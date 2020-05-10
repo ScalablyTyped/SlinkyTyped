@@ -39,12 +39,53 @@ trait SchemaSegment extends js.Object {
 
 object SchemaSegment {
   @scala.inline
-  def apply(fields: StringDictionary[String] = null, segmentId: String = null, setId: String = null): SchemaSegment = {
+  def apply(): SchemaSegment = {
     val __obj = js.Dynamic.literal()
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (segmentId != null) __obj.updateDynamic("segmentId")(segmentId.asInstanceOf[js.Any])
-    if (setId != null) __obj.updateDynamic("setId")(setId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSegment]
   }
+  @scala.inline
+  implicit class SchemaSegmentOps[Self <: SchemaSegment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFields(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

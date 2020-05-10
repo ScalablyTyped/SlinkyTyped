@@ -13,48 +13,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MjmlTableProps extends js.Object {
-  var align: js.UndefOr[left | right | center] = js.undefined
-  var cellpadding: js.UndefOr[String] = js.undefined
-  var cellspacing: js.UndefOr[String] = js.undefined
-  var color: js.UndefOr[ColorProperty] = js.undefined
-  var containerBackgroundColor: js.UndefOr[BackgroundColorProperty] = js.undefined
-  var fontFamily: js.UndefOr[String] = js.undefined
-  var fontSize: js.UndefOr[String | Double] = js.undefined
-  var fontStyle: js.UndefOr[String] = js.undefined
-  var lineHeight: js.UndefOr[String | Double] = js.undefined
-  var tableLayout: js.UndefOr[auto | fixed | initial | inherit] = js.undefined
-  var width: js.UndefOr[String | Double] = js.undefined
+  var align: js.UndefOr[left | right | center] = js.native
+  var cellpadding: js.UndefOr[String] = js.native
+  var cellspacing: js.UndefOr[String] = js.native
+  var color: js.UndefOr[ColorProperty] = js.native
+  var containerBackgroundColor: js.UndefOr[BackgroundColorProperty] = js.native
+  var fontFamily: js.UndefOr[String] = js.native
+  var fontSize: js.UndefOr[String | Double] = js.native
+  var fontStyle: js.UndefOr[String] = js.native
+  var lineHeight: js.UndefOr[String | Double] = js.native
+  var tableLayout: js.UndefOr[auto | fixed | initial | inherit] = js.native
+  var width: js.UndefOr[String | Double] = js.native
 }
 
 object MjmlTableProps {
   @scala.inline
-  def apply(
-    align: left | right | center = null,
-    cellpadding: String = null,
-    cellspacing: String = null,
-    color: ColorProperty = null,
-    containerBackgroundColor: BackgroundColorProperty = null,
-    fontFamily: String = null,
-    fontSize: String | Double = null,
-    fontStyle: String = null,
-    lineHeight: String | Double = null,
-    tableLayout: auto | fixed | initial | inherit = null,
-    width: String | Double = null
-  ): MjmlTableProps = {
+  def apply(): MjmlTableProps = {
     val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (cellpadding != null) __obj.updateDynamic("cellpadding")(cellpadding.asInstanceOf[js.Any])
-    if (cellspacing != null) __obj.updateDynamic("cellspacing")(cellspacing.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (containerBackgroundColor != null) __obj.updateDynamic("containerBackgroundColor")(containerBackgroundColor.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
-    if (fontStyle != null) __obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
-    if (lineHeight != null) __obj.updateDynamic("lineHeight")(lineHeight.asInstanceOf[js.Any])
-    if (tableLayout != null) __obj.updateDynamic("tableLayout")(tableLayout.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[MjmlTableProps]
   }
+  @scala.inline
+  implicit class MjmlTablePropsOps[Self <: MjmlTableProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlign(value: left | right | center): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellpadding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellpadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellpadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellpadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellspacing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellspacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellspacing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellspacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: ColorProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerBackgroundColor(value: BackgroundColorProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerBackgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerBackgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSize(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineHeight(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableLayout(value: auto | fixed | initial | inherit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableLayout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -17,10 +17,29 @@ trait SchemaMobileFriendlyIssue extends js.Object {
 
 object SchemaMobileFriendlyIssue {
   @scala.inline
-  def apply(rule: String = null): SchemaMobileFriendlyIssue = {
+  def apply(): SchemaMobileFriendlyIssue = {
     val __obj = js.Dynamic.literal()
-    if (rule != null) __obj.updateDynamic("rule")(rule.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMobileFriendlyIssue]
   }
+  @scala.inline
+  implicit class SchemaMobileFriendlyIssueOps[Self <: SchemaMobileFriendlyIssue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRule(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

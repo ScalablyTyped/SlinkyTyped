@@ -18,22 +18,20 @@ trait GridAutoFlow extends js.Object
 
 object GridAutoFlow {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def column: typingsSlinky.baseui.baseuiStrings.column = "column".asInstanceOf[typingsSlinky.baseui.baseuiStrings.column]
   @scala.inline
-  def column: typingsSlinky.baseui.baseuiStrings.column = this.cast("column")
+  def `column dense`: typingsSlinky.baseui.baseuiStrings.`column dense` = ("column dense").asInstanceOf[typingsSlinky.baseui.baseuiStrings.`column dense`]
   @scala.inline
-  def `column dense`: typingsSlinky.baseui.baseuiStrings.`column dense` = this.cast("column dense")
+  def dense: typingsSlinky.baseui.baseuiStrings.dense = "dense".asInstanceOf[typingsSlinky.baseui.baseuiStrings.dense]
   @scala.inline
-  def dense: typingsSlinky.baseui.baseuiStrings.dense = this.cast("dense")
+  def inherit: typingsSlinky.baseui.baseuiStrings.inherit = "inherit".asInstanceOf[typingsSlinky.baseui.baseuiStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.baseui.baseuiStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.baseui.baseuiStrings.initial = "initial".asInstanceOf[typingsSlinky.baseui.baseuiStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.baseui.baseuiStrings.initial = this.cast("initial")
+  def row: typingsSlinky.baseui.baseuiStrings.row = "row".asInstanceOf[typingsSlinky.baseui.baseuiStrings.row]
   @scala.inline
-  def row: typingsSlinky.baseui.baseuiStrings.row = this.cast("row")
+  def `row dense`: typingsSlinky.baseui.baseuiStrings.`row dense` = ("row dense").asInstanceOf[typingsSlinky.baseui.baseuiStrings.`row dense`]
   @scala.inline
-  def `row dense`: typingsSlinky.baseui.baseuiStrings.`row dense` = this.cast("row dense")
-  @scala.inline
-  def unset: typingsSlinky.baseui.baseuiStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.baseui.baseuiStrings.unset = "unset".asInstanceOf[typingsSlinky.baseui.baseuiStrings.unset]
 }
 

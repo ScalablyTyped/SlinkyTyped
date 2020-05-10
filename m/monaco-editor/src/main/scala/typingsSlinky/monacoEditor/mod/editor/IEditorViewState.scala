@@ -19,14 +19,11 @@ object IEditorViewState {
     viewState: IViewState
   ): IEditorViewState = {
     val __obj = js.Dynamic.literal(contributionsState = contributionsState.asInstanceOf[js.Any], cursorState = cursorState.asInstanceOf[js.Any], viewState = viewState.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IEditorViewState]
   }
   @scala.inline
-  def IDiffEditorViewState(modified: ICodeEditorViewState = null, original: ICodeEditorViewState = null): IEditorViewState = {
+  def IDiffEditorViewState(): IEditorViewState = {
     val __obj = js.Dynamic.literal()
-    if (modified != null) __obj.updateDynamic("modified")(modified.asInstanceOf[js.Any])
-    if (original != null) __obj.updateDynamic("original")(original.asInstanceOf[js.Any])
     __obj.asInstanceOf[IEditorViewState]
   }
 }

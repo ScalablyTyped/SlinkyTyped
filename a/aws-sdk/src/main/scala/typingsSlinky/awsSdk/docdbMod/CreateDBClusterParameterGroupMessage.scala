@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CreateDBClusterParameterGroupMessage extends js.Object {
   /**
-    * The name of the cluster parameter group. Constraints:   Must match the name of an existing DBClusterParameterGroup.    This value is stored as a lowercase string. 
+    * The name of the cluster parameter group. Constraints:   Must not match the name of an existing DBClusterParameterGroup.    This value is stored as a lowercase string. 
     */
   var DBClusterParameterGroupName: String = js.native
   /**
@@ -26,15 +26,47 @@ trait CreateDBClusterParameterGroupMessage extends js.Object {
 
 object CreateDBClusterParameterGroupMessage {
   @scala.inline
-  def apply(
-    DBClusterParameterGroupName: String,
-    DBParameterGroupFamily: String,
-    Description: String,
-    Tags: TagList = null
-  ): CreateDBClusterParameterGroupMessage = {
+  def apply(DBClusterParameterGroupName: String, DBParameterGroupFamily: String, Description: String): CreateDBClusterParameterGroupMessage = {
     val __obj = js.Dynamic.literal(DBClusterParameterGroupName = DBClusterParameterGroupName.asInstanceOf[js.Any], DBParameterGroupFamily = DBParameterGroupFamily.asInstanceOf[js.Any], Description = Description.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDBClusterParameterGroupMessage]
   }
+  @scala.inline
+  implicit class CreateDBClusterParameterGroupMessageOps[Self <: CreateDBClusterParameterGroupMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDBClusterParameterGroupName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterParameterGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDBParameterGroupFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBParameterGroupFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

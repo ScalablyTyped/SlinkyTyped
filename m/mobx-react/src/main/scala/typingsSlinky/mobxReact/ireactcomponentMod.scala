@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @JSImport("mobx-react/dist/types/IReactComponent", JSImport.Namespace)
 @js.native
 object ireactcomponentMod extends js.Object {
-  type IReactComponent[P] = ReactComponentClass[P] | ReactComponentClass[P] | ReactComponentClass[P] | ForwardRefExoticComponent[P]
+  type IReactComponent[P] = ReactComponentClass[P] | ForwardRefExoticComponent[P]
 }
 

@@ -5,375 +5,1041 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IInput extends IComponent {
   /** [Config Option] (Boolean) */
-  var autoCapitalize: js.UndefOr[Boolean] = js.undefined
+  var autoCapitalize: js.UndefOr[Boolean] = js.native
   /** [Config Option] (Boolean) */
-  var autoComplete: js.UndefOr[Boolean] = js.undefined
+  var autoComplete: js.UndefOr[Boolean] = js.native
   /** [Config Option] (Boolean) */
-  var autoCorrect: js.UndefOr[Boolean] = js.undefined
+  var autoCorrect: js.UndefOr[Boolean] = js.native
   /** [Method] Attempts to forcefully blur input focus for the field
   		* @returns Ext.field.Input this
   		*/
-  var blur: js.UndefOr[js.Function0[this.type]] = js.undefined
+  var blur: js.UndefOr[js.Function0[this.type]] = js.native
   /** [Config Option] (Boolean) */
-  var checked: js.UndefOr[Boolean] = js.undefined
+  var checked: js.UndefOr[Boolean] = js.native
   /** [Config Option] (String) */
   @JSName("cls")
-  var cls_IInput: js.UndefOr[String] = js.undefined
+  var cls_IInput: js.UndefOr[String] = js.native
   /** [Config Option] (Boolean) */
-  var fastFocus: js.UndefOr[Boolean] = js.undefined
+  var fastFocus: js.UndefOr[Boolean] = js.native
   /** [Method] Attempts to set the field as the active input focus
   		* @returns Ext.field.Input this
   		*/
-  var focus: js.UndefOr[js.Function0[this.type]] = js.undefined
+  var focus: js.UndefOr[js.Function0[this.type]] = js.native
   /** [Config Option] (String) */
-  var focusCls: js.UndefOr[String] = js.undefined
+  var focusCls: js.UndefOr[String] = js.native
   /** [Method] Returns the value of autoCapitalize
   		* @returns Boolean
   		*/
-  var getAutoCapitalize: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var getAutoCapitalize: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Returns the value of autoComplete
   		* @returns Boolean
   		*/
-  var getAutoComplete: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var getAutoComplete: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Returns the value of autoCorrect
   		* @returns Boolean
   		*/
-  var getAutoCorrect: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var getAutoCorrect: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Returns the checked value of this field
   		* @returns Mixed value The field value
   		*/
-  var getChecked: js.UndefOr[js.Function0[_]] = js.undefined
+  var getChecked: js.UndefOr[js.Function0[_]] = js.native
   /** [Method] Returns the value of cls
   		* @returns String
   		*/
   @JSName("getCls")
-  var getCls_IInput: js.UndefOr[js.Function0[String]] = js.undefined
+  var getCls_IInput: js.UndefOr[js.Function0[String]] = js.native
   /** [Method] Returns the value of fastFocus
   		* @returns Boolean
   		*/
-  var getFastFocus: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var getFastFocus: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Returns the value of focusCls
   		* @returns String
   		*/
-  var getFocusCls: js.UndefOr[js.Function0[String]] = js.undefined
+  var getFocusCls: js.UndefOr[js.Function0[String]] = js.native
   /** [Method] Returns the value of maxLength
   		* @returns Number
   		*/
-  var getMaxLength: js.UndefOr[js.Function0[Double]] = js.undefined
+  var getMaxLength: js.UndefOr[js.Function0[Double]] = js.native
   /** [Method] Returns the value of maxRows
   		* @returns Number
   		*/
-  var getMaxRows: js.UndefOr[js.Function0[Double]] = js.undefined
+  var getMaxRows: js.UndefOr[js.Function0[Double]] = js.native
   /** [Method] Returns the value of maxValue
   		* @returns Number
   		*/
-  var getMaxValue: js.UndefOr[js.Function0[Double]] = js.undefined
+  var getMaxValue: js.UndefOr[js.Function0[Double]] = js.native
   /** [Method] Returns the value of minValue
   		* @returns Number
   		*/
-  var getMinValue: js.UndefOr[js.Function0[Double]] = js.undefined
+  var getMinValue: js.UndefOr[js.Function0[Double]] = js.native
   /** [Method] Returns the value of name
   		* @returns String
   		*/
-  var getName: js.UndefOr[js.Function0[String]] = js.undefined
+  var getName: js.UndefOr[js.Function0[String]] = js.native
   /** [Method] Returns the value of pattern
   		* @returns String
   		*/
-  var getPattern: js.UndefOr[js.Function0[String]] = js.undefined
+  var getPattern: js.UndefOr[js.Function0[String]] = js.native
   /** [Method] Returns the value of placeHolder
   		* @returns String
   		*/
-  var getPlaceHolder: js.UndefOr[js.Function0[String]] = js.undefined
+  var getPlaceHolder: js.UndefOr[js.Function0[String]] = js.native
   /** [Method] Returns the value of readOnly
   		* @returns Boolean
   		*/
-  var getReadOnly: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var getReadOnly: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Returns the value of startValue
   		* @returns Mixed
   		*/
-  var getStartValue: js.UndefOr[js.Function0[_]] = js.undefined
+  var getStartValue: js.UndefOr[js.Function0[_]] = js.native
   /** [Method] Returns the value of stepValue
   		* @returns Number
   		*/
-  var getStepValue: js.UndefOr[js.Function0[Double]] = js.undefined
+  var getStepValue: js.UndefOr[js.Function0[Double]] = js.native
   /** [Method] Returns the value of tabIndex
   		* @returns Number
   		*/
-  var getTabIndex: js.UndefOr[js.Function0[Double]] = js.undefined
+  var getTabIndex: js.UndefOr[js.Function0[Double]] = js.native
   /** [Method] Returns the value of type
   		* @returns String
   		*/
-  var getType: js.UndefOr[js.Function0[String]] = js.undefined
+  var getType: js.UndefOr[js.Function0[String]] = js.native
   /** [Method] Returns the field data value
   		* @returns Mixed value The field value.
   		*/
-  var getValue: js.UndefOr[js.Function0[_]] = js.undefined
+  var getValue: js.UndefOr[js.Function0[_]] = js.native
   /** [Method] Returns true if the value of this Field has been changed from its original value
   		* @returns Boolean
   		*/
-  var isDirty: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var isDirty: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Property] (Boolean) */
-  var isFocused: js.UndefOr[Boolean] = js.undefined
+  var isFocused: js.UndefOr[Boolean] = js.native
   /** [Config Option] (Number) */
-  var maxLength: js.UndefOr[Double] = js.undefined
+  var maxLength: js.UndefOr[Double] = js.native
   /** [Config Option] (Number) */
-  var maxRows: js.UndefOr[Double] = js.undefined
+  var maxRows: js.UndefOr[Double] = js.native
   /** [Config Option] (Number) */
-  var maxValue: js.UndefOr[Double] = js.undefined
+  var maxValue: js.UndefOr[Double] = js.native
   /** [Config Option] (Number) */
-  var minValue: js.UndefOr[Double] = js.undefined
+  var minValue: js.UndefOr[Double] = js.native
   /** [Config Option] (String) */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /** [Config Option] (String) */
-  var pattern: js.UndefOr[String] = js.undefined
+  var pattern: js.UndefOr[String] = js.native
   /** [Config Option] (String) */
-  var placeHolder: js.UndefOr[String] = js.undefined
+  var placeHolder: js.UndefOr[String] = js.native
   /** [Config Option] (Boolean) */
-  var readOnly: js.UndefOr[Boolean] = js.undefined
+  var readOnly: js.UndefOr[Boolean] = js.native
   /** [Method] Resets the current field value to the original value  */
-  var reset: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var reset: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Attempts to forcefully select all the contents of the input field
   		* @returns Ext.field.Input this
   		*/
-  var select: js.UndefOr[js.Function0[this.type]] = js.undefined
+  var select: js.UndefOr[js.Function0[this.type]] = js.native
   /** [Method] Sets the value of autoCapitalize
   		* @param autoCapitalize Boolean The new value.
   		*/
-  var setAutoCapitalize: js.UndefOr[js.Function1[/* autoCapitalize */ js.UndefOr[Boolean], Unit]] = js.undefined
+  var setAutoCapitalize: js.UndefOr[js.Function1[/* autoCapitalize */ js.UndefOr[Boolean], Unit]] = js.native
   /** [Method] Sets the value of autoComplete
   		* @param autoComplete Boolean The new value.
   		*/
-  var setAutoComplete: js.UndefOr[js.Function1[/* autoComplete */ js.UndefOr[Boolean], Unit]] = js.undefined
+  var setAutoComplete: js.UndefOr[js.Function1[/* autoComplete */ js.UndefOr[Boolean], Unit]] = js.native
   /** [Method] Sets the value of autoCorrect
   		* @param autoCorrect Boolean The new value.
   		*/
-  var setAutoCorrect: js.UndefOr[js.Function1[/* autoCorrect */ js.UndefOr[Boolean], Unit]] = js.undefined
+  var setAutoCorrect: js.UndefOr[js.Function1[/* autoCorrect */ js.UndefOr[Boolean], Unit]] = js.native
   /** [Method] Sets the value of cls
   		* @param cls String The new value.
   		*/
   @JSName("setCls")
-  var setCls_IInput: js.UndefOr[js.Function1[/* cls */ js.UndefOr[String], Unit]] = js.undefined
+  var setCls_IInput: js.UndefOr[js.Function1[/* cls */ js.UndefOr[String], Unit]] = js.native
   /** [Method] Sets the value of fastFocus
   		* @param fastFocus Boolean The new value.
   		*/
-  var setFastFocus: js.UndefOr[js.Function1[/* fastFocus */ js.UndefOr[Boolean], Unit]] = js.undefined
+  var setFastFocus: js.UndefOr[js.Function1[/* fastFocus */ js.UndefOr[Boolean], Unit]] = js.native
   /** [Method] Sets the value of focusCls
   		* @param focusCls String The new value.
   		*/
-  var setFocusCls: js.UndefOr[js.Function1[/* focusCls */ js.UndefOr[String], Unit]] = js.undefined
+  var setFocusCls: js.UndefOr[js.Function1[/* focusCls */ js.UndefOr[String], Unit]] = js.native
   /** [Method] Sets the value of maxLength
   		* @param maxLength Number The new value.
   		*/
-  var setMaxLength: js.UndefOr[js.Function1[/* maxLength */ js.UndefOr[Double], Unit]] = js.undefined
+  var setMaxLength: js.UndefOr[js.Function1[/* maxLength */ js.UndefOr[Double], Unit]] = js.native
   /** [Method] Sets the value of maxRows
   		* @param maxRows Number The new value.
   		*/
-  var setMaxRows: js.UndefOr[js.Function1[/* maxRows */ js.UndefOr[Double], Unit]] = js.undefined
+  var setMaxRows: js.UndefOr[js.Function1[/* maxRows */ js.UndefOr[Double], Unit]] = js.native
   /** [Method] Sets the value of maxValue
   		* @param maxValue Number The new value.
   		*/
-  var setMaxValue: js.UndefOr[js.Function1[/* maxValue */ js.UndefOr[Double], Unit]] = js.undefined
+  var setMaxValue: js.UndefOr[js.Function1[/* maxValue */ js.UndefOr[Double], Unit]] = js.native
   /** [Method] Sets the value of minValue
   		* @param minValue Number The new value.
   		*/
-  var setMinValue: js.UndefOr[js.Function1[/* minValue */ js.UndefOr[Double], Unit]] = js.undefined
+  var setMinValue: js.UndefOr[js.Function1[/* minValue */ js.UndefOr[Double], Unit]] = js.native
   /** [Method] Sets the value of name
   		* @param name String The new value.
   		*/
-  var setName: js.UndefOr[js.Function1[/* name */ js.UndefOr[String], Unit]] = js.undefined
+  var setName: js.UndefOr[js.Function1[/* name */ js.UndefOr[String], Unit]] = js.native
   /** [Method] Sets the value of pattern
   		* @param pattern String The new value.
   		*/
-  var setPattern: js.UndefOr[js.Function1[/* pattern */ js.UndefOr[String], Unit]] = js.undefined
+  var setPattern: js.UndefOr[js.Function1[/* pattern */ js.UndefOr[String], Unit]] = js.native
   /** [Method] Sets the value of placeHolder
   		* @param placeHolder String The new value.
   		*/
-  var setPlaceHolder: js.UndefOr[js.Function1[/* placeHolder */ js.UndefOr[String], Unit]] = js.undefined
+  var setPlaceHolder: js.UndefOr[js.Function1[/* placeHolder */ js.UndefOr[String], Unit]] = js.native
   /** [Method] Sets the value of readOnly
   		* @param readOnly Boolean The new value.
   		*/
-  var setReadOnly: js.UndefOr[js.Function1[/* readOnly */ js.UndefOr[Boolean], Unit]] = js.undefined
+  var setReadOnly: js.UndefOr[js.Function1[/* readOnly */ js.UndefOr[Boolean], Unit]] = js.native
   /** [Method] Sets the value of startValue
   		* @param startValue Mixed The new value.
   		*/
-  var setStartValue: js.UndefOr[js.Function1[/* startValue */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var setStartValue: js.UndefOr[js.Function1[/* startValue */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Sets the value of stepValue
   		* @param stepValue Number The new value.
   		*/
-  var setStepValue: js.UndefOr[js.Function1[/* stepValue */ js.UndefOr[Double], Unit]] = js.undefined
+  var setStepValue: js.UndefOr[js.Function1[/* stepValue */ js.UndefOr[Double], Unit]] = js.native
   /** [Method] Sets the value of tabIndex
   		* @param tabIndex Number The new value.
   		*/
-  var setTabIndex: js.UndefOr[js.Function1[/* tabIndex */ js.UndefOr[Double], Unit]] = js.undefined
+  var setTabIndex: js.UndefOr[js.Function1[/* tabIndex */ js.UndefOr[Double], Unit]] = js.native
   /** [Method] Sets the value of type
   		* @param type String The new value.
   		*/
-  var setType: js.UndefOr[js.Function1[/* type */ js.UndefOr[String], Unit]] = js.undefined
+  var setType: js.UndefOr[js.Function1[/* type */ js.UndefOr[String], Unit]] = js.native
   /** [Config Option] (Mixed) */
-  var startValue: js.UndefOr[js.Any] = js.undefined
+  var startValue: js.UndefOr[js.Any] = js.native
   /** [Config Option] (Number) */
-  var stepValue: js.UndefOr[Double] = js.undefined
+  var stepValue: js.UndefOr[Double] = js.native
   /** [Config Option] (Number) */
-  var tabIndex: js.UndefOr[Double] = js.undefined
+  var tabIndex: js.UndefOr[Double] = js.native
   /** [Config Option] (String) */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /** [Method] Updates the cls configuration
   		* @param newCls Object
   		* @param oldCls Object
   		*/
   var updateCls: js.UndefOr[
     js.Function2[/* newCls */ js.UndefOr[js.Any], /* oldCls */ js.UndefOr[js.Any], Unit]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Updates the useMask configuration
   		* @param newUseMask Object
   		*/
-  var updateUseMask: js.UndefOr[js.Function1[/* newUseMask */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var updateUseMask: js.UndefOr[js.Function1[/* newUseMask */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Config Option] (Mixed) */
-  var value: js.UndefOr[js.Any] = js.undefined
+  var value: js.UndefOr[js.Any] = js.native
 }
 
 object IInput {
   @scala.inline
-  def apply(
-    IComponent: IComponent = null,
-    autoCapitalize: js.UndefOr[Boolean] = js.undefined,
-    autoComplete: js.UndefOr[Boolean] = js.undefined,
-    autoCorrect: js.UndefOr[Boolean] = js.undefined,
-    blur: () => IInput = null,
-    checked: js.UndefOr[Boolean] = js.undefined,
-    cls: String = null,
-    fastFocus: js.UndefOr[Boolean] = js.undefined,
-    focus: () => IInput = null,
-    focusCls: String = null,
-    getAutoCapitalize: () => Boolean = null,
-    getAutoComplete: () => Boolean = null,
-    getAutoCorrect: () => Boolean = null,
-    getChecked: () => _ = null,
-    getCls: () => String = null,
-    getFastFocus: () => Boolean = null,
-    getFocusCls: () => String = null,
-    getMaxLength: () => Double = null,
-    getMaxRows: () => Double = null,
-    getMaxValue: () => Double = null,
-    getMinValue: () => Double = null,
-    getName: () => String = null,
-    getPattern: () => String = null,
-    getPlaceHolder: () => String = null,
-    getReadOnly: () => Boolean = null,
-    getStartValue: () => _ = null,
-    getStepValue: () => Double = null,
-    getTabIndex: () => Double = null,
-    getType: () => String = null,
-    getValue: () => _ = null,
-    isDirty: () => Boolean = null,
-    isFocused: js.UndefOr[Boolean] = js.undefined,
-    maxLength: Int | Double = null,
-    maxRows: Int | Double = null,
-    maxValue: Int | Double = null,
-    minValue: Int | Double = null,
-    name: String = null,
-    pattern: String = null,
-    placeHolder: String = null,
-    readOnly: js.UndefOr[Boolean] = js.undefined,
-    reset: () => Unit = null,
-    select: () => IInput = null,
-    setAutoCapitalize: /* autoCapitalize */ js.UndefOr[Boolean] => Unit = null,
-    setAutoComplete: /* autoComplete */ js.UndefOr[Boolean] => Unit = null,
-    setAutoCorrect: /* autoCorrect */ js.UndefOr[Boolean] => Unit = null,
-    setCls: /* cls */ js.UndefOr[String] => Unit = null,
-    setFastFocus: /* fastFocus */ js.UndefOr[Boolean] => Unit = null,
-    setFocusCls: /* focusCls */ js.UndefOr[String] => Unit = null,
-    setMaxLength: /* maxLength */ js.UndefOr[Double] => Unit = null,
-    setMaxRows: /* maxRows */ js.UndefOr[Double] => Unit = null,
-    setMaxValue: /* maxValue */ js.UndefOr[Double] => Unit = null,
-    setMinValue: /* minValue */ js.UndefOr[Double] => Unit = null,
-    setName: /* name */ js.UndefOr[String] => Unit = null,
-    setPattern: /* pattern */ js.UndefOr[String] => Unit = null,
-    setPlaceHolder: /* placeHolder */ js.UndefOr[String] => Unit = null,
-    setReadOnly: /* readOnly */ js.UndefOr[Boolean] => Unit = null,
-    setStartValue: /* startValue */ js.UndefOr[js.Any] => Unit = null,
-    setStepValue: /* stepValue */ js.UndefOr[Double] => Unit = null,
-    setTabIndex: /* tabIndex */ js.UndefOr[Double] => Unit = null,
-    setType: /* type */ js.UndefOr[String] => Unit = null,
-    startValue: js.Any = null,
-    stepValue: Int | Double = null,
-    tabIndex: Int | Double = null,
-    `type`: String = null,
-    updateCls: (/* newCls */ js.UndefOr[js.Any], /* oldCls */ js.UndefOr[js.Any]) => Unit = null,
-    updateUseMask: /* newUseMask */ js.UndefOr[js.Any] => Unit = null,
-    value: js.Any = null
-  ): IInput = {
+  def apply(): IInput = {
     val __obj = js.Dynamic.literal()
-    if (IComponent != null) js.Dynamic.global.Object.assign(__obj, IComponent)
-    if (!js.isUndefined(autoCapitalize)) __obj.updateDynamic("autoCapitalize")(autoCapitalize.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoComplete)) __obj.updateDynamic("autoComplete")(autoComplete.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoCorrect)) __obj.updateDynamic("autoCorrect")(autoCorrect.asInstanceOf[js.Any])
-    if (blur != null) __obj.updateDynamic("blur")(js.Any.fromFunction0(blur))
-    if (!js.isUndefined(checked)) __obj.updateDynamic("checked")(checked.asInstanceOf[js.Any])
-    if (cls != null) __obj.updateDynamic("cls")(cls.asInstanceOf[js.Any])
-    if (!js.isUndefined(fastFocus)) __obj.updateDynamic("fastFocus")(fastFocus.asInstanceOf[js.Any])
-    if (focus != null) __obj.updateDynamic("focus")(js.Any.fromFunction0(focus))
-    if (focusCls != null) __obj.updateDynamic("focusCls")(focusCls.asInstanceOf[js.Any])
-    if (getAutoCapitalize != null) __obj.updateDynamic("getAutoCapitalize")(js.Any.fromFunction0(getAutoCapitalize))
-    if (getAutoComplete != null) __obj.updateDynamic("getAutoComplete")(js.Any.fromFunction0(getAutoComplete))
-    if (getAutoCorrect != null) __obj.updateDynamic("getAutoCorrect")(js.Any.fromFunction0(getAutoCorrect))
-    if (getChecked != null) __obj.updateDynamic("getChecked")(js.Any.fromFunction0(getChecked))
-    if (getCls != null) __obj.updateDynamic("getCls")(js.Any.fromFunction0(getCls))
-    if (getFastFocus != null) __obj.updateDynamic("getFastFocus")(js.Any.fromFunction0(getFastFocus))
-    if (getFocusCls != null) __obj.updateDynamic("getFocusCls")(js.Any.fromFunction0(getFocusCls))
-    if (getMaxLength != null) __obj.updateDynamic("getMaxLength")(js.Any.fromFunction0(getMaxLength))
-    if (getMaxRows != null) __obj.updateDynamic("getMaxRows")(js.Any.fromFunction0(getMaxRows))
-    if (getMaxValue != null) __obj.updateDynamic("getMaxValue")(js.Any.fromFunction0(getMaxValue))
-    if (getMinValue != null) __obj.updateDynamic("getMinValue")(js.Any.fromFunction0(getMinValue))
-    if (getName != null) __obj.updateDynamic("getName")(js.Any.fromFunction0(getName))
-    if (getPattern != null) __obj.updateDynamic("getPattern")(js.Any.fromFunction0(getPattern))
-    if (getPlaceHolder != null) __obj.updateDynamic("getPlaceHolder")(js.Any.fromFunction0(getPlaceHolder))
-    if (getReadOnly != null) __obj.updateDynamic("getReadOnly")(js.Any.fromFunction0(getReadOnly))
-    if (getStartValue != null) __obj.updateDynamic("getStartValue")(js.Any.fromFunction0(getStartValue))
-    if (getStepValue != null) __obj.updateDynamic("getStepValue")(js.Any.fromFunction0(getStepValue))
-    if (getTabIndex != null) __obj.updateDynamic("getTabIndex")(js.Any.fromFunction0(getTabIndex))
-    if (getType != null) __obj.updateDynamic("getType")(js.Any.fromFunction0(getType))
-    if (getValue != null) __obj.updateDynamic("getValue")(js.Any.fromFunction0(getValue))
-    if (isDirty != null) __obj.updateDynamic("isDirty")(js.Any.fromFunction0(isDirty))
-    if (!js.isUndefined(isFocused)) __obj.updateDynamic("isFocused")(isFocused.asInstanceOf[js.Any])
-    if (maxLength != null) __obj.updateDynamic("maxLength")(maxLength.asInstanceOf[js.Any])
-    if (maxRows != null) __obj.updateDynamic("maxRows")(maxRows.asInstanceOf[js.Any])
-    if (maxValue != null) __obj.updateDynamic("maxValue")(maxValue.asInstanceOf[js.Any])
-    if (minValue != null) __obj.updateDynamic("minValue")(minValue.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (pattern != null) __obj.updateDynamic("pattern")(pattern.asInstanceOf[js.Any])
-    if (placeHolder != null) __obj.updateDynamic("placeHolder")(placeHolder.asInstanceOf[js.Any])
-    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
-    if (reset != null) __obj.updateDynamic("reset")(js.Any.fromFunction0(reset))
-    if (select != null) __obj.updateDynamic("select")(js.Any.fromFunction0(select))
-    if (setAutoCapitalize != null) __obj.updateDynamic("setAutoCapitalize")(js.Any.fromFunction1(setAutoCapitalize))
-    if (setAutoComplete != null) __obj.updateDynamic("setAutoComplete")(js.Any.fromFunction1(setAutoComplete))
-    if (setAutoCorrect != null) __obj.updateDynamic("setAutoCorrect")(js.Any.fromFunction1(setAutoCorrect))
-    if (setCls != null) __obj.updateDynamic("setCls")(js.Any.fromFunction1(setCls))
-    if (setFastFocus != null) __obj.updateDynamic("setFastFocus")(js.Any.fromFunction1(setFastFocus))
-    if (setFocusCls != null) __obj.updateDynamic("setFocusCls")(js.Any.fromFunction1(setFocusCls))
-    if (setMaxLength != null) __obj.updateDynamic("setMaxLength")(js.Any.fromFunction1(setMaxLength))
-    if (setMaxRows != null) __obj.updateDynamic("setMaxRows")(js.Any.fromFunction1(setMaxRows))
-    if (setMaxValue != null) __obj.updateDynamic("setMaxValue")(js.Any.fromFunction1(setMaxValue))
-    if (setMinValue != null) __obj.updateDynamic("setMinValue")(js.Any.fromFunction1(setMinValue))
-    if (setName != null) __obj.updateDynamic("setName")(js.Any.fromFunction1(setName))
-    if (setPattern != null) __obj.updateDynamic("setPattern")(js.Any.fromFunction1(setPattern))
-    if (setPlaceHolder != null) __obj.updateDynamic("setPlaceHolder")(js.Any.fromFunction1(setPlaceHolder))
-    if (setReadOnly != null) __obj.updateDynamic("setReadOnly")(js.Any.fromFunction1(setReadOnly))
-    if (setStartValue != null) __obj.updateDynamic("setStartValue")(js.Any.fromFunction1(setStartValue))
-    if (setStepValue != null) __obj.updateDynamic("setStepValue")(js.Any.fromFunction1(setStepValue))
-    if (setTabIndex != null) __obj.updateDynamic("setTabIndex")(js.Any.fromFunction1(setTabIndex))
-    if (setType != null) __obj.updateDynamic("setType")(js.Any.fromFunction1(setType))
-    if (startValue != null) __obj.updateDynamic("startValue")(startValue.asInstanceOf[js.Any])
-    if (stepValue != null) __obj.updateDynamic("stepValue")(stepValue.asInstanceOf[js.Any])
-    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (updateCls != null) __obj.updateDynamic("updateCls")(js.Any.fromFunction2(updateCls))
-    if (updateUseMask != null) __obj.updateDynamic("updateUseMask")(js.Any.fromFunction1(updateUseMask))
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[IInput]
   }
+  @scala.inline
+  implicit class IInputOps[Self <: IInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoCapitalize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCapitalize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoCapitalize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCapitalize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoComplete(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoComplete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoCorrect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCorrect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoCorrect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCorrect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlur(value: () => IInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blur")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutBlur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChecked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChecked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFastFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fastFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFastFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fastFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocus(value: () => IInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocusCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocusCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetAutoCapitalize(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoCapitalize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetAutoCapitalize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoCapitalize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetAutoComplete(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoComplete")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetAutoComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetAutoCorrect(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoCorrect")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetAutoCorrect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoCorrect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetChecked(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getChecked")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetChecked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getChecked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetCls(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCls")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetFastFocus(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFastFocus")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetFastFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFastFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetFocusCls(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFocusCls")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetFocusCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFocusCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetMaxLength(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxLength")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetMaxLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetMaxRows(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxRows")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetMaxRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetMaxValue(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetMaxValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetMinValue(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMinValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetMinValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMinValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetPattern(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPattern")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetPattern: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPattern")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetPlaceHolder(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPlaceHolder")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetPlaceHolder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPlaceHolder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetReadOnly(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getReadOnly")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetReadOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getReadOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetStartValue(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStartValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetStartValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStartValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetStepValue(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStepValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetStepValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStepValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetTabIndex(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTabIndex")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetTabIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTabIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetType(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetValue(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDirty(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDirty")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsDirty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDirty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsFocused(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFocused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsFocused: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFocused")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRows(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPattern(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPattern: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceHolder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeHolder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceHolder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeHolder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReset(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutReset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelect(value: () => IInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetAutoCapitalize(value: /* autoCapitalize */ js.UndefOr[Boolean] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAutoCapitalize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetAutoCapitalize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAutoCapitalize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetAutoComplete(value: /* autoComplete */ js.UndefOr[Boolean] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAutoComplete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetAutoComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAutoComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetAutoCorrect(value: /* autoCorrect */ js.UndefOr[Boolean] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAutoCorrect")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetAutoCorrect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAutoCorrect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetCls(value: /* cls */ js.UndefOr[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setCls")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetFastFocus(value: /* fastFocus */ js.UndefOr[Boolean] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFastFocus")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetFastFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFastFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetFocusCls(value: /* focusCls */ js.UndefOr[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFocusCls")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetFocusCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFocusCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetMaxLength(value: /* maxLength */ js.UndefOr[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaxLength")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetMaxLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaxLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetMaxRows(value: /* maxRows */ js.UndefOr[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaxRows")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetMaxRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaxRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetMaxValue(value: /* maxValue */ js.UndefOr[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaxValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetMaxValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaxValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetMinValue(value: /* minValue */ js.UndefOr[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMinValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetMinValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMinValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetName(value: /* name */ js.UndefOr[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetPattern(value: /* pattern */ js.UndefOr[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPattern")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetPattern: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPattern")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetPlaceHolder(value: /* placeHolder */ js.UndefOr[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPlaceHolder")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetPlaceHolder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPlaceHolder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetReadOnly(value: /* readOnly */ js.UndefOr[Boolean] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setReadOnly")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetReadOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setReadOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetStartValue(value: /* startValue */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStartValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetStartValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStartValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetStepValue(value: /* stepValue */ js.UndefOr[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStepValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetStepValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStepValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetTabIndex(value: /* tabIndex */ js.UndefOr[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTabIndex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetTabIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTabIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetType(value: /* type */ js.UndefOr[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setType")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStepValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTabIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateCls(value: (/* newCls */ js.UndefOr[js.Any], /* oldCls */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateCls")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutUpdateCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateUseMask(value: /* newUseMask */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateUseMask")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutUpdateUseMask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateUseMask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

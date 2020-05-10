@@ -19,10 +19,29 @@ trait SchemaGetInfoForObservedBeaconsResponse extends js.Object {
 
 object SchemaGetInfoForObservedBeaconsResponse {
   @scala.inline
-  def apply(beacons: js.Array[SchemaBeaconInfo] = null): SchemaGetInfoForObservedBeaconsResponse = {
+  def apply(): SchemaGetInfoForObservedBeaconsResponse = {
     val __obj = js.Dynamic.literal()
-    if (beacons != null) __obj.updateDynamic("beacons")(beacons.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGetInfoForObservedBeaconsResponse]
   }
+  @scala.inline
+  implicit class SchemaGetInfoForObservedBeaconsResponseOps[Self <: SchemaGetInfoForObservedBeaconsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBeacons(value: js.Array[SchemaBeaconInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beacons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeacons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beacons")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

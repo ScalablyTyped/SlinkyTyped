@@ -6,258 +6,716 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Model extends js.Object {
   /** Fires, on clicking the sunburst chart.
     */
-  var Click: js.UndefOr[js.Function1[/* e */ ClickEventArgs, Unit]] = js.undefined
+  var Click: js.UndefOr[js.Function1[/* e */ ClickEventArgs, Unit]] = js.native
   /** Animation type of sunburst
     * @Default {rotation. See Alignment}
     */
-  var animationType: js.UndefOr[Animation | String] = js.undefined
+  var animationType: js.UndefOr[Animation | String] = js.native
   /** Background color of the plot area.
     * @Default {null}
     */
-  var background: js.UndefOr[String] = js.undefined
+  var background: js.UndefOr[String] = js.native
   /** Options for customizing the sunburst border.
     */
-  var border: js.UndefOr[Border] = js.undefined
+  var border: js.UndefOr[Border] = js.native
   /** Fires before rendering the datalabel
     */
-  var dataLabelRendering: js.UndefOr[js.Function1[/* e */ DataLabelRenderingEventArgs, Unit]] = js.undefined
+  var dataLabelRendering: js.UndefOr[js.Function1[/* e */ DataLabelRenderingEventArgs, Unit]] = js.native
   /** Options to customize the Sunburst dataLabel.
     */
-  var dataLabelSettings: js.UndefOr[DataLabelSettings] = js.undefined
+  var dataLabelSettings: js.UndefOr[DataLabelSettings] = js.native
   /** Specifies the dataSource to the sunburst.
     * @Default {null}
     */
-  var dataSource: js.UndefOr[js.Any] = js.undefined
+  var dataSource: js.UndefOr[js.Any] = js.native
   /** Fires, on double clicking the sunburst chart.
     */
-  var doubleClick: js.UndefOr[js.Function1[/* e */ DoubleClickEventArgs, Unit]] = js.undefined
+  var doubleClick: js.UndefOr[js.Function1[/* e */ DoubleClickEventArgs, Unit]] = js.native
   /** Fires when resetting drilldown points.
     */
-  var drillDownBack: js.UndefOr[js.Function1[/* e */ DrillDownBackEventArgs, Unit]] = js.undefined
+  var drillDownBack: js.UndefOr[js.Function1[/* e */ DrillDownBackEventArgs, Unit]] = js.native
   /** Fires when clicking the point to perform drilldown.
     */
-  var drillDownClick: js.UndefOr[js.Function1[/* e */ DrillDownClickEventArgs, Unit]] = js.undefined
+  var drillDownClick: js.UndefOr[js.Function1[/* e */ DrillDownClickEventArgs, Unit]] = js.native
   /** Fires after resetting the sunburst points
     */
-  var drillDownReset: js.UndefOr[js.Function1[/* e */ DrillDownResetEventArgs, Unit]] = js.undefined
+  var drillDownReset: js.UndefOr[js.Function1[/* e */ DrillDownResetEventArgs, Unit]] = js.native
   /** Enable/disable the animation for all the levels.
     * @Default {false}
     */
-  var enableAnimation: js.UndefOr[Boolean] = js.undefined
+  var enableAnimation: js.UndefOr[Boolean] = js.native
   /** Sunburst rendering will end at the specified value
     * @Default {null}
     */
-  var endAngle: js.UndefOr[Double] = js.undefined
+  var endAngle: js.UndefOr[Double] = js.native
   /** Options for customizing the appearance of the levels or point while highlighting.
     */
-  var highlightSettings: js.UndefOr[HighlightSettings] = js.undefined
+  var highlightSettings: js.UndefOr[HighlightSettings] = js.native
   /** Sunburst inner radius value
     * @Default {0.4}
     */
-  var innerRadius: js.UndefOr[Double] = js.undefined
+  var innerRadius: js.UndefOr[Double] = js.native
   /** Controls whether sunburst has to be responsive or not.
     * @Default {true}
     */
-  var isResponsive: js.UndefOr[Boolean] = js.undefined
+  var isResponsive: js.UndefOr[Boolean] = js.native
   /** Options to customize the legend items and legend title.
     */
-  var legend: js.UndefOr[Legend] = js.undefined
+  var legend: js.UndefOr[Legend] = js.native
   /** Specify levels of sunburst for grouped visualization of data
     * @Default {[]}
     */
-  var levels: js.UndefOr[js.Array[Level]] = js.undefined
+  var levels: js.UndefOr[js.Array[Level]] = js.native
   /** Fires before loading.
     */
-  var load: js.UndefOr[js.Function1[/* e */ LoadEventArgs, Unit]] = js.undefined
+  var load: js.UndefOr[js.Function1[/* e */ LoadEventArgs, Unit]] = js.native
   /** Fires after rendering sunburst.
     */
-  var loaded: js.UndefOr[js.Function1[/* e */ LoadedEventArgs, Unit]] = js.undefined
+  var loaded: js.UndefOr[js.Function1[/* e */ LoadedEventArgs, Unit]] = js.native
   /** Options to customize the left, right, top and bottom margins of sunburst area.
     */
-  var margin: js.UndefOr[Margin] = js.undefined
+  var margin: js.UndefOr[Margin] = js.native
   /** Opacity of the levels.
     * @Default {1}
     */
-  var opacity: js.UndefOr[Double] = js.undefined
+  var opacity: js.UndefOr[Double] = js.native
   /** Palette color for the data points.
     * @Default {null}
     */
-  var palette: js.UndefOr[String] = js.undefined
+  var palette: js.UndefOr[String] = js.native
   /** Parent node of the data points.
     * @Default {null}
     */
-  var parentNode: js.UndefOr[String] = js.undefined
+  var parentNode: js.UndefOr[String] = js.native
   /** Fires after clicking the point in sunburst
     */
-  var pointRegionClick: js.UndefOr[js.Function1[/* e */ PointRegionClickEventArgs, Unit]] = js.undefined
+  var pointRegionClick: js.UndefOr[js.Function1[/* e */ PointRegionClickEventArgs, Unit]] = js.native
   /** Fires while moving the mouse over sunburst points
     */
-  var pointRegionMouseMove: js.UndefOr[js.Function1[/* e */ PointRegionMouseMoveEventArgs, Unit]] = js.undefined
+  var pointRegionMouseMove: js.UndefOr[js.Function1[/* e */ PointRegionMouseMoveEventArgs, Unit]] = js.native
   /** Options for customizing sunburst points.
     */
-  var points: js.UndefOr[Points] = js.undefined
+  var points: js.UndefOr[Points] = js.native
   /** Fires before rendering sunburst.
     */
-  var preRender: js.UndefOr[js.Function1[/* e */ PreRenderEventArgs, Unit]] = js.undefined
+  var preRender: js.UndefOr[js.Function1[/* e */ PreRenderEventArgs, Unit]] = js.native
   /** Sunburst outer radius value
     * @Default {1}
     */
-  var radius: js.UndefOr[Double] = js.undefined
+  var radius: js.UndefOr[Double] = js.native
   /** Fires, on right clicking the sunburst chart
     */
-  var rightClick: js.UndefOr[js.Function1[/* e */ RightClickEventArgs, Unit]] = js.undefined
+  var rightClick: js.UndefOr[js.Function1[/* e */ RightClickEventArgs, Unit]] = js.native
   /** Options for customizing the sunburst segment border.
     */
-  var segmentBorder: js.UndefOr[SegmentBorder] = js.undefined
+  var segmentBorder: js.UndefOr[SegmentBorder] = js.native
   /** Fires before rendering each segment
     */
-  var segmentRendering: js.UndefOr[js.Function1[/* e */ SegmentRenderingEventArgs, Unit]] = js.undefined
+  var segmentRendering: js.UndefOr[js.Function1[/* e */ SegmentRenderingEventArgs, Unit]] = js.native
   /** Options for customizing the appearance of the levels or data point while selection.
     */
-  var selectionSettings: js.UndefOr[SelectionSettings] = js.undefined
+  var selectionSettings: js.UndefOr[SelectionSettings] = js.native
   /** Options to customize the Sunburst size.
     */
-  var size: js.UndefOr[Size] = js.undefined
+  var size: js.UndefOr[Size] = js.native
   /** Sunburst rendering will start from the specified value
     * @Default {null}
     */
-  var startAngle: js.UndefOr[Double] = js.undefined
+  var startAngle: js.UndefOr[Double] = js.native
   /** Specifies the theme for Sunburst.
     * @Default {Flatlight. See Theme}
     */
-  var theme: js.UndefOr[SunburstTheme | String] = js.undefined
+  var theme: js.UndefOr[SunburstTheme | String] = js.native
   /** Options for customizing the title and subtitle of sunburst.
     */
-  var title: js.UndefOr[Title] = js.undefined
+  var title: js.UndefOr[Title] = js.native
   /** Fires before rendering sunburst title.
     */
-  var titleRendering: js.UndefOr[js.Function1[/* e */ TitleRenderingEventArgs, Unit]] = js.undefined
+  var titleRendering: js.UndefOr[js.Function1[/* e */ TitleRenderingEventArgs, Unit]] = js.native
   /** Options to customize the Sunburst tooltip.
     */
-  var tooltip: js.UndefOr[Tooltip] = js.undefined
+  var tooltip: js.UndefOr[Tooltip] = js.native
   /** Fires during initialization of tooltip.
     */
-  var tooltipInitialize: js.UndefOr[js.Function1[/* e */ TooltipInitializeEventArgs, Unit]] = js.undefined
+  var tooltipInitialize: js.UndefOr[js.Function1[/* e */ TooltipInitializeEventArgs, Unit]] = js.native
   /** Bind the data field from the data source.
     * @Default {null}
     */
-  var valueMemberPath: js.UndefOr[String] = js.undefined
+  var valueMemberPath: js.UndefOr[String] = js.native
   /** Controls the visibility of sunburst.
     * @Default {true}
     */
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.native
   /** Name of the property in the datasource that contains x values.
     * @Default {null}
     */
-  var xName: js.UndefOr[String] = js.undefined
+  var xName: js.UndefOr[String] = js.native
   /** Name of the property in the datasource that contains y values.
     * @Default {null}
     */
-  var yName: js.UndefOr[String] = js.undefined
+  var yName: js.UndefOr[String] = js.native
   /** Options for enable zooming feature of chart.
     */
-  var zoomSettings: js.UndefOr[ZoomSettings] = js.undefined
+  var zoomSettings: js.UndefOr[ZoomSettings] = js.native
 }
 
 object Model {
   @scala.inline
-  def apply(
-    Click: /* e */ ClickEventArgs => Unit = null,
-    animationType: Animation | String = null,
-    background: String = null,
-    border: Border = null,
-    dataLabelRendering: /* e */ DataLabelRenderingEventArgs => Unit = null,
-    dataLabelSettings: DataLabelSettings = null,
-    dataSource: js.Any = null,
-    doubleClick: /* e */ DoubleClickEventArgs => Unit = null,
-    drillDownBack: /* e */ DrillDownBackEventArgs => Unit = null,
-    drillDownClick: /* e */ DrillDownClickEventArgs => Unit = null,
-    drillDownReset: /* e */ DrillDownResetEventArgs => Unit = null,
-    enableAnimation: js.UndefOr[Boolean] = js.undefined,
-    endAngle: Int | Double = null,
-    highlightSettings: HighlightSettings = null,
-    innerRadius: Int | Double = null,
-    isResponsive: js.UndefOr[Boolean] = js.undefined,
-    legend: Legend = null,
-    levels: js.Array[Level] = null,
-    load: /* e */ LoadEventArgs => Unit = null,
-    loaded: /* e */ LoadedEventArgs => Unit = null,
-    margin: Margin = null,
-    opacity: Int | Double = null,
-    palette: String = null,
-    parentNode: String = null,
-    pointRegionClick: /* e */ PointRegionClickEventArgs => Unit = null,
-    pointRegionMouseMove: /* e */ PointRegionMouseMoveEventArgs => Unit = null,
-    points: Points = null,
-    preRender: /* e */ PreRenderEventArgs => Unit = null,
-    radius: Int | Double = null,
-    rightClick: /* e */ RightClickEventArgs => Unit = null,
-    segmentBorder: SegmentBorder = null,
-    segmentRendering: /* e */ SegmentRenderingEventArgs => Unit = null,
-    selectionSettings: SelectionSettings = null,
-    size: Size = null,
-    startAngle: Int | Double = null,
-    theme: SunburstTheme | String = null,
-    title: Title = null,
-    titleRendering: /* e */ TitleRenderingEventArgs => Unit = null,
-    tooltip: Tooltip = null,
-    tooltipInitialize: /* e */ TooltipInitializeEventArgs => Unit = null,
-    valueMemberPath: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    xName: String = null,
-    yName: String = null,
-    zoomSettings: ZoomSettings = null
-  ): Model = {
+  def apply(): Model = {
     val __obj = js.Dynamic.literal()
-    if (Click != null) __obj.updateDynamic("Click")(js.Any.fromFunction1(Click))
-    if (animationType != null) __obj.updateDynamic("animationType")(animationType.asInstanceOf[js.Any])
-    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
-    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
-    if (dataLabelRendering != null) __obj.updateDynamic("dataLabelRendering")(js.Any.fromFunction1(dataLabelRendering))
-    if (dataLabelSettings != null) __obj.updateDynamic("dataLabelSettings")(dataLabelSettings.asInstanceOf[js.Any])
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (doubleClick != null) __obj.updateDynamic("doubleClick")(js.Any.fromFunction1(doubleClick))
-    if (drillDownBack != null) __obj.updateDynamic("drillDownBack")(js.Any.fromFunction1(drillDownBack))
-    if (drillDownClick != null) __obj.updateDynamic("drillDownClick")(js.Any.fromFunction1(drillDownClick))
-    if (drillDownReset != null) __obj.updateDynamic("drillDownReset")(js.Any.fromFunction1(drillDownReset))
-    if (!js.isUndefined(enableAnimation)) __obj.updateDynamic("enableAnimation")(enableAnimation.asInstanceOf[js.Any])
-    if (endAngle != null) __obj.updateDynamic("endAngle")(endAngle.asInstanceOf[js.Any])
-    if (highlightSettings != null) __obj.updateDynamic("highlightSettings")(highlightSettings.asInstanceOf[js.Any])
-    if (innerRadius != null) __obj.updateDynamic("innerRadius")(innerRadius.asInstanceOf[js.Any])
-    if (!js.isUndefined(isResponsive)) __obj.updateDynamic("isResponsive")(isResponsive.asInstanceOf[js.Any])
-    if (legend != null) __obj.updateDynamic("legend")(legend.asInstanceOf[js.Any])
-    if (levels != null) __obj.updateDynamic("levels")(levels.asInstanceOf[js.Any])
-    if (load != null) __obj.updateDynamic("load")(js.Any.fromFunction1(load))
-    if (loaded != null) __obj.updateDynamic("loaded")(js.Any.fromFunction1(loaded))
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (palette != null) __obj.updateDynamic("palette")(palette.asInstanceOf[js.Any])
-    if (parentNode != null) __obj.updateDynamic("parentNode")(parentNode.asInstanceOf[js.Any])
-    if (pointRegionClick != null) __obj.updateDynamic("pointRegionClick")(js.Any.fromFunction1(pointRegionClick))
-    if (pointRegionMouseMove != null) __obj.updateDynamic("pointRegionMouseMove")(js.Any.fromFunction1(pointRegionMouseMove))
-    if (points != null) __obj.updateDynamic("points")(points.asInstanceOf[js.Any])
-    if (preRender != null) __obj.updateDynamic("preRender")(js.Any.fromFunction1(preRender))
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
-    if (rightClick != null) __obj.updateDynamic("rightClick")(js.Any.fromFunction1(rightClick))
-    if (segmentBorder != null) __obj.updateDynamic("segmentBorder")(segmentBorder.asInstanceOf[js.Any])
-    if (segmentRendering != null) __obj.updateDynamic("segmentRendering")(js.Any.fromFunction1(segmentRendering))
-    if (selectionSettings != null) __obj.updateDynamic("selectionSettings")(selectionSettings.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (startAngle != null) __obj.updateDynamic("startAngle")(startAngle.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titleRendering != null) __obj.updateDynamic("titleRendering")(js.Any.fromFunction1(titleRendering))
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (tooltipInitialize != null) __obj.updateDynamic("tooltipInitialize")(js.Any.fromFunction1(tooltipInitialize))
-    if (valueMemberPath != null) __obj.updateDynamic("valueMemberPath")(valueMemberPath.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (xName != null) __obj.updateDynamic("xName")(xName.asInstanceOf[js.Any])
-    if (yName != null) __obj.updateDynamic("yName")(yName.asInstanceOf[js.Any])
-    if (zoomSettings != null) __obj.updateDynamic("zoomSettings")(zoomSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[Model]
   }
+  @scala.inline
+  implicit class ModelOps[Self <: Model] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClick(value: /* e */ ClickEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Click")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Click")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationType(value: Animation | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackground(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackground: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorder(value: Border): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataLabelRendering(value: /* e */ DataLabelRenderingEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabelRendering")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDataLabelRendering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabelRendering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataLabelSettings(value: DataLabelSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabelSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataLabelSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabelSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSource(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoubleClick(value: /* e */ DoubleClickEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDoubleClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrillDownBack(value: /* e */ DrillDownBackEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drillDownBack")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDrillDownBack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drillDownBack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrillDownClick(value: /* e */ DrillDownClickEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drillDownClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDrillDownClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drillDownClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrillDownReset(value: /* e */ DrillDownResetEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drillDownReset")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDrillDownReset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drillDownReset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableAnimation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighlightSettings(value: HighlightSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlightSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInnerRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInnerRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsResponsive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isResponsive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsResponsive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isResponsive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLegend(value: Legend): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevels(value: js.Array[Level]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoad(value: /* e */ LoadEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoaded(value: /* e */ LoadedEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loaded")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLoaded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loaded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: Margin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPalette(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("palette")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPalette: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("palette")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentNode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointRegionClick(value: /* e */ PointRegionClickEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointRegionClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPointRegionClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointRegionClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointRegionMouseMove(value: /* e */ PointRegionMouseMoveEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointRegionMouseMove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPointRegionMouseMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointRegionMouseMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoints(value: Points): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreRender(value: /* e */ PreRenderEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preRender")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPreRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRightClick(value: /* e */ RightClickEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRightClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentBorder(value: SegmentBorder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentBorder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentBorder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentBorder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentRendering(value: /* e */ SegmentRenderingEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentRendering")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSegmentRendering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentRendering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionSettings(value: SelectionSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectionSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTheme(value: SunburstTheme | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: Title): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleRendering(value: /* e */ TitleRenderingEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleRendering")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTitleRendering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleRendering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: Tooltip): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipInitialize(value: /* e */ TooltipInitializeEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipInitialize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTooltipInitialize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipInitialize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueMemberPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueMemberPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueMemberPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueMemberPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomSettings(value: ZoomSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomSettings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

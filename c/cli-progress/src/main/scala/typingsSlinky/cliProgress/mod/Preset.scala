@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Preset extends js.Object {
-  var barCompleteChar: String
-  var barIncompleteChar: String
+  var barCompleteChar: String = js.native
+  var barIncompleteChar: String = js.native
   /**
     *   Example: 'progress [{bar}] {percentage}% | ETA: {eta}s | {value}/{total}'
     *
@@ -27,15 +28,40 @@ trait Preset extends js.Object {
     * {duration_formatted} - elapsed time formatted into appropriate units
     *
     */
-  var format: String
+  var format: String = js.native
 }
 
 object Preset {
   @scala.inline
   def apply(barCompleteChar: String, barIncompleteChar: String, format: String): Preset = {
     val __obj = js.Dynamic.literal(barCompleteChar = barCompleteChar.asInstanceOf[js.Any], barIncompleteChar = barIncompleteChar.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Preset]
   }
+  @scala.inline
+  implicit class PresetOps[Self <: Preset] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBarCompleteChar(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barCompleteChar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBarIncompleteChar(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barIncompleteChar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

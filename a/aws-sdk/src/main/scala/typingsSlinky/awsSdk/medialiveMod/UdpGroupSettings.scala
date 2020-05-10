@@ -22,16 +22,53 @@ trait UdpGroupSettings extends js.Object {
 
 object UdpGroupSettings {
   @scala.inline
-  def apply(
-    InputLossAction: InputLossActionForUdpOut = null,
-    TimedMetadataId3Frame: UdpTimedMetadataId3Frame = null,
-    TimedMetadataId3Period: Int | Double = null
-  ): UdpGroupSettings = {
+  def apply(): UdpGroupSettings = {
     val __obj = js.Dynamic.literal()
-    if (InputLossAction != null) __obj.updateDynamic("InputLossAction")(InputLossAction.asInstanceOf[js.Any])
-    if (TimedMetadataId3Frame != null) __obj.updateDynamic("TimedMetadataId3Frame")(TimedMetadataId3Frame.asInstanceOf[js.Any])
-    if (TimedMetadataId3Period != null) __obj.updateDynamic("TimedMetadataId3Period")(TimedMetadataId3Period.asInstanceOf[js.Any])
     __obj.asInstanceOf[UdpGroupSettings]
   }
+  @scala.inline
+  implicit class UdpGroupSettingsOps[Self <: UdpGroupSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInputLossAction(value: InputLossActionForUdpOut): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputLossAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputLossAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputLossAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimedMetadataId3Frame(value: UdpTimedMetadataId3Frame): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataId3Frame")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimedMetadataId3Frame: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataId3Frame")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimedMetadataId3Period(value: integerMin0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataId3Period")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimedMetadataId3Period: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataId3Period")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

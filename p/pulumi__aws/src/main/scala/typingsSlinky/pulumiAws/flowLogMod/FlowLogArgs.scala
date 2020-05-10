@@ -29,6 +29,8 @@ trait FlowLogArgs extends js.Object {
   val logFormat: js.UndefOr[Input[String]] = js.native
   /**
     * *Deprecated:* Use `logDestination` instead. The name of the CloudWatch log group.
+    *
+    * @deprecated use 'log_destination' argument instead
     */
   val logGroupName: js.UndefOr[Input[String]] = js.native
   /**
@@ -47,27 +49,119 @@ trait FlowLogArgs extends js.Object {
 
 object FlowLogArgs {
   @scala.inline
-  def apply(
-    trafficType: Input[String],
-    eniId: Input[String] = null,
-    iamRoleArn: Input[String] = null,
-    logDestination: Input[String] = null,
-    logDestinationType: Input[String] = null,
-    logFormat: Input[String] = null,
-    logGroupName: Input[String] = null,
-    subnetId: Input[String] = null,
-    vpcId: Input[String] = null
-  ): FlowLogArgs = {
+  def apply(trafficType: Input[String]): FlowLogArgs = {
     val __obj = js.Dynamic.literal(trafficType = trafficType.asInstanceOf[js.Any])
-    if (eniId != null) __obj.updateDynamic("eniId")(eniId.asInstanceOf[js.Any])
-    if (iamRoleArn != null) __obj.updateDynamic("iamRoleArn")(iamRoleArn.asInstanceOf[js.Any])
-    if (logDestination != null) __obj.updateDynamic("logDestination")(logDestination.asInstanceOf[js.Any])
-    if (logDestinationType != null) __obj.updateDynamic("logDestinationType")(logDestinationType.asInstanceOf[js.Any])
-    if (logFormat != null) __obj.updateDynamic("logFormat")(logFormat.asInstanceOf[js.Any])
-    if (logGroupName != null) __obj.updateDynamic("logGroupName")(logGroupName.asInstanceOf[js.Any])
-    if (subnetId != null) __obj.updateDynamic("subnetId")(subnetId.asInstanceOf[js.Any])
-    if (vpcId != null) __obj.updateDynamic("vpcId")(vpcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlowLogArgs]
   }
+  @scala.inline
+  implicit class FlowLogArgsOps[Self <: FlowLogArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTrafficType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trafficType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEniId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eniId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEniId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eniId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIamRoleArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iamRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIamRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iamRoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogDestination(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logDestination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogDestination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logDestination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogDestinationType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logDestinationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogDestinationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logDestinationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogFormat(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogGroupName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logGroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

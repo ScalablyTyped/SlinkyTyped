@@ -16,18 +16,16 @@ trait PkgManagerCommand extends js.Object
 
 object PkgManagerCommand {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dedupe: typingsSlinky.ionic.ionicStrings.dedupe = "dedupe".asInstanceOf[typingsSlinky.ionic.ionicStrings.dedupe]
   @scala.inline
-  def dedupe: typingsSlinky.ionic.ionicStrings.dedupe = this.cast("dedupe")
+  def info: typingsSlinky.ionic.ionicStrings.info = "info".asInstanceOf[typingsSlinky.ionic.ionicStrings.info]
   @scala.inline
-  def info: typingsSlinky.ionic.ionicStrings.info = this.cast("info")
+  def install: typingsSlinky.ionic.ionicStrings.install = "install".asInstanceOf[typingsSlinky.ionic.ionicStrings.install]
   @scala.inline
-  def install: typingsSlinky.ionic.ionicStrings.install = this.cast("install")
+  def rebuild: typingsSlinky.ionic.ionicStrings.rebuild = "rebuild".asInstanceOf[typingsSlinky.ionic.ionicStrings.rebuild]
   @scala.inline
-  def rebuild: typingsSlinky.ionic.ionicStrings.rebuild = this.cast("rebuild")
+  def run: typingsSlinky.ionic.ionicStrings.run = "run".asInstanceOf[typingsSlinky.ionic.ionicStrings.run]
   @scala.inline
-  def run: typingsSlinky.ionic.ionicStrings.run = this.cast("run")
-  @scala.inline
-  def uninstall: typingsSlinky.ionic.ionicStrings.uninstall = this.cast("uninstall")
+  def uninstall: typingsSlinky.ionic.ionicStrings.uninstall = "uninstall".asInstanceOf[typingsSlinky.ionic.ionicStrings.uninstall]
 }
 

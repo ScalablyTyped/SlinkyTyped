@@ -38,21 +38,78 @@ trait AnalyzerSummary extends js.Object {
 
 object AnalyzerSummary {
   @scala.inline
-  def apply(
-    arn: AnalyzerArn,
-    createdAt: js.Date,
-    name: Name,
-    `type`: Type,
-    lastResourceAnalyzed: String = null,
-    lastResourceAnalyzedAt: js.Date = null,
-    tags: TagsMap = null
-  ): AnalyzerSummary = {
+  def apply(arn: AnalyzerArn, createdAt: js.Date, name: Name, `type`: Type): AnalyzerSummary = {
     val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any], createdAt = createdAt.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (lastResourceAnalyzed != null) __obj.updateDynamic("lastResourceAnalyzed")(lastResourceAnalyzed.asInstanceOf[js.Any])
-    if (lastResourceAnalyzedAt != null) __obj.updateDynamic("lastResourceAnalyzedAt")(lastResourceAnalyzedAt.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalyzerSummary]
   }
+  @scala.inline
+  implicit class AnalyzerSummaryOps[Self <: AnalyzerSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: AnalyzerArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreatedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: Type): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLastResourceAnalyzed(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastResourceAnalyzed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastResourceAnalyzed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastResourceAnalyzed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastResourceAnalyzedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastResourceAnalyzedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastResourceAnalyzedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastResourceAnalyzedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagsMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

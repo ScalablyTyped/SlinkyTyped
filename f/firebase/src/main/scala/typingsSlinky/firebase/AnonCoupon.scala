@@ -6,30 +6,76 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCoupon
   extends /* key */ StringDictionary[js.Any] {
-  var coupon: js.UndefOr[String] = js.undefined
-  var currency: js.UndefOr[String] = js.undefined
-  var items: js.UndefOr[js.Array[Item]] = js.undefined
-  var value: js.UndefOr[Double] = js.undefined
+  var coupon: js.UndefOr[String] = js.native
+  var currency: js.UndefOr[String] = js.native
+  var items: js.UndefOr[js.Array[Item]] = js.native
+  var value: js.UndefOr[Double] = js.native
 }
 
 object AnonCoupon {
   @scala.inline
-  def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    coupon: String = null,
-    currency: String = null,
-    items: js.Array[Item] = null,
-    value: Int | Double = null
-  ): AnonCoupon = {
+  def apply(): AnonCoupon = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (coupon != null) __obj.updateDynamic("coupon")(coupon.asInstanceOf[js.Any])
-    if (currency != null) __obj.updateDynamic("currency")(currency.asInstanceOf[js.Any])
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCoupon]
   }
+  @scala.inline
+  implicit class AnonCouponOps[Self <: AnonCoupon] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCoupon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coupon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoupon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coupon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrency(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItems(value: js.Array[Item]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

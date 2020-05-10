@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonColorString extends js.Object {
   /**
     * The color of a node. It use global palette
@@ -13,15 +14,34 @@ trait AnonColorString extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.data.emphasis.itemStyle.color
     */
-  var color: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[String] = js.native
 }
 
 object AnonColorString {
   @scala.inline
-  def apply(color: String = null): AnonColorString = {
+  def apply(): AnonColorString = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonColorString]
   }
+  @scala.inline
+  implicit class AnonColorStringOps[Self <: AnonColorString] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

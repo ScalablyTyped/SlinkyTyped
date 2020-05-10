@@ -13,12 +13,10 @@ trait DirectionType extends js.Object
 
 object DirectionType {
   @scala.inline
-  def bottom: typingsSlinky.dplayer.dplayerStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.dplayer.dplayerStrings.bottom = "bottom".asInstanceOf[typingsSlinky.dplayer.dplayerStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def right: typingsSlinky.dplayer.dplayerStrings.right = "right".asInstanceOf[typingsSlinky.dplayer.dplayerStrings.right]
   @scala.inline
-  def right: typingsSlinky.dplayer.dplayerStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.dplayer.dplayerStrings.top = this.cast("top")
+  def top: typingsSlinky.dplayer.dplayerStrings.top = "top".asInstanceOf[typingsSlinky.dplayer.dplayerStrings.top]
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.amapJsApi.AMap
 
-import typingsSlinky.std.HTMLVideoElement
+import org.scalajs.dom.raw.HTMLVideoElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

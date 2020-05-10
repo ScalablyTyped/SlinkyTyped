@@ -6,17 +6,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GetActionsRequestedEventOptions extends RequestedEventOptions {
   /** The path of the entry to which this operation is related to. */
-  var entryPaths: js.Array[String]
+  var entryPaths: js.Array[String] = js.native
 }
 
 object GetActionsRequestedEventOptions {
   @scala.inline
   def apply(entryPaths: js.Array[String], fileSystemId: String, requestId: integer): GetActionsRequestedEventOptions = {
     val __obj = js.Dynamic.literal(entryPaths = entryPaths.asInstanceOf[js.Any], fileSystemId = fileSystemId.asInstanceOf[js.Any], requestId = requestId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetActionsRequestedEventOptions]
   }
+  @scala.inline
+  implicit class GetActionsRequestedEventOptionsOps[Self <: GetActionsRequestedEventOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntryPaths(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entryPaths")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

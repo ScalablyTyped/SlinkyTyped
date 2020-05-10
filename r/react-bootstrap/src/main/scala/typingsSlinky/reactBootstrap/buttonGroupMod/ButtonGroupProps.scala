@@ -7,39 +7,103 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ButtonGroupProps
   extends AllHTMLAttributes[ButtonGroup]
      with ClassAttributes[ButtonGroup] {
-  var block: js.UndefOr[Boolean] = js.undefined
-  var bsClass: js.UndefOr[String] = js.undefined
-  var bsSize: js.UndefOr[Sizes] = js.undefined
-  var bsStyle: js.UndefOr[String] = js.undefined
-  var justified: js.UndefOr[Boolean] = js.undefined
-  var vertical: js.UndefOr[Boolean] = js.undefined
+  var block: js.UndefOr[Boolean] = js.native
+  var bsClass: js.UndefOr[String] = js.native
+  var bsSize: js.UndefOr[Sizes] = js.native
+  var bsStyle: js.UndefOr[String] = js.native
+  var justified: js.UndefOr[Boolean] = js.native
+  var vertical: js.UndefOr[Boolean] = js.native
 }
 
 object ButtonGroupProps {
   @scala.inline
-  def apply(
-    AllHTMLAttributes: AllHTMLAttributes[ButtonGroup] = null,
-    ClassAttributes: ClassAttributes[ButtonGroup] = null,
-    block: js.UndefOr[Boolean] = js.undefined,
-    bsClass: String = null,
-    bsSize: Sizes = null,
-    bsStyle: String = null,
-    justified: js.UndefOr[Boolean] = js.undefined,
-    vertical: js.UndefOr[Boolean] = js.undefined
-  ): ButtonGroupProps = {
+  def apply(): ButtonGroupProps = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
-    if (!js.isUndefined(block)) __obj.updateDynamic("block")(block.asInstanceOf[js.Any])
-    if (bsClass != null) __obj.updateDynamic("bsClass")(bsClass.asInstanceOf[js.Any])
-    if (bsSize != null) __obj.updateDynamic("bsSize")(bsSize.asInstanceOf[js.Any])
-    if (bsStyle != null) __obj.updateDynamic("bsStyle")(bsStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(justified)) __obj.updateDynamic("justified")(justified.asInstanceOf[js.Any])
-    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
     __obj.asInstanceOf[ButtonGroupProps]
   }
+  @scala.inline
+  implicit class ButtonGroupPropsOps[Self <: ButtonGroupProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlock(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("block")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("block")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBsClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBsClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBsSize(value: Sizes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBsSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBsStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBsStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJustified(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("justified")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJustified: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("justified")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVertical(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVertical: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

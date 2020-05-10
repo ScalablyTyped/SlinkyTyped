@@ -18,11 +18,41 @@ trait ServiceDiscovery extends js.Object {
 
 object ServiceDiscovery {
   @scala.inline
-  def apply(awsCloudMap: AwsCloudMapServiceDiscovery = null, dns: DnsServiceDiscovery = null): ServiceDiscovery = {
+  def apply(): ServiceDiscovery = {
     val __obj = js.Dynamic.literal()
-    if (awsCloudMap != null) __obj.updateDynamic("awsCloudMap")(awsCloudMap.asInstanceOf[js.Any])
-    if (dns != null) __obj.updateDynamic("dns")(dns.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceDiscovery]
   }
+  @scala.inline
+  implicit class ServiceDiscoveryOps[Self <: ServiceDiscovery] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAwsCloudMap(value: AwsCloudMapServiceDiscovery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsCloudMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsCloudMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsCloudMap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDns(value: DnsServiceDiscovery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

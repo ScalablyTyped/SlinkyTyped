@@ -49,32 +49,149 @@ trait CreateChannelRequest extends js.Object {
 
 object CreateChannelRequest {
   @scala.inline
-  def apply(
-    ChannelClass: ChannelClass = null,
-    Destinations: listOfOutputDestination = null,
-    EncoderSettings: EncoderSettings = null,
-    InputAttachments: listOfInputAttachment = null,
-    InputSpecification: InputSpecification = null,
-    LogLevel: LogLevel = null,
-    Name: string = null,
-    RequestId: string = null,
-    Reserved: string = null,
-    RoleArn: string = null,
-    Tags: Tags = null
-  ): CreateChannelRequest = {
+  def apply(): CreateChannelRequest = {
     val __obj = js.Dynamic.literal()
-    if (ChannelClass != null) __obj.updateDynamic("ChannelClass")(ChannelClass.asInstanceOf[js.Any])
-    if (Destinations != null) __obj.updateDynamic("Destinations")(Destinations.asInstanceOf[js.Any])
-    if (EncoderSettings != null) __obj.updateDynamic("EncoderSettings")(EncoderSettings.asInstanceOf[js.Any])
-    if (InputAttachments != null) __obj.updateDynamic("InputAttachments")(InputAttachments.asInstanceOf[js.Any])
-    if (InputSpecification != null) __obj.updateDynamic("InputSpecification")(InputSpecification.asInstanceOf[js.Any])
-    if (LogLevel != null) __obj.updateDynamic("LogLevel")(LogLevel.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (RequestId != null) __obj.updateDynamic("RequestId")(RequestId.asInstanceOf[js.Any])
-    if (Reserved != null) __obj.updateDynamic("Reserved")(Reserved.asInstanceOf[js.Any])
-    if (RoleArn != null) __obj.updateDynamic("RoleArn")(RoleArn.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateChannelRequest]
   }
+  @scala.inline
+  implicit class CreateChannelRequestOps[Self <: CreateChannelRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChannelClass(value: ChannelClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannelClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinations(value: listOfOutputDestination): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Destinations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Destinations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncoderSettings(value: EncoderSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncoderSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncoderSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncoderSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputAttachments(value: listOfInputAttachment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputAttachments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputAttachments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputAttachments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputSpecification(value: InputSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputSpecification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogLevel(value: LogLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReserved(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reserved")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReserved: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reserved")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

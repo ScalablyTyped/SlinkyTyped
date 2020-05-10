@@ -87,40 +87,197 @@ trait SchemaProduct extends js.Object {
 
 object SchemaProduct {
   @scala.inline
-  def apply(
-    availableEndTime: String = null,
-    availableStartTime: String = null,
-    createTime: String = null,
-    creatorContacts: js.Array[SchemaContactInformation] = null,
-    displayName: String = null,
-    hasCreatorSignedOff: js.UndefOr[Boolean] = js.undefined,
-    productId: String = null,
-    productRevision: String = null,
-    publisherProfileId: String = null,
-    seller: SchemaSeller = null,
-    syndicationProduct: String = null,
-    targetingCriterion: js.Array[SchemaTargetingCriteria] = null,
-    terms: SchemaDealTerms = null,
-    updateTime: String = null,
-    webPropertyCode: String = null
-  ): SchemaProduct = {
+  def apply(): SchemaProduct = {
     val __obj = js.Dynamic.literal()
-    if (availableEndTime != null) __obj.updateDynamic("availableEndTime")(availableEndTime.asInstanceOf[js.Any])
-    if (availableStartTime != null) __obj.updateDynamic("availableStartTime")(availableStartTime.asInstanceOf[js.Any])
-    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
-    if (creatorContacts != null) __obj.updateDynamic("creatorContacts")(creatorContacts.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasCreatorSignedOff)) __obj.updateDynamic("hasCreatorSignedOff")(hasCreatorSignedOff.asInstanceOf[js.Any])
-    if (productId != null) __obj.updateDynamic("productId")(productId.asInstanceOf[js.Any])
-    if (productRevision != null) __obj.updateDynamic("productRevision")(productRevision.asInstanceOf[js.Any])
-    if (publisherProfileId != null) __obj.updateDynamic("publisherProfileId")(publisherProfileId.asInstanceOf[js.Any])
-    if (seller != null) __obj.updateDynamic("seller")(seller.asInstanceOf[js.Any])
-    if (syndicationProduct != null) __obj.updateDynamic("syndicationProduct")(syndicationProduct.asInstanceOf[js.Any])
-    if (targetingCriterion != null) __obj.updateDynamic("targetingCriterion")(targetingCriterion.asInstanceOf[js.Any])
-    if (terms != null) __obj.updateDynamic("terms")(terms.asInstanceOf[js.Any])
-    if (updateTime != null) __obj.updateDynamic("updateTime")(updateTime.asInstanceOf[js.Any])
-    if (webPropertyCode != null) __obj.updateDynamic("webPropertyCode")(webPropertyCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProduct]
   }
+  @scala.inline
+  implicit class SchemaProductOps[Self <: SchemaProduct] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailableEndTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availableEndTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailableEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availableEndTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailableStartTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availableStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailableStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availableStartTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatorContacts(value: js.Array[SchemaContactInformation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creatorContacts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatorContacts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creatorContacts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasCreatorSignedOff(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasCreatorSignedOff")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasCreatorSignedOff: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasCreatorSignedOff")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductRevision(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productRevision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductRevision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productRevision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublisherProfileId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherProfileId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublisherProfileId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherProfileId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeller(value: SchemaSeller): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeller: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seller")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSyndicationProduct(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syndicationProduct")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSyndicationProduct: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syndicationProduct")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetingCriterion(value: js.Array[SchemaTargetingCriteria]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetingCriterion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetingCriterion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetingCriterion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerms(value: SchemaDealTerms): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebPropertyCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebPropertyCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

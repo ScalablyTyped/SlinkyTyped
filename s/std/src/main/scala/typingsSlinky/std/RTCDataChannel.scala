@@ -119,7 +119,7 @@ trait RTCDataChannel extends EventTarget {
   def removeEventListener_bufferedamountlow(
     `type`: bufferedamountlow,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_close(
@@ -136,7 +136,7 @@ trait RTCDataChannel extends EventTarget {
   def removeEventListener_close(
     `type`: typingsSlinky.std.stdStrings.close,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ this.type, /* ev */ RTCErrorEvent, _]): Unit = js.native
@@ -150,7 +150,7 @@ trait RTCDataChannel extends EventTarget {
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ RTCErrorEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_message(
@@ -167,7 +167,7 @@ trait RTCDataChannel extends EventTarget {
   def removeEventListener_message(
     `type`: message,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_open(
@@ -184,15 +184,16 @@ trait RTCDataChannel extends EventTarget {
   def removeEventListener_open(
     `type`: typingsSlinky.std.stdStrings.open,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def send(data: java.lang.String): Unit = js.native
-  def send(data: ArrayBuffer): Unit = js.native
-  def send(data: ArrayBufferView): Unit = js.native
-  def send(data: Blob): Unit = js.native
+  def send(data: js.typedarray.ArrayBuffer): Unit = js.native
+  def send(data: js.typedarray.ArrayBufferView): Unit = js.native
+  def send(data: org.scalajs.dom.raw.Blob): Unit = js.native
 }
 
 @JSGlobal("RTCDataChannel")
 @js.native
-object RTCDataChannel extends Instantiable0[RTCDataChannel]
+object RTCDataChannel
+  extends Instantiable0[org.scalajs.dom.experimental.webrtc.RTCDataChannel]
 

@@ -11,71 +11,72 @@ import scala.scalajs.js.annotation._
   * The User object contains info about a user. The Live Connect REST API
   * supports reading User objects.
   */
+@js.native
 trait IUser extends js.Object {
   /**
     * The user's postal addresses.
     */
-  var addresses: AnonPersonal
+  var addresses: AnonPersonal = js.native
   /**
     * The day of the user's birth date, or null if no birth date is
     * specified.
     */
-  var birth_day: Double
+  var birth_day: Double = js.native
   /**
     * The month of the user's birth date, or null if no birth date is
     * specified.
     */
-  var birth_month: Double
+  var birth_month: Double = js.native
   /**
     * The year of the user's birth date, or null if no birth date is
     * specified.
     */
-  var birth_year: Double
+  var birth_year: Double = js.native
   /**
     * The user's email addresses.
     */
-  var emails: AnonAccount
+  var emails: AnonAccount = js.native
   /**
     * The user's first name.
     */
-  var first_name: String
+  var first_name: String = js.native
   /**
     * The user's gender, or null if no gender is specified.
     */
-  var gender: String
+  var gender: String = js.native
   /**
     * The user's ID.
     */
-  var id: String
+  var id: String = js.native
   /**
     * The user's last name.
     */
-  var last_name: String
+  var last_name: String = js.native
   /**
     * The URL of the user's profile page.
     */
-  var link: String
+  var link: String = js.native
   /**
     * The user's locale code.
     */
-  var locale: String
+  var locale: String = js.native
   /**
     * The user's full name.
     */
-  var name: String
+  var name: String = js.native
   /**
     * The user's phone numbers.
     */
-  var phones: AnonMobile
+  var phones: AnonMobile = js.native
   /**
     * The time, in ISO 8601 format, at which the user last updated the
     * object.
     */
-  var updated_time: String
+  var updated_time: String = js.native
   /**
     * An array that contains the user's work info.
     */
-  var work: js.Array[IWorkInfo]
+  var work: js.Array[IWorkInfo] = js.native
 }
 
 object IUser {
@@ -98,8 +99,105 @@ object IUser {
     work: js.Array[IWorkInfo]
   ): IUser = {
     val __obj = js.Dynamic.literal(addresses = addresses.asInstanceOf[js.Any], birth_day = birth_day.asInstanceOf[js.Any], birth_month = birth_month.asInstanceOf[js.Any], birth_year = birth_year.asInstanceOf[js.Any], emails = emails.asInstanceOf[js.Any], first_name = first_name.asInstanceOf[js.Any], gender = gender.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], last_name = last_name.asInstanceOf[js.Any], link = link.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], phones = phones.asInstanceOf[js.Any], updated_time = updated_time.asInstanceOf[js.Any], work = work.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IUser]
   }
+  @scala.inline
+  implicit class IUserOps[Self <: IUser] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddresses(value: AnonPersonal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBirth_day(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("birth_day")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBirth_month(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("birth_month")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBirth_year(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("birth_year")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmails(value: AnonAccount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFirst_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("first_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGender(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLast_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("last_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPhones(value: AnonMobile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("phones")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdated_time(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWork(value: js.Array[IWorkInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("work")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

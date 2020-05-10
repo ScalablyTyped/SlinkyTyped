@@ -26,16 +26,53 @@ trait DownloadDBLogFilePortionMessage extends js.Object {
 
 object DownloadDBLogFilePortionMessage {
   @scala.inline
-  def apply(
-    DBInstanceIdentifier: String,
-    LogFileName: String,
-    Marker: String = null,
-    NumberOfLines: Int | scala.Double = null
-  ): DownloadDBLogFilePortionMessage = {
+  def apply(DBInstanceIdentifier: String, LogFileName: String): DownloadDBLogFilePortionMessage = {
     val __obj = js.Dynamic.literal(DBInstanceIdentifier = DBInstanceIdentifier.asInstanceOf[js.Any], LogFileName = LogFileName.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (NumberOfLines != null) __obj.updateDynamic("NumberOfLines")(NumberOfLines.asInstanceOf[js.Any])
     __obj.asInstanceOf[DownloadDBLogFilePortionMessage]
   }
+  @scala.inline
+  implicit class DownloadDBLogFilePortionMessageOps[Self <: DownloadDBLogFilePortionMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDBInstanceIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstanceIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLogFileName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogFileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMarker(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfLines(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfLines")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkClientPinpointBrowser
 
+import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientPinpointBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientPinpointBrowser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientPinpointBrowser.pinpointConfigurationMod.PinpointResolvedConfiguration
@@ -8,7 +9,6 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesCreateImportJobOutputMod.C
 import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.std.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,16 +26,9 @@ object createImportJobCommandMod extends js.Object {
           Blob
         ] {
     def this(input: CreateImportJobInput) = this()
-    /* CompleteClass */
-    override val input: CreateImportJobInput = js.native
-    val middlewareStack: MiddlewareStack[CreateImportJobInput, CreateImportJobOutput, org.scalajs.dom.raw.Blob] = js.native
+    val middlewareStack: MiddlewareStack[CreateImportJobInput, CreateImportJobOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
-      configuration: PinpointResolvedConfiguration
-    ): Handler[CreateImportJobInput, CreateImportJobOutput] = js.native
-    /* CompleteClass */
-    override def resolveMiddleware(
-      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[CreateImportJobInput, CreateImportJobOutput] = js.native
   }

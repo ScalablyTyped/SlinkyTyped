@@ -32,6 +32,7 @@ import typingsSlinky.awsSdkClientCodecommitNode.updateDefaultBranchExceptionsUni
 import typingsSlinky.awsSdkClientCodecommitNode.updatePullRequestStatusExceptionsUnionMod.UpdatePullRequestStatusExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.updateRepositoryDescriptionExceptionsUnionMod.UpdateRepositoryDescriptionExceptionsUnion
 import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,5 +73,34 @@ trait EncryptionIntegrityChecksFailedException
      with UpdateRepositoryDescriptionExceptionsUnion {
   @JSName("name")
   var name_EncryptionIntegrityChecksFailedException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.EncryptionIntegrityChecksFailedException = js.native
+}
+
+object EncryptionIntegrityChecksFailedException {
+  @scala.inline
+  def apply(
+    $metadata: ResponseMetadata,
+    details: EncryptionIntegrityChecksFailedExceptionDetails,
+    message: String,
+    name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.EncryptionIntegrityChecksFailedException
+  ): EncryptionIntegrityChecksFailedException = {
+    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EncryptionIntegrityChecksFailedException]
+  }
+  @scala.inline
+  implicit class EncryptionIntegrityChecksFailedExceptionOps[Self <: EncryptionIntegrityChecksFailedException] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(
+      value: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.EncryptionIntegrityChecksFailedException
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

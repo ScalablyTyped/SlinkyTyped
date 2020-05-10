@@ -6,45 +6,153 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PackerOptions extends js.Object {
-  var bgColor: js.UndefOr[AnonBlue] = js.undefined
-  var bitDepth: js.UndefOr[BitDepth] = js.undefined
-  var colorType: js.UndefOr[ColorType] = js.undefined
-  var deflateChunkSize: js.UndefOr[Double] = js.undefined
-  var deflateFactory: js.UndefOr[FnCall] = js.undefined
-  var deflateLevel: js.UndefOr[Double] = js.undefined
-  var deflateStrategy: js.UndefOr[Double] = js.undefined
-  var filterType: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var inputColorType: js.UndefOr[ColorType] = js.undefined
-  var inputHasAlpha: js.UndefOr[Boolean] = js.undefined
+  var bgColor: js.UndefOr[AnonBlue] = js.native
+  var bitDepth: js.UndefOr[BitDepth] = js.native
+  var colorType: js.UndefOr[ColorType] = js.native
+  var deflateChunkSize: js.UndefOr[Double] = js.native
+  var deflateFactory: js.UndefOr[FnCall] = js.native
+  var deflateLevel: js.UndefOr[Double] = js.native
+  var deflateStrategy: js.UndefOr[Double] = js.native
+  var filterType: js.UndefOr[Double | js.Array[Double]] = js.native
+  var inputColorType: js.UndefOr[ColorType] = js.native
+  var inputHasAlpha: js.UndefOr[Boolean] = js.native
 }
 
 object PackerOptions {
   @scala.inline
-  def apply(
-    bgColor: AnonBlue = null,
-    bitDepth: BitDepth = null,
-    colorType: ColorType = null,
-    deflateChunkSize: Int | Double = null,
-    deflateFactory: FnCall = null,
-    deflateLevel: Int | Double = null,
-    deflateStrategy: Int | Double = null,
-    filterType: Double | js.Array[Double] = null,
-    inputColorType: ColorType = null,
-    inputHasAlpha: js.UndefOr[Boolean] = js.undefined
-  ): PackerOptions = {
+  def apply(): PackerOptions = {
     val __obj = js.Dynamic.literal()
-    if (bgColor != null) __obj.updateDynamic("bgColor")(bgColor.asInstanceOf[js.Any])
-    if (bitDepth != null) __obj.updateDynamic("bitDepth")(bitDepth.asInstanceOf[js.Any])
-    if (colorType != null) __obj.updateDynamic("colorType")(colorType.asInstanceOf[js.Any])
-    if (deflateChunkSize != null) __obj.updateDynamic("deflateChunkSize")(deflateChunkSize.asInstanceOf[js.Any])
-    if (deflateFactory != null) __obj.updateDynamic("deflateFactory")(deflateFactory.asInstanceOf[js.Any])
-    if (deflateLevel != null) __obj.updateDynamic("deflateLevel")(deflateLevel.asInstanceOf[js.Any])
-    if (deflateStrategy != null) __obj.updateDynamic("deflateStrategy")(deflateStrategy.asInstanceOf[js.Any])
-    if (filterType != null) __obj.updateDynamic("filterType")(filterType.asInstanceOf[js.Any])
-    if (inputColorType != null) __obj.updateDynamic("inputColorType")(inputColorType.asInstanceOf[js.Any])
-    if (!js.isUndefined(inputHasAlpha)) __obj.updateDynamic("inputHasAlpha")(inputHasAlpha.asInstanceOf[js.Any])
     __obj.asInstanceOf[PackerOptions]
   }
+  @scala.inline
+  implicit class PackerOptionsOps[Self <: PackerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBgColor(value: AnonBlue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bgColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBgColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bgColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBitDepth(value: BitDepth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBitDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitDepth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorType(value: ColorType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeflateChunkSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deflateChunkSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeflateChunkSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deflateChunkSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeflateFactory(value: FnCall): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deflateFactory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeflateFactory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deflateFactory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeflateLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deflateLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeflateLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deflateLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeflateStrategy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deflateStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeflateStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deflateStrategy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterType(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputColorType(value: ColorType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputColorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputColorType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputColorType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputHasAlpha(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputHasAlpha")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputHasAlpha: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputHasAlpha")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

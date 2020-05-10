@@ -20,8 +20,27 @@ object PutInsightSelectorsRequest {
   @scala.inline
   def apply(InsightSelectors: InsightSelectors, TrailName: String): PutInsightSelectorsRequest = {
     val __obj = js.Dynamic.literal(InsightSelectors = InsightSelectors.asInstanceOf[js.Any], TrailName = TrailName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PutInsightSelectorsRequest]
   }
+  @scala.inline
+  implicit class PutInsightSelectorsRequestOps[Self <: PutInsightSelectorsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInsightSelectors(value: InsightSelectors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InsightSelectors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrailName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrailName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

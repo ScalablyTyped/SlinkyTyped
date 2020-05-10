@@ -14,14 +14,12 @@ trait uTemperature extends js.Object
 
 object uTemperature {
   @scala.inline
-  def C: typingsSlinky.convertUnits.convertUnitsStrings.C = this.cast("C")
+  def C: typingsSlinky.convertUnits.convertUnitsStrings.C = "C".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.C]
   @scala.inline
-  def F: typingsSlinky.convertUnits.convertUnitsStrings.F = this.cast("F")
+  def F: typingsSlinky.convertUnits.convertUnitsStrings.F = "F".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.F]
   @scala.inline
-  def K: typingsSlinky.convertUnits.convertUnitsStrings.K = this.cast("K")
+  def K: typingsSlinky.convertUnits.convertUnitsStrings.K = "K".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.K]
   @scala.inline
-  def R: typingsSlinky.convertUnits.convertUnitsStrings.R = this.cast("R")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def R: typingsSlinky.convertUnits.convertUnitsStrings.R = "R".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.R]
 }
 

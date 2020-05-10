@@ -16,10 +16,10 @@ object lang extends js.Object {
     callback: js.Function2[/* code */ String, /* entries */ js.Any, Unit]
   ): Unit = js.native
   @js.native
-  object languages extends /* code */ StringDictionary[Double]
+  object languages extends /* pri */ StringDictionary[Double]
   
   @js.native
-  object rtl extends /* code */ StringDictionary[Double]
+  object rtl extends /* pri */ StringDictionary[Double]
   
 }
 

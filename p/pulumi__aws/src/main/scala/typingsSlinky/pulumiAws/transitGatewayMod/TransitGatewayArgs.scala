@@ -44,26 +44,113 @@ trait TransitGatewayArgs extends js.Object {
 
 object TransitGatewayArgs {
   @scala.inline
-  def apply(
-    amazonSideAsn: Input[Double] = null,
-    autoAcceptSharedAttachments: Input[String] = null,
-    defaultRouteTableAssociation: Input[String] = null,
-    defaultRouteTablePropagation: Input[String] = null,
-    description: Input[String] = null,
-    dnsSupport: Input[String] = null,
-    tags: Input[StringDictionary[_]] = null,
-    vpnEcmpSupport: Input[String] = null
-  ): TransitGatewayArgs = {
+  def apply(): TransitGatewayArgs = {
     val __obj = js.Dynamic.literal()
-    if (amazonSideAsn != null) __obj.updateDynamic("amazonSideAsn")(amazonSideAsn.asInstanceOf[js.Any])
-    if (autoAcceptSharedAttachments != null) __obj.updateDynamic("autoAcceptSharedAttachments")(autoAcceptSharedAttachments.asInstanceOf[js.Any])
-    if (defaultRouteTableAssociation != null) __obj.updateDynamic("defaultRouteTableAssociation")(defaultRouteTableAssociation.asInstanceOf[js.Any])
-    if (defaultRouteTablePropagation != null) __obj.updateDynamic("defaultRouteTablePropagation")(defaultRouteTablePropagation.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (dnsSupport != null) __obj.updateDynamic("dnsSupport")(dnsSupport.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (vpnEcmpSupport != null) __obj.updateDynamic("vpnEcmpSupport")(vpnEcmpSupport.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransitGatewayArgs]
   }
+  @scala.inline
+  implicit class TransitGatewayArgsOps[Self <: TransitGatewayArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAmazonSideAsn(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amazonSideAsn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmazonSideAsn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amazonSideAsn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoAcceptSharedAttachments(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAcceptSharedAttachments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoAcceptSharedAttachments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAcceptSharedAttachments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultRouteTableAssociation(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRouteTableAssociation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultRouteTableAssociation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRouteTableAssociation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultRouteTablePropagation(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRouteTablePropagation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultRouteTablePropagation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRouteTablePropagation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDnsSupport(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsSupport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDnsSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsSupport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpnEcmpSupport(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpnEcmpSupport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpnEcmpSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpnEcmpSupport")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,10 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ICoreImmersiveApplication extends js.Object {
-  var mainView: CoreApplicationView
-  var views: IVectorView[CoreApplicationView]
-  def createNewView(runtimeType: String, entryPoint: String): CoreApplicationView
+  var mainView: CoreApplicationView = js.native
+  var views: IVectorView[CoreApplicationView] = js.native
+  def createNewView(runtimeType: String, entryPoint: String): CoreApplicationView = js.native
 }
 
 object ICoreImmersiveApplication {
@@ -19,8 +20,33 @@ object ICoreImmersiveApplication {
     views: IVectorView[CoreApplicationView]
   ): ICoreImmersiveApplication = {
     val __obj = js.Dynamic.literal(createNewView = js.Any.fromFunction2(createNewView), mainView = mainView.asInstanceOf[js.Any], views = views.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ICoreImmersiveApplication]
   }
+  @scala.inline
+  implicit class ICoreImmersiveApplicationOps[Self <: ICoreImmersiveApplication] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateNewView(value: (String, String) => CoreApplicationView): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createNewView")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withMainView(value: CoreApplicationView): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mainView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withViews(value: IVectorView[CoreApplicationView]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

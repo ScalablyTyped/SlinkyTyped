@@ -33,20 +33,77 @@ trait SchemaAccountAddress extends js.Object {
 
 object SchemaAccountAddress {
   @scala.inline
-  def apply(
-    country: String = null,
-    locality: String = null,
-    postalCode: String = null,
-    region: String = null,
-    streetAddress: String = null
-  ): SchemaAccountAddress = {
+  def apply(): SchemaAccountAddress = {
     val __obj = js.Dynamic.literal()
-    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
-    if (locality != null) __obj.updateDynamic("locality")(locality.asInstanceOf[js.Any])
-    if (postalCode != null) __obj.updateDynamic("postalCode")(postalCode.asInstanceOf[js.Any])
-    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
-    if (streetAddress != null) __obj.updateDynamic("streetAddress")(streetAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAccountAddress]
   }
+  @scala.inline
+  implicit class SchemaAccountAddressOps[Self <: SchemaAccountAddress] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCountry(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocality(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocality: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locality")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostalCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostalCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreetAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streetAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreetAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streetAddress")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

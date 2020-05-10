@@ -1,11 +1,9 @@
 package typingsSlinky.reactLazyLoadImageComponent.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactLazyLoadImageComponent.mod.DelayMethod
 import typingsSlinky.reactLazyLoadImageComponent.mod.LazyLoadComponentProps
 import typingsSlinky.reactLazyLoadImageComponent.mod.ScrollPosition
@@ -13,40 +11,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LazyLoadComponent
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object LazyLoadComponent {
   @JSImport("react-lazy-load-image-component", "LazyLoadComponent")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: style */
-  def apply(
-    afterLoad: () => _ = null,
-    beforeLoad: () => _ = null,
-    delayMethod: DelayMethod = null,
-    delayTime: Int | Double = null,
-    placeholder: ReactElement = null,
-    scrollPosition: ScrollPosition = null,
-    threshold: Int | Double = null,
-    useIntersectionObserver: js.UndefOr[Boolean] = js.undefined,
-    visibleByDefault: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (afterLoad != null) __obj.updateDynamic("afterLoad")(js.Any.fromFunction0(afterLoad))
-    if (beforeLoad != null) __obj.updateDynamic("beforeLoad")(js.Any.fromFunction0(beforeLoad))
-    if (delayMethod != null) __obj.updateDynamic("delayMethod")(delayMethod.asInstanceOf[js.Any])
-    if (delayTime != null) __obj.updateDynamic("delayTime")(delayTime.asInstanceOf[js.Any])
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (scrollPosition != null) __obj.updateDynamic("scrollPosition")(scrollPosition.asInstanceOf[js.Any])
-    if (threshold != null) __obj.updateDynamic("threshold")(threshold.asInstanceOf[js.Any])
-    if (!js.isUndefined(useIntersectionObserver)) __obj.updateDynamic("useIntersectionObserver")(useIntersectionObserver.asInstanceOf[js.Any])
-    if (!js.isUndefined(visibleByDefault)) __obj.updateDynamic("visibleByDefault")(visibleByDefault.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def afterLoad(value: () => _): this.type = set("afterLoad", js.Any.fromFunction0(value))
+    @scala.inline
+    def beforeLoad(value: () => _): this.type = set("beforeLoad", js.Any.fromFunction0(value))
+    @scala.inline
+    def delayMethod(value: DelayMethod): this.type = set("delayMethod", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delayTime(value: Double): this.type = set("delayTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholderNull: this.type = set("placeholder", null)
+    @scala.inline
+    def scrollPosition(value: ScrollPosition): this.type = set("scrollPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def threshold(value: Double): this.type = set("threshold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useIntersectionObserver(value: Boolean): this.type = set("useIntersectionObserver", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visibleByDefault(value: Boolean): this.type = set("visibleByDefault", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = LazyLoadComponentProps
+  
+  def withProps(p: LazyLoadComponentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: LazyLoadComponent.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

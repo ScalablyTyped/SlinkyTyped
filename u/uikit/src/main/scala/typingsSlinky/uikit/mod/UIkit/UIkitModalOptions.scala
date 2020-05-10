@@ -4,36 +4,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UIkitModalOptions extends js.Object {
-  var `bg-close`: js.UndefOr[Boolean] = js.undefined
-  var `cls-page`: js.UndefOr[String] = js.undefined
-  var `cls-panel`: js.UndefOr[String] = js.undefined
-  var container: js.UndefOr[String | Boolean] = js.undefined
-  var `esc-close`: js.UndefOr[Boolean] = js.undefined
-  var `sel-close`: js.UndefOr[String] = js.undefined
-  var stack: js.UndefOr[Boolean] = js.undefined
+  var `bg-close`: js.UndefOr[Boolean] = js.native
+  var `cls-page`: js.UndefOr[String] = js.native
+  var `cls-panel`: js.UndefOr[String] = js.native
+  var container: js.UndefOr[String | Boolean] = js.native
+  var `esc-close`: js.UndefOr[Boolean] = js.native
+  var `sel-close`: js.UndefOr[String] = js.native
+  var stack: js.UndefOr[Boolean] = js.native
 }
 
 object UIkitModalOptions {
   @scala.inline
-  def apply(
-    `bg-close`: js.UndefOr[Boolean] = js.undefined,
-    `cls-page`: String = null,
-    `cls-panel`: String = null,
-    container: String | Boolean = null,
-    `esc-close`: js.UndefOr[Boolean] = js.undefined,
-    `sel-close`: String = null,
-    stack: js.UndefOr[Boolean] = js.undefined
-  ): UIkitModalOptions = {
+  def apply(): UIkitModalOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(`bg-close`)) __obj.updateDynamic("bg-close")(`bg-close`.asInstanceOf[js.Any])
-    if (`cls-page` != null) __obj.updateDynamic("cls-page")(`cls-page`.asInstanceOf[js.Any])
-    if (`cls-panel` != null) __obj.updateDynamic("cls-panel")(`cls-panel`.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (!js.isUndefined(`esc-close`)) __obj.updateDynamic("esc-close")(`esc-close`.asInstanceOf[js.Any])
-    if (`sel-close` != null) __obj.updateDynamic("sel-close")(`sel-close`.asInstanceOf[js.Any])
-    if (!js.isUndefined(stack)) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
     __obj.asInstanceOf[UIkitModalOptions]
   }
+  @scala.inline
+  implicit class UIkitModalOptionsOps[Self <: UIkitModalOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def `withBg-close`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bg-close")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutBg-close`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bg-close")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withCls-page`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cls-page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutCls-page`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cls-page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withCls-panel`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cls-panel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutCls-panel`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cls-panel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainer(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withEsc-close`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("esc-close")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutEsc-close`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("esc-close")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSel-close`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sel-close")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSel-close`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sel-close")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStack(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

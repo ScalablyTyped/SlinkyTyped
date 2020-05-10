@@ -1,12 +1,12 @@
 package typingsSlinky.baseui.inputMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.FC
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("baseui/input", "StatefulInput")
 @js.native
-object StatefulInput extends TopLevel[FC[StatefulInputProps]]
+object StatefulInput extends TopLevel[ReactComponentClass[StatefulInputProps]]
 

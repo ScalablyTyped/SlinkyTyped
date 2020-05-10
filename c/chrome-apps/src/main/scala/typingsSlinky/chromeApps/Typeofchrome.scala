@@ -6,6 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Typeofchrome extends js.Object {
   // #endregion
   // #region classes
@@ -16,7 +17,7 @@ trait Typeofchrome extends js.Object {
     * New Chrome Event
     * @constructor
     */
-  val Event: AnonInstantiable
+  val Event: AnonInstantiable = js.native
   // #endregion internal
   // #region chrome.accessibilityFeatures
   ////////////////////////////
@@ -36,7 +37,7 @@ trait Typeofchrome extends js.Object {
     * For modifying feature state, the extension needs accessibilityFeatures.modify permission.
     * Note that accessibilityFeatures.modify does not imply accessibilityFeatures.read permission.
     */
-  val accessibilityFeatures: TypeofaccessibilityFeatur
+  val accessibilityFeatures: TypeofaccessibilityFeatur = js.native
   // #endregion
   // #region chrome.alarms
   ////////////
@@ -49,7 +50,7 @@ trait Typeofchrome extends js.Object {
     * Use the chrome.alarms API to schedule code to run
     * periodically or at a specified time in the future.
     */
-  val alarms: Typeofalarms
+  val alarms: Typeofalarms = js.native
   ////////////////
   // App Window //
   ////////////////
@@ -61,7 +62,7 @@ trait Typeofchrome extends js.Object {
     * They are not associated with any Chrome browser windows.
     * See the Window State Sample for a demonstration of these options.
     */
-  val app: Typeofapp
+  val app: Typeofapp = js.native
   // #endregion chrome.app.*
   // #region chrome.audio
   ///////////
@@ -75,7 +76,7 @@ trait Typeofchrome extends js.Object {
     * about and control the audio devices attached to the system.
     * This API is currently only implemented for ChromeOS.
     */
-  val audio: Typeofaudio
+  val audio: Typeofaudio = js.native
   // #endregion
   // #region chrome.bluetooth*
   ///////////////
@@ -89,7 +90,7 @@ trait Typeofchrome extends js.Object {
     * All functions report failures via chrome.runtime.lastError.
     * **Important: This API works only on OS X, Windows and Chrome OS.**
     */
-  val bluetooth: Typeofbluetooth
+  val bluetooth: Typeofbluetooth = js.native
   /**
     * @since Chrome 37
     * @requires Manifest: 'bluetooth': {...}
@@ -100,14 +101,14 @@ trait Typeofchrome extends js.Object {
     * with Bluetooth Smart (Low Energy) devices using the
     * Generic Attribute Profile (GATT).
     */
-  val bluetoothLowEnergy: TypeofbluetoothLowEnergy
+  val bluetoothLowEnergy: TypeofbluetoothLowEnergy = js.native
   /**
     * @since Chrome 37
     * @requires Manifest: 'bluetooth': {...}
     * @requires Important: This API works only on OS X, Windows and Chrome OS.
     * Use the chrome.bluetoothSocket API to send and receive data to Bluetooth devices using RFCOMM and L2CAP connections.
     */
-  val bluetoothSocket: TypeofbluetoothSocket
+  val bluetoothSocket: TypeofbluetoothSocket = js.native
   // #endregion
   // #region chrome.browser
   /////////////
@@ -120,7 +121,7 @@ trait Typeofchrome extends js.Object {
     * Use the chrome.browser API to interact with the Chrome browser associated with
     * the current application and Chrome profile.
     */
-  val browser: Typeofbrowser
+  val browser: Typeofbrowser = js.native
   // #endregion
   // #region chrome.certificateProvider
   //////////////////////////
@@ -133,7 +134,7 @@ trait Typeofchrome extends js.Object {
     * Use this API to expose certificates to the platform which
     * can use these certificates for TLS authentications.
     */
-  val certificateProvider: TypeofcertificateProvider
+  val certificateProvider: TypeofcertificateProvider = js.native
   // #endregion
   // #region chrome.clipboard
   ///////////////
@@ -149,7 +150,7 @@ trait Typeofchrome extends js.Object {
     * It will be deprecated once open-web solution is available.
     * @see[Docs]{@link https://developer.chrome.com/apps/clipboard}
     */
-  val clipboard: Typeofclipboard
+  val clipboard: Typeofclipboard = js.native
   // #endregion
   // #region chrome.commands
   //////////////
@@ -165,7 +166,7 @@ trait Typeofchrome extends js.Object {
     * to the app.
     * @see[Usage]{@link https://developer.chrome.com/apps/commands}
     */
-  val commands: Typeofcommands
+  val commands: Typeofcommands = js.native
   // #endregion
   // #region chrome.contextMenus
   ///////////////////
@@ -188,7 +189,7 @@ trait Typeofchrome extends js.Object {
     * but if more than one from your app is visible at once,
     * Google Chrome automatically collapses them into a single parent menu.
     */
-  val contextMenus: TypeofcontextMenus
+  val contextMenus: TypeofcontextMenus = js.native
   // #endregion
   // #region chrome.desktopCapture
   /////////////////////
@@ -199,7 +200,7 @@ trait Typeofchrome extends js.Object {
     * @since Chrome 34.
     * @requires Permissions: 'desktopCapture'
     */
-  val desktopCapture: TypeofdesktopCapture
+  val desktopCapture: TypeofdesktopCapture = js.native
   // #endregion
   // #region chrome.diagnostics
   /////////////////
@@ -209,7 +210,7 @@ trait Typeofchrome extends js.Object {
     * @requires(CrOS) Only Chrome OS. Crashes app on Windows.
     * @requires Permissions: 'diagnostics'
     */
-  val diagnostics: Typeofdiagnostics
+  val diagnostics: Typeofdiagnostics = js.native
   // #endregion
   // #region chrome.displaySource
   ////////////////////
@@ -221,7 +222,7 @@ trait Typeofchrome extends js.Object {
     * The *chrome.displaySource* API creates a Display session using WebMediaStreamTrack as sources.
     * @todo TODO Finish documentation and typings
     */
-  val displaySource: TypeofdisplaySource
+  val displaySource: TypeofdisplaySource = js.native
   // #endregion
   // #region chrome.dns
   /////////
@@ -233,7 +234,7 @@ trait Typeofchrome extends js.Object {
     * @description
     * Use the *chrome.dns* API for dns resolution.
     */
-  val dns: Typeofdns
+  val dns: Typeofdns = js.native
   // #endregion
   // #region chrome.documentScan
   ///////////////////
@@ -254,8 +255,8 @@ trait Typeofchrome extends js.Object {
     * @requires Permissions: 'documentScan'
     * @requires Important: This API works only on Chrome OS.
     */
-  val documentScan: TypeofdocumentScan
-  val enterprise: Typeofenterprise
+  val documentScan: TypeofdocumentScan = js.native
+  val enterprise: Typeofenterprise = js.native
   // #endregion chrome.enterprise.*
   // #region chrome.events
   ////////////
@@ -282,7 +283,7 @@ trait Typeofchrome extends js.Object {
     * object that has details about the elapsed alarm.
     * @since Chrome 25.
     */
-  val events: js.Any
+  val events: js.Any = js.native
   // #endregion
   // #region placeholders
   //////////////////
@@ -293,7 +294,7 @@ trait Typeofchrome extends js.Object {
     * Please consult the official documentation.
     * @see[Documentation]{@link https://developer.chrome.com/apps/experimental}
     */
-  val experimental: js.Any
+  val experimental: js.Any = js.native
   // #endregion
   // #region chrome.extensionTypes
   /////////////////////
@@ -304,7 +305,7 @@ trait Typeofchrome extends js.Object {
     * https://developer.chrome.com/extensions/extensionTypes#type-ImageDetails
     * @since Chrome 39.
     **/
-  val extensionTypes: TypeofextensionTypes
+  val extensionTypes: TypeofextensionTypes = js.native
   // #endregion
   // #region chrome.fileBrowserHandle
   /////////////////////////
@@ -319,7 +320,7 @@ trait Typeofchrome extends js.Object {
     * For example, you can use this API to enable users to upload files to your website.
     * @see[Documentation]{@link https://developer.chrome.com/extensions/fileBrowserHandler}
     */
-  val fileBrowserHandler: TypeoffileBrowserHandler
+  val fileBrowserHandler: TypeoffileBrowserHandler = js.native
   // #endregion
   // #region chrome.fileSystem
   ////////////////
@@ -336,7 +337,7 @@ trait Typeofchrome extends js.Object {
     *   {'fileSystem': ['write']}
     *   {'fileSystem': ['write', 'retainEntries', 'directory']}
     */
-  val fileSystem: TypeoffileSystem
+  val fileSystem: TypeoffileSystem = js.native
   // #endregion
   // #region chrome.fileSystemProvider
   //////////////////////////
@@ -368,7 +369,7 @@ trait Typeofchrome extends js.Object {
     * watchers, so changes on the file system can be reflected immediately and automatically.
     * @see[More information]{@link https://developer.chrome.com/apps/fileSystemProvider}
     */
-  val fileSystemProvider: TypeoffileSystemProvider
+  val fileSystemProvider: TypeoffileSystemProvider = js.native
   // #endregion
   // #region chrome.gcm
   ////////////////////////////
@@ -388,7 +389,7 @@ trait Typeofchrome extends js.Object {
     * @since Chrome 35.
     * @requires Permissions: 'gcm'
     */
-  val gcm: Typeofgcm
+  val gcm: Typeofgcm = js.native
   // #endregion
   // #region chrome.hid
   /////////
@@ -405,7 +406,7 @@ trait Typeofchrome extends js.Object {
     * @requires Permissions: 'hid'
     * @since Chrome 38.
     */
-  val hid: Typeofhid
+  val hid: Typeofhid = js.native
   // #endregion
   // #region chrome.i18n
   /////////////////////////////////
@@ -417,7 +418,7 @@ trait Typeofchrome extends js.Object {
     * @see[Docs]{@link https://developer.chrome.com/apps/i18n}
     * @since Chrome 25.
     */
-  val i18n: Typeofi18n
+  val i18n: Typeofi18n = js.native
   // #endregion
   // #region chrome.identity
   //////////////
@@ -429,7 +430,7 @@ trait Typeofchrome extends js.Object {
     * @see[Identity User]{@link https://developer.chrome.com/apps/app_identity}
     * @since Chrome 29.
     */
-  val identity: Typeofidentity
+  val identity: Typeofidentity = js.native
   // #endregion
   // #region chrome.idle
   //////////
@@ -440,7 +441,7 @@ trait Typeofchrome extends js.Object {
     * @requires Permissions: 'idle'
     * @since Chrome 25.
     */
-  val idle: Typeofidle
+  val idle: Typeofidle = js.native
   // #endregion
   // #region chrome.instanceID
   ////////////////
@@ -451,7 +452,7 @@ trait Typeofchrome extends js.Object {
     * @requires Permissions: 'gcm'
     * @since Chrome 46
     */
-  val instanceID: TypeofinstanceID
+  val instanceID: TypeofinstanceID = js.native
   // #endregion
   // #region chrome.management
   ////////////////
@@ -462,7 +463,7 @@ trait Typeofchrome extends js.Object {
     * manage the list of apps
     * that are installed and running.
     */
-  val management: Typeofmanagement
+  val management: Typeofmanagement = js.native
   // #endregion
   // #region chrome.mdns
   //////////
@@ -475,7 +476,7 @@ trait Typeofchrome extends js.Object {
     * @requires Permissions: 'mdns'
     * @since Chrome 31
     */
-  val mdns: Typeofmdns
+  val mdns: Typeofmdns = js.native
   // #endregion
   // #region chrome.mediaGalleries
   /////////////////////
@@ -489,8 +490,8 @@ trait Typeofchrome extends js.Object {
     *                        {'mediaGalleries': ['accessType1' | 'accessType2', ..., 'allAutoDetected']}
     * @see[More information]{@link https://developer.chrome.com/apps/mediaGalleries}
     */
-  val mediaGalleries: TypeofmediaGalleries
-  val networking: Typeofnetworking
+  val mediaGalleries: TypeofmediaGalleries = js.native
+  val networking: Typeofnetworking = js.native
   // #endregion chrome.networking.*
   // #region chrome.notifications
   ///////////////////
@@ -503,7 +504,7 @@ trait Typeofchrome extends js.Object {
     * @since Chrome 28.
     * @see[Docs]{@link https://developer.chrome.com/extensions/notifications}
     */
-  val notifications: Typeofnotifications
+  val notifications: Typeofnotifications = js.native
   // #endregion
   // #region chrome.permissions
   /////////////////
@@ -514,7 +515,7 @@ trait Typeofchrome extends js.Object {
     * so users understand why the permissions are needed and grant only those that are necessary.
     * @since Chrome 16.
     */
-  val permissions: Typeofpermissions
+  val permissions: Typeofpermissions = js.native
   // #endregion
   // #region chrome.platformKeys
   ///////////////////
@@ -530,7 +531,7 @@ trait Typeofchrome extends js.Object {
     * E.g. this allows usage of platform managed certificates in third party VPNs
     * @see chrome.vpnProvider
     */
-  val platformKeys: TypeofplatformKeysClientCertificateType
+  val platformKeys: TypeofplatformKeysClientCertificateType = js.native
   // #endregion
   // #region chrome.power
   ///////////
@@ -541,7 +542,7 @@ trait Typeofchrome extends js.Object {
     * @requires Permissions: 'power'
     * @since Chrome 27.
     */
-  val power: Typeofpower
+  val power: Typeofpower = js.native
   // #endregion
   // #region chrome.printerProvider
   //////////////////////
@@ -555,7 +556,7 @@ trait Typeofchrome extends js.Object {
     * @requires Permissions: 'printerProvider'
     * @since Chrome 44.
     */
-  val printerProvider: TypeofprinterProvider
+  val printerProvider: TypeofprinterProvider = js.native
   // #endregion
   // #region chrome.runtime
   /////////////
@@ -565,7 +566,7 @@ trait Typeofchrome extends js.Object {
     * Use the chrome.runtime API to retrieve the background page, return details about the manifest, and listen for and respond to events in the app lifecycle. You can also use this API to convert the relative path of URLs to fully-qualified URLs.
     * @since Chrome 22
     */
-  val runtime: TypeofruntimeConnect
+  val runtime: TypeofruntimeConnect = js.native
   // #endregion
   // #region chrome.serial
   ////////////
@@ -578,7 +579,7 @@ trait Typeofchrome extends js.Object {
     *  sockets.udp, sockets.tcp and sockets.tcpServer APIs.
     * @since Chrome 23
     */
-  val serial: deprecated
+  val serial: deprecated = js.native
   // #endregion
   // #region chrome.signedInDevices
   //////////////////////
@@ -589,7 +590,7 @@ trait Typeofchrome extends js.Object {
     * Use the *chrome.signedInDevices* API to get a list of devices
     * signed into chrome with the same account as the current profile.
     */
-  val signedInDevices: TypeofsignedInDevices
+  val signedInDevices: TypeofsignedInDevices = js.native
   // #endregion
   // #region chrome.socket
   ////////////
@@ -612,7 +613,7 @@ trait Typeofchrome extends js.Object {
     * Use the chrome.sockets.* APIs to send and receive data over the network using TCP and UDP connections.
     * @since Chrome 33.
     */
-  val sockets: Typeofsockets
+  val sockets: Typeofsockets = js.native
   // #endregion chrome.sockets.*
   // #region chrome.storage
   /////////////
@@ -623,7 +624,7 @@ trait Typeofchrome extends js.Object {
     * Permissions:  'storage'
     * @since Chrome 20.
     */
-  val storage: Typeofstorage
+  val storage: Typeofstorage = js.native
   // #endregion
   // #region chrome.syncFileSystem
   ////////////////////
@@ -640,8 +641,8 @@ trait Typeofchrome extends js.Object {
     * @see[Learn more: Manage Data]{@link https://developer.chrome.com/apps/app_storage}
     * @since Chrome 27
     */
-  val syncFileSystem: TypeofsyncFileSystem
-  val system: Typeofsystem
+  val syncFileSystem: TypeofsyncFileSystem = js.native
+  val system: Typeofsystem = js.native
   // #endregion chrome.system.*
   // #region chrome.tts
   ////////////////////
@@ -652,7 +653,7 @@ trait Typeofchrome extends js.Object {
     * Permissions:  'tts'
     * @since Chrome 14.
     */
-  val tts: Typeoftts
+  val tts: Typeoftts = js.native
   // #endregion
   // #region chrome.types
   ///////////
@@ -661,7 +662,7 @@ trait Typeofchrome extends js.Object {
   /**
     * The chrome.types API contains type declarations for Chrome.
     */
-  val types: js.Any
+  val types: js.Any = js.native
   // #endregion
   // #region chrome.usb
   /////////
@@ -678,7 +679,7 @@ trait Typeofchrome extends js.Object {
     * regular parameters will be undefined in this case.
     * @see[Accessing Hardware Devices]{@link https://developer.chrome.com/apps/app_usb}
     */
-  val usb: Typeofusb
+  val usb: Typeofusb = js.native
   // #endregion
   // #region chrome.virtualKeyboard
   //////////////////////
@@ -692,7 +693,7 @@ trait Typeofchrome extends js.Object {
     * The *chrome.virtualKeybaord* API is a kiosk only API used
     * to configure virtual keyboard layout and behavior in kiosk sessions.
     */
-  val virtualKeyboard: TypeofvirtualKeyboard
+  val virtualKeyboard: TypeofvirtualKeyboard = js.native
   // #endregion
   // #region chrome.vpnProvider
   //////////////////
@@ -704,7 +705,7 @@ trait Typeofchrome extends js.Object {
     * @requires Permissions: 'vpnProvider'
     * @since Chrome 43.
     */
-  val vpnProvider: TypeofvpnProvider
+  val vpnProvider: TypeofvpnProvider = js.native
   // #endregion
   // #region chrome.wallpaper
   ///////////////
@@ -716,10 +717,10 @@ trait Typeofchrome extends js.Object {
     * @requires Important: This API works only on Chrome OS.
     * @since Chrome 43.
     */
-  val wallpaper: Typeofwallpaper
+  val wallpaper: Typeofwallpaper = js.native
   // #endregion
   // #region chrome.webRequest
-  val webRequest: js.Any
+  val webRequest: js.Any = js.native
   // #endregion
   // #region chrome.webViewRequest
   /////////////////////
@@ -730,7 +731,7 @@ trait Typeofchrome extends js.Object {
     * @description
     * Use the *chrome.webViewRequest* API to intercept, block, or modify requests in-flight.
     */
-  val webViewRequest: TypeofwebViewRequest
+  val webViewRequest: TypeofwebViewRequest = js.native
   // #endregion
   // #region methods
   /////////////
@@ -739,7 +740,7 @@ trait Typeofchrome extends js.Object {
   /**
     * Different page speed and load metrics
     */
-  def csi(): AnonOnloadT
+  def csi(): AnonOnloadT = js.native
   /**
     * @deprecated Deprecated in Chrome 64.
     * chrome.loadTimes() is a non-standard API that exposes loading metrics
@@ -748,7 +749,7 @@ trait Typeofchrome extends js.Object {
     * @see[Use this instead]{@link https://www.w3.org/TR/navigation-timing-2/}
     * @see[Deprecation article]{@link https://developers.google.com/web/updates/2017/12/chrome-loadtimes-deprecated}
     */
-  def loadTimes(): deprecatedButUsable
+  def loadTimes(): deprecatedButUsable = js.native
 }
 
 object Typeofchrome {
@@ -813,8 +814,357 @@ object Typeofchrome {
     webViewRequest: TypeofwebViewRequest
   ): Typeofchrome = {
     val __obj = js.Dynamic.literal(Event = Event.asInstanceOf[js.Any], accessibilityFeatures = accessibilityFeatures.asInstanceOf[js.Any], alarms = alarms.asInstanceOf[js.Any], app = app.asInstanceOf[js.Any], audio = audio.asInstanceOf[js.Any], bluetooth = bluetooth.asInstanceOf[js.Any], bluetoothLowEnergy = bluetoothLowEnergy.asInstanceOf[js.Any], bluetoothSocket = bluetoothSocket.asInstanceOf[js.Any], browser = browser.asInstanceOf[js.Any], certificateProvider = certificateProvider.asInstanceOf[js.Any], clipboard = clipboard.asInstanceOf[js.Any], commands = commands.asInstanceOf[js.Any], contextMenus = contextMenus.asInstanceOf[js.Any], csi = js.Any.fromFunction0(csi), desktopCapture = desktopCapture.asInstanceOf[js.Any], diagnostics = diagnostics.asInstanceOf[js.Any], displaySource = displaySource.asInstanceOf[js.Any], dns = dns.asInstanceOf[js.Any], documentScan = documentScan.asInstanceOf[js.Any], enterprise = enterprise.asInstanceOf[js.Any], events = events.asInstanceOf[js.Any], experimental = experimental.asInstanceOf[js.Any], extensionTypes = extensionTypes.asInstanceOf[js.Any], fileBrowserHandler = fileBrowserHandler.asInstanceOf[js.Any], fileSystem = fileSystem.asInstanceOf[js.Any], fileSystemProvider = fileSystemProvider.asInstanceOf[js.Any], gcm = gcm.asInstanceOf[js.Any], hid = hid.asInstanceOf[js.Any], i18n = i18n.asInstanceOf[js.Any], identity = identity.asInstanceOf[js.Any], idle = idle.asInstanceOf[js.Any], instanceID = instanceID.asInstanceOf[js.Any], loadTimes = js.Any.fromFunction0(loadTimes), management = management.asInstanceOf[js.Any], mdns = mdns.asInstanceOf[js.Any], mediaGalleries = mediaGalleries.asInstanceOf[js.Any], networking = networking.asInstanceOf[js.Any], notifications = notifications.asInstanceOf[js.Any], permissions = permissions.asInstanceOf[js.Any], platformKeys = platformKeys.asInstanceOf[js.Any], power = power.asInstanceOf[js.Any], printerProvider = printerProvider.asInstanceOf[js.Any], runtime = runtime.asInstanceOf[js.Any], serial = serial.asInstanceOf[js.Any], signedInDevices = signedInDevices.asInstanceOf[js.Any], sockets = sockets.asInstanceOf[js.Any], storage = storage.asInstanceOf[js.Any], syncFileSystem = syncFileSystem.asInstanceOf[js.Any], system = system.asInstanceOf[js.Any], tts = tts.asInstanceOf[js.Any], types = types.asInstanceOf[js.Any], usb = usb.asInstanceOf[js.Any], virtualKeyboard = virtualKeyboard.asInstanceOf[js.Any], vpnProvider = vpnProvider.asInstanceOf[js.Any], wallpaper = wallpaper.asInstanceOf[js.Any], webRequest = webRequest.asInstanceOf[js.Any], webViewRequest = webViewRequest.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Typeofchrome]
   }
+  @scala.inline
+  implicit class TypeofchromeOps[Self <: Typeofchrome] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEvent(value: AnonInstantiable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccessibilityFeatures(value: TypeofaccessibilityFeatur): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityFeatures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAlarms(value: Typeofalarms): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alarms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withApp(value: Typeofapp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("app")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAudio(value: Typeofaudio): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBluetooth(value: Typeofbluetooth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetooth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBluetoothLowEnergy(value: TypeofbluetoothLowEnergy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothLowEnergy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBluetoothSocket(value: TypeofbluetoothSocket): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothSocket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBrowser(value: Typeofbrowser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCertificateProvider(value: TypeofcertificateProvider): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateProvider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClipboard(value: Typeofclipboard): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCommands(value: Typeofcommands): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContextMenus(value: TypeofcontextMenus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCsi(value: () => AnonOnloadT): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("csi")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDesktopCapture(value: TypeofdesktopCapture): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desktopCapture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDiagnostics(value: Typeofdiagnostics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diagnostics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisplaySource(value: TypeofdisplaySource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displaySource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDns(value: Typeofdns): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDocumentScan(value: TypeofdocumentScan): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentScan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnterprise(value: Typeofenterprise): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterprise")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvents(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExperimental(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("experimental")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtensionTypes(value: TypeofextensionTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileBrowserHandler(value: TypeoffileBrowserHandler): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileBrowserHandler")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileSystem(value: TypeoffileSystem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileSystemProvider(value: TypeoffileSystemProvider): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystemProvider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGcm(value: Typeofgcm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHid(value: Typeofhid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withI18n(value: Typeofi18n): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdentity(value: Typeofidentity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdle(value: Typeofidle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstanceID(value: TypeofinstanceID): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoadTimes(value: () => deprecatedButUsable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadTimes")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withManagement(value: Typeofmanagement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("management")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMdns(value: Typeofmdns): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mdns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMediaGalleries(value: TypeofmediaGalleries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaGalleries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNetworking(value: Typeofnetworking): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networking")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNotifications(value: Typeofnotifications): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPermissions(value: Typeofpermissions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlatformKeys(value: TypeofplatformKeysClientCertificateType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPower(value: Typeofpower): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("power")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrinterProvider(value: TypeofprinterProvider): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("printerProvider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRuntime(value: TypeofruntimeConnect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runtime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSerial(value: deprecated): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSignedInDevices(value: TypeofsignedInDevices): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signedInDevices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSockets(value: Typeofsockets): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sockets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStorage(value: Typeofstorage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSyncFileSystem(value: TypeofsyncFileSystem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syncFileSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSystem(value: Typeofsystem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("system")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTts(value: Typeoftts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypes(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsb(value: Typeofusb): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVirtualKeyboard(value: TypeofvirtualKeyboard): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualKeyboard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVpnProvider(value: TypeofvpnProvider): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpnProvider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWallpaper(value: Typeofwallpaper): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wallpaper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWebRequest(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webRequest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWebViewRequest(value: TypeofwebViewRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webViewRequest")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

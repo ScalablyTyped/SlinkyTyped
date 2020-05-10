@@ -14,14 +14,12 @@ trait Controls extends js.Object
 
 object Controls {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def pause: typingsSlinky.jqueryCountdown.jqueryCountdownStrings.pause = "pause".asInstanceOf[typingsSlinky.jqueryCountdown.jqueryCountdownStrings.pause]
   @scala.inline
-  def pause: typingsSlinky.jqueryCountdown.jqueryCountdownStrings.pause = this.cast("pause")
+  def resume: typingsSlinky.jqueryCountdown.jqueryCountdownStrings.resume = "resume".asInstanceOf[typingsSlinky.jqueryCountdown.jqueryCountdownStrings.resume]
   @scala.inline
-  def resume: typingsSlinky.jqueryCountdown.jqueryCountdownStrings.resume = this.cast("resume")
+  def start: typingsSlinky.jqueryCountdown.jqueryCountdownStrings.start = "start".asInstanceOf[typingsSlinky.jqueryCountdown.jqueryCountdownStrings.start]
   @scala.inline
-  def start: typingsSlinky.jqueryCountdown.jqueryCountdownStrings.start = this.cast("start")
-  @scala.inline
-  def stop: typingsSlinky.jqueryCountdown.jqueryCountdownStrings.stop = this.cast("stop")
+  def stop: typingsSlinky.jqueryCountdown.jqueryCountdownStrings.stop = "stop".asInstanceOf[typingsSlinky.jqueryCountdown.jqueryCountdownStrings.stop]
 }
 

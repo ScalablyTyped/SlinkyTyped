@@ -42,14 +42,41 @@ trait SchemaGooglePrivacyDlpV2Dictionary extends js.Object {
 
 object SchemaGooglePrivacyDlpV2Dictionary {
   @scala.inline
-  def apply(
-    cloudStoragePath: SchemaGooglePrivacyDlpV2CloudStoragePath = null,
-    wordList: SchemaGooglePrivacyDlpV2WordList = null
-  ): SchemaGooglePrivacyDlpV2Dictionary = {
+  def apply(): SchemaGooglePrivacyDlpV2Dictionary = {
     val __obj = js.Dynamic.literal()
-    if (cloudStoragePath != null) __obj.updateDynamic("cloudStoragePath")(cloudStoragePath.asInstanceOf[js.Any])
-    if (wordList != null) __obj.updateDynamic("wordList")(wordList.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2Dictionary]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2DictionaryOps[Self <: SchemaGooglePrivacyDlpV2Dictionary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloudStoragePath(value: SchemaGooglePrivacyDlpV2CloudStoragePath): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudStoragePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudStoragePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudStoragePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWordList(value: SchemaGooglePrivacyDlpV2WordList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWordList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

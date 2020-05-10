@@ -54,32 +54,149 @@ trait PullRequest extends js.Object {
 
 object PullRequest {
   @scala.inline
-  def apply(
-    approvalRules: ApprovalRulesList = null,
-    authorArn: Arn = null,
-    clientRequestToken: ClientRequestToken = null,
-    creationDate: js.Date = null,
-    description: Description = null,
-    lastActivityDate: js.Date = null,
-    pullRequestId: PullRequestId = null,
-    pullRequestStatus: PullRequestStatusEnum = null,
-    pullRequestTargets: PullRequestTargetList = null,
-    revisionId: RevisionId = null,
-    title: Title = null
-  ): PullRequest = {
+  def apply(): PullRequest = {
     val __obj = js.Dynamic.literal()
-    if (approvalRules != null) __obj.updateDynamic("approvalRules")(approvalRules.asInstanceOf[js.Any])
-    if (authorArn != null) __obj.updateDynamic("authorArn")(authorArn.asInstanceOf[js.Any])
-    if (clientRequestToken != null) __obj.updateDynamic("clientRequestToken")(clientRequestToken.asInstanceOf[js.Any])
-    if (creationDate != null) __obj.updateDynamic("creationDate")(creationDate.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (lastActivityDate != null) __obj.updateDynamic("lastActivityDate")(lastActivityDate.asInstanceOf[js.Any])
-    if (pullRequestId != null) __obj.updateDynamic("pullRequestId")(pullRequestId.asInstanceOf[js.Any])
-    if (pullRequestStatus != null) __obj.updateDynamic("pullRequestStatus")(pullRequestStatus.asInstanceOf[js.Any])
-    if (pullRequestTargets != null) __obj.updateDynamic("pullRequestTargets")(pullRequestTargets.asInstanceOf[js.Any])
-    if (revisionId != null) __obj.updateDynamic("revisionId")(revisionId.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[PullRequest]
   }
+  @scala.inline
+  implicit class PullRequestOps[Self <: PullRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApprovalRules(value: ApprovalRulesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovalRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthorArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientRequestToken(value: ClientRequestToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientRequestToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastActivityDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastActivityDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastActivityDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastActivityDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPullRequestId(value: PullRequestId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRequestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPullRequestId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRequestId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPullRequestStatus(value: PullRequestStatusEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRequestStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPullRequestStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRequestStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPullRequestTargets(value: PullRequestTargetList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRequestTargets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPullRequestTargets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRequestTargets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionId(value: RevisionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: Title): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

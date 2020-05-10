@@ -38,22 +38,89 @@ trait DebugRuleConfiguration extends js.Object {
 
 object DebugRuleConfiguration {
   @scala.inline
-  def apply(
-    RuleConfigurationName: RuleConfigurationName,
-    RuleEvaluatorImage: AlgorithmImage,
-    InstanceType: ProcessingInstanceType = null,
-    LocalPath: DirectoryPath = null,
-    RuleParameters: RuleParameters = null,
-    S3OutputPath: S3Uri = null,
-    VolumeSizeInGB: Int | Double = null
-  ): DebugRuleConfiguration = {
+  def apply(RuleConfigurationName: RuleConfigurationName, RuleEvaluatorImage: AlgorithmImage): DebugRuleConfiguration = {
     val __obj = js.Dynamic.literal(RuleConfigurationName = RuleConfigurationName.asInstanceOf[js.Any], RuleEvaluatorImage = RuleEvaluatorImage.asInstanceOf[js.Any])
-    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
-    if (LocalPath != null) __obj.updateDynamic("LocalPath")(LocalPath.asInstanceOf[js.Any])
-    if (RuleParameters != null) __obj.updateDynamic("RuleParameters")(RuleParameters.asInstanceOf[js.Any])
-    if (S3OutputPath != null) __obj.updateDynamic("S3OutputPath")(S3OutputPath.asInstanceOf[js.Any])
-    if (VolumeSizeInGB != null) __obj.updateDynamic("VolumeSizeInGB")(VolumeSizeInGB.asInstanceOf[js.Any])
     __obj.asInstanceOf[DebugRuleConfiguration]
   }
+  @scala.inline
+  implicit class DebugRuleConfigurationOps[Self <: DebugRuleConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRuleConfigurationName(value: RuleConfigurationName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleConfigurationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRuleEvaluatorImage(value: AlgorithmImage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleEvaluatorImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: ProcessingInstanceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalPath(value: DirectoryPath): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuleParameters(value: RuleParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuleParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3OutputPath(value: S3Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3OutputPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3OutputPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3OutputPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeSizeInGB(value: OptionalVolumeSizeInGB): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeSizeInGB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeSizeInGB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeSizeInGB")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -16,18 +16,16 @@ trait SymbolType extends js.Object
 
 object SymbolType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def esriPFS: typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriPFS = "esriPFS".asInstanceOf[typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriPFS]
   @scala.inline
-  def esriPFS: typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriPFS = this.cast("esriPFS")
+  def esriPMS: typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriPMS = "esriPMS".asInstanceOf[typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriPMS]
   @scala.inline
-  def esriPMS: typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriPMS = this.cast("esriPMS")
+  def esriSFS: typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriSFS = "esriSFS".asInstanceOf[typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriSFS]
   @scala.inline
-  def esriSFS: typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriSFS = this.cast("esriSFS")
+  def esriSLS: typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriSLS = "esriSLS".asInstanceOf[typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriSLS]
   @scala.inline
-  def esriSLS: typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriSLS = this.cast("esriSLS")
+  def esriSMS: typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriSMS = "esriSMS".asInstanceOf[typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriSMS]
   @scala.inline
-  def esriSMS: typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriSMS = this.cast("esriSMS")
-  @scala.inline
-  def esriTS: typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriTS = this.cast("esriTS")
+  def esriTS: typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriTS = "esriTS".asInstanceOf[typingsSlinky.arcgisRestApi.arcgisRestApiStrings.esriTS]
 }
 

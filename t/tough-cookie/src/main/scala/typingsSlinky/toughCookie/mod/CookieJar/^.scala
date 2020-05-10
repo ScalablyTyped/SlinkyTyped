@@ -1,6 +1,5 @@
 package typingsSlinky.toughCookie.mod.CookieJar
 
-import typingsSlinky.std.Error
 import typingsSlinky.toughCookie.mod.Store
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,13 +8,17 @@ import scala.scalajs.js.annotation._
 @JSImport("tough-cookie", "CookieJar")
 @js.native
 object ^ extends js.Object {
-  def deserialize(serialized: String, cb: js.Function2[/* err */ Error | Null, /* object */ this.type, Unit]): Unit = js.native
+  def deserialize(serialized: String): js.Promise[typingsSlinky.toughCookie.mod.CookieJar] = js.native
+  def deserialize(serialized: String, cb: js.Function2[/* err */ js.Error | Null, /* object */ this.type, Unit]): Unit = js.native
+  def deserialize(serialized: String, store: Store): js.Promise[typingsSlinky.toughCookie.mod.CookieJar] = js.native
   def deserialize(
     serialized: String,
     store: Store,
     cb: js.Function2[/* err */ js.Error | Null, /* object */ this.type, Unit]
   ): Unit = js.native
-  def deserialize(serialized: Serialized, cb: js.Function2[/* err */ Error | Null, /* object */ this.type, Unit]): Unit = js.native
+  def deserialize(serialized: Serialized): js.Promise[typingsSlinky.toughCookie.mod.CookieJar] = js.native
+  def deserialize(serialized: Serialized, cb: js.Function2[/* err */ js.Error | Null, /* object */ this.type, Unit]): Unit = js.native
+  def deserialize(serialized: Serialized, store: Store): js.Promise[typingsSlinky.toughCookie.mod.CookieJar] = js.native
   def deserialize(
     serialized: Serialized,
     store: Store,

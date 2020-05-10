@@ -4,43 +4,91 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotCmfStatesOptions extends js.Object {
   /**
     * (Highstock) Options for the hovered series. These settings override the
     * normal state options when a series is moused over or touched.
     */
-  var hover: js.UndefOr[PlotCmfStatesHoverOptions] = js.undefined
+  var hover: js.UndefOr[PlotCmfStatesHoverOptions] = js.native
   /**
     * (Highstock) The opposite state of a hover for series.
     */
-  var inactive: js.UndefOr[PlotCmfStatesInactiveOptions] = js.undefined
+  var inactive: js.UndefOr[PlotCmfStatesInactiveOptions] = js.native
   /**
     * (Highstock) The normal state of a series, or for point items in column,
     * pie and similar series. Currently only used for setting animation when
     * returning to normal state from hover.
     */
-  var normal: js.UndefOr[PlotCmfStatesNormalOptions] = js.undefined
+  var normal: js.UndefOr[PlotCmfStatesNormalOptions] = js.native
   /**
     * (Highstock) Specific options for point in selected states, after being
     * selected by allowPointSelect or programmatically.
     */
-  var select: js.UndefOr[PlotCmfStatesSelectOptions] = js.undefined
+  var select: js.UndefOr[PlotCmfStatesSelectOptions] = js.native
 }
 
 object PlotCmfStatesOptions {
   @scala.inline
-  def apply(
-    hover: PlotCmfStatesHoverOptions = null,
-    inactive: PlotCmfStatesInactiveOptions = null,
-    normal: PlotCmfStatesNormalOptions = null,
-    select: PlotCmfStatesSelectOptions = null
-  ): PlotCmfStatesOptions = {
+  def apply(): PlotCmfStatesOptions = {
     val __obj = js.Dynamic.literal()
-    if (hover != null) __obj.updateDynamic("hover")(hover.asInstanceOf[js.Any])
-    if (inactive != null) __obj.updateDynamic("inactive")(inactive.asInstanceOf[js.Any])
-    if (normal != null) __obj.updateDynamic("normal")(normal.asInstanceOf[js.Any])
-    if (select != null) __obj.updateDynamic("select")(select.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotCmfStatesOptions]
   }
+  @scala.inline
+  implicit class PlotCmfStatesOptionsOps[Self <: PlotCmfStatesOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHover(value: PlotCmfStatesHoverOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInactive(value: PlotCmfStatesInactiveOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inactive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInactive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inactive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNormal(value: PlotCmfStatesNormalOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNormal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelect(value: PlotCmfStatesSelectOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

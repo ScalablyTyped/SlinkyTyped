@@ -20,26 +20,24 @@ trait Algorithm extends js.Object
 
 object Algorithm {
   @scala.inline
-  def `3DES-CBC`: typingsSlinky.nodeForge.nodeForgeStrings.`3DES-CBC` = this.cast("3DES-CBC")
+  def `3DES-CBC`: typingsSlinky.nodeForge.nodeForgeStrings.`3DES-CBC` = "3DES-CBC".asInstanceOf[typingsSlinky.nodeForge.nodeForgeStrings.`3DES-CBC`]
   @scala.inline
-  def `3DES-ECB`: typingsSlinky.nodeForge.nodeForgeStrings.`3DES-ECB` = this.cast("3DES-ECB")
+  def `3DES-ECB`: typingsSlinky.nodeForge.nodeForgeStrings.`3DES-ECB` = "3DES-ECB".asInstanceOf[typingsSlinky.nodeForge.nodeForgeStrings.`3DES-ECB`]
   @scala.inline
-  def `AES-CBC`: typingsSlinky.nodeForge.nodeForgeStrings.`AES-CBC` = this.cast("AES-CBC")
+  def `AES-CBC`: typingsSlinky.nodeForge.nodeForgeStrings.`AES-CBC` = "AES-CBC".asInstanceOf[typingsSlinky.nodeForge.nodeForgeStrings.`AES-CBC`]
   @scala.inline
-  def `AES-CFB`: typingsSlinky.nodeForge.nodeForgeStrings.`AES-CFB` = this.cast("AES-CFB")
+  def `AES-CFB`: typingsSlinky.nodeForge.nodeForgeStrings.`AES-CFB` = "AES-CFB".asInstanceOf[typingsSlinky.nodeForge.nodeForgeStrings.`AES-CFB`]
   @scala.inline
-  def `AES-CTR`: typingsSlinky.nodeForge.nodeForgeStrings.`AES-CTR` = this.cast("AES-CTR")
+  def `AES-CTR`: typingsSlinky.nodeForge.nodeForgeStrings.`AES-CTR` = "AES-CTR".asInstanceOf[typingsSlinky.nodeForge.nodeForgeStrings.`AES-CTR`]
   @scala.inline
-  def `AES-ECB`: typingsSlinky.nodeForge.nodeForgeStrings.`AES-ECB` = this.cast("AES-ECB")
+  def `AES-ECB`: typingsSlinky.nodeForge.nodeForgeStrings.`AES-ECB` = "AES-ECB".asInstanceOf[typingsSlinky.nodeForge.nodeForgeStrings.`AES-ECB`]
   @scala.inline
-  def `AES-GCM`: typingsSlinky.nodeForge.nodeForgeStrings.`AES-GCM` = this.cast("AES-GCM")
+  def `AES-GCM`: typingsSlinky.nodeForge.nodeForgeStrings.`AES-GCM` = "AES-GCM".asInstanceOf[typingsSlinky.nodeForge.nodeForgeStrings.`AES-GCM`]
   @scala.inline
-  def `AES-OFB`: typingsSlinky.nodeForge.nodeForgeStrings.`AES-OFB` = this.cast("AES-OFB")
+  def `AES-OFB`: typingsSlinky.nodeForge.nodeForgeStrings.`AES-OFB` = "AES-OFB".asInstanceOf[typingsSlinky.nodeForge.nodeForgeStrings.`AES-OFB`]
   @scala.inline
-  def `DES-CBC`: typingsSlinky.nodeForge.nodeForgeStrings.`DES-CBC` = this.cast("DES-CBC")
+  def `DES-CBC`: typingsSlinky.nodeForge.nodeForgeStrings.`DES-CBC` = "DES-CBC".asInstanceOf[typingsSlinky.nodeForge.nodeForgeStrings.`DES-CBC`]
   @scala.inline
-  def `DES-ECB`: typingsSlinky.nodeForge.nodeForgeStrings.`DES-ECB` = this.cast("DES-ECB")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `DES-ECB`: typingsSlinky.nodeForge.nodeForgeStrings.`DES-ECB` = "DES-ECB".asInstanceOf[typingsSlinky.nodeForge.nodeForgeStrings.`DES-ECB`]
 }
 

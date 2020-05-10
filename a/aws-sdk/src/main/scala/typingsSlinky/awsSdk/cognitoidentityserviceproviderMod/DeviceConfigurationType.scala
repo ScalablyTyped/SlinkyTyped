@@ -18,14 +18,41 @@ trait DeviceConfigurationType extends js.Object {
 
 object DeviceConfigurationType {
   @scala.inline
-  def apply(
-    ChallengeRequiredOnNewDevice: js.UndefOr[Boolean] = js.undefined,
-    DeviceOnlyRememberedOnUserPrompt: js.UndefOr[Boolean] = js.undefined
-  ): DeviceConfigurationType = {
+  def apply(): DeviceConfigurationType = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(ChallengeRequiredOnNewDevice)) __obj.updateDynamic("ChallengeRequiredOnNewDevice")(ChallengeRequiredOnNewDevice.asInstanceOf[js.Any])
-    if (!js.isUndefined(DeviceOnlyRememberedOnUserPrompt)) __obj.updateDynamic("DeviceOnlyRememberedOnUserPrompt")(DeviceOnlyRememberedOnUserPrompt.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceConfigurationType]
   }
+  @scala.inline
+  implicit class DeviceConfigurationTypeOps[Self <: DeviceConfigurationType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChallengeRequiredOnNewDevice(value: BooleanType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChallengeRequiredOnNewDevice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChallengeRequiredOnNewDevice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChallengeRequiredOnNewDevice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceOnlyRememberedOnUserPrompt(value: BooleanType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceOnlyRememberedOnUserPrompt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceOnlyRememberedOnUserPrompt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceOnlyRememberedOnUserPrompt")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

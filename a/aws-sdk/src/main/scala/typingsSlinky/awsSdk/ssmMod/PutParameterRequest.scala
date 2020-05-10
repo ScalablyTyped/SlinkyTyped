@@ -50,27 +50,119 @@ trait PutParameterRequest extends js.Object {
 
 object PutParameterRequest {
   @scala.inline
-  def apply(
-    Name: PSParameterName,
-    Type: ParameterType,
-    Value: PSParameterValue,
-    AllowedPattern: AllowedPattern = null,
-    Description: ParameterDescription = null,
-    KeyId: ParameterKeyId = null,
-    Overwrite: js.UndefOr[scala.Boolean] = js.undefined,
-    Policies: ParameterPolicies = null,
-    Tags: TagList = null,
-    Tier: ParameterTier = null
-  ): PutParameterRequest = {
+  def apply(Name: PSParameterName, Type: ParameterType, Value: PSParameterValue): PutParameterRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any], Value = Value.asInstanceOf[js.Any])
-    if (AllowedPattern != null) __obj.updateDynamic("AllowedPattern")(AllowedPattern.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (KeyId != null) __obj.updateDynamic("KeyId")(KeyId.asInstanceOf[js.Any])
-    if (!js.isUndefined(Overwrite)) __obj.updateDynamic("Overwrite")(Overwrite.asInstanceOf[js.Any])
-    if (Policies != null) __obj.updateDynamic("Policies")(Policies.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (Tier != null) __obj.updateDynamic("Tier")(Tier.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutParameterRequest]
   }
+  @scala.inline
+  implicit class PutParameterRequestOps[Self <: PutParameterRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: PSParameterName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: ParameterType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: PSParameterValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllowedPattern(value: AllowedPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedPattern: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedPattern")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: ParameterDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyId(value: ParameterKeyId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverwrite(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Overwrite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverwrite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Overwrite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicies(value: ParameterPolicies): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Policies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Policies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTier(value: ParameterTier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

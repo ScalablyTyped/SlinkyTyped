@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Ack extends DeliveryInfo {
-  def acknowledge(all: Boolean): Unit
-  def reject(requeue: Boolean): Unit
+  def acknowledge(all: Boolean): Unit = js.native
+  def reject(requeue: Boolean): Unit = js.native
 }
 
 object Ack {
@@ -15,7 +16,7 @@ object Ack {
     acknowledge: Boolean => Unit,
     consumerTag: String,
     contentType: String,
-    deliveryTag: scala.scalajs.js.typedarray.Uint8Array,
+    deliveryTag: js.typedarray.Uint8Array,
     exchange: String,
     queue: String,
     redelivered: Boolean,
@@ -23,8 +24,27 @@ object Ack {
     routingKey: String
   ): Ack = {
     val __obj = js.Dynamic.literal(acknowledge = js.Any.fromFunction1(acknowledge), consumerTag = consumerTag.asInstanceOf[js.Any], contentType = contentType.asInstanceOf[js.Any], deliveryTag = deliveryTag.asInstanceOf[js.Any], exchange = exchange.asInstanceOf[js.Any], queue = queue.asInstanceOf[js.Any], redelivered = redelivered.asInstanceOf[js.Any], reject = js.Any.fromFunction1(reject), routingKey = routingKey.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Ack]
   }
+  @scala.inline
+  implicit class AckOps[Self <: Ack] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcknowledge(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acknowledge")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withReject(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reject")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -4,25 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UpdateOptions extends js.Object {
   /**
     * The data you're wanting to persist to Firebase.
     */
-  var data: js.Any
+  var data: js.Any = js.native
   /**
     * A callback that will get invoked once the new data has been saved to
     * Firebase. If there is an error, it will be the only argument to this
     * function.
     */
-  var `then`: js.UndefOr[js.Function1[/* result */ js.Any, Unit]] = js.undefined
+  var `then`: js.UndefOr[js.Function1[/* result */ js.Any, Unit]] = js.native
 }
 
 object UpdateOptions {
   @scala.inline
-  def apply(data: js.Any, `then`: /* result */ js.Any => Unit = null): UpdateOptions = {
+  def apply(data: js.Any): UpdateOptions = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    if (`then` != null) __obj.updateDynamic("then")(js.Any.fromFunction1(`then`))
     __obj.asInstanceOf[UpdateOptions]
   }
+  @scala.inline
+  implicit class UpdateOptionsOps[Self <: UpdateOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThen(value: /* result */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("then")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutThen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("then")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

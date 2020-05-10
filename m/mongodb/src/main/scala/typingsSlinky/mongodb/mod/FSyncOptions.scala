@@ -1,30 +1,39 @@
 package typingsSlinky.mongodb.mod
 
-import typingsSlinky.mongodb.mongodbStrings.majority
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FSyncOptions extends CommonOptions {
-  var fsync: js.UndefOr[Boolean] = js.undefined
+  var fsync: js.UndefOr[Boolean] = js.native
 }
 
 object FSyncOptions {
   @scala.inline
-  def apply(
-    fsync: js.UndefOr[Boolean] = js.undefined,
-    j: js.UndefOr[Boolean] = js.undefined,
-    session: ClientSession = null,
-    w: scala.Double | majority | String = null,
-    wtimeout: Int | scala.Double = null
-  ): FSyncOptions = {
+  def apply(): FSyncOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(fsync)) __obj.updateDynamic("fsync")(fsync.asInstanceOf[js.Any])
-    if (!js.isUndefined(j)) __obj.updateDynamic("j")(j.asInstanceOf[js.Any])
-    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
-    if (w != null) __obj.updateDynamic("w")(w.asInstanceOf[js.Any])
-    if (wtimeout != null) __obj.updateDynamic("wtimeout")(wtimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[FSyncOptions]
   }
+  @scala.inline
+  implicit class FSyncOptionsOps[Self <: FSyncOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFsync(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fsync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fsync")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -24,8 +24,33 @@ object PutBackupVaultNotificationsInput {
   @scala.inline
   def apply(BackupVaultEvents: BackupVaultEvents, BackupVaultName: BackupVaultName, SNSTopicArn: ARN): PutBackupVaultNotificationsInput = {
     val __obj = js.Dynamic.literal(BackupVaultEvents = BackupVaultEvents.asInstanceOf[js.Any], BackupVaultName = BackupVaultName.asInstanceOf[js.Any], SNSTopicArn = SNSTopicArn.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PutBackupVaultNotificationsInput]
   }
+  @scala.inline
+  implicit class PutBackupVaultNotificationsInputOps[Self <: PutBackupVaultNotificationsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackupVaultEvents(value: BackupVaultEvents): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupVaultEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBackupVaultName(value: BackupVaultName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupVaultName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSNSTopicArn(value: ARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SNSTopicArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -15,16 +15,14 @@ trait Arm64Shifter extends js.Object
 
 object Arm64Shifter {
   @scala.inline
-  def asr: typingsSlinky.fridaGum.fridaGumStrings.asr = this.cast("asr")
+  def asr: typingsSlinky.fridaGum.fridaGumStrings.asr = "asr".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.asr]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def lsl: typingsSlinky.fridaGum.fridaGumStrings.lsl = "lsl".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.lsl]
   @scala.inline
-  def lsl: typingsSlinky.fridaGum.fridaGumStrings.lsl = this.cast("lsl")
+  def lsr: typingsSlinky.fridaGum.fridaGumStrings.lsr = "lsr".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.lsr]
   @scala.inline
-  def lsr: typingsSlinky.fridaGum.fridaGumStrings.lsr = this.cast("lsr")
+  def msl: typingsSlinky.fridaGum.fridaGumStrings.msl = "msl".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.msl]
   @scala.inline
-  def msl: typingsSlinky.fridaGum.fridaGumStrings.msl = this.cast("msl")
-  @scala.inline
-  def ror: typingsSlinky.fridaGum.fridaGumStrings.ror = this.cast("ror")
+  def ror: typingsSlinky.fridaGum.fridaGumStrings.ror = "ror".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.ror]
 }
 

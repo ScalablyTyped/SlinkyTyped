@@ -13,12 +13,10 @@ trait DeviceStatus extends js.Object
 
 object DeviceStatus {
   @scala.inline
-  def available: typingsSlinky.trezorConnect.trezorConnectStrings.available = this.cast("available")
+  def available: typingsSlinky.trezorConnect.trezorConnectStrings.available = "available".asInstanceOf[typingsSlinky.trezorConnect.trezorConnectStrings.available]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def occupied: typingsSlinky.trezorConnect.trezorConnectStrings.occupied = "occupied".asInstanceOf[typingsSlinky.trezorConnect.trezorConnectStrings.occupied]
   @scala.inline
-  def occupied: typingsSlinky.trezorConnect.trezorConnectStrings.occupied = this.cast("occupied")
-  @scala.inline
-  def used: typingsSlinky.trezorConnect.trezorConnectStrings.used = this.cast("used")
+  def used: typingsSlinky.trezorConnect.trezorConnectStrings.used = "used".asInstanceOf[typingsSlinky.trezorConnect.trezorConnectStrings.used]
 }
 

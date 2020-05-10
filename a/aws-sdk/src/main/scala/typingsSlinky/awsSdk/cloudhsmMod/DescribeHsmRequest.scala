@@ -18,11 +18,41 @@ trait DescribeHsmRequest extends js.Object {
 
 object DescribeHsmRequest {
   @scala.inline
-  def apply(HsmArn: HsmArn = null, HsmSerialNumber: HsmSerialNumber = null): DescribeHsmRequest = {
+  def apply(): DescribeHsmRequest = {
     val __obj = js.Dynamic.literal()
-    if (HsmArn != null) __obj.updateDynamic("HsmArn")(HsmArn.asInstanceOf[js.Any])
-    if (HsmSerialNumber != null) __obj.updateDynamic("HsmSerialNumber")(HsmSerialNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeHsmRequest]
   }
+  @scala.inline
+  implicit class DescribeHsmRequestOps[Self <: DescribeHsmRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHsmArn(value: HsmArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHsmArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHsmSerialNumber(value: HsmSerialNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmSerialNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHsmSerialNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmSerialNumber")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

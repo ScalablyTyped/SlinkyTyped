@@ -1,26 +1,21 @@
 package typingsSlinky.extjs.Ext.layout.container
 
-import typingsSlinky.extjs.Ext.Array
-import typingsSlinky.extjs.Ext.IClass
-import typingsSlinky.extjs.Ext.IComponent
-import typingsSlinky.extjs.Ext.IElement
-import typingsSlinky.extjs.Ext.layout.IContextItem
-import typingsSlinky.extjs.Ext.layout.ISizePolicy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ITable extends IContainer {
   /** [Method] Called to perform the calculations for this layout
   		* @param ownerContext Object
   		*/
   @JSName("calculate")
-  var calculate_ITable: js.UndefOr[js.Function1[/* ownerContext */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var calculate_ITable: js.UndefOr[js.Function1[/* ownerContext */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Config Option] (Number) */
-  var columns: js.UndefOr[Double] = js.undefined
+  var columns: js.UndefOr[Double] = js.native
   /** [Method] This method if implemented is called after all layouts have completed  */
   @JSName("finalizeLayout")
-  var finalizeLayout_ITable: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var finalizeLayout_ITable: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Validates item is in the proper place in the dom
   		* @param item Object
   		* @param target Object
@@ -36,117 +31,114 @@ trait ITable extends IContainer {
       /* cellIdx */ js.UndefOr[js.Any], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Config Option] (Object) */
-  var tableAttrs: js.UndefOr[js.Any] = js.undefined
+  var tableAttrs: js.UndefOr[js.Any] = js.native
   /** [Config Option] (Object) */
-  var tdAttrs: js.UndefOr[js.Any] = js.undefined
+  var tdAttrs: js.UndefOr[js.Any] = js.native
   /** [Config Option] (Object) */
-  var trAttrs: js.UndefOr[js.Any] = js.undefined
+  var trAttrs: js.UndefOr[js.Any] = js.native
 }
 
 object ITable {
   @scala.inline
-  def apply(
-    addChildEls: () => Unit = null,
-    afterRemove: /* item */ js.UndefOr[js.Any] => Unit = null,
-    alias: Array = null,
-    alternateClassName: js.Any = null,
-    beginLayout: /* ownerContext */ js.UndefOr[js.Any] => Unit = null,
-    beginLayoutCycle: (/* ownerContext */ js.UndefOr[js.Any], /* firstCycle */ js.UndefOr[js.Any]) => Unit = null,
-    calculate: /* ownerContext */ js.UndefOr[js.Any] => Unit = null,
-    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
-    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
-    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
-    columns: Int | Double = null,
-    completeLayout: /* ownerContext */ js.UndefOr[IContextItem] => Unit = null,
-    config: js.Any = null,
-    configureItem: /* item */ js.UndefOr[js.Any] => Unit = null,
-    destroy: () => Unit = null,
-    done: js.UndefOr[Boolean] = js.undefined,
-    extend: String = null,
-    finalizeLayout: () => Unit = null,
-    finishedLayout: /* ownerContext */ js.UndefOr[IContextItem] => Unit = null,
-    getContainerSize: (/* ownerContext */ js.UndefOr[IContextItem], /* inDom */ js.UndefOr[Boolean]) => _ = null,
-    getElementTarget: () => IElement = null,
-    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
-    getItemSizePolicy: /* item */ js.UndefOr[IComponent] => ISizePolicy = null,
-    getLayoutItems: () => Array = null,
-    getRenderTarget: () => IElement = null,
-    getRenderedItems: () => Array = null,
-    getTarget: () => IElement = null,
-    getVisibleItems: () => Array = null,
-    inheritableStatics: js.Any = null,
-    initConfig: /* config */ js.UndefOr[js.Any] => ITable = null,
-    initLayout: () => Unit = null,
-    isLayout: js.UndefOr[Boolean] = js.undefined,
-    isValidParent: (/* item */ js.UndefOr[js.Any], /* target */ js.UndefOr[js.Any], /* rowIdx */ js.UndefOr[js.Any], /* cellIdx */ js.UndefOr[js.Any]) => Unit = null,
-    itemCls: String = null,
-    mixins: js.Any = null,
-    notifyOwner: /* ownerContext */ js.UndefOr[IContextItem] => Unit = null,
-    onContentChange: /* child */ js.UndefOr[IComponent] => Boolean = null,
-    overflowPadderEl: IElement = null,
-    removeChildEls: js.UndefOr[js.Any] => Unit = null,
-    renderItems: (/* items */ js.UndefOr[js.Any], /* target */ js.UndefOr[js.Any]) => Unit = null,
-    requires: Array = null,
-    self: IClass = null,
-    singleton: js.UndefOr[Boolean] = js.undefined,
-    statics: js.Any = null,
-    tableAttrs: js.Any = null,
-    tdAttrs: js.Any = null,
-    trAttrs: js.Any = null,
-    uses: Array = null
-  ): ITable = {
+  def apply(): ITable = {
     val __obj = js.Dynamic.literal()
-    if (addChildEls != null) __obj.updateDynamic("addChildEls")(js.Any.fromFunction0(addChildEls))
-    if (afterRemove != null) __obj.updateDynamic("afterRemove")(js.Any.fromFunction1(afterRemove))
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
-    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
-    if (beginLayout != null) __obj.updateDynamic("beginLayout")(js.Any.fromFunction1(beginLayout))
-    if (beginLayoutCycle != null) __obj.updateDynamic("beginLayoutCycle")(js.Any.fromFunction2(beginLayoutCycle))
-    if (calculate != null) __obj.updateDynamic("calculate")(js.Any.fromFunction1(calculate))
-    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
-    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
-    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (completeLayout != null) __obj.updateDynamic("completeLayout")(js.Any.fromFunction1(completeLayout))
-    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
-    if (configureItem != null) __obj.updateDynamic("configureItem")(js.Any.fromFunction1(configureItem))
-    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction0(destroy))
-    if (!js.isUndefined(done)) __obj.updateDynamic("done")(done.asInstanceOf[js.Any])
-    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
-    if (finalizeLayout != null) __obj.updateDynamic("finalizeLayout")(js.Any.fromFunction0(finalizeLayout))
-    if (finishedLayout != null) __obj.updateDynamic("finishedLayout")(js.Any.fromFunction1(finishedLayout))
-    if (getContainerSize != null) __obj.updateDynamic("getContainerSize")(js.Any.fromFunction2(getContainerSize))
-    if (getElementTarget != null) __obj.updateDynamic("getElementTarget")(js.Any.fromFunction0(getElementTarget))
-    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
-    if (getItemSizePolicy != null) __obj.updateDynamic("getItemSizePolicy")(js.Any.fromFunction1(getItemSizePolicy))
-    if (getLayoutItems != null) __obj.updateDynamic("getLayoutItems")(js.Any.fromFunction0(getLayoutItems))
-    if (getRenderTarget != null) __obj.updateDynamic("getRenderTarget")(js.Any.fromFunction0(getRenderTarget))
-    if (getRenderedItems != null) __obj.updateDynamic("getRenderedItems")(js.Any.fromFunction0(getRenderedItems))
-    if (getTarget != null) __obj.updateDynamic("getTarget")(js.Any.fromFunction0(getTarget))
-    if (getVisibleItems != null) __obj.updateDynamic("getVisibleItems")(js.Any.fromFunction0(getVisibleItems))
-    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
-    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
-    if (initLayout != null) __obj.updateDynamic("initLayout")(js.Any.fromFunction0(initLayout))
-    if (!js.isUndefined(isLayout)) __obj.updateDynamic("isLayout")(isLayout.asInstanceOf[js.Any])
-    if (isValidParent != null) __obj.updateDynamic("isValidParent")(js.Any.fromFunction4(isValidParent))
-    if (itemCls != null) __obj.updateDynamic("itemCls")(itemCls.asInstanceOf[js.Any])
-    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
-    if (notifyOwner != null) __obj.updateDynamic("notifyOwner")(js.Any.fromFunction1(notifyOwner))
-    if (onContentChange != null) __obj.updateDynamic("onContentChange")(js.Any.fromFunction1(onContentChange))
-    if (overflowPadderEl != null) __obj.updateDynamic("overflowPadderEl")(overflowPadderEl.asInstanceOf[js.Any])
-    if (removeChildEls != null) __obj.updateDynamic("removeChildEls")(js.Any.fromFunction1(removeChildEls))
-    if (renderItems != null) __obj.updateDynamic("renderItems")(js.Any.fromFunction2(renderItems))
-    if (requires != null) __obj.updateDynamic("requires")(requires.asInstanceOf[js.Any])
-    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
-    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.asInstanceOf[js.Any])
-    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
-    if (tableAttrs != null) __obj.updateDynamic("tableAttrs")(tableAttrs.asInstanceOf[js.Any])
-    if (tdAttrs != null) __obj.updateDynamic("tdAttrs")(tdAttrs.asInstanceOf[js.Any])
-    if (trAttrs != null) __obj.updateDynamic("trAttrs")(trAttrs.asInstanceOf[js.Any])
-    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITable]
   }
+  @scala.inline
+  implicit class ITableOps[Self <: ITable] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCalculate(value: /* ownerContext */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCalculate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumns(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFinalizeLayout(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalizeLayout")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutFinalizeLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalizeLayout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsValidParent(
+      value: (/* item */ js.UndefOr[js.Any], /* target */ js.UndefOr[js.Any], /* rowIdx */ js.UndefOr[js.Any], /* cellIdx */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isValidParent")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsValidParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isValidParent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableAttrs(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableAttrs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableAttrs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableAttrs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTdAttrs(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tdAttrs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTdAttrs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tdAttrs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrAttrs(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trAttrs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrAttrs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trAttrs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -17,10 +17,8 @@ trait Mode extends js.Object
 
 object Mode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hard: typingsSlinky.wordwrap.wordwrapStrings.hard = "hard".asInstanceOf[typingsSlinky.wordwrap.wordwrapStrings.hard]
   @scala.inline
-  def hard: typingsSlinky.wordwrap.wordwrapStrings.hard = this.cast("hard")
-  @scala.inline
-  def soft: typingsSlinky.wordwrap.wordwrapStrings.soft = this.cast("soft")
+  def soft: typingsSlinky.wordwrap.wordwrapStrings.soft = "soft".asInstanceOf[typingsSlinky.wordwrap.wordwrapStrings.soft]
 }
 

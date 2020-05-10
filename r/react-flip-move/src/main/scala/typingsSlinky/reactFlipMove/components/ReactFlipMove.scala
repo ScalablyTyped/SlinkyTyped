@@ -1,13 +1,10 @@
 package typingsSlinky.reactFlipMove.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.ClientRect
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFlipMove.mod.FlipMove.AnimationProp
 import typingsSlinky.reactFlipMove.mod.FlipMove.FlipMoveProps
 import typingsSlinky.reactFlipMove.mod.FlipMove.Styles
@@ -16,58 +13,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactFlipMove
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactFlipMove {
   @JSImport("react-flip-move", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    appearAnimation: AnimationProp = null,
-    delay: Double | String = null,
-    disableAllAnimations: js.UndefOr[Boolean] = js.undefined,
-    duration: Double | String = null,
-    easing: String = null,
-    enterAnimation: AnimationProp = null,
-    getPosition: /* node */ HTMLElement => ClientRect = null,
-    leaveAnimation: AnimationProp = null,
-    maintainContainerHeight: js.UndefOr[Boolean] = js.undefined,
-    onFinish: (/* childElement */ ReactElement, /* domNode */ HTMLElement) => Unit = null,
-    onFinishAll: (/* childElements */ js.Array[ReactElement], /* domNodes */ js.Array[HTMLElement]) => Unit = null,
-    onStart: (/* childElement */ ReactElement, /* domNode */ HTMLElement) => Unit = null,
-    onStartAll: (/* childElements */ js.Array[ReactElement], /* domNodes */ js.Array[HTMLElement]) => Unit = null,
-    staggerDelayBy: Double | String = null,
-    staggerDurationBy: Double | String = null,
-    style: Styles = null,
-    typeName: String = null,
-    verticalAlignment: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (appearAnimation != null) __obj.updateDynamic("appearAnimation")(appearAnimation.asInstanceOf[js.Any])
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableAllAnimations)) __obj.updateDynamic("disableAllAnimations")(disableAllAnimations.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
-    if (enterAnimation != null) __obj.updateDynamic("enterAnimation")(enterAnimation.asInstanceOf[js.Any])
-    if (getPosition != null) __obj.updateDynamic("getPosition")(js.Any.fromFunction1(getPosition))
-    if (leaveAnimation != null) __obj.updateDynamic("leaveAnimation")(leaveAnimation.asInstanceOf[js.Any])
-    if (!js.isUndefined(maintainContainerHeight)) __obj.updateDynamic("maintainContainerHeight")(maintainContainerHeight.asInstanceOf[js.Any])
-    if (onFinish != null) __obj.updateDynamic("onFinish")(js.Any.fromFunction2(onFinish))
-    if (onFinishAll != null) __obj.updateDynamic("onFinishAll")(js.Any.fromFunction2(onFinishAll))
-    if (onStart != null) __obj.updateDynamic("onStart")(js.Any.fromFunction2(onStart))
-    if (onStartAll != null) __obj.updateDynamic("onStartAll")(js.Any.fromFunction2(onStartAll))
-    if (staggerDelayBy != null) __obj.updateDynamic("staggerDelayBy")(staggerDelayBy.asInstanceOf[js.Any])
-    if (staggerDurationBy != null) __obj.updateDynamic("staggerDurationBy")(staggerDurationBy.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (typeName != null) __obj.updateDynamic("typeName")(typeName.asInstanceOf[js.Any])
-    if (verticalAlignment != null) __obj.updateDynamic("verticalAlignment")(verticalAlignment.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def appearAnimation(value: AnimationProp): this.type = set("appearAnimation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delay(value: Double | String): this.type = set("delay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableAllAnimations(value: Boolean): this.type = set("disableAllAnimations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def duration(value: Double | String): this.type = set("duration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def easing(value: String): this.type = set("easing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enterAnimation(value: AnimationProp): this.type = set("enterAnimation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getPosition(value: /* node */ HTMLElement => ClientRect): this.type = set("getPosition", js.Any.fromFunction1(value))
+    @scala.inline
+    def leaveAnimation(value: AnimationProp): this.type = set("leaveAnimation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maintainContainerHeight(value: Boolean): this.type = set("maintainContainerHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onFinish(value: (/* childElement */ ReactElement, /* domNode */ HTMLElement) => Unit): this.type = set("onFinish", js.Any.fromFunction2(value))
+    @scala.inline
+    def onFinishAll(value: (/* childElements */ js.Array[ReactElement], /* domNodes */ js.Array[HTMLElement]) => Unit): this.type = set("onFinishAll", js.Any.fromFunction2(value))
+    @scala.inline
+    def onStart(value: (/* childElement */ ReactElement, /* domNode */ HTMLElement) => Unit): this.type = set("onStart", js.Any.fromFunction2(value))
+    @scala.inline
+    def onStartAll(value: (/* childElements */ js.Array[ReactElement], /* domNodes */ js.Array[HTMLElement]) => Unit): this.type = set("onStartAll", js.Any.fromFunction2(value))
+    @scala.inline
+    def staggerDelayBy(value: Double | String): this.type = set("staggerDelayBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def staggerDurationBy(value: Double | String): this.type = set("staggerDurationBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: Styles): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def typeName(value: String): this.type = set("typeName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def typeNameNull: this.type = set("typeName", null)
+    @scala.inline
+    def verticalAlignment(value: String): this.type = set("verticalAlignment", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactFlipMove.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FlipMoveProps
+  
+  def withProps(p: FlipMoveProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactFlipMove.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

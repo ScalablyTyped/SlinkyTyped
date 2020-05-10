@@ -26,38 +26,36 @@ trait PermissionName extends js.Object
 
 object PermissionName {
   @scala.inline
-  def accelerometer: typingsSlinky.std.stdStrings.accelerometer = this.cast("accelerometer")
+  def accelerometer: typingsSlinky.std.stdStrings.accelerometer = "accelerometer".asInstanceOf[typingsSlinky.std.stdStrings.accelerometer]
   @scala.inline
-  def `ambient-light-sensor`: typingsSlinky.std.stdStrings.`ambient-light-sensor` = this.cast("ambient-light-sensor")
+  def `ambient-light-sensor`: typingsSlinky.std.stdStrings.`ambient-light-sensor` = "ambient-light-sensor".asInstanceOf[typingsSlinky.std.stdStrings.`ambient-light-sensor`]
   @scala.inline
-  def `background-sync`: typingsSlinky.std.stdStrings.`background-sync` = this.cast("background-sync")
+  def `background-sync`: typingsSlinky.std.stdStrings.`background-sync` = "background-sync".asInstanceOf[typingsSlinky.std.stdStrings.`background-sync`]
   @scala.inline
-  def bluetooth: typingsSlinky.std.stdStrings.bluetooth = this.cast("bluetooth")
+  def bluetooth: typingsSlinky.std.stdStrings.bluetooth = "bluetooth".asInstanceOf[typingsSlinky.std.stdStrings.bluetooth]
   @scala.inline
-  def camera: typingsSlinky.std.stdStrings.camera = this.cast("camera")
+  def camera: typingsSlinky.std.stdStrings.camera = "camera".asInstanceOf[typingsSlinky.std.stdStrings.camera]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def clipboard: typingsSlinky.std.stdStrings.clipboard = "clipboard".asInstanceOf[typingsSlinky.std.stdStrings.clipboard]
   @scala.inline
-  def clipboard: typingsSlinky.std.stdStrings.clipboard = this.cast("clipboard")
+  def `device-info`: typingsSlinky.std.stdStrings.`device-info` = "device-info".asInstanceOf[typingsSlinky.std.stdStrings.`device-info`]
   @scala.inline
-  def `device-info`: typingsSlinky.std.stdStrings.`device-info` = this.cast("device-info")
+  def geolocation: typingsSlinky.std.stdStrings.geolocation = "geolocation".asInstanceOf[typingsSlinky.std.stdStrings.geolocation]
   @scala.inline
-  def geolocation: typingsSlinky.std.stdStrings.geolocation = this.cast("geolocation")
+  def gyroscope: typingsSlinky.std.stdStrings.gyroscope = "gyroscope".asInstanceOf[typingsSlinky.std.stdStrings.gyroscope]
   @scala.inline
-  def gyroscope: typingsSlinky.std.stdStrings.gyroscope = this.cast("gyroscope")
+  def magnetometer: typingsSlinky.std.stdStrings.magnetometer = "magnetometer".asInstanceOf[typingsSlinky.std.stdStrings.magnetometer]
   @scala.inline
-  def magnetometer: typingsSlinky.std.stdStrings.magnetometer = this.cast("magnetometer")
+  def microphone: typingsSlinky.std.stdStrings.microphone = "microphone".asInstanceOf[typingsSlinky.std.stdStrings.microphone]
   @scala.inline
-  def microphone: typingsSlinky.std.stdStrings.microphone = this.cast("microphone")
+  def midi: typingsSlinky.std.stdStrings.midi = "midi".asInstanceOf[typingsSlinky.std.stdStrings.midi]
   @scala.inline
-  def midi: typingsSlinky.std.stdStrings.midi = this.cast("midi")
+  def notifications: typingsSlinky.std.stdStrings.notifications = "notifications".asInstanceOf[typingsSlinky.std.stdStrings.notifications]
   @scala.inline
-  def notifications: typingsSlinky.std.stdStrings.notifications = this.cast("notifications")
+  def `persistent-storage`: typingsSlinky.std.stdStrings.`persistent-storage` = "persistent-storage".asInstanceOf[typingsSlinky.std.stdStrings.`persistent-storage`]
   @scala.inline
-  def `persistent-storage`: typingsSlinky.std.stdStrings.`persistent-storage` = this.cast("persistent-storage")
+  def push: typingsSlinky.std.stdStrings.push = "push".asInstanceOf[typingsSlinky.std.stdStrings.push]
   @scala.inline
-  def push: typingsSlinky.std.stdStrings.push = this.cast("push")
-  @scala.inline
-  def speaker: typingsSlinky.std.stdStrings.speaker = this.cast("speaker")
+  def speaker: typingsSlinky.std.stdStrings.speaker = "speaker".asInstanceOf[typingsSlinky.std.stdStrings.speaker]
 }
 

@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ResolvePolicy extends js.Object {
   /**
     * Determines the unwrapping behavior of asynchronous resolve values.
@@ -42,7 +43,7 @@ trait ResolvePolicy extends js.Object {
     * }
     * ```
     */
-  var async: js.UndefOr[PolicyAsync] = js.undefined
+  var async: js.UndefOr[PolicyAsync] = js.native
   /**
     * Defines when a Resolvable is resolved (fetched) during a transition
     *
@@ -86,16 +87,52 @@ trait ResolvePolicy extends js.Object {
     * }
     * ```
     */
-  var when: js.UndefOr[PolicyWhen] = js.undefined
+  var when: js.UndefOr[PolicyWhen] = js.native
 }
 
 object ResolvePolicy {
   @scala.inline
-  def apply(async: PolicyAsync = null, when: PolicyWhen = null): ResolvePolicy = {
+  def apply(): ResolvePolicy = {
     val __obj = js.Dynamic.literal()
-    if (async != null) __obj.updateDynamic("async")(async.asInstanceOf[js.Any])
-    if (when != null) __obj.updateDynamic("when")(when.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResolvePolicy]
   }
+  @scala.inline
+  implicit class ResolvePolicyOps[Self <: ResolvePolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAsyncFunction1(value: /* data */ js.Any => js.Promise[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAsync(value: PolicyAsync): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhen(value: PolicyWhen): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("when")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("when")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

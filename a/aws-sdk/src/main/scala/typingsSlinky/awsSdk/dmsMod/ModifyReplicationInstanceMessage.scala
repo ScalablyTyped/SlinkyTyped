@@ -19,7 +19,7 @@ trait ModifyReplicationInstanceMessage extends js.Object {
     */
   var ApplyImmediately: js.UndefOr[Boolean] = js.native
   /**
-    *  Indicates that minor version upgrades will be applied automatically to the replication instance during the maintenance window. Changing this parameter does not result in an outage except in the following case and the change is asynchronously applied as soon as possible. An outage will result if this parameter is set to true during the maintenance window, and a newer minor version is available, and AWS DMS has enabled auto patching for that engine version. 
+    * A value that indicates that minor version upgrades are applied automatically to the replication instance during the maintenance window. Changing this parameter doesn't result in an outage, except in the case dsecribed following. The change is asynchronously applied as soon as possible.  An outage does result if these factors apply:    This parameter is set to true during the maintenance window.   A newer minor version is available.    AWS DMS has enabled automatic patching for the given engine version.   
     */
   var AutoMinorVersionUpgrade: js.UndefOr[BooleanOptional] = js.native
   /**
@@ -27,7 +27,7 @@ trait ModifyReplicationInstanceMessage extends js.Object {
     */
   var EngineVersion: js.UndefOr[String] = js.native
   /**
-    *  Specifies whether the replication instance is a Multi-AZ deployment. You cannot set the AvailabilityZone parameter if the Multi-AZ parameter is set to true. 
+    *  Specifies whether the replication instance is a Multi-AZ deployment. You can't set the AvailabilityZone parameter if the Multi-AZ parameter is set to true. 
     */
   var MultiAZ: js.UndefOr[BooleanOptional] = js.native
   /**
@@ -54,31 +54,143 @@ trait ModifyReplicationInstanceMessage extends js.Object {
 
 object ModifyReplicationInstanceMessage {
   @scala.inline
-  def apply(
-    ReplicationInstanceArn: String,
-    AllocatedStorage: Int | Double = null,
-    AllowMajorVersionUpgrade: js.UndefOr[scala.Boolean] = js.undefined,
-    ApplyImmediately: js.UndefOr[scala.Boolean] = js.undefined,
-    AutoMinorVersionUpgrade: js.UndefOr[scala.Boolean] = js.undefined,
-    EngineVersion: String = null,
-    MultiAZ: js.UndefOr[scala.Boolean] = js.undefined,
-    PreferredMaintenanceWindow: String = null,
-    ReplicationInstanceClass: String = null,
-    ReplicationInstanceIdentifier: String = null,
-    VpcSecurityGroupIds: VpcSecurityGroupIdList = null
-  ): ModifyReplicationInstanceMessage = {
+  def apply(ReplicationInstanceArn: String): ModifyReplicationInstanceMessage = {
     val __obj = js.Dynamic.literal(ReplicationInstanceArn = ReplicationInstanceArn.asInstanceOf[js.Any])
-    if (AllocatedStorage != null) __obj.updateDynamic("AllocatedStorage")(AllocatedStorage.asInstanceOf[js.Any])
-    if (!js.isUndefined(AllowMajorVersionUpgrade)) __obj.updateDynamic("AllowMajorVersionUpgrade")(AllowMajorVersionUpgrade.asInstanceOf[js.Any])
-    if (!js.isUndefined(ApplyImmediately)) __obj.updateDynamic("ApplyImmediately")(ApplyImmediately.asInstanceOf[js.Any])
-    if (!js.isUndefined(AutoMinorVersionUpgrade)) __obj.updateDynamic("AutoMinorVersionUpgrade")(AutoMinorVersionUpgrade.asInstanceOf[js.Any])
-    if (EngineVersion != null) __obj.updateDynamic("EngineVersion")(EngineVersion.asInstanceOf[js.Any])
-    if (!js.isUndefined(MultiAZ)) __obj.updateDynamic("MultiAZ")(MultiAZ.asInstanceOf[js.Any])
-    if (PreferredMaintenanceWindow != null) __obj.updateDynamic("PreferredMaintenanceWindow")(PreferredMaintenanceWindow.asInstanceOf[js.Any])
-    if (ReplicationInstanceClass != null) __obj.updateDynamic("ReplicationInstanceClass")(ReplicationInstanceClass.asInstanceOf[js.Any])
-    if (ReplicationInstanceIdentifier != null) __obj.updateDynamic("ReplicationInstanceIdentifier")(ReplicationInstanceIdentifier.asInstanceOf[js.Any])
-    if (VpcSecurityGroupIds != null) __obj.updateDynamic("VpcSecurityGroupIds")(VpcSecurityGroupIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyReplicationInstanceMessage]
   }
+  @scala.inline
+  implicit class ModifyReplicationInstanceMessageOps[Self <: ModifyReplicationInstanceMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReplicationInstanceArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationInstanceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllocatedStorage(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocatedStorage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllocatedStorage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocatedStorage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowMajorVersionUpgrade(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowMajorVersionUpgrade")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowMajorVersionUpgrade: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowMajorVersionUpgrade")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApplyImmediately(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplyImmediately")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplyImmediately: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplyImmediately")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoMinorVersionUpgrade(value: BooleanOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoMinorVersionUpgrade")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoMinorVersionUpgrade: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoMinorVersionUpgrade")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEngineVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngineVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiAZ(value: BooleanOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiAZ")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiAZ: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiAZ")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreferredMaintenanceWindow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredMaintenanceWindow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreferredMaintenanceWindow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredMaintenanceWindow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationInstanceClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationInstanceClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationInstanceClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationInstanceClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationInstanceIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationInstanceIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationInstanceIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationInstanceIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcSecurityGroupIds(value: VpcSecurityGroupIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcSecurityGroupIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcSecurityGroupIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcSecurityGroupIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

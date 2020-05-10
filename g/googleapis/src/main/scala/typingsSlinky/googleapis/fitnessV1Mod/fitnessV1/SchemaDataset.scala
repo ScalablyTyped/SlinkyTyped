@@ -46,20 +46,77 @@ trait SchemaDataset extends js.Object {
 
 object SchemaDataset {
   @scala.inline
-  def apply(
-    dataSourceId: String = null,
-    maxEndTimeNs: String = null,
-    minStartTimeNs: String = null,
-    nextPageToken: String = null,
-    point: js.Array[SchemaDataPoint] = null
-  ): SchemaDataset = {
+  def apply(): SchemaDataset = {
     val __obj = js.Dynamic.literal()
-    if (dataSourceId != null) __obj.updateDynamic("dataSourceId")(dataSourceId.asInstanceOf[js.Any])
-    if (maxEndTimeNs != null) __obj.updateDynamic("maxEndTimeNs")(maxEndTimeNs.asInstanceOf[js.Any])
-    if (minStartTimeNs != null) __obj.updateDynamic("minStartTimeNs")(minStartTimeNs.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (point != null) __obj.updateDynamic("point")(point.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDataset]
   }
+  @scala.inline
+  implicit class SchemaDatasetOps[Self <: SchemaDataset] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataSourceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxEndTimeNs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxEndTimeNs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxEndTimeNs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxEndTimeNs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinStartTimeNs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minStartTimeNs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinStartTimeNs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minStartTimeNs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoint(value: js.Array[SchemaDataPoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

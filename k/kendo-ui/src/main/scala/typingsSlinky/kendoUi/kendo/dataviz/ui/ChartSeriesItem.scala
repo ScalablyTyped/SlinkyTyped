@@ -4,255 +4,1063 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChartSeriesItem extends js.Object {
-  var aggregate: js.UndefOr[String | js.Function] = js.undefined
-  var axis: js.UndefOr[String] = js.undefined
-  var border: js.UndefOr[ChartSeriesItemBorder] = js.undefined
-  var categoryAxis: js.UndefOr[String] = js.undefined
-  var categoryField: js.UndefOr[String] = js.undefined
-  var closeField: js.UndefOr[String] = js.undefined
-  var color: js.UndefOr[String | js.Function] = js.undefined
-  var colorField: js.UndefOr[String] = js.undefined
-  var connectors: js.UndefOr[ChartSeriesItemConnectors] = js.undefined
-  var currentField: js.UndefOr[String] = js.undefined
-  var dashType: js.UndefOr[String] = js.undefined
-  var data: js.UndefOr[js.Any] = js.undefined
-  var downColor: js.UndefOr[String | js.Function] = js.undefined
-  var downColorField: js.UndefOr[String] = js.undefined
-  var dynamicHeight: js.UndefOr[Boolean] = js.undefined
-  var dynamicSlope: js.UndefOr[Boolean] = js.undefined
-  var errorBars: js.UndefOr[ChartSeriesItemErrorBars] = js.undefined
-  var errorHighField: js.UndefOr[String] = js.undefined
-  var errorLowField: js.UndefOr[String] = js.undefined
-  var explodeField: js.UndefOr[String] = js.undefined
-  var extremes: js.UndefOr[ChartSeriesItemExtremes] = js.undefined
-  var field: js.UndefOr[String] = js.undefined
-  var fromField: js.UndefOr[String] = js.undefined
-  var gap: js.UndefOr[Double] = js.undefined
-  var highField: js.UndefOr[String] = js.undefined
-  var highlight: js.UndefOr[ChartSeriesItemHighlight] = js.undefined
-  var holeSize: js.UndefOr[Double] = js.undefined
-  var labels: js.UndefOr[ChartSeriesItemLabels] = js.undefined
-  var line: js.UndefOr[String | ChartSeriesItemLine] = js.undefined
-  var lowField: js.UndefOr[String] = js.undefined
-  var lowerField: js.UndefOr[String] = js.undefined
-  var margin: js.UndefOr[Double | ChartSeriesItemMargin] = js.undefined
-  var markers: js.UndefOr[ChartSeriesItemMarkers] = js.undefined
-  var maxSize: js.UndefOr[Double] = js.undefined
-  var meanField: js.UndefOr[String] = js.undefined
-  var medianField: js.UndefOr[String] = js.undefined
-  var minSize: js.UndefOr[Double] = js.undefined
-  var missingValues: js.UndefOr[String] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var neckRatio: js.UndefOr[Double] = js.undefined
-  var negativeColor: js.UndefOr[String] = js.undefined
-  var negativeValues: js.UndefOr[ChartSeriesItemNegativeValues] = js.undefined
-  var noteTextField: js.UndefOr[String] = js.undefined
-  var notes: js.UndefOr[ChartSeriesItemNotes] = js.undefined
-  var opacity: js.UndefOr[Double] = js.undefined
-  var openField: js.UndefOr[String] = js.undefined
-  var outliers: js.UndefOr[ChartSeriesItemOutliers] = js.undefined
-  var outliersField: js.UndefOr[String] = js.undefined
-  var overlay: js.UndefOr[ChartSeriesItemOverlay] = js.undefined
-  var padding: js.UndefOr[Double] = js.undefined
-  var q1Field: js.UndefOr[String] = js.undefined
-  var q3Field: js.UndefOr[String] = js.undefined
-  var segmentSpacing: js.UndefOr[Double] = js.undefined
-  var size: js.UndefOr[Double] = js.undefined
-  var sizeField: js.UndefOr[String] = js.undefined
-  var spacing: js.UndefOr[Double] = js.undefined
-  var stack: js.UndefOr[Boolean | String | ChartSeriesItemStack] = js.undefined
-  var startAngle: js.UndefOr[Double] = js.undefined
-  var style: js.UndefOr[String] = js.undefined
-  var summaryField: js.UndefOr[String] = js.undefined
-  var target: js.UndefOr[ChartSeriesItemTarget] = js.undefined
-  var targetField: js.UndefOr[String] = js.undefined
-  var toField: js.UndefOr[String] = js.undefined
-  var tooltip: js.UndefOr[ChartSeriesItemTooltip] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
-  var upperField: js.UndefOr[String] = js.undefined
-  var visible: js.UndefOr[Boolean] = js.undefined
-  var visibleInLegend: js.UndefOr[Boolean] = js.undefined
-  var visibleInLegendField: js.UndefOr[String] = js.undefined
-  var visual: js.UndefOr[js.Function] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
-  var xAxis: js.UndefOr[String] = js.undefined
-  var xErrorHighField: js.UndefOr[String] = js.undefined
-  var xErrorLowField: js.UndefOr[String] = js.undefined
-  var xField: js.UndefOr[String] = js.undefined
-  var yAxis: js.UndefOr[String] = js.undefined
-  var yErrorHighField: js.UndefOr[String] = js.undefined
-  var yErrorLowField: js.UndefOr[String] = js.undefined
-  var yField: js.UndefOr[String] = js.undefined
-  var zIndex: js.UndefOr[Double] = js.undefined
+  var aggregate: js.UndefOr[String | js.Function] = js.native
+  var axis: js.UndefOr[String] = js.native
+  var border: js.UndefOr[ChartSeriesItemBorder] = js.native
+  var categoryAxis: js.UndefOr[String] = js.native
+  var categoryField: js.UndefOr[String] = js.native
+  var closeField: js.UndefOr[String] = js.native
+  var color: js.UndefOr[String | js.Function] = js.native
+  var colorField: js.UndefOr[String] = js.native
+  var connectors: js.UndefOr[ChartSeriesItemConnectors] = js.native
+  var currentField: js.UndefOr[String] = js.native
+  var dashType: js.UndefOr[String] = js.native
+  var data: js.UndefOr[js.Any] = js.native
+  var downColor: js.UndefOr[String | js.Function] = js.native
+  var downColorField: js.UndefOr[String] = js.native
+  var dynamicHeight: js.UndefOr[Boolean] = js.native
+  var dynamicSlope: js.UndefOr[Boolean] = js.native
+  var errorBars: js.UndefOr[ChartSeriesItemErrorBars] = js.native
+  var errorHighField: js.UndefOr[String] = js.native
+  var errorLowField: js.UndefOr[String] = js.native
+  var explodeField: js.UndefOr[String] = js.native
+  var extremes: js.UndefOr[ChartSeriesItemExtremes] = js.native
+  var field: js.UndefOr[String] = js.native
+  var fromField: js.UndefOr[String] = js.native
+  var gap: js.UndefOr[Double] = js.native
+  var highField: js.UndefOr[String] = js.native
+  var highlight: js.UndefOr[ChartSeriesItemHighlight] = js.native
+  var holeSize: js.UndefOr[Double] = js.native
+  var labels: js.UndefOr[ChartSeriesItemLabels] = js.native
+  var line: js.UndefOr[String | ChartSeriesItemLine] = js.native
+  var lowField: js.UndefOr[String] = js.native
+  var lowerField: js.UndefOr[String] = js.native
+  var margin: js.UndefOr[Double | ChartSeriesItemMargin] = js.native
+  var markers: js.UndefOr[ChartSeriesItemMarkers] = js.native
+  var maxSize: js.UndefOr[Double] = js.native
+  var meanField: js.UndefOr[String] = js.native
+  var medianField: js.UndefOr[String] = js.native
+  var minSize: js.UndefOr[Double] = js.native
+  var missingValues: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.native
+  var neckRatio: js.UndefOr[Double] = js.native
+  var negativeColor: js.UndefOr[String] = js.native
+  var negativeValues: js.UndefOr[ChartSeriesItemNegativeValues] = js.native
+  var noteTextField: js.UndefOr[String] = js.native
+  var notes: js.UndefOr[ChartSeriesItemNotes] = js.native
+  var opacity: js.UndefOr[Double] = js.native
+  var openField: js.UndefOr[String] = js.native
+  var outliers: js.UndefOr[ChartSeriesItemOutliers] = js.native
+  var outliersField: js.UndefOr[String] = js.native
+  var overlay: js.UndefOr[ChartSeriesItemOverlay] = js.native
+  var padding: js.UndefOr[Double] = js.native
+  var q1Field: js.UndefOr[String] = js.native
+  var q3Field: js.UndefOr[String] = js.native
+  var segmentSpacing: js.UndefOr[Double] = js.native
+  var size: js.UndefOr[Double] = js.native
+  var sizeField: js.UndefOr[String] = js.native
+  var spacing: js.UndefOr[Double] = js.native
+  var stack: js.UndefOr[Boolean | String | ChartSeriesItemStack] = js.native
+  var startAngle: js.UndefOr[Double] = js.native
+  var style: js.UndefOr[String] = js.native
+  var summaryField: js.UndefOr[String] = js.native
+  var target: js.UndefOr[ChartSeriesItemTarget] = js.native
+  var targetField: js.UndefOr[String] = js.native
+  var toField: js.UndefOr[String] = js.native
+  var tooltip: js.UndefOr[ChartSeriesItemTooltip] = js.native
+  var `type`: js.UndefOr[String] = js.native
+  var upperField: js.UndefOr[String] = js.native
+  var visible: js.UndefOr[Boolean] = js.native
+  var visibleInLegend: js.UndefOr[Boolean] = js.native
+  var visibleInLegendField: js.UndefOr[String] = js.native
+  var visual: js.UndefOr[js.Function] = js.native
+  var width: js.UndefOr[Double] = js.native
+  var xAxis: js.UndefOr[String] = js.native
+  var xErrorHighField: js.UndefOr[String] = js.native
+  var xErrorLowField: js.UndefOr[String] = js.native
+  var xField: js.UndefOr[String] = js.native
+  var yAxis: js.UndefOr[String] = js.native
+  var yErrorHighField: js.UndefOr[String] = js.native
+  var yErrorLowField: js.UndefOr[String] = js.native
+  var yField: js.UndefOr[String] = js.native
+  var zIndex: js.UndefOr[Double] = js.native
 }
 
 object ChartSeriesItem {
   @scala.inline
-  def apply(
-    aggregate: String | js.Function = null,
-    axis: String = null,
-    border: ChartSeriesItemBorder = null,
-    categoryAxis: String = null,
-    categoryField: String = null,
-    closeField: String = null,
-    color: String | js.Function = null,
-    colorField: String = null,
-    connectors: ChartSeriesItemConnectors = null,
-    currentField: String = null,
-    dashType: String = null,
-    data: js.Any = null,
-    downColor: String | js.Function = null,
-    downColorField: String = null,
-    dynamicHeight: js.UndefOr[Boolean] = js.undefined,
-    dynamicSlope: js.UndefOr[Boolean] = js.undefined,
-    errorBars: ChartSeriesItemErrorBars = null,
-    errorHighField: String = null,
-    errorLowField: String = null,
-    explodeField: String = null,
-    extremes: ChartSeriesItemExtremes = null,
-    field: String = null,
-    fromField: String = null,
-    gap: Int | Double = null,
-    highField: String = null,
-    highlight: ChartSeriesItemHighlight = null,
-    holeSize: Int | Double = null,
-    labels: ChartSeriesItemLabels = null,
-    line: String | ChartSeriesItemLine = null,
-    lowField: String = null,
-    lowerField: String = null,
-    margin: Double | ChartSeriesItemMargin = null,
-    markers: ChartSeriesItemMarkers = null,
-    maxSize: Int | Double = null,
-    meanField: String = null,
-    medianField: String = null,
-    minSize: Int | Double = null,
-    missingValues: String = null,
-    name: String = null,
-    neckRatio: Int | Double = null,
-    negativeColor: String = null,
-    negativeValues: ChartSeriesItemNegativeValues = null,
-    noteTextField: String = null,
-    notes: ChartSeriesItemNotes = null,
-    opacity: Int | Double = null,
-    openField: String = null,
-    outliers: ChartSeriesItemOutliers = null,
-    outliersField: String = null,
-    overlay: ChartSeriesItemOverlay = null,
-    padding: Int | Double = null,
-    q1Field: String = null,
-    q3Field: String = null,
-    segmentSpacing: Int | Double = null,
-    size: Int | Double = null,
-    sizeField: String = null,
-    spacing: Int | Double = null,
-    stack: Boolean | String | ChartSeriesItemStack = null,
-    startAngle: Int | Double = null,
-    style: String = null,
-    summaryField: String = null,
-    target: ChartSeriesItemTarget = null,
-    targetField: String = null,
-    toField: String = null,
-    tooltip: ChartSeriesItemTooltip = null,
-    `type`: String = null,
-    upperField: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    visibleInLegend: js.UndefOr[Boolean] = js.undefined,
-    visibleInLegendField: String = null,
-    visual: js.Function = null,
-    width: Int | Double = null,
-    xAxis: String = null,
-    xErrorHighField: String = null,
-    xErrorLowField: String = null,
-    xField: String = null,
-    yAxis: String = null,
-    yErrorHighField: String = null,
-    yErrorLowField: String = null,
-    yField: String = null,
-    zIndex: Int | Double = null
-  ): ChartSeriesItem = {
+  def apply(): ChartSeriesItem = {
     val __obj = js.Dynamic.literal()
-    if (aggregate != null) __obj.updateDynamic("aggregate")(aggregate.asInstanceOf[js.Any])
-    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
-    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
-    if (categoryAxis != null) __obj.updateDynamic("categoryAxis")(categoryAxis.asInstanceOf[js.Any])
-    if (categoryField != null) __obj.updateDynamic("categoryField")(categoryField.asInstanceOf[js.Any])
-    if (closeField != null) __obj.updateDynamic("closeField")(closeField.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (colorField != null) __obj.updateDynamic("colorField")(colorField.asInstanceOf[js.Any])
-    if (connectors != null) __obj.updateDynamic("connectors")(connectors.asInstanceOf[js.Any])
-    if (currentField != null) __obj.updateDynamic("currentField")(currentField.asInstanceOf[js.Any])
-    if (dashType != null) __obj.updateDynamic("dashType")(dashType.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (downColor != null) __obj.updateDynamic("downColor")(downColor.asInstanceOf[js.Any])
-    if (downColorField != null) __obj.updateDynamic("downColorField")(downColorField.asInstanceOf[js.Any])
-    if (!js.isUndefined(dynamicHeight)) __obj.updateDynamic("dynamicHeight")(dynamicHeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(dynamicSlope)) __obj.updateDynamic("dynamicSlope")(dynamicSlope.asInstanceOf[js.Any])
-    if (errorBars != null) __obj.updateDynamic("errorBars")(errorBars.asInstanceOf[js.Any])
-    if (errorHighField != null) __obj.updateDynamic("errorHighField")(errorHighField.asInstanceOf[js.Any])
-    if (errorLowField != null) __obj.updateDynamic("errorLowField")(errorLowField.asInstanceOf[js.Any])
-    if (explodeField != null) __obj.updateDynamic("explodeField")(explodeField.asInstanceOf[js.Any])
-    if (extremes != null) __obj.updateDynamic("extremes")(extremes.asInstanceOf[js.Any])
-    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
-    if (fromField != null) __obj.updateDynamic("fromField")(fromField.asInstanceOf[js.Any])
-    if (gap != null) __obj.updateDynamic("gap")(gap.asInstanceOf[js.Any])
-    if (highField != null) __obj.updateDynamic("highField")(highField.asInstanceOf[js.Any])
-    if (highlight != null) __obj.updateDynamic("highlight")(highlight.asInstanceOf[js.Any])
-    if (holeSize != null) __obj.updateDynamic("holeSize")(holeSize.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
-    if (lowField != null) __obj.updateDynamic("lowField")(lowField.asInstanceOf[js.Any])
-    if (lowerField != null) __obj.updateDynamic("lowerField")(lowerField.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (markers != null) __obj.updateDynamic("markers")(markers.asInstanceOf[js.Any])
-    if (maxSize != null) __obj.updateDynamic("maxSize")(maxSize.asInstanceOf[js.Any])
-    if (meanField != null) __obj.updateDynamic("meanField")(meanField.asInstanceOf[js.Any])
-    if (medianField != null) __obj.updateDynamic("medianField")(medianField.asInstanceOf[js.Any])
-    if (minSize != null) __obj.updateDynamic("minSize")(minSize.asInstanceOf[js.Any])
-    if (missingValues != null) __obj.updateDynamic("missingValues")(missingValues.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (neckRatio != null) __obj.updateDynamic("neckRatio")(neckRatio.asInstanceOf[js.Any])
-    if (negativeColor != null) __obj.updateDynamic("negativeColor")(negativeColor.asInstanceOf[js.Any])
-    if (negativeValues != null) __obj.updateDynamic("negativeValues")(negativeValues.asInstanceOf[js.Any])
-    if (noteTextField != null) __obj.updateDynamic("noteTextField")(noteTextField.asInstanceOf[js.Any])
-    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (openField != null) __obj.updateDynamic("openField")(openField.asInstanceOf[js.Any])
-    if (outliers != null) __obj.updateDynamic("outliers")(outliers.asInstanceOf[js.Any])
-    if (outliersField != null) __obj.updateDynamic("outliersField")(outliersField.asInstanceOf[js.Any])
-    if (overlay != null) __obj.updateDynamic("overlay")(overlay.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (q1Field != null) __obj.updateDynamic("q1Field")(q1Field.asInstanceOf[js.Any])
-    if (q3Field != null) __obj.updateDynamic("q3Field")(q3Field.asInstanceOf[js.Any])
-    if (segmentSpacing != null) __obj.updateDynamic("segmentSpacing")(segmentSpacing.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (sizeField != null) __obj.updateDynamic("sizeField")(sizeField.asInstanceOf[js.Any])
-    if (spacing != null) __obj.updateDynamic("spacing")(spacing.asInstanceOf[js.Any])
-    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
-    if (startAngle != null) __obj.updateDynamic("startAngle")(startAngle.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (summaryField != null) __obj.updateDynamic("summaryField")(summaryField.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (targetField != null) __obj.updateDynamic("targetField")(targetField.asInstanceOf[js.Any])
-    if (toField != null) __obj.updateDynamic("toField")(toField.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (upperField != null) __obj.updateDynamic("upperField")(upperField.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (!js.isUndefined(visibleInLegend)) __obj.updateDynamic("visibleInLegend")(visibleInLegend.asInstanceOf[js.Any])
-    if (visibleInLegendField != null) __obj.updateDynamic("visibleInLegendField")(visibleInLegendField.asInstanceOf[js.Any])
-    if (visual != null) __obj.updateDynamic("visual")(visual.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (xAxis != null) __obj.updateDynamic("xAxis")(xAxis.asInstanceOf[js.Any])
-    if (xErrorHighField != null) __obj.updateDynamic("xErrorHighField")(xErrorHighField.asInstanceOf[js.Any])
-    if (xErrorLowField != null) __obj.updateDynamic("xErrorLowField")(xErrorLowField.asInstanceOf[js.Any])
-    if (xField != null) __obj.updateDynamic("xField")(xField.asInstanceOf[js.Any])
-    if (yAxis != null) __obj.updateDynamic("yAxis")(yAxis.asInstanceOf[js.Any])
-    if (yErrorHighField != null) __obj.updateDynamic("yErrorHighField")(yErrorHighField.asInstanceOf[js.Any])
-    if (yErrorLowField != null) __obj.updateDynamic("yErrorLowField")(yErrorLowField.asInstanceOf[js.Any])
-    if (yField != null) __obj.updateDynamic("yField")(yField.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartSeriesItem]
   }
+  @scala.inline
+  implicit class ChartSeriesItemOps[Self <: ChartSeriesItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggregate(value: String | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorder(value: ChartSeriesItemBorder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategoryAxis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategoryAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategoryField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategoryField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloseField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectors(value: ChartSeriesItemConnectors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDashType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dashType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDashType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dashType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDownColor(value: String | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDownColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDownColorField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downColorField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDownColorField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downColorField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamicHeight(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamicHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamicSlope(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicSlope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamicSlope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicSlope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorBars(value: ChartSeriesItemErrorBars): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorBars")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorBars: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorBars")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorHighField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorHighField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorHighField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorHighField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorLowField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorLowField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorLowField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorLowField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExplodeField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("explodeField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExplodeField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("explodeField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtremes(value: ChartSeriesItemExtremes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extremes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtremes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extremes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFromField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGap(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighlight(value: ChartSeriesItemHighlight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoleSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("holeSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoleSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("holeSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: ChartSeriesItemLabels): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLine(value: String | ChartSeriesItemLine): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLowField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLowField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLowerField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLowerField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: Double | ChartSeriesItemMargin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkers(value: ChartSeriesItemMarkers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMeanField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meanField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeanField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meanField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMedianField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("medianField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMedianField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("medianField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMissingValues(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("missingValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMissingValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("missingValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeckRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("neckRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeckRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("neckRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNegativeColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNegativeColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNegativeValues(value: ChartSeriesItemNegativeValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNegativeValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoteTextField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noteTextField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoteTextField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noteTextField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotes(value: ChartSeriesItemNotes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutliers(value: ChartSeriesItemOutliers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outliers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutliers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outliers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutliersField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outliersField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutliersField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outliersField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlay(value: ChartSeriesItemOverlay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQ1Field(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q1Field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQ1Field: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q1Field")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQ3Field(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q3Field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQ3Field: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q3Field")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentSpacing(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentSpacing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentSpacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizeField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizeField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpacing(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpacing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStack(value: Boolean | String | ChartSeriesItemStack): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSummaryField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summaryField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSummaryField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summaryField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTarget(value: ChartSeriesItemTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: ChartSeriesItemTooltip): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpperField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upperField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpperField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upperField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibleInLegend(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleInLegend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibleInLegend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleInLegend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibleInLegendField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleInLegendField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibleInLegendField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleInLegendField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisual(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visual")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisual: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visual")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXAxis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXErrorHighField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xErrorHighField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXErrorHighField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xErrorHighField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXErrorLowField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xErrorLowField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXErrorLowField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xErrorLowField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYAxis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYErrorHighField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yErrorHighField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYErrorHighField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yErrorHighField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYErrorLowField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yErrorLowField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYErrorLowField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yErrorLowField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

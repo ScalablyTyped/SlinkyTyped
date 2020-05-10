@@ -38,8 +38,45 @@ object CreateCompilationJobRequest {
     StoppingCondition: StoppingCondition
   ): CreateCompilationJobRequest = {
     val __obj = js.Dynamic.literal(CompilationJobName = CompilationJobName.asInstanceOf[js.Any], InputConfig = InputConfig.asInstanceOf[js.Any], OutputConfig = OutputConfig.asInstanceOf[js.Any], RoleArn = RoleArn.asInstanceOf[js.Any], StoppingCondition = StoppingCondition.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateCompilationJobRequest]
   }
+  @scala.inline
+  implicit class CreateCompilationJobRequestOps[Self <: CreateCompilationJobRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompilationJobName(value: EntityName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompilationJobName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputConfig(value: InputConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutputConfig(value: OutputConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: RoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStoppingCondition(value: StoppingCondition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StoppingCondition")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

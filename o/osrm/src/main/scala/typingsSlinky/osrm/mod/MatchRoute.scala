@@ -12,8 +12,9 @@ import scala.scalajs.js.annotation._
   *
   * https://github.com/Project-OSRM/node-osrm/blob/master/docs/api.md#match
   */
+@js.native
 trait MatchRoute extends Route {
-  var confidence: Double
+  var confidence: Double = js.native
 }
 
 object MatchRoute {
@@ -24,12 +25,24 @@ object MatchRoute {
     duration: Double,
     legs: js.Array[RouteLeg],
     weight: Double,
-    weight_name: String,
-    geometry: js.Any = null
+    weight_name: String
   ): MatchRoute = {
     val __obj = js.Dynamic.literal(confidence = confidence.asInstanceOf[js.Any], distance = distance.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], legs = legs.asInstanceOf[js.Any], weight = weight.asInstanceOf[js.Any], weight_name = weight_name.asInstanceOf[js.Any])
-    if (geometry != null) __obj.updateDynamic("geometry")(geometry.asInstanceOf[js.Any])
     __obj.asInstanceOf[MatchRoute]
   }
+  @scala.inline
+  implicit class MatchRouteOps[Self <: MatchRoute] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfidence(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

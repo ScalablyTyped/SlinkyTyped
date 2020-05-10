@@ -46,20 +46,77 @@ trait SchemaBigtableColumnFamily extends js.Object {
 
 object SchemaBigtableColumnFamily {
   @scala.inline
-  def apply(
-    columns: js.Array[SchemaBigtableColumn] = null,
-    encoding: String = null,
-    familyId: String = null,
-    onlyReadLatest: js.UndefOr[Boolean] = js.undefined,
-    `type`: String = null
-  ): SchemaBigtableColumnFamily = {
+  def apply(): SchemaBigtableColumnFamily = {
     val __obj = js.Dynamic.literal()
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (familyId != null) __obj.updateDynamic("familyId")(familyId.asInstanceOf[js.Any])
-    if (!js.isUndefined(onlyReadLatest)) __obj.updateDynamic("onlyReadLatest")(onlyReadLatest.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBigtableColumnFamily]
   }
+  @scala.inline
+  implicit class SchemaBigtableColumnFamilyOps[Self <: SchemaBigtableColumnFamily] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumns(value: js.Array[SchemaBigtableColumn]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncoding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFamilyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("familyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFamilyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("familyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnlyReadLatest(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyReadLatest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnlyReadLatest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyReadLatest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

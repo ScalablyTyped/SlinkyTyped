@@ -15,16 +15,14 @@ trait StackOffset extends js.Object
 
 object StackOffset {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def diverging: typingsSlinky.nivoCore.nivoCoreStrings.diverging = "diverging".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.diverging]
   @scala.inline
-  def diverging: typingsSlinky.nivoCore.nivoCoreStrings.diverging = this.cast("diverging")
+  def expand: typingsSlinky.nivoCore.nivoCoreStrings.expand = "expand".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.expand]
   @scala.inline
-  def expand: typingsSlinky.nivoCore.nivoCoreStrings.expand = this.cast("expand")
+  def none: typingsSlinky.nivoCore.nivoCoreStrings.none = "none".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.none]
   @scala.inline
-  def none: typingsSlinky.nivoCore.nivoCoreStrings.none = this.cast("none")
+  def silhouette: typingsSlinky.nivoCore.nivoCoreStrings.silhouette = "silhouette".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.silhouette]
   @scala.inline
-  def silhouette: typingsSlinky.nivoCore.nivoCoreStrings.silhouette = this.cast("silhouette")
-  @scala.inline
-  def wiggle: typingsSlinky.nivoCore.nivoCoreStrings.wiggle = this.cast("wiggle")
+  def wiggle: typingsSlinky.nivoCore.nivoCoreStrings.wiggle = "wiggle".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.wiggle]
 }
 

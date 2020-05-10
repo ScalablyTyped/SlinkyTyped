@@ -5,7 +5,7 @@ import typingsSlinky.androiduix.android.content.Context
 import typingsSlinky.androiduix.android.content.res.TypedArray
 import typingsSlinky.androiduix.androidui.attr.AttrBinder
 import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderMap
-import typingsSlinky.androiduix.java.lang.JavaObject
+import typingsSlinky.androiduix.java_.lang.JavaObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

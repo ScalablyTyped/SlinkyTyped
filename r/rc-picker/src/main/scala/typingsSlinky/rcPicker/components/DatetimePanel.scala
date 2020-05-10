@@ -1,10 +1,9 @@
 package typingsSlinky.rcPicker.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcPicker.datetimePanelMod.DatetimePanelProps
 import typingsSlinky.rcPicker.generateMod.GenerateConfig
 import typingsSlinky.rcPicker.interfaceMod.DisabledTimes
@@ -22,13 +21,61 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DatetimePanel
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object DatetimePanel {
   @JSImport("rc-picker/lib/panels/DatetimePanel", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder[DateType] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dateRender(value: (DateType, DateType) => TagMod[Any]): this.type = set("dateRender", js.Any.fromFunction2(value))
+    @scala.inline
+    def defaultPickerValue(value: DateType): this.type = set("defaultPickerValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: DateType): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledDate(value: DateType => Boolean): this.type = set("disabledDate", js.Any.fromFunction1(value))
+    @scala.inline
+    def disabledTime(value: /* date */ DateType | Null => DisabledTimes): this.type = set("disabledTime", js.Any.fromFunction1(value))
+    @scala.inline
+    def keyboardConfig(value: KeyboardConfig): this.type = set("keyboardConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextIconReactElement(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextIcon(value: TagMod[Any]): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def panelName(value: String): this.type = set("panelName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixColumn(value: DateType => TagMod[Any]): this.type = set("prefixColumn", js.Any.fromFunction1(value))
+    @scala.inline
+    def prevIconReactElement(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prevIcon(value: TagMod[Any]): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowClassName(value: DateType => String): this.type = set("rowClassName", js.Any.fromFunction1(value))
+    @scala.inline
+    def showTime(value: Boolean | SharedTimeProps[DateType]): this.type = set("showTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def superNextIconReactElement(value: ReactElement): this.type = set("superNextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def superNextIcon(value: TagMod[Any]): this.type = set("superNextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def superPrevIconReactElement(value: ReactElement): this.type = set("superPrevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def superPrevIcon(value: TagMod[Any]): this.type = set("superPrevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: NullableDateType[DateType]): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueNull: this.type = set("value", null)
+  }
+  
+  def withProps[DateType](p: DatetimePanelProps[DateType]): Builder[DateType] = new Builder[DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply[DateType](
     generateConfig: GenerateConfig[DateType],
     locale: Locale,
@@ -37,45 +84,10 @@ object DatetimePanel
     onViewDateChange: DateType => Unit,
     operationRef: MutableRefObject[PanelRefProps],
     prefixCls: String,
-    viewDate: DateType,
-    active: js.UndefOr[Boolean] = js.undefined,
-    dateRender: (DateType, DateType) => TagMod[Any] = null,
-    defaultPickerValue: DateType = null,
-    defaultValue: DateType = null,
-    disabledDate: DateType => Boolean = null,
-    disabledTime: /* date */ DateType | Null => DisabledTimes = null,
-    keyboardConfig: KeyboardConfig = null,
-    nextIcon: TagMod[Any] = null,
-    panelName: String = null,
-    prefixColumn: DateType => TagMod[Any] = null,
-    prevIcon: TagMod[Any] = null,
-    rowClassName: DateType => String = null,
-    showTime: Boolean | SharedTimeProps[DateType] = null,
-    superNextIcon: TagMod[Any] = null,
-    superPrevIcon: TagMod[Any] = null,
-    value: NullableDateType[DateType] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], onPanelChange = js.Any.fromFunction2(onPanelChange), onSelect = js.Any.fromFunction2(onSelect), onViewDateChange = js.Any.fromFunction1(onViewDateChange), operationRef = operationRef.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], viewDate = viewDate.asInstanceOf[js.Any])
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (dateRender != null) __obj.updateDynamic("dateRender")(js.Any.fromFunction2(dateRender))
-    if (defaultPickerValue != null) __obj.updateDynamic("defaultPickerValue")(defaultPickerValue.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (disabledDate != null) __obj.updateDynamic("disabledDate")(js.Any.fromFunction1(disabledDate))
-    if (disabledTime != null) __obj.updateDynamic("disabledTime")(js.Any.fromFunction1(disabledTime))
-    if (keyboardConfig != null) __obj.updateDynamic("keyboardConfig")(keyboardConfig.asInstanceOf[js.Any])
-    if (nextIcon != null) __obj.updateDynamic("nextIcon")(nextIcon.asInstanceOf[js.Any])
-    if (panelName != null) __obj.updateDynamic("panelName")(panelName.asInstanceOf[js.Any])
-    if (prefixColumn != null) __obj.updateDynamic("prefixColumn")(js.Any.fromFunction1(prefixColumn))
-    if (prevIcon != null) __obj.updateDynamic("prevIcon")(prevIcon.asInstanceOf[js.Any])
-    if (rowClassName != null) __obj.updateDynamic("rowClassName")(js.Any.fromFunction1(rowClassName))
-    if (showTime != null) __obj.updateDynamic("showTime")(showTime.asInstanceOf[js.Any])
-    if (superNextIcon != null) __obj.updateDynamic("superNextIcon")(superNextIcon.asInstanceOf[js.Any])
-    if (superPrevIcon != null) __obj.updateDynamic("superPrevIcon")(superPrevIcon.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object]]
+    viewDate: DateType
+  ): Builder[DateType] = {
+    val __props = js.Dynamic.literal(generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], onPanelChange = js.Any.fromFunction2(onPanelChange), onSelect = js.Any.fromFunction2(onSelect), onViewDateChange = js.Any.fromFunction1(onViewDateChange), operationRef = operationRef.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], viewDate = viewDate.asInstanceOf[js.Any])
+    new Builder[DateType](js.Array(this.component, __props.asInstanceOf[DatetimePanelProps[DateType]]))
   }
-  type Props = DatetimePanelProps[js.Any]
 }
 

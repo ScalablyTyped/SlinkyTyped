@@ -22,16 +22,53 @@ trait DescribeUsersResponse extends js.Object {
 
 object DescribeUsersResponse {
   @scala.inline
-  def apply(
-    Marker: PageMarkerType = null,
-    TotalNumberOfUsers: Int | Double = null,
-    Users: OrganizationUserList = null
-  ): DescribeUsersResponse = {
+  def apply(): DescribeUsersResponse = {
     val __obj = js.Dynamic.literal()
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (TotalNumberOfUsers != null) __obj.updateDynamic("TotalNumberOfUsers")(TotalNumberOfUsers.asInstanceOf[js.Any])
-    if (Users != null) __obj.updateDynamic("Users")(Users.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeUsersResponse]
   }
+  @scala.inline
+  implicit class DescribeUsersResponseOps[Self <: DescribeUsersResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMarker(value: PageMarkerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalNumberOfUsers(value: SizeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalNumberOfUsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalNumberOfUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalNumberOfUsers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsers(value: OrganizationUserList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Users")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Users")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,63 +1,5 @@
 package typingsSlinky.angularCompiler
 
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`101`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`102`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`10`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`110`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`114`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`116`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`117`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`118`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`11`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`120`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`122`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`123`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`124`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`125`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`126`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`12`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`13`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`160`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`32`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`33`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`34`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`35`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`36`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`37`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`38`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`39`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`40`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`41`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`42`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`43`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`44`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`45`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`46`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`47`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`48`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`55`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`57`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`58`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`59`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`60`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`61`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`62`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`63`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`64`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`65`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`69`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`70`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`88`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`8`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`90`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`91`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`92`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`93`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`94`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`95`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`96`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`97`
-import typingsSlinky.angularCompiler.angularCompilerNumbers.`98`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -66,127 +8,127 @@ import scala.scalajs.js.annotation._
 @js.native
 object charsMod extends js.Object {
   @JSName("$_")
-  val $: `95` = js.native
+  val $: /* 95 */ Double = js.native
   @JSName("$A")
-  val $A: `65` = js.native
+  val $A: /* 65 */ Double = js.native
   @JSName("$E")
-  val $E: `69` = js.native
+  val $E: /* 69 */ Double = js.native
   @JSName("$F")
-  val $F: `70` = js.native
+  val $F: /* 70 */ Double = js.native
   @JSName("$X")
-  val $X: `88` = js.native
+  val $X: /* 88 */ Double = js.native
   @JSName("$Z")
-  val $Z: `90` = js.native
+  val $Z: /* 90 */ Double = js.native
   @JSName("$0")
-  val `0`: `48` = js.native
+  val `0`: /* 48 */ Double = js.native
   @JSName("$7")
-  val `7`: `55` = js.native
+  val `7`: /* 55 */ Double = js.native
   @JSName("$9")
-  val `9`: `57` = js.native
+  val `9`: /* 57 */ Double = js.native
   @JSName("$AMPERSAND")
-  val AMPERSAND: `38` = js.native
+  val AMPERSAND: /* 38 */ Double = js.native
   @JSName("$AT")
-  val AT: `64` = js.native
+  val AT: /* 64 */ Double = js.native
   @JSName("$BACKSLASH")
-  val BACKSLASH: `92` = js.native
+  val BACKSLASH: /* 92 */ Double = js.native
   @JSName("$BANG")
-  val BANG: `33` = js.native
+  val BANG: /* 33 */ Double = js.native
   @JSName("$BAR")
-  val BAR: `124` = js.native
+  val BAR: /* 124 */ Double = js.native
   @JSName("$BSPACE")
-  val BSPACE: `8` = js.native
+  val BSPACE: /* 8 */ Double = js.native
   @JSName("$BT")
-  val BT: `96` = js.native
+  val BT: /* 96 */ Double = js.native
   @JSName("$CARET")
-  val CARET: `94` = js.native
+  val CARET: /* 94 */ Double = js.native
   @JSName("$COLON")
-  val COLON: `58` = js.native
+  val COLON: /* 58 */ Double = js.native
   @JSName("$COMMA")
-  val COMMA: `44` = js.native
+  val COMMA: /* 44 */ Double = js.native
   @JSName("$CR")
-  val CR: `13` = js.native
+  val CR: /* 13 */ Double = js.native
   @JSName("$DQ")
-  val DQ: `34` = js.native
+  val DQ: /* 34 */ Double = js.native
   @JSName("$EOF")
-  val EOF: typingsSlinky.angularCompiler.angularCompilerNumbers.`0` = js.native
+  val EOF: /* 0 */ Double = js.native
   @JSName("$EQ")
-  val EQ: `61` = js.native
+  val EQ: /* 61 */ Double = js.native
   @JSName("$FF")
-  val FF: `12` = js.native
+  val FF: /* 12 */ Double = js.native
   @JSName("$GT")
-  val GT: `62` = js.native
+  val GT: /* 62 */ Double = js.native
   @JSName("$HASH")
-  val HASH: `35` = js.native
+  val HASH: /* 35 */ Double = js.native
   @JSName("$LBRACE")
-  val LBRACE: `123` = js.native
+  val LBRACE: /* 123 */ Double = js.native
   @JSName("$LBRACKET")
-  val LBRACKET: `91` = js.native
+  val LBRACKET: /* 91 */ Double = js.native
   @JSName("$LF")
-  val LF: `10` = js.native
+  val LF: /* 10 */ Double = js.native
   @JSName("$LPAREN")
-  val LPAREN: `40` = js.native
+  val LPAREN: /* 40 */ Double = js.native
   @JSName("$LT")
-  val LT: `60` = js.native
+  val LT: /* 60 */ Double = js.native
   @JSName("$MINUS")
-  val MINUS: `45` = js.native
+  val MINUS: /* 45 */ Double = js.native
   @JSName("$NBSP")
-  val NBSP: `160` = js.native
+  val NBSP: /* 160 */ Double = js.native
   @JSName("$PERCENT")
-  val PERCENT: `37` = js.native
+  val PERCENT: /* 37 */ Double = js.native
   @JSName("$PERIOD")
-  val PERIOD: `46` = js.native
+  val PERIOD: /* 46 */ Double = js.native
   @JSName("$PIPE")
-  val PIPE: `124` = js.native
+  val PIPE: /* 124 */ Double = js.native
   @JSName("$PLUS")
-  val PLUS: `43` = js.native
+  val PLUS: /* 43 */ Double = js.native
   @JSName("$QUESTION")
-  val QUESTION: `63` = js.native
+  val QUESTION: /* 63 */ Double = js.native
   @JSName("$RBRACE")
-  val RBRACE: `125` = js.native
+  val RBRACE: /* 125 */ Double = js.native
   @JSName("$RBRACKET")
-  val RBRACKET: `93` = js.native
+  val RBRACKET: /* 93 */ Double = js.native
   @JSName("$RPAREN")
-  val RPAREN: `41` = js.native
+  val RPAREN: /* 41 */ Double = js.native
   @JSName("$SEMICOLON")
-  val SEMICOLON: `59` = js.native
+  val SEMICOLON: /* 59 */ Double = js.native
   @JSName("$SLASH")
-  val SLASH: `47` = js.native
+  val SLASH: /* 47 */ Double = js.native
   @JSName("$SPACE")
-  val SPACE: `32` = js.native
+  val SPACE: /* 32 */ Double = js.native
   @JSName("$SQ")
-  val SQ: `39` = js.native
+  val SQ: /* 39 */ Double = js.native
   @JSName("$STAR")
-  val STAR: `42` = js.native
+  val STAR: /* 42 */ Double = js.native
   @JSName("$TAB")
-  val TAB: typingsSlinky.angularCompiler.angularCompilerNumbers.`9` = js.native
+  val TAB: /* 9 */ Double = js.native
   @JSName("$TILDA")
-  val TILDA: `126` = js.native
+  val TILDA: /* 126 */ Double = js.native
   @JSName("$VTAB")
-  val VTAB: `11` = js.native
+  val VTAB: /* 11 */ Double = js.native
   @JSName("$$")
-  val _empty: `36` = js.native
+  val _empty: /* 36 */ Double = js.native
   @JSName("$a")
-  val a: `97` = js.native
+  val a: /* 97 */ Double = js.native
   @JSName("$b")
-  val b: `98` = js.native
+  val b: /* 98 */ Double = js.native
   @JSName("$e")
-  val e: `101` = js.native
+  val e: /* 101 */ Double = js.native
   @JSName("$f")
-  val f: `102` = js.native
+  val f: /* 102 */ Double = js.native
   @JSName("$n")
-  val n: `110` = js.native
+  val n: /* 110 */ Double = js.native
   @JSName("$r")
-  val r: `114` = js.native
+  val r: /* 114 */ Double = js.native
   @JSName("$t")
-  val t: `116` = js.native
+  val t: /* 116 */ Double = js.native
   @JSName("$u")
-  val u: `117` = js.native
+  val u: /* 117 */ Double = js.native
   @JSName("$v")
-  val v: `118` = js.native
+  val v: /* 118 */ Double = js.native
   @JSName("$x")
-  val x: `120` = js.native
+  val x: /* 120 */ Double = js.native
   @JSName("$z")
-  val z: `122` = js.native
+  val z: /* 122 */ Double = js.native
   def isAsciiHexDigit(code: Double): Boolean = js.native
   def isAsciiLetter(code: Double): Boolean = js.native
   def isDigit(code: Double): Boolean = js.native

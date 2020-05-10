@@ -1,6 +1,5 @@
 package typingsSlinky.reactNativeJoi.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -85,8 +84,8 @@ trait AnySchema
     * override, that error will be returned and the override will be ignored (unless the `abortEarly`
     * option has been set to `false`).
     */
-  def error(err: Error): this.type = js.native
-  def error(err: Error, options: ErrorOptions): this.type = js.native
+  def error(err: js.Error): this.type = js.native
+  def error(err: js.Error, options: ErrorOptions): this.type = js.native
   /**
     * Annotates the key with an example value, must be valid.
     */

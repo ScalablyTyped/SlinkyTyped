@@ -54,29 +54,131 @@ trait CreateStageRequest extends js.Object {
 
 object CreateStageRequest {
   @scala.inline
-  def apply(
-    deploymentId: String,
-    restApiId: String,
-    stageName: String,
-    cacheClusterEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    cacheClusterSize: CacheClusterSize = null,
-    canarySettings: CanarySettings = null,
-    description: String = null,
-    documentationVersion: String = null,
-    tags: MapOfStringToString = null,
-    tracingEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    variables: MapOfStringToString = null
-  ): CreateStageRequest = {
+  def apply(deploymentId: String, restApiId: String, stageName: String): CreateStageRequest = {
     val __obj = js.Dynamic.literal(deploymentId = deploymentId.asInstanceOf[js.Any], restApiId = restApiId.asInstanceOf[js.Any], stageName = stageName.asInstanceOf[js.Any])
-    if (!js.isUndefined(cacheClusterEnabled)) __obj.updateDynamic("cacheClusterEnabled")(cacheClusterEnabled.asInstanceOf[js.Any])
-    if (cacheClusterSize != null) __obj.updateDynamic("cacheClusterSize")(cacheClusterSize.asInstanceOf[js.Any])
-    if (canarySettings != null) __obj.updateDynamic("canarySettings")(canarySettings.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (documentationVersion != null) __obj.updateDynamic("documentationVersion")(documentationVersion.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (!js.isUndefined(tracingEnabled)) __obj.updateDynamic("tracingEnabled")(tracingEnabled.asInstanceOf[js.Any])
-    if (variables != null) __obj.updateDynamic("variables")(variables.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateStageRequest]
   }
+  @scala.inline
+  implicit class CreateStageRequestOps[Self <: CreateStageRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeploymentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRestApiId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restApiId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStageName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCacheClusterEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheClusterEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheClusterEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheClusterEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheClusterSize(value: CacheClusterSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheClusterSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheClusterSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheClusterSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanarySettings(value: CanarySettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canarySettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanarySettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canarySettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentationVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentationVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentationVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentationVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: MapOfStringToString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTracingEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tracingEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTracingEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tracingEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVariables(value: MapOfStringToString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

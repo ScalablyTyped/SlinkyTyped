@@ -13,12 +13,10 @@ trait Linejoin extends js.Object
 
 object Linejoin {
   @scala.inline
-  def bevel: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.bevel = this.cast("bevel")
+  def bevel: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.bevel = "bevel".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.bevel]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def miter: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.miter = "miter".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.miter]
   @scala.inline
-  def miter: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.miter = this.cast("miter")
-  @scala.inline
-  def round: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.round = this.cast("round")
+  def round: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.round = "round".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.round]
 }
 

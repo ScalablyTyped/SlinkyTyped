@@ -12,7 +12,7 @@ class ListLocationsResponse () extends js.Object {
     */
   var errors: js.UndefOr[js.Array[js.Error]] = js.native
   /**
-    * The business's locations.
+    * The business locations.
     */
   var locations: js.UndefOr[js.Array[Location]] = js.native
 }

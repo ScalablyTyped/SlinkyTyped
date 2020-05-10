@@ -4,13 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotBulletTooltipOptions extends js.Object {
   /**
     * (Highstock) How many decimals to show for the `point.change` value when
     * the `series.compare` option is set. This is overridable in each series'
     * tooltip options object. The default is to preserve all decimals.
     */
-  var changeDecimals: js.UndefOr[Double] = js.undefined
+  var changeDecimals: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Gantt) For series on a datetime axes, the date
     * format in the tooltip's header will by default be guessed based on the
@@ -18,11 +19,11 @@ trait PlotBulletTooltipOptions extends js.Object {
     * used for each unit. For an overview of the replacement codes, see
     * dateFormat.
     */
-  var dateTimeLabelFormats: js.UndefOr[PlotBulletTooltipDateTimeLabelFormatsOptions | Dictionary[String]] = js.undefined
+  var dateTimeLabelFormats: js.UndefOr[PlotBulletTooltipDateTimeLabelFormatsOptions | Dictionary[String]] = js.native
   /**
     * (Highcharts) Distance from point to tooltip in pixels.
     */
-  var distance: js.UndefOr[Double] = js.undefined
+  var distance: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) Whether the tooltip should follow the mouse as it moves
     * across columns, pie slices and other point types with an extent. By
@@ -32,7 +33,7 @@ trait PlotBulletTooltipOptions extends js.Object {
     * For touch moves to behave the same way, followTouchMove must be `true`
     * also.
     */
-  var followPointer: js.UndefOr[Boolean] = js.undefined
+  var followPointer: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts) Whether the tooltip should update as the finger moves on a
     * touch device. If this is `true` and chart.panning is
@@ -45,11 +46,11 @@ trait PlotBulletTooltipOptions extends js.Object {
     * is true, the tooltip will jump from column to column as the user swipes
     * across the plot area.
     */
-  var followTouchMove: js.UndefOr[Boolean] = js.undefined
+  var followTouchMove: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts) A string to append to the tooltip format.
     */
-  var footerFormat: js.UndefOr[String] = js.undefined
+  var footerFormat: js.UndefOr[String] = js.native
   /**
     * (Highcharts) The HTML of the tooltip header line. Variables are enclosed
     * by curly brackets. Available variables are `point.key`, `series.name`,
@@ -58,17 +59,17 @@ trait PlotBulletTooltipOptions extends js.Object {
     * string depending on the type of axis. For datetime axes, the `point.key`
     * date format can be set using `tooltip.xDateFormat`.
     */
-  var headerFormat: js.UndefOr[String] = js.undefined
+  var headerFormat: js.UndefOr[String] = js.native
   /**
     * (Highcharts) The HTML of the null point's line in the tooltip. Works
     * analogously to pointFormat.
     */
-  var nullFormat: js.UndefOr[String] = js.undefined
+  var nullFormat: js.UndefOr[String] = js.native
   /**
     * (Highcharts) Callback function to format the text of the tooltip for
     * visible null points. Works analogously to formatter.
     */
-  var nullFormatter: js.UndefOr[TooltipFormatterCallbackFunction] = js.undefined
+  var nullFormatter: js.UndefOr[TooltipFormatterCallbackFunction] = js.native
   /**
     * (Highcharts) The HTML of the point's line in the tooltip. Variables are
     * enclosed by curly brackets. Available variables are point.x, point.y,
@@ -80,73 +81,230 @@ trait PlotBulletTooltipOptions extends js.Object {
     * In styled mode, the dot is colored by a class name rather than the point
     * color.
     */
-  var pointFormat: js.UndefOr[String] = js.undefined
+  var pointFormat: js.UndefOr[String] = js.native
   /**
     * (Highcharts) A callback function for formatting the HTML output for a
     * single point in the tooltip. Like the `pointFormat` string, but with more
     * flexibility.
     */
-  var pointFormatter: js.UndefOr[FormatterCallbackFunction[Point]] = js.undefined
+  var pointFormatter: js.UndefOr[FormatterCallbackFunction[Point]] = js.native
   /**
     * (Highcharts) How many decimals to show in each series' y value. This is
     * overridable in each series' tooltip options object. The default is to
     * preserve all decimals.
     */
-  var valueDecimals: js.UndefOr[Double] = js.undefined
+  var valueDecimals: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) A string to prepend to each series' y value. Overridable in
     * each series' tooltip options object.
     */
-  var valuePrefix: js.UndefOr[String] = js.undefined
+  var valuePrefix: js.UndefOr[String] = js.native
   /**
     * (Highcharts) A string to append to each series' y value. Overridable in
     * each series' tooltip options object.
     */
-  var valueSuffix: js.UndefOr[String] = js.undefined
+  var valueSuffix: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Gantt) The format for the date in the tooltip
     * header if the X axis is a datetime axis. The default is a best guess
     * based on the smallest distance between points in the chart.
     */
-  var xDateFormat: js.UndefOr[String] = js.undefined
+  var xDateFormat: js.UndefOr[String] = js.native
 }
 
 object PlotBulletTooltipOptions {
   @scala.inline
-  def apply(
-    changeDecimals: Int | Double = null,
-    dateTimeLabelFormats: PlotBulletTooltipDateTimeLabelFormatsOptions | Dictionary[String] = null,
-    distance: Int | Double = null,
-    followPointer: js.UndefOr[Boolean] = js.undefined,
-    followTouchMove: js.UndefOr[Boolean] = js.undefined,
-    footerFormat: String = null,
-    headerFormat: String = null,
-    nullFormat: String = null,
-    nullFormatter: TooltipFormatterCallbackFunction = null,
-    pointFormat: String = null,
-    pointFormatter: FormatterCallbackFunction[Point] = null,
-    valueDecimals: Int | Double = null,
-    valuePrefix: String = null,
-    valueSuffix: String = null,
-    xDateFormat: String = null
-  ): PlotBulletTooltipOptions = {
+  def apply(): PlotBulletTooltipOptions = {
     val __obj = js.Dynamic.literal()
-    if (changeDecimals != null) __obj.updateDynamic("changeDecimals")(changeDecimals.asInstanceOf[js.Any])
-    if (dateTimeLabelFormats != null) __obj.updateDynamic("dateTimeLabelFormats")(dateTimeLabelFormats.asInstanceOf[js.Any])
-    if (distance != null) __obj.updateDynamic("distance")(distance.asInstanceOf[js.Any])
-    if (!js.isUndefined(followPointer)) __obj.updateDynamic("followPointer")(followPointer.asInstanceOf[js.Any])
-    if (!js.isUndefined(followTouchMove)) __obj.updateDynamic("followTouchMove")(followTouchMove.asInstanceOf[js.Any])
-    if (footerFormat != null) __obj.updateDynamic("footerFormat")(footerFormat.asInstanceOf[js.Any])
-    if (headerFormat != null) __obj.updateDynamic("headerFormat")(headerFormat.asInstanceOf[js.Any])
-    if (nullFormat != null) __obj.updateDynamic("nullFormat")(nullFormat.asInstanceOf[js.Any])
-    if (nullFormatter != null) __obj.updateDynamic("nullFormatter")(nullFormatter.asInstanceOf[js.Any])
-    if (pointFormat != null) __obj.updateDynamic("pointFormat")(pointFormat.asInstanceOf[js.Any])
-    if (pointFormatter != null) __obj.updateDynamic("pointFormatter")(pointFormatter.asInstanceOf[js.Any])
-    if (valueDecimals != null) __obj.updateDynamic("valueDecimals")(valueDecimals.asInstanceOf[js.Any])
-    if (valuePrefix != null) __obj.updateDynamic("valuePrefix")(valuePrefix.asInstanceOf[js.Any])
-    if (valueSuffix != null) __obj.updateDynamic("valueSuffix")(valueSuffix.asInstanceOf[js.Any])
-    if (xDateFormat != null) __obj.updateDynamic("xDateFormat")(xDateFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotBulletTooltipOptions]
   }
+  @scala.inline
+  implicit class PlotBulletTooltipOptionsOps[Self <: PlotBulletTooltipOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChangeDecimals(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeDecimals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChangeDecimals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeDecimals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateTimeLabelFormats(value: PlotBulletTooltipDateTimeLabelFormatsOptions | Dictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTimeLabelFormats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateTimeLabelFormats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTimeLabelFormats")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFollowPointer(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followPointer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFollowPointer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followPointer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFollowTouchMove(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followTouchMove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFollowTouchMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followTouchMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFooterFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footerFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFooterFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footerFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNullFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nullFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNullFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nullFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNullFormatter(value: TooltipFormatterCallbackFunction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nullFormatter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNullFormatter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nullFormatter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointFormatter(value: FormatterCallbackFunction[Point]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointFormatter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointFormatter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointFormatter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueDecimals(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueDecimals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueDecimals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueDecimals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValuePrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valuePrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValuePrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valuePrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueSuffix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSuffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueSuffix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSuffix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXDateFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xDateFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXDateFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xDateFormat")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

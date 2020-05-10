@@ -15,16 +15,14 @@ trait AccountType extends js.Object
 
 object AccountType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fiat: typingsSlinky.coinbase.coinbaseStrings.fiat = "fiat".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.fiat]
   @scala.inline
-  def fiat: typingsSlinky.coinbase.coinbaseStrings.fiat = this.cast("fiat")
+  def multisig: typingsSlinky.coinbase.coinbaseStrings.multisig = "multisig".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.multisig]
   @scala.inline
-  def multisig: typingsSlinky.coinbase.coinbaseStrings.multisig = this.cast("multisig")
+  def multisig_vault: typingsSlinky.coinbase.coinbaseStrings.multisig_vault = "multisig_vault".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.multisig_vault]
   @scala.inline
-  def multisig_vault: typingsSlinky.coinbase.coinbaseStrings.multisig_vault = this.cast("multisig_vault")
+  def vault: typingsSlinky.coinbase.coinbaseStrings.vault = "vault".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.vault]
   @scala.inline
-  def vault: typingsSlinky.coinbase.coinbaseStrings.vault = this.cast("vault")
-  @scala.inline
-  def wallet: typingsSlinky.coinbase.coinbaseStrings.wallet = this.cast("wallet")
+  def wallet: typingsSlinky.coinbase.coinbaseStrings.wallet = "wallet".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.wallet]
 }
 

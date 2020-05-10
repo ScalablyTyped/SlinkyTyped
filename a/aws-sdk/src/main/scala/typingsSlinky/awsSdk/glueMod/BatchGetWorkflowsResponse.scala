@@ -18,11 +18,41 @@ trait BatchGetWorkflowsResponse extends js.Object {
 
 object BatchGetWorkflowsResponse {
   @scala.inline
-  def apply(MissingWorkflows: WorkflowNames = null, Workflows: Workflows = null): BatchGetWorkflowsResponse = {
+  def apply(): BatchGetWorkflowsResponse = {
     val __obj = js.Dynamic.literal()
-    if (MissingWorkflows != null) __obj.updateDynamic("MissingWorkflows")(MissingWorkflows.asInstanceOf[js.Any])
-    if (Workflows != null) __obj.updateDynamic("Workflows")(Workflows.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchGetWorkflowsResponse]
   }
+  @scala.inline
+  implicit class BatchGetWorkflowsResponseOps[Self <: BatchGetWorkflowsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMissingWorkflows(value: WorkflowNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MissingWorkflows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMissingWorkflows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MissingWorkflows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkflows(value: Workflows): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Workflows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkflows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Workflows")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

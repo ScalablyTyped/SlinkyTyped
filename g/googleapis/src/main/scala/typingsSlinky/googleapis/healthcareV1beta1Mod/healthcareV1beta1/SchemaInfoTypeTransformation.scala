@@ -39,22 +39,89 @@ trait SchemaInfoTypeTransformation extends js.Object {
 
 object SchemaInfoTypeTransformation {
   @scala.inline
-  def apply(
-    characterMaskConfig: SchemaCharacterMaskConfig = null,
-    cryptoHashConfig: SchemaCryptoHashConfig = null,
-    dateShiftConfig: SchemaDateShiftConfig = null,
-    infoTypes: js.Array[String] = null,
-    redactConfig: SchemaRedactConfig = null,
-    replaceWithInfoTypeConfig: SchemaReplaceWithInfoTypeConfig = null
-  ): SchemaInfoTypeTransformation = {
+  def apply(): SchemaInfoTypeTransformation = {
     val __obj = js.Dynamic.literal()
-    if (characterMaskConfig != null) __obj.updateDynamic("characterMaskConfig")(characterMaskConfig.asInstanceOf[js.Any])
-    if (cryptoHashConfig != null) __obj.updateDynamic("cryptoHashConfig")(cryptoHashConfig.asInstanceOf[js.Any])
-    if (dateShiftConfig != null) __obj.updateDynamic("dateShiftConfig")(dateShiftConfig.asInstanceOf[js.Any])
-    if (infoTypes != null) __obj.updateDynamic("infoTypes")(infoTypes.asInstanceOf[js.Any])
-    if (redactConfig != null) __obj.updateDynamic("redactConfig")(redactConfig.asInstanceOf[js.Any])
-    if (replaceWithInfoTypeConfig != null) __obj.updateDynamic("replaceWithInfoTypeConfig")(replaceWithInfoTypeConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInfoTypeTransformation]
   }
+  @scala.inline
+  implicit class SchemaInfoTypeTransformationOps[Self <: SchemaInfoTypeTransformation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCharacterMaskConfig(value: SchemaCharacterMaskConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("characterMaskConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCharacterMaskConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("characterMaskConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCryptoHashConfig(value: SchemaCryptoHashConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoHashConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCryptoHashConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoHashConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateShiftConfig(value: SchemaDateShiftConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateShiftConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateShiftConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateShiftConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInfoTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infoTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInfoTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infoTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRedactConfig(value: SchemaRedactConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redactConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRedactConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redactConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplaceWithInfoTypeConfig(value: SchemaReplaceWithInfoTypeConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceWithInfoTypeConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplaceWithInfoTypeConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceWithInfoTypeConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

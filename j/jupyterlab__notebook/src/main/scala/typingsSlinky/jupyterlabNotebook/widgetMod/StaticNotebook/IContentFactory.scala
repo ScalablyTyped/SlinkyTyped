@@ -21,6 +21,7 @@ import scala.scalajs.js.annotation._
   * factory of the output area and input area. The result is that there is a single
   * factory for creating all child content of a notebook.
   */
+@js.native
 trait IContentFactory
   extends typingsSlinky.jupyterlabCells.widgetMod.Cell.IContentFactory {
   /**
@@ -29,21 +30,21 @@ trait IContentFactory
   def createCodeCell(
     options: typingsSlinky.jupyterlabCells.widgetMod.CodeCell.IOptions,
     parent: typingsSlinky.jupyterlabNotebook.widgetMod.StaticNotebook
-  ): CodeCell
+  ): CodeCell = js.native
   /**
     * Create a new markdown cell widget.
     */
   def createMarkdownCell(
     options: typingsSlinky.jupyterlabCells.widgetMod.MarkdownCell.IOptions,
     parent: typingsSlinky.jupyterlabNotebook.widgetMod.StaticNotebook
-  ): MarkdownCell
+  ): MarkdownCell = js.native
   /**
     * Create a new raw cell widget.
     */
   def createRawCell(
     options: typingsSlinky.jupyterlabCells.widgetMod.RawCell.IOptions,
     parent: typingsSlinky.jupyterlabNotebook.widgetMod.StaticNotebook
-  ): RawCell
+  ): RawCell = js.native
 }
 
 object IContentFactory {
@@ -60,8 +61,39 @@ object IContentFactory {
     editorFactory: /* options */ typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.IOptions => IEditor
   ): IContentFactory = {
     val __obj = js.Dynamic.literal(createCellFooter = js.Any.fromFunction0(createCellFooter), createCellHeader = js.Any.fromFunction0(createCellHeader), createCodeCell = js.Any.fromFunction2(createCodeCell), createInputPrompt = js.Any.fromFunction0(createInputPrompt), createMarkdownCell = js.Any.fromFunction2(createMarkdownCell), createOutputPrompt = js.Any.fromFunction0(createOutputPrompt), createRawCell = js.Any.fromFunction2(createRawCell), createStdin = js.Any.fromFunction1(createStdin), editorFactory = js.Any.fromFunction1(editorFactory))
-  
     __obj.asInstanceOf[IContentFactory]
   }
+  @scala.inline
+  implicit class IContentFactoryOps[Self <: IContentFactory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateCodeCell(
+      value: (typingsSlinky.jupyterlabCells.widgetMod.CodeCell.IOptions, typingsSlinky.jupyterlabNotebook.widgetMod.StaticNotebook) => CodeCell
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createCodeCell")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withCreateMarkdownCell(
+      value: (typingsSlinky.jupyterlabCells.widgetMod.MarkdownCell.IOptions, typingsSlinky.jupyterlabNotebook.widgetMod.StaticNotebook) => MarkdownCell
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createMarkdownCell")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withCreateRawCell(
+      value: (typingsSlinky.jupyterlabCells.widgetMod.RawCell.IOptions, typingsSlinky.jupyterlabNotebook.widgetMod.StaticNotebook) => RawCell
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createRawCell")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

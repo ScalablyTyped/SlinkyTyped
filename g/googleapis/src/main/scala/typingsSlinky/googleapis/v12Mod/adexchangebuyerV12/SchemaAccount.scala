@@ -51,26 +51,113 @@ trait SchemaAccount extends js.Object {
 
 object SchemaAccount {
   @scala.inline
-  def apply(
-    bidderLocation: js.Array[AnonMaximumQps] = null,
-    cookieMatchingNid: String = null,
-    cookieMatchingUrl: String = null,
-    id: Int | Double = null,
-    kind: String = null,
-    maximumActiveCreatives: Int | Double = null,
-    maximumTotalQps: Int | Double = null,
-    numberActiveCreatives: Int | Double = null
-  ): SchemaAccount = {
+  def apply(): SchemaAccount = {
     val __obj = js.Dynamic.literal()
-    if (bidderLocation != null) __obj.updateDynamic("bidderLocation")(bidderLocation.asInstanceOf[js.Any])
-    if (cookieMatchingNid != null) __obj.updateDynamic("cookieMatchingNid")(cookieMatchingNid.asInstanceOf[js.Any])
-    if (cookieMatchingUrl != null) __obj.updateDynamic("cookieMatchingUrl")(cookieMatchingUrl.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (maximumActiveCreatives != null) __obj.updateDynamic("maximumActiveCreatives")(maximumActiveCreatives.asInstanceOf[js.Any])
-    if (maximumTotalQps != null) __obj.updateDynamic("maximumTotalQps")(maximumTotalQps.asInstanceOf[js.Any])
-    if (numberActiveCreatives != null) __obj.updateDynamic("numberActiveCreatives")(numberActiveCreatives.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAccount]
   }
+  @scala.inline
+  implicit class SchemaAccountOps[Self <: SchemaAccount] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBidderLocation(value: js.Array[AnonMaximumQps]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bidderLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBidderLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bidderLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCookieMatchingNid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieMatchingNid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCookieMatchingNid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieMatchingNid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCookieMatchingUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieMatchingUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCookieMatchingUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieMatchingUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumActiveCreatives(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumActiveCreatives")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumActiveCreatives: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumActiveCreatives")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumTotalQps(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumTotalQps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumTotalQps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumTotalQps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberActiveCreatives(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberActiveCreatives")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberActiveCreatives: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberActiveCreatives")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

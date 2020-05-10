@@ -22,16 +22,53 @@ trait GetBuiltinIntentResponse extends js.Object {
 
 object GetBuiltinIntentResponse {
   @scala.inline
-  def apply(
-    signature: BuiltinIntentSignature = null,
-    slots: BuiltinIntentSlotList = null,
-    supportedLocales: LocaleList = null
-  ): GetBuiltinIntentResponse = {
+  def apply(): GetBuiltinIntentResponse = {
     val __obj = js.Dynamic.literal()
-    if (signature != null) __obj.updateDynamic("signature")(signature.asInstanceOf[js.Any])
-    if (slots != null) __obj.updateDynamic("slots")(slots.asInstanceOf[js.Any])
-    if (supportedLocales != null) __obj.updateDynamic("supportedLocales")(supportedLocales.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetBuiltinIntentResponse]
   }
+  @scala.inline
+  implicit class GetBuiltinIntentResponseOps[Self <: GetBuiltinIntentResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSignature(value: BuiltinIntentSignature): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlots(value: BuiltinIntentSlotList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlots: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slots")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportedLocales(value: LocaleList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedLocales")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportedLocales: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedLocales")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

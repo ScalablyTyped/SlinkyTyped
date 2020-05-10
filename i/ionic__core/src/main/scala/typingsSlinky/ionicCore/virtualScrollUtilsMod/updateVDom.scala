@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 object updateVDom extends js.Object {
   def apply(
     dom: js.Array[VirtualNode],
-    heightIndex: scala.scalajs.js.typedarray.Uint32Array,
+    heightIndex: js.typedarray.Uint32Array,
     cells: js.Array[Cell],
     range: Range
   ): Unit = js.native

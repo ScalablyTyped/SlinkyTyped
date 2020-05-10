@@ -14,10 +14,29 @@ trait ResponseTimeRootCause extends js.Object {
 
 object ResponseTimeRootCause {
   @scala.inline
-  def apply(Services: ResponseTimeRootCauseServices = null): ResponseTimeRootCause = {
+  def apply(): ResponseTimeRootCause = {
     val __obj = js.Dynamic.literal()
-    if (Services != null) __obj.updateDynamic("Services")(Services.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResponseTimeRootCause]
   }
+  @scala.inline
+  implicit class ResponseTimeRootCauseOps[Self <: ResponseTimeRootCause] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServices(value: ResponseTimeRootCauseServices): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Services")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Services")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

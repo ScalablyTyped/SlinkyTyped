@@ -34,22 +34,89 @@ trait PlayReadyDrm extends js.Object {
 
 object PlayReadyDrm {
   @scala.inline
-  def apply(
-    Format: PlayReadyDrmFormatString = null,
-    InitializationVector: ZeroTo255String = null,
-    Key: NonEmptyBase64EncodedString = null,
-    KeyId: KeyIdGuid = null,
-    KeyMd5: NonEmptyBase64EncodedString = null,
-    LicenseAcquisitionUrl: OneTo512String = null
-  ): PlayReadyDrm = {
+  def apply(): PlayReadyDrm = {
     val __obj = js.Dynamic.literal()
-    if (Format != null) __obj.updateDynamic("Format")(Format.asInstanceOf[js.Any])
-    if (InitializationVector != null) __obj.updateDynamic("InitializationVector")(InitializationVector.asInstanceOf[js.Any])
-    if (Key != null) __obj.updateDynamic("Key")(Key.asInstanceOf[js.Any])
-    if (KeyId != null) __obj.updateDynamic("KeyId")(KeyId.asInstanceOf[js.Any])
-    if (KeyMd5 != null) __obj.updateDynamic("KeyMd5")(KeyMd5.asInstanceOf[js.Any])
-    if (LicenseAcquisitionUrl != null) __obj.updateDynamic("LicenseAcquisitionUrl")(LicenseAcquisitionUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlayReadyDrm]
   }
+  @scala.inline
+  implicit class PlayReadyDrmOps[Self <: PlayReadyDrm] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormat(value: PlayReadyDrmFormatString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitializationVector(value: ZeroTo255String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitializationVector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitializationVector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitializationVector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: NonEmptyBase64EncodedString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyId(value: KeyIdGuid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyMd5(value: NonEmptyBase64EncodedString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyMd5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyMd5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyMd5")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLicenseAcquisitionUrl(value: OneTo512String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseAcquisitionUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenseAcquisitionUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseAcquisitionUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

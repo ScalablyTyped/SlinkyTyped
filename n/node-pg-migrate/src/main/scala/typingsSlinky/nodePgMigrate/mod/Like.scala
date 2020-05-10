@@ -18,22 +18,20 @@ trait Like extends js.Object
 
 object Like {
   @scala.inline
-  def ALL: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.ALL = this.cast("ALL")
+  def ALL: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.ALL = "ALL".asInstanceOf[typingsSlinky.nodePgMigrate.nodePgMigrateStrings.ALL]
   @scala.inline
-  def COMMENTS: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.COMMENTS = this.cast("COMMENTS")
+  def COMMENTS: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.COMMENTS = "COMMENTS".asInstanceOf[typingsSlinky.nodePgMigrate.nodePgMigrateStrings.COMMENTS]
   @scala.inline
-  def CONSTRAINTS: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.CONSTRAINTS = this.cast("CONSTRAINTS")
+  def CONSTRAINTS: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.CONSTRAINTS = "CONSTRAINTS".asInstanceOf[typingsSlinky.nodePgMigrate.nodePgMigrateStrings.CONSTRAINTS]
   @scala.inline
-  def DEFAULTS: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.DEFAULTS = this.cast("DEFAULTS")
+  def DEFAULTS: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.DEFAULTS = "DEFAULTS".asInstanceOf[typingsSlinky.nodePgMigrate.nodePgMigrateStrings.DEFAULTS]
   @scala.inline
-  def IDENTITY: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.IDENTITY = this.cast("IDENTITY")
+  def IDENTITY: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.IDENTITY = "IDENTITY".asInstanceOf[typingsSlinky.nodePgMigrate.nodePgMigrateStrings.IDENTITY]
   @scala.inline
-  def INDEXES: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.INDEXES = this.cast("INDEXES")
+  def INDEXES: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.INDEXES = "INDEXES".asInstanceOf[typingsSlinky.nodePgMigrate.nodePgMigrateStrings.INDEXES]
   @scala.inline
-  def STATISTICS: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.STATISTICS = this.cast("STATISTICS")
+  def STATISTICS: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.STATISTICS = "STATISTICS".asInstanceOf[typingsSlinky.nodePgMigrate.nodePgMigrateStrings.STATISTICS]
   @scala.inline
-  def STORAGE: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.STORAGE = this.cast("STORAGE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def STORAGE: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.STORAGE = "STORAGE".asInstanceOf[typingsSlinky.nodePgMigrate.nodePgMigrateStrings.STORAGE]
 }
 

@@ -18,10 +18,35 @@ trait PutDataLakeSettingsRequest extends js.Object {
 
 object PutDataLakeSettingsRequest {
   @scala.inline
-  def apply(DataLakeSettings: DataLakeSettings, CatalogId: CatalogIdString = null): PutDataLakeSettingsRequest = {
+  def apply(DataLakeSettings: DataLakeSettings): PutDataLakeSettingsRequest = {
     val __obj = js.Dynamic.literal(DataLakeSettings = DataLakeSettings.asInstanceOf[js.Any])
-    if (CatalogId != null) __obj.updateDynamic("CatalogId")(CatalogId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutDataLakeSettingsRequest]
   }
+  @scala.inline
+  implicit class PutDataLakeSettingsRequestOps[Self <: PutDataLakeSettingsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataLakeSettings(value: DataLakeSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataLakeSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCatalogId(value: CatalogIdString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCatalogId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

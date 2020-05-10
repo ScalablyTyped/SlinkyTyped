@@ -14,12 +14,10 @@ trait ReminderMethod extends js.Object
 
 object ReminderMethod {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def email: typingsSlinky.gapiCalendar.gapiCalendarStrings.email = "email".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.email]
   @scala.inline
-  def email: typingsSlinky.gapiCalendar.gapiCalendarStrings.email = this.cast("email")
+  def popup: typingsSlinky.gapiCalendar.gapiCalendarStrings.popup = "popup".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.popup]
   @scala.inline
-  def popup: typingsSlinky.gapiCalendar.gapiCalendarStrings.popup = this.cast("popup")
-  @scala.inline
-  def sms: typingsSlinky.gapiCalendar.gapiCalendarStrings.sms = this.cast("sms")
+  def sms: typingsSlinky.gapiCalendar.gapiCalendarStrings.sms = "sms".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.sms]
 }
 

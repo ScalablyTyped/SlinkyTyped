@@ -13,5 +13,6 @@ trait ProcessingInstruction extends CharacterData {
 
 @JSGlobal("ProcessingInstruction")
 @js.native
-object ProcessingInstruction extends Instantiable0[ProcessingInstruction]
+object ProcessingInstruction
+  extends Instantiable0[org.scalajs.dom.raw.ProcessingInstruction]
 

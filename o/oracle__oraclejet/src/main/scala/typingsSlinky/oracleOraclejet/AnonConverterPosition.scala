@@ -21,38 +21,116 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonConverterPosition extends js.Object {
-  var converter: js.UndefOr[Converter[String]] = js.undefined
+  var converter: js.UndefOr[Converter[String]] = js.native
   var position: js.UndefOr[
     center | insideIndicatorEdge | outsideIndicatorEdge | outsidePlotArea | withLabel | auto
-  ] = js.undefined
-  var rendered: js.UndefOr[on | off | auto] = js.undefined
-  var scaling: js.UndefOr[none | thousand | million | billion | trillion | quadrillion | auto] = js.undefined
-  var style: js.UndefOr[js.Object] = js.undefined
-  var text: js.UndefOr[String] = js.undefined
-  var textType: js.UndefOr[percent | number] = js.undefined
+  ] = js.native
+  var rendered: js.UndefOr[on | off | auto] = js.native
+  var scaling: js.UndefOr[none | thousand | million | billion | trillion | quadrillion | auto] = js.native
+  var style: js.UndefOr[js.Object] = js.native
+  var text: js.UndefOr[String] = js.native
+  var textType: js.UndefOr[percent | number] = js.native
 }
 
 object AnonConverterPosition {
   @scala.inline
-  def apply(
-    converter: Converter[String] = null,
-    position: center | insideIndicatorEdge | outsideIndicatorEdge | outsidePlotArea | withLabel | auto = null,
-    rendered: on | off | auto = null,
-    scaling: none | thousand | million | billion | trillion | quadrillion | auto = null,
-    style: js.Object = null,
-    text: String = null,
-    textType: percent | number = null
-  ): AnonConverterPosition = {
+  def apply(): AnonConverterPosition = {
     val __obj = js.Dynamic.literal()
-    if (converter != null) __obj.updateDynamic("converter")(converter.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (rendered != null) __obj.updateDynamic("rendered")(rendered.asInstanceOf[js.Any])
-    if (scaling != null) __obj.updateDynamic("scaling")(scaling.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (textType != null) __obj.updateDynamic("textType")(textType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonConverterPosition]
   }
+  @scala.inline
+  implicit class AnonConverterPositionOps[Self <: AnonConverterPosition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConverter(value: Converter[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("converter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConverter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("converter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: center | insideIndicatorEdge | outsideIndicatorEdge | outsidePlotArea | withLabel | auto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRendered(value: on | off | auto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rendered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRendered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rendered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaling(value: none | thousand | million | billion | trillion | quadrillion | auto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextType(value: percent | number): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

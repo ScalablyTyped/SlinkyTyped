@@ -6,10 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("android.view.animation.BounceInterpolator")
 @js.native
-class BounceInterpolator () extends Interpolator {
-  /* CompleteClass */
-  override def getInterpolation(input: Double): Double = js.native
-}
+class BounceInterpolator () extends Interpolator
 
 /* static members */
 @JSGlobal("android.view.animation.BounceInterpolator")

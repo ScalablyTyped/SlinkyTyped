@@ -13,7 +13,7 @@ trait ApplicationVersionArgs extends js.Object {
   /**
     * Name of the Beanstalk Application the version is associated with.
     */
-  val application: Input[Application] = js.native
+  val application: Input[String | Application] = js.native
   /**
     * S3 bucket that contains the Application Version source bundle.
     */
@@ -43,21 +43,83 @@ trait ApplicationVersionArgs extends js.Object {
 
 object ApplicationVersionArgs {
   @scala.inline
-  def apply(
-    application: Input[Application],
-    bucket: Input[String | Bucket],
-    key: Input[String],
-    description: Input[String] = null,
-    forceDelete: Input[Boolean] = null,
-    name: Input[String] = null,
-    tags: Input[StringDictionary[_]] = null
-  ): ApplicationVersionArgs = {
+  def apply(application: Input[String | Application], bucket: Input[String | Bucket], key: Input[String]): ApplicationVersionArgs = {
     val __obj = js.Dynamic.literal(application = application.asInstanceOf[js.Any], bucket = bucket.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (forceDelete != null) __obj.updateDynamic("forceDelete")(forceDelete.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationVersionArgs]
   }
+  @scala.inline
+  implicit class ApplicationVersionArgsOps[Self <: ApplicationVersionArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplication(value: Input[String | Application]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("application")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBucket(value: Input[String | Bucket]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKey(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceDelete(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceDelete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceDelete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

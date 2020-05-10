@@ -1,20 +1,24 @@
 package typingsSlinky.reduxForm.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reduxForm.fieldsMod.BaseFieldsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Couldn't find props for TypeRef(QualifiedName(IArray(Name(<intersection>))),IArray(TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reduxForm), Name(fieldsMod), Name(BaseFieldsProps))),IArray(TypeRef(QualifiedName(IArray(Name(P))),IArray(),NoComments)),NoComments), TypeRef(QualifiedName(IArray(Name(P))),IArray(),NoComments)),NoComments) because: Could't extract props from TypeRef(QualifiedName(IArray(Name(P))),IArray(),NoComments) because couldn't resolve ClassTree. */
-object Fields
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reduxForm.mod.Fields[js.Any]] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for typingsSlinky.reduxForm.fieldsMod.BaseFieldsProps[P] with P because: IArray(Could't extract props from P because couldn't resolve ClassTree.) */
+object Fields {
   @JSImport("redux-form", "Fields")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = BaseFieldsProps[js.Any] with js.Any
+  @scala.inline
+  class Builder[P] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reduxForm.mod.Fields[js.Any]]
+  
+  def apply[P](p: BaseFieldsProps[P] with P): Builder[P] = new Builder[P](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[P](companion: Fields.type): Builder[P] = new Builder[P](js.Array(this.component, js.Dictionary.empty))()
 }
 

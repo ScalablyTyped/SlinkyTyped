@@ -1,57 +1,52 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.paginatorMod.PageState
 import typingsSlinky.primereact.paginatorMod.PaginatorProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Paginator
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactPaginatorMod.Paginator] {
+object Paginator {
   @JSImport("primereact/paginator", "Paginator")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, rows */
-  def apply(
-    alwaysShow: js.UndefOr[Boolean] = js.undefined,
-    currentPageReportTemplate: String = null,
-    first: Int | Double = null,
-    leftContent: ReactElement = null,
-    onPageChange: /* event */ PageState => Unit = null,
-    pageLinkSize: Int | Double = null,
-    rightContent: ReactElement = null,
-    rowsPerPageOptions: js.Array[_] = null,
-    style: js.Object = null,
-    template: String = null,
-    totalRecords: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactPaginatorMod.Paginator] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alwaysShow)) __obj.updateDynamic("alwaysShow")(alwaysShow.asInstanceOf[js.Any])
-    if (currentPageReportTemplate != null) __obj.updateDynamic("currentPageReportTemplate")(currentPageReportTemplate.asInstanceOf[js.Any])
-    if (first != null) __obj.updateDynamic("first")(first.asInstanceOf[js.Any])
-    if (leftContent != null) __obj.updateDynamic("leftContent")(leftContent.asInstanceOf[js.Any])
-    if (onPageChange != null) __obj.updateDynamic("onPageChange")(js.Any.fromFunction1(onPageChange))
-    if (pageLinkSize != null) __obj.updateDynamic("pageLinkSize")(pageLinkSize.asInstanceOf[js.Any])
-    if (rightContent != null) __obj.updateDynamic("rightContent")(rightContent.asInstanceOf[js.Any])
-    if (rowsPerPageOptions != null) __obj.updateDynamic("rowsPerPageOptions")(rowsPerPageOptions.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
-    if (totalRecords != null) __obj.updateDynamic("totalRecords")(totalRecords.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.primereactPaginatorMod.Paginator] {
+    @scala.inline
+    def alwaysShow(value: Boolean): this.type = set("alwaysShow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def currentPageReportTemplate(value: String): this.type = set("currentPageReportTemplate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def first(value: Double): this.type = set("first", value.asInstanceOf[js.Any])
+    @scala.inline
+    def leftContent(value: ReactElement): this.type = set("leftContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onPageChange(value: /* event */ PageState => Unit): this.type = set("onPageChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def pageLinkSize(value: Double): this.type = set("pageLinkSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rightContent(value: ReactElement): this.type = set("rightContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowsPerPageOptions(value: js.Array[_]): this.type = set("rowsPerPageOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def template(value: String): this.type = set("template", value.asInstanceOf[js.Any])
+    @scala.inline
+    def totalRecords(value: Double): this.type = set("totalRecords", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactPaginatorMod.Paginator] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.primereactPaginatorMod.Paginator](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PaginatorProps
+  
+  def withProps(p: PaginatorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Paginator.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

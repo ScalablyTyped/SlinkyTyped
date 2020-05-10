@@ -1,51 +1,92 @@
 package typingsSlinky.stripe.mod.plans
 
 import typingsSlinky.stripe.mod.IDataOptionsWithMetadata
-import typingsSlinky.stripe.mod.IOptionsMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IPlanUpdateOptions extends IDataOptionsWithMetadata {
   /**
     * Whether the plan is currently available for new subscriptions.
     */
-  var active: js.UndefOr[Boolean] = js.undefined
+  var active: js.UndefOr[Boolean] = js.native
   /**
     * A brief description of the plan, hidden from customers. This can be unset by updating the value to null and then saving.
     */
-  var nickname: js.UndefOr[String] = js.undefined
+  var nickname: js.UndefOr[String] = js.native
   /**
     * The product the plan belongs to. Note that after updating, statement descriptors and line items of the plan in active subscriptions will
     * be affected.
     */
-  var product: js.UndefOr[String] = js.undefined
+  var product: js.UndefOr[String] = js.native
   /**
     * Default number of trial days when subscribing a customer to this plan using `trial_from_plan=true`.
     */
-  var trial_period_days: js.UndefOr[Double] = js.undefined
+  var trial_period_days: js.UndefOr[Double] = js.native
 }
 
 object IPlanUpdateOptions {
   @scala.inline
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    expand: js.Array[String] = null,
-    include: js.Array[String] = null,
-    metadata: IOptionsMetadata = null,
-    nickname: String = null,
-    product: String = null,
-    trial_period_days: Int | Double = null
-  ): IPlanUpdateOptions = {
+  def apply(): IPlanUpdateOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
-    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (nickname != null) __obj.updateDynamic("nickname")(nickname.asInstanceOf[js.Any])
-    if (product != null) __obj.updateDynamic("product")(product.asInstanceOf[js.Any])
-    if (trial_period_days != null) __obj.updateDynamic("trial_period_days")(trial_period_days.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPlanUpdateOptions]
   }
+  @scala.inline
+  implicit class IPlanUpdateOptionsOps[Self <: IPlanUpdateOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNickname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nickname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNickname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nickname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProduct(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProduct: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrial_period_days(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trial_period_days")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrial_period_days: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trial_period_days")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

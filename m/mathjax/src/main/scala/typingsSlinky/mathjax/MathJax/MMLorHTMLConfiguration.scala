@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MMLorHTMLConfiguration extends js.Object {
   /*This lets you set the preferred renderer on a browser-by-browser basis. You set the browser to either "MML" or
     * "HTML" depending on whether you want to use the NativeMML or HTML-CSS output processor. Note that although
@@ -15,15 +16,34 @@ trait MMLorHTMLConfiguration extends js.Object {
     * Note that users can still use the MathJax contextual menu to select a different renderer after the default
     * one has been chosen by MMLorHTML.js.
     */
-  var prefer: js.UndefOr[BrowserPreference] = js.undefined
+  var prefer: js.UndefOr[BrowserPreference] = js.native
 }
 
 object MMLorHTMLConfiguration {
   @scala.inline
-  def apply(prefer: BrowserPreference = null): MMLorHTMLConfiguration = {
+  def apply(): MMLorHTMLConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (prefer != null) __obj.updateDynamic("prefer")(prefer.asInstanceOf[js.Any])
     __obj.asInstanceOf[MMLorHTMLConfiguration]
   }
+  @scala.inline
+  implicit class MMLorHTMLConfigurationOps[Self <: MMLorHTMLConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPrefer(value: BrowserPreference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

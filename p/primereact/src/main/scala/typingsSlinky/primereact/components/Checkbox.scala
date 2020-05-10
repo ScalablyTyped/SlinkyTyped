@@ -1,9 +1,7 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.AnonChecked
 import typingsSlinky.primereact.checkboxCheckboxMod.CheckboxProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
@@ -12,38 +10,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Checkbox
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.checkboxMod.Checkbox] {
+object Checkbox {
   @JSImport("primereact/checkbox", "Checkbox")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: checked, className, disabled, id, name, readOnly, required */
-  def apply(
-    onChange: AnonChecked => Unit,
-    ariaLabelledBy: String = null,
-    inputId: String = null,
-    onContextMenu: /* event */ Event_ => Unit = null,
-    onMouseDown: /* event */ Event_ => Unit = null,
-    style: js.Object = null,
-    tooltip: js.Any = null,
-    tooltipOptions: TooltipOptions = null,
-    value: js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.checkboxMod.Checkbox] = {
-    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
-    if (ariaLabelledBy != null) __obj.updateDynamic("ariaLabelledBy")(ariaLabelledBy.asInstanceOf[js.Any])
-    if (inputId != null) __obj.updateDynamic("inputId")(inputId.asInstanceOf[js.Any])
-    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(js.Any.fromFunction1(onContextMenu))
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (tooltipOptions != null) __obj.updateDynamic("tooltipOptions")(tooltipOptions.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.checkboxMod.Checkbox] {
+    @scala.inline
+    def ariaLabelledBy(value: String): this.type = set("ariaLabelledBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputId(value: String): this.type = set("inputId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onContextMenu(value: /* event */ Event_ => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseDown(value: /* event */ Event_ => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltip(value: js.Any): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipOptions(value: TooltipOptions): this.type = set("tooltipOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  type Props = CheckboxProps
+  
+  def withProps(p: CheckboxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(onChange: AnonChecked => Unit): Builder = {
+    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[CheckboxProps]))
+  }
 }
 

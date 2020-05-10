@@ -1,14 +1,17 @@
 package typingsSlinky.react.mod
 
-import typingsSlinky.std.EventTarget
+import org.scalajs.dom.raw.EventTarget
+import slinky.web.SyntheticAnimationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait AnimationEvent[T] extends BaseSyntheticEvent[NativeAnimationEvent, EventTarget with T, EventTarget] {
-  var animationName: String
-  var elapsedTime: Double
-  var pseudoElement: String
+@js.native
+trait AnimationEvent[T]
+  extends BaseSyntheticEvent[org.scalajs.dom.raw.AnimationEvent, EventTarget with T, EventTarget] {
+  var animationName: String = js.native
+  var elapsedTime: Double = js.native
+  var pseudoElement: String = js.native
 }
 
 object AnimationEvent {
@@ -17,7 +20,7 @@ object AnimationEvent {
     animationName: String,
     bubbles: Boolean,
     cancelable: Boolean,
-    currentTarget: org.scalajs.dom.raw.EventTarget with T,
+    currentTarget: EventTarget with T,
     defaultPrevented: Boolean,
     elapsedTime: Double,
     eventPhase: Double,
@@ -29,7 +32,7 @@ object AnimationEvent {
     preventDefault: () => Unit,
     pseudoElement: String,
     stopPropagation: () => Unit,
-    target: org.scalajs.dom.raw.EventTarget,
+    target: EventTarget,
     timeStamp: Double,
     `type`: String
   ): AnimationEvent[T] = {
@@ -37,5 +40,31 @@ object AnimationEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnimationEvent[T]]
   }
+  @scala.inline
+  implicit class AnimationEventOps[Self[t] <: SyntheticAnimationEvent[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withAnimationName(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withElapsedTime(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elapsedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPseudoElement(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pseudoElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

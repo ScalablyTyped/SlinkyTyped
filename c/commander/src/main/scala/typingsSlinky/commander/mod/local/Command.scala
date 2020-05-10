@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.commander.mod.CommandOptions
 import typingsSlinky.commander.mod.ParseOptionsResult
 import typingsSlinky.node.NodeJS.EventEmitter
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -185,8 +184,8 @@ trait Command
     fn: js.Function2[/* arg1 */ js.Any, /* arg2 */ js.Any, Unit],
     defaultValue: js.Any
   ): Command = js.native
-  def option(flags: String, description: String, fn: RegExp): Command = js.native
-  def option(flags: String, description: String, fn: RegExp, defaultValue: js.Any): Command = js.native
+  def option(flags: String, description: String, fn: js.RegExp): Command = js.native
+  def option(flags: String, description: String, fn: js.RegExp, defaultValue: js.Any): Command = js.native
   /**
     * Return an object containing options as key-value pairs
     *

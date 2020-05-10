@@ -26,18 +26,65 @@ trait AwsSqsQueueDetails extends js.Object {
 
 object AwsSqsQueueDetails {
   @scala.inline
-  def apply(
-    DeadLetterTargetArn: NonEmptyString = null,
-    KmsDataKeyReusePeriodSeconds: Int | scala.Double = null,
-    KmsMasterKeyId: NonEmptyString = null,
-    QueueName: NonEmptyString = null
-  ): AwsSqsQueueDetails = {
+  def apply(): AwsSqsQueueDetails = {
     val __obj = js.Dynamic.literal()
-    if (DeadLetterTargetArn != null) __obj.updateDynamic("DeadLetterTargetArn")(DeadLetterTargetArn.asInstanceOf[js.Any])
-    if (KmsDataKeyReusePeriodSeconds != null) __obj.updateDynamic("KmsDataKeyReusePeriodSeconds")(KmsDataKeyReusePeriodSeconds.asInstanceOf[js.Any])
-    if (KmsMasterKeyId != null) __obj.updateDynamic("KmsMasterKeyId")(KmsMasterKeyId.asInstanceOf[js.Any])
-    if (QueueName != null) __obj.updateDynamic("QueueName")(QueueName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsSqsQueueDetails]
   }
+  @scala.inline
+  implicit class AwsSqsQueueDetailsOps[Self <: AwsSqsQueueDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeadLetterTargetArn(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeadLetterTargetArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeadLetterTargetArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeadLetterTargetArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsDataKeyReusePeriodSeconds(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsDataKeyReusePeriodSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsDataKeyReusePeriodSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsDataKeyReusePeriodSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsMasterKeyId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsMasterKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsMasterKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsMasterKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueueName(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueueName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

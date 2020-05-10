@@ -13,101 +13,249 @@ import scala.scalajs.js.annotation._
 	 * Whatever tokens are created like this are tagged as alien
 	 * and z is the finger print code of this token type.
 	 */
+@js.native
 trait Config extends js.Object {
   /**
   		 * such as $ or £ symbols
   		 * @default true
   		 */
-  var currency: js.UndefOr[Boolean] = js.undefined
+  var currency: js.UndefOr[Boolean] = js.native
   /**
   		 * @default true
   		 */
-  var email: js.UndefOr[Boolean] = js.undefined
+  var email: js.UndefOr[Boolean] = js.native
   /**
   		 * @default true
   		 */
-  var emoji: js.UndefOr[Boolean] = js.undefined
+  var emoji: js.UndefOr[Boolean] = js.native
   /**
   		 * @default true
   		 */
-  var emoticon: js.UndefOr[Boolean] = js.undefined
+  var emoticon: js.UndefOr[Boolean] = js.native
   /**
   		 * @default true
   		 */
-  var hashtag: js.UndefOr[Boolean] = js.undefined
+  var hashtag: js.UndefOr[Boolean] = js.native
   /**
   		 * @default true
   		 */
-  var mention: js.UndefOr[Boolean] = js.undefined
+  var mention: js.UndefOr[Boolean] = js.native
   /**
   		 * @default true
   		 */
-  var number: js.UndefOr[Boolean] = js.undefined
+  var number: js.UndefOr[Boolean] = js.native
   /**
   		 * ordinals like 1st , 2nd , 3rd , 4th or 12th or 91st
   		 * @default true
   		 */
-  var ordinal: js.UndefOr[Boolean] = js.undefined
+  var ordinal: js.UndefOr[Boolean] = js.native
   /**
   		 * @default true
   		 */
-  var punctuation: js.UndefOr[Boolean] = js.undefined
+  var punctuation: js.UndefOr[Boolean] = js.native
   /**
   		 * @default true
   		 */
-  var quoted_phrase: js.UndefOr[Boolean] = js.undefined
+  var quoted_phrase: js.UndefOr[Boolean] = js.native
   /**
   		 * @default true
   		 */
-  var symbol: js.UndefOr[Boolean] = js.undefined
+  var symbol: js.UndefOr[Boolean] = js.native
   /**
   		 * @default true
   		 */
-  var time: js.UndefOr[Boolean] = js.undefined
+  var time: js.UndefOr[Boolean] = js.native
   /**
   		 * @default true
   		 */
-  var url: js.UndefOr[Boolean] = js.undefined
+  var url: js.UndefOr[Boolean] = js.native
   /**
   		 * @default true
   		 */
-  var word: js.UndefOr[Boolean] = js.undefined
+  var word: js.UndefOr[Boolean] = js.native
 }
 
 object Config {
   @scala.inline
-  def apply(
-    currency: js.UndefOr[Boolean] = js.undefined,
-    email: js.UndefOr[Boolean] = js.undefined,
-    emoji: js.UndefOr[Boolean] = js.undefined,
-    emoticon: js.UndefOr[Boolean] = js.undefined,
-    hashtag: js.UndefOr[Boolean] = js.undefined,
-    mention: js.UndefOr[Boolean] = js.undefined,
-    number: js.UndefOr[Boolean] = js.undefined,
-    ordinal: js.UndefOr[Boolean] = js.undefined,
-    punctuation: js.UndefOr[Boolean] = js.undefined,
-    quoted_phrase: js.UndefOr[Boolean] = js.undefined,
-    symbol: js.UndefOr[Boolean] = js.undefined,
-    time: js.UndefOr[Boolean] = js.undefined,
-    url: js.UndefOr[Boolean] = js.undefined,
-    word: js.UndefOr[Boolean] = js.undefined
-  ): Config = {
+  def apply(): Config = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(currency)) __obj.updateDynamic("currency")(currency.asInstanceOf[js.Any])
-    if (!js.isUndefined(email)) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (!js.isUndefined(emoji)) __obj.updateDynamic("emoji")(emoji.asInstanceOf[js.Any])
-    if (!js.isUndefined(emoticon)) __obj.updateDynamic("emoticon")(emoticon.asInstanceOf[js.Any])
-    if (!js.isUndefined(hashtag)) __obj.updateDynamic("hashtag")(hashtag.asInstanceOf[js.Any])
-    if (!js.isUndefined(mention)) __obj.updateDynamic("mention")(mention.asInstanceOf[js.Any])
-    if (!js.isUndefined(number)) __obj.updateDynamic("number")(number.asInstanceOf[js.Any])
-    if (!js.isUndefined(ordinal)) __obj.updateDynamic("ordinal")(ordinal.asInstanceOf[js.Any])
-    if (!js.isUndefined(punctuation)) __obj.updateDynamic("punctuation")(punctuation.asInstanceOf[js.Any])
-    if (!js.isUndefined(quoted_phrase)) __obj.updateDynamic("quoted_phrase")(quoted_phrase.asInstanceOf[js.Any])
-    if (!js.isUndefined(symbol)) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
-    if (!js.isUndefined(time)) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
-    if (!js.isUndefined(url)) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (!js.isUndefined(word)) __obj.updateDynamic("word")(word.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
+  @scala.inline
+  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrency(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmail(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmoji(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emoji")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmoji: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emoji")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmoticon(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emoticon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmoticon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emoticon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHashtag(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashtag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHashtag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashtag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMention(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mention")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMention: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mention")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumber(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrdinal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ordinal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrdinal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ordinal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPunctuation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("punctuation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPunctuation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("punctuation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuoted_phrase(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quoted_phrase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuoted_phrase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quoted_phrase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbol(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTime(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWord(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("word")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWord: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("word")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

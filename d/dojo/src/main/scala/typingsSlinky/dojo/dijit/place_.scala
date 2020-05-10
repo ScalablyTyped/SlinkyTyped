@@ -49,7 +49,7 @@ trait place_ extends js.Object {
     */
   def around(
     node: HTMLElement,
-    anchor: typingsSlinky.std.HTMLElement,
+    anchor: HTMLElement,
     positions: js.Array[String],
     leftToRight: Boolean,
     layoutNode: js.Function

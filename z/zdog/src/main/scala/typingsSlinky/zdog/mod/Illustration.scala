@@ -1,13 +1,13 @@
 package typingsSlinky.zdog.mod
 
+import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.SVGSVGElement
-import typingsSlinky.std.CanvasRenderingContext2D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.zdog.mod.Dragger because Inheritance from two classes. Inlined onDragStart, onDragStart_Original, onDragMove, onDragMove_Original, onDragEnd, onDragEnd_Original */ @JSImport("zdog", "Illustration")
 @js.native
 class Illustration protected () extends Anchor {
@@ -42,7 +42,7 @@ class Illustration protected () extends Anchor {
   def onDragStart(pointer: PointerPosition): Unit = js.native
   /** @see {@link IllustrationOptions#onPrerender} */
   def onPrerender(context: CanvasRenderingContext2D): Unit = js.native
-  def onPrerender(context: typingsSlinky.std.SVGSVGElement): Unit = js.native
+  def onPrerender(context: SVGSVGElement): Unit = js.native
   /** @see {@link IllustrationOptions#onResize} */
   def onResize(width: Double, height: Double): Unit = js.native
   /**

@@ -35,18 +35,65 @@ trait SchemaFileComment extends js.Object {
 
 object SchemaFileComment {
   @scala.inline
-  def apply(
-    legacyCommentId: String = null,
-    legacyDiscussionId: String = null,
-    linkToDiscussion: String = null,
-    parent: SchemaDriveItem = null
-  ): SchemaFileComment = {
+  def apply(): SchemaFileComment = {
     val __obj = js.Dynamic.literal()
-    if (legacyCommentId != null) __obj.updateDynamic("legacyCommentId")(legacyCommentId.asInstanceOf[js.Any])
-    if (legacyDiscussionId != null) __obj.updateDynamic("legacyDiscussionId")(legacyDiscussionId.asInstanceOf[js.Any])
-    if (linkToDiscussion != null) __obj.updateDynamic("linkToDiscussion")(linkToDiscussion.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFileComment]
   }
+  @scala.inline
+  implicit class SchemaFileCommentOps[Self <: SchemaFileComment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLegacyCommentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legacyCommentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegacyCommentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legacyCommentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLegacyDiscussionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legacyDiscussionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegacyDiscussionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legacyDiscussionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkToDiscussion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkToDiscussion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkToDiscussion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkToDiscussion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParent(value: SchemaDriveItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

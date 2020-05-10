@@ -18,11 +18,41 @@ trait ExportTaskExecutionInfo extends js.Object {
 
 object ExportTaskExecutionInfo {
   @scala.inline
-  def apply(completionTime: Int | Double = null, creationTime: Int | Double = null): ExportTaskExecutionInfo = {
+  def apply(): ExportTaskExecutionInfo = {
     val __obj = js.Dynamic.literal()
-    if (completionTime != null) __obj.updateDynamic("completionTime")(completionTime.asInstanceOf[js.Any])
-    if (creationTime != null) __obj.updateDynamic("creationTime")(creationTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportTaskExecutionInfo]
   }
+  @scala.inline
+  implicit class ExportTaskExecutionInfoOps[Self <: ExportTaskExecutionInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompletionTime(value: Timestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completionTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompletionTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completionTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTime(value: Timestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

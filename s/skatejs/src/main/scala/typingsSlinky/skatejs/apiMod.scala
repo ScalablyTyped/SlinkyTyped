@@ -1,5 +1,7 @@
 package typingsSlinky.skatejs
 
+import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.skatejs.typesMod.ComposedCustomEvent
 import typingsSlinky.skatejs.typesMod.Constructor
 import typingsSlinky.skatejs.typesMod.CustomElement
@@ -12,8 +14,6 @@ import typingsSlinky.skatejs.typesMod.WithContext
 import typingsSlinky.skatejs.typesMod.WithLifecycle
 import typingsSlinky.skatejs.typesMod.WithRenderer
 import typingsSlinky.skatejs.typesMod.WithUpdate
-import typingsSlinky.std.EventTarget
-import typingsSlinky.std.HTMLElement
 import typingsSlinky.std.PropertyDecorator
 import typingsSlinky.std.ShadowRoot
 import scala.scalajs.js
@@ -36,22 +36,22 @@ object apiMod extends js.Object {
   def prop(ops: PropOptions[_]): PropertyDecorator with PropOptions[_] = js.native
   def shadow(elem: CustomElement): ShadowRoot = js.native
   def shadow(elem: HTMLElement): ShadowRoot = js.native
-  def withChildren[T /* <: Constructor[org.scalajs.dom.raw.HTMLElement] */](): Constructor[WithChildren] with T = js.native
-  def withChildren[T /* <: Constructor[org.scalajs.dom.raw.HTMLElement] */](Base: T): Constructor[WithChildren] with T = js.native
-  def withComponent[T /* <: Constructor[org.scalajs.dom.raw.HTMLElement] */](): TypeofWithComponent = js.native
-  def withComponent[T /* <: Constructor[org.scalajs.dom.raw.HTMLElement] */](Base: T): TypeofWithComponent = js.native
+  def withChildren[T /* <: Constructor[HTMLElement] */](): Constructor[WithChildren] with T = js.native
+  def withChildren[T /* <: Constructor[HTMLElement] */](Base: T): Constructor[WithChildren] with T = js.native
+  def withComponent[T /* <: Constructor[HTMLElement] */](): TypeofWithComponent = js.native
+  def withComponent[T /* <: Constructor[HTMLElement] */](Base: T): TypeofWithComponent = js.native
   @JSName("withComponent")
-  def withComponent_PSCT_ConstructorHTMLElement_Intersection[P, S, C, T /* <: Constructor[org.scalajs.dom.raw.HTMLElement] */](): (Constructor[WithComponent[P, S, C]]) with T = js.native
+  def withComponent_PSCT_ConstructorHTMLElement_Intersection[P, S, C, T /* <: Constructor[HTMLElement] */](): (Constructor[WithComponent[P, S, C]]) with T = js.native
   @JSName("withComponent")
-  def withComponent_PSCT_ConstructorHTMLElement_Intersection[P, S, C, T /* <: Constructor[org.scalajs.dom.raw.HTMLElement] */](Base: T): (Constructor[WithComponent[P, S, C]]) with T = js.native
-  def withContext[C, T /* <: Constructor[org.scalajs.dom.raw.HTMLElement] */](): Constructor[WithContext[C]] with T = js.native
-  def withContext[C, T /* <: Constructor[org.scalajs.dom.raw.HTMLElement] */](Base: T): Constructor[WithContext[C]] with T = js.native
-  def withLifecycle[T /* <: Constructor[org.scalajs.dom.raw.HTMLElement] */](): Constructor[WithLifecycle] with T = js.native
-  def withLifecycle[T /* <: Constructor[org.scalajs.dom.raw.HTMLElement] */](Base: T): Constructor[WithLifecycle] with T = js.native
-  def withRenderer[O, T /* <: Constructor[org.scalajs.dom.raw.HTMLElement] */](): Constructor[WithRenderer[O]] with T = js.native
-  def withRenderer[O, T /* <: Constructor[org.scalajs.dom.raw.HTMLElement] */](Base: T): Constructor[WithRenderer[O]] with T = js.native
-  def withUpdate[P, S, T /* <: Constructor[org.scalajs.dom.raw.HTMLElement] */](): (Constructor[WithUpdate[P, S]]) with T = js.native
-  def withUpdate[P, S, T /* <: Constructor[org.scalajs.dom.raw.HTMLElement] */](Base: T): (Constructor[WithUpdate[P, S]]) with T = js.native
+  def withComponent_PSCT_ConstructorHTMLElement_Intersection[P, S, C, T /* <: Constructor[HTMLElement] */](Base: T): (Constructor[WithComponent[P, S, C]]) with T = js.native
+  def withContext[C, T /* <: Constructor[HTMLElement] */](): Constructor[WithContext[C]] with T = js.native
+  def withContext[C, T /* <: Constructor[HTMLElement] */](Base: T): Constructor[WithContext[C]] with T = js.native
+  def withLifecycle[T /* <: Constructor[HTMLElement] */](): Constructor[WithLifecycle] with T = js.native
+  def withLifecycle[T /* <: Constructor[HTMLElement] */](Base: T): Constructor[WithLifecycle] with T = js.native
+  def withRenderer[O, T /* <: Constructor[HTMLElement] */](): Constructor[WithRenderer[O]] with T = js.native
+  def withRenderer[O, T /* <: Constructor[HTMLElement] */](Base: T): Constructor[WithRenderer[O]] with T = js.native
+  def withUpdate[P, S, T /* <: Constructor[HTMLElement] */](): (Constructor[WithUpdate[P, S]]) with T = js.native
+  def withUpdate[P, S, T /* <: Constructor[HTMLElement] */](Base: T): (Constructor[WithUpdate[P, S]]) with T = js.native
   @js.native
   object props extends js.Object {
     def any(target: js.Object, propertyKey: String): Unit = js.native

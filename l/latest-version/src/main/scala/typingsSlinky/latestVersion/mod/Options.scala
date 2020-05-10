@@ -4,19 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
   /**
   		A semver range or [dist-tag](https://docs.npmjs.com/cli/dist-tag).
   		*/
-  val version: js.UndefOr[String] = js.undefined
+  val version: js.UndefOr[String] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(version: String = null): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

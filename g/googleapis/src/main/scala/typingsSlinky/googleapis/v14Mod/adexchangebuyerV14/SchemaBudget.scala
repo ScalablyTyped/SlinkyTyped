@@ -39,22 +39,89 @@ trait SchemaBudget extends js.Object {
 
 object SchemaBudget {
   @scala.inline
-  def apply(
-    accountId: String = null,
-    billingId: String = null,
-    budgetAmount: String = null,
-    currencyCode: String = null,
-    id: String = null,
-    kind: String = null
-  ): SchemaBudget = {
+  def apply(): SchemaBudget = {
     val __obj = js.Dynamic.literal()
-    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
-    if (billingId != null) __obj.updateDynamic("billingId")(billingId.asInstanceOf[js.Any])
-    if (budgetAmount != null) __obj.updateDynamic("budgetAmount")(budgetAmount.asInstanceOf[js.Any])
-    if (currencyCode != null) __obj.updateDynamic("currencyCode")(currencyCode.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBudget]
   }
+  @scala.inline
+  implicit class SchemaBudgetOps[Self <: SchemaBudget] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBillingId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billingId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBillingId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billingId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBudgetAmount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("budgetAmount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBudgetAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("budgetAmount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrencyCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrencyCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

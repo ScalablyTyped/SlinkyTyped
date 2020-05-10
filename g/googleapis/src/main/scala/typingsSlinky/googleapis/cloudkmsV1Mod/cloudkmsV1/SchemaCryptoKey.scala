@@ -65,26 +65,113 @@ trait SchemaCryptoKey extends js.Object {
 
 object SchemaCryptoKey {
   @scala.inline
-  def apply(
-    createTime: String = null,
-    labels: StringDictionary[String] = null,
-    name: String = null,
-    nextRotationTime: String = null,
-    primary: SchemaCryptoKeyVersion = null,
-    purpose: String = null,
-    rotationPeriod: String = null,
-    versionTemplate: SchemaCryptoKeyVersionTemplate = null
-  ): SchemaCryptoKey = {
+  def apply(): SchemaCryptoKey = {
     val __obj = js.Dynamic.literal()
-    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (nextRotationTime != null) __obj.updateDynamic("nextRotationTime")(nextRotationTime.asInstanceOf[js.Any])
-    if (primary != null) __obj.updateDynamic("primary")(primary.asInstanceOf[js.Any])
-    if (purpose != null) __obj.updateDynamic("purpose")(purpose.asInstanceOf[js.Any])
-    if (rotationPeriod != null) __obj.updateDynamic("rotationPeriod")(rotationPeriod.asInstanceOf[js.Any])
-    if (versionTemplate != null) __obj.updateDynamic("versionTemplate")(versionTemplate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCryptoKey]
   }
+  @scala.inline
+  implicit class SchemaCryptoKeyOps[Self <: SchemaCryptoKey] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextRotationTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextRotationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextRotationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextRotationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimary(value: SchemaCryptoKeyVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPurpose(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("purpose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPurpose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("purpose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotationPeriod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotationPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionTemplate(value: SchemaCryptoKeyVersionTemplate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionTemplate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

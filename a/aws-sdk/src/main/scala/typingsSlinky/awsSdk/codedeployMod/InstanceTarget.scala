@@ -38,24 +38,101 @@ trait InstanceTarget extends js.Object {
 
 object InstanceTarget {
   @scala.inline
-  def apply(
-    deploymentId: DeploymentId = null,
-    instanceLabel: TargetLabel = null,
-    lastUpdatedAt: js.Date = null,
-    lifecycleEvents: LifecycleEventList = null,
-    status: TargetStatus = null,
-    targetArn: TargetArn = null,
-    targetId: TargetId = null
-  ): InstanceTarget = {
+  def apply(): InstanceTarget = {
     val __obj = js.Dynamic.literal()
-    if (deploymentId != null) __obj.updateDynamic("deploymentId")(deploymentId.asInstanceOf[js.Any])
-    if (instanceLabel != null) __obj.updateDynamic("instanceLabel")(instanceLabel.asInstanceOf[js.Any])
-    if (lastUpdatedAt != null) __obj.updateDynamic("lastUpdatedAt")(lastUpdatedAt.asInstanceOf[js.Any])
-    if (lifecycleEvents != null) __obj.updateDynamic("lifecycleEvents")(lifecycleEvents.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (targetArn != null) __obj.updateDynamic("targetArn")(targetArn.asInstanceOf[js.Any])
-    if (targetId != null) __obj.updateDynamic("targetId")(targetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceTarget]
   }
+  @scala.inline
+  implicit class InstanceTargetOps[Self <: InstanceTarget] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeploymentId(value: DeploymentId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeploymentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceLabel(value: TargetLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdatedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdatedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLifecycleEvents(value: LifecycleEventList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycleEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLifecycleEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycleEvents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: TargetStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetArn(value: TargetArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetId(value: TargetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

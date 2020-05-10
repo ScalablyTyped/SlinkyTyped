@@ -22,12 +22,53 @@ trait SAMLProviderListEntry extends js.Object {
 
 object SAMLProviderListEntry {
   @scala.inline
-  def apply(Arn: arnType = null, CreateDate: js.Date = null, ValidUntil: js.Date = null): SAMLProviderListEntry = {
+  def apply(): SAMLProviderListEntry = {
     val __obj = js.Dynamic.literal()
-    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
-    if (CreateDate != null) __obj.updateDynamic("CreateDate")(CreateDate.asInstanceOf[js.Any])
-    if (ValidUntil != null) __obj.updateDynamic("ValidUntil")(ValidUntil.asInstanceOf[js.Any])
     __obj.asInstanceOf[SAMLProviderListEntry]
   }
+  @scala.inline
+  implicit class SAMLProviderListEntryOps[Self <: SAMLProviderListEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: arnType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidUntil(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidUntil")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidUntil: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidUntil")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

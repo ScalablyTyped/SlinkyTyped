@@ -16,16 +16,14 @@ trait uReactiveEnergy extends js.Object
 
 object uReactiveEnergy {
   @scala.inline
-  def GVARH: typingsSlinky.convertUnits.convertUnitsStrings.GVARH = this.cast("GVARH")
+  def GVARH: typingsSlinky.convertUnits.convertUnitsStrings.GVARH = "GVARH".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.GVARH]
   @scala.inline
-  def MVARh: typingsSlinky.convertUnits.convertUnitsStrings.MVARh = this.cast("MVARh")
+  def MVARh: typingsSlinky.convertUnits.convertUnitsStrings.MVARh = "MVARh".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.MVARh]
   @scala.inline
-  def VARh: typingsSlinky.convertUnits.convertUnitsStrings.VARh = this.cast("VARh")
+  def VARh: typingsSlinky.convertUnits.convertUnitsStrings.VARh = "VARh".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.VARh]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def kVARh: typingsSlinky.convertUnits.convertUnitsStrings.kVARh = "kVARh".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.kVARh]
   @scala.inline
-  def kVARh: typingsSlinky.convertUnits.convertUnitsStrings.kVARh = this.cast("kVARh")
-  @scala.inline
-  def mVARh: mVARh_ = this.cast("mVARh")
+  def mVARh: mVARh_ = "mVARh".asInstanceOf[mVARh_]
 }
 

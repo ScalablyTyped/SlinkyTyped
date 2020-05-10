@@ -1,10 +1,7 @@
 package typingsSlinky.reduxRouter.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.history.mod.Location
 import typingsSlinky.history.mod.LocationState
 import typingsSlinky.reactRouter.mod.SwitchProps
@@ -13,20 +10,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReduxRouterSwitch
-  extends ExternalComponentWithAttributesWithRefType[tag.type, Switch] {
+object ReduxRouterSwitch {
   @JSImport("redux-router", "ReduxRouter.Switch")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(location: Location[LocationState] = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, Switch] = {
-    val __obj = js.Dynamic.literal()
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, Switch] {
+    @scala.inline
+    def location(value: Location[LocationState]): this.type = set("location", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, Switch] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reduxRouter.mod.ReduxRouter.Switch](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SwitchProps
+  
+  def withProps(p: SwitchProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReduxRouterSwitch.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

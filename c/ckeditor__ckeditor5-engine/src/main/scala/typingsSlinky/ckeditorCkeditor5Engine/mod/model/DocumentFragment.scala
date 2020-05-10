@@ -1,6 +1,5 @@
 package typingsSlinky.ckeditorCkeditor5Engine.mod.model
 
-import typingsSlinky.std.Iterable
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,16 +13,16 @@ class DocumentFragment protected () extends _NodeSet {
   protected def this(children: js.Iterable[Node]) = this()
   val childCount: Double = js.native
   val isEmpty: Boolean = js.native
-  @JSName(scala.scalajs.js.Symbol.iterator)
+  @JSName(js.Symbol.iterator)
   var iterator: js.Function0[js.Iterator[Node]] = js.native
   val markers: Map[String, Range] = js.native
   val maxOffset: Double = js.native
   val parent: Null = js.native
   val root: DocumentFragment = js.native
   /* protected */ def _appendChild(items: Item): Unit = js.native
-  /* protected */ def _appendChild(items: Iterable[Item]): Unit = js.native
+  /* protected */ def _appendChild(items: js.Iterable[Item]): Unit = js.native
   /* protected */ def _insertChild(index: Double, items: Item): Unit = js.native
-  /* protected */ def _insertChild(index: Double, items: Iterable[Item]): Unit = js.native
+  /* protected */ def _insertChild(index: Double, items: js.Iterable[Item]): Unit = js.native
   /* protected */ def _removeChildren(index: Double): js.Array[Node] = js.native
   /* protected */ def _removeChildren(index: Double, howMany: Double): js.Array[Node] = js.native
   def getChild(index: Double): Node | Null = js.native

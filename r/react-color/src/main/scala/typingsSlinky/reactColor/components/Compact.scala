@@ -1,15 +1,17 @@
 package typingsSlinky.reactColor.components
 
+import typingsSlinky.reactColor.compactMod.CompactPickerProps
 import typingsSlinky.reactColor.compactMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Compact extends SharedApply_CompactPickerProps_589263494[default] {
+object Compact {
   @JSImport("react-color/lib/components/compact/Compact", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: CompactPickerProps): SharedBuilder_CompactPickerProps1757301980[default] = new SharedBuilder_CompactPickerProps1757301980[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Compact.type): SharedBuilder_CompactPickerProps1757301980[default] = new SharedBuilder_CompactPickerProps1757301980[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

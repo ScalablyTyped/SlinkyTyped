@@ -15,18 +15,44 @@ import scala.scalajs.js.annotation._
   *       Logger.log(folder.getName());
   *     }
   */
+@js.native
 trait FolderIterator extends js.Object {
-  def getContinuationToken(): String
-  def hasNext(): Boolean
-  def next(): Folder
+  def getContinuationToken(): String = js.native
+  def hasNext(): Boolean = js.native
+  def next(): Folder = js.native
 }
 
 object FolderIterator {
   @scala.inline
   def apply(getContinuationToken: () => String, hasNext: () => Boolean, next: () => Folder): FolderIterator = {
     val __obj = js.Dynamic.literal(getContinuationToken = js.Any.fromFunction0(getContinuationToken), hasNext = js.Any.fromFunction0(hasNext), next = js.Any.fromFunction0(next))
-  
     __obj.asInstanceOf[FolderIterator]
   }
+  @scala.inline
+  implicit class FolderIteratorOps[Self <: FolderIterator] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetContinuationToken(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getContinuationToken")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHasNext(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasNext")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNext(value: () => Folder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

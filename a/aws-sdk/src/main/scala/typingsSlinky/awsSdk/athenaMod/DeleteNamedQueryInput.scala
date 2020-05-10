@@ -16,8 +16,21 @@ object DeleteNamedQueryInput {
   @scala.inline
   def apply(NamedQueryId: NamedQueryId): DeleteNamedQueryInput = {
     val __obj = js.Dynamic.literal(NamedQueryId = NamedQueryId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DeleteNamedQueryInput]
   }
+  @scala.inline
+  implicit class DeleteNamedQueryInputOps[Self <: DeleteNamedQueryInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNamedQueryId(value: NamedQueryId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NamedQueryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

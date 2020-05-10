@@ -17,18 +17,16 @@ trait LogLevel extends js.Object
 
 object LogLevel {
   @scala.inline
-  def all: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.all = this.cast("all")
+  def all: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.all = "all".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.all]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: error_ = "error".asInstanceOf[error_]
   @scala.inline
-  def error: error_ = this.cast("error")
+  def info: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.info = "info".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.info]
   @scala.inline
-  def info: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.info = this.cast("info")
+  def log: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.log = "log".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.log]
   @scala.inline
-  def log: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.log = this.cast("log")
+  def off: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.off = "off".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.off]
   @scala.inline
-  def off: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.off = this.cast("off")
-  @scala.inline
-  def warn: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.warn = this.cast("warn")
+  def warn: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.warn = "warn".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.warn]
 }
 

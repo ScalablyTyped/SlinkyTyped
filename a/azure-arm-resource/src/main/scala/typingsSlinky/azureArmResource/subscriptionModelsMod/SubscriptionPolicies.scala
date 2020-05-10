@@ -4,31 +4,73 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SubscriptionPolicies extends js.Object {
   /**
     * The subscription location placement ID. The ID indicates which regions are visible for a
     * subscription. For example, a subscription with a location placement Id of Public_2014-09-01
     * has access to Azure public regions.
     */
-  val locationPlacementId: js.UndefOr[String] = js.undefined
+  val locationPlacementId: js.UndefOr[String] = js.native
   /**
     * The subscription quota ID.
     */
-  val quotaId: js.UndefOr[String] = js.undefined
+  val quotaId: js.UndefOr[String] = js.native
   /**
     * The subscription spending limit. Possible values include: 'On', 'Off', 'CurrentPeriodOff'
     */
-  val spendingLimit: js.UndefOr[String] = js.undefined
+  val spendingLimit: js.UndefOr[String] = js.native
 }
 
 object SubscriptionPolicies {
   @scala.inline
-  def apply(locationPlacementId: String = null, quotaId: String = null, spendingLimit: String = null): SubscriptionPolicies = {
+  def apply(): SubscriptionPolicies = {
     val __obj = js.Dynamic.literal()
-    if (locationPlacementId != null) __obj.updateDynamic("locationPlacementId")(locationPlacementId.asInstanceOf[js.Any])
-    if (quotaId != null) __obj.updateDynamic("quotaId")(quotaId.asInstanceOf[js.Any])
-    if (spendingLimit != null) __obj.updateDynamic("spendingLimit")(spendingLimit.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubscriptionPolicies]
   }
+  @scala.inline
+  implicit class SubscriptionPoliciesOps[Self <: SubscriptionPolicies] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocationPlacementId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locationPlacementId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocationPlacementId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locationPlacementId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuotaId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuotaId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpendingLimit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spendingLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpendingLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spendingLimit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

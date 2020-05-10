@@ -5,33 +5,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HP extends js.Object {
-  var CommonActions: String
-  var CommonBody: String
-  var CommonHeader: String
-  var ids: HPIds
-  var postActionEventName: String
-  def Close(): Unit
-  def Follow(): Unit
-  def GetAuthorsHtml(): String
-  def GetBodySectionContent(): String
-  def GetBodySectionHeading(): String
-  def GetEmailLink(title: String, path: String, client: String, url: String): String
-  def GetFriendlyNameForFileType(fileType: js.Any): String
-  def GetNowDateTimeDifference(): String
-  def GetPeopleFollowingControl(): String
-  def Hide(): Unit
-  def Init(): Unit
-  def InitPostLoad(): Unit
-  def IsNumeric(): Boolean
-  def Resize(): Unit
-  def SetPreviewOnHideCallback(): Unit
-  def SetWidth(width: Double): Unit
-  def Show(): Unit
-  def ViewDuplicates(): Boolean
-  def getDateString(): String
-  def getStringFromDate(): String
-  def loadSiteViewer(id: String, idinner: String, idviewer: String, path: String, idglass: String): Unit
+  var CommonActions: String = js.native
+  var CommonBody: String = js.native
+  var CommonHeader: String = js.native
+  var ids: HPIds = js.native
+  var postActionEventName: String = js.native
+  def Close(): Unit = js.native
+  def Follow(): Unit = js.native
+  def GetAuthorsHtml(): String = js.native
+  def GetBodySectionContent(): String = js.native
+  def GetBodySectionHeading(): String = js.native
+  def GetEmailLink(title: String, path: String, client: String, url: String): String = js.native
+  def GetFriendlyNameForFileType(fileType: js.Any): String = js.native
+  def GetNowDateTimeDifference(): String = js.native
+  def GetPeopleFollowingControl(): String = js.native
+  def Hide(): Unit = js.native
+  def Init(): Unit = js.native
+  def InitPostLoad(): Unit = js.native
+  def IsNumeric(): Boolean = js.native
+  def Resize(): Unit = js.native
+  def SetPreviewOnHideCallback(): Unit = js.native
+  def SetWidth(width: Double): Unit = js.native
+  def Show(): Unit = js.native
+  def ViewDuplicates(): Boolean = js.native
+  def getDateString(): String = js.native
+  def getStringFromDate(): String = js.native
+  def loadSiteViewer(id: String, idinner: String, idviewer: String, path: String, idglass: String): Unit = js.native
   def loadViewer(
     id: String,
     idinner: String,
@@ -39,7 +40,7 @@ trait HP extends js.Object {
     idpreview: String,
     embedUrl: String,
     previewUrl: String
-  ): Unit
+  ): Unit = js.native
 }
 
 @JSGlobal("HP")

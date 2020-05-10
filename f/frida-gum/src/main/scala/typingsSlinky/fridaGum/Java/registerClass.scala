@@ -12,6 +12,6 @@ object registerClass extends js.Object {
     *
     * @param spec Object describing the class to be created.
     */
-  def apply(spec: ClassSpec): Wrapper = js.native
+  def apply(spec: ClassSpec): typingsSlinky.fridaGum.Wrapper = js.native
 }
 

@@ -16,8 +16,21 @@ object BatchDisassociateUserStackRequest {
   @scala.inline
   def apply(UserStackAssociations: UserStackAssociationList): BatchDisassociateUserStackRequest = {
     val __obj = js.Dynamic.literal(UserStackAssociations = UserStackAssociations.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[BatchDisassociateUserStackRequest]
   }
+  @scala.inline
+  implicit class BatchDisassociateUserStackRequestOps[Self <: BatchDisassociateUserStackRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUserStackAssociations(value: UserStackAssociationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserStackAssociations")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

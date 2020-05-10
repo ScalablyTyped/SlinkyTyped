@@ -22,12 +22,53 @@ trait ListBatchInferenceJobsRequest extends js.Object {
 
 object ListBatchInferenceJobsRequest {
   @scala.inline
-  def apply(maxResults: Int | Double = null, nextToken: NextToken = null, solutionVersionArn: Arn = null): ListBatchInferenceJobsRequest = {
+  def apply(): ListBatchInferenceJobsRequest = {
     val __obj = js.Dynamic.literal()
-    if (maxResults != null) __obj.updateDynamic("maxResults")(maxResults.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (solutionVersionArn != null) __obj.updateDynamic("solutionVersionArn")(solutionVersionArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListBatchInferenceJobsRequest]
   }
+  @scala.inline
+  implicit class ListBatchInferenceJobsRequestOps[Self <: ListBatchInferenceJobsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxResults(value: MaxResults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSolutionVersionArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("solutionVersionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSolutionVersionArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("solutionVersionArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

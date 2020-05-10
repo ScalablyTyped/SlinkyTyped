@@ -18,11 +18,41 @@ trait DeviceEvent extends js.Object {
 
 object DeviceEvent {
   @scala.inline
-  def apply(Device: Device = null, StdEvent: string = null): DeviceEvent = {
+  def apply(): DeviceEvent = {
     val __obj = js.Dynamic.literal()
-    if (Device != null) __obj.updateDynamic("Device")(Device.asInstanceOf[js.Any])
-    if (StdEvent != null) __obj.updateDynamic("StdEvent")(StdEvent.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceEvent]
   }
+  @scala.inline
+  implicit class DeviceEventOps[Self <: DeviceEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDevice(value: Device): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Device")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Device")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStdEvent(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StdEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStdEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StdEvent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

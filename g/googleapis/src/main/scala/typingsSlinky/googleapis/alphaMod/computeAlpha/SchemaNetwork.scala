@@ -94,40 +94,197 @@ trait SchemaNetwork extends js.Object {
 
 object SchemaNetwork {
   @scala.inline
-  def apply(
-    IPv4Range: String = null,
-    autoCreateSubnetworks: js.UndefOr[Boolean] = js.undefined,
-    creationTimestamp: String = null,
-    crossVmEncryption: String = null,
-    description: String = null,
-    gatewayIPv4: String = null,
-    id: String = null,
-    kind: String = null,
-    loadBalancerVmEncryption: String = null,
-    name: String = null,
-    peerings: js.Array[SchemaNetworkPeering] = null,
-    routingConfig: SchemaNetworkRoutingConfig = null,
-    selfLink: String = null,
-    selfLinkWithId: String = null,
-    subnetworks: js.Array[String] = null
-  ): SchemaNetwork = {
+  def apply(): SchemaNetwork = {
     val __obj = js.Dynamic.literal()
-    if (IPv4Range != null) __obj.updateDynamic("IPv4Range")(IPv4Range.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoCreateSubnetworks)) __obj.updateDynamic("autoCreateSubnetworks")(autoCreateSubnetworks.asInstanceOf[js.Any])
-    if (creationTimestamp != null) __obj.updateDynamic("creationTimestamp")(creationTimestamp.asInstanceOf[js.Any])
-    if (crossVmEncryption != null) __obj.updateDynamic("crossVmEncryption")(crossVmEncryption.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (gatewayIPv4 != null) __obj.updateDynamic("gatewayIPv4")(gatewayIPv4.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (loadBalancerVmEncryption != null) __obj.updateDynamic("loadBalancerVmEncryption")(loadBalancerVmEncryption.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (peerings != null) __obj.updateDynamic("peerings")(peerings.asInstanceOf[js.Any])
-    if (routingConfig != null) __obj.updateDynamic("routingConfig")(routingConfig.asInstanceOf[js.Any])
-    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
-    if (selfLinkWithId != null) __obj.updateDynamic("selfLinkWithId")(selfLinkWithId.asInstanceOf[js.Any])
-    if (subnetworks != null) __obj.updateDynamic("subnetworks")(subnetworks.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNetwork]
   }
+  @scala.inline
+  implicit class SchemaNetworkOps[Self <: SchemaNetwork] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIPv4Range(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IPv4Range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIPv4Range: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IPv4Range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoCreateSubnetworks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCreateSubnetworks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoCreateSubnetworks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCreateSubnetworks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTimestamp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrossVmEncryption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossVmEncryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrossVmEncryption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossVmEncryption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayIPv4(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gatewayIPv4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayIPv4: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gatewayIPv4")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadBalancerVmEncryption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancerVmEncryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadBalancerVmEncryption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancerVmEncryption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeerings(value: js.Array[SchemaNetworkPeering]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("peerings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeerings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("peerings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoutingConfig(value: SchemaNetworkRoutingConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routingConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoutingConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routingConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelfLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelfLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelfLinkWithId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLinkWithId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelfLinkWithId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLinkWithId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetworks(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetworks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetworks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetworks")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

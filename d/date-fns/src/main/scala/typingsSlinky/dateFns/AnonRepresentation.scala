@@ -9,18 +9,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonRepresentation extends js.Object {
-  var format: js.UndefOr[extended | basic] = js.undefined
-  var representation: js.UndefOr[complete | date | time] = js.undefined
+  var format: js.UndefOr[extended | basic] = js.native
+  var representation: js.UndefOr[complete | date | time] = js.native
 }
 
 object AnonRepresentation {
   @scala.inline
-  def apply(format: extended | basic = null, representation: complete | date | time = null): AnonRepresentation = {
+  def apply(): AnonRepresentation = {
     val __obj = js.Dynamic.literal()
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (representation != null) __obj.updateDynamic("representation")(representation.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonRepresentation]
   }
+  @scala.inline
+  implicit class AnonRepresentationOps[Self <: AnonRepresentation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormat(value: extended | basic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepresentation(value: complete | date | time): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("representation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepresentation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("representation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

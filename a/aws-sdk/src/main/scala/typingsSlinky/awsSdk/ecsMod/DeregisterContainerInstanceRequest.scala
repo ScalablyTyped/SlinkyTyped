@@ -22,11 +22,47 @@ trait DeregisterContainerInstanceRequest extends js.Object {
 
 object DeregisterContainerInstanceRequest {
   @scala.inline
-  def apply(containerInstance: String, cluster: String = null, force: js.UndefOr[scala.Boolean] = js.undefined): DeregisterContainerInstanceRequest = {
+  def apply(containerInstance: String): DeregisterContainerInstanceRequest = {
     val __obj = js.Dynamic.literal(containerInstance = containerInstance.asInstanceOf[js.Any])
-    if (cluster != null) __obj.updateDynamic("cluster")(cluster.asInstanceOf[js.Any])
-    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeregisterContainerInstanceRequest]
   }
+  @scala.inline
+  implicit class DeregisterContainerInstanceRequestOps[Self <: DeregisterContainerInstanceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainerInstance(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerInstance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCluster(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCluster: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForce(value: BoxedBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

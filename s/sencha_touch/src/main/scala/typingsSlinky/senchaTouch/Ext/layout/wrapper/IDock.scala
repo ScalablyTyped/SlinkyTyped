@@ -1,127 +1,219 @@
 package typingsSlinky.senchaTouch.Ext.layout.wrapper
 
-import typingsSlinky.senchaTouch.Ext.Array
 import typingsSlinky.senchaTouch.Ext.IBase
-import typingsSlinky.senchaTouch.Ext.IClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IDock extends IBase {
   /** [Method] Returns the value of bodyElement
   		* @returns Object
   		*/
-  var getBodyElement: js.UndefOr[js.Function0[_]] = js.undefined
+  var getBodyElement: js.UndefOr[js.Function0[_]] = js.native
   /** [Method] Returns the value of container
   		* @returns Object
   		*/
-  var getContainer: js.UndefOr[js.Function0[_]] = js.undefined
+  var getContainer: js.UndefOr[js.Function0[_]] = js.native
   /** [Method] Returns the value of direction
   		* @returns String
   		*/
-  var getDirection: js.UndefOr[js.Function0[String]] = js.undefined
+  var getDirection: js.UndefOr[js.Function0[String]] = js.native
   /** [Method] Returns the value of element
   		* @returns Object
   		*/
-  var getElement: js.UndefOr[js.Function0[_]] = js.undefined
+  var getElement: js.UndefOr[js.Function0[_]] = js.native
   /** [Method] Returns the value of innerWrapper
   		* @returns Object
   		*/
-  var getInnerWrapper: js.UndefOr[js.Function0[_]] = js.undefined
+  var getInnerWrapper: js.UndefOr[js.Function0[_]] = js.native
   /** [Method] Returns the value of sizeState
   		* @returns Boolean
   		*/
-  var getSizeState: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var getSizeState: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Sets the value of bodyElement
   		* @param bodyElement Object The new value.
   		*/
-  var setBodyElement: js.UndefOr[js.Function1[/* bodyElement */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var setBodyElement: js.UndefOr[js.Function1[/* bodyElement */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Sets the value of container
   		* @param container Object The new value.
   		*/
-  var setContainer: js.UndefOr[js.Function1[/* container */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var setContainer: js.UndefOr[js.Function1[/* container */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Sets the value of direction
   		* @param direction String The new value.
   		*/
-  var setDirection: js.UndefOr[js.Function1[/* direction */ js.UndefOr[String], Unit]] = js.undefined
+  var setDirection: js.UndefOr[js.Function1[/* direction */ js.UndefOr[String], Unit]] = js.native
   /** [Method] Sets the value of element
   		* @param element Object The new value.
   		*/
-  var setElement: js.UndefOr[js.Function1[/* element */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var setElement: js.UndefOr[js.Function1[/* element */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Sets the value of innerWrapper
   		* @param innerWrapper Object The new value.
   		*/
-  var setInnerWrapper: js.UndefOr[js.Function1[/* innerWrapper */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var setInnerWrapper: js.UndefOr[js.Function1[/* innerWrapper */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Sets the value of sizeState
   		* @param sizeState Boolean The new value.
   		*/
-  var setSizeState: js.UndefOr[js.Function1[/* sizeState */ js.UndefOr[Boolean], Unit]] = js.undefined
+  var setSizeState: js.UndefOr[js.Function1[/* sizeState */ js.UndefOr[Boolean], Unit]] = js.native
 }
 
 object IDock {
   @scala.inline
-  def apply(
-    alias: Array = null,
-    alternateClassName: js.Any = null,
-    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
-    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
-    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
-    config: js.Any = null,
-    destroy: () => Unit = null,
-    extend: String = null,
-    getBodyElement: () => _ = null,
-    getContainer: () => _ = null,
-    getDirection: () => String = null,
-    getElement: () => _ = null,
-    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
-    getInnerWrapper: () => _ = null,
-    getSizeState: () => Boolean = null,
-    inheritableStatics: js.Any = null,
-    initConfig: /* instanceConfig */ js.UndefOr[js.Any] => _ = null,
-    mixins: js.Any = null,
-    platformConfig: js.Any = null,
-    self: IClass = null,
-    setBodyElement: /* bodyElement */ js.UndefOr[js.Any] => Unit = null,
-    setContainer: /* container */ js.UndefOr[js.Any] => Unit = null,
-    setDirection: /* direction */ js.UndefOr[String] => Unit = null,
-    setElement: /* element */ js.UndefOr[js.Any] => Unit = null,
-    setInnerWrapper: /* innerWrapper */ js.UndefOr[js.Any] => Unit = null,
-    setSizeState: /* sizeState */ js.UndefOr[Boolean] => Unit = null,
-    singleton: js.UndefOr[Boolean] = js.undefined,
-    statics: js.Any = null,
-    uses: Array = null
-  ): IDock = {
+  def apply(): IDock = {
     val __obj = js.Dynamic.literal()
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
-    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
-    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
-    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
-    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
-    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
-    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction0(destroy))
-    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
-    if (getBodyElement != null) __obj.updateDynamic("getBodyElement")(js.Any.fromFunction0(getBodyElement))
-    if (getContainer != null) __obj.updateDynamic("getContainer")(js.Any.fromFunction0(getContainer))
-    if (getDirection != null) __obj.updateDynamic("getDirection")(js.Any.fromFunction0(getDirection))
-    if (getElement != null) __obj.updateDynamic("getElement")(js.Any.fromFunction0(getElement))
-    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
-    if (getInnerWrapper != null) __obj.updateDynamic("getInnerWrapper")(js.Any.fromFunction0(getInnerWrapper))
-    if (getSizeState != null) __obj.updateDynamic("getSizeState")(js.Any.fromFunction0(getSizeState))
-    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
-    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
-    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
-    if (platformConfig != null) __obj.updateDynamic("platformConfig")(platformConfig.asInstanceOf[js.Any])
-    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
-    if (setBodyElement != null) __obj.updateDynamic("setBodyElement")(js.Any.fromFunction1(setBodyElement))
-    if (setContainer != null) __obj.updateDynamic("setContainer")(js.Any.fromFunction1(setContainer))
-    if (setDirection != null) __obj.updateDynamic("setDirection")(js.Any.fromFunction1(setDirection))
-    if (setElement != null) __obj.updateDynamic("setElement")(js.Any.fromFunction1(setElement))
-    if (setInnerWrapper != null) __obj.updateDynamic("setInnerWrapper")(js.Any.fromFunction1(setInnerWrapper))
-    if (setSizeState != null) __obj.updateDynamic("setSizeState")(js.Any.fromFunction1(setSizeState))
-    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.asInstanceOf[js.Any])
-    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
-    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDock]
   }
+  @scala.inline
+  implicit class IDockOps[Self <: IDock] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetBodyElement(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBodyElement")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetBodyElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBodyElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetContainer(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getContainer")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetDirection(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDirection")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetElement(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getElement")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetInnerWrapper(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getInnerWrapper")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetInnerWrapper: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getInnerWrapper")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetSizeState(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSizeState")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetSizeState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSizeState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetBodyElement(value: /* bodyElement */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setBodyElement")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetBodyElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setBodyElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetContainer(value: /* container */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setContainer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetDirection(value: /* direction */ js.UndefOr[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDirection")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetElement(value: /* element */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setElement")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetInnerWrapper(value: /* innerWrapper */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setInnerWrapper")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetInnerWrapper: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setInnerWrapper")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetSizeState(value: /* sizeState */ js.UndefOr[Boolean] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSizeState")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetSizeState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSizeState")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

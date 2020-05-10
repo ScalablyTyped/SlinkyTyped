@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object wx {
   type AccelerometerChangeCallback = js.Function1[/* res */ typingsSlinky.weixinApp.wx.AccelerometerData, scala.Unit]
   type AccelerometerOptions = typingsSlinky.weixinApp.wx.BaseOptions[js.Any, js.Any]
-  type ArrayPropsDefinition[T] = js.Array[java.lang.String]
+  type ArrayPropsDefinition[T] = js.Array[/* keyof T */ java.lang.String]
   type ArrayType[T /* <: js.Array[_] */] = js.Any
   type BuiltInEvent[T /* <: typingsSlinky.weixinApp.wx.EventType */, Detail] = typingsSlinky.weixinApp.wx.BaseEvent[T, Detail]
   type CheckSessionOption = typingsSlinky.weixinApp.wx.BaseOptions[js.Any, js.Any]
@@ -50,7 +50,7 @@ package object wx {
   type PropsDefinition[T] = typingsSlinky.weixinApp.wx.ArrayPropsDefinition[T] | typingsSlinky.weixinApp.wx.RecordPropsDefinition[T]
   type RecordPropsDefinition[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]: weixin-app.wx.PropValidator<T[K]>}
-    */ typingsSlinky.weixinApp.weixinAppStrings.RecordPropsDefinition with T
+    */ typingsSlinky.weixinApp.weixinAppStrings.RecordPropsDefinition with org.scalablytyped.runtime.TopLevel[T]
   type RemoveSavedFileOptions = typingsSlinky.weixinApp.wx.GetSavedFileInfoOptions
   // #endregion
   // #region 网络API列表

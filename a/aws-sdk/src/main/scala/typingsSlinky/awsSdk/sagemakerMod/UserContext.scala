@@ -22,12 +22,53 @@ trait UserContext extends js.Object {
 
 object UserContext {
   @scala.inline
-  def apply(DomainId: String = null, UserProfileArn: String = null, UserProfileName: String = null): UserContext = {
+  def apply(): UserContext = {
     val __obj = js.Dynamic.literal()
-    if (DomainId != null) __obj.updateDynamic("DomainId")(DomainId.asInstanceOf[js.Any])
-    if (UserProfileArn != null) __obj.updateDynamic("UserProfileArn")(UserProfileArn.asInstanceOf[js.Any])
-    if (UserProfileName != null) __obj.updateDynamic("UserProfileName")(UserProfileName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserContext]
   }
+  @scala.inline
+  implicit class UserContextOps[Self <: UserContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomainId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserProfileArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserProfileArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserProfileArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserProfileArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserProfileName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserProfileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserProfileName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserProfileName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

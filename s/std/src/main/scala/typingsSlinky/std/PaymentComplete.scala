@@ -13,12 +13,10 @@ trait PaymentComplete extends js.Object
 
 object PaymentComplete {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fail: typingsSlinky.std.stdStrings.fail = "fail".asInstanceOf[typingsSlinky.std.stdStrings.fail]
   @scala.inline
-  def fail: typingsSlinky.std.stdStrings.fail = this.cast("fail")
+  def success: typingsSlinky.std.stdStrings.success = "success".asInstanceOf[typingsSlinky.std.stdStrings.success]
   @scala.inline
-  def success: typingsSlinky.std.stdStrings.success = this.cast("success")
-  @scala.inline
-  def unknown: typingsSlinky.std.stdStrings.unknown = this.cast("unknown")
+  def unknown: typingsSlinky.std.stdStrings.unknown = "unknown".asInstanceOf[typingsSlinky.std.stdStrings.unknown]
 }
 

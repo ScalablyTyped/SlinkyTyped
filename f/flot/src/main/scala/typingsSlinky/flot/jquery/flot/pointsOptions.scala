@@ -4,29 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait pointsOptions extends seriesTypeBase {
-  var radius: js.UndefOr[Double] = js.undefined
-  var symbol: js.UndefOr[js.Any] = js.undefined
+  var radius: js.UndefOr[Double] = js.native
+  var symbol: js.UndefOr[js.Any] = js.native
 }
 
 object pointsOptions {
   @scala.inline
-  def apply(
-    fill: js.Any = null,
-    fillColor: js.Any = null,
-    lineWidth: Int | Double = null,
-    radius: Int | Double = null,
-    show: js.UndefOr[Boolean] = js.undefined,
-    symbol: js.Any = null
-  ): pointsOptions = {
+  def apply(): pointsOptions = {
     val __obj = js.Dynamic.literal()
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
-    if (lineWidth != null) __obj.updateDynamic("lineWidth")(lineWidth.asInstanceOf[js.Any])
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
     __obj.asInstanceOf[pointsOptions]
   }
+  @scala.inline
+  implicit class pointsOptionsOps[Self <: pointsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbol(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

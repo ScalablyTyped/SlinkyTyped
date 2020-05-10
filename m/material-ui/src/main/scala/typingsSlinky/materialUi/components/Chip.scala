@@ -1,12 +1,11 @@
 package typingsSlinky.materialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.ChipProps
 import typingsSlinky.materialUi.chipMod.default
 import typingsSlinky.react.mod.CSSProperties
@@ -14,36 +13,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Chip
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Chip {
   @JSImport("material-ui/Chip", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    backgroundColor: String = null,
-    containerElement: TagMod[Any] | String = null,
-    deleteIconStyle: CSSProperties = null,
-    labelColor: String = null,
-    labelStyle: CSSProperties = null,
-    onClick: SyntheticMouseEvent[typingsSlinky.materialUi.MaterialUI.Chip] => Unit = null,
-    onRequestDelete: SyntheticTouchEvent[typingsSlinky.materialUi.MaterialUI.Chip] => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (containerElement != null) __obj.updateDynamic("containerElement")(containerElement.asInstanceOf[js.Any])
-    if (deleteIconStyle != null) __obj.updateDynamic("deleteIconStyle")(deleteIconStyle.asInstanceOf[js.Any])
-    if (labelColor != null) __obj.updateDynamic("labelColor")(labelColor.asInstanceOf[js.Any])
-    if (labelStyle != null) __obj.updateDynamic("labelStyle")(labelStyle.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onRequestDelete != null) __obj.updateDynamic("onRequestDelete")(js.Any.fromFunction1(onRequestDelete))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerElement(value: TagMod[Any] | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIconStyle(value: CSSProperties): this.type = set("deleteIconStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelColor(value: String): this.type = set("labelColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelStyle(value: CSSProperties): this.type = set("labelStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: SyntheticMouseEvent[typingsSlinky.materialUi.MaterialUI.Chip] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRequestDelete(value: SyntheticTouchEvent[typingsSlinky.materialUi.MaterialUI.Chip] => Unit): this.type = set("onRequestDelete", js.Any.fromFunction1(value))
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.materialUi.chipMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ChipProps
+  
+  def withProps(p: ChipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Chip.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

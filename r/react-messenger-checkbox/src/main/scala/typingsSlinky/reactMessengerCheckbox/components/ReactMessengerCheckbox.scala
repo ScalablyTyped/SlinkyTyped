@@ -1,9 +1,7 @@
 package typingsSlinky.reactMessengerCheckbox.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMessengerCheckbox.mod.ReactMessengerProps
 import typingsSlinky.reactMessengerCheckbox.mod.^
 import typingsSlinky.reactMessengerCheckbox.reactMessengerCheckboxStrings.dark
@@ -17,46 +15,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactMessengerCheckbox
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactMessengerCheckbox {
   @JSImport("react-messenger-checkbox", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    appId: String,
-    origin: String,
-    pageId: String,
-    userRef: String,
-    allowLogin: js.UndefOr[Boolean] = js.undefined,
-    autoLogAppEvents: js.UndefOr[Boolean] = js.undefined,
-    centerAlign: js.UndefOr[Boolean] = js.undefined,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    language: String = null,
-    onEvent: /* event */ js.Any => Unit = null,
-    prechecked: js.UndefOr[Boolean] = js.undefined,
-    size: small | medium | large | standard | xlarge = null,
-    skin: light | dark = null,
-    version: String = null,
-    xfbml: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal(appId = appId.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], pageId = pageId.asInstanceOf[js.Any], userRef = userRef.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowLogin)) __obj.updateDynamic("allowLogin")(allowLogin.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoLogAppEvents)) __obj.updateDynamic("autoLogAppEvents")(autoLogAppEvents.asInstanceOf[js.Any])
-    if (!js.isUndefined(centerAlign)) __obj.updateDynamic("centerAlign")(centerAlign.asInstanceOf[js.Any])
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (onEvent != null) __obj.updateDynamic("onEvent")(js.Any.fromFunction1(onEvent))
-    if (!js.isUndefined(prechecked)) __obj.updateDynamic("prechecked")(prechecked.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (skin != null) __obj.updateDynamic("skin")(skin.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
-    if (!js.isUndefined(xfbml)) __obj.updateDynamic("xfbml")(xfbml.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def allowLogin(value: Boolean): this.type = set("allowLogin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoLogAppEvents(value: Boolean): this.type = set("autoLogAppEvents", value.asInstanceOf[js.Any])
+    @scala.inline
+    def centerAlign(value: Boolean): this.type = set("centerAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def debug(value: Boolean): this.type = set("debug", value.asInstanceOf[js.Any])
+    @scala.inline
+    def language(value: String): this.type = set("language", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onEvent(value: /* event */ js.Any => Unit): this.type = set("onEvent", js.Any.fromFunction1(value))
+    @scala.inline
+    def prechecked(value: Boolean): this.type = set("prechecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: small | medium | large | standard | xlarge): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def skin(value: light | dark): this.type = set("skin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def version(value: String): this.type = set("version", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xfbml(value: Boolean): this.type = set("xfbml", value.asInstanceOf[js.Any])
   }
-  type Props = ReactMessengerProps
+  
+  def withProps(p: ReactMessengerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(appId: String, origin: String, pageId: String, userRef: String): Builder = {
+    val __props = js.Dynamic.literal(appId = appId.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], pageId = pageId.asInstanceOf[js.Any], userRef = userRef.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactMessengerProps]))
+  }
 }
 

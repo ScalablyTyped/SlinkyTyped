@@ -2,7 +2,6 @@ package typingsSlinky.victory.mod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.DOMAttributes
 import typingsSlinky.victory.victoryStrings.all
 import typingsSlinky.victory.victoryStrings.disable
 import typingsSlinky.victory.victoryStrings.none
@@ -12,6 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VictoryBrushContainerProps extends VictoryContainerProps {
   /**
     * The optional allowDrag prop accepts a boolean that enables dragging behavior
@@ -19,21 +19,21 @@ trait VictoryBrushContainerProps extends VictoryContainerProps {
     * prop is set to false.
     * @default true
     */
-  var allowDrag: js.UndefOr[Boolean] = js.undefined
+  var allowDrag: js.UndefOr[Boolean] = js.native
   /**
     * The optional allowResize prop accepts a boolean that enables resizing the
     * highlighted brush area. Dragging will still be enabled when the allowResize
     * prop is set to false, but the dimensions of the brush area will be fixed.
     * @default true
     */
-  var allowResize: js.UndefOr[Boolean] = js.undefined
+  var allowResize: js.UndefOr[Boolean] = js.native
   /**
     * The brushComponent prop specifies the component to be rendered for the
     * highlighted area. This component will be supplied with the following props: x, y,
     * width, height, and style. When this prop is not specified, a <rect/> will be rendered.
     * @default brushComponent={<rect/>}
     */
-  var brushComponent: js.UndefOr[ReactElement] = js.undefined
+  var brushComponent: js.UndefOr[ReactElement] = js.native
   /**
     * When the brushDimension prop is set, brushing will only be specific to the to
     * the given dimension (either "x" or "y"), and the entire domain of the other
@@ -41,7 +41,7 @@ trait VictoryBrushContainerProps extends VictoryContainerProps {
     * occur along both dimensions.
     * @example brushDimension="x"
     */
-  var brushDimension: js.UndefOr[x | y] = js.undefined
+  var brushDimension: js.UndefOr[x | y] = js.native
   /**
     * The optional brushDomain prop describes the highlighted state. This prop is an
     * object that specifies separate arrays for x and y. Each array is a tuple that
@@ -50,13 +50,13 @@ trait VictoryBrushContainerProps extends VictoryContainerProps {
     * changes, the chart will render with a new highlighted domain.
     * @example brushDomain={{ x: [50, 100], y: [0, 100] }}
     */
-  var brushDomain: js.UndefOr[DomainPropType] = js.undefined
+  var brushDomain: js.UndefOr[DomainPropType] = js.native
   /**
     * The brushStyle adds custom styles to the brushComponent. This prop
     * should be given as an object of SVG style attributes.
     * @default "brushStyle={{ stroke: "transparent", fill: "black", fillOpacity: 0.1 }}"
     */
-  var brushStyle: js.UndefOr[CSSProperties] = js.undefined
+  var brushStyle: js.UndefOr[CSSProperties] = js.native
   /**
     * The defaultBrushArea prop specifies how the container will behave when a
     * region outside the active brush is clicked without selecting a new area. When the
@@ -64,11 +64,11 @@ trait VictoryBrushContainerProps extends VictoryContainerProps {
     * no new region will be selected, and any existing active brush will be cleared. When
     * the prop is set to "disable" the new selected region will default to the current active brush.
     */
-  var defaultBrushArea: js.UndefOr[all | none | disable] = js.undefined
+  var defaultBrushArea: js.UndefOr[all | none | disable] = js.native
   /**
     * When the disable prop is set to true, VictoryBrushContainer events will not fire.
     */
-  var disable: js.UndefOr[Boolean] = js.undefined
+  var disable: js.UndefOr[Boolean] = js.native
   /**
     * The handleComponent prop specifies the component to be rendered for each
     * handle for the highlighted area. This component will be supplied with the following
@@ -76,7 +76,7 @@ trait VictoryBrushContainerProps extends VictoryContainerProps {
     * specified, a <rect/> will be rendered.
     * @default handleComponent={<rect/>}
     */
-  var handleComponent: js.UndefOr[ReactElement] = js.undefined
+  var handleComponent: js.UndefOr[ReactElement] = js.native
   /**
     * The handleStyle adds custom styles to the handleComponents. This prop should be given as an object of SVG style attributes.
     *
@@ -86,7 +86,7 @@ trait VictoryBrushContainerProps extends VictoryContainerProps {
     * rendered. Handles are automatically styled with cursors appropriate to their orientation.
     * @default "handleStyle={{ stroke: 'transparent', fill: 'transparent' }}"
     */
-  var handleStyle: js.UndefOr[CSSProperties] = js.undefined
+  var handleStyle: js.UndefOr[CSSProperties] = js.native
   /**
     * The optional onBrushDomainChange prop accepts an function to be called on
     * each update to the highlighted domain. The function accepts the parameters of
@@ -95,51 +95,154 @@ trait VictoryBrushContainerProps extends VictoryContainerProps {
     */
   var onBrushDomainChange: js.UndefOr[
     js.Function2[/* domain */ DomainPropType, /* props */ VictoryBrushContainerProps, Unit]
-  ] = js.undefined
+  ] = js.native
 }
 
 object VictoryBrushContainerProps {
   @scala.inline
-  def apply(
-    allowDrag: js.UndefOr[Boolean] = js.undefined,
-    allowResize: js.UndefOr[Boolean] = js.undefined,
-    brushComponent: ReactElement = null,
-    brushDimension: x | y = null,
-    brushDomain: DomainPropType = null,
-    brushStyle: CSSProperties = null,
-    defaultBrushArea: all | none | disable = null,
-    desc: String = null,
-    disable: js.UndefOr[Boolean] = js.undefined,
-    events: DOMAttributes[_] = null,
-    handleComponent: ReactElement = null,
-    handleStyle: CSSProperties = null,
-    height: Int | Double = null,
-    onBrushDomainChange: (/* domain */ DomainPropType, /* props */ VictoryBrushContainerProps) => Unit = null,
-    responsive: js.UndefOr[Boolean] = js.undefined,
-    style: CSSProperties = null,
-    title: String = null,
-    width: Int | Double = null
-  ): VictoryBrushContainerProps = {
+  def apply(): VictoryBrushContainerProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowDrag)) __obj.updateDynamic("allowDrag")(allowDrag.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowResize)) __obj.updateDynamic("allowResize")(allowResize.asInstanceOf[js.Any])
-    if (brushComponent != null) __obj.updateDynamic("brushComponent")(brushComponent.asInstanceOf[js.Any])
-    if (brushDimension != null) __obj.updateDynamic("brushDimension")(brushDimension.asInstanceOf[js.Any])
-    if (brushDomain != null) __obj.updateDynamic("brushDomain")(brushDomain.asInstanceOf[js.Any])
-    if (brushStyle != null) __obj.updateDynamic("brushStyle")(brushStyle.asInstanceOf[js.Any])
-    if (defaultBrushArea != null) __obj.updateDynamic("defaultBrushArea")(defaultBrushArea.asInstanceOf[js.Any])
-    if (desc != null) __obj.updateDynamic("desc")(desc.asInstanceOf[js.Any])
-    if (!js.isUndefined(disable)) __obj.updateDynamic("disable")(disable.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (handleComponent != null) __obj.updateDynamic("handleComponent")(handleComponent.asInstanceOf[js.Any])
-    if (handleStyle != null) __obj.updateDynamic("handleStyle")(handleStyle.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (onBrushDomainChange != null) __obj.updateDynamic("onBrushDomainChange")(js.Any.fromFunction2(onBrushDomainChange))
-    if (!js.isUndefined(responsive)) __obj.updateDynamic("responsive")(responsive.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[VictoryBrushContainerProps]
   }
+  @scala.inline
+  implicit class VictoryBrushContainerPropsOps[Self <: VictoryBrushContainerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowDrag(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDrag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowDrag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDrag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowResize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowResize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowResize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowResize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrushComponent(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brushComponent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrushComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brushComponent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrushDimension(value: x | y): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brushDimension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrushDimension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brushDimension")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrushDomain(value: DomainPropType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brushDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrushDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brushDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrushStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brushStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrushStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brushStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultBrushArea(value: all | none | disable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultBrushArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultBrushArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultBrushArea")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleComponent(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleComponent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHandleComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleComponent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHandleStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBrushDomainChange(value: (/* domain */ DomainPropType, /* props */ VictoryBrushContainerProps) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBrushDomainChange")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnBrushDomainChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBrushDomainChange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

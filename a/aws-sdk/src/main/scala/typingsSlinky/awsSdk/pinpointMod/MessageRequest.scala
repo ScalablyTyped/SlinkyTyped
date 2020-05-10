@@ -34,21 +34,83 @@ trait MessageRequest extends js.Object {
 
 object MessageRequest {
   @scala.inline
-  def apply(
-    MessageConfiguration: DirectMessageConfiguration,
-    Addresses: MapOfAddressConfiguration = null,
-    Context: MapOfString = null,
-    Endpoints: MapOfEndpointSendConfiguration = null,
-    TemplateConfiguration: TemplateConfiguration = null,
-    TraceId: string = null
-  ): MessageRequest = {
+  def apply(MessageConfiguration: DirectMessageConfiguration): MessageRequest = {
     val __obj = js.Dynamic.literal(MessageConfiguration = MessageConfiguration.asInstanceOf[js.Any])
-    if (Addresses != null) __obj.updateDynamic("Addresses")(Addresses.asInstanceOf[js.Any])
-    if (Context != null) __obj.updateDynamic("Context")(Context.asInstanceOf[js.Any])
-    if (Endpoints != null) __obj.updateDynamic("Endpoints")(Endpoints.asInstanceOf[js.Any])
-    if (TemplateConfiguration != null) __obj.updateDynamic("TemplateConfiguration")(TemplateConfiguration.asInstanceOf[js.Any])
-    if (TraceId != null) __obj.updateDynamic("TraceId")(TraceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageRequest]
   }
+  @scala.inline
+  implicit class MessageRequestOps[Self <: MessageRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMessageConfiguration(value: DirectMessageConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddresses(value: MapOfAddressConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Addresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddresses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Addresses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContext(value: MapOfString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpoints(value: MapOfEndpointSendConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateConfiguration(value: TemplateConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTraceId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TraceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTraceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TraceId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

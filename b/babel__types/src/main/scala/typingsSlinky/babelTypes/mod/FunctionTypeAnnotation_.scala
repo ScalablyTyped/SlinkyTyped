@@ -5,45 +5,76 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait FunctionTypeAnnotation_
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ @js.native
+trait FunctionTypeAnnotation_
   extends Flow
      with BaseNode
      with FlowType {
-  var params: js.Array[FunctionTypeParam_]
-  var rest: FunctionTypeParam_ | Null
-  var returnType: FlowType
-  var typeParameters: TypeParameterDeclaration_ | Null
+  var params: js.Array[FunctionTypeParam_] = js.native
+  var rest: FunctionTypeParam_ | Null = js.native
+  var returnType: FlowType = js.native
+  var typeParameters: TypeParameterDeclaration_ | Null = js.native
   @JSName("type")
-  var type_FunctionTypeAnnotation_ : FunctionTypeAnnotation
+  var type_FunctionTypeAnnotation_ : FunctionTypeAnnotation = js.native
 }
 
 object FunctionTypeAnnotation_ {
   @scala.inline
-  def apply(
-    params: js.Array[FunctionTypeParam_],
-    returnType: FlowType,
-    `type`: FunctionTypeAnnotation,
-    end: Int | Double = null,
-    innerComments: js.Array[Comment] = null,
-    leadingComments: js.Array[Comment] = null,
-    loc: SourceLocation = null,
-    rest: FunctionTypeParam_ = null,
-    start: Int | Double = null,
-    trailingComments: js.Array[Comment] = null,
-    typeParameters: TypeParameterDeclaration_ = null
-  ): FunctionTypeAnnotation_ = {
+  def apply(params: js.Array[FunctionTypeParam_], returnType: FlowType, `type`: FunctionTypeAnnotation): FunctionTypeAnnotation_ = {
     val __obj = js.Dynamic.literal(params = params.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
-    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (rest != null) __obj.updateDynamic("rest")(rest.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
-    if (typeParameters != null) __obj.updateDynamic("typeParameters")(typeParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionTypeAnnotation_]
   }
+  @scala.inline
+  implicit class FunctionTypeAnnotation_Ops[Self <: FunctionTypeAnnotation_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParams(value: js.Array[FunctionTypeParam_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReturnType(value: FlowType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: FunctionTypeAnnotation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRest(value: FunctionTypeParam_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRestNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rest")(null)
+        ret
+    }
+    @scala.inline
+    def withTypeParameters(value: TypeParameterDeclaration_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypeParametersNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(null)
+        ret
+    }
+  }
+  
 }
 

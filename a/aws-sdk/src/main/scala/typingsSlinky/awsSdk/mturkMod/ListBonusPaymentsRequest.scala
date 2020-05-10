@@ -23,18 +23,65 @@ trait ListBonusPaymentsRequest extends js.Object {
 
 object ListBonusPaymentsRequest {
   @scala.inline
-  def apply(
-    AssignmentId: EntityId = null,
-    HITId: EntityId = null,
-    MaxResults: Int | Double = null,
-    NextToken: PaginationToken = null
-  ): ListBonusPaymentsRequest = {
+  def apply(): ListBonusPaymentsRequest = {
     val __obj = js.Dynamic.literal()
-    if (AssignmentId != null) __obj.updateDynamic("AssignmentId")(AssignmentId.asInstanceOf[js.Any])
-    if (HITId != null) __obj.updateDynamic("HITId")(HITId.asInstanceOf[js.Any])
-    if (MaxResults != null) __obj.updateDynamic("MaxResults")(MaxResults.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListBonusPaymentsRequest]
   }
+  @scala.inline
+  implicit class ListBonusPaymentsRequestOps[Self <: ListBonusPaymentsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssignmentId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssignmentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHITId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHITId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: ResultSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

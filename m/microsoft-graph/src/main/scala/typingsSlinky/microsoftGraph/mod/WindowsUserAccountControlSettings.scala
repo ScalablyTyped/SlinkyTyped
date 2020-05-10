@@ -15,16 +15,14 @@ trait WindowsUserAccountControlSettings extends js.Object
 
 object WindowsUserAccountControlSettings {
   @scala.inline
-  def alwaysNotify: typingsSlinky.microsoftGraph.microsoftGraphStrings.alwaysNotify = this.cast("alwaysNotify")
+  def alwaysNotify: typingsSlinky.microsoftGraph.microsoftGraphStrings.alwaysNotify = "alwaysNotify".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.alwaysNotify]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def neverNotify: typingsSlinky.microsoftGraph.microsoftGraphStrings.neverNotify = "neverNotify".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.neverNotify]
   @scala.inline
-  def neverNotify: typingsSlinky.microsoftGraph.microsoftGraphStrings.neverNotify = this.cast("neverNotify")
+  def notifyOnAppChanges: typingsSlinky.microsoftGraph.microsoftGraphStrings.notifyOnAppChanges = "notifyOnAppChanges".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.notifyOnAppChanges]
   @scala.inline
-  def notifyOnAppChanges: typingsSlinky.microsoftGraph.microsoftGraphStrings.notifyOnAppChanges = this.cast("notifyOnAppChanges")
+  def notifyOnAppChangesWithoutDimming: typingsSlinky.microsoftGraph.microsoftGraphStrings.notifyOnAppChangesWithoutDimming = "notifyOnAppChangesWithoutDimming".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.notifyOnAppChangesWithoutDimming]
   @scala.inline
-  def notifyOnAppChangesWithoutDimming: typingsSlinky.microsoftGraph.microsoftGraphStrings.notifyOnAppChangesWithoutDimming = this.cast("notifyOnAppChangesWithoutDimming")
-  @scala.inline
-  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = this.cast("userDefined")
+  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = "userDefined".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined]
 }
 

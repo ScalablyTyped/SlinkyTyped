@@ -1,11 +1,10 @@
 package typingsSlinky.reactNativeElements.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -18,35 +17,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Badge
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeElements.mod.Badge] {
+object Badge {
   @JSImport("react-native-elements", "Badge")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    Component: ReactComponentClass[js.Object] = null,
-    badgeStyle: StyleProp[ViewStyle] = null,
-    containerStyle: StyleProp[ViewStyle] = null,
-    onPress: () => Unit = null,
-    status: primary | success | warning | error = null,
-    textStyle: StyleProp[TextStyle] = null,
-    value: TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Badge] = {
-    val __obj = js.Dynamic.literal()
-    if (Component != null) __obj.updateDynamic("Component")(Component.asInstanceOf[js.Any])
-    if (badgeStyle != null) __obj.updateDynamic("badgeStyle")(badgeStyle.asInstanceOf[js.Any])
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction0(onPress))
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Badge] {
+    @scala.inline
+    def Component(value: ReactComponentClass[js.Object]): this.type = set("Component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def badgeStyle(value: StyleProp[ViewStyle]): this.type = set("badgeStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def badgeStyleNull: this.type = set("badgeStyle", null)
+    @scala.inline
+    def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyleNull: this.type = set("containerStyle", null)
+    @scala.inline
+    def onPress(value: () => Unit): this.type = set("onPress", js.Any.fromFunction0(value))
+    @scala.inline
+    def status(value: primary | success | warning | error): this.type = set("status", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textStyle(value: StyleProp[TextStyle]): this.type = set("textStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textStyleNull: this.type = set("textStyle", null)
+    @scala.inline
+    def valueReactElement(value: ReactElement): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: TagMod[Any]): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Badge] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactNativeElements.mod.Badge](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = BadgeProps
+  
+  def withProps(p: BadgeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Badge.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

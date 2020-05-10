@@ -4,35 +4,93 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonInterval extends js.Object {
   // Optional. Use polling.
-  var interval: js.UndefOr[Double] = js.undefined
+  var interval: js.UndefOr[Double] = js.native
    // Optional. Update polling timeout (0 - short polling).
-  var limit: js.UndefOr[Double] = js.undefined
+  var limit: js.UndefOr[Double] = js.native
    // Optional. Reconnecting timeout (in ms).
-  var proxy: js.UndefOr[String] = js.undefined
+  var proxy: js.UndefOr[String] = js.native
    // Optional. Limits the number of updates to be retrieved.
-  var retryTimeout: js.UndefOr[Double] = js.undefined
+  var retryTimeout: js.UndefOr[Double] = js.native
    // Optional. How often check updates (in ms).
-  var timeout: js.UndefOr[Double] = js.undefined
+  var timeout: js.UndefOr[Double] = js.native
 }
 
 object AnonInterval {
   @scala.inline
-  def apply(
-    interval: Int | Double = null,
-    limit: Int | Double = null,
-    proxy: String = null,
-    retryTimeout: Int | Double = null,
-    timeout: Int | Double = null
-  ): AnonInterval = {
+  def apply(): AnonInterval = {
     val __obj = js.Dynamic.literal()
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (proxy != null) __obj.updateDynamic("proxy")(proxy.asInstanceOf[js.Any])
-    if (retryTimeout != null) __obj.updateDynamic("retryTimeout")(retryTimeout.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonInterval]
   }
+  @scala.inline
+  implicit class AnonIntervalOps[Self <: AnonInterval] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProxy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProxy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetryTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetryTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

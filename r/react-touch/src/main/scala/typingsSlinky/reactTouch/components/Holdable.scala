@@ -1,41 +1,35 @@
 package typingsSlinky.reactTouch.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactTouch.mod.HoldableConfig
 import typingsSlinky.reactTouch.mod.HoldableProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Holdable
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactTouch.mod.Holdable] {
+object Holdable {
   @JSImport("react-touch", "Holdable")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    config: HoldableConfig = null,
-    onHoldComplete: () => Unit = null,
-    onHoldProgress: () => Unit = null,
-    onMouseDown: () => Unit = null,
-    onTouchStart: () => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactTouch.mod.Holdable] = {
-    val __obj = js.Dynamic.literal()
-    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
-    if (onHoldComplete != null) __obj.updateDynamic("onHoldComplete")(js.Any.fromFunction0(onHoldComplete))
-    if (onHoldProgress != null) __obj.updateDynamic("onHoldProgress")(js.Any.fromFunction0(onHoldProgress))
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction0(onMouseDown))
-    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction0(onTouchStart))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactTouch.mod.Holdable] {
+    @scala.inline
+    def config(value: HoldableConfig): this.type = set("config", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onHoldComplete(value: () => Unit): this.type = set("onHoldComplete", js.Any.fromFunction0(value))
+    @scala.inline
+    def onHoldProgress(value: () => Unit): this.type = set("onHoldProgress", js.Any.fromFunction0(value))
+    @scala.inline
+    def onMouseDown(value: () => Unit): this.type = set("onMouseDown", js.Any.fromFunction0(value))
+    @scala.inline
+    def onTouchStart(value: () => Unit): this.type = set("onTouchStart", js.Any.fromFunction0(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactTouch.mod.Holdable] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactTouch.mod.Holdable](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = HoldableProps
+  
+  def withProps(p: HoldableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Holdable.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

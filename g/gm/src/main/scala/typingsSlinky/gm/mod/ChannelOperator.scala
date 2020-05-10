@@ -40,64 +40,62 @@ trait ChannelOperator extends js.Object
 
 object ChannelOperator {
   @scala.inline
-  def Add: typingsSlinky.gm.gmStrings.Add = this.cast("Add")
+  def Add: typingsSlinky.gm.gmStrings.Add = "Add".asInstanceOf[typingsSlinky.gm.gmStrings.Add]
   @scala.inline
-  def And: typingsSlinky.gm.gmStrings.And = this.cast("And")
+  def And: typingsSlinky.gm.gmStrings.And = "And".asInstanceOf[typingsSlinky.gm.gmStrings.And]
   @scala.inline
-  def Assign: typingsSlinky.gm.gmStrings.Assign = this.cast("Assign")
+  def Assign: typingsSlinky.gm.gmStrings.Assign = "Assign".asInstanceOf[typingsSlinky.gm.gmStrings.Assign]
   @scala.inline
-  def Depth: typingsSlinky.gm.gmStrings.Depth = this.cast("Depth")
+  def Depth: typingsSlinky.gm.gmStrings.Depth = "Depth".asInstanceOf[typingsSlinky.gm.gmStrings.Depth]
   @scala.inline
-  def Divide: typingsSlinky.gm.gmStrings.Divide = this.cast("Divide")
+  def Divide: typingsSlinky.gm.gmStrings.Divide = "Divide".asInstanceOf[typingsSlinky.gm.gmStrings.Divide]
   @scala.inline
-  def Gamma: typingsSlinky.gm.gmStrings.Gamma = this.cast("Gamma")
+  def Gamma: typingsSlinky.gm.gmStrings.Gamma = "Gamma".asInstanceOf[typingsSlinky.gm.gmStrings.Gamma]
   @scala.inline
-  def LShift: typingsSlinky.gm.gmStrings.LShift = this.cast("LShift")
+  def LShift: typingsSlinky.gm.gmStrings.LShift = "LShift".asInstanceOf[typingsSlinky.gm.gmStrings.LShift]
   @scala.inline
-  def Log: typingsSlinky.gm.gmStrings.Log = this.cast("Log")
+  def Log: typingsSlinky.gm.gmStrings.Log = "Log".asInstanceOf[typingsSlinky.gm.gmStrings.Log]
   @scala.inline
-  def Max: typingsSlinky.gm.gmStrings.Max = this.cast("Max")
+  def Max: typingsSlinky.gm.gmStrings.Max = "Max".asInstanceOf[typingsSlinky.gm.gmStrings.Max]
   @scala.inline
-  def Min: typingsSlinky.gm.gmStrings.Min = this.cast("Min")
+  def Min: typingsSlinky.gm.gmStrings.Min = "Min".asInstanceOf[typingsSlinky.gm.gmStrings.Min]
   @scala.inline
-  def Multiply: typingsSlinky.gm.gmStrings.Multiply = this.cast("Multiply")
+  def Multiply: typingsSlinky.gm.gmStrings.Multiply = "Multiply".asInstanceOf[typingsSlinky.gm.gmStrings.Multiply]
   @scala.inline
-  def Negate: typingsSlinky.gm.gmStrings.Negate = this.cast("Negate")
+  def Negate: typingsSlinky.gm.gmStrings.Negate = "Negate".asInstanceOf[typingsSlinky.gm.gmStrings.Negate]
   @scala.inline
-  def `Noise-Gaussian`: typingsSlinky.gm.gmStrings.`Noise-Gaussian` = this.cast("Noise-Gaussian")
+  def `Noise-Gaussian`: typingsSlinky.gm.gmStrings.`Noise-Gaussian` = "Noise-Gaussian".asInstanceOf[typingsSlinky.gm.gmStrings.`Noise-Gaussian`]
   @scala.inline
-  def `Noise-Impulse`: typingsSlinky.gm.gmStrings.`Noise-Impulse` = this.cast("Noise-Impulse")
+  def `Noise-Impulse`: typingsSlinky.gm.gmStrings.`Noise-Impulse` = "Noise-Impulse".asInstanceOf[typingsSlinky.gm.gmStrings.`Noise-Impulse`]
   @scala.inline
-  def `Noise-Laplacian`: typingsSlinky.gm.gmStrings.`Noise-Laplacian` = this.cast("Noise-Laplacian")
+  def `Noise-Laplacian`: typingsSlinky.gm.gmStrings.`Noise-Laplacian` = "Noise-Laplacian".asInstanceOf[typingsSlinky.gm.gmStrings.`Noise-Laplacian`]
   @scala.inline
-  def `Noise-Multiplicative`: typingsSlinky.gm.gmStrings.`Noise-Multiplicative` = this.cast("Noise-Multiplicative")
+  def `Noise-Multiplicative`: typingsSlinky.gm.gmStrings.`Noise-Multiplicative` = "Noise-Multiplicative".asInstanceOf[typingsSlinky.gm.gmStrings.`Noise-Multiplicative`]
   @scala.inline
-  def `Noise-Poisson`: typingsSlinky.gm.gmStrings.`Noise-Poisson` = this.cast("Noise-Poisson")
+  def `Noise-Poisson`: typingsSlinky.gm.gmStrings.`Noise-Poisson` = "Noise-Poisson".asInstanceOf[typingsSlinky.gm.gmStrings.`Noise-Poisson`]
   @scala.inline
-  def `Noise-Random`: typingsSlinky.gm.gmStrings.`Noise-Random` = this.cast("Noise-Random")
+  def `Noise-Random`: typingsSlinky.gm.gmStrings.`Noise-Random` = "Noise-Random".asInstanceOf[typingsSlinky.gm.gmStrings.`Noise-Random`]
   @scala.inline
-  def `Noise-Uniform`: typingsSlinky.gm.gmStrings.`Noise-Uniform` = this.cast("Noise-Uniform")
+  def `Noise-Uniform`: typingsSlinky.gm.gmStrings.`Noise-Uniform` = "Noise-Uniform".asInstanceOf[typingsSlinky.gm.gmStrings.`Noise-Uniform`]
   @scala.inline
-  def Or: typingsSlinky.gm.gmStrings.Or = this.cast("Or")
+  def Or: typingsSlinky.gm.gmStrings.Or = "Or".asInstanceOf[typingsSlinky.gm.gmStrings.Or]
   @scala.inline
-  def Pow: typingsSlinky.gm.gmStrings.Pow = this.cast("Pow")
+  def Pow: typingsSlinky.gm.gmStrings.Pow = "Pow".asInstanceOf[typingsSlinky.gm.gmStrings.Pow]
   @scala.inline
-  def RShift: typingsSlinky.gm.gmStrings.RShift = this.cast("RShift")
+  def RShift: typingsSlinky.gm.gmStrings.RShift = "RShift".asInstanceOf[typingsSlinky.gm.gmStrings.RShift]
   @scala.inline
-  def Subtract: typingsSlinky.gm.gmStrings.Subtract = this.cast("Subtract")
+  def Subtract: typingsSlinky.gm.gmStrings.Subtract = "Subtract".asInstanceOf[typingsSlinky.gm.gmStrings.Subtract]
   @scala.inline
-  def Threshold: typingsSlinky.gm.gmStrings.Threshold = this.cast("Threshold")
+  def Threshold: typingsSlinky.gm.gmStrings.Threshold = "Threshold".asInstanceOf[typingsSlinky.gm.gmStrings.Threshold]
   @scala.inline
-  def `Threshold-Black`: typingsSlinky.gm.gmStrings.`Threshold-Black` = this.cast("Threshold-Black")
+  def `Threshold-Black`: typingsSlinky.gm.gmStrings.`Threshold-Black` = "Threshold-Black".asInstanceOf[typingsSlinky.gm.gmStrings.`Threshold-Black`]
   @scala.inline
-  def `Threshold-Black-Negate`: typingsSlinky.gm.gmStrings.`Threshold-Black-Negate` = this.cast("Threshold-Black-Negate")
+  def `Threshold-Black-Negate`: typingsSlinky.gm.gmStrings.`Threshold-Black-Negate` = "Threshold-Black-Negate".asInstanceOf[typingsSlinky.gm.gmStrings.`Threshold-Black-Negate`]
   @scala.inline
-  def `Threshold-White`: typingsSlinky.gm.gmStrings.`Threshold-White` = this.cast("Threshold-White")
+  def `Threshold-White`: typingsSlinky.gm.gmStrings.`Threshold-White` = "Threshold-White".asInstanceOf[typingsSlinky.gm.gmStrings.`Threshold-White`]
   @scala.inline
-  def `Threshold-White-Negate`: typingsSlinky.gm.gmStrings.`Threshold-White-Negate` = this.cast("Threshold-White-Negate")
+  def `Threshold-White-Negate`: typingsSlinky.gm.gmStrings.`Threshold-White-Negate` = "Threshold-White-Negate".asInstanceOf[typingsSlinky.gm.gmStrings.`Threshold-White-Negate`]
   @scala.inline
-  def Xor: Xor_ = this.cast("Xor")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Xor: Xor_ = "Xor".asInstanceOf[Xor_]
 }
 

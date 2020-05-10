@@ -22,10 +22,10 @@ trait HashChangeEvent extends Event_ {
 @JSGlobal("HashChangeEvent")
 @js.native
 object HashChangeEvent
-  extends Instantiable1[/* type */ java.lang.String, HashChangeEvent]
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.HashChangeEvent]
      with Instantiable2[
       /* type */ java.lang.String, 
       /* eventInitDict */ HashChangeEventInit, 
-      HashChangeEvent
+      org.scalajs.dom.raw.HashChangeEvent
     ]
 

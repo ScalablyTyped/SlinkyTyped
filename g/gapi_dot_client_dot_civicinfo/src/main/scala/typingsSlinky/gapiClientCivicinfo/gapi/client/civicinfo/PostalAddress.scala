@@ -4,108 +4,426 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PostalAddress extends js.Object {
-  var addressLines: js.UndefOr[js.Array[String]] = js.undefined
-  var administrativeAreaName: js.UndefOr[String] = js.undefined
-  var countryName: js.UndefOr[String] = js.undefined
-  var countryNameCode: js.UndefOr[String] = js.undefined
-  var dependentLocalityName: js.UndefOr[String] = js.undefined
-  var dependentThoroughfareLeadingType: js.UndefOr[String] = js.undefined
-  var dependentThoroughfareName: js.UndefOr[String] = js.undefined
-  var dependentThoroughfarePostDirection: js.UndefOr[String] = js.undefined
-  var dependentThoroughfarePreDirection: js.UndefOr[String] = js.undefined
-  var dependentThoroughfareTrailingType: js.UndefOr[String] = js.undefined
-  var dependentThoroughfaresConnector: js.UndefOr[String] = js.undefined
-  var dependentThoroughfaresIndicator: js.UndefOr[String] = js.undefined
-  var dependentThoroughfaresType: js.UndefOr[String] = js.undefined
-  var firmName: js.UndefOr[String] = js.undefined
-  var isDisputed: js.UndefOr[Boolean] = js.undefined
-  var languageCode: js.UndefOr[String] = js.undefined
-  var localityName: js.UndefOr[String] = js.undefined
-  var postBoxNumber: js.UndefOr[String] = js.undefined
-  var postalCodeNumber: js.UndefOr[String] = js.undefined
-  var postalCodeNumberExtension: js.UndefOr[String] = js.undefined
-  var premiseName: js.UndefOr[String] = js.undefined
-  var recipientName: js.UndefOr[String] = js.undefined
-  var sortingCode: js.UndefOr[String] = js.undefined
-  var subAdministrativeAreaName: js.UndefOr[String] = js.undefined
-  var subPremiseName: js.UndefOr[String] = js.undefined
-  var thoroughfareLeadingType: js.UndefOr[String] = js.undefined
-  var thoroughfareName: js.UndefOr[String] = js.undefined
-  var thoroughfareNumber: js.UndefOr[String] = js.undefined
-  var thoroughfarePostDirection: js.UndefOr[String] = js.undefined
-  var thoroughfarePreDirection: js.UndefOr[String] = js.undefined
-  var thoroughfareTrailingType: js.UndefOr[String] = js.undefined
+  var addressLines: js.UndefOr[js.Array[String]] = js.native
+  var administrativeAreaName: js.UndefOr[String] = js.native
+  var countryName: js.UndefOr[String] = js.native
+  var countryNameCode: js.UndefOr[String] = js.native
+  var dependentLocalityName: js.UndefOr[String] = js.native
+  var dependentThoroughfareLeadingType: js.UndefOr[String] = js.native
+  var dependentThoroughfareName: js.UndefOr[String] = js.native
+  var dependentThoroughfarePostDirection: js.UndefOr[String] = js.native
+  var dependentThoroughfarePreDirection: js.UndefOr[String] = js.native
+  var dependentThoroughfareTrailingType: js.UndefOr[String] = js.native
+  var dependentThoroughfaresConnector: js.UndefOr[String] = js.native
+  var dependentThoroughfaresIndicator: js.UndefOr[String] = js.native
+  var dependentThoroughfaresType: js.UndefOr[String] = js.native
+  var firmName: js.UndefOr[String] = js.native
+  var isDisputed: js.UndefOr[Boolean] = js.native
+  var languageCode: js.UndefOr[String] = js.native
+  var localityName: js.UndefOr[String] = js.native
+  var postBoxNumber: js.UndefOr[String] = js.native
+  var postalCodeNumber: js.UndefOr[String] = js.native
+  var postalCodeNumberExtension: js.UndefOr[String] = js.native
+  var premiseName: js.UndefOr[String] = js.native
+  var recipientName: js.UndefOr[String] = js.native
+  var sortingCode: js.UndefOr[String] = js.native
+  var subAdministrativeAreaName: js.UndefOr[String] = js.native
+  var subPremiseName: js.UndefOr[String] = js.native
+  var thoroughfareLeadingType: js.UndefOr[String] = js.native
+  var thoroughfareName: js.UndefOr[String] = js.native
+  var thoroughfareNumber: js.UndefOr[String] = js.native
+  var thoroughfarePostDirection: js.UndefOr[String] = js.native
+  var thoroughfarePreDirection: js.UndefOr[String] = js.native
+  var thoroughfareTrailingType: js.UndefOr[String] = js.native
 }
 
 object PostalAddress {
   @scala.inline
-  def apply(
-    addressLines: js.Array[String] = null,
-    administrativeAreaName: String = null,
-    countryName: String = null,
-    countryNameCode: String = null,
-    dependentLocalityName: String = null,
-    dependentThoroughfareLeadingType: String = null,
-    dependentThoroughfareName: String = null,
-    dependentThoroughfarePostDirection: String = null,
-    dependentThoroughfarePreDirection: String = null,
-    dependentThoroughfareTrailingType: String = null,
-    dependentThoroughfaresConnector: String = null,
-    dependentThoroughfaresIndicator: String = null,
-    dependentThoroughfaresType: String = null,
-    firmName: String = null,
-    isDisputed: js.UndefOr[Boolean] = js.undefined,
-    languageCode: String = null,
-    localityName: String = null,
-    postBoxNumber: String = null,
-    postalCodeNumber: String = null,
-    postalCodeNumberExtension: String = null,
-    premiseName: String = null,
-    recipientName: String = null,
-    sortingCode: String = null,
-    subAdministrativeAreaName: String = null,
-    subPremiseName: String = null,
-    thoroughfareLeadingType: String = null,
-    thoroughfareName: String = null,
-    thoroughfareNumber: String = null,
-    thoroughfarePostDirection: String = null,
-    thoroughfarePreDirection: String = null,
-    thoroughfareTrailingType: String = null
-  ): PostalAddress = {
+  def apply(): PostalAddress = {
     val __obj = js.Dynamic.literal()
-    if (addressLines != null) __obj.updateDynamic("addressLines")(addressLines.asInstanceOf[js.Any])
-    if (administrativeAreaName != null) __obj.updateDynamic("administrativeAreaName")(administrativeAreaName.asInstanceOf[js.Any])
-    if (countryName != null) __obj.updateDynamic("countryName")(countryName.asInstanceOf[js.Any])
-    if (countryNameCode != null) __obj.updateDynamic("countryNameCode")(countryNameCode.asInstanceOf[js.Any])
-    if (dependentLocalityName != null) __obj.updateDynamic("dependentLocalityName")(dependentLocalityName.asInstanceOf[js.Any])
-    if (dependentThoroughfareLeadingType != null) __obj.updateDynamic("dependentThoroughfareLeadingType")(dependentThoroughfareLeadingType.asInstanceOf[js.Any])
-    if (dependentThoroughfareName != null) __obj.updateDynamic("dependentThoroughfareName")(dependentThoroughfareName.asInstanceOf[js.Any])
-    if (dependentThoroughfarePostDirection != null) __obj.updateDynamic("dependentThoroughfarePostDirection")(dependentThoroughfarePostDirection.asInstanceOf[js.Any])
-    if (dependentThoroughfarePreDirection != null) __obj.updateDynamic("dependentThoroughfarePreDirection")(dependentThoroughfarePreDirection.asInstanceOf[js.Any])
-    if (dependentThoroughfareTrailingType != null) __obj.updateDynamic("dependentThoroughfareTrailingType")(dependentThoroughfareTrailingType.asInstanceOf[js.Any])
-    if (dependentThoroughfaresConnector != null) __obj.updateDynamic("dependentThoroughfaresConnector")(dependentThoroughfaresConnector.asInstanceOf[js.Any])
-    if (dependentThoroughfaresIndicator != null) __obj.updateDynamic("dependentThoroughfaresIndicator")(dependentThoroughfaresIndicator.asInstanceOf[js.Any])
-    if (dependentThoroughfaresType != null) __obj.updateDynamic("dependentThoroughfaresType")(dependentThoroughfaresType.asInstanceOf[js.Any])
-    if (firmName != null) __obj.updateDynamic("firmName")(firmName.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDisputed)) __obj.updateDynamic("isDisputed")(isDisputed.asInstanceOf[js.Any])
-    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
-    if (localityName != null) __obj.updateDynamic("localityName")(localityName.asInstanceOf[js.Any])
-    if (postBoxNumber != null) __obj.updateDynamic("postBoxNumber")(postBoxNumber.asInstanceOf[js.Any])
-    if (postalCodeNumber != null) __obj.updateDynamic("postalCodeNumber")(postalCodeNumber.asInstanceOf[js.Any])
-    if (postalCodeNumberExtension != null) __obj.updateDynamic("postalCodeNumberExtension")(postalCodeNumberExtension.asInstanceOf[js.Any])
-    if (premiseName != null) __obj.updateDynamic("premiseName")(premiseName.asInstanceOf[js.Any])
-    if (recipientName != null) __obj.updateDynamic("recipientName")(recipientName.asInstanceOf[js.Any])
-    if (sortingCode != null) __obj.updateDynamic("sortingCode")(sortingCode.asInstanceOf[js.Any])
-    if (subAdministrativeAreaName != null) __obj.updateDynamic("subAdministrativeAreaName")(subAdministrativeAreaName.asInstanceOf[js.Any])
-    if (subPremiseName != null) __obj.updateDynamic("subPremiseName")(subPremiseName.asInstanceOf[js.Any])
-    if (thoroughfareLeadingType != null) __obj.updateDynamic("thoroughfareLeadingType")(thoroughfareLeadingType.asInstanceOf[js.Any])
-    if (thoroughfareName != null) __obj.updateDynamic("thoroughfareName")(thoroughfareName.asInstanceOf[js.Any])
-    if (thoroughfareNumber != null) __obj.updateDynamic("thoroughfareNumber")(thoroughfareNumber.asInstanceOf[js.Any])
-    if (thoroughfarePostDirection != null) __obj.updateDynamic("thoroughfarePostDirection")(thoroughfarePostDirection.asInstanceOf[js.Any])
-    if (thoroughfarePreDirection != null) __obj.updateDynamic("thoroughfarePreDirection")(thoroughfarePreDirection.asInstanceOf[js.Any])
-    if (thoroughfareTrailingType != null) __obj.updateDynamic("thoroughfareTrailingType")(thoroughfareTrailingType.asInstanceOf[js.Any])
     __obj.asInstanceOf[PostalAddress]
   }
+  @scala.inline
+  implicit class PostalAddressOps[Self <: PostalAddress] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddressLines(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddressLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdministrativeAreaName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("administrativeAreaName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdministrativeAreaName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("administrativeAreaName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountryName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountryName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countryName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountryNameCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countryNameCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountryNameCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countryNameCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDependentLocalityName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentLocalityName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDependentLocalityName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentLocalityName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDependentThoroughfareLeadingType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentThoroughfareLeadingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDependentThoroughfareLeadingType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentThoroughfareLeadingType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDependentThoroughfareName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentThoroughfareName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDependentThoroughfareName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentThoroughfareName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDependentThoroughfarePostDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentThoroughfarePostDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDependentThoroughfarePostDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentThoroughfarePostDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDependentThoroughfarePreDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentThoroughfarePreDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDependentThoroughfarePreDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentThoroughfarePreDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDependentThoroughfareTrailingType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentThoroughfareTrailingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDependentThoroughfareTrailingType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentThoroughfareTrailingType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDependentThoroughfaresConnector(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentThoroughfaresConnector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDependentThoroughfaresConnector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentThoroughfaresConnector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDependentThoroughfaresIndicator(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentThoroughfaresIndicator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDependentThoroughfaresIndicator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentThoroughfaresIndicator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDependentThoroughfaresType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentThoroughfaresType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDependentThoroughfaresType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentThoroughfaresType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirmName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firmName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirmName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firmName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDisputed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisputed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDisputed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisputed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguageCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalityName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localityName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalityName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localityName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostBoxNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postBoxNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostBoxNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postBoxNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostalCodeNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCodeNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostalCodeNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCodeNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostalCodeNumberExtension(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCodeNumberExtension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostalCodeNumberExtension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCodeNumberExtension")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPremiseName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("premiseName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPremiseName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("premiseName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipientName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipientName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortingCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortingCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortingCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortingCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubAdministrativeAreaName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subAdministrativeAreaName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubAdministrativeAreaName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subAdministrativeAreaName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubPremiseName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subPremiseName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubPremiseName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subPremiseName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThoroughfareLeadingType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thoroughfareLeadingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThoroughfareLeadingType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thoroughfareLeadingType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThoroughfareName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thoroughfareName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThoroughfareName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thoroughfareName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThoroughfareNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thoroughfareNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThoroughfareNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thoroughfareNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThoroughfarePostDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thoroughfarePostDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThoroughfarePostDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thoroughfarePostDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThoroughfarePreDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thoroughfarePreDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThoroughfarePreDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thoroughfarePreDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThoroughfareTrailingType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thoroughfareTrailingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThoroughfareTrailingType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thoroughfareTrailingType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

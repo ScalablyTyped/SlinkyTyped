@@ -18,11 +18,41 @@ trait WeightedQuantileLoss extends js.Object {
 
 object WeightedQuantileLoss {
   @scala.inline
-  def apply(LossValue: Int | scala.Double = null, Quantile: Int | scala.Double = null): WeightedQuantileLoss = {
+  def apply(): WeightedQuantileLoss = {
     val __obj = js.Dynamic.literal()
-    if (LossValue != null) __obj.updateDynamic("LossValue")(LossValue.asInstanceOf[js.Any])
-    if (Quantile != null) __obj.updateDynamic("Quantile")(Quantile.asInstanceOf[js.Any])
     __obj.asInstanceOf[WeightedQuantileLoss]
   }
+  @scala.inline
+  implicit class WeightedQuantileLossOps[Self <: WeightedQuantileLoss] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLossValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LossValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLossValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LossValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuantile(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Quantile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuantile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Quantile")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

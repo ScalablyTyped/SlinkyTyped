@@ -13,7 +13,7 @@ trait TerminateClientVpnConnectionsRequest extends js.Object {
   /**
     * The ID of the client connection to be terminated.
     */
-  var ConnectionId: js.UndefOr[String] = js.native
+  var ConnectionId: js.UndefOr[VpnConnectionId] = js.native
   /**
     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.
     */
@@ -26,17 +26,59 @@ trait TerminateClientVpnConnectionsRequest extends js.Object {
 
 object TerminateClientVpnConnectionsRequest {
   @scala.inline
-  def apply(
-    ClientVpnEndpointId: ClientVpnEndpointId,
-    ConnectionId: String = null,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    Username: String = null
-  ): TerminateClientVpnConnectionsRequest = {
+  def apply(ClientVpnEndpointId: ClientVpnEndpointId): TerminateClientVpnConnectionsRequest = {
     val __obj = js.Dynamic.literal(ClientVpnEndpointId = ClientVpnEndpointId.asInstanceOf[js.Any])
-    if (ConnectionId != null) __obj.updateDynamic("ConnectionId")(ConnectionId.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (Username != null) __obj.updateDynamic("Username")(Username.asInstanceOf[js.Any])
     __obj.asInstanceOf[TerminateClientVpnConnectionsRequest]
   }
+  @scala.inline
+  implicit class TerminateClientVpnConnectionsRequestOps[Self <: TerminateClientVpnConnectionsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientVpnEndpointId(value: ClientVpnEndpointId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientVpnEndpointId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConnectionId(value: VpnConnectionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

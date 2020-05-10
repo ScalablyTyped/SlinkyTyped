@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object fx extends js.Object {
   def apply(element: JQuery): Element = js.native
-  def apply(element: typingsSlinky.std.Element): Element = js.native
+  def apply(element: org.scalajs.dom.raw.Element): Element = js.native
   def apply(selector: String): Element = js.native
 }
 

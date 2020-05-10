@@ -362,7 +362,7 @@ class Map protected () extends Object {
     * @observable
     * @api stable
     */
-  def setTarget(target: typingsSlinky.std.Element): Unit = js.native
+  def setTarget(target: Element): Unit = js.native
   /**
     * Set the view for this map.
     * @param view The view that controls this map.

@@ -20,8 +20,27 @@ object AgentFilter {
   @scala.inline
   def apply(agentHealthCodes: AgentHealthCodeList, agentHealths: AgentHealthList): AgentFilter = {
     val __obj = js.Dynamic.literal(agentHealthCodes = agentHealthCodes.asInstanceOf[js.Any], agentHealths = agentHealths.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AgentFilter]
   }
+  @scala.inline
+  implicit class AgentFilterOps[Self <: AgentFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAgentHealthCodes(value: AgentHealthCodeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentHealthCodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAgentHealths(value: AgentHealthList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentHealths")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

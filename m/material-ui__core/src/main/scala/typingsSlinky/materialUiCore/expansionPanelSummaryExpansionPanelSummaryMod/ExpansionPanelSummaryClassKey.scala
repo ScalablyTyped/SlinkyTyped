@@ -16,18 +16,16 @@ trait ExpansionPanelSummaryClassKey extends js.Object
 
 object ExpansionPanelSummaryClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def content: typingsSlinky.materialUiCore.materialUiCoreStrings.content = "content".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.content]
   @scala.inline
-  def content: typingsSlinky.materialUiCore.materialUiCoreStrings.content = this.cast("content")
+  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = "disabled".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = this.cast("disabled")
+  def expandIcon: typingsSlinky.materialUiCore.materialUiCoreStrings.expandIcon = "expandIcon".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.expandIcon]
   @scala.inline
-  def expandIcon: typingsSlinky.materialUiCore.materialUiCoreStrings.expandIcon = this.cast("expandIcon")
+  def expanded: typingsSlinky.materialUiCore.materialUiCoreStrings.expanded = "expanded".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.expanded]
   @scala.inline
-  def expanded: typingsSlinky.materialUiCore.materialUiCoreStrings.expanded = this.cast("expanded")
+  def focused: typingsSlinky.materialUiCore.materialUiCoreStrings.focused = "focused".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.focused]
   @scala.inline
-  def focused: typingsSlinky.materialUiCore.materialUiCoreStrings.focused = this.cast("focused")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

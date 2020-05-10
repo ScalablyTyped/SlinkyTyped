@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Segment extends js.Object {
-  var duration: js.UndefOr[String] = js.undefined
-  var kind: js.UndefOr[String] = js.undefined
-  var start: js.UndefOr[String] = js.undefined
+  var duration: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.native
+  var start: js.UndefOr[String] = js.native
 }
 
 object Segment {
   @scala.inline
-  def apply(duration: String = null, kind: String = null, start: String = null): Segment = {
+  def apply(): Segment = {
     val __obj = js.Dynamic.literal()
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
     __obj.asInstanceOf[Segment]
   }
+  @scala.inline
+  implicit class SegmentOps[Self <: Segment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

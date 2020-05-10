@@ -2,54 +2,54 @@ package typingsSlinky.senchaTouch.Ext.mixin
 
 import typingsSlinky.senchaTouch.Ext.Array
 import typingsSlinky.senchaTouch.Ext.IBase
-import typingsSlinky.senchaTouch.Ext.IClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IFilterable extends IBase {
   /** [Method] This method adds a filter
   		* @param filter Ext.util.Sorter/Function/Object Can be an instance of Ext.util.Filter, an object representing an Ext.util.Filter configuration, or a filter function.
   		*/
-  var addFilter: js.UndefOr[js.Function1[/* filter */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var addFilter: js.UndefOr[js.Function1[/* filter */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] This method adds all the filters in a passed array
   		* @param filters Array An array with filters. A filter can be an instance of Ext.util.Filter, an object representing an Ext.util.Filter configuration, or a filter function.
   		* @returns Object
   		*/
-  var addFilters: js.UndefOr[js.Function1[/* filters */ js.UndefOr[Array], _]] = js.undefined
+  var addFilters: js.UndefOr[js.Function1[/* filters */ js.UndefOr[Array], _]] = js.native
   /** [Property] (Object) */
-  var currentSortFn: js.UndefOr[js.Any] = js.undefined
+  var currentSortFn: js.UndefOr[js.Any] = js.native
   /** [Property] (Boolean) */
-  var dirtyFilterFn: js.UndefOr[Boolean] = js.undefined
+  var dirtyFilterFn: js.UndefOr[Boolean] = js.native
   /** [Method] This method will sort an array based on the currently configured sorters
   		* @param data Array The array you want to have sorted.
   		* @returns Array The array you passed after it is sorted.
   		*/
-  var filter: js.UndefOr[js.Function1[/* data */ js.UndefOr[Array], Array]] = js.undefined
+  var filter: js.UndefOr[js.Function1[/* data */ js.UndefOr[Array], Array]] = js.native
   /** [Config Option] (String) */
-  var filterRoot: js.UndefOr[String] = js.undefined
+  var filterRoot: js.UndefOr[String] = js.native
   /** [Property] (Boolean) */
-  var filtered: js.UndefOr[Boolean] = js.undefined
+  var filtered: js.UndefOr[Boolean] = js.native
   /** [Config Option] (Array) */
-  var filters: js.UndefOr[Array] = js.undefined
+  var filters: js.UndefOr[Array] = js.native
   /** [Method] Returns an up to date sort function
   		* @returns Function sortFn The sort function.
   		*/
-  var getFilterFn: js.UndefOr[js.Function0[_]] = js.undefined
+  var getFilterFn: js.UndefOr[js.Function0[_]] = js.native
   /** [Method] Returns the value of filterRoot
   		* @returns String
   		*/
-  var getFilterRoot: js.UndefOr[js.Function0[String]] = js.undefined
+  var getFilterRoot: js.UndefOr[js.Function0[String]] = js.native
   /** [Method] Returns the value of filters
   		* @returns Array
   		*/
-  var getFilters: js.UndefOr[js.Function0[Array]] = js.undefined
+  var getFilters: js.UndefOr[js.Function0[Array]] = js.native
   /** [Method] This method adds a filter at a given index
   		* @param index Number The index at which to insert the filter.
   		* @param filter Ext.util.Sorter/Function/Object Can be an instance of Ext.util.Filter, an object representing an Ext.util.Filter configuration, or a filter function.
   		* @returns Object
   		*/
-  var insertFilter: js.UndefOr[js.Function2[/* index */ js.UndefOr[Double], /* filter */ js.UndefOr[js.Any], _]] = js.undefined
+  var insertFilter: js.UndefOr[js.Function2[/* index */ js.UndefOr[Double], /* filter */ js.UndefOr[js.Any], _]] = js.native
   /** [Method] This method inserts all the filters in the passed array at the given index
   		* @param index Number The index at which to insert the filters.
   		* @param filters Array Each filter can be an instance of Ext.util.Filter, an object representing an Ext.util.Filter configuration, or a filter function.
@@ -57,93 +57,226 @@ trait IFilterable extends IBase {
   		*/
   var insertFilters: js.UndefOr[
     js.Function2[/* index */ js.UndefOr[Double], /* filters */ js.UndefOr[Array], Array]
-  ] = js.undefined
+  ] = js.native
   /** [Method] This method removes all the filters in a passed array
   		* @param filters Array Each value in the array can be a string (property name), function (sorterFn), an object containing a property and value keys or Sorter instance.
   		*/
-  var removeFilters: js.UndefOr[js.Function1[/* filters */ js.UndefOr[Array], Unit]] = js.undefined
+  var removeFilters: js.UndefOr[js.Function1[/* filters */ js.UndefOr[Array], Unit]] = js.native
   /** [Method] Sets the value of filterRoot
   		* @param filterRoot String The new value.
   		*/
-  var setFilterRoot: js.UndefOr[js.Function1[/* filterRoot */ js.UndefOr[String], Unit]] = js.undefined
+  var setFilterRoot: js.UndefOr[js.Function1[/* filterRoot */ js.UndefOr[String], Unit]] = js.native
   /** [Method] Sets the value of filters
   		* @param filters Array The new value.
   		*/
-  var setFilters: js.UndefOr[js.Function1[/* filters */ js.UndefOr[Array], Unit]] = js.undefined
+  var setFilters: js.UndefOr[js.Function1[/* filters */ js.UndefOr[Array], Unit]] = js.native
 }
 
 object IFilterable {
   @scala.inline
-  def apply(
-    addFilter: /* filter */ js.UndefOr[js.Any] => Unit = null,
-    addFilters: /* filters */ js.UndefOr[Array] => _ = null,
-    alias: Array = null,
-    alternateClassName: js.Any = null,
-    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
-    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
-    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
-    config: js.Any = null,
-    currentSortFn: js.Any = null,
-    destroy: () => Unit = null,
-    dirtyFilterFn: js.UndefOr[Boolean] = js.undefined,
-    extend: String = null,
-    filter: /* data */ js.UndefOr[Array] => Array = null,
-    filterRoot: String = null,
-    filtered: js.UndefOr[Boolean] = js.undefined,
-    filters: Array = null,
-    getFilterFn: () => _ = null,
-    getFilterRoot: () => String = null,
-    getFilters: () => Array = null,
-    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
-    inheritableStatics: js.Any = null,
-    initConfig: /* instanceConfig */ js.UndefOr[js.Any] => _ = null,
-    insertFilter: (/* index */ js.UndefOr[Double], /* filter */ js.UndefOr[js.Any]) => _ = null,
-    insertFilters: (/* index */ js.UndefOr[Double], /* filters */ js.UndefOr[Array]) => Array = null,
-    mixins: js.Any = null,
-    platformConfig: js.Any = null,
-    removeFilters: /* filters */ js.UndefOr[Array] => Unit = null,
-    self: IClass = null,
-    setFilterRoot: /* filterRoot */ js.UndefOr[String] => Unit = null,
-    setFilters: /* filters */ js.UndefOr[Array] => Unit = null,
-    singleton: js.UndefOr[Boolean] = js.undefined,
-    statics: js.Any = null,
-    uses: Array = null
-  ): IFilterable = {
+  def apply(): IFilterable = {
     val __obj = js.Dynamic.literal()
-    if (addFilter != null) __obj.updateDynamic("addFilter")(js.Any.fromFunction1(addFilter))
-    if (addFilters != null) __obj.updateDynamic("addFilters")(js.Any.fromFunction1(addFilters))
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
-    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
-    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
-    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
-    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
-    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
-    if (currentSortFn != null) __obj.updateDynamic("currentSortFn")(currentSortFn.asInstanceOf[js.Any])
-    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction0(destroy))
-    if (!js.isUndefined(dirtyFilterFn)) __obj.updateDynamic("dirtyFilterFn")(dirtyFilterFn.asInstanceOf[js.Any])
-    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction1(filter))
-    if (filterRoot != null) __obj.updateDynamic("filterRoot")(filterRoot.asInstanceOf[js.Any])
-    if (!js.isUndefined(filtered)) __obj.updateDynamic("filtered")(filtered.asInstanceOf[js.Any])
-    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
-    if (getFilterFn != null) __obj.updateDynamic("getFilterFn")(js.Any.fromFunction0(getFilterFn))
-    if (getFilterRoot != null) __obj.updateDynamic("getFilterRoot")(js.Any.fromFunction0(getFilterRoot))
-    if (getFilters != null) __obj.updateDynamic("getFilters")(js.Any.fromFunction0(getFilters))
-    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
-    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
-    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
-    if (insertFilter != null) __obj.updateDynamic("insertFilter")(js.Any.fromFunction2(insertFilter))
-    if (insertFilters != null) __obj.updateDynamic("insertFilters")(js.Any.fromFunction2(insertFilters))
-    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
-    if (platformConfig != null) __obj.updateDynamic("platformConfig")(platformConfig.asInstanceOf[js.Any])
-    if (removeFilters != null) __obj.updateDynamic("removeFilters")(js.Any.fromFunction1(removeFilters))
-    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
-    if (setFilterRoot != null) __obj.updateDynamic("setFilterRoot")(js.Any.fromFunction1(setFilterRoot))
-    if (setFilters != null) __obj.updateDynamic("setFilters")(js.Any.fromFunction1(setFilters))
-    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.asInstanceOf[js.Any])
-    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
-    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFilterable]
   }
+  @scala.inline
+  implicit class IFilterableOps[Self <: IFilterable] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddFilter(value: /* filter */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addFilter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAddFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddFilters(value: /* filters */ js.UndefOr[Array] => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addFilters")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAddFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentSortFn(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentSortFn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentSortFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentSortFn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirtyFilterFn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dirtyFilterFn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirtyFilterFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dirtyFilterFn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilter(value: /* data */ js.UndefOr[Array] => Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterRoot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterRoot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterRoot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFiltered(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filtered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFiltered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filtered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilters(value: Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetFilterFn(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilterFn")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetFilterFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilterFn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetFilterRoot(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilterRoot")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetFilterRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilterRoot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetFilters(value: () => Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilters")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertFilter(value: (/* index */ js.UndefOr[Double], /* filter */ js.UndefOr[js.Any]) => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertFilter")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutInsertFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertFilters(value: (/* index */ js.UndefOr[Double], /* filters */ js.UndefOr[Array]) => Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertFilters")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutInsertFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveFilters(value: /* filters */ js.UndefOr[Array] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFilters")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRemoveFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetFilterRoot(value: /* filterRoot */ js.UndefOr[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFilterRoot")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetFilterRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFilterRoot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetFilters(value: /* filters */ js.UndefOr[Array] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFilters")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFilters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

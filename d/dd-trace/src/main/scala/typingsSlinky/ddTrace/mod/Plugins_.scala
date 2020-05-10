@@ -43,45 +43,46 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** @hidden */
+@js.native
 trait Plugins_ extends js.Object {
-  var amqp10: typingsSlinky.ddTrace.mod.plugins.amqp10
-  var amqplib: typingsSlinky.ddTrace.mod.plugins.amqplib
-  var bluebird: typingsSlinky.ddTrace.mod.plugins.bluebird
-  var bunyan: typingsSlinky.ddTrace.mod.plugins.bunyan
-  var `cassandra-driver`: cassandraDriver
-  var connect: typingsSlinky.ddTrace.mod.plugins.connect
-  var couchbase: typingsSlinky.ddTrace.mod.plugins.couchbase
-  var dns: typingsSlinky.ddTrace.mod.plugins.dns
-  var elasticsearch: typingsSlinky.ddTrace.mod.plugins.elasticsearch
-  var express: typingsSlinky.ddTrace.mod.plugins.express
-  var fastify: typingsSlinky.ddTrace.mod.plugins.fastify
-  var `generic-pool`: genericPool
-  var graphql: typingsSlinky.ddTrace.mod.plugins.graphql
-  var grpc: typingsSlinky.ddTrace.mod.plugins.grpc
-  var hapi: typingsSlinky.ddTrace.mod.plugins.hapi
-  var http: typingsSlinky.ddTrace.mod.plugins.http
-  var http2: typingsSlinky.ddTrace.mod.plugins.http2
-  var ioredis: typingsSlinky.ddTrace.mod.plugins.ioredis
-  var knex: typingsSlinky.ddTrace.mod.plugins.knex
-  var koa: typingsSlinky.ddTrace.mod.plugins.koa
-  var `limitd-client`: limitdClient
-  var memcached: typingsSlinky.ddTrace.mod.plugins.memcached
-  var `mongodb-core`: mongodbCore
-  var mysql: typingsSlinky.ddTrace.mod.plugins.mysql
-  var mysql2: typingsSlinky.ddTrace.mod.plugins.mysql2
-  var net: typingsSlinky.ddTrace.mod.plugins.net
-  var paperplane: typingsSlinky.ddTrace.mod.plugins.paperplane
-  var pg: typingsSlinky.ddTrace.mod.plugins.pg
-  var pino: typingsSlinky.ddTrace.mod.plugins.pino
-  var promise: typingsSlinky.ddTrace.mod.plugins.promise
-  var `promise-js`: promiseJs
-  var q: typingsSlinky.ddTrace.mod.plugins.q
-  var redis: typingsSlinky.ddTrace.mod.plugins.redis
-  var restify: typingsSlinky.ddTrace.mod.plugins.restify
-  var router: typingsSlinky.ddTrace.mod.plugins.router
-  var tedious: typingsSlinky.ddTrace.mod.plugins.tedious
-  var when: typingsSlinky.ddTrace.mod.plugins.when
-  var winston: typingsSlinky.ddTrace.mod.plugins.winston
+  var amqp10: typingsSlinky.ddTrace.mod.plugins.amqp10 = js.native
+  var amqplib: typingsSlinky.ddTrace.mod.plugins.amqplib = js.native
+  var bluebird: typingsSlinky.ddTrace.mod.plugins.bluebird = js.native
+  var bunyan: typingsSlinky.ddTrace.mod.plugins.bunyan = js.native
+  var `cassandra-driver`: cassandraDriver = js.native
+  var connect: typingsSlinky.ddTrace.mod.plugins.connect = js.native
+  var couchbase: typingsSlinky.ddTrace.mod.plugins.couchbase = js.native
+  var dns: typingsSlinky.ddTrace.mod.plugins.dns = js.native
+  var elasticsearch: typingsSlinky.ddTrace.mod.plugins.elasticsearch = js.native
+  var express: typingsSlinky.ddTrace.mod.plugins.express = js.native
+  var fastify: typingsSlinky.ddTrace.mod.plugins.fastify = js.native
+  var `generic-pool`: genericPool = js.native
+  var graphql: typingsSlinky.ddTrace.mod.plugins.graphql = js.native
+  var grpc: typingsSlinky.ddTrace.mod.plugins.grpc = js.native
+  var hapi: typingsSlinky.ddTrace.mod.plugins.hapi = js.native
+  var http: typingsSlinky.ddTrace.mod.plugins.http = js.native
+  var http2: typingsSlinky.ddTrace.mod.plugins.http2 = js.native
+  var ioredis: typingsSlinky.ddTrace.mod.plugins.ioredis = js.native
+  var knex: typingsSlinky.ddTrace.mod.plugins.knex = js.native
+  var koa: typingsSlinky.ddTrace.mod.plugins.koa = js.native
+  var `limitd-client`: limitdClient = js.native
+  var memcached: typingsSlinky.ddTrace.mod.plugins.memcached = js.native
+  var `mongodb-core`: mongodbCore = js.native
+  var mysql: typingsSlinky.ddTrace.mod.plugins.mysql = js.native
+  var mysql2: typingsSlinky.ddTrace.mod.plugins.mysql2 = js.native
+  var net: typingsSlinky.ddTrace.mod.plugins.net = js.native
+  var paperplane: typingsSlinky.ddTrace.mod.plugins.paperplane = js.native
+  var pg: typingsSlinky.ddTrace.mod.plugins.pg = js.native
+  var pino: typingsSlinky.ddTrace.mod.plugins.pino = js.native
+  var promise: typingsSlinky.ddTrace.mod.plugins.promise = js.native
+  var `promise-js`: promiseJs = js.native
+  var q: typingsSlinky.ddTrace.mod.plugins.q = js.native
+  var redis: typingsSlinky.ddTrace.mod.plugins.redis = js.native
+  var restify: typingsSlinky.ddTrace.mod.plugins.restify = js.native
+  var router: typingsSlinky.ddTrace.mod.plugins.router = js.native
+  var tedious: typingsSlinky.ddTrace.mod.plugins.tedious = js.native
+  var when: typingsSlinky.ddTrace.mod.plugins.when = js.native
+  var winston: typingsSlinky.ddTrace.mod.plugins.winston = js.native
 }
 
 object Plugins_ {
@@ -134,5 +135,241 @@ object Plugins_ {
     __obj.updateDynamic("promise-js")(`promise-js`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Plugins_]
   }
+  @scala.inline
+  implicit class Plugins_Ops[Self <: Plugins_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAmqp10(value: amqp10): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amqp10")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAmqplib(value: amqplib): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amqplib")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBluebird(value: bluebird): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bluebird")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBunyan(value: bunyan): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bunyan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withCassandra-driver`(value: cassandraDriver): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cassandra-driver")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConnect(value: connect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCouchbase(value: couchbase): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("couchbase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDns(value: dns): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withElasticsearch(value: elasticsearch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticsearch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExpress(value: express): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("express")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFastify(value: fastify): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fastify")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withGeneric-pool`(value: genericPool): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generic-pool")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGraphql(value: graphql): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("graphql")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGrpc(value: grpc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grpc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHapi(value: hapi): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hapi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHttp(value: http): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("http")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHttp2(value: http2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("http2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIoredis(value: ioredis): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ioredis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKnex(value: knex): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("knex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKoa(value: koa): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("koa")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withLimitd-client`(value: limitdClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limitd-client")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMemcached(value: memcached): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memcached")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withMongodb-core`(value: mongodbCore): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mongodb-core")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMysql(value: mysql): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mysql")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMysql2(value: mysql2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mysql2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNet(value: net): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("net")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaperplane(value: paperplane): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paperplane")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPg(value: pg): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPino(value: pino): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pino")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPromise(value: promise): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promise")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withPromise-js`(value: promiseJs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promise-js")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQ(value: q): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRedis(value: redis): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRestify(value: restify): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restify")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRouter(value: router): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("router")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTedious(value: tedious): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tedious")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWhen(value: when): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("when")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWinston(value: winston): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("winston")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

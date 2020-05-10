@@ -1,7 +1,5 @@
 package typingsSlinky.relayRuntime.relayConcreteNodeMod
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.relayRuntime.AnonConnection
 import typingsSlinky.relayRuntime.normalizationNodeMod.NormalizationOperation
 import typingsSlinky.relayRuntime.normalizationNodeMod.NormalizationSelection
 import typingsSlinky.relayRuntime.readerNodeMod.ReaderArgumentDefinition
@@ -29,7 +27,6 @@ object GeneratedNode {
     params: RequestParameters
   ): GeneratedNode = {
     val __obj = js.Dynamic.literal(fragment = fragment.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], operation = operation.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GeneratedNode]
   }
   @scala.inline
@@ -38,29 +35,20 @@ object GeneratedNode {
     kind: String,
     name: String,
     selections: js.Array[ReaderSelection],
-    `type`: String,
-    metadata: AnonConnection = null
+    `type`: String
   ): GeneratedNode = {
     val __obj = js.Dynamic.literal(argumentDefinitions = argumentDefinitions.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeneratedNode]
   }
   @scala.inline
   def ReaderInlineDataFragment(kind: InlineDataFragment, name: String): GeneratedNode = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GeneratedNode]
   }
   @scala.inline
-  def NormalizationSplitOperation(
-    kind: String,
-    name: String,
-    selections: js.Array[NormalizationSelection],
-    metadata: StringDictionary[js.Any] = null
-  ): GeneratedNode = {
+  def NormalizationSplitOperation(kind: String, name: String, selections: js.Array[NormalizationSelection]): GeneratedNode = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeneratedNode]
   }
 }

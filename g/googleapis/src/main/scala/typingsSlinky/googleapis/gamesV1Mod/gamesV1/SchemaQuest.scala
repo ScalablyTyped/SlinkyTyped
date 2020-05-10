@@ -94,42 +94,209 @@ trait SchemaQuest extends js.Object {
 
 object SchemaQuest {
   @scala.inline
-  def apply(
-    acceptedTimestampMillis: String = null,
-    applicationId: String = null,
-    bannerUrl: String = null,
-    description: String = null,
-    endTimestampMillis: String = null,
-    iconUrl: String = null,
-    id: String = null,
-    isDefaultBannerUrl: js.UndefOr[Boolean] = js.undefined,
-    isDefaultIconUrl: js.UndefOr[Boolean] = js.undefined,
-    kind: String = null,
-    lastUpdatedTimestampMillis: String = null,
-    milestones: js.Array[SchemaQuestMilestone] = null,
-    name: String = null,
-    notifyTimestampMillis: String = null,
-    startTimestampMillis: String = null,
-    state: String = null
-  ): SchemaQuest = {
+  def apply(): SchemaQuest = {
     val __obj = js.Dynamic.literal()
-    if (acceptedTimestampMillis != null) __obj.updateDynamic("acceptedTimestampMillis")(acceptedTimestampMillis.asInstanceOf[js.Any])
-    if (applicationId != null) __obj.updateDynamic("applicationId")(applicationId.asInstanceOf[js.Any])
-    if (bannerUrl != null) __obj.updateDynamic("bannerUrl")(bannerUrl.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (endTimestampMillis != null) __obj.updateDynamic("endTimestampMillis")(endTimestampMillis.asInstanceOf[js.Any])
-    if (iconUrl != null) __obj.updateDynamic("iconUrl")(iconUrl.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDefaultBannerUrl)) __obj.updateDynamic("isDefaultBannerUrl")(isDefaultBannerUrl.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDefaultIconUrl)) __obj.updateDynamic("isDefaultIconUrl")(isDefaultIconUrl.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (lastUpdatedTimestampMillis != null) __obj.updateDynamic("lastUpdatedTimestampMillis")(lastUpdatedTimestampMillis.asInstanceOf[js.Any])
-    if (milestones != null) __obj.updateDynamic("milestones")(milestones.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (notifyTimestampMillis != null) __obj.updateDynamic("notifyTimestampMillis")(notifyTimestampMillis.asInstanceOf[js.Any])
-    if (startTimestampMillis != null) __obj.updateDynamic("startTimestampMillis")(startTimestampMillis.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaQuest]
   }
+  @scala.inline
+  implicit class SchemaQuestOps[Self <: SchemaQuest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcceptedTimestampMillis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptedTimestampMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceptedTimestampMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptedTimestampMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApplicationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBannerUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bannerUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBannerUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bannerUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTimestampMillis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimestampMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTimestampMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimestampMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDefaultBannerUrl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultBannerUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDefaultBannerUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultBannerUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDefaultIconUrl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultIconUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDefaultIconUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultIconUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdatedTimestampMillis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTimestampMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdatedTimestampMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTimestampMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMilestones(value: js.Array[SchemaQuestMilestone]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("milestones")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMilestones: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("milestones")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotifyTimestampMillis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyTimestampMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotifyTimestampMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyTimestampMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTimestampMillis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimestampMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTimestampMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimestampMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

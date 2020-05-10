@@ -42,24 +42,101 @@ trait ServiceState extends js.Object {
 
 object ServiceState {
   @scala.inline
-  def apply(
-    arn: Input[String] = null,
-    description: Input[String] = null,
-    dnsConfig: Input[ServiceDnsConfig] = null,
-    healthCheckConfig: Input[ServiceHealthCheckConfig] = null,
-    healthCheckCustomConfig: Input[ServiceHealthCheckCustomConfig] = null,
-    name: Input[String] = null,
-    namespaceId: Input[String] = null
-  ): ServiceState = {
+  def apply(): ServiceState = {
     val __obj = js.Dynamic.literal()
-    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (dnsConfig != null) __obj.updateDynamic("dnsConfig")(dnsConfig.asInstanceOf[js.Any])
-    if (healthCheckConfig != null) __obj.updateDynamic("healthCheckConfig")(healthCheckConfig.asInstanceOf[js.Any])
-    if (healthCheckCustomConfig != null) __obj.updateDynamic("healthCheckCustomConfig")(healthCheckCustomConfig.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (namespaceId != null) __obj.updateDynamic("namespaceId")(namespaceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceState]
   }
+  @scala.inline
+  implicit class ServiceStateOps[Self <: ServiceState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDnsConfig(value: Input[ServiceDnsConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDnsConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHealthCheckConfig(value: Input[ServiceHealthCheckConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheckConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHealthCheckConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheckConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHealthCheckCustomConfig(value: Input[ServiceHealthCheckCustomConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheckCustomConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHealthCheckCustomConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheckCustomConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamespaceId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamespaceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

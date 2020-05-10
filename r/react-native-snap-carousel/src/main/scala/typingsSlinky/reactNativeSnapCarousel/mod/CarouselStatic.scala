@@ -1,13 +1,13 @@
 package typingsSlinky.reactNativeSnapCarousel.mod
 
 import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CarouselStatic[T] extends ComponentClass[CarouselProps[T], ComponentState] {
+trait CarouselStatic[T]
+  extends ComponentClass[CarouselProps[T], js.Object] {
   /**
     * Current active item (int, starts at 0)
     */

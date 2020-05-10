@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAnchor extends js.Object {
-  var anchor: Double | Null
-  var head: Double | Null
+  var anchor: Double | Null = js.native
+  var head: Double | Null = js.native
 }
 
 object AnonAnchor {
   @scala.inline
-  def apply(anchor: Int | Double = null, head: Int | Double = null): AnonAnchor = {
+  def apply(): AnonAnchor = {
     val __obj = js.Dynamic.literal()
-    if (anchor != null) __obj.updateDynamic("anchor")(anchor.asInstanceOf[js.Any])
-    if (head != null) __obj.updateDynamic("head")(head.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAnchor]
   }
+  @scala.inline
+  implicit class AnonAnchorOps[Self <: AnonAnchor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnchor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAnchorNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(null)
+        ret
+    }
+    @scala.inline
+    def withHead(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeadNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(null)
+        ret
+    }
+  }
+  
 }
 

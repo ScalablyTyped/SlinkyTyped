@@ -1,10 +1,9 @@
 package typingsSlinky.reactMeasure.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import org.scalajs.dom.raw.Element
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactMeasure.mod.ContentRect
 import typingsSlinky.reactMeasure.mod.MeasureProps
@@ -13,35 +12,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactMeasure
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactMeasure {
   @JSImport("react-measure", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    bounds: js.UndefOr[Boolean] = js.undefined,
-    client: js.UndefOr[Boolean] = js.undefined,
-    innerRef: Ref[org.scalajs.dom.raw.Element] = null,
-    margin: js.UndefOr[Boolean] = js.undefined,
-    offset: js.UndefOr[Boolean] = js.undefined,
-    onResize: /* contentRect */ ContentRect => Unit = null,
-    scroll: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bounds)) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
-    if (!js.isUndefined(client)) __obj.updateDynamic("client")(client.asInstanceOf[js.Any])
-    if (innerRef != null) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
-    if (!js.isUndefined(margin)) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (onResize != null) __obj.updateDynamic("onResize")(js.Any.fromFunction1(onResize))
-    if (!js.isUndefined(scroll)) __obj.updateDynamic("scroll")(scroll.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def bounds(value: Boolean): this.type = set("bounds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def client(value: Boolean): this.type = set("client", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefRefObject(value: ReactRef[Element]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefFunction1(value: /* instance */ Element | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def innerRef(value: Ref[Element]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefNull: this.type = set("innerRef", null)
+    @scala.inline
+    def margin(value: Boolean): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offset(value: Boolean): this.type = set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onResize(value: /* contentRect */ ContentRect => Unit): this.type = set("onResize", js.Any.fromFunction1(value))
+    @scala.inline
+    def scroll(value: Boolean): this.type = set("scroll", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactMeasure.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MeasureProps
+  
+  def withProps(p: MeasureProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactMeasure.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

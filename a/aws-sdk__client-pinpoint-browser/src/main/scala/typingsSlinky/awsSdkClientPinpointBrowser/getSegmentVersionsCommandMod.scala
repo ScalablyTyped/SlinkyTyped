@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkClientPinpointBrowser
 
+import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientPinpointBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientPinpointBrowser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientPinpointBrowser.pinpointConfigurationMod.PinpointResolvedConfiguration
@@ -8,7 +9,6 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesGetSegmentVersionsOutputMo
 import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.std.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,16 +26,9 @@ object getSegmentVersionsCommandMod extends js.Object {
           Blob
         ] {
     def this(input: GetSegmentVersionsInput) = this()
-    /* CompleteClass */
-    override val input: GetSegmentVersionsInput = js.native
-    val middlewareStack: MiddlewareStack[GetSegmentVersionsInput, GetSegmentVersionsOutput, org.scalajs.dom.raw.Blob] = js.native
+    val middlewareStack: MiddlewareStack[GetSegmentVersionsInput, GetSegmentVersionsOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
-      configuration: PinpointResolvedConfiguration
-    ): Handler[GetSegmentVersionsInput, GetSegmentVersionsOutput] = js.native
-    /* CompleteClass */
-    override def resolveMiddleware(
-      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[GetSegmentVersionsInput, GetSegmentVersionsOutput] = js.native
   }

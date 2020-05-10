@@ -15,16 +15,14 @@ trait LogLevel extends js.Object
 
 object LogLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def debug: typingsSlinky.logger.loggerStrings.debug = "debug".asInstanceOf[typingsSlinky.logger.loggerStrings.debug]
   @scala.inline
-  def debug: typingsSlinky.logger.loggerStrings.debug = this.cast("debug")
+  def error: typingsSlinky.logger.loggerStrings.error = "error".asInstanceOf[typingsSlinky.logger.loggerStrings.error]
   @scala.inline
-  def error: typingsSlinky.logger.loggerStrings.error = this.cast("error")
+  def fatal: typingsSlinky.logger.loggerStrings.fatal = "fatal".asInstanceOf[typingsSlinky.logger.loggerStrings.fatal]
   @scala.inline
-  def fatal: typingsSlinky.logger.loggerStrings.fatal = this.cast("fatal")
+  def info: typingsSlinky.logger.loggerStrings.info = "info".asInstanceOf[typingsSlinky.logger.loggerStrings.info]
   @scala.inline
-  def info: typingsSlinky.logger.loggerStrings.info = this.cast("info")
-  @scala.inline
-  def warn: typingsSlinky.logger.loggerStrings.warn = this.cast("warn")
+  def warn: typingsSlinky.logger.loggerStrings.warn = "warn".asInstanceOf[typingsSlinky.logger.loggerStrings.warn]
 }
 

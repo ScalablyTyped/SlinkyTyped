@@ -22,12 +22,53 @@ trait ErrorDetail extends js.Object {
 
 object ErrorDetail {
   @scala.inline
-  def apply(errorCode: ErrorCode = null, errorMessage: String = null, resourceIds: StringList = null): ErrorDetail = {
+  def apply(): ErrorDetail = {
     val __obj = js.Dynamic.literal()
-    if (errorCode != null) __obj.updateDynamic("errorCode")(errorCode.asInstanceOf[js.Any])
-    if (errorMessage != null) __obj.updateDynamic("errorMessage")(errorMessage.asInstanceOf[js.Any])
-    if (resourceIds != null) __obj.updateDynamic("resourceIds")(resourceIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[ErrorDetail]
   }
+  @scala.inline
+  implicit class ErrorDetailOps[Self <: ErrorDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorCode(value: ErrorCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceIds(value: StringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,14 +14,12 @@ trait AdRotationType extends js.Object
 
 object AdRotationType {
   @scala.inline
-  def CONVERSION_OPTIMIZE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.CONVERSION_OPTIMIZE = this.cast("CONVERSION_OPTIMIZE")
+  def CONVERSION_OPTIMIZE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.CONVERSION_OPTIMIZE = "CONVERSION_OPTIMIZE".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.CONVERSION_OPTIMIZE]
   @scala.inline
-  def OPTIMIZE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.OPTIMIZE = this.cast("OPTIMIZE")
+  def OPTIMIZE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.OPTIMIZE = "OPTIMIZE".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.OPTIMIZE]
   @scala.inline
-  def ROTATE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.ROTATE = this.cast("ROTATE")
+  def ROTATE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.ROTATE = "ROTATE".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.ROTATE]
   @scala.inline
-  def ROTATE_FOREVER: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.ROTATE_FOREVER = this.cast("ROTATE_FOREVER")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ROTATE_FOREVER: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.ROTATE_FOREVER = "ROTATE_FOREVER".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.ROTATE_FOREVER]
 }
 

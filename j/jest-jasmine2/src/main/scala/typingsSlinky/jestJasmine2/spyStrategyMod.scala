@@ -1,6 +1,5 @@
 package typingsSlinky.jestJasmine2
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +17,7 @@ object spyStrategyMod extends js.Object {
     def returnValues(): js.Any = js.native
     def stub(fn: js.Function): js.Any = js.native
     def throwError(something: String): js.Any = js.native
-    def throwError(something: Error): js.Any = js.native
+    def throwError(something: js.Error): js.Any = js.native
   }
   
   @js.native

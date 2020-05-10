@@ -18,11 +18,41 @@ trait SavingsPlansSavings extends js.Object {
 
 object SavingsPlansSavings {
   @scala.inline
-  def apply(NetSavings: GenericString = null, OnDemandCostEquivalent: GenericString = null): SavingsPlansSavings = {
+  def apply(): SavingsPlansSavings = {
     val __obj = js.Dynamic.literal()
-    if (NetSavings != null) __obj.updateDynamic("NetSavings")(NetSavings.asInstanceOf[js.Any])
-    if (OnDemandCostEquivalent != null) __obj.updateDynamic("OnDemandCostEquivalent")(OnDemandCostEquivalent.asInstanceOf[js.Any])
     __obj.asInstanceOf[SavingsPlansSavings]
   }
+  @scala.inline
+  implicit class SavingsPlansSavingsOps[Self <: SavingsPlansSavings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNetSavings(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetSavings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetSavings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetSavings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDemandCostEquivalent(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDemandCostEquivalent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDemandCostEquivalent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDemandCostEquivalent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

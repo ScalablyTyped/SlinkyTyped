@@ -8,29 +8,82 @@ import scala.scalajs.js.annotation._
 /**
   * The language info metatda
   */
+@js.native
 trait ILanguageInfoMetadata extends JSONObject {
-  var codemirror_mode: js.UndefOr[String | JSONObject] = js.undefined
-  var file_extension: js.UndefOr[String] = js.undefined
-  var mimetype: js.UndefOr[String] = js.undefined
-  var name: String
-  var pygments_lexer: js.UndefOr[String] = js.undefined
+  var codemirror_mode: js.UndefOr[String | JSONObject] = js.native
+  var file_extension: js.UndefOr[String] = js.native
+  var mimetype: js.UndefOr[String] = js.native
+  var name: String = js.native
+  var pygments_lexer: js.UndefOr[String] = js.native
 }
 
 object ILanguageInfoMetadata {
   @scala.inline
-  def apply(
-    name: String,
-    codemirror_mode: String | JSONObject = null,
-    file_extension: String = null,
-    mimetype: String = null,
-    pygments_lexer: String = null
-  ): ILanguageInfoMetadata = {
+  def apply(name: String): ILanguageInfoMetadata = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (codemirror_mode != null) __obj.updateDynamic("codemirror_mode")(codemirror_mode.asInstanceOf[js.Any])
-    if (file_extension != null) __obj.updateDynamic("file_extension")(file_extension.asInstanceOf[js.Any])
-    if (mimetype != null) __obj.updateDynamic("mimetype")(mimetype.asInstanceOf[js.Any])
-    if (pygments_lexer != null) __obj.updateDynamic("pygments_lexer")(pygments_lexer.asInstanceOf[js.Any])
     __obj.asInstanceOf[ILanguageInfoMetadata]
   }
+  @scala.inline
+  implicit class ILanguageInfoMetadataOps[Self <: ILanguageInfoMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCodemirror_mode(value: String | JSONObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codemirror_mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodemirror_mode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codemirror_mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFile_extension(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file_extension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFile_extension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file_extension")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMimetype(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mimetype")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMimetype: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mimetype")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPygments_lexer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pygments_lexer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPygments_lexer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pygments_lexer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

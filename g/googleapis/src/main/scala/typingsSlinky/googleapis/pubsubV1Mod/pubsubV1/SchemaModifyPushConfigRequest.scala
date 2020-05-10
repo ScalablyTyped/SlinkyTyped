@@ -21,10 +21,29 @@ trait SchemaModifyPushConfigRequest extends js.Object {
 
 object SchemaModifyPushConfigRequest {
   @scala.inline
-  def apply(pushConfig: SchemaPushConfig = null): SchemaModifyPushConfigRequest = {
+  def apply(): SchemaModifyPushConfigRequest = {
     val __obj = js.Dynamic.literal()
-    if (pushConfig != null) __obj.updateDynamic("pushConfig")(pushConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaModifyPushConfigRequest]
   }
+  @scala.inline
+  implicit class SchemaModifyPushConfigRequestOps[Self <: SchemaModifyPushConfigRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPushConfig(value: SchemaPushConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pushConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPushConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pushConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

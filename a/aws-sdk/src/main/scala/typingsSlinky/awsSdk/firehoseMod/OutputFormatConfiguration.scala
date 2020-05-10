@@ -14,10 +14,29 @@ trait OutputFormatConfiguration extends js.Object {
 
 object OutputFormatConfiguration {
   @scala.inline
-  def apply(Serializer: Serializer = null): OutputFormatConfiguration = {
+  def apply(): OutputFormatConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (Serializer != null) __obj.updateDynamic("Serializer")(Serializer.asInstanceOf[js.Any])
     __obj.asInstanceOf[OutputFormatConfiguration]
   }
+  @scala.inline
+  implicit class OutputFormatConfigurationOps[Self <: OutputFormatConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSerializer(value: Serializer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Serializer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSerializer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Serializer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

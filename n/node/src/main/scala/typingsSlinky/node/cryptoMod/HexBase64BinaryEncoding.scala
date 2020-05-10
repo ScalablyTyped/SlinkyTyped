@@ -13,12 +13,10 @@ trait HexBase64BinaryEncoding extends js.Object
 
 object HexBase64BinaryEncoding {
   @scala.inline
-  def base64: typingsSlinky.node.nodeStrings.base64 = this.cast("base64")
+  def base64: typingsSlinky.node.nodeStrings.base64 = "base64".asInstanceOf[typingsSlinky.node.nodeStrings.base64]
   @scala.inline
-  def binary: typingsSlinky.node.nodeStrings.binary = this.cast("binary")
+  def binary: typingsSlinky.node.nodeStrings.binary = "binary".asInstanceOf[typingsSlinky.node.nodeStrings.binary]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def hex: typingsSlinky.node.nodeStrings.hex = this.cast("hex")
+  def hex: typingsSlinky.node.nodeStrings.hex = "hex".asInstanceOf[typingsSlinky.node.nodeStrings.hex]
 }
 

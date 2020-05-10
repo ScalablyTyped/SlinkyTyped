@@ -1,8 +1,8 @@
 package typingsSlinky.reachSkipNav.mod
 
+import org.scalajs.dom.raw.HTMLAnchorElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.HTMLProps
-import typingsSlinky.std.HTMLAnchorElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

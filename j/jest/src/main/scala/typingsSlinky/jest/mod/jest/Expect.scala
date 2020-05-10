@@ -1,7 +1,6 @@
 package typingsSlinky.jest.mod.jest
 
 import typingsSlinky.std.Record
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -97,6 +96,6 @@ trait Expect extends js.Object {
     * Matches any string that contains the exact provided string
     */
   def stringMatching(str: String): js.Any = js.native
-  def stringMatching(str: RegExp): js.Any = js.native
+  def stringMatching(str: js.RegExp): js.Any = js.native
 }
 

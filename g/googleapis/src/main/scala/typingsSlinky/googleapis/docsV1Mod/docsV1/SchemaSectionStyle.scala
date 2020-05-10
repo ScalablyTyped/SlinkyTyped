@@ -28,16 +28,53 @@ trait SchemaSectionStyle extends js.Object {
 
 object SchemaSectionStyle {
   @scala.inline
-  def apply(
-    columnProperties: js.Array[SchemaSectionColumnProperties] = null,
-    columnSeparatorStyle: String = null,
-    contentDirection: String = null
-  ): SchemaSectionStyle = {
+  def apply(): SchemaSectionStyle = {
     val __obj = js.Dynamic.literal()
-    if (columnProperties != null) __obj.updateDynamic("columnProperties")(columnProperties.asInstanceOf[js.Any])
-    if (columnSeparatorStyle != null) __obj.updateDynamic("columnSeparatorStyle")(columnSeparatorStyle.asInstanceOf[js.Any])
-    if (contentDirection != null) __obj.updateDynamic("contentDirection")(contentDirection.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSectionStyle]
   }
+  @scala.inline
+  implicit class SchemaSectionStyleOps[Self <: SchemaSectionStyle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumnProperties(value: js.Array[SchemaSectionColumnProperties]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnSeparatorStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnSeparatorStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnSeparatorStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnSeparatorStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDirection")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

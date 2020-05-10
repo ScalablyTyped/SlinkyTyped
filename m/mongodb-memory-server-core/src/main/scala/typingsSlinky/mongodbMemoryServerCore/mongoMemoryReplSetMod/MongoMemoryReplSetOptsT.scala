@@ -6,30 +6,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MongoMemoryReplSetOptsT extends js.Object {
-  var autoStart: js.UndefOr[Boolean] = js.undefined
-  var binary: js.UndefOr[MongoBinaryOpts] = js.undefined
-  var debug: js.UndefOr[Boolean] = js.undefined
-  var instanceOpts: js.UndefOr[js.Array[MongoMemoryInstancePropBaseT]] = js.undefined
-  var replSet: js.UndefOr[ReplSetOpts] = js.undefined
+  var autoStart: js.UndefOr[Boolean] = js.native
+  var binary: js.UndefOr[MongoBinaryOpts] = js.native
+  var instanceOpts: js.UndefOr[js.Array[MongoMemoryInstancePropBaseT]] = js.native
+  var replSet: js.UndefOr[ReplSetOpts] = js.native
 }
 
 object MongoMemoryReplSetOptsT {
   @scala.inline
-  def apply(
-    autoStart: js.UndefOr[Boolean] = js.undefined,
-    binary: MongoBinaryOpts = null,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    instanceOpts: js.Array[MongoMemoryInstancePropBaseT] = null,
-    replSet: ReplSetOpts = null
-  ): MongoMemoryReplSetOptsT = {
+  def apply(): MongoMemoryReplSetOptsT = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoStart)) __obj.updateDynamic("autoStart")(autoStart.asInstanceOf[js.Any])
-    if (binary != null) __obj.updateDynamic("binary")(binary.asInstanceOf[js.Any])
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (instanceOpts != null) __obj.updateDynamic("instanceOpts")(instanceOpts.asInstanceOf[js.Any])
-    if (replSet != null) __obj.updateDynamic("replSet")(replSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[MongoMemoryReplSetOptsT]
   }
+  @scala.inline
+  implicit class MongoMemoryReplSetOptsTOps[Self <: MongoMemoryReplSetOptsT] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoStart(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBinary(value: MongoBinaryOpts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBinary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceOpts(value: js.Array[MongoMemoryInstancePropBaseT]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceOpts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceOpts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceOpts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplSet(value: ReplSetOpts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replSet")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

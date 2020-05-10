@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonActive extends js.Object {
-  var active: js.UndefOr[Boolean] = js.undefined
-  var amount: js.UndefOr[Double] = js.undefined
-  var description: js.UndefOr[String] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
+  var active: js.UndefOr[Boolean] = js.native
+  var amount: js.UndefOr[Double] = js.native
+  var description: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.native
 }
 
 object AnonActive {
   @scala.inline
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    amount: Int | Double = null,
-    description: String = null,
-    name: String = null
-  ): AnonActive = {
+  def apply(): AnonActive = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (amount != null) __obj.updateDynamic("amount")(amount.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonActive]
   }
+  @scala.inline
+  implicit class AnonActiveOps[Self <: AnonActive] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

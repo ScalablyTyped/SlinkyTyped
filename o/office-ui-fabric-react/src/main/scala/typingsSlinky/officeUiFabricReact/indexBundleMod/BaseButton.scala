@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class BaseButton protected ()
   extends typingsSlinky.officeUiFabricReact.mod.BaseButton {
-  def this(props: IBaseButtonProps, rootClassName: String) = this()
+  def this(props: IBaseButtonProps) = this()
 }
 
 /* static members */

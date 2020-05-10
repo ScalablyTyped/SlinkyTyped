@@ -20,11 +20,41 @@ trait SchemaLicenseResourceRequirements extends js.Object {
 
 object SchemaLicenseResourceRequirements {
   @scala.inline
-  def apply(minGuestCpuCount: Int | Double = null, minMemoryMb: Int | Double = null): SchemaLicenseResourceRequirements = {
+  def apply(): SchemaLicenseResourceRequirements = {
     val __obj = js.Dynamic.literal()
-    if (minGuestCpuCount != null) __obj.updateDynamic("minGuestCpuCount")(minGuestCpuCount.asInstanceOf[js.Any])
-    if (minMemoryMb != null) __obj.updateDynamic("minMemoryMb")(minMemoryMb.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLicenseResourceRequirements]
   }
+  @scala.inline
+  implicit class SchemaLicenseResourceRequirementsOps[Self <: SchemaLicenseResourceRequirements] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMinGuestCpuCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minGuestCpuCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinGuestCpuCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minGuestCpuCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinMemoryMb(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minMemoryMb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinMemoryMb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minMemoryMb")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

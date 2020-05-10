@@ -1,28 +1,46 @@
 package typingsSlinky.reduxAuthWrapper.mod
 
-import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AuthBaseConfig[OwnProps, State] extends AuthConfig {
-  var authenticatedSelector: StateSelector[State, OwnProps, Boolean]
-  var authenticatingSelector: js.UndefOr[StateSelector[State, OwnProps, Boolean]] = js.undefined
+  var authenticatedSelector: StateSelector[State, OwnProps, Boolean] = js.native
+  var authenticatingSelector: js.UndefOr[StateSelector[State, OwnProps, Boolean]] = js.native
 }
 
 object AuthBaseConfig {
   @scala.inline
-  def apply[OwnProps, State](
-    authenticatedSelector: (State, OwnProps) => Boolean,
-    AuthenticatingComponent: ReactComponentClass[_] = null,
-    authenticatingSelector: (State, OwnProps) => Boolean = null,
-    wrapperDisplayName: String = null
-  ): AuthBaseConfig[OwnProps, State] = {
+  def apply[OwnProps, State](authenticatedSelector: (State, OwnProps) => Boolean): AuthBaseConfig[OwnProps, State] = {
     val __obj = js.Dynamic.literal(authenticatedSelector = js.Any.fromFunction2(authenticatedSelector))
-    if (AuthenticatingComponent != null) __obj.updateDynamic("AuthenticatingComponent")(AuthenticatingComponent.asInstanceOf[js.Any])
-    if (authenticatingSelector != null) __obj.updateDynamic("authenticatingSelector")(js.Any.fromFunction2(authenticatingSelector))
-    if (wrapperDisplayName != null) __obj.updateDynamic("wrapperDisplayName")(wrapperDisplayName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthBaseConfig[OwnProps, State]]
   }
+  @scala.inline
+  implicit class AuthBaseConfigOps[Self[ownprops, state] <: AuthBaseConfig[ownprops, state], OwnProps, State] (val x: Self[OwnProps, State]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[OwnProps, State] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[OwnProps, State]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[OwnProps, State]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[OwnProps, State]) with Other]
+    @scala.inline
+    def withAuthenticatedSelector(value: (State, OwnProps) => Boolean): Self[OwnProps, State] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticatedSelector")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withAuthenticatingSelector(value: (State, OwnProps) => Boolean): Self[OwnProps, State] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticatingSelector")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAuthenticatingSelector: Self[OwnProps, State] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticatingSelector")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -28,16 +28,53 @@ trait SchemaStructuredMessage extends js.Object {
 
 object SchemaStructuredMessage {
   @scala.inline
-  def apply(
-    messageKey: String = null,
-    messageText: String = null,
-    parameters: js.Array[SchemaParameter] = null
-  ): SchemaStructuredMessage = {
+  def apply(): SchemaStructuredMessage = {
     val __obj = js.Dynamic.literal()
-    if (messageKey != null) __obj.updateDynamic("messageKey")(messageKey.asInstanceOf[js.Any])
-    if (messageText != null) __obj.updateDynamic("messageText")(messageText.asInstanceOf[js.Any])
-    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStructuredMessage]
   }
+  @scala.inline
+  implicit class SchemaStructuredMessageOps[Self <: SchemaStructuredMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMessageKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessageText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: js.Array[SchemaParameter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

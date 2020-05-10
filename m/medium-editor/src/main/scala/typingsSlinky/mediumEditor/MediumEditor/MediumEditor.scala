@@ -3,10 +3,10 @@ package typingsSlinky.mediumEditor.MediumEditor
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.NodeList
 import org.scalajs.dom.raw.Range
 import typingsSlinky.mediumEditor.AnonMajor
 import typingsSlinky.std.EventListenerOrEventListenerObject
-import typingsSlinky.std.NodeList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,7 +47,7 @@ Instantiable1[/* elements */ elementType, typingsSlinky.mediumEditor.MediumEdito
   def getSelectedParentElement(range: Range): HTMLElement = js.native
   def importSelection(selectionState: selectionObject, favorLaterSelectionAnchor: Boolean): Unit = js.native
   def off(
-    targets: typingsSlinky.std.HTMLElement,
+    targets: HTMLElement,
     event: String,
     listener: EventListenerOrEventListenerObject,
     useCapture: Boolean
@@ -60,7 +60,7 @@ Instantiable1[/* elements */ elementType, typingsSlinky.mediumEditor.MediumEdito
   ): typingsSlinky.mediumEditor.MediumEditor.MediumEditor = js.native
   // Event Functions
   def on(
-    targets: typingsSlinky.std.HTMLElement,
+    targets: HTMLElement,
     event: String,
     listener: EventListenerOrEventListenerObject,
     useCapture: Boolean

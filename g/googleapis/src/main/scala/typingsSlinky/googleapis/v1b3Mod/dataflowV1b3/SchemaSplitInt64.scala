@@ -22,11 +22,41 @@ trait SchemaSplitInt64 extends js.Object {
 
 object SchemaSplitInt64 {
   @scala.inline
-  def apply(highBits: Int | Double = null, lowBits: Int | Double = null): SchemaSplitInt64 = {
+  def apply(): SchemaSplitInt64 = {
     val __obj = js.Dynamic.literal()
-    if (highBits != null) __obj.updateDynamic("highBits")(highBits.asInstanceOf[js.Any])
-    if (lowBits != null) __obj.updateDynamic("lowBits")(lowBits.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSplitInt64]
   }
+  @scala.inline
+  implicit class SchemaSplitInt64Ops[Self <: SchemaSplitInt64] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHighBits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highBits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighBits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highBits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLowBits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowBits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLowBits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowBits")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

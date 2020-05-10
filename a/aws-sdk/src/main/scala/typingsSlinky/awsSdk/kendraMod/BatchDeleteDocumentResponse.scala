@@ -14,10 +14,29 @@ trait BatchDeleteDocumentResponse extends js.Object {
 
 object BatchDeleteDocumentResponse {
   @scala.inline
-  def apply(FailedDocuments: BatchDeleteDocumentResponseFailedDocuments = null): BatchDeleteDocumentResponse = {
+  def apply(): BatchDeleteDocumentResponse = {
     val __obj = js.Dynamic.literal()
-    if (FailedDocuments != null) __obj.updateDynamic("FailedDocuments")(FailedDocuments.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchDeleteDocumentResponse]
   }
+  @scala.inline
+  implicit class BatchDeleteDocumentResponseOps[Self <: BatchDeleteDocumentResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailedDocuments(value: BatchDeleteDocumentResponseFailedDocuments): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedDocuments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailedDocuments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedDocuments")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,99 +13,347 @@ import typingsSlinky.antd.buttonGroupMod.ButtonGroupProps
 import typingsSlinky.antd.dropdownDropdownMod.Align
 import typingsSlinky.antd.dropdownDropdownMod.OverlayFunc
 import typingsSlinky.antd.dropdownDropdownMod.Placement
-import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.antd.dropdownDropdownMod.DropDownProps because var conflicts: className, prefixCls. Inlined trigger, overlay, onVisibleChange, visible, disabled, align, getPopupContainer, transitionName, placement, overlayClassName, overlayStyle, forceRender, mouseEnterDelay, mouseLeaveDelay, openClassName */ trait DropdownButtonProps extends ButtonGroupProps {
-  var align: js.UndefOr[Align] = js.undefined
-  var buttonsRender: js.UndefOr[js.Function1[/* buttons */ js.Array[TagMod[Any]], js.Array[TagMod[Any]]]] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var forceRender: js.UndefOr[Boolean] = js.undefined
-  var getPopupContainer: js.UndefOr[js.Function1[/* triggerNode */ HTMLElement, HTMLElement]] = js.undefined
-  var href: js.UndefOr[String] = js.undefined
-  var htmlType: js.UndefOr[ButtonHTMLType] = js.undefined
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
-  var mouseEnterDelay: js.UndefOr[Double] = js.undefined
-  var mouseLeaveDelay: js.UndefOr[Double] = js.undefined
-  var onClick: js.UndefOr[MouseEventHandler[HTMLButtonElement]] = js.undefined
-  var onVisibleChange: js.UndefOr[js.Function1[/* visible */ Boolean, Unit]] = js.undefined
-  var openClassName: js.UndefOr[String] = js.undefined
-  var overlay: ReactElement | OverlayFunc
-  var overlayClassName: js.UndefOr[String] = js.undefined
-  var overlayStyle: js.UndefOr[CSSProperties] = js.undefined
-  var placement: js.UndefOr[Placement] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
-  var transitionName: js.UndefOr[String] = js.undefined
-  var trigger: js.UndefOr[js.Array[click | hover | contextMenu]] = js.undefined
-  var `type`: js.UndefOr[DropdownButtonType] = js.undefined
-  var visible: js.UndefOr[Boolean] = js.undefined
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.antd.dropdownDropdownMod.DropDownProps because var conflicts: className, prefixCls. Inlined trigger, overlay, onVisibleChange, visible, disabled, align, getPopupContainer, transitionName, placement, overlayClassName, overlayStyle, forceRender, mouseEnterDelay, mouseLeaveDelay, openClassName */ @js.native
+trait DropdownButtonProps extends ButtonGroupProps {
+  var align: js.UndefOr[Align] = js.native
+  var buttonsRender: js.UndefOr[js.Function1[/* buttons */ js.Array[TagMod[Any]], js.Array[TagMod[Any]]]] = js.native
+  var children: js.UndefOr[TagMod[Any]] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var forceRender: js.UndefOr[Boolean] = js.native
+  var getPopupContainer: js.UndefOr[js.Function1[/* triggerNode */ HTMLElement, HTMLElement]] = js.native
+  var href: js.UndefOr[String] = js.native
+  var htmlType: js.UndefOr[ButtonHTMLType] = js.native
+  var icon: js.UndefOr[TagMod[Any]] = js.native
+  var mouseEnterDelay: js.UndefOr[Double] = js.native
+  var mouseLeaveDelay: js.UndefOr[Double] = js.native
+  var onClick: js.UndefOr[MouseEventHandler[HTMLButtonElement]] = js.native
+  var onVisibleChange: js.UndefOr[js.Function1[/* visible */ Boolean, Unit]] = js.native
+  var openClassName: js.UndefOr[String] = js.native
+  var overlay: ReactElement | OverlayFunc = js.native
+  var overlayClassName: js.UndefOr[String] = js.native
+  var overlayStyle: js.UndefOr[CSSProperties] = js.native
+  var placement: js.UndefOr[Placement] = js.native
+  var title: js.UndefOr[String] = js.native
+  var transitionName: js.UndefOr[String] = js.native
+  var trigger: js.UndefOr[js.Array[click | hover | contextMenu]] = js.native
+  var `type`: js.UndefOr[DropdownButtonType] = js.native
+  var visible: js.UndefOr[Boolean] = js.native
 }
 
 object DropdownButtonProps {
   @scala.inline
-  def apply(
-    overlay: ReactElement | OverlayFunc,
-    align: Align = null,
-    buttonsRender: /* buttons */ js.Array[TagMod[Any]] => js.Array[TagMod[Any]] = null,
-    children: TagMod[Any] = null,
-    className: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    forceRender: js.UndefOr[Boolean] = js.undefined,
-    getPopupContainer: /* triggerNode */ HTMLElement => HTMLElement = null,
-    href: String = null,
-    htmlType: ButtonHTMLType = null,
-    icon: TagMod[Any] = null,
-    mouseEnterDelay: Int | Double = null,
-    mouseLeaveDelay: Int | Double = null,
-    onClick: SyntheticMouseEvent[HTMLButtonElement] => Unit = null,
-    onVisibleChange: /* visible */ Boolean => Unit = null,
-    openClassName: String = null,
-    overlayClassName: String = null,
-    overlayStyle: CSSProperties = null,
-    placement: Placement = null,
-    prefixCls: String = null,
-    size: SizeType = null,
-    style: CSSProperties = null,
-    title: String = null,
-    transitionName: String = null,
-    trigger: js.Array[click | hover | contextMenu] = null,
-    `type`: DropdownButtonType = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): DropdownButtonProps = {
+  def apply(overlay: ReactElement | OverlayFunc): DropdownButtonProps = {
     val __obj = js.Dynamic.literal(overlay = overlay.asInstanceOf[js.Any])
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (buttonsRender != null) __obj.updateDynamic("buttonsRender")(js.Any.fromFunction1(buttonsRender))
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceRender)) __obj.updateDynamic("forceRender")(forceRender.asInstanceOf[js.Any])
-    if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
-    if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])
-    if (htmlType != null) __obj.updateDynamic("htmlType")(htmlType.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (mouseEnterDelay != null) __obj.updateDynamic("mouseEnterDelay")(mouseEnterDelay.asInstanceOf[js.Any])
-    if (mouseLeaveDelay != null) __obj.updateDynamic("mouseLeaveDelay")(mouseLeaveDelay.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onVisibleChange != null) __obj.updateDynamic("onVisibleChange")(js.Any.fromFunction1(onVisibleChange))
-    if (openClassName != null) __obj.updateDynamic("openClassName")(openClassName.asInstanceOf[js.Any])
-    if (overlayClassName != null) __obj.updateDynamic("overlayClassName")(overlayClassName.asInstanceOf[js.Any])
-    if (overlayStyle != null) __obj.updateDynamic("overlayStyle")(overlayStyle.asInstanceOf[js.Any])
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
-    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[DropdownButtonProps]
   }
+  @scala.inline
+  implicit class DropdownButtonPropsOps[Self <: DropdownButtonProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOverlayReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOverlayFunction0(value: () => ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOverlay(value: ReactElement | OverlayFunc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAlign(value: Align): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtonsRender(value: /* buttons */ js.Array[TagMod[Any]] => js.Array[TagMod[Any]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonsRender")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutButtonsRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonsRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildrenReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildren(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceRender(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceRender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupContainer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetPopupContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHref(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHref: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtmlType(value: ButtonHTMLType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtmlType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIcon(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMouseEnterDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEnterDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMouseEnterDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEnterDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMouseLeaveDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseLeaveDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMouseLeaveDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseLeaveDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClick(value: SyntheticMouseEvent[HTMLButtonElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnVisibleChange(value: /* visible */ Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVisibleChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnVisibleChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVisibleChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlayClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlayClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlayStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlayStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacement(value: Placement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrigger(value: js.Array[click | hover | contextMenu]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrigger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: DropdownButtonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

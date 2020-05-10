@@ -45,6 +45,7 @@ trait Graticule
     `type`: rendercomplete,
     listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
   ): EventsKey = js.native
+  def strategyFunction(extent: Extent, resolution: Double): js.Array[Extent] = js.native
   @JSName("un")
   def un_postcompose(
     `type`: postcompose,

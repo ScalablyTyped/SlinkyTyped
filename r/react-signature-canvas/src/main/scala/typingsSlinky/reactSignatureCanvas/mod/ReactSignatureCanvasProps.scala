@@ -1,48 +1,55 @@
 package typingsSlinky.reactSignatureCanvas.mod
 
 import org.scalajs.dom.raw.HTMLCanvasElement
-import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.react.mod.CanvasHTMLAttributes
 import typingsSlinky.signaturePad.mod.SignaturePad.SignaturePadOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReactSignatureCanvasProps extends SignaturePadOptions {
-  var canvasProps: js.UndefOr[CanvasHTMLAttributes[HTMLCanvasElement]] = js.undefined
-  var clearOnResize: js.UndefOr[Boolean] = js.undefined
+  var canvasProps: js.UndefOr[CanvasHTMLAttributes[HTMLCanvasElement]] = js.native
+  var clearOnResize: js.UndefOr[Boolean] = js.native
 }
 
 object ReactSignatureCanvasProps {
   @scala.inline
-  def apply(
-    backgroundColor: String = null,
-    canvasProps: CanvasHTMLAttributes[HTMLCanvasElement] = null,
-    clearOnResize: js.UndefOr[Boolean] = js.undefined,
-    dotSize: Double | js.Function0[Double] = null,
-    maxWidth: Int | Double = null,
-    minDistance: Int | Double = null,
-    minWidth: Int | Double = null,
-    onBegin: /* event */ MouseEvent => Unit = null,
-    onEnd: /* event */ MouseEvent => Unit = null,
-    penColor: String = null,
-    throttle: Int | Double = null,
-    velocityFilterWeight: Int | Double = null
-  ): ReactSignatureCanvasProps = {
+  def apply(): ReactSignatureCanvasProps = {
     val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (canvasProps != null) __obj.updateDynamic("canvasProps")(canvasProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(clearOnResize)) __obj.updateDynamic("clearOnResize")(clearOnResize.asInstanceOf[js.Any])
-    if (dotSize != null) __obj.updateDynamic("dotSize")(dotSize.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (minDistance != null) __obj.updateDynamic("minDistance")(minDistance.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
-    if (onBegin != null) __obj.updateDynamic("onBegin")(js.Any.fromFunction1(onBegin))
-    if (onEnd != null) __obj.updateDynamic("onEnd")(js.Any.fromFunction1(onEnd))
-    if (penColor != null) __obj.updateDynamic("penColor")(penColor.asInstanceOf[js.Any])
-    if (throttle != null) __obj.updateDynamic("throttle")(throttle.asInstanceOf[js.Any])
-    if (velocityFilterWeight != null) __obj.updateDynamic("velocityFilterWeight")(velocityFilterWeight.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactSignatureCanvasProps]
   }
+  @scala.inline
+  implicit class ReactSignatureCanvasPropsOps[Self <: ReactSignatureCanvasProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCanvasProps(value: CanvasHTMLAttributes[HTMLCanvasElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canvasProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanvasProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canvasProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClearOnResize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearOnResize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClearOnResize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearOnResize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

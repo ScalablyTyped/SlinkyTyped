@@ -4,11 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFetch[T] extends js.Object {
-  var fetch: js.UndefOr[js.Array[String]] = js.undefined
-  var insert: js.UndefOr[js.Function2[/* userId */ String, /* doc */ T, Boolean]] = js.undefined
-  var remove: js.UndefOr[js.Function2[/* userId */ String, /* doc */ T, Boolean]] = js.undefined
-  var transform: js.UndefOr[js.Function | Null] = js.undefined
+  var fetch: js.UndefOr[js.Array[String]] = js.native
+  var insert: js.UndefOr[js.Function2[/* userId */ String, /* doc */ T, Boolean]] = js.native
+  var remove: js.UndefOr[js.Function2[/* userId */ String, /* doc */ T, Boolean]] = js.native
+  var transform: js.UndefOr[js.Function | Null] = js.native
   var update: js.UndefOr[
     js.Function4[
       /* userId */ String, 
@@ -17,25 +18,90 @@ trait AnonFetch[T] extends js.Object {
       /* modifier */ js.Any, 
       Boolean
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object AnonFetch {
   @scala.inline
-  def apply[T](
-    fetch: js.Array[String] = null,
-    insert: (/* userId */ String, /* doc */ T) => Boolean = null,
-    remove: (/* userId */ String, /* doc */ T) => Boolean = null,
-    transform: js.Function = null,
-    update: (/* userId */ String, /* doc */ T, /* fieldNames */ js.Array[String], /* modifier */ js.Any) => Boolean = null
-  ): AnonFetch[T] = {
+  def apply[T](): AnonFetch[T] = {
     val __obj = js.Dynamic.literal()
-    if (fetch != null) __obj.updateDynamic("fetch")(fetch.asInstanceOf[js.Any])
-    if (insert != null) __obj.updateDynamic("insert")(js.Any.fromFunction2(insert))
-    if (remove != null) __obj.updateDynamic("remove")(js.Any.fromFunction2(remove))
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
-    if (update != null) __obj.updateDynamic("update")(js.Any.fromFunction4(update))
     __obj.asInstanceOf[AnonFetch[T]]
   }
+  @scala.inline
+  implicit class AnonFetchOps[Self[t] <: AnonFetch[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withFetch(value: js.Array[String]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFetch: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsert(value: (/* userId */ String, /* doc */ T) => Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutInsert: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemove(value: (/* userId */ String, /* doc */ T) => Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRemove: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransform(value: js.Function): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransform: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransformNull: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(null)
+        ret
+    }
+    @scala.inline
+    def withUpdate(
+      value: (/* userId */ String, /* doc */ T, /* fieldNames */ js.Array[String], /* modifier */ js.Any) => Boolean
+    ): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutUpdate: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

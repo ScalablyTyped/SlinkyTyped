@@ -9,39 +9,40 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait GoogleSearchStore extends js.Object {
   /**
     *
     */
-  def BlogSearch(): Unit
+  def BlogSearch(): Unit = js.native
   /**
     *
     */
-  def BookSearch(): Unit
+  def BookSearch(): Unit = js.native
   /**
     *
     */
-  def ImageSearch(): Unit
+  def ImageSearch(): Unit = js.native
   /**
     *
     */
-  def LocalSearch(): Unit
+  def LocalSearch(): Unit = js.native
   /**
     *
     */
-  def NewsSearch(): Unit
+  def NewsSearch(): Unit = js.native
   /**
     *
     */
-  def Search(): Unit
+  def Search(): Unit = js.native
   /**
     *
     */
-  def VideoSearch(): Unit
+  def VideoSearch(): Unit = js.native
   /**
     *
     */
-  def WebSearch(): Unit
+  def WebSearch(): Unit = js.native
 }
 
 @JSGlobal("dojox.data.GoogleSearchStore")

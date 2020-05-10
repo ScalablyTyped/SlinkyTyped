@@ -1,15 +1,16 @@
 package typingsSlinky.spectacle.components
 
+import typingsSlinky.spectacle.mod.ListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object List
-  extends SharedApply_ListProps_1354083519[typingsSlinky.spectacle.mod.List] {
+object List {
   @JSImport("spectacle", "List")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ListProps): SharedBuilder_ListProps_1053776531[typingsSlinky.spectacle.mod.List] = new SharedBuilder_ListProps_1053776531[typingsSlinky.spectacle.mod.List](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: List.type): SharedBuilder_ListProps_1053776531[typingsSlinky.spectacle.mod.List] = new SharedBuilder_ListProps_1053776531[typingsSlinky.spectacle.mod.List](js.Array(this.component, js.Dictionary.empty))()
 }
 

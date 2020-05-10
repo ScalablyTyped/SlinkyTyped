@@ -42,9 +42,7 @@ object vectorRenderTileMod extends js.Object {
       tileCoord: TileCoord,
       state: TileState,
       urlTileCoord: TileCoord,
-      sourceTileGrid: typingsSlinky.ol.tilegridTileGridMod.default,
-      getSourceTiles: js.Function1[/* p0 */ VectorRenderTile, js.Array[typingsSlinky.ol.olVectorTileMod.default]],
-      removeSourceTiles: js.Function1[/* p0 */ VectorRenderTile, Unit]
+      getSourceTiles: js.Function1[/* p0 */ VectorRenderTile, js.Array[typingsSlinky.ol.olVectorTileMod.default]]
     ) = this()
   }
   

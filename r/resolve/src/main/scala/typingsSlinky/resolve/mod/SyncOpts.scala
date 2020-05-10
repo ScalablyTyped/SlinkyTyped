@@ -5,43 +5,65 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SyncOpts extends Opts {
   /** function to synchronously test whether a directory exists */
-  var isDirectory: js.UndefOr[js.Function1[/* directory */ String, Boolean]] = js.undefined
+  var isDirectory: js.UndefOr[js.Function1[/* directory */ String, Boolean]] = js.native
   /** function to synchronously test whether a file exists */
-  var isFile: js.UndefOr[js.Function1[/* file */ String, Boolean]] = js.undefined
+  var isFile: js.UndefOr[js.Function1[/* file */ String, Boolean]] = js.native
   /** how to read files synchronously (defaults to fs.readFileSync) */
-  var readFileSync: js.UndefOr[js.Function2[/* file */ String, /* charset */ String, String | Buffer]] = js.undefined
+  var readFileSync: js.UndefOr[js.Function2[/* file */ String, /* charset */ String, String | Buffer]] = js.native
 }
 
 object SyncOpts {
   @scala.inline
-  def apply(
-    _package: js.Any = null,
-    basedir: String = null,
-    extensions: String | js.Array[String] = null,
-    isDirectory: /* directory */ String => Boolean = null,
-    isFile: /* file */ String => Boolean = null,
-    moduleDirectory: String | js.Array[String] = null,
-    packageFilter: (/* pkg */ js.Any, /* pkgfile */ String) => _ = null,
-    pathFilter: (/* pkg */ js.Any, /* path */ String, /* relativePath */ String) => String = null,
-    paths: String | js.Array[String] = null,
-    preserveSymlinks: js.UndefOr[Boolean] = js.undefined,
-    readFileSync: (/* file */ String, /* charset */ String) => String | Buffer = null
-  ): SyncOpts = {
+  def apply(): SyncOpts = {
     val __obj = js.Dynamic.literal()
-    if (_package != null) __obj.updateDynamic("package")(_package.asInstanceOf[js.Any])
-    if (basedir != null) __obj.updateDynamic("basedir")(basedir.asInstanceOf[js.Any])
-    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
-    if (isDirectory != null) __obj.updateDynamic("isDirectory")(js.Any.fromFunction1(isDirectory))
-    if (isFile != null) __obj.updateDynamic("isFile")(js.Any.fromFunction1(isFile))
-    if (moduleDirectory != null) __obj.updateDynamic("moduleDirectory")(moduleDirectory.asInstanceOf[js.Any])
-    if (packageFilter != null) __obj.updateDynamic("packageFilter")(js.Any.fromFunction2(packageFilter))
-    if (pathFilter != null) __obj.updateDynamic("pathFilter")(js.Any.fromFunction3(pathFilter))
-    if (paths != null) __obj.updateDynamic("paths")(paths.asInstanceOf[js.Any])
-    if (!js.isUndefined(preserveSymlinks)) __obj.updateDynamic("preserveSymlinks")(preserveSymlinks.asInstanceOf[js.Any])
-    if (readFileSync != null) __obj.updateDynamic("readFileSync")(js.Any.fromFunction2(readFileSync))
     __obj.asInstanceOf[SyncOpts]
   }
+  @scala.inline
+  implicit class SyncOptsOps[Self <: SyncOpts] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsDirectory(value: /* directory */ String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDirectory")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsDirectory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDirectory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsFile(value: /* file */ String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFile")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadFileSync(value: (/* file */ String, /* charset */ String) => String | Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readFileSync")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutReadFileSync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readFileSync")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

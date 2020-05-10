@@ -74,42 +74,209 @@ trait AppSummary extends js.Object {
 
 object AppSummary {
   @scala.inline
-  def apply(
-    appId: AppId = null,
-    creationTime: js.Date = null,
-    description: AppDescription = null,
-    lastModified: js.Date = null,
-    latestReplicationTime: js.Date = null,
-    launchDetails: LaunchDetails = null,
-    launchStatus: AppLaunchStatus = null,
-    launchStatusMessage: AppLaunchStatusMessage = null,
-    name: AppName = null,
-    replicationStatus: AppReplicationStatus = null,
-    replicationStatusMessage: AppReplicationStatusMessage = null,
-    roleName: RoleName = null,
-    status: AppStatus = null,
-    statusMessage: AppStatusMessage = null,
-    totalServerGroups: Int | Double = null,
-    totalServers: Int | Double = null
-  ): AppSummary = {
+  def apply(): AppSummary = {
     val __obj = js.Dynamic.literal()
-    if (appId != null) __obj.updateDynamic("appId")(appId.asInstanceOf[js.Any])
-    if (creationTime != null) __obj.updateDynamic("creationTime")(creationTime.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (lastModified != null) __obj.updateDynamic("lastModified")(lastModified.asInstanceOf[js.Any])
-    if (latestReplicationTime != null) __obj.updateDynamic("latestReplicationTime")(latestReplicationTime.asInstanceOf[js.Any])
-    if (launchDetails != null) __obj.updateDynamic("launchDetails")(launchDetails.asInstanceOf[js.Any])
-    if (launchStatus != null) __obj.updateDynamic("launchStatus")(launchStatus.asInstanceOf[js.Any])
-    if (launchStatusMessage != null) __obj.updateDynamic("launchStatusMessage")(launchStatusMessage.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (replicationStatus != null) __obj.updateDynamic("replicationStatus")(replicationStatus.asInstanceOf[js.Any])
-    if (replicationStatusMessage != null) __obj.updateDynamic("replicationStatusMessage")(replicationStatusMessage.asInstanceOf[js.Any])
-    if (roleName != null) __obj.updateDynamic("roleName")(roleName.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (statusMessage != null) __obj.updateDynamic("statusMessage")(statusMessage.asInstanceOf[js.Any])
-    if (totalServerGroups != null) __obj.updateDynamic("totalServerGroups")(totalServerGroups.asInstanceOf[js.Any])
-    if (totalServers != null) __obj.updateDynamic("totalServers")(totalServers.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppSummary]
   }
+  @scala.inline
+  implicit class AppSummaryOps[Self <: AppSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppId(value: AppId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: AppDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModified(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModified")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModified: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModified")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatestReplicationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestReplicationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatestReplicationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestReplicationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchDetails(value: LaunchDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchStatus(value: AppLaunchStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchStatusMessage(value: AppLaunchStatusMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchStatusMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchStatusMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchStatusMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: AppName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationStatus(value: AppReplicationStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationStatusMessage(value: AppReplicationStatusMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationStatusMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationStatusMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationStatusMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleName(value: RoleName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: AppStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusMessage(value: AppStatusMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalServerGroups(value: TotalServerGroups): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalServerGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalServerGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalServerGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalServers(value: TotalServers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalServers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalServers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalServers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

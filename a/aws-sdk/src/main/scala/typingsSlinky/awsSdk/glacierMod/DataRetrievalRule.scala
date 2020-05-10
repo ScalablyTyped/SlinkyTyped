@@ -18,11 +18,41 @@ trait DataRetrievalRule extends js.Object {
 
 object DataRetrievalRule {
   @scala.inline
-  def apply(BytesPerHour: Int | Double = null, Strategy: String = null): DataRetrievalRule = {
+  def apply(): DataRetrievalRule = {
     val __obj = js.Dynamic.literal()
-    if (BytesPerHour != null) __obj.updateDynamic("BytesPerHour")(BytesPerHour.asInstanceOf[js.Any])
-    if (Strategy != null) __obj.updateDynamic("Strategy")(Strategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataRetrievalRule]
   }
+  @scala.inline
+  implicit class DataRetrievalRuleOps[Self <: DataRetrievalRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBytesPerHour(value: NullableLong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BytesPerHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesPerHour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BytesPerHour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrategy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Strategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Strategy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

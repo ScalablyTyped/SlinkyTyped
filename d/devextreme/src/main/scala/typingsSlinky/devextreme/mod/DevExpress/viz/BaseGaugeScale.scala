@@ -6,59 +6,177 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Specifies options of the gauge's scale. */
+@js.native
 trait BaseGaugeScale extends js.Object {
   /** Specifies whether to allow decimal values on the scale. When false, the scale contains integer values only. */
-  var allowDecimals: js.UndefOr[Boolean] = js.undefined
+  var allowDecimals: js.UndefOr[Boolean] = js.native
   /** Specifies an array of custom minor ticks. */
-  var customMinorTicks: js.UndefOr[js.Array[Double]] = js.undefined
+  var customMinorTicks: js.UndefOr[js.Array[Double]] = js.native
   /** Specifies an array of custom major ticks. */
-  var customTicks: js.UndefOr[js.Array[Double]] = js.undefined
+  var customTicks: js.UndefOr[js.Array[Double]] = js.native
   /** Specifies the end value for the scale of the gauge. */
-  var endValue: js.UndefOr[Double] = js.undefined
+  var endValue: js.UndefOr[Double] = js.native
   /** Specifies common options for scale labels. */
-  var label: js.UndefOr[BaseGaugeScaleLabel] = js.undefined
+  var label: js.UndefOr[BaseGaugeScaleLabel] = js.native
   /** Specifies options of the gauge's minor ticks. */
-  var minorTick: js.UndefOr[AnonColorLength] = js.undefined
+  var minorTick: js.UndefOr[AnonColorLength] = js.native
   /** Specifies an interval between minor ticks. */
-  var minorTickInterval: js.UndefOr[Double] = js.undefined
+  var minorTickInterval: js.UndefOr[Double] = js.native
   /** Specifies the minimum distance between two neighboring major ticks in pixels. */
-  var scaleDivisionFactor: js.UndefOr[Double] = js.undefined
+  var scaleDivisionFactor: js.UndefOr[Double] = js.native
   /** Specifies the start value for the scale of the gauge. */
-  var startValue: js.UndefOr[Double] = js.undefined
+  var startValue: js.UndefOr[Double] = js.native
   /** Specifies options of the gauge's major ticks. */
-  var tick: js.UndefOr[AnonColorLength] = js.undefined
+  var tick: js.UndefOr[AnonColorLength] = js.native
   /** Specifies an interval between major ticks. */
-  var tickInterval: js.UndefOr[Double] = js.undefined
+  var tickInterval: js.UndefOr[Double] = js.native
 }
 
 object BaseGaugeScale {
   @scala.inline
-  def apply(
-    allowDecimals: js.UndefOr[Boolean] = js.undefined,
-    customMinorTicks: js.Array[Double] = null,
-    customTicks: js.Array[Double] = null,
-    endValue: Int | Double = null,
-    label: BaseGaugeScaleLabel = null,
-    minorTick: AnonColorLength = null,
-    minorTickInterval: Int | Double = null,
-    scaleDivisionFactor: Int | Double = null,
-    startValue: Int | Double = null,
-    tick: AnonColorLength = null,
-    tickInterval: Int | Double = null
-  ): BaseGaugeScale = {
+  def apply(): BaseGaugeScale = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowDecimals)) __obj.updateDynamic("allowDecimals")(allowDecimals.asInstanceOf[js.Any])
-    if (customMinorTicks != null) __obj.updateDynamic("customMinorTicks")(customMinorTicks.asInstanceOf[js.Any])
-    if (customTicks != null) __obj.updateDynamic("customTicks")(customTicks.asInstanceOf[js.Any])
-    if (endValue != null) __obj.updateDynamic("endValue")(endValue.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (minorTick != null) __obj.updateDynamic("minorTick")(minorTick.asInstanceOf[js.Any])
-    if (minorTickInterval != null) __obj.updateDynamic("minorTickInterval")(minorTickInterval.asInstanceOf[js.Any])
-    if (scaleDivisionFactor != null) __obj.updateDynamic("scaleDivisionFactor")(scaleDivisionFactor.asInstanceOf[js.Any])
-    if (startValue != null) __obj.updateDynamic("startValue")(startValue.asInstanceOf[js.Any])
-    if (tick != null) __obj.updateDynamic("tick")(tick.asInstanceOf[js.Any])
-    if (tickInterval != null) __obj.updateDynamic("tickInterval")(tickInterval.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseGaugeScale]
   }
+  @scala.inline
+  implicit class BaseGaugeScaleOps[Self <: BaseGaugeScale] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowDecimals(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDecimals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowDecimals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDecimals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomMinorTicks(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customMinorTicks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomMinorTicks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customMinorTicks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomTicks(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customTicks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomTicks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customTicks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: BaseGaugeScaleLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTick(value: AnonColorLength): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleDivisionFactor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleDivisionFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleDivisionFactor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleDivisionFactor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTick(value: AnonColorLength): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickInterval")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

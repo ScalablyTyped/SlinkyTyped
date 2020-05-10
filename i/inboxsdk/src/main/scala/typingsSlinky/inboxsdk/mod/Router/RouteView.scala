@@ -5,13 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RouteView extends js.Object {
-  var destroyed: Boolean
-  def getParams(): RouteParams
-  def getRouteID(): String
-  def getRouteType(): RouteTypes
+  var destroyed: Boolean = js.native
+  def getParams(): RouteParams = js.native
+  def getRouteID(): String = js.native
+  def getRouteType(): RouteTypes = js.native
   @JSName("on")
-  def on_destroy(name: destroy, cb: js.Function0[Unit]): Unit
+  def on_destroy(name: destroy, cb: js.Function0[Unit]): Unit = js.native
 }
 
 object RouteView {
@@ -24,8 +25,45 @@ object RouteView {
     on: (destroy, js.Function0[Unit]) => Unit
   ): RouteView = {
     val __obj = js.Dynamic.literal(destroyed = destroyed.asInstanceOf[js.Any], getParams = js.Any.fromFunction0(getParams), getRouteID = js.Any.fromFunction0(getRouteID), getRouteType = js.Any.fromFunction0(getRouteType), on = js.Any.fromFunction2(on))
-  
     __obj.asInstanceOf[RouteView]
   }
+  @scala.inline
+  implicit class RouteViewOps[Self <: RouteView] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestroyed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroyed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetParams(value: () => RouteParams): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getParams")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRouteID(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRouteID")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRouteType(value: () => RouteTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRouteType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOn(value: (destroy, js.Function0[Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

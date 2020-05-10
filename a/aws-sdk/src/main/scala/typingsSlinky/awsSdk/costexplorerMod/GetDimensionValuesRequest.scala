@@ -30,18 +30,65 @@ trait GetDimensionValuesRequest extends js.Object {
 
 object GetDimensionValuesRequest {
   @scala.inline
-  def apply(
-    Dimension: Dimension,
-    TimePeriod: DateInterval,
-    Context: Context = null,
-    NextPageToken: NextPageToken = null,
-    SearchString: SearchString = null
-  ): GetDimensionValuesRequest = {
+  def apply(Dimension: Dimension, TimePeriod: DateInterval): GetDimensionValuesRequest = {
     val __obj = js.Dynamic.literal(Dimension = Dimension.asInstanceOf[js.Any], TimePeriod = TimePeriod.asInstanceOf[js.Any])
-    if (Context != null) __obj.updateDynamic("Context")(Context.asInstanceOf[js.Any])
-    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
-    if (SearchString != null) __obj.updateDynamic("SearchString")(SearchString.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDimensionValuesRequest]
   }
+  @scala.inline
+  implicit class GetDimensionValuesRequestOps[Self <: GetDimensionValuesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDimension(value: Dimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimePeriod(value: DateInterval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimePeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContext(value: Context): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: NextPageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchString(value: SearchString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchString")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

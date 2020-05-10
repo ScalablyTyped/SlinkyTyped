@@ -13,12 +13,10 @@ trait FormHooks extends js.Object
 
 object FormHooks {
   @scala.inline
-  def blur: typingsSlinky.angularForms.angularFormsStrings.blur = this.cast("blur")
+  def blur: typingsSlinky.angularForms.angularFormsStrings.blur = "blur".asInstanceOf[typingsSlinky.angularForms.angularFormsStrings.blur]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def change: typingsSlinky.angularForms.angularFormsStrings.change = "change".asInstanceOf[typingsSlinky.angularForms.angularFormsStrings.change]
   @scala.inline
-  def change: typingsSlinky.angularForms.angularFormsStrings.change = this.cast("change")
-  @scala.inline
-  def submit: typingsSlinky.angularForms.angularFormsStrings.submit = this.cast("submit")
+  def submit: typingsSlinky.angularForms.angularFormsStrings.submit = "submit".asInstanceOf[typingsSlinky.angularForms.angularFormsStrings.submit]
 }
 

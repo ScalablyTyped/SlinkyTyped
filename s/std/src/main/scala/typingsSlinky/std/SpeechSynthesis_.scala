@@ -42,7 +42,7 @@ trait SpeechSynthesis_ extends EventTarget {
   def removeEventListener_voiceschanged(
     `type`: voiceschanged,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def resume(): Unit = js.native
   def speak(utterance: SpeechSynthesisUtterance): Unit = js.native

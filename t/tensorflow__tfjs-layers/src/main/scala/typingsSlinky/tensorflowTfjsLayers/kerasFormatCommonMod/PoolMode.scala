@@ -12,10 +12,8 @@ trait PoolMode extends js.Object
 
 object PoolMode {
   @scala.inline
-  def avg: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.avg = this.cast("avg")
+  def avg: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.avg = "avg".asInstanceOf[typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.avg]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def max: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.max = this.cast("max")
+  def max: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.max = "max".asInstanceOf[typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.max]
 }
 

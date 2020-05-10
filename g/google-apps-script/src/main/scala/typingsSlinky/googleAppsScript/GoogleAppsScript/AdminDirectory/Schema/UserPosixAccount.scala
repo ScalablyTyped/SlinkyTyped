@@ -4,45 +4,153 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UserPosixAccount extends js.Object {
-  var accountId: js.UndefOr[String] = js.undefined
-  var gecos: js.UndefOr[String] = js.undefined
-  var gid: js.UndefOr[String] = js.undefined
-  var homeDirectory: js.UndefOr[String] = js.undefined
-  var operatingSystemType: js.UndefOr[String] = js.undefined
-  var primary: js.UndefOr[Boolean] = js.undefined
-  var shell: js.UndefOr[String] = js.undefined
-  var systemId: js.UndefOr[String] = js.undefined
-  var uid: js.UndefOr[String] = js.undefined
-  var username: js.UndefOr[String] = js.undefined
+  var accountId: js.UndefOr[String] = js.native
+  var gecos: js.UndefOr[String] = js.native
+  var gid: js.UndefOr[String] = js.native
+  var homeDirectory: js.UndefOr[String] = js.native
+  var operatingSystemType: js.UndefOr[String] = js.native
+  var primary: js.UndefOr[Boolean] = js.native
+  var shell: js.UndefOr[String] = js.native
+  var systemId: js.UndefOr[String] = js.native
+  var uid: js.UndefOr[String] = js.native
+  var username: js.UndefOr[String] = js.native
 }
 
 object UserPosixAccount {
   @scala.inline
-  def apply(
-    accountId: String = null,
-    gecos: String = null,
-    gid: String = null,
-    homeDirectory: String = null,
-    operatingSystemType: String = null,
-    primary: js.UndefOr[Boolean] = js.undefined,
-    shell: String = null,
-    systemId: String = null,
-    uid: String = null,
-    username: String = null
-  ): UserPosixAccount = {
+  def apply(): UserPosixAccount = {
     val __obj = js.Dynamic.literal()
-    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
-    if (gecos != null) __obj.updateDynamic("gecos")(gecos.asInstanceOf[js.Any])
-    if (gid != null) __obj.updateDynamic("gid")(gid.asInstanceOf[js.Any])
-    if (homeDirectory != null) __obj.updateDynamic("homeDirectory")(homeDirectory.asInstanceOf[js.Any])
-    if (operatingSystemType != null) __obj.updateDynamic("operatingSystemType")(operatingSystemType.asInstanceOf[js.Any])
-    if (!js.isUndefined(primary)) __obj.updateDynamic("primary")(primary.asInstanceOf[js.Any])
-    if (shell != null) __obj.updateDynamic("shell")(shell.asInstanceOf[js.Any])
-    if (systemId != null) __obj.updateDynamic("systemId")(systemId.asInstanceOf[js.Any])
-    if (uid != null) __obj.updateDynamic("uid")(uid.asInstanceOf[js.Any])
-    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPosixAccount]
   }
+  @scala.inline
+  implicit class UserPosixAccountOps[Self <: UserPosixAccount] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGecos(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gecos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGecos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gecos")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHomeDirectory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeDirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomeDirectory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeDirectory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperatingSystemType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystemType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatingSystemType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystemType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShell(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShell: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shell")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSystemId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("systemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSystemId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("systemId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

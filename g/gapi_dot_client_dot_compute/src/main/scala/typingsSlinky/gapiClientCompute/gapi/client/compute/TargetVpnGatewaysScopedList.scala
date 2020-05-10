@@ -5,20 +5,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TargetVpnGatewaysScopedList extends js.Object {
   /** [Output Only] List of target vpn gateways contained in this scope. */
-  var targetVpnGateways: js.UndefOr[js.Array[TargetVpnGateway]] = js.undefined
+  var targetVpnGateways: js.UndefOr[js.Array[TargetVpnGateway]] = js.native
   /** [Output Only] Informational warning which replaces the list of addresses when the list is empty. */
-  var warning: js.UndefOr[AnonCode] = js.undefined
+  var warning: js.UndefOr[AnonCode] = js.native
 }
 
 object TargetVpnGatewaysScopedList {
   @scala.inline
-  def apply(targetVpnGateways: js.Array[TargetVpnGateway] = null, warning: AnonCode = null): TargetVpnGatewaysScopedList = {
+  def apply(): TargetVpnGatewaysScopedList = {
     val __obj = js.Dynamic.literal()
-    if (targetVpnGateways != null) __obj.updateDynamic("targetVpnGateways")(targetVpnGateways.asInstanceOf[js.Any])
-    if (warning != null) __obj.updateDynamic("warning")(warning.asInstanceOf[js.Any])
     __obj.asInstanceOf[TargetVpnGatewaysScopedList]
   }
+  @scala.inline
+  implicit class TargetVpnGatewaysScopedListOps[Self <: TargetVpnGatewaysScopedList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTargetVpnGateways(value: js.Array[TargetVpnGateway]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetVpnGateways")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetVpnGateways: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetVpnGateways")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarning(value: AnonCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

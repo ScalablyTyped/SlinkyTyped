@@ -4,18 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait levelLoadedData extends js.Object {
-  var details: LevelDetails
-  var levelId: Double
-  var stats: Stats
+  var details: LevelDetails = js.native
+  var levelId: Double = js.native
+  var stats: Stats = js.native
 }
 
 object levelLoadedData {
   @scala.inline
   def apply(details: LevelDetails, levelId: Double, stats: Stats): levelLoadedData = {
     val __obj = js.Dynamic.literal(details = details.asInstanceOf[js.Any], levelId = levelId.asInstanceOf[js.Any], stats = stats.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[levelLoadedData]
   }
+  @scala.inline
+  implicit class levelLoadedDataOps[Self <: levelLoadedData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDetails(value: LevelDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLevelId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levelId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStats(value: Stats): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

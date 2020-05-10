@@ -1,7 +1,7 @@
 package typingsSlinky.jsonFormData.mod
 
+import org.scalajs.dom.raw.Blob
 import typingsSlinky.jsonFormData.FnCall
-import typingsSlinky.std.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

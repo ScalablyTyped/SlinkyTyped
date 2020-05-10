@@ -43,24 +43,101 @@ trait SchemaGoogleFirestoreAdminV1beta2ImportDocumentsMetadata extends js.Object
 
 object SchemaGoogleFirestoreAdminV1beta2ImportDocumentsMetadata {
   @scala.inline
-  def apply(
-    collectionIds: js.Array[String] = null,
-    endTime: String = null,
-    inputUriPrefix: String = null,
-    operationState: String = null,
-    progressBytes: SchemaGoogleFirestoreAdminV1beta2Progress = null,
-    progressDocuments: SchemaGoogleFirestoreAdminV1beta2Progress = null,
-    startTime: String = null
-  ): SchemaGoogleFirestoreAdminV1beta2ImportDocumentsMetadata = {
+  def apply(): SchemaGoogleFirestoreAdminV1beta2ImportDocumentsMetadata = {
     val __obj = js.Dynamic.literal()
-    if (collectionIds != null) __obj.updateDynamic("collectionIds")(collectionIds.asInstanceOf[js.Any])
-    if (endTime != null) __obj.updateDynamic("endTime")(endTime.asInstanceOf[js.Any])
-    if (inputUriPrefix != null) __obj.updateDynamic("inputUriPrefix")(inputUriPrefix.asInstanceOf[js.Any])
-    if (operationState != null) __obj.updateDynamic("operationState")(operationState.asInstanceOf[js.Any])
-    if (progressBytes != null) __obj.updateDynamic("progressBytes")(progressBytes.asInstanceOf[js.Any])
-    if (progressDocuments != null) __obj.updateDynamic("progressDocuments")(progressDocuments.asInstanceOf[js.Any])
-    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleFirestoreAdminV1beta2ImportDocumentsMetadata]
   }
+  @scala.inline
+  implicit class SchemaGoogleFirestoreAdminV1beta2ImportDocumentsMetadataOps[Self <: SchemaGoogleFirestoreAdminV1beta2ImportDocumentsMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCollectionIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collectionIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollectionIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collectionIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputUriPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputUriPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputUriPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputUriPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperationState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperationState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressBytes(value: SchemaGoogleFirestoreAdminV1beta2Progress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressDocuments(value: SchemaGoogleFirestoreAdminV1beta2Progress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressDocuments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressDocuments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressDocuments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

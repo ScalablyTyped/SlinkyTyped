@@ -5,18 +5,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAvatar extends js.Object {
-  var avatar: js.UndefOr[ReactElement] = js.undefined
-  var onPress: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var avatar: js.UndefOr[ReactElement] = js.native
+  var onPress: js.UndefOr[js.Function0[Unit]] = js.native
 }
 
 object AnonAvatar {
   @scala.inline
-  def apply(avatar: ReactElement = null, onPress: () => Unit = null): AnonAvatar = {
+  def apply(): AnonAvatar = {
     val __obj = js.Dynamic.literal()
-    if (avatar != null) __obj.updateDynamic("avatar")(avatar.asInstanceOf[js.Any])
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction0(onPress))
     __obj.asInstanceOf[AnonAvatar]
   }
+  @scala.inline
+  implicit class AnonAvatarOps[Self <: AnonAvatar] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvatar(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvatar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPress(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

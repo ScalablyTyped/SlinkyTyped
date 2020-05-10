@@ -4,6 +4,7 @@ import typingsSlinky.awsSdkClientSqsNode.changeMessageVisibilityBatchExceptionsU
 import typingsSlinky.awsSdkClientSqsNode.deleteMessageBatchExceptionsUnionMod.DeleteMessageBatchExceptionsUnion
 import typingsSlinky.awsSdkClientSqsNode.sendMessageBatchExceptionsUnionMod.SendMessageBatchExceptionsUnion
 import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,5 +17,32 @@ trait BatchEntryIdsNotDistinct
      with SendMessageBatchExceptionsUnion {
   @JSName("name")
   var name_BatchEntryIdsNotDistinct: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.BatchEntryIdsNotDistinct = js.native
+}
+
+object BatchEntryIdsNotDistinct {
+  @scala.inline
+  def apply(
+    $metadata: ResponseMetadata,
+    details: BatchEntryIdsNotDistinctDetails,
+    message: String,
+    name: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.BatchEntryIdsNotDistinct
+  ): BatchEntryIdsNotDistinct = {
+    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BatchEntryIdsNotDistinct]
+  }
+  @scala.inline
+  implicit class BatchEntryIdsNotDistinctOps[Self <: BatchEntryIdsNotDistinct] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.BatchEntryIdsNotDistinct): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

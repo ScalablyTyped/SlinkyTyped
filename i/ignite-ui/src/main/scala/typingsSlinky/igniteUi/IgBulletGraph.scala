@@ -6,9 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgBulletGraph
   extends /**
-	 * Option for igBulletGraph
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
@@ -24,35 +25,35 @@ trait IgBulletGraph
   	 * Use ui.offsetX to obtain the X offset of the label on the bullet graph scale.
   	 * Use ui.offsetY to obtain the Y offset of the label on the bullet graph scale.
   	 */
-  var alignLabel: js.UndefOr[AlignLabelEvent] = js.undefined
+  var alignLabel: js.UndefOr[AlignLabelEvent] = js.native
   /**
   	 * Gets or sets the brush to use to fill the backing of the bullet graph.
   	 */
-  var backingBrush: js.UndefOr[String] = js.undefined
+  var backingBrush: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the inner extent of the bullet graph backing.
   	 */
-  var backingInnerExtent: js.UndefOr[Double] = js.undefined
+  var backingInnerExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the outer extent of the bullet graph backing.
   	 */
-  var backingOuterExtent: js.UndefOr[Double] = js.undefined
+  var backingOuterExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the brush to use for the outline of the backing.
   	 */
-  var backingOutline: js.UndefOr[String] = js.undefined
+  var backingOutline: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the stroke thickness of the backing outline.
   	 */
-  var backingStrokeThickness: js.UndefOr[Double] = js.undefined
+  var backingStrokeThickness: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the font.
   	 */
-  var font: js.UndefOr[String] = js.undefined
+  var font: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the brush to use for the label font.
   	 */
-  var fontBrush: js.UndefOr[String] = js.undefined
+  var fontBrush: js.UndefOr[String] = js.native
   /**
   	 * Event which is raised when a label of the bullet graph is formatted.
   	 * Function takes first argument evt and second argument ui.
@@ -62,77 +63,77 @@ trait IgBulletGraph
   	 * Use ui.value to obtain the value on the the bullet graph scale associated with the label.
   	 * Use ui.label to obtain the string value of the label.
   	 */
-  var formatLabel: js.UndefOr[FormatLabelEvent] = js.undefined
+  var formatLabel: js.UndefOr[FormatLabelEvent] = js.native
   /**
   	 * The height of the gauge. It can be set as a number in pixels, string (px) or percentage (%).
   	 */
-  var height: js.UndefOr[String | Double] = js.undefined
+  var height: js.UndefOr[String | Double] = js.native
   /**
   	 * Gets or sets the interval to use for the scale.
   	 */
-  var interval: js.UndefOr[Double] = js.undefined
+  var interval: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets a value indicating whether the scale is inverted.
   	 * When the scale is inverted the direction in which the scale values increase is right to left.
   	 */
-  var isScaleInverted: js.UndefOr[Boolean] = js.undefined
+  var isScaleInverted: js.UndefOr[Boolean] = js.native
   /**
   	 * Gets or sets the position at which to put the labels as a value from 0 to 1, measured from the bottom of the scale.
   	 * Values further from zero than 1 can be used to hide the labels of the bullet graph.
   	 */
-  var labelExtent: js.UndefOr[Double] = js.undefined
+  var labelExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the interval to use for rendering labels. This defaults to be the same interval as the tickmarks on the scale.
   	 */
-  var labelInterval: js.UndefOr[Double] = js.undefined
+  var labelInterval: js.UndefOr[Double] = js.native
   /**
   	 * A value to start adding labels, added to the scale's MinimumValue.
   	 */
-  var labelsPostInitial: js.UndefOr[Double] = js.undefined
+  var labelsPostInitial: js.UndefOr[Double] = js.native
   /**
   	 * A value to stop adding labels, subtracted from the scale's MaximumValue.
   	 */
-  var labelsPreTerminal: js.UndefOr[Double] = js.undefined
+  var labelsPreTerminal: js.UndefOr[Double] = js.native
   /**
   	 * Set/Get the locale language setting for the widget.
   	 *
   	 */
-  var language: js.UndefOr[String] = js.undefined
+  var language: js.UndefOr[String] = js.native
   /**
   	 * Set/Get the locale setting for the widget.
   	 *
   	 */
-  var locale: js.UndefOr[js.Any] = js.undefined
+  var locale: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets or sets the maximum value of the scale.
   	 */
-  var maximumValue: js.UndefOr[Double] = js.undefined
+  var maximumValue: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the minimum value of the scale.
   	 */
-  var minimumValue: js.UndefOr[Double] = js.undefined
+  var minimumValue: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the brush to use for the minor tickmarks.
   	 */
-  var minorTickBrush: js.UndefOr[String] = js.undefined
+  var minorTickBrush: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the number of minor tickmarks to place between major tickmarks.
   	 */
-  var minorTickCount: js.UndefOr[Double] = js.undefined
+  var minorTickCount: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the position at which to stop rendering the minor tickmarks as a value from 0 to 1, measured from the front/bottom of the bullet graph.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the bullet graph.
   	 */
-  var minorTickEndExtent: js.UndefOr[Double] = js.undefined
+  var minorTickEndExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the position at which to start rendering the minor tickmarks as a value from 0 to 1, measured from the front/bottom of the bullet graph.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the bullet graph.
   	 */
-  var minorTickStartExtent: js.UndefOr[Double] = js.undefined
+  var minorTickStartExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the stroke thickness to use when rendering minor ticks.
   	 */
-  var minorTickStrokeThickness: js.UndefOr[Double] = js.undefined
+  var minorTickStrokeThickness: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the orientation of the scale.
   	 *
@@ -140,327 +141,989 @@ trait IgBulletGraph
   	 * "horizontal" The scale has a horizontal orientation.
   	 * "vertical" The scale has a vertical orientation.
   	 */
-  var orientation: js.UndefOr[String] = js.undefined
+  var orientation: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the scaling value used to affect the pixel density of the control.
   	 * A higher scaling ratio will produce crisper visuals at the expense of memory.  Lower values will cause the control
   	 * to appear blurry.
   	 */
-  var pixelScalingRatio: js.UndefOr[Double] = js.undefined
+  var pixelScalingRatio: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets a collection of brushes to be used as the palette for bullet graph ranges.
   	 * The value provided should be an array of css color strings or JavaScript objects defining gradients. Optionally the first element can be a string reading "RGB" or "HSV" to specify the interpolation mode of the collection.
   	 */
-  var rangeBrushes: js.UndefOr[js.Any] = js.undefined
+  var rangeBrushes: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets or sets the position at which to start rendering the ranges, measured from the front/bottom of the control as a value from 0 to 1.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the bullet graph.
   	 */
-  var rangeInnerExtent: js.UndefOr[Double] = js.undefined
+  var rangeInnerExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the position at which to stop rendering the range as a value from 0 to 1 measured from the front/bottom of the bullet graph.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the bullet graph.
   	 */
-  var rangeOuterExtent: js.UndefOr[Double] = js.undefined
+  var rangeOuterExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets a collection of brushes to be used as the palette for bullet graph outlines.
   	 * The value provided should be an array of css color strings or JavaScript objects defining gradients. Optionally the first element can be a string reading "RGB" or "HSV" to specify the interpolation mode of the collection.
   	 */
-  var rangeOutlines: js.UndefOr[js.Any] = js.undefined
+  var rangeOutlines: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets or sets the ranges' tooltip template.
   	 */
-  var rangeToolTipTemplate: js.UndefOr[String] = js.undefined
+  var rangeToolTipTemplate: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the scale ranges to render on the bullet graph.
   	 */
-  var ranges: js.UndefOr[js.Array[IgBulletGraphRange]] = js.undefined
+  var ranges: js.UndefOr[js.Array[IgBulletGraphRange]] = js.native
   /**
   	 * Set/Get the regional setting for the widget.
   	 *
   	 */
-  var regional: js.UndefOr[String | js.Object] = js.undefined
+  var regional: js.UndefOr[String | js.Object] = js.native
   /**
   	 * Gets or sets the background brush for the scale.
   	 */
-  var scaleBackgroundBrush: js.UndefOr[String] = js.undefined
+  var scaleBackgroundBrush: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the background outline for the scale.
   	 */
-  var scaleBackgroundOutline: js.UndefOr[String] = js.undefined
+  var scaleBackgroundOutline: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the background outline thickness for the scale.
   	 */
-  var scaleBackgroundThickness: js.UndefOr[Double] = js.undefined
+  var scaleBackgroundThickness: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the position at which to stop rendering the scale as a value from 0 to 1, measured from the front/bottom of the bullet graph.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the bullet graph.
   	 */
-  var scaleEndExtent: js.UndefOr[Double] = js.undefined
+  var scaleEndExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the position at which to start rendering the scale, measured from the front/bottom of the bullet graph as a value from 0 to 1.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the bullet graph.
   	 */
-  var scaleStartExtent: js.UndefOr[Double] = js.undefined
+  var scaleStartExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets a value indicating whether tooltips are enabled.
   	 */
-  var showToolTip: js.UndefOr[Boolean] = js.undefined
+  var showToolTip: js.UndefOr[Boolean] = js.native
   /**
   	 * Gets or sets the time in milliseconds that tooltip appearance is delayed with.
   	 */
-  var showToolTipTimeout: js.UndefOr[Double] = js.undefined
+  var showToolTipTimeout: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the value indicated by the target value bar.
   	 */
-  var targetValue: js.UndefOr[Double] = js.undefined
+  var targetValue: js.UndefOr[Double] = js.native
   /**
   	 * Get or sets the breadth of the target value element.
   	 */
-  var targetValueBreadth: js.UndefOr[Double] = js.undefined
+  var targetValueBreadth: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the brush to use when rendering the fill of the comparative marker.
   	 */
-  var targetValueBrush: js.UndefOr[String] = js.undefined
+  var targetValueBrush: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the position at which to start rendering the target value, measured from the front/bottom of the control as a value from 0 to 1.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the bullet graph.
   	 */
-  var targetValueInnerExtent: js.UndefOr[Double] = js.undefined
+  var targetValueInnerExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the name used for the target value. The name is displayed in the default target value tooltip.
   	 */
-  var targetValueName: js.UndefOr[String] = js.undefined
+  var targetValueName: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the position at which to start rendering the target value, measured from the front/bottom of the control as a value from 0 to 1.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the bullet graph.
   	 */
-  var targetValueOuterExtent: js.UndefOr[Double] = js.undefined
+  var targetValueOuterExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the brush to use when rendering the outline of the target value.
   	 */
-  var targetValueOutline: js.UndefOr[String] = js.undefined
+  var targetValueOutline: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the stroke thickness of the outline of the target value bar.
   	 */
-  var targetValueStrokeThickness: js.UndefOr[Double] = js.undefined
+  var targetValueStrokeThickness: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the target value's tooltip template.
   	 */
-  var targetValueToolTipTemplate: js.UndefOr[String] = js.undefined
+  var targetValueToolTipTemplate: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the brush to use for the major tickmarks.
   	 */
-  var tickBrush: js.UndefOr[String] = js.undefined
+  var tickBrush: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the position at which to stop rendering the major tickmarks as a value from 0 to 1, measured from the front/bottom of the bullet graph.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the bullet graph.
   	 */
-  var tickEndExtent: js.UndefOr[Double] = js.undefined
+  var tickEndExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the position at which to start rendering the major tickmarks as a value from 0 to 1, measured from the front/bottom of the bullet graph.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the bullet graph.
   	 */
-  var tickStartExtent: js.UndefOr[Double] = js.undefined
+  var tickStartExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the stroke thickness to use when rendering ticks.
   	 */
-  var tickStrokeThickness: js.UndefOr[Double] = js.undefined
+  var tickStrokeThickness: js.UndefOr[Double] = js.native
   /**
   	 * A value to start adding tickmarks, added to the scale's MinimumValue.
   	 */
-  var ticksPostInitial: js.UndefOr[Double] = js.undefined
+  var ticksPostInitial: js.UndefOr[Double] = js.native
   /**
   	 * A value to stop adding tickmarks, subtracted from the scale's MaximumValue.
   	 */
-  var ticksPreTerminal: js.UndefOr[Double] = js.undefined
+  var ticksPreTerminal: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the number of milliseconds over which changes to the bullet graph should be animated.
   	 */
-  var transitionDuration: js.UndefOr[Double] = js.undefined
+  var transitionDuration: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the value at which the bar ends.
   	 */
-  var value: js.UndefOr[Double] = js.undefined
+  var value: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the brush to use for the actual value element.
   	 */
-  var valueBrush: js.UndefOr[String] = js.undefined
+  var valueBrush: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the position at which to start rendering the actual value geometries, measured from the front/bottom of the bullet graph as a value from 0 to 1.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the bullet graph.
   	 */
-  var valueInnerExtent: js.UndefOr[Double] = js.undefined
+  var valueInnerExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the name used for actual value.
   	 */
-  var valueName: js.UndefOr[String] = js.undefined
+  var valueName: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the position at which to stop rendering the actual value geometries as a value from 0 to 1 measured from the front/bottom of the bullet graph.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the bullet graph.
   	 */
-  var valueOuterExtent: js.UndefOr[Double] = js.undefined
+  var valueOuterExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the brush to use for the outline of actual value element.
   	 */
-  var valueOutline: js.UndefOr[String] = js.undefined
+  var valueOutline: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the stroke thickness to use when rendering single actual value element.
   	 */
-  var valueStrokeThickness: js.UndefOr[Double] = js.undefined
+  var valueStrokeThickness: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the value's tooltip template.
   	 */
-  var valueToolTipTemplate: js.UndefOr[String] = js.undefined
+  var valueToolTipTemplate: js.UndefOr[String] = js.native
   /**
   	 * The width of the gauge. It can be set as a number in pixels, string (px) or percentage (%).
   	 */
-  var width: js.UndefOr[String | Double] = js.undefined
+  var width: js.UndefOr[String | Double] = js.native
 }
 
 object IgBulletGraph {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for igBulletGraph
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    alignLabel: (/* event */ Event_, /* ui */ AlignLabelEventUIParam) => Unit = null,
-    backingBrush: String = null,
-    backingInnerExtent: Int | Double = null,
-    backingOuterExtent: Int | Double = null,
-    backingOutline: String = null,
-    backingStrokeThickness: Int | Double = null,
-    font: String = null,
-    fontBrush: String = null,
-    formatLabel: (/* event */ Event_, /* ui */ FormatLabelEventUIParam) => Unit = null,
-    height: String | Double = null,
-    interval: Int | Double = null,
-    isScaleInverted: js.UndefOr[Boolean] = js.undefined,
-    labelExtent: Int | Double = null,
-    labelInterval: Int | Double = null,
-    labelsPostInitial: Int | Double = null,
-    labelsPreTerminal: Int | Double = null,
-    language: String = null,
-    locale: js.Any = null,
-    maximumValue: Int | Double = null,
-    minimumValue: Int | Double = null,
-    minorTickBrush: String = null,
-    minorTickCount: Int | Double = null,
-    minorTickEndExtent: Int | Double = null,
-    minorTickStartExtent: Int | Double = null,
-    minorTickStrokeThickness: Int | Double = null,
-    orientation: String = null,
-    pixelScalingRatio: Int | Double = null,
-    rangeBrushes: js.Any = null,
-    rangeInnerExtent: Int | Double = null,
-    rangeOuterExtent: Int | Double = null,
-    rangeOutlines: js.Any = null,
-    rangeToolTipTemplate: String = null,
-    ranges: js.Array[IgBulletGraphRange] = null,
-    regional: String | js.Object = null,
-    scaleBackgroundBrush: String = null,
-    scaleBackgroundOutline: String = null,
-    scaleBackgroundThickness: Int | Double = null,
-    scaleEndExtent: Int | Double = null,
-    scaleStartExtent: Int | Double = null,
-    showToolTip: js.UndefOr[Boolean] = js.undefined,
-    showToolTipTimeout: Int | Double = null,
-    targetValue: Int | Double = null,
-    targetValueBreadth: Int | Double = null,
-    targetValueBrush: String = null,
-    targetValueInnerExtent: Int | Double = null,
-    targetValueName: String = null,
-    targetValueOuterExtent: Int | Double = null,
-    targetValueOutline: String = null,
-    targetValueStrokeThickness: Int | Double = null,
-    targetValueToolTipTemplate: String = null,
-    tickBrush: String = null,
-    tickEndExtent: Int | Double = null,
-    tickStartExtent: Int | Double = null,
-    tickStrokeThickness: Int | Double = null,
-    ticksPostInitial: Int | Double = null,
-    ticksPreTerminal: Int | Double = null,
-    transitionDuration: Int | Double = null,
-    value: Int | Double = null,
-    valueBrush: String = null,
-    valueInnerExtent: Int | Double = null,
-    valueName: String = null,
-    valueOuterExtent: Int | Double = null,
-    valueOutline: String = null,
-    valueStrokeThickness: Int | Double = null,
-    valueToolTipTemplate: String = null,
-    width: String | Double = null
-  ): IgBulletGraph = {
+  def apply(): IgBulletGraph = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (alignLabel != null) __obj.updateDynamic("alignLabel")(js.Any.fromFunction2(alignLabel))
-    if (backingBrush != null) __obj.updateDynamic("backingBrush")(backingBrush.asInstanceOf[js.Any])
-    if (backingInnerExtent != null) __obj.updateDynamic("backingInnerExtent")(backingInnerExtent.asInstanceOf[js.Any])
-    if (backingOuterExtent != null) __obj.updateDynamic("backingOuterExtent")(backingOuterExtent.asInstanceOf[js.Any])
-    if (backingOutline != null) __obj.updateDynamic("backingOutline")(backingOutline.asInstanceOf[js.Any])
-    if (backingStrokeThickness != null) __obj.updateDynamic("backingStrokeThickness")(backingStrokeThickness.asInstanceOf[js.Any])
-    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
-    if (fontBrush != null) __obj.updateDynamic("fontBrush")(fontBrush.asInstanceOf[js.Any])
-    if (formatLabel != null) __obj.updateDynamic("formatLabel")(js.Any.fromFunction2(formatLabel))
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
-    if (!js.isUndefined(isScaleInverted)) __obj.updateDynamic("isScaleInverted")(isScaleInverted.asInstanceOf[js.Any])
-    if (labelExtent != null) __obj.updateDynamic("labelExtent")(labelExtent.asInstanceOf[js.Any])
-    if (labelInterval != null) __obj.updateDynamic("labelInterval")(labelInterval.asInstanceOf[js.Any])
-    if (labelsPostInitial != null) __obj.updateDynamic("labelsPostInitial")(labelsPostInitial.asInstanceOf[js.Any])
-    if (labelsPreTerminal != null) __obj.updateDynamic("labelsPreTerminal")(labelsPreTerminal.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (maximumValue != null) __obj.updateDynamic("maximumValue")(maximumValue.asInstanceOf[js.Any])
-    if (minimumValue != null) __obj.updateDynamic("minimumValue")(minimumValue.asInstanceOf[js.Any])
-    if (minorTickBrush != null) __obj.updateDynamic("minorTickBrush")(minorTickBrush.asInstanceOf[js.Any])
-    if (minorTickCount != null) __obj.updateDynamic("minorTickCount")(minorTickCount.asInstanceOf[js.Any])
-    if (minorTickEndExtent != null) __obj.updateDynamic("minorTickEndExtent")(minorTickEndExtent.asInstanceOf[js.Any])
-    if (minorTickStartExtent != null) __obj.updateDynamic("minorTickStartExtent")(minorTickStartExtent.asInstanceOf[js.Any])
-    if (minorTickStrokeThickness != null) __obj.updateDynamic("minorTickStrokeThickness")(minorTickStrokeThickness.asInstanceOf[js.Any])
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (pixelScalingRatio != null) __obj.updateDynamic("pixelScalingRatio")(pixelScalingRatio.asInstanceOf[js.Any])
-    if (rangeBrushes != null) __obj.updateDynamic("rangeBrushes")(rangeBrushes.asInstanceOf[js.Any])
-    if (rangeInnerExtent != null) __obj.updateDynamic("rangeInnerExtent")(rangeInnerExtent.asInstanceOf[js.Any])
-    if (rangeOuterExtent != null) __obj.updateDynamic("rangeOuterExtent")(rangeOuterExtent.asInstanceOf[js.Any])
-    if (rangeOutlines != null) __obj.updateDynamic("rangeOutlines")(rangeOutlines.asInstanceOf[js.Any])
-    if (rangeToolTipTemplate != null) __obj.updateDynamic("rangeToolTipTemplate")(rangeToolTipTemplate.asInstanceOf[js.Any])
-    if (ranges != null) __obj.updateDynamic("ranges")(ranges.asInstanceOf[js.Any])
-    if (regional != null) __obj.updateDynamic("regional")(regional.asInstanceOf[js.Any])
-    if (scaleBackgroundBrush != null) __obj.updateDynamic("scaleBackgroundBrush")(scaleBackgroundBrush.asInstanceOf[js.Any])
-    if (scaleBackgroundOutline != null) __obj.updateDynamic("scaleBackgroundOutline")(scaleBackgroundOutline.asInstanceOf[js.Any])
-    if (scaleBackgroundThickness != null) __obj.updateDynamic("scaleBackgroundThickness")(scaleBackgroundThickness.asInstanceOf[js.Any])
-    if (scaleEndExtent != null) __obj.updateDynamic("scaleEndExtent")(scaleEndExtent.asInstanceOf[js.Any])
-    if (scaleStartExtent != null) __obj.updateDynamic("scaleStartExtent")(scaleStartExtent.asInstanceOf[js.Any])
-    if (!js.isUndefined(showToolTip)) __obj.updateDynamic("showToolTip")(showToolTip.asInstanceOf[js.Any])
-    if (showToolTipTimeout != null) __obj.updateDynamic("showToolTipTimeout")(showToolTipTimeout.asInstanceOf[js.Any])
-    if (targetValue != null) __obj.updateDynamic("targetValue")(targetValue.asInstanceOf[js.Any])
-    if (targetValueBreadth != null) __obj.updateDynamic("targetValueBreadth")(targetValueBreadth.asInstanceOf[js.Any])
-    if (targetValueBrush != null) __obj.updateDynamic("targetValueBrush")(targetValueBrush.asInstanceOf[js.Any])
-    if (targetValueInnerExtent != null) __obj.updateDynamic("targetValueInnerExtent")(targetValueInnerExtent.asInstanceOf[js.Any])
-    if (targetValueName != null) __obj.updateDynamic("targetValueName")(targetValueName.asInstanceOf[js.Any])
-    if (targetValueOuterExtent != null) __obj.updateDynamic("targetValueOuterExtent")(targetValueOuterExtent.asInstanceOf[js.Any])
-    if (targetValueOutline != null) __obj.updateDynamic("targetValueOutline")(targetValueOutline.asInstanceOf[js.Any])
-    if (targetValueStrokeThickness != null) __obj.updateDynamic("targetValueStrokeThickness")(targetValueStrokeThickness.asInstanceOf[js.Any])
-    if (targetValueToolTipTemplate != null) __obj.updateDynamic("targetValueToolTipTemplate")(targetValueToolTipTemplate.asInstanceOf[js.Any])
-    if (tickBrush != null) __obj.updateDynamic("tickBrush")(tickBrush.asInstanceOf[js.Any])
-    if (tickEndExtent != null) __obj.updateDynamic("tickEndExtent")(tickEndExtent.asInstanceOf[js.Any])
-    if (tickStartExtent != null) __obj.updateDynamic("tickStartExtent")(tickStartExtent.asInstanceOf[js.Any])
-    if (tickStrokeThickness != null) __obj.updateDynamic("tickStrokeThickness")(tickStrokeThickness.asInstanceOf[js.Any])
-    if (ticksPostInitial != null) __obj.updateDynamic("ticksPostInitial")(ticksPostInitial.asInstanceOf[js.Any])
-    if (ticksPreTerminal != null) __obj.updateDynamic("ticksPreTerminal")(ticksPreTerminal.asInstanceOf[js.Any])
-    if (transitionDuration != null) __obj.updateDynamic("transitionDuration")(transitionDuration.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (valueBrush != null) __obj.updateDynamic("valueBrush")(valueBrush.asInstanceOf[js.Any])
-    if (valueInnerExtent != null) __obj.updateDynamic("valueInnerExtent")(valueInnerExtent.asInstanceOf[js.Any])
-    if (valueName != null) __obj.updateDynamic("valueName")(valueName.asInstanceOf[js.Any])
-    if (valueOuterExtent != null) __obj.updateDynamic("valueOuterExtent")(valueOuterExtent.asInstanceOf[js.Any])
-    if (valueOutline != null) __obj.updateDynamic("valueOutline")(valueOutline.asInstanceOf[js.Any])
-    if (valueStrokeThickness != null) __obj.updateDynamic("valueStrokeThickness")(valueStrokeThickness.asInstanceOf[js.Any])
-    if (valueToolTipTemplate != null) __obj.updateDynamic("valueToolTipTemplate")(valueToolTipTemplate.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgBulletGraph]
   }
+  @scala.inline
+  implicit class IgBulletGraphOps[Self <: IgBulletGraph] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlignLabel(value: (/* event */ Event_, /* ui */ AlignLabelEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignLabel")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAlignLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackingBrush(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingBrush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackingBrush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingBrush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackingInnerExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingInnerExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackingInnerExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingInnerExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackingOuterExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingOuterExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackingOuterExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingOuterExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackingOutline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingOutline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackingOutline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingOutline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackingStrokeThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingStrokeThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackingStrokeThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingStrokeThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFont(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFont: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontBrush(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontBrush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontBrush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontBrush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatLabel(value: (/* event */ Event_, /* ui */ FormatLabelEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatLabel")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutFormatLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsScaleInverted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isScaleInverted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsScaleInverted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isScaleInverted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelsPostInitial(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelsPostInitial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelsPostInitial: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelsPostInitial")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelsPreTerminal(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelsPreTerminal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelsPreTerminal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelsPreTerminal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickBrush(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickBrush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickBrush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickBrush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickEndExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickEndExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickEndExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickEndExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickStartExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickStartExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickStartExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickStartExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickStrokeThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickStrokeThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickStrokeThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickStrokeThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrientation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrientation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPixelScalingRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelScalingRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPixelScalingRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelScalingRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeBrushes(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeBrushes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeBrushes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeBrushes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeInnerExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeInnerExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeInnerExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeInnerExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeOuterExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeOuterExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeOuterExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeOuterExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeOutlines(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeOutlines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeOutlines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeOutlines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeToolTipTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeToolTipTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeToolTipTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeToolTipTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRanges(value: js.Array[IgBulletGraphRange]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegional(value: String | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegional: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regional")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleBackgroundBrush(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleBackgroundBrush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleBackgroundBrush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleBackgroundBrush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleBackgroundOutline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleBackgroundOutline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleBackgroundOutline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleBackgroundOutline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleBackgroundThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleBackgroundThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleBackgroundThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleBackgroundThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleEndExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleEndExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleEndExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleEndExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleStartExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleStartExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleStartExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleStartExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowToolTip(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showToolTip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowToolTip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showToolTip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowToolTipTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showToolTipTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowToolTipTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showToolTipTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetValueBreadth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValueBreadth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetValueBreadth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValueBreadth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetValueBrush(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValueBrush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetValueBrush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValueBrush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetValueInnerExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValueInnerExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetValueInnerExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValueInnerExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetValueName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValueName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetValueName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValueName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetValueOuterExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValueOuterExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetValueOuterExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValueOuterExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetValueOutline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValueOutline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetValueOutline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValueOutline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetValueStrokeThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValueStrokeThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetValueStrokeThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValueStrokeThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetValueToolTipTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValueToolTipTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetValueToolTipTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValueToolTipTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickBrush(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickBrush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickBrush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickBrush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickEndExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickEndExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickEndExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickEndExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickStartExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickStartExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickStartExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickStartExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickStrokeThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickStrokeThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickStrokeThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickStrokeThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTicksPostInitial(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksPostInitial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTicksPostInitial: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksPostInitial")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTicksPreTerminal(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksPreTerminal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTicksPreTerminal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksPreTerminal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueBrush(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueBrush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueBrush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueBrush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueInnerExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueInnerExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueInnerExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueInnerExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueOuterExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueOuterExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueOuterExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueOuterExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueOutline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueOutline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueOutline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueOutline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueStrokeThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueStrokeThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueStrokeThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueStrokeThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueToolTipTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueToolTipTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueToolTipTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueToolTipTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

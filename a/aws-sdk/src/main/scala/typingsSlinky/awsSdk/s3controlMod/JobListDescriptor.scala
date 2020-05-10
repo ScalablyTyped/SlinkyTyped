@@ -42,26 +42,113 @@ trait JobListDescriptor extends js.Object {
 
 object JobListDescriptor {
   @scala.inline
-  def apply(
-    CreationTime: js.Date = null,
-    Description: NonEmptyMaxLength256String = null,
-    JobId: JobId = null,
-    Operation: OperationName = null,
-    Priority: Int | Double = null,
-    ProgressSummary: JobProgressSummary = null,
-    Status: JobStatus = null,
-    TerminationDate: js.Date = null
-  ): JobListDescriptor = {
+  def apply(): JobListDescriptor = {
     val __obj = js.Dynamic.literal()
-    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (JobId != null) __obj.updateDynamic("JobId")(JobId.asInstanceOf[js.Any])
-    if (Operation != null) __obj.updateDynamic("Operation")(Operation.asInstanceOf[js.Any])
-    if (Priority != null) __obj.updateDynamic("Priority")(Priority.asInstanceOf[js.Any])
-    if (ProgressSummary != null) __obj.updateDynamic("ProgressSummary")(ProgressSummary.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (TerminationDate != null) __obj.updateDynamic("TerminationDate")(TerminationDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobListDescriptor]
   }
+  @scala.inline
+  implicit class JobListDescriptorOps[Self <: JobListDescriptor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: NonEmptyMaxLength256String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobId(value: JobId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperation(value: OperationName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Operation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Operation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriority(value: JobPriority): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressSummary(value: JobProgressSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressSummary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: JobStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerminationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerminationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminationDate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

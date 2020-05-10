@@ -22,12 +22,53 @@ trait Region extends js.Object {
 
 object Region {
   @scala.inline
-  def apply(Endpoint: String = null, OptInStatus: String = null, RegionName: String = null): Region = {
+  def apply(): Region = {
     val __obj = js.Dynamic.literal()
-    if (Endpoint != null) __obj.updateDynamic("Endpoint")(Endpoint.asInstanceOf[js.Any])
-    if (OptInStatus != null) __obj.updateDynamic("OptInStatus")(OptInStatus.asInstanceOf[js.Any])
-    if (RegionName != null) __obj.updateDynamic("RegionName")(RegionName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Region]
   }
+  @scala.inline
+  implicit class RegionOps[Self <: Region] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndpoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptInStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptInStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptInStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptInStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

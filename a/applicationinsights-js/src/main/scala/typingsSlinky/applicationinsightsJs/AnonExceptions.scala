@@ -5,13 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonExceptions extends js.Object {
-  var exceptions: FieldType
-  var handledAt: FieldType
-  var measurements: FieldType
-  var properties: FieldType
-  var severityLevel: FieldType
-  var ver: FieldType
+  var exceptions: FieldType = js.native
+  var handledAt: FieldType = js.native
+  var measurements: FieldType = js.native
+  var properties: FieldType = js.native
+  var severityLevel: FieldType = js.native
+  var ver: FieldType = js.native
 }
 
 object AnonExceptions {
@@ -25,8 +26,51 @@ object AnonExceptions {
     ver: FieldType
   ): AnonExceptions = {
     val __obj = js.Dynamic.literal(exceptions = exceptions.asInstanceOf[js.Any], handledAt = handledAt.asInstanceOf[js.Any], measurements = measurements.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], severityLevel = severityLevel.asInstanceOf[js.Any], ver = ver.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonExceptions]
   }
+  @scala.inline
+  implicit class AnonExceptionsOps[Self <: AnonExceptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExceptions(value: FieldType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exceptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHandledAt(value: FieldType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handledAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMeasurements(value: FieldType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measurements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProperties(value: FieldType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSeverityLevel(value: FieldType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("severityLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVer(value: FieldType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ver")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

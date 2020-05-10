@@ -22,11 +22,41 @@ trait SchemaRouterNatLogConfig extends js.Object {
 
 object SchemaRouterNatLogConfig {
   @scala.inline
-  def apply(enable: js.UndefOr[Boolean] = js.undefined, filter: String = null): SchemaRouterNatLogConfig = {
+  def apply(): SchemaRouterNatLogConfig = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enable)) __obj.updateDynamic("enable")(enable.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRouterNatLogConfig]
   }
+  @scala.inline
+  implicit class SchemaRouterNatLogConfigOps[Self <: SchemaRouterNatLogConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,50 +1,55 @@
 package typingsSlinky.antDesignPro.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.noticeIconTabMod.NoticeIconData
 import typingsSlinky.antDesignPro.noticeIconTabMod.NoticeIconTabProps
 import typingsSlinky.antDesignPro.noticeIconTabMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object NoticeIconTab
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object NoticeIconTab {
   @JSImport("ant-design-pro/lib/NoticeIcon/NoticeIconTab", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name, style, title */
-  def apply(
-    locale: js.Any,
-    onClear: js.Any => Unit,
-    onClick: js.Any => Unit,
-    onViewMore: js.Any => Unit,
-    count: Int | Double = null,
-    data: js.Array[_] = null,
-    emptyImage: String = null,
-    emptyText: TagMod[Any] = null,
-    list: js.Array[NoticeIconData] = null,
-    showClear: js.UndefOr[Boolean] = js.undefined,
-    showViewMore: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any], onClear = js.Any.fromFunction1(onClear), onClick = js.Any.fromFunction1(onClick), onViewMore = js.Any.fromFunction1(onViewMore))
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (emptyImage != null) __obj.updateDynamic("emptyImage")(emptyImage.asInstanceOf[js.Any])
-    if (emptyText != null) __obj.updateDynamic("emptyText")(emptyText.asInstanceOf[js.Any])
-    if (list != null) __obj.updateDynamic("list")(list.asInstanceOf[js.Any])
-    if (!js.isUndefined(showClear)) __obj.updateDynamic("showClear")(showClear.asInstanceOf[js.Any])
-    if (!js.isUndefined(showViewMore)) __obj.updateDynamic("showViewMore")(showViewMore.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def count(value: Double): this.type = set("count", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emptyImage(value: String): this.type = set("emptyImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emptyTextReactElement(value: ReactElement): this.type = set("emptyText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emptyText(value: TagMod[Any]): this.type = set("emptyText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def list(value: js.Array[NoticeIconData]): this.type = set("list", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showClear(value: Boolean): this.type = set("showClear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showViewMore(value: Boolean): this.type = set("showViewMore", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }
-  type Props = NoticeIconTabProps
+  
+  def withProps(p: NoticeIconTabProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(locale: js.Any, onClear: js.Any => Unit, onClick: js.Any => Unit, onViewMore: js.Any => Unit): Builder = {
+    val __props = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any], onClear = js.Any.fromFunction1(onClear), onClick = js.Any.fromFunction1(onClick), onViewMore = js.Any.fromFunction1(onViewMore))
+    new Builder(js.Array(this.component, __props.asInstanceOf[NoticeIconTabProps]))
+  }
 }
 

@@ -17,16 +17,30 @@ import scala.scalajs.js.annotation._
   *         .addSection(cardSection)
   *         .build();
   */
+@js.native
 trait Card extends js.Object {
-  def printJson(): String
+  def printJson(): String = js.native
 }
 
 object Card {
   @scala.inline
   def apply(printJson: () => String): Card = {
     val __obj = js.Dynamic.literal(printJson = js.Any.fromFunction0(printJson))
-  
     __obj.asInstanceOf[Card]
   }
+  @scala.inline
+  implicit class CardOps[Self <: Card] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPrintJson(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("printJson")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

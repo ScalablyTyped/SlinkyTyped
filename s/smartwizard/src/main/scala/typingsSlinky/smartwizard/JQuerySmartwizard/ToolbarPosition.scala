@@ -14,14 +14,12 @@ trait ToolbarPosition extends js.Object
 
 object ToolbarPosition {
   @scala.inline
-  def both: typingsSlinky.smartwizard.smartwizardStrings.both = this.cast("both")
+  def both: typingsSlinky.smartwizard.smartwizardStrings.both = "both".asInstanceOf[typingsSlinky.smartwizard.smartwizardStrings.both]
   @scala.inline
-  def bottom: typingsSlinky.smartwizard.smartwizardStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.smartwizard.smartwizardStrings.bottom = "bottom".asInstanceOf[typingsSlinky.smartwizard.smartwizardStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def none: typingsSlinky.smartwizard.smartwizardStrings.none = "none".asInstanceOf[typingsSlinky.smartwizard.smartwizardStrings.none]
   @scala.inline
-  def none: typingsSlinky.smartwizard.smartwizardStrings.none = this.cast("none")
-  @scala.inline
-  def top: typingsSlinky.smartwizard.smartwizardStrings.top = this.cast("top")
+  def top: typingsSlinky.smartwizard.smartwizardStrings.top = "top".asInstanceOf[typingsSlinky.smartwizard.smartwizardStrings.top]
 }
 

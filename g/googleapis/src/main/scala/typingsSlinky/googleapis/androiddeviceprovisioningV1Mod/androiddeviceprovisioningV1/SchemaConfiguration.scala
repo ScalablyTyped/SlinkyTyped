@@ -78,30 +78,137 @@ trait SchemaConfiguration extends js.Object {
 
 object SchemaConfiguration {
   @scala.inline
-  def apply(
-    companyName: String = null,
-    configurationId: String = null,
-    configurationName: String = null,
-    contactEmail: String = null,
-    contactPhone: String = null,
-    customMessage: String = null,
-    dpcExtras: String = null,
-    dpcResourcePath: String = null,
-    isDefault: js.UndefOr[Boolean] = js.undefined,
-    name: String = null
-  ): SchemaConfiguration = {
+  def apply(): SchemaConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (companyName != null) __obj.updateDynamic("companyName")(companyName.asInstanceOf[js.Any])
-    if (configurationId != null) __obj.updateDynamic("configurationId")(configurationId.asInstanceOf[js.Any])
-    if (configurationName != null) __obj.updateDynamic("configurationName")(configurationName.asInstanceOf[js.Any])
-    if (contactEmail != null) __obj.updateDynamic("contactEmail")(contactEmail.asInstanceOf[js.Any])
-    if (contactPhone != null) __obj.updateDynamic("contactPhone")(contactPhone.asInstanceOf[js.Any])
-    if (customMessage != null) __obj.updateDynamic("customMessage")(customMessage.asInstanceOf[js.Any])
-    if (dpcExtras != null) __obj.updateDynamic("dpcExtras")(dpcExtras.asInstanceOf[js.Any])
-    if (dpcResourcePath != null) __obj.updateDynamic("dpcResourcePath")(dpcResourcePath.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDefault)) __obj.updateDynamic("isDefault")(isDefault.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaConfiguration]
   }
+  @scala.inline
+  implicit class SchemaConfigurationOps[Self <: SchemaConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompanyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("companyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompanyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("companyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigurationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigurationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigurationName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigurationName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContactEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactEmail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContactEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactEmail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContactPhone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactPhone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContactPhone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactPhone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDpcExtras(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dpcExtras")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDpcExtras: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dpcExtras")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDpcResourcePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dpcResourcePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDpcResourcePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dpcResourcePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDefault(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefault")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

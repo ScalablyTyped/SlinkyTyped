@@ -15,16 +15,14 @@ trait ReporterVersion extends js.Object
 
 object ReporterVersion {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `no-passes`: typingsSlinky.axeCore.axeCoreStrings.`no-passes` = "no-passes".asInstanceOf[typingsSlinky.axeCore.axeCoreStrings.`no-passes`]
   @scala.inline
-  def `no-passes`: typingsSlinky.axeCore.axeCoreStrings.`no-passes` = this.cast("no-passes")
+  def raw: typingsSlinky.axeCore.axeCoreStrings.raw = "raw".asInstanceOf[typingsSlinky.axeCore.axeCoreStrings.raw]
   @scala.inline
-  def raw: typingsSlinky.axeCore.axeCoreStrings.raw = this.cast("raw")
+  def `raw-env`: typingsSlinky.axeCore.axeCoreStrings.`raw-env` = "raw-env".asInstanceOf[typingsSlinky.axeCore.axeCoreStrings.`raw-env`]
   @scala.inline
-  def `raw-env`: typingsSlinky.axeCore.axeCoreStrings.`raw-env` = this.cast("raw-env")
+  def v1: typingsSlinky.axeCore.axeCoreStrings.v1 = "v1".asInstanceOf[typingsSlinky.axeCore.axeCoreStrings.v1]
   @scala.inline
-  def v1: typingsSlinky.axeCore.axeCoreStrings.v1 = this.cast("v1")
-  @scala.inline
-  def v2: typingsSlinky.axeCore.axeCoreStrings.v2 = this.cast("v2")
+  def v2: typingsSlinky.axeCore.axeCoreStrings.v2 = "v2".asInstanceOf[typingsSlinky.axeCore.axeCoreStrings.v2]
 }
 

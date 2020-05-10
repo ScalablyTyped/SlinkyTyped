@@ -8,73 +8,212 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Termvectors[T] extends Generic {
-  var body: js.UndefOr[T] = js.undefined
-  var field_statistics: js.UndefOr[Boolean] = js.undefined
-  var fields: js.UndefOr[String | js.Array[String]] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var index: String
-  var offsets: js.UndefOr[Boolean] = js.undefined
-  var payloads: js.UndefOr[Boolean] = js.undefined
-  var positions: js.UndefOr[Boolean] = js.undefined
-  var preference: js.UndefOr[String] = js.undefined
-  var realtime: js.UndefOr[Boolean] = js.undefined
-  var routing: js.UndefOr[String] = js.undefined
-  var term_statistics: js.UndefOr[Boolean] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
-  var version: js.UndefOr[Double] = js.undefined
-  var version_type: js.UndefOr[internal | external | external_gte | force] = js.undefined
+  var body: js.UndefOr[T] = js.native
+  var field_statistics: js.UndefOr[Boolean] = js.native
+  var fields: js.UndefOr[String | js.Array[String]] = js.native
+  var id: js.UndefOr[String] = js.native
+  var index: String = js.native
+  var offsets: js.UndefOr[Boolean] = js.native
+  var payloads: js.UndefOr[Boolean] = js.native
+  var positions: js.UndefOr[Boolean] = js.native
+  var preference: js.UndefOr[String] = js.native
+  var realtime: js.UndefOr[Boolean] = js.native
+  var routing: js.UndefOr[String] = js.native
+  var term_statistics: js.UndefOr[Boolean] = js.native
+  var `type`: js.UndefOr[String] = js.native
+  var version: js.UndefOr[Double] = js.native
+  var version_type: js.UndefOr[internal | external | external_gte | force] = js.native
 }
 
 object Termvectors {
   @scala.inline
-  def apply[T](
-    index: String,
-    body: T = null,
-    error_trace: js.UndefOr[Boolean] = js.undefined,
-    field_statistics: js.UndefOr[Boolean] = js.undefined,
-    fields: String | js.Array[String] = null,
-    filter_path: String | js.Array[String] = null,
-    human: js.UndefOr[Boolean] = js.undefined,
-    id: String = null,
-    ignore: Double | js.Array[Double] = null,
-    method: String = null,
-    offsets: js.UndefOr[Boolean] = js.undefined,
-    payloads: js.UndefOr[Boolean] = js.undefined,
-    positions: js.UndefOr[Boolean] = js.undefined,
-    preference: String = null,
-    pretty: js.UndefOr[Boolean] = js.undefined,
-    realtime: js.UndefOr[Boolean] = js.undefined,
-    routing: String = null,
-    source: String = null,
-    term_statistics: js.UndefOr[Boolean] = js.undefined,
-    `type`: String = null,
-    version: Int | Double = null,
-    version_type: internal | external | external_gte | force = null
-  ): Termvectors[T] = {
+  def apply[T](index: String): Termvectors[T] = {
     val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.asInstanceOf[js.Any])
-    if (!js.isUndefined(field_statistics)) __obj.updateDynamic("field_statistics")(field_statistics.asInstanceOf[js.Any])
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
-    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (!js.isUndefined(offsets)) __obj.updateDynamic("offsets")(offsets.asInstanceOf[js.Any])
-    if (!js.isUndefined(payloads)) __obj.updateDynamic("payloads")(payloads.asInstanceOf[js.Any])
-    if (!js.isUndefined(positions)) __obj.updateDynamic("positions")(positions.asInstanceOf[js.Any])
-    if (preference != null) __obj.updateDynamic("preference")(preference.asInstanceOf[js.Any])
-    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.asInstanceOf[js.Any])
-    if (!js.isUndefined(realtime)) __obj.updateDynamic("realtime")(realtime.asInstanceOf[js.Any])
-    if (routing != null) __obj.updateDynamic("routing")(routing.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (!js.isUndefined(term_statistics)) __obj.updateDynamic("term_statistics")(term_statistics.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
-    if (version_type != null) __obj.updateDynamic("version_type")(version_type.asInstanceOf[js.Any])
     __obj.asInstanceOf[Termvectors[T]]
   }
+  @scala.inline
+  implicit class TermvectorsOps[Self[t] <: Termvectors[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withIndex(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBody(value: T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withField_statistics(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field_statistics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutField_statistics: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field_statistics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFields(value: String | js.Array[String]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsets(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsets: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPayloads(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payloads")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPayloads: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payloads")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositions(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPositions: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreference(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreference: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRealtime(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("realtime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRealtime: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("realtime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRouting(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRouting: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerm_statistics(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("term_statistics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerm_statistics: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("term_statistics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion_type(value: internal | external | external_gte | force): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version_type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion_type: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version_type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

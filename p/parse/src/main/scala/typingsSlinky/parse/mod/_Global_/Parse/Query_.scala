@@ -2,8 +2,8 @@ package typingsSlinky.parse.mod._Global_.Parse
 
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.parse.mod._Global_.Parse.Query.AggregationOptions
+import typingsSlinky.parse.mod._Global_.Parse.Query.BatchOptions
 import typingsSlinky.parse.mod._Global_.Parse.Query.CountOptions
-import typingsSlinky.parse.mod._Global_.Parse.Query.EachOptions
 import typingsSlinky.parse.mod._Global_.Parse.Query.FindOptions
 import typingsSlinky.parse.mod._Global_.Parse.Query.FirstOptions
 import typingsSlinky.parse.mod._Global_.Parse.Query.FullTextOptions
@@ -122,6 +122,7 @@ class Query_[T /* <: Object[Attributes] */] protected () extends js.Object {
   def ascending_updatedAt(key: js.Array[updatedAt]): this.type = js.native
   @JSName("ascending")
   def ascending_updatedAt(key: updatedAt): this.type = js.native
+  def cancel(): this.type = js.native
   def containedBy(
     key: createdAt,
     values: js.Array[
@@ -238,7 +239,9 @@ class Query_[T /* <: Object[Attributes] */] protected () extends js.Object {
   ] */](key: updatedAt, queryKey: X, query: Query[U]): this.type = js.native
   def doesNotMatchQuery[U /* <: Object[Attributes] */, K /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any */](key: K, query: Query[U]): this.type = js.native
   def each(callback: js.Function1[/* obj */ T, js.Thenable[Unit] | Unit]): js.Promise[Unit] = js.native
-  def each(callback: js.Function1[/* obj */ T, js.Thenable[Unit] | Unit], options: EachOptions): js.Promise[Unit] = js.native
+  def each(callback: js.Function1[/* obj */ T, js.Thenable[Unit] | Unit], options: BatchOptions): js.Promise[Unit] = js.native
+  def eachBatch(callback: js.Function1[/* objs */ js.Array[T], js.Thenable[Unit] | Unit]): js.Promise[Unit] = js.native
+  def eachBatch(callback: js.Function1[/* objs */ js.Array[T], js.Thenable[Unit] | Unit], options: BatchOptions): js.Promise[Unit] = js.native
   def endsWith[K /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any */](key: K, suffix: String): this.type = js.native
   @JSName("endsWith")
   def endsWith_createdAt(key: createdAt, suffix: String): this.type = js.native
@@ -275,13 +278,32 @@ class Query_[T /* <: Object[Attributes] */] protected () extends js.Object {
   def exists_objectId(key: objectId): this.type = js.native
   @JSName("exists")
   def exists_updatedAt(key: updatedAt): this.type = js.native
+  def explain(explain: Boolean): this.type = js.native
+  def filter(
+    callback: js.Function3[
+      /* currentObject */ T, 
+      /* index */ Double, 
+      /* query */ Query[Object[Attributes]], 
+      js.Thenable[Boolean] | Boolean
+    ]
+  ): js.Promise[js.Array[T]] = js.native
+  def filter(
+    callback: js.Function3[
+      /* currentObject */ T, 
+      /* index */ Double, 
+      /* query */ Query[Object[Attributes]], 
+      js.Thenable[Boolean] | Boolean
+    ],
+    options: BatchOptions
+  ): js.Promise[js.Array[T]] = js.native
   def find(): js.Promise[js.Array[T]] = js.native
   def find(options: FindOptions): js.Promise[js.Array[T]] = js.native
   def first(): js.Promise[js.UndefOr[T]] = js.native
   def first(options: FirstOptions): js.Promise[js.UndefOr[T]] = js.native
-  def fromLocalDatastore(): Unit = js.native
-  def fromPin(): Unit = js.native
-  def fromPinWithName(name: String): Unit = js.native
+  def fromLocalDatastore(): this.type = js.native
+  def fromNetwork(): this.type = js.native
+  def fromPin(): this.type = js.native
+  def fromPinWithName(name: String): this.type = js.native
   def fullText[K /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any */](key: K, value: String): this.type = js.native
   def fullText[K /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any */](key: K, value: String, options: FullTextOptions): this.type = js.native
   @JSName("fullText")
@@ -332,6 +354,8 @@ class Query_[T /* <: Object[Attributes] */] protected () extends js.Object {
     key: K,
     value: /* import warning: importer.ImportType#apply Failed type conversion: T['attributes'][K] */ js.Any
   ): this.type = js.native
+  def hint(value: String): this.type = js.native
+  def hint(value: js.Object): this.type = js.native
   def include[K /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any */](key: K): this.type = js.native
   def include[K /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any */](key: js.Array[K]): this.type = js.native
   def includeAll(): Query[T] = js.native
@@ -382,6 +406,23 @@ class Query_[T /* <: Object[Attributes] */] protected () extends js.Object {
     value: /* import warning: importer.ImportType#apply Failed type conversion: T['attributes'][K] */ js.Any
   ): this.type = js.native
   def limit(n: Double): Query[T] = js.native
+  def map[U](
+    callback: js.Function3[
+      /* currentObject */ T, 
+      /* index */ Double, 
+      /* query */ Query[Object[Attributes]], 
+      js.Thenable[U] | U
+    ]
+  ): js.Promise[js.Array[U]] = js.native
+  def map[U](
+    callback: js.Function3[
+      /* currentObject */ T, 
+      /* index */ Double, 
+      /* query */ Query[Object[Attributes]], 
+      js.Thenable[U] | U
+    ],
+    options: BatchOptions
+  ): js.Promise[js.Array[U]] = js.native
   def matches[K /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any */](key: K, regex: js.RegExp): this.type = js.native
   def matches[K /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any */](key: K, regex: js.RegExp, modifiers: String): this.type = js.native
   def matchesKeyInQuery[U /* <: Object[Attributes] */, K /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any */, X /* <: Extract[
@@ -457,6 +498,23 @@ class Query_[T /* <: Object[Attributes] */] protected () extends js.Object {
   def polygonContains_objectId(key: objectId, point: GeoPoint): this.type = js.native
   @JSName("polygonContains")
   def polygonContains_updatedAt(key: updatedAt, point: GeoPoint): this.type = js.native
+  def reduce(
+    callback: js.Function3[/* accumulator */ T, /* currentObject */ T, /* index */ Double, js.Thenable[T] | T]
+  ): js.Promise[T] = js.native
+  def reduce(
+    callback: js.Function3[/* accumulator */ T, /* currentObject */ T, /* index */ Double, js.Thenable[T] | T],
+    initialValue: js.UndefOr[scala.Nothing],
+    options: BatchOptions
+  ): js.Promise[T] = js.native
+  def reduce[U](
+    callback: js.Function3[/* accumulator */ U, /* currentObject */ T, /* index */ Double, js.Thenable[U] | U],
+    initialValue: U
+  ): js.Promise[U] = js.native
+  def reduce[U](
+    callback: js.Function3[/* accumulator */ U, /* currentObject */ T, /* index */ Double, js.Thenable[U] | U],
+    initialValue: U,
+    options: BatchOptions
+  ): js.Promise[U] = js.native
   def select[K /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any */](keys: K*): this.type = js.native
   @JSName("select")
   def select_createdAt(keys: createdAt*): this.type = js.native

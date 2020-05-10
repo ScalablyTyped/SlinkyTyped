@@ -30,6 +30,7 @@ import scala.scalajs.js.annotation._
   * }
   * ```
   */
+@js.native
 trait graphql
   extends Integration
      with Analyzable {
@@ -39,21 +40,21 @@ trait graphql
     *
     * @default true
     */
-  var collapse: js.UndefOr[Boolean] = js.undefined
+  var collapse: js.UndefOr[Boolean] = js.native
   /**
     * The maximum depth of fields/resolvers to instrument. Set to `0` to only
     * instrument the operation or to `-1` to instrument all fields/resolvers.
     *
     * @default -1
     */
-  var depth: js.UndefOr[Double] = js.undefined
+  var depth: js.UndefOr[Double] = js.native
   /**
     * Whether to enable signature calculation for the resource name. This can
     * be disabled if your GraphQL operations always have a name.
     *
     * @default true
     */
-  var signature: js.UndefOr[Boolean] = js.undefined
+  var signature: js.UndefOr[Boolean] = js.native
   /**
     * An array of variable names to record. Can also be a callback that returns
     * the key/value pairs to record. For example, using
@@ -61,29 +62,78 @@ trait graphql
     */
   var variables: js.UndefOr[
     js.Array[String] | (js.Function1[/* variables */ StringDictionary[js.Any], StringDictionary[_]])
-  ] = js.undefined
+  ] = js.native
 }
 
 object graphql {
   @scala.inline
-  def apply(
-    analytics: Boolean | Double = null,
-    collapse: js.UndefOr[Boolean] = js.undefined,
-    depth: Int | Double = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    service: String = null,
-    signature: js.UndefOr[Boolean] = js.undefined,
-    variables: js.Array[String] | (js.Function1[/* variables */ StringDictionary[js.Any], StringDictionary[_]]) = null
-  ): graphql = {
+  def apply(): graphql = {
     val __obj = js.Dynamic.literal()
-    if (analytics != null) __obj.updateDynamic("analytics")(analytics.asInstanceOf[js.Any])
-    if (!js.isUndefined(collapse)) __obj.updateDynamic("collapse")(collapse.asInstanceOf[js.Any])
-    if (depth != null) __obj.updateDynamic("depth")(depth.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
-    if (!js.isUndefined(signature)) __obj.updateDynamic("signature")(signature.asInstanceOf[js.Any])
-    if (variables != null) __obj.updateDynamic("variables")(variables.asInstanceOf[js.Any])
     __obj.asInstanceOf[graphql]
   }
+  @scala.inline
+  implicit class graphqlOps[Self <: graphql] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCollapse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollapse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDepth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignature(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVariablesFunction1(value: /* variables */ StringDictionary[js.Any] => StringDictionary[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withVariables(
+      value: js.Array[String] | (js.Function1[/* variables */ StringDictionary[js.Any], StringDictionary[_]])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,16 +22,53 @@ trait CacheParameterGroupStatus extends js.Object {
 
 object CacheParameterGroupStatus {
   @scala.inline
-  def apply(
-    CacheNodeIdsToReboot: CacheNodeIdsList = null,
-    CacheParameterGroupName: String = null,
-    ParameterApplyStatus: String = null
-  ): CacheParameterGroupStatus = {
+  def apply(): CacheParameterGroupStatus = {
     val __obj = js.Dynamic.literal()
-    if (CacheNodeIdsToReboot != null) __obj.updateDynamic("CacheNodeIdsToReboot")(CacheNodeIdsToReboot.asInstanceOf[js.Any])
-    if (CacheParameterGroupName != null) __obj.updateDynamic("CacheParameterGroupName")(CacheParameterGroupName.asInstanceOf[js.Any])
-    if (ParameterApplyStatus != null) __obj.updateDynamic("ParameterApplyStatus")(ParameterApplyStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[CacheParameterGroupStatus]
   }
+  @scala.inline
+  implicit class CacheParameterGroupStatusOps[Self <: CacheParameterGroupStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCacheNodeIdsToReboot(value: CacheNodeIdsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheNodeIdsToReboot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheNodeIdsToReboot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheNodeIdsToReboot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheParameterGroupName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheParameterGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheParameterGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheParameterGroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterApplyStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterApplyStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterApplyStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterApplyStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

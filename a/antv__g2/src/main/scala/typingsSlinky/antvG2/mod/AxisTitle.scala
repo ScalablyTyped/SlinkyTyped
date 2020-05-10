@@ -11,39 +11,87 @@ import scala.scalajs.js.annotation._
 /**
   * 坐标轴线
   */
+@js.native
 trait AxisTitle extends js.Object {
   /**
     * 是否需要自动旋转，默认为 `true`
     */
-  var autoRotate: js.UndefOr[Boolean] = js.undefined
+  var autoRotate: js.UndefOr[Boolean] = js.native
   /**
     * 数值，设置坐标轴标题距离坐标轴线的距离
     */
-  var offset: js.UndefOr[Double] = js.undefined
+  var offset: js.UndefOr[Double] = js.native
   /**
     * 标题的显示位置（相对于坐标轴线）
     */
-  var position: js.UndefOr[start | center | end] = js.undefined
+  var position: js.UndefOr[start | center | end] = js.native
   /**
     * 设置标题的文本样式
     */
-  var textStyle: js.UndefOr[text] = js.undefined
+  var textStyle: js.UndefOr[text] = js.native
 }
 
 object AxisTitle {
   @scala.inline
-  def apply(
-    autoRotate: js.UndefOr[Boolean] = js.undefined,
-    offset: Int | Double = null,
-    position: start | center | end = null,
-    textStyle: text = null
-  ): AxisTitle = {
+  def apply(): AxisTitle = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoRotate)) __obj.updateDynamic("autoRotate")(autoRotate.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[AxisTitle]
   }
+  @scala.inline
+  implicit class AxisTitleOps[Self <: AxisTitle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoRotate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRotate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoRotate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: start | center | end): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextStyle(value: text): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

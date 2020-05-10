@@ -1,6 +1,5 @@
 package typingsSlinky.nodePersist.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,7 +54,7 @@ class LocalStorage () extends js.Object {
   def values(filter: FilterFunction[Datum]): js.Promise[js.Array[_]] = js.native
   def valuesWithKeyMatch(): js.Promise[js.Array[_]] = js.native
   def valuesWithKeyMatch(`match`: String): js.Promise[js.Array[_]] = js.native
-  def valuesWithKeyMatch(`match`: RegExp): js.Promise[js.Array[_]] = js.native
+  def valuesWithKeyMatch(`match`: js.RegExp): js.Promise[js.Array[_]] = js.native
   def writeFile(file: String, content: Datum): js.Promise[WriteFileResult] = js.native
 }
 

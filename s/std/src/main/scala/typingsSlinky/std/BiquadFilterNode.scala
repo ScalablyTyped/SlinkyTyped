@@ -15,15 +15,19 @@ trait BiquadFilterNode extends AudioNode {
   val gain: org.scalajs.dom.raw.AudioParam = js.native
   var `type`: BiquadFilterType = js.native
   def getFrequencyResponse(
-    frequencyHz: scala.scalajs.js.typedarray.Float32Array,
-    magResponse: scala.scalajs.js.typedarray.Float32Array,
-    phaseResponse: scala.scalajs.js.typedarray.Float32Array
+    frequencyHz: js.typedarray.Float32Array,
+    magResponse: js.typedarray.Float32Array,
+    phaseResponse: js.typedarray.Float32Array
   ): Unit = js.native
 }
 
 @JSGlobal("BiquadFilterNode")
 @js.native
 object BiquadFilterNode
-  extends Instantiable1[/* context */ BaseAudioContext, BiquadFilterNode]
-     with Instantiable2[/* context */ BaseAudioContext, /* options */ BiquadFilterOptions, BiquadFilterNode]
+  extends Instantiable1[/* context */ BaseAudioContext, org.scalajs.dom.raw.BiquadFilterNode]
+     with Instantiable2[
+      /* context */ BaseAudioContext, 
+      /* options */ BiquadFilterOptions, 
+      org.scalajs.dom.raw.BiquadFilterNode
+    ]
 

@@ -4,8 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Optional[T] extends js.Object {
-  val _value: js.Any
+  val _value: js.Any = js.native
   /**
     * If a value is present, and the value matches the given predicate, return an Optional describing the value,
     * otherwise return an empty Optional.
@@ -15,7 +16,7 @@ trait Optional[T] extends js.Object {
     * predicate, otherwise an empty Optional
     * @throws Error if the predicate is null
     */
-  def filter(predicate: js.Function1[/* value */ T, Boolean]): Optional[js.UndefOr[T | Null]]
+  def filter(predicate: js.Function1[/* value */ T, Boolean]): Optional[js.UndefOr[T | Null]] = js.native
   /**
     * If a value is present, apply the provided Optional-bearing mapping function to it, return that result,
     * otherwise return an empty Optional. This method is similar to map(Function), but the provided mapper is one whose
@@ -27,20 +28,20 @@ trait Optional[T] extends js.Object {
     * if a value is present, otherwise an empty Optional
     * @throws Error if the mapping function is null or returns a null result
     */
-  def flatMap[U](mapper: js.Function1[/* value */ T, js.UndefOr[Optional[U] | Null]]): Optional[U]
+  def flatMap[U](mapper: js.Function1[/* value */ T, js.UndefOr[Optional[U] | Null]]): Optional[U] = js.native
   /**
     * If a value is present in this Optional, returns the value, otherwise throws an Error.
     *
     * @return the non-null value held by this Optional
     * @throws Error if the value is null;
     */
-  def get(): T
+  def get(): T = js.native
   /**
     * If a value is present, invoke the specified consumer with the value, otherwise do nothing.
     *
     * @param consumer function to be executed if a value is present
     */
-  def ifPresent(consumer: js.Function1[/* value */ T, Unit]): Unit
+  def ifPresent(consumer: js.Function1[/* value */ T, Unit]): Unit = js.native
   /**
     * If a value is present, performs the given action with the value, otherwise performs the given empty-based action.
     *
@@ -48,13 +49,13 @@ trait Optional[T] extends js.Object {
     * @param emptyAction the empty-based action to be performed, if no value is present
     * @throws if a value is present and the given action is null, or no value is present and the given empty-based action is null.
     */
-  def ifPresentOrElse(action: js.Function1[/* value */ T, Unit], emptyAction: js.Function0[Unit]): Unit
+  def ifPresentOrElse(action: js.Function1[/* value */ T, Unit], emptyAction: js.Function0[Unit]): Unit = js.native
   /**
     * Return true if there is a value present, otherwise false.
     *
     * @return true if there is a value present, otherwise false
     */
-  def isPresent(): Boolean
+  def isPresent(): Boolean = js.native
   /**
     * If a value is present, apply the provided mapping function to it, and if the result is non-null,
     * return an Optional describing the result. Otherwise return an empty Optional.
@@ -65,7 +66,7 @@ trait Optional[T] extends js.Object {
     * if a value is present, otherwise an empty Optional
     * @throws Error if the mapping function is null
     */
-  def map[U](mapper: js.Function1[/* value */ T, js.UndefOr[U | Null]]): Optional[U]
+  def map[U](mapper: js.Function1[/* value */ T, js.UndefOr[U | Null]]): Optional[U] = js.native
   /**
     * If a value is present, returns an Optional describing the value, otherwise returns an Optional produced by the supplying function.
     *
@@ -74,14 +75,14 @@ trait Optional[T] extends js.Object {
     * otherwise an Optional produced by the supplying function.
     * @throws Error if the supplying function is null or produces a null result
     */
-  def or(optionalSupplier: js.Function0[Optional[T]]): Optional[T]
+  def or(optionalSupplier: js.Function0[Optional[T]]): Optional[T] = js.native
   /**
     * If a value is present, returns the value, otherwise returns other.
     *
     * @param other the value to be returned, if no value is present. May be null.
     * @return the value, if present, otherwise other
     */
-  def orElse(other: T): T
+  def orElse(other: T): T = js.native
   /**
     * If a value is present, returns the value, otherwise returns the result produced by the supplying function.
     *
@@ -89,7 +90,7 @@ trait Optional[T] extends js.Object {
     * @return the value, if present, otherwise the result produced by the supplying function
     * @throws Error if no value is present and the supplying function is null
     */
-  def orElseGet(supplier: js.Function0[T]): T
+  def orElseGet(supplier: js.Function0[T]): T = js.native
   /**
     * If a value is present, returns the value, otherwise throws an exception produced by the exception supplying function.
     *
@@ -97,7 +98,7 @@ trait Optional[T] extends js.Object {
     * @return the value, if present
     * @throws Error if no value is present and the exception supplying function is null
     */
-  def orElseThrow(exceptionSupplier: js.Function0[js.Error]): T
+  def orElseThrow(exceptionSupplier: js.Function0[js.Error]): T = js.native
 }
 
 object Optional {
@@ -117,8 +118,87 @@ object Optional {
     orElseThrow: js.Function0[js.Error] => T
   ): Optional[T] = {
     val __obj = js.Dynamic.literal(_value = _value.asInstanceOf[js.Any], filter = js.Any.fromFunction1(filter), flatMap = js.Any.fromFunction1(flatMap), get = js.Any.fromFunction0(get), ifPresent = js.Any.fromFunction1(ifPresent), ifPresentOrElse = js.Any.fromFunction2(ifPresentOrElse), isPresent = js.Any.fromFunction0(isPresent), map = js.Any.fromFunction1(map), or = js.Any.fromFunction1(or), orElse = js.Any.fromFunction1(orElse), orElseGet = js.Any.fromFunction1(orElseGet), orElseThrow = js.Any.fromFunction1(orElseThrow))
-  
     __obj.asInstanceOf[Optional[T]]
   }
+  @scala.inline
+  implicit class OptionalOps[Self[t] <: Optional[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def with_value(value: js.Any): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFilter(value: js.Function1[/* value */ T, Boolean] => Optional[js.UndefOr[T | Null]]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFlatMap(value: js.Function1[/* value */ T, js.UndefOr[Optional[js.Any] | Null]] => Optional[js.Any]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flatMap")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: () => T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIfPresent(value: js.Function1[/* value */ T, Unit] => Unit): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ifPresent")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIfPresentOrElse(value: (js.Function1[/* value */ T, Unit], js.Function0[Unit]) => Unit): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ifPresentOrElse")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withIsPresent(value: () => Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPresent")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMap(value: js.Function1[/* value */ T, js.UndefOr[js.Any | Null]] => Optional[js.Any]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOr(value: js.Function0[Optional[T]] => Optional[T]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("or")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOrElse(value: T => T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orElse")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOrElseGet(value: js.Function0[T] => T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orElseGet")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOrElseThrow(value: js.Function0[js.Error] => T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orElseThrow")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

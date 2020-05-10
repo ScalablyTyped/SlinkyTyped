@@ -21,28 +21,26 @@ trait CatBytes extends js.Object
 
 object CatBytes {
   @scala.inline
-  def b: typingsSlinky.elasticsearch.elasticsearchStrings.b = this.cast("b")
+  def b: typingsSlinky.elasticsearch.elasticsearchStrings.b = "b".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.b]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def g: typingsSlinky.elasticsearch.elasticsearchStrings.g = "g".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.g]
   @scala.inline
-  def g: typingsSlinky.elasticsearch.elasticsearchStrings.g = this.cast("g")
+  def gb: typingsSlinky.elasticsearch.elasticsearchStrings.gb = "gb".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.gb]
   @scala.inline
-  def gb: typingsSlinky.elasticsearch.elasticsearchStrings.gb = this.cast("gb")
+  def k: typingsSlinky.elasticsearch.elasticsearchStrings.k = "k".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.k]
   @scala.inline
-  def k: typingsSlinky.elasticsearch.elasticsearchStrings.k = this.cast("k")
+  def kb: typingsSlinky.elasticsearch.elasticsearchStrings.kb = "kb".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.kb]
   @scala.inline
-  def kb: typingsSlinky.elasticsearch.elasticsearchStrings.kb = this.cast("kb")
+  def m: typingsSlinky.elasticsearch.elasticsearchStrings.m = "m".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.m]
   @scala.inline
-  def m: typingsSlinky.elasticsearch.elasticsearchStrings.m = this.cast("m")
+  def mb: typingsSlinky.elasticsearch.elasticsearchStrings.mb = "mb".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.mb]
   @scala.inline
-  def mb: typingsSlinky.elasticsearch.elasticsearchStrings.mb = this.cast("mb")
+  def p: typingsSlinky.elasticsearch.elasticsearchStrings.p = "p".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.p]
   @scala.inline
-  def p: typingsSlinky.elasticsearch.elasticsearchStrings.p = this.cast("p")
+  def pb: typingsSlinky.elasticsearch.elasticsearchStrings.pb = "pb".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.pb]
   @scala.inline
-  def pb: typingsSlinky.elasticsearch.elasticsearchStrings.pb = this.cast("pb")
+  def t: typingsSlinky.elasticsearch.elasticsearchStrings.t = "t".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.t]
   @scala.inline
-  def t: typingsSlinky.elasticsearch.elasticsearchStrings.t = this.cast("t")
-  @scala.inline
-  def tb: typingsSlinky.elasticsearch.elasticsearchStrings.tb = this.cast("tb")
+  def tb: typingsSlinky.elasticsearch.elasticsearchStrings.tb = "tb".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.tb]
 }
 

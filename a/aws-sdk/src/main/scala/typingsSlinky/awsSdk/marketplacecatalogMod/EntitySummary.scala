@@ -34,22 +34,89 @@ trait EntitySummary extends js.Object {
 
 object EntitySummary {
   @scala.inline
-  def apply(
-    EntityArn: ARN = null,
-    EntityId: ResourceId = null,
-    EntityType: EntityType = null,
-    LastModifiedDate: StringValue = null,
-    Name: StringValue = null,
-    Visibility: StringValue = null
-  ): EntitySummary = {
+  def apply(): EntitySummary = {
     val __obj = js.Dynamic.literal()
-    if (EntityArn != null) __obj.updateDynamic("EntityArn")(EntityArn.asInstanceOf[js.Any])
-    if (EntityId != null) __obj.updateDynamic("EntityId")(EntityId.asInstanceOf[js.Any])
-    if (EntityType != null) __obj.updateDynamic("EntityType")(EntityType.asInstanceOf[js.Any])
-    if (LastModifiedDate != null) __obj.updateDynamic("LastModifiedDate")(LastModifiedDate.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (Visibility != null) __obj.updateDynamic("Visibility")(Visibility.asInstanceOf[js.Any])
     __obj.asInstanceOf[EntitySummary]
   }
+  @scala.inline
+  implicit class EntitySummaryOps[Self <: EntitySummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntityArn(value: ARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntityId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntityType(value: EntityType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedDate(value: StringValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: StringValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibility(value: StringValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Visibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Visibility")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

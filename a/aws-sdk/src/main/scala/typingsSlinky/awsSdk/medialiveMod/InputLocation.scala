@@ -22,11 +22,47 @@ trait InputLocation extends js.Object {
 
 object InputLocation {
   @scala.inline
-  def apply(Uri: string, PasswordParam: string = null, Username: string = null): InputLocation = {
+  def apply(Uri: string): InputLocation = {
     val __obj = js.Dynamic.literal(Uri = Uri.asInstanceOf[js.Any])
-    if (PasswordParam != null) __obj.updateDynamic("PasswordParam")(PasswordParam.asInstanceOf[js.Any])
-    if (Username != null) __obj.updateDynamic("Username")(Username.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputLocation]
   }
+  @scala.inline
+  implicit class InputLocationOps[Self <: InputLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUri(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPasswordParam(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PasswordParam")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPasswordParam: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PasswordParam")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

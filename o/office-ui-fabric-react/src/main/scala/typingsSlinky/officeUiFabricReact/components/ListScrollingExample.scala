@@ -1,45 +1,33 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.listScrollingExampleMod.IListScrollingExampleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ListScrollingExample
-  extends ExternalComponentWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.officeUiFabricReact.listScrollingExampleMod.ListScrollingExample
-    ] {
+object ListScrollingExample {
   @JSImport("office-ui-fabric-react/lib/components/List/examples/List.Scrolling.Example", "ListScrollingExample")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    items: js.Array[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IExampleItem */ _
-    ] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[
-    tag.type, 
-    typingsSlinky.officeUiFabricReact.listScrollingExampleMod.ListScrollingExample
-  ] = {
-    val __obj = js.Dynamic.literal()
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[
+          tag.type, 
+          typingsSlinky.officeUiFabricReact.listScrollingExampleMod.ListScrollingExample
+        ] {
+    @scala.inline
+    def items(
+      value: js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IExampleItem */ _
+        ]
+    ): this.type = set("items", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[
-    tag.type, 
-    typingsSlinky.officeUiFabricReact.listScrollingExampleMod.ListScrollingExample
-  ] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.officeUiFabricReact.listScrollingExampleMod.ListScrollingExample](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IListScrollingExampleProps
+  
+  def withProps(p: IListScrollingExampleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ListScrollingExample.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

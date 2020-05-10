@@ -92,38 +92,185 @@ trait SchemaConversion extends js.Object {
 
 object SchemaConversion {
   @scala.inline
-  def apply(
-    childDirectedTreatment: js.UndefOr[Boolean] = js.undefined,
-    customVariables: js.Array[SchemaCustomFloodlightVariable] = null,
-    encryptedUserId: String = null,
-    encryptedUserIdCandidates: js.Array[String] = null,
-    floodlightActivityId: String = null,
-    floodlightConfigurationId: String = null,
-    gclid: String = null,
-    kind: String = null,
-    limitAdTracking: js.UndefOr[Boolean] = js.undefined,
-    mobileDeviceId: String = null,
-    ordinal: String = null,
-    quantity: String = null,
-    timestampMicros: String = null,
-    value: Int | Double = null
-  ): SchemaConversion = {
+  def apply(): SchemaConversion = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(childDirectedTreatment)) __obj.updateDynamic("childDirectedTreatment")(childDirectedTreatment.asInstanceOf[js.Any])
-    if (customVariables != null) __obj.updateDynamic("customVariables")(customVariables.asInstanceOf[js.Any])
-    if (encryptedUserId != null) __obj.updateDynamic("encryptedUserId")(encryptedUserId.asInstanceOf[js.Any])
-    if (encryptedUserIdCandidates != null) __obj.updateDynamic("encryptedUserIdCandidates")(encryptedUserIdCandidates.asInstanceOf[js.Any])
-    if (floodlightActivityId != null) __obj.updateDynamic("floodlightActivityId")(floodlightActivityId.asInstanceOf[js.Any])
-    if (floodlightConfigurationId != null) __obj.updateDynamic("floodlightConfigurationId")(floodlightConfigurationId.asInstanceOf[js.Any])
-    if (gclid != null) __obj.updateDynamic("gclid")(gclid.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (!js.isUndefined(limitAdTracking)) __obj.updateDynamic("limitAdTracking")(limitAdTracking.asInstanceOf[js.Any])
-    if (mobileDeviceId != null) __obj.updateDynamic("mobileDeviceId")(mobileDeviceId.asInstanceOf[js.Any])
-    if (ordinal != null) __obj.updateDynamic("ordinal")(ordinal.asInstanceOf[js.Any])
-    if (quantity != null) __obj.updateDynamic("quantity")(quantity.asInstanceOf[js.Any])
-    if (timestampMicros != null) __obj.updateDynamic("timestampMicros")(timestampMicros.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaConversion]
   }
+  @scala.inline
+  implicit class SchemaConversionOps[Self <: SchemaConversion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildDirectedTreatment(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childDirectedTreatment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildDirectedTreatment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childDirectedTreatment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomVariables(value: js.Array[SchemaCustomFloodlightVariable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customVariables")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptedUserId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptedUserId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptedUserId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptedUserId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptedUserIdCandidates(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptedUserIdCandidates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptedUserIdCandidates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptedUserIdCandidates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloodlightActivityId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodlightActivityId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloodlightConfigurationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightConfigurationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodlightConfigurationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightConfigurationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGclid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gclid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGclid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gclid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimitAdTracking(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limitAdTracking")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimitAdTracking: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limitAdTracking")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMobileDeviceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileDeviceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMobileDeviceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileDeviceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrdinal(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ordinal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrdinal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ordinal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuantity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuantity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestampMicros(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampMicros")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestampMicros: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampMicros")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

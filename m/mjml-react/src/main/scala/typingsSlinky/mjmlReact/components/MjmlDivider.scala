@@ -1,10 +1,7 @@
 package typingsSlinky.mjmlReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.csstype.mod.BackgroundColorProperty
 import typingsSlinky.csstype.mod.BorderColorProperty
 import typingsSlinky.csstype.mod.BorderStyleProperty
@@ -15,43 +12,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MjmlDivider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mjmlReact.mod.MjmlDivider] {
+object MjmlDivider {
   @JSImport("mjml-react", "MjmlDivider")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    borderColor: BorderColorProperty = null,
-    borderStyle: BorderStyleProperty = null,
-    borderWidth: String | Double = null,
-    containerBackgroundColor: BackgroundColorProperty = null,
-    cssClass: String = null,
-    padding: String | Double = null,
-    paddingBottom: String | Double = null,
-    paddingLeft: String | Double = null,
-    paddingRight: String | Double = null,
-    paddingTop: String | Double = null,
-    width: String | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlDivider] = {
-    val __obj = js.Dynamic.literal()
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (borderStyle != null) __obj.updateDynamic("borderStyle")(borderStyle.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (containerBackgroundColor != null) __obj.updateDynamic("containerBackgroundColor")(containerBackgroundColor.asInstanceOf[js.Any])
-    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (paddingBottom != null) __obj.updateDynamic("paddingBottom")(paddingBottom.asInstanceOf[js.Any])
-    if (paddingLeft != null) __obj.updateDynamic("paddingLeft")(paddingLeft.asInstanceOf[js.Any])
-    if (paddingRight != null) __obj.updateDynamic("paddingRight")(paddingRight.asInstanceOf[js.Any])
-    if (paddingTop != null) __obj.updateDynamic("paddingTop")(paddingTop.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlDivider] {
+    @scala.inline
+    def borderColor(value: BorderColorProperty): this.type = set("borderColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderStyle(value: BorderStyleProperty): this.type = set("borderStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderWidth(value: String | Double): this.type = set("borderWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerBackgroundColor(value: BackgroundColorProperty): this.type = set("containerBackgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cssClass(value: String): this.type = set("cssClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def padding(value: String | Double): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingBottom(value: String | Double): this.type = set("paddingBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingLeft(value: String | Double): this.type = set("paddingLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingRight(value: String | Double): this.type = set("paddingRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingTop(value: String | Double): this.type = set("paddingTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlDivider] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.mjmlReact.mod.MjmlDivider](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MjmlDividerProps with ClassNameProps with PaddingProps
+  
+  def withProps(p: MjmlDividerProps with ClassNameProps with PaddingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MjmlDivider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

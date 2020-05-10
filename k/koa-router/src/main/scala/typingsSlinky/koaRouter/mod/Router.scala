@@ -1,7 +1,6 @@
 package typingsSlinky.koaRouter.mod
 
 import typingsSlinky.koa.mod.Middleware
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,10 +13,10 @@ trait Router[StateT, CustomT] extends js.Object {
     * Register route with all methods.
     */
   def all(name: String, path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def all(name: String, path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def all(name: String, path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def all(path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def all(path: js.Array[String | RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def all(path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def all(path: js.Array[String | js.RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def all(path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def all[T, U](
     name: String,
     path: String,
@@ -26,7 +25,7 @@ trait Router[StateT, CustomT] extends js.Object {
   ): Router[StateT with T, CustomT with U] = js.native
   def all[T, U](
     name: String,
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -36,12 +35,12 @@ trait Router[StateT, CustomT] extends js.Object {
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def all[T, U](
-    path: js.Array[String | RegExp],
+    path: js.Array[String | js.RegExp],
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def all[T, U](
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -56,10 +55,10 @@ trait Router[StateT, CustomT] extends js.Object {
     * Alias for `router.delete()` because delete is a reserved word
     */
   def del(name: String, path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def del(name: String, path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def del(name: String, path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def del(path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def del(path: js.Array[String | RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def del(path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def del(path: js.Array[String | js.RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def del(path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def del[T, U](
     name: String,
     path: String,
@@ -68,7 +67,7 @@ trait Router[StateT, CustomT] extends js.Object {
   ): Router[StateT with T, CustomT with U] = js.native
   def del[T, U](
     name: String,
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -78,12 +77,12 @@ trait Router[StateT, CustomT] extends js.Object {
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def del[T, U](
-    path: js.Array[String | RegExp],
+    path: js.Array[String | js.RegExp],
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def del[T, U](
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -91,10 +90,10 @@ trait Router[StateT, CustomT] extends js.Object {
     * HTTP delete method
     */
   def delete(name: String, path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def delete(name: String, path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def delete(name: String, path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def delete(path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def delete(path: js.Array[String | RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def delete(path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def delete(path: js.Array[String | js.RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def delete(path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def delete[T, U](
     name: String,
     path: String,
@@ -103,7 +102,7 @@ trait Router[StateT, CustomT] extends js.Object {
   ): Router[StateT with T, CustomT with U] = js.native
   def delete[T, U](
     name: String,
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -113,12 +112,12 @@ trait Router[StateT, CustomT] extends js.Object {
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def delete[T, U](
-    path: js.Array[String | RegExp],
+    path: js.Array[String | js.RegExp],
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def delete[T, U](
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -126,10 +125,10 @@ trait Router[StateT, CustomT] extends js.Object {
     * HTTP get method
     */
   def get(name: String, path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def get(name: String, path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def get(name: String, path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def get(path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def get(path: js.Array[String | RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def get(path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def get(path: js.Array[String | js.RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def get(path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def get[T, U](
     name: String,
     path: String,
@@ -138,7 +137,7 @@ trait Router[StateT, CustomT] extends js.Object {
   ): Router[StateT with T, CustomT with U] = js.native
   def get[T, U](
     name: String,
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -148,12 +147,12 @@ trait Router[StateT, CustomT] extends js.Object {
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def get[T, U](
-    path: js.Array[String | RegExp],
+    path: js.Array[String | js.RegExp],
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def get[T, U](
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -161,10 +160,10 @@ trait Router[StateT, CustomT] extends js.Object {
     * HTTP head method
     */
   def head(name: String, path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def head(name: String, path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def head(name: String, path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def head(path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def head(path: js.Array[String | RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def head(path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def head(path: js.Array[String | js.RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def head(path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def head[T, U](
     name: String,
     path: String,
@@ -173,7 +172,7 @@ trait Router[StateT, CustomT] extends js.Object {
   ): Router[StateT with T, CustomT with U] = js.native
   def head[T, U](
     name: String,
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -183,12 +182,12 @@ trait Router[StateT, CustomT] extends js.Object {
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def head[T, U](
-    path: js.Array[String | RegExp],
+    path: js.Array[String | js.RegExp],
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def head[T, U](
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -196,10 +195,10 @@ trait Router[StateT, CustomT] extends js.Object {
     * HTTP link method
     */
   def link(name: String, path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def link(name: String, path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def link(name: String, path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def link(path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def link(path: js.Array[String | RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def link(path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def link(path: js.Array[String | js.RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def link(path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def link[T, U](
     name: String,
     path: String,
@@ -208,7 +207,7 @@ trait Router[StateT, CustomT] extends js.Object {
   ): Router[StateT with T, CustomT with U] = js.native
   def link[T, U](
     name: String,
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -218,12 +217,12 @@ trait Router[StateT, CustomT] extends js.Object {
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def link[T, U](
-    path: js.Array[String | RegExp],
+    path: js.Array[String | js.RegExp],
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def link[T, U](
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -239,10 +238,10 @@ trait Router[StateT, CustomT] extends js.Object {
     * HTTP options method
     */
   def options(name: String, path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def options(name: String, path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def options(name: String, path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def options(path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def options(path: js.Array[String | RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def options(path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def options(path: js.Array[String | js.RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def options(path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def options[T, U](
     name: String,
     path: String,
@@ -251,7 +250,7 @@ trait Router[StateT, CustomT] extends js.Object {
   ): Router[StateT with T, CustomT with U] = js.native
   def options[T, U](
     name: String,
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -261,12 +260,12 @@ trait Router[StateT, CustomT] extends js.Object {
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def options[T, U](
-    path: js.Array[String | RegExp],
+    path: js.Array[String | js.RegExp],
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def options[T, U](
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -278,10 +277,10 @@ trait Router[StateT, CustomT] extends js.Object {
     * HTTP patch method
     */
   def patch(name: String, path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def patch(name: String, path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def patch(name: String, path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def patch(path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def patch(path: js.Array[String | RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def patch(path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def patch(path: js.Array[String | js.RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def patch(path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def patch[T, U](
     name: String,
     path: String,
@@ -290,7 +289,7 @@ trait Router[StateT, CustomT] extends js.Object {
   ): Router[StateT with T, CustomT with U] = js.native
   def patch[T, U](
     name: String,
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -300,12 +299,12 @@ trait Router[StateT, CustomT] extends js.Object {
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def patch[T, U](
-    path: js.Array[String | RegExp],
+    path: js.Array[String | js.RegExp],
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def patch[T, U](
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -313,10 +312,10 @@ trait Router[StateT, CustomT] extends js.Object {
     * HTTP post method
     */
   def post(name: String, path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def post(name: String, path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def post(name: String, path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def post(path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def post(path: js.Array[String | RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def post(path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def post(path: js.Array[String | js.RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def post(path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def post[T, U](
     name: String,
     path: String,
@@ -325,7 +324,7 @@ trait Router[StateT, CustomT] extends js.Object {
   ): Router[StateT with T, CustomT with U] = js.native
   def post[T, U](
     name: String,
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -335,12 +334,12 @@ trait Router[StateT, CustomT] extends js.Object {
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def post[T, U](
-    path: js.Array[String | RegExp],
+    path: js.Array[String | js.RegExp],
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def post[T, U](
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -352,10 +351,10 @@ trait Router[StateT, CustomT] extends js.Object {
     * HTTP put method
     */
   def put(name: String, path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def put(name: String, path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def put(name: String, path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def put(path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def put(path: js.Array[String | RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def put(path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def put(path: js.Array[String | js.RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def put(path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def put[T, U](
     name: String,
     path: String,
@@ -364,7 +363,7 @@ trait Router[StateT, CustomT] extends js.Object {
   ): Router[StateT with T, CustomT with U] = js.native
   def put[T, U](
     name: String,
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -374,12 +373,12 @@ trait Router[StateT, CustomT] extends js.Object {
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def put[T, U](
-    path: js.Array[String | RegExp],
+    path: js.Array[String | js.RegExp],
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def put[T, U](
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -407,16 +406,16 @@ trait Router[StateT, CustomT] extends js.Object {
     middleware: IMiddleware[StateT, CustomT],
     opts: ILayerOptions
   ): Layer = js.native
-  def register(path: RegExp, methods: js.Array[String], middleware: js.Array[IMiddleware[StateT, CustomT]]): Layer = js.native
+  def register(path: js.RegExp, methods: js.Array[String], middleware: js.Array[IMiddleware[StateT, CustomT]]): Layer = js.native
   def register(
-    path: RegExp,
+    path: js.RegExp,
     methods: js.Array[String],
     middleware: js.Array[IMiddleware[StateT, CustomT]],
     opts: ILayerOptions
   ): Layer = js.native
-  def register(path: RegExp, methods: js.Array[String], middleware: IMiddleware[StateT, CustomT]): Layer = js.native
+  def register(path: js.RegExp, methods: js.Array[String], middleware: IMiddleware[StateT, CustomT]): Layer = js.native
   def register(
-    path: RegExp,
+    path: js.RegExp,
     methods: js.Array[String],
     middleware: IMiddleware[StateT, CustomT],
     opts: ILayerOptions
@@ -435,10 +434,10 @@ trait Router[StateT, CustomT] extends js.Object {
     * HTTP unlink method
     */
   def unlink(name: String, path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def unlink(name: String, path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def unlink(name: String, path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def unlink(path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def unlink(path: js.Array[String | RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def unlink(path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def unlink(path: js.Array[String | js.RegExp], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def unlink(path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def unlink[T, U](
     name: String,
     path: String,
@@ -447,7 +446,7 @@ trait Router[StateT, CustomT] extends js.Object {
   ): Router[StateT with T, CustomT with U] = js.native
   def unlink[T, U](
     name: String,
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -457,12 +456,12 @@ trait Router[StateT, CustomT] extends js.Object {
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def unlink[T, U](
-    path: js.Array[String | RegExp],
+    path: js.Array[String | js.RegExp],
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
   def unlink[T, U](
-    path: RegExp,
+    path: js.RegExp,
     middleware: Middleware[T, U],
     routeHandler: IMiddleware[StateT with T, CustomT with U]
   ): Router[StateT with T, CustomT with U] = js.native
@@ -501,6 +500,6 @@ trait Router[StateT, CustomT] extends js.Object {
   def use(middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def use(path: String, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
   def use(path: js.Array[String], middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
-  def use(path: RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
+  def use(path: js.RegExp, middleware: (IMiddleware[StateT, CustomT])*): Router[StateT, CustomT] = js.native
 }
 

@@ -30,17 +30,59 @@ trait CreateComputerRequest extends js.Object {
 
 object CreateComputerRequest {
   @scala.inline
-  def apply(
-    ComputerName: ComputerName,
-    DirectoryId: DirectoryId,
-    Password: ComputerPassword,
-    ComputerAttributes: Attributes = null,
-    OrganizationalUnitDistinguishedName: OrganizationalUnitDN = null
-  ): CreateComputerRequest = {
+  def apply(ComputerName: ComputerName, DirectoryId: DirectoryId, Password: ComputerPassword): CreateComputerRequest = {
     val __obj = js.Dynamic.literal(ComputerName = ComputerName.asInstanceOf[js.Any], DirectoryId = DirectoryId.asInstanceOf[js.Any], Password = Password.asInstanceOf[js.Any])
-    if (ComputerAttributes != null) __obj.updateDynamic("ComputerAttributes")(ComputerAttributes.asInstanceOf[js.Any])
-    if (OrganizationalUnitDistinguishedName != null) __obj.updateDynamic("OrganizationalUnitDistinguishedName")(OrganizationalUnitDistinguishedName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateComputerRequest]
   }
+  @scala.inline
+  implicit class CreateComputerRequestOps[Self <: CreateComputerRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComputerName(value: ComputerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDirectoryId(value: DirectoryId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPassword(value: ComputerPassword): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComputerAttributes(value: Attributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputerAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputerAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputerAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizationalUnitDistinguishedName(value: OrganizationalUnitDN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnitDistinguishedName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationalUnitDistinguishedName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnitDistinguishedName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

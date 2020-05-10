@@ -4,18 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonPitch extends js.Object {
-  var pitch: Double
-  var roll: Double
-  var yaw: Double
+  var pitch: Double = js.native
+  var roll: Double = js.native
+  var yaw: Double = js.native
 }
 
 object AnonPitch {
   @scala.inline
   def apply(pitch: Double, roll: Double, yaw: Double): AnonPitch = {
     val __obj = js.Dynamic.literal(pitch = pitch.asInstanceOf[js.Any], roll = roll.asInstanceOf[js.Any], yaw = yaw.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonPitch]
   }
+  @scala.inline
+  implicit class AnonPitchOps[Self <: AnonPitch] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPitch(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoll(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withYaw(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yaw")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

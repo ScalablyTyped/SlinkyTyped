@@ -1,9 +1,9 @@
 package typingsSlinky.phaser
 
 import org.scalablytyped.runtime.Instantiable3
+import org.scalajs.dom.raw.WebGLRenderingContext
 import typingsSlinky.phaser.spine.webgl.ManagedWebGLRenderingContext
 import typingsSlinky.phaser.spine.webgl.Shader
-import typingsSlinky.std.WebGLRenderingContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

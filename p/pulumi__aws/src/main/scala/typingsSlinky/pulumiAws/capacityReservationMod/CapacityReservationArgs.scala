@@ -63,24 +63,126 @@ object CapacityReservationArgs {
     availabilityZone: Input[String],
     instanceCount: Input[Double],
     instancePlatform: Input[InstancePlatform],
-    instanceType: Input[InstanceType],
-    ebsOptimized: Input[Boolean] = null,
-    endDate: Input[String] = null,
-    endDateType: Input[String] = null,
-    ephemeralStorage: Input[Boolean] = null,
-    instanceMatchCriteria: Input[String] = null,
-    tags: Input[StringDictionary[_]] = null,
-    tenancy: Input[Tenancy] = null
+    instanceType: Input[InstanceType]
   ): CapacityReservationArgs = {
     val __obj = js.Dynamic.literal(availabilityZone = availabilityZone.asInstanceOf[js.Any], instanceCount = instanceCount.asInstanceOf[js.Any], instancePlatform = instancePlatform.asInstanceOf[js.Any], instanceType = instanceType.asInstanceOf[js.Any])
-    if (ebsOptimized != null) __obj.updateDynamic("ebsOptimized")(ebsOptimized.asInstanceOf[js.Any])
-    if (endDate != null) __obj.updateDynamic("endDate")(endDate.asInstanceOf[js.Any])
-    if (endDateType != null) __obj.updateDynamic("endDateType")(endDateType.asInstanceOf[js.Any])
-    if (ephemeralStorage != null) __obj.updateDynamic("ephemeralStorage")(ephemeralStorage.asInstanceOf[js.Any])
-    if (instanceMatchCriteria != null) __obj.updateDynamic("instanceMatchCriteria")(instanceMatchCriteria.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (tenancy != null) __obj.updateDynamic("tenancy")(tenancy.asInstanceOf[js.Any])
     __obj.asInstanceOf[CapacityReservationArgs]
   }
+  @scala.inline
+  implicit class CapacityReservationArgsOps[Self <: CapacityReservationArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailabilityZone(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstanceCount(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstancePlatform(value: Input[InstancePlatform]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instancePlatform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: Input[InstanceType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEbsOptimized(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ebsOptimized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEbsOptimized: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ebsOptimized")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndDate(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndDateType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endDateType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndDateType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endDateType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEphemeralStorage(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ephemeralStorage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEphemeralStorage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ephemeralStorage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceMatchCriteria(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceMatchCriteria")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceMatchCriteria: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceMatchCriteria")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTenancy(value: Input[Tenancy]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tenancy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTenancy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tenancy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

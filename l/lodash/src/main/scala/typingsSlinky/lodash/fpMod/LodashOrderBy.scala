@@ -14,8 +14,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LodashOrderBy extends js.Object {
   def apply(iteratees: __, orders: Many[Boolean | asc | desc]): LodashOrderBy1x2 = js.native
-  def apply[T](iteratees: Many[js.Function1[/* value */ T, NotVoid]]): LodashOrderBy1x1[T] = js.native
-  def apply[T](iteratees: Many[js.Function1[/* value */ T, NotVoid]], orders: Many[Boolean | asc | desc]): LodashOrderBy1x3[T] = js.native
+  def apply[T](iteratees: Many[ValueIteratee[T]]): LodashOrderBy2x1[T] = js.native
+  def apply[T](
+    iteratees: Many[(js.Function1[/* value */ T, NotVoid]) | ValueIteratee[T]],
+    orders: Many[Boolean | asc | desc]
+  ): js.Array[T] = js.native
   def apply[T /* <: js.Object */](
     iteratees: Many[
       (js.Function1[
@@ -35,7 +38,15 @@ trait LodashOrderBy extends js.Object {
     orders: Many[Boolean | asc | desc],
     collection: List[T]
   ): js.Array[T] = js.native
-  def apply[T](iteratees: Many[js.Function1[/* value */ T, NotVoid]], orders: __): LodashOrderBy1x5[T] = js.native
+  def apply[T /* <: js.Object */](
+    iteratees: Many[
+      js.Function1[
+        /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 
+        NotVoid
+      ]
+    ],
+    orders: __
+  ): LodashOrderBy3x5[T] = js.native
   def apply[T /* <: js.Object */](
     iteratees: Many[
       js.Function1[

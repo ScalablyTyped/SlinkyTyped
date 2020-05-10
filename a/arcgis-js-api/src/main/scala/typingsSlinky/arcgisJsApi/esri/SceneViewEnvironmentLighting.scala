@@ -1,11 +1,11 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import typingsSlinky.arcgisJsApi.HashMap
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SceneViewEnvironmentLighting extends AnonymousAccessor {
   /**
     * Indicates whether to show ambient occlusion shading.
@@ -14,7 +14,7 @@ trait SceneViewEnvironmentLighting extends AnonymousAccessor {
     *
     * @default false
     */
-  var ambientOcclusionEnabled: js.UndefOr[Boolean] = js.undefined
+  var ambientOcclusionEnabled: js.UndefOr[Boolean] = js.native
   /**
     * Indicates whether the date and time of the simulated sun is automatically updated to maintain the current time of day while the camera changes.
     *
@@ -22,7 +22,7 @@ trait SceneViewEnvironmentLighting extends AnonymousAccessor {
     *
     * @default true
     */
-  var cameraTrackingEnabled: js.UndefOr[Boolean] = js.undefined
+  var cameraTrackingEnabled: js.UndefOr[Boolean] = js.native
   /**
     * The current date and time of the simulated sun. When setting the date, specifying the time zone is important, otherwise the time zone of the browser will be used. This might lead to different lighting for users in different time zones.
     *
@@ -30,7 +30,7 @@ trait SceneViewEnvironmentLighting extends AnonymousAccessor {
     *
     * @default new Date("March 15, 2019 12:00:00 UTC")
     */
-  var date: js.UndefOr[js.Date] = js.undefined
+  var date: js.UndefOr[js.Date] = js.native
   /**
     * Indicates whether to show shadows cast by the sun. Shadows are only displayed for real world 3D objects. Terrain doesn't cast shadows. In local scenes at small zoom levels, shadows are not displayed. For more control on which 3D objects cast shadows use the `castShadows` property available on [ObjectSymbol3DLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-ObjectSymbol3DLayer.html#castShadows), [FillSymbol3DLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-FillSymbol3DLayer.html#castShadows), [ExtrudeSymbol3DLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-ExtrudeSymbol3DLayer.html#castShadows), and [PathSymbol3DLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PathSymbol3DLayer.html#castShadows).
     *
@@ -38,7 +38,7 @@ trait SceneViewEnvironmentLighting extends AnonymousAccessor {
     *
     * @default false
     */
-  var directShadowsEnabled: js.UndefOr[Boolean] = js.undefined
+  var directShadowsEnabled: js.UndefOr[Boolean] = js.native
 }
 
 object SceneViewEnvironmentLighting {
@@ -46,24 +46,66 @@ object SceneViewEnvironmentLighting {
   def apply(
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
-    propertyIsEnumerable: PropertyKey => Boolean,
-    ambientOcclusionEnabled: js.UndefOr[Boolean] = js.undefined,
-    cameraTrackingEnabled: js.UndefOr[Boolean] = js.undefined,
-    date: js.Date = null,
-    directShadowsEnabled: js.UndefOr[Boolean] = js.undefined,
-    get: /* propertyName */ String => _ = null,
-    set: (js.Function2[/* propertyName */ String, /* value */ js.Any, SceneViewEnvironmentLighting]) with (js.Function1[/* props */ HashMap[_], SceneViewEnvironmentLighting]) = null,
-    watch: (/* path */ String | js.Array[String], /* callback */ WatchCallback, /* sync */ js.UndefOr[Boolean]) => WatchHandle = null
+    propertyIsEnumerable: PropertyKey => Boolean
   ): SceneViewEnvironmentLighting = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
-    if (!js.isUndefined(ambientOcclusionEnabled)) __obj.updateDynamic("ambientOcclusionEnabled")(ambientOcclusionEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(cameraTrackingEnabled)) __obj.updateDynamic("cameraTrackingEnabled")(cameraTrackingEnabled.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (!js.isUndefined(directShadowsEnabled)) __obj.updateDynamic("directShadowsEnabled")(directShadowsEnabled.asInstanceOf[js.Any])
-    if (get != null) __obj.updateDynamic("get")(js.Any.fromFunction1(get))
-    if (set != null) __obj.updateDynamic("set")(set.asInstanceOf[js.Any])
-    if (watch != null) __obj.updateDynamic("watch")(js.Any.fromFunction3(watch))
     __obj.asInstanceOf[SceneViewEnvironmentLighting]
   }
+  @scala.inline
+  implicit class SceneViewEnvironmentLightingOps[Self <: SceneViewEnvironmentLighting] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAmbientOcclusionEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ambientOcclusionEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmbientOcclusionEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ambientOcclusionEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCameraTrackingEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraTrackingEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCameraTrackingEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraTrackingEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectShadowsEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directShadowsEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectShadowsEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directShadowsEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

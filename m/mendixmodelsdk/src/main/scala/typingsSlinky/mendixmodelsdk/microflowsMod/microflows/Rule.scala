@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 /**
   * See: {@link https://docs.mendix.com/refguide7/rules relevant section in reference guide}
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -35,7 +35,7 @@ class Rule protected () extends ServerSideMicroflow {
   @JSName("model")
   var model_FRule: IModel = js.native
   @JSName("containerAsFolderBase")
-  def containerAsFolderBase_MRule(): FolderBase = js.native
+  def containerAsFolderBase_MRule: FolderBase = js.native
 }
 
 /* static members */

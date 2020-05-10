@@ -1,40 +1,39 @@
 package typingsSlinky.blueprintjsCore.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.collapseMod.ICollapseProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Collapse
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsCore.mod.Collapse] {
+object Collapse {
   @JSImport("@blueprintjs/core", "Collapse")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    component: ReactComponentClass[_] = null,
-    isOpen: js.UndefOr[Boolean] = js.undefined,
-    keepChildrenMounted: js.UndefOr[Boolean] = js.undefined,
-    transitionDuration: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Collapse] = {
-    val __obj = js.Dynamic.literal()
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (!js.isUndefined(isOpen)) __obj.updateDynamic("isOpen")(isOpen.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepChildrenMounted)) __obj.updateDynamic("keepChildrenMounted")(keepChildrenMounted.asInstanceOf[js.Any])
-    if (transitionDuration != null) __obj.updateDynamic("transitionDuration")(transitionDuration.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Collapse] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentFunctionComponent(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentComponentClass(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def component(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isOpen(value: Boolean): this.type = set("isOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keepChildrenMounted(value: Boolean): this.type = set("keepChildrenMounted", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionDuration(value: Double): this.type = set("transitionDuration", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Collapse] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.blueprintjsCore.mod.Collapse](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ICollapseProps
+  
+  def withProps(p: ICollapseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Collapse.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

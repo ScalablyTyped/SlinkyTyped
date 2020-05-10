@@ -40,7 +40,7 @@ class Resource () extends js.Object {
   def delete(options: AnonHeaders): js.UndefOr[js.Promise[_]] = js.native
   def fetch(): js.UndefOr[js.Promise[_]] = js.native
   def fetch(options: AnonHeaders): js.UndefOr[js.Promise[_]] = js.native
-  def fetchArrayBuffer(): js.UndefOr[js.Promise[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  def fetchArrayBuffer(): js.UndefOr[js.Promise[js.typedarray.ArrayBuffer]] = js.native
   def fetchBlob(): js.UndefOr[js.Promise[Blob]] = js.native
   def fetchImage(preferBlob: Boolean): js.UndefOr[js.Promise[_]] = js.native
   def fetchJson(): js.UndefOr[js.Promise[_]] = js.native
@@ -75,8 +75,8 @@ object Resource extends js.Object {
   def delete(options: AnonOverrideMimeType): js.UndefOr[js.Promise[_]] = js.native
   def fetch(): js.UndefOr[js.Promise[_]] = js.native
   def fetch(options: AnonQueryParameters): js.UndefOr[js.Promise[_]] = js.native
-  def fetchArrayBuffer(): js.UndefOr[js.Promise[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
-  def fetchArrayBuffer(options: AnonRetryAttempts): js.UndefOr[js.Promise[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  def fetchArrayBuffer(): js.UndefOr[js.Promise[js.typedarray.ArrayBuffer]] = js.native
+  def fetchArrayBuffer(options: AnonRetryAttempts): js.UndefOr[js.Promise[js.typedarray.ArrayBuffer]] = js.native
   def fetchBlob(): js.UndefOr[js.Promise[Blob]] = js.native
   def fetchBlob(options: AnonRetryAttempts): js.UndefOr[js.Promise[Blob]] = js.native
   def fetchImage(): js.UndefOr[js.Promise[_]] = js.native

@@ -1,10 +1,9 @@
 package typingsSlinky.antDesignReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.PickCardStylefooterConten
 import typingsSlinky.antDesignReactNative.cardFooterMod.CardFooterProps
 import typingsSlinky.antDesignReactNative.cardFooterMod.default
@@ -15,31 +14,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CardFooter
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object CardFooter {
   @JSImport("@ant-design/react-native/lib/card/CardFooter", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    content: TagMod[Any] = null,
-    extra: TagMod[Any] = null,
-    style: StyleProp[ViewStyle] = null,
-    styles: Partial[PickCardStylefooterConten] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(value: TagMod[Any]): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def styles(value: Partial[PickCardStylefooterConten]): this.type = set("styles", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.antDesignReactNative.cardFooterMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = CardFooterProps
+  
+  def withProps(p: CardFooterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CardFooter.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

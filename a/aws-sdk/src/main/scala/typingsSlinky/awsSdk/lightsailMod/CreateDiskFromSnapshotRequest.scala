@@ -46,25 +46,107 @@ trait CreateDiskFromSnapshotRequest extends js.Object {
 
 object CreateDiskFromSnapshotRequest {
   @scala.inline
-  def apply(
-    availabilityZone: NonEmptyString,
-    diskName: ResourceName,
-    sizeInGb: integer,
-    addOns: AddOnRequestList = null,
-    diskSnapshotName: ResourceName = null,
-    restoreDate: String = null,
-    sourceDiskName: String = null,
-    tags: TagList = null,
-    useLatestRestorableAutoSnapshot: js.UndefOr[Boolean] = js.undefined
-  ): CreateDiskFromSnapshotRequest = {
+  def apply(availabilityZone: NonEmptyString, diskName: ResourceName, sizeInGb: integer): CreateDiskFromSnapshotRequest = {
     val __obj = js.Dynamic.literal(availabilityZone = availabilityZone.asInstanceOf[js.Any], diskName = diskName.asInstanceOf[js.Any], sizeInGb = sizeInGb.asInstanceOf[js.Any])
-    if (addOns != null) __obj.updateDynamic("addOns")(addOns.asInstanceOf[js.Any])
-    if (diskSnapshotName != null) __obj.updateDynamic("diskSnapshotName")(diskSnapshotName.asInstanceOf[js.Any])
-    if (restoreDate != null) __obj.updateDynamic("restoreDate")(restoreDate.asInstanceOf[js.Any])
-    if (sourceDiskName != null) __obj.updateDynamic("sourceDiskName")(sourceDiskName.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (!js.isUndefined(useLatestRestorableAutoSnapshot)) __obj.updateDynamic("useLatestRestorableAutoSnapshot")(useLatestRestorableAutoSnapshot.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDiskFromSnapshotRequest]
   }
+  @scala.inline
+  implicit class CreateDiskFromSnapshotRequestOps[Self <: CreateDiskFromSnapshotRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailabilityZone(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDiskName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSizeInGb(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeInGb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddOns(value: AddOnRequestList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addOns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddOns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addOns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskSnapshotName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSnapshotName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskSnapshotName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSnapshotName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestoreDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestoreDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceDiskName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceDiskName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceDiskName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceDiskName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseLatestRestorableAutoSnapshot(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useLatestRestorableAutoSnapshot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseLatestRestorableAutoSnapshot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useLatestRestorableAutoSnapshot")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

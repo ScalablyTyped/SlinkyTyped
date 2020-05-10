@@ -1,13 +1,10 @@
 package typingsSlinky.materialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.EventTarget
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Tabs.TabsProps
 import typingsSlinky.materialUi.tabsMod.default
 import typingsSlinky.react.mod.CSSProperties
@@ -16,40 +13,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tabs
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Tabs {
   @JSImport("material-ui/Tabs", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    contentContainerClassName: String = null,
-    contentContainerStyle: CSSProperties = null,
-    initialSelectedIndex: Int | Double = null,
-    inkBarStyle: CSSProperties = null,
-    onChange: (/* value */ js.Any, SyntheticEvent[EventTarget with js.Object, Event_], /* tab */ typingsSlinky.materialUi.MaterialUI.Tabs.Tab) => Unit = null,
-    tabItemContainerStyle: CSSProperties = null,
-    tabTemplate: ReactComponentClass[_] = null,
-    tabTemplateStyle: CSSProperties = null,
-    value: js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (contentContainerClassName != null) __obj.updateDynamic("contentContainerClassName")(contentContainerClassName.asInstanceOf[js.Any])
-    if (contentContainerStyle != null) __obj.updateDynamic("contentContainerStyle")(contentContainerStyle.asInstanceOf[js.Any])
-    if (initialSelectedIndex != null) __obj.updateDynamic("initialSelectedIndex")(initialSelectedIndex.asInstanceOf[js.Any])
-    if (inkBarStyle != null) __obj.updateDynamic("inkBarStyle")(inkBarStyle.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction3(onChange))
-    if (tabItemContainerStyle != null) __obj.updateDynamic("tabItemContainerStyle")(tabItemContainerStyle.asInstanceOf[js.Any])
-    if (tabTemplate != null) __obj.updateDynamic("tabTemplate")(tabTemplate.asInstanceOf[js.Any])
-    if (tabTemplateStyle != null) __obj.updateDynamic("tabTemplateStyle")(tabTemplateStyle.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentContainerClassName(value: String): this.type = set("contentContainerClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentContainerStyle(value: CSSProperties): this.type = set("contentContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialSelectedIndex(value: Double): this.type = set("initialSelectedIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inkBarStyle(value: CSSProperties): this.type = set("inkBarStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(
+      value: (/* value */ js.Any, SyntheticEvent[EventTarget with js.Object, Event_], /* tab */ typingsSlinky.materialUi.MaterialUI.Tabs.Tab) => Unit
+    ): this.type = set("onChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabItemContainerStyle(value: CSSProperties): this.type = set("tabItemContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabTemplate(value: ReactComponentClass[_]): this.type = set("tabTemplate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabTemplateStyle(value: CSSProperties): this.type = set("tabTemplateStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.materialUi.tabsMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TabsProps
+  
+  def withProps(p: TabsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Tabs.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

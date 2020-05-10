@@ -18,11 +18,41 @@ trait PlacementType extends js.Object {
 
 object PlacementType {
   @scala.inline
-  def apply(AvailabilityZone: XmlString = null, AvailabilityZones: XmlStringMaxLen256List = null): PlacementType = {
+  def apply(): PlacementType = {
     val __obj = js.Dynamic.literal()
-    if (AvailabilityZone != null) __obj.updateDynamic("AvailabilityZone")(AvailabilityZone.asInstanceOf[js.Any])
-    if (AvailabilityZones != null) __obj.updateDynamic("AvailabilityZones")(AvailabilityZones.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlacementType]
   }
+  @scala.inline
+  implicit class PlacementTypeOps[Self <: PlacementType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailabilityZone(value: XmlString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailabilityZones(value: XmlStringMaxLen256List): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZones")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZones: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZones")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

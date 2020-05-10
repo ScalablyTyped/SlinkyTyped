@@ -1,13 +1,16 @@
 package typingsSlinky.react.mod
 
 import org.scalajs.dom.raw.DataTransfer
-import typingsSlinky.std.EventTarget
+import org.scalajs.dom.raw.EventTarget
+import slinky.web.SyntheticClipboardEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait ClipboardEvent[T] extends BaseSyntheticEvent[NativeClipboardEvent, EventTarget with T, EventTarget] {
-  var clipboardData: DataTransfer
+@js.native
+trait ClipboardEvent[T]
+  extends BaseSyntheticEvent[org.scalajs.dom.raw.ClipboardEvent, EventTarget with T, EventTarget] {
+  var clipboardData: DataTransfer = js.native
 }
 
 object ClipboardEvent {
@@ -16,7 +19,7 @@ object ClipboardEvent {
     bubbles: Boolean,
     cancelable: Boolean,
     clipboardData: DataTransfer,
-    currentTarget: org.scalajs.dom.raw.EventTarget with T,
+    currentTarget: EventTarget with T,
     defaultPrevented: Boolean,
     eventPhase: Double,
     isDefaultPrevented: () => Boolean,
@@ -26,7 +29,7 @@ object ClipboardEvent {
     persist: () => Unit,
     preventDefault: () => Unit,
     stopPropagation: () => Unit,
-    target: org.scalajs.dom.raw.EventTarget,
+    target: EventTarget,
     timeStamp: Double,
     `type`: String
   ): ClipboardEvent[T] = {
@@ -34,5 +37,19 @@ object ClipboardEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClipboardEvent[T]]
   }
+  @scala.inline
+  implicit class ClipboardEventOps[Self[t] <: SyntheticClipboardEvent[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withClipboardData(value: DataTransfer): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboardData")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

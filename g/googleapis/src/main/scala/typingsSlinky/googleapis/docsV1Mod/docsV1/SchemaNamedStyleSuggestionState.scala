@@ -29,16 +29,53 @@ trait SchemaNamedStyleSuggestionState extends js.Object {
 
 object SchemaNamedStyleSuggestionState {
   @scala.inline
-  def apply(
-    namedStyleType: String = null,
-    paragraphStyleSuggestionState: SchemaParagraphStyleSuggestionState = null,
-    textStyleSuggestionState: SchemaTextStyleSuggestionState = null
-  ): SchemaNamedStyleSuggestionState = {
+  def apply(): SchemaNamedStyleSuggestionState = {
     val __obj = js.Dynamic.literal()
-    if (namedStyleType != null) __obj.updateDynamic("namedStyleType")(namedStyleType.asInstanceOf[js.Any])
-    if (paragraphStyleSuggestionState != null) __obj.updateDynamic("paragraphStyleSuggestionState")(paragraphStyleSuggestionState.asInstanceOf[js.Any])
-    if (textStyleSuggestionState != null) __obj.updateDynamic("textStyleSuggestionState")(textStyleSuggestionState.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNamedStyleSuggestionState]
   }
+  @scala.inline
+  implicit class SchemaNamedStyleSuggestionStateOps[Self <: SchemaNamedStyleSuggestionState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNamedStyleType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedStyleType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamedStyleType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedStyleType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParagraphStyleSuggestionState(value: SchemaParagraphStyleSuggestionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraphStyleSuggestionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParagraphStyleSuggestionState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraphStyleSuggestionState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextStyleSuggestionState(value: SchemaTextStyleSuggestionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyleSuggestionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextStyleSuggestionState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyleSuggestionState")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

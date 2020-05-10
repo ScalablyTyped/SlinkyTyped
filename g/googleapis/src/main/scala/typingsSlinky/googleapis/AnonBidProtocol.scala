@@ -14,18 +14,65 @@ trait AnonBidProtocol extends js.Object {
 
 object AnonBidProtocol {
   @scala.inline
-  def apply(
-    bidProtocol: String = null,
-    maximumQps: Int | Double = null,
-    region: String = null,
-    url: String = null
-  ): AnonBidProtocol = {
+  def apply(): AnonBidProtocol = {
     val __obj = js.Dynamic.literal()
-    if (bidProtocol != null) __obj.updateDynamic("bidProtocol")(bidProtocol.asInstanceOf[js.Any])
-    if (maximumQps != null) __obj.updateDynamic("maximumQps")(maximumQps.asInstanceOf[js.Any])
-    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBidProtocol]
   }
+  @scala.inline
+  implicit class AnonBidProtocolOps[Self <: AnonBidProtocol] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBidProtocol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bidProtocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBidProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bidProtocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumQps(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumQps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumQps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumQps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

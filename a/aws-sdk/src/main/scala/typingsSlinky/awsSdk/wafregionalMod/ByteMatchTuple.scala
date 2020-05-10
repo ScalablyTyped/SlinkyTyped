@@ -33,8 +33,45 @@ object ByteMatchTuple {
     TextTransformation: TextTransformation
   ): ByteMatchTuple = {
     val __obj = js.Dynamic.literal(FieldToMatch = FieldToMatch.asInstanceOf[js.Any], PositionalConstraint = PositionalConstraint.asInstanceOf[js.Any], TargetString = TargetString.asInstanceOf[js.Any], TextTransformation = TextTransformation.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ByteMatchTuple]
   }
+  @scala.inline
+  implicit class ByteMatchTupleOps[Self <: ByteMatchTuple] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFieldToMatch(value: FieldToMatch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldToMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPositionalConstraint(value: PositionalConstraint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PositionalConstraint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetStringUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetString(value: ByteMatchTargetString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextTransformation(value: TextTransformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TextTransformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

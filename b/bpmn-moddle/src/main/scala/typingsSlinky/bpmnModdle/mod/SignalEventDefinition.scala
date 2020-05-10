@@ -9,3 +9,25 @@ trait SignalEventDefinition extends BaseElement {
   var signalRef: Signal = js.native
 }
 
+object SignalEventDefinition {
+  @scala.inline
+  def apply($parent: TypeDerived, $type: ElementType, id: String, signalRef: Signal): SignalEventDefinition = {
+    val __obj = js.Dynamic.literal($parent = $parent.asInstanceOf[js.Any], $type = $type.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], signalRef = signalRef.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SignalEventDefinition]
+  }
+  @scala.inline
+  implicit class SignalEventDefinitionOps[Self <: SignalEventDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSignalRef(value: Signal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signalRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

@@ -13,12 +13,10 @@ trait imageSize extends js.Object
 
 object imageSize {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def l: typingsSlinky.fundamentalReact.fundamentalReactStrings.l = "l".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.l]
   @scala.inline
-  def l: typingsSlinky.fundamentalReact.fundamentalReactStrings.l = this.cast("l")
+  def m: typingsSlinky.fundamentalReact.fundamentalReactStrings.m = "m".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.m]
   @scala.inline
-  def m: typingsSlinky.fundamentalReact.fundamentalReactStrings.m = this.cast("m")
-  @scala.inline
-  def s: typingsSlinky.fundamentalReact.fundamentalReactStrings.s = this.cast("s")
+  def s: typingsSlinky.fundamentalReact.fundamentalReactStrings.s = "s".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.s]
 }
 

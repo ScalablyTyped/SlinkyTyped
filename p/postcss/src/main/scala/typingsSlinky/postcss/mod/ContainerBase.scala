@@ -1,7 +1,6 @@
 package typingsSlinky.postcss.mod
 
 import typingsSlinky.postcss.AnonFast
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -147,14 +146,14 @@ trait ContainerBase extends NodeBase {
     options: AnonFast,
     callbackOrReplaceValue: js.Function2[/* substring */ String, /* repeated */ js.Any, String]
   ): this.type = js.native
-  def replaceValues(pattern: RegExp, callbackOrReplaceValue: String): this.type = js.native
+  def replaceValues(pattern: js.RegExp, callbackOrReplaceValue: String): this.type = js.native
   def replaceValues(
-    pattern: RegExp,
+    pattern: js.RegExp,
     callbackOrReplaceValue: js.Function2[/* substring */ String, /* repeated */ js.Any, String]
   ): this.type = js.native
-  def replaceValues(pattern: RegExp, options: AnonFast, callbackOrReplaceValue: String): this.type = js.native
+  def replaceValues(pattern: js.RegExp, options: AnonFast, callbackOrReplaceValue: String): this.type = js.native
   def replaceValues(
-    pattern: RegExp,
+    pattern: js.RegExp,
     options: AnonFast,
     callbackOrReplaceValue: js.Function2[/* substring */ String, /* repeated */ js.Any, String]
   ): this.type = js.native
@@ -195,7 +194,7 @@ trait ContainerBase extends NodeBase {
     * container.
     */
   def walkAtRules(nameFilter: String, callback: js.Function2[/* atRule */ AtRule_, /* index */ Double, _]): Boolean | Unit = js.native
-  def walkAtRules(nameFilter: RegExp, callback: js.Function2[/* atRule */ AtRule_, /* index */ Double, _]): Boolean | Unit = js.native
+  def walkAtRules(nameFilter: js.RegExp, callback: js.Function2[/* atRule */ AtRule_, /* index */ Double, _]): Boolean | Unit = js.native
   /**
     * Traverses the container's descendant nodes, calling `callback` for each
     * comment. Like container.each(), this method is safe to use if you are
@@ -214,8 +213,8 @@ trait ContainerBase extends NodeBase {
     */
   def walkDecls(propFilter: String): Boolean | Unit = js.native
   def walkDecls(propFilter: String, callback: js.Function2[/* decl */ Declaration, /* index */ Double, _]): Boolean | Unit = js.native
-  def walkDecls(propFilter: RegExp): Boolean | Unit = js.native
-  def walkDecls(propFilter: RegExp, callback: js.Function2[/* decl */ Declaration, /* index */ Double, _]): Boolean | Unit = js.native
+  def walkDecls(propFilter: js.RegExp): Boolean | Unit = js.native
+  def walkDecls(propFilter: js.RegExp, callback: js.Function2[/* decl */ Declaration, /* index */ Double, _]): Boolean | Unit = js.native
   def walkRules(callback: js.Function2[/* atRule */ Rule_, /* index */ Double, _]): Boolean | Unit = js.native
   /**
     * Traverses the container's descendant nodes, calling `callback` for each
@@ -229,6 +228,6 @@ trait ContainerBase extends NodeBase {
   def walkRules(selectorFilter: String, callback: js.Function2[/* atRule */ Rule_, /* index */ Double, _]): Boolean | Unit = js.native
   def walkRules(selectorFilter: js.Any): Boolean | Unit = js.native
   def walkRules(selectorFilter: js.Any, callback: js.Function2[/* atRule */ Rule_, /* index */ Double, _]): Boolean | Unit = js.native
-  def walkRules(selectorFilter: RegExp, callback: js.Function2[/* atRule */ Rule_, /* index */ Double, _]): Boolean | Unit = js.native
+  def walkRules(selectorFilter: js.RegExp, callback: js.Function2[/* atRule */ Rule_, /* index */ Double, _]): Boolean | Unit = js.native
 }
 

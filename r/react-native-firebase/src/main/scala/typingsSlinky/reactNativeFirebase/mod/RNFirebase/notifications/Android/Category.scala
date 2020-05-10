@@ -25,36 +25,34 @@ trait Category extends js.Object
 
 object Category {
   @scala.inline
-  def alarm: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.alarm = this.cast("alarm")
+  def alarm: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.alarm = "alarm".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.alarm]
   @scala.inline
-  def call: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.call = this.cast("call")
+  def call: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.call = "call".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.call]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def email: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.email = "email".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.email]
   @scala.inline
-  def email: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.email = this.cast("email")
+  def err: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.err = "err".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.err]
   @scala.inline
-  def err: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.err = this.cast("err")
+  def event: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.event = "event".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.event]
   @scala.inline
-  def event: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.event = this.cast("event")
+  def msg: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.msg = "msg".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.msg]
   @scala.inline
-  def msg: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.msg = this.cast("msg")
+  def progress: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.progress = "progress".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.progress]
   @scala.inline
-  def progress: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.progress = this.cast("progress")
+  def promo: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.promo = "promo".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.promo]
   @scala.inline
-  def promo: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.promo = this.cast("promo")
+  def recommendation: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.recommendation = "recommendation".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.recommendation]
   @scala.inline
-  def recommendation: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.recommendation = this.cast("recommendation")
+  def reminder: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.reminder = "reminder".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.reminder]
   @scala.inline
-  def reminder: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.reminder = this.cast("reminder")
+  def service: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.service = "service".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.service]
   @scala.inline
-  def service: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.service = this.cast("service")
+  def social: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.social = "social".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.social]
   @scala.inline
-  def social: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.social = this.cast("social")
+  def status: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.status = "status".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.status]
   @scala.inline
-  def status: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.status = this.cast("status")
+  def system: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.system = "system".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.system]
   @scala.inline
-  def system: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.system = this.cast("system")
-  @scala.inline
-  def transport: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.transport = this.cast("transport")
+  def transport: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.transport = "transport".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.transport]
 }
 

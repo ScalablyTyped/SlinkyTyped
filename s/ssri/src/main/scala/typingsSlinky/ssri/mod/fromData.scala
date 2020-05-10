@@ -3,7 +3,6 @@ package typingsSlinky.ssri.mod
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.TypedArray
 import typingsSlinky.ssri.AnonAlgorithms
-import typingsSlinky.std.DataView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +16,7 @@ object fromData extends js.Object {
   def apply(data: Buffer, opts: AnonAlgorithms): IntegrityMap = js.native
   def apply(data: TypedArray): IntegrityMap = js.native
   def apply(data: TypedArray, opts: AnonAlgorithms): IntegrityMap = js.native
-  def apply(data: DataView): IntegrityMap = js.native
-  def apply(data: DataView, opts: AnonAlgorithms): IntegrityMap = js.native
+  def apply(data: js.typedarray.DataView): IntegrityMap = js.native
+  def apply(data: js.typedarray.DataView, opts: AnonAlgorithms): IntegrityMap = js.native
 }
 

@@ -59,7 +59,7 @@ package object JQuery_ {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.jquery.jqueryBooleans.`false`
     - scala.Null
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
     - typingsSlinky.jquery.jqueryNumbers.`0`
     - typingsSlinky.jquery.jqueryStrings._empty
     - typingsSlinky.std.HTMLAllCollection
@@ -67,7 +67,7 @@ package object JQuery_ {
   type Falsy = js.UndefOr[
     typingsSlinky.jquery.JQuery_._Falsy | scala.Null | typingsSlinky.std.HTMLAllCollection
   ]
-  type Node = org.scalajs.dom.raw.Element | org.scalajs.dom.raw.Text | org.scalajs.dom.raw.Comment | org.scalajs.dom.raw.DocumentFragment
+  type Node = org.scalajs.dom.raw.Element | org.scalajs.dom.raw.Text | org.scalajs.dom.raw.Comment | typingsSlinky.std.Document_ | org.scalajs.dom.raw.DocumentFragment
   /**
     * The PlainObject type is a JavaScript object containing zero or more key-value pairs. The plain object is, in other words, an Object object. It is designated "plain" in jQuery documentation to distinguish it from other kinds of JavaScript objects: for example, null, user-defined arrays, and host objects such as document, all of which have a typeof value of "object."
     *
@@ -180,7 +180,7 @@ package object JQuery_ {
     /* finalValue */ scala.Double, 
     typingsSlinky.jquery.JQuery_.Tween[TElement]
   ]
-  type TypeEventHandler[TDelegateTarget, TData, TCurrentTarget, TTarget, TType /* <: java.lang.String */] = typingsSlinky.jquery.JQuery_.EventHandlerBase[
+  type TypeEventHandler[TDelegateTarget, TData, TCurrentTarget, TTarget, TType /* <: /* keyof jquery.JQuery.TypeToTriggeredEventMap<TDelegateTarget, TData, TCurrentTarget, TTarget> */ typingsSlinky.jquery.jqueryStrings.change | typingsSlinky.jquery.jqueryStrings.resize | typingsSlinky.jquery.jqueryStrings.scroll | typingsSlinky.jquery.jqueryStrings.select | typingsSlinky.jquery.jqueryStrings.submit | typingsSlinky.jquery.jqueryStrings.click | typingsSlinky.jquery.jqueryStrings.contextmenu | typingsSlinky.jquery.jqueryStrings.dblclick | typingsSlinky.jquery.jqueryStrings.mousedown | typingsSlinky.jquery.jqueryStrings.mouseenter | typingsSlinky.jquery.jqueryStrings.mouseleave | typingsSlinky.jquery.jqueryStrings.mousemove | typingsSlinky.jquery.jqueryStrings.mouseout | typingsSlinky.jquery.jqueryStrings.mouseover | typingsSlinky.jquery.jqueryStrings.mouseup | typingsSlinky.jquery.jqueryStrings.drag | typingsSlinky.jquery.jqueryStrings.dragend | typingsSlinky.jquery.jqueryStrings.dragenter | typingsSlinky.jquery.jqueryStrings.dragexit | typingsSlinky.jquery.jqueryStrings.dragleave | typingsSlinky.jquery.jqueryStrings.dragover | typingsSlinky.jquery.jqueryStrings.dragstart | typingsSlinky.jquery.jqueryStrings.drop | typingsSlinky.jquery.jqueryStrings.keydown | typingsSlinky.jquery.jqueryStrings.keypress | typingsSlinky.jquery.jqueryStrings.keyup | typingsSlinky.jquery.jqueryStrings.touchcancel | typingsSlinky.jquery.jqueryStrings.touchend | typingsSlinky.jquery.jqueryStrings.touchmove | typingsSlinky.jquery.jqueryStrings.touchstart | typingsSlinky.jquery.jqueryStrings.blur | typingsSlinky.jquery.jqueryStrings.focus | typingsSlinky.jquery.jqueryStrings.focusin | typingsSlinky.jquery.jqueryStrings.focusout */] = typingsSlinky.jquery.JQuery_.EventHandlerBase[
     TCurrentTarget, 
     /* import warning: importer.ImportType#apply Failed type conversion: jquery.JQuery.TypeToTriggeredEventMap<TDelegateTarget, TData, TCurrentTarget, TTarget>[TType] */ js.Any
   ]

@@ -8,39 +8,39 @@ import scala.scalajs.js.annotation._
   * Simple object returned in the callback from the
   * [reverseGeocoder](Titanium.Geolocation.reverseGeocoder) method.
   */
-trait ReverseGeocodeResponse extends js.Object {
-  /**
-  	 * Error code. Returns 0 if `success` is `true`.
-  	 */
-  var code: js.UndefOr[Double] = js.undefined
-  /**
-  	 * Error message, if any returned.
-  	 */
-  var error: js.UndefOr[String] = js.undefined
+@js.native
+trait ReverseGeocodeResponse extends ErrorResponse {
   /**
   	 * An array of reverse-geocoded addresses matching the requested location.
   	 */
-  var places: js.UndefOr[js.Array[GeocodedAddress]] = js.undefined
-  /**
-  	 * Indicates if the operation succeeded.
-  	 */
-  var success: js.UndefOr[Boolean] = js.undefined
+  var places: js.UndefOr[js.Array[GeocodedAddress]] = js.native
 }
 
 object ReverseGeocodeResponse {
   @scala.inline
-  def apply(
-    code: Int | Double = null,
-    error: String = null,
-    places: js.Array[GeocodedAddress] = null,
-    success: js.UndefOr[Boolean] = js.undefined
-  ): ReverseGeocodeResponse = {
+  def apply(): ReverseGeocodeResponse = {
     val __obj = js.Dynamic.literal()
-    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (places != null) __obj.updateDynamic("places")(places.asInstanceOf[js.Any])
-    if (!js.isUndefined(success)) __obj.updateDynamic("success")(success.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReverseGeocodeResponse]
   }
+  @scala.inline
+  implicit class ReverseGeocodeResponseOps[Self <: ReverseGeocodeResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPlaces(value: js.Array[GeocodedAddress]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("places")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("places")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

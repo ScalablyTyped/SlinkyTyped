@@ -22,10 +22,41 @@ trait AnalyzeDocumentRequest extends js.Object {
 
 object AnalyzeDocumentRequest {
   @scala.inline
-  def apply(Document: Document, FeatureTypes: FeatureTypes, HumanLoopConfig: HumanLoopConfig = null): AnalyzeDocumentRequest = {
+  def apply(Document: Document, FeatureTypes: FeatureTypes): AnalyzeDocumentRequest = {
     val __obj = js.Dynamic.literal(Document = Document.asInstanceOf[js.Any], FeatureTypes = FeatureTypes.asInstanceOf[js.Any])
-    if (HumanLoopConfig != null) __obj.updateDynamic("HumanLoopConfig")(HumanLoopConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalyzeDocumentRequest]
   }
+  @scala.inline
+  implicit class AnalyzeDocumentRequestOps[Self <: AnalyzeDocumentRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocument(value: Document): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Document")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeatureTypes(value: FeatureTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FeatureTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHumanLoopConfig(value: HumanLoopConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HumanLoopConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHumanLoopConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HumanLoopConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

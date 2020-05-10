@@ -30,18 +30,65 @@ trait UpdateThreatIntelSetRequest extends js.Object {
 
 object UpdateThreatIntelSetRequest {
   @scala.inline
-  def apply(
-    DetectorId: DetectorId,
-    ThreatIntelSetId: String,
-    Activate: js.UndefOr[scala.Boolean] = js.undefined,
-    Location: Location = null,
-    Name: Name = null
-  ): UpdateThreatIntelSetRequest = {
+  def apply(DetectorId: DetectorId, ThreatIntelSetId: String): UpdateThreatIntelSetRequest = {
     val __obj = js.Dynamic.literal(DetectorId = DetectorId.asInstanceOf[js.Any], ThreatIntelSetId = ThreatIntelSetId.asInstanceOf[js.Any])
-    if (!js.isUndefined(Activate)) __obj.updateDynamic("Activate")(Activate.asInstanceOf[js.Any])
-    if (Location != null) __obj.updateDynamic("Location")(Location.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateThreatIntelSetRequest]
   }
+  @scala.inline
+  implicit class UpdateThreatIntelSetRequestOps[Self <: UpdateThreatIntelSetRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDetectorId(value: DetectorId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectorId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThreatIntelSetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatIntelSetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActivate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Activate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Activate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

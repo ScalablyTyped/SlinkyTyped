@@ -13,12 +13,10 @@ trait AudioContextState extends js.Object
 
 object AudioContextState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def closed: typingsSlinky.std.stdStrings.closed = "closed".asInstanceOf[typingsSlinky.std.stdStrings.closed]
   @scala.inline
-  def closed: typingsSlinky.std.stdStrings.closed = this.cast("closed")
+  def running: typingsSlinky.std.stdStrings.running = "running".asInstanceOf[typingsSlinky.std.stdStrings.running]
   @scala.inline
-  def running: typingsSlinky.std.stdStrings.running = this.cast("running")
-  @scala.inline
-  def suspended: typingsSlinky.std.stdStrings.suspended = this.cast("suspended")
+  def suspended: typingsSlinky.std.stdStrings.suspended = "suspended".asInstanceOf[typingsSlinky.std.stdStrings.suspended]
 }
 

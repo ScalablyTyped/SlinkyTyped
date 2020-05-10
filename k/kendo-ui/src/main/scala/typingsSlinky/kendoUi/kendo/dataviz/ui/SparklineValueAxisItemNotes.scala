@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SparklineValueAxisItemNotes extends js.Object {
-  var data: js.UndefOr[js.Array[SparklineValueAxisItemNotesDataItem]] = js.undefined
-  var icon: js.UndefOr[SparklineValueAxisItemNotesIcon] = js.undefined
-  var label: js.UndefOr[SparklineValueAxisItemNotesLabel] = js.undefined
-  var line: js.UndefOr[SparklineValueAxisItemNotesLine] = js.undefined
-  var position: js.UndefOr[String] = js.undefined
+  var data: js.UndefOr[js.Array[SparklineValueAxisItemNotesDataItem]] = js.native
+  var icon: js.UndefOr[SparklineValueAxisItemNotesIcon] = js.native
+  var label: js.UndefOr[SparklineValueAxisItemNotesLabel] = js.native
+  var line: js.UndefOr[SparklineValueAxisItemNotesLine] = js.native
+  var position: js.UndefOr[String] = js.native
 }
 
 object SparklineValueAxisItemNotes {
   @scala.inline
-  def apply(
-    data: js.Array[SparklineValueAxisItemNotesDataItem] = null,
-    icon: SparklineValueAxisItemNotesIcon = null,
-    label: SparklineValueAxisItemNotesLabel = null,
-    line: SparklineValueAxisItemNotesLine = null,
-    position: String = null
-  ): SparklineValueAxisItemNotes = {
+  def apply(): SparklineValueAxisItemNotes = {
     val __obj = js.Dynamic.literal()
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
     __obj.asInstanceOf[SparklineValueAxisItemNotes]
   }
+  @scala.inline
+  implicit class SparklineValueAxisItemNotesOps[Self <: SparklineValueAxisItemNotes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: js.Array[SparklineValueAxisItemNotesDataItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: SparklineValueAxisItemNotesIcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: SparklineValueAxisItemNotesLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLine(value: SparklineValueAxisItemNotesLine): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

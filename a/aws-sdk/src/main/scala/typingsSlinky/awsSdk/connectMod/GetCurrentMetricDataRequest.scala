@@ -34,19 +34,71 @@ trait GetCurrentMetricDataRequest extends js.Object {
 
 object GetCurrentMetricDataRequest {
   @scala.inline
-  def apply(
-    CurrentMetrics: CurrentMetrics,
-    Filters: Filters,
-    InstanceId: InstanceId,
-    Groupings: Groupings = null,
-    MaxResults: Int | Double = null,
-    NextToken: NextToken = null
-  ): GetCurrentMetricDataRequest = {
+  def apply(CurrentMetrics: CurrentMetrics, Filters: Filters, InstanceId: InstanceId): GetCurrentMetricDataRequest = {
     val __obj = js.Dynamic.literal(CurrentMetrics = CurrentMetrics.asInstanceOf[js.Any], Filters = Filters.asInstanceOf[js.Any], InstanceId = InstanceId.asInstanceOf[js.Any])
-    if (Groupings != null) __obj.updateDynamic("Groupings")(Groupings.asInstanceOf[js.Any])
-    if (MaxResults != null) __obj.updateDynamic("MaxResults")(MaxResults.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCurrentMetricDataRequest]
   }
+  @scala.inline
+  implicit class GetCurrentMetricDataRequestOps[Self <: GetCurrentMetricDataRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentMetrics(value: CurrentMetrics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentMetrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFilters(value: Filters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstanceId(value: InstanceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGroupings(value: Groupings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Groupings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Groupings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: MaxResult100): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

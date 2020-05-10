@@ -12,10 +12,8 @@ trait LazyLoadTypes extends js.Object
 
 object LazyLoadTypes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ondemand: typingsSlinky.reactSlick.reactSlickStrings.ondemand = "ondemand".asInstanceOf[typingsSlinky.reactSlick.reactSlickStrings.ondemand]
   @scala.inline
-  def ondemand: typingsSlinky.reactSlick.reactSlickStrings.ondemand = this.cast("ondemand")
-  @scala.inline
-  def progressive: typingsSlinky.reactSlick.reactSlickStrings.progressive = this.cast("progressive")
+  def progressive: typingsSlinky.reactSlick.reactSlickStrings.progressive = "progressive".asInstanceOf[typingsSlinky.reactSlick.reactSlickStrings.progressive]
 }
 

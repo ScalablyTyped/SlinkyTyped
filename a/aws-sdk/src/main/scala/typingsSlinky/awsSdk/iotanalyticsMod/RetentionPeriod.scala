@@ -18,11 +18,41 @@ trait RetentionPeriod extends js.Object {
 
 object RetentionPeriod {
   @scala.inline
-  def apply(numberOfDays: Int | Double = null, unlimited: js.UndefOr[Boolean] = js.undefined): RetentionPeriod = {
+  def apply(): RetentionPeriod = {
     val __obj = js.Dynamic.literal()
-    if (numberOfDays != null) __obj.updateDynamic("numberOfDays")(numberOfDays.asInstanceOf[js.Any])
-    if (!js.isUndefined(unlimited)) __obj.updateDynamic("unlimited")(unlimited.asInstanceOf[js.Any])
     __obj.asInstanceOf[RetentionPeriod]
   }
+  @scala.inline
+  implicit class RetentionPeriodOps[Self <: RetentionPeriod] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNumberOfDays(value: RetentionPeriodInDays): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnlimited(value: UnlimitedRetentionPeriod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unlimited")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnlimited: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unlimited")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

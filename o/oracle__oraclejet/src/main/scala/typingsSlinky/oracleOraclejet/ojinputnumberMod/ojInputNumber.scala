@@ -1,8 +1,8 @@
 package typingsSlinky.oracleOraclejet.ojinputnumberMod
 
 import org.scalajs.dom.raw.CustomEvent
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.oracleOraclejet.AnonNumberRange
-import typingsSlinky.oracleOraclejet.mod.JetElementCustomEvent
 import typingsSlinky.oracleOraclejet.ojeditablevalueMod.editableValue
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.AsyncValidator
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Converter
@@ -41,7 +41,6 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.validatorsChanged
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.value
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.virtualKeyboard
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.virtualKeyboardChanged
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -79,143 +78,104 @@ trait ojInputNumber extends editableValue[Double | Null, ojInputNumberSettablePr
   var translations_ojInputNumber: AnonNumberRange = js.native
   var validators: js.Array[Validator[Double] | RegisteredValidator] = js.native
   var virtualKeyboard: auto | number | text = js.native
+  def addEventListener(`type`: autocompleteChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: autocompleteChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[on | off | String], _]
-  ): Unit = js.native
-  def addEventListener(
-    `type`: autocompleteChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[on | off | String], _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  def addEventListener(`type`: virtualKeyboardChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: virtualKeyboardChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[auto | number | text], _]
-  ): Unit = js.native
-  def addEventListener(
-    `type`: virtualKeyboardChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[auto | number | text], _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_asyncValidatorsChanged(`type`: asyncValidatorsChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_asyncValidatorsChanged(
     `type`: asyncValidatorsChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_asyncValidatorsChanged(
-    `type`: asyncValidatorsChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_autofocusChanged(`type`: autofocusChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_autofocusChanged(
     `type`: autofocusChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_autofocusChanged(
-    `type`: autofocusChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_converterChanged(`type`: converterChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_converterChanged(
     `type`: converterChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_converterChanged(
-    `type`: converterChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_maxChanged(`type`: maxChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_maxChanged(
     `type`: maxChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_maxChanged(
-    `type`: maxChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_minChanged(`type`: minChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_minChanged(
     `type`: minChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_minChanged(
-    `type`: minChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_placeholderChanged(`type`: placeholderChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_placeholderChanged(
     `type`: placeholderChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_placeholderChanged(
-    `type`: placeholderChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_rawValueChanged(`type`: rawValueChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_rawValueChanged(
     `type`: rawValueChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_rawValueChanged(
-    `type`: rawValueChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_readonlyChanged(`type`: readonlyChanged_, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_readonlyChanged(
     `type`: readonlyChanged_,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_readonlyChanged(
-    `type`: readonlyChanged_,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_requiredChanged(`type`: requiredChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_requiredChanged(
     `type`: requiredChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_requiredChanged(
-    `type`: requiredChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_stepChanged(
-    `type`: stepChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
+  def addEventListener_stepChanged(`type`: stepChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_stepChanged(
     `type`: stepChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_validatorsChanged(
-    `type`: validatorsChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
+  def addEventListener_validatorsChanged(`type`: validatorsChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_validatorsChanged(
     `type`: validatorsChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("getProperty")

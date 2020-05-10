@@ -1,7 +1,7 @@
 package typingsSlinky.jsdom
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.std.CSSRule
+import org.scalajs.dom.raw.CSSRule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

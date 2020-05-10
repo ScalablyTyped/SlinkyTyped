@@ -26,7 +26,6 @@ import typingsSlinky.expressValidator.optionsMod.MinMaxOptions
 import typingsSlinky.expressValidator.optionsMod.MobilePhoneLocale
 import typingsSlinky.expressValidator.optionsMod.PostalCodeLocale
 import typingsSlinky.expressValidator.optionsMod.UUIDVersion
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -133,8 +132,8 @@ object validatorsMod extends js.Object {
     def isWhitelisted(chars: js.Array[String]): Return = js.native
     def matches(pattern: String): Return = js.native
     def matches(pattern: String, modifiers: String): Return = js.native
-    def matches(pattern: RegExp): Return = js.native
-    def matches(pattern: RegExp, modifiers: String): Return = js.native
+    def matches(pattern: js.RegExp): Return = js.native
+    def matches(pattern: js.RegExp, modifiers: String): Return = js.native
     def not(): Return = js.native
     def notEmpty(): Return = js.native
     def notEmpty(options: IsEmptyOptions): Return = js.native

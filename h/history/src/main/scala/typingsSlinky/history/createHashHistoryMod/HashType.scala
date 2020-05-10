@@ -13,12 +13,10 @@ trait HashType extends js.Object
 
 object HashType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hashbang: typingsSlinky.history.historyStrings.hashbang = "hashbang".asInstanceOf[typingsSlinky.history.historyStrings.hashbang]
   @scala.inline
-  def hashbang: typingsSlinky.history.historyStrings.hashbang = this.cast("hashbang")
+  def noslash: typingsSlinky.history.historyStrings.noslash = "noslash".asInstanceOf[typingsSlinky.history.historyStrings.noslash]
   @scala.inline
-  def noslash: typingsSlinky.history.historyStrings.noslash = this.cast("noslash")
-  @scala.inline
-  def slash: typingsSlinky.history.historyStrings.slash = this.cast("slash")
+  def slash: typingsSlinky.history.historyStrings.slash = "slash".asInstanceOf[typingsSlinky.history.historyStrings.slash]
 }
 

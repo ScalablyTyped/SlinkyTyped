@@ -26,18 +26,65 @@ trait UpgradeHistory extends js.Object {
 
 object UpgradeHistory {
   @scala.inline
-  def apply(
-    StartTimestamp: js.Date = null,
-    StepsList: UpgradeStepsList = null,
-    UpgradeName: UpgradeName = null,
-    UpgradeStatus: UpgradeStatus = null
-  ): UpgradeHistory = {
+  def apply(): UpgradeHistory = {
     val __obj = js.Dynamic.literal()
-    if (StartTimestamp != null) __obj.updateDynamic("StartTimestamp")(StartTimestamp.asInstanceOf[js.Any])
-    if (StepsList != null) __obj.updateDynamic("StepsList")(StepsList.asInstanceOf[js.Any])
-    if (UpgradeName != null) __obj.updateDynamic("UpgradeName")(UpgradeName.asInstanceOf[js.Any])
-    if (UpgradeStatus != null) __obj.updateDynamic("UpgradeStatus")(UpgradeStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpgradeHistory]
   }
+  @scala.inline
+  implicit class UpgradeHistoryOps[Self <: UpgradeHistory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStartTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStepsList(value: UpgradeStepsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StepsList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepsList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StepsList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpgradeName(value: UpgradeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpgradeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpgradeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpgradeName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpgradeStatus(value: UpgradeStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpgradeStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpgradeStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpgradeStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

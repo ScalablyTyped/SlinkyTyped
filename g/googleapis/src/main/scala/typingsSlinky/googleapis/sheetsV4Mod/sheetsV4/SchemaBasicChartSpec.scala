@@ -66,32 +66,149 @@ trait SchemaBasicChartSpec extends js.Object {
 
 object SchemaBasicChartSpec {
   @scala.inline
-  def apply(
-    axis: js.Array[SchemaBasicChartAxis] = null,
-    chartType: String = null,
-    compareMode: String = null,
-    domains: js.Array[SchemaBasicChartDomain] = null,
-    headerCount: Int | Double = null,
-    interpolateNulls: js.UndefOr[Boolean] = js.undefined,
-    legendPosition: String = null,
-    lineSmoothing: js.UndefOr[Boolean] = js.undefined,
-    series: js.Array[SchemaBasicChartSeries] = null,
-    stackedType: String = null,
-    threeDimensional: js.UndefOr[Boolean] = js.undefined
-  ): SchemaBasicChartSpec = {
+  def apply(): SchemaBasicChartSpec = {
     val __obj = js.Dynamic.literal()
-    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
-    if (chartType != null) __obj.updateDynamic("chartType")(chartType.asInstanceOf[js.Any])
-    if (compareMode != null) __obj.updateDynamic("compareMode")(compareMode.asInstanceOf[js.Any])
-    if (domains != null) __obj.updateDynamic("domains")(domains.asInstanceOf[js.Any])
-    if (headerCount != null) __obj.updateDynamic("headerCount")(headerCount.asInstanceOf[js.Any])
-    if (!js.isUndefined(interpolateNulls)) __obj.updateDynamic("interpolateNulls")(interpolateNulls.asInstanceOf[js.Any])
-    if (legendPosition != null) __obj.updateDynamic("legendPosition")(legendPosition.asInstanceOf[js.Any])
-    if (!js.isUndefined(lineSmoothing)) __obj.updateDynamic("lineSmoothing")(lineSmoothing.asInstanceOf[js.Any])
-    if (series != null) __obj.updateDynamic("series")(series.asInstanceOf[js.Any])
-    if (stackedType != null) __obj.updateDynamic("stackedType")(stackedType.asInstanceOf[js.Any])
-    if (!js.isUndefined(threeDimensional)) __obj.updateDynamic("threeDimensional")(threeDimensional.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBasicChartSpec]
   }
+  @scala.inline
+  implicit class SchemaBasicChartSpecOps[Self <: SchemaBasicChartSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAxis(value: js.Array[SchemaBasicChartAxis]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChartType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chartType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChartType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chartType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompareMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompareMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomains(value: js.Array[SchemaBasicChartDomain]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domains")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomains: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domains")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterpolateNulls(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolateNulls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterpolateNulls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolateNulls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLegendPosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegendPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineSmoothing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineSmoothing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineSmoothing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineSmoothing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeries(value: js.Array[SchemaBasicChartSeries]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackedType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stackedType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackedType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stackedType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreeDimensional(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threeDimensional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreeDimensional: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threeDimensional")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

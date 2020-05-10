@@ -1,42 +1,35 @@
 package typingsSlinky.tensorflowTfjsLayers.noiseMod
 
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
-import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.LayerArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GaussianNoiseArgs extends LayerArgs {
   /** Standard Deviation.  */
-  var stddev: Double
+  var stddev: Double = js.native
 }
 
 object GaussianNoiseArgs {
   @scala.inline
-  def apply(
-    stddev: Double,
-    batchInputShape: Shape = null,
-    batchSize: Int | Double = null,
-    dtype: DataType = null,
-    inputDType: DataType = null,
-    inputShape: Shape = null,
-    name: String = null,
-    trainable: js.UndefOr[Boolean] = js.undefined,
-    weights: js.Array[Tensor_[Rank]] = null
-  ): GaussianNoiseArgs = {
+  def apply(stddev: Double): GaussianNoiseArgs = {
     val __obj = js.Dynamic.literal(stddev = stddev.asInstanceOf[js.Any])
-    if (batchInputShape != null) __obj.updateDynamic("batchInputShape")(batchInputShape.asInstanceOf[js.Any])
-    if (batchSize != null) __obj.updateDynamic("batchSize")(batchSize.asInstanceOf[js.Any])
-    if (dtype != null) __obj.updateDynamic("dtype")(dtype.asInstanceOf[js.Any])
-    if (inputDType != null) __obj.updateDynamic("inputDType")(inputDType.asInstanceOf[js.Any])
-    if (inputShape != null) __obj.updateDynamic("inputShape")(inputShape.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(trainable)) __obj.updateDynamic("trainable")(trainable.asInstanceOf[js.Any])
-    if (weights != null) __obj.updateDynamic("weights")(weights.asInstanceOf[js.Any])
     __obj.asInstanceOf[GaussianNoiseArgs]
   }
+  @scala.inline
+  implicit class GaussianNoiseArgsOps[Self <: GaussianNoiseArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStddev(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stddev")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait Alignments extends js.Object
 
 object Alignments {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.storybookComponents.storybookComponentsStrings.center = "center".asInstanceOf[typingsSlinky.storybookComponents.storybookComponentsStrings.center]
   @scala.inline
-  def center: typingsSlinky.storybookComponents.storybookComponentsStrings.center = this.cast("center")
+  def end: typingsSlinky.storybookComponents.storybookComponentsStrings.end = "end".asInstanceOf[typingsSlinky.storybookComponents.storybookComponentsStrings.end]
   @scala.inline
-  def end: typingsSlinky.storybookComponents.storybookComponentsStrings.end = this.cast("end")
-  @scala.inline
-  def start: typingsSlinky.storybookComponents.storybookComponentsStrings.start = this.cast("start")
+  def start: typingsSlinky.storybookComponents.storybookComponentsStrings.start = "start".asInstanceOf[typingsSlinky.storybookComponents.storybookComponentsStrings.start]
 }
 

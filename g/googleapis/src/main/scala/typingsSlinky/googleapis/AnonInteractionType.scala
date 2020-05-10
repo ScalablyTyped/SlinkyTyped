@@ -12,11 +12,41 @@ trait AnonInteractionType extends js.Object {
 
 object AnonInteractionType {
   @scala.inline
-  def apply(interactionType: String = null, nodeValue: String = null): AnonInteractionType = {
+  def apply(): AnonInteractionType = {
     val __obj = js.Dynamic.literal()
-    if (interactionType != null) __obj.updateDynamic("interactionType")(interactionType.asInstanceOf[js.Any])
-    if (nodeValue != null) __obj.updateDynamic("nodeValue")(nodeValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonInteractionType]
   }
+  @scala.inline
+  implicit class AnonInteractionTypeOps[Self <: AnonInteractionType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInteractionType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interactionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInteractionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interactionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,29 +5,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IGuideLayerProps extends IProps {
   /**
     *  The top-offset location of the horizontal guides
     */
-  var horizontalGuides: js.UndefOr[js.Array[Double]] = js.undefined
+  var horizontalGuides: js.UndefOr[js.Array[Double]] = js.native
   /**
     *  The left-offset location of the vertical guides
     */
-  var verticalGuides: js.UndefOr[js.Array[Double]] = js.undefined
+  var verticalGuides: js.UndefOr[js.Array[Double]] = js.native
 }
 
 object IGuideLayerProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    horizontalGuides: js.Array[Double] = null,
-    verticalGuides: js.Array[Double] = null
-  ): IGuideLayerProps = {
+  def apply(): IGuideLayerProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (horizontalGuides != null) __obj.updateDynamic("horizontalGuides")(horizontalGuides.asInstanceOf[js.Any])
-    if (verticalGuides != null) __obj.updateDynamic("verticalGuides")(verticalGuides.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGuideLayerProps]
   }
+  @scala.inline
+  implicit class IGuideLayerPropsOps[Self <: IGuideLayerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHorizontalGuides(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalGuides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizontalGuides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalGuides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalGuides(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalGuides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalGuides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalGuides")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

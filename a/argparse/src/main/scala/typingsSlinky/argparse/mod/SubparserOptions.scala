@@ -5,39 +5,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SubparserOptions extends js.Object {
-  var action: js.UndefOr[String] = js.undefined
-  var description: js.UndefOr[String] = js.undefined
-  var dest: js.UndefOr[String] = js.undefined
-  var help: js.UndefOr[String] = js.undefined
-  var metavar: js.UndefOr[String] = js.undefined
-  var parserClass: js.UndefOr[AnonInstantiable] = js.undefined
-  var prog: js.UndefOr[String] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
+  var action: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.native
+  var dest: js.UndefOr[String] = js.native
+  var help: js.UndefOr[String] = js.native
+  var metavar: js.UndefOr[String] = js.native
+  var parserClass: js.UndefOr[AnonInstantiable] = js.native
+  var prog: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.native
 }
 
 object SubparserOptions {
   @scala.inline
-  def apply(
-    action: String = null,
-    description: String = null,
-    dest: String = null,
-    help: String = null,
-    metavar: String = null,
-    parserClass: AnonInstantiable = null,
-    prog: String = null,
-    title: String = null
-  ): SubparserOptions = {
+  def apply(): SubparserOptions = {
     val __obj = js.Dynamic.literal()
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (dest != null) __obj.updateDynamic("dest")(dest.asInstanceOf[js.Any])
-    if (help != null) __obj.updateDynamic("help")(help.asInstanceOf[js.Any])
-    if (metavar != null) __obj.updateDynamic("metavar")(metavar.asInstanceOf[js.Any])
-    if (parserClass != null) __obj.updateDynamic("parserClass")(parserClass.asInstanceOf[js.Any])
-    if (prog != null) __obj.updateDynamic("prog")(prog.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubparserOptions]
   }
+  @scala.inline
+  implicit class SubparserOptionsOps[Self <: SubparserOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDest(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHelp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHelp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetavar(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metavar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetavar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metavar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParserClass(value: AnonInstantiable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parserClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParserClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parserClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProg(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProg: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prog")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

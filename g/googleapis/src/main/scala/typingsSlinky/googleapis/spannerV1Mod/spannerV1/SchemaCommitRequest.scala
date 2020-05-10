@@ -32,16 +32,53 @@ trait SchemaCommitRequest extends js.Object {
 
 object SchemaCommitRequest {
   @scala.inline
-  def apply(
-    mutations: js.Array[SchemaMutation] = null,
-    singleUseTransaction: SchemaTransactionOptions = null,
-    transactionId: String = null
-  ): SchemaCommitRequest = {
+  def apply(): SchemaCommitRequest = {
     val __obj = js.Dynamic.literal()
-    if (mutations != null) __obj.updateDynamic("mutations")(mutations.asInstanceOf[js.Any])
-    if (singleUseTransaction != null) __obj.updateDynamic("singleUseTransaction")(singleUseTransaction.asInstanceOf[js.Any])
-    if (transactionId != null) __obj.updateDynamic("transactionId")(transactionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCommitRequest]
   }
+  @scala.inline
+  implicit class SchemaCommitRequestOps[Self <: SchemaCommitRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMutations(value: js.Array[SchemaMutation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mutations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMutations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mutations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleUseTransaction(value: SchemaTransactionOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleUseTransaction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleUseTransaction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleUseTransaction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransactionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransactionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

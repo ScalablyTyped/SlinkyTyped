@@ -18,10 +18,35 @@ trait DescribeExclusionsRequest extends js.Object {
 
 object DescribeExclusionsRequest {
   @scala.inline
-  def apply(exclusionArns: BatchDescribeExclusionsArnList, locale: Locale = null): DescribeExclusionsRequest = {
+  def apply(exclusionArns: BatchDescribeExclusionsArnList): DescribeExclusionsRequest = {
     val __obj = js.Dynamic.literal(exclusionArns = exclusionArns.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeExclusionsRequest]
   }
+  @scala.inline
+  implicit class DescribeExclusionsRequestOps[Self <: DescribeExclusionsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExclusionArns(value: BatchDescribeExclusionsArnList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusionArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocale(value: Locale): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

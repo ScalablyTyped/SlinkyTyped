@@ -33,7 +33,7 @@ trait IntegrationResponseArgs extends js.Object {
   /**
     * The ID of the associated REST API
     */
-  val restApi: Input[RestApi] = js.native
+  val restApi: Input[String | RestApi] = js.native
   /**
     * Specifies the regular expression pattern used to choose
     * an integration response based on the response from the backend. Setting this to `-` makes the integration the default one.
@@ -52,19 +52,91 @@ object IntegrationResponseArgs {
   def apply(
     httpMethod: Input[String],
     resourceId: Input[String],
-    restApi: Input[RestApi],
-    statusCode: Input[String],
-    contentHandling: Input[String] = null,
-    responseParameters: Input[StringDictionary[Input[String]]] = null,
-    responseTemplates: Input[StringDictionary[Input[String]]] = null,
-    selectionPattern: Input[String] = null
+    restApi: Input[String | RestApi],
+    statusCode: Input[String]
   ): IntegrationResponseArgs = {
     val __obj = js.Dynamic.literal(httpMethod = httpMethod.asInstanceOf[js.Any], resourceId = resourceId.asInstanceOf[js.Any], restApi = restApi.asInstanceOf[js.Any], statusCode = statusCode.asInstanceOf[js.Any])
-    if (contentHandling != null) __obj.updateDynamic("contentHandling")(contentHandling.asInstanceOf[js.Any])
-    if (responseParameters != null) __obj.updateDynamic("responseParameters")(responseParameters.asInstanceOf[js.Any])
-    if (responseTemplates != null) __obj.updateDynamic("responseTemplates")(responseTemplates.asInstanceOf[js.Any])
-    if (selectionPattern != null) __obj.updateDynamic("selectionPattern")(selectionPattern.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntegrationResponseArgs]
   }
+  @scala.inline
+  implicit class IntegrationResponseArgsOps[Self <: IntegrationResponseArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHttpMethod(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRestApi(value: Input[String | RestApi]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restApi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatusCode(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentHandling(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentHandling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentHandling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentHandling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseParameters(value: Input[StringDictionary[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseTemplates(value: Input[StringDictionary[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseTemplates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseTemplates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseTemplates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionPattern(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectionPattern: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionPattern")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

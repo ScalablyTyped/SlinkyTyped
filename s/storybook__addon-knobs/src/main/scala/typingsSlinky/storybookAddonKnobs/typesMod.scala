@@ -20,6 +20,22 @@ import scala.scalajs.js.annotation._
 @JSImport("@storybook/addon-knobs/dist/components/types", JSImport.Namespace)
 @js.native
 object typesMod extends js.Object {
+  /* keyof @storybook/addon-knobs.AnonArray */ /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.text
+    - typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.number
+    - typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.color
+    - typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.boolean
+    - typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.`object`
+    - typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.select
+    - typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.radios
+    - typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.array
+    - typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.date
+    - typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.button
+    - typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.files
+    - typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.options
+  */
+  trait KnobType extends js.Object
+  
   def getKnobControl(
     `type`: number | boolean | `object` | color | button | select | text | date | options | radios | array | files
   ): KnobControlType = js.native
@@ -40,6 +56,5 @@ object typesMod extends js.Object {
   }
   
   type KnobControlType = ReactComponentClass[_] with AnonDeserialize
-  type KnobType = String
 }
 

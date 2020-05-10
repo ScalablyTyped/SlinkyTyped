@@ -1,6 +1,5 @@
 package typingsSlinky.tensorflowTfjsCore
 
-import typingsSlinky.std.Uint8Array
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
@@ -133,8 +132,8 @@ object tensorOpsMod extends js.Object {
   /** @doc {heading: 'Tensors', subheading: 'Creation'} */
   def scalar(value: Double): Scalar = js.native
   def scalar(value: Double, dtype: DataType): Scalar = js.native
-  def scalar(value: Uint8Array): Scalar = js.native
-  def scalar(value: Uint8Array, dtype: DataType): Scalar = js.native
+  def scalar(value: js.typedarray.Uint8Array): Scalar = js.native
+  def scalar(value: js.typedarray.Uint8Array, dtype: DataType): Scalar = js.native
   /**
     * Creates a `tf.Tensor` with the provided values, shape and dtype.
     *

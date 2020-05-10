@@ -5,12 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WillMoveOrResize[Topic, Type] extends WindowEvent[Topic, Type] {
-  var height: Double
-  var left: Double
-  var monitorScaleFactor: Double
-  var top: Double
-  var width: Double
+  var height: Double = js.native
+  var left: Double = js.native
+  var monitorScaleFactor: Double = js.native
+  var top: Double = js.native
+  var width: Double = js.native
 }
 
 object WillMoveOrResize {
@@ -30,5 +31,43 @@ object WillMoveOrResize {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WillMoveOrResize[Topic, Type]]
   }
+  @scala.inline
+  implicit class WillMoveOrResizeOps[Self[topic, `type`] <: WillMoveOrResize[topic, `type`], Topic, Type] (val x: Self[Topic, Type]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[Topic, Type] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Topic, Type]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[Topic, Type]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[Topic, Type]) with Other]
+    @scala.inline
+    def withHeight(value: Double): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLeft(value: Double): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMonitorScaleFactor(value: Double): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monitorScaleFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTop(value: Double): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

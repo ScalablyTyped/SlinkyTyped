@@ -19,6 +19,10 @@ trait ErrorEvent extends Event_ {
 @JSGlobal("ErrorEvent")
 @js.native
 object ErrorEvent
-  extends Instantiable1[/* type */ java.lang.String, ErrorEvent]
-     with Instantiable2[/* type */ java.lang.String, /* eventInitDict */ ErrorEventInit, ErrorEvent]
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.ErrorEvent]
+     with Instantiable2[
+      /* type */ java.lang.String, 
+      /* eventInitDict */ ErrorEventInit, 
+      org.scalajs.dom.raw.ErrorEvent
+    ]
 

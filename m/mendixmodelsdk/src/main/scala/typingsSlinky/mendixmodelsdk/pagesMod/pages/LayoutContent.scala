@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 /**
   * In version 8.0.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -32,7 +32,7 @@ abstract class LayoutContent protected () extends Element {
   val containerAsLayout_FLayoutContent: ILayout = js.native
   @JSName("model")
   var model_FLayoutContent: IModel = js.native
-  def containerAsLayout(): Layout = js.native
+  def containerAsLayout: Layout = js.native
 }
 
 /* static members */

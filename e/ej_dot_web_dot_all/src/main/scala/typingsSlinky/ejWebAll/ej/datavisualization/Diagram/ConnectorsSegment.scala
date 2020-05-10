@@ -4,62 +4,150 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ConnectorsSegment extends js.Object {
   /** Sets the direction of orthogonal segment
     */
-  var direction: js.UndefOr[String] = js.undefined
+  var direction: js.UndefOr[String] = js.native
   /** Describes the length of orthogonal segment
     * @Default {undefined}
     */
-  var length: js.UndefOr[Double] = js.undefined
+  var length: js.UndefOr[Double] = js.native
   /** Describes the end point of bezier/straight segment
     * @Default {Diagram.Point()}
     */
-  var point: js.UndefOr[ConnectorsSourcePoint] = js.undefined
+  var point: js.UndefOr[ConnectorsSourcePoint] = js.native
   /** Defines the first control point of the bezier segment
     * @Default {null}
     */
-  var point1: js.UndefOr[ConnectorsSourcePoint] = js.undefined
+  var point1: js.UndefOr[ConnectorsSourcePoint] = js.native
   /** Defines the second control point of bezier segment
     * @Default {null}
     */
-  var point2: js.UndefOr[ConnectorsSourcePoint] = js.undefined
+  var point2: js.UndefOr[ConnectorsSourcePoint] = js.native
   /** Sets the type of the segment.
     * @Default {ej.datavisualization.Diagram.Segments.Straight}
     */
-  var `type`: js.UndefOr[Segments | String] = js.undefined
+  var `type`: js.UndefOr[Segments | String] = js.native
   /** Describes the length and angle between the first control point and the start point of bezier segment
     * @Default {null}
     */
-  var vector1: js.UndefOr[js.Any] = js.undefined
+  var vector1: js.UndefOr[js.Any] = js.native
   /** Describes the length and angle between the second control point and end point of bezier segment
     * @Default {null}
     */
-  var vector2: js.UndefOr[js.Any] = js.undefined
+  var vector2: js.UndefOr[js.Any] = js.native
 }
 
 object ConnectorsSegment {
   @scala.inline
-  def apply(
-    direction: String = null,
-    length: Int | Double = null,
-    point: ConnectorsSourcePoint = null,
-    point1: ConnectorsSourcePoint = null,
-    point2: ConnectorsSourcePoint = null,
-    `type`: Segments | String = null,
-    vector1: js.Any = null,
-    vector2: js.Any = null
-  ): ConnectorsSegment = {
+  def apply(): ConnectorsSegment = {
     val __obj = js.Dynamic.literal()
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
-    if (point != null) __obj.updateDynamic("point")(point.asInstanceOf[js.Any])
-    if (point1 != null) __obj.updateDynamic("point1")(point1.asInstanceOf[js.Any])
-    if (point2 != null) __obj.updateDynamic("point2")(point2.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (vector1 != null) __obj.updateDynamic("vector1")(vector1.asInstanceOf[js.Any])
-    if (vector2 != null) __obj.updateDynamic("vector2")(vector2.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectorsSegment]
   }
+  @scala.inline
+  implicit class ConnectorsSegmentOps[Self <: ConnectorsSegment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoint(value: ConnectorsSourcePoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoint1(value: ConnectorsSourcePoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoint1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoint2(value: ConnectorsSourcePoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoint2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: Segments | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVector1(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vector1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVector1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vector1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVector2(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vector2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVector2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vector2")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

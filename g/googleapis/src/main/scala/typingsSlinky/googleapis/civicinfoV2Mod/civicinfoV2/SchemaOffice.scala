@@ -46,22 +46,89 @@ trait SchemaOffice extends js.Object {
 
 object SchemaOffice {
   @scala.inline
-  def apply(
-    divisionId: String = null,
-    levels: js.Array[String] = null,
-    name: String = null,
-    officialIndices: js.Array[Double] = null,
-    roles: js.Array[String] = null,
-    sources: js.Array[SchemaSource] = null
-  ): SchemaOffice = {
+  def apply(): SchemaOffice = {
     val __obj = js.Dynamic.literal()
-    if (divisionId != null) __obj.updateDynamic("divisionId")(divisionId.asInstanceOf[js.Any])
-    if (levels != null) __obj.updateDynamic("levels")(levels.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (officialIndices != null) __obj.updateDynamic("officialIndices")(officialIndices.asInstanceOf[js.Any])
-    if (roles != null) __obj.updateDynamic("roles")(roles.asInstanceOf[js.Any])
-    if (sources != null) __obj.updateDynamic("sources")(sources.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOffice]
   }
+  @scala.inline
+  implicit class SchemaOfficeOps[Self <: SchemaOffice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDivisionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("divisionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDivisionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("divisionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevels(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOfficialIndices(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("officialIndices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOfficialIndices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("officialIndices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoles(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSources(value: js.Array[SchemaSource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

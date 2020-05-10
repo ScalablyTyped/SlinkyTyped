@@ -5,23 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WitContribution extends js.Object {
   /**
     * The id for the contribution.
     */
-  var contributionId: String
+  var contributionId: String = js.native
   /**
     * The height for the contribution.
     */
-  var height: Double
+  var height: Double = js.native
   /**
     * A dictionary holding key value pairs for contribution inputs.
     */
-  var inputs: StringDictionary[js.Any]
+  var inputs: StringDictionary[js.Any] = js.native
   /**
     * A value indicating if the contribution should be show on deleted workItem.
     */
-  var showOnDeletedWorkItem: Boolean
+  var showOnDeletedWorkItem: Boolean = js.native
 }
 
 object WitContribution {
@@ -33,8 +34,39 @@ object WitContribution {
     showOnDeletedWorkItem: Boolean
   ): WitContribution = {
     val __obj = js.Dynamic.literal(contributionId = contributionId.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], inputs = inputs.asInstanceOf[js.Any], showOnDeletedWorkItem = showOnDeletedWorkItem.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[WitContribution]
   }
+  @scala.inline
+  implicit class WitContributionOps[Self <: WitContribution] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContributionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contributionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputs(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShowOnDeletedWorkItem(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showOnDeletedWorkItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -14,14 +14,12 @@ trait ConditionalAccessStatus extends js.Object
 
 object ConditionalAccessStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def failure: typingsSlinky.microsoftGraph.microsoftGraphStrings.failure = "failure".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.failure]
   @scala.inline
-  def failure: typingsSlinky.microsoftGraph.microsoftGraphStrings.failure = this.cast("failure")
+  def notApplied: typingsSlinky.microsoftGraph.microsoftGraphStrings.notApplied = "notApplied".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.notApplied]
   @scala.inline
-  def notApplied: typingsSlinky.microsoftGraph.microsoftGraphStrings.notApplied = this.cast("notApplied")
+  def success: typingsSlinky.microsoftGraph.microsoftGraphStrings.success = "success".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.success]
   @scala.inline
-  def success: typingsSlinky.microsoftGraph.microsoftGraphStrings.success = this.cast("success")
-  @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
 }
 

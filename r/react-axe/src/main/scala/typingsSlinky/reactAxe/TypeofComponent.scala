@@ -1,7 +1,7 @@
 package typingsSlinky.reactAxe
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.react.mod.Component
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait TypeofComponent
   extends Instantiable1[
       /* import warning: RewrittenClass.unapply cls was tparam P */ /* props */ js.Any, 
-      Component[js.Object, js.Object, js.Object]
+      ReactComponentClass[js.Object]
     ] {
   // tslint won't let me format the sample code in a way that vscode likes it :(
   /**

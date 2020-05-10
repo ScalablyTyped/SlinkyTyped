@@ -7,14 +7,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's viewport. */
+@js.native
 trait IntersectionObserver extends js.Object {
-  val root: org.scalajs.dom.raw.Element | Null
-  val rootMargin: java.lang.String
-  val thresholds: js.Array[Double]
-  def disconnect(): Unit
-  def observe(target: org.scalajs.dom.raw.Element): Unit
-  def takeRecords(): js.Array[IntersectionObserverEntry]
-  def unobserve(target: org.scalajs.dom.raw.Element): Unit
+  val root: org.scalajs.dom.raw.Element | Null = js.native
+  val rootMargin: java.lang.String = js.native
+  val thresholds: js.Array[Double] = js.native
+  def disconnect(): Unit = js.native
+  def observe(target: org.scalajs.dom.raw.Element): Unit = js.native
+  def takeRecords(): js.Array[IntersectionObserverEntry] = js.native
+  def unobserve(target: org.scalajs.dom.raw.Element): Unit = js.native
 }
 
 @JSGlobal("IntersectionObserver")

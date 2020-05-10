@@ -1,10 +1,8 @@
 package typingsSlinky.uifabricUtilities.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.uifabricUtilities.ReadonlyICustomizerContex
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.customizationsMod.ISettings
@@ -15,29 +13,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Customizer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.uifabricUtilities.mod.Customizer] {
+object Customizer {
   @JSImport("@uifabric/utilities", "Customizer")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    componentRef: IRefObject[_] = null,
-    contextTransform: /* context */ ReadonlyICustomizerContex => ICustomizerContext = null,
-    scopedSettings: ISettings | ISettingsFunction = null,
-    settings: ISettings | ISettingsFunction = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.uifabricUtilities.mod.Customizer] = {
-    val __obj = js.Dynamic.literal()
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (contextTransform != null) __obj.updateDynamic("contextTransform")(js.Any.fromFunction1(contextTransform))
-    if (scopedSettings != null) __obj.updateDynamic("scopedSettings")(scopedSettings.asInstanceOf[js.Any])
-    if (settings != null) __obj.updateDynamic("settings")(settings.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.uifabricUtilities.mod.Customizer] {
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ _ | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[_]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[_]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contextTransform(value: /* context */ ReadonlyICustomizerContex => ICustomizerContext): this.type = set("contextTransform", js.Any.fromFunction1(value))
+    @scala.inline
+    def scopedSettingsFunction1(value: /* settings */ ISettings => ISettings): this.type = set("scopedSettings", js.Any.fromFunction1(value))
+    @scala.inline
+    def scopedSettings(value: ISettings | ISettingsFunction): this.type = set("scopedSettings", value.asInstanceOf[js.Any])
+    @scala.inline
+    def settingsFunction1(value: /* settings */ ISettings => ISettings): this.type = set("settings", js.Any.fromFunction1(value))
+    @scala.inline
+    def settings(value: ISettings | ISettingsFunction): this.type = set("settings", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.uifabricUtilities.mod.Customizer] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.uifabricUtilities.mod.Customizer](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ICustomizerProps
+  
+  def withProps(p: ICustomizerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Customizer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -18,11 +18,41 @@ trait ImportLabelsTaskRunProperties extends js.Object {
 
 object ImportLabelsTaskRunProperties {
   @scala.inline
-  def apply(InputS3Path: UriString = null, Replace: js.UndefOr[scala.Boolean] = js.undefined): ImportLabelsTaskRunProperties = {
+  def apply(): ImportLabelsTaskRunProperties = {
     val __obj = js.Dynamic.literal()
-    if (InputS3Path != null) __obj.updateDynamic("InputS3Path")(InputS3Path.asInstanceOf[js.Any])
-    if (!js.isUndefined(Replace)) __obj.updateDynamic("Replace")(Replace.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportLabelsTaskRunProperties]
   }
+  @scala.inline
+  implicit class ImportLabelsTaskRunPropertiesOps[Self <: ImportLabelsTaskRunProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInputS3Path(value: UriString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputS3Path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputS3Path: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputS3Path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplace(value: ReplaceBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Replace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Replace")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

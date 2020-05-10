@@ -103,22 +103,198 @@ object GetSnapshotResult {
     sourceRegion: String,
     status: String,
     storageType: String,
-    vpcId: String,
-    dbInstanceIdentifier: String = null,
-    dbSnapshotIdentifier: String = null,
-    includePublic: js.UndefOr[Boolean] = js.undefined,
-    includeShared: js.UndefOr[Boolean] = js.undefined,
-    mostRecent: js.UndefOr[Boolean] = js.undefined,
-    snapshotType: String = null
+    vpcId: String
   ): GetSnapshotResult = {
     val __obj = js.Dynamic.literal(allocatedStorage = allocatedStorage.asInstanceOf[js.Any], availabilityZone = availabilityZone.asInstanceOf[js.Any], dbSnapshotArn = dbSnapshotArn.asInstanceOf[js.Any], encrypted = encrypted.asInstanceOf[js.Any], engine = engine.asInstanceOf[js.Any], engineVersion = engineVersion.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], iops = iops.asInstanceOf[js.Any], kmsKeyId = kmsKeyId.asInstanceOf[js.Any], licenseModel = licenseModel.asInstanceOf[js.Any], optionGroupName = optionGroupName.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any], snapshotCreateTime = snapshotCreateTime.asInstanceOf[js.Any], sourceDbSnapshotIdentifier = sourceDbSnapshotIdentifier.asInstanceOf[js.Any], sourceRegion = sourceRegion.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], storageType = storageType.asInstanceOf[js.Any], vpcId = vpcId.asInstanceOf[js.Any])
-    if (dbInstanceIdentifier != null) __obj.updateDynamic("dbInstanceIdentifier")(dbInstanceIdentifier.asInstanceOf[js.Any])
-    if (dbSnapshotIdentifier != null) __obj.updateDynamic("dbSnapshotIdentifier")(dbSnapshotIdentifier.asInstanceOf[js.Any])
-    if (!js.isUndefined(includePublic)) __obj.updateDynamic("includePublic")(includePublic.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeShared)) __obj.updateDynamic("includeShared")(includeShared.asInstanceOf[js.Any])
-    if (!js.isUndefined(mostRecent)) __obj.updateDynamic("mostRecent")(mostRecent.asInstanceOf[js.Any])
-    if (snapshotType != null) __obj.updateDynamic("snapshotType")(snapshotType.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSnapshotResult]
   }
+  @scala.inline
+  implicit class GetSnapshotResultOps[Self <: GetSnapshotResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllocatedStorage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allocatedStorage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAvailabilityZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDbSnapshotArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbSnapshotArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEncrypted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encrypted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEngine(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("engine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEngineVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("engineVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIops(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iops")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKmsKeyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLicenseModel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptionGroupName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optionGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSnapshotCreateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotCreateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceDbSnapshotIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceDbSnapshotIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStorageType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storageType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVpcId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDbInstanceIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbInstanceIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDbInstanceIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbInstanceIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDbSnapshotIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbSnapshotIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDbSnapshotIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbSnapshotIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludePublic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includePublic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludePublic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includePublic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeShared(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeShared")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeShared: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeShared")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMostRecent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mostRecent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMostRecent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mostRecent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnapshotType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnapshotType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

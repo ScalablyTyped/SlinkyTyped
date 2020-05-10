@@ -3,6 +3,7 @@ package typingsSlinky.expressAsyncWrap
 import typingsSlinky.connect.mod.NextFunction
 import typingsSlinky.expressServeStaticCore.mod.ErrorRequestHandler
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.expressServeStaticCore.mod.Request
 import typingsSlinky.expressServeStaticCore.mod.RequestHandler
 import typingsSlinky.expressServeStaticCore.mod.Response
@@ -15,20 +16,20 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   def default(
     handler: js.Function3[
-      /* req */ Request[ParamsDictionary, _, _], 
+      /* req */ Request[ParamsDictionary, _, _, Query], 
       /* res */ Response[_], 
       /* next */ NextFunction, 
       js.Promise[Unit]
     ]
-  ): RequestHandler[ParamsDictionary, _, _] = js.native
+  ): RequestHandler[ParamsDictionary, _, _, Query] = js.native
   def default(
     handler: js.Function4[
       /* err */ js.Any, 
-      /* req */ Request[ParamsDictionary, _, _], 
+      /* req */ Request[ParamsDictionary, _, _, Query], 
       /* res */ Response[_], 
       /* next */ NextFunction, 
       js.Promise[Unit]
     ]
-  ): ErrorRequestHandler[ParamsDictionary, _, _] = js.native
+  ): ErrorRequestHandler[ParamsDictionary, _, _, Query] = js.native
 }
 

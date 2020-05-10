@@ -1,10 +1,7 @@
 package typingsSlinky.reactNativeLoadingSpinnerOverlay.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNativeLoadingSpinnerOverlay.mod.SpinnerProps
@@ -19,39 +16,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativeLoadingSpinnerOverlay
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactNativeLoadingSpinnerOverlay {
   @JSImport("react-native-loading-spinner-overlay", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    animation: none | slide | fade = null,
-    cancelable: js.UndefOr[Boolean] = js.undefined,
-    color: String = null,
-    overlayColor: String = null,
-    size: normal | small | large = null,
-    textContent: String = null,
-    textStyle: StyleProp[TextStyle] = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (overlayColor != null) __obj.updateDynamic("overlayColor")(overlayColor.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (textContent != null) __obj.updateDynamic("textContent")(textContent.asInstanceOf[js.Any])
-    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def animation(value: none | slide | fade): this.type = set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelable(value: Boolean): this.type = set("cancelable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overlayColor(value: String): this.type = set("overlayColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: normal | small | large): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textContent(value: String): this.type = set("textContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textStyle(value: StyleProp[TextStyle]): this.type = set("textStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textStyleNull: this.type = set("textStyle", null)
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactNativeLoadingSpinnerOverlay.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SpinnerProps
+  
+  def withProps(p: SpinnerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactNativeLoadingSpinnerOverlay.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

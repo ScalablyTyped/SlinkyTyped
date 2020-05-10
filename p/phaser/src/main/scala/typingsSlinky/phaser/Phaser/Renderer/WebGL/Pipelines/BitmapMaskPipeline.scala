@@ -40,7 +40,7 @@ class BitmapMaskPipeline protected () extends WebGLPipeline {
   /**
     * Float32 view of the array buffer containing the pipeline's vertices.
     */
-  var vertexViewF32: scala.scalajs.js.typedarray.Float32Array = js.native
+  var vertexViewF32: js.typedarray.Float32Array = js.native
   /**
     * Binds necessary resources and renders the mask to a separated framebuffer.
     * The framebuffer for the masked object is also bound for further use.

@@ -2,9 +2,9 @@ package typingsSlinky.testingLibraryDom
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLDocument
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.prettyFormat.mod.OptionsReceived
-import typingsSlinky.std.HTMLDocument
 import typingsSlinky.testingLibraryDom.configMod.ConfigFn
 import typingsSlinky.testingLibraryDom.eventsMod.CreateObject
 import typingsSlinky.testingLibraryDom.eventsMod.FireFunction
@@ -110,26 +110,30 @@ object mod extends js.Object {
   def getRoles(container: HTMLElement): StringDictionary[js.Array[HTMLElement]] = js.native
   def isInaccessible(element: Element): Boolean = js.native
   def logDOM(): Unit = js.native
-  def logDOM(dom: typingsSlinky.std.Element): Unit = js.native
-  def logDOM(dom: typingsSlinky.std.Element, maxLength: Double): Unit = js.native
-  def logDOM(dom: typingsSlinky.std.Element, maxLength: Double, options: OptionsReceived): Unit = js.native
+  def logDOM(dom: Element): Unit = js.native
+  def logDOM(dom: Element, maxLength: Double): Unit = js.native
+  def logDOM(dom: Element, maxLength: Double, options: OptionsReceived): Unit = js.native
   def logDOM(dom: HTMLDocument): Unit = js.native
   def logDOM(dom: HTMLDocument, maxLength: Double): Unit = js.native
   def logDOM(dom: HTMLDocument, maxLength: Double, options: OptionsReceived): Unit = js.native
   def logRoles(container: HTMLElement): String = js.native
   def prettyDOM(): String | `false` = js.native
-  def prettyDOM(dom: typingsSlinky.std.Element): String | `false` = js.native
-  def prettyDOM(dom: typingsSlinky.std.Element, maxLength: Double): String | `false` = js.native
-  def prettyDOM(dom: typingsSlinky.std.Element, maxLength: Double, options: OptionsReceived): String | `false` = js.native
+  def prettyDOM(dom: Element): String | `false` = js.native
+  def prettyDOM(dom: Element, maxLength: Double): String | `false` = js.native
+  def prettyDOM(dom: Element, maxLength: Double, options: OptionsReceived): String | `false` = js.native
   def prettyDOM(dom: HTMLDocument): String | `false` = js.native
   def prettyDOM(dom: HTMLDocument, maxLength: Double): String | `false` = js.native
   def prettyDOM(dom: HTMLDocument, maxLength: Double, options: OptionsReceived): String | `false` = js.native
   def wait(callback: js.Function0[Unit]): js.Promise[Unit] = js.native
   def wait(callback: js.Function0[Unit], options: AnonInterval): js.Promise[Unit] = js.native
+  def waitFor[T](callback: js.Function0[T]): js.Promise[T] = js.native
+  def waitFor[T](callback: js.Function0[T], options: AnonContainer): js.Promise[T] = js.native
   def waitForDomChange(): js.Promise[_] = js.native
-  def waitForDomChange(options: AnonContainer): js.Promise[_] = js.native
+  def waitForDomChange(options: AnonMutationObserverOptions): js.Promise[_] = js.native
   def waitForElement[T](callback: js.Function0[T]): js.Promise[T] = js.native
   def waitForElement[T](callback: js.Function0[T], options: WaitForElementOptions): js.Promise[T] = js.native
+  def waitForElementToBeRemoved[T](callback: T): js.Promise[T] = js.native
+  def waitForElementToBeRemoved[T](callback: T, options: AnonContainer): js.Promise[T] = js.native
   def waitForElementToBeRemoved[T](callback: js.Function0[T]): js.Promise[T] = js.native
   def waitForElementToBeRemoved[T](callback: js.Function0[T], options: AnonContainer): js.Promise[T] = js.native
   @js.native
@@ -246,20 +250,16 @@ object mod extends js.Object {
     var queryByTestId: BoundFunction[QueryByBoundAttribute] = js.native
     var queryByText: BoundFunction[QueryByText_] = js.native
     var queryByTitle: BoundFunction[QueryByBoundAttribute] = js.native
-    def debug(element: js.Array[typingsSlinky.std.Element | HTMLDocument]): Unit = js.native
-    def debug(element: js.Array[typingsSlinky.std.Element | HTMLDocument], maxLength: Double): Unit = js.native
-    def debug(
-      element: js.Array[typingsSlinky.std.Element | HTMLDocument],
-      maxLength: Double,
-      options: OptionsReceived
-    ): Unit = js.native
+    def debug(element: js.Array[Element | HTMLDocument]): Unit = js.native
+    def debug(element: js.Array[Element | HTMLDocument], maxLength: Double): Unit = js.native
+    def debug(element: js.Array[Element | HTMLDocument], maxLength: Double, options: OptionsReceived): Unit = js.native
     /**
       * Convenience function for `pretty-dom` which also allows an array
       * of elements
       */
-    def debug(element: typingsSlinky.std.Element): Unit = js.native
-    def debug(element: typingsSlinky.std.Element, maxLength: Double): Unit = js.native
-    def debug(element: typingsSlinky.std.Element, maxLength: Double, options: OptionsReceived): Unit = js.native
+    def debug(element: Element): Unit = js.native
+    def debug(element: Element, maxLength: Double): Unit = js.native
+    def debug(element: Element, maxLength: Double, options: OptionsReceived): Unit = js.native
     def debug(element: HTMLDocument): Unit = js.native
     def debug(element: HTMLDocument, maxLength: Double): Unit = js.native
     def debug(element: HTMLDocument, maxLength: Double, options: OptionsReceived): Unit = js.native

@@ -18,11 +18,41 @@ trait ListRecoveryPointsByResourceOutput extends js.Object {
 
 object ListRecoveryPointsByResourceOutput {
   @scala.inline
-  def apply(NextToken: String = null, RecoveryPoints: RecoveryPointByResourceList = null): ListRecoveryPointsByResourceOutput = {
+  def apply(): ListRecoveryPointsByResourceOutput = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (RecoveryPoints != null) __obj.updateDynamic("RecoveryPoints")(RecoveryPoints.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListRecoveryPointsByResourceOutput]
   }
+  @scala.inline
+  implicit class ListRecoveryPointsByResourceOutputOps[Self <: ListRecoveryPointsByResourceOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecoveryPoints(value: RecoveryPointByResourceList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecoveryPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecoveryPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecoveryPoints")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,12 +22,53 @@ trait UserSummary extends js.Object {
 
 object UserSummary {
   @scala.inline
-  def apply(Arn: ARN = null, Id: UserId = null, Username: AgentUsername = null): UserSummary = {
+  def apply(): UserSummary = {
     val __obj = js.Dynamic.literal()
-    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (Username != null) __obj.updateDynamic("Username")(Username.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserSummary]
   }
+  @scala.inline
+  implicit class UserSummaryOps[Self <: UserSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: ARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: UserId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: AgentUsername): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

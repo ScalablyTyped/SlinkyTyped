@@ -1,6 +1,5 @@
 package typingsSlinky.pgQueryStream.mod
 
-import typingsSlinky.pg.mod.Connection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,5 @@ class ^ protected () extends QueryStream {
   def this(text: String) = this()
   def this(text: String, values: js.Array[_]) = this()
   def this(text: String, values: js.Array[_], options: Options) = this()
-  /* CompleteClass */
-  override def submit(connection: Connection): Unit = js.native
 }
 

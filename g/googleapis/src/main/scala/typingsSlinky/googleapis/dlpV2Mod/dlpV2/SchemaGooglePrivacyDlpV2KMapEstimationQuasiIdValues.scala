@@ -21,11 +21,41 @@ trait SchemaGooglePrivacyDlpV2KMapEstimationQuasiIdValues extends js.Object {
 
 object SchemaGooglePrivacyDlpV2KMapEstimationQuasiIdValues {
   @scala.inline
-  def apply(estimatedAnonymity: String = null, quasiIdsValues: js.Array[SchemaGooglePrivacyDlpV2Value] = null): SchemaGooglePrivacyDlpV2KMapEstimationQuasiIdValues = {
+  def apply(): SchemaGooglePrivacyDlpV2KMapEstimationQuasiIdValues = {
     val __obj = js.Dynamic.literal()
-    if (estimatedAnonymity != null) __obj.updateDynamic("estimatedAnonymity")(estimatedAnonymity.asInstanceOf[js.Any])
-    if (quasiIdsValues != null) __obj.updateDynamic("quasiIdsValues")(quasiIdsValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2KMapEstimationQuasiIdValues]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2KMapEstimationQuasiIdValuesOps[Self <: SchemaGooglePrivacyDlpV2KMapEstimationQuasiIdValues] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEstimatedAnonymity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedAnonymity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedAnonymity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedAnonymity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuasiIdsValues(value: js.Array[SchemaGooglePrivacyDlpV2Value]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quasiIdsValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuasiIdsValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quasiIdsValues")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -46,7 +46,7 @@ package object translateMod {
     - java.lang.String
   */
   type TerminologyDataFormat = typingsSlinky.awsSdk.translateMod._TerminologyDataFormat | java.lang.String
-  type TerminologyFile = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.translateMod.Blob | java.lang.String
+  type TerminologyFile = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.translateMod.Blob | java.lang.String
   type TerminologyPropertiesList = js.Array[typingsSlinky.awsSdk.translateMod.TerminologyProperties]
   type TextTranslationJobPropertiesList = js.Array[typingsSlinky.awsSdk.translateMod.TextTranslationJobProperties]
   type Timestamp = js.Date

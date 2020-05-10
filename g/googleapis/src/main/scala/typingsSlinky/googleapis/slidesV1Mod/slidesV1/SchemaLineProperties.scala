@@ -51,26 +51,113 @@ trait SchemaLineProperties extends js.Object {
 
 object SchemaLineProperties {
   @scala.inline
-  def apply(
-    dashStyle: String = null,
-    endArrow: String = null,
-    endConnection: SchemaLineConnection = null,
-    lineFill: SchemaLineFill = null,
-    link: SchemaLink = null,
-    startArrow: String = null,
-    startConnection: SchemaLineConnection = null,
-    weight: SchemaDimension = null
-  ): SchemaLineProperties = {
+  def apply(): SchemaLineProperties = {
     val __obj = js.Dynamic.literal()
-    if (dashStyle != null) __obj.updateDynamic("dashStyle")(dashStyle.asInstanceOf[js.Any])
-    if (endArrow != null) __obj.updateDynamic("endArrow")(endArrow.asInstanceOf[js.Any])
-    if (endConnection != null) __obj.updateDynamic("endConnection")(endConnection.asInstanceOf[js.Any])
-    if (lineFill != null) __obj.updateDynamic("lineFill")(lineFill.asInstanceOf[js.Any])
-    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
-    if (startArrow != null) __obj.updateDynamic("startArrow")(startArrow.asInstanceOf[js.Any])
-    if (startConnection != null) __obj.updateDynamic("startConnection")(startConnection.asInstanceOf[js.Any])
-    if (weight != null) __obj.updateDynamic("weight")(weight.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLineProperties]
   }
+  @scala.inline
+  implicit class SchemaLinePropertiesOps[Self <: SchemaLineProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDashStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dashStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDashStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dashStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndArrow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endArrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndArrow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endArrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndConnection(value: SchemaLineConnection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endConnection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndConnection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endConnection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineFill(value: SchemaLineFill): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineFill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineFill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLink(value: SchemaLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartArrow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startArrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartArrow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startArrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartConnection(value: SchemaLineConnection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startConnection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartConnection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startConnection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeight(value: SchemaDimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

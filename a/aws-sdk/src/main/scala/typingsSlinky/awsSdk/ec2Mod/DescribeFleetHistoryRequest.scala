@@ -17,7 +17,7 @@ trait DescribeFleetHistoryRequest extends js.Object {
   /**
     * The ID of the EC2 Fleet.
     */
-  var FleetId: FleetIdentifier = js.native
+  var FleetId: typingsSlinky.awsSdk.ec2Mod.FleetId = js.native
   /**
     * The maximum number of results to return in a single call. Specify a value between 1 and 1000. The default value is 1000. To retrieve the remaining results, make another call with the returned NextToken value.
     */
@@ -34,20 +34,77 @@ trait DescribeFleetHistoryRequest extends js.Object {
 
 object DescribeFleetHistoryRequest {
   @scala.inline
-  def apply(
-    FleetId: FleetIdentifier,
-    StartTime: js.Date,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    EventType: FleetEventType = null,
-    MaxResults: Int | scala.Double = null,
-    NextToken: String = null
-  ): DescribeFleetHistoryRequest = {
+  def apply(FleetId: FleetId, StartTime: js.Date): DescribeFleetHistoryRequest = {
     val __obj = js.Dynamic.literal(FleetId = FleetId.asInstanceOf[js.Any], StartTime = StartTime.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (EventType != null) __obj.updateDynamic("EventType")(EventType.asInstanceOf[js.Any])
-    if (MaxResults != null) __obj.updateDynamic("MaxResults")(MaxResults.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeFleetHistoryRequest]
   }
+  @scala.inline
+  implicit class DescribeFleetHistoryRequestOps[Self <: DescribeFleetHistoryRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFleetId(value: FleetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventType(value: FleetEventType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

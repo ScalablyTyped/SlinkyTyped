@@ -1,10 +1,7 @@
 package typingsSlinky.storybookApi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.storybookApi.mod.Combo
 import typingsSlinky.storybookApi.mod.ConsumerProps
 import typingsSlinky.storybookApi.mod.SubState
@@ -12,25 +9,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Consumer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.storybookApi.mod.Consumer] {
+object Consumer {
   @JSImport("@storybook/api", "Consumer")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    filter: Combo => SubState = null,
-    pure: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.storybookApi.mod.Consumer] = {
-    val __obj = js.Dynamic.literal()
-    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction1(filter))
-    if (!js.isUndefined(pure)) __obj.updateDynamic("pure")(pure.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.storybookApi.mod.Consumer] {
+    @scala.inline
+    def filter(value: Combo => SubState): this.type = set("filter", js.Any.fromFunction1(value))
+    @scala.inline
+    def pure(value: Boolean): this.type = set("pure", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.storybookApi.mod.Consumer] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.storybookApi.mod.Consumer](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ConsumerProps[SubState, Combo]
+  
+  def withProps(p: ConsumerProps[SubState, Combo]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Consumer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

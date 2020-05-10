@@ -18,16 +18,14 @@ trait OrderStatus extends js.Object
 
 object OrderStatus {
   @scala.inline
-  def canceled: typingsSlinky.stripe.stripeStrings.canceled = this.cast("canceled")
+  def canceled: typingsSlinky.stripe.stripeStrings.canceled = "canceled".asInstanceOf[typingsSlinky.stripe.stripeStrings.canceled]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def created: typingsSlinky.stripe.stripeStrings.created = "created".asInstanceOf[typingsSlinky.stripe.stripeStrings.created]
   @scala.inline
-  def created: typingsSlinky.stripe.stripeStrings.created = this.cast("created")
+  def fulfilled: typingsSlinky.stripe.stripeStrings.fulfilled = "fulfilled".asInstanceOf[typingsSlinky.stripe.stripeStrings.fulfilled]
   @scala.inline
-  def fulfilled: typingsSlinky.stripe.stripeStrings.fulfilled = this.cast("fulfilled")
+  def paid: typingsSlinky.stripe.stripeStrings.paid = "paid".asInstanceOf[typingsSlinky.stripe.stripeStrings.paid]
   @scala.inline
-  def paid: typingsSlinky.stripe.stripeStrings.paid = this.cast("paid")
-  @scala.inline
-  def returned: typingsSlinky.stripe.stripeStrings.returned = this.cast("returned")
+  def returned: typingsSlinky.stripe.stripeStrings.returned = "returned".asInstanceOf[typingsSlinky.stripe.stripeStrings.returned]
 }
 

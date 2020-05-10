@@ -4,8 +4,6 @@ import typingsSlinky.jupyterlabRendermimeInterfaces.mod.IRenderMime.IExtension
 import typingsSlinky.jupyterlabRendermimeInterfaces.mod.IRenderMime.IRenderer
 import typingsSlinky.jupyterlabRendermimeInterfaces.mod.IRenderMime.IRendererFactory
 import typingsSlinky.jupyterlabRendermimeInterfaces.mod.IRenderMime.IRendererOptions
-import typingsSlinky.jupyterlabVega4Extension.jupyterlabVega4ExtensionStrings.applicationSlashvndDotvegaDotv4Plussignjson
-import typingsSlinky.jupyterlabVega4Extension.jupyterlabVega4ExtensionStrings.applicationSlashvndDotvegaliteDotv2Plussignjson
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,8 +22,8 @@ object mod extends js.Object {
     var _result: js.Any = js.native
   }
   
-  val VEGALITE_MIME_TYPE: applicationSlashvndDotvegaliteDotv2Plussignjson = js.native
-  val VEGA_MIME_TYPE: applicationSlashvndDotvegaDotv4Plussignjson = js.native
+  val VEGALITE_MIME_TYPE: /* "application/vnd.vegalite.v2+json" */ String = js.native
+  val VEGA_MIME_TYPE: /* "application/vnd.vega.v4+json" */ String = js.native
   val default: IExtension = js.native
   val rendererFactory: IRendererFactory = js.native
 }

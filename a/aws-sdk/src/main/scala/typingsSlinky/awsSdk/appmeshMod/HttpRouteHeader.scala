@@ -22,15 +22,47 @@ trait HttpRouteHeader extends js.Object {
 
 object HttpRouteHeader {
   @scala.inline
-  def apply(
-    name: HeaderName,
-    invert: js.UndefOr[scala.Boolean] = js.undefined,
-    `match`: HeaderMatchMethod = null
-  ): HttpRouteHeader = {
+  def apply(name: HeaderName): HttpRouteHeader = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (!js.isUndefined(invert)) __obj.updateDynamic("invert")(invert.asInstanceOf[js.Any])
-    if (`match` != null) __obj.updateDynamic("match")(`match`.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpRouteHeader]
   }
+  @scala.inline
+  implicit class HttpRouteHeaderOps[Self <: HttpRouteHeader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: HeaderName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInvert(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invert")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvert: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invert")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatch(value: HeaderMatchMethod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("match")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("match")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

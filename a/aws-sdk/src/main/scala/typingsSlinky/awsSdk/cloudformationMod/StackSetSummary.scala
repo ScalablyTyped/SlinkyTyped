@@ -42,26 +42,113 @@ trait StackSetSummary extends js.Object {
 
 object StackSetSummary {
   @scala.inline
-  def apply(
-    AutoDeployment: AutoDeployment = null,
-    Description: Description = null,
-    DriftStatus: StackDriftStatus = null,
-    LastDriftCheckTimestamp: js.Date = null,
-    PermissionModel: PermissionModels = null,
-    StackSetId: StackSetId = null,
-    StackSetName: StackSetName = null,
-    Status: StackSetStatus = null
-  ): StackSetSummary = {
+  def apply(): StackSetSummary = {
     val __obj = js.Dynamic.literal()
-    if (AutoDeployment != null) __obj.updateDynamic("AutoDeployment")(AutoDeployment.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (DriftStatus != null) __obj.updateDynamic("DriftStatus")(DriftStatus.asInstanceOf[js.Any])
-    if (LastDriftCheckTimestamp != null) __obj.updateDynamic("LastDriftCheckTimestamp")(LastDriftCheckTimestamp.asInstanceOf[js.Any])
-    if (PermissionModel != null) __obj.updateDynamic("PermissionModel")(PermissionModel.asInstanceOf[js.Any])
-    if (StackSetId != null) __obj.updateDynamic("StackSetId")(StackSetId.asInstanceOf[js.Any])
-    if (StackSetName != null) __obj.updateDynamic("StackSetName")(StackSetName.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[StackSetSummary]
   }
+  @scala.inline
+  implicit class StackSetSummaryOps[Self <: StackSetSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoDeployment(value: AutoDeployment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoDeployment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoDeployment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoDeployment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDriftStatus(value: StackDriftStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DriftStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDriftStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DriftStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastDriftCheckTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastDriftCheckTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastDriftCheckTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastDriftCheckTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermissionModel(value: PermissionModels): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermissionModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionModel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackSetId(value: StackSetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackSetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackSetName(value: StackSetName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackSetName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: StackSetStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,7 @@
 package typingsSlinky.reactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ARTTextProps
 import typingsSlinky.reactNative.reactNativeStrings.bevel
 import typingsSlinky.reactNative.reactNativeStrings.butt
@@ -15,56 +12,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ARTText
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNative.mod.ARTText] {
+object ARTText {
   @JSImport("react-native", "ARTText")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: title */
-  def apply(
-    alignment: String = null,
-    fill: String = null,
-    font: String = null,
-    opacity: Int | Double = null,
-    originX: Int | Double = null,
-    originY: Int | Double = null,
-    scale: Int | Double = null,
-    scaleX: Int | Double = null,
-    scaleY: Int | Double = null,
-    stroke: String = null,
-    strokeCap: butt | square | round = null,
-    strokeDash: js.Array[Double] = null,
-    strokeJoin: bevel | miter | round = null,
-    strokeWidth: Int | Double = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    x: Int | Double = null,
-    y: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNative.mod.ARTText] = {
-    val __obj = js.Dynamic.literal()
-    if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (originX != null) __obj.updateDynamic("originX")(originX.asInstanceOf[js.Any])
-    if (originY != null) __obj.updateDynamic("originY")(originY.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (scaleX != null) __obj.updateDynamic("scaleX")(scaleX.asInstanceOf[js.Any])
-    if (scaleY != null) __obj.updateDynamic("scaleY")(scaleY.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (strokeCap != null) __obj.updateDynamic("strokeCap")(strokeCap.asInstanceOf[js.Any])
-    if (strokeDash != null) __obj.updateDynamic("strokeDash")(strokeDash.asInstanceOf[js.Any])
-    if (strokeJoin != null) __obj.updateDynamic("strokeJoin")(strokeJoin.asInstanceOf[js.Any])
-    if (strokeWidth != null) __obj.updateDynamic("strokeWidth")(strokeWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNative.mod.ARTText] {
+    @scala.inline
+    def alignment(value: String): this.type = set("alignment", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fill(value: String): this.type = set("fill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def font(value: String): this.type = set("font", value.asInstanceOf[js.Any])
+    @scala.inline
+    def opacity(value: Double): this.type = set("opacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def originX(value: Double): this.type = set("originX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def originY(value: Double): this.type = set("originY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scale(value: Double): this.type = set("scale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scaleX(value: Double): this.type = set("scaleX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scaleY(value: Double): this.type = set("scaleY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stroke(value: String): this.type = set("stroke", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeCap(value: butt | square | round): this.type = set("strokeCap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeDash(value: js.Array[Double]): this.type = set("strokeDash", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeJoin(value: bevel | miter | round): this.type = set("strokeJoin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeWidth(value: Double): this.type = set("strokeWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def x(value: Double): this.type = set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactNative.mod.ARTText] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactNative.mod.ARTText](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ARTTextProps
+  
+  def withProps(p: ARTTextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ARTText.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

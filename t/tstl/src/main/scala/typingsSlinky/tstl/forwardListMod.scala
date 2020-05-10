@@ -65,7 +65,7 @@ object forwardListMod extends js.Object {
     /**
       * @inheritDoc
       */
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator_ForwardList: js.Function0[IterableIterator[T]] = js.native
     var ptr_ : js.Any = js.native
     var size_ : js.Any = js.native
@@ -89,30 +89,6 @@ object forwardListMod extends js.Object {
       * @return Iterator to the before beginning.
       */
     def before_begin(): Iterator[T] = js.native
-    /**
-      * Iterator to the first element.
-      *
-      * @return Iterator to the first element.
-      */
-    /* CompleteClass */
-    override def begin(): Iterator[T] = js.native
-    /**
-      * Clear elements.
-      */
-    /* CompleteClass */
-    override def clear(): Unit = js.native
-    /**
-      * Test whether container is empty.
-      */
-    /* CompleteClass */
-    override def empty(): Boolean = js.native
-    /**
-      * Iterator to the end.
-      *
-      * @return Iterator to the end.
-      */
-    /* CompleteClass */
-    override def end(): Iterator[T] = js.native
     /**
       * Erase elements.
       *
@@ -154,23 +130,6 @@ object forwardListMod extends js.Object {
       * @return An iterator to the last of the newly inserted elements.
       */
     def insert_after[T, InputIterator /* <: IForwardIterator[T, InputIterator] */](pos: Iterator[T], first: InputIterator, last: InputIterator): Iterator[T] = js.native
-    /**
-      * Erase the first element.
-      */
-    /* CompleteClass */
-    override def pop_front(): Unit = js.native
-    /**
-      * Insert an element at the first.
-      *
-      * @param val Value to insert.
-      */
-    /* CompleteClass */
-    override def push_front(`val`: T): Unit = js.native
-    /**
-      * Number of elements in the container.
-      */
-    /* CompleteClass */
-    override def size(): Double = js.native
     /**
       * Transfer elements.
       *
@@ -226,7 +185,7 @@ object forwardListMod extends js.Object {
         * @inheritDoc
         */
       @JSName("value")
-      def value_MIterator(): T = js.native
+      def value_MIterator: T = js.native
       /**
         * @inheritDoc
         */

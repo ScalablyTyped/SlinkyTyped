@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OnShowListener extends js.Object {
-  def onShow(dialog: typingsSlinky.androiduix.android.content.DialogInterface): Unit
+  def onShow(dialog: typingsSlinky.androiduix.android.content.DialogInterface): Unit = js.native
 }
 
 object OnShowListener {
   @scala.inline
   def apply(onShow: typingsSlinky.androiduix.android.content.DialogInterface => Unit): OnShowListener = {
     val __obj = js.Dynamic.literal(onShow = js.Any.fromFunction1(onShow))
-  
     __obj.asInstanceOf[OnShowListener]
   }
+  @scala.inline
+  implicit class OnShowListenerOps[Self <: OnShowListener] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnShow(value: typingsSlinky.androiduix.android.content.DialogInterface => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

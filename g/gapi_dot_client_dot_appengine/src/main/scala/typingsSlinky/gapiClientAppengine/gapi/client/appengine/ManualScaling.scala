@@ -4,20 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ManualScaling extends js.Object {
   /**
     * Number of instances to assign to the service at the start. This number can later be altered by using the Modules API
     * (https://cloud.google.com/appengine/docs/python/modules/functions) set_num_instances() function.
     */
-  var instances: js.UndefOr[Double] = js.undefined
+  var instances: js.UndefOr[Double] = js.native
 }
 
 object ManualScaling {
   @scala.inline
-  def apply(instances: Int | Double = null): ManualScaling = {
+  def apply(): ManualScaling = {
     val __obj = js.Dynamic.literal()
-    if (instances != null) __obj.updateDynamic("instances")(instances.asInstanceOf[js.Any])
     __obj.asInstanceOf[ManualScaling]
   }
+  @scala.inline
+  implicit class ManualScalingOps[Self <: ManualScaling] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstances(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

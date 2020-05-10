@@ -1,9 +1,6 @@
 package typingsSlinky.fixedDataTable.mod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,13 +9,14 @@ import scala.scalajs.js.annotation._
 /**
   * Component that defines the attributes of table column.
   */
+@js.native
 trait ColumnProps extends Props[Column] {
   /**
     * The horizontal alignment of the table cell content.
     *
     * 'left'|'center'|'right'
     */
-  var align: js.UndefOr[String] = js.undefined
+  var align: js.UndefOr[String] = js.native
   /**
     * Whether cells in this column can be removed from document
     * when outside of viewport as a result of horizontal
@@ -32,7 +30,7 @@ trait ColumnProps extends Props[Column] {
     *
     * defaultValue: false
     */
-  var allowCellsRecycling: js.UndefOr[Boolean] = js.undefined
+  var allowCellsRecycling: js.UndefOr[Boolean] = js.native
   /**
     * This is the body cell that will be cloned for this
     * column. This can either be a string a React element,
@@ -57,20 +55,20 @@ trait ColumnProps extends Props[Column] {
     */
   var cell: js.UndefOr[
     String | ReactElement | (js.Function1[/* props */ CellProps, String | ReactElement])
-  ] = js.undefined
+  ] = js.native
   /**
     * This is used to uniquely identify the column, and is not
     * required unless you a resizing columns. This will be the
     * key given in the onColumnResizeEndCallback on the Table.
     */
-  var columnKey: js.UndefOr[String | Double] = js.undefined
+  var columnKey: js.UndefOr[String | Double] = js.native
   /**
     * Controls if the column is fixed when scrolling in the X
     * axis.
     *
     * defaultValue: false
     */
-  var fixed: js.UndefOr[Boolean] = js.undefined
+  var fixed: js.UndefOr[Boolean] = js.native
   /**
     * The grow factor relative to other columns. Same as the
     * flex-grow API from http://www.w3.org/TR/css3-flexbox/.
@@ -78,7 +76,7 @@ trait ColumnProps extends Props[Column] {
     * it proportionally according to all columns' flexGrow
     * values. Defaults to zero (no-flexing).
     */
-  var flexGrow: js.UndefOr[Double] = js.undefined
+  var flexGrow: js.UndefOr[Double] = js.native
   /**
     * The footer cell for this column. This can either be a
     * string. a React element, or a function that generates a
@@ -102,7 +100,7 @@ trait ColumnProps extends Props[Column] {
     */
   var footer: js.UndefOr[
     String | ReactElement | (js.Function1[/* props */ CellProps, String | ReactElement])
-  ] = js.undefined
+  ] = js.native
   /**
     * The header cell for this column. This can either be a
     * string. a React element, or a function that generates a
@@ -124,7 +122,7 @@ trait ColumnProps extends Props[Column] {
     */
   var header: js.UndefOr[
     String | ReactElement | (js.Function1[/* props */ CellProps, String | ReactElement])
-  ] = js.undefined
+  ] = js.native
   /**
     * Whether the column can be resized with the
     * FixedDataTableColumnResizeHandle. Please note that if a
@@ -136,58 +134,210 @@ trait ColumnProps extends Props[Column] {
     * onColumnResizeEndCallback table property and render your
     * columns appropriately.
     */
-  var isResizable: js.UndefOr[Boolean] = js.undefined
+  var isResizable: js.UndefOr[Boolean] = js.native
   /**
     * If this is a resizable column this is its maximum pixel
     * width.
     */
-  var maxWidth: js.UndefOr[Double] = js.undefined
+  var maxWidth: js.UndefOr[Double] = js.native
   /**
     * If this is a resizable column this is its minimum pixel
     * width.
     */
-  var minWidth: js.UndefOr[Double] = js.undefined
+  var minWidth: js.UndefOr[Double] = js.native
   /**
     * The pixel width of the column.
     */
-  var width: Double
+  var width: Double = js.native
 }
 
 object ColumnProps {
   @scala.inline
-  def apply(
-    width: Double,
-    align: String = null,
-    allowCellsRecycling: js.UndefOr[Boolean] = js.undefined,
-    cell: String | ReactElement | (js.Function1[/* props */ CellProps, String | ReactElement]) = null,
-    children: TagMod[Any] = null,
-    columnKey: String | Double = null,
-    fixed: js.UndefOr[Boolean] = js.undefined,
-    flexGrow: Int | Double = null,
-    footer: String | ReactElement | (js.Function1[/* props */ CellProps, String | ReactElement]) = null,
-    header: String | ReactElement | (js.Function1[/* props */ CellProps, String | ReactElement]) = null,
-    isResizable: js.UndefOr[Boolean] = js.undefined,
-    key: Key = null,
-    maxWidth: Int | Double = null,
-    minWidth: Int | Double = null,
-    ref: LegacyRef[Column] = null
-  ): ColumnProps = {
+  def apply(width: Double): ColumnProps = {
     val __obj = js.Dynamic.literal(width = width.asInstanceOf[js.Any])
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowCellsRecycling)) __obj.updateDynamic("allowCellsRecycling")(allowCellsRecycling.asInstanceOf[js.Any])
-    if (cell != null) __obj.updateDynamic("cell")(cell.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (columnKey != null) __obj.updateDynamic("columnKey")(columnKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixed)) __obj.updateDynamic("fixed")(fixed.asInstanceOf[js.Any])
-    if (flexGrow != null) __obj.updateDynamic("flexGrow")(flexGrow.asInstanceOf[js.Any])
-    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (!js.isUndefined(isResizable)) __obj.updateDynamic("isResizable")(isResizable.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnProps]
   }
+  @scala.inline
+  implicit class ColumnPropsOps[Self <: ColumnProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAlign(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowCellsRecycling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCellsRecycling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowCellsRecycling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCellsRecycling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCellFunction1(value: /* props */ CellProps => String | ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cell")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCell(value: String | ReactElement | (js.Function1[/* props */ CellProps, String | ReactElement])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCell: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cell")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnKey(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlexGrow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flexGrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlexGrow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flexGrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFooterReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFooterFunction1(value: /* props */ CellProps => String | ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFooter(value: String | ReactElement | (js.Function1[/* props */ CellProps, String | ReactElement])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFooter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeaderFunction1(value: /* props */ CellProps => String | ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHeader(value: String | ReactElement | (js.Function1[/* props */ CellProps, String | ReactElement])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsResizable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isResizable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsResizable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isResizable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

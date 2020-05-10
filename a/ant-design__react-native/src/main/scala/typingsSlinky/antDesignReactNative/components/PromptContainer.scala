@@ -1,10 +1,9 @@
 package typingsSlinky.antDesignReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.`login-password`
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.`secure-text`
 import typingsSlinky.antDesignReactNative.modalPropsTypeMod.CallbackOrActions
@@ -17,36 +16,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PromptContainer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object PromptContainer {
   @JSImport("@ant-design/react-native/lib/modal/PromptContainer", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    actions: CallbackOrActions[TextStyle],
-    title: TagMod[Any],
-    defaultValue: String = null,
-    message: TagMod[Any] = null,
-    onAnimationEnd: /* visible */ Boolean => Unit = null,
-    onBackHandler: () => Boolean = null,
-    placeholders: js.Array[String] = null,
-    styles: Partial[PromptStyle] = null,
-    `type`: typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.default | `login-password` | `secure-text` = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
-    if (onBackHandler != null) __obj.updateDynamic("onBackHandler")(js.Any.fromFunction0(onBackHandler))
-    if (placeholders != null) __obj.updateDynamic("placeholders")(placeholders.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def defaultValue(value: String): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def messageReactElement(value: ReactElement): this.type = set("message", value.asInstanceOf[js.Any])
+    @scala.inline
+    def message(value: TagMod[Any]): this.type = set("message", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAnimationEnd(value: /* visible */ Boolean => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onBackHandler(value: () => Boolean): this.type = set("onBackHandler", js.Any.fromFunction0(value))
+    @scala.inline
+    def placeholders(value: js.Array[String]): this.type = set("placeholders", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styles(value: Partial[PromptStyle]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(
+      value: typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.default | `login-password` | `secure-text`
+    ): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  type Props = PropmptContainerProps
+  
+  def withProps(p: PropmptContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(actions: CallbackOrActions[TextStyle]): Builder = {
+    val __props = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PropmptContainerProps]))
+  }
 }
 

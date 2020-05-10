@@ -4,36 +4,74 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait P2POptions extends js.Object {
   /**
     * Upgrade to p2p connection (from s.io one) when peers are ready
     * @default true
     */
-  var autoUpgrade: js.UndefOr[Boolean] = js.undefined
+  var autoUpgrade: js.UndefOr[Boolean] = js.native
   /**
     * Max number of peers each client can connect to
     * @default 5
     */
-  var numClients: js.UndefOr[Double] = js.undefined
+  var numClients: js.UndefOr[Double] = js.native
   /**
     * Object of options passed to underlying peers
     * @default {}
     */
-  var peerOpts: js.UndefOr[PeerOpts] = js.undefined
+  var peerOpts: js.UndefOr[PeerOpts] = js.native
 }
 
 object P2POptions {
   @scala.inline
-  def apply(
-    autoUpgrade: js.UndefOr[Boolean] = js.undefined,
-    numClients: Int | Double = null,
-    peerOpts: PeerOpts = null
-  ): P2POptions = {
+  def apply(): P2POptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoUpgrade)) __obj.updateDynamic("autoUpgrade")(autoUpgrade.asInstanceOf[js.Any])
-    if (numClients != null) __obj.updateDynamic("numClients")(numClients.asInstanceOf[js.Any])
-    if (peerOpts != null) __obj.updateDynamic("peerOpts")(peerOpts.asInstanceOf[js.Any])
     __obj.asInstanceOf[P2POptions]
   }
+  @scala.inline
+  implicit class P2POptionsOps[Self <: P2POptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoUpgrade(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpgrade")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoUpgrade: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpgrade")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumClients(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numClients")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumClients: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numClients")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeerOpts(value: PeerOpts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("peerOpts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeerOpts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("peerOpts")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

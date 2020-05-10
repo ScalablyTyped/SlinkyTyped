@@ -212,7 +212,7 @@ object swiperEsmMod extends js.Object {
       *   '<div class="swiper-slide">Slide 11"</div>'
       * ]);
       */
-    def appendSlide(slide: typingsSlinky.std.HTMLElement): Unit = js.native
+    def appendSlide(slide: HTMLElement): Unit = js.native
     def prependSlide(slide: String): Unit = js.native
     /**
       * Add new slides to the beginning. slides could be HTMLElement or HTML string with new slide or
@@ -225,7 +225,7 @@ object swiperEsmMod extends js.Object {
       * '<div class="swiper-slide">Slide 2"</div>'
       * ]);
       */
-    def prependSlide(slide: typingsSlinky.std.HTMLElement): Unit = js.native
+    def prependSlide(slide: HTMLElement): Unit = js.native
     /**
       * Update virutal slides state
       */

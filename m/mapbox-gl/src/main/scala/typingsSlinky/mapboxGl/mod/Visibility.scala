@@ -12,10 +12,8 @@ trait Visibility extends js.Object
 
 object Visibility {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def none: typingsSlinky.mapboxGl.mapboxGlStrings.none = "none".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.none]
   @scala.inline
-  def none: typingsSlinky.mapboxGl.mapboxGlStrings.none = this.cast("none")
-  @scala.inline
-  def visible: typingsSlinky.mapboxGl.mapboxGlStrings.visible = this.cast("visible")
+  def visible: typingsSlinky.mapboxGl.mapboxGlStrings.visible = "visible".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.visible]
 }
 

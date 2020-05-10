@@ -11,10 +11,29 @@ trait SchemaFieldMetadataProto extends js.Object {
 
 object SchemaFieldMetadataProto {
   @scala.inline
-  def apply(internal: SchemaInternalFieldMetadataProto = null): SchemaFieldMetadataProto = {
+  def apply(): SchemaFieldMetadataProto = {
     val __obj = js.Dynamic.literal()
-    if (internal != null) __obj.updateDynamic("internal")(internal.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFieldMetadataProto]
   }
+  @scala.inline
+  implicit class SchemaFieldMetadataProtoOps[Self <: SchemaFieldMetadataProto] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInternal(value: SchemaInternalFieldMetadataProto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("internal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInternal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("internal")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

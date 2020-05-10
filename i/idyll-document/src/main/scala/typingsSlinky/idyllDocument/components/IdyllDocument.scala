@@ -1,10 +1,8 @@
 package typingsSlinky.idyllDocument.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.idyllCompiler.mod.AST
 import typingsSlinky.idyllCompiler.mod.Options
 import typingsSlinky.idyllDocument.AnonChildren
@@ -14,41 +12,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IdyllDocument
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object IdyllDocument {
   @JSImport("idyll-document", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    components: js.Any,
-    ast: AST = null,
-    compilerOptions: Options = null,
-    context: /* context */ js.Any => Unit = null,
-    datasets: js.Object = null,
-    errorComponent: ReactComponentClass[AnonChildren] = null,
-    initialState: js.Any = null,
-    layout: String = null,
-    markup: String = null,
-    onError: /* err */ js.Error => Unit = null,
-    theme: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(components = components.asInstanceOf[js.Any])
-    if (ast != null) __obj.updateDynamic("ast")(ast.asInstanceOf[js.Any])
-    if (compilerOptions != null) __obj.updateDynamic("compilerOptions")(compilerOptions.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(js.Any.fromFunction1(context))
-    if (datasets != null) __obj.updateDynamic("datasets")(datasets.asInstanceOf[js.Any])
-    if (errorComponent != null) __obj.updateDynamic("errorComponent")(errorComponent.asInstanceOf[js.Any])
-    if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (markup != null) __obj.updateDynamic("markup")(markup.asInstanceOf[js.Any])
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def ast(value: AST): this.type = set("ast", value.asInstanceOf[js.Any])
+    @scala.inline
+    def compilerOptions(value: Options): this.type = set("compilerOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def context(value: /* context */ js.Any => Unit): this.type = set("context", js.Any.fromFunction1(value))
+    @scala.inline
+    def datasets(value: js.Object): this.type = set("datasets", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorComponentFunctionComponent(value: ReactComponentClass[AnonChildren]): this.type = set("errorComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorComponentComponentClass(value: ReactComponentClass[AnonChildren]): this.type = set("errorComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorComponent(value: ReactComponentClass[AnonChildren]): this.type = set("errorComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialState(value: js.Any): this.type = set("initialState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def layout(value: String): this.type = set("layout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def markup(value: String): this.type = set("markup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onError(value: /* err */ js.Error => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    @scala.inline
+    def theme(value: String): this.type = set("theme", value.asInstanceOf[js.Any])
   }
-  type Props = IdyllDocumentProps
+  
+  def withProps(p: IdyllDocumentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(components: js.Any): Builder = {
+    val __props = js.Dynamic.literal(components = components.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IdyllDocumentProps]))
+  }
 }
 

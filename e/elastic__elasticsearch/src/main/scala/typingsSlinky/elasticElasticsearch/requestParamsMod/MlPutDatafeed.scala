@@ -4,33 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MlPutDatafeed[T] extends Generic {
-  var body: T
-  var datafeed_id: String
+  var body: T = js.native
+  var datafeed_id: String = js.native
 }
 
 object MlPutDatafeed {
   @scala.inline
-  def apply[T](
-    body: T,
-    datafeed_id: String,
-    error_trace: js.UndefOr[Boolean] = js.undefined,
-    filter_path: String | js.Array[String] = null,
-    human: js.UndefOr[Boolean] = js.undefined,
-    ignore: Double | js.Array[Double] = null,
-    method: String = null,
-    pretty: js.UndefOr[Boolean] = js.undefined,
-    source: String = null
-  ): MlPutDatafeed[T] = {
+  def apply[T](body: T, datafeed_id: String): MlPutDatafeed[T] = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], datafeed_id = datafeed_id.asInstanceOf[js.Any])
-    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.asInstanceOf[js.Any])
-    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
-    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.asInstanceOf[js.Any])
-    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[MlPutDatafeed[T]]
   }
+  @scala.inline
+  implicit class MlPutDatafeedOps[Self[t] <: MlPutDatafeed[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withBody(value: T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDatafeed_id(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datafeed_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

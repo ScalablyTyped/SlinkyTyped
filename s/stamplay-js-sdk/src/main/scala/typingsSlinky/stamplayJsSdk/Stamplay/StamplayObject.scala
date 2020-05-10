@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StamplayObject extends js.Object {
-  var Collection: js.Any
-  var Model: typingsSlinky.stamplayJsSdk.Stamplay.Model
+  var Collection: js.Any = js.native
+  var Model: typingsSlinky.stamplayJsSdk.Stamplay.Model = js.native
 }
 
 object StamplayObject {
   @scala.inline
   def apply(Collection: js.Any, Model: Model): StamplayObject = {
     val __obj = js.Dynamic.literal(Collection = Collection.asInstanceOf[js.Any], Model = Model.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[StamplayObject]
   }
+  @scala.inline
+  implicit class StamplayObjectOps[Self <: StamplayObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCollection(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Collection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModel(value: Model): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Model")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

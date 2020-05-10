@@ -23,7 +23,7 @@ package object interfacesMod {
     - typingsSlinky.maquette.interfacesMod.VNodeChildren
     - typingsSlinky.maquette.maquetteBooleans.`false`
     - scala.Null
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
   */
   type VNodeChild = js.UndefOr[typingsSlinky.maquette.interfacesMod._VNodeChild | java.lang.String | scala.Null]
 }

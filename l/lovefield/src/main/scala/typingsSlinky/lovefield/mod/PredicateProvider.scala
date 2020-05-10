@@ -1,7 +1,6 @@
 package typingsSlinky.lovefield.mod
 
 import typingsSlinky.lovefield.mod.schema.Column
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +31,7 @@ trait PredicateProvider extends js.Object {
   def lte(operand: ValueLiteral): Predicate = js.native
   def lte(operand: Column): Predicate = js.native
   def `match`(operand: Binder): Predicate = js.native
-  def `match`(operand: RegExp): Predicate = js.native
+  def `match`(operand: js.RegExp): Predicate = js.native
   def neq(operand: Binder): Predicate = js.native
   def neq(operand: ValueLiteral): Predicate = js.native
   def neq(operand: Column): Predicate = js.native

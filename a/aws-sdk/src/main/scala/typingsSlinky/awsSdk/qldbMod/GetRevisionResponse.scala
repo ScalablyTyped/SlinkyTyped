@@ -18,10 +18,35 @@ trait GetRevisionResponse extends js.Object {
 
 object GetRevisionResponse {
   @scala.inline
-  def apply(Revision: ValueHolder, Proof: ValueHolder = null): GetRevisionResponse = {
+  def apply(Revision: ValueHolder): GetRevisionResponse = {
     val __obj = js.Dynamic.literal(Revision = Revision.asInstanceOf[js.Any])
-    if (Proof != null) __obj.updateDynamic("Proof")(Proof.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRevisionResponse]
   }
+  @scala.inline
+  implicit class GetRevisionResponseOps[Self <: GetRevisionResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRevision(value: ValueHolder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Revision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProof(value: ValueHolder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Proof")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProof: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Proof")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

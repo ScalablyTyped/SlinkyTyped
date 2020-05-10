@@ -1,15 +1,13 @@
 package typingsSlinky.reactSortablePane.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactMotion.mod.SpringHelperConfig
 import typingsSlinky.reactSortablePane.mod.PaneKey
 import typingsSlinky.reactSortablePane.mod.PaneResizeDirection
@@ -21,50 +19,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SortablePane
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactSortablePane.mod.SortablePane] {
+object SortablePane {
   @JSImport("react-sortable-pane", "SortablePane")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    defaultOrder: js.Array[String] = null,
-    direction: horizontal | vertical = null,
-    disableEffect: js.UndefOr[Boolean] = js.undefined,
-    dragHandleClassName: String = null,
-    isSortable: js.UndefOr[Boolean] = js.undefined,
-    margin: Int | Double = null,
-    onDragStart: (/* e */ SyntheticMouseEvent[HTMLElement] | SyntheticTouchEvent[HTMLElement], /* key */ PaneKey, /* elementRef */ HTMLElement) => Unit = null,
-    onDragStop: (/* e */ MouseEvent | TouchEvent, /* key */ PaneKey, /* elementRef */ HTMLElement, /* order */ js.Array[String]) => Unit = null,
-    onOrderChange: /* order */ js.Array[String] => Unit = null,
-    onResize: (/* e */ MouseEvent | TouchEvent, /* key */ PaneKey, /* dir */ PaneResizeDirection, /* elementRef */ HTMLElement, /* delta */ PaneSize) => Unit = null,
-    onResizeStart: (/* e */ SyntheticMouseEvent[HTMLElement] | SyntheticTouchEvent[HTMLElement], /* key */ PaneKey, /* dir */ PaneResizeDirection) => Unit = null,
-    onResizeStop: (/* e */ MouseEvent | TouchEvent, /* key */ PaneKey, /* dir */ PaneResizeDirection, /* elementRef */ HTMLElement, /* delta */ PaneSize) => Unit = null,
-    order: js.Array[String] = null,
-    springConfig: SpringHelperConfig = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactSortablePane.mod.SortablePane] = {
-    val __obj = js.Dynamic.literal()
-    if (defaultOrder != null) __obj.updateDynamic("defaultOrder")(defaultOrder.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableEffect)) __obj.updateDynamic("disableEffect")(disableEffect.asInstanceOf[js.Any])
-    if (dragHandleClassName != null) __obj.updateDynamic("dragHandleClassName")(dragHandleClassName.asInstanceOf[js.Any])
-    if (!js.isUndefined(isSortable)) __obj.updateDynamic("isSortable")(isSortable.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction3(onDragStart))
-    if (onDragStop != null) __obj.updateDynamic("onDragStop")(js.Any.fromFunction4(onDragStop))
-    if (onOrderChange != null) __obj.updateDynamic("onOrderChange")(js.Any.fromFunction1(onOrderChange))
-    if (onResize != null) __obj.updateDynamic("onResize")(js.Any.fromFunction5(onResize))
-    if (onResizeStart != null) __obj.updateDynamic("onResizeStart")(js.Any.fromFunction3(onResizeStart))
-    if (onResizeStop != null) __obj.updateDynamic("onResizeStop")(js.Any.fromFunction5(onResizeStop))
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
-    if (springConfig != null) __obj.updateDynamic("springConfig")(springConfig.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactSortablePane.mod.SortablePane] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultOrder(value: js.Array[String]): this.type = set("defaultOrder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def direction(value: horizontal | vertical): this.type = set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableEffect(value: Boolean): this.type = set("disableEffect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dragHandleClassName(value: String): this.type = set("dragHandleClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isSortable(value: Boolean): this.type = set("isSortable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: Double): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDragStart(
+      value: (/* e */ SyntheticMouseEvent[HTMLElement] | SyntheticTouchEvent[HTMLElement], /* key */ PaneKey, /* elementRef */ HTMLElement) => Unit
+    ): this.type = set("onDragStart", js.Any.fromFunction3(value))
+    @scala.inline
+    def onDragStop(
+      value: (/* e */ MouseEvent | TouchEvent, /* key */ PaneKey, /* elementRef */ HTMLElement, /* order */ js.Array[String]) => Unit
+    ): this.type = set("onDragStop", js.Any.fromFunction4(value))
+    @scala.inline
+    def onOrderChange(value: /* order */ js.Array[String] => Unit): this.type = set("onOrderChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResize(
+      value: (/* e */ MouseEvent | TouchEvent, /* key */ PaneKey, /* dir */ PaneResizeDirection, /* elementRef */ HTMLElement, /* delta */ PaneSize) => Unit
+    ): this.type = set("onResize", js.Any.fromFunction5(value))
+    @scala.inline
+    def onResizeStart(
+      value: (/* e */ SyntheticMouseEvent[HTMLElement] | SyntheticTouchEvent[HTMLElement], /* key */ PaneKey, /* dir */ PaneResizeDirection) => Unit
+    ): this.type = set("onResizeStart", js.Any.fromFunction3(value))
+    @scala.inline
+    def onResizeStop(
+      value: (/* e */ MouseEvent | TouchEvent, /* key */ PaneKey, /* dir */ PaneResizeDirection, /* elementRef */ HTMLElement, /* delta */ PaneSize) => Unit
+    ): this.type = set("onResizeStop", js.Any.fromFunction5(value))
+    @scala.inline
+    def order(value: js.Array[String]): this.type = set("order", value.asInstanceOf[js.Any])
+    @scala.inline
+    def springConfig(value: SpringHelperConfig): this.type = set("springConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactSortablePane.mod.SortablePane] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactSortablePane.mod.SortablePane](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SortablePaneProps
+  
+  def withProps(p: SortablePaneProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SortablePane.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

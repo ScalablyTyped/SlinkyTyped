@@ -27,18 +27,65 @@ trait SpekeKeyProvider extends js.Object {
 
 object SpekeKeyProvider {
   @scala.inline
-  def apply(
-    CertificateArn: stringPatternArnAwsUsGovAcm = null,
-    ResourceId: string = null,
-    SystemIds: listOfStringPattern09aFAF809aFAF409aFAF409aFAF409aFAF12 = null,
-    Url: stringPatternHttps = null
-  ): SpekeKeyProvider = {
+  def apply(): SpekeKeyProvider = {
     val __obj = js.Dynamic.literal()
-    if (CertificateArn != null) __obj.updateDynamic("CertificateArn")(CertificateArn.asInstanceOf[js.Any])
-    if (ResourceId != null) __obj.updateDynamic("ResourceId")(ResourceId.asInstanceOf[js.Any])
-    if (SystemIds != null) __obj.updateDynamic("SystemIds")(SystemIds.asInstanceOf[js.Any])
-    if (Url != null) __obj.updateDynamic("Url")(Url.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpekeKeyProvider]
   }
+  @scala.inline
+  implicit class SpekeKeyProviderOps[Self <: SpekeKeyProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateArn(value: stringPatternArnAwsUsGovAcm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSystemIds(value: listOfStringPattern09aFAF809aFAF409aFAF409aFAF409aFAF12): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SystemIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSystemIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SystemIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: stringPatternHttps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

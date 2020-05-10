@@ -27,18 +27,65 @@ trait VaultLockState extends js.Object {
 
 object VaultLockState {
   @scala.inline
-  def apply(
-    completeLock: Input[Boolean] = null,
-    ignoreDeletionError: Input[Boolean] = null,
-    policy: Input[String] = null,
-    vaultName: Input[String] = null
-  ): VaultLockState = {
+  def apply(): VaultLockState = {
     val __obj = js.Dynamic.literal()
-    if (completeLock != null) __obj.updateDynamic("completeLock")(completeLock.asInstanceOf[js.Any])
-    if (ignoreDeletionError != null) __obj.updateDynamic("ignoreDeletionError")(ignoreDeletionError.asInstanceOf[js.Any])
-    if (policy != null) __obj.updateDynamic("policy")(policy.asInstanceOf[js.Any])
-    if (vaultName != null) __obj.updateDynamic("vaultName")(vaultName.asInstanceOf[js.Any])
     __obj.asInstanceOf[VaultLockState]
   }
+  @scala.inline
+  implicit class VaultLockStateOps[Self <: VaultLockState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompleteLock(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completeLock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompleteLock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completeLock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreDeletionError(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreDeletionError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreDeletionError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreDeletionError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicy(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVaultName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vaultName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVaultName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vaultName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

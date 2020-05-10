@@ -22,10 +22,41 @@ trait GetWorkflowRunRequest extends js.Object {
 
 object GetWorkflowRunRequest {
   @scala.inline
-  def apply(Name: NameString, RunId: IdString, IncludeGraph: js.UndefOr[scala.Boolean] = js.undefined): GetWorkflowRunRequest = {
+  def apply(Name: NameString, RunId: IdString): GetWorkflowRunRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], RunId = RunId.asInstanceOf[js.Any])
-    if (!js.isUndefined(IncludeGraph)) __obj.updateDynamic("IncludeGraph")(IncludeGraph.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetWorkflowRunRequest]
   }
+  @scala.inline
+  implicit class GetWorkflowRunRequestOps[Self <: GetWorkflowRunRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRunId(value: IdString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RunId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIncludeGraph(value: NullableBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeGraph")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeGraph: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeGraph")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,6 +5,7 @@ import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.eventsMod.EventsKey
 import typingsSlinky.ol.extentMod.Extent
 import typingsSlinky.ol.objectMod.ObjectEvent
+import typingsSlinky.ol.olBooleans.`false`
 import typingsSlinky.ol.olStrings.changeColonelement
 import typingsSlinky.ol.olStrings.changeColonmap
 import typingsSlinky.ol.olStrings.changeColonoffset
@@ -20,9 +21,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Overlay
   extends typingsSlinky.ol.objectMod.default {
-  var autoPan: Boolean = js.native
-  var autoPanAnimation: PanOptions = js.native
-  var autoPanMargin: Double = js.native
+  var autoPan: PanIntoViewOptions | `false` = js.native
   var element: HTMLElement = js.native
   var id: Double | String = js.native
   var insertFirst: Boolean = js.native
@@ -63,7 +62,9 @@ trait Overlay
   def once_changeposition(`type`: changeColonposition, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("once")
   def once_changepositioning(`type`: changeColonpositioning, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
-  /* protected */ def panIntoView(): Unit = js.native
+  def panIntoView(): Unit = js.native
+  def panIntoView(panIntoViewOptions: PanIntoViewOptions): Unit = js.native
+  /* protected */ def performAutoPan(): Unit = js.native
   /* protected */ def render(): Unit = js.native
   def setElement(): Unit = js.native
   def setElement(element: HTMLElement): Unit = js.native

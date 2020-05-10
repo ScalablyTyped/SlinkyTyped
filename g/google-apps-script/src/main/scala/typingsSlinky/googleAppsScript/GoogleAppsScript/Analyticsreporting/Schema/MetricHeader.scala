@@ -4,21 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MetricHeader extends js.Object {
-  var metricHeaderEntries: js.UndefOr[js.Array[MetricHeaderEntry]] = js.undefined
-  var pivotHeaders: js.UndefOr[js.Array[PivotHeader]] = js.undefined
+  var metricHeaderEntries: js.UndefOr[js.Array[MetricHeaderEntry]] = js.native
+  var pivotHeaders: js.UndefOr[js.Array[PivotHeader]] = js.native
 }
 
 object MetricHeader {
   @scala.inline
-  def apply(
-    metricHeaderEntries: js.Array[MetricHeaderEntry] = null,
-    pivotHeaders: js.Array[PivotHeader] = null
-  ): MetricHeader = {
+  def apply(): MetricHeader = {
     val __obj = js.Dynamic.literal()
-    if (metricHeaderEntries != null) __obj.updateDynamic("metricHeaderEntries")(metricHeaderEntries.asInstanceOf[js.Any])
-    if (pivotHeaders != null) __obj.updateDynamic("pivotHeaders")(pivotHeaders.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricHeader]
   }
+  @scala.inline
+  implicit class MetricHeaderOps[Self <: MetricHeader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMetricHeaderEntries(value: js.Array[MetricHeaderEntry]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricHeaderEntries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricHeaderEntries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricHeaderEntries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPivotHeaders(value: js.Array[PivotHeader]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPivotHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotHeaders")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

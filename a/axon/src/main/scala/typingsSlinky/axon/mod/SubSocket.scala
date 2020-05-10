@@ -1,6 +1,5 @@
 package typingsSlinky.axon.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,8 +15,8 @@ class SubSocket () extends Socket_ {
     */
   def send(): Unit = js.native
   def subscribe(re: String): js.RegExp = js.native
-  def subscribe(re: RegExp): js.RegExp = js.native
+  def subscribe(re: js.RegExp): js.RegExp = js.native
   def unsubscribe(re: String): Unit = js.native
-  def unsubscribe(re: RegExp): Unit = js.native
+  def unsubscribe(re: js.RegExp): Unit = js.native
 }
 

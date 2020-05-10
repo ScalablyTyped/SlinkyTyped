@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
   * Provides main functionality of ComboBox widget
   * 
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dijit.form.SearchMixin because Inheritance from two classes. Inlined 
 - typingsSlinky.dojo.dijit.form.AutoCompleterMixin because Inheritance from two classes. Inlined autoComplete, fetchProperties, highlightMatch, ignoreCase, item, labelAttr, labelType, pageSize, query, queryExpr, searchAttr, searchDelay, store, closeDropDown, doHighlight, isLoaded, loadDropDown, postCreate, postMixInProperties, reset, onSearch */ @JSGlobal("dijit.form.ComboBoxMixin")
 @js.native

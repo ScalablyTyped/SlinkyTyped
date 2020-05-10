@@ -77,36 +77,173 @@ trait SchemaRevision extends js.Object {
 
 object SchemaRevision {
   @scala.inline
-  def apply(
-    exportLinks: StringDictionary[String] = null,
-    id: String = null,
-    keepForever: js.UndefOr[Boolean] = js.undefined,
-    kind: String = null,
-    lastModifyingUser: SchemaUser = null,
-    md5Checksum: String = null,
-    mimeType: String = null,
-    modifiedTime: String = null,
-    originalFilename: String = null,
-    publishAuto: js.UndefOr[Boolean] = js.undefined,
-    published: js.UndefOr[Boolean] = js.undefined,
-    publishedOutsideDomain: js.UndefOr[Boolean] = js.undefined,
-    size: String = null
-  ): SchemaRevision = {
+  def apply(): SchemaRevision = {
     val __obj = js.Dynamic.literal()
-    if (exportLinks != null) __obj.updateDynamic("exportLinks")(exportLinks.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepForever)) __obj.updateDynamic("keepForever")(keepForever.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (lastModifyingUser != null) __obj.updateDynamic("lastModifyingUser")(lastModifyingUser.asInstanceOf[js.Any])
-    if (md5Checksum != null) __obj.updateDynamic("md5Checksum")(md5Checksum.asInstanceOf[js.Any])
-    if (mimeType != null) __obj.updateDynamic("mimeType")(mimeType.asInstanceOf[js.Any])
-    if (modifiedTime != null) __obj.updateDynamic("modifiedTime")(modifiedTime.asInstanceOf[js.Any])
-    if (originalFilename != null) __obj.updateDynamic("originalFilename")(originalFilename.asInstanceOf[js.Any])
-    if (!js.isUndefined(publishAuto)) __obj.updateDynamic("publishAuto")(publishAuto.asInstanceOf[js.Any])
-    if (!js.isUndefined(published)) __obj.updateDynamic("published")(published.asInstanceOf[js.Any])
-    if (!js.isUndefined(publishedOutsideDomain)) __obj.updateDynamic("publishedOutsideDomain")(publishedOutsideDomain.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRevision]
   }
+  @scala.inline
+  implicit class SchemaRevisionOps[Self <: SchemaRevision] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExportLinks(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exportLinks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExportLinks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exportLinks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepForever(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepForever")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepForever: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepForever")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifyingUser(value: SchemaUser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifyingUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifyingUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifyingUser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMd5Checksum(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("md5Checksum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMd5Checksum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("md5Checksum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMimeType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMimeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModifiedTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModifiedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalFilename(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalFilename")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalFilename: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalFilename")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublishAuto(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publishAuto")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublishAuto: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publishAuto")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublished(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("published")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublished: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("published")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublishedOutsideDomain(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publishedOutsideDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublishedOutsideDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publishedOutsideDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

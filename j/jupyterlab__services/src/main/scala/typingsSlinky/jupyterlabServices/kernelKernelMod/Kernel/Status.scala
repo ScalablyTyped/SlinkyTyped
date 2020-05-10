@@ -22,24 +22,22 @@ trait Status extends js.Object
 
 object Status {
   @scala.inline
-  def autorestarting: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.autorestarting = this.cast("autorestarting")
+  def autorestarting: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.autorestarting = "autorestarting".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.autorestarting]
   @scala.inline
-  def busy: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.busy = this.cast("busy")
+  def busy: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.busy = "busy".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.busy]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def connected: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.connected = "connected".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.connected]
   @scala.inline
-  def connected: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.connected = this.cast("connected")
+  def dead: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.dead = "dead".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.dead]
   @scala.inline
-  def dead: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.dead = this.cast("dead")
+  def idle: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.idle = "idle".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.idle]
   @scala.inline
-  def idle: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.idle = this.cast("idle")
+  def reconnecting: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.reconnecting = "reconnecting".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.reconnecting]
   @scala.inline
-  def reconnecting: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.reconnecting = this.cast("reconnecting")
+  def restarting: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.restarting = "restarting".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.restarting]
   @scala.inline
-  def restarting: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.restarting = this.cast("restarting")
+  def starting: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.starting = "starting".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.starting]
   @scala.inline
-  def starting: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.starting = this.cast("starting")
-  @scala.inline
-  def unknown: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.unknown = this.cast("unknown")
+  def unknown: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.unknown = "unknown".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.unknown]
 }
 

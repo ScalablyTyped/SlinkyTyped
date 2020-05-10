@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   * Functions to parse and serialize JSON
   *
   */
+@js.native
 trait json extends js.Object {
   /**
     * Parses a JSON string to return a JavaScript object.
@@ -24,7 +25,7 @@ trait json extends js.Object {
     * @param str a string literal of a JSON item, for instance:'{ "foo": [ "bar", 1, { "baz": "thud" } ] }'
     * @param strict When set to true, this will ensure that only valid, secure JSON is ever parsed.Make sure this is set to true for untrusted content. Note that on browsers/engineswithout native JSON support, setting this to true will run slower.
     */
-  def parse(str: js.Any, strict: js.Any): Unit
+  def parse(str: js.Any, strict: js.Any): Unit = js.native
   /**
     * Returns a JSON serialization of an object.
     * Returns a JSON serialization of an object.
@@ -35,15 +36,34 @@ trait json extends js.Object {
     * @param replacer A replacer function that is called for each value and can return a replacement
     * @param spacer A spacer string to be used for pretty printing of JSON
     */
-  def stringify(value: js.Any, replacer: js.Any, spacer: js.Any): Unit
+  def stringify(value: js.Any, replacer: js.Any, spacer: js.Any): Unit = js.native
 }
 
 object json {
   @scala.inline
   def apply(parse: (js.Any, js.Any) => Unit, stringify: (js.Any, js.Any, js.Any) => Unit): json = {
     val __obj = js.Dynamic.literal(parse = js.Any.fromFunction2(parse), stringify = js.Any.fromFunction3(stringify))
-  
     __obj.asInstanceOf[json]
   }
+  @scala.inline
+  implicit class jsonOps[Self <: json] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParse(value: (js.Any, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withStringify(value: (js.Any, js.Any, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

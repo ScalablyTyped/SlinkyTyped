@@ -5,96 +5,214 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling `pivotTable.toJSON()`. */
+@js.native
 trait PivotTableData extends js.Object {
+  /**
+    *
+    * Specifies whether the PivotTable allows the application of multiple PivotFilters on a given PivotField in the table.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  var allowMultipleFiltersPerField: js.UndefOr[Boolean] = js.native
   /**
     *
     * The Column Pivot Hierarchies of the PivotTable.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var columnHierarchies: js.UndefOr[js.Array[RowColumnPivotHierarchyData]] = js.undefined
+  var columnHierarchies: js.UndefOr[js.Array[RowColumnPivotHierarchyData]] = js.native
   /**
     *
     * The Data Pivot Hierarchies of the PivotTable.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var dataHierarchies: js.UndefOr[js.Array[DataPivotHierarchyData]] = js.undefined
+  var dataHierarchies: js.UndefOr[js.Array[DataPivotHierarchyData]] = js.native
   /**
     *
     * Specifies whether the PivotTable allows values in the data body to be edited by the user.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var enableDataValueEditing: js.UndefOr[Boolean] = js.undefined
+  var enableDataValueEditing: js.UndefOr[Boolean] = js.native
   /**
     *
     * The Filter Pivot Hierarchies of the PivotTable.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var filterHierarchies: js.UndefOr[js.Array[FilterPivotHierarchyData]] = js.undefined
+  var filterHierarchies: js.UndefOr[js.Array[FilterPivotHierarchyData]] = js.native
   /**
     *
     * The Pivot Hierarchies of the PivotTable.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var hierarchies: js.UndefOr[js.Array[PivotHierarchyData]] = js.undefined
+  var hierarchies: js.UndefOr[js.Array[PivotHierarchyData]] = js.native
   /**
     *
     * Id of the PivotTable. Read-only.
     *
     * [Api set: ExcelApi 1.5]
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     *
     * Name of the PivotTable.
     *
     * [Api set: ExcelApi 1.3]
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     *
     * The Row Pivot Hierarchies of the PivotTable.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var rowHierarchies: js.UndefOr[js.Array[RowColumnPivotHierarchyData]] = js.undefined
+  var rowHierarchies: js.UndefOr[js.Array[RowColumnPivotHierarchyData]] = js.native
   /**
     *
     * Specifies whether the PivotTable uses custom lists when sorting.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var useCustomSortLists: js.UndefOr[Boolean] = js.undefined
+  var useCustomSortLists: js.UndefOr[Boolean] = js.native
 }
 
 object PivotTableData {
   @scala.inline
-  def apply(
-    columnHierarchies: js.Array[RowColumnPivotHierarchyData] = null,
-    dataHierarchies: js.Array[DataPivotHierarchyData] = null,
-    enableDataValueEditing: js.UndefOr[Boolean] = js.undefined,
-    filterHierarchies: js.Array[FilterPivotHierarchyData] = null,
-    hierarchies: js.Array[PivotHierarchyData] = null,
-    id: String = null,
-    name: String = null,
-    rowHierarchies: js.Array[RowColumnPivotHierarchyData] = null,
-    useCustomSortLists: js.UndefOr[Boolean] = js.undefined
-  ): PivotTableData = {
+  def apply(): PivotTableData = {
     val __obj = js.Dynamic.literal()
-    if (columnHierarchies != null) __obj.updateDynamic("columnHierarchies")(columnHierarchies.asInstanceOf[js.Any])
-    if (dataHierarchies != null) __obj.updateDynamic("dataHierarchies")(dataHierarchies.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableDataValueEditing)) __obj.updateDynamic("enableDataValueEditing")(enableDataValueEditing.asInstanceOf[js.Any])
-    if (filterHierarchies != null) __obj.updateDynamic("filterHierarchies")(filterHierarchies.asInstanceOf[js.Any])
-    if (hierarchies != null) __obj.updateDynamic("hierarchies")(hierarchies.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (rowHierarchies != null) __obj.updateDynamic("rowHierarchies")(rowHierarchies.asInstanceOf[js.Any])
-    if (!js.isUndefined(useCustomSortLists)) __obj.updateDynamic("useCustomSortLists")(useCustomSortLists.asInstanceOf[js.Any])
     __obj.asInstanceOf[PivotTableData]
   }
+  @scala.inline
+  implicit class PivotTableDataOps[Self <: PivotTableData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowMultipleFiltersPerField(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMultipleFiltersPerField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowMultipleFiltersPerField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMultipleFiltersPerField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnHierarchies(value: js.Array[RowColumnPivotHierarchyData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHierarchies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnHierarchies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHierarchies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataHierarchies(value: js.Array[DataPivotHierarchyData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataHierarchies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataHierarchies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataHierarchies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableDataValueEditing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDataValueEditing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableDataValueEditing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDataValueEditing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterHierarchies(value: js.Array[FilterPivotHierarchyData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterHierarchies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterHierarchies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterHierarchies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHierarchies(value: js.Array[PivotHierarchyData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHierarchies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowHierarchies(value: js.Array[RowColumnPivotHierarchyData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHierarchies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowHierarchies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHierarchies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseCustomSortLists(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useCustomSortLists")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseCustomSortLists: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useCustomSortLists")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

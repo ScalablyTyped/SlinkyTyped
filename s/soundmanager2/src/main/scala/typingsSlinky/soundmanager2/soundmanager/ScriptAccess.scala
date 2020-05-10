@@ -12,10 +12,8 @@ trait ScriptAccess extends js.Object
 
 object ScriptAccess {
   @scala.inline
-  def always: typingsSlinky.soundmanager2.soundmanager2Strings.always = this.cast("always")
+  def always: typingsSlinky.soundmanager2.soundmanager2Strings.always = "always".asInstanceOf[typingsSlinky.soundmanager2.soundmanager2Strings.always]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def sameDomain: typingsSlinky.soundmanager2.soundmanager2Strings.sameDomain = this.cast("sameDomain")
+  def sameDomain: typingsSlinky.soundmanager2.soundmanager2Strings.sameDomain = "sameDomain".asInstanceOf[typingsSlinky.soundmanager2.soundmanager2Strings.sameDomain]
 }
 

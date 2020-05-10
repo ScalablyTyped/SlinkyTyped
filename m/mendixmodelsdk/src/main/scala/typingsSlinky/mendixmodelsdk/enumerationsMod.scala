@@ -48,18 +48,18 @@ object enumerationsMod extends js.Object {
       ) = this()
       @JSName("model")
       var model_FCondition: IModel = js.native
-      def attributeValue(): String = js.native
+      def attributeValue: String = js.native
       def attributeValue(newValue: String): js.Any = js.native
-      def containerAsConditionSettings(): ConditionSettings = js.native
-      def containerAsConditionalSettings(): ConditionalSettings = js.native
-      def editableVisible(): Boolean = js.native
+      def containerAsConditionSettings: ConditionSettings = js.native
+      def containerAsConditionalSettings: ConditionalSettings = js.native
+      def editableVisible: Boolean = js.native
       def editableVisible(newValue: Boolean): js.Any = js.native
     }
     
     /**
       * See: {@link https://docs.mendix.com/refguide7/enumerations relevant section in reference guide}
       */
-    /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+    /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
     - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
     - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -81,14 +81,14 @@ object enumerationsMod extends js.Object {
       @JSName("values")
       val values_FEnumeration: IList[IEnumerationValue] = js.native
       @JSName("containerAsFolderBase")
-      def containerAsFolderBase_MEnumeration(): FolderBase = js.native
-      def values(): IList[EnumerationValue] = js.native
+      def containerAsFolderBase_MEnumeration: FolderBase = js.native
+      def values: IList[EnumerationValue] = js.native
     }
     
     /**
       * See: {@link https://docs.mendix.com/refguide7/enumeration-values relevant section in reference guide}
       */
-    /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+    /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
     - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
     - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -110,26 +110,18 @@ object enumerationsMod extends js.Object {
       var model_FEnumerationValue: IModel = js.native
       @JSName("name")
       val name_FEnumerationValue: String = js.native
-      /**
-        * Returns the qualified name of this element, or
-        * null if this element is not a part of the model,
-        * or if it or one of its namespace containers does not have a
-        * valid name.
-        */
-      /* CompleteClass */
-      override val qualifiedName: String | Null = js.native
-      def caption(): Text = js.native
+      def caption: Text = js.native
       def caption(newValue: Text): js.Any = js.native
-      def containerAsEnumeration(): Enumeration = js.native
+      def containerAsEnumeration: Enumeration = js.native
       def image(): js.Any = js.native
       def image(newValue: IImage): js.Any = js.native
-      def imageQualifiedName(): String | Null = js.native
+      def imageQualifiedName: String | Null = js.native
       @JSName("image")
-      def image_Union(): IImage | Null = js.native
-      def name(): String = js.native
+      def image_Union: IImage | Null = js.native
+      def name: String = js.native
       def name(newValue: String): js.Any = js.native
       @JSName("qualifiedName")
-      def qualifiedName_MEnumerationValue(): String | Null = js.native
+      def qualifiedName_MEnumerationValue: String | Null = js.native
     }
     
     /**

@@ -13,16 +13,53 @@ trait AnonCpuTemperatureInfo extends js.Object {
 
 object AnonCpuTemperatureInfo {
   @scala.inline
-  def apply(
-    cpuTemperatureInfo: js.Array[AnonLabel] = null,
-    cpuUtilizationPercentageInfo: js.Array[Double] = null,
-    reportTime: String = null
-  ): AnonCpuTemperatureInfo = {
+  def apply(): AnonCpuTemperatureInfo = {
     val __obj = js.Dynamic.literal()
-    if (cpuTemperatureInfo != null) __obj.updateDynamic("cpuTemperatureInfo")(cpuTemperatureInfo.asInstanceOf[js.Any])
-    if (cpuUtilizationPercentageInfo != null) __obj.updateDynamic("cpuUtilizationPercentageInfo")(cpuUtilizationPercentageInfo.asInstanceOf[js.Any])
-    if (reportTime != null) __obj.updateDynamic("reportTime")(reportTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCpuTemperatureInfo]
   }
+  @scala.inline
+  implicit class AnonCpuTemperatureInfoOps[Self <: AnonCpuTemperatureInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCpuTemperatureInfo(value: js.Array[AnonLabel]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuTemperatureInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCpuTemperatureInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuTemperatureInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCpuUtilizationPercentageInfo(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuUtilizationPercentageInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCpuUtilizationPercentageInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuUtilizationPercentageInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -34,20 +34,77 @@ trait SchemaPeerSessionDiagnostics extends js.Object {
 
 object SchemaPeerSessionDiagnostics {
   @scala.inline
-  def apply(
-    connectedTimestampMillis: String = null,
-    kind: String = null,
-    participantId: String = null,
-    reliableChannel: SchemaPeerChannelDiagnostics = null,
-    unreliableChannel: SchemaPeerChannelDiagnostics = null
-  ): SchemaPeerSessionDiagnostics = {
+  def apply(): SchemaPeerSessionDiagnostics = {
     val __obj = js.Dynamic.literal()
-    if (connectedTimestampMillis != null) __obj.updateDynamic("connectedTimestampMillis")(connectedTimestampMillis.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (participantId != null) __obj.updateDynamic("participantId")(participantId.asInstanceOf[js.Any])
-    if (reliableChannel != null) __obj.updateDynamic("reliableChannel")(reliableChannel.asInstanceOf[js.Any])
-    if (unreliableChannel != null) __obj.updateDynamic("unreliableChannel")(unreliableChannel.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPeerSessionDiagnostics]
   }
+  @scala.inline
+  implicit class SchemaPeerSessionDiagnosticsOps[Self <: SchemaPeerSessionDiagnostics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnectedTimestampMillis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectedTimestampMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectedTimestampMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectedTimestampMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParticipantId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("participantId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParticipantId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("participantId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReliableChannel(value: SchemaPeerChannelDiagnostics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reliableChannel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReliableChannel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reliableChannel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnreliableChannel(value: SchemaPeerChannelDiagnostics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unreliableChannel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnreliableChannel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unreliableChannel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

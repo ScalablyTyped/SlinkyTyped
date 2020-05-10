@@ -17,7 +17,7 @@ package object mod {
     /* sheet */ js.UndefOr[typingsSlinky.jss.mod.StyleSheet[java.lang.String]], 
     java.lang.String
   ]
-  type InsertionPoint = java.lang.String | org.scalajs.dom.raw.HTMLElement
+  type InsertionPoint = java.lang.String | org.scalajs.dom.raw.HTMLElement | org.scalajs.dom.raw.Comment
   type JssValue = java.lang.String | scala.Double | (js.Array[
     java.lang.String | scala.Double | (js.Array[java.lang.String | scala.Double]) | typingsSlinky.jss.jssStrings.Exclamationmarkimportant
   ]) | scala.Null | typingsSlinky.jss.jssBooleans.`false`

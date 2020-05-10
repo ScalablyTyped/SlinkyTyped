@@ -30,18 +30,60 @@ trait CreateComputeEnvironmentRequest extends js.Object {
 
 object CreateComputeEnvironmentRequest {
   @scala.inline
-  def apply(
-    computeEnvironmentName: String,
-    serviceRole: String,
-    `type`: CEType,
-    computeResources: ComputeResource = null,
-    state: CEState = null
-  ): CreateComputeEnvironmentRequest = {
+  def apply(computeEnvironmentName: String, serviceRole: String, `type`: CEType): CreateComputeEnvironmentRequest = {
     val __obj = js.Dynamic.literal(computeEnvironmentName = computeEnvironmentName.asInstanceOf[js.Any], serviceRole = serviceRole.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (computeResources != null) __obj.updateDynamic("computeResources")(computeResources.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateComputeEnvironmentRequest]
   }
+  @scala.inline
+  implicit class CreateComputeEnvironmentRequestOps[Self <: CreateComputeEnvironmentRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComputeEnvironmentName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeEnvironmentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServiceRole(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: CEType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComputeResources(value: ComputeResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeResources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputeResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeResources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: CEState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

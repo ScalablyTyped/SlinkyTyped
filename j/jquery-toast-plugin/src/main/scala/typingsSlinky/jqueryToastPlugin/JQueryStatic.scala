@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait JQueryStatic extends js.Object {
-  def toast(options: toastOptions): Unit
+  def toast(options: toastOptions): Unit = js.native
 }
 
 object JQueryStatic {
   @scala.inline
   def apply(toast: toastOptions => Unit): JQueryStatic = {
     val __obj = js.Dynamic.literal(toast = js.Any.fromFunction1(toast))
-  
     __obj.asInstanceOf[JQueryStatic]
   }
+  @scala.inline
+  implicit class JQueryStaticOps[Self <: JQueryStatic] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withToast(value: toastOptions => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toast")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

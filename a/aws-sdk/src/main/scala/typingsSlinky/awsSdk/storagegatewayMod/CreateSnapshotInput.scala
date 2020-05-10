@@ -22,10 +22,41 @@ trait CreateSnapshotInput extends js.Object {
 
 object CreateSnapshotInput {
   @scala.inline
-  def apply(SnapshotDescription: SnapshotDescription, VolumeARN: VolumeARN, Tags: Tags = null): CreateSnapshotInput = {
+  def apply(SnapshotDescription: SnapshotDescription, VolumeARN: VolumeARN): CreateSnapshotInput = {
     val __obj = js.Dynamic.literal(SnapshotDescription = SnapshotDescription.asInstanceOf[js.Any], VolumeARN = VolumeARN.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSnapshotInput]
   }
+  @scala.inline
+  implicit class CreateSnapshotInputOps[Self <: CreateSnapshotInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSnapshotDescription(value: SnapshotDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVolumeARN(value: VolumeARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

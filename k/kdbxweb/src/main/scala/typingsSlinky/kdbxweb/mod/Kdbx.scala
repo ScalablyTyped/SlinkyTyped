@@ -1,6 +1,5 @@
 package typingsSlinky.kdbxweb.mod
 
-import typingsSlinky.std.ArrayBuffer
 import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,8 +17,8 @@ class Kdbx () extends js.Object {
   var xml: Document_ = js.native
   def addDeletedObject(uuid: KdbxUuid, dt: js.Date): Unit = js.native
   def cleanup(settings: Settings): Unit = js.native
-  def createBinary(value: ProtectedValue): js.Promise[ProtectedValue | scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-  def createBinary(value: ArrayBuffer): js.Promise[ProtectedValue | scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def createBinary(value: ProtectedValue): js.Promise[ProtectedValue | js.typedarray.ArrayBuffer] = js.native
+  def createBinary(value: js.typedarray.ArrayBuffer): js.Promise[ProtectedValue | js.typedarray.ArrayBuffer] = js.native
   def createDefaultGroup(): Unit = js.native
   def createEntry(group: Group): Entry = js.native
   def createGroup(group: Group, name: StringProtected): Group = js.native
@@ -35,7 +34,7 @@ class Kdbx () extends js.Object {
   def move(`object`: KdbxObject, toGroup: Group, atIndex: Double): Unit = js.native
   def remove(`object`: KdbxObject): Unit = js.native
   def removeLocalEditState(): Unit = js.native
-  def save(): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def save(): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def saveXml(): js.Promise[String] = js.native
   def setLocalEditState(editingState: editingStateDict): Unit = js.native
   def upgrade(): Unit = js.native
@@ -46,7 +45,7 @@ class Kdbx () extends js.Object {
 @js.native
 object Kdbx extends js.Object {
   def create(credentials: Credentials, name: String): Kdbx = js.native
-  def load(data: scala.scalajs.js.typedarray.ArrayBuffer, credentials: Credentials): js.Promise[Kdbx] = js.native
+  def load(data: js.typedarray.ArrayBuffer, credentials: Credentials): js.Promise[Kdbx] = js.native
   def loadXml(data: String, credentials: Credentials): js.Promise[Kdbx] = js.native
 }
 

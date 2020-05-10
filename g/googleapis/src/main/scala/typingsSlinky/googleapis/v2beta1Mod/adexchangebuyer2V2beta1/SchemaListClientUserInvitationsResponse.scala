@@ -21,11 +21,41 @@ trait SchemaListClientUserInvitationsResponse extends js.Object {
 
 object SchemaListClientUserInvitationsResponse {
   @scala.inline
-  def apply(invitations: js.Array[SchemaClientUserInvitation] = null, nextPageToken: String = null): SchemaListClientUserInvitationsResponse = {
+  def apply(): SchemaListClientUserInvitationsResponse = {
     val __obj = js.Dynamic.literal()
-    if (invitations != null) __obj.updateDynamic("invitations")(invitations.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListClientUserInvitationsResponse]
   }
+  @scala.inline
+  implicit class SchemaListClientUserInvitationsResponseOps[Self <: SchemaListClientUserInvitationsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInvitations(value: js.Array[SchemaClientUserInvitation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvitations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

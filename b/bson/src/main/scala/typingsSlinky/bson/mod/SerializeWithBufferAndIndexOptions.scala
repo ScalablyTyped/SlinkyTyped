@@ -4,25 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SerializeWithBufferAndIndexOptions extends CommonSerializeOptions {
   /** {default:0}, the index in the buffer where we wish to start serializing into. */
-  var index: js.UndefOr[scala.Double] = js.undefined
+  var index: js.UndefOr[scala.Double] = js.native
 }
 
 object SerializeWithBufferAndIndexOptions {
   @scala.inline
-  def apply(
-    checkKeys: js.UndefOr[Boolean] = js.undefined,
-    ignoreUndefined: js.UndefOr[Boolean] = js.undefined,
-    index: Int | scala.Double = null,
-    serializeFunctions: js.UndefOr[Boolean] = js.undefined
-  ): SerializeWithBufferAndIndexOptions = {
+  def apply(): SerializeWithBufferAndIndexOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(checkKeys)) __obj.updateDynamic("checkKeys")(checkKeys.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreUndefined)) __obj.updateDynamic("ignoreUndefined")(ignoreUndefined.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (!js.isUndefined(serializeFunctions)) __obj.updateDynamic("serializeFunctions")(serializeFunctions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SerializeWithBufferAndIndexOptions]
   }
+  @scala.inline
+  implicit class SerializeWithBufferAndIndexOptionsOps[Self <: SerializeWithBufferAndIndexOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIndex(value: scala.Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

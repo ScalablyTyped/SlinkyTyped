@@ -23,11 +23,41 @@ trait SchemaLinks extends js.Object {
 
 object SchemaLinks {
   @scala.inline
-  def apply(droppedLinksCount: Int | Double = null, link: js.Array[SchemaLink] = null): SchemaLinks = {
+  def apply(): SchemaLinks = {
     val __obj = js.Dynamic.literal()
-    if (droppedLinksCount != null) __obj.updateDynamic("droppedLinksCount")(droppedLinksCount.asInstanceOf[js.Any])
-    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLinks]
   }
+  @scala.inline
+  implicit class SchemaLinksOps[Self <: SchemaLinks] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDroppedLinksCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("droppedLinksCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDroppedLinksCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("droppedLinksCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLink(value: js.Array[SchemaLink]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

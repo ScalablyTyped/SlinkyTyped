@@ -14,14 +14,12 @@ trait NavigationType extends js.Object
 
 object NavigationType {
   @scala.inline
-  def back_forward: typingsSlinky.std.stdStrings.back_forward = this.cast("back_forward")
+  def back_forward: typingsSlinky.std.stdStrings.back_forward = "back_forward".asInstanceOf[typingsSlinky.std.stdStrings.back_forward]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def navigate: typingsSlinky.std.stdStrings.navigate = "navigate".asInstanceOf[typingsSlinky.std.stdStrings.navigate]
   @scala.inline
-  def navigate: typingsSlinky.std.stdStrings.navigate = this.cast("navigate")
+  def prerender: typingsSlinky.std.stdStrings.prerender = "prerender".asInstanceOf[typingsSlinky.std.stdStrings.prerender]
   @scala.inline
-  def prerender: typingsSlinky.std.stdStrings.prerender = this.cast("prerender")
-  @scala.inline
-  def reload: typingsSlinky.std.stdStrings.reload = this.cast("reload")
+  def reload: typingsSlinky.std.stdStrings.reload = "reload".asInstanceOf[typingsSlinky.std.stdStrings.reload]
 }
 

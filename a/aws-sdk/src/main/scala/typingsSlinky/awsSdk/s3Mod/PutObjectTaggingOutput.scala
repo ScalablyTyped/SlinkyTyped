@@ -14,10 +14,29 @@ trait PutObjectTaggingOutput extends js.Object {
 
 object PutObjectTaggingOutput {
   @scala.inline
-  def apply(VersionId: ObjectVersionId = null): PutObjectTaggingOutput = {
+  def apply(): PutObjectTaggingOutput = {
     val __obj = js.Dynamic.literal()
-    if (VersionId != null) __obj.updateDynamic("VersionId")(VersionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutObjectTaggingOutput]
   }
+  @scala.inline
+  implicit class PutObjectTaggingOutputOps[Self <: PutObjectTaggingOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVersionId(value: ObjectVersionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

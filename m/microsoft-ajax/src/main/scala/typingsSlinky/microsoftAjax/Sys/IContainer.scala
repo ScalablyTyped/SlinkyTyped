@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 /**
   * Provides a common interface for all components that can contain other components.
   */
+@js.native
 trait IContainer extends js.Object {
   //#region Methods
   /**
@@ -17,7 +18,7 @@ trait IContainer extends js.Object {
     * @param component
     *           The Component object to add.
     */
-  def addComponent(component: Component): Unit
+  def addComponent(component: Component): Unit = js.native
   /**
     * Returns the specified Component instance.
     * Implement this method for an object that will contain one or more component objects to access components within that container.
@@ -25,19 +26,19 @@ trait IContainer extends js.Object {
     *           The ID of the Component object to search for.
     * @return The Component instance with the specified ID.
     */
-  def findComponent(id: String): Component
+  def findComponent(id: String): Component = js.native
   /**
     * Returns an array of all objects in the current container that inherit from Component.
     * Implement this method for an object that will contain one or more component objects so that the components in that container are available. Types that implement this method should return a copy of the list of components so that modifying the array does not change the contents of the container.
     * @return An array of all objects in the current container that inherit from Component.
     */
-  def getComponents(): js.Array[Component]
+  def getComponents(): js.Array[Component] = js.native
   /**
     * Removes a Component object from the current container.
     * @param component
     *               The Component object to remove.
     */
-  def removeComponent(component: Component): Unit
+  def removeComponent(component: Component): Unit = js.native
 }
 
 object IContainer {
@@ -49,8 +50,39 @@ object IContainer {
     removeComponent: Component => Unit
   ): IContainer = {
     val __obj = js.Dynamic.literal(addComponent = js.Any.fromFunction1(addComponent), findComponent = js.Any.fromFunction1(findComponent), getComponents = js.Any.fromFunction0(getComponents), removeComponent = js.Any.fromFunction1(removeComponent))
-  
     __obj.asInstanceOf[IContainer]
   }
+  @scala.inline
+  implicit class IContainerOps[Self <: IContainer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddComponent(value: Component => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addComponent")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFindComponent(value: String => Component): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findComponent")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetComponents(value: () => js.Array[Component]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getComponents")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveComponent(value: Component => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeComponent")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

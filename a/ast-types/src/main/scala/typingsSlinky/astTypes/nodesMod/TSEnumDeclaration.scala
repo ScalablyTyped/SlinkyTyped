@@ -10,15 +10,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/nodes.Declaration, 'type'> */
+@js.native
 trait TSEnumDeclaration extends ASTNode {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var const: Boolean
-  var declare: Boolean
-  var id: IdentifierKind
-  var initializer: ExpressionKind | Null
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var members: js.Array[TSEnumMemberKind]
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSEnumDeclaration
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var const: Boolean = js.native
+  var declare: Boolean = js.native
+  var id: IdentifierKind = js.native
+  var initializer: ExpressionKind | Null = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var members: js.Array[TSEnumMemberKind] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSEnumDeclaration = js.native
 }
 
 object TSEnumDeclaration {
@@ -28,17 +29,85 @@ object TSEnumDeclaration {
     declare: Boolean,
     id: IdentifierKind,
     members: js.Array[TSEnumMemberKind],
-    `type`: typingsSlinky.astTypes.astTypesStrings.TSEnumDeclaration,
-    comments: js.Array[CommentKind] = null,
-    initializer: ExpressionKind = null,
-    loc: SourceLocationKind = null
+    `type`: typingsSlinky.astTypes.astTypesStrings.TSEnumDeclaration
   ): TSEnumDeclaration = {
     val __obj = js.Dynamic.literal(const = const.asInstanceOf[js.Any], declare = declare.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
-    if (initializer != null) __obj.updateDynamic("initializer")(initializer.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSEnumDeclaration]
   }
+  @scala.inline
+  implicit class TSEnumDeclarationOps[Self <: TSEnumDeclaration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConst(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("const")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeclare(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("declare")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: IdentifierKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMembers(value: js.Array[TSEnumMemberKind]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("members")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: typingsSlinky.astTypes.astTypesStrings.TSEnumDeclaration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComments(value: js.Array[CommentKind]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitializer(value: ExpressionKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initializer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInitializerNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initializer")(null)
+        ret
+    }
+    @scala.inline
+    def withLoc(value: SourceLocationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

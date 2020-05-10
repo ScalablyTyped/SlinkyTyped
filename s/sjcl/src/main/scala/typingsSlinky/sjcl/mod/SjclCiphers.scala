@@ -5,16 +5,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // ________________________________________________________________________
+@js.native
 trait SjclCiphers extends js.Object {
-  var aes: SjclCipherStatic
+  var aes: SjclCipherStatic = js.native
 }
 
 object SjclCiphers {
   @scala.inline
   def apply(aes: SjclCipherStatic): SjclCiphers = {
     val __obj = js.Dynamic.literal(aes = aes.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SjclCiphers]
   }
+  @scala.inline
+  implicit class SjclCiphersOps[Self <: SjclCiphers] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAes(value: SjclCipherStatic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aes")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -10,17 +10,17 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Uint16ArrayConstructor
-  extends Instantiable0[Uint16Array]
+  extends Instantiable0[js.typedarray.Uint16Array]
      with Instantiable1[
-      (/* arrayOrArrayBuffer */ ArrayBufferLike) | (/* arrayOrArrayBuffer */ ArrayLike[Double]) | (/* length */ Double) | (/* elements */ Iterable[Double]), 
-      Uint16Array
+      (/* arrayOrArrayBuffer */ ArrayBufferLike) | (/* arrayOrArrayBuffer */ ArrayLike[Double]) | (/* length */ Double) | (/* elements */ js.Iterable[Double]), 
+      js.typedarray.Uint16Array
     ]
-     with Instantiable2[/* buffer */ ArrayBufferLike, /* byteOffset */ Double, Uint16Array]
+     with Instantiable2[/* buffer */ ArrayBufferLike, /* byteOffset */ Double, js.typedarray.Uint16Array]
      with Instantiable3[
       /* buffer */ ArrayBufferLike, 
       /* byteOffset */ Double, 
       /* length */ Double, 
-      Uint16Array
+      js.typedarray.Uint16Array
     ] {
   /**
     * The size in bytes of each element in the array.
@@ -30,32 +30,32 @@ trait Uint16ArrayConstructor
     * Creates an array from an array-like or iterable object.
     * @param arrayLike An array-like or iterable object to convert to an array.
     */
-  def from(arrayLike: ArrayLike[Double]): scala.scalajs.js.typedarray.Uint16Array = js.native
+  def from(arrayLike: ArrayLike[Double]): js.typedarray.Uint16Array = js.native
   /**
     * Creates an array from an array-like or iterable object.
     * @param arrayLike An array-like or iterable object to convert to an array.
     * @param mapfn A mapping function to call on every element of the array.
     * @param thisArg Value of 'this' used to invoke the mapfn.
     */
-  def from(arrayLike: Iterable[Double]): scala.scalajs.js.typedarray.Uint16Array = js.native
-  def from(arrayLike: Iterable[Double], mapfn: js.Function2[/* v */ Double, /* k */ Double, Double]): scala.scalajs.js.typedarray.Uint16Array = js.native
+  def from(arrayLike: js.Iterable[Double]): js.typedarray.Uint16Array = js.native
+  def from(arrayLike: js.Iterable[Double], mapfn: js.Function2[/* v */ Double, /* k */ Double, Double]): js.typedarray.Uint16Array = js.native
   def from(
-    arrayLike: Iterable[Double],
+    arrayLike: js.Iterable[Double],
     mapfn: js.Function2[/* v */ Double, /* k */ Double, Double],
     thisArg: js.Any
-  ): scala.scalajs.js.typedarray.Uint16Array = js.native
+  ): js.typedarray.Uint16Array = js.native
   /**
     * Creates an array from an array-like or iterable object.
     * @param arrayLike An array-like or iterable object to convert to an array.
     * @param mapfn A mapping function to call on every element of the array.
     * @param thisArg Value of 'this' used to invoke the mapfn.
     */
-  def from[T](arrayLike: ArrayLike[T], mapfn: js.Function2[/* v */ T, /* k */ Double, Double]): scala.scalajs.js.typedarray.Uint16Array = js.native
-  def from[T](arrayLike: ArrayLike[T], mapfn: js.Function2[/* v */ T, /* k */ Double, Double], thisArg: js.Any): scala.scalajs.js.typedarray.Uint16Array = js.native
+  def from[T](arrayLike: ArrayLike[T], mapfn: js.Function2[/* v */ T, /* k */ Double, Double]): js.typedarray.Uint16Array = js.native
+  def from[T](arrayLike: ArrayLike[T], mapfn: js.Function2[/* v */ T, /* k */ Double, Double], thisArg: js.Any): js.typedarray.Uint16Array = js.native
   /**
     * Returns a new array from a set of elements.
     * @param items A set of elements to include in the new array object.
     */
-  def of(items: Double*): scala.scalajs.js.typedarray.Uint16Array = js.native
+  def of(items: Double*): js.typedarray.Uint16Array = js.native
 }
 

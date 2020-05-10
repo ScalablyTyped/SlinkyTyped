@@ -33,28 +33,100 @@ trait ModifyVpcEndpointServiceConfigurationRequest extends js.Object {
   /**
     * The ID of the service.
     */
-  var ServiceId: typingsSlinky.awsSdk.ec2Mod.ServiceId = js.native
+  var ServiceId: VpcEndpointServiceId = js.native
 }
 
 object ModifyVpcEndpointServiceConfigurationRequest {
   @scala.inline
-  def apply(
-    ServiceId: ServiceId,
-    AcceptanceRequired: js.UndefOr[scala.Boolean] = js.undefined,
-    AddNetworkLoadBalancerArns: ValueStringList = null,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    PrivateDnsName: String = null,
-    RemoveNetworkLoadBalancerArns: ValueStringList = null,
-    RemovePrivateDnsName: js.UndefOr[scala.Boolean] = js.undefined
-  ): ModifyVpcEndpointServiceConfigurationRequest = {
+  def apply(ServiceId: VpcEndpointServiceId): ModifyVpcEndpointServiceConfigurationRequest = {
     val __obj = js.Dynamic.literal(ServiceId = ServiceId.asInstanceOf[js.Any])
-    if (!js.isUndefined(AcceptanceRequired)) __obj.updateDynamic("AcceptanceRequired")(AcceptanceRequired.asInstanceOf[js.Any])
-    if (AddNetworkLoadBalancerArns != null) __obj.updateDynamic("AddNetworkLoadBalancerArns")(AddNetworkLoadBalancerArns.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (PrivateDnsName != null) __obj.updateDynamic("PrivateDnsName")(PrivateDnsName.asInstanceOf[js.Any])
-    if (RemoveNetworkLoadBalancerArns != null) __obj.updateDynamic("RemoveNetworkLoadBalancerArns")(RemoveNetworkLoadBalancerArns.asInstanceOf[js.Any])
-    if (!js.isUndefined(RemovePrivateDnsName)) __obj.updateDynamic("RemovePrivateDnsName")(RemovePrivateDnsName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyVpcEndpointServiceConfigurationRequest]
   }
+  @scala.inline
+  implicit class ModifyVpcEndpointServiceConfigurationRequestOps[Self <: ModifyVpcEndpointServiceConfigurationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServiceId(value: VpcEndpointServiceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAcceptanceRequired(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptanceRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceptanceRequired: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptanceRequired")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddNetworkLoadBalancerArns(value: ValueStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddNetworkLoadBalancerArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddNetworkLoadBalancerArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddNetworkLoadBalancerArns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateDnsName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateDnsName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateDnsName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateDnsName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveNetworkLoadBalancerArns(value: ValueStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveNetworkLoadBalancerArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveNetworkLoadBalancerArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveNetworkLoadBalancerArns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemovePrivateDnsName(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemovePrivateDnsName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemovePrivateDnsName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemovePrivateDnsName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

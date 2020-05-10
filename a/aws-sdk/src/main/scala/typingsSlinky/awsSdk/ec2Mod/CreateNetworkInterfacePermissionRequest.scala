@@ -30,18 +30,65 @@ trait CreateNetworkInterfacePermissionRequest extends js.Object {
 
 object CreateNetworkInterfacePermissionRequest {
   @scala.inline
-  def apply(
-    NetworkInterfaceId: NetworkInterfaceId,
-    Permission: InterfacePermissionType,
-    AwsAccountId: String = null,
-    AwsService: String = null,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined
-  ): CreateNetworkInterfacePermissionRequest = {
+  def apply(NetworkInterfaceId: NetworkInterfaceId, Permission: InterfacePermissionType): CreateNetworkInterfacePermissionRequest = {
     val __obj = js.Dynamic.literal(NetworkInterfaceId = NetworkInterfaceId.asInstanceOf[js.Any], Permission = Permission.asInstanceOf[js.Any])
-    if (AwsAccountId != null) __obj.updateDynamic("AwsAccountId")(AwsAccountId.asInstanceOf[js.Any])
-    if (AwsService != null) __obj.updateDynamic("AwsService")(AwsService.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateNetworkInterfacePermissionRequest]
   }
+  @scala.inline
+  implicit class CreateNetworkInterfacePermissionRequestOps[Self <: CreateNetworkInterfacePermissionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNetworkInterfaceId(value: NetworkInterfaceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInterfaceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPermission(value: InterfacePermissionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Permission")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAwsAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsService(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsService")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsService")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

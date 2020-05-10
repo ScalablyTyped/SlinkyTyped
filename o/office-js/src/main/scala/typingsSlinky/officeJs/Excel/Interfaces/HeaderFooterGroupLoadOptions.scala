@@ -65,3 +65,115 @@ trait HeaderFooterGroupLoadOptions extends js.Object {
   var useSheetScale: js.UndefOr[Boolean] = js.native
 }
 
+object HeaderFooterGroupLoadOptions {
+  @scala.inline
+  def apply(): HeaderFooterGroupLoadOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[HeaderFooterGroupLoadOptions]
+  }
+  @scala.inline
+  implicit class HeaderFooterGroupLoadOptionsOps[Self <: HeaderFooterGroupLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$all(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$all: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultForAllPages(value: HeaderFooterLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultForAllPages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultForAllPages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultForAllPages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvenPages(value: HeaderFooterLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evenPages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvenPages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evenPages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstPage(value: HeaderFooterLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOddPages(value: HeaderFooterLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oddPages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOddPages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oddPages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseSheetMargins(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useSheetMargins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseSheetMargins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useSheetMargins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseSheetScale(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useSheetScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseSheetScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useSheetScale")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

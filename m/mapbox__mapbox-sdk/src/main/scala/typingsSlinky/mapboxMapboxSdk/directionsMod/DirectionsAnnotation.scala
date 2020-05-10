@@ -14,14 +14,12 @@ trait DirectionsAnnotation extends js.Object
 
 object DirectionsAnnotation {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def congestion: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.congestion = "congestion".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.congestion]
   @scala.inline
-  def congestion: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.congestion = this.cast("congestion")
+  def distance: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.distance = "distance".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.distance]
   @scala.inline
-  def distance: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.distance = this.cast("distance")
+  def duration: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.duration = "duration".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.duration]
   @scala.inline
-  def duration: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.duration = this.cast("duration")
-  @scala.inline
-  def speed: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.speed = this.cast("speed")
+  def speed: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.speed = "speed".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.speed]
 }
 

@@ -33,5 +33,6 @@ trait HTMLEmbedElement extends HTMLElement {
 
 @JSGlobal("HTMLEmbedElement")
 @js.native
-object HTMLEmbedElement extends Instantiable0[HTMLEmbedElement]
+object HTMLEmbedElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLEmbedElement]
 

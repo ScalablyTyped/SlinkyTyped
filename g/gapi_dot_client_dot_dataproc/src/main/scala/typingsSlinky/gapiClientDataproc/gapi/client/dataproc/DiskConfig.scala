@@ -4,24 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DiskConfig extends js.Object {
   /** Optional. Size in GB of the boot disk (default is 500GB). */
-  var bootDiskSizeGb: js.UndefOr[Double] = js.undefined
+  var bootDiskSizeGb: js.UndefOr[Double] = js.native
   /**
     * Optional. Number of attached SSDs, from 0 to 4 (default is 0). If SSDs are not attached, the boot disk is used to store runtime logs and HDFS
     * (https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data. If one or more SSDs are attached, this runtime bulk data is spread across them, and
     * the boot disk contains only basic config and installed binaries.
     */
-  var numLocalSsds: js.UndefOr[Double] = js.undefined
+  var numLocalSsds: js.UndefOr[Double] = js.native
 }
 
 object DiskConfig {
   @scala.inline
-  def apply(bootDiskSizeGb: Int | Double = null, numLocalSsds: Int | Double = null): DiskConfig = {
+  def apply(): DiskConfig = {
     val __obj = js.Dynamic.literal()
-    if (bootDiskSizeGb != null) __obj.updateDynamic("bootDiskSizeGb")(bootDiskSizeGb.asInstanceOf[js.Any])
-    if (numLocalSsds != null) __obj.updateDynamic("numLocalSsds")(numLocalSsds.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiskConfig]
   }
+  @scala.inline
+  implicit class DiskConfigOps[Self <: DiskConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBootDiskSizeGb(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootDiskSizeGb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBootDiskSizeGb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootDiskSizeGb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumLocalSsds(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numLocalSsds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumLocalSsds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numLocalSsds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

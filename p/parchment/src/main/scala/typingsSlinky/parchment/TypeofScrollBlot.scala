@@ -1,9 +1,9 @@
 package typingsSlinky.parchment
 
 import org.scalablytyped.runtime.Instantiable1
+import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.parchment.registryMod.Scope
 import typingsSlinky.parchment.scrollMod.default
-import typingsSlinky.std.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

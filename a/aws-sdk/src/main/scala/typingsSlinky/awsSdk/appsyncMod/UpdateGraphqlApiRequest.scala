@@ -42,24 +42,101 @@ trait UpdateGraphqlApiRequest extends js.Object {
 
 object UpdateGraphqlApiRequest {
   @scala.inline
-  def apply(
-    apiId: String,
-    name: String,
-    additionalAuthenticationProviders: AdditionalAuthenticationProviders = null,
-    authenticationType: AuthenticationType = null,
-    logConfig: LogConfig = null,
-    openIDConnectConfig: OpenIDConnectConfig = null,
-    userPoolConfig: UserPoolConfig = null,
-    xrayEnabled: js.UndefOr[scala.Boolean] = js.undefined
-  ): UpdateGraphqlApiRequest = {
+  def apply(apiId: String, name: String): UpdateGraphqlApiRequest = {
     val __obj = js.Dynamic.literal(apiId = apiId.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (additionalAuthenticationProviders != null) __obj.updateDynamic("additionalAuthenticationProviders")(additionalAuthenticationProviders.asInstanceOf[js.Any])
-    if (authenticationType != null) __obj.updateDynamic("authenticationType")(authenticationType.asInstanceOf[js.Any])
-    if (logConfig != null) __obj.updateDynamic("logConfig")(logConfig.asInstanceOf[js.Any])
-    if (openIDConnectConfig != null) __obj.updateDynamic("openIDConnectConfig")(openIDConnectConfig.asInstanceOf[js.Any])
-    if (userPoolConfig != null) __obj.updateDynamic("userPoolConfig")(userPoolConfig.asInstanceOf[js.Any])
-    if (!js.isUndefined(xrayEnabled)) __obj.updateDynamic("xrayEnabled")(xrayEnabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateGraphqlApiRequest]
   }
+  @scala.inline
+  implicit class UpdateGraphqlApiRequestOps[Self <: UpdateGraphqlApiRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdditionalAuthenticationProviders(value: AdditionalAuthenticationProviders): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalAuthenticationProviders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalAuthenticationProviders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalAuthenticationProviders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthenticationType(value: AuthenticationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthenticationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogConfig(value: LogConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenIDConnectConfig(value: OpenIDConnectConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openIDConnectConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenIDConnectConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openIDConnectConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserPoolConfig(value: UserPoolConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userPoolConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserPoolConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userPoolConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXrayEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xrayEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXrayEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xrayEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

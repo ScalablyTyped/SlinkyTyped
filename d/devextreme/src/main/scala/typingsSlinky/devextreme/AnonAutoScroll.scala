@@ -4,45 +4,153 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAutoScroll extends js.Object {
-  var autoScroll: js.UndefOr[Boolean] = js.undefined
-  var data: js.UndefOr[js.Any] = js.undefined
-  var group: js.UndefOr[String] = js.undefined
-  var onAdd: js.UndefOr[js.Function1[/* e */ AnonToData, _]] = js.undefined
-  var onDragEnd: js.UndefOr[js.Function1[/* e */ AnonCancelEvent, _]] = js.undefined
-  var onDragMove: js.UndefOr[js.Function1[/* e */ AnonCancelEvent, _]] = js.undefined
-  var onDragStart: js.UndefOr[js.Function1[/* e */ AnonFromDataItemData, _]] = js.undefined
-  var onRemove: js.UndefOr[js.Function1[/* e */ AnonEventFromComponent, _]] = js.undefined
-  var scrollSensitivity: js.UndefOr[Double] = js.undefined
-  var scrollSpeed: js.UndefOr[Double] = js.undefined
+  var autoScroll: js.UndefOr[Boolean] = js.native
+  var data: js.UndefOr[js.Any] = js.native
+  var group: js.UndefOr[String] = js.native
+  var onAdd: js.UndefOr[js.Function1[/* e */ AnonToData, _]] = js.native
+  var onDragEnd: js.UndefOr[js.Function1[/* e */ AnonCancelEvent, _]] = js.native
+  var onDragMove: js.UndefOr[js.Function1[/* e */ AnonCancelEvent, _]] = js.native
+  var onDragStart: js.UndefOr[js.Function1[/* e */ AnonFromDataItemData, _]] = js.native
+  var onRemove: js.UndefOr[js.Function1[/* e */ AnonEventFromComponent, _]] = js.native
+  var scrollSensitivity: js.UndefOr[Double] = js.native
+  var scrollSpeed: js.UndefOr[Double] = js.native
 }
 
 object AnonAutoScroll {
   @scala.inline
-  def apply(
-    autoScroll: js.UndefOr[Boolean] = js.undefined,
-    data: js.Any = null,
-    group: String = null,
-    onAdd: /* e */ AnonToData => _ = null,
-    onDragEnd: /* e */ AnonCancelEvent => _ = null,
-    onDragMove: /* e */ AnonCancelEvent => _ = null,
-    onDragStart: /* e */ AnonFromDataItemData => _ = null,
-    onRemove: /* e */ AnonEventFromComponent => _ = null,
-    scrollSensitivity: Int | Double = null,
-    scrollSpeed: Int | Double = null
-  ): AnonAutoScroll = {
+  def apply(): AnonAutoScroll = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoScroll)) __obj.updateDynamic("autoScroll")(autoScroll.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
-    if (onAdd != null) __obj.updateDynamic("onAdd")(js.Any.fromFunction1(onAdd))
-    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(js.Any.fromFunction1(onDragEnd))
-    if (onDragMove != null) __obj.updateDynamic("onDragMove")(js.Any.fromFunction1(onDragMove))
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction1(onDragStart))
-    if (onRemove != null) __obj.updateDynamic("onRemove")(js.Any.fromFunction1(onRemove))
-    if (scrollSensitivity != null) __obj.updateDynamic("scrollSensitivity")(scrollSensitivity.asInstanceOf[js.Any])
-    if (scrollSpeed != null) __obj.updateDynamic("scrollSpeed")(scrollSpeed.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAutoScroll]
   }
+  @scala.inline
+  implicit class AnonAutoScrollOps[Self <: AnonAutoScroll] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoScroll(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScroll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoScroll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScroll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAdd(value: /* e */ AnonToData => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAdd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragEnd(value: /* e */ AnonCancelEvent => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDragEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragMove(value: /* e */ AnonCancelEvent => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragMove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDragMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragStart(value: /* e */ AnonFromDataItemData => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDragStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRemove(value: /* e */ AnonEventFromComponent => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollSensitivity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSensitivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollSensitivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSensitivity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollSpeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSpeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollSpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSpeed")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

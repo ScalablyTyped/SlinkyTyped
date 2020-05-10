@@ -34,12 +34,54 @@ object ListReusableDelegationSetsResponse {
     DelegationSets: DelegationSets,
     IsTruncated: PageTruncated,
     Marker: PageMarker,
-    MaxItems: PageMaxItems,
-    NextMarker: PageMarker = null
+    MaxItems: PageMaxItems
   ): ListReusableDelegationSetsResponse = {
     val __obj = js.Dynamic.literal(DelegationSets = DelegationSets.asInstanceOf[js.Any], IsTruncated = IsTruncated.asInstanceOf[js.Any], Marker = Marker.asInstanceOf[js.Any], MaxItems = MaxItems.asInstanceOf[js.Any])
-    if (NextMarker != null) __obj.updateDynamic("NextMarker")(NextMarker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListReusableDelegationSetsResponse]
   }
+  @scala.inline
+  implicit class ListReusableDelegationSetsResponseOps[Self <: ListReusableDelegationSetsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDelegationSets(value: DelegationSets): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DelegationSets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsTruncated(value: PageTruncated): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMarker(value: PageMarker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxItems(value: PageMaxItems): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextMarker(value: PageMarker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

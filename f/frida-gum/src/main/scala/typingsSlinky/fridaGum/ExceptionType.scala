@@ -19,24 +19,22 @@ trait ExceptionType extends js.Object
 
 object ExceptionType {
   @scala.inline
-  def abort: typingsSlinky.fridaGum.fridaGumStrings.abort = this.cast("abort")
+  def abort: typingsSlinky.fridaGum.fridaGumStrings.abort = "abort".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.abort]
   @scala.inline
-  def `access-violation`: typingsSlinky.fridaGum.fridaGumStrings.`access-violation` = this.cast("access-violation")
+  def `access-violation`: typingsSlinky.fridaGum.fridaGumStrings.`access-violation` = "access-violation".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.`access-violation`]
   @scala.inline
-  def arithmetic: typingsSlinky.fridaGum.fridaGumStrings.arithmetic = this.cast("arithmetic")
+  def arithmetic: typingsSlinky.fridaGum.fridaGumStrings.arithmetic = "arithmetic".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.arithmetic]
   @scala.inline
-  def breakpoint: typingsSlinky.fridaGum.fridaGumStrings.breakpoint = this.cast("breakpoint")
+  def breakpoint: typingsSlinky.fridaGum.fridaGumStrings.breakpoint = "breakpoint".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.breakpoint]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `guard-page`: typingsSlinky.fridaGum.fridaGumStrings.`guard-page` = "guard-page".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.`guard-page`]
   @scala.inline
-  def `guard-page`: typingsSlinky.fridaGum.fridaGumStrings.`guard-page` = this.cast("guard-page")
+  def `illegal-instruction`: typingsSlinky.fridaGum.fridaGumStrings.`illegal-instruction` = "illegal-instruction".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.`illegal-instruction`]
   @scala.inline
-  def `illegal-instruction`: typingsSlinky.fridaGum.fridaGumStrings.`illegal-instruction` = this.cast("illegal-instruction")
+  def `single-step`: typingsSlinky.fridaGum.fridaGumStrings.`single-step` = "single-step".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.`single-step`]
   @scala.inline
-  def `single-step`: typingsSlinky.fridaGum.fridaGumStrings.`single-step` = this.cast("single-step")
+  def `stack-overflow`: typingsSlinky.fridaGum.fridaGumStrings.`stack-overflow` = "stack-overflow".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.`stack-overflow`]
   @scala.inline
-  def `stack-overflow`: typingsSlinky.fridaGum.fridaGumStrings.`stack-overflow` = this.cast("stack-overflow")
-  @scala.inline
-  def system: typingsSlinky.fridaGum.fridaGumStrings.system = this.cast("system")
+  def system: typingsSlinky.fridaGum.fridaGumStrings.system = "system".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.system]
 }
 

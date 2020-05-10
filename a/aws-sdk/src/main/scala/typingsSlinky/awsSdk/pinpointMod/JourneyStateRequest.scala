@@ -14,10 +14,29 @@ trait JourneyStateRequest extends js.Object {
 
 object JourneyStateRequest {
   @scala.inline
-  def apply(State: State = null): JourneyStateRequest = {
+  def apply(): JourneyStateRequest = {
     val __obj = js.Dynamic.literal()
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
     __obj.asInstanceOf[JourneyStateRequest]
   }
+  @scala.inline
+  implicit class JourneyStateRequestOps[Self <: JourneyStateRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withState(value: State): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

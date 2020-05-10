@@ -31,48 +31,46 @@ trait ICSSOverflowAndSelfPositionRule extends js.Object
 
 object ICSSOverflowAndSelfPositionRule {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.center = "center".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.center]
   @scala.inline
-  def center: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.center = this.cast("center")
+  def end: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.end = "end".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.end]
   @scala.inline
-  def end: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.end = this.cast("end")
+  def `flex-end`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`flex-end` = "flex-end".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`flex-end`]
   @scala.inline
-  def `flex-end`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`flex-end` = this.cast("flex-end")
+  def `flex-start`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`flex-start` = "flex-start".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`flex-start`]
   @scala.inline
-  def `flex-start`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`flex-start` = this.cast("flex-start")
+  def `safe center`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe center` = ("safe center").asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe center`]
   @scala.inline
-  def `safe center`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe center` = this.cast("safe center")
+  def `safe end`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe end` = ("safe end").asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe end`]
   @scala.inline
-  def `safe end`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe end` = this.cast("safe end")
+  def `safe flex-end`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe flex-end` = ("safe flex-end").asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe flex-end`]
   @scala.inline
-  def `safe flex-end`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe flex-end` = this.cast("safe flex-end")
+  def `safe flex-start`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe flex-start` = ("safe flex-start").asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe flex-start`]
   @scala.inline
-  def `safe flex-start`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe flex-start` = this.cast("safe flex-start")
+  def `safe self-end`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe self-end` = ("safe self-end").asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe self-end`]
   @scala.inline
-  def `safe self-end`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe self-end` = this.cast("safe self-end")
+  def `safe self-start`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe self-start` = ("safe self-start").asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe self-start`]
   @scala.inline
-  def `safe self-start`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe self-start` = this.cast("safe self-start")
+  def `safe start`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe start` = ("safe start").asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe start`]
   @scala.inline
-  def `safe start`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`safe start` = this.cast("safe start")
+  def `self-end`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`self-end` = "self-end".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`self-end`]
   @scala.inline
-  def `self-end`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`self-end` = this.cast("self-end")
+  def `self-start`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`self-start` = "self-start".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`self-start`]
   @scala.inline
-  def `self-start`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`self-start` = this.cast("self-start")
+  def start: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.start = "start".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.start]
   @scala.inline
-  def start: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.start = this.cast("start")
+  def `unsafe center`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe center` = ("unsafe center").asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe center`]
   @scala.inline
-  def `unsafe center`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe center` = this.cast("unsafe center")
+  def `unsafe end`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe end` = ("unsafe end").asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe end`]
   @scala.inline
-  def `unsafe end`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe end` = this.cast("unsafe end")
+  def `unsafe flex-end`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe flex-end` = ("unsafe flex-end").asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe flex-end`]
   @scala.inline
-  def `unsafe flex-end`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe flex-end` = this.cast("unsafe flex-end")
+  def `unsafe flex-start`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe flex-start` = ("unsafe flex-start").asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe flex-start`]
   @scala.inline
-  def `unsafe flex-start`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe flex-start` = this.cast("unsafe flex-start")
+  def `unsafe self-end`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe self-end` = ("unsafe self-end").asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe self-end`]
   @scala.inline
-  def `unsafe self-end`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe self-end` = this.cast("unsafe self-end")
+  def `unsafe self-start`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe self-start` = ("unsafe self-start").asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe self-start`]
   @scala.inline
-  def `unsafe self-start`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe self-start` = this.cast("unsafe self-start")
-  @scala.inline
-  def `unsafe start`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe start` = this.cast("unsafe start")
+  def `unsafe start`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe start` = ("unsafe start").asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`unsafe start`]
 }
 

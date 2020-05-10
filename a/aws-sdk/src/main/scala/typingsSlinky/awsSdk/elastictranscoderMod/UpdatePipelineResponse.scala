@@ -18,11 +18,41 @@ trait UpdatePipelineResponse extends js.Object {
 
 object UpdatePipelineResponse {
   @scala.inline
-  def apply(Pipeline: Pipeline = null, Warnings: Warnings = null): UpdatePipelineResponse = {
+  def apply(): UpdatePipelineResponse = {
     val __obj = js.Dynamic.literal()
-    if (Pipeline != null) __obj.updateDynamic("Pipeline")(Pipeline.asInstanceOf[js.Any])
-    if (Warnings != null) __obj.updateDynamic("Warnings")(Warnings.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdatePipelineResponse]
   }
+  @scala.inline
+  implicit class UpdatePipelineResponseOps[Self <: UpdatePipelineResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPipeline(value: Pipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pipeline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPipeline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pipeline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarnings(value: Warnings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Warnings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarnings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Warnings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

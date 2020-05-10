@@ -4,9 +4,9 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`avg-rating`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`num-comments`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`num-ratings`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`num-views`
-import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.asc
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.asc_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.created
-import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.desc
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.desc_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.modified
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.owner
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.title
@@ -16,6 +16,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PortalQueryParamsProperties extends js.Object {
   /**
     * An array of categories stored within the item. Use this property to filter the results from [Portal.queryItems()](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#queryItems) and [PortalGroup.queryItems()](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalGroup.html#queryItems). It accepts an array of:
@@ -28,13 +29,13 @@ trait PortalQueryParamsProperties extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html#categories)
     */
-  var categories: js.UndefOr[js.Array[String | js.Array[String]]] = js.undefined
+  var categories: js.UndefOr[js.Array[String | js.Array[String]]] = js.native
   /**
     * Only relevant when querying for [PortalItems](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html). When specified, restricts the results of the query to the extent defined here.  The [spatial reference](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#spatialReference) of the given extent must be WGS84 (wkid 4326) or Web Mercator (wkid 3857).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html#extent)
     */
-  var extent: js.UndefOr[ExtentProperties] = js.undefined
+  var extent: js.UndefOr[ExtentProperties] = js.native
   /**
     * The maximum number of results to be included in the [result](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryResult.html#results) set response. The maximum value allowed is `100`. The [start](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html#start) property combined with the `num` property can be used to paginate the search results.
     *
@@ -42,13 +43,13 @@ trait PortalQueryParamsProperties extends js.Object {
     *
     * @default 10
     */
-  var num: js.UndefOr[Double] = js.undefined
+  var num: js.UndefOr[Double] = js.native
   /**
     * The query string used for the search. View the [ArcGIS REST API Search Reference](https://developers.arcgis.com/rest/users-groups-and-items/search-reference.htm) for details on constructing a valid query.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html#query)
     */
-  var query: js.UndefOr[String] = js.undefined
+  var query: js.UndefOr[String] = js.native
   /**
     * A comma-delimited list of fields to sort. Field names may vary depending on what is being queried. For example, the fields allowed for a user query are much more limited than if performing a basic search query for portal items. A list of possible field names is listed below. These names correspond to either item (search), group, and/or user queries.
     *
@@ -71,7 +72,7 @@ trait PortalQueryParamsProperties extends js.Object {
     */
   var sortField: js.UndefOr[
     title | uploaded | modified | username | created | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`type` | owner | `avg-rating` | `num-ratings` | `num-comments` | `num-views`
-  ] = js.undefined
+  ] = js.native
   /**
     * The order in which to sort the results.
     *
@@ -85,7 +86,7 @@ trait PortalQueryParamsProperties extends js.Object {
     *
     * @default asc
     */
-  var sortOrder: js.UndefOr[asc | desc] = js.undefined
+  var sortOrder: js.UndefOr[asc_ | desc_] = js.native
   /**
     * The index of the first entry in the result set response. The index is 1-based. The [start](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html#start) property, along with the [num](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html#num) property can be used to paginate the search results.
     *
@@ -93,29 +94,108 @@ trait PortalQueryParamsProperties extends js.Object {
     *
     * @default 1
     */
-  var start: js.UndefOr[Double] = js.undefined
+  var start: js.UndefOr[Double] = js.native
 }
 
 object PortalQueryParamsProperties {
   @scala.inline
-  def apply(
-    categories: js.Array[String | js.Array[String]] = null,
-    extent: ExtentProperties = null,
-    num: Int | Double = null,
-    query: String = null,
-    sortField: title | uploaded | modified | username | created | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`type` | owner | `avg-rating` | `num-ratings` | `num-comments` | `num-views` = null,
-    sortOrder: asc | desc = null,
-    start: Int | Double = null
-  ): PortalQueryParamsProperties = {
+  def apply(): PortalQueryParamsProperties = {
     val __obj = js.Dynamic.literal()
-    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
-    if (extent != null) __obj.updateDynamic("extent")(extent.asInstanceOf[js.Any])
-    if (num != null) __obj.updateDynamic("num")(num.asInstanceOf[js.Any])
-    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
-    if (sortField != null) __obj.updateDynamic("sortField")(sortField.asInstanceOf[js.Any])
-    if (sortOrder != null) __obj.updateDynamic("sortOrder")(sortOrder.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
     __obj.asInstanceOf[PortalQueryParamsProperties]
   }
+  @scala.inline
+  implicit class PortalQueryParamsPropertiesOps[Self <: PortalQueryParamsProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCategories(value: js.Array[String | js.Array[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategories: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtent(value: ExtentProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNum(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("num")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("num")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuery(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortField(
+      value: title | uploaded | modified | username | created | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`type` | owner | `avg-rating` | `num-ratings` | `num-comments` | `num-views`
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortOrder(value: asc_ | desc_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,9 +1,7 @@
 package typingsSlinky.antdMobileRn.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.antdMobileRn.AnonDatePicker
 import typingsSlinky.antdMobileRn.localeProviderMod.LocaleProviderProps
 import typingsSlinky.antdMobileRn.localeProviderMod.default
@@ -11,18 +9,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LocaleProvider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object LocaleProvider {
   @JSImport("antd-mobile-rn/lib/locale-provider/locale-provider", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(locale: AnonDatePicker, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: LocaleProviderProps): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(locale: AnonDatePicker): Default[tag.type, default] = {
+    val __props = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any])
+    new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[LocaleProviderProps]))
   }
-  type Props = LocaleProviderProps
 }
 

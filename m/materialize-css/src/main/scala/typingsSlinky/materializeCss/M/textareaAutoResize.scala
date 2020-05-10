@@ -1,8 +1,8 @@
 package typingsSlinky.materializeCss.M
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.cash.Cash_
 import typingsSlinky.materializeCss.JQuery
-import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,11 +1,8 @@
 package typingsSlinky.cathoQuantum.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.cathoQuantum.AnonBaseFontSize
 import typingsSlinky.cathoQuantum.dropdownMod.DropdownProps
 import typingsSlinky.cathoQuantum.dropdownMod.ItemPropType
@@ -14,38 +11,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Dropdown
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Dropdown {
   @JSImport("@catho/quantum/Dropdown", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, id, label, placeholder, required */
-  def apply(
-    autocomplete: js.UndefOr[Boolean] = js.undefined,
-    error: String = null,
-    helperText: String = null,
-    ignoreSpecialChars: js.UndefOr[Boolean] = js.undefined,
-    items: js.Array[ItemPropType] = null,
-    onChange: (/* selectedItem */ js.UndefOr[ReactElement | Null], /* stateAndHelpers */ js.UndefOr[js.Any]) => Unit = null,
-    selectedItem: ItemPropType = null,
-    theme: AnonBaseFontSize = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autocomplete)) __obj.updateDynamic("autocomplete")(autocomplete.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (helperText != null) __obj.updateDynamic("helperText")(helperText.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreSpecialChars)) __obj.updateDynamic("ignoreSpecialChars")(ignoreSpecialChars.asInstanceOf[js.Any])
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (selectedItem != null) __obj.updateDynamic("selectedItem")(selectedItem.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def autocomplete(value: Boolean): this.type = set("autocomplete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def error(value: String): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def helperText(value: String): this.type = set("helperText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ignoreSpecialChars(value: Boolean): this.type = set("ignoreSpecialChars", value.asInstanceOf[js.Any])
+    @scala.inline
+    def items(value: js.Array[ItemPropType]): this.type = set("items", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(
+      value: (/* selectedItem */ js.UndefOr[ReactElement | Null], /* stateAndHelpers */ js.UndefOr[js.Any]) => Unit
+    ): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedItem(value: ItemPropType): this.type = set("selectedItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: AnonBaseFontSize): this.type = set("theme", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.cathoQuantum.dropdownMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DropdownProps
+  
+  def withProps(p: DropdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Dropdown.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

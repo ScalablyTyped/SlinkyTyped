@@ -22,8 +22,27 @@ object StageAccessLogSettings {
   @scala.inline
   def apply(destinationArn: Input[String], format: Input[String]): StageAccessLogSettings = {
     val __obj = js.Dynamic.literal(destinationArn = destinationArn.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[StageAccessLogSettings]
   }
+  @scala.inline
+  implicit class StageAccessLogSettingsOps[Self <: StageAccessLogSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestinationArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFormat(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,40 +1,36 @@
 package typingsSlinky.materialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.touchRippleMod.TouchRippleProps
 import typingsSlinky.materialUi.touchRippleMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TouchRipple
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object TouchRipple {
   @JSImport("material-ui/internal/TouchRipple", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: style */
-  def apply(
-    abortOnScroll: js.UndefOr[Boolean] = js.undefined,
-    centerRipple: js.UndefOr[Boolean] = js.undefined,
-    color: String = null,
-    opacity: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(abortOnScroll)) __obj.updateDynamic("abortOnScroll")(abortOnScroll.asInstanceOf[js.Any])
-    if (!js.isUndefined(centerRipple)) __obj.updateDynamic("centerRipple")(centerRipple.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def abortOnScroll(value: Boolean): this.type = set("abortOnScroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def centerRipple(value: Boolean): this.type = set("centerRipple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def opacity(value: Double): this.type = set("opacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.materialUi.touchRippleMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TouchRippleProps
+  
+  def withProps(p: TouchRippleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TouchRipple.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.firebaseStorage
 
+import org.scalajs.dom.raw.Blob
 import typingsSlinky.firebaseStorage.authwrapperMod.AuthWrapper
 import typingsSlinky.firebaseStorage.locationMod.Location
 import typingsSlinky.firebaseStorage.metadataMod.Mappings
@@ -9,9 +10,6 @@ import typingsSlinky.firebaseStorage.srcListMod.ListResult
 import typingsSlinky.firebaseStorage.srcMetadataMod.Metadata
 import typingsSlinky.firebaseStorage.stringMod.StringFormat
 import typingsSlinky.firebaseStorage.taskMod.UploadTask
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.Blob
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +25,7 @@ object referenceMod extends js.Object {
     var listAllHelper: js.Any = js.native
     var location: Location = js.native
     var throwIfRoot_ : js.Any = js.native
-    def bucket(): String = js.native
+    def bucket: String = js.native
     /**
       * @return A reference to the object obtained by
       *     appending childPath, removing any duplicate, beginning, or trailing
@@ -39,7 +37,7 @@ object referenceMod extends js.Object {
       * @return A promise that resolves if the deletion succeeds.
       */
     def delete(): js.Promise[Unit] = js.native
-    def fullPath(): String = js.native
+    def fullPath: String = js.native
     /**
       * @return A promise that resolves with the download
       *     URL for this object.
@@ -92,15 +90,15 @@ object referenceMod extends js.Object {
       */
     def listAll(): js.Promise[ListResult] = js.native
     /* protected */ def mappings(): Mappings = js.native
-    def name(): String = js.native
+    def name: String = js.native
     /* protected */ def newRef(authWrapper: AuthWrapper, location: Location): Reference = js.native
     /**
       * @return A reference to the parent of the
       *     current object, or null if the current object is the root.
       */
-    def parent(): Reference | Null = js.native
-    def put(data: ArrayBuffer): UploadTask = js.native
-    def put(data: ArrayBuffer, metadata: Metadata): UploadTask = js.native
+    def parent: Reference | Null = js.native
+    def put(data: js.typedarray.ArrayBuffer): UploadTask = js.native
+    def put(data: js.typedarray.ArrayBuffer, metadata: Metadata): UploadTask = js.native
     /**
       * Uploads a blob to this object's location.
       * @param data The blob to upload.
@@ -109,8 +107,8 @@ object referenceMod extends js.Object {
       */
     def put(data: Blob): UploadTask = js.native
     def put(data: Blob, metadata: Metadata): UploadTask = js.native
-    def put(data: Uint8Array): UploadTask = js.native
-    def put(data: Uint8Array, metadata: Metadata): UploadTask = js.native
+    def put(data: js.typedarray.Uint8Array): UploadTask = js.native
+    def put(data: js.typedarray.Uint8Array, metadata: Metadata): UploadTask = js.native
     /**
       * Uploads a string to this object's location.
       * @param value The string to upload.
@@ -125,8 +123,8 @@ object referenceMod extends js.Object {
       * @return An reference to the root of this
       *     object's bucket.
       */
-    def root(): Reference = js.native
-    def storage(): Service = js.native
+    def root: Reference = js.native
+    def storage: Service = js.native
     /**
       * Updates the metadata for this object.
       * @param metadata The new metadata for the object.

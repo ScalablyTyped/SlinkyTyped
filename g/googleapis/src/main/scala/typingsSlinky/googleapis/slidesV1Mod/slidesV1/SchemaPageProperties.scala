@@ -28,11 +28,41 @@ trait SchemaPageProperties extends js.Object {
 
 object SchemaPageProperties {
   @scala.inline
-  def apply(colorScheme: SchemaColorScheme = null, pageBackgroundFill: SchemaPageBackgroundFill = null): SchemaPageProperties = {
+  def apply(): SchemaPageProperties = {
     val __obj = js.Dynamic.literal()
-    if (colorScheme != null) __obj.updateDynamic("colorScheme")(colorScheme.asInstanceOf[js.Any])
-    if (pageBackgroundFill != null) __obj.updateDynamic("pageBackgroundFill")(pageBackgroundFill.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPageProperties]
   }
+  @scala.inline
+  implicit class SchemaPagePropertiesOps[Self <: SchemaPageProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColorScheme(value: SchemaColorScheme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScheme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorScheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScheme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageBackgroundFill(value: SchemaPageBackgroundFill): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageBackgroundFill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageBackgroundFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageBackgroundFill")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -60,3 +60,91 @@ trait ParamsResourceProjectsLocationsTransferconfigsPatch extends StandardParame
   var versionInfo: js.UndefOr[String] = js.native
 }
 
+object ParamsResourceProjectsLocationsTransferconfigsPatch {
+  @scala.inline
+  def apply(): ParamsResourceProjectsLocationsTransferconfigsPatch = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ParamsResourceProjectsLocationsTransferconfigsPatch]
+  }
+  @scala.inline
+  implicit class ParamsResourceProjectsLocationsTransferconfigsPatchOps[Self <: ParamsResourceProjectsLocationsTransferconfigsPatch] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthorizationCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizationCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestBody(value: SchemaTransferConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateMask(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateMask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionInfo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionInfo")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

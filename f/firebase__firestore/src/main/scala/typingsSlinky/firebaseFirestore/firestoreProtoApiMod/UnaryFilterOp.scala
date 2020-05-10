@@ -13,12 +13,10 @@ trait UnaryFilterOp extends js.Object
 
 object UnaryFilterOp {
   @scala.inline
-  def IS_NAN: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.IS_NAN = this.cast("IS_NAN")
+  def IS_NAN: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.IS_NAN = "IS_NAN".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.IS_NAN]
   @scala.inline
-  def IS_NULL: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.IS_NULL = this.cast("IS_NULL")
+  def IS_NULL: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.IS_NULL = "IS_NULL".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.IS_NULL]
   @scala.inline
-  def OPERATOR_UNSPECIFIED: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.OPERATOR_UNSPECIFIED = this.cast("OPERATOR_UNSPECIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def OPERATOR_UNSPECIFIED: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.OPERATOR_UNSPECIFIED = "OPERATOR_UNSPECIFIED".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.OPERATOR_UNSPECIFIED]
 }
 

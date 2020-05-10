@@ -4,19 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonParamsAnonCommentidContent extends js.Object {
-  var headers: AnonAccept
-  var method: String
-  var params: AnonCommentidContent
-  var url: String
+  var headers: AnonAccept = js.native
+  var method: String = js.native
+  var params: AnonCommentidContent = js.native
+  var url: String = js.native
 }
 
 object AnonParamsAnonCommentidContent {
   @scala.inline
   def apply(headers: AnonAccept, method: String, params: AnonCommentidContent, url: String): AnonParamsAnonCommentidContent = {
     val __obj = js.Dynamic.literal(headers = headers.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonParamsAnonCommentidContent]
   }
+  @scala.inline
+  implicit class AnonParamsAnonCommentidContentOps[Self <: AnonParamsAnonCommentidContent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeaders(value: AnonAccept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParams(value: AnonCommentidContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -4,23 +4,65 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Quota extends js.Object {
   /** [Output Only] Quota limit for this metric. */
-  var limit: js.UndefOr[Double] = js.undefined
+  var limit: js.UndefOr[Double] = js.native
   /** [Output Only] Name of the quota metric. */
-  var metric: js.UndefOr[String] = js.undefined
+  var metric: js.UndefOr[String] = js.native
   /** [Output Only] Current usage of this metric. */
-  var usage: js.UndefOr[Double] = js.undefined
+  var usage: js.UndefOr[Double] = js.native
 }
 
 object Quota {
   @scala.inline
-  def apply(limit: Int | Double = null, metric: String = null, usage: Int | Double = null): Quota = {
+  def apply(): Quota = {
     val __obj = js.Dynamic.literal()
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (metric != null) __obj.updateDynamic("metric")(metric.asInstanceOf[js.Any])
-    if (usage != null) __obj.updateDynamic("usage")(usage.asInstanceOf[js.Any])
     __obj.asInstanceOf[Quota]
   }
+  @scala.inline
+  implicit class QuotaOps[Self <: Quota] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetric(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetric: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

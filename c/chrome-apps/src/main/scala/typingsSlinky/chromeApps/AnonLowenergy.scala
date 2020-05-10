@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonLowenergy extends js.Object {
-  var low_energy: js.UndefOr[Boolean] = js.undefined
-  var peripheral: js.UndefOr[Boolean] = js.undefined
-  var socket: js.UndefOr[Boolean] = js.undefined
-  var uuids: js.UndefOr[js.Array[String]] = js.undefined
+  var low_energy: js.UndefOr[Boolean] = js.native
+  var peripheral: js.UndefOr[Boolean] = js.native
+  var socket: js.UndefOr[Boolean] = js.native
+  var uuids: js.UndefOr[js.Array[String]] = js.native
 }
 
 object AnonLowenergy {
   @scala.inline
-  def apply(
-    low_energy: js.UndefOr[Boolean] = js.undefined,
-    peripheral: js.UndefOr[Boolean] = js.undefined,
-    socket: js.UndefOr[Boolean] = js.undefined,
-    uuids: js.Array[String] = null
-  ): AnonLowenergy = {
+  def apply(): AnonLowenergy = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(low_energy)) __obj.updateDynamic("low_energy")(low_energy.asInstanceOf[js.Any])
-    if (!js.isUndefined(peripheral)) __obj.updateDynamic("peripheral")(peripheral.asInstanceOf[js.Any])
-    if (!js.isUndefined(socket)) __obj.updateDynamic("socket")(socket.asInstanceOf[js.Any])
-    if (uuids != null) __obj.updateDynamic("uuids")(uuids.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonLowenergy]
   }
+  @scala.inline
+  implicit class AnonLowenergyOps[Self <: AnonLowenergy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLow_energy(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("low_energy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLow_energy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("low_energy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeripheral(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("peripheral")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeripheral: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("peripheral")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSocket(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSocket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socket")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUuids(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uuids")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUuids: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uuids")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

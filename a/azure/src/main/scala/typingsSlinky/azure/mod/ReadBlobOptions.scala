@@ -4,39 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReadBlobOptions extends GetBlobPropertiesOptions {
-  var disableContentMD5Validation: js.UndefOr[Boolean] = js.undefined
-  var rangeEnd: js.UndefOr[String] = js.undefined
-  var rangeStart: js.UndefOr[String] = js.undefined
-  var useTransactionalMD5: js.UndefOr[Boolean] = js.undefined
+  var disableContentMD5Validation: js.UndefOr[Boolean] = js.native
+  var rangeEnd: js.UndefOr[String] = js.native
+  var rangeStart: js.UndefOr[String] = js.native
+  var useTransactionalMD5: js.UndefOr[Boolean] = js.native
 }
 
 object ReadBlobOptions {
   @scala.inline
-  def apply(
-    accessConditions: StorageAccessCondition = null,
-    disableContentMD5Validation: js.UndefOr[Boolean] = js.undefined,
-    leaseId: String = null,
-    locationMode: String = null,
-    maximumExecutionTimeInMs: Int | Double = null,
-    rangeEnd: String = null,
-    rangeStart: String = null,
-    snapshotId: String = null,
-    timeoutIntervalInMs: Int | Double = null,
-    useTransactionalMD5: js.UndefOr[Boolean] = js.undefined
-  ): ReadBlobOptions = {
+  def apply(): ReadBlobOptions = {
     val __obj = js.Dynamic.literal()
-    if (accessConditions != null) __obj.updateDynamic("accessConditions")(accessConditions.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableContentMD5Validation)) __obj.updateDynamic("disableContentMD5Validation")(disableContentMD5Validation.asInstanceOf[js.Any])
-    if (leaseId != null) __obj.updateDynamic("leaseId")(leaseId.asInstanceOf[js.Any])
-    if (locationMode != null) __obj.updateDynamic("locationMode")(locationMode.asInstanceOf[js.Any])
-    if (maximumExecutionTimeInMs != null) __obj.updateDynamic("maximumExecutionTimeInMs")(maximumExecutionTimeInMs.asInstanceOf[js.Any])
-    if (rangeEnd != null) __obj.updateDynamic("rangeEnd")(rangeEnd.asInstanceOf[js.Any])
-    if (rangeStart != null) __obj.updateDynamic("rangeStart")(rangeStart.asInstanceOf[js.Any])
-    if (snapshotId != null) __obj.updateDynamic("snapshotId")(snapshotId.asInstanceOf[js.Any])
-    if (timeoutIntervalInMs != null) __obj.updateDynamic("timeoutIntervalInMs")(timeoutIntervalInMs.asInstanceOf[js.Any])
-    if (!js.isUndefined(useTransactionalMD5)) __obj.updateDynamic("useTransactionalMD5")(useTransactionalMD5.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadBlobOptions]
   }
+  @scala.inline
+  implicit class ReadBlobOptionsOps[Self <: ReadBlobOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisableContentMD5Validation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableContentMD5Validation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableContentMD5Validation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableContentMD5Validation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeEnd(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeStart(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseTransactionalMD5(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useTransactionalMD5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseTransactionalMD5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useTransactionalMD5")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

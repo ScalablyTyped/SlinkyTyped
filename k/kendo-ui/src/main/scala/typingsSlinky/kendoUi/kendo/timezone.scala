@@ -1,6 +1,5 @@
 package typingsSlinky.kendoUi.kendo
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,10 +17,10 @@ object timezone extends js.Object {
   def convert(targetDate: js.Date, fromOffset: Double, toOffset: String): js.Date = js.native
   def convert(targetDate: js.Date, fromOffset: Double, toOffset: Double): js.Date = js.native
   def offset(utcTime: Double, timezone: String): Double = js.native
-  def offset(utcTime: Date, timezone: String): Double = js.native
+  def offset(utcTime: js.Date, timezone: String): Double = js.native
   def remove(targetDate: js.Date, offset: String): js.Date = js.native
   def remove(targetDate: js.Date, offset: Double): js.Date = js.native
   def toLocalDate(targetDate: Double): js.Date = js.native
-  def toLocalDate(targetDate: Date): js.Date = js.native
+  def toLocalDate(targetDate: js.Date): js.Date = js.native
 }
 

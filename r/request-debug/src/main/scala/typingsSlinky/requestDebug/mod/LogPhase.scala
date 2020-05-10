@@ -14,14 +14,12 @@ trait LogPhase extends js.Object
 
 object LogPhase {
   @scala.inline
-  def auth: typingsSlinky.requestDebug.requestDebugStrings.auth = this.cast("auth")
+  def auth: typingsSlinky.requestDebug.requestDebugStrings.auth = "auth".asInstanceOf[typingsSlinky.requestDebug.requestDebugStrings.auth]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def redirect: typingsSlinky.requestDebug.requestDebugStrings.redirect = "redirect".asInstanceOf[typingsSlinky.requestDebug.requestDebugStrings.redirect]
   @scala.inline
-  def redirect: typingsSlinky.requestDebug.requestDebugStrings.redirect = this.cast("redirect")
+  def request: typingsSlinky.requestDebug.requestDebugStrings.request = "request".asInstanceOf[typingsSlinky.requestDebug.requestDebugStrings.request]
   @scala.inline
-  def request: typingsSlinky.requestDebug.requestDebugStrings.request = this.cast("request")
-  @scala.inline
-  def response: typingsSlinky.requestDebug.requestDebugStrings.response = this.cast("response")
+  def response: typingsSlinky.requestDebug.requestDebugStrings.response = "response".asInstanceOf[typingsSlinky.requestDebug.requestDebugStrings.response]
 }
 

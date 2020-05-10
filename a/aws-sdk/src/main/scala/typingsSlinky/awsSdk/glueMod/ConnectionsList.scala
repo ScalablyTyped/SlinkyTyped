@@ -14,10 +14,29 @@ trait ConnectionsList extends js.Object {
 
 object ConnectionsList {
   @scala.inline
-  def apply(Connections: OrchestrationStringList = null): ConnectionsList = {
+  def apply(): ConnectionsList = {
     val __obj = js.Dynamic.literal()
-    if (Connections != null) __obj.updateDynamic("Connections")(Connections.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectionsList]
   }
+  @scala.inline
+  implicit class ConnectionsListOps[Self <: ConnectionsList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnections(value: OrchestrationStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Connections")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnections: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Connections")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

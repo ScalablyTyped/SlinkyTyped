@@ -5,8 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnimationTimeline extends js.Object {
-  val currentTime: Double | Null
+  val currentTime: Double | Null = js.native
 }
 
 @JSGlobal("AnimationTimeline")

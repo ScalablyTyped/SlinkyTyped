@@ -22,3 +22,25 @@ trait IDoCheck extends js.Object {
   def $doCheck(): Unit = js.native
 }
 
+object IDoCheck {
+  @scala.inline
+  def apply($doCheck: () => Unit): IDoCheck = {
+    val __obj = js.Dynamic.literal($doCheck = js.Any.fromFunction0($doCheck))
+    __obj.asInstanceOf[IDoCheck]
+  }
+  @scala.inline
+  implicit class IDoCheckOps[Self <: IDoCheck] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$doCheck(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$doCheck")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
+}
+

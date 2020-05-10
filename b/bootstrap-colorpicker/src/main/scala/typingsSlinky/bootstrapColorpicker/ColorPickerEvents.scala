@@ -17,20 +17,18 @@ trait ColorPickerEvents extends js.Object
 
 object ColorPickerEvents {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def changeColor: typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.changeColor = "changeColor".asInstanceOf[typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.changeColor]
   @scala.inline
-  def changeColor: typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.changeColor = this.cast("changeColor")
+  def create: typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.create = "create".asInstanceOf[typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.create]
   @scala.inline
-  def create: typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.create = this.cast("create")
+  def destroy: typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.destroy = "destroy".asInstanceOf[typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.destroy]
   @scala.inline
-  def destroy: typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.destroy = this.cast("destroy")
+  def disable: typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.disable = "disable".asInstanceOf[typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.disable]
   @scala.inline
-  def disable: typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.disable = this.cast("disable")
+  def enable: typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.enable = "enable".asInstanceOf[typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.enable]
   @scala.inline
-  def enable: typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.enable = this.cast("enable")
+  def hidePicker: typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.hidePicker = "hidePicker".asInstanceOf[typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.hidePicker]
   @scala.inline
-  def hidePicker: typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.hidePicker = this.cast("hidePicker")
-  @scala.inline
-  def showPicker: typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.showPicker = this.cast("showPicker")
+  def showPicker: typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.showPicker = "showPicker".asInstanceOf[typingsSlinky.bootstrapColorpicker.bootstrapColorpickerStrings.showPicker]
 }
 

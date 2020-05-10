@@ -14,12 +14,53 @@ trait Partialdurationnumberstri extends js.Object {
 
 object Partialdurationnumberstri {
   @scala.inline
-  def apply(delay: Double | String = null, duration: Double | String = null, easing: String = null): Partialdurationnumberstri = {
+  def apply(): Partialdurationnumberstri = {
     val __obj = js.Dynamic.literal()
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
     __obj.asInstanceOf[Partialdurationnumberstri]
   }
+  @scala.inline
+  implicit class PartialdurationnumberstriOps[Self <: Partialdurationnumberstri] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDelay(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEasing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,11 +12,41 @@ trait DescribeFlowResponse extends js.Object {
 
 object DescribeFlowResponse {
   @scala.inline
-  def apply(Flow: Flow = null, Messages: Messages = null): DescribeFlowResponse = {
+  def apply(): DescribeFlowResponse = {
     val __obj = js.Dynamic.literal()
-    if (Flow != null) __obj.updateDynamic("Flow")(Flow.asInstanceOf[js.Any])
-    if (Messages != null) __obj.updateDynamic("Messages")(Messages.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeFlowResponse]
   }
+  @scala.inline
+  implicit class DescribeFlowResponseOps[Self <: DescribeFlowResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFlow(value: Flow): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Flow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Flow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessages(value: Messages): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Messages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Messages")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

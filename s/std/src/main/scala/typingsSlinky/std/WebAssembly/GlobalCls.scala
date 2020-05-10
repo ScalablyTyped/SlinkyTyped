@@ -9,7 +9,5 @@ import scala.scalajs.js.annotation._
 class GlobalCls protected () extends Global {
   def this(descriptor: GlobalDescriptor) = this()
   def this(descriptor: GlobalDescriptor, v: js.Any) = this()
-  /* CompleteClass */
-  override var value: js.Any = js.native
 }
 

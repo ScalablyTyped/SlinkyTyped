@@ -5,17 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonOptionOriginalEvent extends js.Object {
-  var option: js.Any
-  var originalEvent: Event_
+  var option: js.Any = js.native
+  var originalEvent: Event_ = js.native
 }
 
 object AnonOptionOriginalEvent {
   @scala.inline
   def apply(option: js.Any, originalEvent: Event_): AnonOptionOriginalEvent = {
     val __obj = js.Dynamic.literal(option = option.asInstanceOf[js.Any], originalEvent = originalEvent.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonOptionOriginalEvent]
   }
+  @scala.inline
+  implicit class AnonOptionOriginalEventOps[Self <: AnonOptionOriginalEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOption(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("option")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOriginalEvent(value: Event_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

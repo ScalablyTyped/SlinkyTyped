@@ -1,11 +1,11 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactRef
+import slinky.web.SyntheticFocusEvent
+import slinky.web.SyntheticMouseEvent
 import slinky.web.html.input.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.baseuiStrings.bottom
 import typingsSlinky.baseui.baseuiStrings.left
 import typingsSlinky.baseui.baseuiStrings.right
@@ -19,42 +19,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Radio
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.radioMod.Radio] {
+object Radio {
   @JSImport("baseui/radio", "Radio")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, checked, disabled, name, onBlur, onFocus, onMouseDown, onMouseEnter, onMouseLeave, onMouseUp, required */
-  def apply(
-    description: String = null,
-    inputRef: Ref[HTMLInputElement] = null,
-    isError: js.UndefOr[Boolean] = js.undefined,
-    isFocusVisible: js.UndefOr[Boolean] = js.undefined,
-    isFocused: js.UndefOr[Boolean] = js.undefined,
-    labelPlacement: top | right | bottom | left = null,
-    onChange: ChangeEvent[HTMLInputElement] => Unit = null,
-    overrides: RadioOverrides with RadioGroupOverrides = null,
-    tabIndex: String = null,
-    value: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.baseui.radioMod.Radio] = {
-    val __obj = js.Dynamic.literal()
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (inputRef != null) __obj.updateDynamic("inputRef")(inputRef.asInstanceOf[js.Any])
-    if (!js.isUndefined(isError)) __obj.updateDynamic("isError")(isError.asInstanceOf[js.Any])
-    if (!js.isUndefined(isFocusVisible)) __obj.updateDynamic("isFocusVisible")(isFocusVisible.asInstanceOf[js.Any])
-    if (!js.isUndefined(isFocused)) __obj.updateDynamic("isFocused")(isFocused.asInstanceOf[js.Any])
-    if (labelPlacement != null) __obj.updateDynamic("labelPlacement")(labelPlacement.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.radioMod.Radio] {
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def description(value: String): this.type = set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputRefRefObject(value: ReactRef[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputRefFunction1(value: /* instance */ HTMLInputElement | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def inputRef(value: Ref[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputRefNull: this.type = set("inputRef", null)
+    @scala.inline
+    def isError(value: Boolean): this.type = set("isError", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isFocusVisible(value: Boolean): this.type = set("isFocusVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isFocused(value: Boolean): this.type = set("isFocused", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelPlacement(value: top | right | bottom | left): this.type = set("labelPlacement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBlur(value: SyntheticFocusEvent[HTMLInputElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: ChangeEvent[HTMLInputElement] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFocus(value: SyntheticFocusEvent[HTMLInputElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseDown(value: SyntheticMouseEvent[HTMLInputElement] => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseEnter(value: SyntheticMouseEvent[HTMLInputElement] => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseLeave(value: SyntheticMouseEvent[HTMLInputElement] => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseUp(value: SyntheticMouseEvent[HTMLInputElement] => Unit): this.type = set("onMouseUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def overrides(value: RadioOverrides with RadioGroupOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabIndex(value: String): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.radioMod.Radio] = new slinky.core.BuildingComponent[slinky.web.html.input.tag.type, typingsSlinky.baseui.radioMod.Radio](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = RadioProps
+  
+  def withProps(p: RadioProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Radio.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

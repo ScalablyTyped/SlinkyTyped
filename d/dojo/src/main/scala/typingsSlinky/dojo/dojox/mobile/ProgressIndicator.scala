@@ -21,7 +21,7 @@ import scala.scalajs.js.annotation._
   * that indicates the current task is ongoing.
   *
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dijit.Contained because Inheritance from two classes. Inlined getIndexInParent, getNextSibling, getPreviousSibling */ @JSGlobal("dojox.mobile.ProgressIndicator")
 @js.native
 class ProgressIndicator () extends WidgetBase {

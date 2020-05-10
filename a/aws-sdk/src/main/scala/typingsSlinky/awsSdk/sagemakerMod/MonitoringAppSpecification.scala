@@ -30,19 +30,71 @@ trait MonitoringAppSpecification extends js.Object {
 
 object MonitoringAppSpecification {
   @scala.inline
-  def apply(
-    ImageUri: ImageUri,
-    ContainerArguments: MonitoringContainerArguments = null,
-    ContainerEntrypoint: ContainerEntrypoint = null,
-    PostAnalyticsProcessorSourceUri: S3Uri = null,
-    RecordPreprocessorSourceUri: S3Uri = null
-  ): MonitoringAppSpecification = {
+  def apply(ImageUri: ImageUri): MonitoringAppSpecification = {
     val __obj = js.Dynamic.literal(ImageUri = ImageUri.asInstanceOf[js.Any])
-    if (ContainerArguments != null) __obj.updateDynamic("ContainerArguments")(ContainerArguments.asInstanceOf[js.Any])
-    if (ContainerEntrypoint != null) __obj.updateDynamic("ContainerEntrypoint")(ContainerEntrypoint.asInstanceOf[js.Any])
-    if (PostAnalyticsProcessorSourceUri != null) __obj.updateDynamic("PostAnalyticsProcessorSourceUri")(PostAnalyticsProcessorSourceUri.asInstanceOf[js.Any])
-    if (RecordPreprocessorSourceUri != null) __obj.updateDynamic("RecordPreprocessorSourceUri")(RecordPreprocessorSourceUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[MonitoringAppSpecification]
   }
+  @scala.inline
+  implicit class MonitoringAppSpecificationOps[Self <: MonitoringAppSpecification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImageUri(value: ImageUri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContainerArguments(value: MonitoringContainerArguments): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerArguments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerArguments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerArguments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerEntrypoint(value: ContainerEntrypoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerEntrypoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerEntrypoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerEntrypoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostAnalyticsProcessorSourceUri(value: S3Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PostAnalyticsProcessorSourceUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostAnalyticsProcessorSourceUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PostAnalyticsProcessorSourceUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecordPreprocessorSourceUri(value: S3Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordPreprocessorSourceUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecordPreprocessorSourceUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordPreprocessorSourceUri")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

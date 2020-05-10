@@ -1,10 +1,9 @@
 package typingsSlinky.storybookComponents.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.popperJs.mod.Modifiers
 import typingsSlinky.popperJs.mod.Placement
 import typingsSlinky.storybookComponents.storybookComponentsStrings.`right-click`
@@ -17,39 +16,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object WithTooltipPure
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object WithTooltipPure {
   @JSImport("@storybook/components", "WithTooltipPure")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    tooltip: TagMod[Any] | (js.Function1[/* p */ WithHideFn, TagMod[Any]]),
-    closeOnClick: js.UndefOr[Boolean] = js.undefined,
-    hasChrome: js.UndefOr[Boolean] = js.undefined,
-    modifiers: Modifiers = null,
-    onDoubleClick: () => Unit = null,
-    onVisibilityChange: /* visibility */ Boolean => Unit = null,
-    placement: Placement = null,
-    svg: js.UndefOr[Boolean] = js.undefined,
-    tooltipShown: js.UndefOr[Boolean] = js.undefined,
-    trigger: none | hover | click | `right-click` = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(tooltip = tooltip.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnClick)) __obj.updateDynamic("closeOnClick")(closeOnClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasChrome)) __obj.updateDynamic("hasChrome")(hasChrome.asInstanceOf[js.Any])
-    if (modifiers != null) __obj.updateDynamic("modifiers")(modifiers.asInstanceOf[js.Any])
-    if (onDoubleClick != null) __obj.updateDynamic("onDoubleClick")(js.Any.fromFunction0(onDoubleClick))
-    if (onVisibilityChange != null) __obj.updateDynamic("onVisibilityChange")(js.Any.fromFunction1(onVisibilityChange))
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (!js.isUndefined(svg)) __obj.updateDynamic("svg")(svg.asInstanceOf[js.Any])
-    if (!js.isUndefined(tooltipShown)) __obj.updateDynamic("tooltipShown")(tooltipShown.asInstanceOf[js.Any])
-    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def closeOnClick(value: Boolean): this.type = set("closeOnClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hasChrome(value: Boolean): this.type = set("hasChrome", value.asInstanceOf[js.Any])
+    @scala.inline
+    def modifiers(value: Modifiers): this.type = set("modifiers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDoubleClick(value: () => Unit): this.type = set("onDoubleClick", js.Any.fromFunction0(value))
+    @scala.inline
+    def onVisibilityChange(value: /* visibility */ Boolean => Unit): this.type = set("onVisibilityChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def placement(value: Placement): this.type = set("placement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def svg(value: Boolean): this.type = set("svg", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipReactElement(value: ReactElement): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipFunction1(value: /* p */ WithHideFn => TagMod[Any]): this.type = set("tooltip", js.Any.fromFunction1(value))
+    @scala.inline
+    def tooltip(value: TagMod[Any] | (js.Function1[/* p */ WithHideFn, TagMod[Any]])): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipShown(value: Boolean): this.type = set("tooltipShown", value.asInstanceOf[js.Any])
+    @scala.inline
+    def trigger(value: none | hover | click | `right-click`): this.type = set("trigger", value.asInstanceOf[js.Any])
   }
-  type Props = WithTooltipPureProps
+  
+  def withProps(p: WithTooltipPureProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: WithTooltipPure.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

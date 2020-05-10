@@ -1,11 +1,7 @@
 package typingsSlinky.bandagedbdBdapi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListProps
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListRevealOrder
 import typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListTailMode
 import typingsSlinky.react.reactStrings.backwards
@@ -15,33 +11,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BdApiModuleReactSuspenseList
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
-  @JSImport("@bandagedbd/bdapi", "BdApiModule.React.SuspenseList")
-  @js.native
-  object componentImport extends js.Object
+object BdApiModuleReactSuspenseList {
+  object DirectionalSuspenseListProps {
+    @JSImport("@bandagedbd/bdapi", "BdApiModule.React.SuspenseList")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, js.Object] {
+      @scala.inline
+      def tail(value: SuspenseListTailMode): this.type = set("tail", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: typingsSlinky.react.experimentalMod.reactAugmentingMod.DirectionalSuspenseListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(revealOrder: forwards | backwards): Builder = {
+        val __props = js.Dynamic.literal(revealOrder = revealOrder.asInstanceOf[js.Any])
+        new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.react.experimentalMod.reactAugmentingMod.DirectionalSuspenseListProps]))
+    }
+  }
   
-  override val component: String | js.Object = this.componentImport
-  def DirectionalSuspenseListProps(
-    revealOrder: forwards | backwards,
-    tail: SuspenseListTailMode = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(revealOrder = revealOrder.asInstanceOf[js.Any])
-    if (tail != null) __obj.updateDynamic("tail")(tail.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  object NonDirectionalSuspenseListProps {
+    @JSImport("@bandagedbd/bdapi", "BdApiModule.React.SuspenseList")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, js.Object] {
+      @scala.inline
+      def revealOrder(value: Exclude[SuspenseListRevealOrder, forwards | backwards]): this.type = set("revealOrder", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: typingsSlinky.react.experimentalMod.reactAugmentingMod.NonDirectionalSuspenseListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: NonDirectionalSuspenseListProps.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   }
-  def NonDirectionalSuspenseListProps(
-    revealOrder: Exclude[SuspenseListRevealOrder, forwards | backwards] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (revealOrder != null) __obj.updateDynamic("revealOrder")(revealOrder.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
-  }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SuspenseListProps
+  
 }
 

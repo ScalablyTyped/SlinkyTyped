@@ -5,20 +5,51 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains data uploaded in a URL request. */
+@js.native
 trait UploadData extends js.Object {
   /** An ArrayBuffer with a copy of the data. */
-  var bytes: js.UndefOr[js.Any] = js.undefined
+  var bytes: js.UndefOr[js.Any] = js.native
   /** A string with the file's path and name. */
-  var file: js.UndefOr[String] = js.undefined
+  var file: js.UndefOr[String] = js.native
 }
 
 object UploadData {
   @scala.inline
-  def apply(bytes: js.Any = null, file: String = null): UploadData = {
+  def apply(): UploadData = {
     val __obj = js.Dynamic.literal()
-    if (bytes != null) __obj.updateDynamic("bytes")(bytes.asInstanceOf[js.Any])
-    if (file != null) __obj.updateDynamic("file")(file.asInstanceOf[js.Any])
     __obj.asInstanceOf[UploadData]
   }
+  @scala.inline
+  implicit class UploadDataOps[Self <: UploadData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBytes(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

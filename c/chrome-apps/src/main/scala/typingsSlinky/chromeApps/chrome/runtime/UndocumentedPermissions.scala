@@ -1,5 +1,6 @@
 package typingsSlinky.chromeApps.chrome.runtime
 
+import typingsSlinky.chromeApps.chromeAppsStrings.fullscreen_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,19 +8,17 @@ import scala.scalajs.js.annotation._
 /** Undocumented but used permissions */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotime
-  - typingsSlinky.chromeApps.chromeAppsStrings.fullscreen
+  - typingsSlinky.chromeApps.chromeAppsStrings.fullscreen_
   - typingsSlinky.chromeApps.chromeAppsStrings.overrideEscFullscreen
 */
 trait UndocumentedPermissions extends js.Object
 
 object UndocumentedPermissions {
   @scala.inline
-  def appDotwindowDotime: typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotime = this.cast("app.window.ime")
+  def appDotwindowDotime: typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotime = "app.window.ime".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotime]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fullscreen: fullscreen_ = "fullscreen".asInstanceOf[fullscreen_]
   @scala.inline
-  def fullscreen: typingsSlinky.chromeApps.chromeAppsStrings.fullscreen = this.cast("fullscreen")
-  @scala.inline
-  def overrideEscFullscreen: typingsSlinky.chromeApps.chromeAppsStrings.overrideEscFullscreen = this.cast("overrideEscFullscreen")
+  def overrideEscFullscreen: typingsSlinky.chromeApps.chromeAppsStrings.overrideEscFullscreen = "overrideEscFullscreen".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.overrideEscFullscreen]
 }
 

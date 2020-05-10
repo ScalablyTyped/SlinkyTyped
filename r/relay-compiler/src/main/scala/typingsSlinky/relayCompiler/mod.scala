@@ -29,25 +29,11 @@ object mod extends js.Object {
   
   @js.native
   class ConsoleReporter ()
-    extends typingsSlinky.relayCompiler.consoleReporterMod.ConsoleReporter {
-    /* CompleteClass */
-    override def reportError(caughtLocation: String, error: js.Error): Unit = js.native
-    /* CompleteClass */
-    override def reportMessage(message: String): Unit = js.native
-    /* CompleteClass */
-    override def reportTime(name: String, ms: Double): Unit = js.native
-  }
+    extends typingsSlinky.relayCompiler.consoleReporterMod.ConsoleReporter
   
   @js.native
   class MultiReporter ()
-    extends typingsSlinky.relayCompiler.multiReporterMod.MultiReporter {
-    /* CompleteClass */
-    override def reportError(caughtLocation: String, error: js.Error): Unit = js.native
-    /* CompleteClass */
-    override def reportMessage(message: String): Unit = js.native
-    /* CompleteClass */
-    override def reportTime(name: String, ms: Double): Unit = js.native
-  }
+    extends typingsSlinky.relayCompiler.multiReporterMod.MultiReporter
   
   var transformASTSchema: js.Function2[/* schema */ GraphQLSchema, /* schemaExtensions */ js.Array[String], GraphQLSchema] = js.native
   def createUserError(message: String): UserError = js.native

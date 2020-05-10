@@ -1,7 +1,7 @@
 package typingsSlinky.jsdom
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.std.SVGTitleElement
+import org.scalajs.dom.raw.SVGTitleElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -14,14 +14,12 @@ trait StringDataFormat extends js.Object
 
 object StringDataFormat {
   @scala.inline
-  def B64: typingsSlinky.jssha.jsshaStrings.B64 = this.cast("B64")
+  def B64: typingsSlinky.jssha.jsshaStrings.B64 = "B64".asInstanceOf[typingsSlinky.jssha.jsshaStrings.B64]
   @scala.inline
-  def BYTES: typingsSlinky.jssha.jsshaStrings.BYTES = this.cast("BYTES")
+  def BYTES: typingsSlinky.jssha.jsshaStrings.BYTES = "BYTES".asInstanceOf[typingsSlinky.jssha.jsshaStrings.BYTES]
   @scala.inline
-  def HEX: typingsSlinky.jssha.jsshaStrings.HEX = this.cast("HEX")
+  def HEX: typingsSlinky.jssha.jsshaStrings.HEX = "HEX".asInstanceOf[typingsSlinky.jssha.jsshaStrings.HEX]
   @scala.inline
-  def TEXT: typingsSlinky.jssha.jsshaStrings.TEXT = this.cast("TEXT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TEXT: typingsSlinky.jssha.jsshaStrings.TEXT = "TEXT".asInstanceOf[typingsSlinky.jssha.jsshaStrings.TEXT]
 }
 

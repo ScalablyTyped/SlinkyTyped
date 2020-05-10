@@ -3,7 +3,7 @@ package typingsSlinky.microsoftAjax.Sys
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

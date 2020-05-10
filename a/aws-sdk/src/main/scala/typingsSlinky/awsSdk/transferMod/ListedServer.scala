@@ -38,23 +38,95 @@ trait ListedServer extends js.Object {
 
 object ListedServer {
   @scala.inline
-  def apply(
-    Arn: Arn,
-    EndpointType: EndpointType = null,
-    IdentityProviderType: IdentityProviderType = null,
-    LoggingRole: Role = null,
-    ServerId: ServerId = null,
-    State: State = null,
-    UserCount: Int | Double = null
-  ): ListedServer = {
+  def apply(Arn: Arn): ListedServer = {
     val __obj = js.Dynamic.literal(Arn = Arn.asInstanceOf[js.Any])
-    if (EndpointType != null) __obj.updateDynamic("EndpointType")(EndpointType.asInstanceOf[js.Any])
-    if (IdentityProviderType != null) __obj.updateDynamic("IdentityProviderType")(IdentityProviderType.asInstanceOf[js.Any])
-    if (LoggingRole != null) __obj.updateDynamic("LoggingRole")(LoggingRole.asInstanceOf[js.Any])
-    if (ServerId != null) __obj.updateDynamic("ServerId")(ServerId.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
-    if (UserCount != null) __obj.updateDynamic("UserCount")(UserCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListedServer]
   }
+  @scala.inline
+  implicit class ListedServerOps[Self <: ListedServer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndpointType(value: EndpointType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpointType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentityProviderType(value: IdentityProviderType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityProviderType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentityProviderType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityProviderType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoggingRole(value: Role): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoggingRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoggingRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoggingRole")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerId(value: ServerId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: State): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserCount(value: UserCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

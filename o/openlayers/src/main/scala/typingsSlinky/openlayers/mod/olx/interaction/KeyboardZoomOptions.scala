@@ -6,24 +6,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait KeyboardZoomOptions extends js.Object {
-  var condition: js.UndefOr[EventsConditionType] = js.undefined
-  var delta: js.UndefOr[Double] = js.undefined
-  var duration: js.UndefOr[Double] = js.undefined
+  var condition: js.UndefOr[EventsConditionType] = js.native
+  var delta: js.UndefOr[Double] = js.native
+  var duration: js.UndefOr[Double] = js.native
 }
 
 object KeyboardZoomOptions {
   @scala.inline
-  def apply(
-    condition: /* event */ MapBrowserEvent => Boolean = null,
-    delta: Int | Double = null,
-    duration: Int | Double = null
-  ): KeyboardZoomOptions = {
+  def apply(): KeyboardZoomOptions = {
     val __obj = js.Dynamic.literal()
-    if (condition != null) __obj.updateDynamic("condition")(js.Any.fromFunction1(condition))
-    if (delta != null) __obj.updateDynamic("delta")(delta.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
     __obj.asInstanceOf[KeyboardZoomOptions]
   }
+  @scala.inline
+  implicit class KeyboardZoomOptionsOps[Self <: KeyboardZoomOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCondition(value: /* event */ MapBrowserEvent => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelta(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelta: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Detector")
 @js.native
 class Detector protected () extends js.Object {
-  def this(image: scala.scalajs.js.typedarray.Uint8Array) = this()
-  var image: scala.scalajs.js.typedarray.Uint8Array = js.native
+  def this(image: js.typedarray.Uint8Array) = this()
+  var image: js.typedarray.Uint8Array = js.native
   var resultPointCallback: ResultPointCallback = js.native
   def calculateModuleSize(topLeft: AlignmentPattern, topRight: AlignmentPattern, bottomLeft: AlignmentPattern): Double = js.native
   def calculateModuleSizeOneWay(pattern: AlignmentPattern, otherPattern: AlignmentPattern): Double = js.native
@@ -34,7 +34,7 @@ class Detector protected () extends js.Object {
     allowanceFactor: Double
   ): AlignmentPattern = js.native
   def processFinderPatternInfo(info: FinderPatternInfo): DetectorResult = js.native
-  def sampleGrid(image: scala.scalajs.js.typedarray.Uint8Array, transform: PerspectiveTransform, dimension: Double): BitMatrix = js.native
+  def sampleGrid(image: js.typedarray.Uint8Array, transform: PerspectiveTransform, dimension: Double): BitMatrix = js.native
   def sizeOfBlackWhiteBlackRun(fromX: Double, fromY: Double, toX: Double, toY: Double): Double = js.native
   def sizeOfBlackWhiteBlackRunBothWays(fromX: Double, fromY: Double, toX: Double, toY: Double): Double = js.native
 }

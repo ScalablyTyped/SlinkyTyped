@@ -13,8 +13,6 @@ import typingsSlinky.formik.typesMod.FormikValues
 import typingsSlinky.formik.withFormikMod.ComponentDecorator
 import typingsSlinky.formik.withFormikMod.WithFormikConfig
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import typingsSlinky.react.mod.ProviderProps
 import typingsSlinky.std.Document_
 import typingsSlinky.std.Partial
@@ -27,35 +25,35 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   @js.native
   class ErrorMessage protected ()
-    extends Component[ErrorMessageProps, ComponentState, js.Any] {
+    extends Component[ErrorMessageProps, js.Object, js.Any] {
     def this(props: ErrorMessageProps) = this()
     def this(props: ErrorMessageProps, context: js.Any) = this()
   }
   
   @js.native
   class FastField protected ()
-    extends Component[js.Any, ComponentState, js.Any] {
+    extends Component[js.Any, js.Object, js.Any] {
     def this(props: js.Any) = this()
     def this(props: js.Any, context: js.Any) = this()
   }
   
   @js.native
   class Field protected ()
-    extends Component[js.Any, ComponentState, js.Any] {
+    extends Component[js.Any, js.Object, js.Any] {
     def this(props: js.Any) = this()
     def this(props: js.Any, context: js.Any) = this()
   }
   
   @js.native
   class FieldArray protected ()
-    extends Component[FieldArrayConfig, ComponentState, js.Any] {
+    extends Component[FieldArrayConfig, js.Object, js.Any] {
     def this(props: FieldArrayConfig) = this()
     def this(props: FieldArrayConfig, context: js.Any) = this()
   }
   
   @js.native
   class Form protected ()
-    extends Component[PickFormHTMLAttributesHTM, ComponentState, js.Any] {
+    extends Component[PickFormHTMLAttributesHTM, js.Object, js.Any] {
     def this(props: PickFormHTMLAttributesHTM) = this()
     def this(props: PickFormHTMLAttributesHTM, context: js.Any) = this()
   }
@@ -99,21 +97,21 @@ object mod extends js.Object {
   def withFormik[OuterProps, Values /* <: FormikValues */, Payload](hasMapPropsToValuesConfig: WithFormikConfig[OuterProps, Values, Payload]): ComponentDecorator[OuterProps, OuterProps with FormikProps[Values]] = js.native
   def yupToFormErrors[Values](yupError: js.Any): FormikErrors[Values] = js.native
   @js.native
-  object ErrorMessage extends TopLevel[ComponentType[ErrorMessageProps]]
+  object ErrorMessage extends TopLevel[ReactComponentClass[ErrorMessageProps]]
   
   @js.native
   object FastField
-    extends TopLevel[ComponentType[js.Any]]
+    extends TopLevel[ReactComponentClass[js.Any]]
   
   @js.native
   object Field
-    extends TopLevel[ComponentType[js.Any]]
+    extends TopLevel[ReactComponentClass[js.Any]]
   
   @js.native
-  object FieldArray extends TopLevel[ComponentType[FieldArrayConfig]]
+  object FieldArray extends TopLevel[ReactComponentClass[FieldArrayConfig]]
   
   @js.native
-  object Form extends TopLevel[ComponentType[PickFormHTMLAttributesHTM]]
+  object Form extends TopLevel[ReactComponentClass[PickFormHTMLAttributesHTM]]
   
   /* static members */
   @js.native

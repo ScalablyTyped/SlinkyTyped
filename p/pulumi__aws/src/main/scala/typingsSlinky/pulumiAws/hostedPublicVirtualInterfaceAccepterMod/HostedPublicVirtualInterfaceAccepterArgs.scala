@@ -20,10 +20,35 @@ trait HostedPublicVirtualInterfaceAccepterArgs extends js.Object {
 
 object HostedPublicVirtualInterfaceAccepterArgs {
   @scala.inline
-  def apply(virtualInterfaceId: Input[String], tags: Input[StringDictionary[_]] = null): HostedPublicVirtualInterfaceAccepterArgs = {
+  def apply(virtualInterfaceId: Input[String]): HostedPublicVirtualInterfaceAccepterArgs = {
     val __obj = js.Dynamic.literal(virtualInterfaceId = virtualInterfaceId.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[HostedPublicVirtualInterfaceAccepterArgs]
   }
+  @scala.inline
+  implicit class HostedPublicVirtualInterfaceAccepterArgsOps[Self <: HostedPublicVirtualInterfaceAccepterArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVirtualInterfaceId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualInterfaceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

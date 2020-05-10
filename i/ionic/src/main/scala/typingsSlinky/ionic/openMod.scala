@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("ionic/commands/capacitor/open", JSImport.Namespace)
 @js.native
 object openMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.ionicCliFramework.definitionsMod.ICommand because Already inherited
   - typingsSlinky.ionic.definitionsMod.ICommand because Already inherited
   - typingsSlinky.ionic.definitionsMod.CommandPreRun because var conflicts: env, namespace, project. Inlined preRun */ @js.native

@@ -12,48 +12,182 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SelectOptions extends js.Object {
-  var addCondition: js.UndefOr[EventsConditionType] = js.undefined
-  var condition: js.UndefOr[EventsConditionType] = js.undefined
-  var features: js.UndefOr[Collection[Feature]] = js.undefined
-  var filter: js.UndefOr[SelectFilterFunction] = js.undefined
-  var hitTolerance: js.UndefOr[Double] = js.undefined
-  var layers: js.UndefOr[js.Array[Layer] | (js.Function1[/* layer */ Layer, Boolean])] = js.undefined
-  var multi: js.UndefOr[Boolean] = js.undefined
-  var removeCondition: js.UndefOr[EventsConditionType] = js.undefined
-  var style: js.UndefOr[Style | js.Array[Style] | StyleFunction] = js.undefined
-  var toggleCondition: js.UndefOr[EventsConditionType] = js.undefined
-  var wrapX: js.UndefOr[Boolean] = js.undefined
+  var addCondition: js.UndefOr[EventsConditionType] = js.native
+  var condition: js.UndefOr[EventsConditionType] = js.native
+  var features: js.UndefOr[Collection[Feature]] = js.native
+  var filter: js.UndefOr[SelectFilterFunction] = js.native
+  var hitTolerance: js.UndefOr[Double] = js.native
+  var layers: js.UndefOr[js.Array[Layer] | (js.Function1[/* layer */ Layer, Boolean])] = js.native
+  var multi: js.UndefOr[Boolean] = js.native
+  var removeCondition: js.UndefOr[EventsConditionType] = js.native
+  var style: js.UndefOr[Style | js.Array[Style] | StyleFunction] = js.native
+  var toggleCondition: js.UndefOr[EventsConditionType] = js.native
+  var wrapX: js.UndefOr[Boolean] = js.native
 }
 
 object SelectOptions {
   @scala.inline
-  def apply(
-    addCondition: /* event */ MapBrowserEvent => Boolean = null,
-    condition: /* event */ MapBrowserEvent => Boolean = null,
-    features: Collection[Feature] = null,
-    filter: (/* feature */ Feature | typingsSlinky.openlayers.mod.render.Feature, /* layer */ Layer) => Boolean = null,
-    hitTolerance: Int | Double = null,
-    layers: js.Array[Layer] | (js.Function1[/* layer */ Layer, Boolean]) = null,
-    multi: js.UndefOr[Boolean] = js.undefined,
-    removeCondition: /* event */ MapBrowserEvent => Boolean = null,
-    style: Style | js.Array[Style] | StyleFunction = null,
-    toggleCondition: /* event */ MapBrowserEvent => Boolean = null,
-    wrapX: js.UndefOr[Boolean] = js.undefined
-  ): SelectOptions = {
+  def apply(): SelectOptions = {
     val __obj = js.Dynamic.literal()
-    if (addCondition != null) __obj.updateDynamic("addCondition")(js.Any.fromFunction1(addCondition))
-    if (condition != null) __obj.updateDynamic("condition")(js.Any.fromFunction1(condition))
-    if (features != null) __obj.updateDynamic("features")(features.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction2(filter))
-    if (hitTolerance != null) __obj.updateDynamic("hitTolerance")(hitTolerance.asInstanceOf[js.Any])
-    if (layers != null) __obj.updateDynamic("layers")(layers.asInstanceOf[js.Any])
-    if (!js.isUndefined(multi)) __obj.updateDynamic("multi")(multi.asInstanceOf[js.Any])
-    if (removeCondition != null) __obj.updateDynamic("removeCondition")(js.Any.fromFunction1(removeCondition))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (toggleCondition != null) __obj.updateDynamic("toggleCondition")(js.Any.fromFunction1(toggleCondition))
-    if (!js.isUndefined(wrapX)) __obj.updateDynamic("wrapX")(wrapX.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelectOptions]
   }
+  @scala.inline
+  implicit class SelectOptionsOps[Self <: SelectOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddCondition(value: /* event */ MapBrowserEvent => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addCondition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAddCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addCondition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCondition(value: /* event */ MapBrowserEvent => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFeatures(value: Collection[Feature]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFeatures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilter(
+      value: (/* feature */ Feature | typingsSlinky.openlayers.mod.render.Feature, /* layer */ Layer) => Boolean
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHitTolerance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hitTolerance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHitTolerance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hitTolerance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayersFunction1(value: /* layer */ Layer => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLayers(value: js.Array[Layer] | (js.Function1[/* layer */ Layer, Boolean])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMulti(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMulti: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveCondition(value: /* event */ MapBrowserEvent => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeCondition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRemoveCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeCondition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleFunction2(
+      value: (/* feature */ Feature | typingsSlinky.openlayers.mod.render.Feature, /* resolution */ Double) => Style | js.Array[Style] | Null
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withStyle(value: Style | js.Array[Style] | StyleFunction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggleCondition(value: /* event */ MapBrowserEvent => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleCondition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutToggleCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleCondition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrapX(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrapX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapX")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

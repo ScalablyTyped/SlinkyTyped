@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * The object used to register views.
   *
   */
+@js.native
 trait hash extends js.Object
 

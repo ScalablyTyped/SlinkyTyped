@@ -5,24 +5,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IArrayMetadata
-  extends /* other */ StringDictionary[js.Any] {
-  var offset: js.UndefOr[Double] = js.undefined
-  var total: js.UndefOr[Double] = js.undefined
+  extends /* item */ StringDictionary[js.Any] {
+  var offset: js.UndefOr[Double] = js.native
+  var total: js.UndefOr[Double] = js.native
 }
 
 object IArrayMetadata {
   @scala.inline
-  def apply(
-    StringDictionary: /* other */ StringDictionary[js.Any] = null,
-    offset: Int | Double = null,
-    total: Int | Double = null
-  ): IArrayMetadata = {
+  def apply(): IArrayMetadata = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (total != null) __obj.updateDynamic("total")(total.asInstanceOf[js.Any])
     __obj.asInstanceOf[IArrayMetadata]
   }
+  @scala.inline
+  implicit class IArrayMetadataOps[Self <: IArrayMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotal(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

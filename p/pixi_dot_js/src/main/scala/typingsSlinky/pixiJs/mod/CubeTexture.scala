@@ -1,10 +1,10 @@
 package typingsSlinky.pixiJs.mod
 
+import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLImageElement
+import org.scalajs.dom.raw.HTMLVideoElement
+import org.scalajs.dom.raw.SVGElement
 import typingsSlinky.pixiJs.PIXI.resources.Resource
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLImageElement
-import typingsSlinky.std.HTMLVideoElement
-import typingsSlinky.std.SVGElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

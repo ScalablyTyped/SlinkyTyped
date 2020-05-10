@@ -4,39 +4,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAmbiguousErrorMessages extends js.Object {
-  var ambiguousErrorMessages: js.UndefOr[Boolean] = js.undefined
-  var forbidClientAccountCreation: js.UndefOr[Boolean] = js.undefined
-  var loginExpirationInDays: js.UndefOr[Double] = js.undefined
-  var oauthSecretKey: js.UndefOr[String] = js.undefined
-  var passwordEnrollTokenExpirationInDays: js.UndefOr[Double] = js.undefined
-  var passwordResetTokenExpirationInDays: js.UndefOr[Double] = js.undefined
-  var restrictCreationByEmailDomain: js.UndefOr[String | js.Function] = js.undefined
-  var sendVerificationEmail: js.UndefOr[Boolean] = js.undefined
+  var ambiguousErrorMessages: js.UndefOr[Boolean] = js.native
+  var forbidClientAccountCreation: js.UndefOr[Boolean] = js.native
+  var loginExpirationInDays: js.UndefOr[Double] = js.native
+  var oauthSecretKey: js.UndefOr[String] = js.native
+  var passwordEnrollTokenExpirationInDays: js.UndefOr[Double] = js.native
+  var passwordResetTokenExpirationInDays: js.UndefOr[Double] = js.native
+  var restrictCreationByEmailDomain: js.UndefOr[String | js.Function] = js.native
+  var sendVerificationEmail: js.UndefOr[Boolean] = js.native
 }
 
 object AnonAmbiguousErrorMessages {
   @scala.inline
-  def apply(
-    ambiguousErrorMessages: js.UndefOr[Boolean] = js.undefined,
-    forbidClientAccountCreation: js.UndefOr[Boolean] = js.undefined,
-    loginExpirationInDays: Int | Double = null,
-    oauthSecretKey: String = null,
-    passwordEnrollTokenExpirationInDays: Int | Double = null,
-    passwordResetTokenExpirationInDays: Int | Double = null,
-    restrictCreationByEmailDomain: String | js.Function = null,
-    sendVerificationEmail: js.UndefOr[Boolean] = js.undefined
-  ): AnonAmbiguousErrorMessages = {
+  def apply(): AnonAmbiguousErrorMessages = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(ambiguousErrorMessages)) __obj.updateDynamic("ambiguousErrorMessages")(ambiguousErrorMessages.asInstanceOf[js.Any])
-    if (!js.isUndefined(forbidClientAccountCreation)) __obj.updateDynamic("forbidClientAccountCreation")(forbidClientAccountCreation.asInstanceOf[js.Any])
-    if (loginExpirationInDays != null) __obj.updateDynamic("loginExpirationInDays")(loginExpirationInDays.asInstanceOf[js.Any])
-    if (oauthSecretKey != null) __obj.updateDynamic("oauthSecretKey")(oauthSecretKey.asInstanceOf[js.Any])
-    if (passwordEnrollTokenExpirationInDays != null) __obj.updateDynamic("passwordEnrollTokenExpirationInDays")(passwordEnrollTokenExpirationInDays.asInstanceOf[js.Any])
-    if (passwordResetTokenExpirationInDays != null) __obj.updateDynamic("passwordResetTokenExpirationInDays")(passwordResetTokenExpirationInDays.asInstanceOf[js.Any])
-    if (restrictCreationByEmailDomain != null) __obj.updateDynamic("restrictCreationByEmailDomain")(restrictCreationByEmailDomain.asInstanceOf[js.Any])
-    if (!js.isUndefined(sendVerificationEmail)) __obj.updateDynamic("sendVerificationEmail")(sendVerificationEmail.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAmbiguousErrorMessages]
   }
+  @scala.inline
+  implicit class AnonAmbiguousErrorMessagesOps[Self <: AnonAmbiguousErrorMessages] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAmbiguousErrorMessages(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ambiguousErrorMessages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmbiguousErrorMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ambiguousErrorMessages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForbidClientAccountCreation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forbidClientAccountCreation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForbidClientAccountCreation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forbidClientAccountCreation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoginExpirationInDays(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loginExpirationInDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoginExpirationInDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loginExpirationInDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOauthSecretKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthSecretKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOauthSecretKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthSecretKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPasswordEnrollTokenExpirationInDays(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordEnrollTokenExpirationInDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPasswordEnrollTokenExpirationInDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordEnrollTokenExpirationInDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPasswordResetTokenExpirationInDays(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordResetTokenExpirationInDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPasswordResetTokenExpirationInDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordResetTokenExpirationInDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestrictCreationByEmailDomain(value: String | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictCreationByEmailDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestrictCreationByEmailDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictCreationByEmailDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSendVerificationEmail(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendVerificationEmail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSendVerificationEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendVerificationEmail")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

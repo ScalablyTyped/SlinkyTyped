@@ -86,40 +86,197 @@ trait SchemaPublisherProfile extends js.Object {
 
 object SchemaPublisherProfile {
   @scala.inline
-  def apply(
-    audienceDescription: String = null,
-    buyerPitchStatement: String = null,
-    directDealsContact: String = null,
-    displayName: String = null,
-    domains: js.Array[String] = null,
-    googlePlusUrl: String = null,
-    logoUrl: String = null,
-    mediaKitUrl: String = null,
-    overview: String = null,
-    programmaticDealsContact: String = null,
-    publisherProfileId: String = null,
-    rateCardInfoUrl: String = null,
-    samplePageUrl: String = null,
-    seller: SchemaSeller = null,
-    topHeadlines: js.Array[String] = null
-  ): SchemaPublisherProfile = {
+  def apply(): SchemaPublisherProfile = {
     val __obj = js.Dynamic.literal()
-    if (audienceDescription != null) __obj.updateDynamic("audienceDescription")(audienceDescription.asInstanceOf[js.Any])
-    if (buyerPitchStatement != null) __obj.updateDynamic("buyerPitchStatement")(buyerPitchStatement.asInstanceOf[js.Any])
-    if (directDealsContact != null) __obj.updateDynamic("directDealsContact")(directDealsContact.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (domains != null) __obj.updateDynamic("domains")(domains.asInstanceOf[js.Any])
-    if (googlePlusUrl != null) __obj.updateDynamic("googlePlusUrl")(googlePlusUrl.asInstanceOf[js.Any])
-    if (logoUrl != null) __obj.updateDynamic("logoUrl")(logoUrl.asInstanceOf[js.Any])
-    if (mediaKitUrl != null) __obj.updateDynamic("mediaKitUrl")(mediaKitUrl.asInstanceOf[js.Any])
-    if (overview != null) __obj.updateDynamic("overview")(overview.asInstanceOf[js.Any])
-    if (programmaticDealsContact != null) __obj.updateDynamic("programmaticDealsContact")(programmaticDealsContact.asInstanceOf[js.Any])
-    if (publisherProfileId != null) __obj.updateDynamic("publisherProfileId")(publisherProfileId.asInstanceOf[js.Any])
-    if (rateCardInfoUrl != null) __obj.updateDynamic("rateCardInfoUrl")(rateCardInfoUrl.asInstanceOf[js.Any])
-    if (samplePageUrl != null) __obj.updateDynamic("samplePageUrl")(samplePageUrl.asInstanceOf[js.Any])
-    if (seller != null) __obj.updateDynamic("seller")(seller.asInstanceOf[js.Any])
-    if (topHeadlines != null) __obj.updateDynamic("topHeadlines")(topHeadlines.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPublisherProfile]
   }
+  @scala.inline
+  implicit class SchemaPublisherProfileOps[Self <: SchemaPublisherProfile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAudienceDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audienceDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudienceDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audienceDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuyerPitchStatement(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buyerPitchStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuyerPitchStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buyerPitchStatement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectDealsContact(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directDealsContact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectDealsContact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directDealsContact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomains(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domains")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomains: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domains")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGooglePlusUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("googlePlusUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGooglePlusUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("googlePlusUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogoUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logoUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogoUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logoUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMediaKitUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaKitUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediaKitUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaKitUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverview(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overview")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverview: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overview")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgrammaticDealsContact(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("programmaticDealsContact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgrammaticDealsContact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("programmaticDealsContact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublisherProfileId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherProfileId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublisherProfileId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherProfileId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRateCardInfoUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rateCardInfoUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRateCardInfoUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rateCardInfoUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSamplePageUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("samplePageUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSamplePageUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("samplePageUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeller(value: SchemaSeller): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeller: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seller")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopHeadlines(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topHeadlines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopHeadlines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topHeadlines")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

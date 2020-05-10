@@ -13,12 +13,10 @@ trait CandleStickPaintStyle extends js.Object
 
 object CandleStickPaintStyle {
   @scala.inline
-  def FILL: typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.FILL = this.cast("FILL")
+  def FILL: typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.FILL = "FILL".asInstanceOf[typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.FILL]
   @scala.inline
-  def FILL_AND_STROKE: typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.FILL_AND_STROKE = this.cast("FILL_AND_STROKE")
+  def FILL_AND_STROKE: typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.FILL_AND_STROKE = "FILL_AND_STROKE".asInstanceOf[typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.FILL_AND_STROKE]
   @scala.inline
-  def STROKE: typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.STROKE = this.cast("STROKE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def STROKE: typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.STROKE = "STROKE".asInstanceOf[typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.STROKE]
 }
 

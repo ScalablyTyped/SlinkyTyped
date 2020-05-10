@@ -28,16 +28,53 @@ trait SchemaAddMatterPermissionsRequest extends js.Object {
 
 object SchemaAddMatterPermissionsRequest {
   @scala.inline
-  def apply(
-    ccMe: js.UndefOr[Boolean] = js.undefined,
-    matterPermission: SchemaMatterPermission = null,
-    sendEmails: js.UndefOr[Boolean] = js.undefined
-  ): SchemaAddMatterPermissionsRequest = {
+  def apply(): SchemaAddMatterPermissionsRequest = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(ccMe)) __obj.updateDynamic("ccMe")(ccMe.asInstanceOf[js.Any])
-    if (matterPermission != null) __obj.updateDynamic("matterPermission")(matterPermission.asInstanceOf[js.Any])
-    if (!js.isUndefined(sendEmails)) __obj.updateDynamic("sendEmails")(sendEmails.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAddMatterPermissionsRequest]
   }
+  @scala.inline
+  implicit class SchemaAddMatterPermissionsRequestOps[Self <: SchemaAddMatterPermissionsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCcMe(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ccMe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCcMe: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ccMe")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatterPermission(value: SchemaMatterPermission): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matterPermission")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatterPermission: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matterPermission")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSendEmails(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendEmails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSendEmails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendEmails")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

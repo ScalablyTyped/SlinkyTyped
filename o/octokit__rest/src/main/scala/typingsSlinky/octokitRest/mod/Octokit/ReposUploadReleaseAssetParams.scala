@@ -4,35 +4,73 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReposUploadReleaseAssetParams extends js.Object {
-  var data: String | js.Object
-  var headers: ReposUploadReleaseAssetParamsHeaders
+  var data: String | js.Object = js.native
+  var headers: ReposUploadReleaseAssetParamsHeaders = js.native
   /**
     * An alternate short description of the asset. Used in place of the filename. This should be set in a URI query parameter.
     */
-  var label: js.UndefOr[String] = js.undefined
+  var label: js.UndefOr[String] = js.native
   /**
     * The file name of the asset. This should be set in a URI query parameter.
     */
-  var name: String
+  var name: String = js.native
   /**
     * The `upload_url` key returned from creating or getting a release
     */
-  var url: String
+  var url: String = js.native
 }
 
 object ReposUploadReleaseAssetParams {
   @scala.inline
-  def apply(
-    data: String | js.Object,
-    headers: ReposUploadReleaseAssetParamsHeaders,
-    name: String,
-    url: String,
-    label: String = null
-  ): ReposUploadReleaseAssetParams = {
+  def apply(data: String | js.Object, headers: ReposUploadReleaseAssetParamsHeaders, name: String, url: String): ReposUploadReleaseAssetParams = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReposUploadReleaseAssetParams]
   }
+  @scala.inline
+  implicit class ReposUploadReleaseAssetParamsOps[Self <: ReposUploadReleaseAssetParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: String | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: ReposUploadReleaseAssetParamsHeaders): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

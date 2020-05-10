@@ -34,14 +34,15 @@ import scala.scalajs.js.annotation._
   * @property {string} details.billingAddress.postalCode Postal code.
   * @property {string} details.billingAddress.countryCode 2 character country code (e.g. US).
   */
+@js.native
 trait PayPalShippingAddress extends js.Object {
-  var city: String
-  var countryCode: String
-  var line1: String
-  var line2: String
-  var postalCode: String
-  var recipientName: String
-  var state: String
+  var city: String = js.native
+  var countryCode: String = js.native
+  var line1: String = js.native
+  var line2: String = js.native
+  var postalCode: String = js.native
+  var recipientName: String = js.native
+  var state: String = js.native
 }
 
 object PayPalShippingAddress {
@@ -56,8 +57,57 @@ object PayPalShippingAddress {
     state: String
   ): PayPalShippingAddress = {
     val __obj = js.Dynamic.literal(city = city.asInstanceOf[js.Any], countryCode = countryCode.asInstanceOf[js.Any], line1 = line1.asInstanceOf[js.Any], line2 = line2.asInstanceOf[js.Any], postalCode = postalCode.asInstanceOf[js.Any], recipientName = recipientName.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PayPalShippingAddress]
   }
+  @scala.inline
+  implicit class PayPalShippingAddressOps[Self <: PayPalShippingAddress] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("city")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCountryCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countryCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLine1(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLine2(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPostalCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRecipientName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

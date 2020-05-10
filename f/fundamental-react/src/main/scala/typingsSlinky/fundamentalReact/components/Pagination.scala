@@ -1,9 +1,7 @@
 package typingsSlinky.fundamentalReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.AnonNext
 import typingsSlinky.fundamentalReact.paginationMod.PaginationProps
 import typingsSlinky.fundamentalReact.paginationMod.default
@@ -11,35 +9,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Pagination
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Pagination {
   @JSImport("fundamental-react/lib/Pagination/Pagination", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    itemsTotal: Double,
-    onClick: Double => Unit,
-    disableStyles: js.UndefOr[Boolean] = js.undefined,
-    displayTotal: js.UndefOr[Boolean] = js.undefined,
-    initialPage: Int | Double = null,
-    itemsPerPage: Int | Double = null,
-    localizedText: AnonNext = null,
-    totalText: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(itemsTotal = itemsTotal.asInstanceOf[js.Any], onClick = js.Any.fromFunction1(onClick))
-    if (!js.isUndefined(disableStyles)) __obj.updateDynamic("disableStyles")(disableStyles.asInstanceOf[js.Any])
-    if (!js.isUndefined(displayTotal)) __obj.updateDynamic("displayTotal")(displayTotal.asInstanceOf[js.Any])
-    if (initialPage != null) __obj.updateDynamic("initialPage")(initialPage.asInstanceOf[js.Any])
-    if (itemsPerPage != null) __obj.updateDynamic("itemsPerPage")(itemsPerPage.asInstanceOf[js.Any])
-    if (localizedText != null) __obj.updateDynamic("localizedText")(localizedText.asInstanceOf[js.Any])
-    if (totalText != null) __obj.updateDynamic("totalText")(totalText.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableStyles(value: Boolean): this.type = set("disableStyles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def displayTotal(value: Boolean): this.type = set("displayTotal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def displayTotalProps(value: js.Any): this.type = set("displayTotalProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialPage(value: Double): this.type = set("initialPage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemsPerPage(value: Double): this.type = set("itemsPerPage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkProps(value: js.Any): this.type = set("linkProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def localizedText(value: AnonNext): this.type = set("localizedText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextProps(value: js.Any): this.type = set("nextProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prevProps(value: js.Any): this.type = set("prevProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def totalText(value: String): this.type = set("totalText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visiblePageTotal(value: Double): this.type = set("visiblePageTotal", value.asInstanceOf[js.Any])
   }
-  type Props = PaginationProps
+  
+  def withProps(p: PaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(itemsTotal: Double, onClick: /* repeated */ js.Any => js.Any): Builder = {
+    val __props = js.Dynamic.literal(itemsTotal = itemsTotal.asInstanceOf[js.Any], onClick = js.Any.fromFunction1(onClick))
+    new Builder(js.Array(this.component, __props.asInstanceOf[PaginationProps]))
+  }
 }
 

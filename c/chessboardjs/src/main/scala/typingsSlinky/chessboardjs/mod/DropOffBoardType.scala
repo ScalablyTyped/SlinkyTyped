@@ -12,10 +12,8 @@ trait DropOffBoardType extends js.Object
 
 object DropOffBoardType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def snapback: typingsSlinky.chessboardjs.chessboardjsStrings.snapback = "snapback".asInstanceOf[typingsSlinky.chessboardjs.chessboardjsStrings.snapback]
   @scala.inline
-  def snapback: typingsSlinky.chessboardjs.chessboardjsStrings.snapback = this.cast("snapback")
-  @scala.inline
-  def trash: typingsSlinky.chessboardjs.chessboardjsStrings.trash = this.cast("trash")
+  def trash: typingsSlinky.chessboardjs.chessboardjsStrings.trash = "trash".asInstanceOf[typingsSlinky.chessboardjs.chessboardjsStrings.trash]
 }
 

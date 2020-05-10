@@ -16,22 +16,18 @@ trait Mutator extends js.Object
 
 object Mutator {
   @scala.inline
-  def IChangeMutator(mutatorType: CHANGE, updateIndex: Int | Double = null, value: PrimitiveValue = null): Mutator = {
+  def IChangeMutator(mutatorType: CHANGE): Mutator = {
     val __obj = js.Dynamic.literal(mutatorType = mutatorType.asInstanceOf[js.Any])
-    if (updateIndex != null) __obj.updateDynamic("updateIndex")(updateIndex.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[Mutator]
   }
   @scala.inline
-  def IAddMutator(mutatorType: ADD, value: PrimitiveValue, insertionIndex: Int | Double = null): Mutator = {
+  def IAddMutator(mutatorType: ADD, value: PrimitiveValue): Mutator = {
     val __obj = js.Dynamic.literal(mutatorType = mutatorType.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    if (insertionIndex != null) __obj.updateDynamic("insertionIndex")(insertionIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[Mutator]
   }
   @scala.inline
   def IRemoveMutator(mutatorType: REMOVE, removalIndex: Double): Mutator = {
     val __obj = js.Dynamic.literal(mutatorType = mutatorType.asInstanceOf[js.Any], removalIndex = removalIndex.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Mutator]
   }
 }

@@ -1,9 +1,9 @@
 package typingsSlinky.flight.Flight_
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jquery.JQuery_
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

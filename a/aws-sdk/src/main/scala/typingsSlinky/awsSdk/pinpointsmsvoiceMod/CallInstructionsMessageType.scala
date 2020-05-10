@@ -14,10 +14,29 @@ trait CallInstructionsMessageType extends js.Object {
 
 object CallInstructionsMessageType {
   @scala.inline
-  def apply(Text: NonEmptyString = null): CallInstructionsMessageType = {
+  def apply(): CallInstructionsMessageType = {
     val __obj = js.Dynamic.literal()
-    if (Text != null) __obj.updateDynamic("Text")(Text.asInstanceOf[js.Any])
     __obj.asInstanceOf[CallInstructionsMessageType]
   }
+  @scala.inline
+  implicit class CallInstructionsMessageTypeOps[Self <: CallInstructionsMessageType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withText(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

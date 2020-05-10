@@ -58,6 +58,9 @@ object eventTypeMod extends js.Object {
     sealed trait RESIZE extends EventType
     
     @js.native
+    sealed trait TOUCHMOVE extends EventType
+    
+    @js.native
     sealed trait WHEEL extends EventType
     
   }
@@ -79,6 +82,7 @@ object eventTypeMod extends js.Object {
     /* "keypress" */ val KEYPRESS: typingsSlinky.ol.eventTypeMod.EventType.KEYPRESS with String = js.native
     /* "load" */ val LOAD: typingsSlinky.ol.eventTypeMod.EventType.LOAD with String = js.native
     /* "resize" */ val RESIZE: typingsSlinky.ol.eventTypeMod.EventType.RESIZE with String = js.native
+    /* "touchmove" */ val TOUCHMOVE: typingsSlinky.ol.eventTypeMod.EventType.TOUCHMOVE with String = js.native
     /* "wheel" */ val WHEEL: typingsSlinky.ol.eventTypeMod.EventType.WHEEL with String = js.native
     @JSBracketAccess
     def apply(value: String): js.UndefOr[EventType with String] = js.native

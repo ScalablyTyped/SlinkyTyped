@@ -16,16 +16,14 @@ trait ActionTypes extends js.Object
 
 object ActionTypes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def longPress: typingsSlinky.webdriverio.webdriverioStrings.longPress = "longPress".asInstanceOf[typingsSlinky.webdriverio.webdriverioStrings.longPress]
   @scala.inline
-  def longPress: typingsSlinky.webdriverio.webdriverioStrings.longPress = this.cast("longPress")
+  def moveTo: typingsSlinky.webdriverio.webdriverioStrings.moveTo = "moveTo".asInstanceOf[typingsSlinky.webdriverio.webdriverioStrings.moveTo]
   @scala.inline
-  def moveTo: typingsSlinky.webdriverio.webdriverioStrings.moveTo = this.cast("moveTo")
+  def press: typingsSlinky.webdriverio.webdriverioStrings.press = "press".asInstanceOf[typingsSlinky.webdriverio.webdriverioStrings.press]
   @scala.inline
-  def press: typingsSlinky.webdriverio.webdriverioStrings.press = this.cast("press")
+  def release: typingsSlinky.webdriverio.webdriverioStrings.release = "release".asInstanceOf[typingsSlinky.webdriverio.webdriverioStrings.release]
   @scala.inline
-  def release: typingsSlinky.webdriverio.webdriverioStrings.release = this.cast("release")
-  @scala.inline
-  def tap: typingsSlinky.webdriverio.webdriverioStrings.tap = this.cast("tap")
+  def tap: typingsSlinky.webdriverio.webdriverioStrings.tap = "tap".asInstanceOf[typingsSlinky.webdriverio.webdriverioStrings.tap]
 }
 

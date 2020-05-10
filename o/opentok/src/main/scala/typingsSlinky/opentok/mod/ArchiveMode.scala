@@ -12,10 +12,8 @@ trait ArchiveMode extends js.Object
 
 object ArchiveMode {
   @scala.inline
-  def always: typingsSlinky.opentok.opentokStrings.always = this.cast("always")
+  def always: typingsSlinky.opentok.opentokStrings.always = "always".asInstanceOf[typingsSlinky.opentok.opentokStrings.always]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def manual: typingsSlinky.opentok.opentokStrings.manual = this.cast("manual")
+  def manual: typingsSlinky.opentok.opentokStrings.manual = "manual".asInstanceOf[typingsSlinky.opentok.opentokStrings.manual]
 }
 

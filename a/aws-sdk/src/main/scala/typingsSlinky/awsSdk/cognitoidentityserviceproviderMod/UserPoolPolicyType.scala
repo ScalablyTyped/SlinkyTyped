@@ -14,10 +14,29 @@ trait UserPoolPolicyType extends js.Object {
 
 object UserPoolPolicyType {
   @scala.inline
-  def apply(PasswordPolicy: PasswordPolicyType = null): UserPoolPolicyType = {
+  def apply(): UserPoolPolicyType = {
     val __obj = js.Dynamic.literal()
-    if (PasswordPolicy != null) __obj.updateDynamic("PasswordPolicy")(PasswordPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPoolPolicyType]
   }
+  @scala.inline
+  implicit class UserPoolPolicyTypeOps[Self <: UserPoolPolicyType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPasswordPolicy(value: PasswordPolicyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PasswordPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPasswordPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PasswordPolicy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

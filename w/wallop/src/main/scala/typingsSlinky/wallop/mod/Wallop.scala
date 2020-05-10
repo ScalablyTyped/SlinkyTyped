@@ -4,31 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Wallop extends js.Object {
   /**
     * Advances to the slide with the given index.
     */
-  def goTo(index: Double): Wallop
+  def goTo(index: Double): Wallop = js.native
   /**
     * Advances to next slide.
     */
-  def next(): Wallop
+  def next(): Wallop = js.native
   /**
     * Unbinds method from custom event.
     */
-  def off(eventName: String, callback: js.Function0[Unit]): Wallop
+  def off(eventName: String, callback: js.Function0[Unit]): Wallop = js.native
   /**
     * Bind method to custom event.
     */
-  def on(eventName: String, callback: js.Function0[Unit]): Wallop
+  def on(eventName: String, callback: js.Function0[Unit]): Wallop = js.native
   /**
     * Returns to previous slide.
     */
-  def previous(): Wallop
+  def previous(): Wallop = js.native
   /**
     * Resets current Wallop instance to defaults.
     */
-  def reset(): Wallop
+  def reset(): Wallop = js.native
 }
 
 object Wallop {
@@ -42,8 +43,51 @@ object Wallop {
     reset: () => Wallop
   ): Wallop = {
     val __obj = js.Dynamic.literal(goTo = js.Any.fromFunction1(goTo), next = js.Any.fromFunction0(next), off = js.Any.fromFunction2(off), on = js.Any.fromFunction2(on), previous = js.Any.fromFunction0(previous), reset = js.Any.fromFunction0(reset))
-  
     __obj.asInstanceOf[Wallop]
   }
+  @scala.inline
+  implicit class WallopOps[Self <: Wallop] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGoTo(value: Double => Wallop): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goTo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withNext(value: () => Wallop): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOff(value: (String, js.Function0[Unit]) => Wallop): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("off")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withOn(value: (String, js.Function0[Unit]) => Wallop): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withPrevious(value: () => Wallop): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withReset(value: () => Wallop): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

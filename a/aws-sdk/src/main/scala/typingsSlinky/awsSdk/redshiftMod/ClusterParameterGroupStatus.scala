@@ -22,16 +22,53 @@ trait ClusterParameterGroupStatus extends js.Object {
 
 object ClusterParameterGroupStatus {
   @scala.inline
-  def apply(
-    ClusterParameterStatusList: ClusterParameterStatusList = null,
-    ParameterApplyStatus: String = null,
-    ParameterGroupName: String = null
-  ): ClusterParameterGroupStatus = {
+  def apply(): ClusterParameterGroupStatus = {
     val __obj = js.Dynamic.literal()
-    if (ClusterParameterStatusList != null) __obj.updateDynamic("ClusterParameterStatusList")(ClusterParameterStatusList.asInstanceOf[js.Any])
-    if (ParameterApplyStatus != null) __obj.updateDynamic("ParameterApplyStatus")(ParameterApplyStatus.asInstanceOf[js.Any])
-    if (ParameterGroupName != null) __obj.updateDynamic("ParameterGroupName")(ParameterGroupName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterParameterGroupStatus]
   }
+  @scala.inline
+  implicit class ClusterParameterGroupStatusOps[Self <: ClusterParameterGroupStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterParameterStatusList(value: ClusterParameterStatusList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterParameterStatusList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterParameterStatusList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterParameterStatusList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterApplyStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterApplyStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterApplyStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterApplyStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterGroupName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterGroupName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

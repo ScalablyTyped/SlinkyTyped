@@ -14,10 +14,29 @@ trait EventDescription_ extends js.Object {
 
 object EventDescription_ {
   @scala.inline
-  def apply(latestDescription: eventDescription = null): EventDescription_ = {
+  def apply(): EventDescription_ = {
     val __obj = js.Dynamic.literal()
-    if (latestDescription != null) __obj.updateDynamic("latestDescription")(latestDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventDescription_]
   }
+  @scala.inline
+  implicit class EventDescription_Ops[Self <: EventDescription_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLatestDescription(value: eventDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatestDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestDescription")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait QuotaLimit extends js.Object {
   /**
     * Default number of tokens that can be consumed during the specified
@@ -18,20 +19,20 @@ trait QuotaLimit extends js.Object {
     *
     * Used by group-based quotas only.
     */
-  var defaultLimit: js.UndefOr[String] = js.undefined
+  var defaultLimit: js.UndefOr[String] = js.native
   /**
     * Optional. User-visible, extended description for this quota limit.
     * Should be used only when more context is needed to understand this limit
     * than provided by the limit's display name (see: `display_name`).
     */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /**
     * User-visible display name for this limit.
     * Optional. If not set, the UI will provide a default display name based on
     * the quota configuration. This field can be used to override the default
     * display name generated from the configuration.
     */
-  var displayName: js.UndefOr[String] = js.undefined
+  var displayName: js.UndefOr[String] = js.native
   /**
     * Duration of this limit in textual notation. Example: "100s", "24h", "1d".
     * For duration longer than a day, only multiple of days is supported. We
@@ -40,7 +41,7 @@ trait QuotaLimit extends js.Object {
     *
     * Used by group-based quotas only.
     */
-  var duration: js.UndefOr[String] = js.undefined
+  var duration: js.UndefOr[String] = js.native
   /**
     * Free tier value displayed in the Developers Console for this limit.
     * The free tier is the number of tokens that will be subtracted from the
@@ -51,7 +52,7 @@ trait QuotaLimit extends js.Object {
     *
     * Used by group-based quotas only.
     */
-  var freeTier: js.UndefOr[String] = js.undefined
+  var freeTier: js.UndefOr[String] = js.native
   /**
     * Maximum number of tokens that can be consumed during the specified
     * duration. Client application developers can override the default limit up
@@ -63,7 +64,7 @@ trait QuotaLimit extends js.Object {
     *
     * Used by group-based quotas only.
     */
-  var maxLimit: js.UndefOr[String] = js.undefined
+  var maxLimit: js.UndefOr[String] = js.native
   /**
     * The name of the metric this quota limit applies to. The quota limits with
     * the same metric will be checked together during runtime. The metric must be
@@ -71,7 +72,7 @@ trait QuotaLimit extends js.Object {
     *
     * Used by metric-based quotas only.
     */
-  var metric: js.UndefOr[String] = js.undefined
+  var metric: js.UndefOr[String] = js.native
   /**
     * Name of the quota limit. The name is used to refer to the limit when
     * overriding the default limit on per-consumer basis.
@@ -88,7 +89,7 @@ trait QuotaLimit extends js.Object {
     * name for the limit. The display name can be evolved over time without
     * affecting the identity of the limit.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Specify the unit of the quota limit. It uses the same syntax as
     * Metric.unit. The supported unit kinds are determined by the quota
@@ -111,37 +112,144 @@ trait QuotaLimit extends js.Object {
     *
     * Used by metric-based quotas only.
     */
-  var unit: js.UndefOr[String] = js.undefined
+  var unit: js.UndefOr[String] = js.native
   /** Tiered limit values, currently only STANDARD is supported. */
-  var values: js.UndefOr[Record[String, String]] = js.undefined
+  var values: js.UndefOr[Record[String, String]] = js.native
 }
 
 object QuotaLimit {
   @scala.inline
-  def apply(
-    defaultLimit: String = null,
-    description: String = null,
-    displayName: String = null,
-    duration: String = null,
-    freeTier: String = null,
-    maxLimit: String = null,
-    metric: String = null,
-    name: String = null,
-    unit: String = null,
-    values: Record[String, String] = null
-  ): QuotaLimit = {
+  def apply(): QuotaLimit = {
     val __obj = js.Dynamic.literal()
-    if (defaultLimit != null) __obj.updateDynamic("defaultLimit")(defaultLimit.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (freeTier != null) __obj.updateDynamic("freeTier")(freeTier.asInstanceOf[js.Any])
-    if (maxLimit != null) __obj.updateDynamic("maxLimit")(maxLimit.asInstanceOf[js.Any])
-    if (metric != null) __obj.updateDynamic("metric")(metric.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[QuotaLimit]
   }
+  @scala.inline
+  implicit class QuotaLimitOps[Self <: QuotaLimit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultLimit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFreeTier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("freeTier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFreeTier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("freeTier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxLimit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetric(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetric: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValues(value: Record[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

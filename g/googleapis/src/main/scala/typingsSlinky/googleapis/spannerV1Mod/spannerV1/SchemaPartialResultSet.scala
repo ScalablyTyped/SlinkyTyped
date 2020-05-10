@@ -91,20 +91,77 @@ trait SchemaPartialResultSet extends js.Object {
 
 object SchemaPartialResultSet {
   @scala.inline
-  def apply(
-    chunkedValue: js.UndefOr[Boolean] = js.undefined,
-    metadata: SchemaResultSetMetadata = null,
-    resumeToken: String = null,
-    stats: SchemaResultSetStats = null,
-    values: js.Array[_] = null
-  ): SchemaPartialResultSet = {
+  def apply(): SchemaPartialResultSet = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(chunkedValue)) __obj.updateDynamic("chunkedValue")(chunkedValue.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (resumeToken != null) __obj.updateDynamic("resumeToken")(resumeToken.asInstanceOf[js.Any])
-    if (stats != null) __obj.updateDynamic("stats")(stats.asInstanceOf[js.Any])
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPartialResultSet]
   }
+  @scala.inline
+  implicit class SchemaPartialResultSetOps[Self <: SchemaPartialResultSet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChunkedValue(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkedValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChunkedValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkedValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: SchemaResultSetMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResumeToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResumeToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStats(value: SchemaResultSetStats): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValues(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -17,10 +17,29 @@ trait SchemaVideoProjectDetails extends js.Object {
 
 object SchemaVideoProjectDetails {
   @scala.inline
-  def apply(tags: js.Array[String] = null): SchemaVideoProjectDetails = {
+  def apply(): SchemaVideoProjectDetails = {
     val __obj = js.Dynamic.literal()
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVideoProjectDetails]
   }
+  @scala.inline
+  implicit class SchemaVideoProjectDetailsOps[Self <: SchemaVideoProjectDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTags(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,10 +18,35 @@ trait DescribeActionTargetsResponse extends js.Object {
 
 object DescribeActionTargetsResponse {
   @scala.inline
-  def apply(ActionTargets: ActionTargetList, NextToken: NextToken = null): DescribeActionTargetsResponse = {
+  def apply(ActionTargets: ActionTargetList): DescribeActionTargetsResponse = {
     val __obj = js.Dynamic.literal(ActionTargets = ActionTargets.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeActionTargetsResponse]
   }
+  @scala.inline
+  implicit class DescribeActionTargetsResponseOps[Self <: DescribeActionTargetsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionTargets(value: ActionTargetList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionTargets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.qrcodeReact.mod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("qrcode.react", JSImport.Namespace)
 @js.native
 class ^ protected ()
-  extends Component[CanvasQRCodeProps | SvgQRCodeProps, ComponentState, js.Any] {
+  extends Component[CanvasQRCodeProps | SvgQRCodeProps, js.Object, js.Any] {
   def this(props: CanvasQRCodeProps) = this()
   def this(props: SvgQRCodeProps) = this()
   def this(props: CanvasQRCodeProps, context: js.Any) = this()
@@ -19,5 +19,5 @@ class ^ protected ()
 
 @JSImport("qrcode.react", JSImport.Namespace)
 @js.native
-object ^ extends TopLevel[QRCode]
+object ^ extends TopLevel[ReactComponentClass[CanvasQRCodeProps | SvgQRCodeProps]]
 

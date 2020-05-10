@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SyncKeyValueROTransaction extends js.Object {
   /**
     * Retrieves the data at the given key. Throws an ApiError if an error occurs
@@ -12,15 +13,28 @@ trait SyncKeyValueROTransaction extends js.Object {
     * @param key The key to look under for data.
     * @return The data stored under the key, or undefined if not present.
     */
-  def get(key: String): js.UndefOr[Buffer]
+  def get(key: String): js.UndefOr[Buffer] = js.native
 }
 
 object SyncKeyValueROTransaction {
   @scala.inline
   def apply(get: String => js.UndefOr[Buffer]): SyncKeyValueROTransaction = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get))
-  
     __obj.asInstanceOf[SyncKeyValueROTransaction]
   }
+  @scala.inline
+  implicit class SyncKeyValueROTransactionOps[Self <: SyncKeyValueROTransaction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGet(value: String => js.UndefOr[Buffer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

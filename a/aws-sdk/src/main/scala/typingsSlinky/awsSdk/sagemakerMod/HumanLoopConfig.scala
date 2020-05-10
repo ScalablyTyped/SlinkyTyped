@@ -16,7 +16,7 @@ trait HumanLoopConfig extends js.Object {
     */
   var TaskAvailabilityLifetimeInSeconds: js.UndefOr[FlowDefinitionTaskAvailabilityLifetimeInSeconds] = js.native
   /**
-    * The number of human tasks.
+    * The number of distinct workers who will perform the same task on each object. For example, if TaskCount is set to 3 for an image classification labeling job, three workers will classify each input image. Increasing TaskCount can improve label accuracy.
     */
   var TaskCount: FlowDefinitionTaskCount = js.native
   /**
@@ -48,18 +48,96 @@ object HumanLoopConfig {
     TaskCount: FlowDefinitionTaskCount,
     TaskDescription: FlowDefinitionTaskDescription,
     TaskTitle: FlowDefinitionTaskTitle,
-    WorkteamArn: WorkteamArn,
-    PublicWorkforceTaskPrice: PublicWorkforceTaskPrice = null,
-    TaskAvailabilityLifetimeInSeconds: Int | Double = null,
-    TaskKeywords: FlowDefinitionTaskKeywords = null,
-    TaskTimeLimitInSeconds: Int | Double = null
+    WorkteamArn: WorkteamArn
   ): HumanLoopConfig = {
     val __obj = js.Dynamic.literal(HumanTaskUiArn = HumanTaskUiArn.asInstanceOf[js.Any], TaskCount = TaskCount.asInstanceOf[js.Any], TaskDescription = TaskDescription.asInstanceOf[js.Any], TaskTitle = TaskTitle.asInstanceOf[js.Any], WorkteamArn = WorkteamArn.asInstanceOf[js.Any])
-    if (PublicWorkforceTaskPrice != null) __obj.updateDynamic("PublicWorkforceTaskPrice")(PublicWorkforceTaskPrice.asInstanceOf[js.Any])
-    if (TaskAvailabilityLifetimeInSeconds != null) __obj.updateDynamic("TaskAvailabilityLifetimeInSeconds")(TaskAvailabilityLifetimeInSeconds.asInstanceOf[js.Any])
-    if (TaskKeywords != null) __obj.updateDynamic("TaskKeywords")(TaskKeywords.asInstanceOf[js.Any])
-    if (TaskTimeLimitInSeconds != null) __obj.updateDynamic("TaskTimeLimitInSeconds")(TaskTimeLimitInSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[HumanLoopConfig]
   }
+  @scala.inline
+  implicit class HumanLoopConfigOps[Self <: HumanLoopConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHumanTaskUiArn(value: HumanTaskUiArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HumanTaskUiArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTaskCount(value: FlowDefinitionTaskCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTaskDescription(value: FlowDefinitionTaskDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTaskTitle(value: FlowDefinitionTaskTitle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWorkteamArn(value: WorkteamArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkteamArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPublicWorkforceTaskPrice(value: PublicWorkforceTaskPrice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicWorkforceTaskPrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublicWorkforceTaskPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicWorkforceTaskPrice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskAvailabilityLifetimeInSeconds(value: FlowDefinitionTaskAvailabilityLifetimeInSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskAvailabilityLifetimeInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskAvailabilityLifetimeInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskAvailabilityLifetimeInSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskKeywords(value: FlowDefinitionTaskKeywords): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskKeywords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskKeywords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskKeywords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskTimeLimitInSeconds(value: FlowDefinitionTaskTimeLimitInSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskTimeLimitInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskTimeLimitInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskTimeLimitInSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

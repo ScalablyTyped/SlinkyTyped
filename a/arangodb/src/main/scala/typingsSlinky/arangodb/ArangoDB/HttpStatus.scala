@@ -73,132 +73,130 @@ trait HttpStatus extends js.Object
 
 object HttpStatus {
   @scala.inline
-  def LeftparenthesisunusedRightparenthesis: typingsSlinky.arangodb.arangodbStrings.LeftparenthesisunusedRightparenthesis = this.cast("(unused)")
+  def LeftparenthesisunusedRightparenthesis: typingsSlinky.arangodb.arangodbStrings.LeftparenthesisunusedRightparenthesis = "(unused)".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.LeftparenthesisunusedRightparenthesis]
   @scala.inline
-  def accepted: typingsSlinky.arangodb.arangodbStrings.accepted = this.cast("accepted")
+  def accepted: typingsSlinky.arangodb.arangodbStrings.accepted = "accepted".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.accepted]
   @scala.inline
-  def `already reported`: typingsSlinky.arangodb.arangodbStrings.`already reported` = this.cast("already reported")
+  def `already reported`: typingsSlinky.arangodb.arangodbStrings.`already reported` = ("already reported").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`already reported`]
   @scala.inline
-  def `bad gateway`: typingsSlinky.arangodb.arangodbStrings.`bad gateway` = this.cast("bad gateway")
+  def `bad gateway`: typingsSlinky.arangodb.arangodbStrings.`bad gateway` = ("bad gateway").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`bad gateway`]
   @scala.inline
-  def `bad request`: typingsSlinky.arangodb.arangodbStrings.`bad request` = this.cast("bad request")
+  def `bad request`: typingsSlinky.arangodb.arangodbStrings.`bad request` = ("bad request").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`bad request`]
   @scala.inline
-  def `bandwidth limit exceeded`: typingsSlinky.arangodb.arangodbStrings.`bandwidth limit exceeded` = this.cast("bandwidth limit exceeded")
+  def `bandwidth limit exceeded`: typingsSlinky.arangodb.arangodbStrings.`bandwidth limit exceeded` = ("bandwidth limit exceeded").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`bandwidth limit exceeded`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def conflict: typingsSlinky.arangodb.arangodbStrings.conflict = "conflict".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.conflict]
   @scala.inline
-  def conflict: typingsSlinky.arangodb.arangodbStrings.conflict = this.cast("conflict")
+  def continue: typingsSlinky.arangodb.arangodbStrings.continue = "continue".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.continue]
   @scala.inline
-  def continue: typingsSlinky.arangodb.arangodbStrings.continue = this.cast("continue")
+  def created: typingsSlinky.arangodb.arangodbStrings.created = "created".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.created]
   @scala.inline
-  def created: typingsSlinky.arangodb.arangodbStrings.created = this.cast("created")
+  def `expectation failed`: typingsSlinky.arangodb.arangodbStrings.`expectation failed` = ("expectation failed").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`expectation failed`]
   @scala.inline
-  def `expectation failed`: typingsSlinky.arangodb.arangodbStrings.`expectation failed` = this.cast("expectation failed")
+  def `failed dependency`: typingsSlinky.arangodb.arangodbStrings.`failed dependency` = ("failed dependency").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`failed dependency`]
   @scala.inline
-  def `failed dependency`: typingsSlinky.arangodb.arangodbStrings.`failed dependency` = this.cast("failed dependency")
+  def forbidden: typingsSlinky.arangodb.arangodbStrings.forbidden = "forbidden".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.forbidden]
   @scala.inline
-  def forbidden: typingsSlinky.arangodb.arangodbStrings.forbidden = this.cast("forbidden")
+  def found: typingsSlinky.arangodb.arangodbStrings.found = "found".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.found]
   @scala.inline
-  def found: typingsSlinky.arangodb.arangodbStrings.found = this.cast("found")
+  def `gateway timeout`: typingsSlinky.arangodb.arangodbStrings.`gateway timeout` = ("gateway timeout").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`gateway timeout`]
   @scala.inline
-  def `gateway timeout`: typingsSlinky.arangodb.arangodbStrings.`gateway timeout` = this.cast("gateway timeout")
+  def gone: typingsSlinky.arangodb.arangodbStrings.gone = "gone".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.gone]
   @scala.inline
-  def gone: typingsSlinky.arangodb.arangodbStrings.gone = this.cast("gone")
+  def `http version not supported`: typingsSlinky.arangodb.arangodbStrings.`http version not supported` = ("http version not supported").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`http version not supported`]
   @scala.inline
-  def `http version not supported`: typingsSlinky.arangodb.arangodbStrings.`http version not supported` = this.cast("http version not supported")
+  def `iApostrophem a teapot`: typingsSlinky.arangodb.arangodbStrings.`iApostrophem a teapot` = ("i'm a teapot").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`iApostrophem a teapot`]
   @scala.inline
-  def `iApostrophem a teapot`: typingsSlinky.arangodb.arangodbStrings.`iApostrophem a teapot` = this.cast("i'm a teapot")
+  def `im used`: typingsSlinky.arangodb.arangodbStrings.`im used` = ("im used").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`im used`]
   @scala.inline
-  def `im used`: typingsSlinky.arangodb.arangodbStrings.`im used` = this.cast("im used")
+  def `insufficient storage`: typingsSlinky.arangodb.arangodbStrings.`insufficient storage` = ("insufficient storage").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`insufficient storage`]
   @scala.inline
-  def `insufficient storage`: typingsSlinky.arangodb.arangodbStrings.`insufficient storage` = this.cast("insufficient storage")
+  def `internal server error`: typingsSlinky.arangodb.arangodbStrings.`internal server error` = ("internal server error").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`internal server error`]
   @scala.inline
-  def `internal server error`: typingsSlinky.arangodb.arangodbStrings.`internal server error` = this.cast("internal server error")
+  def `length required`: typingsSlinky.arangodb.arangodbStrings.`length required` = ("length required").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`length required`]
   @scala.inline
-  def `length required`: typingsSlinky.arangodb.arangodbStrings.`length required` = this.cast("length required")
+  def locked: typingsSlinky.arangodb.arangodbStrings.locked = "locked".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.locked]
   @scala.inline
-  def locked: typingsSlinky.arangodb.arangodbStrings.locked = this.cast("locked")
+  def `loop detected`: typingsSlinky.arangodb.arangodbStrings.`loop detected` = ("loop detected").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`loop detected`]
   @scala.inline
-  def `loop detected`: typingsSlinky.arangodb.arangodbStrings.`loop detected` = this.cast("loop detected")
+  def `method not allowed`: typingsSlinky.arangodb.arangodbStrings.`method not allowed` = ("method not allowed").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`method not allowed`]
   @scala.inline
-  def `method not allowed`: typingsSlinky.arangodb.arangodbStrings.`method not allowed` = this.cast("method not allowed")
+  def `misdirected request`: typingsSlinky.arangodb.arangodbStrings.`misdirected request` = ("misdirected request").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`misdirected request`]
   @scala.inline
-  def `misdirected request`: typingsSlinky.arangodb.arangodbStrings.`misdirected request` = this.cast("misdirected request")
+  def `moved permanently`: typingsSlinky.arangodb.arangodbStrings.`moved permanently` = ("moved permanently").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`moved permanently`]
   @scala.inline
-  def `moved permanently`: typingsSlinky.arangodb.arangodbStrings.`moved permanently` = this.cast("moved permanently")
+  def `multi-status`: typingsSlinky.arangodb.arangodbStrings.`multi-status` = "multi-status".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`multi-status`]
   @scala.inline
-  def `multi-status`: typingsSlinky.arangodb.arangodbStrings.`multi-status` = this.cast("multi-status")
+  def `multiple choices`: typingsSlinky.arangodb.arangodbStrings.`multiple choices` = ("multiple choices").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`multiple choices`]
   @scala.inline
-  def `multiple choices`: typingsSlinky.arangodb.arangodbStrings.`multiple choices` = this.cast("multiple choices")
+  def `network authentication required`: typingsSlinky.arangodb.arangodbStrings.`network authentication required` = ("network authentication required").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`network authentication required`]
   @scala.inline
-  def `network authentication required`: typingsSlinky.arangodb.arangodbStrings.`network authentication required` = this.cast("network authentication required")
+  def `no content`: typingsSlinky.arangodb.arangodbStrings.`no content` = ("no content").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`no content`]
   @scala.inline
-  def `no content`: typingsSlinky.arangodb.arangodbStrings.`no content` = this.cast("no content")
+  def `non-authoritative information`: typingsSlinky.arangodb.arangodbStrings.`non-authoritative information` = ("non-authoritative information").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`non-authoritative information`]
   @scala.inline
-  def `non-authoritative information`: typingsSlinky.arangodb.arangodbStrings.`non-authoritative information` = this.cast("non-authoritative information")
+  def `not acceptable`: typingsSlinky.arangodb.arangodbStrings.`not acceptable` = ("not acceptable").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`not acceptable`]
   @scala.inline
-  def `not acceptable`: typingsSlinky.arangodb.arangodbStrings.`not acceptable` = this.cast("not acceptable")
+  def `not extended`: typingsSlinky.arangodb.arangodbStrings.`not extended` = ("not extended").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`not extended`]
   @scala.inline
-  def `not extended`: typingsSlinky.arangodb.arangodbStrings.`not extended` = this.cast("not extended")
+  def `not found`: typingsSlinky.arangodb.arangodbStrings.`not found` = ("not found").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`not found`]
   @scala.inline
-  def `not found`: typingsSlinky.arangodb.arangodbStrings.`not found` = this.cast("not found")
+  def `not implemented`: typingsSlinky.arangodb.arangodbStrings.`not implemented` = ("not implemented").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`not implemented`]
   @scala.inline
-  def `not implemented`: typingsSlinky.arangodb.arangodbStrings.`not implemented` = this.cast("not implemented")
+  def `not modified`: typingsSlinky.arangodb.arangodbStrings.`not modified` = ("not modified").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`not modified`]
   @scala.inline
-  def `not modified`: typingsSlinky.arangodb.arangodbStrings.`not modified` = this.cast("not modified")
+  def ok: typingsSlinky.arangodb.arangodbStrings.ok = "ok".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.ok]
   @scala.inline
-  def ok: typingsSlinky.arangodb.arangodbStrings.ok = this.cast("ok")
+  def `partial content`: typingsSlinky.arangodb.arangodbStrings.`partial content` = ("partial content").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`partial content`]
   @scala.inline
-  def `partial content`: typingsSlinky.arangodb.arangodbStrings.`partial content` = this.cast("partial content")
+  def `payload too large`: typingsSlinky.arangodb.arangodbStrings.`payload too large` = ("payload too large").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`payload too large`]
   @scala.inline
-  def `payload too large`: typingsSlinky.arangodb.arangodbStrings.`payload too large` = this.cast("payload too large")
+  def `payment required`: typingsSlinky.arangodb.arangodbStrings.`payment required` = ("payment required").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`payment required`]
   @scala.inline
-  def `payment required`: typingsSlinky.arangodb.arangodbStrings.`payment required` = this.cast("payment required")
+  def `permanent redirect`: typingsSlinky.arangodb.arangodbStrings.`permanent redirect` = ("permanent redirect").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`permanent redirect`]
   @scala.inline
-  def `permanent redirect`: typingsSlinky.arangodb.arangodbStrings.`permanent redirect` = this.cast("permanent redirect")
+  def `precondition failed`: typingsSlinky.arangodb.arangodbStrings.`precondition failed` = ("precondition failed").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`precondition failed`]
   @scala.inline
-  def `precondition failed`: typingsSlinky.arangodb.arangodbStrings.`precondition failed` = this.cast("precondition failed")
+  def `precondition required`: typingsSlinky.arangodb.arangodbStrings.`precondition required` = ("precondition required").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`precondition required`]
   @scala.inline
-  def `precondition required`: typingsSlinky.arangodb.arangodbStrings.`precondition required` = this.cast("precondition required")
+  def processing: typingsSlinky.arangodb.arangodbStrings.processing = "processing".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.processing]
   @scala.inline
-  def processing: typingsSlinky.arangodb.arangodbStrings.processing = this.cast("processing")
+  def `proxy authentication required`: typingsSlinky.arangodb.arangodbStrings.`proxy authentication required` = ("proxy authentication required").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`proxy authentication required`]
   @scala.inline
-  def `proxy authentication required`: typingsSlinky.arangodb.arangodbStrings.`proxy authentication required` = this.cast("proxy authentication required")
+  def `range not satisfiable`: typingsSlinky.arangodb.arangodbStrings.`range not satisfiable` = ("range not satisfiable").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`range not satisfiable`]
   @scala.inline
-  def `range not satisfiable`: typingsSlinky.arangodb.arangodbStrings.`range not satisfiable` = this.cast("range not satisfiable")
+  def `request header fields too large`: typingsSlinky.arangodb.arangodbStrings.`request header fields too large` = ("request header fields too large").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`request header fields too large`]
   @scala.inline
-  def `request header fields too large`: typingsSlinky.arangodb.arangodbStrings.`request header fields too large` = this.cast("request header fields too large")
+  def `request timeout`: typingsSlinky.arangodb.arangodbStrings.`request timeout` = ("request timeout").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`request timeout`]
   @scala.inline
-  def `request timeout`: typingsSlinky.arangodb.arangodbStrings.`request timeout` = this.cast("request timeout")
+  def `reset content`: typingsSlinky.arangodb.arangodbStrings.`reset content` = ("reset content").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`reset content`]
   @scala.inline
-  def `reset content`: typingsSlinky.arangodb.arangodbStrings.`reset content` = this.cast("reset content")
+  def `see other`: typingsSlinky.arangodb.arangodbStrings.`see other` = ("see other").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`see other`]
   @scala.inline
-  def `see other`: typingsSlinky.arangodb.arangodbStrings.`see other` = this.cast("see other")
+  def `service unavailable`: typingsSlinky.arangodb.arangodbStrings.`service unavailable` = ("service unavailable").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`service unavailable`]
   @scala.inline
-  def `service unavailable`: typingsSlinky.arangodb.arangodbStrings.`service unavailable` = this.cast("service unavailable")
+  def `switching protocols`: typingsSlinky.arangodb.arangodbStrings.`switching protocols` = ("switching protocols").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`switching protocols`]
   @scala.inline
-  def `switching protocols`: typingsSlinky.arangodb.arangodbStrings.`switching protocols` = this.cast("switching protocols")
+  def `temporary redirect`: typingsSlinky.arangodb.arangodbStrings.`temporary redirect` = ("temporary redirect").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`temporary redirect`]
   @scala.inline
-  def `temporary redirect`: typingsSlinky.arangodb.arangodbStrings.`temporary redirect` = this.cast("temporary redirect")
+  def `too many requests`: typingsSlinky.arangodb.arangodbStrings.`too many requests` = ("too many requests").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`too many requests`]
   @scala.inline
-  def `too many requests`: typingsSlinky.arangodb.arangodbStrings.`too many requests` = this.cast("too many requests")
+  def unauthorized: typingsSlinky.arangodb.arangodbStrings.unauthorized = "unauthorized".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.unauthorized]
   @scala.inline
-  def unauthorized: typingsSlinky.arangodb.arangodbStrings.unauthorized = this.cast("unauthorized")
+  def `unavailable for legal reasons`: typingsSlinky.arangodb.arangodbStrings.`unavailable for legal reasons` = ("unavailable for legal reasons").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`unavailable for legal reasons`]
   @scala.inline
-  def `unavailable for legal reasons`: typingsSlinky.arangodb.arangodbStrings.`unavailable for legal reasons` = this.cast("unavailable for legal reasons")
+  def `unordered collection`: typingsSlinky.arangodb.arangodbStrings.`unordered collection` = ("unordered collection").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`unordered collection`]
   @scala.inline
-  def `unordered collection`: typingsSlinky.arangodb.arangodbStrings.`unordered collection` = this.cast("unordered collection")
+  def `unprocessable entity`: typingsSlinky.arangodb.arangodbStrings.`unprocessable entity` = ("unprocessable entity").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`unprocessable entity`]
   @scala.inline
-  def `unprocessable entity`: typingsSlinky.arangodb.arangodbStrings.`unprocessable entity` = this.cast("unprocessable entity")
+  def `unsupported media type`: typingsSlinky.arangodb.arangodbStrings.`unsupported media type` = ("unsupported media type").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`unsupported media type`]
   @scala.inline
-  def `unsupported media type`: typingsSlinky.arangodb.arangodbStrings.`unsupported media type` = this.cast("unsupported media type")
+  def `upgrade required`: typingsSlinky.arangodb.arangodbStrings.`upgrade required` = ("upgrade required").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`upgrade required`]
   @scala.inline
-  def `upgrade required`: typingsSlinky.arangodb.arangodbStrings.`upgrade required` = this.cast("upgrade required")
+  def `uri too long`: typingsSlinky.arangodb.arangodbStrings.`uri too long` = ("uri too long").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`uri too long`]
   @scala.inline
-  def `uri too long`: typingsSlinky.arangodb.arangodbStrings.`uri too long` = this.cast("uri too long")
+  def `use proxy`: typingsSlinky.arangodb.arangodbStrings.`use proxy` = ("use proxy").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`use proxy`]
   @scala.inline
-  def `use proxy`: typingsSlinky.arangodb.arangodbStrings.`use proxy` = this.cast("use proxy")
-  @scala.inline
-  def `variant also negotiates`: typingsSlinky.arangodb.arangodbStrings.`variant also negotiates` = this.cast("variant also negotiates")
+  def `variant also negotiates`: typingsSlinky.arangodb.arangodbStrings.`variant also negotiates` = ("variant also negotiates").asInstanceOf[typingsSlinky.arangodb.arangodbStrings.`variant also negotiates`]
 }
 

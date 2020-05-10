@@ -1,7 +1,6 @@
 package typingsSlinky.spatialite
 
 import typingsSlinky.sqlite3.mod.sqlite3
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +27,7 @@ object mod extends js.Object {
     def Database(filename: String): typingsSlinky.sqlite3.mod.Database = js.native
     def Database(
       filename: String,
-      callback: js.ThisFunction1[/* this */ typingsSlinky.sqlite3.mod.Database, /* err */ Error | Null, Unit]
+      callback: js.ThisFunction1[/* this */ typingsSlinky.sqlite3.mod.Database, /* err */ js.Error | Null, Unit]
     ): typingsSlinky.sqlite3.mod.Database = js.native
     def Database(filename: String, mode: Double): typingsSlinky.sqlite3.mod.Database = js.native
     def Database(

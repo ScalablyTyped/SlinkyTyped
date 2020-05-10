@@ -16,8 +16,21 @@ object EnableAWSServiceAccessRequest {
   @scala.inline
   def apply(ServicePrincipal: ServicePrincipal): EnableAWSServiceAccessRequest = {
     val __obj = js.Dynamic.literal(ServicePrincipal = ServicePrincipal.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[EnableAWSServiceAccessRequest]
   }
+  @scala.inline
+  implicit class EnableAWSServiceAccessRequestOps[Self <: EnableAWSServiceAccessRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServicePrincipal(value: ServicePrincipal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServicePrincipal")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgDataChartAxes
   extends /**
-	 * Option for IgDataChartAxes
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
@@ -15,31 +16,31 @@ trait IgDataChartAxes
   	 * Should be specified before setting any member paths, if being used. Setting it later
   	 * will not cause data to be reimported into the chart.
   	 */
-  var coercionMethods: js.UndefOr[js.Any] = js.undefined
+  var coercionMethods: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets or sets the CrossingAxis property.
   	 */
-  var crossingAxis: js.UndefOr[String] = js.undefined
+  var crossingAxis: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the CrossingValue property.
   	 */
-  var crossingValue: js.UndefOr[js.Any] = js.undefined
+  var crossingValue: js.UndefOr[js.Any] = js.native
   /**
   	 * Can be any valid data source accepted by $.ig.DataSource, or an instance of an $.ig.DataSource itself
   	 */
-  var dataSource: js.UndefOr[js.Any] = js.undefined
+  var dataSource: js.UndefOr[js.Any] = js.native
   /**
   	 * Explicitly set data source type (such as "json"). Please refer to the documentation of $.ig.DataSource and its type property.
   	 */
-  var dataSourceType: js.UndefOr[String] = js.undefined
+  var dataSourceType: js.UndefOr[String] = js.native
   /**
   	 * Specifies a remote URL accepted by $.ig.DataSource in order to request data from it
   	 */
-  var dataSourceUrl: js.UndefOr[String] = js.undefined
+  var dataSourceUrl: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the DateTime mapping property for the CategoryDateTimeXAxis.
   	 */
-  var dateTimeMemberPath: js.UndefOr[String] = js.undefined
+  var dateTimeMemberPath: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the axis display type. Continuous display type divides the axis into even intervals, where labels will not necessarily be aligned with data points. Discrete display type will not use a constant interval, but will align each label with its data point.
   	 *
@@ -47,58 +48,58 @@ trait IgDataChartAxes
   	 * "continuous" Points occur at even intervals, even where data is not present at a given point.
   	 * "discrete" Points occur when data is present, possibly at uneven intervals.
   	 */
-  var displayType: js.UndefOr[String] = js.undefined
+  var displayType: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the mininum desired characters to be displayed for horizontal axes when using advanced label heuristics. -1 will attempt to adjust the interval to precisely fit the horizontal labels.
   	 */
-  var enhancedIntervalMinimumCharacters: js.UndefOr[Double] = js.undefined
+  var enhancedIntervalMinimumCharacters: js.UndefOr[Double] = js.native
   /**
   	 * Sets or gets a function which takes an object that produces a formatted label for displaying in the chart.
   	 */
-  var formatLabel: js.UndefOr[js.Any] = js.undefined
+  var formatLabel: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets or sets the amount of space between adjacent categories for the current axis object.
   	 * The gap is silently clamped to the range [0, 1] when used.
   	 */
-  var gap: js.UndefOr[Double] = js.undefined
+  var gap: js.UndefOr[Double] = js.native
   /**
   	 * Defines the percentage of the maximum radius extent to leave blank at the center of the chart. Should be
   	 * a value between 0.0 and 1.0.
   	 */
-  var innerRadiusExtentScale: js.UndefOr[Double] = js.undefined
+  var innerRadiusExtentScale: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the frequency of displayed labels.
   	 * The set value is a factor that determines which labels will be hidden. For example, an interval of 2 will display every other label.
   	 */
-  var interval: js.UndefOr[Double] = js.undefined
+  var interval: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets whether the data assigned to the date time axis should be considered pre-sorted by date/time.
   	 */
-  var isDataPreSorted: js.UndefOr[Boolean] = js.undefined
+  var isDataPreSorted: js.UndefOr[Boolean] = js.native
   /**
   	 * Gets or sets the IsInverted property.
   	 */
-  var isInverted: js.UndefOr[Boolean] = js.undefined
+  var isInverted: js.UndefOr[Boolean] = js.native
   /**
   	 * Gets or sets the IsLogarithmic property.
   	 */
-  var isLogarithmic: js.UndefOr[Boolean] = js.undefined
+  var isLogarithmic: js.UndefOr[Boolean] = js.native
   /**
   	 * Gets or sets the label mapping property to use for axis labels.
   	 */
-  var label: js.UndefOr[js.Any] = js.undefined
+  var label: js.UndefOr[js.Any] = js.native
   /**
   	 * Specifies the angle that labels on the axis should be rotated
   	 */
-  var labelAngle: js.UndefOr[Double] = js.undefined
+  var labelAngle: js.UndefOr[Double] = js.native
   /**
   	 * The bottom margin to use for the labels.
   	 */
-  var labelBottomMargin: js.UndefOr[Double] = js.undefined
+  var labelBottomMargin: js.UndefOr[Double] = js.native
   /**
   	 * Specifies the extent of the area dedicated to the labels for this axis. If unspecified, this value is auto-calculated.
   	 */
-  var labelExtent: js.UndefOr[Double] = js.undefined
+  var labelExtent: js.UndefOr[Double] = js.native
   /**
   	 * the horizontal alignment to use for the labels. Only applicable to vertical axes.
   	 *
@@ -107,11 +108,11 @@ trait IgDataChartAxes
   	 * "center" center aligns the labels.
   	 * "right" right aligns the labels.
   	 */
-  var labelHorizontalAlignment: js.UndefOr[String] = js.undefined
+  var labelHorizontalAlignment: js.UndefOr[String] = js.native
   /**
   	 * The left margin to use for the labels.
   	 */
-  var labelLeftMargin: js.UndefOr[Double] = js.undefined
+  var labelLeftMargin: js.UndefOr[Double] = js.native
   /**
   	 * Specifies the location to display the axis labels for this axis.
   	 *
@@ -125,27 +126,27 @@ trait IgDataChartAxes
   	 * "insideLeft" The labels should have an inside left position.
   	 * "insideRight" The labels should have an inside right position.
   	 */
-  var labelLocation: js.UndefOr[String] = js.undefined
+  var labelLocation: js.UndefOr[String] = js.native
   /**
   	 * The margin to use for the labels.
   	 */
-  var labelMargin: js.UndefOr[Double] = js.undefined
+  var labelMargin: js.UndefOr[Double] = js.native
   /**
   	 * The right margin to use for the labels.
   	 */
-  var labelRightMargin: js.UndefOr[Double] = js.undefined
+  var labelRightMargin: js.UndefOr[Double] = js.native
   /**
   	 * Overrides the color of the text used for the axis labels.
   	 */
-  var labelTextColor: js.UndefOr[String] = js.undefined
+  var labelTextColor: js.UndefOr[String] = js.native
   /**
   	 * Overrides the style of the text used for the axis labels.
   	 */
-  var labelTextStyle: js.UndefOr[String] = js.undefined
+  var labelTextStyle: js.UndefOr[String] = js.native
   /**
   	 * The top margin to use for the labels.
   	 */
-  var labelTopMargin: js.UndefOr[Double] = js.undefined
+  var labelTopMargin: js.UndefOr[Double] = js.native
   /**
   	 * the vertical alignment to use for the labels. Only applicable to horizontal axes.
   	 *
@@ -154,7 +155,7 @@ trait IgDataChartAxes
   	 * "center" center aligns the labels.
   	 * "bottom" bottom aligns the labels.
   	 */
-  var labelVerticalAlignment: js.UndefOr[String] = js.undefined
+  var labelVerticalAlignment: js.UndefOr[String] = js.native
   /**
   	 * Specifies whether the labels are visible.
   	 *
@@ -162,19 +163,19 @@ trait IgDataChartAxes
   	 * "visible" The labels should be visisble for this axis.
   	 * "collapsed" The labels should not be visible for this axis.
   	 */
-  var labelVisibility: js.UndefOr[String] = js.undefined
+  var labelVisibility: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the LogarithmBase property.
   	 */
-  var logarithmBase: js.UndefOr[Double] = js.undefined
+  var logarithmBase: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the MajorStroke property.
   	 */
-  var majorStroke: js.UndefOr[String] = js.undefined
+  var majorStroke: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the MajorStrokeThickness property.
   	 */
-  var majorStrokeThickness: js.UndefOr[Double] = js.undefined
+  var majorStrokeThickness: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the axis MaximumValue.
   	 *
@@ -183,7 +184,7 @@ trait IgDataChartAxes
   	 * "number" The maximum value can be set to be a number when the axis is of numeric type
   	 * "date" The maximum value can be set to be a date object when [type](ui.igDataChart#options:axes.type) option is set to "categoryDateTimeX"
   	 */
-  var maximumValue: js.UndefOr[Double | js.Date] = js.undefined
+  var maximumValue: js.UndefOr[Double | js.Date] = js.native
   /**
   	 * Gets or sets the axis MinimumValue.
   	 *
@@ -192,85 +193,85 @@ trait IgDataChartAxes
   	 * "number" The minimum value can be set to be a number when the axis is of numeric type
   	 * "date" The minimum value can be set to be a date object when [type](ui.igDataChart#options:axes.type) option is set to "categoryDateTimeX"
   	 */
-  var minimumValue: js.UndefOr[Double | js.Date] = js.undefined
+  var minimumValue: js.UndefOr[Double | js.Date] = js.native
   /**
   	 * Gets or sets the MinorStroke property.
   	 */
-  var minorStroke: js.UndefOr[String] = js.undefined
+  var minorStroke: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the MinorStrokeThickness property.
   	 */
-  var minorStrokeThickness: js.UndefOr[Double] = js.undefined
+  var minorStrokeThickness: js.UndefOr[Double] = js.native
   /**
   	 * The unique identifier of the axis.
   	 */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the amount of overlap between adjacent categories for the current axis object.
   	 * The overlap is silently clamped to the range [-1, 1] when used.
   	 */
-  var overlap: js.UndefOr[Double] = js.undefined
+  var overlap: js.UndefOr[Double] = js.native
   /**
   	 * Defines the percentage of the maximum radius extent to use as the maximum radius. Should be
   	 * a value between 0.0 and 1.0.
   	 */
-  var radiusExtentScale: js.UndefOr[Double] = js.undefined
+  var radiusExtentScale: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the ReferenceValue property.
   	 */
-  var referenceValue: js.UndefOr[Double] = js.undefined
+  var referenceValue: js.UndefOr[Double] = js.native
   /**
   	 * Set to true in order to have an existing axis removed from the chart, by name
   	 */
-  var remove: js.UndefOr[Boolean] = js.undefined
+  var remove: js.UndefOr[Boolean] = js.native
   /**
   	 * See $.ig.DataSource. Specifies the name of the property in which data records are held if the response is wrapped.
   	 */
-  var responseDataKey: js.UndefOr[String] = js.undefined
+  var responseDataKey: js.UndefOr[String] = js.native
   /**
   	 * Sets whether or not to show the first label on the axis.
   	 */
-  var showFirstLabel: js.UndefOr[Boolean] = js.undefined
+  var showFirstLabel: js.UndefOr[Boolean] = js.native
   /**
   	 * Indicates the angle in degress that the chart's 0th angle should be offset.
   	 */
-  var startAngleOffset: js.UndefOr[Double] = js.undefined
+  var startAngleOffset: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the Strip property.
   	 */
-  var strip: js.UndefOr[String] = js.undefined
+  var strip: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the Stroke property.
   	 */
-  var stroke: js.UndefOr[String] = js.undefined
+  var stroke: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the StrokeThickness property.
   	 */
-  var strokeThickness: js.UndefOr[Double] = js.undefined
+  var strokeThickness: js.UndefOr[Double] = js.native
   /**
   	 * The length of the tickmarks to display for this axis.
   	 */
-  var tickLength: js.UndefOr[Double] = js.undefined
+  var tickLength: js.UndefOr[Double] = js.native
   /**
   	 * The color to use for the tickmarks.
   	 */
-  var tickStroke: js.UndefOr[js.Any] = js.undefined
+  var tickStroke: js.UndefOr[js.Any] = js.native
   /**
   	 * The stroke thickness to use for the tickmarks.
   	 */
-  var tickStrokeThickness: js.UndefOr[Double] = js.undefined
+  var tickStrokeThickness: js.UndefOr[Double] = js.native
   /**
   	 * The title to display for the component.
   	 */
-  var title: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.native
   /**
   	 * The angle to use for the axis title.
   	 */
-  var titleAngle: js.UndefOr[Double] = js.undefined
+  var titleAngle: js.UndefOr[Double] = js.native
   /**
   	 * The bottom margin to use for the title.
   	 */
-  var titleBottomMargin: js.UndefOr[Double] = js.undefined
+  var titleBottomMargin: js.UndefOr[Double] = js.native
   /**
   	 * the horizontal alignment to use for the title.
   	 *
@@ -279,15 +280,15 @@ trait IgDataChartAxes
   	 * "center" center aligns the title.
   	 * "right" right aligns the title.
   	 */
-  var titleHorizontalAlignment: js.UndefOr[String] = js.undefined
+  var titleHorizontalAlignment: js.UndefOr[String] = js.native
   /**
   	 * The left margin to use for the title.
   	 */
-  var titleLeftMargin: js.UndefOr[Double] = js.undefined
+  var titleLeftMargin: js.UndefOr[Double] = js.native
   /**
   	 * The margin to display around the title of the axis.
   	 */
-  var titleMargin: js.UndefOr[Double] = js.undefined
+  var titleMargin: js.UndefOr[Double] = js.native
   /**
   	 * the position to use for the title.
   	 *
@@ -298,26 +299,26 @@ trait IgDataChartAxes
   	 * "top" the title is positioned on the top of the labels, if applicable.
   	 * "bottom" the title is positioned on the bottom of the labels, if applicable.
   	 */
-  var titlePosition: js.UndefOr[String] = js.undefined
+  var titlePosition: js.UndefOr[String] = js.native
   /**
   	 * The right margin to use for the title.
   	 */
-  var titleRightMargin: js.UndefOr[Double] = js.undefined
+  var titleRightMargin: js.UndefOr[Double] = js.native
   /**
   	 * The css font property to use for the title.
   	 */
-  var titleTextStyle: js.UndefOr[String] = js.undefined
+  var titleTextStyle: js.UndefOr[String] = js.native
   /**
   	 * The top margin to use for the title.
   	 */
-  var titleTopMargin: js.UndefOr[Double] = js.undefined
+  var titleTopMargin: js.UndefOr[Double] = js.native
   /**
   	 * the vertical alignment to use for the title.
   	 *
   	 * Valid values:
   	 * "center" center aligns the title.
   	 */
-  var titleVerticalAlignment: js.UndefOr[String] = js.undefined
+  var titleVerticalAlignment: js.UndefOr[String] = js.native
   /**
   	 * Type of the axis.
   	 *
@@ -332,158 +333,822 @@ trait IgDataChartAxes
   	 * "numericRadius" Specify the axis as numeric radius axis. Useful for displaying polar and radial series.
   	 * "time" Specify the axis as time X axis. Useful for displaying date based data with time breaks.
   	 */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets whether the cateogory axis should use clustering display mode even if no series are present that would force clustering mode.
   	 */
-  var useClusteringMode: js.UndefOr[Boolean] = js.undefined
+  var useClusteringMode: js.UndefOr[Boolean] = js.native
   /**
   	 * Gets or sets whether to use more advanced heuristics when determining the initial number of labels to render, before resolving collisions, etc.
   	 */
-  var useEnhancedIntervalManagement: js.UndefOr[Boolean] = js.undefined
+  var useEnhancedIntervalManagement: js.UndefOr[Boolean] = js.native
 }
 
 object IgDataChartAxes {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for IgDataChartAxes
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    coercionMethods: js.Any = null,
-    crossingAxis: String = null,
-    crossingValue: js.Any = null,
-    dataSource: js.Any = null,
-    dataSourceType: String = null,
-    dataSourceUrl: String = null,
-    dateTimeMemberPath: String = null,
-    displayType: String = null,
-    enhancedIntervalMinimumCharacters: Int | Double = null,
-    formatLabel: js.Any = null,
-    gap: Int | Double = null,
-    innerRadiusExtentScale: Int | Double = null,
-    interval: Int | Double = null,
-    isDataPreSorted: js.UndefOr[Boolean] = js.undefined,
-    isInverted: js.UndefOr[Boolean] = js.undefined,
-    isLogarithmic: js.UndefOr[Boolean] = js.undefined,
-    label: js.Any = null,
-    labelAngle: Int | Double = null,
-    labelBottomMargin: Int | Double = null,
-    labelExtent: Int | Double = null,
-    labelHorizontalAlignment: String = null,
-    labelLeftMargin: Int | Double = null,
-    labelLocation: String = null,
-    labelMargin: Int | Double = null,
-    labelRightMargin: Int | Double = null,
-    labelTextColor: String = null,
-    labelTextStyle: String = null,
-    labelTopMargin: Int | Double = null,
-    labelVerticalAlignment: String = null,
-    labelVisibility: String = null,
-    logarithmBase: Int | Double = null,
-    majorStroke: String = null,
-    majorStrokeThickness: Int | Double = null,
-    maximumValue: Double | js.Date = null,
-    minimumValue: Double | js.Date = null,
-    minorStroke: String = null,
-    minorStrokeThickness: Int | Double = null,
-    name: String = null,
-    overlap: Int | Double = null,
-    radiusExtentScale: Int | Double = null,
-    referenceValue: Int | Double = null,
-    remove: js.UndefOr[Boolean] = js.undefined,
-    responseDataKey: String = null,
-    showFirstLabel: js.UndefOr[Boolean] = js.undefined,
-    startAngleOffset: Int | Double = null,
-    strip: String = null,
-    stroke: String = null,
-    strokeThickness: Int | Double = null,
-    tickLength: Int | Double = null,
-    tickStroke: js.Any = null,
-    tickStrokeThickness: Int | Double = null,
-    title: String = null,
-    titleAngle: Int | Double = null,
-    titleBottomMargin: Int | Double = null,
-    titleHorizontalAlignment: String = null,
-    titleLeftMargin: Int | Double = null,
-    titleMargin: Int | Double = null,
-    titlePosition: String = null,
-    titleRightMargin: Int | Double = null,
-    titleTextStyle: String = null,
-    titleTopMargin: Int | Double = null,
-    titleVerticalAlignment: String = null,
-    `type`: String = null,
-    useClusteringMode: js.UndefOr[Boolean] = js.undefined,
-    useEnhancedIntervalManagement: js.UndefOr[Boolean] = js.undefined
-  ): IgDataChartAxes = {
+  def apply(): IgDataChartAxes = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (coercionMethods != null) __obj.updateDynamic("coercionMethods")(coercionMethods.asInstanceOf[js.Any])
-    if (crossingAxis != null) __obj.updateDynamic("crossingAxis")(crossingAxis.asInstanceOf[js.Any])
-    if (crossingValue != null) __obj.updateDynamic("crossingValue")(crossingValue.asInstanceOf[js.Any])
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (dataSourceType != null) __obj.updateDynamic("dataSourceType")(dataSourceType.asInstanceOf[js.Any])
-    if (dataSourceUrl != null) __obj.updateDynamic("dataSourceUrl")(dataSourceUrl.asInstanceOf[js.Any])
-    if (dateTimeMemberPath != null) __obj.updateDynamic("dateTimeMemberPath")(dateTimeMemberPath.asInstanceOf[js.Any])
-    if (displayType != null) __obj.updateDynamic("displayType")(displayType.asInstanceOf[js.Any])
-    if (enhancedIntervalMinimumCharacters != null) __obj.updateDynamic("enhancedIntervalMinimumCharacters")(enhancedIntervalMinimumCharacters.asInstanceOf[js.Any])
-    if (formatLabel != null) __obj.updateDynamic("formatLabel")(formatLabel.asInstanceOf[js.Any])
-    if (gap != null) __obj.updateDynamic("gap")(gap.asInstanceOf[js.Any])
-    if (innerRadiusExtentScale != null) __obj.updateDynamic("innerRadiusExtentScale")(innerRadiusExtentScale.asInstanceOf[js.Any])
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDataPreSorted)) __obj.updateDynamic("isDataPreSorted")(isDataPreSorted.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInverted)) __obj.updateDynamic("isInverted")(isInverted.asInstanceOf[js.Any])
-    if (!js.isUndefined(isLogarithmic)) __obj.updateDynamic("isLogarithmic")(isLogarithmic.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (labelAngle != null) __obj.updateDynamic("labelAngle")(labelAngle.asInstanceOf[js.Any])
-    if (labelBottomMargin != null) __obj.updateDynamic("labelBottomMargin")(labelBottomMargin.asInstanceOf[js.Any])
-    if (labelExtent != null) __obj.updateDynamic("labelExtent")(labelExtent.asInstanceOf[js.Any])
-    if (labelHorizontalAlignment != null) __obj.updateDynamic("labelHorizontalAlignment")(labelHorizontalAlignment.asInstanceOf[js.Any])
-    if (labelLeftMargin != null) __obj.updateDynamic("labelLeftMargin")(labelLeftMargin.asInstanceOf[js.Any])
-    if (labelLocation != null) __obj.updateDynamic("labelLocation")(labelLocation.asInstanceOf[js.Any])
-    if (labelMargin != null) __obj.updateDynamic("labelMargin")(labelMargin.asInstanceOf[js.Any])
-    if (labelRightMargin != null) __obj.updateDynamic("labelRightMargin")(labelRightMargin.asInstanceOf[js.Any])
-    if (labelTextColor != null) __obj.updateDynamic("labelTextColor")(labelTextColor.asInstanceOf[js.Any])
-    if (labelTextStyle != null) __obj.updateDynamic("labelTextStyle")(labelTextStyle.asInstanceOf[js.Any])
-    if (labelTopMargin != null) __obj.updateDynamic("labelTopMargin")(labelTopMargin.asInstanceOf[js.Any])
-    if (labelVerticalAlignment != null) __obj.updateDynamic("labelVerticalAlignment")(labelVerticalAlignment.asInstanceOf[js.Any])
-    if (labelVisibility != null) __obj.updateDynamic("labelVisibility")(labelVisibility.asInstanceOf[js.Any])
-    if (logarithmBase != null) __obj.updateDynamic("logarithmBase")(logarithmBase.asInstanceOf[js.Any])
-    if (majorStroke != null) __obj.updateDynamic("majorStroke")(majorStroke.asInstanceOf[js.Any])
-    if (majorStrokeThickness != null) __obj.updateDynamic("majorStrokeThickness")(majorStrokeThickness.asInstanceOf[js.Any])
-    if (maximumValue != null) __obj.updateDynamic("maximumValue")(maximumValue.asInstanceOf[js.Any])
-    if (minimumValue != null) __obj.updateDynamic("minimumValue")(minimumValue.asInstanceOf[js.Any])
-    if (minorStroke != null) __obj.updateDynamic("minorStroke")(minorStroke.asInstanceOf[js.Any])
-    if (minorStrokeThickness != null) __obj.updateDynamic("minorStrokeThickness")(minorStrokeThickness.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (overlap != null) __obj.updateDynamic("overlap")(overlap.asInstanceOf[js.Any])
-    if (radiusExtentScale != null) __obj.updateDynamic("radiusExtentScale")(radiusExtentScale.asInstanceOf[js.Any])
-    if (referenceValue != null) __obj.updateDynamic("referenceValue")(referenceValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(remove)) __obj.updateDynamic("remove")(remove.asInstanceOf[js.Any])
-    if (responseDataKey != null) __obj.updateDynamic("responseDataKey")(responseDataKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(showFirstLabel)) __obj.updateDynamic("showFirstLabel")(showFirstLabel.asInstanceOf[js.Any])
-    if (startAngleOffset != null) __obj.updateDynamic("startAngleOffset")(startAngleOffset.asInstanceOf[js.Any])
-    if (strip != null) __obj.updateDynamic("strip")(strip.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (strokeThickness != null) __obj.updateDynamic("strokeThickness")(strokeThickness.asInstanceOf[js.Any])
-    if (tickLength != null) __obj.updateDynamic("tickLength")(tickLength.asInstanceOf[js.Any])
-    if (tickStroke != null) __obj.updateDynamic("tickStroke")(tickStroke.asInstanceOf[js.Any])
-    if (tickStrokeThickness != null) __obj.updateDynamic("tickStrokeThickness")(tickStrokeThickness.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titleAngle != null) __obj.updateDynamic("titleAngle")(titleAngle.asInstanceOf[js.Any])
-    if (titleBottomMargin != null) __obj.updateDynamic("titleBottomMargin")(titleBottomMargin.asInstanceOf[js.Any])
-    if (titleHorizontalAlignment != null) __obj.updateDynamic("titleHorizontalAlignment")(titleHorizontalAlignment.asInstanceOf[js.Any])
-    if (titleLeftMargin != null) __obj.updateDynamic("titleLeftMargin")(titleLeftMargin.asInstanceOf[js.Any])
-    if (titleMargin != null) __obj.updateDynamic("titleMargin")(titleMargin.asInstanceOf[js.Any])
-    if (titlePosition != null) __obj.updateDynamic("titlePosition")(titlePosition.asInstanceOf[js.Any])
-    if (titleRightMargin != null) __obj.updateDynamic("titleRightMargin")(titleRightMargin.asInstanceOf[js.Any])
-    if (titleTextStyle != null) __obj.updateDynamic("titleTextStyle")(titleTextStyle.asInstanceOf[js.Any])
-    if (titleTopMargin != null) __obj.updateDynamic("titleTopMargin")(titleTopMargin.asInstanceOf[js.Any])
-    if (titleVerticalAlignment != null) __obj.updateDynamic("titleVerticalAlignment")(titleVerticalAlignment.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(useClusteringMode)) __obj.updateDynamic("useClusteringMode")(useClusteringMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(useEnhancedIntervalManagement)) __obj.updateDynamic("useEnhancedIntervalManagement")(useEnhancedIntervalManagement.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgDataChartAxes]
   }
+  @scala.inline
+  implicit class IgDataChartAxesOps[Self <: IgDataChartAxes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCoercionMethods(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coercionMethods")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoercionMethods: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coercionMethods")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrossingAxis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossingAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrossingAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossingAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrossingValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossingValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrossingValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossingValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSource(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSourceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSourceUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSourceUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateTimeMemberPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTimeMemberPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateTimeMemberPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTimeMemberPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnhancedIntervalMinimumCharacters(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enhancedIntervalMinimumCharacters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnhancedIntervalMinimumCharacters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enhancedIntervalMinimumCharacters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatLabel(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGap(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInnerRadiusExtentScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadiusExtentScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInnerRadiusExtentScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadiusExtentScale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDataPreSorted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDataPreSorted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDataPreSorted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDataPreSorted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsInverted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInverted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsInverted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInverted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsLogarithmic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLogarithmic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsLogarithmic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLogarithmic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelBottomMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelBottomMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelBottomMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelBottomMargin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelHorizontalAlignment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelHorizontalAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelHorizontalAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelHorizontalAlignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelLeftMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelLeftMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelLeftMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelLeftMargin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelMargin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelRightMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelRightMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelRightMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelRightMargin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelTextColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelTextColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelTextColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelTextColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelTextStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelTextStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelTextStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelTextStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelTopMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelTopMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelTopMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelTopMargin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelVerticalAlignment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelVerticalAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelVerticalAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelVerticalAlignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelVisibility(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelVisibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelVisibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelVisibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogarithmBase(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logarithmBase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogarithmBase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logarithmBase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMajorStroke(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorStroke")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMajorStroke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorStroke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMajorStrokeThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorStrokeThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMajorStrokeThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorStrokeThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumValueDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaximumValue(value: Double | js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumValueDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinimumValue(value: Double | js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorStroke(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorStroke")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorStroke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorStroke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorStrokeThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorStrokeThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorStrokeThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorStrokeThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlap(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadiusExtentScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusExtentScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadiusExtentScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusExtentScale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferenceValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferenceValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemove(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseDataKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseDataKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseDataKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseDataKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowFirstLabel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showFirstLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowFirstLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showFirstLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartAngleOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngleOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartAngleOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngleOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrip(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStroke(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStroke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickStroke(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickStroke")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickStroke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickStroke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickStrokeThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickStrokeThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickStrokeThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickStrokeThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleBottomMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleBottomMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleBottomMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleBottomMargin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleHorizontalAlignment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleHorizontalAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleHorizontalAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleHorizontalAlignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleLeftMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleLeftMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleLeftMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleLeftMargin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleMargin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitlePosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titlePosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitlePosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titlePosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleRightMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleRightMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleRightMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleRightMargin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleTextStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleTextStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleTextStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleTextStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleTopMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleTopMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleTopMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleTopMargin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleVerticalAlignment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleVerticalAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleVerticalAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleVerticalAlignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseClusteringMode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useClusteringMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseClusteringMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useClusteringMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseEnhancedIntervalManagement(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useEnhancedIntervalManagement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseEnhancedIntervalManagement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useEnhancedIntervalManagement")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

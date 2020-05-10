@@ -6,19 +6,56 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // ?Das selbe wie Appearance?
+@js.native
 trait ISettings extends js.Object {
-  var max: js.UndefOr[Double] = js.undefined
-  var min: js.UndefOr[Double] = js.undefined
-  var uses: settings
+  var max: js.UndefOr[Double] = js.native
+  var min: js.UndefOr[Double] = js.native
+  var uses: settings = js.native
 }
 
 object ISettings {
   @scala.inline
-  def apply(uses: settings, max: Int | Double = null, min: Int | Double = null): ISettings = {
+  def apply(uses: settings): ISettings = {
     val __obj = js.Dynamic.literal(uses = uses.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISettings]
   }
+  @scala.inline
+  implicit class ISettingsOps[Self <: ISettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUses(value: settings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

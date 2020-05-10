@@ -14,10 +14,29 @@ trait RetentionPolicy extends js.Object {
 
 object RetentionPolicy {
   @scala.inline
-  def apply(HomeEfsFileSystem: RetentionType = null): RetentionPolicy = {
+  def apply(): RetentionPolicy = {
     val __obj = js.Dynamic.literal()
-    if (HomeEfsFileSystem != null) __obj.updateDynamic("HomeEfsFileSystem")(HomeEfsFileSystem.asInstanceOf[js.Any])
     __obj.asInstanceOf[RetentionPolicy]
   }
+  @scala.inline
+  implicit class RetentionPolicyOps[Self <: RetentionPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHomeEfsFileSystem(value: RetentionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HomeEfsFileSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomeEfsFileSystem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HomeEfsFileSystem")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

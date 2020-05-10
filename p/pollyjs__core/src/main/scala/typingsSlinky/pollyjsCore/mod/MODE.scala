@@ -14,14 +14,12 @@ trait MODE extends js.Object
 
 object MODE {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def passthrough: typingsSlinky.pollyjsCore.pollyjsCoreStrings.passthrough = "passthrough".asInstanceOf[typingsSlinky.pollyjsCore.pollyjsCoreStrings.passthrough]
   @scala.inline
-  def passthrough: typingsSlinky.pollyjsCore.pollyjsCoreStrings.passthrough = this.cast("passthrough")
+  def record: typingsSlinky.pollyjsCore.pollyjsCoreStrings.record = "record".asInstanceOf[typingsSlinky.pollyjsCore.pollyjsCoreStrings.record]
   @scala.inline
-  def record: typingsSlinky.pollyjsCore.pollyjsCoreStrings.record = this.cast("record")
+  def replay: typingsSlinky.pollyjsCore.pollyjsCoreStrings.replay = "replay".asInstanceOf[typingsSlinky.pollyjsCore.pollyjsCoreStrings.replay]
   @scala.inline
-  def replay: typingsSlinky.pollyjsCore.pollyjsCoreStrings.replay = this.cast("replay")
-  @scala.inline
-  def stopped: typingsSlinky.pollyjsCore.pollyjsCoreStrings.stopped = this.cast("stopped")
+  def stopped: typingsSlinky.pollyjsCore.pollyjsCoreStrings.stopped = "stopped".asInstanceOf[typingsSlinky.pollyjsCore.pollyjsCoreStrings.stopped]
 }
 

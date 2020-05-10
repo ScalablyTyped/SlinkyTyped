@@ -1,12 +1,12 @@
 package typingsSlinky.reachRect.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.FC
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("@reach/rect", JSImport.Default)
 @js.native
-object default extends TopLevel[FC[RectProps]]
+object default extends TopLevel[ReactComponentClass[RectProps]]
 

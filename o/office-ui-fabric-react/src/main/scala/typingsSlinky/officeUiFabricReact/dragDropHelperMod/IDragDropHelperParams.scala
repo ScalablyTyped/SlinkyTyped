@@ -6,17 +6,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IDragDropHelperParams extends js.Object {
-  var minimumPixelsForDrag: js.UndefOr[Double] = js.undefined
-  var selection: ISelection[IObjectWithKey]
+  var minimumPixelsForDrag: js.UndefOr[Double] = js.native
+  var selection: ISelection[IObjectWithKey] = js.native
 }
 
 object IDragDropHelperParams {
   @scala.inline
-  def apply(selection: ISelection[IObjectWithKey], minimumPixelsForDrag: Int | Double = null): IDragDropHelperParams = {
+  def apply(selection: ISelection[IObjectWithKey]): IDragDropHelperParams = {
     val __obj = js.Dynamic.literal(selection = selection.asInstanceOf[js.Any])
-    if (minimumPixelsForDrag != null) __obj.updateDynamic("minimumPixelsForDrag")(minimumPixelsForDrag.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDragDropHelperParams]
   }
+  @scala.inline
+  implicit class IDragDropHelperParamsOps[Self <: IDragDropHelperParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSelection(value: ISelection[IObjectWithKey]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinimumPixelsForDrag(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumPixelsForDrag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumPixelsForDrag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumPixelsForDrag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

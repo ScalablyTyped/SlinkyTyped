@@ -6,12 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.System.Threading.Core.SignalNotifier")
 @js.native
-class SignalNotifier () extends ISignalNotifier {
-  /* CompleteClass */
-  override def enable(): Unit = js.native
-  /* CompleteClass */
-  override def terminate(): Unit = js.native
-}
+class SignalNotifier () extends ISignalNotifier
 
 /* static members */
 @JSGlobal("Windows.System.Threading.Core.SignalNotifier")

@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait lang extends js.Object {
   /**
     * Use this method to deeply clone objects with properties that are computed or have their own `clone()` method. For example, if you are creating an object that stores an initial extent and a spatial reference for your application, you can use `esriLang.clone(initialProps)` to clone this object so that the `extent` and `spatialReference` are properly cloned.
@@ -14,7 +15,7 @@ trait lang extends js.Object {
     * @param elem The object to be cloned.
     *
     */
-  def clone(elem: js.Any): js.Any
+  def clone(elem: js.Any): js.Any = js.native
 }
 
 @JSGlobal("__esri.lang")

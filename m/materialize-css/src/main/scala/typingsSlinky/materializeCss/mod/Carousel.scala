@@ -28,7 +28,7 @@ object Carousel extends js.Object {
   /**
     * Init carousel
     */
-  def init(els: typingsSlinky.std.Element): typingsSlinky.materializeCss.M.Carousel = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialCarouselOptions): typingsSlinky.materializeCss.M.Carousel = js.native
+  def init(els: Element): typingsSlinky.materializeCss.M.Carousel = js.native
+  def init(els: Element, options: PartialCarouselOptions): typingsSlinky.materializeCss.M.Carousel = js.native
 }
 

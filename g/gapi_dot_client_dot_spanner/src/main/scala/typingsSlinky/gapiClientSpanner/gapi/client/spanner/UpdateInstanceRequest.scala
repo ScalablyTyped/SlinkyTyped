@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UpdateInstanceRequest extends js.Object {
   /**
     * Required. A mask specifying which fields in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated.
@@ -11,21 +12,51 @@ trait UpdateInstanceRequest extends js.Object {
     * [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
     * about them.
     */
-  var fieldMask: js.UndefOr[String] = js.undefined
+  var fieldMask: js.UndefOr[String] = js.native
   /**
     * Required. The instance to update, which must always include the instance
     * name.  Otherwise, only fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
     */
-  var instance: js.UndefOr[Instance] = js.undefined
+  var instance: js.UndefOr[Instance] = js.native
 }
 
 object UpdateInstanceRequest {
   @scala.inline
-  def apply(fieldMask: String = null, instance: Instance = null): UpdateInstanceRequest = {
+  def apply(): UpdateInstanceRequest = {
     val __obj = js.Dynamic.literal()
-    if (fieldMask != null) __obj.updateDynamic("fieldMask")(fieldMask.asInstanceOf[js.Any])
-    if (instance != null) __obj.updateDynamic("instance")(instance.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateInstanceRequest]
   }
+  @scala.inline
+  implicit class UpdateInstanceRequestOps[Self <: UpdateInstanceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFieldMask(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldMask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldMask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldMask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstance(value: Instance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

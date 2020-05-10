@@ -1,7 +1,6 @@
 package typingsSlinky.highcharts.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -286,7 +285,7 @@ class SVGElement () extends js.Object {
     * @return Returns the SVG element for chainability.
     */
   def removeClass(className: String): SVGElement = js.native
-  def removeClass(className: RegExp): SVGElement = js.native
+  def removeClass(className: js.RegExp): SVGElement = js.native
   /**
     * Set the coordinates needed to draw a consistent radial gradient across a
     * shape regardless of positioning inside the chart. Used on pie slices to

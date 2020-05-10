@@ -1,7 +1,6 @@
 package typingsSlinky.arcgisJsApi.esri
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.Float32Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,34 +49,34 @@ trait externalRenderers extends js.Object {
     destStart: Double,
     destSpatialReference: SpatialReference,
     count: Double
-  ): js.Array[Double] | scala.scalajs.js.typedarray.Float32Array = js.native
+  ): js.Array[Double] | js.typedarray.Float32Array = js.native
   def fromRenderCoordinates(
     view: SceneView,
     srcCoordinates: js.Array[Double],
     srcStart: Double,
-    destCoordinates: Float32Array,
+    destCoordinates: js.typedarray.Float32Array,
     destStart: Double,
     destSpatialReference: SpatialReference,
     count: Double
-  ): js.Array[Double] | scala.scalajs.js.typedarray.Float32Array = js.native
+  ): js.Array[Double] | js.typedarray.Float32Array = js.native
   def fromRenderCoordinates(
     view: SceneView,
-    srcCoordinates: Float32Array,
+    srcCoordinates: js.typedarray.Float32Array,
     srcStart: Double,
     destCoordinates: js.Array[Double],
     destStart: Double,
     destSpatialReference: SpatialReference,
     count: Double
-  ): js.Array[Double] | scala.scalajs.js.typedarray.Float32Array = js.native
+  ): js.Array[Double] | js.typedarray.Float32Array = js.native
   def fromRenderCoordinates(
     view: SceneView,
-    srcCoordinates: Float32Array,
+    srcCoordinates: js.typedarray.Float32Array,
     srcStart: Double,
-    destCoordinates: Float32Array,
+    destCoordinates: js.typedarray.Float32Array,
     destStart: Double,
     destSpatialReference: SpatialReference,
     count: Double
-  ): js.Array[Double] | scala.scalajs.js.typedarray.Float32Array = js.native
+  ): js.Array[Double] | js.typedarray.Float32Array = js.native
   /**
     * Removes an external renderer from the view.
     *
@@ -110,29 +109,34 @@ trait externalRenderers extends js.Object {
     * @param dest A reference to an array where the 16 matrix elements will be stored. The resulting matrix follows OpenGL conventions where the translation components occupy the 13th, 14th and 15th elements. If undefined, a newly created matrix returned.
     *
     */
-  def renderCoordinateTransformAt(view: SceneView, origin: js.Array[Double]): js.Array[Double] | scala.scalajs.js.typedarray.Float32Array = js.native
-  def renderCoordinateTransformAt(view: SceneView, origin: js.Array[Double], srcSpatialReference: SpatialReference): js.Array[Double] | scala.scalajs.js.typedarray.Float32Array = js.native
+  def renderCoordinateTransformAt(view: SceneView, origin: js.Array[Double]): js.Array[Double] | js.typedarray.Float32Array = js.native
+  def renderCoordinateTransformAt(view: SceneView, origin: js.Array[Double], srcSpatialReference: SpatialReference): js.Array[Double] | js.typedarray.Float32Array = js.native
   def renderCoordinateTransformAt(
     view: SceneView,
     origin: js.Array[Double],
     srcSpatialReference: SpatialReference,
     dest: js.Array[Double]
-  ): js.Array[Double] | scala.scalajs.js.typedarray.Float32Array = js.native
+  ): js.Array[Double] | js.typedarray.Float32Array = js.native
   def renderCoordinateTransformAt(
     view: SceneView,
     origin: js.Array[Double],
     srcSpatialReference: SpatialReference,
-    dest: Float32Array
-  ): js.Array[Double] | scala.scalajs.js.typedarray.Float32Array = js.native
-  def renderCoordinateTransformAt(view: SceneView, origin: Float32Array): js.Array[Double] | scala.scalajs.js.typedarray.Float32Array = js.native
-  def renderCoordinateTransformAt(view: SceneView, origin: Float32Array, srcSpatialReference: SpatialReference): js.Array[Double] | scala.scalajs.js.typedarray.Float32Array = js.native
+    dest: js.typedarray.Float32Array
+  ): js.Array[Double] | js.typedarray.Float32Array = js.native
+  def renderCoordinateTransformAt(view: SceneView, origin: js.typedarray.Float32Array): js.Array[Double] | js.typedarray.Float32Array = js.native
+  def renderCoordinateTransformAt(view: SceneView, origin: js.typedarray.Float32Array, srcSpatialReference: SpatialReference): js.Array[Double] | js.typedarray.Float32Array = js.native
   def renderCoordinateTransformAt(
     view: SceneView,
-    origin: Float32Array,
+    origin: js.typedarray.Float32Array,
     srcSpatialReference: SpatialReference,
     dest: js.Array[Double]
-  ): js.Array[Double] | scala.scalajs.js.typedarray.Float32Array = js.native
-  def renderCoordinateTransformAt(view: SceneView, origin: Float32Array, srcSpatialReference: SpatialReference, dest: Float32Array): js.Array[Double] | scala.scalajs.js.typedarray.Float32Array = js.native
+  ): js.Array[Double] | js.typedarray.Float32Array = js.native
+  def renderCoordinateTransformAt(
+    view: SceneView,
+    origin: js.typedarray.Float32Array,
+    srcSpatialReference: SpatialReference,
+    dest: js.typedarray.Float32Array
+  ): js.Array[Double] | js.typedarray.Float32Array = js.native
   /**
     * Requests the view to be redrawn.
     *
@@ -169,34 +173,34 @@ trait externalRenderers extends js.Object {
     destCoordinates: js.Array[Double],
     destStart: Double,
     count: Double
-  ): js.Array[Double] | scala.scalajs.js.typedarray.Float32Array = js.native
+  ): js.Array[Double] | js.typedarray.Float32Array = js.native
   def toRenderCoordinates(
     view: SceneView,
     srcCoordinates: js.Array[Double],
     srcStart: Double,
     srcSpatialReference: SpatialReference,
-    destCoordinates: Float32Array,
+    destCoordinates: js.typedarray.Float32Array,
     destStart: Double,
     count: Double
-  ): js.Array[Double] | scala.scalajs.js.typedarray.Float32Array = js.native
+  ): js.Array[Double] | js.typedarray.Float32Array = js.native
   def toRenderCoordinates(
     view: SceneView,
-    srcCoordinates: Float32Array,
+    srcCoordinates: js.typedarray.Float32Array,
     srcStart: Double,
     srcSpatialReference: SpatialReference,
     destCoordinates: js.Array[Double],
     destStart: Double,
     count: Double
-  ): js.Array[Double] | scala.scalajs.js.typedarray.Float32Array = js.native
+  ): js.Array[Double] | js.typedarray.Float32Array = js.native
   def toRenderCoordinates(
     view: SceneView,
-    srcCoordinates: Float32Array,
+    srcCoordinates: js.typedarray.Float32Array,
     srcStart: Double,
     srcSpatialReference: SpatialReference,
-    destCoordinates: Float32Array,
+    destCoordinates: js.typedarray.Float32Array,
     destStart: Double,
     count: Double
-  ): js.Array[Double] | scala.scalajs.js.typedarray.Float32Array = js.native
+  ): js.Array[Double] | js.typedarray.Float32Array = js.native
 }
 
 @JSGlobal("__esri.externalRenderers")

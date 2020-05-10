@@ -20,8 +20,27 @@ object BucketReplicationConfiguration {
   @scala.inline
   def apply(role: String, rules: js.Array[BucketReplicationConfigurationRule]): BucketReplicationConfiguration = {
     val __obj = js.Dynamic.literal(role = role.asInstanceOf[js.Any], rules = rules.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[BucketReplicationConfiguration]
   }
+  @scala.inline
+  implicit class BucketReplicationConfigurationOps[Self <: BucketReplicationConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRole(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRules(value: js.Array[BucketReplicationConfigurationRule]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

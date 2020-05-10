@@ -5,36 +5,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ConfigurationObject extends js.Object {
-  var credentials: js.UndefOr[AnonClientemail] = js.undefined
-  var email: js.UndefOr[String] = js.undefined
-  var keyFilename: js.UndefOr[String] = js.undefined
-  var port: js.UndefOr[Double] = js.undefined
-  var projectId: js.UndefOr[String] = js.undefined
-  var promise: js.UndefOr[js.Any] = js.undefined
-  var servicePath: js.UndefOr[String] = js.undefined
+  var credentials: js.UndefOr[AnonClientemail] = js.native
+  var email: js.UndefOr[String] = js.native
+  var keyFilename: js.UndefOr[String] = js.native
+  var port: js.UndefOr[Double] = js.native
+  var projectId: js.UndefOr[String] = js.native
+  var promise: js.UndefOr[js.Any] = js.native
+  var servicePath: js.UndefOr[String] = js.native
 }
 
 object ConfigurationObject {
   @scala.inline
-  def apply(
-    credentials: AnonClientemail = null,
-    email: String = null,
-    keyFilename: String = null,
-    port: Int | Double = null,
-    projectId: String = null,
-    promise: js.Any = null,
-    servicePath: String = null
-  ): ConfigurationObject = {
+  def apply(): ConfigurationObject = {
     val __obj = js.Dynamic.literal()
-    if (credentials != null) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (keyFilename != null) __obj.updateDynamic("keyFilename")(keyFilename.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
-    if (promise != null) __obj.updateDynamic("promise")(promise.asInstanceOf[js.Any])
-    if (servicePath != null) __obj.updateDynamic("servicePath")(servicePath.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigurationObject]
   }
+  @scala.inline
+  implicit class ConfigurationObjectOps[Self <: ConfigurationObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCredentials(value: AnonClientemail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCredentials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyFilename(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyFilename")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyFilename: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyFilename")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPromise(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promise")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPromise: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promise")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServicePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servicePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServicePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servicePath")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

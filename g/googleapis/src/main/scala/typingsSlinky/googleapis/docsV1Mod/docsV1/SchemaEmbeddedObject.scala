@@ -61,32 +61,149 @@ trait SchemaEmbeddedObject extends js.Object {
 
 object SchemaEmbeddedObject {
   @scala.inline
-  def apply(
-    description: String = null,
-    embeddedDrawingProperties: SchemaEmbeddedDrawingProperties = null,
-    embeddedObjectBorder: SchemaEmbeddedObjectBorder = null,
-    imageProperties: SchemaImageProperties = null,
-    linkedContentReference: SchemaLinkedContentReference = null,
-    marginBottom: SchemaDimension = null,
-    marginLeft: SchemaDimension = null,
-    marginRight: SchemaDimension = null,
-    marginTop: SchemaDimension = null,
-    size: SchemaSize = null,
-    title: String = null
-  ): SchemaEmbeddedObject = {
+  def apply(): SchemaEmbeddedObject = {
     val __obj = js.Dynamic.literal()
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (embeddedDrawingProperties != null) __obj.updateDynamic("embeddedDrawingProperties")(embeddedDrawingProperties.asInstanceOf[js.Any])
-    if (embeddedObjectBorder != null) __obj.updateDynamic("embeddedObjectBorder")(embeddedObjectBorder.asInstanceOf[js.Any])
-    if (imageProperties != null) __obj.updateDynamic("imageProperties")(imageProperties.asInstanceOf[js.Any])
-    if (linkedContentReference != null) __obj.updateDynamic("linkedContentReference")(linkedContentReference.asInstanceOf[js.Any])
-    if (marginBottom != null) __obj.updateDynamic("marginBottom")(marginBottom.asInstanceOf[js.Any])
-    if (marginLeft != null) __obj.updateDynamic("marginLeft")(marginLeft.asInstanceOf[js.Any])
-    if (marginRight != null) __obj.updateDynamic("marginRight")(marginRight.asInstanceOf[js.Any])
-    if (marginTop != null) __obj.updateDynamic("marginTop")(marginTop.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEmbeddedObject]
   }
+  @scala.inline
+  implicit class SchemaEmbeddedObjectOps[Self <: SchemaEmbeddedObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmbeddedDrawingProperties(value: SchemaEmbeddedDrawingProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embeddedDrawingProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmbeddedDrawingProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embeddedDrawingProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmbeddedObjectBorder(value: SchemaEmbeddedObjectBorder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embeddedObjectBorder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmbeddedObjectBorder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embeddedObjectBorder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageProperties(value: SchemaImageProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkedContentReference(value: SchemaLinkedContentReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedContentReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkedContentReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedContentReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginBottom(value: SchemaDimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginLeft(value: SchemaDimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginRight(value: SchemaDimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginTop(value: SchemaDimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: SchemaSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

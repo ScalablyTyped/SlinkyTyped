@@ -72,5 +72,6 @@ trait SVGPathElement extends SVGGraphicsElement {
 
 @JSGlobal("SVGPathElement")
 @js.native
-object SVGPathElement extends Instantiable0[SVGPathElement]
+object SVGPathElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGPathElement]
 

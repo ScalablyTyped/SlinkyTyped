@@ -12,10 +12,8 @@ trait PollEvent extends js.Object
 
 object PollEvent {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def pollColonstart: typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.pollColonstart = "poll:start".asInstanceOf[typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.pollColonstart]
   @scala.inline
-  def pollColonstart: typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.pollColonstart = this.cast("poll:start")
-  @scala.inline
-  def pollColonstop: typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.pollColonstop = this.cast("poll:stop")
+  def pollColonstop: typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.pollColonstop = "poll:stop".asInstanceOf[typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.pollColonstop]
 }
 

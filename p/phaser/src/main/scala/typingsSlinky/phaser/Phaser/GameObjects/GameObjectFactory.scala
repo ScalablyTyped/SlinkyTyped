@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.Phaser.GameObjects
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.phaser.Phaser.Curves.Path
 import typingsSlinky.phaser.Phaser.Display.BaseShader
 import typingsSlinky.phaser.Phaser.GameObjects.Particles.ParticleEmitterManager
@@ -14,7 +15,6 @@ import typingsSlinky.phaser.Phaser.Types.GameObjects.Particles.ParticleEmitterCo
 import typingsSlinky.phaser.Phaser.Types.Tweens.TweenBuilderConfig
 import typingsSlinky.phaser.SpineGameObject
 import typingsSlinky.phaser.integer
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

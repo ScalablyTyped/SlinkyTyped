@@ -29,7 +29,7 @@ class Server () extends EventEmitter {
   def handleUpgrade(
     request: IncomingMessage,
     socket: Socket,
-    upgradeHead: scala.scalajs.js.typedarray.ArrayBuffer,
+    upgradeHead: js.typedarray.ArrayBuffer,
     callback: js.Function1[/* client */ WebSocket, Unit]
   ): Unit = js.native
   @JSName("on")

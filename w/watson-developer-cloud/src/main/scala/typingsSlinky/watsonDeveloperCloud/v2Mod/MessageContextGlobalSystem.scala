@@ -5,23 +5,65 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Built-in system properties that apply to all skills used by the assistant. */
+@js.native
 trait MessageContextGlobalSystem extends js.Object {
   /** The user time zone. The assistant uses the time zone to correctly resolve relative time references. */
-  var timezone: js.UndefOr[String] = js.undefined
+  var timezone: js.UndefOr[String] = js.native
   /** A counter that is automatically incremented with each turn of the conversation. A value of 1 indicates that this is the the first turn of a new conversation, which can affect the behavior of some skills (for example, triggering the start node of a dialog). */
-  var turn_count: js.UndefOr[Double] = js.undefined
+  var turn_count: js.UndefOr[Double] = js.native
   /** A string value that identifies the user who is interacting with the assistant. The client must provide a unique identifier for each individual end user who accesses the application. For Plus and Premium plans, this user ID is used to identify unique users for billing purposes. This string cannot contain carriage return, newline, or tab characters. */
-  var user_id: js.UndefOr[String] = js.undefined
+  var user_id: js.UndefOr[String] = js.native
 }
 
 object MessageContextGlobalSystem {
   @scala.inline
-  def apply(timezone: String = null, turn_count: Int | Double = null, user_id: String = null): MessageContextGlobalSystem = {
+  def apply(): MessageContextGlobalSystem = {
     val __obj = js.Dynamic.literal()
-    if (timezone != null) __obj.updateDynamic("timezone")(timezone.asInstanceOf[js.Any])
-    if (turn_count != null) __obj.updateDynamic("turn_count")(turn_count.asInstanceOf[js.Any])
-    if (user_id != null) __obj.updateDynamic("user_id")(user_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageContextGlobalSystem]
   }
+  @scala.inline
+  implicit class MessageContextGlobalSystemOps[Self <: MessageContextGlobalSystem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTimezone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimezone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTurn_count(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("turn_count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTurn_count: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("turn_count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user_id")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

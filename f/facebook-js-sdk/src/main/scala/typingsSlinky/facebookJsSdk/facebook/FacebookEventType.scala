@@ -15,16 +15,14 @@ trait FacebookEventType extends js.Object
 
 object FacebookEventType {
   @scala.inline
-  def authDotauthResponseChange: typingsSlinky.facebookJsSdk.facebookJsSdkStrings.authDotauthResponseChange = this.cast("auth.authResponseChange")
+  def authDotauthResponseChange: typingsSlinky.facebookJsSdk.facebookJsSdkStrings.authDotauthResponseChange = "auth.authResponseChange".asInstanceOf[typingsSlinky.facebookJsSdk.facebookJsSdkStrings.authDotauthResponseChange]
   @scala.inline
-  def authDotlogin: typingsSlinky.facebookJsSdk.facebookJsSdkStrings.authDotlogin = this.cast("auth.login")
+  def authDotlogin: typingsSlinky.facebookJsSdk.facebookJsSdkStrings.authDotlogin = "auth.login".asInstanceOf[typingsSlinky.facebookJsSdk.facebookJsSdkStrings.authDotlogin]
   @scala.inline
-  def authDotlogout: typingsSlinky.facebookJsSdk.facebookJsSdkStrings.authDotlogout = this.cast("auth.logout")
+  def authDotlogout: typingsSlinky.facebookJsSdk.facebookJsSdkStrings.authDotlogout = "auth.logout".asInstanceOf[typingsSlinky.facebookJsSdk.facebookJsSdkStrings.authDotlogout]
   @scala.inline
-  def authDotstatusChange: typingsSlinky.facebookJsSdk.facebookJsSdkStrings.authDotstatusChange = this.cast("auth.statusChange")
+  def authDotstatusChange: typingsSlinky.facebookJsSdk.facebookJsSdkStrings.authDotstatusChange = "auth.statusChange".asInstanceOf[typingsSlinky.facebookJsSdk.facebookJsSdkStrings.authDotstatusChange]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def xfbmlDotrender: typingsSlinky.facebookJsSdk.facebookJsSdkStrings.xfbmlDotrender = this.cast("xfbml.render")
+  def xfbmlDotrender: typingsSlinky.facebookJsSdk.facebookJsSdkStrings.xfbmlDotrender = "xfbml.render".asInstanceOf[typingsSlinky.facebookJsSdk.facebookJsSdkStrings.xfbmlDotrender]
 }
 

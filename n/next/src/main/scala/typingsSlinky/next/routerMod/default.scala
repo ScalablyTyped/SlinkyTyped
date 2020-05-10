@@ -14,16 +14,8 @@ class default protected () extends Router {
     pathname: String,
     query: ParsedUrlQuery,
     as: String,
-    hasInitialPropsPageLoaderAppWrapAppComponentErrSubscription: AnonApp
+    hasInitialPropsPageLoaderAppWrapAppComponentErrSubscriptionIsFallback: AnonApp
   ) = this()
-  /* CompleteClass */
-  override var asPath: String = js.native
-  /* CompleteClass */
-  override var pathname: String = js.native
-  /* CompleteClass */
-  override var query: ParsedUrlQuery = js.native
-  /* CompleteClass */
-  override var route: String = js.native
 }
 
 /* static members */

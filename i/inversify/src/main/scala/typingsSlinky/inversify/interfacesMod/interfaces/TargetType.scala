@@ -13,12 +13,10 @@ trait TargetType extends js.Object
 
 object TargetType {
   @scala.inline
-  def ClassProperty: typingsSlinky.inversify.inversifyStrings.ClassProperty = this.cast("ClassProperty")
+  def ClassProperty: typingsSlinky.inversify.inversifyStrings.ClassProperty = "ClassProperty".asInstanceOf[typingsSlinky.inversify.inversifyStrings.ClassProperty]
   @scala.inline
-  def ConstructorArgument: typingsSlinky.inversify.inversifyStrings.ConstructorArgument = this.cast("ConstructorArgument")
+  def ConstructorArgument: typingsSlinky.inversify.inversifyStrings.ConstructorArgument = "ConstructorArgument".asInstanceOf[typingsSlinky.inversify.inversifyStrings.ConstructorArgument]
   @scala.inline
-  def Variable: typingsSlinky.inversify.inversifyStrings.Variable = this.cast("Variable")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Variable: typingsSlinky.inversify.inversifyStrings.Variable = "Variable".asInstanceOf[typingsSlinky.inversify.inversifyStrings.Variable]
 }
 

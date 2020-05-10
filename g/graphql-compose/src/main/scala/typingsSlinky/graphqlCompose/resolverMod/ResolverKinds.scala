@@ -13,12 +13,10 @@ trait ResolverKinds extends js.Object
 
 object ResolverKinds {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def mutation: typingsSlinky.graphqlCompose.graphqlComposeStrings.mutation = "mutation".asInstanceOf[typingsSlinky.graphqlCompose.graphqlComposeStrings.mutation]
   @scala.inline
-  def mutation: typingsSlinky.graphqlCompose.graphqlComposeStrings.mutation = this.cast("mutation")
+  def query: typingsSlinky.graphqlCompose.graphqlComposeStrings.query = "query".asInstanceOf[typingsSlinky.graphqlCompose.graphqlComposeStrings.query]
   @scala.inline
-  def query: typingsSlinky.graphqlCompose.graphqlComposeStrings.query = this.cast("query")
-  @scala.inline
-  def subscription: typingsSlinky.graphqlCompose.graphqlComposeStrings.subscription = this.cast("subscription")
+  def subscription: typingsSlinky.graphqlCompose.graphqlComposeStrings.subscription = "subscription".asInstanceOf[typingsSlinky.graphqlCompose.graphqlComposeStrings.subscription]
 }
 

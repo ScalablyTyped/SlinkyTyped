@@ -202,6 +202,35 @@ package object mediaconvertMod {
   */
   type AudioTypeControl = typingsSlinky.awsSdk.mediaconvertMod._AudioTypeControl | java.lang.String
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.OFF
+    - typingsSlinky.awsSdk.awsSdkStrings.LOW
+    - typingsSlinky.awsSdk.awsSdkStrings.MEDIUM
+    - typingsSlinky.awsSdk.awsSdkStrings.HIGH
+    - typingsSlinky.awsSdk.awsSdkStrings.HIGHER
+    - typingsSlinky.awsSdk.awsSdkStrings.MAX
+    - java.lang.String
+  */
+  type Av1AdaptiveQuantization = typingsSlinky.awsSdk.mediaconvertMod._Av1AdaptiveQuantization | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.INITIALIZE_FROM_SOURCE
+    - typingsSlinky.awsSdk.awsSdkStrings.SPECIFIED
+    - java.lang.String
+  */
+  type Av1FramerateControl = typingsSlinky.awsSdk.mediaconvertMod._Av1FramerateControl | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DUPLICATE_DROP
+    - typingsSlinky.awsSdk.awsSdkStrings.INTERPOLATE
+    - java.lang.String
+  */
+  type Av1FramerateConversionAlgorithm = typingsSlinky.awsSdk.mediaconvertMod._Av1FramerateConversionAlgorithm | java.lang.String
+  type Av1RateControlMode = typingsSlinky.awsSdk.awsSdkStrings.QVBR | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.ENABLED
+    - java.lang.String
+  */
+  type Av1SpatialAdaptiveQuantization = typingsSlinky.awsSdk.mediaconvertMod._Av1SpatialAdaptiveQuantization | java.lang.String
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.QUEUE
     - typingsSlinky.awsSdk.awsSdkStrings.PRESET
     - typingsSlinky.awsSdk.awsSdkStrings.JOB_TEMPLATE
@@ -2000,6 +2029,7 @@ package object mediaconvertMod {
   type Type = typingsSlinky.awsSdk.mediaconvertMod._Type | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.FRAME_CAPTURE
+    - typingsSlinky.awsSdk.awsSdkStrings.AV1
     - typingsSlinky.awsSdk.awsSdkStrings.H_264
     - typingsSlinky.awsSdk.awsSdkStrings.H_265
     - typingsSlinky.awsSdk.awsSdkStrings.MPEG2
@@ -2096,6 +2126,7 @@ package object mediaconvertMod {
   type integerMin48000Max48000 = scala.Double
   type integerMin6000Max1024000 = scala.Double
   type integerMin64000Max640000 = scala.Double
+  type integerMin7Max15 = scala.Double
   type integerMin8000Max192000 = scala.Double
   type integerMin8000Max96000 = scala.Double
   type integerMin96Max600 = scala.Double

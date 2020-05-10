@@ -1,6 +1,5 @@
 package typingsSlinky.lineReader
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +31,7 @@ trait LineReader extends js.Object {
   def nextLine(cb: js.Function2[/* err */ js.Error, /* line */ String, Unit]): Unit = js.native
    // For Promise.promisify;
   def open(): js.Function = js.native
-  def open(file: String, cb: js.Function2[/* err */ Error, /* reader */ this.type, Unit]): Unit = js.native
+  def open(file: String, cb: js.Function2[/* err */ js.Error, /* reader */ this.type, Unit]): Unit = js.native
   def open(
     file: String,
     options: LineReaderOptions,

@@ -11,5 +11,6 @@ trait SVGSwitchElement extends SVGGraphicsElement
 
 @JSGlobal("SVGSwitchElement")
 @js.native
-object SVGSwitchElement extends Instantiable0[SVGSwitchElement]
+object SVGSwitchElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGSwitchElement]
 

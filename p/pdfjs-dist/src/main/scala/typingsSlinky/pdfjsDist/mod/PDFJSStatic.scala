@@ -4,16 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PDFJSStatic extends js.Object {
   /**
     * Specifies if CMaps are binary packed.
     */
-  var cMapPacked: Boolean
+  var cMapPacked: Boolean = js.native
   /**
     * The url of where the predefined Adobe CMaps are located. Include trailing
     * slash.
     */
-  var cMapUrl: String
+  var cMapUrl: String = js.native
   /**
     * Disable pre-fetching of PDF file data. When range requests are enabled PDF.js
     * will automatically keep fetching more data even if it isn't needed to display
@@ -22,82 +23,82 @@ trait PDFJSStatic extends js.Object {
     * NOTE: It is also necessary to disable streaming, see above,
     *       in order for disabling of pre-fetching to work correctly.
     */
-  var disableAutoFetch: Boolean
+  var disableAutoFetch: Boolean = js.native
   /**
     * Disables URL.createObjectURL usage.
     */
-  var disableCreateObjectURL: Boolean
+  var disableCreateObjectURL: Boolean = js.native
   /**
     * By default fonts are converted to OpenType fonts and loaded via font face rules.  If disabled, the font will be rendered using a built in font renderer that constructs the glyphs with primitive path commands.
     **/
-  var disableFontFace: Boolean
+  var disableFontFace: Boolean = js.native
   /**
     * Disables fullscreen support, and by extension Presentation Mode,
     * in browsers which support the fullscreen API.
     */
-  var disableFullscreen: Boolean
+  var disableFullscreen: Boolean = js.native
   /**
     * Disable range request loading of PDF files. When enabled and if the server
     * supports partial content requests then the PDF will be fetched in chunks.
     * Enabled (false) by default.
     */
-  var disableRange: Boolean
+  var disableRange: Boolean = js.native
   /**
     * Disable streaming of PDF file data. By default PDF.js attempts to load PDF
     * in chunks. This default behavior can be disabled.
     */
-  var disableStream: Boolean
+  var disableStream: Boolean = js.native
   /**
     * Disable the text layer of PDF when used PDF.js renders a canvas instead of div elements
     *
     */
-  var disableTextLayer: Boolean
+  var disableTextLayer: Boolean = js.native
   /**
     * Disables WebGL usage.
     */
-  var disableWebGL: Boolean
+  var disableWebGL: Boolean = js.native
   /**
     * Disable the web worker and run all code on the main thread. This will happen
     * automatically if the browser doesn't support workers or sending typed arrays
     * to workers.
     */
-  var disableWorker: Boolean
+  var disableWorker: Boolean = js.native
   /**
     * Path for image resources, mainly for annotation icons. Include trailing
     * slash.
     */
-  var imageResourcesPath: String
+  var imageResourcesPath: String = js.native
   /**
     * Determines if we can eval strings as JS. Primarily used to improve
     * performance for font rendering.
     */
-  var isEvalSupported: Boolean
+  var isEvalSupported: Boolean = js.native
   /**
     * The maximum supported canvas size in total pixels e.g. width * height.
     * The default value is 4096 * 4096. Use -1 for no limit.
     */
-  var maxCanvasPixels: Double
+  var maxCanvasPixels: Double = js.native
   /**
     * The maximum allowed image size in total pixels e.g. width * height.  Images above this value will not be drawn.  Use -1 for no limit.
     **/
-  var maxImageSize: Double
+  var maxImageSize: Double = js.native
   /**
     * Opens external links in a new window if enabled. The default behavior opens
     * external links in the PDF.js window.
     */
-  var openExternalLinksInNewWindow: Boolean
+  var openExternalLinksInNewWindow: Boolean = js.native
   /**
     * Enables special hooks for debugging PDF.js.
     */
-  var pdfBug: Boolean
+  var pdfBug: Boolean = js.native
   /**
     * Enables transfer usage in postMessage for ArrayBuffers.
     */
-  var postMessageTransfers: Boolean
+  var postMessageTransfers: Boolean = js.native
   /**
     * Enables CSS only zooming.
     */
-  var useOnlyCssZoom: Boolean
+  var useOnlyCssZoom: Boolean = js.native
   /**
     * Controls the logging level.
     * The constants from PDFJS.VERBOSITY_LEVELS should be used:
@@ -105,20 +106,20 @@ trait PDFJSStatic extends js.Object {
     * - warnings [default]
     * - infos
     */
-  var verbosity: Double
+  var verbosity: Double = js.native
   /**
     * Path and filename of the worker file. Required when the worker is enabled in
     * development mode. If unspecified in the production build, the worker will be
     * loaded based on the location of the pdf.js file.
     */
-  var workerSrc: String
+  var workerSrc: String = js.native
   /**
     * yet another viewer, this will render only one page at the time, reducing rendering time
     * very important for mobile development
     * @params {PDFViewerParams}
     */
-  def PDFSinglePageViewer(params: PDFViewerParams): Unit
-  def PDFViewer(params: PDFViewerParams): Unit
+  def PDFSinglePageViewer(params: PDFViewerParams): Unit = js.native
+  def PDFViewer(params: PDFViewerParams): Unit = js.native
 }
 
 object PDFJSStatic {
@@ -149,8 +150,153 @@ object PDFJSStatic {
     workerSrc: String
   ): PDFJSStatic = {
     val __obj = js.Dynamic.literal(PDFSinglePageViewer = js.Any.fromFunction1(PDFSinglePageViewer), PDFViewer = js.Any.fromFunction1(PDFViewer), cMapPacked = cMapPacked.asInstanceOf[js.Any], cMapUrl = cMapUrl.asInstanceOf[js.Any], disableAutoFetch = disableAutoFetch.asInstanceOf[js.Any], disableCreateObjectURL = disableCreateObjectURL.asInstanceOf[js.Any], disableFontFace = disableFontFace.asInstanceOf[js.Any], disableFullscreen = disableFullscreen.asInstanceOf[js.Any], disableRange = disableRange.asInstanceOf[js.Any], disableStream = disableStream.asInstanceOf[js.Any], disableTextLayer = disableTextLayer.asInstanceOf[js.Any], disableWebGL = disableWebGL.asInstanceOf[js.Any], disableWorker = disableWorker.asInstanceOf[js.Any], imageResourcesPath = imageResourcesPath.asInstanceOf[js.Any], isEvalSupported = isEvalSupported.asInstanceOf[js.Any], maxCanvasPixels = maxCanvasPixels.asInstanceOf[js.Any], maxImageSize = maxImageSize.asInstanceOf[js.Any], openExternalLinksInNewWindow = openExternalLinksInNewWindow.asInstanceOf[js.Any], pdfBug = pdfBug.asInstanceOf[js.Any], postMessageTransfers = postMessageTransfers.asInstanceOf[js.Any], useOnlyCssZoom = useOnlyCssZoom.asInstanceOf[js.Any], verbosity = verbosity.asInstanceOf[js.Any], workerSrc = workerSrc.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PDFJSStatic]
   }
+  @scala.inline
+  implicit class PDFJSStaticOps[Self <: PDFJSStatic] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPDFSinglePageViewer(value: PDFViewerParams => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PDFSinglePageViewer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPDFViewer(value: PDFViewerParams => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PDFViewer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCMapPacked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cMapPacked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCMapUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cMapUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableAutoFetch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAutoFetch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableCreateObjectURL(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableCreateObjectURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableFontFace(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFontFace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableFullscreen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFullscreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableRange(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableStream(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableTextLayer(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableTextLayer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableWebGL(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableWebGL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableWorker(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableWorker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImageResourcesPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageResourcesPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsEvalSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEvalSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxCanvasPixels(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCanvasPixels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxImageSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxImageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOpenExternalLinksInNewWindow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openExternalLinksInNewWindow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPdfBug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pdfBug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPostMessageTransfers(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postMessageTransfers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUseOnlyCssZoom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useOnlyCssZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVerbosity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verbosity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWorkerSrc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

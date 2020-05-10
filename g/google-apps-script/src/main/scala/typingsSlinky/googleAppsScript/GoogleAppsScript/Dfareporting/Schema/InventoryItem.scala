@@ -4,75 +4,283 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InventoryItem extends js.Object {
-  var accountId: js.UndefOr[String] = js.undefined
-  var adSlots: js.UndefOr[js.Array[AdSlot]] = js.undefined
-  var advertiserId: js.UndefOr[String] = js.undefined
-  var contentCategoryId: js.UndefOr[String] = js.undefined
-  var estimatedClickThroughRate: js.UndefOr[String] = js.undefined
-  var estimatedConversionRate: js.UndefOr[String] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var inPlan: js.UndefOr[Boolean] = js.undefined
-  var kind: js.UndefOr[String] = js.undefined
-  var lastModifiedInfo: js.UndefOr[LastModifiedInfo] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var negotiationChannelId: js.UndefOr[String] = js.undefined
-  var orderId: js.UndefOr[String] = js.undefined
-  var placementStrategyId: js.UndefOr[String] = js.undefined
-  var pricing: js.UndefOr[Pricing] = js.undefined
-  var projectId: js.UndefOr[String] = js.undefined
-  var rfpId: js.UndefOr[String] = js.undefined
-  var siteId: js.UndefOr[String] = js.undefined
-  var subaccountId: js.UndefOr[String] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
+  var accountId: js.UndefOr[String] = js.native
+  var adSlots: js.UndefOr[js.Array[AdSlot]] = js.native
+  var advertiserId: js.UndefOr[String] = js.native
+  var contentCategoryId: js.UndefOr[String] = js.native
+  var estimatedClickThroughRate: js.UndefOr[String] = js.native
+  var estimatedConversionRate: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.native
+  var inPlan: js.UndefOr[Boolean] = js.native
+  var kind: js.UndefOr[String] = js.native
+  var lastModifiedInfo: js.UndefOr[LastModifiedInfo] = js.native
+  var name: js.UndefOr[String] = js.native
+  var negotiationChannelId: js.UndefOr[String] = js.native
+  var orderId: js.UndefOr[String] = js.native
+  var placementStrategyId: js.UndefOr[String] = js.native
+  var pricing: js.UndefOr[Pricing] = js.native
+  var projectId: js.UndefOr[String] = js.native
+  var rfpId: js.UndefOr[String] = js.native
+  var siteId: js.UndefOr[String] = js.native
+  var subaccountId: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.native
 }
 
 object InventoryItem {
   @scala.inline
-  def apply(
-    accountId: String = null,
-    adSlots: js.Array[AdSlot] = null,
-    advertiserId: String = null,
-    contentCategoryId: String = null,
-    estimatedClickThroughRate: String = null,
-    estimatedConversionRate: String = null,
-    id: String = null,
-    inPlan: js.UndefOr[Boolean] = js.undefined,
-    kind: String = null,
-    lastModifiedInfo: LastModifiedInfo = null,
-    name: String = null,
-    negotiationChannelId: String = null,
-    orderId: String = null,
-    placementStrategyId: String = null,
-    pricing: Pricing = null,
-    projectId: String = null,
-    rfpId: String = null,
-    siteId: String = null,
-    subaccountId: String = null,
-    `type`: String = null
-  ): InventoryItem = {
+  def apply(): InventoryItem = {
     val __obj = js.Dynamic.literal()
-    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
-    if (adSlots != null) __obj.updateDynamic("adSlots")(adSlots.asInstanceOf[js.Any])
-    if (advertiserId != null) __obj.updateDynamic("advertiserId")(advertiserId.asInstanceOf[js.Any])
-    if (contentCategoryId != null) __obj.updateDynamic("contentCategoryId")(contentCategoryId.asInstanceOf[js.Any])
-    if (estimatedClickThroughRate != null) __obj.updateDynamic("estimatedClickThroughRate")(estimatedClickThroughRate.asInstanceOf[js.Any])
-    if (estimatedConversionRate != null) __obj.updateDynamic("estimatedConversionRate")(estimatedConversionRate.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(inPlan)) __obj.updateDynamic("inPlan")(inPlan.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (lastModifiedInfo != null) __obj.updateDynamic("lastModifiedInfo")(lastModifiedInfo.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (negotiationChannelId != null) __obj.updateDynamic("negotiationChannelId")(negotiationChannelId.asInstanceOf[js.Any])
-    if (orderId != null) __obj.updateDynamic("orderId")(orderId.asInstanceOf[js.Any])
-    if (placementStrategyId != null) __obj.updateDynamic("placementStrategyId")(placementStrategyId.asInstanceOf[js.Any])
-    if (pricing != null) __obj.updateDynamic("pricing")(pricing.asInstanceOf[js.Any])
-    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
-    if (rfpId != null) __obj.updateDynamic("rfpId")(rfpId.asInstanceOf[js.Any])
-    if (siteId != null) __obj.updateDynamic("siteId")(siteId.asInstanceOf[js.Any])
-    if (subaccountId != null) __obj.updateDynamic("subaccountId")(subaccountId.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[InventoryItem]
   }
+  @scala.inline
+  implicit class InventoryItemOps[Self <: InventoryItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdSlots(value: js.Array[AdSlot]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adSlots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdSlots: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adSlots")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdvertiserId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdvertiserId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentCategoryId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentCategoryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentCategoryId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentCategoryId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedClickThroughRate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedClickThroughRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedClickThroughRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedClickThroughRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedConversionRate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedConversionRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedConversionRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedConversionRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInPlan(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inPlan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInPlan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inPlan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedInfo(value: LastModifiedInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNegotiationChannelId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negotiationChannelId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNegotiationChannelId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negotiationChannelId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrderId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orderId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacementStrategyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placementStrategyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacementStrategyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placementStrategyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPricing(value: Pricing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pricing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPricing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pricing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRfpId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rfpId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRfpId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rfpId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSiteId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("siteId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSiteId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("siteId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubaccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subaccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubaccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subaccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

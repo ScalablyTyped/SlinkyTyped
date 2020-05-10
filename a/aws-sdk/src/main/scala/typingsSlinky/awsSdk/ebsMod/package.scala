@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object ebsMod {
-  type BlockData = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.ebsMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
+  type BlockData = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.ebsMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
   type BlockIndex = scala.Double
   type BlockSize = scala.Double
   type BlockToken = java.lang.String

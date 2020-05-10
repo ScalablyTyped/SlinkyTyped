@@ -1,13 +1,10 @@
 package typingsSlinky.wixStyleReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.wixStyleReact.buttonMod.ButtonPriority
 import typingsSlinky.wixStyleReact.buttonMod.ButtonProps
 import typingsSlinky.wixStyleReact.buttonMod.ButtonSize
@@ -17,40 +14,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Button
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Button {
   @JSImport("wix-style-react/Button", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled */
-  def apply(
-    as: js.Any = null,
-    dataHook: String = null,
-    fullWidth: js.UndefOr[Boolean] = js.undefined,
-    onClick: SyntheticMouseEvent[HTMLElement] => Unit = null,
-    prefixIcon: ReactElement = null,
-    priority: ButtonPriority = null,
-    size: ButtonSize = null,
-    skin: ButtonSkin = null,
-    suffixIcon: ReactElement = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (dataHook != null) __obj.updateDynamic("dataHook")(dataHook.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullWidth)) __obj.updateDynamic("fullWidth")(fullWidth.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (prefixIcon != null) __obj.updateDynamic("prefixIcon")(prefixIcon.asInstanceOf[js.Any])
-    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (skin != null) __obj.updateDynamic("skin")(skin.asInstanceOf[js.Any])
-    if (suffixIcon != null) __obj.updateDynamic("suffixIcon")(suffixIcon.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataHook(value: String): this.type = set("dataHook", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def prefixIcon(value: ReactElement): this.type = set("prefixIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def priority(value: ButtonPriority): this.type = set("priority", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: ButtonSize): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def skin(value: ButtonSkin): this.type = set("skin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def suffixIcon(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.wixStyleReact.buttonMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ButtonProps
+  
+  def withProps(p: ButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Button.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

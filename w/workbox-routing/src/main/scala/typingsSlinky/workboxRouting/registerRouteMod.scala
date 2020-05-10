@@ -1,6 +1,5 @@
 package typingsSlinky.workboxRouting
 
-import typingsSlinky.std.RegExp
 import typingsSlinky.workboxRouting.httpmethodMod.HTTPMethod
 import typingsSlinky.workboxRouting.regExpRouteMod.RegExpRoute
 import typingsSlinky.workboxRouting.routeHandlerMod.RouteHandler
@@ -16,9 +15,9 @@ object registerRouteMod extends js.Object {
   def registerRoute(capture: String): Route[Boolean] = js.native
   def registerRoute(capture: String, handler: RouteHandler): Route[Boolean] = js.native
   def registerRoute(capture: String, handler: RouteHandler, method: HTTPMethod): Route[Boolean] = js.native
-  def registerRoute(capture: RegExp): RegExpRoute = js.native
-  def registerRoute(capture: RegExp, handler: RouteHandler): RegExpRoute = js.native
-  def registerRoute(capture: RegExp, handler: RouteHandler, method: HTTPMethod): RegExpRoute = js.native
+  def registerRoute(capture: js.RegExp): RegExpRoute = js.native
+  def registerRoute(capture: js.RegExp, handler: RouteHandler): RegExpRoute = js.native
+  def registerRoute(capture: js.RegExp, handler: RouteHandler, method: HTTPMethod): RegExpRoute = js.native
   def registerRoute(capture: RegisterRouteCapture): Route[_] = js.native
   def registerRoute(capture: RegisterRouteCapture, handler: RouteHandler): Route[_] = js.native
   def registerRoute(capture: RegisterRouteCapture, handler: RouteHandler, method: HTTPMethod): Route[_] = js.native

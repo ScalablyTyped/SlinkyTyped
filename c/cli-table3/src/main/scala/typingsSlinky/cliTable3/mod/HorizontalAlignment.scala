@@ -13,12 +13,10 @@ trait HorizontalAlignment extends js.Object
 
 object HorizontalAlignment {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.cliTable3.cliTable3Strings.center = "center".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.center]
   @scala.inline
-  def center: typingsSlinky.cliTable3.cliTable3Strings.center = this.cast("center")
+  def left: typingsSlinky.cliTable3.cliTable3Strings.left = "left".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.left]
   @scala.inline
-  def left: typingsSlinky.cliTable3.cliTable3Strings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.cliTable3.cliTable3Strings.right = this.cast("right")
+  def right: typingsSlinky.cliTable3.cliTable3Strings.right = "right".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.right]
 }
 

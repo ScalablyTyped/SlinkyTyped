@@ -1,47 +1,50 @@
 package typingsSlinky.blueprintjsCore.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.boundaryMod.Boundary
 import typingsSlinky.blueprintjsCore.overflowListMod.IOverflowListProps
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactChild
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object OverflowList
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsCore.mod.OverflowList[js.Any]] {
+object OverflowList {
   @JSImport("@blueprintjs/core", "OverflowList")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
+  @scala.inline
+  class Builder[T] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.OverflowList[js.Any]] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def collapseFrom(value: Boundary): this.type = set("collapseFrom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minVisibleItems(value: Double): this.type = set("minVisibleItems", value.asInstanceOf[js.Any])
+    @scala.inline
+    def observeParents(value: Boolean): this.type = set("observeParents", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onOverflow(value: /* overflowItems */ js.Array[T] => Unit): this.type = set("onOverflow", js.Any.fromFunction1(value))
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagName(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any): this.type = set("tagName", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps[T](p: IOverflowListProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply[T](
     items: js.Array[T],
     overflowRenderer: js.Array[T] => TagMod[Any],
-    visibleItemRenderer: (T, Double) => ReactChild,
-    collapseFrom: Boundary = null,
-    minVisibleItems: Int | Double = null,
-    observeParents: js.UndefOr[Boolean] = js.undefined,
-    onOverflow: /* overflowItems */ js.Array[T] => Unit = null,
-    tagName: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.OverflowList[js.Any]] = {
-    val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any], overflowRenderer = js.Any.fromFunction1(overflowRenderer), visibleItemRenderer = js.Any.fromFunction2(visibleItemRenderer))
-    if (collapseFrom != null) __obj.updateDynamic("collapseFrom")(collapseFrom.asInstanceOf[js.Any])
-    if (minVisibleItems != null) __obj.updateDynamic("minVisibleItems")(minVisibleItems.asInstanceOf[js.Any])
-    if (!js.isUndefined(observeParents)) __obj.updateDynamic("observeParents")(observeParents.asInstanceOf[js.Any])
-    if (onOverflow != null) __obj.updateDynamic("onOverflow")(js.Any.fromFunction1(onOverflow))
-    if (tagName != null) __obj.updateDynamic("tagName")(tagName.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.blueprintjsCore.mod.OverflowList[js.Any]]]
+    visibleItemRenderer: (T, Double) => ReactChild
+  ): Builder[T] = {
+    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any], overflowRenderer = js.Any.fromFunction1(overflowRenderer), visibleItemRenderer = js.Any.fromFunction2(visibleItemRenderer))
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[IOverflowListProps[T]]))
   }
-  type Props = IOverflowListProps[js.Any]
 }
 

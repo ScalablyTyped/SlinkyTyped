@@ -26,16 +26,53 @@ trait AnalyticsS3BucketDestination extends js.Object {
 
 object AnalyticsS3BucketDestination {
   @scala.inline
-  def apply(
-    Bucket: BucketName,
-    Format: AnalyticsS3ExportFileFormat,
-    BucketAccountId: AccountId = null,
-    Prefix: Prefix = null
-  ): AnalyticsS3BucketDestination = {
+  def apply(Bucket: BucketName, Format: AnalyticsS3ExportFileFormat): AnalyticsS3BucketDestination = {
     val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any], Format = Format.asInstanceOf[js.Any])
-    if (BucketAccountId != null) __obj.updateDynamic("BucketAccountId")(BucketAccountId.asInstanceOf[js.Any])
-    if (Prefix != null) __obj.updateDynamic("Prefix")(Prefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalyticsS3BucketDestination]
   }
+  @scala.inline
+  implicit class AnalyticsS3BucketDestinationOps[Self <: AnalyticsS3BucketDestination] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucket(value: BucketName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFormat(value: AnalyticsS3ExportFileFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBucketAccountId(value: AccountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketAccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: Prefix): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,12 +22,53 @@ trait VpcCidrBlockAssociation extends js.Object {
 
 object VpcCidrBlockAssociation {
   @scala.inline
-  def apply(AssociationId: String = null, CidrBlock: String = null, CidrBlockState: VpcCidrBlockState = null): VpcCidrBlockAssociation = {
+  def apply(): VpcCidrBlockAssociation = {
     val __obj = js.Dynamic.literal()
-    if (AssociationId != null) __obj.updateDynamic("AssociationId")(AssociationId.asInstanceOf[js.Any])
-    if (CidrBlock != null) __obj.updateDynamic("CidrBlock")(CidrBlock.asInstanceOf[js.Any])
-    if (CidrBlockState != null) __obj.updateDynamic("CidrBlockState")(CidrBlockState.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpcCidrBlockAssociation]
   }
+  @scala.inline
+  implicit class VpcCidrBlockAssociationOps[Self <: VpcCidrBlockAssociation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssociationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCidrBlock(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCidrBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCidrBlockState(value: VpcCidrBlockState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrBlockState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCidrBlockState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrBlockState")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

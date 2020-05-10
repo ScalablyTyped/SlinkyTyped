@@ -4,15 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RESTAPIResponse extends js.Object {
-  def getStreamWriter(): RESTAPIResponseStream
-  def setBody(body: js.Any): Unit
-  def setContentType(contentType: String): Unit
-  def setError(error: js.Any): Unit
-  def setHeader(header: String, value: String): Unit
-  def setHeaders(headers: js.Any): Unit
-  def setLocation(location: String): Unit
-  def setStatus(status: Double): Unit
+  def getStreamWriter(): RESTAPIResponseStream = js.native
+  def setBody(body: js.Any): Unit = js.native
+  def setContentType(contentType: String): Unit = js.native
+  def setError(error: js.Any): Unit = js.native
+  def setHeader(header: String, value: String): Unit = js.native
+  def setHeaders(headers: js.Any): Unit = js.native
+  def setLocation(location: String): Unit = js.native
+  def setStatus(status: Double): Unit = js.native
 }
 
 object RESTAPIResponse {
@@ -28,8 +29,63 @@ object RESTAPIResponse {
     setStatus: Double => Unit
   ): RESTAPIResponse = {
     val __obj = js.Dynamic.literal(getStreamWriter = js.Any.fromFunction0(getStreamWriter), setBody = js.Any.fromFunction1(setBody), setContentType = js.Any.fromFunction1(setContentType), setError = js.Any.fromFunction1(setError), setHeader = js.Any.fromFunction2(setHeader), setHeaders = js.Any.fromFunction1(setHeaders), setLocation = js.Any.fromFunction1(setLocation), setStatus = js.Any.fromFunction1(setStatus))
-  
     __obj.asInstanceOf[RESTAPIResponse]
   }
+  @scala.inline
+  implicit class RESTAPIResponseOps[Self <: RESTAPIResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetStreamWriter(value: () => RESTAPIResponseStream): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStreamWriter")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetBody(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setBody")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetContentType(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setContentType")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetError(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setError")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetHeader(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHeader")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetHeaders(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHeaders")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetLocation(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setLocation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetStatus(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStatus")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

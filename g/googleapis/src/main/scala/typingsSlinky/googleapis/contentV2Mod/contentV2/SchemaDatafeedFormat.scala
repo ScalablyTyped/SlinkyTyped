@@ -26,12 +26,53 @@ trait SchemaDatafeedFormat extends js.Object {
 
 object SchemaDatafeedFormat {
   @scala.inline
-  def apply(columnDelimiter: String = null, fileEncoding: String = null, quotingMode: String = null): SchemaDatafeedFormat = {
+  def apply(): SchemaDatafeedFormat = {
     val __obj = js.Dynamic.literal()
-    if (columnDelimiter != null) __obj.updateDynamic("columnDelimiter")(columnDelimiter.asInstanceOf[js.Any])
-    if (fileEncoding != null) __obj.updateDynamic("fileEncoding")(fileEncoding.asInstanceOf[js.Any])
-    if (quotingMode != null) __obj.updateDynamic("quotingMode")(quotingMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDatafeedFormat]
   }
+  @scala.inline
+  implicit class SchemaDatafeedFormatOps[Self <: SchemaDatafeedFormat] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumnDelimiter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnDelimiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnDelimiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnDelimiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileEncoding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileEncoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileEncoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuotingMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuotingMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotingMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

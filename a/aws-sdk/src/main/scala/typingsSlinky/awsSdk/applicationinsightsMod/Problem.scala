@@ -50,30 +50,137 @@ trait Problem extends js.Object {
 
 object Problem {
   @scala.inline
-  def apply(
-    AffectedResource: AffectedResource = null,
-    EndTime: js.Date = null,
-    Feedback: Feedback = null,
-    Id: ProblemId = null,
-    Insights: Insights = null,
-    ResourceGroupName: ResourceGroupName = null,
-    SeverityLevel: SeverityLevel = null,
-    StartTime: js.Date = null,
-    Status: Status = null,
-    Title: Title = null
-  ): Problem = {
+  def apply(): Problem = {
     val __obj = js.Dynamic.literal()
-    if (AffectedResource != null) __obj.updateDynamic("AffectedResource")(AffectedResource.asInstanceOf[js.Any])
-    if (EndTime != null) __obj.updateDynamic("EndTime")(EndTime.asInstanceOf[js.Any])
-    if (Feedback != null) __obj.updateDynamic("Feedback")(Feedback.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (Insights != null) __obj.updateDynamic("Insights")(Insights.asInstanceOf[js.Any])
-    if (ResourceGroupName != null) __obj.updateDynamic("ResourceGroupName")(ResourceGroupName.asInstanceOf[js.Any])
-    if (SeverityLevel != null) __obj.updateDynamic("SeverityLevel")(SeverityLevel.asInstanceOf[js.Any])
-    if (StartTime != null) __obj.updateDynamic("StartTime")(StartTime.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (Title != null) __obj.updateDynamic("Title")(Title.asInstanceOf[js.Any])
     __obj.asInstanceOf[Problem]
   }
+  @scala.inline
+  implicit class ProblemOps[Self <: Problem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAffectedResource(value: AffectedResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AffectedResource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAffectedResource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AffectedResource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFeedback(value: Feedback): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Feedback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFeedback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Feedback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: ProblemId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsights(value: Insights): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Insights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsights: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Insights")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceGroupName(value: ResourceGroupName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceGroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeverityLevel(value: SeverityLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SeverityLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeverityLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SeverityLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: Status): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: Title): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

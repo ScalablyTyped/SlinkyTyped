@@ -4,15 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AgentInfo extends js.Object {
-  var creation_time: String
-  var did: DID
-  var expiration: Double
-  var metrics: js.Any
-  var name: AgentName
-  var role: String | Null
-  var url: AgentURL
-  var verkey: Verkey
+  var creation_time: String = js.native
+  var did: DID = js.native
+  var expiration: Double = js.native
+  var metrics: js.Any = js.native
+  var name: AgentName = js.native
+  var role: String | Null = js.native
+  var url: AgentURL = js.native
+  var verkey: Verkey = js.native
 }
 
 object AgentInfo {
@@ -24,12 +25,72 @@ object AgentInfo {
     metrics: js.Any,
     name: AgentName,
     url: AgentURL,
-    verkey: Verkey,
-    role: String = null
+    verkey: Verkey
   ): AgentInfo = {
     val __obj = js.Dynamic.literal(creation_time = creation_time.asInstanceOf[js.Any], did = did.asInstanceOf[js.Any], expiration = expiration.asInstanceOf[js.Any], metrics = metrics.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], verkey = verkey.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
     __obj.asInstanceOf[AgentInfo]
   }
+  @scala.inline
+  implicit class AgentInfoOps[Self <: AgentInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreation_time(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creation_time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDid(value: DID): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("did")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExpiration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetrics(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: AgentName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: AgentURL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVerkey(value: Verkey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verkey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRole(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(null)
+        ret
+    }
+  }
+  
 }
 

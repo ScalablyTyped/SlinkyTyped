@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "relay-compiler"
-version := "8.0-dt-20200225Z-a1dbe5"
+version := "8.0-dt-20200225Z-6fa0fe"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.4",
-  "org.scalablytyped.slinky" %%% "graphql" % "14.6.0-1eff51",
-  "org.scalablytyped.slinky" %%% "relay-runtime" % "8.0-dt-20200225Z-7c57db",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "graphql" % "14.6.0-444891",
+  "org.scalablytyped.slinky" %%% "relay-runtime" % "8.0-dt-20200407Z-26cc85",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

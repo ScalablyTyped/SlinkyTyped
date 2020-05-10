@@ -4,41 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ParseOpts extends BaseParseOpts {
   /** If true, the parser will operate as if in a tag e.g. foo="bar" is parsed as an attribute rather than a string. */
-  var attributes: js.UndefOr[Boolean] = js.undefined
+  var attributes: js.UndefOr[Boolean] = js.native
   /** If true, will parse elements as plain text, which allows the resulting template to be used to produce templates that are also later parsed. */
-  var textOnlyMode: js.UndefOr[Boolean] = js.undefined
+  var textOnlyMode: js.UndefOr[Boolean] = js.native
 }
 
 object ParseOpts {
   @scala.inline
-  def apply(
-    attributes: js.UndefOr[Boolean] = js.undefined,
-    contextLines: Int | Double = null,
-    csp: js.UndefOr[Boolean] = js.undefined,
-    delimiters: ParseDelimiters = null,
-    preserveWhitespace: js.UndefOr[Boolean] = js.undefined,
-    sanitize: Boolean | SanitizeOpts = null,
-    staticDelimiters: ParseDelimiters = null,
-    staticTripleDelimiters: ParseDelimiters = null,
-    stripComments: js.UndefOr[Boolean] = js.undefined,
-    textOnlyMode: js.UndefOr[Boolean] = js.undefined,
-    tripleDelimiters: ParseDelimiters = null
-  ): ParseOpts = {
+  def apply(): ParseOpts = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(attributes)) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
-    if (contextLines != null) __obj.updateDynamic("contextLines")(contextLines.asInstanceOf[js.Any])
-    if (!js.isUndefined(csp)) __obj.updateDynamic("csp")(csp.asInstanceOf[js.Any])
-    if (delimiters != null) __obj.updateDynamic("delimiters")(delimiters.asInstanceOf[js.Any])
-    if (!js.isUndefined(preserveWhitespace)) __obj.updateDynamic("preserveWhitespace")(preserveWhitespace.asInstanceOf[js.Any])
-    if (sanitize != null) __obj.updateDynamic("sanitize")(sanitize.asInstanceOf[js.Any])
-    if (staticDelimiters != null) __obj.updateDynamic("staticDelimiters")(staticDelimiters.asInstanceOf[js.Any])
-    if (staticTripleDelimiters != null) __obj.updateDynamic("staticTripleDelimiters")(staticTripleDelimiters.asInstanceOf[js.Any])
-    if (!js.isUndefined(stripComments)) __obj.updateDynamic("stripComments")(stripComments.asInstanceOf[js.Any])
-    if (!js.isUndefined(textOnlyMode)) __obj.updateDynamic("textOnlyMode")(textOnlyMode.asInstanceOf[js.Any])
-    if (tripleDelimiters != null) __obj.updateDynamic("tripleDelimiters")(tripleDelimiters.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParseOpts]
   }
+  @scala.inline
+  implicit class ParseOptsOps[Self <: ParseOpts] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextOnlyMode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textOnlyMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextOnlyMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textOnlyMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

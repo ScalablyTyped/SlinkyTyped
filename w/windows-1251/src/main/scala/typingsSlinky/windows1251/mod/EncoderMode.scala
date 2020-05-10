@@ -12,10 +12,8 @@ trait EncoderMode extends js.Object
 
 object EncoderMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fatal: typingsSlinky.windows1251.windows1251Strings.fatal = "fatal".asInstanceOf[typingsSlinky.windows1251.windows1251Strings.fatal]
   @scala.inline
-  def fatal: typingsSlinky.windows1251.windows1251Strings.fatal = this.cast("fatal")
-  @scala.inline
-  def html: typingsSlinky.windows1251.windows1251Strings.html = this.cast("html")
+  def html: typingsSlinky.windows1251.windows1251Strings.html = "html".asInstanceOf[typingsSlinky.windows1251.windows1251Strings.html]
 }
 

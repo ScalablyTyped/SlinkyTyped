@@ -23,32 +23,30 @@ trait JsonPatchErrorName extends js.Object
 
 object JsonPatchErrorName {
   @scala.inline
-  def OPERATION_FROM_REQUIRED: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_FROM_REQUIRED = this.cast("OPERATION_FROM_REQUIRED")
+  def OPERATION_FROM_REQUIRED: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_FROM_REQUIRED = "OPERATION_FROM_REQUIRED".asInstanceOf[typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_FROM_REQUIRED]
   @scala.inline
-  def OPERATION_FROM_UNRESOLVABLE: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_FROM_UNRESOLVABLE = this.cast("OPERATION_FROM_UNRESOLVABLE")
+  def OPERATION_FROM_UNRESOLVABLE: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_FROM_UNRESOLVABLE = "OPERATION_FROM_UNRESOLVABLE".asInstanceOf[typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_FROM_UNRESOLVABLE]
   @scala.inline
-  def OPERATION_NOT_AN_OBJECT: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_NOT_AN_OBJECT = this.cast("OPERATION_NOT_AN_OBJECT")
+  def OPERATION_NOT_AN_OBJECT: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_NOT_AN_OBJECT = "OPERATION_NOT_AN_OBJECT".asInstanceOf[typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_NOT_AN_OBJECT]
   @scala.inline
-  def OPERATION_OP_INVALID: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_OP_INVALID = this.cast("OPERATION_OP_INVALID")
+  def OPERATION_OP_INVALID: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_OP_INVALID = "OPERATION_OP_INVALID".asInstanceOf[typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_OP_INVALID]
   @scala.inline
-  def OPERATION_PATH_CANNOT_ADD: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_PATH_CANNOT_ADD = this.cast("OPERATION_PATH_CANNOT_ADD")
+  def OPERATION_PATH_CANNOT_ADD: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_PATH_CANNOT_ADD = "OPERATION_PATH_CANNOT_ADD".asInstanceOf[typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_PATH_CANNOT_ADD]
   @scala.inline
-  def OPERATION_PATH_ILLEGAL_ARRAY_INDEX: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_PATH_ILLEGAL_ARRAY_INDEX = this.cast("OPERATION_PATH_ILLEGAL_ARRAY_INDEX")
+  def OPERATION_PATH_ILLEGAL_ARRAY_INDEX: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_PATH_ILLEGAL_ARRAY_INDEX = "OPERATION_PATH_ILLEGAL_ARRAY_INDEX".asInstanceOf[typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_PATH_ILLEGAL_ARRAY_INDEX]
   @scala.inline
-  def OPERATION_PATH_INVALID: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_PATH_INVALID = this.cast("OPERATION_PATH_INVALID")
+  def OPERATION_PATH_INVALID: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_PATH_INVALID = "OPERATION_PATH_INVALID".asInstanceOf[typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_PATH_INVALID]
   @scala.inline
-  def OPERATION_PATH_UNRESOLVABLE: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_PATH_UNRESOLVABLE = this.cast("OPERATION_PATH_UNRESOLVABLE")
+  def OPERATION_PATH_UNRESOLVABLE: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_PATH_UNRESOLVABLE = "OPERATION_PATH_UNRESOLVABLE".asInstanceOf[typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_PATH_UNRESOLVABLE]
   @scala.inline
-  def OPERATION_VALUE_CANNOT_CONTAIN_UNDEFINED: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_VALUE_CANNOT_CONTAIN_UNDEFINED = this.cast("OPERATION_VALUE_CANNOT_CONTAIN_UNDEFINED")
+  def OPERATION_VALUE_CANNOT_CONTAIN_UNDEFINED: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_VALUE_CANNOT_CONTAIN_UNDEFINED = "OPERATION_VALUE_CANNOT_CONTAIN_UNDEFINED".asInstanceOf[typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_VALUE_CANNOT_CONTAIN_UNDEFINED]
   @scala.inline
-  def OPERATION_VALUE_OUT_OF_BOUNDS: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_VALUE_OUT_OF_BOUNDS = this.cast("OPERATION_VALUE_OUT_OF_BOUNDS")
+  def OPERATION_VALUE_OUT_OF_BOUNDS: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_VALUE_OUT_OF_BOUNDS = "OPERATION_VALUE_OUT_OF_BOUNDS".asInstanceOf[typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_VALUE_OUT_OF_BOUNDS]
   @scala.inline
-  def OPERATION_VALUE_REQUIRED: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_VALUE_REQUIRED = this.cast("OPERATION_VALUE_REQUIRED")
+  def OPERATION_VALUE_REQUIRED: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_VALUE_REQUIRED = "OPERATION_VALUE_REQUIRED".asInstanceOf[typingsSlinky.fastJsonPatch.fastJsonPatchStrings.OPERATION_VALUE_REQUIRED]
   @scala.inline
-  def SEQUENCE_NOT_AN_ARRAY: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.SEQUENCE_NOT_AN_ARRAY = this.cast("SEQUENCE_NOT_AN_ARRAY")
+  def SEQUENCE_NOT_AN_ARRAY: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.SEQUENCE_NOT_AN_ARRAY = "SEQUENCE_NOT_AN_ARRAY".asInstanceOf[typingsSlinky.fastJsonPatch.fastJsonPatchStrings.SEQUENCE_NOT_AN_ARRAY]
   @scala.inline
-  def TEST_OPERATION_FAILED: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.TEST_OPERATION_FAILED = this.cast("TEST_OPERATION_FAILED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TEST_OPERATION_FAILED: typingsSlinky.fastJsonPatch.fastJsonPatchStrings.TEST_OPERATION_FAILED = "TEST_OPERATION_FAILED".asInstanceOf[typingsSlinky.fastJsonPatch.fastJsonPatchStrings.TEST_OPERATION_FAILED]
 }
 

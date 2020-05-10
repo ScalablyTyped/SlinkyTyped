@@ -1,15 +1,16 @@
 package typingsSlinky.reactNativeSvg.components
 
+import typingsSlinky.reactNativeSvg.mod.UriProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SvgWithCssUri
-  extends SharedApply_UriProps_1763686808[typingsSlinky.reactNativeSvg.mod.SvgWithCssUri] {
+object SvgWithCssUri {
   @JSImport("react-native-svg", "SvgWithCssUri")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: UriProps): SharedBuilder_UriProps_1855196895[typingsSlinky.reactNativeSvg.mod.SvgWithCssUri] = new SharedBuilder_UriProps_1855196895[typingsSlinky.reactNativeSvg.mod.SvgWithCssUri](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SvgWithCssUri.type): SharedBuilder_UriProps_1855196895[typingsSlinky.reactNativeSvg.mod.SvgWithCssUri] = new SharedBuilder_UriProps_1855196895[typingsSlinky.reactNativeSvg.mod.SvgWithCssUri](js.Array(this.component, js.Dictionary.empty))()
 }
 

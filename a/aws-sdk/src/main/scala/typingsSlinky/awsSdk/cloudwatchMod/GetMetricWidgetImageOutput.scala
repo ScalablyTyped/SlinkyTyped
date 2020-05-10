@@ -14,10 +14,35 @@ trait GetMetricWidgetImageOutput extends js.Object {
 
 object GetMetricWidgetImageOutput {
   @scala.inline
-  def apply(MetricWidgetImage: MetricWidgetImage = null): GetMetricWidgetImageOutput = {
+  def apply(): GetMetricWidgetImageOutput = {
     val __obj = js.Dynamic.literal()
-    if (MetricWidgetImage != null) __obj.updateDynamic("MetricWidgetImage")(MetricWidgetImage.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetMetricWidgetImageOutput]
   }
+  @scala.inline
+  implicit class GetMetricWidgetImageOutputOps[Self <: GetMetricWidgetImageOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMetricWidgetImageUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricWidgetImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetricWidgetImage(value: MetricWidgetImage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricWidgetImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricWidgetImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricWidgetImage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,15 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonAddedItems
 import typingsSlinky.devextreme.AnonComponentDxSlideOut
-import typingsSlinky.devextreme.AnonComponentElement
-import typingsSlinky.devextreme.AnonElement
-import typingsSlinky.devextreme.AnonEvent
-import typingsSlinky.devextreme.AnonItemData
-import typingsSlinky.devextreme.AnonItemElement
-import typingsSlinky.devextreme.AnonModel
-import typingsSlinky.devextreme.AnonName
 import typingsSlinky.devextreme.devextremeStrings.inverted
 import typingsSlinky.devextreme.devextremeStrings.normal
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
@@ -20,19 +12,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxSlideOutOptions extends CollectionWidgetOptions[dxSlideOut] {
   /** Specifies a custom template for the widget content. Rendered only once - when the widget is created. */
   var contentTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function1[/* container */ dxElement, String | Element | JQuery])
-  ] = js.undefined
+  ] = js.native
   /** Binds the widget to data. */
   @JSName("dataSource")
   var dataSource_dxSlideOutOptions: js.UndefOr[
     String | (js.Array[String | dxSlideOutItem | _]) | DataSource | DataSourceOptions
-  ] = js.undefined
+  ] = js.native
   /** An array of items displayed by the widget. */
   @JSName("items")
-  var items_dxSlideOutOptions: js.UndefOr[js.Array[String | dxSlideOutItem | _]] = js.undefined
+  var items_dxSlideOutOptions: js.UndefOr[js.Array[String | dxSlideOutItem | _]] = js.native
   /** Specifies a custom template for group captions. */
   var menuGroupTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
@@ -41,9 +34,9 @@ trait dxSlideOutOptions extends CollectionWidgetOptions[dxSlideOut] {
       /* groupElement */ js.Any, 
       String | Element | JQuery
     ])
-  ] = js.undefined
+  ] = js.native
   /** A Boolean value specifying whether or not to display a grouped menu. */
-  var menuGrouped: js.UndefOr[Boolean] = js.undefined
+  var menuGrouped: js.UndefOr[Boolean] = js.native
   /** Specifies a custom template for menu items. */
   var menuItemTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
@@ -52,122 +45,220 @@ trait dxSlideOutOptions extends CollectionWidgetOptions[dxSlideOut] {
       /* itemElement */ dxElement, 
       String | Element | JQuery
     ])
-  ] = js.undefined
+  ] = js.native
   /** Specifies the current menu position. */
-  var menuPosition: js.UndefOr[inverted | normal] = js.undefined
+  var menuPosition: js.UndefOr[inverted | normal] = js.native
   /** Specifies whether or not the slide-out menu is displayed. */
-  var menuVisible: js.UndefOr[Boolean] = js.undefined
+  var menuVisible: js.UndefOr[Boolean] = js.native
   /** A function that is executed when a group menu item is rendered. */
-  var onMenuGroupRendered: js.UndefOr[js.Function1[/* e */ AnonComponentDxSlideOut, _]] = js.undefined
+  var onMenuGroupRendered: js.UndefOr[js.Function1[/* e */ AnonComponentDxSlideOut, _]] = js.native
   /** A function that is executed when a regular menu item is rendered. */
-  var onMenuItemRendered: js.UndefOr[js.Function1[/* e */ AnonComponentDxSlideOut, _]] = js.undefined
+  var onMenuItemRendered: js.UndefOr[js.Function1[/* e */ AnonComponentDxSlideOut, _]] = js.native
   /** Indicates whether the menu can be shown/hidden by swiping the widget's main panel. */
-  var swipeEnabled: js.UndefOr[Boolean] = js.undefined
+  var swipeEnabled: js.UndefOr[Boolean] = js.native
 }
 
 object dxSlideOutOptions {
   @scala.inline
-  def apply(
-    accessKey: String = null,
-    activeStateEnabled: js.UndefOr[Boolean] = js.undefined,
-    bindingOptions: js.Any = null,
-    contentTemplate: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function1[/* container */ dxElement, String | Element | JQuery]) = null,
-    dataSource: String | (js.Array[String | dxSlideOutItem | _]) | DataSource | DataSourceOptions = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    elementAttr: js.Any = null,
-    focusStateEnabled: js.UndefOr[Boolean] = js.undefined,
-    height: Double | String | (js.Function0[Double | String]) = null,
-    hint: String = null,
-    hoverStateEnabled: js.UndefOr[Boolean] = js.undefined,
-    itemHoldTimeout: Int | Double = null,
-    itemTemplate: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
-      /* itemData */ js.Any, 
-      /* itemIndex */ Double, 
-      /* itemElement */ dxElement, 
-      String | Element | JQuery
-    ]) = null,
-    items: js.Array[String | dxSlideOutItem | _] = null,
-    keyExpr: String | js.Function = null,
-    menuGroupTemplate: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
-      /* groupData */ js.Any, 
-      /* groupIndex */ Double, 
-      /* groupElement */ js.Any, 
-      String | Element | JQuery
-    ]) = null,
-    menuGrouped: js.UndefOr[Boolean] = js.undefined,
-    menuItemTemplate: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
-      /* itemData */ js.Any, 
-      /* itemIndex */ Double, 
-      /* itemElement */ dxElement, 
-      String | Element | JQuery
-    ]) = null,
-    menuPosition: inverted | normal = null,
-    menuVisible: js.UndefOr[Boolean] = js.undefined,
-    noDataText: String = null,
-    onContentReady: /* e */ AnonComponentElement[dxSlideOut] => _ = null,
-    onDisposing: /* e */ AnonModel[dxSlideOut] => _ = null,
-    onInitialized: /* e */ AnonElement[dxSlideOut] => _ = null,
-    onItemClick: (js.Function1[/* e */ AnonEvent[dxSlideOut], _]) | String = null,
-    onItemContextMenu: /* e */ AnonEvent[dxSlideOut] => _ = null,
-    onItemHold: /* e */ AnonItemData[dxSlideOut] => _ = null,
-    onItemRendered: /* e */ AnonItemElement[dxSlideOut] => _ = null,
-    onMenuGroupRendered: /* e */ AnonComponentDxSlideOut => _ = null,
-    onMenuItemRendered: /* e */ AnonComponentDxSlideOut => _ = null,
-    onOptionChanged: /* e */ AnonName[dxSlideOut] => _ = null,
-    onSelectionChanged: /* e */ AnonAddedItems[dxSlideOut] => _ = null,
-    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
-    selectedIndex: Int | Double = null,
-    selectedItem: js.Any = null,
-    selectedItemKeys: js.Array[_] = null,
-    selectedItems: js.Array[_] = null,
-    swipeEnabled: js.UndefOr[Boolean] = js.undefined,
-    tabIndex: Int | Double = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    width: Double | String | (js.Function0[Double | String]) = null
-  ): dxSlideOutOptions = {
+  def apply(): dxSlideOutOptions = {
     val __obj = js.Dynamic.literal()
-    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(activeStateEnabled)) __obj.updateDynamic("activeStateEnabled")(activeStateEnabled.asInstanceOf[js.Any])
-    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
-    if (contentTemplate != null) __obj.updateDynamic("contentTemplate")(contentTemplate.asInstanceOf[js.Any])
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
-    if (!js.isUndefined(focusStateEnabled)) __obj.updateDynamic("focusStateEnabled")(focusStateEnabled.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
-    if (!js.isUndefined(hoverStateEnabled)) __obj.updateDynamic("hoverStateEnabled")(hoverStateEnabled.asInstanceOf[js.Any])
-    if (itemHoldTimeout != null) __obj.updateDynamic("itemHoldTimeout")(itemHoldTimeout.asInstanceOf[js.Any])
-    if (itemTemplate != null) __obj.updateDynamic("itemTemplate")(itemTemplate.asInstanceOf[js.Any])
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (keyExpr != null) __obj.updateDynamic("keyExpr")(keyExpr.asInstanceOf[js.Any])
-    if (menuGroupTemplate != null) __obj.updateDynamic("menuGroupTemplate")(menuGroupTemplate.asInstanceOf[js.Any])
-    if (!js.isUndefined(menuGrouped)) __obj.updateDynamic("menuGrouped")(menuGrouped.asInstanceOf[js.Any])
-    if (menuItemTemplate != null) __obj.updateDynamic("menuItemTemplate")(menuItemTemplate.asInstanceOf[js.Any])
-    if (menuPosition != null) __obj.updateDynamic("menuPosition")(menuPosition.asInstanceOf[js.Any])
-    if (!js.isUndefined(menuVisible)) __obj.updateDynamic("menuVisible")(menuVisible.asInstanceOf[js.Any])
-    if (noDataText != null) __obj.updateDynamic("noDataText")(noDataText.asInstanceOf[js.Any])
-    if (onContentReady != null) __obj.updateDynamic("onContentReady")(js.Any.fromFunction1(onContentReady))
-    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
-    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
-    if (onItemClick != null) __obj.updateDynamic("onItemClick")(onItemClick.asInstanceOf[js.Any])
-    if (onItemContextMenu != null) __obj.updateDynamic("onItemContextMenu")(js.Any.fromFunction1(onItemContextMenu))
-    if (onItemHold != null) __obj.updateDynamic("onItemHold")(js.Any.fromFunction1(onItemHold))
-    if (onItemRendered != null) __obj.updateDynamic("onItemRendered")(js.Any.fromFunction1(onItemRendered))
-    if (onMenuGroupRendered != null) __obj.updateDynamic("onMenuGroupRendered")(js.Any.fromFunction1(onMenuGroupRendered))
-    if (onMenuItemRendered != null) __obj.updateDynamic("onMenuItemRendered")(js.Any.fromFunction1(onMenuItemRendered))
-    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
-    if (onSelectionChanged != null) __obj.updateDynamic("onSelectionChanged")(js.Any.fromFunction1(onSelectionChanged))
-    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.asInstanceOf[js.Any])
-    if (selectedIndex != null) __obj.updateDynamic("selectedIndex")(selectedIndex.asInstanceOf[js.Any])
-    if (selectedItem != null) __obj.updateDynamic("selectedItem")(selectedItem.asInstanceOf[js.Any])
-    if (selectedItemKeys != null) __obj.updateDynamic("selectedItemKeys")(selectedItemKeys.asInstanceOf[js.Any])
-    if (selectedItems != null) __obj.updateDynamic("selectedItems")(selectedItems.asInstanceOf[js.Any])
-    if (!js.isUndefined(swipeEnabled)) __obj.updateDynamic("swipeEnabled")(swipeEnabled.asInstanceOf[js.Any])
-    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxSlideOutOptions]
   }
+  @scala.inline
+  implicit class dxSlideOutOptionsOps[Self <: dxSlideOutOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentTemplateFunction1(value: /* container */ dxElement => String | Element | JQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withContentTemplateElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentTemplate(
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function1[/* container */ dxElement, String | Element | JQuery])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSource(value: String | (js.Array[String | dxSlideOutItem | _]) | DataSource | DataSourceOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItems(value: js.Array[String | dxSlideOutItem | _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenuGroupTemplateElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuGroupTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMenuGroupTemplateFunction3(
+      value: (/* groupData */ js.Any, /* groupIndex */ Double, /* groupElement */ js.Any) => String | Element | JQuery
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuGroupTemplate")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withMenuGroupTemplate(
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
+          /* groupData */ js.Any, 
+          /* groupIndex */ Double, 
+          /* groupElement */ js.Any, 
+          String | Element | JQuery
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuGroupTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenuGroupTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuGroupTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenuGrouped(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuGrouped")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenuGrouped: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuGrouped")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenuItemTemplateElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMenuItemTemplateFunction3(
+      value: (/* itemData */ js.Any, /* itemIndex */ Double, /* itemElement */ dxElement) => String | Element | JQuery
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemTemplate")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withMenuItemTemplate(
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
+          /* itemData */ js.Any, 
+          /* itemIndex */ Double, 
+          /* itemElement */ dxElement, 
+          String | Element | JQuery
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenuItemTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenuPosition(value: inverted | normal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenuPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenuVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenuVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuVisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMenuGroupRendered(value: /* e */ AnonComponentDxSlideOut => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuGroupRendered")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMenuGroupRendered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuGroupRendered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMenuItemRendered(value: /* e */ AnonComponentDxSlideOut => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuItemRendered")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMenuItemRendered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuItemRendered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSwipeEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSwipeEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

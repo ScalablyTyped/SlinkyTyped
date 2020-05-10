@@ -22,11 +22,41 @@ trait SchemaAccountPermissionsListResponse extends js.Object {
 
 object SchemaAccountPermissionsListResponse {
   @scala.inline
-  def apply(accountPermissions: js.Array[SchemaAccountPermission] = null, kind: String = null): SchemaAccountPermissionsListResponse = {
+  def apply(): SchemaAccountPermissionsListResponse = {
     val __obj = js.Dynamic.literal()
-    if (accountPermissions != null) __obj.updateDynamic("accountPermissions")(accountPermissions.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAccountPermissionsListResponse]
   }
+  @scala.inline
+  implicit class SchemaAccountPermissionsListResponseOps[Self <: SchemaAccountPermissionsListResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountPermissions(value: js.Array[SchemaAccountPermission]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountPermissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountPermissions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

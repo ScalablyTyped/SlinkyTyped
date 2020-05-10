@@ -1,13 +1,10 @@
 package typingsSlinky.reactWidgets.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.KeyboardEvent
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactWidgets.mod.SelectList.^
 import typingsSlinky.reactWidgets.selectListMod.SelectListMessages
 import typingsSlinky.reactWidgets.selectListMod.SelectListProps
@@ -15,62 +12,84 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SelectList
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object SelectList {
   @JSImport("react-widgets", "SelectList")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, id, multiple, name, tabIndex */
-  def apply(
-    busy: js.UndefOr[Boolean] = js.undefined,
-    data: js.Array[_] = null,
-    defaultValue: js.Any | js.Array[_] = null,
-    delay: Int | Double = null,
-    disabled: Boolean | js.Array[_] = null,
-    groupBy: String | (js.Function1[/* dataItem */ js.Any, _]) = null,
-    groupComponent: ReactComponentClass[_] = null,
-    isRtl: js.UndefOr[Boolean] = js.undefined,
-    itemComponent: ReactComponentClass[_] = null,
-    listComponent: ReactComponentClass[_] | String = null,
-    listProps: js.Object = null,
-    messages: SelectListMessages = null,
-    onChange: /* values */ js.Any | js.Array[_] => Unit = null,
-    onKeyDown: /* event */ KeyboardEvent => Unit = null,
-    onKeyPress: /* event */ KeyboardEvent => Unit = null,
-    onMove: (/* list */ HTMLElement, /* focusedNode */ HTMLElement, /* focusedItem */ js.Any) => Unit = null,
-    readOnly: Boolean | js.Array[_] = null,
-    textField: String | (js.Function1[/* dataItem */ js.Any, String]) = null,
-    value: js.Any | js.Array[_] = null,
-    valueField: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(busy)) __obj.updateDynamic("busy")(busy.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (groupBy != null) __obj.updateDynamic("groupBy")(groupBy.asInstanceOf[js.Any])
-    if (groupComponent != null) __obj.updateDynamic("groupComponent")(groupComponent.asInstanceOf[js.Any])
-    if (!js.isUndefined(isRtl)) __obj.updateDynamic("isRtl")(isRtl.asInstanceOf[js.Any])
-    if (itemComponent != null) __obj.updateDynamic("itemComponent")(itemComponent.asInstanceOf[js.Any])
-    if (listComponent != null) __obj.updateDynamic("listComponent")(listComponent.asInstanceOf[js.Any])
-    if (listProps != null) __obj.updateDynamic("listProps")(listProps.asInstanceOf[js.Any])
-    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
-    if (onMove != null) __obj.updateDynamic("onMove")(js.Any.fromFunction3(onMove))
-    if (readOnly != null) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
-    if (textField != null) __obj.updateDynamic("textField")(textField.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (valueField != null) __obj.updateDynamic("valueField")(valueField.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def busy(value: Boolean): this.type = set("busy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: js.Any | js.Array[_]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delay(value: Double): this.type = set("delay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean | js.Array[_]): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupByFunction1(value: /* dataItem */ js.Any => _): this.type = set("groupBy", js.Any.fromFunction1(value))
+    @scala.inline
+    def groupBy(value: String | (js.Function1[/* dataItem */ js.Any, _])): this.type = set("groupBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("groupComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupComponentComponentClass(value: ReactComponentClass[_]): this.type = set("groupComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupComponent(value: ReactComponentClass[_]): this.type = set("groupComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isRtl(value: Boolean): this.type = set("isRtl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("itemComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemComponentComponentClass(value: ReactComponentClass[_]): this.type = set("itemComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemComponent(value: ReactComponentClass[_]): this.type = set("itemComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("listComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listComponentComponentClass(value: ReactComponentClass[_]): this.type = set("listComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listComponent(value: ReactComponentClass[_] | String): this.type = set("listComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listProps(value: js.Object): this.type = set("listProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def messages(value: SelectListMessages): this.type = set("messages", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* values */ js.Any | js.Array[_] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyDown(value: /* event */ KeyboardEvent => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyPress(value: /* event */ KeyboardEvent => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMove(value: (/* list */ HTMLElement, /* focusedNode */ HTMLElement, /* focusedItem */ js.Any) => Unit): this.type = set("onMove", js.Any.fromFunction3(value))
+    @scala.inline
+    def readOnly(value: Boolean | js.Array[_]): this.type = set("readOnly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textFieldFunction1(value: /* dataItem */ js.Any => String): this.type = set("textField", js.Any.fromFunction1(value))
+    @scala.inline
+    def textField(value: String | (js.Function1[/* dataItem */ js.Any, String])): this.type = set("textField", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Any | js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueField(value: String): this.type = set("valueField", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, ^] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactWidgets.mod.SelectList.^](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SelectListProps
+  
+  def withProps(p: SelectListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SelectList.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

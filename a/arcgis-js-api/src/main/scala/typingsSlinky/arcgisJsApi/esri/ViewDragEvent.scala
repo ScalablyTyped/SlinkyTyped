@@ -10,19 +10,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ViewDragEvent extends js.Object {
-  var action: start | added | update | removed | end
-  var angle: Double
-  var button: js.Any
-  var buttons: Double
-  var native: js.Any
-  var origin: ViewDragEventOrigin
-  var radius: Double
-  var stopPropagation: js.Function
-  var timestamp: Double
-  var `type`: drag
-  var x: Double
-  var y: Double
+  var action: start | added | update | removed | end = js.native
+  var angle: Double = js.native
+  var button: js.Any = js.native
+  var buttons: Double = js.native
+  var native: js.Any = js.native
+  var origin: ViewDragEventOrigin = js.native
+  var radius: Double = js.native
+  var stopPropagation: js.Function = js.native
+  var timestamp: Double = js.native
+  var `type`: drag = js.native
+  var x: Double = js.native
+  var y: Double = js.native
 }
 
 object ViewDragEvent {
@@ -45,5 +46,85 @@ object ViewDragEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViewDragEvent]
   }
+  @scala.inline
+  implicit class ViewDragEventOps[Self <: ViewDragEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: start | added | update | removed | end): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withButton(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withButtons(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNative(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("native")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrigin(value: ViewDragEventOrigin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStopPropagation(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPropagation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: drag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

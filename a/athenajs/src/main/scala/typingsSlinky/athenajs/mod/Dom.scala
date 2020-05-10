@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 object Dom extends js.Object {
   def apply(): _Dom[HTMLElement] = js.native
   def apply(sel: String): _Dom[HTMLElement] = js.native
-  def apply(sel: typingsSlinky.std.HTMLElement): _Dom[HTMLElement] = js.native
+  def apply(sel: HTMLElement): _Dom[HTMLElement] = js.native
 }
 

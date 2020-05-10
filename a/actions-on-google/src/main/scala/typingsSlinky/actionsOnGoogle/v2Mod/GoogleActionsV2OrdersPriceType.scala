@@ -13,12 +13,10 @@ trait GoogleActionsV2OrdersPriceType extends js.Object
 
 object GoogleActionsV2OrdersPriceType {
   @scala.inline
-  def ACTUAL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ACTUAL = this.cast("ACTUAL")
+  def ACTUAL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ACTUAL = "ACTUAL".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ACTUAL]
   @scala.inline
-  def ESTIMATE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ESTIMATE = this.cast("ESTIMATE")
+  def ESTIMATE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ESTIMATE = "ESTIMATE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ESTIMATE]
   @scala.inline
-  def UNKNOWN: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNKNOWN = this.cast("UNKNOWN")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UNKNOWN: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNKNOWN = "UNKNOWN".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNKNOWN]
 }
 

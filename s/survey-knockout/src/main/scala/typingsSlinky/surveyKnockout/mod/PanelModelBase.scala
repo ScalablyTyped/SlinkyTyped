@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.surveyKnockout.mod.IParentElement because var conflicts: isReadOnly. Inlined addElement, removeElement
 - typingsSlinky.surveyKnockout.mod.ISurveyElement because Already inherited
 - typingsSlinky.surveyKnockout.mod.IPanel because var conflicts: containsErrors, isPage, isPanel, isReadOnly, isVisible, name. Inlined getChildrenLayoutType, getQuestionTitleLocation, parent, elementWidthChanged, indexOf, elements */ @JSImport("survey-knockout", "PanelModelBase")
@@ -14,6 +14,8 @@ class PanelModelBase ()
      with IConditionRunner
      with ISurveyErrorOwner {
   def this(name: String) = this()
+  val _showDescription: Boolean = js.native
+  val _showTitle: Boolean = js.native
   val css: js.Any = js.native
   val cssClasses: js.Any = js.native
   val depth: Double = js.native
@@ -187,19 +189,11 @@ class PanelModelBase ()
     * @param name the element name
     */
   def getElementByName(name: String): IElement = js.native
-  /* CompleteClass */
-  override def getErrorCustomText(text: String, error: SurveyError): String = js.native
   def getFirstQuestionToFocus(): Question = js.native
   def getFirstQuestionToFocus(withError: Boolean): Question = js.native
   def getIsPageVisible(exceptionQuestion: IQuestion): Boolean = js.native
   def getLayoutType(): String = js.native
-  /* CompleteClass */
-  override def getLocale(): String = js.native
-  /* CompleteClass */
-  override def getMarkdownHtml(text: String): String = js.native
   def getPanel(): IPanel = js.native
-  /* CompleteClass */
-  override def getProcessedText(text: String): String = js.native
   /**
     * Returns the question by its name
     * @param name the question name
@@ -252,8 +246,6 @@ class PanelModelBase ()
     * @see removeElement
     */
   def removeQuestion(question: Question): Unit = js.native
-  /* CompleteClass */
-  override def runCondition(values: HashTable[_], properties: HashTable[_]): js.Any = js.native
   def updateElementVisibility(): Unit = js.native
   /* protected */ def updateRowsRemoveElementFromRow(element: IElement, row: QuestionRowModel): Unit = js.native
 }

@@ -18,11 +18,41 @@ trait DescribeDBProxyTargetsResponse extends js.Object {
 
 object DescribeDBProxyTargetsResponse {
   @scala.inline
-  def apply(Marker: String = null, Targets: TargetList = null): DescribeDBProxyTargetsResponse = {
+  def apply(): DescribeDBProxyTargetsResponse = {
     val __obj = js.Dynamic.literal()
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (Targets != null) __obj.updateDynamic("Targets")(Targets.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDBProxyTargetsResponse]
   }
+  @scala.inline
+  implicit class DescribeDBProxyTargetsResponseOps[Self <: DescribeDBProxyTargetsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMarker(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargets(value: TargetList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Targets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Targets")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

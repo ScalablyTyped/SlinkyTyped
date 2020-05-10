@@ -1,9 +1,6 @@
 package typingsSlinky.victory.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.victory.Anon1
-import typingsSlinky.victory.AnonXBoolean
-import typingsSlinky.victory.AnonY
 import typingsSlinky.victory.victoryStrings.data
 import typingsSlinky.victory.victoryStrings.labels
 import typingsSlinky.victory.victoryStrings.parent
@@ -11,6 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VictoryPieProps
   extends VictoryMultiLabeableProps
      with VictoryCommonProps {
@@ -21,11 +19,11 @@ trait VictoryPieProps
     * values from this color scale to the pie slices unless colors are explicitly provided in the
     * data object
     */
-  var colorScale: js.UndefOr[ColorScalePropType] = js.undefined
+  var colorScale: js.UndefOr[ColorScalePropType] = js.native
   /**
     * Set the cornerRadius for every dataComponent (Slice by default) within VictoryPie
     */
-  var cornerRadius: js.UndefOr[Double] = js.undefined
+  var cornerRadius: js.UndefOr[Double] = js.native
   /**
     * The data prop specifies the data to be plotted,
     * where data X-value is the slice label (string or number),
@@ -36,7 +34,7 @@ trait VictoryPieProps
     * @example [{x: 1, y: 2}, {x: 2, y: 3}], [[1, 2], [2, 3]],
     * [[{x: "a", y: 1}, {x: "b", y: 2}], [{x: "a", y: 2}, {x: "b", y: 3}]]
     */
-  var data: js.UndefOr[js.Array[_]] = js.undefined
+  var data: js.UndefOr[js.Array[_]] = js.native
   /**
     * The dataComponent prop takes an entire, HTML-complete data component which will be used to
     * create slices for each datum in the pie chart. The new element created from the passed
@@ -46,17 +44,17 @@ trait VictoryPieProps
     * the VictoryPie; and the d3 compatible slice object.
     * If a dataComponent is not provided, VictoryPie's Slice component will be used.
     */
-  var dataComponent: js.UndefOr[ReactElement] = js.undefined
+  var dataComponent: js.UndefOr[ReactElement] = js.native
   /**
     * The overall end angle of the pie in degrees. This prop is used in conjunction with
     * startAngle to create a pie that spans only a segment of a circle.
     */
-  var endAngle: js.UndefOr[Double] = js.undefined
+  var endAngle: js.UndefOr[Double] = js.native
   /**
     * Similar to data accessor props `x` and `y`, this prop may be used to functionally
     * assign eventKeys to data
     */
-  var eventKey: js.UndefOr[StringOrNumberOrCallback] = js.undefined
+  var eventKey: js.UndefOr[StringOrNumberOrCallback] = js.native
   /**
     * The event prop takes an array of event objects. Event objects are composed of
     * a target, an eventKey, and eventHandlers. Targets may be any valid style namespace
@@ -101,42 +99,42 @@ trait VictoryPieProps
     js.Array[
       EventPropTypeInterface[data | labels | parent, StringOrNumberOrCallback | (js.Array[Double | String])]
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `innerRadius` prop determines the number of pixels between the center of the chart
     * and the inner edge of a donut chart. When this prop is set to zero a regular pie chart is rendered.
     * When this prop is given as a function, `innerRadius` will be evaluated for each slice
     * of the pie with the props corresponding to that slice
     */
-  var innerRadius: js.UndefOr[Double | (js.Function1[/* props */ VictorySliceProps, Double])] = js.undefined
+  var innerRadius: js.UndefOr[Double | (js.Function1[/* props */ VictorySliceProps, Double])] = js.native
   /**
     * The labelRadius prop defines the radius of the arc that will be used for positioning each slice label.
     * If this prop is not set, the label radius will default to the radius of the pie + label padding.
     */
-  var labelRadius: js.UndefOr[Double] = js.undefined
+  var labelRadius: js.UndefOr[Double] = js.native
   /**
     * The padAngle prop determines the amount of separation between adjacent data slices
     * in number of degrees
     */
-  var padAngle: js.UndefOr[Double] = js.undefined
+  var padAngle: js.UndefOr[Double] = js.native
   /**
     * Specifies the radius of the chart. If this property is not provided it is computed
     * from width, height, and padding props
     *
     */
-  var radius: js.UndefOr[Double] = js.undefined
+  var radius: js.UndefOr[Double] = js.native
   /**
     * The overall start angle of the pie in degrees. This prop is used in conjunction with
     * endAngle to create a pie that spans only a segment of a circle.
     */
-  var startAngle: js.UndefOr[Double] = js.undefined
+  var startAngle: js.UndefOr[Double] = js.native
   /**
     * The style prop specifies styles for your pie. VictoryPie relies on Radium,
     * so valid Radium style objects should work for this prop. Height, width, and
     * padding should be specified via the height, width, and padding props.
     * @example {data: {stroke: "black"}, label: {fontSize: 10}}
     */
-  var style: js.UndefOr[VictoryStyleInterface] = js.undefined
+  var style: js.UndefOr[VictoryStyleInterface] = js.native
   /**
     * The x prop specifies how to access the X value of each data point.
     * If given as a function, it will be run on each data point, and returned value will be used.
@@ -147,7 +145,7 @@ trait VictoryPieProps
     * If `null` or `undefined`, the data value will be used as is (identity function/pass-through).
     * @example 0, 'x', 'x.value.nested.1.thing', 'x[2].also.nested', null, d => Math.sin(d)
     */
-  var x: js.UndefOr[DataGetterPropType] = js.undefined
+  var x: js.UndefOr[DataGetterPropType] = js.native
   /**
     * The y prop specifies how to access the Y value of each data point.
     * If given as a function, it will be run on each data point, and returned value will be used.
@@ -158,79 +156,230 @@ trait VictoryPieProps
     * If `null` or `undefined`, the data value will be used as is (identity function/pass-through).
     * @example 0, 'y', 'y.value.nested.1.thing', 'y[2].also.nested', null, d => Math.sin(d)
     */
-  var y: js.UndefOr[DataGetterPropType] = js.undefined
+  var y: js.UndefOr[DataGetterPropType] = js.native
 }
 
 object VictoryPieProps {
   @scala.inline
-  def apply(
-    animate: Boolean | AnimatePropTypeInterface = null,
-    colorScale: ColorScalePropType = null,
-    containerComponent: ReactElement = null,
-    cornerRadius: Int | Double = null,
-    data: js.Array[_] = null,
-    dataComponent: ReactElement = null,
-    endAngle: Int | Double = null,
-    eventKey: StringOrNumberOrCallback = null,
-    events: js.Array[
-      EventPropTypeInterface[data | labels | parent, StringOrNumberOrCallback | (js.Array[Double | String])]
-    ] = null,
-    groupComponent: ReactElement = null,
-    height: Int | Double = null,
-    horizontal: js.UndefOr[Boolean] = js.undefined,
-    innerRadius: Double | (js.Function1[/* props */ VictorySliceProps, Double]) = null,
-    labelComponent: ReactElement = null,
-    labelRadius: Int | Double = null,
-    labels: js.Array[String] | (js.Function1[/* data */ js.Any, String]) = null,
-    maxDomain: Double | AnonY = null,
-    minDomain: Double | AnonY = null,
-    name: String = null,
-    padAngle: Int | Double = null,
-    padding: PaddingProps = null,
-    radius: Int | Double = null,
-    scale: ScalePropType | D3Scale | Anon1 = null,
-    singleQuadrantDomainPadding: Boolean | AnonXBoolean = null,
-    standalone: js.UndefOr[Boolean] = js.undefined,
-    startAngle: Int | Double = null,
-    style: VictoryStyleInterface = null,
-    theme: VictoryThemeDefinition = null,
-    width: Int | Double = null,
-    x: DataGetterPropType = null,
-    y: DataGetterPropType = null
-  ): VictoryPieProps = {
+  def apply(): VictoryPieProps = {
     val __obj = js.Dynamic.literal()
-    if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (colorScale != null) __obj.updateDynamic("colorScale")(colorScale.asInstanceOf[js.Any])
-    if (containerComponent != null) __obj.updateDynamic("containerComponent")(containerComponent.asInstanceOf[js.Any])
-    if (cornerRadius != null) __obj.updateDynamic("cornerRadius")(cornerRadius.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dataComponent != null) __obj.updateDynamic("dataComponent")(dataComponent.asInstanceOf[js.Any])
-    if (endAngle != null) __obj.updateDynamic("endAngle")(endAngle.asInstanceOf[js.Any])
-    if (eventKey != null) __obj.updateDynamic("eventKey")(eventKey.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (groupComponent != null) __obj.updateDynamic("groupComponent")(groupComponent.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.asInstanceOf[js.Any])
-    if (innerRadius != null) __obj.updateDynamic("innerRadius")(innerRadius.asInstanceOf[js.Any])
-    if (labelComponent != null) __obj.updateDynamic("labelComponent")(labelComponent.asInstanceOf[js.Any])
-    if (labelRadius != null) __obj.updateDynamic("labelRadius")(labelRadius.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (maxDomain != null) __obj.updateDynamic("maxDomain")(maxDomain.asInstanceOf[js.Any])
-    if (minDomain != null) __obj.updateDynamic("minDomain")(minDomain.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (padAngle != null) __obj.updateDynamic("padAngle")(padAngle.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (singleQuadrantDomainPadding != null) __obj.updateDynamic("singleQuadrantDomainPadding")(singleQuadrantDomainPadding.asInstanceOf[js.Any])
-    if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.asInstanceOf[js.Any])
-    if (startAngle != null) __obj.updateDynamic("startAngle")(startAngle.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[VictoryPieProps]
   }
+  @scala.inline
+  implicit class VictoryPiePropsOps[Self <: VictoryPieProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColorScale(value: ColorScalePropType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCornerRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCornerRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataComponent(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataComponent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataComponent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventKeyFunction1(value: /* args */ CallbackArgs => String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEventKey(value: StringOrNumberOrCallback): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvents(
+      value: js.Array[
+          EventPropTypeInterface[data | labels | parent, StringOrNumberOrCallback | (js.Array[Double | String])]
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInnerRadiusFunction1(value: /* props */ VictorySliceProps => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInnerRadius(value: Double | (js.Function1[/* props */ VictorySliceProps, Double])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInnerRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: VictoryStyleInterface): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXFunction1(value: /* data */ js.Any => Double | String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withX(value: DataGetterPropType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYFunction1(value: /* data */ js.Any => Double | String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withY(value: DataGetterPropType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

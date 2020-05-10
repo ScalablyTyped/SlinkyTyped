@@ -14,10 +14,29 @@ trait AssociateWebsiteCertificateAuthorityResponse extends js.Object {
 
 object AssociateWebsiteCertificateAuthorityResponse {
   @scala.inline
-  def apply(WebsiteCaId: Id = null): AssociateWebsiteCertificateAuthorityResponse = {
+  def apply(): AssociateWebsiteCertificateAuthorityResponse = {
     val __obj = js.Dynamic.literal()
-    if (WebsiteCaId != null) __obj.updateDynamic("WebsiteCaId")(WebsiteCaId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociateWebsiteCertificateAuthorityResponse]
   }
+  @scala.inline
+  implicit class AssociateWebsiteCertificateAuthorityResponseOps[Self <: AssociateWebsiteCertificateAuthorityResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWebsiteCaId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebsiteCaId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebsiteCaId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebsiteCaId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.promClient.mod
 
 import typingsSlinky.promClient.mod.Gauge.Internal
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,10 +35,10 @@ class Gauge protected () extends _Metric_ {
   def dec(labels: labelValues): Unit = js.native
   def dec(labels: labelValues, value: Double): Unit = js.native
   def dec(labels: labelValues, value: Double, timestamp: Double): Unit = js.native
-  def dec(labels: labelValues, value: Double, timestamp: Date): Unit = js.native
+  def dec(labels: labelValues, value: Double, timestamp: js.Date): Unit = js.native
   def dec(value: Double): Unit = js.native
   def dec(value: Double, timestamp: Double): Unit = js.native
-  def dec(value: Double, timestamp: Date): Unit = js.native
+  def dec(value: Double, timestamp: js.Date): Unit = js.native
   /**
   	 * Increment gauge
   	 * @param value The value to increment with
@@ -55,10 +54,10 @@ class Gauge protected () extends _Metric_ {
   def inc(labels: labelValues): Unit = js.native
   def inc(labels: labelValues, value: Double): Unit = js.native
   def inc(labels: labelValues, value: Double, timestamp: Double): Unit = js.native
-  def inc(labels: labelValues, value: Double, timestamp: Date): Unit = js.native
+  def inc(labels: labelValues, value: Double, timestamp: js.Date): Unit = js.native
   def inc(value: Double): Unit = js.native
   def inc(value: Double, timestamp: Double): Unit = js.native
-  def inc(value: Double, timestamp: Date): Unit = js.native
+  def inc(value: Double, timestamp: js.Date): Unit = js.native
   /**
   	 * Return the child for given labels
   	 * @param values Label values
@@ -82,7 +81,7 @@ class Gauge protected () extends _Metric_ {
   	 */
   def set(labels: labelValues, value: Double): Unit = js.native
   def set(labels: labelValues, value: Double, timestamp: Double): Unit = js.native
-  def set(labels: labelValues, value: Double, timestamp: Date): Unit = js.native
+  def set(labels: labelValues, value: Double, timestamp: js.Date): Unit = js.native
   /**
   	 * Set gauge value
   	 * @param value The value to set
@@ -90,7 +89,7 @@ class Gauge protected () extends _Metric_ {
   	 */
   def set(value: Double): Unit = js.native
   def set(value: Double, timestamp: Double): Unit = js.native
-  def set(value: Double, timestamp: Date): Unit = js.native
+  def set(value: Double, timestamp: js.Date): Unit = js.native
   /**
   	 * Set gauge value to current epoch time in ms
   	 * @param labels Object with label keys and values
@@ -119,7 +118,7 @@ object Gauge extends js.Object {
     def dec(): Unit = js.native
     def dec(value: Double): Unit = js.native
     def dec(value: Double, timestamp: Double): Unit = js.native
-    def dec(value: Double, timestamp: Date): Unit = js.native
+    def dec(value: Double, timestamp: js.Date): Unit = js.native
     /**
     		 * Increment gauge with value
     		 * @param value The value to increment with
@@ -128,7 +127,7 @@ object Gauge extends js.Object {
     def inc(): Unit = js.native
     def inc(value: Double): Unit = js.native
     def inc(value: Double, timestamp: Double): Unit = js.native
-    def inc(value: Double, timestamp: Date): Unit = js.native
+    def inc(value: Double, timestamp: js.Date): Unit = js.native
     /**
     		 * Set gauges value
     		 * @param value The value to set
@@ -136,7 +135,7 @@ object Gauge extends js.Object {
     		 */
     def set(value: Double): Unit = js.native
     def set(value: Double, timestamp: Double): Unit = js.native
-    def set(value: Double, timestamp: Date): Unit = js.native
+    def set(value: Double, timestamp: js.Date): Unit = js.native
     /**
     		 * Set gauge value to current epoch time in ms
     		 */

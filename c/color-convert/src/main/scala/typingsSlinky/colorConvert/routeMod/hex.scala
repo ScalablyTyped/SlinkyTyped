@@ -19,21 +19,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait hex extends js.Object {
-  def ansi16(from: HEX_): ANSI16_
-  def ansi256(from: HEX_): ANSI256_
-  def apple(from: HEX_): APPLE_
-  def cmyk(from: HEX_): CMYK_
-  def gray(from: HEX_): GRAY_
-  def hcg(from: HEX_): HCG_
-  def hsl(from: HEX_): HSL_
-  def hsv(from: HEX_): HSV_
-  def hwb(from: HEX_): HWB_
-  def keyword(from: HEX_): KEYWORD_
-  def lab(from: HEX_): LAB_
-  def lch(from: HEX_): LCH_
-  def rgb(from: HEX_): RGB_
-  def xyz(from: HEX_): XYZ_
+  def ansi16(from: HEX_): ANSI16_ = js.native
+  def ansi256(from: HEX_): ANSI256_ = js.native
+  def apple(from: HEX_): APPLE_ = js.native
+  def cmyk(from: HEX_): CMYK_ = js.native
+  def gray(from: HEX_): GRAY_ = js.native
+  def hcg(from: HEX_): HCG_ = js.native
+  def hsl(from: HEX_): HSL_ = js.native
+  def hsv(from: HEX_): HSV_ = js.native
+  def hwb(from: HEX_): HWB_ = js.native
+  def keyword(from: HEX_): KEYWORD_ = js.native
+  def lab(from: HEX_): LAB_ = js.native
+  def lch(from: HEX_): LCH_ = js.native
+  def rgb(from: HEX_): RGB_ = js.native
+  def xyz(from: HEX_): XYZ_ = js.native
 }
 
 object hex {
@@ -55,8 +56,99 @@ object hex {
     xyz: HEX_ => XYZ_
   ): hex = {
     val __obj = js.Dynamic.literal(ansi16 = js.Any.fromFunction1(ansi16), ansi256 = js.Any.fromFunction1(ansi256), apple = js.Any.fromFunction1(apple), cmyk = js.Any.fromFunction1(cmyk), gray = js.Any.fromFunction1(gray), hcg = js.Any.fromFunction1(hcg), hsl = js.Any.fromFunction1(hsl), hsv = js.Any.fromFunction1(hsv), hwb = js.Any.fromFunction1(hwb), keyword = js.Any.fromFunction1(keyword), lab = js.Any.fromFunction1(lab), lch = js.Any.fromFunction1(lch), rgb = js.Any.fromFunction1(rgb), xyz = js.Any.fromFunction1(xyz))
-  
     __obj.asInstanceOf[hex]
   }
+  @scala.inline
+  implicit class hexOps[Self <: hex] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnsi16(value: HEX_ => ANSI16_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ansi16")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAnsi256(value: HEX_ => ANSI256_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ansi256")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withApple(value: HEX_ => APPLE_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apple")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCmyk(value: HEX_ => CMYK_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cmyk")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGray(value: HEX_ => GRAY_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gray")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHcg(value: HEX_ => HCG_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hcg")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHsl(value: HEX_ => HSL_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hsl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHsv(value: HEX_ => HSV_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hsv")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHwb(value: HEX_ => HWB_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hwb")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withKeyword(value: HEX_ => KEYWORD_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyword")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLab(value: HEX_ => LAB_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lab")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLch(value: HEX_ => LCH_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lch")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRgb(value: HEX_ => RGB_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rgb")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withXyz(value: HEX_ => XYZ_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xyz")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.skatejs.mod
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.std.ShadowRoot
 import scala.scalajs.js
 import scala.scalajs.js.`|`

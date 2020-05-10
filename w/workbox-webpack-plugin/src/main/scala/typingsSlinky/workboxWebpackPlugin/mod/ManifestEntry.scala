@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ManifestEntry extends js.Object {
-  var revision: String
-  var url: String
+  var revision: String = js.native
+  var url: String = js.native
 }
 
 object ManifestEntry {
   @scala.inline
   def apply(revision: String, url: String): ManifestEntry = {
     val __obj = js.Dynamic.literal(revision = revision.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ManifestEntry]
   }
+  @scala.inline
+  implicit class ManifestEntryOps[Self <: ManifestEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRevision(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

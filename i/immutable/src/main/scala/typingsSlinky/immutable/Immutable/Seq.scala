@@ -1,7 +1,6 @@
 package typingsSlinky.immutable.Immutable
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -78,7 +77,7 @@ object Seq extends js.Object {
   def apply(): Seq[_, _] = js.native
   def apply[T](collection: typingsSlinky.immutable.Immutable.Collection.Indexed[T]): Indexed[T] = js.native
   def apply[T](collection: typingsSlinky.immutable.Immutable.Collection.Set[T]): Set[T] = js.native
-  def apply[T](collection: Iterable[T]): Indexed[T] = js.native
+  def apply[T](collection: js.Iterable[T]): Indexed[T] = js.native
   def apply[V](obj: StringDictionary[V]): Keyed[String, V] = js.native
   def apply[S /* <: Seq[_, _] */](seq: S): S = js.native
   def apply[K, V](collection: typingsSlinky.immutable.Immutable.Collection.Keyed[K, V]): Keyed[K, V] = js.native
@@ -104,7 +103,7 @@ object Seq extends js.Object {
   object Keyed extends js.Object {
     def apply(): Keyed[_, _] = js.native
     def apply[V](obj: StringDictionary[V]): Keyed[String, V] = js.native
-    def apply[K, V](collection: Iterable[js.Tuple2[K, V]]): Keyed[K, V] = js.native
+    def apply[K, V](collection: js.Iterable[js.Tuple2[K, V]]): Keyed[K, V] = js.native
   }
   
   @js.native

@@ -70,40 +70,197 @@ trait StackSet extends js.Object {
 
 object StackSet {
   @scala.inline
-  def apply(
-    AdministrationRoleARN: RoleARN_ = null,
-    AutoDeployment: AutoDeployment = null,
-    Capabilities: Capabilities = null,
-    Description: Description = null,
-    ExecutionRoleName: ExecutionRoleName = null,
-    OrganizationalUnitIds: OrganizationalUnitIdList = null,
-    Parameters: Parameters = null,
-    PermissionModel: PermissionModels = null,
-    StackSetARN: StackSetARN = null,
-    StackSetDriftDetectionDetails: StackSetDriftDetectionDetails = null,
-    StackSetId: StackSetId = null,
-    StackSetName: StackSetName = null,
-    Status: StackSetStatus = null,
-    Tags: Tags = null,
-    TemplateBody: TemplateBody = null
-  ): StackSet = {
+  def apply(): StackSet = {
     val __obj = js.Dynamic.literal()
-    if (AdministrationRoleARN != null) __obj.updateDynamic("AdministrationRoleARN")(AdministrationRoleARN.asInstanceOf[js.Any])
-    if (AutoDeployment != null) __obj.updateDynamic("AutoDeployment")(AutoDeployment.asInstanceOf[js.Any])
-    if (Capabilities != null) __obj.updateDynamic("Capabilities")(Capabilities.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (ExecutionRoleName != null) __obj.updateDynamic("ExecutionRoleName")(ExecutionRoleName.asInstanceOf[js.Any])
-    if (OrganizationalUnitIds != null) __obj.updateDynamic("OrganizationalUnitIds")(OrganizationalUnitIds.asInstanceOf[js.Any])
-    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
-    if (PermissionModel != null) __obj.updateDynamic("PermissionModel")(PermissionModel.asInstanceOf[js.Any])
-    if (StackSetARN != null) __obj.updateDynamic("StackSetARN")(StackSetARN.asInstanceOf[js.Any])
-    if (StackSetDriftDetectionDetails != null) __obj.updateDynamic("StackSetDriftDetectionDetails")(StackSetDriftDetectionDetails.asInstanceOf[js.Any])
-    if (StackSetId != null) __obj.updateDynamic("StackSetId")(StackSetId.asInstanceOf[js.Any])
-    if (StackSetName != null) __obj.updateDynamic("StackSetName")(StackSetName.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (TemplateBody != null) __obj.updateDynamic("TemplateBody")(TemplateBody.asInstanceOf[js.Any])
     __obj.asInstanceOf[StackSet]
   }
+  @scala.inline
+  implicit class StackSetOps[Self <: StackSet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdministrationRoleARN(value: RoleARN_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdministrationRoleARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdministrationRoleARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdministrationRoleARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoDeployment(value: AutoDeployment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoDeployment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoDeployment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoDeployment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCapabilities(value: Capabilities): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Capabilities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapabilities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Capabilities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionRoleName(value: ExecutionRoleName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionRoleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionRoleName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionRoleName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizationalUnitIds(value: OrganizationalUnitIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnitIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationalUnitIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnitIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: Parameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermissionModel(value: PermissionModels): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermissionModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionModel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackSetARN(value: StackSetARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackSetARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackSetDriftDetectionDetails(value: StackSetDriftDetectionDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetDriftDetectionDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackSetDriftDetectionDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetDriftDetectionDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackSetId(value: StackSetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackSetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackSetName(value: StackSetName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackSetName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: StackSetStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateBody(value: TemplateBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateBody")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

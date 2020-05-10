@@ -16,10 +16,29 @@ trait Tls extends js.Object {
 
 object Tls {
   @scala.inline
-  def apply(CertificateAuthorityArnList: listOfString = null): Tls = {
+  def apply(): Tls = {
     val __obj = js.Dynamic.literal()
-    if (CertificateAuthorityArnList != null) __obj.updateDynamic("CertificateAuthorityArnList")(CertificateAuthorityArnList.asInstanceOf[js.Any])
     __obj.asInstanceOf[Tls]
   }
+  @scala.inline
+  implicit class TlsOps[Self <: Tls] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateAuthorityArnList(value: listOfString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityArnList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateAuthorityArnList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityArnList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.antDesignIconsAngular
 
 import org.scalajs.dom.raw.SVGElement
-import typingsSlinky.antDesignIconsAngular.antDesignIconsAngularStrings.`[@ant-designSlashicons-angular]Colon`
 import typingsSlinky.antDesignIconsAngular.antDesignIconsAngularTypesMod.IconDefinition
 import typingsSlinky.antDesignIconsAngular.antDesignIconsAngularTypesMod.ThemeType
 import scala.scalajs.js
@@ -11,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@ant-design/icons-angular/utils", JSImport.Namespace)
 @js.native
 object utilsMod extends js.Object {
-  val ANT_ICON_ANGULAR_CONSOLE_PREFIX: `[@ant-designSlashicons-angular]Colon` = js.native
+  val ANT_ICON_ANGULAR_CONSOLE_PREFIX: /* "[@ant-design/icons-angular]:" */ String = js.native
   def alreadyHasAThemeSuffix(name: String): Boolean = js.native
   def cloneSVG(svg: SVGElement): SVGElement = js.native
   def error(message: String): Unit = js.native

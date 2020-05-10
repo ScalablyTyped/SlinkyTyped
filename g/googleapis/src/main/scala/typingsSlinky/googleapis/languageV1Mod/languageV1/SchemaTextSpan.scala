@@ -22,11 +22,41 @@ trait SchemaTextSpan extends js.Object {
 
 object SchemaTextSpan {
   @scala.inline
-  def apply(beginOffset: Int | Double = null, content: String = null): SchemaTextSpan = {
+  def apply(): SchemaTextSpan = {
     val __obj = js.Dynamic.literal()
-    if (beginOffset != null) __obj.updateDynamic("beginOffset")(beginOffset.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTextSpan]
   }
+  @scala.inline
+  implicit class SchemaTextSpanOps[Self <: SchemaTextSpan] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBeginOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beginOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeginOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beginOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -16,18 +16,16 @@ trait CardHeaderClassKey extends js.Object
 
 object CardHeaderClassKey {
   @scala.inline
-  def action: typingsSlinky.materialUiCore.materialUiCoreStrings.action = this.cast("action")
+  def action: typingsSlinky.materialUiCore.materialUiCoreStrings.action = "action".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.action]
   @scala.inline
-  def avatar: typingsSlinky.materialUiCore.materialUiCoreStrings.avatar = this.cast("avatar")
+  def avatar: typingsSlinky.materialUiCore.materialUiCoreStrings.avatar = "avatar".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.avatar]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def content: typingsSlinky.materialUiCore.materialUiCoreStrings.content = "content".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.content]
   @scala.inline
-  def content: typingsSlinky.materialUiCore.materialUiCoreStrings.content = this.cast("content")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def subheader: typingsSlinky.materialUiCore.materialUiCoreStrings.subheader = "subheader".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.subheader]
   @scala.inline
-  def subheader: typingsSlinky.materialUiCore.materialUiCoreStrings.subheader = this.cast("subheader")
-  @scala.inline
-  def title: typingsSlinky.materialUiCore.materialUiCoreStrings.title = this.cast("title")
+  def title: typingsSlinky.materialUiCore.materialUiCoreStrings.title = "title".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.title]
 }
 

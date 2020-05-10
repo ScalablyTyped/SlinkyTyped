@@ -1,47 +1,61 @@
 package typingsSlinky.reactLeaflet.mod
 
-import typingsSlinky.leaflet.mod.CrossOrigin
+import slinky.core.facade.ReactElement
 import typingsSlinky.leaflet.mod.ImageOverlayOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.reactLeaflet.mod.MapComponentProps because var conflicts: pane. Inlined leaflet */ trait SVGOverlayProps extends ImageOverlayOptions {
-  var children: js.UndefOr[Children] = js.undefined
-  var leaflet: js.UndefOr[LeafletContext] = js.undefined
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.reactLeaflet.mod.MapComponentProps because var conflicts: pane. Inlined leaflet */ @js.native
+trait SVGOverlayProps extends ImageOverlayOptions {
+  var children: js.UndefOr[Children] = js.native
+  var leaflet: js.UndefOr[LeafletContext] = js.native
 }
 
 object SVGOverlayProps {
   @scala.inline
-  def apply(
-    alt: String = null,
-    attribution: String = null,
-    bubblingMouseEvents: js.UndefOr[Boolean] = js.undefined,
-    children: Children = null,
-    className: String = null,
-    crossOrigin: CrossOrigin = null,
-    errorOverlayUrl: String = null,
-    interactive: js.UndefOr[Boolean] = js.undefined,
-    leaflet: LeafletContext = null,
-    opacity: Int | Double = null,
-    pane: String = null,
-    zIndex: Int | Double = null
-  ): SVGOverlayProps = {
+  def apply(): SVGOverlayProps = {
     val __obj = js.Dynamic.literal()
-    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
-    if (attribution != null) __obj.updateDynamic("attribution")(attribution.asInstanceOf[js.Any])
-    if (!js.isUndefined(bubblingMouseEvents)) __obj.updateDynamic("bubblingMouseEvents")(bubblingMouseEvents.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
-    if (errorOverlayUrl != null) __obj.updateDynamic("errorOverlayUrl")(errorOverlayUrl.asInstanceOf[js.Any])
-    if (!js.isUndefined(interactive)) __obj.updateDynamic("interactive")(interactive.asInstanceOf[js.Any])
-    if (leaflet != null) __obj.updateDynamic("leaflet")(leaflet.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (pane != null) __obj.updateDynamic("pane")(pane.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGOverlayProps]
   }
+  @scala.inline
+  implicit class SVGOverlayPropsOps[Self <: SVGOverlayProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildrenReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildren(value: Children): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeaflet(value: LeafletContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaflet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeaflet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaflet")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

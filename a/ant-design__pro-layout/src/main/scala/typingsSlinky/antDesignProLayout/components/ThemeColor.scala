@@ -1,36 +1,37 @@
 package typingsSlinky.antDesignProLayout.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.web.html.`*`.tag
+import org.scalajs.dom.raw.HTMLDivElement
+import slinky.web.html.div.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignProLayout.AnonColor
 import typingsSlinky.antDesignProLayout.AnonDefaultMessage
 import typingsSlinky.antDesignProLayout.themeColorMod.ThemeColorProps
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ThemeColor
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object ThemeColor {
   @JSImport("@ant-design/pro-layout/lib/SettingDrawer/ThemeColor", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: title */
-  def apply(
-    formatMessage: AnonDefaultMessage => String,
-    onChange: String => Unit,
-    value: String,
-    colors: js.Array[AnonColor] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(formatMessage = js.Any.fromFunction1(formatMessage), onChange = js.Any.fromFunction1(onChange), value = value.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+    @scala.inline
+    def colors(value: js.Array[AnonColor]): this.type = set("colors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }
-  type Props = ThemeColorProps
+  
+  def withProps(p: ThemeColorProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(formatMessage: AnonDefaultMessage => String, onChange: String => Unit, value: String): Builder = {
+    val __props = js.Dynamic.literal(formatMessage = js.Any.fromFunction1(formatMessage), onChange = js.Any.fromFunction1(onChange), value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ThemeColorProps with RefAttributes[HTMLDivElement]]))
+  }
 }
 

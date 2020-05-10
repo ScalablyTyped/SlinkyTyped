@@ -18,11 +18,41 @@ trait EmbeddedDestinationSettings extends js.Object {
 
 object EmbeddedDestinationSettings {
   @scala.inline
-  def apply(Destination608ChannelNumber: Int | Double = null, Destination708ServiceNumber: Int | Double = null): EmbeddedDestinationSettings = {
+  def apply(): EmbeddedDestinationSettings = {
     val __obj = js.Dynamic.literal()
-    if (Destination608ChannelNumber != null) __obj.updateDynamic("Destination608ChannelNumber")(Destination608ChannelNumber.asInstanceOf[js.Any])
-    if (Destination708ServiceNumber != null) __obj.updateDynamic("Destination708ServiceNumber")(Destination708ServiceNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmbeddedDestinationSettings]
   }
+  @scala.inline
+  implicit class EmbeddedDestinationSettingsOps[Self <: EmbeddedDestinationSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestination608ChannelNumber(value: integerMin1Max4): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination608ChannelNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestination608ChannelNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination608ChannelNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestination708ServiceNumber(value: integerMin1Max6): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination708ServiceNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestination708ServiceNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination708ServiceNumber")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

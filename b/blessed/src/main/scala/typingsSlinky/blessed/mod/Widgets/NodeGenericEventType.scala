@@ -19,24 +19,22 @@ trait NodeGenericEventType extends js.Object
 
 object NodeGenericEventType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def destroy: typingsSlinky.blessed.blessedStrings.destroy = "destroy".asInstanceOf[typingsSlinky.blessed.blessedStrings.destroy]
   @scala.inline
-  def destroy: typingsSlinky.blessed.blessedStrings.destroy = this.cast("destroy")
+  def hide: typingsSlinky.blessed.blessedStrings.hide = "hide".asInstanceOf[typingsSlinky.blessed.blessedStrings.hide]
   @scala.inline
-  def hide: typingsSlinky.blessed.blessedStrings.hide = this.cast("hide")
+  def move: typingsSlinky.blessed.blessedStrings.move = "move".asInstanceOf[typingsSlinky.blessed.blessedStrings.move]
   @scala.inline
-  def move: typingsSlinky.blessed.blessedStrings.move = this.cast("move")
+  def `parsed content`: typingsSlinky.blessed.blessedStrings.`parsed content` = ("parsed content").asInstanceOf[typingsSlinky.blessed.blessedStrings.`parsed content`]
   @scala.inline
-  def `parsed content`: typingsSlinky.blessed.blessedStrings.`parsed content` = this.cast("parsed content")
+  def prerender: typingsSlinky.blessed.blessedStrings.prerender = "prerender".asInstanceOf[typingsSlinky.blessed.blessedStrings.prerender]
   @scala.inline
-  def prerender: typingsSlinky.blessed.blessedStrings.prerender = this.cast("prerender")
+  def render: typingsSlinky.blessed.blessedStrings.render = "render".asInstanceOf[typingsSlinky.blessed.blessedStrings.render]
   @scala.inline
-  def render: typingsSlinky.blessed.blessedStrings.render = this.cast("render")
+  def resize: typingsSlinky.blessed.blessedStrings.resize = "resize".asInstanceOf[typingsSlinky.blessed.blessedStrings.resize]
   @scala.inline
-  def resize: typingsSlinky.blessed.blessedStrings.resize = this.cast("resize")
+  def `set content`: typingsSlinky.blessed.blessedStrings.`set content` = ("set content").asInstanceOf[typingsSlinky.blessed.blessedStrings.`set content`]
   @scala.inline
-  def `set content`: typingsSlinky.blessed.blessedStrings.`set content` = this.cast("set content")
-  @scala.inline
-  def show: typingsSlinky.blessed.blessedStrings.show = this.cast("show")
+  def show: typingsSlinky.blessed.blessedStrings.show = "show".asInstanceOf[typingsSlinky.blessed.blessedStrings.show]
 }
 

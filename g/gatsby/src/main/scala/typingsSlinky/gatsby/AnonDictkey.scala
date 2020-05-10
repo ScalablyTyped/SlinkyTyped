@@ -5,34 +5,90 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDictkey
   extends /* key */ StringDictionary[js.Any] {
-  var force: js.UndefOr[Boolean] = js.undefined
-  var fromPath: String
-  var isPermanent: js.UndefOr[Boolean] = js.undefined
-  var redirectInBrowser: js.UndefOr[Boolean] = js.undefined
-  var statusCode: js.UndefOr[Double] = js.undefined
-  var toPath: String
+  var force: js.UndefOr[Boolean] = js.native
+  var fromPath: String = js.native
+  var isPermanent: js.UndefOr[Boolean] = js.native
+  var redirectInBrowser: js.UndefOr[Boolean] = js.native
+  var statusCode: js.UndefOr[Double] = js.native
+  var toPath: String = js.native
 }
 
 object AnonDictkey {
   @scala.inline
-  def apply(
-    fromPath: String,
-    toPath: String,
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    force: js.UndefOr[Boolean] = js.undefined,
-    isPermanent: js.UndefOr[Boolean] = js.undefined,
-    redirectInBrowser: js.UndefOr[Boolean] = js.undefined,
-    statusCode: Int | Double = null
-  ): AnonDictkey = {
+  def apply(fromPath: String, toPath: String): AnonDictkey = {
     val __obj = js.Dynamic.literal(fromPath = fromPath.asInstanceOf[js.Any], toPath = toPath.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.asInstanceOf[js.Any])
-    if (!js.isUndefined(isPermanent)) __obj.updateDynamic("isPermanent")(isPermanent.asInstanceOf[js.Any])
-    if (!js.isUndefined(redirectInBrowser)) __obj.updateDynamic("redirectInBrowser")(redirectInBrowser.asInstanceOf[js.Any])
-    if (statusCode != null) __obj.updateDynamic("statusCode")(statusCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDictkey]
   }
+  @scala.inline
+  implicit class AnonDictkeyOps[Self <: AnonDictkey] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFromPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForce(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsPermanent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPermanent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsPermanent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPermanent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRedirectInBrowser(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectInBrowser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRedirectInBrowser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectInBrowser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,16 +22,53 @@ trait KinesisStreamSourceDescription extends js.Object {
 
 object KinesisStreamSourceDescription {
   @scala.inline
-  def apply(
-    DeliveryStartTimestamp: js.Date = null,
-    KinesisStreamARN: KinesisStreamARN = null,
-    RoleARN: RoleARN = null
-  ): KinesisStreamSourceDescription = {
+  def apply(): KinesisStreamSourceDescription = {
     val __obj = js.Dynamic.literal()
-    if (DeliveryStartTimestamp != null) __obj.updateDynamic("DeliveryStartTimestamp")(DeliveryStartTimestamp.asInstanceOf[js.Any])
-    if (KinesisStreamARN != null) __obj.updateDynamic("KinesisStreamARN")(KinesisStreamARN.asInstanceOf[js.Any])
-    if (RoleARN != null) __obj.updateDynamic("RoleARN")(RoleARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[KinesisStreamSourceDescription]
   }
+  @scala.inline
+  implicit class KinesisStreamSourceDescriptionOps[Self <: KinesisStreamSourceDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeliveryStartTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryStartTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeliveryStartTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryStartTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKinesisStreamARN(value: KinesisStreamARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisStreamARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKinesisStreamARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisStreamARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleARN(value: RoleARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleARN")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

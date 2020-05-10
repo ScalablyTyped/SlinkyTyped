@@ -26,18 +26,65 @@ trait PresetSettings extends js.Object {
 
 object PresetSettings {
   @scala.inline
-  def apply(
-    AudioDescriptions: listOfAudioDescription = null,
-    CaptionDescriptions: listOfCaptionDescriptionPreset = null,
-    ContainerSettings: ContainerSettings = null,
-    VideoDescription: VideoDescription = null
-  ): PresetSettings = {
+  def apply(): PresetSettings = {
     val __obj = js.Dynamic.literal()
-    if (AudioDescriptions != null) __obj.updateDynamic("AudioDescriptions")(AudioDescriptions.asInstanceOf[js.Any])
-    if (CaptionDescriptions != null) __obj.updateDynamic("CaptionDescriptions")(CaptionDescriptions.asInstanceOf[js.Any])
-    if (ContainerSettings != null) __obj.updateDynamic("ContainerSettings")(ContainerSettings.asInstanceOf[js.Any])
-    if (VideoDescription != null) __obj.updateDynamic("VideoDescription")(VideoDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[PresetSettings]
   }
+  @scala.inline
+  implicit class PresetSettingsOps[Self <: PresetSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAudioDescriptions(value: listOfAudioDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioDescriptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudioDescriptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioDescriptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaptionDescriptions(value: listOfCaptionDescriptionPreset): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionDescriptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptionDescriptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionDescriptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerSettings(value: ContainerSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoDescription(value: VideoDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoDescription")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

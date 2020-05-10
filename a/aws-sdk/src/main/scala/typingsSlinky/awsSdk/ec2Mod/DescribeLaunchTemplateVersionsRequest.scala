@@ -17,7 +17,7 @@ trait DescribeLaunchTemplateVersionsRequest extends js.Object {
   /**
     * The ID of the launch template. You must specify either the launch template ID or launch template name in the request.
     */
-  var LaunchTemplateId: js.UndefOr[String] = js.native
+  var LaunchTemplateId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.LaunchTemplateId] = js.native
   /**
     * The name of the launch template. You must specify either the launch template ID or launch template name in the request.
     */
@@ -46,28 +46,125 @@ trait DescribeLaunchTemplateVersionsRequest extends js.Object {
 
 object DescribeLaunchTemplateVersionsRequest {
   @scala.inline
-  def apply(
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    Filters: FilterList = null,
-    LaunchTemplateId: String = null,
-    LaunchTemplateName: LaunchTemplateName = null,
-    MaxResults: Int | scala.Double = null,
-    MaxVersion: String = null,
-    MinVersion: String = null,
-    NextToken: String = null,
-    Versions: VersionStringList = null
-  ): DescribeLaunchTemplateVersionsRequest = {
+  def apply(): DescribeLaunchTemplateVersionsRequest = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
-    if (LaunchTemplateId != null) __obj.updateDynamic("LaunchTemplateId")(LaunchTemplateId.asInstanceOf[js.Any])
-    if (LaunchTemplateName != null) __obj.updateDynamic("LaunchTemplateName")(LaunchTemplateName.asInstanceOf[js.Any])
-    if (MaxResults != null) __obj.updateDynamic("MaxResults")(MaxResults.asInstanceOf[js.Any])
-    if (MaxVersion != null) __obj.updateDynamic("MaxVersion")(MaxVersion.asInstanceOf[js.Any])
-    if (MinVersion != null) __obj.updateDynamic("MinVersion")(MinVersion.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (Versions != null) __obj.updateDynamic("Versions")(Versions.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLaunchTemplateVersionsRequest]
   }
+  @scala.inline
+  implicit class DescribeLaunchTemplateVersionsRequestOps[Self <: DescribeLaunchTemplateVersionsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilters(value: FilterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchTemplateId(value: LaunchTemplateId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchTemplateId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchTemplateName(value: LaunchTemplateName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchTemplateName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersions(value: VersionStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Versions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Versions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

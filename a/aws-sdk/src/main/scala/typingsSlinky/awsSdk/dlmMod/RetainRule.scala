@@ -22,16 +22,53 @@ trait RetainRule extends js.Object {
 
 object RetainRule {
   @scala.inline
-  def apply(
-    Count: Int | Double = null,
-    Interval: Int | Double = null,
-    IntervalUnit: RetentionIntervalUnitValues = null
-  ): RetainRule = {
+  def apply(): RetainRule = {
     val __obj = js.Dynamic.literal()
-    if (Count != null) __obj.updateDynamic("Count")(Count.asInstanceOf[js.Any])
-    if (Interval != null) __obj.updateDynamic("Interval")(Interval.asInstanceOf[js.Any])
-    if (IntervalUnit != null) __obj.updateDynamic("IntervalUnit")(IntervalUnit.asInstanceOf[js.Any])
     __obj.asInstanceOf[RetainRule]
   }
+  @scala.inline
+  implicit class RetainRuleOps[Self <: RetainRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCount(value: Count): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterval(value: Interval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntervalUnit(value: RetentionIntervalUnitValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntervalUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntervalUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntervalUnit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

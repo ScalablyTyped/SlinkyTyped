@@ -1,10 +1,7 @@
 package typingsSlinky.reactPlacesAutocomplete.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactPlacesAutocomplete.AnonBounds
 import typingsSlinky.reactPlacesAutocomplete.mod.PropTypes
 import typingsSlinky.reactPlacesAutocomplete.mod.default
@@ -12,39 +9,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactPlacesAutocomplete
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactPlacesAutocomplete {
   @JSImport("react-places-autocomplete", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    debounce: Int | Double = null,
-    googleCallbackName: String = null,
-    highlightFirstSuggestion: js.UndefOr[Boolean] = js.undefined,
-    onChange: /* value */ String => Unit = null,
-    onError: (/* status */ String, /* clearSuggestion */ js.Function0[Unit]) => Unit = null,
-    onSelect: (/* address */ String, /* placeID */ String) => Unit = null,
-    searchOptions: AnonBounds = null,
-    shouldFetchSuggestions: js.UndefOr[Boolean] = js.undefined,
-    value: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (debounce != null) __obj.updateDynamic("debounce")(debounce.asInstanceOf[js.Any])
-    if (googleCallbackName != null) __obj.updateDynamic("googleCallbackName")(googleCallbackName.asInstanceOf[js.Any])
-    if (!js.isUndefined(highlightFirstSuggestion)) __obj.updateDynamic("highlightFirstSuggestion")(highlightFirstSuggestion.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction2(onError))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction2(onSelect))
-    if (searchOptions != null) __obj.updateDynamic("searchOptions")(searchOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldFetchSuggestions)) __obj.updateDynamic("shouldFetchSuggestions")(shouldFetchSuggestions.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def debounce(value: Double): this.type = set("debounce", value.asInstanceOf[js.Any])
+    @scala.inline
+    def googleCallbackName(value: String): this.type = set("googleCallbackName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def highlightFirstSuggestion(value: Boolean): this.type = set("highlightFirstSuggestion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* value */ String => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onError(value: (/* status */ String, /* clearSuggestion */ js.Function0[Unit]) => Unit): this.type = set("onError", js.Any.fromFunction2(value))
+    @scala.inline
+    def onSelect(value: (/* address */ String, /* placeID */ String) => Unit): this.type = set("onSelect", js.Any.fromFunction2(value))
+    @scala.inline
+    def searchOptions(value: AnonBounds): this.type = set("searchOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shouldFetchSuggestions(value: Boolean): this.type = set("shouldFetchSuggestions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactPlacesAutocomplete.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PropTypes
+  
+  def withProps(p: PropTypes): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactPlacesAutocomplete.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

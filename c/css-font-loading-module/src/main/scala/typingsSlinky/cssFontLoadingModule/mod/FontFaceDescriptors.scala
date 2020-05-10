@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FontFaceDescriptors extends js.Object {
-  var featureSettings: js.UndefOr[String] = js.undefined
-  var stretch: js.UndefOr[String] = js.undefined
-  var style: js.UndefOr[String] = js.undefined
-  var unicodeRange: js.UndefOr[String] = js.undefined
-  var variant: js.UndefOr[String] = js.undefined
-  var weight: js.UndefOr[String] = js.undefined
+  var featureSettings: js.UndefOr[String] = js.native
+  var stretch: js.UndefOr[String] = js.native
+  var style: js.UndefOr[String] = js.native
+  var unicodeRange: js.UndefOr[String] = js.native
+  var variant: js.UndefOr[String] = js.native
+  var weight: js.UndefOr[String] = js.native
 }
 
 object FontFaceDescriptors {
   @scala.inline
-  def apply(
-    featureSettings: String = null,
-    stretch: String = null,
-    style: String = null,
-    unicodeRange: String = null,
-    variant: String = null,
-    weight: String = null
-  ): FontFaceDescriptors = {
+  def apply(): FontFaceDescriptors = {
     val __obj = js.Dynamic.literal()
-    if (featureSettings != null) __obj.updateDynamic("featureSettings")(featureSettings.asInstanceOf[js.Any])
-    if (stretch != null) __obj.updateDynamic("stretch")(stretch.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (unicodeRange != null) __obj.updateDynamic("unicodeRange")(unicodeRange.asInstanceOf[js.Any])
-    if (variant != null) __obj.updateDynamic("variant")(variant.asInstanceOf[js.Any])
-    if (weight != null) __obj.updateDynamic("weight")(weight.asInstanceOf[js.Any])
     __obj.asInstanceOf[FontFaceDescriptors]
   }
+  @scala.inline
+  implicit class FontFaceDescriptorsOps[Self <: FontFaceDescriptors] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFeatureSettings(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("featureSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFeatureSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("featureSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStretch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stretch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStretch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stretch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnicodeRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unicodeRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnicodeRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unicodeRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVariant(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVariant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

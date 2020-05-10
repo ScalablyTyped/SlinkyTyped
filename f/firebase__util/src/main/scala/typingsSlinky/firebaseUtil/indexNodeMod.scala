@@ -1,6 +1,7 @@
 package typingsSlinky.firebaseUtil
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.firebaseUtil.cryptMod.Base64_
 import typingsSlinky.firebaseUtil.errorsMod.ErrorMap
 import typingsSlinky.firebaseUtil.jwtMod.DecodedToken
@@ -21,7 +22,7 @@ object indexNodeMod extends js.Object {
   @js.native
   class ErrorFactory[ErrorCode /* <: String */, ErrorParams /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {readonly [ K in ErrorCode ]:? @firebase/util.@firebase/util/dist/src/errors.ErrorData}
-    */ typingsSlinky.firebaseUtil.firebaseUtilStrings.ErrorFactory with js.Any */] protected ()
+    */ typingsSlinky.firebaseUtil.firebaseUtilStrings.ErrorFactory with TopLevel[js.Any] */] protected ()
     extends typingsSlinky.firebaseUtil.errorsMod.ErrorFactory[ErrorCode, ErrorParams] {
     def this(service: String, serviceName: String, errors: ErrorMap[ErrorCode]) = this()
   }
@@ -69,37 +70,37 @@ object indexNodeMod extends js.Object {
   def map[K /* <: String */, V, U](
     obj: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in K ]: V}
-    */ typingsSlinky.firebaseUtil.firebaseUtilStrings.map with js.Any,
+    */ typingsSlinky.firebaseUtil.firebaseUtilStrings.map with TopLevel[js.Any],
     fn: js.Function3[
       /* value */ V, 
       /* key */ K, 
       /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in K ]: V}
-    */ /* obj */ typingsSlinky.firebaseUtil.firebaseUtilStrings.map with js.Any, 
+    */ /* obj */ typingsSlinky.firebaseUtil.firebaseUtilStrings.map with TopLevel[js.Any], 
       U
     ]
   ): /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in K ]: U}
-    */ typingsSlinky.firebaseUtil.firebaseUtilStrings.map with js.Any = js.native
+    */ typingsSlinky.firebaseUtil.firebaseUtilStrings.map with TopLevel[js.Any] = js.native
   def map[K /* <: String */, V, U](
     obj: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in K ]: V}
-    */ typingsSlinky.firebaseUtil.firebaseUtilStrings.map with js.Any,
+    */ typingsSlinky.firebaseUtil.firebaseUtilStrings.map with TopLevel[js.Any],
     fn: js.Function3[
       /* value */ V, 
       /* key */ K, 
       /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in K ]: V}
-    */ /* obj */ typingsSlinky.firebaseUtil.firebaseUtilStrings.map with js.Any, 
+    */ /* obj */ typingsSlinky.firebaseUtil.firebaseUtilStrings.map with TopLevel[js.Any], 
       U
     ],
     contextObj: js.Any
   ): /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in K ]: U}
-    */ typingsSlinky.firebaseUtil.firebaseUtilStrings.map with js.Any = js.native
+    */ typingsSlinky.firebaseUtil.firebaseUtilStrings.map with TopLevel[js.Any] = js.native
   def querystring(querystringParams: StringDictionary[String | Double]): String = js.native
   def querystringDecode(querystring: String): js.Object = js.native
-  def safeGet[T /* <: js.Object */, K /* <: String */](obj: T, key: K): js.UndefOr[
+  def safeGet[T /* <: js.Object */, K /* <: /* keyof T */ String */](obj: T, key: K): js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any
   ] = js.native
   def stringLength(str: String): Double = js.native

@@ -1,12 +1,10 @@
 package typingsSlinky.reactImages.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLImageElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.img.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactHTMLElement
 import typingsSlinky.reactImages.mod.Image
 import typingsSlinky.reactImages.mod.LightboxProps
@@ -15,66 +13,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactImages
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactImages {
   @JSImport("react-images", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    images: js.Array[Image],
-    onClose: () => Unit,
-    backdropClosesModal: js.UndefOr[Boolean] = js.undefined,
-    closeButtonTitle: String = null,
-    currentImage: Int | Double = null,
-    customControls: js.Array[ReactHTMLElement[_]] = null,
-    enableKeyboardInput: js.UndefOr[Boolean] = js.undefined,
-    imageCountSeparator: String = null,
-    isOpen: js.UndefOr[Boolean] = js.undefined,
-    leftArrowTitle: String = null,
-    onClickImage: /* e */ SyntheticMouseEvent[HTMLImageElement] => Unit = null,
-    onClickNext: () => Unit = null,
-    onClickPrev: () => Unit = null,
-    onClickThumbnail: /* index */ Double => Unit = null,
-    preloadNextImage: js.UndefOr[Boolean] = js.undefined,
-    preventScroll: js.UndefOr[Boolean] = js.undefined,
-    rightArrowTitle: String = null,
-    showCloseButton: js.UndefOr[Boolean] = js.undefined,
-    showImageCount: js.UndefOr[Boolean] = js.undefined,
-    showThumbnails: js.UndefOr[Boolean] = js.undefined,
-    spinner: () => ReactElement = null,
-    spinnerColor: String = null,
-    spinnerSize: Int | Double = null,
-    width: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(images = images.asInstanceOf[js.Any], onClose = js.Any.fromFunction0(onClose))
-    if (!js.isUndefined(backdropClosesModal)) __obj.updateDynamic("backdropClosesModal")(backdropClosesModal.asInstanceOf[js.Any])
-    if (closeButtonTitle != null) __obj.updateDynamic("closeButtonTitle")(closeButtonTitle.asInstanceOf[js.Any])
-    if (currentImage != null) __obj.updateDynamic("currentImage")(currentImage.asInstanceOf[js.Any])
-    if (customControls != null) __obj.updateDynamic("customControls")(customControls.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableKeyboardInput)) __obj.updateDynamic("enableKeyboardInput")(enableKeyboardInput.asInstanceOf[js.Any])
-    if (imageCountSeparator != null) __obj.updateDynamic("imageCountSeparator")(imageCountSeparator.asInstanceOf[js.Any])
-    if (!js.isUndefined(isOpen)) __obj.updateDynamic("isOpen")(isOpen.asInstanceOf[js.Any])
-    if (leftArrowTitle != null) __obj.updateDynamic("leftArrowTitle")(leftArrowTitle.asInstanceOf[js.Any])
-    if (onClickImage != null) __obj.updateDynamic("onClickImage")(js.Any.fromFunction1(onClickImage))
-    if (onClickNext != null) __obj.updateDynamic("onClickNext")(js.Any.fromFunction0(onClickNext))
-    if (onClickPrev != null) __obj.updateDynamic("onClickPrev")(js.Any.fromFunction0(onClickPrev))
-    if (onClickThumbnail != null) __obj.updateDynamic("onClickThumbnail")(js.Any.fromFunction1(onClickThumbnail))
-    if (!js.isUndefined(preloadNextImage)) __obj.updateDynamic("preloadNextImage")(preloadNextImage.asInstanceOf[js.Any])
-    if (!js.isUndefined(preventScroll)) __obj.updateDynamic("preventScroll")(preventScroll.asInstanceOf[js.Any])
-    if (rightArrowTitle != null) __obj.updateDynamic("rightArrowTitle")(rightArrowTitle.asInstanceOf[js.Any])
-    if (!js.isUndefined(showCloseButton)) __obj.updateDynamic("showCloseButton")(showCloseButton.asInstanceOf[js.Any])
-    if (!js.isUndefined(showImageCount)) __obj.updateDynamic("showImageCount")(showImageCount.asInstanceOf[js.Any])
-    if (!js.isUndefined(showThumbnails)) __obj.updateDynamic("showThumbnails")(showThumbnails.asInstanceOf[js.Any])
-    if (spinner != null) __obj.updateDynamic("spinner")(js.Any.fromFunction0(spinner))
-    if (spinnerColor != null) __obj.updateDynamic("spinnerColor")(spinnerColor.asInstanceOf[js.Any])
-    if (spinnerSize != null) __obj.updateDynamic("spinnerSize")(spinnerSize.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def backdropClosesModal(value: Boolean): this.type = set("backdropClosesModal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeButtonTitle(value: String): this.type = set("closeButtonTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def currentImage(value: Double): this.type = set("currentImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customControls(value: js.Array[ReactHTMLElement[_]]): this.type = set("customControls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableKeyboardInput(value: Boolean): this.type = set("enableKeyboardInput", value.asInstanceOf[js.Any])
+    @scala.inline
+    def imageCountSeparator(value: String): this.type = set("imageCountSeparator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isOpen(value: Boolean): this.type = set("isOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def leftArrowTitle(value: String): this.type = set("leftArrowTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClickImage(value: /* e */ SyntheticMouseEvent[HTMLImageElement] => Unit): this.type = set("onClickImage", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClickNext(value: () => Unit): this.type = set("onClickNext", js.Any.fromFunction0(value))
+    @scala.inline
+    def onClickPrev(value: () => Unit): this.type = set("onClickPrev", js.Any.fromFunction0(value))
+    @scala.inline
+    def onClickThumbnail(value: /* index */ Double => Unit): this.type = set("onClickThumbnail", js.Any.fromFunction1(value))
+    @scala.inline
+    def preloadNextImage(value: Boolean): this.type = set("preloadNextImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preventScroll(value: Boolean): this.type = set("preventScroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rightArrowTitle(value: String): this.type = set("rightArrowTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showCloseButton(value: Boolean): this.type = set("showCloseButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showImageCount(value: Boolean): this.type = set("showImageCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showThumbnails(value: Boolean): this.type = set("showThumbnails", value.asInstanceOf[js.Any])
+    @scala.inline
+    def spinner(value: () => ReactElement): this.type = set("spinner", js.Any.fromFunction0(value))
+    @scala.inline
+    def spinnerColor(value: String): this.type = set("spinnerColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def spinnerSize(value: Double): this.type = set("spinnerSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  type Props = LightboxProps
+  
+  def withProps(p: LightboxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(images: js.Array[Image], onClose: () => Unit): Builder = {
+    val __props = js.Dynamic.literal(images = images.asInstanceOf[js.Any], onClose = js.Any.fromFunction0(onClose))
+    new Builder(js.Array(this.component, __props.asInstanceOf[LightboxProps]))
+  }
 }
 

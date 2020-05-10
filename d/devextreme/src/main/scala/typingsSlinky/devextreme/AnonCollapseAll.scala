@@ -4,48 +4,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCollapseAll extends js.Object {
-  var collapseAll: js.UndefOr[String] = js.undefined
-  var dataNotAvailable: js.UndefOr[String] = js.undefined
-  var expandAll: js.UndefOr[String] = js.undefined
-  var exportToExcel: js.UndefOr[String] = js.undefined
-  var grandTotal: js.UndefOr[String] = js.undefined
-  var noData: js.UndefOr[String] = js.undefined
-  var removeAllSorting: js.UndefOr[String] = js.undefined
-  var showFieldChooser: js.UndefOr[String] = js.undefined
-  var sortColumnBySummary: js.UndefOr[String] = js.undefined
-  var sortRowBySummary: js.UndefOr[String] = js.undefined
-  var total: js.UndefOr[String] = js.undefined
+  var collapseAll: js.UndefOr[String] = js.native
+  var dataNotAvailable: js.UndefOr[String] = js.native
+  var expandAll: js.UndefOr[String] = js.native
+  var exportToExcel: js.UndefOr[String] = js.native
+  var grandTotal: js.UndefOr[String] = js.native
+  var noData: js.UndefOr[String] = js.native
+  var removeAllSorting: js.UndefOr[String] = js.native
+  var showFieldChooser: js.UndefOr[String] = js.native
+  var sortColumnBySummary: js.UndefOr[String] = js.native
+  var sortRowBySummary: js.UndefOr[String] = js.native
+  var total: js.UndefOr[String] = js.native
 }
 
 object AnonCollapseAll {
   @scala.inline
-  def apply(
-    collapseAll: String = null,
-    dataNotAvailable: String = null,
-    expandAll: String = null,
-    exportToExcel: String = null,
-    grandTotal: String = null,
-    noData: String = null,
-    removeAllSorting: String = null,
-    showFieldChooser: String = null,
-    sortColumnBySummary: String = null,
-    sortRowBySummary: String = null,
-    total: String = null
-  ): AnonCollapseAll = {
+  def apply(): AnonCollapseAll = {
     val __obj = js.Dynamic.literal()
-    if (collapseAll != null) __obj.updateDynamic("collapseAll")(collapseAll.asInstanceOf[js.Any])
-    if (dataNotAvailable != null) __obj.updateDynamic("dataNotAvailable")(dataNotAvailable.asInstanceOf[js.Any])
-    if (expandAll != null) __obj.updateDynamic("expandAll")(expandAll.asInstanceOf[js.Any])
-    if (exportToExcel != null) __obj.updateDynamic("exportToExcel")(exportToExcel.asInstanceOf[js.Any])
-    if (grandTotal != null) __obj.updateDynamic("grandTotal")(grandTotal.asInstanceOf[js.Any])
-    if (noData != null) __obj.updateDynamic("noData")(noData.asInstanceOf[js.Any])
-    if (removeAllSorting != null) __obj.updateDynamic("removeAllSorting")(removeAllSorting.asInstanceOf[js.Any])
-    if (showFieldChooser != null) __obj.updateDynamic("showFieldChooser")(showFieldChooser.asInstanceOf[js.Any])
-    if (sortColumnBySummary != null) __obj.updateDynamic("sortColumnBySummary")(sortColumnBySummary.asInstanceOf[js.Any])
-    if (sortRowBySummary != null) __obj.updateDynamic("sortRowBySummary")(sortRowBySummary.asInstanceOf[js.Any])
-    if (total != null) __obj.updateDynamic("total")(total.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCollapseAll]
   }
+  @scala.inline
+  implicit class AnonCollapseAllOps[Self <: AnonCollapseAll] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCollapseAll(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseAll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollapseAll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseAll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataNotAvailable(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataNotAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataNotAvailable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataNotAvailable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpandAll(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandAll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpandAll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandAll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExportToExcel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exportToExcel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExportToExcel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exportToExcel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrandTotal(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grandTotal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrandTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grandTotal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveAllSorting(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAllSorting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveAllSorting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAllSorting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowFieldChooser(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showFieldChooser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowFieldChooser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showFieldChooser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortColumnBySummary(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortColumnBySummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortColumnBySummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortColumnBySummary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortRowBySummary(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortRowBySummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortRowBySummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortRowBySummary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotal(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

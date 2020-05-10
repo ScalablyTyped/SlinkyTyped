@@ -1,17 +1,16 @@
 package typingsSlinky.reactFocusLock.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
-import slinky.web.html.`*`.tag
+import typingsSlinky.reactFocusLock.interfacesMod.AutoFocusProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AutoFocusInside
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.reactFocusLock.mod.AutoFocusInside] {
+object AutoFocusInside {
   @JSImport("react-focus-lock", "AutoFocusInside")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: AutoFocusProps): SharedBuilder_AutoFocusProps718453491[typingsSlinky.reactFocusLock.mod.AutoFocusInside] = new SharedBuilder_AutoFocusProps718453491[typingsSlinky.reactFocusLock.mod.AutoFocusInside](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: AutoFocusInside.type): SharedBuilder_AutoFocusProps718453491[typingsSlinky.reactFocusLock.mod.AutoFocusInside] = new SharedBuilder_AutoFocusProps718453491[typingsSlinky.reactFocusLock.mod.AutoFocusInside](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -19,24 +19,22 @@ trait GoogleCloudDialogflowV2IntentMessagePlatform extends js.Object
 
 object GoogleCloudDialogflowV2IntentMessagePlatform {
   @scala.inline
-  def ACTIONS_ON_GOOGLE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ACTIONS_ON_GOOGLE = this.cast("ACTIONS_ON_GOOGLE")
+  def ACTIONS_ON_GOOGLE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ACTIONS_ON_GOOGLE = "ACTIONS_ON_GOOGLE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ACTIONS_ON_GOOGLE]
   @scala.inline
-  def FACEBOOK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.FACEBOOK = this.cast("FACEBOOK")
+  def FACEBOOK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.FACEBOOK = "FACEBOOK".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.FACEBOOK]
   @scala.inline
-  def KIK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.KIK = this.cast("KIK")
+  def KIK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.KIK = "KIK".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.KIK]
   @scala.inline
-  def LINE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.LINE = this.cast("LINE")
+  def LINE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.LINE = "LINE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.LINE]
   @scala.inline
-  def PLATFORM_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PLATFORM_UNSPECIFIED = this.cast("PLATFORM_UNSPECIFIED")
+  def PLATFORM_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PLATFORM_UNSPECIFIED = "PLATFORM_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PLATFORM_UNSPECIFIED]
   @scala.inline
-  def SKYPE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SKYPE = this.cast("SKYPE")
+  def SKYPE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SKYPE = "SKYPE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SKYPE]
   @scala.inline
-  def SLACK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SLACK = this.cast("SLACK")
+  def SLACK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SLACK = "SLACK".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SLACK]
   @scala.inline
-  def TELEGRAM: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TELEGRAM = this.cast("TELEGRAM")
+  def TELEGRAM: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TELEGRAM = "TELEGRAM".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TELEGRAM]
   @scala.inline
-  def VIBER: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.VIBER = this.cast("VIBER")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def VIBER: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.VIBER = "VIBER".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.VIBER]
 }
 

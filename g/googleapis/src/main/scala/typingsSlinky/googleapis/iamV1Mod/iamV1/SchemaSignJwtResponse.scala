@@ -21,11 +21,41 @@ trait SchemaSignJwtResponse extends js.Object {
 
 object SchemaSignJwtResponse {
   @scala.inline
-  def apply(keyId: String = null, signedJwt: String = null): SchemaSignJwtResponse = {
+  def apply(): SchemaSignJwtResponse = {
     val __obj = js.Dynamic.literal()
-    if (keyId != null) __obj.updateDynamic("keyId")(keyId.asInstanceOf[js.Any])
-    if (signedJwt != null) __obj.updateDynamic("signedJwt")(signedJwt.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSignJwtResponse]
   }
+  @scala.inline
+  implicit class SchemaSignJwtResponseOps[Self <: SchemaSignJwtResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKeyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignedJwt(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signedJwt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignedJwt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signedJwt")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

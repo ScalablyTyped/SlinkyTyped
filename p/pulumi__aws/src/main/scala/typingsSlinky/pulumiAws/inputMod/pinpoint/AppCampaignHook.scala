@@ -23,12 +23,53 @@ trait AppCampaignHook extends js.Object {
 
 object AppCampaignHook {
   @scala.inline
-  def apply(lambdaFunctionName: Input[String] = null, mode: Input[String] = null, webUrl: Input[String] = null): AppCampaignHook = {
+  def apply(): AppCampaignHook = {
     val __obj = js.Dynamic.literal()
-    if (lambdaFunctionName != null) __obj.updateDynamic("lambdaFunctionName")(lambdaFunctionName.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (webUrl != null) __obj.updateDynamic("webUrl")(webUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppCampaignHook]
   }
+  @scala.inline
+  implicit class AppCampaignHookOps[Self <: AppCampaignHook] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLambdaFunctionName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaFunctionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebUrl(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

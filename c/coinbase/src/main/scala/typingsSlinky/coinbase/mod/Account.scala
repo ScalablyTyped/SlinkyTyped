@@ -45,11 +45,6 @@ class Account () extends Resource {
     */
   var primary: Boolean = js.native
   /**
-    * Resource type
-    */
-  /* CompleteClass */
-  override var resource: ResourceType = js.native
-  /**
     * Type of resource, constant string "account"
     */
   @JSName("resource")

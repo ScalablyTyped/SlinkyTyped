@@ -19,10 +19,29 @@ trait SchemaLocationContext extends js.Object {
 
 object SchemaLocationContext {
   @scala.inline
-  def apply(geoCriteriaIds: js.Array[Double] = null): SchemaLocationContext = {
+  def apply(): SchemaLocationContext = {
     val __obj = js.Dynamic.literal()
-    if (geoCriteriaIds != null) __obj.updateDynamic("geoCriteriaIds")(geoCriteriaIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLocationContext]
   }
+  @scala.inline
+  implicit class SchemaLocationContextOps[Self <: SchemaLocationContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGeoCriteriaIds(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geoCriteriaIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeoCriteriaIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geoCriteriaIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

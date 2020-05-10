@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Settings extends js.Object {
-  var syncLimit: js.UndefOr[String | Double] = js.undefined
-  var useHeaders: js.UndefOr[Boolean] = js.undefined
+  var syncLimit: js.UndefOr[String | Double] = js.native
+  var useHeaders: js.UndefOr[Boolean] = js.native
 }
 
 object Settings {
   @scala.inline
-  def apply(syncLimit: String | Double = null, useHeaders: js.UndefOr[Boolean] = js.undefined): Settings = {
+  def apply(): Settings = {
     val __obj = js.Dynamic.literal()
-    if (syncLimit != null) __obj.updateDynamic("syncLimit")(syncLimit.asInstanceOf[js.Any])
-    if (!js.isUndefined(useHeaders)) __obj.updateDynamic("useHeaders")(useHeaders.asInstanceOf[js.Any])
     __obj.asInstanceOf[Settings]
   }
+  @scala.inline
+  implicit class SettingsOps[Self <: Settings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSyncLimit(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syncLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSyncLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syncLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseHeaders(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useHeaders")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

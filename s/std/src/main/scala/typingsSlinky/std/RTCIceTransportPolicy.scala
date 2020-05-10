@@ -12,10 +12,8 @@ trait RTCIceTransportPolicy extends js.Object
 
 object RTCIceTransportPolicy {
   @scala.inline
-  def all: typingsSlinky.std.stdStrings.all = this.cast("all")
+  def all: typingsSlinky.std.stdStrings.all = "all".asInstanceOf[typingsSlinky.std.stdStrings.all]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def relay: typingsSlinky.std.stdStrings.relay = this.cast("relay")
+  def relay: typingsSlinky.std.stdStrings.relay = "relay".asInstanceOf[typingsSlinky.std.stdStrings.relay]
 }
 

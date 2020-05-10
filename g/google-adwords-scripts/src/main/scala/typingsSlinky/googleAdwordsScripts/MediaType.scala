@@ -17,20 +17,18 @@ trait MediaType extends js.Object
 
 object MediaType {
   @scala.inline
-  def AUDIO: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.AUDIO = this.cast("AUDIO")
+  def AUDIO: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.AUDIO = "AUDIO".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.AUDIO]
   @scala.inline
-  def DYNAMIC_IMAGE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.DYNAMIC_IMAGE = this.cast("DYNAMIC_IMAGE")
+  def DYNAMIC_IMAGE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.DYNAMIC_IMAGE = "DYNAMIC_IMAGE".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.DYNAMIC_IMAGE]
   @scala.inline
-  def ICON: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.ICON = this.cast("ICON")
+  def ICON: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.ICON = "ICON".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.ICON]
   @scala.inline
-  def IMAGE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.IMAGE = this.cast("IMAGE")
+  def IMAGE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.IMAGE = "IMAGE".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.IMAGE]
   @scala.inline
-  def MEDIA_BUNDLE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.MEDIA_BUNDLE = this.cast("MEDIA_BUNDLE")
+  def MEDIA_BUNDLE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.MEDIA_BUNDLE = "MEDIA_BUNDLE".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.MEDIA_BUNDLE]
   @scala.inline
-  def STANDARD_ICON: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.STANDARD_ICON = this.cast("STANDARD_ICON")
+  def STANDARD_ICON: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.STANDARD_ICON = "STANDARD_ICON".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.STANDARD_ICON]
   @scala.inline
-  def VIDEO: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.VIDEO = this.cast("VIDEO")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def VIDEO: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.VIDEO = "VIDEO".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.VIDEO]
 }
 

@@ -14,10 +14,29 @@ trait NoiseReducerFilterSettings extends js.Object {
 
 object NoiseReducerFilterSettings {
   @scala.inline
-  def apply(Strength: Int | Double = null): NoiseReducerFilterSettings = {
+  def apply(): NoiseReducerFilterSettings = {
     val __obj = js.Dynamic.literal()
-    if (Strength != null) __obj.updateDynamic("Strength")(Strength.asInstanceOf[js.Any])
     __obj.asInstanceOf[NoiseReducerFilterSettings]
   }
+  @scala.inline
+  implicit class NoiseReducerFilterSettingsOps[Self <: NoiseReducerFilterSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStrength(value: integerMin0Max3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Strength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Strength")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

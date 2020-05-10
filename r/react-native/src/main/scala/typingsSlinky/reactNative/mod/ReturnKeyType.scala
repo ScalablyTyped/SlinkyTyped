@@ -15,16 +15,14 @@ trait ReturnKeyType extends js.Object
 
 object ReturnKeyType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def done: typingsSlinky.reactNative.reactNativeStrings.done = "done".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.done]
   @scala.inline
-  def done: typingsSlinky.reactNative.reactNativeStrings.done = this.cast("done")
+  def go: typingsSlinky.reactNative.reactNativeStrings.go = "go".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.go]
   @scala.inline
-  def go: typingsSlinky.reactNative.reactNativeStrings.go = this.cast("go")
+  def next: typingsSlinky.reactNative.reactNativeStrings.next = "next".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.next]
   @scala.inline
-  def next: typingsSlinky.reactNative.reactNativeStrings.next = this.cast("next")
+  def search: typingsSlinky.reactNative.reactNativeStrings.search = "search".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.search]
   @scala.inline
-  def search: typingsSlinky.reactNative.reactNativeStrings.search = this.cast("search")
-  @scala.inline
-  def send: typingsSlinky.reactNative.reactNativeStrings.send = this.cast("send")
+  def send: typingsSlinky.reactNative.reactNativeStrings.send = "send".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.send]
 }
 

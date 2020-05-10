@@ -34,20 +34,77 @@ trait HyperParameterTuningJobConfig extends js.Object {
 
 object HyperParameterTuningJobConfig {
   @scala.inline
-  def apply(
-    ResourceLimits: ResourceLimits,
-    Strategy: HyperParameterTuningJobStrategyType,
-    HyperParameterTuningJobObjective: HyperParameterTuningJobObjective = null,
-    ParameterRanges: ParameterRanges = null,
-    TrainingJobEarlyStoppingType: TrainingJobEarlyStoppingType = null,
-    TuningJobCompletionCriteria: TuningJobCompletionCriteria = null
-  ): HyperParameterTuningJobConfig = {
+  def apply(ResourceLimits: ResourceLimits, Strategy: HyperParameterTuningJobStrategyType): HyperParameterTuningJobConfig = {
     val __obj = js.Dynamic.literal(ResourceLimits = ResourceLimits.asInstanceOf[js.Any], Strategy = Strategy.asInstanceOf[js.Any])
-    if (HyperParameterTuningJobObjective != null) __obj.updateDynamic("HyperParameterTuningJobObjective")(HyperParameterTuningJobObjective.asInstanceOf[js.Any])
-    if (ParameterRanges != null) __obj.updateDynamic("ParameterRanges")(ParameterRanges.asInstanceOf[js.Any])
-    if (TrainingJobEarlyStoppingType != null) __obj.updateDynamic("TrainingJobEarlyStoppingType")(TrainingJobEarlyStoppingType.asInstanceOf[js.Any])
-    if (TuningJobCompletionCriteria != null) __obj.updateDynamic("TuningJobCompletionCriteria")(TuningJobCompletionCriteria.asInstanceOf[js.Any])
     __obj.asInstanceOf[HyperParameterTuningJobConfig]
   }
+  @scala.inline
+  implicit class HyperParameterTuningJobConfigOps[Self <: HyperParameterTuningJobConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResourceLimits(value: ResourceLimits): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceLimits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStrategy(value: HyperParameterTuningJobStrategyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Strategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHyperParameterTuningJobObjective(value: HyperParameterTuningJobObjective): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HyperParameterTuningJobObjective")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHyperParameterTuningJobObjective: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HyperParameterTuningJobObjective")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterRanges(value: ParameterRanges): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterRanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterRanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrainingJobEarlyStoppingType(value: TrainingJobEarlyStoppingType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingJobEarlyStoppingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrainingJobEarlyStoppingType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingJobEarlyStoppingType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTuningJobCompletionCriteria(value: TuningJobCompletionCriteria): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TuningJobCompletionCriteria")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTuningJobCompletionCriteria: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TuningJobCompletionCriteria")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

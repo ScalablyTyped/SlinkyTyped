@@ -14,10 +14,29 @@ trait RunConfigurationDescription extends js.Object {
 
 object RunConfigurationDescription {
   @scala.inline
-  def apply(ApplicationRestoreConfigurationDescription: ApplicationRestoreConfiguration = null): RunConfigurationDescription = {
+  def apply(): RunConfigurationDescription = {
     val __obj = js.Dynamic.literal()
-    if (ApplicationRestoreConfigurationDescription != null) __obj.updateDynamic("ApplicationRestoreConfigurationDescription")(ApplicationRestoreConfigurationDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[RunConfigurationDescription]
   }
+  @scala.inline
+  implicit class RunConfigurationDescriptionOps[Self <: RunConfigurationDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationRestoreConfigurationDescription(value: ApplicationRestoreConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationRestoreConfigurationDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationRestoreConfigurationDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationRestoreConfigurationDescription")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

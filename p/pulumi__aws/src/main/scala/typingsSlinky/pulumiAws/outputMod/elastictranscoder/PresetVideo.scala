@@ -62,36 +62,173 @@ trait PresetVideo extends js.Object {
 
 object PresetVideo {
   @scala.inline
-  def apply(
-    aspectRatio: String = null,
-    bitRate: String = null,
-    codec: String = null,
-    displayAspectRatio: String = null,
-    fixedGop: String = null,
-    frameRate: String = null,
-    keyframesMaxDist: String = null,
-    maxFrameRate: String = null,
-    maxHeight: String = null,
-    maxWidth: String = null,
-    paddingPolicy: String = null,
-    resolution: String = null,
-    sizingPolicy: String = null
-  ): PresetVideo = {
+  def apply(): PresetVideo = {
     val __obj = js.Dynamic.literal()
-    if (aspectRatio != null) __obj.updateDynamic("aspectRatio")(aspectRatio.asInstanceOf[js.Any])
-    if (bitRate != null) __obj.updateDynamic("bitRate")(bitRate.asInstanceOf[js.Any])
-    if (codec != null) __obj.updateDynamic("codec")(codec.asInstanceOf[js.Any])
-    if (displayAspectRatio != null) __obj.updateDynamic("displayAspectRatio")(displayAspectRatio.asInstanceOf[js.Any])
-    if (fixedGop != null) __obj.updateDynamic("fixedGop")(fixedGop.asInstanceOf[js.Any])
-    if (frameRate != null) __obj.updateDynamic("frameRate")(frameRate.asInstanceOf[js.Any])
-    if (keyframesMaxDist != null) __obj.updateDynamic("keyframesMaxDist")(keyframesMaxDist.asInstanceOf[js.Any])
-    if (maxFrameRate != null) __obj.updateDynamic("maxFrameRate")(maxFrameRate.asInstanceOf[js.Any])
-    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (paddingPolicy != null) __obj.updateDynamic("paddingPolicy")(paddingPolicy.asInstanceOf[js.Any])
-    if (resolution != null) __obj.updateDynamic("resolution")(resolution.asInstanceOf[js.Any])
-    if (sizingPolicy != null) __obj.updateDynamic("sizingPolicy")(sizingPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[PresetVideo]
   }
+  @scala.inline
+  implicit class PresetVideoOps[Self <: PresetVideo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAspectRatio(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAspectRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBitRate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBitRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodec(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayAspectRatio(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayAspectRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayAspectRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayAspectRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedGop(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedGop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedGop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedGop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrameRate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyframesMaxDist(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyframesMaxDist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyframesMaxDist: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyframesMaxDist")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxFrameRate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFrameRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxFrameRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFrameRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxHeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingPolicy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolution(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizingPolicy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizingPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizingPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizingPolicy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

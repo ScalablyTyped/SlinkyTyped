@@ -22,12 +22,53 @@ trait AwsCloudFrontDistributionOriginItem extends js.Object {
 
 object AwsCloudFrontDistributionOriginItem {
   @scala.inline
-  def apply(DomainName: NonEmptyString = null, Id: NonEmptyString = null, OriginPath: NonEmptyString = null): AwsCloudFrontDistributionOriginItem = {
+  def apply(): AwsCloudFrontDistributionOriginItem = {
     val __obj = js.Dynamic.literal()
-    if (DomainName != null) __obj.updateDynamic("DomainName")(DomainName.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (OriginPath != null) __obj.updateDynamic("OriginPath")(OriginPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsCloudFrontDistributionOriginItem]
   }
+  @scala.inline
+  implicit class AwsCloudFrontDistributionOriginItemOps[Self <: AwsCloudFrontDistributionOriginItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomainName(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginPath(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginPath")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -38,24 +38,101 @@ trait Commit extends js.Object {
 
 object Commit {
   @scala.inline
-  def apply(
-    additionalData: AdditionalData = null,
-    author: UserInfo = null,
-    commitId: ObjectId = null,
-    committer: UserInfo = null,
-    message: Message = null,
-    parents: ParentList = null,
-    treeId: ObjectId = null
-  ): Commit = {
+  def apply(): Commit = {
     val __obj = js.Dynamic.literal()
-    if (additionalData != null) __obj.updateDynamic("additionalData")(additionalData.asInstanceOf[js.Any])
-    if (author != null) __obj.updateDynamic("author")(author.asInstanceOf[js.Any])
-    if (commitId != null) __obj.updateDynamic("commitId")(commitId.asInstanceOf[js.Any])
-    if (committer != null) __obj.updateDynamic("committer")(committer.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (parents != null) __obj.updateDynamic("parents")(parents.asInstanceOf[js.Any])
-    if (treeId != null) __obj.updateDynamic("treeId")(treeId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Commit]
   }
+  @scala.inline
+  implicit class CommitOps[Self <: Commit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdditionalData(value: AdditionalData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthor(value: UserInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommitId(value: ObjectId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommitId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommitter(value: UserInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("committer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommitter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("committer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: Message): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParents(value: ParentList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTreeId(value: ObjectId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("treeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTreeId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("treeId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

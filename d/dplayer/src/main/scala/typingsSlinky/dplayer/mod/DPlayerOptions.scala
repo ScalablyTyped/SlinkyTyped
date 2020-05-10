@@ -6,72 +6,258 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DPlayerOptions
   extends /* key */ StringDictionary[js.Any] {
-  var apiBackend: js.UndefOr[DPlayerAPIBackend] = js.undefined
-  var autoplay: js.UndefOr[Boolean] = js.undefined
-  var container: HTMLElement | Null
-  var contextmenu: js.UndefOr[js.Array[DPlayerContextMenuItem]] = js.undefined
-  var danmaku: js.UndefOr[DPlayerDanmaku] = js.undefined
-  var highlight: js.UndefOr[js.Array[DPlayerHighLightItem]] = js.undefined
-  var hotkey: js.UndefOr[Boolean] = js.undefined
-  var lang: js.UndefOr[Lang | String] = js.undefined
-  var live: js.UndefOr[Boolean] = js.undefined
-  var logo: js.UndefOr[String] = js.undefined
-  var loop: js.UndefOr[Boolean] = js.undefined
-  var mutex: js.UndefOr[Boolean] = js.undefined
-  var preload: js.UndefOr[Preload] = js.undefined
-  var screenshot: js.UndefOr[Boolean] = js.undefined
-  var subtitle: js.UndefOr[DPlayerSubTitle] = js.undefined
-  var theme: js.UndefOr[String] = js.undefined
-  var video: js.UndefOr[DPlayerVideo] = js.undefined
-  var volume: js.UndefOr[Double] = js.undefined
+  var apiBackend: js.UndefOr[DPlayerAPIBackend] = js.native
+  var autoplay: js.UndefOr[Boolean] = js.native
+  var container: HTMLElement | Null = js.native
+  var contextmenu: js.UndefOr[js.Array[DPlayerContextMenuItem]] = js.native
+  var danmaku: js.UndefOr[DPlayerDanmaku] = js.native
+  var highlight: js.UndefOr[js.Array[DPlayerHighLightItem]] = js.native
+  var hotkey: js.UndefOr[Boolean] = js.native
+  var lang: js.UndefOr[Lang | String] = js.native
+  var live: js.UndefOr[Boolean] = js.native
+  var logo: js.UndefOr[String] = js.native
+  var loop: js.UndefOr[Boolean] = js.native
+  var mutex: js.UndefOr[Boolean] = js.native
+  var preload: js.UndefOr[Preload] = js.native
+  var screenshot: js.UndefOr[Boolean] = js.native
+  var subtitle: js.UndefOr[DPlayerSubTitle] = js.native
+  var theme: js.UndefOr[String] = js.native
+  var video: js.UndefOr[DPlayerVideo] = js.native
+  var volume: js.UndefOr[Double] = js.native
 }
 
 object DPlayerOptions {
   @scala.inline
-  def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    apiBackend: DPlayerAPIBackend = null,
-    autoplay: js.UndefOr[Boolean] = js.undefined,
-    container: HTMLElement = null,
-    contextmenu: js.Array[DPlayerContextMenuItem] = null,
-    danmaku: DPlayerDanmaku = null,
-    highlight: js.Array[DPlayerHighLightItem] = null,
-    hotkey: js.UndefOr[Boolean] = js.undefined,
-    lang: Lang | String = null,
-    live: js.UndefOr[Boolean] = js.undefined,
-    logo: String = null,
-    loop: js.UndefOr[Boolean] = js.undefined,
-    mutex: js.UndefOr[Boolean] = js.undefined,
-    preload: Preload = null,
-    screenshot: js.UndefOr[Boolean] = js.undefined,
-    subtitle: DPlayerSubTitle = null,
-    theme: String = null,
-    video: DPlayerVideo = null,
-    volume: Int | Double = null
-  ): DPlayerOptions = {
+  def apply(): DPlayerOptions = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (apiBackend != null) __obj.updateDynamic("apiBackend")(apiBackend.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (contextmenu != null) __obj.updateDynamic("contextmenu")(contextmenu.asInstanceOf[js.Any])
-    if (danmaku != null) __obj.updateDynamic("danmaku")(danmaku.asInstanceOf[js.Any])
-    if (highlight != null) __obj.updateDynamic("highlight")(highlight.asInstanceOf[js.Any])
-    if (!js.isUndefined(hotkey)) __obj.updateDynamic("hotkey")(hotkey.asInstanceOf[js.Any])
-    if (lang != null) __obj.updateDynamic("lang")(lang.asInstanceOf[js.Any])
-    if (!js.isUndefined(live)) __obj.updateDynamic("live")(live.asInstanceOf[js.Any])
-    if (logo != null) __obj.updateDynamic("logo")(logo.asInstanceOf[js.Any])
-    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.asInstanceOf[js.Any])
-    if (!js.isUndefined(mutex)) __obj.updateDynamic("mutex")(mutex.asInstanceOf[js.Any])
-    if (preload != null) __obj.updateDynamic("preload")(preload.asInstanceOf[js.Any])
-    if (!js.isUndefined(screenshot)) __obj.updateDynamic("screenshot")(screenshot.asInstanceOf[js.Any])
-    if (subtitle != null) __obj.updateDynamic("subtitle")(subtitle.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (video != null) __obj.updateDynamic("video")(video.asInstanceOf[js.Any])
-    if (volume != null) __obj.updateDynamic("volume")(volume.asInstanceOf[js.Any])
     __obj.asInstanceOf[DPlayerOptions]
   }
+  @scala.inline
+  implicit class DPlayerOptionsOps[Self <: DPlayerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiBackend(value: DPlayerAPIBackend): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiBackend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApiBackend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiBackend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoplay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainer(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContainerNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(null)
+        ret
+    }
+    @scala.inline
+    def withContextmenu(value: js.Array[DPlayerContextMenuItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextmenu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextmenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextmenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDanmaku(value: DPlayerDanmaku): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("danmaku")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDanmaku: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("danmaku")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighlight(value: js.Array[DPlayerHighLightItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHotkey(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hotkey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHotkey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hotkey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLang(value: Lang | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLang: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("live")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("live")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMutex(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mutex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMutex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mutex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreload(value: Preload): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreenshot(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreenshot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubtitle(value: DPlayerSubTitle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubtitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTheme(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideo(value: DPlayerVideo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolume(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolume: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

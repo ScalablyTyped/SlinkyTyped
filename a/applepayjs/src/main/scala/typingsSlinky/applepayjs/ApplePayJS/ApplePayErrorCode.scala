@@ -17,14 +17,12 @@ trait ApplePayErrorCode extends js.Object
 
 object ApplePayErrorCode {
   @scala.inline
-  def addressUnserviceable: typingsSlinky.applepayjs.applepayjsStrings.addressUnserviceable = this.cast("addressUnserviceable")
+  def addressUnserviceable: typingsSlinky.applepayjs.applepayjsStrings.addressUnserviceable = "addressUnserviceable".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.addressUnserviceable]
   @scala.inline
-  def billingContactInvalid: typingsSlinky.applepayjs.applepayjsStrings.billingContactInvalid = this.cast("billingContactInvalid")
+  def billingContactInvalid: typingsSlinky.applepayjs.applepayjsStrings.billingContactInvalid = "billingContactInvalid".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.billingContactInvalid]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def shippingContactInvalid: typingsSlinky.applepayjs.applepayjsStrings.shippingContactInvalid = "shippingContactInvalid".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.shippingContactInvalid]
   @scala.inline
-  def shippingContactInvalid: typingsSlinky.applepayjs.applepayjsStrings.shippingContactInvalid = this.cast("shippingContactInvalid")
-  @scala.inline
-  def unknown: typingsSlinky.applepayjs.applepayjsStrings.unknown = this.cast("unknown")
+  def unknown: typingsSlinky.applepayjs.applepayjsStrings.unknown = "unknown".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.unknown]
 }
 

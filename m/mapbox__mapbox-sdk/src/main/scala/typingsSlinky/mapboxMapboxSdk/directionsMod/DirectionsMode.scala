@@ -16,18 +16,16 @@ trait DirectionsMode extends js.Object
 
 object DirectionsMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cycling: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.cycling = "cycling".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.cycling]
   @scala.inline
-  def cycling: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.cycling = this.cast("cycling")
+  def driving: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.driving = "driving".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.driving]
   @scala.inline
-  def driving: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.driving = this.cast("driving")
+  def ferry: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.ferry = "ferry".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.ferry]
   @scala.inline
-  def ferry: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.ferry = this.cast("ferry")
+  def train: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.train = "train".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.train]
   @scala.inline
-  def train: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.train = this.cast("train")
+  def unaccessible: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.unaccessible = "unaccessible".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.unaccessible]
   @scala.inline
-  def unaccessible: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.unaccessible = this.cast("unaccessible")
-  @scala.inline
-  def walking: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.walking = this.cast("walking")
+  def walking: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.walking = "walking".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.walking]
 }
 

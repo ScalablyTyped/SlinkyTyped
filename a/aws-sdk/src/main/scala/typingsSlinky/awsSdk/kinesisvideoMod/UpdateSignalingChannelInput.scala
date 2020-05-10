@@ -22,14 +22,41 @@ trait UpdateSignalingChannelInput extends js.Object {
 
 object UpdateSignalingChannelInput {
   @scala.inline
-  def apply(
-    ChannelARN: ResourceARN,
-    CurrentVersion: Version,
-    SingleMasterConfiguration: SingleMasterConfiguration = null
-  ): UpdateSignalingChannelInput = {
+  def apply(ChannelARN: ResourceARN, CurrentVersion: Version): UpdateSignalingChannelInput = {
     val __obj = js.Dynamic.literal(ChannelARN = ChannelARN.asInstanceOf[js.Any], CurrentVersion = CurrentVersion.asInstanceOf[js.Any])
-    if (SingleMasterConfiguration != null) __obj.updateDynamic("SingleMasterConfiguration")(SingleMasterConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateSignalingChannelInput]
   }
+  @scala.inline
+  implicit class UpdateSignalingChannelInputOps[Self <: UpdateSignalingChannelInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChannelARN(value: ResourceARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentVersion(value: Version): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSingleMasterConfiguration(value: SingleMasterConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleMasterConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleMasterConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleMasterConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -15,14 +15,12 @@ trait RuleValue extends js.Object
 
 object RuleValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `even-odd`: typingsSlinky.pdfkit.pdfkitStrings.`even-odd` = "even-odd".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.`even-odd`]
   @scala.inline
-  def `even-odd`: typingsSlinky.pdfkit.pdfkitStrings.`even-odd` = this.cast("even-odd")
+  def evenodd: typingsSlinky.pdfkit.pdfkitStrings.evenodd = "evenodd".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.evenodd]
   @scala.inline
-  def evenodd: typingsSlinky.pdfkit.pdfkitStrings.evenodd = this.cast("evenodd")
+  def `non-zero`: typingsSlinky.pdfkit.pdfkitStrings.`non-zero` = "non-zero".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.`non-zero`]
   @scala.inline
-  def `non-zero`: typingsSlinky.pdfkit.pdfkitStrings.`non-zero` = this.cast("non-zero")
-  @scala.inline
-  def nonzero: typingsSlinky.pdfkit.pdfkitStrings.nonzero = this.cast("nonzero")
+  def nonzero: typingsSlinky.pdfkit.pdfkitStrings.nonzero = "nonzero".asInstanceOf[typingsSlinky.pdfkit.pdfkitStrings.nonzero]
 }
 

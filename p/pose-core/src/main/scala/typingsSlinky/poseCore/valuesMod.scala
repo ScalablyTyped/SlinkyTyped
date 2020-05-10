@@ -1,7 +1,6 @@
 package typingsSlinky.poseCore
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.poseCore.poseCoreStrings.init
 import typingsSlinky.poseCore.typesMod.ActivePoses
 import typingsSlinky.poseCore.typesMod.AncestorValueList
 import typingsSlinky.poseCore.typesMod.ConvertValue
@@ -46,7 +45,7 @@ object valuesMod extends js.Object {
     def setValueNative(key: String, value: js.Any, props: Props): Unit = js.native
   }
   
-  val DEFAULT_INITIAL_POSE: init = js.native
+  val DEFAULT_INITIAL_POSE: /* "init" */ String = js.native
   def default[V, A, TD](props: ValueFactoryProps[V, A, TD]): Map[String, V] = js.native
 }
 

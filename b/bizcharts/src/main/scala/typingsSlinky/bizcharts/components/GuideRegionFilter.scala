@@ -1,41 +1,43 @@
 package typingsSlinky.bizcharts.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.bizcharts.mod.Guide.RegionFilter
 import typingsSlinky.bizcharts.mod.Guide.RegionFilterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GuideRegionFilter
-  extends ExternalComponentWithAttributesWithRefType[tag.type, RegionFilter] {
+object GuideRegionFilter {
   @JSImport("bizcharts", "Guide.RegionFilter")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    apply: js.Array[_] = null,
-    color: String = null,
-    end: js.Object | js.Array[_] | (js.Function2[/* xScale */ js.UndefOr[js.Any], /* yScale */ js.UndefOr[js.Any], _]) = null,
-    start: js.Object | js.Array[_] | (js.Function2[/* xScale */ js.UndefOr[js.Any], /* yScale */ js.UndefOr[js.Any], _]) = null,
-    top: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, RegionFilter] = {
-    val __obj = js.Dynamic.literal()
-    if (apply != null) __obj.updateDynamic("apply")(apply.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (!js.isUndefined(top)) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, RegionFilter] {
+    @scala.inline
+    def apply(value: js.Array[_]): this.type = set("apply", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endFunction2(value: (/* xScale */ js.UndefOr[js.Any], /* yScale */ js.UndefOr[js.Any]) => _): this.type = set("end", js.Any.fromFunction2(value))
+    @scala.inline
+    def end(
+      value: js.Object | js.Array[_] | (js.Function2[/* xScale */ js.UndefOr[js.Any], /* yScale */ js.UndefOr[js.Any], _])
+    ): this.type = set("end", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startFunction2(value: (/* xScale */ js.UndefOr[js.Any], /* yScale */ js.UndefOr[js.Any]) => _): this.type = set("start", js.Any.fromFunction2(value))
+    @scala.inline
+    def start(
+      value: js.Object | js.Array[_] | (js.Function2[/* xScale */ js.UndefOr[js.Any], /* yScale */ js.UndefOr[js.Any], _])
+    ): this.type = set("start", value.asInstanceOf[js.Any])
+    @scala.inline
+    def top(value: Boolean): this.type = set("top", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, RegionFilter] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.mod.Guide.RegionFilter](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = RegionFilterProps
+  
+  def withProps(p: RegionFilterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: GuideRegionFilter.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

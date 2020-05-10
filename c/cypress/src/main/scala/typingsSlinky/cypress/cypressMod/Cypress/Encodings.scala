@@ -21,28 +21,26 @@ trait Encodings extends js.Object
 
 object Encodings {
   @scala.inline
-  def ascii: typingsSlinky.cypress.cypressStrings.ascii = this.cast("ascii")
+  def ascii: typingsSlinky.cypress.cypressStrings.ascii = "ascii".asInstanceOf[typingsSlinky.cypress.cypressStrings.ascii]
   @scala.inline
-  def base64: typingsSlinky.cypress.cypressStrings.base64 = this.cast("base64")
+  def base64: typingsSlinky.cypress.cypressStrings.base64 = "base64".asInstanceOf[typingsSlinky.cypress.cypressStrings.base64]
   @scala.inline
-  def binary: typingsSlinky.cypress.cypressStrings.binary = this.cast("binary")
+  def binary: typingsSlinky.cypress.cypressStrings.binary = "binary".asInstanceOf[typingsSlinky.cypress.cypressStrings.binary]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hex: typingsSlinky.cypress.cypressStrings.hex = "hex".asInstanceOf[typingsSlinky.cypress.cypressStrings.hex]
   @scala.inline
-  def hex: typingsSlinky.cypress.cypressStrings.hex = this.cast("hex")
+  def latin1: typingsSlinky.cypress.cypressStrings.latin1 = "latin1".asInstanceOf[typingsSlinky.cypress.cypressStrings.latin1]
   @scala.inline
-  def latin1: typingsSlinky.cypress.cypressStrings.latin1 = this.cast("latin1")
+  def `ucs-2`: typingsSlinky.cypress.cypressStrings.`ucs-2` = "ucs-2".asInstanceOf[typingsSlinky.cypress.cypressStrings.`ucs-2`]
   @scala.inline
-  def `ucs-2`: typingsSlinky.cypress.cypressStrings.`ucs-2` = this.cast("ucs-2")
+  def ucs2: typingsSlinky.cypress.cypressStrings.ucs2 = "ucs2".asInstanceOf[typingsSlinky.cypress.cypressStrings.ucs2]
   @scala.inline
-  def ucs2: typingsSlinky.cypress.cypressStrings.ucs2 = this.cast("ucs2")
+  def `utf-16le`: typingsSlinky.cypress.cypressStrings.`utf-16le` = "utf-16le".asInstanceOf[typingsSlinky.cypress.cypressStrings.`utf-16le`]
   @scala.inline
-  def `utf-16le`: typingsSlinky.cypress.cypressStrings.`utf-16le` = this.cast("utf-16le")
+  def `utf-8`: typingsSlinky.cypress.cypressStrings.`utf-8` = "utf-8".asInstanceOf[typingsSlinky.cypress.cypressStrings.`utf-8`]
   @scala.inline
-  def `utf-8`: typingsSlinky.cypress.cypressStrings.`utf-8` = this.cast("utf-8")
+  def utf16le: typingsSlinky.cypress.cypressStrings.utf16le = "utf16le".asInstanceOf[typingsSlinky.cypress.cypressStrings.utf16le]
   @scala.inline
-  def utf16le: typingsSlinky.cypress.cypressStrings.utf16le = this.cast("utf16le")
-  @scala.inline
-  def utf8: typingsSlinky.cypress.cypressStrings.utf8 = this.cast("utf8")
+  def utf8: typingsSlinky.cypress.cypressStrings.utf8 = "utf8".asInstanceOf[typingsSlinky.cypress.cypressStrings.utf8]
 }
 

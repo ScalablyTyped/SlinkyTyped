@@ -1,14 +1,16 @@
 package typingsSlinky.reactNativeSvg.components
 
+import typingsSlinky.reactNativeSvg.mod.XmlProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SvgCss extends SharedApply_XmlProps1604224866 {
+object SvgCss {
   @JSImport("react-native-svg", "SvgCss")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: XmlProps): SharedBuilder_XmlProps_304989786 = new SharedBuilder_XmlProps_304989786(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SvgCss.type): SharedBuilder_XmlProps_304989786 = new SharedBuilder_XmlProps_304989786(js.Array(this.component, js.Dictionary.empty))()
 }
 

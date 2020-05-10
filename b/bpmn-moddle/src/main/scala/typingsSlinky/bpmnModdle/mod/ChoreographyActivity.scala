@@ -12,3 +12,57 @@ trait ChoreographyActivity extends FlowNode {
   var participantRef: js.Array[Participant] = js.native
 }
 
+object ChoreographyActivity {
+  @scala.inline
+  def apply(
+    $parent: TypeDerived,
+    $type: ElementType,
+    auditing: Auditing,
+    categoryValueRef: js.Array[CategoryValue],
+    correlationKeys: js.Array[CorrelationKey],
+    id: String,
+    incoming: js.Array[SequenceFlow],
+    initiatingParticipantRef: Participant,
+    lanes: js.Array[Lane],
+    loopType: ChoreographyLoopType,
+    monitoring: Monitoring,
+    outgoing: js.Array[SequenceFlow],
+    participantRef: js.Array[Participant]
+  ): ChoreographyActivity = {
+    val __obj = js.Dynamic.literal($parent = $parent.asInstanceOf[js.Any], $type = $type.asInstanceOf[js.Any], auditing = auditing.asInstanceOf[js.Any], categoryValueRef = categoryValueRef.asInstanceOf[js.Any], correlationKeys = correlationKeys.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], incoming = incoming.asInstanceOf[js.Any], initiatingParticipantRef = initiatingParticipantRef.asInstanceOf[js.Any], lanes = lanes.asInstanceOf[js.Any], loopType = loopType.asInstanceOf[js.Any], monitoring = monitoring.asInstanceOf[js.Any], outgoing = outgoing.asInstanceOf[js.Any], participantRef = participantRef.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ChoreographyActivity]
+  }
+  @scala.inline
+  implicit class ChoreographyActivityOps[Self <: ChoreographyActivity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCorrelationKeys(value: js.Array[CorrelationKey]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("correlationKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInitiatingParticipantRef(value: Participant): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initiatingParticipantRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoopType(value: ChoreographyLoopType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loopType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParticipantRef(value: js.Array[Participant]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("participantRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

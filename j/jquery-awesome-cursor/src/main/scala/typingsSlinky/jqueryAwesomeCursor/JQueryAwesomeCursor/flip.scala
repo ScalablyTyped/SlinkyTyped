@@ -13,12 +13,10 @@ trait flip extends js.Object
 
 object flip {
   @scala.inline
-  def both: typingsSlinky.jqueryAwesomeCursor.jqueryAwesomeCursorStrings.both = this.cast("both")
+  def both: typingsSlinky.jqueryAwesomeCursor.jqueryAwesomeCursorStrings.both = "both".asInstanceOf[typingsSlinky.jqueryAwesomeCursor.jqueryAwesomeCursorStrings.both]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def horizontal: typingsSlinky.jqueryAwesomeCursor.jqueryAwesomeCursorStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.jqueryAwesomeCursor.jqueryAwesomeCursorStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.jqueryAwesomeCursor.jqueryAwesomeCursorStrings.horizontal = this.cast("horizontal")
-  @scala.inline
-  def vertical: typingsSlinky.jqueryAwesomeCursor.jqueryAwesomeCursorStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.jqueryAwesomeCursor.jqueryAwesomeCursorStrings.vertical = "vertical".asInstanceOf[typingsSlinky.jqueryAwesomeCursor.jqueryAwesomeCursorStrings.vertical]
 }
 

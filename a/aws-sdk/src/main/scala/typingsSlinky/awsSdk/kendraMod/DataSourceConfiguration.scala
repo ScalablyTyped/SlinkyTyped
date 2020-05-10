@@ -22,16 +22,53 @@ trait DataSourceConfiguration extends js.Object {
 
 object DataSourceConfiguration {
   @scala.inline
-  def apply(
-    DatabaseConfiguration: DatabaseConfiguration = null,
-    S3Configuration: S3DataSourceConfiguration = null,
-    SharePointConfiguration: SharePointConfiguration = null
-  ): DataSourceConfiguration = {
+  def apply(): DataSourceConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (DatabaseConfiguration != null) __obj.updateDynamic("DatabaseConfiguration")(DatabaseConfiguration.asInstanceOf[js.Any])
-    if (S3Configuration != null) __obj.updateDynamic("S3Configuration")(S3Configuration.asInstanceOf[js.Any])
-    if (SharePointConfiguration != null) __obj.updateDynamic("SharePointConfiguration")(SharePointConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataSourceConfiguration]
   }
+  @scala.inline
+  implicit class DataSourceConfigurationOps[Self <: DataSourceConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDatabaseConfiguration(value: DatabaseConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabaseConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3Configuration(value: S3DataSourceConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Configuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3Configuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Configuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSharePointConfiguration(value: SharePointConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SharePointConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSharePointConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SharePointConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

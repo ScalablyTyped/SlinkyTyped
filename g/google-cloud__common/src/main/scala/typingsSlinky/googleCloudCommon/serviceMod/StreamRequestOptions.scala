@@ -1,59 +1,36 @@
 package typingsSlinky.googleCloudCommon.serviceMod
 
 import typingsSlinky.googleCloudCommon.googleCloudCommonBooleans.`true`
-import typingsSlinky.googleCloudCommon.serviceObjectMod.Interceptor
 import typingsSlinky.googleCloudCommon.utilMod.DecorateRequestOptions
-import typingsSlinky.teenyRequest.mod.Headers
-import typingsSlinky.teenyRequest.mod.RequestPart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StreamRequestOptions extends DecorateRequestOptions {
   @JSName("shouldReturnStream")
-  var shouldReturnStream_StreamRequestOptions: `true`
+  var shouldReturnStream_StreamRequestOptions: `true` = js.native
 }
 
 object StreamRequestOptions {
   @scala.inline
-  def apply(
-    shouldReturnStream: `true`,
-    uri: String,
-    autoPaginate: js.UndefOr[Boolean] = js.undefined,
-    autoPaginateVal: js.UndefOr[Boolean] = js.undefined,
-    body: String | js.Object = null,
-    forever: js.UndefOr[Boolean] = js.undefined,
-    gzip: js.UndefOr[Boolean] = js.undefined,
-    headers: Headers = null,
-    interceptors_ : js.Array[Interceptor] = null,
-    json: js.Any = null,
-    maxRetries: Int | Double = null,
-    method: String = null,
-    multipart: js.Array[RequestPart] = null,
-    objectMode: js.UndefOr[Boolean] = js.undefined,
-    proxy: String = null,
-    qs: js.Any = null,
-    timeout: Int | Double = null,
-    useQuerystring: js.UndefOr[Boolean] = js.undefined
-  ): StreamRequestOptions = {
+  def apply(shouldReturnStream: `true`, uri: String): StreamRequestOptions = {
     val __obj = js.Dynamic.literal(shouldReturnStream = shouldReturnStream.asInstanceOf[js.Any], uri = uri.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoPaginate)) __obj.updateDynamic("autoPaginate")(autoPaginate.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoPaginateVal)) __obj.updateDynamic("autoPaginateVal")(autoPaginateVal.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (!js.isUndefined(forever)) __obj.updateDynamic("forever")(forever.asInstanceOf[js.Any])
-    if (!js.isUndefined(gzip)) __obj.updateDynamic("gzip")(gzip.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (interceptors_ != null) __obj.updateDynamic("interceptors_")(interceptors_.asInstanceOf[js.Any])
-    if (json != null) __obj.updateDynamic("json")(json.asInstanceOf[js.Any])
-    if (maxRetries != null) __obj.updateDynamic("maxRetries")(maxRetries.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (multipart != null) __obj.updateDynamic("multipart")(multipart.asInstanceOf[js.Any])
-    if (!js.isUndefined(objectMode)) __obj.updateDynamic("objectMode")(objectMode.asInstanceOf[js.Any])
-    if (proxy != null) __obj.updateDynamic("proxy")(proxy.asInstanceOf[js.Any])
-    if (qs != null) __obj.updateDynamic("qs")(qs.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(useQuerystring)) __obj.updateDynamic("useQuerystring")(useQuerystring.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreamRequestOptions]
   }
+  @scala.inline
+  implicit class StreamRequestOptionsOps[Self <: StreamRequestOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withShouldReturnStream(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldReturnStream")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

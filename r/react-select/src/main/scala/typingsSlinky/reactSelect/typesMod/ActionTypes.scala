@@ -17,20 +17,18 @@ trait ActionTypes extends js.Object
 
 object ActionTypes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def clear: typingsSlinky.reactSelect.reactSelectStrings.clear = "clear".asInstanceOf[typingsSlinky.reactSelect.reactSelectStrings.clear]
   @scala.inline
-  def clear: typingsSlinky.reactSelect.reactSelectStrings.clear = this.cast("clear")
+  def `create-option`: typingsSlinky.reactSelect.reactSelectStrings.`create-option` = "create-option".asInstanceOf[typingsSlinky.reactSelect.reactSelectStrings.`create-option`]
   @scala.inline
-  def `create-option`: typingsSlinky.reactSelect.reactSelectStrings.`create-option` = this.cast("create-option")
+  def `deselect-option`: typingsSlinky.reactSelect.reactSelectStrings.`deselect-option` = "deselect-option".asInstanceOf[typingsSlinky.reactSelect.reactSelectStrings.`deselect-option`]
   @scala.inline
-  def `deselect-option`: typingsSlinky.reactSelect.reactSelectStrings.`deselect-option` = this.cast("deselect-option")
+  def `pop-value`: typingsSlinky.reactSelect.reactSelectStrings.`pop-value` = "pop-value".asInstanceOf[typingsSlinky.reactSelect.reactSelectStrings.`pop-value`]
   @scala.inline
-  def `pop-value`: typingsSlinky.reactSelect.reactSelectStrings.`pop-value` = this.cast("pop-value")
+  def `remove-value`: typingsSlinky.reactSelect.reactSelectStrings.`remove-value` = "remove-value".asInstanceOf[typingsSlinky.reactSelect.reactSelectStrings.`remove-value`]
   @scala.inline
-  def `remove-value`: typingsSlinky.reactSelect.reactSelectStrings.`remove-value` = this.cast("remove-value")
+  def `select-option`: typingsSlinky.reactSelect.reactSelectStrings.`select-option` = "select-option".asInstanceOf[typingsSlinky.reactSelect.reactSelectStrings.`select-option`]
   @scala.inline
-  def `select-option`: typingsSlinky.reactSelect.reactSelectStrings.`select-option` = this.cast("select-option")
-  @scala.inline
-  def `set-value`: typingsSlinky.reactSelect.reactSelectStrings.`set-value` = this.cast("set-value")
+  def `set-value`: typingsSlinky.reactSelect.reactSelectStrings.`set-value` = "set-value".asInstanceOf[typingsSlinky.reactSelect.reactSelectStrings.`set-value`]
 }
 

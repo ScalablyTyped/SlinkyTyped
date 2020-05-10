@@ -4,56 +4,194 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait QueryOptions extends js.Object {
-  var cache: js.UndefOr[Boolean] = js.undefined
-  var count: js.UndefOr[Boolean] = js.undefined
-  var failOnWarning: js.UndefOr[Boolean] = js.undefined
-  var fullCount: js.UndefOr[Boolean] = js.undefined
-  var intermediateCommitCount: js.UndefOr[Double] = js.undefined
-  var intermediateCommitSize: js.UndefOr[Double] = js.undefined
-  var maxNumberOfPlans: js.UndefOr[Double] = js.undefined
+  var cache: js.UndefOr[Boolean] = js.native
+  var count: js.UndefOr[Boolean] = js.native
+  var failOnWarning: js.UndefOr[Boolean] = js.native
+  var fullCount: js.UndefOr[Boolean] = js.native
+  var intermediateCommitCount: js.UndefOr[Double] = js.native
+  var intermediateCommitSize: js.UndefOr[Double] = js.native
+  var maxNumberOfPlans: js.UndefOr[Double] = js.native
   // RocksDB
-  var maxTransactionsSize: js.UndefOr[Double] = js.undefined
-  var maxWarningCount: js.UndefOr[Double] = js.undefined
-  var memoryLimit: js.UndefOr[Double] = js.undefined
-  var profile: js.UndefOr[Boolean] = js.undefined
+  var maxTransactionsSize: js.UndefOr[Double] = js.native
+  var maxWarningCount: js.UndefOr[Double] = js.native
+  var memoryLimit: js.UndefOr[Double] = js.native
+  var profile: js.UndefOr[Boolean] = js.native
   // enterprise
-  var skipInaccessibleCollections: js.UndefOr[Boolean] = js.undefined
-  var stream: js.UndefOr[Boolean] = js.undefined
+  var skipInaccessibleCollections: js.UndefOr[Boolean] = js.native
+  var stream: js.UndefOr[Boolean] = js.native
 }
 
 object QueryOptions {
   @scala.inline
-  def apply(
-    cache: js.UndefOr[Boolean] = js.undefined,
-    count: js.UndefOr[Boolean] = js.undefined,
-    failOnWarning: js.UndefOr[Boolean] = js.undefined,
-    fullCount: js.UndefOr[Boolean] = js.undefined,
-    intermediateCommitCount: Int | Double = null,
-    intermediateCommitSize: Int | Double = null,
-    maxNumberOfPlans: Int | Double = null,
-    maxTransactionsSize: Int | Double = null,
-    maxWarningCount: Int | Double = null,
-    memoryLimit: Int | Double = null,
-    profile: js.UndefOr[Boolean] = js.undefined,
-    skipInaccessibleCollections: js.UndefOr[Boolean] = js.undefined,
-    stream: js.UndefOr[Boolean] = js.undefined
-  ): QueryOptions = {
+  def apply(): QueryOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(cache)) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
-    if (!js.isUndefined(count)) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (!js.isUndefined(failOnWarning)) __obj.updateDynamic("failOnWarning")(failOnWarning.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullCount)) __obj.updateDynamic("fullCount")(fullCount.asInstanceOf[js.Any])
-    if (intermediateCommitCount != null) __obj.updateDynamic("intermediateCommitCount")(intermediateCommitCount.asInstanceOf[js.Any])
-    if (intermediateCommitSize != null) __obj.updateDynamic("intermediateCommitSize")(intermediateCommitSize.asInstanceOf[js.Any])
-    if (maxNumberOfPlans != null) __obj.updateDynamic("maxNumberOfPlans")(maxNumberOfPlans.asInstanceOf[js.Any])
-    if (maxTransactionsSize != null) __obj.updateDynamic("maxTransactionsSize")(maxTransactionsSize.asInstanceOf[js.Any])
-    if (maxWarningCount != null) __obj.updateDynamic("maxWarningCount")(maxWarningCount.asInstanceOf[js.Any])
-    if (memoryLimit != null) __obj.updateDynamic("memoryLimit")(memoryLimit.asInstanceOf[js.Any])
-    if (!js.isUndefined(profile)) __obj.updateDynamic("profile")(profile.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipInaccessibleCollections)) __obj.updateDynamic("skipInaccessibleCollections")(skipInaccessibleCollections.asInstanceOf[js.Any])
-    if (!js.isUndefined(stream)) __obj.updateDynamic("stream")(stream.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryOptions]
   }
+  @scala.inline
+  implicit class QueryOptionsOps[Self <: QueryOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCache(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCount(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailOnWarning(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failOnWarning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailOnWarning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failOnWarning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFullCount(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntermediateCommitCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intermediateCommitCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntermediateCommitCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intermediateCommitCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntermediateCommitSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intermediateCommitSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntermediateCommitSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intermediateCommitSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxNumberOfPlans(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNumberOfPlans")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxNumberOfPlans: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNumberOfPlans")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxTransactionsSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTransactionsSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxTransactionsSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTransactionsSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxWarningCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWarningCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxWarningCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWarningCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMemoryLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memoryLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMemoryLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memoryLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfile(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipInaccessibleCollections(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipInaccessibleCollections")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipInaccessibleCollections: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipInaccessibleCollections")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStream(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStream: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

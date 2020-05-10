@@ -1,6 +1,5 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +29,7 @@ trait baseSeriesObject extends js.Object {
   def getPointsByArg(pointArg: String): js.Array[basePointObject] = js.native
   /** Gets a series point with the specified argument value. */
   def getPointsByArg(pointArg: Double): js.Array[basePointObject] = js.native
-  def getPointsByArg(pointArg: Date): js.Array[basePointObject] = js.native
+  def getPointsByArg(pointArg: js.Date): js.Array[basePointObject] = js.native
   /** Gets visible series points. */
   def getVisiblePoints(): js.Array[basePointObject] = js.native
   /** Hides a series at runtime. */

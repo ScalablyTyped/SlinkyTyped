@@ -19,10 +19,29 @@ trait SchemaPartition extends js.Object {
 
 object SchemaPartition {
   @scala.inline
-  def apply(partitionToken: String = null): SchemaPartition = {
+  def apply(): SchemaPartition = {
     val __obj = js.Dynamic.literal()
-    if (partitionToken != null) __obj.updateDynamic("partitionToken")(partitionToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPartition]
   }
+  @scala.inline
+  implicit class SchemaPartitionOps[Self <: SchemaPartition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPartitionToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartitionToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

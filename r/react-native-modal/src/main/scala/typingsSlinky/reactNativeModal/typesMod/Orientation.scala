@@ -15,16 +15,14 @@ trait Orientation extends js.Object
 
 object Orientation {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def landscape: typingsSlinky.reactNativeModal.reactNativeModalStrings.landscape = "landscape".asInstanceOf[typingsSlinky.reactNativeModal.reactNativeModalStrings.landscape]
   @scala.inline
-  def landscape: typingsSlinky.reactNativeModal.reactNativeModalStrings.landscape = this.cast("landscape")
+  def `landscape-left`: typingsSlinky.reactNativeModal.reactNativeModalStrings.`landscape-left` = "landscape-left".asInstanceOf[typingsSlinky.reactNativeModal.reactNativeModalStrings.`landscape-left`]
   @scala.inline
-  def `landscape-left`: typingsSlinky.reactNativeModal.reactNativeModalStrings.`landscape-left` = this.cast("landscape-left")
+  def `landscape-right`: typingsSlinky.reactNativeModal.reactNativeModalStrings.`landscape-right` = "landscape-right".asInstanceOf[typingsSlinky.reactNativeModal.reactNativeModalStrings.`landscape-right`]
   @scala.inline
-  def `landscape-right`: typingsSlinky.reactNativeModal.reactNativeModalStrings.`landscape-right` = this.cast("landscape-right")
+  def portrait: typingsSlinky.reactNativeModal.reactNativeModalStrings.portrait = "portrait".asInstanceOf[typingsSlinky.reactNativeModal.reactNativeModalStrings.portrait]
   @scala.inline
-  def portrait: typingsSlinky.reactNativeModal.reactNativeModalStrings.portrait = this.cast("portrait")
-  @scala.inline
-  def `portrait-upside-down`: typingsSlinky.reactNativeModal.reactNativeModalStrings.`portrait-upside-down` = this.cast("portrait-upside-down")
+  def `portrait-upside-down`: typingsSlinky.reactNativeModal.reactNativeModalStrings.`portrait-upside-down` = "portrait-upside-down".asInstanceOf[typingsSlinky.reactNativeModal.reactNativeModalStrings.`portrait-upside-down`]
 }
 

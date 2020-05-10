@@ -7,13 +7,23 @@ import scala.scalajs.js.annotation._
 package object mod {
   type FormatFn = js.Function3[
     /* tokens */ typingsSlinky.morgan.mod.TokenIndexer, 
-    /* req */ typingsSlinky.express.mod.Request_[typingsSlinky.expressServeStaticCore.mod.ParamsDictionary], 
-    /* res */ typingsSlinky.express.mod.Response_, 
+    /* req */ typingsSlinky.express.mod.Request_[
+      typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
+      js.Any, 
+      js.Any, 
+      typingsSlinky.expressServeStaticCore.mod.Query
+    ], 
+    /* res */ typingsSlinky.express.mod.Response_[js.Any], 
     js.UndefOr[java.lang.String | scala.Null]
   ]
   type TokenCallbackFn = js.Function3[
-    /* req */ typingsSlinky.express.mod.Request_[typingsSlinky.expressServeStaticCore.mod.ParamsDictionary], 
-    /* res */ typingsSlinky.express.mod.Response_, 
+    /* req */ typingsSlinky.express.mod.Request_[
+      typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
+      js.Any, 
+      js.Any, 
+      typingsSlinky.expressServeStaticCore.mod.Query
+    ], 
+    /* res */ typingsSlinky.express.mod.Response_[js.Any], 
     /* arg */ js.UndefOr[java.lang.String | scala.Double | scala.Boolean], 
     js.UndefOr[java.lang.String]
   ]

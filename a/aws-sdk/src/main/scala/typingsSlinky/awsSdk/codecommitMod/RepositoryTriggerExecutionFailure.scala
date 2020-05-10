@@ -18,14 +18,41 @@ trait RepositoryTriggerExecutionFailure extends js.Object {
 
 object RepositoryTriggerExecutionFailure {
   @scala.inline
-  def apply(
-    failureMessage: RepositoryTriggerExecutionFailureMessage = null,
-    trigger: RepositoryTriggerName = null
-  ): RepositoryTriggerExecutionFailure = {
+  def apply(): RepositoryTriggerExecutionFailure = {
     val __obj = js.Dynamic.literal()
-    if (failureMessage != null) __obj.updateDynamic("failureMessage")(failureMessage.asInstanceOf[js.Any])
-    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
     __obj.asInstanceOf[RepositoryTriggerExecutionFailure]
   }
+  @scala.inline
+  implicit class RepositoryTriggerExecutionFailureOps[Self <: RepositoryTriggerExecutionFailure] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailureMessage(value: RepositoryTriggerExecutionFailureMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrigger(value: RepositoryTriggerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrigger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

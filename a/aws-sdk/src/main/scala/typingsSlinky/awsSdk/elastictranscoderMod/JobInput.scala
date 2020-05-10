@@ -50,30 +50,137 @@ trait JobInput extends js.Object {
 
 object JobInput {
   @scala.inline
-  def apply(
-    AspectRatio: AspectRatio = null,
-    Container: JobContainer = null,
-    DetectedProperties: DetectedProperties = null,
-    Encryption: Encryption = null,
-    FrameRate: FrameRate = null,
-    InputCaptions: InputCaptions = null,
-    Interlaced: Interlaced = null,
-    Key: LongKey = null,
-    Resolution: Resolution = null,
-    TimeSpan: TimeSpan = null
-  ): JobInput = {
+  def apply(): JobInput = {
     val __obj = js.Dynamic.literal()
-    if (AspectRatio != null) __obj.updateDynamic("AspectRatio")(AspectRatio.asInstanceOf[js.Any])
-    if (Container != null) __obj.updateDynamic("Container")(Container.asInstanceOf[js.Any])
-    if (DetectedProperties != null) __obj.updateDynamic("DetectedProperties")(DetectedProperties.asInstanceOf[js.Any])
-    if (Encryption != null) __obj.updateDynamic("Encryption")(Encryption.asInstanceOf[js.Any])
-    if (FrameRate != null) __obj.updateDynamic("FrameRate")(FrameRate.asInstanceOf[js.Any])
-    if (InputCaptions != null) __obj.updateDynamic("InputCaptions")(InputCaptions.asInstanceOf[js.Any])
-    if (Interlaced != null) __obj.updateDynamic("Interlaced")(Interlaced.asInstanceOf[js.Any])
-    if (Key != null) __obj.updateDynamic("Key")(Key.asInstanceOf[js.Any])
-    if (Resolution != null) __obj.updateDynamic("Resolution")(Resolution.asInstanceOf[js.Any])
-    if (TimeSpan != null) __obj.updateDynamic("TimeSpan")(TimeSpan.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobInput]
   }
+  @scala.inline
+  implicit class JobInputOps[Self <: JobInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAspectRatio(value: AspectRatio): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AspectRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAspectRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AspectRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainer(value: JobContainer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Container")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDetectedProperties(value: DetectedProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectedProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetectedProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectedProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryption(value: Encryption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrameRate(value: FrameRate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FrameRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FrameRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputCaptions(value: InputCaptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputCaptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputCaptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputCaptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterlaced(value: Interlaced): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Interlaced")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterlaced: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Interlaced")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: LongKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolution(value: Resolution): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Resolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Resolution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeSpan(value: TimeSpan): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeSpan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeSpan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeSpan")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

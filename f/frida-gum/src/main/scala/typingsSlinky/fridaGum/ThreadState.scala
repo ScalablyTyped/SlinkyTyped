@@ -15,16 +15,14 @@ trait ThreadState extends js.Object
 
 object ThreadState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def halted: typingsSlinky.fridaGum.fridaGumStrings.halted = "halted".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.halted]
   @scala.inline
-  def halted: typingsSlinky.fridaGum.fridaGumStrings.halted = this.cast("halted")
+  def running: typingsSlinky.fridaGum.fridaGumStrings.running = "running".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.running]
   @scala.inline
-  def running: typingsSlinky.fridaGum.fridaGumStrings.running = this.cast("running")
+  def stopped: typingsSlinky.fridaGum.fridaGumStrings.stopped = "stopped".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.stopped]
   @scala.inline
-  def stopped: typingsSlinky.fridaGum.fridaGumStrings.stopped = this.cast("stopped")
+  def uninterruptible: typingsSlinky.fridaGum.fridaGumStrings.uninterruptible = "uninterruptible".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.uninterruptible]
   @scala.inline
-  def uninterruptible: typingsSlinky.fridaGum.fridaGumStrings.uninterruptible = this.cast("uninterruptible")
-  @scala.inline
-  def waiting: typingsSlinky.fridaGum.fridaGumStrings.waiting = this.cast("waiting")
+  def waiting: typingsSlinky.fridaGum.fridaGumStrings.waiting = "waiting".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.waiting]
 }
 

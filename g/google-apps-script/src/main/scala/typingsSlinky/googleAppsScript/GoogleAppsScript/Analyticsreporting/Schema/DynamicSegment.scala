@@ -4,24 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DynamicSegment extends js.Object {
-  var name: js.UndefOr[String] = js.undefined
-  var sessionSegment: js.UndefOr[SegmentDefinition] = js.undefined
-  var userSegment: js.UndefOr[SegmentDefinition] = js.undefined
+  var name: js.UndefOr[String] = js.native
+  var sessionSegment: js.UndefOr[SegmentDefinition] = js.native
+  var userSegment: js.UndefOr[SegmentDefinition] = js.native
 }
 
 object DynamicSegment {
   @scala.inline
-  def apply(
-    name: String = null,
-    sessionSegment: SegmentDefinition = null,
-    userSegment: SegmentDefinition = null
-  ): DynamicSegment = {
+  def apply(): DynamicSegment = {
     val __obj = js.Dynamic.literal()
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (sessionSegment != null) __obj.updateDynamic("sessionSegment")(sessionSegment.asInstanceOf[js.Any])
-    if (userSegment != null) __obj.updateDynamic("userSegment")(userSegment.asInstanceOf[js.Any])
     __obj.asInstanceOf[DynamicSegment]
   }
+  @scala.inline
+  implicit class DynamicSegmentOps[Self <: DynamicSegment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionSegment(value: SegmentDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionSegment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionSegment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionSegment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserSegment(value: SegmentDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userSegment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserSegment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userSegment")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

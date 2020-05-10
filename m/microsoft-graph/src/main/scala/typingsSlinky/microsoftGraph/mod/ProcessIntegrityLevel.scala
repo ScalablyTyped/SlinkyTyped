@@ -18,20 +18,18 @@ trait ProcessIntegrityLevel extends js.Object
 
 object ProcessIntegrityLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def high: typingsSlinky.microsoftGraph.microsoftGraphStrings.high = "high".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.high]
   @scala.inline
-  def high: typingsSlinky.microsoftGraph.microsoftGraphStrings.high = this.cast("high")
+  def low: typingsSlinky.microsoftGraph.microsoftGraphStrings.low = "low".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.low]
   @scala.inline
-  def low: typingsSlinky.microsoftGraph.microsoftGraphStrings.low = this.cast("low")
+  def medium: typingsSlinky.microsoftGraph.microsoftGraphStrings.medium = "medium".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.medium]
   @scala.inline
-  def medium: typingsSlinky.microsoftGraph.microsoftGraphStrings.medium = this.cast("medium")
+  def system: typingsSlinky.microsoftGraph.microsoftGraphStrings.system = "system".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.system]
   @scala.inline
-  def system: typingsSlinky.microsoftGraph.microsoftGraphStrings.system = this.cast("system")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
   @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
   @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
-  @scala.inline
-  def untrusted: typingsSlinky.microsoftGraph.microsoftGraphStrings.untrusted = this.cast("untrusted")
+  def untrusted: typingsSlinky.microsoftGraph.microsoftGraphStrings.untrusted = "untrusted".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.untrusted]
 }
 

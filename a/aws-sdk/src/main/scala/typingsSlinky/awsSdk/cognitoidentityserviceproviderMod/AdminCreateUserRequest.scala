@@ -46,26 +46,113 @@ trait AdminCreateUserRequest extends js.Object {
 
 object AdminCreateUserRequest {
   @scala.inline
-  def apply(
-    UserPoolId: UserPoolIdType,
-    Username: UsernameType,
-    ClientMetadata: ClientMetadataType = null,
-    DesiredDeliveryMediums: DeliveryMediumListType = null,
-    ForceAliasCreation: js.UndefOr[Boolean] = js.undefined,
-    MessageAction: MessageActionType = null,
-    TemporaryPassword: PasswordType = null,
-    UserAttributes: AttributeListType = null,
-    ValidationData: AttributeListType = null
-  ): AdminCreateUserRequest = {
+  def apply(UserPoolId: UserPoolIdType, Username: UsernameType): AdminCreateUserRequest = {
     val __obj = js.Dynamic.literal(UserPoolId = UserPoolId.asInstanceOf[js.Any], Username = Username.asInstanceOf[js.Any])
-    if (ClientMetadata != null) __obj.updateDynamic("ClientMetadata")(ClientMetadata.asInstanceOf[js.Any])
-    if (DesiredDeliveryMediums != null) __obj.updateDynamic("DesiredDeliveryMediums")(DesiredDeliveryMediums.asInstanceOf[js.Any])
-    if (!js.isUndefined(ForceAliasCreation)) __obj.updateDynamic("ForceAliasCreation")(ForceAliasCreation.asInstanceOf[js.Any])
-    if (MessageAction != null) __obj.updateDynamic("MessageAction")(MessageAction.asInstanceOf[js.Any])
-    if (TemporaryPassword != null) __obj.updateDynamic("TemporaryPassword")(TemporaryPassword.asInstanceOf[js.Any])
-    if (UserAttributes != null) __obj.updateDynamic("UserAttributes")(UserAttributes.asInstanceOf[js.Any])
-    if (ValidationData != null) __obj.updateDynamic("ValidationData")(ValidationData.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdminCreateUserRequest]
   }
+  @scala.inline
+  implicit class AdminCreateUserRequestOps[Self <: AdminCreateUserRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUserPoolId(value: UserPoolIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsername(value: UsernameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientMetadata(value: ClientMetadataType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredDeliveryMediums(value: DeliveryMediumListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredDeliveryMediums")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredDeliveryMediums: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredDeliveryMediums")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceAliasCreation(value: ForceAliasCreation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForceAliasCreation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceAliasCreation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForceAliasCreation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessageAction(value: MessageActionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemporaryPassword(value: PasswordType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemporaryPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemporaryPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemporaryPassword")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserAttributes(value: AttributeListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidationData(value: AttributeListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidationData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationData")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

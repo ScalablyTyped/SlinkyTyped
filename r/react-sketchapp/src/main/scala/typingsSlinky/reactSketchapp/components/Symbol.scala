@@ -1,34 +1,33 @@
 package typingsSlinky.reactSketchapp.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSketchapp.symbolMod.SymbolProps
 import typingsSlinky.reactSketchapp.symbolMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Symbol
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Symbol {
   @JSImport("react-sketchapp/lib/components/Svg/Symbol", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    id: String,
-    preserveAspectRatio: String = null,
-    viewBox: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    if (preserveAspectRatio != null) __obj.updateDynamic("preserveAspectRatio")(preserveAspectRatio.asInstanceOf[js.Any])
-    if (viewBox != null) __obj.updateDynamic("viewBox")(viewBox.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def preserveAspectRatio(value: String): this.type = set("preserveAspectRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def viewBox(value: String): this.type = set("viewBox", value.asInstanceOf[js.Any])
   }
-  type Props = SymbolProps
+  
+  def withProps(p: SymbolProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(id: String): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SymbolProps]))
+  }
 }
 

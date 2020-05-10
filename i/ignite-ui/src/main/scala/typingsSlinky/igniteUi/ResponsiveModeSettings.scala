@@ -5,36 +5,79 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ResponsiveModeSettings
   extends /**
-	 * Option for ResponsiveModeSettings
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
-  var maxHeight: js.UndefOr[js.Any] = js.undefined
-  var maxWidth: js.UndefOr[js.Any] = js.undefined
-  var minHeight: js.UndefOr[Double] = js.undefined
-  var minWidth: js.UndefOr[Double] = js.undefined
+  var maxHeight: js.UndefOr[js.Any] = js.native
+  var maxWidth: js.UndefOr[js.Any] = js.native
+  var minHeight: js.UndefOr[Double] = js.native
+  var minWidth: js.UndefOr[Double] = js.native
 }
 
 object ResponsiveModeSettings {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for ResponsiveModeSettings
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    maxHeight: js.Any = null,
-    maxWidth: js.Any = null,
-    minHeight: Int | Double = null,
-    minWidth: Int | Double = null
-  ): ResponsiveModeSettings = {
+  def apply(): ResponsiveModeSettings = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (minHeight != null) __obj.updateDynamic("minHeight")(minHeight.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResponsiveModeSettings]
   }
+  @scala.inline
+  implicit class ResponsiveModeSettingsOps[Self <: ResponsiveModeSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxHeight(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxWidth(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,10 +12,8 @@ trait ResponseStatus extends js.Object
 
 object ResponseStatus {
   @scala.inline
-  def FAILED: typingsSlinky.cfnResponse.cfnResponseStrings.FAILED = this.cast("FAILED")
+  def FAILED: typingsSlinky.cfnResponse.cfnResponseStrings.FAILED = "FAILED".asInstanceOf[typingsSlinky.cfnResponse.cfnResponseStrings.FAILED]
   @scala.inline
-  def SUCCESS: typingsSlinky.cfnResponse.cfnResponseStrings.SUCCESS = this.cast("SUCCESS")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SUCCESS: typingsSlinky.cfnResponse.cfnResponseStrings.SUCCESS = "SUCCESS".asInstanceOf[typingsSlinky.cfnResponse.cfnResponseStrings.SUCCESS]
 }
 

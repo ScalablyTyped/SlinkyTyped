@@ -23,16 +23,53 @@ trait GetSavingsPlansUtilizationDetailsResponse extends js.Object {
 
 object GetSavingsPlansUtilizationDetailsResponse {
   @scala.inline
-  def apply(
-    SavingsPlansUtilizationDetails: SavingsPlansUtilizationDetails,
-    TimePeriod: DateInterval,
-    NextToken: NextPageToken = null,
-    Total: SavingsPlansUtilizationAggregates = null
-  ): GetSavingsPlansUtilizationDetailsResponse = {
+  def apply(SavingsPlansUtilizationDetails: SavingsPlansUtilizationDetails, TimePeriod: DateInterval): GetSavingsPlansUtilizationDetailsResponse = {
     val __obj = js.Dynamic.literal(SavingsPlansUtilizationDetails = SavingsPlansUtilizationDetails.asInstanceOf[js.Any], TimePeriod = TimePeriod.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (Total != null) __obj.updateDynamic("Total")(Total.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSavingsPlansUtilizationDetailsResponse]
   }
+  @scala.inline
+  implicit class GetSavingsPlansUtilizationDetailsResponseOps[Self <: GetSavingsPlansUtilizationDetailsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSavingsPlansUtilizationDetails(value: SavingsPlansUtilizationDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SavingsPlansUtilizationDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimePeriod(value: DateInterval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimePeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextPageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotal(value: SavingsPlansUtilizationAggregates): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Total")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Total")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

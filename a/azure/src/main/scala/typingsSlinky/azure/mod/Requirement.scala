@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Requirement extends js.Object {
-  var SettingName: String
-  var SettingPredicate: js.Function
+  var SettingName: String = js.native
+  var SettingPredicate: js.Function = js.native
 }
 
 object Requirement {
   @scala.inline
   def apply(SettingName: String, SettingPredicate: js.Function): Requirement = {
     val __obj = js.Dynamic.literal(SettingName = SettingName.asInstanceOf[js.Any], SettingPredicate = SettingPredicate.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Requirement]
   }
+  @scala.inline
+  implicit class RequirementOps[Self <: Requirement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSettingName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SettingName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSettingPredicate(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SettingPredicate")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

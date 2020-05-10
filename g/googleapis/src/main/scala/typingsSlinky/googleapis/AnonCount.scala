@@ -12,11 +12,41 @@ trait AnonCount extends js.Object {
 
 object AnonCount {
   @scala.inline
-  def apply(count: String = null, timeRange: String = null): AnonCount = {
+  def apply(): AnonCount = {
     val __obj = js.Dynamic.literal()
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (timeRange != null) __obj.updateDynamic("timeRange")(timeRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCount]
   }
+  @scala.inline
+  implicit class AnonCountOps[Self <: AnonCount] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeRange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

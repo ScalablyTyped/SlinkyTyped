@@ -5,41 +5,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ISpringOptions extends IForceOptions {
-  var anchor: js.UndefOr[Vec3] = js.undefined
-  var damping: js.UndefOr[Double] = js.undefined
-  var dampingRatio: js.UndefOr[Double] = js.undefined
-  var length: js.UndefOr[Double] = js.undefined
-  var maxLength: js.UndefOr[Double] = js.undefined
-  var period: js.UndefOr[Double] = js.undefined
-  var stiffness: js.UndefOr[Double] = js.undefined
-  var `type`: js.UndefOr[js.Function2[/* dist */ js.Any, /* rMax */ js.Any, Double]] = js.undefined
+  var anchor: js.UndefOr[Vec3] = js.native
+  var damping: js.UndefOr[Double] = js.native
+  var dampingRatio: js.UndefOr[Double] = js.native
+  var length: js.UndefOr[Double] = js.native
+  var maxLength: js.UndefOr[Double] = js.native
+  var period: js.UndefOr[Double] = js.native
+  var stiffness: js.UndefOr[Double] = js.native
+  var `type`: js.UndefOr[js.Function2[/* dist */ js.Any, /* rMax */ js.Any, Double]] = js.native
 }
 
 object ISpringOptions {
   @scala.inline
-  def apply(
-    anchor: Vec3 = null,
-    damping: Int | Double = null,
-    dampingRatio: Int | Double = null,
-    length: Int | Double = null,
-    maxLength: Int | Double = null,
-    period: Int | Double = null,
-    stiffness: Int | Double = null,
-    targets: js.Array[_] = null,
-    `type`: (/* dist */ js.Any, /* rMax */ js.Any) => Double = null
-  ): ISpringOptions = {
+  def apply(): ISpringOptions = {
     val __obj = js.Dynamic.literal()
-    if (anchor != null) __obj.updateDynamic("anchor")(anchor.asInstanceOf[js.Any])
-    if (damping != null) __obj.updateDynamic("damping")(damping.asInstanceOf[js.Any])
-    if (dampingRatio != null) __obj.updateDynamic("dampingRatio")(dampingRatio.asInstanceOf[js.Any])
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
-    if (maxLength != null) __obj.updateDynamic("maxLength")(maxLength.asInstanceOf[js.Any])
-    if (period != null) __obj.updateDynamic("period")(period.asInstanceOf[js.Any])
-    if (stiffness != null) __obj.updateDynamic("stiffness")(stiffness.asInstanceOf[js.Any])
-    if (targets != null) __obj.updateDynamic("targets")(targets.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(js.Any.fromFunction2(`type`))
     __obj.asInstanceOf[ISpringOptions]
   }
+  @scala.inline
+  implicit class ISpringOptionsOps[Self <: ISpringOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnchor(value: Vec3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnchor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDamping(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("damping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDamping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("damping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDampingRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dampingRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDampingRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dampingRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeriod(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStiffness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stiffness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStiffness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stiffness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: (/* dist */ js.Any, /* rMax */ js.Any) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

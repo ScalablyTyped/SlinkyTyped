@@ -13,213 +13,881 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<hls.js.hls.js.Config> */
+@js.native
 trait PartialConfig extends js.Object {
-  var abrBandWidthFactor: js.UndefOr[Double] = js.undefined
-  var abrBandWidthUpFactor: js.UndefOr[Double] = js.undefined
-  var abrController: js.UndefOr[AbrController] = js.undefined
-  var abrEwmaDefaultEstimate: js.UndefOr[Double] = js.undefined
-  var abrEwmaFastLive: js.UndefOr[Double] = js.undefined
-  var abrEwmaFastVod: js.UndefOr[Double] = js.undefined
-  var abrEwmaSlowLive: js.UndefOr[Double] = js.undefined
-  var abrEwmaSlowVod: js.UndefOr[Double] = js.undefined
-  var abrMaxWithRealBitrate: js.UndefOr[Boolean] = js.undefined
-  var appendErrorMaxRetry: js.UndefOr[Double] = js.undefined
-  var autoStartLoad: js.UndefOr[Boolean] = js.undefined
-  var capLevelToPlayerSize: js.UndefOr[Boolean] = js.undefined
-  var captionsTextTrack1Label: js.UndefOr[String] = js.undefined
-  var captionsTextTrack1LanguagedCode: js.UndefOr[String] = js.undefined
-  var captionsTextTrack2Label: js.UndefOr[String] = js.undefined
-  var captionsTextTrack2LanguageCode: js.UndefOr[String] = js.undefined
-  var debug: js.UndefOr[Boolean | CustomLoggerObject] = js.undefined
-  var defaultAudioCodec: js.UndefOr[String] = js.undefined
-  var enableCEA708Captions: js.UndefOr[Boolean] = js.undefined
-  var enableSoftwareAES: js.UndefOr[Boolean] = js.undefined
-  var enableWebVTT: js.UndefOr[Boolean] = js.undefined
-  var enableWorker: js.UndefOr[Boolean] = js.undefined
-  var fLoader: js.UndefOr[Instantiable1[/* config */ LoaderConfig, Loader]] = js.undefined
-  var fetchSetup: js.UndefOr[js.Function2[/* context */ js.Any, /* initParams */ js.Any, Request]] = js.undefined
-  var forceKeyFrameOnDiscontinuity: js.UndefOr[Boolean] = js.undefined
-  var fragLoadingMaxRetry: js.UndefOr[Double] = js.undefined
-  var fragLoadingMaxRetryDelay: js.UndefOr[Double] = js.undefined
-  var fragLoadingRetryDelay: js.UndefOr[Double] = js.undefined
-  var fragLoadingTimeOut: js.UndefOr[Double] = js.undefined
-  var highBufferWatchdogPeriod: js.UndefOr[Double] = js.undefined
-  var initialLiveManifestSize: js.UndefOr[Double] = js.undefined
-  var levelLoadingMaxRetry: js.UndefOr[Double] = js.undefined
-  var levelLoadingMaxRetryTimeout: js.UndefOr[Double] = js.undefined
-  var levelLoadingRetryDelay: js.UndefOr[Double] = js.undefined
-  var levelLoadingTimeOut: js.UndefOr[Double] = js.undefined
-  var liveBackBufferLength: js.UndefOr[Double] = js.undefined
-  var liveDurationInfinity: js.UndefOr[Boolean] = js.undefined
-  var liveMaxLatencyDuration: js.UndefOr[Double] = js.undefined
-  var liveMaxLatencyDurationCount: js.UndefOr[Double] = js.undefined
-  var liveSyncDuration: js.UndefOr[Double] = js.undefined
-  var liveSyncDurationCount: js.UndefOr[Double] = js.undefined
-  var loader: js.UndefOr[Instantiable1[/* config */ LoaderConfig, Loader]] = js.undefined
-  var lowBufferWatchdogPeriod: js.UndefOr[Double] = js.undefined
-  var manifestLoadingMaxRetry: js.UndefOr[Double] = js.undefined
-  var manifestLoadingMaxRetryTimeout: js.UndefOr[Double] = js.undefined
-  var manifestLoadingRetryDelay: js.UndefOr[Double] = js.undefined
-  var manifestLoadingTimeOut: js.UndefOr[Double] = js.undefined
-  var maxAudioFramesDrift: js.UndefOr[Double] = js.undefined
-  var maxBufferHole: js.UndefOr[Double] = js.undefined
-  var maxBufferLength: js.UndefOr[Double] = js.undefined
-  var maxBufferSize: js.UndefOr[Double] = js.undefined
-  var maxFragLookUpTolerance: js.UndefOr[Double] = js.undefined
-  var maxLoadingDelay: js.UndefOr[Double] = js.undefined
-  var maxMaxBufferLength: js.UndefOr[Double] = js.undefined
-  var maxSeekHole: js.UndefOr[Double] = js.undefined
-  var maxStarvationDelay: js.UndefOr[Double] = js.undefined
-  var minAutoBitrate: js.UndefOr[Double] = js.undefined
-  var nudgeMaxRetry: js.UndefOr[Double] = js.undefined
-  var nudgeOffset: js.UndefOr[Double] = js.undefined
-  var pLoader: js.UndefOr[Instantiable1[/* config */ LoaderConfig, Loader]] = js.undefined
-  var startFragPrefetch: js.UndefOr[Boolean] = js.undefined
-  var startLevel: js.UndefOr[Double] = js.undefined
-  var startPosition: js.UndefOr[Double] = js.undefined
-  var stretchShortVideoTrack: js.UndefOr[Boolean] = js.undefined
-  var timelineController: js.UndefOr[TimelineController] = js.undefined
-  var xhrSetup: js.UndefOr[js.Function2[/* xhr */ XMLHttpRequest, /* url */ String, Unit]] = js.undefined
+  var abrBandWidthFactor: js.UndefOr[Double] = js.native
+  var abrBandWidthUpFactor: js.UndefOr[Double] = js.native
+  var abrController: js.UndefOr[AbrController] = js.native
+  var abrEwmaDefaultEstimate: js.UndefOr[Double] = js.native
+  var abrEwmaFastLive: js.UndefOr[Double] = js.native
+  var abrEwmaFastVod: js.UndefOr[Double] = js.native
+  var abrEwmaSlowLive: js.UndefOr[Double] = js.native
+  var abrEwmaSlowVod: js.UndefOr[Double] = js.native
+  var abrMaxWithRealBitrate: js.UndefOr[Boolean] = js.native
+  var appendErrorMaxRetry: js.UndefOr[Double] = js.native
+  var autoStartLoad: js.UndefOr[Boolean] = js.native
+  var capLevelToPlayerSize: js.UndefOr[Boolean] = js.native
+  var captionsTextTrack1Label: js.UndefOr[String] = js.native
+  var captionsTextTrack1LanguagedCode: js.UndefOr[String] = js.native
+  var captionsTextTrack2Label: js.UndefOr[String] = js.native
+  var captionsTextTrack2LanguageCode: js.UndefOr[String] = js.native
+  var debug: js.UndefOr[Boolean | CustomLoggerObject] = js.native
+  var defaultAudioCodec: js.UndefOr[String] = js.native
+  var enableCEA708Captions: js.UndefOr[Boolean] = js.native
+  var enableSoftwareAES: js.UndefOr[Boolean] = js.native
+  var enableWebVTT: js.UndefOr[Boolean] = js.native
+  var enableWorker: js.UndefOr[Boolean] = js.native
+  var fLoader: js.UndefOr[Instantiable1[/* config */ LoaderConfig, Loader]] = js.native
+  var fetchSetup: js.UndefOr[js.Function2[/* context */ js.Any, /* initParams */ js.Any, Request]] = js.native
+  var forceKeyFrameOnDiscontinuity: js.UndefOr[Boolean] = js.native
+  var fragLoadingMaxRetry: js.UndefOr[Double] = js.native
+  var fragLoadingMaxRetryDelay: js.UndefOr[Double] = js.native
+  var fragLoadingRetryDelay: js.UndefOr[Double] = js.native
+  var fragLoadingTimeOut: js.UndefOr[Double] = js.native
+  var highBufferWatchdogPeriod: js.UndefOr[Double] = js.native
+  var initialLiveManifestSize: js.UndefOr[Double] = js.native
+  var levelLoadingMaxRetry: js.UndefOr[Double] = js.native
+  var levelLoadingMaxRetryTimeout: js.UndefOr[Double] = js.native
+  var levelLoadingRetryDelay: js.UndefOr[Double] = js.native
+  var levelLoadingTimeOut: js.UndefOr[Double] = js.native
+  var liveBackBufferLength: js.UndefOr[Double] = js.native
+  var liveDurationInfinity: js.UndefOr[Boolean] = js.native
+  var liveMaxLatencyDuration: js.UndefOr[Double] = js.native
+  var liveMaxLatencyDurationCount: js.UndefOr[Double] = js.native
+  var liveSyncDuration: js.UndefOr[Double] = js.native
+  var liveSyncDurationCount: js.UndefOr[Double] = js.native
+  var loader: js.UndefOr[Instantiable1[/* config */ LoaderConfig, Loader]] = js.native
+  var lowBufferWatchdogPeriod: js.UndefOr[Double] = js.native
+  var manifestLoadingMaxRetry: js.UndefOr[Double] = js.native
+  var manifestLoadingMaxRetryTimeout: js.UndefOr[Double] = js.native
+  var manifestLoadingRetryDelay: js.UndefOr[Double] = js.native
+  var manifestLoadingTimeOut: js.UndefOr[Double] = js.native
+  var maxAudioFramesDrift: js.UndefOr[Double] = js.native
+  var maxBufferHole: js.UndefOr[Double] = js.native
+  var maxBufferLength: js.UndefOr[Double] = js.native
+  var maxBufferSize: js.UndefOr[Double] = js.native
+  var maxFragLookUpTolerance: js.UndefOr[Double] = js.native
+  var maxLoadingDelay: js.UndefOr[Double] = js.native
+  var maxMaxBufferLength: js.UndefOr[Double] = js.native
+  var maxSeekHole: js.UndefOr[Double] = js.native
+  var maxStarvationDelay: js.UndefOr[Double] = js.native
+  var minAutoBitrate: js.UndefOr[Double] = js.native
+  var nudgeMaxRetry: js.UndefOr[Double] = js.native
+  var nudgeOffset: js.UndefOr[Double] = js.native
+  var pLoader: js.UndefOr[Instantiable1[/* config */ LoaderConfig, Loader]] = js.native
+  var startFragPrefetch: js.UndefOr[Boolean] = js.native
+  var startLevel: js.UndefOr[Double] = js.native
+  var startPosition: js.UndefOr[Double] = js.native
+  var stretchShortVideoTrack: js.UndefOr[Boolean] = js.native
+  var timelineController: js.UndefOr[TimelineController] = js.native
+  var xhrSetup: js.UndefOr[js.Function2[/* xhr */ XMLHttpRequest, /* url */ String, Unit]] = js.native
 }
 
 object PartialConfig {
   @scala.inline
-  def apply(
-    abrBandWidthFactor: Int | Double = null,
-    abrBandWidthUpFactor: Int | Double = null,
-    abrController: AbrController = null,
-    abrEwmaDefaultEstimate: Int | Double = null,
-    abrEwmaFastLive: Int | Double = null,
-    abrEwmaFastVod: Int | Double = null,
-    abrEwmaSlowLive: Int | Double = null,
-    abrEwmaSlowVod: Int | Double = null,
-    abrMaxWithRealBitrate: js.UndefOr[Boolean] = js.undefined,
-    appendErrorMaxRetry: Int | Double = null,
-    autoStartLoad: js.UndefOr[Boolean] = js.undefined,
-    capLevelToPlayerSize: js.UndefOr[Boolean] = js.undefined,
-    captionsTextTrack1Label: String = null,
-    captionsTextTrack1LanguagedCode: String = null,
-    captionsTextTrack2Label: String = null,
-    captionsTextTrack2LanguageCode: String = null,
-    debug: Boolean | CustomLoggerObject = null,
-    defaultAudioCodec: String = null,
-    enableCEA708Captions: js.UndefOr[Boolean] = js.undefined,
-    enableSoftwareAES: js.UndefOr[Boolean] = js.undefined,
-    enableWebVTT: js.UndefOr[Boolean] = js.undefined,
-    enableWorker: js.UndefOr[Boolean] = js.undefined,
-    fLoader: Instantiable1[/* config */ LoaderConfig, Loader] = null,
-    fetchSetup: (/* context */ js.Any, /* initParams */ js.Any) => Request = null,
-    forceKeyFrameOnDiscontinuity: js.UndefOr[Boolean] = js.undefined,
-    fragLoadingMaxRetry: Int | Double = null,
-    fragLoadingMaxRetryDelay: Int | Double = null,
-    fragLoadingRetryDelay: Int | Double = null,
-    fragLoadingTimeOut: Int | Double = null,
-    highBufferWatchdogPeriod: Int | Double = null,
-    initialLiveManifestSize: Int | Double = null,
-    levelLoadingMaxRetry: Int | Double = null,
-    levelLoadingMaxRetryTimeout: Int | Double = null,
-    levelLoadingRetryDelay: Int | Double = null,
-    levelLoadingTimeOut: Int | Double = null,
-    liveBackBufferLength: Int | Double = null,
-    liveDurationInfinity: js.UndefOr[Boolean] = js.undefined,
-    liveMaxLatencyDuration: Int | Double = null,
-    liveMaxLatencyDurationCount: Int | Double = null,
-    liveSyncDuration: Int | Double = null,
-    liveSyncDurationCount: Int | Double = null,
-    loader: Instantiable1[/* config */ LoaderConfig, Loader] = null,
-    lowBufferWatchdogPeriod: Int | Double = null,
-    manifestLoadingMaxRetry: Int | Double = null,
-    manifestLoadingMaxRetryTimeout: Int | Double = null,
-    manifestLoadingRetryDelay: Int | Double = null,
-    manifestLoadingTimeOut: Int | Double = null,
-    maxAudioFramesDrift: Int | Double = null,
-    maxBufferHole: Int | Double = null,
-    maxBufferLength: Int | Double = null,
-    maxBufferSize: Int | Double = null,
-    maxFragLookUpTolerance: Int | Double = null,
-    maxLoadingDelay: Int | Double = null,
-    maxMaxBufferLength: Int | Double = null,
-    maxSeekHole: Int | Double = null,
-    maxStarvationDelay: Int | Double = null,
-    minAutoBitrate: Int | Double = null,
-    nudgeMaxRetry: Int | Double = null,
-    nudgeOffset: Int | Double = null,
-    pLoader: Instantiable1[/* config */ LoaderConfig, Loader] = null,
-    startFragPrefetch: js.UndefOr[Boolean] = js.undefined,
-    startLevel: Int | Double = null,
-    startPosition: Int | Double = null,
-    stretchShortVideoTrack: js.UndefOr[Boolean] = js.undefined,
-    timelineController: TimelineController = null,
-    xhrSetup: (/* xhr */ XMLHttpRequest, /* url */ String) => Unit = null
-  ): PartialConfig = {
+  def apply(): PartialConfig = {
     val __obj = js.Dynamic.literal()
-    if (abrBandWidthFactor != null) __obj.updateDynamic("abrBandWidthFactor")(abrBandWidthFactor.asInstanceOf[js.Any])
-    if (abrBandWidthUpFactor != null) __obj.updateDynamic("abrBandWidthUpFactor")(abrBandWidthUpFactor.asInstanceOf[js.Any])
-    if (abrController != null) __obj.updateDynamic("abrController")(abrController.asInstanceOf[js.Any])
-    if (abrEwmaDefaultEstimate != null) __obj.updateDynamic("abrEwmaDefaultEstimate")(abrEwmaDefaultEstimate.asInstanceOf[js.Any])
-    if (abrEwmaFastLive != null) __obj.updateDynamic("abrEwmaFastLive")(abrEwmaFastLive.asInstanceOf[js.Any])
-    if (abrEwmaFastVod != null) __obj.updateDynamic("abrEwmaFastVod")(abrEwmaFastVod.asInstanceOf[js.Any])
-    if (abrEwmaSlowLive != null) __obj.updateDynamic("abrEwmaSlowLive")(abrEwmaSlowLive.asInstanceOf[js.Any])
-    if (abrEwmaSlowVod != null) __obj.updateDynamic("abrEwmaSlowVod")(abrEwmaSlowVod.asInstanceOf[js.Any])
-    if (!js.isUndefined(abrMaxWithRealBitrate)) __obj.updateDynamic("abrMaxWithRealBitrate")(abrMaxWithRealBitrate.asInstanceOf[js.Any])
-    if (appendErrorMaxRetry != null) __obj.updateDynamic("appendErrorMaxRetry")(appendErrorMaxRetry.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoStartLoad)) __obj.updateDynamic("autoStartLoad")(autoStartLoad.asInstanceOf[js.Any])
-    if (!js.isUndefined(capLevelToPlayerSize)) __obj.updateDynamic("capLevelToPlayerSize")(capLevelToPlayerSize.asInstanceOf[js.Any])
-    if (captionsTextTrack1Label != null) __obj.updateDynamic("captionsTextTrack1Label")(captionsTextTrack1Label.asInstanceOf[js.Any])
-    if (captionsTextTrack1LanguagedCode != null) __obj.updateDynamic("captionsTextTrack1LanguagedCode")(captionsTextTrack1LanguagedCode.asInstanceOf[js.Any])
-    if (captionsTextTrack2Label != null) __obj.updateDynamic("captionsTextTrack2Label")(captionsTextTrack2Label.asInstanceOf[js.Any])
-    if (captionsTextTrack2LanguageCode != null) __obj.updateDynamic("captionsTextTrack2LanguageCode")(captionsTextTrack2LanguageCode.asInstanceOf[js.Any])
-    if (debug != null) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (defaultAudioCodec != null) __obj.updateDynamic("defaultAudioCodec")(defaultAudioCodec.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableCEA708Captions)) __obj.updateDynamic("enableCEA708Captions")(enableCEA708Captions.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableSoftwareAES)) __obj.updateDynamic("enableSoftwareAES")(enableSoftwareAES.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableWebVTT)) __obj.updateDynamic("enableWebVTT")(enableWebVTT.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableWorker)) __obj.updateDynamic("enableWorker")(enableWorker.asInstanceOf[js.Any])
-    if (fLoader != null) __obj.updateDynamic("fLoader")(fLoader.asInstanceOf[js.Any])
-    if (fetchSetup != null) __obj.updateDynamic("fetchSetup")(js.Any.fromFunction2(fetchSetup))
-    if (!js.isUndefined(forceKeyFrameOnDiscontinuity)) __obj.updateDynamic("forceKeyFrameOnDiscontinuity")(forceKeyFrameOnDiscontinuity.asInstanceOf[js.Any])
-    if (fragLoadingMaxRetry != null) __obj.updateDynamic("fragLoadingMaxRetry")(fragLoadingMaxRetry.asInstanceOf[js.Any])
-    if (fragLoadingMaxRetryDelay != null) __obj.updateDynamic("fragLoadingMaxRetryDelay")(fragLoadingMaxRetryDelay.asInstanceOf[js.Any])
-    if (fragLoadingRetryDelay != null) __obj.updateDynamic("fragLoadingRetryDelay")(fragLoadingRetryDelay.asInstanceOf[js.Any])
-    if (fragLoadingTimeOut != null) __obj.updateDynamic("fragLoadingTimeOut")(fragLoadingTimeOut.asInstanceOf[js.Any])
-    if (highBufferWatchdogPeriod != null) __obj.updateDynamic("highBufferWatchdogPeriod")(highBufferWatchdogPeriod.asInstanceOf[js.Any])
-    if (initialLiveManifestSize != null) __obj.updateDynamic("initialLiveManifestSize")(initialLiveManifestSize.asInstanceOf[js.Any])
-    if (levelLoadingMaxRetry != null) __obj.updateDynamic("levelLoadingMaxRetry")(levelLoadingMaxRetry.asInstanceOf[js.Any])
-    if (levelLoadingMaxRetryTimeout != null) __obj.updateDynamic("levelLoadingMaxRetryTimeout")(levelLoadingMaxRetryTimeout.asInstanceOf[js.Any])
-    if (levelLoadingRetryDelay != null) __obj.updateDynamic("levelLoadingRetryDelay")(levelLoadingRetryDelay.asInstanceOf[js.Any])
-    if (levelLoadingTimeOut != null) __obj.updateDynamic("levelLoadingTimeOut")(levelLoadingTimeOut.asInstanceOf[js.Any])
-    if (liveBackBufferLength != null) __obj.updateDynamic("liveBackBufferLength")(liveBackBufferLength.asInstanceOf[js.Any])
-    if (!js.isUndefined(liveDurationInfinity)) __obj.updateDynamic("liveDurationInfinity")(liveDurationInfinity.asInstanceOf[js.Any])
-    if (liveMaxLatencyDuration != null) __obj.updateDynamic("liveMaxLatencyDuration")(liveMaxLatencyDuration.asInstanceOf[js.Any])
-    if (liveMaxLatencyDurationCount != null) __obj.updateDynamic("liveMaxLatencyDurationCount")(liveMaxLatencyDurationCount.asInstanceOf[js.Any])
-    if (liveSyncDuration != null) __obj.updateDynamic("liveSyncDuration")(liveSyncDuration.asInstanceOf[js.Any])
-    if (liveSyncDurationCount != null) __obj.updateDynamic("liveSyncDurationCount")(liveSyncDurationCount.asInstanceOf[js.Any])
-    if (loader != null) __obj.updateDynamic("loader")(loader.asInstanceOf[js.Any])
-    if (lowBufferWatchdogPeriod != null) __obj.updateDynamic("lowBufferWatchdogPeriod")(lowBufferWatchdogPeriod.asInstanceOf[js.Any])
-    if (manifestLoadingMaxRetry != null) __obj.updateDynamic("manifestLoadingMaxRetry")(manifestLoadingMaxRetry.asInstanceOf[js.Any])
-    if (manifestLoadingMaxRetryTimeout != null) __obj.updateDynamic("manifestLoadingMaxRetryTimeout")(manifestLoadingMaxRetryTimeout.asInstanceOf[js.Any])
-    if (manifestLoadingRetryDelay != null) __obj.updateDynamic("manifestLoadingRetryDelay")(manifestLoadingRetryDelay.asInstanceOf[js.Any])
-    if (manifestLoadingTimeOut != null) __obj.updateDynamic("manifestLoadingTimeOut")(manifestLoadingTimeOut.asInstanceOf[js.Any])
-    if (maxAudioFramesDrift != null) __obj.updateDynamic("maxAudioFramesDrift")(maxAudioFramesDrift.asInstanceOf[js.Any])
-    if (maxBufferHole != null) __obj.updateDynamic("maxBufferHole")(maxBufferHole.asInstanceOf[js.Any])
-    if (maxBufferLength != null) __obj.updateDynamic("maxBufferLength")(maxBufferLength.asInstanceOf[js.Any])
-    if (maxBufferSize != null) __obj.updateDynamic("maxBufferSize")(maxBufferSize.asInstanceOf[js.Any])
-    if (maxFragLookUpTolerance != null) __obj.updateDynamic("maxFragLookUpTolerance")(maxFragLookUpTolerance.asInstanceOf[js.Any])
-    if (maxLoadingDelay != null) __obj.updateDynamic("maxLoadingDelay")(maxLoadingDelay.asInstanceOf[js.Any])
-    if (maxMaxBufferLength != null) __obj.updateDynamic("maxMaxBufferLength")(maxMaxBufferLength.asInstanceOf[js.Any])
-    if (maxSeekHole != null) __obj.updateDynamic("maxSeekHole")(maxSeekHole.asInstanceOf[js.Any])
-    if (maxStarvationDelay != null) __obj.updateDynamic("maxStarvationDelay")(maxStarvationDelay.asInstanceOf[js.Any])
-    if (minAutoBitrate != null) __obj.updateDynamic("minAutoBitrate")(minAutoBitrate.asInstanceOf[js.Any])
-    if (nudgeMaxRetry != null) __obj.updateDynamic("nudgeMaxRetry")(nudgeMaxRetry.asInstanceOf[js.Any])
-    if (nudgeOffset != null) __obj.updateDynamic("nudgeOffset")(nudgeOffset.asInstanceOf[js.Any])
-    if (pLoader != null) __obj.updateDynamic("pLoader")(pLoader.asInstanceOf[js.Any])
-    if (!js.isUndefined(startFragPrefetch)) __obj.updateDynamic("startFragPrefetch")(startFragPrefetch.asInstanceOf[js.Any])
-    if (startLevel != null) __obj.updateDynamic("startLevel")(startLevel.asInstanceOf[js.Any])
-    if (startPosition != null) __obj.updateDynamic("startPosition")(startPosition.asInstanceOf[js.Any])
-    if (!js.isUndefined(stretchShortVideoTrack)) __obj.updateDynamic("stretchShortVideoTrack")(stretchShortVideoTrack.asInstanceOf[js.Any])
-    if (timelineController != null) __obj.updateDynamic("timelineController")(timelineController.asInstanceOf[js.Any])
-    if (xhrSetup != null) __obj.updateDynamic("xhrSetup")(js.Any.fromFunction2(xhrSetup))
     __obj.asInstanceOf[PartialConfig]
   }
+  @scala.inline
+  implicit class PartialConfigOps[Self <: PartialConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAbrBandWidthFactor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrBandWidthFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbrBandWidthFactor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrBandWidthFactor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAbrBandWidthUpFactor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrBandWidthUpFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbrBandWidthUpFactor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrBandWidthUpFactor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAbrController(value: AbrController): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrController")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbrController: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrController")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAbrEwmaDefaultEstimate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrEwmaDefaultEstimate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbrEwmaDefaultEstimate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrEwmaDefaultEstimate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAbrEwmaFastLive(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrEwmaFastLive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbrEwmaFastLive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrEwmaFastLive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAbrEwmaFastVod(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrEwmaFastVod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbrEwmaFastVod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrEwmaFastVod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAbrEwmaSlowLive(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrEwmaSlowLive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbrEwmaSlowLive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrEwmaSlowLive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAbrEwmaSlowVod(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrEwmaSlowVod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbrEwmaSlowVod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrEwmaSlowVod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAbrMaxWithRealBitrate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrMaxWithRealBitrate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbrMaxWithRealBitrate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abrMaxWithRealBitrate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppendErrorMaxRetry(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendErrorMaxRetry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppendErrorMaxRetry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendErrorMaxRetry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoStartLoad(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoStartLoad")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoStartLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoStartLoad")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCapLevelToPlayerSize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capLevelToPlayerSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapLevelToPlayerSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capLevelToPlayerSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaptionsTextTrack1Label(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionsTextTrack1Label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptionsTextTrack1Label: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionsTextTrack1Label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaptionsTextTrack1LanguagedCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionsTextTrack1LanguagedCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptionsTextTrack1LanguagedCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionsTextTrack1LanguagedCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaptionsTextTrack2Label(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionsTextTrack2Label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptionsTextTrack2Label: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionsTextTrack2Label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaptionsTextTrack2LanguageCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionsTextTrack2LanguageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptionsTextTrack2LanguageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionsTextTrack2LanguageCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebug(value: Boolean | CustomLoggerObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebug: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultAudioCodec(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAudioCodec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultAudioCodec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAudioCodec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableCEA708Captions(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCEA708Captions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableCEA708Captions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCEA708Captions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableSoftwareAES(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSoftwareAES")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableSoftwareAES: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSoftwareAES")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableWebVTT(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWebVTT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableWebVTT: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWebVTT")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableWorker(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWorker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableWorker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWorker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFLoader(value: Instantiable1[/* config */ LoaderConfig, Loader]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fLoader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFLoader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fLoader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFetchSetup(value: (/* context */ js.Any, /* initParams */ js.Any) => Request): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchSetup")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutFetchSetup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchSetup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceKeyFrameOnDiscontinuity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceKeyFrameOnDiscontinuity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceKeyFrameOnDiscontinuity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceKeyFrameOnDiscontinuity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFragLoadingMaxRetry(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fragLoadingMaxRetry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFragLoadingMaxRetry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fragLoadingMaxRetry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFragLoadingMaxRetryDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fragLoadingMaxRetryDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFragLoadingMaxRetryDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fragLoadingMaxRetryDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFragLoadingRetryDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fragLoadingRetryDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFragLoadingRetryDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fragLoadingRetryDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFragLoadingTimeOut(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fragLoadingTimeOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFragLoadingTimeOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fragLoadingTimeOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighBufferWatchdogPeriod(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highBufferWatchdogPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighBufferWatchdogPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highBufferWatchdogPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialLiveManifestSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialLiveManifestSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialLiveManifestSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialLiveManifestSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevelLoadingMaxRetry(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levelLoadingMaxRetry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevelLoadingMaxRetry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levelLoadingMaxRetry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevelLoadingMaxRetryTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levelLoadingMaxRetryTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevelLoadingMaxRetryTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levelLoadingMaxRetryTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevelLoadingRetryDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levelLoadingRetryDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevelLoadingRetryDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levelLoadingRetryDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevelLoadingTimeOut(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levelLoadingTimeOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevelLoadingTimeOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levelLoadingTimeOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLiveBackBufferLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("liveBackBufferLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLiveBackBufferLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("liveBackBufferLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLiveDurationInfinity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("liveDurationInfinity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLiveDurationInfinity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("liveDurationInfinity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLiveMaxLatencyDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("liveMaxLatencyDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLiveMaxLatencyDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("liveMaxLatencyDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLiveMaxLatencyDurationCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("liveMaxLatencyDurationCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLiveMaxLatencyDurationCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("liveMaxLatencyDurationCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLiveSyncDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("liveSyncDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLiveSyncDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("liveSyncDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLiveSyncDurationCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("liveSyncDurationCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLiveSyncDurationCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("liveSyncDurationCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoader(value: Instantiable1[/* config */ LoaderConfig, Loader]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLowBufferWatchdogPeriod(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowBufferWatchdogPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLowBufferWatchdogPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowBufferWatchdogPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManifestLoadingMaxRetry(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestLoadingMaxRetry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManifestLoadingMaxRetry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestLoadingMaxRetry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManifestLoadingMaxRetryTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestLoadingMaxRetryTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManifestLoadingMaxRetryTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestLoadingMaxRetryTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManifestLoadingRetryDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestLoadingRetryDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManifestLoadingRetryDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestLoadingRetryDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManifestLoadingTimeOut(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestLoadingTimeOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManifestLoadingTimeOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestLoadingTimeOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAudioFramesDrift(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAudioFramesDrift")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAudioFramesDrift: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAudioFramesDrift")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxBufferHole(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBufferHole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxBufferHole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBufferHole")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxBufferLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBufferLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxBufferLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBufferLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxBufferSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBufferSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxBufferSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBufferSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxFragLookUpTolerance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFragLookUpTolerance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxFragLookUpTolerance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFragLookUpTolerance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxLoadingDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLoadingDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxLoadingDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLoadingDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxMaxBufferLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMaxBufferLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxMaxBufferLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMaxBufferLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSeekHole(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSeekHole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSeekHole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSeekHole")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxStarvationDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxStarvationDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxStarvationDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxStarvationDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinAutoBitrate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minAutoBitrate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinAutoBitrate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minAutoBitrate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNudgeMaxRetry(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nudgeMaxRetry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNudgeMaxRetry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nudgeMaxRetry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNudgeOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nudgeOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNudgeOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nudgeOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPLoader(value: Instantiable1[/* config */ LoaderConfig, Loader]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pLoader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPLoader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pLoader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartFragPrefetch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startFragPrefetch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartFragPrefetch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startFragPrefetch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartPosition(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStretchShortVideoTrack(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stretchShortVideoTrack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStretchShortVideoTrack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stretchShortVideoTrack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimelineController(value: TimelineController): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timelineController")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimelineController: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timelineController")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXhrSetup(value: (/* xhr */ XMLHttpRequest, /* url */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xhrSetup")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutXhrSetup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xhrSetup")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

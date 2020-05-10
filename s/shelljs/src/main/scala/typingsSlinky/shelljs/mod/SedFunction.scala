@@ -1,6 +1,5 @@
 package typingsSlinky.shelljs.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,8 +19,8 @@ trait SedFunction extends js.Object {
   	 * @return            The new string after replacement.
   	 */
   def apply(options: String, searchRegex: String, replacement: String, files: js.Array[String]): ShellString = js.native
-  def apply(options: String, searchRegex: RegExp, replacement: String, files: String*): ShellString = js.native
-  def apply(options: String, searchRegex: RegExp, replacement: String, files: js.Array[String]): ShellString = js.native
+  def apply(options: String, searchRegex: js.RegExp, replacement: String, files: String*): ShellString = js.native
+  def apply(options: String, searchRegex: js.RegExp, replacement: String, files: js.Array[String]): ShellString = js.native
   def apply(searchRegex: String, replacement: String, files: String*): ShellString = js.native
   /**
   	 * Reads an input string from file and performs a JavaScript `replace()`
@@ -33,7 +32,7 @@ trait SedFunction extends js.Object {
   	 * @return            The new string after replacement.
   	 */
   def apply(searchRegex: String, replacement: String, files: js.Array[String]): ShellString = js.native
-  def apply(searchRegex: RegExp, replacement: String, files: String*): ShellString = js.native
-  def apply(searchRegex: RegExp, replacement: String, files: js.Array[String]): ShellString = js.native
+  def apply(searchRegex: js.RegExp, replacement: String, files: String*): ShellString = js.native
+  def apply(searchRegex: js.RegExp, replacement: String, files: js.Array[String]): ShellString = js.native
 }
 

@@ -22,15 +22,47 @@ trait DeleteProvisionedProductPlanInput extends js.Object {
 
 object DeleteProvisionedProductPlanInput {
   @scala.inline
-  def apply(
-    PlanId: Id,
-    AcceptLanguage: AcceptLanguage = null,
-    IgnoreErrors: js.UndefOr[Boolean] = js.undefined
-  ): DeleteProvisionedProductPlanInput = {
+  def apply(PlanId: Id): DeleteProvisionedProductPlanInput = {
     val __obj = js.Dynamic.literal(PlanId = PlanId.asInstanceOf[js.Any])
-    if (AcceptLanguage != null) __obj.updateDynamic("AcceptLanguage")(AcceptLanguage.asInstanceOf[js.Any])
-    if (!js.isUndefined(IgnoreErrors)) __obj.updateDynamic("IgnoreErrors")(IgnoreErrors.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteProvisionedProductPlanInput]
   }
+  @scala.inline
+  implicit class DeleteProvisionedProductPlanInputOps[Self <: DeleteProvisionedProductPlanInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPlanId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlanId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAcceptLanguage(value: AcceptLanguage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceptLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreErrors(value: IgnoreErrors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IgnoreErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IgnoreErrors")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

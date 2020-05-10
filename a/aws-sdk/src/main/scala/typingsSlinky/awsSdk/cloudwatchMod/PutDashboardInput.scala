@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PutDashboardInput extends js.Object {
   /**
-    * The detailed information about the dashboard in JSON format, including the widgets to include and their location on the dashboard. This parameter is required. For more information about the syntax, see CloudWatch-Dashboard-Body-Structure.
+    * The detailed information about the dashboard in JSON format, including the widgets to include and their location on the dashboard. This parameter is required. For more information about the syntax, see Dashboard Body Structure and Syntax.
     */
   var DashboardBody: typingsSlinky.awsSdk.cloudwatchMod.DashboardBody = js.native
   /**
@@ -20,8 +20,27 @@ object PutDashboardInput {
   @scala.inline
   def apply(DashboardBody: DashboardBody, DashboardName: DashboardName): PutDashboardInput = {
     val __obj = js.Dynamic.literal(DashboardBody = DashboardBody.asInstanceOf[js.Any], DashboardName = DashboardName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PutDashboardInput]
   }
+  @scala.inline
+  implicit class PutDashboardInputOps[Self <: PutDashboardInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDashboardBody(value: DashboardBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDashboardName(value: DashboardName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

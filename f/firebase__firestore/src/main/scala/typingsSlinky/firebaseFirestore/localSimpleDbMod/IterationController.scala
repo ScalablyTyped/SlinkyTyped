@@ -25,12 +25,12 @@ class IterationController protected () extends js.Object {
     * This function can be called to stop iteration at any point.
     */
   def done(): Unit = js.native
-  def isDone(): Boolean = js.native
+  def isDone: Boolean = js.native
   /**
     * This function can be called to skip to that next key, which could be
     * an index or a primary key.
     */
   def skip(key: IDBValidKey): Unit = js.native
-  def skipToKey(): IDBValidKey | Null = js.native
+  def skipToKey: IDBValidKey | Null = js.native
 }
 

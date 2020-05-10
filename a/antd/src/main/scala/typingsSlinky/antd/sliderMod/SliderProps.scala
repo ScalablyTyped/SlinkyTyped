@@ -8,84 +8,334 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SliderProps extends js.Object {
-  var className: js.UndefOr[String] = js.undefined
-  var defaultValue: js.UndefOr[SliderValue] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var dots: js.UndefOr[Boolean] = js.undefined
-  var getTooltipPopupContainer: js.UndefOr[js.Function1[/* triggerNode */ HTMLElement, HTMLElement]] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var included: js.UndefOr[Boolean] = js.undefined
-  var marks: js.UndefOr[SliderMarks] = js.undefined
-  var max: js.UndefOr[Double] = js.undefined
-  var min: js.UndefOr[Double] = js.undefined
-  var onAfterChange: js.UndefOr[js.Function1[/* value */ SliderValue, Unit]] = js.undefined
-  var onChange: js.UndefOr[js.Function1[/* value */ SliderValue, Unit]] = js.undefined
-  var prefixCls: js.UndefOr[String] = js.undefined
-  var range: js.UndefOr[Boolean] = js.undefined
-  var reverse: js.UndefOr[Boolean] = js.undefined
-  var step: js.UndefOr[Double | Null] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
-  var tipFormatter: js.UndefOr[Null | (js.Function1[/* value */ Double, TagMod[Any]])] = js.undefined
-  var tooltipPlacement: js.UndefOr[TooltipPlacement] = js.undefined
-  var tooltipPrefixCls: js.UndefOr[String] = js.undefined
-  var tooltipVisible: js.UndefOr[Boolean] = js.undefined
-  var value: js.UndefOr[SliderValue] = js.undefined
-  var vertical: js.UndefOr[Boolean] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var defaultValue: js.UndefOr[SliderValue] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var dots: js.UndefOr[Boolean] = js.native
+  var getTooltipPopupContainer: js.UndefOr[js.Function1[/* triggerNode */ HTMLElement, HTMLElement]] = js.native
+  var id: js.UndefOr[String] = js.native
+  var included: js.UndefOr[Boolean] = js.native
+  var marks: js.UndefOr[SliderMarks] = js.native
+  var max: js.UndefOr[Double] = js.native
+  var min: js.UndefOr[Double] = js.native
+  var onAfterChange: js.UndefOr[js.Function1[/* value */ SliderValue, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* value */ SliderValue, Unit]] = js.native
+  var prefixCls: js.UndefOr[String] = js.native
+  var range: js.UndefOr[Boolean] = js.native
+  var reverse: js.UndefOr[Boolean] = js.native
+  var step: js.UndefOr[Double | Null] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
+  var tipFormatter: js.UndefOr[Null | (js.Function1[/* value */ Double, TagMod[Any]])] = js.native
+  var tooltipPlacement: js.UndefOr[TooltipPlacement] = js.native
+  var tooltipPrefixCls: js.UndefOr[String] = js.native
+  var tooltipVisible: js.UndefOr[Boolean] = js.native
+  var value: js.UndefOr[SliderValue] = js.native
+  var vertical: js.UndefOr[Boolean] = js.native
 }
 
 object SliderProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    defaultValue: SliderValue = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    dots: js.UndefOr[Boolean] = js.undefined,
-    getTooltipPopupContainer: /* triggerNode */ HTMLElement => HTMLElement = null,
-    id: String = null,
-    included: js.UndefOr[Boolean] = js.undefined,
-    marks: SliderMarks = null,
-    max: Int | Double = null,
-    min: Int | Double = null,
-    onAfterChange: /* value */ SliderValue => Unit = null,
-    onChange: /* value */ SliderValue => Unit = null,
-    prefixCls: String = null,
-    range: js.UndefOr[Boolean] = js.undefined,
-    reverse: js.UndefOr[Boolean] = js.undefined,
-    step: Int | Double = null,
-    style: CSSProperties = null,
-    tipFormatter: /* value */ Double => TagMod[Any] = null,
-    tooltipPlacement: TooltipPlacement = null,
-    tooltipPrefixCls: String = null,
-    tooltipVisible: js.UndefOr[Boolean] = js.undefined,
-    value: SliderValue = null,
-    vertical: js.UndefOr[Boolean] = js.undefined
-  ): SliderProps = {
+  def apply(): SliderProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(dots)) __obj.updateDynamic("dots")(dots.asInstanceOf[js.Any])
-    if (getTooltipPopupContainer != null) __obj.updateDynamic("getTooltipPopupContainer")(js.Any.fromFunction1(getTooltipPopupContainer))
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(included)) __obj.updateDynamic("included")(included.asInstanceOf[js.Any])
-    if (marks != null) __obj.updateDynamic("marks")(marks.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (onAfterChange != null) __obj.updateDynamic("onAfterChange")(js.Any.fromFunction1(onAfterChange))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(range)) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (tipFormatter != null) __obj.updateDynamic("tipFormatter")(js.Any.fromFunction1(tipFormatter))
-    if (tooltipPlacement != null) __obj.updateDynamic("tooltipPlacement")(tooltipPlacement.asInstanceOf[js.Any])
-    if (tooltipPrefixCls != null) __obj.updateDynamic("tooltipPrefixCls")(tooltipPrefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(tooltipVisible)) __obj.updateDynamic("tooltipVisible")(tooltipVisible.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
     __obj.asInstanceOf[SliderProps]
   }
+  @scala.inline
+  implicit class SliderPropsOps[Self <: SliderProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValue(value: SliderValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDots(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDots: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dots")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetTooltipPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTooltipPopupContainer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetTooltipPopupContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTooltipPopupContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncluded(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("included")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncluded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("included")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarks(value: SliderMarks): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAfterChange(value: /* value */ SliderValue => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAfterChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAfterChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAfterChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: /* value */ SliderValue => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReverse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReverse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStep(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStepNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(null)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTipFormatter(value: /* value */ Double => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tipFormatter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTipFormatter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tipFormatter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTipFormatterNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tipFormatter")(null)
+        ret
+    }
+    @scala.inline
+    def withTooltipPlacement(value: TooltipPlacement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPlacement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipPlacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPlacement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPrefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPrefixCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipVisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: SliderValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVertical(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVertical: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

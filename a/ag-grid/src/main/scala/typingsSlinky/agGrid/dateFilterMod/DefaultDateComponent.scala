@@ -14,13 +14,7 @@ class DefaultDateComponent ()
      with IDate {
   var eDateInput: js.Any = js.native
   var listener: js.Any = js.native
-  /** Returns the current date represented by this editor */
-  /* CompleteClass */
-  override def getDate(): js.Date = js.native
   @JSName("init")
   def init_MDefaultDateComponent(params: IDateParams): Unit = js.native
-  /** Sets the date represented by this component */
-  /* CompleteClass */
-  override def setDate(date: js.Date): Unit = js.native
 }
 

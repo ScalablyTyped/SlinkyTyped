@@ -28,8 +28,39 @@ object TestRoleRequest {
   @scala.inline
   def apply(InputBucket: BucketName, OutputBucket: BucketName, Role: Role, Topics: SnsTopics): TestRoleRequest = {
     val __obj = js.Dynamic.literal(InputBucket = InputBucket.asInstanceOf[js.Any], OutputBucket = OutputBucket.asInstanceOf[js.Any], Role = Role.asInstanceOf[js.Any], Topics = Topics.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TestRoleRequest]
   }
+  @scala.inline
+  implicit class TestRoleRequestOps[Self <: TestRoleRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInputBucket(value: BucketName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputBucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutputBucket(value: BucketName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputBucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRole(value: Role): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTopics(value: SnsTopics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Topics")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

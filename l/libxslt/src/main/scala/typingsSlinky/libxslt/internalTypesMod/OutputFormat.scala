@@ -12,10 +12,8 @@ trait OutputFormat extends js.Object
 
 object OutputFormat {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def document: typingsSlinky.libxslt.libxsltStrings.document = "document".asInstanceOf[typingsSlinky.libxslt.libxsltStrings.document]
   @scala.inline
-  def document: typingsSlinky.libxslt.libxsltStrings.document = this.cast("document")
-  @scala.inline
-  def string: typingsSlinky.libxslt.libxsltStrings.string = this.cast("string")
+  def string: typingsSlinky.libxslt.libxsltStrings.string = "string".asInstanceOf[typingsSlinky.libxslt.libxsltStrings.string]
 }
 

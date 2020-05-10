@@ -39,7 +39,7 @@ trait ChartistStatic extends js.Object {
   def quantity(input: String): js.Object = js.native
   def quantity(input: Double): js.Object = js.native
   def query(query: String): Node = js.native
-  def query(query: typingsSlinky.std.Node): Node = js.native
+  def query(query: Node): Node = js.native
   def replaceAll(str: String, subStr: String, newSubStr: String): String = js.native
   def roundWithPrecision(value: Double): Double = js.native
   def roundWithPrecision(value: Double, digits: Double): Double = js.native

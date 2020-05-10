@@ -13,12 +13,10 @@ trait Interactive extends js.Object
 
 object Interactive {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def if_needed: typingsSlinky.chromeApps.chromeAppsStrings.if_needed = "if_needed".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.if_needed]
   @scala.inline
-  def if_needed: typingsSlinky.chromeApps.chromeAppsStrings.if_needed = this.cast("if_needed")
+  def no: typingsSlinky.chromeApps.chromeAppsStrings.no = "no".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.no]
   @scala.inline
-  def no: typingsSlinky.chromeApps.chromeAppsStrings.no = this.cast("no")
-  @scala.inline
-  def yes: typingsSlinky.chromeApps.chromeAppsStrings.yes = this.cast("yes")
+  def yes: typingsSlinky.chromeApps.chromeAppsStrings.yes = "yes".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.yes]
 }
 

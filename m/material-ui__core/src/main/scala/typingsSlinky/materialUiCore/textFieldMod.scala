@@ -1,10 +1,9 @@
 package typingsSlinky.materialUiCore
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.textFieldTextFieldMod.TextFieldProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,13 +13,13 @@ import scala.scalajs.js.annotation._
 object textFieldMod extends js.Object {
   @js.native
   class default protected ()
-    extends Component[TextFieldProps, ComponentState, js.Any] {
+    extends Component[TextFieldProps, js.Object, js.Any] {
     def this(props: TextFieldProps) = this()
     def this(props: TextFieldProps, context: js.Any) = this()
   }
   
   @js.native
-  object default extends TopLevel[ComponentType[TextFieldProps]]
+  object default extends TopLevel[ReactComponentClass[TextFieldProps]]
   
 }
 

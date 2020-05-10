@@ -4,31 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DomainDnsTxtRecord extends DomainDnsRecord {
   // Value used when configuring the text property at the DNS host.
-  var text: js.UndefOr[String] = js.undefined
+  var text: js.UndefOr[String] = js.native
 }
 
 object DomainDnsTxtRecord {
   @scala.inline
-  def apply(
-    id: String = null,
-    isOptional: js.UndefOr[Boolean] = js.undefined,
-    label: String = null,
-    recordType: String = null,
-    supportedService: String = null,
-    text: String = null,
-    ttl: Int | Double = null
-  ): DomainDnsTxtRecord = {
+  def apply(): DomainDnsTxtRecord = {
     val __obj = js.Dynamic.literal()
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(isOptional)) __obj.updateDynamic("isOptional")(isOptional.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (recordType != null) __obj.updateDynamic("recordType")(recordType.asInstanceOf[js.Any])
-    if (supportedService != null) __obj.updateDynamic("supportedService")(supportedService.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (ttl != null) __obj.updateDynamic("ttl")(ttl.asInstanceOf[js.Any])
     __obj.asInstanceOf[DomainDnsTxtRecord]
   }
+  @scala.inline
+  implicit class DomainDnsTxtRecordOps[Self <: DomainDnsTxtRecord] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

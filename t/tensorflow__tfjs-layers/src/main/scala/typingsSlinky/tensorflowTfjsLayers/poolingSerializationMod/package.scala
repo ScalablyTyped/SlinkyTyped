@@ -37,6 +37,5 @@ package object poolingSerializationMod {
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.MaxPooling2D, 
     typingsSlinky.tensorflowTfjsLayers.poolingSerializationMod.Pooling2DLayerConfig
   ]
-  type PoolingLayerClassName = /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-layers.@tensorflow/tfjs-layers/dist/keras_format/layers/pooling_serialization.PoolingLayerSerialization['class_name'] */ js.Any
   type PoolingLayerSerialization = typingsSlinky.tensorflowTfjsLayers.poolingSerializationMod.MaxPooling1DLayerSerialization | typingsSlinky.tensorflowTfjsLayers.poolingSerializationMod.AveragePooling1DLayerSerialization | typingsSlinky.tensorflowTfjsLayers.poolingSerializationMod.MaxPooling2DLayerSerialization | typingsSlinky.tensorflowTfjsLayers.poolingSerializationMod.AveragePooling2DLayerSerialization | typingsSlinky.tensorflowTfjsLayers.poolingSerializationMod.GlobalAveragePooling1DLayerSerialization | typingsSlinky.tensorflowTfjsLayers.poolingSerializationMod.GlobalMaxPooling1DLayerSerialization | typingsSlinky.tensorflowTfjsLayers.poolingSerializationMod.GlobalAveragePooling2DLayerSerialization | typingsSlinky.tensorflowTfjsLayers.poolingSerializationMod.GlobalMaxPooling2DLayerSerialization
 }

@@ -11,7 +11,6 @@ import typingsSlinky.node.nodeStrings.goaway
 import typingsSlinky.node.nodeStrings.ping
 import typingsSlinky.node.nodeStrings.timeout
 import typingsSlinky.node.tlsMod.TLSSocket
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -139,7 +138,9 @@ trait Http2Session extends EventEmitter {
   ): this.type = js.native
   @JSName("once")
   def once_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
-  def ping(callback: js.Function3[/* err */ Error | Null, /* duration */ Double, /* payload */ Buffer, Unit]): Boolean = js.native
+  def ping(
+    callback: js.Function3[/* err */ js.Error | Null, /* duration */ Double, /* payload */ Buffer, Unit]
+  ): Boolean = js.native
   def ping(
     payload: ArrayBufferView,
     callback: js.Function3[/* err */ js.Error | Null, /* duration */ Double, /* payload */ Buffer, Unit]

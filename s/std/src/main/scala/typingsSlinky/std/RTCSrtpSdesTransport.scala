@@ -38,7 +38,7 @@ trait RTCSrtpSdesTransport
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

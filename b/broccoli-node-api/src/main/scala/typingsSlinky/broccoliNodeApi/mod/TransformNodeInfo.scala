@@ -6,34 +6,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait TransformNodeInfo
-  extends NodeInfoCommon[transform]
-     with NodeInfo {
+@js.native
+trait TransformNodeInfo extends NodeInfoCommon[transform] {
   /**
     Zero or more Broccoli nodes to be used as input to this node.
     */
-  var inputNodes: js.Array[InputNode]
+  var inputNodes: js.Array[InputNode] = js.native
   /**
     If false, a cache directory will not be created. If true, a cache directory
     will be created and its path will be available as this.cachePath.
     */
-  var needsCache: Boolean
+  var needsCache: Boolean = js.native
   /**
     If false, then between rebuilds, the Builder will delete the outputPath
     directory recursively and recreate it as an empty directory. If true,
     the Builder will do nothing.
     */
-  var persistentOutput: Boolean
+  var persistentOutput: Boolean = js.native
   /**
     If true, a change object will be passed to the build method which contains
     information about which input has changed since the last build. Defaults to false.
     */
-  var trackInputChanges: Boolean
+  var trackInputChanges: Boolean = js.native
   /**
     If true, memoization will not be applied and the build method will always be 
     called regardless if the inputNodes have changed. Defaults to false.
     */
-  var volatile: Boolean
+  var volatile: Boolean = js.native
   /**
     The Builder will call this function once after it has called `setup`. This
     function will not be called more than once throughout the lifetime of the
@@ -51,7 +50,7 @@ trait TransformNodeInfo
     that is resolved on completion of the asynchronous work, or rejected if
     there is an error. Return values other than promises are ignored.
     */
-  def getCallbackObject(): CallbackObject
+  def getCallbackObject(): CallbackObject = js.native
   /**
     The `Builder` will call this function once before the first build. This
     function will not be called more than once throughout the lifetime of the
@@ -68,7 +67,7 @@ trait TransformNodeInfo
     If a `cachePath` is not needed/desired, a plugin can opt-out of its creation
     via the `needsCache` flag metioned below.
     */
-  def setup(features: FeatureSet, options: AnonCachePath): Unit
+  def setup(features: FeatureSet, options: AnonCachePath): Unit = js.native
 }
 
 object TransformNodeInfo {
@@ -83,12 +82,60 @@ object TransformNodeInfo {
     persistentOutput: Boolean,
     setup: (FeatureSet, AnonCachePath) => Unit,
     trackInputChanges: Boolean,
-    volatile: Boolean,
-    annotation: String = null
+    volatile: Boolean
   ): TransformNodeInfo = {
     val __obj = js.Dynamic.literal(getCallbackObject = js.Any.fromFunction0(getCallbackObject), inputNodes = inputNodes.asInstanceOf[js.Any], instantiationStack = instantiationStack.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], needsCache = needsCache.asInstanceOf[js.Any], nodeType = nodeType.asInstanceOf[js.Any], persistentOutput = persistentOutput.asInstanceOf[js.Any], setup = js.Any.fromFunction2(setup), trackInputChanges = trackInputChanges.asInstanceOf[js.Any], volatile = volatile.asInstanceOf[js.Any])
-    if (annotation != null) __obj.updateDynamic("annotation")(annotation.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransformNodeInfo]
   }
+  @scala.inline
+  implicit class TransformNodeInfoOps[Self <: TransformNodeInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetCallbackObject(value: () => CallbackObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCallbackObject")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withInputNodes(value: js.Array[InputNode]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNeedsCache(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needsCache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPersistentOutput(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persistentOutput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetup(value: (FeatureSet, AnonCachePath) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setup")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withTrackInputChanges(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackInputChanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVolatile(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volatile")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

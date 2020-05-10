@@ -4,16 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonLabel extends js.Object {
-  var label: String
-  var linkId: String
-  var mappedPosition: AnonLatitude
-  var mappedRoadName: String
-  var originalPosition: AnonLatitude
-  var shapeIndex: Double
-  var sideOfStreet: String
-  var spot: Double
-  var `type`: String
+  var label: String = js.native
+  var linkId: String = js.native
+  var mappedPosition: AnonLatitude = js.native
+  var mappedRoadName: String = js.native
+  var originalPosition: AnonLatitude = js.native
+  var shapeIndex: Double = js.native
+  var sideOfStreet: String = js.native
+  var spot: Double = js.native
+  var `type`: String = js.native
 }
 
 object AnonLabel {
@@ -33,5 +34,67 @@ object AnonLabel {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonLabel]
   }
+  @scala.inline
+  implicit class AnonLabelOps[Self <: AnonLabel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinkId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMappedPosition(value: AnonLatitude): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mappedPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMappedRoadName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mappedRoadName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOriginalPosition(value: AnonLatitude): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShapeIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSideOfStreet(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sideOfStreet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpot(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

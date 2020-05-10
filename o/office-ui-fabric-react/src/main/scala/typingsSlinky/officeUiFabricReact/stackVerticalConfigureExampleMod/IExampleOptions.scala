@@ -5,23 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IExampleOptions extends js.Object {
-  var autoHeight: Boolean
-  var childrenGap: Double
-  var disableShrink: Boolean
-  var emptyChildren: js.Array[String]
-  var hideEmptyChildren: Boolean
-  var horizontalAlignment: js.UndefOr[Alignment] = js.undefined
-  var numItems: Double
-  var paddingBottom: Double
-  var paddingLeft: Double
-  var paddingRight: Double
-  var paddingTop: Double
-  var preventOverflow: Boolean
-  var showBoxShadow: Boolean
-  var stackHeight: Double
-  var verticalAlignment: js.UndefOr[Alignment] = js.undefined
-  var wrap: Boolean
+  var autoHeight: Boolean = js.native
+  var childrenGap: Double = js.native
+  var disableShrink: Boolean = js.native
+  var emptyChildren: js.Array[String] = js.native
+  var hideEmptyChildren: Boolean = js.native
+  var horizontalAlignment: js.UndefOr[Alignment] = js.native
+  var numItems: Double = js.native
+  var paddingBottom: Double = js.native
+  var paddingLeft: Double = js.native
+  var paddingRight: Double = js.native
+  var paddingTop: Double = js.native
+  var preventOverflow: Boolean = js.native
+  var showBoxShadow: Boolean = js.native
+  var stackHeight: Double = js.native
+  var verticalAlignment: js.UndefOr[Alignment] = js.native
+  var wrap: Boolean = js.native
 }
 
 object IExampleOptions {
@@ -40,14 +41,126 @@ object IExampleOptions {
     preventOverflow: Boolean,
     showBoxShadow: Boolean,
     stackHeight: Double,
-    wrap: Boolean,
-    horizontalAlignment: Alignment = null,
-    verticalAlignment: Alignment = null
+    wrap: Boolean
   ): IExampleOptions = {
     val __obj = js.Dynamic.literal(autoHeight = autoHeight.asInstanceOf[js.Any], childrenGap = childrenGap.asInstanceOf[js.Any], disableShrink = disableShrink.asInstanceOf[js.Any], emptyChildren = emptyChildren.asInstanceOf[js.Any], hideEmptyChildren = hideEmptyChildren.asInstanceOf[js.Any], numItems = numItems.asInstanceOf[js.Any], paddingBottom = paddingBottom.asInstanceOf[js.Any], paddingLeft = paddingLeft.asInstanceOf[js.Any], paddingRight = paddingRight.asInstanceOf[js.Any], paddingTop = paddingTop.asInstanceOf[js.Any], preventOverflow = preventOverflow.asInstanceOf[js.Any], showBoxShadow = showBoxShadow.asInstanceOf[js.Any], stackHeight = stackHeight.asInstanceOf[js.Any], wrap = wrap.asInstanceOf[js.Any])
-    if (horizontalAlignment != null) __obj.updateDynamic("horizontalAlignment")(horizontalAlignment.asInstanceOf[js.Any])
-    if (verticalAlignment != null) __obj.updateDynamic("verticalAlignment")(verticalAlignment.asInstanceOf[js.Any])
     __obj.asInstanceOf[IExampleOptions]
   }
+  @scala.inline
+  implicit class IExampleOptionsOps[Self <: IExampleOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoHeight(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildrenGap(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childrenGap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableShrink(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableShrink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmptyChildren(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyChildren")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHideEmptyChildren(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideEmptyChildren")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumItems(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaddingBottom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaddingLeft(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaddingRight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaddingTop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreventOverflow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventOverflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShowBoxShadow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showBoxShadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStackHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stackHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWrap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHorizontalAlignment(value: Alignment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizontalAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalAlignment(value: Alignment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

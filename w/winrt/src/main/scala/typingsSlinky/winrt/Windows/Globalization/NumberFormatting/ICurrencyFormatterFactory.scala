@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ICurrencyFormatterFactory extends js.Object {
-  def createCurrencyFormatterCode(currencyCode: String): CurrencyFormatter
-  def createCurrencyFormatterCodeContext(currencyCode: String, languages: IIterable[String], geographicRegion: String): CurrencyFormatter
+  def createCurrencyFormatterCode(currencyCode: String): CurrencyFormatter = js.native
+  def createCurrencyFormatterCodeContext(currencyCode: String, languages: IIterable[String], geographicRegion: String): CurrencyFormatter = js.native
 }
 
 object ICurrencyFormatterFactory {
@@ -17,8 +18,27 @@ object ICurrencyFormatterFactory {
     createCurrencyFormatterCodeContext: (String, IIterable[String], String) => CurrencyFormatter
   ): ICurrencyFormatterFactory = {
     val __obj = js.Dynamic.literal(createCurrencyFormatterCode = js.Any.fromFunction1(createCurrencyFormatterCode), createCurrencyFormatterCodeContext = js.Any.fromFunction3(createCurrencyFormatterCodeContext))
-  
     __obj.asInstanceOf[ICurrencyFormatterFactory]
   }
+  @scala.inline
+  implicit class ICurrencyFormatterFactoryOps[Self <: ICurrencyFormatterFactory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateCurrencyFormatterCode(value: String => CurrencyFormatter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createCurrencyFormatterCode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateCurrencyFormatterCodeContext(value: (String, IIterable[String], String) => CurrencyFormatter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createCurrencyFormatterCodeContext")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

@@ -22,16 +22,53 @@ trait ListMembersRequest extends js.Object {
 
 object ListMembersRequest {
   @scala.inline
-  def apply(
-    MaxResults: Int | scala.Double = null,
-    NextToken: NextToken = null,
-    OnlyAssociated: js.UndefOr[scala.Boolean] = js.undefined
-  ): ListMembersRequest = {
+  def apply(): ListMembersRequest = {
     val __obj = js.Dynamic.literal()
-    if (MaxResults != null) __obj.updateDynamic("MaxResults")(MaxResults.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (!js.isUndefined(OnlyAssociated)) __obj.updateDynamic("OnlyAssociated")(OnlyAssociated.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListMembersRequest]
   }
+  @scala.inline
+  implicit class ListMembersRequestOps[Self <: ListMembersRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxResults(value: MaxResults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnlyAssociated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnlyAssociated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnlyAssociated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnlyAssociated")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

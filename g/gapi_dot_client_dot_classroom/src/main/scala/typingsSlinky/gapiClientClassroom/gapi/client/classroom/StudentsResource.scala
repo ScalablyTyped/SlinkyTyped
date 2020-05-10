@@ -39,6 +39,7 @@ trait StudentsResource extends js.Object {
     * &#42; `NOT_FOUND` if no student of this course has the requested ID or if the
     * course does not exist.
     */
+  def delete(): Request_[js.Object] = js.native
   def delete(request: AnonUserId): Request_[js.Object] = js.native
   /**
     * Returns a student of a course.
@@ -50,6 +51,7 @@ trait StudentsResource extends js.Object {
     * &#42; `NOT_FOUND` if no student of this course has the requested ID or if the
     * course does not exist.
     */
+  def get(): Request_[Student] = js.native
   def get(request: AnonUserId): Request_[Student] = js.native
   /**
     * Returns a list of students of this course that the requester
@@ -60,6 +62,7 @@ trait StudentsResource extends js.Object {
     * &#42; `NOT_FOUND` if the course does not exist.
     * &#42; `PERMISSION_DENIED` for access errors.
     */
+  def list(): Request_[ListStudentsResponse] = js.native
   def list(request: AnonCallback): Request_[ListStudentsResponse] = js.native
 }
 

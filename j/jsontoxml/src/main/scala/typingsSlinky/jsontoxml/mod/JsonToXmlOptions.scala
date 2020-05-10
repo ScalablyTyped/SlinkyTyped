@@ -5,36 +5,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait JsonToXmlOptions extends js.Object {
-  var docType: js.UndefOr[String] = js.undefined
-  var escape: js.UndefOr[Boolean] = js.undefined
-  var html: js.UndefOr[Boolean] = js.undefined
-  var indent: js.UndefOr[String] = js.undefined
-  var prettyPrint: js.UndefOr[Boolean] = js.undefined
-  var removeIllegalNameCharacters: js.UndefOr[Boolean] = js.undefined
-  var xmlHeader: js.UndefOr[Boolean | AnonStandalone] = js.undefined
+  var docType: js.UndefOr[String] = js.native
+  var escape: js.UndefOr[Boolean] = js.native
+  var html: js.UndefOr[Boolean] = js.native
+  var indent: js.UndefOr[String] = js.native
+  var prettyPrint: js.UndefOr[Boolean] = js.native
+  var removeIllegalNameCharacters: js.UndefOr[Boolean] = js.native
+  var xmlHeader: js.UndefOr[Boolean | AnonStandalone] = js.native
 }
 
 object JsonToXmlOptions {
   @scala.inline
-  def apply(
-    docType: String = null,
-    escape: js.UndefOr[Boolean] = js.undefined,
-    html: js.UndefOr[Boolean] = js.undefined,
-    indent: String = null,
-    prettyPrint: js.UndefOr[Boolean] = js.undefined,
-    removeIllegalNameCharacters: js.UndefOr[Boolean] = js.undefined,
-    xmlHeader: Boolean | AnonStandalone = null
-  ): JsonToXmlOptions = {
+  def apply(): JsonToXmlOptions = {
     val __obj = js.Dynamic.literal()
-    if (docType != null) __obj.updateDynamic("docType")(docType.asInstanceOf[js.Any])
-    if (!js.isUndefined(escape)) __obj.updateDynamic("escape")(escape.asInstanceOf[js.Any])
-    if (!js.isUndefined(html)) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
-    if (indent != null) __obj.updateDynamic("indent")(indent.asInstanceOf[js.Any])
-    if (!js.isUndefined(prettyPrint)) __obj.updateDynamic("prettyPrint")(prettyPrint.asInstanceOf[js.Any])
-    if (!js.isUndefined(removeIllegalNameCharacters)) __obj.updateDynamic("removeIllegalNameCharacters")(removeIllegalNameCharacters.asInstanceOf[js.Any])
-    if (xmlHeader != null) __obj.updateDynamic("xmlHeader")(xmlHeader.asInstanceOf[js.Any])
     __obj.asInstanceOf[JsonToXmlOptions]
   }
+  @scala.inline
+  implicit class JsonToXmlOptionsOps[Self <: JsonToXmlOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("docType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("docType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEscape(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("escape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEscape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("escape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtml(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtml: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrettyPrint(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prettyPrint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrettyPrint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prettyPrint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveIllegalNameCharacters(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeIllegalNameCharacters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveIllegalNameCharacters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeIllegalNameCharacters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXmlHeader(value: Boolean | AnonStandalone): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXmlHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlHeader")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

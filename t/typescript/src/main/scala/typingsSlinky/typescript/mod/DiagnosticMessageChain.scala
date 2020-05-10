@@ -4,24 +4,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DiagnosticMessageChain extends js.Object {
-  var category: DiagnosticCategory
-  var code: Double
-  var messageText: java.lang.String
-  var next: js.UndefOr[js.Array[DiagnosticMessageChain]] = js.undefined
+  var category: DiagnosticCategory = js.native
+  var code: Double = js.native
+  var messageText: java.lang.String = js.native
+  var next: js.UndefOr[js.Array[DiagnosticMessageChain]] = js.native
 }
 
 object DiagnosticMessageChain {
   @scala.inline
-  def apply(
-    category: DiagnosticCategory,
-    code: Double,
-    messageText: java.lang.String,
-    next: js.Array[DiagnosticMessageChain] = null
-  ): DiagnosticMessageChain = {
+  def apply(category: DiagnosticCategory, code: Double, messageText: java.lang.String): DiagnosticMessageChain = {
     val __obj = js.Dynamic.literal(category = category.asInstanceOf[js.Any], code = code.asInstanceOf[js.Any], messageText = messageText.asInstanceOf[js.Any])
-    if (next != null) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiagnosticMessageChain]
   }
+  @scala.inline
+  implicit class DiagnosticMessageChainOps[Self <: DiagnosticMessageChain] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCategory(value: DiagnosticCategory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessageText(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNext(value: js.Array[DiagnosticMessageChain]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

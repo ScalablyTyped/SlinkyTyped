@@ -8,10 +8,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SketchDeleteEvent extends js.Object {
-  var graphics: js.Array[Graphic]
-  var tool: move | reshape | transform
-  var `type`: delete
+  var graphics: js.Array[Graphic] = js.native
+  var tool: move | reshape | transform = js.native
+  var `type`: delete = js.native
 }
 
 object SketchDeleteEvent {
@@ -21,5 +22,31 @@ object SketchDeleteEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SketchDeleteEvent]
   }
+  @scala.inline
+  implicit class SketchDeleteEventOps[Self <: SketchDeleteEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGraphics(value: js.Array[Graphic]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("graphics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTool(value: move | reshape | transform): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tool")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: delete): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

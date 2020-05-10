@@ -38,8 +38,45 @@ object GetEC2RecommendationProjectedMetricsRequest {
     stat: MetricStatistic
   ): GetEC2RecommendationProjectedMetricsRequest = {
     val __obj = js.Dynamic.literal(endTime = endTime.asInstanceOf[js.Any], instanceArn = instanceArn.asInstanceOf[js.Any], period = period.asInstanceOf[js.Any], startTime = startTime.asInstanceOf[js.Any], stat = stat.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetEC2RecommendationProjectedMetricsRequest]
   }
+  @scala.inline
+  implicit class GetEC2RecommendationProjectedMetricsRequestOps[Self <: GetEC2RecommendationProjectedMetricsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstanceArn(value: InstanceArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPeriod(value: Period): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStat(value: MetricStatistic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stat")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

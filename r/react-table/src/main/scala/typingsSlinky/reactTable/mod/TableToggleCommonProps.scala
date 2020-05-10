@@ -1,34 +1,78 @@
 package typingsSlinky.reactTable.mod
 
-import typingsSlinky.reactTable.AnonCursor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait TableToggleCommonProps extends js.Object {
-  var checked: js.UndefOr[Boolean] = js.undefined
-  var indeterminate: js.UndefOr[Boolean] = js.undefined
-  var onChange: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var style: js.UndefOr[AnonCursor] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
+@js.native
+trait TableToggleCommonProps extends TableCommonProps {
+  var checked: js.UndefOr[Boolean] = js.native
+  var indeterminate: js.UndefOr[Boolean] = js.native
+  var onChange: js.UndefOr[js.Function0[Unit]] = js.native
+  var title: js.UndefOr[String] = js.native
 }
 
 object TableToggleCommonProps {
   @scala.inline
-  def apply(
-    checked: js.UndefOr[Boolean] = js.undefined,
-    indeterminate: js.UndefOr[Boolean] = js.undefined,
-    onChange: () => Unit = null,
-    style: AnonCursor = null,
-    title: String = null
-  ): TableToggleCommonProps = {
+  def apply(): TableToggleCommonProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(checked)) __obj.updateDynamic("checked")(checked.asInstanceOf[js.Any])
-    if (!js.isUndefined(indeterminate)) __obj.updateDynamic("indeterminate")(indeterminate.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction0(onChange))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableToggleCommonProps]
   }
+  @scala.inline
+  implicit class TableToggleCommonPropsOps[Self <: TableToggleCommonProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChecked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChecked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndeterminate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indeterminate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndeterminate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indeterminate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

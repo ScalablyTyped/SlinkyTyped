@@ -7,7 +7,6 @@ import typingsSlinky.phaser.Phaser.Events.EventEmitter
 import typingsSlinky.phaser.Phaser.Types.Sound.DecodeAudioConfig
 import typingsSlinky.phaser.Phaser.Types.Sound.SoundConfig
 import typingsSlinky.phaser.Phaser.Types.Sound.SoundMarker
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -559,10 +558,10 @@ object Sound extends js.Object {
     def decodeAudio(): Unit = js.native
     def decodeAudio(audioKey: String): Unit = js.native
     def decodeAudio(audioKey: String, audioData: String): Unit = js.native
-    def decodeAudio(audioKey: String, audioData: ArrayBuffer): Unit = js.native
+    def decodeAudio(audioKey: String, audioData: js.typedarray.ArrayBuffer): Unit = js.native
     def decodeAudio(audioKey: js.Array[DecodeAudioConfig]): Unit = js.native
     def decodeAudio(audioKey: js.Array[DecodeAudioConfig], audioData: String): Unit = js.native
-    def decodeAudio(audioKey: js.Array[DecodeAudioConfig], audioData: ArrayBuffer): Unit = js.native
+    def decodeAudio(audioKey: js.Array[DecodeAudioConfig], audioData: js.typedarray.ArrayBuffer): Unit = js.native
     /**
       * This method takes a new AudioContext reference and then sets
       * this Sound Manager to use that context for all playback.

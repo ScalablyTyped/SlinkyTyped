@@ -1,42 +1,52 @@
 package typingsSlinky.reactOnsenui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameAutofocus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Select
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactOnsenui.mod.Select] {
+object Select {
   @JSImport("react-onsenui", "Select")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, form, id, multiple, name, required, style */
-  def apply(
-    autofocus: js.UndefOr[Boolean] = js.undefined,
-    modifier: String = null,
-    onChange: /* e */ ChangeEvent[_] => Unit = null,
-    size: String = null,
-    value: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.Select] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autofocus)) __obj.updateDynamic("autofocus")(autofocus.asInstanceOf[js.Any])
-    if (modifier != null) __obj.updateDynamic("modifier")(modifier.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.Select] {
+    @scala.inline
+    def autofocus(value: Boolean): this.type = set("autofocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def modifier(value: String): this.type = set("modifier", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* e */ ChangeEvent[_] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: String): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.Select] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactOnsenui.mod.Select](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = HTMLAttributesidclassNameAutofocus
+  
+  def withProps(p: HTMLAttributesidclassNameAutofocus): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Select.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

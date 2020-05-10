@@ -10,5 +10,7 @@ package object mod {
   type Logger_ = typingsSlinky.camundaExternalTaskClientJs.mod.Middleware with typingsSlinky.camundaExternalTaskClientJs.AnonError
   type Middleware = js.Function1[/* client */ typingsSlinky.camundaExternalTaskClientJs.mod.Client, scala.Unit]
   type SuccessWithTasksEvent = typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.pollColonsuccess
+  type TypedValueMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.camundaExternalTaskClientJs.mod.TypedValue]
   type Value = js.Any
+  type ValueMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.camundaExternalTaskClientJs.mod.Value]
 }

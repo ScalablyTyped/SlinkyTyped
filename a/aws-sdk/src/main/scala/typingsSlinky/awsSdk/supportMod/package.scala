@@ -24,7 +24,7 @@ package object supportMod {
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.supportMod.ClientApiVersions
   type CommunicationBody = java.lang.String
   type CommunicationList = js.Array[typingsSlinky.awsSdk.supportMod.Communication]
-  type Data = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.supportMod.Blob | java.lang.String
+  type Data = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.supportMod.Blob | java.lang.String
   type DisplayId = java.lang.String
   type Double = scala.Double
   type ExpiryTime = java.lang.String

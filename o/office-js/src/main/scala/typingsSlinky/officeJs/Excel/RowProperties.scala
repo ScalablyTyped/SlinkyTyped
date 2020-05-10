@@ -1,6 +1,5 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.CellPropertiesFormatrowHe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
+@js.native
 trait RowProperties extends SettableRowProperties {
   /**
     *
@@ -18,43 +18,72 @@ trait RowProperties extends SettableRowProperties {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var address: js.UndefOr[String] = js.undefined
+  var address: js.UndefOr[String] = js.native
   /**
     *
     * Represents the `addressLocal` property.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var addressLocal: js.UndefOr[String] = js.undefined
+  var addressLocal: js.UndefOr[String] = js.native
   /**
     *
     * Represents the `rowIndex` property.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var rowIndex: js.UndefOr[Double] = js.undefined
+  var rowIndex: js.UndefOr[Double] = js.native
 }
 
 object RowProperties {
   @scala.inline
-  def apply(
-    address: String = null,
-    addressLocal: String = null,
-    format: CellPropertiesFormatrowHe = null,
-    hyperlink: RangeHyperlink = null,
-    rowHidden: js.UndefOr[Boolean] = js.undefined,
-    rowIndex: Int | Double = null,
-    style: String = null
-  ): RowProperties = {
+  def apply(): RowProperties = {
     val __obj = js.Dynamic.literal()
-    if (address != null) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
-    if (addressLocal != null) __obj.updateDynamic("addressLocal")(addressLocal.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (hyperlink != null) __obj.updateDynamic("hyperlink")(hyperlink.asInstanceOf[js.Any])
-    if (!js.isUndefined(rowHidden)) __obj.updateDynamic("rowHidden")(rowHidden.asInstanceOf[js.Any])
-    if (rowIndex != null) __obj.updateDynamic("rowIndex")(rowIndex.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[RowProperties]
   }
+  @scala.inline
+  implicit class RowPropertiesOps[Self <: RowProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddressLocal(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressLocal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddressLocal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressLocal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

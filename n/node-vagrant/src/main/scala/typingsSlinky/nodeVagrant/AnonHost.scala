@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonHost extends js.Object {
-  var host: String | Null
-  var hostname: String | Null
-  var port: String | Null
-  var private_key: String | Null
-  var user: String | Null
+  var host: String | Null = js.native
+  var hostname: String | Null = js.native
+  var port: String | Null = js.native
+  var private_key: String | Null = js.native
+  var user: String | Null = js.native
 }
 
 object AnonHost {
   @scala.inline
-  def apply(
-    host: String = null,
-    hostname: String = null,
-    port: String = null,
-    private_key: String = null,
-    user: String = null
-  ): AnonHost = {
+  def apply(): AnonHost = {
     val __obj = js.Dynamic.literal()
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (private_key != null) __obj.updateDynamic("private_key")(private_key.asInstanceOf[js.Any])
-    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonHost]
   }
+  @scala.inline
+  implicit class AnonHostOps[Self <: AnonHost] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHostNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(null)
+        ret
+    }
+    @scala.inline
+    def withHostname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHostnameNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(null)
+        ret
+    }
+    @scala.inline
+    def withPort(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPortNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(null)
+        ret
+    }
+    @scala.inline
+    def withPrivate_key(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("private_key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrivate_keyNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("private_key")(null)
+        ret
+    }
+    @scala.inline
+    def withUser(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(null)
+        ret
+    }
+  }
+  
 }
 

@@ -7,40 +7,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SimpleRouterURL extends UrlWithParsedQuery {
-  var args: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  var args: js.UndefOr[StringDictionary[js.Any]] = js.native
 }
 
 object SimpleRouterURL {
   @scala.inline
-  def apply(
-    href: String,
-    query: ParsedUrlQuery,
-    args: StringDictionary[js.Any] = null,
-    auth: String = null,
-    hash: String = null,
-    host: String = null,
-    hostname: String = null,
-    path: String = null,
-    pathname: String = null,
-    port: String = null,
-    protocol: String = null,
-    search: String = null,
-    slashes: js.UndefOr[Boolean] = js.undefined
-  ): SimpleRouterURL = {
+  def apply(href: String, query: ParsedUrlQuery): SimpleRouterURL = {
     val __obj = js.Dynamic.literal(href = href.asInstanceOf[js.Any], query = query.asInstanceOf[js.Any])
-    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
-    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
-    if (hash != null) __obj.updateDynamic("hash")(hash.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (pathname != null) __obj.updateDynamic("pathname")(pathname.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
-    if (search != null) __obj.updateDynamic("search")(search.asInstanceOf[js.Any])
-    if (!js.isUndefined(slashes)) __obj.updateDynamic("slashes")(slashes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SimpleRouterURL]
   }
+  @scala.inline
+  implicit class SimpleRouterURLOps[Self <: SimpleRouterURL] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArgs(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArgs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

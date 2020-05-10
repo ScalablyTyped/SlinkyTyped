@@ -19,14 +19,12 @@ trait ServerType extends js.Object
 
 object ServerType {
   @scala.inline
-  def carmentaserver: typingsSlinky.openlayers.openlayersStrings.carmentaserver = this.cast("carmentaserver")
+  def carmentaserver: typingsSlinky.openlayers.openlayersStrings.carmentaserver = "carmentaserver".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.carmentaserver]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def geoserver: typingsSlinky.openlayers.openlayersStrings.geoserver = "geoserver".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.geoserver]
   @scala.inline
-  def geoserver: typingsSlinky.openlayers.openlayersStrings.geoserver = this.cast("geoserver")
+  def mapserver: typingsSlinky.openlayers.openlayersStrings.mapserver = "mapserver".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.mapserver]
   @scala.inline
-  def mapserver: typingsSlinky.openlayers.openlayersStrings.mapserver = this.cast("mapserver")
-  @scala.inline
-  def qgis: typingsSlinky.openlayers.openlayersStrings.qgis = this.cast("qgis")
+  def qgis: typingsSlinky.openlayers.openlayersStrings.qgis = "qgis".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.qgis]
 }
 

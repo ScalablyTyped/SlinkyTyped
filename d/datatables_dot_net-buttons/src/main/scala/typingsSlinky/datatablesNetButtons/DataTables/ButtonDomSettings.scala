@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ButtonDomSettings extends js.Object {
-  var button: js.UndefOr[ButtonDomButtomButton] = js.undefined
-  var buttonContainer: js.UndefOr[ButtonDomButtomCommon] = js.undefined
-  var buttonLiner: js.UndefOr[ButtonDomButtomCommon] = js.undefined
-  var collection: js.UndefOr[ButtonDomButtomCommon] = js.undefined
-  var container: js.UndefOr[ButtonDomButtomCommon] = js.undefined
+  var button: js.UndefOr[ButtonDomButtomButton] = js.native
+  var buttonContainer: js.UndefOr[ButtonDomButtomCommon] = js.native
+  var buttonLiner: js.UndefOr[ButtonDomButtomCommon] = js.native
+  var collection: js.UndefOr[ButtonDomButtomCommon] = js.native
+  var container: js.UndefOr[ButtonDomButtomCommon] = js.native
 }
 
 object ButtonDomSettings {
   @scala.inline
-  def apply(
-    button: ButtonDomButtomButton = null,
-    buttonContainer: ButtonDomButtomCommon = null,
-    buttonLiner: ButtonDomButtomCommon = null,
-    collection: ButtonDomButtomCommon = null,
-    container: ButtonDomButtomCommon = null
-  ): ButtonDomSettings = {
+  def apply(): ButtonDomSettings = {
     val __obj = js.Dynamic.literal()
-    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
-    if (buttonContainer != null) __obj.updateDynamic("buttonContainer")(buttonContainer.asInstanceOf[js.Any])
-    if (buttonLiner != null) __obj.updateDynamic("buttonLiner")(buttonLiner.asInstanceOf[js.Any])
-    if (collection != null) __obj.updateDynamic("collection")(collection.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
     __obj.asInstanceOf[ButtonDomSettings]
   }
+  @scala.inline
+  implicit class ButtonDomSettingsOps[Self <: ButtonDomSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withButton(value: ButtonDomButtomButton): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtonContainer(value: ButtonDomButtomCommon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonContainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtonContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtonLiner(value: ButtonDomButtomCommon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonLiner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtonLiner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonLiner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollection(value: ButtonDomButtomCommon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainer(value: ButtonDomButtomCommon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

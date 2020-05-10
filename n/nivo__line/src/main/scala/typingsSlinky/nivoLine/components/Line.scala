@@ -1,11 +1,9 @@
 package typingsSlinky.nivoLine.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoAxes.mod.AxisProps
 import typingsSlinky.nivoColors.mod.OrdinalColorsInstruction
 import typingsSlinky.nivoCore.mod.Box
@@ -37,109 +35,126 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Line
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.nivoLine.mod.Line] {
+object Line {
   @JSImport("@nivo/line", "Line")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    data: js.Array[LineSerieData],
-    height: Double,
-    width: Double,
-    animate: js.UndefOr[Boolean] = js.undefined,
-    areaBaselineValue: LineValue = null,
-    areaBlendMode: String = null,
-    areaOpacity: Int | Double = null,
-    axisBottom: AxisProps = null,
-    axisLeft: AxisProps = null,
-    axisRight: AxisProps = null,
-    axisTop: AxisProps = null,
-    colors: OrdinalColorsInstruction[_] = null,
-    crosshairType: CrosshairType = null,
-    curve: linear | monotoneX | monotoneY | natural | stepBefore | step | stepAfter = null,
-    debugMesh: js.UndefOr[Boolean] = js.undefined,
-    debugSlices: js.UndefOr[Boolean] = js.undefined,
-    enableArea: js.UndefOr[Boolean] = js.undefined,
-    enableCrosshair: js.UndefOr[Boolean] = js.undefined,
-    enableGridX: js.UndefOr[Boolean] = js.undefined,
-    enableGridY: js.UndefOr[Boolean] = js.undefined,
-    enablePointLabel: js.UndefOr[Boolean] = js.undefined,
-    enablePoints: js.UndefOr[Boolean] = js.undefined,
-    enableSlices: x | y | `false` = null,
-    isInteractive: js.UndefOr[Boolean] = js.undefined,
-    layers: js.Array[Layer] = null,
-    legends: js.Array[LegendProps] = null,
-    lineWidth: Int | Double = null,
-    margin: Box = null,
-    markers: js.Array[CartesianMarkerProps] = null,
-    motionDamping: Int | Double = null,
-    motionStiffness: Int | Double = null,
-    pointBorderColor: js.Any = null,
-    pointBorderWidth: Int | Double = null,
-    pointColor: js.Any = null,
-    pointLabel: String = null,
-    pointLabelYOffset: Int | Double = null,
-    pointSize: Int | Double = null,
-    sliceTooltip: /* data */ LineSliceData => TagMod[Any] = null,
-    theme: Theme = null,
-    tooltip: ReactComponentClass[LineTooltipProps] = null,
-    tooltipFormat: TooltipFormatter | String = null,
-    useMesh: js.UndefOr[Boolean] = js.undefined,
-    xFormat: String | DataFormatter = null,
-    xScale: Scale = null,
-    yFormat: String | DataFormatter = null,
-    yScale: Scale = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.nivoLine.mod.Line] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (areaBaselineValue != null) __obj.updateDynamic("areaBaselineValue")(areaBaselineValue.asInstanceOf[js.Any])
-    if (areaBlendMode != null) __obj.updateDynamic("areaBlendMode")(areaBlendMode.asInstanceOf[js.Any])
-    if (areaOpacity != null) __obj.updateDynamic("areaOpacity")(areaOpacity.asInstanceOf[js.Any])
-    if (axisBottom != null) __obj.updateDynamic("axisBottom")(axisBottom.asInstanceOf[js.Any])
-    if (axisLeft != null) __obj.updateDynamic("axisLeft")(axisLeft.asInstanceOf[js.Any])
-    if (axisRight != null) __obj.updateDynamic("axisRight")(axisRight.asInstanceOf[js.Any])
-    if (axisTop != null) __obj.updateDynamic("axisTop")(axisTop.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (crosshairType != null) __obj.updateDynamic("crosshairType")(crosshairType.asInstanceOf[js.Any])
-    if (curve != null) __obj.updateDynamic("curve")(curve.asInstanceOf[js.Any])
-    if (!js.isUndefined(debugMesh)) __obj.updateDynamic("debugMesh")(debugMesh.asInstanceOf[js.Any])
-    if (!js.isUndefined(debugSlices)) __obj.updateDynamic("debugSlices")(debugSlices.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableArea)) __obj.updateDynamic("enableArea")(enableArea.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableCrosshair)) __obj.updateDynamic("enableCrosshair")(enableCrosshair.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableGridX)) __obj.updateDynamic("enableGridX")(enableGridX.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableGridY)) __obj.updateDynamic("enableGridY")(enableGridY.asInstanceOf[js.Any])
-    if (!js.isUndefined(enablePointLabel)) __obj.updateDynamic("enablePointLabel")(enablePointLabel.asInstanceOf[js.Any])
-    if (!js.isUndefined(enablePoints)) __obj.updateDynamic("enablePoints")(enablePoints.asInstanceOf[js.Any])
-    if (enableSlices != null) __obj.updateDynamic("enableSlices")(enableSlices.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInteractive)) __obj.updateDynamic("isInteractive")(isInteractive.asInstanceOf[js.Any])
-    if (layers != null) __obj.updateDynamic("layers")(layers.asInstanceOf[js.Any])
-    if (legends != null) __obj.updateDynamic("legends")(legends.asInstanceOf[js.Any])
-    if (lineWidth != null) __obj.updateDynamic("lineWidth")(lineWidth.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (markers != null) __obj.updateDynamic("markers")(markers.asInstanceOf[js.Any])
-    if (motionDamping != null) __obj.updateDynamic("motionDamping")(motionDamping.asInstanceOf[js.Any])
-    if (motionStiffness != null) __obj.updateDynamic("motionStiffness")(motionStiffness.asInstanceOf[js.Any])
-    if (pointBorderColor != null) __obj.updateDynamic("pointBorderColor")(pointBorderColor.asInstanceOf[js.Any])
-    if (pointBorderWidth != null) __obj.updateDynamic("pointBorderWidth")(pointBorderWidth.asInstanceOf[js.Any])
-    if (pointColor != null) __obj.updateDynamic("pointColor")(pointColor.asInstanceOf[js.Any])
-    if (pointLabel != null) __obj.updateDynamic("pointLabel")(pointLabel.asInstanceOf[js.Any])
-    if (pointLabelYOffset != null) __obj.updateDynamic("pointLabelYOffset")(pointLabelYOffset.asInstanceOf[js.Any])
-    if (pointSize != null) __obj.updateDynamic("pointSize")(pointSize.asInstanceOf[js.Any])
-    if (sliceTooltip != null) __obj.updateDynamic("sliceTooltip")(js.Any.fromFunction1(sliceTooltip))
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (tooltipFormat != null) __obj.updateDynamic("tooltipFormat")(tooltipFormat.asInstanceOf[js.Any])
-    if (!js.isUndefined(useMesh)) __obj.updateDynamic("useMesh")(useMesh.asInstanceOf[js.Any])
-    if (xFormat != null) __obj.updateDynamic("xFormat")(xFormat.asInstanceOf[js.Any])
-    if (xScale != null) __obj.updateDynamic("xScale")(xScale.asInstanceOf[js.Any])
-    if (yFormat != null) __obj.updateDynamic("yFormat")(yFormat.asInstanceOf[js.Any])
-    if (yScale != null) __obj.updateDynamic("yScale")(yScale.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.nivoLine.mod.Line] {
+    @scala.inline
+    def animate(value: Boolean): this.type = set("animate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def areaBaselineValueDate(value: js.Date): this.type = set("areaBaselineValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def areaBaselineValue(value: LineValue): this.type = set("areaBaselineValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def areaBlendMode(value: String): this.type = set("areaBlendMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def areaOpacity(value: Double): this.type = set("areaOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisBottom(value: AxisProps): this.type = set("axisBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisBottomNull: this.type = set("axisBottom", null)
+    @scala.inline
+    def axisLeft(value: AxisProps): this.type = set("axisLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisLeftNull: this.type = set("axisLeft", null)
+    @scala.inline
+    def axisRight(value: AxisProps): this.type = set("axisRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisRightNull: this.type = set("axisRight", null)
+    @scala.inline
+    def axisTop(value: AxisProps): this.type = set("axisTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisTopNull: this.type = set("axisTop", null)
+    @scala.inline
+    def colorsFunction1(value: _ => String): this.type = set("colors", js.Any.fromFunction1(value))
+    @scala.inline
+    def colors(value: OrdinalColorsInstruction[_]): this.type = set("colors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def crosshairType(value: CrosshairType): this.type = set("crosshairType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def curve(value: linear | monotoneX | monotoneY | natural | stepBefore | step | stepAfter): this.type = set("curve", value.asInstanceOf[js.Any])
+    @scala.inline
+    def debugMesh(value: Boolean): this.type = set("debugMesh", value.asInstanceOf[js.Any])
+    @scala.inline
+    def debugSlices(value: Boolean): this.type = set("debugSlices", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableArea(value: Boolean): this.type = set("enableArea", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableCrosshair(value: Boolean): this.type = set("enableCrosshair", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableGridX(value: Boolean): this.type = set("enableGridX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableGridY(value: Boolean): this.type = set("enableGridY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enablePointLabel(value: Boolean): this.type = set("enablePointLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enablePoints(value: Boolean): this.type = set("enablePoints", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableSlices(value: x | y | `false`): this.type = set("enableSlices", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isInteractive(value: Boolean): this.type = set("isInteractive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def layers(value: js.Array[Layer]): this.type = set("layers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def legends(value: js.Array[LegendProps]): this.type = set("legends", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lineWidth(value: Double): this.type = set("lineWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: Box): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def markers(value: js.Array[CartesianMarkerProps]): this.type = set("markers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def motionDamping(value: Double): this.type = set("motionDamping", value.asInstanceOf[js.Any])
+    @scala.inline
+    def motionStiffness(value: Double): this.type = set("motionStiffness", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pointBorderColor(value: js.Any): this.type = set("pointBorderColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pointBorderWidth(value: Double): this.type = set("pointBorderWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pointColor(value: js.Any): this.type = set("pointColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pointLabel(value: String): this.type = set("pointLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pointLabelYOffset(value: Double): this.type = set("pointLabelYOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pointSize(value: Double): this.type = set("pointSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sliceTooltip(value: /* data */ LineSliceData => TagMod[Any]): this.type = set("sliceTooltip", js.Any.fromFunction1(value))
+    @scala.inline
+    def theme(value: Theme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltip(value: ReactComponentClass[LineTooltipProps]): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipFormatFunction1(value: /* value */ LineValue => TagMod[Any]): this.type = set("tooltipFormat", js.Any.fromFunction1(value))
+    @scala.inline
+    def tooltipFormat(value: TooltipFormatter | String): this.type = set("tooltipFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useMesh(value: Boolean): this.type = set("useMesh", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xFormatFunction1(value: /* value */ LineValue => String | Double): this.type = set("xFormat", js.Any.fromFunction1(value))
+    @scala.inline
+    def xFormat(value: String | DataFormatter): this.type = set("xFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xScale(value: Scale): this.type = set("xScale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yFormatFunction1(value: /* value */ LineValue => String | Double): this.type = set("yFormat", js.Any.fromFunction1(value))
+    @scala.inline
+    def yFormat(value: String | DataFormatter): this.type = set("yFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yScale(value: Scale): this.type = set("yScale", value.asInstanceOf[js.Any])
   }
-  type Props = LineSvgProps with Dimensions
+  
+  def withProps(p: LineSvgProps with Dimensions): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(data: js.Array[LineSerieData], height: Double, width: Double): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[LineSvgProps with Dimensions]))
+  }
 }
 

@@ -14,10 +14,29 @@ trait GetSizeConstraintSetResponse extends js.Object {
 
 object GetSizeConstraintSetResponse {
   @scala.inline
-  def apply(SizeConstraintSet: SizeConstraintSet = null): GetSizeConstraintSetResponse = {
+  def apply(): GetSizeConstraintSetResponse = {
     val __obj = js.Dynamic.literal()
-    if (SizeConstraintSet != null) __obj.updateDynamic("SizeConstraintSet")(SizeConstraintSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSizeConstraintSetResponse]
   }
+  @scala.inline
+  implicit class GetSizeConstraintSetResponseOps[Self <: GetSizeConstraintSetResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSizeConstraintSet(value: SizeConstraintSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeConstraintSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizeConstraintSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeConstraintSet")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

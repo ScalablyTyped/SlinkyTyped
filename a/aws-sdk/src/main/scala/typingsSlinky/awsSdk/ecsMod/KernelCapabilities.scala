@@ -18,11 +18,41 @@ trait KernelCapabilities extends js.Object {
 
 object KernelCapabilities {
   @scala.inline
-  def apply(add: StringList = null, drop: StringList = null): KernelCapabilities = {
+  def apply(): KernelCapabilities = {
     val __obj = js.Dynamic.literal()
-    if (add != null) __obj.updateDynamic("add")(add.asInstanceOf[js.Any])
-    if (drop != null) __obj.updateDynamic("drop")(drop.asInstanceOf[js.Any])
     __obj.asInstanceOf[KernelCapabilities]
   }
+  @scala.inline
+  implicit class KernelCapabilitiesOps[Self <: KernelCapabilities] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd(value: StringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrop(value: StringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drop")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

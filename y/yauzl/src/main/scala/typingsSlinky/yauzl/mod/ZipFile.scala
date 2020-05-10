@@ -2,7 +2,6 @@ package typingsSlinky.yauzl.mod
 
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.streamMod.Readable
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +34,7 @@ class ZipFile protected () extends EventEmitter {
   def close(): Unit = js.native
   def openReadStream(
     entry: Entry,
-    callback: js.Function2[/* err */ js.UndefOr[Error], /* stream */ js.UndefOr[Readable], Unit]
+    callback: js.Function2[/* err */ js.UndefOr[js.Error], /* stream */ js.UndefOr[Readable], Unit]
   ): Unit = js.native
   def openReadStream(
     entry: Entry,

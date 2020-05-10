@@ -18,11 +18,41 @@ trait ListPlatformVersionsResult extends js.Object {
 
 object ListPlatformVersionsResult {
   @scala.inline
-  def apply(NextToken: Token = null, PlatformSummaryList: PlatformSummaryList = null): ListPlatformVersionsResult = {
+  def apply(): ListPlatformVersionsResult = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (PlatformSummaryList != null) __obj.updateDynamic("PlatformSummaryList")(PlatformSummaryList.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListPlatformVersionsResult]
   }
+  @scala.inline
+  implicit class ListPlatformVersionsResultOps[Self <: ListPlatformVersionsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: Token): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformSummaryList(value: PlatformSummaryList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformSummaryList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformSummaryList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformSummaryList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -8,24 +8,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAuthorizationMethod extends js.Object {
   /**
     * Indicates the method used to send the client.id/client.secret authorization params at the token request.
     * If set to body, the bodyFormat option will be used to format the credentials.
     * Defaults to header
     */
-  var authorizationMethod: js.UndefOr[header | body] = js.undefined
+  var authorizationMethod: js.UndefOr[header | body] = js.native
   /** Format of data sent in the request body. Defaults to form. */
-  var bodyFormat: js.UndefOr[json | form] = js.undefined
+  var bodyFormat: js.UndefOr[json | form] = js.native
 }
 
 object AnonAuthorizationMethod {
   @scala.inline
-  def apply(authorizationMethod: header | body = null, bodyFormat: json | form = null): AnonAuthorizationMethod = {
+  def apply(): AnonAuthorizationMethod = {
     val __obj = js.Dynamic.literal()
-    if (authorizationMethod != null) __obj.updateDynamic("authorizationMethod")(authorizationMethod.asInstanceOf[js.Any])
-    if (bodyFormat != null) __obj.updateDynamic("bodyFormat")(bodyFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAuthorizationMethod]
   }
+  @scala.inline
+  implicit class AnonAuthorizationMethodOps[Self <: AnonAuthorizationMethod] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthorizationMethod(value: header | body): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizationMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBodyFormat(value: json | form): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBodyFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyFormat")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

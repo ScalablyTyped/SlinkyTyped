@@ -24,8 +24,33 @@ object VisibilityConfig {
   @scala.inline
   def apply(CloudWatchMetricsEnabled: Boolean, MetricName: MetricName, SampledRequestsEnabled: Boolean): VisibilityConfig = {
     val __obj = js.Dynamic.literal(CloudWatchMetricsEnabled = CloudWatchMetricsEnabled.asInstanceOf[js.Any], MetricName = MetricName.asInstanceOf[js.Any], SampledRequestsEnabled = SampledRequestsEnabled.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[VisibilityConfig]
   }
+  @scala.inline
+  implicit class VisibilityConfigOps[Self <: VisibilityConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloudWatchMetricsEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchMetricsEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetricName(value: MetricName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSampledRequestsEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampledRequestsEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

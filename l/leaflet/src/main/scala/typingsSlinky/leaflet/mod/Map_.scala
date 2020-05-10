@@ -64,7 +64,7 @@ class Map_ protected () extends Evented {
     * Name of the pane or the pane as HTML-Element
     */
   def getPane(pane: String): js.UndefOr[HTMLElement] = js.native
-  def getPane(pane: typingsSlinky.std.HTMLElement): js.UndefOr[HTMLElement] = js.native
+  def getPane(pane: HTMLElement): js.UndefOr[HTMLElement] = js.native
   def getPanes(): namestringHTMLElementDefa = js.native
   def getPixelBounds(): Bounds_ = js.native
   def getPixelOrigin(): Point_ = js.native

@@ -13,12 +13,10 @@ trait date extends _StartOf
 
 object date {
   @scala.inline
-  def D: typingsSlinky.moment.momentStrings.D = this.cast("D")
+  def D: typingsSlinky.moment.momentStrings.D = "D".asInstanceOf[typingsSlinky.moment.momentStrings.D]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def date: typingsSlinky.moment.momentStrings.date = "date".asInstanceOf[typingsSlinky.moment.momentStrings.date]
   @scala.inline
-  def date: typingsSlinky.moment.momentStrings.date = this.cast("date")
-  @scala.inline
-  def dates: typingsSlinky.moment.momentStrings.dates = this.cast("dates")
+  def dates: typingsSlinky.moment.momentStrings.dates = "dates".asInstanceOf[typingsSlinky.moment.momentStrings.dates]
 }
 

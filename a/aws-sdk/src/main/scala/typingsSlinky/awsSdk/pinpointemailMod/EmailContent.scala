@@ -22,12 +22,53 @@ trait EmailContent extends js.Object {
 
 object EmailContent {
   @scala.inline
-  def apply(Raw: RawMessage = null, Simple: Message = null, Template: Template = null): EmailContent = {
+  def apply(): EmailContent = {
     val __obj = js.Dynamic.literal()
-    if (Raw != null) __obj.updateDynamic("Raw")(Raw.asInstanceOf[js.Any])
-    if (Simple != null) __obj.updateDynamic("Simple")(Simple.asInstanceOf[js.Any])
-    if (Template != null) __obj.updateDynamic("Template")(Template.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmailContent]
   }
+  @scala.inline
+  implicit class EmailContentOps[Self <: EmailContent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRaw(value: RawMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Raw")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRaw: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Raw")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSimple(value: Message): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Simple")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSimple: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Simple")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplate(value: Template): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Template")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -19,3 +19,25 @@ trait IOnInit extends js.Object {
   def $onInit(): Unit = js.native
 }
 
+object IOnInit {
+  @scala.inline
+  def apply($onInit: () => Unit): IOnInit = {
+    val __obj = js.Dynamic.literal($onInit = js.Any.fromFunction0($onInit))
+    __obj.asInstanceOf[IOnInit]
+  }
+  @scala.inline
+  implicit class IOnInitOps[Self <: IOnInit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$onInit(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$onInit")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
+}
+

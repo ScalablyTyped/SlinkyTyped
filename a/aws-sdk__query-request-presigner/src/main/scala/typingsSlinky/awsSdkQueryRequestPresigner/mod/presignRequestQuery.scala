@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object presignRequestQuery extends js.Object {
   def apply(
-    request: HttpRequest[scala.scalajs.js.typedarray.Uint8Array],
+    request: HttpRequest[js.typedarray.Uint8Array],
     hasCredentialsSha256SigningNameSigningRegionEndpointExpireTime: PresignOption
-  ): js.Promise[HttpRequest[scala.scalajs.js.typedarray.Uint8Array]] = js.native
+  ): js.Promise[HttpRequest[js.typedarray.Uint8Array]] = js.native
 }
 

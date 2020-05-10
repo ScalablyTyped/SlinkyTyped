@@ -4,17 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AccessibilityKeyboardNavigationOptions extends js.Object {
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Enable keyboard navigation for
     * the chart.
     */
-  var enabled: js.UndefOr[Boolean] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Options for the focus border
     * drawn around elements while navigating through them.
     */
-  var focusBorder: js.UndefOr[AccessibilityKeyboardNavigationFocusBorderOptions] = js.undefined
+  var focusBorder: js.UndefOr[AccessibilityKeyboardNavigationFocusBorderOptions] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Set the keyboard navigation mode
     * for the chart. Can be "normal" or "serialize". In normal mode, left/right
@@ -27,45 +28,112 @@ trait AccessibilityKeyboardNavigationOptions extends js.Object {
     * like left/right. This can be useful for unifying navigation behavior
     * with/without screen readers enabled.
     */
-  var mode: js.UndefOr[OptionsModeValue] = js.undefined
+  var mode: js.UndefOr[OptionsModeValue] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Order of tab navigation in the
     * chart. Determines which elements are tabbed to first. Available elements
     * are: `series`, `zoom`, `rangeSelector`, `chartMenu`, `legend`. In
     * addition, any custom components can be added here.
     */
-  var order: js.UndefOr[js.Array[String]] = js.undefined
+  var order: js.UndefOr[js.Array[String]] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Skip null points when navigating
     * through points with the keyboard.
     */
-  var skipNullPoints: js.UndefOr[Boolean] = js.undefined
+  var skipNullPoints: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether or not to wrap around
     * when reaching the end of arrow-key navigation for an element in the
     * chart.
     */
-  var wrapAround: js.UndefOr[Boolean] = js.undefined
+  var wrapAround: js.UndefOr[Boolean] = js.native
 }
 
 object AccessibilityKeyboardNavigationOptions {
   @scala.inline
-  def apply(
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    focusBorder: AccessibilityKeyboardNavigationFocusBorderOptions = null,
-    mode: OptionsModeValue = null,
-    order: js.Array[String] = null,
-    skipNullPoints: js.UndefOr[Boolean] = js.undefined,
-    wrapAround: js.UndefOr[Boolean] = js.undefined
-  ): AccessibilityKeyboardNavigationOptions = {
+  def apply(): AccessibilityKeyboardNavigationOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (focusBorder != null) __obj.updateDynamic("focusBorder")(focusBorder.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipNullPoints)) __obj.updateDynamic("skipNullPoints")(skipNullPoints.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrapAround)) __obj.updateDynamic("wrapAround")(wrapAround.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccessibilityKeyboardNavigationOptions]
   }
+  @scala.inline
+  implicit class AccessibilityKeyboardNavigationOptionsOps[Self <: AccessibilityKeyboardNavigationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocusBorder(value: AccessibilityKeyboardNavigationFocusBorderOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusBorder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocusBorder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusBorder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: OptionsModeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrder(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipNullPoints(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipNullPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipNullPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipNullPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrapAround(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapAround")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrapAround: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapAround")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

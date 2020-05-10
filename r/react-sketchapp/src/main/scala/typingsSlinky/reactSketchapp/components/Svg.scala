@@ -1,10 +1,7 @@
 package typingsSlinky.reactSketchapp.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSketchapp.mod.Style
 import typingsSlinky.reactSketchapp.mod.StyleReference
 import typingsSlinky.reactSketchapp.svgMod.default
@@ -15,38 +12,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Svg
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Svg {
   @JSImport("react-sketchapp/lib/components/Svg", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name */
-  def apply(
-    height: String | Double = null,
-    opacity: String | Double = null,
-    preserveAspectRatio: String = null,
-    resizingConstraint: ResizeConstraints = null,
-    shadows: js.Array[SketchShadow] = null,
-    style: Style | StyleReference = null,
-    viewBox: String = null,
-    width: String | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (preserveAspectRatio != null) __obj.updateDynamic("preserveAspectRatio")(preserveAspectRatio.asInstanceOf[js.Any])
-    if (resizingConstraint != null) __obj.updateDynamic("resizingConstraint")(resizingConstraint.asInstanceOf[js.Any])
-    if (shadows != null) __obj.updateDynamic("shadows")(shadows.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (viewBox != null) __obj.updateDynamic("viewBox")(viewBox.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def height(value: String | Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def opacity(value: String | Double): this.type = set("opacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preserveAspectRatio(value: String): this.type = set("preserveAspectRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resizingConstraint(value: ResizeConstraints): this.type = set("resizingConstraint", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shadows(value: js.Array[SketchShadow]): this.type = set("shadows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: Style | StyleReference): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def viewBox(value: String): this.type = set("viewBox", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactSketchapp.svgMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SvgProps
+  
+  def withProps(p: SvgProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Svg.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

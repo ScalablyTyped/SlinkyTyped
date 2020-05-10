@@ -124,8 +124,8 @@ trait domGeometry extends js.Object {
     * @param node
     * @param computedStyle               OptionalThis parameter accepts computed styles object.If this parameter is omitted, the functions will calldojo/dom-style.getComputedStyle to get one. It is a better way, callingdojo/dom-style.getComputedStyle once, and then pass the reference to thiscomputedStyle parameter. Wherever possible, reuse the returnedobject of dojo/dom-style.getComputedStyle().
     */
-  def getMarginSize(node: typingsSlinky.std.HTMLElement): js.Object = js.native
-  def getMarginSize(node: typingsSlinky.std.HTMLElement, computedStyle: js.Object): js.Object = js.native
+  def getMarginSize(node: HTMLElement): js.Object = js.native
+  def getMarginSize(node: HTMLElement, computedStyle: js.Object): js.Object = js.native
   /**
     * Returns object with properties useful for box fitting with
     * regards to padding.
@@ -206,8 +206,8 @@ trait domGeometry extends js.Object {
     * @param node
     * @param includeScroll               Optional
     */
-  def position(node: typingsSlinky.std.HTMLElement): AnonH = js.native
-  def position(node: typingsSlinky.std.HTMLElement, includeScroll: Boolean): AnonH = js.native
+  def position(node: HTMLElement): AnonH = js.native
+  def position(node: HTMLElement, includeScroll: Boolean): AnonH = js.native
   /**
     * Sets the size of the node's contents, irrespective of margins,
     * padding, or borders.

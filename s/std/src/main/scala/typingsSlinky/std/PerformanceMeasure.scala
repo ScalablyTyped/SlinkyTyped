@@ -7,5 +7,6 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("PerformanceMeasure")
 @js.native
-object PerformanceMeasure extends Instantiable0[PerformanceMeasure]
+object PerformanceMeasure
+  extends Instantiable0[org.scalajs.dom.raw.PerformanceMeasure]
 

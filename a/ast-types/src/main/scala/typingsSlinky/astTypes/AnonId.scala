@@ -8,26 +8,87 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonId extends js.Object {
-  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
-  var id: PatternKind
-  var init: js.UndefOr[ExpressionKind | Null] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  var id: PatternKind = js.native
+  var init: js.UndefOr[ExpressionKind | Null] = js.native
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
 }
 
 object AnonId {
   @scala.inline
-  def apply(
-    id: PatternKind,
-    comments: js.Array[CommentKind] = null,
-    init: ExpressionKind = null,
-    loc: SourceLocationKind = null
-  ): AnonId = {
+  def apply(id: PatternKind): AnonId = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
-    if (init != null) __obj.updateDynamic("init")(init.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonId]
   }
+  @scala.inline
+  implicit class AnonIdOps[Self <: AnonId] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: PatternKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComments(value: js.Array[CommentKind]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommentsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(null)
+        ret
+    }
+    @scala.inline
+    def withInit(value: ExpressionKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(null)
+        ret
+    }
+    @scala.inline
+    def withLoc(value: SourceLocationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(null)
+        ret
+    }
+  }
+  
 }
 

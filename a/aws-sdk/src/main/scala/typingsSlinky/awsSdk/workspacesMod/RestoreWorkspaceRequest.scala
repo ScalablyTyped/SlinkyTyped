@@ -16,8 +16,21 @@ object RestoreWorkspaceRequest {
   @scala.inline
   def apply(WorkspaceId: WorkspaceId): RestoreWorkspaceRequest = {
     val __obj = js.Dynamic.literal(WorkspaceId = WorkspaceId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[RestoreWorkspaceRequest]
   }
+  @scala.inline
+  implicit class RestoreWorkspaceRequestOps[Self <: RestoreWorkspaceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWorkspaceId(value: WorkspaceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkspaceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

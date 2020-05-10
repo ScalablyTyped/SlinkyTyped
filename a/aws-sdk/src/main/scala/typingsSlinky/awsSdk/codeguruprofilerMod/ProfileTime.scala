@@ -14,10 +14,29 @@ trait ProfileTime extends js.Object {
 
 object ProfileTime {
   @scala.inline
-  def apply(start: js.Date = null): ProfileTime = {
+  def apply(): ProfileTime = {
     val __obj = js.Dynamic.literal()
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProfileTime]
   }
+  @scala.inline
+  implicit class ProfileTimeOps[Self <: ProfileTime] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStart(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

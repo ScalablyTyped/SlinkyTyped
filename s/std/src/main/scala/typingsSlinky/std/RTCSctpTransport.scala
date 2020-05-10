@@ -39,7 +39,7 @@ trait RTCSctpTransport extends EventTarget {
   def removeEventListener_statechange(
     `type`: statechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

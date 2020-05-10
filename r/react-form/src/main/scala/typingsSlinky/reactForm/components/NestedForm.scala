@@ -1,39 +1,33 @@
 package typingsSlinky.reactForm.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactText
 import typingsSlinky.reactForm.mod.FieldProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object NestedForm
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object NestedForm {
   @JSImport("react-form", "NestedForm")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    errorBefore: js.UndefOr[Boolean] = js.undefined,
-    field: String | (js.Array[js.Array[ReactText] | ReactText | String]) = null,
-    isForm: js.UndefOr[Boolean] = js.undefined,
-    showErrors: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(errorBefore)) __obj.updateDynamic("errorBefore")(errorBefore.asInstanceOf[js.Any])
-    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
-    if (!js.isUndefined(isForm)) __obj.updateDynamic("isForm")(isForm.asInstanceOf[js.Any])
-    if (!js.isUndefined(showErrors)) __obj.updateDynamic("showErrors")(showErrors.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def errorBefore(value: Boolean): this.type = set("errorBefore", value.asInstanceOf[js.Any])
+    @scala.inline
+    def field(value: String | (js.Array[js.Array[ReactText] | ReactText | String])): this.type = set("field", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isForm(value: Boolean): this.type = set("isForm", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showErrors(value: Boolean): this.type = set("showErrors", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FieldProps
+  
+  def withProps(p: FieldProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: NestedForm.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

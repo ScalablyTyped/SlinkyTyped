@@ -1,6 +1,8 @@
 package typingsSlinky.dojo.dijit.layout
 
+import org.scalajs.dom.experimental.URL
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.NodeList
 import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dijit.Widget
 import typingsSlinky.dojo.dijit.WidgetBase
@@ -21,8 +23,6 @@ import typingsSlinky.dojo.dojoStrings.preventCache
 import typingsSlinky.dojo.dojoStrings.refreshOnShow
 import typingsSlinky.dojo.dojoStrings.stopParser
 import typingsSlinky.dojo.dojoStrings.style
-import typingsSlinky.std.NodeList
-import typingsSlinky.std.URL
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,7 +49,7 @@ import scala.scalajs.js.annotation._
   * @param params Hash of initialization parameters for widget, including scalar values (like title, duration etc.)and functions, typically callbacks like onClick.The hash can contain any of the widget's properties, excluding read-only properties.     
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree     
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dijit.layout.ContentPaneResizeMixin because Inheritance from two classes. Inlined doLayout, isLayoutContainer, resize, startup
 - typingsSlinky.dojo.dijit.Container because Inheritance from two classes. Inlined addChild, addChild, buildRendering, getIndexOfChild, hasChildren, removeChild, removeChild */ @JSGlobal("dijit.layout.ContentPane")
 @js.native
@@ -366,7 +366,7 @@ class ContentPane () extends Widget {
     * 
     * @param data             
     */
-  def setContent(data: typingsSlinky.std.HTMLElement): Unit = js.native
+  def setContent(data: HTMLElement): Unit = js.native
   /**
     * Deprecated.   Use set('content', ...) instead.
     * 

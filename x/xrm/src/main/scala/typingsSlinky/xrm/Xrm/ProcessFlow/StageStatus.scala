@@ -16,10 +16,8 @@ trait StageStatus extends js.Object
 
 object StageStatus {
   @scala.inline
-  def active: typingsSlinky.xrm.xrmStrings.active = this.cast("active")
+  def active: typingsSlinky.xrm.xrmStrings.active = "active".asInstanceOf[typingsSlinky.xrm.xrmStrings.active]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def inactive: typingsSlinky.xrm.xrmStrings.inactive = this.cast("inactive")
+  def inactive: typingsSlinky.xrm.xrmStrings.inactive = "inactive".asInstanceOf[typingsSlinky.xrm.xrmStrings.inactive]
 }
 

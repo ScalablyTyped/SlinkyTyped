@@ -22,16 +22,53 @@ trait TrafficRoutingConfig extends js.Object {
 
 object TrafficRoutingConfig {
   @scala.inline
-  def apply(
-    timeBasedCanary: TimeBasedCanary = null,
-    timeBasedLinear: TimeBasedLinear = null,
-    `type`: TrafficRoutingType = null
-  ): TrafficRoutingConfig = {
+  def apply(): TrafficRoutingConfig = {
     val __obj = js.Dynamic.literal()
-    if (timeBasedCanary != null) __obj.updateDynamic("timeBasedCanary")(timeBasedCanary.asInstanceOf[js.Any])
-    if (timeBasedLinear != null) __obj.updateDynamic("timeBasedLinear")(timeBasedLinear.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrafficRoutingConfig]
   }
+  @scala.inline
+  implicit class TrafficRoutingConfigOps[Self <: TrafficRoutingConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTimeBasedCanary(value: TimeBasedCanary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeBasedCanary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeBasedCanary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeBasedCanary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeBasedLinear(value: TimeBasedLinear): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeBasedLinear")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeBasedLinear: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeBasedLinear")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: TrafficRoutingType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

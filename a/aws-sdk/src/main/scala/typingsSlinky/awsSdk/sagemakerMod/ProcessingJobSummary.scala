@@ -46,18 +46,90 @@ object ProcessingJobSummary {
     CreationTime: js.Date,
     ProcessingJobArn: ProcessingJobArn,
     ProcessingJobName: ProcessingJobName,
-    ProcessingJobStatus: ProcessingJobStatus,
-    ExitMessage: ExitMessage = null,
-    FailureReason: FailureReason = null,
-    LastModifiedTime: js.Date = null,
-    ProcessingEndTime: js.Date = null
+    ProcessingJobStatus: ProcessingJobStatus
   ): ProcessingJobSummary = {
     val __obj = js.Dynamic.literal(CreationTime = CreationTime.asInstanceOf[js.Any], ProcessingJobArn = ProcessingJobArn.asInstanceOf[js.Any], ProcessingJobName = ProcessingJobName.asInstanceOf[js.Any], ProcessingJobStatus = ProcessingJobStatus.asInstanceOf[js.Any])
-    if (ExitMessage != null) __obj.updateDynamic("ExitMessage")(ExitMessage.asInstanceOf[js.Any])
-    if (FailureReason != null) __obj.updateDynamic("FailureReason")(FailureReason.asInstanceOf[js.Any])
-    if (LastModifiedTime != null) __obj.updateDynamic("LastModifiedTime")(LastModifiedTime.asInstanceOf[js.Any])
-    if (ProcessingEndTime != null) __obj.updateDynamic("ProcessingEndTime")(ProcessingEndTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProcessingJobSummary]
   }
+  @scala.inline
+  implicit class ProcessingJobSummaryOps[Self <: ProcessingJobSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProcessingJobArn(value: ProcessingJobArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessingJobArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProcessingJobName(value: ProcessingJobName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessingJobName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProcessingJobStatus(value: ProcessingJobStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessingJobStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExitMessage(value: ExitMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExitMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExitMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExitMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureReason(value: FailureReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProcessingEndTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessingEndTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProcessingEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessingEndTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -35,16 +35,53 @@ trait SchemaAdmissionRule extends js.Object {
 
 object SchemaAdmissionRule {
   @scala.inline
-  def apply(
-    enforcementMode: String = null,
-    evaluationMode: String = null,
-    requireAttestationsBy: js.Array[String] = null
-  ): SchemaAdmissionRule = {
+  def apply(): SchemaAdmissionRule = {
     val __obj = js.Dynamic.literal()
-    if (enforcementMode != null) __obj.updateDynamic("enforcementMode")(enforcementMode.asInstanceOf[js.Any])
-    if (evaluationMode != null) __obj.updateDynamic("evaluationMode")(evaluationMode.asInstanceOf[js.Any])
-    if (requireAttestationsBy != null) __obj.updateDynamic("requireAttestationsBy")(requireAttestationsBy.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAdmissionRule]
   }
+  @scala.inline
+  implicit class SchemaAdmissionRuleOps[Self <: SchemaAdmissionRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnforcementMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enforcementMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnforcementMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enforcementMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvaluationMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluationMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvaluationMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluationMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequireAttestationsBy(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireAttestationsBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequireAttestationsBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireAttestationsBy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

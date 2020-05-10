@@ -18,20 +18,18 @@ trait UnaryOperator extends js.Object
 
 object UnaryOperator {
   @scala.inline
-  def Exclamationmark: typingsSlinky.estree.estreeStrings.Exclamationmark = this.cast("!")
+  def Exclamationmark: typingsSlinky.estree.estreeStrings.Exclamationmark = "!".asInstanceOf[typingsSlinky.estree.estreeStrings.Exclamationmark]
   @scala.inline
-  def Plussign: typingsSlinky.estree.estreeStrings.Plussign = this.cast("+")
+  def Plussign: typingsSlinky.estree.estreeStrings.Plussign = "+".asInstanceOf[typingsSlinky.estree.estreeStrings.Plussign]
   @scala.inline
-  def Tilde: typingsSlinky.estree.estreeStrings.Tilde = this.cast("~")
+  def Tilde: typingsSlinky.estree.estreeStrings.Tilde = "~".asInstanceOf[typingsSlinky.estree.estreeStrings.Tilde]
   @scala.inline
-  def _dash: `-_` = this.cast("-")
+  def _dash: `-_` = "-".asInstanceOf[`-_`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def delete: typingsSlinky.estree.estreeStrings.delete = "delete".asInstanceOf[typingsSlinky.estree.estreeStrings.delete]
   @scala.inline
-  def delete: typingsSlinky.estree.estreeStrings.delete = this.cast("delete")
+  def typeof: typingsSlinky.estree.estreeStrings.typeof = "typeof".asInstanceOf[typingsSlinky.estree.estreeStrings.typeof]
   @scala.inline
-  def typeof: typingsSlinky.estree.estreeStrings.typeof = this.cast("typeof")
-  @scala.inline
-  def void: typingsSlinky.estree.estreeStrings.void = this.cast("void")
+  def void: typingsSlinky.estree.estreeStrings.void = "void".asInstanceOf[typingsSlinky.estree.estreeStrings.void]
 }
 

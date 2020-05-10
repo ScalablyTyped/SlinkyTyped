@@ -34,22 +34,89 @@ trait MetricDataResult extends js.Object {
 
 object MetricDataResult {
   @scala.inline
-  def apply(
-    Id: MetricId = null,
-    Label: MetricLabel = null,
-    Messages: MetricDataResultMessages = null,
-    StatusCode: StatusCode = null,
-    Timestamps: Timestamps = null,
-    Values: DatapointValues = null
-  ): MetricDataResult = {
+  def apply(): MetricDataResult = {
     val __obj = js.Dynamic.literal()
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (Label != null) __obj.updateDynamic("Label")(Label.asInstanceOf[js.Any])
-    if (Messages != null) __obj.updateDynamic("Messages")(Messages.asInstanceOf[js.Any])
-    if (StatusCode != null) __obj.updateDynamic("StatusCode")(StatusCode.asInstanceOf[js.Any])
-    if (Timestamps != null) __obj.updateDynamic("Timestamps")(Timestamps.asInstanceOf[js.Any])
-    if (Values != null) __obj.updateDynamic("Values")(Values.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricDataResult]
   }
+  @scala.inline
+  implicit class MetricDataResultOps[Self <: MetricDataResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: MetricId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: MetricLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessages(value: MetricDataResultMessages): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Messages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Messages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusCode(value: StatusCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestamps(value: Timestamps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestamps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValues(value: DatapointValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

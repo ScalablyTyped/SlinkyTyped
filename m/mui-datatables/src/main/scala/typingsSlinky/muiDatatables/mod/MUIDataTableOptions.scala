@@ -5,33 +5,35 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.muiDatatables.AnonColIndex
 import typingsSlinky.muiDatatables.AnonDataDataIndex
-import typingsSlinky.muiDatatables.AnonFilename
 import typingsSlinky.muiDatatables.AnonLookup
 import typingsSlinky.muiDatatables.AnonRowIndex
 import typingsSlinky.muiDatatables.AnonXAxis
+import typingsSlinky.muiDatatables.PartialMUIDataTableTextLaBody
+import typingsSlinky.muiDatatables.Partialfilenamestringsepa
 import typingsSlinky.muiDatatables.muiDatatablesStrings.chip
 import typingsSlinky.muiDatatables.muiDatatablesStrings.reset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MUIDataTableOptions extends js.Object {
-  var caseSensitive: js.UndefOr[Boolean] = js.undefined
-  var count: js.UndefOr[Double] = js.undefined
-  var customFilterDialogFooter: js.UndefOr[js.Function1[/* filterList */ js.Array[_], TagMod[Any]]] = js.undefined
+  var caseSensitive: js.UndefOr[Boolean] = js.native
+  var count: js.UndefOr[Double] = js.native
+  var customFilterDialogFooter: js.UndefOr[js.Function1[/* filterList */ js.Array[_], TagMod[Any]]] = js.native
   var customFooter: js.UndefOr[
     js.Function5[
       /* rowCount */ Double, 
       /* page */ Double, 
       /* rowsPerPage */ Double, 
-      /* changeRowsPerPage */ js.Function0[_], 
-      /* changePage */ Double, 
+      /* changeRowsPerPage */ js.Function1[/* page */ String | Double, Unit], 
+      /* changePage */ js.Function1[/* newPage */ Double, Unit], 
       TagMod[Any]
     ]
-  ] = js.undefined
+  ] = js.native
   var customRowRender: js.UndefOr[
     js.Function3[/* data */ js.Array[_], /* dataIndex */ Double, /* rowIndex */ Double, TagMod[Any]]
-  ] = js.undefined
+  ] = js.native
   var customSearch: js.UndefOr[
     js.Function3[
       /* searchQuery */ String, 
@@ -39,7 +41,7 @@ trait MUIDataTableOptions extends js.Object {
       /* columns */ js.Array[_], 
       Boolean
     ]
-  ] = js.undefined
+  ] = js.native
   var customSearchRender: js.UndefOr[
     js.Function4[
       /* searchText */ String, 
@@ -48,11 +50,11 @@ trait MUIDataTableOptions extends js.Object {
       /* options */ js.Any, 
       ReactComponentClass[js.Object] | ReactElement
     ]
-  ] = js.undefined
+  ] = js.native
   var customSort: js.UndefOr[
     js.Function3[/* data */ js.Array[_], /* colIndex */ Double, /* order */ String, js.Array[_]]
-  ] = js.undefined
-  var customToolbar: js.UndefOr[js.Function0[TagMod[Any]]] = js.undefined
+  ] = js.native
+  var customToolbar: js.UndefOr[js.Function0[TagMod[Any]]] = js.native
   var customToolbarSelect: js.UndefOr[
     js.Function3[
       /* selectedRows */ AnonLookup, 
@@ -60,36 +62,36 @@ trait MUIDataTableOptions extends js.Object {
       /* setSelectedRows */ js.Function1[/* rows */ js.Array[Double], Unit], 
       TagMod[Any]
     ]
-  ] = js.undefined
-  var disableToolbarSelect: js.UndefOr[Boolean] = js.undefined
-  var download: js.UndefOr[Boolean] = js.undefined
-  var downloadOptions: js.UndefOr[AnonFilename] = js.undefined
-  var elevation: js.UndefOr[Double] = js.undefined
-  var expandableRows: js.UndefOr[Boolean] = js.undefined
-  var expandableRowsOnClick: js.UndefOr[Boolean] = js.undefined
-  var filter: js.UndefOr[Boolean] = js.undefined
-  var filterType: js.UndefOr[FilterType] = js.undefined
-  var fixedHeader: js.UndefOr[Boolean] = js.undefined
-  var fixedHeaderOptions: js.UndefOr[AnonXAxis] = js.undefined
+  ] = js.native
+  var disableToolbarSelect: js.UndefOr[Boolean] = js.native
+  var download: js.UndefOr[Boolean] = js.native
+  var downloadOptions: js.UndefOr[Partialfilenamestringsepa] = js.native
+  var elevation: js.UndefOr[Double] = js.native
+  var expandableRows: js.UndefOr[Boolean] = js.native
+  var expandableRowsOnClick: js.UndefOr[Boolean] = js.native
+  var filter: js.UndefOr[Boolean] = js.native
+  var filterType: js.UndefOr[FilterType] = js.native
+  var fixedHeader: js.UndefOr[Boolean] = js.native
+  var fixedHeaderOptions: js.UndefOr[AnonXAxis] = js.native
   var isRowExpandable: js.UndefOr[
     js.Function2[
       /* dataIndex */ Double, 
       /* expandedRows */ js.UndefOr[MUIDataTableIsRowCheck], 
       Boolean
     ]
-  ] = js.undefined
+  ] = js.native
   var isRowSelectable: js.UndefOr[
     js.Function2[
       /* dataIndex */ Double, 
       /* selectedRows */ js.UndefOr[MUIDataTableIsRowCheck], 
       Boolean
     ]
-  ] = js.undefined
-  var onCellClick: js.UndefOr[js.Function2[/* colData */ js.Any, /* cellMeta */ AnonColIndex, Unit]] = js.undefined
-  var onChangePage: js.UndefOr[js.Function1[/* currentPage */ Double, Unit]] = js.undefined
-  var onChangeRowsPerPage: js.UndefOr[js.Function1[/* numberOfRows */ Double, Unit]] = js.undefined
-  var onColumnSortChange: js.UndefOr[js.Function2[/* changedColumn */ String, /* direction */ String, Unit]] = js.undefined
-  var onColumnViewChange: js.UndefOr[js.Function2[/* changedColumn */ String, /* action */ String, Unit]] = js.undefined
+  ] = js.native
+  var onCellClick: js.UndefOr[js.Function2[/* colData */ js.Any, /* cellMeta */ AnonColIndex, Unit]] = js.native
+  var onChangePage: js.UndefOr[js.Function1[/* currentPage */ Double, Unit]] = js.native
+  var onChangeRowsPerPage: js.UndefOr[js.Function1[/* numberOfRows */ Double, Unit]] = js.native
+  var onColumnSortChange: js.UndefOr[js.Function2[/* changedColumn */ String, /* direction */ String, Unit]] = js.native
+  var onColumnViewChange: js.UndefOr[js.Function2[/* changedColumn */ String, /* action */ String, Unit]] = js.native
   /**
     * A callback function that triggers when the user downloads the CSV file.
     * In the callback, you can control what is written to the CSV file.
@@ -103,7 +105,7 @@ trait MUIDataTableOptions extends js.Object {
       /* data */ js.Any, 
       String | Boolean
     ]
-  ] = js.undefined
+  ] = js.native
   var onFilterChange: js.UndefOr[
     js.Function3[
       /* changedColumn */ String, 
@@ -111,190 +113,869 @@ trait MUIDataTableOptions extends js.Object {
       /* type */ FilterType | chip | reset, 
       Unit
     ]
-  ] = js.undefined
-  var onFilterDialogClose: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onFilterDialogOpen: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onRowClick: js.UndefOr[js.Function2[/* rowData */ js.Array[String], /* rowMeta */ AnonRowIndex, Unit]] = js.undefined
-  var onRowsDelete: js.UndefOr[js.Function1[/* rowsDeleted */ js.Array[_], Unit]] = js.undefined
+  ] = js.native
+  var onFilterDialogClose: js.UndefOr[js.Function0[Unit]] = js.native
+  var onFilterDialogOpen: js.UndefOr[js.Function0[Unit]] = js.native
+  var onRowClick: js.UndefOr[js.Function2[/* rowData */ js.Array[String], /* rowMeta */ AnonRowIndex, Unit]] = js.native
+  var onRowsDelete: js.UndefOr[js.Function1[/* rowsDeleted */ js.Array[_], Unit]] = js.native
   var onRowsExpand: js.UndefOr[
     js.Function2[/* currentRowsExpanded */ js.Array[_], /* allRowsExpanded */ js.Array[_], Unit]
-  ] = js.undefined
+  ] = js.native
   var onRowsSelect: js.UndefOr[
     js.Function2[/* currentRowsSelected */ js.Array[_], /* rowsSelected */ js.Array[_], Unit]
-  ] = js.undefined
-  var onSearchChange: js.UndefOr[js.Function1[/* searchText */ String, Unit]] = js.undefined
-  var onSearchClose: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onSearchOpen: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onTableChange: js.UndefOr[js.Function2[/* action */ String, /* tableState */ MUIDataTableState, Unit]] = js.undefined
-  var onTableInit: js.UndefOr[js.Function2[/* action */ String, /* tableState */ MUIDataTableState, Unit]] = js.undefined
-  var page: js.UndefOr[Double] = js.undefined
-  var pagination: js.UndefOr[Boolean] = js.undefined
-  var print: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var onSearchChange: js.UndefOr[js.Function1[/* searchText */ String, Unit]] = js.native
+  var onSearchClose: js.UndefOr[js.Function0[Unit]] = js.native
+  var onSearchOpen: js.UndefOr[js.Function0[Unit]] = js.native
+  var onTableChange: js.UndefOr[js.Function2[/* action */ String, /* tableState */ MUIDataTableState, Unit]] = js.native
+  var onTableInit: js.UndefOr[js.Function2[/* action */ String, /* tableState */ MUIDataTableState, Unit]] = js.native
+  var page: js.UndefOr[Double] = js.native
+  var pagination: js.UndefOr[Boolean] = js.native
+  var print: js.UndefOr[Boolean] = js.native
   var renderExpandableRow: js.UndefOr[
     js.Function2[/* rowData */ js.Array[String], /* rowMeta */ AnonRowIndex, TagMod[Any]]
-  ] = js.undefined
-  var resizableColumns: js.UndefOr[Boolean] = js.undefined
-  var responsive: js.UndefOr[Responsive] = js.undefined
-  var rowHover: js.UndefOr[Boolean] = js.undefined
-  var rowsExpanded: js.UndefOr[js.Array[_]] = js.undefined
-  var rowsPerPage: js.UndefOr[Double] = js.undefined
-  var rowsPerPageOptions: js.UndefOr[js.Array[Double]] = js.undefined
-  var rowsSelected: js.UndefOr[js.Array[_]] = js.undefined
-  var search: js.UndefOr[Boolean] = js.undefined
-  var searchOpen: js.UndefOr[Boolean] = js.undefined
-  var searchPlaceholder: js.UndefOr[String] = js.undefined
-  var searchText: js.UndefOr[String] = js.undefined
-  var selectableRows: js.UndefOr[SelectableRows] = js.undefined
-  var selectableRowsHeader: js.UndefOr[Boolean] = js.undefined
-  var selectableRowsOnClick: js.UndefOr[Boolean] = js.undefined
-  var serverSide: js.UndefOr[Boolean] = js.undefined
-  var serverSideFilterList: js.UndefOr[js.Array[_]] = js.undefined
-  var setRowProps: js.UndefOr[js.Function2[/* row */ js.Array[_], /* rowIndex */ Double, js.Object]] = js.undefined
-  var setTableProps: js.UndefOr[js.Function0[js.Object]] = js.undefined
-  var sort: js.UndefOr[Boolean] = js.undefined
-  var sortFilterList: js.UndefOr[Boolean] = js.undefined
-  var textLabels: js.UndefOr[MUIDataTableTextLabels] = js.undefined
-  var viewColumns: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var resizableColumns: js.UndefOr[Boolean] = js.native
+  var responsive: js.UndefOr[Responsive] = js.native
+  var rowHover: js.UndefOr[Boolean] = js.native
+  var rowsExpanded: js.UndefOr[js.Array[_]] = js.native
+  var rowsPerPage: js.UndefOr[Double] = js.native
+  var rowsPerPageOptions: js.UndefOr[js.Array[Double]] = js.native
+  var rowsSelected: js.UndefOr[js.Array[_]] = js.native
+  var search: js.UndefOr[Boolean] = js.native
+  var searchOpen: js.UndefOr[Boolean] = js.native
+  var searchPlaceholder: js.UndefOr[String] = js.native
+  var searchText: js.UndefOr[String] = js.native
+  var selectableRows: js.UndefOr[SelectableRows] = js.native
+  var selectableRowsHeader: js.UndefOr[Boolean] = js.native
+  var selectableRowsOnClick: js.UndefOr[Boolean] = js.native
+  var serverSide: js.UndefOr[Boolean] = js.native
+  var serverSideFilterList: js.UndefOr[js.Array[_]] = js.native
+  var setRowProps: js.UndefOr[js.Function2[/* row */ js.Array[_], /* rowIndex */ Double, js.Object]] = js.native
+  var setTableProps: js.UndefOr[js.Function0[js.Object]] = js.native
+  var sort: js.UndefOr[Boolean] = js.native
+  var sortFilterList: js.UndefOr[Boolean] = js.native
+  var textLabels: js.UndefOr[PartialMUIDataTableTextLaBody] = js.native
+  var viewColumns: js.UndefOr[Boolean] = js.native
 }
 
 object MUIDataTableOptions {
   @scala.inline
-  def apply(
-    caseSensitive: js.UndefOr[Boolean] = js.undefined,
-    count: Int | Double = null,
-    customFilterDialogFooter: /* filterList */ js.Array[_] => TagMod[Any] = null,
-    customFooter: (/* rowCount */ Double, /* page */ Double, /* rowsPerPage */ Double, /* changeRowsPerPage */ js.Function0[_], /* changePage */ Double) => TagMod[Any] = null,
-    customRowRender: (/* data */ js.Array[_], /* dataIndex */ Double, /* rowIndex */ Double) => TagMod[Any] = null,
-    customSearch: (/* searchQuery */ String, /* currentRow */ js.Array[_], /* columns */ js.Array[_]) => Boolean = null,
-    customSearchRender: (/* searchText */ String, /* handleSearch */ js.Any, /* hideSearch */ js.Any, /* options */ js.Any) => ReactComponentClass[js.Object] | ReactElement = null,
-    customSort: (/* data */ js.Array[_], /* colIndex */ Double, /* order */ String) => js.Array[_] = null,
-    customToolbar: () => TagMod[Any] = null,
-    customToolbarSelect: (/* selectedRows */ AnonLookup, /* displayData */ js.Array[AnonDataDataIndex], /* setSelectedRows */ js.Function1[/* rows */ js.Array[Double], Unit]) => TagMod[Any] = null,
-    disableToolbarSelect: js.UndefOr[Boolean] = js.undefined,
-    download: js.UndefOr[Boolean] = js.undefined,
-    downloadOptions: AnonFilename = null,
-    elevation: Int | Double = null,
-    expandableRows: js.UndefOr[Boolean] = js.undefined,
-    expandableRowsOnClick: js.UndefOr[Boolean] = js.undefined,
-    filter: js.UndefOr[Boolean] = js.undefined,
-    filterType: FilterType = null,
-    fixedHeader: js.UndefOr[Boolean] = js.undefined,
-    fixedHeaderOptions: AnonXAxis = null,
-    isRowExpandable: (/* dataIndex */ Double, /* expandedRows */ js.UndefOr[MUIDataTableIsRowCheck]) => Boolean = null,
-    isRowSelectable: (/* dataIndex */ Double, /* selectedRows */ js.UndefOr[MUIDataTableIsRowCheck]) => Boolean = null,
-    onCellClick: (/* colData */ js.Any, /* cellMeta */ AnonColIndex) => Unit = null,
-    onChangePage: /* currentPage */ Double => Unit = null,
-    onChangeRowsPerPage: /* numberOfRows */ Double => Unit = null,
-    onColumnSortChange: (/* changedColumn */ String, /* direction */ String) => Unit = null,
-    onColumnViewChange: (/* changedColumn */ String, /* action */ String) => Unit = null,
-    onDownload: (/* buildHead */ js.Function1[/* columns */ js.Any, String], /* buildBody */ js.Function1[/* data */ js.Any, String], /* columns */ js.Any, /* data */ js.Any) => String | Boolean = null,
-    onFilterChange: (/* changedColumn */ String, /* filterList */ js.Array[_], /* type */ FilterType | chip | reset) => Unit = null,
-    onFilterDialogClose: () => Unit = null,
-    onFilterDialogOpen: () => Unit = null,
-    onRowClick: (/* rowData */ js.Array[String], /* rowMeta */ AnonRowIndex) => Unit = null,
-    onRowsDelete: /* rowsDeleted */ js.Array[_] => Unit = null,
-    onRowsExpand: (/* currentRowsExpanded */ js.Array[_], /* allRowsExpanded */ js.Array[_]) => Unit = null,
-    onRowsSelect: (/* currentRowsSelected */ js.Array[_], /* rowsSelected */ js.Array[_]) => Unit = null,
-    onSearchChange: /* searchText */ String => Unit = null,
-    onSearchClose: () => Unit = null,
-    onSearchOpen: () => Unit = null,
-    onTableChange: (/* action */ String, /* tableState */ MUIDataTableState) => Unit = null,
-    onTableInit: (/* action */ String, /* tableState */ MUIDataTableState) => Unit = null,
-    page: Int | Double = null,
-    pagination: js.UndefOr[Boolean] = js.undefined,
-    print: js.UndefOr[Boolean] = js.undefined,
-    renderExpandableRow: (/* rowData */ js.Array[String], /* rowMeta */ AnonRowIndex) => TagMod[Any] = null,
-    resizableColumns: js.UndefOr[Boolean] = js.undefined,
-    responsive: Responsive = null,
-    rowHover: js.UndefOr[Boolean] = js.undefined,
-    rowsExpanded: js.Array[_] = null,
-    rowsPerPage: Int | Double = null,
-    rowsPerPageOptions: js.Array[Double] = null,
-    rowsSelected: js.Array[_] = null,
-    search: js.UndefOr[Boolean] = js.undefined,
-    searchOpen: js.UndefOr[Boolean] = js.undefined,
-    searchPlaceholder: String = null,
-    searchText: String = null,
-    selectableRows: SelectableRows = null,
-    selectableRowsHeader: js.UndefOr[Boolean] = js.undefined,
-    selectableRowsOnClick: js.UndefOr[Boolean] = js.undefined,
-    serverSide: js.UndefOr[Boolean] = js.undefined,
-    serverSideFilterList: js.Array[_] = null,
-    setRowProps: (/* row */ js.Array[_], /* rowIndex */ Double) => js.Object = null,
-    setTableProps: () => js.Object = null,
-    sort: js.UndefOr[Boolean] = js.undefined,
-    sortFilterList: js.UndefOr[Boolean] = js.undefined,
-    textLabels: MUIDataTableTextLabels = null,
-    viewColumns: js.UndefOr[Boolean] = js.undefined
-  ): MUIDataTableOptions = {
+  def apply(): MUIDataTableOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(caseSensitive)) __obj.updateDynamic("caseSensitive")(caseSensitive.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (customFilterDialogFooter != null) __obj.updateDynamic("customFilterDialogFooter")(js.Any.fromFunction1(customFilterDialogFooter))
-    if (customFooter != null) __obj.updateDynamic("customFooter")(js.Any.fromFunction5(customFooter))
-    if (customRowRender != null) __obj.updateDynamic("customRowRender")(js.Any.fromFunction3(customRowRender))
-    if (customSearch != null) __obj.updateDynamic("customSearch")(js.Any.fromFunction3(customSearch))
-    if (customSearchRender != null) __obj.updateDynamic("customSearchRender")(js.Any.fromFunction4(customSearchRender))
-    if (customSort != null) __obj.updateDynamic("customSort")(js.Any.fromFunction3(customSort))
-    if (customToolbar != null) __obj.updateDynamic("customToolbar")(js.Any.fromFunction0(customToolbar))
-    if (customToolbarSelect != null) __obj.updateDynamic("customToolbarSelect")(js.Any.fromFunction3(customToolbarSelect))
-    if (!js.isUndefined(disableToolbarSelect)) __obj.updateDynamic("disableToolbarSelect")(disableToolbarSelect.asInstanceOf[js.Any])
-    if (!js.isUndefined(download)) __obj.updateDynamic("download")(download.asInstanceOf[js.Any])
-    if (downloadOptions != null) __obj.updateDynamic("downloadOptions")(downloadOptions.asInstanceOf[js.Any])
-    if (elevation != null) __obj.updateDynamic("elevation")(elevation.asInstanceOf[js.Any])
-    if (!js.isUndefined(expandableRows)) __obj.updateDynamic("expandableRows")(expandableRows.asInstanceOf[js.Any])
-    if (!js.isUndefined(expandableRowsOnClick)) __obj.updateDynamic("expandableRowsOnClick")(expandableRowsOnClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(filter)) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (filterType != null) __obj.updateDynamic("filterType")(filterType.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixedHeader)) __obj.updateDynamic("fixedHeader")(fixedHeader.asInstanceOf[js.Any])
-    if (fixedHeaderOptions != null) __obj.updateDynamic("fixedHeaderOptions")(fixedHeaderOptions.asInstanceOf[js.Any])
-    if (isRowExpandable != null) __obj.updateDynamic("isRowExpandable")(js.Any.fromFunction2(isRowExpandable))
-    if (isRowSelectable != null) __obj.updateDynamic("isRowSelectable")(js.Any.fromFunction2(isRowSelectable))
-    if (onCellClick != null) __obj.updateDynamic("onCellClick")(js.Any.fromFunction2(onCellClick))
-    if (onChangePage != null) __obj.updateDynamic("onChangePage")(js.Any.fromFunction1(onChangePage))
-    if (onChangeRowsPerPage != null) __obj.updateDynamic("onChangeRowsPerPage")(js.Any.fromFunction1(onChangeRowsPerPage))
-    if (onColumnSortChange != null) __obj.updateDynamic("onColumnSortChange")(js.Any.fromFunction2(onColumnSortChange))
-    if (onColumnViewChange != null) __obj.updateDynamic("onColumnViewChange")(js.Any.fromFunction2(onColumnViewChange))
-    if (onDownload != null) __obj.updateDynamic("onDownload")(js.Any.fromFunction4(onDownload))
-    if (onFilterChange != null) __obj.updateDynamic("onFilterChange")(js.Any.fromFunction3(onFilterChange))
-    if (onFilterDialogClose != null) __obj.updateDynamic("onFilterDialogClose")(js.Any.fromFunction0(onFilterDialogClose))
-    if (onFilterDialogOpen != null) __obj.updateDynamic("onFilterDialogOpen")(js.Any.fromFunction0(onFilterDialogOpen))
-    if (onRowClick != null) __obj.updateDynamic("onRowClick")(js.Any.fromFunction2(onRowClick))
-    if (onRowsDelete != null) __obj.updateDynamic("onRowsDelete")(js.Any.fromFunction1(onRowsDelete))
-    if (onRowsExpand != null) __obj.updateDynamic("onRowsExpand")(js.Any.fromFunction2(onRowsExpand))
-    if (onRowsSelect != null) __obj.updateDynamic("onRowsSelect")(js.Any.fromFunction2(onRowsSelect))
-    if (onSearchChange != null) __obj.updateDynamic("onSearchChange")(js.Any.fromFunction1(onSearchChange))
-    if (onSearchClose != null) __obj.updateDynamic("onSearchClose")(js.Any.fromFunction0(onSearchClose))
-    if (onSearchOpen != null) __obj.updateDynamic("onSearchOpen")(js.Any.fromFunction0(onSearchOpen))
-    if (onTableChange != null) __obj.updateDynamic("onTableChange")(js.Any.fromFunction2(onTableChange))
-    if (onTableInit != null) __obj.updateDynamic("onTableInit")(js.Any.fromFunction2(onTableInit))
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (!js.isUndefined(pagination)) __obj.updateDynamic("pagination")(pagination.asInstanceOf[js.Any])
-    if (!js.isUndefined(print)) __obj.updateDynamic("print")(print.asInstanceOf[js.Any])
-    if (renderExpandableRow != null) __obj.updateDynamic("renderExpandableRow")(js.Any.fromFunction2(renderExpandableRow))
-    if (!js.isUndefined(resizableColumns)) __obj.updateDynamic("resizableColumns")(resizableColumns.asInstanceOf[js.Any])
-    if (responsive != null) __obj.updateDynamic("responsive")(responsive.asInstanceOf[js.Any])
-    if (!js.isUndefined(rowHover)) __obj.updateDynamic("rowHover")(rowHover.asInstanceOf[js.Any])
-    if (rowsExpanded != null) __obj.updateDynamic("rowsExpanded")(rowsExpanded.asInstanceOf[js.Any])
-    if (rowsPerPage != null) __obj.updateDynamic("rowsPerPage")(rowsPerPage.asInstanceOf[js.Any])
-    if (rowsPerPageOptions != null) __obj.updateDynamic("rowsPerPageOptions")(rowsPerPageOptions.asInstanceOf[js.Any])
-    if (rowsSelected != null) __obj.updateDynamic("rowsSelected")(rowsSelected.asInstanceOf[js.Any])
-    if (!js.isUndefined(search)) __obj.updateDynamic("search")(search.asInstanceOf[js.Any])
-    if (!js.isUndefined(searchOpen)) __obj.updateDynamic("searchOpen")(searchOpen.asInstanceOf[js.Any])
-    if (searchPlaceholder != null) __obj.updateDynamic("searchPlaceholder")(searchPlaceholder.asInstanceOf[js.Any])
-    if (searchText != null) __obj.updateDynamic("searchText")(searchText.asInstanceOf[js.Any])
-    if (selectableRows != null) __obj.updateDynamic("selectableRows")(selectableRows.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectableRowsHeader)) __obj.updateDynamic("selectableRowsHeader")(selectableRowsHeader.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectableRowsOnClick)) __obj.updateDynamic("selectableRowsOnClick")(selectableRowsOnClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(serverSide)) __obj.updateDynamic("serverSide")(serverSide.asInstanceOf[js.Any])
-    if (serverSideFilterList != null) __obj.updateDynamic("serverSideFilterList")(serverSideFilterList.asInstanceOf[js.Any])
-    if (setRowProps != null) __obj.updateDynamic("setRowProps")(js.Any.fromFunction2(setRowProps))
-    if (setTableProps != null) __obj.updateDynamic("setTableProps")(js.Any.fromFunction0(setTableProps))
-    if (!js.isUndefined(sort)) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
-    if (!js.isUndefined(sortFilterList)) __obj.updateDynamic("sortFilterList")(sortFilterList.asInstanceOf[js.Any])
-    if (textLabels != null) __obj.updateDynamic("textLabels")(textLabels.asInstanceOf[js.Any])
-    if (!js.isUndefined(viewColumns)) __obj.updateDynamic("viewColumns")(viewColumns.asInstanceOf[js.Any])
     __obj.asInstanceOf[MUIDataTableOptions]
   }
+  @scala.inline
+  implicit class MUIDataTableOptionsOps[Self <: MUIDataTableOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCaseSensitive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caseSensitive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaseSensitive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caseSensitive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomFilterDialogFooter(value: /* filterList */ js.Array[_] => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customFilterDialogFooter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCustomFilterDialogFooter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customFilterDialogFooter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomFooter(
+      value: (/* rowCount */ Double, /* page */ Double, /* rowsPerPage */ Double, /* changeRowsPerPage */ js.Function1[/* page */ String | Double, Unit], /* changePage */ js.Function1[/* newPage */ Double, Unit]) => TagMod[Any]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customFooter")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutCustomFooter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customFooter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomRowRender(value: (/* data */ js.Array[_], /* dataIndex */ Double, /* rowIndex */ Double) => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customRowRender")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutCustomRowRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customRowRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomSearch(
+      value: (/* searchQuery */ String, /* currentRow */ js.Array[_], /* columns */ js.Array[_]) => Boolean
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customSearch")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutCustomSearch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customSearch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomSearchRender(
+      value: (/* searchText */ String, /* handleSearch */ js.Any, /* hideSearch */ js.Any, /* options */ js.Any) => ReactComponentClass[js.Object] | ReactElement
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customSearchRender")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutCustomSearchRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customSearchRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomSort(value: (/* data */ js.Array[_], /* colIndex */ Double, /* order */ String) => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customSort")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutCustomSort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customSort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomToolbar(value: () => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customToolbar")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutCustomToolbar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customToolbar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomToolbarSelect(
+      value: (/* selectedRows */ AnonLookup, /* displayData */ js.Array[AnonDataDataIndex], /* setSelectedRows */ js.Function1[/* rows */ js.Array[Double], Unit]) => TagMod[Any]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customToolbarSelect")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutCustomToolbarSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customToolbarSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableToolbarSelect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableToolbarSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableToolbarSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableToolbarSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDownload(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("download")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDownload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("download")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDownloadOptions(value: Partialfilenamestringsepa): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDownloadOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpandableRows(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandableRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpandableRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandableRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpandableRowsOnClick(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandableRowsOnClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpandableRowsOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandableRowsOnClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterType(value: FilterType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedHeader(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedHeaderOptions(value: AnonXAxis): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeaderOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedHeaderOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeaderOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsRowExpandable(value: (/* dataIndex */ Double, /* expandedRows */ js.UndefOr[MUIDataTableIsRowCheck]) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRowExpandable")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsRowExpandable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRowExpandable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsRowSelectable(value: (/* dataIndex */ Double, /* selectedRows */ js.UndefOr[MUIDataTableIsRowCheck]) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRowSelectable")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsRowSelectable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRowSelectable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCellClick(value: (/* colData */ js.Any, /* cellMeta */ AnonColIndex) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellClick")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCellClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChangePage(value: /* currentPage */ Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChangePage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChangePage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChangePage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChangeRowsPerPage(value: /* numberOfRows */ Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChangeRowsPerPage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChangeRowsPerPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChangeRowsPerPage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnColumnSortChange(value: (/* changedColumn */ String, /* direction */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onColumnSortChange")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnColumnSortChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onColumnSortChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnColumnViewChange(value: (/* changedColumn */ String, /* action */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onColumnViewChange")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnColumnViewChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onColumnViewChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDownload(
+      value: (/* buildHead */ js.Function1[/* columns */ js.Any, String], /* buildBody */ js.Function1[/* data */ js.Any, String], /* columns */ js.Any, /* data */ js.Any) => String | Boolean
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDownload")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDownload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDownload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFilterChange(
+      value: (/* changedColumn */ String, /* filterList */ js.Array[_], /* type */ FilterType | chip | reset) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFilterChange")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFilterChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFilterChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFilterDialogClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFilterDialogClose")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFilterDialogClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFilterDialogClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFilterDialogOpen(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFilterDialogOpen")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFilterDialogOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFilterDialogOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowClick(value: (/* rowData */ js.Array[String], /* rowMeta */ AnonRowIndex) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowsDelete(value: /* rowsDeleted */ js.Array[_] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowsDelete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowsDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowsDelete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowsExpand(value: (/* currentRowsExpanded */ js.Array[_], /* allRowsExpanded */ js.Array[_]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowsExpand")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowsExpand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowsExpand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowsSelect(value: (/* currentRowsSelected */ js.Array[_], /* rowsSelected */ js.Array[_]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowsSelect")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowsSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowsSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSearchChange(value: /* searchText */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearchChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSearchChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearchChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSearchClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearchClose")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSearchClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearchClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSearchOpen(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearchOpen")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSearchOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearchOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTableChange(value: (/* action */ String, /* tableState */ MUIDataTableState) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTableChange")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTableChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTableChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTableInit(value: (/* action */ String, /* tableState */ MUIDataTableState) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTableInit")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTableInit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTableInit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPagination(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pagination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPagination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pagination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrint(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("print")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("print")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderExpandableRow(value: (/* rowData */ js.Array[String], /* rowMeta */ AnonRowIndex) => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderExpandableRow")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderExpandableRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderExpandableRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResizableColumns(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizableColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResizableColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizableColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponsive(value: Responsive): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponsive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowHover(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowHover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowsExpanded(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsExpanded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowsExpanded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsExpanded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowsPerPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsPerPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowsPerPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsPerPage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowsPerPageOptions(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsPerPageOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowsPerPageOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsPerPageOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowsSelected(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsSelected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowsSelected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsSelected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchPlaceholder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchPlaceholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchPlaceholder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchPlaceholder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectableRows(value: SelectableRows): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectableRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectableRowsHeader(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableRowsHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectableRowsHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableRowsHeader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectableRowsOnClick(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableRowsOnClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectableRowsOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableRowsOnClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerSide(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverSide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerSide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverSide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerSideFilterList(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverSideFilterList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerSideFilterList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverSideFilterList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetRowProps(value: (/* row */ js.Array[_], /* rowIndex */ Double) => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setRowProps")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetRowProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setRowProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetTableProps(value: () => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTableProps")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetTableProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTableProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSort(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortFilterList(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortFilterList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortFilterList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortFilterList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextLabels(value: PartialMUIDataTableTextLaBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewColumns(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViewColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewColumns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

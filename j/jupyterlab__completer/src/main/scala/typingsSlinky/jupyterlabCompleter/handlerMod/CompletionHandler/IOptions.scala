@@ -9,11 +9,12 @@ import scala.scalajs.js.annotation._
 /**
   * The instantiation options for cell completion handlers.
   */
+@js.native
 trait IOptions extends js.Object {
   /**
     * The completion widget the handler will connect to.
     */
-  var completer: Completer
+  var completer: Completer = js.native
   /**
     * The data connector used to populate completion requests.
     *
@@ -22,15 +23,34 @@ trait IOptions extends js.Object {
     * it is acceptable for the other methods to be simple functions that return
     * rejected promises.
     */
-  var connector: IDataConnector[IReply, Unit, IRequest]
+  var connector: IDataConnector[IReply, Unit, IRequest] = js.native
 }
 
 object IOptions {
   @scala.inline
   def apply(completer: Completer, connector: IDataConnector[IReply, Unit, IRequest]): IOptions = {
     val __obj = js.Dynamic.literal(completer = completer.asInstanceOf[js.Any], connector = connector.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IOptions]
   }
+  @scala.inline
+  implicit class IOptionsOps[Self <: IOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompleter(value: Completer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConnector(value: IDataConnector[IReply, Unit, IRequest]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connector")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

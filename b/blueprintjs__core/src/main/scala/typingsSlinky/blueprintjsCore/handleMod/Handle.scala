@@ -1,11 +1,12 @@
 package typingsSlinky.blueprintjsCore.handleMod
 
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.TouchEvent
+import slinky.web.SyntheticMouseEvent
+import slinky.web.SyntheticTouchEvent
 import typingsSlinky.blueprintjsCore.AnonIsMoving
 import typingsSlinky.blueprintjsCore.commonMod.AbstractPureComponent2
-import typingsSlinky.react.mod.NativeMouseEvent
-import typingsSlinky.react.mod.TouchEvent
-import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.MouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,20 +34,20 @@ class Handle ()
   var removeDocumentEventListeners: js.Any = js.native
   @JSName("state")
   var state_Handle: AnonIsMoving = js.native
-  def beginHandleMovement(event: typingsSlinky.react.mod.MouseEvent[HTMLElement, MouseEvent]): Unit = js.native
+  def beginHandleMovement(event: SyntheticMouseEvent[HTMLElement]): Unit = js.native
   def beginHandleMovement(event: MouseEvent): Unit = js.native
-  def beginHandleTouchMovement(event: TouchEvent[HTMLElement]): Unit = js.native
-  def beginHandleTouchMovement(event: typingsSlinky.std.TouchEvent): Unit = js.native
+  def beginHandleTouchMovement(event: SyntheticTouchEvent[HTMLElement]): Unit = js.native
+  def beginHandleTouchMovement(event: TouchEvent): Unit = js.native
   /** Convert client pixel to value between min and max. */
   def clientToValue(clientPixel: Double): Double = js.native
   @JSName("componentDidMount")
   def componentDidMount_MHandle(): Unit = js.native
   @JSName("componentWillUnmount")
   def componentWillUnmount_MHandle(): Unit = js.native
-  def mouseEventClientOffset(event: typingsSlinky.react.mod.MouseEvent[HTMLElement, NativeMouseEvent]): Double = js.native
+  def mouseEventClientOffset(event: SyntheticMouseEvent[HTMLElement]): Double = js.native
   def mouseEventClientOffset(event: MouseEvent): Double = js.native
-  def touchEventClientOffset(event: TouchEvent[HTMLElement]): Double = js.native
-  def touchEventClientOffset(event: typingsSlinky.std.TouchEvent): Double = js.native
+  def touchEventClientOffset(event: SyntheticTouchEvent[HTMLElement]): Double = js.native
+  def touchEventClientOffset(event: TouchEvent): Double = js.native
 }
 
 /* static members */

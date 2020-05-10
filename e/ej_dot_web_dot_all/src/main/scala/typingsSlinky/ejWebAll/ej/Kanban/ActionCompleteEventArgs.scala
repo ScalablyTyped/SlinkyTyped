@@ -4,75 +4,203 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ActionCompleteEventArgs extends js.Object {
   /** Returns the cancel option value.
     */
-  var cancel: js.UndefOr[Boolean] = js.undefined
+  var cancel: js.UndefOr[Boolean] = js.native
   /** Returns current filtering column field name.
     */
-  var currentFilteringColumn: js.UndefOr[String] = js.undefined
+  var currentFilteringColumn: js.UndefOr[String] = js.native
   /** Returns the card object (JSON).
     */
-  var data: js.UndefOr[js.Any] = js.undefined
+  var data: js.UndefOr[js.Any] = js.native
   /** Returns filter details.
     */
-  var filterCollection: js.UndefOr[js.Any] = js.undefined
+  var filterCollection: js.UndefOr[js.Any] = js.native
   /** Returns the Kanban model.
     */
-  var model: js.UndefOr[js.Any] = js.undefined
+  var model: js.UndefOr[js.Any] = js.native
   /** Returns current action event type.
     */
-  var originalEventType: js.UndefOr[String] = js.undefined
+  var originalEventType: js.UndefOr[String] = js.native
   /** Returns primary key.
     */
-  var primaryKey: js.UndefOr[String] = js.undefined
+  var primaryKey: js.UndefOr[String] = js.native
   /** Returns primary key value.
     */
-  var primaryKeyValue: js.UndefOr[String] = js.undefined
+  var primaryKeyValue: js.UndefOr[String] = js.native
   /** Returns request type.
     */
-  var requestType: js.UndefOr[String] = js.undefined
+  var requestType: js.UndefOr[String] = js.native
   /** Returns the selectedRow index.
     */
-  var selectedRow: js.UndefOr[Double] = js.undefined
+  var selectedRow: js.UndefOr[Double] = js.native
   /** Returns Kanban element.
     */
-  var target: js.UndefOr[js.Any] = js.undefined
+  var target: js.UndefOr[js.Any] = js.native
   /** Returns the name of the event.
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
 }
 
 object ActionCompleteEventArgs {
   @scala.inline
-  def apply(
-    cancel: js.UndefOr[Boolean] = js.undefined,
-    currentFilteringColumn: String = null,
-    data: js.Any = null,
-    filterCollection: js.Any = null,
-    model: js.Any = null,
-    originalEventType: String = null,
-    primaryKey: String = null,
-    primaryKeyValue: String = null,
-    requestType: String = null,
-    selectedRow: Int | Double = null,
-    target: js.Any = null,
-    `type`: String = null
-  ): ActionCompleteEventArgs = {
+  def apply(): ActionCompleteEventArgs = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.asInstanceOf[js.Any])
-    if (currentFilteringColumn != null) __obj.updateDynamic("currentFilteringColumn")(currentFilteringColumn.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (filterCollection != null) __obj.updateDynamic("filterCollection")(filterCollection.asInstanceOf[js.Any])
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
-    if (originalEventType != null) __obj.updateDynamic("originalEventType")(originalEventType.asInstanceOf[js.Any])
-    if (primaryKey != null) __obj.updateDynamic("primaryKey")(primaryKey.asInstanceOf[js.Any])
-    if (primaryKeyValue != null) __obj.updateDynamic("primaryKeyValue")(primaryKeyValue.asInstanceOf[js.Any])
-    if (requestType != null) __obj.updateDynamic("requestType")(requestType.asInstanceOf[js.Any])
-    if (selectedRow != null) __obj.updateDynamic("selectedRow")(selectedRow.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionCompleteEventArgs]
   }
+  @scala.inline
+  implicit class ActionCompleteEventArgsOps[Self <: ActionCompleteEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCancel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentFilteringColumn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentFilteringColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentFilteringColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentFilteringColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterCollection(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterCollection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterCollection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterCollection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModel(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalEventType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEventType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalEventType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEventType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimaryKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimaryKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimaryKeyValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryKeyValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimaryKeyValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryKeyValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedRow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTarget(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

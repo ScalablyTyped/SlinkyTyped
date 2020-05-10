@@ -9,19 +9,39 @@ import scala.scalajs.js.annotation._
   * IP address information for entries in the (plural) PodIPs field. Each entry includes:
   *    IP: An IP address allocated to the pod. Routable at least within the cluster.
   */
+@js.native
 trait PodIP extends js.Object {
   /**
     * ip is an IP address (IPv4 or IPv6) assigned to the pod
     */
-  var ip: js.UndefOr[Input[String]] = js.undefined
+  var ip: js.UndefOr[Input[String]] = js.native
 }
 
 object PodIP {
   @scala.inline
-  def apply(ip: Input[String] = null): PodIP = {
+  def apply(): PodIP = {
     val __obj = js.Dynamic.literal()
-    if (ip != null) __obj.updateDynamic("ip")(ip.asInstanceOf[js.Any])
     __obj.asInstanceOf[PodIP]
   }
+  @scala.inline
+  implicit class PodIPOps[Self <: PodIP] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIp(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

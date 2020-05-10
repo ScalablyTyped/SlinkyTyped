@@ -8,9 +8,6 @@ import typingsSlinky.tstl.dequeMod.Deque.Iterator
 import typingsSlinky.tstl.dequeMod.Deque.ReverseIterator
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import typingsSlinky.tstl.ifrontMod.IFront
-import typingsSlinky.tstl.tstlNumbers.`1.5`
-import typingsSlinky.tstl.tstlNumbers.`36`
-import typingsSlinky.tstl.tstlNumbers.`8`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +15,7 @@ import scala.scalajs.js.annotation._
 @JSImport("tstl/container/Deque", JSImport.Namespace)
 @js.native
 object dequeMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.tstl.isizeMod.ISize because Already inherited
   - typingsSlinky.tstl.iforwardcontainerMod.IForwardContainer because Already inherited
   - typingsSlinky.tstl.ipushMod.IPush because Already inherited
@@ -207,14 +204,14 @@ object dequeMod extends js.Object {
     /**
       * Expansion ratio.
       */
-    val MAGNIFIER: `1.5` = js.native
+    val MAGNIFIER: /* 1.5 */ Double = js.native
     /**
       * Minimum {@link Deque.capacity}.
       *
       * Although a {@link Deque} has few elements, even no element is belonged to, the {@link Deque}
       * keeps the minimum {@link Deque.capacity} at least.
       */
-    val MIN_CAPACITY: `36` = js.native
+    val MIN_CAPACITY: /* 36 */ Double = js.native
     /**
       * Row size of the {@link Deque.matrix_ matrix} which contains elements.
       *
@@ -226,7 +223,7 @@ object dequeMod extends js.Object {
       * element in middle position is O(N/8). ({@link Vector}'s time complexity of accessement is O(1)
       * and inserting element is O(N)).
       */
-    val ROW_SIZE: `8` = js.native
+    val ROW_SIZE: /* 8 */ Double = js.native
     val ReverseIterator: Instantiable0[
         ArrayReverseIterator[
           js.Object, 

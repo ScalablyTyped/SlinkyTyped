@@ -14,14 +14,12 @@ trait TargetFrameValues extends js.Object
 
 object TargetFrameValues {
   @scala.inline
-  def _blank: typingsSlinky.activexShdocvw.activexShdocvwStrings._blank = this.cast("_blank")
+  def _blank: typingsSlinky.activexShdocvw.activexShdocvwStrings._blank = "_blank".asInstanceOf[typingsSlinky.activexShdocvw.activexShdocvwStrings._blank]
   @scala.inline
-  def _parent: typingsSlinky.activexShdocvw.activexShdocvwStrings._parent = this.cast("_parent")
+  def _parent: typingsSlinky.activexShdocvw.activexShdocvwStrings._parent = "_parent".asInstanceOf[typingsSlinky.activexShdocvw.activexShdocvwStrings._parent]
   @scala.inline
-  def _self: typingsSlinky.activexShdocvw.activexShdocvwStrings._self = this.cast("_self")
+  def _self: typingsSlinky.activexShdocvw.activexShdocvwStrings._self = "_self".asInstanceOf[typingsSlinky.activexShdocvw.activexShdocvwStrings._self]
   @scala.inline
-  def _top: typingsSlinky.activexShdocvw.activexShdocvwStrings._top = this.cast("_top")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def _top: typingsSlinky.activexShdocvw.activexShdocvwStrings._top = "_top".asInstanceOf[typingsSlinky.activexShdocvw.activexShdocvwStrings._top]
 }
 

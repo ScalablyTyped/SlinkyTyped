@@ -1,7 +1,7 @@
 package typingsSlinky.storybookComponents.previewMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.FunctionComponent
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,5 +13,5 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("@storybook/components/dist/blocks/Preview", "Preview")
 @js.native
-object Preview extends TopLevel[FunctionComponent[PreviewProps]]
+object Preview extends TopLevel[ReactComponentClass[PreviewProps]]
 

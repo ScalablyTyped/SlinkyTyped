@@ -1,20 +1,19 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
-import slinky.web.html.`*`.tag
+import slinky.web.html.input.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.baseuiStrings.both
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
 import typingsSlinky.baseui.baseuiStrings.left
+import typingsSlinky.baseui.baseuiStrings.mini
 import typingsSlinky.baseui.baseuiStrings.none
 import typingsSlinky.baseui.baseuiStrings.right
 import typingsSlinky.baseui.inputMod.BaseInputOverrides
@@ -26,62 +25,84 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BaseInput
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.inputMod.BaseInput] {
+object BaseInput {
   @JSImport("baseui/input", "BaseInput")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoComplete, autoFocus, disabled, id, name, placeholder, required, rows, type */
-  def apply(
-    adjoined: none | left | right | both = null,
-    `aria-describedby`: String = null,
-    `aria-label`: String = null,
-    `aria-labelledby`: String = null,
-    clearable: js.UndefOr[Boolean] = js.undefined,
-    `data-baseweb`: String = null,
-    error: js.UndefOr[Boolean] = js.undefined,
-    inputRef: Ref[HTMLInputElement] = null,
-    max: Int | Double = null,
-    min: Int | Double = null,
-    onBlur: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
-    onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit = null,
-    onFocus: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
-    onKeyDown: SyntheticKeyboardEvent[HTMLInputElement] => Unit = null,
-    onKeyPress: SyntheticKeyboardEvent[HTMLInputElement] => Unit = null,
-    onKeyUp: SyntheticKeyboardEvent[HTMLInputElement] => Unit = null,
-    overrides: BaseInputOverrides[SharedProps] = null,
-    positive: js.UndefOr[Boolean] = js.undefined,
-    size: default_ | compact | large_ = null,
-    value: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.baseui.inputMod.BaseInput] = {
-    val __obj = js.Dynamic.literal()
-    if (adjoined != null) __obj.updateDynamic("adjoined")(adjoined.asInstanceOf[js.Any])
-    if (`aria-describedby` != null) __obj.updateDynamic("aria-describedby")(`aria-describedby`.asInstanceOf[js.Any])
-    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
-    if (`aria-labelledby` != null) __obj.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
-    if (!js.isUndefined(clearable)) __obj.updateDynamic("clearable")(clearable.asInstanceOf[js.Any])
-    if (`data-baseweb` != null) __obj.updateDynamic("data-baseweb")(`data-baseweb`.asInstanceOf[js.Any])
-    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (inputRef != null) __obj.updateDynamic("inputRef")(inputRef.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
-    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (!js.isUndefined(positive)) __obj.updateDynamic("positive")(positive.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.inputMod.BaseInput] {
+    @scala.inline
+    def adjoined(value: none | left | right | both): this.type = set("adjoined", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `aria-describedby`(value: String): this.type = set("aria-describedby", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `aria-label`(value: String): this.type = set("aria-label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `aria-labelledby`(value: String): this.type = set("aria-labelledby", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoComplete(value: String): this.type = set("autoComplete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clearable(value: Boolean): this.type = set("clearable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `data-baseweb`(value: String): this.type = set("data-baseweb", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputMode(value: String): this.type = set("inputMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputRefRefObject(value: ReactRef[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputRefFunction1(value: /* instance */ HTMLInputElement | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def inputRef(value: Ref[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputRefNull: this.type = set("inputRef", null)
+    @scala.inline
+    def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
+    @scala.inline
+    def min(value: Double): this.type = set("min", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBlur(value: SyntheticFocusEvent[HTMLInputElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFocus(value: SyntheticFocusEvent[HTMLInputElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyDown(value: SyntheticKeyboardEvent[HTMLInputElement] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyPress(value: SyntheticKeyboardEvent[HTMLInputElement] => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyUp(value: SyntheticKeyboardEvent[HTMLInputElement] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def overrides(value: BaseInputOverrides[SharedProps]): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def positive(value: Boolean): this.type = set("positive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: mini | default_ | compact | large_): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String | Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.inputMod.BaseInput] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.baseui.inputMod.BaseInput](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = BaseInputProps[HTMLInputElement]
+  
+  def withProps(p: BaseInputProps[HTMLInputElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: BaseInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

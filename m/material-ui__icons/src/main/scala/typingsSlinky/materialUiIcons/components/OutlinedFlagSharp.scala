@@ -1,15 +1,17 @@
 package typingsSlinky.materialUiIcons.components
 
+import typingsSlinky.materialUiCore.svgIconSvgIconMod.SvgIconProps
 import typingsSlinky.materialUiIcons.outlinedFlagSharpMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object OutlinedFlagSharp extends SharedApply_SvgIconProps1442979138[default] {
-  @JSImport("@material-ui/icons/OutlinedFlagSharp", "default")
+object OutlinedFlagSharp {
+  @JSImport("@material-ui/icons/OutlinedFlagSharp", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1164301990[default] = new SharedBuilder_SvgIconProps_1164301990[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: OutlinedFlagSharp.type): SharedBuilder_SvgIconProps_1164301990[default] = new SharedBuilder_SvgIconProps_1164301990[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

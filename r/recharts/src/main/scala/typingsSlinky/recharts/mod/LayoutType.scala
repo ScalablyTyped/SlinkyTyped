@@ -12,10 +12,8 @@ trait LayoutType extends js.Object
 
 object LayoutType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def horizontal: typingsSlinky.recharts.rechartsStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.recharts.rechartsStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.recharts.rechartsStrings.horizontal = this.cast("horizontal")
-  @scala.inline
-  def vertical: typingsSlinky.recharts.rechartsStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.recharts.rechartsStrings.vertical = "vertical".asInstanceOf[typingsSlinky.recharts.rechartsStrings.vertical]
 }
 

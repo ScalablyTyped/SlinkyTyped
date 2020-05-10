@@ -26,16 +26,53 @@ trait PutBucketPolicyRequest extends js.Object {
 
 object PutBucketPolicyRequest {
   @scala.inline
-  def apply(
-    Bucket: BucketName,
-    Policy: Policy,
-    ConfirmRemoveSelfBucketAccess: js.UndefOr[Boolean] = js.undefined,
-    ContentMD5: ContentMD5 = null
-  ): PutBucketPolicyRequest = {
+  def apply(Bucket: BucketName, Policy: Policy): PutBucketPolicyRequest = {
     val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any], Policy = Policy.asInstanceOf[js.Any])
-    if (!js.isUndefined(ConfirmRemoveSelfBucketAccess)) __obj.updateDynamic("ConfirmRemoveSelfBucketAccess")(ConfirmRemoveSelfBucketAccess.asInstanceOf[js.Any])
-    if (ContentMD5 != null) __obj.updateDynamic("ContentMD5")(ContentMD5.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutBucketPolicyRequest]
   }
+  @scala.inline
+  implicit class PutBucketPolicyRequestOps[Self <: PutBucketPolicyRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucket(value: BucketName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPolicy(value: Policy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConfirmRemoveSelfBucketAccess(value: ConfirmRemoveSelfBucketAccess): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfirmRemoveSelfBucketAccess")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfirmRemoveSelfBucketAccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfirmRemoveSelfBucketAccess")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentMD5(value: ContentMD5): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentMD5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentMD5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentMD5")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LayerEvent extends LeafletEvent {
   @JSName("layer")
-  var layer_LayerEvent: Layer
+  var layer_LayerEvent: Layer = js.native
 }
 
 object LayerEvent {
@@ -16,5 +17,19 @@ object LayerEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LayerEvent]
   }
+  @scala.inline
+  implicit class LayerEventOps[Self <: LayerEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLayer(value: Layer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

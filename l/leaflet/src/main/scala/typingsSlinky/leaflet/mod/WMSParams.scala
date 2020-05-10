@@ -4,41 +4,134 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WMSParams extends js.Object {
-  var format: js.UndefOr[String] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var layers: String
-  var request: js.UndefOr[String] = js.undefined
-  var service: js.UndefOr[String] = js.undefined
-  var styles: js.UndefOr[String] = js.undefined
-  var transparent: js.UndefOr[Boolean] = js.undefined
-  var version: js.UndefOr[String] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
+  var format: js.UndefOr[String] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var layers: String = js.native
+  var request: js.UndefOr[String] = js.native
+  var service: js.UndefOr[String] = js.native
+  var styles: js.UndefOr[String] = js.native
+  var transparent: js.UndefOr[Boolean] = js.native
+  var version: js.UndefOr[String] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object WMSParams {
   @scala.inline
-  def apply(
-    layers: String,
-    format: String = null,
-    height: Int | Double = null,
-    request: String = null,
-    service: String = null,
-    styles: String = null,
-    transparent: js.UndefOr[Boolean] = js.undefined,
-    version: String = null,
-    width: Int | Double = null
-  ): WMSParams = {
+  def apply(layers: String): WMSParams = {
     val __obj = js.Dynamic.literal(layers = layers.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
-    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (!js.isUndefined(transparent)) __obj.updateDynamic("transparent")(transparent.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[WMSParams]
   }
+  @scala.inline
+  implicit class WMSParamsOps[Self <: WMSParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLayers(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequest(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withService(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyles(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransparent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transparent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransparent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transparent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

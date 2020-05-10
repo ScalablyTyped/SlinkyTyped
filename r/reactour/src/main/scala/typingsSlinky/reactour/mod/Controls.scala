@@ -1,12 +1,12 @@
 package typingsSlinky.reactour.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.FC
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("reactour", "Controls")
 @js.native
-object Controls extends TopLevel[FC[ControlsProps]]
+object Controls extends TopLevel[ReactComponentClass[ControlsProps]]
 

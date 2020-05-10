@@ -34,22 +34,89 @@ trait OnDemandOptions extends js.Object {
 
 object OnDemandOptions {
   @scala.inline
-  def apply(
-    AllocationStrategy: FleetOnDemandAllocationStrategy = null,
-    CapacityReservationOptions: CapacityReservationOptions = null,
-    MaxTotalPrice: String = null,
-    MinTargetCapacity: Int | scala.Double = null,
-    SingleAvailabilityZone: js.UndefOr[scala.Boolean] = js.undefined,
-    SingleInstanceType: js.UndefOr[scala.Boolean] = js.undefined
-  ): OnDemandOptions = {
+  def apply(): OnDemandOptions = {
     val __obj = js.Dynamic.literal()
-    if (AllocationStrategy != null) __obj.updateDynamic("AllocationStrategy")(AllocationStrategy.asInstanceOf[js.Any])
-    if (CapacityReservationOptions != null) __obj.updateDynamic("CapacityReservationOptions")(CapacityReservationOptions.asInstanceOf[js.Any])
-    if (MaxTotalPrice != null) __obj.updateDynamic("MaxTotalPrice")(MaxTotalPrice.asInstanceOf[js.Any])
-    if (MinTargetCapacity != null) __obj.updateDynamic("MinTargetCapacity")(MinTargetCapacity.asInstanceOf[js.Any])
-    if (!js.isUndefined(SingleAvailabilityZone)) __obj.updateDynamic("SingleAvailabilityZone")(SingleAvailabilityZone.asInstanceOf[js.Any])
-    if (!js.isUndefined(SingleInstanceType)) __obj.updateDynamic("SingleInstanceType")(SingleInstanceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[OnDemandOptions]
   }
+  @scala.inline
+  implicit class OnDemandOptionsOps[Self <: OnDemandOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllocationStrategy(value: FleetOnDemandAllocationStrategy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocationStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllocationStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocationStrategy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCapacityReservationOptions(value: CapacityReservationOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CapacityReservationOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapacityReservationOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CapacityReservationOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxTotalPrice(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxTotalPrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxTotalPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxTotalPrice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinTargetCapacity(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinTargetCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinTargetCapacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinTargetCapacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleAvailabilityZone(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleAvailabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleAvailabilityZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleAvailabilityZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleInstanceType(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleInstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleInstanceType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

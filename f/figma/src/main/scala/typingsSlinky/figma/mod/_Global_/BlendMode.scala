@@ -29,44 +29,42 @@ trait BlendMode extends js.Object
 
 object BlendMode {
   @scala.inline
-  def COLOR: typingsSlinky.figma.figmaStrings.COLOR = this.cast("COLOR")
+  def COLOR: typingsSlinky.figma.figmaStrings.COLOR = "COLOR".asInstanceOf[typingsSlinky.figma.figmaStrings.COLOR]
   @scala.inline
-  def COLOR_BURN: typingsSlinky.figma.figmaStrings.COLOR_BURN = this.cast("COLOR_BURN")
+  def COLOR_BURN: typingsSlinky.figma.figmaStrings.COLOR_BURN = "COLOR_BURN".asInstanceOf[typingsSlinky.figma.figmaStrings.COLOR_BURN]
   @scala.inline
-  def COLOR_DODGE: typingsSlinky.figma.figmaStrings.COLOR_DODGE = this.cast("COLOR_DODGE")
+  def COLOR_DODGE: typingsSlinky.figma.figmaStrings.COLOR_DODGE = "COLOR_DODGE".asInstanceOf[typingsSlinky.figma.figmaStrings.COLOR_DODGE]
   @scala.inline
-  def DARKEN: typingsSlinky.figma.figmaStrings.DARKEN = this.cast("DARKEN")
+  def DARKEN: typingsSlinky.figma.figmaStrings.DARKEN = "DARKEN".asInstanceOf[typingsSlinky.figma.figmaStrings.DARKEN]
   @scala.inline
-  def DIFFERENCE: typingsSlinky.figma.figmaStrings.DIFFERENCE = this.cast("DIFFERENCE")
+  def DIFFERENCE: typingsSlinky.figma.figmaStrings.DIFFERENCE = "DIFFERENCE".asInstanceOf[typingsSlinky.figma.figmaStrings.DIFFERENCE]
   @scala.inline
-  def EXCLUSION: typingsSlinky.figma.figmaStrings.EXCLUSION = this.cast("EXCLUSION")
+  def EXCLUSION: typingsSlinky.figma.figmaStrings.EXCLUSION = "EXCLUSION".asInstanceOf[typingsSlinky.figma.figmaStrings.EXCLUSION]
   @scala.inline
-  def HARD_LIGHT: typingsSlinky.figma.figmaStrings.HARD_LIGHT = this.cast("HARD_LIGHT")
+  def HARD_LIGHT: typingsSlinky.figma.figmaStrings.HARD_LIGHT = "HARD_LIGHT".asInstanceOf[typingsSlinky.figma.figmaStrings.HARD_LIGHT]
   @scala.inline
-  def HUE: typingsSlinky.figma.figmaStrings.HUE = this.cast("HUE")
+  def HUE: typingsSlinky.figma.figmaStrings.HUE = "HUE".asInstanceOf[typingsSlinky.figma.figmaStrings.HUE]
   @scala.inline
-  def LIGHTEN: typingsSlinky.figma.figmaStrings.LIGHTEN = this.cast("LIGHTEN")
+  def LIGHTEN: typingsSlinky.figma.figmaStrings.LIGHTEN = "LIGHTEN".asInstanceOf[typingsSlinky.figma.figmaStrings.LIGHTEN]
   @scala.inline
-  def LINEAR_BURN: typingsSlinky.figma.figmaStrings.LINEAR_BURN = this.cast("LINEAR_BURN")
+  def LINEAR_BURN: typingsSlinky.figma.figmaStrings.LINEAR_BURN = "LINEAR_BURN".asInstanceOf[typingsSlinky.figma.figmaStrings.LINEAR_BURN]
   @scala.inline
-  def LINEAR_DODGE: typingsSlinky.figma.figmaStrings.LINEAR_DODGE = this.cast("LINEAR_DODGE")
+  def LINEAR_DODGE: typingsSlinky.figma.figmaStrings.LINEAR_DODGE = "LINEAR_DODGE".asInstanceOf[typingsSlinky.figma.figmaStrings.LINEAR_DODGE]
   @scala.inline
-  def LUMINOSITY: typingsSlinky.figma.figmaStrings.LUMINOSITY = this.cast("LUMINOSITY")
+  def LUMINOSITY: typingsSlinky.figma.figmaStrings.LUMINOSITY = "LUMINOSITY".asInstanceOf[typingsSlinky.figma.figmaStrings.LUMINOSITY]
   @scala.inline
-  def MULTIPLY: typingsSlinky.figma.figmaStrings.MULTIPLY = this.cast("MULTIPLY")
+  def MULTIPLY: typingsSlinky.figma.figmaStrings.MULTIPLY = "MULTIPLY".asInstanceOf[typingsSlinky.figma.figmaStrings.MULTIPLY]
   @scala.inline
-  def NORMAL: typingsSlinky.figma.figmaStrings.NORMAL = this.cast("NORMAL")
+  def NORMAL: typingsSlinky.figma.figmaStrings.NORMAL = "NORMAL".asInstanceOf[typingsSlinky.figma.figmaStrings.NORMAL]
   @scala.inline
-  def OVERLAY: typingsSlinky.figma.figmaStrings.OVERLAY = this.cast("OVERLAY")
+  def OVERLAY: typingsSlinky.figma.figmaStrings.OVERLAY = "OVERLAY".asInstanceOf[typingsSlinky.figma.figmaStrings.OVERLAY]
   @scala.inline
-  def PASS_THROUGH: typingsSlinky.figma.figmaStrings.PASS_THROUGH = this.cast("PASS_THROUGH")
+  def PASS_THROUGH: typingsSlinky.figma.figmaStrings.PASS_THROUGH = "PASS_THROUGH".asInstanceOf[typingsSlinky.figma.figmaStrings.PASS_THROUGH]
   @scala.inline
-  def SATURATION: typingsSlinky.figma.figmaStrings.SATURATION = this.cast("SATURATION")
+  def SATURATION: typingsSlinky.figma.figmaStrings.SATURATION = "SATURATION".asInstanceOf[typingsSlinky.figma.figmaStrings.SATURATION]
   @scala.inline
-  def SCREEN: typingsSlinky.figma.figmaStrings.SCREEN = this.cast("SCREEN")
+  def SCREEN: typingsSlinky.figma.figmaStrings.SCREEN = "SCREEN".asInstanceOf[typingsSlinky.figma.figmaStrings.SCREEN]
   @scala.inline
-  def SOFT_LIGHT: typingsSlinky.figma.figmaStrings.SOFT_LIGHT = this.cast("SOFT_LIGHT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SOFT_LIGHT: typingsSlinky.figma.figmaStrings.SOFT_LIGHT = "SOFT_LIGHT".asInstanceOf[typingsSlinky.figma.figmaStrings.SOFT_LIGHT]
 }
 

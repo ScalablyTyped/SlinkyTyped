@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ReferenceErrorConstructor
-  extends Instantiable0[typingsSlinky.std.ReferenceError]
-     with Instantiable1[/* message */ java.lang.String, typingsSlinky.std.ReferenceError] {
+  extends Instantiable0[js.ReferenceError]
+     with Instantiable1[/* message */ java.lang.String, js.ReferenceError] {
   def apply(): js.ReferenceError = js.native
   def apply(message: java.lang.String): js.ReferenceError = js.native
 }

@@ -17,7 +17,7 @@ import typingsSlinky.officeUiFabricReact.libAutofillMod.Autofill
 import typingsSlinky.officeUiFabricReact.libFloatingPickerMod.BaseFloatingPicker
 import typingsSlinky.officeUiFabricReact.libSelectedItemsListMod.BaseSelectedItemsList
 import typingsSlinky.officeUiFabricReact.libSelectionMod.Selection
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,7 +26,7 @@ import scala.scalajs.js.annotation._
 @JSImport("office-ui-fabric-react/lib/components/ExtendedPicker/BaseExtendedPicker", "BaseExtendedPicker")
 @js.native
 class BaseExtendedPicker[T, P /* <: IBaseExtendedPickerProps[T] */] protected ()
-  extends BaseComponent[P, IBaseExtendedPickerState[T]]
+  extends Component[P, IBaseExtendedPickerState[T], js.Any]
      with IBaseExtendedPicker[T] {
   def this(basePickerProps: P) = this()
   var _addProcessedItem: js.Any = js.native
@@ -57,9 +57,6 @@ class BaseExtendedPicker[T, P /* <: IBaseExtendedPickerProps[T] */] protected ()
   def clearInput(): Unit = js.native
   @JSName("componentDidMount")
   def componentDidMount_MBaseExtendedPicker(): Unit = js.native
-  /** Sets focus to the input. */
-  /* CompleteClass */
-  override def focus(): Unit = js.native
   /* protected */ def onBackspace(ev: SyntheticKeyboardEvent[HTMLElement]): Unit = js.native
   /* protected */ def onCopy(ev: SyntheticClipboardEvent[HTMLElement]): Unit = js.native
   /* protected */ def onInputChange(value: String): Unit = js.native

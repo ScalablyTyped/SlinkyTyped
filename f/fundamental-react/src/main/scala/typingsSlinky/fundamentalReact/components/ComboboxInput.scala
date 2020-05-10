@@ -1,41 +1,53 @@
 package typingsSlinky.fundamentalReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.raw.HTMLDivElement
+import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import slinky.web.html.`*`.tag
+import slinky.web.SyntheticMouseEvent
+import slinky.web.html.div.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.fundamentalReact.AnonState
 import typingsSlinky.fundamentalReact.comboboxInputMod.ComboboxInputProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ComboboxInput
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object ComboboxInput {
   @JSImport("fundamental-react/lib/ComboboxInput/ComboboxInput", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, placeholder */
-  def apply(
-    menu: ReactElement,
-    buttonProps: js.Object = null,
-    compact: js.UndefOr[Boolean] = js.undefined,
-    disableStyles: js.UndefOr[Boolean] = js.undefined,
-    inputProps: js.Object = null,
-    popoverProps: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(menu = menu.asInstanceOf[js.Any])
-    if (buttonProps != null) __obj.updateDynamic("buttonProps")(buttonProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableStyles)) __obj.updateDynamic("disableStyles")(disableStyles.asInstanceOf[js.Any])
-    if (inputProps != null) __obj.updateDynamic("inputProps")(inputProps.asInstanceOf[js.Any])
-    if (popoverProps != null) __obj.updateDynamic("popoverProps")(popoverProps.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def buttonProps(value: js.Object): this.type = set("buttonProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableStyles(value: Boolean): this.type = set("disableStyles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputProps(value: js.Object): this.type = set("inputProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def list(value: TagMod[Any]): this.type = set("list", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* event */ SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popoverProps(value: js.Object): this.type = set("popoverProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def validationState(value: AnonState): this.type = set("validationState", value.asInstanceOf[js.Any])
   }
-  type Props = ComboboxInputProps
+  
+  def withProps(p: ComboboxInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(menu: ReactElement): Builder = {
+    val __props = js.Dynamic.literal(menu = menu.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ComboboxInputProps]))
+  }
 }
 

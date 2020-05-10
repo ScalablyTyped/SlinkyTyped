@@ -1,10 +1,11 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.semanticUiReact.feedDateMod.FeedDateProps
 import typingsSlinky.semanticUiReact.feedSummaryMod.FeedSummaryProps
 import typingsSlinky.semanticUiReact.feedUserMod.FeedUserProps
@@ -14,30 +15,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FeedSummary
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object FeedSummary {
   @JSImport("semantic-ui-react/dist/commonjs/views/Feed/FeedSummary", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    as: js.Any = null,
-    content: SemanticShorthandContent = null,
-    date: SemanticShorthandItem[FeedDateProps] = null,
-    user: SemanticShorthandItem[FeedUserProps] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dateReactElement(value: ReactElement): this.type = set("date", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dateFunction3(
+      value: (/* component */ ReactComponentClass[FeedDateProps], FeedDateProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("date", js.Any.fromFunction3(value))
+    @scala.inline
+    def date(value: SemanticShorthandItem[FeedDateProps]): this.type = set("date", value.asInstanceOf[js.Any])
+    @scala.inline
+    def userReactElement(value: ReactElement): this.type = set("user", value.asInstanceOf[js.Any])
+    @scala.inline
+    def userFunction3(
+      value: (/* component */ ReactComponentClass[FeedUserProps], FeedUserProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("user", js.Any.fromFunction3(value))
+    @scala.inline
+    def user(value: SemanticShorthandItem[FeedUserProps]): this.type = set("user", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FeedSummaryProps
+  
+  def withProps(p: FeedSummaryProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FeedSummary.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

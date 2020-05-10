@@ -16,6 +16,6 @@ object mod extends js.Object {
   def assignRef(ref: Ref[_], value: TagMod[Any]): Unit = js.native
   def checkStyles(pkg: String): js.Function0[Unit] = js.native
   def wrapEvent(handler: js.UndefOr[scala.Nothing], cb: ReactEventHandler[Element]): ReactEventHandler[Element] = js.native
-  def wrapEvent(handler: ReactEventHandler[typingsSlinky.std.Element], cb: ReactEventHandler[Element]): ReactEventHandler[Element] = js.native
+  def wrapEvent(handler: ReactEventHandler[Element], cb: ReactEventHandler[Element]): ReactEventHandler[Element] = js.native
 }
 

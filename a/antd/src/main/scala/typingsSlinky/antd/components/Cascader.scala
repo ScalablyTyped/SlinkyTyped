@@ -1,11 +1,10 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.cascaderMod.CascaderExpandTrigger
 import typingsSlinky.antd.cascaderMod.CascaderOptionType
 import typingsSlinky.antd.cascaderMod.CascaderProps
@@ -13,68 +12,85 @@ import typingsSlinky.antd.cascaderMod.FieldNamesType
 import typingsSlinky.antd.cascaderMod.ShowSearchType
 import typingsSlinky.antd.cascaderMod.default
 import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Cascader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Cascader {
   @JSImport("antd/lib/cascader", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, placeholder, style */
-  def apply(
-    options: js.Array[CascaderOptionType],
-    allowClear: js.UndefOr[Boolean] = js.undefined,
-    bordered: js.UndefOr[Boolean] = js.undefined,
-    changeOnSelect: js.UndefOr[Boolean] = js.undefined,
-    defaultValue: js.Array[String] = null,
-    displayRender: (/* label */ js.Array[String], /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]]) => TagMod[Any] = null,
-    expandTrigger: CascaderExpandTrigger = null,
-    fieldNames: FieldNamesType = null,
-    getPopupContainer: /* triggerNode */ HTMLElement => HTMLElement = null,
-    inputPrefixCls: String = null,
-    loadData: /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]] => Unit = null,
-    notFoundContent: TagMod[Any] = null,
-    onChange: (/* value */ js.Array[String], /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]]) => Unit = null,
-    onPopupVisibleChange: /* popupVisible */ Boolean => Unit = null,
-    popupClassName: String = null,
-    popupPlacement: String = null,
-    popupVisible: js.UndefOr[Boolean] = js.undefined,
-    prefixCls: String = null,
-    showSearch: Boolean | ShowSearchType = null,
-    size: SizeType = null,
-    suffixIcon: TagMod[Any] = null,
-    value: js.Array[String] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowClear)) __obj.updateDynamic("allowClear")(allowClear.asInstanceOf[js.Any])
-    if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.asInstanceOf[js.Any])
-    if (!js.isUndefined(changeOnSelect)) __obj.updateDynamic("changeOnSelect")(changeOnSelect.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (displayRender != null) __obj.updateDynamic("displayRender")(js.Any.fromFunction2(displayRender))
-    if (expandTrigger != null) __obj.updateDynamic("expandTrigger")(expandTrigger.asInstanceOf[js.Any])
-    if (fieldNames != null) __obj.updateDynamic("fieldNames")(fieldNames.asInstanceOf[js.Any])
-    if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
-    if (inputPrefixCls != null) __obj.updateDynamic("inputPrefixCls")(inputPrefixCls.asInstanceOf[js.Any])
-    if (loadData != null) __obj.updateDynamic("loadData")(js.Any.fromFunction1(loadData))
-    if (notFoundContent != null) __obj.updateDynamic("notFoundContent")(notFoundContent.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onPopupVisibleChange != null) __obj.updateDynamic("onPopupVisibleChange")(js.Any.fromFunction1(onPopupVisibleChange))
-    if (popupClassName != null) __obj.updateDynamic("popupClassName")(popupClassName.asInstanceOf[js.Any])
-    if (popupPlacement != null) __obj.updateDynamic("popupPlacement")(popupPlacement.asInstanceOf[js.Any])
-    if (!js.isUndefined(popupVisible)) __obj.updateDynamic("popupVisible")(popupVisible.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (showSearch != null) __obj.updateDynamic("showSearch")(showSearch.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (suffixIcon != null) __obj.updateDynamic("suffixIcon")(suffixIcon.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bordered(value: Boolean): this.type = set("bordered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def changeOnSelect(value: Boolean): this.type = set("changeOnSelect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def displayRender(
+      value: (/* label */ js.Array[String], /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]]) => TagMod[Any]
+    ): this.type = set("displayRender", js.Any.fromFunction2(value))
+    @scala.inline
+    def expandTrigger(value: CascaderExpandTrigger): this.type = set("expandTrigger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fieldNames(value: FieldNamesType): this.type = set("fieldNames", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
+    @scala.inline
+    def inputPrefixCls(value: String): this.type = set("inputPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loadData(value: /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]] => Unit): this.type = set("loadData", js.Any.fromFunction1(value))
+    @scala.inline
+    def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def notFoundContent(value: TagMod[Any]): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(
+      value: (/* value */ js.Array[String], /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]]) => Unit
+    ): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onPopupVisibleChange(value: /* popupVisible */ Boolean => Unit): this.type = set("onPopupVisibleChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popupClassName(value: String): this.type = set("popupClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popupPlacement(value: String): this.type = set("popupPlacement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popupVisible(value: Boolean): this.type = set("popupVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showSearch(value: Boolean | ShowSearchType): this.type = set("showSearch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: SizeType): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def suffixIconReactElement(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def suffixIcon(value: TagMod[Any]): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Array[String]): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  type Props = CascaderProps
+  
+  def withProps(p: CascaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(options: js.Array[CascaderOptionType]): Builder = {
+    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CascaderProps]))
+  }
 }
 

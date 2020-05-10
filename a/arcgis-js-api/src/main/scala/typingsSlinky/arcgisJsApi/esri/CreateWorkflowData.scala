@@ -1,45 +1,33 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import typingsSlinky.std.Object
-import typingsSlinky.std.PropertyKey
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait CreateWorkflowData extends Object {
+@js.native
+trait CreateWorkflowData extends js.Object {
   /**
-    * The [creationInfo](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor.html#CreationInfo) provides the feature template and layer when creating a new feature.
+    * This provides the feature template and layer when creating a new feature.
     *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-Workflow.html#CreateWorkflowData)
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-CreateWorkflowData.html#creationInfo)
     */
-  var creationInfo: CreationInfo
+  var creationInfo: CreationInfo = js.native
   /**
-    * The edits used to keep track of a feature being modified.
+    * The [edits](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-Edits.html) used to keep track of a feature being modified.
     *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-Workflow.html#CreateWorkflowData)
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-CreateWorkflowData.html#edits)
     */
-  var edits: Edits
+  var edits: Edits = js.native
   /**
     * The associated [EditorViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html) for this workflow.
     *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-Workflow.html#CreateWorkflowData)
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-CreateWorkflowData.html#viewModel)
     */
-  var viewModel: EditorViewModel
+  var viewModel: EditorViewModel = js.native
 }
 
-object CreateWorkflowData {
-  @scala.inline
-  def apply(
-    constructor: js.Function,
-    creationInfo: CreationInfo,
-    edits: Edits,
-    hasOwnProperty: PropertyKey => Boolean,
-    propertyIsEnumerable: PropertyKey => Boolean,
-    viewModel: EditorViewModel
-  ): CreateWorkflowData = {
-    val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], creationInfo = creationInfo.asInstanceOf[js.Any], edits = edits.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), viewModel = viewModel.asInstanceOf[js.Any])
-  
-    __obj.asInstanceOf[CreateWorkflowData]
-  }
-}
+@JSGlobal("__esri.CreateWorkflowData")
+@js.native
+object CreateWorkflowData extends TopLevel[CreateWorkflowData]
 

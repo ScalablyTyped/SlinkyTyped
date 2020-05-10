@@ -15,14 +15,12 @@ trait WebExtensionManifestBrowserActionDefaultArea extends js.Object
 
 object WebExtensionManifestBrowserActionDefaultArea {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def menupanel: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.menupanel = "menupanel".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.menupanel]
   @scala.inline
-  def menupanel: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.menupanel = this.cast("menupanel")
+  def navbar: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.navbar = "navbar".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.navbar]
   @scala.inline
-  def navbar: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.navbar = this.cast("navbar")
+  def personaltoolbar: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.personaltoolbar = "personaltoolbar".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.personaltoolbar]
   @scala.inline
-  def personaltoolbar: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.personaltoolbar = this.cast("personaltoolbar")
-  @scala.inline
-  def tabstrip: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tabstrip = this.cast("tabstrip")
+  def tabstrip: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tabstrip = "tabstrip".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tabstrip]
 }
 

@@ -339,7 +339,7 @@ package object wafv2Mod {
     - java.lang.String
   */
   type Scope = typingsSlinky.awsSdk.wafv2Mod._Scope | java.lang.String
-  type SearchString = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.wafv2Mod.Blob | java.lang.String
+  type SearchString = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.wafv2Mod.Blob | java.lang.String
   type Size = scala.Double
   type Statements = js.Array[typingsSlinky.awsSdk.wafv2Mod.Statement]
   type TagKey = java.lang.String

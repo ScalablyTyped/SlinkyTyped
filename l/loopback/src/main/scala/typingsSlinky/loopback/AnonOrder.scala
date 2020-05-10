@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonOrder extends js.Object {
-  var fields: js.UndefOr[String | js.Any | js.Array[_]] = js.undefined
-  var include: js.UndefOr[String | js.Any | js.Array[_]] = js.undefined
-  var order: js.UndefOr[String] = js.undefined
-  var skip: js.UndefOr[Double] = js.undefined
-  var where: js.UndefOr[js.Any] = js.undefined
+  var fields: js.UndefOr[String | js.Any | js.Array[_]] = js.native
+  var include: js.UndefOr[String | js.Any | js.Array[_]] = js.native
+  var order: js.UndefOr[String] = js.native
+  var skip: js.UndefOr[Double] = js.native
+  var where: js.UndefOr[js.Any] = js.native
 }
 
 object AnonOrder {
   @scala.inline
-  def apply(
-    fields: String | js.Any | js.Array[_] = null,
-    include: String | js.Any | js.Array[_] = null,
-    order: String = null,
-    skip: Int | Double = null,
-    where: js.Any = null
-  ): AnonOrder = {
+  def apply(): AnonOrder = {
     val __obj = js.Dynamic.literal()
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
-    if (skip != null) __obj.updateDynamic("skip")(skip.asInstanceOf[js.Any])
-    if (where != null) __obj.updateDynamic("where")(where.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonOrder]
   }
+  @scala.inline
+  implicit class AnonOrderOps[Self <: AnonOrder] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFields(value: String | js.Any | js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInclude(value: String | js.Any | js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkip(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhere(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhere: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

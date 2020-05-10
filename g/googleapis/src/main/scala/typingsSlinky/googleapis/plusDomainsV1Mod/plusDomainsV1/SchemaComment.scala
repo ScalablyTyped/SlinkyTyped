@@ -61,32 +61,149 @@ trait SchemaComment extends js.Object {
 
 object SchemaComment {
   @scala.inline
-  def apply(
-    actor: AnonVerification = null,
-    etag: String = null,
-    id: String = null,
-    inReplyTo: js.Array[AnonIdUrl] = null,
-    kind: String = null,
-    `object`: AnonObjectType = null,
-    plusoners: AnonTotalItemsNumber = null,
-    published: String = null,
-    selfLink: String = null,
-    updated: String = null,
-    verb: String = null
-  ): SchemaComment = {
+  def apply(): SchemaComment = {
     val __obj = js.Dynamic.literal()
-    if (actor != null) __obj.updateDynamic("actor")(actor.asInstanceOf[js.Any])
-    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (inReplyTo != null) __obj.updateDynamic("inReplyTo")(inReplyTo.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (`object` != null) __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
-    if (plusoners != null) __obj.updateDynamic("plusoners")(plusoners.asInstanceOf[js.Any])
-    if (published != null) __obj.updateDynamic("published")(published.asInstanceOf[js.Any])
-    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
-    if (updated != null) __obj.updateDynamic("updated")(updated.asInstanceOf[js.Any])
-    if (verb != null) __obj.updateDynamic("verb")(verb.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaComment]
   }
+  @scala.inline
+  implicit class SchemaCommentOps[Self <: SchemaComment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActor(value: AnonVerification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEtag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEtag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInReplyTo(value: js.Array[AnonIdUrl]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inReplyTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInReplyTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inReplyTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObject(value: AnonObjectType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlusoners(value: AnonTotalItemsNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plusoners")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlusoners: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plusoners")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublished(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("published")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublished: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("published")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelfLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelfLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdated(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerb(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verb")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

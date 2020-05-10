@@ -13,12 +13,10 @@ trait LinkPathOrient extends js.Object
 
 object LinkPathOrient {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def horizontal: typingsSlinky.vegaTypings.vegaTypingsStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.vegaTypings.vegaTypingsStrings.horizontal = this.cast("horizontal")
+  def radial: typingsSlinky.vegaTypings.vegaTypingsStrings.radial = "radial".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.radial]
   @scala.inline
-  def radial: typingsSlinky.vegaTypings.vegaTypingsStrings.radial = this.cast("radial")
-  @scala.inline
-  def vertical: typingsSlinky.vegaTypings.vegaTypingsStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.vegaTypings.vegaTypingsStrings.vertical = "vertical".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.vertical]
 }
 

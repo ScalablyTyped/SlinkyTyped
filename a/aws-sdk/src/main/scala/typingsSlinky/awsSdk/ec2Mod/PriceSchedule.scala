@@ -26,18 +26,65 @@ trait PriceSchedule extends js.Object {
 
 object PriceSchedule {
   @scala.inline
-  def apply(
-    Active: js.UndefOr[scala.Boolean] = js.undefined,
-    CurrencyCode: CurrencyCodeValues = null,
-    Price: Int | scala.Double = null,
-    Term: Int | scala.Double = null
-  ): PriceSchedule = {
+  def apply(): PriceSchedule = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(Active)) __obj.updateDynamic("Active")(Active.asInstanceOf[js.Any])
-    if (CurrencyCode != null) __obj.updateDynamic("CurrencyCode")(CurrencyCode.asInstanceOf[js.Any])
-    if (Price != null) __obj.updateDynamic("Price")(Price.asInstanceOf[js.Any])
-    if (Term != null) __obj.updateDynamic("Term")(Term.asInstanceOf[js.Any])
     __obj.asInstanceOf[PriceSchedule]
   }
+  @scala.inline
+  implicit class PriceScheduleOps[Self <: PriceSchedule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrencyCode(value: CurrencyCodeValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrencyCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrice(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Price")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Price")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerm(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Term")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Term")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

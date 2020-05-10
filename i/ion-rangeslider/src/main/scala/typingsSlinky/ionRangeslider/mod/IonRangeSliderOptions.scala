@@ -10,190 +10,638 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IonRangeSliderOptions extends js.Object {
      // Locks slider and makes it inactive. Input is disabled too. Invisible to forms [Default: false]
-  var block: js.UndefOr[Boolean] = js.undefined
+  var block: js.UndefOr[Boolean] = js.native
       // Special postfix, used only for maximum value. Will be showed after handle will reach maximum right position. For example **0 — 100+** [Default: ]
-  var decorate_both: js.UndefOr[Boolean] = js.undefined
+  var decorate_both: js.UndefOr[Boolean] = js.native
       // Separator for **double** values in input value property. `<input value="25;42"> [Default:  ; ]
-  var disable: js.UndefOr[Boolean] = js.undefined
+  var disable: js.UndefOr[Boolean] = js.native
       // Set minimum maximum between sliders. Only for **double** type [Default: -]
-  var drag_interval: js.UndefOr[Boolean] = js.undefined
+  var drag_interval: js.UndefOr[Boolean] = js.native
      // Locks slider and makes it inactive. Input is NOT disabled. Can be send with forms [Default: false]
-  var extra_classes: js.UndefOr[String] = js.undefined
+  var extra_classes: js.UndefOr[String] = js.native
    // Set up your own prettify function. Can be anything. For example, you can set up unix time as slider values and than transform them to cool looking dates [Default: null]
-  var force_edges: js.UndefOr[Boolean] = js.undefined
+  var force_edges: js.UndefOr[Boolean] = js.native
       // Set slider maximum value [Default: 100]
-  var from: js.UndefOr[Double] = js.undefined
+  var from: js.UndefOr[Double] = js.native
        // Set up your own array of possible slider values. They could be numbers or strings. If the values array is set up, min, max and step param, can no longer be changed [Default: []]
-  var from_fixed: js.UndefOr[Boolean] = js.undefined
+  var from_fixed: js.UndefOr[Boolean] = js.native
       // Set minimum limit for left (or single) handle [Default: min]
-  var from_max: js.UndefOr[Double] = js.undefined
+  var from_max: js.UndefOr[Double] = js.native
      // Fix position of left (or single) handle [Default: false]
-  var from_min: js.UndefOr[Double] = js.undefined
+  var from_min: js.UndefOr[Double] = js.native
       // Set maximum limit for left (or single) handle [Default: max]
-  var from_shadow: js.UndefOr[Boolean] = js.undefined
+  var from_shadow: js.UndefOr[Boolean] = js.native
      // Activates keyboard controls. Move left: &larr;, &darr;, A, S. Move right: &rarr;, &uarr;, W, D. [Default: true]
-  var grid: js.UndefOr[Boolean] = js.undefined
+  var grid: js.UndefOr[Boolean] = js.native
      // Enables grid of values above the slider [Default: true]
-  var grid_margin: js.UndefOr[Boolean] = js.undefined
+  var grid_margin: js.UndefOr[Boolean] = js.native
      // Set left and right grid gaps [Default: true]
-  var grid_num: js.UndefOr[Double] = js.undefined
+  var grid_num: js.UndefOr[Double] = js.native
       // Number of grid units [Default: 4]
-  var grid_snap: js.UndefOr[Boolean] = js.undefined
+  var grid_snap: js.UndefOr[Boolean] = js.native
      // Hides **min** and **max** labels [Default: false]
-  var hide_from_to: js.UndefOr[Boolean] = js.undefined
+  var hide_from_to: js.UndefOr[Boolean] = js.native
      // Snap grid to sliders step (step param). If activated, grid_num will not be used. Max steps = 50 [Default: false]
-  var hide_min_max: js.UndefOr[Boolean] = js.undefined
+  var hide_min_max: js.UndefOr[Boolean] = js.native
       // Set your own separator for close values. Used for **double** type. Default: **10 — 100**. Or you may set: **10 to 100, 10 + 100, 10 &rarr; 100** etc. [Default:  - ]
-  var input_values_separator: js.UndefOr[String] = js.undefined
+  var input_values_separator: js.UndefOr[String] = js.native
      // Sliders handles and tooltips will be always inside it's container [Default: false]
-  var keyboard: js.UndefOr[Boolean] = js.undefined
+  var keyboard: js.UndefOr[Boolean] = js.native
       // Set slider minimum value [Default: 10]
-  var max: js.UndefOr[Double] = js.undefined
+  var max: js.UndefOr[Double] = js.native
       // Set minimum diapason between sliders. Only for **double** type [Default: -]
-  var max_interval: js.UndefOr[Double] = js.undefined
+  var max_interval: js.UndefOr[Double] = js.native
       // Set postfix for values. Will be set up right after the number: 100**k** [Default: ]
-  var max_postfix: js.UndefOr[String] = js.undefined
+  var max_postfix: js.UndefOr[String] = js.native
       // Choose slider type, could be `single` - for one handle, or `double` for two handles [Default: single]
-  var min: js.UndefOr[Double] = js.undefined
+  var min: js.UndefOr[Double] = js.native
       // Set sliders step. Always > 0. Could be fractional [Default: 1]
-  var min_interval: js.UndefOr[Double] = js.undefined
+  var min_interval: js.UndefOr[Double] = js.native
    // Callback. Is called on slider start. Gets all slider data as a 1st attribute [Default: null]
-  var onChange: js.UndefOr[js.Function1[/* obj */ IonRangeSliderEvent, Unit]] = js.undefined
+  var onChange: js.UndefOr[js.Function1[/* obj */ IonRangeSliderEvent, Unit]] = js.native
    // Callback. IS called on each values change. Gets all slider data as a 1st attribute [Default: null]
-  var onFinish: js.UndefOr[js.Function1[/* obj */ IonRangeSliderEvent, Unit]] = js.undefined
+  var onFinish: js.UndefOr[js.Function1[/* obj */ IonRangeSliderEvent, Unit]] = js.native
          // Scope for callbacks. Pass any object [Default: null]
-  var onStart: js.UndefOr[js.Function1[/* obj */ IonRangeSliderEvent, Unit]] = js.undefined
+  var onStart: js.UndefOr[js.Function1[/* obj */ IonRangeSliderEvent, Unit]] = js.native
    // Callback. Is called when user releases handle. Gets all slider data as a 1st attribute [Default: null]
-  var onUpdate: js.UndefOr[js.Function1[/* obj */ IonRangeSliderEvent, Unit]] = js.undefined
+  var onUpdate: js.UndefOr[js.Function1[/* obj */ IonRangeSliderEvent, Unit]] = js.native
       // Set prefix for values. Will be set up right before the number: **$**100 [Default: ]
-  var postfix: js.UndefOr[String] = js.undefined
+  var postfix: js.UndefOr[String] = js.native
      // Hides **from** and **to** labels [Default: false]
-  var prefix: js.UndefOr[String] = js.undefined
+  var prefix: js.UndefOr[String] = js.native
       // Set up your own separator for long numbers: 10000000 &rarr; 10,000,000 etc. [Default:  ]
-  var prettify: js.UndefOr[js.Function1[/* num */ Double, String]] = js.undefined
+  var prettify: js.UndefOr[js.Function1[/* num */ Double, String]] = js.native
      // Highlight the right handle [Default: false]
-  var prettify_enabled: js.UndefOr[Boolean] = js.undefined
+  var prettify_enabled: js.UndefOr[Boolean] = js.native
      // Improve readability of long numbers: 10000000 &rarr; 10 000 000 [Default: true]
-  var prettify_separator: js.UndefOr[String] = js.undefined
+  var prettify_separator: js.UndefOr[String] = js.native
       // Traverse extra CSS-classes to sliders container [Default: —]
-  var scope: js.UndefOr[js.Any] = js.undefined
-  var skin: js.UndefOr[flat | big | modern | round | sharp | square] = js.undefined
+  var scope: js.UndefOr[js.Any] = js.native
+  var skin: js.UndefOr[flat | big | modern | round | sharp | square] = js.native
       // Set start position for right handle [Default: max]
-  var step: js.UndefOr[Double] = js.undefined
+  var step: js.UndefOr[Double] = js.native
       // Set start position for left handle (or for single handle) [Default: min]
-  var to: js.UndefOr[Double] = js.undefined
+  var to: js.UndefOr[Double] = js.native
      // Highlight the limits for left handle [Default: false]
-  var to_fixed: js.UndefOr[Boolean] = js.undefined
+  var to_fixed: js.UndefOr[Boolean] = js.native
       // Set minimum limit for right handle [Default: min]
-  var to_max: js.UndefOr[Double] = js.undefined
+  var to_max: js.UndefOr[Double] = js.native
      // Fix position of right handle [Default: false]
-  var to_min: js.UndefOr[Double] = js.undefined
+  var to_min: js.UndefOr[Double] = js.native
       // Set maximum limit for right handle [Default: max]
-  var to_shadow: js.UndefOr[Boolean] = js.undefined
+  var to_shadow: js.UndefOr[Boolean] = js.native
    // Set slider theme [Default: flat]
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
      // Allow user to drag whole range. Only for **double** type [Default: false]
-  var values: js.UndefOr[js.Array[_]] = js.undefined
+  var values: js.UndefOr[js.Array[_]] = js.native
      // Used for **double** type and only if prefix or postfix was set up. Determine how to decorate close values. For example: **$10k — $100k** or **$10 — 100k** [Default: true]
-  var values_separator: js.UndefOr[String] = js.undefined
+  var values_separator: js.UndefOr[String] = js.native
 }
 
 object IonRangeSliderOptions {
   @scala.inline
-  def apply(
-    block: js.UndefOr[Boolean] = js.undefined,
-    decorate_both: js.UndefOr[Boolean] = js.undefined,
-    disable: js.UndefOr[Boolean] = js.undefined,
-    drag_interval: js.UndefOr[Boolean] = js.undefined,
-    extra_classes: String = null,
-    force_edges: js.UndefOr[Boolean] = js.undefined,
-    from: Int | Double = null,
-    from_fixed: js.UndefOr[Boolean] = js.undefined,
-    from_max: Int | Double = null,
-    from_min: Int | Double = null,
-    from_shadow: js.UndefOr[Boolean] = js.undefined,
-    grid: js.UndefOr[Boolean] = js.undefined,
-    grid_margin: js.UndefOr[Boolean] = js.undefined,
-    grid_num: Int | Double = null,
-    grid_snap: js.UndefOr[Boolean] = js.undefined,
-    hide_from_to: js.UndefOr[Boolean] = js.undefined,
-    hide_min_max: js.UndefOr[Boolean] = js.undefined,
-    input_values_separator: String = null,
-    keyboard: js.UndefOr[Boolean] = js.undefined,
-    max: Int | Double = null,
-    max_interval: Int | Double = null,
-    max_postfix: String = null,
-    min: Int | Double = null,
-    min_interval: Int | Double = null,
-    onChange: /* obj */ IonRangeSliderEvent => Unit = null,
-    onFinish: /* obj */ IonRangeSliderEvent => Unit = null,
-    onStart: /* obj */ IonRangeSliderEvent => Unit = null,
-    onUpdate: /* obj */ IonRangeSliderEvent => Unit = null,
-    postfix: String = null,
-    prefix: String = null,
-    prettify: /* num */ Double => String = null,
-    prettify_enabled: js.UndefOr[Boolean] = js.undefined,
-    prettify_separator: String = null,
-    scope: js.Any = null,
-    skin: flat | big | modern | round | sharp | square = null,
-    step: Int | Double = null,
-    to: Int | Double = null,
-    to_fixed: js.UndefOr[Boolean] = js.undefined,
-    to_max: Int | Double = null,
-    to_min: Int | Double = null,
-    to_shadow: js.UndefOr[Boolean] = js.undefined,
-    `type`: String = null,
-    values: js.Array[_] = null,
-    values_separator: String = null
-  ): IonRangeSliderOptions = {
+  def apply(): IonRangeSliderOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(block)) __obj.updateDynamic("block")(block.asInstanceOf[js.Any])
-    if (!js.isUndefined(decorate_both)) __obj.updateDynamic("decorate_both")(decorate_both.asInstanceOf[js.Any])
-    if (!js.isUndefined(disable)) __obj.updateDynamic("disable")(disable.asInstanceOf[js.Any])
-    if (!js.isUndefined(drag_interval)) __obj.updateDynamic("drag_interval")(drag_interval.asInstanceOf[js.Any])
-    if (extra_classes != null) __obj.updateDynamic("extra_classes")(extra_classes.asInstanceOf[js.Any])
-    if (!js.isUndefined(force_edges)) __obj.updateDynamic("force_edges")(force_edges.asInstanceOf[js.Any])
-    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
-    if (!js.isUndefined(from_fixed)) __obj.updateDynamic("from_fixed")(from_fixed.asInstanceOf[js.Any])
-    if (from_max != null) __obj.updateDynamic("from_max")(from_max.asInstanceOf[js.Any])
-    if (from_min != null) __obj.updateDynamic("from_min")(from_min.asInstanceOf[js.Any])
-    if (!js.isUndefined(from_shadow)) __obj.updateDynamic("from_shadow")(from_shadow.asInstanceOf[js.Any])
-    if (!js.isUndefined(grid)) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
-    if (!js.isUndefined(grid_margin)) __obj.updateDynamic("grid_margin")(grid_margin.asInstanceOf[js.Any])
-    if (grid_num != null) __obj.updateDynamic("grid_num")(grid_num.asInstanceOf[js.Any])
-    if (!js.isUndefined(grid_snap)) __obj.updateDynamic("grid_snap")(grid_snap.asInstanceOf[js.Any])
-    if (!js.isUndefined(hide_from_to)) __obj.updateDynamic("hide_from_to")(hide_from_to.asInstanceOf[js.Any])
-    if (!js.isUndefined(hide_min_max)) __obj.updateDynamic("hide_min_max")(hide_min_max.asInstanceOf[js.Any])
-    if (input_values_separator != null) __obj.updateDynamic("input_values_separator")(input_values_separator.asInstanceOf[js.Any])
-    if (!js.isUndefined(keyboard)) __obj.updateDynamic("keyboard")(keyboard.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (max_interval != null) __obj.updateDynamic("max_interval")(max_interval.asInstanceOf[js.Any])
-    if (max_postfix != null) __obj.updateDynamic("max_postfix")(max_postfix.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (min_interval != null) __obj.updateDynamic("min_interval")(min_interval.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onFinish != null) __obj.updateDynamic("onFinish")(js.Any.fromFunction1(onFinish))
-    if (onStart != null) __obj.updateDynamic("onStart")(js.Any.fromFunction1(onStart))
-    if (onUpdate != null) __obj.updateDynamic("onUpdate")(js.Any.fromFunction1(onUpdate))
-    if (postfix != null) __obj.updateDynamic("postfix")(postfix.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (prettify != null) __obj.updateDynamic("prettify")(js.Any.fromFunction1(prettify))
-    if (!js.isUndefined(prettify_enabled)) __obj.updateDynamic("prettify_enabled")(prettify_enabled.asInstanceOf[js.Any])
-    if (prettify_separator != null) __obj.updateDynamic("prettify_separator")(prettify_separator.asInstanceOf[js.Any])
-    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
-    if (skin != null) __obj.updateDynamic("skin")(skin.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
-    if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
-    if (!js.isUndefined(to_fixed)) __obj.updateDynamic("to_fixed")(to_fixed.asInstanceOf[js.Any])
-    if (to_max != null) __obj.updateDynamic("to_max")(to_max.asInstanceOf[js.Any])
-    if (to_min != null) __obj.updateDynamic("to_min")(to_min.asInstanceOf[js.Any])
-    if (!js.isUndefined(to_shadow)) __obj.updateDynamic("to_shadow")(to_shadow.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
-    if (values_separator != null) __obj.updateDynamic("values_separator")(values_separator.asInstanceOf[js.Any])
     __obj.asInstanceOf[IonRangeSliderOptions]
   }
+  @scala.inline
+  implicit class IonRangeSliderOptionsOps[Self <: IonRangeSliderOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlock(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("block")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("block")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecorate_both(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decorate_both")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecorate_both: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decorate_both")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrag_interval(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drag_interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrag_interval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drag_interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtra_classes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extra_classes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtra_classes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extra_classes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForce_edges(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("force_edges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForce_edges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("force_edges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrom_fixed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from_fixed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrom_fixed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from_fixed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrom_max(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from_max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrom_max: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from_max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrom_min(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from_min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrom_min: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from_min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrom_shadow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from_shadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrom_shadow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from_shadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrid(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrid_margin(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grid_margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrid_margin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grid_margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrid_num(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grid_num")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrid_num: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grid_num")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrid_snap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grid_snap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrid_snap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grid_snap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHide_from_to(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide_from_to")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHide_from_to: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide_from_to")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHide_min_max(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide_min_max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHide_min_max: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide_min_max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInput_values_separator(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input_values_separator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput_values_separator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input_values_separator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyboard(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyboard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax_interval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax_interval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax_postfix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_postfix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax_postfix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_postfix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin_interval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min_interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin_interval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min_interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: /* obj */ IonRangeSliderEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFinish(value: /* obj */ IonRangeSliderEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFinish")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFinish: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFinish")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnStart(value: /* obj */ IonRangeSliderEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnUpdate(value: /* obj */ IonRangeSliderEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostfix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postfix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostfix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postfix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrettify(value: /* num */ Double => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prettify")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPrettify: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prettify")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrettify_enabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prettify_enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrettify_enabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prettify_enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrettify_separator(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prettify_separator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrettify_separator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prettify_separator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScope(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkin(value: flat | big | modern | round | sharp | square): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStep(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTo(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTo_fixed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("to_fixed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTo_fixed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("to_fixed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTo_max(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("to_max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTo_max: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("to_max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTo_min(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("to_min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTo_min: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("to_min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTo_shadow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("to_shadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTo_shadow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("to_shadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValues(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValues_separator(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values_separator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues_separator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values_separator")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

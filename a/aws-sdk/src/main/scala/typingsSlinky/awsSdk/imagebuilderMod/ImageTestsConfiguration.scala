@@ -18,11 +18,41 @@ trait ImageTestsConfiguration extends js.Object {
 
 object ImageTestsConfiguration {
   @scala.inline
-  def apply(imageTestsEnabled: js.UndefOr[Boolean] = js.undefined, timeoutMinutes: Int | Double = null): ImageTestsConfiguration = {
+  def apply(): ImageTestsConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(imageTestsEnabled)) __obj.updateDynamic("imageTestsEnabled")(imageTestsEnabled.asInstanceOf[js.Any])
-    if (timeoutMinutes != null) __obj.updateDynamic("timeoutMinutes")(timeoutMinutes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageTestsConfiguration]
   }
+  @scala.inline
+  implicit class ImageTestsConfigurationOps[Self <: ImageTestsConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImageTestsEnabled(value: NullableBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageTestsEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageTestsEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageTestsEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeoutMinutes(value: ImageTestsTimeoutMinutes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeoutMinutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutMinutes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

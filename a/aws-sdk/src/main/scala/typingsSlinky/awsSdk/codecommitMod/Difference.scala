@@ -22,12 +22,53 @@ trait Difference extends js.Object {
 
 object Difference {
   @scala.inline
-  def apply(afterBlob: BlobMetadata = null, beforeBlob: BlobMetadata = null, changeType: ChangeTypeEnum = null): Difference = {
+  def apply(): Difference = {
     val __obj = js.Dynamic.literal()
-    if (afterBlob != null) __obj.updateDynamic("afterBlob")(afterBlob.asInstanceOf[js.Any])
-    if (beforeBlob != null) __obj.updateDynamic("beforeBlob")(beforeBlob.asInstanceOf[js.Any])
-    if (changeType != null) __obj.updateDynamic("changeType")(changeType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Difference]
   }
+  @scala.inline
+  implicit class DifferenceOps[Self <: Difference] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfterBlob(value: BlobMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterBlob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAfterBlob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterBlob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeBlob(value: BlobMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeBlob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeforeBlob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeBlob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChangeType(value: ChangeTypeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChangeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 /**
   * See: {@link https://docs.mendix.com/refguide7/module-security relevant section in reference guide}
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -35,8 +35,8 @@ class ModuleSecurity protected () extends ModelUnit {
   var model_FModuleSecurity: IModel = js.native
   @JSName("moduleRoles")
   val moduleRoles_FModuleSecurity: IList[IModuleRole] = js.native
-  def containerAsModule(): Module = js.native
-  def moduleRoles(): IList[ModuleRole] = js.native
+  def containerAsModule: Module = js.native
+  def moduleRoles: IList[ModuleRole] = js.native
 }
 
 /* static members */

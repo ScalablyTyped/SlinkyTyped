@@ -1,6 +1,9 @@
 package typingsSlinky.firebaseLogger
 
+import typingsSlinky.firebaseLogger.loggerMod.LogCallback
 import typingsSlinky.firebaseLogger.loggerMod.LogLevel
+import typingsSlinky.firebaseLogger.loggerMod.LogLevelString
+import typingsSlinky.firebaseLogger.loggerMod.LogOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,6 +24,11 @@ object mod extends js.Object {
   }
   
   def setLogLevel(level: LogLevel): Unit = js.native
+  def setLogLevel(level: LogLevelString): Unit = js.native
+  def setUserLogHandler(): Unit = js.native
+  def setUserLogHandler(logCallback: Null, options: LogOptions): Unit = js.native
+  def setUserLogHandler(logCallback: LogCallback): Unit = js.native
+  def setUserLogHandler(logCallback: LogCallback, options: LogOptions): Unit = js.native
   @js.native
   object LogLevel extends js.Object {
     /* 0 */ val DEBUG: typingsSlinky.firebaseLogger.loggerMod.LogLevel.DEBUG with Double = js.native

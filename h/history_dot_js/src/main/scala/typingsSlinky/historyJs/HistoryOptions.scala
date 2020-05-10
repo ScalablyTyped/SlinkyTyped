@@ -4,45 +4,153 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HistoryOptions extends js.Object {
-  var busyDelay: js.UndefOr[Double] = js.undefined
-  var debug: js.UndefOr[Boolean] = js.undefined
-  var delayInit: js.UndefOr[Double] = js.undefined
-  var disableSuid: js.UndefOr[Boolean] = js.undefined
-  var doubleCheckInterval: js.UndefOr[Double] = js.undefined
-  var hashChangeInterval: js.UndefOr[Double] = js.undefined
-  var html4Mode: js.UndefOr[Boolean] = js.undefined
-  var initialTitle: js.UndefOr[String] = js.undefined
-  var safariPollInterval: js.UndefOr[Double] = js.undefined
-  var storeInterval: js.UndefOr[Double] = js.undefined
+  var busyDelay: js.UndefOr[Double] = js.native
+  var debug: js.UndefOr[Boolean] = js.native
+  var delayInit: js.UndefOr[Double] = js.native
+  var disableSuid: js.UndefOr[Boolean] = js.native
+  var doubleCheckInterval: js.UndefOr[Double] = js.native
+  var hashChangeInterval: js.UndefOr[Double] = js.native
+  var html4Mode: js.UndefOr[Boolean] = js.native
+  var initialTitle: js.UndefOr[String] = js.native
+  var safariPollInterval: js.UndefOr[Double] = js.native
+  var storeInterval: js.UndefOr[Double] = js.native
 }
 
 object HistoryOptions {
   @scala.inline
-  def apply(
-    busyDelay: Int | Double = null,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    delayInit: Int | Double = null,
-    disableSuid: js.UndefOr[Boolean] = js.undefined,
-    doubleCheckInterval: Int | Double = null,
-    hashChangeInterval: Int | Double = null,
-    html4Mode: js.UndefOr[Boolean] = js.undefined,
-    initialTitle: String = null,
-    safariPollInterval: Int | Double = null,
-    storeInterval: Int | Double = null
-  ): HistoryOptions = {
+  def apply(): HistoryOptions = {
     val __obj = js.Dynamic.literal()
-    if (busyDelay != null) __obj.updateDynamic("busyDelay")(busyDelay.asInstanceOf[js.Any])
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (delayInit != null) __obj.updateDynamic("delayInit")(delayInit.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableSuid)) __obj.updateDynamic("disableSuid")(disableSuid.asInstanceOf[js.Any])
-    if (doubleCheckInterval != null) __obj.updateDynamic("doubleCheckInterval")(doubleCheckInterval.asInstanceOf[js.Any])
-    if (hashChangeInterval != null) __obj.updateDynamic("hashChangeInterval")(hashChangeInterval.asInstanceOf[js.Any])
-    if (!js.isUndefined(html4Mode)) __obj.updateDynamic("html4Mode")(html4Mode.asInstanceOf[js.Any])
-    if (initialTitle != null) __obj.updateDynamic("initialTitle")(initialTitle.asInstanceOf[js.Any])
-    if (safariPollInterval != null) __obj.updateDynamic("safariPollInterval")(safariPollInterval.asInstanceOf[js.Any])
-    if (storeInterval != null) __obj.updateDynamic("storeInterval")(storeInterval.asInstanceOf[js.Any])
     __obj.asInstanceOf[HistoryOptions]
   }
+  @scala.inline
+  implicit class HistoryOptionsOps[Self <: HistoryOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBusyDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("busyDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBusyDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("busyDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebug: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelayInit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delayInit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelayInit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delayInit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableSuid(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableSuid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableSuid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableSuid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoubleCheckInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleCheckInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDoubleCheckInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleCheckInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHashChangeInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashChangeInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHashChangeInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashChangeInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtml4Mode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html4Mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtml4Mode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html4Mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSafariPollInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("safariPollInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSafariPollInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("safariPollInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoreInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoreInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeInterval")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

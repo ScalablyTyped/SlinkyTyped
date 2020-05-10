@@ -5,30 +5,28 @@ import typingsSlinky.passportAzureAd.commonMod.IBaseStrategyOption
 import typingsSlinky.passportAzureAd.passportAzureAdStrings.`code id_token`
 import typingsSlinky.passportAzureAd.passportAzureAdStrings.`id_token code`
 import typingsSlinky.passportAzureAd.passportAzureAdStrings.code
-import typingsSlinky.passportAzureAd.passportAzureAdStrings.error
 import typingsSlinky.passportAzureAd.passportAzureAdStrings.form_post
 import typingsSlinky.passportAzureAd.passportAzureAdStrings.id_token
-import typingsSlinky.passportAzureAd.passportAzureAdStrings.info
 import typingsSlinky.passportAzureAd.passportAzureAdStrings.query
-import typingsSlinky.passportAzureAd.passportAzureAdStrings.warn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IOIDCStrategyOption extends IBaseStrategyOption {
-  var allowHttpForRedirectUrl: js.UndefOr[Boolean] = js.undefined
-  var clientSecret: js.UndefOr[String] = js.undefined
-  var cookieEncryptionKeys: js.UndefOr[js.Array[AnonIv]] = js.undefined
-  var cookieSameSite: js.UndefOr[Boolean] = js.undefined
-  var nonceLifetime: js.UndefOr[Double] = js.undefined
-  var nonceMaxAmount: js.UndefOr[Double] = js.undefined
-  var privatePEMKey: js.UndefOr[String] = js.undefined
-  var redirectUrl: String
-  var responseMode: query | form_post
-  var responseType: code | (`code id_token`) | (`id_token code`) | id_token
-  var scope: js.UndefOr[String | js.Array[String]] = js.undefined
-  var thumbprint: js.UndefOr[String] = js.undefined
-  var useCookieInsteadOfSession: js.UndefOr[Boolean] = js.undefined
+  var allowHttpForRedirectUrl: js.UndefOr[Boolean] = js.native
+  var clientSecret: js.UndefOr[String] = js.native
+  var cookieEncryptionKeys: js.UndefOr[js.Array[AnonIv]] = js.native
+  var cookieSameSite: js.UndefOr[Boolean] = js.native
+  var nonceLifetime: js.UndefOr[Double] = js.native
+  var nonceMaxAmount: js.UndefOr[Double] = js.native
+  var privatePEMKey: js.UndefOr[String] = js.native
+  var redirectUrl: String = js.native
+  var responseMode: query | form_post = js.native
+  var responseType: code | (`code id_token`) | (`id_token code`) | id_token = js.native
+  var scope: js.UndefOr[String | js.Array[String]] = js.native
+  var thumbprint: js.UndefOr[String] = js.native
+  var useCookieInsteadOfSession: js.UndefOr[Boolean] = js.native
 }
 
 object IOIDCStrategyOption {
@@ -38,42 +36,156 @@ object IOIDCStrategyOption {
     identityMetadata: String,
     redirectUrl: String,
     responseMode: query | form_post,
-    responseType: code | (`code id_token`) | (`id_token code`) | id_token,
-    allowHttpForRedirectUrl: js.UndefOr[Boolean] = js.undefined,
-    clientSecret: String = null,
-    clockSkew: Int | Double = null,
-    cookieEncryptionKeys: js.Array[AnonIv] = null,
-    cookieSameSite: js.UndefOr[Boolean] = js.undefined,
-    isB2C: js.UndefOr[Boolean] = js.undefined,
-    issuer: String | js.Array[String] = null,
-    loggingLevel: info | warn | error = null,
-    loggingNoPII: js.UndefOr[Boolean] = js.undefined,
-    nonceLifetime: Int | Double = null,
-    nonceMaxAmount: Int | Double = null,
-    privatePEMKey: String = null,
-    scope: String | js.Array[String] = null,
-    thumbprint: String = null,
-    useCookieInsteadOfSession: js.UndefOr[Boolean] = js.undefined,
-    validateIssuer: js.UndefOr[Boolean] = js.undefined
+    responseType: code | (`code id_token`) | (`id_token code`) | id_token
   ): IOIDCStrategyOption = {
     val __obj = js.Dynamic.literal(clientID = clientID.asInstanceOf[js.Any], identityMetadata = identityMetadata.asInstanceOf[js.Any], redirectUrl = redirectUrl.asInstanceOf[js.Any], responseMode = responseMode.asInstanceOf[js.Any], responseType = responseType.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowHttpForRedirectUrl)) __obj.updateDynamic("allowHttpForRedirectUrl")(allowHttpForRedirectUrl.asInstanceOf[js.Any])
-    if (clientSecret != null) __obj.updateDynamic("clientSecret")(clientSecret.asInstanceOf[js.Any])
-    if (clockSkew != null) __obj.updateDynamic("clockSkew")(clockSkew.asInstanceOf[js.Any])
-    if (cookieEncryptionKeys != null) __obj.updateDynamic("cookieEncryptionKeys")(cookieEncryptionKeys.asInstanceOf[js.Any])
-    if (!js.isUndefined(cookieSameSite)) __obj.updateDynamic("cookieSameSite")(cookieSameSite.asInstanceOf[js.Any])
-    if (!js.isUndefined(isB2C)) __obj.updateDynamic("isB2C")(isB2C.asInstanceOf[js.Any])
-    if (issuer != null) __obj.updateDynamic("issuer")(issuer.asInstanceOf[js.Any])
-    if (loggingLevel != null) __obj.updateDynamic("loggingLevel")(loggingLevel.asInstanceOf[js.Any])
-    if (!js.isUndefined(loggingNoPII)) __obj.updateDynamic("loggingNoPII")(loggingNoPII.asInstanceOf[js.Any])
-    if (nonceLifetime != null) __obj.updateDynamic("nonceLifetime")(nonceLifetime.asInstanceOf[js.Any])
-    if (nonceMaxAmount != null) __obj.updateDynamic("nonceMaxAmount")(nonceMaxAmount.asInstanceOf[js.Any])
-    if (privatePEMKey != null) __obj.updateDynamic("privatePEMKey")(privatePEMKey.asInstanceOf[js.Any])
-    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
-    if (thumbprint != null) __obj.updateDynamic("thumbprint")(thumbprint.asInstanceOf[js.Any])
-    if (!js.isUndefined(useCookieInsteadOfSession)) __obj.updateDynamic("useCookieInsteadOfSession")(useCookieInsteadOfSession.asInstanceOf[js.Any])
-    if (!js.isUndefined(validateIssuer)) __obj.updateDynamic("validateIssuer")(validateIssuer.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOIDCStrategyOption]
   }
+  @scala.inline
+  implicit class IOIDCStrategyOptionOps[Self <: IOIDCStrategyOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRedirectUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResponseMode(value: query | form_post): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResponseType(value: code | (`code id_token`) | (`id_token code`) | id_token): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllowHttpForRedirectUrl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHttpForRedirectUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowHttpForRedirectUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHttpForRedirectUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientSecret(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSecret")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientSecret: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSecret")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCookieEncryptionKeys(value: js.Array[AnonIv]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieEncryptionKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCookieEncryptionKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieEncryptionKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCookieSameSite(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieSameSite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCookieSameSite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieSameSite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNonceLifetime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonceLifetime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNonceLifetime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonceLifetime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNonceMaxAmount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonceMaxAmount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNonceMaxAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonceMaxAmount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivatePEMKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privatePEMKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivatePEMKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privatePEMKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScope(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThumbprint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbprint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThumbprint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbprint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseCookieInsteadOfSession(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useCookieInsteadOfSession")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseCookieInsteadOfSession: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useCookieInsteadOfSession")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

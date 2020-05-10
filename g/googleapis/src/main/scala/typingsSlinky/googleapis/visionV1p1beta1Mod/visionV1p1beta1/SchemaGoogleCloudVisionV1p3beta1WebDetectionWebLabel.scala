@@ -23,11 +23,41 @@ trait SchemaGoogleCloudVisionV1p3beta1WebDetectionWebLabel extends js.Object {
 
 object SchemaGoogleCloudVisionV1p3beta1WebDetectionWebLabel {
   @scala.inline
-  def apply(label: String = null, languageCode: String = null): SchemaGoogleCloudVisionV1p3beta1WebDetectionWebLabel = {
+  def apply(): SchemaGoogleCloudVisionV1p3beta1WebDetectionWebLabel = {
     val __obj = js.Dynamic.literal()
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p3beta1WebDetectionWebLabel]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVisionV1p3beta1WebDetectionWebLabelOps[Self <: SchemaGoogleCloudVisionV1p3beta1WebDetectionWebLabel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguageCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

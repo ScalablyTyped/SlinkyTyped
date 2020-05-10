@@ -1,9 +1,8 @@
 package typingsSlinky.reactSelect.groupMod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("react-select/src/components/Group", "Group")
 @js.native
 class Group protected ()
-  extends Component[GroupProps[js.Any], ComponentState, js.Any] {
+  extends Component[GroupProps[js.Any], js.Object, js.Any] {
   def this(props: GroupProps[_]) = this()
   def this(props: GroupProps[_], context: js.Any) = this()
 }
@@ -19,5 +18,5 @@ class Group protected ()
 @JSImport("react-select/src/components/Group", "Group")
 @js.native
 object Group
-  extends TopLevel[ComponentType[GroupProps[js.Any]]]
+  extends TopLevel[ReactComponentClass[GroupProps[js.Any]]]
 

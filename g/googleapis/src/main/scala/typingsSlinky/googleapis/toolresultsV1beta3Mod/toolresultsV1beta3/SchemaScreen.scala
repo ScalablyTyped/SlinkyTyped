@@ -26,13 +26,65 @@ trait SchemaScreen extends js.Object {
 
 object SchemaScreen {
   @scala.inline
-  def apply(fileReference: String = null, locale: String = null, model: String = null, version: String = null): SchemaScreen = {
+  def apply(): SchemaScreen = {
     val __obj = js.Dynamic.literal()
-    if (fileReference != null) __obj.updateDynamic("fileReference")(fileReference.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaScreen]
   }
+  @scala.inline
+  implicit class SchemaScreenOps[Self <: SchemaScreen] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileReference(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

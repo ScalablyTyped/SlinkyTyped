@@ -9,25 +9,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UnmarshalledStartingPosition extends StartingPosition {
   /**
     * _Timestamp shape
     */
   @JSName("Timestamp")
-  var Timestamp_UnmarshalledStartingPosition: js.UndefOr[js.Date] = js.undefined
+  var Timestamp_UnmarshalledStartingPosition: js.UndefOr[js.Date] = js.native
 }
 
 object UnmarshalledStartingPosition {
   @scala.inline
-  def apply(
-    Type: AT_SEQUENCE_NUMBER | AFTER_SEQUENCE_NUMBER | TRIM_HORIZON | LATEST | AT_TIMESTAMP | String,
-    SequenceNumber: String = null,
-    Timestamp: js.Date = null
-  ): UnmarshalledStartingPosition = {
+  def apply(Type: AT_SEQUENCE_NUMBER | AFTER_SEQUENCE_NUMBER | TRIM_HORIZON | LATEST | AT_TIMESTAMP | String): UnmarshalledStartingPosition = {
     val __obj = js.Dynamic.literal(Type = Type.asInstanceOf[js.Any])
-    if (SequenceNumber != null) __obj.updateDynamic("SequenceNumber")(SequenceNumber.asInstanceOf[js.Any])
-    if (Timestamp != null) __obj.updateDynamic("Timestamp")(Timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledStartingPosition]
   }
+  @scala.inline
+  implicit class UnmarshalledStartingPositionOps[Self <: UnmarshalledStartingPosition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

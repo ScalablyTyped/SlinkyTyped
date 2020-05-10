@@ -30,19 +30,71 @@ trait GetDevicePoolCompatibilityRequest extends js.Object {
 
 object GetDevicePoolCompatibilityRequest {
   @scala.inline
-  def apply(
-    devicePoolArn: AmazonResourceName,
-    appArn: AmazonResourceName = null,
-    configuration: ScheduleRunConfiguration = null,
-    test: ScheduleRunTest = null,
-    testType: TestType = null
-  ): GetDevicePoolCompatibilityRequest = {
+  def apply(devicePoolArn: AmazonResourceName): GetDevicePoolCompatibilityRequest = {
     val __obj = js.Dynamic.literal(devicePoolArn = devicePoolArn.asInstanceOf[js.Any])
-    if (appArn != null) __obj.updateDynamic("appArn")(appArn.asInstanceOf[js.Any])
-    if (configuration != null) __obj.updateDynamic("configuration")(configuration.asInstanceOf[js.Any])
-    if (test != null) __obj.updateDynamic("test")(test.asInstanceOf[js.Any])
-    if (testType != null) __obj.updateDynamic("testType")(testType.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDevicePoolCompatibilityRequest]
   }
+  @scala.inline
+  implicit class GetDevicePoolCompatibilityRequestOps[Self <: GetDevicePoolCompatibilityRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDevicePoolArn(value: AmazonResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devicePoolArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppArn(value: AmazonResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfiguration(value: ScheduleRunConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTest(value: ScheduleRunTest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestType(value: TestType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,26 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IsIntOptions extends MinMaxExtendedOptions {
-  var allow_leading_zeroes: js.UndefOr[Boolean] = js.undefined
+  var allow_leading_zeroes: js.UndefOr[Boolean] = js.native
 }
 
 object IsIntOptions {
   @scala.inline
-  def apply(
-    allow_leading_zeroes: js.UndefOr[Boolean] = js.undefined,
-    gt: Int | Double = null,
-    lt: Int | Double = null,
-    max: Int | Double = null,
-    min: Int | Double = null
-  ): IsIntOptions = {
+  def apply(): IsIntOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allow_leading_zeroes)) __obj.updateDynamic("allow_leading_zeroes")(allow_leading_zeroes.asInstanceOf[js.Any])
-    if (gt != null) __obj.updateDynamic("gt")(gt.asInstanceOf[js.Any])
-    if (lt != null) __obj.updateDynamic("lt")(lt.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
     __obj.asInstanceOf[IsIntOptions]
   }
+  @scala.inline
+  implicit class IsIntOptionsOps[Self <: IsIntOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllow_leading_zeroes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_leading_zeroes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllow_leading_zeroes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_leading_zeroes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

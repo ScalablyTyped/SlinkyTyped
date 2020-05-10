@@ -6,8 +6,5 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.UI.Core.IdleDispatchedHandlerArgs")
 @js.native
-class IdleDispatchedHandlerArgs () extends IIdleDispatchedHandlerArgs {
-  /* CompleteClass */
-  override var isDispatcherIdle: Boolean = js.native
-}
+class IdleDispatchedHandlerArgs () extends IIdleDispatchedHandlerArgs
 

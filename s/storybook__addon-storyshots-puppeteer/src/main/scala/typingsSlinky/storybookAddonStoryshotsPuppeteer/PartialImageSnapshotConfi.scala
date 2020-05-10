@@ -11,48 +11,166 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@storybook/addon-storyshots-puppeteer.@storybook/addon-storyshots-puppeteer/dist/config.ImageSnapshotConfig> */
+@js.native
 trait PartialImageSnapshotConfi extends js.Object {
-  var afterScreenshot: js.UndefOr[js.Function1[/* options */ AnonContext, Unit]] = js.undefined
-  var beforeScreenshot: js.UndefOr[js.Function2[/* page */ Page, /* options */ Options, Unit]] = js.undefined
-  var chromeExecutablePath: js.UndefOr[String] = js.undefined
-  var customizePage: js.UndefOr[js.Function1[/* page */ Page, js.Promise[Unit]]] = js.undefined
-  var getCustomBrowser: js.UndefOr[js.Function0[js.Promise[Browser]]] = js.undefined
-  var getGotoOptions: js.UndefOr[js.Function1[/* options */ Options, DirectNavigationOptions]] = js.undefined
-  var getMatchOptions: js.UndefOr[js.Function1[/* options */ Options, MatchImageSnapshotOptions]] = js.undefined
-  var getScreenshotOptions: js.UndefOr[js.Function1[/* options */ Options, Base64ScreenShotOptions]] = js.undefined
-  var setupTimeout: js.UndefOr[Double] = js.undefined
-  var storybookUrl: js.UndefOr[String] = js.undefined
-  var testTimeout: js.UndefOr[Double] = js.undefined
+  var afterScreenshot: js.UndefOr[js.Function1[/* options */ AnonContext, Unit]] = js.native
+  var beforeScreenshot: js.UndefOr[js.Function2[/* page */ Page, /* options */ Options, Unit]] = js.native
+  var chromeExecutablePath: js.UndefOr[String] = js.native
+  var customizePage: js.UndefOr[js.Function1[/* page */ Page, js.Promise[Unit]]] = js.native
+  var getCustomBrowser: js.UndefOr[js.Function0[js.Promise[Browser]]] = js.native
+  var getGotoOptions: js.UndefOr[js.Function1[/* options */ Options, DirectNavigationOptions]] = js.native
+  var getMatchOptions: js.UndefOr[js.Function1[/* options */ Options, MatchImageSnapshotOptions]] = js.native
+  var getScreenshotOptions: js.UndefOr[js.Function1[/* options */ Options, Base64ScreenShotOptions]] = js.native
+  var setupTimeout: js.UndefOr[Double] = js.native
+  var storybookUrl: js.UndefOr[String] = js.native
+  var testTimeout: js.UndefOr[Double] = js.native
 }
 
 object PartialImageSnapshotConfi {
   @scala.inline
-  def apply(
-    afterScreenshot: /* options */ AnonContext => Unit = null,
-    beforeScreenshot: (/* page */ Page, /* options */ Options) => Unit = null,
-    chromeExecutablePath: String = null,
-    customizePage: /* page */ Page => js.Promise[Unit] = null,
-    getCustomBrowser: () => js.Promise[Browser] = null,
-    getGotoOptions: /* options */ Options => DirectNavigationOptions = null,
-    getMatchOptions: /* options */ Options => MatchImageSnapshotOptions = null,
-    getScreenshotOptions: /* options */ Options => Base64ScreenShotOptions = null,
-    setupTimeout: Int | Double = null,
-    storybookUrl: String = null,
-    testTimeout: Int | Double = null
-  ): PartialImageSnapshotConfi = {
+  def apply(): PartialImageSnapshotConfi = {
     val __obj = js.Dynamic.literal()
-    if (afterScreenshot != null) __obj.updateDynamic("afterScreenshot")(js.Any.fromFunction1(afterScreenshot))
-    if (beforeScreenshot != null) __obj.updateDynamic("beforeScreenshot")(js.Any.fromFunction2(beforeScreenshot))
-    if (chromeExecutablePath != null) __obj.updateDynamic("chromeExecutablePath")(chromeExecutablePath.asInstanceOf[js.Any])
-    if (customizePage != null) __obj.updateDynamic("customizePage")(js.Any.fromFunction1(customizePage))
-    if (getCustomBrowser != null) __obj.updateDynamic("getCustomBrowser")(js.Any.fromFunction0(getCustomBrowser))
-    if (getGotoOptions != null) __obj.updateDynamic("getGotoOptions")(js.Any.fromFunction1(getGotoOptions))
-    if (getMatchOptions != null) __obj.updateDynamic("getMatchOptions")(js.Any.fromFunction1(getMatchOptions))
-    if (getScreenshotOptions != null) __obj.updateDynamic("getScreenshotOptions")(js.Any.fromFunction1(getScreenshotOptions))
-    if (setupTimeout != null) __obj.updateDynamic("setupTimeout")(setupTimeout.asInstanceOf[js.Any])
-    if (storybookUrl != null) __obj.updateDynamic("storybookUrl")(storybookUrl.asInstanceOf[js.Any])
-    if (testTimeout != null) __obj.updateDynamic("testTimeout")(testTimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialImageSnapshotConfi]
   }
+  @scala.inline
+  implicit class PartialImageSnapshotConfiOps[Self <: PartialImageSnapshotConfi] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfterScreenshot(value: /* options */ AnonContext => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterScreenshot")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterScreenshot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterScreenshot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeScreenshot(value: (/* page */ Page, /* options */ Options) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeScreenshot")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeScreenshot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeScreenshot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChromeExecutablePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chromeExecutablePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChromeExecutablePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chromeExecutablePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomizePage(value: /* page */ Page => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customizePage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCustomizePage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customizePage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetCustomBrowser(value: () => js.Promise[Browser]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCustomBrowser")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetCustomBrowser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCustomBrowser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetGotoOptions(value: /* options */ Options => DirectNavigationOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getGotoOptions")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetGotoOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getGotoOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetMatchOptions(value: /* options */ Options => MatchImageSnapshotOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMatchOptions")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetMatchOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMatchOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetScreenshotOptions(value: /* options */ Options => Base64ScreenShotOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScreenshotOptions")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetScreenshotOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScreenshotOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetupTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setupTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetupTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setupTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStorybookUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storybookUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorybookUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storybookUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testTimeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

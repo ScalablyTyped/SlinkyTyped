@@ -14,10 +14,29 @@ trait PredictedItem extends js.Object {
 
 object PredictedItem {
   @scala.inline
-  def apply(itemId: ItemID = null): PredictedItem = {
+  def apply(): PredictedItem = {
     val __obj = js.Dynamic.literal()
-    if (itemId != null) __obj.updateDynamic("itemId")(itemId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PredictedItem]
   }
+  @scala.inline
+  implicit class PredictedItemOps[Self <: PredictedItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItemId(value: ItemID): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

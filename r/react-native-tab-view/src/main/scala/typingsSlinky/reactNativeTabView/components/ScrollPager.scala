@@ -1,15 +1,14 @@
 package typingsSlinky.reactNativeTabView.components
 
 import org.scalablytyped.runtime.Instantiable0
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.reactNativeGestureHandler.mod.PanGestureHandler
 import typingsSlinky.reactNativeTabView.AnonDamping
 import typingsSlinky.reactNativeTabView.AnonDuration
 import typingsSlinky.reactNativeTabView.AnonOverscroll
+import typingsSlinky.reactNativeTabView.pagerMod.Props
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.`on-drag`
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.auto
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.none
@@ -21,14 +20,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ScrollPager
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any]] {
+object ScrollPager {
   @JSImport("react-native-tab-view/lib/typescript/src/ScrollPager", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[T /* <: Route */](
+  @scala.inline
+  class Builder[T <: Route] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default[js.Any]] {
+    @scala.inline
+    def onSwipeEnd(value: () => Unit): this.type = set("onSwipeEnd", js.Any.fromFunction0(value))
+    @scala.inline
+    def onSwipeStart(value: () => Unit): this.type = set("onSwipeStart", js.Any.fromFunction0(value))
+    @scala.inline
+    def overscroll(value: Boolean): this.type = set("overscroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def removeClippedSubviews(value: Boolean): this.type = set("removeClippedSubviews", value.asInstanceOf[js.Any])
+    @scala.inline
+    def springVelocityScale(value: Double): this.type = set("springVelocityScale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def swipeVelocityImpact(value: Double): this.type = set("swipeVelocityImpact", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps[T <: Route](p: Props[T] with AnonOverscroll): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T <: Route](
     gestureHandlerProps: ComponentProps[Instantiable0[PanGestureHandler]],
     keyboardDismissMode: none | `on-drag` | auto,
     layout: Layout,
@@ -36,27 +53,10 @@ object ScrollPager
     onIndexChange: Double => Unit,
     springConfig: AnonDamping,
     swipeEnabled: Boolean,
-    timingConfig: AnonDuration,
-    onSwipeEnd: () => Unit = null,
-    onSwipeStart: () => Unit = null,
-    overscroll: js.UndefOr[Boolean] = js.undefined,
-    removeClippedSubviews: js.UndefOr[Boolean] = js.undefined,
-    springVelocityScale: Int | Double = null,
-    swipeVelocityImpact: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default[js.Any]] = {
-    val __obj = js.Dynamic.literal(gestureHandlerProps = gestureHandlerProps.asInstanceOf[js.Any], keyboardDismissMode = keyboardDismissMode.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any], navigationState = navigationState.asInstanceOf[js.Any], onIndexChange = js.Any.fromFunction1(onIndexChange), springConfig = springConfig.asInstanceOf[js.Any], swipeEnabled = swipeEnabled.asInstanceOf[js.Any], timingConfig = timingConfig.asInstanceOf[js.Any])
-    if (onSwipeEnd != null) __obj.updateDynamic("onSwipeEnd")(js.Any.fromFunction0(onSwipeEnd))
-    if (onSwipeStart != null) __obj.updateDynamic("onSwipeStart")(js.Any.fromFunction0(onSwipeStart))
-    if (!js.isUndefined(overscroll)) __obj.updateDynamic("overscroll")(overscroll.asInstanceOf[js.Any])
-    if (!js.isUndefined(removeClippedSubviews)) __obj.updateDynamic("removeClippedSubviews")(removeClippedSubviews.asInstanceOf[js.Any])
-    if (springVelocityScale != null) __obj.updateDynamic("springVelocityScale")(springVelocityScale.asInstanceOf[js.Any])
-    if (swipeVelocityImpact != null) __obj.updateDynamic("swipeVelocityImpact")(swipeVelocityImpact.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactNativeTabView.scrollPagerMod.default[js.Any]]]
+    timingConfig: AnonDuration
+  ): Builder[T] = {
+    val __props = js.Dynamic.literal(gestureHandlerProps = gestureHandlerProps.asInstanceOf[js.Any], keyboardDismissMode = keyboardDismissMode.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any], navigationState = navigationState.asInstanceOf[js.Any], onIndexChange = js.Any.fromFunction1(onIndexChange), springConfig = springConfig.asInstanceOf[js.Any], swipeEnabled = swipeEnabled.asInstanceOf[js.Any], timingConfig = timingConfig.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[Props[T] with AnonOverscroll]))
   }
-  type Props = typingsSlinky.reactNativeTabView.pagerMod.Props[js.Any] with AnonOverscroll
 }
 

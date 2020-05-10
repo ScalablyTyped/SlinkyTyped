@@ -1,10 +1,7 @@
 package typingsSlinky.reactMapGl.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMapGl.mod.ScaleControlProps
 import typingsSlinky.reactMapGl.reactMapGlStrings.imperial
 import typingsSlinky.reactMapGl.reactMapGlStrings.metric
@@ -13,33 +10,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ScaleControl
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactMapGl.mod.ScaleControl] {
+object ScaleControl {
   @JSImport("react-map-gl", "ScaleControl")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    captureClick: js.UndefOr[Boolean] = js.undefined,
-    captureDoubleClick: js.UndefOr[Boolean] = js.undefined,
-    captureDrag: js.UndefOr[Boolean] = js.undefined,
-    captureScroll: js.UndefOr[Boolean] = js.undefined,
-    maxWidth: Int | Double = null,
-    unit: imperial | metric | nautical = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.ScaleControl] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(captureClick)) __obj.updateDynamic("captureClick")(captureClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureDoubleClick)) __obj.updateDynamic("captureDoubleClick")(captureDoubleClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureDrag)) __obj.updateDynamic("captureDrag")(captureDrag.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureScroll)) __obj.updateDynamic("captureScroll")(captureScroll.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.ScaleControl] {
+    @scala.inline
+    def captureClick(value: Boolean): this.type = set("captureClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureDoubleClick(value: Boolean): this.type = set("captureDoubleClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureDrag(value: Boolean): this.type = set("captureDrag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureScroll(value: Boolean): this.type = set("captureScroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxWidth(value: Double): this.type = set("maxWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unit(value: imperial | metric | nautical): this.type = set("unit", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.ScaleControl] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactMapGl.mod.ScaleControl](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ScaleControlProps
+  
+  def withProps(p: ScaleControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ScaleControl.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

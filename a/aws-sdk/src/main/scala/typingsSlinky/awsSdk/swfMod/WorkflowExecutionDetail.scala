@@ -33,14 +33,60 @@ object WorkflowExecutionDetail {
   def apply(
     executionConfiguration: WorkflowExecutionConfiguration,
     executionInfo: WorkflowExecutionInfo,
-    openCounts: WorkflowExecutionOpenCounts,
-    latestActivityTaskTimestamp: js.Date = null,
-    latestExecutionContext: Data = null
+    openCounts: WorkflowExecutionOpenCounts
   ): WorkflowExecutionDetail = {
     val __obj = js.Dynamic.literal(executionConfiguration = executionConfiguration.asInstanceOf[js.Any], executionInfo = executionInfo.asInstanceOf[js.Any], openCounts = openCounts.asInstanceOf[js.Any])
-    if (latestActivityTaskTimestamp != null) __obj.updateDynamic("latestActivityTaskTimestamp")(latestActivityTaskTimestamp.asInstanceOf[js.Any])
-    if (latestExecutionContext != null) __obj.updateDynamic("latestExecutionContext")(latestExecutionContext.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkflowExecutionDetail]
   }
+  @scala.inline
+  implicit class WorkflowExecutionDetailOps[Self <: WorkflowExecutionDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecutionConfiguration(value: WorkflowExecutionConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExecutionInfo(value: WorkflowExecutionInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOpenCounts(value: WorkflowExecutionOpenCounts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openCounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLatestActivityTaskTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestActivityTaskTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatestActivityTaskTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestActivityTaskTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatestExecutionContext(value: Data): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestExecutionContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatestExecutionContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestExecutionContext")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,15 +1,17 @@
 package typingsSlinky.reactSpinners.components
 
 import typingsSlinky.reactSpinners.dotLoaderMod.default
+import typingsSlinky.reactSpinners.interfacesMod.LoaderSizeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DotLoader extends SharedApply_LoaderSizeProps_1622436841[default] {
+object DotLoader {
   @JSImport("react-spinners/DotLoader", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: LoaderSizeProps): SharedBuilder_LoaderSizeProps1650113268[default] = new SharedBuilder_LoaderSizeProps1650113268[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DotLoader.type): SharedBuilder_LoaderSizeProps1650113268[default] = new SharedBuilder_LoaderSizeProps1650113268[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

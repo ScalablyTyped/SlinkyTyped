@@ -18,22 +18,20 @@ trait KeyUsage extends js.Object
 
 object KeyUsage {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def decrypt: typingsSlinky.std.stdStrings.decrypt = "decrypt".asInstanceOf[typingsSlinky.std.stdStrings.decrypt]
   @scala.inline
-  def decrypt: typingsSlinky.std.stdStrings.decrypt = this.cast("decrypt")
+  def deriveBits: typingsSlinky.std.stdStrings.deriveBits = "deriveBits".asInstanceOf[typingsSlinky.std.stdStrings.deriveBits]
   @scala.inline
-  def deriveBits: typingsSlinky.std.stdStrings.deriveBits = this.cast("deriveBits")
+  def deriveKey: typingsSlinky.std.stdStrings.deriveKey = "deriveKey".asInstanceOf[typingsSlinky.std.stdStrings.deriveKey]
   @scala.inline
-  def deriveKey: typingsSlinky.std.stdStrings.deriveKey = this.cast("deriveKey")
+  def encrypt: typingsSlinky.std.stdStrings.encrypt = "encrypt".asInstanceOf[typingsSlinky.std.stdStrings.encrypt]
   @scala.inline
-  def encrypt: typingsSlinky.std.stdStrings.encrypt = this.cast("encrypt")
+  def sign: typingsSlinky.std.stdStrings.sign = "sign".asInstanceOf[typingsSlinky.std.stdStrings.sign]
   @scala.inline
-  def sign: typingsSlinky.std.stdStrings.sign = this.cast("sign")
+  def unwrapKey: typingsSlinky.std.stdStrings.unwrapKey = "unwrapKey".asInstanceOf[typingsSlinky.std.stdStrings.unwrapKey]
   @scala.inline
-  def unwrapKey: typingsSlinky.std.stdStrings.unwrapKey = this.cast("unwrapKey")
+  def verify: typingsSlinky.std.stdStrings.verify = "verify".asInstanceOf[typingsSlinky.std.stdStrings.verify]
   @scala.inline
-  def verify: typingsSlinky.std.stdStrings.verify = this.cast("verify")
-  @scala.inline
-  def wrapKey: typingsSlinky.std.stdStrings.wrapKey = this.cast("wrapKey")
+  def wrapKey: typingsSlinky.std.stdStrings.wrapKey = "wrapKey".asInstanceOf[typingsSlinky.std.stdStrings.wrapKey]
 }
 

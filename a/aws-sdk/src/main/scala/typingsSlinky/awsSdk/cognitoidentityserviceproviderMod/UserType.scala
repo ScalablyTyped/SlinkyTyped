@@ -38,24 +38,101 @@ trait UserType extends js.Object {
 
 object UserType {
   @scala.inline
-  def apply(
-    Attributes: AttributeListType = null,
-    Enabled: js.UndefOr[Boolean] = js.undefined,
-    MFAOptions: MFAOptionListType = null,
-    UserCreateDate: js.Date = null,
-    UserLastModifiedDate: js.Date = null,
-    UserStatus: UserStatusType = null,
-    Username: UsernameType = null
-  ): UserType = {
+  def apply(): UserType = {
     val __obj = js.Dynamic.literal()
-    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
-    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.asInstanceOf[js.Any])
-    if (MFAOptions != null) __obj.updateDynamic("MFAOptions")(MFAOptions.asInstanceOf[js.Any])
-    if (UserCreateDate != null) __obj.updateDynamic("UserCreateDate")(UserCreateDate.asInstanceOf[js.Any])
-    if (UserLastModifiedDate != null) __obj.updateDynamic("UserLastModifiedDate")(UserLastModifiedDate.asInstanceOf[js.Any])
-    if (UserStatus != null) __obj.updateDynamic("UserStatus")(UserStatus.asInstanceOf[js.Any])
-    if (Username != null) __obj.updateDynamic("Username")(Username.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserType]
   }
+  @scala.inline
+  implicit class UserTypeOps[Self <: UserType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributes(value: AttributeListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: BooleanType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMFAOptions(value: MFAOptionListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MFAOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMFAOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MFAOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserCreateDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserCreateDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserCreateDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserCreateDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserLastModifiedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserLastModifiedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserLastModifiedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserLastModifiedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserStatus(value: UserStatusType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: UsernameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

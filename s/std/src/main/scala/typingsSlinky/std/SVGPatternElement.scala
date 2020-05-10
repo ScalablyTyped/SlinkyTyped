@@ -52,11 +52,12 @@ trait SVGPatternElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGPatternElement")
 @js.native
-object SVGPatternElement extends Instantiable0[SVGPatternElement]
+object SVGPatternElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGPatternElement]
 

@@ -55,20 +55,108 @@ object RegisterDomainRequest {
     DomainName: DomainName,
     DurationInYears: DurationInYears,
     RegistrantContact: ContactDetail,
-    TechContact: ContactDetail,
-    AutoRenew: js.UndefOr[scala.Boolean] = js.undefined,
-    IdnLangCode: LangCode = null,
-    PrivacyProtectAdminContact: js.UndefOr[scala.Boolean] = js.undefined,
-    PrivacyProtectRegistrantContact: js.UndefOr[scala.Boolean] = js.undefined,
-    PrivacyProtectTechContact: js.UndefOr[scala.Boolean] = js.undefined
+    TechContact: ContactDetail
   ): RegisterDomainRequest = {
     val __obj = js.Dynamic.literal(AdminContact = AdminContact.asInstanceOf[js.Any], DomainName = DomainName.asInstanceOf[js.Any], DurationInYears = DurationInYears.asInstanceOf[js.Any], RegistrantContact = RegistrantContact.asInstanceOf[js.Any], TechContact = TechContact.asInstanceOf[js.Any])
-    if (!js.isUndefined(AutoRenew)) __obj.updateDynamic("AutoRenew")(AutoRenew.asInstanceOf[js.Any])
-    if (IdnLangCode != null) __obj.updateDynamic("IdnLangCode")(IdnLangCode.asInstanceOf[js.Any])
-    if (!js.isUndefined(PrivacyProtectAdminContact)) __obj.updateDynamic("PrivacyProtectAdminContact")(PrivacyProtectAdminContact.asInstanceOf[js.Any])
-    if (!js.isUndefined(PrivacyProtectRegistrantContact)) __obj.updateDynamic("PrivacyProtectRegistrantContact")(PrivacyProtectRegistrantContact.asInstanceOf[js.Any])
-    if (!js.isUndefined(PrivacyProtectTechContact)) __obj.updateDynamic("PrivacyProtectTechContact")(PrivacyProtectTechContact.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterDomainRequest]
   }
+  @scala.inline
+  implicit class RegisterDomainRequestOps[Self <: RegisterDomainRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdminContact(value: ContactDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdminContact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDomainName(value: DomainName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDurationInYears(value: DurationInYears): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationInYears")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegistrantContact(value: ContactDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegistrantContact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTechContact(value: ContactDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TechContact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoRenew(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoRenew")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoRenew: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoRenew")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdnLangCode(value: LangCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdnLangCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdnLangCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdnLangCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivacyProtectAdminContact(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivacyProtectAdminContact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivacyProtectAdminContact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivacyProtectAdminContact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivacyProtectRegistrantContact(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivacyProtectRegistrantContact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivacyProtectRegistrantContact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivacyProtectRegistrantContact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivacyProtectTechContact(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivacyProtectTechContact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivacyProtectTechContact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivacyProtectTechContact")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

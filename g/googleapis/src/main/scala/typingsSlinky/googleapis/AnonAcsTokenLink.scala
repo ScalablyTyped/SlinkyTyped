@@ -13,16 +13,53 @@ trait AnonAcsTokenLink extends js.Object {
 
 object AnonAcsTokenLink {
   @scala.inline
-  def apply(
-    acsTokenLink: String = null,
-    downloadLink: String = null,
-    isAvailable: js.UndefOr[Boolean] = js.undefined
-  ): AnonAcsTokenLink = {
+  def apply(): AnonAcsTokenLink = {
     val __obj = js.Dynamic.literal()
-    if (acsTokenLink != null) __obj.updateDynamic("acsTokenLink")(acsTokenLink.asInstanceOf[js.Any])
-    if (downloadLink != null) __obj.updateDynamic("downloadLink")(downloadLink.asInstanceOf[js.Any])
-    if (!js.isUndefined(isAvailable)) __obj.updateDynamic("isAvailable")(isAvailable.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAcsTokenLink]
   }
+  @scala.inline
+  implicit class AnonAcsTokenLinkOps[Self <: AnonAcsTokenLink] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcsTokenLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acsTokenLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcsTokenLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acsTokenLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDownloadLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDownloadLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsAvailable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAvailable")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,10 +12,8 @@ trait InputStyle extends js.Object
 
 object InputStyle {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def contenteditable: typingsSlinky.codemirror.codemirrorStrings.contenteditable = "contenteditable".asInstanceOf[typingsSlinky.codemirror.codemirrorStrings.contenteditable]
   @scala.inline
-  def contenteditable: typingsSlinky.codemirror.codemirrorStrings.contenteditable = this.cast("contenteditable")
-  @scala.inline
-  def textarea: typingsSlinky.codemirror.codemirrorStrings.textarea = this.cast("textarea")
+  def textarea: typingsSlinky.codemirror.codemirrorStrings.textarea = "textarea".asInstanceOf[typingsSlinky.codemirror.codemirrorStrings.textarea]
 }
 

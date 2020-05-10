@@ -13,12 +13,10 @@ trait OptionsUnitValue extends js.Object
 
 object OptionsUnitValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def percentage: typingsSlinky.highcharts.highchartsStrings.percentage = "percentage".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.percentage]
   @scala.inline
-  def percentage: typingsSlinky.highcharts.highchartsStrings.percentage = this.cast("percentage")
+  def pixels: typingsSlinky.highcharts.highchartsStrings.pixels = "pixels".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.pixels]
   @scala.inline
-  def pixels: typingsSlinky.highcharts.highchartsStrings.pixels = this.cast("pixels")
-  @scala.inline
-  def weight: typingsSlinky.highcharts.highchartsStrings.weight = this.cast("weight")
+  def weight: typingsSlinky.highcharts.highchartsStrings.weight = "weight".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.weight]
 }
 

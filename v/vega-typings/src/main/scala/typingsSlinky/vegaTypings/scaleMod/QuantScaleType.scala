@@ -18,22 +18,20 @@ trait QuantScaleType extends js.Object
 
 object QuantScaleType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def linear: typingsSlinky.vegaTypings.vegaTypingsStrings.linear = "linear".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.linear]
   @scala.inline
-  def linear: typingsSlinky.vegaTypings.vegaTypingsStrings.linear = this.cast("linear")
+  def log: typingsSlinky.vegaTypings.vegaTypingsStrings.log = "log".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.log]
   @scala.inline
-  def log: typingsSlinky.vegaTypings.vegaTypingsStrings.log = this.cast("log")
+  def pow: typingsSlinky.vegaTypings.vegaTypingsStrings.pow = "pow".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.pow]
   @scala.inline
-  def pow: typingsSlinky.vegaTypings.vegaTypingsStrings.pow = this.cast("pow")
+  def sequential: typingsSlinky.vegaTypings.vegaTypingsStrings.sequential = "sequential".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.sequential]
   @scala.inline
-  def sequential: typingsSlinky.vegaTypings.vegaTypingsStrings.sequential = this.cast("sequential")
+  def sqrt: typingsSlinky.vegaTypings.vegaTypingsStrings.sqrt = "sqrt".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.sqrt]
   @scala.inline
-  def sqrt: typingsSlinky.vegaTypings.vegaTypingsStrings.sqrt = this.cast("sqrt")
+  def symlog: typingsSlinky.vegaTypings.vegaTypingsStrings.symlog = "symlog".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.symlog]
   @scala.inline
-  def symlog: typingsSlinky.vegaTypings.vegaTypingsStrings.symlog = this.cast("symlog")
+  def time: typingsSlinky.vegaTypings.vegaTypingsStrings.time = "time".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.time]
   @scala.inline
-  def time: typingsSlinky.vegaTypings.vegaTypingsStrings.time = this.cast("time")
-  @scala.inline
-  def utc: typingsSlinky.vegaTypings.vegaTypingsStrings.utc = this.cast("utc")
+  def utc: typingsSlinky.vegaTypings.vegaTypingsStrings.utc = "utc".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.utc]
 }
 

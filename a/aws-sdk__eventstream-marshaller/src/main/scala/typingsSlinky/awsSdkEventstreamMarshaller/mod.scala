@@ -18,7 +18,7 @@ object mod extends js.Object {
   @js.native
   class Int64 protected ()
     extends typingsSlinky.awsSdkEventstreamMarshaller.int64Mod.Int64 {
-    def this(bytes: scala.scalajs.js.typedarray.Uint8Array) = this()
+    def this(bytes: js.typedarray.Uint8Array) = this()
   }
   
   /* static members */

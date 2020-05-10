@@ -26,18 +26,65 @@ trait ProgressDetail extends js.Object {
 
 object ProgressDetail {
   @scala.inline
-  def apply(
-    currentProgress: RobotDeploymentStep = null,
-    estimatedTimeRemainingSeconds: Int | Double = null,
-    percentDone: Int | Double = null,
-    targetResource: GenericString = null
-  ): ProgressDetail = {
+  def apply(): ProgressDetail = {
     val __obj = js.Dynamic.literal()
-    if (currentProgress != null) __obj.updateDynamic("currentProgress")(currentProgress.asInstanceOf[js.Any])
-    if (estimatedTimeRemainingSeconds != null) __obj.updateDynamic("estimatedTimeRemainingSeconds")(estimatedTimeRemainingSeconds.asInstanceOf[js.Any])
-    if (percentDone != null) __obj.updateDynamic("percentDone")(percentDone.asInstanceOf[js.Any])
-    if (targetResource != null) __obj.updateDynamic("targetResource")(targetResource.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProgressDetail]
   }
+  @scala.inline
+  implicit class ProgressDetailOps[Self <: ProgressDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentProgress(value: RobotDeploymentStep): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentProgress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentProgress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedTimeRemainingSeconds(value: GenericInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedTimeRemainingSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedTimeRemainingSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedTimeRemainingSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPercentDone(value: PercentDone): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percentDone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPercentDone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percentDone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetResource(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetResource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetResource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetResource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

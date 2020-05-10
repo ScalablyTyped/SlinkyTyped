@@ -7,62 +7,113 @@ import scala.scalajs.js.annotation._
 /**
   * List of Diagnosis
   */
+@js.native
 trait ClaimDiagnosis extends BackboneElement {
   /**
     * Contains extended information for property 'sequence'.
     */
-  var _sequence: js.UndefOr[Element] = js.undefined
+  var _sequence: js.UndefOr[Element] = js.native
   /**
     * Patient's diagnosis
     */
-  var diagnosisCodeableConcept: js.UndefOr[CodeableConcept] = js.undefined
+  var diagnosisCodeableConcept: js.UndefOr[CodeableConcept] = js.native
   /**
     * Patient's diagnosis
     */
-  var diagnosisReference: js.UndefOr[Reference] = js.undefined
+  var diagnosisReference: js.UndefOr[Reference] = js.native
   /**
     * Package billing code
     */
-  var packageCode: js.UndefOr[CodeableConcept] = js.undefined
+  var packageCode: js.UndefOr[CodeableConcept] = js.native
   /**
     * Number to covey order of diagnosis
     */
-  var sequence: positiveInt
+  var sequence: positiveInt = js.native
   /**
     * Timing or nature of the diagnosis
     */
-  var `type`: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
+  var `type`: js.UndefOr[js.Array[CodeableConcept]] = js.native
 }
 
 object ClaimDiagnosis {
   @scala.inline
-  def apply(
-    sequence: positiveInt,
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    _sequence: Element = null,
-    diagnosisCodeableConcept: CodeableConcept = null,
-    diagnosisReference: Reference = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    id: String = null,
-    modifierExtension: js.Array[Extension] = null,
-    packageCode: CodeableConcept = null,
-    `type`: js.Array[CodeableConcept] = null
-  ): ClaimDiagnosis = {
+  def apply(sequence: positiveInt): ClaimDiagnosis = {
     val __obj = js.Dynamic.literal(sequence = sequence.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_sequence != null) __obj.updateDynamic("_sequence")(_sequence.asInstanceOf[js.Any])
-    if (diagnosisCodeableConcept != null) __obj.updateDynamic("diagnosisCodeableConcept")(diagnosisCodeableConcept.asInstanceOf[js.Any])
-    if (diagnosisReference != null) __obj.updateDynamic("diagnosisReference")(diagnosisReference.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (packageCode != null) __obj.updateDynamic("packageCode")(packageCode.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClaimDiagnosis]
   }
+  @scala.inline
+  implicit class ClaimDiagnosisOps[Self <: ClaimDiagnosis] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSequence(value: positiveInt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sequence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_sequence(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_sequence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_sequence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_sequence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiagnosisCodeableConcept(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diagnosisCodeableConcept")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiagnosisCodeableConcept: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diagnosisCodeableConcept")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiagnosisReference(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diagnosisReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiagnosisReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diagnosisReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPackageCode(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: js.Array[CodeableConcept]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

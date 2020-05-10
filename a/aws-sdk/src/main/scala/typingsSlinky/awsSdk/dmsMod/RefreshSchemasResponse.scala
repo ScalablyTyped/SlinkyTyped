@@ -14,10 +14,29 @@ trait RefreshSchemasResponse extends js.Object {
 
 object RefreshSchemasResponse {
   @scala.inline
-  def apply(RefreshSchemasStatus: RefreshSchemasStatus = null): RefreshSchemasResponse = {
+  def apply(): RefreshSchemasResponse = {
     val __obj = js.Dynamic.literal()
-    if (RefreshSchemasStatus != null) __obj.updateDynamic("RefreshSchemasStatus")(RefreshSchemasStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[RefreshSchemasResponse]
   }
+  @scala.inline
+  implicit class RefreshSchemasResponseOps[Self <: RefreshSchemasResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRefreshSchemasStatus(value: RefreshSchemasStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RefreshSchemasStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRefreshSchemasStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RefreshSchemasStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

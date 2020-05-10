@@ -13,12 +13,10 @@ trait ChooserFileMode extends js.Object
 
 object ChooserFileMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def crop: typingsSlinky.dropboxChooser.dropboxChooserStrings.crop = "crop".asInstanceOf[typingsSlinky.dropboxChooser.dropboxChooserStrings.crop]
   @scala.inline
-  def crop: typingsSlinky.dropboxChooser.dropboxChooserStrings.crop = this.cast("crop")
+  def fit: typingsSlinky.dropboxChooser.dropboxChooserStrings.fit = "fit".asInstanceOf[typingsSlinky.dropboxChooser.dropboxChooserStrings.fit]
   @scala.inline
-  def fit: typingsSlinky.dropboxChooser.dropboxChooserStrings.fit = this.cast("fit")
-  @scala.inline
-  def fit_one_and_overflow: typingsSlinky.dropboxChooser.dropboxChooserStrings.fit_one_and_overflow = this.cast("fit_one_and_overflow")
+  def fit_one_and_overflow: typingsSlinky.dropboxChooser.dropboxChooserStrings.fit_one_and_overflow = "fit_one_and_overflow".asInstanceOf[typingsSlinky.dropboxChooser.dropboxChooserStrings.fit_one_and_overflow]
 }
 

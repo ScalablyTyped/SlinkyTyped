@@ -10,33 +10,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TooltipOptions extends js.Object {
-  var className: js.UndefOr[String] = js.undefined
-  var delay: js.UndefOr[Double] = js.undefined
-  var hideOnClick: js.UndefOr[Boolean] = js.undefined
-  var passthrough: js.UndefOr[Boolean] = js.undefined
-  var position: js.UndefOr[bottom | horizontal | left | right | top | vertical] = js.undefined
-  var showOnClick: js.UndefOr[Boolean] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var delay: js.UndefOr[Double] = js.native
+  var hideOnClick: js.UndefOr[Boolean] = js.native
+  var passthrough: js.UndefOr[Boolean] = js.native
+  var position: js.UndefOr[bottom | horizontal | left | right | top | vertical] = js.native
+  var showOnClick: js.UndefOr[Boolean] = js.native
 }
 
 object TooltipOptions {
   @scala.inline
-  def apply(
-    className: String = null,
-    delay: Int | Double = null,
-    hideOnClick: js.UndefOr[Boolean] = js.undefined,
-    passthrough: js.UndefOr[Boolean] = js.undefined,
-    position: bottom | horizontal | left | right | top | vertical = null,
-    showOnClick: js.UndefOr[Boolean] = js.undefined
-  ): TooltipOptions = {
+  def apply(): TooltipOptions = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideOnClick)) __obj.updateDynamic("hideOnClick")(hideOnClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(passthrough)) __obj.updateDynamic("passthrough")(passthrough.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(showOnClick)) __obj.updateDynamic("showOnClick")(showOnClick.asInstanceOf[js.Any])
     __obj.asInstanceOf[TooltipOptions]
   }
+  @scala.inline
+  implicit class TooltipOptionsOps[Self <: TooltipOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideOnClick(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassthrough(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passthrough")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassthrough: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passthrough")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: bottom | horizontal | left | right | top | vertical): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowOnClick(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showOnClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showOnClick")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

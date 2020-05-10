@@ -1,47 +1,73 @@
 package typingsSlinky.consul.mod.Health
 
 import typingsSlinky.consul.mod.CommonOptions
-import typingsSlinky.node.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ServiceOptions extends CommonOptions {
-  var near: js.UndefOr[String] = js.undefined
-  var passing: js.UndefOr[Boolean] = js.undefined
-  var service: String
-  var tag: js.UndefOr[String] = js.undefined
+  var near: js.UndefOr[String] = js.native
+  var passing: js.UndefOr[Boolean] = js.native
+  var service: String = js.native
+  var tag: js.UndefOr[String] = js.native
 }
 
 object ServiceOptions {
   @scala.inline
-  def apply(
-    service: String,
-    consistent: js.UndefOr[Boolean] = js.undefined,
-    ctx: EventEmitter = null,
-    dc: String = null,
-    near: String = null,
-    passing: js.UndefOr[Boolean] = js.undefined,
-    stale: js.UndefOr[Boolean] = js.undefined,
-    tag: String = null,
-    timeout: Int | Double = null,
-    token: String = null,
-    wait: String = null,
-    wan: js.UndefOr[Boolean] = js.undefined
-  ): ServiceOptions = {
+  def apply(service: String): ServiceOptions = {
     val __obj = js.Dynamic.literal(service = service.asInstanceOf[js.Any])
-    if (!js.isUndefined(consistent)) __obj.updateDynamic("consistent")(consistent.asInstanceOf[js.Any])
-    if (ctx != null) __obj.updateDynamic("ctx")(ctx.asInstanceOf[js.Any])
-    if (dc != null) __obj.updateDynamic("dc")(dc.asInstanceOf[js.Any])
-    if (near != null) __obj.updateDynamic("near")(near.asInstanceOf[js.Any])
-    if (!js.isUndefined(passing)) __obj.updateDynamic("passing")(passing.asInstanceOf[js.Any])
-    if (!js.isUndefined(stale)) __obj.updateDynamic("stale")(stale.asInstanceOf[js.Any])
-    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
-    if (wait != null) __obj.updateDynamic("wait")(wait.asInstanceOf[js.Any])
-    if (!js.isUndefined(wan)) __obj.updateDynamic("wan")(wan.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceOptions]
   }
+  @scala.inline
+  implicit class ServiceOptionsOps[Self <: ServiceOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withService(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNear(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("near")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNear: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("near")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

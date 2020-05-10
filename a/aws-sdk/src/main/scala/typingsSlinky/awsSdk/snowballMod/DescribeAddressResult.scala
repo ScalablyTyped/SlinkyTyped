@@ -14,10 +14,29 @@ trait DescribeAddressResult extends js.Object {
 
 object DescribeAddressResult {
   @scala.inline
-  def apply(Address: Address = null): DescribeAddressResult = {
+  def apply(): DescribeAddressResult = {
     val __obj = js.Dynamic.literal()
-    if (Address != null) __obj.updateDynamic("Address")(Address.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAddressResult]
   }
+  @scala.inline
+  implicit class DescribeAddressResultOps[Self <: DescribeAddressResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: Address): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Address")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

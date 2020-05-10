@@ -22,16 +22,53 @@ trait ContextEntry extends js.Object {
 
 object ContextEntry {
   @scala.inline
-  def apply(
-    ContextKeyName: ContextKeyNameType = null,
-    ContextKeyType: ContextKeyTypeEnum = null,
-    ContextKeyValues: ContextKeyValueListType = null
-  ): ContextEntry = {
+  def apply(): ContextEntry = {
     val __obj = js.Dynamic.literal()
-    if (ContextKeyName != null) __obj.updateDynamic("ContextKeyName")(ContextKeyName.asInstanceOf[js.Any])
-    if (ContextKeyType != null) __obj.updateDynamic("ContextKeyType")(ContextKeyType.asInstanceOf[js.Any])
-    if (ContextKeyValues != null) __obj.updateDynamic("ContextKeyValues")(ContextKeyValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContextEntry]
   }
+  @scala.inline
+  implicit class ContextEntryOps[Self <: ContextEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContextKeyName(value: ContextKeyNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContextKeyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextKeyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContextKeyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContextKeyType(value: ContextKeyTypeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContextKeyType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextKeyType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContextKeyType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContextKeyValues(value: ContextKeyValueListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContextKeyValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextKeyValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContextKeyValues")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

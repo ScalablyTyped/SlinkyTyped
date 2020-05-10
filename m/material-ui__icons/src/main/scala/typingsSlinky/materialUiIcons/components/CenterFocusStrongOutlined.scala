@@ -1,15 +1,17 @@
 package typingsSlinky.materialUiIcons.components
 
+import typingsSlinky.materialUiCore.svgIconSvgIconMod.SvgIconProps
 import typingsSlinky.materialUiIcons.centerFocusStrongOutlinedMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CenterFocusStrongOutlined extends SharedApply_SvgIconProps1442979138[default] {
-  @JSImport("@material-ui/icons/CenterFocusStrongOutlined", "default")
+object CenterFocusStrongOutlined {
+  @JSImport("@material-ui/icons/CenterFocusStrongOutlined", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1164301990[default] = new SharedBuilder_SvgIconProps_1164301990[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CenterFocusStrongOutlined.type): SharedBuilder_SvgIconProps_1164301990[default] = new SharedBuilder_SvgIconProps_1164301990[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

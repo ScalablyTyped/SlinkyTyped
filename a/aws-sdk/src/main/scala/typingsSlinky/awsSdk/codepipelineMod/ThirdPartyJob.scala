@@ -18,11 +18,41 @@ trait ThirdPartyJob extends js.Object {
 
 object ThirdPartyJob {
   @scala.inline
-  def apply(clientId: ClientId = null, jobId: JobId = null): ThirdPartyJob = {
+  def apply(): ThirdPartyJob = {
     val __obj = js.Dynamic.literal()
-    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
-    if (jobId != null) __obj.updateDynamic("jobId")(jobId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThirdPartyJob]
   }
+  @scala.inline
+  implicit class ThirdPartyJobOps[Self <: ThirdPartyJob] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientId(value: ClientId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobId(value: JobId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -3,6 +3,7 @@ package typingsSlinky.awsSdk
 import typingsSlinky.awsSdk.machinelearningMod.ComparatorValue
 import typingsSlinky.awsSdk.machinelearningMod.MLModelFilterVariable
 import typingsSlinky.awsSdk.machinelearningMod.PageLimit
+import typingsSlinky.awsSdk.machinelearningMod.SortOrder
 import typingsSlinky.awsSdk.machinelearningMod.StringType
 import typingsSlinky.awsSdk.serviceMod.WaiterConfiguration
 import scala.scalajs.js
@@ -58,5 +59,165 @@ trait DescribeMLModelsInputwait extends js.Object {
     * A two-value parameter that determines the sequence of the resulting list of MLModel.   asc - Arranges the list in ascending order (A-Z, 0-9).  dsc - Arranges the list in descending order (Z-A, 9-0).  Results are sorted by FilterVariable.
     */
   var SortOrder: js.UndefOr[typingsSlinky.awsSdk.machinelearningMod.SortOrder] = js.native
+}
+
+object DescribeMLModelsInputwait {
+  @scala.inline
+  def apply(): DescribeMLModelsInputwait = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[DescribeMLModelsInputwait]
+  }
+  @scala.inline
+  implicit class DescribeMLModelsInputwaitOps[Self <: DescribeMLModelsInputwait] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$waiter(value: WaiterConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$waiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEQ(value: ComparatorValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EQ")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEQ: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EQ")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterVariable(value: MLModelFilterVariable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterVariable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterVariable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterVariable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGE(value: ComparatorValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGT(value: ComparatorValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGT: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GT")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLE(value: ComparatorValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLT(value: ComparatorValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLT: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LT")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: PageLimit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNE(value: ComparatorValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: StringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: ComparatorValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortOrder(value: SortOrder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SortOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SortOrder")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

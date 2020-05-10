@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An object representing a error from the Globalization API. */
+@js.native
 trait GlobalizationError extends js.Object {
   /** One of the following codes representing the error type:
     * GlobalizationError.UNKNOWN_ERROR: 0
@@ -12,9 +13,9 @@ trait GlobalizationError extends js.Object {
     * GlobalizationError.PARSING_ERROR: 2
     * GlobalizationError.PATTERN_ERROR: 3
     */
-  var code: Double
+  var code: Double = js.native
   /** A text message that includes the error's explanation and/or details */
-  var message: String
+  var message: String = js.native
 }
 
 /** An object representing a error from the Globalization API. */

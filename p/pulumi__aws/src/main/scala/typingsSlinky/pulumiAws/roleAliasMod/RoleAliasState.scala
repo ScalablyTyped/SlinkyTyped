@@ -27,18 +27,65 @@ trait RoleAliasState extends js.Object {
 
 object RoleAliasState {
   @scala.inline
-  def apply(
-    alias: Input[String] = null,
-    arn: Input[String] = null,
-    credentialDuration: Input[Double] = null,
-    roleArn: Input[String] = null
-  ): RoleAliasState = {
+  def apply(): RoleAliasState = {
     val __obj = js.Dynamic.literal()
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
-    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
-    if (credentialDuration != null) __obj.updateDynamic("credentialDuration")(credentialDuration.asInstanceOf[js.Any])
-    if (roleArn != null) __obj.updateDynamic("roleArn")(roleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[RoleAliasState]
   }
+  @scala.inline
+  implicit class RoleAliasStateOps[Self <: RoleAliasState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlias(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCredentialDuration(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credentialDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCredentialDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credentialDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

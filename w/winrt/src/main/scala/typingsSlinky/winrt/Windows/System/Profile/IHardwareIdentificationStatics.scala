@@ -5,16 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IHardwareIdentificationStatics extends js.Object {
-  def getPackageSpecificToken(nonce: IBuffer): HardwareToken
+  def getPackageSpecificToken(nonce: IBuffer): HardwareToken = js.native
 }
 
 object IHardwareIdentificationStatics {
   @scala.inline
   def apply(getPackageSpecificToken: IBuffer => HardwareToken): IHardwareIdentificationStatics = {
     val __obj = js.Dynamic.literal(getPackageSpecificToken = js.Any.fromFunction1(getPackageSpecificToken))
-  
     __obj.asInstanceOf[IHardwareIdentificationStatics]
   }
+  @scala.inline
+  implicit class IHardwareIdentificationStaticsOps[Self <: IHardwareIdentificationStatics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetPackageSpecificToken(value: IBuffer => HardwareToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPackageSpecificToken")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

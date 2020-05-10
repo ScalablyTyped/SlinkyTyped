@@ -26,16 +26,53 @@ trait SchemaChannelStatus extends js.Object {
 
 object SchemaChannelStatus {
   @scala.inline
-  def apply(
-    isLinked: js.UndefOr[Boolean] = js.undefined,
-    longUploadsStatus: String = null,
-    privacyStatus: String = null
-  ): SchemaChannelStatus = {
+  def apply(): SchemaChannelStatus = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(isLinked)) __obj.updateDynamic("isLinked")(isLinked.asInstanceOf[js.Any])
-    if (longUploadsStatus != null) __obj.updateDynamic("longUploadsStatus")(longUploadsStatus.asInstanceOf[js.Any])
-    if (privacyStatus != null) __obj.updateDynamic("privacyStatus")(privacyStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaChannelStatus]
   }
+  @scala.inline
+  implicit class SchemaChannelStatusOps[Self <: SchemaChannelStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsLinked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLinked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsLinked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLinked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLongUploadsStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longUploadsStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLongUploadsStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longUploadsStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivacyStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privacyStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivacyStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privacyStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

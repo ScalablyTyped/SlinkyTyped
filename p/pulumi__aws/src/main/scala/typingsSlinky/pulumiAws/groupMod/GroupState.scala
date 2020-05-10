@@ -171,72 +171,389 @@ trait GroupState extends js.Object {
 
 object GroupState {
   @scala.inline
-  def apply(
-    arn: Input[String] = null,
-    availabilityZones: Input[js.Array[Input[String]]] = null,
-    defaultCooldown: Input[Double] = null,
-    desiredCapacity: Input[Double] = null,
-    enabledMetrics: Input[js.Array[Input[Metric]]] = null,
-    forceDelete: Input[Boolean] = null,
-    healthCheckGracePeriod: Input[Double] = null,
-    healthCheckType: Input[String] = null,
-    initialLifecycleHooks: Input[js.Array[Input[GroupInitialLifecycleHook]]] = null,
-    launchConfiguration: Input[String | LaunchConfiguration] = null,
-    launchTemplate: Input[GroupLaunchTemplate] = null,
-    loadBalancers: Input[js.Array[Input[String]]] = null,
-    maxInstanceLifetime: Input[Double] = null,
-    maxSize: Input[Double] = null,
-    metricsGranularity: Input[String | MetricsGranularity] = null,
-    minElbCapacity: Input[Double] = null,
-    minSize: Input[Double] = null,
-    mixedInstancesPolicy: Input[GroupMixedInstancesPolicy] = null,
-    name: Input[String] = null,
-    namePrefix: Input[String] = null,
-    placementGroup: Input[String | PlacementGroup] = null,
-    protectFromScaleIn: Input[Boolean] = null,
-    serviceLinkedRoleArn: Input[String] = null,
-    suspendedProcesses: Input[js.Array[Input[String]]] = null,
-    tags: Input[js.Array[Input[GroupTag]]] = null,
-    tagsCollection: Input[js.Array[Input[StringDictionary[_]]]] = null,
-    targetGroupArns: Input[js.Array[Input[String]]] = null,
-    terminationPolicies: Input[js.Array[Input[String]]] = null,
-    vpcZoneIdentifiers: Input[js.Array[Input[String]]] = null,
-    waitForCapacityTimeout: Input[String] = null,
-    waitForElbCapacity: Input[Double] = null
-  ): GroupState = {
+  def apply(): GroupState = {
     val __obj = js.Dynamic.literal()
-    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
-    if (availabilityZones != null) __obj.updateDynamic("availabilityZones")(availabilityZones.asInstanceOf[js.Any])
-    if (defaultCooldown != null) __obj.updateDynamic("defaultCooldown")(defaultCooldown.asInstanceOf[js.Any])
-    if (desiredCapacity != null) __obj.updateDynamic("desiredCapacity")(desiredCapacity.asInstanceOf[js.Any])
-    if (enabledMetrics != null) __obj.updateDynamic("enabledMetrics")(enabledMetrics.asInstanceOf[js.Any])
-    if (forceDelete != null) __obj.updateDynamic("forceDelete")(forceDelete.asInstanceOf[js.Any])
-    if (healthCheckGracePeriod != null) __obj.updateDynamic("healthCheckGracePeriod")(healthCheckGracePeriod.asInstanceOf[js.Any])
-    if (healthCheckType != null) __obj.updateDynamic("healthCheckType")(healthCheckType.asInstanceOf[js.Any])
-    if (initialLifecycleHooks != null) __obj.updateDynamic("initialLifecycleHooks")(initialLifecycleHooks.asInstanceOf[js.Any])
-    if (launchConfiguration != null) __obj.updateDynamic("launchConfiguration")(launchConfiguration.asInstanceOf[js.Any])
-    if (launchTemplate != null) __obj.updateDynamic("launchTemplate")(launchTemplate.asInstanceOf[js.Any])
-    if (loadBalancers != null) __obj.updateDynamic("loadBalancers")(loadBalancers.asInstanceOf[js.Any])
-    if (maxInstanceLifetime != null) __obj.updateDynamic("maxInstanceLifetime")(maxInstanceLifetime.asInstanceOf[js.Any])
-    if (maxSize != null) __obj.updateDynamic("maxSize")(maxSize.asInstanceOf[js.Any])
-    if (metricsGranularity != null) __obj.updateDynamic("metricsGranularity")(metricsGranularity.asInstanceOf[js.Any])
-    if (minElbCapacity != null) __obj.updateDynamic("minElbCapacity")(minElbCapacity.asInstanceOf[js.Any])
-    if (minSize != null) __obj.updateDynamic("minSize")(minSize.asInstanceOf[js.Any])
-    if (mixedInstancesPolicy != null) __obj.updateDynamic("mixedInstancesPolicy")(mixedInstancesPolicy.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (namePrefix != null) __obj.updateDynamic("namePrefix")(namePrefix.asInstanceOf[js.Any])
-    if (placementGroup != null) __obj.updateDynamic("placementGroup")(placementGroup.asInstanceOf[js.Any])
-    if (protectFromScaleIn != null) __obj.updateDynamic("protectFromScaleIn")(protectFromScaleIn.asInstanceOf[js.Any])
-    if (serviceLinkedRoleArn != null) __obj.updateDynamic("serviceLinkedRoleArn")(serviceLinkedRoleArn.asInstanceOf[js.Any])
-    if (suspendedProcesses != null) __obj.updateDynamic("suspendedProcesses")(suspendedProcesses.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (tagsCollection != null) __obj.updateDynamic("tagsCollection")(tagsCollection.asInstanceOf[js.Any])
-    if (targetGroupArns != null) __obj.updateDynamic("targetGroupArns")(targetGroupArns.asInstanceOf[js.Any])
-    if (terminationPolicies != null) __obj.updateDynamic("terminationPolicies")(terminationPolicies.asInstanceOf[js.Any])
-    if (vpcZoneIdentifiers != null) __obj.updateDynamic("vpcZoneIdentifiers")(vpcZoneIdentifiers.asInstanceOf[js.Any])
-    if (waitForCapacityTimeout != null) __obj.updateDynamic("waitForCapacityTimeout")(waitForCapacityTimeout.asInstanceOf[js.Any])
-    if (waitForElbCapacity != null) __obj.updateDynamic("waitForElbCapacity")(waitForElbCapacity.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroupState]
   }
+  @scala.inline
+  implicit class GroupStateOps[Self <: GroupState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailabilityZones(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZones")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZones: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZones")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultCooldown(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCooldown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultCooldown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCooldown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredCapacity(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredCapacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredCapacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabledMetrics(value: Input[js.Array[Input[Metric]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledMetrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabledMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledMetrics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceDelete(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceDelete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceDelete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHealthCheckGracePeriod(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheckGracePeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHealthCheckGracePeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheckGracePeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHealthCheckType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheckType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHealthCheckType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheckType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialLifecycleHooks(value: Input[js.Array[Input[GroupInitialLifecycleHook]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialLifecycleHooks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialLifecycleHooks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialLifecycleHooks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchConfiguration(value: Input[String | LaunchConfiguration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchTemplate(value: Input[GroupLaunchTemplate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadBalancers(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadBalancers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxInstanceLifetime(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxInstanceLifetime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxInstanceLifetime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxInstanceLifetime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSize(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricsGranularity(value: Input[String | MetricsGranularity]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricsGranularity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricsGranularity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricsGranularity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinElbCapacity(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minElbCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinElbCapacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minElbCapacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinSize(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMixedInstancesPolicy(value: Input[GroupMixedInstancesPolicy]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mixedInstancesPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMixedInstancesPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mixedInstancesPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamePrefix(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamePrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacementGroup(value: Input[String | PlacementGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placementGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacementGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placementGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtectFromScaleIn(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protectFromScaleIn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtectFromScaleIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protectFromScaleIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceLinkedRoleArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceLinkedRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceLinkedRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceLinkedRoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuspendedProcesses(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suspendedProcesses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuspendedProcesses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suspendedProcesses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[js.Array[Input[GroupTag]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagsCollection(value: Input[js.Array[Input[StringDictionary[_]]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagsCollection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagsCollection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagsCollection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetGroupArns(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetGroupArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetGroupArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetGroupArns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerminationPolicies(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terminationPolicies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerminationPolicies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terminationPolicies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcZoneIdentifiers(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcZoneIdentifiers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcZoneIdentifiers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcZoneIdentifiers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWaitForCapacityTimeout(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForCapacityTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWaitForCapacityTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForCapacityTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWaitForElbCapacity(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForElbCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWaitForElbCapacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForElbCapacity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

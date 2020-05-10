@@ -38,7 +38,7 @@ object utilSortedSetMod extends js.Object {
     def isEmpty(): Boolean = js.native
     def isEqual(other: SortedSet[T]): Boolean = js.native
     def last(): T | Null = js.native
-    def size(): Double = js.native
+    def size: Double = js.native
     def toArray(): js.Array[T] = js.native
     def unionWith(other: SortedSet[T]): SortedSet[T] = js.native
   }

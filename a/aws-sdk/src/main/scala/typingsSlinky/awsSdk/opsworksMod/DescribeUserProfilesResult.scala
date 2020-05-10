@@ -14,10 +14,29 @@ trait DescribeUserProfilesResult extends js.Object {
 
 object DescribeUserProfilesResult {
   @scala.inline
-  def apply(UserProfiles: UserProfiles = null): DescribeUserProfilesResult = {
+  def apply(): DescribeUserProfilesResult = {
     val __obj = js.Dynamic.literal()
-    if (UserProfiles != null) __obj.updateDynamic("UserProfiles")(UserProfiles.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeUserProfilesResult]
   }
+  @scala.inline
+  implicit class DescribeUserProfilesResultOps[Self <: DescribeUserProfilesResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUserProfiles(value: UserProfiles): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserProfiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserProfiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserProfiles")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

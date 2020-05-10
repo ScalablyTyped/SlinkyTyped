@@ -1,12 +1,13 @@
 package typingsSlinky.chromeApps.chrome.networking.onc
 
+import typingsSlinky.chromeApps.chromeAppsStrings.Manual_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.chromeApps.chromeAppsStrings.Direct
-  - typingsSlinky.chromeApps.chromeAppsStrings.Manual
+  - typingsSlinky.chromeApps.chromeAppsStrings.Manual_
   - typingsSlinky.chromeApps.chromeAppsStrings.PAC
   - typingsSlinky.chromeApps.chromeAppsStrings.WPAD
 */
@@ -14,14 +15,12 @@ trait ProxySettingsType extends js.Object
 
 object ProxySettingsType {
   @scala.inline
-  def Direct: typingsSlinky.chromeApps.chromeAppsStrings.Direct = this.cast("Direct")
+  def Direct: typingsSlinky.chromeApps.chromeAppsStrings.Direct = "Direct".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.Direct]
   @scala.inline
-  def Manual: typingsSlinky.chromeApps.chromeAppsStrings.Manual = this.cast("Manual")
+  def Manual: Manual_ = "Manual".asInstanceOf[Manual_]
   @scala.inline
-  def PAC: typingsSlinky.chromeApps.chromeAppsStrings.PAC = this.cast("PAC")
+  def PAC: typingsSlinky.chromeApps.chromeAppsStrings.PAC = "PAC".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.PAC]
   @scala.inline
-  def WPAD: typingsSlinky.chromeApps.chromeAppsStrings.WPAD = this.cast("WPAD")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def WPAD: typingsSlinky.chromeApps.chromeAppsStrings.WPAD = "WPAD".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.WPAD]
 }
 

@@ -31,18 +31,65 @@ trait SchemaPubsubEvent extends js.Object {
 
 object SchemaPubsubEvent {
   @scala.inline
-  def apply(
-    deleted: js.UndefOr[Boolean] = js.undefined,
-    message: SchemaPubsubMessage = null,
-    subscription: String = null,
-    truncated: js.UndefOr[Boolean] = js.undefined
-  ): SchemaPubsubEvent = {
+  def apply(): SchemaPubsubEvent = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(deleted)) __obj.updateDynamic("deleted")(deleted.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (subscription != null) __obj.updateDynamic("subscription")(subscription.asInstanceOf[js.Any])
-    if (!js.isUndefined(truncated)) __obj.updateDynamic("truncated")(truncated.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPubsubEvent]
   }
+  @scala.inline
+  implicit class SchemaPubsubEventOps[Self <: SchemaPubsubEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeleted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: SchemaPubsubMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubscription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubscription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTruncated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("truncated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTruncated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("truncated")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

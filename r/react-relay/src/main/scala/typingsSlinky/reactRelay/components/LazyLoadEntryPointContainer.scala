@@ -1,10 +1,8 @@
 package typingsSlinky.reactRelay.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactRelay.entryPointTypesMod.EntryPoint
 import typingsSlinky.reactRelay.entryPointTypesMod.EntryPointProps
 import typingsSlinky.reactRelay.entryPointTypesMod.EnvironmentProviderOptions
@@ -14,14 +12,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LazyLoadEntryPointContainer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object LazyLoadEntryPointContainer {
   @JSImport("react-relay/hooks", "LazyLoadEntryPointContainer")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[TEntryPointParams /* <: js.Object */, TPreloadedQueries /* <: js.Object */, TPreloadedEntryPoints /* <: js.Object */, TRuntimeProps /* <: js.Object */, TExtraProps](
+  @scala.inline
+  class Builder[TEntryPointParams <: js.Object, TPreloadedQueries <: js.Object, TPreloadedEntryPoints <: js.Object, TRuntimeProps <: js.Object, TExtraProps] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def environmentProvider(value: IEnvironmentProvider[EnvironmentProviderOptions]): this.type = set("environmentProvider", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps[TEntryPointParams <: js.Object, TPreloadedQueries <: js.Object, TPreloadedEntryPoints <: js.Object, TRuntimeProps <: js.Object, TExtraProps](
+    p: EntryPointContainerProps[
+      // tslint:disable-next-line no-unnecessary-generics
+  TEntryPointParams, 
+      // tslint:disable-next-line no-unnecessary-generics
+  TPreloadedQueries, 
+      // tslint:disable-next-line no-unnecessary-generics
+  TPreloadedEntryPoints, 
+      // tslint:disable-next-line no-unnecessary-generics
+  TRuntimeProps, 
+      // tslint:disable-next-line no-unnecessary-generics
+  TExtraProps
+    ]
+  ): Builder[TEntryPointParams, TPreloadedQueries, TPreloadedEntryPoints, TRuntimeProps, TExtraProps] = new Builder[TEntryPointParams, TPreloadedQueries, TPreloadedEntryPoints, TRuntimeProps, TExtraProps](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[TEntryPointParams <: js.Object, TPreloadedQueries <: js.Object, TPreloadedEntryPoints <: js.Object, TRuntimeProps <: js.Object, TExtraProps](
     entryPoint: EntryPoint[
       // tslint:disable-next-line no-unnecessary-generics
   TEntryPointParams, 
@@ -41,15 +60,21 @@ object LazyLoadEntryPointContainer
     entryPointParams: // tslint:disable-next-line no-unnecessary-generics
   TEntryPointParams,
     props: // tslint:disable-next-line no-unnecessary-generics
-  TRuntimeProps,
-    environmentProvider: IEnvironmentProvider[EnvironmentProviderOptions] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(entryPoint = entryPoint.asInstanceOf[js.Any], entryPointParams = entryPointParams.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any])
-    if (environmentProvider != null) __obj.updateDynamic("environmentProvider")(environmentProvider.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object]]
+  TRuntimeProps
+  ): Builder[TEntryPointParams, TPreloadedQueries, TPreloadedEntryPoints, TRuntimeProps, TExtraProps] = {
+    val __props = js.Dynamic.literal(entryPoint = entryPoint.asInstanceOf[js.Any], entryPointParams = entryPointParams.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any])
+    new Builder[TEntryPointParams, TPreloadedQueries, TPreloadedEntryPoints, TRuntimeProps, TExtraProps](js.Array(this.component, __props.asInstanceOf[EntryPointContainerProps[
+      // tslint:disable-next-line no-unnecessary-generics
+  TEntryPointParams, 
+      // tslint:disable-next-line no-unnecessary-generics
+  TPreloadedQueries, 
+      // tslint:disable-next-line no-unnecessary-generics
+  TPreloadedEntryPoints, 
+      // tslint:disable-next-line no-unnecessary-generics
+  TRuntimeProps, 
+      // tslint:disable-next-line no-unnecessary-generics
+  TExtraProps
+    ]]))
   }
-  type Props = EntryPointContainerProps[js.Any, js.Any, js.Any, js.Any, js.Any]
 }
 

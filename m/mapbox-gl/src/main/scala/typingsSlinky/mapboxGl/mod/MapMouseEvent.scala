@@ -1,5 +1,6 @@
 package typingsSlinky.mapboxGl.mod
 
+import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.mapboxGl.mapboxGlStrings.click
 import typingsSlinky.mapboxGl.mapboxGlStrings.contextmenu
 import typingsSlinky.mapboxGl.mapboxGlStrings.dblclick
@@ -10,7 +11,6 @@ import typingsSlinky.mapboxGl.mapboxGlStrings.mousemove
 import typingsSlinky.mapboxGl.mapboxGlStrings.mouseout
 import typingsSlinky.mapboxGl.mapboxGlStrings.mouseover
 import typingsSlinky.mapboxGl.mapboxGlStrings.mouseup
-import typingsSlinky.std.MouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

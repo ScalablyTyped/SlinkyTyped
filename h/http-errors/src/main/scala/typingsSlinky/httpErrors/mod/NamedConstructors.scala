@@ -6,90 +6,91 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {[code: string] : http-errors.http-errors.HttpErrorConstructor,   HttpError  :http-errors.http-errors.HttpErrorConstructor} & std.Record<'BadRequest' | 'Unauthorized' | 'PaymentRequired' | 'Forbidden' | 'NotFound' | 'MethodNotAllowed' | 'NotAcceptable' | 'ProxyAuthenticationRequired' | 'RequestTimeout' | 'Conflict' | 'Gone' | 'LengthRequired' | 'PreconditionFailed' | 'PayloadTooLarge' | 'URITooLong' | 'UnsupportedMediaType' | 'RangeNotSatisfiable' | 'ExpectationFailed' | 'ImATeapot' | 'MisdirectedRequest' | 'UnprocessableEntity' | 'Locked' | 'FailedDependency' | 'UnorderedCollection' | 'UpgradeRequired' | 'PreconditionRequired' | 'TooManyRequests' | 'RequestHeaderFieldsTooLarge' | 'UnavailableForLegalReasons' | 'InternalServerError' | 'NotImplemented' | 'BadGateway' | 'ServiceUnavailable' | 'GatewayTimeout' | 'HTTPVersionNotSupported' | 'VariantAlsoNegotiates' | 'InsufficientStorage' | 'LoopDetected' | 'BandwidthLimitExceeded' | 'NotExtended' | 'NetworkAuthenticationRequire' | '400' | '401' | '402' | '403' | '404' | '405' | '406' | '407' | '408' | '409' | '410' | '411' | '412' | '413' | '414' | '415' | '416' | '417' | '418' | '421' | '422' | '423' | '424' | '425' | '426' | '428' | '429' | '431' | '451' | '500' | '501' | '502' | '503' | '504' | '505' | '506' | '507' | '508' | '509' | '510' | '511', http-errors.http-errors.HttpErrorConstructor> */
+@js.native
 trait NamedConstructors extends /* code */ StringDictionary[HttpErrorConstructor] {
-  var `400`: HttpErrorConstructor
-  var `401`: HttpErrorConstructor
-  var `402`: HttpErrorConstructor
-  var `403`: HttpErrorConstructor
-  var `404`: HttpErrorConstructor
-  var `405`: HttpErrorConstructor
-  var `406`: HttpErrorConstructor
-  var `407`: HttpErrorConstructor
-  var `408`: HttpErrorConstructor
-  var `409`: HttpErrorConstructor
-  var `410`: HttpErrorConstructor
-  var `411`: HttpErrorConstructor
-  var `412`: HttpErrorConstructor
-  var `413`: HttpErrorConstructor
-  var `414`: HttpErrorConstructor
-  var `415`: HttpErrorConstructor
-  var `416`: HttpErrorConstructor
-  var `417`: HttpErrorConstructor
-  var `418`: HttpErrorConstructor
-  var `421`: HttpErrorConstructor
-  var `422`: HttpErrorConstructor
-  var `423`: HttpErrorConstructor
-  var `424`: HttpErrorConstructor
-  var `425`: HttpErrorConstructor
-  var `426`: HttpErrorConstructor
-  var `428`: HttpErrorConstructor
-  var `429`: HttpErrorConstructor
-  var `431`: HttpErrorConstructor
-  var `451`: HttpErrorConstructor
-  var `500`: HttpErrorConstructor
-  var `501`: HttpErrorConstructor
-  var `502`: HttpErrorConstructor
-  var `503`: HttpErrorConstructor
-  var `504`: HttpErrorConstructor
-  var `505`: HttpErrorConstructor
-  var `506`: HttpErrorConstructor
-  var `507`: HttpErrorConstructor
-  var `508`: HttpErrorConstructor
-  var `509`: HttpErrorConstructor
-  var `510`: HttpErrorConstructor
-  var `511`: HttpErrorConstructor
-  var BadGateway: HttpErrorConstructor
-  var BadRequest: HttpErrorConstructor
-  var BandwidthLimitExceeded: HttpErrorConstructor
-  var Conflict: HttpErrorConstructor
-  var ExpectationFailed: HttpErrorConstructor
-  var FailedDependency: HttpErrorConstructor
-  var Forbidden: HttpErrorConstructor
-  var GatewayTimeout: HttpErrorConstructor
-  var Gone: HttpErrorConstructor
-  var HTTPVersionNotSupported: HttpErrorConstructor
-  var HttpError: HttpErrorConstructor
-  var ImATeapot: HttpErrorConstructor
-  var InsufficientStorage: HttpErrorConstructor
-  var InternalServerError: HttpErrorConstructor
-  var LengthRequired: HttpErrorConstructor
-  var Locked: HttpErrorConstructor
-  var LoopDetected: HttpErrorConstructor
-  var MethodNotAllowed: HttpErrorConstructor
-  var MisdirectedRequest: HttpErrorConstructor
-  var NetworkAuthenticationRequire: HttpErrorConstructor
-  var NotAcceptable: HttpErrorConstructor
-  var NotExtended: HttpErrorConstructor
-  var NotFound: HttpErrorConstructor
-  var NotImplemented: HttpErrorConstructor
-  var PayloadTooLarge: HttpErrorConstructor
-  var PaymentRequired: HttpErrorConstructor
-  var PreconditionFailed: HttpErrorConstructor
-  var PreconditionRequired: HttpErrorConstructor
-  var ProxyAuthenticationRequired: HttpErrorConstructor
-  var RangeNotSatisfiable: HttpErrorConstructor
-  var RequestHeaderFieldsTooLarge: HttpErrorConstructor
-  var RequestTimeout: HttpErrorConstructor
-  var ServiceUnavailable: HttpErrorConstructor
-  var TooManyRequests: HttpErrorConstructor
-  var URITooLong: HttpErrorConstructor
-  var Unauthorized: HttpErrorConstructor
-  var UnavailableForLegalReasons: HttpErrorConstructor
-  var UnorderedCollection: HttpErrorConstructor
-  var UnprocessableEntity: HttpErrorConstructor
-  var UnsupportedMediaType: HttpErrorConstructor
-  var UpgradeRequired: HttpErrorConstructor
-  var VariantAlsoNegotiates: HttpErrorConstructor
+  var `400`: HttpErrorConstructor = js.native
+  var `401`: HttpErrorConstructor = js.native
+  var `402`: HttpErrorConstructor = js.native
+  var `403`: HttpErrorConstructor = js.native
+  var `404`: HttpErrorConstructor = js.native
+  var `405`: HttpErrorConstructor = js.native
+  var `406`: HttpErrorConstructor = js.native
+  var `407`: HttpErrorConstructor = js.native
+  var `408`: HttpErrorConstructor = js.native
+  var `409`: HttpErrorConstructor = js.native
+  var `410`: HttpErrorConstructor = js.native
+  var `411`: HttpErrorConstructor = js.native
+  var `412`: HttpErrorConstructor = js.native
+  var `413`: HttpErrorConstructor = js.native
+  var `414`: HttpErrorConstructor = js.native
+  var `415`: HttpErrorConstructor = js.native
+  var `416`: HttpErrorConstructor = js.native
+  var `417`: HttpErrorConstructor = js.native
+  var `418`: HttpErrorConstructor = js.native
+  var `421`: HttpErrorConstructor = js.native
+  var `422`: HttpErrorConstructor = js.native
+  var `423`: HttpErrorConstructor = js.native
+  var `424`: HttpErrorConstructor = js.native
+  var `425`: HttpErrorConstructor = js.native
+  var `426`: HttpErrorConstructor = js.native
+  var `428`: HttpErrorConstructor = js.native
+  var `429`: HttpErrorConstructor = js.native
+  var `431`: HttpErrorConstructor = js.native
+  var `451`: HttpErrorConstructor = js.native
+  var `500`: HttpErrorConstructor = js.native
+  var `501`: HttpErrorConstructor = js.native
+  var `502`: HttpErrorConstructor = js.native
+  var `503`: HttpErrorConstructor = js.native
+  var `504`: HttpErrorConstructor = js.native
+  var `505`: HttpErrorConstructor = js.native
+  var `506`: HttpErrorConstructor = js.native
+  var `507`: HttpErrorConstructor = js.native
+  var `508`: HttpErrorConstructor = js.native
+  var `509`: HttpErrorConstructor = js.native
+  var `510`: HttpErrorConstructor = js.native
+  var `511`: HttpErrorConstructor = js.native
+  var BadGateway: HttpErrorConstructor = js.native
+  var BadRequest: HttpErrorConstructor = js.native
+  var BandwidthLimitExceeded: HttpErrorConstructor = js.native
+  var Conflict: HttpErrorConstructor = js.native
+  var ExpectationFailed: HttpErrorConstructor = js.native
+  var FailedDependency: HttpErrorConstructor = js.native
+  var Forbidden: HttpErrorConstructor = js.native
+  var GatewayTimeout: HttpErrorConstructor = js.native
+  var Gone: HttpErrorConstructor = js.native
+  var HTTPVersionNotSupported: HttpErrorConstructor = js.native
+  var HttpError: HttpErrorConstructor = js.native
+  var ImATeapot: HttpErrorConstructor = js.native
+  var InsufficientStorage: HttpErrorConstructor = js.native
+  var InternalServerError: HttpErrorConstructor = js.native
+  var LengthRequired: HttpErrorConstructor = js.native
+  var Locked: HttpErrorConstructor = js.native
+  var LoopDetected: HttpErrorConstructor = js.native
+  var MethodNotAllowed: HttpErrorConstructor = js.native
+  var MisdirectedRequest: HttpErrorConstructor = js.native
+  var NetworkAuthenticationRequire: HttpErrorConstructor = js.native
+  var NotAcceptable: HttpErrorConstructor = js.native
+  var NotExtended: HttpErrorConstructor = js.native
+  var NotFound: HttpErrorConstructor = js.native
+  var NotImplemented: HttpErrorConstructor = js.native
+  var PayloadTooLarge: HttpErrorConstructor = js.native
+  var PaymentRequired: HttpErrorConstructor = js.native
+  var PreconditionFailed: HttpErrorConstructor = js.native
+  var PreconditionRequired: HttpErrorConstructor = js.native
+  var ProxyAuthenticationRequired: HttpErrorConstructor = js.native
+  var RangeNotSatisfiable: HttpErrorConstructor = js.native
+  var RequestHeaderFieldsTooLarge: HttpErrorConstructor = js.native
+  var RequestTimeout: HttpErrorConstructor = js.native
+  var ServiceUnavailable: HttpErrorConstructor = js.native
+  var TooManyRequests: HttpErrorConstructor = js.native
+  var URITooLong: HttpErrorConstructor = js.native
+  var Unauthorized: HttpErrorConstructor = js.native
+  var UnavailableForLegalReasons: HttpErrorConstructor = js.native
+  var UnorderedCollection: HttpErrorConstructor = js.native
+  var UnprocessableEntity: HttpErrorConstructor = js.native
+  var UnsupportedMediaType: HttpErrorConstructor = js.native
+  var UpgradeRequired: HttpErrorConstructor = js.native
+  var VariantAlsoNegotiates: HttpErrorConstructor = js.native
 }
 
 object NamedConstructors {
@@ -177,8 +178,7 @@ object NamedConstructors {
     UnprocessableEntity: HttpErrorConstructor,
     UnsupportedMediaType: HttpErrorConstructor,
     UpgradeRequired: HttpErrorConstructor,
-    VariantAlsoNegotiates: HttpErrorConstructor,
-    StringDictionary: /* code */ StringDictionary[HttpErrorConstructor] = null
+    VariantAlsoNegotiates: HttpErrorConstructor
   ): NamedConstructors = {
     val __obj = js.Dynamic.literal(BadGateway = BadGateway.asInstanceOf[js.Any], BadRequest = BadRequest.asInstanceOf[js.Any], BandwidthLimitExceeded = BandwidthLimitExceeded.asInstanceOf[js.Any], Conflict = Conflict.asInstanceOf[js.Any], ExpectationFailed = ExpectationFailed.asInstanceOf[js.Any], FailedDependency = FailedDependency.asInstanceOf[js.Any], Forbidden = Forbidden.asInstanceOf[js.Any], GatewayTimeout = GatewayTimeout.asInstanceOf[js.Any], Gone = Gone.asInstanceOf[js.Any], HTTPVersionNotSupported = HTTPVersionNotSupported.asInstanceOf[js.Any], HttpError = HttpError.asInstanceOf[js.Any], ImATeapot = ImATeapot.asInstanceOf[js.Any], InsufficientStorage = InsufficientStorage.asInstanceOf[js.Any], InternalServerError = InternalServerError.asInstanceOf[js.Any], LengthRequired = LengthRequired.asInstanceOf[js.Any], Locked = Locked.asInstanceOf[js.Any], LoopDetected = LoopDetected.asInstanceOf[js.Any], MethodNotAllowed = MethodNotAllowed.asInstanceOf[js.Any], MisdirectedRequest = MisdirectedRequest.asInstanceOf[js.Any], NetworkAuthenticationRequire = NetworkAuthenticationRequire.asInstanceOf[js.Any], NotAcceptable = NotAcceptable.asInstanceOf[js.Any], NotExtended = NotExtended.asInstanceOf[js.Any], NotFound = NotFound.asInstanceOf[js.Any], NotImplemented = NotImplemented.asInstanceOf[js.Any], PayloadTooLarge = PayloadTooLarge.asInstanceOf[js.Any], PaymentRequired = PaymentRequired.asInstanceOf[js.Any], PreconditionFailed = PreconditionFailed.asInstanceOf[js.Any], PreconditionRequired = PreconditionRequired.asInstanceOf[js.Any], ProxyAuthenticationRequired = ProxyAuthenticationRequired.asInstanceOf[js.Any], RangeNotSatisfiable = RangeNotSatisfiable.asInstanceOf[js.Any], RequestHeaderFieldsTooLarge = RequestHeaderFieldsTooLarge.asInstanceOf[js.Any], RequestTimeout = RequestTimeout.asInstanceOf[js.Any], ServiceUnavailable = ServiceUnavailable.asInstanceOf[js.Any], TooManyRequests = TooManyRequests.asInstanceOf[js.Any], URITooLong = URITooLong.asInstanceOf[js.Any], Unauthorized = Unauthorized.asInstanceOf[js.Any], UnavailableForLegalReasons = UnavailableForLegalReasons.asInstanceOf[js.Any], UnorderedCollection = UnorderedCollection.asInstanceOf[js.Any], UnprocessableEntity = UnprocessableEntity.asInstanceOf[js.Any], UnsupportedMediaType = UnsupportedMediaType.asInstanceOf[js.Any], UpgradeRequired = UpgradeRequired.asInstanceOf[js.Any], VariantAlsoNegotiates = VariantAlsoNegotiates.asInstanceOf[js.Any])
     __obj.updateDynamic("400")(`400`.asInstanceOf[js.Any])
@@ -222,8 +222,513 @@ object NamedConstructors {
     __obj.updateDynamic("509")(`509`.asInstanceOf[js.Any])
     __obj.updateDynamic("510")(`510`.asInstanceOf[js.Any])
     __obj.updateDynamic("511")(`511`.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[NamedConstructors]
   }
+  @scala.inline
+  implicit class NamedConstructorsOps[Self <: NamedConstructors] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with400(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("400")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with401(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("401")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with402(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("402")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with403(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("403")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with404(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("404")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with405(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("405")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with406(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("406")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with407(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("407")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with408(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("408")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with409(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("409")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with410(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("410")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with411(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("411")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with412(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("412")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with413(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("413")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with414(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("414")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with415(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("415")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with416(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("416")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with417(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("417")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with418(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("418")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with421(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("421")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with422(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("422")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with423(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("423")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with424(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("424")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with425(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("425")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with426(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("426")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with428(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("428")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with429(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("429")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with431(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("431")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with451(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("451")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with500(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("500")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with501(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("501")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with502(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("502")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with503(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("503")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with504(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("504")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with505(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("505")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with506(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("506")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with507(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("507")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with508(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("508")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with509(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("509")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with510(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("510")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with511(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("511")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBadGateway(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BadGateway")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBadRequest(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BadRequest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBandwidthLimitExceeded(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BandwidthLimitExceeded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConflict(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Conflict")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExpectationFailed(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpectationFailed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFailedDependency(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedDependency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForbidden(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Forbidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGatewayTimeout(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGone(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Gone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHTTPVersionNotSupported(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HTTPVersionNotSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHttpError(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImATeapot(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImATeapot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInsufficientStorage(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InsufficientStorage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInternalServerError(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InternalServerError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLengthRequired(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LengthRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocked(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Locked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoopDetected(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoopDetected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMethodNotAllowed(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MethodNotAllowed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMisdirectedRequest(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MisdirectedRequest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNetworkAuthenticationRequire(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkAuthenticationRequire")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNotAcceptable(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotAcceptable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNotExtended(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotExtended")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNotFound(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotFound")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNotImplemented(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotImplemented")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPayloadTooLarge(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PayloadTooLarge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaymentRequired(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaymentRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreconditionFailed(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreconditionFailed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreconditionRequired(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreconditionRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProxyAuthenticationRequired(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProxyAuthenticationRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRangeNotSatisfiable(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RangeNotSatisfiable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRequestHeaderFieldsTooLarge(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestHeaderFieldsTooLarge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRequestTimeout(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServiceUnavailable(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceUnavailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTooManyRequests(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TooManyRequests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withURITooLong(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("URITooLong")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnauthorized(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unauthorized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnavailableForLegalReasons(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnavailableForLegalReasons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnorderedCollection(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnorderedCollection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnprocessableEntity(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnprocessableEntity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnsupportedMediaType(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnsupportedMediaType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpgradeRequired(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpgradeRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVariantAlsoNegotiates(value: HttpErrorConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VariantAlsoNegotiates")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

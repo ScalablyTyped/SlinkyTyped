@@ -1,7 +1,7 @@
 
 # Scala.js typings for xo
 
-Typings are for version 0.26
+Typings are for version 0.28
 
 ## Library description:
 JavaScript/TypeScript linter with great defaults

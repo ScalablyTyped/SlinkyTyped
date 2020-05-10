@@ -7,5 +7,6 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("SVGPathSegClosePath")
 @js.native
-object SVGPathSegClosePath extends Instantiable0[SVGPathSegClosePath]
+object SVGPathSegClosePath
+  extends Instantiable0[org.scalajs.dom.raw.SVGPathSegClosePath]
 

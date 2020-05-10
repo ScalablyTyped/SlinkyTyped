@@ -62,3 +62,55 @@ trait ParamsResourceV1Watch extends StandardParameters {
   var target: js.UndefOr[String] = js.native
 }
 
+object ParamsResourceV1Watch {
+  @scala.inline
+  def apply(): ParamsResourceV1Watch = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ParamsResourceV1Watch]
+  }
+  @scala.inline
+  implicit class ParamsResourceV1WatchOps[Self <: ParamsResourceV1Watch] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResumeMarker(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResumeMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeMarker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTarget(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

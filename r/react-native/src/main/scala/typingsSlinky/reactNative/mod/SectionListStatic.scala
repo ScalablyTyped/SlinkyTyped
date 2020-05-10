@@ -1,13 +1,13 @@
 package typingsSlinky.reactNative.mod
 
 import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SectionListStatic[SectionT] extends ComponentClass[SectionListProps[SectionT], ComponentState] {
+trait SectionListStatic[SectionT]
+  extends ComponentClass[SectionListProps[SectionT], js.Object] {
   /**
     * Scrolls to the item at the specified sectionIndex and itemIndex (within the section)
     * positioned in the viewable area such that viewPosition 0 places it at the top

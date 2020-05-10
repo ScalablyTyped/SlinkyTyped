@@ -9,331 +9,1027 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ParticleEmitterConfig extends js.Object {
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#accelerationX} (emit only).
     */
-  var accelerationX: js.UndefOr[EmitterOpOnEmitType] = js.undefined
+  var accelerationX: js.UndefOr[EmitterOpOnEmitType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#accelerationY} (emit only).
     */
-  var accelerationY: js.UndefOr[EmitterOpOnEmitType] = js.undefined
+  var accelerationY: js.UndefOr[EmitterOpOnEmitType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#active}.
     */
-  var active: js.UndefOr[Boolean] = js.undefined
+  var active: js.UndefOr[Boolean] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#alpha}.
     */
-  var alpha: js.UndefOr[EmitterOpOnEmitType | EmitterOpOnUpdateType] = js.undefined
+  var alpha: js.UndefOr[EmitterOpOnEmitType | EmitterOpOnUpdateType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#angle} (emit only).
     */
-  var angle: js.UndefOr[EmitterOpOnEmitType] = js.undefined
+  var angle: js.UndefOr[EmitterOpOnEmitType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#blendMode}.
     */
-  var blendMode: js.UndefOr[BlendModes | String] = js.undefined
+  var blendMode: js.UndefOr[BlendModes | String] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#bounce} (emit only).
     */
-  var bounce: js.UndefOr[EmitterOpOnEmitType] = js.undefined
+  var bounce: js.UndefOr[EmitterOpOnEmitType] = js.native
   /**
     * As {@link Phaser.GameObjects.Particles.ParticleEmitter#setBounds}.
     */
-  var bounds: js.UndefOr[ParticleEmitterBounds | ParticleEmitterBoundsAlt] = js.undefined
+  var bounds: js.UndefOr[ParticleEmitterBounds | ParticleEmitterBoundsAlt] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#deathCallbackScope} and {@link Phaser.GameObjects.Particles.ParticleEmitter#emitCallbackScope}.
     */
-  var callbackScope: js.UndefOr[js.Any] = js.undefined
+  var callbackScope: js.UndefOr[js.Any] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#collideBottom}.
     */
-  var collideBottom: js.UndefOr[Boolean] = js.undefined
+  var collideBottom: js.UndefOr[Boolean] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#collideLeft}.
     */
-  var collideLeft: js.UndefOr[Boolean] = js.undefined
+  var collideLeft: js.UndefOr[Boolean] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#collideRight}.
     */
-  var collideRight: js.UndefOr[Boolean] = js.undefined
+  var collideRight: js.UndefOr[Boolean] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#collideTop}.
     */
-  var collideTop: js.UndefOr[Boolean] = js.undefined
+  var collideTop: js.UndefOr[Boolean] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#deathCallback}.
     */
-  var deathCallback: js.UndefOr[Boolean] = js.undefined
+  var deathCallback: js.UndefOr[Boolean] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#deathCallbackScope}.
     */
-  var deathCallbackScope: js.UndefOr[js.Any] = js.undefined
+  var deathCallbackScope: js.UndefOr[js.Any] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#delay} (emit only).
     */
-  var delay: js.UndefOr[EmitterOpOnEmitType] = js.undefined
+  var delay: js.UndefOr[EmitterOpOnEmitType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#emitCallback}.
     */
-  var emitCallback: js.UndefOr[js.Function] = js.undefined
+  var emitCallback: js.UndefOr[js.Function] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#emitCallbackScope}.
     */
-  var emitCallbackScope: js.UndefOr[js.Any] = js.undefined
+  var emitCallbackScope: js.UndefOr[js.Any] = js.native
   /**
     * As {@link Phaser.GameObjects.Particles.ParticleEmitter#setEmitZone}.
     */
-  var emitZone: js.UndefOr[js.Object] = js.undefined
+  var emitZone: js.UndefOr[js.Object] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#follow}.
     */
-  var follow: js.UndefOr[GameObject] = js.undefined
+  var follow: js.UndefOr[GameObject] = js.native
   /**
     * Assigns to {@link Phaser.GameObjects.Particles.ParticleEmitter#followOffset}.
     */
-  var followOffset: js.UndefOr[js.Object] = js.undefined
+  var followOffset: js.UndefOr[js.Object] = js.native
   /**
     * x-coordinate of the offset.
     */
   @JSName("followOffset.x")
-  var followOffsetDotx: js.UndefOr[Double] = js.undefined
+  var followOffsetDotx: js.UndefOr[Double] = js.native
   /**
     * y-coordinate of the offset.
     */
   @JSName("followOffset.y")
-  var followOffsetDoty: js.UndefOr[Double] = js.undefined
+  var followOffsetDoty: js.UndefOr[Double] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#frames}.
     */
   var frame: js.UndefOr[
     Double | (js.Array[Double | Frame | String]) | String | Frame | ParticleEmitterFrameConfig
-  ] = js.undefined
+  ] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#frequency}.
     */
-  var frequency: js.UndefOr[Double] = js.undefined
+  var frequency: js.UndefOr[Double] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#gravityX}.
     */
-  var gravityX: js.UndefOr[Double] = js.undefined
+  var gravityX: js.UndefOr[Double] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#gravityY}.
     */
-  var gravityY: js.UndefOr[Double] = js.undefined
+  var gravityY: js.UndefOr[Double] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#lifespan} (emit only).
     */
-  var lifespan: js.UndefOr[EmitterOpOnEmitType] = js.undefined
+  var lifespan: js.UndefOr[EmitterOpOnEmitType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#maxParticles}.
     */
-  var maxParticles: js.UndefOr[integer] = js.undefined
+  var maxParticles: js.UndefOr[integer] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#maxVelocityX} (emit only).
     */
-  var maxVelocityX: js.UndefOr[EmitterOpOnEmitType] = js.undefined
+  var maxVelocityX: js.UndefOr[EmitterOpOnEmitType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#maxVelocityY} (emit only).
     */
-  var maxVelocityY: js.UndefOr[EmitterOpOnEmitType] = js.undefined
+  var maxVelocityY: js.UndefOr[EmitterOpOnEmitType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#moveToX} (emit only).
     */
-  var moveToX: js.UndefOr[EmitterOpOnEmitType] = js.undefined
+  var moveToX: js.UndefOr[EmitterOpOnEmitType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#moveToY} (emit only).
     */
-  var moveToY: js.UndefOr[EmitterOpOnEmitType] = js.undefined
+  var moveToY: js.UndefOr[EmitterOpOnEmitType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#name}.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#on}.
     */
-  var on: js.UndefOr[Boolean] = js.undefined
+  var on: js.UndefOr[Boolean] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#particleBringToTop}.
     */
-  var particleBringToTop: js.UndefOr[Boolean] = js.undefined
+  var particleBringToTop: js.UndefOr[Boolean] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#particleClass}.
     */
-  var particleClass: js.UndefOr[Particle] = js.undefined
+  var particleClass: js.UndefOr[Particle] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#quantity} (emit only).
     */
-  var quantity: js.UndefOr[EmitterOpOnEmitType] = js.undefined
+  var quantity: js.UndefOr[EmitterOpOnEmitType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#radial}.
     */
-  var radial: js.UndefOr[Boolean] = js.undefined
+  var radial: js.UndefOr[Boolean] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#rotate}.
     */
-  var rotate: js.UndefOr[EmitterOpOnEmitType | EmitterOpOnUpdateType] = js.undefined
+  var rotate: js.UndefOr[EmitterOpOnEmitType | EmitterOpOnUpdateType] = js.native
   /**
     * As {@link Phaser.GameObjects.Particles.ParticleEmitter#setScale}.
     */
-  var scale: js.UndefOr[EmitterOpOnEmitType | EmitterOpOnUpdateType] = js.undefined
+  var scale: js.UndefOr[EmitterOpOnEmitType | EmitterOpOnUpdateType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#scaleX}.
     */
-  var scaleX: js.UndefOr[EmitterOpOnEmitType | EmitterOpOnUpdateType] = js.undefined
+  var scaleX: js.UndefOr[EmitterOpOnEmitType | EmitterOpOnUpdateType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#scaleY}.
     */
-  var scaleY: js.UndefOr[EmitterOpOnEmitType | EmitterOpOnUpdateType] = js.undefined
+  var scaleY: js.UndefOr[EmitterOpOnEmitType | EmitterOpOnUpdateType] = js.native
   /**
     * As {@link Phaser.GameObjects.Particles.ParticleEmitter#setSpeed} (emit only).
     */
-  var speed: js.UndefOr[EmitterOpOnEmitType] = js.undefined
+  var speed: js.UndefOr[EmitterOpOnEmitType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#speedX} (emit only).
     */
-  var speedX: js.UndefOr[EmitterOpOnEmitType] = js.undefined
+  var speedX: js.UndefOr[EmitterOpOnEmitType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#speedY} (emit only).
     */
-  var speedY: js.UndefOr[EmitterOpOnEmitType] = js.undefined
+  var speedY: js.UndefOr[EmitterOpOnEmitType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#timeScale}.
     */
-  var timeScale: js.UndefOr[Double] = js.undefined
+  var timeScale: js.UndefOr[Double] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#tint}.
     */
-  var tint: js.UndefOr[EmitterOpOnEmitType | EmitterOpOnUpdateType] = js.undefined
+  var tint: js.UndefOr[EmitterOpOnEmitType | EmitterOpOnUpdateType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#trackVisible}.
     */
-  var trackVisible: js.UndefOr[Boolean] = js.undefined
+  var trackVisible: js.UndefOr[Boolean] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#visible}.
     */
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#x} (emit only).
     */
-  var x: js.UndefOr[EmitterOpOnEmitType] = js.undefined
+  var x: js.UndefOr[EmitterOpOnEmitType] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Particles.ParticleEmitter#y} (emit only).
     */
-  var y: js.UndefOr[EmitterOpOnEmitType] = js.undefined
+  var y: js.UndefOr[EmitterOpOnEmitType] = js.native
 }
 
 object ParticleEmitterConfig {
   @scala.inline
-  def apply(
-    accelerationX: EmitterOpOnEmitType = null,
-    accelerationY: EmitterOpOnEmitType = null,
-    active: js.UndefOr[Boolean] = js.undefined,
-    alpha: EmitterOpOnEmitType | EmitterOpOnUpdateType = null,
-    angle: EmitterOpOnEmitType = null,
-    blendMode: BlendModes | String = null,
-    bounce: EmitterOpOnEmitType = null,
-    bounds: ParticleEmitterBounds | ParticleEmitterBoundsAlt = null,
-    callbackScope: js.Any = null,
-    collideBottom: js.UndefOr[Boolean] = js.undefined,
-    collideLeft: js.UndefOr[Boolean] = js.undefined,
-    collideRight: js.UndefOr[Boolean] = js.undefined,
-    collideTop: js.UndefOr[Boolean] = js.undefined,
-    deathCallback: js.UndefOr[Boolean] = js.undefined,
-    deathCallbackScope: js.Any = null,
-    delay: EmitterOpOnEmitType = null,
-    emitCallback: js.Function = null,
-    emitCallbackScope: js.Any = null,
-    emitZone: js.Object = null,
-    follow: GameObject = null,
-    followOffset: js.Object = null,
-    followOffsetDotx: Int | Double = null,
-    followOffsetDoty: Int | Double = null,
-    frame: Double | (js.Array[Double | Frame | String]) | String | Frame | ParticleEmitterFrameConfig = null,
-    frequency: Int | Double = null,
-    gravityX: Int | Double = null,
-    gravityY: Int | Double = null,
-    lifespan: EmitterOpOnEmitType = null,
-    maxParticles: Int | Double = null,
-    maxVelocityX: EmitterOpOnEmitType = null,
-    maxVelocityY: EmitterOpOnEmitType = null,
-    moveToX: EmitterOpOnEmitType = null,
-    moveToY: EmitterOpOnEmitType = null,
-    name: String = null,
-    on: js.UndefOr[Boolean] = js.undefined,
-    particleBringToTop: js.UndefOr[Boolean] = js.undefined,
-    particleClass: Particle = null,
-    quantity: EmitterOpOnEmitType = null,
-    radial: js.UndefOr[Boolean] = js.undefined,
-    rotate: EmitterOpOnEmitType | EmitterOpOnUpdateType = null,
-    scale: EmitterOpOnEmitType | EmitterOpOnUpdateType = null,
-    scaleX: EmitterOpOnEmitType | EmitterOpOnUpdateType = null,
-    scaleY: EmitterOpOnEmitType | EmitterOpOnUpdateType = null,
-    speed: EmitterOpOnEmitType = null,
-    speedX: EmitterOpOnEmitType = null,
-    speedY: EmitterOpOnEmitType = null,
-    timeScale: Int | Double = null,
-    tint: EmitterOpOnEmitType | EmitterOpOnUpdateType = null,
-    trackVisible: js.UndefOr[Boolean] = js.undefined,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    x: EmitterOpOnEmitType = null,
-    y: EmitterOpOnEmitType = null
-  ): ParticleEmitterConfig = {
+  def apply(): ParticleEmitterConfig = {
     val __obj = js.Dynamic.literal()
-    if (accelerationX != null) __obj.updateDynamic("accelerationX")(accelerationX.asInstanceOf[js.Any])
-    if (accelerationY != null) __obj.updateDynamic("accelerationY")(accelerationY.asInstanceOf[js.Any])
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (alpha != null) __obj.updateDynamic("alpha")(alpha.asInstanceOf[js.Any])
-    if (angle != null) __obj.updateDynamic("angle")(angle.asInstanceOf[js.Any])
-    if (blendMode != null) __obj.updateDynamic("blendMode")(blendMode.asInstanceOf[js.Any])
-    if (bounce != null) __obj.updateDynamic("bounce")(bounce.asInstanceOf[js.Any])
-    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
-    if (callbackScope != null) __obj.updateDynamic("callbackScope")(callbackScope.asInstanceOf[js.Any])
-    if (!js.isUndefined(collideBottom)) __obj.updateDynamic("collideBottom")(collideBottom.asInstanceOf[js.Any])
-    if (!js.isUndefined(collideLeft)) __obj.updateDynamic("collideLeft")(collideLeft.asInstanceOf[js.Any])
-    if (!js.isUndefined(collideRight)) __obj.updateDynamic("collideRight")(collideRight.asInstanceOf[js.Any])
-    if (!js.isUndefined(collideTop)) __obj.updateDynamic("collideTop")(collideTop.asInstanceOf[js.Any])
-    if (!js.isUndefined(deathCallback)) __obj.updateDynamic("deathCallback")(deathCallback.asInstanceOf[js.Any])
-    if (deathCallbackScope != null) __obj.updateDynamic("deathCallbackScope")(deathCallbackScope.asInstanceOf[js.Any])
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (emitCallback != null) __obj.updateDynamic("emitCallback")(emitCallback.asInstanceOf[js.Any])
-    if (emitCallbackScope != null) __obj.updateDynamic("emitCallbackScope")(emitCallbackScope.asInstanceOf[js.Any])
-    if (emitZone != null) __obj.updateDynamic("emitZone")(emitZone.asInstanceOf[js.Any])
-    if (follow != null) __obj.updateDynamic("follow")(follow.asInstanceOf[js.Any])
-    if (followOffset != null) __obj.updateDynamic("followOffset")(followOffset.asInstanceOf[js.Any])
-    if (followOffsetDotx != null) __obj.updateDynamic("followOffset.x")(followOffsetDotx.asInstanceOf[js.Any])
-    if (followOffsetDoty != null) __obj.updateDynamic("followOffset.y")(followOffsetDoty.asInstanceOf[js.Any])
-    if (frame != null) __obj.updateDynamic("frame")(frame.asInstanceOf[js.Any])
-    if (frequency != null) __obj.updateDynamic("frequency")(frequency.asInstanceOf[js.Any])
-    if (gravityX != null) __obj.updateDynamic("gravityX")(gravityX.asInstanceOf[js.Any])
-    if (gravityY != null) __obj.updateDynamic("gravityY")(gravityY.asInstanceOf[js.Any])
-    if (lifespan != null) __obj.updateDynamic("lifespan")(lifespan.asInstanceOf[js.Any])
-    if (maxParticles != null) __obj.updateDynamic("maxParticles")(maxParticles.asInstanceOf[js.Any])
-    if (maxVelocityX != null) __obj.updateDynamic("maxVelocityX")(maxVelocityX.asInstanceOf[js.Any])
-    if (maxVelocityY != null) __obj.updateDynamic("maxVelocityY")(maxVelocityY.asInstanceOf[js.Any])
-    if (moveToX != null) __obj.updateDynamic("moveToX")(moveToX.asInstanceOf[js.Any])
-    if (moveToY != null) __obj.updateDynamic("moveToY")(moveToY.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(on)) __obj.updateDynamic("on")(on.asInstanceOf[js.Any])
-    if (!js.isUndefined(particleBringToTop)) __obj.updateDynamic("particleBringToTop")(particleBringToTop.asInstanceOf[js.Any])
-    if (particleClass != null) __obj.updateDynamic("particleClass")(particleClass.asInstanceOf[js.Any])
-    if (quantity != null) __obj.updateDynamic("quantity")(quantity.asInstanceOf[js.Any])
-    if (!js.isUndefined(radial)) __obj.updateDynamic("radial")(radial.asInstanceOf[js.Any])
-    if (rotate != null) __obj.updateDynamic("rotate")(rotate.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (scaleX != null) __obj.updateDynamic("scaleX")(scaleX.asInstanceOf[js.Any])
-    if (scaleY != null) __obj.updateDynamic("scaleY")(scaleY.asInstanceOf[js.Any])
-    if (speed != null) __obj.updateDynamic("speed")(speed.asInstanceOf[js.Any])
-    if (speedX != null) __obj.updateDynamic("speedX")(speedX.asInstanceOf[js.Any])
-    if (speedY != null) __obj.updateDynamic("speedY")(speedY.asInstanceOf[js.Any])
-    if (timeScale != null) __obj.updateDynamic("timeScale")(timeScale.asInstanceOf[js.Any])
-    if (tint != null) __obj.updateDynamic("tint")(tint.asInstanceOf[js.Any])
-    if (!js.isUndefined(trackVisible)) __obj.updateDynamic("trackVisible")(trackVisible.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParticleEmitterConfig]
   }
+  @scala.inline
+  implicit class ParticleEmitterConfigOps[Self <: ParticleEmitterConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccelerationXFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerationX")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withAccelerationX(value: EmitterOpOnEmitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerationX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccelerationX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerationX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccelerationYFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerationY")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withAccelerationY(value: EmitterOpOnEmitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerationY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccelerationY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerationY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlphaFunction4(value: (/* particle */ Particle, /* key */ String, /* t */ Double, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withAlphaFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withAlpha(value: EmitterOpOnEmitType | EmitterOpOnUpdateType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlpha: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAngleFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withAngle(value: EmitterOpOnEmitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlendMode(value: BlendModes | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blendMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlendMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blendMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBounceFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounce")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withBounce(value: EmitterOpOnEmitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounce")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBounce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounce")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBounds(value: ParticleEmitterBounds | ParticleEmitterBoundsAlt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCallbackScope(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackScope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallbackScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackScope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollideBottom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collideBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollideBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collideBottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollideLeft(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collideLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollideLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collideLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollideRight(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collideRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollideRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collideRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollideTop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collideTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollideTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collideTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeathCallback(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deathCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeathCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deathCallback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeathCallbackScope(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deathCallbackScope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeathCallbackScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deathCallbackScope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelayFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withDelay(value: EmitterOpOnEmitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmitCallback(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emitCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmitCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emitCallback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmitCallbackScope(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emitCallbackScope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmitCallbackScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emitCallbackScope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmitZone(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emitZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmitZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emitZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFollow(value: GameObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("follow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFollow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("follow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFollowOffset(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFollowOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFollowOffsetDotx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followOffset.x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFollowOffsetDotx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followOffset.x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFollowOffsetDoty(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followOffset.y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFollowOffsetDoty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followOffset.y")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrame(value: Double | (js.Array[Double | Frame | String]) | String | Frame | ParticleEmitterFrameConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrame: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrequency(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrequency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGravityX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gravityX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGravityX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gravityX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGravityY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gravityY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGravityY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gravityY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLifespanFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lifespan")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withLifespan(value: EmitterOpOnEmitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lifespan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLifespan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lifespan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxParticles(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxParticles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxParticles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxParticles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxVelocityXFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxVelocityX")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withMaxVelocityX(value: EmitterOpOnEmitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxVelocityX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxVelocityX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxVelocityX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxVelocityYFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxVelocityY")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withMaxVelocityY(value: EmitterOpOnEmitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxVelocityY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxVelocityY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxVelocityY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMoveToXFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveToX")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withMoveToX(value: EmitterOpOnEmitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveToX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMoveToX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveToX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMoveToYFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveToY")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withMoveToY(value: EmitterOpOnEmitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveToY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMoveToY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveToY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParticleBringToTop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("particleBringToTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParticleBringToTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("particleBringToTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParticleClass(value: Particle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("particleClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParticleClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("particleClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuantityFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withQuantity(value: EmitterOpOnEmitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuantity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadial(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadial: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radial")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotateFunction4(value: (/* particle */ Particle, /* key */ String, /* t */ Double, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withRotateFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withRotate(value: EmitterOpOnEmitType | EmitterOpOnUpdateType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleFunction4(value: (/* particle */ Particle, /* key */ String, /* t */ Double, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withScaleFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withScale(value: EmitterOpOnEmitType | EmitterOpOnUpdateType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleXFunction4(value: (/* particle */ Particle, /* key */ String, /* t */ Double, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withScaleXFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withScaleX(value: EmitterOpOnEmitType | EmitterOpOnUpdateType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleYFunction4(value: (/* particle */ Particle, /* key */ String, /* t */ Double, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withScaleYFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withScaleY(value: EmitterOpOnEmitType | EmitterOpOnUpdateType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpeedFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSpeed(value: EmitterOpOnEmitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpeedXFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speedX")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSpeedX(value: EmitterOpOnEmitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speedX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpeedX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speedX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpeedYFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speedY")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSpeedY(value: EmitterOpOnEmitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speedY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpeedY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speedY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeScale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTintFunction4(value: (/* particle */ Particle, /* key */ String, /* t */ Double, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tint")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withTintFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tint")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withTint(value: EmitterOpOnEmitType | EmitterOpOnUpdateType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrackVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackVisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withX(value: EmitterOpOnEmitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYFunction3(value: (/* particle */ Particle, /* key */ String, /* value */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withY(value: EmitterOpOnEmitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

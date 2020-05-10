@@ -14,10 +14,29 @@ trait CreateApiKeyResponse extends js.Object {
 
 object CreateApiKeyResponse {
   @scala.inline
-  def apply(apiKey: ApiKey = null): CreateApiKeyResponse = {
+  def apply(): CreateApiKeyResponse = {
     val __obj = js.Dynamic.literal()
-    if (apiKey != null) __obj.updateDynamic("apiKey")(apiKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateApiKeyResponse]
   }
+  @scala.inline
+  implicit class CreateApiKeyResponseOps[Self <: CreateApiKeyResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiKey(value: ApiKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApiKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKey")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

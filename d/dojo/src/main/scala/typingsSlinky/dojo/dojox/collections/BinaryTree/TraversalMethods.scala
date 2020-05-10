@@ -10,19 +10,20 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait TraversalMethods extends js.Object {
   /**
     *
     */
-  var Inorder: Double
+  var Inorder: Double = js.native
   /**
     *
     */
-  var Postorder: Double
+  var Postorder: Double = js.native
   /**
     *
     */
-  var Preorder: Double
+  var Preorder: Double = js.native
 }
 
 /**

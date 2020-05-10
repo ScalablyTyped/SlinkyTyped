@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class AlignmentPatternFinder protected () extends js.Object {
   def this(
-    image: scala.scalajs.js.typedarray.Uint8Array,
+    image: js.typedarray.Uint8Array,
     startX: Double,
     startY: Double,
     width: Double,
@@ -18,7 +18,7 @@ class AlignmentPatternFinder protected () extends js.Object {
   ) = this()
   var crossCheckStateCount: js.Tuple3[Double, Double, Double] = js.native
   var height: Double = js.native
-  var image: scala.scalajs.js.typedarray.Uint8Array = js.native
+  var image: js.typedarray.Uint8Array = js.native
   var moduleSize: Double = js.native
   var possibleCenters: js.Array[AlignmentPattern] = js.native
   var resultPointCallback: ResultPointCallback = js.native

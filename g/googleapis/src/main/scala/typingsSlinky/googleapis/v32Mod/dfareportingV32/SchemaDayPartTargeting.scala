@@ -35,16 +35,53 @@ trait SchemaDayPartTargeting extends js.Object {
 
 object SchemaDayPartTargeting {
   @scala.inline
-  def apply(
-    daysOfWeek: js.Array[String] = null,
-    hoursOfDay: js.Array[Double] = null,
-    userLocalTime: js.UndefOr[Boolean] = js.undefined
-  ): SchemaDayPartTargeting = {
+  def apply(): SchemaDayPartTargeting = {
     val __obj = js.Dynamic.literal()
-    if (daysOfWeek != null) __obj.updateDynamic("daysOfWeek")(daysOfWeek.asInstanceOf[js.Any])
-    if (hoursOfDay != null) __obj.updateDynamic("hoursOfDay")(hoursOfDay.asInstanceOf[js.Any])
-    if (!js.isUndefined(userLocalTime)) __obj.updateDynamic("userLocalTime")(userLocalTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDayPartTargeting]
   }
+  @scala.inline
+  implicit class SchemaDayPartTargetingOps[Self <: SchemaDayPartTargeting] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDaysOfWeek(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("daysOfWeek")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDaysOfWeek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("daysOfWeek")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoursOfDay(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoursOfDay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoursOfDay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoursOfDay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserLocalTime(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userLocalTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserLocalTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userLocalTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

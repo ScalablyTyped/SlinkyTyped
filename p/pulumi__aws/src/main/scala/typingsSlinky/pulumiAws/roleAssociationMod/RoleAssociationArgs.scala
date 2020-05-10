@@ -25,8 +25,33 @@ object RoleAssociationArgs {
   @scala.inline
   def apply(dbInstanceIdentifier: Input[String], featureName: Input[String], roleArn: Input[String]): RoleAssociationArgs = {
     val __obj = js.Dynamic.literal(dbInstanceIdentifier = dbInstanceIdentifier.asInstanceOf[js.Any], featureName = featureName.asInstanceOf[js.Any], roleArn = roleArn.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[RoleAssociationArgs]
   }
+  @scala.inline
+  implicit class RoleAssociationArgsOps[Self <: RoleAssociationArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDbInstanceIdentifier(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbInstanceIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeatureName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("featureName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

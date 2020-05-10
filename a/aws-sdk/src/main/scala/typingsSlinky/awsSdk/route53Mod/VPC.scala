@@ -15,11 +15,41 @@ trait VPC extends js.Object {
 
 object VPC {
   @scala.inline
-  def apply(VPCId: VPCId = null, VPCRegion: VPCRegion = null): VPC = {
+  def apply(): VPC = {
     val __obj = js.Dynamic.literal()
-    if (VPCId != null) __obj.updateDynamic("VPCId")(VPCId.asInstanceOf[js.Any])
-    if (VPCRegion != null) __obj.updateDynamic("VPCRegion")(VPCRegion.asInstanceOf[js.Any])
     __obj.asInstanceOf[VPC]
   }
+  @scala.inline
+  implicit class VPCOps[Self <: VPC] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVPCId(value: VPCId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VPCId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVPCId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VPCId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVPCRegion(value: VPCRegion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VPCRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVPCRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VPCRegion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

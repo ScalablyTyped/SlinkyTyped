@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GanttToolbarItem extends js.Object {
-  var name: js.UndefOr[String] = js.undefined
-  var template: js.UndefOr[String | js.Function] = js.undefined
-  var text: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
+  var template: js.UndefOr[String | js.Function] = js.native
+  var text: js.UndefOr[String] = js.native
 }
 
 object GanttToolbarItem {
   @scala.inline
-  def apply(name: String = null, template: String | js.Function = null, text: String = null): GanttToolbarItem = {
+  def apply(): GanttToolbarItem = {
     val __obj = js.Dynamic.literal()
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[GanttToolbarItem]
   }
+  @scala.inline
+  implicit class GanttToolbarItemOps[Self <: GanttToolbarItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplate(value: String | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

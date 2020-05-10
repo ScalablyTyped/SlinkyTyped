@@ -42,26 +42,113 @@ trait Build extends js.Object {
 
 object Build {
   @scala.inline
-  def apply(
-    BuildArn: BuildArn = null,
-    BuildId: BuildId = null,
-    CreationTime: js.Date = null,
-    Name: FreeText = null,
-    OperatingSystem: OperatingSystem = null,
-    SizeOnDisk: Int | scala.Double = null,
-    Status: BuildStatus = null,
-    Version: FreeText = null
-  ): Build = {
+  def apply(): Build = {
     val __obj = js.Dynamic.literal()
-    if (BuildArn != null) __obj.updateDynamic("BuildArn")(BuildArn.asInstanceOf[js.Any])
-    if (BuildId != null) __obj.updateDynamic("BuildId")(BuildId.asInstanceOf[js.Any])
-    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (OperatingSystem != null) __obj.updateDynamic("OperatingSystem")(OperatingSystem.asInstanceOf[js.Any])
-    if (SizeOnDisk != null) __obj.updateDynamic("SizeOnDisk")(SizeOnDisk.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (Version != null) __obj.updateDynamic("Version")(Version.asInstanceOf[js.Any])
     __obj.asInstanceOf[Build]
   }
+  @scala.inline
+  implicit class BuildOps[Self <: Build] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBuildArn(value: BuildArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BuildArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuildArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BuildArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuildId(value: BuildId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BuildId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuildId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BuildId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: FreeText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperatingSystem(value: OperatingSystem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatingSystem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizeOnDisk(value: PositiveLong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeOnDisk")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizeOnDisk: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeOnDisk")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: BuildStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: FreeText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

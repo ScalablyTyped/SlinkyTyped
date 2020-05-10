@@ -4,40 +4,128 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAutostem extends js.Object {
-  var auto_stem: js.UndefOr[Boolean] = js.undefined
-  var clef: js.UndefOr[String] = js.undefined
-  var dots: js.UndefOr[Double] = js.undefined
-  var duration: String
-  var keys: js.Array[String]
-  var octave_shift: js.UndefOr[Double] = js.undefined
-  var slash: js.UndefOr[Boolean] = js.undefined
-  var stem_direction: js.UndefOr[Double] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
+  var auto_stem: js.UndefOr[Boolean] = js.native
+  var clef: js.UndefOr[String] = js.native
+  var dots: js.UndefOr[Double] = js.native
+  var duration: String = js.native
+  var keys: js.Array[String] = js.native
+  var octave_shift: js.UndefOr[Double] = js.native
+  var slash: js.UndefOr[Boolean] = js.native
+  var stem_direction: js.UndefOr[Double] = js.native
+  var `type`: js.UndefOr[String] = js.native
 }
 
 object AnonAutostem {
   @scala.inline
-  def apply(
-    duration: String,
-    keys: js.Array[String],
-    auto_stem: js.UndefOr[Boolean] = js.undefined,
-    clef: String = null,
-    dots: Int | Double = null,
-    octave_shift: Int | Double = null,
-    slash: js.UndefOr[Boolean] = js.undefined,
-    stem_direction: Int | Double = null,
-    `type`: String = null
-  ): AnonAutostem = {
+  def apply(duration: String, keys: js.Array[String]): AnonAutostem = {
     val __obj = js.Dynamic.literal(duration = duration.asInstanceOf[js.Any], keys = keys.asInstanceOf[js.Any])
-    if (!js.isUndefined(auto_stem)) __obj.updateDynamic("auto_stem")(auto_stem.asInstanceOf[js.Any])
-    if (clef != null) __obj.updateDynamic("clef")(clef.asInstanceOf[js.Any])
-    if (dots != null) __obj.updateDynamic("dots")(dots.asInstanceOf[js.Any])
-    if (octave_shift != null) __obj.updateDynamic("octave_shift")(octave_shift.asInstanceOf[js.Any])
-    if (!js.isUndefined(slash)) __obj.updateDynamic("slash")(slash.asInstanceOf[js.Any])
-    if (stem_direction != null) __obj.updateDynamic("stem_direction")(stem_direction.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAutostem]
   }
+  @scala.inline
+  implicit class AnonAutostemOps[Self <: AnonAutostem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeys(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuto_stem(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auto_stem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuto_stem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auto_stem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClef(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDots(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDots: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dots")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOctave_shift(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("octave_shift")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOctave_shift: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("octave_shift")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlash(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStem_direction(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stem_direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStem_direction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stem_direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

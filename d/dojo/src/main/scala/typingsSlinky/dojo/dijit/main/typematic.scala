@@ -15,6 +15,7 @@ import scala.scalajs.js.annotation._
   * Only 1 such event is allowed to occur on the browser page at 1 time.
   * 
   */
+@js.native
 trait typematic extends js.Object {
   /**
     * Start listening for a specific typematic key.
@@ -36,7 +37,7 @@ trait typematic extends js.Object {
     subsequentDelay: Double,
     initialDelay: Double,
     minDelay: Double
-  ): js.Any
+  ): js.Any = js.native
   /**
     * Start listening for a specific typematic key and mouseclick.
     * This is a thin wrapper to addKeyListener and addMouseListener.
@@ -60,7 +61,7 @@ trait typematic extends js.Object {
     subsequentDelay: Double,
     initialDelay: Double,
     minDelay: Double
-  ): js.Any
+  ): js.Any = js.native
   /**
     * Start listening for a typematic mouse click.
     * See the trigger method for other parameters.
@@ -79,12 +80,12 @@ trait typematic extends js.Object {
     subsequentDelay: Double,
     initialDelay: Double,
     minDelay: Double
-  ): js.Any
+  ): js.Any = js.native
   /**
     * Stop an ongoing timed, repeating callback sequence.
     * 
     */
-  def stop(): Unit
+  def stop(): Unit = js.native
   /**
     * Start a timed, repeating callback sequence.
     * If already started, the function call is ignored.
@@ -109,7 +110,7 @@ trait typematic extends js.Object {
     subsequentDelay: Double,
     initialDelay: Double,
     minDelay: Double
-  ): Unit
+  ): Unit = js.native
 }
 
 object typematic {
@@ -122,8 +123,47 @@ object typematic {
     trigger: (Event_, js.Object, HTMLElement, js.Function, js.Object, Double, Double, Double) => Unit
   ): typematic = {
     val __obj = js.Dynamic.literal(addKeyListener = js.Any.fromFunction7(addKeyListener), addListener = js.Any.fromFunction8(addListener), addMouseListener = js.Any.fromFunction6(addMouseListener), stop = js.Any.fromFunction0(stop), trigger = js.Any.fromFunction8(trigger))
-  
     __obj.asInstanceOf[typematic]
   }
+  @scala.inline
+  implicit class typematicOps[Self <: typematic] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddKeyListener(value: (HTMLElement, js.Object, js.Object, js.Function, Double, Double, Double) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addKeyListener")(js.Any.fromFunction7(value))
+        ret
+    }
+    @scala.inline
+    def withAddListener(
+      value: (HTMLElement, HTMLElement, js.Object, js.Object, js.Function, Double, Double, Double) => js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addListener")(js.Any.fromFunction8(value))
+        ret
+    }
+    @scala.inline
+    def withAddMouseListener(value: (HTMLElement, js.Object, js.Function, Double, Double, Double) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addMouseListener")(js.Any.fromFunction6(value))
+        ret
+    }
+    @scala.inline
+    def withStop(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTrigger(value: (Event_, js.Object, HTMLElement, js.Function, js.Object, Double, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(js.Any.fromFunction8(value))
+        ret
+    }
+  }
+  
 }
 

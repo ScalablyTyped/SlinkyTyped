@@ -151,25 +151,25 @@ trait Checkbox_ extends js.Object {
   def apply(
     behavior: setting,
     name: beforeChecked,
-    value: js.ThisFunction0[/* this */ typingsSlinky.std.HTMLInputElement, Unit | `false`]
+    value: js.ThisFunction0[/* this */ HTMLInputElement, Unit | `false`]
   ): JQuery = js.native
   def apply(behavior: setting, name: beforeDeterminate): js.ThisFunction0[/* this */ HTMLInputElement, Unit | `false`] = js.native
   def apply(
     behavior: setting,
     name: beforeDeterminate,
-    value: js.ThisFunction0[/* this */ typingsSlinky.std.HTMLInputElement, Unit | `false`]
+    value: js.ThisFunction0[/* this */ HTMLInputElement, Unit | `false`]
   ): JQuery = js.native
   def apply(behavior: setting, name: beforeIndeterminate): js.ThisFunction0[/* this */ HTMLInputElement, Unit | `false`] = js.native
   def apply(
     behavior: setting,
     name: beforeIndeterminate,
-    value: js.ThisFunction0[/* this */ typingsSlinky.std.HTMLInputElement, Unit | `false`]
+    value: js.ThisFunction0[/* this */ HTMLInputElement, Unit | `false`]
   ): JQuery = js.native
   def apply(behavior: setting, name: beforeUnchecked): js.ThisFunction0[/* this */ HTMLInputElement, Unit | `false`] = js.native
   def apply(
     behavior: setting,
     name: beforeUnchecked,
-    value: js.ThisFunction0[/* this */ typingsSlinky.std.HTMLInputElement, Unit | `false`]
+    value: js.ThisFunction0[/* this */ HTMLInputElement, Unit | `false`]
   ): JQuery = js.native
   def apply(behavior: setting, name: className): ClassNameSettings = js.native
   def apply(behavior: setting, name: className, value: ClassNameSettings): JQuery = js.native
@@ -184,59 +184,27 @@ trait Checkbox_ extends js.Object {
   def apply(behavior: setting, name: namespace, value: String): JQuery = js.native
   def apply(behavior: setting, name: name, value: String): JQuery = js.native
   def apply(behavior: setting, name: onChange): js.ThisFunction0[/* this */ HTMLInputElement, Unit] = js.native
-  def apply(
-    behavior: setting,
-    name: onChange,
-    value: js.ThisFunction0[/* this */ typingsSlinky.std.HTMLInputElement, Unit]
-  ): JQuery = js.native
+  def apply(behavior: setting, name: onChange, value: js.ThisFunction0[/* this */ HTMLInputElement, Unit]): JQuery = js.native
   def apply(behavior: setting, name: onChecked): js.ThisFunction0[/* this */ HTMLInputElement, Unit] = js.native
-  def apply(
-    behavior: setting,
-    name: onChecked,
-    value: js.ThisFunction0[/* this */ typingsSlinky.std.HTMLInputElement, Unit]
-  ): JQuery = js.native
+  def apply(behavior: setting, name: onChecked, value: js.ThisFunction0[/* this */ HTMLInputElement, Unit]): JQuery = js.native
   def apply(behavior: setting, name: onDeterminate): js.ThisFunction0[/* this */ HTMLInputElement, Unit] = js.native
-  def apply(
-    behavior: setting,
-    name: onDeterminate,
-    value: js.ThisFunction0[/* this */ typingsSlinky.std.HTMLInputElement, Unit]
-  ): JQuery = js.native
+  def apply(behavior: setting, name: onDeterminate, value: js.ThisFunction0[/* this */ HTMLInputElement, Unit]): JQuery = js.native
   def apply(behavior: setting, name: onDisable): js.ThisFunction0[/* this */ HTMLInputElement, Unit] = js.native
   def apply(behavior: setting, name: onDisabled): js.ThisFunction0[/* this */ HTMLInputElement, Unit] = js.native
-  def apply(
-    behavior: setting,
-    name: onDisabled,
-    value: js.ThisFunction0[/* this */ typingsSlinky.std.HTMLInputElement, Unit]
-  ): JQuery = js.native
-  def apply(
-    behavior: setting,
-    name: onDisable,
-    value: js.ThisFunction0[/* this */ typingsSlinky.std.HTMLInputElement, Unit]
-  ): JQuery = js.native
+  def apply(behavior: setting, name: onDisabled, value: js.ThisFunction0[/* this */ HTMLInputElement, Unit]): JQuery = js.native
+  def apply(behavior: setting, name: onDisable, value: js.ThisFunction0[/* this */ HTMLInputElement, Unit]): JQuery = js.native
   def apply(behavior: setting, name: onEnable): js.ThisFunction0[/* this */ HTMLInputElement, Unit] = js.native
   def apply(behavior: setting, name: onEnabled): js.ThisFunction0[/* this */ HTMLInputElement, Unit] = js.native
-  def apply(
-    behavior: setting,
-    name: onEnabled,
-    value: js.ThisFunction0[/* this */ typingsSlinky.std.HTMLInputElement, Unit]
-  ): JQuery = js.native
-  def apply(
-    behavior: setting,
-    name: onEnable,
-    value: js.ThisFunction0[/* this */ typingsSlinky.std.HTMLInputElement, Unit]
-  ): JQuery = js.native
+  def apply(behavior: setting, name: onEnabled, value: js.ThisFunction0[/* this */ HTMLInputElement, Unit]): JQuery = js.native
+  def apply(behavior: setting, name: onEnable, value: js.ThisFunction0[/* this */ HTMLInputElement, Unit]): JQuery = js.native
   def apply(behavior: setting, name: onIndeterminate): js.ThisFunction0[/* this */ HTMLInputElement, Unit] = js.native
   def apply(
     behavior: setting,
     name: onIndeterminate,
-    value: js.ThisFunction0[/* this */ typingsSlinky.std.HTMLInputElement, Unit]
+    value: js.ThisFunction0[/* this */ HTMLInputElement, Unit]
   ): JQuery = js.native
   def apply(behavior: setting, name: onUnchecked): js.ThisFunction0[/* this */ HTMLInputElement, Unit] = js.native
-  def apply(
-    behavior: setting,
-    name: onUnchecked,
-    value: js.ThisFunction0[/* this */ typingsSlinky.std.HTMLInputElement, Unit]
-  ): JQuery = js.native
+  def apply(behavior: setting, name: onUnchecked, value: js.ThisFunction0[/* this */ HTMLInputElement, Unit]): JQuery = js.native
   def apply(behavior: setting, name: performance): Boolean = js.native
   def apply(behavior: setting, name: performance, value: Boolean): JQuery = js.native
   def apply(behavior: setting, name: selector): SelectorSettings = js.native

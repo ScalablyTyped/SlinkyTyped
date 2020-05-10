@@ -2,7 +2,6 @@ package typingsSlinky.pikaday.mod
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.moment.mod.Moment
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -85,8 +84,8 @@ trait Pikaday extends js.Object {
   def setDate(date: String): Unit = js.native
   def setDate(date: String, preventOnSelect: Boolean): Unit = js.native
   def setDate(date: Null, preventOnSelect: Boolean): Unit = js.native
-  def setDate(date: Date): Unit = js.native
-  def setDate(date: Date, preventOnSelect: Boolean): Unit = js.native
+  def setDate(date: js.Date): Unit = js.native
+  def setDate(date: js.Date, preventOnSelect: Boolean): Unit = js.native
   def setEndRange(): Unit = js.native
   /**
     * Update the range end date. For using two Pikaday instances to select

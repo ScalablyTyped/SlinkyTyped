@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait KnobsOptions extends js.Object {
-  var addDecorator: js.UndefOr[Boolean] = js.undefined
+  var addDecorator: js.UndefOr[Boolean] = js.native
 }
 
 object KnobsOptions {
   @scala.inline
-  def apply(addDecorator: js.UndefOr[Boolean] = js.undefined): KnobsOptions = {
+  def apply(): KnobsOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(addDecorator)) __obj.updateDynamic("addDecorator")(addDecorator.asInstanceOf[js.Any])
     __obj.asInstanceOf[KnobsOptions]
   }
+  @scala.inline
+  implicit class KnobsOptionsOps[Self <: KnobsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddDecorator(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addDecorator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddDecorator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addDecorator")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

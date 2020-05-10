@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Id extends js.Object {
-  var addresses: js.Array[Multiaddr]
-  var agentVersion: String
-  var id: String
-  var protocolVersion: String
-  var publicKey: String
+  var addresses: js.Array[Multiaddr] = js.native
+  var agentVersion: String = js.native
+  var id: String = js.native
+  var protocolVersion: String = js.native
+  var publicKey: String = js.native
 }
 
 object Id {
@@ -22,8 +23,45 @@ object Id {
     publicKey: String
   ): Id = {
     val __obj = js.Dynamic.literal(addresses = addresses.asInstanceOf[js.Any], agentVersion = agentVersion.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], protocolVersion = protocolVersion.asInstanceOf[js.Any], publicKey = publicKey.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Id]
   }
+  @scala.inline
+  implicit class IdOps[Self <: Id] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddresses(value: js.Array[Multiaddr]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAgentVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProtocolVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocolVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPublicKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

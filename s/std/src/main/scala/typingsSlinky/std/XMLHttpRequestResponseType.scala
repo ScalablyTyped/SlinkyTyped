@@ -16,18 +16,16 @@ trait XMLHttpRequestResponseType extends js.Object
 
 object XMLHttpRequestResponseType {
   @scala.inline
-  def _empty: typingsSlinky.std.stdStrings._empty = this.cast("")
+  def _empty: typingsSlinky.std.stdStrings._empty = "".asInstanceOf[typingsSlinky.std.stdStrings._empty]
   @scala.inline
-  def arraybuffer: typingsSlinky.std.stdStrings.arraybuffer = this.cast("arraybuffer")
+  def arraybuffer: typingsSlinky.std.stdStrings.arraybuffer = "arraybuffer".asInstanceOf[typingsSlinky.std.stdStrings.arraybuffer]
   @scala.inline
-  def blob: typingsSlinky.std.stdStrings.blob = this.cast("blob")
+  def blob: typingsSlinky.std.stdStrings.blob = "blob".asInstanceOf[typingsSlinky.std.stdStrings.blob]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def document: typingsSlinky.std.stdStrings.document = "document".asInstanceOf[typingsSlinky.std.stdStrings.document]
   @scala.inline
-  def document: typingsSlinky.std.stdStrings.document = this.cast("document")
+  def json: typingsSlinky.std.stdStrings.json = "json".asInstanceOf[typingsSlinky.std.stdStrings.json]
   @scala.inline
-  def json: typingsSlinky.std.stdStrings.json = this.cast("json")
-  @scala.inline
-  def text: typingsSlinky.std.stdStrings.text = this.cast("text")
+  def text: typingsSlinky.std.stdStrings.text = "text".asInstanceOf[typingsSlinky.std.stdStrings.text]
 }
 

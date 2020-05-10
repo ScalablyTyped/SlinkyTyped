@@ -18,20 +18,18 @@ trait DayOfWeekShape extends js.Object
 
 object DayOfWeekShape {
   @scala.inline
-  def `0`: typingsSlinky.reactDates.reactDatesNumbers.`0` = this.cast(0)
+  def `0`: typingsSlinky.reactDates.reactDatesNumbers.`0` = 0.asInstanceOf[typingsSlinky.reactDates.reactDatesNumbers.`0`]
   @scala.inline
-  def `1`: typingsSlinky.reactDates.reactDatesNumbers.`1` = this.cast(1)
+  def `1`: typingsSlinky.reactDates.reactDatesNumbers.`1` = 1.asInstanceOf[typingsSlinky.reactDates.reactDatesNumbers.`1`]
   @scala.inline
-  def `2`: typingsSlinky.reactDates.reactDatesNumbers.`2` = this.cast(2)
+  def `2`: typingsSlinky.reactDates.reactDatesNumbers.`2` = 2.asInstanceOf[typingsSlinky.reactDates.reactDatesNumbers.`2`]
   @scala.inline
-  def `3`: typingsSlinky.reactDates.reactDatesNumbers.`3` = this.cast(3)
+  def `3`: typingsSlinky.reactDates.reactDatesNumbers.`3` = 3.asInstanceOf[typingsSlinky.reactDates.reactDatesNumbers.`3`]
   @scala.inline
-  def `4`: typingsSlinky.reactDates.reactDatesNumbers.`4` = this.cast(4)
+  def `4`: typingsSlinky.reactDates.reactDatesNumbers.`4` = 4.asInstanceOf[typingsSlinky.reactDates.reactDatesNumbers.`4`]
   @scala.inline
-  def `5`: typingsSlinky.reactDates.reactDatesNumbers.`5` = this.cast(5)
+  def `5`: typingsSlinky.reactDates.reactDatesNumbers.`5` = 5.asInstanceOf[typingsSlinky.reactDates.reactDatesNumbers.`5`]
   @scala.inline
-  def `6`: typingsSlinky.reactDates.reactDatesNumbers.`6` = this.cast(6)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `6`: typingsSlinky.reactDates.reactDatesNumbers.`6` = 6.asInstanceOf[typingsSlinky.reactDates.reactDatesNumbers.`6`]
 }
 

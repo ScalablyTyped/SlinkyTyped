@@ -1,10 +1,7 @@
 package typingsSlinky.reactReduxToastr.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactReduxToastr.AnonCancelText
 import typingsSlinky.reactReduxToastr.mod.ReduxToastrProps
 import typingsSlinky.reactReduxToastr.mod.ToastrState
@@ -16,44 +13,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactReduxToastr
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactReduxToastr {
   @JSImport("react-redux-toastr", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    closeOnToastrClick: js.UndefOr[Boolean] = js.undefined,
-    confirmOptions: AnonCancelText = null,
-    newestOnTop: js.UndefOr[Boolean] = js.undefined,
-    options: js.Any = null,
-    position: positionType = null,
-    preventDuplicates: js.UndefOr[Boolean] = js.undefined,
-    progressBar: js.UndefOr[Boolean] = js.undefined,
-    timeOut: Int | Double = null,
-    toastr: ToastrState = null,
-    transitionIn: transitionInType = null,
-    transitionOut: transitionOutType = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(closeOnToastrClick)) __obj.updateDynamic("closeOnToastrClick")(closeOnToastrClick.asInstanceOf[js.Any])
-    if (confirmOptions != null) __obj.updateDynamic("confirmOptions")(confirmOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(newestOnTop)) __obj.updateDynamic("newestOnTop")(newestOnTop.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(preventDuplicates)) __obj.updateDynamic("preventDuplicates")(preventDuplicates.asInstanceOf[js.Any])
-    if (!js.isUndefined(progressBar)) __obj.updateDynamic("progressBar")(progressBar.asInstanceOf[js.Any])
-    if (timeOut != null) __obj.updateDynamic("timeOut")(timeOut.asInstanceOf[js.Any])
-    if (toastr != null) __obj.updateDynamic("toastr")(toastr.asInstanceOf[js.Any])
-    if (transitionIn != null) __obj.updateDynamic("transitionIn")(transitionIn.asInstanceOf[js.Any])
-    if (transitionOut != null) __obj.updateDynamic("transitionOut")(transitionOut.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeOnToastrClick(value: Boolean): this.type = set("closeOnToastrClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def confirmOptions(value: AnonCancelText): this.type = set("confirmOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def newestOnTop(value: Boolean): this.type = set("newestOnTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def options(value: js.Any): this.type = set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def position(value: positionType): this.type = set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preventDuplicates(value: Boolean): this.type = set("preventDuplicates", value.asInstanceOf[js.Any])
+    @scala.inline
+    def progressBar(value: Boolean): this.type = set("progressBar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def timeOut(value: Double): this.type = set("timeOut", value.asInstanceOf[js.Any])
+    @scala.inline
+    def toastr(value: ToastrState): this.type = set("toastr", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionIn(value: transitionInType): this.type = set("transitionIn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionOut(value: transitionOutType): this.type = set("transitionOut", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactReduxToastr.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ReduxToastrProps
+  
+  def withProps(p: ReduxToastrProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactReduxToastr.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

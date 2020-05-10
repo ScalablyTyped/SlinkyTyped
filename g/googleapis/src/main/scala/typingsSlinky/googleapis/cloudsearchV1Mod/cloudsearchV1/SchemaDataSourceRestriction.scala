@@ -24,11 +24,41 @@ trait SchemaDataSourceRestriction extends js.Object {
 
 object SchemaDataSourceRestriction {
   @scala.inline
-  def apply(filterOptions: js.Array[SchemaFilterOptions] = null, source: SchemaSource = null): SchemaDataSourceRestriction = {
+  def apply(): SchemaDataSourceRestriction = {
     val __obj = js.Dynamic.literal()
-    if (filterOptions != null) __obj.updateDynamic("filterOptions")(filterOptions.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDataSourceRestriction]
   }
+  @scala.inline
+  implicit class SchemaDataSourceRestrictionOps[Self <: SchemaDataSourceRestriction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilterOptions(value: js.Array[SchemaFilterOptions]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: SchemaSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

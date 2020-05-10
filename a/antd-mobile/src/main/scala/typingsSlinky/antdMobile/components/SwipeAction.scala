@@ -1,10 +1,7 @@
 package typingsSlinky.antdMobile.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.AnonOnPress
 import typingsSlinky.antdMobile.swipeActionMod.SwipeActionProps
 import typingsSlinky.antdMobile.swipeActionMod.default
@@ -13,34 +10,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SwipeAction
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object SwipeAction {
   @JSImport("antd-mobile/lib/swipe-action", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, style, title */
-  def apply(
-    autoClose: js.UndefOr[Boolean] = js.undefined,
-    left: js.Array[AnonOnPress[CSSProperties]] = null,
-    onClose: () => Unit = null,
-    onOpen: () => Unit = null,
-    prefixCls: String = null,
-    right: js.Array[AnonOnPress[CSSProperties]] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoClose)) __obj.updateDynamic("autoClose")(autoClose.asInstanceOf[js.Any])
-    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
-    if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction0(onOpen))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def autoClose(value: Boolean): this.type = set("autoClose", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def left(value: js.Array[AnonOnPress[CSSProperties]]): this.type = set("left", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClose(value: () => Unit): this.type = set("onClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def onOpen(value: () => Unit): this.type = set("onOpen", js.Any.fromFunction0(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def right(value: js.Array[AnonOnPress[CSSProperties]]): this.type = set("right", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antdMobile.swipeActionMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SwipeActionProps
+  
+  def withProps(p: SwipeActionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SwipeAction.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

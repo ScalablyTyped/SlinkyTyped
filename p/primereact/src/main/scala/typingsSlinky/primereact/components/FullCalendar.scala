@@ -1,39 +1,34 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.fullCalendarMod.FullCalendarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FullCalendar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactFullcalendarMod.FullCalendar] {
+object FullCalendar {
   @JSImport("primereact/fullcalendar", "FullCalendar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id */
-  def apply(
-    events: js.Array[_] = null,
-    options: js.Object = null,
-    style: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactFullcalendarMod.FullCalendar] = {
-    val __obj = js.Dynamic.literal()
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.primereactFullcalendarMod.FullCalendar] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def events(value: js.Array[_]): this.type = set("events", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def options(value: js.Object): this.type = set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactFullcalendarMod.FullCalendar] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.primereactFullcalendarMod.FullCalendar](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FullCalendarProps
+  
+  def withProps(p: FullCalendarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FullCalendar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

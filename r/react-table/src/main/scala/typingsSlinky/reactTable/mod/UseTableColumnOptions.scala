@@ -1,50 +1,111 @@
 package typingsSlinky.reactTable.mod
 
-import typingsSlinky.reactTable.AnonDepth
+import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined parent react-table.react-table.Accessor<D> */
-/* Inlined parent std.Partial<{  columns  :std.Array<react-table.react-table.Column<D>>,   show  :boolean | (instance : react-table.react-table.TableInstance<D>): boolean,   Header  :react-table.react-table.Renderer<react-table.react-table.HeaderProps<D>>,   Cell  :react-table.react-table.Renderer<react-table.react-table.CellProps<D>>,   width ? :number | string,   minWidth ? :number,   maxWidth ? :number}> */
+@js.native
 trait UseTableColumnOptions[D /* <: js.Object */] extends js.Object {
-  var Cell: js.UndefOr[Renderer[CellProps[D]]] = js.undefined
-  var Header: js.UndefOr[Renderer[HeaderProps[D]]] = js.undefined
-  var accessor: js.UndefOr[
-    IdType[D] | (js.Function3[/* originalRow */ D, /* index */ Double, /* sub */ AnonDepth[D], CellValue])
-  ] = js.undefined
-  var columns: js.UndefOr[js.Array[Column[D]]] = js.undefined
-  var id: js.UndefOr[IdType[D]] = js.undefined
-  var maxWidth: js.UndefOr[Double] = js.undefined
-  var minWidth: js.UndefOr[Double] = js.undefined
-  var show: js.UndefOr[Boolean | (js.Function1[/* instance */ TableInstance[D], Boolean])] = js.undefined
-  var width: js.UndefOr[Double | String] = js.undefined
+  var Header: js.UndefOr[Renderer[HeaderProps[D]]] = js.native
+  var id: js.UndefOr[IdType[D]] = js.native
+  var maxWidth: js.UndefOr[Double] = js.native
+  var minWidth: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double | String] = js.native
 }
 
 object UseTableColumnOptions {
   @scala.inline
-  def apply[D /* <: js.Object */](
-    Cell: Renderer[CellProps[D]] = null,
-    Header: Renderer[HeaderProps[D]] = null,
-    accessor: IdType[D] | (js.Function3[/* originalRow */ D, /* index */ Double, /* sub */ AnonDepth[D], CellValue]) = null,
-    columns: js.Array[Column[D]] = null,
-    id: IdType[D] = null,
-    maxWidth: Int | Double = null,
-    minWidth: Int | Double = null,
-    show: Boolean | (js.Function1[/* instance */ TableInstance[D], Boolean]) = null,
-    width: Double | String = null
-  ): UseTableColumnOptions[D] = {
+  def apply[D](): UseTableColumnOptions[D] = {
     val __obj = js.Dynamic.literal()
-    if (Cell != null) __obj.updateDynamic("Cell")(Cell.asInstanceOf[js.Any])
-    if (Header != null) __obj.updateDynamic("Header")(Header.asInstanceOf[js.Any])
-    if (accessor != null) __obj.updateDynamic("accessor")(accessor.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
-    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[UseTableColumnOptions[D]]
   }
+  @scala.inline
+  implicit class UseTableColumnOptionsOps[Self[d] <: UseTableColumnOptions[d], D] (val x: Self[D]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[D] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[D]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[D] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[D] with Other]
+    @scala.inline
+    def withHeaderReactElement(value: ReactElement): Self[D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeaderFunctionComponent(value: ReactComponentClass[HeaderProps[D]]): Self[D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeaderComponentClass(value: ReactComponentClass[HeaderProps[D]]): Self[D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeader(value: Renderer[HeaderProps[D]]): Self[D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeader: Self[D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Header")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: IdType[D]): Self[D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self[D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxWidth(value: Double): Self[D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxWidth: Self[D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinWidth(value: Double): Self[D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinWidth: Self[D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double | String): Self[D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self[D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,11 +22,41 @@ trait SchemaStartManualTransferRunsRequest extends js.Object {
 
 object SchemaStartManualTransferRunsRequest {
   @scala.inline
-  def apply(requestedRunTime: String = null, requestedTimeRange: SchemaTimeRange = null): SchemaStartManualTransferRunsRequest = {
+  def apply(): SchemaStartManualTransferRunsRequest = {
     val __obj = js.Dynamic.literal()
-    if (requestedRunTime != null) __obj.updateDynamic("requestedRunTime")(requestedRunTime.asInstanceOf[js.Any])
-    if (requestedTimeRange != null) __obj.updateDynamic("requestedTimeRange")(requestedTimeRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStartManualTransferRunsRequest]
   }
+  @scala.inline
+  implicit class SchemaStartManualTransferRunsRequestOps[Self <: SchemaStartManualTransferRunsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRequestedRunTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedRunTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestedRunTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedRunTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestedTimeRange(value: SchemaTimeRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedTimeRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestedTimeRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedTimeRange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

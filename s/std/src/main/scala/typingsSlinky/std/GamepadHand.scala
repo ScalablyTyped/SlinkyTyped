@@ -13,12 +13,10 @@ trait GamepadHand extends js.Object
 
 object GamepadHand {
   @scala.inline
-  def _empty: typingsSlinky.std.stdStrings._empty = this.cast("")
+  def _empty: typingsSlinky.std.stdStrings._empty = "".asInstanceOf[typingsSlinky.std.stdStrings._empty]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.std.stdStrings.left = "left".asInstanceOf[typingsSlinky.std.stdStrings.left]
   @scala.inline
-  def left: typingsSlinky.std.stdStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.std.stdStrings.right = this.cast("right")
+  def right: typingsSlinky.std.stdStrings.right = "right".asInstanceOf[typingsSlinky.std.stdStrings.right]
 }
 

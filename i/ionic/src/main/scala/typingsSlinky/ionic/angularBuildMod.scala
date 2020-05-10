@@ -2,10 +2,6 @@ package typingsSlinky.ionic
 
 import typingsSlinky.ionic.angularMod.AngularProject
 import typingsSlinky.ionic.definitionsMod.AngularBuildOptions
-import typingsSlinky.ionic.ionicStrings.`@angularSlashcli`
-import typingsSlinky.ionic.ionicStrings.`Angular CLI`
-import typingsSlinky.ionic.ionicStrings.ionicColonbuild
-import typingsSlinky.ionic.ionicStrings.ng
 import typingsSlinky.ionic.libBuildMod.BuildCLI
 import typingsSlinky.ionic.libBuildMod.BuildRunner
 import typingsSlinky.ionic.libBuildMod.BuildRunnerDeps
@@ -18,15 +14,9 @@ import scala.scalajs.js.annotation._
 object angularBuildMod extends js.Object {
   @js.native
   class AngularBuildCLI () extends BuildCLI[AngularBuildOptions] {
-    @JSName("name")
-    val name_AngularBuildCLI: `Angular CLI` = js.native
-    @JSName("pkg")
-    val pkg_AngularBuildCLI: `@angularSlashcli` = js.native
-    val prefix: ng = js.native
-    @JSName("program")
-    val program_AngularBuildCLI: ng = js.native
+    val prefix: /* "ng" */ String = js.native
     @JSName("script")
-    val script_AngularBuildCLI: ionicColonbuild = js.native
+    val script_AngularBuildCLI: /* "ionic:build" */ String = js.native
     /* protected */ def buildArchitectCommand(options: AngularBuildOptions): js.Array[String] = js.native
     /* protected */ def buildOptionsToNgArgs(options: AngularBuildOptions): js.Promise[js.Array[String]] = js.native
   }

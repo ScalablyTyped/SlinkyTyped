@@ -30,20 +30,77 @@ trait UpdateModelResponse extends js.Object {
 
 object UpdateModelResponse {
   @scala.inline
-  def apply(
-    ContentType: StringWithLengthBetween1And256 = null,
-    Description: StringWithLengthBetween0And1024 = null,
-    ModelId: Id = null,
-    Name: StringWithLengthBetween1And128 = null,
-    Schema: StringWithLengthBetween0And32K = null
-  ): UpdateModelResponse = {
+  def apply(): UpdateModelResponse = {
     val __obj = js.Dynamic.literal()
-    if (ContentType != null) __obj.updateDynamic("ContentType")(ContentType.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (ModelId != null) __obj.updateDynamic("ModelId")(ModelId.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (Schema != null) __obj.updateDynamic("Schema")(Schema.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateModelResponse]
   }
+  @scala.inline
+  implicit class UpdateModelResponseOps[Self <: UpdateModelResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentType(value: StringWithLengthBetween1And256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: StringWithLengthBetween0And1024): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModelId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModelId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: StringWithLengthBetween1And128): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchema(value: StringWithLengthBetween0And32K): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schema")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.chromeApps.chrome.syncFileSystem
 
-import typingsSlinky.chromeApps.chromeAppsStrings.conflicting
-import typingsSlinky.chromeApps.chromeAppsStrings.pending
-import typingsSlinky.chromeApps.chromeAppsStrings.synced
+import typingsSlinky.chromeApps.chromeAppsStrings.conflicting_
+import typingsSlinky.chromeApps.chromeAppsStrings.pending_
+import typingsSlinky.chromeApps.chromeAppsStrings.synced_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,8 +19,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.syncFileSystem.FileStatus")
 @js.native
 object FileStatus extends js.Object {
-  var CONFLICTING: conflicting = js.native
-  var PENDING: pending = js.native
-  var SYNCED: synced = js.native
+  var CONFLICTING: conflicting_ = js.native
+  var PENDING: pending_ = js.native
+  var SYNCED: synced_ = js.native
 }
 

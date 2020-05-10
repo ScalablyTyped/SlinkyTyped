@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
   */
+@js.native
 trait PlusWebviewWebviewProgressStyles extends js.Object {
   /**
     * 进度条颜色
@@ -19,7 +20,7 @@ trait PlusWebviewWebviewProgressStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var color: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[String] = js.native
   /**
     * 进度条高度
     * 可取值：像素值（逻辑像素），支持小数点，如"1px"表示1像素高；百分比，如"1%"，相对于标题栏控件的高度。
@@ -27,16 +28,46 @@ trait PlusWebviewWebviewProgressStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var height: js.UndefOr[String] = js.undefined
+  var height: js.UndefOr[String] = js.native
 }
 
 object PlusWebviewWebviewProgressStyles {
   @scala.inline
-  def apply(color: String = null, height: String = null): PlusWebviewWebviewProgressStyles = {
+  def apply(): PlusWebviewWebviewProgressStyles = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusWebviewWebviewProgressStyles]
   }
+  @scala.inline
+  implicit class PlusWebviewWebviewProgressStylesOps[Self <: PlusWebviewWebviewProgressStyles] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

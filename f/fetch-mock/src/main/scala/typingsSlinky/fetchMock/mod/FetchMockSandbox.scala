@@ -1,8 +1,8 @@
 package typingsSlinky.fetchMock.mod
 
+import org.scalajs.dom.experimental.Request
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.experimental.Response
-import typingsSlinky.std.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

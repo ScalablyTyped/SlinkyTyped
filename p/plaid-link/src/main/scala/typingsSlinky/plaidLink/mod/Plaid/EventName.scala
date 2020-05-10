@@ -20,26 +20,24 @@ trait EventName extends js.Object
 
 object EventName {
   @scala.inline
-  def ERROR: typingsSlinky.plaidLink.plaidLinkStrings.ERROR = this.cast("ERROR")
+  def ERROR: typingsSlinky.plaidLink.plaidLinkStrings.ERROR = "ERROR".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.ERROR]
   @scala.inline
-  def EXIT: typingsSlinky.plaidLink.plaidLinkStrings.EXIT = this.cast("EXIT")
+  def EXIT: typingsSlinky.plaidLink.plaidLinkStrings.EXIT = "EXIT".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.EXIT]
   @scala.inline
-  def HANDOFF: typingsSlinky.plaidLink.plaidLinkStrings.HANDOFF = this.cast("HANDOFF")
+  def HANDOFF: typingsSlinky.plaidLink.plaidLinkStrings.HANDOFF = "HANDOFF".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.HANDOFF]
   @scala.inline
-  def OPEN: typingsSlinky.plaidLink.plaidLinkStrings.OPEN = this.cast("OPEN")
+  def OPEN: typingsSlinky.plaidLink.plaidLinkStrings.OPEN = "OPEN".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.OPEN]
   @scala.inline
-  def OPEN_MY_PLAID: typingsSlinky.plaidLink.plaidLinkStrings.OPEN_MY_PLAID = this.cast("OPEN_MY_PLAID")
+  def OPEN_MY_PLAID: typingsSlinky.plaidLink.plaidLinkStrings.OPEN_MY_PLAID = "OPEN_MY_PLAID".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.OPEN_MY_PLAID]
   @scala.inline
-  def SEARCH_INSTITUTION: typingsSlinky.plaidLink.plaidLinkStrings.SEARCH_INSTITUTION = this.cast("SEARCH_INSTITUTION")
+  def SEARCH_INSTITUTION: typingsSlinky.plaidLink.plaidLinkStrings.SEARCH_INSTITUTION = "SEARCH_INSTITUTION".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.SEARCH_INSTITUTION]
   @scala.inline
-  def SELECT_INSTITUTION: typingsSlinky.plaidLink.plaidLinkStrings.SELECT_INSTITUTION = this.cast("SELECT_INSTITUTION")
+  def SELECT_INSTITUTION: typingsSlinky.plaidLink.plaidLinkStrings.SELECT_INSTITUTION = "SELECT_INSTITUTION".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.SELECT_INSTITUTION]
   @scala.inline
-  def SUBMIT_CREDENTIALS: typingsSlinky.plaidLink.plaidLinkStrings.SUBMIT_CREDENTIALS = this.cast("SUBMIT_CREDENTIALS")
+  def SUBMIT_CREDENTIALS: typingsSlinky.plaidLink.plaidLinkStrings.SUBMIT_CREDENTIALS = "SUBMIT_CREDENTIALS".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.SUBMIT_CREDENTIALS]
   @scala.inline
-  def SUBMIT_MFA: typingsSlinky.plaidLink.plaidLinkStrings.SUBMIT_MFA = this.cast("SUBMIT_MFA")
+  def SUBMIT_MFA: typingsSlinky.plaidLink.plaidLinkStrings.SUBMIT_MFA = "SUBMIT_MFA".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.SUBMIT_MFA]
   @scala.inline
-  def TRANSITION_VIEW: typingsSlinky.plaidLink.plaidLinkStrings.TRANSITION_VIEW = this.cast("TRANSITION_VIEW")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TRANSITION_VIEW: typingsSlinky.plaidLink.plaidLinkStrings.TRANSITION_VIEW = "TRANSITION_VIEW".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.TRANSITION_VIEW]
 }
 

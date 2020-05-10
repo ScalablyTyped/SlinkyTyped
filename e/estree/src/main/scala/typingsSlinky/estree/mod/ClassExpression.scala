@@ -4,36 +4,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClassExpression
   extends BaseClass
      with Class
      with Expression {
-  var id: js.UndefOr[Identifier | Null] = js.undefined
+  var id: js.UndefOr[Identifier | Null] = js.native
   @JSName("type")
-  var type_ClassExpression: typingsSlinky.estree.estreeStrings.ClassExpression
+  var type_ClassExpression: typingsSlinky.estree.estreeStrings.ClassExpression = js.native
 }
 
 object ClassExpression {
   @scala.inline
-  def apply(
-    body: ClassBody,
-    `type`: typingsSlinky.estree.estreeStrings.ClassExpression,
-    id: Identifier = null,
-    leadingComments: js.Array[Comment] = null,
-    loc: SourceLocation = null,
-    range: js.Tuple2[Double, Double] = null,
-    superClass: Expression = null,
-    trailingComments: js.Array[Comment] = null
-  ): ClassExpression = {
+  def apply(body: ClassBody, `type`: typingsSlinky.estree.estreeStrings.ClassExpression): ClassExpression = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (superClass != null) __obj.updateDynamic("superClass")(superClass.asInstanceOf[js.Any])
-    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassExpression]
   }
+  @scala.inline
+  implicit class ClassExpressionOps[Self <: ClassExpression] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: typingsSlinky.estree.estreeStrings.ClassExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: Identifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(null)
+        ret
+    }
+  }
+  
 }
 

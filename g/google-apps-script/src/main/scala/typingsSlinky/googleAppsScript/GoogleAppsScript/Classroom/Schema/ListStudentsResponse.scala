@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ListStudentsResponse extends js.Object {
-  var nextPageToken: js.UndefOr[String] = js.undefined
-  var students: js.UndefOr[js.Array[Student]] = js.undefined
+  var nextPageToken: js.UndefOr[String] = js.native
+  var students: js.UndefOr[js.Array[Student]] = js.native
 }
 
 object ListStudentsResponse {
   @scala.inline
-  def apply(nextPageToken: String = null, students: js.Array[Student] = null): ListStudentsResponse = {
+  def apply(): ListStudentsResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (students != null) __obj.updateDynamic("students")(students.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListStudentsResponse]
   }
+  @scala.inline
+  implicit class ListStudentsResponseOps[Self <: ListStudentsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStudents(value: js.Array[Student]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("students")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStudents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("students")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

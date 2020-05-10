@@ -1,10 +1,10 @@
 package typingsSlinky.ionicons.componentsMod._Global_
 
 import org.scalablytyped.runtime.Instantiable0
+import org.scalajs.dom.raw.EventListenerOptions
 import typingsSlinky.ionicons.componentsMod.Components.IonIcon
 import typingsSlinky.ionicons.stencilCoreMod.HTMLStencilElement
 import typingsSlinky.std.AddEventListenerOptions
-import typingsSlinky.std.EventListenerOptions
 import typingsSlinky.std.EventListenerOrEventListenerObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

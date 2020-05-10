@@ -14,14 +14,12 @@ trait GatewayDirection extends js.Object
 
 object GatewayDirection {
   @scala.inline
-  def Converging: typingsSlinky.bpmnModdle.bpmnModdleStrings.Converging = this.cast("Converging")
+  def Converging: typingsSlinky.bpmnModdle.bpmnModdleStrings.Converging = "Converging".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.Converging]
   @scala.inline
-  def Diverging: typingsSlinky.bpmnModdle.bpmnModdleStrings.Diverging = this.cast("Diverging")
+  def Diverging: typingsSlinky.bpmnModdle.bpmnModdleStrings.Diverging = "Diverging".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.Diverging]
   @scala.inline
-  def Mixed: typingsSlinky.bpmnModdle.bpmnModdleStrings.Mixed = this.cast("Mixed")
+  def Mixed: typingsSlinky.bpmnModdle.bpmnModdleStrings.Mixed = "Mixed".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.Mixed]
   @scala.inline
-  def Unspecified: typingsSlinky.bpmnModdle.bpmnModdleStrings.Unspecified = this.cast("Unspecified")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Unspecified: typingsSlinky.bpmnModdle.bpmnModdleStrings.Unspecified = "Unspecified".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.Unspecified]
 }
 

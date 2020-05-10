@@ -28,18 +28,65 @@ trait TableItemState extends js.Object {
 
 object TableItemState {
   @scala.inline
-  def apply(
-    hashKey: Input[String] = null,
-    item: Input[String] = null,
-    rangeKey: Input[String] = null,
-    tableName: Input[String] = null
-  ): TableItemState = {
+  def apply(): TableItemState = {
     val __obj = js.Dynamic.literal()
-    if (hashKey != null) __obj.updateDynamic("hashKey")(hashKey.asInstanceOf[js.Any])
-    if (item != null) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
-    if (rangeKey != null) __obj.updateDynamic("rangeKey")(rangeKey.asInstanceOf[js.Any])
-    if (tableName != null) __obj.updateDynamic("tableName")(tableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableItemState]
   }
+  @scala.inline
+  implicit class TableItemStateOps[Self <: TableItemState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHashKey(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHashKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItem(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeKey(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

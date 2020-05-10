@@ -24,24 +24,22 @@ trait GeometryType extends js.Object
 
 object GeometryType {
   @scala.inline
-  def Circle: typingsSlinky.openlayers.openlayersStrings.Circle = this.cast("Circle")
+  def Circle: typingsSlinky.openlayers.openlayersStrings.Circle = "Circle".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.Circle]
   @scala.inline
-  def GeometryCollection: typingsSlinky.openlayers.openlayersStrings.GeometryCollection = this.cast("GeometryCollection")
+  def GeometryCollection: typingsSlinky.openlayers.openlayersStrings.GeometryCollection = "GeometryCollection".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.GeometryCollection]
   @scala.inline
-  def LineString: typingsSlinky.openlayers.openlayersStrings.LineString = this.cast("LineString")
+  def LineString: typingsSlinky.openlayers.openlayersStrings.LineString = "LineString".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.LineString]
   @scala.inline
-  def LinearRing: typingsSlinky.openlayers.openlayersStrings.LinearRing = this.cast("LinearRing")
+  def LinearRing: typingsSlinky.openlayers.openlayersStrings.LinearRing = "LinearRing".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.LinearRing]
   @scala.inline
-  def MultiLineString: typingsSlinky.openlayers.openlayersStrings.MultiLineString = this.cast("MultiLineString")
+  def MultiLineString: typingsSlinky.openlayers.openlayersStrings.MultiLineString = "MultiLineString".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.MultiLineString]
   @scala.inline
-  def MultiPoint: typingsSlinky.openlayers.openlayersStrings.MultiPoint = this.cast("MultiPoint")
+  def MultiPoint: typingsSlinky.openlayers.openlayersStrings.MultiPoint = "MultiPoint".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.MultiPoint]
   @scala.inline
-  def MultiPolygon: typingsSlinky.openlayers.openlayersStrings.MultiPolygon = this.cast("MultiPolygon")
+  def MultiPolygon: typingsSlinky.openlayers.openlayersStrings.MultiPolygon = "MultiPolygon".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.MultiPolygon]
   @scala.inline
-  def Point: typingsSlinky.openlayers.openlayersStrings.Point = this.cast("Point")
+  def Point: typingsSlinky.openlayers.openlayersStrings.Point = "Point".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.Point]
   @scala.inline
-  def Polygon: typingsSlinky.openlayers.openlayersStrings.Polygon = this.cast("Polygon")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Polygon: typingsSlinky.openlayers.openlayersStrings.Polygon = "Polygon".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.Polygon]
 }
 

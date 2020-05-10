@@ -5,12 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CameraPopoverOptions extends js.Object {
-  var arrowDir: js.UndefOr[Double] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
-  var x: js.UndefOr[Double] = js.undefined
-  var y: js.UndefOr[Double] = js.undefined
+  var arrowDir: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.native
+  var x: js.UndefOr[Double] = js.native
+  var y: js.UndefOr[Double] = js.native
 }
 
 @JSGlobal("CameraPopoverOptions")

@@ -1,5 +1,6 @@
 package typingsSlinky.knex.mod
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -38,7 +39,7 @@ trait Knex[TRecord /* <: js.Object */, TResult]
     TSrc, 
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in TSrc ]: TSrc}
-    */ typingsSlinky.knex.knexStrings.Knex with js.Any
+    */ typingsSlinky.knex.knexStrings.Knex with TopLevel[js.Any]
   ] = js.native
   def transaction(): js.Promise[Transaction[_, _]] = js.native
   def transaction(transactionScope: Null, config: js.Any): js.Promise[Transaction[_, _]] = js.native

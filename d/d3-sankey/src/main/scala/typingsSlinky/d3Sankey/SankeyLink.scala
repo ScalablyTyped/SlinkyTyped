@@ -5,11 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined d3-sankey.d3-sankey.SankeyLink<{}, {}> */
+@js.native
 trait SankeyLink extends js.Object {
   /**
     * Link's zero-based index within the array of links calculated by Sankey layout generator.
     */
-  var index: js.UndefOr[Double] = js.undefined
+  var index: js.UndefOr[Double] = js.native
   /**
     * Link's source node. For convenience, when initializing a Sankey layout using the default node id accessor,
     * source may be the zero-based index of the corresponding node in the nodes array
@@ -19,7 +20,7 @@ trait SankeyLink extends js.Object {
     * Once the Sankey generator is invoked to return the Sankey graph object,
     * the numeric index will be replaced with the corresponding source node object.
     */
-  var source: Double | String | SankeyNode
+  var source: Double | String | (typingsSlinky.d3Sankey.mod.SankeyNode[js.Object, js.Object]) = js.native
   /**
     * Link's target node. For convenience, when initializing a Sankey layout using the default node id accessor,
     * target may be the zero-based index of the corresponding node in the nodes array
@@ -29,42 +30,108 @@ trait SankeyLink extends js.Object {
     * Once the Sankey generator is invoked to return the Sankey graph object,
     * the numeric index will be replaced with the corresponding target node object.
     */
-  var target: Double | String | SankeyNode
+  var target: Double | String | (typingsSlinky.d3Sankey.mod.SankeyNode[js.Object, js.Object]) = js.native
   /**
     * Link's numeric value
     */
-  var value: Double
+  var value: Double = js.native
   /**
     * Link's width (proportional to its value) calculated by Sankey layout generator.
     */
-  var width: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.native
   /**
     * Link's vertical starting position (at source node) calculated by Sankey layout generator.
     */
-  var y0: js.UndefOr[Double] = js.undefined
+  var y0: js.UndefOr[Double] = js.native
   /**
     * Link's vertical end position (at target node) calculated by Sankey layout generator.
     */
-  var y1: js.UndefOr[Double] = js.undefined
+  var y1: js.UndefOr[Double] = js.native
 }
 
 object SankeyLink {
   @scala.inline
   def apply(
-    source: Double | String | SankeyNode,
-    target: Double | String | SankeyNode,
-    value: Double,
-    index: Int | Double = null,
-    width: Int | Double = null,
-    y0: Int | Double = null,
-    y1: Int | Double = null
+    source: Double | String | (typingsSlinky.d3Sankey.mod.SankeyNode[js.Object, js.Object]),
+    target: Double | String | (typingsSlinky.d3Sankey.mod.SankeyNode[js.Object, js.Object]),
+    value: Double
   ): SankeyLink = {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (y0 != null) __obj.updateDynamic("y0")(y0.asInstanceOf[js.Any])
-    if (y1 != null) __obj.updateDynamic("y1")(y1.asInstanceOf[js.Any])
     __obj.asInstanceOf[SankeyLink]
   }
+  @scala.inline
+  implicit class SankeyLinkOps[Self <: SankeyLink] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSource(value: Double | String | (typingsSlinky.d3Sankey.mod.SankeyNode[js.Object, js.Object])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTarget(value: Double | String | (typingsSlinky.d3Sankey.mod.SankeyNode[js.Object, js.Object])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY0(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y0")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY0: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y0")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY1(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y1")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

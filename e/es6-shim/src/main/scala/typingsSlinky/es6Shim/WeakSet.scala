@@ -5,10 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WeakSet[T] extends js.Object {
-  def add(value: T): WeakSet[T]
-  def delete(value: T): Boolean
-  def has(value: T): Boolean
+  def add(value: T): WeakSet[T] = js.native
+  def delete(value: T): Boolean = js.native
+  def has(value: T): Boolean = js.native
 }
 
 @JSGlobal("WeakSet")

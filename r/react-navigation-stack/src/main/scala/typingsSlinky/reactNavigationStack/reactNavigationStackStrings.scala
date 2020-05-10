@@ -86,6 +86,12 @@ object reactNavigationStackStrings {
   sealed trait normal extends js.Object
   
   @js.native
+  sealed trait onComponentRef extends js.Object
+  
+  @js.native
+  sealed trait pointerEvents extends js.Object
+  
+  @js.native
   sealed trait polite extends js.Object
   
   @js.native
@@ -172,6 +178,10 @@ object reactNavigationStackStrings {
   def none: none = "none".asInstanceOf[none]
   @scala.inline
   def normal: normal = "normal".asInstanceOf[normal]
+  @scala.inline
+  def onComponentRef: onComponentRef = "onComponentRef".asInstanceOf[onComponentRef]
+  @scala.inline
+  def pointerEvents: pointerEvents = "pointerEvents".asInstanceOf[pointerEvents]
   @scala.inline
   def polite: polite = "polite".asInstanceOf[polite]
   @scala.inline

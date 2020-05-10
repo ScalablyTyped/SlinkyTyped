@@ -22,16 +22,53 @@ trait ProvisioningTemplateVersionSummary extends js.Object {
 
 object ProvisioningTemplateVersionSummary {
   @scala.inline
-  def apply(
-    creationDate: js.Date = null,
-    isDefaultVersion: js.UndefOr[scala.Boolean] = js.undefined,
-    versionId: Int | Double = null
-  ): ProvisioningTemplateVersionSummary = {
+  def apply(): ProvisioningTemplateVersionSummary = {
     val __obj = js.Dynamic.literal()
-    if (creationDate != null) __obj.updateDynamic("creationDate")(creationDate.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDefaultVersion)) __obj.updateDynamic("isDefaultVersion")(isDefaultVersion.asInstanceOf[js.Any])
-    if (versionId != null) __obj.updateDynamic("versionId")(versionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProvisioningTemplateVersionSummary]
   }
+  @scala.inline
+  implicit class ProvisioningTemplateVersionSummaryOps[Self <: ProvisioningTemplateVersionSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDefaultVersion(value: IsDefaultVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDefaultVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionId(value: TemplateVersionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

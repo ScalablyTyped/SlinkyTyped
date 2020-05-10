@@ -54,30 +54,137 @@ trait CreateJobRequest extends js.Object {
 
 object CreateJobRequest {
   @scala.inline
-  def apply(
-    jobId: JobId,
-    targets: JobTargets,
-    abortConfig: AbortConfig = null,
-    description: JobDescription = null,
-    document: JobDocument = null,
-    documentSource: JobDocumentSource = null,
-    jobExecutionsRolloutConfig: JobExecutionsRolloutConfig = null,
-    presignedUrlConfig: PresignedUrlConfig = null,
-    tags: TagList = null,
-    targetSelection: TargetSelection = null,
-    timeoutConfig: TimeoutConfig = null
-  ): CreateJobRequest = {
+  def apply(jobId: JobId, targets: JobTargets): CreateJobRequest = {
     val __obj = js.Dynamic.literal(jobId = jobId.asInstanceOf[js.Any], targets = targets.asInstanceOf[js.Any])
-    if (abortConfig != null) __obj.updateDynamic("abortConfig")(abortConfig.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (document != null) __obj.updateDynamic("document")(document.asInstanceOf[js.Any])
-    if (documentSource != null) __obj.updateDynamic("documentSource")(documentSource.asInstanceOf[js.Any])
-    if (jobExecutionsRolloutConfig != null) __obj.updateDynamic("jobExecutionsRolloutConfig")(jobExecutionsRolloutConfig.asInstanceOf[js.Any])
-    if (presignedUrlConfig != null) __obj.updateDynamic("presignedUrlConfig")(presignedUrlConfig.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (targetSelection != null) __obj.updateDynamic("targetSelection")(targetSelection.asInstanceOf[js.Any])
-    if (timeoutConfig != null) __obj.updateDynamic("timeoutConfig")(timeoutConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateJobRequest]
   }
+  @scala.inline
+  implicit class CreateJobRequestOps[Self <: CreateJobRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobId(value: JobId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargets(value: JobTargets): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAbortConfig(value: AbortConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abortConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbortConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abortConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: JobDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocument(value: JobDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocument: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentSource(value: JobDocumentSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobExecutionsRolloutConfig(value: JobExecutionsRolloutConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobExecutionsRolloutConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobExecutionsRolloutConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobExecutionsRolloutConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPresignedUrlConfig(value: PresignedUrlConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presignedUrlConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPresignedUrlConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presignedUrlConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetSelection(value: TargetSelection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetSelection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetSelection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetSelection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeoutConfig(value: TimeoutConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeoutConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

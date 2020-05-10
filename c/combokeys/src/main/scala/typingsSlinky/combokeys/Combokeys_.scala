@@ -94,8 +94,7 @@ object Combokeys_ extends js.Object {
   }
   
   @js.native
-  trait CombokeysStatic
-    extends Instantiable1[/* element */ typingsSlinky.std.Element, Combokeys] {
+  trait CombokeysStatic extends Instantiable1[/* element */ Element, Combokeys] {
     /**
       * all instances of Combokeys
       */

@@ -3,7 +3,6 @@ package typingsSlinky.libpq.mod
 import typingsSlinky.libpq.libpqBooleans.`true`
 import typingsSlinky.node.bufferMod.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,7 +36,7 @@ trait Libpq extends EventEmitter {
     *                   number, it is returned as a string to mirror libpq's behavior.
     */
   def cmdTuples(): String = js.native
-  def connect(callback: js.Function1[/* err */ js.UndefOr[Error], Unit]): Unit = js.native
+  def connect(callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
   /**
     * (async) Connects to a PostgreSQL backend server process.
     *

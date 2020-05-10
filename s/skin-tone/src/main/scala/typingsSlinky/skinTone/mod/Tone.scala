@@ -16,18 +16,16 @@ trait Tone extends js.Object
 
 object Tone {
   @scala.inline
-  def brown: typingsSlinky.skinTone.skinToneStrings.brown = this.cast("brown")
+  def brown: typingsSlinky.skinTone.skinToneStrings.brown = "brown".asInstanceOf[typingsSlinky.skinTone.skinToneStrings.brown]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def creamWhite: typingsSlinky.skinTone.skinToneStrings.creamWhite = "creamWhite".asInstanceOf[typingsSlinky.skinTone.skinToneStrings.creamWhite]
   @scala.inline
-  def creamWhite: typingsSlinky.skinTone.skinToneStrings.creamWhite = this.cast("creamWhite")
+  def darkBrown: typingsSlinky.skinTone.skinToneStrings.darkBrown = "darkBrown".asInstanceOf[typingsSlinky.skinTone.skinToneStrings.darkBrown]
   @scala.inline
-  def darkBrown: typingsSlinky.skinTone.skinToneStrings.darkBrown = this.cast("darkBrown")
+  def lightBrown: typingsSlinky.skinTone.skinToneStrings.lightBrown = "lightBrown".asInstanceOf[typingsSlinky.skinTone.skinToneStrings.lightBrown]
   @scala.inline
-  def lightBrown: typingsSlinky.skinTone.skinToneStrings.lightBrown = this.cast("lightBrown")
+  def none: typingsSlinky.skinTone.skinToneStrings.none = "none".asInstanceOf[typingsSlinky.skinTone.skinToneStrings.none]
   @scala.inline
-  def none: typingsSlinky.skinTone.skinToneStrings.none = this.cast("none")
-  @scala.inline
-  def white: typingsSlinky.skinTone.skinToneStrings.white = this.cast("white")
+  def white: typingsSlinky.skinTone.skinToneStrings.white = "white".asInstanceOf[typingsSlinky.skinTone.skinToneStrings.white]
 }
 

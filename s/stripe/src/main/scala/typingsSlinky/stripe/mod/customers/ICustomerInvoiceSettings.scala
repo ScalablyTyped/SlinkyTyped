@@ -5,34 +5,72 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ICustomerInvoiceSettings extends js.Object {
   /**
     * Default custom fields to be displayed on invoices for this customer.
     */
-  var custom_fields: js.UndefOr[js.Array[AnonName]] = js.undefined
+  var custom_fields: js.UndefOr[js.Array[AnonName]] = js.native
   /**
     * ID of the default payment method used for subscriptions and invoices for the customer.
     */
-  var default_payment_method: js.UndefOr[String] = js.undefined
+  var default_payment_method: js.UndefOr[String] = js.native
   /**
     * Default footer to be displayed on invoices for this customer.
     * This can be unset by updating the value to null and then saving.
     */
-  var footer: js.UndefOr[String] = js.undefined
+  var footer: js.UndefOr[String] = js.native
 }
 
 object ICustomerInvoiceSettings {
   @scala.inline
-  def apply(
-    custom_fields: js.Array[AnonName] = null,
-    default_payment_method: String = null,
-    footer: String = null
-  ): ICustomerInvoiceSettings = {
+  def apply(): ICustomerInvoiceSettings = {
     val __obj = js.Dynamic.literal()
-    if (custom_fields != null) __obj.updateDynamic("custom_fields")(custom_fields.asInstanceOf[js.Any])
-    if (default_payment_method != null) __obj.updateDynamic("default_payment_method")(default_payment_method.asInstanceOf[js.Any])
-    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICustomerInvoiceSettings]
   }
+  @scala.inline
+  implicit class ICustomerInvoiceSettingsOps[Self <: ICustomerInvoiceSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustom_fields(value: js.Array[AnonName]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustom_fields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefault_payment_method(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default_payment_method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefault_payment_method: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default_payment_method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFooter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFooter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

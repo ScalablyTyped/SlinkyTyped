@@ -5,1476 +5,1477 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Record<dom-helpers.dom-helpers/cjs/types.Property | dom-helpers.dom-helpers/cjs/isTransform.TransformValue, string> */
+@js.native
 trait AnimateProperties extends js.Object {
-  var `-khtml-box-align`: String
-  var `-khtml-box-direction`: String
-  var `-khtml-box-flex`: String
-  var `-khtml-box-flex-group`: String
-  var `-khtml-box-lines`: String
-  var `-khtml-box-ordinal-group`: String
-  var `-khtml-box-orient`: String
-  var `-khtml-box-pack`: String
-  var `-khtml-line-break`: String
-  var `-khtml-opacity`: String
-  var `-khtml-user-select`: String
-  var `-moz-animation`: String
-  var `-moz-animation-delay`: String
-  var `-moz-animation-direction`: String
-  var `-moz-animation-duration`: String
-  var `-moz-animation-fill-mode`: String
-  var `-moz-animation-iteration-count`: String
-  var `-moz-animation-name`: String
-  var `-moz-animation-play-state`: String
-  var `-moz-animation-timing-function`: String
-  var `-moz-appearance`: String
-  var `-moz-backface-visibility`: String
-  var `-moz-background-clip`: String
-  var `-moz-background-inline-policy`: String
-  var `-moz-background-origin`: String
-  var `-moz-background-size`: String
-  var `-moz-binding`: String
-  var `-moz-border-bottom-colors`: String
-  var `-moz-border-end-color`: String
-  var `-moz-border-end-style`: String
-  var `-moz-border-end-width`: String
-  var `-moz-border-image`: String
-  var `-moz-border-left-colors`: String
-  var `-moz-border-radius`: String
-  var `-moz-border-radius-bottomleft`: String
-  var `-moz-border-radius-bottomright`: String
-  var `-moz-border-radius-topleft`: String
-  var `-moz-border-radius-topright`: String
-  var `-moz-border-right-colors`: String
-  var `-moz-border-start-color`: String
-  var `-moz-border-start-style`: String
-  var `-moz-border-top-colors`: String
-  var `-moz-box-align`: String
-  var `-moz-box-direction`: String
-  var `-moz-box-flex`: String
-  var `-moz-box-ordinal-group`: String
-  var `-moz-box-orient`: String
-  var `-moz-box-pack`: String
-  var `-moz-box-shadow`: String
-  var `-moz-box-sizing`: String
-  var `-moz-column-count`: String
-  var `-moz-column-fill`: String
-  var `-moz-column-gap`: String
-  var `-moz-column-rule`: String
-  var `-moz-column-rule-color`: String
-  var `-moz-column-rule-style`: String
-  var `-moz-column-rule-width`: String
-  var `-moz-column-width`: String
-  var `-moz-columns`: String
-  var `-moz-context-properties`: String
-  var `-moz-float-edge`: String
-  var `-moz-font-feature-settings`: String
-  var `-moz-font-language-override`: String
-  var `-moz-force-broken-image-icon`: String
-  var `-moz-hyphens`: String
-  var `-moz-image-region`: String
-  var `-moz-margin-end`: String
-  var `-moz-margin-start`: String
-  var `-moz-opacity`: String
-  var `-moz-orient`: String
-  var `-moz-outline`: String
-  var `-moz-outline-color`: String
-  var `-moz-outline-radius`: String
-  var `-moz-outline-radius-bottomleft`: String
-  var `-moz-outline-radius-bottomright`: String
-  var `-moz-outline-radius-topleft`: String
-  var `-moz-outline-radius-topright`: String
-  var `-moz-outline-style`: String
-  var `-moz-outline-width`: String
-  var `-moz-padding-end`: String
-  var `-moz-padding-start`: String
-  var `-moz-perspective`: String
-  var `-moz-perspective-origin`: String
-  var `-moz-stack-sizing`: String
-  var `-moz-tab-size`: String
-  var `-moz-text-align-last`: String
-  var `-moz-text-blink`: String
-  var `-moz-text-decoration-color`: String
-  var `-moz-text-decoration-line`: String
-  var `-moz-text-decoration-style`: String
-  var `-moz-text-size-adjust`: String
-  var `-moz-transform-origin`: String
-  var `-moz-transform-style`: String
-  var `-moz-transition`: String
-  var `-moz-transition-delay`: String
-  var `-moz-transition-duration`: String
-  var `-moz-transition-property`: String
-  var `-moz-transition-timing-function`: String
-  var `-moz-user-focus`: String
-  var `-moz-user-input`: String
-  var `-moz-user-modify`: String
-  var `-moz-user-select`: String
-  var `-moz-window-dragging`: String
-  var `-moz-window-shadow`: String
-  var `-ms-accelerator`: String
-  var `-ms-align-self`: String
-  var `-ms-block-progression`: String
-  var `-ms-content-zoom-chaining`: String
-  var `-ms-content-zoom-limit`: String
-  var `-ms-content-zoom-limit-max`: String
-  var `-ms-content-zoom-limit-min`: String
-  var `-ms-content-zoom-snap`: String
-  var `-ms-content-zoom-snap-points`: String
-  var `-ms-content-zoom-snap-type`: String
-  var `-ms-content-zooming`: String
-  var `-ms-filter`: String
-  var `-ms-flex`: String
-  var `-ms-flex-direction`: String
-  var `-ms-flex-positive`: String
-  var `-ms-flow-from`: String
-  var `-ms-flow-into`: String
-  var `-ms-grid-columns`: String
-  var `-ms-grid-rows`: String
-  var `-ms-high-contrast-adjust`: String
-  var `-ms-hyphenate-limit-chars`: String
-  var `-ms-hyphenate-limit-lines`: String
-  var `-ms-hyphenate-limit-zone`: String
-  var `-ms-hyphens`: String
-  var `-ms-ime-align`: String
-  var `-ms-ime-mode`: String
-  var `-ms-line-break`: String
-  var `-ms-order`: String
-  var `-ms-overflow-style`: String
-  var `-ms-overflow-x`: String
-  var `-ms-overflow-y`: String
-  var `-ms-scroll-chaining`: String
-  var `-ms-scroll-limit`: String
-  var `-ms-scroll-limit-x-max`: String
-  var `-ms-scroll-limit-x-min`: String
-  var `-ms-scroll-limit-y-max`: String
-  var `-ms-scroll-limit-y-min`: String
-  var `-ms-scroll-rails`: String
-  var `-ms-scroll-snap-points-x`: String
-  var `-ms-scroll-snap-points-y`: String
-  var `-ms-scroll-snap-type`: String
-  var `-ms-scroll-snap-x`: String
-  var `-ms-scroll-snap-y`: String
-  var `-ms-scroll-translation`: String
-  var `-ms-scrollbar-3dlight-color`: String
-  var `-ms-scrollbar-arrow-color`: String
-  var `-ms-scrollbar-base-color`: String
-  var `-ms-scrollbar-darkshadow-color`: String
-  var `-ms-scrollbar-face-color`: String
-  var `-ms-scrollbar-highlight-color`: String
-  var `-ms-scrollbar-shadow-color`: String
-  var `-ms-scrollbar-track-color`: String
-  var `-ms-text-autospace`: String
-  var `-ms-text-combine-horizontal`: String
-  var `-ms-text-overflow`: String
-  var `-ms-touch-action`: String
-  var `-ms-touch-select`: String
-  var `-ms-transform`: String
-  var `-ms-transform-origin`: String
-  var `-ms-transition`: String
-  var `-ms-transition-delay`: String
-  var `-ms-transition-duration`: String
-  var `-ms-transition-property`: String
-  var `-ms-transition-timing-function`: String
-  var `-ms-user-select`: String
-  var `-ms-word-break`: String
-  var `-ms-wrap-flow`: String
-  var `-ms-wrap-margin`: String
-  var `-ms-wrap-through`: String
-  var `-ms-writing-mode`: String
-  var `-o-animation`: String
-  var `-o-animation-delay`: String
-  var `-o-animation-direction`: String
-  var `-o-animation-duration`: String
-  var `-o-animation-fill-mode`: String
-  var `-o-animation-iteration-count`: String
-  var `-o-animation-name`: String
-  var `-o-animation-play-state`: String
-  var `-o-animation-timing-function`: String
-  var `-o-background-size`: String
-  var `-o-border-image`: String
-  var `-o-object-fit`: String
-  var `-o-object-position`: String
-  var `-o-tab-size`: String
-  var `-o-text-overflow`: String
-  var `-o-transform`: String
-  var `-o-transform-origin`: String
-  var `-o-transition`: String
-  var `-o-transition-delay`: String
-  var `-o-transition-duration`: String
-  var `-o-transition-property`: String
-  var `-o-transition-timing-function`: String
-  var `-webkit-align-content`: String
-  var `-webkit-align-items`: String
-  var `-webkit-align-self`: String
-  var `-webkit-animation`: String
-  var `-webkit-animation-delay`: String
-  var `-webkit-animation-direction`: String
-  var `-webkit-animation-duration`: String
-  var `-webkit-animation-fill-mode`: String
-  var `-webkit-animation-iteration-count`: String
-  var `-webkit-animation-name`: String
-  var `-webkit-animation-play-state`: String
-  var `-webkit-animation-timing-function`: String
-  var `-webkit-appearance`: String
-  var `-webkit-backdrop-filter`: String
-  var `-webkit-backface-visibility`: String
-  var `-webkit-background-clip`: String
-  var `-webkit-background-origin`: String
-  var `-webkit-background-size`: String
-  var `-webkit-border-before`: String
-  var `-webkit-border-before-color`: String
-  var `-webkit-border-before-style`: String
-  var `-webkit-border-before-width`: String
-  var `-webkit-border-bottom-left-radius`: String
-  var `-webkit-border-bottom-right-radius`: String
-  var `-webkit-border-image`: String
-  var `-webkit-border-image-slice`: String
-  var `-webkit-border-radius`: String
-  var `-webkit-border-top-left-radius`: String
-  var `-webkit-border-top-right-radius`: String
-  var `-webkit-box-align`: String
-  var `-webkit-box-decoration-break`: String
-  var `-webkit-box-direction`: String
-  var `-webkit-box-flex`: String
-  var `-webkit-box-flex-group`: String
-  var `-webkit-box-lines`: String
-  var `-webkit-box-ordinal-group`: String
-  var `-webkit-box-orient`: String
-  var `-webkit-box-pack`: String
-  var `-webkit-box-reflect`: String
-  var `-webkit-box-shadow`: String
-  var `-webkit-box-sizing`: String
-  var `-webkit-clip-path`: String
-  var `-webkit-color-adjust`: String
-  var `-webkit-column-count`: String
-  var `-webkit-column-fill`: String
-  var `-webkit-column-gap`: String
-  var `-webkit-column-rule`: String
-  var `-webkit-column-rule-color`: String
-  var `-webkit-column-rule-style`: String
-  var `-webkit-column-rule-width`: String
-  var `-webkit-column-span`: String
-  var `-webkit-column-width`: String
-  var `-webkit-columns`: String
-  var `-webkit-filter`: String
-  var `-webkit-flex`: String
-  var `-webkit-flex-basis`: String
-  var `-webkit-flex-direction`: String
-  var `-webkit-flex-flow`: String
-  var `-webkit-flex-grow`: String
-  var `-webkit-flex-shrink`: String
-  var `-webkit-flex-wrap`: String
-  var `-webkit-font-feature-settings`: String
-  var `-webkit-font-kerning`: String
-  var `-webkit-font-variant-ligatures`: String
-  var `-webkit-hyphens`: String
-  var `-webkit-justify-content`: String
-  var `-webkit-line-break`: String
-  var `-webkit-line-clamp`: String
-  var `-webkit-margin-end`: String
-  var `-webkit-margin-start`: String
-  var `-webkit-mask`: String
-  var `-webkit-mask-attachment`: String
-  var `-webkit-mask-clip`: String
-  var `-webkit-mask-composite`: String
-  var `-webkit-mask-image`: String
-  var `-webkit-mask-origin`: String
-  var `-webkit-mask-position`: String
-  var `-webkit-mask-position-x`: String
-  var `-webkit-mask-position-y`: String
-  var `-webkit-mask-repeat`: String
-  var `-webkit-mask-repeat-x`: String
-  var `-webkit-mask-repeat-y`: String
-  var `-webkit-mask-size`: String
-  var `-webkit-max-inline-size`: String
-  var `-webkit-order`: String
-  var `-webkit-overflow-scrolling`: String
-  var `-webkit-padding-end`: String
-  var `-webkit-padding-start`: String
-  var `-webkit-perspective`: String
-  var `-webkit-perspective-origin`: String
-  var `-webkit-scroll-snap-points-x`: String
-  var `-webkit-scroll-snap-points-y`: String
-  var `-webkit-scroll-snap-type`: String
-  var `-webkit-shape-margin`: String
-  var `-webkit-tap-highlight-color`: String
-  var `-webkit-text-combine`: String
-  var `-webkit-text-decoration-color`: String
-  var `-webkit-text-decoration-line`: String
-  var `-webkit-text-decoration-skip`: String
-  var `-webkit-text-decoration-style`: String
-  var `-webkit-text-emphasis`: String
-  var `-webkit-text-emphasis-color`: String
-  var `-webkit-text-emphasis-position`: String
-  var `-webkit-text-emphasis-style`: String
-  var `-webkit-text-fill-color`: String
-  var `-webkit-text-orientation`: String
-  var `-webkit-text-size-adjust`: String
-  var `-webkit-text-stroke`: String
-  var `-webkit-text-stroke-color`: String
-  var `-webkit-text-stroke-width`: String
-  var `-webkit-touch-callout`: String
-  var `-webkit-transform`: String
-  var `-webkit-transform-origin`: String
-  var `-webkit-transform-style`: String
-  var `-webkit-transition`: String
-  var `-webkit-transition-delay`: String
-  var `-webkit-transition-duration`: String
-  var `-webkit-transition-property`: String
-  var `-webkit-transition-timing-function`: String
-  var `-webkit-user-modify`: String
-  var `-webkit-user-select`: String
-  var `-webkit-writing-mode`: String
-  var KhtmlBoxAlign: String
-  var KhtmlBoxDirection: String
-  var KhtmlBoxFlex: String
-  var KhtmlBoxFlexGroup: String
-  var KhtmlBoxLines: String
-  var KhtmlBoxOrdinalGroup: String
-  var KhtmlBoxOrient: String
-  var KhtmlBoxPack: String
-  var KhtmlLineBreak: String
-  var KhtmlOpacity: String
-  var KhtmlUserSelect: String
-  var MozAnimation: String
-  var MozAnimationDelay: String
-  var MozAnimationDirection: String
-  var MozAnimationDuration: String
-  var MozAnimationFillMode: String
-  var MozAnimationIterationCount: String
-  var MozAnimationName: String
-  var MozAnimationPlayState: String
-  var MozAnimationTimingFunction: String
-  var MozAppearance: String
-  var MozBackfaceVisibility: String
-  var MozBackgroundClip: String
-  var MozBackgroundInlinePolicy: String
-  var MozBackgroundOrigin: String
-  var MozBackgroundSize: String
-  var MozBinding: String
-  var MozBorderBottomColors: String
-  var MozBorderEndColor: String
-  var MozBorderEndStyle: String
-  var MozBorderEndWidth: String
-  var MozBorderImage: String
-  var MozBorderLeftColors: String
-  var MozBorderRadius: String
-  var MozBorderRadiusBottomleft: String
-  var MozBorderRadiusBottomright: String
-  var MozBorderRadiusTopleft: String
-  var MozBorderRadiusTopright: String
-  var MozBorderRightColors: String
-  var MozBorderStartColor: String
-  var MozBorderStartStyle: String
-  var MozBorderTopColors: String
-  var MozBoxAlign: String
-  var MozBoxDirection: String
-  var MozBoxFlex: String
-  var MozBoxOrdinalGroup: String
-  var MozBoxOrient: String
-  var MozBoxPack: String
-  var MozBoxShadow: String
-  var MozBoxSizing: String
-  var MozColumnCount: String
-  var MozColumnFill: String
-  var MozColumnGap: String
-  var MozColumnRule: String
-  var MozColumnRuleColor: String
-  var MozColumnRuleStyle: String
-  var MozColumnRuleWidth: String
-  var MozColumnWidth: String
-  var MozColumns: String
-  var MozContextProperties: String
-  var MozFloatEdge: String
-  var MozFontFeatureSettings: String
-  var MozFontLanguageOverride: String
-  var MozForceBrokenImageIcon: String
-  var MozHyphens: String
-  var MozImageRegion: String
-  var MozMarginEnd: String
-  var MozMarginStart: String
-  var MozOpacity: String
-  var MozOrient: String
-  var MozOutline: String
-  var MozOutlineColor: String
-  var MozOutlineRadius: String
-  var MozOutlineRadiusBottomleft: String
-  var MozOutlineRadiusBottomright: String
-  var MozOutlineRadiusTopleft: String
-  var MozOutlineRadiusTopright: String
-  var MozOutlineStyle: String
-  var MozOutlineWidth: String
-  var MozPaddingEnd: String
-  var MozPaddingStart: String
-  var MozPerspective: String
-  var MozPerspectiveOrigin: String
-  var MozStackSizing: String
-  var MozTabSize: String
-  var MozTextAlignLast: String
-  var MozTextBlink: String
-  var MozTextDecorationColor: String
-  var MozTextDecorationLine: String
-  var MozTextDecorationStyle: String
-  var MozTextSizeAdjust: String
-  var MozTransformOrigin: String
-  var MozTransformStyle: String
-  var MozTransition: String
-  var MozTransitionDelay: String
-  var MozTransitionDuration: String
-  var MozTransitionProperty: String
-  var MozTransitionTimingFunction: String
-  var MozUserFocus: String
-  var MozUserInput: String
-  var MozUserModify: String
-  var MozUserSelect: String
-  var MozWindowDragging: String
-  var MozWindowShadow: String
-  var OAnimation: String
-  var OAnimationDelay: String
-  var OAnimationDirection: String
-  var OAnimationDuration: String
-  var OAnimationFillMode: String
-  var OAnimationIterationCount: String
-  var OAnimationName: String
-  var OAnimationPlayState: String
-  var OAnimationTimingFunction: String
-  var OBackgroundSize: String
-  var OBorderImage: String
-  var OObjectFit: String
-  var OObjectPosition: String
-  var OTabSize: String
-  var OTextOverflow: String
-  var OTransform: String
-  var OTransformOrigin: String
-  var OTransition: String
-  var OTransitionDelay: String
-  var OTransitionDuration: String
-  var OTransitionProperty: String
-  var OTransitionTimingFunction: String
-  var WebkitAlignContent: String
-  var WebkitAlignItems: String
-  var WebkitAlignSelf: String
-  var WebkitAnimation: String
-  var WebkitAnimationDelay: String
-  var WebkitAnimationDirection: String
-  var WebkitAnimationDuration: String
-  var WebkitAnimationFillMode: String
-  var WebkitAnimationIterationCount: String
-  var WebkitAnimationName: String
-  var WebkitAnimationPlayState: String
-  var WebkitAnimationTimingFunction: String
-  var WebkitAppearance: String
-  var WebkitBackdropFilter: String
-  var WebkitBackfaceVisibility: String
-  var WebkitBackgroundClip: String
-  var WebkitBackgroundOrigin: String
-  var WebkitBackgroundSize: String
-  var WebkitBorderBefore: String
-  var WebkitBorderBeforeColor: String
-  var WebkitBorderBeforeStyle: String
-  var WebkitBorderBeforeWidth: String
-  var WebkitBorderBottomLeftRadius: String
-  var WebkitBorderBottomRightRadius: String
-  var WebkitBorderImage: String
-  var WebkitBorderImageSlice: String
-  var WebkitBorderRadius: String
-  var WebkitBorderTopLeftRadius: String
-  var WebkitBorderTopRightRadius: String
-  var WebkitBoxAlign: String
-  var WebkitBoxDecorationBreak: String
-  var WebkitBoxDirection: String
-  var WebkitBoxFlex: String
-  var WebkitBoxFlexGroup: String
-  var WebkitBoxLines: String
-  var WebkitBoxOrdinalGroup: String
-  var WebkitBoxOrient: String
-  var WebkitBoxPack: String
-  var WebkitBoxReflect: String
-  var WebkitBoxShadow: String
-  var WebkitBoxSizing: String
-  var WebkitClipPath: String
-  var WebkitColorAdjust: String
-  var WebkitColumnCount: String
-  var WebkitColumnFill: String
-  var WebkitColumnGap: String
-  var WebkitColumnRule: String
-  var WebkitColumnRuleColor: String
-  var WebkitColumnRuleStyle: String
-  var WebkitColumnRuleWidth: String
-  var WebkitColumnSpan: String
-  var WebkitColumnWidth: String
-  var WebkitColumns: String
-  var WebkitFilter: String
-  var WebkitFlex: String
-  var WebkitFlexBasis: String
-  var WebkitFlexDirection: String
-  var WebkitFlexFlow: String
-  var WebkitFlexGrow: String
-  var WebkitFlexShrink: String
-  var WebkitFlexWrap: String
-  var WebkitFontFeatureSettings: String
-  var WebkitFontKerning: String
-  var WebkitFontVariantLigatures: String
-  var WebkitHyphens: String
-  var WebkitJustifyContent: String
-  var WebkitLineBreak: String
-  var WebkitLineClamp: String
-  var WebkitMarginEnd: String
-  var WebkitMarginStart: String
-  var WebkitMask: String
-  var WebkitMaskAttachment: String
-  var WebkitMaskClip: String
-  var WebkitMaskComposite: String
-  var WebkitMaskImage: String
-  var WebkitMaskOrigin: String
-  var WebkitMaskPosition: String
-  var WebkitMaskPositionX: String
-  var WebkitMaskPositionY: String
-  var WebkitMaskRepeat: String
-  var WebkitMaskRepeatX: String
-  var WebkitMaskRepeatY: String
-  var WebkitMaskSize: String
-  var WebkitMaxInlineSize: String
-  var WebkitOrder: String
-  var WebkitOverflowScrolling: String
-  var WebkitPaddingEnd: String
-  var WebkitPaddingStart: String
-  var WebkitPerspective: String
-  var WebkitPerspectiveOrigin: String
-  var WebkitScrollSnapPointsX: String
-  var WebkitScrollSnapPointsY: String
-  var WebkitScrollSnapType: String
-  var WebkitShapeMargin: String
-  var WebkitTapHighlightColor: String
-  var WebkitTextCombine: String
-  var WebkitTextDecorationColor: String
-  var WebkitTextDecorationLine: String
-  var WebkitTextDecorationSkip: String
-  var WebkitTextDecorationStyle: String
-  var WebkitTextEmphasis: String
-  var WebkitTextEmphasisColor: String
-  var WebkitTextEmphasisPosition: String
-  var WebkitTextEmphasisStyle: String
-  var WebkitTextFillColor: String
-  var WebkitTextOrientation: String
-  var WebkitTextSizeAdjust: String
-  var WebkitTextStroke: String
-  var WebkitTextStrokeColor: String
-  var WebkitTextStrokeWidth: String
-  var WebkitTouchCallout: String
-  var WebkitTransform: String
-  var WebkitTransformOrigin: String
-  var WebkitTransformStyle: String
-  var WebkitTransition: String
-  var WebkitTransitionDelay: String
-  var WebkitTransitionDuration: String
-  var WebkitTransitionProperty: String
-  var WebkitTransitionTimingFunction: String
-  var WebkitUserModify: String
-  var WebkitUserSelect: String
-  var WebkitWritingMode: String
-  var `align-content`: String
-  var `align-items`: String
-  var `align-self`: String
-  var alignContent: String
-  var alignItems: String
-  var alignSelf: String
-  var `alignment-baseline`: String
-  var alignmentBaseline: String
-  var all: String
-  var animation: String
-  var `animation-delay`: String
-  var `animation-direction`: String
-  var `animation-duration`: String
-  var `animation-fill-mode`: String
-  var `animation-iteration-count`: String
-  var `animation-name`: String
-  var `animation-play-state`: String
-  var `animation-timing-function`: String
-  var animationDelay: String
-  var animationDirection: String
-  var animationDuration: String
-  var animationFillMode: String
-  var animationIterationCount: String
-  var animationName: String
-  var animationPlayState: String
-  var animationTimingFunction: String
-  var appearance: String
-  var `backdrop-filter`: String
-  var backdropFilter: String
-  var `backface-visibility`: String
-  var backfaceVisibility: String
-  var background: String
-  var `background-attachment`: String
-  var `background-blend-mode`: String
-  var `background-clip`: String
-  var `background-color`: String
-  var `background-image`: String
-  var `background-origin`: String
-  var `background-position`: String
-  var `background-position-x`: String
-  var `background-position-y`: String
-  var `background-repeat`: String
-  var `background-size`: String
-  var backgroundAttachment: String
-  var backgroundBlendMode: String
-  var backgroundClip: String
-  var backgroundColor: String
-  var backgroundImage: String
-  var backgroundOrigin: String
-  var backgroundPosition: String
-  var backgroundPositionX: String
-  var backgroundPositionY: String
-  var backgroundRepeat: String
-  var backgroundSize: String
-  var `baseline-shift`: String
-  var baselineShift: String
-  var `block-overflow`: String
-  var `block-size`: String
-  var blockOverflow: String
-  var blockSize: String
-  var border: String
-  var `border-block`: String
-  var `border-block-color`: String
-  var `border-block-end`: String
-  var `border-block-end-color`: String
-  var `border-block-end-style`: String
-  var `border-block-end-width`: String
-  var `border-block-start`: String
-  var `border-block-start-color`: String
-  var `border-block-start-style`: String
-  var `border-block-start-width`: String
-  var `border-block-style`: String
-  var `border-block-width`: String
-  var `border-bottom`: String
-  var `border-bottom-color`: String
-  var `border-bottom-left-radius`: String
-  var `border-bottom-right-radius`: String
-  var `border-bottom-style`: String
-  var `border-bottom-width`: String
-  var `border-collapse`: String
-  var `border-color`: String
-  var `border-end-end-radius`: String
-  var `border-end-start-radius`: String
-  var `border-image`: String
-  var `border-image-outset`: String
-  var `border-image-repeat`: String
-  var `border-image-slice`: String
-  var `border-image-source`: String
-  var `border-image-width`: String
-  var `border-inline`: String
-  var `border-inline-color`: String
-  var `border-inline-end`: String
-  var `border-inline-end-color`: String
-  var `border-inline-end-style`: String
-  var `border-inline-end-width`: String
-  var `border-inline-start`: String
-  var `border-inline-start-color`: String
-  var `border-inline-start-style`: String
-  var `border-inline-start-width`: String
-  var `border-inline-style`: String
-  var `border-inline-width`: String
-  var `border-left`: String
-  var `border-left-color`: String
-  var `border-left-style`: String
-  var `border-left-width`: String
-  var `border-radius`: String
-  var `border-right`: String
-  var `border-right-color`: String
-  var `border-right-style`: String
-  var `border-right-width`: String
-  var `border-spacing`: String
-  var `border-start-end-radius`: String
-  var `border-start-start-radius`: String
-  var `border-style`: String
-  var `border-top`: String
-  var `border-top-color`: String
-  var `border-top-left-radius`: String
-  var `border-top-right-radius`: String
-  var `border-top-style`: String
-  var `border-top-width`: String
-  var `border-width`: String
-  var borderBlock: String
-  var borderBlockColor: String
-  var borderBlockEnd: String
-  var borderBlockEndColor: String
-  var borderBlockEndStyle: String
-  var borderBlockEndWidth: String
-  var borderBlockStart: String
-  var borderBlockStartColor: String
-  var borderBlockStartStyle: String
-  var borderBlockStartWidth: String
-  var borderBlockStyle: String
-  var borderBlockWidth: String
-  var borderBottom: String
-  var borderBottomColor: String
-  var borderBottomLeftRadius: String
-  var borderBottomRightRadius: String
-  var borderBottomStyle: String
-  var borderBottomWidth: String
-  var borderCollapse: String
-  var borderColor: String
-  var borderEndEndRadius: String
-  var borderEndStartRadius: String
-  var borderImage: String
-  var borderImageOutset: String
-  var borderImageRepeat: String
-  var borderImageSlice: String
-  var borderImageSource: String
-  var borderImageWidth: String
-  var borderInline: String
-  var borderInlineColor: String
-  var borderInlineEnd: String
-  var borderInlineEndColor: String
-  var borderInlineEndStyle: String
-  var borderInlineEndWidth: String
-  var borderInlineStart: String
-  var borderInlineStartColor: String
-  var borderInlineStartStyle: String
-  var borderInlineStartWidth: String
-  var borderInlineStyle: String
-  var borderInlineWidth: String
-  var borderLeft: String
-  var borderLeftColor: String
-  var borderLeftStyle: String
-  var borderLeftWidth: String
-  var borderRadius: String
-  var borderRight: String
-  var borderRightColor: String
-  var borderRightStyle: String
-  var borderRightWidth: String
-  var borderSpacing: String
-  var borderStartEndRadius: String
-  var borderStartStartRadius: String
-  var borderStyle: String
-  var borderTop: String
-  var borderTopColor: String
-  var borderTopLeftRadius: String
-  var borderTopRightRadius: String
-  var borderTopStyle: String
-  var borderTopWidth: String
-  var borderWidth: String
-  var bottom: String
-  var `box-align`: String
-  var `box-decoration-break`: String
-  var `box-direction`: String
-  var `box-flex`: String
-  var `box-flex-group`: String
-  var `box-lines`: String
-  var `box-ordinal-group`: String
-  var `box-orient`: String
-  var `box-pack`: String
-  var `box-shadow`: String
-  var `box-sizing`: String
-  var boxAlign: String
-  var boxDecorationBreak: String
-  var boxDirection: String
-  var boxFlex: String
-  var boxFlexGroup: String
-  var boxLines: String
-  var boxOrdinalGroup: String
-  var boxOrient: String
-  var boxPack: String
-  var boxShadow: String
-  var boxSizing: String
-  var `break-after`: String
-  var `break-before`: String
-  var `break-inside`: String
-  var breakAfter: String
-  var breakBefore: String
-  var breakInside: String
-  var `caption-side`: String
-  var captionSide: String
-  var `caret-color`: String
-  var caretColor: String
-  var clear: String
-  var clip: String
-  var `clip-path`: String
-  var `clip-rule`: String
-  var clipPath: String
-  var clipRule: String
-  var color: String
-  var `color-adjust`: String
-  var `color-interpolation`: String
-  var `color-rendering`: String
-  var colorAdjust: String
-  var colorInterpolation: String
-  var colorRendering: String
-  var `column-count`: String
-  var `column-fill`: String
-  var `column-gap`: String
-  var `column-rule`: String
-  var `column-rule-color`: String
-  var `column-rule-style`: String
-  var `column-rule-width`: String
-  var `column-span`: String
-  var `column-width`: String
-  var columnCount: String
-  var columnFill: String
-  var columnGap: String
-  var columnRule: String
-  var columnRuleColor: String
-  var columnRuleStyle: String
-  var columnRuleWidth: String
-  var columnSpan: String
-  var columnWidth: String
-  var columns: String
-  var contain: String
-  var content: String
-  var `counter-increment`: String
-  var `counter-reset`: String
-  var `counter-set`: String
-  var counterIncrement: String
-  var counterReset: String
-  var counterSet: String
-  var cursor: String
-  var direction: String
-  var display: String
-  var `dominant-baseline`: String
-  var dominantBaseline: String
-  var `empty-cells`: String
-  var emptyCells: String
-  var fill: String
-  var `fill-opacity`: String
-  var `fill-rule`: String
-  var fillOpacity: String
-  var fillRule: String
-  var filter: String
-  var flex: String
-  var `flex-basis`: String
-  var `flex-direction`: String
-  var `flex-flow`: String
-  var `flex-grow`: String
-  var `flex-shrink`: String
-  var `flex-wrap`: String
-  var flexBasis: String
-  var flexDirection: String
-  var flexFlow: String
-  var flexGrow: String
-  var flexShrink: String
-  var flexWrap: String
-  var float: String
-  var `flood-color`: String
-  var `flood-opacity`: String
-  var floodColor: String
-  var floodOpacity: String
-  var font: String
-  var `font-family`: String
-  var `font-feature-settings`: String
-  var `font-kerning`: String
-  var `font-language-override`: String
-  var `font-optical-sizing`: String
-  var `font-size`: String
-  var `font-size-adjust`: String
-  var `font-stretch`: String
-  var `font-style`: String
-  var `font-synthesis`: String
-  var `font-variant`: String
-  var `font-variant-alternates`: String
-  var `font-variant-caps`: String
-  var `font-variant-east-asian`: String
-  var `font-variant-ligatures`: String
-  var `font-variant-numeric`: String
-  var `font-variant-position`: String
-  var `font-variation-settings`: String
-  var `font-weight`: String
-  var fontFamily: String
-  var fontFeatureSettings: String
-  var fontKerning: String
-  var fontLanguageOverride: String
-  var fontOpticalSizing: String
-  var fontSize: String
-  var fontSizeAdjust: String
-  var fontStretch: String
-  var fontStyle: String
-  var fontSynthesis: String
-  var fontVariant: String
-  var fontVariantAlternates: String
-  var fontVariantCaps: String
-  var fontVariantEastAsian: String
-  var fontVariantLigatures: String
-  var fontVariantNumeric: String
-  var fontVariantPosition: String
-  var fontVariationSettings: String
-  var fontWeight: String
-  var gap: String
-  var `glyph-orientation-vertical`: String
-  var glyphOrientationVertical: String
-  var grid: String
-  var `grid-area`: String
-  var `grid-auto-columns`: String
-  var `grid-auto-flow`: String
-  var `grid-auto-rows`: String
-  var `grid-column`: String
-  var `grid-column-end`: String
-  var `grid-column-gap`: String
-  var `grid-column-start`: String
-  var `grid-gap`: String
-  var `grid-row`: String
-  var `grid-row-end`: String
-  var `grid-row-gap`: String
-  var `grid-row-start`: String
-  var `grid-template`: String
-  var `grid-template-areas`: String
-  var `grid-template-columns`: String
-  var `grid-template-rows`: String
-  var gridArea: String
-  var gridAutoColumns: String
-  var gridAutoFlow: String
-  var gridAutoRows: String
-  var gridColumn: String
-  var gridColumnEnd: String
-  var gridColumnGap: String
-  var gridColumnStart: String
-  var gridGap: String
-  var gridRow: String
-  var gridRowEnd: String
-  var gridRowGap: String
-  var gridRowStart: String
-  var gridTemplate: String
-  var gridTemplateAreas: String
-  var gridTemplateColumns: String
-  var gridTemplateRows: String
-  var `hanging-punctuation`: String
-  var hangingPunctuation: String
-  var height: String
-  var hyphens: String
-  var `image-orientation`: String
-  var `image-rendering`: String
-  var `image-resolution`: String
-  var imageOrientation: String
-  var imageRendering: String
-  var imageResolution: String
-  var `ime-mode`: String
-  var imeMode: String
-  var `initial-letter`: String
-  var initialLetter: String
-  var `inline-size`: String
-  var inlineSize: String
-  var inset: String
-  var `inset-block`: String
-  var `inset-block-end`: String
-  var `inset-block-start`: String
-  var `inset-inline`: String
-  var `inset-inline-end`: String
-  var `inset-inline-start`: String
-  var insetBlock: String
-  var insetBlockEnd: String
-  var insetBlockStart: String
-  var insetInline: String
-  var insetInlineEnd: String
-  var insetInlineStart: String
-  var isolation: String
-  var `justify-content`: String
-  var `justify-items`: String
-  var `justify-self`: String
-  var justifyContent: String
-  var justifyItems: String
-  var justifySelf: String
-  var left: String
-  var `letter-spacing`: String
-  var letterSpacing: String
-  var `lighting-color`: String
-  var lightingColor: String
-  var `line-break`: String
-  var `line-clamp`: String
-  var `line-height`: String
-  var `line-height-step`: String
-  var lineBreak: String
-  var lineClamp: String
-  var lineHeight: String
-  var lineHeightStep: String
-  var `list-style`: String
-  var `list-style-image`: String
-  var `list-style-position`: String
-  var `list-style-type`: String
-  var listStyle: String
-  var listStyleImage: String
-  var listStylePosition: String
-  var listStyleType: String
-  var margin: String
-  var `margin-block`: String
-  var `margin-block-end`: String
-  var `margin-block-start`: String
-  var `margin-bottom`: String
-  var `margin-inline`: String
-  var `margin-inline-end`: String
-  var `margin-inline-start`: String
-  var `margin-left`: String
-  var `margin-right`: String
-  var `margin-top`: String
-  var marginBlock: String
-  var marginBlockEnd: String
-  var marginBlockStart: String
-  var marginBottom: String
-  var marginInline: String
-  var marginInlineEnd: String
-  var marginInlineStart: String
-  var marginLeft: String
-  var marginRight: String
-  var marginTop: String
-  var marker: String
-  var `marker-end`: String
-  var `marker-mid`: String
-  var `marker-start`: String
-  var markerEnd: String
-  var markerMid: String
-  var markerStart: String
-  var mask: String
-  var `mask-border`: String
-  var `mask-border-mode`: String
-  var `mask-border-outset`: String
-  var `mask-border-repeat`: String
-  var `mask-border-slice`: String
-  var `mask-border-source`: String
-  var `mask-border-width`: String
-  var `mask-clip`: String
-  var `mask-composite`: String
-  var `mask-image`: String
-  var `mask-mode`: String
-  var `mask-origin`: String
-  var `mask-position`: String
-  var `mask-repeat`: String
-  var `mask-size`: String
-  var `mask-type`: String
-  var maskBorder: String
-  var maskBorderMode: String
-  var maskBorderOutset: String
-  var maskBorderRepeat: String
-  var maskBorderSlice: String
-  var maskBorderSource: String
-  var maskBorderWidth: String
-  var maskClip: String
-  var maskComposite: String
-  var maskImage: String
-  var maskMode: String
-  var maskOrigin: String
-  var maskPosition: String
-  var maskRepeat: String
-  var maskSize: String
-  var maskType: String
-  var matrix: String
-  var matrix3d: String
-  var `max-block-size`: String
-  var `max-height`: String
-  var `max-inline-size`: String
-  var `max-lines`: String
-  var `max-width`: String
-  var maxBlockSize: String
-  var maxHeight: String
-  var maxInlineSize: String
-  var maxLines: String
-  var maxWidth: String
-  var `min-block-size`: String
-  var `min-height`: String
-  var `min-inline-size`: String
-  var `min-width`: String
-  var minBlockSize: String
-  var minHeight: String
-  var minInlineSize: String
-  var minWidth: String
-  var `mix-blend-mode`: String
-  var mixBlendMode: String
-  var motion: String
-  var `motion-distance`: String
-  var `motion-path`: String
-  var `motion-rotation`: String
-  var motionDistance: String
-  var motionPath: String
-  var motionRotation: String
-  var msAccelerator: String
-  var msAlignSelf: String
-  var msBlockProgression: String
-  var msContentZoomChaining: String
-  var msContentZoomLimit: String
-  var msContentZoomLimitMax: String
-  var msContentZoomLimitMin: String
-  var msContentZoomSnap: String
-  var msContentZoomSnapPoints: String
-  var msContentZoomSnapType: String
-  var msContentZooming: String
-  var msFilter: String
-  var msFlex: String
-  var msFlexDirection: String
-  var msFlexPositive: String
-  var msFlowFrom: String
-  var msFlowInto: String
-  var msGridColumns: String
-  var msGridRows: String
-  var msHighContrastAdjust: String
-  var msHyphenateLimitChars: String
-  var msHyphenateLimitLines: String
-  var msHyphenateLimitZone: String
-  var msHyphens: String
-  var msImeAlign: String
-  var msImeMode: String
-  var msLineBreak: String
-  var msOrder: String
-  var msOverflowStyle: String
-  var msOverflowX: String
-  var msOverflowY: String
-  var msScrollChaining: String
-  var msScrollLimit: String
-  var msScrollLimitXMax: String
-  var msScrollLimitXMin: String
-  var msScrollLimitYMax: String
-  var msScrollLimitYMin: String
-  var msScrollRails: String
-  var msScrollSnapPointsX: String
-  var msScrollSnapPointsY: String
-  var msScrollSnapType: String
-  var msScrollSnapX: String
-  var msScrollSnapY: String
-  var msScrollTranslation: String
-  var msScrollbar3dlightColor: String
-  var msScrollbarArrowColor: String
-  var msScrollbarBaseColor: String
-  var msScrollbarDarkshadowColor: String
-  var msScrollbarFaceColor: String
-  var msScrollbarHighlightColor: String
-  var msScrollbarShadowColor: String
-  var msScrollbarTrackColor: String
-  var msTextAutospace: String
-  var msTextCombineHorizontal: String
-  var msTextOverflow: String
-  var msTouchAction: String
-  var msTouchSelect: String
-  var msTransform: String
-  var msTransformOrigin: String
-  var msTransition: String
-  var msTransitionDelay: String
-  var msTransitionDuration: String
-  var msTransitionProperty: String
-  var msTransitionTimingFunction: String
-  var msUserSelect: String
-  var msWordBreak: String
-  var msWrapFlow: String
-  var msWrapMargin: String
-  var msWrapThrough: String
-  var msWritingMode: String
-  var `object-fit`: String
-  var `object-position`: String
-  var objectFit: String
-  var objectPosition: String
-  var offset: String
-  var `offset-anchor`: String
-  var `offset-block`: String
-  var `offset-block-end`: String
-  var `offset-block-start`: String
-  var `offset-distance`: String
-  var `offset-inline`: String
-  var `offset-inline-end`: String
-  var `offset-inline-start`: String
-  var `offset-path`: String
-  var `offset-position`: String
-  var `offset-rotate`: String
-  var `offset-rotation`: String
-  var offsetAnchor: String
-  var offsetBlock: String
-  var offsetBlockEnd: String
-  var offsetBlockStart: String
-  var offsetDistance: String
-  var offsetInline: String
-  var offsetInlineEnd: String
-  var offsetInlineStart: String
-  var offsetPath: String
-  var offsetPosition: String
-  var offsetRotate: String
-  var offsetRotation: String
-  var opacity: String
-  var order: String
-  var orphans: String
-  var outline: String
-  var `outline-color`: String
-  var `outline-offset`: String
-  var `outline-style`: String
-  var `outline-width`: String
-  var outlineColor: String
-  var outlineOffset: String
-  var outlineStyle: String
-  var outlineWidth: String
-  var overflow: String
-  var `overflow-anchor`: String
-  var `overflow-block`: String
-  var `overflow-clip-box`: String
-  var `overflow-inline`: String
-  var `overflow-wrap`: String
-  var `overflow-x`: String
-  var `overflow-y`: String
-  var overflowAnchor: String
-  var overflowBlock: String
-  var overflowClipBox: String
-  var overflowInline: String
-  var overflowWrap: String
-  var overflowX: String
-  var overflowY: String
-  var `overscroll-behavior`: String
-  var `overscroll-behavior-x`: String
-  var `overscroll-behavior-y`: String
-  var overscrollBehavior: String
-  var overscrollBehaviorX: String
-  var overscrollBehaviorY: String
-  var padding: String
-  var `padding-block`: String
-  var `padding-block-end`: String
-  var `padding-block-start`: String
-  var `padding-bottom`: String
-  var `padding-inline`: String
-  var `padding-inline-end`: String
-  var `padding-inline-start`: String
-  var `padding-left`: String
-  var `padding-right`: String
-  var `padding-top`: String
-  var paddingBlock: String
-  var paddingBlockEnd: String
-  var paddingBlockStart: String
-  var paddingBottom: String
-  var paddingInline: String
-  var paddingInlineEnd: String
-  var paddingInlineStart: String
-  var paddingLeft: String
-  var paddingRight: String
-  var paddingTop: String
-  var `page-break-after`: String
-  var `page-break-before`: String
-  var `page-break-inside`: String
-  var pageBreakAfter: String
-  var pageBreakBefore: String
-  var pageBreakInside: String
-  var `paint-order`: String
-  var paintOrder: String
-  var perspective: String
-  var `perspective-origin`: String
-  var perspectiveOrigin: String
-  var `place-content`: String
-  var `place-items`: String
-  var `place-self`: String
-  var placeContent: String
-  var placeItems: String
-  var placeSelf: String
-  var `pointer-events`: String
-  var pointerEvents: String
-  var position: String
-  var quotes: String
-  var resize: String
-  var right: String
-  var rotate: String
-  var rotate3d: String
-  var rotateX: String
-  var rotateY: String
-  var rotateZ: String
-  var `row-gap`: String
-  var rowGap: String
-  var `ruby-align`: String
-  var `ruby-merge`: String
-  var `ruby-position`: String
-  var rubyAlign: String
-  var rubyMerge: String
-  var rubyPosition: String
-  var scale: String
-  var scale3d: String
-  var scaleX: String
-  var scaleY: String
-  var scaleZ: String
-  var `scroll-behavior`: String
-  var `scroll-margin`: String
-  var `scroll-margin-block`: String
-  var `scroll-margin-block-end`: String
-  var `scroll-margin-block-start`: String
-  var `scroll-margin-bottom`: String
-  var `scroll-margin-inline`: String
-  var `scroll-margin-inline-end`: String
-  var `scroll-margin-inline-start`: String
-  var `scroll-margin-left`: String
-  var `scroll-margin-right`: String
-  var `scroll-margin-top`: String
-  var `scroll-padding`: String
-  var `scroll-padding-block`: String
-  var `scroll-padding-block-end`: String
-  var `scroll-padding-block-start`: String
-  var `scroll-padding-bottom`: String
-  var `scroll-padding-inline`: String
-  var `scroll-padding-inline-end`: String
-  var `scroll-padding-inline-start`: String
-  var `scroll-padding-left`: String
-  var `scroll-padding-right`: String
-  var `scroll-padding-top`: String
-  var `scroll-snap-align`: String
-  var `scroll-snap-coordinate`: String
-  var `scroll-snap-destination`: String
-  var `scroll-snap-points-x`: String
-  var `scroll-snap-points-y`: String
-  var `scroll-snap-stop`: String
-  var `scroll-snap-type`: String
-  var `scroll-snap-type-x`: String
-  var `scroll-snap-type-y`: String
-  var scrollBehavior: String
-  var scrollMargin: String
-  var scrollMarginBlock: String
-  var scrollMarginBlockEnd: String
-  var scrollMarginBlockStart: String
-  var scrollMarginBottom: String
-  var scrollMarginInline: String
-  var scrollMarginInlineEnd: String
-  var scrollMarginInlineStart: String
-  var scrollMarginLeft: String
-  var scrollMarginRight: String
-  var scrollMarginTop: String
-  var scrollPadding: String
-  var scrollPaddingBlock: String
-  var scrollPaddingBlockEnd: String
-  var scrollPaddingBlockStart: String
-  var scrollPaddingBottom: String
-  var scrollPaddingInline: String
-  var scrollPaddingInlineEnd: String
-  var scrollPaddingInlineStart: String
-  var scrollPaddingLeft: String
-  var scrollPaddingRight: String
-  var scrollPaddingTop: String
-  var scrollSnapAlign: String
-  var scrollSnapCoordinate: String
-  var scrollSnapDestination: String
-  var scrollSnapPointsX: String
-  var scrollSnapPointsY: String
-  var scrollSnapStop: String
-  var scrollSnapType: String
-  var scrollSnapTypeX: String
-  var scrollSnapTypeY: String
-  var `scrollbar-color`: String
-  var `scrollbar-width`: String
-  var scrollbarColor: String
-  var scrollbarWidth: String
-  var `shape-image-threshold`: String
-  var `shape-margin`: String
-  var `shape-outside`: String
-  var `shape-rendering`: String
-  var shapeImageThreshold: String
-  var shapeMargin: String
-  var shapeOutside: String
-  var shapeRendering: String
-  var skew: String
-  var skewX: String
-  var skewY: String
-  var `stop-color`: String
-  var `stop-opacity`: String
-  var stopColor: String
-  var stopOpacity: String
-  var stroke: String
-  var `stroke-dasharray`: String
-  var `stroke-dashoffset`: String
-  var `stroke-linecap`: String
-  var `stroke-linejoin`: String
-  var `stroke-miterlimit`: String
-  var `stroke-opacity`: String
-  var `stroke-width`: String
-  var strokeDasharray: String
-  var strokeDashoffset: String
-  var strokeLinecap: String
-  var strokeLinejoin: String
-  var strokeMiterlimit: String
-  var strokeOpacity: String
-  var strokeWidth: String
-  var `tab-size`: String
-  var tabSize: String
-  var `table-layout`: String
-  var tableLayout: String
-  var `text-align`: String
-  var `text-align-last`: String
-  var `text-anchor`: String
-  var `text-combine-horizontal`: String
-  var `text-combine-upright`: String
-  var `text-decoration`: String
-  var `text-decoration-color`: String
-  var `text-decoration-line`: String
-  var `text-decoration-skip`: String
-  var `text-decoration-skip-ink`: String
-  var `text-decoration-style`: String
-  var `text-emphasis`: String
-  var `text-emphasis-color`: String
-  var `text-emphasis-position`: String
-  var `text-emphasis-style`: String
-  var `text-indent`: String
-  var `text-justify`: String
-  var `text-orientation`: String
-  var `text-overflow`: String
-  var `text-rendering`: String
-  var `text-shadow`: String
-  var `text-size-adjust`: String
-  var `text-transform`: String
-  var `text-underline-position`: String
-  var textAlign: String
-  var textAlignLast: String
-  var textAnchor: String
-  var textCombineHorizontal: String
-  var textCombineUpright: String
-  var textDecoration: String
-  var textDecorationColor: String
-  var textDecorationLine: String
-  var textDecorationSkip: String
-  var textDecorationSkipInk: String
-  var textDecorationStyle: String
-  var textEmphasis: String
-  var textEmphasisColor: String
-  var textEmphasisPosition: String
-  var textEmphasisStyle: String
-  var textIndent: String
-  var textJustify: String
-  var textOrientation: String
-  var textOverflow: String
-  var textRendering: String
-  var textShadow: String
-  var textSizeAdjust: String
-  var textTransform: String
-  var textUnderlinePosition: String
-  var top: String
-  var `touch-action`: String
-  var touchAction: String
-  var transform: String
-  var `transform-box`: String
-  var `transform-origin`: String
-  var `transform-style`: String
-  var transformBox: String
-  var transformOrigin: String
-  var transformStyle: String
-  var transition: String
-  var `transition-delay`: String
-  var `transition-duration`: String
-  var `transition-property`: String
-  var `transition-timing-function`: String
-  var transitionDelay: String
-  var transitionDuration: String
-  var transitionProperty: String
-  var transitionTimingFunction: String
-  var translate: String
-  var translate3d: String
-  var translateX: String
-  var translateY: String
-  var translateZ: String
-  var `unicode-bidi`: String
-  var unicodeBidi: String
-  var `user-select`: String
-  var userSelect: String
-  var `vector-effect`: String
-  var vectorEffect: String
-  var `vertical-align`: String
-  var verticalAlign: String
-  var visibility: String
-  var `white-space`: String
-  var whiteSpace: String
-  var widows: String
-  var width: String
-  var `will-change`: String
-  var willChange: String
-  var `word-break`: String
-  var `word-spacing`: String
-  var `word-wrap`: String
-  var wordBreak: String
-  var wordSpacing: String
-  var wordWrap: String
-  var `writing-mode`: String
-  var writingMode: String
-  var `z-index`: String
-  var zIndex: String
-  var zoom: String
+  var `-khtml-box-align`: String = js.native
+  var `-khtml-box-direction`: String = js.native
+  var `-khtml-box-flex`: String = js.native
+  var `-khtml-box-flex-group`: String = js.native
+  var `-khtml-box-lines`: String = js.native
+  var `-khtml-box-ordinal-group`: String = js.native
+  var `-khtml-box-orient`: String = js.native
+  var `-khtml-box-pack`: String = js.native
+  var `-khtml-line-break`: String = js.native
+  var `-khtml-opacity`: String = js.native
+  var `-khtml-user-select`: String = js.native
+  var `-moz-animation`: String = js.native
+  var `-moz-animation-delay`: String = js.native
+  var `-moz-animation-direction`: String = js.native
+  var `-moz-animation-duration`: String = js.native
+  var `-moz-animation-fill-mode`: String = js.native
+  var `-moz-animation-iteration-count`: String = js.native
+  var `-moz-animation-name`: String = js.native
+  var `-moz-animation-play-state`: String = js.native
+  var `-moz-animation-timing-function`: String = js.native
+  var `-moz-appearance`: String = js.native
+  var `-moz-backface-visibility`: String = js.native
+  var `-moz-background-clip`: String = js.native
+  var `-moz-background-inline-policy`: String = js.native
+  var `-moz-background-origin`: String = js.native
+  var `-moz-background-size`: String = js.native
+  var `-moz-binding`: String = js.native
+  var `-moz-border-bottom-colors`: String = js.native
+  var `-moz-border-end-color`: String = js.native
+  var `-moz-border-end-style`: String = js.native
+  var `-moz-border-end-width`: String = js.native
+  var `-moz-border-image`: String = js.native
+  var `-moz-border-left-colors`: String = js.native
+  var `-moz-border-radius`: String = js.native
+  var `-moz-border-radius-bottomleft`: String = js.native
+  var `-moz-border-radius-bottomright`: String = js.native
+  var `-moz-border-radius-topleft`: String = js.native
+  var `-moz-border-radius-topright`: String = js.native
+  var `-moz-border-right-colors`: String = js.native
+  var `-moz-border-start-color`: String = js.native
+  var `-moz-border-start-style`: String = js.native
+  var `-moz-border-top-colors`: String = js.native
+  var `-moz-box-align`: String = js.native
+  var `-moz-box-direction`: String = js.native
+  var `-moz-box-flex`: String = js.native
+  var `-moz-box-ordinal-group`: String = js.native
+  var `-moz-box-orient`: String = js.native
+  var `-moz-box-pack`: String = js.native
+  var `-moz-box-shadow`: String = js.native
+  var `-moz-box-sizing`: String = js.native
+  var `-moz-column-count`: String = js.native
+  var `-moz-column-fill`: String = js.native
+  var `-moz-column-gap`: String = js.native
+  var `-moz-column-rule`: String = js.native
+  var `-moz-column-rule-color`: String = js.native
+  var `-moz-column-rule-style`: String = js.native
+  var `-moz-column-rule-width`: String = js.native
+  var `-moz-column-width`: String = js.native
+  var `-moz-columns`: String = js.native
+  var `-moz-context-properties`: String = js.native
+  var `-moz-float-edge`: String = js.native
+  var `-moz-font-feature-settings`: String = js.native
+  var `-moz-font-language-override`: String = js.native
+  var `-moz-force-broken-image-icon`: String = js.native
+  var `-moz-hyphens`: String = js.native
+  var `-moz-image-region`: String = js.native
+  var `-moz-margin-end`: String = js.native
+  var `-moz-margin-start`: String = js.native
+  var `-moz-opacity`: String = js.native
+  var `-moz-orient`: String = js.native
+  var `-moz-outline`: String = js.native
+  var `-moz-outline-color`: String = js.native
+  var `-moz-outline-radius`: String = js.native
+  var `-moz-outline-radius-bottomleft`: String = js.native
+  var `-moz-outline-radius-bottomright`: String = js.native
+  var `-moz-outline-radius-topleft`: String = js.native
+  var `-moz-outline-radius-topright`: String = js.native
+  var `-moz-outline-style`: String = js.native
+  var `-moz-outline-width`: String = js.native
+  var `-moz-padding-end`: String = js.native
+  var `-moz-padding-start`: String = js.native
+  var `-moz-perspective`: String = js.native
+  var `-moz-perspective-origin`: String = js.native
+  var `-moz-stack-sizing`: String = js.native
+  var `-moz-tab-size`: String = js.native
+  var `-moz-text-align-last`: String = js.native
+  var `-moz-text-blink`: String = js.native
+  var `-moz-text-decoration-color`: String = js.native
+  var `-moz-text-decoration-line`: String = js.native
+  var `-moz-text-decoration-style`: String = js.native
+  var `-moz-text-size-adjust`: String = js.native
+  var `-moz-transform-origin`: String = js.native
+  var `-moz-transform-style`: String = js.native
+  var `-moz-transition`: String = js.native
+  var `-moz-transition-delay`: String = js.native
+  var `-moz-transition-duration`: String = js.native
+  var `-moz-transition-property`: String = js.native
+  var `-moz-transition-timing-function`: String = js.native
+  var `-moz-user-focus`: String = js.native
+  var `-moz-user-input`: String = js.native
+  var `-moz-user-modify`: String = js.native
+  var `-moz-user-select`: String = js.native
+  var `-moz-window-dragging`: String = js.native
+  var `-moz-window-shadow`: String = js.native
+  var `-ms-accelerator`: String = js.native
+  var `-ms-align-self`: String = js.native
+  var `-ms-block-progression`: String = js.native
+  var `-ms-content-zoom-chaining`: String = js.native
+  var `-ms-content-zoom-limit`: String = js.native
+  var `-ms-content-zoom-limit-max`: String = js.native
+  var `-ms-content-zoom-limit-min`: String = js.native
+  var `-ms-content-zoom-snap`: String = js.native
+  var `-ms-content-zoom-snap-points`: String = js.native
+  var `-ms-content-zoom-snap-type`: String = js.native
+  var `-ms-content-zooming`: String = js.native
+  var `-ms-filter`: String = js.native
+  var `-ms-flex`: String = js.native
+  var `-ms-flex-direction`: String = js.native
+  var `-ms-flex-positive`: String = js.native
+  var `-ms-flow-from`: String = js.native
+  var `-ms-flow-into`: String = js.native
+  var `-ms-grid-columns`: String = js.native
+  var `-ms-grid-rows`: String = js.native
+  var `-ms-high-contrast-adjust`: String = js.native
+  var `-ms-hyphenate-limit-chars`: String = js.native
+  var `-ms-hyphenate-limit-lines`: String = js.native
+  var `-ms-hyphenate-limit-zone`: String = js.native
+  var `-ms-hyphens`: String = js.native
+  var `-ms-ime-align`: String = js.native
+  var `-ms-ime-mode`: String = js.native
+  var `-ms-line-break`: String = js.native
+  var `-ms-order`: String = js.native
+  var `-ms-overflow-style`: String = js.native
+  var `-ms-overflow-x`: String = js.native
+  var `-ms-overflow-y`: String = js.native
+  var `-ms-scroll-chaining`: String = js.native
+  var `-ms-scroll-limit`: String = js.native
+  var `-ms-scroll-limit-x-max`: String = js.native
+  var `-ms-scroll-limit-x-min`: String = js.native
+  var `-ms-scroll-limit-y-max`: String = js.native
+  var `-ms-scroll-limit-y-min`: String = js.native
+  var `-ms-scroll-rails`: String = js.native
+  var `-ms-scroll-snap-points-x`: String = js.native
+  var `-ms-scroll-snap-points-y`: String = js.native
+  var `-ms-scroll-snap-type`: String = js.native
+  var `-ms-scroll-snap-x`: String = js.native
+  var `-ms-scroll-snap-y`: String = js.native
+  var `-ms-scroll-translation`: String = js.native
+  var `-ms-scrollbar-3dlight-color`: String = js.native
+  var `-ms-scrollbar-arrow-color`: String = js.native
+  var `-ms-scrollbar-base-color`: String = js.native
+  var `-ms-scrollbar-darkshadow-color`: String = js.native
+  var `-ms-scrollbar-face-color`: String = js.native
+  var `-ms-scrollbar-highlight-color`: String = js.native
+  var `-ms-scrollbar-shadow-color`: String = js.native
+  var `-ms-scrollbar-track-color`: String = js.native
+  var `-ms-text-autospace`: String = js.native
+  var `-ms-text-combine-horizontal`: String = js.native
+  var `-ms-text-overflow`: String = js.native
+  var `-ms-touch-action`: String = js.native
+  var `-ms-touch-select`: String = js.native
+  var `-ms-transform`: String = js.native
+  var `-ms-transform-origin`: String = js.native
+  var `-ms-transition`: String = js.native
+  var `-ms-transition-delay`: String = js.native
+  var `-ms-transition-duration`: String = js.native
+  var `-ms-transition-property`: String = js.native
+  var `-ms-transition-timing-function`: String = js.native
+  var `-ms-user-select`: String = js.native
+  var `-ms-word-break`: String = js.native
+  var `-ms-wrap-flow`: String = js.native
+  var `-ms-wrap-margin`: String = js.native
+  var `-ms-wrap-through`: String = js.native
+  var `-ms-writing-mode`: String = js.native
+  var `-o-animation`: String = js.native
+  var `-o-animation-delay`: String = js.native
+  var `-o-animation-direction`: String = js.native
+  var `-o-animation-duration`: String = js.native
+  var `-o-animation-fill-mode`: String = js.native
+  var `-o-animation-iteration-count`: String = js.native
+  var `-o-animation-name`: String = js.native
+  var `-o-animation-play-state`: String = js.native
+  var `-o-animation-timing-function`: String = js.native
+  var `-o-background-size`: String = js.native
+  var `-o-border-image`: String = js.native
+  var `-o-object-fit`: String = js.native
+  var `-o-object-position`: String = js.native
+  var `-o-tab-size`: String = js.native
+  var `-o-text-overflow`: String = js.native
+  var `-o-transform`: String = js.native
+  var `-o-transform-origin`: String = js.native
+  var `-o-transition`: String = js.native
+  var `-o-transition-delay`: String = js.native
+  var `-o-transition-duration`: String = js.native
+  var `-o-transition-property`: String = js.native
+  var `-o-transition-timing-function`: String = js.native
+  var `-webkit-align-content`: String = js.native
+  var `-webkit-align-items`: String = js.native
+  var `-webkit-align-self`: String = js.native
+  var `-webkit-animation`: String = js.native
+  var `-webkit-animation-delay`: String = js.native
+  var `-webkit-animation-direction`: String = js.native
+  var `-webkit-animation-duration`: String = js.native
+  var `-webkit-animation-fill-mode`: String = js.native
+  var `-webkit-animation-iteration-count`: String = js.native
+  var `-webkit-animation-name`: String = js.native
+  var `-webkit-animation-play-state`: String = js.native
+  var `-webkit-animation-timing-function`: String = js.native
+  var `-webkit-appearance`: String = js.native
+  var `-webkit-backdrop-filter`: String = js.native
+  var `-webkit-backface-visibility`: String = js.native
+  var `-webkit-background-clip`: String = js.native
+  var `-webkit-background-origin`: String = js.native
+  var `-webkit-background-size`: String = js.native
+  var `-webkit-border-before`: String = js.native
+  var `-webkit-border-before-color`: String = js.native
+  var `-webkit-border-before-style`: String = js.native
+  var `-webkit-border-before-width`: String = js.native
+  var `-webkit-border-bottom-left-radius`: String = js.native
+  var `-webkit-border-bottom-right-radius`: String = js.native
+  var `-webkit-border-image`: String = js.native
+  var `-webkit-border-image-slice`: String = js.native
+  var `-webkit-border-radius`: String = js.native
+  var `-webkit-border-top-left-radius`: String = js.native
+  var `-webkit-border-top-right-radius`: String = js.native
+  var `-webkit-box-align`: String = js.native
+  var `-webkit-box-decoration-break`: String = js.native
+  var `-webkit-box-direction`: String = js.native
+  var `-webkit-box-flex`: String = js.native
+  var `-webkit-box-flex-group`: String = js.native
+  var `-webkit-box-lines`: String = js.native
+  var `-webkit-box-ordinal-group`: String = js.native
+  var `-webkit-box-orient`: String = js.native
+  var `-webkit-box-pack`: String = js.native
+  var `-webkit-box-reflect`: String = js.native
+  var `-webkit-box-shadow`: String = js.native
+  var `-webkit-box-sizing`: String = js.native
+  var `-webkit-clip-path`: String = js.native
+  var `-webkit-color-adjust`: String = js.native
+  var `-webkit-column-count`: String = js.native
+  var `-webkit-column-fill`: String = js.native
+  var `-webkit-column-gap`: String = js.native
+  var `-webkit-column-rule`: String = js.native
+  var `-webkit-column-rule-color`: String = js.native
+  var `-webkit-column-rule-style`: String = js.native
+  var `-webkit-column-rule-width`: String = js.native
+  var `-webkit-column-span`: String = js.native
+  var `-webkit-column-width`: String = js.native
+  var `-webkit-columns`: String = js.native
+  var `-webkit-filter`: String = js.native
+  var `-webkit-flex`: String = js.native
+  var `-webkit-flex-basis`: String = js.native
+  var `-webkit-flex-direction`: String = js.native
+  var `-webkit-flex-flow`: String = js.native
+  var `-webkit-flex-grow`: String = js.native
+  var `-webkit-flex-shrink`: String = js.native
+  var `-webkit-flex-wrap`: String = js.native
+  var `-webkit-font-feature-settings`: String = js.native
+  var `-webkit-font-kerning`: String = js.native
+  var `-webkit-font-variant-ligatures`: String = js.native
+  var `-webkit-hyphens`: String = js.native
+  var `-webkit-justify-content`: String = js.native
+  var `-webkit-line-break`: String = js.native
+  var `-webkit-line-clamp`: String = js.native
+  var `-webkit-margin-end`: String = js.native
+  var `-webkit-margin-start`: String = js.native
+  var `-webkit-mask`: String = js.native
+  var `-webkit-mask-attachment`: String = js.native
+  var `-webkit-mask-clip`: String = js.native
+  var `-webkit-mask-composite`: String = js.native
+  var `-webkit-mask-image`: String = js.native
+  var `-webkit-mask-origin`: String = js.native
+  var `-webkit-mask-position`: String = js.native
+  var `-webkit-mask-position-x`: String = js.native
+  var `-webkit-mask-position-y`: String = js.native
+  var `-webkit-mask-repeat`: String = js.native
+  var `-webkit-mask-repeat-x`: String = js.native
+  var `-webkit-mask-repeat-y`: String = js.native
+  var `-webkit-mask-size`: String = js.native
+  var `-webkit-max-inline-size`: String = js.native
+  var `-webkit-order`: String = js.native
+  var `-webkit-overflow-scrolling`: String = js.native
+  var `-webkit-padding-end`: String = js.native
+  var `-webkit-padding-start`: String = js.native
+  var `-webkit-perspective`: String = js.native
+  var `-webkit-perspective-origin`: String = js.native
+  var `-webkit-scroll-snap-points-x`: String = js.native
+  var `-webkit-scroll-snap-points-y`: String = js.native
+  var `-webkit-scroll-snap-type`: String = js.native
+  var `-webkit-shape-margin`: String = js.native
+  var `-webkit-tap-highlight-color`: String = js.native
+  var `-webkit-text-combine`: String = js.native
+  var `-webkit-text-decoration-color`: String = js.native
+  var `-webkit-text-decoration-line`: String = js.native
+  var `-webkit-text-decoration-skip`: String = js.native
+  var `-webkit-text-decoration-style`: String = js.native
+  var `-webkit-text-emphasis`: String = js.native
+  var `-webkit-text-emphasis-color`: String = js.native
+  var `-webkit-text-emphasis-position`: String = js.native
+  var `-webkit-text-emphasis-style`: String = js.native
+  var `-webkit-text-fill-color`: String = js.native
+  var `-webkit-text-orientation`: String = js.native
+  var `-webkit-text-size-adjust`: String = js.native
+  var `-webkit-text-stroke`: String = js.native
+  var `-webkit-text-stroke-color`: String = js.native
+  var `-webkit-text-stroke-width`: String = js.native
+  var `-webkit-touch-callout`: String = js.native
+  var `-webkit-transform`: String = js.native
+  var `-webkit-transform-origin`: String = js.native
+  var `-webkit-transform-style`: String = js.native
+  var `-webkit-transition`: String = js.native
+  var `-webkit-transition-delay`: String = js.native
+  var `-webkit-transition-duration`: String = js.native
+  var `-webkit-transition-property`: String = js.native
+  var `-webkit-transition-timing-function`: String = js.native
+  var `-webkit-user-modify`: String = js.native
+  var `-webkit-user-select`: String = js.native
+  var `-webkit-writing-mode`: String = js.native
+  var KhtmlBoxAlign: String = js.native
+  var KhtmlBoxDirection: String = js.native
+  var KhtmlBoxFlex: String = js.native
+  var KhtmlBoxFlexGroup: String = js.native
+  var KhtmlBoxLines: String = js.native
+  var KhtmlBoxOrdinalGroup: String = js.native
+  var KhtmlBoxOrient: String = js.native
+  var KhtmlBoxPack: String = js.native
+  var KhtmlLineBreak: String = js.native
+  var KhtmlOpacity: String = js.native
+  var KhtmlUserSelect: String = js.native
+  var MozAnimation: String = js.native
+  var MozAnimationDelay: String = js.native
+  var MozAnimationDirection: String = js.native
+  var MozAnimationDuration: String = js.native
+  var MozAnimationFillMode: String = js.native
+  var MozAnimationIterationCount: String = js.native
+  var MozAnimationName: String = js.native
+  var MozAnimationPlayState: String = js.native
+  var MozAnimationTimingFunction: String = js.native
+  var MozAppearance: String = js.native
+  var MozBackfaceVisibility: String = js.native
+  var MozBackgroundClip: String = js.native
+  var MozBackgroundInlinePolicy: String = js.native
+  var MozBackgroundOrigin: String = js.native
+  var MozBackgroundSize: String = js.native
+  var MozBinding: String = js.native
+  var MozBorderBottomColors: String = js.native
+  var MozBorderEndColor: String = js.native
+  var MozBorderEndStyle: String = js.native
+  var MozBorderEndWidth: String = js.native
+  var MozBorderImage: String = js.native
+  var MozBorderLeftColors: String = js.native
+  var MozBorderRadius: String = js.native
+  var MozBorderRadiusBottomleft: String = js.native
+  var MozBorderRadiusBottomright: String = js.native
+  var MozBorderRadiusTopleft: String = js.native
+  var MozBorderRadiusTopright: String = js.native
+  var MozBorderRightColors: String = js.native
+  var MozBorderStartColor: String = js.native
+  var MozBorderStartStyle: String = js.native
+  var MozBorderTopColors: String = js.native
+  var MozBoxAlign: String = js.native
+  var MozBoxDirection: String = js.native
+  var MozBoxFlex: String = js.native
+  var MozBoxOrdinalGroup: String = js.native
+  var MozBoxOrient: String = js.native
+  var MozBoxPack: String = js.native
+  var MozBoxShadow: String = js.native
+  var MozBoxSizing: String = js.native
+  var MozColumnCount: String = js.native
+  var MozColumnFill: String = js.native
+  var MozColumnGap: String = js.native
+  var MozColumnRule: String = js.native
+  var MozColumnRuleColor: String = js.native
+  var MozColumnRuleStyle: String = js.native
+  var MozColumnRuleWidth: String = js.native
+  var MozColumnWidth: String = js.native
+  var MozColumns: String = js.native
+  var MozContextProperties: String = js.native
+  var MozFloatEdge: String = js.native
+  var MozFontFeatureSettings: String = js.native
+  var MozFontLanguageOverride: String = js.native
+  var MozForceBrokenImageIcon: String = js.native
+  var MozHyphens: String = js.native
+  var MozImageRegion: String = js.native
+  var MozMarginEnd: String = js.native
+  var MozMarginStart: String = js.native
+  var MozOpacity: String = js.native
+  var MozOrient: String = js.native
+  var MozOutline: String = js.native
+  var MozOutlineColor: String = js.native
+  var MozOutlineRadius: String = js.native
+  var MozOutlineRadiusBottomleft: String = js.native
+  var MozOutlineRadiusBottomright: String = js.native
+  var MozOutlineRadiusTopleft: String = js.native
+  var MozOutlineRadiusTopright: String = js.native
+  var MozOutlineStyle: String = js.native
+  var MozOutlineWidth: String = js.native
+  var MozPaddingEnd: String = js.native
+  var MozPaddingStart: String = js.native
+  var MozPerspective: String = js.native
+  var MozPerspectiveOrigin: String = js.native
+  var MozStackSizing: String = js.native
+  var MozTabSize: String = js.native
+  var MozTextAlignLast: String = js.native
+  var MozTextBlink: String = js.native
+  var MozTextDecorationColor: String = js.native
+  var MozTextDecorationLine: String = js.native
+  var MozTextDecorationStyle: String = js.native
+  var MozTextSizeAdjust: String = js.native
+  var MozTransformOrigin: String = js.native
+  var MozTransformStyle: String = js.native
+  var MozTransition: String = js.native
+  var MozTransitionDelay: String = js.native
+  var MozTransitionDuration: String = js.native
+  var MozTransitionProperty: String = js.native
+  var MozTransitionTimingFunction: String = js.native
+  var MozUserFocus: String = js.native
+  var MozUserInput: String = js.native
+  var MozUserModify: String = js.native
+  var MozUserSelect: String = js.native
+  var MozWindowDragging: String = js.native
+  var MozWindowShadow: String = js.native
+  var OAnimation: String = js.native
+  var OAnimationDelay: String = js.native
+  var OAnimationDirection: String = js.native
+  var OAnimationDuration: String = js.native
+  var OAnimationFillMode: String = js.native
+  var OAnimationIterationCount: String = js.native
+  var OAnimationName: String = js.native
+  var OAnimationPlayState: String = js.native
+  var OAnimationTimingFunction: String = js.native
+  var OBackgroundSize: String = js.native
+  var OBorderImage: String = js.native
+  var OObjectFit: String = js.native
+  var OObjectPosition: String = js.native
+  var OTabSize: String = js.native
+  var OTextOverflow: String = js.native
+  var OTransform: String = js.native
+  var OTransformOrigin: String = js.native
+  var OTransition: String = js.native
+  var OTransitionDelay: String = js.native
+  var OTransitionDuration: String = js.native
+  var OTransitionProperty: String = js.native
+  var OTransitionTimingFunction: String = js.native
+  var WebkitAlignContent: String = js.native
+  var WebkitAlignItems: String = js.native
+  var WebkitAlignSelf: String = js.native
+  var WebkitAnimation: String = js.native
+  var WebkitAnimationDelay: String = js.native
+  var WebkitAnimationDirection: String = js.native
+  var WebkitAnimationDuration: String = js.native
+  var WebkitAnimationFillMode: String = js.native
+  var WebkitAnimationIterationCount: String = js.native
+  var WebkitAnimationName: String = js.native
+  var WebkitAnimationPlayState: String = js.native
+  var WebkitAnimationTimingFunction: String = js.native
+  var WebkitAppearance: String = js.native
+  var WebkitBackdropFilter: String = js.native
+  var WebkitBackfaceVisibility: String = js.native
+  var WebkitBackgroundClip: String = js.native
+  var WebkitBackgroundOrigin: String = js.native
+  var WebkitBackgroundSize: String = js.native
+  var WebkitBorderBefore: String = js.native
+  var WebkitBorderBeforeColor: String = js.native
+  var WebkitBorderBeforeStyle: String = js.native
+  var WebkitBorderBeforeWidth: String = js.native
+  var WebkitBorderBottomLeftRadius: String = js.native
+  var WebkitBorderBottomRightRadius: String = js.native
+  var WebkitBorderImage: String = js.native
+  var WebkitBorderImageSlice: String = js.native
+  var WebkitBorderRadius: String = js.native
+  var WebkitBorderTopLeftRadius: String = js.native
+  var WebkitBorderTopRightRadius: String = js.native
+  var WebkitBoxAlign: String = js.native
+  var WebkitBoxDecorationBreak: String = js.native
+  var WebkitBoxDirection: String = js.native
+  var WebkitBoxFlex: String = js.native
+  var WebkitBoxFlexGroup: String = js.native
+  var WebkitBoxLines: String = js.native
+  var WebkitBoxOrdinalGroup: String = js.native
+  var WebkitBoxOrient: String = js.native
+  var WebkitBoxPack: String = js.native
+  var WebkitBoxReflect: String = js.native
+  var WebkitBoxShadow: String = js.native
+  var WebkitBoxSizing: String = js.native
+  var WebkitClipPath: String = js.native
+  var WebkitColorAdjust: String = js.native
+  var WebkitColumnCount: String = js.native
+  var WebkitColumnFill: String = js.native
+  var WebkitColumnGap: String = js.native
+  var WebkitColumnRule: String = js.native
+  var WebkitColumnRuleColor: String = js.native
+  var WebkitColumnRuleStyle: String = js.native
+  var WebkitColumnRuleWidth: String = js.native
+  var WebkitColumnSpan: String = js.native
+  var WebkitColumnWidth: String = js.native
+  var WebkitColumns: String = js.native
+  var WebkitFilter: String = js.native
+  var WebkitFlex: String = js.native
+  var WebkitFlexBasis: String = js.native
+  var WebkitFlexDirection: String = js.native
+  var WebkitFlexFlow: String = js.native
+  var WebkitFlexGrow: String = js.native
+  var WebkitFlexShrink: String = js.native
+  var WebkitFlexWrap: String = js.native
+  var WebkitFontFeatureSettings: String = js.native
+  var WebkitFontKerning: String = js.native
+  var WebkitFontVariantLigatures: String = js.native
+  var WebkitHyphens: String = js.native
+  var WebkitJustifyContent: String = js.native
+  var WebkitLineBreak: String = js.native
+  var WebkitLineClamp: String = js.native
+  var WebkitMarginEnd: String = js.native
+  var WebkitMarginStart: String = js.native
+  var WebkitMask: String = js.native
+  var WebkitMaskAttachment: String = js.native
+  var WebkitMaskClip: String = js.native
+  var WebkitMaskComposite: String = js.native
+  var WebkitMaskImage: String = js.native
+  var WebkitMaskOrigin: String = js.native
+  var WebkitMaskPosition: String = js.native
+  var WebkitMaskPositionX: String = js.native
+  var WebkitMaskPositionY: String = js.native
+  var WebkitMaskRepeat: String = js.native
+  var WebkitMaskRepeatX: String = js.native
+  var WebkitMaskRepeatY: String = js.native
+  var WebkitMaskSize: String = js.native
+  var WebkitMaxInlineSize: String = js.native
+  var WebkitOrder: String = js.native
+  var WebkitOverflowScrolling: String = js.native
+  var WebkitPaddingEnd: String = js.native
+  var WebkitPaddingStart: String = js.native
+  var WebkitPerspective: String = js.native
+  var WebkitPerspectiveOrigin: String = js.native
+  var WebkitScrollSnapPointsX: String = js.native
+  var WebkitScrollSnapPointsY: String = js.native
+  var WebkitScrollSnapType: String = js.native
+  var WebkitShapeMargin: String = js.native
+  var WebkitTapHighlightColor: String = js.native
+  var WebkitTextCombine: String = js.native
+  var WebkitTextDecorationColor: String = js.native
+  var WebkitTextDecorationLine: String = js.native
+  var WebkitTextDecorationSkip: String = js.native
+  var WebkitTextDecorationStyle: String = js.native
+  var WebkitTextEmphasis: String = js.native
+  var WebkitTextEmphasisColor: String = js.native
+  var WebkitTextEmphasisPosition: String = js.native
+  var WebkitTextEmphasisStyle: String = js.native
+  var WebkitTextFillColor: String = js.native
+  var WebkitTextOrientation: String = js.native
+  var WebkitTextSizeAdjust: String = js.native
+  var WebkitTextStroke: String = js.native
+  var WebkitTextStrokeColor: String = js.native
+  var WebkitTextStrokeWidth: String = js.native
+  var WebkitTouchCallout: String = js.native
+  var WebkitTransform: String = js.native
+  var WebkitTransformOrigin: String = js.native
+  var WebkitTransformStyle: String = js.native
+  var WebkitTransition: String = js.native
+  var WebkitTransitionDelay: String = js.native
+  var WebkitTransitionDuration: String = js.native
+  var WebkitTransitionProperty: String = js.native
+  var WebkitTransitionTimingFunction: String = js.native
+  var WebkitUserModify: String = js.native
+  var WebkitUserSelect: String = js.native
+  var WebkitWritingMode: String = js.native
+  var `align-content`: String = js.native
+  var `align-items`: String = js.native
+  var `align-self`: String = js.native
+  var alignContent: String = js.native
+  var alignItems: String = js.native
+  var alignSelf: String = js.native
+  var `alignment-baseline`: String = js.native
+  var alignmentBaseline: String = js.native
+  var all: String = js.native
+  var animation: String = js.native
+  var `animation-delay`: String = js.native
+  var `animation-direction`: String = js.native
+  var `animation-duration`: String = js.native
+  var `animation-fill-mode`: String = js.native
+  var `animation-iteration-count`: String = js.native
+  var `animation-name`: String = js.native
+  var `animation-play-state`: String = js.native
+  var `animation-timing-function`: String = js.native
+  var animationDelay: String = js.native
+  var animationDirection: String = js.native
+  var animationDuration: String = js.native
+  var animationFillMode: String = js.native
+  var animationIterationCount: String = js.native
+  var animationName: String = js.native
+  var animationPlayState: String = js.native
+  var animationTimingFunction: String = js.native
+  var appearance: String = js.native
+  var `backdrop-filter`: String = js.native
+  var backdropFilter: String = js.native
+  var `backface-visibility`: String = js.native
+  var backfaceVisibility: String = js.native
+  var background: String = js.native
+  var `background-attachment`: String = js.native
+  var `background-blend-mode`: String = js.native
+  var `background-clip`: String = js.native
+  var `background-color`: String = js.native
+  var `background-image`: String = js.native
+  var `background-origin`: String = js.native
+  var `background-position`: String = js.native
+  var `background-position-x`: String = js.native
+  var `background-position-y`: String = js.native
+  var `background-repeat`: String = js.native
+  var `background-size`: String = js.native
+  var backgroundAttachment: String = js.native
+  var backgroundBlendMode: String = js.native
+  var backgroundClip: String = js.native
+  var backgroundColor: String = js.native
+  var backgroundImage: String = js.native
+  var backgroundOrigin: String = js.native
+  var backgroundPosition: String = js.native
+  var backgroundPositionX: String = js.native
+  var backgroundPositionY: String = js.native
+  var backgroundRepeat: String = js.native
+  var backgroundSize: String = js.native
+  var `baseline-shift`: String = js.native
+  var baselineShift: String = js.native
+  var `block-overflow`: String = js.native
+  var `block-size`: String = js.native
+  var blockOverflow: String = js.native
+  var blockSize: String = js.native
+  var border: String = js.native
+  var `border-block`: String = js.native
+  var `border-block-color`: String = js.native
+  var `border-block-end`: String = js.native
+  var `border-block-end-color`: String = js.native
+  var `border-block-end-style`: String = js.native
+  var `border-block-end-width`: String = js.native
+  var `border-block-start`: String = js.native
+  var `border-block-start-color`: String = js.native
+  var `border-block-start-style`: String = js.native
+  var `border-block-start-width`: String = js.native
+  var `border-block-style`: String = js.native
+  var `border-block-width`: String = js.native
+  var `border-bottom`: String = js.native
+  var `border-bottom-color`: String = js.native
+  var `border-bottom-left-radius`: String = js.native
+  var `border-bottom-right-radius`: String = js.native
+  var `border-bottom-style`: String = js.native
+  var `border-bottom-width`: String = js.native
+  var `border-collapse`: String = js.native
+  var `border-color`: String = js.native
+  var `border-end-end-radius`: String = js.native
+  var `border-end-start-radius`: String = js.native
+  var `border-image`: String = js.native
+  var `border-image-outset`: String = js.native
+  var `border-image-repeat`: String = js.native
+  var `border-image-slice`: String = js.native
+  var `border-image-source`: String = js.native
+  var `border-image-width`: String = js.native
+  var `border-inline`: String = js.native
+  var `border-inline-color`: String = js.native
+  var `border-inline-end`: String = js.native
+  var `border-inline-end-color`: String = js.native
+  var `border-inline-end-style`: String = js.native
+  var `border-inline-end-width`: String = js.native
+  var `border-inline-start`: String = js.native
+  var `border-inline-start-color`: String = js.native
+  var `border-inline-start-style`: String = js.native
+  var `border-inline-start-width`: String = js.native
+  var `border-inline-style`: String = js.native
+  var `border-inline-width`: String = js.native
+  var `border-left`: String = js.native
+  var `border-left-color`: String = js.native
+  var `border-left-style`: String = js.native
+  var `border-left-width`: String = js.native
+  var `border-radius`: String = js.native
+  var `border-right`: String = js.native
+  var `border-right-color`: String = js.native
+  var `border-right-style`: String = js.native
+  var `border-right-width`: String = js.native
+  var `border-spacing`: String = js.native
+  var `border-start-end-radius`: String = js.native
+  var `border-start-start-radius`: String = js.native
+  var `border-style`: String = js.native
+  var `border-top`: String = js.native
+  var `border-top-color`: String = js.native
+  var `border-top-left-radius`: String = js.native
+  var `border-top-right-radius`: String = js.native
+  var `border-top-style`: String = js.native
+  var `border-top-width`: String = js.native
+  var `border-width`: String = js.native
+  var borderBlock: String = js.native
+  var borderBlockColor: String = js.native
+  var borderBlockEnd: String = js.native
+  var borderBlockEndColor: String = js.native
+  var borderBlockEndStyle: String = js.native
+  var borderBlockEndWidth: String = js.native
+  var borderBlockStart: String = js.native
+  var borderBlockStartColor: String = js.native
+  var borderBlockStartStyle: String = js.native
+  var borderBlockStartWidth: String = js.native
+  var borderBlockStyle: String = js.native
+  var borderBlockWidth: String = js.native
+  var borderBottom: String = js.native
+  var borderBottomColor: String = js.native
+  var borderBottomLeftRadius: String = js.native
+  var borderBottomRightRadius: String = js.native
+  var borderBottomStyle: String = js.native
+  var borderBottomWidth: String = js.native
+  var borderCollapse: String = js.native
+  var borderColor: String = js.native
+  var borderEndEndRadius: String = js.native
+  var borderEndStartRadius: String = js.native
+  var borderImage: String = js.native
+  var borderImageOutset: String = js.native
+  var borderImageRepeat: String = js.native
+  var borderImageSlice: String = js.native
+  var borderImageSource: String = js.native
+  var borderImageWidth: String = js.native
+  var borderInline: String = js.native
+  var borderInlineColor: String = js.native
+  var borderInlineEnd: String = js.native
+  var borderInlineEndColor: String = js.native
+  var borderInlineEndStyle: String = js.native
+  var borderInlineEndWidth: String = js.native
+  var borderInlineStart: String = js.native
+  var borderInlineStartColor: String = js.native
+  var borderInlineStartStyle: String = js.native
+  var borderInlineStartWidth: String = js.native
+  var borderInlineStyle: String = js.native
+  var borderInlineWidth: String = js.native
+  var borderLeft: String = js.native
+  var borderLeftColor: String = js.native
+  var borderLeftStyle: String = js.native
+  var borderLeftWidth: String = js.native
+  var borderRadius: String = js.native
+  var borderRight: String = js.native
+  var borderRightColor: String = js.native
+  var borderRightStyle: String = js.native
+  var borderRightWidth: String = js.native
+  var borderSpacing: String = js.native
+  var borderStartEndRadius: String = js.native
+  var borderStartStartRadius: String = js.native
+  var borderStyle: String = js.native
+  var borderTop: String = js.native
+  var borderTopColor: String = js.native
+  var borderTopLeftRadius: String = js.native
+  var borderTopRightRadius: String = js.native
+  var borderTopStyle: String = js.native
+  var borderTopWidth: String = js.native
+  var borderWidth: String = js.native
+  var bottom: String = js.native
+  var `box-align`: String = js.native
+  var `box-decoration-break`: String = js.native
+  var `box-direction`: String = js.native
+  var `box-flex`: String = js.native
+  var `box-flex-group`: String = js.native
+  var `box-lines`: String = js.native
+  var `box-ordinal-group`: String = js.native
+  var `box-orient`: String = js.native
+  var `box-pack`: String = js.native
+  var `box-shadow`: String = js.native
+  var `box-sizing`: String = js.native
+  var boxAlign: String = js.native
+  var boxDecorationBreak: String = js.native
+  var boxDirection: String = js.native
+  var boxFlex: String = js.native
+  var boxFlexGroup: String = js.native
+  var boxLines: String = js.native
+  var boxOrdinalGroup: String = js.native
+  var boxOrient: String = js.native
+  var boxPack: String = js.native
+  var boxShadow: String = js.native
+  var boxSizing: String = js.native
+  var `break-after`: String = js.native
+  var `break-before`: String = js.native
+  var `break-inside`: String = js.native
+  var breakAfter: String = js.native
+  var breakBefore: String = js.native
+  var breakInside: String = js.native
+  var `caption-side`: String = js.native
+  var captionSide: String = js.native
+  var `caret-color`: String = js.native
+  var caretColor: String = js.native
+  var clear: String = js.native
+  var clip: String = js.native
+  var `clip-path`: String = js.native
+  var `clip-rule`: String = js.native
+  var clipPath: String = js.native
+  var clipRule: String = js.native
+  var color: String = js.native
+  var `color-adjust`: String = js.native
+  var `color-interpolation`: String = js.native
+  var `color-rendering`: String = js.native
+  var colorAdjust: String = js.native
+  var colorInterpolation: String = js.native
+  var colorRendering: String = js.native
+  var `column-count`: String = js.native
+  var `column-fill`: String = js.native
+  var `column-gap`: String = js.native
+  var `column-rule`: String = js.native
+  var `column-rule-color`: String = js.native
+  var `column-rule-style`: String = js.native
+  var `column-rule-width`: String = js.native
+  var `column-span`: String = js.native
+  var `column-width`: String = js.native
+  var columnCount: String = js.native
+  var columnFill: String = js.native
+  var columnGap: String = js.native
+  var columnRule: String = js.native
+  var columnRuleColor: String = js.native
+  var columnRuleStyle: String = js.native
+  var columnRuleWidth: String = js.native
+  var columnSpan: String = js.native
+  var columnWidth: String = js.native
+  var columns: String = js.native
+  var contain: String = js.native
+  var content: String = js.native
+  var `counter-increment`: String = js.native
+  var `counter-reset`: String = js.native
+  var `counter-set`: String = js.native
+  var counterIncrement: String = js.native
+  var counterReset: String = js.native
+  var counterSet: String = js.native
+  var cursor: String = js.native
+  var direction: String = js.native
+  var display: String = js.native
+  var `dominant-baseline`: String = js.native
+  var dominantBaseline: String = js.native
+  var `empty-cells`: String = js.native
+  var emptyCells: String = js.native
+  var fill: String = js.native
+  var `fill-opacity`: String = js.native
+  var `fill-rule`: String = js.native
+  var fillOpacity: String = js.native
+  var fillRule: String = js.native
+  var filter: String = js.native
+  var flex: String = js.native
+  var `flex-basis`: String = js.native
+  var `flex-direction`: String = js.native
+  var `flex-flow`: String = js.native
+  var `flex-grow`: String = js.native
+  var `flex-shrink`: String = js.native
+  var `flex-wrap`: String = js.native
+  var flexBasis: String = js.native
+  var flexDirection: String = js.native
+  var flexFlow: String = js.native
+  var flexGrow: String = js.native
+  var flexShrink: String = js.native
+  var flexWrap: String = js.native
+  var float: String = js.native
+  var `flood-color`: String = js.native
+  var `flood-opacity`: String = js.native
+  var floodColor: String = js.native
+  var floodOpacity: String = js.native
+  var font: String = js.native
+  var `font-family`: String = js.native
+  var `font-feature-settings`: String = js.native
+  var `font-kerning`: String = js.native
+  var `font-language-override`: String = js.native
+  var `font-optical-sizing`: String = js.native
+  var `font-size`: String = js.native
+  var `font-size-adjust`: String = js.native
+  var `font-stretch`: String = js.native
+  var `font-style`: String = js.native
+  var `font-synthesis`: String = js.native
+  var `font-variant`: String = js.native
+  var `font-variant-alternates`: String = js.native
+  var `font-variant-caps`: String = js.native
+  var `font-variant-east-asian`: String = js.native
+  var `font-variant-ligatures`: String = js.native
+  var `font-variant-numeric`: String = js.native
+  var `font-variant-position`: String = js.native
+  var `font-variation-settings`: String = js.native
+  var `font-weight`: String = js.native
+  var fontFamily: String = js.native
+  var fontFeatureSettings: String = js.native
+  var fontKerning: String = js.native
+  var fontLanguageOverride: String = js.native
+  var fontOpticalSizing: String = js.native
+  var fontSize: String = js.native
+  var fontSizeAdjust: String = js.native
+  var fontStretch: String = js.native
+  var fontStyle: String = js.native
+  var fontSynthesis: String = js.native
+  var fontVariant: String = js.native
+  var fontVariantAlternates: String = js.native
+  var fontVariantCaps: String = js.native
+  var fontVariantEastAsian: String = js.native
+  var fontVariantLigatures: String = js.native
+  var fontVariantNumeric: String = js.native
+  var fontVariantPosition: String = js.native
+  var fontVariationSettings: String = js.native
+  var fontWeight: String = js.native
+  var gap: String = js.native
+  var `glyph-orientation-vertical`: String = js.native
+  var glyphOrientationVertical: String = js.native
+  var grid: String = js.native
+  var `grid-area`: String = js.native
+  var `grid-auto-columns`: String = js.native
+  var `grid-auto-flow`: String = js.native
+  var `grid-auto-rows`: String = js.native
+  var `grid-column`: String = js.native
+  var `grid-column-end`: String = js.native
+  var `grid-column-gap`: String = js.native
+  var `grid-column-start`: String = js.native
+  var `grid-gap`: String = js.native
+  var `grid-row`: String = js.native
+  var `grid-row-end`: String = js.native
+  var `grid-row-gap`: String = js.native
+  var `grid-row-start`: String = js.native
+  var `grid-template`: String = js.native
+  var `grid-template-areas`: String = js.native
+  var `grid-template-columns`: String = js.native
+  var `grid-template-rows`: String = js.native
+  var gridArea: String = js.native
+  var gridAutoColumns: String = js.native
+  var gridAutoFlow: String = js.native
+  var gridAutoRows: String = js.native
+  var gridColumn: String = js.native
+  var gridColumnEnd: String = js.native
+  var gridColumnGap: String = js.native
+  var gridColumnStart: String = js.native
+  var gridGap: String = js.native
+  var gridRow: String = js.native
+  var gridRowEnd: String = js.native
+  var gridRowGap: String = js.native
+  var gridRowStart: String = js.native
+  var gridTemplate: String = js.native
+  var gridTemplateAreas: String = js.native
+  var gridTemplateColumns: String = js.native
+  var gridTemplateRows: String = js.native
+  var `hanging-punctuation`: String = js.native
+  var hangingPunctuation: String = js.native
+  var height: String = js.native
+  var hyphens: String = js.native
+  var `image-orientation`: String = js.native
+  var `image-rendering`: String = js.native
+  var `image-resolution`: String = js.native
+  var imageOrientation: String = js.native
+  var imageRendering: String = js.native
+  var imageResolution: String = js.native
+  var `ime-mode`: String = js.native
+  var imeMode: String = js.native
+  var `initial-letter`: String = js.native
+  var initialLetter: String = js.native
+  var `inline-size`: String = js.native
+  var inlineSize: String = js.native
+  var inset: String = js.native
+  var `inset-block`: String = js.native
+  var `inset-block-end`: String = js.native
+  var `inset-block-start`: String = js.native
+  var `inset-inline`: String = js.native
+  var `inset-inline-end`: String = js.native
+  var `inset-inline-start`: String = js.native
+  var insetBlock: String = js.native
+  var insetBlockEnd: String = js.native
+  var insetBlockStart: String = js.native
+  var insetInline: String = js.native
+  var insetInlineEnd: String = js.native
+  var insetInlineStart: String = js.native
+  var isolation: String = js.native
+  var `justify-content`: String = js.native
+  var `justify-items`: String = js.native
+  var `justify-self`: String = js.native
+  var justifyContent: String = js.native
+  var justifyItems: String = js.native
+  var justifySelf: String = js.native
+  var left: String = js.native
+  var `letter-spacing`: String = js.native
+  var letterSpacing: String = js.native
+  var `lighting-color`: String = js.native
+  var lightingColor: String = js.native
+  var `line-break`: String = js.native
+  var `line-clamp`: String = js.native
+  var `line-height`: String = js.native
+  var `line-height-step`: String = js.native
+  var lineBreak: String = js.native
+  var lineClamp: String = js.native
+  var lineHeight: String = js.native
+  var lineHeightStep: String = js.native
+  var `list-style`: String = js.native
+  var `list-style-image`: String = js.native
+  var `list-style-position`: String = js.native
+  var `list-style-type`: String = js.native
+  var listStyle: String = js.native
+  var listStyleImage: String = js.native
+  var listStylePosition: String = js.native
+  var listStyleType: String = js.native
+  var margin: String = js.native
+  var `margin-block`: String = js.native
+  var `margin-block-end`: String = js.native
+  var `margin-block-start`: String = js.native
+  var `margin-bottom`: String = js.native
+  var `margin-inline`: String = js.native
+  var `margin-inline-end`: String = js.native
+  var `margin-inline-start`: String = js.native
+  var `margin-left`: String = js.native
+  var `margin-right`: String = js.native
+  var `margin-top`: String = js.native
+  var marginBlock: String = js.native
+  var marginBlockEnd: String = js.native
+  var marginBlockStart: String = js.native
+  var marginBottom: String = js.native
+  var marginInline: String = js.native
+  var marginInlineEnd: String = js.native
+  var marginInlineStart: String = js.native
+  var marginLeft: String = js.native
+  var marginRight: String = js.native
+  var marginTop: String = js.native
+  var marker: String = js.native
+  var `marker-end`: String = js.native
+  var `marker-mid`: String = js.native
+  var `marker-start`: String = js.native
+  var markerEnd: String = js.native
+  var markerMid: String = js.native
+  var markerStart: String = js.native
+  var mask: String = js.native
+  var `mask-border`: String = js.native
+  var `mask-border-mode`: String = js.native
+  var `mask-border-outset`: String = js.native
+  var `mask-border-repeat`: String = js.native
+  var `mask-border-slice`: String = js.native
+  var `mask-border-source`: String = js.native
+  var `mask-border-width`: String = js.native
+  var `mask-clip`: String = js.native
+  var `mask-composite`: String = js.native
+  var `mask-image`: String = js.native
+  var `mask-mode`: String = js.native
+  var `mask-origin`: String = js.native
+  var `mask-position`: String = js.native
+  var `mask-repeat`: String = js.native
+  var `mask-size`: String = js.native
+  var `mask-type`: String = js.native
+  var maskBorder: String = js.native
+  var maskBorderMode: String = js.native
+  var maskBorderOutset: String = js.native
+  var maskBorderRepeat: String = js.native
+  var maskBorderSlice: String = js.native
+  var maskBorderSource: String = js.native
+  var maskBorderWidth: String = js.native
+  var maskClip: String = js.native
+  var maskComposite: String = js.native
+  var maskImage: String = js.native
+  var maskMode: String = js.native
+  var maskOrigin: String = js.native
+  var maskPosition: String = js.native
+  var maskRepeat: String = js.native
+  var maskSize: String = js.native
+  var maskType: String = js.native
+  var matrix: String = js.native
+  var matrix3d: String = js.native
+  var `max-block-size`: String = js.native
+  var `max-height`: String = js.native
+  var `max-inline-size`: String = js.native
+  var `max-lines`: String = js.native
+  var `max-width`: String = js.native
+  var maxBlockSize: String = js.native
+  var maxHeight: String = js.native
+  var maxInlineSize: String = js.native
+  var maxLines: String = js.native
+  var maxWidth: String = js.native
+  var `min-block-size`: String = js.native
+  var `min-height`: String = js.native
+  var `min-inline-size`: String = js.native
+  var `min-width`: String = js.native
+  var minBlockSize: String = js.native
+  var minHeight: String = js.native
+  var minInlineSize: String = js.native
+  var minWidth: String = js.native
+  var `mix-blend-mode`: String = js.native
+  var mixBlendMode: String = js.native
+  var motion: String = js.native
+  var `motion-distance`: String = js.native
+  var `motion-path`: String = js.native
+  var `motion-rotation`: String = js.native
+  var motionDistance: String = js.native
+  var motionPath: String = js.native
+  var motionRotation: String = js.native
+  var msAccelerator: String = js.native
+  var msAlignSelf: String = js.native
+  var msBlockProgression: String = js.native
+  var msContentZoomChaining: String = js.native
+  var msContentZoomLimit: String = js.native
+  var msContentZoomLimitMax: String = js.native
+  var msContentZoomLimitMin: String = js.native
+  var msContentZoomSnap: String = js.native
+  var msContentZoomSnapPoints: String = js.native
+  var msContentZoomSnapType: String = js.native
+  var msContentZooming: String = js.native
+  var msFilter: String = js.native
+  var msFlex: String = js.native
+  var msFlexDirection: String = js.native
+  var msFlexPositive: String = js.native
+  var msFlowFrom: String = js.native
+  var msFlowInto: String = js.native
+  var msGridColumns: String = js.native
+  var msGridRows: String = js.native
+  var msHighContrastAdjust: String = js.native
+  var msHyphenateLimitChars: String = js.native
+  var msHyphenateLimitLines: String = js.native
+  var msHyphenateLimitZone: String = js.native
+  var msHyphens: String = js.native
+  var msImeAlign: String = js.native
+  var msImeMode: String = js.native
+  var msLineBreak: String = js.native
+  var msOrder: String = js.native
+  var msOverflowStyle: String = js.native
+  var msOverflowX: String = js.native
+  var msOverflowY: String = js.native
+  var msScrollChaining: String = js.native
+  var msScrollLimit: String = js.native
+  var msScrollLimitXMax: String = js.native
+  var msScrollLimitXMin: String = js.native
+  var msScrollLimitYMax: String = js.native
+  var msScrollLimitYMin: String = js.native
+  var msScrollRails: String = js.native
+  var msScrollSnapPointsX: String = js.native
+  var msScrollSnapPointsY: String = js.native
+  var msScrollSnapType: String = js.native
+  var msScrollSnapX: String = js.native
+  var msScrollSnapY: String = js.native
+  var msScrollTranslation: String = js.native
+  var msScrollbar3dlightColor: String = js.native
+  var msScrollbarArrowColor: String = js.native
+  var msScrollbarBaseColor: String = js.native
+  var msScrollbarDarkshadowColor: String = js.native
+  var msScrollbarFaceColor: String = js.native
+  var msScrollbarHighlightColor: String = js.native
+  var msScrollbarShadowColor: String = js.native
+  var msScrollbarTrackColor: String = js.native
+  var msTextAutospace: String = js.native
+  var msTextCombineHorizontal: String = js.native
+  var msTextOverflow: String = js.native
+  var msTouchAction: String = js.native
+  var msTouchSelect: String = js.native
+  var msTransform: String = js.native
+  var msTransformOrigin: String = js.native
+  var msTransition: String = js.native
+  var msTransitionDelay: String = js.native
+  var msTransitionDuration: String = js.native
+  var msTransitionProperty: String = js.native
+  var msTransitionTimingFunction: String = js.native
+  var msUserSelect: String = js.native
+  var msWordBreak: String = js.native
+  var msWrapFlow: String = js.native
+  var msWrapMargin: String = js.native
+  var msWrapThrough: String = js.native
+  var msWritingMode: String = js.native
+  var `object-fit`: String = js.native
+  var `object-position`: String = js.native
+  var objectFit: String = js.native
+  var objectPosition: String = js.native
+  var offset: String = js.native
+  var `offset-anchor`: String = js.native
+  var `offset-block`: String = js.native
+  var `offset-block-end`: String = js.native
+  var `offset-block-start`: String = js.native
+  var `offset-distance`: String = js.native
+  var `offset-inline`: String = js.native
+  var `offset-inline-end`: String = js.native
+  var `offset-inline-start`: String = js.native
+  var `offset-path`: String = js.native
+  var `offset-position`: String = js.native
+  var `offset-rotate`: String = js.native
+  var `offset-rotation`: String = js.native
+  var offsetAnchor: String = js.native
+  var offsetBlock: String = js.native
+  var offsetBlockEnd: String = js.native
+  var offsetBlockStart: String = js.native
+  var offsetDistance: String = js.native
+  var offsetInline: String = js.native
+  var offsetInlineEnd: String = js.native
+  var offsetInlineStart: String = js.native
+  var offsetPath: String = js.native
+  var offsetPosition: String = js.native
+  var offsetRotate: String = js.native
+  var offsetRotation: String = js.native
+  var opacity: String = js.native
+  var order: String = js.native
+  var orphans: String = js.native
+  var outline: String = js.native
+  var `outline-color`: String = js.native
+  var `outline-offset`: String = js.native
+  var `outline-style`: String = js.native
+  var `outline-width`: String = js.native
+  var outlineColor: String = js.native
+  var outlineOffset: String = js.native
+  var outlineStyle: String = js.native
+  var outlineWidth: String = js.native
+  var overflow: String = js.native
+  var `overflow-anchor`: String = js.native
+  var `overflow-block`: String = js.native
+  var `overflow-clip-box`: String = js.native
+  var `overflow-inline`: String = js.native
+  var `overflow-wrap`: String = js.native
+  var `overflow-x`: String = js.native
+  var `overflow-y`: String = js.native
+  var overflowAnchor: String = js.native
+  var overflowBlock: String = js.native
+  var overflowClipBox: String = js.native
+  var overflowInline: String = js.native
+  var overflowWrap: String = js.native
+  var overflowX: String = js.native
+  var overflowY: String = js.native
+  var `overscroll-behavior`: String = js.native
+  var `overscroll-behavior-x`: String = js.native
+  var `overscroll-behavior-y`: String = js.native
+  var overscrollBehavior: String = js.native
+  var overscrollBehaviorX: String = js.native
+  var overscrollBehaviorY: String = js.native
+  var padding: String = js.native
+  var `padding-block`: String = js.native
+  var `padding-block-end`: String = js.native
+  var `padding-block-start`: String = js.native
+  var `padding-bottom`: String = js.native
+  var `padding-inline`: String = js.native
+  var `padding-inline-end`: String = js.native
+  var `padding-inline-start`: String = js.native
+  var `padding-left`: String = js.native
+  var `padding-right`: String = js.native
+  var `padding-top`: String = js.native
+  var paddingBlock: String = js.native
+  var paddingBlockEnd: String = js.native
+  var paddingBlockStart: String = js.native
+  var paddingBottom: String = js.native
+  var paddingInline: String = js.native
+  var paddingInlineEnd: String = js.native
+  var paddingInlineStart: String = js.native
+  var paddingLeft: String = js.native
+  var paddingRight: String = js.native
+  var paddingTop: String = js.native
+  var `page-break-after`: String = js.native
+  var `page-break-before`: String = js.native
+  var `page-break-inside`: String = js.native
+  var pageBreakAfter: String = js.native
+  var pageBreakBefore: String = js.native
+  var pageBreakInside: String = js.native
+  var `paint-order`: String = js.native
+  var paintOrder: String = js.native
+  var perspective: String = js.native
+  var `perspective-origin`: String = js.native
+  var perspectiveOrigin: String = js.native
+  var `place-content`: String = js.native
+  var `place-items`: String = js.native
+  var `place-self`: String = js.native
+  var placeContent: String = js.native
+  var placeItems: String = js.native
+  var placeSelf: String = js.native
+  var `pointer-events`: String = js.native
+  var pointerEvents: String = js.native
+  var position: String = js.native
+  var quotes: String = js.native
+  var resize: String = js.native
+  var right: String = js.native
+  var rotate: String = js.native
+  var rotate3d: String = js.native
+  var rotateX: String = js.native
+  var rotateY: String = js.native
+  var rotateZ: String = js.native
+  var `row-gap`: String = js.native
+  var rowGap: String = js.native
+  var `ruby-align`: String = js.native
+  var `ruby-merge`: String = js.native
+  var `ruby-position`: String = js.native
+  var rubyAlign: String = js.native
+  var rubyMerge: String = js.native
+  var rubyPosition: String = js.native
+  var scale: String = js.native
+  var scale3d: String = js.native
+  var scaleX: String = js.native
+  var scaleY: String = js.native
+  var scaleZ: String = js.native
+  var `scroll-behavior`: String = js.native
+  var `scroll-margin`: String = js.native
+  var `scroll-margin-block`: String = js.native
+  var `scroll-margin-block-end`: String = js.native
+  var `scroll-margin-block-start`: String = js.native
+  var `scroll-margin-bottom`: String = js.native
+  var `scroll-margin-inline`: String = js.native
+  var `scroll-margin-inline-end`: String = js.native
+  var `scroll-margin-inline-start`: String = js.native
+  var `scroll-margin-left`: String = js.native
+  var `scroll-margin-right`: String = js.native
+  var `scroll-margin-top`: String = js.native
+  var `scroll-padding`: String = js.native
+  var `scroll-padding-block`: String = js.native
+  var `scroll-padding-block-end`: String = js.native
+  var `scroll-padding-block-start`: String = js.native
+  var `scroll-padding-bottom`: String = js.native
+  var `scroll-padding-inline`: String = js.native
+  var `scroll-padding-inline-end`: String = js.native
+  var `scroll-padding-inline-start`: String = js.native
+  var `scroll-padding-left`: String = js.native
+  var `scroll-padding-right`: String = js.native
+  var `scroll-padding-top`: String = js.native
+  var `scroll-snap-align`: String = js.native
+  var `scroll-snap-coordinate`: String = js.native
+  var `scroll-snap-destination`: String = js.native
+  var `scroll-snap-points-x`: String = js.native
+  var `scroll-snap-points-y`: String = js.native
+  var `scroll-snap-stop`: String = js.native
+  var `scroll-snap-type`: String = js.native
+  var `scroll-snap-type-x`: String = js.native
+  var `scroll-snap-type-y`: String = js.native
+  var scrollBehavior: String = js.native
+  var scrollMargin: String = js.native
+  var scrollMarginBlock: String = js.native
+  var scrollMarginBlockEnd: String = js.native
+  var scrollMarginBlockStart: String = js.native
+  var scrollMarginBottom: String = js.native
+  var scrollMarginInline: String = js.native
+  var scrollMarginInlineEnd: String = js.native
+  var scrollMarginInlineStart: String = js.native
+  var scrollMarginLeft: String = js.native
+  var scrollMarginRight: String = js.native
+  var scrollMarginTop: String = js.native
+  var scrollPadding: String = js.native
+  var scrollPaddingBlock: String = js.native
+  var scrollPaddingBlockEnd: String = js.native
+  var scrollPaddingBlockStart: String = js.native
+  var scrollPaddingBottom: String = js.native
+  var scrollPaddingInline: String = js.native
+  var scrollPaddingInlineEnd: String = js.native
+  var scrollPaddingInlineStart: String = js.native
+  var scrollPaddingLeft: String = js.native
+  var scrollPaddingRight: String = js.native
+  var scrollPaddingTop: String = js.native
+  var scrollSnapAlign: String = js.native
+  var scrollSnapCoordinate: String = js.native
+  var scrollSnapDestination: String = js.native
+  var scrollSnapPointsX: String = js.native
+  var scrollSnapPointsY: String = js.native
+  var scrollSnapStop: String = js.native
+  var scrollSnapType: String = js.native
+  var scrollSnapTypeX: String = js.native
+  var scrollSnapTypeY: String = js.native
+  var `scrollbar-color`: String = js.native
+  var `scrollbar-width`: String = js.native
+  var scrollbarColor: String = js.native
+  var scrollbarWidth: String = js.native
+  var `shape-image-threshold`: String = js.native
+  var `shape-margin`: String = js.native
+  var `shape-outside`: String = js.native
+  var `shape-rendering`: String = js.native
+  var shapeImageThreshold: String = js.native
+  var shapeMargin: String = js.native
+  var shapeOutside: String = js.native
+  var shapeRendering: String = js.native
+  var skew: String = js.native
+  var skewX: String = js.native
+  var skewY: String = js.native
+  var `stop-color`: String = js.native
+  var `stop-opacity`: String = js.native
+  var stopColor: String = js.native
+  var stopOpacity: String = js.native
+  var stroke: String = js.native
+  var `stroke-dasharray`: String = js.native
+  var `stroke-dashoffset`: String = js.native
+  var `stroke-linecap`: String = js.native
+  var `stroke-linejoin`: String = js.native
+  var `stroke-miterlimit`: String = js.native
+  var `stroke-opacity`: String = js.native
+  var `stroke-width`: String = js.native
+  var strokeDasharray: String = js.native
+  var strokeDashoffset: String = js.native
+  var strokeLinecap: String = js.native
+  var strokeLinejoin: String = js.native
+  var strokeMiterlimit: String = js.native
+  var strokeOpacity: String = js.native
+  var strokeWidth: String = js.native
+  var `tab-size`: String = js.native
+  var tabSize: String = js.native
+  var `table-layout`: String = js.native
+  var tableLayout: String = js.native
+  var `text-align`: String = js.native
+  var `text-align-last`: String = js.native
+  var `text-anchor`: String = js.native
+  var `text-combine-horizontal`: String = js.native
+  var `text-combine-upright`: String = js.native
+  var `text-decoration`: String = js.native
+  var `text-decoration-color`: String = js.native
+  var `text-decoration-line`: String = js.native
+  var `text-decoration-skip`: String = js.native
+  var `text-decoration-skip-ink`: String = js.native
+  var `text-decoration-style`: String = js.native
+  var `text-emphasis`: String = js.native
+  var `text-emphasis-color`: String = js.native
+  var `text-emphasis-position`: String = js.native
+  var `text-emphasis-style`: String = js.native
+  var `text-indent`: String = js.native
+  var `text-justify`: String = js.native
+  var `text-orientation`: String = js.native
+  var `text-overflow`: String = js.native
+  var `text-rendering`: String = js.native
+  var `text-shadow`: String = js.native
+  var `text-size-adjust`: String = js.native
+  var `text-transform`: String = js.native
+  var `text-underline-position`: String = js.native
+  var textAlign: String = js.native
+  var textAlignLast: String = js.native
+  var textAnchor: String = js.native
+  var textCombineHorizontal: String = js.native
+  var textCombineUpright: String = js.native
+  var textDecoration: String = js.native
+  var textDecorationColor: String = js.native
+  var textDecorationLine: String = js.native
+  var textDecorationSkip: String = js.native
+  var textDecorationSkipInk: String = js.native
+  var textDecorationStyle: String = js.native
+  var textEmphasis: String = js.native
+  var textEmphasisColor: String = js.native
+  var textEmphasisPosition: String = js.native
+  var textEmphasisStyle: String = js.native
+  var textIndent: String = js.native
+  var textJustify: String = js.native
+  var textOrientation: String = js.native
+  var textOverflow: String = js.native
+  var textRendering: String = js.native
+  var textShadow: String = js.native
+  var textSizeAdjust: String = js.native
+  var textTransform: String = js.native
+  var textUnderlinePosition: String = js.native
+  var top: String = js.native
+  var `touch-action`: String = js.native
+  var touchAction: String = js.native
+  var transform: String = js.native
+  var `transform-box`: String = js.native
+  var `transform-origin`: String = js.native
+  var `transform-style`: String = js.native
+  var transformBox: String = js.native
+  var transformOrigin: String = js.native
+  var transformStyle: String = js.native
+  var transition: String = js.native
+  var `transition-delay`: String = js.native
+  var `transition-duration`: String = js.native
+  var `transition-property`: String = js.native
+  var `transition-timing-function`: String = js.native
+  var transitionDelay: String = js.native
+  var transitionDuration: String = js.native
+  var transitionProperty: String = js.native
+  var transitionTimingFunction: String = js.native
+  var translate: String = js.native
+  var translate3d: String = js.native
+  var translateX: String = js.native
+  var translateY: String = js.native
+  var translateZ: String = js.native
+  var `unicode-bidi`: String = js.native
+  var unicodeBidi: String = js.native
+  var `user-select`: String = js.native
+  var userSelect: String = js.native
+  var `vector-effect`: String = js.native
+  var vectorEffect: String = js.native
+  var `vertical-align`: String = js.native
+  var verticalAlign: String = js.native
+  var visibility: String = js.native
+  var `white-space`: String = js.native
+  var whiteSpace: String = js.native
+  var widows: String = js.native
+  var width: String = js.native
+  var `will-change`: String = js.native
+  var willChange: String = js.native
+  var `word-break`: String = js.native
+  var `word-spacing`: String = js.native
+  var `word-wrap`: String = js.native
+  var wordBreak: String = js.native
+  var wordSpacing: String = js.native
+  var wordWrap: String = js.native
+  var `writing-mode`: String = js.native
+  var writingMode: String = js.native
+  var `z-index`: String = js.native
+  var zIndex: String = js.native
+  var zoom: String = js.native
 }
 
 object AnimateProperties {
@@ -1992,5 +1993,1537 @@ object AnimateProperties {
     __obj.updateDynamic("-webkit-flex-flow")(`-webkit-flex-flow`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnimateProperties]
   }
+  @scala.inline
+  implicit class AnimatePropertiesOps[Self <: AnimateProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def `with-khtml-box-align`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-khtml-box-align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-khtml-box-direction`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-khtml-box-direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-khtml-box-flex`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-khtml-box-flex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-khtml-box-flex-group`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-khtml-box-flex-group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-khtml-box-lines`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-khtml-box-lines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-khtml-box-ordinal-group`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-khtml-box-ordinal-group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-khtml-box-orient`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-khtml-box-orient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-khtml-box-pack`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-khtml-box-pack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-khtml-line-break`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-khtml-line-break")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-khtml-opacity`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-khtml-opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-khtml-user-select`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-khtml-user-select")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-animation`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-animation-delay`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-animation-delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-animation-direction`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-animation-direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-animation-duration`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-animation-duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-animation-fill-mode`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-animation-fill-mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-animation-iteration-count`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-animation-iteration-count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-animation-name`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-animation-name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-animation-play-state`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-animation-play-state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-animation-timing-function`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-animation-timing-function")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-appearance`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-appearance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-backface-visibility`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-backface-visibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-background-clip`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-background-clip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-background-inline-policy`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-background-inline-policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-background-origin`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-background-origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-background-size`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-background-size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-binding`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-binding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-border-bottom-colors`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-border-bottom-colors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-border-end-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-border-end-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-border-end-style`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-border-end-style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-border-end-width`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-border-end-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-border-image`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-border-image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-border-left-colors`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-border-left-colors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-border-radius`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-border-radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-border-radius-bottomleft`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-border-radius-bottomleft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-border-radius-bottomright`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-border-radius-bottomright")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-border-radius-topleft`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-border-radius-topleft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-border-radius-topright`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-border-radius-topright")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-border-right-colors`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-border-right-colors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-border-start-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-border-start-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-border-start-style`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-border-start-style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-border-top-colors`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-border-top-colors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-box-align`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-box-align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-box-direction`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-box-direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-box-flex`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-box-flex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-box-ordinal-group`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-box-ordinal-group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-box-orient`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-box-orient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-box-pack`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-box-pack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-box-shadow`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-box-shadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-box-sizing`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-box-sizing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-column-count`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-column-count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-column-fill`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-column-fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-column-gap`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-column-gap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-column-rule`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-column-rule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-column-rule-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-column-rule-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-column-rule-style`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-column-rule-style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-column-rule-width`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-column-rule-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-column-width`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-column-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-columns`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-context-properties`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-context-properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-float-edge`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-float-edge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-font-feature-settings`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-font-feature-settings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-font-language-override`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-font-language-override")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-force-broken-image-icon`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-force-broken-image-icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-hyphens`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-hyphens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-image-region`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-image-region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-margin-end`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-margin-end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-margin-start`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-margin-start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-opacity`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-orient`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-orient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-outline`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-outline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-outline-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-outline-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-outline-radius`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-outline-radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-outline-radius-bottomleft`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-outline-radius-bottomleft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-outline-radius-bottomright`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-outline-radius-bottomright")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-outline-radius-topleft`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-outline-radius-topleft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-outline-radius-topright`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-outline-radius-topright")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-outline-style`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-outline-style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-outline-width`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-outline-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-padding-end`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-padding-end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-padding-start`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-padding-start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-perspective`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-perspective")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-perspective-origin`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-perspective-origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-stack-sizing`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-stack-sizing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-tab-size`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-tab-size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-text-align-last`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-text-align-last")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-text-blink`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-text-blink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-text-decoration-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-text-decoration-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-text-decoration-line`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-text-decoration-line")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-text-decoration-style`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-text-decoration-style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-text-size-adjust`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-text-size-adjust")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-transform-origin`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-transform-origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-transform-style`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-transform-style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-transition`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-transition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-transition-delay`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-transition-delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-transition-duration`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-transition-duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-transition-property`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-transition-property")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-transition-timing-function`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-transition-timing-function")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-user-focus`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-user-focus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-user-input`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-user-input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-user-modify`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-user-modify")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-user-select`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-user-select")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-window-dragging`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-window-dragging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-moz-window-shadow`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-moz-window-shadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-accelerator`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-accelerator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-align-self`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-align-self")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-block-progression`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-block-progression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-content-zoom-chaining`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-content-zoom-chaining")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-content-zoom-limit`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-content-zoom-limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-content-zoom-limit-max`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-content-zoom-limit-max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-content-zoom-limit-min`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-content-zoom-limit-min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-content-zoom-snap`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-content-zoom-snap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-content-zoom-snap-points`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-content-zoom-snap-points")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-content-zoom-snap-type`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-content-zoom-snap-type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-content-zooming`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-content-zooming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-filter`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-flex`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-flex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-flex-direction`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-flex-direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-flex-positive`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-flex-positive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-flow-from`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-flow-from")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-flow-into`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-flow-into")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-grid-columns`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-grid-columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-grid-rows`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-grid-rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-high-contrast-adjust`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-high-contrast-adjust")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-hyphenate-limit-chars`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-hyphenate-limit-chars")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-hyphenate-limit-lines`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-hyphenate-limit-lines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-hyphenate-limit-zone`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-hyphenate-limit-zone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-hyphens`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-hyphens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-ime-align`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-ime-align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-ime-mode`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-ime-mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-line-break`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-line-break")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-order`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-order")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-overflow-style`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-overflow-style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-overflow-x`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-overflow-x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-overflow-y`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-overflow-y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scroll-chaining`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scroll-chaining")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scroll-limit`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scroll-limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scroll-limit-x-max`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scroll-limit-x-max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scroll-limit-x-min`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scroll-limit-x-min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scroll-limit-y-max`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scroll-limit-y-max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scroll-limit-y-min`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scroll-limit-y-min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scroll-rails`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scroll-rails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scroll-snap-points-x`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scroll-snap-points-x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scroll-snap-points-y`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scroll-snap-points-y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scroll-snap-type`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scroll-snap-type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scroll-snap-x`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scroll-snap-x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scroll-snap-y`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scroll-snap-y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scroll-translation`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scroll-translation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scrollbar-3dlight-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scrollbar-3dlight-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scrollbar-arrow-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scrollbar-arrow-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scrollbar-base-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scrollbar-base-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scrollbar-darkshadow-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scrollbar-darkshadow-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scrollbar-face-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scrollbar-face-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scrollbar-highlight-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scrollbar-highlight-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scrollbar-shadow-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scrollbar-shadow-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-scrollbar-track-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-scrollbar-track-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-text-autospace`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-text-autospace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-text-combine-horizontal`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-text-combine-horizontal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-text-overflow`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-text-overflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-touch-action`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-touch-action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-touch-select`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-touch-select")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-transform`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-transform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-transform-origin`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-transform-origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-transition`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-transition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-transition-delay`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-transition-delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-transition-duration`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-transition-duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-transition-property`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-transition-property")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-transition-timing-function`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-transition-timing-function")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-user-select`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-user-select")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-word-break`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-word-break")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-wrap-flow`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-wrap-flow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-wrap-margin`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-wrap-margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-wrap-through`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-wrap-through")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-ms-writing-mode`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-writing-mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-animation`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-animation-delay`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-animation-delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-animation-direction`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-animation-direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-animation-duration`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-animation-duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-animation-fill-mode`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-animation-fill-mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-animation-iteration-count`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-animation-iteration-count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-animation-name`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-animation-name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-animation-play-state`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-animation-play-state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-animation-timing-function`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-animation-timing-function")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-background-size`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-background-size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-border-image`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-border-image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-object-fit`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-object-fit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-object-position`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-object-position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-tab-size`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-tab-size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-text-overflow`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-text-overflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-transform`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-transform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-transform-origin`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-transform-origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-transition`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-transition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-transition-delay`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-transition-delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-transition-duration`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-transition-duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-transition-property`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-transition-property")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-o-transition-timing-function`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-transition-timing-function")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-align-content`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-align-content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-align-items`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-align-items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-align-self`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-align-self")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-animation`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-animation-delay`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-animation-delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-animation-direction`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-animation-direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-animation-duration`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-animation-duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-animation-fill-mode`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-animation-fill-mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-animation-iteration-count`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-animation-iteration-count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-animation-name`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-animation-name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-animation-play-state`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-animation-play-state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-animation-timing-function`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-animation-timing-function")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-appearance`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-appearance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-backdrop-filter`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-backdrop-filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-backface-visibility`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-backface-visibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-background-clip`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-background-clip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-background-origin`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-background-origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-background-size`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-background-size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-border-before`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-border-before")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-border-before-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-border-before-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-border-before-style`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-border-before-style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-border-before-width`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-border-before-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-border-bottom-left-radius`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-border-bottom-left-radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-border-bottom-right-radius`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-border-bottom-right-radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-border-image`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-border-image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-border-image-slice`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-border-image-slice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-border-radius`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-border-radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-border-top-left-radius`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-border-top-left-radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-border-top-right-radius`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-border-top-right-radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-box-align`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-box-align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-box-decoration-break`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-box-decoration-break")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-box-direction`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-box-direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-box-flex`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-box-flex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-box-flex-group`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-box-flex-group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-box-lines`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-box-lines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-box-ordinal-group`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-box-ordinal-group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-box-orient`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-box-orient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-box-pack`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-box-pack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-box-reflect`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-box-reflect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-box-shadow`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-box-shadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-box-sizing`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-box-sizing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-clip-path`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-clip-path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-color-adjust`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-color-adjust")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-column-count`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-column-count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-column-fill`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-column-fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-column-gap`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-column-gap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-column-rule`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-column-rule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-column-rule-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-column-rule-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-column-rule-style`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-column-rule-style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-column-rule-width`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-column-rule-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-column-span`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-column-span")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-column-width`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-column-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-columns`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-filter`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-flex`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-flex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-flex-basis`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-flex-basis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-flex-direction`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-flex-direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with-webkit-flex-flow`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-webkit-flex-flow")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

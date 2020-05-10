@@ -13,12 +13,10 @@ trait ViewportUserZoomProperty extends js.Object
 
 object ViewportUserZoomProperty {
   @scala.inline
-  def `-ms-zoom`: typingsSlinky.csstype.csstypeStrings.`-ms-zoom` = this.cast("-ms-zoom")
+  def `-ms-zoom`: typingsSlinky.csstype.csstypeStrings.`-ms-zoom` = "-ms-zoom".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-ms-zoom`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fixed: typingsSlinky.csstype.csstypeStrings.fixed = "fixed".asInstanceOf[typingsSlinky.csstype.csstypeStrings.fixed]
   @scala.inline
-  def fixed: typingsSlinky.csstype.csstypeStrings.fixed = this.cast("fixed")
-  @scala.inline
-  def zoom: typingsSlinky.csstype.csstypeStrings.zoom = this.cast("zoom")
+  def zoom: typingsSlinky.csstype.csstypeStrings.zoom = "zoom".asInstanceOf[typingsSlinky.csstype.csstypeStrings.zoom]
 }
 

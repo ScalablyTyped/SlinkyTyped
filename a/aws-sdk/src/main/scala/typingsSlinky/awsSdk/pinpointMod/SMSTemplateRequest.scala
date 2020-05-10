@@ -15,6 +15,10 @@ trait SMSTemplateRequest extends js.Object {
     */
   var DefaultSubstitutions: js.UndefOr[string] = js.native
   /**
+    * The unique identifier for the recommender model to use for the message template. Amazon Pinpoint uses this value to determine how to retrieve and process data from a recommender model when it sends messages that use the template, if the template contains message variables for recommendation data.
+    */
+  var RecommenderId: js.UndefOr[string] = js.native
+  /**
     * A custom description of the message template.
     */
   var TemplateDescription: js.UndefOr[string] = js.native
@@ -26,18 +30,77 @@ trait SMSTemplateRequest extends js.Object {
 
 object SMSTemplateRequest {
   @scala.inline
-  def apply(
-    Body: string = null,
-    DefaultSubstitutions: string = null,
-    TemplateDescription: string = null,
-    tags: MapOfString = null
-  ): SMSTemplateRequest = {
+  def apply(): SMSTemplateRequest = {
     val __obj = js.Dynamic.literal()
-    if (Body != null) __obj.updateDynamic("Body")(Body.asInstanceOf[js.Any])
-    if (DefaultSubstitutions != null) __obj.updateDynamic("DefaultSubstitutions")(DefaultSubstitutions.asInstanceOf[js.Any])
-    if (TemplateDescription != null) __obj.updateDynamic("TemplateDescription")(TemplateDescription.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[SMSTemplateRequest]
   }
+  @scala.inline
+  implicit class SMSTemplateRequestOps[Self <: SMSTemplateRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBody(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultSubstitutions(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultSubstitutions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultSubstitutions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultSubstitutions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecommenderId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecommenderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecommenderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecommenderId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateDescription(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: MapOfString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

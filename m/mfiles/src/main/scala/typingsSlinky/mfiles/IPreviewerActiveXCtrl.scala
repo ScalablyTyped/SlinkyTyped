@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IPreviewerActiveXCtrl extends js.Object {
-  def ClearPreview(): Double
-  def ShowFilePreview(bstrFilename: String): Double
+  def ClearPreview(): Double = js.native
+  def ShowFilePreview(bstrFilename: String): Double = js.native
   def ShowHitHighlightedFilePreview(
     bstrFilename: String,
     lObjType: Double,
@@ -16,7 +17,7 @@ trait IPreviewerActiveXCtrl extends js.Object {
     lFileVersion: Double,
     pIHitHighlightingInfo: js.Any,
     bstrSearchConditions: String
-  ): Double
+  ): Double = js.native
 }
 
 object IPreviewerActiveXCtrl {
@@ -27,8 +28,33 @@ object IPreviewerActiveXCtrl {
     ShowHitHighlightedFilePreview: (String, Double, Double, Double, Double, Double, js.Any, String) => Double
   ): IPreviewerActiveXCtrl = {
     val __obj = js.Dynamic.literal(ClearPreview = js.Any.fromFunction0(ClearPreview), ShowFilePreview = js.Any.fromFunction1(ShowFilePreview), ShowHitHighlightedFilePreview = js.Any.fromFunction8(ShowHitHighlightedFilePreview))
-  
     __obj.asInstanceOf[IPreviewerActiveXCtrl]
   }
+  @scala.inline
+  implicit class IPreviewerActiveXCtrlOps[Self <: IPreviewerActiveXCtrl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClearPreview(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClearPreview")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withShowFilePreview(value: String => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowFilePreview")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withShowHitHighlightedFilePreview(value: (String, Double, Double, Double, Double, Double, js.Any, String) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowHitHighlightedFilePreview")(js.Any.fromFunction8(value))
+        ret
+    }
+  }
+  
 }
 

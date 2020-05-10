@@ -28,7 +28,7 @@ object Dropdown extends js.Object {
   /**
     * Init Dropdown
     */
-  def init(els: typingsSlinky.std.Element): typingsSlinky.materializeCss.M.Dropdown = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialDropdownOptions): typingsSlinky.materializeCss.M.Dropdown = js.native
+  def init(els: Element): typingsSlinky.materializeCss.M.Dropdown = js.native
+  def init(els: Element, options: PartialDropdownOptions): typingsSlinky.materializeCss.M.Dropdown = js.native
 }
 

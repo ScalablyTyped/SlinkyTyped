@@ -9,7 +9,6 @@ import typingsSlinky.react.mod.ClassType
 import typingsSlinky.react.mod.DOMAttributes
 import typingsSlinky.react.mod.DOMElement
 import typingsSlinky.react.mod.ReactInstance
-import typingsSlinky.react.mod.SFC
 import typingsSlinky.react.mod.SFCElement
 import typingsSlinky.reactDom.testUtilsMod.MockedComponentClass
 import typingsSlinky.reactDom.testUtilsMod.ShallowRenderer
@@ -33,7 +32,7 @@ trait TypeofReactTestUtils extends js.Object {
   def isDOMComponent(instance: ReactInstance): /* is std.Element */ Boolean = js.native
   def isElement(element: js.Any): Boolean = js.native
   def isElementOfType[T /* <: HTMLElement */](element: ReactElement, `type`: String): /* is react.react.ReactHTMLElement<T> */ Boolean = js.native
-  def isElementOfType[P](element: ReactElement, `type`: SFC[P]): /* is react.react.SFCElement<P> */ Boolean = js.native
+  def isElementOfType[P](element: ReactElement, `type`: ReactComponentClass[P]): /* is react.react.SFCElement<P> */ Boolean = js.native
   def isElementOfType[P, T /* <: ReactComponentClass[P] */, C /* <: ReactComponentClass[P] */](element: ReactElement, `type`: ClassType[P, T, C]): /* is react.react.CElement<P, T> */ Boolean = js.native
   @JSName("isElementOfType")
   def isElementOfType_P_DOMAttributesObjectT_Element[P /* <: DOMAttributes[js.Object] */, T /* <: Element */](element: ReactElement, `type`: String): /* is react.react.DOMElement<P, T> */ Boolean = js.native

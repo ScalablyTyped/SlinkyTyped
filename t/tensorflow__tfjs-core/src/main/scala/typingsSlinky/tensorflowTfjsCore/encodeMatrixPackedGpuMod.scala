@@ -16,16 +16,10 @@ object encodeMatrixPackedGpuMod extends js.Object {
       texShape: js.Tuple2[Double, Double],
       inputIsUnsignedByte: Boolean
     ) = this()
-    /* CompleteClass */
-    override var outputShape: js.Array[Double] = js.native
     @JSName("packedInputs")
     var packedInputs_EncodeMatrixPackedProgram: Boolean = js.native
     @JSName("packedOutput")
     var packedOutput_EncodeMatrixPackedProgram: Boolean = js.native
-    /* CompleteClass */
-    override var userCode: String = js.native
-    /* CompleteClass */
-    override var variableNames: js.Array[String] = js.native
   }
   
 }

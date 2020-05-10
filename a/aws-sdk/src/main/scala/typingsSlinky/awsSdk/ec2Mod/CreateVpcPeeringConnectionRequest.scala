@@ -30,20 +30,77 @@ trait CreateVpcPeeringConnectionRequest extends js.Object {
 
 object CreateVpcPeeringConnectionRequest {
   @scala.inline
-  def apply(
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    PeerOwnerId: String = null,
-    PeerRegion: String = null,
-    PeerVpcId: String = null,
-    VpcId: VpcId = null
-  ): CreateVpcPeeringConnectionRequest = {
+  def apply(): CreateVpcPeeringConnectionRequest = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (PeerOwnerId != null) __obj.updateDynamic("PeerOwnerId")(PeerOwnerId.asInstanceOf[js.Any])
-    if (PeerRegion != null) __obj.updateDynamic("PeerRegion")(PeerRegion.asInstanceOf[js.Any])
-    if (PeerVpcId != null) __obj.updateDynamic("PeerVpcId")(PeerVpcId.asInstanceOf[js.Any])
-    if (VpcId != null) __obj.updateDynamic("VpcId")(VpcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateVpcPeeringConnectionRequest]
   }
+  @scala.inline
+  implicit class CreateVpcPeeringConnectionRequestOps[Self <: CreateVpcPeeringConnectionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeerOwnerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PeerOwnerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeerOwnerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PeerOwnerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeerRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PeerRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeerRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PeerRegion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeerVpcId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PeerVpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeerVpcId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PeerVpcId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcId(value: VpcId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

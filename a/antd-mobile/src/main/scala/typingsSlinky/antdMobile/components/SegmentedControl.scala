@@ -1,44 +1,44 @@
 package typingsSlinky.antdMobile.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.segmentedControlMod.SegmentedControlProps
 import typingsSlinky.antdMobile.segmentedControlMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SegmentedControl
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object SegmentedControl {
   @JSImport("antd-mobile/lib/segmented-control", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, style */
-  def apply(
-    onChange: /* e */ js.Any => Unit = null,
-    onValueChange: /* value */ String => Unit = null,
-    prefixCls: String = null,
-    selectedIndex: Int | Double = null,
-    tintColor: String = null,
-    values: js.Array[String] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onValueChange != null) __obj.updateDynamic("onValueChange")(js.Any.fromFunction1(onValueChange))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (selectedIndex != null) __obj.updateDynamic("selectedIndex")(selectedIndex.asInstanceOf[js.Any])
-    if (tintColor != null) __obj.updateDynamic("tintColor")(tintColor.asInstanceOf[js.Any])
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* e */ js.Any => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onValueChange(value: /* value */ String => Unit): this.type = set("onValueChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedIndex(value: Double): this.type = set("selectedIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def values(value: js.Array[String]): this.type = set("values", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antdMobile.segmentedControlMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SegmentedControlProps
+  
+  def withProps(p: SegmentedControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SegmentedControl.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

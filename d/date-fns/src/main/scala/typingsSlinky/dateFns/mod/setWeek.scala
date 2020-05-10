@@ -1,7 +1,6 @@
 package typingsSlinky.dateFns.mod
 
 import typingsSlinky.dateFns.AnonFirstWeekContainsDateLocaleWeekStartsOn
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ import scala.scalajs.js.annotation._
 object setWeek extends js.Object {
   def apply(date: Double, week: Double): js.Date = js.native
   def apply(date: Double, week: Double, options: AnonFirstWeekContainsDateLocaleWeekStartsOn): js.Date = js.native
-  def apply(date: Date, week: Double): js.Date = js.native
-  def apply(date: Date, week: Double, options: AnonFirstWeekContainsDateLocaleWeekStartsOn): js.Date = js.native
+  def apply(date: js.Date, week: Double): js.Date = js.native
+  def apply(date: js.Date, week: Double, options: AnonFirstWeekContainsDateLocaleWeekStartsOn): js.Date = js.native
 }
 

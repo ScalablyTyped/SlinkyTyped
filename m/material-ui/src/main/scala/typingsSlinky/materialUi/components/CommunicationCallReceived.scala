@@ -1,15 +1,16 @@
 package typingsSlinky.materialUi.components
 
+import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CommunicationCallReceived
-  extends SharedApply_SvgIconProps1666625642[typingsSlinky.materialUi.svgIconsMod.CommunicationCallReceived] {
+object CommunicationCallReceived {
   @JSImport("material-ui/svg-icons", "CommunicationCallReceived")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.CommunicationCallReceived] = new SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.CommunicationCallReceived](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CommunicationCallReceived.type): SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.CommunicationCallReceived] = new SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.CommunicationCallReceived](js.Array(this.component, js.Dictionary.empty))()
 }
 

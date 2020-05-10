@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.postmanCollection.mod.PropertyBaseDefinition because Already inherited
 - typingsSlinky.postmanCollection.mod.VersionDefinition because var conflicts: description. Inlined build, major, minor, patch, prerelease, raw, version */ @JSImport("postman-collection", "Version")
 @js.native

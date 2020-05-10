@@ -82,44 +82,221 @@ trait SchemaContainerVersion extends js.Object {
 
 object SchemaContainerVersion {
   @scala.inline
-  def apply(
-    accountId: String = null,
-    builtInVariable: js.Array[SchemaBuiltInVariable] = null,
-    container: SchemaContainer = null,
-    containerId: String = null,
-    containerVersionId: String = null,
-    customTemplate: js.Array[SchemaCustomTemplate] = null,
-    deleted: js.UndefOr[Boolean] = js.undefined,
-    description: String = null,
-    fingerprint: String = null,
-    folder: js.Array[SchemaFolder] = null,
-    name: String = null,
-    path: String = null,
-    tag: js.Array[SchemaTag] = null,
-    tagManagerUrl: String = null,
-    trigger: js.Array[SchemaTrigger] = null,
-    variable: js.Array[SchemaVariable] = null,
-    zone: js.Array[SchemaZone] = null
-  ): SchemaContainerVersion = {
+  def apply(): SchemaContainerVersion = {
     val __obj = js.Dynamic.literal()
-    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
-    if (builtInVariable != null) __obj.updateDynamic("builtInVariable")(builtInVariable.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (containerId != null) __obj.updateDynamic("containerId")(containerId.asInstanceOf[js.Any])
-    if (containerVersionId != null) __obj.updateDynamic("containerVersionId")(containerVersionId.asInstanceOf[js.Any])
-    if (customTemplate != null) __obj.updateDynamic("customTemplate")(customTemplate.asInstanceOf[js.Any])
-    if (!js.isUndefined(deleted)) __obj.updateDynamic("deleted")(deleted.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (fingerprint != null) __obj.updateDynamic("fingerprint")(fingerprint.asInstanceOf[js.Any])
-    if (folder != null) __obj.updateDynamic("folder")(folder.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
-    if (tagManagerUrl != null) __obj.updateDynamic("tagManagerUrl")(tagManagerUrl.asInstanceOf[js.Any])
-    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
-    if (variable != null) __obj.updateDynamic("variable")(variable.asInstanceOf[js.Any])
-    if (zone != null) __obj.updateDynamic("zone")(zone.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaContainerVersion]
   }
+  @scala.inline
+  implicit class SchemaContainerVersionOps[Self <: SchemaContainerVersion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuiltInVariable(value: js.Array[SchemaBuiltInVariable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("builtInVariable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuiltInVariable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("builtInVariable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainer(value: SchemaContainer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerVersionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerVersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerVersionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomTemplate(value: js.Array[SchemaCustomTemplate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFingerprint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFingerprint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFolder(value: js.Array[SchemaFolder]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("folder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFolder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("folder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTag(value: js.Array[SchemaTag]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagManagerUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagManagerUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagManagerUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagManagerUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrigger(value: js.Array[SchemaTrigger]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrigger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVariable(value: js.Array[SchemaVariable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVariable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZone(value: js.Array[SchemaZone]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zone")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

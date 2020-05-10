@@ -16,18 +16,16 @@ trait GoogleActionsV2OrdersPaymentInfoPaymentType extends js.Object
 
 object GoogleActionsV2OrdersPaymentInfoPaymentType {
   @scala.inline
-  def BANK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.BANK = this.cast("BANK")
+  def BANK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.BANK = "BANK".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.BANK]
   @scala.inline
-  def GIFT_CARD: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.GIFT_CARD = this.cast("GIFT_CARD")
+  def GIFT_CARD: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.GIFT_CARD = "GIFT_CARD".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.GIFT_CARD]
   @scala.inline
-  def LOYALTY_PROGRAM: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.LOYALTY_PROGRAM = this.cast("LOYALTY_PROGRAM")
+  def LOYALTY_PROGRAM: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.LOYALTY_PROGRAM = "LOYALTY_PROGRAM".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.LOYALTY_PROGRAM]
   @scala.inline
-  def ON_FULFILLMENT: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ON_FULFILLMENT = this.cast("ON_FULFILLMENT")
+  def ON_FULFILLMENT: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ON_FULFILLMENT = "ON_FULFILLMENT".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ON_FULFILLMENT]
   @scala.inline
-  def PAYMENT_CARD: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PAYMENT_CARD = this.cast("PAYMENT_CARD")
+  def PAYMENT_CARD: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PAYMENT_CARD = "PAYMENT_CARD".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PAYMENT_CARD]
   @scala.inline
-  def PAYMENT_TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PAYMENT_TYPE_UNSPECIFIED = this.cast("PAYMENT_TYPE_UNSPECIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def PAYMENT_TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PAYMENT_TYPE_UNSPECIFIED = "PAYMENT_TYPE_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PAYMENT_TYPE_UNSPECIFIED]
 }
 

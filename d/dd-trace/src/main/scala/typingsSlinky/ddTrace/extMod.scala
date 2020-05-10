@@ -7,7 +7,6 @@ import typingsSlinky.ddTrace.ddTraceNumbers.`2`
 import typingsSlinky.ddTrace.ddTraceStrings._dd1DotsrDoteausr
 import typingsSlinky.ddTrace.ddTraceStrings.`agent-exporter`
 import typingsSlinky.ddTrace.ddTraceStrings.`log-exporter`
-import typingsSlinky.ddTrace.ddTraceStrings.binary
 import typingsSlinky.ddTrace.ddTraceStrings.client
 import typingsSlinky.ddTrace.ddTraceStrings.consumer
 import typingsSlinky.ddTrace.ddTraceStrings.error
@@ -18,7 +17,6 @@ import typingsSlinky.ddTrace.ddTraceStrings.httpDotresponseDotheaders
 import typingsSlinky.ddTrace.ddTraceStrings.httpDotroute
 import typingsSlinky.ddTrace.ddTraceStrings.httpDotstatus_code
 import typingsSlinky.ddTrace.ddTraceStrings.httpDoturl
-import typingsSlinky.ddTrace.ddTraceStrings.http_headers
 import typingsSlinky.ddTrace.ddTraceStrings.log
 import typingsSlinky.ddTrace.ddTraceStrings.manualDotdrop
 import typingsSlinky.ddTrace.ddTraceStrings.manualDotkeep
@@ -29,7 +27,6 @@ import typingsSlinky.ddTrace.ddTraceStrings.server
 import typingsSlinky.ddTrace.ddTraceStrings.serviceDotname
 import typingsSlinky.ddTrace.ddTraceStrings.spanDotkind
 import typingsSlinky.ddTrace.ddTraceStrings.spanDottype
-import typingsSlinky.ddTrace.ddTraceStrings.text_map
 import typingsSlinky.ddTrace.ddTraceStrings.web
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -46,10 +43,10 @@ object extMod extends js.Object {
   
   @js.native
   object formats extends js.Object {
-    var BINARY: binary = js.native
-    var HTTP_HEADERS: http_headers = js.native
+    var BINARY: /* "binary" */ String = js.native
+    var HTTP_HEADERS: /* "http_headers" */ String = js.native
     var LOG: log = js.native
-    var TEXT_MAP: text_map = js.native
+    var TEXT_MAP: /* "text_map" */ String = js.native
   }
   
   @js.native

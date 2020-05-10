@@ -22,11 +22,41 @@ trait SchemaTargetWindow extends js.Object {
 
 object SchemaTargetWindow {
   @scala.inline
-  def apply(customHtml: String = null, targetWindowOption: String = null): SchemaTargetWindow = {
+  def apply(): SchemaTargetWindow = {
     val __obj = js.Dynamic.literal()
-    if (customHtml != null) __obj.updateDynamic("customHtml")(customHtml.asInstanceOf[js.Any])
-    if (targetWindowOption != null) __obj.updateDynamic("targetWindowOption")(targetWindowOption.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTargetWindow]
   }
+  @scala.inline
+  implicit class SchemaTargetWindowOps[Self <: SchemaTargetWindow] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomHtml(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customHtml")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomHtml: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customHtml")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetWindowOption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetWindowOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetWindowOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetWindowOption")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

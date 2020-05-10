@@ -1,7 +1,5 @@
 package typingsSlinky.node.netMod
 
-import typingsSlinky.node.NodeJS.ErrnoException
-import typingsSlinky.node.dnsMod.LookupOneOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,30 +12,13 @@ trait SocketConnectOpts extends js.Object
 
 object SocketConnectOpts {
   @scala.inline
-  def TcpSocketConnectOpts(
-    port: Double,
-    family: Int | Double = null,
-    hints: Int | Double = null,
-    host: String = null,
-    localAddress: String = null,
-    localPort: Int | Double = null,
-    lookup: (/* hostname */ String, /* options */ LookupOneOptions, /* callback */ js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit]) => Unit = null,
-    onread: OnReadOpts = null
-  ): SocketConnectOpts = {
+  def TcpSocketConnectOpts(port: Double): SocketConnectOpts = {
     val __obj = js.Dynamic.literal(port = port.asInstanceOf[js.Any])
-    if (family != null) __obj.updateDynamic("family")(family.asInstanceOf[js.Any])
-    if (hints != null) __obj.updateDynamic("hints")(hints.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (localAddress != null) __obj.updateDynamic("localAddress")(localAddress.asInstanceOf[js.Any])
-    if (localPort != null) __obj.updateDynamic("localPort")(localPort.asInstanceOf[js.Any])
-    if (lookup != null) __obj.updateDynamic("lookup")(js.Any.fromFunction3(lookup))
-    if (onread != null) __obj.updateDynamic("onread")(onread.asInstanceOf[js.Any])
     __obj.asInstanceOf[SocketConnectOpts]
   }
   @scala.inline
-  def IpcSocketConnectOpts(path: String, onread: OnReadOpts = null): SocketConnectOpts = {
+  def IpcSocketConnectOpts(path: String): SocketConnectOpts = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
-    if (onread != null) __obj.updateDynamic("onread")(onread.asInstanceOf[js.Any])
     __obj.asInstanceOf[SocketConnectOpts]
   }
 }

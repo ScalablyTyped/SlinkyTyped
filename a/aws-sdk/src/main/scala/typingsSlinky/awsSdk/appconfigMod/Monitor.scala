@@ -18,11 +18,41 @@ trait Monitor extends js.Object {
 
 object Monitor {
   @scala.inline
-  def apply(AlarmArn: Arn = null, AlarmRoleArn: Arn = null): Monitor = {
+  def apply(): Monitor = {
     val __obj = js.Dynamic.literal()
-    if (AlarmArn != null) __obj.updateDynamic("AlarmArn")(AlarmArn.asInstanceOf[js.Any])
-    if (AlarmRoleArn != null) __obj.updateDynamic("AlarmRoleArn")(AlarmRoleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[Monitor]
   }
+  @scala.inline
+  implicit class MonitorOps[Self <: Monitor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlarmArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlarmArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlarmRoleArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlarmRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmRoleArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

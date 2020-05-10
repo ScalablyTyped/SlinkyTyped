@@ -14,17 +14,18 @@ interface LocalStorage {
   clear;
 }
 */
+@js.native
 trait StatusBar extends js.Object {
-  var isVisible: Boolean
-  def backgroundColorByHexString(hexString: String): Unit
-  def backgroundColorByName(colorname: String): Unit
-  def hide(): Unit
-  def overlaysWebView(doOverlay: Boolean): Unit
-  def show(): Unit
-  def styleBlackOpaque(): Unit
-  def styleBlackTranslucent(): Unit
-  def styleDefault(): Unit
-  def styleLightContent(): Unit
+  var isVisible: Boolean = js.native
+  def backgroundColorByHexString(hexString: String): Unit = js.native
+  def backgroundColorByName(colorname: String): Unit = js.native
+  def hide(): Unit = js.native
+  def overlaysWebView(doOverlay: Boolean): Unit = js.native
+  def show(): Unit = js.native
+  def styleBlackOpaque(): Unit = js.native
+  def styleBlackTranslucent(): Unit = js.native
+  def styleDefault(): Unit = js.native
+  def styleLightContent(): Unit = js.native
 }
 
 @JSGlobal("StatusBar")

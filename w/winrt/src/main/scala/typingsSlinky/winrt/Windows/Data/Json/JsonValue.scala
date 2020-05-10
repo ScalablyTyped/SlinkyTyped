@@ -7,22 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.Data.Json.JsonValue")
 @js.native
-class JsonValue () extends IJsonValue {
-  /* CompleteClass */
-  override var valueType: JsonValueType = js.native
-  /* CompleteClass */
-  override def getArray(): JsonArray = js.native
-  /* CompleteClass */
-  override def getBoolean(): Boolean = js.native
-  /* CompleteClass */
-  override def getNumber(): Double = js.native
-  /* CompleteClass */
-  override def getObject(): JsonObject = js.native
-  /* CompleteClass */
-  override def getString(): String = js.native
-  /* CompleteClass */
-  override def stringify(): String = js.native
-}
+class JsonValue () extends IJsonValue
 
 /* static members */
 @JSGlobal("Windows.Data.Json.JsonValue")

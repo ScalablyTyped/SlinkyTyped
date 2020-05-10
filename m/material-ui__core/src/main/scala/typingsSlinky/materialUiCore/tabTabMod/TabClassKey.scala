@@ -22,30 +22,28 @@ trait TabClassKey extends js.Object
 
 object TabClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = "disabled".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = this.cast("disabled")
+  def fullWidth: typingsSlinky.materialUiCore.materialUiCoreStrings.fullWidth = "fullWidth".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.fullWidth]
   @scala.inline
-  def fullWidth: typingsSlinky.materialUiCore.materialUiCoreStrings.fullWidth = this.cast("fullWidth")
+  def label: typingsSlinky.materialUiCore.materialUiCoreStrings.label = "label".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.label]
   @scala.inline
-  def label: typingsSlinky.materialUiCore.materialUiCoreStrings.label = this.cast("label")
+  def labelContainer: typingsSlinky.materialUiCore.materialUiCoreStrings.labelContainer = "labelContainer".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.labelContainer]
   @scala.inline
-  def labelContainer: typingsSlinky.materialUiCore.materialUiCoreStrings.labelContainer = this.cast("labelContainer")
+  def labelIcon: typingsSlinky.materialUiCore.materialUiCoreStrings.labelIcon = "labelIcon".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.labelIcon]
   @scala.inline
-  def labelIcon: typingsSlinky.materialUiCore.materialUiCoreStrings.labelIcon = this.cast("labelIcon")
+  def labelWrapped: typingsSlinky.materialUiCore.materialUiCoreStrings.labelWrapped = "labelWrapped".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.labelWrapped]
   @scala.inline
-  def labelWrapped: typingsSlinky.materialUiCore.materialUiCoreStrings.labelWrapped = this.cast("labelWrapped")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def selected: typingsSlinky.materialUiCore.materialUiCoreStrings.selected = "selected".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.selected]
   @scala.inline
-  def selected: typingsSlinky.materialUiCore.materialUiCoreStrings.selected = this.cast("selected")
+  def textColorInherit: typingsSlinky.materialUiCore.materialUiCoreStrings.textColorInherit = "textColorInherit".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.textColorInherit]
   @scala.inline
-  def textColorInherit: typingsSlinky.materialUiCore.materialUiCoreStrings.textColorInherit = this.cast("textColorInherit")
+  def textColorPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.textColorPrimary = "textColorPrimary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.textColorPrimary]
   @scala.inline
-  def textColorPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.textColorPrimary = this.cast("textColorPrimary")
+  def textColorSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.textColorSecondary = "textColorSecondary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.textColorSecondary]
   @scala.inline
-  def textColorSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.textColorSecondary = this.cast("textColorSecondary")
-  @scala.inline
-  def wrapper: typingsSlinky.materialUiCore.materialUiCoreStrings.wrapper = this.cast("wrapper")
+  def wrapper: typingsSlinky.materialUiCore.materialUiCoreStrings.wrapper = "wrapper".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.wrapper]
 }
 

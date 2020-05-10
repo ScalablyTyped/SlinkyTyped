@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DefaultOptions_ extends js.Object {
-  var alwaysRender: js.UndefOr[Boolean] = js.undefined
-  var disposeOnDetach: js.UndefOr[Boolean] = js.undefined
-  var documentTitle: js.UndefOr[String] = js.undefined
-  var saveScrollPosition: js.UndefOr[Boolean] = js.undefined
+  var alwaysRender: js.UndefOr[Boolean] = js.native
+  var disposeOnDetach: js.UndefOr[Boolean] = js.native
+  var documentTitle: js.UndefOr[String] = js.native
+  var saveScrollPosition: js.UndefOr[Boolean] = js.native
 }
 
 object DefaultOptions_ {
   @scala.inline
-  def apply(
-    alwaysRender: js.UndefOr[Boolean] = js.undefined,
-    disposeOnDetach: js.UndefOr[Boolean] = js.undefined,
-    documentTitle: String = null,
-    saveScrollPosition: js.UndefOr[Boolean] = js.undefined
-  ): DefaultOptions_ = {
+  def apply(): DefaultOptions_ = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alwaysRender)) __obj.updateDynamic("alwaysRender")(alwaysRender.asInstanceOf[js.Any])
-    if (!js.isUndefined(disposeOnDetach)) __obj.updateDynamic("disposeOnDetach")(disposeOnDetach.asInstanceOf[js.Any])
-    if (documentTitle != null) __obj.updateDynamic("documentTitle")(documentTitle.asInstanceOf[js.Any])
-    if (!js.isUndefined(saveScrollPosition)) __obj.updateDynamic("saveScrollPosition")(saveScrollPosition.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultOptions_]
   }
+  @scala.inline
+  implicit class DefaultOptions_Ops[Self <: DefaultOptions_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlwaysRender(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysRender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlwaysRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisposeOnDetach(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disposeOnDetach")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisposeOnDetach: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disposeOnDetach")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSaveScrollPosition(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saveScrollPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSaveScrollPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saveScrollPosition")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,10 +12,8 @@ trait VideoSourceType extends js.Object
 
 object VideoSourceType {
   @scala.inline
-  def album: typingsSlinky.weappApi.weappApiStrings.album = this.cast("album")
+  def album: typingsSlinky.weappApi.weappApiStrings.album = "album".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.album]
   @scala.inline
-  def camera: typingsSlinky.weappApi.weappApiStrings.camera = this.cast("camera")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def camera: typingsSlinky.weappApi.weappApiStrings.camera = "camera".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.camera]
 }
 

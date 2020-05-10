@@ -41,22 +41,89 @@ trait SchemaWebDetection extends js.Object {
 
 object SchemaWebDetection {
   @scala.inline
-  def apply(
-    bestGuessLabels: js.Array[SchemaWebLabel] = null,
-    fullMatchingImages: js.Array[SchemaWebImage] = null,
-    pagesWithMatchingImages: js.Array[SchemaWebPage] = null,
-    partialMatchingImages: js.Array[SchemaWebImage] = null,
-    visuallySimilarImages: js.Array[SchemaWebImage] = null,
-    webEntities: js.Array[SchemaWebEntity] = null
-  ): SchemaWebDetection = {
+  def apply(): SchemaWebDetection = {
     val __obj = js.Dynamic.literal()
-    if (bestGuessLabels != null) __obj.updateDynamic("bestGuessLabels")(bestGuessLabels.asInstanceOf[js.Any])
-    if (fullMatchingImages != null) __obj.updateDynamic("fullMatchingImages")(fullMatchingImages.asInstanceOf[js.Any])
-    if (pagesWithMatchingImages != null) __obj.updateDynamic("pagesWithMatchingImages")(pagesWithMatchingImages.asInstanceOf[js.Any])
-    if (partialMatchingImages != null) __obj.updateDynamic("partialMatchingImages")(partialMatchingImages.asInstanceOf[js.Any])
-    if (visuallySimilarImages != null) __obj.updateDynamic("visuallySimilarImages")(visuallySimilarImages.asInstanceOf[js.Any])
-    if (webEntities != null) __obj.updateDynamic("webEntities")(webEntities.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWebDetection]
   }
+  @scala.inline
+  implicit class SchemaWebDetectionOps[Self <: SchemaWebDetection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBestGuessLabels(value: js.Array[SchemaWebLabel]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bestGuessLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBestGuessLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bestGuessLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFullMatchingImages(value: js.Array[SchemaWebImage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullMatchingImages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullMatchingImages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullMatchingImages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPagesWithMatchingImages(value: js.Array[SchemaWebPage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pagesWithMatchingImages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPagesWithMatchingImages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pagesWithMatchingImages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartialMatchingImages(value: js.Array[SchemaWebImage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partialMatchingImages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartialMatchingImages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partialMatchingImages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisuallySimilarImages(value: js.Array[SchemaWebImage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visuallySimilarImages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisuallySimilarImages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visuallySimilarImages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebEntities(value: js.Array[SchemaWebEntity]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webEntities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebEntities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webEntities")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -19,21 +19,17 @@ import scala.scalajs.js.annotation._
 trait HelloJSUtils extends js.Object {
   var Event: HelloJSEvent = js.native
   def append(node: String, attr: js.UndefOr[scala.Nothing], target: String): HTMLElement = js.native
-  def append(node: String, attr: js.UndefOr[scala.Nothing], target: typingsSlinky.std.HTMLElement): HTMLElement = js.native
+  def append(node: String, attr: js.UndefOr[scala.Nothing], target: HTMLElement): HTMLElement = js.native
   def append(node: String, attr: js.Object, target: String): HTMLElement = js.native
-  def append(node: String, attr: js.Object, target: typingsSlinky.std.HTMLElement): HTMLElement = js.native
+  def append(node: String, attr: js.Object, target: HTMLElement): HTMLElement = js.native
   def append(node: String, attr: Null, target: String): HTMLElement = js.native
-  def append(node: String, attr: Null, target: typingsSlinky.std.HTMLElement): HTMLElement = js.native
-  def append(node: typingsSlinky.std.HTMLElement, attr: js.UndefOr[scala.Nothing], target: String): HTMLElement = js.native
-  def append(
-    node: typingsSlinky.std.HTMLElement,
-    attr: js.UndefOr[scala.Nothing],
-    target: typingsSlinky.std.HTMLElement
-  ): HTMLElement = js.native
-  def append(node: typingsSlinky.std.HTMLElement, attr: js.Object, target: String): HTMLElement = js.native
-  def append(node: typingsSlinky.std.HTMLElement, attr: js.Object, target: typingsSlinky.std.HTMLElement): HTMLElement = js.native
-  def append(node: typingsSlinky.std.HTMLElement, attr: Null, target: String): HTMLElement = js.native
-  def append(node: typingsSlinky.std.HTMLElement, attr: Null, target: typingsSlinky.std.HTMLElement): HTMLElement = js.native
+  def append(node: String, attr: Null, target: HTMLElement): HTMLElement = js.native
+  def append(node: HTMLElement, attr: js.UndefOr[scala.Nothing], target: String): HTMLElement = js.native
+  def append(node: HTMLElement, attr: js.UndefOr[scala.Nothing], target: HTMLElement): HTMLElement = js.native
+  def append(node: HTMLElement, attr: js.Object, target: String): HTMLElement = js.native
+  def append(node: HTMLElement, attr: js.Object, target: HTMLElement): HTMLElement = js.native
+  def append(node: HTMLElement, attr: Null, target: String): HTMLElement = js.native
+  def append(node: HTMLElement, attr: Null, target: HTMLElement): HTMLElement = js.native
   def args(o: js.Object, args: js.Object): js.Any | `false` = js.native
   def clone[T](obj: T): T = js.native
   def dataToJSON(p: js.Any): js.Any = js.native

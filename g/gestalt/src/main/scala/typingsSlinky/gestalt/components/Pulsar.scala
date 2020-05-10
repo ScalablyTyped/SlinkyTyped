@@ -1,30 +1,28 @@
 package typingsSlinky.gestalt.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.gestalt.mod.PulsarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Pulsar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Pulsar] {
+object Pulsar {
   @JSImport("gestalt", "Pulsar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: size */
-  def apply(paused: js.UndefOr[Boolean] = js.undefined, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Pulsar] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(paused)) __obj.updateDynamic("paused")(paused.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.gestalt.mod.Pulsar] {
+    @scala.inline
+    def paused(value: Boolean): this.type = set("paused", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Pulsar] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.gestalt.mod.Pulsar](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PulsarProps
+  
+  def withProps(p: PulsarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Pulsar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

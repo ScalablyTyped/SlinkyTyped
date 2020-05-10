@@ -30,18 +30,65 @@ trait SchemaGcRule extends js.Object {
 
 object SchemaGcRule {
   @scala.inline
-  def apply(
-    intersection: SchemaIntersection = null,
-    maxAge: String = null,
-    maxNumVersions: Int | Double = null,
-    union: SchemaUnion = null
-  ): SchemaGcRule = {
+  def apply(): SchemaGcRule = {
     val __obj = js.Dynamic.literal()
-    if (intersection != null) __obj.updateDynamic("intersection")(intersection.asInstanceOf[js.Any])
-    if (maxAge != null) __obj.updateDynamic("maxAge")(maxAge.asInstanceOf[js.Any])
-    if (maxNumVersions != null) __obj.updateDynamic("maxNumVersions")(maxNumVersions.asInstanceOf[js.Any])
-    if (union != null) __obj.updateDynamic("union")(union.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGcRule]
   }
+  @scala.inline
+  implicit class SchemaGcRuleOps[Self <: SchemaGcRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIntersection(value: SchemaIntersection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intersection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntersection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intersection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAge(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxNumVersions(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNumVersions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxNumVersions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNumVersions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnion(value: SchemaUnion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("union")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("union")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

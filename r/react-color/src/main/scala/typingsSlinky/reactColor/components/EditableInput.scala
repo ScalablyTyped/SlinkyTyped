@@ -1,10 +1,7 @@
 package typingsSlinky.reactColor.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactColor.editableInputMod.EditableInputProps
 import typingsSlinky.reactColor.editableInputMod.EditableInputStyles
 import typingsSlinky.reactColor.editableInputMod.default
@@ -14,34 +11,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object EditableInput
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object EditableInput {
   @JSImport("react-color/lib/components/common/EditableInput", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: label */
-  def apply(
-    color: Color = null,
-    dragLabel: String = null,
-    dragMax: String = null,
-    onChange: /* color */ ColorResult => Unit = null,
-    style: EditableInputStyles = null,
-    value: js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (dragLabel != null) __obj.updateDynamic("dragLabel")(dragLabel.asInstanceOf[js.Any])
-    if (dragMax != null) __obj.updateDynamic("dragMax")(dragMax.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def color(value: Color): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dragLabel(value: String): this.type = set("dragLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dragMax(value: String): this.type = set("dragMax", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* color */ ColorResult => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def style(value: EditableInputStyles): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactColor.editableInputMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = EditableInputProps
+  
+  def withProps(p: EditableInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: EditableInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

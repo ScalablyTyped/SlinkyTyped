@@ -1,41 +1,70 @@
 package typingsSlinky.mongodb.mod
 
-import typingsSlinky.mongodb.mongodbStrings.majority
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CollectionInsertOneOptions extends CommonOptions {
   //Allow driver to bypass schema validation in MongoDB 3.2 or higher.
-  var bypassDocumentValidation: js.UndefOr[Boolean] = js.undefined
+  var bypassDocumentValidation: js.UndefOr[Boolean] = js.native
   //Force server to assign _id values instead of driver.
-  var forceServerObjectId: js.UndefOr[Boolean] = js.undefined
+  var forceServerObjectId: js.UndefOr[Boolean] = js.native
   /**
     * Serialize functions on any object.
     */
-  var serializeFunctions: js.UndefOr[Boolean] = js.undefined
+  var serializeFunctions: js.UndefOr[Boolean] = js.native
 }
 
 object CollectionInsertOneOptions {
   @scala.inline
-  def apply(
-    bypassDocumentValidation: js.UndefOr[Boolean] = js.undefined,
-    forceServerObjectId: js.UndefOr[Boolean] = js.undefined,
-    j: js.UndefOr[Boolean] = js.undefined,
-    serializeFunctions: js.UndefOr[Boolean] = js.undefined,
-    session: ClientSession = null,
-    w: scala.Double | majority | String = null,
-    wtimeout: Int | scala.Double = null
-  ): CollectionInsertOneOptions = {
+  def apply(): CollectionInsertOneOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bypassDocumentValidation)) __obj.updateDynamic("bypassDocumentValidation")(bypassDocumentValidation.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceServerObjectId)) __obj.updateDynamic("forceServerObjectId")(forceServerObjectId.asInstanceOf[js.Any])
-    if (!js.isUndefined(j)) __obj.updateDynamic("j")(j.asInstanceOf[js.Any])
-    if (!js.isUndefined(serializeFunctions)) __obj.updateDynamic("serializeFunctions")(serializeFunctions.asInstanceOf[js.Any])
-    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
-    if (w != null) __obj.updateDynamic("w")(w.asInstanceOf[js.Any])
-    if (wtimeout != null) __obj.updateDynamic("wtimeout")(wtimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollectionInsertOneOptions]
   }
+  @scala.inline
+  implicit class CollectionInsertOneOptionsOps[Self <: CollectionInsertOneOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBypassDocumentValidation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bypassDocumentValidation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBypassDocumentValidation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bypassDocumentValidation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceServerObjectId(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceServerObjectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceServerObjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceServerObjectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSerializeFunctions(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serializeFunctions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSerializeFunctions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serializeFunctions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait TextAnchor extends js.Object
 
 object TextAnchor {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def end: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.end = "end".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.end]
   @scala.inline
-  def end: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.end = this.cast("end")
+  def middle: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.middle = "middle".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.middle]
   @scala.inline
-  def middle: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.middle = this.cast("middle")
-  @scala.inline
-  def start: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.start = this.cast("start")
+  def start: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.start = "start".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.start]
 }
 

@@ -7,24 +7,80 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ExtraSchemaConfig extends js.Object {
-  var astNode: js.UndefOr[SchemaDefinitionNode | Null] = js.undefined
-  var directives: js.UndefOr[js.Array[GraphQLDirective] | Null] = js.undefined
-  var types: js.UndefOr[js.Array[GraphQLNamedType] | Null] = js.undefined
+  var astNode: js.UndefOr[SchemaDefinitionNode | Null] = js.native
+  var directives: js.UndefOr[js.Array[GraphQLDirective] | Null] = js.native
+  var types: js.UndefOr[js.Array[GraphQLNamedType] | Null] = js.native
 }
 
 object ExtraSchemaConfig {
   @scala.inline
-  def apply(
-    astNode: SchemaDefinitionNode = null,
-    directives: js.Array[GraphQLDirective] = null,
-    types: js.Array[GraphQLNamedType] = null
-  ): ExtraSchemaConfig = {
+  def apply(): ExtraSchemaConfig = {
     val __obj = js.Dynamic.literal()
-    if (astNode != null) __obj.updateDynamic("astNode")(astNode.asInstanceOf[js.Any])
-    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
-    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExtraSchemaConfig]
   }
+  @scala.inline
+  implicit class ExtraSchemaConfigOps[Self <: ExtraSchemaConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAstNode(value: SchemaDefinitionNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("astNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAstNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("astNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAstNodeNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("astNode")(null)
+        ret
+    }
+    @scala.inline
+    def withDirectives(value: js.Array[GraphQLDirective]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directives")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectives: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directives")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectivesNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directives")(null)
+        ret
+    }
+    @scala.inline
+    def withTypes(value: js.Array[GraphQLNamedType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypesNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(null)
+        ret
+    }
+  }
+  
 }
 

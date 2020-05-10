@@ -1,10 +1,8 @@
 package typingsSlinky.reactStripeElements.components
 
 import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactStripeElements.mod.ReactStripeElements.ElementChangeResponse
 import typingsSlinky.reactStripeElements.mod.ReactStripeElements.HTMLStripeElement
 import typingsSlinky.reactStripeElements.mod.ReactStripeElements.PaymentRequestButtonElementProps
@@ -17,54 +15,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PaymentRequestButtonElement
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactStripeElements.mod.PaymentRequestButtonElement] {
+object PaymentRequestButtonElement {
   @JSImport("react-stripe-elements", "PaymentRequestButtonElement")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, id, placeholder */
-  def apply(
-    classes: AnonBase = null,
-    elementRef: /* ref */ js.Any => Unit = null,
-    hideIcon: js.UndefOr[Boolean] = js.undefined,
-    hidePostalCode: js.UndefOr[Boolean] = js.undefined,
-    iconStyle: solid | default = null,
-    onBlur: /* event */ ElementChangeResponse => Unit = null,
-    onChange: /* event */ ElementChangeResponse => Unit = null,
-    onClick: /* event */ js.Any => Unit = null,
-    onFocus: /* event */ ElementChangeResponse => Unit = null,
-    onReady: /* el */ HTMLStripeElement => Unit = null,
-    paymentRequest: StripePaymentRequest = null,
-    placeholderCountry: String = null,
-    style: AnonComplete = null,
-    supportedCountries: js.Array[String] = null,
-    value: String | StringDictionary[String] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactStripeElements.mod.PaymentRequestButtonElement] = {
-    val __obj = js.Dynamic.literal()
-    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
-    if (elementRef != null) __obj.updateDynamic("elementRef")(js.Any.fromFunction1(elementRef))
-    if (!js.isUndefined(hideIcon)) __obj.updateDynamic("hideIcon")(hideIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidePostalCode)) __obj.updateDynamic("hidePostalCode")(hidePostalCode.asInstanceOf[js.Any])
-    if (iconStyle != null) __obj.updateDynamic("iconStyle")(iconStyle.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onReady != null) __obj.updateDynamic("onReady")(js.Any.fromFunction1(onReady))
-    if (paymentRequest != null) __obj.updateDynamic("paymentRequest")(paymentRequest.asInstanceOf[js.Any])
-    if (placeholderCountry != null) __obj.updateDynamic("placeholderCountry")(placeholderCountry.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (supportedCountries != null) __obj.updateDynamic("supportedCountries")(supportedCountries.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactStripeElements.mod.PaymentRequestButtonElement] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def classes(value: AnonBase): this.type = set("classes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def elementRef(value: /* ref */ js.Any => Unit): this.type = set("elementRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def hideIcon(value: Boolean): this.type = set("hideIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hidePostalCode(value: Boolean): this.type = set("hidePostalCode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconStyle(value: solid | default): this.type = set("iconStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBlur(value: /* event */ ElementChangeResponse => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: /* event */ ElementChangeResponse => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClick(value: /* event */ js.Any => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFocus(value: /* event */ ElementChangeResponse => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def onReady(value: /* el */ HTMLStripeElement => Unit): this.type = set("onReady", js.Any.fromFunction1(value))
+    @scala.inline
+    def paymentRequest(value: StripePaymentRequest): this.type = set("paymentRequest", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholderCountry(value: String): this.type = set("placeholderCountry", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: AnonComplete): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def supportedCountries(value: js.Array[String]): this.type = set("supportedCountries", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String | StringDictionary[String]): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactStripeElements.mod.PaymentRequestButtonElement] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactStripeElements.mod.PaymentRequestButtonElement](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PaymentRequestButtonElementProps
+  
+  def withProps(p: PaymentRequestButtonElementProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PaymentRequestButtonElement.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

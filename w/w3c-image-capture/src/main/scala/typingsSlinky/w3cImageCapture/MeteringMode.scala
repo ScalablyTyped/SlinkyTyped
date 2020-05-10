@@ -14,14 +14,12 @@ trait MeteringMode extends js.Object
 
 object MeteringMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def continuous: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.continuous = "continuous".asInstanceOf[typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.continuous]
   @scala.inline
-  def continuous: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.continuous = this.cast("continuous")
+  def manual: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.manual = "manual".asInstanceOf[typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.manual]
   @scala.inline
-  def manual: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.manual = this.cast("manual")
+  def none: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.none = "none".asInstanceOf[typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.none]
   @scala.inline
-  def none: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.none = this.cast("none")
-  @scala.inline
-  def `single-shot`: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.`single-shot` = this.cast("single-shot")
+  def `single-shot`: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.`single-shot` = "single-shot".asInstanceOf[typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.`single-shot`]
 }
 

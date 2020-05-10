@@ -17,22 +17,89 @@ trait PartialClassNameMapCardHe extends js.Object {
 
 object PartialClassNameMapCardHe {
   @scala.inline
-  def apply(
-    action: String = null,
-    avatar: String = null,
-    content: String = null,
-    root: String = null,
-    subheader: String = null,
-    title: String = null
-  ): PartialClassNameMapCardHe = {
+  def apply(): PartialClassNameMapCardHe = {
     val __obj = js.Dynamic.literal()
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (avatar != null) __obj.updateDynamic("avatar")(avatar.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
-    if (subheader != null) __obj.updateDynamic("subheader")(subheader.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapCardHe]
   }
+  @scala.inline
+  implicit class PartialClassNameMapCardHeOps[Self <: PartialClassNameMapCardHe] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvatar(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvatar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubheader(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subheader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubheader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subheader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,15 +22,47 @@ trait CopyCommand extends js.Object {
 
 object CopyCommand {
   @scala.inline
-  def apply(
-    DataTableName: DataTableName,
-    CopyOptions: CopyOptions = null,
-    DataTableColumns: DataTableColumns = null
-  ): CopyCommand = {
+  def apply(DataTableName: DataTableName): CopyCommand = {
     val __obj = js.Dynamic.literal(DataTableName = DataTableName.asInstanceOf[js.Any])
-    if (CopyOptions != null) __obj.updateDynamic("CopyOptions")(CopyOptions.asInstanceOf[js.Any])
-    if (DataTableColumns != null) __obj.updateDynamic("DataTableColumns")(DataTableColumns.asInstanceOf[js.Any])
     __obj.asInstanceOf[CopyCommand]
   }
+  @scala.inline
+  implicit class CopyCommandOps[Self <: CopyCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataTableName(value: DataTableName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataTableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCopyOptions(value: CopyOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCopyOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataTableColumns(value: DataTableColumns): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataTableColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataTableColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataTableColumns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

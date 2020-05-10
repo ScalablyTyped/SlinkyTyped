@@ -26,26 +26,113 @@ trait SchemaGooglePrivacyDlpV2Value extends js.Object {
 
 object SchemaGooglePrivacyDlpV2Value {
   @scala.inline
-  def apply(
-    booleanValue: js.UndefOr[Boolean] = js.undefined,
-    dateValue: SchemaGoogleTypeDate = null,
-    dayOfWeekValue: String = null,
-    floatValue: Int | Double = null,
-    integerValue: String = null,
-    stringValue: String = null,
-    timeValue: SchemaGoogleTypeTimeOfDay = null,
-    timestampValue: String = null
-  ): SchemaGooglePrivacyDlpV2Value = {
+  def apply(): SchemaGooglePrivacyDlpV2Value = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(booleanValue)) __obj.updateDynamic("booleanValue")(booleanValue.asInstanceOf[js.Any])
-    if (dateValue != null) __obj.updateDynamic("dateValue")(dateValue.asInstanceOf[js.Any])
-    if (dayOfWeekValue != null) __obj.updateDynamic("dayOfWeekValue")(dayOfWeekValue.asInstanceOf[js.Any])
-    if (floatValue != null) __obj.updateDynamic("floatValue")(floatValue.asInstanceOf[js.Any])
-    if (integerValue != null) __obj.updateDynamic("integerValue")(integerValue.asInstanceOf[js.Any])
-    if (stringValue != null) __obj.updateDynamic("stringValue")(stringValue.asInstanceOf[js.Any])
-    if (timeValue != null) __obj.updateDynamic("timeValue")(timeValue.asInstanceOf[js.Any])
-    if (timestampValue != null) __obj.updateDynamic("timestampValue")(timestampValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2Value]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2ValueOps[Self <: SchemaGooglePrivacyDlpV2Value] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBooleanValue(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBooleanValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateValue(value: SchemaGoogleTypeDate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDayOfWeekValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayOfWeekValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDayOfWeekValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayOfWeekValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloatValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloatValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntegerValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integerValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntegerValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integerValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStringValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStringValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeValue(value: SchemaGoogleTypeTimeOfDay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestampValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestampValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

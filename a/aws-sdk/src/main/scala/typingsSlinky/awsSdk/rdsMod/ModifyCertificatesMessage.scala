@@ -18,14 +18,41 @@ trait ModifyCertificatesMessage extends js.Object {
 
 object ModifyCertificatesMessage {
   @scala.inline
-  def apply(
-    CertificateIdentifier: String = null,
-    RemoveCustomerOverride: js.UndefOr[scala.Boolean] = js.undefined
-  ): ModifyCertificatesMessage = {
+  def apply(): ModifyCertificatesMessage = {
     val __obj = js.Dynamic.literal()
-    if (CertificateIdentifier != null) __obj.updateDynamic("CertificateIdentifier")(CertificateIdentifier.asInstanceOf[js.Any])
-    if (!js.isUndefined(RemoveCustomerOverride)) __obj.updateDynamic("RemoveCustomerOverride")(RemoveCustomerOverride.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyCertificatesMessage]
   }
+  @scala.inline
+  implicit class ModifyCertificatesMessageOps[Self <: ModifyCertificatesMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveCustomerOverride(value: BooleanOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveCustomerOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveCustomerOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveCustomerOverride")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

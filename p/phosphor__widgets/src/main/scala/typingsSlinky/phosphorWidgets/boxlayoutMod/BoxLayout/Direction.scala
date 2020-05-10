@@ -17,14 +17,12 @@ trait Direction extends js.Object
 
 object Direction {
   @scala.inline
-  def `bottom-to-top`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`bottom-to-top` = this.cast("bottom-to-top")
+  def `bottom-to-top`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`bottom-to-top` = "bottom-to-top".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`bottom-to-top`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `left-to-right`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`left-to-right` = "left-to-right".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`left-to-right`]
   @scala.inline
-  def `left-to-right`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`left-to-right` = this.cast("left-to-right")
+  def `right-to-left`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`right-to-left` = "right-to-left".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`right-to-left`]
   @scala.inline
-  def `right-to-left`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`right-to-left` = this.cast("right-to-left")
-  @scala.inline
-  def `top-to-bottom`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`top-to-bottom` = this.cast("top-to-bottom")
+  def `top-to-bottom`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`top-to-bottom` = "top-to-bottom".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`top-to-bottom`]
 }
 

@@ -1,41 +1,35 @@
 package typingsSlinky.storybookComponents.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.storybookComponents.sourceMod.SourceError
 import typingsSlinky.storybookComponents.sourceMod.SourceProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Source
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Source {
   @JSImport("@storybook/components", "Source")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    code: String = null,
-    dark: js.UndefOr[Boolean] = js.undefined,
-    error: SourceError = null,
-    format: js.UndefOr[Boolean] = js.undefined,
-    language: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
-    if (!js.isUndefined(dark)) __obj.updateDynamic("dark")(dark.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (!js.isUndefined(format)) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def code(value: String): this.type = set("code", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dark(value: Boolean): this.type = set("dark", value.asInstanceOf[js.Any])
+    @scala.inline
+    def error(value: SourceError): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def format(value: Boolean): this.type = set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def language(value: String): this.type = set("language", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SourceProps
+  
+  def withProps(p: SourceProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Source.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.mobx.observablemapMod
 
 import typingsSlinky.mobx.interceptUtilsMod.IInterceptable
-import typingsSlinky.mobx.interceptUtilsMod.IInterceptor
 import typingsSlinky.mobx.listenUtilsMod.IListenable
 import typingsSlinky.mobx.modifiersMod.IEnhancer
 import typingsSlinky.mobx.utilsMod.Lambda
@@ -31,12 +30,10 @@ class ObservableMap[K, V] ()
   @JSName("enhancer")
   var enhancer_Original: IEnhancer[V] = js.native
   var name: String = js.native
-  @JSName(scala.scalajs.js.Symbol.toStringTag)
+  @JSName(js.Symbol.toStringTag)
   var toStringTag_ObservableMap: typingsSlinky.mobx.mobxStrings.Map = js.native
   def enhancer(newValue: V, oldValue: V, name: String): V = js.native
   def enhancer(newValue: V, oldValue: js.UndefOr[scala.Nothing], name: String): V = js.native
-  /* CompleteClass */
-  override def intercept(handler: IInterceptor[IMapWillChange[K, V]]): Lambda = js.native
   def merge(other: js.Any): ObservableMap[K, V] = js.native
   def merge(other: IKeyValueMap[V]): ObservableMap[K, V] = js.native
   /** Merge another object into this object, returns this. */

@@ -12,10 +12,8 @@ trait RendererType extends js.Object
 
 object RendererType {
   @scala.inline
-  def canvas: typingsSlinky.xterm.xtermStrings.canvas = this.cast("canvas")
+  def canvas: typingsSlinky.xterm.xtermStrings.canvas = "canvas".asInstanceOf[typingsSlinky.xterm.xtermStrings.canvas]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def dom: typingsSlinky.xterm.xtermStrings.dom = this.cast("dom")
+  def dom: typingsSlinky.xterm.xtermStrings.dom = "dom".asInstanceOf[typingsSlinky.xterm.xtermStrings.dom]
 }
 

@@ -1,12 +1,11 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.baseuiStrings.auto
 import typingsSlinky.baseui.baseuiStrings.bottom
 import typingsSlinky.baseui.baseuiStrings.bottomLeft
@@ -32,67 +31,78 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Popover
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.popoverMod.Popover] {
+object Popover {
   @JSImport("baseui/popover", "Popover")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, id */
-  def apply(
-    content: TagMod[Any] | js.Function0[TagMod[Any]],
-    isOpen: Boolean,
-    accessibilityType: none | menu | tooltip = null,
-    animateOutTime: Int | Double = null,
-    `data-baseweb`: String = null,
-    focusLock: js.UndefOr[Boolean] = js.undefined,
-    ignoreBoundary: js.UndefOr[Boolean] = js.undefined,
-    mountNode: HTMLElement = null,
-    onBlur: () => _ = null,
-    onClick: /* e */ Event_ => _ = null,
-    onClickOutside: /* event */ MouseEvent => _ = null,
-    onEsc: () => _ = null,
-    onFocus: () => _ = null,
-    onMouseEnter: () => _ = null,
-    onMouseEnterDelay: Int | Double = null,
-    onMouseLeave: () => _ = null,
-    onMouseLeaveDelay: Int | Double = null,
-    overrides: Overrides = null,
-    placement: topLeft | leftBottom | topRight | rightBottom | bottomLeft | right | auto | bottomRight | leftTop | left | bottom | rightTop | top = null,
-    popperOptions: js.Any = null,
-    renderAll: js.UndefOr[Boolean] = js.undefined,
-    returnFocus: js.UndefOr[Boolean] = js.undefined,
-    showArrow: js.UndefOr[Boolean] = js.undefined,
-    triggerType: click | hover = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.baseui.popoverMod.Popover] = {
-    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], isOpen = isOpen.asInstanceOf[js.Any])
-    if (accessibilityType != null) __obj.updateDynamic("accessibilityType")(accessibilityType.asInstanceOf[js.Any])
-    if (animateOutTime != null) __obj.updateDynamic("animateOutTime")(animateOutTime.asInstanceOf[js.Any])
-    if (`data-baseweb` != null) __obj.updateDynamic("data-baseweb")(`data-baseweb`.asInstanceOf[js.Any])
-    if (!js.isUndefined(focusLock)) __obj.updateDynamic("focusLock")(focusLock.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreBoundary)) __obj.updateDynamic("ignoreBoundary")(ignoreBoundary.asInstanceOf[js.Any])
-    if (mountNode != null) __obj.updateDynamic("mountNode")(mountNode.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction0(onBlur))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onClickOutside != null) __obj.updateDynamic("onClickOutside")(js.Any.fromFunction1(onClickOutside))
-    if (onEsc != null) __obj.updateDynamic("onEsc")(js.Any.fromFunction0(onEsc))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction0(onFocus))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction0(onMouseEnter))
-    if (onMouseEnterDelay != null) __obj.updateDynamic("onMouseEnterDelay")(onMouseEnterDelay.asInstanceOf[js.Any])
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction0(onMouseLeave))
-    if (onMouseLeaveDelay != null) __obj.updateDynamic("onMouseLeaveDelay")(onMouseLeaveDelay.asInstanceOf[js.Any])
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (popperOptions != null) __obj.updateDynamic("popperOptions")(popperOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(renderAll)) __obj.updateDynamic("renderAll")(renderAll.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnFocus)) __obj.updateDynamic("returnFocus")(returnFocus.asInstanceOf[js.Any])
-    if (!js.isUndefined(showArrow)) __obj.updateDynamic("showArrow")(showArrow.asInstanceOf[js.Any])
-    if (triggerType != null) __obj.updateDynamic("triggerType")(triggerType.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.popoverMod.Popover] {
+    @scala.inline
+    def accessibilityType(value: none | menu | tooltip): this.type = set("accessibilityType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animateOutTime(value: Double): this.type = set("animateOutTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentFunction0(value: () => TagMod[Any]): this.type = set("content", js.Any.fromFunction0(value))
+    @scala.inline
+    def content(value: TagMod[Any] | js.Function0[TagMod[Any]]): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `data-baseweb`(value: String): this.type = set("data-baseweb", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusLock(value: Boolean): this.type = set("focusLock", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ignoreBoundary(value: Boolean): this.type = set("ignoreBoundary", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mountNode(value: HTMLElement): this.type = set("mountNode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBlur(value: () => _): this.type = set("onBlur", js.Any.fromFunction0(value))
+    @scala.inline
+    def onClick(value: /* e */ Event_ => _): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClickOutside(value: /* event */ MouseEvent => _): this.type = set("onClickOutside", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEsc(value: () => _): this.type = set("onEsc", js.Any.fromFunction0(value))
+    @scala.inline
+    def onFocus(value: () => _): this.type = set("onFocus", js.Any.fromFunction0(value))
+    @scala.inline
+    def onMouseEnter(value: () => _): this.type = set("onMouseEnter", js.Any.fromFunction0(value))
+    @scala.inline
+    def onMouseEnterDelay(value: Double): this.type = set("onMouseEnterDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onMouseLeave(value: () => _): this.type = set("onMouseLeave", js.Any.fromFunction0(value))
+    @scala.inline
+    def onMouseLeaveDelay(value: Double): this.type = set("onMouseLeaveDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overrides(value: Overrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placement(
+      value: topLeft | leftBottom | topRight | rightBottom | bottomLeft | right | auto | bottomRight | leftTop | left | bottom | rightTop | top
+    ): this.type = set("placement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popperOptions(value: js.Any): this.type = set("popperOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderAll(value: Boolean): this.type = set("renderAll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def returnFocus(value: Boolean): this.type = set("returnFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showArrow(value: Boolean): this.type = set("showArrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def triggerType(value: click | hover): this.type = set("triggerType", value.asInstanceOf[js.Any])
   }
-  type Props = PopoverProps
+  
+  def withProps(p: PopoverProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(isOpen: Boolean): Builder = {
+    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PopoverProps]))
+  }
 }
 

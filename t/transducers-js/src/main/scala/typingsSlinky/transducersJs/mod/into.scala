@@ -1,7 +1,6 @@
 package typingsSlinky.transducersJs.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +9,13 @@ import scala.scalajs.js.annotation._
 @js.native
 object into extends js.Object {
   def apply[TInput](empty: String, xf: Transducer[js.Tuple2[String, TInput], String], coll: StringDictionary[TInput]): String = js.native
-  def apply[TInput](empty: String, xf: Transducer[TInput, String], coll: Iterable[TInput]): String = js.native
+  def apply[TInput](empty: String, xf: Transducer[TInput, String], coll: js.Iterable[TInput]): String = js.native
   def apply[TInput, TOutput](
     empty: js.Array[TOutput],
     xf: Transducer[js.Tuple2[String, TInput], TOutput],
     coll: StringDictionary[TInput]
   ): js.Array[TOutput] = js.native
-  def apply[TInput, TOutput](empty: js.Array[TOutput], xf: Transducer[TInput, TOutput], coll: Iterable[TInput]): js.Array[TOutput] = js.native
+  def apply[TInput, TOutput](empty: js.Array[TOutput], xf: Transducer[TInput, TOutput], coll: js.Iterable[TInput]): js.Array[TOutput] = js.native
   def apply[TInput, TOutput](
     empty: StringDictionary[TOutput],
     xf: Transducer[js.Tuple2[String, TInput], js.Tuple2[String, TOutput]],
@@ -25,7 +24,7 @@ object into extends js.Object {
   def apply[TInput, TOutput](
     empty: StringDictionary[TOutput],
     xf: Transducer[TInput, js.Tuple2[String, TOutput]],
-    coll: Iterable[TInput]
+    coll: js.Iterable[TInput]
   ): StringDictionary[TOutput] = js.native
 }
 

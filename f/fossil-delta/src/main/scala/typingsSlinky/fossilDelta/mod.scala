@@ -14,6 +14,6 @@ object mod extends js.Object {
   def apply(origin: ByteArray, delta: js.Array[Double], ops: AnonVerifyChecksum): js.Array[Double] = js.native
   def create(origin: ByteArray, target: ByteArray): js.Array[Double] = js.native
   def outputSize(delta: js.Array[Double]): Double = js.native
-  type ByteArray = js.Array[Double] | scala.scalajs.js.typedarray.Uint8Array | Buffer
+  type ByteArray = js.Array[Double] | js.typedarray.Uint8Array | Buffer
 }
 

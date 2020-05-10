@@ -4,13 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SeriesWordcloudDataOptions extends js.Object {
-  var accessibility: js.UndefOr[SeriesWordcloudDataAccessibilityOptions] = js.undefined
+  var accessibility: js.UndefOr[SeriesWordcloudDataAccessibilityOptions] = js.native
   /**
     * (Highcharts, Gantt) An additional, individual class name for the data
     * point's graphic representation.
     */
-  var className: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Individual color for the point. By default
     * the color is pulled from the global `colors` array.
@@ -18,7 +19,7 @@ trait SeriesWordcloudDataOptions extends js.Object {
     * In styled mode, the `color` option doesn't take effect. Instead, use
     * `colorIndex`.
     */
-  var color: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var color: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts, Gantt) A specific color index to use for the point, so its
     * graphic representations are given the class name `highcharts-color-{n}`.
@@ -26,80 +27,207 @@ trait SeriesWordcloudDataOptions extends js.Object {
     * mode, the color by is set by the `fill` attribute, so the change in class
     * name won't have a visual effect by default.
     */
-  var colorIndex: js.UndefOr[Double] = js.undefined
+  var colorIndex: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Individual data label for each point. The
     * options are the same as the ones for plotOptions.series.dataLabels.
     */
-  var dataLabels: js.UndefOr[DataLabelsOptionsObject | js.Array[DataLabelsOptionsObject]] = js.undefined
+  var dataLabels: js.UndefOr[DataLabelsOptionsObject | js.Array[DataLabelsOptionsObject]] = js.native
   /**
     * (Highcharts) A description of the point to add to the screen reader
     * information about the point.
     */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /**
     * (Highcharts) Point specific options for the draggable-points module.
     * Overrides options on `series.dragDrop`.
     */
-  var dragDrop: js.UndefOr[SeriesWordcloudDataDragDropOptions] = js.undefined
+  var dragDrop: js.UndefOr[SeriesWordcloudDataDragDropOptions] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Individual point events
     */
-  var events: js.UndefOr[SeriesWordcloudDataEventsOptions] = js.undefined
+  var events: js.UndefOr[SeriesWordcloudDataEventsOptions] = js.native
   /**
     * (Highcharts, Highstock, Gantt) An id for the point. This can be used
     * after render time to get a pointer to the point object through
     * `chart.get()`.
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * (Highcharts) The rank for this point's data label in case of collision.
     * If two data labels are about to overlap, only the one with the highest
     * `labelrank` will be drawn.
     */
-  var labelrank: js.UndefOr[Double] = js.undefined
+  var labelrank: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) The name of the point as shown in the legend, tooltip,
     * dataLabels etc.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Whether the data point is selected
     * initially.
     */
-  var selected: js.UndefOr[Boolean] = js.undefined
+  var selected: js.UndefOr[Boolean] = js.native
 }
 
 object SeriesWordcloudDataOptions {
   @scala.inline
-  def apply(
-    accessibility: SeriesWordcloudDataAccessibilityOptions = null,
-    className: String = null,
-    color: ColorString | GradientColorObject | PatternObject = null,
-    colorIndex: Int | Double = null,
-    dataLabels: DataLabelsOptionsObject | js.Array[DataLabelsOptionsObject] = null,
-    description: String = null,
-    dragDrop: SeriesWordcloudDataDragDropOptions = null,
-    events: SeriesWordcloudDataEventsOptions = null,
-    id: String = null,
-    labelrank: Int | Double = null,
-    name: String = null,
-    selected: js.UndefOr[Boolean] = js.undefined
-  ): SeriesWordcloudDataOptions = {
+  def apply(): SeriesWordcloudDataOptions = {
     val __obj = js.Dynamic.literal()
-    if (accessibility != null) __obj.updateDynamic("accessibility")(accessibility.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (colorIndex != null) __obj.updateDynamic("colorIndex")(colorIndex.asInstanceOf[js.Any])
-    if (dataLabels != null) __obj.updateDynamic("dataLabels")(dataLabels.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (dragDrop != null) __obj.updateDynamic("dragDrop")(dragDrop.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (labelrank != null) __obj.updateDynamic("labelrank")(labelrank.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesWordcloudDataOptions]
   }
+  @scala.inline
+  implicit class SeriesWordcloudDataOptionsOps[Self <: SeriesWordcloudDataOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessibility(value: SeriesWordcloudDataAccessibilityOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataLabels(value: DataLabelsOptionsObject | js.Array[DataLabelsOptionsObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDragDrop(value: SeriesWordcloudDataDragDropOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDragDrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDrop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvents(value: SeriesWordcloudDataEventsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelrank(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelrank")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelrank: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelrank")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelected(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

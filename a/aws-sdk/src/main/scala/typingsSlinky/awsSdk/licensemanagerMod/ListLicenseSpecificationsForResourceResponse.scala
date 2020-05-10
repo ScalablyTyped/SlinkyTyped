@@ -18,11 +18,41 @@ trait ListLicenseSpecificationsForResourceResponse extends js.Object {
 
 object ListLicenseSpecificationsForResourceResponse {
   @scala.inline
-  def apply(LicenseSpecifications: LicenseSpecifications = null, NextToken: String = null): ListLicenseSpecificationsForResourceResponse = {
+  def apply(): ListLicenseSpecificationsForResourceResponse = {
     val __obj = js.Dynamic.literal()
-    if (LicenseSpecifications != null) __obj.updateDynamic("LicenseSpecifications")(LicenseSpecifications.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListLicenseSpecificationsForResourceResponse]
   }
+  @scala.inline
+  implicit class ListLicenseSpecificationsForResourceResponseOps[Self <: ListLicenseSpecificationsForResourceResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLicenseSpecifications(value: LicenseSpecifications): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseSpecifications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenseSpecifications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseSpecifications")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

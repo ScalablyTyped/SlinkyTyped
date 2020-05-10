@@ -14,10 +14,29 @@ trait CidrBlock extends js.Object {
 
 object CidrBlock {
   @scala.inline
-  def apply(CidrBlock: String = null): CidrBlock = {
+  def apply(): CidrBlock = {
     val __obj = js.Dynamic.literal()
-    if (CidrBlock != null) __obj.updateDynamic("CidrBlock")(CidrBlock.asInstanceOf[js.Any])
     __obj.asInstanceOf[CidrBlock]
   }
+  @scala.inline
+  implicit class CidrBlockOps[Self <: CidrBlock] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCidrBlock(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCidrBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrBlock")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,5 +1,7 @@
 package typingsSlinky.chartJs.mod
 
+import org.scalajs.dom.raw.CanvasGradient
+import org.scalajs.dom.raw.CanvasPattern
 import typingsSlinky.chartJs.chartJsStrings.auto
 import typingsSlinky.chartJs.chartJsStrings.data
 import typingsSlinky.chartJs.chartJsStrings.labels
@@ -7,107 +9,429 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NestedTickOptions extends js.Object {
-  var autoSkip: js.UndefOr[Boolean] = js.undefined
-  var autoSkipPadding: js.UndefOr[Double] = js.undefined
-  var backdropColor: js.UndefOr[ChartColor] = js.undefined
-  var backdropPaddingX: js.UndefOr[Double] = js.undefined
-  var backdropPaddingY: js.UndefOr[Double] = js.undefined
-  var beginAtZero: js.UndefOr[Boolean] = js.undefined
+  var autoSkip: js.UndefOr[Boolean] = js.native
+  var autoSkipPadding: js.UndefOr[Double] = js.native
+  var backdropColor: js.UndefOr[ChartColor] = js.native
+  var backdropPaddingX: js.UndefOr[Double] = js.native
+  var backdropPaddingY: js.UndefOr[Double] = js.native
+  var beginAtZero: js.UndefOr[Boolean] = js.native
+  /**
+    * If the callback returns null or undefined the associated grid line will be hidden.
+    */
   var callback: js.UndefOr[
-    js.Function3[/* value */ js.Any, /* index */ js.Any, /* values */ js.Any, String | Double]
-  ] = js.undefined
-  var display: js.UndefOr[Boolean] = js.undefined
-  var fontColor: js.UndefOr[ChartColor] = js.undefined
-  var fontFamily: js.UndefOr[String] = js.undefined
-  var fontSize: js.UndefOr[Double] = js.undefined
-  var fontStyle: js.UndefOr[String] = js.undefined
-  var labelOffset: js.UndefOr[Double] = js.undefined
-  var lineHeight: js.UndefOr[Double] = js.undefined
-  var max: js.UndefOr[js.Any] = js.undefined
-  var maxRotation: js.UndefOr[Double] = js.undefined
-  var maxTicksLimit: js.UndefOr[Double] = js.undefined
-  var min: js.UndefOr[js.Any] = js.undefined
-  var minRotation: js.UndefOr[Double] = js.undefined
-  var mirror: js.UndefOr[Boolean] = js.undefined
-  var padding: js.UndefOr[Double] = js.undefined
-  var reverse: js.UndefOr[Boolean] = js.undefined
+    js.Function3[
+      /* value */ Double | String, 
+      /* index */ Double, 
+      /* values */ js.Array[Double | String], 
+      js.UndefOr[String | Double | Null]
+    ]
+  ] = js.native
+  var display: js.UndefOr[Boolean] = js.native
+  var fontColor: js.UndefOr[ChartColor] = js.native
+  var fontFamily: js.UndefOr[String] = js.native
+  var fontSize: js.UndefOr[Double] = js.native
+  var fontStyle: js.UndefOr[String] = js.native
+  var labelOffset: js.UndefOr[Double] = js.native
+  var lineHeight: js.UndefOr[Double] = js.native
+  var max: js.UndefOr[js.Any] = js.native
+  var maxRotation: js.UndefOr[Double] = js.native
+  var maxTicksLimit: js.UndefOr[Double] = js.native
+  var min: js.UndefOr[js.Any] = js.native
+  var minRotation: js.UndefOr[Double] = js.native
+  var mirror: js.UndefOr[Boolean] = js.native
+  var padding: js.UndefOr[Double] = js.native
+  var reverse: js.UndefOr[Boolean] = js.native
   /**
     * The number of ticks to examine when deciding how many labels will fit.
     * Setting a smaller value will be faster, but may be less accurate
     * when there is large variability in label length.
     * Deault: `ticks.length`
     */
-  var sampleSize: js.UndefOr[Double] = js.undefined
-  var showLabelBackdrop: js.UndefOr[Boolean] = js.undefined
-  var source: js.UndefOr[auto | data | labels] = js.undefined
-  var stepSize: js.UndefOr[Double] = js.undefined
-  var suggestedMax: js.UndefOr[Double] = js.undefined
-  var suggestedMin: js.UndefOr[Double] = js.undefined
+  var sampleSize: js.UndefOr[Double] = js.native
+  var showLabelBackdrop: js.UndefOr[Boolean] = js.native
+  var source: js.UndefOr[auto | data | labels] = js.native
+  var stepSize: js.UndefOr[Double] = js.native
+  var suggestedMax: js.UndefOr[Double] = js.native
+  var suggestedMin: js.UndefOr[Double] = js.native
 }
 
 object NestedTickOptions {
   @scala.inline
-  def apply(
-    autoSkip: js.UndefOr[Boolean] = js.undefined,
-    autoSkipPadding: Int | Double = null,
-    backdropColor: ChartColor = null,
-    backdropPaddingX: Int | Double = null,
-    backdropPaddingY: Int | Double = null,
-    beginAtZero: js.UndefOr[Boolean] = js.undefined,
-    callback: (/* value */ js.Any, /* index */ js.Any, /* values */ js.Any) => String | Double = null,
-    display: js.UndefOr[Boolean] = js.undefined,
-    fontColor: ChartColor = null,
-    fontFamily: String = null,
-    fontSize: Int | Double = null,
-    fontStyle: String = null,
-    labelOffset: Int | Double = null,
-    lineHeight: Int | Double = null,
-    max: js.Any = null,
-    maxRotation: Int | Double = null,
-    maxTicksLimit: Int | Double = null,
-    min: js.Any = null,
-    minRotation: Int | Double = null,
-    mirror: js.UndefOr[Boolean] = js.undefined,
-    padding: Int | Double = null,
-    reverse: js.UndefOr[Boolean] = js.undefined,
-    sampleSize: Int | Double = null,
-    showLabelBackdrop: js.UndefOr[Boolean] = js.undefined,
-    source: auto | data | labels = null,
-    stepSize: Int | Double = null,
-    suggestedMax: Int | Double = null,
-    suggestedMin: Int | Double = null
-  ): NestedTickOptions = {
+  def apply(): NestedTickOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoSkip)) __obj.updateDynamic("autoSkip")(autoSkip.asInstanceOf[js.Any])
-    if (autoSkipPadding != null) __obj.updateDynamic("autoSkipPadding")(autoSkipPadding.asInstanceOf[js.Any])
-    if (backdropColor != null) __obj.updateDynamic("backdropColor")(backdropColor.asInstanceOf[js.Any])
-    if (backdropPaddingX != null) __obj.updateDynamic("backdropPaddingX")(backdropPaddingX.asInstanceOf[js.Any])
-    if (backdropPaddingY != null) __obj.updateDynamic("backdropPaddingY")(backdropPaddingY.asInstanceOf[js.Any])
-    if (!js.isUndefined(beginAtZero)) __obj.updateDynamic("beginAtZero")(beginAtZero.asInstanceOf[js.Any])
-    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction3(callback))
-    if (!js.isUndefined(display)) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
-    if (fontColor != null) __obj.updateDynamic("fontColor")(fontColor.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
-    if (fontStyle != null) __obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
-    if (labelOffset != null) __obj.updateDynamic("labelOffset")(labelOffset.asInstanceOf[js.Any])
-    if (lineHeight != null) __obj.updateDynamic("lineHeight")(lineHeight.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maxRotation != null) __obj.updateDynamic("maxRotation")(maxRotation.asInstanceOf[js.Any])
-    if (maxTicksLimit != null) __obj.updateDynamic("maxTicksLimit")(maxTicksLimit.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minRotation != null) __obj.updateDynamic("minRotation")(minRotation.asInstanceOf[js.Any])
-    if (!js.isUndefined(mirror)) __obj.updateDynamic("mirror")(mirror.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.asInstanceOf[js.Any])
-    if (sampleSize != null) __obj.updateDynamic("sampleSize")(sampleSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(showLabelBackdrop)) __obj.updateDynamic("showLabelBackdrop")(showLabelBackdrop.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (stepSize != null) __obj.updateDynamic("stepSize")(stepSize.asInstanceOf[js.Any])
-    if (suggestedMax != null) __obj.updateDynamic("suggestedMax")(suggestedMax.asInstanceOf[js.Any])
-    if (suggestedMin != null) __obj.updateDynamic("suggestedMin")(suggestedMin.asInstanceOf[js.Any])
     __obj.asInstanceOf[NestedTickOptions]
   }
+  @scala.inline
+  implicit class NestedTickOptionsOps[Self <: NestedTickOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoSkip(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSkip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoSkip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSkip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoSkipPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSkipPadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoSkipPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSkipPadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackdropColorCanvasPattern(value: CanvasPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBackdropColorCanvasGradient(value: CanvasGradient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBackdropColor(value: ChartColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackdropColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackdropPaddingX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropPaddingX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackdropPaddingX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropPaddingX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackdropPaddingY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropPaddingY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackdropPaddingY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropPaddingY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeginAtZero(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beginAtZero")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeginAtZero: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beginAtZero")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCallback(
+      value: (/* value */ Double | String, /* index */ Double, /* values */ js.Array[Double | String]) => js.UndefOr[String | Double | Null]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontColorCanvasPattern(value: CanvasPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFontColorCanvasGradient(value: CanvasGradient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFontColor(value: ChartColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxTicksLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTicksLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxTicksLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTicksLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinRotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minRotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinRotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minRotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMirror(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mirror")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMirror: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mirror")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReverse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReverse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowLabelBackdrop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showLabelBackdrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowLabelBackdrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showLabelBackdrop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: auto | data | labels): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStepSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedMax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedMax")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedMin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedMin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedMin")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

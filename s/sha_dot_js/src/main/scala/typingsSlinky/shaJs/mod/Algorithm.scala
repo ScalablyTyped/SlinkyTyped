@@ -16,18 +16,16 @@ trait Algorithm extends js.Object
 
 object Algorithm {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def sha: typingsSlinky.shaJs.shaJsStrings.sha = "sha".asInstanceOf[typingsSlinky.shaJs.shaJsStrings.sha]
   @scala.inline
-  def sha: typingsSlinky.shaJs.shaJsStrings.sha = this.cast("sha")
+  def sha1: typingsSlinky.shaJs.shaJsStrings.sha1 = "sha1".asInstanceOf[typingsSlinky.shaJs.shaJsStrings.sha1]
   @scala.inline
-  def sha1: typingsSlinky.shaJs.shaJsStrings.sha1 = this.cast("sha1")
+  def sha224: typingsSlinky.shaJs.shaJsStrings.sha224 = "sha224".asInstanceOf[typingsSlinky.shaJs.shaJsStrings.sha224]
   @scala.inline
-  def sha224: typingsSlinky.shaJs.shaJsStrings.sha224 = this.cast("sha224")
+  def sha256: typingsSlinky.shaJs.shaJsStrings.sha256 = "sha256".asInstanceOf[typingsSlinky.shaJs.shaJsStrings.sha256]
   @scala.inline
-  def sha256: typingsSlinky.shaJs.shaJsStrings.sha256 = this.cast("sha256")
+  def sha384: typingsSlinky.shaJs.shaJsStrings.sha384 = "sha384".asInstanceOf[typingsSlinky.shaJs.shaJsStrings.sha384]
   @scala.inline
-  def sha384: typingsSlinky.shaJs.shaJsStrings.sha384 = this.cast("sha384")
-  @scala.inline
-  def sha512: typingsSlinky.shaJs.shaJsStrings.sha512 = this.cast("sha512")
+  def sha512: typingsSlinky.shaJs.shaJsStrings.sha512 = "sha512".asInstanceOf[typingsSlinky.shaJs.shaJsStrings.sha512]
 }
 

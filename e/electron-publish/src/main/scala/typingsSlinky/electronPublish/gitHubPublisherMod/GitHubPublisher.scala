@@ -1,7 +1,6 @@
 package typingsSlinky.electronPublish.gitHubPublisherMod
 
 import typingsSlinky.builderUtilRuntime.publishOptionsMod.GithubOptions
-import typingsSlinky.electronPublish.electronPublishStrings.GitHub
 import typingsSlinky.electronPublish.mod.HttpPublisher
 import typingsSlinky.electronPublish.mod.PublishContext
 import typingsSlinky.electronPublish.mod.PublishOptions
@@ -23,8 +22,6 @@ class GitHubPublisher protected () extends HttpPublisher {
   val info: js.Any = js.native
   val options: js.Any = js.native
   var overwriteArtifact: js.Any = js.native
-  @JSName("providerName")
-  val providerName_GitHubPublisher: GitHub = js.native
   var releaseLogFields: js.Any = js.native
   val releaseType: js.Any = js.native
   val tag: js.Any = js.native

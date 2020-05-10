@@ -22,11 +22,41 @@ trait SchemaStoreLayoutPagesListResponse extends js.Object {
 
 object SchemaStoreLayoutPagesListResponse {
   @scala.inline
-  def apply(kind: String = null, page: js.Array[SchemaStorePage] = null): SchemaStoreLayoutPagesListResponse = {
+  def apply(): SchemaStoreLayoutPagesListResponse = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStoreLayoutPagesListResponse]
   }
+  @scala.inline
+  implicit class SchemaStoreLayoutPagesListResponseOps[Self <: SchemaStoreLayoutPagesListResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPage(value: js.Array[SchemaStorePage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

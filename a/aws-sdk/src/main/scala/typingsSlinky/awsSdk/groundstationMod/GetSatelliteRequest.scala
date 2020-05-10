@@ -16,8 +16,21 @@ object GetSatelliteRequest {
   @scala.inline
   def apply(satelliteId: String): GetSatelliteRequest = {
     val __obj = js.Dynamic.literal(satelliteId = satelliteId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetSatelliteRequest]
   }
+  @scala.inline
+  implicit class GetSatelliteRequestOps[Self <: GetSatelliteRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSatelliteId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("satelliteId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

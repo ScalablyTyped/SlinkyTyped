@@ -21,14 +21,12 @@ trait LevelOfControl extends js.Object
 
 object LevelOfControl {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def controllable_by_this_extension: typingsSlinky.chromeApps.chromeAppsStrings.controllable_by_this_extension = "controllable_by_this_extension".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.controllable_by_this_extension]
   @scala.inline
-  def controllable_by_this_extension: typingsSlinky.chromeApps.chromeAppsStrings.controllable_by_this_extension = this.cast("controllable_by_this_extension")
+  def controlled_by_other_extensions: typingsSlinky.chromeApps.chromeAppsStrings.controlled_by_other_extensions = "controlled_by_other_extensions".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.controlled_by_other_extensions]
   @scala.inline
-  def controlled_by_other_extensions: typingsSlinky.chromeApps.chromeAppsStrings.controlled_by_other_extensions = this.cast("controlled_by_other_extensions")
+  def controlled_by_this_extension: typingsSlinky.chromeApps.chromeAppsStrings.controlled_by_this_extension = "controlled_by_this_extension".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.controlled_by_this_extension]
   @scala.inline
-  def controlled_by_this_extension: typingsSlinky.chromeApps.chromeAppsStrings.controlled_by_this_extension = this.cast("controlled_by_this_extension")
-  @scala.inline
-  def not_controllable: typingsSlinky.chromeApps.chromeAppsStrings.not_controllable = this.cast("not_controllable")
+  def not_controllable: typingsSlinky.chromeApps.chromeAppsStrings.not_controllable = "not_controllable".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.not_controllable]
 }
 

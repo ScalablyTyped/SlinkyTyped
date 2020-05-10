@@ -6,16 +6,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonHeaders extends OutputValidation {
-  var headers: SchemaLike
+  var headers: SchemaLike = js.native
 }
 
 object AnonHeaders {
   @scala.inline
-  def apply(headers: SchemaLike = null): AnonHeaders = {
+  def apply(): AnonHeaders = {
     val __obj = js.Dynamic.literal()
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonHeaders]
   }
+  @scala.inline
+  implicit class AnonHeadersOps[Self <: AnonHeaders] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeaders(value: SchemaLike): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeadersNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(null)
+        ret
+    }
+  }
+  
 }
 

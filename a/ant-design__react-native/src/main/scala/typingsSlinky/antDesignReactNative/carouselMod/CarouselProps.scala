@@ -2,21 +2,20 @@ package typingsSlinky.antDesignReactNative.carouselMod
 
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
-import typingsSlinky.antDesignReactNative.carouselStyleMod.CarouselStyle
 import typingsSlinky.reactNative.mod.NativeScrollEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CarouselProps extends CarouselPropsType {
-  var afterChange: js.UndefOr[js.Function1[/* index */ Double, Unit]] = js.undefined
-  var bounces: js.UndefOr[Boolean] = js.undefined
-  var dotActiveStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  var dotStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var afterChange: js.UndefOr[js.Function1[/* index */ Double, Unit]] = js.native
+  var bounces: js.UndefOr[Boolean] = js.native
+  var dotActiveStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var dotStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
   var onMomentumScrollEnd: js.UndefOr[
     js.Function3[
       SyntheticEvent[NodeHandle, NativeScrollEvent], 
@@ -24,7 +23,7 @@ trait CarouselProps extends CarouselPropsType {
       /* carousel */ Carousel, 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   var onScrollBeginDrag: js.UndefOr[
     js.Function3[
       SyntheticEvent[NodeHandle, NativeScrollEvent], 
@@ -32,49 +31,142 @@ trait CarouselProps extends CarouselPropsType {
       /* carousel */ Carousel, 
       Unit
     ]
-  ] = js.undefined
-  var pagination: js.UndefOr[js.Function1[/* props */ PaginationProps, TagMod[Any]]] = js.undefined
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  ] = js.native
+  var pagination: js.UndefOr[js.Function1[/* props */ PaginationProps, TagMod[Any]]] = js.native
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
 }
 
 object CarouselProps {
   @scala.inline
-  def apply(
-    afterChange: /* index */ Double => Unit = null,
-    autoplay: js.UndefOr[Boolean] = js.undefined,
-    autoplayInterval: Int | Double = null,
-    bounces: js.UndefOr[Boolean] = js.undefined,
-    dotActiveStyle: StyleProp[ViewStyle] = null,
-    dotStyle: StyleProp[ViewStyle] = null,
-    dots: js.UndefOr[Boolean] = js.undefined,
-    infinite: js.UndefOr[Boolean] = js.undefined,
-    initialSlideWidth: Int | Double = null,
-    onMomentumScrollEnd: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ CarouselState, /* carousel */ Carousel) => Unit = null,
-    onScrollBeginDrag: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ CarouselState, /* carousel */ Carousel) => Unit = null,
-    pagination: /* props */ PaginationProps => TagMod[Any] = null,
-    selectedIndex: Int | Double = null,
-    style: StyleProp[ViewStyle] = null,
-    styles: Partial[CarouselStyle] = null,
-    vertical: js.UndefOr[Boolean] = js.undefined
-  ): CarouselProps = {
+  def apply(): CarouselProps = {
     val __obj = js.Dynamic.literal()
-    if (afterChange != null) __obj.updateDynamic("afterChange")(js.Any.fromFunction1(afterChange))
-    if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.asInstanceOf[js.Any])
-    if (autoplayInterval != null) __obj.updateDynamic("autoplayInterval")(autoplayInterval.asInstanceOf[js.Any])
-    if (!js.isUndefined(bounces)) __obj.updateDynamic("bounces")(bounces.asInstanceOf[js.Any])
-    if (dotActiveStyle != null) __obj.updateDynamic("dotActiveStyle")(dotActiveStyle.asInstanceOf[js.Any])
-    if (dotStyle != null) __obj.updateDynamic("dotStyle")(dotStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(dots)) __obj.updateDynamic("dots")(dots.asInstanceOf[js.Any])
-    if (!js.isUndefined(infinite)) __obj.updateDynamic("infinite")(infinite.asInstanceOf[js.Any])
-    if (initialSlideWidth != null) __obj.updateDynamic("initialSlideWidth")(initialSlideWidth.asInstanceOf[js.Any])
-    if (onMomentumScrollEnd != null) __obj.updateDynamic("onMomentumScrollEnd")(js.Any.fromFunction3(onMomentumScrollEnd))
-    if (onScrollBeginDrag != null) __obj.updateDynamic("onScrollBeginDrag")(js.Any.fromFunction3(onScrollBeginDrag))
-    if (pagination != null) __obj.updateDynamic("pagination")(js.Any.fromFunction1(pagination))
-    if (selectedIndex != null) __obj.updateDynamic("selectedIndex")(selectedIndex.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
     __obj.asInstanceOf[CarouselProps]
   }
+  @scala.inline
+  implicit class CarouselPropsOps[Self <: CarouselProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfterChange(value: /* index */ Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBounces(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBounces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotActiveStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotActiveStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotActiveStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotActiveStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotActiveStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotActiveStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withDotStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withOnMomentumScrollEnd(
+      value: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ CarouselState, /* carousel */ Carousel) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMomentumScrollEnd")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMomentumScrollEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMomentumScrollEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnScrollBeginDrag(
+      value: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ CarouselState, /* carousel */ Carousel) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onScrollBeginDrag")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnScrollBeginDrag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onScrollBeginDrag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPagination(value: /* props */ PaginationProps => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pagination")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPagination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pagination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
+        ret
+    }
+  }
+  
 }
 

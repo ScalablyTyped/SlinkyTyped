@@ -19,24 +19,22 @@ trait HTTPMethod extends js.Object
 
 object HTTPMethod {
   @scala.inline
-  def CONNECT: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.CONNECT = this.cast("CONNECT")
+  def CONNECT: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.CONNECT = "CONNECT".asInstanceOf[typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.CONNECT]
   @scala.inline
-  def DELETE: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.DELETE = this.cast("DELETE")
+  def DELETE: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.DELETE = "DELETE".asInstanceOf[typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.DELETE]
   @scala.inline
-  def GET: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.GET = this.cast("GET")
+  def GET: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.GET = "GET".asInstanceOf[typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.GET]
   @scala.inline
-  def HEAD: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.HEAD = this.cast("HEAD")
+  def HEAD: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.HEAD = "HEAD".asInstanceOf[typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.HEAD]
   @scala.inline
-  def OPTIONS: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.OPTIONS = this.cast("OPTIONS")
+  def OPTIONS: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.OPTIONS = "OPTIONS".asInstanceOf[typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.OPTIONS]
   @scala.inline
-  def PATCH: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.PATCH = this.cast("PATCH")
+  def PATCH: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.PATCH = "PATCH".asInstanceOf[typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.PATCH]
   @scala.inline
-  def POST: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.POST = this.cast("POST")
+  def POST: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.POST = "POST".asInstanceOf[typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.POST]
   @scala.inline
-  def PUT: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.PUT = this.cast("PUT")
+  def PUT: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.PUT = "PUT".asInstanceOf[typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.PUT]
   @scala.inline
-  def TRACE: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.TRACE = this.cast("TRACE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TRACE: typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.TRACE = "TRACE".asInstanceOf[typingsSlinky.reactNativeViewPdf.reactNativeViewPdfStrings.TRACE]
 }
 

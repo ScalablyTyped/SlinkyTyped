@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation._
 /**
   * MediaListItem...
   */
+@js.native
 trait IMediaListItem extends js.Object {
   /**
     * Relative path to the media file.
@@ -15,7 +16,7 @@ trait IMediaListItem extends js.Object {
     * - in the /content/default/ folder are outside the qvf file.
     * - in the /media/ folder are embedded in the qvf file.
     */
-  var qUrl: String
+  var qUrl: String = js.native
   /**
     * Relative path to the media file.
     * The URL is static.
@@ -24,15 +25,34 @@ trait IMediaListItem extends js.Object {
     * - in the /content/default/ folder are outside the qvf file.
     * - in the /media/ folder are embedded in the qvf file.
     */
-  var qUrlDef: String
+  var qUrlDef: String = js.native
 }
 
 object IMediaListItem {
   @scala.inline
   def apply(qUrl: String, qUrlDef: String): IMediaListItem = {
     val __obj = js.Dynamic.literal(qUrl = qUrl.asInstanceOf[js.Any], qUrlDef = qUrlDef.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IMediaListItem]
   }
+  @scala.inline
+  implicit class IMediaListItemOps[Self <: IMediaListItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQUrlDef(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qUrlDef")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

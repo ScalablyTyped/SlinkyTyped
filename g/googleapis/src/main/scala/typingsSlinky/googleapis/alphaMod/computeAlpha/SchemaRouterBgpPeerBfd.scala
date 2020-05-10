@@ -67,22 +67,89 @@ trait SchemaRouterBgpPeerBfd extends js.Object {
 
 object SchemaRouterBgpPeerBfd {
   @scala.inline
-  def apply(
-    minReceiveInterval: Int | Double = null,
-    minTransmitInterval: Int | Double = null,
-    mode: String = null,
-    multiplier: Int | Double = null,
-    packetMode: String = null,
-    slowTimerInterval: Int | Double = null
-  ): SchemaRouterBgpPeerBfd = {
+  def apply(): SchemaRouterBgpPeerBfd = {
     val __obj = js.Dynamic.literal()
-    if (minReceiveInterval != null) __obj.updateDynamic("minReceiveInterval")(minReceiveInterval.asInstanceOf[js.Any])
-    if (minTransmitInterval != null) __obj.updateDynamic("minTransmitInterval")(minTransmitInterval.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (multiplier != null) __obj.updateDynamic("multiplier")(multiplier.asInstanceOf[js.Any])
-    if (packetMode != null) __obj.updateDynamic("packetMode")(packetMode.asInstanceOf[js.Any])
-    if (slowTimerInterval != null) __obj.updateDynamic("slowTimerInterval")(slowTimerInterval.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRouterBgpPeerBfd]
   }
+  @scala.inline
+  implicit class SchemaRouterBgpPeerBfdOps[Self <: SchemaRouterBgpPeerBfd] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMinReceiveInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minReceiveInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinReceiveInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minReceiveInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinTransmitInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minTransmitInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinTransmitInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minTransmitInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiplier(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiplier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiplier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiplier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPacketMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packetMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPacketMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packetMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlowTimerInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slowTimerInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlowTimerInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slowTimerInterval")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

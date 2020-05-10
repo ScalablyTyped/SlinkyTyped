@@ -30,11 +30,41 @@ trait SchemaSslSettings extends js.Object {
 
 object SchemaSslSettings {
   @scala.inline
-  def apply(certificateId: String = null, isManagedCertificate: js.UndefOr[Boolean] = js.undefined): SchemaSslSettings = {
+  def apply(): SchemaSslSettings = {
     val __obj = js.Dynamic.literal()
-    if (certificateId != null) __obj.updateDynamic("certificateId")(certificateId.asInstanceOf[js.Any])
-    if (!js.isUndefined(isManagedCertificate)) __obj.updateDynamic("isManagedCertificate")(isManagedCertificate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSslSettings]
   }
+  @scala.inline
+  implicit class SchemaSslSettingsOps[Self <: SchemaSslSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsManagedCertificate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isManagedCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsManagedCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isManagedCertificate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

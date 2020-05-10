@@ -12,10 +12,8 @@ trait PaymentIntentDataCaptureMethodOptions extends js.Object
 
 object PaymentIntentDataCaptureMethodOptions {
   @scala.inline
-  def automatic: typingsSlinky.stripe.stripeStrings.automatic = this.cast("automatic")
+  def automatic: typingsSlinky.stripe.stripeStrings.automatic = "automatic".asInstanceOf[typingsSlinky.stripe.stripeStrings.automatic]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def manual: typingsSlinky.stripe.stripeStrings.manual = this.cast("manual")
+  def manual: typingsSlinky.stripe.stripeStrings.manual = "manual".asInstanceOf[typingsSlinky.stripe.stripeStrings.manual]
 }
 

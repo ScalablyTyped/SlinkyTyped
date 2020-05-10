@@ -20,7 +20,7 @@ class HealthCheckRequest () extends Message
 object HealthCheckRequest extends js.Object {
   var extensions: NumberDictionary[ExtensionFieldInfo[Message]] = js.native
   var extensionsBinary: NumberDictionary[ExtensionFieldBinaryInfo[Message]] = js.native
-  def deserializeBinary(bytes: scala.scalajs.js.typedarray.Uint8Array): HealthCheckRequest = js.native
+  def deserializeBinary(bytes: js.typedarray.Uint8Array): HealthCheckRequest = js.native
   def deserializeBinaryFromReader(message: HealthCheckRequest, reader: BinaryReader): HealthCheckRequest = js.native
   def serializeBinaryToWriter(message: HealthCheckRequest, writer: BinaryWriter): Unit = js.native
   def toObject(includeInstance: Boolean, msg: HealthCheckRequest): AsObject = js.native

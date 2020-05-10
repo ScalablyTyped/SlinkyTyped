@@ -1,64 +1,192 @@
 package typingsSlinky.fundamentalReact.multiInputMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.fundamentalReact.AnonImageLabel
+import typingsSlinky.fundamentalReact.AnonText
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MultiInputProps
   extends /* x */ StringDictionary[js.Any] {
-  var buttonProps: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var compact: js.UndefOr[Boolean] = js.undefined
-  var customStyles: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  /* Collection of items to display in the list. */
-  var data: js.Array[String | Double | js.Array[String]]
-  var disableStyles: js.UndefOr[Boolean] = js.undefined
-  var inputProps: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var listProps: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var localizedText: js.UndefOr[AnonImageLabel] = js.undefined
-  /* Localized placeholder text of the input. */
-  var placeHolder: js.UndefOr[String] = js.undefined
-  var popoverProps: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  /* Additional props to be spread to the tags `<div>` element. */
-  var tagProps: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  /* Callback function when a tag is added or removed. Returns array of tags selected. */
-  def onTagsUpdate(tags: js.Array[String]): Unit
+  var buttonProps: js.UndefOr[js.Any] = js.native
+  var className: js.UndefOr[String] = js.native
+  var compact: js.UndefOr[Boolean] = js.native
+  var data: js.Array[_] = js.native
+  var disableStyles: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var inputProps: js.UndefOr[js.Any] = js.native
+  var listProps: js.UndefOr[js.Any] = js.native
+  var onTagsUpdate: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  var placeholder: js.UndefOr[String] = js.native
+  var popoverProps: js.UndefOr[js.Any] = js.native
+  var tagProps: js.UndefOr[js.Any] = js.native
+  var validationState: js.UndefOr[AnonText] = js.native
 }
 
 object MultiInputProps {
   @scala.inline
-  def apply(
-    data: js.Array[String | Double | js.Array[String]],
-    onTagsUpdate: js.Array[String] => Unit,
-    StringDictionary: /* x */ StringDictionary[js.Any] = null,
-    buttonProps: StringDictionary[js.Any] = null,
-    className: String = null,
-    compact: js.UndefOr[Boolean] = js.undefined,
-    customStyles: StringDictionary[js.Any] = null,
-    disableStyles: js.UndefOr[Boolean] = js.undefined,
-    inputProps: StringDictionary[js.Any] = null,
-    listProps: StringDictionary[js.Any] = null,
-    localizedText: AnonImageLabel = null,
-    placeHolder: String = null,
-    popoverProps: StringDictionary[js.Any] = null,
-    tagProps: StringDictionary[js.Any] = null
-  ): MultiInputProps = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], onTagsUpdate = js.Any.fromFunction1(onTagsUpdate))
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (buttonProps != null) __obj.updateDynamic("buttonProps")(buttonProps.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
-    if (customStyles != null) __obj.updateDynamic("customStyles")(customStyles.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableStyles)) __obj.updateDynamic("disableStyles")(disableStyles.asInstanceOf[js.Any])
-    if (inputProps != null) __obj.updateDynamic("inputProps")(inputProps.asInstanceOf[js.Any])
-    if (listProps != null) __obj.updateDynamic("listProps")(listProps.asInstanceOf[js.Any])
-    if (localizedText != null) __obj.updateDynamic("localizedText")(localizedText.asInstanceOf[js.Any])
-    if (placeHolder != null) __obj.updateDynamic("placeHolder")(placeHolder.asInstanceOf[js.Any])
-    if (popoverProps != null) __obj.updateDynamic("popoverProps")(popoverProps.asInstanceOf[js.Any])
-    if (tagProps != null) __obj.updateDynamic("tagProps")(tagProps.asInstanceOf[js.Any])
+  def apply(data: js.Array[_]): MultiInputProps = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.asInstanceOf[MultiInputProps]
   }
+  @scala.inline
+  implicit class MultiInputPropsOps[Self <: MultiInputProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withButtonProps(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtonProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompact(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableStyles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputProps(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListProps(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTagsUpdate(value: /* repeated */ js.Any => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTagsUpdate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTagsUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTagsUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopoverProps(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popoverProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopoverProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popoverProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagProps(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidationState(value: AnonText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidationState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationState")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

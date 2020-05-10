@@ -16,5 +16,6 @@ trait SVGLinearGradientElement extends SVGGradientElement {
 
 @JSGlobal("SVGLinearGradientElement")
 @js.native
-object SVGLinearGradientElement extends Instantiable0[SVGLinearGradientElement]
+object SVGLinearGradientElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGLinearGradientElement]
 

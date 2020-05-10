@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAccuracy extends js.Object {
-  var accuracy: js.UndefOr[Double] = js.undefined
-  var errorMessage: js.UndefOr[String] = js.undefined
-  var latitude: js.UndefOr[Double] = js.undefined
-  var longitude: js.UndefOr[Double] = js.undefined
-  var timestamp: js.UndefOr[Double] = js.undefined
+  var accuracy: js.UndefOr[Double] = js.native
+  var errorMessage: js.UndefOr[String] = js.native
+  var latitude: js.UndefOr[Double] = js.native
+  var longitude: js.UndefOr[Double] = js.native
+  var timestamp: js.UndefOr[Double] = js.native
 }
 
 object AnonAccuracy {
   @scala.inline
-  def apply(
-    accuracy: Int | Double = null,
-    errorMessage: String = null,
-    latitude: Int | Double = null,
-    longitude: Int | Double = null,
-    timestamp: Int | Double = null
-  ): AnonAccuracy = {
+  def apply(): AnonAccuracy = {
     val __obj = js.Dynamic.literal()
-    if (accuracy != null) __obj.updateDynamic("accuracy")(accuracy.asInstanceOf[js.Any])
-    if (errorMessage != null) __obj.updateDynamic("errorMessage")(errorMessage.asInstanceOf[js.Any])
-    if (latitude != null) __obj.updateDynamic("latitude")(latitude.asInstanceOf[js.Any])
-    if (longitude != null) __obj.updateDynamic("longitude")(longitude.asInstanceOf[js.Any])
-    if (timestamp != null) __obj.updateDynamic("timestamp")(timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAccuracy]
   }
+  @scala.inline
+  implicit class AnonAccuracyOps[Self <: AnonAccuracy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccuracy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accuracy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccuracy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accuracy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatitude(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatitude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latitude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLongitude(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLongitude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longitude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

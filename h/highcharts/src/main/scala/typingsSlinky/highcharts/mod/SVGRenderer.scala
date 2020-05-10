@@ -263,10 +263,10 @@ class SVGRenderer protected () extends js.Object {
     */
   def fontMetrics(): FontMetricsObject = js.native
   def fontMetrics(fontSize: String): FontMetricsObject = js.native
-  def fontMetrics(fontSize: String, elem: SVGDOMElement): FontMetricsObject = js.native
+  def fontMetrics(fontSize: String, elem: org.scalajs.dom.raw.SVGElement): FontMetricsObject = js.native
   def fontMetrics(fontSize: String, elem: SVGElement): FontMetricsObject = js.native
   def fontMetrics(fontSize: Double): FontMetricsObject = js.native
-  def fontMetrics(fontSize: Double, elem: SVGDOMElement): FontMetricsObject = js.native
+  def fontMetrics(fontSize: Double, elem: org.scalajs.dom.raw.SVGElement): FontMetricsObject = js.native
   def fontMetrics(fontSize: Double, elem: SVGElement): FontMetricsObject = js.native
   /**
     * Create and return an svg group element. Child Highcharts.SVGElement

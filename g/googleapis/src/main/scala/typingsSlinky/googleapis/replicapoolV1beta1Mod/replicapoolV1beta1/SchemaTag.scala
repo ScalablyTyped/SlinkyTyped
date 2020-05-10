@@ -22,11 +22,41 @@ trait SchemaTag extends js.Object {
 
 object SchemaTag {
   @scala.inline
-  def apply(fingerPrint: String = null, items: js.Array[String] = null): SchemaTag = {
+  def apply(): SchemaTag = {
     val __obj = js.Dynamic.literal()
-    if (fingerPrint != null) __obj.updateDynamic("fingerPrint")(fingerPrint.asInstanceOf[js.Any])
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTag]
   }
+  @scala.inline
+  implicit class SchemaTagOps[Self <: SchemaTag] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFingerPrint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerPrint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFingerPrint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerPrint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItems(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

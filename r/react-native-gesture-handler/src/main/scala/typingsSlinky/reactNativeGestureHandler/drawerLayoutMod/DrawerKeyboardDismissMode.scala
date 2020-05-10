@@ -12,10 +12,8 @@ trait DrawerKeyboardDismissMode extends js.Object
 
 object DrawerKeyboardDismissMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def none: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.none = "none".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.none]
   @scala.inline
-  def none: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.none = this.cast("none")
-  @scala.inline
-  def `on-drag`: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.`on-drag` = this.cast("on-drag")
+  def `on-drag`: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.`on-drag` = "on-drag".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.`on-drag`]
 }
 

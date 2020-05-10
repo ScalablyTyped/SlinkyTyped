@@ -13,12 +13,10 @@ trait Mode extends js.Object
 
 object Mode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disabled: typingsSlinky.videoJs.videoJsStrings.disabled = "disabled".asInstanceOf[typingsSlinky.videoJs.videoJsStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.videoJs.videoJsStrings.disabled = this.cast("disabled")
+  def hidden: typingsSlinky.videoJs.videoJsStrings.hidden = "hidden".asInstanceOf[typingsSlinky.videoJs.videoJsStrings.hidden]
   @scala.inline
-  def hidden: typingsSlinky.videoJs.videoJsStrings.hidden = this.cast("hidden")
-  @scala.inline
-  def showing: typingsSlinky.videoJs.videoJsStrings.showing = this.cast("showing")
+  def showing: typingsSlinky.videoJs.videoJsStrings.showing = "showing".asInstanceOf[typingsSlinky.videoJs.videoJsStrings.showing]
 }
 

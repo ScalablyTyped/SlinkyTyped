@@ -73,14 +73,108 @@ object DescribeCompilationJobResponse {
     ModelArtifacts: ModelArtifacts,
     OutputConfig: OutputConfig,
     RoleArn: RoleArn,
-    StoppingCondition: StoppingCondition,
-    CompilationEndTime: js.Date = null,
-    CompilationStartTime: js.Date = null
+    StoppingCondition: StoppingCondition
   ): DescribeCompilationJobResponse = {
     val __obj = js.Dynamic.literal(CompilationJobArn = CompilationJobArn.asInstanceOf[js.Any], CompilationJobName = CompilationJobName.asInstanceOf[js.Any], CompilationJobStatus = CompilationJobStatus.asInstanceOf[js.Any], CreationTime = CreationTime.asInstanceOf[js.Any], FailureReason = FailureReason.asInstanceOf[js.Any], InputConfig = InputConfig.asInstanceOf[js.Any], LastModifiedTime = LastModifiedTime.asInstanceOf[js.Any], ModelArtifacts = ModelArtifacts.asInstanceOf[js.Any], OutputConfig = OutputConfig.asInstanceOf[js.Any], RoleArn = RoleArn.asInstanceOf[js.Any], StoppingCondition = StoppingCondition.asInstanceOf[js.Any])
-    if (CompilationEndTime != null) __obj.updateDynamic("CompilationEndTime")(CompilationEndTime.asInstanceOf[js.Any])
-    if (CompilationStartTime != null) __obj.updateDynamic("CompilationStartTime")(CompilationStartTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeCompilationJobResponse]
   }
+  @scala.inline
+  implicit class DescribeCompilationJobResponseOps[Self <: DescribeCompilationJobResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompilationJobArn(value: CompilationJobArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompilationJobArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCompilationJobName(value: EntityName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompilationJobName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCompilationJobStatus(value: CompilationJobStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompilationJobStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFailureReason(value: FailureReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputConfig(value: InputConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLastModifiedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModelArtifacts(value: ModelArtifacts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelArtifacts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutputConfig(value: OutputConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: RoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStoppingCondition(value: StoppingCondition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StoppingCondition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCompilationEndTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompilationEndTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompilationEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompilationEndTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompilationStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompilationStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompilationStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompilationStartTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

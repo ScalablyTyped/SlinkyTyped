@@ -31,18 +31,65 @@ trait SchemaEventRecordRequest extends js.Object {
 
 object SchemaEventRecordRequest {
   @scala.inline
-  def apply(
-    currentTimeMillis: String = null,
-    kind: String = null,
-    requestId: String = null,
-    timePeriods: js.Array[SchemaEventPeriodUpdate] = null
-  ): SchemaEventRecordRequest = {
+  def apply(): SchemaEventRecordRequest = {
     val __obj = js.Dynamic.literal()
-    if (currentTimeMillis != null) __obj.updateDynamic("currentTimeMillis")(currentTimeMillis.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (requestId != null) __obj.updateDynamic("requestId")(requestId.asInstanceOf[js.Any])
-    if (timePeriods != null) __obj.updateDynamic("timePeriods")(timePeriods.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEventRecordRequest]
   }
+  @scala.inline
+  implicit class SchemaEventRecordRequestOps[Self <: SchemaEventRecordRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentTimeMillis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTimeMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentTimeMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTimeMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimePeriods(value: js.Array[SchemaEventPeriodUpdate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timePeriods")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimePeriods: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timePeriods")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

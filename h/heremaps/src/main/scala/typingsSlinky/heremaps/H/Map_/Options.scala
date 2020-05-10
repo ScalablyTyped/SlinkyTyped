@@ -26,54 +26,192 @@ import scala.scalajs.js.annotation._
   * @property fixedCenter {boolean=} - Indicates whether the center of the map should remain unchanged if the viewport's size or padding has been changed, default is true
   * @property noWrap {boolean=} - Indicates whether to wrap the world on longitude axes. When set to true, only one world will be rendered. Default is false, multiple worlds are rendered.
   */
+@js.native
 trait Options extends js.Object {
-  var autoColor: js.UndefOr[Boolean] = js.undefined
-  var bounds: js.UndefOr[Rect] = js.undefined
-  var center: js.UndefOr[IPoint] = js.undefined
-  var engineType: js.UndefOr[EngineType] = js.undefined
-  var fixedCenter: js.UndefOr[Boolean] = js.undefined
-  var imprint: js.UndefOr[typingsSlinky.heremaps.H.map.Imprint.Options] = js.undefined
-  var layers: js.UndefOr[js.Array[Layer]] = js.undefined
-  var margin: js.UndefOr[Double] = js.undefined
-  var noWrap: js.UndefOr[Boolean] = js.undefined
-  var padding: js.UndefOr[Padding] = js.undefined
-  var pixelRatio: js.UndefOr[Double] = js.undefined
-  var renderBaseBackground: js.UndefOr[BackgroundRange] = js.undefined
-  var zoom: js.UndefOr[Double] = js.undefined
+  var autoColor: js.UndefOr[Boolean] = js.native
+  var bounds: js.UndefOr[Rect] = js.native
+  var center: js.UndefOr[IPoint] = js.native
+  var engineType: js.UndefOr[EngineType] = js.native
+  var fixedCenter: js.UndefOr[Boolean] = js.native
+  var imprint: js.UndefOr[typingsSlinky.heremaps.H.map.Imprint.Options] = js.native
+  var layers: js.UndefOr[js.Array[Layer]] = js.native
+  var margin: js.UndefOr[Double] = js.native
+  var noWrap: js.UndefOr[Boolean] = js.native
+  var padding: js.UndefOr[Padding] = js.native
+  var pixelRatio: js.UndefOr[Double] = js.native
+  var renderBaseBackground: js.UndefOr[BackgroundRange] = js.native
+  var zoom: js.UndefOr[Double] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    autoColor: js.UndefOr[Boolean] = js.undefined,
-    bounds: Rect = null,
-    center: IPoint = null,
-    engineType: EngineType = null,
-    fixedCenter: js.UndefOr[Boolean] = js.undefined,
-    imprint: typingsSlinky.heremaps.H.map.Imprint.Options = null,
-    layers: js.Array[Layer] = null,
-    margin: Int | Double = null,
-    noWrap: js.UndefOr[Boolean] = js.undefined,
-    padding: Padding = null,
-    pixelRatio: Int | Double = null,
-    renderBaseBackground: BackgroundRange = null,
-    zoom: Int | Double = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoColor)) __obj.updateDynamic("autoColor")(autoColor.asInstanceOf[js.Any])
-    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
-    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (engineType != null) __obj.updateDynamic("engineType")(engineType.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixedCenter)) __obj.updateDynamic("fixedCenter")(fixedCenter.asInstanceOf[js.Any])
-    if (imprint != null) __obj.updateDynamic("imprint")(imprint.asInstanceOf[js.Any])
-    if (layers != null) __obj.updateDynamic("layers")(layers.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (!js.isUndefined(noWrap)) __obj.updateDynamic("noWrap")(noWrap.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (pixelRatio != null) __obj.updateDynamic("pixelRatio")(pixelRatio.asInstanceOf[js.Any])
-    if (renderBaseBackground != null) __obj.updateDynamic("renderBaseBackground")(renderBaseBackground.asInstanceOf[js.Any])
-    if (zoom != null) __obj.updateDynamic("zoom")(zoom.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoColor(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBounds(value: Rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCenter(value: IPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEngineType(value: EngineType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("engineType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngineType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("engineType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedCenter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedCenter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedCenter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImprint(value: typingsSlinky.heremaps.H.map.Imprint.Options): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imprint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImprint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imprint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayers(value: js.Array[Layer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoWrap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noWrap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoWrap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noWrap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: Padding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPixelRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPixelRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderBaseBackground(value: BackgroundRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBaseBackground")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenderBaseBackground: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBaseBackground")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

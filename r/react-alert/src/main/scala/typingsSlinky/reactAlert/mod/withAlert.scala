@@ -15,11 +15,11 @@ import scala.scalajs.js.annotation._
 object withAlert extends js.Object {
   def apply[P /* <: AnonAlert */](): js.Function1[
     /* c */ ReactComponentClass[P], 
-    ReactComponentClass[Pick[P, Exclude[String, alert]]]
+    ReactComponentClass[Pick[P, Exclude[/* keyof P */ String, alert]]]
   ] = js.native
   def apply[P /* <: AnonAlert */](context: Context[js.UndefOr[AlertManager]]): js.Function1[
     /* c */ ReactComponentClass[P], 
-    ReactComponentClass[Pick[P, Exclude[String, alert]]]
+    ReactComponentClass[Pick[P, Exclude[/* keyof P */ String, alert]]]
   ] = js.native
 }
 

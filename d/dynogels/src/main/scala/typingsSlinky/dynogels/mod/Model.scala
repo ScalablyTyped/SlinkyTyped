@@ -6,7 +6,6 @@ import typingsSlinky.awsSdk.dynamodbMod.CreateTableOutput
 import typingsSlinky.awsSdk.dynamodbMod.DescribeTableOutput
 import typingsSlinky.awsSdk.dynamodbMod.UpdateTableOutput
 import typingsSlinky.dynogels.AnonName
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +16,7 @@ trait Model
   def after(action: LifeCycleAction, listner: js.Function1[/* item */ Item, Unit]): Unit = js.native
   def batchGetItems(
     items: js.Array[String | StringDictionary[String]],
-    callback: js.Function2[/* err */ Error, /* items */ js.Array[_], Unit]
+    callback: js.Function2[/* err */ js.Error, /* items */ js.Array[_], Unit]
   ): Unit = js.native
   def batchGetItems(
     items: js.Array[String | StringDictionary[String]],
@@ -35,7 +34,7 @@ trait Model
   def config(config: ModelConfig): AnonName = js.native
   def create(item: js.Any, callback: DynogelsItemCallback): Unit = js.native
   def create(item: js.Any, options: CreateItemOptions, callback: DynogelsItemCallback): Unit = js.native
-  def createTable(callback: js.Function2[/* err */ Error, /* data */ CreateTableOutput, Unit]): Unit = js.native
+  def createTable(callback: js.Function2[/* err */ js.Error, /* data */ CreateTableOutput, Unit]): Unit = js.native
   def createTable(
     options: CreateTablesOptions,
     callback: js.Function2[/* err */ js.Error, /* data */ CreateTableOutput, Unit]
@@ -52,7 +51,7 @@ trait Model
   def get(haskKey: js.Any, options: GetItemOptions, callback: DynogelsItemCallback): Unit = js.native
   def getItems(
     items: js.Array[String | StringDictionary[String]],
-    callback: js.Function2[/* err */ Error, /* items */ js.Array[_], Unit]
+    callback: js.Function2[/* err */ js.Error, /* items */ js.Array[_], Unit]
   ): Unit = js.native
   def getItems(
     items: js.Array[String | StringDictionary[String]],
@@ -65,7 +64,7 @@ trait Model
   def tableName(): String = js.native
   def update(item: js.Any, callback: DynogelsItemCallback): Unit = js.native
   def update(item: js.Any, options: UpdateItemOptions, callback: DynogelsItemCallback): Unit = js.native
-  def updateTable(callback: js.Function2[/* err */ Error, /* data */ UpdateTableOutput, Unit]): Unit = js.native
+  def updateTable(callback: js.Function2[/* err */ js.Error, /* data */ UpdateTableOutput, Unit]): Unit = js.native
   def updateTable(
     throughput: Throughput,
     callback: js.Function2[/* err */ js.Error, /* data */ UpdateTableOutput, Unit]

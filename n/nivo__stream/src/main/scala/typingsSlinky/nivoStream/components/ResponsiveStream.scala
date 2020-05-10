@@ -1,9 +1,8 @@
 package typingsSlinky.nivoStream.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoAxes.mod.AxisProps
 import typingsSlinky.nivoColors.mod.InheritedColorProp
 import typingsSlinky.nivoColors.mod.OrdinalColorsInstruction
@@ -17,6 +16,7 @@ import typingsSlinky.nivoCore.mod.Theme
 import typingsSlinky.nivoLegends.mod.LegendProps
 import typingsSlinky.nivoScales.mod.Scale
 import typingsSlinky.nivoStream.Anon0
+import typingsSlinky.nivoStream.mod.Datum
 import typingsSlinky.nivoStream.mod.DatumToNumber
 import typingsSlinky.nivoStream.mod.StreamProps
 import typingsSlinky.nivoStream.mod.TooltipFormatter
@@ -27,94 +27,106 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ResponsiveStream
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.nivoStream.mod.ResponsiveStream[js.Any]] {
+object ResponsiveStream {
   @JSImport("@nivo/stream", "ResponsiveStream")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[T](
-    data: js.Array[T],
-    keys: js.Array[String],
-    animate: js.UndefOr[Boolean] = js.undefined,
-    axisBottom: AxisProps = null,
-    axisLeft: AxisProps = null,
-    axisRight: AxisProps = null,
-    axisTop: AxisProps = null,
-    borderColor: InheritedColorProp[_] = null,
-    borderWidth: Int | Double = null,
-    colors: OrdinalColorsInstruction[_] = null,
-    curve: AreaCurve = null,
-    defs: js.Array[AnonDictkey] = null,
-    dotBorderColor: InheritedColorProp[_] = null,
-    dotBorderWidth: DatumToNumber | Double = null,
-    dotColor: InheritedColorProp[_] = null,
-    dotPosition: start | center | end = null,
-    dotSize: DatumToNumber | Double = null,
-    enableDots: js.UndefOr[Boolean] = js.undefined,
-    enableGridX: js.UndefOr[Boolean] = js.undefined,
-    enableGridY: js.UndefOr[Boolean] = js.undefined,
-    enableStackTooltip: js.UndefOr[Boolean] = js.undefined,
-    fill: js.Array[AnonId[T]] = null,
-    fillOpacity: Int | Double = null,
-    isInteractive: js.UndefOr[Boolean] = js.undefined,
-    legends: js.Array[LegendProps] = null,
-    margin: Box = null,
-    motionDamping: Int | Double = null,
-    motionStiffness: Int | Double = null,
-    offsetType: StackOffset = null,
-    order: StackOrder = null,
-    renderDot: typingsSlinky.nivoStream.mod.StreamDotsItem = null,
-    stack: /* data */ js.Array[T] => js.Array[js.Array[Anon0[T]]] = null,
-    theme: Theme = null,
-    tooltipFormat: TooltipFormatter[T] | String = null,
-    tooltipLabel: T => String = null,
-    xScale: Scale = null,
-    yScale: Scale = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.nivoStream.mod.ResponsiveStream[js.Any]] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], keys = keys.asInstanceOf[js.Any])
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (axisBottom != null) __obj.updateDynamic("axisBottom")(axisBottom.asInstanceOf[js.Any])
-    if (axisLeft != null) __obj.updateDynamic("axisLeft")(axisLeft.asInstanceOf[js.Any])
-    if (axisRight != null) __obj.updateDynamic("axisRight")(axisRight.asInstanceOf[js.Any])
-    if (axisTop != null) __obj.updateDynamic("axisTop")(axisTop.asInstanceOf[js.Any])
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (curve != null) __obj.updateDynamic("curve")(curve.asInstanceOf[js.Any])
-    if (defs != null) __obj.updateDynamic("defs")(defs.asInstanceOf[js.Any])
-    if (dotBorderColor != null) __obj.updateDynamic("dotBorderColor")(dotBorderColor.asInstanceOf[js.Any])
-    if (dotBorderWidth != null) __obj.updateDynamic("dotBorderWidth")(dotBorderWidth.asInstanceOf[js.Any])
-    if (dotColor != null) __obj.updateDynamic("dotColor")(dotColor.asInstanceOf[js.Any])
-    if (dotPosition != null) __obj.updateDynamic("dotPosition")(dotPosition.asInstanceOf[js.Any])
-    if (dotSize != null) __obj.updateDynamic("dotSize")(dotSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableDots)) __obj.updateDynamic("enableDots")(enableDots.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableGridX)) __obj.updateDynamic("enableGridX")(enableGridX.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableGridY)) __obj.updateDynamic("enableGridY")(enableGridY.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableStackTooltip)) __obj.updateDynamic("enableStackTooltip")(enableStackTooltip.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInteractive)) __obj.updateDynamic("isInteractive")(isInteractive.asInstanceOf[js.Any])
-    if (legends != null) __obj.updateDynamic("legends")(legends.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (motionDamping != null) __obj.updateDynamic("motionDamping")(motionDamping.asInstanceOf[js.Any])
-    if (motionStiffness != null) __obj.updateDynamic("motionStiffness")(motionStiffness.asInstanceOf[js.Any])
-    if (offsetType != null) __obj.updateDynamic("offsetType")(offsetType.asInstanceOf[js.Any])
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
-    if (renderDot != null) __obj.updateDynamic("renderDot")(renderDot.asInstanceOf[js.Any])
-    if (stack != null) __obj.updateDynamic("stack")(js.Any.fromFunction1(stack))
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (tooltipFormat != null) __obj.updateDynamic("tooltipFormat")(tooltipFormat.asInstanceOf[js.Any])
-    if (tooltipLabel != null) __obj.updateDynamic("tooltipLabel")(js.Any.fromFunction1(tooltipLabel))
-    if (xScale != null) __obj.updateDynamic("xScale")(xScale.asInstanceOf[js.Any])
-    if (yScale != null) __obj.updateDynamic("yScale")(yScale.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.nivoStream.mod.ResponsiveStream[js.Any]]]
+  @scala.inline
+  class Builder[T] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.nivoStream.mod.ResponsiveStream[js.Any]] {
+    @scala.inline
+    def animate(value: Boolean): this.type = set("animate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisBottom(value: AxisProps): this.type = set("axisBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisLeft(value: AxisProps): this.type = set("axisLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisRight(value: AxisProps): this.type = set("axisRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisTop(value: AxisProps): this.type = set("axisTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderColorFunction1(value: _ => String): this.type = set("borderColor", js.Any.fromFunction1(value))
+    @scala.inline
+    def borderColor(value: InheritedColorProp[_]): this.type = set("borderColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderWidth(value: Double): this.type = set("borderWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorsFunction1(value: _ => String): this.type = set("colors", js.Any.fromFunction1(value))
+    @scala.inline
+    def colors(value: OrdinalColorsInstruction[_]): this.type = set("colors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def curve(value: AreaCurve): this.type = set("curve", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defs(value: js.Array[AnonDictkey]): this.type = set("defs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dotBorderColorFunction1(value: _ => String): this.type = set("dotBorderColor", js.Any.fromFunction1(value))
+    @scala.inline
+    def dotBorderColor(value: InheritedColorProp[_]): this.type = set("dotBorderColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dotBorderWidthFunction1(value: /* datum */ Datum => Double): this.type = set("dotBorderWidth", js.Any.fromFunction1(value))
+    @scala.inline
+    def dotBorderWidth(value: DatumToNumber | Double): this.type = set("dotBorderWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dotColorFunction1(value: _ => String): this.type = set("dotColor", js.Any.fromFunction1(value))
+    @scala.inline
+    def dotColor(value: InheritedColorProp[_]): this.type = set("dotColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dotPosition(value: start | center | end): this.type = set("dotPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dotSizeFunction1(value: /* datum */ Datum => Double): this.type = set("dotSize", js.Any.fromFunction1(value))
+    @scala.inline
+    def dotSize(value: DatumToNumber | Double): this.type = set("dotSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableDots(value: Boolean): this.type = set("enableDots", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableGridX(value: Boolean): this.type = set("enableGridX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableGridY(value: Boolean): this.type = set("enableGridY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableStackTooltip(value: Boolean): this.type = set("enableStackTooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fill(value: js.Array[AnonId[T]]): this.type = set("fill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fillOpacity(value: Double): this.type = set("fillOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isInteractive(value: Boolean): this.type = set("isInteractive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def legends(value: js.Array[LegendProps]): this.type = set("legends", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: Box): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def motionDamping(value: Double): this.type = set("motionDamping", value.asInstanceOf[js.Any])
+    @scala.inline
+    def motionStiffness(value: Double): this.type = set("motionStiffness", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offsetType(value: StackOffset): this.type = set("offsetType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def order(value: StackOrder): this.type = set("order", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderDot(value: typingsSlinky.nivoStream.mod.StreamDotsItem): this.type = set("renderDot", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stack(value: /* data */ js.Array[T] => js.Array[js.Array[Anon0[T]]]): this.type = set("stack", js.Any.fromFunction1(value))
+    @scala.inline
+    def theme(value: Theme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipFormatFunction1(value: T => TagMod[Any]): this.type = set("tooltipFormat", js.Any.fromFunction1(value))
+    @scala.inline
+    def tooltipFormat(value: TooltipFormatter[T] | String): this.type = set("tooltipFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipLabel(value: T => String): this.type = set("tooltipLabel", js.Any.fromFunction1(value))
+    @scala.inline
+    def xScale(value: Scale): this.type = set("xScale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yScale(value: Scale): this.type = set("yScale", value.asInstanceOf[js.Any])
   }
-  type Props = StreamProps[js.Any]
+  
+  def withProps[T](p: StreamProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](data: js.Array[T], keys: js.Array[String]): Builder[T] = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], keys = keys.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[StreamProps[T]]))
+  }
 }
 

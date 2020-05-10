@@ -23,11 +23,9 @@ object SearchResult {
     origin: LngLat,
     routes: js.Array[DriveRoute],
     start: Poi,
-    waypoints: js.Array[PoiisWaypointboolean],
-    taxi_cost: Int | Double = null
+    waypoints: js.Array[PoiisWaypointboolean]
   ): SearchResult = {
     val __obj = js.Dynamic.literal(destination = destination.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], info = info.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], routes = routes.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], waypoints = waypoints.asInstanceOf[js.Any])
-    if (taxi_cost != null) __obj.updateDynamic("taxi_cost")(taxi_cost.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchResult]
   }
   @scala.inline
@@ -40,11 +38,9 @@ object SearchResult {
     originName: String,
     routes: js.Array[DriveRoute],
     start: PoiExt,
-    waypoints: js.Array[PoiExt with AnonIsWaypoint],
-    taxi_cost: Int | Double = null
+    waypoints: js.Array[PoiExt with AnonIsWaypoint]
   ): SearchResult = {
     val __obj = js.Dynamic.literal(destination = destination.asInstanceOf[js.Any], destinationName = destinationName.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], info = info.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], originName = originName.asInstanceOf[js.Any], routes = routes.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], waypoints = waypoints.asInstanceOf[js.Any])
-    if (taxi_cost != null) __obj.updateDynamic("taxi_cost")(taxi_cost.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchResult]
   }
 }

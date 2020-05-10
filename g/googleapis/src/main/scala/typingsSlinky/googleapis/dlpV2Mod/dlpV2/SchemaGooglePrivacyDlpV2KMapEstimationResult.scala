@@ -24,10 +24,29 @@ trait SchemaGooglePrivacyDlpV2KMapEstimationResult extends js.Object {
 
 object SchemaGooglePrivacyDlpV2KMapEstimationResult {
   @scala.inline
-  def apply(kMapEstimationHistogram: js.Array[SchemaGooglePrivacyDlpV2KMapEstimationHistogramBucket] = null): SchemaGooglePrivacyDlpV2KMapEstimationResult = {
+  def apply(): SchemaGooglePrivacyDlpV2KMapEstimationResult = {
     val __obj = js.Dynamic.literal()
-    if (kMapEstimationHistogram != null) __obj.updateDynamic("kMapEstimationHistogram")(kMapEstimationHistogram.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2KMapEstimationResult]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2KMapEstimationResultOps[Self <: SchemaGooglePrivacyDlpV2KMapEstimationResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKMapEstimationHistogram(value: js.Array[SchemaGooglePrivacyDlpV2KMapEstimationHistogramBucket]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kMapEstimationHistogram")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKMapEstimationHistogram: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kMapEstimationHistogram")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

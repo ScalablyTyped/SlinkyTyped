@@ -6,12 +6,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Memory extends js.Object {
-  var creeps: StringDictionary[CreepMemory]
-  var flags: StringDictionary[FlagMemory]
-  var powerCreeps: StringDictionary[PowerCreepMemory]
-  var rooms: StringDictionary[RoomMemory]
-  var spawns: StringDictionary[SpawnMemory]
+  var creeps: StringDictionary[CreepMemory] = js.native
+  var flags: StringDictionary[FlagMemory] = js.native
+  var powerCreeps: StringDictionary[PowerCreepMemory] = js.native
+  var rooms: StringDictionary[RoomMemory] = js.native
+  var spawns: StringDictionary[SpawnMemory] = js.native
 }
 
 @JSGlobal("Memory")

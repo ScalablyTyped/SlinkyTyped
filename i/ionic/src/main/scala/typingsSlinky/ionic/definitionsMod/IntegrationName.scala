@@ -13,12 +13,10 @@ trait IntegrationName extends js.Object
 
 object IntegrationName {
   @scala.inline
-  def capacitor: typingsSlinky.ionic.ionicStrings.capacitor = this.cast("capacitor")
+  def capacitor: typingsSlinky.ionic.ionicStrings.capacitor = "capacitor".asInstanceOf[typingsSlinky.ionic.ionicStrings.capacitor]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cordova: typingsSlinky.ionic.ionicStrings.cordova = "cordova".asInstanceOf[typingsSlinky.ionic.ionicStrings.cordova]
   @scala.inline
-  def cordova: typingsSlinky.ionic.ionicStrings.cordova = this.cast("cordova")
-  @scala.inline
-  def enterprise: typingsSlinky.ionic.ionicStrings.enterprise = this.cast("enterprise")
+  def enterprise: typingsSlinky.ionic.ionicStrings.enterprise = "enterprise".asInstanceOf[typingsSlinky.ionic.ionicStrings.enterprise]
 }
 

@@ -10,21 +10,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBaseColorSet extends js.Object {
-  var baseColorSet: js.UndefOr[simpleSet | indicatingSet | gradientSet] = js.undefined
-  var paletteExtensionMode: js.UndefOr[alternate | blend | extrapolate] = js.undefined
+  var baseColorSet: js.UndefOr[simpleSet | indicatingSet | gradientSet] = js.native
+  var paletteExtensionMode: js.UndefOr[alternate | blend | extrapolate] = js.native
 }
 
 object AnonBaseColorSet {
   @scala.inline
-  def apply(
-    baseColorSet: simpleSet | indicatingSet | gradientSet = null,
-    paletteExtensionMode: alternate | blend | extrapolate = null
-  ): AnonBaseColorSet = {
+  def apply(): AnonBaseColorSet = {
     val __obj = js.Dynamic.literal()
-    if (baseColorSet != null) __obj.updateDynamic("baseColorSet")(baseColorSet.asInstanceOf[js.Any])
-    if (paletteExtensionMode != null) __obj.updateDynamic("paletteExtensionMode")(paletteExtensionMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBaseColorSet]
   }
+  @scala.inline
+  implicit class AnonBaseColorSetOps[Self <: AnonBaseColorSet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBaseColorSet(value: simpleSet | indicatingSet | gradientSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseColorSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseColorSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseColorSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaletteExtensionMode(value: alternate | blend | extrapolate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paletteExtensionMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaletteExtensionMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paletteExtensionMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

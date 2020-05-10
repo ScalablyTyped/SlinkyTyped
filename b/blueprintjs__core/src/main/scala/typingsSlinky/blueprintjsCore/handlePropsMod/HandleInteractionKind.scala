@@ -7,6 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/* Inlined {  LOCK  :'lock',   PUSH  :'push',   NONE  :'none'}[keyof {  LOCK  :'lock',   PUSH  :'push',   NONE  :'none'}] */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.lock
   - typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.push

@@ -19,11 +19,36 @@ trait ProjectSourceAuth extends js.Object {
 
 object ProjectSourceAuth {
   @scala.inline
-  def apply(`type`: Input[String], resource: Input[String] = null): ProjectSourceAuth = {
+  def apply(`type`: Input[String]): ProjectSourceAuth = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectSourceAuth]
   }
+  @scala.inline
+  implicit class ProjectSourceAuthOps[Self <: ProjectSourceAuth] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResource(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

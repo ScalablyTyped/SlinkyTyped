@@ -5,25 +5,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AlternativePlaceId extends js.Object {
   /**
     * The most likely reason for a place to have an alternative place ID is if your application adds a place and receives
     * an application-scoped place ID, then later receives a Google-scoped place ID after passing the moderation process.
     */
-  var place_id: String
+  var place_id: String = js.native
   /**
     * The scope of an alternative place ID will always be `APP`,
     * indicating that the alternative place ID is recognised by your application only.
     */
-  var scope: APP
+  var scope: APP = js.native
 }
 
 object AlternativePlaceId {
   @scala.inline
   def apply(place_id: String, scope: APP): AlternativePlaceId = {
     val __obj = js.Dynamic.literal(place_id = place_id.asInstanceOf[js.Any], scope = scope.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AlternativePlaceId]
   }
+  @scala.inline
+  implicit class AlternativePlaceIdOps[Self <: AlternativePlaceId] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPlace_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("place_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScope(value: APP): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

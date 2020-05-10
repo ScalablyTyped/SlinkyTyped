@@ -1,11 +1,8 @@
 package typingsSlinky.reactDynamicNumber.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.input.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.reactDynamicNumber.mod.DynamicNumberProps
 import typingsSlinky.reactDynamicNumber.mod.default
@@ -17,38 +14,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactDynamicNumber
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactDynamicNumber {
   @JSImport("react-dynamic-number", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: placeholder */
-  def apply(
-    fraction: Int | Double = null,
-    integer: Int | Double = null,
-    negative: js.UndefOr[Boolean] = js.undefined,
-    onChange: (/* event */ ChangeEvent[HTMLInputElement], /* modelValue */ Double, /* viewValue */ String) => Unit = null,
-    positive: js.UndefOr[Boolean] = js.undefined,
-    separator: Dot | Comma = null,
-    thousand: Boolean | Space = null,
-    value: Double | _empty = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (fraction != null) __obj.updateDynamic("fraction")(fraction.asInstanceOf[js.Any])
-    if (integer != null) __obj.updateDynamic("integer")(integer.asInstanceOf[js.Any])
-    if (!js.isUndefined(negative)) __obj.updateDynamic("negative")(negative.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction3(onChange))
-    if (!js.isUndefined(positive)) __obj.updateDynamic("positive")(positive.asInstanceOf[js.Any])
-    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
-    if (thousand != null) __obj.updateDynamic("thousand")(thousand.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def fraction(value: Double): this.type = set("fraction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def integer(value: Double): this.type = set("integer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def negative(value: Boolean): this.type = set("negative", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(
+      value: (/* event */ ChangeEvent[HTMLInputElement], /* modelValue */ Double, /* viewValue */ String) => Unit
+    ): this.type = set("onChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def positive(value: Boolean): this.type = set("positive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def separator(value: Dot | Comma): this.type = set("separator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def thousand(value: Boolean | Space): this.type = set("thousand", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: Double | _empty): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.input.tag.type, typingsSlinky.reactDynamicNumber.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DynamicNumberProps
+  
+  def withProps(p: DynamicNumberProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactDynamicNumber.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

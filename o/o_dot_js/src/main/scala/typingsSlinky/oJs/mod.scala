@@ -44,8 +44,8 @@ object mod extends js.Object {
   def o(rootUrl: String): typingsSlinky.oJs.ohandlerMod.OHandler = js.native
   def o(rootUrl: String, config: js.Any): typingsSlinky.oJs.ohandlerMod.OHandler = js.native
   def o(rootUrl: String, config: OdataConfig): typingsSlinky.oJs.ohandlerMod.OHandler = js.native
-  def o(rootUrl: typingsSlinky.std.URL): typingsSlinky.oJs.ohandlerMod.OHandler = js.native
-  def o(rootUrl: typingsSlinky.std.URL, config: js.Any): typingsSlinky.oJs.ohandlerMod.OHandler = js.native
-  def o(rootUrl: typingsSlinky.std.URL, config: OdataConfig): typingsSlinky.oJs.ohandlerMod.OHandler = js.native
+  def o(rootUrl: URL): typingsSlinky.oJs.ohandlerMod.OHandler = js.native
+  def o(rootUrl: URL, config: js.Any): typingsSlinky.oJs.ohandlerMod.OHandler = js.native
+  def o(rootUrl: URL, config: OdataConfig): typingsSlinky.oJs.ohandlerMod.OHandler = js.native
 }
 

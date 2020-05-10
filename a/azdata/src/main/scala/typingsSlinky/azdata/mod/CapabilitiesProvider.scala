@@ -5,20 +5,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CapabilitiesProvider extends DataProvider {
-  def getServerCapabilities(client: DataProtocolClientCapabilities): Thenable[DataProtocolServerCapabilities]
+  def getServerCapabilities(client: DataProtocolClientCapabilities): Thenable[DataProtocolServerCapabilities] = js.native
 }
 
 object CapabilitiesProvider {
   @scala.inline
   def apply(
     getServerCapabilities: DataProtocolClientCapabilities => Thenable[DataProtocolServerCapabilities],
-    providerId: String,
-    handle: Int | Double = null
+    providerId: String
   ): CapabilitiesProvider = {
     val __obj = js.Dynamic.literal(getServerCapabilities = js.Any.fromFunction1(getServerCapabilities), providerId = providerId.asInstanceOf[js.Any])
-    if (handle != null) __obj.updateDynamic("handle")(handle.asInstanceOf[js.Any])
     __obj.asInstanceOf[CapabilitiesProvider]
   }
+  @scala.inline
+  implicit class CapabilitiesProviderOps[Self <: CapabilitiesProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetServerCapabilities(value: DataProtocolClientCapabilities => Thenable[DataProtocolServerCapabilities]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getServerCapabilities")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

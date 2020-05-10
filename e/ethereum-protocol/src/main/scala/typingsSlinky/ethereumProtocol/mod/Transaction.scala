@@ -5,18 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Transaction extends js.Object {
-  var blockHash: String | Null
-  var blockNumber: Double | Null
-  var from: String
-  var gas: Double
-  var gasPrice: default
-  var hash: String
-  var input: String
-  var nonce: Double
-  var to: String | Null
-  var transactionIndex: Double | Null
-  var value: default
+  var blockHash: String | Null = js.native
+  var blockNumber: Double | Null = js.native
+  var from: String = js.native
+  var gas: Double = js.native
+  var gasPrice: default = js.native
+  var hash: String = js.native
+  var input: String = js.native
+  var nonce: Double = js.native
+  var to: String | Null = js.native
+  var transactionIndex: Double | Null = js.native
+  var value: default = js.native
 }
 
 object Transaction {
@@ -28,18 +29,108 @@ object Transaction {
     hash: String,
     input: String,
     nonce: Double,
-    value: default,
-    blockHash: String = null,
-    blockNumber: Int | Double = null,
-    to: String = null,
-    transactionIndex: Int | Double = null
+    value: default
   ): Transaction = {
     val __obj = js.Dynamic.literal(from = from.asInstanceOf[js.Any], gas = gas.asInstanceOf[js.Any], gasPrice = gasPrice.asInstanceOf[js.Any], hash = hash.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], nonce = nonce.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    if (blockHash != null) __obj.updateDynamic("blockHash")(blockHash.asInstanceOf[js.Any])
-    if (blockNumber != null) __obj.updateDynamic("blockNumber")(blockNumber.asInstanceOf[js.Any])
-    if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
-    if (transactionIndex != null) __obj.updateDynamic("transactionIndex")(transactionIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[Transaction]
   }
+  @scala.inline
+  implicit class TransactionOps[Self <: Transaction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFrom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGas(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGasPrice(value: default): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gasPrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHash(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInput(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNonce(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: default): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlockHash(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockHash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlockHashNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockHash")(null)
+        ret
+    }
+    @scala.inline
+    def withBlockNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlockNumberNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockNumber")(null)
+        ret
+    }
+    @scala.inline
+    def withTo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(null)
+        ret
+    }
+    @scala.inline
+    def withTransactionIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTransactionIndexNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionIndex")(null)
+        ret
+    }
+  }
+  
 }
 

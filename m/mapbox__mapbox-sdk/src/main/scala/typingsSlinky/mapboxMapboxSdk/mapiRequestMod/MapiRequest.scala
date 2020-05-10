@@ -33,7 +33,7 @@ trait MapiRequest extends js.Object {
   /**
     * A file to send with the request. The browser client accepts Blobs and ArrayBuffers.
     */
-  var file: Blob | scala.scalajs.js.typedarray.ArrayBuffer | String = js.native
+  var file: Blob | js.typedarray.ArrayBuffer | String = js.native
   /**
     * The request's headers.
     */

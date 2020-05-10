@@ -1,10 +1,7 @@
 package typingsSlinky.gatsbyImage.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.gatsbyImage.AnonWasCached
 import typingsSlinky.gatsbyImage.gatsbyImageStrings.`lazy`
 import typingsSlinky.gatsbyImage.gatsbyImageStrings.`scale-down`
@@ -22,66 +19,68 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object WithIEPolyfill
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object WithIEPolyfill {
   @JSImport("gatsby-image/withIEPolyfill", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: alt, draggable, title */
-  def apply(
-    Tag: String = null,
-    backgroundColor: String | Boolean = null,
-    className: String | js.Object = null,
-    critical: js.UndefOr[Boolean] = js.undefined,
-    crossOrigin: String | Boolean = null,
-    durationFadeIn: Int | Double = null,
-    fadeIn: js.UndefOr[Boolean] = js.undefined,
-    fixed: FixedObject | js.Array[FixedObject] = null,
-    fluid: FluidObject | js.Array[FluidObject] = null,
-    imgStyle: js.Object = null,
-    itemProp: String = null,
-    loading: auto | `lazy` | eager = null,
-    objectFit: fill | contain | cover | none | `scale-down` = null,
-    objectPosition: String = null,
-    onError: /* event */ js.Any => Unit = null,
-    onLoad: () => Unit = null,
-    onStartLoad: /* param */ AnonWasCached => Unit = null,
-    placeholderClassName: String = null,
-    placeholderStyle: js.Object = null,
-    resolutions: FixedObject = null,
-    sizes: FluidObject = null,
-    style: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (Tag != null) __obj.updateDynamic("Tag")(Tag.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(critical)) __obj.updateDynamic("critical")(critical.asInstanceOf[js.Any])
-    if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
-    if (durationFadeIn != null) __obj.updateDynamic("durationFadeIn")(durationFadeIn.asInstanceOf[js.Any])
-    if (!js.isUndefined(fadeIn)) __obj.updateDynamic("fadeIn")(fadeIn.asInstanceOf[js.Any])
-    if (fixed != null) __obj.updateDynamic("fixed")(fixed.asInstanceOf[js.Any])
-    if (fluid != null) __obj.updateDynamic("fluid")(fluid.asInstanceOf[js.Any])
-    if (imgStyle != null) __obj.updateDynamic("imgStyle")(imgStyle.asInstanceOf[js.Any])
-    if (itemProp != null) __obj.updateDynamic("itemProp")(itemProp.asInstanceOf[js.Any])
-    if (loading != null) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (objectFit != null) __obj.updateDynamic("objectFit")(objectFit.asInstanceOf[js.Any])
-    if (objectPosition != null) __obj.updateDynamic("objectPosition")(objectPosition.asInstanceOf[js.Any])
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction0(onLoad))
-    if (onStartLoad != null) __obj.updateDynamic("onStartLoad")(js.Any.fromFunction1(onStartLoad))
-    if (placeholderClassName != null) __obj.updateDynamic("placeholderClassName")(placeholderClassName.asInstanceOf[js.Any])
-    if (placeholderStyle != null) __obj.updateDynamic("placeholderStyle")(placeholderStyle.asInstanceOf[js.Any])
-    if (resolutions != null) __obj.updateDynamic("resolutions")(resolutions.asInstanceOf[js.Any])
-    if (sizes != null) __obj.updateDynamic("sizes")(sizes.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def Tag(value: String): this.type = set("Tag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def alt(value: String): this.type = set("alt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundColor(value: String | Boolean): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String | js.Object): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def critical(value: Boolean): this.type = set("critical", value.asInstanceOf[js.Any])
+    @scala.inline
+    def crossOrigin(value: String | Boolean): this.type = set("crossOrigin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def draggable(value: Boolean): this.type = set("draggable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def durationFadeIn(value: Double): this.type = set("durationFadeIn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fadeIn(value: Boolean): this.type = set("fadeIn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fixed(value: FixedObject | js.Array[FixedObject]): this.type = set("fixed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fluid(value: FluidObject | js.Array[FluidObject]): this.type = set("fluid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def imgStyle(value: js.Object): this.type = set("imgStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemProp(value: String): this.type = set("itemProp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loading(value: auto | `lazy` | eager): this.type = set("loading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def objectFit(value: fill | contain | cover | none | `scale-down`): this.type = set("objectFit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def objectPosition(value: String): this.type = set("objectPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onError(value: /* event */ js.Any => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoad(value: () => Unit): this.type = set("onLoad", js.Any.fromFunction0(value))
+    @scala.inline
+    def onStartLoad(value: /* param */ AnonWasCached => Unit): this.type = set("onStartLoad", js.Any.fromFunction1(value))
+    @scala.inline
+    def placeholderClassName(value: String): this.type = set("placeholderClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholderStyle(value: js.Object): this.type = set("placeholderStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resolutions(value: FixedObject): this.type = set("resolutions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sizes(value: FluidObject): this.type = set("sizes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.gatsbyImage.withIEPolyfillMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = GatsbyImageWithIEPolyfillProps
+  
+  def withProps(p: GatsbyImageWithIEPolyfillProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: WithIEPolyfill.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

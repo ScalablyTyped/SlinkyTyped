@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.pulumiAws.pulumiAwsStrings.java8
   - typingsSlinky.pulumiAws.pulumiAwsStrings.java11
   - typingsSlinky.pulumiAws.pulumiAwsStrings.ruby2Dot5
+  - typingsSlinky.pulumiAws.pulumiAwsStrings.ruby2Dot7
   - typingsSlinky.pulumiAws.pulumiAwsStrings.`nodejs4Dot3-edge`
   - typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs4Dot3
   - typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs6Dot10
@@ -29,44 +30,44 @@ trait Runtime extends js.Object
 
 object Runtime {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dotnetcore1Dot0: typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore1Dot0 = "dotnetcore1.0".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore1Dot0]
   @scala.inline
-  def dotnetcore1Dot0: typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore1Dot0 = this.cast("dotnetcore1.0")
+  def dotnetcore2Dot0: typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore2Dot0 = "dotnetcore2.0".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore2Dot0]
   @scala.inline
-  def dotnetcore2Dot0: typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore2Dot0 = this.cast("dotnetcore2.0")
+  def dotnetcore2Dot1: typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore2Dot1 = "dotnetcore2.1".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore2Dot1]
   @scala.inline
-  def dotnetcore2Dot1: typingsSlinky.pulumiAws.pulumiAwsStrings.dotnetcore2Dot1 = this.cast("dotnetcore2.1")
+  def go1Dotx: typingsSlinky.pulumiAws.pulumiAwsStrings.go1Dotx = "go1.x".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.go1Dotx]
   @scala.inline
-  def go1Dotx: typingsSlinky.pulumiAws.pulumiAwsStrings.go1Dotx = this.cast("go1.x")
+  def java11: typingsSlinky.pulumiAws.pulumiAwsStrings.java11 = "java11".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.java11]
   @scala.inline
-  def java11: typingsSlinky.pulumiAws.pulumiAwsStrings.java11 = this.cast("java11")
+  def java8: typingsSlinky.pulumiAws.pulumiAwsStrings.java8 = "java8".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.java8]
   @scala.inline
-  def java8: typingsSlinky.pulumiAws.pulumiAwsStrings.java8 = this.cast("java8")
+  def nodejs: typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs = "nodejs".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs]
   @scala.inline
-  def nodejs: typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs = this.cast("nodejs")
+  def nodejs10Dotx: typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs10Dotx = "nodejs10.x".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs10Dotx]
   @scala.inline
-  def nodejs10Dotx: typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs10Dotx = this.cast("nodejs10.x")
+  def nodejs12Dotx: typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs12Dotx = "nodejs12.x".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs12Dotx]
   @scala.inline
-  def nodejs12Dotx: typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs12Dotx = this.cast("nodejs12.x")
+  def nodejs4Dot3: typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs4Dot3 = "nodejs4.3".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs4Dot3]
   @scala.inline
-  def nodejs4Dot3: typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs4Dot3 = this.cast("nodejs4.3")
+  def `nodejs4Dot3-edge`: typingsSlinky.pulumiAws.pulumiAwsStrings.`nodejs4Dot3-edge` = "nodejs4.3-edge".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.`nodejs4Dot3-edge`]
   @scala.inline
-  def `nodejs4Dot3-edge`: typingsSlinky.pulumiAws.pulumiAwsStrings.`nodejs4Dot3-edge` = this.cast("nodejs4.3-edge")
+  def nodejs6Dot10: typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs6Dot10 = "nodejs6.10".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs6Dot10]
   @scala.inline
-  def nodejs6Dot10: typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs6Dot10 = this.cast("nodejs6.10")
+  def nodejs8Dot10: typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs8Dot10 = "nodejs8.10".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs8Dot10]
   @scala.inline
-  def nodejs8Dot10: typingsSlinky.pulumiAws.pulumiAwsStrings.nodejs8Dot10 = this.cast("nodejs8.10")
+  def provided: typingsSlinky.pulumiAws.pulumiAwsStrings.provided = "provided".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.provided]
   @scala.inline
-  def provided: typingsSlinky.pulumiAws.pulumiAwsStrings.provided = this.cast("provided")
+  def python2Dot7: typingsSlinky.pulumiAws.pulumiAwsStrings.python2Dot7 = "python2.7".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.python2Dot7]
   @scala.inline
-  def python2Dot7: typingsSlinky.pulumiAws.pulumiAwsStrings.python2Dot7 = this.cast("python2.7")
+  def python3Dot6: typingsSlinky.pulumiAws.pulumiAwsStrings.python3Dot6 = "python3.6".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.python3Dot6]
   @scala.inline
-  def python3Dot6: typingsSlinky.pulumiAws.pulumiAwsStrings.python3Dot6 = this.cast("python3.6")
+  def python3Dot7: typingsSlinky.pulumiAws.pulumiAwsStrings.python3Dot7 = "python3.7".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.python3Dot7]
   @scala.inline
-  def python3Dot7: typingsSlinky.pulumiAws.pulumiAwsStrings.python3Dot7 = this.cast("python3.7")
+  def python3Dot8: typingsSlinky.pulumiAws.pulumiAwsStrings.python3Dot8 = "python3.8".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.python3Dot8]
   @scala.inline
-  def python3Dot8: typingsSlinky.pulumiAws.pulumiAwsStrings.python3Dot8 = this.cast("python3.8")
+  def ruby2Dot5: typingsSlinky.pulumiAws.pulumiAwsStrings.ruby2Dot5 = "ruby2.5".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.ruby2Dot5]
   @scala.inline
-  def ruby2Dot5: typingsSlinky.pulumiAws.pulumiAwsStrings.ruby2Dot5 = this.cast("ruby2.5")
+  def ruby2Dot7: typingsSlinky.pulumiAws.pulumiAwsStrings.ruby2Dot7 = "ruby2.7".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.ruby2Dot7]
 }
 

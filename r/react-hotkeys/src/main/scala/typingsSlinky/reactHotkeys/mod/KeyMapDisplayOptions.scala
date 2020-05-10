@@ -4,26 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait KeyMapDisplayOptions extends js.Object {
-  var description: js.UndefOr[String] = js.undefined
-  var group: js.UndefOr[String] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var sequences: js.Array[KeyMapOptions]
+  var description: js.UndefOr[String] = js.native
+  var group: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.native
+  var sequences: js.Array[KeyMapOptions] = js.native
 }
 
 object KeyMapDisplayOptions {
   @scala.inline
-  def apply(
-    sequences: js.Array[KeyMapOptions],
-    description: String = null,
-    group: String = null,
-    name: String = null
-  ): KeyMapDisplayOptions = {
+  def apply(sequences: js.Array[KeyMapOptions]): KeyMapDisplayOptions = {
     val __obj = js.Dynamic.literal(sequences = sequences.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[KeyMapDisplayOptions]
   }
+  @scala.inline
+  implicit class KeyMapDisplayOptionsOps[Self <: KeyMapDisplayOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSequences(value: js.Array[KeyMapOptions]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sequences")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

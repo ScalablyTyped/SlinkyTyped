@@ -25,11 +25,41 @@ trait SchemaGoogleFirestoreAdminV1beta1ImportDocumentsRequest extends js.Object 
 
 object SchemaGoogleFirestoreAdminV1beta1ImportDocumentsRequest {
   @scala.inline
-  def apply(collectionIds: js.Array[String] = null, inputUriPrefix: String = null): SchemaGoogleFirestoreAdminV1beta1ImportDocumentsRequest = {
+  def apply(): SchemaGoogleFirestoreAdminV1beta1ImportDocumentsRequest = {
     val __obj = js.Dynamic.literal()
-    if (collectionIds != null) __obj.updateDynamic("collectionIds")(collectionIds.asInstanceOf[js.Any])
-    if (inputUriPrefix != null) __obj.updateDynamic("inputUriPrefix")(inputUriPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleFirestoreAdminV1beta1ImportDocumentsRequest]
   }
+  @scala.inline
+  implicit class SchemaGoogleFirestoreAdminV1beta1ImportDocumentsRequestOps[Self <: SchemaGoogleFirestoreAdminV1beta1ImportDocumentsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCollectionIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collectionIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollectionIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collectionIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputUriPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputUriPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputUriPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputUriPrefix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

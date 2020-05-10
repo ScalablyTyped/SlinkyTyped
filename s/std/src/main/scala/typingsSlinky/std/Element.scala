@@ -1029,7 +1029,7 @@ trait Element
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenerror(`type`: fullscreenerror, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -1043,7 +1043,7 @@ trait Element
   def removeEventListener_fullscreenerror(
     `type`: fullscreenerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   /**
     * Displays element fullscreen and resolves promise when done.
@@ -1089,5 +1089,6 @@ trait Element
 
 @JSGlobal("Element")
 @js.native
-object Element extends Instantiable0[Element]
+object Element
+  extends Instantiable0[org.scalajs.dom.raw.Element]
 

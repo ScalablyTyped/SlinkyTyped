@@ -9,58 +9,136 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LegendOptions extends js.Object {
   /**
     * Defaults to `false`.
     */
-  var equally: js.UndefOr[Boolean] = js.undefined
+  var equally: js.UndefOr[Boolean] = js.native
   /**
     * Hide legend
     * If true given, all legend will be hidden. If string or array given, only the legend that has the id will be hidden.
     * Defaults to `false`.
     */
-  var hide: js.UndefOr[Boolean | ArrayOrString] = js.undefined
+  var hide: js.UndefOr[Boolean | ArrayOrString] = js.native
   /**
     * Change inset legend attributes. Ignored unless `legend.position` is `"inset"`.
     */
-  var inset: js.UndefOr[AnonAnchor] = js.undefined
-  var item: js.UndefOr[AnonOnclick] = js.undefined
+  var inset: js.UndefOr[AnonAnchor] = js.native
+  var item: js.UndefOr[AnonOnclick] = js.native
   /**
     * Padding between legend elements.
     * Defaults to `0`.
     */
-  var padding: js.UndefOr[Double] = js.undefined
+  var padding: js.UndefOr[Double] = js.native
   /**
     * Change the position of legend.
     */
-  var position: js.UndefOr[bottom | right | inset] = js.undefined
+  var position: js.UndefOr[bottom | right | inset] = js.native
   /**
     * Show or hide legend.
     * Defaults to `true`.
     */
-  var show: js.UndefOr[Boolean] = js.undefined
+  var show: js.UndefOr[Boolean] = js.native
 }
 
 object LegendOptions {
   @scala.inline
-  def apply(
-    equally: js.UndefOr[Boolean] = js.undefined,
-    hide: Boolean | ArrayOrString = null,
-    inset: AnonAnchor = null,
-    item: AnonOnclick = null,
-    padding: Int | Double = null,
-    position: bottom | right | inset = null,
-    show: js.UndefOr[Boolean] = js.undefined
-  ): LegendOptions = {
+  def apply(): LegendOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(equally)) __obj.updateDynamic("equally")(equally.asInstanceOf[js.Any])
-    if (hide != null) __obj.updateDynamic("hide")(hide.asInstanceOf[js.Any])
-    if (inset != null) __obj.updateDynamic("inset")(inset.asInstanceOf[js.Any])
-    if (item != null) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
     __obj.asInstanceOf[LegendOptions]
   }
+  @scala.inline
+  implicit class LegendOptionsOps[Self <: LegendOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEqually(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equally")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEqually: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equally")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHide(value: Boolean | ArrayOrString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInset(value: AnonAnchor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItem(value: AnonOnclick): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: bottom | right | inset): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

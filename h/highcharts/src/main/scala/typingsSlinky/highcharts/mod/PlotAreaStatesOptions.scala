@@ -4,44 +4,92 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotAreaStatesOptions extends js.Object {
   /**
     * (Highcharts, Highstock) Options for the hovered series. These settings
     * override the normal state options when a series is moused over or
     * touched.
     */
-  var hover: js.UndefOr[PlotAreaStatesHoverOptions] = js.undefined
+  var hover: js.UndefOr[PlotAreaStatesHoverOptions] = js.native
   /**
     * (Highcharts, Highstock) The opposite state of a hover for series.
     */
-  var inactive: js.UndefOr[PlotAreaStatesInactiveOptions] = js.undefined
+  var inactive: js.UndefOr[PlotAreaStatesInactiveOptions] = js.native
   /**
     * (Highcharts, Highstock) The normal state of a series, or for point items
     * in column, pie and similar series. Currently only used for setting
     * animation when returning to normal state from hover.
     */
-  var normal: js.UndefOr[PlotAreaStatesNormalOptions] = js.undefined
+  var normal: js.UndefOr[PlotAreaStatesNormalOptions] = js.native
   /**
     * (Highcharts, Highstock) Specific options for point in selected states,
     * after being selected by allowPointSelect or programmatically.
     */
-  var select: js.UndefOr[PlotAreaStatesSelectOptions] = js.undefined
+  var select: js.UndefOr[PlotAreaStatesSelectOptions] = js.native
 }
 
 object PlotAreaStatesOptions {
   @scala.inline
-  def apply(
-    hover: PlotAreaStatesHoverOptions = null,
-    inactive: PlotAreaStatesInactiveOptions = null,
-    normal: PlotAreaStatesNormalOptions = null,
-    select: PlotAreaStatesSelectOptions = null
-  ): PlotAreaStatesOptions = {
+  def apply(): PlotAreaStatesOptions = {
     val __obj = js.Dynamic.literal()
-    if (hover != null) __obj.updateDynamic("hover")(hover.asInstanceOf[js.Any])
-    if (inactive != null) __obj.updateDynamic("inactive")(inactive.asInstanceOf[js.Any])
-    if (normal != null) __obj.updateDynamic("normal")(normal.asInstanceOf[js.Any])
-    if (select != null) __obj.updateDynamic("select")(select.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotAreaStatesOptions]
   }
+  @scala.inline
+  implicit class PlotAreaStatesOptionsOps[Self <: PlotAreaStatesOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHover(value: PlotAreaStatesHoverOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInactive(value: PlotAreaStatesInactiveOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inactive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInactive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inactive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNormal(value: PlotAreaStatesNormalOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNormal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelect(value: PlotAreaStatesSelectOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetBucketObjectsArgs extends js.Object {
   /**
-    * Lists object keys in this S3 bucket
+    * Lists object keys in this S3 bucket. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified
     */
   val bucket: String = js.native
   /**
@@ -38,23 +38,95 @@ trait GetBucketObjectsArgs extends js.Object {
 
 object GetBucketObjectsArgs {
   @scala.inline
-  def apply(
-    bucket: String,
-    delimiter: String = null,
-    encodingType: String = null,
-    fetchOwner: js.UndefOr[Boolean] = js.undefined,
-    maxKeys: Int | Double = null,
-    prefix: String = null,
-    startAfter: String = null
-  ): GetBucketObjectsArgs = {
+  def apply(bucket: String): GetBucketObjectsArgs = {
     val __obj = js.Dynamic.literal(bucket = bucket.asInstanceOf[js.Any])
-    if (delimiter != null) __obj.updateDynamic("delimiter")(delimiter.asInstanceOf[js.Any])
-    if (encodingType != null) __obj.updateDynamic("encodingType")(encodingType.asInstanceOf[js.Any])
-    if (!js.isUndefined(fetchOwner)) __obj.updateDynamic("fetchOwner")(fetchOwner.asInstanceOf[js.Any])
-    if (maxKeys != null) __obj.updateDynamic("maxKeys")(maxKeys.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (startAfter != null) __obj.updateDynamic("startAfter")(startAfter.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetBucketObjectsArgs]
   }
+  @scala.inline
+  implicit class GetBucketObjectsArgsOps[Self <: GetBucketObjectsArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucket(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDelimiter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelimiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncodingType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encodingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncodingType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encodingType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFetchOwner(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchOwner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFetchOwner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchOwner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxKeys(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartAfter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAfter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

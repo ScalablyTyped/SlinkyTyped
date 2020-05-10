@@ -22,15 +22,47 @@ trait ListServerNeighborsResponse extends js.Object {
 
 object ListServerNeighborsResponse {
   @scala.inline
-  def apply(
-    neighbors: NeighborDetailsList,
-    knownDependencyCount: Int | Double = null,
-    nextToken: String = null
-  ): ListServerNeighborsResponse = {
+  def apply(neighbors: NeighborDetailsList): ListServerNeighborsResponse = {
     val __obj = js.Dynamic.literal(neighbors = neighbors.asInstanceOf[js.Any])
-    if (knownDependencyCount != null) __obj.updateDynamic("knownDependencyCount")(knownDependencyCount.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListServerNeighborsResponse]
   }
+  @scala.inline
+  implicit class ListServerNeighborsResponseOps[Self <: ListServerNeighborsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNeighbors(value: NeighborDetailsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("neighbors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKnownDependencyCount(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("knownDependencyCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKnownDependencyCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("knownDependencyCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

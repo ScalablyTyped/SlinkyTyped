@@ -26,16 +26,53 @@ trait SchemaAllocationSpecificSKUReservation extends js.Object {
 
 object SchemaAllocationSpecificSKUReservation {
   @scala.inline
-  def apply(
-    count: String = null,
-    inUseCount: String = null,
-    instanceProperties: SchemaAllocationSpecificSKUAllocationReservedInstanceProperties = null
-  ): SchemaAllocationSpecificSKUReservation = {
+  def apply(): SchemaAllocationSpecificSKUReservation = {
     val __obj = js.Dynamic.literal()
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (inUseCount != null) __obj.updateDynamic("inUseCount")(inUseCount.asInstanceOf[js.Any])
-    if (instanceProperties != null) __obj.updateDynamic("instanceProperties")(instanceProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAllocationSpecificSKUReservation]
   }
+  @scala.inline
+  implicit class SchemaAllocationSpecificSKUReservationOps[Self <: SchemaAllocationSpecificSKUReservation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInUseCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inUseCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInUseCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inUseCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceProperties(value: SchemaAllocationSpecificSKUAllocationReservedInstanceProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceProperties")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

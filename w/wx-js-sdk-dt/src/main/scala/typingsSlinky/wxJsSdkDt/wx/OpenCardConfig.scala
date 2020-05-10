@@ -7,25 +7,30 @@ import scala.scalajs.js.annotation._
 /**
   * 需要打开的卡券列表
   */
+@js.native
 trait OpenCardConfig extends WxBaseRequestConfig {
-  var cardList: js.Array[OpenCardObj]
+  var cardList: js.Array[OpenCardObj] = js.native
 }
 
 object OpenCardConfig {
   @scala.inline
-  def apply(
-    cardList: js.Array[OpenCardObj],
-    cancel: () => Unit = null,
-    complete: /* res */ js.UndefOr[js.Any] => Unit = null,
-    fail: /* error */ js.UndefOr[js.Any] => Unit = null,
-    success: /* res */ js.UndefOr[js.Any] => Unit = null
-  ): OpenCardConfig = {
+  def apply(cardList: js.Array[OpenCardObj]): OpenCardConfig = {
     val __obj = js.Dynamic.literal(cardList = cardList.asInstanceOf[js.Any])
-    if (cancel != null) __obj.updateDynamic("cancel")(js.Any.fromFunction0(cancel))
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
-    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[OpenCardConfig]
   }
+  @scala.inline
+  implicit class OpenCardConfigOps[Self <: OpenCardConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCardList(value: js.Array[OpenCardObj]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cardList")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

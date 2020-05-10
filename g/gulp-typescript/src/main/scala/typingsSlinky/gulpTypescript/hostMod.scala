@@ -19,8 +19,6 @@ object hostMod extends js.Object {
     var typescript: Typeofts = js.native
     @JSName("directoryExists")
     def directoryExists_MHost(path: String): Boolean = js.native
-    /* CompleteClass */
-    override def fileExists(fileName: String): Boolean = js.native
     @JSName("getCurrentDirectory")
     def getCurrentDirectory_MHost(): String = js.native
     @JSName("getDefaultLibLocation")
@@ -42,8 +40,6 @@ object hostMod extends js.Object {
       includes: js.Array[String],
       depth: Double
     ): js.Array[String] = js.native
-    /* CompleteClass */
-    override def readFile(fileName: String): js.UndefOr[String] = js.native
     @JSName("realpath")
     def realpath_MHost(path: String): String = js.native
   }

@@ -23,11 +23,41 @@ trait SchemaCustomErrorRule extends js.Object {
 
 object SchemaCustomErrorRule {
   @scala.inline
-  def apply(isErrorType: js.UndefOr[Boolean] = js.undefined, selector: String = null): SchemaCustomErrorRule = {
+  def apply(): SchemaCustomErrorRule = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(isErrorType)) __obj.updateDynamic("isErrorType")(isErrorType.asInstanceOf[js.Any])
-    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCustomErrorRule]
   }
+  @scala.inline
+  implicit class SchemaCustomErrorRuleOps[Self <: SchemaCustomErrorRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsErrorType(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isErrorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsErrorType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isErrorType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelector(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

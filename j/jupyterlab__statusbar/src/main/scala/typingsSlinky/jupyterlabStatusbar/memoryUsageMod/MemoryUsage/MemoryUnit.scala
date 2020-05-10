@@ -19,18 +19,16 @@ trait MemoryUnit extends js.Object
 
 object MemoryUnit {
   @scala.inline
-  def B: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.B = this.cast("B")
+  def B: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.B = "B".asInstanceOf[typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.B]
   @scala.inline
-  def GB: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.GB = this.cast("GB")
+  def GB: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.GB = "GB".asInstanceOf[typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.GB]
   @scala.inline
-  def KB: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.KB = this.cast("KB")
+  def KB: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.KB = "KB".asInstanceOf[typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.KB]
   @scala.inline
-  def MB: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.MB = this.cast("MB")
+  def MB: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.MB = "MB".asInstanceOf[typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.MB]
   @scala.inline
-  def PB: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.PB = this.cast("PB")
+  def PB: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.PB = "PB".asInstanceOf[typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.PB]
   @scala.inline
-  def TB: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.TB = this.cast("TB")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TB: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.TB = "TB".asInstanceOf[typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.TB]
 }
 

@@ -29,18 +29,65 @@ trait SchemaItemContent extends js.Object {
 
 object SchemaItemContent {
   @scala.inline
-  def apply(
-    contentDataRef: SchemaUploadItemRef = null,
-    contentFormat: String = null,
-    hash: String = null,
-    inlineContent: String = null
-  ): SchemaItemContent = {
+  def apply(): SchemaItemContent = {
     val __obj = js.Dynamic.literal()
-    if (contentDataRef != null) __obj.updateDynamic("contentDataRef")(contentDataRef.asInstanceOf[js.Any])
-    if (contentFormat != null) __obj.updateDynamic("contentFormat")(contentFormat.asInstanceOf[js.Any])
-    if (hash != null) __obj.updateDynamic("hash")(hash.asInstanceOf[js.Any])
-    if (inlineContent != null) __obj.updateDynamic("inlineContent")(inlineContent.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaItemContent]
   }
+  @scala.inline
+  implicit class SchemaItemContentOps[Self <: SchemaItemContent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentDataRef(value: SchemaUploadItemRef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDataRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentDataRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDataRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHash(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlineContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlineContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineContent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

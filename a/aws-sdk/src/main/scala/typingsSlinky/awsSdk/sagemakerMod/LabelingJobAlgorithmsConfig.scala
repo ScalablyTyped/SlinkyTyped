@@ -22,15 +22,47 @@ trait LabelingJobAlgorithmsConfig extends js.Object {
 
 object LabelingJobAlgorithmsConfig {
   @scala.inline
-  def apply(
-    LabelingJobAlgorithmSpecificationArn: LabelingJobAlgorithmSpecificationArn,
-    InitialActiveLearningModelArn: ModelArn = null,
-    LabelingJobResourceConfig: LabelingJobResourceConfig = null
-  ): LabelingJobAlgorithmsConfig = {
+  def apply(LabelingJobAlgorithmSpecificationArn: LabelingJobAlgorithmSpecificationArn): LabelingJobAlgorithmsConfig = {
     val __obj = js.Dynamic.literal(LabelingJobAlgorithmSpecificationArn = LabelingJobAlgorithmSpecificationArn.asInstanceOf[js.Any])
-    if (InitialActiveLearningModelArn != null) __obj.updateDynamic("InitialActiveLearningModelArn")(InitialActiveLearningModelArn.asInstanceOf[js.Any])
-    if (LabelingJobResourceConfig != null) __obj.updateDynamic("LabelingJobResourceConfig")(LabelingJobResourceConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[LabelingJobAlgorithmsConfig]
   }
+  @scala.inline
+  implicit class LabelingJobAlgorithmsConfigOps[Self <: LabelingJobAlgorithmsConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLabelingJobAlgorithmSpecificationArn(value: LabelingJobAlgorithmSpecificationArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobAlgorithmSpecificationArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInitialActiveLearningModelArn(value: ModelArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitialActiveLearningModelArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialActiveLearningModelArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitialActiveLearningModelArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelingJobResourceConfig(value: LabelingJobResourceConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobResourceConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelingJobResourceConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobResourceConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

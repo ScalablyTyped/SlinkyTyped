@@ -7,7 +7,6 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank.R1
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
-import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreNumbers.`30`
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NCDHW
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NCHW
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NDHWC
@@ -26,7 +25,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@tensorflow/tfjs-core/dist/backends/backend_util", JSImport.Namespace)
 @js.native
 object backendUtilMod extends js.Object {
-  val PARALLELIZE_THRESHOLD: `30` = js.native
+  val PARALLELIZE_THRESHOLD: /* 30 */ Double = js.native
   def assertAndGetBroadcastShape(shapeA: js.Array[Double], shapeB: js.Array[Double]): js.Array[Double] = js.native
   def assertAxesAreInnerMostDims(msg: String, axes: js.Array[Double], rank: Double): Unit = js.native
   def assertParamsConsistent(shapes: js.Array[js.Array[Double]], axis: Double): Unit = js.native

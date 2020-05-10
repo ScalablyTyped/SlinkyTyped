@@ -14,10 +14,29 @@ trait ResultSetOptions extends js.Object {
 
 object ResultSetOptions {
   @scala.inline
-  def apply(decimalReturnType: DecimalReturnType = null): ResultSetOptions = {
+  def apply(): ResultSetOptions = {
     val __obj = js.Dynamic.literal()
-    if (decimalReturnType != null) __obj.updateDynamic("decimalReturnType")(decimalReturnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResultSetOptions]
   }
+  @scala.inline
+  implicit class ResultSetOptionsOps[Self <: ResultSetOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDecimalReturnType(value: DecimalReturnType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalReturnType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecimalReturnType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalReturnType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

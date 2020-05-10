@@ -60,16 +60,16 @@ trait TypeofvpnProvider extends js.Object {
   /** Triggered when a configuration created by the extension is removed by the platform. */
   val onConfigRemoved: Event[js.Function1[/* id */ String, Unit]] = js.native
   /** Triggered when an IP packet is received via the tunnel for the VPN session owned by the extension. */
-  val onPacketReceived: Event[js.Function1[/* data */ scala.scalajs.js.typedarray.ArrayBuffer, Unit]] = js.native
+  val onPacketReceived: Event[js.Function1[/* data */ js.typedarray.ArrayBuffer, Unit]] = js.native
   /** Triggered when a message is received from the platform for a VPN configuration owned by the extension. */
   val onPlatformMessage: Event[
     js.Function3[
       /* id */ String, 
       /* message */ ToStringLiteral[
         /* import warning: importer.ImportType#apply Failed type conversion: typeof PlatformMessage */ js.Any, 
-        String, 
+        /* keyof typeof PlatformMessage */ String, 
         Exclude[
-          String, 
+          /* keyof typeof PlatformMessage */ String, 
           /* import warning: importer.ImportType#apply Failed type conversion: typeof PlatformMessage[keyof typeof PlatformMessage] */ js.Any
         ]
       ], 
@@ -85,9 +85,9 @@ trait TypeofvpnProvider extends js.Object {
     js.Function2[
       /* event */ ToStringLiteral[
         /* import warning: importer.ImportType#apply Failed type conversion: typeof UIEvent */ js.Any, 
-        String, 
+        /* keyof typeof UIEvent */ String, 
         Exclude[
-          String, 
+          /* keyof typeof UIEvent */ String, 
           /* import warning: importer.ImportType#apply Failed type conversion: typeof UIEvent[keyof typeof UIEvent] */ js.Any
         ]
       ], 
@@ -120,9 +120,9 @@ trait TypeofvpnProvider extends js.Object {
   def notifyConnectionStateChanged(
     state: ToStringLiteral[
       /* import warning: importer.ImportType#apply Failed type conversion: typeof VpnConnectionState */ js.Any, 
-      String, 
+      /* keyof typeof VpnConnectionState */ String, 
       Exclude[
-        String, 
+        /* keyof typeof VpnConnectionState */ String, 
         /* import warning: importer.ImportType#apply Failed type conversion: typeof VpnConnectionState[keyof typeof VpnConnectionState] */ js.Any
       ]
     ]
@@ -130,9 +130,9 @@ trait TypeofvpnProvider extends js.Object {
   def notifyConnectionStateChanged(
     state: ToStringLiteral[
       /* import warning: importer.ImportType#apply Failed type conversion: typeof VpnConnectionState */ js.Any, 
-      String, 
+      /* keyof typeof VpnConnectionState */ String, 
       Exclude[
-        String, 
+        /* keyof typeof VpnConnectionState */ String, 
         /* import warning: importer.ImportType#apply Failed type conversion: typeof VpnConnectionState[keyof typeof VpnConnectionState] */ js.Any
       ]
     ],
@@ -143,8 +143,8 @@ trait TypeofvpnProvider extends js.Object {
     * @param data The IP packet to be sent to the platform.
     * @param callback Called when the packet is sent or if there is an error.
     */
-  def sendPacket(data: scala.scalajs.js.typedarray.ArrayBuffer): Unit = js.native
-  def sendPacket(data: scala.scalajs.js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
+  def sendPacket(data: js.typedarray.ArrayBuffer): Unit = js.native
+  def sendPacket(data: js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
   /**
     * Sets the parameters for the VPN session. This should be called immediately after 'connected' is received from the platform. This will succeed only when the VPN session is owned by the extension.
     * @param parameters The parameters for the VPN session.

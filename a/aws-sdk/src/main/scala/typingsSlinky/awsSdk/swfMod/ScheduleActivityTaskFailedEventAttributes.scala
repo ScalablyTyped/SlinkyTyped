@@ -33,8 +33,39 @@ object ScheduleActivityTaskFailedEventAttributes {
     decisionTaskCompletedEventId: EventId
   ): ScheduleActivityTaskFailedEventAttributes = {
     val __obj = js.Dynamic.literal(activityId = activityId.asInstanceOf[js.Any], activityType = activityType.asInstanceOf[js.Any], cause = cause.asInstanceOf[js.Any], decisionTaskCompletedEventId = decisionTaskCompletedEventId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ScheduleActivityTaskFailedEventAttributes]
   }
+  @scala.inline
+  implicit class ScheduleActivityTaskFailedEventAttributesOps[Self <: ScheduleActivityTaskFailedEventAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActivityId(value: ActivityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActivityType(value: ActivityType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCause(value: ScheduleActivityTaskFailedCause): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cause")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDecisionTaskCompletedEventId(value: EventId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decisionTaskCompletedEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

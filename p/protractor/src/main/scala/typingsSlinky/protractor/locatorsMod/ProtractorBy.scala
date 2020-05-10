@@ -1,7 +1,6 @@
 package typingsSlinky.protractor.locatorsMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -110,7 +109,7 @@ class ProtractorBy ()
     * @returns {ProtractorLocator} location strategy
     */
   def cssContainingText(cssSelector: String, searchText: String): ProtractorLocator = js.native
-  def cssContainingText(cssSelector: String, searchText: RegExp): ProtractorLocator = js.native
+  def cssContainingText(cssSelector: String, searchText: js.RegExp): ProtractorLocator = js.native
   /**
     * Find an element by css selector within the Shadow DOM.
     *

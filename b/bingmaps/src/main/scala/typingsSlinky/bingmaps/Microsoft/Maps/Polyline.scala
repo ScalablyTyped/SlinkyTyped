@@ -15,12 +15,6 @@ class Polyline protected () extends IPrimitive {
   def this(locations: js.Array[Location]) = this()
   def this(locations: js.Array[Location], options: IPolylineOptions) = this()
   /**
-    * Gets the css cursor value when the primitive has events on it.
-    * @returns css cursor string when primitive has events on it.
-    */
-  /* CompleteClass */
-  override def getCursor(): String = js.native
-  /**
     * Returns whether the polyline is generalizable based on zoom level or not.
     * @returns whether the polyline is generalizable based on zoom level or not.
     */
@@ -46,12 +40,6 @@ class Polyline protected () extends IPrimitive {
     */
   def getStrokeThickness(): Double = js.native
   /**
-    * Gets whether the primitive is visible.
-    * @returns A boolean indicating whether the primitive is visible or not.
-    */
-  /* CompleteClass */
-  override def getVisible(): Boolean = js.native
-  /**
     * Sets locations of the polyline.
     * @param locations A Location[] that defines path of the polyline
     */
@@ -61,11 +49,5 @@ class Polyline protected () extends IPrimitive {
     * @param options The IPolylineOptions object containing the options to customize the polyline.
     */
   def setOptions(options: IPolylineOptions): Unit = js.native
-  /**
-    * Sets the options for customizing the IPrimitive.
-    * @param options The options for customizing the IPrimitive.
-    */
-  /* CompleteClass */
-  override def setOptions(options: IPrimitiveOptions): Unit = js.native
 }
 

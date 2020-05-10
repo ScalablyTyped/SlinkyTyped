@@ -2,66 +2,75 @@ package typingsSlinky.ionicCore.transitionMod
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.animationInterfaceMod.Animation
-import typingsSlinky.ionicCore.mod.FrameworkDelegate
-import typingsSlinky.ionicCore.mod.Mode
-import typingsSlinky.ionicCore.navInterfaceMod.NavDirection
 import typingsSlinky.ionicCore.navInterfaceMod.NavOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TransitionOptions extends NavOptions {
-  var baseEl: js.Any
-  var enteringEl: HTMLElement
-  var leavingEl: js.UndefOr[HTMLElement] = js.undefined
+  var baseEl: js.Any = js.native
+  var enteringEl: HTMLElement = js.native
+  var leavingEl: js.UndefOr[HTMLElement] = js.native
   var progressCallback: js.UndefOr[
     js.Function1[
       /* ani */ js.UndefOr[Animation | typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object TransitionOptions {
   @scala.inline
-  def apply(
-    baseEl: js.Any,
-    enteringEl: HTMLElement,
-    animated: js.UndefOr[Boolean] = js.undefined,
-    animationBuilder: (/* Animation */ typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation] = null,
-    deepWait: js.UndefOr[Boolean] = js.undefined,
-    delegate: FrameworkDelegate = null,
-    direction: NavDirection = null,
-    duration: Int | Double = null,
-    easing: String = null,
-    keyboardClose: js.UndefOr[Boolean] = js.undefined,
-    leavingEl: HTMLElement = null,
-    mode: Mode = null,
-    progressAnimation: js.UndefOr[Boolean] = js.undefined,
-    progressCallback: /* ani */ js.UndefOr[Animation | typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation] => Unit = null,
-    showGoBack: js.UndefOr[Boolean] = js.undefined,
-    skipIfBusy: js.UndefOr[Boolean] = js.undefined,
-    updateURL: js.UndefOr[Boolean] = js.undefined,
-    viewIsReady: /* enteringEl */ HTMLElement => js.Promise[_] = null
-  ): TransitionOptions = {
+  def apply(baseEl: js.Any, enteringEl: HTMLElement): TransitionOptions = {
     val __obj = js.Dynamic.literal(baseEl = baseEl.asInstanceOf[js.Any], enteringEl = enteringEl.asInstanceOf[js.Any])
-    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
-    if (animationBuilder != null) __obj.updateDynamic("animationBuilder")(js.Any.fromFunction3(animationBuilder))
-    if (!js.isUndefined(deepWait)) __obj.updateDynamic("deepWait")(deepWait.asInstanceOf[js.Any])
-    if (delegate != null) __obj.updateDynamic("delegate")(delegate.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
-    if (!js.isUndefined(keyboardClose)) __obj.updateDynamic("keyboardClose")(keyboardClose.asInstanceOf[js.Any])
-    if (leavingEl != null) __obj.updateDynamic("leavingEl")(leavingEl.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (!js.isUndefined(progressAnimation)) __obj.updateDynamic("progressAnimation")(progressAnimation.asInstanceOf[js.Any])
-    if (progressCallback != null) __obj.updateDynamic("progressCallback")(js.Any.fromFunction1(progressCallback))
-    if (!js.isUndefined(showGoBack)) __obj.updateDynamic("showGoBack")(showGoBack.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipIfBusy)) __obj.updateDynamic("skipIfBusy")(skipIfBusy.asInstanceOf[js.Any])
-    if (!js.isUndefined(updateURL)) __obj.updateDynamic("updateURL")(updateURL.asInstanceOf[js.Any])
-    if (viewIsReady != null) __obj.updateDynamic("viewIsReady")(js.Any.fromFunction1(viewIsReady))
     __obj.asInstanceOf[TransitionOptions]
   }
+  @scala.inline
+  implicit class TransitionOptionsOps[Self <: TransitionOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBaseEl(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseEl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnteringEl(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enteringEl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLeavingEl(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leavingEl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeavingEl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leavingEl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressCallback(
+      value: /* ani */ js.UndefOr[Animation | typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation] => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressCallback")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutProgressCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressCallback")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

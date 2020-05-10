@@ -5,34 +5,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PaymentDetails extends ShopifyObject {
-  var avs_result_code: js.UndefOr[String] = js.undefined
-  var credit_card_bin: js.UndefOr[String] = js.undefined
-  var credit_card_company: js.UndefOr[String] = js.undefined
-  var credit_card_number: js.UndefOr[String] = js.undefined
-  var cvv_result_code: js.UndefOr[String] = js.undefined
+  var avs_result_code: js.UndefOr[String] = js.native
+  var credit_card_bin: js.UndefOr[String] = js.native
+  var credit_card_company: js.UndefOr[String] = js.native
+  var credit_card_number: js.UndefOr[String] = js.native
+  var cvv_result_code: js.UndefOr[String] = js.native
 }
 
 object PaymentDetails {
   @scala.inline
-  def apply(
-    admin_graphql_api_id: String = null,
-    avs_result_code: String = null,
-    credit_card_bin: String = null,
-    credit_card_company: String = null,
-    credit_card_number: String = null,
-    cvv_result_code: String = null,
-    id: Int | Double = null
-  ): PaymentDetails = {
+  def apply(): PaymentDetails = {
     val __obj = js.Dynamic.literal()
-    if (admin_graphql_api_id != null) __obj.updateDynamic("admin_graphql_api_id")(admin_graphql_api_id.asInstanceOf[js.Any])
-    if (avs_result_code != null) __obj.updateDynamic("avs_result_code")(avs_result_code.asInstanceOf[js.Any])
-    if (credit_card_bin != null) __obj.updateDynamic("credit_card_bin")(credit_card_bin.asInstanceOf[js.Any])
-    if (credit_card_company != null) __obj.updateDynamic("credit_card_company")(credit_card_company.asInstanceOf[js.Any])
-    if (credit_card_number != null) __obj.updateDynamic("credit_card_number")(credit_card_number.asInstanceOf[js.Any])
-    if (cvv_result_code != null) __obj.updateDynamic("cvv_result_code")(cvv_result_code.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaymentDetails]
   }
+  @scala.inline
+  implicit class PaymentDetailsOps[Self <: PaymentDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvs_result_code(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avs_result_code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvs_result_code: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avs_result_code")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCredit_card_bin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credit_card_bin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCredit_card_bin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credit_card_bin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCredit_card_company(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credit_card_company")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCredit_card_company: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credit_card_company")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCredit_card_number(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credit_card_number")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCredit_card_number: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credit_card_number")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCvv_result_code(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cvv_result_code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCvv_result_code: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cvv_result_code")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

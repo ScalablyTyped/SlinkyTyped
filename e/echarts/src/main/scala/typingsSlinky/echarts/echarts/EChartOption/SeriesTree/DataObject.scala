@@ -8,6 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DataObject extends js.Object {
   /**
     * Whether to enable animation.
@@ -17,7 +18,7 @@ trait DataObject extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-tree.data.animation
     */
-  var animation: js.UndefOr[Boolean] = js.undefined
+  var animation: js.UndefOr[Boolean] = js.native
   /**
     * Delay before updating the first animation, which supports
     * callback function for different data to have different animation
@@ -34,7 +35,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.data.animationDelay
     */
-  var animationDelay: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDelay: js.UndefOr[js.Function | Double] = js.native
   /**
     * Delay before updating animation, which supports callback
     * function for different data to have different animation effect.
@@ -50,7 +51,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.data.animationDelayUpdate
     */
-  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.native
   /**
     * Duration of the first animation, which supports callback
     * function for different data to have different animation effect:
@@ -62,7 +63,7 @@ trait DataObject extends js.Object {
     * 1000
     * @see https://echarts.apache.org/en/option.html#series-tree.data.animationDuration
     */
-  var animationDuration: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDuration: js.UndefOr[js.Function | Double] = js.native
   /**
     * Time for animation to complete, which supports callback function
     * for different data to have different animation effect:
@@ -74,7 +75,7 @@ trait DataObject extends js.Object {
     * 300
     * @see https://echarts.apache.org/en/option.html#series-tree.data.animationDurationUpdate
     */
-  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.native
   /**
     * Easing method used for the first animation.
     * Varied easing effects can be found at
@@ -86,7 +87,7 @@ trait DataObject extends js.Object {
     * "linear"
     * @see https://echarts.apache.org/en/option.html#series-tree.data.animationEasing
     */
-  var animationEasing: js.UndefOr[String] = js.undefined
+  var animationEasing: js.UndefOr[String] = js.native
   /**
     * Easing method used for animation.
     *
@@ -95,7 +96,7 @@ trait DataObject extends js.Object {
     * "cubicOut"
     * @see https://echarts.apache.org/en/option.html#series-tree.data.animationEasingUpdate
     */
-  var animationEasingUpdate: js.UndefOr[String] = js.undefined
+  var animationEasingUpdate: js.UndefOr[String] = js.native
   /**
     * Whether to set graphic number threshold to animation.
     * Animation will be disabled when graphic number is larger
@@ -106,85 +107,242 @@ trait DataObject extends js.Object {
     * 2000
     * @see https://echarts.apache.org/en/option.html#series-tree.data.animationThreshold
     */
-  var animationThreshold: js.UndefOr[Double] = js.undefined
-  var children: js.UndefOr[js.Array[DataObject]] = js.undefined
+  var animationThreshold: js.UndefOr[Double] = js.native
+  var children: js.UndefOr[js.Array[DataObject]] = js.native
   /**
     * @see https://echarts.apache.org/en/option.html#series-tree.data.emphasis
     */
-  var emphasis: js.UndefOr[AnonLabelAnonDistance] = js.undefined
+  var emphasis: js.UndefOr[AnonLabelAnonDistance] = js.native
   /**
     * The style of the node.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.data.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderType] = js.undefined
+  var itemStyle: js.UndefOr[AnonBorderType] = js.native
   /**
     * The label of the node.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.data.label
     */
-  var label: js.UndefOr[AnonDistance] = js.undefined
+  var label: js.UndefOr[AnonDistance] = js.native
   /**
     * The name of the tree node, used to identify each node.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.data.name
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * tooltip settings in this series data.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.data.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
   /**
     * The value of the node, displayed in the tooltip.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.data.value
     */
-  var value: js.UndefOr[Double] = js.undefined
+  var value: js.UndefOr[Double] = js.native
 }
 
 object DataObject {
   @scala.inline
-  def apply(
-    animation: js.UndefOr[Boolean] = js.undefined,
-    animationDelay: js.Function | Double = null,
-    animationDelayUpdate: js.Function | Double = null,
-    animationDuration: js.Function | Double = null,
-    animationDurationUpdate: js.Function | Double = null,
-    animationEasing: String = null,
-    animationEasingUpdate: String = null,
-    animationThreshold: Int | Double = null,
-    children: js.Array[DataObject] = null,
-    emphasis: AnonLabelAnonDistance = null,
-    itemStyle: AnonBorderType = null,
-    label: AnonDistance = null,
-    name: String = null,
-    tooltip: AnonExtraCssText = null,
-    value: Int | Double = null
-  ): DataObject = {
+  def apply(): DataObject = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animation)) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (animationDelay != null) __obj.updateDynamic("animationDelay")(animationDelay.asInstanceOf[js.Any])
-    if (animationDelayUpdate != null) __obj.updateDynamic("animationDelayUpdate")(animationDelayUpdate.asInstanceOf[js.Any])
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (animationDurationUpdate != null) __obj.updateDynamic("animationDurationUpdate")(animationDurationUpdate.asInstanceOf[js.Any])
-    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
-    if (animationEasingUpdate != null) __obj.updateDynamic("animationEasingUpdate")(animationEasingUpdate.asInstanceOf[js.Any])
-    if (animationThreshold != null) __obj.updateDynamic("animationThreshold")(animationThreshold.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataObject]
   }
+  @scala.inline
+  implicit class DataObjectOps[Self <: DataObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDelay(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDelayUpdate(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDelayUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDuration(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDurationUpdate(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDurationUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationEasing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationEasingUpdate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationEasingUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildren(value: js.Array[DataObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmphasis(value: AnonLabelAnonDistance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmphasis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemStyle(value: AnonBorderType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: AnonDistance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: AnonExtraCssText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

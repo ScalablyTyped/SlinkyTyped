@@ -14,15 +14,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Expression, 'type'> */
+@js.native
 trait ArrayExpression
   extends ASTNode
      with ExpressionKind
      with NodeKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var elements: js.Array[ExpressionKind | SpreadElementKind | RestElementKind | Null]
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ArrayExpression
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var elements: js.Array[ExpressionKind | SpreadElementKind | RestElementKind | Null] = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ArrayExpression = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.ArrayExpression")

@@ -28,18 +28,65 @@ trait TriggerAction extends js.Object {
 
 object TriggerAction {
   @scala.inline
-  def apply(
-    arguments: Input[StringDictionary[_]] = null,
-    crawlerName: Input[String] = null,
-    jobName: Input[String] = null,
-    timeout: Input[Double] = null
-  ): TriggerAction = {
+  def apply(): TriggerAction = {
     val __obj = js.Dynamic.literal()
-    if (arguments != null) __obj.updateDynamic("arguments")(arguments.asInstanceOf[js.Any])
-    if (crawlerName != null) __obj.updateDynamic("crawlerName")(crawlerName.asInstanceOf[js.Any])
-    if (jobName != null) __obj.updateDynamic("jobName")(jobName.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[TriggerAction]
   }
+  @scala.inline
+  implicit class TriggerActionOps[Self <: TriggerAction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArguments(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArguments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrawlerName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crawlerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrawlerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crawlerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

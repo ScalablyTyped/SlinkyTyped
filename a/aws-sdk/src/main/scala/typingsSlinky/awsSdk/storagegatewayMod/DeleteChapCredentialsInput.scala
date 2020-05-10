@@ -20,8 +20,27 @@ object DeleteChapCredentialsInput {
   @scala.inline
   def apply(InitiatorName: IqnName, TargetARN: TargetARN): DeleteChapCredentialsInput = {
     val __obj = js.Dynamic.literal(InitiatorName = InitiatorName.asInstanceOf[js.Any], TargetARN = TargetARN.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DeleteChapCredentialsInput]
   }
+  @scala.inline
+  implicit class DeleteChapCredentialsInputOps[Self <: DeleteChapCredentialsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInitiatorName(value: IqnName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitiatorName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetARN(value: TargetARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

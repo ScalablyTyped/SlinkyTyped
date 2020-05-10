@@ -4,27 +4,53 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ZeptoEffectsSpeeds extends js.Object {
   /**
   	* Default = 400ms.
   	**/
-  var _default: Double
+  var _default: Double = js.native
   /**
   	* Default = 200ms.
   	**/
-  var fast: Double
+  var fast: Double = js.native
   /**
   	* Default = 600ms.
   	**/
-  var slow: Double
+  var slow: Double = js.native
 }
 
 object ZeptoEffectsSpeeds {
   @scala.inline
   def apply(_default: Double, fast: Double, slow: Double): ZeptoEffectsSpeeds = {
     val __obj = js.Dynamic.literal(_default = _default.asInstanceOf[js.Any], fast = fast.asInstanceOf[js.Any], slow = slow.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ZeptoEffectsSpeeds]
   }
+  @scala.inline
+  implicit class ZeptoEffectsSpeedsOps[Self <: ZeptoEffectsSpeeds] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_default(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_default")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFast(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fast")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSlow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slow")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

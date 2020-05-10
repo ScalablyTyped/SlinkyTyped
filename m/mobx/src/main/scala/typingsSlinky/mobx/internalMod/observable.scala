@@ -1,5 +1,6 @@
 package typingsSlinky.mobx.internalMod
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.mobx.modifiersMod.IEnhancer
 import typingsSlinky.mobx.observableMod.CreateObservableOptions
 import typingsSlinky.mobx.observablearrayMod.IObservableArray
@@ -9,7 +10,6 @@ import typingsSlinky.mobx.observableobjectMod.IObservableObject
 import typingsSlinky.mobx.observablesetMod.IObservableSetInitialValues
 import typingsSlinky.mobx.observablevalueMod.IObservableValue
 import typingsSlinky.std.Map
-import typingsSlinky.std.PropertyDescriptor
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -36,9 +36,9 @@ object observable extends js.Object {
   var struct_Original: IObservableDecorator = js.native
   def apply(): scala.Nothing = js.native
   def apply(target: js.Object, key: String): js.Any = js.native
-  def apply(target: js.Object, key: String, baseDescriptor: PropertyDescriptor): js.Any = js.native
+  def apply(target: js.Object, key: String, baseDescriptor: js.PropertyDescriptor): js.Any = js.native
   def apply(target: js.Object, key: js.Symbol): js.Any = js.native
-  def apply(target: js.Object, key: js.Symbol, baseDescriptor: PropertyDescriptor): js.Any = js.native
+  def apply(target: js.Object, key: js.Symbol, baseDescriptor: js.PropertyDescriptor): js.Any = js.native
   def apply(value: String): scala.Nothing = js.native
   def apply(value: Boolean): scala.Nothing = js.native
   def apply(value: Double): scala.Nothing = js.native
@@ -47,13 +47,13 @@ object observable extends js.Object {
     value: T,
     decorators: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]:? std.Function}
-    */ typingsSlinky.mobx.mobxStrings.observable with js.Any
+    */ typingsSlinky.mobx.mobxStrings.observable with TopLevel[js.Any]
   ): T with IObservableObject = js.native
   def apply[T /* <: js.Object */](
     value: T,
     decorators: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]:? std.Function}
-    */ typingsSlinky.mobx.mobxStrings.observable with js.Any,
+    */ typingsSlinky.mobx.mobxStrings.observable with TopLevel[js.Any],
     options: CreateObservableOptions
   ): T with IObservableObject = js.native
   def apply[T](value: js.Array[T]): IObservableArray[T] = js.native
@@ -82,13 +82,13 @@ object observable extends js.Object {
     props: T,
     decorators: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]:? std.Function}
-    */ typingsSlinky.mobx.mobxStrings.observable with js.Any
+    */ typingsSlinky.mobx.mobxStrings.observable with TopLevel[js.Any]
   ): T with IObservableObject = js.native
   def `object`[T](
     props: T,
     decorators: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]:? std.Function}
-    */ typingsSlinky.mobx.mobxStrings.observable with js.Any,
+    */ typingsSlinky.mobx.mobxStrings.observable with TopLevel[js.Any],
     options: CreateObservableOptions
   ): T with IObservableObject = js.native
   /**

@@ -56,24 +56,101 @@ trait SchemaGoogleCloudDialogflowV2beta1Document extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2beta1Document {
   @scala.inline
-  def apply(
-    content: String = null,
-    contentUri: String = null,
-    displayName: String = null,
-    knowledgeTypes: js.Array[String] = null,
-    mimeType: String = null,
-    name: String = null,
-    rawContent: String = null
-  ): SchemaGoogleCloudDialogflowV2beta1Document = {
+  def apply(): SchemaGoogleCloudDialogflowV2beta1Document = {
     val __obj = js.Dynamic.literal()
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (contentUri != null) __obj.updateDynamic("contentUri")(contentUri.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (knowledgeTypes != null) __obj.updateDynamic("knowledgeTypes")(knowledgeTypes.asInstanceOf[js.Any])
-    if (mimeType != null) __obj.updateDynamic("mimeType")(mimeType.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (rawContent != null) __obj.updateDynamic("rawContent")(rawContent.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1Document]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudDialogflowV2beta1DocumentOps[Self <: SchemaGoogleCloudDialogflowV2beta1Document] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKnowledgeTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("knowledgeTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKnowledgeTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("knowledgeTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMimeType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMimeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRawContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRawContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawContent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,25 +5,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonActions extends js.Object {
-  var actions: js.UndefOr[js.Array[AnonTypeDeclarativeWebRequestActionsList]] = js.undefined
-  var conditions: js.UndefOr[js.Array[AnonDictkey]] = js.undefined
+  var actions: js.UndefOr[js.Array[AnonTypeDeclarativeWebRequestActionsList]] = js.native
+  var conditions: js.UndefOr[js.Array[AnonDictkey]] = js.native
   /** Event name */
-  var event: js.UndefOr[DeclarativeWebRequestEventList] = js.undefined
+  var event: js.UndefOr[DeclarativeWebRequestEventList] = js.native
 }
 
 object AnonActions {
   @scala.inline
-  def apply(
-    actions: js.Array[AnonTypeDeclarativeWebRequestActionsList] = null,
-    conditions: js.Array[AnonDictkey] = null,
-    event: DeclarativeWebRequestEventList = null
-  ): AnonActions = {
+  def apply(): AnonActions = {
     val __obj = js.Dynamic.literal()
-    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
-    if (conditions != null) __obj.updateDynamic("conditions")(conditions.asInstanceOf[js.Any])
-    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonActions]
   }
+  @scala.inline
+  implicit class AnonActionsOps[Self <: AnonActions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActions(value: js.Array[AnonTypeDeclarativeWebRequestActionsList]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConditions(value: js.Array[AnonDictkey]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConditions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvent(value: DeclarativeWebRequestEventList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

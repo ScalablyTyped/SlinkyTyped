@@ -1,38 +1,37 @@
 package typingsSlinky.reactFns.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFns.mediaMediaMod.MediaProps
 import typingsSlinky.reactFns.typesMod.SharedRenderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Media
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Media {
   @JSImport("react-fns", "Media")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    component: ReactComponentClass[MediaProps | Unit] = null,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    render: MediaProps => TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction1(render))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def componentFunctionComponent(value: ReactComponentClass[MediaProps | Unit]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentComponentClass(value: ReactComponentClass[MediaProps | Unit]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def component(value: ReactComponentClass[MediaProps | Unit]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def debug(value: Boolean): this.type = set("debug", value.asInstanceOf[js.Any])
+    @scala.inline
+    def render(value: MediaProps => TagMod[Any]): this.type = set("render", js.Any.fromFunction1(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SharedRenderProps[MediaProps]
+  
+  def withProps(p: SharedRenderProps[MediaProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Media.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

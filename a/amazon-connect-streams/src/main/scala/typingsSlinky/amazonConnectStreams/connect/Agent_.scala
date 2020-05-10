@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Agent_ extends js.Object {
   /**
     * Creates an outbound contact to the given endpoint.
@@ -11,15 +12,15 @@ trait Agent_ extends js.Object {
     * @param endpoint An object describing the endpoint to which to connect.
     * @param successFailOptions Optional success and failure callbacks can be provided to determine whether the operation was successful.
     */
-  def connect(endpoint: Endpoint, successFailOptions: ConnectOptions): Unit
+  def connect(endpoint: Endpoint, successFailOptions: ConnectOptions): Unit = js.native
   /**
     * Gets the list of selectable AgentState API objects.
     */
-  def getAgentStates(): js.Array[AgentState]
+  def getAgentStates(): js.Array[AgentState] = js.native
   /**
     * Gets the full AgentConfiguration object for the agent.
     */
-  def getConfiguration(): AgentConfiguration
+  def getConfiguration(): AgentConfiguration = js.native
   // /**
   //  * For internal purposes only.
   //  */
@@ -27,53 +28,53 @@ trait Agent_ extends js.Object {
   /**
     * Gets a list of Contact API objects for each of the agent's current contacts.
     */
-  def getContacts(contactTypeFilter: String): js.Array[Contact_]
+  def getContacts(contactTypeFilter: String): js.Array[Contact_] = js.native
   /**
     * Gets the agent's phone number from the AgentConfiguration object for the agent.
     */
-  def getExtension(): String
+  def getExtension(): String = js.native
   /**
     * Gets the agent's user friendly display name from the AgentConfiguration object for the agent.
     */
-  def getName(): String
+  def getName(): String = js.native
   /**
     * Gets the agent's routing profile.
     */
-  def getRoutingProfile(): AgentRoutingProfile
+  def getRoutingProfile(): AgentRoutingProfile = js.native
   /**
     * Get the agent's current AgentState object indicating their availability state type.
     */
-  def getState(): AgentState
+  def getState(): AgentState = js.native
   /**
     * Get the duration of the agent's state in milliseconds relative to local time.
     */
-  def getStateDuration(): Double
+  def getStateDuration(): Double = js.native
   /**
     * Determine if softphone is enabled for the agent.
     */
-  def isSoftphoneEnabled(): Boolean
+  def isSoftphoneEnabled(): Boolean = js.native
   /*
     * Sets the agent local media to mute mode.
     */
-  def mute(): Unit
+  def mute(): Unit = js.native
   /**
     * Subscribe a method to be called when the agent enters the "After Call Work" (ACW) state.
     *
     * @param callback A callback to receive updated Agent information.
     */
-  def onAfterCallWork(callback: AgentCallback): Unit
+  def onAfterCallWork(callback: AgentCallback): Unit = js.native
   /**
     * Subscribe a method to be called whenever Contact information is about to be updated.
     *
     * @param callback A callback to receive updated Agent information.
     */
-  def onContactPending(callback: AgentCallback): Unit
+  def onContactPending(callback: AgentCallback): Unit = js.native
   /**
     * Subscribe a method to be called when the agent is put into an error state.
     *
     * @param callback A callback to receive updated Agent information.
     */
-  def onError(callback: AgentCallback): Unit
+  def onError(callback: AgentCallback): Unit = js.native
   /**
     * Subscribe a method to be called when the agent updates the mute status,
     * meaning that agents mute/unmute APIs are called and the local media stream
@@ -81,53 +82,63 @@ trait Agent_ extends js.Object {
     *
     * @param callback A callback to receive updates on agent mute state
     */
-  def onMuteToggle(callback: MuteCallback): Unit
+  def onMuteToggle(callback: MuteCallback): Unit = js.native
   /**
     * Subscribe a method to be called when the agent becomes not-routable, meaning that they are online but cannot be routed incoming contacts.
     *
     * @param callback A callback to receive updated Agent information.
     */
-  def onNotRoutable(callback: AgentCallback): Unit
+  def onNotRoutable(callback: AgentCallback): Unit = js.native
   /**
     * Subscribe a method to be called when the agent goes offline.
     *
     * @param callback A callback to receive updated Agent information.
     */
-  def onOffline(callback: AgentCallback): Unit
+  def onOffline(callback: AgentCallback): Unit = js.native
   /**
     * Subscribe a method to be called whenever new agent data is available.
     *
     * @param callback A callback to receive updated Agent information.
     */
-  def onRefresh(callback: AgentCallback): Unit
+  def onRefresh(callback: AgentCallback): Unit = js.native
   /**
     * Subscribe a method to be called when the agent becomes routable, meaning that they can be routed incoming contacts.
     *
     * @param callback A callback to receive updated Agent information.
     */
-  def onRoutable(callback: AgentCallback): Unit
+  def onRoutable(callback: AgentCallback): Unit = js.native
+  /**
+    * Subscribe a method to be called when the agent is put into an error state specific to softphone functionality.
+    * @param callback
+    */
+  def onSoftphoneError(callback: AgentCallback): Unit = js.native
+  /**
+    * Subscribe a method to be called whenever new agent data is available.
+    * @param callback
+    */
+  def onStateChange(callback: js.Function1[/* agentStateChange */ AgentStateChange, Unit]): Unit = js.native
   /**
     * Updates the agent's configuration with the given AgentConfiguration object.
     *
     * @param configuration The desired configuration
     * @param successFailOptions Optional success and failure callbacks can be provided to determine whether the operation was successful.
     */
-  def setConfiguration(configuration: AgentConfiguration, successFailOptions: SuccessFailOptions): Unit
+  def setConfiguration(configuration: AgentConfiguration, successFailOptions: SuccessFailOptions): Unit = js.native
   /**
     * Set the agent's current availability state.
     *
     * @param state The new agent state.
     * @param successFailOptions Optional success and failure callbacks can be provided to determine whether the operation was successful.
     */
-  def setState(state: AgentState, successFailOptions: SuccessFailOptions): Unit
+  def setState(state: AgentState, successFailOptions: SuccessFailOptions): Unit = js.native
   /**
     * Create a snapshot version of the current Agent state and save it for future use, such as adding to a log file or posting elsewhere.
     */
-  def toSnapshot(): Agent_
+  def toSnapshot(): Agent_ = js.native
   /*
     * Sets the agent localmedia to unmute mode.
     */
-  def unmute(): Unit
+  def unmute(): Unit = js.native
 }
 
 object Agent_ {
@@ -152,14 +163,173 @@ object Agent_ {
     onOffline: AgentCallback => Unit,
     onRefresh: AgentCallback => Unit,
     onRoutable: AgentCallback => Unit,
+    onSoftphoneError: AgentCallback => Unit,
+    onStateChange: js.Function1[/* agentStateChange */ AgentStateChange, Unit] => Unit,
     setConfiguration: (AgentConfiguration, SuccessFailOptions) => Unit,
     setState: (AgentState, SuccessFailOptions) => Unit,
     toSnapshot: () => Agent_,
     unmute: () => Unit
   ): Agent_ = {
-    val __obj = js.Dynamic.literal(connect = js.Any.fromFunction2(connect), getAgentStates = js.Any.fromFunction0(getAgentStates), getConfiguration = js.Any.fromFunction0(getConfiguration), getContacts = js.Any.fromFunction1(getContacts), getExtension = js.Any.fromFunction0(getExtension), getName = js.Any.fromFunction0(getName), getRoutingProfile = js.Any.fromFunction0(getRoutingProfile), getState = js.Any.fromFunction0(getState), getStateDuration = js.Any.fromFunction0(getStateDuration), isSoftphoneEnabled = js.Any.fromFunction0(isSoftphoneEnabled), mute = js.Any.fromFunction0(mute), onAfterCallWork = js.Any.fromFunction1(onAfterCallWork), onContactPending = js.Any.fromFunction1(onContactPending), onError = js.Any.fromFunction1(onError), onMuteToggle = js.Any.fromFunction1(onMuteToggle), onNotRoutable = js.Any.fromFunction1(onNotRoutable), onOffline = js.Any.fromFunction1(onOffline), onRefresh = js.Any.fromFunction1(onRefresh), onRoutable = js.Any.fromFunction1(onRoutable), setConfiguration = js.Any.fromFunction2(setConfiguration), setState = js.Any.fromFunction2(setState), toSnapshot = js.Any.fromFunction0(toSnapshot), unmute = js.Any.fromFunction0(unmute))
-  
+    val __obj = js.Dynamic.literal(connect = js.Any.fromFunction2(connect), getAgentStates = js.Any.fromFunction0(getAgentStates), getConfiguration = js.Any.fromFunction0(getConfiguration), getContacts = js.Any.fromFunction1(getContacts), getExtension = js.Any.fromFunction0(getExtension), getName = js.Any.fromFunction0(getName), getRoutingProfile = js.Any.fromFunction0(getRoutingProfile), getState = js.Any.fromFunction0(getState), getStateDuration = js.Any.fromFunction0(getStateDuration), isSoftphoneEnabled = js.Any.fromFunction0(isSoftphoneEnabled), mute = js.Any.fromFunction0(mute), onAfterCallWork = js.Any.fromFunction1(onAfterCallWork), onContactPending = js.Any.fromFunction1(onContactPending), onError = js.Any.fromFunction1(onError), onMuteToggle = js.Any.fromFunction1(onMuteToggle), onNotRoutable = js.Any.fromFunction1(onNotRoutable), onOffline = js.Any.fromFunction1(onOffline), onRefresh = js.Any.fromFunction1(onRefresh), onRoutable = js.Any.fromFunction1(onRoutable), onSoftphoneError = js.Any.fromFunction1(onSoftphoneError), onStateChange = js.Any.fromFunction1(onStateChange), setConfiguration = js.Any.fromFunction2(setConfiguration), setState = js.Any.fromFunction2(setState), toSnapshot = js.Any.fromFunction0(toSnapshot), unmute = js.Any.fromFunction0(unmute))
     __obj.asInstanceOf[Agent_]
   }
+  @scala.inline
+  implicit class Agent_Ops[Self <: Agent_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnect(value: (Endpoint, ConnectOptions) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connect")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetAgentStates(value: () => js.Array[AgentState]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAgentStates")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetConfiguration(value: () => AgentConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getConfiguration")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetContacts(value: String => js.Array[Contact_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getContacts")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetExtension(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getExtension")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRoutingProfile(value: () => AgentRoutingProfile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRoutingProfile")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetState(value: () => AgentState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStateDuration(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStateDuration")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsSoftphoneEnabled(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSoftphoneEnabled")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMute(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mute")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnAfterCallWork(value: AgentCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAfterCallWork")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnContactPending(value: AgentCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onContactPending")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnError(value: AgentCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnMuteToggle(value: MuteCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMuteToggle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnNotRoutable(value: AgentCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onNotRoutable")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnOffline(value: AgentCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOffline")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnRefresh(value: AgentCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRefresh")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnRoutable(value: AgentCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRoutable")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnSoftphoneError(value: AgentCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSoftphoneError")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnStateChange(value: js.Function1[/* agentStateChange */ AgentStateChange, Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStateChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetConfiguration(value: (AgentConfiguration, SuccessFailOptions) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setConfiguration")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetState(value: (AgentState, SuccessFailOptions) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setState")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withToSnapshot(value: () => Agent_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toSnapshot")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUnmute(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unmute")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

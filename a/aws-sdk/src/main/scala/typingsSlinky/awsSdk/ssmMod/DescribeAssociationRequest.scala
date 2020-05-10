@@ -26,18 +26,65 @@ trait DescribeAssociationRequest extends js.Object {
 
 object DescribeAssociationRequest {
   @scala.inline
-  def apply(
-    AssociationId: AssociationId = null,
-    AssociationVersion: AssociationVersion = null,
-    InstanceId: InstanceId = null,
-    Name: DocumentARN = null
-  ): DescribeAssociationRequest = {
+  def apply(): DescribeAssociationRequest = {
     val __obj = js.Dynamic.literal()
-    if (AssociationId != null) __obj.updateDynamic("AssociationId")(AssociationId.asInstanceOf[js.Any])
-    if (AssociationVersion != null) __obj.updateDynamic("AssociationVersion")(AssociationVersion.asInstanceOf[js.Any])
-    if (InstanceId != null) __obj.updateDynamic("InstanceId")(InstanceId.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAssociationRequest]
   }
+  @scala.inline
+  implicit class DescribeAssociationRequestOps[Self <: DescribeAssociationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssociationId(value: AssociationId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAssociationVersion(value: AssociationVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociationVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceId(value: InstanceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: DocumentARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

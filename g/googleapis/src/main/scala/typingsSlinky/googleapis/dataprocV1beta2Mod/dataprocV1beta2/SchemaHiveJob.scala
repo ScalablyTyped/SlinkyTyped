@@ -46,22 +46,89 @@ trait SchemaHiveJob extends js.Object {
 
 object SchemaHiveJob {
   @scala.inline
-  def apply(
-    continueOnFailure: js.UndefOr[Boolean] = js.undefined,
-    jarFileUris: js.Array[String] = null,
-    properties: StringDictionary[String] = null,
-    queryFileUri: String = null,
-    queryList: SchemaQueryList = null,
-    scriptVariables: StringDictionary[String] = null
-  ): SchemaHiveJob = {
+  def apply(): SchemaHiveJob = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(continueOnFailure)) __obj.updateDynamic("continueOnFailure")(continueOnFailure.asInstanceOf[js.Any])
-    if (jarFileUris != null) __obj.updateDynamic("jarFileUris")(jarFileUris.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
-    if (queryFileUri != null) __obj.updateDynamic("queryFileUri")(queryFileUri.asInstanceOf[js.Any])
-    if (queryList != null) __obj.updateDynamic("queryList")(queryList.asInstanceOf[js.Any])
-    if (scriptVariables != null) __obj.updateDynamic("scriptVariables")(scriptVariables.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHiveJob]
   }
+  @scala.inline
+  implicit class SchemaHiveJobOps[Self <: SchemaHiveJob] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContinueOnFailure(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continueOnFailure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinueOnFailure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continueOnFailure")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJarFileUris(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jarFileUris")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJarFileUris: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jarFileUris")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProperties(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryFileUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryFileUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryFileUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryFileUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryList(value: SchemaQueryList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScriptVariables(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScriptVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptVariables")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

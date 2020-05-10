@@ -1,7 +1,5 @@
 package typingsSlinky.antdMobileRn
 
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.Tabs
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.`Tabs example`
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +15,7 @@ object tabsDemoBasicNativeMod extends js.Object {
   @js.native
   class default () extends BasicTabsExample
   
-  val description: `Tabs example` = js.native
-  val title: Tabs = js.native
+  val description: /* "Tabs example" */ String = js.native
+  val title: /* "Tabs" */ String = js.native
 }
 

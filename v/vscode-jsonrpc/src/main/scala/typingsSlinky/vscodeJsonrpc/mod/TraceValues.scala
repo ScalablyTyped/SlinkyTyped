@@ -13,12 +13,10 @@ trait TraceValues extends js.Object
 
 object TraceValues {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def messages: typingsSlinky.vscodeJsonrpc.vscodeJsonrpcStrings.messages = "messages".asInstanceOf[typingsSlinky.vscodeJsonrpc.vscodeJsonrpcStrings.messages]
   @scala.inline
-  def messages: typingsSlinky.vscodeJsonrpc.vscodeJsonrpcStrings.messages = this.cast("messages")
+  def off: typingsSlinky.vscodeJsonrpc.vscodeJsonrpcStrings.off = "off".asInstanceOf[typingsSlinky.vscodeJsonrpc.vscodeJsonrpcStrings.off]
   @scala.inline
-  def off: typingsSlinky.vscodeJsonrpc.vscodeJsonrpcStrings.off = this.cast("off")
-  @scala.inline
-  def verbose: typingsSlinky.vscodeJsonrpc.vscodeJsonrpcStrings.verbose = this.cast("verbose")
+  def verbose: typingsSlinky.vscodeJsonrpc.vscodeJsonrpcStrings.verbose = "verbose".asInstanceOf[typingsSlinky.vscodeJsonrpc.vscodeJsonrpcStrings.verbose]
 }
 

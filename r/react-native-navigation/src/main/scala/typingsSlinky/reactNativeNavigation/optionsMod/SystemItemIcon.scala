@@ -33,52 +33,50 @@ trait SystemItemIcon extends js.Object
 
 object SystemItemIcon {
   @scala.inline
-  def action: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.action = this.cast("action")
+  def action: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.action = "action".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.action]
   @scala.inline
-  def add: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.add = this.cast("add")
+  def add: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.add = "add".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.add]
   @scala.inline
-  def bookmarks: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.bookmarks = this.cast("bookmarks")
+  def bookmarks: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.bookmarks = "bookmarks".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.bookmarks]
   @scala.inline
-  def camera: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.camera = this.cast("camera")
+  def camera: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.camera = "camera".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.camera]
   @scala.inline
-  def cancel: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.cancel = this.cast("cancel")
+  def cancel: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.cancel = "cancel".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.cancel]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def compose: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.compose = "compose".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.compose]
   @scala.inline
-  def compose: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.compose = this.cast("compose")
+  def done: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.done = "done".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.done]
   @scala.inline
-  def done: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.done = this.cast("done")
+  def edit: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.edit = "edit".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.edit]
   @scala.inline
-  def edit: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.edit = this.cast("edit")
+  def fastForward: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.fastForward = "fastForward".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.fastForward]
   @scala.inline
-  def fastForward: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.fastForward = this.cast("fastForward")
+  def fixedSpace: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.fixedSpace = "fixedSpace".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.fixedSpace]
   @scala.inline
-  def fixedSpace: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.fixedSpace = this.cast("fixedSpace")
+  def flexibleSpace: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.flexibleSpace = "flexibleSpace".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.flexibleSpace]
   @scala.inline
-  def flexibleSpace: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.flexibleSpace = this.cast("flexibleSpace")
+  def organize: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.organize = "organize".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.organize]
   @scala.inline
-  def organize: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.organize = this.cast("organize")
+  def pause: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.pause = "pause".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.pause]
   @scala.inline
-  def pause: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.pause = this.cast("pause")
+  def play: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.play = "play".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.play]
   @scala.inline
-  def play: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.play = this.cast("play")
+  def redo: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.redo = "redo".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.redo]
   @scala.inline
-  def redo: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.redo = this.cast("redo")
+  def refresh: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.refresh = "refresh".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.refresh]
   @scala.inline
-  def refresh: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.refresh = this.cast("refresh")
+  def reply: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.reply = "reply".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.reply]
   @scala.inline
-  def reply: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.reply = this.cast("reply")
+  def rewind: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.rewind = "rewind".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.rewind]
   @scala.inline
-  def rewind: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.rewind = this.cast("rewind")
+  def save: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.save = "save".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.save]
   @scala.inline
-  def save: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.save = this.cast("save")
+  def search: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.search = "search".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.search]
   @scala.inline
-  def search: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.search = this.cast("search")
+  def stop: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.stop = "stop".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.stop]
   @scala.inline
-  def stop: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.stop = this.cast("stop")
+  def trash: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.trash = "trash".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.trash]
   @scala.inline
-  def trash: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.trash = this.cast("trash")
-  @scala.inline
-  def undo: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.undo = this.cast("undo")
+  def undo: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.undo = "undo".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.undo]
 }
 

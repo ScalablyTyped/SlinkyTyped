@@ -26,11 +26,41 @@ trait SchemaFirstPartyMobileApplicationTargeting extends js.Object {
 
 object SchemaFirstPartyMobileApplicationTargeting {
   @scala.inline
-  def apply(excludedAppIds: js.Array[String] = null, targetedAppIds: js.Array[String] = null): SchemaFirstPartyMobileApplicationTargeting = {
+  def apply(): SchemaFirstPartyMobileApplicationTargeting = {
     val __obj = js.Dynamic.literal()
-    if (excludedAppIds != null) __obj.updateDynamic("excludedAppIds")(excludedAppIds.asInstanceOf[js.Any])
-    if (targetedAppIds != null) __obj.updateDynamic("targetedAppIds")(targetedAppIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFirstPartyMobileApplicationTargeting]
   }
+  @scala.inline
+  implicit class SchemaFirstPartyMobileApplicationTargetingOps[Self <: SchemaFirstPartyMobileApplicationTargeting] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExcludedAppIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedAppIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludedAppIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedAppIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetedAppIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetedAppIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetedAppIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetedAppIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

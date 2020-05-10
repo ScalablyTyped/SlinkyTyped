@@ -34,7 +34,7 @@ Instantiable0[I2C] {
     * @return  
     * @url http://www.espruino.com/Reference#l_I2C_readFrom
     */
-  def readFrom(address: js.Any, quantity: Double): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def readFrom(address: js.Any, quantity: Double): js.typedarray.Uint8Array = js.native
   /**
     * <p>Set up this I2C port</p>
     * <p>If not specified in options, the default pins are used (usually the lowest numbered pins on the lowest port that supports this peripheral)</p>

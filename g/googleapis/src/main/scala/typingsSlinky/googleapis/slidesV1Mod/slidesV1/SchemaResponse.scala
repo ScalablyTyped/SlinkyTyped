@@ -62,34 +62,161 @@ trait SchemaResponse extends js.Object {
 
 object SchemaResponse {
   @scala.inline
-  def apply(
-    createImage: SchemaCreateImageResponse = null,
-    createLine: SchemaCreateLineResponse = null,
-    createShape: SchemaCreateShapeResponse = null,
-    createSheetsChart: SchemaCreateSheetsChartResponse = null,
-    createSlide: SchemaCreateSlideResponse = null,
-    createTable: SchemaCreateTableResponse = null,
-    createVideo: SchemaCreateVideoResponse = null,
-    duplicateObject: SchemaDuplicateObjectResponse = null,
-    groupObjects: SchemaGroupObjectsResponse = null,
-    replaceAllShapesWithImage: SchemaReplaceAllShapesWithImageResponse = null,
-    replaceAllShapesWithSheetsChart: SchemaReplaceAllShapesWithSheetsChartResponse = null,
-    replaceAllText: SchemaReplaceAllTextResponse = null
-  ): SchemaResponse = {
+  def apply(): SchemaResponse = {
     val __obj = js.Dynamic.literal()
-    if (createImage != null) __obj.updateDynamic("createImage")(createImage.asInstanceOf[js.Any])
-    if (createLine != null) __obj.updateDynamic("createLine")(createLine.asInstanceOf[js.Any])
-    if (createShape != null) __obj.updateDynamic("createShape")(createShape.asInstanceOf[js.Any])
-    if (createSheetsChart != null) __obj.updateDynamic("createSheetsChart")(createSheetsChart.asInstanceOf[js.Any])
-    if (createSlide != null) __obj.updateDynamic("createSlide")(createSlide.asInstanceOf[js.Any])
-    if (createTable != null) __obj.updateDynamic("createTable")(createTable.asInstanceOf[js.Any])
-    if (createVideo != null) __obj.updateDynamic("createVideo")(createVideo.asInstanceOf[js.Any])
-    if (duplicateObject != null) __obj.updateDynamic("duplicateObject")(duplicateObject.asInstanceOf[js.Any])
-    if (groupObjects != null) __obj.updateDynamic("groupObjects")(groupObjects.asInstanceOf[js.Any])
-    if (replaceAllShapesWithImage != null) __obj.updateDynamic("replaceAllShapesWithImage")(replaceAllShapesWithImage.asInstanceOf[js.Any])
-    if (replaceAllShapesWithSheetsChart != null) __obj.updateDynamic("replaceAllShapesWithSheetsChart")(replaceAllShapesWithSheetsChart.asInstanceOf[js.Any])
-    if (replaceAllText != null) __obj.updateDynamic("replaceAllText")(replaceAllText.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResponse]
   }
+  @scala.inline
+  implicit class SchemaResponseOps[Self <: SchemaResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateImage(value: SchemaCreateImageResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateLine(value: SchemaCreateLineResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateShape(value: SchemaCreateShapeResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createShape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateShape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createShape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateSheetsChart(value: SchemaCreateSheetsChartResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createSheetsChart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateSheetsChart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createSheetsChart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateSlide(value: SchemaCreateSlideResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createSlide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateSlide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createSlide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateTable(value: SchemaCreateTableResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateVideo(value: SchemaCreateVideoResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createVideo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateVideo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createVideo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuplicateObject(value: SchemaDuplicateObjectResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicateObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuplicateObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicateObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupObjects(value: SchemaGroupObjectsResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupObjects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupObjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupObjects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplaceAllShapesWithImage(value: SchemaReplaceAllShapesWithImageResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceAllShapesWithImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplaceAllShapesWithImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceAllShapesWithImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplaceAllShapesWithSheetsChart(value: SchemaReplaceAllShapesWithSheetsChartResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceAllShapesWithSheetsChart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplaceAllShapesWithSheetsChart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceAllShapesWithSheetsChart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplaceAllText(value: SchemaReplaceAllTextResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceAllText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplaceAllText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceAllText")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

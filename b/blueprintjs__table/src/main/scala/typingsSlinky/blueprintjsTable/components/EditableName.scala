@@ -1,42 +1,39 @@
 package typingsSlinky.blueprintjsTable.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsTable.editableNameMod.IEditableNameProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object EditableName
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsTable.mod.EditableName] {
+object EditableName {
   @JSImport("@blueprintjs/table", "EditableName")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, name */
-  def apply(
-    index: Int | Double = null,
-    intent: Intent = null,
-    onCancel: (/* value */ String, /* columnIndex */ js.UndefOr[Double]) => Unit = null,
-    onChange: (/* value */ String, /* columnIndex */ js.UndefOr[Double]) => Unit = null,
-    onConfirm: (/* value */ String, /* columnIndex */ js.UndefOr[Double]) => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsTable.mod.EditableName] = {
-    val __obj = js.Dynamic.literal()
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (intent != null) __obj.updateDynamic("intent")(intent.asInstanceOf[js.Any])
-    if (onCancel != null) __obj.updateDynamic("onCancel")(js.Any.fromFunction2(onCancel))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onConfirm != null) __obj.updateDynamic("onConfirm")(js.Any.fromFunction2(onConfirm))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsTable.mod.EditableName] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def index(value: Double): this.type = set("index", value.asInstanceOf[js.Any])
+    @scala.inline
+    def intent(value: Intent): this.type = set("intent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCancel(value: (/* value */ String, /* columnIndex */ js.UndefOr[Double]) => Unit): this.type = set("onCancel", js.Any.fromFunction2(value))
+    @scala.inline
+    def onChange(value: (/* value */ String, /* columnIndex */ js.UndefOr[Double]) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onConfirm(value: (/* value */ String, /* columnIndex */ js.UndefOr[Double]) => Unit): this.type = set("onConfirm", js.Any.fromFunction2(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.blueprintjsTable.mod.EditableName] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.blueprintjsTable.mod.EditableName](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IEditableNameProps
+  
+  def withProps(p: IEditableNameProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: EditableName.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

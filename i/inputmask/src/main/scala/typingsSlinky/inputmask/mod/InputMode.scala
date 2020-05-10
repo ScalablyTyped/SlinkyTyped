@@ -19,24 +19,22 @@ trait InputMode extends js.Object
 
 object InputMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def decimal: typingsSlinky.inputmask.inputmaskStrings.decimal = "decimal".asInstanceOf[typingsSlinky.inputmask.inputmaskStrings.decimal]
   @scala.inline
-  def decimal: typingsSlinky.inputmask.inputmaskStrings.decimal = this.cast("decimal")
+  def email: typingsSlinky.inputmask.inputmaskStrings.email = "email".asInstanceOf[typingsSlinky.inputmask.inputmaskStrings.email]
   @scala.inline
-  def email: typingsSlinky.inputmask.inputmaskStrings.email = this.cast("email")
+  def none: typingsSlinky.inputmask.inputmaskStrings.none = "none".asInstanceOf[typingsSlinky.inputmask.inputmaskStrings.none]
   @scala.inline
-  def none: typingsSlinky.inputmask.inputmaskStrings.none = this.cast("none")
+  def numeric: typingsSlinky.inputmask.inputmaskStrings.numeric = "numeric".asInstanceOf[typingsSlinky.inputmask.inputmaskStrings.numeric]
   @scala.inline
-  def numeric: typingsSlinky.inputmask.inputmaskStrings.numeric = this.cast("numeric")
+  def search: typingsSlinky.inputmask.inputmaskStrings.search = "search".asInstanceOf[typingsSlinky.inputmask.inputmaskStrings.search]
   @scala.inline
-  def search: typingsSlinky.inputmask.inputmaskStrings.search = this.cast("search")
+  def tel: typingsSlinky.inputmask.inputmaskStrings.tel = "tel".asInstanceOf[typingsSlinky.inputmask.inputmaskStrings.tel]
   @scala.inline
-  def tel: typingsSlinky.inputmask.inputmaskStrings.tel = this.cast("tel")
+  def text: typingsSlinky.inputmask.inputmaskStrings.text = "text".asInstanceOf[typingsSlinky.inputmask.inputmaskStrings.text]
   @scala.inline
-  def text: typingsSlinky.inputmask.inputmaskStrings.text = this.cast("text")
+  def url: typingsSlinky.inputmask.inputmaskStrings.url = "url".asInstanceOf[typingsSlinky.inputmask.inputmaskStrings.url]
   @scala.inline
-  def url: typingsSlinky.inputmask.inputmaskStrings.url = this.cast("url")
-  @scala.inline
-  def verbatim: typingsSlinky.inputmask.inputmaskStrings.verbatim = this.cast("verbatim")
+  def verbatim: typingsSlinky.inputmask.inputmaskStrings.verbatim = "verbatim".asInstanceOf[typingsSlinky.inputmask.inputmaskStrings.verbatim]
 }
 

@@ -1162,6 +1162,13 @@ package object medialiveMod {
   */
   type PipelineId = typingsSlinky.awsSdk.medialiveMod._PipelineId | java.lang.String
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CURRENTLY_ACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.PIPELINE_0
+    - typingsSlinky.awsSdk.awsSdkStrings.PIPELINE_1
+    - java.lang.String
+  */
+  type PreferredChannelPipeline = typingsSlinky.awsSdk.medialiveMod._PreferredChannelPipeline | java.lang.String
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.MPEG2
     - typingsSlinky.awsSdk.awsSdkStrings.AVC
     - typingsSlinky.awsSdk.awsSdkStrings.HEVC

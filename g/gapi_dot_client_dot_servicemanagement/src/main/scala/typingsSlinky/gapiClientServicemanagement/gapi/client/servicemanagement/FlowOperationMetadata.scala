@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FlowOperationMetadata extends js.Object {
   /** The state of the operation with respect to cancellation. */
-  var cancelState: js.UndefOr[String] = js.undefined
+  var cancelState: js.UndefOr[String] = js.native
   /**
     * Deadline for the flow to complete, to prevent orphaned Operations.
     *
@@ -19,45 +20,122 @@ trait FlowOperationMetadata extends js.Object {
     * to ensure we don't have orphans.
     * see also: go/prevent-orphaned-operations
     */
-  var deadline: js.UndefOr[String] = js.undefined
+  var deadline: js.UndefOr[String] = js.native
   /**
     * The name of the top-level flow corresponding to this operation.
     * Must be equal to the "name" field for a FlowName enum.
     */
-  var flowName: js.UndefOr[String] = js.undefined
+  var flowName: js.UndefOr[String] = js.native
   /**
     * Operation type which is a flow type and subtype info as that is missing in
     * our datastore otherwise. This maps to the ordinal value of the enum:
     * jcg/api/tenant/operations/OperationNamespace.java
     */
-  var operationType: js.UndefOr[Double] = js.undefined
+  var operationType: js.UndefOr[Double] = js.native
   /** The full name of the resources that this flow is directly associated with. */
-  var resourceNames: js.UndefOr[js.Array[String]] = js.undefined
+  var resourceNames: js.UndefOr[js.Array[String]] = js.native
   /** The start time of the operation. */
-  var startTime: js.UndefOr[String] = js.undefined
-  var surface: js.UndefOr[String] = js.undefined
+  var startTime: js.UndefOr[String] = js.native
+  var surface: js.UndefOr[String] = js.native
 }
 
 object FlowOperationMetadata {
   @scala.inline
-  def apply(
-    cancelState: String = null,
-    deadline: String = null,
-    flowName: String = null,
-    operationType: Int | Double = null,
-    resourceNames: js.Array[String] = null,
-    startTime: String = null,
-    surface: String = null
-  ): FlowOperationMetadata = {
+  def apply(): FlowOperationMetadata = {
     val __obj = js.Dynamic.literal()
-    if (cancelState != null) __obj.updateDynamic("cancelState")(cancelState.asInstanceOf[js.Any])
-    if (deadline != null) __obj.updateDynamic("deadline")(deadline.asInstanceOf[js.Any])
-    if (flowName != null) __obj.updateDynamic("flowName")(flowName.asInstanceOf[js.Any])
-    if (operationType != null) __obj.updateDynamic("operationType")(operationType.asInstanceOf[js.Any])
-    if (resourceNames != null) __obj.updateDynamic("resourceNames")(resourceNames.asInstanceOf[js.Any])
-    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
-    if (surface != null) __obj.updateDynamic("surface")(surface.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlowOperationMetadata]
   }
+  @scala.inline
+  implicit class FlowOperationMetadataOps[Self <: FlowOperationMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCancelState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeadline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deadline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeadline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deadline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlowName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flowName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlowName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flowName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperationType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSurface(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("surface")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSurface: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("surface")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

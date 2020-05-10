@@ -13,12 +13,10 @@ trait ReferenceType extends js.Object
 
 object ReferenceType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def collapsed: typingsSlinky.reactMarkdown.reactMarkdownStrings.collapsed = "collapsed".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.collapsed]
   @scala.inline
-  def collapsed: typingsSlinky.reactMarkdown.reactMarkdownStrings.collapsed = this.cast("collapsed")
+  def full: typingsSlinky.reactMarkdown.reactMarkdownStrings.full = "full".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.full]
   @scala.inline
-  def full: typingsSlinky.reactMarkdown.reactMarkdownStrings.full = this.cast("full")
-  @scala.inline
-  def shortcut: typingsSlinky.reactMarkdown.reactMarkdownStrings.shortcut = this.cast("shortcut")
+  def shortcut: typingsSlinky.reactMarkdown.reactMarkdownStrings.shortcut = "shortcut".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.shortcut]
 }
 

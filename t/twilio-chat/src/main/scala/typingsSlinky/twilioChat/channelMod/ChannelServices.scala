@@ -11,14 +11,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChannelServices extends js.Object {
-  var consumptionHorizon: ConsumptionHorizon
-  var mcsClient: McsClient
-  var network: Network
-  var session: Session
-  var syncClient: SyncClient
-  var typingIndicator: TypingIndicator
-  var users: Users
+  var consumptionHorizon: ConsumptionHorizon = js.native
+  var mcsClient: McsClient = js.native
+  var network: Network = js.native
+  var session: Session = js.native
+  var syncClient: SyncClient = js.native
+  var typingIndicator: TypingIndicator = js.native
+  var users: Users = js.native
 }
 
 object ChannelServices {
@@ -33,8 +34,57 @@ object ChannelServices {
     users: Users
   ): ChannelServices = {
     val __obj = js.Dynamic.literal(consumptionHorizon = consumptionHorizon.asInstanceOf[js.Any], mcsClient = mcsClient.asInstanceOf[js.Any], network = network.asInstanceOf[js.Any], session = session.asInstanceOf[js.Any], syncClient = syncClient.asInstanceOf[js.Any], typingIndicator = typingIndicator.asInstanceOf[js.Any], users = users.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ChannelServices]
   }
+  @scala.inline
+  implicit class ChannelServicesOps[Self <: ChannelServices] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConsumptionHorizon(value: ConsumptionHorizon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("consumptionHorizon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMcsClient(value: McsClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mcsClient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNetwork(value: Network): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSession(value: Session): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSyncClient(value: SyncClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syncClient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypingIndicator(value: TypingIndicator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typingIndicator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsers(value: Users): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("users")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

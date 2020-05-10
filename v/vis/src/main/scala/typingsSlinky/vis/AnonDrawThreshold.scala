@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDrawThreshold extends js.Object {
-  var drawThreshold: js.UndefOr[Double] = js.undefined
-  var enabled: js.UndefOr[Boolean] = js.undefined
-  var max: js.UndefOr[Double] = js.undefined
-  var maxVisible: js.UndefOr[Double] = js.undefined
-  var min: js.UndefOr[Double] = js.undefined
+  var drawThreshold: js.UndefOr[Double] = js.native
+  var enabled: js.UndefOr[Boolean] = js.native
+  var max: js.UndefOr[Double] = js.native
+  var maxVisible: js.UndefOr[Double] = js.native
+  var min: js.UndefOr[Double] = js.native
 }
 
 object AnonDrawThreshold {
   @scala.inline
-  def apply(
-    drawThreshold: Int | Double = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    max: Int | Double = null,
-    maxVisible: Int | Double = null,
-    min: Int | Double = null
-  ): AnonDrawThreshold = {
+  def apply(): AnonDrawThreshold = {
     val __obj = js.Dynamic.literal()
-    if (drawThreshold != null) __obj.updateDynamic("drawThreshold")(drawThreshold.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maxVisible != null) __obj.updateDynamic("maxVisible")(maxVisible.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDrawThreshold]
   }
+  @scala.inline
+  implicit class AnonDrawThresholdOps[Self <: AnonDrawThreshold] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDrawThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrawThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxVisible(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxVisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

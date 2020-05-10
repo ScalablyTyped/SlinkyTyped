@@ -15,16 +15,14 @@ trait MeasurementType extends js.Object
 
 object MeasurementType {
   @scala.inline
-  def bounds: typingsSlinky.reactMeasure.reactMeasureStrings.bounds = this.cast("bounds")
+  def bounds: typingsSlinky.reactMeasure.reactMeasureStrings.bounds = "bounds".asInstanceOf[typingsSlinky.reactMeasure.reactMeasureStrings.bounds]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def client: typingsSlinky.reactMeasure.reactMeasureStrings.client = "client".asInstanceOf[typingsSlinky.reactMeasure.reactMeasureStrings.client]
   @scala.inline
-  def client: typingsSlinky.reactMeasure.reactMeasureStrings.client = this.cast("client")
+  def margin: typingsSlinky.reactMeasure.reactMeasureStrings.margin = "margin".asInstanceOf[typingsSlinky.reactMeasure.reactMeasureStrings.margin]
   @scala.inline
-  def margin: typingsSlinky.reactMeasure.reactMeasureStrings.margin = this.cast("margin")
+  def offset: typingsSlinky.reactMeasure.reactMeasureStrings.offset = "offset".asInstanceOf[typingsSlinky.reactMeasure.reactMeasureStrings.offset]
   @scala.inline
-  def offset: typingsSlinky.reactMeasure.reactMeasureStrings.offset = this.cast("offset")
-  @scala.inline
-  def scroll: typingsSlinky.reactMeasure.reactMeasureStrings.scroll = this.cast("scroll")
+  def scroll: typingsSlinky.reactMeasure.reactMeasureStrings.scroll = "scroll".asInstanceOf[typingsSlinky.reactMeasure.reactMeasureStrings.scroll]
 }
 

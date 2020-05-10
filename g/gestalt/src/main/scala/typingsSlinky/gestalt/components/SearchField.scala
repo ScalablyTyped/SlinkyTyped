@@ -1,40 +1,48 @@
 package typingsSlinky.gestalt.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.gestalt.Anon0
 import typingsSlinky.gestalt.AnonSyntheticEvent
+import typingsSlinky.gestalt.gestaltStrings.lg
+import typingsSlinky.gestalt.gestaltStrings.md
+import typingsSlinky.gestalt.gestaltStrings.name
+import typingsSlinky.gestalt.gestaltStrings.off
+import typingsSlinky.gestalt.gestaltStrings.on
+import typingsSlinky.gestalt.gestaltStrings.username
 import typingsSlinky.gestalt.mod.SearchFieldProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SearchField
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.SearchField] {
+object SearchField {
   @JSImport("gestalt", "SearchField")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: placeholder */
-  def apply(
-    accessibilityLabel: String,
-    id: String,
-    onChange: AnonSyntheticEvent => Unit,
-    onBlur: /* args */ Anon0 => Unit = null,
-    onFocus: /* args */ AnonSyntheticEvent => Unit = null,
-    value: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.SearchField] = {
-    val __obj = js.Dynamic.literal(accessibilityLabel = accessibilityLabel.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.gestalt.mod.SearchField] {
+    @scala.inline
+    def autoComplete(value: on | off | username | name): this.type = set("autoComplete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBlur(value: /* args */ Anon0 => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFocus(value: /* args */ AnonSyntheticEvent => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: md | lg): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  type Props = SearchFieldProps
+  
+  def withProps(p: SearchFieldProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(accessibilityLabel: String, id: String, onChange: AnonSyntheticEvent => Unit): Builder = {
+    val __props = js.Dynamic.literal(accessibilityLabel = accessibilityLabel.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[SearchFieldProps]))
+  }
 }
 

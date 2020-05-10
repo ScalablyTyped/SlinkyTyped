@@ -42,26 +42,113 @@ trait AvailabilityZone extends js.Object {
 
 object AvailabilityZone {
   @scala.inline
-  def apply(
-    GroupName: String = null,
-    Messages: AvailabilityZoneMessageList = null,
-    NetworkBorderGroup: String = null,
-    OptInStatus: AvailabilityZoneOptInStatus = null,
-    RegionName: String = null,
-    State: AvailabilityZoneState = null,
-    ZoneId: String = null,
-    ZoneName: String = null
-  ): AvailabilityZone = {
+  def apply(): AvailabilityZone = {
     val __obj = js.Dynamic.literal()
-    if (GroupName != null) __obj.updateDynamic("GroupName")(GroupName.asInstanceOf[js.Any])
-    if (Messages != null) __obj.updateDynamic("Messages")(Messages.asInstanceOf[js.Any])
-    if (NetworkBorderGroup != null) __obj.updateDynamic("NetworkBorderGroup")(NetworkBorderGroup.asInstanceOf[js.Any])
-    if (OptInStatus != null) __obj.updateDynamic("OptInStatus")(OptInStatus.asInstanceOf[js.Any])
-    if (RegionName != null) __obj.updateDynamic("RegionName")(RegionName.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
-    if (ZoneId != null) __obj.updateDynamic("ZoneId")(ZoneId.asInstanceOf[js.Any])
-    if (ZoneName != null) __obj.updateDynamic("ZoneName")(ZoneName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AvailabilityZone]
   }
+  @scala.inline
+  implicit class AvailabilityZoneOps[Self <: AvailabilityZone] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroupName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessages(value: AvailabilityZoneMessageList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Messages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Messages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkBorderGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkBorderGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkBorderGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkBorderGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptInStatus(value: AvailabilityZoneOptInStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptInStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptInStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptInStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: AvailabilityZoneState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoneId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZoneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoneId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZoneId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoneName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZoneName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoneName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZoneName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,18 +26,65 @@ trait EnvironmentInfoDescription extends js.Object {
 
 object EnvironmentInfoDescription {
   @scala.inline
-  def apply(
-    Ec2InstanceId: Ec2InstanceId = null,
-    InfoType: EnvironmentInfoType = null,
-    Message: Message = null,
-    SampleTimestamp: js.Date = null
-  ): EnvironmentInfoDescription = {
+  def apply(): EnvironmentInfoDescription = {
     val __obj = js.Dynamic.literal()
-    if (Ec2InstanceId != null) __obj.updateDynamic("Ec2InstanceId")(Ec2InstanceId.asInstanceOf[js.Any])
-    if (InfoType != null) __obj.updateDynamic("InfoType")(InfoType.asInstanceOf[js.Any])
-    if (Message != null) __obj.updateDynamic("Message")(Message.asInstanceOf[js.Any])
-    if (SampleTimestamp != null) __obj.updateDynamic("SampleTimestamp")(SampleTimestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnvironmentInfoDescription]
   }
+  @scala.inline
+  implicit class EnvironmentInfoDescriptionOps[Self <: EnvironmentInfoDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEc2InstanceId(value: Ec2InstanceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ec2InstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEc2InstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ec2InstanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInfoType(value: EnvironmentInfoType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InfoType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInfoType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InfoType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: Message): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleTimestamp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

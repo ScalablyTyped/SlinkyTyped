@@ -1,70 +1,64 @@
 package typingsSlinky.leafletDraw.mod.DrawOptions
 
-import typingsSlinky.leaflet.mod.DivIcon_
-import typingsSlinky.leaflet.mod.IconOptions
-import typingsSlinky.leaflet.mod.Icon_
-import typingsSlinky.leafletDraw.PolylineOptionsclickableb
 import typingsSlinky.leafletDraw.mod.PrecisionOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PolygonOptions extends PolylineOptions {
   /**
     * Defines the precision for each type of unit (e.g. {km: 2, ft: 0}
     *
     * @default {}
     */
-  var precision: js.UndefOr[PrecisionOptions] = js.undefined
+  var precision: js.UndefOr[PrecisionOptions] = js.native
   /**
     * Show the area of the drawn polygon in m², ha or km².
     * The area is only approximate and become less accurate the larger the polygon is.
     *
     * @default false
     */
-  var showArea: js.UndefOr[Boolean] = js.undefined
+  var showArea: js.UndefOr[Boolean] = js.native
 }
 
 object PolygonOptions {
   @scala.inline
-  def apply(
-    allowIntersection: js.UndefOr[Boolean] = js.undefined,
-    drawError: DrawErrorOptions = null,
-    factor: Int | Double = null,
-    feet: js.UndefOr[Boolean] = js.undefined,
-    guidelineDistance: Int | Double = null,
-    icon: Icon_[IconOptions] | DivIcon_ = null,
-    maxGuideLineLength: Int | Double = null,
-    maxPoints: Int | Double = null,
-    metric: js.UndefOr[Boolean] = js.undefined,
-    nautic: js.UndefOr[Boolean] = js.undefined,
-    precision: PrecisionOptions = null,
-    repeatMode: js.UndefOr[Boolean] = js.undefined,
-    shapeOptions: PolylineOptionsclickableb = null,
-    showArea: js.UndefOr[Boolean] = js.undefined,
-    showLength: js.UndefOr[Boolean] = js.undefined,
-    touchIcon: Icon_[IconOptions] | DivIcon_ = null,
-    zIndexOffset: Int | Double = null
-  ): PolygonOptions = {
+  def apply(): PolygonOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowIntersection)) __obj.updateDynamic("allowIntersection")(allowIntersection.asInstanceOf[js.Any])
-    if (drawError != null) __obj.updateDynamic("drawError")(drawError.asInstanceOf[js.Any])
-    if (factor != null) __obj.updateDynamic("factor")(factor.asInstanceOf[js.Any])
-    if (!js.isUndefined(feet)) __obj.updateDynamic("feet")(feet.asInstanceOf[js.Any])
-    if (guidelineDistance != null) __obj.updateDynamic("guidelineDistance")(guidelineDistance.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (maxGuideLineLength != null) __obj.updateDynamic("maxGuideLineLength")(maxGuideLineLength.asInstanceOf[js.Any])
-    if (maxPoints != null) __obj.updateDynamic("maxPoints")(maxPoints.asInstanceOf[js.Any])
-    if (!js.isUndefined(metric)) __obj.updateDynamic("metric")(metric.asInstanceOf[js.Any])
-    if (!js.isUndefined(nautic)) __obj.updateDynamic("nautic")(nautic.asInstanceOf[js.Any])
-    if (precision != null) __obj.updateDynamic("precision")(precision.asInstanceOf[js.Any])
-    if (!js.isUndefined(repeatMode)) __obj.updateDynamic("repeatMode")(repeatMode.asInstanceOf[js.Any])
-    if (shapeOptions != null) __obj.updateDynamic("shapeOptions")(shapeOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(showArea)) __obj.updateDynamic("showArea")(showArea.asInstanceOf[js.Any])
-    if (!js.isUndefined(showLength)) __obj.updateDynamic("showLength")(showLength.asInstanceOf[js.Any])
-    if (touchIcon != null) __obj.updateDynamic("touchIcon")(touchIcon.asInstanceOf[js.Any])
-    if (zIndexOffset != null) __obj.updateDynamic("zIndexOffset")(zIndexOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolygonOptions]
   }
+  @scala.inline
+  implicit class PolygonOptionsOps[Self <: PolygonOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPrecision(value: PrecisionOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrecision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowArea(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showArea")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

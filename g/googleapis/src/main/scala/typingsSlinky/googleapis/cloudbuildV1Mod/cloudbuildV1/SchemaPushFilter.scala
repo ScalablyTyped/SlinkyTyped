@@ -25,11 +25,41 @@ trait SchemaPushFilter extends js.Object {
 
 object SchemaPushFilter {
   @scala.inline
-  def apply(branch: String = null, tag: String = null): SchemaPushFilter = {
+  def apply(): SchemaPushFilter = {
     val __obj = js.Dynamic.literal()
-    if (branch != null) __obj.updateDynamic("branch")(branch.asInstanceOf[js.Any])
-    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPushFilter]
   }
+  @scala.inline
+  implicit class SchemaPushFilterOps[Self <: SchemaPushFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBranch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("branch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBranch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("branch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

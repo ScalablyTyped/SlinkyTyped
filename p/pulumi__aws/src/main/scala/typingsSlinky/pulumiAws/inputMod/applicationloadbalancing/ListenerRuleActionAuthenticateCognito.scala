@@ -44,23 +44,95 @@ trait ListenerRuleActionAuthenticateCognito extends js.Object {
 
 object ListenerRuleActionAuthenticateCognito {
   @scala.inline
-  def apply(
-    userPoolArn: Input[String],
-    userPoolClientId: Input[String],
-    userPoolDomain: Input[String],
-    authenticationRequestExtraParams: Input[StringDictionary[_]] = null,
-    onUnauthenticatedRequest: Input[String] = null,
-    scope: Input[String] = null,
-    sessionCookieName: Input[String] = null,
-    sessionTimeout: Input[Double] = null
-  ): ListenerRuleActionAuthenticateCognito = {
+  def apply(userPoolArn: Input[String], userPoolClientId: Input[String], userPoolDomain: Input[String]): ListenerRuleActionAuthenticateCognito = {
     val __obj = js.Dynamic.literal(userPoolArn = userPoolArn.asInstanceOf[js.Any], userPoolClientId = userPoolClientId.asInstanceOf[js.Any], userPoolDomain = userPoolDomain.asInstanceOf[js.Any])
-    if (authenticationRequestExtraParams != null) __obj.updateDynamic("authenticationRequestExtraParams")(authenticationRequestExtraParams.asInstanceOf[js.Any])
-    if (onUnauthenticatedRequest != null) __obj.updateDynamic("onUnauthenticatedRequest")(onUnauthenticatedRequest.asInstanceOf[js.Any])
-    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
-    if (sessionCookieName != null) __obj.updateDynamic("sessionCookieName")(sessionCookieName.asInstanceOf[js.Any])
-    if (sessionTimeout != null) __obj.updateDynamic("sessionTimeout")(sessionTimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListenerRuleActionAuthenticateCognito]
   }
+  @scala.inline
+  implicit class ListenerRuleActionAuthenticateCognitoOps[Self <: ListenerRuleActionAuthenticateCognito] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUserPoolArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userPoolArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserPoolClientId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userPoolClientId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserPoolDomain(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userPoolDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthenticationRequestExtraParams(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationRequestExtraParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthenticationRequestExtraParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationRequestExtraParams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnUnauthenticatedRequest(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUnauthenticatedRequest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnUnauthenticatedRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUnauthenticatedRequest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScope(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionCookieName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionCookieName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionCookieName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionCookieName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionTimeout(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionTimeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonHeight extends js.Object {
-  var caption: js.UndefOr[String] = js.undefined
-  var duration: js.UndefOr[Double] = js.undefined
-  var fileName: js.UndefOr[String] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var notification: js.UndefOr[Boolean] = js.undefined
-  var replyMarkup: js.UndefOr[js.Any] = js.undefined
-  var replyToMessage: js.UndefOr[Double] = js.undefined
-  var serverDownload: js.UndefOr[Boolean] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
+  var caption: js.UndefOr[String] = js.native
+  var duration: js.UndefOr[Double] = js.native
+  var fileName: js.UndefOr[String] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var notification: js.UndefOr[Boolean] = js.native
+  var replyMarkup: js.UndefOr[js.Any] = js.native
+  var replyToMessage: js.UndefOr[Double] = js.native
+  var serverDownload: js.UndefOr[Boolean] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object AnonHeight {
   @scala.inline
-  def apply(
-    caption: String = null,
-    duration: Int | Double = null,
-    fileName: String = null,
-    height: Int | Double = null,
-    notification: js.UndefOr[Boolean] = js.undefined,
-    replyMarkup: js.Any = null,
-    replyToMessage: Int | Double = null,
-    serverDownload: js.UndefOr[Boolean] = js.undefined,
-    width: Int | Double = null
-  ): AnonHeight = {
+  def apply(): AnonHeight = {
     val __obj = js.Dynamic.literal()
-    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (fileName != null) __obj.updateDynamic("fileName")(fileName.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(notification)) __obj.updateDynamic("notification")(notification.asInstanceOf[js.Any])
-    if (replyMarkup != null) __obj.updateDynamic("replyMarkup")(replyMarkup.asInstanceOf[js.Any])
-    if (replyToMessage != null) __obj.updateDynamic("replyToMessage")(replyToMessage.asInstanceOf[js.Any])
-    if (!js.isUndefined(serverDownload)) __obj.updateDynamic("serverDownload")(serverDownload.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonHeight]
   }
+  @scala.inline
+  implicit class AnonHeightOps[Self <: AnonHeight] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCaption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotification(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplyMarkup(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replyMarkup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplyMarkup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replyMarkup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplyToMessage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replyToMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplyToMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replyToMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerDownload(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverDownload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerDownload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverDownload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

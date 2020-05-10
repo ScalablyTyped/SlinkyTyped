@@ -1,5 +1,6 @@
 package typingsSlinky.emotionStyledBase
 
+import typingsSlinky.emotionStyledBase.mod.ReactClassPropKeys
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -285,6 +286,9 @@ object emotionStyledBaseStrings {
   sealed trait kbd extends js.Object
   
   @js.native
+  sealed trait key extends ReactClassPropKeys
+  
+  @js.native
   sealed trait keygen extends js.Object
   
   @js.native
@@ -399,6 +403,9 @@ object emotionStyledBaseStrings {
   sealed trait rect extends js.Object
   
   @js.native
+  sealed trait ref extends ReactClassPropKeys
+  
+  @js.native
   sealed trait rp extends js.Object
   
   @js.native
@@ -421,6 +428,9 @@ object emotionStyledBaseStrings {
   
   @js.native
   sealed trait select extends js.Object
+  
+  @js.native
+  sealed trait slot extends js.Object
   
   @js.native
   sealed trait small extends js.Object
@@ -714,6 +724,8 @@ object emotionStyledBaseStrings {
   @scala.inline
   def kbd: kbd = "kbd".asInstanceOf[kbd]
   @scala.inline
+  def key: key = "key".asInstanceOf[key]
+  @scala.inline
   def keygen: keygen = "keygen".asInstanceOf[keygen]
   @scala.inline
   def label: label = "label".asInstanceOf[label]
@@ -790,6 +802,8 @@ object emotionStyledBaseStrings {
   @scala.inline
   def rect: rect = "rect".asInstanceOf[rect]
   @scala.inline
+  def ref: ref = "ref".asInstanceOf[ref]
+  @scala.inline
   def rp: rp = "rp".asInstanceOf[rp]
   @scala.inline
   def rt: rt = "rt".asInstanceOf[rt]
@@ -805,6 +819,8 @@ object emotionStyledBaseStrings {
   def section: section = "section".asInstanceOf[section]
   @scala.inline
   def select: select = "select".asInstanceOf[select]
+  @scala.inline
+  def slot: slot = "slot".asInstanceOf[slot]
   @scala.inline
   def small: small = "small".asInstanceOf[small]
   @scala.inline

@@ -23,16 +23,53 @@ trait GetSessionTokenRequest extends TemporaryCredentialsOptions {
 
 object GetSessionTokenRequest {
   @scala.inline
-  def apply(
-    DurationSeconds: Int | Double = null,
-    SerialNumber: serialNumberType = null,
-    TokenCode: tokenCodeType = null
-  ): GetSessionTokenRequest = {
+  def apply(): GetSessionTokenRequest = {
     val __obj = js.Dynamic.literal()
-    if (DurationSeconds != null) __obj.updateDynamic("DurationSeconds")(DurationSeconds.asInstanceOf[js.Any])
-    if (SerialNumber != null) __obj.updateDynamic("SerialNumber")(SerialNumber.asInstanceOf[js.Any])
-    if (TokenCode != null) __obj.updateDynamic("TokenCode")(TokenCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSessionTokenRequest]
   }
+  @scala.inline
+  implicit class GetSessionTokenRequestOps[Self <: GetSessionTokenRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDurationSeconds(value: durationSecondsType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDurationSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSerialNumber(value: serialNumberType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SerialNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSerialNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SerialNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTokenCode(value: tokenCodeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TokenCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTokenCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TokenCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

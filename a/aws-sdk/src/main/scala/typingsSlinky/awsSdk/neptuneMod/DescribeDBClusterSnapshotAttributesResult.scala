@@ -11,10 +11,29 @@ trait DescribeDBClusterSnapshotAttributesResult extends js.Object {
 
 object DescribeDBClusterSnapshotAttributesResult {
   @scala.inline
-  def apply(DBClusterSnapshotAttributesResult: DBClusterSnapshotAttributesResult = null): DescribeDBClusterSnapshotAttributesResult = {
+  def apply(): DescribeDBClusterSnapshotAttributesResult = {
     val __obj = js.Dynamic.literal()
-    if (DBClusterSnapshotAttributesResult != null) __obj.updateDynamic("DBClusterSnapshotAttributesResult")(DBClusterSnapshotAttributesResult.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDBClusterSnapshotAttributesResult]
   }
+  @scala.inline
+  implicit class DescribeDBClusterSnapshotAttributesResultOps[Self <: DescribeDBClusterSnapshotAttributesResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDBClusterSnapshotAttributesResult(value: DBClusterSnapshotAttributesResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterSnapshotAttributesResult")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBClusterSnapshotAttributesResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterSnapshotAttributesResult")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

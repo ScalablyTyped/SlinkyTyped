@@ -20,26 +20,24 @@ trait TimeUnit extends js.Object
 
 object TimeUnit {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def date: typingsSlinky.vegaTypings.vegaTypingsStrings.date = "date".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.date]
   @scala.inline
-  def date: typingsSlinky.vegaTypings.vegaTypingsStrings.date = this.cast("date")
+  def day: typingsSlinky.vegaTypings.vegaTypingsStrings.day = "day".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.day]
   @scala.inline
-  def day: typingsSlinky.vegaTypings.vegaTypingsStrings.day = this.cast("day")
+  def hours: typingsSlinky.vegaTypings.vegaTypingsStrings.hours = "hours".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.hours]
   @scala.inline
-  def hours: typingsSlinky.vegaTypings.vegaTypingsStrings.hours = this.cast("hours")
+  def milliseconds: typingsSlinky.vegaTypings.vegaTypingsStrings.milliseconds = "milliseconds".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.milliseconds]
   @scala.inline
-  def milliseconds: typingsSlinky.vegaTypings.vegaTypingsStrings.milliseconds = this.cast("milliseconds")
+  def minutes: typingsSlinky.vegaTypings.vegaTypingsStrings.minutes = "minutes".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.minutes]
   @scala.inline
-  def minutes: typingsSlinky.vegaTypings.vegaTypingsStrings.minutes = this.cast("minutes")
+  def month: typingsSlinky.vegaTypings.vegaTypingsStrings.month = "month".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.month]
   @scala.inline
-  def month: typingsSlinky.vegaTypings.vegaTypingsStrings.month = this.cast("month")
+  def quarter: typingsSlinky.vegaTypings.vegaTypingsStrings.quarter = "quarter".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.quarter]
   @scala.inline
-  def quarter: typingsSlinky.vegaTypings.vegaTypingsStrings.quarter = this.cast("quarter")
+  def seconds: typingsSlinky.vegaTypings.vegaTypingsStrings.seconds = "seconds".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.seconds]
   @scala.inline
-  def seconds: typingsSlinky.vegaTypings.vegaTypingsStrings.seconds = this.cast("seconds")
+  def week: typingsSlinky.vegaTypings.vegaTypingsStrings.week = "week".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.week]
   @scala.inline
-  def week: typingsSlinky.vegaTypings.vegaTypingsStrings.week = this.cast("week")
-  @scala.inline
-  def year: typingsSlinky.vegaTypings.vegaTypingsStrings.year = this.cast("year")
+  def year: typingsSlinky.vegaTypings.vegaTypingsStrings.year = "year".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.year]
 }
 

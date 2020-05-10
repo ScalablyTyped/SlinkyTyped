@@ -26,18 +26,65 @@ trait DiskImageDescription extends js.Object {
 
 object DiskImageDescription {
   @scala.inline
-  def apply(
-    Checksum: String = null,
-    Format: DiskImageFormat = null,
-    ImportManifestUrl: String = null,
-    Size: Int | scala.Double = null
-  ): DiskImageDescription = {
+  def apply(): DiskImageDescription = {
     val __obj = js.Dynamic.literal()
-    if (Checksum != null) __obj.updateDynamic("Checksum")(Checksum.asInstanceOf[js.Any])
-    if (Format != null) __obj.updateDynamic("Format")(Format.asInstanceOf[js.Any])
-    if (ImportManifestUrl != null) __obj.updateDynamic("ImportManifestUrl")(ImportManifestUrl.asInstanceOf[js.Any])
-    if (Size != null) __obj.updateDynamic("Size")(Size.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiskImageDescription]
   }
+  @scala.inline
+  implicit class DiskImageDescriptionOps[Self <: DiskImageDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChecksum(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Checksum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChecksum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Checksum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: DiskImageFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImportManifestUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportManifestUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImportManifestUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportManifestUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

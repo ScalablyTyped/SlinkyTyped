@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UpdateConditionalFormatRuleRequest extends js.Object {
-  var index: js.UndefOr[Double] = js.undefined
-  var newIndex: js.UndefOr[Double] = js.undefined
-  var rule: js.UndefOr[ConditionalFormatRule] = js.undefined
-  var sheetId: js.UndefOr[Double] = js.undefined
+  var index: js.UndefOr[Double] = js.native
+  var newIndex: js.UndefOr[Double] = js.native
+  var rule: js.UndefOr[ConditionalFormatRule] = js.native
+  var sheetId: js.UndefOr[Double] = js.native
 }
 
 object UpdateConditionalFormatRuleRequest {
   @scala.inline
-  def apply(
-    index: Int | Double = null,
-    newIndex: Int | Double = null,
-    rule: ConditionalFormatRule = null,
-    sheetId: Int | Double = null
-  ): UpdateConditionalFormatRuleRequest = {
+  def apply(): UpdateConditionalFormatRuleRequest = {
     val __obj = js.Dynamic.literal()
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (newIndex != null) __obj.updateDynamic("newIndex")(newIndex.asInstanceOf[js.Any])
-    if (rule != null) __obj.updateDynamic("rule")(rule.asInstanceOf[js.Any])
-    if (sheetId != null) __obj.updateDynamic("sheetId")(sheetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateConditionalFormatRuleRequest]
   }
+  @scala.inline
+  implicit class UpdateConditionalFormatRuleRequestOps[Self <: UpdateConditionalFormatRuleRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRule(value: ConditionalFormatRule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSheetId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSheetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

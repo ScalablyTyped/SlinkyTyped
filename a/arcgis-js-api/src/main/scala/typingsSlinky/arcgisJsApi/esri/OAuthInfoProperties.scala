@@ -4,13 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OAuthInfoProperties extends js.Object {
   /**
     * The registered application id.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-identity-OAuthInfo.html#appId)
     */
-  var appId: js.UndefOr[String] = js.undefined
+  var appId: js.UndefOr[String] = js.native
   /**
     * Applications with the same value will share the stored token on the same host.
     *
@@ -18,7 +19,7 @@ trait OAuthInfoProperties extends js.Object {
     *
     * @default / (forward slash)
     */
-  var authNamespace: js.UndefOr[String] = js.undefined
+  var authNamespace: js.UndefOr[String] = js.native
   /**
     * The number of minutes that the token is valid.
     *
@@ -26,7 +27,7 @@ trait OAuthInfoProperties extends js.Object {
     *
     * @default 20160 (two weeks)
     */
-  var expiration: js.UndefOr[Double] = js.undefined
+  var expiration: js.UndefOr[Double] = js.native
   /**
     * The locale for the OAuth sign in page. The default locale is based on your browser/OS and the organization locale. You can use the locale property to change this. The locale needs to follow the language dash country code syntax supported by ArcGIS.com.
     *
@@ -34,7 +35,7 @@ trait OAuthInfoProperties extends js.Object {
     *
     * @default Based on your browser/OS and the organization locale.
     */
-  var locale: js.UndefOr[String] = js.undefined
+  var locale: js.UndefOr[String] = js.native
   /**
     * The minimum time in minutes before a saved token is due to expire that it should still be considered valid for use.
     *
@@ -42,7 +43,7 @@ trait OAuthInfoProperties extends js.Object {
     *
     * @default 30
     */
-  var minTimeUntilExpiration: js.UndefOr[Double] = js.undefined
+  var minTimeUntilExpiration: js.UndefOr[Double] = js.native
   /**
     * Set to `true` to show the OAuth sign in page in a popup window.
     *
@@ -50,7 +51,7 @@ trait OAuthInfoProperties extends js.Object {
     *
     * @default false
     */
-  var popup: js.UndefOr[Boolean] = js.undefined
+  var popup: js.UndefOr[Boolean] = js.native
   /**
     * Applicable if working with the popup user-login workflow. This is a relative page URL that redirects the user back to the secured application after successful login.
     *
@@ -58,7 +59,7 @@ trait OAuthInfoProperties extends js.Object {
     *
     * @default "oauth-callback.html"
     */
-  var popupCallbackUrl: js.UndefOr[String] = js.undefined
+  var popupCallbackUrl: js.UndefOr[String] = js.native
   /**
     * The window features passed to [window.open()](https://developer.mozilla.org/en-US/docs/Web/API/Window/open).
     *
@@ -66,7 +67,7 @@ trait OAuthInfoProperties extends js.Object {
     *
     * @default height=490,width=800,resizable,scrollbars,status
     */
-  var popupWindowFeatures: js.UndefOr[String] = js.undefined
+  var popupWindowFeatures: js.UndefOr[String] = js.native
   /**
     * The ArcGIS Enterprise portal URL.
     *
@@ -74,7 +75,7 @@ trait OAuthInfoProperties extends js.Object {
     *
     * @default "https://www.arcgis.com"
     */
-  var portalUrl: js.UndefOr[String] = js.undefined
+  var portalUrl: js.UndefOr[String] = js.native
   /**
     * Set this property to `true` when [popup](https://developers.arcgis.com/javascript/latest/api-reference/esri-identity-OAuthInfo.html#popup) is `false` in order to have the window's location hash value restored after signing in.
     *
@@ -82,35 +83,142 @@ trait OAuthInfoProperties extends js.Object {
     *
     * @default false
     */
-  var preserveUrlHash: js.UndefOr[Boolean] = js.undefined
+  var preserveUrlHash: js.UndefOr[Boolean] = js.native
 }
 
 object OAuthInfoProperties {
   @scala.inline
-  def apply(
-    appId: String = null,
-    authNamespace: String = null,
-    expiration: Int | Double = null,
-    locale: String = null,
-    minTimeUntilExpiration: Int | Double = null,
-    popup: js.UndefOr[Boolean] = js.undefined,
-    popupCallbackUrl: String = null,
-    popupWindowFeatures: String = null,
-    portalUrl: String = null,
-    preserveUrlHash: js.UndefOr[Boolean] = js.undefined
-  ): OAuthInfoProperties = {
+  def apply(): OAuthInfoProperties = {
     val __obj = js.Dynamic.literal()
-    if (appId != null) __obj.updateDynamic("appId")(appId.asInstanceOf[js.Any])
-    if (authNamespace != null) __obj.updateDynamic("authNamespace")(authNamespace.asInstanceOf[js.Any])
-    if (expiration != null) __obj.updateDynamic("expiration")(expiration.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (minTimeUntilExpiration != null) __obj.updateDynamic("minTimeUntilExpiration")(minTimeUntilExpiration.asInstanceOf[js.Any])
-    if (!js.isUndefined(popup)) __obj.updateDynamic("popup")(popup.asInstanceOf[js.Any])
-    if (popupCallbackUrl != null) __obj.updateDynamic("popupCallbackUrl")(popupCallbackUrl.asInstanceOf[js.Any])
-    if (popupWindowFeatures != null) __obj.updateDynamic("popupWindowFeatures")(popupWindowFeatures.asInstanceOf[js.Any])
-    if (portalUrl != null) __obj.updateDynamic("portalUrl")(portalUrl.asInstanceOf[js.Any])
-    if (!js.isUndefined(preserveUrlHash)) __obj.updateDynamic("preserveUrlHash")(preserveUrlHash.asInstanceOf[js.Any])
     __obj.asInstanceOf[OAuthInfoProperties]
   }
+  @scala.inline
+  implicit class OAuthInfoPropertiesOps[Self <: OAuthInfoProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthNamespace(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authNamespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthNamespace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authNamespace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpiration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpiration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinTimeUntilExpiration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minTimeUntilExpiration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinTimeUntilExpiration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minTimeUntilExpiration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopupCallbackUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupCallbackUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopupCallbackUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupCallbackUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopupWindowFeatures(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupWindowFeatures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopupWindowFeatures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupWindowFeatures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPortalUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portalUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPortalUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portalUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreserveUrlHash(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveUrlHash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreserveUrlHash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveUrlHash")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

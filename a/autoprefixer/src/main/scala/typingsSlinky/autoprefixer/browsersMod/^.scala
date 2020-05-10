@@ -1,0 +1,16 @@
+package typingsSlinky.autoprefixer.browsersMod
+
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.browserslist.mod.Options
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("autoprefixer/lib/browsers", JSImport.Namespace)
+@js.native
+class ^ protected () extends BrowsersImpl {
+  def this(data: StringDictionary[js.Any]) = this()
+  def this(data: StringDictionary[js.Any], options: js.Any) = this()
+  def this(data: StringDictionary[js.Any], options: js.Any, browserslistOpts: Options) = this()
+}
+

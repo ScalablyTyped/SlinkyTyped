@@ -5,14 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped / * import warning: parser.TsParser#tsDeclClass functionCall class extends from : CoreView.extend(ViewMixin, ActionSupport, ClassNamesSupport) * / any */ trait Component extends js.Object {
+- Dropped / * import warning: parser.TsParser#tsDeclClass functionCall class extends from : CoreView.extend(ViewMixin, ActionSupport, ClassNamesSupport) * / any */ @js.native
+trait Component extends js.Object {
   // properties
   /**
     * The WAI-ARIA role of the control represented by this view. For example, a button may have a
     * role of type 'button', or a pane may have a role of type 'alertdialog'. This property is
     * used by assistive software to help visually challenged users navigate rich web applications.
     */
-  var ariaRole: String
+  var ariaRole: String = js.native
   /**
     * The HTML id of the component's element in the DOM. You can provide this value yourself but
     * it must be unique (just as in HTML):
@@ -22,11 +23,11 @@ import scala.scalajs.js.annotation._
     * to compute a dynamic value for the elementId, you should do this when the component or
     * element is being instantiated:
     */
-  var elementId: String
+  var elementId: String = js.native
   /**
     * If false, the view will appear hidden in DOM.
     */
-  var isVisible: Boolean
+  var isVisible: Boolean = js.native
   /**
     * A component may contain a layout. A layout is a regular template but supersedes the template
     * property during rendering. It is the responsibility of the layout template to retrieve the
@@ -35,39 +36,39 @@ import scala.scalajs.js.annotation._
     * shared wrapper, but which delegates the rendering of the contents of the wrapper to the
     * template property on a subclass.
     */
-  var layout: TemplateFactory | String
+  var layout: TemplateFactory | String = js.native
   // events
   /**
     * Called when the attributes passed into the component have been updated. Called both during the
     * initial render of a container and during a rerender. Can be used in place of an observer; code
     * placed here will be executed every time any attribute updates.
     */
-  def didReceiveAttrs(): Unit
+  def didReceiveAttrs(): Unit = js.native
   /**
     * Called after a component has been rendered, both on initial render and in subsequent rerenders.
     */
-  def didRender(): Unit
+  def didRender(): Unit = js.native
   /**
     * Called when the component has updated and rerendered itself. Called only during a rerender,
     * not during an initial render.
     */
-  def didUpdate(): Unit
+  def didUpdate(): Unit = js.native
   /**
     * Called when the attributes passed into the component have been changed. Called only during a
     * rerender, not during an initial render.
     */
-  def didUpdateAttrs(): Unit
+  def didUpdateAttrs(): Unit = js.native
   // methods
-  def readDOMAttr(name: String): String
+  def readDOMAttr(name: String): String = js.native
   /**
     * Called before a component has been rendered, both on initial render and in subsequent rerenders.
     */
-  def willRender(): Unit
+  def willRender(): Unit = js.native
   /**
     * Called when the component is about to update and rerender itself. Called only during a rerender,
     * not during an initial render.
     */
-  def willUpdate(): Unit
+  def willUpdate(): Unit = js.native
 }
 
 object Component {
@@ -86,8 +87,81 @@ object Component {
     willUpdate: () => Unit
   ): Component = {
     val __obj = js.Dynamic.literal(ariaRole = ariaRole.asInstanceOf[js.Any], didReceiveAttrs = js.Any.fromFunction0(didReceiveAttrs), didRender = js.Any.fromFunction0(didRender), didUpdate = js.Any.fromFunction0(didUpdate), didUpdateAttrs = js.Any.fromFunction0(didUpdateAttrs), elementId = elementId.asInstanceOf[js.Any], isVisible = isVisible.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any], readDOMAttr = js.Any.fromFunction1(readDOMAttr), willRender = js.Any.fromFunction0(willRender), willUpdate = js.Any.fromFunction0(willUpdate))
-  
     __obj.asInstanceOf[Component]
   }
+  @scala.inline
+  implicit class ComponentOps[Self <: Component] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAriaRole(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDidReceiveAttrs(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("didReceiveAttrs")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDidRender(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("didRender")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDidUpdate(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("didUpdate")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDidUpdateAttrs(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("didUpdateAttrs")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withElementId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLayout(value: TemplateFactory | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReadDOMAttr(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readDOMAttr")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWillRender(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("willRender")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withWillUpdate(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("willUpdate")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

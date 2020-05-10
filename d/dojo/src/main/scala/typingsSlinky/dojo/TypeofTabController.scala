@@ -7,6 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TypeofTabController extends js.Object {
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/layout/TabController.TabButton.html
@@ -19,7 +20,7 @@ trait TypeofTabController extends js.Object {
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
     typingsSlinky.dojo.dijit.layout.TabController.TabButton
-  ]
+  ] = js.native
 }
 
 object TypeofTabController {
@@ -32,8 +33,27 @@ object TypeofTabController {
     ]
   ): TypeofTabController = {
     val __obj = js.Dynamic.literal(TabButton = TabButton.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TypeofTabController]
   }
+  @scala.inline
+  implicit class TypeofTabControllerOps[Self <: TypeofTabController] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTabButton(
+      value: Instantiable2[
+          js.UndefOr[/* params */ js.Object], 
+          js.UndefOr[/* srcNodeRef */ HTMLElement], 
+          TabButton
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TabButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -18,11 +18,41 @@ trait ListFargateProfilesResponse extends js.Object {
 
 object ListFargateProfilesResponse {
   @scala.inline
-  def apply(fargateProfileNames: StringList = null, nextToken: String = null): ListFargateProfilesResponse = {
+  def apply(): ListFargateProfilesResponse = {
     val __obj = js.Dynamic.literal()
-    if (fargateProfileNames != null) __obj.updateDynamic("fargateProfileNames")(fargateProfileNames.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListFargateProfilesResponse]
   }
+  @scala.inline
+  implicit class ListFargateProfilesResponseOps[Self <: ListFargateProfilesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFargateProfileNames(value: StringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fargateProfileNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFargateProfileNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fargateProfileNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

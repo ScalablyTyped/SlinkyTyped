@@ -15,10 +15,10 @@ trait AnonHandleAction[TState, TRootAction /* <: Action[TypeConstant] */] extend
   def handleAction[TType /* <: /* import warning: importer.ImportType#apply Failed type conversion: TRootAction['type'] */ js.Any */, TCreator /* <: js.Function1[/* repeated */ js.Any, TRootAction] */, TNextNotHandledAction /* <: Exclude[TRootAction, Action[TType] with ReturnType[TCreator]] */, TAction /* <: TRootAction */](
     singleOrMultipleCreatorsAndTypes: TCreator | TType,
     reducer: js.Function2[/* state */ TState, /* action */ TAction, TState]
-  ): ((Reducer[TState, TRootAction]) with (AnonHandleActionHandlers[TRootAction, TNextNotHandledAction, TState])) | ((Reducer[TState, TRootAction]) with (AnonHandlers[TRootAction, TState])) = js.native
+  ): ((Reducer[TState, TRootAction]) with (AnonHandleActionHandlers[TRootAction, TNextNotHandledAction, TState, TRootAction, TType, TCreator])) | ((Reducer[TState, TRootAction]) with (AnonHandlers[TRootAction, TState])) = js.native
   def handleAction[TType /* <: /* import warning: importer.ImportType#apply Failed type conversion: TRootAction['type'] */ js.Any */, TCreator /* <: js.Function1[/* repeated */ js.Any, TRootAction] */, TNextNotHandledAction /* <: Exclude[TRootAction, Action[TType] with ReturnType[TCreator]] */, TAction /* <: TRootAction */](
     singleOrMultipleCreatorsAndTypes: js.Array[TCreator | TType],
     reducer: js.Function2[/* state */ TState, /* action */ TAction, TState]
-  ): ((Reducer[TState, TRootAction]) with (AnonHandleActionHandlers[TRootAction, TNextNotHandledAction, TState])) | ((Reducer[TState, TRootAction]) with (AnonHandlers[TRootAction, TState])) = js.native
+  ): ((Reducer[TState, TRootAction]) with (AnonHandleActionHandlers[TRootAction, TNextNotHandledAction, TState, TRootAction, TType, TCreator])) | ((Reducer[TState, TRootAction]) with (AnonHandlers[TRootAction, TState])) = js.native
 }
 

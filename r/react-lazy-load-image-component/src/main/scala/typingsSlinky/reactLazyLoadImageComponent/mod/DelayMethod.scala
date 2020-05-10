@@ -12,10 +12,8 @@ trait DelayMethod extends js.Object
 
 object DelayMethod {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def debounce: typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.debounce = "debounce".asInstanceOf[typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.debounce]
   @scala.inline
-  def debounce: typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.debounce = this.cast("debounce")
-  @scala.inline
-  def throttle: typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.throttle = this.cast("throttle")
+  def throttle: typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.throttle = "throttle".asInstanceOf[typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.throttle]
 }
 

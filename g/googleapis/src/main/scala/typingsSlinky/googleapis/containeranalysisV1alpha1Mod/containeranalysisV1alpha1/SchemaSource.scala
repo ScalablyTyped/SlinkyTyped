@@ -48,22 +48,89 @@ trait SchemaSource extends js.Object {
 
 object SchemaSource {
   @scala.inline
-  def apply(
-    additionalContexts: js.Array[SchemaGoogleDevtoolsContaineranalysisV1alpha1SourceContext] = null,
-    artifactStorageSource: SchemaStorageSource = null,
-    context: SchemaGoogleDevtoolsContaineranalysisV1alpha1SourceContext = null,
-    fileHashes: StringDictionary[SchemaFileHashes] = null,
-    repoSource: SchemaRepoSource = null,
-    storageSource: SchemaStorageSource = null
-  ): SchemaSource = {
+  def apply(): SchemaSource = {
     val __obj = js.Dynamic.literal()
-    if (additionalContexts != null) __obj.updateDynamic("additionalContexts")(additionalContexts.asInstanceOf[js.Any])
-    if (artifactStorageSource != null) __obj.updateDynamic("artifactStorageSource")(artifactStorageSource.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (fileHashes != null) __obj.updateDynamic("fileHashes")(fileHashes.asInstanceOf[js.Any])
-    if (repoSource != null) __obj.updateDynamic("repoSource")(repoSource.asInstanceOf[js.Any])
-    if (storageSource != null) __obj.updateDynamic("storageSource")(storageSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSource]
   }
+  @scala.inline
+  implicit class SchemaSourceOps[Self <: SchemaSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdditionalContexts(value: js.Array[SchemaGoogleDevtoolsContaineranalysisV1alpha1SourceContext]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalContexts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalContexts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalContexts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArtifactStorageSource(value: SchemaStorageSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactStorageSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArtifactStorageSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactStorageSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContext(value: SchemaGoogleDevtoolsContaineranalysisV1alpha1SourceContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileHashes(value: StringDictionary[SchemaFileHashes]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileHashes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileHashes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileHashes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepoSource(value: SchemaRepoSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repoSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepoSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repoSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStorageSource(value: SchemaStorageSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storageSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorageSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storageSource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

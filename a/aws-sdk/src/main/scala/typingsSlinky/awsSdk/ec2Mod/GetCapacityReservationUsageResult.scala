@@ -38,24 +38,101 @@ trait GetCapacityReservationUsageResult extends js.Object {
 
 object GetCapacityReservationUsageResult {
   @scala.inline
-  def apply(
-    AvailableInstanceCount: Int | scala.Double = null,
-    CapacityReservationId: String = null,
-    InstanceType: String = null,
-    InstanceUsages: InstanceUsageSet = null,
-    NextToken: String = null,
-    State: CapacityReservationState = null,
-    TotalInstanceCount: Int | scala.Double = null
-  ): GetCapacityReservationUsageResult = {
+  def apply(): GetCapacityReservationUsageResult = {
     val __obj = js.Dynamic.literal()
-    if (AvailableInstanceCount != null) __obj.updateDynamic("AvailableInstanceCount")(AvailableInstanceCount.asInstanceOf[js.Any])
-    if (CapacityReservationId != null) __obj.updateDynamic("CapacityReservationId")(CapacityReservationId.asInstanceOf[js.Any])
-    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
-    if (InstanceUsages != null) __obj.updateDynamic("InstanceUsages")(InstanceUsages.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
-    if (TotalInstanceCount != null) __obj.updateDynamic("TotalInstanceCount")(TotalInstanceCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCapacityReservationUsageResult]
   }
+  @scala.inline
+  implicit class GetCapacityReservationUsageResultOps[Self <: GetCapacityReservationUsageResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailableInstanceCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableInstanceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailableInstanceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableInstanceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCapacityReservationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CapacityReservationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapacityReservationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CapacityReservationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceUsages(value: InstanceUsageSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceUsages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceUsages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceUsages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: CapacityReservationState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalInstanceCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalInstanceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalInstanceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalInstanceCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

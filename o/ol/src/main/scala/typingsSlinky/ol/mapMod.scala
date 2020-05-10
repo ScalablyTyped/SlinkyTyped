@@ -43,7 +43,7 @@ object mapMod extends js.Object {
       callback: js.ThisFunction2[
           /* this */ S, 
           /* p0 */ typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default], 
-          /* p1 */ scala.scalajs.js.typedarray.Uint8ClampedArray | scala.scalajs.js.typedarray.Uint8Array, 
+          /* p1 */ js.typedarray.Uint8ClampedArray | js.typedarray.Uint8Array, 
           T
         ],
       layerFilter: js.ThisFunction1[

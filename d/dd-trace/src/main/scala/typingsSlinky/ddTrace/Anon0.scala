@@ -7,6 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Anon0 extends js.Object {
   /**
     * Hook to execute just before the request span finishes.
@@ -18,17 +19,36 @@ trait Anon0 extends js.Object {
       /* res */ js.UndefOr[IncomingMessage], 
       _
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object Anon0 {
   @scala.inline
-  def apply(
-    request: (/* span */ js.UndefOr[Span], /* req */ js.UndefOr[ClientRequest], /* res */ js.UndefOr[IncomingMessage]) => _ = null
-  ): Anon0 = {
+  def apply(): Anon0 = {
     val __obj = js.Dynamic.literal()
-    if (request != null) __obj.updateDynamic("request")(js.Any.fromFunction3(request))
     __obj.asInstanceOf[Anon0]
   }
+  @scala.inline
+  implicit class Anon0Ops[Self <: Anon0] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRequest(
+      value: (/* span */ js.UndefOr[Span], /* req */ js.UndefOr[ClientRequest], /* res */ js.UndefOr[IncomingMessage]) => _
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

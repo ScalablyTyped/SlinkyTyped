@@ -57,28 +57,125 @@ trait SchemaOperationMetadata extends js.Object {
 
 object SchemaOperationMetadata {
   @scala.inline
-  def apply(
-    clientId: String = null,
-    createTime: String = null,
-    endTime: String = null,
-    events: js.Array[SchemaOperationEvent] = null,
-    labels: StringDictionary[String] = null,
-    projectId: String = null,
-    request: StringDictionary[js.Any] = null,
-    runtimeMetadata: StringDictionary[js.Any] = null,
-    startTime: String = null
-  ): SchemaOperationMetadata = {
+  def apply(): SchemaOperationMetadata = {
     val __obj = js.Dynamic.literal()
-    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
-    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
-    if (endTime != null) __obj.updateDynamic("endTime")(endTime.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
-    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
-    if (runtimeMetadata != null) __obj.updateDynamic("runtimeMetadata")(runtimeMetadata.asInstanceOf[js.Any])
-    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOperationMetadata]
   }
+  @scala.inline
+  implicit class SchemaOperationMetadataOps[Self <: SchemaOperationMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvents(value: js.Array[SchemaOperationEvent]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequest(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuntimeMetadata(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuntimeMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

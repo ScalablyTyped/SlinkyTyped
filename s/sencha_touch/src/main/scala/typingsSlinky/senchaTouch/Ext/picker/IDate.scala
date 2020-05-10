@@ -5,47 +5,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IDate extends IPicker {
   /** [Config Option] (String) */
-  var dayText: js.UndefOr[String] = js.undefined
+  var dayText: js.UndefOr[String] = js.native
   /** [Method] Returns the value of dayText
   		* @returns String
   		*/
-  var getDayText: js.UndefOr[js.Function0[String]] = js.undefined
+  var getDayText: js.UndefOr[js.Function0[String]] = js.native
   /** [Method] Returns the value of monthText
   		* @returns String
   		*/
-  var getMonthText: js.UndefOr[js.Function0[String]] = js.undefined
+  var getMonthText: js.UndefOr[js.Function0[String]] = js.native
   /** [Method] Returns the value of slotOrder
   		* @returns Array
   		*/
-  var getSlotOrder: js.UndefOr[js.Function0[Array]] = js.undefined
+  var getSlotOrder: js.UndefOr[js.Function0[Array]] = js.native
   /** [Method] Returns the value of yearFrom
   		* @returns Number
   		*/
-  var getYearFrom: js.UndefOr[js.Function0[Double]] = js.undefined
+  var getYearFrom: js.UndefOr[js.Function0[Double]] = js.native
   /** [Method] Returns the value of yearText
   		* @returns String
   		*/
-  var getYearText: js.UndefOr[js.Function0[String]] = js.undefined
+  var getYearText: js.UndefOr[js.Function0[String]] = js.native
   /** [Method] Returns the value of yearTo
   		* @returns Number
   		*/
-  var getYearTo: js.UndefOr[js.Function0[Double]] = js.undefined
+  var getYearTo: js.UndefOr[js.Function0[Double]] = js.native
   /** [Config Option] (String) */
-  var monthText: js.UndefOr[String] = js.undefined
+  var monthText: js.UndefOr[String] = js.native
   /** [Method] Sets the value of dayText
   		* @param dayText String The new value.
   		*/
-  var setDayText: js.UndefOr[js.Function1[/* dayText */ js.UndefOr[String], Unit]] = js.undefined
+  var setDayText: js.UndefOr[js.Function1[/* dayText */ js.UndefOr[String], Unit]] = js.native
   /** [Method] Sets the value of monthText
   		* @param monthText String The new value.
   		*/
-  var setMonthText: js.UndefOr[js.Function1[/* monthText */ js.UndefOr[String], Unit]] = js.undefined
+  var setMonthText: js.UndefOr[js.Function1[/* monthText */ js.UndefOr[String], Unit]] = js.native
   /** [Method] Sets the value of slotOrder
   		* @param slotOrder Array The new value.
   		*/
-  var setSlotOrder: js.UndefOr[js.Function1[/* slotOrder */ js.UndefOr[Array], Unit]] = js.undefined
+  var setSlotOrder: js.UndefOr[js.Function1[/* slotOrder */ js.UndefOr[Array], Unit]] = js.native
   /** [Method] Sets the values of the pickers slots
   		* @param value Object
   		* @param animated Object
@@ -58,107 +59,354 @@ trait IDate extends IPicker {
       /* animated */ js.UndefOr[js.Any], 
       typingsSlinky.senchaTouch.Ext.IPicker
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Sets the value of yearFrom
   		* @param yearFrom Number The new value.
   		*/
-  var setYearFrom: js.UndefOr[js.Function1[/* yearFrom */ js.UndefOr[Double], Unit]] = js.undefined
+  var setYearFrom: js.UndefOr[js.Function1[/* yearFrom */ js.UndefOr[Double], Unit]] = js.native
   /** [Method] Sets the value of yearText
   		* @param yearText String The new value.
   		*/
-  var setYearText: js.UndefOr[js.Function1[/* yearText */ js.UndefOr[String], Unit]] = js.undefined
+  var setYearText: js.UndefOr[js.Function1[/* yearText */ js.UndefOr[String], Unit]] = js.native
   /** [Method] Sets the value of yearTo
   		* @param yearTo Number The new value.
   		*/
-  var setYearTo: js.UndefOr[js.Function1[/* yearTo */ js.UndefOr[Double], Unit]] = js.undefined
+  var setYearTo: js.UndefOr[js.Function1[/* yearTo */ js.UndefOr[Double], Unit]] = js.native
   /** [Config Option] (Array) */
-  var slotOrder: js.UndefOr[Array] = js.undefined
+  var slotOrder: js.UndefOr[Array] = js.native
   /** [Method] Updates the dayText configuration
   		* @param newDayText Object
   		* @param oldDayText Object
   		*/
   var updateDayText: js.UndefOr[
     js.Function2[/* newDayText */ js.UndefOr[js.Any], /* oldDayText */ js.UndefOr[js.Any], Unit]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Updates the monthText configuration
   		* @param newMonthText Object
   		* @param oldMonthText Object
   		*/
   var updateMonthText: js.UndefOr[
     js.Function2[/* newMonthText */ js.UndefOr[js.Any], /* oldMonthText */ js.UndefOr[js.Any], Unit]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Updates the yearFrom configuration */
-  var updateYearFrom: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var updateYearFrom: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Updates the yearText configuration
   		* @param yearText Object
   		*/
-  var updateYearText: js.UndefOr[js.Function1[/* yearText */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var updateYearText: js.UndefOr[js.Function1[/* yearText */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Updates the yearTo configuration */
-  var updateYearTo: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var updateYearTo: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Config Option] (Number) */
-  var yearFrom: js.UndefOr[Double] = js.undefined
+  var yearFrom: js.UndefOr[Double] = js.native
   /** [Config Option] (String) */
-  var yearText: js.UndefOr[String] = js.undefined
+  var yearText: js.UndefOr[String] = js.native
   /** [Config Option] (Number) */
-  var yearTo: js.UndefOr[Double] = js.undefined
+  var yearTo: js.UndefOr[Double] = js.native
 }
 
 object IDate {
   @scala.inline
-  def apply(
-    IPicker: IPicker = null,
-    dayText: String = null,
-    getDayText: () => String = null,
-    getMonthText: () => String = null,
-    getSlotOrder: () => Array = null,
-    getYearFrom: () => Double = null,
-    getYearText: () => String = null,
-    getYearTo: () => Double = null,
-    monthText: String = null,
-    setDayText: /* dayText */ js.UndefOr[String] => Unit = null,
-    setMonthText: /* monthText */ js.UndefOr[String] => Unit = null,
-    setSlotOrder: /* slotOrder */ js.UndefOr[Array] => Unit = null,
-    setValue: (/* value */ js.UndefOr[js.Any], /* animated */ js.UndefOr[js.Any]) => typingsSlinky.senchaTouch.Ext.IPicker = null,
-    setYearFrom: /* yearFrom */ js.UndefOr[Double] => Unit = null,
-    setYearText: /* yearText */ js.UndefOr[String] => Unit = null,
-    setYearTo: /* yearTo */ js.UndefOr[Double] => Unit = null,
-    slotOrder: Array = null,
-    updateDayText: (/* newDayText */ js.UndefOr[js.Any], /* oldDayText */ js.UndefOr[js.Any]) => Unit = null,
-    updateMonthText: (/* newMonthText */ js.UndefOr[js.Any], /* oldMonthText */ js.UndefOr[js.Any]) => Unit = null,
-    updateYearFrom: () => Unit = null,
-    updateYearText: /* yearText */ js.UndefOr[js.Any] => Unit = null,
-    updateYearTo: () => Unit = null,
-    yearFrom: Int | Double = null,
-    yearText: String = null,
-    yearTo: Int | Double = null
-  ): IDate = {
+  def apply(): IDate = {
     val __obj = js.Dynamic.literal()
-    if (IPicker != null) js.Dynamic.global.Object.assign(__obj, IPicker)
-    if (dayText != null) __obj.updateDynamic("dayText")(dayText.asInstanceOf[js.Any])
-    if (getDayText != null) __obj.updateDynamic("getDayText")(js.Any.fromFunction0(getDayText))
-    if (getMonthText != null) __obj.updateDynamic("getMonthText")(js.Any.fromFunction0(getMonthText))
-    if (getSlotOrder != null) __obj.updateDynamic("getSlotOrder")(js.Any.fromFunction0(getSlotOrder))
-    if (getYearFrom != null) __obj.updateDynamic("getYearFrom")(js.Any.fromFunction0(getYearFrom))
-    if (getYearText != null) __obj.updateDynamic("getYearText")(js.Any.fromFunction0(getYearText))
-    if (getYearTo != null) __obj.updateDynamic("getYearTo")(js.Any.fromFunction0(getYearTo))
-    if (monthText != null) __obj.updateDynamic("monthText")(monthText.asInstanceOf[js.Any])
-    if (setDayText != null) __obj.updateDynamic("setDayText")(js.Any.fromFunction1(setDayText))
-    if (setMonthText != null) __obj.updateDynamic("setMonthText")(js.Any.fromFunction1(setMonthText))
-    if (setSlotOrder != null) __obj.updateDynamic("setSlotOrder")(js.Any.fromFunction1(setSlotOrder))
-    if (setValue != null) __obj.updateDynamic("setValue")(js.Any.fromFunction2(setValue))
-    if (setYearFrom != null) __obj.updateDynamic("setYearFrom")(js.Any.fromFunction1(setYearFrom))
-    if (setYearText != null) __obj.updateDynamic("setYearText")(js.Any.fromFunction1(setYearText))
-    if (setYearTo != null) __obj.updateDynamic("setYearTo")(js.Any.fromFunction1(setYearTo))
-    if (slotOrder != null) __obj.updateDynamic("slotOrder")(slotOrder.asInstanceOf[js.Any])
-    if (updateDayText != null) __obj.updateDynamic("updateDayText")(js.Any.fromFunction2(updateDayText))
-    if (updateMonthText != null) __obj.updateDynamic("updateMonthText")(js.Any.fromFunction2(updateMonthText))
-    if (updateYearFrom != null) __obj.updateDynamic("updateYearFrom")(js.Any.fromFunction0(updateYearFrom))
-    if (updateYearText != null) __obj.updateDynamic("updateYearText")(js.Any.fromFunction1(updateYearText))
-    if (updateYearTo != null) __obj.updateDynamic("updateYearTo")(js.Any.fromFunction0(updateYearTo))
-    if (yearFrom != null) __obj.updateDynamic("yearFrom")(yearFrom.asInstanceOf[js.Any])
-    if (yearText != null) __obj.updateDynamic("yearText")(yearText.asInstanceOf[js.Any])
-    if (yearTo != null) __obj.updateDynamic("yearTo")(yearTo.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDate]
   }
+  @scala.inline
+  implicit class IDateOps[Self <: IDate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDayText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDayText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetDayText(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDayText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetDayText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDayText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetMonthText(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMonthText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetMonthText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMonthText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetSlotOrder(value: () => Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSlotOrder")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetSlotOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSlotOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetYearFrom(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getYearFrom")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetYearFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getYearFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetYearText(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getYearText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetYearText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getYearText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetYearTo(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getYearTo")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetYearTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getYearTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonthText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monthText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonthText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monthText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetDayText(value: /* dayText */ js.UndefOr[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDayText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetDayText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDayText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetMonthText(value: /* monthText */ js.UndefOr[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMonthText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetMonthText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMonthText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetSlotOrder(value: /* slotOrder */ js.UndefOr[Array] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSlotOrder")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetSlotOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSlotOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetValue(
+      value: (/* value */ js.UndefOr[js.Any], /* animated */ js.UndefOr[js.Any]) => typingsSlinky.senchaTouch.Ext.IPicker
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setValue")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetYearFrom(value: /* yearFrom */ js.UndefOr[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setYearFrom")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetYearFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setYearFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetYearText(value: /* yearText */ js.UndefOr[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setYearText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetYearText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setYearText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetYearTo(value: /* yearTo */ js.UndefOr[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setYearTo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetYearTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setYearTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlotOrder(value: Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slotOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlotOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slotOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateDayText(value: (/* newDayText */ js.UndefOr[js.Any], /* oldDayText */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDayText")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutUpdateDayText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDayText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateMonthText(value: (/* newMonthText */ js.UndefOr[js.Any], /* oldMonthText */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMonthText")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutUpdateMonthText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMonthText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateYearFrom(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateYearFrom")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutUpdateYearFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateYearFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateYearText(value: /* yearText */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateYearText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutUpdateYearText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateYearText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateYearTo(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateYearTo")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutUpdateYearTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateYearTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYearFrom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yearFrom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYearFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yearFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYearText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yearText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYearText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yearText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYearTo(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yearTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYearTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yearTo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

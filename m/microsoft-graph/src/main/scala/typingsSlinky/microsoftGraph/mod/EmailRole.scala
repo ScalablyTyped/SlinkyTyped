@@ -15,14 +15,12 @@ trait EmailRole extends js.Object
 
 object EmailRole {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def recipient: typingsSlinky.microsoftGraph.microsoftGraphStrings.recipient = "recipient".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.recipient]
   @scala.inline
-  def recipient: typingsSlinky.microsoftGraph.microsoftGraphStrings.recipient = this.cast("recipient")
+  def sender: typingsSlinky.microsoftGraph.microsoftGraphStrings.sender = "sender".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.sender]
   @scala.inline
-  def sender: typingsSlinky.microsoftGraph.microsoftGraphStrings.sender = this.cast("sender")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
   @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
-  @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
 }
 

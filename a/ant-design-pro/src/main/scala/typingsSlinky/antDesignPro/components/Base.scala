@@ -1,19 +1,23 @@
 package typingsSlinky.antDesignPro.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Could't extract props from TypeRef(QualifiedName(IArray(Name(T))),IArray(),NoComments) because couldn't resolve ClassTree. */
-object Base
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.antDesignPro.bizchartsMod.Base[js.Any]] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Could't extract props from T because couldn't resolve ClassTree. */
+object Base {
   @JSImport("ant-design-pro/lib/Charts/bizcharts", "Base")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = js.Any
+  @scala.inline
+  class Builder[T] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.bizchartsMod.Base[js.Any]]
+  
+  def apply[T](p: T): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[T](companion: Base.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

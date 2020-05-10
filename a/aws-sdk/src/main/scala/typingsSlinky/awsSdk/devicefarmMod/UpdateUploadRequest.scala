@@ -26,17 +26,59 @@ trait UpdateUploadRequest extends js.Object {
 
 object UpdateUploadRequest {
   @scala.inline
-  def apply(
-    arn: AmazonResourceName,
-    contentType: ContentType = null,
-    editContent: js.UndefOr[scala.Boolean] = js.undefined,
-    name: Name = null
-  ): UpdateUploadRequest = {
+  def apply(arn: AmazonResourceName): UpdateUploadRequest = {
     val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any])
-    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
-    if (!js.isUndefined(editContent)) __obj.updateDynamic("editContent")(editContent.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateUploadRequest]
   }
+  @scala.inline
+  implicit class UpdateUploadRequestOps[Self <: UpdateUploadRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: AmazonResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentType(value: ContentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditContent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEditContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

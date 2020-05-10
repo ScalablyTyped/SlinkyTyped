@@ -5,29 +5,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FindAllParams extends PaginationParams {
-  var archived: js.UndefOr[Boolean] = js.undefined
-  var team: js.UndefOr[Double] = js.undefined
+  var archived: js.UndefOr[Boolean] = js.native
+  var team: js.UndefOr[Double] = js.native
 }
 
 object FindAllParams {
   @scala.inline
-  def apply(
-    archived: js.UndefOr[Boolean] = js.undefined,
-    limit: Int | Double = null,
-    offset: String = null,
-    opt_expand: String = null,
-    opt_fields: String = null,
-    team: Int | Double = null
-  ): FindAllParams = {
+  def apply(): FindAllParams = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(archived)) __obj.updateDynamic("archived")(archived.asInstanceOf[js.Any])
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (opt_expand != null) __obj.updateDynamic("opt_expand")(opt_expand.asInstanceOf[js.Any])
-    if (opt_fields != null) __obj.updateDynamic("opt_fields")(opt_fields.asInstanceOf[js.Any])
-    if (team != null) __obj.updateDynamic("team")(team.asInstanceOf[js.Any])
     __obj.asInstanceOf[FindAllParams]
   }
+  @scala.inline
+  implicit class FindAllParamsOps[Self <: FindAllParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArchived(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("archived")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArchived: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("archived")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTeam(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("team")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTeam: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("team")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

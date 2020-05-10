@@ -30,20 +30,77 @@ trait Rule extends js.Object {
 
 object Rule {
   @scala.inline
-  def apply(
-    Actions: Actions = null,
-    Conditions: RuleConditionList = null,
-    IsDefault: js.UndefOr[Boolean] = js.undefined,
-    Priority: String = null,
-    RuleArn: RuleArn = null
-  ): Rule = {
+  def apply(): Rule = {
     val __obj = js.Dynamic.literal()
-    if (Actions != null) __obj.updateDynamic("Actions")(Actions.asInstanceOf[js.Any])
-    if (Conditions != null) __obj.updateDynamic("Conditions")(Conditions.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsDefault)) __obj.updateDynamic("IsDefault")(IsDefault.asInstanceOf[js.Any])
-    if (Priority != null) __obj.updateDynamic("Priority")(Priority.asInstanceOf[js.Any])
-    if (RuleArn != null) __obj.updateDynamic("RuleArn")(RuleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[Rule]
   }
+  @scala.inline
+  implicit class RuleOps[Self <: Rule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActions(value: Actions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Actions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Actions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConditions(value: RuleConditionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Conditions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConditions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Conditions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDefault(value: IsDefault): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsDefault")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriority(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuleArn(value: RuleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

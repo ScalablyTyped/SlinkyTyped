@@ -25,16 +25,53 @@ trait SchemaListNodesResponse extends js.Object {
 
 object SchemaListNodesResponse {
   @scala.inline
-  def apply(
-    nextPageToken: String = null,
-    nodes: js.Array[SchemaNode] = null,
-    unreachable: js.Array[String] = null
-  ): SchemaListNodesResponse = {
+  def apply(): SchemaListNodesResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (nodes != null) __obj.updateDynamic("nodes")(nodes.asInstanceOf[js.Any])
-    if (unreachable != null) __obj.updateDynamic("unreachable")(unreachable.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListNodesResponse]
   }
+  @scala.inline
+  implicit class SchemaListNodesResponseOps[Self <: SchemaListNodesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodes(value: js.Array[SchemaNode]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnreachable(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unreachable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnreachable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unreachable")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

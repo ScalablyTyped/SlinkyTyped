@@ -3,8 +3,8 @@ package typingsSlinky.androiduix.android.widget
 import typingsSlinky.androiduix.android.database.DataSetObserver
 import typingsSlinky.androiduix.android.widget.ExpandableListConnector.GroupMetadata
 import typingsSlinky.androiduix.android.widget.ExpandableListConnector.PositionMetadata
-import typingsSlinky.androiduix.java.lang.Comparable
-import typingsSlinky.androiduix.java.util.ArrayList
+import typingsSlinky.androiduix.java_.lang.Comparable
+import typingsSlinky.androiduix.java_.util.ArrayList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,8 +43,6 @@ object ExpandableListConnector extends js.Object {
     var gId: Double = js.native
     var gPos: Double = js.native
     var lastChildFlPos: Double = js.native
-    /* CompleteClass */
-    override def compareTo(o: GroupMetadata): Double = js.native
   }
   
   @js.native

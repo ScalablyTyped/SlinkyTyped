@@ -18,14 +18,12 @@ trait UndefinedType extends js.Object
 
 object UndefinedType {
   @scala.inline
-  def api_call: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.api_call = this.cast("api_call")
+  def api_call: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.api_call = "api_call".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.api_call]
   @scala.inline
-  def api_event: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.api_event = this.cast("api_event")
+  def api_event: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.api_event = "api_event".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.api_event]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def content_script: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.content_script = "content_script".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.content_script]
   @scala.inline
-  def content_script: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.content_script = this.cast("content_script")
-  @scala.inline
-  def user_script: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.user_script = this.cast("user_script")
+  def user_script: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.user_script = "user_script".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.user_script]
 }
 

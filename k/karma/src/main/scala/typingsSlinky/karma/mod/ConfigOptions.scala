@@ -7,12 +7,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ConfigOptions extends js.Object {
   /**
     * @description Enable or disable watching files and executing the tests whenever one of these files changes.
     * @default true
     */
-  var autoWatch: js.UndefOr[Boolean] = js.undefined
+  var autoWatch: js.UndefOr[Boolean] = js.native
   /**
     * @description When Karma is watching the files for changes, it tries to batch multiple changes into a single run
     * so that the test runner doesn't try to start and restart running tests more than it should.
@@ -20,23 +21,23 @@ trait ConfigOptions extends js.Object {
     * before starting the test process again.
     * @default 250
     */
-  var autoWatchBatchDelay: js.UndefOr[Double] = js.undefined
+  var autoWatchBatchDelay: js.UndefOr[Double] = js.native
   /**
     * @default ''
     * @description The root path location that will be used to resolve all relative paths defined in <code>files</code> and <code>exclude</code>.
     * If the basePath configuration is a relative path then it will be resolved to
     * the <code>__dirname</code> of the configuration file.
     */
-  var basePath: js.UndefOr[String] = js.undefined
+  var basePath: js.UndefOr[String] = js.native
   /**
     * This is the same as middleware except that these middleware will be run before karma's own middleware.
     * @default []
     */
-  var beforeMiddleware: js.UndefOr[js.Array[String]] = js.undefined
+  var beforeMiddleware: js.UndefOr[js.Array[String]] = js.native
   /**
     * Configure how the browser console is logged with the following properties, all of which are optional
     */
-  var browserConsoleLogOptions: js.UndefOr[BrowserConsoleLogOptions] = js.undefined
+  var browserConsoleLogOptions: js.UndefOr[BrowserConsoleLogOptions] = js.native
   /**
     * @default 2000
     * @description How long does Karma wait for a browser to reconnect (in ms).
@@ -47,7 +48,7 @@ trait ConfigOptions extends js.Object {
     * If the browser reconnects during that time, everything is fine.
     * </p>
     */
-  var browserDisconnectTimeout: js.UndefOr[Double] = js.undefined
+  var browserDisconnectTimeout: js.UndefOr[Double] = js.native
   /**
     * @default 0
     * @description The number of disconnections tolerated.
@@ -58,7 +59,7 @@ trait ConfigOptions extends js.Object {
     * the Karma server and the browsers.
     * </p>
     */
-  var browserDisconnectTolerance: js.UndefOr[Double] = js.undefined
+  var browserDisconnectTolerance: js.UndefOr[Double] = js.native
   /**
     * @default 10000
     * @description How long will Karma wait for a message from a browser before disconnecting from it (in ms).
@@ -67,12 +68,12 @@ trait ConfigOptions extends js.Object {
     * <code>browserNoActivityTimeout</code> (ms), it will disconnect from the browser
     * </p>
     */
-  var browserNoActivityTimeout: js.UndefOr[Double] = js.undefined
+  var browserNoActivityTimeout: js.UndefOr[Double] = js.native
   /**
     * Timeout for the client socket connection (in ms)
     * @default 20000
     */
-  var browserSocketTimeout: js.UndefOr[Double] = js.undefined
+  var browserSocketTimeout: js.UndefOr[Double] = js.native
   /**
     * @default []
     * Possible Values:
@@ -90,7 +91,7 @@ trait ConfigOptions extends js.Object {
     * You can capture any browser manually by opening the browser and visiting the URL where
     * the Karma web server is listening (by default it is <code>http://localhost:9876/</code>).
     */
-  var browsers: js.UndefOr[js.Array[AutomatedBrowsers | String]] = js.undefined
+  var browsers: js.UndefOr[js.Array[AutomatedBrowsers | String]] = js.native
   /**
     * @default 60000
     * @description Timeout for capturing a browser (in ms).
@@ -100,13 +101,13 @@ trait ConfigOptions extends js.Object {
     * will kill it and try to launch it again and, after three attempts to capture it, Karma will give up.
     * </p>
     */
-  var captureTimeout: js.UndefOr[Double] = js.undefined
-  var client: js.UndefOr[ClientOptions] = js.undefined
+  var captureTimeout: js.UndefOr[Double] = js.native
+  var client: js.UndefOr[ClientOptions] = js.native
   /**
     * @default true
     * @description Enable or disable colors in the output (reporters and logs).
     */
-  var colors: js.UndefOr[Boolean] = js.undefined
+  var colors: js.UndefOr[Boolean] = js.native
   /**
     * @default 'Infinity'
     * @description How many browsers Karma launches in parallel.
@@ -114,106 +115,106 @@ trait ConfigOptions extends js.Object {
     * amount of browsers at once, and only start more when those have finished. Using this configuration,
     * you can specify how many browsers should be running at once at any given point in time.
     */
-  var concurrency: js.UndefOr[Double] = js.undefined
+  var concurrency: js.UndefOr[Double] = js.native
   /**
     * When true, this will append the crossorigin attribute to generated script tags,
     * which enables better error reporting for JavaScript files served from a different origin
     * @default true
     */
-  var crossOriginAttribute: js.UndefOr[Boolean] = js.undefined
+  var crossOriginAttribute: js.UndefOr[Boolean] = js.native
   /**
     * If null (default), uses karma's own client_with_context.html file (which is used when client.runInParent set to true).
     * @default undefined
     */
-  var customClientContextFile: js.UndefOr[String] = js.undefined
+  var customClientContextFile: js.UndefOr[String] = js.native
   /**
     * If null (default), uses karma's own context.html file.
     * @default undefined
     */
-  var customContextFile: js.UndefOr[String] = js.undefined
+  var customContextFile: js.UndefOr[String] = js.native
   /**
     * If null (default), uses karma's own debug.html file.
     * @default undefined
     */
-  var customDebugFile: js.UndefOr[String] = js.undefined
+  var customDebugFile: js.UndefOr[String] = js.native
   /**
     * Custom HTTP headers that will be set upon serving files by Karma's web server.
     * Custom headers are useful, especially with upcoming browser features like Service Workers.
     * @default undefined
     */
-  var customHeaders: js.UndefOr[js.Array[CustomHeaders]] = js.undefined
-  var customLaunchers: js.UndefOr[StringDictionary[CustomLauncher]] = js.undefined
+  var customHeaders: js.UndefOr[js.Array[CustomHeaders]] = js.native
+  var customLaunchers: js.UndefOr[StringDictionary[CustomLauncher]] = js.native
   /**
     * When true, this will start the karma server in another process, writing no output to the console.
     * The server can be stopped using the karma stop command.
     * @default false
     */
-  var detached: js.UndefOr[Boolean] = js.undefined
+  var detached: js.UndefOr[Boolean] = js.native
   /**
     * @default []
     * @description List of files/patterns to exclude from loaded files.
     */
-  var exclude: js.UndefOr[js.Array[String]] = js.undefined
+  var exclude: js.UndefOr[js.Array[String]] = js.native
   /**
     * Enable or disable failure on running empty test-suites.
     * If disabled the program will return exit-code 0 and display a warning.
     * @default true
     */
-  var failOnEmptyTestSuite: js.UndefOr[Boolean] = js.undefined
+  var failOnEmptyTestSuite: js.UndefOr[Boolean] = js.native
   /**
     * Enable or disable failure on failing tests.
     * @default true
     */
-  var failOnFailingTestSuite: js.UndefOr[Boolean] = js.undefined
+  var failOnFailingTestSuite: js.UndefOr[Boolean] = js.native
   /**
     * Enable or disable failure on tests deliberately disabled, eg fit() or xit() tests in jasmine.
     * Use this to prevent accidental disabling tests needed to validate production.
     * @default true
     */
-  var failOnSkippedTests: js.UndefOr[Boolean] = js.undefined
+  var failOnSkippedTests: js.UndefOr[Boolean] = js.native
   /**
     * @default []
     * @description List of files/patterns to load in the browser.
     */
-  var files: js.UndefOr[js.Array[FilePattern | String]] = js.undefined
+  var files: js.UndefOr[js.Array[FilePattern | String]] = js.native
   /**
     * Force socket.io to use JSONP polling instead of XHR polling
     * @default false
     */
-  var forceJSONP: js.UndefOr[Boolean] = js.undefined
+  var forceJSONP: js.UndefOr[Boolean] = js.native
   /**
     * A new error message line
     * @default undefined
     */
-  var formatError: js.UndefOr[js.Function1[/* msg */ String, String]] = js.undefined
+  var formatError: js.UndefOr[js.Function1[/* msg */ String, String]] = js.native
   /**
     * @default []
     * @description List of test frameworks you want to use. Typically, you will set this to ['jasmine'], ['mocha'] or ['qunit']...
     * Please note just about all frameworks in Karma require an additional plugin/framework library to be installed (via NPM).
     */
-  var frameworks: js.UndefOr[js.Array[String]] = js.undefined
+  var frameworks: js.UndefOr[js.Array[String]] = js.native
   /**
     * @default 'localhost'
     * @description Hostname to be used when capturing browsers.
     */
-  var hostname: js.UndefOr[String] = js.undefined
+  var hostname: js.UndefOr[String] = js.native
   /**
     * Module used for Karma webserver
     * @default undefined
     */
-  var httpModule: js.UndefOr[String] = js.undefined
+  var httpModule: js.UndefOr[String] = js.native
   /**
     * @default {}
     * @description Options object to be used by Node's https class.
     * Object description can be found in the
     * [NodeJS.org API docs](https://nodejs.org/api/tls.html#tls_tls_createserver_options_secureconnectionlistener)
     */
-  var httpsServerOptions: js.UndefOr[ServerOptions] = js.undefined
+  var httpsServerOptions: js.UndefOr[ServerOptions] = js.native
   /**
     * Address that the server will listen on. Change to 'localhost' to only listen to the loopback, or '::' to listen on all IPv6 interfaces
     * @default '0.0.0.0' or `LISTEN_ADDR`
     */
-  var listenAddress: js.UndefOr[String] = js.undefined
+  var listenAddress: js.UndefOr[String] = js.native
   /**
     * @default config.LOG_INFO
     * Possible values:
@@ -226,12 +227,12 @@ trait ConfigOptions extends js.Object {
     * </ul>
     * @description Level of logging.
     */
-  var logLevel: js.UndefOr[String] = js.undefined
+  var logLevel: js.UndefOr[String] = js.native
   /**
     * @default [{type: 'console'}]
     * @description A list of log appenders to be used. See the documentation for [log4js] for more information.
     */
-  var loggers: js.UndefOr[StringDictionary[Appender] | js.Array[Appender]] = js.undefined
+  var loggers: js.UndefOr[StringDictionary[Appender] | js.Array[Appender]] = js.native
   /**
     * @default []
     * @description List of names of additional middleware you want the
@@ -243,19 +244,19 @@ trait ConfigOptions extends js.Object {
     * (details about this can be found in the
     * [Express](http://expressjs.com/guide/using-middleware.html) docs).
     */
-  var middleware: js.UndefOr[js.Array[String]] = js.undefined
+  var middleware: js.UndefOr[js.Array[String]] = js.native
   /**
     * @default {}
     * @description Redefine default mapping from file extensions to MIME-type.
     * Set property name to required MIME, provide Array of extensions (without dots) as it's value.
     */
-  var mime: js.UndefOr[StringDictionary[js.Array[String]]] = js.undefined
+  var mime: js.UndefOr[StringDictionary[js.Array[String]]] = js.native
   /**
     * Socket.io pingTimeout in ms, https://socket.io/docs/server-api/#new-Server-httpServer-options.
     * Very slow networks may need values up to 60000. Larger values delay discovery of deadlock in tests or browser crashes.
     * @default 5000
     */
-  var pingTimeout: js.UndefOr[Double] = js.undefined
+  var pingTimeout: js.UndefOr[Double] = js.native
   /**
     * @default ['karma-*']
     * @description List of plugins to load. A plugin can be a string (in which case it will be required
@@ -263,12 +264,12 @@ trait ConfigOptions extends js.Object {
     * By default, Karma loads all sibling NPM modules which have a name starting with karma-*.
     * Note: Just about all plugins in Karma require an additional library to be installed (via NPM).
     */
-  var plugins: js.UndefOr[js.Array[PluginName | InlinePluginDef]] = js.undefined
+  var plugins: js.UndefOr[js.Array[PluginName | InlinePluginDef]] = js.native
   /**
     * @default 9876
     * @description The port where the web server will be listening.
     */
-  var port: js.UndefOr[Double] = js.undefined
+  var port: js.UndefOr[Double] = js.native
   /**
     * @default {'**\/ *.coffee': 'coffee'}
     * @description A map of preprocessors to use.
@@ -285,12 +286,12 @@ trait ConfigOptions extends js.Object {
     * but your interactive debugging does not.
     *
     */
-  var preprocessors: js.UndefOr[StringDictionary[String | js.Array[String]]] = js.undefined
+  var preprocessors: js.UndefOr[StringDictionary[String | js.Array[String]]] = js.native
   /**
     * How long will Karma wait for browser process to terminate before sending a SIGKILL signal
     * @default 2000
     */
-  var processKillTimeout: js.UndefOr[Double] = js.undefined
+  var processKillTimeout: js.UndefOr[Double] = js.native
   /**
     * @default 'http:'
     * Possible Values:
@@ -302,36 +303,36 @@ trait ConfigOptions extends js.Object {
     * Determines the use of the Node http or https class.
     * Note: Using <code>'https:'</code> requires you to specify <code>httpsServerOptions</code>.
     */
-  var protocol: js.UndefOr[String] = js.undefined
+  var protocol: js.UndefOr[String] = js.native
   /**
     * @default {}
     * @description A map of path-proxy pairs
     * The proxy can be specified directly by the target url or path, or with an object to configure more options
     */
-  var proxies: js.UndefOr[PathProxyPairs] = js.undefined
+  var proxies: js.UndefOr[PathProxyPairs] = js.native
   /**
     * Called when requesting Proxy
     * @default undefined
     */
   var proxyReq: js.UndefOr[
     js.Function4[/* proxyReq */ js.Any, /* req */ js.Any, /* res */ js.Any, /* options */ js.Object, Unit]
-  ] = js.undefined
+  ] = js.native
   /**
     * Called when respnsing Proxy
     * @default undefined
     */
-  var proxyRes: js.UndefOr[js.Function3[/* proxyRes */ js.Any, /* req */ js.Any, /* res */ js.Any, Unit]] = js.undefined
+  var proxyRes: js.UndefOr[js.Function3[/* proxyRes */ js.Any, /* req */ js.Any, /* res */ js.Any, Unit]] = js.native
   /**
     * @default true
     * @description Whether or not Karma or any browsers should raise an error when an inavlid SSL certificate is found.
     */
-  var proxyValidateSSL: js.UndefOr[Boolean] = js.undefined
+  var proxyValidateSSL: js.UndefOr[Boolean] = js.native
   /**
     * @default 0
     * @description Karma will report all the tests that are slower than given time limit (in ms).
     * This is disabled by default (since the default value is 0).
     */
-  var reportSlowerThan: js.UndefOr[Double] = js.undefined
+  var reportSlowerThan: js.UndefOr[Double] = js.native
   /**
     * @default ['progress']
     * Possible Values:
@@ -343,161 +344,720 @@ trait ConfigOptions extends js.Object {
     * Additional reporters, such as growl, junit, teamcity or coverage can be loaded through plugins.
     * Note: Just about all additional reporters in Karma (other than progress) require an additional library to be installed (via NPM).
     */
-  var reporters: js.UndefOr[js.Array[String]] = js.undefined
+  var reporters: js.UndefOr[js.Array[String]] = js.native
   /**
     * When Karma is watching the files for changes, it will delay a new run
     * until the current run is finished. Enabling this setting
     * will cancel the current run and start a new run immediately when a change is detected.
     */
-  var restartOnFileChange: js.UndefOr[Boolean] = js.undefined
+  var restartOnFileChange: js.UndefOr[Boolean] = js.native
   /**
     * When a browser crashes, karma will try to relaunch. This defines how many times karma should relaunch a browser before giving up.
     * @default 2
     */
-  var retryLimit: js.UndefOr[Double] = js.undefined
+  var retryLimit: js.UndefOr[Double] = js.native
   /**
     * @default false
     * @description Continuous Integration mode.
     * If true, Karma will start and capture all configured browsers, run tests and then exit with an exit code of 0 or 1 depending
     * on whether all tests passed or any tests failed.
     */
-  var singleRun: js.UndefOr[Boolean] = js.undefined
+  var singleRun: js.UndefOr[Boolean] = js.native
   /**
     * @default ['polling', 'websocket']
     * @description An array of allowed transport methods between the browser and testing server. This configuration setting
     * is handed off to [socket.io](http://socket.io/) (which manages the communication
     * between browsers and the testing server).
     */
-  var transports: js.UndefOr[js.Array[String]] = js.undefined
+  var transports: js.UndefOr[js.Array[String]] = js.native
   /**
     * For use when the Karma server needs to be run behind a proxy that changes the base url, etc
     */
-  var upstreamProxy: js.UndefOr[UpstreamProxy] = js.undefined
+  var upstreamProxy: js.UndefOr[UpstreamProxy] = js.native
   /**
     * @default '/'
     * @description The base url, where Karma runs.
     * All of Karma's urls get prefixed with the urlRoot. This is helpful when using proxies, as
     * sometimes you might want to proxy a url that is already taken by Karma.
     */
-  var urlRoot: js.UndefOr[String] = js.undefined
+  var urlRoot: js.UndefOr[String] = js.native
 }
 
 object ConfigOptions {
   @scala.inline
-  def apply(
-    autoWatch: js.UndefOr[Boolean] = js.undefined,
-    autoWatchBatchDelay: Int | Double = null,
-    basePath: String = null,
-    beforeMiddleware: js.Array[String] = null,
-    browserConsoleLogOptions: BrowserConsoleLogOptions = null,
-    browserDisconnectTimeout: Int | Double = null,
-    browserDisconnectTolerance: Int | Double = null,
-    browserNoActivityTimeout: Int | Double = null,
-    browserSocketTimeout: Int | Double = null,
-    browsers: js.Array[AutomatedBrowsers | String] = null,
-    captureTimeout: Int | Double = null,
-    client: ClientOptions = null,
-    colors: js.UndefOr[Boolean] = js.undefined,
-    concurrency: Int | Double = null,
-    crossOriginAttribute: js.UndefOr[Boolean] = js.undefined,
-    customClientContextFile: String = null,
-    customContextFile: String = null,
-    customDebugFile: String = null,
-    customHeaders: js.Array[CustomHeaders] = null,
-    customLaunchers: StringDictionary[CustomLauncher] = null,
-    detached: js.UndefOr[Boolean] = js.undefined,
-    exclude: js.Array[String] = null,
-    failOnEmptyTestSuite: js.UndefOr[Boolean] = js.undefined,
-    failOnFailingTestSuite: js.UndefOr[Boolean] = js.undefined,
-    failOnSkippedTests: js.UndefOr[Boolean] = js.undefined,
-    files: js.Array[FilePattern | String] = null,
-    forceJSONP: js.UndefOr[Boolean] = js.undefined,
-    formatError: /* msg */ String => String = null,
-    frameworks: js.Array[String] = null,
-    hostname: String = null,
-    httpModule: String = null,
-    httpsServerOptions: ServerOptions = null,
-    listenAddress: String = null,
-    logLevel: String = null,
-    loggers: StringDictionary[Appender] | js.Array[Appender] = null,
-    middleware: js.Array[String] = null,
-    mime: StringDictionary[js.Array[String]] = null,
-    pingTimeout: Int | Double = null,
-    plugins: js.Array[PluginName | InlinePluginDef] = null,
-    port: Int | Double = null,
-    preprocessors: StringDictionary[String | js.Array[String]] = null,
-    processKillTimeout: Int | Double = null,
-    protocol: String = null,
-    proxies: PathProxyPairs = null,
-    proxyReq: (/* proxyReq */ js.Any, /* req */ js.Any, /* res */ js.Any, /* options */ js.Object) => Unit = null,
-    proxyRes: (/* proxyRes */ js.Any, /* req */ js.Any, /* res */ js.Any) => Unit = null,
-    proxyValidateSSL: js.UndefOr[Boolean] = js.undefined,
-    reportSlowerThan: Int | Double = null,
-    reporters: js.Array[String] = null,
-    restartOnFileChange: js.UndefOr[Boolean] = js.undefined,
-    retryLimit: Int | Double = null,
-    singleRun: js.UndefOr[Boolean] = js.undefined,
-    transports: js.Array[String] = null,
-    upstreamProxy: UpstreamProxy = null,
-    urlRoot: String = null
-  ): ConfigOptions = {
+  def apply(): ConfigOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoWatch)) __obj.updateDynamic("autoWatch")(autoWatch.asInstanceOf[js.Any])
-    if (autoWatchBatchDelay != null) __obj.updateDynamic("autoWatchBatchDelay")(autoWatchBatchDelay.asInstanceOf[js.Any])
-    if (basePath != null) __obj.updateDynamic("basePath")(basePath.asInstanceOf[js.Any])
-    if (beforeMiddleware != null) __obj.updateDynamic("beforeMiddleware")(beforeMiddleware.asInstanceOf[js.Any])
-    if (browserConsoleLogOptions != null) __obj.updateDynamic("browserConsoleLogOptions")(browserConsoleLogOptions.asInstanceOf[js.Any])
-    if (browserDisconnectTimeout != null) __obj.updateDynamic("browserDisconnectTimeout")(browserDisconnectTimeout.asInstanceOf[js.Any])
-    if (browserDisconnectTolerance != null) __obj.updateDynamic("browserDisconnectTolerance")(browserDisconnectTolerance.asInstanceOf[js.Any])
-    if (browserNoActivityTimeout != null) __obj.updateDynamic("browserNoActivityTimeout")(browserNoActivityTimeout.asInstanceOf[js.Any])
-    if (browserSocketTimeout != null) __obj.updateDynamic("browserSocketTimeout")(browserSocketTimeout.asInstanceOf[js.Any])
-    if (browsers != null) __obj.updateDynamic("browsers")(browsers.asInstanceOf[js.Any])
-    if (captureTimeout != null) __obj.updateDynamic("captureTimeout")(captureTimeout.asInstanceOf[js.Any])
-    if (client != null) __obj.updateDynamic("client")(client.asInstanceOf[js.Any])
-    if (!js.isUndefined(colors)) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (concurrency != null) __obj.updateDynamic("concurrency")(concurrency.asInstanceOf[js.Any])
-    if (!js.isUndefined(crossOriginAttribute)) __obj.updateDynamic("crossOriginAttribute")(crossOriginAttribute.asInstanceOf[js.Any])
-    if (customClientContextFile != null) __obj.updateDynamic("customClientContextFile")(customClientContextFile.asInstanceOf[js.Any])
-    if (customContextFile != null) __obj.updateDynamic("customContextFile")(customContextFile.asInstanceOf[js.Any])
-    if (customDebugFile != null) __obj.updateDynamic("customDebugFile")(customDebugFile.asInstanceOf[js.Any])
-    if (customHeaders != null) __obj.updateDynamic("customHeaders")(customHeaders.asInstanceOf[js.Any])
-    if (customLaunchers != null) __obj.updateDynamic("customLaunchers")(customLaunchers.asInstanceOf[js.Any])
-    if (!js.isUndefined(detached)) __obj.updateDynamic("detached")(detached.asInstanceOf[js.Any])
-    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
-    if (!js.isUndefined(failOnEmptyTestSuite)) __obj.updateDynamic("failOnEmptyTestSuite")(failOnEmptyTestSuite.asInstanceOf[js.Any])
-    if (!js.isUndefined(failOnFailingTestSuite)) __obj.updateDynamic("failOnFailingTestSuite")(failOnFailingTestSuite.asInstanceOf[js.Any])
-    if (!js.isUndefined(failOnSkippedTests)) __obj.updateDynamic("failOnSkippedTests")(failOnSkippedTests.asInstanceOf[js.Any])
-    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceJSONP)) __obj.updateDynamic("forceJSONP")(forceJSONP.asInstanceOf[js.Any])
-    if (formatError != null) __obj.updateDynamic("formatError")(js.Any.fromFunction1(formatError))
-    if (frameworks != null) __obj.updateDynamic("frameworks")(frameworks.asInstanceOf[js.Any])
-    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
-    if (httpModule != null) __obj.updateDynamic("httpModule")(httpModule.asInstanceOf[js.Any])
-    if (httpsServerOptions != null) __obj.updateDynamic("httpsServerOptions")(httpsServerOptions.asInstanceOf[js.Any])
-    if (listenAddress != null) __obj.updateDynamic("listenAddress")(listenAddress.asInstanceOf[js.Any])
-    if (logLevel != null) __obj.updateDynamic("logLevel")(logLevel.asInstanceOf[js.Any])
-    if (loggers != null) __obj.updateDynamic("loggers")(loggers.asInstanceOf[js.Any])
-    if (middleware != null) __obj.updateDynamic("middleware")(middleware.asInstanceOf[js.Any])
-    if (mime != null) __obj.updateDynamic("mime")(mime.asInstanceOf[js.Any])
-    if (pingTimeout != null) __obj.updateDynamic("pingTimeout")(pingTimeout.asInstanceOf[js.Any])
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (preprocessors != null) __obj.updateDynamic("preprocessors")(preprocessors.asInstanceOf[js.Any])
-    if (processKillTimeout != null) __obj.updateDynamic("processKillTimeout")(processKillTimeout.asInstanceOf[js.Any])
-    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
-    if (proxies != null) __obj.updateDynamic("proxies")(proxies.asInstanceOf[js.Any])
-    if (proxyReq != null) __obj.updateDynamic("proxyReq")(js.Any.fromFunction4(proxyReq))
-    if (proxyRes != null) __obj.updateDynamic("proxyRes")(js.Any.fromFunction3(proxyRes))
-    if (!js.isUndefined(proxyValidateSSL)) __obj.updateDynamic("proxyValidateSSL")(proxyValidateSSL.asInstanceOf[js.Any])
-    if (reportSlowerThan != null) __obj.updateDynamic("reportSlowerThan")(reportSlowerThan.asInstanceOf[js.Any])
-    if (reporters != null) __obj.updateDynamic("reporters")(reporters.asInstanceOf[js.Any])
-    if (!js.isUndefined(restartOnFileChange)) __obj.updateDynamic("restartOnFileChange")(restartOnFileChange.asInstanceOf[js.Any])
-    if (retryLimit != null) __obj.updateDynamic("retryLimit")(retryLimit.asInstanceOf[js.Any])
-    if (!js.isUndefined(singleRun)) __obj.updateDynamic("singleRun")(singleRun.asInstanceOf[js.Any])
-    if (transports != null) __obj.updateDynamic("transports")(transports.asInstanceOf[js.Any])
-    if (upstreamProxy != null) __obj.updateDynamic("upstreamProxy")(upstreamProxy.asInstanceOf[js.Any])
-    if (urlRoot != null) __obj.updateDynamic("urlRoot")(urlRoot.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigOptions]
   }
+  @scala.inline
+  implicit class ConfigOptionsOps[Self <: ConfigOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoWatch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoWatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoWatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoWatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoWatchBatchDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoWatchBatchDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoWatchBatchDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoWatchBatchDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBasePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBasePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeMiddleware(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeMiddleware")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeforeMiddleware: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeMiddleware")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrowserConsoleLogOptions(value: BrowserConsoleLogOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browserConsoleLogOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrowserConsoleLogOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browserConsoleLogOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrowserDisconnectTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browserDisconnectTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrowserDisconnectTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browserDisconnectTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrowserDisconnectTolerance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browserDisconnectTolerance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrowserDisconnectTolerance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browserDisconnectTolerance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrowserNoActivityTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browserNoActivityTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrowserNoActivityTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browserNoActivityTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrowserSocketTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browserSocketTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrowserSocketTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browserSocketTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrowsers(value: js.Array[AutomatedBrowsers | String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrowsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browsers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaptureTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captureTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptureTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captureTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClient(value: ClientOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColors(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConcurrency(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("concurrency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConcurrency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("concurrency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrossOriginAttribute(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOriginAttribute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrossOriginAttribute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOriginAttribute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomClientContextFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customClientContextFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomClientContextFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customClientContextFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomContextFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customContextFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomContextFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customContextFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomDebugFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customDebugFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomDebugFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customDebugFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomHeaders(value: js.Array[CustomHeaders]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomLaunchers(value: StringDictionary[CustomLauncher]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customLaunchers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomLaunchers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customLaunchers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDetached(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detached")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetached: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detached")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclude(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailOnEmptyTestSuite(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failOnEmptyTestSuite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailOnEmptyTestSuite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failOnEmptyTestSuite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailOnFailingTestSuite(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failOnFailingTestSuite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailOnFailingTestSuite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failOnFailingTestSuite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailOnSkippedTests(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failOnSkippedTests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailOnSkippedTests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failOnSkippedTests")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFiles(value: js.Array[FilePattern | String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceJSONP(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceJSONP")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceJSONP: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceJSONP")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatError(value: /* msg */ String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatError")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutFormatError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrameworks(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameworks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameworks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameworks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttpModule(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpModule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpModule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpModule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttpsServerOptions(value: ServerOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpsServerOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpsServerOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpsServerOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListenAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listenAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListenAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listenAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogLevel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoggers(value: StringDictionary[Appender] | js.Array[Appender]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loggers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoggers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loggers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMiddleware(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("middleware")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMiddleware: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("middleware")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMime(value: StringDictionary[js.Array[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPingTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pingTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPingTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pingTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlugins(value: js.Array[PluginName | InlinePluginDef]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreprocessors(value: StringDictionary[String | js.Array[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preprocessors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreprocessors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preprocessors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProcessKillTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processKillTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProcessKillTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processKillTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtocol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProxies(value: PathProxyPairs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProxies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProxyReq(
+      value: (/* proxyReq */ js.Any, /* req */ js.Any, /* res */ js.Any, /* options */ js.Object) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyReq")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutProxyReq: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyReq")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProxyRes(value: (/* proxyRes */ js.Any, /* req */ js.Any, /* res */ js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyRes")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutProxyRes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyRes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProxyValidateSSL(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyValidateSSL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProxyValidateSSL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyValidateSSL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportSlowerThan(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportSlowerThan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportSlowerThan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportSlowerThan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReporters(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reporters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReporters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reporters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestartOnFileChange(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restartOnFileChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestartOnFileChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restartOnFileChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetryLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetryLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransports(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransports: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transports")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpstreamProxy(value: UpstreamProxy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upstreamProxy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpstreamProxy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upstreamProxy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrlRoot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlRoot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrlRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlRoot")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

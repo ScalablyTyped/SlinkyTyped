@@ -5,45 +5,103 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OrderCancelOptions extends js.Object {
   /**
     * Amount to refund. If set, Shopify will attempt to void/refund the payment depending on the status.
     */
-  var amount: js.UndefOr[Double] = js.undefined
+  var amount: js.UndefOr[Double] = js.native
   /**
     * Whether Shopify should send an email to the customer notifying them of the cancellation.
     */
-  var email: js.UndefOr[Boolean] = js.undefined
+  var email: js.UndefOr[Boolean] = js.native
   /**
     * The reason for the order cancellation.
     */
-  var reason: js.UndefOr[OrderCancelReason] = js.undefined
+  var reason: js.UndefOr[OrderCancelReason] = js.native
   /**
     * Required for some more complex refund situations.
     */
-  var refund: js.UndefOr[js.Any] = js.undefined
+  var refund: js.UndefOr[js.Any] = js.native
   /**
     * Restock the items for this order back to your store.
     */
-  var restock: js.UndefOr[Boolean] = js.undefined
+  var restock: js.UndefOr[Boolean] = js.native
 }
 
 object OrderCancelOptions {
   @scala.inline
-  def apply(
-    amount: Int | Double = null,
-    email: js.UndefOr[Boolean] = js.undefined,
-    reason: OrderCancelReason = null,
-    refund: js.Any = null,
-    restock: js.UndefOr[Boolean] = js.undefined
-  ): OrderCancelOptions = {
+  def apply(): OrderCancelOptions = {
     val __obj = js.Dynamic.literal()
-    if (amount != null) __obj.updateDynamic("amount")(amount.asInstanceOf[js.Any])
-    if (!js.isUndefined(email)) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
-    if (refund != null) __obj.updateDynamic("refund")(refund.asInstanceOf[js.Any])
-    if (!js.isUndefined(restock)) __obj.updateDynamic("restock")(restock.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrderCancelOptions]
   }
+  @scala.inline
+  implicit class OrderCancelOptionsOps[Self <: OrderCancelOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAmount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmail(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReason(value: OrderCancelReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRefund(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refund")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRefund: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refund")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestock(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restock")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

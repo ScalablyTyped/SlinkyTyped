@@ -1,12 +1,18 @@
 package typingsSlinky.workboxWebpackPlugin.mod
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.workboxWebpackPlugin.AnonManifest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InjectManifestOptions extends CommonOptions {
+  /**
+  	 * When true (the default), the swSrc file will be compiled by webpack.
+  	 * When false, compilation will not occur (and webpackCompilationPlugins can't be used.)
+  	 * Set to false if you want to inject the manifest into, e.g., a JSON file
+  	 * @default true
+  	 */
+  var compileSrc: js.UndefOr[Boolean] = js.native
   /**
   	 * The path to the source service worker file that can contain your own customized code, in addition to containing a match for `injectionPointRegexp`.
   	 *
@@ -16,52 +22,56 @@ trait InjectManifestOptions extends CommonOptions {
   	 *
   	 * @example swSrc: path.join('src', 'sw.js')
   	 */
-  var swSrc: String
+  var swSrc: String = js.native
+  /**
+  	 * Optional webpack plugins that will be used when compiling the swSrc input file
+  	 */
+  var webpackCompilationPlugins: js.UndefOr[js.Array[_]] = js.native
 }
 
 object InjectManifestOptions {
   @scala.inline
-  def apply(
-    swSrc: String,
-    chunks: js.Array[String] = null,
-    dontCacheBustUrlsMatching: js.RegExp = null,
-    exclude: js.Array[String | js.RegExp] = null,
-    excludeChunks: js.Array[String] = null,
-    globDirectory: String = null,
-    globFollow: js.UndefOr[Boolean] = js.undefined,
-    globIgnores: js.Array[String] = null,
-    globPatterns: js.Array[String] = null,
-    globStrict: js.UndefOr[Boolean] = js.undefined,
-    importsDirectory: String = null,
-    include: js.Array[String | js.RegExp] = null,
-    manifestTransforms: js.Array[js.Function1[/* originalManifest */ js.Array[ManifestEntry], AnonManifest]] = null,
-    maximumFileSizeToCacheInBytes: Int | Double = null,
-    modifyUrlPrefix: StringDictionary[String] = null,
-    precacheManifestFilename: String = null,
-    swDest: String = null,
-    templatedUrls: StringDictionary[String | js.Array[String]] = null,
-    test: js.Array[String | js.RegExp] = null
-  ): InjectManifestOptions = {
+  def apply(swSrc: String): InjectManifestOptions = {
     val __obj = js.Dynamic.literal(swSrc = swSrc.asInstanceOf[js.Any])
-    if (chunks != null) __obj.updateDynamic("chunks")(chunks.asInstanceOf[js.Any])
-    if (dontCacheBustUrlsMatching != null) __obj.updateDynamic("dontCacheBustUrlsMatching")(dontCacheBustUrlsMatching.asInstanceOf[js.Any])
-    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
-    if (excludeChunks != null) __obj.updateDynamic("excludeChunks")(excludeChunks.asInstanceOf[js.Any])
-    if (globDirectory != null) __obj.updateDynamic("globDirectory")(globDirectory.asInstanceOf[js.Any])
-    if (!js.isUndefined(globFollow)) __obj.updateDynamic("globFollow")(globFollow.asInstanceOf[js.Any])
-    if (globIgnores != null) __obj.updateDynamic("globIgnores")(globIgnores.asInstanceOf[js.Any])
-    if (globPatterns != null) __obj.updateDynamic("globPatterns")(globPatterns.asInstanceOf[js.Any])
-    if (!js.isUndefined(globStrict)) __obj.updateDynamic("globStrict")(globStrict.asInstanceOf[js.Any])
-    if (importsDirectory != null) __obj.updateDynamic("importsDirectory")(importsDirectory.asInstanceOf[js.Any])
-    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
-    if (manifestTransforms != null) __obj.updateDynamic("manifestTransforms")(manifestTransforms.asInstanceOf[js.Any])
-    if (maximumFileSizeToCacheInBytes != null) __obj.updateDynamic("maximumFileSizeToCacheInBytes")(maximumFileSizeToCacheInBytes.asInstanceOf[js.Any])
-    if (modifyUrlPrefix != null) __obj.updateDynamic("modifyUrlPrefix")(modifyUrlPrefix.asInstanceOf[js.Any])
-    if (precacheManifestFilename != null) __obj.updateDynamic("precacheManifestFilename")(precacheManifestFilename.asInstanceOf[js.Any])
-    if (swDest != null) __obj.updateDynamic("swDest")(swDest.asInstanceOf[js.Any])
-    if (templatedUrls != null) __obj.updateDynamic("templatedUrls")(templatedUrls.asInstanceOf[js.Any])
-    if (test != null) __obj.updateDynamic("test")(test.asInstanceOf[js.Any])
     __obj.asInstanceOf[InjectManifestOptions]
   }
+  @scala.inline
+  implicit class InjectManifestOptionsOps[Self <: InjectManifestOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSwSrc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCompileSrc(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compileSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompileSrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compileSrc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebpackCompilationPlugins(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webpackCompilationPlugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebpackCompilationPlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webpackCompilationPlugins")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

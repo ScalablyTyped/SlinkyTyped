@@ -46,24 +46,101 @@ trait SchemaReadinessCheck extends js.Object {
 
 object SchemaReadinessCheck {
   @scala.inline
-  def apply(
-    appStartTimeout: String = null,
-    checkInterval: String = null,
-    failureThreshold: Int | Double = null,
-    host: String = null,
-    path: String = null,
-    successThreshold: Int | Double = null,
-    timeout: String = null
-  ): SchemaReadinessCheck = {
+  def apply(): SchemaReadinessCheck = {
     val __obj = js.Dynamic.literal()
-    if (appStartTimeout != null) __obj.updateDynamic("appStartTimeout")(appStartTimeout.asInstanceOf[js.Any])
-    if (checkInterval != null) __obj.updateDynamic("checkInterval")(checkInterval.asInstanceOf[js.Any])
-    if (failureThreshold != null) __obj.updateDynamic("failureThreshold")(failureThreshold.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (successThreshold != null) __obj.updateDynamic("successThreshold")(successThreshold.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReadinessCheck]
   }
+  @scala.inline
+  implicit class SchemaReadinessCheckOps[Self <: SchemaReadinessCheck] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppStartTimeout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appStartTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppStartTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appStartTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckInterval(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

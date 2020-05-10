@@ -13,12 +13,10 @@ trait WindowsSpotlightEnablementSettings extends js.Object
 
 object WindowsSpotlightEnablementSettings {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disabled: typingsSlinky.microsoftGraph.microsoftGraphStrings.disabled = "disabled".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.microsoftGraph.microsoftGraphStrings.disabled = this.cast("disabled")
+  def enabled: typingsSlinky.microsoftGraph.microsoftGraphStrings.enabled = "enabled".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.enabled]
   @scala.inline
-  def enabled: typingsSlinky.microsoftGraph.microsoftGraphStrings.enabled = this.cast("enabled")
-  @scala.inline
-  def notConfigured: typingsSlinky.microsoftGraph.microsoftGraphStrings.notConfigured = this.cast("notConfigured")
+  def notConfigured: typingsSlinky.microsoftGraph.microsoftGraphStrings.notConfigured = "notConfigured".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.notConfigured]
 }
 

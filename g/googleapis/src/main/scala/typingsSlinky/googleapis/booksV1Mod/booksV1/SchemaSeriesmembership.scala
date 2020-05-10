@@ -16,12 +16,53 @@ trait SchemaSeriesmembership extends js.Object {
 
 object SchemaSeriesmembership {
   @scala.inline
-  def apply(kind: String = null, member: js.Array[SchemaVolume] = null, nextPageToken: String = null): SchemaSeriesmembership = {
+  def apply(): SchemaSeriesmembership = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (member != null) __obj.updateDynamic("member")(member.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSeriesmembership]
   }
+  @scala.inline
+  implicit class SchemaSeriesmembershipOps[Self <: SchemaSeriesmembership] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMember(value: js.Array[SchemaVolume]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("member")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMember: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("member")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

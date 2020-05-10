@@ -1,9 +1,7 @@
 package typingsSlinky.blueprintjsDatetime.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeBooleans.`true`
 import typingsSlinky.blueprintjsDatetime.shortcutsMod.IDateRangeShortcut
 import typingsSlinky.blueprintjsDatetime.shortcutsMod.IShortcutsProps
@@ -12,30 +10,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Shortcuts
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsDatetime.shortcutsMod.Shortcuts] {
+object Shortcuts {
   @JSImport("@blueprintjs/datetime/lib/esm/shortcuts", "Shortcuts")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsDatetime.shortcutsMod.Shortcuts] {
+    @scala.inline
+    def selectedShortcutIndex(value: Double): this.type = set("selectedShortcutIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useSingleDateShortcuts(value: Boolean): this.type = set("useSingleDateShortcuts", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: IShortcutsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     allowSingleDayRange: Boolean,
     maxDate: js.Date,
     minDate: js.Date,
     onShortcutClick: (IDateRangeShortcut, Double) => Unit,
     shortcuts: js.Array[IDateRangeShortcut] | `true`,
-    timePrecision: TimePrecision,
-    selectedShortcutIndex: Int | Double = null,
-    useSingleDateShortcuts: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsDatetime.shortcutsMod.Shortcuts] = {
-    val __obj = js.Dynamic.literal(allowSingleDayRange = allowSingleDayRange.asInstanceOf[js.Any], maxDate = maxDate.asInstanceOf[js.Any], minDate = minDate.asInstanceOf[js.Any], onShortcutClick = js.Any.fromFunction2(onShortcutClick), shortcuts = shortcuts.asInstanceOf[js.Any], timePrecision = timePrecision.asInstanceOf[js.Any])
-    if (selectedShortcutIndex != null) __obj.updateDynamic("selectedShortcutIndex")(selectedShortcutIndex.asInstanceOf[js.Any])
-    if (!js.isUndefined(useSingleDateShortcuts)) __obj.updateDynamic("useSingleDateShortcuts")(useSingleDateShortcuts.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    timePrecision: TimePrecision
+  ): Builder = {
+    val __props = js.Dynamic.literal(allowSingleDayRange = allowSingleDayRange.asInstanceOf[js.Any], maxDate = maxDate.asInstanceOf[js.Any], minDate = minDate.asInstanceOf[js.Any], onShortcutClick = js.Any.fromFunction2(onShortcutClick), shortcuts = shortcuts.asInstanceOf[js.Any], timePrecision = timePrecision.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IShortcutsProps]))
   }
-  type Props = IShortcutsProps
 }
 

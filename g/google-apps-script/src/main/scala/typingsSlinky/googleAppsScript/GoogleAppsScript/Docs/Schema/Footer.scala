@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Footer extends js.Object {
-  var content: js.UndefOr[js.Array[StructuralElement]] = js.undefined
-  var footerId: js.UndefOr[String] = js.undefined
+  var content: js.UndefOr[js.Array[StructuralElement]] = js.native
+  var footerId: js.UndefOr[String] = js.native
 }
 
 object Footer {
   @scala.inline
-  def apply(content: js.Array[StructuralElement] = null, footerId: String = null): Footer = {
+  def apply(): Footer = {
     val __obj = js.Dynamic.literal()
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (footerId != null) __obj.updateDynamic("footerId")(footerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Footer]
   }
+  @scala.inline
+  implicit class FooterOps[Self <: Footer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: js.Array[StructuralElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFooterId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFooterId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footerId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

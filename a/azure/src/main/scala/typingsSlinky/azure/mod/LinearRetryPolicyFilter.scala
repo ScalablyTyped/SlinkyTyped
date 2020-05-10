@@ -11,7 +11,5 @@ class LinearRetryPolicyFilter () extends Filter {
   def this(retryCount: Double, retryInterval: Double) = this()
   var retryCount: Double = js.native
   var retryInterval: Double = js.native
-  /* CompleteClass */
-  override def handle(requestOptions: js.Any, next: js.Function): Unit = js.native
 }
 

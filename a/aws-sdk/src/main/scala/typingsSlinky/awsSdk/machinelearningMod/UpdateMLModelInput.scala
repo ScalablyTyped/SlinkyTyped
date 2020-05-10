@@ -22,11 +22,47 @@ trait UpdateMLModelInput extends js.Object {
 
 object UpdateMLModelInput {
   @scala.inline
-  def apply(MLModelId: EntityId, MLModelName: EntityName = null, ScoreThreshold: Int | Double = null): UpdateMLModelInput = {
+  def apply(MLModelId: EntityId): UpdateMLModelInput = {
     val __obj = js.Dynamic.literal(MLModelId = MLModelId.asInstanceOf[js.Any])
-    if (MLModelName != null) __obj.updateDynamic("MLModelName")(MLModelName.asInstanceOf[js.Any])
-    if (ScoreThreshold != null) __obj.updateDynamic("ScoreThreshold")(ScoreThreshold.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateMLModelInput]
   }
+  @scala.inline
+  implicit class UpdateMLModelInputOps[Self <: UpdateMLModelInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMLModelId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MLModelId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMLModelName(value: EntityName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MLModelName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMLModelName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MLModelName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScoreThreshold(value: ScoreThreshold): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScoreThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScoreThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScoreThreshold")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

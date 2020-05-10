@@ -1,7 +1,7 @@
 package typingsSlinky.androiduix.android.view.animation
 
 import typingsSlinky.androiduix.android.graphics.Matrix
-import typingsSlinky.androiduix.java.lang.StringBuilder
+import typingsSlinky.androiduix.java_.lang.StringBuilder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

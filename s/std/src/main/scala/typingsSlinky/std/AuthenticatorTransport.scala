@@ -16,14 +16,12 @@ trait AuthenticatorTransport extends js.Object
 
 object AuthenticatorTransport {
   @scala.inline
-  def ble: typingsSlinky.std.stdStrings.ble = this.cast("ble")
+  def ble: typingsSlinky.std.stdStrings.ble = "ble".asInstanceOf[typingsSlinky.std.stdStrings.ble]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def internal: typingsSlinky.std.stdStrings.internal = "internal".asInstanceOf[typingsSlinky.std.stdStrings.internal]
   @scala.inline
-  def internal: typingsSlinky.std.stdStrings.internal = this.cast("internal")
+  def nfc: nfc_ = "nfc".asInstanceOf[nfc_]
   @scala.inline
-  def nfc: nfc_ = this.cast("nfc")
-  @scala.inline
-  def usb: usb_ = this.cast("usb")
+  def usb: usb_ = "usb".asInstanceOf[usb_]
 }
 

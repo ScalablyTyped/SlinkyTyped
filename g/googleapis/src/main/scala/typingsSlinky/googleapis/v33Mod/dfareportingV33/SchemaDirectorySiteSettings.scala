@@ -29,18 +29,65 @@ trait SchemaDirectorySiteSettings extends js.Object {
 
 object SchemaDirectorySiteSettings {
   @scala.inline
-  def apply(
-    activeViewOptOut: js.UndefOr[Boolean] = js.undefined,
-    dfpSettings: SchemaDfpSettings = null,
-    instreamVideoPlacementAccepted: js.UndefOr[Boolean] = js.undefined,
-    interstitialPlacementAccepted: js.UndefOr[Boolean] = js.undefined
-  ): SchemaDirectorySiteSettings = {
+  def apply(): SchemaDirectorySiteSettings = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(activeViewOptOut)) __obj.updateDynamic("activeViewOptOut")(activeViewOptOut.asInstanceOf[js.Any])
-    if (dfpSettings != null) __obj.updateDynamic("dfpSettings")(dfpSettings.asInstanceOf[js.Any])
-    if (!js.isUndefined(instreamVideoPlacementAccepted)) __obj.updateDynamic("instreamVideoPlacementAccepted")(instreamVideoPlacementAccepted.asInstanceOf[js.Any])
-    if (!js.isUndefined(interstitialPlacementAccepted)) __obj.updateDynamic("interstitialPlacementAccepted")(interstitialPlacementAccepted.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDirectorySiteSettings]
   }
+  @scala.inline
+  implicit class SchemaDirectorySiteSettingsOps[Self <: SchemaDirectorySiteSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActiveViewOptOut(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeViewOptOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveViewOptOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeViewOptOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDfpSettings(value: SchemaDfpSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dfpSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDfpSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dfpSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstreamVideoPlacementAccepted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instreamVideoPlacementAccepted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstreamVideoPlacementAccepted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instreamVideoPlacementAccepted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterstitialPlacementAccepted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interstitialPlacementAccepted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterstitialPlacementAccepted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interstitialPlacementAccepted")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

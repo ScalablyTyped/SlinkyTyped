@@ -1,10 +1,8 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarIconStrings
 import typingsSlinky.officeUiFabricReact.calendarYearMod.ICalendarYearHeaderProps
 import typingsSlinky.officeUiFabricReact.calendarYearMod.ICalendarYearProps
@@ -13,44 +11,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CalendarYear
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.officeUiFabricReact.calendarYearMod.CalendarYear] {
+object CalendarYear {
   @JSImport("office-ui-fabric-react/lib/components/Calendar/CalendarYear", "CalendarYear")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    maxYear: Int | Double = null,
-    minYear: Int | Double = null,
-    navigatedYear: Int | Double = null,
-    navigationIcons: ICalendarIconStrings = null,
-    onHeaderSelect: /* focus */ Boolean => Unit = null,
-    onRenderTitle: /* props */ ICalendarYearHeaderProps => TagMod[Any] = null,
-    onRenderYear: /* year */ Double => TagMod[Any] = null,
-    onSelectYear: /* year */ Double => Unit = null,
-    selectedYear: Int | Double = null,
-    strings: ICalendarYearStrings = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.calendarYearMod.CalendarYear] = {
-    val __obj = js.Dynamic.literal()
-    if (maxYear != null) __obj.updateDynamic("maxYear")(maxYear.asInstanceOf[js.Any])
-    if (minYear != null) __obj.updateDynamic("minYear")(minYear.asInstanceOf[js.Any])
-    if (navigatedYear != null) __obj.updateDynamic("navigatedYear")(navigatedYear.asInstanceOf[js.Any])
-    if (navigationIcons != null) __obj.updateDynamic("navigationIcons")(navigationIcons.asInstanceOf[js.Any])
-    if (onHeaderSelect != null) __obj.updateDynamic("onHeaderSelect")(js.Any.fromFunction1(onHeaderSelect))
-    if (onRenderTitle != null) __obj.updateDynamic("onRenderTitle")(js.Any.fromFunction1(onRenderTitle))
-    if (onRenderYear != null) __obj.updateDynamic("onRenderYear")(js.Any.fromFunction1(onRenderYear))
-    if (onSelectYear != null) __obj.updateDynamic("onSelectYear")(js.Any.fromFunction1(onSelectYear))
-    if (selectedYear != null) __obj.updateDynamic("selectedYear")(selectedYear.asInstanceOf[js.Any])
-    if (strings != null) __obj.updateDynamic("strings")(strings.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.calendarYearMod.CalendarYear] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxYear(value: Double): this.type = set("maxYear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minYear(value: Double): this.type = set("minYear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def navigatedYear(value: Double): this.type = set("navigatedYear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def navigationIcons(value: ICalendarIconStrings): this.type = set("navigationIcons", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onHeaderSelect(value: /* focus */ Boolean => Unit): this.type = set("onHeaderSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRenderTitle(value: /* props */ ICalendarYearHeaderProps => TagMod[Any]): this.type = set("onRenderTitle", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRenderYear(value: /* year */ Double => TagMod[Any]): this.type = set("onRenderYear", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSelectYear(value: /* year */ Double => Unit): this.type = set("onSelectYear", js.Any.fromFunction1(value))
+    @scala.inline
+    def selectedYear(value: Double): this.type = set("selectedYear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strings(value: ICalendarYearStrings): this.type = set("strings", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.calendarYearMod.CalendarYear] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.officeUiFabricReact.calendarYearMod.CalendarYear](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ICalendarYearProps
+  
+  def withProps(p: ICalendarYearProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CalendarYear.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

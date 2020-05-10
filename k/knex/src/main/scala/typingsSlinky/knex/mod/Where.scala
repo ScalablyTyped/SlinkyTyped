@@ -18,19 +18,19 @@ trait Where[TRecord, TResult]
   def apply(left: Raw[_], operator: String, right: Value): QueryBuilder[TRecord, TResult] = js.native
   def apply(`object`: js.Object): QueryBuilder[TRecord, TResult] = js.native
   def apply(`object`: SafePartial[TRecord]): QueryBuilder[TRecord, TResult] = js.native
-  def apply[T /* <: String */](columnName: T): QueryBuilder[TRecord, TResult] = js.native
-  def apply[T /* <: String */](columnName: T, operator: ComparisionOperator): QueryBuilder[TRecord, TResult] = js.native
-  def apply[T /* <: String */](
+  def apply[T /* <: /* keyof TRecord */ String */](columnName: T): QueryBuilder[TRecord, TResult] = js.native
+  def apply[T /* <: /* keyof TRecord */ String */](columnName: T, operator: ComparisionOperator): QueryBuilder[TRecord, TResult] = js.native
+  def apply[T /* <: /* keyof TRecord */ String */](
     columnName: T,
     operator: ComparisionOperator,
     value: /* import warning: importer.ImportType#apply Failed type conversion: TRecord[T] */ js.Any
   ): QueryBuilder[TRecord, TResult] = js.native
-  def apply[T /* <: String */](
+  def apply[T /* <: /* keyof TRecord */ String */](
     columnName: T,
     value: /* import warning: importer.ImportType#apply Failed type conversion: TRecord[T] */ js.Any
   ): QueryBuilder[TRecord, TResult] = js.native
   def apply[TRecordInner, TResultInner](columnName: String, operator: String, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
   def apply[TRecordInner, TResultInner](left: Raw[_], operator: String, right: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
-  def apply[T /* <: String */, TRecordInner, TResultInner](columnName: T, operator: ComparisionOperator, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
+  def apply[T /* <: /* keyof TRecord */ String */, TRecordInner, TResultInner](columnName: T, operator: ComparisionOperator, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
 }
 

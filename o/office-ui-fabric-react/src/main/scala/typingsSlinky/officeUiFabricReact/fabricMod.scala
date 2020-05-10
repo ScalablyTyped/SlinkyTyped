@@ -10,10 +10,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object fabricMod extends js.Object {
   @js.native
-  class FabricBase protected ()
-    extends typingsSlinky.officeUiFabricReact.fabricBaseMod.FabricBase {
-    def this(props: IFabricProps) = this()
-  }
+  class FabricBase ()
+    extends typingsSlinky.officeUiFabricReact.fabricBaseMod.FabricBase
   
   val Fabric: ReactComponentClass[IFabricProps] = js.native
 }

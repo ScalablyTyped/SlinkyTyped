@@ -8,17 +8,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CreativeGroupsResource extends js.Object {
   /** Gets one creative group by ID. */
-  def get(request: AnonFields): Request_[CreativeGroup]
+  def get(request: AnonFields): Request_[CreativeGroup] = js.native
   /** Inserts a new creative group. */
-  def insert(request: AnonKey): Request_[CreativeGroup]
+  def insert(request: AnonKey): Request_[CreativeGroup] = js.native
   /** Retrieves a list of creative groups, possibly filtered. This method supports paging. */
-  def list(request: AnonGroupNumber): Request_[CreativeGroupsListResponse]
+  def list(request: AnonGroupNumber): Request_[CreativeGroupsListResponse] = js.native
   /** Updates an existing creative group. This method supports patch semantics. */
-  def patch(request: AnonFields): Request_[CreativeGroup]
+  def patch(request: AnonFields): Request_[CreativeGroup] = js.native
   /** Updates an existing creative group. */
-  def update(request: AnonKey): Request_[CreativeGroup]
+  def update(request: AnonKey): Request_[CreativeGroup] = js.native
 }
 
 object CreativeGroupsResource {
@@ -31,8 +32,45 @@ object CreativeGroupsResource {
     update: AnonKey => Request_[CreativeGroup]
   ): CreativeGroupsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
-  
     __obj.asInstanceOf[CreativeGroupsResource]
   }
+  @scala.inline
+  implicit class CreativeGroupsResourceOps[Self <: CreativeGroupsResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGet(value: AnonFields => Request_[CreativeGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInsert(value: AnonKey => Request_[CreativeGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withList(value: AnonGroupNumber => Request_[CreativeGroupsListResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPatch(value: AnonFields => Request_[CreativeGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: AnonKey => Request_[CreativeGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

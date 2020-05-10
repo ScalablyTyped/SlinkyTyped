@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.html.styles
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.NodeList
+import org.scalajs.dom.raw.NodeList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -131,7 +131,7 @@ class ContentSetter protected () extends js.Object {
     * @param cont               OptionalAn html string, node or enumerable list of nodes for insertion into the domIf not provided, the object's content property will be used
     * @param params               Optional
     */
-  def set(cont: typingsSlinky.std.HTMLElement, params: js.Object): js.Any = js.native
+  def set(cont: HTMLElement, params: js.Object): js.Any = js.native
   /**
     * front-end to the set-content sequence
     *

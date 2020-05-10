@@ -11,8 +11,6 @@ class DataReader protected ()
   extends IDataReader
      with IClosable {
   def this(inputStream: IInputStream) = this()
-  /* CompleteClass */
-  override def close(): Unit = js.native
   def dispose(): Unit = js.native
 }
 

@@ -46,12 +46,72 @@ object ScalableTarget {
     ResourceId: ResourceIdMaxLen1600,
     RoleARN: ResourceIdMaxLen1600,
     ScalableDimension: ScalableDimension,
-    ServiceNamespace: ServiceNamespace,
-    SuspendedState: SuspendedState = null
+    ServiceNamespace: ServiceNamespace
   ): ScalableTarget = {
     val __obj = js.Dynamic.literal(CreationTime = CreationTime.asInstanceOf[js.Any], MaxCapacity = MaxCapacity.asInstanceOf[js.Any], MinCapacity = MinCapacity.asInstanceOf[js.Any], ResourceId = ResourceId.asInstanceOf[js.Any], RoleARN = RoleARN.asInstanceOf[js.Any], ScalableDimension = ScalableDimension.asInstanceOf[js.Any], ServiceNamespace = ServiceNamespace.asInstanceOf[js.Any])
-    if (SuspendedState != null) __obj.updateDynamic("SuspendedState")(SuspendedState.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScalableTarget]
   }
+  @scala.inline
+  implicit class ScalableTargetOps[Self <: ScalableTarget] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxCapacity(value: ResourceCapacity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinCapacity(value: ResourceCapacity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceId(value: ResourceIdMaxLen1600): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleARN(value: ResourceIdMaxLen1600): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScalableDimension(value: ScalableDimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalableDimension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServiceNamespace(value: ServiceNamespace): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceNamespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuspendedState(value: SuspendedState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SuspendedState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuspendedState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SuspendedState")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

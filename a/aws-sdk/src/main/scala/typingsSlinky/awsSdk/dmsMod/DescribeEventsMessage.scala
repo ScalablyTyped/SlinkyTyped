@@ -46,28 +46,125 @@ trait DescribeEventsMessage extends js.Object {
 
 object DescribeEventsMessage {
   @scala.inline
-  def apply(
-    Duration: Int | Double = null,
-    EndTime: js.Date = null,
-    EventCategories: EventCategoriesList = null,
-    Filters: FilterList = null,
-    Marker: String = null,
-    MaxRecords: Int | Double = null,
-    SourceIdentifier: String = null,
-    SourceType: SourceType = null,
-    StartTime: js.Date = null
-  ): DescribeEventsMessage = {
+  def apply(): DescribeEventsMessage = {
     val __obj = js.Dynamic.literal()
-    if (Duration != null) __obj.updateDynamic("Duration")(Duration.asInstanceOf[js.Any])
-    if (EndTime != null) __obj.updateDynamic("EndTime")(EndTime.asInstanceOf[js.Any])
-    if (EventCategories != null) __obj.updateDynamic("EventCategories")(EventCategories.asInstanceOf[js.Any])
-    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (MaxRecords != null) __obj.updateDynamic("MaxRecords")(MaxRecords.asInstanceOf[js.Any])
-    if (SourceIdentifier != null) __obj.updateDynamic("SourceIdentifier")(SourceIdentifier.asInstanceOf[js.Any])
-    if (SourceType != null) __obj.updateDynamic("SourceType")(SourceType.asInstanceOf[js.Any])
-    if (StartTime != null) __obj.updateDynamic("StartTime")(StartTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEventsMessage]
   }
+  @scala.inline
+  implicit class DescribeEventsMessageOps[Self <: DescribeEventsMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDuration(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventCategories(value: EventCategoriesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventCategories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventCategories: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventCategories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilters(value: FilterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRecords(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRecords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRecords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRecords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceType(value: SourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

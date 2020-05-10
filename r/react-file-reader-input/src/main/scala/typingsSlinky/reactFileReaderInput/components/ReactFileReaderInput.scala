@@ -1,11 +1,10 @@
 package typingsSlinky.reactFileReaderInput.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFileReaderInput.mod.Format
+import typingsSlinky.reactFileReaderInput.mod.Props
 import typingsSlinky.reactFileReaderInput.mod.Result
 import typingsSlinky.reactFileReaderInput.mod.^
 import typingsSlinky.std.Event_
@@ -13,23 +12,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactFileReaderInput
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactFileReaderInput {
   @JSImport("react-file-reader-input", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    onChange: (SyntheticEvent[Event_, _], js.Array[Result]) => Unit,
-    as: Format = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction2(onChange))
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def as(value: Format): this.type = set("as", value.asInstanceOf[js.Any])
   }
-  type Props = typingsSlinky.reactFileReaderInput.mod.Props
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(onChange: (SyntheticEvent[Event_, _], js.Array[Result]) => Unit): Builder = {
+    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction2(onChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
 }
 

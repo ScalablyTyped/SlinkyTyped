@@ -1,13 +1,12 @@
 package typingsSlinky.grommet.mod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLUListElement
+import slinky.core.ReactComponentClass
 import typingsSlinky.grommet.listMod.ListProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.std.HTMLUListElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,18 +16,12 @@ import scala.scalajs.js.annotation._
 class List protected ()
   extends Component[
       ListProps with (DetailedHTMLProps[HTMLAttributes[HTMLUListElement], HTMLUListElement]), 
-      ComponentState, 
+      js.Object, 
       js.Any
     ] {
-  def this(props: ListProps with (DetailedHTMLProps[
-        HTMLAttributes[org.scalajs.dom.raw.HTMLUListElement], 
-        org.scalajs.dom.raw.HTMLUListElement
-      ])) = this()
+  def this(props: ListProps with (DetailedHTMLProps[HTMLAttributes[HTMLUListElement], HTMLUListElement])) = this()
   def this(
-    props: ListProps with (DetailedHTMLProps[
-        HTMLAttributes[org.scalajs.dom.raw.HTMLUListElement], 
-        org.scalajs.dom.raw.HTMLUListElement
-      ]),
+    props: ListProps with (DetailedHTMLProps[HTMLAttributes[HTMLUListElement], HTMLUListElement]),
     context: js.Any
   ) = this()
 }
@@ -36,9 +29,8 @@ class List protected ()
 @JSImport("grommet", "List")
 @js.native
 object List extends TopLevel[
-      ComponentClass[
-        ListProps with (DetailedHTMLProps[HTMLAttributes[HTMLUListElement], HTMLUListElement]), 
-        ComponentState
+      ReactComponentClass[
+        ListProps with (DetailedHTMLProps[HTMLAttributes[HTMLUListElement], HTMLUListElement])
       ]
     ]
 

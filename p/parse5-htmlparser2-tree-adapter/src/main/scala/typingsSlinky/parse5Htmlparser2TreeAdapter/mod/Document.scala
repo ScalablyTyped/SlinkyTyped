@@ -9,20 +9,21 @@ import scala.scalajs.js.annotation._
 /**
   * htmlparser2 tree adapter Document interface.
   */
+@js.native
 trait Document extends ParentNode {
   /**
     * The name of the node.
     */
-  var name: root
+  var name: root = js.native
   /**
     * The type of the node.
     */
   @JSName("type")
-  var type_Document: root
+  var type_Document: root = js.native
   /**
     * [Document mode](https://dom.spec.whatwg.org/#concept-document-limited-quirks).
     */
-  var `x-mode`: DocumentMode
+  var `x-mode`: DocumentMode = js.native
 }
 
 object Document {
@@ -48,5 +49,31 @@ object Document {
     __obj.updateDynamic("x-mode")(`x-mode`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Document]
   }
+  @scala.inline
+  implicit class DocumentOps[Self <: Document] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: root): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: root): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withX-mode`(value: DocumentMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x-mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

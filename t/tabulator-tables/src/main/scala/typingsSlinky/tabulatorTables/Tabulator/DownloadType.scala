@@ -15,16 +15,14 @@ trait DownloadType extends js.Object
 
 object DownloadType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def csv: typingsSlinky.tabulatorTables.tabulatorTablesStrings.csv = "csv".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.csv]
   @scala.inline
-  def csv: typingsSlinky.tabulatorTables.tabulatorTablesStrings.csv = this.cast("csv")
+  def html: typingsSlinky.tabulatorTables.tabulatorTablesStrings.html = "html".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.html]
   @scala.inline
-  def html: typingsSlinky.tabulatorTables.tabulatorTablesStrings.html = this.cast("html")
+  def json: typingsSlinky.tabulatorTables.tabulatorTablesStrings.json = "json".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.json]
   @scala.inline
-  def json: typingsSlinky.tabulatorTables.tabulatorTablesStrings.json = this.cast("json")
+  def pdf: typingsSlinky.tabulatorTables.tabulatorTablesStrings.pdf = "pdf".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.pdf]
   @scala.inline
-  def pdf: typingsSlinky.tabulatorTables.tabulatorTablesStrings.pdf = this.cast("pdf")
-  @scala.inline
-  def xlsx: typingsSlinky.tabulatorTables.tabulatorTablesStrings.xlsx = this.cast("xlsx")
+  def xlsx: typingsSlinky.tabulatorTables.tabulatorTablesStrings.xlsx = "xlsx".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.xlsx]
 }
 

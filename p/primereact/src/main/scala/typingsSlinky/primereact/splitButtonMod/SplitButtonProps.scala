@@ -7,57 +7,205 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SplitButtonProps extends js.Object {
-  var appendTo: js.UndefOr[HTMLElement] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var icon: js.UndefOr[String] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var label: js.UndefOr[String] = js.undefined
-  var menuClassName: js.UndefOr[String] = js.undefined
-  var menuStyle: js.UndefOr[js.Object] = js.undefined
-  var model: js.UndefOr[js.Array[_]] = js.undefined
-  var onClick: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.undefined
-  var style: js.UndefOr[js.Object] = js.undefined
-  var tabIndex: js.UndefOr[String] = js.undefined
-  var tooltip: js.UndefOr[js.Any] = js.undefined
-  var tooltipOptions: js.UndefOr[TooltipOptions] = js.undefined
+  var appendTo: js.UndefOr[HTMLElement] = js.native
+  var className: js.UndefOr[String] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var icon: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.native
+  var label: js.UndefOr[String] = js.native
+  var menuClassName: js.UndefOr[String] = js.native
+  var menuStyle: js.UndefOr[js.Object] = js.native
+  var model: js.UndefOr[js.Array[_]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var style: js.UndefOr[js.Object] = js.native
+  var tabIndex: js.UndefOr[String] = js.native
+  var tooltip: js.UndefOr[js.Any] = js.native
+  var tooltipOptions: js.UndefOr[TooltipOptions] = js.native
 }
 
 object SplitButtonProps {
   @scala.inline
-  def apply(
-    appendTo: HTMLElement = null,
-    className: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    icon: String = null,
-    id: String = null,
-    label: String = null,
-    menuClassName: String = null,
-    menuStyle: js.Object = null,
-    model: js.Array[_] = null,
-    onClick: /* event */ Event_ => Unit = null,
-    style: js.Object = null,
-    tabIndex: String = null,
-    tooltip: js.Any = null,
-    tooltipOptions: TooltipOptions = null
-  ): SplitButtonProps = {
+  def apply(): SplitButtonProps = {
     val __obj = js.Dynamic.literal()
-    if (appendTo != null) __obj.updateDynamic("appendTo")(appendTo.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (menuClassName != null) __obj.updateDynamic("menuClassName")(menuClassName.asInstanceOf[js.Any])
-    if (menuStyle != null) __obj.updateDynamic("menuStyle")(menuStyle.asInstanceOf[js.Any])
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (tooltipOptions != null) __obj.updateDynamic("tooltipOptions")(tooltipOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SplitButtonProps]
   }
+  @scala.inline
+  implicit class SplitButtonPropsOps[Self <: SplitButtonProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppendTo(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppendTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenuClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenuClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenuStyle(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenuStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModel(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClick(value: /* event */ Event_ => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTabIndex(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipOptions(value: TooltipOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

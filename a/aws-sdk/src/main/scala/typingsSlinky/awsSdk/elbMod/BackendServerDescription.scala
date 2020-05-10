@@ -18,11 +18,41 @@ trait BackendServerDescription extends js.Object {
 
 object BackendServerDescription {
   @scala.inline
-  def apply(InstancePort: Int | Double = null, PolicyNames: PolicyNames = null): BackendServerDescription = {
+  def apply(): BackendServerDescription = {
     val __obj = js.Dynamic.literal()
-    if (InstancePort != null) __obj.updateDynamic("InstancePort")(InstancePort.asInstanceOf[js.Any])
-    if (PolicyNames != null) __obj.updateDynamic("PolicyNames")(PolicyNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[BackendServerDescription]
   }
+  @scala.inline
+  implicit class BackendServerDescriptionOps[Self <: BackendServerDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstancePort(value: InstancePort): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstancePort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstancePort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstancePort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyNames(value: PolicyNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyNames")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

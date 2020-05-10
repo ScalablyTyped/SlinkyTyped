@@ -2,6 +2,7 @@ package typingsSlinky.mockReqRes
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.expressServeStaticCore.mod.Request
 import typingsSlinky.expressServeStaticCore.mod.Response
 import typingsSlinky.sinon.mod.SinonSpy
@@ -23,7 +24,7 @@ object mod extends js.Object {
   
   @js.native
   trait RequestOutput
-    extends Request[ParamsDictionary, js.Any, js.Any] {
+    extends Request[ParamsDictionary, js.Any, js.Any, Query] {
     @JSName("get")
     var get_Original: SinonStub = js.native
     // Methods

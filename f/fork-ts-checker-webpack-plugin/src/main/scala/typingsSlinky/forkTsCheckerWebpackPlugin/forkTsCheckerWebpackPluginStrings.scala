@@ -9,15 +9,6 @@ import scala.scalajs.js.annotation._
 
 object forkTsCheckerWebpackPluginStrings {
   @js.native
-  sealed trait `0Dot8` extends js.Object
-  
-  @js.native
-  sealed trait `3Dot8` extends js.Object
-  
-  @js.native
-  sealed trait INTERNAL_ERROR extends js.Object
-  
-  @js.native
   sealed trait cancel extends ForkTsCheckerHooks
   
   @js.native
@@ -51,9 +42,6 @@ object forkTsCheckerWebpackPluginStrings {
   sealed trait receive extends ForkTsCheckerHooks
   
   @js.native
-  sealed trait run extends js.Object
-  
-  @js.native
   sealed trait serviceBeforeStart extends ForkTsCheckerHooks
   
   @js.native
@@ -71,12 +59,6 @@ object forkTsCheckerWebpackPluginStrings {
   @js.native
   sealed trait warning extends Severity
   
-  @scala.inline
-  def `0Dot8`: `0Dot8` = "0.8".asInstanceOf[`0Dot8`]
-  @scala.inline
-  def `3Dot8`: `3Dot8` = "3.8".asInstanceOf[`3Dot8`]
-  @scala.inline
-  def INTERNAL_ERROR: INTERNAL_ERROR = "INTERNAL_ERROR".asInstanceOf[INTERNAL_ERROR]
   @scala.inline
   def cancel: cancel = "cancel".asInstanceOf[cancel]
   @scala.inline
@@ -99,8 +81,6 @@ object forkTsCheckerWebpackPluginStrings {
   def lint: lint = "lint".asInstanceOf[lint]
   @scala.inline
   def receive: receive = "receive".asInstanceOf[receive]
-  @scala.inline
-  def run: run = "run".asInstanceOf[run]
   @scala.inline
   def serviceBeforeStart: serviceBeforeStart = "serviceBeforeStart".asInstanceOf[serviceBeforeStart]
   @scala.inline

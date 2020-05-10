@@ -22,30 +22,28 @@ trait TXT_STYLE extends js.Object
 
 object TXT_STYLE {
   @scala.inline
-  def B: typingsSlinky.escpos.escposStrings.B = this.cast("B")
+  def B: typingsSlinky.escpos.escposStrings.B = "B".asInstanceOf[typingsSlinky.escpos.escposStrings.B]
   @scala.inline
-  def BI: typingsSlinky.escpos.escposStrings.BI = this.cast("BI")
+  def BI: typingsSlinky.escpos.escposStrings.BI = "BI".asInstanceOf[typingsSlinky.escpos.escposStrings.BI]
   @scala.inline
-  def BIU: typingsSlinky.escpos.escposStrings.BIU = this.cast("BIU")
+  def BIU: typingsSlinky.escpos.escposStrings.BIU = "BIU".asInstanceOf[typingsSlinky.escpos.escposStrings.BIU]
   @scala.inline
-  def BIU2: typingsSlinky.escpos.escposStrings.BIU2 = this.cast("BIU2")
+  def BIU2: typingsSlinky.escpos.escposStrings.BIU2 = "BIU2".asInstanceOf[typingsSlinky.escpos.escposStrings.BIU2]
   @scala.inline
-  def BU: typingsSlinky.escpos.escposStrings.BU = this.cast("BU")
+  def BU: typingsSlinky.escpos.escposStrings.BU = "BU".asInstanceOf[typingsSlinky.escpos.escposStrings.BU]
   @scala.inline
-  def BU2: typingsSlinky.escpos.escposStrings.BU2 = this.cast("BU2")
+  def BU2: typingsSlinky.escpos.escposStrings.BU2 = "BU2".asInstanceOf[typingsSlinky.escpos.escposStrings.BU2]
   @scala.inline
-  def I: typingsSlinky.escpos.escposStrings.I = this.cast("I")
+  def I: typingsSlinky.escpos.escposStrings.I = "I".asInstanceOf[typingsSlinky.escpos.escposStrings.I]
   @scala.inline
-  def IU: typingsSlinky.escpos.escposStrings.IU = this.cast("IU")
+  def IU: typingsSlinky.escpos.escposStrings.IU = "IU".asInstanceOf[typingsSlinky.escpos.escposStrings.IU]
   @scala.inline
-  def IU2: typingsSlinky.escpos.escposStrings.IU2 = this.cast("IU2")
+  def IU2: typingsSlinky.escpos.escposStrings.IU2 = "IU2".asInstanceOf[typingsSlinky.escpos.escposStrings.IU2]
   @scala.inline
-  def NORMAL: typingsSlinky.escpos.escposStrings.NORMAL = this.cast("NORMAL")
+  def NORMAL: typingsSlinky.escpos.escposStrings.NORMAL = "NORMAL".asInstanceOf[typingsSlinky.escpos.escposStrings.NORMAL]
   @scala.inline
-  def U: typingsSlinky.escpos.escposStrings.U = this.cast("U")
+  def U: typingsSlinky.escpos.escposStrings.U = "U".asInstanceOf[typingsSlinky.escpos.escposStrings.U]
   @scala.inline
-  def U2: typingsSlinky.escpos.escposStrings.U2 = this.cast("U2")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def U2: typingsSlinky.escpos.escposStrings.U2 = "U2".asInstanceOf[typingsSlinky.escpos.escposStrings.U2]
 }
 

@@ -6,9 +6,6 @@ import typingsSlinky.angularCore.mod.ChangeDetectorRef
 import typingsSlinky.angularCore.mod.ElementRef
 import typingsSlinky.angularCore.mod.EventEmitter
 import typingsSlinky.angularCore.mod.NgZone
-import typingsSlinky.ionicCore.ionicCoreStrings.button
-import typingsSlinky.ionicCore.ionicCoreStrings.reset
-import typingsSlinky.ionicCore.ionicCoreStrings.submit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,28 +15,8 @@ import scala.scalajs.js.annotation._
 class IonSegmentButton protected ()
   extends typingsSlinky.ionicCore.componentsMod.Components.IonSegmentButton {
   def this(c: ChangeDetectorRef, r: ElementRef[_], z: NgZone) = this()
-  /**
-    * If `true`, the segment button is selected.
-    */
-  /* CompleteClass */
-  override var checked: Boolean = js.native
-  /**
-    * If `true`, the user cannot interact with the segment button.
-    */
-  /* CompleteClass */
-  override var disabled: Boolean = js.native
   var el: HTMLElement = js.native
   var ionSelect: EventEmitter[CustomEvent] = js.native
-  /**
-    * The type of the button.
-    */
-  /* CompleteClass */
-  override var `type`: submit | reset | button = js.native
-  /**
-    * The value of the segment button.
-    */
-  /* CompleteClass */
-  override var value: String = js.native
   var z: NgZone = js.native
 }
 

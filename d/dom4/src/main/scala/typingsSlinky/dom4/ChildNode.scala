@@ -8,23 +8,24 @@ import scala.scalajs.js.annotation._
 /**
   * https://dom.spec.whatwg.org/#childnode
   */
+@js.native
 trait ChildNode extends js.Object {
   /**
     * Inserts `nodes` just after this node, while replacing strings with equivalent `Text` nodes.
     */
-  def after(nodes: (Node | String)*): Unit
+  def after(nodes: (Node | String)*): Unit = js.native
   /**
     * Inserts `nodes` just before this node, while replacing strings with equivalent `Text` nodes.
     */
-  def before(nodes: (Node | String)*): Unit
+  def before(nodes: (Node | String)*): Unit = js.native
   /**
     * Removes this node.
     */
-  def remove(): Unit
+  def remove(): Unit = js.native
   /**
     * Replaces this node with `nodes`, while replacing strings in nodes with equivalent Text nodes.
     */
-  def replaceWith(nodes: (Node | String)*): Unit
+  def replaceWith(nodes: (Node | String)*): Unit = js.native
 }
 
 object ChildNode {
@@ -36,8 +37,39 @@ object ChildNode {
     replaceWith: /* repeated */ Node | String => Unit
   ): ChildNode = {
     val __obj = js.Dynamic.literal(after = js.Any.fromFunction1(after), before = js.Any.fromFunction1(before), remove = js.Any.fromFunction0(remove), replaceWith = js.Any.fromFunction1(replaceWith))
-  
     __obj.asInstanceOf[ChildNode]
   }
+  @scala.inline
+  implicit class ChildNodeOps[Self <: ChildNode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfter(value: /* repeated */ Node | String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBefore(value: /* repeated */ Node | String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemove(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withReplaceWith(value: /* repeated */ Node | String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceWith")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

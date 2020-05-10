@@ -18,11 +18,41 @@ trait ListDetectorModelVersionsResponse extends js.Object {
 
 object ListDetectorModelVersionsResponse {
   @scala.inline
-  def apply(detectorModelVersionSummaries: DetectorModelVersionSummaries = null, nextToken: NextToken = null): ListDetectorModelVersionsResponse = {
+  def apply(): ListDetectorModelVersionsResponse = {
     val __obj = js.Dynamic.literal()
-    if (detectorModelVersionSummaries != null) __obj.updateDynamic("detectorModelVersionSummaries")(detectorModelVersionSummaries.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDetectorModelVersionsResponse]
   }
+  @scala.inline
+  implicit class ListDetectorModelVersionsResponseOps[Self <: ListDetectorModelVersionsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDetectorModelVersionSummaries(value: DetectorModelVersionSummaries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorModelVersionSummaries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetectorModelVersionSummaries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorModelVersionSummaries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

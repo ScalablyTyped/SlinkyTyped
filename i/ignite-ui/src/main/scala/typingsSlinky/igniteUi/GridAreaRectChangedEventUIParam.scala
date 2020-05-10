@@ -4,69 +4,167 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GridAreaRectChangedEventUIParam extends js.Object {
   /**
   	 * Used to get reference to chart object.
   	 */
-  var chart: js.UndefOr[js.Any] = js.undefined
+  var chart: js.UndefOr[js.Any] = js.native
   /**
   	 * Used to get new height value.
   	 */
-  var newHeight: js.UndefOr[js.Any] = js.undefined
+  var newHeight: js.UndefOr[js.Any] = js.native
   /**
   	 * Used to get new left value.
   	 */
-  var newLeft: js.UndefOr[js.Any] = js.undefined
+  var newLeft: js.UndefOr[js.Any] = js.native
   /**
   	 * Used to get new top value.
   	 */
-  var newTop: js.UndefOr[js.Any] = js.undefined
+  var newTop: js.UndefOr[js.Any] = js.native
   /**
   	 * Used to get new top value.
   	 */
-  var newWidth: js.UndefOr[js.Any] = js.undefined
+  var newWidth: js.UndefOr[js.Any] = js.native
   /**
   	 * Used to get old height value.
   	 */
-  var oldHeight: js.UndefOr[js.Any] = js.undefined
+  var oldHeight: js.UndefOr[js.Any] = js.native
   /**
   	 * Used to get old left value.
   	 */
-  var oldLeft: js.UndefOr[js.Any] = js.undefined
+  var oldLeft: js.UndefOr[js.Any] = js.native
   /**
   	 * Used to get old top value.
   	 */
-  var oldTop: js.UndefOr[js.Any] = js.undefined
+  var oldTop: js.UndefOr[js.Any] = js.native
   /**
   	 * Used to get old top value.
   	 */
-  var oldWidth: js.UndefOr[js.Any] = js.undefined
+  var oldWidth: js.UndefOr[js.Any] = js.native
 }
 
 object GridAreaRectChangedEventUIParam {
   @scala.inline
-  def apply(
-    chart: js.Any = null,
-    newHeight: js.Any = null,
-    newLeft: js.Any = null,
-    newTop: js.Any = null,
-    newWidth: js.Any = null,
-    oldHeight: js.Any = null,
-    oldLeft: js.Any = null,
-    oldTop: js.Any = null,
-    oldWidth: js.Any = null
-  ): GridAreaRectChangedEventUIParam = {
+  def apply(): GridAreaRectChangedEventUIParam = {
     val __obj = js.Dynamic.literal()
-    if (chart != null) __obj.updateDynamic("chart")(chart.asInstanceOf[js.Any])
-    if (newHeight != null) __obj.updateDynamic("newHeight")(newHeight.asInstanceOf[js.Any])
-    if (newLeft != null) __obj.updateDynamic("newLeft")(newLeft.asInstanceOf[js.Any])
-    if (newTop != null) __obj.updateDynamic("newTop")(newTop.asInstanceOf[js.Any])
-    if (newWidth != null) __obj.updateDynamic("newWidth")(newWidth.asInstanceOf[js.Any])
-    if (oldHeight != null) __obj.updateDynamic("oldHeight")(oldHeight.asInstanceOf[js.Any])
-    if (oldLeft != null) __obj.updateDynamic("oldLeft")(oldLeft.asInstanceOf[js.Any])
-    if (oldTop != null) __obj.updateDynamic("oldTop")(oldTop.asInstanceOf[js.Any])
-    if (oldWidth != null) __obj.updateDynamic("oldWidth")(oldWidth.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridAreaRectChangedEventUIParam]
   }
+  @scala.inline
+  implicit class GridAreaRectChangedEventUIParamOps[Self <: GridAreaRectChangedEventUIParam] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChart(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewHeight(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewLeft(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewTop(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewWidth(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOldHeight(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOldHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOldLeft(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOldLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOldTop(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOldTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOldWidth(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOldWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldWidth")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

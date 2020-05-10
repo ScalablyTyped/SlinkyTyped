@@ -32,18 +32,65 @@ trait SchemaModification extends js.Object {
 
 object SchemaModification {
   @scala.inline
-  def apply(
-    create: SchemaColumnFamily = null,
-    drop: js.UndefOr[Boolean] = js.undefined,
-    id: String = null,
-    update: SchemaColumnFamily = null
-  ): SchemaModification = {
+  def apply(): SchemaModification = {
     val __obj = js.Dynamic.literal()
-    if (create != null) __obj.updateDynamic("create")(create.asInstanceOf[js.Any])
-    if (!js.isUndefined(drop)) __obj.updateDynamic("drop")(drop.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (update != null) __obj.updateDynamic("update")(update.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaModification]
   }
+  @scala.inline
+  implicit class SchemaModificationOps[Self <: SchemaModification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreate(value: SchemaColumnFamily): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: SchemaColumnFamily): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

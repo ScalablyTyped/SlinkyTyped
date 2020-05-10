@@ -78,44 +78,221 @@ trait M3u8Settings extends js.Object {
 
 object M3u8Settings {
   @scala.inline
-  def apply(
-    AudioFramesPerPes: Int | Double = null,
-    AudioPids: string = null,
-    EcmPid: string = null,
-    NielsenId3Behavior: M3u8NielsenId3Behavior = null,
-    PatInterval: Int | Double = null,
-    PcrControl: M3u8PcrControl = null,
-    PcrPeriod: Int | Double = null,
-    PcrPid: string = null,
-    PmtInterval: Int | Double = null,
-    PmtPid: string = null,
-    ProgramNum: Int | Double = null,
-    Scte35Behavior: M3u8Scte35Behavior = null,
-    Scte35Pid: string = null,
-    TimedMetadataBehavior: M3u8TimedMetadataBehavior = null,
-    TimedMetadataPid: string = null,
-    TransportStreamId: Int | Double = null,
-    VideoPid: string = null
-  ): M3u8Settings = {
+  def apply(): M3u8Settings = {
     val __obj = js.Dynamic.literal()
-    if (AudioFramesPerPes != null) __obj.updateDynamic("AudioFramesPerPes")(AudioFramesPerPes.asInstanceOf[js.Any])
-    if (AudioPids != null) __obj.updateDynamic("AudioPids")(AudioPids.asInstanceOf[js.Any])
-    if (EcmPid != null) __obj.updateDynamic("EcmPid")(EcmPid.asInstanceOf[js.Any])
-    if (NielsenId3Behavior != null) __obj.updateDynamic("NielsenId3Behavior")(NielsenId3Behavior.asInstanceOf[js.Any])
-    if (PatInterval != null) __obj.updateDynamic("PatInterval")(PatInterval.asInstanceOf[js.Any])
-    if (PcrControl != null) __obj.updateDynamic("PcrControl")(PcrControl.asInstanceOf[js.Any])
-    if (PcrPeriod != null) __obj.updateDynamic("PcrPeriod")(PcrPeriod.asInstanceOf[js.Any])
-    if (PcrPid != null) __obj.updateDynamic("PcrPid")(PcrPid.asInstanceOf[js.Any])
-    if (PmtInterval != null) __obj.updateDynamic("PmtInterval")(PmtInterval.asInstanceOf[js.Any])
-    if (PmtPid != null) __obj.updateDynamic("PmtPid")(PmtPid.asInstanceOf[js.Any])
-    if (ProgramNum != null) __obj.updateDynamic("ProgramNum")(ProgramNum.asInstanceOf[js.Any])
-    if (Scte35Behavior != null) __obj.updateDynamic("Scte35Behavior")(Scte35Behavior.asInstanceOf[js.Any])
-    if (Scte35Pid != null) __obj.updateDynamic("Scte35Pid")(Scte35Pid.asInstanceOf[js.Any])
-    if (TimedMetadataBehavior != null) __obj.updateDynamic("TimedMetadataBehavior")(TimedMetadataBehavior.asInstanceOf[js.Any])
-    if (TimedMetadataPid != null) __obj.updateDynamic("TimedMetadataPid")(TimedMetadataPid.asInstanceOf[js.Any])
-    if (TransportStreamId != null) __obj.updateDynamic("TransportStreamId")(TransportStreamId.asInstanceOf[js.Any])
-    if (VideoPid != null) __obj.updateDynamic("VideoPid")(VideoPid.asInstanceOf[js.Any])
     __obj.asInstanceOf[M3u8Settings]
   }
+  @scala.inline
+  implicit class M3u8SettingsOps[Self <: M3u8Settings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAudioFramesPerPes(value: integerMin0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioFramesPerPes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudioFramesPerPes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioFramesPerPes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAudioPids(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioPids")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudioPids: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioPids")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEcmPid(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EcmPid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEcmPid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EcmPid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNielsenId3Behavior(value: M3u8NielsenId3Behavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NielsenId3Behavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNielsenId3Behavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NielsenId3Behavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatInterval(value: integerMin0Max1000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PatInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PatInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPcrControl(value: M3u8PcrControl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PcrControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPcrControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PcrControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPcrPeriod(value: integerMin0Max500): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PcrPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPcrPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PcrPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPcrPid(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PcrPid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPcrPid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PcrPid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPmtInterval(value: integerMin0Max1000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PmtInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPmtInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PmtInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPmtPid(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PmtPid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPmtPid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PmtPid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgramNum(value: integerMin0Max65535): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramNum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgramNum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramNum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScte35Behavior(value: M3u8Scte35Behavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35Behavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScte35Behavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35Behavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScte35Pid(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35Pid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScte35Pid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35Pid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimedMetadataBehavior(value: M3u8TimedMetadataBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimedMetadataBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimedMetadataPid(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataPid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimedMetadataPid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataPid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransportStreamId(value: integerMin0Max65535): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransportStreamId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransportStreamId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransportStreamId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoPid(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoPid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoPid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoPid")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

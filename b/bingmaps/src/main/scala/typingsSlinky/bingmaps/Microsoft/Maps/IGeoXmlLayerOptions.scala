@@ -4,51 +4,93 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IGeoXmlLayerOptions extends IGeoXmlReadOptions {
   /** A boolean indicating if the map should automatically upate the view when a data set is loaded. Default: true */
-  var autoUpdateMapView: js.UndefOr[Boolean] = js.undefined
+  var autoUpdateMapView: js.UndefOr[Boolean] = js.native
   /** Options used to customize how the default infobox renders. */
-  var infoboxOptions: js.UndefOr[IInfoboxOptions] = js.undefined
+  var infoboxOptions: js.UndefOr[IInfoboxOptions] = js.native
   /** An optional name to identify the layer by. */
-  var layerName: js.UndefOr[String] = js.undefined
+  var layerName: js.UndefOr[String] = js.native
   /** A boolean indicating if infoboxes should automatically appear when shapes clicked. Default: false */
-  var suppressInfoboxes: js.UndefOr[Boolean] = js.undefined
+  var suppressInfoboxes: js.UndefOr[Boolean] = js.native
   /** A boolean indicating if the layer is visible or not. Default: true */
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.native
 }
 
 object IGeoXmlLayerOptions {
   @scala.inline
-  def apply(
-    allowKmlScreenOverlays: js.UndefOr[Boolean] = js.undefined,
-    autoUpdateMapView: js.UndefOr[Boolean] = js.undefined,
-    captureGpxPathWaypoints: js.UndefOr[Boolean] = js.undefined,
-    defaultStyles: IStylesOptions = null,
-    error: /* msg */ String => Unit = null,
-    ignoreVisibility: js.UndefOr[Boolean] = js.undefined,
-    infoboxOptions: IInfoboxOptions = null,
-    layerName: String = null,
-    maxNetworkLinkDepth: Int | Double = null,
-    maxNetworkLinks: Int | Double = null,
-    setPushpinTitles: js.UndefOr[Boolean] = js.undefined,
-    suppressInfoboxes: js.UndefOr[Boolean] = js.undefined,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): IGeoXmlLayerOptions = {
+  def apply(): IGeoXmlLayerOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowKmlScreenOverlays)) __obj.updateDynamic("allowKmlScreenOverlays")(allowKmlScreenOverlays.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoUpdateMapView)) __obj.updateDynamic("autoUpdateMapView")(autoUpdateMapView.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureGpxPathWaypoints)) __obj.updateDynamic("captureGpxPathWaypoints")(captureGpxPathWaypoints.asInstanceOf[js.Any])
-    if (defaultStyles != null) __obj.updateDynamic("defaultStyles")(defaultStyles.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction1(error))
-    if (!js.isUndefined(ignoreVisibility)) __obj.updateDynamic("ignoreVisibility")(ignoreVisibility.asInstanceOf[js.Any])
-    if (infoboxOptions != null) __obj.updateDynamic("infoboxOptions")(infoboxOptions.asInstanceOf[js.Any])
-    if (layerName != null) __obj.updateDynamic("layerName")(layerName.asInstanceOf[js.Any])
-    if (maxNetworkLinkDepth != null) __obj.updateDynamic("maxNetworkLinkDepth")(maxNetworkLinkDepth.asInstanceOf[js.Any])
-    if (maxNetworkLinks != null) __obj.updateDynamic("maxNetworkLinks")(maxNetworkLinks.asInstanceOf[js.Any])
-    if (!js.isUndefined(setPushpinTitles)) __obj.updateDynamic("setPushpinTitles")(setPushpinTitles.asInstanceOf[js.Any])
-    if (!js.isUndefined(suppressInfoboxes)) __obj.updateDynamic("suppressInfoboxes")(suppressInfoboxes.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGeoXmlLayerOptions]
   }
+  @scala.inline
+  implicit class IGeoXmlLayerOptionsOps[Self <: IGeoXmlLayerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoUpdateMapView(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpdateMapView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoUpdateMapView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpdateMapView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInfoboxOptions(value: IInfoboxOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infoboxOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInfoboxOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infoboxOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayerName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuppressInfoboxes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressInfoboxes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuppressInfoboxes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressInfoboxes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

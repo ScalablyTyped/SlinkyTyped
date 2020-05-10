@@ -17,20 +17,18 @@ trait JustifyContentType extends js.Object
 
 object JustifyContentType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.azdata.azdataStrings.center = "center".asInstanceOf[typingsSlinky.azdata.azdataStrings.center]
   @scala.inline
-  def center: typingsSlinky.azdata.azdataStrings.center = this.cast("center")
+  def `flex-end`: typingsSlinky.azdata.azdataStrings.`flex-end` = "flex-end".asInstanceOf[typingsSlinky.azdata.azdataStrings.`flex-end`]
   @scala.inline
-  def `flex-end`: typingsSlinky.azdata.azdataStrings.`flex-end` = this.cast("flex-end")
+  def `flex-start`: typingsSlinky.azdata.azdataStrings.`flex-start` = "flex-start".asInstanceOf[typingsSlinky.azdata.azdataStrings.`flex-start`]
   @scala.inline
-  def `flex-start`: typingsSlinky.azdata.azdataStrings.`flex-start` = this.cast("flex-start")
+  def inherit: typingsSlinky.azdata.azdataStrings.inherit = "inherit".asInstanceOf[typingsSlinky.azdata.azdataStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.azdata.azdataStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.azdata.azdataStrings.initial = "initial".asInstanceOf[typingsSlinky.azdata.azdataStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.azdata.azdataStrings.initial = this.cast("initial")
+  def `space-around`: typingsSlinky.azdata.azdataStrings.`space-around` = "space-around".asInstanceOf[typingsSlinky.azdata.azdataStrings.`space-around`]
   @scala.inline
-  def `space-around`: typingsSlinky.azdata.azdataStrings.`space-around` = this.cast("space-around")
-  @scala.inline
-  def `space-between`: typingsSlinky.azdata.azdataStrings.`space-between` = this.cast("space-between")
+  def `space-between`: typingsSlinky.azdata.azdataStrings.`space-between` = "space-between".asInstanceOf[typingsSlinky.azdata.azdataStrings.`space-between`]
 }
 

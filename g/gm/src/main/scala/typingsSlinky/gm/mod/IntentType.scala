@@ -14,14 +14,12 @@ trait IntentType extends js.Object
 
 object IntentType {
   @scala.inline
-  def Absolute: typingsSlinky.gm.gmStrings.Absolute = this.cast("Absolute")
+  def Absolute: typingsSlinky.gm.gmStrings.Absolute = "Absolute".asInstanceOf[typingsSlinky.gm.gmStrings.Absolute]
   @scala.inline
-  def Perceptual: typingsSlinky.gm.gmStrings.Perceptual = this.cast("Perceptual")
+  def Perceptual: typingsSlinky.gm.gmStrings.Perceptual = "Perceptual".asInstanceOf[typingsSlinky.gm.gmStrings.Perceptual]
   @scala.inline
-  def Relative: typingsSlinky.gm.gmStrings.Relative = this.cast("Relative")
+  def Relative: typingsSlinky.gm.gmStrings.Relative = "Relative".asInstanceOf[typingsSlinky.gm.gmStrings.Relative]
   @scala.inline
-  def Saturation: typingsSlinky.gm.gmStrings.Saturation = this.cast("Saturation")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Saturation: typingsSlinky.gm.gmStrings.Saturation = "Saturation".asInstanceOf[typingsSlinky.gm.gmStrings.Saturation]
 }
 

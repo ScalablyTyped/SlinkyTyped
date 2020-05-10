@@ -26,17 +26,59 @@ trait GetCelebrityRecognitionRequest extends js.Object {
 
 object GetCelebrityRecognitionRequest {
   @scala.inline
-  def apply(
-    JobId: JobId,
-    MaxResults: Int | Double = null,
-    NextToken: PaginationToken = null,
-    SortBy: CelebrityRecognitionSortBy = null
-  ): GetCelebrityRecognitionRequest = {
+  def apply(JobId: JobId): GetCelebrityRecognitionRequest = {
     val __obj = js.Dynamic.literal(JobId = JobId.asInstanceOf[js.Any])
-    if (MaxResults != null) __obj.updateDynamic("MaxResults")(MaxResults.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (SortBy != null) __obj.updateDynamic("SortBy")(SortBy.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCelebrityRecognitionRequest]
   }
+  @scala.inline
+  implicit class GetCelebrityRecognitionRequestOps[Self <: GetCelebrityRecognitionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobId(value: JobId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: MaxResults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortBy(value: CelebrityRecognitionSortBy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SortBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SortBy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

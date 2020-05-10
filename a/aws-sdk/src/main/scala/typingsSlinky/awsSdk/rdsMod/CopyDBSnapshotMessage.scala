@@ -39,24 +39,101 @@ trait CopyDBSnapshotMessage extends js.Object {
 
 object CopyDBSnapshotMessage {
   @scala.inline
-  def apply(
-    SourceDBSnapshotIdentifier: String,
-    TargetDBSnapshotIdentifier: String,
-    CopyTags: js.UndefOr[scala.Boolean] = js.undefined,
-    KmsKeyId: String = null,
-    OptionGroupName: String = null,
-    PreSignedUrl: String = null,
-    SourceRegion: String = null,
-    Tags: TagList = null
-  ): CopyDBSnapshotMessage = {
+  def apply(SourceDBSnapshotIdentifier: String, TargetDBSnapshotIdentifier: String): CopyDBSnapshotMessage = {
     val __obj = js.Dynamic.literal(SourceDBSnapshotIdentifier = SourceDBSnapshotIdentifier.asInstanceOf[js.Any], TargetDBSnapshotIdentifier = TargetDBSnapshotIdentifier.asInstanceOf[js.Any])
-    if (!js.isUndefined(CopyTags)) __obj.updateDynamic("CopyTags")(CopyTags.asInstanceOf[js.Any])
-    if (KmsKeyId != null) __obj.updateDynamic("KmsKeyId")(KmsKeyId.asInstanceOf[js.Any])
-    if (OptionGroupName != null) __obj.updateDynamic("OptionGroupName")(OptionGroupName.asInstanceOf[js.Any])
-    if (PreSignedUrl != null) __obj.updateDynamic("PreSignedUrl")(PreSignedUrl.asInstanceOf[js.Any])
-    if (SourceRegion != null) __obj.updateDynamic("SourceRegion")(SourceRegion.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CopyDBSnapshotMessage]
   }
+  @scala.inline
+  implicit class CopyDBSnapshotMessageOps[Self <: CopyDBSnapshotMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSourceDBSnapshotIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceDBSnapshotIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetDBSnapshotIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetDBSnapshotIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCopyTags(value: BooleanOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCopyTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsKeyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionGroupName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreSignedUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreSignedUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreSignedUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreSignedUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceRegion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,11 +18,41 @@ trait DescribeMaintenanceWindowExecutionsResult extends js.Object {
 
 object DescribeMaintenanceWindowExecutionsResult {
   @scala.inline
-  def apply(NextToken: NextToken = null, WindowExecutions: MaintenanceWindowExecutionList = null): DescribeMaintenanceWindowExecutionsResult = {
+  def apply(): DescribeMaintenanceWindowExecutionsResult = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (WindowExecutions != null) __obj.updateDynamic("WindowExecutions")(WindowExecutions.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeMaintenanceWindowExecutionsResult]
   }
+  @scala.inline
+  implicit class DescribeMaintenanceWindowExecutionsResultOps[Self <: DescribeMaintenanceWindowExecutionsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWindowExecutions(value: MaintenanceWindowExecutionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowExecutions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWindowExecutions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowExecutions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

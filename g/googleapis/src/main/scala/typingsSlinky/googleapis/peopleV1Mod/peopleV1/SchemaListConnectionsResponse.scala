@@ -31,20 +31,77 @@ trait SchemaListConnectionsResponse extends js.Object {
 
 object SchemaListConnectionsResponse {
   @scala.inline
-  def apply(
-    connections: js.Array[SchemaPerson] = null,
-    nextPageToken: String = null,
-    nextSyncToken: String = null,
-    totalItems: Int | Double = null,
-    totalPeople: Int | Double = null
-  ): SchemaListConnectionsResponse = {
+  def apply(): SchemaListConnectionsResponse = {
     val __obj = js.Dynamic.literal()
-    if (connections != null) __obj.updateDynamic("connections")(connections.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (nextSyncToken != null) __obj.updateDynamic("nextSyncToken")(nextSyncToken.asInstanceOf[js.Any])
-    if (totalItems != null) __obj.updateDynamic("totalItems")(totalItems.asInstanceOf[js.Any])
-    if (totalPeople != null) __obj.updateDynamic("totalPeople")(totalPeople.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListConnectionsResponse]
   }
+  @scala.inline
+  implicit class SchemaListConnectionsResponseOps[Self <: SchemaListConnectionsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnections(value: js.Array[SchemaPerson]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connections")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnections: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connections")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextSyncToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextSyncToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextSyncToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextSyncToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalItems(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalPeople(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPeople")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalPeople: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPeople")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

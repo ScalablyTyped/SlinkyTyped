@@ -50,29 +50,131 @@ trait ModifyImageAttributeRequest extends js.Object {
 
 object ModifyImageAttributeRequest {
   @scala.inline
-  def apply(
-    ImageId: ImageId,
-    Attribute: String = null,
-    Description: AttributeValue = null,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    LaunchPermission: LaunchPermissionModifications = null,
-    OperationType: OperationType = null,
-    ProductCodes: ProductCodeStringList = null,
-    UserGroups: UserGroupStringList = null,
-    UserIds: UserIdStringList = null,
-    Value: String = null
-  ): ModifyImageAttributeRequest = {
+  def apply(ImageId: ImageId): ModifyImageAttributeRequest = {
     val __obj = js.Dynamic.literal(ImageId = ImageId.asInstanceOf[js.Any])
-    if (Attribute != null) __obj.updateDynamic("Attribute")(Attribute.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (LaunchPermission != null) __obj.updateDynamic("LaunchPermission")(LaunchPermission.asInstanceOf[js.Any])
-    if (OperationType != null) __obj.updateDynamic("OperationType")(OperationType.asInstanceOf[js.Any])
-    if (ProductCodes != null) __obj.updateDynamic("ProductCodes")(ProductCodes.asInstanceOf[js.Any])
-    if (UserGroups != null) __obj.updateDynamic("UserGroups")(UserGroups.asInstanceOf[js.Any])
-    if (UserIds != null) __obj.updateDynamic("UserIds")(UserIds.asInstanceOf[js.Any])
-    if (Value != null) __obj.updateDynamic("Value")(Value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyImageAttributeRequest]
   }
+  @scala.inline
+  implicit class ModifyImageAttributeRequestOps[Self <: ModifyImageAttributeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImageId(value: ImageId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttribute(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attribute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttribute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attribute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: AttributeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchPermission(value: LaunchPermissionModifications): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchPermission")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchPermission: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchPermission")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperationType(value: OperationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductCodes(value: ProductCodeStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductCodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductCodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductCodes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserGroups(value: UserGroupStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserIds(value: UserIdStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

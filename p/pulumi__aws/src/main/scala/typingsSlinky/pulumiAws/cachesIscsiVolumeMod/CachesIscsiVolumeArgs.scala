@@ -44,16 +44,78 @@ object CachesIscsiVolumeArgs {
     gatewayArn: Input[String],
     networkInterfaceId: Input[String],
     targetName: Input[String],
-    volumeSizeInBytes: Input[Double],
-    snapshotId: Input[String] = null,
-    sourceVolumeArn: Input[String] = null,
-    tags: Input[StringDictionary[_]] = null
+    volumeSizeInBytes: Input[Double]
   ): CachesIscsiVolumeArgs = {
     val __obj = js.Dynamic.literal(gatewayArn = gatewayArn.asInstanceOf[js.Any], networkInterfaceId = networkInterfaceId.asInstanceOf[js.Any], targetName = targetName.asInstanceOf[js.Any], volumeSizeInBytes = volumeSizeInBytes.asInstanceOf[js.Any])
-    if (snapshotId != null) __obj.updateDynamic("snapshotId")(snapshotId.asInstanceOf[js.Any])
-    if (sourceVolumeArn != null) __obj.updateDynamic("sourceVolumeArn")(sourceVolumeArn.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CachesIscsiVolumeArgs]
   }
+  @scala.inline
+  implicit class CachesIscsiVolumeArgsOps[Self <: CachesIscsiVolumeArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGatewayArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gatewayArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNetworkInterfaceId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVolumeSizeInBytes(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeSizeInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSnapshotId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnapshotId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceVolumeArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceVolumeArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceVolumeArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceVolumeArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

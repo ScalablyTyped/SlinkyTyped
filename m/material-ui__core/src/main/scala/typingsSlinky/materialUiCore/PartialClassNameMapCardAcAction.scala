@@ -14,12 +14,53 @@ trait PartialClassNameMapCardAcAction extends js.Object {
 
 object PartialClassNameMapCardAcAction {
   @scala.inline
-  def apply(action: String = null, disableActionSpacing: String = null, root: String = null): PartialClassNameMapCardAcAction = {
+  def apply(): PartialClassNameMapCardAcAction = {
     val __obj = js.Dynamic.literal()
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (disableActionSpacing != null) __obj.updateDynamic("disableActionSpacing")(disableActionSpacing.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapCardAcAction]
   }
+  @scala.inline
+  implicit class PartialClassNameMapCardAcActionOps[Self <: PartialClassNameMapCardAcAction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableActionSpacing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableActionSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableActionSpacing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableActionSpacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

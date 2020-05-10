@@ -9,22 +9,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BackendBucketsResource extends js.Object {
   /** Deletes the specified BackendBucket resource. */
-  def delete(request: AnonBackendBucket): Request_[Operation]
+  def delete(request: AnonBackendBucket): Request_[Operation] = js.native
   /** Returns the specified BackendBucket resource. Get a list of available backend buckets by making a list() request. */
-  def get(request: AnonUserIp): Request_[BackendBucket]
+  def get(request: AnonUserIp): Request_[BackendBucket] = js.native
   /** Creates a BackendBucket resource in the specified project using the data included in the request. */
-  def insert(request: AnonAltFields): Request_[Operation]
+  def insert(request: AnonAltFields): Request_[Operation] = js.native
   /** Retrieves the list of BackendBucket resources available to the specified project. */
-  def list(request: AnonAlt): Request_[BackendBucketList]
+  def list(request: AnonAlt): Request_[BackendBucketList] = js.native
   /**
     * Updates the specified BackendBucket resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch
     * format and processing rules.
     */
-  def patch(request: AnonBackendBucket): Request_[Operation]
+  def patch(request: AnonBackendBucket): Request_[Operation] = js.native
   /** Updates the specified BackendBucket resource with the data included in the request. */
-  def update(request: AnonBackendBucket): Request_[Operation]
+  def update(request: AnonBackendBucket): Request_[Operation] = js.native
 }
 
 object BackendBucketsResource {
@@ -38,8 +39,51 @@ object BackendBucketsResource {
     update: AnonBackendBucket => Request_[Operation]
   ): BackendBucketsResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
-  
     __obj.asInstanceOf[BackendBucketsResource]
   }
+  @scala.inline
+  implicit class BackendBucketsResourceOps[Self <: BackendBucketsResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDelete(value: AnonBackendBucket => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: AnonUserIp => Request_[BackendBucket]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInsert(value: AnonAltFields => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withList(value: AnonAlt => Request_[BackendBucketList]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPatch(value: AnonBackendBucket => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: AnonBackendBucket => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

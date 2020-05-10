@@ -46,28 +46,125 @@ trait TransformFilterCriteria extends js.Object {
 
 object TransformFilterCriteria {
   @scala.inline
-  def apply(
-    CreatedAfter: js.Date = null,
-    CreatedBefore: js.Date = null,
-    GlueVersion: GlueVersionString = null,
-    LastModifiedAfter: js.Date = null,
-    LastModifiedBefore: js.Date = null,
-    Name: NameString = null,
-    Schema: TransformSchema = null,
-    Status: TransformStatusType = null,
-    TransformType: TransformType = null
-  ): TransformFilterCriteria = {
+  def apply(): TransformFilterCriteria = {
     val __obj = js.Dynamic.literal()
-    if (CreatedAfter != null) __obj.updateDynamic("CreatedAfter")(CreatedAfter.asInstanceOf[js.Any])
-    if (CreatedBefore != null) __obj.updateDynamic("CreatedBefore")(CreatedBefore.asInstanceOf[js.Any])
-    if (GlueVersion != null) __obj.updateDynamic("GlueVersion")(GlueVersion.asInstanceOf[js.Any])
-    if (LastModifiedAfter != null) __obj.updateDynamic("LastModifiedAfter")(LastModifiedAfter.asInstanceOf[js.Any])
-    if (LastModifiedBefore != null) __obj.updateDynamic("LastModifiedBefore")(LastModifiedBefore.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (Schema != null) __obj.updateDynamic("Schema")(Schema.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (TransformType != null) __obj.updateDynamic("TransformType")(TransformType.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransformFilterCriteria]
   }
+  @scala.inline
+  implicit class TransformFilterCriteriaOps[Self <: TransformFilterCriteria] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreatedAfter(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAfter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatedBefore(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedBefore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlueVersion(value: GlueVersionString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlueVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlueVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlueVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedAfter(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedAfter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedBefore(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedBefore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchema(value: TransformSchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: TransformStatusType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransformType(value: TransformType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransformType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransformType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransformType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

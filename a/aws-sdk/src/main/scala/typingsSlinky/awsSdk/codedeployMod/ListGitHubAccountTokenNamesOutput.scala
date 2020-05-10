@@ -18,11 +18,41 @@ trait ListGitHubAccountTokenNamesOutput extends js.Object {
 
 object ListGitHubAccountTokenNamesOutput {
   @scala.inline
-  def apply(nextToken: NextToken = null, tokenNameList: GitHubAccountTokenNameList = null): ListGitHubAccountTokenNamesOutput = {
+  def apply(): ListGitHubAccountTokenNamesOutput = {
     val __obj = js.Dynamic.literal()
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (tokenNameList != null) __obj.updateDynamic("tokenNameList")(tokenNameList.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListGitHubAccountTokenNamesOutput]
   }
+  @scala.inline
+  implicit class ListGitHubAccountTokenNamesOutputOps[Self <: ListGitHubAccountTokenNamesOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTokenNameList(value: GitHubAccountTokenNameList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenNameList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTokenNameList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenNameList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

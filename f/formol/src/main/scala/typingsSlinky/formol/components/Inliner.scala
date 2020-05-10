@@ -1,17 +1,17 @@
 package typingsSlinky.formol.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Inliner
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.formol.mod.Inliner] {
+object Inliner {
   @JSImport("formol", "Inliner")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: js.Object): Default[tag.type, typingsSlinky.formol.mod.Inliner] = new Default[tag.type, typingsSlinky.formol.mod.Inliner](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Inliner.type): Default[tag.type, typingsSlinky.formol.mod.Inliner] = new Default[tag.type, typingsSlinky.formol.mod.Inliner](js.Array(this.component, js.Dictionary.empty))()
 }
 

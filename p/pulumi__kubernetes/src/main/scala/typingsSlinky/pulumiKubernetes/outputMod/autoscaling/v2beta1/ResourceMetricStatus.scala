@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   * or memory).  Such metrics are built in to Kubernetes, and have special scaling options on top
   * of those available to normal per-pod metrics using the "pods" source.
   */
+@js.native
 trait ResourceMetricStatus extends js.Object {
   /**
     * currentAverageUtilization is the current value of the average of the resource metric across
@@ -17,26 +18,51 @@ trait ResourceMetricStatus extends js.Object {
     * the pods.  It will only be present if `targetAverageValue` was set in the corresponding
     * metric specification.
     */
-  val currentAverageUtilization: Double
+  val currentAverageUtilization: Double = js.native
   /**
     * currentAverageValue is the current value of the average of the resource metric across all
     * relevant pods, as a raw value (instead of as a percentage of the request), similar to the
     * "pods" metric source type. It will always be set, regardless of the corresponding metric
     * specification.
     */
-  val currentAverageValue: String
+  val currentAverageValue: String = js.native
   /**
     * name is the name of the resource in question.
     */
-  val name: String
+  val name: String = js.native
 }
 
 object ResourceMetricStatus {
   @scala.inline
   def apply(currentAverageUtilization: Double, currentAverageValue: String, name: String): ResourceMetricStatus = {
     val __obj = js.Dynamic.literal(currentAverageUtilization = currentAverageUtilization.asInstanceOf[js.Any], currentAverageValue = currentAverageValue.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ResourceMetricStatus]
   }
+  @scala.inline
+  implicit class ResourceMetricStatusOps[Self <: ResourceMetricStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentAverageUtilization(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentAverageUtilization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentAverageValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentAverageValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

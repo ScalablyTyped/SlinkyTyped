@@ -28,3 +28,42 @@ trait IDialogProvider extends IServiceProvider {
   def setForceHtmlReload(force: Boolean): Unit = js.native
 }
 
+object IDialogProvider {
+  @scala.inline
+  def apply(
+    $get: js.Any,
+    setDefaults: IDialogOptions => Unit,
+    setForceBodyReload: Boolean => Unit,
+    setForceHtmlReload: Boolean => Unit
+  ): IDialogProvider = {
+    val __obj = js.Dynamic.literal($get = $get.asInstanceOf[js.Any], setDefaults = js.Any.fromFunction1(setDefaults), setForceBodyReload = js.Any.fromFunction1(setForceBodyReload), setForceHtmlReload = js.Any.fromFunction1(setForceHtmlReload))
+    __obj.asInstanceOf[IDialogProvider]
+  }
+  @scala.inline
+  implicit class IDialogProviderOps[Self <: IDialogProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSetDefaults(value: IDialogOptions => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDefaults")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetForceBodyReload(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setForceBodyReload")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetForceHtmlReload(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setForceHtmlReload")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
+

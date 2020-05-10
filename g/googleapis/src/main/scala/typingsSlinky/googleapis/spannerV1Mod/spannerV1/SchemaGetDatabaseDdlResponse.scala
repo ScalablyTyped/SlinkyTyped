@@ -18,10 +18,29 @@ trait SchemaGetDatabaseDdlResponse extends js.Object {
 
 object SchemaGetDatabaseDdlResponse {
   @scala.inline
-  def apply(statements: js.Array[String] = null): SchemaGetDatabaseDdlResponse = {
+  def apply(): SchemaGetDatabaseDdlResponse = {
     val __obj = js.Dynamic.literal()
-    if (statements != null) __obj.updateDynamic("statements")(statements.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGetDatabaseDdlResponse]
   }
+  @scala.inline
+  implicit class SchemaGetDatabaseDdlResponseOps[Self <: SchemaGetDatabaseDdlResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStatements(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statements")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

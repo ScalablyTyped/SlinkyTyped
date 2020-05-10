@@ -5,7 +5,6 @@ import typingsSlinky.apolloEngineReportingProtobuf.protobufMod.IStatsContext
 import typingsSlinky.apolloProtobufjs.mod.IConversionOptions
 import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,8 +41,8 @@ object StatsContext extends js.Object {
     */
   def decode(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.StatsContext = js.native
   def decode(reader: Reader, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.StatsContext = js.native
-  def decode(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.StatsContext = js.native
-  def decode(reader: Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.StatsContext = js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.StatsContext = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.StatsContext = js.native
   /**
     * Decodes a StatsContext message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -52,7 +51,7 @@ object StatsContext extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.StatsContext = js.native
-  def decodeDelimited(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.StatsContext = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.StatsContext = js.native
   /**
     * Encodes the specified StatsContext message. Does not implicitly {@link StatsContext.verify|verify} messages.
     * @param message StatsContext message or plain object to encode

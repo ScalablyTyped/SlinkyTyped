@@ -1,37 +1,54 @@
 package typingsSlinky.reactStripeElements.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.reactStripeElements.mod.ReactStripeElements.StripeProviderProps
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.stripeV3.stripe.Stripe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object StripeProvider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactStripeElements.mod.StripeProvider] {
-  @JSImport("react-stripe-elements", "StripeProvider")
-  @js.native
-  object componentImport extends js.Object
+object StripeProvider {
+  object apiKeyneverstripeStripenu {
+    @JSImport("react-stripe-elements", "StripeProvider")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, typingsSlinky.reactStripeElements.mod.StripeProvider] {
+      @scala.inline
+      def stripe(value: Stripe): this.type = set("stripe", value.asInstanceOf[js.Any])
+      @scala.inline
+      def stripeNull: this.type = set("stripe", null)
+      @scala.inline
+      def stripeAccount(value: String): this.type = set("stripeAccount", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: typingsSlinky.reactStripeElements.apiKeyneverstripeStripenu): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: apiKeyneverstripeStripenu.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  }
   
-  override val component: String | js.Object = this.componentImport
-  def apiKeystringstripeneverSt(apiKey: String, stripeAccount: String = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactStripeElements.mod.StripeProvider] = {
-    val __obj = js.Dynamic.literal(apiKey = apiKey.asInstanceOf[js.Any])
-    if (stripeAccount != null) __obj.updateDynamic("stripeAccount")(stripeAccount.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  object apiKeystringstripeneverSt {
+    @JSImport("react-stripe-elements", "StripeProvider")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, typingsSlinky.reactStripeElements.mod.StripeProvider] {
+      @scala.inline
+      def stripeAccount(value: String): this.type = set("stripeAccount", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: typingsSlinky.reactStripeElements.apiKeystringstripeneverSt): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(apiKey: String): Builder = {
+        val __props = js.Dynamic.literal(apiKey = apiKey.asInstanceOf[js.Any])
+        new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactStripeElements.apiKeystringstripeneverSt]))
+    }
   }
-  def apiKeyneverstripeStripenu(stripe: Stripe = null, stripeAccount: String = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactStripeElements.mod.StripeProvider] = {
-    val __obj = js.Dynamic.literal()
-    if (stripe != null) __obj.updateDynamic("stripe")(stripe.asInstanceOf[js.Any])
-    if (stripeAccount != null) __obj.updateDynamic("stripeAccount")(stripeAccount.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
-  }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactStripeElements.mod.StripeProvider] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactStripeElements.mod.StripeProvider](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = StripeProviderProps
+  
 }
 

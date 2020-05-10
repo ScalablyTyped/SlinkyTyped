@@ -48,8 +48,8 @@ import typingsSlinky.androiduix.android.widget.TextView.BufferType
 import typingsSlinky.androiduix.android.widget.TextView.Drawables
 import typingsSlinky.androiduix.android.widget.TextView.OnEditorActionListener
 import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderMap
-import typingsSlinky.androiduix.java.lang.Runnable
-import typingsSlinky.androiduix.java.util.ArrayList
+import typingsSlinky.androiduix.java_.lang.Runnable
+import typingsSlinky.androiduix.java_.util.ArrayList
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -820,8 +820,6 @@ class TextView_ protected ()
   /* protected */ override def onMeasure(widthMeasureSpec: Double, heightMeasureSpec: Double): Unit = js.native
   /* InferMemberOverrides */
   /* protected */ override def onOverScrolled(scrollX: Double, scrollY: Double, clampedX: Boolean, clampedY: Boolean): Unit = js.native
-  /* CompleteClass */
-  override def onPreDraw(): Boolean = js.native
   def onResolveDrawables(layoutDirection: Double): Unit = js.native
   /* InferMemberOverrides */
   override def onScrollChanged(l: Double, t: Double, oldl: Double, oldt: Double): Unit = js.native

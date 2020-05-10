@@ -18,10 +18,35 @@ trait GetQueueAttributesRequest extends js.Object {
 
 object GetQueueAttributesRequest {
   @scala.inline
-  def apply(QueueUrl: String, AttributeNames: AttributeNameList = null): GetQueueAttributesRequest = {
+  def apply(QueueUrl: String): GetQueueAttributesRequest = {
     val __obj = js.Dynamic.literal(QueueUrl = QueueUrl.asInstanceOf[js.Any])
-    if (AttributeNames != null) __obj.updateDynamic("AttributeNames")(AttributeNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetQueueAttributesRequest]
   }
+  @scala.inline
+  implicit class GetQueueAttributesRequestOps[Self <: GetQueueAttributesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQueueUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributeNames(value: AttributeNameList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeNames")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

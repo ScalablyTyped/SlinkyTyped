@@ -20,11 +20,41 @@ trait SchemaTeardownTag extends js.Object {
 
 object SchemaTeardownTag {
   @scala.inline
-  def apply(stopTeardownOnFailure: js.UndefOr[Boolean] = js.undefined, tagName: String = null): SchemaTeardownTag = {
+  def apply(): SchemaTeardownTag = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(stopTeardownOnFailure)) __obj.updateDynamic("stopTeardownOnFailure")(stopTeardownOnFailure.asInstanceOf[js.Any])
-    if (tagName != null) __obj.updateDynamic("tagName")(tagName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTeardownTag]
   }
+  @scala.inline
+  implicit class SchemaTeardownTagOps[Self <: SchemaTeardownTag] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStopTeardownOnFailure(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopTeardownOnFailure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopTeardownOnFailure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopTeardownOnFailure")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -75,10 +75,10 @@ trait TwitterWidgets extends js.Object {
   /**
     * Initialize Twitter for Websites widgets contained within children of the elements.
     */
-  def load(elements: js.Array[typingsSlinky.std.HTMLElement]): Unit = js.native
+  def load(elements: js.Array[HTMLElement]): Unit = js.native
   /**
     * Initialize Twitter for Websites widgets contained within children of the element.
     */
-  def load(element: typingsSlinky.std.HTMLElement): Unit = js.native
+  def load(element: HTMLElement): Unit = js.native
 }
 

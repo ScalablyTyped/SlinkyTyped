@@ -2,7 +2,6 @@ package typingsSlinky.reactVirtualized
 
 import typingsSlinky.reactVirtualized.esGridMod.GridCellRangeRenderer
 import typingsSlinky.reactVirtualized.esGridMod.OverscanIndicesGetter
-import typingsSlinky.reactVirtualized.reactVirtualizedNumbers.`150`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +13,7 @@ object gridMod extends js.Object {
   class Grid ()
     extends typingsSlinky.reactVirtualized.esGridMod.Grid
   
-  val DEFAULT_SCROLLING_RESET_TIME_INTERVAL: `150` = js.native
+  val DEFAULT_SCROLLING_RESET_TIME_INTERVAL: /* 150 */ Double = js.native
   val accessibilityOverscanIndicesGetter: OverscanIndicesGetter = js.native
   val defaultCellRangeRenderer: GridCellRangeRenderer = js.native
   val defaultOverscanIndicesGetter: OverscanIndicesGetter = js.native

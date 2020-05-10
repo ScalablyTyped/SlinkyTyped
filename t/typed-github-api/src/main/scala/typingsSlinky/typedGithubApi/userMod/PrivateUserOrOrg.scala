@@ -5,13 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PrivateUserOrOrg extends UserOrOrg {
-  var collaborators: Double
-  var disk_usage: Double
-  var owned_private_repos: Double
-  var plan: AnonCollaborators
-  var private_gists: Double
-  var total_private_repos: Double
+  var collaborators: Double = js.native
+  var disk_usage: Double = js.native
+  var owned_private_repos: Double = js.native
+  var plan: AnonCollaborators = js.native
+  var private_gists: Double = js.native
+  var total_private_repos: Double = js.native
 }
 
 object PrivateUserOrOrg {
@@ -46,5 +47,49 @@ object PrivateUserOrOrg {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrivateUserOrOrg]
   }
+  @scala.inline
+  implicit class PrivateUserOrOrgOps[Self <: PrivateUserOrOrg] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCollaborators(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collaborators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisk_usage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disk_usage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOwned_private_repos(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owned_private_repos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlan(value: AnonCollaborators): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrivate_gists(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("private_gists")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTotal_private_repos(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total_private_repos")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

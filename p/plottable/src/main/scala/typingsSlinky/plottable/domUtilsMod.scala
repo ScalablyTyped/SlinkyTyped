@@ -21,10 +21,10 @@ object domUtilsMod extends js.Object {
   def clientRectsOverlap(clientRectA: ClientRect, clientRectB: ClientRect): Boolean = js.native
   def contains(parent: Element, child: Element): Boolean = js.native
   def elementBBox(element: SimpleSelection[_]): SVGRect = js.native
-  def elementHeight(elementOrSelection: Selection_[typingsSlinky.std.Element, _, _, _]): Double = js.native
-  def elementHeight(elementOrSelection: typingsSlinky.std.Element): Double = js.native
-  def elementWidth(elementOrSelection: Selection_[typingsSlinky.std.Element, _, _, _]): Double = js.native
-  def elementWidth(elementOrSelection: typingsSlinky.std.Element): Double = js.native
+  def elementHeight(elementOrSelection: Selection_[Element, _, _, _]): Double = js.native
+  def elementHeight(elementOrSelection: Element): Double = js.native
+  def elementWidth(elementOrSelection: Selection_[Element, _, _, _]): Double = js.native
+  def elementWidth(elementOrSelection: Element): Double = js.native
   def entityBounds(element: Element): IEntityBounds = js.native
   def expandRect(rect: ClientRect, amount: Double): AnonLeft = js.native
   def getElementTransform(elem: Element): ICssTransformMatrix | Null = js.native

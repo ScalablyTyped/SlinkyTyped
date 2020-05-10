@@ -5,20 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait TSDeclareFunction_
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ @js.native
+trait TSDeclareFunction_
   extends Declaration
      with BaseNode
      with Statement {
-  var async: Boolean
-  var declare: Boolean | Null
-  var generator: Boolean
-  var id: Identifier_ | Null
-  var params: js.Array[Identifier_ | Pattern | RestElement_ | TSParameterProperty_]
-  var returnType: TSTypeAnnotation_ | Noop_ | Null
-  var typeParameters: TSTypeParameterDeclaration_ | Noop_ | Null
+  var async: Boolean = js.native
+  var declare: Boolean | Null = js.native
+  var generator: Boolean = js.native
+  var id: Identifier_ | Null = js.native
+  var params: js.Array[Identifier_ | Pattern | RestElement_ | TSParameterProperty_] = js.native
+  var returnType: TSTypeAnnotation_ | Noop_ | Null = js.native
+  var typeParameters: TSTypeParameterDeclaration_ | Noop_ | Null = js.native
   @JSName("type")
-  var type_TSDeclareFunction_ : TSDeclareFunction
+  var type_TSDeclareFunction_ : TSDeclareFunction = js.native
 }
 
 object TSDeclareFunction_ {
@@ -27,31 +28,91 @@ object TSDeclareFunction_ {
     async: Boolean,
     generator: Boolean,
     params: js.Array[Identifier_ | Pattern | RestElement_ | TSParameterProperty_],
-    `type`: TSDeclareFunction,
-    declare: js.UndefOr[Boolean] = js.undefined,
-    end: Int | Double = null,
-    id: Identifier_ = null,
-    innerComments: js.Array[Comment] = null,
-    leadingComments: js.Array[Comment] = null,
-    loc: SourceLocation = null,
-    returnType: TSTypeAnnotation_ | Noop_ = null,
-    start: Int | Double = null,
-    trailingComments: js.Array[Comment] = null,
-    typeParameters: TSTypeParameterDeclaration_ | Noop_ = null
+    `type`: TSDeclareFunction
   ): TSDeclareFunction_ = {
     val __obj = js.Dynamic.literal(async = async.asInstanceOf[js.Any], generator = generator.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(declare)) __obj.updateDynamic("declare")(declare.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
-    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (returnType != null) __obj.updateDynamic("returnType")(returnType.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
-    if (typeParameters != null) __obj.updateDynamic("typeParameters")(typeParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSDeclareFunction_]
   }
+  @scala.inline
+  implicit class TSDeclareFunction_Ops[Self <: TSDeclareFunction_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAsync(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGenerator(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParams(value: js.Array[Identifier_ | Pattern | RestElement_ | TSParameterProperty_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: TSDeclareFunction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeclare(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("declare")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeclareNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("declare")(null)
+        ret
+    }
+    @scala.inline
+    def withId(value: Identifier_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(null)
+        ret
+    }
+    @scala.inline
+    def withReturnType(value: TSTypeAnnotation_ | Noop_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReturnTypeNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnType")(null)
+        ret
+    }
+    @scala.inline
+    def withTypeParameters(value: TSTypeParameterDeclaration_ | Noop_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypeParametersNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(null)
+        ret
+    }
+  }
+  
 }
 

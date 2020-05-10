@@ -1,7 +1,7 @@
 package typingsSlinky.readmoreJs.mod
 
-import typingsSlinky.std.Element
-import typingsSlinky.std.NodeList
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.NodeList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,13 +1,12 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
+import typingsSlinky.baseui.baseuiStrings.mini
 import typingsSlinky.baseui.selectMod.AutosizeInputOverrides
 import typingsSlinky.baseui.selectMod.AutosizeInputProps
 import typingsSlinky.react.mod.Ref
@@ -15,31 +14,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AutosizeInput
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.selectMod.AutosizeInput] {
+object AutosizeInput {
   @JSImport("baseui/select", "AutosizeInput")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    $size: default_ | compact | large_ = null,
-    defaultValue: String = null,
-    inputRef: Ref[_] = null,
-    overrides: AutosizeInputOverrides = null,
-    value: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.baseui.selectMod.AutosizeInput] = {
-    val __obj = js.Dynamic.literal()
-    if ($size != null) __obj.updateDynamic("$size")($size.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (inputRef != null) __obj.updateDynamic("inputRef")(inputRef.asInstanceOf[js.Any])
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.selectMod.AutosizeInput] {
+    @scala.inline
+    def $size(value: mini | default_ | compact | large_): this.type = set("$size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: String): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputRefRefObject(value: ReactRef[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def inputRef(value: Ref[_]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputRefNull: this.type = set("inputRef", null)
+    @scala.inline
+    def overrides(value: AutosizeInputOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.selectMod.AutosizeInput] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.baseui.selectMod.AutosizeInput](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = AutosizeInputProps
+  
+  def withProps(p: AutosizeInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: AutosizeInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

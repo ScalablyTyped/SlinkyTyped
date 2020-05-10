@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DefaultFormsInformationRequestor extends js.Object {
-  def onDefaultFormsInformationRetrieveFailure(): Unit
-  def onDefaultFormsInformationRetrieveSuccess(defaultForms: DefaultFormsInformation): Unit
+  def onDefaultFormsInformationRetrieveFailure(): Unit = js.native
+  def onDefaultFormsInformationRetrieveSuccess(defaultForms: DefaultFormsInformation): Unit = js.native
 }
 
 object DefaultFormsInformationRequestor {
@@ -16,8 +17,27 @@ object DefaultFormsInformationRequestor {
     onDefaultFormsInformationRetrieveSuccess: DefaultFormsInformation => Unit
   ): DefaultFormsInformationRequestor = {
     val __obj = js.Dynamic.literal(onDefaultFormsInformationRetrieveFailure = js.Any.fromFunction0(onDefaultFormsInformationRetrieveFailure), onDefaultFormsInformationRetrieveSuccess = js.Any.fromFunction1(onDefaultFormsInformationRetrieveSuccess))
-  
     __obj.asInstanceOf[DefaultFormsInformationRequestor]
   }
+  @scala.inline
+  implicit class DefaultFormsInformationRequestorOps[Self <: DefaultFormsInformationRequestor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnDefaultFormsInformationRetrieveFailure(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDefaultFormsInformationRetrieveFailure")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnDefaultFormsInformationRetrieveSuccess(value: DefaultFormsInformation => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDefaultFormsInformationRetrieveSuccess")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

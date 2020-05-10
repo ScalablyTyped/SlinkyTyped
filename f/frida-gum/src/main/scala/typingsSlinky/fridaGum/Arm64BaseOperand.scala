@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Arm64BaseOperand extends js.Object {
-  var ext: js.UndefOr[Arm64Extender] = js.undefined
-  var shift: js.UndefOr[AnonValue] = js.undefined
-  var vas: js.UndefOr[Arm64Vas] = js.undefined
-  var vectorIndex: js.UndefOr[Double] = js.undefined
+  var ext: js.UndefOr[Arm64Extender] = js.native
+  var shift: js.UndefOr[AnonValue] = js.native
+  var vas: js.UndefOr[Arm64Vas] = js.native
+  var vectorIndex: js.UndefOr[Double] = js.native
 }
 
 object Arm64BaseOperand {
   @scala.inline
-  def apply(
-    ext: Arm64Extender = null,
-    shift: AnonValue = null,
-    vas: Arm64Vas = null,
-    vectorIndex: Int | Double = null
-  ): Arm64BaseOperand = {
+  def apply(): Arm64BaseOperand = {
     val __obj = js.Dynamic.literal()
-    if (ext != null) __obj.updateDynamic("ext")(ext.asInstanceOf[js.Any])
-    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
-    if (vas != null) __obj.updateDynamic("vas")(vas.asInstanceOf[js.Any])
-    if (vectorIndex != null) __obj.updateDynamic("vectorIndex")(vectorIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[Arm64BaseOperand]
   }
+  @scala.inline
+  implicit class Arm64BaseOperandOps[Self <: Arm64BaseOperand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExt(value: Arm64Extender): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShift(value: AnonValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shift")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShift: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shift")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVas(value: Arm64Vas): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVas: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vas")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVectorIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vectorIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVectorIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vectorIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

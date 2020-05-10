@@ -38,24 +38,101 @@ trait AssociateAddressRequest extends js.Object {
 
 object AssociateAddressRequest {
   @scala.inline
-  def apply(
-    AllocationId: AllocationId = null,
-    AllowReassociation: js.UndefOr[scala.Boolean] = js.undefined,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    InstanceId: InstanceId = null,
-    NetworkInterfaceId: NetworkInterfaceId = null,
-    PrivateIpAddress: String = null,
-    PublicIp: String = null
-  ): AssociateAddressRequest = {
+  def apply(): AssociateAddressRequest = {
     val __obj = js.Dynamic.literal()
-    if (AllocationId != null) __obj.updateDynamic("AllocationId")(AllocationId.asInstanceOf[js.Any])
-    if (!js.isUndefined(AllowReassociation)) __obj.updateDynamic("AllowReassociation")(AllowReassociation.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (InstanceId != null) __obj.updateDynamic("InstanceId")(InstanceId.asInstanceOf[js.Any])
-    if (NetworkInterfaceId != null) __obj.updateDynamic("NetworkInterfaceId")(NetworkInterfaceId.asInstanceOf[js.Any])
-    if (PrivateIpAddress != null) __obj.updateDynamic("PrivateIpAddress")(PrivateIpAddress.asInstanceOf[js.Any])
-    if (PublicIp != null) __obj.updateDynamic("PublicIp")(PublicIp.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociateAddressRequest]
   }
+  @scala.inline
+  implicit class AssociateAddressRequestOps[Self <: AssociateAddressRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllocationId(value: AllocationId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllocationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowReassociation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowReassociation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowReassociation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowReassociation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceId(value: InstanceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkInterfaceId(value: NetworkInterfaceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInterfaceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkInterfaceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInterfaceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateIpAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateIpAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublicIp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublicIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicIp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

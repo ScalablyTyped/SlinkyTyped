@@ -50,30 +50,143 @@ trait PutSessionResponse extends js.Object {
 
 object PutSessionResponse {
   @scala.inline
-  def apply(
-    audioStream: BlobStream = null,
-    contentType: HttpContentType = null,
-    dialogState: DialogState = null,
-    intentName: IntentName = null,
-    message: Text = null,
-    messageFormat: MessageFormatType = null,
-    sessionAttributes: String = null,
-    sessionId: String = null,
-    slotToElicit: String = null,
-    slots: String = null
-  ): PutSessionResponse = {
+  def apply(): PutSessionResponse = {
     val __obj = js.Dynamic.literal()
-    if (audioStream != null) __obj.updateDynamic("audioStream")(audioStream.asInstanceOf[js.Any])
-    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
-    if (dialogState != null) __obj.updateDynamic("dialogState")(dialogState.asInstanceOf[js.Any])
-    if (intentName != null) __obj.updateDynamic("intentName")(intentName.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (messageFormat != null) __obj.updateDynamic("messageFormat")(messageFormat.asInstanceOf[js.Any])
-    if (sessionAttributes != null) __obj.updateDynamic("sessionAttributes")(sessionAttributes.asInstanceOf[js.Any])
-    if (sessionId != null) __obj.updateDynamic("sessionId")(sessionId.asInstanceOf[js.Any])
-    if (slotToElicit != null) __obj.updateDynamic("slotToElicit")(slotToElicit.asInstanceOf[js.Any])
-    if (slots != null) __obj.updateDynamic("slots")(slots.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutSessionResponse]
   }
+  @scala.inline
+  implicit class PutSessionResponseOps[Self <: PutSessionResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAudioStreamUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audioStream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAudioStream(value: BlobStream): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audioStream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudioStream: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audioStream")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentType(value: HttpContentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDialogState(value: DialogState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialogState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntentName(value: IntentName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntentName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intentName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: Text): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessageFormat(value: MessageFormatType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionAttributes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlotToElicit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slotToElicit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlotToElicit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slotToElicit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlots(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlots: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slots")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

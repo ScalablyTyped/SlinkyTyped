@@ -34,22 +34,89 @@ trait UserPoolDescriptionType extends js.Object {
 
 object UserPoolDescriptionType {
   @scala.inline
-  def apply(
-    CreationDate: js.Date = null,
-    Id: UserPoolIdType = null,
-    LambdaConfig: LambdaConfigType = null,
-    LastModifiedDate: js.Date = null,
-    Name: UserPoolNameType = null,
-    Status: StatusType = null
-  ): UserPoolDescriptionType = {
+  def apply(): UserPoolDescriptionType = {
     val __obj = js.Dynamic.literal()
-    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (LambdaConfig != null) __obj.updateDynamic("LambdaConfig")(LambdaConfig.asInstanceOf[js.Any])
-    if (LastModifiedDate != null) __obj.updateDynamic("LastModifiedDate")(LastModifiedDate.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPoolDescriptionType]
   }
+  @scala.inline
+  implicit class UserPoolDescriptionTypeOps[Self <: UserPoolDescriptionType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: UserPoolIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLambdaConfig(value: LambdaConfigType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LambdaConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LambdaConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: UserPoolNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: StatusType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

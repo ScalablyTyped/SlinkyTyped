@@ -14,10 +14,29 @@ trait SchemaCreateOrdersResponse extends js.Object {
 
 object SchemaCreateOrdersResponse {
   @scala.inline
-  def apply(proposals: js.Array[SchemaProposal] = null): SchemaCreateOrdersResponse = {
+  def apply(): SchemaCreateOrdersResponse = {
     val __obj = js.Dynamic.literal()
-    if (proposals != null) __obj.updateDynamic("proposals")(proposals.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateOrdersResponse]
   }
+  @scala.inline
+  implicit class SchemaCreateOrdersResponseOps[Self <: SchemaCreateOrdersResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProposals(value: js.Array[SchemaProposal]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proposals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProposals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proposals")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

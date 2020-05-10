@@ -1,15 +1,16 @@
 package typingsSlinky.reactSpinners.components
 
+import typingsSlinky.reactSpinners.interfacesMod.LoaderHeightWidthProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Loader
-  extends SharedApply_LoaderHeightWidthProps973015728[typingsSlinky.reactSpinners.barLoaderMod.Loader] {
+object Loader {
   @JSImport("react-spinners/BarLoader", "Loader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: LoaderHeightWidthProps): SharedBuilder_LoaderHeightWidthProps_1665205413[typingsSlinky.reactSpinners.barLoaderMod.Loader] = new SharedBuilder_LoaderHeightWidthProps_1665205413[typingsSlinky.reactSpinners.barLoaderMod.Loader](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Loader.type): SharedBuilder_LoaderHeightWidthProps_1665205413[typingsSlinky.reactSpinners.barLoaderMod.Loader] = new SharedBuilder_LoaderHeightWidthProps_1665205413[typingsSlinky.reactSpinners.barLoaderMod.Loader](js.Array(this.component, js.Dictionary.empty))()
 }
 

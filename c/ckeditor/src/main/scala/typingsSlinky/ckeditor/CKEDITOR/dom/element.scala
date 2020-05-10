@@ -132,7 +132,7 @@ object element extends js.Object {
   def createFromHtml(html: String): element = js.native
   def get(element: String): element = js.native
   def get(element: element): element = js.native
-  def get(element: typingsSlinky.std.HTMLElement): element = js.native
+  def get(element: HTMLElement): element = js.native
   def setMarker(database: js.Any, element: element, name: String, value: js.Any): element = js.native
 }
 

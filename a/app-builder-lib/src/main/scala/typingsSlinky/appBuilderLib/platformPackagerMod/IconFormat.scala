@@ -13,12 +13,10 @@ trait IconFormat extends js.Object
 
 object IconFormat {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def icns: typingsSlinky.appBuilderLib.appBuilderLibStrings.icns = "icns".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.icns]
   @scala.inline
-  def icns: typingsSlinky.appBuilderLib.appBuilderLibStrings.icns = this.cast("icns")
+  def ico: typingsSlinky.appBuilderLib.appBuilderLibStrings.ico = "ico".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.ico]
   @scala.inline
-  def ico: typingsSlinky.appBuilderLib.appBuilderLibStrings.ico = this.cast("ico")
-  @scala.inline
-  def set: typingsSlinky.appBuilderLib.appBuilderLibStrings.set = this.cast("set")
+  def set: typingsSlinky.appBuilderLib.appBuilderLibStrings.set = "set".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.set]
 }
 

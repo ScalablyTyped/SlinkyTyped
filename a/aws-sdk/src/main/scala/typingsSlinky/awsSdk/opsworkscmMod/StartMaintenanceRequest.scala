@@ -18,10 +18,35 @@ trait StartMaintenanceRequest extends js.Object {
 
 object StartMaintenanceRequest {
   @scala.inline
-  def apply(ServerName: ServerName, EngineAttributes: EngineAttributes = null): StartMaintenanceRequest = {
+  def apply(ServerName: ServerName): StartMaintenanceRequest = {
     val __obj = js.Dynamic.literal(ServerName = ServerName.asInstanceOf[js.Any])
-    if (EngineAttributes != null) __obj.updateDynamic("EngineAttributes")(EngineAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartMaintenanceRequest]
   }
+  @scala.inline
+  implicit class StartMaintenanceRequestOps[Self <: StartMaintenanceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServerName(value: ServerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEngineAttributes(value: EngineAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngineAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineAttributes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

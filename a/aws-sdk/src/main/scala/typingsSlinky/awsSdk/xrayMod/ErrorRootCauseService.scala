@@ -34,22 +34,89 @@ trait ErrorRootCauseService extends js.Object {
 
 object ErrorRootCauseService {
   @scala.inline
-  def apply(
-    AccountId: String = null,
-    EntityPath: ErrorRootCauseEntityPath = null,
-    Inferred: js.UndefOr[scala.Boolean] = js.undefined,
-    Name: String = null,
-    Names: ServiceNames = null,
-    Type: String = null
-  ): ErrorRootCauseService = {
+  def apply(): ErrorRootCauseService = {
     val __obj = js.Dynamic.literal()
-    if (AccountId != null) __obj.updateDynamic("AccountId")(AccountId.asInstanceOf[js.Any])
-    if (EntityPath != null) __obj.updateDynamic("EntityPath")(EntityPath.asInstanceOf[js.Any])
-    if (!js.isUndefined(Inferred)) __obj.updateDynamic("Inferred")(Inferred.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (Names != null) __obj.updateDynamic("Names")(Names.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[ErrorRootCauseService]
   }
+  @scala.inline
+  implicit class ErrorRootCauseServiceOps[Self <: ErrorRootCauseService] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntityPath(value: ErrorRootCauseEntityPath): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInferred(value: NullableBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Inferred")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInferred: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Inferred")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNames(value: ServiceNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Names")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Names")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -409,7 +409,13 @@ trait WebGLRenderingContextBase extends js.Object {
     renderbuffer: org.scalajs.dom.raw.WebGLRenderbuffer
   ): Unit = js.native
   def framebufferTexture2D(target: GLenum, attachment: GLenum, textarget: GLenum, texture: Null, level: GLint): Unit = js.native
-  def framebufferTexture2D(target: GLenum, attachment: GLenum, textarget: GLenum, texture: WebGLTexture, level: GLint): Unit = js.native
+  def framebufferTexture2D(
+    target: GLenum,
+    attachment: GLenum,
+    textarget: GLenum,
+    texture: org.scalajs.dom.raw.WebGLTexture,
+    level: GLint
+  ): Unit = js.native
   def frontFace(mode: GLenum): Unit = js.native
   def generateMipmap(target: GLenum): Unit = js.native
   def getActiveAttrib(program: org.scalajs.dom.raw.WebGLProgram, index: GLuint): org.scalajs.dom.raw.WebGLActiveInfo | Null = js.native
@@ -512,36 +518,36 @@ trait WebGLRenderingContextBase extends js.Object {
   def texParameterf(target: GLenum, pname: GLenum, param: GLfloat): Unit = js.native
   def texParameteri(target: GLenum, pname: GLenum, param: GLint): Unit = js.native
   def uniform1f(location: Null, x: GLfloat): Unit = js.native
-  def uniform1f(location: WebGLUniformLocation, x: GLfloat): Unit = js.native
+  def uniform1f(location: org.scalajs.dom.raw.WebGLUniformLocation, x: GLfloat): Unit = js.native
   def uniform1i(location: Null, x: GLint): Unit = js.native
-  def uniform1i(location: WebGLUniformLocation, x: GLint): Unit = js.native
+  def uniform1i(location: org.scalajs.dom.raw.WebGLUniformLocation, x: GLint): Unit = js.native
   def uniform2f(location: Null, x: GLfloat, y: GLfloat): Unit = js.native
-  def uniform2f(location: WebGLUniformLocation, x: GLfloat, y: GLfloat): Unit = js.native
+  def uniform2f(location: org.scalajs.dom.raw.WebGLUniformLocation, x: GLfloat, y: GLfloat): Unit = js.native
   def uniform2i(location: Null, x: GLint, y: GLint): Unit = js.native
-  def uniform2i(location: WebGLUniformLocation, x: GLint, y: GLint): Unit = js.native
+  def uniform2i(location: org.scalajs.dom.raw.WebGLUniformLocation, x: GLint, y: GLint): Unit = js.native
   def uniform3f(location: Null, x: GLfloat, y: GLfloat, z: GLfloat): Unit = js.native
-  def uniform3f(location: WebGLUniformLocation, x: GLfloat, y: GLfloat, z: GLfloat): Unit = js.native
+  def uniform3f(location: org.scalajs.dom.raw.WebGLUniformLocation, x: GLfloat, y: GLfloat, z: GLfloat): Unit = js.native
   def uniform3i(location: Null, x: GLint, y: GLint, z: GLint): Unit = js.native
-  def uniform3i(location: WebGLUniformLocation, x: GLint, y: GLint, z: GLint): Unit = js.native
+  def uniform3i(location: org.scalajs.dom.raw.WebGLUniformLocation, x: GLint, y: GLint, z: GLint): Unit = js.native
   def uniform4f(location: Null, x: GLfloat, y: GLfloat, z: GLfloat, w: GLfloat): Unit = js.native
-  def uniform4f(location: WebGLUniformLocation, x: GLfloat, y: GLfloat, z: GLfloat, w: GLfloat): Unit = js.native
+  def uniform4f(location: org.scalajs.dom.raw.WebGLUniformLocation, x: GLfloat, y: GLfloat, z: GLfloat, w: GLfloat): Unit = js.native
   def uniform4i(location: Null, x: GLint, y: GLint, z: GLint, w: GLint): Unit = js.native
-  def uniform4i(location: WebGLUniformLocation, x: GLint, y: GLint, z: GLint, w: GLint): Unit = js.native
+  def uniform4i(location: org.scalajs.dom.raw.WebGLUniformLocation, x: GLint, y: GLint, z: GLint, w: GLint): Unit = js.native
   def useProgram(): Unit = js.native
   def useProgram(program: org.scalajs.dom.raw.WebGLProgram): Unit = js.native
   def validateProgram(program: org.scalajs.dom.raw.WebGLProgram): Unit = js.native
   def vertexAttrib1f(index: GLuint, x: GLfloat): Unit = js.native
   def vertexAttrib1fv(index: GLuint, values: Float32List): Unit = js.native
-  def vertexAttrib1fv(index: GLuint, values: Iterable[GLfloat]): Unit = js.native
+  def vertexAttrib1fv(index: GLuint, values: js.Iterable[GLfloat]): Unit = js.native
   def vertexAttrib2f(index: GLuint, x: GLfloat, y: GLfloat): Unit = js.native
   def vertexAttrib2fv(index: GLuint, values: Float32List): Unit = js.native
-  def vertexAttrib2fv(index: GLuint, values: Iterable[GLfloat]): Unit = js.native
+  def vertexAttrib2fv(index: GLuint, values: js.Iterable[GLfloat]): Unit = js.native
   def vertexAttrib3f(index: GLuint, x: GLfloat, y: GLfloat, z: GLfloat): Unit = js.native
   def vertexAttrib3fv(index: GLuint, values: Float32List): Unit = js.native
-  def vertexAttrib3fv(index: GLuint, values: Iterable[GLfloat]): Unit = js.native
+  def vertexAttrib3fv(index: GLuint, values: js.Iterable[GLfloat]): Unit = js.native
   def vertexAttrib4f(index: GLuint, x: GLfloat, y: GLfloat, z: GLfloat, w: GLfloat): Unit = js.native
   def vertexAttrib4fv(index: GLuint, values: Float32List): Unit = js.native
-  def vertexAttrib4fv(index: GLuint, values: Iterable[GLfloat]): Unit = js.native
+  def vertexAttrib4fv(index: GLuint, values: js.Iterable[GLfloat]): Unit = js.native
   def vertexAttribPointer(
     index: GLuint,
     size: GLint,

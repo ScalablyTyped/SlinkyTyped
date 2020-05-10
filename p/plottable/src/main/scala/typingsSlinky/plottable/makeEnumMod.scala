@@ -1,5 +1,6 @@
 package typingsSlinky.plottable
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +10,6 @@ import scala.scalajs.js.annotation._
 object makeEnumMod extends js.Object {
   def makeEnum[T /* <: String */](values: js.Array[T]): /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in T ]: K}
-    */ typingsSlinky.plottable.plottableStrings.makeEnum with js.Any = js.native
+    */ typingsSlinky.plottable.plottableStrings.makeEnum with TopLevel[js.Any] = js.native
 }
 

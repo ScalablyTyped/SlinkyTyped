@@ -32,31 +32,10 @@ object modelMod extends js.Object {
     var _subsetMatch: js.Any = js.native
     var _typeMap: js.Any = js.native
     /**
-      * Test whether the object has been disposed.
-      *
-      * #### Notes
-      * This property is always safe to access.
-      */
-    /* CompleteClass */
-    override val isDisposed: Boolean = js.native
-    /**
       * A signal emitted when state of the completer menu changes.
       */
     @JSName("stateChanged")
     val stateChanged_CompleterModel: ISignal[this.type, Unit] = js.native
-    /**
-      * Dispose of the resources held by the object.
-      *
-      * #### Notes
-      * If the object's `dispose` method is called more than once, all
-      * calls made after the first will be a no-op.
-      *
-      * #### Undefined Behavior
-      * It is undefined behavior to use any functionality of the object
-      * after it has been disposed unless otherwise explicitly noted.
-      */
-    /* CompleteClass */
-    override def dispose(): Unit = js.native
     def setOptions(newValue: IterableOrArrayLike[String], typeMap: TypeMap): Unit = js.native
   }
   

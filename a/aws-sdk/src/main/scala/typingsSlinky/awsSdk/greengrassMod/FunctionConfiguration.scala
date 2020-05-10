@@ -38,24 +38,101 @@ trait FunctionConfiguration extends js.Object {
 
 object FunctionConfiguration {
   @scala.inline
-  def apply(
-    EncodingType: EncodingType = null,
-    Environment: FunctionConfigurationEnvironment = null,
-    ExecArgs: string = null,
-    Executable: string = null,
-    MemorySize: Int | Double = null,
-    Pinned: js.UndefOr[Boolean] = js.undefined,
-    Timeout: Int | Double = null
-  ): FunctionConfiguration = {
+  def apply(): FunctionConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (EncodingType != null) __obj.updateDynamic("EncodingType")(EncodingType.asInstanceOf[js.Any])
-    if (Environment != null) __obj.updateDynamic("Environment")(Environment.asInstanceOf[js.Any])
-    if (ExecArgs != null) __obj.updateDynamic("ExecArgs")(ExecArgs.asInstanceOf[js.Any])
-    if (Executable != null) __obj.updateDynamic("Executable")(Executable.asInstanceOf[js.Any])
-    if (MemorySize != null) __obj.updateDynamic("MemorySize")(MemorySize.asInstanceOf[js.Any])
-    if (!js.isUndefined(Pinned)) __obj.updateDynamic("Pinned")(Pinned.asInstanceOf[js.Any])
-    if (Timeout != null) __obj.updateDynamic("Timeout")(Timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionConfiguration]
   }
+  @scala.inline
+  implicit class FunctionConfigurationOps[Self <: FunctionConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncodingType(value: EncodingType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncodingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncodingType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncodingType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironment(value: FunctionConfigurationEnvironment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Environment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Environment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecArgs(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecArgs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecArgs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecArgs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutable(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Executable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Executable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMemorySize(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MemorySize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMemorySize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MemorySize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPinned(value: boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pinned")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPinned: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pinned")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

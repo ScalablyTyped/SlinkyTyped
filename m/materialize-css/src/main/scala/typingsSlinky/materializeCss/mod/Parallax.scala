@@ -28,7 +28,7 @@ object Parallax extends js.Object {
   /**
     * Init Parallax
     */
-  def init(els: typingsSlinky.std.Element): typingsSlinky.materializeCss.M.Parallax = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialParallaxOptions): typingsSlinky.materializeCss.M.Parallax = js.native
+  def init(els: Element): typingsSlinky.materializeCss.M.Parallax = js.native
+  def init(els: Element, options: PartialParallaxOptions): typingsSlinky.materializeCss.M.Parallax = js.native
 }
 

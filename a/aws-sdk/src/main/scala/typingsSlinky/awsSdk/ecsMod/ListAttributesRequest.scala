@@ -34,21 +34,83 @@ trait ListAttributesRequest extends js.Object {
 
 object ListAttributesRequest {
   @scala.inline
-  def apply(
-    targetType: TargetType,
-    attributeName: String = null,
-    attributeValue: String = null,
-    cluster: String = null,
-    maxResults: Int | scala.Double = null,
-    nextToken: String = null
-  ): ListAttributesRequest = {
+  def apply(targetType: TargetType): ListAttributesRequest = {
     val __obj = js.Dynamic.literal(targetType = targetType.asInstanceOf[js.Any])
-    if (attributeName != null) __obj.updateDynamic("attributeName")(attributeName.asInstanceOf[js.Any])
-    if (attributeValue != null) __obj.updateDynamic("attributeValue")(attributeValue.asInstanceOf[js.Any])
-    if (cluster != null) __obj.updateDynamic("cluster")(cluster.asInstanceOf[js.Any])
-    if (maxResults != null) __obj.updateDynamic("maxResults")(maxResults.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListAttributesRequest]
   }
+  @scala.inline
+  implicit class ListAttributesRequestOps[Self <: ListAttributesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTargetType(value: TargetType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributeName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttributeValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCluster(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCluster: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: BoxedInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

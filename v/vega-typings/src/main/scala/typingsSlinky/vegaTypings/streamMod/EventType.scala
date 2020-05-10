@@ -29,44 +29,42 @@ trait EventType extends js.Object
 
 object EventType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def click: typingsSlinky.vegaTypings.vegaTypingsStrings.click = "click".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.click]
   @scala.inline
-  def click: typingsSlinky.vegaTypings.vegaTypingsStrings.click = this.cast("click")
+  def dblclick: typingsSlinky.vegaTypings.vegaTypingsStrings.dblclick = "dblclick".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.dblclick]
   @scala.inline
-  def dblclick: typingsSlinky.vegaTypings.vegaTypingsStrings.dblclick = this.cast("dblclick")
+  def dragenter: typingsSlinky.vegaTypings.vegaTypingsStrings.dragenter = "dragenter".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.dragenter]
   @scala.inline
-  def dragenter: typingsSlinky.vegaTypings.vegaTypingsStrings.dragenter = this.cast("dragenter")
+  def dragleave: typingsSlinky.vegaTypings.vegaTypingsStrings.dragleave = "dragleave".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.dragleave]
   @scala.inline
-  def dragleave: typingsSlinky.vegaTypings.vegaTypingsStrings.dragleave = this.cast("dragleave")
+  def dragover: typingsSlinky.vegaTypings.vegaTypingsStrings.dragover = "dragover".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.dragover]
   @scala.inline
-  def dragover: typingsSlinky.vegaTypings.vegaTypingsStrings.dragover = this.cast("dragover")
+  def keydown: typingsSlinky.vegaTypings.vegaTypingsStrings.keydown = "keydown".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.keydown]
   @scala.inline
-  def keydown: typingsSlinky.vegaTypings.vegaTypingsStrings.keydown = this.cast("keydown")
+  def keypress: typingsSlinky.vegaTypings.vegaTypingsStrings.keypress = "keypress".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.keypress]
   @scala.inline
-  def keypress: typingsSlinky.vegaTypings.vegaTypingsStrings.keypress = this.cast("keypress")
+  def keyup: typingsSlinky.vegaTypings.vegaTypingsStrings.keyup = "keyup".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.keyup]
   @scala.inline
-  def keyup: typingsSlinky.vegaTypings.vegaTypingsStrings.keyup = this.cast("keyup")
+  def mousedown: typingsSlinky.vegaTypings.vegaTypingsStrings.mousedown = "mousedown".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.mousedown]
   @scala.inline
-  def mousedown: typingsSlinky.vegaTypings.vegaTypingsStrings.mousedown = this.cast("mousedown")
+  def mousemove: typingsSlinky.vegaTypings.vegaTypingsStrings.mousemove = "mousemove".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.mousemove]
   @scala.inline
-  def mousemove: typingsSlinky.vegaTypings.vegaTypingsStrings.mousemove = this.cast("mousemove")
+  def mouseout: typingsSlinky.vegaTypings.vegaTypingsStrings.mouseout = "mouseout".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.mouseout]
   @scala.inline
-  def mouseout: typingsSlinky.vegaTypings.vegaTypingsStrings.mouseout = this.cast("mouseout")
+  def mouseover: typingsSlinky.vegaTypings.vegaTypingsStrings.mouseover = "mouseover".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.mouseover]
   @scala.inline
-  def mouseover: typingsSlinky.vegaTypings.vegaTypingsStrings.mouseover = this.cast("mouseover")
+  def mouseup: typingsSlinky.vegaTypings.vegaTypingsStrings.mouseup = "mouseup".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.mouseup]
   @scala.inline
-  def mouseup: typingsSlinky.vegaTypings.vegaTypingsStrings.mouseup = this.cast("mouseup")
+  def mousewheel: typingsSlinky.vegaTypings.vegaTypingsStrings.mousewheel = "mousewheel".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.mousewheel]
   @scala.inline
-  def mousewheel: typingsSlinky.vegaTypings.vegaTypingsStrings.mousewheel = this.cast("mousewheel")
+  def timer: typingsSlinky.vegaTypings.vegaTypingsStrings.timer = "timer".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.timer]
   @scala.inline
-  def timer: typingsSlinky.vegaTypings.vegaTypingsStrings.timer = this.cast("timer")
+  def touchend: typingsSlinky.vegaTypings.vegaTypingsStrings.touchend = "touchend".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.touchend]
   @scala.inline
-  def touchend: typingsSlinky.vegaTypings.vegaTypingsStrings.touchend = this.cast("touchend")
+  def touchmove: typingsSlinky.vegaTypings.vegaTypingsStrings.touchmove = "touchmove".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.touchmove]
   @scala.inline
-  def touchmove: typingsSlinky.vegaTypings.vegaTypingsStrings.touchmove = this.cast("touchmove")
+  def touchstart: typingsSlinky.vegaTypings.vegaTypingsStrings.touchstart = "touchstart".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.touchstart]
   @scala.inline
-  def touchstart: typingsSlinky.vegaTypings.vegaTypingsStrings.touchstart = this.cast("touchstart")
-  @scala.inline
-  def wheel: typingsSlinky.vegaTypings.vegaTypingsStrings.wheel = this.cast("wheel")
+  def wheel: typingsSlinky.vegaTypings.vegaTypingsStrings.wheel = "wheel".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.wheel]
 }
 

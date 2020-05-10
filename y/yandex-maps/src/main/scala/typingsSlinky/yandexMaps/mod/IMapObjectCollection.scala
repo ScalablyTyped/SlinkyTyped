@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.yandexMaps.mod.IEventEmitter because Already inherited
-- typingsSlinky.yandexMaps.mod.ICustomizable because var conflicts: events. Inlined options */ trait IMapObjectCollection
+- typingsSlinky.yandexMaps.mod.ICustomizable because var conflicts: events. Inlined options */ @js.native
+trait IMapObjectCollection
   extends ICollection
      with IParentOnMap {
-  var options: IOptionManager
+  var options: IOptionManager = js.native
 }
 
 object IMapObjectCollection {
@@ -23,8 +24,21 @@ object IMapObjectCollection {
     remove: js.Object => IMapObjectCollection
   ): IMapObjectCollection = {
     val __obj = js.Dynamic.literal(add = js.Any.fromFunction1(add), events = events.asInstanceOf[js.Any], getIterator = js.Any.fromFunction0(getIterator), getMap = js.Any.fromFunction0(getMap), options = options.asInstanceOf[js.Any], remove = js.Any.fromFunction1(remove))
-  
     __obj.asInstanceOf[IMapObjectCollection]
   }
+  @scala.inline
+  implicit class IMapObjectCollectionOps[Self <: IMapObjectCollection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOptions(value: IOptionManager): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -8,7 +8,6 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import typingsSlinky.blueprintjsCore.blueprintjsCoreBooleans.`false`
-import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.propsMod.HTMLInputProps
 import typingsSlinky.blueprintjsCore.propsMod.IIntentProps
 import typingsSlinky.blueprintjsCore.propsMod.IProps
@@ -21,6 +20,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ITagInputProps
   extends IIntentProps
      with IProps {
@@ -29,7 +29,7 @@ trait ITagInputProps
     * Otherwise, `onAdd` is only invoked when `enter` is pressed.
     * @default false
     */
-  var addOnBlur: js.UndefOr[Boolean] = js.undefined
+  var addOnBlur: js.UndefOr[Boolean] = js.native
   /**
     * If true, `onAdd` will be invoked when the user pastes text containing the `separator`
     * into the input. Otherwise, pasted text will remain in the input.
@@ -41,29 +41,29 @@ trait ITagInputProps
     *
     * @default true
     */
-  var addOnPaste: js.UndefOr[Boolean] = js.undefined
+  var addOnPaste: js.UndefOr[Boolean] = js.native
   /**
     * Whether the component is non-interactive.
     * Note that you'll also need to disable the component's `rightElement`,
     * if appropriate.
     * @default false
     */
-  var disabled: js.UndefOr[Boolean] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.native
   /** Whether the tag input should take up the full width of its container. */
-  var fill: js.UndefOr[Boolean] = js.undefined
+  var fill: js.UndefOr[Boolean] = js.native
   /**
     * React props to pass to the `<input>` element.
     * Note that `ref` and `key` are not supported here; use `inputRef` below.
     */
-  var inputProps: js.UndefOr[HTMLInputProps] = js.undefined
+  var inputProps: js.UndefOr[HTMLInputProps] = js.native
   /** Ref handler for the `<input>` element. */
-  var inputRef: js.UndefOr[js.Function1[/* input */ HTMLInputElement | Null, Unit]] = js.undefined
+  var inputRef: js.UndefOr[js.Function1[/* input */ HTMLInputElement | Null, Unit]] = js.native
   /** Controlled value of the `<input>` element. This is shorthand for `inputProps={{ value }}`. */
-  var inputValue: js.UndefOr[String] = js.undefined
+  var inputValue: js.UndefOr[String] = js.native
   /** Whether the tag input should use a large size. */
-  var large: js.UndefOr[Boolean] = js.undefined
+  var large: js.UndefOr[Boolean] = js.native
   /** Name of a Blueprint UI icon (or an icon element) to render on the left side of the input. */
-  var leftIcon: js.UndefOr[IconName | MaybeElement] = js.undefined
+  var leftIcon: js.UndefOr[IconName | MaybeElement] = js.native
   /**
     * Callback invoked when new tags are added by the user pressing `enter` on the input.
     * Receives the current value of the input field split by `separator` into an array.
@@ -75,7 +75,7 @@ trait ITagInputProps
     */
   var onAdd: js.UndefOr[
     js.Function2[/* values */ js.Array[String], /* method */ TagInputAddMethod, Boolean | Unit]
-  ] = js.undefined
+  ] = js.native
   /**
     * Callback invoked when new tags are added or removed. Receives the updated list of `values`:
     * new tags are appended to the end of the list, removed tags are removed at their index.
@@ -95,12 +95,12 @@ trait ITagInputProps
     * />
     * ```
     */
-  var onChange: js.UndefOr[js.Function1[/* values */ js.Array[TagMod[Any]], Boolean | Unit]] = js.undefined
+  var onChange: js.UndefOr[js.Function1[/* values */ js.Array[TagMod[Any]], Boolean | Unit]] = js.native
   /**
     * Callback invoked when the value of `<input>` element is changed.
     * This is shorthand for `inputProps={{ onChange }}`.
     */
-  var onInputChange: js.UndefOr[FormEventHandler[HTMLInputElement]] = js.undefined
+  var onInputChange: js.UndefOr[FormEventHandler[HTMLInputElement]] = js.native
   /**
     * Callback invoked when the user depresses a keyboard key.
     * Receives the event and the index of the active tag (or `undefined` if
@@ -112,7 +112,7 @@ trait ITagInputProps
       /* index */ js.UndefOr[Double], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * Callback invoked when the user releases a keyboard key.
     * Receives the event and the index of the active tag (or `undefined` if
@@ -124,12 +124,12 @@ trait ITagInputProps
       /* index */ js.UndefOr[Double], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * Callback invoked when the user clicks the X button on a tag.
     * Receives value and index of removed tag.
     */
-  var onRemove: js.UndefOr[js.Function2[/* value */ String, /* index */ Double, Unit]] = js.undefined
+  var onRemove: js.UndefOr[js.Function2[/* value */ String, /* index */ Double, Unit]] = js.native
   /**
     * Input placeholder text which will not appear if `values` contains any items
     * (consistent with default HTML input behavior).
@@ -138,19 +138,19 @@ trait ITagInputProps
     * If you define both `placeholder` and `inputProps.placeholder`, then the former will appear
     * when `values` is empty and the latter at all other times.
     */
-  var placeholder: js.UndefOr[String] = js.undefined
+  var placeholder: js.UndefOr[String] = js.native
   /**
     * Element to render on right side of input.
     * For best results, use a small spinner or minimal button (button height will adjust if `TagInput` uses large styles).
     * Other elements will likely require custom styles for correct positioning.
     */
-  var rightElement: js.UndefOr[ReactElement] = js.undefined
+  var rightElement: js.UndefOr[ReactElement] = js.native
   /**
     * Separator pattern used to split input text into multiple values. Default value splits on commas and newlines.
     * Explicit `false` value disables splitting (note that `onAdd` will still receive an array of length 1).
     * @default /[,\n\r]/
     */
-  var separator: js.UndefOr[String | js.RegExp | `false`] = js.undefined
+  var separator: js.UndefOr[String | js.RegExp | `false`] = js.native
   /**
     * React props to pass to each `Tag`. Provide an object to pass the same props to every tag,
     * or a function to customize props per tag.
@@ -160,7 +160,7 @@ trait ITagInputProps
     */
   var tagProps: js.UndefOr[
     ITagProps | (js.Function2[/* value */ TagMod[Any], /* index */ Double, ITagProps])
-  ] = js.undefined
+  ] = js.native
   /**
     * Controlled tag values. Each value will be rendered inside a `Tag`, which can be customized
     * using `tagProps`. Therefore, any valid React node can be used as a `TagInput` value; falsy
@@ -170,58 +170,280 @@ trait ITagInputProps
     * subtype, such as `string` or `ReactChild`, you can use that type on all your handlers
     * to simplify type logic.
     */
-  var values: js.Array[TagMod[Any]]
+  var values: js.Array[TagMod[Any]] = js.native
 }
 
 object ITagInputProps {
   @scala.inline
-  def apply(
-    values: js.Array[TagMod[Any]],
-    addOnBlur: js.UndefOr[Boolean] = js.undefined,
-    addOnPaste: js.UndefOr[Boolean] = js.undefined,
-    className: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    fill: js.UndefOr[Boolean] = js.undefined,
-    inputProps: HTMLInputProps = null,
-    inputRef: /* input */ HTMLInputElement | Null => Unit = null,
-    inputValue: String = null,
-    intent: Intent = null,
-    large: js.UndefOr[Boolean] = js.undefined,
-    leftIcon: IconName | MaybeElement = null,
-    onAdd: (/* values */ js.Array[String], /* method */ TagInputAddMethod) => Boolean | Unit = null,
-    onChange: /* values */ js.Array[TagMod[Any]] => Boolean | Unit = null,
-    onInputChange: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit = null,
-    onKeyDown: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* index */ js.UndefOr[Double]) => Unit = null,
-    onKeyUp: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* index */ js.UndefOr[Double]) => Unit = null,
-    onRemove: (/* value */ String, /* index */ Double) => Unit = null,
-    placeholder: String = null,
-    rightElement: ReactElement = null,
-    separator: String | js.RegExp | `false` = null,
-    tagProps: ITagProps | (js.Function2[/* value */ TagMod[Any], /* index */ Double, ITagProps]) = null
-  ): ITagInputProps = {
+  def apply(values: js.Array[TagMod[Any]]): ITagInputProps = {
     val __obj = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
-    if (!js.isUndefined(addOnBlur)) __obj.updateDynamic("addOnBlur")(addOnBlur.asInstanceOf[js.Any])
-    if (!js.isUndefined(addOnPaste)) __obj.updateDynamic("addOnPaste")(addOnPaste.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(fill)) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (inputProps != null) __obj.updateDynamic("inputProps")(inputProps.asInstanceOf[js.Any])
-    if (inputRef != null) __obj.updateDynamic("inputRef")(js.Any.fromFunction1(inputRef))
-    if (inputValue != null) __obj.updateDynamic("inputValue")(inputValue.asInstanceOf[js.Any])
-    if (intent != null) __obj.updateDynamic("intent")(intent.asInstanceOf[js.Any])
-    if (!js.isUndefined(large)) __obj.updateDynamic("large")(large.asInstanceOf[js.Any])
-    if (leftIcon != null) __obj.updateDynamic("leftIcon")(leftIcon.asInstanceOf[js.Any])
-    if (onAdd != null) __obj.updateDynamic("onAdd")(js.Any.fromFunction2(onAdd))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onInputChange != null) __obj.updateDynamic("onInputChange")(js.Any.fromFunction1(onInputChange))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction2(onKeyDown))
-    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction2(onKeyUp))
-    if (onRemove != null) __obj.updateDynamic("onRemove")(js.Any.fromFunction2(onRemove))
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (rightElement != null) __obj.updateDynamic("rightElement")(rightElement.asInstanceOf[js.Any])
-    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
-    if (tagProps != null) __obj.updateDynamic("tagProps")(tagProps.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITagInputProps]
   }
+  @scala.inline
+  implicit class ITagInputPropsOps[Self <: ITagInputProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValues(value: js.Array[TagMod[Any]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddOnBlur(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnBlur")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddOnBlur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnBlur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddOnPaste(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnPaste")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddOnPaste: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnPaste")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFill(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputProps(value: HTMLInputProps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputRef(value: /* input */ HTMLInputElement | Null => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutInputRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLarge(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLarge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeftIconReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLeftIcon(value: IconName | MaybeElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeftIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeftIconNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftIcon")(null)
+        ret
+    }
+    @scala.inline
+    def withOnAdd(value: (/* values */ js.Array[String], /* method */ TagInputAddMethod) => Boolean | Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAdd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: /* values */ js.Array[TagMod[Any]] => Boolean | Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnInputChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onInputChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnInputChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onInputChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnKeyDown(value: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* index */ js.UndefOr[Double]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnKeyDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnKeyUp(value: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* index */ js.UndefOr[Double]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyUp")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnKeyUp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyUp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRemove(value: (/* value */ String, /* index */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemove")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRightElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRightElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeparatorRegExp(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSeparator(value: String | js.RegExp | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeparator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagPropsFunction2(value: (/* value */ TagMod[Any], /* index */ Double) => ITagProps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagProps")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withTagProps(value: ITagProps | (js.Function2[/* value */ TagMod[Any], /* index */ Double, ITagProps])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagProps")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

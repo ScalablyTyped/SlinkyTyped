@@ -34,22 +34,89 @@ trait RegisterClientResponse extends js.Object {
 
 object RegisterClientResponse {
   @scala.inline
-  def apply(
-    authorizationEndpoint: URI = null,
-    clientId: ClientId = null,
-    clientIdIssuedAt: Int | Double = null,
-    clientSecret: ClientSecret = null,
-    clientSecretExpiresAt: Int | Double = null,
-    tokenEndpoint: URI = null
-  ): RegisterClientResponse = {
+  def apply(): RegisterClientResponse = {
     val __obj = js.Dynamic.literal()
-    if (authorizationEndpoint != null) __obj.updateDynamic("authorizationEndpoint")(authorizationEndpoint.asInstanceOf[js.Any])
-    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
-    if (clientIdIssuedAt != null) __obj.updateDynamic("clientIdIssuedAt")(clientIdIssuedAt.asInstanceOf[js.Any])
-    if (clientSecret != null) __obj.updateDynamic("clientSecret")(clientSecret.asInstanceOf[js.Any])
-    if (clientSecretExpiresAt != null) __obj.updateDynamic("clientSecretExpiresAt")(clientSecretExpiresAt.asInstanceOf[js.Any])
-    if (tokenEndpoint != null) __obj.updateDynamic("tokenEndpoint")(tokenEndpoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterClientResponse]
   }
+  @scala.inline
+  implicit class RegisterClientResponseOps[Self <: RegisterClientResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthorizationEndpoint(value: URI): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationEndpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizationEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationEndpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientId(value: ClientId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientIdIssuedAt(value: LongTimeStampType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientIdIssuedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientIdIssuedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientIdIssuedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientSecret(value: ClientSecret): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSecret")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientSecret: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSecret")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientSecretExpiresAt(value: LongTimeStampType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSecretExpiresAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientSecretExpiresAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSecretExpiresAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTokenEndpoint(value: URI): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenEndpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTokenEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenEndpoint")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,7 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.AnonExpanded
 import typingsSlinky.baseui.SharedPropsexpandednever
 import typingsSlinky.baseui.accordionMod.AccordionOverrides
@@ -15,36 +12,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Accordion
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.accordionMod.Accordion] {
+object Accordion {
   @JSImport("baseui/accordion", "Accordion")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    accordion: js.UndefOr[Boolean] = js.undefined,
-    initialState: AccordionState = null,
-    onChange: /* args */ AnonExpanded => _ = null,
-    overrides: AccordionOverrides[SharedPropsexpandednever] = null,
-    renderAll: js.UndefOr[Boolean] = js.undefined,
-    renderPanelContent: js.UndefOr[Boolean] = js.undefined,
-    stateReducer: (expand, AccordionState, AccordionState) => AccordionState = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.baseui.accordionMod.Accordion] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(accordion)) __obj.updateDynamic("accordion")(accordion.asInstanceOf[js.Any])
-    if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (!js.isUndefined(renderAll)) __obj.updateDynamic("renderAll")(renderAll.asInstanceOf[js.Any])
-    if (!js.isUndefined(renderPanelContent)) __obj.updateDynamic("renderPanelContent")(renderPanelContent.asInstanceOf[js.Any])
-    if (stateReducer != null) __obj.updateDynamic("stateReducer")(js.Any.fromFunction3(stateReducer))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.accordionMod.Accordion] {
+    @scala.inline
+    def accordion(value: Boolean): this.type = set("accordion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialState(value: AccordionState): this.type = set("initialState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* args */ AnonExpanded => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def overrides(value: AccordionOverrides[SharedPropsexpandednever]): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderAll(value: Boolean): this.type = set("renderAll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderPanelContent(value: Boolean): this.type = set("renderPanelContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stateReducer(value: (expand, AccordionState, AccordionState) => AccordionState): this.type = set("stateReducer", js.Any.fromFunction3(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.accordionMod.Accordion] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.baseui.accordionMod.Accordion](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = AccordionProps
+  
+  def withProps(p: AccordionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Accordion.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,14 +1,16 @@
 package typingsSlinky.antd.components
 
+import typingsSlinky.antd.metaMod.CardMetaProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Meta extends SharedApply_CardMetaProps2019622521 {
+object Meta {
   @JSImport("antd/lib/card/Meta", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: CardMetaProps): SharedBuilder_CardMetaProps1450922115 = new SharedBuilder_CardMetaProps1450922115(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Meta.type): SharedBuilder_CardMetaProps1450922115 = new SharedBuilder_CardMetaProps1450922115(js.Array(this.component, js.Dictionary.empty))()
 }
 

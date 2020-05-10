@@ -79,36 +79,173 @@ trait SchemaAutomaticScaling extends js.Object {
 
 object SchemaAutomaticScaling {
   @scala.inline
-  def apply(
-    coolDownPeriod: String = null,
-    cpuUtilization: SchemaCpuUtilization = null,
-    diskUtilization: SchemaDiskUtilization = null,
-    maxConcurrentRequests: Int | Double = null,
-    maxIdleInstances: Int | Double = null,
-    maxPendingLatency: String = null,
-    maxTotalInstances: Int | Double = null,
-    minIdleInstances: Int | Double = null,
-    minPendingLatency: String = null,
-    minTotalInstances: Int | Double = null,
-    networkUtilization: SchemaNetworkUtilization = null,
-    requestUtilization: SchemaRequestUtilization = null,
-    standardSchedulerSettings: SchemaStandardSchedulerSettings = null
-  ): SchemaAutomaticScaling = {
+  def apply(): SchemaAutomaticScaling = {
     val __obj = js.Dynamic.literal()
-    if (coolDownPeriod != null) __obj.updateDynamic("coolDownPeriod")(coolDownPeriod.asInstanceOf[js.Any])
-    if (cpuUtilization != null) __obj.updateDynamic("cpuUtilization")(cpuUtilization.asInstanceOf[js.Any])
-    if (diskUtilization != null) __obj.updateDynamic("diskUtilization")(diskUtilization.asInstanceOf[js.Any])
-    if (maxConcurrentRequests != null) __obj.updateDynamic("maxConcurrentRequests")(maxConcurrentRequests.asInstanceOf[js.Any])
-    if (maxIdleInstances != null) __obj.updateDynamic("maxIdleInstances")(maxIdleInstances.asInstanceOf[js.Any])
-    if (maxPendingLatency != null) __obj.updateDynamic("maxPendingLatency")(maxPendingLatency.asInstanceOf[js.Any])
-    if (maxTotalInstances != null) __obj.updateDynamic("maxTotalInstances")(maxTotalInstances.asInstanceOf[js.Any])
-    if (minIdleInstances != null) __obj.updateDynamic("minIdleInstances")(minIdleInstances.asInstanceOf[js.Any])
-    if (minPendingLatency != null) __obj.updateDynamic("minPendingLatency")(minPendingLatency.asInstanceOf[js.Any])
-    if (minTotalInstances != null) __obj.updateDynamic("minTotalInstances")(minTotalInstances.asInstanceOf[js.Any])
-    if (networkUtilization != null) __obj.updateDynamic("networkUtilization")(networkUtilization.asInstanceOf[js.Any])
-    if (requestUtilization != null) __obj.updateDynamic("requestUtilization")(requestUtilization.asInstanceOf[js.Any])
-    if (standardSchedulerSettings != null) __obj.updateDynamic("standardSchedulerSettings")(standardSchedulerSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAutomaticScaling]
   }
+  @scala.inline
+  implicit class SchemaAutomaticScalingOps[Self <: SchemaAutomaticScaling] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCoolDownPeriod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coolDownPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoolDownPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coolDownPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCpuUtilization(value: SchemaCpuUtilization): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuUtilization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCpuUtilization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuUtilization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskUtilization(value: SchemaDiskUtilization): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskUtilization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskUtilization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskUtilization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxConcurrentRequests(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConcurrentRequests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxConcurrentRequests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConcurrentRequests")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxIdleInstances(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxIdleInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxIdleInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxIdleInstances")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxPendingLatency(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPendingLatency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxPendingLatency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPendingLatency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxTotalInstances(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTotalInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxTotalInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTotalInstances")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinIdleInstances(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minIdleInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinIdleInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minIdleInstances")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinPendingLatency(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minPendingLatency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinPendingLatency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minPendingLatency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinTotalInstances(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minTotalInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinTotalInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minTotalInstances")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkUtilization(value: SchemaNetworkUtilization): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkUtilization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkUtilization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkUtilization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestUtilization(value: SchemaRequestUtilization): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestUtilization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestUtilization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestUtilization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStandardSchedulerSettings(value: SchemaStandardSchedulerSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("standardSchedulerSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStandardSchedulerSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("standardSchedulerSettings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

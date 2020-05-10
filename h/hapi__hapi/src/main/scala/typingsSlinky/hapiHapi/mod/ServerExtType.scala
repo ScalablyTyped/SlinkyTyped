@@ -14,14 +14,12 @@ trait ServerExtType extends js.Object
 
 object ServerExtType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def onPostStart: typingsSlinky.hapiHapi.hapiHapiStrings.onPostStart = "onPostStart".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.onPostStart]
   @scala.inline
-  def onPostStart: typingsSlinky.hapiHapi.hapiHapiStrings.onPostStart = this.cast("onPostStart")
+  def onPostStop: typingsSlinky.hapiHapi.hapiHapiStrings.onPostStop = "onPostStop".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.onPostStop]
   @scala.inline
-  def onPostStop: typingsSlinky.hapiHapi.hapiHapiStrings.onPostStop = this.cast("onPostStop")
+  def onPreStart: typingsSlinky.hapiHapi.hapiHapiStrings.onPreStart = "onPreStart".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.onPreStart]
   @scala.inline
-  def onPreStart: typingsSlinky.hapiHapi.hapiHapiStrings.onPreStart = this.cast("onPreStart")
-  @scala.inline
-  def onPreStop: typingsSlinky.hapiHapi.hapiHapiStrings.onPreStop = this.cast("onPreStop")
+  def onPreStop: typingsSlinky.hapiHapi.hapiHapiStrings.onPreStop = "onPreStop".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.onPreStop]
 }
 

@@ -11,7 +11,7 @@ package object Parser {
       O, 
       /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ name in N ]: T}
-    */ typingsSlinky.binaryParser.binaryParserStrings.Next with js.Any
+    */ typingsSlinky.binaryParser.binaryParserStrings.Next with org.scalablytyped.runtime.TopLevel[js.Any]
     ]
   ]
   type Parsed[O /* <: js.UndefOr[js.Object] */] = O | js.Object

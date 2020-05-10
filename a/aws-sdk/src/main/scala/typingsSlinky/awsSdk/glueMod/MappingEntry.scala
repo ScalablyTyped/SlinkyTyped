@@ -34,22 +34,89 @@ trait MappingEntry extends js.Object {
 
 object MappingEntry {
   @scala.inline
-  def apply(
-    SourcePath: SchemaPathString = null,
-    SourceTable: TableName = null,
-    SourceType: FieldType = null,
-    TargetPath: SchemaPathString = null,
-    TargetTable: TableName = null,
-    TargetType: FieldType = null
-  ): MappingEntry = {
+  def apply(): MappingEntry = {
     val __obj = js.Dynamic.literal()
-    if (SourcePath != null) __obj.updateDynamic("SourcePath")(SourcePath.asInstanceOf[js.Any])
-    if (SourceTable != null) __obj.updateDynamic("SourceTable")(SourceTable.asInstanceOf[js.Any])
-    if (SourceType != null) __obj.updateDynamic("SourceType")(SourceType.asInstanceOf[js.Any])
-    if (TargetPath != null) __obj.updateDynamic("TargetPath")(TargetPath.asInstanceOf[js.Any])
-    if (TargetTable != null) __obj.updateDynamic("TargetTable")(TargetTable.asInstanceOf[js.Any])
-    if (TargetType != null) __obj.updateDynamic("TargetType")(TargetType.asInstanceOf[js.Any])
     __obj.asInstanceOf[MappingEntry]
   }
+  @scala.inline
+  implicit class MappingEntryOps[Self <: MappingEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSourcePath(value: SchemaPathString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourcePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourcePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourcePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceTable(value: TableName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceTable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceType(value: FieldType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetPath(value: SchemaPathString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetTable(value: TableName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetTable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetType(value: FieldType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

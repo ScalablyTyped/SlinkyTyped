@@ -20,5 +20,6 @@ trait HTMLOListElement extends HTMLElement {
 
 @JSGlobal("HTMLOListElement")
 @js.native
-object HTMLOListElement extends Instantiable0[HTMLOListElement]
+object HTMLOListElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLOListElement]
 

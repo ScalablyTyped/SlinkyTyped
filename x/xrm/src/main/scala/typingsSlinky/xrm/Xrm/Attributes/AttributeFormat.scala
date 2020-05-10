@@ -29,30 +29,28 @@ trait AttributeFormat extends js.Object
 
 object AttributeFormat {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def date: typingsSlinky.xrm.xrmStrings.date = "date".asInstanceOf[typingsSlinky.xrm.xrmStrings.date]
   @scala.inline
-  def date: typingsSlinky.xrm.xrmStrings.date = this.cast("date")
+  def datetime: typingsSlinky.xrm.xrmStrings.datetime = "datetime".asInstanceOf[typingsSlinky.xrm.xrmStrings.datetime]
   @scala.inline
-  def datetime: typingsSlinky.xrm.xrmStrings.datetime = this.cast("datetime")
+  def duration: typingsSlinky.xrm.xrmStrings.duration = "duration".asInstanceOf[typingsSlinky.xrm.xrmStrings.duration]
   @scala.inline
-  def duration: typingsSlinky.xrm.xrmStrings.duration = this.cast("duration")
+  def email: typingsSlinky.xrm.xrmStrings.email = "email".asInstanceOf[typingsSlinky.xrm.xrmStrings.email]
   @scala.inline
-  def email: typingsSlinky.xrm.xrmStrings.email = this.cast("email")
+  def language: typingsSlinky.xrm.xrmStrings.language = "language".asInstanceOf[typingsSlinky.xrm.xrmStrings.language]
   @scala.inline
-  def language: typingsSlinky.xrm.xrmStrings.language = this.cast("language")
+  def none: typingsSlinky.xrm.xrmStrings.none = "none".asInstanceOf[typingsSlinky.xrm.xrmStrings.none]
   @scala.inline
-  def none: typingsSlinky.xrm.xrmStrings.none = this.cast("none")
+  def phone: typingsSlinky.xrm.xrmStrings.phone = "phone".asInstanceOf[typingsSlinky.xrm.xrmStrings.phone]
   @scala.inline
-  def phone: typingsSlinky.xrm.xrmStrings.phone = this.cast("phone")
+  def text: typingsSlinky.xrm.xrmStrings.text = "text".asInstanceOf[typingsSlinky.xrm.xrmStrings.text]
   @scala.inline
-  def text: typingsSlinky.xrm.xrmStrings.text = this.cast("text")
+  def textarea: typingsSlinky.xrm.xrmStrings.textarea = "textarea".asInstanceOf[typingsSlinky.xrm.xrmStrings.textarea]
   @scala.inline
-  def textarea: typingsSlinky.xrm.xrmStrings.textarea = this.cast("textarea")
+  def tickersymbol: typingsSlinky.xrm.xrmStrings.tickersymbol = "tickersymbol".asInstanceOf[typingsSlinky.xrm.xrmStrings.tickersymbol]
   @scala.inline
-  def tickersymbol: typingsSlinky.xrm.xrmStrings.tickersymbol = this.cast("tickersymbol")
+  def timezone: typingsSlinky.xrm.xrmStrings.timezone = "timezone".asInstanceOf[typingsSlinky.xrm.xrmStrings.timezone]
   @scala.inline
-  def timezone: typingsSlinky.xrm.xrmStrings.timezone = this.cast("timezone")
-  @scala.inline
-  def url: typingsSlinky.xrm.xrmStrings.url = this.cast("url")
+  def url: typingsSlinky.xrm.xrmStrings.url = "url".asInstanceOf[typingsSlinky.xrm.xrmStrings.url]
 }
 

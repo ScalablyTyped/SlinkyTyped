@@ -5,39 +5,73 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ISubscriptionCancellationOptions extends IDataOptions {
   /**
     * @deprecated Use subscription update with cancel_at_period_end option as of 2018-08-23.
     *
     * A flag that if set to true will delay the cancellation of the subscription until the end of the current period.
     */
-  var at_period_end: js.UndefOr[Boolean] = js.undefined
+  var at_period_end: js.UndefOr[Boolean] = js.native
   /**
     * Will generate a final invoice that invoices for any un-invoiced metered usage and new/pending proration invoice items.
     */
-  var invoice_now: js.UndefOr[Boolean] = js.undefined
+  var invoice_now: js.UndefOr[Boolean] = js.native
   /**
     * Will generate a proration invoice item that credits remaining unused time until the subscription period end.
     */
-  var prorate: js.UndefOr[Boolean] = js.undefined
+  var prorate: js.UndefOr[Boolean] = js.native
 }
 
 object ISubscriptionCancellationOptions {
   @scala.inline
-  def apply(
-    at_period_end: js.UndefOr[Boolean] = js.undefined,
-    expand: js.Array[String] = null,
-    include: js.Array[String] = null,
-    invoice_now: js.UndefOr[Boolean] = js.undefined,
-    prorate: js.UndefOr[Boolean] = js.undefined
-  ): ISubscriptionCancellationOptions = {
+  def apply(): ISubscriptionCancellationOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(at_period_end)) __obj.updateDynamic("at_period_end")(at_period_end.asInstanceOf[js.Any])
-    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
-    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
-    if (!js.isUndefined(invoice_now)) __obj.updateDynamic("invoice_now")(invoice_now.asInstanceOf[js.Any])
-    if (!js.isUndefined(prorate)) __obj.updateDynamic("prorate")(prorate.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISubscriptionCancellationOptions]
   }
+  @scala.inline
+  implicit class ISubscriptionCancellationOptionsOps[Self <: ISubscriptionCancellationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAt_period_end(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("at_period_end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAt_period_end: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("at_period_end")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvoice_now(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invoice_now")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvoice_now: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invoice_now")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProrate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prorate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProrate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prorate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

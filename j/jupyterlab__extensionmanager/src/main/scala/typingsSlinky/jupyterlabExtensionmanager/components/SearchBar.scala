@@ -1,26 +1,22 @@
 package typingsSlinky.jupyterlabExtensionmanager.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.jupyterlabExtensionmanager.widgetMod.SearchBar.IProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SearchBar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.jupyterlabExtensionmanager.mod.SearchBar] {
+object SearchBar {
   @JSImport("@jupyterlab/extensionmanager", "SearchBar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(placeholder: String, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.jupyterlabExtensionmanager.mod.SearchBar] = {
-    val __obj = js.Dynamic.literal(placeholder = placeholder.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: IProperties): Default[tag.type, typingsSlinky.jupyterlabExtensionmanager.mod.SearchBar] = new Default[tag.type, typingsSlinky.jupyterlabExtensionmanager.mod.SearchBar](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(placeholder: String): Default[tag.type, typingsSlinky.jupyterlabExtensionmanager.mod.SearchBar] = {
+    val __props = js.Dynamic.literal(placeholder = placeholder.asInstanceOf[js.Any])
+    new Default[tag.type, typingsSlinky.jupyterlabExtensionmanager.mod.SearchBar](js.Array(this.component, __props.asInstanceOf[IProperties]))
   }
-  type Props = IProperties
 }
 

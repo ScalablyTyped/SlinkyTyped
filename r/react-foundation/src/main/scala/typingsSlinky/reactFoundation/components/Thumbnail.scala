@@ -1,14 +1,16 @@
 package typingsSlinky.reactFoundation.components
 
+import typingsSlinky.reactFoundation.thumbnailMod.ThumbnailProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Thumbnail extends SharedApply_ThumbnailProps1350158008 {
+object Thumbnail {
   @JSImport("react-foundation", "Thumbnail")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ThumbnailProps): SharedBuilder_ThumbnailProps1581258749 = new SharedBuilder_ThumbnailProps1581258749(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Thumbnail.type): SharedBuilder_ThumbnailProps1581258749 = new SharedBuilder_ThumbnailProps1581258749(js.Array(this.component, js.Dictionary.empty))()
 }
 

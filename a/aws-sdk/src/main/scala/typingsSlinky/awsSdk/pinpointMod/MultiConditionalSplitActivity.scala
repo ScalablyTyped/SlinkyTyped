@@ -22,16 +22,53 @@ trait MultiConditionalSplitActivity extends js.Object {
 
 object MultiConditionalSplitActivity {
   @scala.inline
-  def apply(
-    Branches: ListOfMultiConditionalBranch = null,
-    DefaultActivity: string = null,
-    EvaluationWaitTime: WaitTime = null
-  ): MultiConditionalSplitActivity = {
+  def apply(): MultiConditionalSplitActivity = {
     val __obj = js.Dynamic.literal()
-    if (Branches != null) __obj.updateDynamic("Branches")(Branches.asInstanceOf[js.Any])
-    if (DefaultActivity != null) __obj.updateDynamic("DefaultActivity")(DefaultActivity.asInstanceOf[js.Any])
-    if (EvaluationWaitTime != null) __obj.updateDynamic("EvaluationWaitTime")(EvaluationWaitTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[MultiConditionalSplitActivity]
   }
+  @scala.inline
+  implicit class MultiConditionalSplitActivityOps[Self <: MultiConditionalSplitActivity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBranches(value: ListOfMultiConditionalBranch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Branches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBranches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Branches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultActivity(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultActivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultActivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultActivity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvaluationWaitTime(value: WaitTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationWaitTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvaluationWaitTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationWaitTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

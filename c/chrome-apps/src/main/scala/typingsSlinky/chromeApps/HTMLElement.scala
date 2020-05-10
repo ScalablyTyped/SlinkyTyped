@@ -4,23 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HTMLElement extends js.Object {
   /**
     * @requires Permissions: 'pointerLock'
     */
-  def exitPointerLock(): Unit
+  def exitPointerLock(): Unit = js.native
   /**
     * ❗ Unprefixed version are not available as of Chrome 68, in Chrome apps ❗
     */
-  def exitrequestFullscreen(): Unit
+  def exitrequestFullscreen(): Unit = js.native
   /**
     * ❗ Unprefixed version are not available as of Chrome 68, in Chrome apps ❗
     */
-  def requestFullscreen(): js.Promise[Unit]
+  def requestFullscreen(): js.Promise[Unit] = js.native
   /**
     * @requires Permissions: 'pointerLock'
     */
-  def requestPointerLock(): Unit
+  def requestPointerLock(): Unit = js.native
   /**
     * @requires Permissions: 'app.window.fullscreen', 'app.window.fullscreen.overrideEsc'
     * @description
@@ -35,7 +36,7 @@ trait HTMLElement extends js.Object {
     * @example
     * document.webkitExitFullscreen();
     */
-  def webkitRequestFullscreen(): Unit
+  def webkitRequestFullscreen(): Unit = js.native
 }
 
 object HTMLElement {
@@ -48,8 +49,45 @@ object HTMLElement {
     webkitRequestFullscreen: () => Unit
   ): HTMLElement = {
     val __obj = js.Dynamic.literal(exitPointerLock = js.Any.fromFunction0(exitPointerLock), exitrequestFullscreen = js.Any.fromFunction0(exitrequestFullscreen), requestFullscreen = js.Any.fromFunction0(requestFullscreen), requestPointerLock = js.Any.fromFunction0(requestPointerLock), webkitRequestFullscreen = js.Any.fromFunction0(webkitRequestFullscreen))
-  
     __obj.asInstanceOf[HTMLElement]
   }
+  @scala.inline
+  implicit class HTMLElementOps[Self <: HTMLElement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExitPointerLock(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitPointerLock")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withExitrequestFullscreen(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitrequestFullscreen")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRequestFullscreen(value: () => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestFullscreen")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRequestPointerLock(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestPointerLock")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withWebkitRequestFullscreen(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webkitRequestFullscreen")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

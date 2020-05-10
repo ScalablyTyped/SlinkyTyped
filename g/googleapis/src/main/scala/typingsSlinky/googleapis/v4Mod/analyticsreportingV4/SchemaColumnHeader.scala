@@ -21,11 +21,41 @@ trait SchemaColumnHeader extends js.Object {
 
 object SchemaColumnHeader {
   @scala.inline
-  def apply(dimensions: js.Array[String] = null, metricHeader: SchemaMetricHeader = null): SchemaColumnHeader = {
+  def apply(): SchemaColumnHeader = {
     val __obj = js.Dynamic.literal()
-    if (dimensions != null) __obj.updateDynamic("dimensions")(dimensions.asInstanceOf[js.Any])
-    if (metricHeader != null) __obj.updateDynamic("metricHeader")(metricHeader.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaColumnHeader]
   }
+  @scala.inline
+  implicit class SchemaColumnHeaderOps[Self <: SchemaColumnHeader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDimensions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricHeader(value: SchemaMetricHeader): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricHeader")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,9 +1,9 @@
 package typingsSlinky.cesium.mod
 
+import org.scalajs.dom.raw.Blob
 import typingsSlinky.cesium.AnonCamera
 import typingsSlinky.cesium.AnonCanvas
 import typingsSlinky.cesium.AnonClampToGroundEllipsoid
-import typingsSlinky.std.Blob
 import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`

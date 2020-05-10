@@ -13,12 +13,10 @@ trait VerticalAlignValue extends js.Object
 
 object VerticalAlignValue {
   @scala.inline
-  def bottom: typingsSlinky.highcharts.highchartsStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.highcharts.highchartsStrings.bottom = "bottom".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def middle: typingsSlinky.highcharts.highchartsStrings.middle = "middle".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.middle]
   @scala.inline
-  def middle: typingsSlinky.highcharts.highchartsStrings.middle = this.cast("middle")
-  @scala.inline
-  def top: typingsSlinky.highcharts.highchartsStrings.top = this.cast("top")
+  def top: typingsSlinky.highcharts.highchartsStrings.top = "top".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.top]
 }
 

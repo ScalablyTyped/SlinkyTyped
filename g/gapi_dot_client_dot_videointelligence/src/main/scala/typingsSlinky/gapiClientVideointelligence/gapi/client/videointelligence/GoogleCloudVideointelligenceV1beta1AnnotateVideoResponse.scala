@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GoogleCloudVideointelligenceV1beta1AnnotateVideoResponse extends js.Object {
   /** Annotation results for all videos specified in `AnnotateVideoRequest`. */
-  var annotationResults: js.UndefOr[js.Array[GoogleCloudVideointelligenceV1beta1VideoAnnotationResults]] = js.undefined
+  var annotationResults: js.UndefOr[js.Array[GoogleCloudVideointelligenceV1beta1VideoAnnotationResults]] = js.native
 }
 
 object GoogleCloudVideointelligenceV1beta1AnnotateVideoResponse {
   @scala.inline
-  def apply(annotationResults: js.Array[GoogleCloudVideointelligenceV1beta1VideoAnnotationResults] = null): GoogleCloudVideointelligenceV1beta1AnnotateVideoResponse = {
+  def apply(): GoogleCloudVideointelligenceV1beta1AnnotateVideoResponse = {
     val __obj = js.Dynamic.literal()
-    if (annotationResults != null) __obj.updateDynamic("annotationResults")(annotationResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleCloudVideointelligenceV1beta1AnnotateVideoResponse]
   }
+  @scala.inline
+  implicit class GoogleCloudVideointelligenceV1beta1AnnotateVideoResponseOps[Self <: GoogleCloudVideointelligenceV1beta1AnnotateVideoResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnnotationResults(value: js.Array[GoogleCloudVideointelligenceV1beta1VideoAnnotationResults]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("annotationResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnnotationResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("annotationResults")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

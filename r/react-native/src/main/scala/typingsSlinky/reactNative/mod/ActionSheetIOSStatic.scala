@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ActionSheetIOSStatic extends js.Object {
   /**
     * Display an iOS action sheet. The `options` object must contain one or more
@@ -14,7 +15,7 @@ trait ActionSheetIOSStatic extends js.Object {
     * - `title` (string) - a title to show above the action sheet
     * - `message` (string) - a message to show below the title
     */
-  def showActionSheetWithOptions(options: ActionSheetIOSOptions, callback: js.Function1[/* buttonIndex */ Double, Unit]): Unit
+  def showActionSheetWithOptions(options: ActionSheetIOSOptions, callback: js.Function1[/* buttonIndex */ Double, Unit]): Unit = js.native
   /**
     * Display the iOS share sheet. The `options` object should contain
     * one or both of `message` and `url` and can additionally have
@@ -33,7 +34,7 @@ trait ActionSheetIOSStatic extends js.Object {
     options: ShareActionSheetIOSOptions,
     failureCallback: js.Function1[/* error */ js.Error, Unit],
     successCallback: js.Function2[/* success */ Boolean, /* method */ String, Unit]
-  ): Unit
+  ): Unit = js.native
 }
 
 object ActionSheetIOSStatic {
@@ -43,8 +44,29 @@ object ActionSheetIOSStatic {
     showShareActionSheetWithOptions: (ShareActionSheetIOSOptions, js.Function1[/* error */ js.Error, Unit], js.Function2[/* success */ Boolean, /* method */ String, Unit]) => Unit
   ): ActionSheetIOSStatic = {
     val __obj = js.Dynamic.literal(showActionSheetWithOptions = js.Any.fromFunction2(showActionSheetWithOptions), showShareActionSheetWithOptions = js.Any.fromFunction3(showShareActionSheetWithOptions))
-  
     __obj.asInstanceOf[ActionSheetIOSStatic]
   }
+  @scala.inline
+  implicit class ActionSheetIOSStaticOps[Self <: ActionSheetIOSStatic] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withShowActionSheetWithOptions(value: (ActionSheetIOSOptions, js.Function1[/* buttonIndex */ Double, Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showActionSheetWithOptions")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withShowShareActionSheetWithOptions(
+      value: (ShareActionSheetIOSOptions, js.Function1[/* error */ js.Error, Unit], js.Function2[/* success */ Boolean, /* method */ String, Unit]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showShareActionSheetWithOptions")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

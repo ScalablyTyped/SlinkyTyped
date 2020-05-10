@@ -1,57 +1,68 @@
 package typingsSlinky.documentdb.mod
 
-import typingsSlinky.documentdb.AnonCondition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FeedOptions extends RequestOptions {
   /** Opaque token for continuing the enumeration. */
-  var continuation: js.UndefOr[String] = js.undefined
+  var continuation: js.UndefOr[String] = js.native
   /** Allow scan on the queries which couldn't be served as indexing was opted out on the requested paths. */
-  var enableScanInQuery: js.UndefOr[Boolean] = js.undefined
+  var enableScanInQuery: js.UndefOr[Boolean] = js.native
   /** Max number of items to be returned in the enumeration operation. */
-  var maxItemCount: js.UndefOr[Double] = js.undefined
+  var maxItemCount: js.UndefOr[Double] = js.native
 }
 
 object FeedOptions {
   @scala.inline
-  def apply(
-    accessCondition: AnonCondition = null,
-    consistencyLevel: String = null,
-    continuation: String = null,
-    enableCrossPartitionQuery: js.UndefOr[Boolean] = js.undefined,
-    enableScanInQuery: js.UndefOr[Boolean] = js.undefined,
-    indexingDirective: String = null,
-    maxDegreeOfParallelism: js.UndefOr[Boolean] = js.undefined,
-    maxItemCount: Int | Double = null,
-    offerThroughput: Int | Double = null,
-    offerType: String = null,
-    partitionKey: String | js.Array[String] = null,
-    populateQuotaInfo: js.UndefOr[Boolean] = js.undefined,
-    postTriggerInclude: String = null,
-    preTriggerInclude: String = null,
-    resourceTokenExpirySeconds: Int | Double = null,
-    sessionToken: String = null
-  ): FeedOptions = {
+  def apply(): FeedOptions = {
     val __obj = js.Dynamic.literal()
-    if (accessCondition != null) __obj.updateDynamic("accessCondition")(accessCondition.asInstanceOf[js.Any])
-    if (consistencyLevel != null) __obj.updateDynamic("consistencyLevel")(consistencyLevel.asInstanceOf[js.Any])
-    if (continuation != null) __obj.updateDynamic("continuation")(continuation.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableCrossPartitionQuery)) __obj.updateDynamic("enableCrossPartitionQuery")(enableCrossPartitionQuery.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableScanInQuery)) __obj.updateDynamic("enableScanInQuery")(enableScanInQuery.asInstanceOf[js.Any])
-    if (indexingDirective != null) __obj.updateDynamic("indexingDirective")(indexingDirective.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxDegreeOfParallelism)) __obj.updateDynamic("maxDegreeOfParallelism")(maxDegreeOfParallelism.asInstanceOf[js.Any])
-    if (maxItemCount != null) __obj.updateDynamic("maxItemCount")(maxItemCount.asInstanceOf[js.Any])
-    if (offerThroughput != null) __obj.updateDynamic("offerThroughput")(offerThroughput.asInstanceOf[js.Any])
-    if (offerType != null) __obj.updateDynamic("offerType")(offerType.asInstanceOf[js.Any])
-    if (partitionKey != null) __obj.updateDynamic("partitionKey")(partitionKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(populateQuotaInfo)) __obj.updateDynamic("populateQuotaInfo")(populateQuotaInfo.asInstanceOf[js.Any])
-    if (postTriggerInclude != null) __obj.updateDynamic("postTriggerInclude")(postTriggerInclude.asInstanceOf[js.Any])
-    if (preTriggerInclude != null) __obj.updateDynamic("preTriggerInclude")(preTriggerInclude.asInstanceOf[js.Any])
-    if (resourceTokenExpirySeconds != null) __obj.updateDynamic("resourceTokenExpirySeconds")(resourceTokenExpirySeconds.asInstanceOf[js.Any])
-    if (sessionToken != null) __obj.updateDynamic("sessionToken")(sessionToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[FeedOptions]
   }
+  @scala.inline
+  implicit class FeedOptionsOps[Self <: FeedOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContinuation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continuation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinuation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continuation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableScanInQuery(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableScanInQuery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableScanInQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableScanInQuery")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxItemCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxItemCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxItemCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxItemCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

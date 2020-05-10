@@ -39,14 +39,10 @@ class Bone protected () extends Updatable {
   def getWorldRotationY(): Double = js.native
   def getWorldScaleX(): Double = js.native
   def getWorldScaleY(): Double = js.native
-  /* CompleteClass */
-  override def isActive(): Boolean = js.native
   def localToWorld(local: Vector2): Vector2 = js.native
   def localToWorldRotation(localRotation: Double): Double = js.native
   def rotateWorld(degrees: Double): Unit = js.native
   def setToSetupPose(): Unit = js.native
-  /* CompleteClass */
-  override def update(): Unit = js.native
   def updateAppliedTransform(): Unit = js.native
   def updateWorldTransform(): Unit = js.native
   def updateWorldTransformWith(

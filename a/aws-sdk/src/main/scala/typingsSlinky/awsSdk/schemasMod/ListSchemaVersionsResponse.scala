@@ -18,11 +18,41 @@ trait ListSchemaVersionsResponse extends js.Object {
 
 object ListSchemaVersionsResponse {
   @scala.inline
-  def apply(NextToken: string = null, SchemaVersions: listOfSchemaVersionSummary = null): ListSchemaVersionsResponse = {
+  def apply(): ListSchemaVersionsResponse = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (SchemaVersions != null) __obj.updateDynamic("SchemaVersions")(SchemaVersions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListSchemaVersionsResponse]
   }
+  @scala.inline
+  implicit class ListSchemaVersionsResponseOps[Self <: ListSchemaVersionsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemaVersions(value: listOfSchemaVersionSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaVersions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchemaVersions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaVersions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

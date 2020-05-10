@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object ArangoDB {
   type CollectionType = typingsSlinky.arangodb.ArangoDB.DocumentCollectionType | typingsSlinky.arangodb.ArangoDB.EdgeCollectionType
-  type Document[T /* <: js.Object */] = typingsSlinky.arangodb.AnonDictkey with typingsSlinky.arangodb.arangodbStrings.Document with T with typingsSlinky.arangodb.ArangoDB.DocumentMetadata
+  type Document[T /* <: js.Object */] = typingsSlinky.arangodb.AnonDictkey with typingsSlinky.arangodb.arangodbStrings.Document with org.scalablytyped.runtime.TopLevel[T] with typingsSlinky.arangodb.ArangoDB.DocumentMetadata
   // Collection
   type DocumentCollectionType = typingsSlinky.arangodb.arangodbNumbers.`2`
   type DocumentIterator[T /* <: js.Object */] = js.Function2[
@@ -18,6 +18,6 @@ package object ArangoDB {
   type EdgeCollectionType = typingsSlinky.arangodb.arangodbNumbers.`3`
   type Patch[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]:? T[K] | / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias arangodb.ArangoDB.Patch<T[K]> * / object}
-    */ typingsSlinky.arangodb.arangodbStrings.Patch_ with T
+    */ typingsSlinky.arangodb.arangodbStrings.Patch_ with org.scalablytyped.runtime.TopLevel[T]
   type ViewType = typingsSlinky.arangodb.arangodbStrings.arangosearch
 }

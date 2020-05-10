@@ -2,7 +2,6 @@ package typingsSlinky.node.http2Mod
 
 import typingsSlinky.node.fsMod.promises.FileHandle
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ trait ServerHttp2Stream extends Http2Stream {
   def pushStream(
     headers: OutgoingHttpHeaders,
     callback: js.Function3[
-      /* err */ Error | Null, 
+      /* err */ js.Error | Null, 
       /* pushStream */ this.type, 
       /* headers */ OutgoingHttpHeaders, 
       Unit

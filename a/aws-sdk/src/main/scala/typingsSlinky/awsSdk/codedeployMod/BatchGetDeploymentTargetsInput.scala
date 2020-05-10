@@ -18,11 +18,41 @@ trait BatchGetDeploymentTargetsInput extends js.Object {
 
 object BatchGetDeploymentTargetsInput {
   @scala.inline
-  def apply(deploymentId: DeploymentId = null, targetIds: TargetIdList = null): BatchGetDeploymentTargetsInput = {
+  def apply(): BatchGetDeploymentTargetsInput = {
     val __obj = js.Dynamic.literal()
-    if (deploymentId != null) __obj.updateDynamic("deploymentId")(deploymentId.asInstanceOf[js.Any])
-    if (targetIds != null) __obj.updateDynamic("targetIds")(targetIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchGetDeploymentTargetsInput]
   }
+  @scala.inline
+  implicit class BatchGetDeploymentTargetsInputOps[Self <: BatchGetDeploymentTargetsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeploymentId(value: DeploymentId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeploymentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetIds(value: TargetIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,13 +26,65 @@ trait PipelineNotifications extends js.Object {
 
 object PipelineNotifications {
   @scala.inline
-  def apply(completed: String = null, error: String = null, progressing: String = null, warning: String = null): PipelineNotifications = {
+  def apply(): PipelineNotifications = {
     val __obj = js.Dynamic.literal()
-    if (completed != null) __obj.updateDynamic("completed")(completed.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (progressing != null) __obj.updateDynamic("progressing")(progressing.asInstanceOf[js.Any])
-    if (warning != null) __obj.updateDynamic("warning")(warning.asInstanceOf[js.Any])
     __obj.asInstanceOf[PipelineNotifications]
   }
+  @scala.inline
+  implicit class PipelineNotificationsOps[Self <: PipelineNotifications] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompleted(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompleted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarning(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

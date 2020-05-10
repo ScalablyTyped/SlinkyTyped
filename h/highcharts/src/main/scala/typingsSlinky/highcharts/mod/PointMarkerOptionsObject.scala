@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PointMarkerOptionsObject extends js.Object {
   /**
     * Enable or disable the point marker. If `undefined`, the markers are
     * hidden when the data is dense, and shown for more widespread data points.
     */
-  var enabled: js.UndefOr[Boolean] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.native
   /**
     * The threshold for how dense the point markers should be before they are
     * hidden, given that `enabled` is not defined. The number indicates the
@@ -17,34 +18,34 @@ trait PointMarkerOptionsObject extends js.Object {
     * multiples of the `marker.radius`. In other words, the default value of 2
     * means points are hidden if overlapping horizontally.
     */
-  var enabledThreshold: js.UndefOr[Double] = js.undefined
+  var enabledThreshold: js.UndefOr[Double] = js.native
   /**
     * The fill color of the point marker. When `undefined`, the series' or
     * point's color is used.
     */
-  var fillColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var fillColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * Image markers only. Set the image width explicitly. When using this
     * option, a `width` must also be set.
     */
-  var height: js.UndefOr[Double] = js.undefined
+  var height: js.UndefOr[Double] = js.native
   /**
     * The color of the point marker's outline. When `undefined`, the series' or
     * point's color is used.
     */
-  var lineColor: js.UndefOr[ColorString] = js.undefined
+  var lineColor: js.UndefOr[ColorString] = js.native
   /**
     * The width of the point marker's outline.
     */
-  var lineWidth: js.UndefOr[Double] = js.undefined
+  var lineWidth: js.UndefOr[Double] = js.native
   /**
     * The radius of the point marker.
     */
-  var radius: js.UndefOr[Double] = js.undefined
+  var radius: js.UndefOr[Double] = js.native
   /**
     * States for a single point marker.
     */
-  var states: js.UndefOr[PointStatesOptionsObject] = js.undefined
+  var states: js.UndefOr[PointStatesOptionsObject] = js.native
   /**
     * A predefined shape or symbol for the marker. When undefined, the symbol
     * is pulled from options.symbols. Other possible values are "circle",
@@ -57,40 +58,147 @@ trait PointMarkerOptionsObject extends js.Object {
     * Custom callbacks for symbol path generation can also be added to
     * `Highcharts.SVGRenderer.prototype.symbols`.
     */
-  var symbol: js.UndefOr[String] = js.undefined
+  var symbol: js.UndefOr[String] = js.native
   /**
     * Image markers only. Set the image width explicitly. When using this
     * option, a `height` must also be set.
     */
-  var width: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.native
 }
 
 object PointMarkerOptionsObject {
   @scala.inline
-  def apply(
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    enabledThreshold: Int | Double = null,
-    fillColor: ColorString | GradientColorObject | PatternObject = null,
-    height: Int | Double = null,
-    lineColor: ColorString = null,
-    lineWidth: Int | Double = null,
-    radius: Int | Double = null,
-    states: PointStatesOptionsObject = null,
-    symbol: String = null,
-    width: Int | Double = null
-  ): PointMarkerOptionsObject = {
+  def apply(): PointMarkerOptionsObject = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (enabledThreshold != null) __obj.updateDynamic("enabledThreshold")(enabledThreshold.asInstanceOf[js.Any])
-    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (lineColor != null) __obj.updateDynamic("lineColor")(lineColor.asInstanceOf[js.Any])
-    if (lineWidth != null) __obj.updateDynamic("lineWidth")(lineWidth.asInstanceOf[js.Any])
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
-    if (states != null) __obj.updateDynamic("states")(states.asInstanceOf[js.Any])
-    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[PointMarkerOptionsObject]
   }
+  @scala.inline
+  implicit class PointMarkerOptionsObjectOps[Self <: PointMarkerOptionsObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabledThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabledThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineColor(value: ColorString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStates(value: PointStatesOptionsObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("states")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("states")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

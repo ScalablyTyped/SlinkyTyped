@@ -25,7 +25,7 @@ object ^ extends js.Object {
     * @returns {Promise<string|Uint8Array>} Promise
     * @variation 3
     */
-  def apply(path: String): js.Promise[String | scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def apply(path: String): js.Promise[String | js.typedarray.Uint8Array] = js.native
   /**
     * Fetches the contents of a file.
     * @name util.fetch
@@ -36,6 +36,6 @@ object ^ extends js.Object {
     * @variation 2
     */
   def apply(path: String, callback: FetchCallback): Unit = js.native
-  def apply(path: String, options: FetchOptions): js.Promise[String | scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def apply(path: String, options: FetchOptions): js.Promise[String | js.typedarray.Uint8Array] = js.native
 }
 

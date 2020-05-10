@@ -3,6 +3,7 @@ package typingsSlinky.baseui.popoverMod
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.baseui.baseuiStrings.auto
 import typingsSlinky.baseui.baseuiStrings.bottom
 import typingsSlinky.baseui.baseuiStrings.bottomLeft
@@ -27,95 +28,384 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined baseui.baseui/popover.BasePopoverProps & {  children  :react.react.ReactNode,   content  :react.react.ReactNode | (): react.react.ReactNode,   isOpen  :boolean, onBlur ? (): any, onClick ? (e : std.Event): any, onClickOutside ? (event : std.MouseEvent): any, onEsc ? (): any, onFocus ? (): any, onMouseEnter ? (): any, onMouseLeave ? (): any} */
+@js.native
 trait PopoverProps extends js.Object {
-  var accessibilityType: js.UndefOr[none | menu | tooltip] = js.undefined
-  var animateOutTime: js.UndefOr[Double] = js.undefined
-  var autoFocus: js.UndefOr[Boolean] = js.undefined
-  var children: TagMod[Any]
-  var content: TagMod[Any] | js.Function0[TagMod[Any]]
-  var `data-baseweb`: js.UndefOr[String] = js.undefined
-  var focusLock: js.UndefOr[Boolean] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var ignoreBoundary: js.UndefOr[Boolean] = js.undefined
-  var isOpen: Boolean
-  var mountNode: js.UndefOr[HTMLElement] = js.undefined
-  var onBlur: js.UndefOr[js.Function0[_]] = js.undefined
-  var onClick: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.undefined
-  var onClickOutside: js.UndefOr[js.Function1[/* event */ MouseEvent, _]] = js.undefined
-  var onEsc: js.UndefOr[js.Function0[_]] = js.undefined
-  var onFocus: js.UndefOr[js.Function0[_]] = js.undefined
-  var onMouseEnter: js.UndefOr[js.Function0[_]] = js.undefined
-  var onMouseEnterDelay: js.UndefOr[Double] = js.undefined
-  var onMouseLeave: js.UndefOr[js.Function0[_]] = js.undefined
-  var onMouseLeaveDelay: js.UndefOr[Double] = js.undefined
-  var overrides: js.UndefOr[Overrides] = js.undefined
+  var accessibilityType: js.UndefOr[none | menu | tooltip] = js.native
+  var animateOutTime: js.UndefOr[Double] = js.native
+  var autoFocus: js.UndefOr[Boolean] = js.native
+  var children: TagMod[Any] = js.native
+  var content: TagMod[Any] | js.Function0[TagMod[Any]] = js.native
+  var `data-baseweb`: js.UndefOr[String] = js.native
+  var focusLock: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[String] = js.native
+  var ignoreBoundary: js.UndefOr[Boolean] = js.native
+  var isOpen: Boolean = js.native
+  var mountNode: js.UndefOr[HTMLElement] = js.native
+  var onBlur: js.UndefOr[js.Function0[_]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.native
+  var onClickOutside: js.UndefOr[js.Function1[/* event */ MouseEvent, _]] = js.native
+  var onEsc: js.UndefOr[js.Function0[_]] = js.native
+  var onFocus: js.UndefOr[js.Function0[_]] = js.native
+  var onMouseEnter: js.UndefOr[js.Function0[_]] = js.native
+  var onMouseEnterDelay: js.UndefOr[Double] = js.native
+  var onMouseLeave: js.UndefOr[js.Function0[_]] = js.native
+  var onMouseLeaveDelay: js.UndefOr[Double] = js.native
+  var overrides: js.UndefOr[Overrides] = js.native
   var placement: js.UndefOr[
     topLeft | leftBottom | topRight | rightBottom | bottomLeft | right | auto | bottomRight | leftTop | left | bottom | rightTop | top
-  ] = js.undefined
-  var popperOptions: js.UndefOr[js.Any] = js.undefined
-  var renderAll: js.UndefOr[Boolean] = js.undefined
-  var returnFocus: js.UndefOr[Boolean] = js.undefined
-  var showArrow: js.UndefOr[Boolean] = js.undefined
-  var triggerType: js.UndefOr[click | hover] = js.undefined
+  ] = js.native
+  var popperOptions: js.UndefOr[js.Any] = js.native
+  var renderAll: js.UndefOr[Boolean] = js.native
+  var returnFocus: js.UndefOr[Boolean] = js.native
+  var showArrow: js.UndefOr[Boolean] = js.native
+  var triggerType: js.UndefOr[click | hover] = js.native
 }
 
 object PopoverProps {
   @scala.inline
-  def apply(
-    children: TagMod[Any],
-    content: TagMod[Any] | js.Function0[TagMod[Any]],
-    isOpen: Boolean,
-    accessibilityType: none | menu | tooltip = null,
-    animateOutTime: Int | Double = null,
-    autoFocus: js.UndefOr[Boolean] = js.undefined,
-    `data-baseweb`: String = null,
-    focusLock: js.UndefOr[Boolean] = js.undefined,
-    id: String = null,
-    ignoreBoundary: js.UndefOr[Boolean] = js.undefined,
-    mountNode: HTMLElement = null,
-    onBlur: () => _ = null,
-    onClick: /* e */ Event_ => _ = null,
-    onClickOutside: /* event */ MouseEvent => _ = null,
-    onEsc: () => _ = null,
-    onFocus: () => _ = null,
-    onMouseEnter: () => _ = null,
-    onMouseEnterDelay: Int | Double = null,
-    onMouseLeave: () => _ = null,
-    onMouseLeaveDelay: Int | Double = null,
-    overrides: Overrides = null,
-    placement: topLeft | leftBottom | topRight | rightBottom | bottomLeft | right | auto | bottomRight | leftTop | left | bottom | rightTop | top = null,
-    popperOptions: js.Any = null,
-    renderAll: js.UndefOr[Boolean] = js.undefined,
-    returnFocus: js.UndefOr[Boolean] = js.undefined,
-    showArrow: js.UndefOr[Boolean] = js.undefined,
-    triggerType: click | hover = null
-  ): PopoverProps = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], isOpen = isOpen.asInstanceOf[js.Any])
-    if (accessibilityType != null) __obj.updateDynamic("accessibilityType")(accessibilityType.asInstanceOf[js.Any])
-    if (animateOutTime != null) __obj.updateDynamic("animateOutTime")(animateOutTime.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])
-    if (`data-baseweb` != null) __obj.updateDynamic("data-baseweb")(`data-baseweb`.asInstanceOf[js.Any])
-    if (!js.isUndefined(focusLock)) __obj.updateDynamic("focusLock")(focusLock.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreBoundary)) __obj.updateDynamic("ignoreBoundary")(ignoreBoundary.asInstanceOf[js.Any])
-    if (mountNode != null) __obj.updateDynamic("mountNode")(mountNode.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction0(onBlur))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onClickOutside != null) __obj.updateDynamic("onClickOutside")(js.Any.fromFunction1(onClickOutside))
-    if (onEsc != null) __obj.updateDynamic("onEsc")(js.Any.fromFunction0(onEsc))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction0(onFocus))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction0(onMouseEnter))
-    if (onMouseEnterDelay != null) __obj.updateDynamic("onMouseEnterDelay")(onMouseEnterDelay.asInstanceOf[js.Any])
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction0(onMouseLeave))
-    if (onMouseLeaveDelay != null) __obj.updateDynamic("onMouseLeaveDelay")(onMouseLeaveDelay.asInstanceOf[js.Any])
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (popperOptions != null) __obj.updateDynamic("popperOptions")(popperOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(renderAll)) __obj.updateDynamic("renderAll")(renderAll.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnFocus)) __obj.updateDynamic("returnFocus")(returnFocus.asInstanceOf[js.Any])
-    if (!js.isUndefined(showArrow)) __obj.updateDynamic("showArrow")(showArrow.asInstanceOf[js.Any])
-    if (triggerType != null) __obj.updateDynamic("triggerType")(triggerType.asInstanceOf[js.Any])
+  def apply(isOpen: Boolean): PopoverProps = {
+    val __obj = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
     __obj.asInstanceOf[PopoverProps]
   }
+  @scala.inline
+  implicit class PopoverPropsOps[Self <: PopoverProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccessibilityType(value: none | menu | tooltip): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibilityType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimateOutTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animateOutTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimateOutTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animateOutTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildren(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentFunction0(value: () => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withContent(value: TagMod[Any] | js.Function0[TagMod[Any]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withData-baseweb`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data-baseweb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutData-baseweb`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data-baseweb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocusLock(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusLock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocusLock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusLock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreBoundary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreBoundary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreBoundary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreBoundary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMountNode(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mountNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMountNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mountNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBlur(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnBlur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClick(value: /* e */ Event_ => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClickOutside(value: /* event */ MouseEvent => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClickOutside")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClickOutside: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClickOutside")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnEsc(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEsc")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnEsc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEsc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFocus(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseEnter(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseEnter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseEnterDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnterDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseEnterDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnterDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseLeave(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseLeave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseLeaveDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeaveDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseLeaveDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeaveDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverrides(value: Overrides): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacement(
+      value: topLeft | leftBottom | topRight | rightBottom | bottomLeft | right | auto | bottomRight | leftTop | left | bottom | rightTop | top
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopperOptions(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popperOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopperOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popperOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderAll(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenderAll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowArrow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showArrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowArrow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showArrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriggerType(value: click | hover): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggerType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

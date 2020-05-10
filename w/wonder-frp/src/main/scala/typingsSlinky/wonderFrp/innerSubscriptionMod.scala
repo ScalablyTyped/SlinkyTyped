@@ -17,8 +17,6 @@ object innerSubscriptionMod extends js.Object {
     def this(subject: Subject, observer: Observer) = this()
     var _observer: js.Any = js.native
     var _subject: js.Any = js.native
-    /* CompleteClass */
-    override def dispose(): Unit = js.native
   }
   
   /* static members */

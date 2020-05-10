@@ -6,6 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GetWindowBoundsCenteredOptions extends js.Object {
   /**
   	Set a new window size.
@@ -15,21 +16,51 @@ trait GetWindowBoundsCenteredOptions extends js.Object {
   	{width: 600, height: 400}
   	```
   	*/
-  val size: js.UndefOr[Size] = js.undefined
+  val size: js.UndefOr[Size] = js.native
   /**
   	The window to get the bounds of.
   	Default: Current window
   	*/
-  val window: js.UndefOr[BrowserWindow] = js.undefined
+  val window: js.UndefOr[BrowserWindow] = js.native
 }
 
 object GetWindowBoundsCenteredOptions {
   @scala.inline
-  def apply(size: Size = null, window: BrowserWindow = null): GetWindowBoundsCenteredOptions = {
+  def apply(): GetWindowBoundsCenteredOptions = {
     val __obj = js.Dynamic.literal()
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (window != null) __obj.updateDynamic("window")(window.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetWindowBoundsCenteredOptions]
   }
+  @scala.inline
+  implicit class GetWindowBoundsCenteredOptionsOps[Self <: GetWindowBoundsCenteredOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSize(value: Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWindow(value: BrowserWindow): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWindow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

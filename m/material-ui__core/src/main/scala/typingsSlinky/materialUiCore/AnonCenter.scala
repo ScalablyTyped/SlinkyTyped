@@ -11,10 +11,29 @@ trait AnonCenter extends js.Object {
 
 object AnonCenter {
   @scala.inline
-  def apply(center: js.UndefOr[Boolean] = js.undefined): AnonCenter = {
+  def apply(): AnonCenter = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(center)) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCenter]
   }
+  @scala.inline
+  implicit class AnonCenterOps[Self <: AnonCenter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCenter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

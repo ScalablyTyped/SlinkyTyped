@@ -1,26 +1,22 @@
 package typingsSlinky.reactApp.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactApp.mod.LayoutProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Layout
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactApp.mod.Layout] {
+object Layout {
   @JSImport("react-app", "Layout")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(className: String, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactApp.mod.Layout] = {
-    val __obj = js.Dynamic.literal(className = className.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: LayoutProps): Default[tag.type, typingsSlinky.reactApp.mod.Layout] = new Default[tag.type, typingsSlinky.reactApp.mod.Layout](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(className: String): Default[tag.type, typingsSlinky.reactApp.mod.Layout] = {
+    val __props = js.Dynamic.literal(className = className.asInstanceOf[js.Any])
+    new Default[tag.type, typingsSlinky.reactApp.mod.Layout](js.Array(this.component, __props.asInstanceOf[LayoutProps]))
   }
-  type Props = LayoutProps
 }
 

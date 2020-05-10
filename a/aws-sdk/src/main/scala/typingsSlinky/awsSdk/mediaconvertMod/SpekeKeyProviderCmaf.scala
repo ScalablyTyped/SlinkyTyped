@@ -30,20 +30,77 @@ trait SpekeKeyProviderCmaf extends js.Object {
 
 object SpekeKeyProviderCmaf {
   @scala.inline
-  def apply(
-    CertificateArn: stringPatternArnAwsUsGovAcm = null,
-    DashSignaledSystemIds: listOfStringMin36Max36Pattern09aFAF809aFAF409aFAF409aFAF409aFAF12 = null,
-    HlsSignaledSystemIds: listOfStringMin36Max36Pattern09aFAF809aFAF409aFAF409aFAF409aFAF12 = null,
-    ResourceId: stringPatternW = null,
-    Url: stringPatternHttps = null
-  ): SpekeKeyProviderCmaf = {
+  def apply(): SpekeKeyProviderCmaf = {
     val __obj = js.Dynamic.literal()
-    if (CertificateArn != null) __obj.updateDynamic("CertificateArn")(CertificateArn.asInstanceOf[js.Any])
-    if (DashSignaledSystemIds != null) __obj.updateDynamic("DashSignaledSystemIds")(DashSignaledSystemIds.asInstanceOf[js.Any])
-    if (HlsSignaledSystemIds != null) __obj.updateDynamic("HlsSignaledSystemIds")(HlsSignaledSystemIds.asInstanceOf[js.Any])
-    if (ResourceId != null) __obj.updateDynamic("ResourceId")(ResourceId.asInstanceOf[js.Any])
-    if (Url != null) __obj.updateDynamic("Url")(Url.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpekeKeyProviderCmaf]
   }
+  @scala.inline
+  implicit class SpekeKeyProviderCmafOps[Self <: SpekeKeyProviderCmaf] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateArn(value: stringPatternArnAwsUsGovAcm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDashSignaledSystemIds(value: listOfStringMin36Max36Pattern09aFAF809aFAF409aFAF409aFAF409aFAF12): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DashSignaledSystemIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDashSignaledSystemIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DashSignaledSystemIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHlsSignaledSystemIds(value: listOfStringMin36Max36Pattern09aFAF809aFAF409aFAF409aFAF409aFAF12): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsSignaledSystemIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHlsSignaledSystemIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsSignaledSystemIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceId(value: stringPatternW): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: stringPatternHttps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

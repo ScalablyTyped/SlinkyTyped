@@ -1,14 +1,14 @@
 package typingsSlinky.preact.mod.h
 
+import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.raw.SVGElement
 import typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes
 import typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes
 import typingsSlinky.preact.mod.Attributes
 import typingsSlinky.preact.mod.ComponentChildren
 import typingsSlinky.preact.mod.ComponentType
 import typingsSlinky.preact.mod.VNode
-import typingsSlinky.std.EventTarget
 import typingsSlinky.std.Record
-import typingsSlinky.std.SVGElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

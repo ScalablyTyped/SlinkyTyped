@@ -22,10 +22,41 @@ trait SnsAction extends js.Object {
 
 object SnsAction {
   @scala.inline
-  def apply(roleArn: AwsArn, targetArn: AwsArn, messageFormat: MessageFormat = null): SnsAction = {
+  def apply(roleArn: AwsArn, targetArn: AwsArn): SnsAction = {
     val __obj = js.Dynamic.literal(roleArn = roleArn.asInstanceOf[js.Any], targetArn = targetArn.asInstanceOf[js.Any])
-    if (messageFormat != null) __obj.updateDynamic("messageFormat")(messageFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[SnsAction]
   }
+  @scala.inline
+  implicit class SnsActionOps[Self <: SnsAction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRoleArn(value: AwsArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetArn(value: AwsArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessageFormat(value: MessageFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageFormat")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

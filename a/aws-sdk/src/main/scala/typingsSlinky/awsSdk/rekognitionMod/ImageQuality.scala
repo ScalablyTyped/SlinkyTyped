@@ -18,11 +18,41 @@ trait ImageQuality extends js.Object {
 
 object ImageQuality {
   @scala.inline
-  def apply(Brightness: Int | Double = null, Sharpness: Int | Double = null): ImageQuality = {
+  def apply(): ImageQuality = {
     val __obj = js.Dynamic.literal()
-    if (Brightness != null) __obj.updateDynamic("Brightness")(Brightness.asInstanceOf[js.Any])
-    if (Sharpness != null) __obj.updateDynamic("Sharpness")(Sharpness.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageQuality]
   }
+  @scala.inline
+  implicit class ImageQualityOps[Self <: ImageQuality] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBrightness(value: Float): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Brightness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrightness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Brightness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSharpness(value: Float): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sharpness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSharpness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sharpness")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

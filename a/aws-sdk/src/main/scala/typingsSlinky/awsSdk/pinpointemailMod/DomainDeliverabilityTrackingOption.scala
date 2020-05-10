@@ -22,16 +22,53 @@ trait DomainDeliverabilityTrackingOption extends js.Object {
 
 object DomainDeliverabilityTrackingOption {
   @scala.inline
-  def apply(
-    Domain: Domain = null,
-    InboxPlacementTrackingOption: InboxPlacementTrackingOption = null,
-    SubscriptionStartDate: js.Date = null
-  ): DomainDeliverabilityTrackingOption = {
+  def apply(): DomainDeliverabilityTrackingOption = {
     val __obj = js.Dynamic.literal()
-    if (Domain != null) __obj.updateDynamic("Domain")(Domain.asInstanceOf[js.Any])
-    if (InboxPlacementTrackingOption != null) __obj.updateDynamic("InboxPlacementTrackingOption")(InboxPlacementTrackingOption.asInstanceOf[js.Any])
-    if (SubscriptionStartDate != null) __obj.updateDynamic("SubscriptionStartDate")(SubscriptionStartDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[DomainDeliverabilityTrackingOption]
   }
+  @scala.inline
+  implicit class DomainDeliverabilityTrackingOptionOps[Self <: DomainDeliverabilityTrackingOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomain(value: Domain): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Domain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInboxPlacementTrackingOption(value: InboxPlacementTrackingOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InboxPlacementTrackingOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInboxPlacementTrackingOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InboxPlacementTrackingOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubscriptionStartDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionStartDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubscriptionStartDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionStartDate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

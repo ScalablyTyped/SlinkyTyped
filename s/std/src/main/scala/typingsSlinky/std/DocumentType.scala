@@ -15,5 +15,6 @@ trait DocumentType extends ChildNode {
 
 @JSGlobal("DocumentType")
 @js.native
-object DocumentType extends Instantiable0[DocumentType]
+object DocumentType
+  extends Instantiable0[org.scalajs.dom.raw.DocumentType]
 

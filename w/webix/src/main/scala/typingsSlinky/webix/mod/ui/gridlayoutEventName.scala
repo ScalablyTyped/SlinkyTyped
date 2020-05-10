@@ -14,14 +14,12 @@ trait gridlayoutEventName extends js.Object
 
 object gridlayoutEventName {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def onBindRequest: typingsSlinky.webix.webixStrings.onBindRequest = "onBindRequest".asInstanceOf[typingsSlinky.webix.webixStrings.onBindRequest]
   @scala.inline
-  def onBindRequest: typingsSlinky.webix.webixStrings.onBindRequest = this.cast("onBindRequest")
+  def onChange: typingsSlinky.webix.webixStrings.onChange = "onChange".asInstanceOf[typingsSlinky.webix.webixStrings.onChange]
   @scala.inline
-  def onChange: typingsSlinky.webix.webixStrings.onChange = this.cast("onChange")
+  def onDestruct: typingsSlinky.webix.webixStrings.onDestruct = "onDestruct".asInstanceOf[typingsSlinky.webix.webixStrings.onDestruct]
   @scala.inline
-  def onDestruct: typingsSlinky.webix.webixStrings.onDestruct = this.cast("onDestruct")
-  @scala.inline
-  def onViewShow: typingsSlinky.webix.webixStrings.onViewShow = this.cast("onViewShow")
+  def onViewShow: typingsSlinky.webix.webixStrings.onViewShow = "onViewShow".asInstanceOf[typingsSlinky.webix.webixStrings.onViewShow]
 }
 

@@ -14,10 +14,29 @@ trait GetRateBasedRuleResponse extends js.Object {
 
 object GetRateBasedRuleResponse {
   @scala.inline
-  def apply(Rule: RateBasedRule = null): GetRateBasedRuleResponse = {
+  def apply(): GetRateBasedRuleResponse = {
     val __obj = js.Dynamic.literal()
-    if (Rule != null) __obj.updateDynamic("Rule")(Rule.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRateBasedRuleResponse]
   }
+  @scala.inline
+  implicit class GetRateBasedRuleResponseOps[Self <: GetRateBasedRuleResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRule(value: RateBasedRule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rule")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -42,3 +42,91 @@ trait ParamsResourceProjectsZonesClustersNodepoolsSetmanagement extends Standard
   var zone: js.UndefOr[String] = js.native
 }
 
+object ParamsResourceProjectsZonesClustersNodepoolsSetmanagement {
+  @scala.inline
+  def apply(): ParamsResourceProjectsZonesClustersNodepoolsSetmanagement = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ParamsResourceProjectsZonesClustersNodepoolsSetmanagement]
+  }
+  @scala.inline
+  implicit class ParamsResourceProjectsZonesClustersNodepoolsSetmanagementOps[Self <: ParamsResourceProjectsZonesClustersNodepoolsSetmanagement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodePoolId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodePoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodePoolId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodePoolId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestBody(value: SchemaSetNodePoolManagementRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zone")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

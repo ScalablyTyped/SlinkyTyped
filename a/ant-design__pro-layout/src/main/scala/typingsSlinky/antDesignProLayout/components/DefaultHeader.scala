@@ -1,15 +1,16 @@
 package typingsSlinky.antDesignProLayout.components
 
+import typingsSlinky.antDesignProLayout.headerMod.HeaderViewProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DefaultHeader
-  extends SharedApply_HeaderViewProps_1318526730[typingsSlinky.antDesignProLayout.mod.DefaultHeader] {
+object DefaultHeader {
   @JSImport("@ant-design/pro-layout", "DefaultHeader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: HeaderViewProps): SharedBuilder_HeaderViewProps_1284827889[typingsSlinky.antDesignProLayout.mod.DefaultHeader] = new SharedBuilder_HeaderViewProps_1284827889[typingsSlinky.antDesignProLayout.mod.DefaultHeader](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DefaultHeader.type): SharedBuilder_HeaderViewProps_1284827889[typingsSlinky.antDesignProLayout.mod.DefaultHeader] = new SharedBuilder_HeaderViewProps_1284827889[typingsSlinky.antDesignProLayout.mod.DefaultHeader](js.Array(this.component, js.Dictionary.empty))()
 }
 

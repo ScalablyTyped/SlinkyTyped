@@ -10,57 +10,125 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UnmarshalledSegmentDimensions extends SegmentDimensions {
   /**
     * Custom segment attributes.
     */
   @JSName("Attributes")
-  var Attributes_UnmarshalledSegmentDimensions: js.UndefOr[StringDictionary[UnmarshalledAttributeDimension]] = js.undefined
+  var Attributes_UnmarshalledSegmentDimensions: js.UndefOr[StringDictionary[UnmarshalledAttributeDimension]] = js.native
   /**
     * The segment behaviors attributes.
     */
   @JSName("Behavior")
-  var Behavior_UnmarshalledSegmentDimensions: js.UndefOr[UnmarshalledSegmentBehaviors] = js.undefined
+  var Behavior_UnmarshalledSegmentDimensions: js.UndefOr[UnmarshalledSegmentBehaviors] = js.native
   /**
     * The segment demographics attributes.
     */
   @JSName("Demographic")
-  var Demographic_UnmarshalledSegmentDimensions: js.UndefOr[UnmarshalledSegmentDemographics] = js.undefined
+  var Demographic_UnmarshalledSegmentDimensions: js.UndefOr[UnmarshalledSegmentDemographics] = js.native
   /**
     * The segment location attributes.
     */
   @JSName("Location")
-  var Location_UnmarshalledSegmentDimensions: js.UndefOr[UnmarshalledSegmentLocation] = js.undefined
+  var Location_UnmarshalledSegmentDimensions: js.UndefOr[UnmarshalledSegmentLocation] = js.native
   /**
     * Custom segment metrics.
     */
   @JSName("Metrics")
-  var Metrics_UnmarshalledSegmentDimensions: js.UndefOr[StringDictionary[UnmarshalledMetricDimension]] = js.undefined
+  var Metrics_UnmarshalledSegmentDimensions: js.UndefOr[StringDictionary[UnmarshalledMetricDimension]] = js.native
   /**
     * Custom segment user attributes.
     */
   @JSName("UserAttributes")
-  var UserAttributes_UnmarshalledSegmentDimensions: js.UndefOr[StringDictionary[UnmarshalledAttributeDimension]] = js.undefined
+  var UserAttributes_UnmarshalledSegmentDimensions: js.UndefOr[StringDictionary[UnmarshalledAttributeDimension]] = js.native
 }
 
 object UnmarshalledSegmentDimensions {
   @scala.inline
-  def apply(
-    Attributes: StringDictionary[UnmarshalledAttributeDimension] = null,
-    Behavior: UnmarshalledSegmentBehaviors = null,
-    Demographic: UnmarshalledSegmentDemographics = null,
-    Location: UnmarshalledSegmentLocation = null,
-    Metrics: StringDictionary[UnmarshalledMetricDimension] = null,
-    UserAttributes: StringDictionary[UnmarshalledAttributeDimension] = null
-  ): UnmarshalledSegmentDimensions = {
+  def apply(): UnmarshalledSegmentDimensions = {
     val __obj = js.Dynamic.literal()
-    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
-    if (Behavior != null) __obj.updateDynamic("Behavior")(Behavior.asInstanceOf[js.Any])
-    if (Demographic != null) __obj.updateDynamic("Demographic")(Demographic.asInstanceOf[js.Any])
-    if (Location != null) __obj.updateDynamic("Location")(Location.asInstanceOf[js.Any])
-    if (Metrics != null) __obj.updateDynamic("Metrics")(Metrics.asInstanceOf[js.Any])
-    if (UserAttributes != null) __obj.updateDynamic("UserAttributes")(UserAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledSegmentDimensions]
   }
+  @scala.inline
+  implicit class UnmarshalledSegmentDimensionsOps[Self <: UnmarshalledSegmentDimensions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributes(value: StringDictionary[UnmarshalledAttributeDimension]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBehavior(value: UnmarshalledSegmentBehaviors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Behavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Behavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDemographic(value: UnmarshalledSegmentDemographics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Demographic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDemographic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Demographic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: UnmarshalledSegmentLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetrics(value: StringDictionary[UnmarshalledMetricDimension]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserAttributes(value: StringDictionary[UnmarshalledAttributeDimension]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserAttributes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

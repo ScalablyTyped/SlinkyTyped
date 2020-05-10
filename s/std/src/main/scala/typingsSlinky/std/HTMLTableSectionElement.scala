@@ -38,5 +38,6 @@ trait HTMLTableSectionElement extends HTMLElement {
 
 @JSGlobal("HTMLTableSectionElement")
 @js.native
-object HTMLTableSectionElement extends Instantiable0[HTMLTableSectionElement]
+object HTMLTableSectionElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLTableSectionElement]
 

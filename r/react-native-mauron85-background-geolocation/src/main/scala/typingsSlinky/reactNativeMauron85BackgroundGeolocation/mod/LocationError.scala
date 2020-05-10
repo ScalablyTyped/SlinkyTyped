@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LocationError extends js.Object {
   /**
     * Reason of an error occurring when using the geolocating device.
@@ -13,17 +14,36 @@ trait LocationError extends js.Object {
     *  2. LOCATION_UNAVAILABLE
     *  3. TIMEOUT
     */
-  var code: LocationErrorCode
+  var code: LocationErrorCode = js.native
   /** Message describing the details of the error */
-  var message: String
+  var message: String = js.native
 }
 
 object LocationError {
   @scala.inline
   def apply(code: LocationErrorCode, message: String): LocationError = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[LocationError]
   }
+  @scala.inline
+  implicit class LocationErrorOps[Self <: LocationError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCode(value: LocationErrorCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

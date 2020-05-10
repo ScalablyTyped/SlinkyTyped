@@ -37,22 +37,89 @@ trait SchemaIterationResult extends js.Object {
 
 object SchemaIterationResult {
   @scala.inline
-  def apply(
-    clusterInfos: js.Array[SchemaClusterInfo] = null,
-    durationMs: String = null,
-    evalLoss: Int | Double = null,
-    index: Int | Double = null,
-    learnRate: Int | Double = null,
-    trainingLoss: Int | Double = null
-  ): SchemaIterationResult = {
+  def apply(): SchemaIterationResult = {
     val __obj = js.Dynamic.literal()
-    if (clusterInfos != null) __obj.updateDynamic("clusterInfos")(clusterInfos.asInstanceOf[js.Any])
-    if (durationMs != null) __obj.updateDynamic("durationMs")(durationMs.asInstanceOf[js.Any])
-    if (evalLoss != null) __obj.updateDynamic("evalLoss")(evalLoss.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (learnRate != null) __obj.updateDynamic("learnRate")(learnRate.asInstanceOf[js.Any])
-    if (trainingLoss != null) __obj.updateDynamic("trainingLoss")(trainingLoss.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIterationResult]
   }
+  @scala.inline
+  implicit class SchemaIterationResultOps[Self <: SchemaIterationResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterInfos(value: js.Array[SchemaClusterInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterInfos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterInfos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterInfos")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDurationMs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("durationMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDurationMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("durationMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvalLoss(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evalLoss")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvalLoss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evalLoss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLearnRate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("learnRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLearnRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("learnRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrainingLoss(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingLoss")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrainingLoss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingLoss")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

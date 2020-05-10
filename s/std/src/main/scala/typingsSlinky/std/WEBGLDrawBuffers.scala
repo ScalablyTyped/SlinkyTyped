@@ -41,6 +41,6 @@ trait WEBGLDrawBuffers extends js.Object {
   val MAX_COLOR_ATTACHMENTS_WEBGL: GLenum = js.native
   val MAX_DRAW_BUFFERS_WEBGL: GLenum = js.native
   def drawBuffersWEBGL(buffers: js.Array[GLenum]): Unit = js.native
-  def drawBuffersWEBGL(buffers: Iterable[GLenum]): Unit = js.native
+  def drawBuffersWEBGL(buffers: js.Iterable[GLenum]): Unit = js.native
 }
 

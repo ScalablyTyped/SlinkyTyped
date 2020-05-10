@@ -54,32 +54,149 @@ trait JobExecution extends js.Object {
 
 object JobExecution {
   @scala.inline
-  def apply(
-    approximateSecondsBeforeTimedOut: Int | Double = null,
-    executionNumber: Int | Double = null,
-    jobDocument: JobDocument = null,
-    jobId: JobId = null,
-    lastUpdatedAt: Int | Double = null,
-    queuedAt: Int | Double = null,
-    startedAt: Int | Double = null,
-    status: JobExecutionStatus = null,
-    statusDetails: DetailsMap = null,
-    thingName: ThingName = null,
-    versionNumber: Int | Double = null
-  ): JobExecution = {
+  def apply(): JobExecution = {
     val __obj = js.Dynamic.literal()
-    if (approximateSecondsBeforeTimedOut != null) __obj.updateDynamic("approximateSecondsBeforeTimedOut")(approximateSecondsBeforeTimedOut.asInstanceOf[js.Any])
-    if (executionNumber != null) __obj.updateDynamic("executionNumber")(executionNumber.asInstanceOf[js.Any])
-    if (jobDocument != null) __obj.updateDynamic("jobDocument")(jobDocument.asInstanceOf[js.Any])
-    if (jobId != null) __obj.updateDynamic("jobId")(jobId.asInstanceOf[js.Any])
-    if (lastUpdatedAt != null) __obj.updateDynamic("lastUpdatedAt")(lastUpdatedAt.asInstanceOf[js.Any])
-    if (queuedAt != null) __obj.updateDynamic("queuedAt")(queuedAt.asInstanceOf[js.Any])
-    if (startedAt != null) __obj.updateDynamic("startedAt")(startedAt.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (statusDetails != null) __obj.updateDynamic("statusDetails")(statusDetails.asInstanceOf[js.Any])
-    if (thingName != null) __obj.updateDynamic("thingName")(thingName.asInstanceOf[js.Any])
-    if (versionNumber != null) __obj.updateDynamic("versionNumber")(versionNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobExecution]
   }
+  @scala.inline
+  implicit class JobExecutionOps[Self <: JobExecution] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApproximateSecondsBeforeTimedOut(value: ApproximateSecondsBeforeTimedOut): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approximateSecondsBeforeTimedOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApproximateSecondsBeforeTimedOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approximateSecondsBeforeTimedOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionNumber(value: ExecutionNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobDocument(value: JobDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobDocument")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobDocument: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobDocument")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobId(value: JobId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdatedAt(value: LastUpdatedAt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdatedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueuedAt(value: QueuedAt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queuedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueuedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queuedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartedAt(value: StartedAt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: JobExecutionStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusDetails(value: DetailsMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThingName(value: ThingName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThingName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionNumber(value: VersionNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionNumber")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

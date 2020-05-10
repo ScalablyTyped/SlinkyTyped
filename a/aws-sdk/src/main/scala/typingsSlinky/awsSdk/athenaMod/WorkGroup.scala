@@ -30,19 +30,71 @@ trait WorkGroup extends js.Object {
 
 object WorkGroup {
   @scala.inline
-  def apply(
-    Name: WorkGroupName,
-    Configuration: WorkGroupConfiguration = null,
-    CreationTime: js.Date = null,
-    Description: WorkGroupDescriptionString = null,
-    State: WorkGroupState = null
-  ): WorkGroup = {
+  def apply(Name: WorkGroupName): WorkGroup = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
-    if (Configuration != null) __obj.updateDynamic("Configuration")(Configuration.asInstanceOf[js.Any])
-    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkGroup]
   }
+  @scala.inline
+  implicit class WorkGroupOps[Self <: WorkGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: WorkGroupName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConfiguration(value: WorkGroupConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Configuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Configuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: WorkGroupDescriptionString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: WorkGroupState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

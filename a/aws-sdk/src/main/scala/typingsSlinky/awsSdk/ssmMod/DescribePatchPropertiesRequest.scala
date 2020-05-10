@@ -30,18 +30,65 @@ trait DescribePatchPropertiesRequest extends js.Object {
 
 object DescribePatchPropertiesRequest {
   @scala.inline
-  def apply(
-    OperatingSystem: OperatingSystem,
-    Property: PatchProperty,
-    MaxResults: Int | Double = null,
-    NextToken: NextToken = null,
-    PatchSet: PatchSet = null
-  ): DescribePatchPropertiesRequest = {
+  def apply(OperatingSystem: OperatingSystem, Property: PatchProperty): DescribePatchPropertiesRequest = {
     val __obj = js.Dynamic.literal(OperatingSystem = OperatingSystem.asInstanceOf[js.Any], Property = Property.asInstanceOf[js.Any])
-    if (MaxResults != null) __obj.updateDynamic("MaxResults")(MaxResults.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (PatchSet != null) __obj.updateDynamic("PatchSet")(PatchSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribePatchPropertiesRequest]
   }
+  @scala.inline
+  implicit class DescribePatchPropertiesRequestOps[Self <: DescribePatchPropertiesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOperatingSystem(value: OperatingSystem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProperty(value: PatchProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Property")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: MaxResults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatchSet(value: PatchSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PatchSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatchSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PatchSet")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

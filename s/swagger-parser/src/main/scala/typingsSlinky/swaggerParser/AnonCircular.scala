@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCircular extends js.Object {
   /**
     * Determines whether circular `$ref` pointers are handled.
@@ -13,15 +14,34 @@ trait AnonCircular extends js.Object {
     *
     * If set to `"ignore"`, then circular references will simply be ignored. No error will be thrown, but the `$Refs.circular` property will still be set to `true`.
     */
-  var circular: js.UndefOr[Boolean | ignore] = js.undefined
+  var circular: js.UndefOr[Boolean | ignore] = js.native
 }
 
 object AnonCircular {
   @scala.inline
-  def apply(circular: Boolean | ignore = null): AnonCircular = {
+  def apply(): AnonCircular = {
     val __obj = js.Dynamic.literal()
-    if (circular != null) __obj.updateDynamic("circular")(circular.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCircular]
   }
+  @scala.inline
+  implicit class AnonCircularOps[Self <: AnonCircular] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCircular(value: Boolean | ignore): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("circular")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCircular: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("circular")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

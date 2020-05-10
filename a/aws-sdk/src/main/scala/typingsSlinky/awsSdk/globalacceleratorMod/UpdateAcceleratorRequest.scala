@@ -26,17 +26,59 @@ trait UpdateAcceleratorRequest extends js.Object {
 
 object UpdateAcceleratorRequest {
   @scala.inline
-  def apply(
-    AcceleratorArn: GenericString,
-    Enabled: js.UndefOr[Boolean] = js.undefined,
-    IpAddressType: IpAddressType = null,
-    Name: GenericString = null
-  ): UpdateAcceleratorRequest = {
+  def apply(AcceleratorArn: GenericString): UpdateAcceleratorRequest = {
     val __obj = js.Dynamic.literal(AcceleratorArn = AcceleratorArn.asInstanceOf[js.Any])
-    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.asInstanceOf[js.Any])
-    if (IpAddressType != null) __obj.updateDynamic("IpAddressType")(IpAddressType.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateAcceleratorRequest]
   }
+  @scala.inline
+  implicit class UpdateAcceleratorRequestOps[Self <: UpdateAcceleratorRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcceleratorArn(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceleratorArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: GenericBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpAddressType(value: IpAddressType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddressType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpAddressType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddressType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

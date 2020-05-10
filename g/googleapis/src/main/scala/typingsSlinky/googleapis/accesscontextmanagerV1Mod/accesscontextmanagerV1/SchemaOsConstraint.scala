@@ -30,16 +30,53 @@ trait SchemaOsConstraint extends js.Object {
 
 object SchemaOsConstraint {
   @scala.inline
-  def apply(
-    minimumVersion: String = null,
-    osType: String = null,
-    requireVerifiedChromeOs: js.UndefOr[Boolean] = js.undefined
-  ): SchemaOsConstraint = {
+  def apply(): SchemaOsConstraint = {
     val __obj = js.Dynamic.literal()
-    if (minimumVersion != null) __obj.updateDynamic("minimumVersion")(minimumVersion.asInstanceOf[js.Any])
-    if (osType != null) __obj.updateDynamic("osType")(osType.asInstanceOf[js.Any])
-    if (!js.isUndefined(requireVerifiedChromeOs)) __obj.updateDynamic("requireVerifiedChromeOs")(requireVerifiedChromeOs.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOsConstraint]
   }
+  @scala.inline
+  implicit class SchemaOsConstraintOps[Self <: SchemaOsConstraint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMinimumVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOsType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("osType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOsType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("osType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequireVerifiedChromeOs(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireVerifiedChromeOs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequireVerifiedChromeOs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireVerifiedChromeOs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

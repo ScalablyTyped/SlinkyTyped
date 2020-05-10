@@ -15,6 +15,10 @@ trait GainNode extends AudioNode {
 @JSGlobal("GainNode")
 @js.native
 object GainNode
-  extends Instantiable1[/* context */ BaseAudioContext, GainNode]
-     with Instantiable2[/* context */ BaseAudioContext, /* options */ GainOptions, GainNode]
+  extends Instantiable1[/* context */ BaseAudioContext, org.scalajs.dom.raw.GainNode]
+     with Instantiable2[
+      /* context */ BaseAudioContext, 
+      /* options */ GainOptions, 
+      org.scalajs.dom.raw.GainNode
+    ]
 

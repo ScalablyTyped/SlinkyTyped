@@ -1,6 +1,5 @@
 package typingsSlinky.fsExtraPromiseEs6.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object appendFile extends js.Object {
   def apply(filename: String, data: js.Any): Unit = js.native
-  def apply(filename: String, data: js.Any, callback: js.Function1[/* err */ Error, Unit]): Unit = js.native
+  def apply(filename: String, data: js.Any, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def apply(filename: String, data: js.Any, option: String): Unit = js.native
   def apply(filename: String, data: js.Any, option: String, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def apply(filename: String, data: js.Any, option: OpenOptions): Unit = js.native

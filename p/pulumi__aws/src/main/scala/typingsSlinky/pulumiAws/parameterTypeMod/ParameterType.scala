@@ -13,12 +13,10 @@ trait ParameterType extends js.Object
 
 object ParameterType {
   @scala.inline
-  def SecureString: typingsSlinky.pulumiAws.pulumiAwsStrings.SecureString = this.cast("SecureString")
+  def SecureString: typingsSlinky.pulumiAws.pulumiAwsStrings.SecureString = "SecureString".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.SecureString]
   @scala.inline
-  def String: typingsSlinky.pulumiAws.pulumiAwsStrings.String = this.cast("String")
+  def String: typingsSlinky.pulumiAws.pulumiAwsStrings.String = "String".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.String]
   @scala.inline
-  def StringList: typingsSlinky.pulumiAws.pulumiAwsStrings.StringList = this.cast("StringList")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def StringList: typingsSlinky.pulumiAws.pulumiAwsStrings.StringList = "StringList".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.StringList]
 }
 

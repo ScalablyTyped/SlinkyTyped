@@ -13,12 +13,10 @@ trait ClickType extends js.Object
 
 object ClickType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def keyClick: typingsSlinky.reactInteractive.reactInteractiveStrings.keyClick = "keyClick".asInstanceOf[typingsSlinky.reactInteractive.reactInteractiveStrings.keyClick]
   @scala.inline
-  def keyClick: typingsSlinky.reactInteractive.reactInteractiveStrings.keyClick = this.cast("keyClick")
+  def mouseClick: typingsSlinky.reactInteractive.reactInteractiveStrings.mouseClick = "mouseClick".asInstanceOf[typingsSlinky.reactInteractive.reactInteractiveStrings.mouseClick]
   @scala.inline
-  def mouseClick: typingsSlinky.reactInteractive.reactInteractiveStrings.mouseClick = this.cast("mouseClick")
-  @scala.inline
-  def tapClick: typingsSlinky.reactInteractive.reactInteractiveStrings.tapClick = this.cast("tapClick")
+  def tapClick: typingsSlinky.reactInteractive.reactInteractiveStrings.tapClick = "tapClick".asInstanceOf[typingsSlinky.reactInteractive.reactInteractiveStrings.tapClick]
 }
 

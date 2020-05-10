@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IntegerIteratorOptions extends js.Object {
-  var end: js.UndefOr[Double] = js.undefined
-  var start: js.UndefOr[Double] = js.undefined
-  var step: js.UndefOr[Double] = js.undefined
+  var end: js.UndefOr[Double] = js.native
+  var start: js.UndefOr[Double] = js.native
+  var step: js.UndefOr[Double] = js.native
 }
 
 object IntegerIteratorOptions {
   @scala.inline
-  def apply(end: Int | Double = null, start: Int | Double = null, step: Int | Double = null): IntegerIteratorOptions = {
+  def apply(): IntegerIteratorOptions = {
     val __obj = js.Dynamic.literal()
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntegerIteratorOptions]
   }
+  @scala.inline
+  implicit class IntegerIteratorOptionsOps[Self <: IntegerIteratorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnd(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStep(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

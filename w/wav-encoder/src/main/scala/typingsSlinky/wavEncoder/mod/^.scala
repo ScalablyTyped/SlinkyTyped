@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 object ^ extends js.Object {
   @JSName("encode")
   var encode_Original: AnonCall = js.native
-  def encode(audioData: AudioData): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-  def encode(audioData: AudioData, opts: Options): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def encode(audioData: AudioData): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def encode(audioData: AudioData, opts: Options): js.Promise[js.typedarray.ArrayBuffer] = js.native
 }
 

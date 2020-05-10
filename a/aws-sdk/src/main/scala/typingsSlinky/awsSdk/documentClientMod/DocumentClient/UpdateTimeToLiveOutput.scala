@@ -14,10 +14,29 @@ trait UpdateTimeToLiveOutput extends js.Object {
 
 object UpdateTimeToLiveOutput {
   @scala.inline
-  def apply(TimeToLiveSpecification: TimeToLiveSpecification = null): UpdateTimeToLiveOutput = {
+  def apply(): UpdateTimeToLiveOutput = {
     val __obj = js.Dynamic.literal()
-    if (TimeToLiveSpecification != null) __obj.updateDynamic("TimeToLiveSpecification")(TimeToLiveSpecification.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateTimeToLiveOutput]
   }
+  @scala.inline
+  implicit class UpdateTimeToLiveOutputOps[Self <: UpdateTimeToLiveOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTimeToLiveSpecification(value: TimeToLiveSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeToLiveSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeToLiveSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeToLiveSpecification")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

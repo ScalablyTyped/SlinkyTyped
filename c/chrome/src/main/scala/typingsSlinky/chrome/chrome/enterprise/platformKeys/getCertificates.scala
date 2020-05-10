@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 object getCertificates extends js.Object {
   def apply(
     tokenId: String,
-    callback: js.Function1[/* certificates */ scala.scalajs.js.typedarray.ArrayBuffer, Unit]
+    callback: js.Function1[/* certificates */ js.Array[js.typedarray.ArrayBuffer], Unit]
   ): Unit = js.native
 }
 

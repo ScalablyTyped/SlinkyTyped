@@ -1,44 +1,67 @@
 package typingsSlinky.antdMobile.swipeActionMod
 
-import typingsSlinky.antdMobile.AnonOnPress
 import typingsSlinky.antdMobile.swipeActionPropsTypeMod.SwipeActionPropsType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SwipeActionProps extends SwipeActionPropsType[CSSProperties] {
-  var className: js.UndefOr[String] = js.undefined
-  var prefixCls: js.UndefOr[String] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var prefixCls: js.UndefOr[String] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
 }
 
 object SwipeActionProps {
   @scala.inline
-  def apply(
-    autoClose: js.UndefOr[Boolean] = js.undefined,
-    className: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    left: js.Array[AnonOnPress[CSSProperties]] = null,
-    onClose: () => Unit = null,
-    onOpen: () => Unit = null,
-    prefixCls: String = null,
-    right: js.Array[AnonOnPress[CSSProperties]] = null,
-    style: CSSProperties = null,
-    title: String = null
-  ): SwipeActionProps = {
+  def apply(): SwipeActionProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoClose)) __obj.updateDynamic("autoClose")(autoClose.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
-    if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction0(onOpen))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[SwipeActionProps]
   }
+  @scala.inline
+  implicit class SwipeActionPropsOps[Self <: SwipeActionProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

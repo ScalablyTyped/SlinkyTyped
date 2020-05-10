@@ -12,10 +12,8 @@ trait ImpersonationTokenScope extends js.Object
 
 object ImpersonationTokenScope {
   @scala.inline
-  def api: typingsSlinky.gitlab.gitlabStrings.api = this.cast("api")
+  def api: typingsSlinky.gitlab.gitlabStrings.api = "api".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.api]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def read_user: typingsSlinky.gitlab.gitlabStrings.read_user = this.cast("read_user")
+  def read_user: typingsSlinky.gitlab.gitlabStrings.read_user = "read_user".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.read_user]
 }
 

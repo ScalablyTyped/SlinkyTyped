@@ -23,16 +23,53 @@ trait MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificat
 
 object MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig {
   @scala.inline
-  def apply(
-    notificationArn: Input[String] = null,
-    notificationEvents: Input[js.Array[Input[String]]] = null,
-    notificationType: Input[String] = null
-  ): MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig = {
+  def apply(): MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig = {
     val __obj = js.Dynamic.literal()
-    if (notificationArn != null) __obj.updateDynamic("notificationArn")(notificationArn.asInstanceOf[js.Any])
-    if (notificationEvents != null) __obj.updateDynamic("notificationEvents")(notificationEvents.asInstanceOf[js.Any])
-    if (notificationType != null) __obj.updateDynamic("notificationType")(notificationType.asInstanceOf[js.Any])
     __obj.asInstanceOf[MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig]
   }
+  @scala.inline
+  implicit class MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigOps[Self <: MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNotificationArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotificationEvents(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationEvents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotificationType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

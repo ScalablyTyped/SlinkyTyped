@@ -30,20 +30,77 @@ trait EventContextDataType extends js.Object {
 
 object EventContextDataType {
   @scala.inline
-  def apply(
-    City: StringType = null,
-    Country: StringType = null,
-    DeviceName: StringType = null,
-    IpAddress: StringType = null,
-    Timezone: StringType = null
-  ): EventContextDataType = {
+  def apply(): EventContextDataType = {
     val __obj = js.Dynamic.literal()
-    if (City != null) __obj.updateDynamic("City")(City.asInstanceOf[js.Any])
-    if (Country != null) __obj.updateDynamic("Country")(Country.asInstanceOf[js.Any])
-    if (DeviceName != null) __obj.updateDynamic("DeviceName")(DeviceName.asInstanceOf[js.Any])
-    if (IpAddress != null) __obj.updateDynamic("IpAddress")(IpAddress.asInstanceOf[js.Any])
-    if (Timezone != null) __obj.updateDynamic("Timezone")(Timezone.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventContextDataType]
   }
+  @scala.inline
+  implicit class EventContextDataTypeOps[Self <: EventContextDataType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCity(value: StringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("City")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("City")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountry(value: StringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Country")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceName(value: StringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpAddress(value: StringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimezone(value: StringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timezone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimezone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timezone")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

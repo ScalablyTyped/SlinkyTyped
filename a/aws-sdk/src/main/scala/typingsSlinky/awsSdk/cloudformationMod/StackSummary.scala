@@ -54,29 +54,131 @@ trait StackSummary extends js.Object {
 
 object StackSummary {
   @scala.inline
-  def apply(
-    CreationTime: js.Date,
-    StackName: StackName,
-    StackStatus: StackStatus,
-    DeletionTime: js.Date = null,
-    DriftInformation: StackDriftInformationSummary = null,
-    LastUpdatedTime: js.Date = null,
-    ParentId: StackId = null,
-    RootId: StackId = null,
-    StackId: StackId = null,
-    StackStatusReason: StackStatusReason = null,
-    TemplateDescription: TemplateDescription = null
-  ): StackSummary = {
+  def apply(CreationTime: js.Date, StackName: StackName, StackStatus: StackStatus): StackSummary = {
     val __obj = js.Dynamic.literal(CreationTime = CreationTime.asInstanceOf[js.Any], StackName = StackName.asInstanceOf[js.Any], StackStatus = StackStatus.asInstanceOf[js.Any])
-    if (DeletionTime != null) __obj.updateDynamic("DeletionTime")(DeletionTime.asInstanceOf[js.Any])
-    if (DriftInformation != null) __obj.updateDynamic("DriftInformation")(DriftInformation.asInstanceOf[js.Any])
-    if (LastUpdatedTime != null) __obj.updateDynamic("LastUpdatedTime")(LastUpdatedTime.asInstanceOf[js.Any])
-    if (ParentId != null) __obj.updateDynamic("ParentId")(ParentId.asInstanceOf[js.Any])
-    if (RootId != null) __obj.updateDynamic("RootId")(RootId.asInstanceOf[js.Any])
-    if (StackId != null) __obj.updateDynamic("StackId")(StackId.asInstanceOf[js.Any])
-    if (StackStatusReason != null) __obj.updateDynamic("StackStatusReason")(StackStatusReason.asInstanceOf[js.Any])
-    if (TemplateDescription != null) __obj.updateDynamic("TemplateDescription")(TemplateDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[StackSummary]
   }
+  @scala.inline
+  implicit class StackSummaryOps[Self <: StackSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStackName(value: StackName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStackStatus(value: StackStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeletionTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeletionTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDriftInformation(value: StackDriftInformationSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DriftInformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDriftInformation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DriftInformation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdatedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdatedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentId(value: StackId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRootId(value: StackId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RootId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRootId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RootId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackId(value: StackId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackStatusReason(value: StackStatusReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackStatusReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackStatusReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackStatusReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateDescription(value: TemplateDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateDescription")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

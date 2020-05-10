@@ -13,12 +13,10 @@ trait StepButtonClasskey extends js.Object
 
 object StepButtonClasskey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def touchRipple: typingsSlinky.materialUiCore.materialUiCoreStrings.touchRipple = "touchRipple".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.touchRipple]
   @scala.inline
-  def touchRipple: typingsSlinky.materialUiCore.materialUiCoreStrings.touchRipple = this.cast("touchRipple")
-  @scala.inline
-  def vertical: typingsSlinky.materialUiCore.materialUiCoreStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.materialUiCore.materialUiCoreStrings.vertical = "vertical".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.vertical]
 }
 

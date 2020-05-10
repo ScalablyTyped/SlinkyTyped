@@ -1,10 +1,11 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.semanticUiReact.formFieldMod.FormFieldProps
 import typingsSlinky.semanticUiReact.genericMod.HtmlLabelProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
@@ -15,40 +16,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FormField
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object FormField {
   @JSImport("semantic-ui-react/dist/commonjs/collections/Form/FormField", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, type */
-  def apply(
-    as: js.Any = null,
-    content: SemanticShorthandContent = null,
-    control: js.Any = null,
-    error: Boolean | SemanticShorthandItem[LabelProps] = null,
-    id: Double | String = null,
-    `inline`: js.UndefOr[Boolean] = js.undefined,
-    label: SemanticShorthandItem[HtmlLabelProps] = null,
-    required: js.Any = null,
-    width: SemanticWIDTHS = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (control != null) __obj.updateDynamic("control")(control.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (required != null) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def control(value: js.Any): this.type = set("control", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorReactElement(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorFunction3(
+      value: (/* component */ ReactComponentClass[LabelProps], LabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("error", js.Any.fromFunction3(value))
+    @scala.inline
+    def error(value: Boolean | SemanticShorthandItem[LabelProps]): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: Double | String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFunction3(
+      value: (/* component */ ReactComponentClass[HtmlLabelProps], HtmlLabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("label", js.Any.fromFunction3(value))
+    @scala.inline
+    def label(value: SemanticShorthandItem[HtmlLabelProps]): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def required(value: js.Any): this.type = set("required", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: SemanticWIDTHS): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FormFieldProps
+  
+  def withProps(p: FormFieldProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FormField.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

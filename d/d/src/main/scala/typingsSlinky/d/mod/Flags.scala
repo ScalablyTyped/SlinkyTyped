@@ -17,20 +17,18 @@ trait Flags extends js.Object
 
 object Flags {
   @scala.inline
-  def c: typingsSlinky.d.dStrings.c = this.cast("c")
+  def c: typingsSlinky.d.dStrings.c = "c".asInstanceOf[typingsSlinky.d.dStrings.c]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ce: typingsSlinky.d.dStrings.ce = "ce".asInstanceOf[typingsSlinky.d.dStrings.ce]
   @scala.inline
-  def ce: typingsSlinky.d.dStrings.ce = this.cast("ce")
+  def cew: typingsSlinky.d.dStrings.cew = "cew".asInstanceOf[typingsSlinky.d.dStrings.cew]
   @scala.inline
-  def cew: typingsSlinky.d.dStrings.cew = this.cast("cew")
+  def cw: typingsSlinky.d.dStrings.cw = "cw".asInstanceOf[typingsSlinky.d.dStrings.cw]
   @scala.inline
-  def cw: typingsSlinky.d.dStrings.cw = this.cast("cw")
+  def e: typingsSlinky.d.dStrings.e = "e".asInstanceOf[typingsSlinky.d.dStrings.e]
   @scala.inline
-  def e: typingsSlinky.d.dStrings.e = this.cast("e")
+  def ew: typingsSlinky.d.dStrings.ew = "ew".asInstanceOf[typingsSlinky.d.dStrings.ew]
   @scala.inline
-  def ew: typingsSlinky.d.dStrings.ew = this.cast("ew")
-  @scala.inline
-  def w: typingsSlinky.d.dStrings.w = this.cast("w")
+  def w: typingsSlinky.d.dStrings.w = "w".asInstanceOf[typingsSlinky.d.dStrings.w]
 }
 

@@ -14,10 +14,29 @@ trait GetIceServerConfigResponse extends js.Object {
 
 object GetIceServerConfigResponse {
   @scala.inline
-  def apply(IceServerList: IceServerList = null): GetIceServerConfigResponse = {
+  def apply(): GetIceServerConfigResponse = {
     val __obj = js.Dynamic.literal()
-    if (IceServerList != null) __obj.updateDynamic("IceServerList")(IceServerList.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetIceServerConfigResponse]
   }
+  @scala.inline
+  implicit class GetIceServerConfigResponseOps[Self <: GetIceServerConfigResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIceServerList(value: IceServerList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IceServerList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIceServerList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IceServerList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

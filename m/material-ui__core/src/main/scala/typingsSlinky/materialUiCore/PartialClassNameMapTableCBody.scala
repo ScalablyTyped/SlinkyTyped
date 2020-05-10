@@ -19,26 +19,113 @@ trait PartialClassNameMapTableCBody extends js.Object {
 
 object PartialClassNameMapTableCBody {
   @scala.inline
-  def apply(
-    body: String = null,
-    footer: String = null,
-    head: String = null,
-    numeric: String = null,
-    paddingCheckbox: String = null,
-    paddingDense: String = null,
-    paddingNone: String = null,
-    root: String = null
-  ): PartialClassNameMapTableCBody = {
+  def apply(): PartialClassNameMapTableCBody = {
     val __obj = js.Dynamic.literal()
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
-    if (head != null) __obj.updateDynamic("head")(head.asInstanceOf[js.Any])
-    if (numeric != null) __obj.updateDynamic("numeric")(numeric.asInstanceOf[js.Any])
-    if (paddingCheckbox != null) __obj.updateDynamic("paddingCheckbox")(paddingCheckbox.asInstanceOf[js.Any])
-    if (paddingDense != null) __obj.updateDynamic("paddingDense")(paddingDense.asInstanceOf[js.Any])
-    if (paddingNone != null) __obj.updateDynamic("paddingNone")(paddingNone.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapTableCBody]
   }
+  @scala.inline
+  implicit class PartialClassNameMapTableCBodyOps[Self <: PartialClassNameMapTableCBody] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBody(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFooter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFooter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHead(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHead: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumeric(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numeric")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumeric: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numeric")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingCheckbox(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingCheckbox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingCheckbox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingCheckbox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingDense(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingDense")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingDense: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingDense")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingNone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingNone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingNone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingNone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

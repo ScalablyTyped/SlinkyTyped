@@ -6,13 +6,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CSVLayerElevationInfoFeatureExpressionInfo extends Object {
   /**
     * An [Arcade expression](https://developers.arcgis.com/javascript/latest/guide/arcade/index.html) evaluating to a number that determines the z-value of the feature. When `mode = "on-the-ground"`, this property has no effect. For line and polygon geometries the result of the expression is the same for all vertices of a feature.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#elevationInfo)
     */
-  var expression: js.UndefOr[String] = js.undefined
+  var expression: js.UndefOr[String] = js.native
 }
 
 object CSVLayerElevationInfoFeatureExpressionInfo {
@@ -20,12 +21,30 @@ object CSVLayerElevationInfoFeatureExpressionInfo {
   def apply(
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
-    propertyIsEnumerable: PropertyKey => Boolean,
-    expression: String = null
+    propertyIsEnumerable: PropertyKey => Boolean
   ): CSVLayerElevationInfoFeatureExpressionInfo = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
-    if (expression != null) __obj.updateDynamic("expression")(expression.asInstanceOf[js.Any])
     __obj.asInstanceOf[CSVLayerElevationInfoFeatureExpressionInfo]
   }
+  @scala.inline
+  implicit class CSVLayerElevationInfoFeatureExpressionInfoOps[Self <: CSVLayerElevationInfoFeatureExpressionInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExpression(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

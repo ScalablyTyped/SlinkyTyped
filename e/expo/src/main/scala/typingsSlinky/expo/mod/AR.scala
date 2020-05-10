@@ -1,6 +1,7 @@
 package typingsSlinky.expo.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import slinky.core.ReactComponentClass
 import typingsSlinky.expo.aRMod.ARFrame
 import typingsSlinky.expo.aRMod.ARFrameRequest
 import typingsSlinky.expo.aRMod.ARMatrices
@@ -22,7 +23,6 @@ import typingsSlinky.expo.aRMod.TrackingConfiguration
 import typingsSlinky.expo.aRMod.Vector2
 import typingsSlinky.expo.aRMod.VideoFormat
 import typingsSlinky.expo.aRMod.WorldAlignment
-import typingsSlinky.react.mod.Component
 import typingsSlinky.reactNative.mod.EmitterSubscription
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -77,7 +77,7 @@ object AR extends js.Object {
   def setWorldAlignment(worldAlignment: WorldAlignment): Unit = js.native
   def setWorldOriginAsync(matrix_float4x4: Matrix): js.Promise[Unit] = js.native
   def startAsync(node: ReactNativeNodeHandle, configuration: TrackingConfiguration): js.Promise[ARStartResult] = js.native
-  def startAsync(node: Component[js.Object, js.Object, _], configuration: TrackingConfiguration): js.Promise[ARStartResult] = js.native
+  def startAsync(node: ReactComponentClass[js.Object], configuration: TrackingConfiguration): js.Promise[ARStartResult] = js.native
   def stopAsync(): js.Promise[Unit] = js.native
   @js.native
   object AnchorEventType extends js.Object {

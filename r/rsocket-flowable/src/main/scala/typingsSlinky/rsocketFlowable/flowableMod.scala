@@ -37,9 +37,9 @@ object flowableMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    def error(error: js.Error): Flowable[js.Object] = js.native
+    def error(error: js.Error): Flowable[scala.Nothing] = js.native
     def just[U](values: U*): Flowable[U] = js.native
-    def never(): Flowable[js.Object] = js.native
+    def never(): Flowable[scala.Nothing] = js.native
   }
   
   type Source[T] = js.Function1[

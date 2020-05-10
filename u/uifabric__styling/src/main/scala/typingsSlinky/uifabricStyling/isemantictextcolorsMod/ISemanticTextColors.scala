@@ -4,126 +4,128 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ISemanticTextColors extends js.Object {
   /**
     * Color of text for accent button (kicker)
     */
-  var accentButtonText: String
+  var accentButtonText: String = js.native
   /**
     * Neutral colored links and links for action buttons.
     */
-  var actionLink: String
+  var actionLink: String = js.native
   /**
     * Hover state for neutral colored links and links for action buttons.
     */
-  var actionLinkHovered: String
+  var actionLinkHovered: String = js.native
   /**
     * De-emphasized text; e.g. metadata, captions, placeholder text.
     */
-  var bodySubtext: String
+  var bodySubtext: String = js.native
   /**
     * The default color for text.
     */
-  var bodyText: String
+  var bodyText: String = js.native
   /**
     * Checked text color, e.g. selected menu item text.
     */
-  var bodyTextChecked: String
+  var bodyTextChecked: String = js.native
   /**
     * Color of text in a standard button
     */
-  var buttonText: String
+  var buttonText: String = js.native
   /**
     * Color of text in a checked standard button
     */
-  var buttonTextChecked: String
+  var buttonTextChecked: String = js.native
   /**
     * Color of text in a checked and hovered standard button
     */
-  var buttonTextCheckedHovered: String
+  var buttonTextCheckedHovered: String = js.native
   /**
     * Color of text in a disabled standard button
     */
-  var buttonTextDisabled: String
+  var buttonTextDisabled: String = js.native
   /**
     * Color of text in a hovered standard button
     */
-  var buttonTextHovered: String
+  var buttonTextHovered: String = js.native
   /**
     * Color of text in a pressed standard button; i.e. currently being clicked by mouse
     */
-  var buttonTextPressed: String
+  var buttonTextPressed: String = js.native
   /**
     * Disabled de-emphasized text, for use on the default background (bodyBackground).
     */
-  var disabledBodySubtext: String
+  var disabledBodySubtext: String = js.native
   /**
     * The default color for disabled text on the default background (bodyBackground).
     */
-  var disabledBodyText: String
+  var disabledBodyText: String = js.native
   /**
     * Disabled de-emphasized text, for use on disabledBackground.
     */
-  var disabledSubtext: String
+  var disabledSubtext: String = js.native
   /**
-    * The default color for disabled text on top of disabledBackground; e.g. text in a disabled text field, disabled button text.
+    * The default color for disabled text on top of disabledBackground; e.g. text in a disabled text field or
+    * disabled button text.
     */
-  var disabledText: String
+  var disabledText: String = js.native
   /**
     * The default color of error text on bodyBackground.
     */
-  var errorText: String
+  var errorText: String = js.native
   /**
     * The color of placeholder text.
     */
-  var inputPlaceholderText: String
+  var inputPlaceholderText: String = js.native
   /**
     * The color of input text.
     */
-  var inputText: String
+  var inputText: String = js.native
   /**
     * The color of input text on hover.
     */
-  var inputTextHovered: String
+  var inputTextHovered: String = js.native
   /**
     * The color of a link.
     */
-  var link: String
+  var link: String = js.native
   /**
     * The color of a hovered link. Also used when the link is active.
     */
-  var linkHovered: String
+  var linkHovered: String = js.native
   /**
     * The default text color for list item titles and text in column fields.
     */
-  var listText: String
+  var listText: String = js.native
   /** @deprecated
     * This slot was incorrectly named. Use listText instead. */
-  var listTextColor: String
+  var listTextColor: String = js.native
   /**
     * Color of text in a primary button
     */
-  var primaryButtonText: String
+  var primaryButtonText: String = js.native
   /**
     * Color of text in a disabled primary button
     */
-  var primaryButtonTextDisabled: String
+  var primaryButtonTextDisabled: String = js.native
   /**
     * Color of text in a hovered primary button
     */
-  var primaryButtonTextHovered: String
+  var primaryButtonTextHovered: String = js.native
   /**
     * Color of text in a pressed primary button; i.e. currently being clicked by mouse
     */
-  var primaryButtonTextPressed: String
+  var primaryButtonTextPressed: String = js.native
   /**
     * The default color of success text on successBackground.
     */
-  var successText: String
+  var successText: String = js.native
   /**
     * The default color of text on errorBackground, warningBackground, blockingBackground, or successBackground.
     */
-  var warningText: String
+  var warningText: String = js.native
 }
 
 object ISemanticTextColors {
@@ -161,8 +163,195 @@ object ISemanticTextColors {
     warningText: String
   ): ISemanticTextColors = {
     val __obj = js.Dynamic.literal(accentButtonText = accentButtonText.asInstanceOf[js.Any], actionLink = actionLink.asInstanceOf[js.Any], actionLinkHovered = actionLinkHovered.asInstanceOf[js.Any], bodySubtext = bodySubtext.asInstanceOf[js.Any], bodyText = bodyText.asInstanceOf[js.Any], bodyTextChecked = bodyTextChecked.asInstanceOf[js.Any], buttonText = buttonText.asInstanceOf[js.Any], buttonTextChecked = buttonTextChecked.asInstanceOf[js.Any], buttonTextCheckedHovered = buttonTextCheckedHovered.asInstanceOf[js.Any], buttonTextDisabled = buttonTextDisabled.asInstanceOf[js.Any], buttonTextHovered = buttonTextHovered.asInstanceOf[js.Any], buttonTextPressed = buttonTextPressed.asInstanceOf[js.Any], disabledBodySubtext = disabledBodySubtext.asInstanceOf[js.Any], disabledBodyText = disabledBodyText.asInstanceOf[js.Any], disabledSubtext = disabledSubtext.asInstanceOf[js.Any], disabledText = disabledText.asInstanceOf[js.Any], errorText = errorText.asInstanceOf[js.Any], inputPlaceholderText = inputPlaceholderText.asInstanceOf[js.Any], inputText = inputText.asInstanceOf[js.Any], inputTextHovered = inputTextHovered.asInstanceOf[js.Any], link = link.asInstanceOf[js.Any], linkHovered = linkHovered.asInstanceOf[js.Any], listText = listText.asInstanceOf[js.Any], listTextColor = listTextColor.asInstanceOf[js.Any], primaryButtonText = primaryButtonText.asInstanceOf[js.Any], primaryButtonTextDisabled = primaryButtonTextDisabled.asInstanceOf[js.Any], primaryButtonTextHovered = primaryButtonTextHovered.asInstanceOf[js.Any], primaryButtonTextPressed = primaryButtonTextPressed.asInstanceOf[js.Any], successText = successText.asInstanceOf[js.Any], warningText = warningText.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ISemanticTextColors]
   }
+  @scala.inline
+  implicit class ISemanticTextColorsOps[Self <: ISemanticTextColors] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccentButtonText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accentButtonText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActionLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActionLinkHovered(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionLinkHovered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBodySubtext(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodySubtext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBodyText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBodyTextChecked(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyTextChecked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withButtonText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withButtonTextChecked(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonTextChecked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withButtonTextCheckedHovered(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonTextCheckedHovered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withButtonTextDisabled(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonTextDisabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withButtonTextHovered(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonTextHovered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withButtonTextPressed(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonTextPressed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisabledBodySubtext(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledBodySubtext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisabledBodyText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledBodyText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisabledSubtext(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledSubtext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisabledText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withErrorText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputPlaceholderText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputPlaceholderText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputTextHovered(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputTextHovered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinkHovered(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkHovered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withListText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withListTextColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listTextColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrimaryButtonText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrimaryButtonTextDisabled(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonTextDisabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrimaryButtonTextHovered(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonTextHovered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrimaryButtonTextPressed(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryButtonTextPressed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuccessText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWarningText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warningText")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

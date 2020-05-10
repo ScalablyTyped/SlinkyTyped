@@ -9,9 +9,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InstancesResource extends js.Object {
-  var databases: DatabasesResource
-  var operations: OperationsResource
+  var databases: DatabasesResource = js.native
+  var operations: OperationsResource = js.native
   /**
     * Creates an instance and begins preparing it to begin serving. The
     * returned long-running operation
@@ -48,7 +49,7 @@ trait InstancesResource extends js.Object {
     * The response field type is
     * Instance, if successful.
     */
-  def create(request: AnonKey): Request_[Operation]
+  def create(request: AnonKey): Request_[Operation] = js.native
   /**
     * Deletes an instance.
     *
@@ -62,9 +63,9 @@ trait InstancesResource extends js.Object {
     * irrevocably disappear from the API. All data in the databases
     * is permanently deleted.
     */
-  def delete(request: AnonAccesstoken): Request_[js.Object]
+  def delete(request: AnonAccesstoken): Request_[js.Object] = js.native
   /** Gets information about a particular instance. */
-  def get(request: AnonAccesstoken): Request_[Instance]
+  def get(request: AnonAccesstoken): Request_[Instance] = js.native
   /**
     * Gets the access control policy for an instance resource. Returns an empty
     * policy if an instance exists but does not have a policy set.
@@ -72,9 +73,9 @@ trait InstancesResource extends js.Object {
     * Authorization requires `spanner.instances.getIamPolicy` on
     * resource.
     */
-  def getIamPolicy(request: AnonOauthtoken): Request_[Policy]
+  def getIamPolicy(request: AnonOauthtoken): Request_[Policy] = js.native
   /** Lists all instances in the given project. */
-  def list(request: AnonFilter): Request_[ListInstancesResponse]
+  def list(request: AnonFilter): Request_[ListInstancesResponse] = js.native
   /**
     * Updates an instance, and begins allocating or releasing resources
     * as requested. The returned long-running
@@ -117,7 +118,7 @@ trait InstancesResource extends js.Object {
     * Authorization requires `spanner.instances.update` permission on
     * resource name.
     */
-  def patch(request: AnonAccesstoken): Request_[Operation]
+  def patch(request: AnonAccesstoken): Request_[Operation] = js.native
   /**
     * Sets the access control policy on an instance resource. Replaces any
     * existing policy.
@@ -125,7 +126,7 @@ trait InstancesResource extends js.Object {
     * Authorization requires `spanner.instances.setIamPolicy` on
     * resource.
     */
-  def setIamPolicy(request: AnonOauthtoken): Request_[Policy]
+  def setIamPolicy(request: AnonOauthtoken): Request_[Policy] = js.native
   /**
     * Returns permissions that the caller has on the specified instance resource.
     *
@@ -134,7 +135,7 @@ trait InstancesResource extends js.Object {
     * permission on the containing Google Cloud Project. Otherwise returns an
     * empty set of permissions.
     */
-  def testIamPermissions(request: AnonOauthtoken): Request_[TestIamPermissionsResponse]
+  def testIamPermissions(request: AnonOauthtoken): Request_[TestIamPermissionsResponse] = js.native
 }
 
 object InstancesResource {
@@ -152,8 +153,75 @@ object InstancesResource {
     testIamPermissions: AnonOauthtoken => Request_[TestIamPermissionsResponse]
   ): InstancesResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), databases = databases.asInstanceOf[js.Any], delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), getIamPolicy = js.Any.fromFunction1(getIamPolicy), list = js.Any.fromFunction1(list), operations = operations.asInstanceOf[js.Any], patch = js.Any.fromFunction1(patch), setIamPolicy = js.Any.fromFunction1(setIamPolicy), testIamPermissions = js.Any.fromFunction1(testIamPermissions))
-  
     __obj.asInstanceOf[InstancesResource]
   }
+  @scala.inline
+  implicit class InstancesResourceOps[Self <: InstancesResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreate(value: AnonKey => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDatabases(value: DatabasesResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("databases")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDelete(value: AnonAccesstoken => Request_[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: AnonAccesstoken => Request_[Instance]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetIamPolicy(value: AnonOauthtoken => Request_[Policy]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getIamPolicy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withList(value: AnonFilter => Request_[ListInstancesResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOperations(value: OperationsResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPatch(value: AnonAccesstoken => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetIamPolicy(value: AnonOauthtoken => Request_[Policy]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setIamPolicy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTestIamPermissions(value: AnonOauthtoken => Request_[TestIamPermissionsResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testIamPermissions")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

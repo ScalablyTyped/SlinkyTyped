@@ -25,11 +25,41 @@ trait SchemaListUsableSubnetworksResponse extends js.Object {
 
 object SchemaListUsableSubnetworksResponse {
   @scala.inline
-  def apply(nextPageToken: String = null, subnetworks: js.Array[SchemaUsableSubnetwork] = null): SchemaListUsableSubnetworksResponse = {
+  def apply(): SchemaListUsableSubnetworksResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (subnetworks != null) __obj.updateDynamic("subnetworks")(subnetworks.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListUsableSubnetworksResponse]
   }
+  @scala.inline
+  implicit class SchemaListUsableSubnetworksResponseOps[Self <: SchemaListUsableSubnetworksResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetworks(value: js.Array[SchemaUsableSubnetwork]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetworks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetworks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetworks")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

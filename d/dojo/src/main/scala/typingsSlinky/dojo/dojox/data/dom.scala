@@ -52,7 +52,7 @@ trait dom extends js.Object {
     * @param node The node to modify the children on
     * @param newChildren The children to add to the node.  It can either be a single Node or anarray of Nodes.
     */
-  def replaceChildren(node: HTMLElement, newChildren: typingsSlinky.std.HTMLElement): Unit = js.native
+  def replaceChildren(node: HTMLElement, newChildren: HTMLElement): Unit = js.native
   /**
     * Implementation of the DOM Level 3 attribute; scan node for text
     * Implementation of the DOM Level 3 attribute; scan node for text

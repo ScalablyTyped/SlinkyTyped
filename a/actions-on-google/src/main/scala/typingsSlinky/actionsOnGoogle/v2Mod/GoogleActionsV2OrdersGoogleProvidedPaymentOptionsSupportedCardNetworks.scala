@@ -16,18 +16,16 @@ trait GoogleActionsV2OrdersGoogleProvidedPaymentOptionsSupportedCardNetworks ext
 
 object GoogleActionsV2OrdersGoogleProvidedPaymentOptionsSupportedCardNetworks {
   @scala.inline
-  def AMEX: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.AMEX = this.cast("AMEX")
+  def AMEX: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.AMEX = "AMEX".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.AMEX]
   @scala.inline
-  def DISCOVER: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DISCOVER = this.cast("DISCOVER")
+  def DISCOVER: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DISCOVER = "DISCOVER".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DISCOVER]
   @scala.inline
-  def JCB: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.JCB = this.cast("JCB")
+  def JCB: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.JCB = "JCB".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.JCB]
   @scala.inline
-  def MASTERCARD: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.MASTERCARD = this.cast("MASTERCARD")
+  def MASTERCARD: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.MASTERCARD = "MASTERCARD".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.MASTERCARD]
   @scala.inline
-  def UNSPECIFIED_CARD_NETWORK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNSPECIFIED_CARD_NETWORK = this.cast("UNSPECIFIED_CARD_NETWORK")
+  def UNSPECIFIED_CARD_NETWORK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNSPECIFIED_CARD_NETWORK = "UNSPECIFIED_CARD_NETWORK".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNSPECIFIED_CARD_NETWORK]
   @scala.inline
-  def VISA: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.VISA = this.cast("VISA")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def VISA: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.VISA = "VISA".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.VISA]
 }
 

@@ -26,18 +26,65 @@ trait KeyPair extends js.Object {
 
 object KeyPair {
   @scala.inline
-  def apply(
-    KeyFingerprint: String = null,
-    KeyMaterial: SensitiveUserData = null,
-    KeyName: String = null,
-    KeyPairId: String = null
-  ): KeyPair = {
+  def apply(): KeyPair = {
     val __obj = js.Dynamic.literal()
-    if (KeyFingerprint != null) __obj.updateDynamic("KeyFingerprint")(KeyFingerprint.asInstanceOf[js.Any])
-    if (KeyMaterial != null) __obj.updateDynamic("KeyMaterial")(KeyMaterial.asInstanceOf[js.Any])
-    if (KeyName != null) __obj.updateDynamic("KeyName")(KeyName.asInstanceOf[js.Any])
-    if (KeyPairId != null) __obj.updateDynamic("KeyPairId")(KeyPairId.asInstanceOf[js.Any])
     __obj.asInstanceOf[KeyPair]
   }
+  @scala.inline
+  implicit class KeyPairOps[Self <: KeyPair] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKeyFingerprint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyFingerprint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyFingerprint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyFingerprint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyMaterial(value: SensitiveUserData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyMaterial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyMaterial: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyMaterial")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyPairId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyPairId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyPairId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyPairId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

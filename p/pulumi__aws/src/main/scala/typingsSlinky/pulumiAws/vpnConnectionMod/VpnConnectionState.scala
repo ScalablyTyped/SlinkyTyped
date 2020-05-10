@@ -104,58 +104,305 @@ trait VpnConnectionState extends js.Object {
 
 object VpnConnectionState {
   @scala.inline
-  def apply(
-    customerGatewayConfiguration: Input[String] = null,
-    customerGatewayId: Input[String] = null,
-    routes: Input[js.Array[Input[VpnConnectionRoute]]] = null,
-    staticRoutesOnly: Input[Boolean] = null,
-    tags: Input[StringDictionary[_]] = null,
-    transitGatewayAttachmentId: Input[String] = null,
-    transitGatewayId: Input[String] = null,
-    tunnel1Address: Input[String] = null,
-    tunnel1BgpAsn: Input[String] = null,
-    tunnel1BgpHoldtime: Input[Double] = null,
-    tunnel1CgwInsideAddress: Input[String] = null,
-    tunnel1InsideCidr: Input[String] = null,
-    tunnel1PresharedKey: Input[String] = null,
-    tunnel1VgwInsideAddress: Input[String] = null,
-    tunnel2Address: Input[String] = null,
-    tunnel2BgpAsn: Input[String] = null,
-    tunnel2BgpHoldtime: Input[Double] = null,
-    tunnel2CgwInsideAddress: Input[String] = null,
-    tunnel2InsideCidr: Input[String] = null,
-    tunnel2PresharedKey: Input[String] = null,
-    tunnel2VgwInsideAddress: Input[String] = null,
-    `type`: Input[String] = null,
-    vgwTelemetries: Input[js.Array[Input[VpnConnectionVgwTelemetry]]] = null,
-    vpnGatewayId: Input[String] = null
-  ): VpnConnectionState = {
+  def apply(): VpnConnectionState = {
     val __obj = js.Dynamic.literal()
-    if (customerGatewayConfiguration != null) __obj.updateDynamic("customerGatewayConfiguration")(customerGatewayConfiguration.asInstanceOf[js.Any])
-    if (customerGatewayId != null) __obj.updateDynamic("customerGatewayId")(customerGatewayId.asInstanceOf[js.Any])
-    if (routes != null) __obj.updateDynamic("routes")(routes.asInstanceOf[js.Any])
-    if (staticRoutesOnly != null) __obj.updateDynamic("staticRoutesOnly")(staticRoutesOnly.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (transitGatewayAttachmentId != null) __obj.updateDynamic("transitGatewayAttachmentId")(transitGatewayAttachmentId.asInstanceOf[js.Any])
-    if (transitGatewayId != null) __obj.updateDynamic("transitGatewayId")(transitGatewayId.asInstanceOf[js.Any])
-    if (tunnel1Address != null) __obj.updateDynamic("tunnel1Address")(tunnel1Address.asInstanceOf[js.Any])
-    if (tunnel1BgpAsn != null) __obj.updateDynamic("tunnel1BgpAsn")(tunnel1BgpAsn.asInstanceOf[js.Any])
-    if (tunnel1BgpHoldtime != null) __obj.updateDynamic("tunnel1BgpHoldtime")(tunnel1BgpHoldtime.asInstanceOf[js.Any])
-    if (tunnel1CgwInsideAddress != null) __obj.updateDynamic("tunnel1CgwInsideAddress")(tunnel1CgwInsideAddress.asInstanceOf[js.Any])
-    if (tunnel1InsideCidr != null) __obj.updateDynamic("tunnel1InsideCidr")(tunnel1InsideCidr.asInstanceOf[js.Any])
-    if (tunnel1PresharedKey != null) __obj.updateDynamic("tunnel1PresharedKey")(tunnel1PresharedKey.asInstanceOf[js.Any])
-    if (tunnel1VgwInsideAddress != null) __obj.updateDynamic("tunnel1VgwInsideAddress")(tunnel1VgwInsideAddress.asInstanceOf[js.Any])
-    if (tunnel2Address != null) __obj.updateDynamic("tunnel2Address")(tunnel2Address.asInstanceOf[js.Any])
-    if (tunnel2BgpAsn != null) __obj.updateDynamic("tunnel2BgpAsn")(tunnel2BgpAsn.asInstanceOf[js.Any])
-    if (tunnel2BgpHoldtime != null) __obj.updateDynamic("tunnel2BgpHoldtime")(tunnel2BgpHoldtime.asInstanceOf[js.Any])
-    if (tunnel2CgwInsideAddress != null) __obj.updateDynamic("tunnel2CgwInsideAddress")(tunnel2CgwInsideAddress.asInstanceOf[js.Any])
-    if (tunnel2InsideCidr != null) __obj.updateDynamic("tunnel2InsideCidr")(tunnel2InsideCidr.asInstanceOf[js.Any])
-    if (tunnel2PresharedKey != null) __obj.updateDynamic("tunnel2PresharedKey")(tunnel2PresharedKey.asInstanceOf[js.Any])
-    if (tunnel2VgwInsideAddress != null) __obj.updateDynamic("tunnel2VgwInsideAddress")(tunnel2VgwInsideAddress.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (vgwTelemetries != null) __obj.updateDynamic("vgwTelemetries")(vgwTelemetries.asInstanceOf[js.Any])
-    if (vpnGatewayId != null) __obj.updateDynamic("vpnGatewayId")(vpnGatewayId.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpnConnectionState]
   }
+  @scala.inline
+  implicit class VpnConnectionStateOps[Self <: VpnConnectionState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomerGatewayConfiguration(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerGatewayConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomerGatewayConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerGatewayConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomerGatewayId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerGatewayId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomerGatewayId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerGatewayId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoutes(value: Input[js.Array[Input[VpnConnectionRoute]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStaticRoutesOnly(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("staticRoutesOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStaticRoutesOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("staticRoutesOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitGatewayAttachmentId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitGatewayAttachmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitGatewayAttachmentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitGatewayAttachmentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitGatewayId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitGatewayId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitGatewayId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitGatewayId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTunnel1Address(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1Address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTunnel1Address: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1Address")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTunnel1BgpAsn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1BgpAsn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTunnel1BgpAsn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1BgpAsn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTunnel1BgpHoldtime(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1BgpHoldtime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTunnel1BgpHoldtime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1BgpHoldtime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTunnel1CgwInsideAddress(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1CgwInsideAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTunnel1CgwInsideAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1CgwInsideAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTunnel1InsideCidr(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1InsideCidr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTunnel1InsideCidr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1InsideCidr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTunnel1PresharedKey(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1PresharedKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTunnel1PresharedKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1PresharedKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTunnel1VgwInsideAddress(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1VgwInsideAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTunnel1VgwInsideAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1VgwInsideAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTunnel2Address(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2Address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTunnel2Address: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2Address")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTunnel2BgpAsn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2BgpAsn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTunnel2BgpAsn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2BgpAsn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTunnel2BgpHoldtime(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2BgpHoldtime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTunnel2BgpHoldtime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2BgpHoldtime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTunnel2CgwInsideAddress(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2CgwInsideAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTunnel2CgwInsideAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2CgwInsideAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTunnel2InsideCidr(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2InsideCidr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTunnel2InsideCidr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2InsideCidr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTunnel2PresharedKey(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2PresharedKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTunnel2PresharedKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2PresharedKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTunnel2VgwInsideAddress(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2VgwInsideAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTunnel2VgwInsideAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2VgwInsideAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVgwTelemetries(value: Input[js.Array[Input[VpnConnectionVgwTelemetry]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vgwTelemetries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVgwTelemetries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vgwTelemetries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpnGatewayId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpnGatewayId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpnGatewayId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpnGatewayId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

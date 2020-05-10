@@ -5,30 +5,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NotificationOptions extends js.Object {
-  var buttons: js.UndefOr[js.Array[AnonClassName]] = js.undefined
-  var description: js.UndefOr[String] = js.undefined
-  var detail: js.UndefOr[String] = js.undefined
-  var dismissable: js.UndefOr[Boolean] = js.undefined
-  var icon: js.UndefOr[String] = js.undefined
+  var buttons: js.UndefOr[js.Array[AnonClassName]] = js.native
+  var description: js.UndefOr[String] = js.native
+  var detail: js.UndefOr[String] = js.native
+  var dismissable: js.UndefOr[Boolean] = js.native
+  var icon: js.UndefOr[String] = js.native
 }
 
 object NotificationOptions {
   @scala.inline
-  def apply(
-    buttons: js.Array[AnonClassName] = null,
-    description: String = null,
-    detail: String = null,
-    dismissable: js.UndefOr[Boolean] = js.undefined,
-    icon: String = null
-  ): NotificationOptions = {
+  def apply(): NotificationOptions = {
     val __obj = js.Dynamic.literal()
-    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (detail != null) __obj.updateDynamic("detail")(detail.asInstanceOf[js.Any])
-    if (!js.isUndefined(dismissable)) __obj.updateDynamic("dismissable")(dismissable.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotificationOptions]
   }
+  @scala.inline
+  implicit class NotificationOptionsOps[Self <: NotificationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withButtons(value: js.Array[AnonClassName]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDetail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDismissable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dismissable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDismissable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dismissable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

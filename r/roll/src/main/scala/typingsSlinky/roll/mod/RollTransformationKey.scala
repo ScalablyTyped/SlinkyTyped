@@ -17,20 +17,18 @@ trait RollTransformationKey extends js.Object
 
 object RollTransformationKey {
   @scala.inline
-  def add: typingsSlinky.roll.rollStrings.add = this.cast("add")
+  def add: typingsSlinky.roll.rollStrings.add = "add".asInstanceOf[typingsSlinky.roll.rollStrings.add]
   @scala.inline
-  def `best-of`: typingsSlinky.roll.rollStrings.`best-of` = this.cast("best-of")
+  def `best-of`: typingsSlinky.roll.rollStrings.`best-of` = "best-of".asInstanceOf[typingsSlinky.roll.rollStrings.`best-of`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def divide: typingsSlinky.roll.rollStrings.divide = "divide".asInstanceOf[typingsSlinky.roll.rollStrings.divide]
   @scala.inline
-  def divide: typingsSlinky.roll.rollStrings.divide = this.cast("divide")
+  def multiply: typingsSlinky.roll.rollStrings.multiply = "multiply".asInstanceOf[typingsSlinky.roll.rollStrings.multiply]
   @scala.inline
-  def multiply: typingsSlinky.roll.rollStrings.multiply = this.cast("multiply")
+  def subtract: typingsSlinky.roll.rollStrings.subtract = "subtract".asInstanceOf[typingsSlinky.roll.rollStrings.subtract]
   @scala.inline
-  def subtract: typingsSlinky.roll.rollStrings.subtract = this.cast("subtract")
+  def sum: typingsSlinky.roll.rollStrings.sum = "sum".asInstanceOf[typingsSlinky.roll.rollStrings.sum]
   @scala.inline
-  def sum: typingsSlinky.roll.rollStrings.sum = this.cast("sum")
-  @scala.inline
-  def `worst-of`: typingsSlinky.roll.rollStrings.`worst-of` = this.cast("worst-of")
+  def `worst-of`: typingsSlinky.roll.rollStrings.`worst-of` = "worst-of".asInstanceOf[typingsSlinky.roll.rollStrings.`worst-of`]
 }
 

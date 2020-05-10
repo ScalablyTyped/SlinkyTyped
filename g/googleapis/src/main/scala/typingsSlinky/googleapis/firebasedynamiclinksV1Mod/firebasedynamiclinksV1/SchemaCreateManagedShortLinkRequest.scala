@@ -42,20 +42,77 @@ trait SchemaCreateManagedShortLinkRequest extends js.Object {
 
 object SchemaCreateManagedShortLinkRequest {
   @scala.inline
-  def apply(
-    dynamicLinkInfo: SchemaDynamicLinkInfo = null,
-    longDynamicLink: String = null,
-    name: String = null,
-    sdkVersion: String = null,
-    suffix: SchemaSuffix = null
-  ): SchemaCreateManagedShortLinkRequest = {
+  def apply(): SchemaCreateManagedShortLinkRequest = {
     val __obj = js.Dynamic.literal()
-    if (dynamicLinkInfo != null) __obj.updateDynamic("dynamicLinkInfo")(dynamicLinkInfo.asInstanceOf[js.Any])
-    if (longDynamicLink != null) __obj.updateDynamic("longDynamicLink")(longDynamicLink.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (sdkVersion != null) __obj.updateDynamic("sdkVersion")(sdkVersion.asInstanceOf[js.Any])
-    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateManagedShortLinkRequest]
   }
+  @scala.inline
+  implicit class SchemaCreateManagedShortLinkRequestOps[Self <: SchemaCreateManagedShortLinkRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDynamicLinkInfo(value: SchemaDynamicLinkInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicLinkInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamicLinkInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicLinkInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLongDynamicLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longDynamicLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLongDynamicLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longDynamicLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSdkVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sdkVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSdkVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sdkVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuffix(value: SchemaSuffix): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuffix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -30,30 +30,28 @@ trait IOPubMessageType extends js.Object
 
 object IOPubMessageType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def clear_output: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.clear_output = "clear_output".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.clear_output]
   @scala.inline
-  def clear_output: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.clear_output = this.cast("clear_output")
+  def comm_close: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.comm_close = "comm_close".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.comm_close]
   @scala.inline
-  def comm_close: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.comm_close = this.cast("comm_close")
+  def comm_msg: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.comm_msg = "comm_msg".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.comm_msg]
   @scala.inline
-  def comm_msg: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.comm_msg = this.cast("comm_msg")
+  def comm_open: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.comm_open = "comm_open".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.comm_open]
   @scala.inline
-  def comm_open: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.comm_open = this.cast("comm_open")
+  def debug_event: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.debug_event = "debug_event".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.debug_event]
   @scala.inline
-  def debug_event: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.debug_event = this.cast("debug_event")
+  def display_data: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.display_data = "display_data".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.display_data]
   @scala.inline
-  def display_data: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.display_data = this.cast("display_data")
+  def error: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.error = "error".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.error]
   @scala.inline
-  def error: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.error = this.cast("error")
+  def execute_input: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.execute_input = "execute_input".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.execute_input]
   @scala.inline
-  def execute_input: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.execute_input = this.cast("execute_input")
+  def execute_result: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.execute_result = "execute_result".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.execute_result]
   @scala.inline
-  def execute_result: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.execute_result = this.cast("execute_result")
+  def status: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.status = "status".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.status]
   @scala.inline
-  def status: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.status = this.cast("status")
+  def stream: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.stream = "stream".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.stream]
   @scala.inline
-  def stream: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.stream = this.cast("stream")
-  @scala.inline
-  def update_display_data: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.update_display_data = this.cast("update_display_data")
+  def update_display_data: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.update_display_data = "update_display_data".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.update_display_data]
 }
 

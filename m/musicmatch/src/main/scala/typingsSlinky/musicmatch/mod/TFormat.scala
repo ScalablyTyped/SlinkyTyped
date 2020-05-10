@@ -12,10 +12,8 @@ trait TFormat extends js.Object
 
 object TFormat {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def json: typingsSlinky.musicmatch.musicmatchStrings.json = "json".asInstanceOf[typingsSlinky.musicmatch.musicmatchStrings.json]
   @scala.inline
-  def json: typingsSlinky.musicmatch.musicmatchStrings.json = this.cast("json")
-  @scala.inline
-  def xml: typingsSlinky.musicmatch.musicmatchStrings.xml = this.cast("xml")
+  def xml: typingsSlinky.musicmatch.musicmatchStrings.xml = "xml".asInstanceOf[typingsSlinky.musicmatch.musicmatchStrings.xml]
 }
 

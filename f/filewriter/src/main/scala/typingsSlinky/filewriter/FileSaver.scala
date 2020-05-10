@@ -1,8 +1,8 @@
 package typingsSlinky.filewriter
 
 import org.scalablytyped.runtime.Instantiable1
+import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.ProgressEvent
-import typingsSlinky.std.Blob
 import typingsSlinky.std.EventTarget
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -10,45 +10,153 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var ERROR: js.UndefOr[String] = js.undefined
-  var EXCLUDED: js.UndefOr[String] = js.undefined
-  var NOT_AVAILABLE: js.UndefOr[String] = js.undefined
-  var audio: js.UndefOr[AnonExcludeIOS11] = js.undefined
-  var excludes: js.UndefOr[AnonAdBlock] = js.undefined
-  var extraComponents: js.UndefOr[js.Array[AnonGetData]] = js.undefined
-  var fonts: js.UndefOr[AnonExtendedJsFonts] = js.undefined
-  var plugins: js.UndefOr[AnonExcludeIE] = js.undefined
-  var preprocessor: js.UndefOr[js.Function2[/* key */ String, /* value */ js.Any, _]] = js.undefined
-  var screen: js.UndefOr[AnonDetectScreenOrientation] = js.undefined
+  var ERROR: js.UndefOr[String] = js.native
+  var EXCLUDED: js.UndefOr[String] = js.native
+  var NOT_AVAILABLE: js.UndefOr[String] = js.native
+  var audio: js.UndefOr[AnonExcludeIOS11] = js.native
+  var excludes: js.UndefOr[AnonAdBlock] = js.native
+  var extraComponents: js.UndefOr[js.Array[AnonGetData]] = js.native
+  var fonts: js.UndefOr[AnonExtendedJsFonts] = js.native
+  var plugins: js.UndefOr[AnonExcludeIE] = js.native
+  var preprocessor: js.UndefOr[js.Function2[/* key */ String, /* value */ js.Any, _]] = js.native
+  var screen: js.UndefOr[AnonDetectScreenOrientation] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    ERROR: String = null,
-    EXCLUDED: String = null,
-    NOT_AVAILABLE: String = null,
-    audio: AnonExcludeIOS11 = null,
-    excludes: AnonAdBlock = null,
-    extraComponents: js.Array[AnonGetData] = null,
-    fonts: AnonExtendedJsFonts = null,
-    plugins: AnonExcludeIE = null,
-    preprocessor: (/* key */ String, /* value */ js.Any) => _ = null,
-    screen: AnonDetectScreenOrientation = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (ERROR != null) __obj.updateDynamic("ERROR")(ERROR.asInstanceOf[js.Any])
-    if (EXCLUDED != null) __obj.updateDynamic("EXCLUDED")(EXCLUDED.asInstanceOf[js.Any])
-    if (NOT_AVAILABLE != null) __obj.updateDynamic("NOT_AVAILABLE")(NOT_AVAILABLE.asInstanceOf[js.Any])
-    if (audio != null) __obj.updateDynamic("audio")(audio.asInstanceOf[js.Any])
-    if (excludes != null) __obj.updateDynamic("excludes")(excludes.asInstanceOf[js.Any])
-    if (extraComponents != null) __obj.updateDynamic("extraComponents")(extraComponents.asInstanceOf[js.Any])
-    if (fonts != null) __obj.updateDynamic("fonts")(fonts.asInstanceOf[js.Any])
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
-    if (preprocessor != null) __obj.updateDynamic("preprocessor")(js.Any.fromFunction2(preprocessor))
-    if (screen != null) __obj.updateDynamic("screen")(screen.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withERROR(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ERROR")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutERROR: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ERROR")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEXCLUDED(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EXCLUDED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEXCLUDED: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EXCLUDED")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNOT_AVAILABLE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NOT_AVAILABLE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNOT_AVAILABLE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NOT_AVAILABLE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAudio(value: AnonExcludeIOS11): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcludes(value: AnonAdBlock): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtraComponents(value: js.Array[AnonGetData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraComponents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtraComponents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraComponents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFonts(value: AnonExtendedJsFonts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fonts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFonts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fonts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlugins(value: AnonExcludeIE): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreprocessor(value: (/* key */ String, /* value */ js.Any) => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preprocessor")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutPreprocessor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preprocessor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreen(value: AnonDetectScreenOrientation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screen")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -33,20 +33,77 @@ trait SchemaGdataContentTypeInfo extends js.Object {
 
 object SchemaGdataContentTypeInfo {
   @scala.inline
-  def apply(
-    bestGuess: String = null,
-    fromBytes: String = null,
-    fromFileName: String = null,
-    fromHeader: String = null,
-    fromUrlPath: String = null
-  ): SchemaGdataContentTypeInfo = {
+  def apply(): SchemaGdataContentTypeInfo = {
     val __obj = js.Dynamic.literal()
-    if (bestGuess != null) __obj.updateDynamic("bestGuess")(bestGuess.asInstanceOf[js.Any])
-    if (fromBytes != null) __obj.updateDynamic("fromBytes")(fromBytes.asInstanceOf[js.Any])
-    if (fromFileName != null) __obj.updateDynamic("fromFileName")(fromFileName.asInstanceOf[js.Any])
-    if (fromHeader != null) __obj.updateDynamic("fromHeader")(fromHeader.asInstanceOf[js.Any])
-    if (fromUrlPath != null) __obj.updateDynamic("fromUrlPath")(fromUrlPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGdataContentTypeInfo]
   }
+  @scala.inline
+  implicit class SchemaGdataContentTypeInfoOps[Self <: SchemaGdataContentTypeInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBestGuess(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bestGuess")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBestGuess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bestGuess")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFromBytes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFromFileName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromFileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromFileName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromFileName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFromHeader(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromHeader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFromUrlPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromUrlPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromUrlPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromUrlPath")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

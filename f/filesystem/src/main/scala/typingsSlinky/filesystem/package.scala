@@ -20,7 +20,7 @@ package object filesystem {
   /**
     * When an error occurs, the following callback is made.
     */
-  type ErrorCallback = js.Function1[/* err */ org.scalajs.dom.raw.DOMError, scala.Unit]
+  type ErrorCallback = js.Function1[/* err */ typingsSlinky.std.DOMError, scala.Unit]
   /**
     * This interface is the callback used to obtain a File.
     */

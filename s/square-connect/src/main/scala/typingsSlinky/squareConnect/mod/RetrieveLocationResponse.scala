@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class RetrieveLocationResponse () extends js.Object {
   /**
-    * Any errors that occurred during the request.
+    * Information on errors encountered during the request.
     */
   var errors: js.UndefOr[js.Array[js.Error]] = js.native
   /**

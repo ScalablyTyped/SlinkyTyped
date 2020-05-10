@@ -7,17 +7,37 @@ import scala.scalajs.js.annotation._
 /**
   * Node args
   */
+@js.native
 trait INodeArgs extends js.Object {
-  var node: js.Any
-  var section: js.Any
+  var node: js.Any = js.native
+  var section: js.Any = js.native
 }
 
 object INodeArgs {
   @scala.inline
   def apply(node: js.Any, section: js.Any): INodeArgs = {
     val __obj = js.Dynamic.literal(node = node.asInstanceOf[js.Any], section = section.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[INodeArgs]
   }
+  @scala.inline
+  implicit class INodeArgsOps[Self <: INodeArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNode(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSection(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("section")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -21,12 +21,6 @@ object depthToSpaceGpuMod extends js.Object {
     var getInputSamplingString: js.Any = js.native
     var getOutputDepthSize: js.Any = js.native
     var getWidthCoordString: js.Any = js.native
-    /* CompleteClass */
-    override var outputShape: js.Array[Double] = js.native
-    /* CompleteClass */
-    override var userCode: String = js.native
-    /* CompleteClass */
-    override var variableNames: js.Array[String] = js.native
   }
   
 }

@@ -1,8 +1,6 @@
 package typingsSlinky.rrule
 
 import typingsSlinky.rrule.datetimeMod.Time
-import typingsSlinky.rrule.rruleNumbers.`9999`
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +13,7 @@ object dateutilMod extends js.Object {
     /**
       * @see: <http://docs.python.org/library/datetime.html#datetime.MAXYEAR>
       */
-    val MAXYEAR: `9999` = js.native
+    val MAXYEAR: /* 9999 */ Double = js.native
     val MONTH_DAYS: js.Array[Double] = js.native
     /**
       * Number of milliseconds of one day
@@ -33,13 +31,13 @@ object dateutilMod extends js.Object {
       */
     val PY_WEEKDAYS: js.Array[Double] = js.native
     def clone(date: Time): js.Date = js.native
-    def clone(date: Date): js.Date = js.native
+    def clone(date: js.Date): js.Date = js.native
     def cloneDates(dates: js.Array[js.Date | Time]): js.Array[js.Date] = js.native
     def combine(date: js.Date, time: Time): js.Date = js.native
     /**
       * @see: <http://docs.python.org/library/datetime.html#datetime.datetime.combine>
       */
-    def combine(date: js.Date, time: Date): js.Date = js.native
+    def combine(date: js.Date, time: js.Date): js.Date = js.native
     /**
       * @see: <http://www.mcfedries.com/JavaScript/DaysBetween.asp>
       */
@@ -86,7 +84,7 @@ object dateutilMod extends js.Object {
     /**
       * @see: <http://docs.python.org/library/datetime.html#datetime.MAXYEAR>
       */
-    val MAXYEAR: `9999` = js.native
+    val MAXYEAR: /* 9999 */ Double = js.native
     val MONTH_DAYS: js.Array[Double] = js.native
     /**
       * Number of milliseconds of one day
@@ -104,13 +102,13 @@ object dateutilMod extends js.Object {
       */
     val PY_WEEKDAYS: js.Array[Double] = js.native
     def clone(date: Time): js.Date = js.native
-    def clone(date: Date): js.Date = js.native
+    def clone(date: js.Date): js.Date = js.native
     def cloneDates(dates: js.Array[js.Date | Time]): js.Array[js.Date] = js.native
     def combine(date: js.Date, time: Time): js.Date = js.native
     /**
       * @see: <http://docs.python.org/library/datetime.html#datetime.datetime.combine>
       */
-    def combine(date: js.Date, time: Date): js.Date = js.native
+    def combine(date: js.Date, time: js.Date): js.Date = js.native
     /**
       * @see: <http://www.mcfedries.com/JavaScript/DaysBetween.asp>
       */

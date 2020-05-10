@@ -16,8 +16,21 @@ object MonitoringOutput {
   @scala.inline
   def apply(S3Output: MonitoringS3Output): MonitoringOutput = {
     val __obj = js.Dynamic.literal(S3Output = S3Output.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[MonitoringOutput]
   }
+  @scala.inline
+  implicit class MonitoringOutputOps[Self <: MonitoringOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withS3Output(value: MonitoringS3Output): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Output")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

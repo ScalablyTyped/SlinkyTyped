@@ -22,15 +22,47 @@ trait ThingGroupIndexingConfiguration extends js.Object {
 
 object ThingGroupIndexingConfiguration {
   @scala.inline
-  def apply(
-    thingGroupIndexingMode: ThingGroupIndexingMode,
-    customFields: Fields = null,
-    managedFields: Fields = null
-  ): ThingGroupIndexingConfiguration = {
+  def apply(thingGroupIndexingMode: ThingGroupIndexingMode): ThingGroupIndexingConfiguration = {
     val __obj = js.Dynamic.literal(thingGroupIndexingMode = thingGroupIndexingMode.asInstanceOf[js.Any])
-    if (customFields != null) __obj.updateDynamic("customFields")(customFields.asInstanceOf[js.Any])
-    if (managedFields != null) __obj.updateDynamic("managedFields")(managedFields.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThingGroupIndexingConfiguration]
   }
+  @scala.inline
+  implicit class ThingGroupIndexingConfigurationOps[Self <: ThingGroupIndexingConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withThingGroupIndexingMode(value: ThingGroupIndexingMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupIndexingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCustomFields(value: Fields): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManagedFields(value: Fields): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManagedFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedFields")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

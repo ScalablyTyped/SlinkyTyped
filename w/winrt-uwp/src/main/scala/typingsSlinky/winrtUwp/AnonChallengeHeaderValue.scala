@@ -5,17 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonChallengeHeaderValue extends js.Object {
-  /** The HttpChallengeHeaderValue version of the string. */ var challengeHeaderValue: HttpChallengeHeaderValue
-  /** true if input is valid HttpChallengeHeaderValue information; otherwise, false. */ var returnValue: Boolean
+  /** The HttpChallengeHeaderValue version of the string. */ var challengeHeaderValue: HttpChallengeHeaderValue = js.native
+  /** true if input is valid HttpChallengeHeaderValue information; otherwise, false. */ var returnValue: Boolean = js.native
 }
 
 object AnonChallengeHeaderValue {
   @scala.inline
   def apply(challengeHeaderValue: HttpChallengeHeaderValue, returnValue: Boolean): AnonChallengeHeaderValue = {
     val __obj = js.Dynamic.literal(challengeHeaderValue = challengeHeaderValue.asInstanceOf[js.Any], returnValue = returnValue.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonChallengeHeaderValue]
   }
+  @scala.inline
+  implicit class AnonChallengeHeaderValueOps[Self <: AnonChallengeHeaderValue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChallengeHeaderValue(value: HttpChallengeHeaderValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("challengeHeaderValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReturnValue(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

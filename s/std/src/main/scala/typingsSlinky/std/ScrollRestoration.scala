@@ -12,10 +12,8 @@ trait ScrollRestoration extends js.Object
 
 object ScrollRestoration {
   @scala.inline
-  def auto: typingsSlinky.std.stdStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.std.stdStrings.auto = "auto".asInstanceOf[typingsSlinky.std.stdStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def manual: typingsSlinky.std.stdStrings.manual = this.cast("manual")
+  def manual: typingsSlinky.std.stdStrings.manual = "manual".asInstanceOf[typingsSlinky.std.stdStrings.manual]
 }
 

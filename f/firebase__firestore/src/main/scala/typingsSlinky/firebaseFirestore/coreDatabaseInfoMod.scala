@@ -14,7 +14,7 @@ object coreDatabaseInfoMod extends js.Object {
     val database: String = js.native
     val projectId: String = js.native
     def compareTo(other: DatabaseId): Double = js.native
-    def isDefaultDatabase(): Boolean = js.native
+    def isDefaultDatabase: Boolean = js.native
     def isEqual(other: js.Object): Boolean = js.native
   }
   

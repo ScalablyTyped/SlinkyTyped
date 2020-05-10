@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait JSTreeStaticDefaultsContextMenu extends js.Object {
   /**
     * an object of actions, or a function that accepts a node and a callback function and calls the callback function
@@ -32,28 +33,53 @@ trait JSTreeStaticDefaultsContextMenu extends js.Object {
     * @name $.jstree.defaults.contextmenu.items
     * @plugin contextmenu
     */
-  var items: js.Any
+  var items: js.Any = js.native
   /**
     * a boolean indicating if the node should be selected when the context menu is invoked on it. Defaults to `true`.
     * @name $.jstree.defaults.contextmenu.select_node
     * @plugin contextmenu
     */
-  var select_node: Boolean
+  var select_node: Boolean = js.native
   /**
     * a boolean indicating if the menu should be shown aligned with the node. Defaults to `true`,
     * otherwise the mouse coordinates are used.
     * @name $.jstree.defaults.contextmenu.show_at_node
     * @plugin contextmenu
     */
-  var show_at_node: Boolean
+  var show_at_node: Boolean = js.native
 }
 
 object JSTreeStaticDefaultsContextMenu {
   @scala.inline
   def apply(items: js.Any, select_node: Boolean, show_at_node: Boolean): JSTreeStaticDefaultsContextMenu = {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any], select_node = select_node.asInstanceOf[js.Any], show_at_node = show_at_node.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[JSTreeStaticDefaultsContextMenu]
   }
+  @scala.inline
+  implicit class JSTreeStaticDefaultsContextMenuOps[Self <: JSTreeStaticDefaultsContextMenu] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItems(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelect_node(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select_node")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShow_at_node(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show_at_node")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.contractProxyKit
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.contractProxyKit.contractProxyKitStrings.Ξ
 import typingsSlinky.ethers.AnonFrom
 import typingsSlinky.ethers.abiCoderMod.AbiCoder
 import typingsSlinky.ethers.typesMod.Arrayish
@@ -29,14 +28,14 @@ trait Typeofutils extends js.Object {
   val constants: AnonHashZero = js.native
   val defaultAbiCoder: AbiCoder = js.native
   val errors: Typeoferrors = js.native
-  val etherSymbol: Ξ = js.native
+  val etherSymbol: /* "\\u039E" */ String = js.native
   val types: Typeoftypes = js.native
-  def arrayify(value: Arrayish): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def arrayify(value: BigNumber): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def arrayify(value: Arrayish): js.typedarray.Uint8Array = js.native
+  def arrayify(value: BigNumber): js.typedarray.Uint8Array = js.native
   def bigNumberify(value: BigNumberish): BigNumber = js.native
   def computePublicKey(key: Arrayish): String = js.native
   def computePublicKey(key: Arrayish, compressed: Boolean): String = js.native
-  def concat(objects: js.Array[Arrayish]): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def concat(objects: js.Array[Arrayish]): js.typedarray.Uint8Array = js.native
   def defineFrozen(`object`: js.Any, name: String, value: js.Any): Unit = js.native
   def defineReadOnly(`object`: js.Any, name: String, value: js.Any): Unit = js.native
   def fetchJson(connection: String, json: String, processFunc: js.Function1[/* value */ js.Any, _]): js.Promise[_] = js.native
@@ -70,7 +69,7 @@ trait Typeofutils extends js.Object {
   def joinSignature(signature: Signature): String = js.native
   def keccak256(data: Arrayish): String = js.native
   def namehash(name: String): String = js.native
-  def padZeros(value: Arrayish, length: Double): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def padZeros(value: Arrayish, length: Double): js.typedarray.Uint8Array = js.native
   def parseEther(ether: String): BigNumber = js.native
   def parseParamType(`type`: String): ParamType = js.native
   def parseSignature(fragment: String): EventFragment | FunctionFragment = js.native
@@ -78,7 +77,7 @@ trait Typeofutils extends js.Object {
   def parseUnits(value: String): BigNumber = js.native
   def parseUnits(value: String, unitType: String): BigNumber = js.native
   def parseUnits(value: String, unitType: Double): BigNumber = js.native
-  def randomBytes(length: Double): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def randomBytes(length: Double): js.typedarray.Uint8Array = js.native
   def resolveProperties(`object`: js.Any): js.Promise[_] = js.native
   def serializeTransaction(transaction: UnsignedTransaction): String = js.native
   def serializeTransaction(transaction: UnsignedTransaction, signature: Arrayish): String = js.native
@@ -90,9 +89,9 @@ trait Typeofutils extends js.Object {
   def soliditySha256(types: js.Array[String], values: js.Array[_]): String = js.native
   def splitSignature(signature: Arrayish): Signature = js.native
   def splitSignature(signature: Signature): Signature = js.native
-  def stripZeros(value: Arrayish): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def toUtf8Bytes(str: String): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def toUtf8Bytes(str: String, form: UnicodeNormalizationForm): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def stripZeros(value: Arrayish): js.typedarray.Uint8Array = js.native
+  def toUtf8Bytes(str: String): js.typedarray.Uint8Array = js.native
+  def toUtf8Bytes(str: String, form: UnicodeNormalizationForm): js.typedarray.Uint8Array = js.native
   def toUtf8String(bytes: Arrayish): String = js.native
   def verifyMessage(message: String, signature: String): String = js.native
   def verifyMessage(message: String, signature: Signature): String = js.native

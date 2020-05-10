@@ -14,14 +14,12 @@ trait IntermediateDirection extends js.Object
 
 object IntermediateDirection {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ne: typingsSlinky.jqueryJcrop.jqueryJcropStrings.ne = "ne".asInstanceOf[typingsSlinky.jqueryJcrop.jqueryJcropStrings.ne]
   @scala.inline
-  def ne: typingsSlinky.jqueryJcrop.jqueryJcropStrings.ne = this.cast("ne")
+  def nw: typingsSlinky.jqueryJcrop.jqueryJcropStrings.nw = "nw".asInstanceOf[typingsSlinky.jqueryJcrop.jqueryJcropStrings.nw]
   @scala.inline
-  def nw: typingsSlinky.jqueryJcrop.jqueryJcropStrings.nw = this.cast("nw")
+  def se: typingsSlinky.jqueryJcrop.jqueryJcropStrings.se = "se".asInstanceOf[typingsSlinky.jqueryJcrop.jqueryJcropStrings.se]
   @scala.inline
-  def se: typingsSlinky.jqueryJcrop.jqueryJcropStrings.se = this.cast("se")
-  @scala.inline
-  def sw: typingsSlinky.jqueryJcrop.jqueryJcropStrings.sw = this.cast("sw")
+  def sw: typingsSlinky.jqueryJcrop.jqueryJcropStrings.sw = "sw".asInstanceOf[typingsSlinky.jqueryJcrop.jqueryJcropStrings.sw]
 }
 

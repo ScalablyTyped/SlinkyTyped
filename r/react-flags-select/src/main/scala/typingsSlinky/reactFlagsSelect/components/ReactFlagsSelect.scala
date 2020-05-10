@@ -1,51 +1,51 @@
 package typingsSlinky.reactFlagsSelect.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactFlagsSelect.mod.Props
 import typingsSlinky.reactFlagsSelect.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactFlagsSelect
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactFlagsSelect {
   @JSImport("react-flags-select", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, placeholder */
-  def apply(
-    alignOptions: String = null,
-    blackList: js.UndefOr[Boolean] = js.undefined,
-    countries: js.Array[String] = null,
-    defaultCountry: String = null,
-    onSelect: /* countryCode */ String => Unit = null,
-    optionsSize: Int | Double = null,
-    searchable: js.UndefOr[Boolean] = js.undefined,
-    selectedSize: Int | Double = null,
-    showOptionLabel: js.UndefOr[Boolean] = js.undefined,
-    showSelectedLabel: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (alignOptions != null) __obj.updateDynamic("alignOptions")(alignOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(blackList)) __obj.updateDynamic("blackList")(blackList.asInstanceOf[js.Any])
-    if (countries != null) __obj.updateDynamic("countries")(countries.asInstanceOf[js.Any])
-    if (defaultCountry != null) __obj.updateDynamic("defaultCountry")(defaultCountry.asInstanceOf[js.Any])
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
-    if (optionsSize != null) __obj.updateDynamic("optionsSize")(optionsSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(searchable)) __obj.updateDynamic("searchable")(searchable.asInstanceOf[js.Any])
-    if (selectedSize != null) __obj.updateDynamic("selectedSize")(selectedSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(showOptionLabel)) __obj.updateDynamic("showOptionLabel")(showOptionLabel.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSelectedLabel)) __obj.updateDynamic("showSelectedLabel")(showSelectedLabel.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def alignOptions(value: String): this.type = set("alignOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def blackList(value: Boolean): this.type = set("blackList", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def countries(value: js.Array[String]): this.type = set("countries", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultCountry(value: String): this.type = set("defaultCountry", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onSelect(value: /* countryCode */ String => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def optionsSize(value: Double): this.type = set("optionsSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def searchable(value: Boolean): this.type = set("searchable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedSize(value: Double): this.type = set("selectedSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showOptionLabel(value: Boolean): this.type = set("showOptionLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showSelectedLabel(value: Boolean): this.type = set("showSelectedLabel", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactFlagsSelect.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = typingsSlinky.reactFlagsSelect.mod.Props
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactFlagsSelect.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

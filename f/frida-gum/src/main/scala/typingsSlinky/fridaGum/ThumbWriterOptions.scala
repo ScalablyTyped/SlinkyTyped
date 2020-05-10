@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ThumbWriterOptions extends js.Object {
   /**
     * Specifies the initial program counter, which is useful when
@@ -12,15 +13,34 @@ trait ThumbWriterOptions extends js.Object {
     * temporary location that later gets mapped into memory at the
     * intended memory location.
     */
-  var pc: js.UndefOr[NativePointer] = js.undefined
+  var pc: js.UndefOr[NativePointer] = js.native
 }
 
 object ThumbWriterOptions {
   @scala.inline
-  def apply(pc: NativePointer = null): ThumbWriterOptions = {
+  def apply(): ThumbWriterOptions = {
     val __obj = js.Dynamic.literal()
-    if (pc != null) __obj.updateDynamic("pc")(pc.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThumbWriterOptions]
   }
+  @scala.inline
+  implicit class ThumbWriterOptionsOps[Self <: ThumbWriterOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPc(value: NativePointer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pc")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

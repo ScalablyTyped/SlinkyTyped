@@ -16,11 +16,59 @@ trait WithWidthProps extends js.Object {
 
 object WithWidthProps {
   @scala.inline
-  def apply(innerRef: Ref[_] | ReactRef[_] = null, width: Breakpoint = null): WithWidthProps = {
+  def apply(): WithWidthProps = {
     val __obj = js.Dynamic.literal()
-    if (innerRef != null) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[WithWidthProps]
   }
+  @scala.inline
+  implicit class WithWidthPropsOps[Self <: WithWidthProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInnerRefRefObject(value: ReactRef[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInnerRefFunction1(value: /* instance */ _ | Null => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInnerRef(value: Ref[_] | ReactRef[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInnerRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInnerRefNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(null)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Breakpoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

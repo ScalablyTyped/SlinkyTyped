@@ -1,15 +1,14 @@
 package typingsSlinky.grommet.mod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLDivElement
+import org.scalajs.dom.raw.SVGSVGElement
+import slinky.core.ReactComponentClass
 import typingsSlinky.grommet.clockMod.ClockProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.SVGProps
-import typingsSlinky.std.HTMLDivElement
-import typingsSlinky.std.SVGSVGElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,18 +18,12 @@ import scala.scalajs.js.annotation._
 class Clock protected ()
   extends Component[
       ClockProps with ((DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) | SVGProps[SVGSVGElement]), 
-      ComponentState, 
+      js.Object, 
       js.Any
     ] {
-  def this(props: ClockProps with ((DetailedHTMLProps[
-        HTMLAttributes[org.scalajs.dom.raw.HTMLDivElement], 
-        org.scalajs.dom.raw.HTMLDivElement
-      ]) | SVGProps[org.scalajs.dom.raw.SVGSVGElement])) = this()
+  def this(props: ClockProps with ((DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) | SVGProps[SVGSVGElement])) = this()
   def this(
-    props: ClockProps with ((DetailedHTMLProps[
-        HTMLAttributes[org.scalajs.dom.raw.HTMLDivElement], 
-        org.scalajs.dom.raw.HTMLDivElement
-      ]) | SVGProps[org.scalajs.dom.raw.SVGSVGElement]),
+    props: ClockProps with ((DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) | SVGProps[SVGSVGElement]),
     context: js.Any
   ) = this()
 }
@@ -38,9 +31,8 @@ class Clock protected ()
 @JSImport("grommet", "Clock")
 @js.native
 object Clock extends TopLevel[
-      ComponentClass[
-        ClockProps with ((DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) | SVGProps[SVGSVGElement]), 
-        ComponentState
+      ReactComponentClass[
+        ClockProps with ((DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) | SVGProps[SVGSVGElement])
       ]
     ]
 

@@ -1,12 +1,9 @@
 package typingsSlinky.blueprintjsCore.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -19,11 +16,14 @@ import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.blueprintjsCoreBooleans.`false`
 import typingsSlinky.blueprintjsCore.iconMod.IIconProps
 import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
+import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DOMAttributes
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.std.Event_
@@ -31,194 +31,202 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Icon
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsCore.mod.Icon] {
+object Icon {
   @JSImport("@blueprintjs/core", "Icon")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    color: String = null,
-    htmlTitle: String = null,
-    icon: IconName | MaybeElement = null,
-    iconSize: Int | Double = null,
-    intent: Intent = null,
-    onAbort: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onAnimationEnd: SyntheticAnimationEvent[HTMLElement] => Unit = null,
-    onAnimationIteration: SyntheticAnimationEvent[HTMLElement] => Unit = null,
-    onAnimationStart: SyntheticAnimationEvent[HTMLElement] => Unit = null,
-    onAuxClick: SyntheticMouseEvent[HTMLElement] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with HTMLElement, Event_] => Unit = null,
-    onBlur: SyntheticFocusEvent[HTMLElement] => Unit = null,
-    onCanPlay: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onCanPlayThrough: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onChange: SyntheticEvent[EventTarget with HTMLElement, Event_] => Unit = null,
-    onClick: SyntheticMouseEvent[HTMLElement] => Unit = null,
-    onCompositionEnd: SyntheticCompositionEvent[HTMLElement] => Unit = null,
-    onCompositionStart: SyntheticCompositionEvent[HTMLElement] => Unit = null,
-    onCompositionUpdate: SyntheticCompositionEvent[HTMLElement] => Unit = null,
-    onContextMenu: SyntheticMouseEvent[HTMLElement] => Unit = null,
-    onCopy: SyntheticClipboardEvent[HTMLElement] => Unit = null,
-    onCut: SyntheticClipboardEvent[HTMLElement] => Unit = null,
-    onDoubleClick: SyntheticMouseEvent[HTMLElement] => Unit = null,
-    onDrag: DragEvent[HTMLElement] => Unit = null,
-    onDragEnd: DragEvent[HTMLElement] => Unit = null,
-    onDragEnter: DragEvent[HTMLElement] => Unit = null,
-    onDragExit: DragEvent[HTMLElement] => Unit = null,
-    onDragLeave: DragEvent[HTMLElement] => Unit = null,
-    onDragOver: DragEvent[HTMLElement] => Unit = null,
-    onDragStart: DragEvent[HTMLElement] => Unit = null,
-    onDrop: DragEvent[HTMLElement] => Unit = null,
-    onDurationChange: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onEmptied: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onEncrypted: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onEnded: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onError: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onFocus: SyntheticFocusEvent[HTMLElement] => Unit = null,
-    onInput: SyntheticEvent[EventTarget with HTMLElement, Event_] => Unit = null,
-    onInvalid: SyntheticEvent[EventTarget with HTMLElement, Event_] => Unit = null,
-    onKeyDown: SyntheticKeyboardEvent[HTMLElement] => Unit = null,
-    onKeyPress: SyntheticKeyboardEvent[HTMLElement] => Unit = null,
-    onKeyUp: SyntheticKeyboardEvent[HTMLElement] => Unit = null,
-    onLoad: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onLoadStart: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onLoadedData: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onLoadedMetadata: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onMouseDown: SyntheticMouseEvent[HTMLElement] => Unit = null,
-    onMouseEnter: SyntheticMouseEvent[HTMLElement] => Unit = null,
-    onMouseLeave: SyntheticMouseEvent[HTMLElement] => Unit = null,
-    onMouseMove: SyntheticMouseEvent[HTMLElement] => Unit = null,
-    onMouseOut: SyntheticMouseEvent[HTMLElement] => Unit = null,
-    onMouseOver: SyntheticMouseEvent[HTMLElement] => Unit = null,
-    onMouseUp: SyntheticMouseEvent[HTMLElement] => Unit = null,
-    onPaste: SyntheticClipboardEvent[HTMLElement] => Unit = null,
-    onPause: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onPlay: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onPlaying: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onPointerCancel: SyntheticPointerEvent[HTMLElement] => Unit = null,
-    onPointerDown: SyntheticPointerEvent[HTMLElement] => Unit = null,
-    onPointerEnter: SyntheticPointerEvent[HTMLElement] => Unit = null,
-    onPointerLeave: SyntheticPointerEvent[HTMLElement] => Unit = null,
-    onPointerMove: SyntheticPointerEvent[HTMLElement] => Unit = null,
-    onPointerOut: SyntheticPointerEvent[HTMLElement] => Unit = null,
-    onPointerOver: SyntheticPointerEvent[HTMLElement] => Unit = null,
-    onPointerUp: SyntheticPointerEvent[HTMLElement] => Unit = null,
-    onProgress: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onRateChange: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onReset: SyntheticEvent[EventTarget with HTMLElement, Event_] => Unit = null,
-    onScroll: SyntheticUIEvent[HTMLElement] => Unit = null,
-    onSeeked: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onSeeking: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onSelect: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onStalled: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onSubmit: SyntheticEvent[EventTarget with HTMLElement, Event_] => Unit = null,
-    onSuspend: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onTimeUpdate: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onTouchCancel: SyntheticTouchEvent[HTMLElement] => Unit = null,
-    onTouchEnd: SyntheticTouchEvent[HTMLElement] => Unit = null,
-    onTouchMove: SyntheticTouchEvent[HTMLElement] => Unit = null,
-    onTouchStart: SyntheticTouchEvent[HTMLElement] => Unit = null,
-    onTransitionEnd: SyntheticTransitionEvent[HTMLElement] => Unit = null,
-    onVolumeChange: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onWaiting: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onWheel: SyntheticWheelEvent[HTMLElement] => Unit = null,
-    tagName: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any = null,
-    title: String | `false` = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Icon] = {
-    val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (htmlTitle != null) __obj.updateDynamic("htmlTitle")(htmlTitle.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (iconSize != null) __obj.updateDynamic("iconSize")(iconSize.asInstanceOf[js.Any])
-    if (intent != null) __obj.updateDynamic("intent")(intent.asInstanceOf[js.Any])
-    if (onAbort != null) __obj.updateDynamic("onAbort")(js.Any.fromFunction1(onAbort))
-    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
-    if (onAnimationIteration != null) __obj.updateDynamic("onAnimationIteration")(js.Any.fromFunction1(onAnimationIteration))
-    if (onAnimationStart != null) __obj.updateDynamic("onAnimationStart")(js.Any.fromFunction1(onAnimationStart))
-    if (onAuxClick != null) __obj.updateDynamic("onAuxClick")(js.Any.fromFunction1(onAuxClick))
-    if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onCanPlay != null) __obj.updateDynamic("onCanPlay")(js.Any.fromFunction1(onCanPlay))
-    if (onCanPlayThrough != null) __obj.updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(onCanPlayThrough))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onCompositionEnd != null) __obj.updateDynamic("onCompositionEnd")(js.Any.fromFunction1(onCompositionEnd))
-    if (onCompositionStart != null) __obj.updateDynamic("onCompositionStart")(js.Any.fromFunction1(onCompositionStart))
-    if (onCompositionUpdate != null) __obj.updateDynamic("onCompositionUpdate")(js.Any.fromFunction1(onCompositionUpdate))
-    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(js.Any.fromFunction1(onContextMenu))
-    if (onCopy != null) __obj.updateDynamic("onCopy")(js.Any.fromFunction1(onCopy))
-    if (onCut != null) __obj.updateDynamic("onCut")(js.Any.fromFunction1(onCut))
-    if (onDoubleClick != null) __obj.updateDynamic("onDoubleClick")(js.Any.fromFunction1(onDoubleClick))
-    if (onDrag != null) __obj.updateDynamic("onDrag")(js.Any.fromFunction1(onDrag))
-    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(js.Any.fromFunction1(onDragEnd))
-    if (onDragEnter != null) __obj.updateDynamic("onDragEnter")(js.Any.fromFunction1(onDragEnter))
-    if (onDragExit != null) __obj.updateDynamic("onDragExit")(js.Any.fromFunction1(onDragExit))
-    if (onDragLeave != null) __obj.updateDynamic("onDragLeave")(js.Any.fromFunction1(onDragLeave))
-    if (onDragOver != null) __obj.updateDynamic("onDragOver")(js.Any.fromFunction1(onDragOver))
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction1(onDragStart))
-    if (onDrop != null) __obj.updateDynamic("onDrop")(js.Any.fromFunction1(onDrop))
-    if (onDurationChange != null) __obj.updateDynamic("onDurationChange")(js.Any.fromFunction1(onDurationChange))
-    if (onEmptied != null) __obj.updateDynamic("onEmptied")(js.Any.fromFunction1(onEmptied))
-    if (onEncrypted != null) __obj.updateDynamic("onEncrypted")(js.Any.fromFunction1(onEncrypted))
-    if (onEnded != null) __obj.updateDynamic("onEnded")(js.Any.fromFunction1(onEnded))
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onInput != null) __obj.updateDynamic("onInput")(js.Any.fromFunction1(onInput))
-    if (onInvalid != null) __obj.updateDynamic("onInvalid")(js.Any.fromFunction1(onInvalid))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
-    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
-    if (onLoadStart != null) __obj.updateDynamic("onLoadStart")(js.Any.fromFunction1(onLoadStart))
-    if (onLoadedData != null) __obj.updateDynamic("onLoadedData")(js.Any.fromFunction1(onLoadedData))
-    if (onLoadedMetadata != null) __obj.updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(onLoadedMetadata))
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
-    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(js.Any.fromFunction1(onMouseOut))
-    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(js.Any.fromFunction1(onMouseOver))
-    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
-    if (onPaste != null) __obj.updateDynamic("onPaste")(js.Any.fromFunction1(onPaste))
-    if (onPause != null) __obj.updateDynamic("onPause")(js.Any.fromFunction1(onPause))
-    if (onPlay != null) __obj.updateDynamic("onPlay")(js.Any.fromFunction1(onPlay))
-    if (onPlaying != null) __obj.updateDynamic("onPlaying")(js.Any.fromFunction1(onPlaying))
-    if (onPointerCancel != null) __obj.updateDynamic("onPointerCancel")(js.Any.fromFunction1(onPointerCancel))
-    if (onPointerDown != null) __obj.updateDynamic("onPointerDown")(js.Any.fromFunction1(onPointerDown))
-    if (onPointerEnter != null) __obj.updateDynamic("onPointerEnter")(js.Any.fromFunction1(onPointerEnter))
-    if (onPointerLeave != null) __obj.updateDynamic("onPointerLeave")(js.Any.fromFunction1(onPointerLeave))
-    if (onPointerMove != null) __obj.updateDynamic("onPointerMove")(js.Any.fromFunction1(onPointerMove))
-    if (onPointerOut != null) __obj.updateDynamic("onPointerOut")(js.Any.fromFunction1(onPointerOut))
-    if (onPointerOver != null) __obj.updateDynamic("onPointerOver")(js.Any.fromFunction1(onPointerOver))
-    if (onPointerUp != null) __obj.updateDynamic("onPointerUp")(js.Any.fromFunction1(onPointerUp))
-    if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
-    if (onRateChange != null) __obj.updateDynamic("onRateChange")(js.Any.fromFunction1(onRateChange))
-    if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
-    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
-    if (onSeeked != null) __obj.updateDynamic("onSeeked")(js.Any.fromFunction1(onSeeked))
-    if (onSeeking != null) __obj.updateDynamic("onSeeking")(js.Any.fromFunction1(onSeeking))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
-    if (onStalled != null) __obj.updateDynamic("onStalled")(js.Any.fromFunction1(onStalled))
-    if (onSubmit != null) __obj.updateDynamic("onSubmit")(js.Any.fromFunction1(onSubmit))
-    if (onSuspend != null) __obj.updateDynamic("onSuspend")(js.Any.fromFunction1(onSuspend))
-    if (onTimeUpdate != null) __obj.updateDynamic("onTimeUpdate")(js.Any.fromFunction1(onTimeUpdate))
-    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
-    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
-    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
-    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
-    if (onTransitionEnd != null) __obj.updateDynamic("onTransitionEnd")(js.Any.fromFunction1(onTransitionEnd))
-    if (onVolumeChange != null) __obj.updateDynamic("onVolumeChange")(js.Any.fromFunction1(onVolumeChange))
-    if (onWaiting != null) __obj.updateDynamic("onWaiting")(js.Any.fromFunction1(onWaiting))
-    if (onWheel != null) __obj.updateDynamic("onWheel")(js.Any.fromFunction1(onWheel))
-    if (tagName != null) __obj.updateDynamic("tagName")(tagName.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Icon] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dangerouslySetInnerHTML(value: AnonHtml): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
+    @scala.inline
+    def htmlTitle(value: String): this.type = set("htmlTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: IconName | MaybeElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconNull: this.type = set("icon", null)
+    @scala.inline
+    def iconSize(value: Double): this.type = set("iconSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def intent(value: Intent): this.type = set("intent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAbort(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
+    @scala.inline
+    def onAnimationEnd(value: SyntheticAnimationEvent[HTMLElement] => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onAnimationIteration(value: SyntheticAnimationEvent[HTMLElement] => Unit): this.type = set("onAnimationIteration", js.Any.fromFunction1(value))
+    @scala.inline
+    def onAnimationStart(value: SyntheticAnimationEvent[HTMLElement] => Unit): this.type = set("onAnimationStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onAuxClick(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onAuxClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onBeforeInput(value: SyntheticEvent[EventTarget with HTMLElement, Event_] => Unit): this.type = set("onBeforeInput", js.Any.fromFunction1(value))
+    @scala.inline
+    def onBlur(value: SyntheticFocusEvent[HTMLElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCanPlay(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onCanPlay", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCanPlayThrough(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: SyntheticEvent[EventTarget with HTMLElement, Event_] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClick(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCompositionEnd(value: SyntheticCompositionEvent[HTMLElement] => Unit): this.type = set("onCompositionEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCompositionStart(value: SyntheticCompositionEvent[HTMLElement] => Unit): this.type = set("onCompositionStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCompositionUpdate(value: SyntheticCompositionEvent[HTMLElement] => Unit): this.type = set("onCompositionUpdate", js.Any.fromFunction1(value))
+    @scala.inline
+    def onContextMenu(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCopy(value: SyntheticClipboardEvent[HTMLElement] => Unit): this.type = set("onCopy", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCut(value: SyntheticClipboardEvent[HTMLElement] => Unit): this.type = set("onCut", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDoubleClick(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onDoubleClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDrag(value: DragEvent[HTMLElement] => Unit): this.type = set("onDrag", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragEnd(value: DragEvent[HTMLElement] => Unit): this.type = set("onDragEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragEnter(value: DragEvent[HTMLElement] => Unit): this.type = set("onDragEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragExit(value: DragEvent[HTMLElement] => Unit): this.type = set("onDragExit", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragLeave(value: DragEvent[HTMLElement] => Unit): this.type = set("onDragLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragOver(value: DragEvent[HTMLElement] => Unit): this.type = set("onDragOver", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragStart(value: DragEvent[HTMLElement] => Unit): this.type = set("onDragStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDrop(value: DragEvent[HTMLElement] => Unit): this.type = set("onDrop", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDurationChange(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onDurationChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEmptied(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onEmptied", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEncrypted(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onEncrypted", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEnded(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
+    @scala.inline
+    def onError(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFocus(value: SyntheticFocusEvent[HTMLElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def onInput(value: SyntheticEvent[EventTarget with HTMLElement, Event_] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
+    @scala.inline
+    def onInvalid(value: SyntheticEvent[EventTarget with HTMLElement, Event_] => Unit): this.type = set("onInvalid", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyDown(value: SyntheticKeyboardEvent[HTMLElement] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyPress(value: SyntheticKeyboardEvent[HTMLElement] => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyUp(value: SyntheticKeyboardEvent[HTMLElement] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoad(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoadStart(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onLoadStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoadedData(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onLoadedData", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoadedMetadata(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseDown(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseEnter(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseLeave(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseMove(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onMouseMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseOut(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onMouseOut", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseOver(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onMouseOver", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseUp(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onMouseUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPaste(value: SyntheticClipboardEvent[HTMLElement] => Unit): this.type = set("onPaste", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPause(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPlay(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPlaying(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onPlaying", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPointerCancel(value: SyntheticPointerEvent[HTMLElement] => Unit): this.type = set("onPointerCancel", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPointerDown(value: SyntheticPointerEvent[HTMLElement] => Unit): this.type = set("onPointerDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPointerEnter(value: SyntheticPointerEvent[HTMLElement] => Unit): this.type = set("onPointerEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPointerLeave(value: SyntheticPointerEvent[HTMLElement] => Unit): this.type = set("onPointerLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPointerMove(value: SyntheticPointerEvent[HTMLElement] => Unit): this.type = set("onPointerMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPointerOut(value: SyntheticPointerEvent[HTMLElement] => Unit): this.type = set("onPointerOut", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPointerOver(value: SyntheticPointerEvent[HTMLElement] => Unit): this.type = set("onPointerOver", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPointerUp(value: SyntheticPointerEvent[HTMLElement] => Unit): this.type = set("onPointerUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def onProgress(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRateChange(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onRateChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onReset(value: SyntheticEvent[EventTarget with HTMLElement, Event_] => Unit): this.type = set("onReset", js.Any.fromFunction1(value))
+    @scala.inline
+    def onScroll(value: SyntheticUIEvent[HTMLElement] => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSeeked(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onSeeked", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSeeking(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onSeeking", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSelect(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def onStalled(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSubmit(value: SyntheticEvent[EventTarget with HTMLElement, Event_] => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSuspend(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onSuspend", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTimeUpdate(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onTimeUpdate", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchCancel(value: SyntheticTouchEvent[HTMLElement] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchEnd(value: SyntheticTouchEvent[HTMLElement] => Unit): this.type = set("onTouchEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchMove(value: SyntheticTouchEvent[HTMLElement] => Unit): this.type = set("onTouchMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchStart(value: SyntheticTouchEvent[HTMLElement] => Unit): this.type = set("onTouchStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTransitionEnd(value: SyntheticTransitionEvent[HTMLElement] => Unit): this.type = set("onTransitionEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onVolumeChange(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onWaiting(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onWaiting", js.Any.fromFunction1(value))
+    @scala.inline
+    def onWheel(value: SyntheticWheelEvent[HTMLElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagName(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any): this.type = set("tagName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String | `false`): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleNull: this.type = set("title", null)
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Icon] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.blueprintjsCore.mod.Icon](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IIconProps with DOMAttributes[HTMLElement]
+  
+  def withProps(p: IIconProps with DOMAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Icon.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

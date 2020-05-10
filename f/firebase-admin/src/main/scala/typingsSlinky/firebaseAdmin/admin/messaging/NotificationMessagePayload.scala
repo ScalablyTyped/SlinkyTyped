@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation._
   * See [Build send requests](/docs/cloud-messaging/send-message)
   * for code samples and detailed documentation.
   */
+@js.native
 trait NotificationMessagePayload
   extends /* key */ StringDictionary[js.UndefOr[String]] {
   /**
@@ -24,13 +25,13 @@ trait NotificationMessagePayload
     *
     * **Platforms:** iOS
     */
-  var badge: js.UndefOr[String] = js.undefined
+  var badge: js.UndefOr[String] = js.native
   /**
     * The notification's body text.
     *
     * **Platforms:** iOS, Android, Web
     */
-  var body: js.UndefOr[String] = js.undefined
+  var body: js.UndefOr[String] = js.native
   /**
     * Variable string values to be used in place of the format specifiers in
     * `body_loc_key` to use to localize the body text to the user's current
@@ -50,7 +51,7 @@ trait NotificationMessagePayload
     *
     * **Platforms:** iOS, Android
     */
-  var bodyLocArgs: js.UndefOr[String] = js.undefined
+  var bodyLocArgs: js.UndefOr[String] = js.native
   /**
     * The key to the body string in the app's string resources to use to localize
     * the body text to the user's current localization.
@@ -66,7 +67,7 @@ trait NotificationMessagePayload
     *
     * **Platforms:** iOS, Android
     */
-  var bodyLocKey: js.UndefOr[String] = js.undefined
+  var bodyLocKey: js.UndefOr[String] = js.native
   /**
     * Action associated with a user click on the notification. If specified, an
     * activity with a matching Intent Filter is launched when a user clicks on the
@@ -74,13 +75,13 @@ trait NotificationMessagePayload
     *
     *   * **Platforms:** Android
     */
-  var clickAction: js.UndefOr[String] = js.undefined
+  var clickAction: js.UndefOr[String] = js.native
   /**
     * The notification icon's color, expressed in `#rrggbb` format.
     *
     * **Platforms:** Android
     */
-  var color: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[String] = js.native
   /**
     * The notification's icon.
     *
@@ -92,7 +93,7 @@ trait NotificationMessagePayload
     *
     * **Platforms:** Android, Web
     */
-  var icon: js.UndefOr[String] = js.undefined
+  var icon: js.UndefOr[String] = js.native
   /**
     * Identifier used to replace existing notifications in the notification drawer.
     *
@@ -103,14 +104,14 @@ trait NotificationMessagePayload
     *
     * **Platforms:** Android
     */
-  var sound: js.UndefOr[String] = js.undefined
-  var tag: js.UndefOr[String] = js.undefined
+  var sound: js.UndefOr[String] = js.native
+  var tag: js.UndefOr[String] = js.native
   /**
     * The notification's title.
     *
     * **Platforms:** iOS, Android, Web
     */
-  var title: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.native
   /**
     * Variable string values to be used in place of the format specifiers in
     * `title_loc_key` to use to localize the title text to the user's current
@@ -130,7 +131,7 @@ trait NotificationMessagePayload
     *
     * **Platforms:** iOS, Android
     */
-  var titleLocArgs: js.UndefOr[String] = js.undefined
+  var titleLocArgs: js.UndefOr[String] = js.native
   /**
     * The key to the title string in the app's string resources to use to localize
     * the title text to the user's current localization.
@@ -147,41 +148,166 @@ trait NotificationMessagePayload
     *
     * **Platforms:** iOS, Android
     */
-  var titleLocKey: js.UndefOr[String] = js.undefined
+  var titleLocKey: js.UndefOr[String] = js.native
 }
 
 object NotificationMessagePayload {
   @scala.inline
-  def apply(
-    StringDictionary: /* key */ StringDictionary[js.UndefOr[String]] = null,
-    badge: String = null,
-    body: String = null,
-    bodyLocArgs: String = null,
-    bodyLocKey: String = null,
-    clickAction: String = null,
-    color: String = null,
-    icon: String = null,
-    sound: String = null,
-    tag: String = null,
-    title: String = null,
-    titleLocArgs: String = null,
-    titleLocKey: String = null
-  ): NotificationMessagePayload = {
+  def apply(): NotificationMessagePayload = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (badge != null) __obj.updateDynamic("badge")(badge.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (bodyLocArgs != null) __obj.updateDynamic("bodyLocArgs")(bodyLocArgs.asInstanceOf[js.Any])
-    if (bodyLocKey != null) __obj.updateDynamic("bodyLocKey")(bodyLocKey.asInstanceOf[js.Any])
-    if (clickAction != null) __obj.updateDynamic("clickAction")(clickAction.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (sound != null) __obj.updateDynamic("sound")(sound.asInstanceOf[js.Any])
-    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titleLocArgs != null) __obj.updateDynamic("titleLocArgs")(titleLocArgs.asInstanceOf[js.Any])
-    if (titleLocKey != null) __obj.updateDynamic("titleLocKey")(titleLocKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotificationMessagePayload]
   }
+  @scala.inline
+  implicit class NotificationMessagePayloadOps[Self <: NotificationMessagePayload] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBadge(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBadge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBody(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBodyLocArgs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyLocArgs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBodyLocArgs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyLocArgs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBodyLocKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyLocKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBodyLocKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyLocKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClickAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClickAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSound(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sound")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSound: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sound")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleLocArgs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleLocArgs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleLocArgs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleLocArgs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleLocKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleLocKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleLocKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleLocKey")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

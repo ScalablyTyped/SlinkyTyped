@@ -15,16 +15,14 @@ trait Status extends js.Object
 
 object Status {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def completed: typingsSlinky.nodeZendesk.nodeZendeskStrings.completed = "completed".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.completed]
   @scala.inline
-  def completed: typingsSlinky.nodeZendesk.nodeZendeskStrings.completed = this.cast("completed")
+  def failed: typingsSlinky.nodeZendesk.nodeZendeskStrings.failed = "failed".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.failed]
   @scala.inline
-  def failed: typingsSlinky.nodeZendesk.nodeZendeskStrings.failed = this.cast("failed")
+  def killed: typingsSlinky.nodeZendesk.nodeZendeskStrings.killed = "killed".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.killed]
   @scala.inline
-  def killed: typingsSlinky.nodeZendesk.nodeZendeskStrings.killed = this.cast("killed")
+  def queued: typingsSlinky.nodeZendesk.nodeZendeskStrings.queued = "queued".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.queued]
   @scala.inline
-  def queued: typingsSlinky.nodeZendesk.nodeZendeskStrings.queued = this.cast("queued")
-  @scala.inline
-  def working: typingsSlinky.nodeZendesk.nodeZendeskStrings.working = this.cast("working")
+  def working: typingsSlinky.nodeZendesk.nodeZendeskStrings.working = "working".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.working]
 }
 

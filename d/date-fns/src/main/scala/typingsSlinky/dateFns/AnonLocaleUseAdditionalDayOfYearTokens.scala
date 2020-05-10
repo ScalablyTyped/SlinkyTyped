@@ -12,30 +12,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonLocaleUseAdditionalDayOfYearTokens extends js.Object {
-  var firstWeekContainsDate: js.UndefOr[`1` | `2` | `3` | `4` | `5` | `6` | `7`] = js.undefined
-  var locale: js.UndefOr[Locale] = js.undefined
-  var useAdditionalDayOfYearTokens: js.UndefOr[Boolean] = js.undefined
-  var useAdditionalWeekYearTokens: js.UndefOr[Boolean] = js.undefined
-  var weekStartsOn: js.UndefOr[`0` | `1` | `2` | `3` | `4` | `5` | `6`] = js.undefined
+  var firstWeekContainsDate: js.UndefOr[`1` | `2` | `3` | `4` | `5` | `6` | `7`] = js.native
+  var locale: js.UndefOr[Locale] = js.native
+  var useAdditionalDayOfYearTokens: js.UndefOr[Boolean] = js.native
+  var useAdditionalWeekYearTokens: js.UndefOr[Boolean] = js.native
+  var weekStartsOn: js.UndefOr[`0` | `1` | `2` | `3` | `4` | `5` | `6`] = js.native
 }
 
 object AnonLocaleUseAdditionalDayOfYearTokens {
   @scala.inline
-  def apply(
-    firstWeekContainsDate: `1` | `2` | `3` | `4` | `5` | `6` | `7` = null,
-    locale: Locale = null,
-    useAdditionalDayOfYearTokens: js.UndefOr[Boolean] = js.undefined,
-    useAdditionalWeekYearTokens: js.UndefOr[Boolean] = js.undefined,
-    weekStartsOn: `0` | `1` | `2` | `3` | `4` | `5` | `6` = null
-  ): AnonLocaleUseAdditionalDayOfYearTokens = {
+  def apply(): AnonLocaleUseAdditionalDayOfYearTokens = {
     val __obj = js.Dynamic.literal()
-    if (firstWeekContainsDate != null) __obj.updateDynamic("firstWeekContainsDate")(firstWeekContainsDate.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (!js.isUndefined(useAdditionalDayOfYearTokens)) __obj.updateDynamic("useAdditionalDayOfYearTokens")(useAdditionalDayOfYearTokens.asInstanceOf[js.Any])
-    if (!js.isUndefined(useAdditionalWeekYearTokens)) __obj.updateDynamic("useAdditionalWeekYearTokens")(useAdditionalWeekYearTokens.asInstanceOf[js.Any])
-    if (weekStartsOn != null) __obj.updateDynamic("weekStartsOn")(weekStartsOn.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonLocaleUseAdditionalDayOfYearTokens]
   }
+  @scala.inline
+  implicit class AnonLocaleUseAdditionalDayOfYearTokensOps[Self <: AnonLocaleUseAdditionalDayOfYearTokens] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFirstWeekContainsDate(value: `1` | `2` | `3` | `4` | `5` | `6` | `7`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstWeekContainsDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstWeekContainsDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstWeekContainsDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: Locale): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseAdditionalDayOfYearTokens(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useAdditionalDayOfYearTokens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseAdditionalDayOfYearTokens: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useAdditionalDayOfYearTokens")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseAdditionalWeekYearTokens(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useAdditionalWeekYearTokens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseAdditionalWeekYearTokens: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useAdditionalWeekYearTokens")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeekStartsOn(value: `0` | `1` | `2` | `3` | `4` | `5` | `6`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weekStartsOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeekStartsOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weekStartsOn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

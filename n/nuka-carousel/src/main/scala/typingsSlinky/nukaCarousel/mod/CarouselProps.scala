@@ -1,6 +1,8 @@
 package typingsSlinky.nukaCarousel.mod
 
+import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import typingsSlinky.nukaCarousel.AnonContainerClassName
 import typingsSlinky.nukaCarousel.nukaCarouselStrings.zoom
 import typingsSlinky.nukaCarousel.slideActioninCarouselSlid
@@ -8,345 +10,940 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CarouselProps extends js.Object {
   /**
     * Hook to be called after a slide is changed
     * @param prevSlide Index of the previous slide
     */
-  var afterSlide: js.UndefOr[js.Function1[/* prevSlide */ Double, Unit]] = js.undefined
+  var afterSlide: js.UndefOr[js.Function1[/* prevSlide */ Double, Unit]] = js.native
   /**
     * Adds a zoom effect on the currently visible slide.
     */
-  var animation: js.UndefOr[zoom] = js.undefined
+  var animation: js.UndefOr[zoom] = js.native
   /**
     * Will generate a style tag to help ensure images are displayed properly
     * @default true
     */
-  var autoGenerateStyleTag: js.UndefOr[Boolean] = js.undefined
+  var autoGenerateStyleTag: js.UndefOr[Boolean] = js.native
   /**
     * Autoplay mode active
     * @default false
     */
-  var autoplay: js.UndefOr[Boolean] = js.undefined
+  var autoplay: js.UndefOr[Boolean] = js.native
   /**
     * Interval for autoplay iteration (ms)
     * @default 3000
     */
-  var autoplayInterval: js.UndefOr[Double] = js.undefined
+  var autoplayInterval: js.UndefOr[Double] = js.native
   /**
     * Autoplay cycles through slide indexes in reverse
     * @default false
     */
-  var autoplayReverse: js.UndefOr[Boolean] = js.undefined
+  var autoplayReverse: js.UndefOr[Boolean] = js.native
   /**
     * Hook to be called before a slide is changed
     * @param currentSlide Index of the current slide
     * @param endSlide Index of the last slide
     */
-  var beforeSlide: js.UndefOr[js.Function2[/* currentSlide */ Double, /* endSlide */ Double, Unit]] = js.undefined
+  var beforeSlide: js.UndefOr[js.Function2[/* currentSlide */ Double, /* endSlide */ Double, Unit]] = js.native
   /**
     * When displaying more than one slide,
     * sets which position to anchor the current slide to
     */
-  var cellAlign: js.UndefOr[CarouselCellAlignProp] = js.undefined
+  var cellAlign: js.UndefOr[CarouselCellAlignProp] = js.native
   /**
     * Space between slides, as an integer, but reflected as px
     */
-  var cellSpacing: js.UndefOr[Double] = js.undefined
+  var cellSpacing: js.UndefOr[Double] = js.native
   /**
     * Additional className
     */
-  var className: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
   /**
     * This prop lets you apply custom classes and styles to the default Next, Previous, and Paging Dots controls
     */
-  var defaultControlsConfig: js.UndefOr[AnonContainerClassName] = js.undefined
+  var defaultControlsConfig: js.UndefOr[AnonContainerClassName] = js.native
   /**
     * Disable slides animation
     * @default false
     */
-  var disableAnimation: js.UndefOr[Boolean] = js.undefined
+  var disableAnimation: js.UndefOr[Boolean] = js.native
   /**
     * Disable swipe before first slide and after last slide
     * @default false
     */
-  var disableEdgeSwiping: js.UndefOr[Boolean] = js.undefined
+  var disableEdgeSwiping: js.UndefOr[Boolean] = js.native
   /**
     * Enable mouse swipe/dragging
     */
-  var dragging: js.UndefOr[Boolean] = js.undefined
+  var dragging: js.UndefOr[Boolean] = js.native
   /**
     * Animation easing function
     * @see https://github.com/d3/d3-ease
     */
-  var easing: js.UndefOr[String] = js.undefined
+  var easing: js.UndefOr[String] = js.native
   /**
     * Animation easing function when swipe exceeds edge
     * @see https://github.com/d3/d3-ease
     */
-  var edgeEasing: js.UndefOr[String] = js.undefined
+  var edgeEasing: js.UndefOr[String] = js.native
   /**
     * When set to true, disable keyboard controls
     * @default false
     */
-  var enableKeyboardControls: js.UndefOr[Boolean] = js.undefined
+  var enableKeyboardControls: js.UndefOr[Boolean] = js.native
   /**
     * Used to set overflow style property on slider frame
     * @default 'hidden'
     */
-  var frameOverflow: js.UndefOr[String] = js.undefined
+  var frameOverflow: js.UndefOr[String] = js.native
   /**
     * Used to set the margin of the slider frame.
     * Accepts any string dimension value such as "0px 20px" or "500px"
     * @example '0px 20px'
     * @example '500px'
     */
-  var framePadding: js.UndefOr[String] = js.undefined
+  var framePadding: js.UndefOr[String] = js.native
   /**
     * Optional callback to apply styles to the container of a control.
     */
-  var getControlContainerStyle: js.UndefOr[js.Function1[/* key */ CarouselControlContainerProp, CSSProperties]] = js.undefined
+  var getControlsContainerStyle: js.UndefOr[js.Function1[/* key */ CarouselControlContainerProp, CSSProperties]] = js.native
   /**
     * Used to hardcode the slider height
     * @example '80%'
     * @example '500px'
     */
-  var height: js.UndefOr[String] = js.undefined
+  var height: js.UndefOr[String] = js.native
   /**
     * Change the height of the slides based either on the first slide,
     * the current slide, or the maximum height of all slides.
     */
-  var heightMode: js.UndefOr[CarouselHeightModeProp] = js.undefined
+  var heightMode: js.UndefOr[CarouselHeightModeProp] = js.native
   /**
     * Initial height of the slides (px)
     */
-  var initialSlideHeight: js.UndefOr[Double] = js.undefined
+  var initialSlideHeight: js.UndefOr[Double] = js.native
   /**
     * Initial width of the slides (px)
     */
-  var initialSlideWidth: js.UndefOr[Double] = js.undefined
+  var initialSlideWidth: js.UndefOr[Double] = js.native
+  /**
+    * Ref to pass to carousel element
+    */
+  var innerRef: js.UndefOr[ReactRef[HTMLInputElement]] = js.native
   /**
     * When enableKeyboardControls is enabled, Configure keyCodes for corresponding slide actions as array of keyCodes
     */
-  var keyCodeConfig: js.UndefOr[slideActioninCarouselSlid] = js.undefined
+  var keyCodeConfig: js.UndefOr[slideActioninCarouselSlid] = js.native
   /**
     * optional callback function
     */
-  var onDragStart: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onDragStart: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * Window onResize callback
     */
-  var onResize: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onResize: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * Pause autoPlay when mouse is over carousel
     * @default true
     */
-  var pauseOnHover: js.UndefOr[Boolean] = js.undefined
+  var pauseOnHover: js.UndefOr[Boolean] = js.native
   /**
     * Function for rendering aria-live announcement messages
     */
   var renderAnnounceSlideMessage: js.UndefOr[
     js.Function1[/* hasCurrentSlideSlideCount */ CarouselSlideRenderControlProps, String]
-  ] = js.undefined
+  ] = js.native
   /**
     * Function for rendering bottom center control
     */
-  var renderBottomCenterControls: js.UndefOr[CarouselRenderControl | Null] = js.undefined
+  var renderBottomCenterControls: js.UndefOr[CarouselRenderControl | Null] = js.native
   /**
     * Function for rendering bottom left control
     */
-  var renderBottomLeftControls: js.UndefOr[CarouselRenderControl | Null] = js.undefined
+  var renderBottomLeftControls: js.UndefOr[CarouselRenderControl | Null] = js.native
   /**
     * Function for rendering bottom right control
     */
-  var renderBottomRightControls: js.UndefOr[CarouselRenderControl | Null] = js.undefined
+  var renderBottomRightControls: js.UndefOr[CarouselRenderControl | Null] = js.native
   /**
     * Function for rendering center center control
     */
-  var renderCenterCenterControls: js.UndefOr[CarouselRenderControl | Null] = js.undefined
+  var renderCenterCenterControls: js.UndefOr[CarouselRenderControl | Null] = js.native
   /**
     * Function for rendering center left control
     */
-  var renderCenterLeftControls: js.UndefOr[CarouselRenderControl | Null] = js.undefined
+  var renderCenterLeftControls: js.UndefOr[CarouselRenderControl | Null] = js.native
   /**
     * Function for rendering center right control
     */
-  var renderCenterRightControls: js.UndefOr[CarouselRenderControl | Null] = js.undefined
+  var renderCenterRightControls: js.UndefOr[CarouselRenderControl | Null] = js.native
   /**
     * Function for rendering top center control
     */
-  var renderTopCenterControls: js.UndefOr[CarouselRenderControl | Null] = js.undefined
+  var renderTopCenterControls: js.UndefOr[CarouselRenderControl | Null] = js.native
   /**
     * Function for rendering top left control
     */
-  var renderTopLeftControls: js.UndefOr[CarouselRenderControl | Null] = js.undefined
+  var renderTopLeftControls: js.UndefOr[CarouselRenderControl | Null] = js.native
   /**
     * Function for rendering top right control
     */
-  var renderTopRightControls: js.UndefOr[CarouselRenderControl | Null] = js.undefined
+  var renderTopRightControls: js.UndefOr[CarouselRenderControl | Null] = js.native
+  /**
+    * Supports 'page' and 'remainder' scroll modes.
+    * Defaults to 'remainder'.
+    */
+  var scrollMode: js.UndefOr[CarouselScrollModeProp] = js.native
   /**
     * Manually set the index of the slide to be shown
     */
-  var slideIndex: js.UndefOr[Double] = js.undefined
+  var slideIndex: js.UndefOr[Double] = js.native
   /**
     * Manually set slideWidth
     * @example '20px'
     * @example 0.8
     */
-  var slideWidth: js.UndefOr[CarouselSlideWidthProp] = js.undefined
+  var slideWidth: js.UndefOr[CarouselSlideWidthProp] = js.native
   /**
     * Slides to scroll at once. Set to "auto"
     * to always scroll the current number of visible slides
     */
-  var slidesToScroll: js.UndefOr[CarouselSlidesToScrollProp] = js.undefined
+  var slidesToScroll: js.UndefOr[CarouselSlidesToScrollProp] = js.native
   /**
     * Slides to show at once
     */
-  var slidesToShow: js.UndefOr[Double] = js.undefined
+  var slidesToShow: js.UndefOr[Double] = js.native
   /**
     * Animation duration
     */
-  var speed: js.UndefOr[Double] = js.undefined
+  var speed: js.UndefOr[Double] = js.native
   /**
     * style object
     */
-  var style: js.UndefOr[CSSProperties] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.native
   /**
     * Enable touch swipe/dragging
     */
-  var swiping: js.UndefOr[Boolean] = js.undefined
+  var swiping: js.UndefOr[Boolean] = js.native
   /**
     * Set the way slides transition from one to the next
     */
-  var transitionMode: js.UndefOr[CarouselTransitionModeProp] = js.undefined
+  var transitionMode: js.UndefOr[CarouselTransitionModeProp] = js.native
   /**
     * Enable the slides to transition vertically
     */
-  var vertical: js.UndefOr[Boolean] = js.undefined
+  var vertical: js.UndefOr[Boolean] = js.native
   /**
     * Used to hardcode the slider width
     * @example '80%'
     * @example '500px'
     */
-  var width: js.UndefOr[String] = js.undefined
+  var width: js.UndefOr[String] = js.native
   /**
     * Used to remove all controls at once. Overwrites the render[Top, Right, Bottom, Left]CenterControls()
     * @default false
     */
-  var withoutControls: js.UndefOr[Boolean] = js.undefined
+  var withoutControls: js.UndefOr[Boolean] = js.native
   /**
     * Sets infinite wrapAround mode
     * @default false
     */
-  var wrapAround: js.UndefOr[Boolean] = js.undefined
+  var wrapAround: js.UndefOr[Boolean] = js.native
 }
 
 object CarouselProps {
   @scala.inline
-  def apply(
-    afterSlide: /* prevSlide */ Double => Unit = null,
-    animation: zoom = null,
-    autoGenerateStyleTag: js.UndefOr[Boolean] = js.undefined,
-    autoplay: js.UndefOr[Boolean] = js.undefined,
-    autoplayInterval: Int | Double = null,
-    autoplayReverse: js.UndefOr[Boolean] = js.undefined,
-    beforeSlide: (/* currentSlide */ Double, /* endSlide */ Double) => Unit = null,
-    cellAlign: CarouselCellAlignProp = null,
-    cellSpacing: Int | Double = null,
-    className: String = null,
-    defaultControlsConfig: AnonContainerClassName = null,
-    disableAnimation: js.UndefOr[Boolean] = js.undefined,
-    disableEdgeSwiping: js.UndefOr[Boolean] = js.undefined,
-    dragging: js.UndefOr[Boolean] = js.undefined,
-    easing: String = null,
-    edgeEasing: String = null,
-    enableKeyboardControls: js.UndefOr[Boolean] = js.undefined,
-    frameOverflow: String = null,
-    framePadding: String = null,
-    getControlContainerStyle: /* key */ CarouselControlContainerProp => CSSProperties = null,
-    height: String = null,
-    heightMode: CarouselHeightModeProp = null,
-    initialSlideHeight: Int | Double = null,
-    initialSlideWidth: Int | Double = null,
-    keyCodeConfig: slideActioninCarouselSlid = null,
-    onDragStart: () => Unit = null,
-    onResize: () => Unit = null,
-    pauseOnHover: js.UndefOr[Boolean] = js.undefined,
-    renderAnnounceSlideMessage: /* hasCurrentSlideSlideCount */ CarouselSlideRenderControlProps => String = null,
-    renderBottomCenterControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    renderBottomLeftControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    renderBottomRightControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    renderCenterCenterControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    renderCenterLeftControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    renderCenterRightControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    renderTopCenterControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    renderTopLeftControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    renderTopRightControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    slideIndex: Int | Double = null,
-    slideWidth: CarouselSlideWidthProp = null,
-    slidesToScroll: CarouselSlidesToScrollProp = null,
-    slidesToShow: Int | Double = null,
-    speed: Int | Double = null,
-    style: CSSProperties = null,
-    swiping: js.UndefOr[Boolean] = js.undefined,
-    transitionMode: CarouselTransitionModeProp = null,
-    vertical: js.UndefOr[Boolean] = js.undefined,
-    width: String = null,
-    withoutControls: js.UndefOr[Boolean] = js.undefined,
-    wrapAround: js.UndefOr[Boolean] = js.undefined
-  ): CarouselProps = {
+  def apply(): CarouselProps = {
     val __obj = js.Dynamic.literal()
-    if (afterSlide != null) __obj.updateDynamic("afterSlide")(js.Any.fromFunction1(afterSlide))
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoGenerateStyleTag)) __obj.updateDynamic("autoGenerateStyleTag")(autoGenerateStyleTag.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.asInstanceOf[js.Any])
-    if (autoplayInterval != null) __obj.updateDynamic("autoplayInterval")(autoplayInterval.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoplayReverse)) __obj.updateDynamic("autoplayReverse")(autoplayReverse.asInstanceOf[js.Any])
-    if (beforeSlide != null) __obj.updateDynamic("beforeSlide")(js.Any.fromFunction2(beforeSlide))
-    if (cellAlign != null) __obj.updateDynamic("cellAlign")(cellAlign.asInstanceOf[js.Any])
-    if (cellSpacing != null) __obj.updateDynamic("cellSpacing")(cellSpacing.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (defaultControlsConfig != null) __obj.updateDynamic("defaultControlsConfig")(defaultControlsConfig.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableAnimation)) __obj.updateDynamic("disableAnimation")(disableAnimation.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableEdgeSwiping)) __obj.updateDynamic("disableEdgeSwiping")(disableEdgeSwiping.asInstanceOf[js.Any])
-    if (!js.isUndefined(dragging)) __obj.updateDynamic("dragging")(dragging.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
-    if (edgeEasing != null) __obj.updateDynamic("edgeEasing")(edgeEasing.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableKeyboardControls)) __obj.updateDynamic("enableKeyboardControls")(enableKeyboardControls.asInstanceOf[js.Any])
-    if (frameOverflow != null) __obj.updateDynamic("frameOverflow")(frameOverflow.asInstanceOf[js.Any])
-    if (framePadding != null) __obj.updateDynamic("framePadding")(framePadding.asInstanceOf[js.Any])
-    if (getControlContainerStyle != null) __obj.updateDynamic("getControlContainerStyle")(js.Any.fromFunction1(getControlContainerStyle))
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (heightMode != null) __obj.updateDynamic("heightMode")(heightMode.asInstanceOf[js.Any])
-    if (initialSlideHeight != null) __obj.updateDynamic("initialSlideHeight")(initialSlideHeight.asInstanceOf[js.Any])
-    if (initialSlideWidth != null) __obj.updateDynamic("initialSlideWidth")(initialSlideWidth.asInstanceOf[js.Any])
-    if (keyCodeConfig != null) __obj.updateDynamic("keyCodeConfig")(keyCodeConfig.asInstanceOf[js.Any])
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction0(onDragStart))
-    if (onResize != null) __obj.updateDynamic("onResize")(js.Any.fromFunction0(onResize))
-    if (!js.isUndefined(pauseOnHover)) __obj.updateDynamic("pauseOnHover")(pauseOnHover.asInstanceOf[js.Any])
-    if (renderAnnounceSlideMessage != null) __obj.updateDynamic("renderAnnounceSlideMessage")(js.Any.fromFunction1(renderAnnounceSlideMessage))
-    if (renderBottomCenterControls != null) __obj.updateDynamic("renderBottomCenterControls")(js.Any.fromFunction1(renderBottomCenterControls))
-    if (renderBottomLeftControls != null) __obj.updateDynamic("renderBottomLeftControls")(js.Any.fromFunction1(renderBottomLeftControls))
-    if (renderBottomRightControls != null) __obj.updateDynamic("renderBottomRightControls")(js.Any.fromFunction1(renderBottomRightControls))
-    if (renderCenterCenterControls != null) __obj.updateDynamic("renderCenterCenterControls")(js.Any.fromFunction1(renderCenterCenterControls))
-    if (renderCenterLeftControls != null) __obj.updateDynamic("renderCenterLeftControls")(js.Any.fromFunction1(renderCenterLeftControls))
-    if (renderCenterRightControls != null) __obj.updateDynamic("renderCenterRightControls")(js.Any.fromFunction1(renderCenterRightControls))
-    if (renderTopCenterControls != null) __obj.updateDynamic("renderTopCenterControls")(js.Any.fromFunction1(renderTopCenterControls))
-    if (renderTopLeftControls != null) __obj.updateDynamic("renderTopLeftControls")(js.Any.fromFunction1(renderTopLeftControls))
-    if (renderTopRightControls != null) __obj.updateDynamic("renderTopRightControls")(js.Any.fromFunction1(renderTopRightControls))
-    if (slideIndex != null) __obj.updateDynamic("slideIndex")(slideIndex.asInstanceOf[js.Any])
-    if (slideWidth != null) __obj.updateDynamic("slideWidth")(slideWidth.asInstanceOf[js.Any])
-    if (slidesToScroll != null) __obj.updateDynamic("slidesToScroll")(slidesToScroll.asInstanceOf[js.Any])
-    if (slidesToShow != null) __obj.updateDynamic("slidesToShow")(slidesToShow.asInstanceOf[js.Any])
-    if (speed != null) __obj.updateDynamic("speed")(speed.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(swiping)) __obj.updateDynamic("swiping")(swiping.asInstanceOf[js.Any])
-    if (transitionMode != null) __obj.updateDynamic("transitionMode")(transitionMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (!js.isUndefined(withoutControls)) __obj.updateDynamic("withoutControls")(withoutControls.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrapAround)) __obj.updateDynamic("wrapAround")(wrapAround.asInstanceOf[js.Any])
     __obj.asInstanceOf[CarouselProps]
   }
+  @scala.inline
+  implicit class CarouselPropsOps[Self <: CarouselProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfterSlide(value: /* prevSlide */ Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterSlide")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterSlide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterSlide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimation(value: zoom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoGenerateStyleTag(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGenerateStyleTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoGenerateStyleTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGenerateStyleTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoplay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoplayInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoplayInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoplayReverse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayReverse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoplayReverse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayReverse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeSlide(value: (/* currentSlide */ Double, /* endSlide */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSlide")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeSlide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSlide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellAlign(value: CarouselCellAlignProp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellAlign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellSpacing(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellSpacing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSpacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultControlsConfig(value: AnonContainerClassName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultControlsConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultControlsConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultControlsConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableAnimation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableEdgeSwiping(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableEdgeSwiping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableEdgeSwiping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableEdgeSwiping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDragging(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDragging: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEasing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEdgeEasing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeEasing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEdgeEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeEasing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableKeyboardControls(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableKeyboardControls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableKeyboardControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableKeyboardControls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrameOverflow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameOverflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameOverflow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameOverflow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFramePadding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("framePadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFramePadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("framePadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetControlsContainerStyle(value: /* key */ CarouselControlContainerProp => CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getControlsContainerStyle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetControlsContainerStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getControlsContainerStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeightMode(value: CarouselHeightModeProp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeightMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialSlideHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialSlideHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialSlideHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialSlideHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialSlideWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialSlideWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialSlideWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialSlideWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInnerRef(value: ReactRef[HTMLInputElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInnerRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyCodeConfig(value: slideActioninCarouselSlid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyCodeConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyCodeConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyCodeConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragStart(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDragStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnResize(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnResize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPauseOnHover(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pauseOnHover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPauseOnHover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pauseOnHover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderAnnounceSlideMessage(value: /* hasCurrentSlideSlideCount */ CarouselSlideRenderControlProps => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAnnounceSlideMessage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderAnnounceSlideMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAnnounceSlideMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderBottomCenterControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBottomCenterControls")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderBottomCenterControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBottomCenterControls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderBottomCenterControlsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBottomCenterControls")(null)
+        ret
+    }
+    @scala.inline
+    def withRenderBottomLeftControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBottomLeftControls")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderBottomLeftControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBottomLeftControls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderBottomLeftControlsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBottomLeftControls")(null)
+        ret
+    }
+    @scala.inline
+    def withRenderBottomRightControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBottomRightControls")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderBottomRightControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBottomRightControls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderBottomRightControlsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBottomRightControls")(null)
+        ret
+    }
+    @scala.inline
+    def withRenderCenterCenterControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderCenterCenterControls")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderCenterCenterControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderCenterCenterControls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderCenterCenterControlsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderCenterCenterControls")(null)
+        ret
+    }
+    @scala.inline
+    def withRenderCenterLeftControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderCenterLeftControls")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderCenterLeftControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderCenterLeftControls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderCenterLeftControlsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderCenterLeftControls")(null)
+        ret
+    }
+    @scala.inline
+    def withRenderCenterRightControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderCenterRightControls")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderCenterRightControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderCenterRightControls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderCenterRightControlsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderCenterRightControls")(null)
+        ret
+    }
+    @scala.inline
+    def withRenderTopCenterControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTopCenterControls")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderTopCenterControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTopCenterControls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderTopCenterControlsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTopCenterControls")(null)
+        ret
+    }
+    @scala.inline
+    def withRenderTopLeftControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTopLeftControls")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderTopLeftControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTopLeftControls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderTopLeftControlsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTopLeftControls")(null)
+        ret
+    }
+    @scala.inline
+    def withRenderTopRightControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTopRightControls")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderTopRightControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTopRightControls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderTopRightControlsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTopRightControls")(null)
+        ret
+    }
+    @scala.inline
+    def withScrollMode(value: CarouselScrollModeProp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlideIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlideIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlideWidth(value: CarouselSlideWidthProp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlideWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlidesToScroll(value: CarouselSlidesToScrollProp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slidesToScroll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlidesToScroll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slidesToScroll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlidesToShow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slidesToShow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlidesToShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slidesToShow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSwiping(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swiping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSwiping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swiping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionMode(value: CarouselTransitionModeProp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVertical(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVertical: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWithoutControls(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withoutControls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWithoutControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withoutControls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrapAround(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapAround")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrapAround: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapAround")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

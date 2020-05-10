@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object getKeyPair extends js.Object {
   def apply(
-    certificate: scala.scalajs.js.typedarray.ArrayBuffer,
+    certificate: js.typedarray.ArrayBuffer,
     parameters: js.Object,
     callback: js.Function2[/* publicKey */ CryptoKey, /* privateKey */ CryptoKey | Null, Unit]
   ): Unit = js.native

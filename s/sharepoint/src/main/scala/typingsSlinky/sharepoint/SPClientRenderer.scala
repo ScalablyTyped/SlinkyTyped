@@ -5,21 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SPClientRenderer extends js.Object {
-  var AddCallStackInfoToErrors: Boolean
-  var GlobalDebugMode: Boolean
-  var RenderErrors: Boolean
-  def AddPostRenderCallback(context: js.Any, callback: js.Function0[Unit]): Unit
-  def CoreRender(): Unit
-  def IsDebugMode(): Boolean
-  def ParseTemplateString(template: String): js.Function0[String]
-  def ParseTemplateStringWorker(template: String): js.Function0[String]
-  def Render(): Unit
-  def RenderCore(): Unit
-  def RenderReplace(): Unit
-  def ReplaceUrlTokens(url: String): js.Function0[String]
-  def _ExecuteRenderCallbacks(): Unit
-  def _ExecuteRenderCallbacksWorker(): Unit
+  var AddCallStackInfoToErrors: Boolean = js.native
+  var GlobalDebugMode: Boolean = js.native
+  var RenderErrors: Boolean = js.native
+  def AddPostRenderCallback(context: js.Any, callback: js.Function0[Unit]): Unit = js.native
+  def CoreRender(): Unit = js.native
+  def IsDebugMode(): Boolean = js.native
+  def ParseTemplateString(template: String): js.Function0[String] = js.native
+  def ParseTemplateStringWorker(template: String): js.Function0[String] = js.native
+  def Render(): Unit = js.native
+  def RenderCore(): Unit = js.native
+  def RenderReplace(): Unit = js.native
+  def ReplaceUrlTokens(url: String): js.Function0[String] = js.native
+  def _ExecuteRenderCallbacks(): Unit = js.native
+  def _ExecuteRenderCallbacksWorker(): Unit = js.native
 }
 
 @JSGlobal("SPClientRenderer")

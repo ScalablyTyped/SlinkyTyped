@@ -13,12 +13,10 @@ trait GoogleActionsV2RegisterUpdateValueStatus extends js.Object
 
 object GoogleActionsV2RegisterUpdateValueStatus {
   @scala.inline
-  def CANCELLED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANCELLED = this.cast("CANCELLED")
+  def CANCELLED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANCELLED = "CANCELLED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANCELLED]
   @scala.inline
-  def OK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.OK = this.cast("OK")
+  def OK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.OK = "OK".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.OK]
   @scala.inline
-  def REGISTER_UPDATE_STATUS_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REGISTER_UPDATE_STATUS_UNSPECIFIED = this.cast("REGISTER_UPDATE_STATUS_UNSPECIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def REGISTER_UPDATE_STATUS_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REGISTER_UPDATE_STATUS_UNSPECIFIED = "REGISTER_UPDATE_STATUS_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REGISTER_UPDATE_STATUS_UNSPECIFIED]
 }
 

@@ -17,10 +17,29 @@ trait SchemaUserAsset extends js.Object {
 
 object SchemaUserAsset {
   @scala.inline
-  def apply(asset: SchemaAsset = null): SchemaUserAsset = {
+  def apply(): SchemaUserAsset = {
     val __obj = js.Dynamic.literal()
-    if (asset != null) __obj.updateDynamic("asset")(asset.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUserAsset]
   }
+  @scala.inline
+  implicit class SchemaUserAssetOps[Self <: SchemaUserAsset] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAsset(value: SchemaAsset): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAsset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asset")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

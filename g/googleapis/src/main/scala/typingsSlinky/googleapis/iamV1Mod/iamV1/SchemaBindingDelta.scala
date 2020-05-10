@@ -33,13 +33,65 @@ trait SchemaBindingDelta extends js.Object {
 
 object SchemaBindingDelta {
   @scala.inline
-  def apply(action: String = null, condition: SchemaExpr = null, member: String = null, role: String = null): SchemaBindingDelta = {
+  def apply(): SchemaBindingDelta = {
     val __obj = js.Dynamic.literal()
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (condition != null) __obj.updateDynamic("condition")(condition.asInstanceOf[js.Any])
-    if (member != null) __obj.updateDynamic("member")(member.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBindingDelta]
   }
+  @scala.inline
+  implicit class SchemaBindingDeltaOps[Self <: SchemaBindingDelta] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCondition(value: SchemaExpr): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMember(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("member")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMember: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("member")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRole(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

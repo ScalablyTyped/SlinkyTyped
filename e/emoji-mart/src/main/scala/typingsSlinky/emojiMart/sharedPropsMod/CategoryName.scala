@@ -21,28 +21,26 @@ trait CategoryName extends js.Object
 
 object CategoryName {
   @scala.inline
-  def activity: typingsSlinky.emojiMart.emojiMartStrings.activity = this.cast("activity")
+  def activity: typingsSlinky.emojiMart.emojiMartStrings.activity = "activity".asInstanceOf[typingsSlinky.emojiMart.emojiMartStrings.activity]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def custom: typingsSlinky.emojiMart.emojiMartStrings.custom = "custom".asInstanceOf[typingsSlinky.emojiMart.emojiMartStrings.custom]
   @scala.inline
-  def custom: typingsSlinky.emojiMart.emojiMartStrings.custom = this.cast("custom")
+  def flags: typingsSlinky.emojiMart.emojiMartStrings.flags = "flags".asInstanceOf[typingsSlinky.emojiMart.emojiMartStrings.flags]
   @scala.inline
-  def flags: typingsSlinky.emojiMart.emojiMartStrings.flags = this.cast("flags")
+  def foods: typingsSlinky.emojiMart.emojiMartStrings.foods = "foods".asInstanceOf[typingsSlinky.emojiMart.emojiMartStrings.foods]
   @scala.inline
-  def foods: typingsSlinky.emojiMart.emojiMartStrings.foods = this.cast("foods")
+  def nature: typingsSlinky.emojiMart.emojiMartStrings.nature = "nature".asInstanceOf[typingsSlinky.emojiMart.emojiMartStrings.nature]
   @scala.inline
-  def nature: typingsSlinky.emojiMart.emojiMartStrings.nature = this.cast("nature")
+  def objects: typingsSlinky.emojiMart.emojiMartStrings.objects = "objects".asInstanceOf[typingsSlinky.emojiMart.emojiMartStrings.objects]
   @scala.inline
-  def objects: typingsSlinky.emojiMart.emojiMartStrings.objects = this.cast("objects")
+  def people: typingsSlinky.emojiMart.emojiMartStrings.people = "people".asInstanceOf[typingsSlinky.emojiMart.emojiMartStrings.people]
   @scala.inline
-  def people: typingsSlinky.emojiMart.emojiMartStrings.people = this.cast("people")
+  def places: typingsSlinky.emojiMart.emojiMartStrings.places = "places".asInstanceOf[typingsSlinky.emojiMart.emojiMartStrings.places]
   @scala.inline
-  def places: typingsSlinky.emojiMart.emojiMartStrings.places = this.cast("places")
+  def recent: typingsSlinky.emojiMart.emojiMartStrings.recent = "recent".asInstanceOf[typingsSlinky.emojiMart.emojiMartStrings.recent]
   @scala.inline
-  def recent: typingsSlinky.emojiMart.emojiMartStrings.recent = this.cast("recent")
+  def search: typingsSlinky.emojiMart.emojiMartStrings.search = "search".asInstanceOf[typingsSlinky.emojiMart.emojiMartStrings.search]
   @scala.inline
-  def search: typingsSlinky.emojiMart.emojiMartStrings.search = this.cast("search")
-  @scala.inline
-  def symbols: typingsSlinky.emojiMart.emojiMartStrings.symbols = this.cast("symbols")
+  def symbols: typingsSlinky.emojiMart.emojiMartStrings.symbols = "symbols".asInstanceOf[typingsSlinky.emojiMart.emojiMartStrings.symbols]
 }
 

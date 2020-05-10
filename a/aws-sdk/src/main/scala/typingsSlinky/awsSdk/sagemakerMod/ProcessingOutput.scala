@@ -20,8 +20,27 @@ object ProcessingOutput {
   @scala.inline
   def apply(OutputName: String, S3Output: ProcessingS3Output): ProcessingOutput = {
     val __obj = js.Dynamic.literal(OutputName = OutputName.asInstanceOf[js.Any], S3Output = S3Output.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ProcessingOutput]
   }
+  @scala.inline
+  implicit class ProcessingOutputOps[Self <: ProcessingOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOutputName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3Output(value: ProcessingS3Output): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Output")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

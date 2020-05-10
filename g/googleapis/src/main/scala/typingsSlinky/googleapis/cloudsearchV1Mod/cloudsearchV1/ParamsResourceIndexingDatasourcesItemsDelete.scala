@@ -46,3 +46,91 @@ trait ParamsResourceIndexingDatasourcesItemsDelete extends StandardParameters {
   var version: js.UndefOr[String] = js.native
 }
 
+object ParamsResourceIndexingDatasourcesItemsDelete {
+  @scala.inline
+  def apply(): ParamsResourceIndexingDatasourcesItemsDelete = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ParamsResourceIndexingDatasourcesItemsDelete]
+  }
+  @scala.inline
+  implicit class ParamsResourceIndexingDatasourcesItemsDeleteOps[Self <: ParamsResourceIndexingDatasourcesItemsDelete] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectorName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectorName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugOptionsDotenableDebugging(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugOptions.enableDebugging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugOptionsDotenableDebugging: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugOptions.enableDebugging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

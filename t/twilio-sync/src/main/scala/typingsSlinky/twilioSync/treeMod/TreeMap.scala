@@ -20,7 +20,7 @@ class TreeMap[K, V] ()
   var getNode: js.Any = js.native
   var isEqual: js.Any = js.native
   var isLessThan: js.Any = js.native
-  @JSName(scala.scalajs.js.Symbol.iterator)
+  @JSName(js.Symbol.iterator)
   var iterator_TreeMap: js.Function0[IterableIterator[js.Tuple2[K, V]]] = js.native
   var rebalance: js.Any = js.native
   var root: js.Any = js.native
@@ -29,14 +29,10 @@ class TreeMap[K, V] ()
   val size: Double = js.native
   def clear(): Unit = js.native
   def delete(key: K): Unit = js.native
-  /* CompleteClass */
-  override def get(key: K): V = js.native
   def getIterator(): IterableIterator[js.Tuple2[K, V]] = js.native
   def getIterator(key: K): IterableIterator[js.Tuple2[K, V]] = js.native
   def getReverseIterator(): IterableIterator[js.Tuple2[K, V]] = js.native
   def getReverseIterator(key: K): IterableIterator[js.Tuple2[K, V]] = js.native
   def insert(key: K, value: V): Unit = js.native
-  /* CompleteClass */
-  override def set(key: K, value: V): Unit = js.native
 }
 

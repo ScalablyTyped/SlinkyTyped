@@ -18,22 +18,20 @@ trait ObjectType extends js.Object
 
 object ObjectType {
   @scala.inline
-  def CATEGORY: typingsSlinky.squareConnect.squareConnectStrings.CATEGORY = this.cast("CATEGORY")
+  def CATEGORY: typingsSlinky.squareConnect.squareConnectStrings.CATEGORY = "CATEGORY".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.CATEGORY]
   @scala.inline
-  def DISCOUNT: typingsSlinky.squareConnect.squareConnectStrings.DISCOUNT = this.cast("DISCOUNT")
+  def DISCOUNT: typingsSlinky.squareConnect.squareConnectStrings.DISCOUNT = "DISCOUNT".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.DISCOUNT]
   @scala.inline
-  def IMAGE: typingsSlinky.squareConnect.squareConnectStrings.IMAGE = this.cast("IMAGE")
+  def IMAGE: typingsSlinky.squareConnect.squareConnectStrings.IMAGE = "IMAGE".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.IMAGE]
   @scala.inline
-  def ITEM: typingsSlinky.squareConnect.squareConnectStrings.ITEM = this.cast("ITEM")
+  def ITEM: typingsSlinky.squareConnect.squareConnectStrings.ITEM = "ITEM".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.ITEM]
   @scala.inline
-  def ITEM_VARIATION: typingsSlinky.squareConnect.squareConnectStrings.ITEM_VARIATION = this.cast("ITEM_VARIATION")
+  def ITEM_VARIATION: typingsSlinky.squareConnect.squareConnectStrings.ITEM_VARIATION = "ITEM_VARIATION".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.ITEM_VARIATION]
   @scala.inline
-  def MODIFIER: typingsSlinky.squareConnect.squareConnectStrings.MODIFIER = this.cast("MODIFIER")
+  def MODIFIER: typingsSlinky.squareConnect.squareConnectStrings.MODIFIER = "MODIFIER".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MODIFIER]
   @scala.inline
-  def MODIFIER_LIST: typingsSlinky.squareConnect.squareConnectStrings.MODIFIER_LIST = this.cast("MODIFIER_LIST")
+  def MODIFIER_LIST: typingsSlinky.squareConnect.squareConnectStrings.MODIFIER_LIST = "MODIFIER_LIST".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MODIFIER_LIST]
   @scala.inline
-  def TAX: typingsSlinky.squareConnect.squareConnectStrings.TAX = this.cast("TAX")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TAX: typingsSlinky.squareConnect.squareConnectStrings.TAX = "TAX".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.TAX]
 }
 

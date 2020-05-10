@@ -34,19 +34,71 @@ trait TestDNSAnswerRequest extends js.Object {
 
 object TestDNSAnswerRequest {
   @scala.inline
-  def apply(
-    HostedZoneId: ResourceId,
-    RecordName: DNSName,
-    RecordType: RRType,
-    EDNS0ClientSubnetIP: IPAddress = null,
-    EDNS0ClientSubnetMask: SubnetMask = null,
-    ResolverIP: IPAddress = null
-  ): TestDNSAnswerRequest = {
+  def apply(HostedZoneId: ResourceId, RecordName: DNSName, RecordType: RRType): TestDNSAnswerRequest = {
     val __obj = js.Dynamic.literal(HostedZoneId = HostedZoneId.asInstanceOf[js.Any], RecordName = RecordName.asInstanceOf[js.Any], RecordType = RecordType.asInstanceOf[js.Any])
-    if (EDNS0ClientSubnetIP != null) __obj.updateDynamic("EDNS0ClientSubnetIP")(EDNS0ClientSubnetIP.asInstanceOf[js.Any])
-    if (EDNS0ClientSubnetMask != null) __obj.updateDynamic("EDNS0ClientSubnetMask")(EDNS0ClientSubnetMask.asInstanceOf[js.Any])
-    if (ResolverIP != null) __obj.updateDynamic("ResolverIP")(ResolverIP.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestDNSAnswerRequest]
   }
+  @scala.inline
+  implicit class TestDNSAnswerRequestOps[Self <: TestDNSAnswerRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHostedZoneId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostedZoneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRecordName(value: DNSName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRecordType(value: RRType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEDNS0ClientSubnetIP(value: IPAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EDNS0ClientSubnetIP")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEDNS0ClientSubnetIP: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EDNS0ClientSubnetIP")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEDNS0ClientSubnetMask(value: SubnetMask): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EDNS0ClientSubnetMask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEDNS0ClientSubnetMask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EDNS0ClientSubnetMask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolverIP(value: IPAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResolverIP")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolverIP: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResolverIP")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

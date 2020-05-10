@@ -4,18 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OSDetails extends Details {
-  var versionName: js.UndefOr[String] = js.undefined
+  var versionName: js.UndefOr[String] = js.native
 }
 
 object OSDetails {
   @scala.inline
-  def apply(name: String = null, version: String = null, versionName: String = null): OSDetails = {
+  def apply(): OSDetails = {
     val __obj = js.Dynamic.literal()
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
-    if (versionName != null) __obj.updateDynamic("versionName")(versionName.asInstanceOf[js.Any])
     __obj.asInstanceOf[OSDetails]
   }
+  @scala.inline
+  implicit class OSDetailsOps[Self <: OSDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVersionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

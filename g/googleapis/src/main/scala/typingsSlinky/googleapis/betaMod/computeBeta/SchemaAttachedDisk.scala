@@ -108,36 +108,173 @@ trait SchemaAttachedDisk extends js.Object {
 
 object SchemaAttachedDisk {
   @scala.inline
-  def apply(
-    autoDelete: js.UndefOr[Boolean] = js.undefined,
-    boot: js.UndefOr[Boolean] = js.undefined,
-    deviceName: String = null,
-    diskEncryptionKey: SchemaCustomerEncryptionKey = null,
-    guestOsFeatures: js.Array[SchemaGuestOsFeature] = null,
-    index: Int | Double = null,
-    initializeParams: SchemaAttachedDiskInitializeParams = null,
-    interface: String = null,
-    kind: String = null,
-    licenses: js.Array[String] = null,
-    mode: String = null,
-    source: String = null,
-    `type`: String = null
-  ): SchemaAttachedDisk = {
+  def apply(): SchemaAttachedDisk = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoDelete)) __obj.updateDynamic("autoDelete")(autoDelete.asInstanceOf[js.Any])
-    if (!js.isUndefined(boot)) __obj.updateDynamic("boot")(boot.asInstanceOf[js.Any])
-    if (deviceName != null) __obj.updateDynamic("deviceName")(deviceName.asInstanceOf[js.Any])
-    if (diskEncryptionKey != null) __obj.updateDynamic("diskEncryptionKey")(diskEncryptionKey.asInstanceOf[js.Any])
-    if (guestOsFeatures != null) __obj.updateDynamic("guestOsFeatures")(guestOsFeatures.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (initializeParams != null) __obj.updateDynamic("initializeParams")(initializeParams.asInstanceOf[js.Any])
-    if (interface != null) __obj.updateDynamic("interface")(interface.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (licenses != null) __obj.updateDynamic("licenses")(licenses.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAttachedDisk]
   }
+  @scala.inline
+  implicit class SchemaAttachedDiskOps[Self <: SchemaAttachedDisk] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoDelete(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDelete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDelete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoot(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskEncryptionKey(value: SchemaCustomerEncryptionKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskEncryptionKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskEncryptionKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskEncryptionKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGuestOsFeatures(value: js.Array[SchemaGuestOsFeature]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guestOsFeatures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGuestOsFeatures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guestOsFeatures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitializeParams(value: SchemaAttachedDiskInitializeParams): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initializeParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitializeParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initializeParams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterface(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interface")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterface: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interface")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLicenses(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("licenses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("licenses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

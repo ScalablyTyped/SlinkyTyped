@@ -31,12 +31,53 @@ trait SchemaRevisionCheckResponse extends js.Object {
 
 object SchemaRevisionCheckResponse {
   @scala.inline
-  def apply(apiVersion: String = null, kind: String = null, revisionStatus: String = null): SchemaRevisionCheckResponse = {
+  def apply(): SchemaRevisionCheckResponse = {
     val __obj = js.Dynamic.literal()
-    if (apiVersion != null) __obj.updateDynamic("apiVersion")(apiVersion.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (revisionStatus != null) __obj.updateDynamic("revisionStatus")(revisionStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRevisionCheckResponse]
   }
+  @scala.inline
+  implicit class SchemaRevisionCheckResponseOps[Self <: SchemaRevisionCheckResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApiVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

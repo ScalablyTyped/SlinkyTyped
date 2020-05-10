@@ -5,16 +5,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-api.SemanticUI.ApiSettings._Impl, 'loadingDuration'> */
+@js.native
 trait PickImplloadingDuration extends js.Object {
-  var loadingDuration: Double
+  var loadingDuration: Double = js.native
 }
 
 object PickImplloadingDuration {
   @scala.inline
   def apply(loadingDuration: Double): PickImplloadingDuration = {
     val __obj = js.Dynamic.literal(loadingDuration = loadingDuration.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PickImplloadingDuration]
   }
+  @scala.inline
+  implicit class PickImplloadingDurationOps[Self <: PickImplloadingDuration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLoadingDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

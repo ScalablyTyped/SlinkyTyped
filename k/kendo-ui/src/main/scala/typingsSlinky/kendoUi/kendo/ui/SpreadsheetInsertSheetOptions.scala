@@ -5,39 +5,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SpreadsheetInsertSheetOptions extends js.Object {
-  var columnWidth: js.UndefOr[Double] = js.undefined
-  var columns: js.UndefOr[Double] = js.undefined
-  var data: js.UndefOr[js.Any] = js.undefined
-  var dataSource: js.UndefOr[DataSource] = js.undefined
-  var headerHeight: js.UndefOr[Double] = js.undefined
-  var headerWidth: js.UndefOr[Double] = js.undefined
-  var rowHeight: js.UndefOr[Double] = js.undefined
-  var rows: js.UndefOr[Double] = js.undefined
+  var columnWidth: js.UndefOr[Double] = js.native
+  var columns: js.UndefOr[Double] = js.native
+  var data: js.UndefOr[js.Any] = js.native
+  var dataSource: js.UndefOr[DataSource] = js.native
+  var headerHeight: js.UndefOr[Double] = js.native
+  var headerWidth: js.UndefOr[Double] = js.native
+  var rowHeight: js.UndefOr[Double] = js.native
+  var rows: js.UndefOr[Double] = js.native
 }
 
 object SpreadsheetInsertSheetOptions {
   @scala.inline
-  def apply(
-    columnWidth: Int | Double = null,
-    columns: Int | Double = null,
-    data: js.Any = null,
-    dataSource: DataSource = null,
-    headerHeight: Int | Double = null,
-    headerWidth: Int | Double = null,
-    rowHeight: Int | Double = null,
-    rows: Int | Double = null
-  ): SpreadsheetInsertSheetOptions = {
+  def apply(): SpreadsheetInsertSheetOptions = {
     val __obj = js.Dynamic.literal()
-    if (columnWidth != null) __obj.updateDynamic("columnWidth")(columnWidth.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (headerHeight != null) __obj.updateDynamic("headerHeight")(headerHeight.asInstanceOf[js.Any])
-    if (headerWidth != null) __obj.updateDynamic("headerWidth")(headerWidth.asInstanceOf[js.Any])
-    if (rowHeight != null) __obj.updateDynamic("rowHeight")(rowHeight.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpreadsheetInsertSheetOptions]
   }
+  @scala.inline
+  implicit class SpreadsheetInsertSheetOptionsOps[Self <: SpreadsheetInsertSheetOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumnWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumns(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSource(value: DataSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

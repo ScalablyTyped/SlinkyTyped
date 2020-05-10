@@ -16,10 +16,29 @@ trait MeshSpecEgressFilter extends js.Object {
 
 object MeshSpecEgressFilter {
   @scala.inline
-  def apply(`type`: Input[String] = null): MeshSpecEgressFilter = {
+  def apply(): MeshSpecEgressFilter = {
     val __obj = js.Dynamic.literal()
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[MeshSpecEgressFilter]
   }
+  @scala.inline
+  implicit class MeshSpecEgressFilterOps[Self <: MeshSpecEgressFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

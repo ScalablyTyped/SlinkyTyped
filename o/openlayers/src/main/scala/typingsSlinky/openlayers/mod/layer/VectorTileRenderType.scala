@@ -25,12 +25,10 @@ trait VectorTileRenderType extends js.Object
 
 object VectorTileRenderType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hybrid: typingsSlinky.openlayers.openlayersStrings.hybrid = "hybrid".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.hybrid]
   @scala.inline
-  def hybrid: typingsSlinky.openlayers.openlayersStrings.hybrid = this.cast("hybrid")
+  def image: typingsSlinky.openlayers.openlayersStrings.image = "image".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.image]
   @scala.inline
-  def image: typingsSlinky.openlayers.openlayersStrings.image = this.cast("image")
-  @scala.inline
-  def vector: typingsSlinky.openlayers.openlayersStrings.vector = this.cast("vector")
+  def vector: typingsSlinky.openlayers.openlayersStrings.vector = "vector".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.vector]
 }
 

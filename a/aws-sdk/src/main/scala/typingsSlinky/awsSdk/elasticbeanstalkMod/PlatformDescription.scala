@@ -82,46 +82,233 @@ trait PlatformDescription extends js.Object {
 
 object PlatformDescription {
   @scala.inline
-  def apply(
-    CustomAmiList: CustomAmiList = null,
-    DateCreated: js.Date = null,
-    DateUpdated: js.Date = null,
-    Description: Description = null,
-    Frameworks: PlatformFrameworks = null,
-    Maintainer: Maintainer = null,
-    OperatingSystemName: OperatingSystemName = null,
-    OperatingSystemVersion: OperatingSystemVersion = null,
-    PlatformArn: PlatformArn = null,
-    PlatformCategory: PlatformCategory = null,
-    PlatformName: PlatformName = null,
-    PlatformOwner: PlatformOwner = null,
-    PlatformStatus: PlatformStatus = null,
-    PlatformVersion: PlatformVersion = null,
-    ProgrammingLanguages: PlatformProgrammingLanguages = null,
-    SolutionStackName: SolutionStackName = null,
-    SupportedAddonList: SupportedAddonList = null,
-    SupportedTierList: SupportedTierList = null
-  ): PlatformDescription = {
+  def apply(): PlatformDescription = {
     val __obj = js.Dynamic.literal()
-    if (CustomAmiList != null) __obj.updateDynamic("CustomAmiList")(CustomAmiList.asInstanceOf[js.Any])
-    if (DateCreated != null) __obj.updateDynamic("DateCreated")(DateCreated.asInstanceOf[js.Any])
-    if (DateUpdated != null) __obj.updateDynamic("DateUpdated")(DateUpdated.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (Frameworks != null) __obj.updateDynamic("Frameworks")(Frameworks.asInstanceOf[js.Any])
-    if (Maintainer != null) __obj.updateDynamic("Maintainer")(Maintainer.asInstanceOf[js.Any])
-    if (OperatingSystemName != null) __obj.updateDynamic("OperatingSystemName")(OperatingSystemName.asInstanceOf[js.Any])
-    if (OperatingSystemVersion != null) __obj.updateDynamic("OperatingSystemVersion")(OperatingSystemVersion.asInstanceOf[js.Any])
-    if (PlatformArn != null) __obj.updateDynamic("PlatformArn")(PlatformArn.asInstanceOf[js.Any])
-    if (PlatformCategory != null) __obj.updateDynamic("PlatformCategory")(PlatformCategory.asInstanceOf[js.Any])
-    if (PlatformName != null) __obj.updateDynamic("PlatformName")(PlatformName.asInstanceOf[js.Any])
-    if (PlatformOwner != null) __obj.updateDynamic("PlatformOwner")(PlatformOwner.asInstanceOf[js.Any])
-    if (PlatformStatus != null) __obj.updateDynamic("PlatformStatus")(PlatformStatus.asInstanceOf[js.Any])
-    if (PlatformVersion != null) __obj.updateDynamic("PlatformVersion")(PlatformVersion.asInstanceOf[js.Any])
-    if (ProgrammingLanguages != null) __obj.updateDynamic("ProgrammingLanguages")(ProgrammingLanguages.asInstanceOf[js.Any])
-    if (SolutionStackName != null) __obj.updateDynamic("SolutionStackName")(SolutionStackName.asInstanceOf[js.Any])
-    if (SupportedAddonList != null) __obj.updateDynamic("SupportedAddonList")(SupportedAddonList.asInstanceOf[js.Any])
-    if (SupportedTierList != null) __obj.updateDynamic("SupportedTierList")(SupportedTierList.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlatformDescription]
   }
+  @scala.inline
+  implicit class PlatformDescriptionOps[Self <: PlatformDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomAmiList(value: CustomAmiList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAmiList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomAmiList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAmiList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateCreated(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DateCreated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateCreated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DateCreated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateUpdated(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DateUpdated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateUpdated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DateUpdated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrameworks(value: PlatformFrameworks): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Frameworks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameworks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Frameworks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaintainer(value: Maintainer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Maintainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaintainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Maintainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperatingSystemName(value: OperatingSystemName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystemName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatingSystemName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystemName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperatingSystemVersion(value: OperatingSystemVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystemVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatingSystemVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystemVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformArn(value: PlatformArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformCategory(value: PlatformCategory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformCategory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformCategory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformCategory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformName(value: PlatformName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformOwner(value: PlatformOwner): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformOwner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformOwner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformOwner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformStatus(value: PlatformStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformVersion(value: PlatformVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgrammingLanguages(value: PlatformProgrammingLanguages): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgrammingLanguages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgrammingLanguages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgrammingLanguages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSolutionStackName(value: SolutionStackName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SolutionStackName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSolutionStackName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SolutionStackName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportedAddonList(value: SupportedAddonList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedAddonList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportedAddonList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedAddonList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportedTierList(value: SupportedTierList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedTierList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportedTierList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedTierList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,10 +18,35 @@ trait StreamingConfiguration extends js.Object {
 
 object StreamingConfiguration {
   @scala.inline
-  def apply(DataRetentionInHours: DataRetentionInHours, Disabled: js.UndefOr[scala.Boolean] = js.undefined): StreamingConfiguration = {
+  def apply(DataRetentionInHours: DataRetentionInHours): StreamingConfiguration = {
     val __obj = js.Dynamic.literal(DataRetentionInHours = DataRetentionInHours.asInstanceOf[js.Any])
-    if (!js.isUndefined(Disabled)) __obj.updateDynamic("Disabled")(Disabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreamingConfiguration]
   }
+  @scala.inline
+  implicit class StreamingConfigurationOps[Self <: StreamingConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataRetentionInHours(value: DataRetentionInHours): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataRetentionInHours")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Disabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

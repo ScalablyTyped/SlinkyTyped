@@ -11,7 +11,7 @@ package object mod {
   type GeometryDefinition[T /* <: js.Object */, U] = T with typingsSlinky.std.Partial[typingsSlinky.aframe.mod.Geometry[U]]
   type MultiPropertySchema[T /* <: js.Object */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: aframe.aframe.SinglePropertySchema<T[P]> | T[P]}
-    */ typingsSlinky.aframe.aframeStrings.MultiPropertySchema with js.Any
+    */ typingsSlinky.aframe.aframeStrings.MultiPropertySchema with org.scalablytyped.runtime.TopLevel[js.Any]
   type NodeDefinition[T /* <: js.Object */] = T with typingsSlinky.aframe.PartialANode
   type ObjectMap[T] = org.scalablytyped.runtime.StringDictionary[T]
   type Schema_[T /* <: js.Object */] = typingsSlinky.aframe.mod.SinglePropertySchema[T] | typingsSlinky.aframe.mod.MultiPropertySchema[T]

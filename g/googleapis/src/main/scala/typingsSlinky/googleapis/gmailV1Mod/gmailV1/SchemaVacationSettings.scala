@@ -58,26 +58,113 @@ trait SchemaVacationSettings extends js.Object {
 
 object SchemaVacationSettings {
   @scala.inline
-  def apply(
-    enableAutoReply: js.UndefOr[Boolean] = js.undefined,
-    endTime: String = null,
-    responseBodyHtml: String = null,
-    responseBodyPlainText: String = null,
-    responseSubject: String = null,
-    restrictToContacts: js.UndefOr[Boolean] = js.undefined,
-    restrictToDomain: js.UndefOr[Boolean] = js.undefined,
-    startTime: String = null
-  ): SchemaVacationSettings = {
+  def apply(): SchemaVacationSettings = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enableAutoReply)) __obj.updateDynamic("enableAutoReply")(enableAutoReply.asInstanceOf[js.Any])
-    if (endTime != null) __obj.updateDynamic("endTime")(endTime.asInstanceOf[js.Any])
-    if (responseBodyHtml != null) __obj.updateDynamic("responseBodyHtml")(responseBodyHtml.asInstanceOf[js.Any])
-    if (responseBodyPlainText != null) __obj.updateDynamic("responseBodyPlainText")(responseBodyPlainText.asInstanceOf[js.Any])
-    if (responseSubject != null) __obj.updateDynamic("responseSubject")(responseSubject.asInstanceOf[js.Any])
-    if (!js.isUndefined(restrictToContacts)) __obj.updateDynamic("restrictToContacts")(restrictToContacts.asInstanceOf[js.Any])
-    if (!js.isUndefined(restrictToDomain)) __obj.updateDynamic("restrictToDomain")(restrictToDomain.asInstanceOf[js.Any])
-    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVacationSettings]
   }
+  @scala.inline
+  implicit class SchemaVacationSettingsOps[Self <: SchemaVacationSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnableAutoReply(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAutoReply")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableAutoReply: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAutoReply")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseBodyHtml(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseBodyHtml")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseBodyHtml: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseBodyHtml")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseBodyPlainText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseBodyPlainText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseBodyPlainText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseBodyPlainText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseSubject(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseSubject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseSubject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseSubject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestrictToContacts(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictToContacts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestrictToContacts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictToContacts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestrictToDomain(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictToDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestrictToDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictToDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

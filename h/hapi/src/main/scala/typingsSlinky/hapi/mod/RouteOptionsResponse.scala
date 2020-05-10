@@ -3,12 +3,15 @@ package typingsSlinky.hapi.mod
 import typingsSlinky.hapi.hapiNumbers.`200`
 import typingsSlinky.hapi.hapiNumbers.`204`
 import typingsSlinky.hapi.mod.Lifecycle.FailAction
+import typingsSlinky.hapi.mod.Lifecycle.ReturnValue
 import typingsSlinky.hapi.mod.Util.Dictionary
 import typingsSlinky.joi.mod.ValidationOptions
+import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RouteOptionsResponse extends js.Object {
   /**
     * The default HTTP status code used to set a response error when the request is closed or aborted before the
@@ -18,46 +21,46 @@ trait RouteOptionsResponse extends js.Object {
     * The value is only used for logging as the request has already ended.
     * @default 499
     */
-  var disconnectStatusCode: js.UndefOr[Double] = js.undefined
+  var disconnectStatusCode: js.UndefOr[Double] = js.native
   /**
     * Default value: 200.
     * The default HTTP status code when the payload is considered empty. Value can be 200 or 204. Note that a 200 status code is converted to a 204 only at the time of response transmission (the
     * response status code will remain 200 throughout the request lifecycle unless manually set).
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsresponseemptystatuscode)
     */
-  var emptyStatusCode: js.UndefOr[`200` | `204`] = js.undefined
+  var emptyStatusCode: js.UndefOr[`200` | `204`] = js.native
   /**
     * Default value: 'error' (return an Internal Server Error (500) error response).
     * A failAction value which defines what to do when a response fails payload validation.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsresponsefailaction)
     */
-  var failAction: js.UndefOr[FailAction] = js.undefined
+  var failAction: js.UndefOr[FailAction] = js.native
   /**
     * Default value: false.
     * If true, applies the validation rule changes to the response payload.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsresponsemodify)
     */
-  var modify: js.UndefOr[Boolean] = js.undefined
+  var modify: js.UndefOr[Boolean] = js.native
   /**
     * Default value: none.
     * [joi](http://github.com/hapijs/joi) options object pass to the validation function. Useful to set global options such as stripUnknown or abortEarly (the complete list is available here). If a
     * custom validation function is defined via schema or status then options can an arbitrary object that will be passed to this function as the second argument.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsresponseoptions)
     */
-  var options: js.UndefOr[ValidationOptions] = js.undefined
+  var options: js.UndefOr[ValidationOptions] = js.native
    // TODO needs validation
   /**
     * Default value: true.
     * If false, payload range support is disabled.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsresponseranges)
     */
-  var ranges: js.UndefOr[Boolean] = js.undefined
+  var ranges: js.UndefOr[Boolean] = js.native
   /**
     * Default value: 100 (all responses).
     * The percent of response payloads validated (0 - 100). Set to 0 to disable all validation.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsresponsesample)
     */
-  var sample: js.UndefOr[Double] = js.undefined
+  var sample: js.UndefOr[Double] = js.native
   /**
     * Default value: true (no validation).
     * The default response payload validation rules (for all non-error responses) expressed as one of:
@@ -71,40 +74,153 @@ trait RouteOptionsResponse extends js.Object {
     * output.payload. If an error is thrown, the error is processed according to failAction.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsresponseschema)
     */
-  var schema: js.UndefOr[RouteOptionsResponseSchema] = js.undefined
+  var schema: js.UndefOr[RouteOptionsResponseSchema] = js.native
   /**
     * Default value: none.
     * Validation schemas for specific HTTP status codes. Responses (excluding errors) not matching the listed status codes are validated using the default schema.
     * status is set to an object where each key is a 3 digit HTTP status code and the value has the same definition as schema.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsresponsestatus)
     */
-  var status: js.UndefOr[Dictionary[RouteOptionsResponseSchema]] = js.undefined
+  var status: js.UndefOr[Dictionary[RouteOptionsResponseSchema]] = js.native
 }
 
 object RouteOptionsResponse {
   @scala.inline
-  def apply(
-    disconnectStatusCode: Int | Double = null,
-    emptyStatusCode: `200` | `204` = null,
-    failAction: FailAction = null,
-    modify: js.UndefOr[Boolean] = js.undefined,
-    options: ValidationOptions = null,
-    ranges: js.UndefOr[Boolean] = js.undefined,
-    sample: Int | Double = null,
-    schema: RouteOptionsResponseSchema = null,
-    status: Dictionary[RouteOptionsResponseSchema] = null
-  ): RouteOptionsResponse = {
+  def apply(): RouteOptionsResponse = {
     val __obj = js.Dynamic.literal()
-    if (disconnectStatusCode != null) __obj.updateDynamic("disconnectStatusCode")(disconnectStatusCode.asInstanceOf[js.Any])
-    if (emptyStatusCode != null) __obj.updateDynamic("emptyStatusCode")(emptyStatusCode.asInstanceOf[js.Any])
-    if (failAction != null) __obj.updateDynamic("failAction")(failAction.asInstanceOf[js.Any])
-    if (!js.isUndefined(modify)) __obj.updateDynamic("modify")(modify.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (!js.isUndefined(ranges)) __obj.updateDynamic("ranges")(ranges.asInstanceOf[js.Any])
-    if (sample != null) __obj.updateDynamic("sample")(sample.asInstanceOf[js.Any])
-    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[RouteOptionsResponse]
   }
+  @scala.inline
+  implicit class RouteOptionsResponseOps[Self <: RouteOptionsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisconnectStatusCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disconnectStatusCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisconnectStatusCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disconnectStatusCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmptyStatusCode(value: `200` | `204`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyStatusCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmptyStatusCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyStatusCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailActionFunction3(
+      value: (/* request */ Request, /* h */ ResponseToolkit, /* err */ js.UndefOr[js.Error]) => ReturnValue
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failAction")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withFailAction(value: FailAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModify(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modify")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModify: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modify")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: ValidationOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRanges(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSample(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sample")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSample: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sample")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemaFunction2(
+      value: (/* value */ js.Object | Buffer | String, /* options */ ValidationOptions) => js.Promise[js.Any]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSchema(value: RouteOptionsResponseSchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: Dictionary[RouteOptionsResponseSchema]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

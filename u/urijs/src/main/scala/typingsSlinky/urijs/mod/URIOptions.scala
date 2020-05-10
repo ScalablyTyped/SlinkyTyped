@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait URIOptions extends js.Object {
-  var fragment: js.UndefOr[String] = js.undefined
-  var hostname: js.UndefOr[String] = js.undefined
-  var password: js.UndefOr[String] = js.undefined
-  var path: js.UndefOr[String] = js.undefined
-  var port: js.UndefOr[String] = js.undefined
-  var protocol: js.UndefOr[String] = js.undefined
-  var query: js.UndefOr[String] = js.undefined
-  var urn: js.UndefOr[Boolean] = js.undefined
-  var username: js.UndefOr[String] = js.undefined
+  var fragment: js.UndefOr[String] = js.native
+  var hostname: js.UndefOr[String] = js.native
+  var password: js.UndefOr[String] = js.native
+  var path: js.UndefOr[String] = js.native
+  var port: js.UndefOr[String] = js.native
+  var protocol: js.UndefOr[String] = js.native
+  var query: js.UndefOr[String] = js.native
+  var urn: js.UndefOr[Boolean] = js.native
+  var username: js.UndefOr[String] = js.native
 }
 
 object URIOptions {
   @scala.inline
-  def apply(
-    fragment: String = null,
-    hostname: String = null,
-    password: String = null,
-    path: String = null,
-    port: String = null,
-    protocol: String = null,
-    query: String = null,
-    urn: js.UndefOr[Boolean] = js.undefined,
-    username: String = null
-  ): URIOptions = {
+  def apply(): URIOptions = {
     val __obj = js.Dynamic.literal()
-    if (fragment != null) __obj.updateDynamic("fragment")(fragment.asInstanceOf[js.Any])
-    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
-    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
-    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
-    if (!js.isUndefined(urn)) __obj.updateDynamic("urn")(urn.asInstanceOf[js.Any])
-    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
     __obj.asInstanceOf[URIOptions]
   }
+  @scala.inline
+  implicit class URIOptionsOps[Self <: URIOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFragment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fragment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFragment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fragment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtocol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuery(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,7 @@
 package typingsSlinky.cathoQuantum.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.cathoQuantum.AnonComponentsAnonProgressBar
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.neutral
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.primary
@@ -15,34 +12,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ProgressBar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ProgressBar {
   @JSImport("@catho/quantum/ProgressBar", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: label */
-  def apply(
-    height: String = null,
-    progressPercent: Int | Double = null,
-    progressText: Int | Double = null,
-    skin: neutral | primary | secondary = null,
-    theme: AnonComponentsAnonProgressBar = null,
-    width: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (progressPercent != null) __obj.updateDynamic("progressPercent")(progressPercent.asInstanceOf[js.Any])
-    if (progressText != null) __obj.updateDynamic("progressText")(progressText.asInstanceOf[js.Any])
-    if (skin != null) __obj.updateDynamic("skin")(skin.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def height(value: String): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def progressPercent(value: Double): this.type = set("progressPercent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def progressText(value: Double): this.type = set("progressText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def skin(value: neutral | primary | secondary): this.type = set("skin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: AnonComponentsAnonProgressBar): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: String): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.cathoQuantum.progressBarMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ProgressBarProps
+  
+  def withProps(p: ProgressBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ProgressBar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

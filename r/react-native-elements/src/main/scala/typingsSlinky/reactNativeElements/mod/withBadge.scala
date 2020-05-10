@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeElements.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.react.mod.ReactNode
+import slinky.core.TagMod
 import typingsSlinky.reactNativeElements.bottomnumberleftnumberrig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +17,7 @@ object withBadge extends js.Object {
   def apply(/**
     * Text value to be displayed by badge
     */
-  value: js.Function0[ReactNode]): js.Function1[
+  value: js.Function0[TagMod[Any]]): js.Function1[
     /* WrappedComponent */ ReactComponentClass[js.Object], 
     ReactComponentClass[js.Object]
   ] = js.native
@@ -25,7 +25,7 @@ object withBadge extends js.Object {
     /**
     * Text value to be displayed by badge
     */
-  value: js.Function0[ReactNode],
+  value: js.Function0[TagMod[Any]],
     /**
     * Options to configure the badge
     */
@@ -37,7 +37,7 @@ object withBadge extends js.Object {
   def apply(/**
     * Text value to be displayed by badge
     */
-  value: ReactNode): js.Function1[
+  value: TagMod[Any]): js.Function1[
     /* WrappedComponent */ ReactComponentClass[js.Object], 
     ReactComponentClass[js.Object]
   ] = js.native
@@ -45,7 +45,7 @@ object withBadge extends js.Object {
     /**
     * Text value to be displayed by badge
     */
-  value: ReactNode,
+  value: TagMod[Any],
     /**
     * Options to configure the badge
     */

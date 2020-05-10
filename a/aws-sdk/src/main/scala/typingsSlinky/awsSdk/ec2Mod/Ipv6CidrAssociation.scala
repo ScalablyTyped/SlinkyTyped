@@ -18,11 +18,41 @@ trait Ipv6CidrAssociation extends js.Object {
 
 object Ipv6CidrAssociation {
   @scala.inline
-  def apply(AssociatedResource: String = null, Ipv6Cidr: String = null): Ipv6CidrAssociation = {
+  def apply(): Ipv6CidrAssociation = {
     val __obj = js.Dynamic.literal()
-    if (AssociatedResource != null) __obj.updateDynamic("AssociatedResource")(AssociatedResource.asInstanceOf[js.Any])
-    if (Ipv6Cidr != null) __obj.updateDynamic("Ipv6Cidr")(Ipv6Cidr.asInstanceOf[js.Any])
     __obj.asInstanceOf[Ipv6CidrAssociation]
   }
+  @scala.inline
+  implicit class Ipv6CidrAssociationOps[Self <: Ipv6CidrAssociation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssociatedResource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociatedResource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociatedResource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociatedResource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv6Cidr(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Cidr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6Cidr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Cidr")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

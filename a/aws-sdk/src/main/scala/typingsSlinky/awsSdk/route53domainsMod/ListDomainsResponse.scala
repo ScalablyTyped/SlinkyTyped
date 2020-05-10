@@ -18,10 +18,35 @@ trait ListDomainsResponse extends js.Object {
 
 object ListDomainsResponse {
   @scala.inline
-  def apply(Domains: DomainSummaryList, NextPageMarker: PageMarker = null): ListDomainsResponse = {
+  def apply(Domains: DomainSummaryList): ListDomainsResponse = {
     val __obj = js.Dynamic.literal(Domains = Domains.asInstanceOf[js.Any])
-    if (NextPageMarker != null) __obj.updateDynamic("NextPageMarker")(NextPageMarker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDomainsResponse]
   }
+  @scala.inline
+  implicit class ListDomainsResponseOps[Self <: ListDomainsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomains(value: DomainSummaryList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Domains")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextPageMarker(value: PageMarker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageMarker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

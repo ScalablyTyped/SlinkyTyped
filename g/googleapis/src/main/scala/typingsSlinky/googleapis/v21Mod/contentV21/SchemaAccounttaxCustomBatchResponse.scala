@@ -19,11 +19,41 @@ trait SchemaAccounttaxCustomBatchResponse extends js.Object {
 
 object SchemaAccounttaxCustomBatchResponse {
   @scala.inline
-  def apply(entries: js.Array[SchemaAccounttaxCustomBatchResponseEntry] = null, kind: String = null): SchemaAccounttaxCustomBatchResponse = {
+  def apply(): SchemaAccounttaxCustomBatchResponse = {
     val __obj = js.Dynamic.literal()
-    if (entries != null) __obj.updateDynamic("entries")(entries.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAccounttaxCustomBatchResponse]
   }
+  @scala.inline
+  implicit class SchemaAccounttaxCustomBatchResponseOps[Self <: SchemaAccounttaxCustomBatchResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntries(value: js.Array[SchemaAccounttaxCustomBatchResponseEntry]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

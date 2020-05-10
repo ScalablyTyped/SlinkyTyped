@@ -4,27 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WeakClientOptions extends Options {
-  var deploymentId: js.UndefOr[String] = js.undefined
+  var deploymentId: js.UndefOr[String] = js.native
 }
 
 object WeakClientOptions {
   @scala.inline
-  def apply(
-    sandboxId: String,
-    apiUrl: String = null,
-    deploymentId: String = null,
-    forceHttps: js.UndefOr[Boolean] = js.undefined,
-    resource: String = null,
-    transports: js.Array[_] = null
-  ): WeakClientOptions = {
+  def apply(sandboxId: String): WeakClientOptions = {
     val __obj = js.Dynamic.literal(sandboxId = sandboxId.asInstanceOf[js.Any])
-    if (apiUrl != null) __obj.updateDynamic("apiUrl")(apiUrl.asInstanceOf[js.Any])
-    if (deploymentId != null) __obj.updateDynamic("deploymentId")(deploymentId.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceHttps)) __obj.updateDynamic("forceHttps")(forceHttps.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
-    if (transports != null) __obj.updateDynamic("transports")(transports.asInstanceOf[js.Any])
     __obj.asInstanceOf[WeakClientOptions]
   }
+  @scala.inline
+  implicit class WeakClientOptionsOps[Self <: WeakClientOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeploymentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeploymentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

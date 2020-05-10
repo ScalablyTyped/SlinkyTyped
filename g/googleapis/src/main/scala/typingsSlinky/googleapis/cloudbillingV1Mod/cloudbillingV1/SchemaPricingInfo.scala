@@ -44,20 +44,77 @@ trait SchemaPricingInfo extends js.Object {
 
 object SchemaPricingInfo {
   @scala.inline
-  def apply(
-    aggregationInfo: SchemaAggregationInfo = null,
-    currencyConversionRate: Int | Double = null,
-    effectiveTime: String = null,
-    pricingExpression: SchemaPricingExpression = null,
-    summary: String = null
-  ): SchemaPricingInfo = {
+  def apply(): SchemaPricingInfo = {
     val __obj = js.Dynamic.literal()
-    if (aggregationInfo != null) __obj.updateDynamic("aggregationInfo")(aggregationInfo.asInstanceOf[js.Any])
-    if (currencyConversionRate != null) __obj.updateDynamic("currencyConversionRate")(currencyConversionRate.asInstanceOf[js.Any])
-    if (effectiveTime != null) __obj.updateDynamic("effectiveTime")(effectiveTime.asInstanceOf[js.Any])
-    if (pricingExpression != null) __obj.updateDynamic("pricingExpression")(pricingExpression.asInstanceOf[js.Any])
-    if (summary != null) __obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPricingInfo]
   }
+  @scala.inline
+  implicit class SchemaPricingInfoOps[Self <: SchemaPricingInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggregationInfo(value: SchemaAggregationInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregationInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrencyConversionRate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyConversionRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrencyConversionRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyConversionRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEffectiveTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEffectiveTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPricingExpression(value: SchemaPricingExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pricingExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPricingExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pricingExpression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSummary(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -10,7 +10,6 @@ import typingsSlinky.ssh2.mod.SFTPWrapper
 import typingsSlinky.ssh2Streams.mod.Attributes
 import typingsSlinky.ssh2Streams.mod.InputAttributes
 import typingsSlinky.ssh2Streams.mod.Stats
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -151,15 +150,15 @@ trait PromiseSftp extends js.Object {
     */
   def fstat(handle: Buffer): typingsSlinky.bluebird.mod.^[Stats] = js.native
   def futimes(handle: Buffer, atime: Double, mtime: Double): typingsSlinky.bluebird.mod.^[Unit] = js.native
-  def futimes(handle: Buffer, atime: Double, mtime: Date): typingsSlinky.bluebird.mod.^[Unit] = js.native
-  def futimes(handle: Buffer, atime: Date, mtime: Double): typingsSlinky.bluebird.mod.^[Unit] = js.native
+  def futimes(handle: Buffer, atime: Double, mtime: js.Date): typingsSlinky.bluebird.mod.^[Unit] = js.native
+  def futimes(handle: Buffer, atime: js.Date, mtime: Double): typingsSlinky.bluebird.mod.^[Unit] = js.native
   /**
     * Set the access and modified times for a resource on the server.
     * @param handle - A resource handle returned from `#open()` or `#fopen()`.
     * @param atime - A Date or unix timestamp representing the new access time for the resource
     * @param mtime - A Date or unix timestamp representing the new modify time for the resource
     */
-  def futimes(handle: Buffer, atime: Date, mtime: Date): typingsSlinky.bluebird.mod.^[Unit] = js.native
+  def futimes(handle: Buffer, atime: js.Date, mtime: js.Date): typingsSlinky.bluebird.mod.^[Unit] = js.native
   /**
     * Retrieve a file from the server.
     * @param path - The file to retrieve from the server.
@@ -310,14 +309,14 @@ trait PromiseSftp extends js.Object {
     */
   def unlink(path: String): typingsSlinky.bluebird.mod.^[Unit] = js.native
   def utimes(path: String, atime: Double, mtime: Double): typingsSlinky.bluebird.mod.^[Unit] = js.native
-  def utimes(path: String, atime: Double, mtime: Date): typingsSlinky.bluebird.mod.^[Unit] = js.native
-  def utimes(path: String, atime: Date, mtime: Double): typingsSlinky.bluebird.mod.^[Unit] = js.native
+  def utimes(path: String, atime: Double, mtime: js.Date): typingsSlinky.bluebird.mod.^[Unit] = js.native
+  def utimes(path: String, atime: js.Date, mtime: Double): typingsSlinky.bluebird.mod.^[Unit] = js.native
   /**
     * Set the access and modified times for a resource on the server.
     * @param path - The path of the resource to set times of.
     * @param atime - A Date or unix timestamp representing the new access time for the resource
     * @param mtime - A Date or unix timestamp representing the new modify time for the resource
     */
-  def utimes(path: String, atime: Date, mtime: Date): typingsSlinky.bluebird.mod.^[Unit] = js.native
+  def utimes(path: String, atime: js.Date, mtime: js.Date): typingsSlinky.bluebird.mod.^[Unit] = js.native
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.promisifySupertest
 
 import typingsSlinky.express.mod.Express
-import typingsSlinky.std.RegExp
 import typingsSlinky.superagent.mod.SuperAgent
 import typingsSlinky.superagent.mod.SuperAgentRequest
 import scala.scalajs.js
@@ -17,13 +16,13 @@ object mod extends js.Object {
     def expect(body: String, callback: CallbackHandler): this.type = js.native
     def expect(body: js.Object): this.type = js.native
     def expect(body: js.Object, callback: CallbackHandler): this.type = js.native
-    def expect(body: RegExp): this.type = js.native
-    def expect(body: RegExp, callback: CallbackHandler): this.type = js.native
+    def expect(body: js.RegExp): this.type = js.native
+    def expect(body: js.RegExp, callback: CallbackHandler): this.type = js.native
     def expect(checker: js.Function1[/* res */ Response, _]): this.type = js.native
     def expect(field: String, `val`: String): this.type = js.native
     def expect(field: String, `val`: String, callback: CallbackHandler): this.type = js.native
-    def expect(field: String, `val`: RegExp): this.type = js.native
-    def expect(field: String, `val`: RegExp, callback: CallbackHandler): this.type = js.native
+    def expect(field: String, `val`: js.RegExp): this.type = js.native
+    def expect(field: String, `val`: js.RegExp, callback: CallbackHandler): this.type = js.native
     def expect(status: Double): this.type = js.native
     def expect(status: Double, body: String): this.type = js.native
     def expect(status: Double, body: String, callback: CallbackHandler): this.type = js.native

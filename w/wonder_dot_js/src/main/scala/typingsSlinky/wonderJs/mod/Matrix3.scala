@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Matrix3 ()
   extends typingsSlinky.wonderJs.matrix3Mod.Matrix3 {
-  def this(mat: scala.scalajs.js.typedarray.Float32Array) = this()
+  def this(mat: js.typedarray.Float32Array) = this()
 }
 
 /* static members */
@@ -16,6 +16,6 @@ class Matrix3 ()
 @js.native
 object Matrix3 extends js.Object {
   def create(): typingsSlinky.wonderJs.matrix3Mod.Matrix3 = js.native
-  def create(mat: scala.scalajs.js.typedarray.Float32Array): typingsSlinky.wonderJs.matrix3Mod.Matrix3 = js.native
+  def create(mat: js.typedarray.Float32Array): typingsSlinky.wonderJs.matrix3Mod.Matrix3 = js.native
 }
 

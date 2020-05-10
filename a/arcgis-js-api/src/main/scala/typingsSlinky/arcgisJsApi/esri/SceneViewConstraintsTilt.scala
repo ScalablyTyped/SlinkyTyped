@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import typingsSlinky.arcgisJsApi.HashMap
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.auto
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.manual
 import typingsSlinky.std.PropertyKey
@@ -8,13 +7,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SceneViewConstraintsTilt extends AnonymousAccessor {
   /**
     * Specifies the maximum amount of tilt (in degrees) allowed in the view and may range from 0.5 to 179.5 degrees.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#constraints)
     */
-  var max: js.UndefOr[Double] = js.undefined
+  var max: js.UndefOr[Double] = js.native
   /**
     * Specifies the mode of the constraint. There are two possible values: `auto` or `manual`. In `auto` mode, the maximum tilt value is automatically determined based on the altitude of the view camera. In `manual` mode, the maximum tilt value is a user defined, constant value. **Note:** The mode automatically changes to `manual` whenever the `max` property is set.
     *
@@ -22,7 +22,7 @@ trait SceneViewConstraintsTilt extends AnonymousAccessor {
     *
     * @default auto
     */
-  var mode: js.UndefOr[auto | manual] = js.undefined
+  var mode: js.UndefOr[auto | manual] = js.native
 }
 
 object SceneViewConstraintsTilt {
@@ -30,20 +30,42 @@ object SceneViewConstraintsTilt {
   def apply(
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
-    propertyIsEnumerable: PropertyKey => Boolean,
-    get: /* propertyName */ String => _ = null,
-    max: Int | Double = null,
-    mode: auto | manual = null,
-    set: (js.Function2[/* propertyName */ String, /* value */ js.Any, SceneViewConstraintsTilt]) with (js.Function1[/* props */ HashMap[_], SceneViewConstraintsTilt]) = null,
-    watch: (/* path */ String | js.Array[String], /* callback */ WatchCallback, /* sync */ js.UndefOr[Boolean]) => WatchHandle = null
+    propertyIsEnumerable: PropertyKey => Boolean
   ): SceneViewConstraintsTilt = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
-    if (get != null) __obj.updateDynamic("get")(js.Any.fromFunction1(get))
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (set != null) __obj.updateDynamic("set")(set.asInstanceOf[js.Any])
-    if (watch != null) __obj.updateDynamic("watch")(js.Any.fromFunction3(watch))
     __obj.asInstanceOf[SceneViewConstraintsTilt]
   }
+  @scala.inline
+  implicit class SceneViewConstraintsTiltOps[Self <: SceneViewConstraintsTilt] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: auto | manual): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

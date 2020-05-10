@@ -21,28 +21,26 @@ trait PositionProperty extends js.Object
 
 object PositionProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  def `-webkit-sticky`: typingsSlinky.csstype.csstypeStrings.`-webkit-sticky` = this.cast("-webkit-sticky")
+  def `-webkit-sticky`: typingsSlinky.csstype.csstypeStrings.`-webkit-sticky` = "-webkit-sticky".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-webkit-sticky`]
   @scala.inline
-  def absolute: typingsSlinky.csstype.csstypeStrings.absolute = this.cast("absolute")
+  def absolute: typingsSlinky.csstype.csstypeStrings.absolute = "absolute".asInstanceOf[typingsSlinky.csstype.csstypeStrings.absolute]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fixed: typingsSlinky.csstype.csstypeStrings.fixed = "fixed".asInstanceOf[typingsSlinky.csstype.csstypeStrings.fixed]
   @scala.inline
-  def fixed: typingsSlinky.csstype.csstypeStrings.fixed = this.cast("fixed")
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def relative: typingsSlinky.csstype.csstypeStrings.relative = "relative".asInstanceOf[typingsSlinky.csstype.csstypeStrings.relative]
   @scala.inline
-  def relative: typingsSlinky.csstype.csstypeStrings.relative = this.cast("relative")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
+  def static: typingsSlinky.csstype.csstypeStrings.static = "static".asInstanceOf[typingsSlinky.csstype.csstypeStrings.static]
   @scala.inline
-  def static: typingsSlinky.csstype.csstypeStrings.static = this.cast("static")
+  def sticky: typingsSlinky.csstype.csstypeStrings.sticky = "sticky".asInstanceOf[typingsSlinky.csstype.csstypeStrings.sticky]
   @scala.inline
-  def sticky: typingsSlinky.csstype.csstypeStrings.sticky = this.cast("sticky")
-  @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
 }
 

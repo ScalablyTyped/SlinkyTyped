@@ -17,7 +17,7 @@ trait Socket extends js.Object {
   @JSName("resume")
   var resume_Original: Method0[Unit] = js.native
   @JSName("write")
-  var write_Original: Method1[scala.scalajs.js.typedarray.ArrayBuffer, WriteInfo] = js.native
+  var write_Original: Method1[js.typedarray.ArrayBuffer, WriteInfo] = js.native
   def close(): js.Promise[Unit] = js.native
   def connect(hostname: String, port: Double): js.Promise[Unit] = js.native
   def getInfo(): js.Promise[SocketInfo] = js.native
@@ -36,6 +36,6 @@ trait Socket extends js.Object {
   def pause(): js.Promise[Unit] = js.native
   def resume(): js.Promise[Unit] = js.native
   def secure(): js.Promise[Unit] = js.native
-  def write(a: scala.scalajs.js.typedarray.ArrayBuffer): js.Promise[WriteInfo] = js.native
+  def write(a: js.typedarray.ArrayBuffer): js.Promise[WriteInfo] = js.native
 }
 

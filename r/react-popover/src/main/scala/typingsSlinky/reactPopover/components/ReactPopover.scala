@@ -1,11 +1,11 @@
 package typingsSlinky.reactPopover.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.raw.Element
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactPopover.mod.PopoverPlace
 import typingsSlinky.reactPopover.mod.PopoverProps
 import typingsSlinky.reactPopover.mod.^
@@ -14,40 +14,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactPopover
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactPopover {
   @JSImport("react-popover", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    body: TagMod[Any],
-    appendTarget: org.scalajs.dom.raw.Element = null,
-    enterExitTransitionDurationMs: Int | Double = null,
-    isOpen: js.UndefOr[Boolean] = js.undefined,
-    onOuterAction: /* event */ Event_ => Unit = null,
-    place: PopoverPlace = null,
-    preferPlace: PopoverPlace = null,
-    refreshIntervalMs: Int | Double = null,
-    target: ReactElement = null,
-    tipSize: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
-    if (appendTarget != null) __obj.updateDynamic("appendTarget")(appendTarget.asInstanceOf[js.Any])
-    if (enterExitTransitionDurationMs != null) __obj.updateDynamic("enterExitTransitionDurationMs")(enterExitTransitionDurationMs.asInstanceOf[js.Any])
-    if (!js.isUndefined(isOpen)) __obj.updateDynamic("isOpen")(isOpen.asInstanceOf[js.Any])
-    if (onOuterAction != null) __obj.updateDynamic("onOuterAction")(js.Any.fromFunction1(onOuterAction))
-    if (place != null) __obj.updateDynamic("place")(place.asInstanceOf[js.Any])
-    if (preferPlace != null) __obj.updateDynamic("preferPlace")(preferPlace.asInstanceOf[js.Any])
-    if (refreshIntervalMs != null) __obj.updateDynamic("refreshIntervalMs")(refreshIntervalMs.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (tipSize != null) __obj.updateDynamic("tipSize")(tipSize.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def appendTarget(value: Element): this.type = set("appendTarget", value.asInstanceOf[js.Any])
+    @scala.inline
+    def body(value: TagMod[Any]): this.type = set("body", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enterExitTransitionDurationMs(value: Double): this.type = set("enterExitTransitionDurationMs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isOpen(value: Boolean): this.type = set("isOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onOuterAction(value: /* event */ Event_ => Unit): this.type = set("onOuterAction", js.Any.fromFunction1(value))
+    @scala.inline
+    def place(value: PopoverPlace): this.type = set("place", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preferPlace(value: PopoverPlace): this.type = set("preferPlace", value.asInstanceOf[js.Any])
+    @scala.inline
+    def refreshIntervalMs(value: Double): this.type = set("refreshIntervalMs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def target(value: ReactElement): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tipSize(value: Double): this.type = set("tipSize", value.asInstanceOf[js.Any])
   }
-  type Props = PopoverProps
+  
+  def withProps(p: PopoverProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactPopover.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

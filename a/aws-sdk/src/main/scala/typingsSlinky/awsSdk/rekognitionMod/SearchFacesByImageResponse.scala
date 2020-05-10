@@ -26,18 +26,65 @@ trait SearchFacesByImageResponse extends js.Object {
 
 object SearchFacesByImageResponse {
   @scala.inline
-  def apply(
-    FaceMatches: FaceMatchList = null,
-    FaceModelVersion: String = null,
-    SearchedFaceBoundingBox: BoundingBox = null,
-    SearchedFaceConfidence: Int | Double = null
-  ): SearchFacesByImageResponse = {
+  def apply(): SearchFacesByImageResponse = {
     val __obj = js.Dynamic.literal()
-    if (FaceMatches != null) __obj.updateDynamic("FaceMatches")(FaceMatches.asInstanceOf[js.Any])
-    if (FaceModelVersion != null) __obj.updateDynamic("FaceModelVersion")(FaceModelVersion.asInstanceOf[js.Any])
-    if (SearchedFaceBoundingBox != null) __obj.updateDynamic("SearchedFaceBoundingBox")(SearchedFaceBoundingBox.asInstanceOf[js.Any])
-    if (SearchedFaceConfidence != null) __obj.updateDynamic("SearchedFaceConfidence")(SearchedFaceConfidence.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchFacesByImageResponse]
   }
+  @scala.inline
+  implicit class SearchFacesByImageResponseOps[Self <: SearchFacesByImageResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFaceMatches(value: FaceMatchList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceMatches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFaceMatches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceMatches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFaceModelVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceModelVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFaceModelVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceModelVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchedFaceBoundingBox(value: BoundingBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchedFaceBoundingBox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchedFaceBoundingBox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchedFaceBoundingBox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchedFaceConfidence(value: Percent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchedFaceConfidence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchedFaceConfidence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchedFaceConfidence")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

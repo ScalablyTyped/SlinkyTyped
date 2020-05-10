@@ -22,12 +22,53 @@ trait HealthCheckObservation extends js.Object {
 
 object HealthCheckObservation {
   @scala.inline
-  def apply(IPAddress: IPAddress = null, Region: HealthCheckRegion = null, StatusReport: StatusReport = null): HealthCheckObservation = {
+  def apply(): HealthCheckObservation = {
     val __obj = js.Dynamic.literal()
-    if (IPAddress != null) __obj.updateDynamic("IPAddress")(IPAddress.asInstanceOf[js.Any])
-    if (Region != null) __obj.updateDynamic("Region")(Region.asInstanceOf[js.Any])
-    if (StatusReport != null) __obj.updateDynamic("StatusReport")(StatusReport.asInstanceOf[js.Any])
     __obj.asInstanceOf[HealthCheckObservation]
   }
+  @scala.inline
+  implicit class HealthCheckObservationOps[Self <: HealthCheckObservation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIPAddress(value: IPAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IPAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIPAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IPAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: HealthCheckRegion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusReport(value: StatusReport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusReport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusReport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusReport")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

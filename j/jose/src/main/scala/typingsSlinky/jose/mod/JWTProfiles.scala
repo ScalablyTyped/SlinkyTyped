@@ -13,12 +13,10 @@ trait JWTProfiles extends js.Object
 
 object JWTProfiles {
   @scala.inline
-  def atPlussignJWT: typingsSlinky.jose.joseStrings.atPlussignJWT = this.cast("at+JWT")
+  def atPlussignJWT: typingsSlinky.jose.joseStrings.atPlussignJWT = "at+JWT".asInstanceOf[typingsSlinky.jose.joseStrings.atPlussignJWT]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def id_token: typingsSlinky.jose.joseStrings.id_token = "id_token".asInstanceOf[typingsSlinky.jose.joseStrings.id_token]
   @scala.inline
-  def id_token: typingsSlinky.jose.joseStrings.id_token = this.cast("id_token")
-  @scala.inline
-  def logout_token: typingsSlinky.jose.joseStrings.logout_token = this.cast("logout_token")
+  def logout_token: typingsSlinky.jose.joseStrings.logout_token = "logout_token".asInstanceOf[typingsSlinky.jose.joseStrings.logout_token]
 }
 

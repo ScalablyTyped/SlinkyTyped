@@ -4,75 +4,233 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OnPremisesExtensionAttributes extends js.Object {
   // First customizable extension attribute.
-  var extensionAttribute1: js.UndefOr[String] = js.undefined
+  var extensionAttribute1: js.UndefOr[String] = js.native
   // Tenth customizable extension attribute.
-  var extensionAttribute10: js.UndefOr[String] = js.undefined
+  var extensionAttribute10: js.UndefOr[String] = js.native
   // Eleventh customizable extension attribute.
-  var extensionAttribute11: js.UndefOr[String] = js.undefined
+  var extensionAttribute11: js.UndefOr[String] = js.native
   // Twelfth customizable extension attribute.
-  var extensionAttribute12: js.UndefOr[String] = js.undefined
+  var extensionAttribute12: js.UndefOr[String] = js.native
   // Thirteenth customizable extension attribute.
-  var extensionAttribute13: js.UndefOr[String] = js.undefined
+  var extensionAttribute13: js.UndefOr[String] = js.native
   // Fourteenth customizable extension attribute.
-  var extensionAttribute14: js.UndefOr[String] = js.undefined
+  var extensionAttribute14: js.UndefOr[String] = js.native
   // Fifteenth customizable extension attribute.
-  var extensionAttribute15: js.UndefOr[String] = js.undefined
+  var extensionAttribute15: js.UndefOr[String] = js.native
   // Second customizable extension attribute.
-  var extensionAttribute2: js.UndefOr[String] = js.undefined
+  var extensionAttribute2: js.UndefOr[String] = js.native
   // Third customizable extension attribute.
-  var extensionAttribute3: js.UndefOr[String] = js.undefined
+  var extensionAttribute3: js.UndefOr[String] = js.native
   // Fourth customizable extension attribute.
-  var extensionAttribute4: js.UndefOr[String] = js.undefined
+  var extensionAttribute4: js.UndefOr[String] = js.native
   // Fifth customizable extension attribute.
-  var extensionAttribute5: js.UndefOr[String] = js.undefined
+  var extensionAttribute5: js.UndefOr[String] = js.native
   // Sixth customizable extension attribute.
-  var extensionAttribute6: js.UndefOr[String] = js.undefined
+  var extensionAttribute6: js.UndefOr[String] = js.native
   // Seventh customizable extension attribute.
-  var extensionAttribute7: js.UndefOr[String] = js.undefined
+  var extensionAttribute7: js.UndefOr[String] = js.native
   // Eighth customizable extension attribute.
-  var extensionAttribute8: js.UndefOr[String] = js.undefined
+  var extensionAttribute8: js.UndefOr[String] = js.native
   // Ninth customizable extension attribute.
-  var extensionAttribute9: js.UndefOr[String] = js.undefined
+  var extensionAttribute9: js.UndefOr[String] = js.native
 }
 
 object OnPremisesExtensionAttributes {
   @scala.inline
-  def apply(
-    extensionAttribute1: String = null,
-    extensionAttribute10: String = null,
-    extensionAttribute11: String = null,
-    extensionAttribute12: String = null,
-    extensionAttribute13: String = null,
-    extensionAttribute14: String = null,
-    extensionAttribute15: String = null,
-    extensionAttribute2: String = null,
-    extensionAttribute3: String = null,
-    extensionAttribute4: String = null,
-    extensionAttribute5: String = null,
-    extensionAttribute6: String = null,
-    extensionAttribute7: String = null,
-    extensionAttribute8: String = null,
-    extensionAttribute9: String = null
-  ): OnPremisesExtensionAttributes = {
+  def apply(): OnPremisesExtensionAttributes = {
     val __obj = js.Dynamic.literal()
-    if (extensionAttribute1 != null) __obj.updateDynamic("extensionAttribute1")(extensionAttribute1.asInstanceOf[js.Any])
-    if (extensionAttribute10 != null) __obj.updateDynamic("extensionAttribute10")(extensionAttribute10.asInstanceOf[js.Any])
-    if (extensionAttribute11 != null) __obj.updateDynamic("extensionAttribute11")(extensionAttribute11.asInstanceOf[js.Any])
-    if (extensionAttribute12 != null) __obj.updateDynamic("extensionAttribute12")(extensionAttribute12.asInstanceOf[js.Any])
-    if (extensionAttribute13 != null) __obj.updateDynamic("extensionAttribute13")(extensionAttribute13.asInstanceOf[js.Any])
-    if (extensionAttribute14 != null) __obj.updateDynamic("extensionAttribute14")(extensionAttribute14.asInstanceOf[js.Any])
-    if (extensionAttribute15 != null) __obj.updateDynamic("extensionAttribute15")(extensionAttribute15.asInstanceOf[js.Any])
-    if (extensionAttribute2 != null) __obj.updateDynamic("extensionAttribute2")(extensionAttribute2.asInstanceOf[js.Any])
-    if (extensionAttribute3 != null) __obj.updateDynamic("extensionAttribute3")(extensionAttribute3.asInstanceOf[js.Any])
-    if (extensionAttribute4 != null) __obj.updateDynamic("extensionAttribute4")(extensionAttribute4.asInstanceOf[js.Any])
-    if (extensionAttribute5 != null) __obj.updateDynamic("extensionAttribute5")(extensionAttribute5.asInstanceOf[js.Any])
-    if (extensionAttribute6 != null) __obj.updateDynamic("extensionAttribute6")(extensionAttribute6.asInstanceOf[js.Any])
-    if (extensionAttribute7 != null) __obj.updateDynamic("extensionAttribute7")(extensionAttribute7.asInstanceOf[js.Any])
-    if (extensionAttribute8 != null) __obj.updateDynamic("extensionAttribute8")(extensionAttribute8.asInstanceOf[js.Any])
-    if (extensionAttribute9 != null) __obj.updateDynamic("extensionAttribute9")(extensionAttribute9.asInstanceOf[js.Any])
     __obj.asInstanceOf[OnPremisesExtensionAttributes]
   }
+  @scala.inline
+  implicit class OnPremisesExtensionAttributesOps[Self <: OnPremisesExtensionAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExtensionAttribute1(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensionAttribute1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensionAttribute10(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute10")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensionAttribute10: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute10")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensionAttribute11(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute11")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensionAttribute11: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute11")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensionAttribute12(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute12")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensionAttribute12: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute12")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensionAttribute13(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute13")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensionAttribute13: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute13")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensionAttribute14(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute14")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensionAttribute14: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute14")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensionAttribute15(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute15")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensionAttribute15: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute15")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensionAttribute2(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensionAttribute2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensionAttribute3(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensionAttribute3: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute3")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensionAttribute4(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensionAttribute4: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute4")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensionAttribute5(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensionAttribute5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute5")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensionAttribute6(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensionAttribute6: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute6")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensionAttribute7(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute7")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensionAttribute7: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute7")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensionAttribute8(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute8")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensionAttribute8: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute8")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensionAttribute9(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute9")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensionAttribute9: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionAttribute9")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

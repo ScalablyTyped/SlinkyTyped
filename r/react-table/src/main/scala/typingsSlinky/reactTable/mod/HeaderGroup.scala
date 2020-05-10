@@ -1,23 +1,20 @@
 package typingsSlinky.reactTable.mod
 
 import slinky.core.TagMod
-import typingsSlinky.reactTable.AnonData
 import typingsSlinky.reactTable.reactTableStrings.Footer
 import typingsSlinky.reactTable.reactTableStrings.Header
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined parent std.Omit<react-table.react-table.Column<D>, 'id' | 'columns'> */
+/* Inlined parent std.Omit<react-table.react-table.ColumnInterface<D>, 'id'> */
+/* Inlined parent react-table.react-table.ColumnInterfaceBasedOnValue<D, any> */
 /* Inlined parent react-table.react-table.UseTableColumnProps<D> */
 /* Inlined parent react-table.react-table.UseTableHeaderGroupProps<D> */
 @js.native
 trait HeaderGroup[D /* <: js.Object */] extends js.Object {
-  var Cell: js.UndefOr[Renderer[CellProps[D]]] = js.native
+  var Cell: js.UndefOr[Renderer[CellProps[D, _]]] = js.native
   var Header: js.UndefOr[Renderer[HeaderProps[D]]] = js.native
-  var accessor: js.UndefOr[
-    IdType[D] | (js.Function3[/* originalRow */ D, /* index */ Double, /* sub */ AnonData[D], CellValue])
-  ] = js.native
   var columns: js.Array[ColumnInstance[D]] = js.native
   var depth: Double = js.native
   var headers: js.Array[ColumnInstance[D]] = js.native
@@ -30,7 +27,6 @@ trait HeaderGroup[D /* <: js.Object */] extends js.Object {
   var parent: ColumnInstance[D] = js.native
    // not documented
   var placeholderOf: js.UndefOr[ColumnInstance[js.Object]] = js.native
-  var show: js.UndefOr[Boolean | (js.Function1[/* instance */ TableInstance[D], Boolean])] = js.native
   var totalHeaderCount: Double = js.native
   var totalLeft: Double = js.native
   var totalWidth: Double = js.native

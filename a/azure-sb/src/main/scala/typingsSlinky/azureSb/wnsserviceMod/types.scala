@@ -14,14 +14,12 @@ trait types extends js.Object
 
 object types {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def wnsSlashbadge: typingsSlinky.azureSb.azureSbStrings.wnsSlashbadge = "wns/badge".asInstanceOf[typingsSlinky.azureSb.azureSbStrings.wnsSlashbadge]
   @scala.inline
-  def wnsSlashbadge: typingsSlinky.azureSb.azureSbStrings.wnsSlashbadge = this.cast("wns/badge")
+  def wnsSlashraw: typingsSlinky.azureSb.azureSbStrings.wnsSlashraw = "wns/raw".asInstanceOf[typingsSlinky.azureSb.azureSbStrings.wnsSlashraw]
   @scala.inline
-  def wnsSlashraw: typingsSlinky.azureSb.azureSbStrings.wnsSlashraw = this.cast("wns/raw")
+  def wnsSlashtile: typingsSlinky.azureSb.azureSbStrings.wnsSlashtile = "wns/tile".asInstanceOf[typingsSlinky.azureSb.azureSbStrings.wnsSlashtile]
   @scala.inline
-  def wnsSlashtile: typingsSlinky.azureSb.azureSbStrings.wnsSlashtile = this.cast("wns/tile")
-  @scala.inline
-  def wnsSlashtoast: typingsSlinky.azureSb.azureSbStrings.wnsSlashtoast = this.cast("wns/toast")
+  def wnsSlashtoast: typingsSlinky.azureSb.azureSbStrings.wnsSlashtoast = "wns/toast".asInstanceOf[typingsSlinky.azureSb.azureSbStrings.wnsSlashtoast]
 }
 

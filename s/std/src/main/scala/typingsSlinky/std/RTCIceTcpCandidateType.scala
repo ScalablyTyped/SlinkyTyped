@@ -13,12 +13,10 @@ trait RTCIceTcpCandidateType extends js.Object
 
 object RTCIceTcpCandidateType {
   @scala.inline
-  def active: typingsSlinky.std.stdStrings.active = this.cast("active")
+  def active: typingsSlinky.std.stdStrings.active = "active".asInstanceOf[typingsSlinky.std.stdStrings.active]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def passive: typingsSlinky.std.stdStrings.passive = "passive".asInstanceOf[typingsSlinky.std.stdStrings.passive]
   @scala.inline
-  def passive: typingsSlinky.std.stdStrings.passive = this.cast("passive")
-  @scala.inline
-  def so: typingsSlinky.std.stdStrings.so = this.cast("so")
+  def so: typingsSlinky.std.stdStrings.so = "so".asInstanceOf[typingsSlinky.std.stdStrings.so]
 }
 

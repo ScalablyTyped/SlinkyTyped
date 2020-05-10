@@ -34,22 +34,89 @@ trait VideoPreprocessor extends js.Object {
 
 object VideoPreprocessor {
   @scala.inline
-  def apply(
-    ColorCorrector: ColorCorrector = null,
-    Deinterlacer: Deinterlacer = null,
-    DolbyVision: DolbyVision = null,
-    ImageInserter: ImageInserter = null,
-    NoiseReducer: NoiseReducer = null,
-    TimecodeBurnin: TimecodeBurnin = null
-  ): VideoPreprocessor = {
+  def apply(): VideoPreprocessor = {
     val __obj = js.Dynamic.literal()
-    if (ColorCorrector != null) __obj.updateDynamic("ColorCorrector")(ColorCorrector.asInstanceOf[js.Any])
-    if (Deinterlacer != null) __obj.updateDynamic("Deinterlacer")(Deinterlacer.asInstanceOf[js.Any])
-    if (DolbyVision != null) __obj.updateDynamic("DolbyVision")(DolbyVision.asInstanceOf[js.Any])
-    if (ImageInserter != null) __obj.updateDynamic("ImageInserter")(ImageInserter.asInstanceOf[js.Any])
-    if (NoiseReducer != null) __obj.updateDynamic("NoiseReducer")(NoiseReducer.asInstanceOf[js.Any])
-    if (TimecodeBurnin != null) __obj.updateDynamic("TimecodeBurnin")(TimecodeBurnin.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoPreprocessor]
   }
+  @scala.inline
+  implicit class VideoPreprocessorOps[Self <: VideoPreprocessor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColorCorrector(value: ColorCorrector): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorCorrector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorCorrector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorCorrector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeinterlacer(value: Deinterlacer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Deinterlacer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeinterlacer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Deinterlacer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDolbyVision(value: DolbyVision): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DolbyVision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDolbyVision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DolbyVision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageInserter(value: ImageInserter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageInserter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageInserter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageInserter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoiseReducer(value: NoiseReducer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NoiseReducer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoiseReducer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NoiseReducer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimecodeBurnin(value: TimecodeBurnin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimecodeBurnin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimecodeBurnin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimecodeBurnin")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -23,11 +23,41 @@ trait SchemaAppStartTime extends js.Object {
 
 object SchemaAppStartTime {
   @scala.inline
-  def apply(fullyDrawnTime: SchemaDuration = null, initialDisplayTime: SchemaDuration = null): SchemaAppStartTime = {
+  def apply(): SchemaAppStartTime = {
     val __obj = js.Dynamic.literal()
-    if (fullyDrawnTime != null) __obj.updateDynamic("fullyDrawnTime")(fullyDrawnTime.asInstanceOf[js.Any])
-    if (initialDisplayTime != null) __obj.updateDynamic("initialDisplayTime")(initialDisplayTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAppStartTime]
   }
+  @scala.inline
+  implicit class SchemaAppStartTimeOps[Self <: SchemaAppStartTime] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFullyDrawnTime(value: SchemaDuration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullyDrawnTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullyDrawnTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullyDrawnTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialDisplayTime(value: SchemaDuration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialDisplayTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialDisplayTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialDisplayTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

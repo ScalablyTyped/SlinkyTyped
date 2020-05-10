@@ -21,8 +21,27 @@ object StaticIpAttachmentArgs {
   @scala.inline
   def apply(instanceName: Input[String], staticIpName: Input[String]): StaticIpAttachmentArgs = {
     val __obj = js.Dynamic.literal(instanceName = instanceName.asInstanceOf[js.Any], staticIpName = staticIpName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[StaticIpAttachmentArgs]
   }
+  @scala.inline
+  implicit class StaticIpAttachmentArgsOps[Self <: StaticIpAttachmentArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStaticIpName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("staticIpName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

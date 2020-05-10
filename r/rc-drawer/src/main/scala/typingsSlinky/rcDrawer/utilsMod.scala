@@ -29,7 +29,7 @@ object utilsMod extends js.Object {
   ): Unit = js.native
   def dataToArray(vars: js.Any): js.Array[_] = js.native
   def getTouchParentScroll(root: HTMLElement, currentTarget: Document_, differX: Double, differY: Double): Boolean = js.native
-  def getTouchParentScroll(root: HTMLElement, currentTarget: typingsSlinky.std.HTMLElement, differX: Double, differY: Double): Boolean = js.native
+  def getTouchParentScroll(root: HTMLElement, currentTarget: HTMLElement, differX: Double, differY: Double): Boolean = js.native
   def isNumeric(value: String): Boolean = js.native
   def isNumeric(value: Double): Boolean = js.native
   def removeEventListener(

@@ -1,36 +1,39 @@
 package typingsSlinky.linguiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.linguiReact.createFormatMod.FormatPropsWithoutI18n
 import typingsSlinky.std.Intl.NumberFormatOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object NumberFormat
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.linguiReact.mod.NumberFormat] {
+object NumberFormat {
   @JSImport("@lingui/react", "NumberFormat")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    value: Double,
-    format: NumberFormatOptions = null,
-    render: TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.linguiReact.mod.NumberFormat] = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (render != null) __obj.updateDynamic("render")(render.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.linguiReact.mod.NumberFormat] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def format(value: NumberFormatOptions): this.type = set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderReactElement(value: ReactElement): this.type = set("render", value.asInstanceOf[js.Any])
+    @scala.inline
+    def render(value: TagMod[Any]): this.type = set("render", value.asInstanceOf[js.Any])
   }
-  type Props = FormatPropsWithoutI18n[Double, NumberFormatOptions]
+  
+  def withProps(p: FormatPropsWithoutI18n[Double, NumberFormatOptions]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(value: Double): Builder = {
+    val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[FormatPropsWithoutI18n[Double, NumberFormatOptions]]))
+  }
 }
 

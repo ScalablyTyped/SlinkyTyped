@@ -10,57 +10,205 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonArea extends js.Object {
-  var area: js.UndefOr[String] = js.undefined
-  var cancel: js.UndefOr[Boolean] = js.undefined
-  var cell: js.UndefOr[dxPivotGridPivotGridCell] = js.undefined
-  var cellElement: js.UndefOr[dxElement] = js.undefined
-  var columnFields: js.UndefOr[js.Array[PivotGridDataSourceField]] = js.undefined
-  var columnIndex: js.UndefOr[Double] = js.undefined
-  var component: js.UndefOr[dxPivotGrid] = js.undefined
-  var dataFields: js.UndefOr[js.Array[PivotGridDataSourceField]] = js.undefined
-  var element: js.UndefOr[dxElement] = js.undefined
-  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.undefined
-  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.undefined
-  var model: js.UndefOr[js.Any] = js.undefined
-  var rowFields: js.UndefOr[js.Array[PivotGridDataSourceField]] = js.undefined
-  var rowIndex: js.UndefOr[Double] = js.undefined
+  var area: js.UndefOr[String] = js.native
+  var cancel: js.UndefOr[Boolean] = js.native
+  var cell: js.UndefOr[dxPivotGridPivotGridCell] = js.native
+  var cellElement: js.UndefOr[dxElement] = js.native
+  var columnFields: js.UndefOr[js.Array[PivotGridDataSourceField]] = js.native
+  var columnIndex: js.UndefOr[Double] = js.native
+  var component: js.UndefOr[dxPivotGrid] = js.native
+  var dataFields: js.UndefOr[js.Array[PivotGridDataSourceField]] = js.native
+  var element: js.UndefOr[dxElement] = js.native
+  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.native
+  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.native
+  var model: js.UndefOr[js.Any] = js.native
+  var rowFields: js.UndefOr[js.Array[PivotGridDataSourceField]] = js.native
+  var rowIndex: js.UndefOr[Double] = js.native
 }
 
 object AnonArea {
   @scala.inline
-  def apply(
-    area: String = null,
-    cancel: js.UndefOr[Boolean] = js.undefined,
-    cell: dxPivotGridPivotGridCell = null,
-    cellElement: dxElement = null,
-    columnFields: js.Array[PivotGridDataSourceField] = null,
-    columnIndex: Int | Double = null,
-    component: dxPivotGrid = null,
-    dataFields: js.Array[PivotGridDataSourceField] = null,
-    element: dxElement = null,
-    event: event = null,
-    jQueryEvent: JQueryEventObject = null,
-    model: js.Any = null,
-    rowFields: js.Array[PivotGridDataSourceField] = null,
-    rowIndex: Int | Double = null
-  ): AnonArea = {
+  def apply(): AnonArea = {
     val __obj = js.Dynamic.literal()
-    if (area != null) __obj.updateDynamic("area")(area.asInstanceOf[js.Any])
-    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.asInstanceOf[js.Any])
-    if (cell != null) __obj.updateDynamic("cell")(cell.asInstanceOf[js.Any])
-    if (cellElement != null) __obj.updateDynamic("cellElement")(cellElement.asInstanceOf[js.Any])
-    if (columnFields != null) __obj.updateDynamic("columnFields")(columnFields.asInstanceOf[js.Any])
-    if (columnIndex != null) __obj.updateDynamic("columnIndex")(columnIndex.asInstanceOf[js.Any])
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (dataFields != null) __obj.updateDynamic("dataFields")(dataFields.asInstanceOf[js.Any])
-    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
-    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
-    if (jQueryEvent != null) __obj.updateDynamic("jQueryEvent")(jQueryEvent.asInstanceOf[js.Any])
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
-    if (rowFields != null) __obj.updateDynamic("rowFields")(rowFields.asInstanceOf[js.Any])
-    if (rowIndex != null) __obj.updateDynamic("rowIndex")(rowIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonArea]
   }
+  @scala.inline
+  implicit class AnonAreaOps[Self <: AnonArea] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArea(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCell(value: dxPivotGridPivotGridCell): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCell: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cell")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellElement(value: dxElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnFields(value: js.Array[PivotGridDataSourceField]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponent(value: dxPivotGrid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataFields(value: js.Array[PivotGridDataSourceField]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElement(value: dxElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvent(value: event): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJQueryEvent(value: JQueryEventObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jQueryEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJQueryEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jQueryEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModel(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowFields(value: js.Array[PivotGridDataSourceField]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.dateFns
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +11,12 @@ object dateFnsIsSameWeekMod extends js.Object {
   object default extends js.Object {
     def apply(dateLeft: Double, dateRight: Double): Boolean = js.native
     def apply(dateLeft: Double, dateRight: Double, options: AnonLocale): Boolean = js.native
-    def apply(dateLeft: Double, dateRight: Date): Boolean = js.native
-    def apply(dateLeft: Double, dateRight: Date, options: AnonLocale): Boolean = js.native
-    def apply(dateLeft: Date, dateRight: Double): Boolean = js.native
-    def apply(dateLeft: Date, dateRight: Double, options: AnonLocale): Boolean = js.native
-    def apply(dateLeft: Date, dateRight: Date): Boolean = js.native
-    def apply(dateLeft: Date, dateRight: Date, options: AnonLocale): Boolean = js.native
+    def apply(dateLeft: Double, dateRight: js.Date): Boolean = js.native
+    def apply(dateLeft: Double, dateRight: js.Date, options: AnonLocale): Boolean = js.native
+    def apply(dateLeft: js.Date, dateRight: Double): Boolean = js.native
+    def apply(dateLeft: js.Date, dateRight: Double, options: AnonLocale): Boolean = js.native
+    def apply(dateLeft: js.Date, dateRight: js.Date): Boolean = js.native
+    def apply(dateLeft: js.Date, dateRight: js.Date, options: AnonLocale): Boolean = js.native
   }
   
 }

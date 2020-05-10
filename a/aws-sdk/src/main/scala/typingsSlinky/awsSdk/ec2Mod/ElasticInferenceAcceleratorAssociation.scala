@@ -26,18 +26,65 @@ trait ElasticInferenceAcceleratorAssociation extends js.Object {
 
 object ElasticInferenceAcceleratorAssociation {
   @scala.inline
-  def apply(
-    ElasticInferenceAcceleratorArn: String = null,
-    ElasticInferenceAcceleratorAssociationId: String = null,
-    ElasticInferenceAcceleratorAssociationState: String = null,
-    ElasticInferenceAcceleratorAssociationTime: js.Date = null
-  ): ElasticInferenceAcceleratorAssociation = {
+  def apply(): ElasticInferenceAcceleratorAssociation = {
     val __obj = js.Dynamic.literal()
-    if (ElasticInferenceAcceleratorArn != null) __obj.updateDynamic("ElasticInferenceAcceleratorArn")(ElasticInferenceAcceleratorArn.asInstanceOf[js.Any])
-    if (ElasticInferenceAcceleratorAssociationId != null) __obj.updateDynamic("ElasticInferenceAcceleratorAssociationId")(ElasticInferenceAcceleratorAssociationId.asInstanceOf[js.Any])
-    if (ElasticInferenceAcceleratorAssociationState != null) __obj.updateDynamic("ElasticInferenceAcceleratorAssociationState")(ElasticInferenceAcceleratorAssociationState.asInstanceOf[js.Any])
-    if (ElasticInferenceAcceleratorAssociationTime != null) __obj.updateDynamic("ElasticInferenceAcceleratorAssociationTime")(ElasticInferenceAcceleratorAssociationTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElasticInferenceAcceleratorAssociation]
   }
+  @scala.inline
+  implicit class ElasticInferenceAcceleratorAssociationOps[Self <: ElasticInferenceAcceleratorAssociation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withElasticInferenceAcceleratorArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticInferenceAcceleratorArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticInferenceAcceleratorArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticInferenceAcceleratorArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElasticInferenceAcceleratorAssociationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticInferenceAcceleratorAssociationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticInferenceAcceleratorAssociationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticInferenceAcceleratorAssociationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElasticInferenceAcceleratorAssociationState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticInferenceAcceleratorAssociationState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticInferenceAcceleratorAssociationState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticInferenceAcceleratorAssociationState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElasticInferenceAcceleratorAssociationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticInferenceAcceleratorAssociationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticInferenceAcceleratorAssociationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticInferenceAcceleratorAssociationTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

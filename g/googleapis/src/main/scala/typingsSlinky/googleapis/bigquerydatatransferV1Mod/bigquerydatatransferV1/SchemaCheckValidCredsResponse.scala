@@ -17,10 +17,29 @@ trait SchemaCheckValidCredsResponse extends js.Object {
 
 object SchemaCheckValidCredsResponse {
   @scala.inline
-  def apply(hasValidCreds: js.UndefOr[Boolean] = js.undefined): SchemaCheckValidCredsResponse = {
+  def apply(): SchemaCheckValidCredsResponse = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(hasValidCreds)) __obj.updateDynamic("hasValidCreds")(hasValidCreds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCheckValidCredsResponse]
   }
+  @scala.inline
+  implicit class SchemaCheckValidCredsResponseOps[Self <: SchemaCheckValidCredsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHasValidCreds(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasValidCreds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasValidCreds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasValidCreds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

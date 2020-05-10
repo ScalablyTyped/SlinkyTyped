@@ -49,7 +49,7 @@ class RemoteTileProvider protected () extends TileProvider {
     y: Double,
     z: Double,
     onResponse: js.Function2[
-      /* object */ js.Array[Object] | HTMLImageElement | HTMLCanvasElement | scala.scalajs.js.typedarray.ArrayBuffer, 
+      /* object */ js.Array[Object] | HTMLImageElement | HTMLCanvasElement | js.typedarray.ArrayBuffer, 
       /* response */ js.Any, 
       Unit
     ]
@@ -59,7 +59,7 @@ class RemoteTileProvider protected () extends TileProvider {
     y: Double,
     z: Double,
     onResponse: js.Function2[
-      /* object */ js.Array[Object] | HTMLImageElement | HTMLCanvasElement | scala.scalajs.js.typedarray.ArrayBuffer, 
+      /* object */ js.Array[Object] | HTMLImageElement | HTMLCanvasElement | js.typedarray.ArrayBuffer, 
       /* response */ js.Any, 
       Unit
     ],
@@ -70,7 +70,7 @@ class RemoteTileProvider protected () extends TileProvider {
     y: Double,
     z: Double,
     onResponse: js.Function2[
-      /* object */ js.Array[Object] | HTMLImageElement | HTMLCanvasElement | scala.scalajs.js.typedarray.ArrayBuffer, 
+      /* object */ js.Array[Object] | HTMLImageElement | HTMLCanvasElement | js.typedarray.ArrayBuffer, 
       /* response */ js.Any, 
       Unit
     ],

@@ -27,40 +27,38 @@ trait Tone extends js.Object
 
 object Tone {
   @scala.inline
-  def a: typingsSlinky.microsoftGraph.microsoftGraphStrings.a = this.cast("a")
+  def a: typingsSlinky.microsoftGraph.microsoftGraphStrings.a = "a".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.a]
   @scala.inline
-  def b: typingsSlinky.microsoftGraph.microsoftGraphStrings.b = this.cast("b")
+  def b: typingsSlinky.microsoftGraph.microsoftGraphStrings.b = "b".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.b]
   @scala.inline
-  def c: typingsSlinky.microsoftGraph.microsoftGraphStrings.c = this.cast("c")
+  def c: typingsSlinky.microsoftGraph.microsoftGraphStrings.c = "c".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.c]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def d: typingsSlinky.microsoftGraph.microsoftGraphStrings.d = "d".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.d]
   @scala.inline
-  def d: typingsSlinky.microsoftGraph.microsoftGraphStrings.d = this.cast("d")
+  def flash: typingsSlinky.microsoftGraph.microsoftGraphStrings.flash = "flash".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.flash]
   @scala.inline
-  def flash: typingsSlinky.microsoftGraph.microsoftGraphStrings.flash = this.cast("flash")
+  def pound: typingsSlinky.microsoftGraph.microsoftGraphStrings.pound = "pound".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.pound]
   @scala.inline
-  def pound: typingsSlinky.microsoftGraph.microsoftGraphStrings.pound = this.cast("pound")
+  def star: typingsSlinky.microsoftGraph.microsoftGraphStrings.star = "star".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.star]
   @scala.inline
-  def star: typingsSlinky.microsoftGraph.microsoftGraphStrings.star = this.cast("star")
+  def tone0: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone0 = "tone0".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.tone0]
   @scala.inline
-  def tone0: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone0 = this.cast("tone0")
+  def tone1: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone1 = "tone1".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.tone1]
   @scala.inline
-  def tone1: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone1 = this.cast("tone1")
+  def tone2: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone2 = "tone2".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.tone2]
   @scala.inline
-  def tone2: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone2 = this.cast("tone2")
+  def tone3: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone3 = "tone3".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.tone3]
   @scala.inline
-  def tone3: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone3 = this.cast("tone3")
+  def tone4: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone4 = "tone4".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.tone4]
   @scala.inline
-  def tone4: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone4 = this.cast("tone4")
+  def tone5: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone5 = "tone5".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.tone5]
   @scala.inline
-  def tone5: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone5 = this.cast("tone5")
+  def tone6: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone6 = "tone6".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.tone6]
   @scala.inline
-  def tone6: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone6 = this.cast("tone6")
+  def tone7: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone7 = "tone7".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.tone7]
   @scala.inline
-  def tone7: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone7 = this.cast("tone7")
+  def tone8: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone8 = "tone8".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.tone8]
   @scala.inline
-  def tone8: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone8 = this.cast("tone8")
-  @scala.inline
-  def tone9: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone9 = this.cast("tone9")
+  def tone9: typingsSlinky.microsoftGraph.microsoftGraphStrings.tone9 = "tone9".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.tone9]
 }
 

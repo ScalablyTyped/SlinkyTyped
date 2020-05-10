@@ -32,7 +32,7 @@ object getKeyPair extends js.Object {
     * @see[CryptoKey docs]{@link http://www.w3.org/TR/WebCryptoAPI/#dfn-CryptoKey}
     */
   def apply(
-    certificate: scala.scalajs.js.typedarray.ArrayBuffer,
+    certificate: js.typedarray.ArrayBuffer,
     parameters: js.Object,
     callback: js.Function2[/* publicKey */ CryptoKey, /* privateKey */ CryptoKey | Null, Unit]
   ): Unit = js.native

@@ -28,42 +28,40 @@ trait Types extends js.Object
 
 object Types {
   @scala.inline
-  def Audio: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Audio = this.cast("Audio")
+  def Audio: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Audio = "Audio".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Audio]
   @scala.inline
-  def BallTriangle: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.BallTriangle = this.cast("BallTriangle")
+  def BallTriangle: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.BallTriangle = "BallTriangle".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.BallTriangle]
   @scala.inline
-  def Bars: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Bars = this.cast("Bars")
+  def Bars: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Bars = "Bars".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Bars]
   @scala.inline
-  def Circles: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Circles = this.cast("Circles")
+  def Circles: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Circles = "Circles".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Circles]
   @scala.inline
-  def Grid: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Grid = this.cast("Grid")
+  def Grid: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Grid = "Grid".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Grid]
   @scala.inline
-  def Hearts: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Hearts = this.cast("Hearts")
+  def Hearts: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Hearts = "Hearts".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Hearts]
   @scala.inline
-  def MutatingDots: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.MutatingDots = this.cast("MutatingDots")
+  def MutatingDots: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.MutatingDots = "MutatingDots".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.MutatingDots]
   @scala.inline
-  def None: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.None = this.cast("None")
+  def None: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.None = "None".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.None]
   @scala.inline
-  def NotSpecified: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.NotSpecified = this.cast("NotSpecified")
+  def NotSpecified: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.NotSpecified = "NotSpecified".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.NotSpecified]
   @scala.inline
-  def Oval: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Oval = this.cast("Oval")
+  def Oval: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Oval = "Oval".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Oval]
   @scala.inline
-  def Plane: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Plane = this.cast("Plane")
+  def Plane: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Plane = "Plane".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Plane]
   @scala.inline
-  def Puff: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Puff = this.cast("Puff")
+  def Puff: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Puff = "Puff".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Puff]
   @scala.inline
-  def RevolvingDot: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.RevolvingDot = this.cast("RevolvingDot")
+  def RevolvingDot: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.RevolvingDot = "RevolvingDot".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.RevolvingDot]
   @scala.inline
-  def Rings: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Rings = this.cast("Rings")
+  def Rings: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Rings = "Rings".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Rings]
   @scala.inline
-  def TailSpin: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.TailSpin = this.cast("TailSpin")
+  def TailSpin: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.TailSpin = "TailSpin".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.TailSpin]
   @scala.inline
-  def ThreeDots: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.ThreeDots = this.cast("ThreeDots")
+  def ThreeDots: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.ThreeDots = "ThreeDots".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.ThreeDots]
   @scala.inline
-  def Triangle: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Triangle = this.cast("Triangle")
+  def Triangle: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Triangle = "Triangle".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Triangle]
   @scala.inline
-  def Watch: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Watch = this.cast("Watch")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Watch: typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Watch = "Watch".asInstanceOf[typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Watch]
 }
 

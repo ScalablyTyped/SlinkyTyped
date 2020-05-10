@@ -13,6 +13,34 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UI extends js.Object {
   /**
+    * Adds an event handler to the object using the specified event type.
+    * 
+    * @beta
+    *
+    * @remarks
+    * 
+    * **Requirement set**: TBD
+    *
+    * You can add multiple event handlers for the specified event type as long as the name of each event handler function is unique.
+    *
+    * @param eventType Specifies the type of event to add. This must be `Office.EventType.DialogParentMessageReceived`.
+    * @param handler The event handler function to add, whose only parameter is of type {@link Office.DialogParentMessageReceivedEventArgs}.
+    * @param options Optional. Provides an option for preserving context data of any type, unchanged, for use in a callback.
+    * @param callback Optional. A function that is invoked when the handler registration returns, whose only parameter is of type {@link Office.AsyncResult}.
+    */
+  def addHandlerAsync(eventType: EventType, handler: js.Function1[/* result */ js.Any, Unit]): Unit = js.native
+  def addHandlerAsync(
+    eventType: EventType,
+    handler: js.Function1[/* result */ js.Any, Unit],
+    options: AsyncContextOptions
+  ): Unit = js.native
+  def addHandlerAsync(
+    eventType: EventType,
+    handler: js.Function1[/* result */ js.Any, Unit],
+    options: AsyncContextOptions,
+    callback: js.Function1[/* result */ AsyncResult[Unit], Unit]
+  ): Unit = js.native
+  /**
     * Closes the UI container where the JavaScript is executing.
     *
     * @remarks
@@ -75,10 +103,6 @@ trait UI extends js.Object {
     * - Temporarily increase the surface area that a user has available to complete a task.
     *
     * Do not use a dialog box to interact with a document. Use a task pane instead.
-    * 
-    * For a design pattern that you can use to create a dialog box, see 
-    * {@link https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/blob/master/Patterns/Client_Dialog.md | Client Dialog}  in the Office 
-    * Add-in UX Design Patterns repository on GitHub.
     * 
     * **displayDialogAsync Errors**:
     * 

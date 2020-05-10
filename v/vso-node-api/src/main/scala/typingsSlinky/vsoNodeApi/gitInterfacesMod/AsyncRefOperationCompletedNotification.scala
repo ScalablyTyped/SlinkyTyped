@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AsyncRefOperationCompletedNotification extends AsyncGitOperationNotification {
-  var newRefName: String
+  var newRefName: String = js.native
 }
 
 object AsyncRefOperationCompletedNotification {
   @scala.inline
   def apply(newRefName: String, operationId: Double): AsyncRefOperationCompletedNotification = {
     val __obj = js.Dynamic.literal(newRefName = newRefName.asInstanceOf[js.Any], operationId = operationId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AsyncRefOperationCompletedNotification]
   }
+  @scala.inline
+  implicit class AsyncRefOperationCompletedNotificationOps[Self <: AsyncRefOperationCompletedNotification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNewRefName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newRefName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

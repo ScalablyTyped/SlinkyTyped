@@ -6,48 +6,126 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonTitle extends js.Object {
-  var complete: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var complete: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * 提示的延迟时间
     */
-  var duration: js.UndefOr[Double] = js.undefined
-  var fail: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var duration: js.UndefOr[Double] = js.native
+  var fail: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * 图标
     */
-  var icon: js.UndefOr[success | loading] = js.undefined
+  var icon: js.UndefOr[success | loading] = js.native
   /**
     * 自定义图标的本地路径，image 的优先级高于 icon
     */
-  var image: js.UndefOr[String] = js.undefined
-  var success: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var image: js.UndefOr[String] = js.native
+  var success: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * 提示的内容
     */
-  var title: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.native
 }
 
 object AnonTitle {
   @scala.inline
-  def apply(
-    complete: () => Unit = null,
-    duration: Int | Double = null,
-    fail: () => Unit = null,
-    icon: success | loading = null,
-    image: String = null,
-    success: () => Unit = null,
-    title: String = null
-  ): AnonTitle = {
+  def apply(): AnonTitle = {
     val __obj = js.Dynamic.literal()
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction0(complete))
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction0(fail))
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction0(success))
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonTitle]
   }
+  @scala.inline
+  implicit class AnonTitleOps[Self <: AnonTitle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComplete(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFail(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutFail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: success | loading): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccess(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

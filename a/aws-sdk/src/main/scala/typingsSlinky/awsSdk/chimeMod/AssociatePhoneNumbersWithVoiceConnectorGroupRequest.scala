@@ -22,15 +22,47 @@ trait AssociatePhoneNumbersWithVoiceConnectorGroupRequest extends js.Object {
 
 object AssociatePhoneNumbersWithVoiceConnectorGroupRequest {
   @scala.inline
-  def apply(
-    VoiceConnectorGroupId: NonEmptyString,
-    E164PhoneNumbers: E164PhoneNumberList = null,
-    ForceAssociate: js.UndefOr[scala.Boolean] = js.undefined
-  ): AssociatePhoneNumbersWithVoiceConnectorGroupRequest = {
+  def apply(VoiceConnectorGroupId: NonEmptyString): AssociatePhoneNumbersWithVoiceConnectorGroupRequest = {
     val __obj = js.Dynamic.literal(VoiceConnectorGroupId = VoiceConnectorGroupId.asInstanceOf[js.Any])
-    if (E164PhoneNumbers != null) __obj.updateDynamic("E164PhoneNumbers")(E164PhoneNumbers.asInstanceOf[js.Any])
-    if (!js.isUndefined(ForceAssociate)) __obj.updateDynamic("ForceAssociate")(ForceAssociate.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociatePhoneNumbersWithVoiceConnectorGroupRequest]
   }
+  @scala.inline
+  implicit class AssociatePhoneNumbersWithVoiceConnectorGroupRequestOps[Self <: AssociatePhoneNumbersWithVoiceConnectorGroupRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVoiceConnectorGroupId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VoiceConnectorGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withE164PhoneNumbers(value: E164PhoneNumberList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("E164PhoneNumbers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutE164PhoneNumbers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("E164PhoneNumbers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceAssociate(value: NullableBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForceAssociate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceAssociate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForceAssociate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

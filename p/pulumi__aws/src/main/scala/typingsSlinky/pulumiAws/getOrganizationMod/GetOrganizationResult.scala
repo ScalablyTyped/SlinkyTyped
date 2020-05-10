@@ -71,8 +71,81 @@ object GetOrganizationResult {
     roots: js.Array[GetOrganizationRoot]
   ): GetOrganizationResult = {
     val __obj = js.Dynamic.literal(accounts = accounts.asInstanceOf[js.Any], arn = arn.asInstanceOf[js.Any], awsServiceAccessPrincipals = awsServiceAccessPrincipals.asInstanceOf[js.Any], enabledPolicyTypes = enabledPolicyTypes.asInstanceOf[js.Any], featureSet = featureSet.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], masterAccountArn = masterAccountArn.asInstanceOf[js.Any], masterAccountEmail = masterAccountEmail.asInstanceOf[js.Any], masterAccountId = masterAccountId.asInstanceOf[js.Any], nonMasterAccounts = nonMasterAccounts.asInstanceOf[js.Any], roots = roots.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetOrganizationResult]
   }
+  @scala.inline
+  implicit class GetOrganizationResultOps[Self <: GetOrganizationResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccounts(value: js.Array[GetOrganizationAccount]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAwsServiceAccessPrincipals(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsServiceAccessPrincipals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnabledPolicyTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledPolicyTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeatureSet(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("featureSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMasterAccountArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterAccountArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMasterAccountEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterAccountEmail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMasterAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNonMasterAccounts(value: js.Array[GetOrganizationNonMasterAccount]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonMasterAccounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoots(value: js.Array[GetOrganizationRoot]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roots")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

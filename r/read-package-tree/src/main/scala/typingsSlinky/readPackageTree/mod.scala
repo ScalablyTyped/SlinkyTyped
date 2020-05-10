@@ -2,7 +2,6 @@ package typingsSlinky.readPackageTree
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.readPackageTree.readPackageTreeBooleans.`true`
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -65,7 +64,7 @@ object mod extends js.Object {
     var realpath: String = js.native
   }
   
-  def apply(root: String, cb: js.Function2[/* er */ Error | Null, /* data */ Node, Unit]): Unit = js.native
+  def apply(root: String, cb: js.Function2[/* er */ js.Error | Null, /* data */ Node, Unit]): Unit = js.native
   def apply(
     root: String,
     filterWith: js.Function2[/* node */ Node, /* kidName */ String, js.UndefOr[Unit | Boolean]],

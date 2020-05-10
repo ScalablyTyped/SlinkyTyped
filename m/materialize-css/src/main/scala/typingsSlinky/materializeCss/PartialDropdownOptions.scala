@@ -8,54 +8,192 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<materialize-css.M.DropdownOptions> */
+@js.native
 trait PartialDropdownOptions extends js.Object {
-  var alignment: js.UndefOr[left | right] = js.undefined
-  var autoTrigger: js.UndefOr[Boolean] = js.undefined
-  var closeOnClick: js.UndefOr[Boolean] = js.undefined
-  var constrainWidth: js.UndefOr[Boolean] = js.undefined
-  var container: js.UndefOr[Element] = js.undefined
-  var coverTrigger: js.UndefOr[Boolean] = js.undefined
-  var hover: js.UndefOr[Boolean] = js.undefined
-  var inDuration: js.UndefOr[Double] = js.undefined
-  var onCloseEnd: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* el */ Element, Unit]] = js.undefined
-  var onCloseStart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* el */ Element, Unit]] = js.undefined
-  var onOpenEnd: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* el */ Element, Unit]] = js.undefined
-  var onOpenStart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* el */ Element, Unit]] = js.undefined
-  var outDuration: js.UndefOr[Double] = js.undefined
+  var alignment: js.UndefOr[left | right] = js.native
+  var autoTrigger: js.UndefOr[Boolean] = js.native
+  var closeOnClick: js.UndefOr[Boolean] = js.native
+  var constrainWidth: js.UndefOr[Boolean] = js.native
+  var container: js.UndefOr[Element] = js.native
+  var coverTrigger: js.UndefOr[Boolean] = js.native
+  var hover: js.UndefOr[Boolean] = js.native
+  var inDuration: js.UndefOr[Double] = js.native
+  var onCloseEnd: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* el */ Element, Unit]] = js.native
+  var onCloseStart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* el */ Element, Unit]] = js.native
+  var onOpenEnd: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* el */ Element, Unit]] = js.native
+  var onOpenStart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* el */ Element, Unit]] = js.native
+  var outDuration: js.UndefOr[Double] = js.native
 }
 
 object PartialDropdownOptions {
   @scala.inline
-  def apply(
-    alignment: left | right = null,
-    autoTrigger: js.UndefOr[Boolean] = js.undefined,
-    closeOnClick: js.UndefOr[Boolean] = js.undefined,
-    constrainWidth: js.UndefOr[Boolean] = js.undefined,
-    container: Element = null,
-    coverTrigger: js.UndefOr[Boolean] = js.undefined,
-    hover: js.UndefOr[Boolean] = js.undefined,
-    inDuration: Int | Double = null,
-    onCloseEnd: js.ThisFunction1[PartialDropdownOptions, /* el */ Element, Unit] = null,
-    onCloseStart: js.ThisFunction1[PartialDropdownOptions, /* el */ Element, Unit] = null,
-    onOpenEnd: js.ThisFunction1[PartialDropdownOptions, /* el */ Element, Unit] = null,
-    onOpenStart: js.ThisFunction1[PartialDropdownOptions, /* el */ Element, Unit] = null,
-    outDuration: Int | Double = null
-  ): PartialDropdownOptions = {
+  def apply(): PartialDropdownOptions = {
     val __obj = js.Dynamic.literal()
-    if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoTrigger)) __obj.updateDynamic("autoTrigger")(autoTrigger.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnClick)) __obj.updateDynamic("closeOnClick")(closeOnClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(constrainWidth)) __obj.updateDynamic("constrainWidth")(constrainWidth.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (!js.isUndefined(coverTrigger)) __obj.updateDynamic("coverTrigger")(coverTrigger.asInstanceOf[js.Any])
-    if (!js.isUndefined(hover)) __obj.updateDynamic("hover")(hover.asInstanceOf[js.Any])
-    if (inDuration != null) __obj.updateDynamic("inDuration")(inDuration.asInstanceOf[js.Any])
-    if (onCloseEnd != null) __obj.updateDynamic("onCloseEnd")(onCloseEnd.asInstanceOf[js.Any])
-    if (onCloseStart != null) __obj.updateDynamic("onCloseStart")(onCloseStart.asInstanceOf[js.Any])
-    if (onOpenEnd != null) __obj.updateDynamic("onOpenEnd")(onOpenEnd.asInstanceOf[js.Any])
-    if (onOpenStart != null) __obj.updateDynamic("onOpenStart")(onOpenStart.asInstanceOf[js.Any])
-    if (outDuration != null) __obj.updateDynamic("outDuration")(outDuration.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialDropdownOptions]
   }
+  @scala.inline
+  implicit class PartialDropdownOptionsOps[Self <: PartialDropdownOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlignment(value: left | right): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoTrigger(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoTrigger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoTrigger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoTrigger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloseOnClick(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConstrainWidth(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constrainWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstrainWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constrainWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainer(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoverTrigger(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coverTrigger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoverTrigger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coverTrigger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHover(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCloseEnd(value: js.ThisFunction1[PartialDropdownOptions, /* el */ Element, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCloseEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnCloseEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCloseEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCloseStart(value: js.ThisFunction1[PartialDropdownOptions, /* el */ Element, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCloseStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnCloseStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCloseStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOpenEnd(value: js.ThisFunction1[PartialDropdownOptions, /* el */ Element, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnOpenEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOpenStart(value: js.ThisFunction1[PartialDropdownOptions, /* el */ Element, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnOpenStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outDuration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

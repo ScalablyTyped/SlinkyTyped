@@ -21,11 +21,11 @@ object rxjsNotificationMod extends js.Object {
   
   @js.native
   object Notification
-    extends Instantiable1[/* title */ String, typingsSlinky.std.Notification]
+    extends Instantiable1[/* title */ String, org.scalajs.dom.experimental.Notification]
        with Instantiable2[
           /* title */ String, 
-          /* options */ typingsSlinky.std.NotificationOptions, 
-          typingsSlinky.std.Notification
+          /* options */ NotificationOptions, 
+          org.scalajs.dom.experimental.Notification
         ] {
     val maxActions: Double = js.native
     val permission: NotificationPermission = js.native

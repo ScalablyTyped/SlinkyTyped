@@ -8,9 +8,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCellGroupRenderer extends js.Object {
-  var `aria-label`: grid
-  var cellGroupRenderer: CollectionCellGroupRenderer
+  var `aria-label`: grid = js.native
+  var cellGroupRenderer: CollectionCellGroupRenderer = js.native
 }
 
 object AnonCellGroupRenderer {
@@ -23,5 +24,25 @@ object AnonCellGroupRenderer {
     __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCellGroupRenderer]
   }
+  @scala.inline
+  implicit class AnonCellGroupRendererOps[Self <: AnonCellGroupRenderer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def `withAria-label`(value: grid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCellGroupRenderer(value: /* params */ CollectionCellGroupRendererParams => js.Array[TagMod[Any]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellGroupRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

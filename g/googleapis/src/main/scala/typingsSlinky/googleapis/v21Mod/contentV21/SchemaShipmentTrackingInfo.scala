@@ -12,11 +12,41 @@ trait SchemaShipmentTrackingInfo extends js.Object {
 
 object SchemaShipmentTrackingInfo {
   @scala.inline
-  def apply(carrier: String = null, trackingNumber: String = null): SchemaShipmentTrackingInfo = {
+  def apply(): SchemaShipmentTrackingInfo = {
     val __obj = js.Dynamic.literal()
-    if (carrier != null) __obj.updateDynamic("carrier")(carrier.asInstanceOf[js.Any])
-    if (trackingNumber != null) __obj.updateDynamic("trackingNumber")(trackingNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaShipmentTrackingInfo]
   }
+  @scala.inline
+  implicit class SchemaShipmentTrackingInfoOps[Self <: SchemaShipmentTrackingInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCarrier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("carrier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCarrier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("carrier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrackingNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackingNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackingNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackingNumber")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

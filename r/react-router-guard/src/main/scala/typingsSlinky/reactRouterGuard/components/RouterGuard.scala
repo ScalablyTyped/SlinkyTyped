@@ -1,10 +1,8 @@
 package typingsSlinky.reactRouterGuard.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.history.mod.History
 import typingsSlinky.history.mod.LocationState
 import typingsSlinky.reactRouterGuard.mod.RouterGuardConfigProps
@@ -13,27 +11,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RouterGuard
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactRouterGuard.mod.RouterGuard[js.Any]] {
+object RouterGuard {
   @JSImport("react-router-guard", "RouterGuard")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[T](
-    config: js.Array[RouterGuardConfigProps],
-    history: History[LocationState] = null,
-    loading: Boolean | ReactElement = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactRouterGuard.mod.RouterGuard[js.Any]] = {
-    val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any])
-    if (history != null) __obj.updateDynamic("history")(history.asInstanceOf[js.Any])
-    if (loading != null) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactRouterGuard.mod.RouterGuard[js.Any]]]
+  @scala.inline
+  class Builder[T] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactRouterGuard.mod.RouterGuard[js.Any]] {
+    @scala.inline
+    def history(value: History[LocationState]): this.type = set("history", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loadingReactElement(value: ReactElement): this.type = set("loading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loading(value: Boolean | ReactElement): this.type = set("loading", value.asInstanceOf[js.Any])
   }
-  type Props = RouterGuardProps
+  
+  def withProps[T](p: RouterGuardProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](config: js.Array[RouterGuardConfigProps]): Builder[T] = {
+    val __props = js.Dynamic.literal(config = config.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[RouterGuardProps]))
+  }
 }
 

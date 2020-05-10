@@ -4,33 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFAILURE_[TTriggerPayloadCreator, TRequestPayloadCreator, TSuccessPayloadCreator, TFailurePayloadCreator, TFulfillPayloadCreator] extends js.Object {
-  var FAILURE: js.UndefOr[TFailurePayloadCreator] = js.undefined
-  var FULFILL: js.UndefOr[TFulfillPayloadCreator] = js.undefined
-  var REQUEST: js.UndefOr[TRequestPayloadCreator] = js.undefined
-  var SUCCESS: js.UndefOr[TSuccessPayloadCreator] = js.undefined
-  var TRIGGER: js.UndefOr[TTriggerPayloadCreator] = js.undefined
-  var failure: js.UndefOr[TFailurePayloadCreator] = js.undefined
-  var fulfill: js.UndefOr[TFulfillPayloadCreator] = js.undefined
-  var request: js.UndefOr[TRequestPayloadCreator] = js.undefined
-  var success: js.UndefOr[TSuccessPayloadCreator] = js.undefined
-  var trigger: js.UndefOr[TTriggerPayloadCreator] = js.undefined
+  var FAILURE: js.UndefOr[TFailurePayloadCreator] = js.native
+  var FULFILL: js.UndefOr[TFulfillPayloadCreator] = js.native
+  var REQUEST: js.UndefOr[TRequestPayloadCreator] = js.native
+  var SUCCESS: js.UndefOr[TSuccessPayloadCreator] = js.native
+  var TRIGGER: js.UndefOr[TTriggerPayloadCreator] = js.native
+  var failure: js.UndefOr[TFailurePayloadCreator] = js.native
+  var fulfill: js.UndefOr[TFulfillPayloadCreator] = js.native
+  var request: js.UndefOr[TRequestPayloadCreator] = js.native
+  var success: js.UndefOr[TSuccessPayloadCreator] = js.native
+  var trigger: js.UndefOr[TTriggerPayloadCreator] = js.native
 }
 
 object AnonFAILURE_ {
   @scala.inline
-  def apply[TTriggerPayloadCreator, TRequestPayloadCreator, TSuccessPayloadCreator, TFailurePayloadCreator, TFulfillPayloadCreator](
-    FAILURE: TFailurePayloadCreator = null,
-    FULFILL: TFulfillPayloadCreator = null,
-    REQUEST: TRequestPayloadCreator = null,
-    SUCCESS: TSuccessPayloadCreator = null,
-    TRIGGER: TTriggerPayloadCreator = null,
-    failure: TFailurePayloadCreator = null,
-    fulfill: TFulfillPayloadCreator = null,
-    request: TRequestPayloadCreator = null,
-    success: TSuccessPayloadCreator = null,
-    trigger: TTriggerPayloadCreator = null
-  ): AnonFAILURE_[
+  def apply[TTriggerPayloadCreator, TRequestPayloadCreator, TSuccessPayloadCreator, TFailurePayloadCreator, TFulfillPayloadCreator](): AnonFAILURE_[
     TTriggerPayloadCreator, 
     TRequestPayloadCreator, 
     TSuccessPayloadCreator, 
@@ -38,22 +28,177 @@ object AnonFAILURE_ {
     TFulfillPayloadCreator
   ] = {
     val __obj = js.Dynamic.literal()
-    if (FAILURE != null) __obj.updateDynamic("FAILURE")(FAILURE.asInstanceOf[js.Any])
-    if (FULFILL != null) __obj.updateDynamic("FULFILL")(FULFILL.asInstanceOf[js.Any])
-    if (REQUEST != null) __obj.updateDynamic("REQUEST")(REQUEST.asInstanceOf[js.Any])
-    if (SUCCESS != null) __obj.updateDynamic("SUCCESS")(SUCCESS.asInstanceOf[js.Any])
-    if (TRIGGER != null) __obj.updateDynamic("TRIGGER")(TRIGGER.asInstanceOf[js.Any])
-    if (failure != null) __obj.updateDynamic("failure")(failure.asInstanceOf[js.Any])
-    if (fulfill != null) __obj.updateDynamic("fulfill")(fulfill.asInstanceOf[js.Any])
-    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
-    if (success != null) __obj.updateDynamic("success")(success.asInstanceOf[js.Any])
-    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonFAILURE_[
-  TTriggerPayloadCreator, 
-  TRequestPayloadCreator, 
-  TSuccessPayloadCreator, 
-  TFailurePayloadCreator, 
-  TFulfillPayloadCreator]]
+      TTriggerPayloadCreator, 
+      TRequestPayloadCreator, 
+      TSuccessPayloadCreator, 
+      TFailurePayloadCreator, 
+      TFulfillPayloadCreator
+    ]]
   }
+  @scala.inline
+  implicit class AnonFAILURE_Ops[Self[ttriggerpayloadcreator, trequestpayloadcreator, tsuccesspayloadcreator, tfailurepayloadcreator, tfulfillpayloadcreator] <: AnonFAILURE_[
+    ttriggerpayloadcreator, 
+    trequestpayloadcreator, 
+    tsuccesspayloadcreator, 
+    tfailurepayloadcreator, 
+    tfulfillpayloadcreator
+  ], TTriggerPayloadCreator, TRequestPayloadCreator, TSuccessPayloadCreator, TFailurePayloadCreator, TFulfillPayloadCreator] (val x: Self[
+        TTriggerPayloadCreator, 
+        TRequestPayloadCreator, 
+        TSuccessPayloadCreator, 
+        TFailurePayloadCreator, 
+        TFulfillPayloadCreator
+      ]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[
+        TTriggerPayloadCreator, 
+        TRequestPayloadCreator, 
+        TSuccessPayloadCreator, 
+        TFailurePayloadCreator, 
+        TFulfillPayloadCreator
+      ] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[
+        TTriggerPayloadCreator, 
+        TRequestPayloadCreator, 
+        TSuccessPayloadCreator, 
+        TFailurePayloadCreator, 
+        TFulfillPayloadCreator
+      ]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[
+        TTriggerPayloadCreator, 
+        TRequestPayloadCreator, 
+        TSuccessPayloadCreator, 
+        TFailurePayloadCreator, 
+        TFulfillPayloadCreator
+      ]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[
+        TTriggerPayloadCreator, 
+        TRequestPayloadCreator, 
+        TSuccessPayloadCreator, 
+        TFailurePayloadCreator, 
+        TFulfillPayloadCreator
+      ]) with Other]
+    @scala.inline
+    def withFAILURE(value: TFailurePayloadCreator): Self[
+        TTriggerPayloadCreator, 
+        TRequestPayloadCreator, 
+        TSuccessPayloadCreator, 
+        TFailurePayloadCreator, 
+        TFulfillPayloadCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FAILURE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFAILURE: Self[
+        TTriggerPayloadCreator, 
+        TRequestPayloadCreator, 
+        TSuccessPayloadCreator, 
+        TFailurePayloadCreator, 
+        TFulfillPayloadCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FAILURE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFULFILL(value: TFulfillPayloadCreator): Self[
+        TTriggerPayloadCreator, 
+        TRequestPayloadCreator, 
+        TSuccessPayloadCreator, 
+        TFailurePayloadCreator, 
+        TFulfillPayloadCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FULFILL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFULFILL: Self[
+        TTriggerPayloadCreator, 
+        TRequestPayloadCreator, 
+        TSuccessPayloadCreator, 
+        TFailurePayloadCreator, 
+        TFulfillPayloadCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FULFILL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withREQUEST(value: TRequestPayloadCreator): Self[
+        TTriggerPayloadCreator, 
+        TRequestPayloadCreator, 
+        TSuccessPayloadCreator, 
+        TFailurePayloadCreator, 
+        TFulfillPayloadCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("REQUEST")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutREQUEST: Self[
+        TTriggerPayloadCreator, 
+        TRequestPayloadCreator, 
+        TSuccessPayloadCreator, 
+        TFailurePayloadCreator, 
+        TFulfillPayloadCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("REQUEST")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSUCCESS(value: TSuccessPayloadCreator): Self[
+        TTriggerPayloadCreator, 
+        TRequestPayloadCreator, 
+        TSuccessPayloadCreator, 
+        TFailurePayloadCreator, 
+        TFulfillPayloadCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SUCCESS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSUCCESS: Self[
+        TTriggerPayloadCreator, 
+        TRequestPayloadCreator, 
+        TSuccessPayloadCreator, 
+        TFailurePayloadCreator, 
+        TFulfillPayloadCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SUCCESS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTRIGGER(value: TTriggerPayloadCreator): Self[
+        TTriggerPayloadCreator, 
+        TRequestPayloadCreator, 
+        TSuccessPayloadCreator, 
+        TFailurePayloadCreator, 
+        TFulfillPayloadCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TRIGGER")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTRIGGER: Self[
+        TTriggerPayloadCreator, 
+        TRequestPayloadCreator, 
+        TSuccessPayloadCreator, 
+        TFailurePayloadCreator, 
+        TFulfillPayloadCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TRIGGER")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -35,18 +35,65 @@ trait SchemaDomainMappingStatus extends js.Object {
 
 object SchemaDomainMappingStatus {
   @scala.inline
-  def apply(
-    conditions: js.Array[SchemaDomainMappingCondition] = null,
-    mappedRouteName: String = null,
-    observedGeneration: Int | Double = null,
-    resourceRecords: js.Array[SchemaResourceRecord] = null
-  ): SchemaDomainMappingStatus = {
+  def apply(): SchemaDomainMappingStatus = {
     val __obj = js.Dynamic.literal()
-    if (conditions != null) __obj.updateDynamic("conditions")(conditions.asInstanceOf[js.Any])
-    if (mappedRouteName != null) __obj.updateDynamic("mappedRouteName")(mappedRouteName.asInstanceOf[js.Any])
-    if (observedGeneration != null) __obj.updateDynamic("observedGeneration")(observedGeneration.asInstanceOf[js.Any])
-    if (resourceRecords != null) __obj.updateDynamic("resourceRecords")(resourceRecords.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDomainMappingStatus]
   }
+  @scala.inline
+  implicit class SchemaDomainMappingStatusOps[Self <: SchemaDomainMappingStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConditions(value: js.Array[SchemaDomainMappingCondition]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConditions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMappedRouteName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mappedRouteName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMappedRouteName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mappedRouteName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObservedGeneration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("observedGeneration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObservedGeneration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("observedGeneration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceRecords(value: js.Array[SchemaResourceRecord]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceRecords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceRecords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceRecords")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

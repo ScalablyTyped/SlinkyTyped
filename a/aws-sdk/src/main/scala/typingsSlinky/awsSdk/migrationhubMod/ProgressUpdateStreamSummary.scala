@@ -14,10 +14,29 @@ trait ProgressUpdateStreamSummary extends js.Object {
 
 object ProgressUpdateStreamSummary {
   @scala.inline
-  def apply(ProgressUpdateStreamName: ProgressUpdateStream = null): ProgressUpdateStreamSummary = {
+  def apply(): ProgressUpdateStreamSummary = {
     val __obj = js.Dynamic.literal()
-    if (ProgressUpdateStreamName != null) __obj.updateDynamic("ProgressUpdateStreamName")(ProgressUpdateStreamName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProgressUpdateStreamSummary]
   }
+  @scala.inline
+  implicit class ProgressUpdateStreamSummaryOps[Self <: ProgressUpdateStreamSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProgressUpdateStreamName(value: ProgressUpdateStream): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressUpdateStreamName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressUpdateStreamName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressUpdateStreamName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

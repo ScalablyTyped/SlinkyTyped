@@ -15,10 +15,29 @@ trait ClusterClientAuthenticationTls extends js.Object {
 
 object ClusterClientAuthenticationTls {
   @scala.inline
-  def apply(certificateAuthorityArns: Input[js.Array[Input[String]]] = null): ClusterClientAuthenticationTls = {
+  def apply(): ClusterClientAuthenticationTls = {
     val __obj = js.Dynamic.literal()
-    if (certificateAuthorityArns != null) __obj.updateDynamic("certificateAuthorityArns")(certificateAuthorityArns.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterClientAuthenticationTls]
   }
+  @scala.inline
+  implicit class ClusterClientAuthenticationTlsOps[Self <: ClusterClientAuthenticationTls] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateAuthorityArns(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateAuthorityArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateAuthorityArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateAuthorityArns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

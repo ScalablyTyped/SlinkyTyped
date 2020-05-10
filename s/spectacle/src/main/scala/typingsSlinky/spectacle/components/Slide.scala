@@ -1,10 +1,7 @@
 package typingsSlinky.spectacle.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.spectacle.mod.CSSProperties
 import typingsSlinky.spectacle.mod.SlideProps
 import typingsSlinky.spectacle.mod.alignType
@@ -13,80 +10,80 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Slide
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.mod.Slide] {
+object Slide {
   @JSImport("spectacle", "Slide")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id */
-  def apply(
-    align: alignType = null,
-    bgColor: String = null,
-    bgDarken: Int | Double = null,
-    bgImage: String = null,
-    bold: js.UndefOr[Boolean] = js.undefined,
-    caps: js.UndefOr[Boolean] = js.undefined,
-    contentStyles: CSSProperties = null,
-    controlColor: String = null,
-    dispatch: () => Unit = null,
-    hash: Double | String = null,
-    history: js.Any = null,
-    italic: js.UndefOr[Boolean] = js.undefined,
-    lastSlideIndex: Int | Double = null,
-    margin: Double | String = null,
-    notes: String = null,
-    onActive: /* slideIndex */ String | Double => Unit = null,
-    padding: Double | String = null,
-    progressColor: String = null,
-    slideIndex: Int | Double = null,
-    state: String = null,
-    style: CSSProperties = null,
-    textAlign: String = null,
-    textColor: String = null,
-    textFont: String = null,
-    textSize: String = null,
-    transition: js.Array[transitionType] = null,
-    transitionDuration: Int | Double = null,
-    transitionIn: js.Array[transitionType] = null,
-    transitionOut: js.Array[transitionType] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.Slide] = {
-    val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (bgColor != null) __obj.updateDynamic("bgColor")(bgColor.asInstanceOf[js.Any])
-    if (bgDarken != null) __obj.updateDynamic("bgDarken")(bgDarken.asInstanceOf[js.Any])
-    if (bgImage != null) __obj.updateDynamic("bgImage")(bgImage.asInstanceOf[js.Any])
-    if (!js.isUndefined(bold)) __obj.updateDynamic("bold")(bold.asInstanceOf[js.Any])
-    if (!js.isUndefined(caps)) __obj.updateDynamic("caps")(caps.asInstanceOf[js.Any])
-    if (contentStyles != null) __obj.updateDynamic("contentStyles")(contentStyles.asInstanceOf[js.Any])
-    if (controlColor != null) __obj.updateDynamic("controlColor")(controlColor.asInstanceOf[js.Any])
-    if (dispatch != null) __obj.updateDynamic("dispatch")(js.Any.fromFunction0(dispatch))
-    if (hash != null) __obj.updateDynamic("hash")(hash.asInstanceOf[js.Any])
-    if (history != null) __obj.updateDynamic("history")(history.asInstanceOf[js.Any])
-    if (!js.isUndefined(italic)) __obj.updateDynamic("italic")(italic.asInstanceOf[js.Any])
-    if (lastSlideIndex != null) __obj.updateDynamic("lastSlideIndex")(lastSlideIndex.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
-    if (onActive != null) __obj.updateDynamic("onActive")(js.Any.fromFunction1(onActive))
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (progressColor != null) __obj.updateDynamic("progressColor")(progressColor.asInstanceOf[js.Any])
-    if (slideIndex != null) __obj.updateDynamic("slideIndex")(slideIndex.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
-    if (textColor != null) __obj.updateDynamic("textColor")(textColor.asInstanceOf[js.Any])
-    if (textFont != null) __obj.updateDynamic("textFont")(textFont.asInstanceOf[js.Any])
-    if (textSize != null) __obj.updateDynamic("textSize")(textSize.asInstanceOf[js.Any])
-    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
-    if (transitionDuration != null) __obj.updateDynamic("transitionDuration")(transitionDuration.asInstanceOf[js.Any])
-    if (transitionIn != null) __obj.updateDynamic("transitionIn")(transitionIn.asInstanceOf[js.Any])
-    if (transitionOut != null) __obj.updateDynamic("transitionOut")(transitionOut.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.spectacle.mod.Slide] {
+    @scala.inline
+    def align(value: alignType): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgColor(value: String): this.type = set("bgColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgDarken(value: Double): this.type = set("bgDarken", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgImage(value: String): this.type = set("bgImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bold(value: Boolean): this.type = set("bold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def caps(value: Boolean): this.type = set("caps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentStyles(value: CSSProperties): this.type = set("contentStyles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def controlColor(value: String): this.type = set("controlColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dispatch(value: () => Unit): this.type = set("dispatch", js.Any.fromFunction0(value))
+    @scala.inline
+    def hash(value: Double | String): this.type = set("hash", value.asInstanceOf[js.Any])
+    @scala.inline
+    def history(value: js.Any): this.type = set("history", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def italic(value: Boolean): this.type = set("italic", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lastSlideIndex(value: Double): this.type = set("lastSlideIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: Double | String): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def notes(value: String): this.type = set("notes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onActive(value: /* slideIndex */ String | Double => Unit): this.type = set("onActive", js.Any.fromFunction1(value))
+    @scala.inline
+    def padding(value: Double | String): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def progressColor(value: String): this.type = set("progressColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def slideIndex(value: Double): this.type = set("slideIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def state(value: String): this.type = set("state", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textAlign(value: String): this.type = set("textAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textColor(value: String): this.type = set("textColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textFont(value: String): this.type = set("textFont", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textSize(value: String): this.type = set("textSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transition(value: js.Array[transitionType]): this.type = set("transition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionDuration(value: Double): this.type = set("transitionDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionIn(value: js.Array[transitionType]): this.type = set("transitionIn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionOut(value: js.Array[transitionType]): this.type = set("transitionOut", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.Slide] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.spectacle.mod.Slide](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SlideProps
+  
+  def withProps(p: SlideProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Slide.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

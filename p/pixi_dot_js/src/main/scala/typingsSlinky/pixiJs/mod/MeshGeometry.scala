@@ -26,28 +26,16 @@ import scala.scalajs.js.annotation._
 class MeshGeometry protected ()
   extends typingsSlinky.pixiJs.PIXI.MeshGeometry {
   def this(vertices: js.Array[Double], uvs: js.Array[Double], index: js.Array[Double]) = this()
-  def this(vertices: js.Array[Double], uvs: js.Array[Double], index: scala.scalajs.js.typedarray.Uint16Array) = this()
-  def this(vertices: js.Array[Double], uvs: scala.scalajs.js.typedarray.Float32Array, index: js.Array[Double]) = this()
+  def this(vertices: js.Array[Double], uvs: js.Array[Double], index: js.typedarray.Uint16Array) = this()
+  def this(vertices: js.Array[Double], uvs: js.typedarray.Float32Array, index: js.Array[Double]) = this()
+  def this(vertices: js.Array[Double], uvs: js.typedarray.Float32Array, index: js.typedarray.Uint16Array) = this()
+  def this(vertices: js.typedarray.Float32Array, uvs: js.Array[Double], index: js.Array[Double]) = this()
+  def this(vertices: js.typedarray.Float32Array, uvs: js.Array[Double], index: js.typedarray.Uint16Array) = this()
+  def this(vertices: js.typedarray.Float32Array, uvs: js.typedarray.Float32Array, index: js.Array[Double]) = this()
   def this(
-    vertices: js.Array[Double],
-    uvs: scala.scalajs.js.typedarray.Float32Array,
-    index: scala.scalajs.js.typedarray.Uint16Array
-  ) = this()
-  def this(vertices: scala.scalajs.js.typedarray.Float32Array, uvs: js.Array[Double], index: js.Array[Double]) = this()
-  def this(
-    vertices: scala.scalajs.js.typedarray.Float32Array,
-    uvs: js.Array[Double],
-    index: scala.scalajs.js.typedarray.Uint16Array
-  ) = this()
-  def this(
-    vertices: scala.scalajs.js.typedarray.Float32Array,
-    uvs: scala.scalajs.js.typedarray.Float32Array,
-    index: js.Array[Double]
-  ) = this()
-  def this(
-    vertices: scala.scalajs.js.typedarray.Float32Array,
-    uvs: scala.scalajs.js.typedarray.Float32Array,
-    index: scala.scalajs.js.typedarray.Uint16Array
+    vertices: js.typedarray.Float32Array,
+    uvs: js.typedarray.Float32Array,
+    index: js.typedarray.Uint16Array
   ) = this()
 }
 

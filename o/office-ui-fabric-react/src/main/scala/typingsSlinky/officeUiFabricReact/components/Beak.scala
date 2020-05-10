@@ -1,10 +1,8 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.beakTypesMod.IBeak
 import typingsSlinky.officeUiFabricReact.beakTypesMod.IBeakProps
 import typingsSlinky.officeUiFabricReact.positioningTypesMod.RectangleEdge
@@ -13,39 +11,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Beak
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.officeUiFabricReact.beakMod.Beak] {
+object Beak {
   @JSImport("office-ui-fabric-react/lib/components/Coachmark/Beak/Beak", "Beak")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    bottom: String = null,
-    color: String = null,
-    componentRef: IRefObject[IBeak] = null,
-    direction: RectangleEdge = null,
-    height: Int | Double = null,
-    left: String = null,
-    right: String = null,
-    top: String = null,
-    width: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.beakMod.Beak] = {
-    val __obj = js.Dynamic.literal()
-    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.beakMod.Beak] {
+    @scala.inline
+    def bottom(value: String): this.type = set("bottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ IBeak | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[IBeak]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[IBeak]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def direction(value: RectangleEdge): this.type = set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def left(value: String): this.type = set("left", value.asInstanceOf[js.Any])
+    @scala.inline
+    def right(value: String): this.type = set("right", value.asInstanceOf[js.Any])
+    @scala.inline
+    def top(value: String): this.type = set("top", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.beakMod.Beak] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.officeUiFabricReact.beakMod.Beak](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IBeakProps
+  
+  def withProps(p: IBeakProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Beak.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

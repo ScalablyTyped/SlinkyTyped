@@ -18,11 +18,41 @@ trait DescribeTrafficMirrorFiltersResult extends js.Object {
 
 object DescribeTrafficMirrorFiltersResult {
   @scala.inline
-  def apply(NextToken: String = null, TrafficMirrorFilters: TrafficMirrorFilterSet = null): DescribeTrafficMirrorFiltersResult = {
+  def apply(): DescribeTrafficMirrorFiltersResult = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (TrafficMirrorFilters != null) __obj.updateDynamic("TrafficMirrorFilters")(TrafficMirrorFilters.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTrafficMirrorFiltersResult]
   }
+  @scala.inline
+  implicit class DescribeTrafficMirrorFiltersResultOps[Self <: DescribeTrafficMirrorFiltersResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrafficMirrorFilters(value: TrafficMirrorFilterSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficMirrorFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrafficMirrorFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficMirrorFilters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

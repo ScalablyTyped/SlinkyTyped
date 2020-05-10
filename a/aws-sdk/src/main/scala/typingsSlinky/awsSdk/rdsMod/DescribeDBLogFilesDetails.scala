@@ -22,16 +22,53 @@ trait DescribeDBLogFilesDetails extends js.Object {
 
 object DescribeDBLogFilesDetails {
   @scala.inline
-  def apply(
-    LastWritten: Int | scala.Double = null,
-    LogFileName: String = null,
-    Size: Int | scala.Double = null
-  ): DescribeDBLogFilesDetails = {
+  def apply(): DescribeDBLogFilesDetails = {
     val __obj = js.Dynamic.literal()
-    if (LastWritten != null) __obj.updateDynamic("LastWritten")(LastWritten.asInstanceOf[js.Any])
-    if (LogFileName != null) __obj.updateDynamic("LogFileName")(LogFileName.asInstanceOf[js.Any])
-    if (Size != null) __obj.updateDynamic("Size")(Size.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDBLogFilesDetails]
   }
+  @scala.inline
+  implicit class DescribeDBLogFilesDetailsOps[Self <: DescribeDBLogFilesDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLastWritten(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastWritten")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastWritten: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastWritten")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogFileName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogFileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogFileName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogFileName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,8 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.keytipDataTypesMod.IKeytip
 import typingsSlinky.officeUiFabricReact.keytipDataTypesMod.IKeytipDataProps
 import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipProps
@@ -14,28 +12,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object KeytipData
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.officeUiFabricReact.mod.KeytipData] {
+object KeytipData {
   @JSImport("office-ui-fabric-react", "KeytipData")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    ariaDescribedBy: String = null,
-    componentRef: IRefObject[IKeytip] = null,
-    keytipProps: IKeytipProps = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.KeytipData] = {
-    val __obj = js.Dynamic.literal()
-    if (ariaDescribedBy != null) __obj.updateDynamic("ariaDescribedBy")(ariaDescribedBy.asInstanceOf[js.Any])
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (keytipProps != null) __obj.updateDynamic("keytipProps")(keytipProps.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.KeytipData] {
+    @scala.inline
+    def ariaDescribedBy(value: String): this.type = set("ariaDescribedBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ IKeytip | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[IKeytip]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[IKeytip]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keytipProps(value: IKeytipProps): this.type = set("keytipProps", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.KeytipData] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.officeUiFabricReact.mod.KeytipData](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IKeytipDataProps with IRenderComponent[js.Object]
+  
+  def withProps(p: IKeytipDataProps with IRenderComponent[js.Object]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: KeytipData.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

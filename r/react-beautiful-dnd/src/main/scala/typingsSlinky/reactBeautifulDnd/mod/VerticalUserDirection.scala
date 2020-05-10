@@ -12,10 +12,8 @@ trait VerticalUserDirection extends js.Object
 
 object VerticalUserDirection {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def down: typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.down = "down".asInstanceOf[typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.down]
   @scala.inline
-  def down: typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.down = this.cast("down")
-  @scala.inline
-  def up: typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.up = this.cast("up")
+  def up: typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.up = "up".asInstanceOf[typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.up]
 }
 

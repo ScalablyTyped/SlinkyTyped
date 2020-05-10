@@ -38,24 +38,101 @@ trait ElasticGpus extends js.Object {
 
 object ElasticGpus {
   @scala.inline
-  def apply(
-    AvailabilityZone: String = null,
-    ElasticGpuHealth: ElasticGpuHealth = null,
-    ElasticGpuId: String = null,
-    ElasticGpuState: ElasticGpuState = null,
-    ElasticGpuType: String = null,
-    InstanceId: String = null,
-    Tags: TagList = null
-  ): ElasticGpus = {
+  def apply(): ElasticGpus = {
     val __obj = js.Dynamic.literal()
-    if (AvailabilityZone != null) __obj.updateDynamic("AvailabilityZone")(AvailabilityZone.asInstanceOf[js.Any])
-    if (ElasticGpuHealth != null) __obj.updateDynamic("ElasticGpuHealth")(ElasticGpuHealth.asInstanceOf[js.Any])
-    if (ElasticGpuId != null) __obj.updateDynamic("ElasticGpuId")(ElasticGpuId.asInstanceOf[js.Any])
-    if (ElasticGpuState != null) __obj.updateDynamic("ElasticGpuState")(ElasticGpuState.asInstanceOf[js.Any])
-    if (ElasticGpuType != null) __obj.updateDynamic("ElasticGpuType")(ElasticGpuType.asInstanceOf[js.Any])
-    if (InstanceId != null) __obj.updateDynamic("InstanceId")(InstanceId.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElasticGpus]
   }
+  @scala.inline
+  implicit class ElasticGpusOps[Self <: ElasticGpus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailabilityZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElasticGpuHealth(value: ElasticGpuHealth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticGpuHealth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticGpuHealth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticGpuHealth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElasticGpuId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticGpuId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticGpuId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticGpuId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElasticGpuState(value: ElasticGpuState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticGpuState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticGpuState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticGpuState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElasticGpuType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticGpuType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticGpuType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticGpuType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

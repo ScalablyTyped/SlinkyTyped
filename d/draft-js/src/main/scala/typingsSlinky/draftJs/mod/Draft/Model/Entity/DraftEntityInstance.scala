@@ -17,18 +17,44 @@ import scala.scalajs.js.annotation._
   * the rendered anchor. For a mention, the ID could be used to retrieve
   * a hovercard.
   */
+@js.native
 trait DraftEntityInstance extends js.Object {
-  def getData(): js.Any
-  def getMutability(): DraftEntityMutability
-  def getType(): DraftEntityType
+  def getData(): js.Any = js.native
+  def getMutability(): DraftEntityMutability = js.native
+  def getType(): DraftEntityType = js.native
 }
 
 object DraftEntityInstance {
   @scala.inline
   def apply(getData: () => js.Any, getMutability: () => DraftEntityMutability, getType: () => DraftEntityType): DraftEntityInstance = {
     val __obj = js.Dynamic.literal(getData = js.Any.fromFunction0(getData), getMutability = js.Any.fromFunction0(getMutability), getType = js.Any.fromFunction0(getType))
-  
     __obj.asInstanceOf[DraftEntityInstance]
   }
+  @scala.inline
+  implicit class DraftEntityInstanceOps[Self <: DraftEntityInstance] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetData(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getData")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMutability(value: () => DraftEntityMutability): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMutability")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetType(value: () => DraftEntityType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getType")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

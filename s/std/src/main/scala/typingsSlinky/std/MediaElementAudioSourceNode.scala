@@ -13,9 +13,10 @@ trait MediaElementAudioSourceNode extends AudioNode {
 
 @JSGlobal("MediaElementAudioSourceNode")
 @js.native
-object MediaElementAudioSourceNode extends Instantiable2[
-      /* context */ AudioContext, 
+object MediaElementAudioSourceNode
+  extends Instantiable2[
+      /* context */ org.scalajs.dom.raw.AudioContext, 
       /* options */ MediaElementAudioSourceOptions, 
-      MediaElementAudioSourceNode
+      org.scalajs.dom.raw.MediaElementAudioSourceNode
     ]
 

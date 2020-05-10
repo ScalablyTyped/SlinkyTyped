@@ -7,27 +7,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonOptionsOptionsResourceTypeResourceType extends js.Object {
-  var headers: js.UndefOr[Headers] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var options: js.UndefOr[Options] = js.undefined
-  var resourceType: js.UndefOr[ResourceType] = js.undefined
+  var headers: js.UndefOr[Headers] = js.native
+  var id: js.UndefOr[String] = js.native
+  var options: js.UndefOr[Options] = js.native
+  var resourceType: js.UndefOr[ResourceType] = js.native
 }
 
 object AnonOptionsOptionsResourceTypeResourceType {
   @scala.inline
-  def apply(
-    headers: Headers = null,
-    id: String = null,
-    options: Options = null,
-    resourceType: ResourceType = null
-  ): AnonOptionsOptionsResourceTypeResourceType = {
+  def apply(): AnonOptionsOptionsResourceTypeResourceType = {
     val __obj = js.Dynamic.literal()
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonOptionsOptionsResourceTypeResourceType]
   }
+  @scala.inline
+  implicit class AnonOptionsOptionsResourceTypeResourceTypeOps[Self <: AnonOptionsOptionsResourceTypeResourceType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeaders(value: Headers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: Options): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceType(value: ResourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

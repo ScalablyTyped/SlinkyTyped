@@ -22,11 +22,47 @@ trait RespondDecisionTaskCompletedInput extends js.Object {
 
 object RespondDecisionTaskCompletedInput {
   @scala.inline
-  def apply(taskToken: TaskToken, decisions: DecisionList = null, executionContext: Data = null): RespondDecisionTaskCompletedInput = {
+  def apply(taskToken: TaskToken): RespondDecisionTaskCompletedInput = {
     val __obj = js.Dynamic.literal(taskToken = taskToken.asInstanceOf[js.Any])
-    if (decisions != null) __obj.updateDynamic("decisions")(decisions.asInstanceOf[js.Any])
-    if (executionContext != null) __obj.updateDynamic("executionContext")(executionContext.asInstanceOf[js.Any])
     __obj.asInstanceOf[RespondDecisionTaskCompletedInput]
   }
+  @scala.inline
+  implicit class RespondDecisionTaskCompletedInputOps[Self <: RespondDecisionTaskCompletedInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTaskToken(value: TaskToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDecisions(value: DecisionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decisions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecisions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decisions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionContext(value: Data): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionContext")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

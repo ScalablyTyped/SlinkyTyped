@@ -1,35 +1,33 @@
 package typingsSlinky.reactMailchimpSubscribe.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMailchimpSubscribe.mod.FormHooks
+import typingsSlinky.reactMailchimpSubscribe.mod.Props
 import typingsSlinky.reactMailchimpSubscribe.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactMailchimpSubscribe
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any]] {
+object ReactMailchimpSubscribe {
   @JSImport("react-mailchimp-subscribe", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[FormFields](
-    url: String,
-    render: /* hooks */ FormHooks[FormFields] => TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default[js.Any]] = {
-    val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction1(render))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactMailchimpSubscribe.mod.default[js.Any]]]
+  @scala.inline
+  class Builder[FormFields] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default[js.Any]] {
+    @scala.inline
+    def render(value: /* hooks */ FormHooks[FormFields] => TagMod[Any]): this.type = set("render", js.Any.fromFunction1(value))
   }
-  type Props = typingsSlinky.reactMailchimpSubscribe.mod.Props[js.Any]
+  
+  def withProps[FormFields](p: Props[FormFields]): Builder[FormFields] = new Builder[FormFields](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[FormFields](url: String): Builder[FormFields] = {
+    val __props = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    new Builder[FormFields](js.Array(this.component, __props.asInstanceOf[Props[FormFields]]))
+  }
 }
 

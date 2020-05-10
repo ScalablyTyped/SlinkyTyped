@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.eksClusterMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.inputMod.eks.ClusterEncryptionConfig
 import typingsSlinky.pulumiAws.inputMod.eks.ClusterVpcConfig
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -13,6 +14,10 @@ trait ClusterArgs extends js.Object {
     * A list of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
     */
   val enabledClusterLogTypes: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
+  /**
+    * Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
+    */
+  val encryptionConfig: js.UndefOr[Input[ClusterEncryptionConfig]] = js.native
   /**
     * Name of the cluster.
     */
@@ -37,20 +42,89 @@ trait ClusterArgs extends js.Object {
 
 object ClusterArgs {
   @scala.inline
-  def apply(
-    roleArn: Input[String],
-    vpcConfig: Input[ClusterVpcConfig],
-    enabledClusterLogTypes: Input[js.Array[Input[String]]] = null,
-    name: Input[String] = null,
-    tags: Input[StringDictionary[_]] = null,
-    version: Input[String] = null
-  ): ClusterArgs = {
+  def apply(roleArn: Input[String], vpcConfig: Input[ClusterVpcConfig]): ClusterArgs = {
     val __obj = js.Dynamic.literal(roleArn = roleArn.asInstanceOf[js.Any], vpcConfig = vpcConfig.asInstanceOf[js.Any])
-    if (enabledClusterLogTypes != null) __obj.updateDynamic("enabledClusterLogTypes")(enabledClusterLogTypes.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterArgs]
   }
+  @scala.inline
+  implicit class ClusterArgsOps[Self <: ClusterArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRoleArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVpcConfig(value: Input[ClusterVpcConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnabledClusterLogTypes(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledClusterLogTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabledClusterLogTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledClusterLogTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptionConfig(value: Input[ClusterEncryptionConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

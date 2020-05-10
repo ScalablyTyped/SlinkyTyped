@@ -1,9 +1,7 @@
 package typingsSlinky.jupyterlabExtensionmanager.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.jupyterlabExtensionmanager.modelMod.Action
 import typingsSlinky.jupyterlabExtensionmanager.modelMod.IEntry
 import typingsSlinky.jupyterlabExtensionmanager.widgetMod.ListView.IProperties
@@ -11,24 +9,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ListView
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object ListView {
   @JSImport("@jupyterlab/extensionmanager", "ListView")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IProperties): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     entries: js.Array[IEntry],
     numPages: Double,
     onPage: Double => Unit,
-    performAction: (Action, IEntry) => Unit,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(entries = entries.asInstanceOf[js.Any], numPages = numPages.asInstanceOf[js.Any], onPage = js.Any.fromFunction1(onPage), performAction = js.Any.fromFunction2(performAction))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    performAction: (Action, IEntry) => Unit
+  ): Default[tag.type, js.Object] = {
+    val __props = js.Dynamic.literal(entries = entries.asInstanceOf[js.Any], numPages = numPages.asInstanceOf[js.Any], onPage = js.Any.fromFunction1(onPage), performAction = js.Any.fromFunction2(performAction))
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[IProperties]))
   }
-  type Props = IProperties
 }
 

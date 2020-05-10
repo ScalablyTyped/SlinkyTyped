@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HeroWins extends Hero {
-  var games_won: String
+  var games_won: String = js.native
 }
 
 object HeroWins {
   @scala.inline
   def apply(games_won: String, hero: String, img: String): HeroWins = {
     val __obj = js.Dynamic.literal(games_won = games_won.asInstanceOf[js.Any], hero = hero.asInstanceOf[js.Any], img = img.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[HeroWins]
   }
+  @scala.inline
+  implicit class HeroWinsOps[Self <: HeroWins] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGames_won(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("games_won")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

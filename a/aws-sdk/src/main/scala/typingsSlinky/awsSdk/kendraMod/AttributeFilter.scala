@@ -50,30 +50,137 @@ trait AttributeFilter extends js.Object {
 
 object AttributeFilter {
   @scala.inline
-  def apply(
-    AndAllFilters: AttributeFilterList = null,
-    ContainsAll: DocumentAttribute = null,
-    ContainsAny: DocumentAttribute = null,
-    EqualsTo: DocumentAttribute = null,
-    GreaterThan: DocumentAttribute = null,
-    GreaterThanOrEquals: DocumentAttribute = null,
-    LessThan: DocumentAttribute = null,
-    LessThanOrEquals: DocumentAttribute = null,
-    NotFilter: AttributeFilter = null,
-    OrAllFilters: AttributeFilterList = null
-  ): AttributeFilter = {
+  def apply(): AttributeFilter = {
     val __obj = js.Dynamic.literal()
-    if (AndAllFilters != null) __obj.updateDynamic("AndAllFilters")(AndAllFilters.asInstanceOf[js.Any])
-    if (ContainsAll != null) __obj.updateDynamic("ContainsAll")(ContainsAll.asInstanceOf[js.Any])
-    if (ContainsAny != null) __obj.updateDynamic("ContainsAny")(ContainsAny.asInstanceOf[js.Any])
-    if (EqualsTo != null) __obj.updateDynamic("EqualsTo")(EqualsTo.asInstanceOf[js.Any])
-    if (GreaterThan != null) __obj.updateDynamic("GreaterThan")(GreaterThan.asInstanceOf[js.Any])
-    if (GreaterThanOrEquals != null) __obj.updateDynamic("GreaterThanOrEquals")(GreaterThanOrEquals.asInstanceOf[js.Any])
-    if (LessThan != null) __obj.updateDynamic("LessThan")(LessThan.asInstanceOf[js.Any])
-    if (LessThanOrEquals != null) __obj.updateDynamic("LessThanOrEquals")(LessThanOrEquals.asInstanceOf[js.Any])
-    if (NotFilter != null) __obj.updateDynamic("NotFilter")(NotFilter.asInstanceOf[js.Any])
-    if (OrAllFilters != null) __obj.updateDynamic("OrAllFilters")(OrAllFilters.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttributeFilter]
   }
+  @scala.inline
+  implicit class AttributeFilterOps[Self <: AttributeFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAndAllFilters(value: AttributeFilterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AndAllFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndAllFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AndAllFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainsAll(value: DocumentAttribute): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainsAll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainsAll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainsAll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainsAny(value: DocumentAttribute): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainsAny")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainsAny: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainsAny")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEqualsTo(value: DocumentAttribute): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EqualsTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEqualsTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EqualsTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGreaterThan(value: DocumentAttribute): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GreaterThan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGreaterThan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GreaterThan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGreaterThanOrEquals(value: DocumentAttribute): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GreaterThanOrEquals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGreaterThanOrEquals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GreaterThanOrEquals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLessThan(value: DocumentAttribute): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LessThan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLessThan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LessThan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLessThanOrEquals(value: DocumentAttribute): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LessThanOrEquals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLessThanOrEquals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LessThanOrEquals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotFilter(value: AttributeFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrAllFilters(value: AttributeFilterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrAllFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrAllFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrAllFilters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

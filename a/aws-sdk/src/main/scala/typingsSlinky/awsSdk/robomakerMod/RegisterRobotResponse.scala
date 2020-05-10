@@ -18,11 +18,41 @@ trait RegisterRobotResponse extends js.Object {
 
 object RegisterRobotResponse {
   @scala.inline
-  def apply(fleet: Arn = null, robot: Arn = null): RegisterRobotResponse = {
+  def apply(): RegisterRobotResponse = {
     val __obj = js.Dynamic.literal()
-    if (fleet != null) __obj.updateDynamic("fleet")(fleet.asInstanceOf[js.Any])
-    if (robot != null) __obj.updateDynamic("robot")(robot.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterRobotResponse]
   }
+  @scala.inline
+  implicit class RegisterRobotResponseOps[Self <: RegisterRobotResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFleet(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fleet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFleet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fleet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRobot(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("robot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRobot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("robot")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

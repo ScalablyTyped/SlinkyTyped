@@ -22,12 +22,53 @@ trait DateFilter extends js.Object {
 
 object DateFilter {
   @scala.inline
-  def apply(DateRange: DateRange = null, End: NonEmptyString = null, Start: NonEmptyString = null): DateFilter = {
+  def apply(): DateFilter = {
     val __obj = js.Dynamic.literal()
-    if (DateRange != null) __obj.updateDynamic("DateRange")(DateRange.asInstanceOf[js.Any])
-    if (End != null) __obj.updateDynamic("End")(End.asInstanceOf[js.Any])
-    if (Start != null) __obj.updateDynamic("Start")(Start.asInstanceOf[js.Any])
     __obj.asInstanceOf[DateFilter]
   }
+  @scala.inline
+  implicit class DateFilterOps[Self <: DateFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDateRange(value: DateRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DateRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DateRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnd(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("End")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("End")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Start")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

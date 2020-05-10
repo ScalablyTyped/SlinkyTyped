@@ -30,20 +30,77 @@ trait VPCEConfiguration extends js.Object {
 
 object VPCEConfiguration {
   @scala.inline
-  def apply(
-    arn: AmazonResourceName = null,
-    serviceDnsName: ServiceDnsName = null,
-    vpceConfigurationDescription: VPCEConfigurationDescription = null,
-    vpceConfigurationName: VPCEConfigurationName = null,
-    vpceServiceName: VPCEServiceName = null
-  ): VPCEConfiguration = {
+  def apply(): VPCEConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
-    if (serviceDnsName != null) __obj.updateDynamic("serviceDnsName")(serviceDnsName.asInstanceOf[js.Any])
-    if (vpceConfigurationDescription != null) __obj.updateDynamic("vpceConfigurationDescription")(vpceConfigurationDescription.asInstanceOf[js.Any])
-    if (vpceConfigurationName != null) __obj.updateDynamic("vpceConfigurationName")(vpceConfigurationName.asInstanceOf[js.Any])
-    if (vpceServiceName != null) __obj.updateDynamic("vpceServiceName")(vpceServiceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[VPCEConfiguration]
   }
+  @scala.inline
+  implicit class VPCEConfigurationOps[Self <: VPCEConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: AmazonResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceDnsName(value: ServiceDnsName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceDnsName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceDnsName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceDnsName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpceConfigurationDescription(value: VPCEConfigurationDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpceConfigurationDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpceConfigurationDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpceConfigurationDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpceConfigurationName(value: VPCEConfigurationName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpceConfigurationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpceConfigurationName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpceConfigurationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpceServiceName(value: VPCEServiceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpceServiceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpceServiceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpceServiceName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

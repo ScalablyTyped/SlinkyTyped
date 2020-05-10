@@ -1,6 +1,5 @@
 package typingsSlinky.fsExtraPromiseEs6.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +13,6 @@ object realpath extends js.Object {
     cache: String,
     callback: js.Function2[/* err */ js.Error, /* resolvedPath */ String, Unit]
   ): Unit = js.native
-  def apply(path: String, callback: js.Function2[/* err */ Error, /* resolvedPath */ String, Unit]): Unit = js.native
+  def apply(path: String, callback: js.Function2[/* err */ js.Error, /* resolvedPath */ String, Unit]): Unit = js.native
 }
 

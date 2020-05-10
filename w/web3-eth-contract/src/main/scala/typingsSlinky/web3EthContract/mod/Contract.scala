@@ -1,6 +1,5 @@
 package typingsSlinky.web3EthContract.mod
 
-import typingsSlinky.std.Error
 import typingsSlinky.web3Core.mod.BlockNumber
 import typingsSlinky.web3Core.mod.Common
 import typingsSlinky.web3Core.mod.chain
@@ -31,14 +30,14 @@ class Contract protected () extends js.Object {
   var transactionPollingTimeout: Double = js.native
   def deploy(options: DeployOptions): ContractSendMethod = js.native
   def getPastEvents(event: String): js.Promise[js.Array[EventData]] = js.native
-  def getPastEvents(event: String, callback: js.Function2[/* error */ Error, /* event */ EventData, Unit]): js.Promise[js.Array[EventData]] = js.native
+  def getPastEvents(event: String, callback: js.Function2[/* error */ js.Error, /* event */ EventData, Unit]): js.Promise[js.Array[EventData]] = js.native
   def getPastEvents(event: String, options: PastEventOptions): js.Promise[js.Array[EventData]] = js.native
   def getPastEvents(
     event: String,
     options: PastEventOptions,
     callback: js.Function2[/* error */ js.Error, /* event */ EventData, Unit]
   ): js.Promise[js.Array[EventData]] = js.native
-  def once(event: String, callback: js.Function2[/* error */ Error, /* event */ EventData, Unit]): Unit = js.native
+  def once(event: String, callback: js.Function2[/* error */ js.Error, /* event */ EventData, Unit]): Unit = js.native
   def once(
     event: String,
     options: EventOptions,

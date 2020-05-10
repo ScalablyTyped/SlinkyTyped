@@ -26,12 +26,53 @@ trait SchemaVideoRecordingDetails extends js.Object {
 
 object SchemaVideoRecordingDetails {
   @scala.inline
-  def apply(location: SchemaGeoPoint = null, locationDescription: String = null, recordingDate: String = null): SchemaVideoRecordingDetails = {
+  def apply(): SchemaVideoRecordingDetails = {
     val __obj = js.Dynamic.literal()
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (locationDescription != null) __obj.updateDynamic("locationDescription")(locationDescription.asInstanceOf[js.Any])
-    if (recordingDate != null) __obj.updateDynamic("recordingDate")(recordingDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVideoRecordingDetails]
   }
+  @scala.inline
+  implicit class SchemaVideoRecordingDetailsOps[Self <: SchemaVideoRecordingDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocation(value: SchemaGeoPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocationDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locationDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocationDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locationDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecordingDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordingDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecordingDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordingDate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

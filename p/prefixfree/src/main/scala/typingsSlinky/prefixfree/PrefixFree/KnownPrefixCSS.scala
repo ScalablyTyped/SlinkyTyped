@@ -15,14 +15,12 @@ trait KnownPrefixCSS extends js.Object
 
 object KnownPrefixCSS {
   @scala.inline
-  def `-moz-`: typingsSlinky.prefixfree.prefixfreeStrings.`-moz-` = this.cast("-moz-")
+  def `-moz-`: typingsSlinky.prefixfree.prefixfreeStrings.`-moz-` = "-moz-".asInstanceOf[typingsSlinky.prefixfree.prefixfreeStrings.`-moz-`]
   @scala.inline
-  def `-ms-`: typingsSlinky.prefixfree.prefixfreeStrings.`-ms-` = this.cast("-ms-")
+  def `-ms-`: typingsSlinky.prefixfree.prefixfreeStrings.`-ms-` = "-ms-".asInstanceOf[typingsSlinky.prefixfree.prefixfreeStrings.`-ms-`]
   @scala.inline
-  def `-o-`: typingsSlinky.prefixfree.prefixfreeStrings.`-o-` = this.cast("-o-")
+  def `-o-`: typingsSlinky.prefixfree.prefixfreeStrings.`-o-` = "-o-".asInstanceOf[typingsSlinky.prefixfree.prefixfreeStrings.`-o-`]
   @scala.inline
-  def `-webkit-`: typingsSlinky.prefixfree.prefixfreeStrings.`-webkit-` = this.cast("-webkit-")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `-webkit-`: typingsSlinky.prefixfree.prefixfreeStrings.`-webkit-` = "-webkit-".asInstanceOf[typingsSlinky.prefixfree.prefixfreeStrings.`-webkit-`]
 }
 

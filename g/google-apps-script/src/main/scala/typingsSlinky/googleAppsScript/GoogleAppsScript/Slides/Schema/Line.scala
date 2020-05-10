@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Line extends js.Object {
-  var lineCategory: js.UndefOr[String] = js.undefined
-  var lineProperties: js.UndefOr[LineProperties] = js.undefined
-  var lineType: js.UndefOr[String] = js.undefined
+  var lineCategory: js.UndefOr[String] = js.native
+  var lineProperties: js.UndefOr[LineProperties] = js.native
+  var lineType: js.UndefOr[String] = js.native
 }
 
 object Line {
   @scala.inline
-  def apply(lineCategory: String = null, lineProperties: LineProperties = null, lineType: String = null): Line = {
+  def apply(): Line = {
     val __obj = js.Dynamic.literal()
-    if (lineCategory != null) __obj.updateDynamic("lineCategory")(lineCategory.asInstanceOf[js.Any])
-    if (lineProperties != null) __obj.updateDynamic("lineProperties")(lineProperties.asInstanceOf[js.Any])
-    if (lineType != null) __obj.updateDynamic("lineType")(lineType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Line]
   }
+  @scala.inline
+  implicit class LineOps[Self <: Line] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLineCategory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineCategory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineCategory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineCategory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineProperties(value: LineProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

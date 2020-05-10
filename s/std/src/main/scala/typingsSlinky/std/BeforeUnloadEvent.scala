@@ -11,5 +11,6 @@ trait BeforeUnloadEvent extends Event_
 
 @JSGlobal("BeforeUnloadEvent")
 @js.native
-object BeforeUnloadEvent extends Instantiable0[BeforeUnloadEvent]
+object BeforeUnloadEvent
+  extends Instantiable0[org.scalajs.dom.raw.BeforeUnloadEvent]
 

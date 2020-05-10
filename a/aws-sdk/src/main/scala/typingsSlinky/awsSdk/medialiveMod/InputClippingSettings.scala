@@ -22,15 +22,47 @@ trait InputClippingSettings extends js.Object {
 
 object InputClippingSettings {
   @scala.inline
-  def apply(
-    InputTimecodeSource: InputTimecodeSource,
-    StartTimecode: StartTimecode = null,
-    StopTimecode: StopTimecode = null
-  ): InputClippingSettings = {
+  def apply(InputTimecodeSource: InputTimecodeSource): InputClippingSettings = {
     val __obj = js.Dynamic.literal(InputTimecodeSource = InputTimecodeSource.asInstanceOf[js.Any])
-    if (StartTimecode != null) __obj.updateDynamic("StartTimecode")(StartTimecode.asInstanceOf[js.Any])
-    if (StopTimecode != null) __obj.updateDynamic("StopTimecode")(StopTimecode.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputClippingSettings]
   }
+  @scala.inline
+  implicit class InputClippingSettingsOps[Self <: InputClippingSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInputTimecodeSource(value: InputTimecodeSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputTimecodeSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartTimecode(value: StartTimecode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTimecode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTimecode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTimecode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopTimecode(value: StopTimecode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StopTimecode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopTimecode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StopTimecode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

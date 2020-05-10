@@ -1,7 +1,5 @@
 package typingsSlinky.appBuilderLib
 
-import typingsSlinky.appBuilderLib.appBuilderLibStrings.`comDotproton-nativeDot`
-import typingsSlinky.appBuilderLib.appBuilderLibStrings.proton
 import typingsSlinky.appBuilderLib.coreMod.Platform
 import typingsSlinky.appBuilderLib.libUiFrameworkMod.LibUiFramework
 import typingsSlinky.builderUtil.fsMod.FileTransformer
@@ -15,10 +13,6 @@ object protonFrameworkMod extends js.Object {
   @js.native
   class ProtonFramework protected () extends LibUiFramework {
     def this(version: String, distMacOsAppName: String, isUseLaunchUi: Boolean) = this()
-    @JSName("defaultAppIdPrefix")
-    val defaultAppIdPrefix_ProtonFramework: `comDotproton-nativeDot` = js.native
-    @JSName("name")
-    val name_ProtonFramework: proton = js.native
     @JSName("createTransformer")
     def createTransformer_MProtonFramework(): FileTransformer | Null = js.native
     @JSName("getDefaultIcon")

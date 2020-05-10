@@ -12,10 +12,8 @@ trait CustomerLocation extends js.Object
 
 object CustomerLocation {
   @scala.inline
-  def International: typingsSlinky.braintree.braintreeStrings.International = this.cast("International")
+  def International: typingsSlinky.braintree.braintreeStrings.International = "International".asInstanceOf[typingsSlinky.braintree.braintreeStrings.International]
   @scala.inline
-  def US: typingsSlinky.braintree.braintreeStrings.US = this.cast("US")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def US: typingsSlinky.braintree.braintreeStrings.US = "US".asInstanceOf[typingsSlinky.braintree.braintreeStrings.US]
 }
 

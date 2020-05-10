@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkClientKinesisBrowser
 
+import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientKinesisBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientKinesisBrowser.kinesisConfigurationMod.KinesisResolvedConfiguration
 import typingsSlinky.awsSdkClientKinesisBrowser.outputTypesUnionMod.OutputTypesUnion
@@ -8,7 +9,6 @@ import typingsSlinky.awsSdkClientKinesisBrowser.typesListStreamConsumersOutputMo
 import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.std.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,16 +26,9 @@ object listStreamConsumersCommandMod extends js.Object {
           Blob
         ] {
     def this(input: ListStreamConsumersInput) = this()
-    /* CompleteClass */
-    override val input: ListStreamConsumersInput = js.native
-    val middlewareStack: MiddlewareStack[ListStreamConsumersInput, ListStreamConsumersOutput, org.scalajs.dom.raw.Blob] = js.native
+    val middlewareStack: MiddlewareStack[ListStreamConsumersInput, ListStreamConsumersOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
-      configuration: KinesisResolvedConfiguration
-    ): Handler[ListStreamConsumersInput, ListStreamConsumersOutput] = js.native
-    /* CompleteClass */
-    override def resolveMiddleware(
-      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KinesisResolvedConfiguration
     ): Handler[ListStreamConsumersInput, ListStreamConsumersOutput] = js.native
   }

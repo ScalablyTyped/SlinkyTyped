@@ -4,8 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TransformationMethod2 extends TransformationMethod {
-  def setLengthChangesAllowed(allowLengthChanges: Boolean): Unit
+  def setLengthChangesAllowed(allowLengthChanges: Boolean): Unit = js.native
 }
 
 @JSGlobal("android.text.method.TransformationMethod2")

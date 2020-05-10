@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait WeakSetConstructor
   extends Instantiable0[WeakSet[js.Object]]
      with Instantiable1[
-      (/* values */ js.Array[js.Object]) | (/* iterable */ Iterable[js.Object]), 
+      (/* values */ js.Array[js.Object]) | (/* iterable */ js.Iterable[js.Object]), 
       WeakSet[js.Object]
     ]
 

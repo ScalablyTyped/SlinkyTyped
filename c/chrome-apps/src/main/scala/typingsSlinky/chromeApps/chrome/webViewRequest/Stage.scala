@@ -14,14 +14,12 @@ trait Stage extends js.Object
 
 object Stage {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def onAuthRequired: typingsSlinky.chromeApps.chromeAppsStrings.onAuthRequired = "onAuthRequired".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.onAuthRequired]
   @scala.inline
-  def onAuthRequired: typingsSlinky.chromeApps.chromeAppsStrings.onAuthRequired = this.cast("onAuthRequired")
+  def onBeforeRequest: typingsSlinky.chromeApps.chromeAppsStrings.onBeforeRequest = "onBeforeRequest".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.onBeforeRequest]
   @scala.inline
-  def onBeforeRequest: typingsSlinky.chromeApps.chromeAppsStrings.onBeforeRequest = this.cast("onBeforeRequest")
+  def onBeforeSendHeaders: typingsSlinky.chromeApps.chromeAppsStrings.onBeforeSendHeaders = "onBeforeSendHeaders".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.onBeforeSendHeaders]
   @scala.inline
-  def onBeforeSendHeaders: typingsSlinky.chromeApps.chromeAppsStrings.onBeforeSendHeaders = this.cast("onBeforeSendHeaders")
-  @scala.inline
-  def onHeadersReceived: typingsSlinky.chromeApps.chromeAppsStrings.onHeadersReceived = this.cast("onHeadersReceived")
+  def onHeadersReceived: typingsSlinky.chromeApps.chromeAppsStrings.onHeadersReceived = "onHeadersReceived".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.onHeadersReceived]
 }
 

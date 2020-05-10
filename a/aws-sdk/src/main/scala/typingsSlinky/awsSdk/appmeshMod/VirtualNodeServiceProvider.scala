@@ -16,8 +16,21 @@ object VirtualNodeServiceProvider {
   @scala.inline
   def apply(virtualNodeName: ResourceName): VirtualNodeServiceProvider = {
     val __obj = js.Dynamic.literal(virtualNodeName = virtualNodeName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[VirtualNodeServiceProvider]
   }
+  @scala.inline
+  implicit class VirtualNodeServiceProviderOps[Self <: VirtualNodeServiceProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVirtualNodeName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualNodeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

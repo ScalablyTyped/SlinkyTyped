@@ -1,9 +1,10 @@
 package typingsSlinky.vegaTypings.runtimeMod
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Element
 import typingsSlinky.vegaTypings.AnonBottom
+import typingsSlinky.vegaTypings.AnonContext
 import typingsSlinky.vegaTypings.AnonData
 import typingsSlinky.vegaTypings.AnonSignals
 import typingsSlinky.vegaTypings.dataflowMod.Changeset_
@@ -61,9 +62,12 @@ class View protected () extends js.Object {
   def signal(name: String): SignalValue = js.native
   def signal(name: String, value: SignalValue): this.type = js.native
   def toCanvas(): js.Promise[HTMLCanvasElement] = js.native
+  def toCanvas(scaleFactor: Double): js.Promise[HTMLCanvasElement] = js.native
+  def toCanvas(scaleFactor: Double, options: AnonContext): js.Promise[HTMLCanvasElement] = js.native
   def toImageURL(`type`: String): js.Promise[String] = js.native
   def toImageURL(`type`: String, scaleFactor: Double): js.Promise[String] = js.native
   def toSVG(): js.Promise[String] = js.native
+  def toSVG(scaleFactor: Double): js.Promise[String] = js.native
   def tooltip(handler: TooltipHandler): this.type = js.native
   def width(): Double = js.native
   def width(w: Double): this.type = js.native

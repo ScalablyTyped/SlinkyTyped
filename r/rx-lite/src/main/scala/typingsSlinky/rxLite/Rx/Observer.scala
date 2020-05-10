@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Observer[T] extends IObserver[T] {
-  def asObserver(): Observer[T]
-  def toNotifier(): js.Function1[/* notification */ Notification[T], Unit]
+  def asObserver(): Observer[T] = js.native
+  def toNotifier(): js.Function1[/* notification */ Notification[T], Unit] = js.native
 }
 
 @JSGlobal("Rx.Observer")

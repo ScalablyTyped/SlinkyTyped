@@ -1,27 +1,25 @@
 package typingsSlinky.fixedDataTable.mod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ColumnGroupProps extends Props[ColumnGroup] {
   /**
   	     * The horizontal alignment of the table cell content.
     * 'left', 'center', 'right'
   	     */
-  var align: js.UndefOr[String] = js.undefined
+  var align: js.UndefOr[String] = js.native
   /**
   	     * Controls if the column group is fixed when scrolling in the X
   	     * axis.
   	     *
   	     * defaultValue: false
   	     */
-  var fixed: js.UndefOr[Boolean] = js.undefined
+  var fixed: js.UndefOr[Boolean] = js.native
   /**
     * The header cell for this column group. This can either be
     * a string. a React element, or a function that generates a
@@ -42,26 +40,64 @@ trait ColumnGroupProps extends Props[ColumnGroup] {
     * If you pass in a function, you will receive the same props
     * object as the first argument.
     */
-  var header: String | ReactElement | (js.Function1[/* props */ CellProps, String | ReactElement])
+  var header: String | ReactElement | (js.Function1[/* props */ CellProps, String | ReactElement]) = js.native
 }
 
 object ColumnGroupProps {
   @scala.inline
-  def apply(
-    header: String | ReactElement | (js.Function1[/* props */ CellProps, String | ReactElement]),
-    align: String = null,
-    children: TagMod[Any] = null,
-    fixed: js.UndefOr[Boolean] = js.undefined,
-    key: Key = null,
-    ref: LegacyRef[ColumnGroup] = null
-  ): ColumnGroupProps = {
+  def apply(header: String | ReactElement | (js.Function1[/* props */ CellProps, String | ReactElement])): ColumnGroupProps = {
     val __obj = js.Dynamic.literal(header = header.asInstanceOf[js.Any])
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixed)) __obj.updateDynamic("fixed")(fixed.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnGroupProps]
   }
+  @scala.inline
+  implicit class ColumnGroupPropsOps[Self <: ColumnGroupProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeaderReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeaderFunction1(value: /* props */ CellProps => String | ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHeader(value: String | ReactElement | (js.Function1[/* props */ CellProps, String | ReactElement])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAlign(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixed")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

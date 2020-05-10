@@ -5,99 +5,331 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IDetailsColumnStyles extends js.Object {
   /**
     * Styleable label region.
     */
-  var accessibleLabel: IStyle
+  var accessibleLabel: IStyle = js.native
   /**
     * Styleable border region after drag & drop.
     */
-  var borderAfterDropping: IStyle
+  var borderAfterDropping: IStyle = js.native
   /**
     * Styleable border while drag & drop occurs.
     */
-  var borderWhileDragging: IStyle
+  var borderWhileDragging: IStyle = js.native
   /**
     * Styleable cell name region.
     */
-  var cellName: IStyle
+  var cellName: IStyle = js.native
   /**
     * Styleable cell title region.
     */
-  var cellTitle: IStyle
+  var cellTitle: IStyle = js.native
   /**
     * Styleable cell tooltip region.
     */
-  var cellTooltip: IStyle
+  var cellTooltip: IStyle = js.native
   /**
     * Styleable filter glyph.
     */
-  var filterChevron: IStyle
+  var filterChevron: IStyle = js.native
   /**
     * Styleable resize glyph region.
     */
-  var gripperBarVerticalStyle: IStyle
+  var gripperBarVerticalStyle: IStyle = js.native
   /**
     * Styleable icon region.
     */
-  var iconClassName: IStyle
+  var iconClassName: IStyle = js.native
   /**
     * Styleable margin by icon region.
     */
-  var nearIcon: IStyle
+  var nearIcon: IStyle = js.native
   /**
     * Transparent no border region after drag & drop to avoid content shift.
     */
-  var noBorderAfterDropping: IStyle
+  var noBorderAfterDropping: IStyle = js.native
   /**
     * Transparent no border region while drag & drop occurs to avoid content shift.
     */
-  var noBorderWhileDragging: IStyle
+  var noBorderWhileDragging: IStyle = js.native
   /**
     * Styleable root region.
     */
-  var root: IStyle
+  var root: IStyle = js.native
   /**
     * Styleable column sort icon region.
     */
-  var sortIcon: IStyle
+  var sortIcon: IStyle = js.native
 }
 
 object IDetailsColumnStyles {
   @scala.inline
-  def apply(
-    accessibleLabel: IStyle = null,
-    borderAfterDropping: IStyle = null,
-    borderWhileDragging: IStyle = null,
-    cellName: IStyle = null,
-    cellTitle: IStyle = null,
-    cellTooltip: IStyle = null,
-    filterChevron: IStyle = null,
-    gripperBarVerticalStyle: IStyle = null,
-    iconClassName: IStyle = null,
-    nearIcon: IStyle = null,
-    noBorderAfterDropping: IStyle = null,
-    noBorderWhileDragging: IStyle = null,
-    root: IStyle = null,
-    sortIcon: IStyle = null
-  ): IDetailsColumnStyles = {
+  def apply(): IDetailsColumnStyles = {
     val __obj = js.Dynamic.literal()
-    if (accessibleLabel != null) __obj.updateDynamic("accessibleLabel")(accessibleLabel.asInstanceOf[js.Any])
-    if (borderAfterDropping != null) __obj.updateDynamic("borderAfterDropping")(borderAfterDropping.asInstanceOf[js.Any])
-    if (borderWhileDragging != null) __obj.updateDynamic("borderWhileDragging")(borderWhileDragging.asInstanceOf[js.Any])
-    if (cellName != null) __obj.updateDynamic("cellName")(cellName.asInstanceOf[js.Any])
-    if (cellTitle != null) __obj.updateDynamic("cellTitle")(cellTitle.asInstanceOf[js.Any])
-    if (cellTooltip != null) __obj.updateDynamic("cellTooltip")(cellTooltip.asInstanceOf[js.Any])
-    if (filterChevron != null) __obj.updateDynamic("filterChevron")(filterChevron.asInstanceOf[js.Any])
-    if (gripperBarVerticalStyle != null) __obj.updateDynamic("gripperBarVerticalStyle")(gripperBarVerticalStyle.asInstanceOf[js.Any])
-    if (iconClassName != null) __obj.updateDynamic("iconClassName")(iconClassName.asInstanceOf[js.Any])
-    if (nearIcon != null) __obj.updateDynamic("nearIcon")(nearIcon.asInstanceOf[js.Any])
-    if (noBorderAfterDropping != null) __obj.updateDynamic("noBorderAfterDropping")(noBorderAfterDropping.asInstanceOf[js.Any])
-    if (noBorderWhileDragging != null) __obj.updateDynamic("noBorderWhileDragging")(noBorderWhileDragging.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
-    if (sortIcon != null) __obj.updateDynamic("sortIcon")(sortIcon.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDetailsColumnStyles]
   }
+  @scala.inline
+  implicit class IDetailsColumnStylesOps[Self <: IDetailsColumnStyles] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessibleLabel(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibleLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibleLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibleLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessibleLabelNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibleLabel")(null)
+        ret
+    }
+    @scala.inline
+    def withBorderAfterDropping(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderAfterDropping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderAfterDropping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderAfterDropping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderAfterDroppingNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderAfterDropping")(null)
+        ret
+    }
+    @scala.inline
+    def withBorderWhileDragging(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWhileDragging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWhileDragging: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWhileDragging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderWhileDraggingNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWhileDragging")(null)
+        ret
+    }
+    @scala.inline
+    def withCellName(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellNameNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellName")(null)
+        ret
+    }
+    @scala.inline
+    def withCellTitle(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellTitleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTitle")(null)
+        ret
+    }
+    @scala.inline
+    def withCellTooltip(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellTooltipNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTooltip")(null)
+        ret
+    }
+    @scala.inline
+    def withFilterChevron(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterChevron")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterChevron: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterChevron")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterChevronNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterChevron")(null)
+        ret
+    }
+    @scala.inline
+    def withGripperBarVerticalStyle(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gripperBarVerticalStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGripperBarVerticalStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gripperBarVerticalStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGripperBarVerticalStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gripperBarVerticalStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withIconClassName(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconClassNameNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClassName")(null)
+        ret
+    }
+    @scala.inline
+    def withNearIcon(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nearIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNearIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nearIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNearIconNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nearIcon")(null)
+        ret
+    }
+    @scala.inline
+    def withNoBorderAfterDropping(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noBorderAfterDropping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoBorderAfterDropping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noBorderAfterDropping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoBorderAfterDroppingNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noBorderAfterDropping")(null)
+        ret
+    }
+    @scala.inline
+    def withNoBorderWhileDragging(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noBorderWhileDragging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoBorderWhileDragging: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noBorderWhileDragging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoBorderWhileDraggingNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noBorderWhileDragging")(null)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRootNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(null)
+        ret
+    }
+    @scala.inline
+    def withSortIcon(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortIconNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortIcon")(null)
+        ret
+    }
+  }
+  
 }
 

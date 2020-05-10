@@ -20,6 +20,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AreasAndLengthsParametersProperties extends js.Object {
   /**
     * The area unit in which areas of polygons will be calculated. Use the strings listed below or [any other valid area unit](https://developers.arcgis.com/java/api-reference/constant-values.html#com.esri.core.geometry.AreaUnit.Code.ACRE).
@@ -28,7 +29,7 @@ trait AreasAndLengthsParametersProperties extends js.Object {
     */
   var areaUnit: js.UndefOr[
     acres | hectares | `square-miles` | `square-kilometers` | `square-meters` | `square-feet` | `square-yards`
-  ] = js.undefined
+  ] = js.native
   /**
     * Defines the type of calculation for the geometry. The type can be one of the following:
     *
@@ -41,35 +42,84 @@ trait AreasAndLengthsParametersProperties extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-AreasAndLengthsParameters.html#calculationType)
     */
-  var calculationType: js.UndefOr[planar | geodesic | `preserve-shape`] = js.undefined
+  var calculationType: js.UndefOr[planar | geodesic | `preserve-shape`] = js.native
   /**
     * The length unit in which perimeters of polygons will be calculated. Use one of the possible values listed below or any of the [numeric codes for linear units](https://developers.arcgis.com/java/api-reference/constant-values.html#com.esri.core.geometry.LinearUnit.Code.CENTIMETER).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-AreasAndLengthsParameters.html#lengthUnit)
     */
-  var lengthUnit: js.UndefOr[feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards] = js.undefined
+  var lengthUnit: js.UndefOr[feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards] = js.native
   /**
     * Polygon geometries for which to compute areas and lengths.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-AreasAndLengthsParameters.html#polygons)
     */
-  var polygons: js.UndefOr[js.Array[PolygonProperties]] = js.undefined
+  var polygons: js.UndefOr[js.Array[PolygonProperties]] = js.native
 }
 
 object AreasAndLengthsParametersProperties {
   @scala.inline
-  def apply(
-    areaUnit: acres | hectares | `square-miles` | `square-kilometers` | `square-meters` | `square-feet` | `square-yards` = null,
-    calculationType: planar | geodesic | `preserve-shape` = null,
-    lengthUnit: feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards = null,
-    polygons: js.Array[PolygonProperties] = null
-  ): AreasAndLengthsParametersProperties = {
+  def apply(): AreasAndLengthsParametersProperties = {
     val __obj = js.Dynamic.literal()
-    if (areaUnit != null) __obj.updateDynamic("areaUnit")(areaUnit.asInstanceOf[js.Any])
-    if (calculationType != null) __obj.updateDynamic("calculationType")(calculationType.asInstanceOf[js.Any])
-    if (lengthUnit != null) __obj.updateDynamic("lengthUnit")(lengthUnit.asInstanceOf[js.Any])
-    if (polygons != null) __obj.updateDynamic("polygons")(polygons.asInstanceOf[js.Any])
     __obj.asInstanceOf[AreasAndLengthsParametersProperties]
   }
+  @scala.inline
+  implicit class AreasAndLengthsParametersPropertiesOps[Self <: AreasAndLengthsParametersProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAreaUnit(
+      value: acres | hectares | `square-miles` | `square-kilometers` | `square-meters` | `square-feet` | `square-yards`
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("areaUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAreaUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("areaUnit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCalculationType(value: planar | geodesic | `preserve-shape`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCalculationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLengthUnit(value: feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lengthUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLengthUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lengthUnit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolygons(value: js.Array[PolygonProperties]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polygons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolygons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polygons")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

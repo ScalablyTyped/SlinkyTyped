@@ -8,12 +8,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Block
   extends Comment
      with ASTNode
      with CommentKind
      with PrintableKind {
-  var `type`: typingsSlinky.astTypes.astTypesStrings.Block
+  var `type`: typingsSlinky.astTypes.astTypesStrings.Block = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.Block")

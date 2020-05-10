@@ -7,27 +7,46 @@ import scala.scalajs.js.annotation._
 
 //#endregion
 //#region 屏幕亮度 https://docs.alipay.com/mini/api/screen-brightness
+@js.native
 trait SetKeepScreenOnOptions
   extends BaseOptions[js.Any, js.Any] {
   /** 是否保持屏幕常亮 */
-  var keepScreenOn: Boolean
+  var keepScreenOn: Boolean = js.native
   @JSName("success")
-  var success_SetKeepScreenOnOptions: js.UndefOr[js.Function1[/* res */ AnonErrMsg, Unit]] = js.undefined
+  var success_SetKeepScreenOnOptions: js.UndefOr[js.Function1[/* res */ AnonErrMsg, Unit]] = js.native
 }
 
 object SetKeepScreenOnOptions {
   @scala.inline
-  def apply(
-    keepScreenOn: Boolean,
-    complete: /* res */ js.Any => Unit = null,
-    fail: js.Any => Unit = null,
-    success: /* res */ AnonErrMsg => Unit = null
-  ): SetKeepScreenOnOptions = {
+  def apply(keepScreenOn: Boolean): SetKeepScreenOnOptions = {
     val __obj = js.Dynamic.literal(keepScreenOn = keepScreenOn.asInstanceOf[js.Any])
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
-    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[SetKeepScreenOnOptions]
   }
+  @scala.inline
+  implicit class SetKeepScreenOnOptionsOps[Self <: SetKeepScreenOnOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKeepScreenOn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepScreenOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuccess(value: /* res */ AnonErrMsg => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

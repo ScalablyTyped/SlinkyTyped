@@ -1,10 +1,8 @@
 package typingsSlinky.reactCanvasDraw.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactCanvasDraw.mod.CanvasDraw
 import typingsSlinky.reactCanvasDraw.mod.CanvasDrawProps
 import typingsSlinky.reactCanvasDraw.mod.default
@@ -12,52 +10,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactCanvasDraw
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactCanvasDraw {
   @JSImport("react-canvas-draw", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, style */
-  def apply(
-    backgroundColor: String = null,
-    brushColor: String = null,
-    brushRadius: Int | Double = null,
-    canvasHeight: Double | String = null,
-    canvasWidth: Double | String = null,
-    catenaryColor: String = null,
-    gridColor: String = null,
-    hideGrid: js.UndefOr[Boolean] = js.undefined,
-    hideInterface: js.UndefOr[Boolean] = js.undefined,
-    imgSrc: String = null,
-    immediateLoading: js.UndefOr[Boolean] = js.undefined,
-    lazyRadius: Int | Double = null,
-    loadTimeOffset: Int | Double = null,
-    onChange: /* canvas */ CanvasDraw => Unit = null,
-    saveData: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (brushColor != null) __obj.updateDynamic("brushColor")(brushColor.asInstanceOf[js.Any])
-    if (brushRadius != null) __obj.updateDynamic("brushRadius")(brushRadius.asInstanceOf[js.Any])
-    if (canvasHeight != null) __obj.updateDynamic("canvasHeight")(canvasHeight.asInstanceOf[js.Any])
-    if (canvasWidth != null) __obj.updateDynamic("canvasWidth")(canvasWidth.asInstanceOf[js.Any])
-    if (catenaryColor != null) __obj.updateDynamic("catenaryColor")(catenaryColor.asInstanceOf[js.Any])
-    if (gridColor != null) __obj.updateDynamic("gridColor")(gridColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideGrid)) __obj.updateDynamic("hideGrid")(hideGrid.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideInterface)) __obj.updateDynamic("hideInterface")(hideInterface.asInstanceOf[js.Any])
-    if (imgSrc != null) __obj.updateDynamic("imgSrc")(imgSrc.asInstanceOf[js.Any])
-    if (!js.isUndefined(immediateLoading)) __obj.updateDynamic("immediateLoading")(immediateLoading.asInstanceOf[js.Any])
-    if (lazyRadius != null) __obj.updateDynamic("lazyRadius")(lazyRadius.asInstanceOf[js.Any])
-    if (loadTimeOffset != null) __obj.updateDynamic("loadTimeOffset")(loadTimeOffset.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (saveData != null) __obj.updateDynamic("saveData")(saveData.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def brushColor(value: String): this.type = set("brushColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def brushRadius(value: Double): this.type = set("brushRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def canvasHeight(value: Double | String): this.type = set("canvasHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def canvasWidth(value: Double | String): this.type = set("canvasWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def catenaryColor(value: String): this.type = set("catenaryColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridColor(value: String): this.type = set("gridColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hideGrid(value: Boolean): this.type = set("hideGrid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hideInterface(value: Boolean): this.type = set("hideInterface", value.asInstanceOf[js.Any])
+    @scala.inline
+    def imgSrc(value: String): this.type = set("imgSrc", value.asInstanceOf[js.Any])
+    @scala.inline
+    def immediateLoading(value: Boolean): this.type = set("immediateLoading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lazyRadius(value: Double): this.type = set("lazyRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loadTimeOffset(value: Double): this.type = set("loadTimeOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* canvas */ CanvasDraw => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChangeNull: this.type = set("onChange", null)
+    @scala.inline
+    def saveData(value: String): this.type = set("saveData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactCanvasDraw.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = CanvasDrawProps
+  
+  def withProps(p: CanvasDrawProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactCanvasDraw.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

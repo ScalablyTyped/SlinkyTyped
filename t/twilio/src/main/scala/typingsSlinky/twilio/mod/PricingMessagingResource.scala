@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PricingMessagingResource extends js.Object {
-  var countries: CountryResource
+  var countries: CountryResource = js.native
 }
 
 object PricingMessagingResource {
   @scala.inline
   def apply(countries: CountryResource): PricingMessagingResource = {
     val __obj = js.Dynamic.literal(countries = countries.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PricingMessagingResource]
   }
+  @scala.inline
+  implicit class PricingMessagingResourceOps[Self <: PricingMessagingResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCountries(value: CountryResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countries")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

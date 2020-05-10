@@ -17,7 +17,7 @@ object removeEventListener_pagehide extends js.Object {
   def apply(
     `type`: pagehide,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ PageTransitionEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.koaJoiRouter.mod
 
-import typingsSlinky.joi.mod.SchemaLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,15 +12,13 @@ trait OutputValidation extends js.Object
 
 object OutputValidation {
   @scala.inline
-  def AnonBody(body: SchemaLike = null): OutputValidation = {
+  def AnonBody(): OutputValidation = {
     val __obj = js.Dynamic.literal()
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
     __obj.asInstanceOf[OutputValidation]
   }
   @scala.inline
-  def AnonHeaders(headers: SchemaLike = null): OutputValidation = {
+  def AnonHeaders(): OutputValidation = {
     val __obj = js.Dynamic.literal()
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
     __obj.asInstanceOf[OutputValidation]
   }
 }

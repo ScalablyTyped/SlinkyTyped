@@ -18,10 +18,35 @@ trait RuleGroupReferenceStatement extends js.Object {
 
 object RuleGroupReferenceStatement {
   @scala.inline
-  def apply(ARN: ResourceArn, ExcludedRules: ExcludedRules = null): RuleGroupReferenceStatement = {
+  def apply(ARN: ResourceArn): RuleGroupReferenceStatement = {
     val __obj = js.Dynamic.literal(ARN = ARN.asInstanceOf[js.Any])
-    if (ExcludedRules != null) __obj.updateDynamic("ExcludedRules")(ExcludedRules.asInstanceOf[js.Any])
     __obj.asInstanceOf[RuleGroupReferenceStatement]
   }
+  @scala.inline
+  implicit class RuleGroupReferenceStatementOps[Self <: RuleGroupReferenceStatement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withARN(value: ResourceArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExcludedRules(value: ExcludedRules): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludedRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludedRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludedRules")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

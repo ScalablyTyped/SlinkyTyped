@@ -18,16 +18,14 @@ trait Flavor extends js.Object
 
 object Flavor {
   @scala.inline
-  def allOn: typingsSlinky.showdown.showdownStrings.allOn = this.cast("allOn")
+  def allOn: typingsSlinky.showdown.showdownStrings.allOn = "allOn".asInstanceOf[typingsSlinky.showdown.showdownStrings.allOn]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ghost: typingsSlinky.showdown.showdownStrings.ghost = "ghost".asInstanceOf[typingsSlinky.showdown.showdownStrings.ghost]
   @scala.inline
-  def ghost: typingsSlinky.showdown.showdownStrings.ghost = this.cast("ghost")
+  def github: typingsSlinky.showdown.showdownStrings.github = "github".asInstanceOf[typingsSlinky.showdown.showdownStrings.github]
   @scala.inline
-  def github: typingsSlinky.showdown.showdownStrings.github = this.cast("github")
+  def original: typingsSlinky.showdown.showdownStrings.original = "original".asInstanceOf[typingsSlinky.showdown.showdownStrings.original]
   @scala.inline
-  def original: typingsSlinky.showdown.showdownStrings.original = this.cast("original")
-  @scala.inline
-  def vanilla: typingsSlinky.showdown.showdownStrings.vanilla = this.cast("vanilla")
+  def vanilla: typingsSlinky.showdown.showdownStrings.vanilla = "vanilla".asInstanceOf[typingsSlinky.showdown.showdownStrings.vanilla]
 }
 

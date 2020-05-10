@@ -4,39 +4,87 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DragStopEventUIParam extends js.Object {
   /**
   	 * Gets a reference to the helper.
   	 */
-  var helper: js.UndefOr[String] = js.undefined
+  var helper: js.UndefOr[String] = js.native
   /**
   	 * Gets a reference to the offset.
   	 */
-  var offset: js.UndefOr[js.Any] = js.undefined
+  var offset: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets a reference to the original position of the draggable element.
   	 */
-  var originalPosition: js.UndefOr[js.Any] = js.undefined
+  var originalPosition: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets a reference to the current position of the draggable element.
   	 */
-  var position: js.UndefOr[js.Any] = js.undefined
+  var position: js.UndefOr[js.Any] = js.native
 }
 
 object DragStopEventUIParam {
   @scala.inline
-  def apply(
-    helper: String = null,
-    offset: js.Any = null,
-    originalPosition: js.Any = null,
-    position: js.Any = null
-  ): DragStopEventUIParam = {
+  def apply(): DragStopEventUIParam = {
     val __obj = js.Dynamic.literal()
-    if (helper != null) __obj.updateDynamic("helper")(helper.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (originalPosition != null) __obj.updateDynamic("originalPosition")(originalPosition.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
     __obj.asInstanceOf[DragStopEventUIParam]
   }
+  @scala.inline
+  implicit class DragStopEventUIParamOps[Self <: DragStopEventUIParam] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHelper(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("helper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHelper: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("helper")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffset(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalPosition(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

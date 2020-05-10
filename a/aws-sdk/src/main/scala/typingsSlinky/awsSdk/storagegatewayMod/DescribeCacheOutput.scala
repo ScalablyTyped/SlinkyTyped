@@ -35,24 +35,101 @@ trait DescribeCacheOutput extends js.Object {
 
 object DescribeCacheOutput {
   @scala.inline
-  def apply(
-    CacheAllocatedInBytes: Int | Double = null,
-    CacheDirtyPercentage: Int | Double = null,
-    CacheHitPercentage: Int | Double = null,
-    CacheMissPercentage: Int | Double = null,
-    CacheUsedPercentage: Int | Double = null,
-    DiskIds: DiskIds = null,
-    GatewayARN: GatewayARN = null
-  ): DescribeCacheOutput = {
+  def apply(): DescribeCacheOutput = {
     val __obj = js.Dynamic.literal()
-    if (CacheAllocatedInBytes != null) __obj.updateDynamic("CacheAllocatedInBytes")(CacheAllocatedInBytes.asInstanceOf[js.Any])
-    if (CacheDirtyPercentage != null) __obj.updateDynamic("CacheDirtyPercentage")(CacheDirtyPercentage.asInstanceOf[js.Any])
-    if (CacheHitPercentage != null) __obj.updateDynamic("CacheHitPercentage")(CacheHitPercentage.asInstanceOf[js.Any])
-    if (CacheMissPercentage != null) __obj.updateDynamic("CacheMissPercentage")(CacheMissPercentage.asInstanceOf[js.Any])
-    if (CacheUsedPercentage != null) __obj.updateDynamic("CacheUsedPercentage")(CacheUsedPercentage.asInstanceOf[js.Any])
-    if (DiskIds != null) __obj.updateDynamic("DiskIds")(DiskIds.asInstanceOf[js.Any])
-    if (GatewayARN != null) __obj.updateDynamic("GatewayARN")(GatewayARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeCacheOutput]
   }
+  @scala.inline
+  implicit class DescribeCacheOutputOps[Self <: DescribeCacheOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCacheAllocatedInBytes(value: long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheAllocatedInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheAllocatedInBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheAllocatedInBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheDirtyPercentage(value: double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheDirtyPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheDirtyPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheDirtyPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheHitPercentage(value: double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheHitPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheHitPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheHitPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheMissPercentage(value: double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheMissPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheMissPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheMissPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheUsedPercentage(value: double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheUsedPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheUsedPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheUsedPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskIds(value: DiskIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayARN(value: GatewayARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

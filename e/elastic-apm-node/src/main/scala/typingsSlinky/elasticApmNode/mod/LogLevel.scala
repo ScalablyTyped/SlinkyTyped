@@ -16,18 +16,16 @@ trait LogLevel extends js.Object
 
 object LogLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def debug: typingsSlinky.elasticApmNode.elasticApmNodeStrings.debug = "debug".asInstanceOf[typingsSlinky.elasticApmNode.elasticApmNodeStrings.debug]
   @scala.inline
-  def debug: typingsSlinky.elasticApmNode.elasticApmNodeStrings.debug = this.cast("debug")
+  def error: typingsSlinky.elasticApmNode.elasticApmNodeStrings.error = "error".asInstanceOf[typingsSlinky.elasticApmNode.elasticApmNodeStrings.error]
   @scala.inline
-  def error: typingsSlinky.elasticApmNode.elasticApmNodeStrings.error = this.cast("error")
+  def fatal: typingsSlinky.elasticApmNode.elasticApmNodeStrings.fatal = "fatal".asInstanceOf[typingsSlinky.elasticApmNode.elasticApmNodeStrings.fatal]
   @scala.inline
-  def fatal: typingsSlinky.elasticApmNode.elasticApmNodeStrings.fatal = this.cast("fatal")
+  def info: typingsSlinky.elasticApmNode.elasticApmNodeStrings.info = "info".asInstanceOf[typingsSlinky.elasticApmNode.elasticApmNodeStrings.info]
   @scala.inline
-  def info: typingsSlinky.elasticApmNode.elasticApmNodeStrings.info = this.cast("info")
+  def trace: typingsSlinky.elasticApmNode.elasticApmNodeStrings.trace = "trace".asInstanceOf[typingsSlinky.elasticApmNode.elasticApmNodeStrings.trace]
   @scala.inline
-  def trace: typingsSlinky.elasticApmNode.elasticApmNodeStrings.trace = this.cast("trace")
-  @scala.inline
-  def warn: typingsSlinky.elasticApmNode.elasticApmNodeStrings.warn = this.cast("warn")
+  def warn: typingsSlinky.elasticApmNode.elasticApmNodeStrings.warn = "warn".asInstanceOf[typingsSlinky.elasticApmNode.elasticApmNodeStrings.warn]
 }
 

@@ -18,10 +18,35 @@ trait PutVoiceConnectorTerminationCredentialsRequest extends js.Object {
 
 object PutVoiceConnectorTerminationCredentialsRequest {
   @scala.inline
-  def apply(VoiceConnectorId: NonEmptyString, Credentials: CredentialList = null): PutVoiceConnectorTerminationCredentialsRequest = {
+  def apply(VoiceConnectorId: NonEmptyString): PutVoiceConnectorTerminationCredentialsRequest = {
     val __obj = js.Dynamic.literal(VoiceConnectorId = VoiceConnectorId.asInstanceOf[js.Any])
-    if (Credentials != null) __obj.updateDynamic("Credentials")(Credentials.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutVoiceConnectorTerminationCredentialsRequest]
   }
+  @scala.inline
+  implicit class PutVoiceConnectorTerminationCredentialsRequestOps[Self <: PutVoiceConnectorTerminationCredentialsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVoiceConnectorId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VoiceConnectorId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCredentials(value: CredentialList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Credentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCredentials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Credentials")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

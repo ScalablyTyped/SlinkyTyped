@@ -30,19 +30,71 @@ trait DatabaseInput extends js.Object {
 
 object DatabaseInput {
   @scala.inline
-  def apply(
-    Name: NameString,
-    CreateTableDefaultPermissions: PrincipalPermissionsList = null,
-    Description: DescriptionString = null,
-    LocationUri: URI = null,
-    Parameters: ParametersMap = null
-  ): DatabaseInput = {
+  def apply(Name: NameString): DatabaseInput = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
-    if (CreateTableDefaultPermissions != null) __obj.updateDynamic("CreateTableDefaultPermissions")(CreateTableDefaultPermissions.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (LocationUri != null) __obj.updateDynamic("LocationUri")(LocationUri.asInstanceOf[js.Any])
-    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatabaseInput]
   }
+  @scala.inline
+  implicit class DatabaseInputOps[Self <: DatabaseInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreateTableDefaultPermissions(value: PrincipalPermissionsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateTableDefaultPermissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateTableDefaultPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateTableDefaultPermissions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: DescriptionString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocationUri(value: URI): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocationUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: ParametersMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

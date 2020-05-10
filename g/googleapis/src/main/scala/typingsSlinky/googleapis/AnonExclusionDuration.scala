@@ -12,11 +12,41 @@ trait AnonExclusionDuration extends js.Object {
 
 object AnonExclusionDuration {
   @scala.inline
-  def apply(exclusionDuration: String = null, segment: String = null): AnonExclusionDuration = {
+  def apply(): AnonExclusionDuration = {
     val __obj = js.Dynamic.literal()
-    if (exclusionDuration != null) __obj.updateDynamic("exclusionDuration")(exclusionDuration.asInstanceOf[js.Any])
-    if (segment != null) __obj.updateDynamic("segment")(segment.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonExclusionDuration]
   }
+  @scala.inline
+  implicit class AnonExclusionDurationOps[Self <: AnonExclusionDuration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExclusionDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusionDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclusionDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusionDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

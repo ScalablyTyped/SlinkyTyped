@@ -18,7 +18,6 @@ import typingsSlinky.rxjs.typesMod.PartialObserver
 import typingsSlinky.rxjs.typesMod.SchedulerLike
 import typingsSlinky.rxjs.typesMod.SubscribableOrPromise
 import typingsSlinky.rxjs.typesMod.UnaryFunction
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -155,9 +154,9 @@ object rxjsMod extends js.Object {
     v6: ObservableInput[T6],
     scheduler: SchedulerLike
   ): OperatorFunction[T, T | T2 | T3 | T4 | T5 | T6] = js.native
-  def concatAll[R](): OperatorFunction[_, R] = js.native
+  def concatAll[T](): OperatorFunction[ObservableInput[T], T] = js.native
   @JSName("concatAll")
-  def concatAll_T[T](): OperatorFunction[ObservableInput[T], T] = js.native
+  def concatAll_R[R](): OperatorFunction[_, R] = js.native
   def concatMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def concatMap[T, R, O /* <: ObservableInput[_] */](
     project: js.Function2[/* value */ T, /* index */ Double, O],
@@ -195,8 +194,8 @@ object rxjsMod extends js.Object {
   def defaultIfEmpty_TR_OperatorFunction[T, R](defaultValue: R): OperatorFunction[T, T | R] = js.native
   def delay[T](delay: Double): MonoTypeOperatorFunction[T] = js.native
   def delay[T](delay: Double, scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
-  def delay[T](delay: Date): MonoTypeOperatorFunction[T] = js.native
-  def delay[T](delay: Date, scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
+  def delay[T](delay: js.Date): MonoTypeOperatorFunction[T] = js.native
+  def delay[T](delay: js.Date, scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
   def delayWhen[T](
     delayDurationSelector: js.Function2[/* value */ T, /* index */ Double, Observable[_ | scala.Nothing]]
   ): MonoTypeOperatorFunction[T] = js.native
@@ -211,8 +210,8 @@ object rxjsMod extends js.Object {
   def distinctUntilChanged[T](): MonoTypeOperatorFunction[T] = js.native
   def distinctUntilChanged[T](compare: js.Function2[/* x */ T, /* y */ T, Boolean]): MonoTypeOperatorFunction[T] = js.native
   def distinctUntilChanged[T, K](compare: js.Function2[/* x */ K, /* y */ K, Boolean], keySelector: js.Function1[/* x */ T, K]): MonoTypeOperatorFunction[T] = js.native
-  def distinctUntilKeyChanged[T](key: String): MonoTypeOperatorFunction[T] = js.native
-  def distinctUntilKeyChanged[T, K /* <: String */](
+  def distinctUntilKeyChanged[T](key: /* keyof T */ String): MonoTypeOperatorFunction[T] = js.native
+  def distinctUntilKeyChanged[T, K /* <: /* keyof T */ String */](
     key: K,
     compare: js.Function2[
       /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ /* x */ js.Any, 
@@ -241,7 +240,7 @@ object rxjsMod extends js.Object {
     predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean],
     thisArg: js.Any
   ): OperatorFunction[T, Boolean] = js.native
-  def exhaust[R](): OperatorFunction[_, R] = js.native
+  def exhaust[T](): OperatorFunction[ObservableInput[T], T] = js.native
   def exhaustMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def exhaustMap[T, I, R](
     project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[I]],
@@ -254,7 +253,7 @@ object rxjsMod extends js.Object {
     ]
   ): OperatorFunction[T, R] = js.native
   @JSName("exhaust")
-  def exhaust_T[T](): OperatorFunction[ObservableInput[T], T] = js.native
+  def exhaust_R[R](): OperatorFunction[_, R] = js.native
   def expand[T](project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[T]]): MonoTypeOperatorFunction[T] = js.native
   def expand[T](project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[T]], concurrent: Double): MonoTypeOperatorFunction[T] = js.native
   def expand[T](
@@ -299,21 +298,21 @@ object rxjsMod extends js.Object {
     thisArg: js.Any
   ): OperatorFunction[T, js.UndefOr[S]] = js.native
   def first[T, D](): OperatorFunction[T, T | D] = js.native
-  def first[T, D](predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean]): OperatorFunction[T, T | D] = js.native
-  def first[T, D](
-    predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean],
-    defaultValue: D
-  ): OperatorFunction[T, T | D] = js.native
-  def first[T, D](predicate: Null, defaultValue: D): OperatorFunction[T, T | D] = js.native
-  @JSName("first")
-  def first_TS_T[T, S /* <: T */](
+  def first[T, S /* <: T */](
     predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], /* is S */ Boolean]
   ): OperatorFunction[T, S] = js.native
-  @JSName("first")
-  def first_TS_T[T, S /* <: T */](
+  def first[T, S /* <: T */](
     predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], /* is S */ Boolean],
     defaultValue: S
   ): OperatorFunction[T, S] = js.native
+  def first[T, D](predicate: Null, defaultValue: D): OperatorFunction[T, T | D] = js.native
+  @JSName("first")
+  def first_TD[T, D](predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean]): OperatorFunction[T, T | D] = js.native
+  @JSName("first")
+  def first_TD[T, D](
+    predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean],
+    defaultValue: D
+  ): OperatorFunction[T, T | D] = js.native
   def flatMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def flatMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O], concurrent: Double): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def flatMap[T, O /* <: ObservableInput[_] */](
@@ -365,21 +364,21 @@ object rxjsMod extends js.Object {
   def ignoreElements(): OperatorFunction[_, scala.Nothing] = js.native
   def isEmpty[T](): OperatorFunction[T, Boolean] = js.native
   def last[T, D](): OperatorFunction[T, T | D] = js.native
-  def last[T, D](predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean]): OperatorFunction[T, T | D] = js.native
-  def last[T, D](
-    predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean],
-    defaultValue: D
-  ): OperatorFunction[T, T | D] = js.native
-  def last[T, D](predicate: Null, defaultValue: D): OperatorFunction[T, T | D] = js.native
-  @JSName("last")
-  def last_TS_T[T, S /* <: T */](
+  def last[T, S /* <: T */](
     predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], /* is S */ Boolean]
   ): OperatorFunction[T, S] = js.native
-  @JSName("last")
-  def last_TS_T[T, S /* <: T */](
+  def last[T, S /* <: T */](
     predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], /* is S */ Boolean],
     defaultValue: S
   ): OperatorFunction[T, S] = js.native
+  def last[T, D](predicate: Null, defaultValue: D): OperatorFunction[T, T | D] = js.native
+  @JSName("last")
+  def last_TD[T, D](predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean]): OperatorFunction[T, T | D] = js.native
+  @JSName("last")
+  def last_TD[T, D](
+    predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean],
+    defaultValue: D
+  ): OperatorFunction[T, T | D] = js.native
   def map[T, R](project: js.Function2[/* value */ T, /* index */ Double, R]): OperatorFunction[T, R] = js.native
   def map[T, R](project: js.Function2[/* value */ T, /* index */ Double, R], thisArg: js.Any): OperatorFunction[T, R] = js.native
   def mapTo[T, R](value: R): OperatorFunction[T, R] = js.native
@@ -569,28 +568,28 @@ object rxjsMod extends js.Object {
   def pairwise[T](): OperatorFunction[T, js.Tuple2[T, T]] = js.native
   def partition[T](predicate: js.Function2[/* value */ T, /* index */ Double, Boolean]): UnaryFunction[Observable[T], js.Tuple2[Observable[T], Observable[T]]] = js.native
   def partition[T](predicate: js.Function2[/* value */ T, /* index */ Double, Boolean], thisArg: js.Any): UnaryFunction[Observable[T], js.Tuple2[Observable[T], Observable[T]]] = js.native
-  def pluck[T, K1 /* <: String */](k1: K1): OperatorFunction[
+  def pluck[T, K1 /* <: /* keyof T */ String */](k1: K1): OperatorFunction[
     T, 
     /* import warning: importer.ImportType#apply Failed type conversion: T[K1] */ js.Any
   ] = js.native
   def pluck[T, R](properties: String*): OperatorFunction[T, R] = js.native
-  def pluck[T, K1 /* <: String */, K2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1] */ js.Any */](k1: K1, k2: K2): OperatorFunction[
+  def pluck[T, K1 /* <: /* keyof T */ String */, K2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1] */ js.Any */](k1: K1, k2: K2): OperatorFunction[
     T, 
     /* import warning: importer.ImportType#apply Failed type conversion: T[K1][K2] */ js.Any
   ] = js.native
-  def pluck[T, K1 /* <: String */, K2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1] */ js.Any */, K3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2] */ js.Any */](k1: K1, k2: K2, k3: K3): OperatorFunction[
+  def pluck[T, K1 /* <: /* keyof T */ String */, K2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1] */ js.Any */, K3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2] */ js.Any */](k1: K1, k2: K2, k3: K3): OperatorFunction[
     T, 
     /* import warning: importer.ImportType#apply Failed type conversion: T[K1][K2][K3] */ js.Any
   ] = js.native
-  def pluck[T, K1 /* <: String */, K2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1] */ js.Any */, K3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2] */ js.Any */, K4 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2][K3] */ js.Any */](k1: K1, k2: K2, k3: K3, k4: K4): OperatorFunction[
+  def pluck[T, K1 /* <: /* keyof T */ String */, K2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1] */ js.Any */, K3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2] */ js.Any */, K4 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2][K3] */ js.Any */](k1: K1, k2: K2, k3: K3, k4: K4): OperatorFunction[
     T, 
     /* import warning: importer.ImportType#apply Failed type conversion: T[K1][K2][K3][K4] */ js.Any
   ] = js.native
-  def pluck[T, K1 /* <: String */, K2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1] */ js.Any */, K3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2] */ js.Any */, K4 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2][K3] */ js.Any */, K5 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2][K3][K4] */ js.Any */](k1: K1, k2: K2, k3: K3, k4: K4, k5: K5): OperatorFunction[
+  def pluck[T, K1 /* <: /* keyof T */ String */, K2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1] */ js.Any */, K3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2] */ js.Any */, K4 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2][K3] */ js.Any */, K5 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2][K3][K4] */ js.Any */](k1: K1, k2: K2, k3: K3, k4: K4, k5: K5): OperatorFunction[
     T, 
     /* import warning: importer.ImportType#apply Failed type conversion: T[K1][K2][K3][K4][K5] */ js.Any
   ] = js.native
-  def pluck[T, K1 /* <: String */, K2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1] */ js.Any */, K3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2] */ js.Any */, K4 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2][K3] */ js.Any */, K5 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2][K3][K4] */ js.Any */, K6 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2][K3][K4][K5] */ js.Any */](k1: K1, k2: K2, k3: K3, k4: K4, k5: K5, k6: K6): OperatorFunction[
+  def pluck[T, K1 /* <: /* keyof T */ String */, K2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1] */ js.Any */, K3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2] */ js.Any */, K4 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2][K3] */ js.Any */, K5 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2][K3][K4] */ js.Any */, K6 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K1][K2][K3][K4][K5] */ js.Any */](k1: K1, k2: K2, k3: K3, k4: K4, k5: K5, k6: K6): OperatorFunction[
     T, 
     /* import warning: importer.ImportType#apply Failed type conversion: T[K1][K2][K3][K4][K5][K6] */ js.Any
   ] = js.native
@@ -675,9 +674,9 @@ object rxjsMod extends js.Object {
   def startWith[T, D, E, F, G, H, I](v1: D, v2: E, v3: F, v4: G, v5: H, v6: I, scheduler: SchedulerLike): OperatorFunction[T, T | D | E | F | G | H | I] = js.native
   def subscribeOn[T](scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
   def subscribeOn[T](scheduler: SchedulerLike, delay: Double): MonoTypeOperatorFunction[T] = js.native
-  def switchAll[R](): OperatorFunction[_, R] = js.native
+  def switchAll[T](): OperatorFunction[ObservableInput[T], T] = js.native
   @JSName("switchAll")
-  def switchAll_T[T](): OperatorFunction[ObservableInput[T], T] = js.native
+  def switchAll_R[R](): OperatorFunction[_, R] = js.native
   def switchMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def switchMap[T, R, O /* <: ObservableInput[_] */](
     project: js.Function2[/* value */ T, /* index */ Double, O],
@@ -749,12 +748,12 @@ object rxjsMod extends js.Object {
   def timeInterval[T](scheduler: SchedulerLike): OperatorFunction[T, TimeInterval_[T]] = js.native
   def timeout[T](due: Double): MonoTypeOperatorFunction[T] = js.native
   def timeout[T](due: Double, scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
-  def timeout[T](due: Date): MonoTypeOperatorFunction[T] = js.native
-  def timeout[T](due: Date, scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
+  def timeout[T](due: js.Date): MonoTypeOperatorFunction[T] = js.native
+  def timeout[T](due: js.Date, scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
   def timeoutWith[T, R](due: Double, withObservable: ObservableInput[R]): OperatorFunction[T, T | R] = js.native
   def timeoutWith[T, R](due: Double, withObservable: ObservableInput[R], scheduler: SchedulerLike): OperatorFunction[T, T | R] = js.native
-  def timeoutWith[T, R](due: Date, withObservable: ObservableInput[R]): OperatorFunction[T, T | R] = js.native
-  def timeoutWith[T, R](due: Date, withObservable: ObservableInput[R], scheduler: SchedulerLike): OperatorFunction[T, T | R] = js.native
+  def timeoutWith[T, R](due: js.Date, withObservable: ObservableInput[R]): OperatorFunction[T, T | R] = js.native
+  def timeoutWith[T, R](due: js.Date, withObservable: ObservableInput[R], scheduler: SchedulerLike): OperatorFunction[T, T | R] = js.native
   def timestamp[T](): OperatorFunction[T, Timestamp_[T]] = js.native
   def timestamp[T](scheduler: SchedulerLike): OperatorFunction[T, Timestamp_[T]] = js.native
   def toArray[T](): OperatorFunction[T, js.Array[T]] = js.native

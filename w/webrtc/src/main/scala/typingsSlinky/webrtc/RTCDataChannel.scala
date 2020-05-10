@@ -1,10 +1,8 @@
 package typingsSlinky.webrtc
 
 import org.scalajs.dom.experimental.webrtc.RTCDataChannelState
+import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.MessageEvent
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.ArrayBufferView
-import typingsSlinky.std.Blob
 import typingsSlinky.std.EventTarget
 import typingsSlinky.std.Event_
 import typingsSlinky.std.RTCErrorEvent
@@ -32,8 +30,8 @@ trait RTCDataChannel extends EventTarget {
   val readyState: RTCDataChannelState = js.native
   def close(): Unit = js.native
   def send(data: String): Unit = js.native
-  def send(data: ArrayBuffer): Unit = js.native
-  def send(data: ArrayBufferView): Unit = js.native
+  def send(data: js.typedarray.ArrayBuffer): Unit = js.native
+  def send(data: js.typedarray.ArrayBufferView): Unit = js.native
   def send(data: Blob): Unit = js.native
 }
 

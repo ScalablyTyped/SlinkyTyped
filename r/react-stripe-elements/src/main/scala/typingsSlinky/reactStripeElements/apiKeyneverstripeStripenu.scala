@@ -7,18 +7,49 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {  apiKey ? :never,   stripe  :stripe-v3.stripe.Stripe | null} & react-stripe-elements.react-stripe-elements.ReactStripeElements.StripeProviderOptions */
+@js.native
 trait apiKeyneverstripeStripenu extends StripeProviderProps {
-  var stripe: Stripe | Null
-  var stripeAccount: js.UndefOr[String] = js.undefined
+  var stripe: Stripe | Null = js.native
+  var stripeAccount: js.UndefOr[String] = js.native
 }
 
 object apiKeyneverstripeStripenu {
   @scala.inline
-  def apply(stripe: Stripe = null, stripeAccount: String = null): apiKeyneverstripeStripenu = {
+  def apply(): apiKeyneverstripeStripenu = {
     val __obj = js.Dynamic.literal()
-    if (stripe != null) __obj.updateDynamic("stripe")(stripe.asInstanceOf[js.Any])
-    if (stripeAccount != null) __obj.updateDynamic("stripeAccount")(stripeAccount.asInstanceOf[js.Any])
     __obj.asInstanceOf[apiKeyneverstripeStripenu]
   }
+  @scala.inline
+  implicit class apiKeyneverstripeStripenuOps[Self <: apiKeyneverstripeStripenu] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStripe(value: Stripe): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stripe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStripeNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stripe")(null)
+        ret
+    }
+    @scala.inline
+    def withStripeAccount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stripeAccount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStripeAccount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stripeAccount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

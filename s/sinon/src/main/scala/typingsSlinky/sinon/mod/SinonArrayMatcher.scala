@@ -4,23 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SinonArrayMatcher extends SinonMatcher {
   /**
     * Requires an Array to contain each one of the values the given array has.
     */
-  def contains(expected: js.Array[_]): SinonMatcher
+  def contains(expected: js.Array[_]): SinonMatcher = js.native
   /**
     * Requires an Array to be deep equal another one.
     */
-  def deepEquals(expected: js.Array[_]): SinonMatcher
+  def deepEquals(expected: js.Array[_]): SinonMatcher = js.native
   /**
     * Requires an Array to end with the same values as another one.
     */
-  def endsWith(expected: js.Array[_]): SinonMatcher
+  def endsWith(expected: js.Array[_]): SinonMatcher = js.native
   /**
     * Requires an Array to start with the same values as another one.
     */
-  def startsWith(expected: js.Array[_]): SinonMatcher
+  def startsWith(expected: js.Array[_]): SinonMatcher = js.native
 }
 
 object SinonArrayMatcher {
@@ -35,8 +36,39 @@ object SinonArrayMatcher {
     test: js.Any => Boolean
   ): SinonArrayMatcher = {
     val __obj = js.Dynamic.literal(and = js.Any.fromFunction1(and), contains = js.Any.fromFunction1(contains), deepEquals = js.Any.fromFunction1(deepEquals), endsWith = js.Any.fromFunction1(endsWith), or = js.Any.fromFunction1(or), startsWith = js.Any.fromFunction1(startsWith), test = js.Any.fromFunction1(test))
-  
     __obj.asInstanceOf[SinonArrayMatcher]
   }
+  @scala.inline
+  implicit class SinonArrayMatcherOps[Self <: SinonArrayMatcher] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContains(value: js.Array[_] => SinonMatcher): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDeepEquals(value: js.Array[_] => SinonMatcher): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deepEquals")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEndsWith(value: js.Array[_] => SinonMatcher): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endsWith")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStartsWith(value: js.Array[_] => SinonMatcher): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startsWith")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

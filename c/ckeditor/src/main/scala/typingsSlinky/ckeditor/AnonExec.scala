@@ -6,17 +6,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonExec extends js.Object {
-  def exec(editor: editor): Boolean
-  def refresh(editor: editor, path: elementPath): Double
+  def exec(editor: editor): Boolean = js.native
+  def refresh(editor: editor, path: elementPath): Double = js.native
 }
 
 object AnonExec {
   @scala.inline
   def apply(exec: editor => Boolean, refresh: (editor, elementPath) => Double): AnonExec = {
     val __obj = js.Dynamic.literal(exec = js.Any.fromFunction1(exec), refresh = js.Any.fromFunction2(refresh))
-  
     __obj.asInstanceOf[AnonExec]
   }
+  @scala.inline
+  implicit class AnonExecOps[Self <: AnonExec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExec(value: editor => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exec")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRefresh(value: (editor, elementPath) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

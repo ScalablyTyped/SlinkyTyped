@@ -5,14 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IOptions
   extends typingsSlinky.jupyterlabRendermime.outputmodelMod.IOutputModel.IOptions
 
 object IOptions {
   @scala.inline
-  def apply(value: IOutput, trusted: js.UndefOr[Boolean] = js.undefined): IOptions = {
+  def apply(value: IOutput): IOptions = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    if (!js.isUndefined(trusted)) __obj.updateDynamic("trusted")(trusted.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptions]
   }
 }

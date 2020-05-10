@@ -4,20 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SetAddonsConfigRequest extends js.Object {
   /**
     * The desired configurations for the various addons available to run in the
     * cluster.
     */
-  var addonsConfig: js.UndefOr[AddonsConfig] = js.undefined
+  var addonsConfig: js.UndefOr[AddonsConfig] = js.native
 }
 
 object SetAddonsConfigRequest {
   @scala.inline
-  def apply(addonsConfig: AddonsConfig = null): SetAddonsConfigRequest = {
+  def apply(): SetAddonsConfigRequest = {
     val __obj = js.Dynamic.literal()
-    if (addonsConfig != null) __obj.updateDynamic("addonsConfig")(addonsConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetAddonsConfigRequest]
   }
+  @scala.inline
+  implicit class SetAddonsConfigRequestOps[Self <: SetAddonsConfigRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddonsConfig(value: AddonsConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addonsConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddonsConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addonsConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,16 +13,53 @@ trait AnonLocalizedRuleName extends js.Object {
 
 object AnonLocalizedRuleName {
   @scala.inline
-  def apply(
-    localizedRuleName: String = null,
-    ruleImpact: Int | Double = null,
-    urlBlocks: js.Array[AnonHeader] = null
-  ): AnonLocalizedRuleName = {
+  def apply(): AnonLocalizedRuleName = {
     val __obj = js.Dynamic.literal()
-    if (localizedRuleName != null) __obj.updateDynamic("localizedRuleName")(localizedRuleName.asInstanceOf[js.Any])
-    if (ruleImpact != null) __obj.updateDynamic("ruleImpact")(ruleImpact.asInstanceOf[js.Any])
-    if (urlBlocks != null) __obj.updateDynamic("urlBlocks")(urlBlocks.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonLocalizedRuleName]
   }
+  @scala.inline
+  implicit class AnonLocalizedRuleNameOps[Self <: AnonLocalizedRuleName] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocalizedRuleName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localizedRuleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalizedRuleName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localizedRuleName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuleImpact(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleImpact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuleImpact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleImpact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrlBlocks(value: js.Array[AnonHeader]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlBlocks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrlBlocks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlBlocks")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -40,7 +40,7 @@ import scala.scalajs.js.annotation._
   * The simple column view is displaying a day per column. Each cell of a column is a time slot.
   *
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dijit.AttachMixin because Inheritance from two classes. Inlined 
 - typingsSlinky.dojo.dijit.TemplatedMixin because Inheritance from two classes. Inlined attachScope, searchContainerNode, templatePath, templateString, buildRendering, destroyRendering, getCachedTemplate, getCachedTemplate */ @JSGlobal("dojox.calendar.SimpleColumnView")
 @js.native

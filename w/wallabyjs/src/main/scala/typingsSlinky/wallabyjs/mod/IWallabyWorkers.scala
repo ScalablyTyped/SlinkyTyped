@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IWallabyWorkers extends js.Object {
-  var recycle: js.UndefOr[Boolean] = js.undefined
+  var recycle: js.UndefOr[Boolean] = js.native
 }
 
 object IWallabyWorkers {
   @scala.inline
-  def apply(recycle: js.UndefOr[Boolean] = js.undefined): IWallabyWorkers = {
+  def apply(): IWallabyWorkers = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(recycle)) __obj.updateDynamic("recycle")(recycle.asInstanceOf[js.Any])
     __obj.asInstanceOf[IWallabyWorkers]
   }
+  @scala.inline
+  implicit class IWallabyWorkersOps[Self <: IWallabyWorkers] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRecycle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recycle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecycle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recycle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

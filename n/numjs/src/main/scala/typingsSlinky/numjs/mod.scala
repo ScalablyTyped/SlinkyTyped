@@ -165,15 +165,15 @@ object mod extends js.Object {
   def fft[T](x: NjArray[T]): NdArray[T] = js.native
   def fftconvolve[T](a: NjArray[T], b: NjArray[T]): NdArray[T] = js.native
   def flatten[T](array: NjArray[T]): NdArray[T] = js.native
-  def float32[T](arr: NjArray[T]): NjArray[scala.scalajs.js.typedarray.Float32Array] = js.native
-  def float64[T](arr: NjArray[T]): NjArray[scala.scalajs.js.typedarray.Float64Array] = js.native
-  def getRawData[T](array: NdArrayData[T]): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def float32[T](arr: NjArray[T]): NjArray[js.typedarray.Float32Array] = js.native
+  def float64[T](arr: NjArray[T]): NjArray[js.typedarray.Float64Array] = js.native
+  def getRawData[T](array: NdArrayData[T]): js.typedarray.Uint8Array = js.native
   def identity[T](n: T): NdArray[T] = js.native
   def identity[T](n: T, dtype: DataType): NdArray[T] = js.native
   def ifft[T](x: NjArray[T]): NdArray[T] = js.native
-  def int16[T](arr: NjArray[T]): NjArray[scala.scalajs.js.typedarray.Int16Array] = js.native
-  def int32[T](arr: NjArray[T]): NjArray[scala.scalajs.js.typedarray.Int32Array] = js.native
-  def int8[T](arr: NjArray[T]): NjArray[scala.scalajs.js.typedarray.Int8Array] = js.native
+  def int16[T](arr: NjArray[T]): NjArray[js.typedarray.Int16Array] = js.native
+  def int32[T](arr: NjArray[T]): NjArray[js.typedarray.Int32Array] = js.native
+  def int8[T](arr: NjArray[T]): NjArray[js.typedarray.Int8Array] = js.native
   def max[T](x: NjParam[T]): T = js.native
   def mean[T](x: NjParam[T]): T = js.native
   def min[T](x: NjParam[T]): T = js.native
@@ -189,7 +189,7 @@ object mod extends js.Object {
   def random[T](shape: NdArrayData[T]): NdArray[T] = js.native
   def reshape[T](array: NjArray[T], shape: NdArray[T]): NdArray[T] = js.native
   def round[T](x: NjArray[T]): NdArray[T] = js.native
-  def setRawData[T](array: NdArrayData[T], data: NdArrayData[T]): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def setRawData[T](array: NdArrayData[T], data: NdArrayData[T]): js.typedarray.Uint8Array = js.native
   def sigmoid[T](x: NjParam[T]): NdArray[T] = js.native
   def sigmoid[T](x: NjParam[T], t: Double): NdArray[T] = js.native
   def sin[T](x: NjParam[T]): NdArray[T] = js.native
@@ -204,9 +204,9 @@ object mod extends js.Object {
   def tanh[T](x: NjParam[T]): NdArray[T] = js.native
   def transpose[T](x: NjParam[T]): NdArray[T] = js.native
   def transpose[T](x: NjParam[T], axes: Double): NdArray[T] = js.native
-  def uint16[T](arr: NjArray[T]): NjArray[scala.scalajs.js.typedarray.Uint16Array] = js.native
-  def uint32[T](arr: NjArray[T]): NjArray[scala.scalajs.js.typedarray.Uint32Array] = js.native
-  def uint8[T](arr: NjArray[T]): NjArray[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def uint16[T](arr: NjArray[T]): NjArray[js.typedarray.Uint16Array] = js.native
+  def uint32[T](arr: NjArray[T]): NjArray[js.typedarray.Uint32Array] = js.native
+  def uint8[T](arr: NjArray[T]): NjArray[js.typedarray.Uint8Array] = js.native
   def zeros[T](shape: Double): NdArray[T] = js.native
   def zeros[T](shape: Double, dtype: DataType): NdArray[T] = js.native
   def zeros[T](shape: NdArrayData[T]): NdArray[T] = js.native
@@ -226,14 +226,14 @@ object mod extends js.Object {
     def areaSum[T](h0: Double, w0: Double, H: Double, W: Double, SAT: NdArray[T]): Double = js.native
     def areaValue[T](img: NdArray[T]): Double = js.native
     def flip[T, O](img: NdArray[T]): NdArray[O] = js.native
-    def read(input: String): NdArray[scala.scalajs.js.typedarray.Uint8Array] = js.native
-    def resize[T](img: NdArray[T], height: Double, width: Double): NdArray[scala.scalajs.js.typedarray.Uint8Array] = js.native
-    def rgb2gray[T](img: NdArray[T]): NdArray[scala.scalajs.js.typedarray.Uint8Array] = js.native
-    def sat[T](img: NdArray[T]): NdArray[scala.scalajs.js.typedarray.Uint32Array] = js.native
+    def read(input: String): NdArray[js.typedarray.Uint8Array] = js.native
+    def resize[T](img: NdArray[T], height: Double, width: Double): NdArray[js.typedarray.Uint8Array] = js.native
+    def rgb2gray[T](img: NdArray[T]): NdArray[js.typedarray.Uint8Array] = js.native
+    def sat[T](img: NdArray[T]): NdArray[js.typedarray.Uint32Array] = js.native
     def save[T](img: NdArray[T], dest: String): Unit = js.native
-    def scharr[T](img: NdArray[T]): NdArray[scala.scalajs.js.typedarray.Float32Array] = js.native
-    def sobel[T](img: NdArray[T]): NdArray[scala.scalajs.js.typedarray.Float32Array] = js.native
-    def ssat[T](img: NdArray[T]): NdArray[scala.scalajs.js.typedarray.Uint32Array] = js.native
+    def scharr[T](img: NdArray[T]): NdArray[js.typedarray.Float32Array] = js.native
+    def sobel[T](img: NdArray[T]): NdArray[js.typedarray.Float32Array] = js.native
+    def ssat[T](img: NdArray[T]): NdArray[js.typedarray.Uint32Array] = js.native
     @js.native
     object data extends js.Object {
       /**  28x28 grayscale image with an handwritten digit extracted from MNIST database */

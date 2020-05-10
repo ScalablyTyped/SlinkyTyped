@@ -38,22 +38,89 @@ trait SchemaDistributionUpdate extends js.Object {
 
 object SchemaDistributionUpdate {
   @scala.inline
-  def apply(
-    count: SchemaSplitInt64 = null,
-    histogram: SchemaHistogram = null,
-    max: SchemaSplitInt64 = null,
-    min: SchemaSplitInt64 = null,
-    sum: SchemaSplitInt64 = null,
-    sumOfSquares: Int | Double = null
-  ): SchemaDistributionUpdate = {
+  def apply(): SchemaDistributionUpdate = {
     val __obj = js.Dynamic.literal()
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (histogram != null) __obj.updateDynamic("histogram")(histogram.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (sum != null) __obj.updateDynamic("sum")(sum.asInstanceOf[js.Any])
-    if (sumOfSquares != null) __obj.updateDynamic("sumOfSquares")(sumOfSquares.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDistributionUpdate]
   }
+  @scala.inline
+  implicit class SchemaDistributionUpdateOps[Self <: SchemaDistributionUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCount(value: SchemaSplitInt64): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHistogram(value: SchemaHistogram): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("histogram")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHistogram: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("histogram")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: SchemaSplitInt64): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: SchemaSplitInt64): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSum(value: SchemaSplitInt64): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSumOfSquares(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sumOfSquares")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSumOfSquares: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sumOfSquares")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

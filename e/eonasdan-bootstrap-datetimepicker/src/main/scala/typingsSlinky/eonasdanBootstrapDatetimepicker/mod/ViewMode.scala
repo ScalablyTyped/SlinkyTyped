@@ -14,14 +14,12 @@ trait ViewMode extends js.Object
 
 object ViewMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def days: typingsSlinky.eonasdanBootstrapDatetimepicker.eonasdanBootstrapDatetimepickerStrings.days = "days".asInstanceOf[typingsSlinky.eonasdanBootstrapDatetimepicker.eonasdanBootstrapDatetimepickerStrings.days]
   @scala.inline
-  def days: typingsSlinky.eonasdanBootstrapDatetimepicker.eonasdanBootstrapDatetimepickerStrings.days = this.cast("days")
+  def decades: typingsSlinky.eonasdanBootstrapDatetimepicker.eonasdanBootstrapDatetimepickerStrings.decades = "decades".asInstanceOf[typingsSlinky.eonasdanBootstrapDatetimepicker.eonasdanBootstrapDatetimepickerStrings.decades]
   @scala.inline
-  def decades: typingsSlinky.eonasdanBootstrapDatetimepicker.eonasdanBootstrapDatetimepickerStrings.decades = this.cast("decades")
+  def months: typingsSlinky.eonasdanBootstrapDatetimepicker.eonasdanBootstrapDatetimepickerStrings.months = "months".asInstanceOf[typingsSlinky.eonasdanBootstrapDatetimepicker.eonasdanBootstrapDatetimepickerStrings.months]
   @scala.inline
-  def months: typingsSlinky.eonasdanBootstrapDatetimepicker.eonasdanBootstrapDatetimepickerStrings.months = this.cast("months")
-  @scala.inline
-  def years: typingsSlinky.eonasdanBootstrapDatetimepicker.eonasdanBootstrapDatetimepickerStrings.years = this.cast("years")
+  def years: typingsSlinky.eonasdanBootstrapDatetimepicker.eonasdanBootstrapDatetimepickerStrings.years = "years".asInstanceOf[typingsSlinky.eonasdanBootstrapDatetimepicker.eonasdanBootstrapDatetimepickerStrings.years]
 }
 

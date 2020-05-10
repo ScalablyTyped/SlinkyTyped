@@ -14,14 +14,12 @@ trait Placement extends js.Object
 
 object Placement {
   @scala.inline
-  def bottomLeft: typingsSlinky.rcPicker.rcPickerStrings.bottomLeft = this.cast("bottomLeft")
+  def bottomLeft: typingsSlinky.rcPicker.rcPickerStrings.bottomLeft = "bottomLeft".asInstanceOf[typingsSlinky.rcPicker.rcPickerStrings.bottomLeft]
   @scala.inline
-  def bottomRight: typingsSlinky.rcPicker.rcPickerStrings.bottomRight = this.cast("bottomRight")
+  def bottomRight: typingsSlinky.rcPicker.rcPickerStrings.bottomRight = "bottomRight".asInstanceOf[typingsSlinky.rcPicker.rcPickerStrings.bottomRight]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def topLeft: typingsSlinky.rcPicker.rcPickerStrings.topLeft = "topLeft".asInstanceOf[typingsSlinky.rcPicker.rcPickerStrings.topLeft]
   @scala.inline
-  def topLeft: typingsSlinky.rcPicker.rcPickerStrings.topLeft = this.cast("topLeft")
-  @scala.inline
-  def topRight: typingsSlinky.rcPicker.rcPickerStrings.topRight = this.cast("topRight")
+  def topRight: typingsSlinky.rcPicker.rcPickerStrings.topRight = "topRight".asInstanceOf[typingsSlinky.rcPicker.rcPickerStrings.topRight]
 }
 

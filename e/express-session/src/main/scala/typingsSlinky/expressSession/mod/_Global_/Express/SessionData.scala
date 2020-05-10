@@ -5,17 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SessionData
   extends /* key */ StringDictionary[js.Any] {
-  var cookie: SessionCookieData
+  var cookie: SessionCookieData = js.native
 }
 
 object SessionData {
   @scala.inline
-  def apply(cookie: SessionCookieData, StringDictionary: /* key */ StringDictionary[js.Any] = null): SessionData = {
+  def apply(cookie: SessionCookieData): SessionData = {
     val __obj = js.Dynamic.literal(cookie = cookie.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[SessionData]
   }
+  @scala.inline
+  implicit class SessionDataOps[Self <: SessionData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCookie(value: SessionCookieData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

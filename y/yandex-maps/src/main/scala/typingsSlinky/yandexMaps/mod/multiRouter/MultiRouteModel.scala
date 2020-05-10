@@ -1,7 +1,6 @@
 package typingsSlinky.yandexMaps.mod.multiRouter
 
 import typingsSlinky.yandexMaps.mod.IEventEmitter
-import typingsSlinky.yandexMaps.mod.IEventManager
 import typingsSlinky.yandexMaps.mod.IMultiRouteParams
 import typingsSlinky.yandexMaps.mod.IMultiRouteReferencePoint
 import typingsSlinky.yandexMaps.mod.data.Manager
@@ -15,8 +14,6 @@ import scala.scalajs.js.annotation._
 class MultiRouteModel protected () extends IEventEmitter {
   def this(referencePoints: js.Array[IMultiRouteReferencePoint]) = this()
   def this(referencePoints: js.Array[IMultiRouteReferencePoint], params: IMultiRouteParams) = this()
-  /* CompleteClass */
-  override var events: IEventManager = js.native
   var properties: Manager = js.native
   def destroy(): Unit = js.native
   def getAllPoints(): js.Array[WayPointModel | ViaPointModel] = js.native

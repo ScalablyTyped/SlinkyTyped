@@ -1,5 +1,7 @@
 package typingsSlinky.cypress.cypressMod.Cypress
 
+import org.scalajs.dom.raw.BeforeUnloadEvent
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.cypress.JQuery_
 import typingsSlinky.cypress.Mocha_.IRunnable
 import typingsSlinky.cypress.Mocha_.ITest
@@ -25,10 +27,7 @@ import typingsSlinky.cypress.cypressStrings.windowColonload
 import typingsSlinky.cypress.cypressStrings.windowColonunload
 import typingsSlinky.cypress.sinonMod.SinonSpy
 import typingsSlinky.cypress.sinonMod.SinonStub
-import typingsSlinky.std.BeforeUnloadEvent
-import typingsSlinky.std.Error
 import typingsSlinky.std.Event_
-import typingsSlinky.std.HTMLElement
 import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -67,7 +66,7 @@ trait Actions extends js.Object {
     * Fires when the test has failed. It is technically possible to prevent the test from actually failing by binding to this event and invoking an async `done` callback. However this is **strongly discouraged**. Tests should never legitimately fail. This event exists because it's extremely useful for debugging purposes.
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
-  def apply(action: fail, fn: js.Function2[/* error */ Error, /* mocha */ IRunnable, Unit]): Unit = js.native
+  def apply(action: fail, fn: js.Function2[/* error */ js.Error, /* mocha */ IRunnable, Unit]): Unit = js.native
   /**
     * Fires whenever a command emits this event so it can be displayed in the Command Log. Useful to see how internal cypress commands utilize the {% url 'Cypress.log()' cypress-log %} API.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -127,7 +126,7 @@ trait Actions extends js.Object {
     */
   def apply(
     action: uncaughtColonexception,
-    fn: js.Function2[/* error */ Error, /* runnable */ IRunnable, `false` | Unit]
+    fn: js.Function2[/* error */ js.Error, /* runnable */ IRunnable, `false` | Unit]
   ): Unit = js.native
   /**
     * Fires whenever Cypress detects that your application's URL has changed.

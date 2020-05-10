@@ -1,10 +1,7 @@
 package typingsSlinky.reactFilepond.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFilepond.AnonFetch
 import typingsSlinky.reactFilepond.mod.FilePondErrorDescription
 import typingsSlinky.reactFilepond.mod.FilePondProps
@@ -12,136 +9,148 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FilePond
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactFilepond.mod.FilePond] {
+object FilePond {
   @JSImport("react-filepond", "FilePond")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, name, required */
-  def apply(
-    acceptedFileTypes: js.Array[String] = null,
-    allowBrowse: js.UndefOr[Boolean] = js.undefined,
-    allowDrop: js.UndefOr[Boolean] = js.undefined,
-    allowMultiple: js.UndefOr[Boolean] = js.undefined,
-    allowPaste: js.UndefOr[Boolean] = js.undefined,
-    allowReplace: js.UndefOr[Boolean] = js.undefined,
-    allowRevert: js.UndefOr[Boolean] = js.undefined,
-    beforeRemoveFile: /* file */ typingsSlinky.reactFilepond.mod.File => Boolean = null,
-    captureMethod: js.Any = null,
-    dropOnElement: js.UndefOr[Boolean] = js.undefined,
-    dropOnPage: js.UndefOr[Boolean] = js.undefined,
-    dropValidation: js.UndefOr[Boolean] = js.undefined,
-    files: js.Array[typingsSlinky.reactFilepond.mod.File] = null,
-    iconProcess: String = null,
-    iconRemove: String = null,
-    iconRetry: String = null,
-    iconUndo: String = null,
-    ignoredFiles: js.Array[String] = null,
-    instantUpload: js.UndefOr[Boolean] = js.undefined,
-    labelButtonAbortItemLoad: String = null,
-    labelButtonAbortItemProcessing: String = null,
-    labelButtonProcessItem: String = null,
-    labelButtonRemoveItem: String = null,
-    labelButtonRetryItemLoad: String = null,
-    labelButtonRetryItemProcessing: String = null,
-    labelButtonUndoItemProcessing: String = null,
-    labelDecimalSeparator: String = null,
-    labelFileLoadError: String = null,
-    labelFileLoading: String = null,
-    labelFileProcessing: String = null,
-    labelFileProcessingAborted: String = null,
-    labelFileProcessingComplete: String = null,
-    labelFileProcessingError: String = null,
-    labelFileSizeNotAvailable: String = null,
-    labelFileWaitingForSize: String = null,
-    labelIdle: String = null,
-    labelTapToCancel: String = null,
-    labelTapToRetry: String = null,
-    labelTapToUndo: String = null,
-    labelThousandsSeparator: String = null,
-    maxFiles: Int | Double = null,
-    maxParallelUploads: Int | Double = null,
-    onaddfile: (/* error */ FilePondErrorDescription, /* file */ typingsSlinky.reactFilepond.mod.File) => Unit = null,
-    onaddfileprogress: (/* file */ typingsSlinky.reactFilepond.mod.File, /* progress */ Double) => Unit = null,
-    onaddfilestart: /* file */ typingsSlinky.reactFilepond.mod.File => Unit = null,
-    onerror: (/* error */ FilePondErrorDescription, /* file */ js.UndefOr[typingsSlinky.reactFilepond.mod.File], /* status */ js.UndefOr[js.Any]) => Unit = null,
-    oninit: () => Unit = null,
-    onpreparefile: (/* file */ typingsSlinky.reactFilepond.mod.File, /* output */ js.Any) => Unit = null,
-    onprocessfile: (/* error */ FilePondErrorDescription, /* file */ typingsSlinky.reactFilepond.mod.File) => Unit = null,
-    onprocessfileabort: /* file */ typingsSlinky.reactFilepond.mod.File => Unit = null,
-    onprocessfileprogress: (/* file */ typingsSlinky.reactFilepond.mod.File, /* progress */ Double) => Unit = null,
-    onprocessfilestart: /* file */ typingsSlinky.reactFilepond.mod.File => Unit = null,
-    onprocessfileundo: /* file */ typingsSlinky.reactFilepond.mod.File => Unit = null,
-    onremovefile: /* file */ typingsSlinky.reactFilepond.mod.File => Unit = null,
-    onupdatefiles: /* fileItems */ js.Array[typingsSlinky.reactFilepond.mod.File] => Unit = null,
-    onwarning: (/* error */ js.Any, /* file */ js.UndefOr[typingsSlinky.reactFilepond.mod.File], /* status */ js.UndefOr[js.Any]) => Unit = null,
-    server: String | AnonFetch = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactFilepond.mod.FilePond] = {
-    val __obj = js.Dynamic.literal()
-    if (acceptedFileTypes != null) __obj.updateDynamic("acceptedFileTypes")(acceptedFileTypes.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowBrowse)) __obj.updateDynamic("allowBrowse")(allowBrowse.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowDrop)) __obj.updateDynamic("allowDrop")(allowDrop.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowMultiple)) __obj.updateDynamic("allowMultiple")(allowMultiple.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowPaste)) __obj.updateDynamic("allowPaste")(allowPaste.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowReplace)) __obj.updateDynamic("allowReplace")(allowReplace.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowRevert)) __obj.updateDynamic("allowRevert")(allowRevert.asInstanceOf[js.Any])
-    if (beforeRemoveFile != null) __obj.updateDynamic("beforeRemoveFile")(js.Any.fromFunction1(beforeRemoveFile))
-    if (captureMethod != null) __obj.updateDynamic("captureMethod")(captureMethod.asInstanceOf[js.Any])
-    if (!js.isUndefined(dropOnElement)) __obj.updateDynamic("dropOnElement")(dropOnElement.asInstanceOf[js.Any])
-    if (!js.isUndefined(dropOnPage)) __obj.updateDynamic("dropOnPage")(dropOnPage.asInstanceOf[js.Any])
-    if (!js.isUndefined(dropValidation)) __obj.updateDynamic("dropValidation")(dropValidation.asInstanceOf[js.Any])
-    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
-    if (iconProcess != null) __obj.updateDynamic("iconProcess")(iconProcess.asInstanceOf[js.Any])
-    if (iconRemove != null) __obj.updateDynamic("iconRemove")(iconRemove.asInstanceOf[js.Any])
-    if (iconRetry != null) __obj.updateDynamic("iconRetry")(iconRetry.asInstanceOf[js.Any])
-    if (iconUndo != null) __obj.updateDynamic("iconUndo")(iconUndo.asInstanceOf[js.Any])
-    if (ignoredFiles != null) __obj.updateDynamic("ignoredFiles")(ignoredFiles.asInstanceOf[js.Any])
-    if (!js.isUndefined(instantUpload)) __obj.updateDynamic("instantUpload")(instantUpload.asInstanceOf[js.Any])
-    if (labelButtonAbortItemLoad != null) __obj.updateDynamic("labelButtonAbortItemLoad")(labelButtonAbortItemLoad.asInstanceOf[js.Any])
-    if (labelButtonAbortItemProcessing != null) __obj.updateDynamic("labelButtonAbortItemProcessing")(labelButtonAbortItemProcessing.asInstanceOf[js.Any])
-    if (labelButtonProcessItem != null) __obj.updateDynamic("labelButtonProcessItem")(labelButtonProcessItem.asInstanceOf[js.Any])
-    if (labelButtonRemoveItem != null) __obj.updateDynamic("labelButtonRemoveItem")(labelButtonRemoveItem.asInstanceOf[js.Any])
-    if (labelButtonRetryItemLoad != null) __obj.updateDynamic("labelButtonRetryItemLoad")(labelButtonRetryItemLoad.asInstanceOf[js.Any])
-    if (labelButtonRetryItemProcessing != null) __obj.updateDynamic("labelButtonRetryItemProcessing")(labelButtonRetryItemProcessing.asInstanceOf[js.Any])
-    if (labelButtonUndoItemProcessing != null) __obj.updateDynamic("labelButtonUndoItemProcessing")(labelButtonUndoItemProcessing.asInstanceOf[js.Any])
-    if (labelDecimalSeparator != null) __obj.updateDynamic("labelDecimalSeparator")(labelDecimalSeparator.asInstanceOf[js.Any])
-    if (labelFileLoadError != null) __obj.updateDynamic("labelFileLoadError")(labelFileLoadError.asInstanceOf[js.Any])
-    if (labelFileLoading != null) __obj.updateDynamic("labelFileLoading")(labelFileLoading.asInstanceOf[js.Any])
-    if (labelFileProcessing != null) __obj.updateDynamic("labelFileProcessing")(labelFileProcessing.asInstanceOf[js.Any])
-    if (labelFileProcessingAborted != null) __obj.updateDynamic("labelFileProcessingAborted")(labelFileProcessingAborted.asInstanceOf[js.Any])
-    if (labelFileProcessingComplete != null) __obj.updateDynamic("labelFileProcessingComplete")(labelFileProcessingComplete.asInstanceOf[js.Any])
-    if (labelFileProcessingError != null) __obj.updateDynamic("labelFileProcessingError")(labelFileProcessingError.asInstanceOf[js.Any])
-    if (labelFileSizeNotAvailable != null) __obj.updateDynamic("labelFileSizeNotAvailable")(labelFileSizeNotAvailable.asInstanceOf[js.Any])
-    if (labelFileWaitingForSize != null) __obj.updateDynamic("labelFileWaitingForSize")(labelFileWaitingForSize.asInstanceOf[js.Any])
-    if (labelIdle != null) __obj.updateDynamic("labelIdle")(labelIdle.asInstanceOf[js.Any])
-    if (labelTapToCancel != null) __obj.updateDynamic("labelTapToCancel")(labelTapToCancel.asInstanceOf[js.Any])
-    if (labelTapToRetry != null) __obj.updateDynamic("labelTapToRetry")(labelTapToRetry.asInstanceOf[js.Any])
-    if (labelTapToUndo != null) __obj.updateDynamic("labelTapToUndo")(labelTapToUndo.asInstanceOf[js.Any])
-    if (labelThousandsSeparator != null) __obj.updateDynamic("labelThousandsSeparator")(labelThousandsSeparator.asInstanceOf[js.Any])
-    if (maxFiles != null) __obj.updateDynamic("maxFiles")(maxFiles.asInstanceOf[js.Any])
-    if (maxParallelUploads != null) __obj.updateDynamic("maxParallelUploads")(maxParallelUploads.asInstanceOf[js.Any])
-    if (onaddfile != null) __obj.updateDynamic("onaddfile")(js.Any.fromFunction2(onaddfile))
-    if (onaddfileprogress != null) __obj.updateDynamic("onaddfileprogress")(js.Any.fromFunction2(onaddfileprogress))
-    if (onaddfilestart != null) __obj.updateDynamic("onaddfilestart")(js.Any.fromFunction1(onaddfilestart))
-    if (onerror != null) __obj.updateDynamic("onerror")(js.Any.fromFunction3(onerror))
-    if (oninit != null) __obj.updateDynamic("oninit")(js.Any.fromFunction0(oninit))
-    if (onpreparefile != null) __obj.updateDynamic("onpreparefile")(js.Any.fromFunction2(onpreparefile))
-    if (onprocessfile != null) __obj.updateDynamic("onprocessfile")(js.Any.fromFunction2(onprocessfile))
-    if (onprocessfileabort != null) __obj.updateDynamic("onprocessfileabort")(js.Any.fromFunction1(onprocessfileabort))
-    if (onprocessfileprogress != null) __obj.updateDynamic("onprocessfileprogress")(js.Any.fromFunction2(onprocessfileprogress))
-    if (onprocessfilestart != null) __obj.updateDynamic("onprocessfilestart")(js.Any.fromFunction1(onprocessfilestart))
-    if (onprocessfileundo != null) __obj.updateDynamic("onprocessfileundo")(js.Any.fromFunction1(onprocessfileundo))
-    if (onremovefile != null) __obj.updateDynamic("onremovefile")(js.Any.fromFunction1(onremovefile))
-    if (onupdatefiles != null) __obj.updateDynamic("onupdatefiles")(js.Any.fromFunction1(onupdatefiles))
-    if (onwarning != null) __obj.updateDynamic("onwarning")(js.Any.fromFunction3(onwarning))
-    if (server != null) __obj.updateDynamic("server")(server.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactFilepond.mod.FilePond] {
+    @scala.inline
+    def acceptedFileTypes(value: js.Array[String]): this.type = set("acceptedFileTypes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def allowBrowse(value: Boolean): this.type = set("allowBrowse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def allowDrop(value: Boolean): this.type = set("allowDrop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def allowMultiple(value: Boolean): this.type = set("allowMultiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def allowPaste(value: Boolean): this.type = set("allowPaste", value.asInstanceOf[js.Any])
+    @scala.inline
+    def allowReplace(value: Boolean): this.type = set("allowReplace", value.asInstanceOf[js.Any])
+    @scala.inline
+    def allowRevert(value: Boolean): this.type = set("allowRevert", value.asInstanceOf[js.Any])
+    @scala.inline
+    def beforeRemoveFile(value: /* file */ typingsSlinky.reactFilepond.mod.File => Boolean): this.type = set("beforeRemoveFile", js.Any.fromFunction1(value))
+    @scala.inline
+    def captureMethod(value: js.Any): this.type = set("captureMethod", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropOnElement(value: Boolean): this.type = set("dropOnElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropOnPage(value: Boolean): this.type = set("dropOnPage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropValidation(value: Boolean): this.type = set("dropValidation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def files(value: js.Array[typingsSlinky.reactFilepond.mod.File]): this.type = set("files", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconProcess(value: String): this.type = set("iconProcess", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconRemove(value: String): this.type = set("iconRemove", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconRetry(value: String): this.type = set("iconRetry", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconUndo(value: String): this.type = set("iconUndo", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ignoredFiles(value: js.Array[String]): this.type = set("ignoredFiles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def instantUpload(value: Boolean): this.type = set("instantUpload", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelButtonAbortItemLoad(value: String): this.type = set("labelButtonAbortItemLoad", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelButtonAbortItemProcessing(value: String): this.type = set("labelButtonAbortItemProcessing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelButtonProcessItem(value: String): this.type = set("labelButtonProcessItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelButtonRemoveItem(value: String): this.type = set("labelButtonRemoveItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelButtonRetryItemLoad(value: String): this.type = set("labelButtonRetryItemLoad", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelButtonRetryItemProcessing(value: String): this.type = set("labelButtonRetryItemProcessing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelButtonUndoItemProcessing(value: String): this.type = set("labelButtonUndoItemProcessing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelDecimalSeparator(value: String): this.type = set("labelDecimalSeparator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFileLoadError(value: String): this.type = set("labelFileLoadError", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFileLoading(value: String): this.type = set("labelFileLoading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFileProcessing(value: String): this.type = set("labelFileProcessing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFileProcessingAborted(value: String): this.type = set("labelFileProcessingAborted", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFileProcessingComplete(value: String): this.type = set("labelFileProcessingComplete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFileProcessingError(value: String): this.type = set("labelFileProcessingError", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFileSizeNotAvailable(value: String): this.type = set("labelFileSizeNotAvailable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFileWaitingForSize(value: String): this.type = set("labelFileWaitingForSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelIdle(value: String): this.type = set("labelIdle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelTapToCancel(value: String): this.type = set("labelTapToCancel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelTapToRetry(value: String): this.type = set("labelTapToRetry", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelTapToUndo(value: String): this.type = set("labelTapToUndo", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelThousandsSeparator(value: String): this.type = set("labelThousandsSeparator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxFiles(value: Double): this.type = set("maxFiles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxParallelUploads(value: Double): this.type = set("maxParallelUploads", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onaddfile(
+      value: (/* error */ FilePondErrorDescription, /* file */ typingsSlinky.reactFilepond.mod.File) => Unit
+    ): this.type = set("onaddfile", js.Any.fromFunction2(value))
+    @scala.inline
+    def onaddfileprogress(value: (/* file */ typingsSlinky.reactFilepond.mod.File, /* progress */ Double) => Unit): this.type = set("onaddfileprogress", js.Any.fromFunction2(value))
+    @scala.inline
+    def onaddfilestart(value: /* file */ typingsSlinky.reactFilepond.mod.File => Unit): this.type = set("onaddfilestart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onerror(
+      value: (/* error */ FilePondErrorDescription, /* file */ js.UndefOr[typingsSlinky.reactFilepond.mod.File], /* status */ js.UndefOr[js.Any]) => Unit
+    ): this.type = set("onerror", js.Any.fromFunction3(value))
+    @scala.inline
+    def oninit(value: () => Unit): this.type = set("oninit", js.Any.fromFunction0(value))
+    @scala.inline
+    def onpreparefile(value: (/* file */ typingsSlinky.reactFilepond.mod.File, /* output */ js.Any) => Unit): this.type = set("onpreparefile", js.Any.fromFunction2(value))
+    @scala.inline
+    def onprocessfile(
+      value: (/* error */ FilePondErrorDescription, /* file */ typingsSlinky.reactFilepond.mod.File) => Unit
+    ): this.type = set("onprocessfile", js.Any.fromFunction2(value))
+    @scala.inline
+    def onprocessfileabort(value: /* file */ typingsSlinky.reactFilepond.mod.File => Unit): this.type = set("onprocessfileabort", js.Any.fromFunction1(value))
+    @scala.inline
+    def onprocessfileprogress(value: (/* file */ typingsSlinky.reactFilepond.mod.File, /* progress */ Double) => Unit): this.type = set("onprocessfileprogress", js.Any.fromFunction2(value))
+    @scala.inline
+    def onprocessfilestart(value: /* file */ typingsSlinky.reactFilepond.mod.File => Unit): this.type = set("onprocessfilestart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onprocessfileundo(value: /* file */ typingsSlinky.reactFilepond.mod.File => Unit): this.type = set("onprocessfileundo", js.Any.fromFunction1(value))
+    @scala.inline
+    def onremovefile(value: /* file */ typingsSlinky.reactFilepond.mod.File => Unit): this.type = set("onremovefile", js.Any.fromFunction1(value))
+    @scala.inline
+    def onupdatefiles(value: /* fileItems */ js.Array[typingsSlinky.reactFilepond.mod.File] => Unit): this.type = set("onupdatefiles", js.Any.fromFunction1(value))
+    @scala.inline
+    def onwarning(
+      value: (/* error */ js.Any, /* file */ js.UndefOr[typingsSlinky.reactFilepond.mod.File], /* status */ js.UndefOr[js.Any]) => Unit
+    ): this.type = set("onwarning", js.Any.fromFunction3(value))
+    @scala.inline
+    def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
+    @scala.inline
+    def server(value: String | AnonFetch): this.type = set("server", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactFilepond.mod.FilePond] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactFilepond.mod.FilePond](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FilePondProps
+  
+  def withProps(p: FilePondProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FilePond.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

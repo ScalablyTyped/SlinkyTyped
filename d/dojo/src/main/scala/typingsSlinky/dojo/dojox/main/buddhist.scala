@@ -10,11 +10,12 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait buddhist extends js.Object {
   /**
     *
     */
-  var locale: js.Object
+  var locale: js.Object = js.native
   /**
     * Add to a Date in intervals of different size, from milliseconds to years
     *
@@ -22,7 +23,7 @@ trait buddhist extends js.Object {
     * @param interval A string representing the interval.  One of the following:"year", "month", "day", "hour", "minute", "second","millisecond", "week", "weekday"
     * @param amount How much to add to the date.
     */
-  def add(date: Date, interval: String, amount: Double): Unit
+  def add(date: Date, interval: String, amount: Double): Unit = js.native
   /**
     * Compare two buddhist date objects by date, time, or both.
     *
@@ -30,7 +31,7 @@ trait buddhist extends js.Object {
     * @param date2
     * @param portion               Optional
     */
-  def compare(date1: Date, date2: Date, portion: String): Unit
+  def compare(date1: Date, date2: Date, portion: String): Unit = js.native
   /**
     * date2 - date1
     *
@@ -42,17 +43,17 @@ trait buddhist extends js.Object {
     date1: typingsSlinky.dojo.dojox.date.hebrew.Date,
     date2: typingsSlinky.dojo.dojox.date.hebrew.Date,
     interval: String
-  ): Unit
+  ): Unit = js.native
   /**
     *
     * @param dateObject
     */
-  def getDaysInMonth(dateObject: Date): Unit
+  def getDaysInMonth(dateObject: Date): Unit = js.native
   /**
     *
     * @param dateObject
     */
-  def isLeapYear(dateObject: Date): Unit
+  def isLeapYear(dateObject: Date): Unit = js.native
 }
 
 object buddhist {
@@ -66,8 +67,53 @@ object buddhist {
     locale: js.Object
   ): buddhist = {
     val __obj = js.Dynamic.literal(add = js.Any.fromFunction3(add), compare = js.Any.fromFunction3(compare), difference = js.Any.fromFunction3(difference), getDaysInMonth = js.Any.fromFunction1(getDaysInMonth), isLeapYear = js.Any.fromFunction1(isLeapYear), locale = locale.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[buddhist]
   }
+  @scala.inline
+  implicit class buddhistOps[Self <: buddhist] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd(value: (Date, String, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withCompare(value: (Date, Date, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compare")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withDifference(
+      value: (typingsSlinky.dojo.dojox.date.hebrew.Date, typingsSlinky.dojo.dojox.date.hebrew.Date, String) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("difference")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withGetDaysInMonth(value: Date => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDaysInMonth")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsLeapYear(value: Date => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLeapYear")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLocale(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -18,13 +18,35 @@ trait GetSavingsPlansUtilizationResponse extends js.Object {
 
 object GetSavingsPlansUtilizationResponse {
   @scala.inline
-  def apply(
-    Total: SavingsPlansUtilizationAggregates,
-    SavingsPlansUtilizationsByTime: SavingsPlansUtilizationsByTime = null
-  ): GetSavingsPlansUtilizationResponse = {
+  def apply(Total: SavingsPlansUtilizationAggregates): GetSavingsPlansUtilizationResponse = {
     val __obj = js.Dynamic.literal(Total = Total.asInstanceOf[js.Any])
-    if (SavingsPlansUtilizationsByTime != null) __obj.updateDynamic("SavingsPlansUtilizationsByTime")(SavingsPlansUtilizationsByTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSavingsPlansUtilizationResponse]
   }
+  @scala.inline
+  implicit class GetSavingsPlansUtilizationResponseOps[Self <: GetSavingsPlansUtilizationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTotal(value: SavingsPlansUtilizationAggregates): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Total")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSavingsPlansUtilizationsByTime(value: SavingsPlansUtilizationsByTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SavingsPlansUtilizationsByTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSavingsPlansUtilizationsByTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SavingsPlansUtilizationsByTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

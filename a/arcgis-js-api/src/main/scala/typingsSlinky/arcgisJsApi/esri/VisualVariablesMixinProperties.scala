@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VisualVariablesMixinProperties extends js.Object {
   /**
     * An array of [VisualVariable](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-visualVariables-VisualVariable.html) objects. Each object must indicate the type of visual variable to apply (e.g. [ColorVisualVariable](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-visualVariables-ColorVariable.html), [SizeVisualVariable](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-visualVariables-SizeVariable.html), [OpacityVisualVariable](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-visualVariables-OpacityVariable.html), [RotationVisualVariable](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-visualVariables-RotationVariable.html)), the numeric field or expression from which to drive the visualization, and the visual values to map to the data. The following list identifies each visual variable type and provides a link to the specification table of each.
@@ -58,15 +59,34 @@ trait VisualVariablesMixinProperties extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-mixins-VisualVariablesMixin.html#visualVariables)
     */
-  var visualVariables: js.UndefOr[js.Array[VisualVariableProperties]] = js.undefined
+  var visualVariables: js.UndefOr[js.Array[VisualVariableProperties]] = js.native
 }
 
 object VisualVariablesMixinProperties {
   @scala.inline
-  def apply(visualVariables: js.Array[VisualVariableProperties] = null): VisualVariablesMixinProperties = {
+  def apply(): VisualVariablesMixinProperties = {
     val __obj = js.Dynamic.literal()
-    if (visualVariables != null) __obj.updateDynamic("visualVariables")(visualVariables.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisualVariablesMixinProperties]
   }
+  @scala.inline
+  implicit class VisualVariablesMixinPropertiesOps[Self <: VisualVariablesMixinProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVisualVariables(value: js.Array[VisualVariableProperties]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visualVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisualVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visualVariables")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

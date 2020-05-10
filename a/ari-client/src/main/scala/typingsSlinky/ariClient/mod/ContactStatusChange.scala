@@ -1,0 +1,48 @@
+package typingsSlinky.ariClient.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ContactStatusChange extends Event {
+  var contact_info: ContactInfo = js.native
+  /* Properties */
+  var endpoint: Endpoint = js.native
+}
+
+object ContactStatusChange {
+  @scala.inline
+  def apply(
+    application: String,
+    contact_info: ContactInfo,
+    endpoint: Endpoint,
+    timestamp: js.Date,
+    `type`: String
+  ): ContactStatusChange = {
+    val __obj = js.Dynamic.literal(application = application.asInstanceOf[js.Any], contact_info = contact_info.asInstanceOf[js.Any], endpoint = endpoint.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ContactStatusChange]
+  }
+  @scala.inline
+  implicit class ContactStatusChangeOps[Self <: ContactStatusChange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContact_info(value: ContactInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contact_info")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndpoint(value: Endpoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

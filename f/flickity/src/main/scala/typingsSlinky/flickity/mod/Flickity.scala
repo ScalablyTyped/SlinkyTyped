@@ -2,11 +2,11 @@ package typingsSlinky.flickity.mod
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.NodeList
+import org.scalajs.dom.raw.Touch
 import typingsSlinky.flickity.AnonX
 import typingsSlinky.flickity.mod._Global_.JQuery
 import typingsSlinky.std.Event_
-import typingsSlinky.std.NodeList
-import typingsSlinky.std.Touch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,14 +39,14 @@ trait Flickity extends js.Object {
     * If groupCells is disabled, then each slide is a cell, so they are one in the same.
     */
   var slides: js.Array[Element] = js.native
-  def append(elements: js.Array[typingsSlinky.std.Element]): Unit = js.native
+  def append(elements: js.Array[Element]): Unit = js.native
   /**
     * Append elements and create cells to the end of the gallery.
     *
     * @param elements JQuery, Element[], Element, or NodeList
     */
   def append(elements: JQuery): Unit = js.native
-  def append(elements: typingsSlinky.std.Element): Unit = js.native
+  def append(elements: Element): Unit = js.native
   def append(elements: NodeList): Unit = js.native
   /**
     * Remove Flickity functionality completely. destroy will return the element back to its pre-initialized state.
@@ -57,7 +57,7 @@ trait Flickity extends js.Object {
     * @returns  Element[]
     */
   def getCellElements(): js.Array[Element] = js.native
-  def insert(elements: js.Array[typingsSlinky.std.Element], index: Double): Unit = js.native
+  def insert(elements: js.Array[Element], index: Double): Unit = js.native
   /**
     * Insert elements into the gallery and create cells.
     *
@@ -65,7 +65,7 @@ trait Flickity extends js.Object {
     * @param index Integer: Zero-based index to insert elements.
     */
   def insert(elements: JQuery, index: Double): Unit = js.native
-  def insert(elements: typingsSlinky.std.Element, index: Double): Unit = js.native
+  def insert(elements: Element, index: Double): Unit = js.native
   def insert(elements: NodeList, index: Double): Unit = js.native
   // event listeners
   /**
@@ -91,7 +91,7 @@ trait Flickity extends js.Object {
     */
   def off(
     eventname: FlickityEvents,
-    callback: js.Function2[js.UndefOr[Event_], js.UndefOr[typingsSlinky.std.Element | Touch], _]
+    callback: js.Function2[js.UndefOr[Event_], js.UndefOr[Element | Touch], _]
   ): Unit = js.native
   /**
     * Remove event listener
@@ -102,7 +102,7 @@ trait Flickity extends js.Object {
     eventname: FlickityEvents,
     callback: js.Function3[
       /* event */ js.UndefOr[Event_], 
-      /* pointer */ js.UndefOr[typingsSlinky.std.Element | Touch], 
+      /* pointer */ js.UndefOr[Element | Touch], 
       /* moveVector */ js.UndefOr[js.Object], 
       _
     ]
@@ -116,8 +116,8 @@ trait Flickity extends js.Object {
     eventname: FlickityEvents,
     callback: js.Function4[
       /* event */ js.UndefOr[Event_], 
-      /* pointer */ js.UndefOr[typingsSlinky.std.Element | Touch], 
-      /* cellElement */ js.UndefOr[typingsSlinky.std.Element], 
+      /* pointer */ js.UndefOr[Element | Touch], 
+      /* cellElement */ js.UndefOr[Element], 
       /* cellIndex */ js.UndefOr[Double], 
       _
     ]
@@ -135,7 +135,7 @@ trait Flickity extends js.Object {
     */
   def on(
     eventname: FlickityEvents,
-    callback: js.Function2[js.UndefOr[Event_], js.UndefOr[typingsSlinky.std.Element | Touch], _]
+    callback: js.Function2[js.UndefOr[Event_], js.UndefOr[Element | Touch], _]
   ): Unit = js.native
   /**
     * bind event listener
@@ -146,7 +146,7 @@ trait Flickity extends js.Object {
     eventname: FlickityEvents,
     callback: js.Function3[
       /* event */ js.UndefOr[Event_], 
-      /* pointer */ js.UndefOr[typingsSlinky.std.Element | Touch], 
+      /* pointer */ js.UndefOr[Element | Touch], 
       /* moveVector */ js.UndefOr[AnonX], 
       _
     ]
@@ -160,8 +160,8 @@ trait Flickity extends js.Object {
     eventname: FlickityEvents,
     callback: js.Function4[
       /* event */ js.UndefOr[Event_], 
-      /* pointer */ js.UndefOr[typingsSlinky.std.Element | Touch], 
-      /* cellElement */ js.UndefOr[typingsSlinky.std.Element], 
+      /* pointer */ js.UndefOr[Element | Touch], 
+      /* cellElement */ js.UndefOr[Element], 
       /* cellIndex */ js.UndefOr[Double], 
       _
     ]
@@ -171,10 +171,7 @@ trait Flickity extends js.Object {
     * @param eventName name of event  (@see Flickity.FlickityEvents class for filckity supported events)
     * @param callback callback funtion to execute when event fires
     */
-  def once(
-    eventname: String,
-    callback: js.Function2[js.UndefOr[Event_], js.UndefOr[typingsSlinky.std.Element | Touch], _]
-  ): Unit = js.native
+  def once(eventname: String, callback: js.Function2[js.UndefOr[Event_], js.UndefOr[Element | Touch], _]): Unit = js.native
   /**
     * one time event handl`er
     * @param eventName name of event  (@see Flickity.FlickityEvents class for filckity supported events)
@@ -184,7 +181,7 @@ trait Flickity extends js.Object {
     eventname: String,
     callback: js.Function3[
       /* event */ js.UndefOr[Event_], 
-      /* pointer */ js.UndefOr[typingsSlinky.std.Element | Touch], 
+      /* pointer */ js.UndefOr[Element | Touch], 
       /* moveVector */ js.UndefOr[js.Object], 
       _
     ]
@@ -198,8 +195,8 @@ trait Flickity extends js.Object {
     eventname: String,
     callback: js.Function4[
       /* event */ js.UndefOr[Event_], 
-      /* pointer */ js.UndefOr[typingsSlinky.std.Element | Touch], 
-      /* cellElement */ js.UndefOr[typingsSlinky.std.Element], 
+      /* pointer */ js.UndefOr[Element | Touch], 
+      /* cellElement */ js.UndefOr[Element], 
       /* cellIndex */ js.UndefOr[Double], 
       _
     ]
@@ -218,14 +215,14 @@ trait Flickity extends js.Object {
     * Starts auto-play. Setting autoPlay will automatically start auto-play on initialization. You do not need to start auto-play with playPlayer.
     */
   def playPlayer(): Unit = js.native
-  def prepend(elements: js.Array[typingsSlinky.std.Element]): Unit = js.native
+  def prepend(elements: js.Array[Element]): Unit = js.native
   /**
     * Prepend elements and create cells to the beginning of the gallery.
     *
     * @param elements JQuery, Element[], Element, or NodeList
     */
   def prepend(elements: JQuery): Unit = js.native
-  def prepend(elements: typingsSlinky.std.Element): Unit = js.native
+  def prepend(elements: Element): Unit = js.native
   def prepend(elements: NodeList): Unit = js.native
   /**
     * Select the previous cell.
@@ -238,14 +235,14 @@ trait Flickity extends js.Object {
     * Re-collect all cell elements in flickity-slider.
     */
   def reloadCells(): Unit = js.native
-  def remove(elements: js.Array[typingsSlinky.std.Element]): Unit = js.native
+  def remove(elements: js.Array[Element]): Unit = js.native
   /**
     * Remove cells from gallery and remove elements from DOM.
     *
     * @param elements Element[], Element, or NodeList
     */
   def remove(elements: JQuery): Unit = js.native
-  def remove(elements: typingsSlinky.std.Element): Unit = js.native
+  def remove(elements: Element): Unit = js.native
   def remove(elements: NodeList): Unit = js.native
   /**
     * Position cells at selected position.

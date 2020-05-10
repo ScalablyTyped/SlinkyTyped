@@ -3,6 +3,7 @@ package typingsSlinky.feathersjsAuthenticationJwt.mod
 import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.feathersjsFeathers.mod.Application
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -50,6 +51,6 @@ trait FeathersAuthenticationJWTOptions extends js.Object {
   /**
     * a passport-jwt option determining where to parse the JWT
     */
-  def jwtFromRequest(req: Request_[ParamsDictionary]): String | Null = js.native
+  def jwtFromRequest(req: Request_[ParamsDictionary, _, _, Query]): String | Null = js.native
 }
 

@@ -13,5 +13,6 @@ trait AudioDestinationNode extends AudioNode {
 
 @JSGlobal("AudioDestinationNode")
 @js.native
-object AudioDestinationNode extends Instantiable0[AudioDestinationNode]
+object AudioDestinationNode
+  extends Instantiable0[org.scalajs.dom.raw.AudioDestinationNode]
 

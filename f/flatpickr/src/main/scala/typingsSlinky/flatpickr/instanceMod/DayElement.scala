@@ -8,6 +8,7 @@ import org.scalajs.dom.raw.DOMTokenList
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.ErrorEvent
+import org.scalajs.dom.raw.EventListenerOptions
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.HTMLAnchorElement
 import org.scalajs.dom.raw.HTMLAreaElement
@@ -399,7 +400,6 @@ import typingsSlinky.std.DOMRect
 import typingsSlinky.std.DOMRectList
 import typingsSlinky.std.DOMStringMap
 import typingsSlinky.std.Document_
-import typingsSlinky.std.EventListenerOptions
 import typingsSlinky.std.EventListenerOrEventListenerObject
 import typingsSlinky.std.Event_
 import typingsSlinky.std.FocusOptions

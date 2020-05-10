@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type CustomComponent = java.lang.String | slinky.core.ReactComponentClass[js.Any] | slinky.core.ReactComponentClass[js.Any]
+  type CustomComponent = java.lang.String | slinky.core.ReactComponentClass[js.Any]
   type Icon = slinky.core.ReactComponentClass[typingsSlinky.reactFa.mod.IconProps]
   type IconStack = slinky.core.ReactComponentClass[typingsSlinky.reactFa.mod.IconStackProps]
 }

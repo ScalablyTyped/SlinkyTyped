@@ -17,8 +17,27 @@ object AddUploadBufferInput {
   @scala.inline
   def apply(DiskIds: DiskIds, GatewayARN: GatewayARN): AddUploadBufferInput = {
     val __obj = js.Dynamic.literal(DiskIds = DiskIds.asInstanceOf[js.Any], GatewayARN = GatewayARN.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AddUploadBufferInput]
   }
+  @scala.inline
+  implicit class AddUploadBufferInputOps[Self <: AddUploadBufferInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDiskIds(value: DiskIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGatewayARN(value: GatewayARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

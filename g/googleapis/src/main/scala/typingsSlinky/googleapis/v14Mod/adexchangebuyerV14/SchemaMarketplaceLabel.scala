@@ -26,18 +26,65 @@ trait SchemaMarketplaceLabel extends js.Object {
 
 object SchemaMarketplaceLabel {
   @scala.inline
-  def apply(
-    accountId: String = null,
-    createTimeMs: String = null,
-    deprecatedMarketplaceDealParty: SchemaMarketplaceDealParty = null,
-    label: String = null
-  ): SchemaMarketplaceLabel = {
+  def apply(): SchemaMarketplaceLabel = {
     val __obj = js.Dynamic.literal()
-    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
-    if (createTimeMs != null) __obj.updateDynamic("createTimeMs")(createTimeMs.asInstanceOf[js.Any])
-    if (deprecatedMarketplaceDealParty != null) __obj.updateDynamic("deprecatedMarketplaceDealParty")(deprecatedMarketplaceDealParty.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMarketplaceLabel]
   }
+  @scala.inline
+  implicit class SchemaMarketplaceLabelOps[Self <: SchemaMarketplaceLabel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateTimeMs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTimeMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateTimeMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTimeMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeprecatedMarketplaceDealParty(value: SchemaMarketplaceDealParty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecatedMarketplaceDealParty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeprecatedMarketplaceDealParty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecatedMarketplaceDealParty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

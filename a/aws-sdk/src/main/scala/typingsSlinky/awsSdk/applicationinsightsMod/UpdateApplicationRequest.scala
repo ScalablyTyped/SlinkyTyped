@@ -26,17 +26,59 @@ trait UpdateApplicationRequest extends js.Object {
 
 object UpdateApplicationRequest {
   @scala.inline
-  def apply(
-    ResourceGroupName: ResourceGroupName,
-    OpsCenterEnabled: js.UndefOr[Boolean] = js.undefined,
-    OpsItemSNSTopicArn: OpsItemSNSTopicArn = null,
-    RemoveSNSTopic: js.UndefOr[Boolean] = js.undefined
-  ): UpdateApplicationRequest = {
+  def apply(ResourceGroupName: ResourceGroupName): UpdateApplicationRequest = {
     val __obj = js.Dynamic.literal(ResourceGroupName = ResourceGroupName.asInstanceOf[js.Any])
-    if (!js.isUndefined(OpsCenterEnabled)) __obj.updateDynamic("OpsCenterEnabled")(OpsCenterEnabled.asInstanceOf[js.Any])
-    if (OpsItemSNSTopicArn != null) __obj.updateDynamic("OpsItemSNSTopicArn")(OpsItemSNSTopicArn.asInstanceOf[js.Any])
-    if (!js.isUndefined(RemoveSNSTopic)) __obj.updateDynamic("RemoveSNSTopic")(RemoveSNSTopic.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateApplicationRequest]
   }
+  @scala.inline
+  implicit class UpdateApplicationRequestOps[Self <: UpdateApplicationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResourceGroupName(value: ResourceGroupName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOpsCenterEnabled(value: OpsCenterEnabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OpsCenterEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpsCenterEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OpsCenterEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpsItemSNSTopicArn(value: OpsItemSNSTopicArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OpsItemSNSTopicArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpsItemSNSTopicArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OpsItemSNSTopicArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveSNSTopic(value: RemoveSNSTopic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveSNSTopic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveSNSTopic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveSNSTopic")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -42,26 +42,113 @@ trait QueryExecution extends js.Object {
 
 object QueryExecution {
   @scala.inline
-  def apply(
-    Query: QueryString = null,
-    QueryExecutionContext: QueryExecutionContext = null,
-    QueryExecutionId: QueryExecutionId = null,
-    ResultConfiguration: ResultConfiguration = null,
-    StatementType: StatementType = null,
-    Statistics: QueryExecutionStatistics = null,
-    Status: QueryExecutionStatus = null,
-    WorkGroup: WorkGroupName = null
-  ): QueryExecution = {
+  def apply(): QueryExecution = {
     val __obj = js.Dynamic.literal()
-    if (Query != null) __obj.updateDynamic("Query")(Query.asInstanceOf[js.Any])
-    if (QueryExecutionContext != null) __obj.updateDynamic("QueryExecutionContext")(QueryExecutionContext.asInstanceOf[js.Any])
-    if (QueryExecutionId != null) __obj.updateDynamic("QueryExecutionId")(QueryExecutionId.asInstanceOf[js.Any])
-    if (ResultConfiguration != null) __obj.updateDynamic("ResultConfiguration")(ResultConfiguration.asInstanceOf[js.Any])
-    if (StatementType != null) __obj.updateDynamic("StatementType")(StatementType.asInstanceOf[js.Any])
-    if (Statistics != null) __obj.updateDynamic("Statistics")(Statistics.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (WorkGroup != null) __obj.updateDynamic("WorkGroup")(WorkGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryExecution]
   }
+  @scala.inline
+  implicit class QueryExecutionOps[Self <: QueryExecution] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQuery(value: QueryString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Query")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryExecutionContext(value: QueryExecutionContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryExecutionContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryExecutionContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryExecutionContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryExecutionId(value: QueryExecutionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryExecutionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryExecutionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryExecutionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResultConfiguration(value: ResultConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResultConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatementType(value: StatementType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatementType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatementType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatementType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatistics(value: QueryExecutionStatistics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Statistics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatistics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Statistics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: QueryExecutionStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkGroup(value: WorkGroupName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkGroup")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

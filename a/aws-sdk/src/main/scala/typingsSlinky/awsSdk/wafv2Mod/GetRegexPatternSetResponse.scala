@@ -18,11 +18,41 @@ trait GetRegexPatternSetResponse extends js.Object {
 
 object GetRegexPatternSetResponse {
   @scala.inline
-  def apply(LockToken: LockToken = null, RegexPatternSet: RegexPatternSet = null): GetRegexPatternSetResponse = {
+  def apply(): GetRegexPatternSetResponse = {
     val __obj = js.Dynamic.literal()
-    if (LockToken != null) __obj.updateDynamic("LockToken")(LockToken.asInstanceOf[js.Any])
-    if (RegexPatternSet != null) __obj.updateDynamic("RegexPatternSet")(RegexPatternSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRegexPatternSetResponse]
   }
+  @scala.inline
+  implicit class GetRegexPatternSetResponseOps[Self <: GetRegexPatternSetResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLockToken(value: LockToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LockToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLockToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LockToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegexPatternSet(value: RegexPatternSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegexPatternSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegexPatternSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegexPatternSet")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

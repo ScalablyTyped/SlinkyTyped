@@ -26,16 +26,53 @@ trait CreateTrialRequest extends js.Object {
 
 object CreateTrialRequest {
   @scala.inline
-  def apply(
-    ExperimentName: ExperimentEntityName,
-    TrialName: ExperimentEntityName,
-    DisplayName: ExperimentEntityName = null,
-    Tags: TagList = null
-  ): CreateTrialRequest = {
+  def apply(ExperimentName: ExperimentEntityName, TrialName: ExperimentEntityName): CreateTrialRequest = {
     val __obj = js.Dynamic.literal(ExperimentName = ExperimentName.asInstanceOf[js.Any], TrialName = TrialName.asInstanceOf[js.Any])
-    if (DisplayName != null) __obj.updateDynamic("DisplayName")(DisplayName.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateTrialRequest]
   }
+  @scala.inline
+  implicit class CreateTrialRequestOps[Self <: CreateTrialRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExperimentName(value: ExperimentEntityName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExperimentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrialName(value: ExperimentEntityName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrialName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: ExperimentEntityName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,11 +22,41 @@ trait SchemaLayer extends js.Object {
 
 object SchemaLayer {
   @scala.inline
-  def apply(arguments: String = null, directive: String = null): SchemaLayer = {
+  def apply(): SchemaLayer = {
     val __obj = js.Dynamic.literal()
-    if (arguments != null) __obj.updateDynamic("arguments")(arguments.asInstanceOf[js.Any])
-    if (directive != null) __obj.updateDynamic("directive")(directive.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLayer]
   }
+  @scala.inline
+  implicit class SchemaLayerOps[Self <: SchemaLayer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArguments(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArguments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirective(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirective: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directive")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

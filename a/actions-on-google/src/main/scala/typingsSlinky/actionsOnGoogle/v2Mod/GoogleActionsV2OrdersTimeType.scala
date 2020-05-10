@@ -14,14 +14,12 @@ trait GoogleActionsV2OrdersTimeType extends js.Object
 
 object GoogleActionsV2OrdersTimeType {
   @scala.inline
-  def DELIVERY_DATE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERY_DATE = this.cast("DELIVERY_DATE")
+  def DELIVERY_DATE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERY_DATE = "DELIVERY_DATE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERY_DATE]
   @scala.inline
-  def ETA: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ETA = this.cast("ETA")
+  def ETA: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ETA = "ETA".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ETA]
   @scala.inline
-  def RESERVATION_SLOT: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RESERVATION_SLOT = this.cast("RESERVATION_SLOT")
+  def RESERVATION_SLOT: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RESERVATION_SLOT = "RESERVATION_SLOT".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RESERVATION_SLOT]
   @scala.inline
-  def UNKNOWN: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNKNOWN = this.cast("UNKNOWN")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UNKNOWN: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNKNOWN = "UNKNOWN".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNKNOWN]
 }
 

@@ -13,10 +13,6 @@ package object mod {
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DisplayNamesOptions */ js.Any, 
     typingsSlinky.reactIntl.reactIntlStrings.localeMatcher
   ]
-  type FormatListOptions = typingsSlinky.std.Exclude[
-    typingsSlinky.formatjsIntlListformat.mod.IntlListFormatOptions, 
-    typingsSlinky.reactIntl.reactIntlStrings.localeMatcher
-  ]
   type FormatNumberOptions = (typingsSlinky.std.Exclude[
     typingsSlinky.formatjsIntlUnifiedNumberformat.mod.UnifiedNumberFormatOptions, 
     typingsSlinky.reactIntl.reactIntlStrings.localeMatcher
@@ -29,9 +25,9 @@ package object mod {
     typingsSlinky.formatjsIntlRelativetimeformat.mod.IntlRelativeTimeFormatOptions, 
     typingsSlinky.reactIntl.reactIntlStrings.localeMatcher
   ]) with typingsSlinky.reactIntl.mod.CustomFormatConfig
-  type Omit[T, K /* <: java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[java.lang.String, K]]
-  type WithIntlProps[P] = (typingsSlinky.reactIntl.mod.Omit[P, java.lang.String]) with typingsSlinky.reactIntl.AnonForwardedRef
+  type Omit[T, K /* <: /* keyof any */ java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
+  type WithIntlProps[P] = (typingsSlinky.reactIntl.mod.Omit[P, typingsSlinky.reactIntl.reactIntlStrings.intl]) with typingsSlinky.reactIntl.AnonForwardedRef
   type WrappedComponentProps[IntlPropName /* <: java.lang.String */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ k in IntlPropName ]: react-intl.react-intl.IntlShape}
-    */ typingsSlinky.reactIntl.reactIntlStrings.WrappedComponentProps with js.Any
+    */ typingsSlinky.reactIntl.reactIntlStrings.WrappedComponentProps with org.scalablytyped.runtime.TopLevel[js.Any]
 }

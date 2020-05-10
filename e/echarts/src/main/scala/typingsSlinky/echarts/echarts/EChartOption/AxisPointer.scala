@@ -1,15 +1,10 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonIcon
-import typingsSlinky.echarts.AnonOpacity
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.Pointer
-import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.PointerLabel
 import typingsSlinky.echarts.echartsStrings.click
-import typingsSlinky.echarts.echartsStrings.line
 import typingsSlinky.echarts.echartsStrings.mousemove
 import typingsSlinky.echarts.echartsStrings.mousemoveVerticallineclick
 import typingsSlinky.echarts.echartsStrings.none
-import typingsSlinky.echarts.echartsStrings.shadow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,13 +12,14 @@ import scala.scalajs.js.annotation._
 /**
   * @todo describe
   */
+@js.native
 trait AxisPointer extends Pointer {
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component
     * in option or API.
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * axisPointers can be linked to each other.
     * The term 'link' represents that axes are synchronized
@@ -54,7 +50,7 @@ trait AxisPointer extends Pointer {
     *
     * @see https://echarts.apache.org/en/option.html#axisPointer.link
     */
-  var link: js.UndefOr[js.Array[js.Object]] = js.undefined
+  var link: js.UndefOr[js.Array[js.Object]] = js.native
   /**
     * Conditions to trigger tooltip.
     * Options:
@@ -70,43 +66,58 @@ trait AxisPointer extends Pointer {
     *
     * @default 'mousemove|click'
     */
-  var triggerOn: js.UndefOr[mousemove | click | mousemoveVerticallineclick | none] = js.undefined
+  var triggerOn: js.UndefOr[mousemove | click | mousemoveVerticallineclick | none] = js.native
 }
 
 object AxisPointer {
   @scala.inline
-  def apply(
-    handle: AnonIcon = null,
-    id: String = null,
-    label: PointerLabel = null,
-    lineStyle: LineStyle = null,
-    link: js.Array[js.Object] = null,
-    shadowStyle: AnonOpacity = null,
-    show: js.UndefOr[Boolean] = js.undefined,
-    snap: js.UndefOr[Boolean] = js.undefined,
-    status: js.UndefOr[Boolean] = js.undefined,
-    triggerOn: mousemove | click | mousemoveVerticallineclick | none = null,
-    triggerTooltip: js.UndefOr[Boolean] = js.undefined,
-    `type`: line | shadow | none = null,
-    value: Int | Double = null,
-    z: Int | Double = null
-  ): AxisPointer = {
+  def apply(): AxisPointer = {
     val __obj = js.Dynamic.literal()
-    if (handle != null) __obj.updateDynamic("handle")(handle.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (lineStyle != null) __obj.updateDynamic("lineStyle")(lineStyle.asInstanceOf[js.Any])
-    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
-    if (shadowStyle != null) __obj.updateDynamic("shadowStyle")(shadowStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (!js.isUndefined(snap)) __obj.updateDynamic("snap")(snap.asInstanceOf[js.Any])
-    if (!js.isUndefined(status)) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (triggerOn != null) __obj.updateDynamic("triggerOn")(triggerOn.asInstanceOf[js.Any])
-    if (!js.isUndefined(triggerTooltip)) __obj.updateDynamic("triggerTooltip")(triggerTooltip.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (z != null) __obj.updateDynamic("z")(z.asInstanceOf[js.Any])
     __obj.asInstanceOf[AxisPointer]
   }
+  @scala.inline
+  implicit class AxisPointerOps[Self <: AxisPointer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLink(value: js.Array[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriggerOn(value: mousemove | click | mousemoveVerticallineclick | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggerOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerOn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

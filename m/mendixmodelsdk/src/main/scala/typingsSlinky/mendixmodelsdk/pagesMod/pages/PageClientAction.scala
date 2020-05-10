@@ -26,12 +26,12 @@ class PageClientAction protected () extends ClientAction {
   ) = this()
   @JSName("model")
   var model_FPageClientAction: IModel = js.native
-  def pageSettings(): PageSettings = js.native
+  def pageSettings: PageSettings = js.native
   def pageSettings(newValue: PageSettings): js.Any = js.native
   /**
     * In version 7.17.0: introduced
     */
-  def pagesForSpecializations(): IList[PageForSpecialization] = js.native
+  def pagesForSpecializations: IList[PageForSpecialization] = js.native
 }
 
 /* static members */
@@ -172,6 +172,15 @@ object PageClientAction extends js.Object {
     * of the parent StaticImageViewer element passed as argument.
     */
   def createInStaticImageViewerUnderClickAction(container: StaticImageViewer): PageClientAction = js.native
+  /**
+    * Creates and returns a new PageClientAction instance in the SDK and on the server.
+    * The new PageClientAction will be automatically stored in the 'onEnterKeyPressAction' property
+    * of the parent TextBox element passed as argument.
+    *
+    * Warning! Can only be used on models with the following Mendix meta model versions:
+    *  8.7.0 and higher
+    */
+  def createInTextBoxUnderOnEnterKeyPressAction(container: TextBox): PageClientAction = js.native
   /**
     * Creates and returns a new PageClientAction instance in the SDK and on the server.
     * The new PageClientAction will be automatically stored in the 'action' property

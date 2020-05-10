@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DeprecatedLifecycle[P, S] extends js.Object {
   /**
     * Called immediately before mounting occurs, and before `Component#render`.
@@ -18,7 +19,7 @@ trait DeprecatedLifecycle[P, S] extends js.Object {
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#initializing-state
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#gradual-migration-path
     */
-  var UNSAFE_componentWillMount: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var UNSAFE_componentWillMount: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * Called when the component may be receiving new props.
     * React may call this even if props have not changed, so be sure to compare new and existing
@@ -35,7 +36,7 @@ trait DeprecatedLifecycle[P, S] extends js.Object {
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#updating-state-based-on-props
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#gradual-migration-path
     */
-  var UNSAFE_componentWillReceiveProps: js.UndefOr[js.Function2[/* nextProps */ P, /* nextContext */ js.Any, Unit]] = js.undefined
+  var UNSAFE_componentWillReceiveProps: js.UndefOr[js.Function2[/* nextProps */ P, /* nextContext */ js.Any, Unit]] = js.native
   /**
     * Called immediately before rendering when new props or state is received. Not called for the initial render.
     *
@@ -52,7 +53,7 @@ trait DeprecatedLifecycle[P, S] extends js.Object {
     */
   var UNSAFE_componentWillUpdate: js.UndefOr[
     js.Function3[/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any, Unit]
-  ] = js.undefined
+  ] = js.native
   /**
     * Called immediately before mounting occurs, and before `Component#render`.
     * Avoid introducing any side-effects or subscriptions in this method.
@@ -64,7 +65,7 @@ trait DeprecatedLifecycle[P, S] extends js.Object {
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#initializing-state
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#gradual-migration-path
     */
-  var componentWillMount: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var componentWillMount: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * Called when the component may be receiving new props.
     * React may call this even if props have not changed, so be sure to compare new and existing
@@ -79,7 +80,7 @@ trait DeprecatedLifecycle[P, S] extends js.Object {
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#updating-state-based-on-props
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#gradual-migration-path
     */
-  var componentWillReceiveProps: js.UndefOr[js.Function2[/* nextProps */ P, /* nextContext */ js.Any, Unit]] = js.undefined
+  var componentWillReceiveProps: js.UndefOr[js.Function2[/* nextProps */ P, /* nextContext */ js.Any, Unit]] = js.native
   /**
     * Called immediately before rendering when new props or state is received. Not called for the initial render.
     *
@@ -94,27 +95,94 @@ trait DeprecatedLifecycle[P, S] extends js.Object {
     */
   var componentWillUpdate: js.UndefOr[
     js.Function3[/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any, Unit]
-  ] = js.undefined
+  ] = js.native
 }
 
 object DeprecatedLifecycle {
   @scala.inline
-  def apply[P, S](
-    UNSAFE_componentWillMount: () => Unit = null,
-    UNSAFE_componentWillReceiveProps: (/* nextProps */ P, /* nextContext */ js.Any) => Unit = null,
-    UNSAFE_componentWillUpdate: (/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any) => Unit = null,
-    componentWillMount: () => Unit = null,
-    componentWillReceiveProps: (/* nextProps */ P, /* nextContext */ js.Any) => Unit = null,
-    componentWillUpdate: (/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any) => Unit = null
-  ): DeprecatedLifecycle[P, S] = {
+  def apply[P, S](): DeprecatedLifecycle[P, S] = {
     val __obj = js.Dynamic.literal()
-    if (UNSAFE_componentWillMount != null) __obj.updateDynamic("UNSAFE_componentWillMount")(js.Any.fromFunction0(UNSAFE_componentWillMount))
-    if (UNSAFE_componentWillReceiveProps != null) __obj.updateDynamic("UNSAFE_componentWillReceiveProps")(js.Any.fromFunction2(UNSAFE_componentWillReceiveProps))
-    if (UNSAFE_componentWillUpdate != null) __obj.updateDynamic("UNSAFE_componentWillUpdate")(js.Any.fromFunction3(UNSAFE_componentWillUpdate))
-    if (componentWillMount != null) __obj.updateDynamic("componentWillMount")(js.Any.fromFunction0(componentWillMount))
-    if (componentWillReceiveProps != null) __obj.updateDynamic("componentWillReceiveProps")(js.Any.fromFunction2(componentWillReceiveProps))
-    if (componentWillUpdate != null) __obj.updateDynamic("componentWillUpdate")(js.Any.fromFunction3(componentWillUpdate))
     __obj.asInstanceOf[DeprecatedLifecycle[P, S]]
   }
+  @scala.inline
+  implicit class DeprecatedLifecycleOps[Self[p, s] <: DeprecatedLifecycle[p, s], P, S] (val x: Self[P, S]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[P, S] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[P, S]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[P, S]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[P, S]) with Other]
+    @scala.inline
+    def withUNSAFE_componentWillMount(value: () => Unit): Self[P, S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UNSAFE_componentWillMount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutUNSAFE_componentWillMount: Self[P, S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UNSAFE_componentWillMount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUNSAFE_componentWillReceiveProps(value: (/* nextProps */ P, /* nextContext */ js.Any) => Unit): Self[P, S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UNSAFE_componentWillReceiveProps")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutUNSAFE_componentWillReceiveProps: Self[P, S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UNSAFE_componentWillReceiveProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUNSAFE_componentWillUpdate(value: (/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any) => Unit): Self[P, S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UNSAFE_componentWillUpdate")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutUNSAFE_componentWillUpdate: Self[P, S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UNSAFE_componentWillUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponentWillMount(value: () => Unit): Self[P, S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentWillMount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutComponentWillMount: Self[P, S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentWillMount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponentWillReceiveProps(value: (/* nextProps */ P, /* nextContext */ js.Any) => Unit): Self[P, S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentWillReceiveProps")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutComponentWillReceiveProps: Self[P, S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentWillReceiveProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponentWillUpdate(value: (/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any) => Unit): Self[P, S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentWillUpdate")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutComponentWillUpdate: Self[P, S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentWillUpdate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -25,36 +25,34 @@ trait Scope extends js.Object
 
 object Scope {
   @scala.inline
-  def accountColonread: typingsSlinky.forgeApis.forgeApisStrings.accountColonread = this.cast("account:read")
+  def accountColonread: typingsSlinky.forgeApis.forgeApisStrings.accountColonread = "account:read".asInstanceOf[typingsSlinky.forgeApis.forgeApisStrings.accountColonread]
   @scala.inline
-  def accountColonwrite: typingsSlinky.forgeApis.forgeApisStrings.accountColonwrite = this.cast("account:write")
+  def accountColonwrite: typingsSlinky.forgeApis.forgeApisStrings.accountColonwrite = "account:write".asInstanceOf[typingsSlinky.forgeApis.forgeApisStrings.accountColonwrite]
   @scala.inline
-  def bucketColoncreate: typingsSlinky.forgeApis.forgeApisStrings.bucketColoncreate = this.cast("bucket:create")
+  def bucketColoncreate: typingsSlinky.forgeApis.forgeApisStrings.bucketColoncreate = "bucket:create".asInstanceOf[typingsSlinky.forgeApis.forgeApisStrings.bucketColoncreate]
   @scala.inline
-  def bucketColondelete: typingsSlinky.forgeApis.forgeApisStrings.bucketColondelete = this.cast("bucket:delete")
+  def bucketColondelete: typingsSlinky.forgeApis.forgeApisStrings.bucketColondelete = "bucket:delete".asInstanceOf[typingsSlinky.forgeApis.forgeApisStrings.bucketColondelete]
   @scala.inline
-  def bucketColonread: typingsSlinky.forgeApis.forgeApisStrings.bucketColonread = this.cast("bucket:read")
+  def bucketColonread: typingsSlinky.forgeApis.forgeApisStrings.bucketColonread = "bucket:read".asInstanceOf[typingsSlinky.forgeApis.forgeApisStrings.bucketColonread]
   @scala.inline
-  def bucketColonupdate: typingsSlinky.forgeApis.forgeApisStrings.bucketColonupdate = this.cast("bucket:update")
+  def bucketColonupdate: typingsSlinky.forgeApis.forgeApisStrings.bucketColonupdate = "bucket:update".asInstanceOf[typingsSlinky.forgeApis.forgeApisStrings.bucketColonupdate]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def codeColonall: typingsSlinky.forgeApis.forgeApisStrings.codeColonall = "code:all".asInstanceOf[typingsSlinky.forgeApis.forgeApisStrings.codeColonall]
   @scala.inline
-  def codeColonall: typingsSlinky.forgeApis.forgeApisStrings.codeColonall = this.cast("code:all")
+  def dataColoncreate: typingsSlinky.forgeApis.forgeApisStrings.dataColoncreate = "data:create".asInstanceOf[typingsSlinky.forgeApis.forgeApisStrings.dataColoncreate]
   @scala.inline
-  def dataColoncreate: typingsSlinky.forgeApis.forgeApisStrings.dataColoncreate = this.cast("data:create")
+  def dataColonread: typingsSlinky.forgeApis.forgeApisStrings.dataColonread = "data:read".asInstanceOf[typingsSlinky.forgeApis.forgeApisStrings.dataColonread]
   @scala.inline
-  def dataColonread: typingsSlinky.forgeApis.forgeApisStrings.dataColonread = this.cast("data:read")
+  def dataColonsearch: typingsSlinky.forgeApis.forgeApisStrings.dataColonsearch = "data:search".asInstanceOf[typingsSlinky.forgeApis.forgeApisStrings.dataColonsearch]
   @scala.inline
-  def dataColonsearch: typingsSlinky.forgeApis.forgeApisStrings.dataColonsearch = this.cast("data:search")
+  def dataColonwrite: typingsSlinky.forgeApis.forgeApisStrings.dataColonwrite = "data:write".asInstanceOf[typingsSlinky.forgeApis.forgeApisStrings.dataColonwrite]
   @scala.inline
-  def dataColonwrite: typingsSlinky.forgeApis.forgeApisStrings.dataColonwrite = this.cast("data:write")
+  def `user-profileColonread`: typingsSlinky.forgeApis.forgeApisStrings.`user-profileColonread` = "user-profile:read".asInstanceOf[typingsSlinky.forgeApis.forgeApisStrings.`user-profileColonread`]
   @scala.inline
-  def `user-profileColonread`: typingsSlinky.forgeApis.forgeApisStrings.`user-profileColonread` = this.cast("user-profile:read")
+  def userColonread: typingsSlinky.forgeApis.forgeApisStrings.userColonread = "user:read".asInstanceOf[typingsSlinky.forgeApis.forgeApisStrings.userColonread]
   @scala.inline
-  def userColonread: typingsSlinky.forgeApis.forgeApisStrings.userColonread = this.cast("user:read")
+  def userColonwrite: typingsSlinky.forgeApis.forgeApisStrings.userColonwrite = "user:write".asInstanceOf[typingsSlinky.forgeApis.forgeApisStrings.userColonwrite]
   @scala.inline
-  def userColonwrite: typingsSlinky.forgeApis.forgeApisStrings.userColonwrite = this.cast("user:write")
-  @scala.inline
-  def viewablesColonread: typingsSlinky.forgeApis.forgeApisStrings.viewablesColonread = this.cast("viewables:read")
+  def viewablesColonread: typingsSlinky.forgeApis.forgeApisStrings.viewablesColonread = "viewables:read".asInstanceOf[typingsSlinky.forgeApis.forgeApisStrings.viewablesColonread]
 }
 

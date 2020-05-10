@@ -5,18 +5,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HookScenarioResult extends js.Object {
-  var pickle: Pickle
-  var result: ScenarioResult
-  var sourceLocation: SourceLocation
+  var pickle: Pickle = js.native
+  var result: ScenarioResult = js.native
+  var sourceLocation: SourceLocation = js.native
 }
 
 object HookScenarioResult {
   @scala.inline
   def apply(pickle: Pickle, result: ScenarioResult, sourceLocation: SourceLocation): HookScenarioResult = {
     val __obj = js.Dynamic.literal(pickle = pickle.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any], sourceLocation = sourceLocation.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[HookScenarioResult]
   }
+  @scala.inline
+  implicit class HookScenarioResultOps[Self <: HookScenarioResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPickle(value: Pickle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pickle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResult(value: ScenarioResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceLocation(value: SourceLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

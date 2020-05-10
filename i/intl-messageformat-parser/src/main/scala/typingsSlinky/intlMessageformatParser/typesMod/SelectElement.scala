@@ -6,24 +6,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SelectElement
   extends BaseElement[select]
      with _MessageFormatElement {
-  var options: Record[String, PluralOrSelectOption]
+  var options: Record[String, PluralOrSelectOption] = js.native
 }
 
 object SelectElement {
   @scala.inline
-  def apply(
-    options: Record[String, PluralOrSelectOption],
-    `type`: select,
-    value: String,
-    location: Location = null
-  ): SelectElement = {
+  def apply(options: Record[String, PluralOrSelectOption], `type`: select, value: String): SelectElement = {
     val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelectElement]
   }
+  @scala.inline
+  implicit class SelectElementOps[Self <: SelectElement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOptions(value: Record[String, PluralOrSelectOption]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

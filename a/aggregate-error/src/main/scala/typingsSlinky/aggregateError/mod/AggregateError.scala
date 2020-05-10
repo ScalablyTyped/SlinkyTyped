@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AggregateError
   extends Error
-     with Iterable[Error] {
-  @JSName(scala.scalajs.js.Symbol.iterator)
+     with Iterable[js.Error] {
+  @JSName(js.Symbol.iterator)
   var iterator_AggregateError: js.Function0[IterableIterator[js.Error]] = js.native
   @JSName("name")
   val name_AggregateError: typingsSlinky.aggregateError.aggregateErrorStrings.AggregateError = js.native

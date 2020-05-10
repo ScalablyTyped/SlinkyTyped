@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IIterable[T] extends js.Object {
   /**
     * Get an iterator over the object's values.
@@ -16,15 +17,28 @@ trait IIterable[T] extends js.Object {
     * typically return a new iterator, while an iterator itself should
     * normally return `this`.
     */
-  def iter(): IIterator[T]
+  def iter(): IIterator[T] = js.native
 }
 
 object IIterable {
   @scala.inline
   def apply[T](iter: () => IIterator[T]): IIterable[T] = {
     val __obj = js.Dynamic.literal(iter = js.Any.fromFunction0(iter))
-  
     __obj.asInstanceOf[IIterable[T]]
   }
+  @scala.inline
+  implicit class IIterableOps[Self[t] <: IIterable[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withIter(value: () => IIterator[T]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iter")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

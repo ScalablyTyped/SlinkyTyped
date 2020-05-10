@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 /**
   * In version 7.21.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -36,9 +36,9 @@ abstract class Type protected () extends Element {
   val containerAsListType_FType: IListType = js.native
   @JSName("model")
   var model_FType: IModel = js.native
-  def containerAsBasicParameterType(): BasicParameterType = js.native
-  def containerAsCodeAction(): CodeAction = js.native
-  def containerAsListType(): ListType = js.native
+  def containerAsBasicParameterType: BasicParameterType = js.native
+  def containerAsCodeAction: CodeAction = js.native
+  def containerAsListType: ListType = js.native
 }
 
 /* static members */

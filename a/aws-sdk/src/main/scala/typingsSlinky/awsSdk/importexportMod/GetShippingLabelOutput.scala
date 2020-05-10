@@ -12,11 +12,41 @@ trait GetShippingLabelOutput extends js.Object {
 
 object GetShippingLabelOutput {
   @scala.inline
-  def apply(ShippingLabelURL: GenericString = null, Warning: GenericString = null): GetShippingLabelOutput = {
+  def apply(): GetShippingLabelOutput = {
     val __obj = js.Dynamic.literal()
-    if (ShippingLabelURL != null) __obj.updateDynamic("ShippingLabelURL")(ShippingLabelURL.asInstanceOf[js.Any])
-    if (Warning != null) __obj.updateDynamic("Warning")(Warning.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetShippingLabelOutput]
   }
+  @scala.inline
+  implicit class GetShippingLabelOutputOps[Self <: GetShippingLabelOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withShippingLabelURL(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShippingLabelURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShippingLabelURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShippingLabelURL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarning(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Warning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Warning")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

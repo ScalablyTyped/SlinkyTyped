@@ -18,14 +18,41 @@ trait EvaluationParameters extends js.Object {
 
 object EvaluationParameters {
   @scala.inline
-  def apply(
-    BackTestWindowOffset: Int | scala.Double = null,
-    NumberOfBacktestWindows: Int | scala.Double = null
-  ): EvaluationParameters = {
+  def apply(): EvaluationParameters = {
     val __obj = js.Dynamic.literal()
-    if (BackTestWindowOffset != null) __obj.updateDynamic("BackTestWindowOffset")(BackTestWindowOffset.asInstanceOf[js.Any])
-    if (NumberOfBacktestWindows != null) __obj.updateDynamic("NumberOfBacktestWindows")(NumberOfBacktestWindows.asInstanceOf[js.Any])
     __obj.asInstanceOf[EvaluationParameters]
   }
+  @scala.inline
+  implicit class EvaluationParametersOps[Self <: EvaluationParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackTestWindowOffset(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackTestWindowOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackTestWindowOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackTestWindowOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfBacktestWindows(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfBacktestWindows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfBacktestWindows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfBacktestWindows")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

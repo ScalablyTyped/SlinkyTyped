@@ -19,24 +19,22 @@ trait Platform extends js.Object
 
 object Platform {
   @scala.inline
-  def aix: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.aix = this.cast("aix")
+  def aix: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.aix = "aix".asInstanceOf[typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.aix]
   @scala.inline
-  def android: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.android = this.cast("android")
+  def android: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.android = "android".asInstanceOf[typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.android]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cygwin: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.cygwin = "cygwin".asInstanceOf[typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.cygwin]
   @scala.inline
-  def cygwin: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.cygwin = this.cast("cygwin")
+  def darwin: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.darwin = "darwin".asInstanceOf[typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.darwin]
   @scala.inline
-  def darwin: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.darwin = this.cast("darwin")
+  def freebsd: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.freebsd = "freebsd".asInstanceOf[typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.freebsd]
   @scala.inline
-  def freebsd: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.freebsd = this.cast("freebsd")
+  def linux: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.linux = "linux".asInstanceOf[typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.linux]
   @scala.inline
-  def linux: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.linux = this.cast("linux")
+  def openbsd: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.openbsd = "openbsd".asInstanceOf[typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.openbsd]
   @scala.inline
-  def openbsd: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.openbsd = this.cast("openbsd")
+  def sunos: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.sunos = "sunos".asInstanceOf[typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.sunos]
   @scala.inline
-  def sunos: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.sunos = this.cast("sunos")
-  @scala.inline
-  def win32: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.win32 = this.cast("win32")
+  def win32: typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.win32 = "win32".asInstanceOf[typingsSlinky.nodeOsUtils.nodeOsUtilsStrings.win32]
 }
 

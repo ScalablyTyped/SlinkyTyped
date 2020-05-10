@@ -1,70 +1,74 @@
 package typingsSlinky.reactAutocomplete.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.input.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.HTMLProps
+import typingsSlinky.reactAutocomplete.mod.Props
 import typingsSlinky.reactAutocomplete.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactAutocomplete
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactAutocomplete {
   @JSImport("react-autocomplete", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def autoHighlight(value: Boolean): this.type = set("autoHighlight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def debug(value: Boolean): this.type = set("debug", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputProps(value: HTMLProps[HTMLInputElement]): this.type = set("inputProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isItemSelectable(value: /* item */ js.Any => Boolean): this.type = set("isItemSelectable", js.Any.fromFunction1(value))
+    @scala.inline
+    def menuStyle(value: CSSProperties): this.type = set("menuStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: (/* e */ ChangeEvent[HTMLInputElement], /* value */ String) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMenuVisibilityChange(value: /* isOpen */ Boolean => Unit): this.type = set("onMenuVisibilityChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSelect(value: (/* value */ String, /* item */ js.Any) => Unit): this.type = set("onSelect", js.Any.fromFunction2(value))
+    @scala.inline
+    def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderInput(value: /* props */ HTMLProps[HTMLInputElement] => TagMod[Any]): this.type = set("renderInput", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderMenu(
+      value: (/* items */ js.Array[TagMod[Any]], /* value */ String, /* styles */ CSSProperties) => TagMod[Any]
+    ): this.type = set("renderMenu", js.Any.fromFunction3(value))
+    @scala.inline
+    def selectOnBlur(value: Boolean): this.type = set("selectOnBlur", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shouldItemRender(value: (/* item */ js.Any, /* value */ String) => Boolean): this.type = set("shouldItemRender", js.Any.fromFunction2(value))
+    @scala.inline
+    def sortItems(value: (/* a */ js.Any, /* b */ js.Any, /* value */ String) => Double): this.type = set("sortItems", js.Any.fromFunction3(value))
+    @scala.inline
+    def wrapperProps(value: HTMLProps[HTMLDivElement]): this.type = set("wrapperProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapperStyle(value: CSSProperties): this.type = set("wrapperStyle", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     getItemValue: js.Any => String,
     items: js.Array[_],
     renderItem: (js.Any, Boolean, js.UndefOr[CSSProperties]) => TagMod[Any],
-    value: js.Any,
-    autoHighlight: js.UndefOr[Boolean] = js.undefined,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    inputProps: HTMLProps[HTMLInputElement] = null,
-    isItemSelectable: /* item */ js.Any => Boolean = null,
-    menuStyle: CSSProperties = null,
-    onChange: (/* e */ ChangeEvent[HTMLInputElement], /* value */ String) => Unit = null,
-    onMenuVisibilityChange: /* isOpen */ Boolean => Unit = null,
-    onSelect: (/* value */ String, /* item */ js.Any) => Unit = null,
-    open: js.UndefOr[Boolean] = js.undefined,
-    renderInput: /* props */ HTMLProps[HTMLInputElement] => TagMod[Any] = null,
-    renderMenu: (/* items */ js.Array[TagMod[Any]], /* value */ String, /* styles */ CSSProperties) => TagMod[Any] = null,
-    selectOnBlur: js.UndefOr[Boolean] = js.undefined,
-    shouldItemRender: (/* item */ js.Any, /* value */ String) => Boolean = null,
-    sortItems: (/* a */ js.Any, /* b */ js.Any, /* value */ String) => Double = null,
-    wrapperProps: HTMLProps[HTMLDivElement] = null,
-    wrapperStyle: CSSProperties = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal(getItemValue = js.Any.fromFunction1(getItemValue), items = items.asInstanceOf[js.Any], renderItem = js.Any.fromFunction3(renderItem), value = value.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoHighlight)) __obj.updateDynamic("autoHighlight")(autoHighlight.asInstanceOf[js.Any])
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (inputProps != null) __obj.updateDynamic("inputProps")(inputProps.asInstanceOf[js.Any])
-    if (isItemSelectable != null) __obj.updateDynamic("isItemSelectable")(js.Any.fromFunction1(isItemSelectable))
-    if (menuStyle != null) __obj.updateDynamic("menuStyle")(menuStyle.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onMenuVisibilityChange != null) __obj.updateDynamic("onMenuVisibilityChange")(js.Any.fromFunction1(onMenuVisibilityChange))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction2(onSelect))
-    if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.asInstanceOf[js.Any])
-    if (renderInput != null) __obj.updateDynamic("renderInput")(js.Any.fromFunction1(renderInput))
-    if (renderMenu != null) __obj.updateDynamic("renderMenu")(js.Any.fromFunction3(renderMenu))
-    if (!js.isUndefined(selectOnBlur)) __obj.updateDynamic("selectOnBlur")(selectOnBlur.asInstanceOf[js.Any])
-    if (shouldItemRender != null) __obj.updateDynamic("shouldItemRender")(js.Any.fromFunction2(shouldItemRender))
-    if (sortItems != null) __obj.updateDynamic("sortItems")(js.Any.fromFunction3(sortItems))
-    if (wrapperProps != null) __obj.updateDynamic("wrapperProps")(wrapperProps.asInstanceOf[js.Any])
-    if (wrapperStyle != null) __obj.updateDynamic("wrapperStyle")(wrapperStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    value: js.Any
+  ): Builder = {
+    val __props = js.Dynamic.literal(getItemValue = js.Any.fromFunction1(getItemValue), items = items.asInstanceOf[js.Any], renderItem = js.Any.fromFunction3(renderItem), value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
   }
-  type Props = typingsSlinky.reactAutocomplete.mod.Props
 }
 

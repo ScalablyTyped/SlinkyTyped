@@ -14,10 +14,29 @@ trait CreateEventBusResponse extends js.Object {
 
 object CreateEventBusResponse {
   @scala.inline
-  def apply(EventBusArn: String = null): CreateEventBusResponse = {
+  def apply(): CreateEventBusResponse = {
     val __obj = js.Dynamic.literal()
-    if (EventBusArn != null) __obj.updateDynamic("EventBusArn")(EventBusArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateEventBusResponse]
   }
+  @scala.inline
+  implicit class CreateEventBusResponseOps[Self <: CreateEventBusResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventBusArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventBusArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventBusArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventBusArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

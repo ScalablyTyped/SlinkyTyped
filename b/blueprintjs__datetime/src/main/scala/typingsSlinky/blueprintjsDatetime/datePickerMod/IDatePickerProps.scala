@@ -2,15 +2,13 @@ package typingsSlinky.blueprintjsDatetime.datePickerMod
 
 import typingsSlinky.blueprintjsCore.propsMod.IProps
 import typingsSlinky.blueprintjsDatetime.datePickerCoreMod.IDatePickerBaseProps
-import typingsSlinky.blueprintjsDatetime.datePickerCoreMod.IDatePickerModifiers
 import typingsSlinky.blueprintjsDatetime.shortcutsMod.IDatePickerShortcut
-import typingsSlinky.blueprintjsDatetime.timePickerMod.ITimePickerProps
-import typingsSlinky.blueprintjsDatetime.timePickerMod.TimePrecision
 import typingsSlinky.reactDayPicker.propsMod.DayPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IDatePickerProps
   extends IDatePickerBaseProps
      with IProps {
@@ -18,12 +16,12 @@ trait IDatePickerProps
     * Allows the user to clear the selection by clicking the currently selected day.
     * @default true
     */
-  var canClearSelection: js.UndefOr[Boolean] = js.undefined
+  var canClearSelection: js.UndefOr[Boolean] = js.native
   /**
     * Text for the reset button in the action bar.
     * @default "Clear"
     */
-  var clearButtonText: js.UndefOr[String] = js.undefined
+  var clearButtonText: js.UndefOr[String] = js.native
   /**
     * Props to pass to ReactDayPicker. See API documentation
     * [here](http://react-day-picker.js.org/api/DayPicker).
@@ -32,17 +30,17 @@ trait IDatePickerProps
     * `canChangeMonth`, `captionElement`, `fromMonth` (use `minDate`), `month` (use
     * `initialMonth`), `toMonth` (use `maxDate`).
     */
-  var dayPickerProps: js.UndefOr[DayPickerProps] = js.undefined
+  var dayPickerProps: js.UndefOr[DayPickerProps] = js.native
   /**
     * Initial day the calendar will display as selected.
     * This should not be set if `value` is set.
     */
-  var defaultValue: js.UndefOr[js.Date] = js.undefined
+  var defaultValue: js.UndefOr[js.Date] = js.native
   /**
     * Whether the current day should be highlighted in the calendar.
     * @default false
     */
-  var highlightCurrentDay: js.UndefOr[Boolean] = js.undefined
+  var highlightCurrentDay: js.UndefOr[Boolean] = js.native
   /**
     * Called when the user selects a day.
     * If being used in an uncontrolled manner, `selectedDate` will be `null` if the user clicks the currently selected
@@ -50,89 +48,196 @@ trait IDatePickerProps
     * `isUserChange` is true if the user selected a day, and false if the date was automatically changed
     * by the user navigating to a new month or year rather than explicitly clicking on a date in the calendar.
     */
-  var onChange: js.UndefOr[js.Function2[/* selectedDate */ js.Date, /* isUserChange */ Boolean, Unit]] = js.undefined
+  var onChange: js.UndefOr[js.Function2[/* selectedDate */ js.Date, /* isUserChange */ Boolean, Unit]] = js.native
   /**
     * Called when the `shortcuts` props is enabled and the user changes the shortcut.
     */
-  var onShortcutChange: js.UndefOr[js.Function2[/* shortcut */ IDatePickerShortcut, /* index */ Double, Unit]] = js.undefined
+  var onShortcutChange: js.UndefOr[js.Function2[/* shortcut */ IDatePickerShortcut, /* index */ Double, Unit]] = js.native
   /**
     * The currently selected shortcut.
     * If this prop is provided, the component acts in a controlled manner.
     */
-  var selectedShortcutIndex: js.UndefOr[Double] = js.undefined
+  var selectedShortcutIndex: js.UndefOr[Double] = js.native
   /**
     * Whether shortcuts to quickly select a date are displayed or not.
     * If `true`, preset shortcuts will be displayed.
     * If `false`, no shortcuts will be displayed.
     * If an array is provided, the custom shortcuts will be displayed.
     */
-  var shortcuts: js.UndefOr[Boolean | js.Array[IDatePickerShortcut]] = js.undefined
+  var shortcuts: js.UndefOr[Boolean | js.Array[IDatePickerShortcut]] = js.native
   /**
     * Whether the bottom bar displaying "Today" and "Clear" buttons should be shown.
     * @default false
     */
-  var showActionsBar: js.UndefOr[Boolean] = js.undefined
+  var showActionsBar: js.UndefOr[Boolean] = js.native
   /**
     * Text for the today button in the action bar.
     * @default "Today"
     */
-  var todayButtonText: js.UndefOr[String] = js.undefined
+  var todayButtonText: js.UndefOr[String] = js.native
   /**
     * The currently selected day. If this prop is provided, the component acts in a controlled manner.
     */
-  var value: js.UndefOr[js.Date] = js.undefined
+  var value: js.UndefOr[js.Date] = js.native
 }
 
 object IDatePickerProps {
   @scala.inline
-  def apply(
-    canClearSelection: js.UndefOr[Boolean] = js.undefined,
-    className: String = null,
-    clearButtonText: String = null,
-    dayPickerProps: DayPickerProps = null,
-    defaultValue: js.Date = null,
-    highlightCurrentDay: js.UndefOr[Boolean] = js.undefined,
-    initialMonth: js.Date = null,
-    locale: String = null,
-    localeUtils: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any = null,
-    maxDate: js.Date = null,
-    minDate: js.Date = null,
-    modifiers: IDatePickerModifiers = null,
-    onChange: (/* selectedDate */ js.Date, /* isUserChange */ Boolean) => Unit = null,
-    onShortcutChange: (/* shortcut */ IDatePickerShortcut, /* index */ Double) => Unit = null,
-    reverseMonthAndYearMenus: js.UndefOr[Boolean] = js.undefined,
-    selectedShortcutIndex: Int | Double = null,
-    shortcuts: Boolean | js.Array[IDatePickerShortcut] = null,
-    showActionsBar: js.UndefOr[Boolean] = js.undefined,
-    timePickerProps: ITimePickerProps = null,
-    timePrecision: TimePrecision = null,
-    todayButtonText: String = null,
-    value: js.Date = null
-  ): IDatePickerProps = {
+  def apply(): IDatePickerProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(canClearSelection)) __obj.updateDynamic("canClearSelection")(canClearSelection.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (clearButtonText != null) __obj.updateDynamic("clearButtonText")(clearButtonText.asInstanceOf[js.Any])
-    if (dayPickerProps != null) __obj.updateDynamic("dayPickerProps")(dayPickerProps.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(highlightCurrentDay)) __obj.updateDynamic("highlightCurrentDay")(highlightCurrentDay.asInstanceOf[js.Any])
-    if (initialMonth != null) __obj.updateDynamic("initialMonth")(initialMonth.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (localeUtils != null) __obj.updateDynamic("localeUtils")(localeUtils.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (modifiers != null) __obj.updateDynamic("modifiers")(modifiers.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onShortcutChange != null) __obj.updateDynamic("onShortcutChange")(js.Any.fromFunction2(onShortcutChange))
-    if (!js.isUndefined(reverseMonthAndYearMenus)) __obj.updateDynamic("reverseMonthAndYearMenus")(reverseMonthAndYearMenus.asInstanceOf[js.Any])
-    if (selectedShortcutIndex != null) __obj.updateDynamic("selectedShortcutIndex")(selectedShortcutIndex.asInstanceOf[js.Any])
-    if (shortcuts != null) __obj.updateDynamic("shortcuts")(shortcuts.asInstanceOf[js.Any])
-    if (!js.isUndefined(showActionsBar)) __obj.updateDynamic("showActionsBar")(showActionsBar.asInstanceOf[js.Any])
-    if (timePickerProps != null) __obj.updateDynamic("timePickerProps")(timePickerProps.asInstanceOf[js.Any])
-    if (timePrecision != null) __obj.updateDynamic("timePrecision")(timePrecision.asInstanceOf[js.Any])
-    if (todayButtonText != null) __obj.updateDynamic("todayButtonText")(todayButtonText.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDatePickerProps]
   }
+  @scala.inline
+  implicit class IDatePickerPropsOps[Self <: IDatePickerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCanClearSelection(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canClearSelection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanClearSelection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canClearSelection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClearButtonText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearButtonText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClearButtonText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearButtonText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDayPickerProps(value: DayPickerProps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayPickerProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDayPickerProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayPickerProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValue(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighlightCurrentDay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightCurrentDay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlightCurrentDay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightCurrentDay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: (/* selectedDate */ js.Date, /* isUserChange */ Boolean) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnShortcutChange(value: (/* shortcut */ IDatePickerShortcut, /* index */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShortcutChange")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnShortcutChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShortcutChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedShortcutIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedShortcutIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedShortcutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedShortcutIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShortcuts(value: Boolean | js.Array[IDatePickerShortcut]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortcuts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShortcuts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortcuts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowActionsBar(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showActionsBar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowActionsBar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showActionsBar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTodayButtonText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("todayButtonText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTodayButtonText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("todayButtonText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

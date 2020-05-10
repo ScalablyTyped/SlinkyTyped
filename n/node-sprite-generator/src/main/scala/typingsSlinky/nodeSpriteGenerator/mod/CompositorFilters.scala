@@ -16,18 +16,16 @@ trait CompositorFilters extends js.Object
 
 object CompositorFilters {
   @scala.inline
-  def all: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.all = this.cast("all")
+  def all: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.all = "all".asInstanceOf[typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.all]
   @scala.inline
-  def average: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.average = this.cast("average")
+  def average: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.average = "average".asInstanceOf[typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.average]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def none: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.none = "none".asInstanceOf[typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.none]
   @scala.inline
-  def none: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.none = this.cast("none")
+  def paeth: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.paeth = "paeth".asInstanceOf[typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.paeth]
   @scala.inline
-  def paeth: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.paeth = this.cast("paeth")
+  def sub: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.sub = "sub".asInstanceOf[typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.sub]
   @scala.inline
-  def sub: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.sub = this.cast("sub")
-  @scala.inline
-  def up: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.up = this.cast("up")
+  def up: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.up = "up".asInstanceOf[typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.up]
 }
 

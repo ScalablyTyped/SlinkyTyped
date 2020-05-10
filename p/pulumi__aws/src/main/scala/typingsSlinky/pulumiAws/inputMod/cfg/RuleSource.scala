@@ -23,14 +23,41 @@ trait RuleSource extends js.Object {
 
 object RuleSource {
   @scala.inline
-  def apply(
-    owner: Input[String],
-    sourceIdentifier: Input[String],
-    sourceDetails: Input[js.Array[Input[RuleSourceSourceDetail]]] = null
-  ): RuleSource = {
+  def apply(owner: Input[String], sourceIdentifier: Input[String]): RuleSource = {
     val __obj = js.Dynamic.literal(owner = owner.asInstanceOf[js.Any], sourceIdentifier = sourceIdentifier.asInstanceOf[js.Any])
-    if (sourceDetails != null) __obj.updateDynamic("sourceDetails")(sourceDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[RuleSource]
   }
+  @scala.inline
+  implicit class RuleSourceOps[Self <: RuleSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOwner(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceIdentifier(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceDetails(value: Input[js.Array[Input[RuleSourceSourceDetail]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceDetails")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

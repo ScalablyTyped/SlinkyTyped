@@ -1,10 +1,9 @@
 package typingsSlinky.reactNavigationStack
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import typingsSlinky.reactNative.mod.Animated.AnimatedInterpolation
 import typingsSlinky.reactNative.mod.Animated.Value
 import typingsSlinky.reactNative.mod.StyleProp
@@ -40,13 +39,13 @@ object stackViewCardMod extends js.Object {
   
   @js.native
   class default protected ()
-    extends Component[PickPropsstylechildrensce, ComponentState, js.Any] {
+    extends Component[PickPropsstylechildrensce, js.Object, js.Any] {
     def this(props: PickPropsstylechildrensce) = this()
     def this(props: PickPropsstylechildrensce, context: js.Any) = this()
   }
   
   @js.native
-  object default extends TopLevel[ComponentType[PickPropsstylechildrensce]]
+  object default extends TopLevel[ReactComponentClass[PickPropsstylechildrensce]]
   
 }
 

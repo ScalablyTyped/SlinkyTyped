@@ -1,20 +1,19 @@
 organization := "org.scalablytyped.slinky"
 name := "svg-sprite"
-version := "0.0-unknown-dt-20190322Z-58dfb4"
-scalaVersion := "2.12.10"
+version := "0.0-unknown-dt-20200225Z-90af05"
+scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "logform" % "2.1.2-f3bc2a",
-  "org.scalablytyped.slinky" %%% "node" % "13.1-dt-20200103Z-c18ea7",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43",
-  "org.scalablytyped.slinky" %%% "vinyl" % "2.0-dt-20191106Z-27f499",
-  "org.scalablytyped.slinky" %%% "winston" % "3.2.1-26c21a",
-  "org.scalablytyped.slinky" %%% "winston-transport" % "4.3.0-3bb81b")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "logform" % "2.1.2-b03847",
+  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-6c3110",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e",
+  "org.scalablytyped.slinky" %%% "vinyl" % "2.0-dt-20200225Z-f08824",
+  "org.scalablytyped.slinky" %%% "winston" % "3.2.1-629d4f",
+  "org.scalablytyped.slinky" %%% "winston-transport" % "4.3.0-fa2ba4")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
-        
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

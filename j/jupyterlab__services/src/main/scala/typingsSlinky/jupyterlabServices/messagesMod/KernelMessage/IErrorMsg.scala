@@ -13,11 +13,12 @@ import scala.scalajs.js.annotation._
   *
   * See [Execution errors](https://jupyter-client.readthedocs.io/en/latest/messaging.html#execution-errors).
   */
+@js.native
 trait IErrorMsg
   extends IIOPubMessage[error]
      with _Message {
   @JSName("content")
-  var content_IErrorMsg: AnonEname
+  var content_IErrorMsg: AnonEname = js.native
 }
 
 object IErrorMsg {
@@ -27,14 +28,24 @@ object IErrorMsg {
     content: AnonEname,
     header: IHeader[error],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): IErrorMsg = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[IErrorMsg]
   }
+  @scala.inline
+  implicit class IErrorMsgOps[Self <: IErrorMsg] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: AnonEname): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

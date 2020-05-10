@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ProjectsResource extends js.Object {
-  var testMatrices: TestMatricesResource
+  var testMatrices: TestMatricesResource = js.native
 }
 
 object ProjectsResource {
   @scala.inline
   def apply(testMatrices: TestMatricesResource): ProjectsResource = {
     val __obj = js.Dynamic.literal(testMatrices = testMatrices.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ProjectsResource]
   }
+  @scala.inline
+  implicit class ProjectsResourceOps[Self <: ProjectsResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTestMatrices(value: TestMatricesResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testMatrices")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

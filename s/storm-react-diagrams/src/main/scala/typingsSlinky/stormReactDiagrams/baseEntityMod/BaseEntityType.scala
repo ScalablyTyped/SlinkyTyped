@@ -14,14 +14,12 @@ trait BaseEntityType extends js.Object
 
 object BaseEntityType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def link: typingsSlinky.stormReactDiagrams.stormReactDiagramsStrings.link = "link".asInstanceOf[typingsSlinky.stormReactDiagrams.stormReactDiagramsStrings.link]
   @scala.inline
-  def link: typingsSlinky.stormReactDiagrams.stormReactDiagramsStrings.link = this.cast("link")
+  def node: typingsSlinky.stormReactDiagrams.stormReactDiagramsStrings.node = "node".asInstanceOf[typingsSlinky.stormReactDiagrams.stormReactDiagramsStrings.node]
   @scala.inline
-  def node: typingsSlinky.stormReactDiagrams.stormReactDiagramsStrings.node = this.cast("node")
+  def point: typingsSlinky.stormReactDiagrams.stormReactDiagramsStrings.point = "point".asInstanceOf[typingsSlinky.stormReactDiagrams.stormReactDiagramsStrings.point]
   @scala.inline
-  def point: typingsSlinky.stormReactDiagrams.stormReactDiagramsStrings.point = this.cast("point")
-  @scala.inline
-  def port: typingsSlinky.stormReactDiagrams.stormReactDiagramsStrings.port = this.cast("port")
+  def port: typingsSlinky.stormReactDiagrams.stormReactDiagramsStrings.port = "port".asInstanceOf[typingsSlinky.stormReactDiagrams.stormReactDiagramsStrings.port]
 }
 

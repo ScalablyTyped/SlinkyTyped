@@ -3,7 +3,6 @@ package typingsSlinky.d3Scale
 import typingsSlinky.d3Scale.d3ScaleStrings.`implicit`
 import typingsSlinky.d3Time.mod.CountableTimeInterval
 import typingsSlinky.d3Time.mod.TimeInterval_
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -912,6 +911,19 @@ object mod extends js.Object {
   }
   
   @js.native
+  trait ScaleSymLog_[Range, Output] extends ScaleContinuousNumeric[Range, Output] {
+    /**
+      * Returns the current constant, which defaults to 1.
+      */
+    def constant(): Double = js.native
+    /**
+      * Sets the symlog constant to the specified number and returns this scale;
+      * otherwise returns the current value of the symlog constant, which defaults to 1. See “A bi-symmetric log transformation for wide-range data” by Webber for more.
+      */
+    def constant(constant: Double): this.type = js.native
+  }
+  
+  @js.native
   trait ScaleThreshold_[Domain /* <: Double | String | js.Date */, Range] extends js.Object {
     /**
       * Given a value in the input domain, returns the corresponding value in the output range.
@@ -971,7 +983,7 @@ object mod extends js.Object {
       *
       * @param value A temporal value from the domain. If the value is not a Date, it will be coerced to Date.
       */
-    def apply(value: Date): Output = js.native
+    def apply(value: js.Date): Output = js.native
     /**
       * Returns whether or not the scale currently clamps values to within the range.
       */
@@ -1229,6 +1241,11 @@ object mod extends js.Object {
   def scaleSqrt_Output[Output](): ScalePower[Output, Output] = js.native
   @JSName("scaleSqrt")
   def scaleSqrt_RangeOutput[Range, Output](): ScalePower[Range, Output] = js.native
+  def scaleSymlog(): ScaleSymLog_[Double, Double] = js.native
+  @JSName("scaleSymlog")
+  def scaleSymlog_Output[Output](): ScaleSymLog_[Output, Output] = js.native
+  @JSName("scaleSymlog")
+  def scaleSymlog_RangeOutput[Range, Output](): ScaleSymLog_[Range, Output] = js.native
   def scaleThreshold(): ScaleThreshold_[Double, Double] = js.native
   @JSName("scaleThreshold")
   def scaleThreshold_Domain_UnionDoubleStringDateRange[Domain /* <: Double | String | js.Date */, Range](): ScaleThreshold_[Domain, Range] = js.native

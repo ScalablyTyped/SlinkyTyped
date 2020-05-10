@@ -18,11 +18,41 @@ trait ListMigrationTasksResult extends js.Object {
 
 object ListMigrationTasksResult {
   @scala.inline
-  def apply(MigrationTaskSummaryList: MigrationTaskSummaryList = null, NextToken: Token = null): ListMigrationTasksResult = {
+  def apply(): ListMigrationTasksResult = {
     val __obj = js.Dynamic.literal()
-    if (MigrationTaskSummaryList != null) __obj.updateDynamic("MigrationTaskSummaryList")(MigrationTaskSummaryList.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListMigrationTasksResult]
   }
+  @scala.inline
+  implicit class ListMigrationTasksResultOps[Self <: ListMigrationTasksResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMigrationTaskSummaryList(value: MigrationTaskSummaryList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MigrationTaskSummaryList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMigrationTaskSummaryList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MigrationTaskSummaryList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: Token): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,38 +26,36 @@ trait AnnotSubtype extends js.Object
 
 object AnnotSubtype {
   @scala.inline
-  def Caret: typingsSlinky.hummusRecipe.hummusRecipeStrings.Caret = this.cast("Caret")
+  def Caret: typingsSlinky.hummusRecipe.hummusRecipeStrings.Caret = "Caret".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Caret]
   @scala.inline
-  def Circle: typingsSlinky.hummusRecipe.hummusRecipeStrings.Circle = this.cast("Circle")
+  def Circle: typingsSlinky.hummusRecipe.hummusRecipeStrings.Circle = "Circle".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Circle]
   @scala.inline
-  def FileAttachment: typingsSlinky.hummusRecipe.hummusRecipeStrings.FileAttachment = this.cast("FileAttachment")
+  def FileAttachment: typingsSlinky.hummusRecipe.hummusRecipeStrings.FileAttachment = "FileAttachment".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.FileAttachment]
   @scala.inline
-  def FreeText: typingsSlinky.hummusRecipe.hummusRecipeStrings.FreeText = this.cast("FreeText")
+  def FreeText: typingsSlinky.hummusRecipe.hummusRecipeStrings.FreeText = "FreeText".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.FreeText]
   @scala.inline
-  def Highlight: typingsSlinky.hummusRecipe.hummusRecipeStrings.Highlight = this.cast("Highlight")
+  def Highlight: typingsSlinky.hummusRecipe.hummusRecipeStrings.Highlight = "Highlight".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Highlight]
   @scala.inline
-  def Ink: typingsSlinky.hummusRecipe.hummusRecipeStrings.Ink = this.cast("Ink")
+  def Ink: typingsSlinky.hummusRecipe.hummusRecipeStrings.Ink = "Ink".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Ink]
   @scala.inline
-  def Line: typingsSlinky.hummusRecipe.hummusRecipeStrings.Line = this.cast("Line")
+  def Line: typingsSlinky.hummusRecipe.hummusRecipeStrings.Line = "Line".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Line]
   @scala.inline
-  def PolyLine: typingsSlinky.hummusRecipe.hummusRecipeStrings.PolyLine = this.cast("PolyLine")
+  def PolyLine: typingsSlinky.hummusRecipe.hummusRecipeStrings.PolyLine = "PolyLine".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.PolyLine]
   @scala.inline
-  def Polygon: typingsSlinky.hummusRecipe.hummusRecipeStrings.Polygon = this.cast("Polygon")
+  def Polygon: typingsSlinky.hummusRecipe.hummusRecipeStrings.Polygon = "Polygon".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Polygon]
   @scala.inline
-  def Sound: typingsSlinky.hummusRecipe.hummusRecipeStrings.Sound = this.cast("Sound")
+  def Sound: typingsSlinky.hummusRecipe.hummusRecipeStrings.Sound = "Sound".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Sound]
   @scala.inline
-  def Square: typingsSlinky.hummusRecipe.hummusRecipeStrings.Square = this.cast("Square")
+  def Square: typingsSlinky.hummusRecipe.hummusRecipeStrings.Square = "Square".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Square]
   @scala.inline
-  def Squiggly: typingsSlinky.hummusRecipe.hummusRecipeStrings.Squiggly = this.cast("Squiggly")
+  def Squiggly: typingsSlinky.hummusRecipe.hummusRecipeStrings.Squiggly = "Squiggly".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Squiggly]
   @scala.inline
-  def Stamp: typingsSlinky.hummusRecipe.hummusRecipeStrings.Stamp = this.cast("Stamp")
+  def Stamp: typingsSlinky.hummusRecipe.hummusRecipeStrings.Stamp = "Stamp".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Stamp]
   @scala.inline
-  def StrikeOut: typingsSlinky.hummusRecipe.hummusRecipeStrings.StrikeOut = this.cast("StrikeOut")
+  def StrikeOut: typingsSlinky.hummusRecipe.hummusRecipeStrings.StrikeOut = "StrikeOut".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.StrikeOut]
   @scala.inline
-  def Text: typingsSlinky.hummusRecipe.hummusRecipeStrings.Text = this.cast("Text")
+  def Text: typingsSlinky.hummusRecipe.hummusRecipeStrings.Text = "Text".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Text]
   @scala.inline
-  def Underline: typingsSlinky.hummusRecipe.hummusRecipeStrings.Underline = this.cast("Underline")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Underline: typingsSlinky.hummusRecipe.hummusRecipeStrings.Underline = "Underline".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Underline]
 }
 

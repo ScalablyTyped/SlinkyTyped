@@ -16,8 +16,21 @@ object DeleteDeviceDefinitionRequest {
   @scala.inline
   def apply(DeviceDefinitionId: string): DeleteDeviceDefinitionRequest = {
     val __obj = js.Dynamic.literal(DeviceDefinitionId = DeviceDefinitionId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DeleteDeviceDefinitionRequest]
   }
+  @scala.inline
+  implicit class DeleteDeviceDefinitionRequestOps[Self <: DeleteDeviceDefinitionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceDefinitionId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceDefinitionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

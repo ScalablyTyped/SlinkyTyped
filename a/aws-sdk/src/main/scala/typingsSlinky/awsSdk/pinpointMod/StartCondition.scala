@@ -18,11 +18,41 @@ trait StartCondition extends js.Object {
 
 object StartCondition {
   @scala.inline
-  def apply(Description: string = null, SegmentStartCondition: SegmentCondition = null): StartCondition = {
+  def apply(): StartCondition = {
     val __obj = js.Dynamic.literal()
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (SegmentStartCondition != null) __obj.updateDynamic("SegmentStartCondition")(SegmentStartCondition.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartCondition]
   }
+  @scala.inline
+  implicit class StartConditionOps[Self <: StartCondition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentStartCondition(value: SegmentCondition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentStartCondition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentStartCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentStartCondition")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

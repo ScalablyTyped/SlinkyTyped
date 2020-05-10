@@ -15,16 +15,14 @@ trait CommandType extends js.Object
 
 object CommandType {
   @scala.inline
-  def DisableQlikViewSelectButton: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.DisableQlikViewSelectButton = this.cast("DisableQlikViewSelectButton")
+  def DisableQlikViewSelectButton: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.DisableQlikViewSelectButton = "DisableQlikViewSelectButton".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.DisableQlikViewSelectButton]
   @scala.inline
-  def GetCustomCaption: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.GetCustomCaption = this.cast("GetCustomCaption")
+  def GetCustomCaption: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.GetCustomCaption = "GetCustomCaption".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.GetCustomCaption]
   @scala.inline
-  def HaveStarField: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.HaveStarField = this.cast("HaveStarField")
+  def HaveStarField: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.HaveStarField = "HaveStarField".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.HaveStarField]
   @scala.inline
-  def IsConnected: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.IsConnected = this.cast("IsConnected")
+  def IsConnected: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.IsConnected = "IsConnected".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.IsConnected]
   @scala.inline
-  def JsonRequest: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.JsonRequest = this.cast("JsonRequest")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def JsonRequest: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.JsonRequest = "JsonRequest".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.JsonRequest]
 }
 

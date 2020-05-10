@@ -39,18 +39,65 @@ trait SchemaBuildBazelRemoteExecutionV2RequestMetadata extends js.Object {
 
 object SchemaBuildBazelRemoteExecutionV2RequestMetadata {
   @scala.inline
-  def apply(
-    actionId: String = null,
-    correlatedInvocationsId: String = null,
-    toolDetails: SchemaBuildBazelRemoteExecutionV2ToolDetails = null,
-    toolInvocationId: String = null
-  ): SchemaBuildBazelRemoteExecutionV2RequestMetadata = {
+  def apply(): SchemaBuildBazelRemoteExecutionV2RequestMetadata = {
     val __obj = js.Dynamic.literal()
-    if (actionId != null) __obj.updateDynamic("actionId")(actionId.asInstanceOf[js.Any])
-    if (correlatedInvocationsId != null) __obj.updateDynamic("correlatedInvocationsId")(correlatedInvocationsId.asInstanceOf[js.Any])
-    if (toolDetails != null) __obj.updateDynamic("toolDetails")(toolDetails.asInstanceOf[js.Any])
-    if (toolInvocationId != null) __obj.updateDynamic("toolInvocationId")(toolInvocationId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2RequestMetadata]
   }
+  @scala.inline
+  implicit class SchemaBuildBazelRemoteExecutionV2RequestMetadataOps[Self <: SchemaBuildBazelRemoteExecutionV2RequestMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCorrelatedInvocationsId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("correlatedInvocationsId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCorrelatedInvocationsId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("correlatedInvocationsId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolDetails(value: SchemaBuildBazelRemoteExecutionV2ToolDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolInvocationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolInvocationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolInvocationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolInvocationId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

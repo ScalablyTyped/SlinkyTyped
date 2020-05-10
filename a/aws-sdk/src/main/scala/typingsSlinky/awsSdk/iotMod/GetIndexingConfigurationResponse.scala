@@ -18,14 +18,41 @@ trait GetIndexingConfigurationResponse extends js.Object {
 
 object GetIndexingConfigurationResponse {
   @scala.inline
-  def apply(
-    thingGroupIndexingConfiguration: ThingGroupIndexingConfiguration = null,
-    thingIndexingConfiguration: ThingIndexingConfiguration = null
-  ): GetIndexingConfigurationResponse = {
+  def apply(): GetIndexingConfigurationResponse = {
     val __obj = js.Dynamic.literal()
-    if (thingGroupIndexingConfiguration != null) __obj.updateDynamic("thingGroupIndexingConfiguration")(thingGroupIndexingConfiguration.asInstanceOf[js.Any])
-    if (thingIndexingConfiguration != null) __obj.updateDynamic("thingIndexingConfiguration")(thingIndexingConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetIndexingConfigurationResponse]
   }
+  @scala.inline
+  implicit class GetIndexingConfigurationResponseOps[Self <: GetIndexingConfigurationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withThingGroupIndexingConfiguration(value: ThingGroupIndexingConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupIndexingConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThingGroupIndexingConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupIndexingConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThingIndexingConfiguration(value: ThingIndexingConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingIndexingConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThingIndexingConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingIndexingConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

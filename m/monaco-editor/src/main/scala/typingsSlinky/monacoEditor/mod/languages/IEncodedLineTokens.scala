@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IEncodedLineTokens extends js.Object {
   /**
     * The tokenization end state.
     * A pointer will be held to this and the object should not be modified by the tokenizer after the pointer is returned.
     */
-  var endState: IState
+  var endState: IState = js.native
   /**
     * The tokens on the line in a binary, encoded format. Each token occupies two array indices. For token i:
     *  - at offset 2*i => startIndex
@@ -30,15 +31,34 @@ trait IEncodedLineTokens extends js.Object {
     * e.g. colorId = 1 is stored in IStandaloneThemeData.customTokenColors[1]. Color id = 0 means no color,
     * id = 1 is for the default foreground color, id = 2 for the default background.
     */
-  var tokens: scala.scalajs.js.typedarray.Uint32Array
+  var tokens: js.typedarray.Uint32Array = js.native
 }
 
 object IEncodedLineTokens {
   @scala.inline
-  def apply(endState: IState, tokens: scala.scalajs.js.typedarray.Uint32Array): IEncodedLineTokens = {
+  def apply(endState: IState, tokens: js.typedarray.Uint32Array): IEncodedLineTokens = {
     val __obj = js.Dynamic.literal(endState = endState.asInstanceOf[js.Any], tokens = tokens.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IEncodedLineTokens]
   }
+  @scala.inline
+  implicit class IEncodedLineTokensOps[Self <: IEncodedLineTokens] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndState(value: IState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTokens(value: js.typedarray.Uint32Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokens")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

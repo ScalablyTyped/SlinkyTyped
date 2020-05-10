@@ -19,24 +19,22 @@ trait WeeklySchedule extends js.Object
 
 object WeeklySchedule {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def everyday: typingsSlinky.microsoftGraph.microsoftGraphStrings.everyday = "everyday".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.everyday]
   @scala.inline
-  def everyday: typingsSlinky.microsoftGraph.microsoftGraphStrings.everyday = this.cast("everyday")
+  def friday: typingsSlinky.microsoftGraph.microsoftGraphStrings.friday = "friday".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.friday]
   @scala.inline
-  def friday: typingsSlinky.microsoftGraph.microsoftGraphStrings.friday = this.cast("friday")
+  def monday: typingsSlinky.microsoftGraph.microsoftGraphStrings.monday = "monday".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.monday]
   @scala.inline
-  def monday: typingsSlinky.microsoftGraph.microsoftGraphStrings.monday = this.cast("monday")
+  def saturday: typingsSlinky.microsoftGraph.microsoftGraphStrings.saturday = "saturday".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.saturday]
   @scala.inline
-  def saturday: typingsSlinky.microsoftGraph.microsoftGraphStrings.saturday = this.cast("saturday")
+  def sunday: typingsSlinky.microsoftGraph.microsoftGraphStrings.sunday = "sunday".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.sunday]
   @scala.inline
-  def sunday: typingsSlinky.microsoftGraph.microsoftGraphStrings.sunday = this.cast("sunday")
+  def thursday: typingsSlinky.microsoftGraph.microsoftGraphStrings.thursday = "thursday".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.thursday]
   @scala.inline
-  def thursday: typingsSlinky.microsoftGraph.microsoftGraphStrings.thursday = this.cast("thursday")
+  def tuesday: typingsSlinky.microsoftGraph.microsoftGraphStrings.tuesday = "tuesday".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.tuesday]
   @scala.inline
-  def tuesday: typingsSlinky.microsoftGraph.microsoftGraphStrings.tuesday = this.cast("tuesday")
+  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = "userDefined".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined]
   @scala.inline
-  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = this.cast("userDefined")
-  @scala.inline
-  def wednesday: typingsSlinky.microsoftGraph.microsoftGraphStrings.wednesday = this.cast("wednesday")
+  def wednesday: typingsSlinky.microsoftGraph.microsoftGraphStrings.wednesday = "wednesday".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.wednesday]
 }
 

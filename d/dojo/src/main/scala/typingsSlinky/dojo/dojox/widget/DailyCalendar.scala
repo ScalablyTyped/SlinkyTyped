@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
   * A calendar with only a daily view.
   *
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dojox.widget.CalendarDay because Inheritance from two classes. Inlined parent */ @JSGlobal("dojox.widget.DailyCalendar")
 @js.native
 class DailyCalendar () extends CalendarBase {

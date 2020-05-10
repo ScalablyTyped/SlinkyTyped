@@ -2,7 +2,6 @@ package typingsSlinky.pulumiAws.environmentMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.applicationVersionMod.ApplicationVersion
-import typingsSlinky.pulumiAws.elasticbeanstalkApplicationMod.Application
 import typingsSlinky.pulumiAws.outputMod.elasticbeanstalk.EnvironmentAllSetting
 import typingsSlinky.pulumiAws.outputMod.elasticbeanstalk.EnvironmentSetting
 import typingsSlinky.pulumiPulumi.mod.CustomResource
@@ -36,7 +35,7 @@ class Environment protected () extends CustomResource {
     * Name of the application that contains the version
     * to be deployed
     */
-  val application: Output_[Application] = js.native
+  val application: Output_[String] = js.native
   val arn: Output_[String] = js.native
   /**
     * The autoscaling groups used by this Environment.

@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class LocalPrimitiveValueBlock () extends LocalValueBlock {
   var isHexOnly: scala.Boolean = js.native
-  var valueHex: scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  var valueHex: js.typedarray.ArrayBuffer = js.native
 }
 

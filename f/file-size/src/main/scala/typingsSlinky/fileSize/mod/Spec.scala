@@ -13,12 +13,10 @@ trait Spec extends js.Object
 
 object Spec {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def iec: typingsSlinky.fileSize.fileSizeStrings.iec = "iec".asInstanceOf[typingsSlinky.fileSize.fileSizeStrings.iec]
   @scala.inline
-  def iec: typingsSlinky.fileSize.fileSizeStrings.iec = this.cast("iec")
+  def jedec: typingsSlinky.fileSize.fileSizeStrings.jedec = "jedec".asInstanceOf[typingsSlinky.fileSize.fileSizeStrings.jedec]
   @scala.inline
-  def jedec: typingsSlinky.fileSize.fileSizeStrings.jedec = this.cast("jedec")
-  @scala.inline
-  def si: typingsSlinky.fileSize.fileSizeStrings.si = this.cast("si")
+  def si: typingsSlinky.fileSize.fileSizeStrings.si = "si".asInstanceOf[typingsSlinky.fileSize.fileSizeStrings.si]
 }
 

@@ -15,16 +15,14 @@ trait Status extends js.Object
 
 object Status {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def connected: typingsSlinky.meteor.meteorStrings.connected = "connected".asInstanceOf[typingsSlinky.meteor.meteorStrings.connected]
   @scala.inline
-  def connected: typingsSlinky.meteor.meteorStrings.connected = this.cast("connected")
+  def connecting: typingsSlinky.meteor.meteorStrings.connecting = "connecting".asInstanceOf[typingsSlinky.meteor.meteorStrings.connecting]
   @scala.inline
-  def connecting: typingsSlinky.meteor.meteorStrings.connecting = this.cast("connecting")
+  def failed: typingsSlinky.meteor.meteorStrings.failed = "failed".asInstanceOf[typingsSlinky.meteor.meteorStrings.failed]
   @scala.inline
-  def failed: typingsSlinky.meteor.meteorStrings.failed = this.cast("failed")
+  def offline: typingsSlinky.meteor.meteorStrings.offline = "offline".asInstanceOf[typingsSlinky.meteor.meteorStrings.offline]
   @scala.inline
-  def offline: typingsSlinky.meteor.meteorStrings.offline = this.cast("offline")
-  @scala.inline
-  def waiting: typingsSlinky.meteor.meteorStrings.waiting = this.cast("waiting")
+  def waiting: typingsSlinky.meteor.meteorStrings.waiting = "waiting".asInstanceOf[typingsSlinky.meteor.meteorStrings.waiting]
 }
 

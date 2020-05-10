@@ -24,11 +24,41 @@ trait SchemaGoogleFactcheckingFactchecktoolsV1alpha1Publisher extends js.Object 
 
 object SchemaGoogleFactcheckingFactchecktoolsV1alpha1Publisher {
   @scala.inline
-  def apply(name: String = null, site: String = null): SchemaGoogleFactcheckingFactchecktoolsV1alpha1Publisher = {
+  def apply(): SchemaGoogleFactcheckingFactchecktoolsV1alpha1Publisher = {
     val __obj = js.Dynamic.literal()
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (site != null) __obj.updateDynamic("site")(site.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleFactcheckingFactchecktoolsV1alpha1Publisher]
   }
+  @scala.inline
+  implicit class SchemaGoogleFactcheckingFactchecktoolsV1alpha1PublisherOps[Self <: SchemaGoogleFactcheckingFactchecktoolsV1alpha1Publisher] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSite(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("site")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("site")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

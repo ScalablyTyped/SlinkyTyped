@@ -49,20 +49,77 @@ trait SchemaGoogleCloudVideointelligenceV1p3beta1LabelDetectionConfig extends js
 
 object SchemaGoogleCloudVideointelligenceV1p3beta1LabelDetectionConfig {
   @scala.inline
-  def apply(
-    frameConfidenceThreshold: Int | Double = null,
-    labelDetectionMode: String = null,
-    model: String = null,
-    stationaryCamera: js.UndefOr[Boolean] = js.undefined,
-    videoConfidenceThreshold: Int | Double = null
-  ): SchemaGoogleCloudVideointelligenceV1p3beta1LabelDetectionConfig = {
+  def apply(): SchemaGoogleCloudVideointelligenceV1p3beta1LabelDetectionConfig = {
     val __obj = js.Dynamic.literal()
-    if (frameConfidenceThreshold != null) __obj.updateDynamic("frameConfidenceThreshold")(frameConfidenceThreshold.asInstanceOf[js.Any])
-    if (labelDetectionMode != null) __obj.updateDynamic("labelDetectionMode")(labelDetectionMode.asInstanceOf[js.Any])
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
-    if (!js.isUndefined(stationaryCamera)) __obj.updateDynamic("stationaryCamera")(stationaryCamera.asInstanceOf[js.Any])
-    if (videoConfidenceThreshold != null) __obj.updateDynamic("videoConfidenceThreshold")(videoConfidenceThreshold.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1p3beta1LabelDetectionConfig]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVideointelligenceV1p3beta1LabelDetectionConfigOps[Self <: SchemaGoogleCloudVideointelligenceV1p3beta1LabelDetectionConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFrameConfidenceThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameConfidenceThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameConfidenceThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameConfidenceThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelDetectionMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelDetectionMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelDetectionMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelDetectionMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStationaryCamera(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stationaryCamera")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStationaryCamera: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stationaryCamera")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoConfidenceThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoConfidenceThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoConfidenceThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoConfidenceThreshold")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

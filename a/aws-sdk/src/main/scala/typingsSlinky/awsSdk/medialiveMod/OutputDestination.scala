@@ -26,18 +26,65 @@ trait OutputDestination extends js.Object {
 
 object OutputDestination {
   @scala.inline
-  def apply(
-    Id: string = null,
-    MediaPackageSettings: listOfMediaPackageOutputDestinationSettings = null,
-    MultiplexSettings: MultiplexProgramChannelDestinationSettings = null,
-    Settings: listOfOutputDestinationSettings = null
-  ): OutputDestination = {
+  def apply(): OutputDestination = {
     val __obj = js.Dynamic.literal()
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (MediaPackageSettings != null) __obj.updateDynamic("MediaPackageSettings")(MediaPackageSettings.asInstanceOf[js.Any])
-    if (MultiplexSettings != null) __obj.updateDynamic("MultiplexSettings")(MultiplexSettings.asInstanceOf[js.Any])
-    if (Settings != null) __obj.updateDynamic("Settings")(Settings.asInstanceOf[js.Any])
     __obj.asInstanceOf[OutputDestination]
   }
+  @scala.inline
+  implicit class OutputDestinationOps[Self <: OutputDestination] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMediaPackageSettings(value: listOfMediaPackageOutputDestinationSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaPackageSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediaPackageSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaPackageSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiplexSettings(value: MultiplexProgramChannelDestinationSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiplexSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiplexSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiplexSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSettings(value: listOfOutputDestinationSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Settings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Settings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

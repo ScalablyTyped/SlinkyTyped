@@ -6,15 +6,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This Gamepad API interface represents the pose of a WebVR controller at a given timestamp (which includes orientation, position, velocity, and acceleration information.) */
+@js.native
 trait GamepadPose extends js.Object {
-  val angularAcceleration: scala.scalajs.js.typedarray.Float32Array | Null
-  val angularVelocity: scala.scalajs.js.typedarray.Float32Array | Null
-  val hasOrientation: scala.Boolean
-  val hasPosition: scala.Boolean
-  val linearAcceleration: scala.scalajs.js.typedarray.Float32Array | Null
-  val linearVelocity: scala.scalajs.js.typedarray.Float32Array | Null
-  val orientation: scala.scalajs.js.typedarray.Float32Array | Null
-  val position: scala.scalajs.js.typedarray.Float32Array | Null
+  val angularAcceleration: js.typedarray.Float32Array | Null = js.native
+  val angularVelocity: js.typedarray.Float32Array | Null = js.native
+  val hasOrientation: scala.Boolean = js.native
+  val hasPosition: scala.Boolean = js.native
+  val linearAcceleration: js.typedarray.Float32Array | Null = js.native
+  val linearVelocity: js.typedarray.Float32Array | Null = js.native
+  val orientation: js.typedarray.Float32Array | Null = js.native
+  val position: js.typedarray.Float32Array | Null = js.native
 }
 
 @JSGlobal("GamepadPose")

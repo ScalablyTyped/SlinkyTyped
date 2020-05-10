@@ -31,22 +31,89 @@ trait UploadPartOutput extends js.Object {
 
 object UploadPartOutput {
   @scala.inline
-  def apply(
-    ETag: ETag = null,
-    RequestCharged: RequestCharged = null,
-    SSECustomerAlgorithm: SSECustomerAlgorithm = null,
-    SSECustomerKeyMD5: SSECustomerKeyMD5 = null,
-    SSEKMSKeyId: SSEKMSKeyId = null,
-    ServerSideEncryption: ServerSideEncryption = null
-  ): UploadPartOutput = {
+  def apply(): UploadPartOutput = {
     val __obj = js.Dynamic.literal()
-    if (ETag != null) __obj.updateDynamic("ETag")(ETag.asInstanceOf[js.Any])
-    if (RequestCharged != null) __obj.updateDynamic("RequestCharged")(RequestCharged.asInstanceOf[js.Any])
-    if (SSECustomerAlgorithm != null) __obj.updateDynamic("SSECustomerAlgorithm")(SSECustomerAlgorithm.asInstanceOf[js.Any])
-    if (SSECustomerKeyMD5 != null) __obj.updateDynamic("SSECustomerKeyMD5")(SSECustomerKeyMD5.asInstanceOf[js.Any])
-    if (SSEKMSKeyId != null) __obj.updateDynamic("SSEKMSKeyId")(SSEKMSKeyId.asInstanceOf[js.Any])
-    if (ServerSideEncryption != null) __obj.updateDynamic("ServerSideEncryption")(ServerSideEncryption.asInstanceOf[js.Any])
     __obj.asInstanceOf[UploadPartOutput]
   }
+  @scala.inline
+  implicit class UploadPartOutputOps[Self <: UploadPartOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withETag(value: ETag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutETag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestCharged(value: RequestCharged): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestCharged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSSECustomerAlgorithm(value: SSECustomerAlgorithm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSSECustomerAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerAlgorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSSECustomerKeyMD5(value: SSECustomerKeyMD5): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKeyMD5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSSECustomerKeyMD5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKeyMD5")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSSEKMSKeyId(value: SSEKMSKeyId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEKMSKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSSEKMSKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEKMSKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerSideEncryption(value: ServerSideEncryption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerSideEncryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerSideEncryption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerSideEncryption")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

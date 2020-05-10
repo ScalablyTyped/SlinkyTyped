@@ -4,15 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IToolTip extends IAnnotation {
-  var animated: Double
-  var autoHide: Boolean
-  var autoRedraw: Boolean
-  var currentIndex: Double
-  var currentSeries: ISeries
-  var delay: Double
-  def hide(): Unit
-  def refresh(series: ISeries, index: Double): Unit
+  var animated: Double = js.native
+  var autoHide: Boolean = js.native
+  var autoRedraw: Boolean = js.native
+  var currentIndex: Double = js.native
+  var currentSeries: ISeries = js.native
+  var delay: Double = js.native
+  def hide(): Unit = js.native
+  def refresh(series: ISeries, index: Double): Unit = js.native
 }
 
 object IToolTip {
@@ -44,8 +45,63 @@ object IToolTip {
     visible: Boolean
   ): IToolTip = {
     val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], add = js.Any.fromFunction1(add), animated = animated.asInstanceOf[js.Any], autoHide = autoHide.asInstanceOf[js.Any], autoRedraw = autoRedraw.asInstanceOf[js.Any], bounds = bounds.asInstanceOf[js.Any], chart = chart.asInstanceOf[js.Any], clicked = js.Any.fromFunction1(clicked), currentIndex = currentIndex.asInstanceOf[js.Any], currentSeries = currentSeries.asInstanceOf[js.Any], delay = delay.asInstanceOf[js.Any], draw = js.Any.fromFunction0(draw), format = format.asInstanceOf[js.Any], hide = js.Any.fromFunction0(hide), items = items.asInstanceOf[js.Any], margins = margins.asInstanceOf[js.Any], mousedown = js.Any.fromFunction1(mousedown), mousemove = js.Any.fromFunction1(mousemove), position = position.asInstanceOf[js.Any], refresh = js.Any.fromFunction2(refresh), resize = js.Any.fromFunction0(resize), text = text.asInstanceOf[js.Any], transparent = transparent.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IToolTip]
   }
+  @scala.inline
+  implicit class IToolTipOps[Self <: IToolTip] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimated(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoHide(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoRedraw(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRedraw")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentSeries(value: ISeries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentSeries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHide(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRefresh(value: (ISeries, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

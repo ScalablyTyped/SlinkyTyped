@@ -1,6 +1,5 @@
 package typingsSlinky.tensorflowTfjsCore
 
-import typingsSlinky.std.Error
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.RecursiveArray
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TypedArray
@@ -18,11 +17,11 @@ object testUtilMod extends js.Object {
     def apply(): Unit = js.native
     def fail(): Unit = js.native
     def fail(message: String): Unit = js.native
-    def fail(message: Error): Unit = js.native
+    def fail(message: js.Error): Unit = js.native
   }
   
-  val TEST_EPSILON_FLOAT16: `0.1` = js.native
-  def expectArrayBuffersEqual(actual: scala.scalajs.js.typedarray.ArrayBuffer, expected: scala.scalajs.js.typedarray.ArrayBuffer): Unit = js.native
+  val TEST_EPSILON_FLOAT16: /* 0.1 */ Double = js.native
+  def expectArrayBuffersEqual(actual: js.typedarray.ArrayBuffer, expected: js.typedarray.ArrayBuffer): Unit = js.native
   def expectArraysClose(actual: Double, expected: Double): Unit = js.native
   def expectArraysClose(actual: Double, expected: Double, epsilon: Double): Unit = js.native
   def expectArraysClose(actual: Double, expected: RecursiveArray[Double]): Unit = js.native

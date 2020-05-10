@@ -5,33 +5,71 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Option extends js.Object {
   /**
     * Add default xml declaration (default false)
     */
-  var declaration: js.UndefOr[Boolean | AnonEncoding] = js.undefined
+  var declaration: js.UndefOr[Boolean | AnonEncoding] = js.native
   /**
     * String used for tab, defaults to no tabs (compressed)
     */
-  var indent: js.UndefOr[String] = js.undefined
+  var indent: js.UndefOr[String] = js.native
   /**
     * Return the result as a `stream` (default false)
     */
-  var stream: js.UndefOr[Boolean] = js.undefined
+  var stream: js.UndefOr[Boolean] = js.native
 }
 
 object Option {
   @scala.inline
-  def apply(
-    declaration: Boolean | AnonEncoding = null,
-    indent: String = null,
-    stream: js.UndefOr[Boolean] = js.undefined
-  ): Option = {
+  def apply(): Option = {
     val __obj = js.Dynamic.literal()
-    if (declaration != null) __obj.updateDynamic("declaration")(declaration.asInstanceOf[js.Any])
-    if (indent != null) __obj.updateDynamic("indent")(indent.asInstanceOf[js.Any])
-    if (!js.isUndefined(stream)) __obj.updateDynamic("stream")(stream.asInstanceOf[js.Any])
     __obj.asInstanceOf[Option]
   }
+  @scala.inline
+  implicit class OptionOps[Self <: Option] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeclaration(value: Boolean | AnonEncoding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("declaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeclaration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("declaration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStream(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStream: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

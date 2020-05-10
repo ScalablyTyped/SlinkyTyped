@@ -14,14 +14,12 @@ trait DistanceMatrixResponseElementLevelStatus extends js.Object
 
 object DistanceMatrixResponseElementLevelStatus {
   @scala.inline
-  def MAX_ROUTE_LENGTH_EXCEEDED: typingsSlinky.googleMaps.googleMapsStrings.MAX_ROUTE_LENGTH_EXCEEDED = this.cast("MAX_ROUTE_LENGTH_EXCEEDED")
+  def MAX_ROUTE_LENGTH_EXCEEDED: typingsSlinky.googleMaps.googleMapsStrings.MAX_ROUTE_LENGTH_EXCEEDED = "MAX_ROUTE_LENGTH_EXCEEDED".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.MAX_ROUTE_LENGTH_EXCEEDED]
   @scala.inline
-  def NOT_FOUND: typingsSlinky.googleMaps.googleMapsStrings.NOT_FOUND = this.cast("NOT_FOUND")
+  def NOT_FOUND: typingsSlinky.googleMaps.googleMapsStrings.NOT_FOUND = "NOT_FOUND".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.NOT_FOUND]
   @scala.inline
-  def OK: typingsSlinky.googleMaps.googleMapsStrings.OK = this.cast("OK")
+  def OK: typingsSlinky.googleMaps.googleMapsStrings.OK = "OK".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.OK]
   @scala.inline
-  def ZERO_RESULTS: typingsSlinky.googleMaps.googleMapsStrings.ZERO_RESULTS = this.cast("ZERO_RESULTS")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ZERO_RESULTS: typingsSlinky.googleMaps.googleMapsStrings.ZERO_RESULTS = "ZERO_RESULTS".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.ZERO_RESULTS]
 }
 

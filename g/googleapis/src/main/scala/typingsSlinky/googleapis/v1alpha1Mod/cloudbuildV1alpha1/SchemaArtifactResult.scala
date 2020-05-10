@@ -24,11 +24,41 @@ trait SchemaArtifactResult extends js.Object {
 
 object SchemaArtifactResult {
   @scala.inline
-  def apply(fileHash: js.Array[SchemaFileHashes] = null, location: String = null): SchemaArtifactResult = {
+  def apply(): SchemaArtifactResult = {
     val __obj = js.Dynamic.literal()
-    if (fileHash != null) __obj.updateDynamic("fileHash")(fileHash.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaArtifactResult]
   }
+  @scala.inline
+  implicit class SchemaArtifactResultOps[Self <: SchemaArtifactResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileHash(value: js.Array[SchemaFileHashes]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileHash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileHash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileHash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

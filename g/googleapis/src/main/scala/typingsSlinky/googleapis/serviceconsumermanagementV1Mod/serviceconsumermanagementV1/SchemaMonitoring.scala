@@ -50,14 +50,41 @@ trait SchemaMonitoring extends js.Object {
 
 object SchemaMonitoring {
   @scala.inline
-  def apply(
-    consumerDestinations: js.Array[SchemaMonitoringDestination] = null,
-    producerDestinations: js.Array[SchemaMonitoringDestination] = null
-  ): SchemaMonitoring = {
+  def apply(): SchemaMonitoring = {
     val __obj = js.Dynamic.literal()
-    if (consumerDestinations != null) __obj.updateDynamic("consumerDestinations")(consumerDestinations.asInstanceOf[js.Any])
-    if (producerDestinations != null) __obj.updateDynamic("producerDestinations")(producerDestinations.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMonitoring]
   }
+  @scala.inline
+  implicit class SchemaMonitoringOps[Self <: SchemaMonitoring] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConsumerDestinations(value: js.Array[SchemaMonitoringDestination]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("consumerDestinations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConsumerDestinations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("consumerDestinations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProducerDestinations(value: js.Array[SchemaMonitoringDestination]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("producerDestinations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProducerDestinations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("producerDestinations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

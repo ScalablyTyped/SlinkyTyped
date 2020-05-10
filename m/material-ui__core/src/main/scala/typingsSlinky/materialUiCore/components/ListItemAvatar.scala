@@ -1,41 +1,43 @@
 package typingsSlinky.materialUiCore.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.PartialClassNameMapListItIcon
 import typingsSlinky.materialUiCore.listItemAvatarListItemAvatarMod.ListItemAvatarProps
 import typingsSlinky.materialUiCore.listItemAvatarMod.default
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ListItemAvatar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ListItemAvatar {
   @JSImport("@material-ui/core/ListItemAvatar", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    classes: PartialClassNameMapListItIcon = null,
-    innerRef: Ref[_] | ReactRef[_] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
-    if (innerRef != null) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def classes(value: PartialClassNameMapListItIcon): this.type = set("classes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def innerRef(value: Ref[_] | ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefNull: this.type = set("innerRef", null)
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.materialUiCore.listItemAvatarMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ListItemAvatarProps
+  
+  def withProps(p: ListItemAvatarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ListItemAvatar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

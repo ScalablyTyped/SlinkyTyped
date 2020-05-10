@@ -14,7 +14,7 @@ package object vpnProvider {
     ]
   ]
   type VpnConfigRemovalEvent = typingsSlinky.chrome.chrome.events.Event[js.Function1[/* id */ java.lang.String, scala.Unit]]
-  type VpnPacketReceptionEvent = typingsSlinky.chrome.chrome.events.Event[js.Function1[/* data */ scala.scalajs.js.typedarray.ArrayBuffer, scala.Unit]]
+  type VpnPacketReceptionEvent = typingsSlinky.chrome.chrome.events.Event[js.Function1[/* data */ js.typedarray.ArrayBuffer, scala.Unit]]
   type VpnPlatformMessageEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
       /* id */ java.lang.String, 

@@ -51,16 +51,53 @@ trait SchemaGoogleIamV1Policy extends js.Object {
 
 object SchemaGoogleIamV1Policy {
   @scala.inline
-  def apply(
-    bindings: js.Array[SchemaGoogleIamV1Binding] = null,
-    etag: String = null,
-    version: Int | Double = null
-  ): SchemaGoogleIamV1Policy = {
+  def apply(): SchemaGoogleIamV1Policy = {
     val __obj = js.Dynamic.literal()
-    if (bindings != null) __obj.updateDynamic("bindings")(bindings.asInstanceOf[js.Any])
-    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleIamV1Policy]
   }
+  @scala.inline
+  implicit class SchemaGoogleIamV1PolicyOps[Self <: SchemaGoogleIamV1Policy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBindings(value: js.Array[SchemaGoogleIamV1Binding]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBindings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEtag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEtag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

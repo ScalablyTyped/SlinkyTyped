@@ -1,6 +1,8 @@
 package typingsSlinky.rcFieldForm.fieldMod
 
 import org.scalablytyped.runtime.StringDictionary
+import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.rcFieldForm.AnonChild
 import typingsSlinky.rcFieldForm.AnonResetCount
 import typingsSlinky.rcFieldForm.interfaceMod.FormInstance
@@ -11,15 +13,13 @@ import typingsSlinky.rcFieldForm.interfaceMod.RuleObject
 import typingsSlinky.rcFieldForm.interfaceMod.Store
 import typingsSlinky.rcFieldForm.interfaceMod.ValidateOptions
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ReactElement
-import typingsSlinky.react.mod.ReactNode
 import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.react.mod.ReactPortal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.rcFieldForm.interfaceMod.FieldEntity because var conflicts: props. Inlined onStoreChange, onStoreChange, isFieldTouched, isFieldValidating, validateRules, validateRules, getMeta, getNamePath, getErrors */ @js.native
 trait Field
   extends Component[FieldProps, FieldState, js.Any] {
@@ -53,7 +53,7 @@ trait Field
   def getNamePath(): InternalNamePath = js.native
   def getOnlyChild(children: String): AnonChild = js.native
   def getOnlyChild(
-    children: js.Function3[/* control */ ChildProps, /* meta */ Meta, /* context */ FormInstance, ReactNode]
+    children: js.Function3[/* control */ ChildProps, /* meta */ Meta, /* context */ FormInstance, TagMod[Any]]
   ): AnonChild = js.native
   def getOnlyChild(children: js.Object): AnonChild = js.native
   def getOnlyChild(children: Boolean): AnonChild = js.native

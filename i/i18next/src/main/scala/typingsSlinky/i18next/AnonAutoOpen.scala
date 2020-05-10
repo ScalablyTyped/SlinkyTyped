@@ -11,103 +11,237 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAutoOpen extends js.Object {
   /**
     * If set to false you will need to open the editor via API
     * @default true
     */
-  var autoOpen: js.UndefOr[Boolean] = js.undefined
+  var autoOpen: js.UndefOr[Boolean] = js.native
   /**
     * Styles to adapt layout in iframe mode to your website layout.
     * This will add a style to `<body>`
     * @default 'margin-right: 605px;'
     */
-  var bodyStyle: js.UndefOr[String] = js.undefined
+  var bodyStyle: js.UndefOr[String] = js.native
   /**
     * Enable by adding querystring locize=true; can be set to another value or turned off by setting to false
     * @default 'locize'
     */
-  var enableByQS: js.UndefOr[String | `false`] = js.undefined
+  var enableByQS: js.UndefOr[String | `false`] = js.native
   /**
     * Enable on init without the need of adding querystring locize=true
     * @default false
     */
-  var enabled: js.UndefOr[Boolean] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.native
   /**
     * Styles to adapt layout in iframe mode to your website layout.
     * This will add a style to the `<iframe>`
     * @default 'z-index: 2000; position: fixed; top: 0; right: 0; bottom: 0; width: 600px; box-shadow: -3px 0 5px 0 rgba(0,0,0,0.5);'
     */
-  var iframeContainerStyle: js.UndefOr[String] = js.undefined
+  var iframeContainerStyle: js.UndefOr[String] = js.native
   /**
     * Styles to adapt layout in iframe mode to your website layout.
     * This will add a style to the parent of `<iframe>`
     * @default 'height: 100%; width: 600px; border: none;'
     */
-  var iframeStyle: js.UndefOr[String] = js.undefined
+  var iframeStyle: js.UndefOr[String] = js.native
   /**
     * Use lng in editor, eg. if running with lng=cimode (i18next, locize)
     * @default null
     */
-  var lngOverride: js.UndefOr[String | Null] = js.undefined
+  var lngOverride: js.UndefOr[String | Null] = js.native
   /**
     * Use lng in editor taken from query string, eg. if running with lng=cimode (i18next, locize)
     * @default 'useLng'
     */
-  var lngOverrideQS: js.UndefOr[String] = js.undefined
+  var lngOverrideQS: js.UndefOr[String] = js.native
   /**
     * How the editor will open.
     * Setting to window will open a new window/tab instead
     * @default 'iframe'
     */
-  var mode: js.UndefOr[iframe | window] = js.undefined
+  var mode: js.UndefOr[iframe | window] = js.native
   /**
     * Handle when locize saved the edited translations, eg. reload website
     * @default noop
     */
-  var onEditorSaved: js.UndefOr[js.Function2[/* lng */ Null, /* ns */ String | js.Array[String], Unit]] = js.undefined
+  var onEditorSaved: js.UndefOr[js.Function2[/* lng */ Null, /* ns */ String | js.Array[String], Unit]] = js.native
   /**
     * Turn on/off by pressing key combination. Combine this with `toggleKeyModifier`
     * @default 24 (x)
     */
-  var toggleKeyCode: js.UndefOr[Double] = js.undefined
+  var toggleKeyCode: js.UndefOr[Double] = js.native
   /**
     * Turn on/off by pressing key combination. Combine this with `toggleKeyCode`
     * @default 'ctrlKey'
     */
-  var toggleKeyModifier: js.UndefOr[ctrlKey | metaKey | altKey | shiftKey] = js.undefined
+  var toggleKeyModifier: js.UndefOr[ctrlKey | metaKey | altKey | shiftKey] = js.native
 }
 
 object AnonAutoOpen {
   @scala.inline
-  def apply(
-    autoOpen: js.UndefOr[Boolean] = js.undefined,
-    bodyStyle: String = null,
-    enableByQS: String | `false` = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    iframeContainerStyle: String = null,
-    iframeStyle: String = null,
-    lngOverride: String = null,
-    lngOverrideQS: String = null,
-    mode: iframe | window = null,
-    onEditorSaved: (/* lng */ Null, /* ns */ String | js.Array[String]) => Unit = null,
-    toggleKeyCode: Int | Double = null,
-    toggleKeyModifier: ctrlKey | metaKey | altKey | shiftKey = null
-  ): AnonAutoOpen = {
+  def apply(): AnonAutoOpen = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoOpen)) __obj.updateDynamic("autoOpen")(autoOpen.asInstanceOf[js.Any])
-    if (bodyStyle != null) __obj.updateDynamic("bodyStyle")(bodyStyle.asInstanceOf[js.Any])
-    if (enableByQS != null) __obj.updateDynamic("enableByQS")(enableByQS.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (iframeContainerStyle != null) __obj.updateDynamic("iframeContainerStyle")(iframeContainerStyle.asInstanceOf[js.Any])
-    if (iframeStyle != null) __obj.updateDynamic("iframeStyle")(iframeStyle.asInstanceOf[js.Any])
-    if (lngOverride != null) __obj.updateDynamic("lngOverride")(lngOverride.asInstanceOf[js.Any])
-    if (lngOverrideQS != null) __obj.updateDynamic("lngOverrideQS")(lngOverrideQS.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (onEditorSaved != null) __obj.updateDynamic("onEditorSaved")(js.Any.fromFunction2(onEditorSaved))
-    if (toggleKeyCode != null) __obj.updateDynamic("toggleKeyCode")(toggleKeyCode.asInstanceOf[js.Any])
-    if (toggleKeyModifier != null) __obj.updateDynamic("toggleKeyModifier")(toggleKeyModifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAutoOpen]
   }
+  @scala.inline
+  implicit class AnonAutoOpenOps[Self <: AnonAutoOpen] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBodyStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBodyStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableByQS(value: String | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableByQS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableByQS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableByQS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIframeContainerStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iframeContainerStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIframeContainerStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iframeContainerStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIframeStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iframeStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIframeStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iframeStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLngOverride(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lngOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLngOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lngOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLngOverrideNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lngOverride")(null)
+        ret
+    }
+    @scala.inline
+    def withLngOverrideQS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lngOverrideQS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLngOverrideQS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lngOverrideQS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: iframe | window): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnEditorSaved(value: (/* lng */ Null, /* ns */ String | js.Array[String]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorSaved")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnEditorSaved: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorSaved")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggleKeyCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleKeyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggleKeyCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleKeyCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggleKeyModifier(value: ctrlKey | metaKey | altKey | shiftKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleKeyModifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggleKeyModifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleKeyModifier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

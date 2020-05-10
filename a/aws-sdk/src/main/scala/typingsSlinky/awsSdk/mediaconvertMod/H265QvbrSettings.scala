@@ -22,16 +22,53 @@ trait H265QvbrSettings extends js.Object {
 
 object H265QvbrSettings {
   @scala.inline
-  def apply(
-    MaxAverageBitrate: Int | Double = null,
-    QvbrQualityLevel: Int | Double = null,
-    QvbrQualityLevelFineTune: Int | Double = null
-  ): H265QvbrSettings = {
+  def apply(): H265QvbrSettings = {
     val __obj = js.Dynamic.literal()
-    if (MaxAverageBitrate != null) __obj.updateDynamic("MaxAverageBitrate")(MaxAverageBitrate.asInstanceOf[js.Any])
-    if (QvbrQualityLevel != null) __obj.updateDynamic("QvbrQualityLevel")(QvbrQualityLevel.asInstanceOf[js.Any])
-    if (QvbrQualityLevelFineTune != null) __obj.updateDynamic("QvbrQualityLevelFineTune")(QvbrQualityLevelFineTune.asInstanceOf[js.Any])
     __obj.asInstanceOf[H265QvbrSettings]
   }
+  @scala.inline
+  implicit class H265QvbrSettingsOps[Self <: H265QvbrSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxAverageBitrate(value: integerMin1000Max1466400000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxAverageBitrate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAverageBitrate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxAverageBitrate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQvbrQualityLevel(value: integerMin1Max10): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QvbrQualityLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQvbrQualityLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QvbrQualityLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQvbrQualityLevelFineTune(value: doubleMin0Max1): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QvbrQualityLevelFineTune")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQvbrQualityLevelFineTune: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QvbrQualityLevelFineTune")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

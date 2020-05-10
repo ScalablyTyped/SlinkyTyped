@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ageUtils extends js.Object {
   /**
     * Returns an [Arcade](https://developers.arcgis.com/javascript/latest/guide/arcade/index.html) expression for visualizing the age of a feature based on a given start time and end time.
@@ -18,7 +19,7 @@ trait ageUtils extends js.Object {
     * @param params.unit The desired units of the age result.  **Possible Values:** years | months | days | hours | minutes | seconds
     *
     */
-  def getAgeExpressions(params: ageUtilsGetAgeExpressionsParams): AgeExpressionsResult
+  def getAgeExpressions(params: ageUtilsGetAgeExpressionsParams): AgeExpressionsResult = js.native
 }
 
 @JSGlobal("__esri.ageUtils")

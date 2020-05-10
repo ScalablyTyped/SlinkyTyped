@@ -48,6 +48,6 @@ class Deserializer protected () extends js.Object {
     * Pass the corresponding `ArrayBuffer` in the serializing context to serializer.transferArrayBuffer()
     * (or return the id from serializer._getSharedArrayBufferId() in the case of SharedArrayBuffers).
     */
-  def transferArrayBuffer(id: Double, arrayBuffer: scala.scalajs.js.typedarray.ArrayBuffer): Unit = js.native
+  def transferArrayBuffer(id: Double, arrayBuffer: js.typedarray.ArrayBuffer): Unit = js.native
 }
 

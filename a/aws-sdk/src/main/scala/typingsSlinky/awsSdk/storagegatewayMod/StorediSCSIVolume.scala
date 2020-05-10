@@ -67,40 +67,197 @@ trait StorediSCSIVolume extends js.Object {
 
 object StorediSCSIVolume {
   @scala.inline
-  def apply(
-    CreatedDate: js.Date = null,
-    KMSKey: KMSKey = null,
-    PreservedExistingData: js.UndefOr[scala.Boolean] = js.undefined,
-    SourceSnapshotId: SnapshotId = null,
-    TargetName: TargetName = null,
-    VolumeARN: VolumeARN = null,
-    VolumeAttachmentStatus: VolumeAttachmentStatus = null,
-    VolumeDiskId: DiskId = null,
-    VolumeId: VolumeId = null,
-    VolumeProgress: Int | Double = null,
-    VolumeSizeInBytes: Int | Double = null,
-    VolumeStatus: VolumeStatus = null,
-    VolumeType: VolumeType = null,
-    VolumeUsedInBytes: Int | Double = null,
-    VolumeiSCSIAttributes: VolumeiSCSIAttributes = null
-  ): StorediSCSIVolume = {
+  def apply(): StorediSCSIVolume = {
     val __obj = js.Dynamic.literal()
-    if (CreatedDate != null) __obj.updateDynamic("CreatedDate")(CreatedDate.asInstanceOf[js.Any])
-    if (KMSKey != null) __obj.updateDynamic("KMSKey")(KMSKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(PreservedExistingData)) __obj.updateDynamic("PreservedExistingData")(PreservedExistingData.asInstanceOf[js.Any])
-    if (SourceSnapshotId != null) __obj.updateDynamic("SourceSnapshotId")(SourceSnapshotId.asInstanceOf[js.Any])
-    if (TargetName != null) __obj.updateDynamic("TargetName")(TargetName.asInstanceOf[js.Any])
-    if (VolumeARN != null) __obj.updateDynamic("VolumeARN")(VolumeARN.asInstanceOf[js.Any])
-    if (VolumeAttachmentStatus != null) __obj.updateDynamic("VolumeAttachmentStatus")(VolumeAttachmentStatus.asInstanceOf[js.Any])
-    if (VolumeDiskId != null) __obj.updateDynamic("VolumeDiskId")(VolumeDiskId.asInstanceOf[js.Any])
-    if (VolumeId != null) __obj.updateDynamic("VolumeId")(VolumeId.asInstanceOf[js.Any])
-    if (VolumeProgress != null) __obj.updateDynamic("VolumeProgress")(VolumeProgress.asInstanceOf[js.Any])
-    if (VolumeSizeInBytes != null) __obj.updateDynamic("VolumeSizeInBytes")(VolumeSizeInBytes.asInstanceOf[js.Any])
-    if (VolumeStatus != null) __obj.updateDynamic("VolumeStatus")(VolumeStatus.asInstanceOf[js.Any])
-    if (VolumeType != null) __obj.updateDynamic("VolumeType")(VolumeType.asInstanceOf[js.Any])
-    if (VolumeUsedInBytes != null) __obj.updateDynamic("VolumeUsedInBytes")(VolumeUsedInBytes.asInstanceOf[js.Any])
-    if (VolumeiSCSIAttributes != null) __obj.updateDynamic("VolumeiSCSIAttributes")(VolumeiSCSIAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[StorediSCSIVolume]
   }
+  @scala.inline
+  implicit class StorediSCSIVolumeOps[Self <: StorediSCSIVolume] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreatedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKMSKey(value: KMSKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKMSKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreservedExistingData(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreservedExistingData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreservedExistingData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreservedExistingData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceSnapshotId(value: SnapshotId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceSnapshotId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceSnapshotId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceSnapshotId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetName(value: TargetName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeARN(value: VolumeARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeAttachmentStatus(value: VolumeAttachmentStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeAttachmentStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeAttachmentStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeAttachmentStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeDiskId(value: DiskId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeDiskId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeDiskId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeDiskId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeId(value: VolumeId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeProgress(value: DoubleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeProgress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeProgress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeSizeInBytes(value: long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeSizeInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeSizeInBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeSizeInBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeStatus(value: VolumeStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeType(value: VolumeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeUsedInBytes(value: VolumeUsedInBytes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeUsedInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeUsedInBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeUsedInBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeiSCSIAttributes(value: VolumeiSCSIAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeiSCSIAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeiSCSIAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeiSCSIAttributes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

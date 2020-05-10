@@ -4,41 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CatHealthParams extends CatCommonParams {
-  var ts: js.UndefOr[Boolean] = js.undefined
+  var ts: js.UndefOr[Boolean] = js.native
 }
 
 object CatHealthParams {
   @scala.inline
-  def apply(
-    format: String,
-    body: js.Any = null,
-    filterPath: String | js.Array[String] = null,
-    h: NameList = null,
-    help: js.UndefOr[Boolean] = js.undefined,
-    ignore: Double | js.Array[Double] = null,
-    local: js.UndefOr[Boolean] = js.undefined,
-    masterTimeout: TimeSpan = null,
-    maxRetries: Int | Double = null,
-    method: String = null,
-    requestTimeout: Int | Double = null,
-    ts: js.UndefOr[Boolean] = js.undefined,
-    v: js.UndefOr[Boolean] = js.undefined
-  ): CatHealthParams = {
+  def apply(format: String): CatHealthParams = {
     val __obj = js.Dynamic.literal(format = format.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (filterPath != null) __obj.updateDynamic("filterPath")(filterPath.asInstanceOf[js.Any])
-    if (h != null) __obj.updateDynamic("h")(h.asInstanceOf[js.Any])
-    if (!js.isUndefined(help)) __obj.updateDynamic("help")(help.asInstanceOf[js.Any])
-    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
-    if (!js.isUndefined(local)) __obj.updateDynamic("local")(local.asInstanceOf[js.Any])
-    if (masterTimeout != null) __obj.updateDynamic("masterTimeout")(masterTimeout.asInstanceOf[js.Any])
-    if (maxRetries != null) __obj.updateDynamic("maxRetries")(maxRetries.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (requestTimeout != null) __obj.updateDynamic("requestTimeout")(requestTimeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(ts)) __obj.updateDynamic("ts")(ts.asInstanceOf[js.Any])
-    if (!js.isUndefined(v)) __obj.updateDynamic("v")(v.asInstanceOf[js.Any])
     __obj.asInstanceOf[CatHealthParams]
   }
+  @scala.inline
+  implicit class CatHealthParamsOps[Self <: CatHealthParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTs(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ts")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

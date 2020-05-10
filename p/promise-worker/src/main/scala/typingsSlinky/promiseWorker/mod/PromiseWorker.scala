@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PromiseWorker extends js.Object {
   /**
     * Send a message to the worker
@@ -14,15 +15,28 @@ trait PromiseWorker extends js.Object {
     * @param userMessage Data or message to send to the worker
     * @returns Promise resolved with the processed result or rejected with an error
     */
-  def postMessage[TResult, TInput](userMessage: TInput): js.Promise[TResult]
+  def postMessage[TResult, TInput](userMessage: TInput): js.Promise[TResult] = js.native
 }
 
 object PromiseWorker {
   @scala.inline
   def apply(postMessage: js.Any => js.Promise[js.Any]): PromiseWorker = {
     val __obj = js.Dynamic.literal(postMessage = js.Any.fromFunction1(postMessage))
-  
     __obj.asInstanceOf[PromiseWorker]
   }
+  @scala.inline
+  implicit class PromiseWorkerOps[Self <: PromiseWorker] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPostMessage(value: js.Any => js.Promise[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postMessage")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

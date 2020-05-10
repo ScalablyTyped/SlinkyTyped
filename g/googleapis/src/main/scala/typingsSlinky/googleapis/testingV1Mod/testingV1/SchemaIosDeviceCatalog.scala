@@ -29,18 +29,65 @@ trait SchemaIosDeviceCatalog extends js.Object {
 
 object SchemaIosDeviceCatalog {
   @scala.inline
-  def apply(
-    models: js.Array[SchemaIosModel] = null,
-    runtimeConfiguration: SchemaIosRuntimeConfiguration = null,
-    versions: js.Array[SchemaIosVersion] = null,
-    xcodeVersions: js.Array[SchemaXcodeVersion] = null
-  ): SchemaIosDeviceCatalog = {
+  def apply(): SchemaIosDeviceCatalog = {
     val __obj = js.Dynamic.literal()
-    if (models != null) __obj.updateDynamic("models")(models.asInstanceOf[js.Any])
-    if (runtimeConfiguration != null) __obj.updateDynamic("runtimeConfiguration")(runtimeConfiguration.asInstanceOf[js.Any])
-    if (versions != null) __obj.updateDynamic("versions")(versions.asInstanceOf[js.Any])
-    if (xcodeVersions != null) __obj.updateDynamic("xcodeVersions")(xcodeVersions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIosDeviceCatalog]
   }
+  @scala.inline
+  implicit class SchemaIosDeviceCatalogOps[Self <: SchemaIosDeviceCatalog] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withModels(value: js.Array[SchemaIosModel]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("models")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("models")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuntimeConfiguration(value: SchemaIosRuntimeConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuntimeConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersions(value: js.Array[SchemaIosVersion]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXcodeVersions(value: js.Array[SchemaXcodeVersion]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xcodeVersions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXcodeVersions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xcodeVersions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

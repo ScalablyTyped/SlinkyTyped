@@ -57,5 +57,9 @@ trait MSPointerEvent extends MouseEvent {
 @js.native
 object MSPointerEvent
   extends Instantiable1[/* typeArg */ java.lang.String, MSPointerEvent]
-     with Instantiable2[/* typeArg */ java.lang.String, /* eventInitDict */ PointerEventInit, MSPointerEvent]
+     with Instantiable2[
+      /* typeArg */ java.lang.String, 
+      /* eventInitDict */ org.scalajs.dom.raw.PointerEventInit, 
+      MSPointerEvent
+    ]
 

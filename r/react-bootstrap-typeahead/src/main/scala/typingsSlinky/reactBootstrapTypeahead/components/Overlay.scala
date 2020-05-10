@@ -1,48 +1,48 @@
 package typingsSlinky.reactBootstrapTypeahead.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBootstrapTypeahead.mod.OverlayProps
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadAlign
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Overlay
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.Overlay] {
+object Overlay {
   @JSImport("react-bootstrap-typeahead", "Overlay")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    container: HTMLElement,
-    align: TypeaheadAlign = null,
-    dropup: js.UndefOr[Boolean] = js.undefined,
-    flip: js.UndefOr[Boolean] = js.undefined,
-    onMenuHide: () => Unit = null,
-    onMenuShow: () => Unit = null,
-    onMenuToggle: /* show */ Boolean => Unit = null,
-    referenceElement: HTMLElement = null,
-    show: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.Overlay] = {
-    val __obj = js.Dynamic.literal(container = container.asInstanceOf[js.Any])
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (!js.isUndefined(dropup)) __obj.updateDynamic("dropup")(dropup.asInstanceOf[js.Any])
-    if (!js.isUndefined(flip)) __obj.updateDynamic("flip")(flip.asInstanceOf[js.Any])
-    if (onMenuHide != null) __obj.updateDynamic("onMenuHide")(js.Any.fromFunction0(onMenuHide))
-    if (onMenuShow != null) __obj.updateDynamic("onMenuShow")(js.Any.fromFunction0(onMenuShow))
-    if (onMenuToggle != null) __obj.updateDynamic("onMenuToggle")(js.Any.fromFunction1(onMenuToggle))
-    if (referenceElement != null) __obj.updateDynamic("referenceElement")(referenceElement.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.Overlay] {
+    @scala.inline
+    def align(value: TypeaheadAlign): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropup(value: Boolean): this.type = set("dropup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flip(value: Boolean): this.type = set("flip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onMenuHide(value: () => Unit): this.type = set("onMenuHide", js.Any.fromFunction0(value))
+    @scala.inline
+    def onMenuShow(value: () => Unit): this.type = set("onMenuShow", js.Any.fromFunction0(value))
+    @scala.inline
+    def onMenuToggle(value: /* show */ Boolean => Unit): this.type = set("onMenuToggle", js.Any.fromFunction1(value))
+    @scala.inline
+    def referenceElement(value: HTMLElement): this.type = set("referenceElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def show(value: Boolean): this.type = set("show", value.asInstanceOf[js.Any])
   }
-  type Props = OverlayProps
+  
+  def withProps(p: OverlayProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(container: HTMLElement): Builder = {
+    val __props = js.Dynamic.literal(container = container.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[OverlayProps]))
+  }
 }
 

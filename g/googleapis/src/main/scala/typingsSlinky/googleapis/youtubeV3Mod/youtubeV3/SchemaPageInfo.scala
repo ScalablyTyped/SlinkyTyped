@@ -22,11 +22,41 @@ trait SchemaPageInfo extends js.Object {
 
 object SchemaPageInfo {
   @scala.inline
-  def apply(resultsPerPage: Int | Double = null, totalResults: Int | Double = null): SchemaPageInfo = {
+  def apply(): SchemaPageInfo = {
     val __obj = js.Dynamic.literal()
-    if (resultsPerPage != null) __obj.updateDynamic("resultsPerPage")(resultsPerPage.asInstanceOf[js.Any])
-    if (totalResults != null) __obj.updateDynamic("totalResults")(totalResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPageInfo]
   }
+  @scala.inline
+  implicit class SchemaPageInfoOps[Self <: SchemaPageInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResultsPerPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resultsPerPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResultsPerPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resultsPerPage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalResults(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalResults")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

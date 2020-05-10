@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDeleteIconColor extends js.Object {
-  var backgroundColor: js.UndefOr[String] = js.undefined
-  var deleteIconColor: js.UndefOr[String] = js.undefined
-  var fontSize: js.UndefOr[Double] = js.undefined
-  var fontWeight: js.UndefOr[Double] = js.undefined
-  var shadow: js.UndefOr[String] = js.undefined
-  var textColor: js.UndefOr[String] = js.undefined
+  var backgroundColor: js.UndefOr[String] = js.native
+  var deleteIconColor: js.UndefOr[String] = js.native
+  var fontSize: js.UndefOr[Double] = js.native
+  var fontWeight: js.UndefOr[Double] = js.native
+  var shadow: js.UndefOr[String] = js.native
+  var textColor: js.UndefOr[String] = js.native
 }
 
 object AnonDeleteIconColor {
   @scala.inline
-  def apply(
-    backgroundColor: String = null,
-    deleteIconColor: String = null,
-    fontSize: Int | Double = null,
-    fontWeight: Int | Double = null,
-    shadow: String = null,
-    textColor: String = null
-  ): AnonDeleteIconColor = {
+  def apply(): AnonDeleteIconColor = {
     val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (deleteIconColor != null) __obj.updateDynamic("deleteIconColor")(deleteIconColor.asInstanceOf[js.Any])
-    if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
-    if (fontWeight != null) __obj.updateDynamic("fontWeight")(fontWeight.asInstanceOf[js.Any])
-    if (shadow != null) __obj.updateDynamic("shadow")(shadow.asInstanceOf[js.Any])
-    if (textColor != null) __obj.updateDynamic("textColor")(textColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDeleteIconColor]
   }
+  @scala.inline
+  implicit class AnonDeleteIconColorOps[Self <: AnonDeleteIconColor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteIconColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteIconColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteIconColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteIconColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontWeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

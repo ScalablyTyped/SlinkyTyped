@@ -1,11 +1,7 @@
 package typingsSlinky.fastGlob.fsMod
 
-import typingsSlinky.fastGlob.entriesMod.Entry
 import typingsSlinky.fastGlob.entriesMod.EntryItem
 import typingsSlinky.fastGlob.optionsMod.IOptions
-import typingsSlinky.fastGlob.patternsMod.Pattern
-import typingsSlinky.mrmlncReaddirEnhanced.mod.FilterFunction
-import typingsSlinky.node.fsMod.Stats
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,22 +10,5 @@ import scala.scalajs.js.annotation._
 @js.native
 abstract class default[T] protected () extends FileSystem[T] {
   def this(options: IOptions[EntryItem]) = this()
-  /* CompleteClass */
-  override val options: js.Any = js.native
-  /**
-    * Return full path to entry.
-    */
-  /* CompleteClass */
-  override def getFullEntryPath(filepath: String): String = js.native
-  /**
-    * Return an implementation of the Entry interface.
-    */
-  /* CompleteClass */
-  override def makeEntry(stat: Stats, pattern: Pattern): Entry = js.native
-  /**
-    * The main logic of reading the entries that must be implemented by each adapter.
-    */
-  /* CompleteClass */
-  override def read(filepaths: js.Array[String], filter: FilterFunction): T = js.native
 }
 

@@ -1,63 +1,66 @@
 package typingsSlinky.ionic.definitionsMod
 
-import typingsSlinky.node.NodeJS.ProcessEnv
 import typingsSlinky.node.NodeJS.WritableStream
-import typingsSlinky.node.childProcessMod.SerializationType
-import typingsSlinky.node.childProcessMod.StdioOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IShellRunOptions extends IShellOutputOptions {
-  var killOnExit: js.UndefOr[Boolean] = js.undefined
-  var stream: js.UndefOr[WritableStream] = js.undefined
-  var truncateErrorOutput: js.UndefOr[Double] = js.undefined
+  var killOnExit: js.UndefOr[Boolean] = js.native
+  var stream: js.UndefOr[WritableStream] = js.native
+  var truncateErrorOutput: js.UndefOr[Double] = js.native
 }
 
 object IShellRunOptions {
   @scala.inline
-  def apply(
-    argv0: String = null,
-    cwd: String = null,
-    detached: js.UndefOr[Boolean] = js.undefined,
-    env: ProcessEnv = null,
-    fatalOnError: js.UndefOr[Boolean] = js.undefined,
-    fatalOnNotFound: js.UndefOr[Boolean] = js.undefined,
-    gid: Int | Double = null,
-    killOnExit: js.UndefOr[Boolean] = js.undefined,
-    serialization: SerializationType = null,
-    shell: Boolean | String = null,
-    showCommand: js.UndefOr[Boolean] = js.undefined,
-    showError: js.UndefOr[Boolean] = js.undefined,
-    stdio: StdioOptions = null,
-    stream: WritableStream = null,
-    timeout: Int | Double = null,
-    truncateErrorOutput: Int | Double = null,
-    uid: Int | Double = null,
-    windowsHide: js.UndefOr[Boolean] = js.undefined,
-    windowsVerbatimArguments: js.UndefOr[Boolean] = js.undefined
-  ): IShellRunOptions = {
+  def apply(): IShellRunOptions = {
     val __obj = js.Dynamic.literal()
-    if (argv0 != null) __obj.updateDynamic("argv0")(argv0.asInstanceOf[js.Any])
-    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
-    if (!js.isUndefined(detached)) __obj.updateDynamic("detached")(detached.asInstanceOf[js.Any])
-    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
-    if (!js.isUndefined(fatalOnError)) __obj.updateDynamic("fatalOnError")(fatalOnError.asInstanceOf[js.Any])
-    if (!js.isUndefined(fatalOnNotFound)) __obj.updateDynamic("fatalOnNotFound")(fatalOnNotFound.asInstanceOf[js.Any])
-    if (gid != null) __obj.updateDynamic("gid")(gid.asInstanceOf[js.Any])
-    if (!js.isUndefined(killOnExit)) __obj.updateDynamic("killOnExit")(killOnExit.asInstanceOf[js.Any])
-    if (serialization != null) __obj.updateDynamic("serialization")(serialization.asInstanceOf[js.Any])
-    if (shell != null) __obj.updateDynamic("shell")(shell.asInstanceOf[js.Any])
-    if (!js.isUndefined(showCommand)) __obj.updateDynamic("showCommand")(showCommand.asInstanceOf[js.Any])
-    if (!js.isUndefined(showError)) __obj.updateDynamic("showError")(showError.asInstanceOf[js.Any])
-    if (stdio != null) __obj.updateDynamic("stdio")(stdio.asInstanceOf[js.Any])
-    if (stream != null) __obj.updateDynamic("stream")(stream.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (truncateErrorOutput != null) __obj.updateDynamic("truncateErrorOutput")(truncateErrorOutput.asInstanceOf[js.Any])
-    if (uid != null) __obj.updateDynamic("uid")(uid.asInstanceOf[js.Any])
-    if (!js.isUndefined(windowsHide)) __obj.updateDynamic("windowsHide")(windowsHide.asInstanceOf[js.Any])
-    if (!js.isUndefined(windowsVerbatimArguments)) __obj.updateDynamic("windowsVerbatimArguments")(windowsVerbatimArguments.asInstanceOf[js.Any])
     __obj.asInstanceOf[IShellRunOptions]
   }
+  @scala.inline
+  implicit class IShellRunOptionsOps[Self <: IShellRunOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKillOnExit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("killOnExit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKillOnExit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("killOnExit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStream(value: WritableStream): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStream: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTruncateErrorOutput(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("truncateErrorOutput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTruncateErrorOutput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("truncateErrorOutput")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

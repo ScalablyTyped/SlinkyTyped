@@ -1,10 +1,9 @@
 package typingsSlinky.antdMobile.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.PartialHTMLPropsHTMLDivEl
 import typingsSlinky.antdMobile.modalMod.default
 import typingsSlinky.antdMobile.modalModalMod.ModalProps
@@ -14,60 +13,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Modal
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Modal {
   @JSImport("antd-mobile/lib/modal", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    visible: Boolean,
-    animateAppear: js.UndefOr[Boolean] = js.undefined,
-    animated: js.UndefOr[Boolean] = js.undefined,
-    animationType: js.Any = null,
-    bodyStyle: CSSProperties = null,
-    closable: js.UndefOr[Boolean] = js.undefined,
-    footer: js.Array[Action[CSSProperties]] = null,
-    maskClosable: js.UndefOr[Boolean] = js.undefined,
-    maskTransitionName: String = null,
-    onAnimationEnd: /* visible */ Boolean => Unit = null,
-    onClose: () => Unit = null,
-    operation: js.UndefOr[Boolean] = js.undefined,
-    platform: String = null,
-    popup: js.UndefOr[Boolean] = js.undefined,
-    prefixCls: String = null,
-    title: TagMod[Any] = null,
-    transitionName: String = null,
-    transparent: js.UndefOr[Boolean] = js.undefined,
-    wrapClassName: String = null,
-    wrapProps: PartialHTMLPropsHTMLDivEl = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(visible = visible.asInstanceOf[js.Any])
-    if (!js.isUndefined(animateAppear)) __obj.updateDynamic("animateAppear")(animateAppear.asInstanceOf[js.Any])
-    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
-    if (animationType != null) __obj.updateDynamic("animationType")(animationType.asInstanceOf[js.Any])
-    if (bodyStyle != null) __obj.updateDynamic("bodyStyle")(bodyStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(closable)) __obj.updateDynamic("closable")(closable.asInstanceOf[js.Any])
-    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
-    if (!js.isUndefined(maskClosable)) __obj.updateDynamic("maskClosable")(maskClosable.asInstanceOf[js.Any])
-    if (maskTransitionName != null) __obj.updateDynamic("maskTransitionName")(maskTransitionName.asInstanceOf[js.Any])
-    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
-    if (!js.isUndefined(operation)) __obj.updateDynamic("operation")(operation.asInstanceOf[js.Any])
-    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
-    if (!js.isUndefined(popup)) __obj.updateDynamic("popup")(popup.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
-    if (!js.isUndefined(transparent)) __obj.updateDynamic("transparent")(transparent.asInstanceOf[js.Any])
-    if (wrapClassName != null) __obj.updateDynamic("wrapClassName")(wrapClassName.asInstanceOf[js.Any])
-    if (wrapProps != null) __obj.updateDynamic("wrapProps")(wrapProps.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def animateAppear(value: Boolean): this.type = set("animateAppear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animationType(value: js.Any): this.type = set("animationType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bodyStyle(value: CSSProperties): this.type = set("bodyStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footer(value: js.Array[Action[CSSProperties]]): this.type = set("footer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maskClosable(value: Boolean): this.type = set("maskClosable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maskTransitionName(value: String): this.type = set("maskTransitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAnimationEnd(value: /* visible */ Boolean => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClose(value: () => Unit): this.type = set("onClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def operation(value: Boolean): this.type = set("operation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def platform(value: String): this.type = set("platform", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popup(value: Boolean): this.type = set("popup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transparent(value: Boolean): this.type = set("transparent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapClassName(value: String): this.type = set("wrapClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapProps(value: PartialHTMLPropsHTMLDivEl): this.type = set("wrapProps", value.asInstanceOf[js.Any])
   }
-  type Props = ModalProps
+  
+  def withProps(p: ModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(visible: Boolean): Builder = {
+    val __props = js.Dynamic.literal(visible = visible.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ModalProps]))
+  }
 }
 

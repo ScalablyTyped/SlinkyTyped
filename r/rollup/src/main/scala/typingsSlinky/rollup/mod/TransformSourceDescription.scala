@@ -1,31 +1,39 @@
 package typingsSlinky.rollup.mod
 
-import typingsSlinky.estree.mod.Program
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TransformSourceDescription extends SourceDescription {
-  var dependencies: js.UndefOr[js.Array[String]] = js.undefined
+  var dependencies: js.UndefOr[js.Array[String]] = js.native
 }
 
 object TransformSourceDescription {
   @scala.inline
-  def apply(
-    code: String,
-    ast: Program = null,
-    dependencies: js.Array[String] = null,
-    map: SourceMapInput = null,
-    moduleSideEffects: js.UndefOr[Boolean] = js.undefined,
-    syntheticNamedExports: js.UndefOr[Boolean] = js.undefined
-  ): TransformSourceDescription = {
+  def apply(code: String): TransformSourceDescription = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
-    if (ast != null) __obj.updateDynamic("ast")(ast.asInstanceOf[js.Any])
-    if (dependencies != null) __obj.updateDynamic("dependencies")(dependencies.asInstanceOf[js.Any])
-    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
-    if (!js.isUndefined(moduleSideEffects)) __obj.updateDynamic("moduleSideEffects")(moduleSideEffects.asInstanceOf[js.Any])
-    if (!js.isUndefined(syntheticNamedExports)) __obj.updateDynamic("syntheticNamedExports")(syntheticNamedExports.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransformSourceDescription]
   }
+  @scala.inline
+  implicit class TransformSourceDescriptionOps[Self <: TransformSourceDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDependencies(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDependencies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

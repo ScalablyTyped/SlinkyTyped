@@ -191,7 +191,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def andHaving[TResult2](sql: String, bindings: RawBinding*): QueryBuilder[TRecord, TResult2] = js.native
   def andHaving[TResult2](sql: String, bindings: js.Array[RawBinding]): QueryBuilder[TRecord, TResult2] = js.native
   def andHaving[TResult2](sql: String, bindings: ValueDict): QueryBuilder[TRecord, TResult2] = js.native
-  def andHaving[K1 /* <: String */, K2 /* <: String */](tableName: String, column1: K1, operator: ComparisionOperator, column2: K2): QueryBuilder[TRecord, TResult] = js.native
+  def andHaving[K1 /* <: /* keyof TRecord */ String */, K2 /* <: /* keyof TRecord */ String */](tableName: String, column1: K1, operator: ComparisionOperator, column2: K2): QueryBuilder[TRecord, TResult] = js.native
   def andWhere(callback: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
   def andWhere(columnName: String): QueryBuilder[TRecord, TResult] = js.native
   def andWhere(columnName: String, operator: String): QueryBuilder[TRecord, TResult] = js.native
@@ -203,14 +203,14 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def andWhere(`object`: js.Object): QueryBuilder[TRecord, TResult] = js.native
   def andWhere(`object`: SafePartial[TRecord]): QueryBuilder[TRecord, TResult] = js.native
   def andWhere(raw: Raw[_]): QueryBuilder[TRecord, TResult] = js.native
-  def andWhere[T /* <: String */](columnName: T): QueryBuilder[TRecord, TResult] = js.native
-  def andWhere[T /* <: String */](columnName: T, operator: ComparisionOperator): QueryBuilder[TRecord, TResult] = js.native
-  def andWhere[T /* <: String */](
+  def andWhere[T /* <: /* keyof TRecord */ String */](columnName: T): QueryBuilder[TRecord, TResult] = js.native
+  def andWhere[T /* <: /* keyof TRecord */ String */](columnName: T, operator: ComparisionOperator): QueryBuilder[TRecord, TResult] = js.native
+  def andWhere[T /* <: /* keyof TRecord */ String */](
     columnName: T,
     operator: ComparisionOperator,
     value: /* import warning: importer.ImportType#apply Failed type conversion: TRecord[T] */ js.Any
   ): QueryBuilder[TRecord, TResult] = js.native
-  def andWhere[T /* <: String */](
+  def andWhere[T /* <: /* keyof TRecord */ String */](
     columnName: T,
     value: /* import warning: importer.ImportType#apply Failed type conversion: TRecord[T] */ js.Any
   ): QueryBuilder[TRecord, TResult] = js.native
@@ -219,9 +219,9 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def andWhere[TResult2](sql: String, bindings: ValueDict): QueryBuilder[TRecord, TResult2] = js.native
   def andWhere[TRecordInner, TResultInner](columnName: String, operator: String, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
   def andWhere[TRecordInner, TResultInner](left: Raw[_], operator: String, right: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
-  def andWhere[T /* <: String */, TRecordInner, TResultInner](columnName: T, operator: ComparisionOperator, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
+  def andWhere[T /* <: /* keyof TRecord */ String */, TRecordInner, TResultInner](columnName: T, operator: ComparisionOperator, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
   def andWhereBetween(columnName: String, range: js.Tuple2[Value, Value]): QueryBuilder[TRecord, TResult] = js.native
-  def andWhereBetween[K /* <: String */](
+  def andWhereBetween[K /* <: /* keyof TRecord */ String */](
     columnName: K,
     range: js.Tuple2[
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any, 
@@ -239,14 +239,14 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def andWhereNot(`object`: js.Object): QueryBuilder[TRecord, TResult] = js.native
   def andWhereNot(`object`: SafePartial[TRecord]): QueryBuilder[TRecord, TResult] = js.native
   def andWhereNot(raw: Raw[_]): QueryBuilder[TRecord, TResult] = js.native
-  def andWhereNot[T /* <: String */](columnName: T): QueryBuilder[TRecord, TResult] = js.native
-  def andWhereNot[T /* <: String */](columnName: T, operator: ComparisionOperator): QueryBuilder[TRecord, TResult] = js.native
-  def andWhereNot[T /* <: String */](
+  def andWhereNot[T /* <: /* keyof TRecord */ String */](columnName: T): QueryBuilder[TRecord, TResult] = js.native
+  def andWhereNot[T /* <: /* keyof TRecord */ String */](columnName: T, operator: ComparisionOperator): QueryBuilder[TRecord, TResult] = js.native
+  def andWhereNot[T /* <: /* keyof TRecord */ String */](
     columnName: T,
     operator: ComparisionOperator,
     value: /* import warning: importer.ImportType#apply Failed type conversion: TRecord[T] */ js.Any
   ): QueryBuilder[TRecord, TResult] = js.native
-  def andWhereNot[T /* <: String */](
+  def andWhereNot[T /* <: /* keyof TRecord */ String */](
     columnName: T,
     value: /* import warning: importer.ImportType#apply Failed type conversion: TRecord[T] */ js.Any
   ): QueryBuilder[TRecord, TResult] = js.native
@@ -255,9 +255,9 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def andWhereNot[TResult2](sql: String, bindings: ValueDict): QueryBuilder[TRecord, TResult2] = js.native
   def andWhereNot[TRecordInner, TResultInner](columnName: String, operator: String, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
   def andWhereNot[TRecordInner, TResultInner](left: Raw[_], operator: String, right: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
-  def andWhereNot[T /* <: String */, TRecordInner, TResultInner](columnName: T, operator: ComparisionOperator, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
+  def andWhereNot[T /* <: /* keyof TRecord */ String */, TRecordInner, TResultInner](columnName: T, operator: ComparisionOperator, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
   def andWhereNotBetween(columnName: String, range: js.Tuple2[Value, Value]): QueryBuilder[TRecord, TResult] = js.native
-  def andWhereNotBetween[K /* <: String */](
+  def andWhereNotBetween[K /* <: /* keyof TRecord */ String */](
     columnName: K,
     range: js.Tuple2[
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any, 
@@ -273,15 +273,15 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def andWhereRaw[TResult2](sql: String, bindings: ValueDict): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("andWhere")
   def andWhere_TResult2[TResult2](raw: Raw[TResult2]): QueryBuilder[TRecord, TResult2] = js.native
-  def as(columnName: String): QueryBuilder[TRecord, TResult] = js.native
+  def as(columnName: /* keyof TRecord */ String): QueryBuilder[TRecord, TResult] = js.native
   def avg[TResult2](columnNames: ((Record[String, String | js.Array[String] | Raw[_]]) | Raw[_] | String)*): QueryBuilder[TRecord, TResult2] = js.native
   def avg[TAliases /* <: js.Object */, TResult2](aliases: TAliases): QueryBuilder[TRecord, TResult2] = js.native
   def avgDistinct[TResult2](columnNames: ((Record[String, String | js.Array[String] | Raw[_]]) | Raw[_] | String)*): QueryBuilder[TRecord, TResult2] = js.native
   def avgDistinct[TAliases /* <: js.Object */, TResult2](aliases: TAliases): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("avgDistinct")
-  def avgDistinct_TKey_StringTResult2[TKey /* <: String */, TResult2](columnNames: TKey*): QueryBuilder[TRecord, TResult2] = js.native
+  def avgDistinct_TKey_StringTResult2[TKey /* <: /* keyof TRecord */ String */, TResult2](columnNames: TKey*): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("avg")
-  def avg_TKey_StringTResult2[TKey /* <: String */, TResult2](columnNames: TKey*): QueryBuilder[TRecord, TResult2] = js.native
+  def avg_TKey_StringTResult2[TKey /* <: /* keyof TRecord */ String */, TResult2](columnNames: TKey*): QueryBuilder[TRecord, TResult2] = js.native
   def clearCounters(): QueryBuilder[TRecord, TResult] = js.native
   def clearHaving(): QueryBuilder[TRecord, TResult] = js.native
   def clearOrder(): QueryBuilder[TRecord, TResult] = js.native
@@ -306,17 +306,17 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   // specify result type and if not widen the result to entire record type with any omissions permitted
   def column[TResult2](columnNames: (ColumnDescriptor[TRecord, TResult])*): QueryBuilder[TRecord, TResult2] = js.native
   def column[TResult2](columnNames: js.Array[ColumnDescriptor[TRecord, TResult]]): QueryBuilder[TRecord, TResult2] = js.native
-  def column[AliasUT /* <: js.Array[Dict[_] | String] */, TResult2](
+  def column[AliasUT /* <: js.Array[InferrableColumnDescriptor[TRecord]] */, TResult2](
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
   ): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("column")
-  def column_AliasUT_ArrayInferrableColumnDescriptorTRecordTResult2[AliasUT /* <: js.Array[InferrableColumnDescriptor[TRecord]] */, TResult2](
+  def column_AliasUT_ArrayUnionDictWildcardStringTResult2[AliasUT /* <: js.Array[Dict[_] | String] */, TResult2](
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
   ): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("column")
-  def column_ColNameUT_StringTResult2[ColNameUT /* <: String */, TResult2](columnNames: ColNameUT*): QueryBuilder[TRecord, TResult2] = js.native
+  def column_ColNameUT_StringTResult2[ColNameUT /* <: /* keyof TRecord */ String */, TResult2](columnNames: ColNameUT*): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("column")
-  def column_ColNameUT_StringTResult2[ColNameUT /* <: String */, TResult2](columnNames: js.Array[ColNameUT]): QueryBuilder[TRecord, TResult2] = js.native
+  def column_ColNameUT_StringTResult2[ColNameUT /* <: /* keyof TRecord */ String */, TResult2](columnNames: js.Array[ColNameUT]): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("column")
   def column_TResult2TInnerRecordTInnerResult[TResult2, TInnerRecord, TInnerResult](subQueryBuilders: (QueryBuilder[TInnerRecord, TInnerResult])*): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("column")
@@ -334,26 +334,30 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   // specify result type and if not widen the result to entire record type with any omissions permitted
   def columns[TResult2](columnNames: (ColumnDescriptor[TRecord, TResult])*): QueryBuilder[TRecord, TResult2] = js.native
   def columns[TResult2](columnNames: js.Array[ColumnDescriptor[TRecord, TResult]]): QueryBuilder[TRecord, TResult2] = js.native
-  def columns[AliasUT /* <: js.Array[Dict[_] | String] */, TResult2](
+  def columns[AliasUT /* <: js.Array[InferrableColumnDescriptor[TRecord]] */, TResult2](
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
   ): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("columns")
-  def columns_AliasUT_ArrayInferrableColumnDescriptorTRecordTResult2[AliasUT /* <: js.Array[InferrableColumnDescriptor[TRecord]] */, TResult2](
+  def columns_AliasUT_ArrayUnionDictWildcardStringTResult2[AliasUT /* <: js.Array[Dict[_] | String] */, TResult2](
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
   ): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("columns")
-  def columns_ColNameUT_StringTResult2[ColNameUT /* <: String */, TResult2](columnNames: ColNameUT*): QueryBuilder[TRecord, TResult2] = js.native
+  def columns_ColNameUT_StringTResult2[ColNameUT /* <: /* keyof TRecord */ String */, TResult2](columnNames: ColNameUT*): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("columns")
-  def columns_ColNameUT_StringTResult2[ColNameUT /* <: String */, TResult2](columnNames: js.Array[ColNameUT]): QueryBuilder[TRecord, TResult2] = js.native
+  def columns_ColNameUT_StringTResult2[ColNameUT /* <: /* keyof TRecord */ String */, TResult2](columnNames: js.Array[ColNameUT]): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("columns")
   def columns_TResult2TInnerRecordTInnerResult[TResult2, TInnerRecord, TInnerResult](subQueryBuilders: (QueryBuilder[TInnerRecord, TInnerResult])*): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("columns")
   def columns_TResult2TInnerRecordTInnerResult[TResult2, TInnerRecord, TInnerResult](subQueryBuilders: js.Array[QueryBuilder[TInnerRecord, TInnerResult]]): QueryBuilder[TRecord, TResult2] = js.native
   // Aggregation
-  def count[TResult2](columnNames: (Raw[_] | (Record[String, String | js.Array[String] | Raw[_]]) | String)*): QueryBuilder[TRecord, TResult2] = js.native
+  def count[TResult2](
+    columnNames: (Raw[_] | (Record[String, String | js.Array[String] | Raw[_]]) | (/* keyof TRecord */ String))*
+  ): QueryBuilder[TRecord, TResult2] = js.native
   // Aggregation
   def count[TAliases /* <: js.Object */, TResult2](aliases: TAliases): QueryBuilder[TRecord, TResult2] = js.native
-  def countDistinct[TResult2](columnNames: (Raw[_] | (Record[String, String | js.Array[String] | Raw[_]]) | String)*): QueryBuilder[TRecord, TResult2] = js.native
+  def countDistinct[TResult2](
+    columnNames: (Raw[_] | (Record[String, String | js.Array[String] | Raw[_]]) | (/* keyof TRecord */ String))*
+  ): QueryBuilder[TRecord, TResult2] = js.native
   def countDistinct[TAliases /* <: js.Object */, TResult2](aliases: TAliases): QueryBuilder[TRecord, TResult2] = js.native
   def crossJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](raw: Raw[_]): QueryBuilder[TRecord2, TResult2] = js.native
   def crossJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](tableName: AliasDict, clause: JoinCallback): QueryBuilder[TRecord2, TResult2] = js.native
@@ -377,8 +381,8 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def crossJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](tableName: TableDescriptor, column1: String, raw: Raw[_]): QueryBuilder[TRecord2, TResult2] = js.native
   def crossJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](tableName: TableDescriptor, columns: StringDictionary[String | Double | Boolean | Raw[_]]): QueryBuilder[TRecord2, TResult2] = js.native
   def crossJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](tableName: TableDescriptor, raw: Raw[_]): QueryBuilder[TRecord2, TResult2] = js.native
-  def decrement(columnName: String): QueryBuilder[TRecord, Double] = js.native
-  def decrement(columnName: String, amount: Double): QueryBuilder[TRecord, Double] = js.native
+  def decrement(columnName: /* keyof TRecord */ String): QueryBuilder[TRecord, Double] = js.native
+  def decrement(columnName: /* keyof TRecord */ String, amount: Double): QueryBuilder[TRecord, Double] = js.native
   def del(returning: Asterisk): QueryBuilder[
     TRecord, 
     js.Array[
@@ -416,9 +420,9 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def distinct[TResult2](columnNames: (ColumnDescriptor[TRecord, TResult])*): QueryBuilder[TRecord, TResult2] = js.native
   def distinct[TResult2](columnNames: js.Array[ColumnDescriptor[TRecord, TResult]]): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("distinct")
-  def distinct_ColNameUT_StringTResult2[ColNameUT /* <: String */, TResult2](columnNames: ColNameUT*): QueryBuilder[TRecord, TResult2] = js.native
+  def distinct_ColNameUT_StringTResult2[ColNameUT /* <: /* keyof TRecord */ String */, TResult2](columnNames: ColNameUT*): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("distinct")
-  def distinct_ColNameUT_StringTResult2[ColNameUT /* <: String */, TResult2](columnNames: js.Array[ColNameUT]): QueryBuilder[TRecord, TResult2] = js.native
+  def distinct_ColNameUT_StringTResult2[ColNameUT /* <: /* keyof TRecord */ String */, TResult2](columnNames: js.Array[ColNameUT]): QueryBuilder[TRecord, TResult2] = js.native
   // Others
   def first(): QueryBuilder[TRecord, AddUnionMember[UnwrapArrayMember[TResult], js.UndefOr[scala.Nothing]]] = js.native
   // When all columns are known to be keys of original record,
@@ -443,20 +447,20 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
     ]
   ): QueryBuilder[TRecord, TResult2] = js.native
   // Others
-  def first[AliasUT /* <: js.Array[Dict[_] | String] */, TResult2](
+  def first[AliasUT /* <: js.Array[InferrableColumnDescriptor[TRecord]] */, TResult2](
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
   ): QueryBuilder[TRecord, TResult2] = js.native
   // Others
   @JSName("first")
-  def first_AliasUT_ArrayInferrableColumnDescriptorTRecordTResult2[AliasUT /* <: js.Array[InferrableColumnDescriptor[TRecord]] */, TResult2](
+  def first_AliasUT_ArrayUnionDictWildcardStringTResult2[AliasUT /* <: js.Array[Dict[_] | String] */, TResult2](
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
   ): QueryBuilder[TRecord, TResult2] = js.native
   // Others
   @JSName("first")
-  def first_ColNameUT_StringTResult2[ColNameUT /* <: String */, TResult2](columnNames: ColNameUT*): QueryBuilder[TRecord, TResult2] = js.native
+  def first_ColNameUT_StringTResult2[ColNameUT /* <: /* keyof TRecord */ String */, TResult2](columnNames: ColNameUT*): QueryBuilder[TRecord, TResult2] = js.native
   // Others
   @JSName("first")
-  def first_ColNameUT_StringTResult2[ColNameUT /* <: String */, TResult2](columnNames: js.Array[ColNameUT]): QueryBuilder[TRecord, TResult2] = js.native
+  def first_ColNameUT_StringTResult2[ColNameUT /* <: /* keyof TRecord */ String */, TResult2](columnNames: js.Array[ColNameUT]): QueryBuilder[TRecord, TResult2] = js.native
   // Others
   @JSName("first")
   def first_TResult2TInnerRecordTInnerResult[TResult2, TInnerRecord, TInnerResult](subQueryBuilders: (QueryBuilder[TInnerRecord, TInnerResult])*): QueryBuilder[TRecord, TResult2] = js.native
@@ -517,10 +521,10 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def groupByRaw[TResult2](sql: String, bindings: ValueDict): QueryBuilder[TRecord, TResult2] = js.native
   // Group by
   @JSName("groupBy")
-  def groupBy_ColNameUT_StringTResult2[ColNameUT /* <: String */, TResult2](columnNames: ColNameUT*): QueryBuilder[TRecord, TResult2] = js.native
+  def groupBy_ColNameUT_StringTResult2[ColNameUT /* <: /* keyof TRecord */ String */, TResult2](columnNames: ColNameUT*): QueryBuilder[TRecord, TResult2] = js.native
   // Group by
   @JSName("groupBy")
-  def groupBy_ColNameUT_StringTResult2[ColNameUT /* <: String */, TResult2](columnNames: js.Array[ColNameUT]): QueryBuilder[TRecord, TResult2] = js.native
+  def groupBy_ColNameUT_StringTResult2[ColNameUT /* <: /* keyof TRecord */ String */, TResult2](columnNames: js.Array[ColNameUT]): QueryBuilder[TRecord, TResult2] = js.native
   // Having
   def having(tableName: String, column1: String, operator: String, column2: String): QueryBuilder[TRecord, TResult] = js.native
   // Having
@@ -531,23 +535,23 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def having[TResult2](sql: String, bindings: js.Array[RawBinding]): QueryBuilder[TRecord, TResult2] = js.native
   def having[TResult2](sql: String, bindings: ValueDict): QueryBuilder[TRecord, TResult2] = js.native
   // Having
-  def having[K1 /* <: String */, K2 /* <: String */](tableName: String, column1: K1, operator: ComparisionOperator, column2: K2): QueryBuilder[TRecord, TResult] = js.native
+  def having[K1 /* <: /* keyof TRecord */ String */, K2 /* <: /* keyof TRecord */ String */](tableName: String, column1: K1, operator: ComparisionOperator, column2: K2): QueryBuilder[TRecord, TResult] = js.native
   def havingBetween(columnName: String, values: js.Array[Value]): QueryBuilder[TRecord, TResult] = js.native
-  def havingBetween[K /* <: String */](
+  def havingBetween[K /* <: /* keyof TRecord */ String */](
     columnName: K,
     values: js.Array[
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any
     ]
   ): QueryBuilder[TRecord, TResult] = js.native
   def havingIn(columnName: String, values: js.Array[Value]): QueryBuilder[TRecord, TResult] = js.native
-  def havingIn[K /* <: String */](
+  def havingIn[K /* <: /* keyof TRecord */ String */](
     columnName: K,
     values: js.Array[
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any
     ]
   ): QueryBuilder[TRecord, TResult] = js.native
   def havingNotBetween(columnName: String, values: js.Array[Value]): QueryBuilder[TRecord, TResult] = js.native
-  def havingNotBetween[K /* <: String */](
+  def havingNotBetween[K /* <: /* keyof TRecord */ String */](
     columnName: K,
     values: js.Array[
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any
@@ -558,8 +562,8 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def havingRaw[TResult2](sql: String, bindings: js.Array[RawBinding]): QueryBuilder[TRecord, TResult2] = js.native
   def havingRaw[TResult2](sql: String, bindings: ValueDict): QueryBuilder[TRecord, TResult2] = js.native
   def havingWrapped(callback: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
-  def increment(columnName: String): QueryBuilder[TRecord, Double] = js.native
-  def increment(columnName: String, amount: Double): QueryBuilder[TRecord, Double] = js.native
+  def increment(columnName: /* keyof TRecord */ String): QueryBuilder[TRecord, Double] = js.native
+  def increment(columnName: /* keyof TRecord */ String, amount: Double): QueryBuilder[TRecord, Double] = js.native
   def innerJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](raw: Raw[_]): QueryBuilder[TRecord2, TResult2] = js.native
   def innerJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](tableName: AliasDict, clause: JoinCallback): QueryBuilder[TRecord2, TResult2] = js.native
   def innerJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](tableName: AliasDict, column1: String, column2: String): QueryBuilder[TRecord2, TResult2] = js.native
@@ -589,12 +593,12 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
     ]
   ] = js.native
   def insert[TResult2](data: MaybeArray[SafePartial[TRecord]]): QueryBuilder[TRecord, TResult2] = js.native
-  def insert[TKey /* <: StrKey[TRecord] */, TResult2](data: MaybeArray[SafePartial[TRecord]], returning: TKey): QueryBuilder[TRecord, TResult2] = js.native
-  def insert[TKey /* <: StrKey[TRecord] */, TResult2](data: MaybeArray[SafePartial[TRecord]], returning: js.Array[TKey]): QueryBuilder[TRecord, TResult2] = js.native
+  def insert[TKey /* <: String */, TResult2](data: MaybeArray[SafePartial[TRecord]], returning: TKey): QueryBuilder[TRecord, TResult2] = js.native
+  def insert[TKey /* <: String */, TResult2](data: MaybeArray[SafePartial[TRecord]], returning: js.Array[TKey]): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("insert")
-  def insert_TKey_StringTResult2[TKey /* <: String */, TResult2](data: MaybeArray[SafePartial[TRecord]], returning: TKey): QueryBuilder[TRecord, TResult2] = js.native
+  def insert_TKey_StrKeyTRecordTResult2[TKey /* <: StrKey[TRecord] */, TResult2](data: MaybeArray[SafePartial[TRecord]], returning: TKey): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("insert")
-  def insert_TKey_StringTResult2[TKey /* <: String */, TResult2](data: MaybeArray[SafePartial[TRecord]], returning: js.Array[TKey]): QueryBuilder[TRecord, TResult2] = js.native
+  def insert_TKey_StrKeyTRecordTResult2[TKey /* <: StrKey[TRecord] */, TResult2](data: MaybeArray[SafePartial[TRecord]], returning: js.Array[TKey]): QueryBuilder[TRecord, TResult2] = js.native
   // Intersect
   def intersect(callbacks: ((QueryCallback[_, js.Array[_]]) | Raw[_] | (QueryBuilder[TRecord, _]))*): QueryBuilder[TRecord, TResult] = js.native
   // Intersect
@@ -687,11 +691,11 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def max[TResult2](columnNames: ((Record[String, String | js.Array[String] | Raw[_]]) | Raw[_] | String)*): QueryBuilder[TRecord, TResult2] = js.native
   def max[TAliases /* <: js.Object */, TResult2](aliases: TAliases): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("max")
-  def max_TKey_StringTResult2[TKey /* <: String */, TResult2](columnNames: TKey*): QueryBuilder[TRecord, TResult2] = js.native
+  def max_TKey_StringTResult2[TKey /* <: /* keyof TRecord */ String */, TResult2](columnNames: TKey*): QueryBuilder[TRecord, TResult2] = js.native
   def min[TResult2](columnNames: ((Record[String, String | js.Array[String] | Raw[_]]) | Raw[_] | String)*): QueryBuilder[TRecord, TResult2] = js.native
   def min[TAliases /* <: js.Object */, TResult2](aliases: TAliases): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("min")
-  def min_TKey_StringTResult2[TKey /* <: String */, TResult2](columnNames: TKey*): QueryBuilder[TRecord, TResult2] = js.native
+  def min_TKey_StringTResult2[TKey /* <: /* keyof TRecord */ String */, TResult2](columnNames: TKey*): QueryBuilder[TRecord, TResult2] = js.native
   def modify[TRecord2 /* <: js.Object */, TResult2 /* <: js.Object */](callback: QueryCallbackWithArgs[TRecord, _], args: js.Any*): QueryBuilder[TRecord2, TResult2] = js.native
   // Paging
   def offset(offset: Double): QueryBuilder[TRecord, TResult] = js.native
@@ -700,16 +704,16 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def orHaving[TResult2](sql: String, bindings: RawBinding*): QueryBuilder[TRecord, TResult2] = js.native
   def orHaving[TResult2](sql: String, bindings: js.Array[RawBinding]): QueryBuilder[TRecord, TResult2] = js.native
   def orHaving[TResult2](sql: String, bindings: ValueDict): QueryBuilder[TRecord, TResult2] = js.native
-  def orHaving[K1 /* <: String */, K2 /* <: String */](tableName: String, column1: K1, operator: ComparisionOperator, column2: K2): QueryBuilder[TRecord, TResult] = js.native
+  def orHaving[K1 /* <: /* keyof TRecord */ String */, K2 /* <: /* keyof TRecord */ String */](tableName: String, column1: K1, operator: ComparisionOperator, column2: K2): QueryBuilder[TRecord, TResult] = js.native
   def orHavingBetween(columnName: String, values: js.Array[Value]): QueryBuilder[TRecord, TResult] = js.native
-  def orHavingBetween[K /* <: String */](
+  def orHavingBetween[K /* <: /* keyof TRecord */ String */](
     columnName: K,
     values: js.Array[
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any
     ]
   ): QueryBuilder[TRecord, TResult] = js.native
   def orHavingNotBetween(columnName: String, values: js.Array[Value]): QueryBuilder[TRecord, TResult] = js.native
-  def orHavingNotBetween[K /* <: String */](
+  def orHavingNotBetween[K /* <: /* keyof TRecord */ String */](
     columnName: K,
     values: js.Array[
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any
@@ -730,14 +734,14 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def orWhere(`object`: js.Object): QueryBuilder[TRecord, TResult] = js.native
   def orWhere(`object`: SafePartial[TRecord]): QueryBuilder[TRecord, TResult] = js.native
   def orWhere(raw: Raw[_]): QueryBuilder[TRecord, TResult] = js.native
-  def orWhere[T /* <: String */](columnName: T): QueryBuilder[TRecord, TResult] = js.native
-  def orWhere[T /* <: String */](columnName: T, operator: ComparisionOperator): QueryBuilder[TRecord, TResult] = js.native
-  def orWhere[T /* <: String */](
+  def orWhere[T /* <: /* keyof TRecord */ String */](columnName: T): QueryBuilder[TRecord, TResult] = js.native
+  def orWhere[T /* <: /* keyof TRecord */ String */](columnName: T, operator: ComparisionOperator): QueryBuilder[TRecord, TResult] = js.native
+  def orWhere[T /* <: /* keyof TRecord */ String */](
     columnName: T,
     operator: ComparisionOperator,
     value: /* import warning: importer.ImportType#apply Failed type conversion: TRecord[T] */ js.Any
   ): QueryBuilder[TRecord, TResult] = js.native
-  def orWhere[T /* <: String */](
+  def orWhere[T /* <: /* keyof TRecord */ String */](
     columnName: T,
     value: /* import warning: importer.ImportType#apply Failed type conversion: TRecord[T] */ js.Any
   ): QueryBuilder[TRecord, TResult] = js.native
@@ -746,9 +750,9 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def orWhere[TResult2](sql: String, bindings: ValueDict): QueryBuilder[TRecord, TResult2] = js.native
   def orWhere[TRecordInner, TResultInner](columnName: String, operator: String, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
   def orWhere[TRecordInner, TResultInner](left: Raw[_], operator: String, right: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
-  def orWhere[T /* <: String */, TRecordInner, TResultInner](columnName: T, operator: ComparisionOperator, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
+  def orWhere[T /* <: /* keyof TRecord */ String */, TRecordInner, TResultInner](columnName: T, operator: ComparisionOperator, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
   def orWhereBetween(columnName: String, range: js.Tuple2[Value, Value]): QueryBuilder[TRecord, TResult] = js.native
-  def orWhereBetween[K /* <: String */](
+  def orWhereBetween[K /* <: /* keyof TRecord */ String */](
     columnName: K,
     range: js.Tuple2[
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any, 
@@ -761,16 +765,16 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def orWhereIn(columnName: String, values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
   def orWhereIn(columnNames: js.Array[String], values: js.Array[js.Array[Value]]): QueryBuilder[TRecord, TResult] = js.native
   def orWhereIn(columnNames: js.Array[String], values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
-  def orWhereIn[K /* <: String */](
+  def orWhereIn[K /* <: /* keyof TRecord */ String */](
     columnName: K,
     values: js.Array[
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any
     ]
   ): QueryBuilder[TRecord, TResult] = js.native
-  def orWhereIn[K /* <: String */](columnName: K, values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
+  def orWhereIn[K /* <: /* keyof TRecord */ String */](columnName: K, values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
   def orWhereIn[TRecordInner, TResultInner](columnName: String, values: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
   def orWhereIn[TRecordInner, TResultInner](columnNames: js.Array[String], values: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
-  def orWhereIn[K /* <: String */, TRecordInner, TResultInner](
+  def orWhereIn[K /* <: /* keyof TRecord */ String */, TRecordInner, TResultInner](
     columnName: K,
     values: QueryBuilder[
       TRecordInner, 
@@ -778,7 +782,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
     ]
   ): QueryBuilder[TRecord, TResult] = js.native
   @JSName("orWhereIn")
-  def orWhereIn_K_String[K /* <: String */](
+  def orWhereIn_K_String[K /* <: /* keyof TRecord */ String */](
     columnNames: js.Array[K],
     values: js.Array[
       js.Array[
@@ -787,9 +791,9 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
     ]
   ): QueryBuilder[TRecord, TResult] = js.native
   @JSName("orWhereIn")
-  def orWhereIn_K_String[K /* <: String */](columnNames: js.Array[K], values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
+  def orWhereIn_K_String[K /* <: /* keyof TRecord */ String */](columnNames: js.Array[K], values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
   @JSName("orWhereIn")
-  def orWhereIn_K_StringTRecordInnerTResultInner[K /* <: String */, TRecordInner, TResultInner](
+  def orWhereIn_K_StringTRecordInnerTResultInner[K /* <: /* keyof TRecord */ String */, TRecordInner, TResultInner](
     columnNames: js.Array[K],
     values: QueryBuilder[
       TRecordInner, 
@@ -807,14 +811,14 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def orWhereNot(`object`: js.Object): QueryBuilder[TRecord, TResult] = js.native
   def orWhereNot(`object`: SafePartial[TRecord]): QueryBuilder[TRecord, TResult] = js.native
   def orWhereNot(raw: Raw[_]): QueryBuilder[TRecord, TResult] = js.native
-  def orWhereNot[T /* <: String */](columnName: T): QueryBuilder[TRecord, TResult] = js.native
-  def orWhereNot[T /* <: String */](columnName: T, operator: ComparisionOperator): QueryBuilder[TRecord, TResult] = js.native
-  def orWhereNot[T /* <: String */](
+  def orWhereNot[T /* <: /* keyof TRecord */ String */](columnName: T): QueryBuilder[TRecord, TResult] = js.native
+  def orWhereNot[T /* <: /* keyof TRecord */ String */](columnName: T, operator: ComparisionOperator): QueryBuilder[TRecord, TResult] = js.native
+  def orWhereNot[T /* <: /* keyof TRecord */ String */](
     columnName: T,
     operator: ComparisionOperator,
     value: /* import warning: importer.ImportType#apply Failed type conversion: TRecord[T] */ js.Any
   ): QueryBuilder[TRecord, TResult] = js.native
-  def orWhereNot[T /* <: String */](
+  def orWhereNot[T /* <: /* keyof TRecord */ String */](
     columnName: T,
     value: /* import warning: importer.ImportType#apply Failed type conversion: TRecord[T] */ js.Any
   ): QueryBuilder[TRecord, TResult] = js.native
@@ -823,9 +827,9 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def orWhereNot[TResult2](sql: String, bindings: ValueDict): QueryBuilder[TRecord, TResult2] = js.native
   def orWhereNot[TRecordInner, TResultInner](columnName: String, operator: String, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
   def orWhereNot[TRecordInner, TResultInner](left: Raw[_], operator: String, right: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
-  def orWhereNot[T /* <: String */, TRecordInner, TResultInner](columnName: T, operator: ComparisionOperator, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
+  def orWhereNot[T /* <: /* keyof TRecord */ String */, TRecordInner, TResultInner](columnName: T, operator: ComparisionOperator, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
   def orWhereNotBetween(columnName: String, range: js.Tuple2[Value, Value]): QueryBuilder[TRecord, TResult] = js.native
-  def orWhereNotBetween[K /* <: String */](
+  def orWhereNotBetween[K /* <: /* keyof TRecord */ String */](
     columnName: K,
     range: js.Tuple2[
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any, 
@@ -838,16 +842,16 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def orWhereNotIn(columnName: String, values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
   def orWhereNotIn(columnNames: js.Array[String], values: js.Array[js.Array[Value]]): QueryBuilder[TRecord, TResult] = js.native
   def orWhereNotIn(columnNames: js.Array[String], values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
-  def orWhereNotIn[K /* <: String */](
+  def orWhereNotIn[K /* <: /* keyof TRecord */ String */](
     columnName: K,
     values: js.Array[
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any
     ]
   ): QueryBuilder[TRecord, TResult] = js.native
-  def orWhereNotIn[K /* <: String */](columnName: K, values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
+  def orWhereNotIn[K /* <: /* keyof TRecord */ String */](columnName: K, values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
   def orWhereNotIn[TRecordInner, TResultInner](columnName: String, values: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
   def orWhereNotIn[TRecordInner, TResultInner](columnNames: js.Array[String], values: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
-  def orWhereNotIn[K /* <: String */, TRecordInner, TResultInner](
+  def orWhereNotIn[K /* <: /* keyof TRecord */ String */, TRecordInner, TResultInner](
     columnName: K,
     values: QueryBuilder[
       TRecordInner, 
@@ -855,7 +859,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
     ]
   ): QueryBuilder[TRecord, TResult] = js.native
   @JSName("orWhereNotIn")
-  def orWhereNotIn_K_String[K /* <: String */](
+  def orWhereNotIn_K_String[K /* <: /* keyof TRecord */ String */](
     columnNames: js.Array[K],
     values: js.Array[
       js.Array[
@@ -864,19 +868,19 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
     ]
   ): QueryBuilder[TRecord, TResult] = js.native
   @JSName("orWhereNotIn")
-  def orWhereNotIn_K_String[K /* <: String */](columnNames: js.Array[K], values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
+  def orWhereNotIn_K_String[K /* <: /* keyof TRecord */ String */](columnNames: js.Array[K], values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
   @JSName("orWhereNotIn")
-  def orWhereNotIn_K_StringTRecordInnerTResultInner[K /* <: String */, TRecordInner, TResultInner](
+  def orWhereNotIn_K_StringTRecordInnerTResultInner[K /* <: /* keyof TRecord */ String */, TRecordInner, TResultInner](
     columnNames: js.Array[K],
     values: QueryBuilder[
       TRecordInner, 
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any
     ]
   ): QueryBuilder[TRecord, TResult] = js.native
-  def orWhereNotNull(columnName: String): QueryBuilder[TRecord, TResult] = js.native
+  def orWhereNotNull(columnName: /* keyof TRecord */ String): QueryBuilder[TRecord, TResult] = js.native
   @JSName("orWhereNot")
   def orWhereNot_TResult2[TResult2](raw: Raw[TResult2]): QueryBuilder[TRecord, TResult2] = js.native
-  def orWhereNull(columnName: String): QueryBuilder[TRecord, TResult] = js.native
+  def orWhereNull(columnName: /* keyof TRecord */ String): QueryBuilder[TRecord, TResult] = js.native
   def orWhereRaw(condition: Boolean): QueryBuilder[TRecord, TResult] = js.native
   def orWhereRaw[TResult2](raw: Raw[TResult2]): QueryBuilder[TRecord, TResult2] = js.native
   def orWhereRaw[TResult2](sql: String, bindings: RawBinding*): QueryBuilder[TRecord, TResult2] = js.native
@@ -885,18 +889,18 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   @JSName("orWhere")
   def orWhere_TResult2[TResult2](raw: Raw[TResult2]): QueryBuilder[TRecord, TResult2] = js.native
   // Order by
-  def orderBy(columnDefs: js.Array[AnonColumn[TRecord] | AnonOrder | String]): QueryBuilder[TRecord, TResult] = js.native
+  def orderBy(columnDefs: js.Array[AnonColumn[TRecord] | AnonOrder | (/* keyof TRecord */ String)]): QueryBuilder[TRecord, TResult] = js.native
   // Order by
-  def orderBy(columnName: String): QueryBuilder[TRecord, TResult] = js.native
+  def orderBy(columnName: /* keyof TRecord */ String): QueryBuilder[TRecord, TResult] = js.native
   def orderBy(columnName: String, order: String): QueryBuilder[TRecord, TResult] = js.native
   def orderByRaw[TResult2](raw: Raw[TResult2]): QueryBuilder[TRecord, TResult2] = js.native
   def orderByRaw[TResult2](sql: String, bindings: RawBinding*): QueryBuilder[TRecord, TResult2] = js.native
   def orderByRaw[TResult2](sql: String, bindings: js.Array[RawBinding]): QueryBuilder[TRecord, TResult2] = js.native
   def orderByRaw[TResult2](sql: String, bindings: ValueDict): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("orderBy")
-  def orderBy_asc(columnName: String, order: asc): QueryBuilder[TRecord, TResult] = js.native
+  def orderBy_asc(columnName: /* keyof TRecord */ String, order: asc): QueryBuilder[TRecord, TResult] = js.native
   @JSName("orderBy")
-  def orderBy_desc(columnName: String, order: desc): QueryBuilder[TRecord, TResult] = js.native
+  def orderBy_desc(columnName: /* keyof TRecord */ String, order: desc): QueryBuilder[TRecord, TResult] = js.native
   def outerJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](raw: Raw[_]): QueryBuilder[TRecord2, TResult2] = js.native
   def outerJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](tableName: AliasDict, clause: JoinCallback): QueryBuilder[TRecord2, TResult2] = js.native
   def outerJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](tableName: AliasDict, column1: String, column2: String): QueryBuilder[TRecord2, TResult2] = js.native
@@ -919,7 +923,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def outerJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](tableName: TableDescriptor, column1: String, raw: Raw[_]): QueryBuilder[TRecord2, TResult2] = js.native
   def outerJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](tableName: TableDescriptor, columns: StringDictionary[String | Double | Boolean | Raw[_]]): QueryBuilder[TRecord2, TResult2] = js.native
   def outerJoin[TJoinTargetRecord /* <: js.Object */, TRecord2 /* <: js.Object */, TResult2](tableName: TableDescriptor, raw: Raw[_]): QueryBuilder[TRecord2, TResult2] = js.native
-  def pluck[K /* <: String */](column: K): QueryBuilder[
+  def pluck[K /* <: /* keyof TRecord */ String */](column: K): QueryBuilder[
     TRecord, 
     js.Array[
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any
@@ -994,17 +998,17 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   // specify result type and if not widen the result to entire record type with any omissions permitted
   def select[TResult2](columnNames: (ColumnDescriptor[TRecord, TResult])*): QueryBuilder[TRecord, TResult2] = js.native
   def select[TResult2](columnNames: js.Array[ColumnDescriptor[TRecord, TResult]]): QueryBuilder[TRecord, TResult2] = js.native
-  def select[AliasUT /* <: js.Array[Dict[_] | String] */, TResult2](
+  def select[AliasUT /* <: js.Array[InferrableColumnDescriptor[TRecord]] */, TResult2](
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
   ): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("select")
-  def select_AliasUT_ArrayInferrableColumnDescriptorTRecordTResult2[AliasUT /* <: js.Array[InferrableColumnDescriptor[TRecord]] */, TResult2](
+  def select_AliasUT_ArrayUnionDictWildcardStringTResult2[AliasUT /* <: js.Array[Dict[_] | String] */, TResult2](
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param aliases because its type AliasUT is not an array type */ aliases: AliasUT
   ): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("select")
-  def select_ColNameUT_StringTResult2[ColNameUT /* <: String */, TResult2](columnNames: ColNameUT*): QueryBuilder[TRecord, TResult2] = js.native
+  def select_ColNameUT_StringTResult2[ColNameUT /* <: /* keyof TRecord */ String */, TResult2](columnNames: ColNameUT*): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("select")
-  def select_ColNameUT_StringTResult2[ColNameUT /* <: String */, TResult2](columnNames: js.Array[ColNameUT]): QueryBuilder[TRecord, TResult2] = js.native
+  def select_ColNameUT_StringTResult2[ColNameUT /* <: /* keyof TRecord */ String */, TResult2](columnNames: js.Array[ColNameUT]): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("select")
   def select_TResult2TInnerRecordTInnerResult[TResult2, TInnerRecord, TInnerResult](subQueryBuilders: (QueryBuilder[TInnerRecord, TInnerResult])*): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("select")
@@ -1014,9 +1018,9 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def sumDistinct[TResult2](columnNames: ((Record[String, String | js.Array[String] | Raw[_]]) | Raw[_] | String)*): QueryBuilder[TRecord, TResult2] = js.native
   def sumDistinct[TAliases /* <: js.Object */, TResult2](aliases: TAliases): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("sumDistinct")
-  def sumDistinct_TKey_StringTResult2[TKey /* <: String */, TResult2](columnNames: TKey*): QueryBuilder[TRecord, TResult2] = js.native
+  def sumDistinct_TKey_StringTResult2[TKey /* <: /* keyof TRecord */ String */, TResult2](columnNames: TKey*): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("sum")
-  def sum_TKey_StringTResult2[TKey /* <: String */, TResult2](columnNames: TKey*): QueryBuilder[TRecord, TResult2] = js.native
+  def sum_TKey_StringTResult2[TKey /* <: /* keyof TRecord */ String */, TResult2](columnNames: TKey*): QueryBuilder[TRecord, TResult2] = js.native
   def table[TRecord2, TResult2](callback: js.Function): QueryBuilder[TRecord2, TResult2] = js.native
   def table[TRecord2, TResult2](raw: Raw[_]): QueryBuilder[TRecord2, TResult2] = js.native
   def table[TRecord2, TResult2](tableName: AliasDict): QueryBuilder[TRecord2, TResult2] = js.native
@@ -1042,7 +1046,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
       DeferredKeySelection[TRecord, scala.Nothing, `false`, js.Object, `false`, js.Object, scala.Nothing]
     ]
   ] = js.native
-  def update[K /* <: String */](
+  def update[K /* <: /* keyof TRecord */ String */](
     columnName: K,
     value: /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any
   ): QueryBuilder[TRecord, Double] = js.native
@@ -1050,8 +1054,8 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def update[TResult2](columnName: String, value: Value, returning: String): QueryBuilder[TRecord, TResult2] = js.native
   def update[TResult2](columnName: String, value: Value, returning: js.Array[String]): QueryBuilder[TRecord, TResult2] = js.native
   def update[TResult2](data: MaybeArray[SafePartial[TRecord]]): QueryBuilder[TRecord, TResult2] = js.native
-  def update[TKey /* <: StrKey[TRecord] */, TResult2](data: MaybeArray[SafePartial[TRecord]], returning: TKey): QueryBuilder[TRecord, TResult2] = js.native
-  def update[TKey /* <: StrKey[TRecord] */, TResult2](data: MaybeArray[SafePartial[TRecord]], returning: js.Array[TKey]): QueryBuilder[TRecord, TResult2] = js.native
+  def update[TKey /* <: String */, TResult2 /* <: js.Array[js.Object] */](data: MaybeArray[SafePartial[TRecord]], returning: TKey): QueryBuilder[TRecord, TResult2] = js.native
+  def update[TKey /* <: String */, TResult2 /* <: js.Array[js.Object] */](data: MaybeArray[SafePartial[TRecord]], returning: js.Array[TKey]): QueryBuilder[TRecord, TResult2] = js.native
   def update[K1 /* <: StrKey[TRecord] */, K2 /* <: StrKey[TRecord] */, TResult2](
     columnName: K1,
     value: /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K1] */ js.Any,
@@ -1063,9 +1067,9 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
     returning: js.Array[K1]
   ): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("update")
-  def update_TKey_StringTResult2_ArrayObject[TKey /* <: String */, TResult2 /* <: js.Array[js.Object] */](data: MaybeArray[SafePartial[TRecord]], returning: TKey): QueryBuilder[TRecord, TResult2] = js.native
+  def update_TKey_StrKeyTRecordTResult2[TKey /* <: StrKey[TRecord] */, TResult2](data: MaybeArray[SafePartial[TRecord]], returning: TKey): QueryBuilder[TRecord, TResult2] = js.native
   @JSName("update")
-  def update_TKey_StringTResult2_ArrayObject[TKey /* <: String */, TResult2 /* <: js.Array[js.Object] */](data: MaybeArray[SafePartial[TRecord]], returning: js.Array[TKey]): QueryBuilder[TRecord, TResult2] = js.native
+  def update_TKey_StrKeyTRecordTResult2[TKey /* <: StrKey[TRecord] */, TResult2](data: MaybeArray[SafePartial[TRecord]], returning: js.Array[TKey]): QueryBuilder[TRecord, TResult2] = js.native
   // Wheres
   def where(callback: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
   def where(columnName: String): QueryBuilder[TRecord, TResult] = js.native
@@ -1085,16 +1089,16 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def where(`object`: SafePartial[TRecord]): QueryBuilder[TRecord, TResult] = js.native
   // Wheres
   def where(raw: Raw[_]): QueryBuilder[TRecord, TResult] = js.native
-  def where[T /* <: String */](columnName: T): QueryBuilder[TRecord, TResult] = js.native
-  def where[T /* <: String */](columnName: T, operator: ComparisionOperator): QueryBuilder[TRecord, TResult] = js.native
+  def where[T /* <: /* keyof TRecord */ String */](columnName: T): QueryBuilder[TRecord, TResult] = js.native
+  def where[T /* <: /* keyof TRecord */ String */](columnName: T, operator: ComparisionOperator): QueryBuilder[TRecord, TResult] = js.native
   // Wheres
-  def where[T /* <: String */](
+  def where[T /* <: /* keyof TRecord */ String */](
     columnName: T,
     operator: ComparisionOperator,
     value: /* import warning: importer.ImportType#apply Failed type conversion: TRecord[T] */ js.Any
   ): QueryBuilder[TRecord, TResult] = js.native
   // Wheres
-  def where[T /* <: String */](
+  def where[T /* <: /* keyof TRecord */ String */](
     columnName: T,
     value: /* import warning: importer.ImportType#apply Failed type conversion: TRecord[T] */ js.Any
   ): QueryBuilder[TRecord, TResult] = js.native
@@ -1108,9 +1112,9 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   // Wheres
   def where[TRecordInner, TResultInner](left: Raw[_], operator: String, right: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
   // Wheres
-  def where[T /* <: String */, TRecordInner, TResultInner](columnName: T, operator: ComparisionOperator, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
+  def where[T /* <: /* keyof TRecord */ String */, TRecordInner, TResultInner](columnName: T, operator: ComparisionOperator, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
   def whereBetween(columnName: String, range: js.Tuple2[Value, Value]): QueryBuilder[TRecord, TResult] = js.native
-  def whereBetween[K /* <: String */](
+  def whereBetween[K /* <: /* keyof TRecord */ String */](
     columnName: K,
     range: js.Tuple2[
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any, 
@@ -1123,16 +1127,16 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def whereIn(columnName: String, values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
   def whereIn(columnNames: js.Array[String], values: js.Array[js.Array[Value]]): QueryBuilder[TRecord, TResult] = js.native
   def whereIn(columnNames: js.Array[String], values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
-  def whereIn[K /* <: String */](
+  def whereIn[K /* <: /* keyof TRecord */ String */](
     columnName: K,
     values: js.Array[
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any
     ]
   ): QueryBuilder[TRecord, TResult] = js.native
-  def whereIn[K /* <: String */](columnName: K, values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
+  def whereIn[K /* <: /* keyof TRecord */ String */](columnName: K, values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
   def whereIn[TRecordInner, TResultInner](columnName: String, values: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
   def whereIn[TRecordInner, TResultInner](columnNames: js.Array[String], values: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
-  def whereIn[K /* <: String */, TRecordInner, TResultInner](
+  def whereIn[K /* <: /* keyof TRecord */ String */, TRecordInner, TResultInner](
     columnName: K,
     values: QueryBuilder[
       TRecordInner, 
@@ -1140,7 +1144,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
     ]
   ): QueryBuilder[TRecord, TResult] = js.native
   @JSName("whereIn")
-  def whereIn_K_String[K /* <: String */](
+  def whereIn_K_String[K /* <: /* keyof TRecord */ String */](
     columnNames: js.Array[K],
     values: js.Array[
       js.Array[
@@ -1149,9 +1153,9 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
     ]
   ): QueryBuilder[TRecord, TResult] = js.native
   @JSName("whereIn")
-  def whereIn_K_String[K /* <: String */](columnNames: js.Array[K], values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
+  def whereIn_K_String[K /* <: /* keyof TRecord */ String */](columnNames: js.Array[K], values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
   @JSName("whereIn")
-  def whereIn_K_StringTRecordInnerTResultInner[K /* <: String */, TRecordInner, TResultInner](
+  def whereIn_K_StringTRecordInnerTResultInner[K /* <: /* keyof TRecord */ String */, TRecordInner, TResultInner](
     columnNames: js.Array[K],
     values: QueryBuilder[
       TRecordInner, 
@@ -1169,14 +1173,14 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def whereNot(`object`: js.Object): QueryBuilder[TRecord, TResult] = js.native
   def whereNot(`object`: SafePartial[TRecord]): QueryBuilder[TRecord, TResult] = js.native
   def whereNot(raw: Raw[_]): QueryBuilder[TRecord, TResult] = js.native
-  def whereNot[T /* <: String */](columnName: T): QueryBuilder[TRecord, TResult] = js.native
-  def whereNot[T /* <: String */](columnName: T, operator: ComparisionOperator): QueryBuilder[TRecord, TResult] = js.native
-  def whereNot[T /* <: String */](
+  def whereNot[T /* <: /* keyof TRecord */ String */](columnName: T): QueryBuilder[TRecord, TResult] = js.native
+  def whereNot[T /* <: /* keyof TRecord */ String */](columnName: T, operator: ComparisionOperator): QueryBuilder[TRecord, TResult] = js.native
+  def whereNot[T /* <: /* keyof TRecord */ String */](
     columnName: T,
     operator: ComparisionOperator,
     value: /* import warning: importer.ImportType#apply Failed type conversion: TRecord[T] */ js.Any
   ): QueryBuilder[TRecord, TResult] = js.native
-  def whereNot[T /* <: String */](
+  def whereNot[T /* <: /* keyof TRecord */ String */](
     columnName: T,
     value: /* import warning: importer.ImportType#apply Failed type conversion: TRecord[T] */ js.Any
   ): QueryBuilder[TRecord, TResult] = js.native
@@ -1185,9 +1189,9 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def whereNot[TResult2](sql: String, bindings: ValueDict): QueryBuilder[TRecord, TResult2] = js.native
   def whereNot[TRecordInner, TResultInner](columnName: String, operator: String, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
   def whereNot[TRecordInner, TResultInner](left: Raw[_], operator: String, right: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
-  def whereNot[T /* <: String */, TRecordInner, TResultInner](columnName: T, operator: ComparisionOperator, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
+  def whereNot[T /* <: /* keyof TRecord */ String */, TRecordInner, TResultInner](columnName: T, operator: ComparisionOperator, value: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
   def whereNotBetween(columnName: String, range: js.Tuple2[Value, Value]): QueryBuilder[TRecord, TResult] = js.native
-  def whereNotBetween[K /* <: String */](
+  def whereNotBetween[K /* <: /* keyof TRecord */ String */](
     columnName: K,
     range: js.Tuple2[
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any, 
@@ -1200,16 +1204,16 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   def whereNotIn(columnName: String, values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
   def whereNotIn(columnNames: js.Array[String], values: js.Array[js.Array[Value]]): QueryBuilder[TRecord, TResult] = js.native
   def whereNotIn(columnNames: js.Array[String], values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
-  def whereNotIn[K /* <: String */](
+  def whereNotIn[K /* <: /* keyof TRecord */ String */](
     columnName: K,
     values: js.Array[
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any
     ]
   ): QueryBuilder[TRecord, TResult] = js.native
-  def whereNotIn[K /* <: String */](columnName: K, values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
+  def whereNotIn[K /* <: /* keyof TRecord */ String */](columnName: K, values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
   def whereNotIn[TRecordInner, TResultInner](columnName: String, values: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
   def whereNotIn[TRecordInner, TResultInner](columnNames: js.Array[String], values: QueryBuilder[TRecordInner, TResultInner]): QueryBuilder[TRecord, TResult] = js.native
-  def whereNotIn[K /* <: String */, TRecordInner, TResultInner](
+  def whereNotIn[K /* <: /* keyof TRecord */ String */, TRecordInner, TResultInner](
     columnName: K,
     values: QueryBuilder[
       TRecordInner, 
@@ -1217,7 +1221,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
     ]
   ): QueryBuilder[TRecord, TResult] = js.native
   @JSName("whereNotIn")
-  def whereNotIn_K_String[K /* <: String */](
+  def whereNotIn_K_String[K /* <: /* keyof TRecord */ String */](
     columnNames: js.Array[K],
     values: js.Array[
       js.Array[
@@ -1226,19 +1230,19 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
     ]
   ): QueryBuilder[TRecord, TResult] = js.native
   @JSName("whereNotIn")
-  def whereNotIn_K_String[K /* <: String */](columnNames: js.Array[K], values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
+  def whereNotIn_K_String[K /* <: /* keyof TRecord */ String */](columnNames: js.Array[K], values: QueryCallback[_, js.Array[_]]): QueryBuilder[TRecord, TResult] = js.native
   @JSName("whereNotIn")
-  def whereNotIn_K_StringTRecordInnerTResultInner[K /* <: String */, TRecordInner, TResultInner](
+  def whereNotIn_K_StringTRecordInnerTResultInner[K /* <: /* keyof TRecord */ String */, TRecordInner, TResultInner](
     columnNames: js.Array[K],
     values: QueryBuilder[
       TRecordInner, 
       /* import warning: importer.ImportType#apply Failed type conversion: TRecord[K] */ js.Any
     ]
   ): QueryBuilder[TRecord, TResult] = js.native
-  def whereNotNull(columnName: String): QueryBuilder[TRecord, TResult] = js.native
+  def whereNotNull(columnName: /* keyof TRecord */ String): QueryBuilder[TRecord, TResult] = js.native
   @JSName("whereNot")
   def whereNot_TResult2[TResult2](raw: Raw[TResult2]): QueryBuilder[TRecord, TResult2] = js.native
-  def whereNull(columnName: String): QueryBuilder[TRecord, TResult] = js.native
+  def whereNull(columnName: /* keyof TRecord */ String): QueryBuilder[TRecord, TResult] = js.native
   def whereRaw(condition: Boolean): QueryBuilder[TRecord, TResult] = js.native
   def whereRaw[TResult2](raw: Raw[TResult2]): QueryBuilder[TRecord, TResult2] = js.native
   def whereRaw[TResult2](sql: String, bindings: RawBinding*): QueryBuilder[TRecord, TResult2] = js.native

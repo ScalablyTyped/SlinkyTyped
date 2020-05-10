@@ -28,8 +28,33 @@ object CreateDirectoryConfigRequest {
     ServiceAccountCredentials: ServiceAccountCredentials
   ): CreateDirectoryConfigRequest = {
     val __obj = js.Dynamic.literal(DirectoryName = DirectoryName.asInstanceOf[js.Any], OrganizationalUnitDistinguishedNames = OrganizationalUnitDistinguishedNames.asInstanceOf[js.Any], ServiceAccountCredentials = ServiceAccountCredentials.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateDirectoryConfigRequest]
   }
+  @scala.inline
+  implicit class CreateDirectoryConfigRequestOps[Self <: CreateDirectoryConfigRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectoryName(value: DirectoryName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrganizationalUnitDistinguishedNames(value: OrganizationalUnitDistinguishedNamesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnitDistinguishedNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServiceAccountCredentials(value: ServiceAccountCredentials): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceAccountCredentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

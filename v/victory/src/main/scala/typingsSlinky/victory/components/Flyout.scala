@@ -1,11 +1,8 @@
 package typingsSlinky.victory.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.victory.Anon1
 import typingsSlinky.victory.AnonXBoolean
 import typingsSlinky.victory.AnonY
@@ -24,92 +21,92 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Flyout
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.Flyout] {
+object Flyout {
   @JSImport("victory", "Flyout")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, name */
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    animate: Boolean | AnimatePropTypeInterface = null,
-    center: AnonY = null,
-    containerComponent: ReactElement = null,
-    cornerRadius: Int | Double = null,
-    data: js.Array[_] = null,
-    datum: js.Object = null,
-    dx: Int | Double = null,
-    dy: Int | Double = null,
-    events: js.Object = null,
-    groupComponent: ReactElement = null,
-    height: Int | Double = null,
-    horizontal: js.UndefOr[Boolean] = js.undefined,
-    id: String | Double = null,
-    index: Int | Double = null,
-    maxDomain: Double | AnonY = null,
-    minDomain: Double | AnonY = null,
-    orientation: top | bottom | left | right = null,
-    origin: js.Object = null,
-    padding: PaddingProps = null,
-    pathComponent: ReactElement = null,
-    pointerLength: Int | Double = null,
-    pointerWidth: Int | Double = null,
-    polar: js.UndefOr[Boolean] = js.undefined,
-    role: String = null,
-    scale: ScalePropType | D3Scale | Anon1 = null,
-    shapeRendering: String = null,
-    singleQuadrantDomainPadding: Boolean | AnonXBoolean = null,
-    standalone: js.UndefOr[Boolean] = js.undefined,
-    style: VictoryStyleObject = null,
-    theme: VictoryThemeDefinition = null,
-    transform: String = null,
-    width: Int | Double = null,
-    x: Int | Double = null,
-    y: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.Flyout] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (containerComponent != null) __obj.updateDynamic("containerComponent")(containerComponent.asInstanceOf[js.Any])
-    if (cornerRadius != null) __obj.updateDynamic("cornerRadius")(cornerRadius.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (datum != null) __obj.updateDynamic("datum")(datum.asInstanceOf[js.Any])
-    if (dx != null) __obj.updateDynamic("dx")(dx.asInstanceOf[js.Any])
-    if (dy != null) __obj.updateDynamic("dy")(dy.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (groupComponent != null) __obj.updateDynamic("groupComponent")(groupComponent.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (maxDomain != null) __obj.updateDynamic("maxDomain")(maxDomain.asInstanceOf[js.Any])
-    if (minDomain != null) __obj.updateDynamic("minDomain")(minDomain.asInstanceOf[js.Any])
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (pathComponent != null) __obj.updateDynamic("pathComponent")(pathComponent.asInstanceOf[js.Any])
-    if (pointerLength != null) __obj.updateDynamic("pointerLength")(pointerLength.asInstanceOf[js.Any])
-    if (pointerWidth != null) __obj.updateDynamic("pointerWidth")(pointerWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(polar)) __obj.updateDynamic("polar")(polar.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (shapeRendering != null) __obj.updateDynamic("shapeRendering")(shapeRendering.asInstanceOf[js.Any])
-    if (singleQuadrantDomainPadding != null) __obj.updateDynamic("singleQuadrantDomainPadding")(singleQuadrantDomainPadding.asInstanceOf[js.Any])
-    if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.victory.mod.Flyout] {
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animate(value: Boolean | AnimatePropTypeInterface): this.type = set("animate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def center(value: AnonY): this.type = set("center", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerComponent(value: ReactElement): this.type = set("containerComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cornerRadius(value: Double): this.type = set("cornerRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def datum(value: js.Object): this.type = set("datum", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dx(value: Double): this.type = set("dx", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dy(value: Double): this.type = set("dy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def events(value: js.Object): this.type = set("events", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupComponent(value: ReactElement): this.type = set("groupComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String | Double): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def index(value: Double): this.type = set("index", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDomain(value: Double | AnonY): this.type = set("maxDomain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDomain(value: Double | AnonY): this.type = set("minDomain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def orientation(value: top | bottom | left | right): this.type = set("orientation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def origin(value: js.Object): this.type = set("origin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def padding(value: PaddingProps): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pathComponent(value: ReactElement): this.type = set("pathComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pointerLength(value: Double): this.type = set("pointerLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pointerWidth(value: Double): this.type = set("pointerWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def polar(value: Boolean): this.type = set("polar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scale(value: ScalePropType | D3Scale | Anon1): this.type = set("scale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shapeRendering(value: String): this.type = set("shapeRendering", value.asInstanceOf[js.Any])
+    @scala.inline
+    def singleQuadrantDomainPadding(value: Boolean | AnonXBoolean): this.type = set("singleQuadrantDomainPadding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def standalone(value: Boolean): this.type = set("standalone", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: VictoryStyleObject): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: VictoryThemeDefinition): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transform(value: String): this.type = set("transform", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def x(value: Double): this.type = set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.Flyout] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.Flyout](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FlyoutProps
+  
+  def withProps(p: FlyoutProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Flyout.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

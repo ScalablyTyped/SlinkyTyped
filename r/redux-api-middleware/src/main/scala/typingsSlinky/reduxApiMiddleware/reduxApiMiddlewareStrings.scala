@@ -6,9 +6,6 @@ import scala.scalajs.js.annotation._
 
 object reduxApiMiddlewareStrings {
   @js.native
-  sealed trait `@@redux-api-middlewareSlashRSAA` extends js.Object
-  
-  @js.native
   sealed trait ApiError extends js.Object
   
   @js.native
@@ -45,8 +42,6 @@ object reduxApiMiddlewareStrings {
   sealed trait RequestError extends js.Object
   
   @scala.inline
-  def `@@redux-api-middlewareSlashRSAA`: `@@redux-api-middlewareSlashRSAA` = "@@redux-api-middleware/RSAA".asInstanceOf[`@@redux-api-middlewareSlashRSAA`]
-  @scala.inline
   def ApiError: ApiError = "ApiError".asInstanceOf[ApiError]
   @scala.inline
   def DELETE: DELETE = "DELETE".asInstanceOf[DELETE]
@@ -57,7 +52,7 @@ object reduxApiMiddlewareStrings {
   @scala.inline
   def InternalError: InternalError = "InternalError".asInstanceOf[InternalError]
   @scala.inline
-  def `Invalid RSAA`: `Invalid RSAA` = "Invalid RSAA".asInstanceOf[`Invalid RSAA`]
+  def `Invalid RSAA`: `Invalid RSAA` = ("Invalid RSAA").asInstanceOf[`Invalid RSAA`]
   @scala.inline
   def InvalidRSAA: InvalidRSAA = "InvalidRSAA".asInstanceOf[InvalidRSAA]
   @scala.inline

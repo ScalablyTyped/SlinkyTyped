@@ -11,10 +11,7 @@ import scala.scalajs.js.annotation._
   * 
   * @return  
   */
-class Serial1 () extends Serial {
-  /* CompleteClass */
-  override def removeListener(event: String, listener: js.Any): js.Any = js.native
-}
+class Serial1 () extends Serial
 
 /**
 * <p>The first Serial (USART) port</p>

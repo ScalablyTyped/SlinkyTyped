@@ -1,43 +1,47 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.timelineItemMod.TimeLineItemProps
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TimelineItem
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object TimelineItem {
   @JSImport("antd/lib/timeline/TimelineItem", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    color: String = null,
-    dot: TagMod[Any] = null,
-    label: TagMod[Any] = null,
-    pending: js.UndefOr[Boolean] = js.undefined,
-    position: String = null,
-    prefixCls: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (dot != null) __obj.updateDynamic("dot")(dot.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (!js.isUndefined(pending)) __obj.updateDynamic("pending")(pending.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dotReactElement(value: ReactElement): this.type = set("dot", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dot(value: TagMod[Any]): this.type = set("dot", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pending(value: Boolean): this.type = set("pending", value.asInstanceOf[js.Any])
+    @scala.inline
+    def position(value: String): this.type = set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TimeLineItemProps
+  
+  def withProps(p: TimeLineItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TimelineItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

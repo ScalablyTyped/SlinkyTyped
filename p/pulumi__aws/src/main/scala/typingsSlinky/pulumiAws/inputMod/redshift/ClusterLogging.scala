@@ -24,11 +24,47 @@ trait ClusterLogging extends js.Object {
 
 object ClusterLogging {
   @scala.inline
-  def apply(enable: Input[Boolean], bucketName: Input[String] = null, s3KeyPrefix: Input[String] = null): ClusterLogging = {
+  def apply(enable: Input[Boolean]): ClusterLogging = {
     val __obj = js.Dynamic.literal(enable = enable.asInstanceOf[js.Any])
-    if (bucketName != null) __obj.updateDynamic("bucketName")(bucketName.asInstanceOf[js.Any])
-    if (s3KeyPrefix != null) __obj.updateDynamic("s3KeyPrefix")(s3KeyPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterLogging]
   }
+  @scala.inline
+  implicit class ClusterLoggingOps[Self <: ClusterLogging] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnable(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBucketName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3KeyPrefix(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3KeyPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3KeyPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3KeyPrefix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

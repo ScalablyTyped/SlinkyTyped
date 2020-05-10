@@ -49,26 +49,113 @@ trait SchemaGoogleApiServiceusageV1ServiceConfig extends js.Object {
 
 object SchemaGoogleApiServiceusageV1ServiceConfig {
   @scala.inline
-  def apply(
-    apis: js.Array[SchemaApi] = null,
-    authentication: SchemaAuthentication = null,
-    documentation: SchemaDocumentation = null,
-    endpoints: js.Array[SchemaEndpoint] = null,
-    name: String = null,
-    quota: SchemaQuota = null,
-    title: String = null,
-    usage: SchemaUsage = null
-  ): SchemaGoogleApiServiceusageV1ServiceConfig = {
+  def apply(): SchemaGoogleApiServiceusageV1ServiceConfig = {
     val __obj = js.Dynamic.literal()
-    if (apis != null) __obj.updateDynamic("apis")(apis.asInstanceOf[js.Any])
-    if (authentication != null) __obj.updateDynamic("authentication")(authentication.asInstanceOf[js.Any])
-    if (documentation != null) __obj.updateDynamic("documentation")(documentation.asInstanceOf[js.Any])
-    if (endpoints != null) __obj.updateDynamic("endpoints")(endpoints.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (quota != null) __obj.updateDynamic("quota")(quota.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (usage != null) __obj.updateDynamic("usage")(usage.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleApiServiceusageV1ServiceConfig]
   }
+  @scala.inline
+  implicit class SchemaGoogleApiServiceusageV1ServiceConfigOps[Self <: SchemaGoogleApiServiceusageV1ServiceConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApis(value: js.Array[SchemaApi]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthentication(value: SchemaAuthentication): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authentication")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthentication: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authentication")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentation(value: SchemaDocumentation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpoints(value: js.Array[SchemaEndpoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuota(value: SchemaQuota): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quota")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuota: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quota")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsage(value: SchemaUsage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

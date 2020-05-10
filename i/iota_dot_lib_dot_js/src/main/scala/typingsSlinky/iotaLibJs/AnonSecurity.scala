@@ -5,18 +5,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonSecurity extends js.Object {
-  var end: Double
-  var security: js.UndefOr[Security] = js.undefined
-  var start: Double
+  var end: Double = js.native
+  var security: js.UndefOr[Security] = js.native
+  var start: Double = js.native
 }
 
 object AnonSecurity {
   @scala.inline
-  def apply(end: Double, start: Double, security: Security = null): AnonSecurity = {
+  def apply(end: Double, start: Double): AnonSecurity = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonSecurity]
   }
+  @scala.inline
+  implicit class AnonSecurityOps[Self <: AnonSecurity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnd(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSecurity(value: Security): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

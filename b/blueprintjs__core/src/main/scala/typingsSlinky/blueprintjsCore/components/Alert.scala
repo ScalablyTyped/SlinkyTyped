@@ -1,66 +1,76 @@
 package typingsSlinky.blueprintjsCore.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.alertMod.IAlertProps
 import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Alert
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsCore.mod.Alert] {
+object Alert {
   @JSImport("@blueprintjs/core", "Alert")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    isOpen: Boolean,
-    canEscapeKeyCancel: js.UndefOr[Boolean] = js.undefined,
-    canOutsideClickCancel: js.UndefOr[Boolean] = js.undefined,
-    cancelButtonText: String = null,
-    confirmButtonText: String = null,
-    icon: IconName | MaybeElement = null,
-    intent: Intent = null,
-    onCancel: /* evt */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit = null,
-    onClose: (/* confirmed */ Boolean, /* evt */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]]) => Unit = null,
-    onClosed: /* node */ HTMLElement => Unit = null,
-    onClosing: /* node */ HTMLElement => Unit = null,
-    onConfirm: /* evt */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit = null,
-    onOpened: /* node */ HTMLElement => Unit = null,
-    onOpening: /* node */ HTMLElement => Unit = null,
-    portalContainer: HTMLElement = null,
-    transitionDuration: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Alert] = {
-    val __obj = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
-    if (!js.isUndefined(canEscapeKeyCancel)) __obj.updateDynamic("canEscapeKeyCancel")(canEscapeKeyCancel.asInstanceOf[js.Any])
-    if (!js.isUndefined(canOutsideClickCancel)) __obj.updateDynamic("canOutsideClickCancel")(canOutsideClickCancel.asInstanceOf[js.Any])
-    if (cancelButtonText != null) __obj.updateDynamic("cancelButtonText")(cancelButtonText.asInstanceOf[js.Any])
-    if (confirmButtonText != null) __obj.updateDynamic("confirmButtonText")(confirmButtonText.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (intent != null) __obj.updateDynamic("intent")(intent.asInstanceOf[js.Any])
-    if (onCancel != null) __obj.updateDynamic("onCancel")(js.Any.fromFunction1(onCancel))
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction2(onClose))
-    if (onClosed != null) __obj.updateDynamic("onClosed")(js.Any.fromFunction1(onClosed))
-    if (onClosing != null) __obj.updateDynamic("onClosing")(js.Any.fromFunction1(onClosing))
-    if (onConfirm != null) __obj.updateDynamic("onConfirm")(js.Any.fromFunction1(onConfirm))
-    if (onOpened != null) __obj.updateDynamic("onOpened")(js.Any.fromFunction1(onOpened))
-    if (onOpening != null) __obj.updateDynamic("onOpening")(js.Any.fromFunction1(onOpening))
-    if (portalContainer != null) __obj.updateDynamic("portalContainer")(portalContainer.asInstanceOf[js.Any])
-    if (transitionDuration != null) __obj.updateDynamic("transitionDuration")(transitionDuration.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Alert] {
+    @scala.inline
+    def canEscapeKeyCancel(value: Boolean): this.type = set("canEscapeKeyCancel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def canOutsideClickCancel(value: Boolean): this.type = set("canOutsideClickCancel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelButtonText(value: String): this.type = set("cancelButtonText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def confirmButtonText(value: String): this.type = set("confirmButtonText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: IconName | MaybeElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconNull: this.type = set("icon", null)
+    @scala.inline
+    def intent(value: Intent): this.type = set("intent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCancel(value: /* evt */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit): this.type = set("onCancel", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClose(
+      value: (/* confirmed */ Boolean, /* evt */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]]) => Unit
+    ): this.type = set("onClose", js.Any.fromFunction2(value))
+    @scala.inline
+    def onClosed(value: /* node */ HTMLElement => Unit): this.type = set("onClosed", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClosing(value: /* node */ HTMLElement => Unit): this.type = set("onClosing", js.Any.fromFunction1(value))
+    @scala.inline
+    def onConfirm(value: /* evt */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit): this.type = set("onConfirm", js.Any.fromFunction1(value))
+    @scala.inline
+    def onOpened(value: /* node */ HTMLElement => Unit): this.type = set("onOpened", js.Any.fromFunction1(value))
+    @scala.inline
+    def onOpening(value: /* node */ HTMLElement => Unit): this.type = set("onOpening", js.Any.fromFunction1(value))
+    @scala.inline
+    def portalContainer(value: HTMLElement): this.type = set("portalContainer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionDuration(value: Double): this.type = set("transitionDuration", value.asInstanceOf[js.Any])
   }
-  type Props = IAlertProps
+  
+  def withProps(p: IAlertProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(isOpen: Boolean): Builder = {
+    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IAlertProps]))
+  }
 }
 

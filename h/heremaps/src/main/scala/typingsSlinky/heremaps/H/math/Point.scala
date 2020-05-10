@@ -18,10 +18,6 @@ class Point protected () extends IPoint {
     * @param y {number} - The point's coordinate on Y-axis.
     */
   def this(x: Double, y: Double) = this()
-  /* CompleteClass */
-  override var x: Double = js.native
-  /* CompleteClass */
-  override var y: Double = js.native
   /**
     * This method adds given point coordinates to the current one.
     * @param other {H.math.IPoint} - The point to add

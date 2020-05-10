@@ -14,14 +14,12 @@ trait CascadeType extends js.Object
 
 object CascadeType {
   @scala.inline
-  def Active: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Active = this.cast("Active")
+  def Active: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Active = "Active".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Active]
   @scala.inline
-  def Cascade: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Cascade = this.cast("Cascade")
+  def Cascade: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Cascade = "Cascade".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Cascade]
   @scala.inline
-  def NoCascade: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.NoCascade = this.cast("NoCascade")
+  def NoCascade: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.NoCascade = "NoCascade".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.NoCascade]
   @scala.inline
-  def UserOwned: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.UserOwned = this.cast("UserOwned")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UserOwned: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.UserOwned = "UserOwned".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.UserOwned]
 }
 

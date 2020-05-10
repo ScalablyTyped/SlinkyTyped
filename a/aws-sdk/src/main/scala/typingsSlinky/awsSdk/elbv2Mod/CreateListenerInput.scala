@@ -27,25 +27,72 @@ trait CreateListenerInput extends js.Object {
     */
   var Protocol: ProtocolEnum = js.native
   /**
-    * [HTTPS and TLS listeners] The security policy that defines which ciphers and protocols are supported. The default is the current predefined security policy.
+    * [HTTPS and TLS listeners] The security policy that defines which protocols and ciphers are supported. The following are the possible values:    ELBSecurityPolicy-2016-08     ELBSecurityPolicy-TLS-1-0-2015-04     ELBSecurityPolicy-TLS-1-1-2017-01     ELBSecurityPolicy-TLS-1-2-2017-01     ELBSecurityPolicy-TLS-1-2-Ext-2018-06     ELBSecurityPolicy-FS-2018-06     ELBSecurityPolicy-FS-1-1-2019-08     ELBSecurityPolicy-FS-1-2-2019-08     ELBSecurityPolicy-FS-1-2-Res-2019-08    For more information, see Security Policies in the Application Load Balancers Guide and Security Policies in the Network Load Balancers Guide.
     */
   var SslPolicy: js.UndefOr[SslPolicyName] = js.native
 }
 
 object CreateListenerInput {
   @scala.inline
-  def apply(
-    DefaultActions: Actions,
-    LoadBalancerArn: LoadBalancerArn,
-    Port: Port,
-    Protocol: ProtocolEnum,
-    Certificates: CertificateList = null,
-    SslPolicy: SslPolicyName = null
-  ): CreateListenerInput = {
+  def apply(DefaultActions: Actions, LoadBalancerArn: LoadBalancerArn, Port: Port, Protocol: ProtocolEnum): CreateListenerInput = {
     val __obj = js.Dynamic.literal(DefaultActions = DefaultActions.asInstanceOf[js.Any], LoadBalancerArn = LoadBalancerArn.asInstanceOf[js.Any], Port = Port.asInstanceOf[js.Any], Protocol = Protocol.asInstanceOf[js.Any])
-    if (Certificates != null) __obj.updateDynamic("Certificates")(Certificates.asInstanceOf[js.Any])
-    if (SslPolicy != null) __obj.updateDynamic("SslPolicy")(SslPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateListenerInput]
   }
+  @scala.inline
+  implicit class CreateListenerInputOps[Self <: CreateListenerInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultActions(value: Actions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoadBalancerArn(value: LoadBalancerArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPort(value: Port): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProtocol(value: ProtocolEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCertificates(value: CertificateList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSslPolicy(value: SslPolicyName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SslPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSslPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SslPolicy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

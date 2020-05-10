@@ -18,10 +18,6 @@ class ResponderLeaseHandler protected () extends LeaseHandler {
     stats: LeaseStats,
     errorConsumer: js.Function1[/* e */ js.Error, Unit]
   ) = this()
-  /* CompleteClass */
-  override def errorMessage(): String = js.native
   def send(send: js.Function1[/* lease */ Lease, Unit]): Disposable = js.native
-  /* CompleteClass */
-  override def use(): Boolean = js.native
 }
 

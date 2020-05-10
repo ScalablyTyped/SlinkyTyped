@@ -1,46 +1,94 @@
 package typingsSlinky.jose.mod.JWKS
 
 import typingsSlinky.jose.mod.BasicParameters
-import typingsSlinky.jose.mod.keyOperation
 import typingsSlinky.jose.mod.keyType
-import typingsSlinky.jose.mod.use
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait KeyQuery extends BasicParameters {
-  var crv: js.UndefOr[String] = js.undefined
-  var kty: js.UndefOr[keyType] = js.undefined
-  var thumbprint: js.UndefOr[String] = js.undefined
-  var x5t: js.UndefOr[String] = js.undefined
+  var crv: js.UndefOr[String] = js.native
+  var kty: js.UndefOr[keyType] = js.native
+  var thumbprint: js.UndefOr[String] = js.native
+  var x5t: js.UndefOr[String] = js.native
   @JSName("x5t#S256")
-  var x5tNumbersignS256: js.UndefOr[String] = js.undefined
+  var x5tNumbersignS256: js.UndefOr[String] = js.native
 }
 
 object KeyQuery {
   @scala.inline
-  def apply(
-    alg: String = null,
-    crv: String = null,
-    key_ops: js.Array[keyOperation] = null,
-    kid: String = null,
-    kty: keyType = null,
-    thumbprint: String = null,
-    use: use = null,
-    x5t: String = null,
-    x5tNumbersignS256: String = null
-  ): KeyQuery = {
+  def apply(): KeyQuery = {
     val __obj = js.Dynamic.literal()
-    if (alg != null) __obj.updateDynamic("alg")(alg.asInstanceOf[js.Any])
-    if (crv != null) __obj.updateDynamic("crv")(crv.asInstanceOf[js.Any])
-    if (key_ops != null) __obj.updateDynamic("key_ops")(key_ops.asInstanceOf[js.Any])
-    if (kid != null) __obj.updateDynamic("kid")(kid.asInstanceOf[js.Any])
-    if (kty != null) __obj.updateDynamic("kty")(kty.asInstanceOf[js.Any])
-    if (thumbprint != null) __obj.updateDynamic("thumbprint")(thumbprint.asInstanceOf[js.Any])
-    if (use != null) __obj.updateDynamic("use")(use.asInstanceOf[js.Any])
-    if (x5t != null) __obj.updateDynamic("x5t")(x5t.asInstanceOf[js.Any])
-    if (x5tNumbersignS256 != null) __obj.updateDynamic("x5t#S256")(x5tNumbersignS256.asInstanceOf[js.Any])
     __obj.asInstanceOf[KeyQuery]
   }
+  @scala.inline
+  implicit class KeyQueryOps[Self <: KeyQuery] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCrv(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crv")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrv: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crv")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKty(value: keyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThumbprint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbprint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThumbprint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbprint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX5t(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x5t")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX5t: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x5t")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX5tNumbersignS256(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x5t#S256")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX5tNumbersignS256: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x5t#S256")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

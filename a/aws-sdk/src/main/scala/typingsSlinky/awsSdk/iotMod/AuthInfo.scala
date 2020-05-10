@@ -18,11 +18,41 @@ trait AuthInfo extends js.Object {
 
 object AuthInfo {
   @scala.inline
-  def apply(actionType: ActionType = null, resources: Resources = null): AuthInfo = {
+  def apply(): AuthInfo = {
     val __obj = js.Dynamic.literal()
-    if (actionType != null) __obj.updateDynamic("actionType")(actionType.asInstanceOf[js.Any])
-    if (resources != null) __obj.updateDynamic("resources")(resources.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthInfo]
   }
+  @scala.inline
+  implicit class AuthInfoOps[Self <: AuthInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionType(value: ActionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResources(value: Resources): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

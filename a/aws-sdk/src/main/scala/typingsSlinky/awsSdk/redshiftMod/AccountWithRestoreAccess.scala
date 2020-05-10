@@ -18,11 +18,41 @@ trait AccountWithRestoreAccess extends js.Object {
 
 object AccountWithRestoreAccess {
   @scala.inline
-  def apply(AccountAlias: String = null, AccountId: String = null): AccountWithRestoreAccess = {
+  def apply(): AccountWithRestoreAccess = {
     val __obj = js.Dynamic.literal()
-    if (AccountAlias != null) __obj.updateDynamic("AccountAlias")(AccountAlias.asInstanceOf[js.Any])
-    if (AccountId != null) __obj.updateDynamic("AccountId")(AccountId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountWithRestoreAccess]
   }
+  @scala.inline
+  implicit class AccountWithRestoreAccessOps[Self <: AccountWithRestoreAccess] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountAlias(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountAlias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountAlias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountAlias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

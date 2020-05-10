@@ -12,10 +12,8 @@ trait CompositeFilterOp extends js.Object
 
 object CompositeFilterOp {
   @scala.inline
-  def AND: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.AND = this.cast("AND")
+  def AND: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.AND = "AND".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.AND]
   @scala.inline
-  def OPERATOR_UNSPECIFIED: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.OPERATOR_UNSPECIFIED = this.cast("OPERATOR_UNSPECIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def OPERATOR_UNSPECIFIED: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.OPERATOR_UNSPECIFIED = "OPERATOR_UNSPECIFIED".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.OPERATOR_UNSPECIFIED]
 }
 

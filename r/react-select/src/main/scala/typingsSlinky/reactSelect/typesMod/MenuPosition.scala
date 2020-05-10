@@ -12,10 +12,8 @@ trait MenuPosition extends js.Object
 
 object MenuPosition {
   @scala.inline
-  def absolute: typingsSlinky.reactSelect.reactSelectStrings.absolute = this.cast("absolute")
+  def absolute: typingsSlinky.reactSelect.reactSelectStrings.absolute = "absolute".asInstanceOf[typingsSlinky.reactSelect.reactSelectStrings.absolute]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def fixed: typingsSlinky.reactSelect.reactSelectStrings.fixed = this.cast("fixed")
+  def fixed: typingsSlinky.reactSelect.reactSelectStrings.fixed = "fixed".asInstanceOf[typingsSlinky.reactSelect.reactSelectStrings.fixed]
 }
 

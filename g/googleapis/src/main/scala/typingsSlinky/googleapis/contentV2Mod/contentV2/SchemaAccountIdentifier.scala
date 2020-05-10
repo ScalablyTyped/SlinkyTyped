@@ -19,11 +19,41 @@ trait SchemaAccountIdentifier extends js.Object {
 
 object SchemaAccountIdentifier {
   @scala.inline
-  def apply(aggregatorId: String = null, merchantId: String = null): SchemaAccountIdentifier = {
+  def apply(): SchemaAccountIdentifier = {
     val __obj = js.Dynamic.literal()
-    if (aggregatorId != null) __obj.updateDynamic("aggregatorId")(aggregatorId.asInstanceOf[js.Any])
-    if (merchantId != null) __obj.updateDynamic("merchantId")(merchantId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAccountIdentifier]
   }
+  @scala.inline
+  implicit class SchemaAccountIdentifierOps[Self <: SchemaAccountIdentifier] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggregatorId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregatorId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregatorId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregatorId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMerchantId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMerchantId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -2,7 +2,6 @@ package typingsSlinky.angularUiRouter.mod.angularAugmentingMod.ui
 
 import typingsSlinky.angular.mod.IServiceProvider
 import typingsSlinky.angular.mod._Global_.Function
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,8 +28,8 @@ trait IUrlRouterProvider extends IServiceProvider {
   def when(whenPath: IUrlMatcher, handler: js.Array[_]): IUrlRouterProvider = js.native
   def when(whenPath: IUrlMatcher, hanlder: Function): IUrlRouterProvider = js.native
   def when(whenPath: IUrlMatcher, toPath: String): IUrlRouterProvider = js.native
-  def when(whenPath: RegExp, handler: js.Array[_]): IUrlRouterProvider = js.native
-  def when(whenPath: RegExp, handler: Function): IUrlRouterProvider = js.native
-  def when(whenPath: RegExp, toPath: String): IUrlRouterProvider = js.native
+  def when(whenPath: js.RegExp, handler: js.Array[_]): IUrlRouterProvider = js.native
+  def when(whenPath: js.RegExp, handler: Function): IUrlRouterProvider = js.native
+  def when(whenPath: js.RegExp, toPath: String): IUrlRouterProvider = js.native
 }
 

@@ -23,10 +23,41 @@ trait UserPoolDomainArgs extends js.Object {
 
 object UserPoolDomainArgs {
   @scala.inline
-  def apply(domain: Input[String], userPoolId: Input[String], certificateArn: Input[String] = null): UserPoolDomainArgs = {
+  def apply(domain: Input[String], userPoolId: Input[String]): UserPoolDomainArgs = {
     val __obj = js.Dynamic.literal(domain = domain.asInstanceOf[js.Any], userPoolId = userPoolId.asInstanceOf[js.Any])
-    if (certificateArn != null) __obj.updateDynamic("certificateArn")(certificateArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPoolDomainArgs]
   }
+  @scala.inline
+  implicit class UserPoolDomainArgsOps[Self <: UserPoolDomainArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomain(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserPoolId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userPoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCertificateArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

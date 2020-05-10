@@ -33,8 +33,39 @@ object SizeConstraint {
     TextTransformation: TextTransformation
   ): SizeConstraint = {
     val __obj = js.Dynamic.literal(ComparisonOperator = ComparisonOperator.asInstanceOf[js.Any], FieldToMatch = FieldToMatch.asInstanceOf[js.Any], Size = Size.asInstanceOf[js.Any], TextTransformation = TextTransformation.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SizeConstraint]
   }
+  @scala.inline
+  implicit class SizeConstraintOps[Self <: SizeConstraint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComparisonOperator(value: ComparisonOperator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComparisonOperator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFieldToMatch(value: FieldToMatch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldToMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSize(value: Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextTransformation(value: TextTransformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TextTransformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

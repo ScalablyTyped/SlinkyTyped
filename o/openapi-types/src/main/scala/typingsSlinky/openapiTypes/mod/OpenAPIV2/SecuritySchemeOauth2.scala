@@ -21,16 +21,9 @@ trait SecuritySchemeOauth2 extends SecuritySchemeObject
 
 object SecuritySchemeOauth2 {
   @scala.inline
-  def SecuritySchemeOauth2Implicit(
-    authorizationUrl: String,
-    flow: `implicit`,
-    scopes: ScopesObject,
-    `type`: basic | apiKey | oauth2,
-    description: String = null
-  ): SecuritySchemeOauth2 = {
+  def SecuritySchemeOauth2Implicit(authorizationUrl: String, flow: `implicit`, scopes: ScopesObject, `type`: basic | apiKey | oauth2): SecuritySchemeOauth2 = {
     val __obj = js.Dynamic.literal(authorizationUrl = authorizationUrl.asInstanceOf[js.Any], flow = flow.asInstanceOf[js.Any], scopes = scopes.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecuritySchemeOauth2]
   }
   @scala.inline
@@ -39,38 +32,22 @@ object SecuritySchemeOauth2 {
     flow: accessCode,
     scopes: ScopesObject,
     tokenUrl: String,
-    `type`: basic | apiKey | oauth2,
-    description: String = null
+    `type`: basic | apiKey | oauth2
   ): SecuritySchemeOauth2 = {
     val __obj = js.Dynamic.literal(authorizationUrl = authorizationUrl.asInstanceOf[js.Any], flow = flow.asInstanceOf[js.Any], scopes = scopes.asInstanceOf[js.Any], tokenUrl = tokenUrl.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecuritySchemeOauth2]
   }
   @scala.inline
-  def SecuritySchemeOauth2Password(
-    flow: password,
-    scopes: ScopesObject,
-    tokenUrl: String,
-    `type`: basic | apiKey | oauth2,
-    description: String = null
-  ): SecuritySchemeOauth2 = {
+  def SecuritySchemeOauth2Password(flow: password, scopes: ScopesObject, tokenUrl: String, `type`: basic | apiKey | oauth2): SecuritySchemeOauth2 = {
     val __obj = js.Dynamic.literal(flow = flow.asInstanceOf[js.Any], scopes = scopes.asInstanceOf[js.Any], tokenUrl = tokenUrl.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecuritySchemeOauth2]
   }
   @scala.inline
-  def SecuritySchemeOauth2Application(
-    flow: application,
-    scopes: ScopesObject,
-    tokenUrl: String,
-    `type`: basic | apiKey | oauth2,
-    description: String = null
-  ): SecuritySchemeOauth2 = {
+  def SecuritySchemeOauth2Application(flow: application, scopes: ScopesObject, tokenUrl: String, `type`: basic | apiKey | oauth2): SecuritySchemeOauth2 = {
     val __obj = js.Dynamic.literal(flow = flow.asInstanceOf[js.Any], scopes = scopes.asInstanceOf[js.Any], tokenUrl = tokenUrl.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecuritySchemeOauth2]
   }
 }

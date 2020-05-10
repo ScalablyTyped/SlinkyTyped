@@ -14,10 +14,29 @@ trait BatchWriteResponse extends js.Object {
 
 object BatchWriteResponse {
   @scala.inline
-  def apply(Responses: BatchWriteOperationResponseList = null): BatchWriteResponse = {
+  def apply(): BatchWriteResponse = {
     val __obj = js.Dynamic.literal()
-    if (Responses != null) __obj.updateDynamic("Responses")(Responses.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchWriteResponse]
   }
+  @scala.inline
+  implicit class BatchWriteResponseOps[Self <: BatchWriteResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResponses(value: BatchWriteOperationResponseList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Responses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Responses")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

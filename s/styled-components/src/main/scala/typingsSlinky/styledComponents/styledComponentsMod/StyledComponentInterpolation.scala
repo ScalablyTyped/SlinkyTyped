@@ -11,3 +11,34 @@ import scala.scalajs.js.annotation._
 */
 trait StyledComponentInterpolation extends _InterpolationValue
 
+object StyledComponentInterpolation {
+  @scala.inline
+  def PickStyledComponentBasean(
+    DollarDollartypeof: js.Symbol,
+    withComponent: /* component */ AnyStyledComponent => StyledComponent[
+      StyledComponentInnerComponent[AnyStyledComponent], 
+      _, 
+      js.Any with StyledComponentInnerOtherProps[AnyStyledComponent], 
+      _ | StyledComponentInnerAttrs[AnyStyledComponent]
+    ]
+  ): StyledComponentInterpolation = {
+    val __obj = js.Dynamic.literal(withComponent = js.Any.fromFunction1(withComponent))
+    __obj.updateDynamic("$$typeof")(DollarDollartypeof.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StyledComponentInterpolation]
+  }
+  @scala.inline
+  def PickStyledComponentBaseanDefaultProps(
+    DollarDollartypeof: js.Symbol,
+    withComponent: /* component */ AnyStyledComponent => StyledComponent[
+      StyledComponentInnerComponent[AnyStyledComponent], 
+      _, 
+      js.Any with StyledComponentInnerOtherProps[AnyStyledComponent], 
+      scala.Nothing | StyledComponentInnerAttrs[AnyStyledComponent]
+    ]
+  ): StyledComponentInterpolation = {
+    val __obj = js.Dynamic.literal(withComponent = js.Any.fromFunction1(withComponent))
+    __obj.updateDynamic("$$typeof")(DollarDollartypeof.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StyledComponentInterpolation]
+  }
+}
+

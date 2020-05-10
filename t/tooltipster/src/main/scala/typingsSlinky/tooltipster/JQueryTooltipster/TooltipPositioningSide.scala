@@ -14,14 +14,12 @@ trait TooltipPositioningSide extends js.Object
 
 object TooltipPositioningSide {
   @scala.inline
-  def bottom: typingsSlinky.tooltipster.tooltipsterStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.tooltipster.tooltipsterStrings.bottom = "bottom".asInstanceOf[typingsSlinky.tooltipster.tooltipsterStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.tooltipster.tooltipsterStrings.left = "left".asInstanceOf[typingsSlinky.tooltipster.tooltipsterStrings.left]
   @scala.inline
-  def left: typingsSlinky.tooltipster.tooltipsterStrings.left = this.cast("left")
+  def right: typingsSlinky.tooltipster.tooltipsterStrings.right = "right".asInstanceOf[typingsSlinky.tooltipster.tooltipsterStrings.right]
   @scala.inline
-  def right: typingsSlinky.tooltipster.tooltipsterStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.tooltipster.tooltipsterStrings.top = this.cast("top")
+  def top: typingsSlinky.tooltipster.tooltipsterStrings.top = "top".asInstanceOf[typingsSlinky.tooltipster.tooltipsterStrings.top]
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.mfiles.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.mfiles.IExpression
 import typingsSlinky.mfiles.IPropertyDefOrObjectType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,16 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.PropertyDefOrObjectType")
 @js.native
-class PropertyDefOrObjectType () extends IPropertyDefOrObjectType {
-  /* CompleteClass */
-  override var ID: Double = js.native
-  /* CompleteClass */
-  override var PropertyDef: Boolean = js.native
-  /* CompleteClass */
-  override def Clone(): IPropertyDefOrObjectType = js.native
-  /* CompleteClass */
-  override def GetAsExpression(): IExpression = js.native
-}
+class PropertyDefOrObjectType () extends IPropertyDefOrObjectType
 
 @JSGlobal("MFiles.PropertyDefOrObjectType")
 @js.native

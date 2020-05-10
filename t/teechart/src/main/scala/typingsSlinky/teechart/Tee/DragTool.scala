@@ -10,20 +10,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class DragTool () extends IDragTool {
   def this(chart: Chart) = this()
-  /* CompleteClass */
-  override var active: Boolean = js.native
-  /* CompleteClass */
-  override var chart: IChart = js.native
-  /* CompleteClass */
-  override var series: ISeries = js.native
-  /* CompleteClass */
-  override def clicked(p: IPoint): Boolean = js.native
-  /* CompleteClass */
-  override def draw(): Unit = js.native
-  /* CompleteClass */
-  override def mousedown(event: js.Any): Boolean = js.native
-  /* CompleteClass */
-  override def mousemove(event: js.Any): Boolean = js.native
 }
 
 @JSGlobal("Tee.DragTool")

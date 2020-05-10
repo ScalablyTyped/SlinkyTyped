@@ -1,6 +1,5 @@
 package typingsSlinky.tensorflowTfjsData
 
-import typingsSlinky.std.Uint8Array
 import typingsSlinky.tensorflowTfjsData.lazyIteratorMod.LazyIterator
 import typingsSlinky.tensorflowTfjsData.stringIteratorMod.StringIterator
 import scala.scalajs.js
@@ -11,7 +10,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object byteChunkIteratorMod extends js.Object {
   @js.native
-  abstract class ByteChunkIterator () extends LazyIterator[Uint8Array] {
+  abstract class ByteChunkIterator ()
+    extends LazyIterator[js.typedarray.Uint8Array] {
     /**
       * Decode a stream of UTF8-encoded byte arrays to a stream of strings.
       *

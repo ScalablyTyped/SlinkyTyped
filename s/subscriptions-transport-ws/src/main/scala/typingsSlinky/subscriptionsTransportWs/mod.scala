@@ -2,8 +2,6 @@ package typingsSlinky.subscriptionsTransportWs
 
 import typingsSlinky.subscriptionsTransportWs.clientMod.ClientOptions
 import typingsSlinky.subscriptionsTransportWs.serverMod.ServerOptions
-import typingsSlinky.subscriptionsTransportWs.subscriptionsTransportWsStrings.`graphql-subscriptions`
-import typingsSlinky.subscriptionsTransportWs.subscriptionsTransportWsStrings.`graphql-ws`
 import typingsSlinky.ws.mod.Server
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,8 +27,8 @@ object mod extends js.Object {
     def this(options: ServerOptions, socketOptionsOrServer: typingsSlinky.ws.mod.ServerOptions) = this()
   }
   
-  val GRAPHQL_SUBSCRIPTIONS: `graphql-subscriptions` = js.native
-  val GRAPHQL_WS: `graphql-ws` = js.native
+  val GRAPHQL_SUBSCRIPTIONS: /* "graphql-subscriptions" */ String = js.native
+  val GRAPHQL_WS: /* "graphql-ws" */ String = js.native
   /* static members */
   @js.native
   object SubscriptionServer extends js.Object {

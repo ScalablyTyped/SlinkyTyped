@@ -4,39 +4,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChartSeriesItemTooltip extends js.Object {
-  var background: js.UndefOr[String] = js.undefined
-  var border: js.UndefOr[ChartSeriesItemTooltipBorder] = js.undefined
-  var color: js.UndefOr[String] = js.undefined
-  var font: js.UndefOr[String] = js.undefined
-  var format: js.UndefOr[String] = js.undefined
-  var padding: js.UndefOr[ChartSeriesItemTooltipPadding] = js.undefined
-  var template: js.UndefOr[String | js.Function] = js.undefined
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var background: js.UndefOr[String] = js.native
+  var border: js.UndefOr[ChartSeriesItemTooltipBorder] = js.native
+  var color: js.UndefOr[String] = js.native
+  var font: js.UndefOr[String] = js.native
+  var format: js.UndefOr[String] = js.native
+  var padding: js.UndefOr[ChartSeriesItemTooltipPadding] = js.native
+  var template: js.UndefOr[String | js.Function] = js.native
+  var visible: js.UndefOr[Boolean] = js.native
 }
 
 object ChartSeriesItemTooltip {
   @scala.inline
-  def apply(
-    background: String = null,
-    border: ChartSeriesItemTooltipBorder = null,
-    color: String = null,
-    font: String = null,
-    format: String = null,
-    padding: ChartSeriesItemTooltipPadding = null,
-    template: String | js.Function = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): ChartSeriesItemTooltip = {
+  def apply(): ChartSeriesItemTooltip = {
     val __obj = js.Dynamic.literal()
-    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
-    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartSeriesItemTooltip]
   }
+  @scala.inline
+  implicit class ChartSeriesItemTooltipOps[Self <: ChartSeriesItemTooltip] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackground(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackground: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorder(value: ChartSeriesItemTooltipBorder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFont(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFont: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: ChartSeriesItemTooltipPadding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplate(value: String | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

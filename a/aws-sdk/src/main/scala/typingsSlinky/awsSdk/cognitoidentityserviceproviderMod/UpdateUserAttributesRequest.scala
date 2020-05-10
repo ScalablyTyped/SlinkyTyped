@@ -22,14 +22,41 @@ trait UpdateUserAttributesRequest extends js.Object {
 
 object UpdateUserAttributesRequest {
   @scala.inline
-  def apply(
-    AccessToken: TokenModelType,
-    UserAttributes: AttributeListType,
-    ClientMetadata: ClientMetadataType = null
-  ): UpdateUserAttributesRequest = {
+  def apply(AccessToken: TokenModelType, UserAttributes: AttributeListType): UpdateUserAttributesRequest = {
     val __obj = js.Dynamic.literal(AccessToken = AccessToken.asInstanceOf[js.Any], UserAttributes = UserAttributes.asInstanceOf[js.Any])
-    if (ClientMetadata != null) __obj.updateDynamic("ClientMetadata")(ClientMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateUserAttributesRequest]
   }
+  @scala.inline
+  implicit class UpdateUserAttributesRequestOps[Self <: UpdateUserAttributesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessToken(value: TokenModelType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserAttributes(value: AttributeListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientMetadata(value: ClientMetadataType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientMetadata")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

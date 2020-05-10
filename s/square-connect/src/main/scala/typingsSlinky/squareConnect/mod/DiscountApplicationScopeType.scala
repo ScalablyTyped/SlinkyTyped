@@ -13,12 +13,10 @@ trait DiscountApplicationScopeType extends js.Object
 
 object DiscountApplicationScopeType {
   @scala.inline
-  def LINE_ITEM: typingsSlinky.squareConnect.squareConnectStrings.LINE_ITEM = this.cast("LINE_ITEM")
+  def LINE_ITEM: typingsSlinky.squareConnect.squareConnectStrings.LINE_ITEM = "LINE_ITEM".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.LINE_ITEM]
   @scala.inline
-  def ORDER: typingsSlinky.squareConnect.squareConnectStrings.ORDER = this.cast("ORDER")
+  def ORDER: typingsSlinky.squareConnect.squareConnectStrings.ORDER = "ORDER".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.ORDER]
   @scala.inline
-  def OTHER_DISCOUNT_SCOPE: typingsSlinky.squareConnect.squareConnectStrings.OTHER_DISCOUNT_SCOPE = this.cast("OTHER_DISCOUNT_SCOPE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def OTHER_DISCOUNT_SCOPE: typingsSlinky.squareConnect.squareConnectStrings.OTHER_DISCOUNT_SCOPE = "OTHER_DISCOUNT_SCOPE".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.OTHER_DISCOUNT_SCOPE]
 }
 

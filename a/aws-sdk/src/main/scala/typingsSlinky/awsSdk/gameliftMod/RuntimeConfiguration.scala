@@ -22,16 +22,53 @@ trait RuntimeConfiguration extends js.Object {
 
 object RuntimeConfiguration {
   @scala.inline
-  def apply(
-    GameSessionActivationTimeoutSeconds: Int | scala.Double = null,
-    MaxConcurrentGameSessionActivations: Int | scala.Double = null,
-    ServerProcesses: ServerProcessList = null
-  ): RuntimeConfiguration = {
+  def apply(): RuntimeConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (GameSessionActivationTimeoutSeconds != null) __obj.updateDynamic("GameSessionActivationTimeoutSeconds")(GameSessionActivationTimeoutSeconds.asInstanceOf[js.Any])
-    if (MaxConcurrentGameSessionActivations != null) __obj.updateDynamic("MaxConcurrentGameSessionActivations")(MaxConcurrentGameSessionActivations.asInstanceOf[js.Any])
-    if (ServerProcesses != null) __obj.updateDynamic("ServerProcesses")(ServerProcesses.asInstanceOf[js.Any])
     __obj.asInstanceOf[RuntimeConfiguration]
   }
+  @scala.inline
+  implicit class RuntimeConfigurationOps[Self <: RuntimeConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGameSessionActivationTimeoutSeconds(value: GameSessionActivationTimeoutSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionActivationTimeoutSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGameSessionActivationTimeoutSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionActivationTimeoutSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxConcurrentGameSessionActivations(value: MaxConcurrentGameSessionActivations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrentGameSessionActivations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxConcurrentGameSessionActivations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrentGameSessionActivations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerProcesses(value: ServerProcessList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerProcesses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerProcesses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerProcesses")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.rollupPluginTypescript2
 
 import typingsSlinky.rollupPluginTypescript2.ioptionsMod.TransformerFactoryCreator
-import typingsSlinky.typescript.mod.CompilerOptions
 import typingsSlinky.typescript.mod.IScriptSnapshot
 import typingsSlinky.typescript.mod.LanguageService
 import typingsSlinky.typescript.mod.ParsedCommandLine
@@ -23,19 +22,6 @@ object hostMod extends js.Object {
     var snapshots: js.Any = js.native
     var transformers: js.Any = js.native
     var versions: js.Any = js.native
-    /* CompleteClass */
-    override def getCompilationSettings(): CompilerOptions = js.native
-    /* CompleteClass */
-    @JSName("getCurrentDirectory")
-    override def getCurrentDirectory_MLanguageServiceHost(): String = js.native
-    /* CompleteClass */
-    override def getDefaultLibFileName(options: CompilerOptions): String = js.native
-    /* CompleteClass */
-    override def getScriptFileNames(): js.Array[String] = js.native
-    /* CompleteClass */
-    override def getScriptSnapshot(fileName: String): js.UndefOr[IScriptSnapshot] = js.native
-    /* CompleteClass */
-    override def getScriptVersion(fileName: String): String = js.native
     def reset(): Unit = js.native
     def setLanguageService(service: LanguageService): Unit = js.native
     def setSnapshot(fileName: String, data: String): IScriptSnapshot = js.native

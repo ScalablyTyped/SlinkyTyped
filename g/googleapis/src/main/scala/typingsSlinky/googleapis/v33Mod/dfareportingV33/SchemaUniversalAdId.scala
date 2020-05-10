@@ -24,11 +24,41 @@ trait SchemaUniversalAdId extends js.Object {
 
 object SchemaUniversalAdId {
   @scala.inline
-  def apply(registry: String = null, value: String = null): SchemaUniversalAdId = {
+  def apply(): SchemaUniversalAdId = {
     val __obj = js.Dynamic.literal()
-    if (registry != null) __obj.updateDynamic("registry")(registry.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUniversalAdId]
   }
+  @scala.inline
+  implicit class SchemaUniversalAdIdOps[Self <: SchemaUniversalAdId] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRegistry(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegistry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -15,10 +15,8 @@ trait WMTSRequestEncoding extends js.Object
 
 object WMTSRequestEncoding {
   @scala.inline
-  def KVP: typingsSlinky.openlayers.openlayersStrings.KVP = this.cast("KVP")
+  def KVP: typingsSlinky.openlayers.openlayersStrings.KVP = "KVP".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.KVP]
   @scala.inline
-  def REST: typingsSlinky.openlayers.openlayersStrings.REST = this.cast("REST")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def REST: typingsSlinky.openlayers.openlayersStrings.REST = "REST".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.REST]
 }
 

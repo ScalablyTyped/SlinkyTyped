@@ -1,7 +1,6 @@
 package typingsSlinky.lolex.mod
 
 import typingsSlinky.lolex.AnonNow
-import typingsSlinky.std.Date
 import typingsSlinky.std.DateConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -155,7 +154,7 @@ trait BrowserClock extends Clock {
     */
   def setSystemTime(): Unit = js.native
   def setSystemTime(now: Double): Unit = js.native
-  def setSystemTime(now: Date): Unit = js.native
+  def setSystemTime(now: js.Date): Unit = js.native
   /**
     * Schedules a callback to be fired once timeout milliseconds have ticked by.
     *

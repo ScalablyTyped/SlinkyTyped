@@ -4,56 +4,110 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SectionGroup extends OnenoteEntityHierarchyModel {
   // The notebook that contains the section group. Read-only.
-  var parentNotebook: js.UndefOr[Notebook] = js.undefined
+  var parentNotebook: js.UndefOr[Notebook] = js.native
   // The section group that contains the section group. Read-only.
-  var parentSectionGroup: js.UndefOr[SectionGroup] = js.undefined
+  var parentSectionGroup: js.UndefOr[SectionGroup] = js.native
   // The section groups in the section. Read-only. Nullable.
-  var sectionGroups: js.UndefOr[js.Array[SectionGroup]] = js.undefined
+  var sectionGroups: js.UndefOr[js.Array[SectionGroup]] = js.native
   /**
     * The URL for the sectionGroups navigation property, which returns all the section groups in the section group.
     * Read-only.
     */
-  var sectionGroupsUrl: js.UndefOr[String] = js.undefined
+  var sectionGroupsUrl: js.UndefOr[String] = js.native
   // The sections in the section group. Read-only. Nullable.
-  var sections: js.UndefOr[js.Array[OnenoteSection]] = js.undefined
+  var sections: js.UndefOr[js.Array[OnenoteSection]] = js.native
   // The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
-  var sectionsUrl: js.UndefOr[String] = js.undefined
+  var sectionsUrl: js.UndefOr[String] = js.native
 }
 
 object SectionGroup {
   @scala.inline
-  def apply(
-    createdBy: IdentitySet = null,
-    createdDateTime: String = null,
-    displayName: String = null,
-    id: String = null,
-    lastModifiedBy: IdentitySet = null,
-    lastModifiedDateTime: String = null,
-    parentNotebook: Notebook = null,
-    parentSectionGroup: SectionGroup = null,
-    sectionGroups: js.Array[SectionGroup] = null,
-    sectionGroupsUrl: String = null,
-    sections: js.Array[OnenoteSection] = null,
-    sectionsUrl: String = null,
-    self: String = null
-  ): SectionGroup = {
+  def apply(): SectionGroup = {
     val __obj = js.Dynamic.literal()
-    if (createdBy != null) __obj.updateDynamic("createdBy")(createdBy.asInstanceOf[js.Any])
-    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (lastModifiedBy != null) __obj.updateDynamic("lastModifiedBy")(lastModifiedBy.asInstanceOf[js.Any])
-    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
-    if (parentNotebook != null) __obj.updateDynamic("parentNotebook")(parentNotebook.asInstanceOf[js.Any])
-    if (parentSectionGroup != null) __obj.updateDynamic("parentSectionGroup")(parentSectionGroup.asInstanceOf[js.Any])
-    if (sectionGroups != null) __obj.updateDynamic("sectionGroups")(sectionGroups.asInstanceOf[js.Any])
-    if (sectionGroupsUrl != null) __obj.updateDynamic("sectionGroupsUrl")(sectionGroupsUrl.asInstanceOf[js.Any])
-    if (sections != null) __obj.updateDynamic("sections")(sections.asInstanceOf[js.Any])
-    if (sectionsUrl != null) __obj.updateDynamic("sectionsUrl")(sectionsUrl.asInstanceOf[js.Any])
-    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
     __obj.asInstanceOf[SectionGroup]
   }
+  @scala.inline
+  implicit class SectionGroupOps[Self <: SectionGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParentNotebook(value: Notebook): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentNotebook")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentNotebook: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentNotebook")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentSectionGroup(value: SectionGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentSectionGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentSectionGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentSectionGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSectionGroups(value: js.Array[SectionGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSectionGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSectionGroupsUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionGroupsUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSectionGroupsUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionGroupsUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSections(value: js.Array[OnenoteSection]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sections")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSections: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sections")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSectionsUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionsUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSectionsUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionsUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

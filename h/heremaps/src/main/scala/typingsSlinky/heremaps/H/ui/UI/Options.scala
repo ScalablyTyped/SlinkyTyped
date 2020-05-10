@@ -19,39 +19,127 @@ import scala.scalajs.js.annotation._
   * or a string one of following 'en-US', 'de-DE', 'es-ES', 'fi-FI', 'fr-FR', 'it-IT', 'nl-NL', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'tr-TR', 'zh-CN'. If not defined ui will use 'en-US'
   * by default
   */
+@js.native
 trait Options extends js.Object {
-  var distancemeasurement: js.UndefOr[typingsSlinky.heremaps.H.ui.DistanceMeasurement.Options | Boolean] = js.undefined
-  var locale: js.UndefOr[Localization | String] = js.undefined
-  var mapsettings: js.UndefOr[typingsSlinky.heremaps.H.ui.MapSettingsControl.Options | Boolean] = js.undefined
-  var panorama: js.UndefOr[typingsSlinky.heremaps.H.ui.Pano.Options | Boolean] = js.undefined
-  var scalebar: js.UndefOr[typingsSlinky.heremaps.H.ui.ScaleBar.Options | Boolean] = js.undefined
-  var unitSystem: js.UndefOr[UnitSystem] = js.undefined
-  var zoom: js.UndefOr[typingsSlinky.heremaps.H.ui.ZoomControl.Options | Boolean] = js.undefined
-  var zoomrectangle: js.UndefOr[typingsSlinky.heremaps.H.ui.ZoomRectangle.Options | Boolean] = js.undefined
+  var distancemeasurement: js.UndefOr[typingsSlinky.heremaps.H.ui.DistanceMeasurement.Options | Boolean] = js.native
+  var locale: js.UndefOr[Localization | String] = js.native
+  var mapsettings: js.UndefOr[typingsSlinky.heremaps.H.ui.MapSettingsControl.Options | Boolean] = js.native
+  var panorama: js.UndefOr[typingsSlinky.heremaps.H.ui.Pano.Options | Boolean] = js.native
+  var scalebar: js.UndefOr[typingsSlinky.heremaps.H.ui.ScaleBar.Options | Boolean] = js.native
+  var unitSystem: js.UndefOr[UnitSystem] = js.native
+  var zoom: js.UndefOr[typingsSlinky.heremaps.H.ui.ZoomControl.Options | Boolean] = js.native
+  var zoomrectangle: js.UndefOr[typingsSlinky.heremaps.H.ui.ZoomRectangle.Options | Boolean] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    distancemeasurement: typingsSlinky.heremaps.H.ui.DistanceMeasurement.Options | Boolean = null,
-    locale: Localization | String = null,
-    mapsettings: typingsSlinky.heremaps.H.ui.MapSettingsControl.Options | Boolean = null,
-    panorama: typingsSlinky.heremaps.H.ui.Pano.Options | Boolean = null,
-    scalebar: typingsSlinky.heremaps.H.ui.ScaleBar.Options | Boolean = null,
-    unitSystem: UnitSystem = null,
-    zoom: typingsSlinky.heremaps.H.ui.ZoomControl.Options | Boolean = null,
-    zoomrectangle: typingsSlinky.heremaps.H.ui.ZoomRectangle.Options | Boolean = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (distancemeasurement != null) __obj.updateDynamic("distancemeasurement")(distancemeasurement.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (mapsettings != null) __obj.updateDynamic("mapsettings")(mapsettings.asInstanceOf[js.Any])
-    if (panorama != null) __obj.updateDynamic("panorama")(panorama.asInstanceOf[js.Any])
-    if (scalebar != null) __obj.updateDynamic("scalebar")(scalebar.asInstanceOf[js.Any])
-    if (unitSystem != null) __obj.updateDynamic("unitSystem")(unitSystem.asInstanceOf[js.Any])
-    if (zoom != null) __obj.updateDynamic("zoom")(zoom.asInstanceOf[js.Any])
-    if (zoomrectangle != null) __obj.updateDynamic("zoomrectangle")(zoomrectangle.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDistancemeasurement(value: typingsSlinky.heremaps.H.ui.DistanceMeasurement.Options | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distancemeasurement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistancemeasurement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distancemeasurement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: Localization | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapsettings(value: typingsSlinky.heremaps.H.ui.MapSettingsControl.Options | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapsettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapsettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapsettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPanorama(value: typingsSlinky.heremaps.H.ui.Pano.Options | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panorama")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPanorama: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panorama")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScalebar(value: typingsSlinky.heremaps.H.ui.ScaleBar.Options | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scalebar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScalebar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scalebar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnitSystem(value: UnitSystem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unitSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnitSystem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unitSystem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoom(value: typingsSlinky.heremaps.H.ui.ZoomControl.Options | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomrectangle(value: typingsSlinky.heremaps.H.ui.ZoomRectangle.Options | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomrectangle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomrectangle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomrectangle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

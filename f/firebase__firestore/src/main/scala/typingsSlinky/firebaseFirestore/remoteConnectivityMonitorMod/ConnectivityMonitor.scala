@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ConnectivityMonitor extends js.Object {
   /**
     * Adds a callback to be called when connectivity changes.
@@ -13,21 +14,40 @@ trait ConnectivityMonitor extends js.Object {
     * connectivity changes. As such, the initial connectivity state is
     * irrelevant here.
     */
-  def addCallback(callback: ConnectivityMonitorCallback): Unit
+  def addCallback(callback: ConnectivityMonitorCallback): Unit = js.native
   /**
     * Stops monitoring connectivity. After this call completes, no further
     * callbacks will be triggered. After shutdown() is called, no further calls
     * are allowed on this instance.
     */
-  def shutdown(): Unit
+  def shutdown(): Unit = js.native
 }
 
 object ConnectivityMonitor {
   @scala.inline
   def apply(addCallback: ConnectivityMonitorCallback => Unit, shutdown: () => Unit): ConnectivityMonitor = {
     val __obj = js.Dynamic.literal(addCallback = js.Any.fromFunction1(addCallback), shutdown = js.Any.fromFunction0(shutdown))
-  
     __obj.asInstanceOf[ConnectivityMonitor]
   }
+  @scala.inline
+  implicit class ConnectivityMonitorOps[Self <: ConnectivityMonitor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddCallback(value: ConnectivityMonitorCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addCallback")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withShutdown(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shutdown")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

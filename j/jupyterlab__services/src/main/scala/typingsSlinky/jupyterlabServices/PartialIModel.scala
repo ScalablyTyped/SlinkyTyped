@@ -7,45 +7,153 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@jupyterlab/services.@jupyterlab/services/lib/contents.Contents.IModel> */
+@js.native
 trait PartialIModel extends js.Object {
-  var chunk: js.UndefOr[Double] = js.undefined
-  var content: js.UndefOr[js.Any] = js.undefined
-  var created: js.UndefOr[String] = js.undefined
-  var format: js.UndefOr[FileFormat] = js.undefined
-  var last_modified: js.UndefOr[String] = js.undefined
-  var mimetype: js.UndefOr[String] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var path: js.UndefOr[String] = js.undefined
-  var `type`: js.UndefOr[ContentType] = js.undefined
-  var writable: js.UndefOr[Boolean] = js.undefined
+  var chunk: js.UndefOr[Double] = js.native
+  var content: js.UndefOr[js.Any] = js.native
+  var created: js.UndefOr[String] = js.native
+  var format: js.UndefOr[FileFormat] = js.native
+  var last_modified: js.UndefOr[String] = js.native
+  var mimetype: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.native
+  var path: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[ContentType] = js.native
+  var writable: js.UndefOr[Boolean] = js.native
 }
 
 object PartialIModel {
   @scala.inline
-  def apply(
-    chunk: Int | Double = null,
-    content: js.Any = null,
-    created: String = null,
-    format: FileFormat = null,
-    last_modified: String = null,
-    mimetype: String = null,
-    name: String = null,
-    path: String = null,
-    `type`: ContentType = null,
-    writable: js.UndefOr[Boolean] = js.undefined
-  ): PartialIModel = {
+  def apply(): PartialIModel = {
     val __obj = js.Dynamic.literal()
-    if (chunk != null) __obj.updateDynamic("chunk")(chunk.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (created != null) __obj.updateDynamic("created")(created.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (last_modified != null) __obj.updateDynamic("last_modified")(last_modified.asInstanceOf[js.Any])
-    if (mimetype != null) __obj.updateDynamic("mimetype")(mimetype.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(writable)) __obj.updateDynamic("writable")(writable.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialIModel]
   }
+  @scala.inline
+  implicit class PartialIModelOps[Self <: PartialIModel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChunk(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chunk")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChunk: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chunk")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreated(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: FileFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLast_modified(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("last_modified")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLast_modified: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("last_modified")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMimetype(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mimetype")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMimetype: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mimetype")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: ContentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWritable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWritable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writable")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

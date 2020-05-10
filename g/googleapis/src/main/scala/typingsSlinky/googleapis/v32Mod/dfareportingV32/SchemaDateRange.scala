@@ -31,18 +31,65 @@ trait SchemaDateRange extends js.Object {
 
 object SchemaDateRange {
   @scala.inline
-  def apply(
-    endDate: String = null,
-    kind: String = null,
-    relativeDateRange: String = null,
-    startDate: String = null
-  ): SchemaDateRange = {
+  def apply(): SchemaDateRange = {
     val __obj = js.Dynamic.literal()
-    if (endDate != null) __obj.updateDynamic("endDate")(endDate.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (relativeDateRange != null) __obj.updateDynamic("relativeDateRange")(relativeDateRange.asInstanceOf[js.Any])
-    if (startDate != null) __obj.updateDynamic("startDate")(startDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDateRange]
   }
+  @scala.inline
+  implicit class SchemaDateRangeOps[Self <: SchemaDateRange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelativeDateRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeDateRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelativeDateRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeDateRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -54,22 +54,114 @@ object ProvisionProductInput {
     ProductId: Id,
     ProvisionToken: IdempotencyToken,
     ProvisionedProductName: ProvisionedProductName,
-    ProvisioningArtifactId: Id,
-    AcceptLanguage: AcceptLanguage = null,
-    NotificationArns: NotificationArns = null,
-    PathId: Id = null,
-    ProvisioningParameters: ProvisioningParameters = null,
-    ProvisioningPreferences: ProvisioningPreferences = null,
-    Tags: Tags = null
+    ProvisioningArtifactId: Id
   ): ProvisionProductInput = {
     val __obj = js.Dynamic.literal(ProductId = ProductId.asInstanceOf[js.Any], ProvisionToken = ProvisionToken.asInstanceOf[js.Any], ProvisionedProductName = ProvisionedProductName.asInstanceOf[js.Any], ProvisioningArtifactId = ProvisioningArtifactId.asInstanceOf[js.Any])
-    if (AcceptLanguage != null) __obj.updateDynamic("AcceptLanguage")(AcceptLanguage.asInstanceOf[js.Any])
-    if (NotificationArns != null) __obj.updateDynamic("NotificationArns")(NotificationArns.asInstanceOf[js.Any])
-    if (PathId != null) __obj.updateDynamic("PathId")(PathId.asInstanceOf[js.Any])
-    if (ProvisioningParameters != null) __obj.updateDynamic("ProvisioningParameters")(ProvisioningParameters.asInstanceOf[js.Any])
-    if (ProvisioningPreferences != null) __obj.updateDynamic("ProvisioningPreferences")(ProvisioningPreferences.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProvisionProductInput]
   }
+  @scala.inline
+  implicit class ProvisionProductInputOps[Self <: ProvisionProductInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProductId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProvisionToken(value: IdempotencyToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProvisionedProductName(value: ProvisionedProductName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedProductName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProvisioningArtifactId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningArtifactId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAcceptLanguage(value: AcceptLanguage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceptLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotificationArns(value: NotificationArns): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationArns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPathId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PathId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPathId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PathId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisioningParameters(value: ProvisioningParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisioningParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisioningPreferences(value: ProvisioningPreferences): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningPreferences")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisioningPreferences: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningPreferences")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

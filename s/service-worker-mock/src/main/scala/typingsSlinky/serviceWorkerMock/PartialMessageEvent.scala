@@ -1,5 +1,6 @@
 package typingsSlinky.serviceWorkerMock
 
+import org.scalajs.dom.experimental.serviceworkers.ServiceWorker
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.MessagePort
 import typingsSlinky.std.MessageEventSource
@@ -8,96 +9,386 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<std.MessageEvent> */
+@js.native
 trait PartialMessageEvent extends js.Object {
-  var AT_TARGET: js.UndefOr[Double] = js.undefined
-  var BUBBLING_PHASE: js.UndefOr[Double] = js.undefined
-  var CAPTURING_PHASE: js.UndefOr[Double] = js.undefined
-  var NONE: js.UndefOr[Double] = js.undefined
-  var bubbles: js.UndefOr[Boolean] = js.undefined
-  var cancelBubble: js.UndefOr[Boolean] = js.undefined
-  var cancelable: js.UndefOr[Boolean] = js.undefined
-  var composed: js.UndefOr[Boolean] = js.undefined
-  var composedPath: js.UndefOr[js.Function0[js.Array[EventTarget]]] = js.undefined
-  var currentTarget: js.UndefOr[EventTarget] = js.undefined
-  var data: js.UndefOr[js.Any] = js.undefined
-  var defaultPrevented: js.UndefOr[Boolean] = js.undefined
-  var eventPhase: js.UndefOr[Double] = js.undefined
-  var initEvent: js.UndefOr[js.Function1[/* type */ String, Unit]] = js.undefined
-  var isTrusted: js.UndefOr[Boolean] = js.undefined
-  var lastEventId: js.UndefOr[String] = js.undefined
-  var origin: js.UndefOr[String] = js.undefined
-  var ports: js.UndefOr[js.Array[MessagePort]] = js.undefined
-  var preventDefault: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var returnValue: js.UndefOr[Boolean] = js.undefined
-  var source: js.UndefOr[MessageEventSource] = js.undefined
-  var srcElement: js.UndefOr[EventTarget] = js.undefined
-  var stopImmediatePropagation: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var stopPropagation: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var target: js.UndefOr[EventTarget] = js.undefined
-  var timeStamp: js.UndefOr[Double] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
+  var AT_TARGET: js.UndefOr[Double] = js.native
+  var BUBBLING_PHASE: js.UndefOr[Double] = js.native
+  var CAPTURING_PHASE: js.UndefOr[Double] = js.native
+  var NONE: js.UndefOr[Double] = js.native
+  var bubbles: js.UndefOr[Boolean] = js.native
+  var cancelBubble: js.UndefOr[Boolean] = js.native
+  var cancelable: js.UndefOr[Boolean] = js.native
+  var composed: js.UndefOr[Boolean] = js.native
+  var composedPath: js.UndefOr[js.Function0[js.Array[EventTarget]]] = js.native
+  var currentTarget: js.UndefOr[EventTarget] = js.native
+  var data: js.UndefOr[js.Any] = js.native
+  var defaultPrevented: js.UndefOr[Boolean] = js.native
+  var eventPhase: js.UndefOr[Double] = js.native
+  var initEvent: js.UndefOr[js.Function1[/* type */ String, Unit]] = js.native
+  var isTrusted: js.UndefOr[Boolean] = js.native
+  var lastEventId: js.UndefOr[String] = js.native
+  var origin: js.UndefOr[String] = js.native
+  var ports: js.UndefOr[js.Array[MessagePort]] = js.native
+  var preventDefault: js.UndefOr[js.Function0[Unit]] = js.native
+  var returnValue: js.UndefOr[Boolean] = js.native
+  var source: js.UndefOr[MessageEventSource] = js.native
+  var srcElement: js.UndefOr[EventTarget] = js.native
+  var stopImmediatePropagation: js.UndefOr[js.Function0[Unit]] = js.native
+  var stopPropagation: js.UndefOr[js.Function0[Unit]] = js.native
+  var target: js.UndefOr[EventTarget] = js.native
+  var timeStamp: js.UndefOr[Double] = js.native
+  var `type`: js.UndefOr[String] = js.native
 }
 
 object PartialMessageEvent {
   @scala.inline
-  def apply(
-    AT_TARGET: Int | Double = null,
-    BUBBLING_PHASE: Int | Double = null,
-    CAPTURING_PHASE: Int | Double = null,
-    NONE: Int | Double = null,
-    bubbles: js.UndefOr[Boolean] = js.undefined,
-    cancelBubble: js.UndefOr[Boolean] = js.undefined,
-    cancelable: js.UndefOr[Boolean] = js.undefined,
-    composed: js.UndefOr[Boolean] = js.undefined,
-    composedPath: () => js.Array[EventTarget] = null,
-    currentTarget: EventTarget = null,
-    data: js.Any = null,
-    defaultPrevented: js.UndefOr[Boolean] = js.undefined,
-    eventPhase: Int | Double = null,
-    initEvent: /* type */ String => Unit = null,
-    isTrusted: js.UndefOr[Boolean] = js.undefined,
-    lastEventId: String = null,
-    origin: String = null,
-    ports: js.Array[MessagePort] = null,
-    preventDefault: () => Unit = null,
-    returnValue: js.UndefOr[Boolean] = js.undefined,
-    source: MessageEventSource = null,
-    srcElement: EventTarget = null,
-    stopImmediatePropagation: () => Unit = null,
-    stopPropagation: () => Unit = null,
-    target: EventTarget = null,
-    timeStamp: Int | Double = null,
-    `type`: String = null
-  ): PartialMessageEvent = {
+  def apply(): PartialMessageEvent = {
     val __obj = js.Dynamic.literal()
-    if (AT_TARGET != null) __obj.updateDynamic("AT_TARGET")(AT_TARGET.asInstanceOf[js.Any])
-    if (BUBBLING_PHASE != null) __obj.updateDynamic("BUBBLING_PHASE")(BUBBLING_PHASE.asInstanceOf[js.Any])
-    if (CAPTURING_PHASE != null) __obj.updateDynamic("CAPTURING_PHASE")(CAPTURING_PHASE.asInstanceOf[js.Any])
-    if (NONE != null) __obj.updateDynamic("NONE")(NONE.asInstanceOf[js.Any])
-    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.asInstanceOf[js.Any])
-    if (!js.isUndefined(cancelBubble)) __obj.updateDynamic("cancelBubble")(cancelBubble.asInstanceOf[js.Any])
-    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.asInstanceOf[js.Any])
-    if (!js.isUndefined(composed)) __obj.updateDynamic("composed")(composed.asInstanceOf[js.Any])
-    if (composedPath != null) __obj.updateDynamic("composedPath")(js.Any.fromFunction0(composedPath))
-    if (currentTarget != null) __obj.updateDynamic("currentTarget")(currentTarget.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultPrevented)) __obj.updateDynamic("defaultPrevented")(defaultPrevented.asInstanceOf[js.Any])
-    if (eventPhase != null) __obj.updateDynamic("eventPhase")(eventPhase.asInstanceOf[js.Any])
-    if (initEvent != null) __obj.updateDynamic("initEvent")(js.Any.fromFunction1(initEvent))
-    if (!js.isUndefined(isTrusted)) __obj.updateDynamic("isTrusted")(isTrusted.asInstanceOf[js.Any])
-    if (lastEventId != null) __obj.updateDynamic("lastEventId")(lastEventId.asInstanceOf[js.Any])
-    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
-    if (ports != null) __obj.updateDynamic("ports")(ports.asInstanceOf[js.Any])
-    if (preventDefault != null) __obj.updateDynamic("preventDefault")(js.Any.fromFunction0(preventDefault))
-    if (!js.isUndefined(returnValue)) __obj.updateDynamic("returnValue")(returnValue.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (srcElement != null) __obj.updateDynamic("srcElement")(srcElement.asInstanceOf[js.Any])
-    if (stopImmediatePropagation != null) __obj.updateDynamic("stopImmediatePropagation")(js.Any.fromFunction0(stopImmediatePropagation))
-    if (stopPropagation != null) __obj.updateDynamic("stopPropagation")(js.Any.fromFunction0(stopPropagation))
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (timeStamp != null) __obj.updateDynamic("timeStamp")(timeStamp.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialMessageEvent]
   }
+  @scala.inline
+  implicit class PartialMessageEventOps[Self <: PartialMessageEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAT_TARGET(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AT_TARGET")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAT_TARGET: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AT_TARGET")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBUBBLING_PHASE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BUBBLING_PHASE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBUBBLING_PHASE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BUBBLING_PHASE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCAPTURING_PHASE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CAPTURING_PHASE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCAPTURING_PHASE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CAPTURING_PHASE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNONE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NONE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNONE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NONE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBubbles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBubbles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancelBubble(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelBubble")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelBubble: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelBubble")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancelable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComposed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("composed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComposed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("composed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComposedPath(value: () => js.Array[EventTarget]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("composedPath")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutComposedPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("composedPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentTarget(value: EventTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTarget")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultPrevented(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPrevented")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultPrevented: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPrevented")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventPhase(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventPhase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventPhase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventPhase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitEvent(value: /* type */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initEvent")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutInitEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsTrusted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTrusted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsTrusted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTrusted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastEventId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastEventId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastEventId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrigin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPorts(value: js.Array[MessagePort]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPorts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreventDefault(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefault")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutPreventDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefault")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnValue(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceServiceWorker(value: ServiceWorker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceMessagePort(value: MessagePort): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSource(value: MessageEventSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSrcElement(value: EventTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("srcElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSrcElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("srcElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopImmediatePropagation(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopImmediatePropagation")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutStopImmediatePropagation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopImmediatePropagation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopPropagation(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPropagation")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutStopPropagation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPropagation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTarget(value: EventTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeStamp(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeStamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeStamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeStamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

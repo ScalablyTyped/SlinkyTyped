@@ -1,28 +1,44 @@
 package typingsSlinky.awsSdkClientPinpointBrowser.typesSegmentGroupListMod
 
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.ALL
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.ANY
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.NONE
 import typingsSlinky.awsSdkClientPinpointBrowser.typesSegmentGroupMod.UnmarshalledSegmentGroup
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UnmarshalledSegmentGroupList extends SegmentGroupList {
   /**
     * A set of segment criteria to evaluate.
     */
   @JSName("Groups")
-  var Groups_UnmarshalledSegmentGroupList: js.UndefOr[js.Array[UnmarshalledSegmentGroup]] = js.undefined
+  var Groups_UnmarshalledSegmentGroupList: js.UndefOr[js.Array[UnmarshalledSegmentGroup]] = js.native
 }
 
 object UnmarshalledSegmentGroupList {
   @scala.inline
-  def apply(Groups: js.Array[UnmarshalledSegmentGroup] = null, Include: ALL | ANY | NONE | String = null): UnmarshalledSegmentGroupList = {
+  def apply(): UnmarshalledSegmentGroupList = {
     val __obj = js.Dynamic.literal()
-    if (Groups != null) __obj.updateDynamic("Groups")(Groups.asInstanceOf[js.Any])
-    if (Include != null) __obj.updateDynamic("Include")(Include.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledSegmentGroupList]
   }
+  @scala.inline
+  implicit class UnmarshalledSegmentGroupListOps[Self <: UnmarshalledSegmentGroupList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroups(value: js.Array[UnmarshalledSegmentGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

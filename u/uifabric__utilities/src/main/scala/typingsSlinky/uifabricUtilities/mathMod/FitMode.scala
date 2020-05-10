@@ -12,10 +12,8 @@ trait FitMode extends js.Object
 
 object FitMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def contain: typingsSlinky.uifabricUtilities.uifabricUtilitiesStrings.contain = "contain".asInstanceOf[typingsSlinky.uifabricUtilities.uifabricUtilitiesStrings.contain]
   @scala.inline
-  def contain: typingsSlinky.uifabricUtilities.uifabricUtilitiesStrings.contain = this.cast("contain")
-  @scala.inline
-  def cover: typingsSlinky.uifabricUtilities.uifabricUtilitiesStrings.cover = this.cast("cover")
+  def cover: typingsSlinky.uifabricUtilities.uifabricUtilitiesStrings.cover = "cover".asInstanceOf[typingsSlinky.uifabricUtilities.uifabricUtilitiesStrings.cover]
 }
 

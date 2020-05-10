@@ -14,18 +14,65 @@ trait AnonExternalId extends js.Object {
 
 object AnonExternalId {
   @scala.inline
-  def apply(
-    externalId: String = null,
-    policy: String = null,
-    roleArn: String = null,
-    sessionName: String = null
-  ): AnonExternalId = {
+  def apply(): AnonExternalId = {
     val __obj = js.Dynamic.literal()
-    if (externalId != null) __obj.updateDynamic("externalId")(externalId.asInstanceOf[js.Any])
-    if (policy != null) __obj.updateDynamic("policy")(policy.asInstanceOf[js.Any])
-    if (roleArn != null) __obj.updateDynamic("roleArn")(roleArn.asInstanceOf[js.Any])
-    if (sessionName != null) __obj.updateDynamic("sessionName")(sessionName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonExternalId]
   }
+  @scala.inline
+  implicit class AnonExternalIdOps[Self <: AnonExternalId] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExternalId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

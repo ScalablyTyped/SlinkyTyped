@@ -50,29 +50,131 @@ trait StartJobRunRequest extends js.Object {
 
 object StartJobRunRequest {
   @scala.inline
-  def apply(
-    JobName: NameString,
-    AllocatedCapacity: Int | Double = null,
-    Arguments: GenericMap = null,
-    JobRunId: IdString = null,
-    MaxCapacity: Int | Double = null,
-    NotificationProperty: NotificationProperty = null,
-    NumberOfWorkers: Int | Double = null,
-    SecurityConfiguration: NameString = null,
-    Timeout: Int | Double = null,
-    WorkerType: WorkerType = null
-  ): StartJobRunRequest = {
+  def apply(JobName: NameString): StartJobRunRequest = {
     val __obj = js.Dynamic.literal(JobName = JobName.asInstanceOf[js.Any])
-    if (AllocatedCapacity != null) __obj.updateDynamic("AllocatedCapacity")(AllocatedCapacity.asInstanceOf[js.Any])
-    if (Arguments != null) __obj.updateDynamic("Arguments")(Arguments.asInstanceOf[js.Any])
-    if (JobRunId != null) __obj.updateDynamic("JobRunId")(JobRunId.asInstanceOf[js.Any])
-    if (MaxCapacity != null) __obj.updateDynamic("MaxCapacity")(MaxCapacity.asInstanceOf[js.Any])
-    if (NotificationProperty != null) __obj.updateDynamic("NotificationProperty")(NotificationProperty.asInstanceOf[js.Any])
-    if (NumberOfWorkers != null) __obj.updateDynamic("NumberOfWorkers")(NumberOfWorkers.asInstanceOf[js.Any])
-    if (SecurityConfiguration != null) __obj.updateDynamic("SecurityConfiguration")(SecurityConfiguration.asInstanceOf[js.Any])
-    if (Timeout != null) __obj.updateDynamic("Timeout")(Timeout.asInstanceOf[js.Any])
-    if (WorkerType != null) __obj.updateDynamic("WorkerType")(WorkerType.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartJobRunRequest]
   }
+  @scala.inline
+  implicit class StartJobRunRequestOps[Self <: StartJobRunRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobName(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllocatedCapacity(value: IntegerValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocatedCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllocatedCapacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocatedCapacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArguments(value: GenericMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arguments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArguments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arguments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobRunId(value: IdString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobRunId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobRunId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobRunId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxCapacity(value: NullableDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxCapacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxCapacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotificationProperty(value: NotificationProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationProperty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationProperty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfWorkers(value: NullableInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfWorkers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfWorkers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfWorkers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityConfiguration(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Timeout): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerType(value: WorkerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

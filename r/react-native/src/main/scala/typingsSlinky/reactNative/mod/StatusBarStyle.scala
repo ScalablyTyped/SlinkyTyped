@@ -13,12 +13,10 @@ trait StatusBarStyle extends js.Object
 
 object StatusBarStyle {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `dark-content`: typingsSlinky.reactNative.reactNativeStrings.`dark-content` = "dark-content".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.`dark-content`]
   @scala.inline
-  def `dark-content`: typingsSlinky.reactNative.reactNativeStrings.`dark-content` = this.cast("dark-content")
+  def default: typingsSlinky.reactNative.reactNativeStrings.default = "default".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.default]
   @scala.inline
-  def default: typingsSlinky.reactNative.reactNativeStrings.default = this.cast("default")
-  @scala.inline
-  def `light-content`: typingsSlinky.reactNative.reactNativeStrings.`light-content` = this.cast("light-content")
+  def `light-content`: typingsSlinky.reactNative.reactNativeStrings.`light-content` = "light-content".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.`light-content`]
 }
 

@@ -18,10 +18,35 @@ trait ModifyClusterInput extends js.Object {
 
 object ModifyClusterInput {
   @scala.inline
-  def apply(ClusterId: String, StepConcurrencyLevel: Int | Double = null): ModifyClusterInput = {
+  def apply(ClusterId: String): ModifyClusterInput = {
     val __obj = js.Dynamic.literal(ClusterId = ClusterId.asInstanceOf[js.Any])
-    if (StepConcurrencyLevel != null) __obj.updateDynamic("StepConcurrencyLevel")(StepConcurrencyLevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyClusterInput]
   }
+  @scala.inline
+  implicit class ModifyClusterInputOps[Self <: ModifyClusterInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStepConcurrencyLevel(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StepConcurrencyLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepConcurrencyLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StepConcurrencyLevel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

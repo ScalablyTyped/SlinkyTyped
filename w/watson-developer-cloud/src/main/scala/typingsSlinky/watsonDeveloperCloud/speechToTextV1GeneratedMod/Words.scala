@@ -5,17 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Words. */
+@js.native
 trait Words extends js.Object {
   /** An array of `Word` objects that provides information about each word in the custom model's words resource. The array is empty if the custom model has no words. */
-  var words: js.Array[Word]
+  var words: js.Array[Word] = js.native
 }
 
 object Words {
   @scala.inline
   def apply(words: js.Array[Word]): Words = {
     val __obj = js.Dynamic.literal(words = words.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Words]
   }
+  @scala.inline
+  implicit class WordsOps[Self <: Words] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWords(value: js.Array[Word]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("words")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

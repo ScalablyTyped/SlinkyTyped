@@ -13,12 +13,10 @@ trait VisibilityType extends js.Object
 
 object VisibilityType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `private`: typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.`private` = "private".asInstanceOf[typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.`private`]
   @scala.inline
-  def `private`: typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.`private` = this.cast("private")
+  def public: typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.public = "public".asInstanceOf[typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.public]
   @scala.inline
-  def public: typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.public = this.cast("public")
-  @scala.inline
-  def secret: typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.secret = this.cast("secret")
+  def secret: typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.secret = "secret".asInstanceOf[typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.secret]
 }
 

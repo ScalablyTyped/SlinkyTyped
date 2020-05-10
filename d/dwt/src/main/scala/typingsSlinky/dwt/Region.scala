@@ -4,20 +4,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Region extends js.Object {
-  var bottom: Double
-  var left: Double
-  var measuredByPercentage: Double
-  var right: Double
-  var top: Double
+  var bottom: Double = js.native
+  var left: Double = js.native
+  var measuredByPercentage: Double = js.native
+  var right: Double = js.native
+  var top: Double = js.native
 }
 
 object Region {
   @scala.inline
   def apply(bottom: Double, left: Double, measuredByPercentage: Double, right: Double, top: Double): Region = {
     val __obj = js.Dynamic.literal(bottom = bottom.asInstanceOf[js.Any], left = left.asInstanceOf[js.Any], measuredByPercentage = measuredByPercentage.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any], top = top.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Region]
   }
+  @scala.inline
+  implicit class RegionOps[Self <: Region] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBottom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLeft(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMeasuredByPercentage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measuredByPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

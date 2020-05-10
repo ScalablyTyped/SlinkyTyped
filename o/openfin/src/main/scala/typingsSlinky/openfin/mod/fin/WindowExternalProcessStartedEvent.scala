@@ -6,13 +6,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WindowExternalProcessStartedEvent extends WindowBaseEvent {
   /**
     * the process handle uuid
     */
-  var processUuid: String
+  var processUuid: String = js.native
   @JSName("type")
-  var type_WindowExternalProcessStartedEvent: `external-process-started`
+  var type_WindowExternalProcessStartedEvent: `external-process-started` = js.native
 }
 
 object WindowExternalProcessStartedEvent {
@@ -22,5 +23,25 @@ object WindowExternalProcessStartedEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WindowExternalProcessStartedEvent]
   }
+  @scala.inline
+  implicit class WindowExternalProcessStartedEventOps[Self <: WindowExternalProcessStartedEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProcessUuid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processUuid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: `external-process-started`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

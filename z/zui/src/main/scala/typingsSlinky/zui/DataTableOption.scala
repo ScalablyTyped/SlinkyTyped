@@ -4,87 +4,335 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DataTableOption extends js.Object {
-  var afterLoad: js.UndefOr[js.Function1[/* event */ AfterLoadEvent, Unit]] = js.undefined
-  var checkByClickRow: js.UndefOr[Boolean] = js.undefined
-  var checkable: js.UndefOr[Boolean] = js.undefined
-  var checkedClass: js.UndefOr[String] = js.undefined
-  var checksChanged: js.UndefOr[js.Function1[/* event */ ChecksChangeEvent, Unit]] = js.undefined
-  var colHover: js.UndefOr[Boolean] = js.undefined
-  var fixCellHeight: js.UndefOr[Boolean] = js.undefined
-  var fixedHeader: js.UndefOr[Boolean] = js.undefined
-  var fixedHeaderOffset: js.UndefOr[Double] = js.undefined
-  var fixedLeftWidth: js.UndefOr[String] = js.undefined
-  var fixedRightWidth: js.UndefOr[String] = js.undefined
-  var flexHeadDrag: js.UndefOr[Boolean] = js.undefined
-  var minColWidth: js.UndefOr[Double] = js.undefined
-  var minFixedLeftWidth: js.UndefOr[Double] = js.undefined
-  var minFixedRightWidth: js.UndefOr[Double] = js.undefined
-  var minFlexAreaWidth: js.UndefOr[Double] = js.undefined
-  var ready: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var rowHover: js.UndefOr[Boolean] = js.undefined
-  var scrollPos: js.UndefOr[String] = js.undefined
-  var selectable: js.UndefOr[Boolean | js.Object] = js.undefined
-  var sizeChanged: js.UndefOr[js.Function1[/* event */ SizeChangeEvent, Unit]] = js.undefined
-  var sort: js.UndefOr[js.Function1[/* event */ SortEvent, Unit]] = js.undefined
-  var sortable: js.UndefOr[Boolean] = js.undefined
-  var storage: js.UndefOr[Boolean] = js.undefined
+  var afterLoad: js.UndefOr[js.Function1[/* event */ AfterLoadEvent, Unit]] = js.native
+  var checkByClickRow: js.UndefOr[Boolean] = js.native
+  var checkable: js.UndefOr[Boolean] = js.native
+  var checkedClass: js.UndefOr[String] = js.native
+  var checksChanged: js.UndefOr[js.Function1[/* event */ ChecksChangeEvent, Unit]] = js.native
+  var colHover: js.UndefOr[Boolean] = js.native
+  var fixCellHeight: js.UndefOr[Boolean] = js.native
+  var fixedHeader: js.UndefOr[Boolean] = js.native
+  var fixedHeaderOffset: js.UndefOr[Double] = js.native
+  var fixedLeftWidth: js.UndefOr[String] = js.native
+  var fixedRightWidth: js.UndefOr[String] = js.native
+  var flexHeadDrag: js.UndefOr[Boolean] = js.native
+  var minColWidth: js.UndefOr[Double] = js.native
+  var minFixedLeftWidth: js.UndefOr[Double] = js.native
+  var minFixedRightWidth: js.UndefOr[Double] = js.native
+  var minFlexAreaWidth: js.UndefOr[Double] = js.native
+  var ready: js.UndefOr[js.Function0[Unit]] = js.native
+  var rowHover: js.UndefOr[Boolean] = js.native
+  var scrollPos: js.UndefOr[String] = js.native
+  var selectable: js.UndefOr[Boolean | js.Object] = js.native
+  var sizeChanged: js.UndefOr[js.Function1[/* event */ SizeChangeEvent, Unit]] = js.native
+  var sort: js.UndefOr[js.Function1[/* event */ SortEvent, Unit]] = js.native
+  var sortable: js.UndefOr[Boolean] = js.native
+  var storage: js.UndefOr[Boolean] = js.native
 }
 
 object DataTableOption {
   @scala.inline
-  def apply(
-    afterLoad: /* event */ AfterLoadEvent => Unit = null,
-    checkByClickRow: js.UndefOr[Boolean] = js.undefined,
-    checkable: js.UndefOr[Boolean] = js.undefined,
-    checkedClass: String = null,
-    checksChanged: /* event */ ChecksChangeEvent => Unit = null,
-    colHover: js.UndefOr[Boolean] = js.undefined,
-    fixCellHeight: js.UndefOr[Boolean] = js.undefined,
-    fixedHeader: js.UndefOr[Boolean] = js.undefined,
-    fixedHeaderOffset: Int | Double = null,
-    fixedLeftWidth: String = null,
-    fixedRightWidth: String = null,
-    flexHeadDrag: js.UndefOr[Boolean] = js.undefined,
-    minColWidth: Int | Double = null,
-    minFixedLeftWidth: Int | Double = null,
-    minFixedRightWidth: Int | Double = null,
-    minFlexAreaWidth: Int | Double = null,
-    ready: () => Unit = null,
-    rowHover: js.UndefOr[Boolean] = js.undefined,
-    scrollPos: String = null,
-    selectable: Boolean | js.Object = null,
-    sizeChanged: /* event */ SizeChangeEvent => Unit = null,
-    sort: /* event */ SortEvent => Unit = null,
-    sortable: js.UndefOr[Boolean] = js.undefined,
-    storage: js.UndefOr[Boolean] = js.undefined
-  ): DataTableOption = {
+  def apply(): DataTableOption = {
     val __obj = js.Dynamic.literal()
-    if (afterLoad != null) __obj.updateDynamic("afterLoad")(js.Any.fromFunction1(afterLoad))
-    if (!js.isUndefined(checkByClickRow)) __obj.updateDynamic("checkByClickRow")(checkByClickRow.asInstanceOf[js.Any])
-    if (!js.isUndefined(checkable)) __obj.updateDynamic("checkable")(checkable.asInstanceOf[js.Any])
-    if (checkedClass != null) __obj.updateDynamic("checkedClass")(checkedClass.asInstanceOf[js.Any])
-    if (checksChanged != null) __obj.updateDynamic("checksChanged")(js.Any.fromFunction1(checksChanged))
-    if (!js.isUndefined(colHover)) __obj.updateDynamic("colHover")(colHover.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixCellHeight)) __obj.updateDynamic("fixCellHeight")(fixCellHeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixedHeader)) __obj.updateDynamic("fixedHeader")(fixedHeader.asInstanceOf[js.Any])
-    if (fixedHeaderOffset != null) __obj.updateDynamic("fixedHeaderOffset")(fixedHeaderOffset.asInstanceOf[js.Any])
-    if (fixedLeftWidth != null) __obj.updateDynamic("fixedLeftWidth")(fixedLeftWidth.asInstanceOf[js.Any])
-    if (fixedRightWidth != null) __obj.updateDynamic("fixedRightWidth")(fixedRightWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(flexHeadDrag)) __obj.updateDynamic("flexHeadDrag")(flexHeadDrag.asInstanceOf[js.Any])
-    if (minColWidth != null) __obj.updateDynamic("minColWidth")(minColWidth.asInstanceOf[js.Any])
-    if (minFixedLeftWidth != null) __obj.updateDynamic("minFixedLeftWidth")(minFixedLeftWidth.asInstanceOf[js.Any])
-    if (minFixedRightWidth != null) __obj.updateDynamic("minFixedRightWidth")(minFixedRightWidth.asInstanceOf[js.Any])
-    if (minFlexAreaWidth != null) __obj.updateDynamic("minFlexAreaWidth")(minFlexAreaWidth.asInstanceOf[js.Any])
-    if (ready != null) __obj.updateDynamic("ready")(js.Any.fromFunction0(ready))
-    if (!js.isUndefined(rowHover)) __obj.updateDynamic("rowHover")(rowHover.asInstanceOf[js.Any])
-    if (scrollPos != null) __obj.updateDynamic("scrollPos")(scrollPos.asInstanceOf[js.Any])
-    if (selectable != null) __obj.updateDynamic("selectable")(selectable.asInstanceOf[js.Any])
-    if (sizeChanged != null) __obj.updateDynamic("sizeChanged")(js.Any.fromFunction1(sizeChanged))
-    if (sort != null) __obj.updateDynamic("sort")(js.Any.fromFunction1(sort))
-    if (!js.isUndefined(sortable)) __obj.updateDynamic("sortable")(sortable.asInstanceOf[js.Any])
-    if (!js.isUndefined(storage)) __obj.updateDynamic("storage")(storage.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataTableOption]
   }
+  @scala.inline
+  implicit class DataTableOptionOps[Self <: DataTableOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfterLoad(value: /* event */ AfterLoadEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterLoad")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterLoad")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckByClickRow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkByClickRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckByClickRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkByClickRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckedClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckedClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChecksChanged(value: /* event */ ChecksChangeEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checksChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutChecksChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checksChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColHover(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colHover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColHover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colHover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixCellHeight(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixCellHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixCellHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixCellHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedHeader(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedHeaderOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeaderOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedHeaderOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeaderOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedLeftWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedLeftWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedLeftWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedLeftWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedRightWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedRightWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedRightWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedRightWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlexHeadDrag(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flexHeadDrag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlexHeadDrag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flexHeadDrag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinColWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minColWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinColWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minColWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinFixedLeftWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minFixedLeftWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinFixedLeftWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minFixedLeftWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinFixedRightWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minFixedRightWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinFixedRightWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minFixedRightWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinFlexAreaWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minFlexAreaWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinFlexAreaWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minFlexAreaWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReady(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutReady: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowHover(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowHover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollPos(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollPos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPos")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectable(value: Boolean | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizeChanged(value: /* event */ SizeChangeEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSizeChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSort(value: /* event */ SortEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStorage(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

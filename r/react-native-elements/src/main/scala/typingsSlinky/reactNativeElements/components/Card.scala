@@ -1,11 +1,8 @@
 package typingsSlinky.reactNativeElements.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ImageSourcePropType
 import typingsSlinky.reactNative.mod.ImageStyle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -17,47 +14,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Card
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeElements.mod.Card] {
+object Card {
   @JSImport("react-native-elements", "Card")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    containerStyle: StyleProp[ViewStyle] = null,
-    dividerStyle: StyleProp[ViewStyle] = null,
-    featuredSubtitle: String = null,
-    featuredSubtitleStyle: StyleProp[TextStyle] = null,
-    featuredTitle: String = null,
-    featuredTitleStyle: StyleProp[TextStyle] = null,
-    image: ImageSourcePropType = null,
-    imageProps: PartialImageProps = null,
-    imageStyle: ImageStyle = null,
-    imageWrapperStyle: StyleProp[ViewStyle] = null,
-    title: String | ReactElement = null,
-    titleStyle: StyleProp[TextStyle] = null,
-    wrapperStyle: StyleProp[ViewStyle] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Card] = {
-    val __obj = js.Dynamic.literal()
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (dividerStyle != null) __obj.updateDynamic("dividerStyle")(dividerStyle.asInstanceOf[js.Any])
-    if (featuredSubtitle != null) __obj.updateDynamic("featuredSubtitle")(featuredSubtitle.asInstanceOf[js.Any])
-    if (featuredSubtitleStyle != null) __obj.updateDynamic("featuredSubtitleStyle")(featuredSubtitleStyle.asInstanceOf[js.Any])
-    if (featuredTitle != null) __obj.updateDynamic("featuredTitle")(featuredTitle.asInstanceOf[js.Any])
-    if (featuredTitleStyle != null) __obj.updateDynamic("featuredTitleStyle")(featuredTitleStyle.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (imageProps != null) __obj.updateDynamic("imageProps")(imageProps.asInstanceOf[js.Any])
-    if (imageStyle != null) __obj.updateDynamic("imageStyle")(imageStyle.asInstanceOf[js.Any])
-    if (imageWrapperStyle != null) __obj.updateDynamic("imageWrapperStyle")(imageWrapperStyle.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titleStyle != null) __obj.updateDynamic("titleStyle")(titleStyle.asInstanceOf[js.Any])
-    if (wrapperStyle != null) __obj.updateDynamic("wrapperStyle")(wrapperStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Card] {
+    @scala.inline
+    def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyleNull: this.type = set("containerStyle", null)
+    @scala.inline
+    def dividerStyle(value: StyleProp[ViewStyle]): this.type = set("dividerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dividerStyleNull: this.type = set("dividerStyle", null)
+    @scala.inline
+    def featuredSubtitle(value: String): this.type = set("featuredSubtitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def featuredSubtitleStyle(value: StyleProp[TextStyle]): this.type = set("featuredSubtitleStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def featuredSubtitleStyleNull: this.type = set("featuredSubtitleStyle", null)
+    @scala.inline
+    def featuredTitle(value: String): this.type = set("featuredTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def featuredTitleStyle(value: StyleProp[TextStyle]): this.type = set("featuredTitleStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def featuredTitleStyleNull: this.type = set("featuredTitleStyle", null)
+    @scala.inline
+    def image(value: ImageSourcePropType): this.type = set("image", value.asInstanceOf[js.Any])
+    @scala.inline
+    def imageProps(value: PartialImageProps): this.type = set("imageProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def imageStyle(value: ImageStyle): this.type = set("imageStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def imageWrapperStyle(value: StyleProp[ViewStyle]): this.type = set("imageWrapperStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def imageWrapperStyleNull: this.type = set("imageWrapperStyle", null)
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String | ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleStyle(value: StyleProp[TextStyle]): this.type = set("titleStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleStyleNull: this.type = set("titleStyle", null)
+    @scala.inline
+    def wrapperStyle(value: StyleProp[ViewStyle]): this.type = set("wrapperStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapperStyleNull: this.type = set("wrapperStyle", null)
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Card] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactNativeElements.mod.Card](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = CardProps
+  
+  def withProps(p: CardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Card.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

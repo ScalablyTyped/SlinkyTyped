@@ -35,7 +35,7 @@ trait a11y extends js.Object {
     * @param root             
     * @param doc               Optional            
     */
-  def getFirstInTabbingOrder(root: typingsSlinky.std.HTMLElement, doc: HTMLDocument): js.Any = js.native
+  def getFirstInTabbingOrder(root: HTMLElement, doc: HTMLDocument): js.Any = js.native
   /**
     * Finds the descendant of the specified root node
     * that is last in the tabbing order
@@ -51,7 +51,7 @@ trait a11y extends js.Object {
     * @param root             
     * @param doc               Optional            
     */
-  def getLastInTabbingOrder(root: typingsSlinky.std.HTMLElement, doc: HTMLDocument): js.Any = js.native
+  def getLastInTabbingOrder(root: HTMLElement, doc: HTMLDocument): js.Any = js.native
   /**
     * Tests if element is tab-navigable even without an explicit tabIndex setting
     * 

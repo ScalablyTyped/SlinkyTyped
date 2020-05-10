@@ -1,6 +1,5 @@
 package typingsSlinky.node.NodeJS
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,7 +60,7 @@ trait ProcessReport extends js.Object {
     * @return Filename of the generated report.
     */
   def writeReport(): String = js.native
-  def writeReport(error: Error): String = js.native
+  def writeReport(error: js.Error): String = js.native
   def writeReport(fileName: String): String = js.native
   def writeReport(fileName: String, err: js.Error): String = js.native
 }

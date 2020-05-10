@@ -10,39 +10,40 @@ import scala.scalajs.js.annotation._
   * Style of text
   *
   */
+@js.native
 trait text extends js.Object {
   /**
     *
     */
-  var color: String
+  var color: String = js.native
   /**
     *
     */
-  var deleteEmptyCreate: Boolean
+  var deleteEmptyCreate: Boolean = js.native
   /**
     *
     */
-  var deleteEmptyModify: Boolean
+  var deleteEmptyModify: Boolean = js.native
   /**
     *
     */
-  var family: String
+  var family: String = js.native
   /**
     *
     */
-  var minWidth: Double
+  var minWidth: Double = js.native
   /**
     *
     */
-  var pad: Double
+  var pad: Double = js.native
   /**
     *
     */
-  var size: String
+  var size: String = js.native
   /**
     *
     */
-  var weight: String
+  var weight: String = js.native
 }
 
 object text {
@@ -58,8 +59,63 @@ object text {
     weight: String
   ): text = {
     val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any], deleteEmptyCreate = deleteEmptyCreate.asInstanceOf[js.Any], deleteEmptyModify = deleteEmptyModify.asInstanceOf[js.Any], family = family.asInstanceOf[js.Any], minWidth = minWidth.asInstanceOf[js.Any], pad = pad.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], weight = weight.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[text]
   }
+  @scala.inline
+  implicit class textOps[Self <: text] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeleteEmptyCreate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteEmptyCreate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeleteEmptyModify(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteEmptyModify")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("family")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPad(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pad")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

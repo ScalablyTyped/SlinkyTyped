@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.officeUiFabricReact.libStickyMod.Sticky
 import typingsSlinky.officeUiFabricReact.scrollablePaneTypesMod.IScrollablePane
 import typingsSlinky.officeUiFabricReact.scrollablePaneTypesMod.IScrollablePaneProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,14 @@ import scala.scalajs.js.annotation._
 @JSImport("office-ui-fabric-react/lib/components/ScrollablePane/ScrollablePane.base", "ScrollablePaneBase")
 @js.native
 class ScrollablePaneBase protected ()
-  extends BaseComponent[IScrollablePaneProps, IScrollablePaneState]
+  extends Component[IScrollablePaneProps, IScrollablePaneState, js.Any]
      with IScrollablePane {
   def this(props: IScrollablePaneProps) = this()
   var _addToStickyContainer: js.Any = js.native
+  var _async: js.Any = js.native
   var _checkStickyStatus: js.Any = js.native
   var _contentContainer: js.Any = js.native
+  var _events: js.Any = js.native
   var _getScrollablePaneContext: js.Any = js.native
   var _getScrollbarHeight: js.Any = js.native
   var _getScrollbarWidth: js.Any = js.native
@@ -43,12 +45,6 @@ class ScrollablePaneBase protected ()
   def componentDidUpdate_MScrollablePaneBase(prevProps: IScrollablePaneProps, prevState: IScrollablePaneState): Unit = js.native
   @JSName("componentWillUnmount")
   def componentWillUnmount_MScrollablePaneBase(): Unit = js.native
-  /** Triggers a layout update for the pane. */
-  /* CompleteClass */
-  override def forceLayoutUpdate(): Unit = js.native
-  /** Gets the current scroll position of the scrollable pane */
-  /* CompleteClass */
-  override def getScrollPosition(): Double = js.native
   def notifySubscribers(): Unit = js.native
   def removeSticky(sticky: Sticky): Unit = js.native
   def setStickiesDistanceFromTop(): Unit = js.native

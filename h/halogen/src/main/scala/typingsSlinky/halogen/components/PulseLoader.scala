@@ -1,15 +1,17 @@
 package typingsSlinky.halogen.components
 
+import typingsSlinky.halogen.mod.MarginLoaderProps
 import typingsSlinky.halogen.mod.PulseLoaderCls
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PulseLoader extends SharedApply_MarginLoaderProps1428208436[PulseLoaderCls] {
+object PulseLoader {
   @JSImport("halogen", "PulseLoader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: MarginLoaderProps[String]): SharedBuilder_MarginLoaderProps_531447020[PulseLoaderCls] = new SharedBuilder_MarginLoaderProps_531447020[PulseLoaderCls](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PulseLoader.type): SharedBuilder_MarginLoaderProps_531447020[PulseLoaderCls] = new SharedBuilder_MarginLoaderProps_531447020[PulseLoaderCls](js.Array(this.component, js.Dictionary.empty))()
 }
 

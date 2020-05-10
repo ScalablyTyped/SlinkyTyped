@@ -55,32 +55,149 @@ trait NetworkAclRuleState extends js.Object {
 
 object NetworkAclRuleState {
   @scala.inline
-  def apply(
-    cidrBlock: Input[String] = null,
-    egress: Input[Boolean] = null,
-    fromPort: Input[Double] = null,
-    icmpCode: Input[String] = null,
-    icmpType: Input[String] = null,
-    ipv6CidrBlock: Input[String] = null,
-    networkAclId: Input[String] = null,
-    protocol: Input[String] = null,
-    ruleAction: Input[String] = null,
-    ruleNumber: Input[Double] = null,
-    toPort: Input[Double] = null
-  ): NetworkAclRuleState = {
+  def apply(): NetworkAclRuleState = {
     val __obj = js.Dynamic.literal()
-    if (cidrBlock != null) __obj.updateDynamic("cidrBlock")(cidrBlock.asInstanceOf[js.Any])
-    if (egress != null) __obj.updateDynamic("egress")(egress.asInstanceOf[js.Any])
-    if (fromPort != null) __obj.updateDynamic("fromPort")(fromPort.asInstanceOf[js.Any])
-    if (icmpCode != null) __obj.updateDynamic("icmpCode")(icmpCode.asInstanceOf[js.Any])
-    if (icmpType != null) __obj.updateDynamic("icmpType")(icmpType.asInstanceOf[js.Any])
-    if (ipv6CidrBlock != null) __obj.updateDynamic("ipv6CidrBlock")(ipv6CidrBlock.asInstanceOf[js.Any])
-    if (networkAclId != null) __obj.updateDynamic("networkAclId")(networkAclId.asInstanceOf[js.Any])
-    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
-    if (ruleAction != null) __obj.updateDynamic("ruleAction")(ruleAction.asInstanceOf[js.Any])
-    if (ruleNumber != null) __obj.updateDynamic("ruleNumber")(ruleNumber.asInstanceOf[js.Any])
-    if (toPort != null) __obj.updateDynamic("toPort")(toPort.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkAclRuleState]
   }
+  @scala.inline
+  implicit class NetworkAclRuleStateOps[Self <: NetworkAclRuleState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCidrBlock(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cidrBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCidrBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cidrBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEgress(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("egress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("egress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFromPort(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcmpCode(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icmpCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcmpCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icmpCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcmpType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icmpType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcmpType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icmpType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv6CidrBlock(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv6CidrBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6CidrBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv6CidrBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkAclId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkAclId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkAclId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkAclId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtocol(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuleAction(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuleAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuleNumber(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuleNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToPort(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toPort")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

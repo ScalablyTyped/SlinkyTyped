@@ -1,56 +1,56 @@
 package typingsSlinky.reactInfinite.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactInfinite.mod.InfiniteProps
 import typingsSlinky.reactInfinite.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactInfinite
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactInfinite {
   @JSImport("react-infinite", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    elementHeight: Double | js.Array[Double],
-    containerHeight: Int | Double = null,
-    displayBottomUpwards: js.UndefOr[Boolean] = js.undefined,
-    handleScroll: /* node */ ReactElement => Unit = null,
-    infiniteLoadBeginBottomOffset: Int | Double = null,
-    infiniteLoadBeginEdgeOffset: Int | Double = null,
-    isInfiniteLoading: js.UndefOr[Boolean] = js.undefined,
-    loadingSpinnerDelegate: ReactElement = null,
-    onInfiniteLoad: () => Unit = null,
-    preloadAdditionalHeight: Double | js.Object = null,
-    preloadBatchSize: Double | js.Object = null,
-    timeScrollStateLastsForAfterUserScrolls: Int | Double = null,
-    useWindowAsScrollContainer: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal(elementHeight = elementHeight.asInstanceOf[js.Any])
-    if (containerHeight != null) __obj.updateDynamic("containerHeight")(containerHeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(displayBottomUpwards)) __obj.updateDynamic("displayBottomUpwards")(displayBottomUpwards.asInstanceOf[js.Any])
-    if (handleScroll != null) __obj.updateDynamic("handleScroll")(js.Any.fromFunction1(handleScroll))
-    if (infiniteLoadBeginBottomOffset != null) __obj.updateDynamic("infiniteLoadBeginBottomOffset")(infiniteLoadBeginBottomOffset.asInstanceOf[js.Any])
-    if (infiniteLoadBeginEdgeOffset != null) __obj.updateDynamic("infiniteLoadBeginEdgeOffset")(infiniteLoadBeginEdgeOffset.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInfiniteLoading)) __obj.updateDynamic("isInfiniteLoading")(isInfiniteLoading.asInstanceOf[js.Any])
-    if (loadingSpinnerDelegate != null) __obj.updateDynamic("loadingSpinnerDelegate")(loadingSpinnerDelegate.asInstanceOf[js.Any])
-    if (onInfiniteLoad != null) __obj.updateDynamic("onInfiniteLoad")(js.Any.fromFunction0(onInfiniteLoad))
-    if (preloadAdditionalHeight != null) __obj.updateDynamic("preloadAdditionalHeight")(preloadAdditionalHeight.asInstanceOf[js.Any])
-    if (preloadBatchSize != null) __obj.updateDynamic("preloadBatchSize")(preloadBatchSize.asInstanceOf[js.Any])
-    if (timeScrollStateLastsForAfterUserScrolls != null) __obj.updateDynamic("timeScrollStateLastsForAfterUserScrolls")(timeScrollStateLastsForAfterUserScrolls.asInstanceOf[js.Any])
-    if (!js.isUndefined(useWindowAsScrollContainer)) __obj.updateDynamic("useWindowAsScrollContainer")(useWindowAsScrollContainer.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerHeight(value: Double): this.type = set("containerHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def displayBottomUpwards(value: Boolean): this.type = set("displayBottomUpwards", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handleScroll(value: /* node */ ReactElement => Unit): this.type = set("handleScroll", js.Any.fromFunction1(value))
+    @scala.inline
+    def infiniteLoadBeginBottomOffset(value: Double): this.type = set("infiniteLoadBeginBottomOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def infiniteLoadBeginEdgeOffset(value: Double): this.type = set("infiniteLoadBeginEdgeOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isInfiniteLoading(value: Boolean): this.type = set("isInfiniteLoading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loadingSpinnerDelegate(value: ReactElement): this.type = set("loadingSpinnerDelegate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onInfiniteLoad(value: () => Unit): this.type = set("onInfiniteLoad", js.Any.fromFunction0(value))
+    @scala.inline
+    def preloadAdditionalHeight(value: Double | js.Object): this.type = set("preloadAdditionalHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preloadBatchSize(value: Double | js.Object): this.type = set("preloadBatchSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def timeScrollStateLastsForAfterUserScrolls(value: Double): this.type = set("timeScrollStateLastsForAfterUserScrolls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useWindowAsScrollContainer(value: Boolean): this.type = set("useWindowAsScrollContainer", value.asInstanceOf[js.Any])
   }
-  type Props = InfiniteProps
+  
+  def withProps(p: InfiniteProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(elementHeight: Double | js.Array[Double]): Builder = {
+    val __props = js.Dynamic.literal(elementHeight = elementHeight.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[InfiniteProps]))
+  }
 }
 

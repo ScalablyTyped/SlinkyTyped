@@ -50,22 +50,89 @@ trait SchemaTestSetup extends js.Object {
 
 object SchemaTestSetup {
   @scala.inline
-  def apply(
-    account: SchemaAccount = null,
-    additionalApks: js.Array[SchemaApk] = null,
-    directoriesToPull: js.Array[String] = null,
-    environmentVariables: js.Array[SchemaEnvironmentVariable] = null,
-    filesToPush: js.Array[SchemaDeviceFile] = null,
-    networkProfile: String = null
-  ): SchemaTestSetup = {
+  def apply(): SchemaTestSetup = {
     val __obj = js.Dynamic.literal()
-    if (account != null) __obj.updateDynamic("account")(account.asInstanceOf[js.Any])
-    if (additionalApks != null) __obj.updateDynamic("additionalApks")(additionalApks.asInstanceOf[js.Any])
-    if (directoriesToPull != null) __obj.updateDynamic("directoriesToPull")(directoriesToPull.asInstanceOf[js.Any])
-    if (environmentVariables != null) __obj.updateDynamic("environmentVariables")(environmentVariables.asInstanceOf[js.Any])
-    if (filesToPush != null) __obj.updateDynamic("filesToPush")(filesToPush.asInstanceOf[js.Any])
-    if (networkProfile != null) __obj.updateDynamic("networkProfile")(networkProfile.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTestSetup]
   }
+  @scala.inline
+  implicit class SchemaTestSetupOps[Self <: SchemaTestSetup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccount(value: SchemaAccount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("account")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("account")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdditionalApks(value: js.Array[SchemaApk]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalApks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalApks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalApks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectoriesToPull(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directoriesToPull")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectoriesToPull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directoriesToPull")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironmentVariables(value: js.Array[SchemaEnvironmentVariable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironmentVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariables")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilesToPush(value: js.Array[SchemaDeviceFile]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filesToPush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilesToPush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filesToPush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkProfile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProfile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkProfile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProfile")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

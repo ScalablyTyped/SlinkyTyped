@@ -17,10 +17,29 @@ trait SchemaPackageNameList extends js.Object {
 
 object SchemaPackageNameList {
   @scala.inline
-  def apply(packageNames: js.Array[String] = null): SchemaPackageNameList = {
+  def apply(): SchemaPackageNameList = {
     val __obj = js.Dynamic.literal()
-    if (packageNames != null) __obj.updateDynamic("packageNames")(packageNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPackageNameList]
   }
+  @scala.inline
+  implicit class SchemaPackageNameListOps[Self <: SchemaPackageNameList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPackageNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackageNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageNames")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

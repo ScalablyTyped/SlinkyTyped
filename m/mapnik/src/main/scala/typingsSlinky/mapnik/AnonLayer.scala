@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonLayer extends js.Object {
-  var layer: js.UndefOr[String] = js.undefined
-  var tolerance: js.UndefOr[Double] = js.undefined
+  var layer: js.UndefOr[String] = js.native
+  var tolerance: js.UndefOr[Double] = js.native
 }
 
 object AnonLayer {
   @scala.inline
-  def apply(layer: String = null, tolerance: Int | Double = null): AnonLayer = {
+  def apply(): AnonLayer = {
     val __obj = js.Dynamic.literal()
-    if (layer != null) __obj.updateDynamic("layer")(layer.asInstanceOf[js.Any])
-    if (tolerance != null) __obj.updateDynamic("tolerance")(tolerance.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonLayer]
   }
+  @scala.inline
+  implicit class AnonLayerOps[Self <: AnonLayer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLayer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTolerance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tolerance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTolerance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tolerance")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

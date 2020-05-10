@@ -14,14 +14,12 @@ trait OTType extends js.Object
 
 object OTType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `ot-json0`: typingsSlinky.sharedb.sharedbStrings.`ot-json0` = "ot-json0".asInstanceOf[typingsSlinky.sharedb.sharedbStrings.`ot-json0`]
   @scala.inline
-  def `ot-json0`: typingsSlinky.sharedb.sharedbStrings.`ot-json0` = this.cast("ot-json0")
+  def `ot-text`: typingsSlinky.sharedb.sharedbStrings.`ot-text` = "ot-text".asInstanceOf[typingsSlinky.sharedb.sharedbStrings.`ot-text`]
   @scala.inline
-  def `ot-text`: typingsSlinky.sharedb.sharedbStrings.`ot-text` = this.cast("ot-text")
+  def `ot-text-tp2`: typingsSlinky.sharedb.sharedbStrings.`ot-text-tp2` = "ot-text-tp2".asInstanceOf[typingsSlinky.sharedb.sharedbStrings.`ot-text-tp2`]
   @scala.inline
-  def `ot-text-tp2`: typingsSlinky.sharedb.sharedbStrings.`ot-text-tp2` = this.cast("ot-text-tp2")
-  @scala.inline
-  def `rich-text`: typingsSlinky.sharedb.sharedbStrings.`rich-text` = this.cast("rich-text")
+  def `rich-text`: typingsSlinky.sharedb.sharedbStrings.`rich-text` = "rich-text".asInstanceOf[typingsSlinky.sharedb.sharedbStrings.`rich-text`]
 }
 

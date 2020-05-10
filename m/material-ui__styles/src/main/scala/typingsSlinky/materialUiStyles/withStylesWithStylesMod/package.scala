@@ -22,4 +22,5 @@ package object withStylesWithStylesMod {
   ]
   type Styles[Theme, Props /* <: js.Object */, ClassKey /* <: java.lang.String */] = (typingsSlinky.materialUiStyles.withStylesWithStylesMod.StyleRules[Props, ClassKey]) | (typingsSlinky.materialUiStyles.withStylesWithStylesMod.StyleRulesCallback[Theme, Props, ClassKey])
   type ThemeOfStyles[StylesType] = js.Object
+  type WithStyles[StylesType /* <: typingsSlinky.materialUiStyles.withStylesWithStylesMod.ClassKeyInferable[_, _] */, IncludeTheme /* <: js.UndefOr[scala.Boolean] */] = (js.Object | typingsSlinky.materialUiStyles.AnonThemeThemeOfStyles[StylesType]) with typingsSlinky.materialUiStyles.AnonClasses[StylesType] with typingsSlinky.materialUiStyles.withStylesWithStylesMod.PropsOfStyles[StylesType]
 }

@@ -1,6 +1,5 @@
 package typingsSlinky.ol
 
-import typingsSlinky.std.Uint8ClampedArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,9 +10,9 @@ object arrayMod extends js.Object {
   def binarySearch(haystack: js.Array[_], needle: js.Any): Double = js.native
   def binarySearch(haystack: js.Array[_], needle: js.Any, opt_comparator: js.Function0[Unit]): Double = js.native
   def equals(arr1: js.Array[_], arr2: js.Array[_]): Boolean = js.native
-  def equals(arr1: js.Array[_], arr2: Uint8ClampedArray): Boolean = js.native
-  def equals(arr1: Uint8ClampedArray, arr2: js.Array[_]): Boolean = js.native
-  def equals(arr1: Uint8ClampedArray, arr2: Uint8ClampedArray): Boolean = js.native
+  def equals(arr1: js.Array[_], arr2: js.typedarray.Uint8ClampedArray): Boolean = js.native
+  def equals(arr1: js.typedarray.Uint8ClampedArray, arr2: js.Array[_]): Boolean = js.native
+  def equals(arr1: js.typedarray.Uint8ClampedArray, arr2: js.typedarray.Uint8ClampedArray): Boolean = js.native
   def extend[VALUE](arr: js.Array[VALUE], data: VALUE): Unit = js.native
   def extend[VALUE](arr: js.Array[VALUE], data: js.Array[VALUE]): Unit = js.native
   def find[VALUE](

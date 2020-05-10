@@ -14,14 +14,12 @@ trait AndroidWorkProfileCrossProfileDataSharingType extends js.Object
 
 object AndroidWorkProfileCrossProfileDataSharingType {
   @scala.inline
-  def allowPersonalToWork: typingsSlinky.microsoftGraph.microsoftGraphStrings.allowPersonalToWork = this.cast("allowPersonalToWork")
+  def allowPersonalToWork: typingsSlinky.microsoftGraph.microsoftGraphStrings.allowPersonalToWork = "allowPersonalToWork".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.allowPersonalToWork]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def deviceDefault: typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault = "deviceDefault".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault]
   @scala.inline
-  def deviceDefault: typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault = this.cast("deviceDefault")
+  def noRestrictions: typingsSlinky.microsoftGraph.microsoftGraphStrings.noRestrictions = "noRestrictions".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.noRestrictions]
   @scala.inline
-  def noRestrictions: typingsSlinky.microsoftGraph.microsoftGraphStrings.noRestrictions = this.cast("noRestrictions")
-  @scala.inline
-  def preventAny: typingsSlinky.microsoftGraph.microsoftGraphStrings.preventAny = this.cast("preventAny")
+  def preventAny: typingsSlinky.microsoftGraph.microsoftGraphStrings.preventAny = "preventAny".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.preventAny]
 }
 

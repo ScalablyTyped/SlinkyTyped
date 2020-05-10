@@ -5,19 +5,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ISetupIntentPaymentMethodOptions extends js.Object {
   /**
     * Configuration for any card payments attempted on this SetupIntent.
     */
-  var card: js.UndefOr[AnonRequestthreedsecure] = js.undefined
+  var card: js.UndefOr[AnonRequestthreedsecure] = js.native
 }
 
 object ISetupIntentPaymentMethodOptions {
   @scala.inline
-  def apply(card: AnonRequestthreedsecure = null): ISetupIntentPaymentMethodOptions = {
+  def apply(): ISetupIntentPaymentMethodOptions = {
     val __obj = js.Dynamic.literal()
-    if (card != null) __obj.updateDynamic("card")(card.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISetupIntentPaymentMethodOptions]
   }
+  @scala.inline
+  implicit class ISetupIntentPaymentMethodOptionsOps[Self <: ISetupIntentPaymentMethodOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCard(value: AnonRequestthreedsecure): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("card")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("card")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

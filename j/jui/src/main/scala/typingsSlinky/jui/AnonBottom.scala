@@ -4,91 +4,219 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBottom extends js.Object {
   /**
     * @cfg {String/Integer} [bottom="auto"]
     * Determines the Y coordinate based on the bottom side of a window
     */
-  var bottom: js.UndefOr[String | Double] = js.undefined
-  var event: js.UndefOr[js.Any] = js.undefined
+  var bottom: js.UndefOr[String | Double] = js.native
+  var event: js.UndefOr[js.Any] = js.native
   /**
     * @cfg {Integer} [height=300]
     * Determines the height of a window
     */
-  var height: js.UndefOr[Double] = js.undefined
+  var height: js.UndefOr[Double] = js.native
   /**
     * @cfg {String/Integer} [left="auto"]
     * Determines the X coordinate of a window
     */
-  var left: js.UndefOr[String | Double] = js.undefined
+  var left: js.UndefOr[String | Double] = js.native
   /**
     * @cfg {Boolean} [modal=false]
     * Applies a modal UI to a window
     */
-  var modal: js.UndefOr[Boolean] = js.undefined
+  var modal: js.UndefOr[Boolean] = js.native
   /**
     * @cfg {Integer} [modalIndex=0]
     * Determines the z-index property of a modal UI
     */
-  var modalIndex: js.UndefOr[Double] = js.undefined
+  var modalIndex: js.UndefOr[Double] = js.native
   /**
     * @cfg {Boolean} [move=true]
     * It is possible to move a window
     */
-  var move: js.UndefOr[Boolean] = js.undefined
+  var move: js.UndefOr[Boolean] = js.native
   /**
     * @cfg {Boolean} [resize=true]
     * It is possible to resize a window
     */
-  var resize: js.UndefOr[Boolean] = js.undefined
+  var resize: js.UndefOr[Boolean] = js.native
   /**
     * @cfg {String/Integer} [right="auto"]
     * Determines the X coordinate based on the right side of a window
     */
-  var right: js.UndefOr[String | Double] = js.undefined
+  var right: js.UndefOr[String | Double] = js.native
   /**
     * @cfg {String/Integer} [top="auto"]
     * Determines the Y coordinate of a window
     */
-  var top: js.UndefOr[String | Double] = js.undefined
-  var tpl: js.UndefOr[js.Any] = js.undefined
+  var top: js.UndefOr[String | Double] = js.native
+  var tpl: js.UndefOr[js.Any] = js.native
   /**
     * @cfg {Integer} [width=400]
     * Determines the horizontal size of a window
     */
-  var width: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.native
 }
 
 object AnonBottom {
   @scala.inline
-  def apply(
-    bottom: String | Double = null,
-    event: js.Any = null,
-    height: Int | Double = null,
-    left: String | Double = null,
-    modal: js.UndefOr[Boolean] = js.undefined,
-    modalIndex: Int | Double = null,
-    move: js.UndefOr[Boolean] = js.undefined,
-    resize: js.UndefOr[Boolean] = js.undefined,
-    right: String | Double = null,
-    top: String | Double = null,
-    tpl: js.Any = null,
-    width: Int | Double = null
-  ): AnonBottom = {
+  def apply(): AnonBottom = {
     val __obj = js.Dynamic.literal()
-    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
-    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (!js.isUndefined(modal)) __obj.updateDynamic("modal")(modal.asInstanceOf[js.Any])
-    if (modalIndex != null) __obj.updateDynamic("modalIndex")(modalIndex.asInstanceOf[js.Any])
-    if (!js.isUndefined(move)) __obj.updateDynamic("move")(move.asInstanceOf[js.Any])
-    if (!js.isUndefined(resize)) __obj.updateDynamic("resize")(resize.asInstanceOf[js.Any])
-    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
-    if (tpl != null) __obj.updateDynamic("tpl")(tpl.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBottom]
   }
+  @scala.inline
+  implicit class AnonBottomOps[Self <: AnonBottom] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBottom(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeft(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModalIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modalIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModalIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modalIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMove(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("move")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("move")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRight(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTop(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTpl(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tpl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTpl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tpl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -21,25 +21,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ojDialogEventMap extends baseComponentEventMap[ojDialogSettableProperties] {
-  var cancelBehaviorChanged: CustomEvent
-  var dialogTitleChanged: CustomEvent
-  var dragAffordanceChanged: CustomEvent
-  var initialVisibilityChanged: CustomEvent
-  var modalityChanged: CustomEvent
-  var ojAnimateEnd: CustomEvent
-  var ojAnimateStart: CustomEvent
-  var ojBeforeClose: CustomEvent
-  var ojBeforeOpen: CustomEvent
-  var ojClose: CustomEvent
-  var ojFocus: CustomEvent
-  var ojOpen: CustomEvent
-  var ojResize: CustomEvent
-  var ojResizeStart: CustomEvent
-  var ojResizeStop: CustomEvent
-  var positionChanged: CustomEvent
-  var resizeBehaviorChanged: CustomEvent
-  var roleChanged: CustomEvent
+  var cancelBehaviorChanged: CustomEvent = js.native
+  var dialogTitleChanged: CustomEvent = js.native
+  var dragAffordanceChanged: CustomEvent = js.native
+  var initialVisibilityChanged: CustomEvent = js.native
+  var modalityChanged: CustomEvent = js.native
+  var ojAnimateEnd: CustomEvent = js.native
+  var ojAnimateStart: CustomEvent = js.native
+  var ojBeforeClose: CustomEvent = js.native
+  var ojBeforeOpen: CustomEvent = js.native
+  var ojClose: CustomEvent = js.native
+  var ojFocus: CustomEvent = js.native
+  var ojOpen: CustomEvent = js.native
+  var ojResize: CustomEvent = js.native
+  var ojResizeStart: CustomEvent = js.native
+  var ojResizeStop: CustomEvent = js.native
+  var positionChanged: CustomEvent = js.native
+  var resizeBehaviorChanged: CustomEvent = js.native
+  var roleChanged: CustomEvent = js.native
 }
 
 object ojDialogEventMap {
@@ -158,8 +159,123 @@ object ojDialogEventMap {
     wheel: WheelEvent
   ): ojDialogEventMap = {
     val __obj = js.Dynamic.literal(abort = abort.asInstanceOf[js.Any], animationcancel = animationcancel.asInstanceOf[js.Any], animationend = animationend.asInstanceOf[js.Any], animationiteration = animationiteration.asInstanceOf[js.Any], animationstart = animationstart.asInstanceOf[js.Any], auxclick = auxclick.asInstanceOf[js.Any], blur = blur.asInstanceOf[js.Any], cancel = cancel.asInstanceOf[js.Any], cancelBehaviorChanged = cancelBehaviorChanged.asInstanceOf[js.Any], canplay = canplay.asInstanceOf[js.Any], canplaythrough = canplaythrough.asInstanceOf[js.Any], change = change.asInstanceOf[js.Any], click = click.asInstanceOf[js.Any], close = close.asInstanceOf[js.Any], contextmenu = contextmenu.asInstanceOf[js.Any], copy = copy.asInstanceOf[js.Any], cuechange = cuechange.asInstanceOf[js.Any], cut = cut.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], dialogTitleChanged = dialogTitleChanged.asInstanceOf[js.Any], drag = drag.asInstanceOf[js.Any], dragAffordanceChanged = dragAffordanceChanged.asInstanceOf[js.Any], dragend = dragend.asInstanceOf[js.Any], dragenter = dragenter.asInstanceOf[js.Any], dragexit = dragexit.asInstanceOf[js.Any], dragleave = dragleave.asInstanceOf[js.Any], dragover = dragover.asInstanceOf[js.Any], dragstart = dragstart.asInstanceOf[js.Any], drop = drop.asInstanceOf[js.Any], durationchange = durationchange.asInstanceOf[js.Any], emptied = emptied.asInstanceOf[js.Any], ended = ended.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], focus = focus.asInstanceOf[js.Any], focusin = focusin.asInstanceOf[js.Any], focusout = focusout.asInstanceOf[js.Any], fullscreenchange = fullscreenchange.asInstanceOf[js.Any], fullscreenerror = fullscreenerror.asInstanceOf[js.Any], gotpointercapture = gotpointercapture.asInstanceOf[js.Any], initialVisibilityChanged = initialVisibilityChanged.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], invalid = invalid.asInstanceOf[js.Any], keydown = keydown.asInstanceOf[js.Any], keypress = keypress.asInstanceOf[js.Any], keyup = keyup.asInstanceOf[js.Any], load = load.asInstanceOf[js.Any], loadeddata = loadeddata.asInstanceOf[js.Any], loadedmetadata = loadedmetadata.asInstanceOf[js.Any], loadstart = loadstart.asInstanceOf[js.Any], lostpointercapture = lostpointercapture.asInstanceOf[js.Any], modalityChanged = modalityChanged.asInstanceOf[js.Any], mousedown = mousedown.asInstanceOf[js.Any], mouseenter = mouseenter.asInstanceOf[js.Any], mouseleave = mouseleave.asInstanceOf[js.Any], mousemove = mousemove.asInstanceOf[js.Any], mouseout = mouseout.asInstanceOf[js.Any], mouseover = mouseover.asInstanceOf[js.Any], mouseup = mouseup.asInstanceOf[js.Any], ojAnimateEnd = ojAnimateEnd.asInstanceOf[js.Any], ojAnimateStart = ojAnimateStart.asInstanceOf[js.Any], ojBeforeClose = ojBeforeClose.asInstanceOf[js.Any], ojBeforeOpen = ojBeforeOpen.asInstanceOf[js.Any], ojClose = ojClose.asInstanceOf[js.Any], ojFocus = ojFocus.asInstanceOf[js.Any], ojOpen = ojOpen.asInstanceOf[js.Any], ojResize = ojResize.asInstanceOf[js.Any], ojResizeStart = ojResizeStart.asInstanceOf[js.Any], ojResizeStop = ojResizeStop.asInstanceOf[js.Any], paste = paste.asInstanceOf[js.Any], pause = pause.asInstanceOf[js.Any], play = play.asInstanceOf[js.Any], playing = playing.asInstanceOf[js.Any], pointercancel = pointercancel.asInstanceOf[js.Any], pointerdown = pointerdown.asInstanceOf[js.Any], pointerenter = pointerenter.asInstanceOf[js.Any], pointerleave = pointerleave.asInstanceOf[js.Any], pointermove = pointermove.asInstanceOf[js.Any], pointerout = pointerout.asInstanceOf[js.Any], pointerover = pointerover.asInstanceOf[js.Any], pointerup = pointerup.asInstanceOf[js.Any], positionChanged = positionChanged.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], ratechange = ratechange.asInstanceOf[js.Any], reset = reset.asInstanceOf[js.Any], resize = resize.asInstanceOf[js.Any], resizeBehaviorChanged = resizeBehaviorChanged.asInstanceOf[js.Any], roleChanged = roleChanged.asInstanceOf[js.Any], scroll = scroll.asInstanceOf[js.Any], securitypolicyviolation = securitypolicyviolation.asInstanceOf[js.Any], seeked = seeked.asInstanceOf[js.Any], seeking = seeking.asInstanceOf[js.Any], select = select.asInstanceOf[js.Any], selectionchange = selectionchange.asInstanceOf[js.Any], selectstart = selectstart.asInstanceOf[js.Any], stalled = stalled.asInstanceOf[js.Any], submit = submit.asInstanceOf[js.Any], suspend = suspend.asInstanceOf[js.Any], timeupdate = timeupdate.asInstanceOf[js.Any], toggle = toggle.asInstanceOf[js.Any], touchcancel = touchcancel.asInstanceOf[js.Any], touchend = touchend.asInstanceOf[js.Any], touchmove = touchmove.asInstanceOf[js.Any], touchstart = touchstart.asInstanceOf[js.Any], transitioncancel = transitioncancel.asInstanceOf[js.Any], transitionend = transitionend.asInstanceOf[js.Any], transitionrun = transitionrun.asInstanceOf[js.Any], transitionstart = transitionstart.asInstanceOf[js.Any], translationsChanged = translationsChanged.asInstanceOf[js.Any], volumechange = volumechange.asInstanceOf[js.Any], waiting = waiting.asInstanceOf[js.Any], wheel = wheel.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ojDialogEventMap]
   }
+  @scala.inline
+  implicit class ojDialogEventMapOps[Self <: ojDialogEventMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCancelBehaviorChanged(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelBehaviorChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDialogTitleChanged(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogTitleChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDragAffordanceChanged(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragAffordanceChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInitialVisibilityChanged(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialVisibilityChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModalityChanged(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modalityChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOjAnimateEnd(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ojAnimateEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOjAnimateStart(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ojAnimateStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOjBeforeClose(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ojBeforeClose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOjBeforeOpen(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ojBeforeOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOjClose(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ojClose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOjFocus(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ojFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOjOpen(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ojOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOjResize(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ojResize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOjResizeStart(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ojResizeStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOjResizeStop(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ojResizeStop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPositionChanged(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResizeBehaviorChanged(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeBehaviorChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleChanged(value: CustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

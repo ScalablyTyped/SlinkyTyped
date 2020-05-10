@@ -14,5 +14,9 @@ trait GamepadEvent extends Event_ {
 @JSGlobal("GamepadEvent")
 @js.native
 object GamepadEvent
-  extends Instantiable2[/* type */ java.lang.String, /* eventInitDict */ GamepadEventInit, GamepadEvent]
+  extends Instantiable2[
+      /* type */ java.lang.String, 
+      /* eventInitDict */ org.scalajs.dom.experimental.gamepad.GamepadEventInit, 
+      org.scalajs.dom.experimental.gamepad.GamepadEvent
+    ]
 

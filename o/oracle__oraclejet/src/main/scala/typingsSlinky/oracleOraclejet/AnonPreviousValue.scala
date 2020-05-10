@@ -7,26 +7,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonPreviousValue[V]
   extends /* key */ StringDictionary[js.Any] {
-  var previousValue: V
-  var subproperty: AnonDictkey
-  var updatedFrom: external | internal
-  var value: V
+  var previousValue: V = js.native
+  var subproperty: AnonDictkey = js.native
+  var updatedFrom: external | internal = js.native
+  var value: V = js.native
 }
 
 object AnonPreviousValue {
   @scala.inline
-  def apply[V](
-    previousValue: V,
-    subproperty: AnonDictkey,
-    updatedFrom: external | internal,
-    value: V,
-    StringDictionary: /* key */ StringDictionary[js.Any] = null
-  ): AnonPreviousValue[V] = {
+  def apply[V](previousValue: V, subproperty: AnonDictkey, updatedFrom: external | internal, value: V): AnonPreviousValue[V] = {
     val __obj = js.Dynamic.literal(previousValue = previousValue.asInstanceOf[js.Any], subproperty = subproperty.asInstanceOf[js.Any], updatedFrom = updatedFrom.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[AnonPreviousValue[V]]
   }
+  @scala.inline
+  implicit class AnonPreviousValueOps[Self[v] <: AnonPreviousValue[v], V] (val x: Self[V]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[V] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[V]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[V] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[V] with Other]
+    @scala.inline
+    def withPreviousValue(value: V): Self[V] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubproperty(value: AnonDictkey): Self[V] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subproperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdatedFrom(value: external | internal): Self[V] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedFrom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: V): Self[V] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,5 @@
 package typingsSlinky.googlemaps.google.maps
 
-import org.scalajs.dom.raw.Element
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,9 +25,5 @@ class StyledMapType protected ()
   var radius_StyledMapType: Double = js.native
   @JSName("tileSize")
   var tileSize_StyledMapType: Size = js.native
-  /* CompleteClass */
-  override def getTile(tileCoord: Point, zoom: Double, ownerDocument: Document_): Element = js.native
-  /* CompleteClass */
-  override def releaseTile(tile: Element): Unit = js.native
 }
 

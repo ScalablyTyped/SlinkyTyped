@@ -7,15 +7,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ICommandPalette extends js.Object {
   /**
     * The placeholder text of the command palette's search input.
     */
-  var placeholder: String
+  var placeholder: String = js.native
   /**
     * Activate the command palette for user input.
     */
-  def activate(): Unit
+  def activate(): Unit = js.native
   /**
     * Add a command item to the command palette.
     *
@@ -23,7 +24,7 @@ trait ICommandPalette extends js.Object {
     *
     * @returns A disposable that will remove the item from the palette.
     */
-  def addItem(options: IPaletteItem): IDisposable
+  def addItem(options: IPaletteItem): IDisposable = js.native
 }
 
 @JSImport("@jupyterlab/apputils/lib/commandpalette", "ICommandPalette")

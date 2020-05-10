@@ -34,22 +34,89 @@ trait DescribeInstanceStatusRequest extends js.Object {
 
 object DescribeInstanceStatusRequest {
   @scala.inline
-  def apply(
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    Filters: FilterList = null,
-    IncludeAllInstances: js.UndefOr[scala.Boolean] = js.undefined,
-    InstanceIds: InstanceIdStringList = null,
-    MaxResults: Int | scala.Double = null,
-    NextToken: String = null
-  ): DescribeInstanceStatusRequest = {
+  def apply(): DescribeInstanceStatusRequest = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
-    if (!js.isUndefined(IncludeAllInstances)) __obj.updateDynamic("IncludeAllInstances")(IncludeAllInstances.asInstanceOf[js.Any])
-    if (InstanceIds != null) __obj.updateDynamic("InstanceIds")(InstanceIds.asInstanceOf[js.Any])
-    if (MaxResults != null) __obj.updateDynamic("MaxResults")(MaxResults.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeInstanceStatusRequest]
   }
+  @scala.inline
+  implicit class DescribeInstanceStatusRequestOps[Self <: DescribeInstanceStatusRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilters(value: FilterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeAllInstances(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeAllInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeAllInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeAllInstances")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceIds(value: InstanceIdStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

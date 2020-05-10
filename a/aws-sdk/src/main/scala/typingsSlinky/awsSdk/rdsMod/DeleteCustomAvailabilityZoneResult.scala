@@ -11,10 +11,29 @@ trait DeleteCustomAvailabilityZoneResult extends js.Object {
 
 object DeleteCustomAvailabilityZoneResult {
   @scala.inline
-  def apply(CustomAvailabilityZone: CustomAvailabilityZone = null): DeleteCustomAvailabilityZoneResult = {
+  def apply(): DeleteCustomAvailabilityZoneResult = {
     val __obj = js.Dynamic.literal()
-    if (CustomAvailabilityZone != null) __obj.updateDynamic("CustomAvailabilityZone")(CustomAvailabilityZone.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteCustomAvailabilityZoneResult]
   }
+  @scala.inline
+  implicit class DeleteCustomAvailabilityZoneResultOps[Self <: DeleteCustomAvailabilityZoneResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomAvailabilityZone(value: CustomAvailabilityZone): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAvailabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomAvailabilityZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAvailabilityZone")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

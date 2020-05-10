@@ -30,20 +30,77 @@ trait BusinessReport extends js.Object {
 
 object BusinessReport {
   @scala.inline
-  def apply(
-    DeliveryTime: js.Date = null,
-    DownloadUrl: BusinessReportDownloadUrl = null,
-    FailureCode: BusinessReportFailureCode = null,
-    S3Location: BusinessReportS3Location = null,
-    Status: BusinessReportStatus = null
-  ): BusinessReport = {
+  def apply(): BusinessReport = {
     val __obj = js.Dynamic.literal()
-    if (DeliveryTime != null) __obj.updateDynamic("DeliveryTime")(DeliveryTime.asInstanceOf[js.Any])
-    if (DownloadUrl != null) __obj.updateDynamic("DownloadUrl")(DownloadUrl.asInstanceOf[js.Any])
-    if (FailureCode != null) __obj.updateDynamic("FailureCode")(FailureCode.asInstanceOf[js.Any])
-    if (S3Location != null) __obj.updateDynamic("S3Location")(S3Location.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[BusinessReport]
   }
+  @scala.inline
+  implicit class BusinessReportOps[Self <: BusinessReport] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeliveryTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeliveryTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDownloadUrl(value: BusinessReportDownloadUrl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DownloadUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDownloadUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DownloadUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureCode(value: BusinessReportFailureCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3Location(value: BusinessReportS3Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3Location: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: BusinessReportStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

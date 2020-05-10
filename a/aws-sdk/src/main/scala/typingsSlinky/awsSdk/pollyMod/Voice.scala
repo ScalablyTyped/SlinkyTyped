@@ -38,24 +38,101 @@ trait Voice extends js.Object {
 
 object Voice {
   @scala.inline
-  def apply(
-    AdditionalLanguageCodes: LanguageCodeList = null,
-    Gender: Gender = null,
-    Id: VoiceId = null,
-    LanguageCode: LanguageCode = null,
-    LanguageName: LanguageName = null,
-    Name: VoiceName = null,
-    SupportedEngines: EngineList = null
-  ): Voice = {
+  def apply(): Voice = {
     val __obj = js.Dynamic.literal()
-    if (AdditionalLanguageCodes != null) __obj.updateDynamic("AdditionalLanguageCodes")(AdditionalLanguageCodes.asInstanceOf[js.Any])
-    if (Gender != null) __obj.updateDynamic("Gender")(Gender.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (LanguageCode != null) __obj.updateDynamic("LanguageCode")(LanguageCode.asInstanceOf[js.Any])
-    if (LanguageName != null) __obj.updateDynamic("LanguageName")(LanguageName.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (SupportedEngines != null) __obj.updateDynamic("SupportedEngines")(SupportedEngines.asInstanceOf[js.Any])
     __obj.asInstanceOf[Voice]
   }
+  @scala.inline
+  implicit class VoiceOps[Self <: Voice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdditionalLanguageCodes(value: LanguageCodeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalLanguageCodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalLanguageCodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalLanguageCodes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGender(value: Gender): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Gender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Gender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: VoiceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguageCode(value: LanguageCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguageName(value: LanguageName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: VoiceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportedEngines(value: EngineList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedEngines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportedEngines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedEngines")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

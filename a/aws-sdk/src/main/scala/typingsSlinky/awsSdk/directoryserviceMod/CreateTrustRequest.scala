@@ -42,16 +42,78 @@ object CreateTrustRequest {
     DirectoryId: DirectoryId,
     RemoteDomainName: RemoteDomainName,
     TrustDirection: TrustDirection,
-    TrustPassword: TrustPassword,
-    ConditionalForwarderIpAddrs: DnsIpAddrs = null,
-    SelectiveAuth: SelectiveAuth = null,
-    TrustType: TrustType = null
+    TrustPassword: TrustPassword
   ): CreateTrustRequest = {
     val __obj = js.Dynamic.literal(DirectoryId = DirectoryId.asInstanceOf[js.Any], RemoteDomainName = RemoteDomainName.asInstanceOf[js.Any], TrustDirection = TrustDirection.asInstanceOf[js.Any], TrustPassword = TrustPassword.asInstanceOf[js.Any])
-    if (ConditionalForwarderIpAddrs != null) __obj.updateDynamic("ConditionalForwarderIpAddrs")(ConditionalForwarderIpAddrs.asInstanceOf[js.Any])
-    if (SelectiveAuth != null) __obj.updateDynamic("SelectiveAuth")(SelectiveAuth.asInstanceOf[js.Any])
-    if (TrustType != null) __obj.updateDynamic("TrustType")(TrustType.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateTrustRequest]
   }
+  @scala.inline
+  implicit class CreateTrustRequestOps[Self <: CreateTrustRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectoryId(value: DirectoryId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoteDomainName(value: RemoteDomainName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoteDomainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrustDirection(value: TrustDirection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrustDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrustPassword(value: TrustPassword): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrustPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConditionalForwarderIpAddrs(value: DnsIpAddrs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConditionalForwarderIpAddrs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConditionalForwarderIpAddrs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConditionalForwarderIpAddrs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectiveAuth(value: SelectiveAuth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectiveAuth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectiveAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectiveAuth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrustType(value: TrustType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrustType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrustType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrustType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

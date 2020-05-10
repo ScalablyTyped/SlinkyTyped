@@ -3,7 +3,6 @@ package typingsSlinky.autolinker
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.autolinker.anchorTagBuilderMod.AnchorTagBuilderCfg
 import typingsSlinky.autolinker.autolinkerMod.AutolinkerConfig
-import typingsSlinky.autolinker.autolinkerStrings.`3Dot11Dot1`
 import typingsSlinky.autolinker.emailMatchMod.EmailMatchConfig
 import typingsSlinky.autolinker.hashtagMatchMod.HashtagMatchConfig
 import typingsSlinky.autolinker.hashtagMatcherMod.HashtagMatcherConfig
@@ -217,7 +216,7 @@ object mod extends js.Object {
       *
       * Ex: 0.25.1
       */
-    val version: `3Dot11Dot1` = js.native
+    val version: /* "3.13.0" */ String = js.native
     /**
       * Automatically links URLs, Email addresses, Phone Numbers, Twitter handles,
       * Hashtags, and Mentions found in the given chunk of HTML. Does not link URLs
@@ -312,7 +311,7 @@ object mod extends js.Object {
       *
       * Ex: 0.25.1
       */
-    val version: `3Dot11Dot1` = js.native
+    val version: /* "3.13.0" */ String = js.native
     /**
       * Automatically links URLs, Email addresses, Phone Numbers, Twitter handles,
       * Hashtags, and Mentions found in the given chunk of HTML. Does not link URLs

@@ -34,22 +34,89 @@ trait EvaluationResult extends js.Object {
 
 object EvaluationResult {
   @scala.inline
-  def apply(
-    Annotation: StringWithCharLimit256 = null,
-    ComplianceType: ComplianceType = null,
-    ConfigRuleInvokedTime: js.Date = null,
-    EvaluationResultIdentifier: EvaluationResultIdentifier = null,
-    ResultRecordedTime: js.Date = null,
-    ResultToken: String = null
-  ): EvaluationResult = {
+  def apply(): EvaluationResult = {
     val __obj = js.Dynamic.literal()
-    if (Annotation != null) __obj.updateDynamic("Annotation")(Annotation.asInstanceOf[js.Any])
-    if (ComplianceType != null) __obj.updateDynamic("ComplianceType")(ComplianceType.asInstanceOf[js.Any])
-    if (ConfigRuleInvokedTime != null) __obj.updateDynamic("ConfigRuleInvokedTime")(ConfigRuleInvokedTime.asInstanceOf[js.Any])
-    if (EvaluationResultIdentifier != null) __obj.updateDynamic("EvaluationResultIdentifier")(EvaluationResultIdentifier.asInstanceOf[js.Any])
-    if (ResultRecordedTime != null) __obj.updateDynamic("ResultRecordedTime")(ResultRecordedTime.asInstanceOf[js.Any])
-    if (ResultToken != null) __obj.updateDynamic("ResultToken")(ResultToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[EvaluationResult]
   }
+  @scala.inline
+  implicit class EvaluationResultOps[Self <: EvaluationResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnnotation(value: StringWithCharLimit256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Annotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnnotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Annotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComplianceType(value: ComplianceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComplianceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigRuleInvokedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleInvokedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigRuleInvokedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleInvokedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvaluationResultIdentifier(value: EvaluationResultIdentifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationResultIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvaluationResultIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationResultIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResultRecordedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultRecordedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResultRecordedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultRecordedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResultToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResultToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

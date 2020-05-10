@@ -12,10 +12,8 @@ trait TopicEvent extends js.Object
 
 object TopicEvent {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def subscribe: typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.subscribe = "subscribe".asInstanceOf[typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.subscribe]
   @scala.inline
-  def subscribe: typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.subscribe = this.cast("subscribe")
-  @scala.inline
-  def unsubscribe: typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.unsubscribe = this.cast("unsubscribe")
+  def unsubscribe: typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.unsubscribe = "unsubscribe".asInstanceOf[typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.unsubscribe]
 }
 

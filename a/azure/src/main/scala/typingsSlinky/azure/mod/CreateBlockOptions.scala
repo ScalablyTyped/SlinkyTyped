@@ -4,31 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CreateBlockOptions extends LeaseAccessConditionsOptions {
-  var contentMD5: js.UndefOr[String] = js.undefined
-  var useTransactionalMD5: js.UndefOr[Boolean] = js.undefined
+  var contentMD5: js.UndefOr[String] = js.native
+  var useTransactionalMD5: js.UndefOr[Boolean] = js.native
 }
 
 object CreateBlockOptions {
   @scala.inline
-  def apply(
-    accessConditions: StorageAccessCondition = null,
-    contentMD5: String = null,
-    leaseId: String = null,
-    locationMode: String = null,
-    maximumExecutionTimeInMs: Int | Double = null,
-    timeoutIntervalInMs: Int | Double = null,
-    useTransactionalMD5: js.UndefOr[Boolean] = js.undefined
-  ): CreateBlockOptions = {
+  def apply(): CreateBlockOptions = {
     val __obj = js.Dynamic.literal()
-    if (accessConditions != null) __obj.updateDynamic("accessConditions")(accessConditions.asInstanceOf[js.Any])
-    if (contentMD5 != null) __obj.updateDynamic("contentMD5")(contentMD5.asInstanceOf[js.Any])
-    if (leaseId != null) __obj.updateDynamic("leaseId")(leaseId.asInstanceOf[js.Any])
-    if (locationMode != null) __obj.updateDynamic("locationMode")(locationMode.asInstanceOf[js.Any])
-    if (maximumExecutionTimeInMs != null) __obj.updateDynamic("maximumExecutionTimeInMs")(maximumExecutionTimeInMs.asInstanceOf[js.Any])
-    if (timeoutIntervalInMs != null) __obj.updateDynamic("timeoutIntervalInMs")(timeoutIntervalInMs.asInstanceOf[js.Any])
-    if (!js.isUndefined(useTransactionalMD5)) __obj.updateDynamic("useTransactionalMD5")(useTransactionalMD5.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateBlockOptions]
   }
+  @scala.inline
+  implicit class CreateBlockOptionsOps[Self <: CreateBlockOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentMD5(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentMD5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentMD5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentMD5")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseTransactionalMD5(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useTransactionalMD5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseTransactionalMD5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useTransactionalMD5")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

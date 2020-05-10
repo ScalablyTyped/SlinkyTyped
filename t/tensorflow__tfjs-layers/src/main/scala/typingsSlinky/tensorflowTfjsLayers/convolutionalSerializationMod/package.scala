@@ -17,7 +17,6 @@ package object convolutionalSerializationMod {
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Conv2DTranspose, 
     typingsSlinky.tensorflowTfjsLayers.convolutionalSerializationMod.ConvLayerConfig
   ]
-  type ConvolutionalLayerClassName = /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-layers.@tensorflow/tfjs-layers/dist/keras_format/layers/convolutional_serialization.ConvolutionalLayerSerialization['class_name'] */ js.Any
   type ConvolutionalLayerSerialization = typingsSlinky.tensorflowTfjsLayers.convolutionalSerializationMod.Conv1DLayerSerialization | typingsSlinky.tensorflowTfjsLayers.convolutionalSerializationMod.Conv2DLayerSerialization | typingsSlinky.tensorflowTfjsLayers.convolutionalSerializationMod.Conv2DTransposeLayerSerialization | typingsSlinky.tensorflowTfjsLayers.convolutionalSerializationMod.SeparableConv2DLayerSerialization | typingsSlinky.tensorflowTfjsLayers.convolutionalSerializationMod.Cropping2DLayerSerialization | typingsSlinky.tensorflowTfjsLayers.convolutionalSerializationMod.UpSampling2DLayerSerialization
   type Cropping2DLayerSerialization = typingsSlinky.tensorflowTfjsLayers.topologyConfigMod.BaseLayerSerialization[
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Cropping2D, 

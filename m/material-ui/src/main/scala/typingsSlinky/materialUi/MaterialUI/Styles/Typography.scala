@@ -5,19 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Typography extends js.Object {
-  var fontStyleButtonFontSize: Double
+  var fontStyleButtonFontSize: Double = js.native
   // font weight
-  var fontWeightLight: Double
-  var fontWeightMedium: Double
-  var fontWeightNormal: Double
-  var textDarkBlack: String
-  var textDarkWhite: String
-  var textFullBlack: String
-  var textFullWhite: String
-  var textLightBlack: String
-  var textLightWhite: String
-  var textMinBlack: String
+  var fontWeightLight: Double = js.native
+  var fontWeightMedium: Double = js.native
+  var fontWeightNormal: Double = js.native
+  var textDarkBlack: String = js.native
+  var textDarkWhite: String = js.native
+  var textFullBlack: String = js.native
+  var textFullWhite: String = js.native
+  var textLightBlack: String = js.native
+  var textLightWhite: String = js.native
+  var textMinBlack: String = js.native
 }
 
 @JSGlobal("__MaterialUI.Styles.Typography")

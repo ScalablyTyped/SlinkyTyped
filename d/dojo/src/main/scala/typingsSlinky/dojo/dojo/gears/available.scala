@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * True if client is using Google Gears
   *
   */
+@js.native
 trait available extends js.Object
 

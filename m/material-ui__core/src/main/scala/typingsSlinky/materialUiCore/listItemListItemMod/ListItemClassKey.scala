@@ -21,28 +21,26 @@ trait ListItemClassKey extends js.Object
 
 object ListItemClassKey {
   @scala.inline
-  def button: typingsSlinky.materialUiCore.materialUiCoreStrings.button = this.cast("button")
+  def button: typingsSlinky.materialUiCore.materialUiCoreStrings.button = "button".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.button]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def container: typingsSlinky.materialUiCore.materialUiCoreStrings.container = "container".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.container]
   @scala.inline
-  def container: typingsSlinky.materialUiCore.materialUiCoreStrings.container = this.cast("container")
+  def default: typingsSlinky.materialUiCore.materialUiCoreStrings.default = "default".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.default]
   @scala.inline
-  def default: typingsSlinky.materialUiCore.materialUiCoreStrings.default = this.cast("default")
+  def dense: typingsSlinky.materialUiCore.materialUiCoreStrings.dense = "dense".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.dense]
   @scala.inline
-  def dense: typingsSlinky.materialUiCore.materialUiCoreStrings.dense = this.cast("dense")
+  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = "disabled".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = this.cast("disabled")
+  def divider: typingsSlinky.materialUiCore.materialUiCoreStrings.divider = "divider".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.divider]
   @scala.inline
-  def divider: typingsSlinky.materialUiCore.materialUiCoreStrings.divider = this.cast("divider")
+  def focusVisible: typingsSlinky.materialUiCore.materialUiCoreStrings.focusVisible = "focusVisible".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.focusVisible]
   @scala.inline
-  def focusVisible: typingsSlinky.materialUiCore.materialUiCoreStrings.focusVisible = this.cast("focusVisible")
+  def gutters: typingsSlinky.materialUiCore.materialUiCoreStrings.gutters = "gutters".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.gutters]
   @scala.inline
-  def gutters: typingsSlinky.materialUiCore.materialUiCoreStrings.gutters = this.cast("gutters")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def secondaryAction: typingsSlinky.materialUiCore.materialUiCoreStrings.secondaryAction = "secondaryAction".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.secondaryAction]
   @scala.inline
-  def secondaryAction: typingsSlinky.materialUiCore.materialUiCoreStrings.secondaryAction = this.cast("secondaryAction")
-  @scala.inline
-  def selected: typingsSlinky.materialUiCore.materialUiCoreStrings.selected = this.cast("selected")
+  def selected: typingsSlinky.materialUiCore.materialUiCoreStrings.selected = "selected".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.selected]
 }
 

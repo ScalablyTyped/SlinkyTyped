@@ -1,40 +1,48 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.collapsePanelMod.CollapsePanelProps
 import typingsSlinky.antd.collapsePanelMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CollapsePanel
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object CollapsePanel {
   @JSImport("antd/lib/collapse/CollapsePanel", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, id, style */
-  def apply(
-    header: TagMod[Any],
-    extra: TagMod[Any] = null,
-    forceRender: js.UndefOr[Boolean] = js.undefined,
-    prefixCls: String = null,
-    showArrow: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(header = header.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceRender)) __obj.updateDynamic("forceRender")(forceRender.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(showArrow)) __obj.updateDynamic("showArrow")(showArrow.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def forceRender(value: Boolean): this.type = set("forceRender", value.asInstanceOf[js.Any])
+    @scala.inline
+    def header(value: TagMod[Any]): this.type = set("header", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showArrow(value: Boolean): this.type = set("showArrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = CollapsePanelProps
+  
+  def withProps(p: CollapsePanelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CollapsePanel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

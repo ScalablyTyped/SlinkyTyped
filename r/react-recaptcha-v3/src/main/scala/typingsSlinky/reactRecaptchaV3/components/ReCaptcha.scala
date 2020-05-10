@@ -1,37 +1,35 @@
 package typingsSlinky.reactRecaptchaV3.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactRecaptchaV3.mod.ReCaptcha.ReCaptchaProps
 import typingsSlinky.reactRecaptchaV3.mod.ReCaptcha_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReCaptcha
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ReCaptcha_] {
+object ReCaptcha {
   @JSImport("react-recaptcha-v3", "ReCaptcha")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    action: String,
-    sitekey: String,
-    elementID: String = null,
-    verifyCallback: /* response */ String => Unit = null,
-    verifyCallbackName: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ReCaptcha_] = {
-    val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any], sitekey = sitekey.asInstanceOf[js.Any])
-    if (elementID != null) __obj.updateDynamic("elementID")(elementID.asInstanceOf[js.Any])
-    if (verifyCallback != null) __obj.updateDynamic("verifyCallback")(js.Any.fromFunction1(verifyCallback))
-    if (verifyCallbackName != null) __obj.updateDynamic("verifyCallbackName")(verifyCallbackName.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ReCaptcha_] {
+    @scala.inline
+    def elementID(value: String): this.type = set("elementID", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verifyCallback(value: /* response */ String => Unit): this.type = set("verifyCallback", js.Any.fromFunction1(value))
+    @scala.inline
+    def verifyCallbackName(value: String): this.type = set("verifyCallbackName", value.asInstanceOf[js.Any])
   }
-  type Props = ReCaptchaProps
+  
+  def withProps(p: ReCaptchaProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(action: String, sitekey: String): Builder = {
+    val __props = js.Dynamic.literal(action = action.asInstanceOf[js.Any], sitekey = sitekey.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReCaptchaProps]))
+  }
 }
 

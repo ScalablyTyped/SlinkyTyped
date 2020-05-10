@@ -4,22 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
   /**
   		Recurse nested objects and objects in arrays.
   		@default false
   		*/
-  val deep: js.UndefOr[Boolean] = js.undefined
+  val deep: js.UndefOr[Boolean] = js.native
   /**
   		Exclude keys from being camel-cased.
   		@default []
   		*/
-  val exclude: js.UndefOr[js.Array[String | js.RegExp]] = js.undefined
+  val exclude: js.UndefOr[js.Array[String | js.RegExp]] = js.native
   /**
   		Uppercase the first character as in `bye-bye` → `ByeBye`.
   		@default false
   		*/
-  val pascalCase: js.UndefOr[Boolean] = js.undefined
+  val pascalCase: js.UndefOr[Boolean] = js.native
   /**
   		Exclude children at the given object paths in dot-notation from being camel-cased. For example, with an object like `{a: {b: '🦄'}}`, the object path to reach the unicorn is `'a.b'`.
   		@default []
@@ -50,23 +51,70 @@ trait Options extends js.Object {
   		// }
   		```
   		*/
-  val stopPaths: js.UndefOr[js.Array[String]] = js.undefined
+  val stopPaths: js.UndefOr[js.Array[String]] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    deep: js.UndefOr[Boolean] = js.undefined,
-    exclude: js.Array[String | js.RegExp] = null,
-    pascalCase: js.UndefOr[Boolean] = js.undefined,
-    stopPaths: js.Array[String] = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(deep)) __obj.updateDynamic("deep")(deep.asInstanceOf[js.Any])
-    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
-    if (!js.isUndefined(pascalCase)) __obj.updateDynamic("pascalCase")(pascalCase.asInstanceOf[js.Any])
-    if (stopPaths != null) __obj.updateDynamic("stopPaths")(stopPaths.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeep(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclude(value: js.Array[String | js.RegExp]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPascalCase(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pascalCase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPascalCase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pascalCase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopPaths(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPaths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopPaths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPaths")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

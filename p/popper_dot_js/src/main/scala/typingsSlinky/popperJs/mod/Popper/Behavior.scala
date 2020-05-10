@@ -13,12 +13,10 @@ trait Behavior extends js.Object
 
 object Behavior {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def clockwise: typingsSlinky.popperJs.popperJsStrings.clockwise = "clockwise".asInstanceOf[typingsSlinky.popperJs.popperJsStrings.clockwise]
   @scala.inline
-  def clockwise: typingsSlinky.popperJs.popperJsStrings.clockwise = this.cast("clockwise")
+  def counterclockwise: typingsSlinky.popperJs.popperJsStrings.counterclockwise = "counterclockwise".asInstanceOf[typingsSlinky.popperJs.popperJsStrings.counterclockwise]
   @scala.inline
-  def counterclockwise: typingsSlinky.popperJs.popperJsStrings.counterclockwise = this.cast("counterclockwise")
-  @scala.inline
-  def flip: typingsSlinky.popperJs.popperJsStrings.flip = this.cast("flip")
+  def flip: typingsSlinky.popperJs.popperJsStrings.flip = "flip".asInstanceOf[typingsSlinky.popperJs.popperJsStrings.flip]
 }
 

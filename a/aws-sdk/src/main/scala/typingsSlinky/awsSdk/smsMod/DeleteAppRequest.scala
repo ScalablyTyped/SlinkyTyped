@@ -22,16 +22,53 @@ trait DeleteAppRequest extends js.Object {
 
 object DeleteAppRequest {
   @scala.inline
-  def apply(
-    appId: AppId = null,
-    forceStopAppReplication: js.UndefOr[Boolean] = js.undefined,
-    forceTerminateApp: js.UndefOr[Boolean] = js.undefined
-  ): DeleteAppRequest = {
+  def apply(): DeleteAppRequest = {
     val __obj = js.Dynamic.literal()
-    if (appId != null) __obj.updateDynamic("appId")(appId.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceStopAppReplication)) __obj.updateDynamic("forceStopAppReplication")(forceStopAppReplication.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceTerminateApp)) __obj.updateDynamic("forceTerminateApp")(forceTerminateApp.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteAppRequest]
   }
+  @scala.inline
+  implicit class DeleteAppRequestOps[Self <: DeleteAppRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppId(value: AppId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceStopAppReplication(value: ForceStopAppReplication): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceStopAppReplication")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceStopAppReplication: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceStopAppReplication")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceTerminateApp(value: ForceTerminateApp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceTerminateApp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceTerminateApp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceTerminateApp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

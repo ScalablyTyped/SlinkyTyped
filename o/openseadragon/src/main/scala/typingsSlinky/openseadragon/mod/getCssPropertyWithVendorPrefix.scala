@@ -1,0 +1,12 @@
+package typingsSlinky.openseadragon.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("openseadragon", "getCssPropertyWithVendorPrefix")
+@js.native
+object getCssPropertyWithVendorPrefix extends js.Object {
+  def apply(property: String): String = js.native
+}
+

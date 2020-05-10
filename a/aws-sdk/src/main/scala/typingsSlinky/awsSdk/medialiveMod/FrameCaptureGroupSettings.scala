@@ -16,8 +16,21 @@ object FrameCaptureGroupSettings {
   @scala.inline
   def apply(Destination: OutputLocationRef): FrameCaptureGroupSettings = {
     val __obj = js.Dynamic.literal(Destination = Destination.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[FrameCaptureGroupSettings]
   }
+  @scala.inline
+  implicit class FrameCaptureGroupSettingsOps[Self <: FrameCaptureGroupSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestination(value: OutputLocationRef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

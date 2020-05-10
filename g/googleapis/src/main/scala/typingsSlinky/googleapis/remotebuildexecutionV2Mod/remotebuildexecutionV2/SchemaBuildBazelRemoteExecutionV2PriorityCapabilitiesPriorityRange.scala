@@ -15,11 +15,41 @@ trait SchemaBuildBazelRemoteExecutionV2PriorityCapabilitiesPriorityRange extends
 
 object SchemaBuildBazelRemoteExecutionV2PriorityCapabilitiesPriorityRange {
   @scala.inline
-  def apply(maxPriority: Int | Double = null, minPriority: Int | Double = null): SchemaBuildBazelRemoteExecutionV2PriorityCapabilitiesPriorityRange = {
+  def apply(): SchemaBuildBazelRemoteExecutionV2PriorityCapabilitiesPriorityRange = {
     val __obj = js.Dynamic.literal()
-    if (maxPriority != null) __obj.updateDynamic("maxPriority")(maxPriority.asInstanceOf[js.Any])
-    if (minPriority != null) __obj.updateDynamic("minPriority")(minPriority.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2PriorityCapabilitiesPriorityRange]
   }
+  @scala.inline
+  implicit class SchemaBuildBazelRemoteExecutionV2PriorityCapabilitiesPriorityRangeOps[Self <: SchemaBuildBazelRemoteExecutionV2PriorityCapabilitiesPriorityRange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxPriority(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPriority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPriority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinPriority(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minPriority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minPriority")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

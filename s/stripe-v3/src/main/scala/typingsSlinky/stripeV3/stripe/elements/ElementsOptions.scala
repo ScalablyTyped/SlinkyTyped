@@ -10,48 +10,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ElementsOptions extends js.Object {
-  var classes: js.UndefOr[AnonBase] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var hideIcon: js.UndefOr[Boolean] = js.undefined
-  var hidePostalCode: js.UndefOr[Boolean] = js.undefined
-  var iconStyle: js.UndefOr[solid | default] = js.undefined
-  var paymentRequest: js.UndefOr[StripePaymentRequest] = js.undefined
-  var placeholder: js.UndefOr[String] = js.undefined
-  var placeholderCountry: js.UndefOr[String] = js.undefined
-  var style: js.UndefOr[AnonComplete] = js.undefined
-  var supportedCountries: js.UndefOr[js.Array[String]] = js.undefined
-  var value: js.UndefOr[String | StringDictionary[String]] = js.undefined
+  var classes: js.UndefOr[AnonBase] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var hideIcon: js.UndefOr[Boolean] = js.native
+  var hidePostalCode: js.UndefOr[Boolean] = js.native
+  var iconStyle: js.UndefOr[solid | default] = js.native
+  var paymentRequest: js.UndefOr[StripePaymentRequest] = js.native
+  var placeholder: js.UndefOr[String] = js.native
+  var placeholderCountry: js.UndefOr[String] = js.native
+  var style: js.UndefOr[AnonComplete] = js.native
+  var supportedCountries: js.UndefOr[js.Array[String]] = js.native
+  var value: js.UndefOr[String | StringDictionary[String]] = js.native
 }
 
 object ElementsOptions {
   @scala.inline
-  def apply(
-    classes: AnonBase = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    hideIcon: js.UndefOr[Boolean] = js.undefined,
-    hidePostalCode: js.UndefOr[Boolean] = js.undefined,
-    iconStyle: solid | default = null,
-    paymentRequest: StripePaymentRequest = null,
-    placeholder: String = null,
-    placeholderCountry: String = null,
-    style: AnonComplete = null,
-    supportedCountries: js.Array[String] = null,
-    value: String | StringDictionary[String] = null
-  ): ElementsOptions = {
+  def apply(): ElementsOptions = {
     val __obj = js.Dynamic.literal()
-    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideIcon)) __obj.updateDynamic("hideIcon")(hideIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidePostalCode)) __obj.updateDynamic("hidePostalCode")(hidePostalCode.asInstanceOf[js.Any])
-    if (iconStyle != null) __obj.updateDynamic("iconStyle")(iconStyle.asInstanceOf[js.Any])
-    if (paymentRequest != null) __obj.updateDynamic("paymentRequest")(paymentRequest.asInstanceOf[js.Any])
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (placeholderCountry != null) __obj.updateDynamic("placeholderCountry")(placeholderCountry.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (supportedCountries != null) __obj.updateDynamic("supportedCountries")(supportedCountries.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElementsOptions]
   }
+  @scala.inline
+  implicit class ElementsOptionsOps[Self <: ElementsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClasses(value: AnonBase): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClasses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideIcon(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHidePostalCode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidePostalCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHidePostalCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidePostalCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconStyle(value: solid | default): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaymentRequest(value: StripePaymentRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentRequest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaymentRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentRequest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholderCountry(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderCountry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholderCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderCountry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: AnonComplete): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportedCountries(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedCountries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportedCountries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedCountries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: String | StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.timeago
 
-import typingsSlinky.std.Date
 import typingsSlinky.timeago.timeagoStrings.dispose
 import typingsSlinky.timeago.timeagoStrings.init
 import typingsSlinky.timeago.timeagoStrings.update
@@ -19,7 +18,7 @@ trait JQuery extends js.Object {
   @JSName("timeago")
   def timeago_update(action: update, timestamp: String): this.type = js.native
   @JSName("timeago")
-  def timeago_update(action: update, timestamp: Date): this.type = js.native
+  def timeago_update(action: update, timestamp: js.Date): this.type = js.native
   @JSName("timeago")
   def timeago_updateFromDOM(action: updateFromDOM): this.type = js.native
 }

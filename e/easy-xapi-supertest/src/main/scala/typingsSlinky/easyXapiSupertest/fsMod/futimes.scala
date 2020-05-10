@@ -1,7 +1,6 @@
 package typingsSlinky.easyXapiSupertest.fsMod
 
 import typingsSlinky.easyXapiSupertest.NodeJS.ErrnoException
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,11 +15,11 @@ object futimes extends js.Object {
     mtime: Double,
     callback: js.Function1[/* err */ js.UndefOr[ErrnoException], Unit]
   ): Unit = js.native
-  def apply(fd: Double, atime: Date, mtime: Date): Unit = js.native
+  def apply(fd: Double, atime: js.Date, mtime: js.Date): Unit = js.native
   def apply(
     fd: Double,
-    atime: Date,
-    mtime: Date,
+    atime: js.Date,
+    mtime: js.Date,
     callback: js.Function1[/* err */ js.UndefOr[ErrnoException], Unit]
   ): Unit = js.native
 }

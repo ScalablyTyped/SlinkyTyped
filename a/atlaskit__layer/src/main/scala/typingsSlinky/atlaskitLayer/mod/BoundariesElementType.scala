@@ -13,12 +13,10 @@ trait BoundariesElementType extends js.Object
 
 object BoundariesElementType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def scrollParent: typingsSlinky.atlaskitLayer.atlaskitLayerStrings.scrollParent = "scrollParent".asInstanceOf[typingsSlinky.atlaskitLayer.atlaskitLayerStrings.scrollParent]
   @scala.inline
-  def scrollParent: typingsSlinky.atlaskitLayer.atlaskitLayerStrings.scrollParent = this.cast("scrollParent")
+  def viewport: typingsSlinky.atlaskitLayer.atlaskitLayerStrings.viewport = "viewport".asInstanceOf[typingsSlinky.atlaskitLayer.atlaskitLayerStrings.viewport]
   @scala.inline
-  def viewport: typingsSlinky.atlaskitLayer.atlaskitLayerStrings.viewport = this.cast("viewport")
-  @scala.inline
-  def window: typingsSlinky.atlaskitLayer.atlaskitLayerStrings.window = this.cast("window")
+  def window: typingsSlinky.atlaskitLayer.atlaskitLayerStrings.window = "window".asInstanceOf[typingsSlinky.atlaskitLayer.atlaskitLayerStrings.window]
 }
 

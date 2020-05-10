@@ -44,18 +44,65 @@ trait SchemaResourceRequirements extends js.Object {
 
 object SchemaResourceRequirements {
   @scala.inline
-  def apply(
-    limits: StringDictionary[String] = null,
-    limitsInMap: StringDictionary[SchemaQuantity] = null,
-    requests: StringDictionary[String] = null,
-    requestsInMap: StringDictionary[SchemaQuantity] = null
-  ): SchemaResourceRequirements = {
+  def apply(): SchemaResourceRequirements = {
     val __obj = js.Dynamic.literal()
-    if (limits != null) __obj.updateDynamic("limits")(limits.asInstanceOf[js.Any])
-    if (limitsInMap != null) __obj.updateDynamic("limitsInMap")(limitsInMap.asInstanceOf[js.Any])
-    if (requests != null) __obj.updateDynamic("requests")(requests.asInstanceOf[js.Any])
-    if (requestsInMap != null) __obj.updateDynamic("requestsInMap")(requestsInMap.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResourceRequirements]
   }
+  @scala.inline
+  implicit class SchemaResourceRequirementsOps[Self <: SchemaResourceRequirements] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLimits(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimitsInMap(value: StringDictionary[SchemaQuantity]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limitsInMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimitsInMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limitsInMap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequests(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requests")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestsInMap(value: StringDictionary[SchemaQuantity]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestsInMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestsInMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestsInMap")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -8,14 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.UserOrUserGroupID")
 @js.native
-class UserOrUserGroupID () extends IUserOrUserGroupID {
-  /* CompleteClass */
-  override var UserOrGroupID: Double = js.native
-  /* CompleteClass */
-  override var UserOrGroupType: MFUserOrUserGroupType = js.native
-  /* CompleteClass */
-  override def Clone(): IUserOrUserGroupID = js.native
-}
+class UserOrUserGroupID () extends IUserOrUserGroupID
 
 @JSGlobal("MFiles.UserOrUserGroupID")
 @js.native

@@ -43,8 +43,51 @@ object PatchComplianceData {
     Title: PatchTitle
   ): PatchComplianceData = {
     val __obj = js.Dynamic.literal(Classification = Classification.asInstanceOf[js.Any], InstalledTime = InstalledTime.asInstanceOf[js.Any], KBId = KBId.asInstanceOf[js.Any], Severity = Severity.asInstanceOf[js.Any], State = State.asInstanceOf[js.Any], Title = Title.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PatchComplianceData]
   }
+  @scala.inline
+  implicit class PatchComplianceDataOps[Self <: PatchComplianceData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassification(value: PatchClassification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Classification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstalledTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstalledTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKBId(value: PatchKbNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KBId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSeverity(value: PatchSeverity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Severity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withState(value: PatchComplianceDataState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: PatchTitle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

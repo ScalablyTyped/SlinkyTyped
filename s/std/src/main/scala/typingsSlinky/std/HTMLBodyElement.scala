@@ -57,7 +57,7 @@ trait HTMLBodyElement
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_orientationchange(`type`: orientationchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -71,11 +71,12 @@ trait HTMLBodyElement
   def removeEventListener_orientationchange(
     `type`: orientationchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("HTMLBodyElement")
 @js.native
-object HTMLBodyElement extends Instantiable0[HTMLBodyElement]
+object HTMLBodyElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLBodyElement]
 

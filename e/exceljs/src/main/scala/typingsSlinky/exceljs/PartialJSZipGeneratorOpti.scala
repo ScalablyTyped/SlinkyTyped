@@ -7,18 +7,49 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<exceljs.exceljs.JSZipGeneratorOptions> */
+@js.native
 trait PartialJSZipGeneratorOpti extends js.Object {
-  var compression: js.UndefOr[STORE | DEFLATE] = js.undefined
-  var compressionOptions: js.UndefOr[AnonLevel] = js.undefined
+  var compression: js.UndefOr[STORE | DEFLATE] = js.native
+  var compressionOptions: js.UndefOr[AnonLevel] = js.native
 }
 
 object PartialJSZipGeneratorOpti {
   @scala.inline
-  def apply(compression: STORE | DEFLATE = null, compressionOptions: AnonLevel = null): PartialJSZipGeneratorOpti = {
+  def apply(): PartialJSZipGeneratorOpti = {
     val __obj = js.Dynamic.literal()
-    if (compression != null) __obj.updateDynamic("compression")(compression.asInstanceOf[js.Any])
-    if (compressionOptions != null) __obj.updateDynamic("compressionOptions")(compressionOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialJSZipGeneratorOpti]
   }
+  @scala.inline
+  implicit class PartialJSZipGeneratorOptiOps[Self <: PartialJSZipGeneratorOpti] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompression(value: STORE | DEFLATE): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompressionOptions(value: AnonLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compressionOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompressionOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compressionOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

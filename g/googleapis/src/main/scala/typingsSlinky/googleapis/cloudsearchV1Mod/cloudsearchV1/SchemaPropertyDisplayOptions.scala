@@ -26,10 +26,29 @@ trait SchemaPropertyDisplayOptions extends js.Object {
 
 object SchemaPropertyDisplayOptions {
   @scala.inline
-  def apply(displayLabel: String = null): SchemaPropertyDisplayOptions = {
+  def apply(): SchemaPropertyDisplayOptions = {
     val __obj = js.Dynamic.literal()
-    if (displayLabel != null) __obj.updateDynamic("displayLabel")(displayLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPropertyDisplayOptions]
   }
+  @scala.inline
+  implicit class SchemaPropertyDisplayOptionsOps[Self <: SchemaPropertyDisplayOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisplayLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayLabel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

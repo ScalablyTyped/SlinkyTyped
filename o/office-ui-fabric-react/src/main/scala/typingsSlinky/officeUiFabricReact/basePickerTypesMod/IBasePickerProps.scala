@@ -3,8 +3,8 @@ package typingsSlinky.officeUiFabricReact.basePickerTypesMod
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
 import typingsSlinky.officeUiFabricReact.AnonInput
-import typingsSlinky.officeUiFabricReact.baseAutoFillMod.BaseAutoFill
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
+import typingsSlinky.officeUiFabricReact.libAutofillMod.Autofill
 import typingsSlinky.officeUiFabricReact.pickerItemTypesMod.IPickerItemProps
 import typingsSlinky.officeUiFabricReact.suggestionsItemTypesMod.ISuggestionItemProps
 import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionModel
@@ -45,9 +45,9 @@ trait IBasePickerProps[T]
     */
   var disabled: js.UndefOr[Boolean] = js.native
   /**
-    * Adds an additional alert for the currently selected suggestion. This prop should be set to true for IE11 and below, as it
-    * enables proper screen reader behavior for each suggestion (since aria-activedescendant does not work with IE11).
-    * It should not be set for modern browsers (Edge, Chrome).
+    * Adds an additional alert for the currently selected suggestion. This prop should be set to true for IE11 and below,
+    * as it enables proper screen reader behavior for each suggestion (since aria-activedescendant does not work
+    * with IE11). It should not be set for modern browsers (Edge, Chrome).
     * @defaultvalue false
     */
   var enableSelectedSuggestionAlert: js.UndefOr[Boolean] = js.native
@@ -68,7 +68,7 @@ trait IBasePickerProps[T]
   /**
     * A callback for when the user moves the focus away from the picker
     */
-  var onBlur: js.UndefOr[FocusEventHandler[HTMLInputElement | BaseAutoFill]] = js.native
+  var onBlur: js.UndefOr[FocusEventHandler[HTMLInputElement | Autofill]] = js.native
   /**
     * A callback for when the selected list of items changes.
     */
@@ -106,7 +106,7 @@ trait IBasePickerProps[T]
     * A callback for when the user put focus on the picker
     * @deprecated Use `inputProps.onFocus` instead
     */
-  var onFocus: js.UndefOr[FocusEventHandler[HTMLInputElement | BaseAutoFill]] = js.native
+  var onFocus: js.UndefOr[FocusEventHandler[HTMLInputElement | Autofill]] = js.native
   /**
     * A callback that gets the rest of the results when a user clicks get more results.
     */

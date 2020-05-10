@@ -26,16 +26,53 @@ trait SchemaFeatures extends js.Object {
 
 object SchemaFeatures {
   @scala.inline
-  def apply(
-    extractDocumentSentiment: js.UndefOr[Boolean] = js.undefined,
-    extractEntities: js.UndefOr[Boolean] = js.undefined,
-    extractSyntax: js.UndefOr[Boolean] = js.undefined
-  ): SchemaFeatures = {
+  def apply(): SchemaFeatures = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(extractDocumentSentiment)) __obj.updateDynamic("extractDocumentSentiment")(extractDocumentSentiment.asInstanceOf[js.Any])
-    if (!js.isUndefined(extractEntities)) __obj.updateDynamic("extractEntities")(extractEntities.asInstanceOf[js.Any])
-    if (!js.isUndefined(extractSyntax)) __obj.updateDynamic("extractSyntax")(extractSyntax.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFeatures]
   }
+  @scala.inline
+  implicit class SchemaFeaturesOps[Self <: SchemaFeatures] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExtractDocumentSentiment(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extractDocumentSentiment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtractDocumentSentiment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extractDocumentSentiment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtractEntities(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extractEntities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtractEntities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extractEntities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtractSyntax(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extractSyntax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtractSyntax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extractSyntax")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

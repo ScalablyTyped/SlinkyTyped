@@ -1,12 +1,10 @@
 package typingsSlinky.nivoPie.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.SVGPathElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
 import slinky.web.svg.path.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoColors.mod.InheritedColorProp
 import typingsSlinky.nivoColors.mod.OrdinalColorsInstruction
 import typingsSlinky.nivoCore.mod.Box
@@ -21,91 +19,108 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ResponsivePieCanvas
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.nivoPie.mod.ResponsivePieCanvas] {
+object ResponsivePieCanvas {
   @JSImport("@nivo/pie", "ResponsivePieCanvas")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    data: js.Array[PieDatum],
-    animate: js.UndefOr[Boolean] = js.undefined,
-    borderColor: InheritedColorProp[PieDatum] = null,
-    borderWidth: Int | Double = null,
-    colors: OrdinalColorsInstruction[PieDatum] = null,
-    cornerRadius: Int | Double = null,
-    enableRadialLabels: js.UndefOr[Boolean] = js.undefined,
-    enableSlicesLabels: js.UndefOr[Boolean] = js.undefined,
-    endAngle: Int | Double = null,
-    fit: js.UndefOr[Boolean] = js.undefined,
-    innerRadius: Int | Double = null,
-    isInteractive: js.UndefOr[Boolean] = js.undefined,
-    legends: js.Array[LegendProps] = null,
-    margin: Box = null,
-    motionDamping: Int | Double = null,
-    motionStiffness: Int | Double = null,
-    onClick: (/* datum */ PieDatum, /* event */ SyntheticMouseEvent[SVGPathElement]) => Unit = null,
-    padAngle: Int | Double = null,
-    pixelRatio: Int | Double = null,
-    radialLabel: String | AccessorFunc = null,
-    radialLabelsLinkColor: InheritedColorProp[PieDatumWithColor] = null,
-    radialLabelsLinkDiagonalLength: Int | Double = null,
-    radialLabelsLinkHorizontalLength: Int | Double = null,
-    radialLabelsLinkOffset: Int | Double = null,
-    radialLabelsLinkStrokeWidth: Int | Double = null,
-    radialLabelsSkipAngle: Int | Double = null,
-    radialLabelsTextColor: InheritedColorProp[PieDatumWithColor] = null,
-    radialLabelsTextXOffset: Int | Double = null,
-    sliceLabel: String | AccessorFunc = null,
-    slicesLabelsSkipAngle: Int | Double = null,
-    slicesLabelsTextColor: InheritedColorProp[PieDatumWithColor] = null,
-    sortByValue: js.UndefOr[Boolean] = js.undefined,
-    startAngle: Int | Double = null,
-    theme: Theme = null,
-    tooltip: ReactComponentClass[PieDatumWithColor] = null,
-    tooltipFormat: String | ValueFormatter = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.nivoPie.mod.ResponsivePieCanvas] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (cornerRadius != null) __obj.updateDynamic("cornerRadius")(cornerRadius.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableRadialLabels)) __obj.updateDynamic("enableRadialLabels")(enableRadialLabels.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableSlicesLabels)) __obj.updateDynamic("enableSlicesLabels")(enableSlicesLabels.asInstanceOf[js.Any])
-    if (endAngle != null) __obj.updateDynamic("endAngle")(endAngle.asInstanceOf[js.Any])
-    if (!js.isUndefined(fit)) __obj.updateDynamic("fit")(fit.asInstanceOf[js.Any])
-    if (innerRadius != null) __obj.updateDynamic("innerRadius")(innerRadius.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInteractive)) __obj.updateDynamic("isInteractive")(isInteractive.asInstanceOf[js.Any])
-    if (legends != null) __obj.updateDynamic("legends")(legends.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (motionDamping != null) __obj.updateDynamic("motionDamping")(motionDamping.asInstanceOf[js.Any])
-    if (motionStiffness != null) __obj.updateDynamic("motionStiffness")(motionStiffness.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (padAngle != null) __obj.updateDynamic("padAngle")(padAngle.asInstanceOf[js.Any])
-    if (pixelRatio != null) __obj.updateDynamic("pixelRatio")(pixelRatio.asInstanceOf[js.Any])
-    if (radialLabel != null) __obj.updateDynamic("radialLabel")(radialLabel.asInstanceOf[js.Any])
-    if (radialLabelsLinkColor != null) __obj.updateDynamic("radialLabelsLinkColor")(radialLabelsLinkColor.asInstanceOf[js.Any])
-    if (radialLabelsLinkDiagonalLength != null) __obj.updateDynamic("radialLabelsLinkDiagonalLength")(radialLabelsLinkDiagonalLength.asInstanceOf[js.Any])
-    if (radialLabelsLinkHorizontalLength != null) __obj.updateDynamic("radialLabelsLinkHorizontalLength")(radialLabelsLinkHorizontalLength.asInstanceOf[js.Any])
-    if (radialLabelsLinkOffset != null) __obj.updateDynamic("radialLabelsLinkOffset")(radialLabelsLinkOffset.asInstanceOf[js.Any])
-    if (radialLabelsLinkStrokeWidth != null) __obj.updateDynamic("radialLabelsLinkStrokeWidth")(radialLabelsLinkStrokeWidth.asInstanceOf[js.Any])
-    if (radialLabelsSkipAngle != null) __obj.updateDynamic("radialLabelsSkipAngle")(radialLabelsSkipAngle.asInstanceOf[js.Any])
-    if (radialLabelsTextColor != null) __obj.updateDynamic("radialLabelsTextColor")(radialLabelsTextColor.asInstanceOf[js.Any])
-    if (radialLabelsTextXOffset != null) __obj.updateDynamic("radialLabelsTextXOffset")(radialLabelsTextXOffset.asInstanceOf[js.Any])
-    if (sliceLabel != null) __obj.updateDynamic("sliceLabel")(sliceLabel.asInstanceOf[js.Any])
-    if (slicesLabelsSkipAngle != null) __obj.updateDynamic("slicesLabelsSkipAngle")(slicesLabelsSkipAngle.asInstanceOf[js.Any])
-    if (slicesLabelsTextColor != null) __obj.updateDynamic("slicesLabelsTextColor")(slicesLabelsTextColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(sortByValue)) __obj.updateDynamic("sortByValue")(sortByValue.asInstanceOf[js.Any])
-    if (startAngle != null) __obj.updateDynamic("startAngle")(startAngle.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (tooltipFormat != null) __obj.updateDynamic("tooltipFormat")(tooltipFormat.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.nivoPie.mod.ResponsivePieCanvas] {
+    @scala.inline
+    def animate(value: Boolean): this.type = set("animate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderColorFunction1(value: PieDatum => String): this.type = set("borderColor", js.Any.fromFunction1(value))
+    @scala.inline
+    def borderColor(value: InheritedColorProp[PieDatum]): this.type = set("borderColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderWidth(value: Double): this.type = set("borderWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorsFunction1(value: PieDatum => String): this.type = set("colors", js.Any.fromFunction1(value))
+    @scala.inline
+    def colors(value: OrdinalColorsInstruction[PieDatum]): this.type = set("colors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cornerRadius(value: Double): this.type = set("cornerRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableRadialLabels(value: Boolean): this.type = set("enableRadialLabels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableSlicesLabels(value: Boolean): this.type = set("enableSlicesLabels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endAngle(value: Double): this.type = set("endAngle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fit(value: Boolean): this.type = set("fit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRadius(value: Double): this.type = set("innerRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isInteractive(value: Boolean): this.type = set("isInteractive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def legends(value: js.Array[LegendProps]): this.type = set("legends", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: Box): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def motionDamping(value: Double): this.type = set("motionDamping", value.asInstanceOf[js.Any])
+    @scala.inline
+    def motionStiffness(value: Double): this.type = set("motionStiffness", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: (/* datum */ PieDatum, /* event */ SyntheticMouseEvent[SVGPathElement]) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def padAngle(value: Double): this.type = set("padAngle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pixelRatio(value: Double): this.type = set("pixelRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def radialLabelFunction1(value: /* datum */ PieDatum => String): this.type = set("radialLabel", js.Any.fromFunction1(value))
+    @scala.inline
+    def radialLabel(value: String | AccessorFunc): this.type = set("radialLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def radialLabelsLinkColorFunction1(value: PieDatumWithColor => String): this.type = set("radialLabelsLinkColor", js.Any.fromFunction1(value))
+    @scala.inline
+    def radialLabelsLinkColor(value: InheritedColorProp[PieDatumWithColor]): this.type = set("radialLabelsLinkColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def radialLabelsLinkDiagonalLength(value: Double): this.type = set("radialLabelsLinkDiagonalLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def radialLabelsLinkHorizontalLength(value: Double): this.type = set("radialLabelsLinkHorizontalLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def radialLabelsLinkOffset(value: Double): this.type = set("radialLabelsLinkOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def radialLabelsLinkStrokeWidth(value: Double): this.type = set("radialLabelsLinkStrokeWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def radialLabelsSkipAngle(value: Double): this.type = set("radialLabelsSkipAngle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def radialLabelsTextColorFunction1(value: PieDatumWithColor => String): this.type = set("radialLabelsTextColor", js.Any.fromFunction1(value))
+    @scala.inline
+    def radialLabelsTextColor(value: InheritedColorProp[PieDatumWithColor]): this.type = set("radialLabelsTextColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def radialLabelsTextXOffset(value: Double): this.type = set("radialLabelsTextXOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sliceLabelFunction1(value: /* datum */ PieDatum => String): this.type = set("sliceLabel", js.Any.fromFunction1(value))
+    @scala.inline
+    def sliceLabel(value: String | AccessorFunc): this.type = set("sliceLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def slicesLabelsSkipAngle(value: Double): this.type = set("slicesLabelsSkipAngle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def slicesLabelsTextColorFunction1(value: PieDatumWithColor => String): this.type = set("slicesLabelsTextColor", js.Any.fromFunction1(value))
+    @scala.inline
+    def slicesLabelsTextColor(value: InheritedColorProp[PieDatumWithColor]): this.type = set("slicesLabelsTextColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sortByValue(value: Boolean): this.type = set("sortByValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startAngle(value: Double): this.type = set("startAngle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: Theme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltip(value: ReactComponentClass[PieDatumWithColor]): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipFormatFunction1(value: /* value */ Double => String | Double): this.type = set("tooltipFormat", js.Any.fromFunction1(value))
+    @scala.inline
+    def tooltipFormat(value: String | ValueFormatter): this.type = set("tooltipFormat", value.asInstanceOf[js.Any])
   }
-  type Props = PieCanvasProps
+  
+  def withProps(p: PieCanvasProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(data: js.Array[PieDatum]): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PieCanvasProps]))
+  }
 }
 

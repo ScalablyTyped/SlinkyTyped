@@ -4,10 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MessageTransports extends js.Object {
-  var detached: js.UndefOr[Boolean] = js.undefined
-  var reader: typingsSlinky.vscodeJsonrpc.messageReaderMod.MessageReader
-  var writer: typingsSlinky.vscodeJsonrpc.messageWriterMod.MessageWriter
+  var detached: js.UndefOr[Boolean] = js.native
+  var reader: typingsSlinky.vscodeJsonrpc.messageReaderMod.MessageReader = js.native
+  var writer: typingsSlinky.vscodeJsonrpc.messageWriterMod.MessageWriter = js.native
 }
 
 @JSImport("vscode-languageclient/lib/client", "MessageTransports")

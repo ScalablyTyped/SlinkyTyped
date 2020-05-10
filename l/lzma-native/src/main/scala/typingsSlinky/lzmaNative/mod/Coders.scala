@@ -17,20 +17,18 @@ trait Coders extends js.Object
 
 object Coders {
   @scala.inline
-  def aloneDecoder: typingsSlinky.lzmaNative.lzmaNativeStrings.aloneDecoder = this.cast("aloneDecoder")
+  def aloneDecoder: typingsSlinky.lzmaNative.lzmaNativeStrings.aloneDecoder = "aloneDecoder".asInstanceOf[typingsSlinky.lzmaNative.lzmaNativeStrings.aloneDecoder]
   @scala.inline
-  def aloneEncoder: typingsSlinky.lzmaNative.lzmaNativeStrings.aloneEncoder = this.cast("aloneEncoder")
+  def aloneEncoder: typingsSlinky.lzmaNative.lzmaNativeStrings.aloneEncoder = "aloneEncoder".asInstanceOf[typingsSlinky.lzmaNative.lzmaNativeStrings.aloneEncoder]
   @scala.inline
-  def autoDecoder: typingsSlinky.lzmaNative.lzmaNativeStrings.autoDecoder = this.cast("autoDecoder")
+  def autoDecoder: typingsSlinky.lzmaNative.lzmaNativeStrings.autoDecoder = "autoDecoder".asInstanceOf[typingsSlinky.lzmaNative.lzmaNativeStrings.autoDecoder]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def easyEncoder: typingsSlinky.lzmaNative.lzmaNativeStrings.easyEncoder = "easyEncoder".asInstanceOf[typingsSlinky.lzmaNative.lzmaNativeStrings.easyEncoder]
   @scala.inline
-  def easyEncoder: typingsSlinky.lzmaNative.lzmaNativeStrings.easyEncoder = this.cast("easyEncoder")
+  def rawEncoder: typingsSlinky.lzmaNative.lzmaNativeStrings.rawEncoder = "rawEncoder".asInstanceOf[typingsSlinky.lzmaNative.lzmaNativeStrings.rawEncoder]
   @scala.inline
-  def rawEncoder: typingsSlinky.lzmaNative.lzmaNativeStrings.rawEncoder = this.cast("rawEncoder")
+  def streamDecoder: typingsSlinky.lzmaNative.lzmaNativeStrings.streamDecoder = "streamDecoder".asInstanceOf[typingsSlinky.lzmaNative.lzmaNativeStrings.streamDecoder]
   @scala.inline
-  def streamDecoder: typingsSlinky.lzmaNative.lzmaNativeStrings.streamDecoder = this.cast("streamDecoder")
-  @scala.inline
-  def streamEncoder: typingsSlinky.lzmaNative.lzmaNativeStrings.streamEncoder = this.cast("streamEncoder")
+  def streamEncoder: typingsSlinky.lzmaNative.lzmaNativeStrings.streamEncoder = "streamEncoder".asInstanceOf[typingsSlinky.lzmaNative.lzmaNativeStrings.streamEncoder]
 }
 

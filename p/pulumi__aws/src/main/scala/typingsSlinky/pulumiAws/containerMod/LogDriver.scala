@@ -19,22 +19,20 @@ trait LogDriver extends js.Object
 
 object LogDriver {
   @scala.inline
-  def awsfirelens: typingsSlinky.pulumiAws.pulumiAwsStrings.awsfirelens = this.cast("awsfirelens")
+  def awsfirelens: typingsSlinky.pulumiAws.pulumiAwsStrings.awsfirelens = "awsfirelens".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.awsfirelens]
   @scala.inline
-  def awslogs: typingsSlinky.pulumiAws.pulumiAwsStrings.awslogs = this.cast("awslogs")
+  def awslogs: typingsSlinky.pulumiAws.pulumiAwsStrings.awslogs = "awslogs".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.awslogs]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fluentd: typingsSlinky.pulumiAws.pulumiAwsStrings.fluentd = "fluentd".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.fluentd]
   @scala.inline
-  def fluentd: typingsSlinky.pulumiAws.pulumiAwsStrings.fluentd = this.cast("fluentd")
+  def gelf: typingsSlinky.pulumiAws.pulumiAwsStrings.gelf = "gelf".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.gelf]
   @scala.inline
-  def gelf: typingsSlinky.pulumiAws.pulumiAwsStrings.gelf = this.cast("gelf")
+  def journald: typingsSlinky.pulumiAws.pulumiAwsStrings.journald = "journald".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.journald]
   @scala.inline
-  def journald: typingsSlinky.pulumiAws.pulumiAwsStrings.journald = this.cast("journald")
+  def `json-file`: typingsSlinky.pulumiAws.pulumiAwsStrings.`json-file` = "json-file".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.`json-file`]
   @scala.inline
-  def `json-file`: typingsSlinky.pulumiAws.pulumiAwsStrings.`json-file` = this.cast("json-file")
+  def splunk: typingsSlinky.pulumiAws.pulumiAwsStrings.splunk = "splunk".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.splunk]
   @scala.inline
-  def splunk: typingsSlinky.pulumiAws.pulumiAwsStrings.splunk = this.cast("splunk")
-  @scala.inline
-  def syslog: syslog_ = this.cast("syslog")
+  def syslog: syslog_ = "syslog".asInstanceOf[syslog_]
 }
 

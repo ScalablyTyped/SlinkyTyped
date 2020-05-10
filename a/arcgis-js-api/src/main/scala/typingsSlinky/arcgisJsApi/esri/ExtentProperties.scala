@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ExtentProperties extends GeometryProperties {
   /**
     * The maximum possible `m` value in an extent envelope.
@@ -12,7 +13,7 @@ trait ExtentProperties extends GeometryProperties {
     *
     * @default undefined
     */
-  var mmax: js.UndefOr[Double] = js.undefined
+  var mmax: js.UndefOr[Double] = js.native
   /**
     * The minimum possible `m` value of an extent envelope.
     *
@@ -20,39 +21,39 @@ trait ExtentProperties extends GeometryProperties {
     *
     * @default undefined
     */
-  var mmin: js.UndefOr[Double] = js.undefined
+  var mmin: js.UndefOr[Double] = js.native
   /**
-    * The bottom-right X-coordinate of an extent envelope.
+    * The maximum X-coordinate of an extent envelope.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#xmax)
     *
     * @default 0
     */
-  var xmax: js.UndefOr[Double] = js.undefined
+  var xmax: js.UndefOr[Double] = js.native
   /**
-    * The top-left X-coordinate of an extent envelope.
+    * The minimum X-coordinate of an extent envelope.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#xmin)
     *
     * @default 0
     */
-  var xmin: js.UndefOr[Double] = js.undefined
+  var xmin: js.UndefOr[Double] = js.native
   /**
-    * The top-right Y-coordinate of an extent envelope.
+    * The maximum Y-coordinate of an extent envelope.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#ymax)
     *
     * @default 0
     */
-  var ymax: js.UndefOr[Double] = js.undefined
+  var ymax: js.UndefOr[Double] = js.native
   /**
-    * The bottom-left Y-coordinate of an extent envelope.
+    * The minimum Y-coordinate of an extent envelope.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#ymin)
     *
     * @default 0
     */
-  var ymin: js.UndefOr[Double] = js.undefined
+  var ymin: js.UndefOr[Double] = js.native
   /**
     * The maximum possible `z`, or elevation, value in an extent envelope.
     * > **Z-values** defined in a geographic or metric coordinate system are expressed in meters. However, in local scenes that use a projected coordinate system, vertical units are assumed to be the same as the horizontal units specified by the service.
@@ -61,7 +62,7 @@ trait ExtentProperties extends GeometryProperties {
     *
     * @default undefined
     */
-  var zmax: js.UndefOr[Double] = js.undefined
+  var zmax: js.UndefOr[Double] = js.native
   /**
     * The minimum possible `z`, or elevation, value of an extent envelope.
     * > **Z-values** defined in a geographic or metric coordinate system are expressed in meters. However, in local scenes that use a projected coordinate system, vertical units are assumed to be the same as the horizontal units specified by the service.
@@ -70,37 +71,118 @@ trait ExtentProperties extends GeometryProperties {
     *
     * @default undefined
     */
-  var zmin: js.UndefOr[Double] = js.undefined
+  var zmin: js.UndefOr[Double] = js.native
 }
 
 object ExtentProperties {
   @scala.inline
-  def apply(
-    hasM: js.UndefOr[Boolean] = js.undefined,
-    hasZ: js.UndefOr[Boolean] = js.undefined,
-    mmax: Int | Double = null,
-    mmin: Int | Double = null,
-    spatialReference: SpatialReferenceProperties = null,
-    xmax: Int | Double = null,
-    xmin: Int | Double = null,
-    ymax: Int | Double = null,
-    ymin: Int | Double = null,
-    zmax: Int | Double = null,
-    zmin: Int | Double = null
-  ): ExtentProperties = {
+  def apply(): ExtentProperties = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(hasM)) __obj.updateDynamic("hasM")(hasM.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasZ)) __obj.updateDynamic("hasZ")(hasZ.asInstanceOf[js.Any])
-    if (mmax != null) __obj.updateDynamic("mmax")(mmax.asInstanceOf[js.Any])
-    if (mmin != null) __obj.updateDynamic("mmin")(mmin.asInstanceOf[js.Any])
-    if (spatialReference != null) __obj.updateDynamic("spatialReference")(spatialReference.asInstanceOf[js.Any])
-    if (xmax != null) __obj.updateDynamic("xmax")(xmax.asInstanceOf[js.Any])
-    if (xmin != null) __obj.updateDynamic("xmin")(xmin.asInstanceOf[js.Any])
-    if (ymax != null) __obj.updateDynamic("ymax")(ymax.asInstanceOf[js.Any])
-    if (ymin != null) __obj.updateDynamic("ymin")(ymin.asInstanceOf[js.Any])
-    if (zmax != null) __obj.updateDynamic("zmax")(zmax.asInstanceOf[js.Any])
-    if (zmin != null) __obj.updateDynamic("zmin")(zmin.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExtentProperties]
   }
+  @scala.inline
+  implicit class ExtentPropertiesOps[Self <: ExtentProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMmax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mmax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMmax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mmax")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMmin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mmin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMmin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mmin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXmax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXmax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmax")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXmin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXmin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYmax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ymax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYmax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ymax")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYmin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ymin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYmin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ymin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZmax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zmax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZmax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zmax")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZmin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zmin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZmin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zmin")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -80,7 +80,7 @@ package object mod {
     - java.lang.String
     - typingsSlinky.rollup.rollupBooleans.`false`
     - scala.Null
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
     - typingsSlinky.rollup.mod.PartialResolvedId
   */
   type ResolveIdResult = js.UndefOr[typingsSlinky.rollup.mod._ResolveIdResult | java.lang.String | scala.Null]

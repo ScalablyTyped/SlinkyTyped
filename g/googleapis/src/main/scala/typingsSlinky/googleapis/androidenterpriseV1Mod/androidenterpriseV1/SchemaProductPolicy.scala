@@ -36,20 +36,77 @@ trait SchemaProductPolicy extends js.Object {
 
 object SchemaProductPolicy {
   @scala.inline
-  def apply(
-    autoInstallPolicy: SchemaAutoInstallPolicy = null,
-    managedConfiguration: SchemaManagedConfiguration = null,
-    productId: String = null,
-    trackIds: js.Array[String] = null,
-    tracks: js.Array[String] = null
-  ): SchemaProductPolicy = {
+  def apply(): SchemaProductPolicy = {
     val __obj = js.Dynamic.literal()
-    if (autoInstallPolicy != null) __obj.updateDynamic("autoInstallPolicy")(autoInstallPolicy.asInstanceOf[js.Any])
-    if (managedConfiguration != null) __obj.updateDynamic("managedConfiguration")(managedConfiguration.asInstanceOf[js.Any])
-    if (productId != null) __obj.updateDynamic("productId")(productId.asInstanceOf[js.Any])
-    if (trackIds != null) __obj.updateDynamic("trackIds")(trackIds.asInstanceOf[js.Any])
-    if (tracks != null) __obj.updateDynamic("tracks")(tracks.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProductPolicy]
   }
+  @scala.inline
+  implicit class SchemaProductPolicyOps[Self <: SchemaProductPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoInstallPolicy(value: SchemaAutoInstallPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoInstallPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoInstallPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoInstallPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManagedConfiguration(value: SchemaManagedConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManagedConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrackIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTracks(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tracks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTracks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tracks")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

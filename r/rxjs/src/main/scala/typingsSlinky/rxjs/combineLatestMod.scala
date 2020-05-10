@@ -7,7 +7,6 @@ import typingsSlinky.rxjs.subscriberMod.Subscriber
 import typingsSlinky.rxjs.typesMod.ObservableInput
 import typingsSlinky.rxjs.typesMod.ObservedValueOf
 import typingsSlinky.rxjs.typesMod.SchedulerLike
-import typingsSlinky.rxjs.typesMod.TeardownLogic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,8 +18,6 @@ object combineLatestMod extends js.Object {
   class CombineLatestOperator[T, R] () extends Operator[T, R] {
     def this(resultSelector: js.Function1[/* repeated */ js.Any, R]) = this()
     var resultSelector: js.UndefOr[js.Any] = js.native
-    /* CompleteClass */
-    override def call(subscriber: Subscriber[R], source: js.Any): TeardownLogic = js.native
   }
   
   @js.native
@@ -38,8 +35,8 @@ object combineLatestMod extends js.Object {
   }
   
   def combineLatest[O /* <: ObservableInput[_] */](observables: (O | SchedulerLike)*): Observable[js.Array[_]] = js.native
-  def combineLatest[O /* <: ObservableInput[_] */](sources: js.Array[O]): Observable[js.Array[ObservedValueOf[O]]] = js.native
-  def combineLatest[O /* <: ObservableInput[_] */](sources: js.Array[O], scheduler: SchedulerLike): Observable[js.Array[ObservedValueOf[O]]] = js.native
+  def combineLatest[O1 /* <: ObservableInput[_] */](sources: js.Array[O1]): Observable[js.Array[ObservedValueOf[O1]]] = js.native
+  def combineLatest[O1 /* <: ObservableInput[_] */](sources: js.Array[O1], scheduler: SchedulerLike): Observable[js.Array[ObservedValueOf[O1]]] = js.native
   def combineLatest[O1 /* <: ObservableInput[_] */](v1: O1): Observable[js.Array[ObservedValueOf[O1]]] = js.native
   def combineLatest[O1 /* <: ObservableInput[_] */](v1: O1, scheduler: SchedulerLike): Observable[js.Array[ObservedValueOf[O1]]] = js.native
   def combineLatest[O /* <: ObservableInput[_] */, R](sources: js.Array[O], resultSelector: js.Function1[/* repeated */ ObservedValueOf[O], R]): Observable[R] = js.native
@@ -371,10 +368,6 @@ object combineLatestMod extends js.Object {
     scheduler: SchedulerLike
   ): Observable[R] = js.native
   @JSName("combineLatest")
-  def combineLatest_O1_ObservableInputWildcard[O1 /* <: ObservableInput[_] */](sources: js.Array[O1]): Observable[js.Array[ObservedValueOf[O1]]] = js.native
-  @JSName("combineLatest")
-  def combineLatest_O1_ObservableInputWildcard[O1 /* <: ObservableInput[_] */](sources: js.Array[O1], scheduler: SchedulerLike): Observable[js.Array[ObservedValueOf[O1]]] = js.native
-  @JSName("combineLatest")
   def combineLatest_O1_ObservableInputWildcardR[O1 /* <: ObservableInput[_] */, R](sources: js.Array[O1], resultSelector: js.Function1[/* v1 */ ObservedValueOf[O1], R]): Observable[R] = js.native
   @JSName("combineLatest")
   def combineLatest_O1_ObservableInputWildcardR[O1 /* <: ObservableInput[_] */, R](
@@ -382,6 +375,10 @@ object combineLatestMod extends js.Object {
     resultSelector: js.Function1[/* v1 */ ObservedValueOf[O1], R],
     scheduler: SchedulerLike
   ): Observable[R] = js.native
+  @JSName("combineLatest")
+  def combineLatest_O_ObservableInputWildcard[O /* <: ObservableInput[_] */](sources: js.Array[O]): Observable[js.Array[ObservedValueOf[O]]] = js.native
+  @JSName("combineLatest")
+  def combineLatest_O_ObservableInputWildcard[O /* <: ObservableInput[_] */](sources: js.Array[O], scheduler: SchedulerLike): Observable[js.Array[ObservedValueOf[O]]] = js.native
   @JSName("combineLatest")
   def combineLatest_O_ObservableInputWildcardR[O /* <: ObservableInput[_] */, R](
     observables: ((js.Function1[(/* repeated */ js.Any) | (/* repeated */ ObservedValueOf[O]), R]) | O | ObservableInput[_] | SchedulerLike)*

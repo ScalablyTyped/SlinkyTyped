@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Chart extends js.Object {
   /**
     * Returns true if the chart is in series boost mode.
@@ -13,15 +14,28 @@ trait Chart extends js.Object {
     *
     * @return true if the chart is in series boost mode
     */
-  def isChartSeriesBoosting(chart: Chart): Boolean
+  def isChartSeriesBoosting(chart: Chart): Boolean = js.native
 }
 
 object Chart {
   @scala.inline
   def apply(isChartSeriesBoosting: Chart => Boolean): Chart = {
     val __obj = js.Dynamic.literal(isChartSeriesBoosting = js.Any.fromFunction1(isChartSeriesBoosting))
-  
     __obj.asInstanceOf[Chart]
   }
+  @scala.inline
+  implicit class ChartOps[Self <: Chart] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsChartSeriesBoosting(value: Chart => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isChartSeriesBoosting")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

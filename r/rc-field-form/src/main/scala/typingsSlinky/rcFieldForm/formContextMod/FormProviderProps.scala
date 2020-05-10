@@ -5,24 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FormProviderProps extends js.Object {
-  var onFormChange: js.UndefOr[js.Function2[/* name */ String, /* info */ FormChangeInfo, Unit]] = js.undefined
-  var onFormFinish: js.UndefOr[js.Function2[/* name */ String, /* info */ FormFinishInfo, Unit]] = js.undefined
-  var validateMessages: js.UndefOr[ValidateMessages] = js.undefined
+  var onFormChange: js.UndefOr[js.Function2[/* name */ String, /* info */ FormChangeInfo, Unit]] = js.native
+  var onFormFinish: js.UndefOr[js.Function2[/* name */ String, /* info */ FormFinishInfo, Unit]] = js.native
+  var validateMessages: js.UndefOr[ValidateMessages] = js.native
 }
 
 object FormProviderProps {
   @scala.inline
-  def apply(
-    onFormChange: (/* name */ String, /* info */ FormChangeInfo) => Unit = null,
-    onFormFinish: (/* name */ String, /* info */ FormFinishInfo) => Unit = null,
-    validateMessages: ValidateMessages = null
-  ): FormProviderProps = {
+  def apply(): FormProviderProps = {
     val __obj = js.Dynamic.literal()
-    if (onFormChange != null) __obj.updateDynamic("onFormChange")(js.Any.fromFunction2(onFormChange))
-    if (onFormFinish != null) __obj.updateDynamic("onFormFinish")(js.Any.fromFunction2(onFormFinish))
-    if (validateMessages != null) __obj.updateDynamic("validateMessages")(validateMessages.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormProviderProps]
   }
+  @scala.inline
+  implicit class FormProviderPropsOps[Self <: FormProviderProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnFormChange(value: (/* name */ String, /* info */ FormChangeInfo) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFormChange")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFormChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFormChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFormFinish(value: (/* name */ String, /* info */ FormFinishInfo) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFormFinish")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFormFinish: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFormFinish")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidateMessages(value: ValidateMessages): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validateMessages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidateMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validateMessages")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

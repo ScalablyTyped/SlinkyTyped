@@ -1,53 +1,58 @@
 package typingsSlinky.antd.anchorAnchorMod
 
-import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
-import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.AnonHref
-import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnchorDefaultProps extends AnchorProps {
   @JSName("affix")
-  var affix_AnchorDefaultProps: Boolean
+  var affix_AnchorDefaultProps: Boolean = js.native
   @JSName("prefixCls")
-  var prefixCls_AnchorDefaultProps: String
+  var prefixCls_AnchorDefaultProps: String = js.native
   @JSName("showInkInFixed")
-  var showInkInFixed_AnchorDefaultProps: Boolean
+  var showInkInFixed_AnchorDefaultProps: Boolean = js.native
   @JSName("getContainer")
-  def getContainer_MAnchorDefaultProps(): AnchorContainer
+  def getContainer_MAnchorDefaultProps(): AnchorContainer = js.native
 }
 
 object AnchorDefaultProps {
   @scala.inline
-  def apply(
-    affix: Boolean,
-    getContainer: () => AnchorContainer,
-    prefixCls: String,
-    showInkInFixed: Boolean,
-    bounds: Int | Double = null,
-    children: TagMod[Any] = null,
-    className: String = null,
-    getCurrentAnchor: () => String = null,
-    offsetTop: Int | Double = null,
-    onChange: /* currentActiveLink */ String => Unit = null,
-    onClick: (/* e */ SyntheticMouseEvent[HTMLElement], /* link */ AnonHref) => Unit = null,
-    style: CSSProperties = null,
-    targetOffset: Int | Double = null
-  ): AnchorDefaultProps = {
+  def apply(affix: Boolean, getContainer: () => AnchorContainer, prefixCls: String, showInkInFixed: Boolean): AnchorDefaultProps = {
     val __obj = js.Dynamic.literal(affix = affix.asInstanceOf[js.Any], getContainer = js.Any.fromFunction0(getContainer), prefixCls = prefixCls.asInstanceOf[js.Any], showInkInFixed = showInkInFixed.asInstanceOf[js.Any])
-    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (getCurrentAnchor != null) __obj.updateDynamic("getCurrentAnchor")(js.Any.fromFunction0(getCurrentAnchor))
-    if (offsetTop != null) __obj.updateDynamic("offsetTop")(offsetTop.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (targetOffset != null) __obj.updateDynamic("targetOffset")(targetOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnchorDefaultProps]
   }
+  @scala.inline
+  implicit class AnchorDefaultPropsOps[Self <: AnchorDefaultProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAffix(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("affix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetContainer(value: () => AnchorContainer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getContainer")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShowInkInFixed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showInkInFixed")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

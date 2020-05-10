@@ -13,12 +13,10 @@ trait CanvasLineCap extends js.Object
 
 object CanvasLineCap {
   @scala.inline
-  def butt: typingsSlinky.std.stdStrings.butt = this.cast("butt")
+  def butt: typingsSlinky.std.stdStrings.butt = "butt".asInstanceOf[typingsSlinky.std.stdStrings.butt]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def round: typingsSlinky.std.stdStrings.round = "round".asInstanceOf[typingsSlinky.std.stdStrings.round]
   @scala.inline
-  def round: typingsSlinky.std.stdStrings.round = this.cast("round")
-  @scala.inline
-  def square: typingsSlinky.std.stdStrings.square = this.cast("square")
+  def square: typingsSlinky.std.stdStrings.square = "square".asInstanceOf[typingsSlinky.std.stdStrings.square]
 }
 

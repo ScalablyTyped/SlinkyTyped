@@ -26,18 +26,65 @@ trait ClusterDbRevision extends js.Object {
 
 object ClusterDbRevision {
   @scala.inline
-  def apply(
-    ClusterIdentifier: String = null,
-    CurrentDatabaseRevision: String = null,
-    DatabaseRevisionReleaseDate: js.Date = null,
-    RevisionTargets: RevisionTargetsList = null
-  ): ClusterDbRevision = {
+  def apply(): ClusterDbRevision = {
     val __obj = js.Dynamic.literal()
-    if (ClusterIdentifier != null) __obj.updateDynamic("ClusterIdentifier")(ClusterIdentifier.asInstanceOf[js.Any])
-    if (CurrentDatabaseRevision != null) __obj.updateDynamic("CurrentDatabaseRevision")(CurrentDatabaseRevision.asInstanceOf[js.Any])
-    if (DatabaseRevisionReleaseDate != null) __obj.updateDynamic("DatabaseRevisionReleaseDate")(DatabaseRevisionReleaseDate.asInstanceOf[js.Any])
-    if (RevisionTargets != null) __obj.updateDynamic("RevisionTargets")(RevisionTargets.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterDbRevision]
   }
+  @scala.inline
+  implicit class ClusterDbRevisionOps[Self <: ClusterDbRevision] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentDatabaseRevision(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentDatabaseRevision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentDatabaseRevision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentDatabaseRevision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatabaseRevisionReleaseDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseRevisionReleaseDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabaseRevisionReleaseDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseRevisionReleaseDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionTargets(value: RevisionTargetsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RevisionTargets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionTargets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RevisionTargets")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

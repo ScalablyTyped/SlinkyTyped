@@ -18,11 +18,41 @@ trait ListUniqueProblemsResult extends js.Object {
 
 object ListUniqueProblemsResult {
   @scala.inline
-  def apply(nextToken: PaginationToken = null, uniqueProblems: UniqueProblemsByExecutionResultMap = null): ListUniqueProblemsResult = {
+  def apply(): ListUniqueProblemsResult = {
     val __obj = js.Dynamic.literal()
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (uniqueProblems != null) __obj.updateDynamic("uniqueProblems")(uniqueProblems.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListUniqueProblemsResult]
   }
+  @scala.inline
+  implicit class ListUniqueProblemsResultOps[Self <: ListUniqueProblemsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUniqueProblems(value: UniqueProblemsByExecutionResultMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueProblems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUniqueProblems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueProblems")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

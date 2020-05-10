@@ -30,17 +30,59 @@ trait TrustedAdvisorResourceDetail extends js.Object {
 
 object TrustedAdvisorResourceDetail {
   @scala.inline
-  def apply(
-    metadata: StringList,
-    resourceId: String,
-    status: String,
-    isSuppressed: js.UndefOr[scala.Boolean] = js.undefined,
-    region: String = null
-  ): TrustedAdvisorResourceDetail = {
+  def apply(metadata: StringList, resourceId: String, status: String): TrustedAdvisorResourceDetail = {
     val __obj = js.Dynamic.literal(metadata = metadata.asInstanceOf[js.Any], resourceId = resourceId.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    if (!js.isUndefined(isSuppressed)) __obj.updateDynamic("isSuppressed")(isSuppressed.asInstanceOf[js.Any])
-    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrustedAdvisorResourceDetail]
   }
+  @scala.inline
+  implicit class TrustedAdvisorResourceDetailOps[Self <: TrustedAdvisorResourceDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMetadata(value: StringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsSuppressed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSuppressed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsSuppressed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSuppressed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,33 +5,107 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var allowHeaders: js.UndefOr[js.Array[String]] = js.undefined
-  var allowMethods: js.UndefOr[js.Array[String]] = js.undefined
-  var credentials: js.UndefOr[Boolean] = js.undefined
-  var exposeHeaders: js.UndefOr[js.Array[String]] = js.undefined
-  var maxAge: js.UndefOr[Double] = js.undefined
-  var origin: js.UndefOr[String | (js.Function1[/* ctx */ Context, Boolean | String])] = js.undefined
+  var allowHeaders: js.UndefOr[js.Array[String]] = js.native
+  var allowMethods: js.UndefOr[js.Array[String]] = js.native
+  var credentials: js.UndefOr[Boolean] = js.native
+  var exposeHeaders: js.UndefOr[js.Array[String]] = js.native
+  var maxAge: js.UndefOr[Double] = js.native
+  var origin: js.UndefOr[String | (js.Function1[/* ctx */ Context, Boolean | String])] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    allowHeaders: js.Array[String] = null,
-    allowMethods: js.Array[String] = null,
-    credentials: js.UndefOr[Boolean] = js.undefined,
-    exposeHeaders: js.Array[String] = null,
-    maxAge: Int | Double = null,
-    origin: String | (js.Function1[/* ctx */ Context, Boolean | String]) = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (allowHeaders != null) __obj.updateDynamic("allowHeaders")(allowHeaders.asInstanceOf[js.Any])
-    if (allowMethods != null) __obj.updateDynamic("allowMethods")(allowMethods.asInstanceOf[js.Any])
-    if (!js.isUndefined(credentials)) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
-    if (exposeHeaders != null) __obj.updateDynamic("exposeHeaders")(exposeHeaders.asInstanceOf[js.Any])
-    if (maxAge != null) __obj.updateDynamic("maxAge")(maxAge.asInstanceOf[js.Any])
-    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowHeaders(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowMethods(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMethods")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowMethods: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMethods")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCredentials(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCredentials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExposeHeaders(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exposeHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExposeHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exposeHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAge(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginFunction1(value: /* ctx */ Context => Boolean | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOrigin(value: String | (js.Function1[/* ctx */ Context, Boolean | String])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SqlError extends js.Object {
-  var code: Double
-  var message: String
+  var code: Double = js.native
+  var message: String = js.native
 }
 
 @JSGlobal("SqlError")

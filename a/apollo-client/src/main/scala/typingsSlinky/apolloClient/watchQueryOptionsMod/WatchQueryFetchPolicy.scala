@@ -16,18 +16,16 @@ trait WatchQueryFetchPolicy extends js.Object
 
 object WatchQueryFetchPolicy {
   @scala.inline
-  def `cache-and-network`: typingsSlinky.apolloClient.apolloClientStrings.`cache-and-network` = this.cast("cache-and-network")
+  def `cache-and-network`: typingsSlinky.apolloClient.apolloClientStrings.`cache-and-network` = "cache-and-network".asInstanceOf[typingsSlinky.apolloClient.apolloClientStrings.`cache-and-network`]
   @scala.inline
-  def `cache-first`: typingsSlinky.apolloClient.apolloClientStrings.`cache-first` = this.cast("cache-first")
+  def `cache-first`: typingsSlinky.apolloClient.apolloClientStrings.`cache-first` = "cache-first".asInstanceOf[typingsSlinky.apolloClient.apolloClientStrings.`cache-first`]
   @scala.inline
-  def `cache-only`: typingsSlinky.apolloClient.apolloClientStrings.`cache-only` = this.cast("cache-only")
+  def `cache-only`: typingsSlinky.apolloClient.apolloClientStrings.`cache-only` = "cache-only".asInstanceOf[typingsSlinky.apolloClient.apolloClientStrings.`cache-only`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `network-only`: typingsSlinky.apolloClient.apolloClientStrings.`network-only` = "network-only".asInstanceOf[typingsSlinky.apolloClient.apolloClientStrings.`network-only`]
   @scala.inline
-  def `network-only`: typingsSlinky.apolloClient.apolloClientStrings.`network-only` = this.cast("network-only")
+  def `no-cache`: typingsSlinky.apolloClient.apolloClientStrings.`no-cache` = "no-cache".asInstanceOf[typingsSlinky.apolloClient.apolloClientStrings.`no-cache`]
   @scala.inline
-  def `no-cache`: typingsSlinky.apolloClient.apolloClientStrings.`no-cache` = this.cast("no-cache")
-  @scala.inline
-  def standby: typingsSlinky.apolloClient.apolloClientStrings.standby = this.cast("standby")
+  def standby: typingsSlinky.apolloClient.apolloClientStrings.standby = "standby".asInstanceOf[typingsSlinky.apolloClient.apolloClientStrings.standby]
 }
 

@@ -74,42 +74,209 @@ trait GetLicenseConfigurationResponse extends js.Object {
 
 object GetLicenseConfigurationResponse {
   @scala.inline
-  def apply(
-    AutomatedDiscoveryInformation: AutomatedDiscoveryInformation = null,
-    ConsumedLicenseSummaryList: ConsumedLicenseSummaryList = null,
-    ConsumedLicenses: Int | Double = null,
-    Description: String = null,
-    LicenseConfigurationArn: String = null,
-    LicenseConfigurationId: String = null,
-    LicenseCount: Int | Double = null,
-    LicenseCountHardLimit: js.UndefOr[scala.Boolean] = js.undefined,
-    LicenseCountingType: LicenseCountingType = null,
-    LicenseRules: StringList = null,
-    ManagedResourceSummaryList: ManagedResourceSummaryList = null,
-    Name: String = null,
-    OwnerAccountId: String = null,
-    ProductInformationList: ProductInformationList = null,
-    Status: String = null,
-    Tags: TagList = null
-  ): GetLicenseConfigurationResponse = {
+  def apply(): GetLicenseConfigurationResponse = {
     val __obj = js.Dynamic.literal()
-    if (AutomatedDiscoveryInformation != null) __obj.updateDynamic("AutomatedDiscoveryInformation")(AutomatedDiscoveryInformation.asInstanceOf[js.Any])
-    if (ConsumedLicenseSummaryList != null) __obj.updateDynamic("ConsumedLicenseSummaryList")(ConsumedLicenseSummaryList.asInstanceOf[js.Any])
-    if (ConsumedLicenses != null) __obj.updateDynamic("ConsumedLicenses")(ConsumedLicenses.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (LicenseConfigurationArn != null) __obj.updateDynamic("LicenseConfigurationArn")(LicenseConfigurationArn.asInstanceOf[js.Any])
-    if (LicenseConfigurationId != null) __obj.updateDynamic("LicenseConfigurationId")(LicenseConfigurationId.asInstanceOf[js.Any])
-    if (LicenseCount != null) __obj.updateDynamic("LicenseCount")(LicenseCount.asInstanceOf[js.Any])
-    if (!js.isUndefined(LicenseCountHardLimit)) __obj.updateDynamic("LicenseCountHardLimit")(LicenseCountHardLimit.asInstanceOf[js.Any])
-    if (LicenseCountingType != null) __obj.updateDynamic("LicenseCountingType")(LicenseCountingType.asInstanceOf[js.Any])
-    if (LicenseRules != null) __obj.updateDynamic("LicenseRules")(LicenseRules.asInstanceOf[js.Any])
-    if (ManagedResourceSummaryList != null) __obj.updateDynamic("ManagedResourceSummaryList")(ManagedResourceSummaryList.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (OwnerAccountId != null) __obj.updateDynamic("OwnerAccountId")(OwnerAccountId.asInstanceOf[js.Any])
-    if (ProductInformationList != null) __obj.updateDynamic("ProductInformationList")(ProductInformationList.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLicenseConfigurationResponse]
   }
+  @scala.inline
+  implicit class GetLicenseConfigurationResponseOps[Self <: GetLicenseConfigurationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutomatedDiscoveryInformation(value: AutomatedDiscoveryInformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomatedDiscoveryInformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutomatedDiscoveryInformation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomatedDiscoveryInformation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConsumedLicenseSummaryList(value: ConsumedLicenseSummaryList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsumedLicenseSummaryList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConsumedLicenseSummaryList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsumedLicenseSummaryList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConsumedLicenses(value: BoxLong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsumedLicenses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConsumedLicenses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsumedLicenses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLicenseConfigurationArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseConfigurationArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenseConfigurationArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseConfigurationArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLicenseConfigurationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseConfigurationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenseConfigurationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseConfigurationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLicenseCount(value: BoxLong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenseCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLicenseCountHardLimit(value: BoxBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseCountHardLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenseCountHardLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseCountHardLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLicenseCountingType(value: LicenseCountingType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseCountingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenseCountingType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseCountingType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLicenseRules(value: StringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenseRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseRules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManagedResourceSummaryList(value: ManagedResourceSummaryList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManagedResourceSummaryList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManagedResourceSummaryList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManagedResourceSummaryList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwnerAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwnerAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerAccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductInformationList(value: ProductInformationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductInformationList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductInformationList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductInformationList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

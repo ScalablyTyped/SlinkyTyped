@@ -22,14 +22,41 @@ trait SetDesiredCapacityType extends js.Object {
 
 object SetDesiredCapacityType {
   @scala.inline
-  def apply(
-    AutoScalingGroupName: ResourceName,
-    DesiredCapacity: AutoScalingGroupDesiredCapacity,
-    HonorCooldown: js.UndefOr[Boolean] = js.undefined
-  ): SetDesiredCapacityType = {
+  def apply(AutoScalingGroupName: ResourceName, DesiredCapacity: AutoScalingGroupDesiredCapacity): SetDesiredCapacityType = {
     val __obj = js.Dynamic.literal(AutoScalingGroupName = AutoScalingGroupName.asInstanceOf[js.Any], DesiredCapacity = DesiredCapacity.asInstanceOf[js.Any])
-    if (!js.isUndefined(HonorCooldown)) __obj.updateDynamic("HonorCooldown")(HonorCooldown.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetDesiredCapacityType]
   }
+  @scala.inline
+  implicit class SetDesiredCapacityTypeOps[Self <: SetDesiredCapacityType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoScalingGroupName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDesiredCapacity(value: AutoScalingGroupDesiredCapacity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHonorCooldown(value: HonorCooldown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HonorCooldown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHonorCooldown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HonorCooldown")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

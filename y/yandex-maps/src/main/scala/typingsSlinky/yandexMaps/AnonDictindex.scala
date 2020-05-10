@@ -5,36 +5,102 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDictindex
   extends /* index */ StringDictionary[js.Any] {
-  var activeRouteAutoSelection: js.UndefOr[Boolean] = js.undefined
-  var boundsAutoApply: js.UndefOr[Boolean] = js.undefined
-  var dragUpdateInterval: js.UndefOr[String | Double] = js.undefined
-  var preventDragUpdate: js.UndefOr[Boolean] = js.undefined
-  var useMapMargin: js.UndefOr[Boolean] = js.undefined
-  var zoomMargin: js.UndefOr[(js.Array[js.Array[Double] | Double]) | Double] = js.undefined
+  var activeRouteAutoSelection: js.UndefOr[Boolean] = js.native
+  var boundsAutoApply: js.UndefOr[Boolean] = js.native
+  var dragUpdateInterval: js.UndefOr[String | Double] = js.native
+  var preventDragUpdate: js.UndefOr[Boolean] = js.native
+  var useMapMargin: js.UndefOr[Boolean] = js.native
+  var zoomMargin: js.UndefOr[(js.Array[js.Array[Double] | Double]) | Double] = js.native
 }
 
 object AnonDictindex {
   @scala.inline
-  def apply(
-    StringDictionary: /* index */ StringDictionary[js.Any] = null,
-    activeRouteAutoSelection: js.UndefOr[Boolean] = js.undefined,
-    boundsAutoApply: js.UndefOr[Boolean] = js.undefined,
-    dragUpdateInterval: String | Double = null,
-    preventDragUpdate: js.UndefOr[Boolean] = js.undefined,
-    useMapMargin: js.UndefOr[Boolean] = js.undefined,
-    zoomMargin: (js.Array[js.Array[Double] | Double]) | Double = null
-  ): AnonDictindex = {
+  def apply(): AnonDictindex = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(activeRouteAutoSelection)) __obj.updateDynamic("activeRouteAutoSelection")(activeRouteAutoSelection.asInstanceOf[js.Any])
-    if (!js.isUndefined(boundsAutoApply)) __obj.updateDynamic("boundsAutoApply")(boundsAutoApply.asInstanceOf[js.Any])
-    if (dragUpdateInterval != null) __obj.updateDynamic("dragUpdateInterval")(dragUpdateInterval.asInstanceOf[js.Any])
-    if (!js.isUndefined(preventDragUpdate)) __obj.updateDynamic("preventDragUpdate")(preventDragUpdate.asInstanceOf[js.Any])
-    if (!js.isUndefined(useMapMargin)) __obj.updateDynamic("useMapMargin")(useMapMargin.asInstanceOf[js.Any])
-    if (zoomMargin != null) __obj.updateDynamic("zoomMargin")(zoomMargin.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDictindex]
   }
+  @scala.inline
+  implicit class AnonDictindexOps[Self <: AnonDictindex] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActiveRouteAutoSelection(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeRouteAutoSelection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveRouteAutoSelection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeRouteAutoSelection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoundsAutoApply(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundsAutoApply")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoundsAutoApply: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundsAutoApply")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDragUpdateInterval(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragUpdateInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDragUpdateInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragUpdateInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreventDragUpdate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDragUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreventDragUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDragUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseMapMargin(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useMapMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseMapMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useMapMargin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomMargin(value: (js.Array[js.Array[Double] | Double]) | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomMargin")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

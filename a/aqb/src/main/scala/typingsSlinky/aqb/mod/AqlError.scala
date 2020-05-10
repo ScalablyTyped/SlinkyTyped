@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AqlError
   extends Error
-     with Instantiable1[/* message */ String, Error]
+     with Instantiable1[/* message */ String, js.Error]
 

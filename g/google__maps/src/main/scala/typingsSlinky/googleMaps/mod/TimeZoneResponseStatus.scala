@@ -17,20 +17,18 @@ trait TimeZoneResponseStatus extends js.Object
 
 object TimeZoneResponseStatus {
   @scala.inline
-  def INVALID_REQUEST: typingsSlinky.googleMaps.googleMapsStrings.INVALID_REQUEST = this.cast("INVALID_REQUEST")
+  def INVALID_REQUEST: typingsSlinky.googleMaps.googleMapsStrings.INVALID_REQUEST = "INVALID_REQUEST".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.INVALID_REQUEST]
   @scala.inline
-  def OK: typingsSlinky.googleMaps.googleMapsStrings.OK = this.cast("OK")
+  def OK: typingsSlinky.googleMaps.googleMapsStrings.OK = "OK".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.OK]
   @scala.inline
-  def OVER_DAILY_LIMIT: typingsSlinky.googleMaps.googleMapsStrings.OVER_DAILY_LIMIT = this.cast("OVER_DAILY_LIMIT")
+  def OVER_DAILY_LIMIT: typingsSlinky.googleMaps.googleMapsStrings.OVER_DAILY_LIMIT = "OVER_DAILY_LIMIT".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.OVER_DAILY_LIMIT]
   @scala.inline
-  def OVER_QUERY_LIMIT: typingsSlinky.googleMaps.googleMapsStrings.OVER_QUERY_LIMIT = this.cast("OVER_QUERY_LIMIT")
+  def OVER_QUERY_LIMIT: typingsSlinky.googleMaps.googleMapsStrings.OVER_QUERY_LIMIT = "OVER_QUERY_LIMIT".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.OVER_QUERY_LIMIT]
   @scala.inline
-  def REQUEST_DENIED: typingsSlinky.googleMaps.googleMapsStrings.REQUEST_DENIED = this.cast("REQUEST_DENIED")
+  def REQUEST_DENIED: typingsSlinky.googleMaps.googleMapsStrings.REQUEST_DENIED = "REQUEST_DENIED".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.REQUEST_DENIED]
   @scala.inline
-  def UNKNOWN_ERROR: typingsSlinky.googleMaps.googleMapsStrings.UNKNOWN_ERROR = this.cast("UNKNOWN_ERROR")
+  def UNKNOWN_ERROR: typingsSlinky.googleMaps.googleMapsStrings.UNKNOWN_ERROR = "UNKNOWN_ERROR".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.UNKNOWN_ERROR]
   @scala.inline
-  def ZERO_RESULTS: typingsSlinky.googleMaps.googleMapsStrings.ZERO_RESULTS = this.cast("ZERO_RESULTS")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ZERO_RESULTS: typingsSlinky.googleMaps.googleMapsStrings.ZERO_RESULTS = "ZERO_RESULTS".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.ZERO_RESULTS]
 }
 

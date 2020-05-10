@@ -12,10 +12,8 @@ trait AuthenticatorAttachment extends js.Object
 
 object AuthenticatorAttachment {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `cross-platform`: typingsSlinky.std.stdStrings.`cross-platform` = "cross-platform".asInstanceOf[typingsSlinky.std.stdStrings.`cross-platform`]
   @scala.inline
-  def `cross-platform`: typingsSlinky.std.stdStrings.`cross-platform` = this.cast("cross-platform")
-  @scala.inline
-  def platform: typingsSlinky.std.stdStrings.platform = this.cast("platform")
+  def platform: typingsSlinky.std.stdStrings.platform = "platform".asInstanceOf[typingsSlinky.std.stdStrings.platform]
 }
 

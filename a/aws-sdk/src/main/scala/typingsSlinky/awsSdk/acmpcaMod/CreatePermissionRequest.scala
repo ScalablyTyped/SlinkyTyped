@@ -26,15 +26,47 @@ trait CreatePermissionRequest extends js.Object {
 
 object CreatePermissionRequest {
   @scala.inline
-  def apply(
-    Actions: ActionList,
-    CertificateAuthorityArn: Arn,
-    Principal: Principal,
-    SourceAccount: AccountId = null
-  ): CreatePermissionRequest = {
+  def apply(Actions: ActionList, CertificateAuthorityArn: Arn, Principal: Principal): CreatePermissionRequest = {
     val __obj = js.Dynamic.literal(Actions = Actions.asInstanceOf[js.Any], CertificateAuthorityArn = CertificateAuthorityArn.asInstanceOf[js.Any], Principal = Principal.asInstanceOf[js.Any])
-    if (SourceAccount != null) __obj.updateDynamic("SourceAccount")(SourceAccount.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreatePermissionRequest]
   }
+  @scala.inline
+  implicit class CreatePermissionRequestOps[Self <: CreatePermissionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActions(value: ActionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Actions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCertificateAuthorityArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrincipal(value: Principal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Principal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceAccount(value: AccountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceAccount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceAccount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceAccount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

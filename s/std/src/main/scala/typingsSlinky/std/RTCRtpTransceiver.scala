@@ -13,7 +13,7 @@ trait RTCRtpTransceiver extends js.Object {
   val receiver: RTCRtpReceiver = js.native
   val sender: RTCRtpSender = js.native
   def setCodecPreferences(codecs: js.Array[RTCRtpCodecCapability]): Unit = js.native
-  def setCodecPreferences(codecs: Iterable[RTCRtpCodecCapability]): Unit = js.native
+  def setCodecPreferences(codecs: js.Iterable[RTCRtpCodecCapability]): Unit = js.native
   def stop(): Unit = js.native
 }
 

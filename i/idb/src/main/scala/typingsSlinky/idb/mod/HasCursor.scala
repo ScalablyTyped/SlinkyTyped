@@ -1,10 +1,10 @@
 package typingsSlinky.idb.mod
 
+import org.scalajs.dom.raw.IDBKeyRange
 import typingsSlinky.idb.idbStrings.next
 import typingsSlinky.idb.idbStrings.nextunique
 import typingsSlinky.idb.idbStrings.prev
 import typingsSlinky.idb.idbStrings.prevunique
-import typingsSlinky.std.IDBKeyRange
 import typingsSlinky.std.IDBValidKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`

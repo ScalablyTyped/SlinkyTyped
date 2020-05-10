@@ -1,10 +1,8 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.baseuiStrings.accent
 import typingsSlinky.baseui.baseuiStrings.custom_
 import typingsSlinky.baseui.baseuiStrings.light
@@ -22,44 +20,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tag
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.tagMod.Tag] {
+object Tag {
   @JSImport("baseui/tag", "Tag")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, title */
-  def apply(
-    closeable: js.UndefOr[Boolean] = js.undefined,
-    color: String = null,
-    isFocused: js.UndefOr[Boolean] = js.undefined,
-    isHovered: js.UndefOr[Boolean] = js.undefined,
-    kind: custom_ | accent | primary | neutral | positive | warning | negative = null,
-    onActionClick: (/* e */ Event_, /* children */ js.UndefOr[TagMod[Any]]) => _ = null,
-    onActionKeyDown: (/* e */ Event_, /* children */ js.UndefOr[TagMod[Any]]) => _ = null,
-    onClick: /* event */ Event_ => _ = null,
-    onKeyDown: /* event */ Event_ => _ = null,
-    overrides: TagOverrides = null,
-    variant: solid | light | outlined = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.baseui.tagMod.Tag] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(closeable)) __obj.updateDynamic("closeable")(closeable.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(isFocused)) __obj.updateDynamic("isFocused")(isFocused.asInstanceOf[js.Any])
-    if (!js.isUndefined(isHovered)) __obj.updateDynamic("isHovered")(isHovered.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (onActionClick != null) __obj.updateDynamic("onActionClick")(js.Any.fromFunction2(onActionClick))
-    if (onActionKeyDown != null) __obj.updateDynamic("onActionKeyDown")(js.Any.fromFunction2(onActionKeyDown))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (variant != null) __obj.updateDynamic("variant")(variant.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.tagMod.Tag] {
+    @scala.inline
+    def closeable(value: Boolean): this.type = set("closeable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isFocused(value: Boolean): this.type = set("isFocused", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isHovered(value: Boolean): this.type = set("isHovered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def kind(value: custom_ | accent | primary | neutral | positive | warning | negative): this.type = set("kind", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onActionClick(value: (/* e */ Event_, /* children */ js.UndefOr[TagMod[Any]]) => _): this.type = set("onActionClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onActionKeyDown(value: (/* e */ Event_, /* children */ js.UndefOr[TagMod[Any]]) => _): this.type = set("onActionKeyDown", js.Any.fromFunction2(value))
+    @scala.inline
+    def onClick(value: /* event */ Event_ => _): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyDown(value: /* event */ Event_ => _): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def overrides(value: TagOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def variant(value: solid | light | outlined): this.type = set("variant", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.tagMod.Tag] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.baseui.tagMod.Tag](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TagProps
+  
+  def withProps(p: TagProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Tag.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

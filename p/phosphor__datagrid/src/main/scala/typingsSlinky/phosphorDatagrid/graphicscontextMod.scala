@@ -4,14 +4,14 @@ import org.scalajs.dom.raw.CanvasGradient
 import org.scalajs.dom.raw.CanvasPattern
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLImageElement
+import org.scalajs.dom.raw.HTMLVideoElement
+import org.scalajs.dom.raw.ImageData
 import org.scalajs.dom.raw.TextMetrics
 import typingsSlinky.phosphorDisposable.mod.IDisposable
 import typingsSlinky.std.CanvasFillRule
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLImageElement
-import typingsSlinky.std.HTMLVideoElement
 import typingsSlinky.std.ImageBitmap
-import typingsSlinky.std.ImageData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,14 +35,6 @@ object graphicscontextMod extends js.Object {
     var globalAlpha: Double = js.native
     var globalCompositeOperation: String = js.native
     var imageSmoothingEnabled: Boolean = js.native
-    /**
-      * Test whether the object has been disposed.
-      *
-      * #### Notes
-      * This property is always safe to access.
-      */
-    /* CompleteClass */
-    override val isDisposed: Boolean = js.native
     var lineCap: String = js.native
     var lineDashOffset: Double = js.native
     var lineJoin: String = js.native
@@ -64,26 +56,13 @@ object graphicscontextMod extends js.Object {
     def clip(): Unit = js.native
     def clip(fillRule: CanvasFillRule): Unit = js.native
     def closePath(): Unit = js.native
-    def createImageData(imageData: ImageData): org.scalajs.dom.raw.ImageData = js.native
-    def createImageData(sw: Double, sh: Double): org.scalajs.dom.raw.ImageData = js.native
+    def createImageData(imageData: ImageData): ImageData = js.native
+    def createImageData(sw: Double, sh: Double): ImageData = js.native
     def createLinearGradient(x0: Double, y0: Double, x1: Double, y1: Double): CanvasGradient = js.native
     def createPattern(image: HTMLCanvasElement, repetition: String): CanvasPattern = js.native
     def createPattern(image: HTMLImageElement, repetition: String): CanvasPattern = js.native
     def createPattern(image: HTMLVideoElement, repetition: String): CanvasPattern = js.native
     def createRadialGradient(x0: Double, y0: Double, r0: Double, x1: Double, y1: Double, r1: Double): CanvasGradient = js.native
-    /**
-      * Dispose of the resources held by the object.
-      *
-      * #### Notes
-      * If the object's `dispose` method is called more than once, all
-      * calls made after the first will be a no-op.
-      *
-      * #### Undefined Behavior
-      * It is undefined behavior to use any functionality of the object
-      * after it has been disposed unless otherwise explicitly noted.
-      */
-    /* CompleteClass */
-    override def dispose(): Unit = js.native
     def drawFocusIfNeeded(element: Element): Unit = js.native
     def drawImage(image: HTMLCanvasElement, dstX: Double, dstY: Double): Unit = js.native
     def drawImage(image: HTMLCanvasElement, dstX: Double, dstY: Double, dstW: Double, dstH: Double): Unit = js.native
@@ -161,16 +140,16 @@ object graphicscontextMod extends js.Object {
     def fillRect(x: Double, y: Double, w: Double, h: Double): Unit = js.native
     def fillText(text: String, x: Double, y: Double): Unit = js.native
     def fillText(text: String, x: Double, y: Double, maxWidth: Double): Unit = js.native
-    def getImageData(sx: Double, sy: Double, sw: Double, sh: Double): org.scalajs.dom.raw.ImageData = js.native
+    def getImageData(sx: Double, sy: Double, sw: Double, sh: Double): ImageData = js.native
     def getLineDash(): js.Array[Double] = js.native
     def isPointInPath(x: Double, y: Double): Boolean = js.native
     def isPointInPath(x: Double, y: Double, fillRule: CanvasFillRule): Boolean = js.native
     def lineTo(x: Double, y: Double): Unit = js.native
     def measureText(text: String): TextMetrics = js.native
     def moveTo(x: Double, y: Double): Unit = js.native
-    def putImageData(imagedata: org.scalajs.dom.raw.ImageData, dx: Double, dy: Double): Unit = js.native
+    def putImageData(imagedata: ImageData, dx: Double, dy: Double): Unit = js.native
     def putImageData(
-      imagedata: org.scalajs.dom.raw.ImageData,
+      imagedata: ImageData,
       dx: Double,
       dy: Double,
       dirtyX: Double,

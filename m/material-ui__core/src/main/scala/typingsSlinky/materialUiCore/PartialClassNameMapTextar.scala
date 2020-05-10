@@ -14,12 +14,53 @@ trait PartialClassNameMapTextar extends js.Object {
 
 object PartialClassNameMapTextar {
   @scala.inline
-  def apply(root: String = null, shadow: String = null, textarea: String = null): PartialClassNameMapTextar = {
+  def apply(): PartialClassNameMapTextar = {
     val __obj = js.Dynamic.literal()
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
-    if (shadow != null) __obj.updateDynamic("shadow")(shadow.asInstanceOf[js.Any])
-    if (textarea != null) __obj.updateDynamic("textarea")(textarea.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapTextar]
   }
+  @scala.inline
+  implicit class PartialClassNameMapTextarOps[Self <: PartialClassNameMapTextar] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRoot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextarea(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textarea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextarea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textarea")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

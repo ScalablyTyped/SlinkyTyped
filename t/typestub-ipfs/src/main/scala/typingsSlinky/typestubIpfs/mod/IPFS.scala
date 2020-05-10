@@ -1,7 +1,6 @@
 package typingsSlinky.typestubIpfs.mod
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.Error
 import typingsSlinky.typestubIpfs.AnonMessage
 import typingsSlinky.typestubIpfs.typestubIpfsStrings.error
 import scala.scalajs.js
@@ -23,7 +22,7 @@ trait IPFS extends EventEmitter {
   var swarm: SwarmAPI = js.native
   var types: Types = js.native
   def id(): js.Promise[Id] = js.native
-  def id(callback: js.Function2[/* error */ Error, /* version */ Id, Unit]): Unit = js.native
+  def id(callback: js.Function2[/* error */ js.Error, /* version */ Id, Unit]): Unit = js.native
   def id(options: js.Any): js.Promise[Id] = js.native
   def id(options: js.Any, callback: js.Function2[/* error */ js.Error, /* version */ Id, Unit]): Unit = js.native
   def init(callback: Callback[Boolean]): Unit = js.native
@@ -41,7 +40,7 @@ trait IPFS extends EventEmitter {
   def stop(): Unit = js.native
   def stop(callback: js.Function1[/* error */ js.UndefOr[js.Error], Unit]): Unit = js.native
   def version(): js.Promise[Version] = js.native
-  def version(callback: js.Function2[/* error */ Error, /* version */ Version, Unit]): Unit = js.native
+  def version(callback: js.Function2[/* error */ js.Error, /* version */ Version, Unit]): Unit = js.native
   def version(options: js.Any): js.Promise[Version] = js.native
   def version(options: js.Any, callback: js.Function2[/* error */ js.Error, /* version */ Version, Unit]): Unit = js.native
 }

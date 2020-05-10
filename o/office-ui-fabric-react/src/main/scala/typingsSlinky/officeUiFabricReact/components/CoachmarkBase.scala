@@ -1,18 +1,17 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmark
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmarkProps
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmarkStyleProps
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmarkStyles
 import typingsSlinky.officeUiFabricReact.positioningContainerTypesMod.IPositioningContainerProps
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubble
+import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -20,84 +19,92 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CoachmarkBase
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.officeUiFabricReact.mod.CoachmarkBase] {
+object CoachmarkBase {
   @JSImport("office-ui-fabric-react", "CoachmarkBase")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    ariaAlertText: String = null,
-    ariaDescribedBy: String = null,
-    ariaDescribedByText: String = null,
-    ariaLabelledBy: String = null,
-    ariaLabelledByText: String = null,
-    beaconColorOne: String = null,
-    beaconColorTwo: String = null,
-    beakHeight: Int | Double = null,
-    beakWidth: Int | Double = null,
-    collapsed: js.UndefOr[Boolean] = js.undefined,
-    color: String = null,
-    componentRef: IRefObject[ICoachmark] = null,
-    delayBeforeCoachmarkAnimation: Int | Double = null,
-    delayBeforeMouseOpen: Int | Double = null,
-    height: Int | Double = null,
-    isCollapsed: js.UndefOr[Boolean] = js.undefined,
-    isPositionForced: js.UndefOr[Boolean] = js.undefined,
-    mouseProximityOffset: Int | Double = null,
-    onAnimationOpenEnd: () => Unit = null,
-    onAnimationOpenStart: () => Unit = null,
-    onDismiss: /* ev */ js.UndefOr[js.Any] => Unit = null,
-    onMouseMove: /* e */ MouseEvent => Unit = null,
-    persistentBeak: js.UndefOr[Boolean] = js.undefined,
-    positioningContainerProps: IPositioningContainerProps = null,
-    preventDismissOnLostFocus: js.UndefOr[Boolean] = js.undefined,
-    preventFocusOnMount: js.UndefOr[Boolean] = js.undefined,
-    styles: IStyleFunctionOrObject[ICoachmarkStyleProps, ICoachmarkStyles] = null,
-    target: HTMLElement | String = null,
-    teachingBubbleRef: ITeachingBubble = null,
-    theme: ITheme = null,
-    width: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.CoachmarkBase] = {
-    val __obj = js.Dynamic.literal()
-    if (ariaAlertText != null) __obj.updateDynamic("ariaAlertText")(ariaAlertText.asInstanceOf[js.Any])
-    if (ariaDescribedBy != null) __obj.updateDynamic("ariaDescribedBy")(ariaDescribedBy.asInstanceOf[js.Any])
-    if (ariaDescribedByText != null) __obj.updateDynamic("ariaDescribedByText")(ariaDescribedByText.asInstanceOf[js.Any])
-    if (ariaLabelledBy != null) __obj.updateDynamic("ariaLabelledBy")(ariaLabelledBy.asInstanceOf[js.Any])
-    if (ariaLabelledByText != null) __obj.updateDynamic("ariaLabelledByText")(ariaLabelledByText.asInstanceOf[js.Any])
-    if (beaconColorOne != null) __obj.updateDynamic("beaconColorOne")(beaconColorOne.asInstanceOf[js.Any])
-    if (beaconColorTwo != null) __obj.updateDynamic("beaconColorTwo")(beaconColorTwo.asInstanceOf[js.Any])
-    if (beakHeight != null) __obj.updateDynamic("beakHeight")(beakHeight.asInstanceOf[js.Any])
-    if (beakWidth != null) __obj.updateDynamic("beakWidth")(beakWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(collapsed)) __obj.updateDynamic("collapsed")(collapsed.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (delayBeforeCoachmarkAnimation != null) __obj.updateDynamic("delayBeforeCoachmarkAnimation")(delayBeforeCoachmarkAnimation.asInstanceOf[js.Any])
-    if (delayBeforeMouseOpen != null) __obj.updateDynamic("delayBeforeMouseOpen")(delayBeforeMouseOpen.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(isCollapsed)) __obj.updateDynamic("isCollapsed")(isCollapsed.asInstanceOf[js.Any])
-    if (!js.isUndefined(isPositionForced)) __obj.updateDynamic("isPositionForced")(isPositionForced.asInstanceOf[js.Any])
-    if (mouseProximityOffset != null) __obj.updateDynamic("mouseProximityOffset")(mouseProximityOffset.asInstanceOf[js.Any])
-    if (onAnimationOpenEnd != null) __obj.updateDynamic("onAnimationOpenEnd")(js.Any.fromFunction0(onAnimationOpenEnd))
-    if (onAnimationOpenStart != null) __obj.updateDynamic("onAnimationOpenStart")(js.Any.fromFunction0(onAnimationOpenStart))
-    if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction1(onDismiss))
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
-    if (!js.isUndefined(persistentBeak)) __obj.updateDynamic("persistentBeak")(persistentBeak.asInstanceOf[js.Any])
-    if (positioningContainerProps != null) __obj.updateDynamic("positioningContainerProps")(positioningContainerProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(preventDismissOnLostFocus)) __obj.updateDynamic("preventDismissOnLostFocus")(preventDismissOnLostFocus.asInstanceOf[js.Any])
-    if (!js.isUndefined(preventFocusOnMount)) __obj.updateDynamic("preventFocusOnMount")(preventFocusOnMount.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (teachingBubbleRef != null) __obj.updateDynamic("teachingBubbleRef")(teachingBubbleRef.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.CoachmarkBase] {
+    @scala.inline
+    def ariaAlertText(value: String): this.type = set("ariaAlertText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaDescribedBy(value: String): this.type = set("ariaDescribedBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaDescribedByText(value: String): this.type = set("ariaDescribedByText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaLabelledBy(value: String): this.type = set("ariaLabelledBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaLabelledByText(value: String): this.type = set("ariaLabelledByText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def beaconColorOne(value: String): this.type = set("beaconColorOne", value.asInstanceOf[js.Any])
+    @scala.inline
+    def beaconColorTwo(value: String): this.type = set("beaconColorTwo", value.asInstanceOf[js.Any])
+    @scala.inline
+    def beakHeight(value: Double): this.type = set("beakHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def beakWidth(value: Double): this.type = set("beakWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def collapsed(value: Boolean): this.type = set("collapsed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ ICoachmark | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[ICoachmark]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[ICoachmark]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delayBeforeCoachmarkAnimation(value: Double): this.type = set("delayBeforeCoachmarkAnimation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delayBeforeMouseOpen(value: Double): this.type = set("delayBeforeMouseOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isCollapsed(value: Boolean): this.type = set("isCollapsed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isPositionForced(value: Boolean): this.type = set("isPositionForced", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mouseProximityOffset(value: Double): this.type = set("mouseProximityOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAnimationOpenEnd(value: () => Unit): this.type = set("onAnimationOpenEnd", js.Any.fromFunction0(value))
+    @scala.inline
+    def onAnimationOpenStart(value: () => Unit): this.type = set("onAnimationOpenStart", js.Any.fromFunction0(value))
+    @scala.inline
+    def onDismiss(value: /* ev */ js.UndefOr[js.Any] => Unit): this.type = set("onDismiss", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseMove(value: /* e */ MouseEvent => Unit): this.type = set("onMouseMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def persistentBeak(value: Boolean): this.type = set("persistentBeak", value.asInstanceOf[js.Any])
+    @scala.inline
+    def positioningContainerProps(value: IPositioningContainerProps): this.type = set("positioningContainerProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preventDismissOnLostFocus(value: Boolean): this.type = set("preventDismissOnLostFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preventFocusOnMount(value: Boolean): this.type = set("preventFocusOnMount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stylesFunction1(value: ICoachmarkStyleProps => Partial[ICoachmarkStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: IStyleFunctionOrObject[ICoachmarkStyleProps, ICoachmarkStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetHTMLElement(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def target(value: HTMLElement | String): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetNull: this.type = set("target", null)
+    @scala.inline
+    def teachingBubbleRef(value: ITeachingBubble): this.type = set("teachingBubbleRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.CoachmarkBase] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.officeUiFabricReact.mod.CoachmarkBase](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ICoachmarkProps
+  
+  def withProps(p: ICoachmarkProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CoachmarkBase.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

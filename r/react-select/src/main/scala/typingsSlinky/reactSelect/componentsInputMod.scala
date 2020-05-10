@@ -1,10 +1,9 @@
 package typingsSlinky.reactSelect
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactSelect.typesMod.ClassNamesState
 import scala.scalajs.js
@@ -16,7 +15,7 @@ import scala.scalajs.js.annotation._
 object componentsInputMod extends js.Object {
   @js.native
   class Input protected ()
-    extends Component[InputProps, ComponentState, js.Any] {
+    extends Component[InputProps, js.Object, js.Any] {
     def this(props: InputProps) = this()
     def this(props: InputProps, context: js.Any) = this()
   }
@@ -43,7 +42,7 @@ object componentsInputMod extends js.Object {
   
   @js.native
   class default protected ()
-    extends Component[InputProps, ComponentState, js.Any] {
+    extends Component[InputProps, js.Object, js.Any] {
     def this(props: InputProps) = this()
     def this(props: InputProps, context: js.Any) = this()
   }
@@ -51,10 +50,10 @@ object componentsInputMod extends js.Object {
   def inputCSS(props: InputProps): CSSProperties = js.native
   def inputStyle(isHidden: Boolean): CSSProperties = js.native
   @js.native
-  object Input extends TopLevel[ComponentType[InputProps]]
+  object Input extends TopLevel[ReactComponentClass[InputProps]]
   
   @js.native
-  object default extends TopLevel[ComponentType[InputProps]]
+  object default extends TopLevel[ReactComponentClass[InputProps]]
   
 }
 

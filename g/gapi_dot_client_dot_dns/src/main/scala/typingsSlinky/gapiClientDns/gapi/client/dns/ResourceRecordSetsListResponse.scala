@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ResourceRecordSetsListResponse extends js.Object {
   /** Type of resource. */
-  var kind: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.native
   /**
     * The presence of this field indicates that there exist more results following your last page of results in pagination order. To fetch them, make another
     * list request using this value as your pagination token.
@@ -15,19 +16,60 @@ trait ResourceRecordSetsListResponse extends js.Object {
     * between the first and last paginated list request, the set of all elements returned will be an inconsistent view of the collection. There is no way to
     * retrieve a consistent snapshot of a collection larger than the maximum page size.
     */
-  var nextPageToken: js.UndefOr[String] = js.undefined
+  var nextPageToken: js.UndefOr[String] = js.native
   /** The resource record set resources. */
-  var rrsets: js.UndefOr[js.Array[ResourceRecordSet]] = js.undefined
+  var rrsets: js.UndefOr[js.Array[ResourceRecordSet]] = js.native
 }
 
 object ResourceRecordSetsListResponse {
   @scala.inline
-  def apply(kind: String = null, nextPageToken: String = null, rrsets: js.Array[ResourceRecordSet] = null): ResourceRecordSetsListResponse = {
+  def apply(): ResourceRecordSetsListResponse = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (rrsets != null) __obj.updateDynamic("rrsets")(rrsets.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceRecordSetsListResponse]
   }
+  @scala.inline
+  implicit class ResourceRecordSetsListResponseOps[Self <: ResourceRecordSetsListResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRrsets(value: js.Array[ResourceRecordSet]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rrsets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRrsets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rrsets")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

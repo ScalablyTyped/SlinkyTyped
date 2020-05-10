@@ -56,30 +56,137 @@ trait FileSystemState extends js.Object {
 
 object FileSystemState {
   @scala.inline
-  def apply(
-    arn: Input[String] = null,
-    creationToken: Input[String] = null,
-    dnsName: Input[String] = null,
-    encrypted: Input[Boolean] = null,
-    kmsKeyId: Input[String] = null,
-    lifecyclePolicy: Input[FileSystemLifecyclePolicy] = null,
-    performanceMode: Input[String] = null,
-    provisionedThroughputInMibps: Input[Double] = null,
-    tags: Input[StringDictionary[_]] = null,
-    throughputMode: Input[String] = null
-  ): FileSystemState = {
+  def apply(): FileSystemState = {
     val __obj = js.Dynamic.literal()
-    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
-    if (creationToken != null) __obj.updateDynamic("creationToken")(creationToken.asInstanceOf[js.Any])
-    if (dnsName != null) __obj.updateDynamic("dnsName")(dnsName.asInstanceOf[js.Any])
-    if (encrypted != null) __obj.updateDynamic("encrypted")(encrypted.asInstanceOf[js.Any])
-    if (kmsKeyId != null) __obj.updateDynamic("kmsKeyId")(kmsKeyId.asInstanceOf[js.Any])
-    if (lifecyclePolicy != null) __obj.updateDynamic("lifecyclePolicy")(lifecyclePolicy.asInstanceOf[js.Any])
-    if (performanceMode != null) __obj.updateDynamic("performanceMode")(performanceMode.asInstanceOf[js.Any])
-    if (provisionedThroughputInMibps != null) __obj.updateDynamic("provisionedThroughputInMibps")(provisionedThroughputInMibps.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (throughputMode != null) __obj.updateDynamic("throughputMode")(throughputMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileSystemState]
   }
+  @scala.inline
+  implicit class FileSystemStateOps[Self <: FileSystemState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationToken(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDnsName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDnsName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncrypted(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encrypted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncrypted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encrypted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsKeyId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLifecyclePolicy(value: Input[FileSystemLifecyclePolicy]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecyclePolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLifecyclePolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecyclePolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPerformanceMode(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("performanceMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPerformanceMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("performanceMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisionedThroughputInMibps(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("provisionedThroughputInMibps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedThroughputInMibps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("provisionedThroughputInMibps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThroughputMode(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("throughputMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThroughputMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("throughputMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

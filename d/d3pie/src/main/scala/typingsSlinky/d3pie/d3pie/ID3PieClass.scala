@@ -1,7 +1,7 @@
 package typingsSlinky.d3pie.d3pie
 
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

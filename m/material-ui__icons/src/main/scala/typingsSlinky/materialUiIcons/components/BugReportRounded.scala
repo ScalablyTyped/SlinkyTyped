@@ -1,15 +1,17 @@
 package typingsSlinky.materialUiIcons.components
 
+import typingsSlinky.materialUiCore.svgIconSvgIconMod.SvgIconProps
 import typingsSlinky.materialUiIcons.bugReportRoundedMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BugReportRounded extends SharedApply_SvgIconProps1442979138[default] {
-  @JSImport("@material-ui/icons/BugReportRounded", "default")
+object BugReportRounded {
+  @JSImport("@material-ui/icons/BugReportRounded", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1164301990[default] = new SharedBuilder_SvgIconProps_1164301990[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: BugReportRounded.type): SharedBuilder_SvgIconProps_1164301990[default] = new SharedBuilder_SvgIconProps_1164301990[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

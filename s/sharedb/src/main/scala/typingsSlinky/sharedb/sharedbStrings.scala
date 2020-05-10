@@ -117,6 +117,9 @@ object sharedbStrings {
   sealed trait `ot-text-tp2` extends OTType
   
   @js.native
+  sealed trait pause extends js.Object
+  
+  @js.native
   sealed trait pipe extends js.Object
   
   @js.native
@@ -150,6 +153,9 @@ object sharedbStrings {
   sealed trait reply extends js.Object
   
   @js.native
+  sealed trait resume extends js.Object
+  
+  @js.native
   sealed trait `rich-text` extends OTType
   
   @js.native
@@ -169,7 +175,7 @@ object sharedbStrings {
   @scala.inline
   def apply: apply = "apply".asInstanceOf[apply]
   @scala.inline
-  def `before op`: `before op` = "before op".asInstanceOf[`before op`]
+  def `before op`: `before op` = ("before op").asInstanceOf[`before op`]
   @scala.inline
   def bf: bf = "bf".asInstanceOf[bf]
   @scala.inline
@@ -219,9 +225,9 @@ object sharedbStrings {
   @scala.inline
   def nf: nf = "nf".asInstanceOf[nf]
   @scala.inline
-  def `no write pending`: `no write pending` = "no write pending".asInstanceOf[`no write pending`]
+  def `no write pending`: `no write pending` = ("no write pending").asInstanceOf[`no write pending`]
   @scala.inline
-  def `nothing pending`: `nothing pending` = "nothing pending".asInstanceOf[`nothing pending`]
+  def `nothing pending`: `nothing pending` = ("nothing pending").asInstanceOf[`nothing pending`]
   @scala.inline
   def nt: nt = "nt".asInstanceOf[nt]
   @scala.inline
@@ -232,6 +238,8 @@ object sharedbStrings {
   def `ot-text`: `ot-text` = "ot-text".asInstanceOf[`ot-text`]
   @scala.inline
   def `ot-text-tp2`: `ot-text-tp2` = "ot-text-tp2".asInstanceOf[`ot-text-tp2`]
+  @scala.inline
+  def pause: pause = "pause".asInstanceOf[pause]
   @scala.inline
   def pipe: pipe = "pipe".asInstanceOf[pipe]
   @scala.inline
@@ -254,6 +262,8 @@ object sharedbStrings {
   def remove: remove = "remove".asInstanceOf[remove]
   @scala.inline
   def reply: reply = "reply".asInstanceOf[reply]
+  @scala.inline
+  def resume: resume = "resume".asInstanceOf[resume]
   @scala.inline
   def `rich-text`: `rich-text` = "rich-text".asInstanceOf[`rich-text`]
   @scala.inline

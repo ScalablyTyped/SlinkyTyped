@@ -4,29 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PromptOptions extends ConfirmOptions {
-  var defaultValue: js.UndefOr[String | Double] = js.undefined
-  var required: js.UndefOr[Boolean] = js.undefined
+  var defaultValue: js.UndefOr[String | Double] = js.native
+  var required: js.UndefOr[Boolean] = js.native
 }
 
 object PromptOptions {
   @scala.inline
-  def apply(
-    cancel: String = null,
-    defaultValue: String | Double = null,
-    message: String = null,
-    ok: String = null,
-    required: js.UndefOr[Boolean] = js.undefined,
-    title: String = null
-  ): PromptOptions = {
+  def apply(): PromptOptions = {
     val __obj = js.Dynamic.literal()
-    if (cancel != null) __obj.updateDynamic("cancel")(cancel.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (ok != null) __obj.updateDynamic("ok")(ok.asInstanceOf[js.Any])
-    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[PromptOptions]
   }
+  @scala.inline
+  implicit class PromptOptionsOps[Self <: PromptOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultValue(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequired(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequired: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

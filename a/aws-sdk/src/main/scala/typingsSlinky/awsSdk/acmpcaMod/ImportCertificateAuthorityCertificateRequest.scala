@@ -22,14 +22,53 @@ trait ImportCertificateAuthorityCertificateRequest extends js.Object {
 
 object ImportCertificateAuthorityCertificateRequest {
   @scala.inline
-  def apply(
-    Certificate: CertificateBodyBlob,
-    CertificateAuthorityArn: Arn,
-    CertificateChain: CertificateChainBlob = null
-  ): ImportCertificateAuthorityCertificateRequest = {
+  def apply(Certificate: CertificateBodyBlob, CertificateAuthorityArn: Arn): ImportCertificateAuthorityCertificateRequest = {
     val __obj = js.Dynamic.literal(Certificate = Certificate.asInstanceOf[js.Any], CertificateAuthorityArn = CertificateAuthorityArn.asInstanceOf[js.Any])
-    if (CertificateChain != null) __obj.updateDynamic("CertificateChain")(CertificateChain.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportCertificateAuthorityCertificateRequest]
   }
+  @scala.inline
+  implicit class ImportCertificateAuthorityCertificateRequestOps[Self <: ImportCertificateAuthorityCertificateRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCertificate(value: CertificateBodyBlob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCertificateAuthorityArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCertificateChainUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateChain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCertificateChain(value: CertificateChainBlob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateChain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateChain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateChain")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

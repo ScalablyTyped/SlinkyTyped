@@ -12,10 +12,8 @@ trait MediaMode extends js.Object
 
 object MediaMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def relayed: typingsSlinky.opentok.opentokStrings.relayed = "relayed".asInstanceOf[typingsSlinky.opentok.opentokStrings.relayed]
   @scala.inline
-  def relayed: typingsSlinky.opentok.opentokStrings.relayed = this.cast("relayed")
-  @scala.inline
-  def routed: typingsSlinky.opentok.opentokStrings.routed = this.cast("routed")
+  def routed: typingsSlinky.opentok.opentokStrings.routed = "routed".asInstanceOf[typingsSlinky.opentok.opentokStrings.routed]
 }
 

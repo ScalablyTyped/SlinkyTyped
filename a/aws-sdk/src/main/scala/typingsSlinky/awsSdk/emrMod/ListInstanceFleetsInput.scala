@@ -18,10 +18,35 @@ trait ListInstanceFleetsInput extends js.Object {
 
 object ListInstanceFleetsInput {
   @scala.inline
-  def apply(ClusterId: ClusterId, Marker: Marker = null): ListInstanceFleetsInput = {
+  def apply(ClusterId: ClusterId): ListInstanceFleetsInput = {
     val __obj = js.Dynamic.literal(ClusterId = ClusterId.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListInstanceFleetsInput]
   }
+  @scala.inline
+  implicit class ListInstanceFleetsInputOps[Self <: ListInstanceFleetsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterId(value: ClusterId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMarker(value: Marker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

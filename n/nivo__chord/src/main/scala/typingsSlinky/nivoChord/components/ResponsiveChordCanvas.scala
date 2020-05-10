@@ -1,10 +1,10 @@
 package typingsSlinky.nivoChord.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.nivoChord.OmitArcDataformattedValue
+import typingsSlinky.nivoChord.OmitArcDatalabel
 import typingsSlinky.nivoChord.mod.ArcData
 import typingsSlinky.nivoChord.mod.ChordCanvasProps
 import typingsSlinky.nivoChord.mod.LabelAccessor
@@ -17,81 +17,92 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ResponsiveChordCanvas
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.nivoChord.mod.ResponsiveChordCanvas] {
+object ResponsiveChordCanvas {
   @JSImport("@nivo/chord", "ResponsiveChordCanvas")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    keys: js.Array[String],
-    layers: js.Array[_],
-    matrix: js.Array[js.Array[Double]],
-    BorderColor: InheritedColorProp[_] = null,
-    arcBorderColor: InheritedColorProp[_] = null,
-    arcBorderWidth: Int | Double = null,
-    arcHoverOpacity: Int | Double = null,
-    arcHoverOthersOpacity: Int | Double = null,
-    arcOpacity: Int | Double = null,
-    arcTooltip: js.Any = null,
-    colors: OrdinalColorsInstruction[_] = null,
-    enableLabel: js.UndefOr[Boolean] = js.undefined,
-    innerRadiusOffset: Int | Double = null,
-    innerRadiusRatio: Int | Double = null,
-    isInteractive: js.UndefOr[Boolean] = js.undefined,
-    label: String | LabelAccessor = null,
-    labelOffset: Int | Double = null,
-    labelRotation: Int | Double = null,
-    labelTextColor: InheritedColorProp[_] = null,
-    margin: Box = null,
-    onArcClick: (/* arc */ ArcData, /* event */ SyntheticMouseEvent[js.Any]) => Unit = null,
-    onArcMouseEnter: (/* arc */ ArcData, /* event */ SyntheticMouseEvent[js.Any]) => Unit = null,
-    onArcMouseLeave: (/* arc */ ArcData, /* event */ SyntheticMouseEvent[js.Any]) => Unit = null,
-    onArcMouseMove: (/* arc */ ArcData, /* event */ SyntheticMouseEvent[js.Any]) => Unit = null,
-    padAngle: Int | Double = null,
-    pixelRatio: Int | Double = null,
-    ribbonBorderWidth: Int | Double = null,
-    ribbonHoverOpacity: Int | Double = null,
-    ribbonHoverOthersOpacity: Int | Double = null,
-    ribbonOpacity: Int | Double = null,
-    theme: Theme = null,
-    valueFormat: String | ValueFormatter = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.nivoChord.mod.ResponsiveChordCanvas] = {
-    val __obj = js.Dynamic.literal(keys = keys.asInstanceOf[js.Any], layers = layers.asInstanceOf[js.Any], matrix = matrix.asInstanceOf[js.Any])
-    if (BorderColor != null) __obj.updateDynamic("BorderColor")(BorderColor.asInstanceOf[js.Any])
-    if (arcBorderColor != null) __obj.updateDynamic("arcBorderColor")(arcBorderColor.asInstanceOf[js.Any])
-    if (arcBorderWidth != null) __obj.updateDynamic("arcBorderWidth")(arcBorderWidth.asInstanceOf[js.Any])
-    if (arcHoverOpacity != null) __obj.updateDynamic("arcHoverOpacity")(arcHoverOpacity.asInstanceOf[js.Any])
-    if (arcHoverOthersOpacity != null) __obj.updateDynamic("arcHoverOthersOpacity")(arcHoverOthersOpacity.asInstanceOf[js.Any])
-    if (arcOpacity != null) __obj.updateDynamic("arcOpacity")(arcOpacity.asInstanceOf[js.Any])
-    if (arcTooltip != null) __obj.updateDynamic("arcTooltip")(arcTooltip.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableLabel)) __obj.updateDynamic("enableLabel")(enableLabel.asInstanceOf[js.Any])
-    if (innerRadiusOffset != null) __obj.updateDynamic("innerRadiusOffset")(innerRadiusOffset.asInstanceOf[js.Any])
-    if (innerRadiusRatio != null) __obj.updateDynamic("innerRadiusRatio")(innerRadiusRatio.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInteractive)) __obj.updateDynamic("isInteractive")(isInteractive.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (labelOffset != null) __obj.updateDynamic("labelOffset")(labelOffset.asInstanceOf[js.Any])
-    if (labelRotation != null) __obj.updateDynamic("labelRotation")(labelRotation.asInstanceOf[js.Any])
-    if (labelTextColor != null) __obj.updateDynamic("labelTextColor")(labelTextColor.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (onArcClick != null) __obj.updateDynamic("onArcClick")(js.Any.fromFunction2(onArcClick))
-    if (onArcMouseEnter != null) __obj.updateDynamic("onArcMouseEnter")(js.Any.fromFunction2(onArcMouseEnter))
-    if (onArcMouseLeave != null) __obj.updateDynamic("onArcMouseLeave")(js.Any.fromFunction2(onArcMouseLeave))
-    if (onArcMouseMove != null) __obj.updateDynamic("onArcMouseMove")(js.Any.fromFunction2(onArcMouseMove))
-    if (padAngle != null) __obj.updateDynamic("padAngle")(padAngle.asInstanceOf[js.Any])
-    if (pixelRatio != null) __obj.updateDynamic("pixelRatio")(pixelRatio.asInstanceOf[js.Any])
-    if (ribbonBorderWidth != null) __obj.updateDynamic("ribbonBorderWidth")(ribbonBorderWidth.asInstanceOf[js.Any])
-    if (ribbonHoverOpacity != null) __obj.updateDynamic("ribbonHoverOpacity")(ribbonHoverOpacity.asInstanceOf[js.Any])
-    if (ribbonHoverOthersOpacity != null) __obj.updateDynamic("ribbonHoverOthersOpacity")(ribbonHoverOthersOpacity.asInstanceOf[js.Any])
-    if (ribbonOpacity != null) __obj.updateDynamic("ribbonOpacity")(ribbonOpacity.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (valueFormat != null) __obj.updateDynamic("valueFormat")(valueFormat.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.nivoChord.mod.ResponsiveChordCanvas] {
+    @scala.inline
+    def BorderColorFunction1(value: _ => String): this.type = set("BorderColor", js.Any.fromFunction1(value))
+    @scala.inline
+    def BorderColor(value: InheritedColorProp[_]): this.type = set("BorderColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arcBorderColorFunction1(value: _ => String): this.type = set("arcBorderColor", js.Any.fromFunction1(value))
+    @scala.inline
+    def arcBorderColor(value: InheritedColorProp[_]): this.type = set("arcBorderColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arcBorderWidth(value: Double): this.type = set("arcBorderWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arcHoverOpacity(value: Double): this.type = set("arcHoverOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arcHoverOthersOpacity(value: Double): this.type = set("arcHoverOthersOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arcOpacity(value: Double): this.type = set("arcOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arcTooltip(value: js.Any): this.type = set("arcTooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorsFunction1(value: _ => String): this.type = set("colors", js.Any.fromFunction1(value))
+    @scala.inline
+    def colors(value: OrdinalColorsInstruction[_]): this.type = set("colors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableLabel(value: Boolean): this.type = set("enableLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRadiusOffset(value: Double): this.type = set("innerRadiusOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRadiusRatio(value: Double): this.type = set("innerRadiusRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isInteractive(value: Boolean): this.type = set("isInteractive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFunction1(value: /* datum */ OmitArcDatalabel => String): this.type = set("label", js.Any.fromFunction1(value))
+    @scala.inline
+    def label(value: String | LabelAccessor): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelOffset(value: Double): this.type = set("labelOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelRotation(value: Double): this.type = set("labelRotation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelTextColorFunction1(value: _ => String): this.type = set("labelTextColor", js.Any.fromFunction1(value))
+    @scala.inline
+    def labelTextColor(value: InheritedColorProp[_]): this.type = set("labelTextColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: Box): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onArcClick(value: (/* arc */ ArcData, /* event */ SyntheticMouseEvent[js.Any]) => Unit): this.type = set("onArcClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onArcMouseEnter(value: (/* arc */ ArcData, /* event */ SyntheticMouseEvent[js.Any]) => Unit): this.type = set("onArcMouseEnter", js.Any.fromFunction2(value))
+    @scala.inline
+    def onArcMouseLeave(value: (/* arc */ ArcData, /* event */ SyntheticMouseEvent[js.Any]) => Unit): this.type = set("onArcMouseLeave", js.Any.fromFunction2(value))
+    @scala.inline
+    def onArcMouseMove(value: (/* arc */ ArcData, /* event */ SyntheticMouseEvent[js.Any]) => Unit): this.type = set("onArcMouseMove", js.Any.fromFunction2(value))
+    @scala.inline
+    def padAngle(value: Double): this.type = set("padAngle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pixelRatio(value: Double): this.type = set("pixelRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ribbonBorderWidth(value: Double): this.type = set("ribbonBorderWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ribbonHoverOpacity(value: Double): this.type = set("ribbonHoverOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ribbonHoverOthersOpacity(value: Double): this.type = set("ribbonHoverOthersOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ribbonOpacity(value: Double): this.type = set("ribbonOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: Theme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueFormatFunction1(value: /* datum */ OmitArcDataformattedValue => String | Double): this.type = set("valueFormat", js.Any.fromFunction1(value))
+    @scala.inline
+    def valueFormat(value: String | ValueFormatter): this.type = set("valueFormat", value.asInstanceOf[js.Any])
   }
-  type Props = ChordCanvasProps
+  
+  def withProps(p: ChordCanvasProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(keys: js.Array[String], layers: js.Array[_], matrix: js.Array[js.Array[Double]]): Builder = {
+    val __props = js.Dynamic.literal(keys = keys.asInstanceOf[js.Any], layers = layers.asInstanceOf[js.Any], matrix = matrix.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ChordCanvasProps]))
+  }
 }
 

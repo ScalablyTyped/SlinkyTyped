@@ -1,12 +1,13 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.semanticUiReact.dropdownItemMod.DropdownItemProps
 import typingsSlinky.semanticUiReact.dropdownItemMod.default
 import typingsSlinky.semanticUiReact.flagFlagMod.FlagProps
@@ -20,50 +21,80 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DropdownItem
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object DropdownItem {
   @JSImport("semantic-ui-react/dist/commonjs/modules/Dropdown/DropdownItem", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    as: js.Any = null,
-    content: SemanticShorthandContent = null,
-    description: SemanticShorthandItem[HtmlSpanProps] = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    flag: SemanticShorthandItem[FlagProps] = null,
-    icon: SemanticShorthandItem[IconProps] = null,
-    image: SemanticShorthandItem[ImageProps] = null,
-    label: SemanticShorthandItem[LabelProps] = null,
-    onClick: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ DropdownItemProps) => Unit = null,
-    selected: js.UndefOr[Boolean] = js.undefined,
-    text: SemanticShorthandContent = null,
-    value: Boolean | Double | String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (flag != null) __obj.updateDynamic("flag")(flag.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def descriptionFunction3(
+      value: (/* component */ ReactComponentClass[HtmlSpanProps], HtmlSpanProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("description", js.Any.fromFunction3(value))
+    @scala.inline
+    def description(value: SemanticShorthandItem[HtmlSpanProps]): this.type = set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flagReactElement(value: ReactElement): this.type = set("flag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flagFunction3(
+      value: (/* component */ ReactComponentClass[FlagProps], FlagProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("flag", js.Any.fromFunction3(value))
+    @scala.inline
+    def flag(value: SemanticShorthandItem[FlagProps]): this.type = set("flag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconFunction3(
+      value: (/* component */ ReactComponentClass[IconProps], IconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("icon", js.Any.fromFunction3(value))
+    @scala.inline
+    def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def imageReactElement(value: ReactElement): this.type = set("image", value.asInstanceOf[js.Any])
+    @scala.inline
+    def imageFunction3(
+      value: (/* component */ ReactComponentClass[ImageProps], ImageProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("image", js.Any.fromFunction3(value))
+    @scala.inline
+    def image(value: SemanticShorthandItem[ImageProps]): this.type = set("image", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFunction3(
+      value: (/* component */ ReactComponentClass[LabelProps], LabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("label", js.Any.fromFunction3(value))
+    @scala.inline
+    def label(value: SemanticShorthandItem[LabelProps]): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ DropdownItemProps) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def selected(value: Boolean): this.type = set("selected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textReactElement(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
+    @scala.inline
+    def text(value: SemanticShorthandContent): this.type = set("text", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: Boolean | Double | String): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.div.tag.type, 
-  typingsSlinky.semanticUiReact.dropdownItemMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DropdownItemProps
+  
+  def withProps(p: DropdownItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DropdownItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -18,22 +18,20 @@ trait DocEvent extends js.Object
 
 object DocEvent {
   @scala.inline
-  def `before op`: typingsSlinky.sharedb.sharedbStrings.`before op` = this.cast("before op")
+  def `before op`: typingsSlinky.sharedb.sharedbStrings.`before op` = ("before op").asInstanceOf[typingsSlinky.sharedb.sharedbStrings.`before op`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def create: typingsSlinky.sharedb.sharedbStrings.create = "create".asInstanceOf[typingsSlinky.sharedb.sharedbStrings.create]
   @scala.inline
-  def create: typingsSlinky.sharedb.sharedbStrings.create = this.cast("create")
+  def del: typingsSlinky.sharedb.sharedbStrings.del = "del".asInstanceOf[typingsSlinky.sharedb.sharedbStrings.del]
   @scala.inline
-  def del: typingsSlinky.sharedb.sharedbStrings.del = this.cast("del")
+  def error: typingsSlinky.sharedb.sharedbStrings.error = "error".asInstanceOf[typingsSlinky.sharedb.sharedbStrings.error]
   @scala.inline
-  def error: typingsSlinky.sharedb.sharedbStrings.error = this.cast("error")
+  def load: typingsSlinky.sharedb.sharedbStrings.load = "load".asInstanceOf[typingsSlinky.sharedb.sharedbStrings.load]
   @scala.inline
-  def load: typingsSlinky.sharedb.sharedbStrings.load = this.cast("load")
+  def `no write pending`: typingsSlinky.sharedb.sharedbStrings.`no write pending` = ("no write pending").asInstanceOf[typingsSlinky.sharedb.sharedbStrings.`no write pending`]
   @scala.inline
-  def `no write pending`: typingsSlinky.sharedb.sharedbStrings.`no write pending` = this.cast("no write pending")
+  def `nothing pending`: typingsSlinky.sharedb.sharedbStrings.`nothing pending` = ("nothing pending").asInstanceOf[typingsSlinky.sharedb.sharedbStrings.`nothing pending`]
   @scala.inline
-  def `nothing pending`: typingsSlinky.sharedb.sharedbStrings.`nothing pending` = this.cast("nothing pending")
-  @scala.inline
-  def op: typingsSlinky.sharedb.sharedbStrings.op = this.cast("op")
+  def op: typingsSlinky.sharedb.sharedbStrings.op = "op".asInstanceOf[typingsSlinky.sharedb.sharedbStrings.op]
 }
 

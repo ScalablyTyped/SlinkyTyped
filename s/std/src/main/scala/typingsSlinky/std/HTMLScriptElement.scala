@@ -80,11 +80,12 @@ trait HTMLScriptElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("HTMLScriptElement")
 @js.native
-object HTMLScriptElement extends Instantiable0[HTMLScriptElement]
+object HTMLScriptElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLScriptElement]
 

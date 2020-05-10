@@ -26,9 +26,9 @@ import typingsSlinky.androiduix.android.view.View.TransformationInfo
 import typingsSlinky.androiduix.android.view.ViewGroup.LayoutParams
 import typingsSlinky.androiduix.android.view.animation.Animation
 import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderMap
-import typingsSlinky.androiduix.java.lang.JavaObject
-import typingsSlinky.androiduix.java.lang.Runnable
-import typingsSlinky.androiduix.java.util.ArrayList
+import typingsSlinky.androiduix.java_.lang.JavaObject
+import typingsSlinky.androiduix.java_.lang.Runnable
+import typingsSlinky.androiduix.java_.util.ArrayList
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -337,8 +337,6 @@ class View_ protected ()
   def invalidate(dirty: Rect): js.Any = js.native
   def invalidate(invalidateCache: Boolean): js.Any = js.native
   def invalidate(l: Double, t: Double, r: Double, b: Double): js.Any = js.native
-  /* CompleteClass */
-  override def invalidateDrawable(who: Drawable): Unit = js.native
   def invalidateParentCaches(): Unit = js.native
   def invalidateParentIfNeeded(): Unit = js.native
   def invalidateViewProperty(invalidateParent: Boolean, forceRedraw: Boolean): Unit = js.native
@@ -396,12 +394,6 @@ class View_ protected ()
   /* protected */ def onFocusChanged(gainFocus: Boolean, direction: Double, previouslyFocusedRect: Rect): Unit = js.native
   def onFocusLost(): Unit = js.native
   def onGenericMotionEvent(event: MotionEvent): Boolean = js.native
-  /* CompleteClass */
-  override def onKeyDown(keyCode: Double, event: KeyEvent): Boolean = js.native
-  /* CompleteClass */
-  override def onKeyLongPress(keyCode: Double, event: KeyEvent): Boolean = js.native
-  /* CompleteClass */
-  override def onKeyUp(keyCode: Double, event: KeyEvent): Boolean = js.native
   /* protected */ def onLayout(changed: Boolean, left: Double, top: Double, right: Double, bottom: Double): Unit = js.native
   /* protected */ def onMeasure(widthMeasureSpec: Double, heightMeasureSpec: Double): Unit = js.native
   /* protected */ def onOverScrolled(scrollX: Double, scrollY: Double, clampedX: Boolean, clampedY: Boolean): Unit = js.native
@@ -473,8 +465,6 @@ class View_ protected ()
   def resolveDrawables(): Unit = js.native
   def resolvePadding(): Unit = js.native
   def rootViewRequestFocus(): Boolean = js.native
-  /* CompleteClass */
-  override def scheduleDrawable(who: Drawable, what: Runnable, when: Double): Unit = js.native
   def scrollBy(x: Double, y: Double): Unit = js.native
   def scrollTo(x: Double, y: Double): Unit = js.native
   def setActivated(activated: Boolean): Unit = js.native
@@ -582,8 +572,6 @@ class View_ protected ()
   def transformRect(rect: Rect): Unit = js.native
   def unFocus(): Unit = js.native
   def unscheduleDrawable(who: Drawable): Unit = js.native
-  /* CompleteClass */
-  override def unscheduleDrawable(who: Drawable, what: Runnable): Unit = js.native
   /* private */ def updateMatrix(): js.Any = js.native
   /* protected */ def verifyDrawable(who: Drawable): Boolean = js.native
   def willNotCacheDrawing(): Boolean = js.native

@@ -1,41 +1,35 @@
 package typingsSlinky.spectacle.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.spectacle.mod.CSSProperties
 import typingsSlinky.spectacle.mod.GoToActionProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GoToAction
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.mod.GoToAction] {
+object GoToAction {
   @JSImport("spectacle", "GoToAction")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    margin: Double | String = null,
-    padding: Double | String = null,
-    render: /* goToSlide */ js.UndefOr[js.Function1[/* slide */ Double | String, Unit]] => Unit = null,
-    slide: Double | String = null,
-    style: CSSProperties = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.GoToAction] = {
-    val __obj = js.Dynamic.literal()
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction1(render))
-    if (slide != null) __obj.updateDynamic("slide")(slide.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.spectacle.mod.GoToAction] {
+    @scala.inline
+    def margin(value: Double | String): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def padding(value: Double | String): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def render(value: /* goToSlide */ js.UndefOr[js.Function1[/* slide */ Double | String, Unit]] => Unit): this.type = set("render", js.Any.fromFunction1(value))
+    @scala.inline
+    def slide(value: Double | String): this.type = set("slide", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.GoToAction] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.spectacle.mod.GoToAction](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = GoToActionProps
+  
+  def withProps(p: GoToActionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: GoToAction.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

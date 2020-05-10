@@ -16,24 +16,12 @@ object poolGpuMod extends js.Object {
   class Pool2DProgram protected () extends GPGPUProgram {
     def this(convInfo: Conv2DInfo, poolType: avg, computePositions: Boolean) = this()
     def this(convInfo: Conv2DInfo, poolType: max, computePositions: Boolean) = this()
-    /* CompleteClass */
-    override var outputShape: js.Array[Double] = js.native
-    /* CompleteClass */
-    override var userCode: String = js.native
-    /* CompleteClass */
-    override var variableNames: js.Array[String] = js.native
   }
   
   @js.native
   class Pool3DProgram protected () extends GPGPUProgram {
     def this(convInfo: Conv3DInfo, poolType: avg, computePositions: Boolean) = this()
     def this(convInfo: Conv3DInfo, poolType: max, computePositions: Boolean) = this()
-    /* CompleteClass */
-    override var outputShape: js.Array[Double] = js.native
-    /* CompleteClass */
-    override var userCode: String = js.native
-    /* CompleteClass */
-    override var variableNames: js.Array[String] = js.native
   }
   
 }

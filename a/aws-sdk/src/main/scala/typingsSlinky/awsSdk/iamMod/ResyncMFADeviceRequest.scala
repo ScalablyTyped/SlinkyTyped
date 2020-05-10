@@ -33,8 +33,39 @@ object ResyncMFADeviceRequest {
     UserName: existingUserNameType
   ): ResyncMFADeviceRequest = {
     val __obj = js.Dynamic.literal(AuthenticationCode1 = AuthenticationCode1.asInstanceOf[js.Any], AuthenticationCode2 = AuthenticationCode2.asInstanceOf[js.Any], SerialNumber = SerialNumber.asInstanceOf[js.Any], UserName = UserName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ResyncMFADeviceRequest]
   }
+  @scala.inline
+  implicit class ResyncMFADeviceRequestOps[Self <: ResyncMFADeviceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthenticationCode1(value: authenticationCodeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationCode1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthenticationCode2(value: authenticationCodeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationCode2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSerialNumber(value: serialNumberType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SerialNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserName(value: existingUserNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

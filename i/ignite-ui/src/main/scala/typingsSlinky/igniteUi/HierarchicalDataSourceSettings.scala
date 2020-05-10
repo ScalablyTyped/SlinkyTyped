@@ -5,97 +5,320 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HierarchicalDataSourceSettings
   extends /**
-	 * Option for HierarchicalDataSourceSettings
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
-  var autogenerate: js.UndefOr[Boolean] = js.undefined
-  var callback: js.UndefOr[js.Any] = js.undefined
-  var callee: js.UndefOr[js.Any] = js.undefined
-  var data: js.UndefOr[js.Array[_]] = js.undefined
-  var dataBinding: js.UndefOr[js.Any] = js.undefined
-  var dataBound: js.UndefOr[js.Any] = js.undefined
-  var dataSource: js.UndefOr[js.Any] = js.undefined
-  var defaultChildrenDataProperty: js.UndefOr[String] = js.undefined
-  var filtering: js.UndefOr[HierarchicalDataSourceSettingsFiltering] = js.undefined
-  var initialDataBindDepth: js.UndefOr[Double] = js.undefined
-  var localSchemaTransform: js.UndefOr[Boolean] = js.undefined
-  var maxDataBindDepth: js.UndefOr[Double] = js.undefined
-  var odata: js.UndefOr[Boolean] = js.undefined
-  var paging: js.UndefOr[HierarchicalDataSourceSettingsPaging] = js.undefined
-  var requestType: js.UndefOr[String] = js.undefined
-  var responseContentType: js.UndefOr[js.Any] = js.undefined
-  var responseDataType: js.UndefOr[js.Any] = js.undefined
+  var autogenerate: js.UndefOr[Boolean] = js.native
+  var callback: js.UndefOr[js.Any] = js.native
+  var callee: js.UndefOr[js.Any] = js.native
+  var data: js.UndefOr[js.Array[_]] = js.native
+  var dataBinding: js.UndefOr[js.Any] = js.native
+  var dataBound: js.UndefOr[js.Any] = js.native
+  var dataSource: js.UndefOr[js.Any] = js.native
+  var defaultChildrenDataProperty: js.UndefOr[String] = js.native
+  var filtering: js.UndefOr[HierarchicalDataSourceSettingsFiltering] = js.native
+  var initialDataBindDepth: js.UndefOr[Double] = js.native
+  var localSchemaTransform: js.UndefOr[Boolean] = js.native
+  var maxDataBindDepth: js.UndefOr[Double] = js.native
+  var odata: js.UndefOr[Boolean] = js.native
+  var paging: js.UndefOr[HierarchicalDataSourceSettingsPaging] = js.native
+  var requestType: js.UndefOr[String] = js.native
+  var responseContentType: js.UndefOr[js.Any] = js.native
+  var responseDataType: js.UndefOr[js.Any] = js.native
   /**
   	 * All of the rest - paging, sorting, filtering, can be defined in the layouts definition, which will "override" the parent defs
   	 * IMPORTANT:  if there is no paging, sorting or filtering, an instance of $.ig.DataSource won't be created for child row islands
   	 */
-  var schema: js.UndefOr[HierarchicalDataSourceSettingsSchema] = js.undefined
-  var sorting: js.UndefOr[HierarchicalDataSourceSettingsSorting] = js.undefined
+  var schema: js.UndefOr[HierarchicalDataSourceSettingsSchema] = js.native
+  var sorting: js.UndefOr[HierarchicalDataSourceSettingsSorting] = js.native
   /**
   	 * Other options
   	 */
-  var `type`: js.UndefOr[String] = js.undefined
-  var urlParamsEncoded: js.UndefOr[js.Any] = js.undefined
-  var urlParamsEncoding: js.UndefOr[js.Any] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
+  var urlParamsEncoded: js.UndefOr[js.Any] = js.native
+  var urlParamsEncoding: js.UndefOr[js.Any] = js.native
 }
 
 object HierarchicalDataSourceSettings {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for HierarchicalDataSourceSettings
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    autogenerate: js.UndefOr[Boolean] = js.undefined,
-    callback: js.Any = null,
-    callee: js.Any = null,
-    data: js.Array[_] = null,
-    dataBinding: js.Any = null,
-    dataBound: js.Any = null,
-    dataSource: js.Any = null,
-    defaultChildrenDataProperty: String = null,
-    filtering: HierarchicalDataSourceSettingsFiltering = null,
-    initialDataBindDepth: Int | Double = null,
-    localSchemaTransform: js.UndefOr[Boolean] = js.undefined,
-    maxDataBindDepth: Int | Double = null,
-    odata: js.UndefOr[Boolean] = js.undefined,
-    paging: HierarchicalDataSourceSettingsPaging = null,
-    requestType: String = null,
-    responseContentType: js.Any = null,
-    responseDataType: js.Any = null,
-    schema: HierarchicalDataSourceSettingsSchema = null,
-    sorting: HierarchicalDataSourceSettingsSorting = null,
-    `type`: String = null,
-    urlParamsEncoded: js.Any = null,
-    urlParamsEncoding: js.Any = null
-  ): HierarchicalDataSourceSettings = {
+  def apply(): HierarchicalDataSourceSettings = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(autogenerate)) __obj.updateDynamic("autogenerate")(autogenerate.asInstanceOf[js.Any])
-    if (callback != null) __obj.updateDynamic("callback")(callback.asInstanceOf[js.Any])
-    if (callee != null) __obj.updateDynamic("callee")(callee.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dataBinding != null) __obj.updateDynamic("dataBinding")(dataBinding.asInstanceOf[js.Any])
-    if (dataBound != null) __obj.updateDynamic("dataBound")(dataBound.asInstanceOf[js.Any])
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (defaultChildrenDataProperty != null) __obj.updateDynamic("defaultChildrenDataProperty")(defaultChildrenDataProperty.asInstanceOf[js.Any])
-    if (filtering != null) __obj.updateDynamic("filtering")(filtering.asInstanceOf[js.Any])
-    if (initialDataBindDepth != null) __obj.updateDynamic("initialDataBindDepth")(initialDataBindDepth.asInstanceOf[js.Any])
-    if (!js.isUndefined(localSchemaTransform)) __obj.updateDynamic("localSchemaTransform")(localSchemaTransform.asInstanceOf[js.Any])
-    if (maxDataBindDepth != null) __obj.updateDynamic("maxDataBindDepth")(maxDataBindDepth.asInstanceOf[js.Any])
-    if (!js.isUndefined(odata)) __obj.updateDynamic("odata")(odata.asInstanceOf[js.Any])
-    if (paging != null) __obj.updateDynamic("paging")(paging.asInstanceOf[js.Any])
-    if (requestType != null) __obj.updateDynamic("requestType")(requestType.asInstanceOf[js.Any])
-    if (responseContentType != null) __obj.updateDynamic("responseContentType")(responseContentType.asInstanceOf[js.Any])
-    if (responseDataType != null) __obj.updateDynamic("responseDataType")(responseDataType.asInstanceOf[js.Any])
-    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
-    if (sorting != null) __obj.updateDynamic("sorting")(sorting.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (urlParamsEncoded != null) __obj.updateDynamic("urlParamsEncoded")(urlParamsEncoded.asInstanceOf[js.Any])
-    if (urlParamsEncoding != null) __obj.updateDynamic("urlParamsEncoding")(urlParamsEncoding.asInstanceOf[js.Any])
     __obj.asInstanceOf[HierarchicalDataSourceSettings]
   }
+  @scala.inline
+  implicit class HierarchicalDataSourceSettingsOps[Self <: HierarchicalDataSourceSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutogenerate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autogenerate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutogenerate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autogenerate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCallback(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCallee(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callee")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallee: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callee")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataBinding(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBinding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataBinding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBinding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataBound(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBound")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataBound: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBound")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSource(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultChildrenDataProperty(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultChildrenDataProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultChildrenDataProperty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultChildrenDataProperty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFiltering(value: HierarchicalDataSourceSettingsFiltering): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filtering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFiltering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filtering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialDataBindDepth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialDataBindDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialDataBindDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialDataBindDepth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalSchemaTransform(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localSchemaTransform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalSchemaTransform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localSchemaTransform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDataBindDepth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDataBindDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDataBindDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDataBindDepth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOdata(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("odata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOdata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("odata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaging(value: HierarchicalDataSourceSettingsPaging): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaging: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseContentType(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseContentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseContentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseDataType(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseDataType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseDataType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseDataType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchema(value: HierarchicalDataSourceSettingsSchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSorting(value: HierarchicalDataSourceSettingsSorting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sorting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSorting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sorting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrlParamsEncoded(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlParamsEncoded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrlParamsEncoded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlParamsEncoded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrlParamsEncoding(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlParamsEncoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrlParamsEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlParamsEncoding")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

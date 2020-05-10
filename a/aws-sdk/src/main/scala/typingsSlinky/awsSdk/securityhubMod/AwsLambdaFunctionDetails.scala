@@ -82,46 +82,233 @@ trait AwsLambdaFunctionDetails extends js.Object {
 
 object AwsLambdaFunctionDetails {
   @scala.inline
-  def apply(
-    Code: AwsLambdaFunctionCode = null,
-    CodeSha256: NonEmptyString = null,
-    DeadLetterConfig: AwsLambdaFunctionDeadLetterConfig = null,
-    Environment: AwsLambdaFunctionEnvironment = null,
-    FunctionName: NonEmptyString = null,
-    Handler: NonEmptyString = null,
-    KmsKeyArn: NonEmptyString = null,
-    LastModified: NonEmptyString = null,
-    Layers: AwsLambdaFunctionLayerList = null,
-    MasterArn: NonEmptyString = null,
-    MemorySize: Int | scala.Double = null,
-    RevisionId: NonEmptyString = null,
-    Role: NonEmptyString = null,
-    Runtime: NonEmptyString = null,
-    Timeout: Int | scala.Double = null,
-    TracingConfig: AwsLambdaFunctionTracingConfig = null,
-    Version: NonEmptyString = null,
-    VpcConfig: AwsLambdaFunctionVpcConfig = null
-  ): AwsLambdaFunctionDetails = {
+  def apply(): AwsLambdaFunctionDetails = {
     val __obj = js.Dynamic.literal()
-    if (Code != null) __obj.updateDynamic("Code")(Code.asInstanceOf[js.Any])
-    if (CodeSha256 != null) __obj.updateDynamic("CodeSha256")(CodeSha256.asInstanceOf[js.Any])
-    if (DeadLetterConfig != null) __obj.updateDynamic("DeadLetterConfig")(DeadLetterConfig.asInstanceOf[js.Any])
-    if (Environment != null) __obj.updateDynamic("Environment")(Environment.asInstanceOf[js.Any])
-    if (FunctionName != null) __obj.updateDynamic("FunctionName")(FunctionName.asInstanceOf[js.Any])
-    if (Handler != null) __obj.updateDynamic("Handler")(Handler.asInstanceOf[js.Any])
-    if (KmsKeyArn != null) __obj.updateDynamic("KmsKeyArn")(KmsKeyArn.asInstanceOf[js.Any])
-    if (LastModified != null) __obj.updateDynamic("LastModified")(LastModified.asInstanceOf[js.Any])
-    if (Layers != null) __obj.updateDynamic("Layers")(Layers.asInstanceOf[js.Any])
-    if (MasterArn != null) __obj.updateDynamic("MasterArn")(MasterArn.asInstanceOf[js.Any])
-    if (MemorySize != null) __obj.updateDynamic("MemorySize")(MemorySize.asInstanceOf[js.Any])
-    if (RevisionId != null) __obj.updateDynamic("RevisionId")(RevisionId.asInstanceOf[js.Any])
-    if (Role != null) __obj.updateDynamic("Role")(Role.asInstanceOf[js.Any])
-    if (Runtime != null) __obj.updateDynamic("Runtime")(Runtime.asInstanceOf[js.Any])
-    if (Timeout != null) __obj.updateDynamic("Timeout")(Timeout.asInstanceOf[js.Any])
-    if (TracingConfig != null) __obj.updateDynamic("TracingConfig")(TracingConfig.asInstanceOf[js.Any])
-    if (Version != null) __obj.updateDynamic("Version")(Version.asInstanceOf[js.Any])
-    if (VpcConfig != null) __obj.updateDynamic("VpcConfig")(VpcConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsLambdaFunctionDetails]
   }
+  @scala.inline
+  implicit class AwsLambdaFunctionDetailsOps[Self <: AwsLambdaFunctionDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCode(value: AwsLambdaFunctionCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Code")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodeSha256(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeSha256")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodeSha256: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeSha256")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeadLetterConfig(value: AwsLambdaFunctionDeadLetterConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeadLetterConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeadLetterConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeadLetterConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironment(value: AwsLambdaFunctionEnvironment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Environment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Environment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFunctionName(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFunctionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandler(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Handler")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHandler: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Handler")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsKeyArn(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsKeyArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModified(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModified")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModified: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModified")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayers(value: AwsLambdaFunctionLayerList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Layers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Layers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterArn(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMemorySize(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MemorySize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMemorySize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MemorySize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RevisionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RevisionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRole(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuntime(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Runtime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuntime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Runtime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTracingConfig(value: AwsLambdaFunctionTracingConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TracingConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTracingConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TracingConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcConfig(value: AwsLambdaFunctionVpcConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

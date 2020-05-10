@@ -22,12 +22,53 @@ trait Range extends js.Object {
 
 object Range {
   @scala.inline
-  def apply(From: Int | scala.Double = null, Step: Int | scala.Double = null, To: Int | scala.Double = null): Range = {
+  def apply(): Range = {
     val __obj = js.Dynamic.literal()
-    if (From != null) __obj.updateDynamic("From")(From.asInstanceOf[js.Any])
-    if (Step != null) __obj.updateDynamic("Step")(Step.asInstanceOf[js.Any])
-    if (To != null) __obj.updateDynamic("To")(To.asInstanceOf[js.Any])
     __obj.asInstanceOf[Range]
   }
+  @scala.inline
+  implicit class RangeOps[Self <: Range] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFrom(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("From")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("From")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStep(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Step")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Step")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTo(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("To")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("To")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

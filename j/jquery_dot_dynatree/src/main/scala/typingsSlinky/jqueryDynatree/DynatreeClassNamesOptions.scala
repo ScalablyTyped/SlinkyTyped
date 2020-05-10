@@ -4,87 +4,335 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DynatreeClassNamesOptions extends js.Object {
-  var active: js.UndefOr[String] = js.undefined
-  var checkbox: js.UndefOr[String] = js.undefined
-  var combinedExpanderPrefix: js.UndefOr[String] = js.undefined
-  var combinedIconPrefix: js.UndefOr[String] = js.undefined
-  var connector: js.UndefOr[String] = js.undefined
-  var container: js.UndefOr[String] = js.undefined
-  var empty: js.UndefOr[String] = js.undefined
-  var expanded: js.UndefOr[String] = js.undefined
-  var expander: js.UndefOr[String] = js.undefined
-  var focused: js.UndefOr[String] = js.undefined
-  var folder: js.UndefOr[String] = js.undefined
-  var hasChildren: js.UndefOr[String] = js.undefined
-  var hidden: js.UndefOr[String] = js.undefined
-  var lastsib: js.UndefOr[String] = js.undefined
-  var `lazy`: js.UndefOr[String] = js.undefined
-  var noConnector: js.UndefOr[String] = js.undefined
-  var node: js.UndefOr[String] = js.undefined
-  var nodeError: js.UndefOr[String] = js.undefined
-  var nodeIcon: js.UndefOr[String] = js.undefined
-  var nodeWait: js.UndefOr[String] = js.undefined
-  var partsel: js.UndefOr[String] = js.undefined
-  var selected: js.UndefOr[String] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
-  var vline: js.UndefOr[String] = js.undefined
+  var active: js.UndefOr[String] = js.native
+  var checkbox: js.UndefOr[String] = js.native
+  var combinedExpanderPrefix: js.UndefOr[String] = js.native
+  var combinedIconPrefix: js.UndefOr[String] = js.native
+  var connector: js.UndefOr[String] = js.native
+  var container: js.UndefOr[String] = js.native
+  var empty: js.UndefOr[String] = js.native
+  var expanded: js.UndefOr[String] = js.native
+  var expander: js.UndefOr[String] = js.native
+  var focused: js.UndefOr[String] = js.native
+  var folder: js.UndefOr[String] = js.native
+  var hasChildren: js.UndefOr[String] = js.native
+  var hidden: js.UndefOr[String] = js.native
+  var lastsib: js.UndefOr[String] = js.native
+  var `lazy`: js.UndefOr[String] = js.native
+  var noConnector: js.UndefOr[String] = js.native
+  var node: js.UndefOr[String] = js.native
+  var nodeError: js.UndefOr[String] = js.native
+  var nodeIcon: js.UndefOr[String] = js.native
+  var nodeWait: js.UndefOr[String] = js.native
+  var partsel: js.UndefOr[String] = js.native
+  var selected: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.native
+  var vline: js.UndefOr[String] = js.native
 }
 
 object DynatreeClassNamesOptions {
   @scala.inline
-  def apply(
-    active: String = null,
-    checkbox: String = null,
-    combinedExpanderPrefix: String = null,
-    combinedIconPrefix: String = null,
-    connector: String = null,
-    container: String = null,
-    empty: String = null,
-    expanded: String = null,
-    expander: String = null,
-    focused: String = null,
-    folder: String = null,
-    hasChildren: String = null,
-    hidden: String = null,
-    lastsib: String = null,
-    `lazy`: String = null,
-    noConnector: String = null,
-    node: String = null,
-    nodeError: String = null,
-    nodeIcon: String = null,
-    nodeWait: String = null,
-    partsel: String = null,
-    selected: String = null,
-    title: String = null,
-    vline: String = null
-  ): DynatreeClassNamesOptions = {
+  def apply(): DynatreeClassNamesOptions = {
     val __obj = js.Dynamic.literal()
-    if (active != null) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (checkbox != null) __obj.updateDynamic("checkbox")(checkbox.asInstanceOf[js.Any])
-    if (combinedExpanderPrefix != null) __obj.updateDynamic("combinedExpanderPrefix")(combinedExpanderPrefix.asInstanceOf[js.Any])
-    if (combinedIconPrefix != null) __obj.updateDynamic("combinedIconPrefix")(combinedIconPrefix.asInstanceOf[js.Any])
-    if (connector != null) __obj.updateDynamic("connector")(connector.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (empty != null) __obj.updateDynamic("empty")(empty.asInstanceOf[js.Any])
-    if (expanded != null) __obj.updateDynamic("expanded")(expanded.asInstanceOf[js.Any])
-    if (expander != null) __obj.updateDynamic("expander")(expander.asInstanceOf[js.Any])
-    if (focused != null) __obj.updateDynamic("focused")(focused.asInstanceOf[js.Any])
-    if (folder != null) __obj.updateDynamic("folder")(folder.asInstanceOf[js.Any])
-    if (hasChildren != null) __obj.updateDynamic("hasChildren")(hasChildren.asInstanceOf[js.Any])
-    if (hidden != null) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
-    if (lastsib != null) __obj.updateDynamic("lastsib")(lastsib.asInstanceOf[js.Any])
-    if (`lazy` != null) __obj.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
-    if (noConnector != null) __obj.updateDynamic("noConnector")(noConnector.asInstanceOf[js.Any])
-    if (node != null) __obj.updateDynamic("node")(node.asInstanceOf[js.Any])
-    if (nodeError != null) __obj.updateDynamic("nodeError")(nodeError.asInstanceOf[js.Any])
-    if (nodeIcon != null) __obj.updateDynamic("nodeIcon")(nodeIcon.asInstanceOf[js.Any])
-    if (nodeWait != null) __obj.updateDynamic("nodeWait")(nodeWait.asInstanceOf[js.Any])
-    if (partsel != null) __obj.updateDynamic("partsel")(partsel.asInstanceOf[js.Any])
-    if (selected != null) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (vline != null) __obj.updateDynamic("vline")(vline.asInstanceOf[js.Any])
     __obj.asInstanceOf[DynatreeClassNamesOptions]
   }
+  @scala.inline
+  implicit class DynatreeClassNamesOptionsOps[Self <: DynatreeClassNamesOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckbox(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkbox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckbox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkbox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCombinedExpanderPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("combinedExpanderPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCombinedExpanderPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("combinedExpanderPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCombinedIconPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("combinedIconPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCombinedIconPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("combinedIconPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnector(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmpty(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmpty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpanded(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpanded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpander(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expander")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpander: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expander")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocused(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocused: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focused")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFolder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("folder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFolder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("folder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasChildren(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChildren")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChildren")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHidden(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastsib(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastsib")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastsib: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastsib")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLazy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lazy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLazy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lazy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoConnector(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noConnector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoConnector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noConnector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeError(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeWait(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeWait")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeWait: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeWait")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartsel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partsel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartsel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partsel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelected(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vline")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

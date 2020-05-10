@@ -1,15 +1,16 @@
 package typingsSlinky.reactNativeTabNavigator.components
 
+import typingsSlinky.reactNativeTabNavigator.mod.TabNavigatorProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TabNavigator
-  extends SharedApply_TabNavigatorProps_1079316793[typingsSlinky.reactNativeTabNavigator.mod.TabNavigator] {
+object TabNavigator {
   @JSImport("react-native-tab-navigator", "TabNavigator")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: TabNavigatorProps): SharedBuilder_TabNavigatorProps_1107387328[typingsSlinky.reactNativeTabNavigator.mod.TabNavigator] = new SharedBuilder_TabNavigatorProps_1107387328[typingsSlinky.reactNativeTabNavigator.mod.TabNavigator](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TabNavigator.type): SharedBuilder_TabNavigatorProps_1107387328[typingsSlinky.reactNativeTabNavigator.mod.TabNavigator] = new SharedBuilder_TabNavigatorProps_1107387328[typingsSlinky.reactNativeTabNavigator.mod.TabNavigator](js.Array(this.component, js.Dictionary.empty))()
 }
 

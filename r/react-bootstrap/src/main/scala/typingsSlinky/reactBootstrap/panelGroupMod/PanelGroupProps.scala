@@ -7,37 +7,91 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PanelGroupProps
   extends AllHTMLAttributes[PanelGroup]
      with ClassAttributes[PanelGroup] {
-  var accordion: js.UndefOr[Boolean] = js.undefined
-  var activeKey: js.UndefOr[js.Any] = js.undefined
-  var defaultActiveKey: js.UndefOr[js.Any] = js.undefined
-  var generateChildId: js.UndefOr[js.Function] = js.undefined
+  var accordion: js.UndefOr[Boolean] = js.native
+  var activeKey: js.UndefOr[js.Any] = js.native
+  var defaultActiveKey: js.UndefOr[js.Any] = js.native
+  var generateChildId: js.UndefOr[js.Function] = js.native
   @JSName("onSelect")
-  var onSelect_PanelGroupProps: js.UndefOr[SelectCallback] = js.undefined
+  var onSelect_PanelGroupProps: js.UndefOr[SelectCallback] = js.native
 }
 
 object PanelGroupProps {
   @scala.inline
-  def apply(
-    AllHTMLAttributes: AllHTMLAttributes[PanelGroup] = null,
-    ClassAttributes: ClassAttributes[PanelGroup] = null,
-    accordion: js.UndefOr[Boolean] = js.undefined,
-    activeKey: js.Any = null,
-    defaultActiveKey: js.Any = null,
-    generateChildId: js.Function = null,
-    onSelect: SelectCallback = null
-  ): PanelGroupProps = {
+  def apply(): PanelGroupProps = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
-    if (!js.isUndefined(accordion)) __obj.updateDynamic("accordion")(accordion.asInstanceOf[js.Any])
-    if (activeKey != null) __obj.updateDynamic("activeKey")(activeKey.asInstanceOf[js.Any])
-    if (defaultActiveKey != null) __obj.updateDynamic("defaultActiveKey")(defaultActiveKey.asInstanceOf[js.Any])
-    if (generateChildId != null) __obj.updateDynamic("generateChildId")(generateChildId.asInstanceOf[js.Any])
-    if (onSelect != null) __obj.updateDynamic("onSelect")(onSelect.asInstanceOf[js.Any])
     __obj.asInstanceOf[PanelGroupProps]
   }
+  @scala.inline
+  implicit class PanelGroupPropsOps[Self <: PanelGroupProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccordion(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accordion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccordion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accordion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActiveKey(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultActiveKey(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultActiveKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultActiveKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultActiveKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGenerateChildId(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateChildId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGenerateChildId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateChildId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSelect(value: SelectCallback): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

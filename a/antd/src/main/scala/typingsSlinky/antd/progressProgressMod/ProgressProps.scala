@@ -17,75 +17,263 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ProgressProps extends js.Object {
-  var className: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
   var format: js.UndefOr[
     js.Function2[
       /* percent */ js.UndefOr[Double], 
       /* successPercent */ js.UndefOr[Double], 
       TagMod[Any]
     ]
-  ] = js.undefined
-  var gapDegree: js.UndefOr[Double] = js.undefined
-  var gapPosition: js.UndefOr[top | bottom | left | right] = js.undefined
-  var percent: js.UndefOr[Double] = js.undefined
-  var prefixCls: js.UndefOr[String] = js.undefined
-  var showInfo: js.UndefOr[Boolean] = js.undefined
-  var size: js.UndefOr[ProgressSize] = js.undefined
-  var status: js.UndefOr[normal | exception | active | success] = js.undefined
-  var steps: js.UndefOr[Double] = js.undefined
-  var strokeColor: js.UndefOr[String | ProgressGradient] = js.undefined
-  var strokeLinecap: js.UndefOr[butt | square | round] = js.undefined
-  var strokeWidth: js.UndefOr[Double] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
-  var successPercent: js.UndefOr[Double] = js.undefined
-  var trailColor: js.UndefOr[String] = js.undefined
-  var `type`: js.UndefOr[ProgressType] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
+  ] = js.native
+  var gapDegree: js.UndefOr[Double] = js.native
+  var gapPosition: js.UndefOr[top | bottom | left | right] = js.native
+  var percent: js.UndefOr[Double] = js.native
+  var prefixCls: js.UndefOr[String] = js.native
+  var showInfo: js.UndefOr[Boolean] = js.native
+  var size: js.UndefOr[ProgressSize] = js.native
+  var status: js.UndefOr[normal | exception | active | success] = js.native
+  var steps: js.UndefOr[Double] = js.native
+  var strokeColor: js.UndefOr[String | ProgressGradient] = js.native
+  var strokeLinecap: js.UndefOr[butt | square | round] = js.native
+  var strokeWidth: js.UndefOr[Double] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
+  var successPercent: js.UndefOr[Double] = js.native
+  var trailColor: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[ProgressType] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object ProgressProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    format: (/* percent */ js.UndefOr[Double], /* successPercent */ js.UndefOr[Double]) => TagMod[Any] = null,
-    gapDegree: Int | Double = null,
-    gapPosition: top | bottom | left | right = null,
-    percent: Int | Double = null,
-    prefixCls: String = null,
-    showInfo: js.UndefOr[Boolean] = js.undefined,
-    size: ProgressSize = null,
-    status: normal | exception | active | success = null,
-    steps: Int | Double = null,
-    strokeColor: String | ProgressGradient = null,
-    strokeLinecap: butt | square | round = null,
-    strokeWidth: Int | Double = null,
-    style: CSSProperties = null,
-    successPercent: Int | Double = null,
-    trailColor: String = null,
-    `type`: ProgressType = null,
-    width: Int | Double = null
-  ): ProgressProps = {
+  def apply(): ProgressProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(js.Any.fromFunction2(format))
-    if (gapDegree != null) __obj.updateDynamic("gapDegree")(gapDegree.asInstanceOf[js.Any])
-    if (gapPosition != null) __obj.updateDynamic("gapPosition")(gapPosition.asInstanceOf[js.Any])
-    if (percent != null) __obj.updateDynamic("percent")(percent.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(showInfo)) __obj.updateDynamic("showInfo")(showInfo.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (steps != null) __obj.updateDynamic("steps")(steps.asInstanceOf[js.Any])
-    if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
-    if (strokeLinecap != null) __obj.updateDynamic("strokeLinecap")(strokeLinecap.asInstanceOf[js.Any])
-    if (strokeWidth != null) __obj.updateDynamic("strokeWidth")(strokeWidth.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (successPercent != null) __obj.updateDynamic("successPercent")(successPercent.asInstanceOf[js.Any])
-    if (trailColor != null) __obj.updateDynamic("trailColor")(trailColor.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProgressProps]
   }
+  @scala.inline
+  implicit class ProgressPropsOps[Self <: ProgressProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: (/* percent */ js.UndefOr[Double], /* successPercent */ js.UndefOr[Double]) => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGapDegree(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gapDegree")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGapDegree: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gapDegree")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGapPosition(value: top | bottom | left | right): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gapPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGapPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gapPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPercent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPercent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowInfo(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: ProgressSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: normal | exception | active | success): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSteps(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSteps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeColor(value: String | ProgressGradient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeLinecap(value: butt | square | round): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeLinecap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeLinecap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeLinecap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessPercent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successPercent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessPercent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successPercent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrailColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trailColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrailColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trailColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: ProgressType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

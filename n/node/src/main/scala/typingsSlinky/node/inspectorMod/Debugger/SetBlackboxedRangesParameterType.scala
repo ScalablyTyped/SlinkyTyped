@@ -5,20 +5,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SetBlackboxedRangesParameterType extends js.Object {
-  var positions: js.Array[ScriptPosition]
+  var positions: js.Array[ScriptPosition] = js.native
   /**
     * Id of the script.
     */
-  var scriptId: ScriptId
+  var scriptId: ScriptId = js.native
 }
 
 object SetBlackboxedRangesParameterType {
   @scala.inline
   def apply(positions: js.Array[ScriptPosition], scriptId: ScriptId): SetBlackboxedRangesParameterType = {
     val __obj = js.Dynamic.literal(positions = positions.asInstanceOf[js.Any], scriptId = scriptId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SetBlackboxedRangesParameterType]
   }
+  @scala.inline
+  implicit class SetBlackboxedRangesParameterTypeOps[Self <: SetBlackboxedRangesParameterType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPositions(value: js.Array[ScriptPosition]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScriptId(value: ScriptId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -29,6 +29,7 @@ import scala.scalajs.js.annotation._
 /**
   * An editor model.
   */
+@js.native
 trait IModel extends IDisposable {
   /**
     * A mime type of the model.
@@ -36,24 +37,24 @@ trait IModel extends IDisposable {
     * #### Notes
     * It is never `null`, the default mime type is `text/plain`.
     */
-  var mimeType: String
+  var mimeType: String = js.native
   /**
     * A signal emitted when a property changes.
     */
-  var mimeTypeChanged: ISignal[IModel, IChangedArgs[String, String]]
+  var mimeTypeChanged: ISignal[IModel, IChangedArgs[String, String]] = js.native
   /**
     * The underlying `IModelDB` instance in which model
     * data is stored.
     */
-  val modelDB: IModelDB
+  val modelDB: IModelDB = js.native
   /**
     * The currently selected code.
     */
-  val selections: IObservableMap[js.Array[ITextSelection]]
+  val selections: IObservableMap[js.Array[ITextSelection]] = js.native
   /**
     * The text stored in the model.
     */
-  val value: IObservableString
+  val value: IObservableString = js.native
 }
 
 object IModel {
@@ -68,8 +69,45 @@ object IModel {
     value: IObservableString
   ): IModel = {
     val __obj = js.Dynamic.literal(dispose = js.Any.fromFunction0(dispose), isDisposed = isDisposed.asInstanceOf[js.Any], mimeType = mimeType.asInstanceOf[js.Any], mimeTypeChanged = mimeTypeChanged.asInstanceOf[js.Any], modelDB = modelDB.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IModel]
   }
+  @scala.inline
+  implicit class IModelOps[Self <: IModel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMimeType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMimeTypeChanged(value: ISignal[IModel, IChangedArgs[String, String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeTypeChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModelDB(value: IModelDB): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelDB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelections(value: IObservableMap[js.Array[ITextSelection]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selections")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: IObservableString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

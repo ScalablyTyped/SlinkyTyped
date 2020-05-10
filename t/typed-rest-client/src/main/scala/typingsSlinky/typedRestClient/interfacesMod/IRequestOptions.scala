@@ -4,54 +4,192 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IRequestOptions extends js.Object {
-  var allowRedirectDowngrade: js.UndefOr[Boolean] = js.undefined
-  var allowRedirects: js.UndefOr[Boolean] = js.undefined
-  var allowRetries: js.UndefOr[Boolean] = js.undefined
-  var cert: js.UndefOr[ICertConfiguration] = js.undefined
-  var headers: js.UndefOr[IHeaders] = js.undefined
-  var ignoreSslError: js.UndefOr[Boolean] = js.undefined
-  var keepAlive: js.UndefOr[Boolean] = js.undefined
-  var maxRedirects: js.UndefOr[Double] = js.undefined
-  var maxRetries: js.UndefOr[Double] = js.undefined
-  var maxSockets: js.UndefOr[Double] = js.undefined
-  var presignedUrlPatterns: js.UndefOr[js.Array[js.RegExp]] = js.undefined
-  var proxy: js.UndefOr[IProxyConfiguration] = js.undefined
-  var socketTimeout: js.UndefOr[Double] = js.undefined
+  var allowRedirectDowngrade: js.UndefOr[Boolean] = js.native
+  var allowRedirects: js.UndefOr[Boolean] = js.native
+  var allowRetries: js.UndefOr[Boolean] = js.native
+  var cert: js.UndefOr[ICertConfiguration] = js.native
+  var headers: js.UndefOr[IHeaders] = js.native
+  var ignoreSslError: js.UndefOr[Boolean] = js.native
+  var keepAlive: js.UndefOr[Boolean] = js.native
+  var maxRedirects: js.UndefOr[Double] = js.native
+  var maxRetries: js.UndefOr[Double] = js.native
+  var maxSockets: js.UndefOr[Double] = js.native
+  var presignedUrlPatterns: js.UndefOr[js.Array[js.RegExp]] = js.native
+  var proxy: js.UndefOr[IProxyConfiguration] = js.native
+  var socketTimeout: js.UndefOr[Double] = js.native
 }
 
 object IRequestOptions {
   @scala.inline
-  def apply(
-    allowRedirectDowngrade: js.UndefOr[Boolean] = js.undefined,
-    allowRedirects: js.UndefOr[Boolean] = js.undefined,
-    allowRetries: js.UndefOr[Boolean] = js.undefined,
-    cert: ICertConfiguration = null,
-    headers: IHeaders = null,
-    ignoreSslError: js.UndefOr[Boolean] = js.undefined,
-    keepAlive: js.UndefOr[Boolean] = js.undefined,
-    maxRedirects: Int | Double = null,
-    maxRetries: Int | Double = null,
-    maxSockets: Int | Double = null,
-    presignedUrlPatterns: js.Array[js.RegExp] = null,
-    proxy: IProxyConfiguration = null,
-    socketTimeout: Int | Double = null
-  ): IRequestOptions = {
+  def apply(): IRequestOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowRedirectDowngrade)) __obj.updateDynamic("allowRedirectDowngrade")(allowRedirectDowngrade.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowRedirects)) __obj.updateDynamic("allowRedirects")(allowRedirects.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowRetries)) __obj.updateDynamic("allowRetries")(allowRetries.asInstanceOf[js.Any])
-    if (cert != null) __obj.updateDynamic("cert")(cert.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreSslError)) __obj.updateDynamic("ignoreSslError")(ignoreSslError.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepAlive)) __obj.updateDynamic("keepAlive")(keepAlive.asInstanceOf[js.Any])
-    if (maxRedirects != null) __obj.updateDynamic("maxRedirects")(maxRedirects.asInstanceOf[js.Any])
-    if (maxRetries != null) __obj.updateDynamic("maxRetries")(maxRetries.asInstanceOf[js.Any])
-    if (maxSockets != null) __obj.updateDynamic("maxSockets")(maxSockets.asInstanceOf[js.Any])
-    if (presignedUrlPatterns != null) __obj.updateDynamic("presignedUrlPatterns")(presignedUrlPatterns.asInstanceOf[js.Any])
-    if (proxy != null) __obj.updateDynamic("proxy")(proxy.asInstanceOf[js.Any])
-    if (socketTimeout != null) __obj.updateDynamic("socketTimeout")(socketTimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[IRequestOptions]
   }
+  @scala.inline
+  implicit class IRequestOptionsOps[Self <: IRequestOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowRedirectDowngrade(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowRedirectDowngrade")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowRedirectDowngrade: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowRedirectDowngrade")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowRedirects(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowRedirects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowRedirects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowRedirects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowRetries(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowRetries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowRetries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowRetries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCert(value: ICertConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cert")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCert: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cert")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: IHeaders): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreSslError(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreSslError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreSslError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreSslError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepAlive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAlive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepAlive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAlive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRedirects(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRedirects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRedirects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRedirects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRetries(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRetries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSockets(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSockets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSockets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSockets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPresignedUrlPatterns(value: js.Array[js.RegExp]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presignedUrlPatterns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPresignedUrlPatterns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presignedUrlPatterns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProxy(value: IProxyConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProxy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSocketTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socketTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSocketTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socketTimeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

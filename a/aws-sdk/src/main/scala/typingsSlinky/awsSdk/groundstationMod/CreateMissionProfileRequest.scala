@@ -42,16 +42,78 @@ object CreateMissionProfileRequest {
     dataflowEdges: DataflowEdgeList,
     minimumViableContactDurationSeconds: DurationInSeconds,
     name: SafeName,
-    trackingConfigArn: ConfigArn,
-    contactPostPassDurationSeconds: Int | scala.Double = null,
-    contactPrePassDurationSeconds: Int | scala.Double = null,
-    tags: TagsMap = null
+    trackingConfigArn: ConfigArn
   ): CreateMissionProfileRequest = {
     val __obj = js.Dynamic.literal(dataflowEdges = dataflowEdges.asInstanceOf[js.Any], minimumViableContactDurationSeconds = minimumViableContactDurationSeconds.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], trackingConfigArn = trackingConfigArn.asInstanceOf[js.Any])
-    if (contactPostPassDurationSeconds != null) __obj.updateDynamic("contactPostPassDurationSeconds")(contactPostPassDurationSeconds.asInstanceOf[js.Any])
-    if (contactPrePassDurationSeconds != null) __obj.updateDynamic("contactPrePassDurationSeconds")(contactPrePassDurationSeconds.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateMissionProfileRequest]
   }
+  @scala.inline
+  implicit class CreateMissionProfileRequestOps[Self <: CreateMissionProfileRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataflowEdges(value: DataflowEdgeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataflowEdges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinimumViableContactDurationSeconds(value: DurationInSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumViableContactDurationSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: SafeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrackingConfigArn(value: ConfigArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackingConfigArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContactPostPassDurationSeconds(value: DurationInSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactPostPassDurationSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContactPostPassDurationSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactPostPassDurationSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContactPrePassDurationSeconds(value: DurationInSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactPrePassDurationSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContactPrePassDurationSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactPrePassDurationSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagsMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

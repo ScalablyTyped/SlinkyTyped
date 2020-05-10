@@ -18,22 +18,20 @@ trait Placement extends js.Object
 
 object Placement {
   @scala.inline
-  def bottom: typingsSlinky.rcTooltip.rcTooltipStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.rcTooltip.rcTooltipStrings.bottom = "bottom".asInstanceOf[typingsSlinky.rcTooltip.rcTooltipStrings.bottom]
   @scala.inline
-  def bottomLeft: typingsSlinky.rcTooltip.rcTooltipStrings.bottomLeft = this.cast("bottomLeft")
+  def bottomLeft: typingsSlinky.rcTooltip.rcTooltipStrings.bottomLeft = "bottomLeft".asInstanceOf[typingsSlinky.rcTooltip.rcTooltipStrings.bottomLeft]
   @scala.inline
-  def bottomRight: typingsSlinky.rcTooltip.rcTooltipStrings.bottomRight = this.cast("bottomRight")
+  def bottomRight: typingsSlinky.rcTooltip.rcTooltipStrings.bottomRight = "bottomRight".asInstanceOf[typingsSlinky.rcTooltip.rcTooltipStrings.bottomRight]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.rcTooltip.rcTooltipStrings.left = "left".asInstanceOf[typingsSlinky.rcTooltip.rcTooltipStrings.left]
   @scala.inline
-  def left: typingsSlinky.rcTooltip.rcTooltipStrings.left = this.cast("left")
+  def right: typingsSlinky.rcTooltip.rcTooltipStrings.right = "right".asInstanceOf[typingsSlinky.rcTooltip.rcTooltipStrings.right]
   @scala.inline
-  def right: typingsSlinky.rcTooltip.rcTooltipStrings.right = this.cast("right")
+  def top: typingsSlinky.rcTooltip.rcTooltipStrings.top = "top".asInstanceOf[typingsSlinky.rcTooltip.rcTooltipStrings.top]
   @scala.inline
-  def top: typingsSlinky.rcTooltip.rcTooltipStrings.top = this.cast("top")
+  def topLeft: typingsSlinky.rcTooltip.rcTooltipStrings.topLeft = "topLeft".asInstanceOf[typingsSlinky.rcTooltip.rcTooltipStrings.topLeft]
   @scala.inline
-  def topLeft: typingsSlinky.rcTooltip.rcTooltipStrings.topLeft = this.cast("topLeft")
-  @scala.inline
-  def topRight: typingsSlinky.rcTooltip.rcTooltipStrings.topRight = this.cast("topRight")
+  def topRight: typingsSlinky.rcTooltip.rcTooltipStrings.topRight = "topRight".asInstanceOf[typingsSlinky.rcTooltip.rcTooltipStrings.topRight]
 }
 

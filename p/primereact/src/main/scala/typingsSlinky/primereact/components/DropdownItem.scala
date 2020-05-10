@@ -1,41 +1,34 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.AnonOption
 import typingsSlinky.primereact.dropdownItemMod.DropdownItemProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DropdownItem
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.dropdownItemMod.DropdownItem] {
+object DropdownItem {
   @JSImport("primereact/components/dropdown/DropdownItem", "DropdownItem")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: selected */
-  def apply(
-    onClick: /* e */ AnonOption => Unit = null,
-    option: js.Object = null,
-    template: /* option */ js.Any => js.UndefOr[ReactElement] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.dropdownItemMod.DropdownItem] = {
-    val __obj = js.Dynamic.literal()
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (option != null) __obj.updateDynamic("option")(option.asInstanceOf[js.Any])
-    if (template != null) __obj.updateDynamic("template")(js.Any.fromFunction1(template))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.dropdownItemMod.DropdownItem] {
+    @scala.inline
+    def onClick(value: /* e */ AnonOption => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def option(value: js.Object): this.type = set("option", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selected(value: Boolean): this.type = set("selected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def template(value: /* option */ js.Any => js.UndefOr[ReactElement]): this.type = set("template", js.Any.fromFunction1(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.dropdownItemMod.DropdownItem] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.dropdownItemMod.DropdownItem](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DropdownItemProps
+  
+  def withProps(p: DropdownItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DropdownItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

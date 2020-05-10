@@ -22,11 +22,47 @@ trait ExportBundleRequest extends js.Object {
 
 object ExportBundleRequest {
   @scala.inline
-  def apply(bundleId: BundleId, platform: Platform = null, projectId: ProjectId = null): ExportBundleRequest = {
+  def apply(bundleId: BundleId): ExportBundleRequest = {
     val __obj = js.Dynamic.literal(bundleId = bundleId.asInstanceOf[js.Any])
-    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
-    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportBundleRequest]
   }
+  @scala.inline
+  implicit class ExportBundleRequestOps[Self <: ExportBundleRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBundleId(value: BundleId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlatform(value: Platform): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectId(value: ProjectId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

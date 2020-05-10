@@ -16,18 +16,16 @@ trait RequestMethod extends js.Object
 
 object RequestMethod {
   @scala.inline
-  def DELETE: typingsSlinky.octokitRest.octokitRestStrings.DELETE = this.cast("DELETE")
+  def DELETE: typingsSlinky.octokitRest.octokitRestStrings.DELETE = "DELETE".asInstanceOf[typingsSlinky.octokitRest.octokitRestStrings.DELETE]
   @scala.inline
-  def GET: typingsSlinky.octokitRest.octokitRestStrings.GET = this.cast("GET")
+  def GET: typingsSlinky.octokitRest.octokitRestStrings.GET = "GET".asInstanceOf[typingsSlinky.octokitRest.octokitRestStrings.GET]
   @scala.inline
-  def HEAD: typingsSlinky.octokitRest.octokitRestStrings.HEAD = this.cast("HEAD")
+  def HEAD: typingsSlinky.octokitRest.octokitRestStrings.HEAD = "HEAD".asInstanceOf[typingsSlinky.octokitRest.octokitRestStrings.HEAD]
   @scala.inline
-  def PATCH: typingsSlinky.octokitRest.octokitRestStrings.PATCH = this.cast("PATCH")
+  def PATCH: typingsSlinky.octokitRest.octokitRestStrings.PATCH = "PATCH".asInstanceOf[typingsSlinky.octokitRest.octokitRestStrings.PATCH]
   @scala.inline
-  def POST: typingsSlinky.octokitRest.octokitRestStrings.POST = this.cast("POST")
+  def POST: typingsSlinky.octokitRest.octokitRestStrings.POST = "POST".asInstanceOf[typingsSlinky.octokitRest.octokitRestStrings.POST]
   @scala.inline
-  def PUT: typingsSlinky.octokitRest.octokitRestStrings.PUT = this.cast("PUT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def PUT: typingsSlinky.octokitRest.octokitRestStrings.PUT = "PUT".asInstanceOf[typingsSlinky.octokitRest.octokitRestStrings.PUT]
 }
 

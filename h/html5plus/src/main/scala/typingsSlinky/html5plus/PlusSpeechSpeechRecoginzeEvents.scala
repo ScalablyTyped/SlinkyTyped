@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/speech.html](http://www.html5plus.org/doc/zh_cn/speech.html)
   */
+@js.native
 trait PlusSpeechSpeechRecoginzeEvents extends js.Object {
   /**
     * 结束语音识别
@@ -18,7 +19,7 @@ trait PlusSpeechSpeechRecoginzeEvents extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/speech.html](http://www.html5plus.org/doc/zh_cn/speech.html)
     */
-  var end: js.UndefOr[String] = js.undefined
+  var end: js.UndefOr[String] = js.native
   /**
     * 语音识别错误
     * 语音识别发生错误时触发。
@@ -26,7 +27,7 @@ trait PlusSpeechSpeechRecoginzeEvents extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/speech.html](http://www.html5plus.org/doc/zh_cn/speech.html)
     */
-  var error: js.UndefOr[String] = js.undefined
+  var error: js.UndefOr[String] = js.native
   /**
     * 最终语音识别
     * 返回最终语音识别结果。
@@ -34,7 +35,7 @@ trait PlusSpeechSpeechRecoginzeEvents extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/speech.html](http://www.html5plus.org/doc/zh_cn/speech.html)
     */
-  var recognition: js.UndefOr[String] = js.undefined
+  var recognition: js.UndefOr[String] = js.native
   /**
     * 临时语音识别结果
     * 返回临时语音识别结果时触发。
@@ -42,7 +43,7 @@ trait PlusSpeechSpeechRecoginzeEvents extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/speech.html](http://www.html5plus.org/doc/zh_cn/speech.html)
     */
-  var recognizing: js.UndefOr[String] = js.undefined
+  var recognizing: js.UndefOr[String] = js.native
   /**
     * 开始语音识别
     * 调用plus.speech.startRecognize方法开始语音识别时触发。
@@ -50,7 +51,7 @@ trait PlusSpeechSpeechRecoginzeEvents extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/speech.html](http://www.html5plus.org/doc/zh_cn/speech.html)
     */
-  var start: js.UndefOr[String] = js.undefined
+  var start: js.UndefOr[String] = js.native
   /**
     * 音量变化
     * 开始语音识别后，麦克风录制到的语音音量变化时触发。
@@ -58,27 +59,94 @@ trait PlusSpeechSpeechRecoginzeEvents extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/speech.html](http://www.html5plus.org/doc/zh_cn/speech.html)
     */
-  var volumeChange: js.UndefOr[String] = js.undefined
+  var volumeChange: js.UndefOr[String] = js.native
 }
 
 object PlusSpeechSpeechRecoginzeEvents {
   @scala.inline
-  def apply(
-    end: String = null,
-    error: String = null,
-    recognition: String = null,
-    recognizing: String = null,
-    start: String = null,
-    volumeChange: String = null
-  ): PlusSpeechSpeechRecoginzeEvents = {
+  def apply(): PlusSpeechSpeechRecoginzeEvents = {
     val __obj = js.Dynamic.literal()
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (recognition != null) __obj.updateDynamic("recognition")(recognition.asInstanceOf[js.Any])
-    if (recognizing != null) __obj.updateDynamic("recognizing")(recognizing.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (volumeChange != null) __obj.updateDynamic("volumeChange")(volumeChange.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusSpeechSpeechRecoginzeEvents]
   }
+  @scala.inline
+  implicit class PlusSpeechSpeechRecoginzeEventsOps[Self <: PlusSpeechSpeechRecoginzeEvents] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnd(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecognition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recognition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecognition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recognition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecognizing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recognizing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecognizing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recognizing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeChange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeChange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

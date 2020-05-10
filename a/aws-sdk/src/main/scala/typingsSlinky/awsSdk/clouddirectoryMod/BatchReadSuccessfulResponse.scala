@@ -63,38 +63,185 @@ trait BatchReadSuccessfulResponse extends js.Object {
 
 object BatchReadSuccessfulResponse {
   @scala.inline
-  def apply(
-    GetLinkAttributes: BatchGetLinkAttributesResponse = null,
-    GetObjectAttributes: BatchGetObjectAttributesResponse = null,
-    GetObjectInformation: BatchGetObjectInformationResponse = null,
-    ListAttachedIndices: BatchListAttachedIndicesResponse = null,
-    ListIncomingTypedLinks: BatchListIncomingTypedLinksResponse = null,
-    ListIndex: BatchListIndexResponse = null,
-    ListObjectAttributes: BatchListObjectAttributesResponse = null,
-    ListObjectChildren: BatchListObjectChildrenResponse = null,
-    ListObjectParentPaths: BatchListObjectParentPathsResponse = null,
-    ListObjectParents: BatchListObjectParentsResponse = null,
-    ListObjectPolicies: BatchListObjectPoliciesResponse = null,
-    ListOutgoingTypedLinks: BatchListOutgoingTypedLinksResponse = null,
-    ListPolicyAttachments: BatchListPolicyAttachmentsResponse = null,
-    LookupPolicy: BatchLookupPolicyResponse = null
-  ): BatchReadSuccessfulResponse = {
+  def apply(): BatchReadSuccessfulResponse = {
     val __obj = js.Dynamic.literal()
-    if (GetLinkAttributes != null) __obj.updateDynamic("GetLinkAttributes")(GetLinkAttributes.asInstanceOf[js.Any])
-    if (GetObjectAttributes != null) __obj.updateDynamic("GetObjectAttributes")(GetObjectAttributes.asInstanceOf[js.Any])
-    if (GetObjectInformation != null) __obj.updateDynamic("GetObjectInformation")(GetObjectInformation.asInstanceOf[js.Any])
-    if (ListAttachedIndices != null) __obj.updateDynamic("ListAttachedIndices")(ListAttachedIndices.asInstanceOf[js.Any])
-    if (ListIncomingTypedLinks != null) __obj.updateDynamic("ListIncomingTypedLinks")(ListIncomingTypedLinks.asInstanceOf[js.Any])
-    if (ListIndex != null) __obj.updateDynamic("ListIndex")(ListIndex.asInstanceOf[js.Any])
-    if (ListObjectAttributes != null) __obj.updateDynamic("ListObjectAttributes")(ListObjectAttributes.asInstanceOf[js.Any])
-    if (ListObjectChildren != null) __obj.updateDynamic("ListObjectChildren")(ListObjectChildren.asInstanceOf[js.Any])
-    if (ListObjectParentPaths != null) __obj.updateDynamic("ListObjectParentPaths")(ListObjectParentPaths.asInstanceOf[js.Any])
-    if (ListObjectParents != null) __obj.updateDynamic("ListObjectParents")(ListObjectParents.asInstanceOf[js.Any])
-    if (ListObjectPolicies != null) __obj.updateDynamic("ListObjectPolicies")(ListObjectPolicies.asInstanceOf[js.Any])
-    if (ListOutgoingTypedLinks != null) __obj.updateDynamic("ListOutgoingTypedLinks")(ListOutgoingTypedLinks.asInstanceOf[js.Any])
-    if (ListPolicyAttachments != null) __obj.updateDynamic("ListPolicyAttachments")(ListPolicyAttachments.asInstanceOf[js.Any])
-    if (LookupPolicy != null) __obj.updateDynamic("LookupPolicy")(LookupPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchReadSuccessfulResponse]
   }
+  @scala.inline
+  implicit class BatchReadSuccessfulResponseOps[Self <: BatchReadSuccessfulResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetLinkAttributes(value: BatchGetLinkAttributesResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetLinkAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGetLinkAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetLinkAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetObjectAttributes(value: BatchGetObjectAttributesResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetObjectAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGetObjectAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetObjectAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetObjectInformation(value: BatchGetObjectInformationResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetObjectInformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGetObjectInformation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetObjectInformation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListAttachedIndices(value: BatchListAttachedIndicesResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListAttachedIndices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListAttachedIndices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListAttachedIndices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListIncomingTypedLinks(value: BatchListIncomingTypedLinksResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListIncomingTypedLinks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListIncomingTypedLinks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListIncomingTypedLinks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListIndex(value: BatchListIndexResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListObjectAttributes(value: BatchListObjectAttributesResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListObjectAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListObjectAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListObjectAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListObjectChildren(value: BatchListObjectChildrenResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListObjectChildren")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListObjectChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListObjectChildren")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListObjectParentPaths(value: BatchListObjectParentPathsResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListObjectParentPaths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListObjectParentPaths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListObjectParentPaths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListObjectParents(value: BatchListObjectParentsResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListObjectParents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListObjectParents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListObjectParents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListObjectPolicies(value: BatchListObjectPoliciesResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListObjectPolicies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListObjectPolicies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListObjectPolicies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListOutgoingTypedLinks(value: BatchListOutgoingTypedLinksResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListOutgoingTypedLinks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListOutgoingTypedLinks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListOutgoingTypedLinks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListPolicyAttachments(value: BatchListPolicyAttachmentsResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListPolicyAttachments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListPolicyAttachments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListPolicyAttachments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLookupPolicy(value: BatchLookupPolicyResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LookupPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLookupPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LookupPolicy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

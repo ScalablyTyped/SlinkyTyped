@@ -33,21 +33,78 @@ trait ComputeEnvironmentArgs extends js.Object {
 
 object ComputeEnvironmentArgs {
   @scala.inline
-  def apply(
-    serviceRole: Input[String],
-    `type`: Input[String],
-    computeEnvironmentName: Input[String] = null,
-    computeEnvironmentNamePrefix: Input[String] = null,
-    computeResources: Input[ComputeEnvironmentComputeResources] = null,
-    state: Input[String] = null
-  ): ComputeEnvironmentArgs = {
+  def apply(serviceRole: Input[String], `type`: Input[String]): ComputeEnvironmentArgs = {
     val __obj = js.Dynamic.literal(serviceRole = serviceRole.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (computeEnvironmentName != null) __obj.updateDynamic("computeEnvironmentName")(computeEnvironmentName.asInstanceOf[js.Any])
-    if (computeEnvironmentNamePrefix != null) __obj.updateDynamic("computeEnvironmentNamePrefix")(computeEnvironmentNamePrefix.asInstanceOf[js.Any])
-    if (computeResources != null) __obj.updateDynamic("computeResources")(computeResources.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[ComputeEnvironmentArgs]
   }
+  @scala.inline
+  implicit class ComputeEnvironmentArgsOps[Self <: ComputeEnvironmentArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServiceRole(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComputeEnvironmentName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeEnvironmentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputeEnvironmentName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeEnvironmentName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComputeEnvironmentNamePrefix(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeEnvironmentNamePrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputeEnvironmentNamePrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeEnvironmentNamePrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComputeResources(value: Input[ComputeEnvironmentComputeResources]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeResources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputeResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeResources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

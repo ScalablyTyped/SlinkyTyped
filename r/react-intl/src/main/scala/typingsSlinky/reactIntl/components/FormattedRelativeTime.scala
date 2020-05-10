@@ -1,38 +1,33 @@
 package typingsSlinky.reactIntl.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.formatjsIntlRelativetimeformat.mod.Unit
+import typingsSlinky.reactIntl.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FormattedRelativeTime
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactIntl.mod.FormattedRelativeTime] {
+object FormattedRelativeTime {
   @JSImport("react-intl", "FormattedRelativeTime")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    format: String = null,
-    unit: Unit = null,
-    updateIntervalInSeconds: Int | Double = null,
-    value: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactIntl.mod.FormattedRelativeTime] = {
-    val __obj = js.Dynamic.literal()
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
-    if (updateIntervalInSeconds != null) __obj.updateDynamic("updateIntervalInSeconds")(updateIntervalInSeconds.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactIntl.mod.FormattedRelativeTime] {
+    @scala.inline
+    def format(value: String): this.type = set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unit(value: Unit): this.type = set("unit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def updateIntervalInSeconds(value: Double): this.type = set("updateIntervalInSeconds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactIntl.mod.FormattedRelativeTime] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactIntl.mod.FormattedRelativeTime](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = typingsSlinky.reactIntl.mod.Props
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FormattedRelativeTime.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

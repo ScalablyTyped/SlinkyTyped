@@ -15,8 +15,6 @@ import typingsSlinky.oracleOraclejet.ojmessagingMod.^
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.AsyncValidator
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Converter
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Validation.RegisteredConverter
-import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Validation.RegisteredValidator
-import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Validator
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.all
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.disabled
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.enabled
@@ -32,18 +30,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ojInputDateSettableProperties extends inputBaseSettableProperties[String, String, String] {
-  var converter: Converter[String] | RegisteredConverter
-  var datePicker: AnonChangeMonth
-  var dayMetaData: StringDictionary[StringDictionary[StringDictionary[AnonDisabled]]]
-  var keyboardEdit: enabled | disabled
-  var max: String | Null
-  var min: String | Null
-  var pickerAttributes: AnonClass
-  var renderMode: jet | native
+  var converter: Converter[String] | RegisteredConverter = js.native
+  var datePicker: AnonChangeMonth = js.native
+  var dayMetaData: StringDictionary[StringDictionary[StringDictionary[AnonDisabled]]] = js.native
+  var keyboardEdit: enabled | disabled = js.native
+  var max: String | Null = js.native
+  var min: String | Null = js.native
+  var pickerAttributes: AnonClass = js.native
+  var renderMode: jet | native = js.native
   @JSName("translations")
-  var translations_ojInputDateSettableProperties: AnonCurrentText
-  def dayFormatter(param: DayFormatterInput): Null | all | DayFormatterOutput
+  var translations_ojInputDateSettableProperties: AnonCurrentText = js.native
+  def dayFormatter(param: DayFormatterInput): Null | all | DayFormatterOutput = js.native
 }
 
 object ojInputDateSettableProperties {
@@ -71,18 +70,90 @@ object ojInputDateSettableProperties {
     required: Boolean,
     translations: AnonCurrentText,
     valid: valid | pending | invalidHidden | invalidShown,
-    value: String,
-    describedBy: String = null,
-    max: String = null,
-    min: String = null,
-    validators: js.Array[Validator[String] | RegisteredValidator] = null
+    value: String
   ): ojInputDateSettableProperties = {
     val __obj = js.Dynamic.literal(asyncValidators = asyncValidators.asInstanceOf[js.Any], autocomplete = autocomplete.asInstanceOf[js.Any], autofocus = autofocus.asInstanceOf[js.Any], converter = converter.asInstanceOf[js.Any], datePicker = datePicker.asInstanceOf[js.Any], dayFormatter = js.Any.fromFunction1(dayFormatter), dayMetaData = dayMetaData.asInstanceOf[js.Any], disabled = disabled.asInstanceOf[js.Any], displayOptions = displayOptions.asInstanceOf[js.Any], help = help.asInstanceOf[js.Any], helpHints = helpHints.asInstanceOf[js.Any], keyboardEdit = keyboardEdit.asInstanceOf[js.Any], labelHint = labelHint.asInstanceOf[js.Any], messagesCustom = messagesCustom.asInstanceOf[js.Any], pickerAttributes = pickerAttributes.asInstanceOf[js.Any], placeholder = placeholder.asInstanceOf[js.Any], rawValue = rawValue.asInstanceOf[js.Any], readonly = readonly.asInstanceOf[js.Any], renderMode = renderMode.asInstanceOf[js.Any], required = required.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any], valid = valid.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    if (describedBy != null) __obj.updateDynamic("describedBy")(describedBy.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (validators != null) __obj.updateDynamic("validators")(validators.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojInputDateSettableProperties]
   }
+  @scala.inline
+  implicit class ojInputDateSettablePropertiesOps[Self <: ojInputDateSettableProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConverter(value: Converter[String] | RegisteredConverter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("converter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDatePicker(value: AnonChangeMonth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datePicker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDayFormatter(value: DayFormatterInput => Null | all | DayFormatterOutput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayFormatter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDayMetaData(value: StringDictionary[StringDictionary[StringDictionary[AnonDisabled]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayMetaData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeyboardEdit(value: enabled | disabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardEdit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPickerAttributes(value: AnonClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRenderMode(value: jet | native): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTranslations(value: AnonCurrentText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMax(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(null)
+        ret
+    }
+    @scala.inline
+    def withMin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(null)
+        ret
+    }
+  }
+  
 }
 

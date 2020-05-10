@@ -8,9 +8,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StrictTransitionablePortalProps extends js.Object {
   /** Primary content. */
-  var children: TagMod[Any]
+  var children: TagMod[Any] = js.native
   /**
     * Called when a close event happens.
     *
@@ -19,7 +20,7 @@ trait StrictTransitionablePortalProps extends js.Object {
     */
   var onClose: js.UndefOr[
     js.Function2[/* nothing */ Null, /* data */ PortalProps with TransitionablePortalState, Unit]
-  ] = js.undefined
+  ] = js.native
   /**
     * Callback on each transition that changes visibility to hidden.
     *
@@ -32,7 +33,7 @@ trait StrictTransitionablePortalProps extends js.Object {
       /* data */ TransitionEventData with TransitionablePortalState, 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * Called when an open event happens.
     *
@@ -41,7 +42,7 @@ trait StrictTransitionablePortalProps extends js.Object {
     */
   var onOpen: js.UndefOr[
     js.Function2[/* nothing */ Null, /* data */ PortalProps with TransitionablePortalState, Unit]
-  ] = js.undefined
+  ] = js.native
   /**
     * Callback on animation start.
     *
@@ -54,32 +55,110 @@ trait StrictTransitionablePortalProps extends js.Object {
       /* data */ TransitionEventData with TransitionablePortalState, 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** Controls whether or not the portal is displayed. */
-  var open: js.UndefOr[Boolean] = js.undefined
+  var open: js.UndefOr[Boolean] = js.native
   /** Transition props. */
-  var transition: js.UndefOr[TransitionProps] = js.undefined
+  var transition: js.UndefOr[TransitionProps] = js.native
 }
 
 object StrictTransitionablePortalProps {
   @scala.inline
-  def apply(
-    children: TagMod[Any],
-    onClose: (/* nothing */ Null, /* data */ PortalProps with TransitionablePortalState) => Unit = null,
-    onHide: (/* nothing */ Null, /* data */ TransitionEventData with TransitionablePortalState) => Unit = null,
-    onOpen: (/* nothing */ Null, /* data */ PortalProps with TransitionablePortalState) => Unit = null,
-    onStart: (/* nothing */ Null, /* data */ TransitionEventData with TransitionablePortalState) => Unit = null,
-    open: js.UndefOr[Boolean] = js.undefined,
-    transition: TransitionProps = null
-  ): StrictTransitionablePortalProps = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction2(onClose))
-    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction2(onHide))
-    if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction2(onOpen))
-    if (onStart != null) __obj.updateDynamic("onStart")(js.Any.fromFunction2(onStart))
-    if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.asInstanceOf[js.Any])
-    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
+  def apply(): StrictTransitionablePortalProps = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[StrictTransitionablePortalProps]
   }
+  @scala.inline
+  implicit class StrictTransitionablePortalPropsOps[Self <: StrictTransitionablePortalProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildren(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClose(value: (/* nothing */ Null, /* data */ PortalProps with TransitionablePortalState) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnHide(value: (/* nothing */ Null, /* data */ TransitionEventData with TransitionablePortalState) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnHide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOpen(value: (/* nothing */ Null, /* data */ PortalProps with TransitionablePortalState) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnStart(value: (/* nothing */ Null, /* data */ TransitionEventData with TransitionablePortalState) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransition(value: TransitionProps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

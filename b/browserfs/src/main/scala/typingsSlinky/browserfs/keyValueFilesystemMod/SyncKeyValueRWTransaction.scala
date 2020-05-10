@@ -5,20 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SyncKeyValueRWTransaction extends SyncKeyValueROTransaction {
   /**
     * Aborts and rolls back the transaction.
     */
-  def abort(): Unit
+  def abort(): Unit = js.native
   /**
     * Commits the transaction.
     */
-  def commit(): Unit
+  def commit(): Unit = js.native
   /**
     * Deletes the data at the given key.
     * @param key The key to delete from the store.
     */
-  def del(key: String): Unit
+  def del(key: String): Unit = js.native
   /**
     * Adds the data to the store under the given key.
     * @param key The key to add the data under.
@@ -27,7 +28,7 @@ trait SyncKeyValueRWTransaction extends SyncKeyValueROTransaction {
     *   avoids storing the data if the key exists.
     * @return True if storage succeeded, false otherwise.
     */
-  def put(key: String, data: Buffer, overwrite: Boolean): Boolean
+  def put(key: String, data: Buffer, overwrite: Boolean): Boolean = js.native
 }
 
 object SyncKeyValueRWTransaction {
@@ -40,8 +41,39 @@ object SyncKeyValueRWTransaction {
     put: (String, Buffer, Boolean) => Boolean
   ): SyncKeyValueRWTransaction = {
     val __obj = js.Dynamic.literal(abort = js.Any.fromFunction0(abort), commit = js.Any.fromFunction0(commit), del = js.Any.fromFunction1(del), get = js.Any.fromFunction1(get), put = js.Any.fromFunction3(put))
-  
     __obj.asInstanceOf[SyncKeyValueRWTransaction]
   }
+  @scala.inline
+  implicit class SyncKeyValueRWTransactionOps[Self <: SyncKeyValueRWTransaction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAbort(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abort")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCommit(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commit")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDel(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("del")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPut(value: (String, Buffer, Boolean) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("put")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

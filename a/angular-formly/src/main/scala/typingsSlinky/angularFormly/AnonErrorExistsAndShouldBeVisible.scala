@@ -6,6 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonErrorExistsAndShouldBeVisible extends js.Object {
   /**
   			 * This is set by angular-formly. This is a boolean indicating whether an error message should be shown. Because
@@ -13,32 +14,69 @@ trait AnonErrorExistsAndShouldBeVisible extends js.Object {
   			 * is set to true based on this rule: field invalid && (field touched || validation.show) (with slight difference
   			 * for pre-angular 1.3 because it doesn't have touched support).
   			 */
-  var errorExistsAndShouldBeVisible: js.UndefOr[Boolean] = js.undefined
+  var errorExistsAndShouldBeVisible: js.UndefOr[Boolean] = js.native
   /**
   			 * A map of Formly Expressions mapped to message names. This is really useful when you're using ng-messages
   			 * like in this example.
   			 */
-  var messages: js.UndefOr[StringDictionary[IExpressionFunction | String]] = js.undefined
+  var messages: js.UndefOr[StringDictionary[IExpressionFunction | String]] = js.native
   /**
   			 * A boolean you as the developer can set to specify to force options.validation.errorExistsAndShouldBeVisible
   			 * to be set to true when there are $errors. This is useful when you're trying to call the user's attention to
   			 * some fields for some reason.
   			 */
-  var show: js.UndefOr[Boolean] = js.undefined
+  var show: js.UndefOr[Boolean] = js.native
 }
 
 object AnonErrorExistsAndShouldBeVisible {
   @scala.inline
-  def apply(
-    errorExistsAndShouldBeVisible: js.UndefOr[Boolean] = js.undefined,
-    messages: StringDictionary[IExpressionFunction | String] = null,
-    show: js.UndefOr[Boolean] = js.undefined
-  ): AnonErrorExistsAndShouldBeVisible = {
+  def apply(): AnonErrorExistsAndShouldBeVisible = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(errorExistsAndShouldBeVisible)) __obj.updateDynamic("errorExistsAndShouldBeVisible")(errorExistsAndShouldBeVisible.asInstanceOf[js.Any])
-    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonErrorExistsAndShouldBeVisible]
   }
+  @scala.inline
+  implicit class AnonErrorExistsAndShouldBeVisibleOps[Self <: AnonErrorExistsAndShouldBeVisible] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorExistsAndShouldBeVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorExistsAndShouldBeVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorExistsAndShouldBeVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorExistsAndShouldBeVisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessages(value: StringDictionary[IExpressionFunction | String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

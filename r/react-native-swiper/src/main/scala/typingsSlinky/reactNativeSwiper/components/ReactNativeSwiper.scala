@@ -1,12 +1,9 @@
 package typingsSlinky.reactNativeSwiper.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.NativeScrollEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -19,98 +16,118 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativeSwiper
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactNativeSwiper {
   @JSImport("react-native-swiper", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: loop */
-  def apply(
-    activeDot: ReactElement = null,
-    activeDotColor: String = null,
-    activeDotStyle: StyleProp[ViewStyle] = null,
-    automaticallyAdjustContentInsets: js.UndefOr[Boolean] = js.undefined,
-    autoplay: js.UndefOr[Boolean] = js.undefined,
-    autoplayDirection: js.UndefOr[Boolean] = js.undefined,
-    autoplayTimeout: Int | Double = null,
-    bounces: js.UndefOr[Boolean] = js.undefined,
-    buttonWrapperStyle: StyleProp[ViewStyle] = null,
-    dot: ReactElement = null,
-    dotColor: String = null,
-    dotStyle: StyleProp[ViewStyle] = null,
-    height: Int | Double = null,
-    horizontal: js.UndefOr[Boolean] = js.undefined,
-    index: Int | Double = null,
-    loadMinimal: js.UndefOr[Boolean] = js.undefined,
-    loadMinimalLoader: ReactElement = null,
-    loadMinimalSize: Int | Double = null,
-    nextButton: ReactElement = null,
-    onMomentumScrollEnd: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ SwiperState, /* context */ Swiper) => Unit = null,
-    onResponderRelease: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ SwiperState, /* context */ Swiper) => Unit = null,
-    onScrollBeginDrag: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ SwiperState, /* context */ Swiper) => Unit = null,
-    onTouchEnd: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ SwiperState, /* context */ Swiper) => Unit = null,
-    onTouchStart: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ SwiperState, /* context */ Swiper) => Unit = null,
-    onTouchStartCapture: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ SwiperState, /* context */ Swiper) => Unit = null,
-    paginationStyle: StyleProp[ViewStyle] = null,
-    pagingEnabled: js.UndefOr[Boolean] = js.undefined,
-    prevButton: ReactElement = null,
-    removeClippedSubviews: js.UndefOr[Boolean] = js.undefined,
-    renderPagination: (/* index */ Double, /* total */ Double, /* thisObject */ Swiper) => ReactElement = null,
-    scrollEnabled: js.UndefOr[Boolean] = js.undefined,
-    scrollsToTop: js.UndefOr[Boolean] = js.undefined,
-    showsButtons: js.UndefOr[Boolean] = js.undefined,
-    showsHorizontalScrollIndicator: js.UndefOr[Boolean] = js.undefined,
-    showsPagination: js.UndefOr[Boolean] = js.undefined,
-    showsVerticalScrollIndicator: js.UndefOr[Boolean] = js.undefined,
-    style: StyleProp[ViewStyle] = null,
-    width: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (activeDot != null) __obj.updateDynamic("activeDot")(activeDot.asInstanceOf[js.Any])
-    if (activeDotColor != null) __obj.updateDynamic("activeDotColor")(activeDotColor.asInstanceOf[js.Any])
-    if (activeDotStyle != null) __obj.updateDynamic("activeDotStyle")(activeDotStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(automaticallyAdjustContentInsets)) __obj.updateDynamic("automaticallyAdjustContentInsets")(automaticallyAdjustContentInsets.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoplayDirection)) __obj.updateDynamic("autoplayDirection")(autoplayDirection.asInstanceOf[js.Any])
-    if (autoplayTimeout != null) __obj.updateDynamic("autoplayTimeout")(autoplayTimeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(bounces)) __obj.updateDynamic("bounces")(bounces.asInstanceOf[js.Any])
-    if (buttonWrapperStyle != null) __obj.updateDynamic("buttonWrapperStyle")(buttonWrapperStyle.asInstanceOf[js.Any])
-    if (dot != null) __obj.updateDynamic("dot")(dot.asInstanceOf[js.Any])
-    if (dotColor != null) __obj.updateDynamic("dotColor")(dotColor.asInstanceOf[js.Any])
-    if (dotStyle != null) __obj.updateDynamic("dotStyle")(dotStyle.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (!js.isUndefined(loadMinimal)) __obj.updateDynamic("loadMinimal")(loadMinimal.asInstanceOf[js.Any])
-    if (loadMinimalLoader != null) __obj.updateDynamic("loadMinimalLoader")(loadMinimalLoader.asInstanceOf[js.Any])
-    if (loadMinimalSize != null) __obj.updateDynamic("loadMinimalSize")(loadMinimalSize.asInstanceOf[js.Any])
-    if (nextButton != null) __obj.updateDynamic("nextButton")(nextButton.asInstanceOf[js.Any])
-    if (onMomentumScrollEnd != null) __obj.updateDynamic("onMomentumScrollEnd")(js.Any.fromFunction3(onMomentumScrollEnd))
-    if (onResponderRelease != null) __obj.updateDynamic("onResponderRelease")(js.Any.fromFunction3(onResponderRelease))
-    if (onScrollBeginDrag != null) __obj.updateDynamic("onScrollBeginDrag")(js.Any.fromFunction3(onScrollBeginDrag))
-    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction3(onTouchEnd))
-    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction3(onTouchStart))
-    if (onTouchStartCapture != null) __obj.updateDynamic("onTouchStartCapture")(js.Any.fromFunction3(onTouchStartCapture))
-    if (paginationStyle != null) __obj.updateDynamic("paginationStyle")(paginationStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(pagingEnabled)) __obj.updateDynamic("pagingEnabled")(pagingEnabled.asInstanceOf[js.Any])
-    if (prevButton != null) __obj.updateDynamic("prevButton")(prevButton.asInstanceOf[js.Any])
-    if (!js.isUndefined(removeClippedSubviews)) __obj.updateDynamic("removeClippedSubviews")(removeClippedSubviews.asInstanceOf[js.Any])
-    if (renderPagination != null) __obj.updateDynamic("renderPagination")(js.Any.fromFunction3(renderPagination))
-    if (!js.isUndefined(scrollEnabled)) __obj.updateDynamic("scrollEnabled")(scrollEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollsToTop)) __obj.updateDynamic("scrollsToTop")(scrollsToTop.asInstanceOf[js.Any])
-    if (!js.isUndefined(showsButtons)) __obj.updateDynamic("showsButtons")(showsButtons.asInstanceOf[js.Any])
-    if (!js.isUndefined(showsHorizontalScrollIndicator)) __obj.updateDynamic("showsHorizontalScrollIndicator")(showsHorizontalScrollIndicator.asInstanceOf[js.Any])
-    if (!js.isUndefined(showsPagination)) __obj.updateDynamic("showsPagination")(showsPagination.asInstanceOf[js.Any])
-    if (!js.isUndefined(showsVerticalScrollIndicator)) __obj.updateDynamic("showsVerticalScrollIndicator")(showsVerticalScrollIndicator.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def activeDot(value: ReactElement): this.type = set("activeDot", value.asInstanceOf[js.Any])
+    @scala.inline
+    def activeDotColor(value: String): this.type = set("activeDotColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def activeDotStyle(value: StyleProp[ViewStyle]): this.type = set("activeDotStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def activeDotStyleNull: this.type = set("activeDotStyle", null)
+    @scala.inline
+    def automaticallyAdjustContentInsets(value: Boolean): this.type = set("automaticallyAdjustContentInsets", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoplay(value: Boolean): this.type = set("autoplay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoplayDirection(value: Boolean): this.type = set("autoplayDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoplayTimeout(value: Double): this.type = set("autoplayTimeout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bounces(value: Boolean): this.type = set("bounces", value.asInstanceOf[js.Any])
+    @scala.inline
+    def buttonWrapperStyle(value: StyleProp[ViewStyle]): this.type = set("buttonWrapperStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def buttonWrapperStyleNull: this.type = set("buttonWrapperStyle", null)
+    @scala.inline
+    def dot(value: ReactElement): this.type = set("dot", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dotColor(value: String): this.type = set("dotColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dotStyle(value: StyleProp[ViewStyle]): this.type = set("dotStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dotStyleNull: this.type = set("dotStyle", null)
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def index(value: Double): this.type = set("index", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loadMinimal(value: Boolean): this.type = set("loadMinimal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loadMinimalLoader(value: ReactElement): this.type = set("loadMinimalLoader", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loadMinimalSize(value: Double): this.type = set("loadMinimalSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loop(value: Boolean): this.type = set("loop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextButton(value: ReactElement): this.type = set("nextButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onMomentumScrollEnd(
+      value: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ SwiperState, /* context */ Swiper) => Unit
+    ): this.type = set("onMomentumScrollEnd", js.Any.fromFunction3(value))
+    @scala.inline
+    def onResponderRelease(
+      value: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ SwiperState, /* context */ Swiper) => Unit
+    ): this.type = set("onResponderRelease", js.Any.fromFunction3(value))
+    @scala.inline
+    def onScrollBeginDrag(
+      value: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ SwiperState, /* context */ Swiper) => Unit
+    ): this.type = set("onScrollBeginDrag", js.Any.fromFunction3(value))
+    @scala.inline
+    def onTouchEnd(
+      value: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ SwiperState, /* context */ Swiper) => Unit
+    ): this.type = set("onTouchEnd", js.Any.fromFunction3(value))
+    @scala.inline
+    def onTouchStart(
+      value: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ SwiperState, /* context */ Swiper) => Unit
+    ): this.type = set("onTouchStart", js.Any.fromFunction3(value))
+    @scala.inline
+    def onTouchStartCapture(
+      value: (SyntheticEvent[NodeHandle, NativeScrollEvent], /* state */ SwiperState, /* context */ Swiper) => Unit
+    ): this.type = set("onTouchStartCapture", js.Any.fromFunction3(value))
+    @scala.inline
+    def paginationStyle(value: StyleProp[ViewStyle]): this.type = set("paginationStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paginationStyleNull: this.type = set("paginationStyle", null)
+    @scala.inline
+    def pagingEnabled(value: Boolean): this.type = set("pagingEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prevButton(value: ReactElement): this.type = set("prevButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def removeClippedSubviews(value: Boolean): this.type = set("removeClippedSubviews", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderPagination(value: (/* index */ Double, /* total */ Double, /* thisObject */ Swiper) => ReactElement): this.type = set("renderPagination", js.Any.fromFunction3(value))
+    @scala.inline
+    def scrollEnabled(value: Boolean): this.type = set("scrollEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollsToTop(value: Boolean): this.type = set("scrollsToTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showsButtons(value: Boolean): this.type = set("showsButtons", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showsHorizontalScrollIndicator(value: Boolean): this.type = set("showsHorizontalScrollIndicator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showsPagination(value: Boolean): this.type = set("showsPagination", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showsVerticalScrollIndicator(value: Boolean): this.type = set("showsVerticalScrollIndicator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactNativeSwiper.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SwiperProperties
+  
+  def withProps(p: SwiperProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactNativeSwiper.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

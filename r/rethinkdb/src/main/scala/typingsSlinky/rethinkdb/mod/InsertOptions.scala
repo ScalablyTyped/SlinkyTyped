@@ -1,0 +1,81 @@
+package typingsSlinky.rethinkdb.mod
+
+import typingsSlinky.rethinkdb.rethinkdbStrings.always
+import typingsSlinky.rethinkdb.rethinkdbStrings.error
+import typingsSlinky.rethinkdb.rethinkdbStrings.hard
+import typingsSlinky.rethinkdb.rethinkdbStrings.replace
+import typingsSlinky.rethinkdb.rethinkdbStrings.soft
+import typingsSlinky.rethinkdb.rethinkdbStrings.update
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait InsertOptions extends js.Object {
+  var conflict: js.UndefOr[
+    error | replace | update | (js.Function3[/* id */ String, /* oldDoc */ js.Any, /* newDoc */ js.Any, _])
+  ] = js.native
+  var durability: js.UndefOr[hard | soft] = js.native
+  var returnChanges: js.UndefOr[Boolean | always] = js.native
+}
+
+object InsertOptions {
+  @scala.inline
+  def apply(): InsertOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[InsertOptions]
+  }
+  @scala.inline
+  implicit class InsertOptionsOps[Self <: InsertOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConflictFunction3(value: (/* id */ String, /* oldDoc */ js.Any, /* newDoc */ js.Any) => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conflict")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withConflict(
+      value: error | replace | update | (js.Function3[/* id */ String, /* oldDoc */ js.Any, /* newDoc */ js.Any, _])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conflict")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConflict: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conflict")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDurability(value: hard | soft): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("durability")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDurability: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("durability")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnChanges(value: Boolean | always): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnChanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnChanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnChanges")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

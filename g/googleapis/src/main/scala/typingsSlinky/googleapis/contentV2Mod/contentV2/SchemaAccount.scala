@@ -75,34 +75,161 @@ trait SchemaAccount extends js.Object {
 
 object SchemaAccount {
   @scala.inline
-  def apply(
-    adultContent: js.UndefOr[Boolean] = js.undefined,
-    adwordsLinks: js.Array[SchemaAccountAdwordsLink] = null,
-    businessInformation: SchemaAccountBusinessInformation = null,
-    googleMyBusinessLink: SchemaAccountGoogleMyBusinessLink = null,
-    id: String = null,
-    kind: String = null,
-    name: String = null,
-    reviewsUrl: String = null,
-    sellerId: String = null,
-    users: js.Array[SchemaAccountUser] = null,
-    websiteUrl: String = null,
-    youtubeChannelLinks: js.Array[SchemaAccountYouTubeChannelLink] = null
-  ): SchemaAccount = {
+  def apply(): SchemaAccount = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(adultContent)) __obj.updateDynamic("adultContent")(adultContent.asInstanceOf[js.Any])
-    if (adwordsLinks != null) __obj.updateDynamic("adwordsLinks")(adwordsLinks.asInstanceOf[js.Any])
-    if (businessInformation != null) __obj.updateDynamic("businessInformation")(businessInformation.asInstanceOf[js.Any])
-    if (googleMyBusinessLink != null) __obj.updateDynamic("googleMyBusinessLink")(googleMyBusinessLink.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (reviewsUrl != null) __obj.updateDynamic("reviewsUrl")(reviewsUrl.asInstanceOf[js.Any])
-    if (sellerId != null) __obj.updateDynamic("sellerId")(sellerId.asInstanceOf[js.Any])
-    if (users != null) __obj.updateDynamic("users")(users.asInstanceOf[js.Any])
-    if (websiteUrl != null) __obj.updateDynamic("websiteUrl")(websiteUrl.asInstanceOf[js.Any])
-    if (youtubeChannelLinks != null) __obj.updateDynamic("youtubeChannelLinks")(youtubeChannelLinks.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAccount]
   }
+  @scala.inline
+  implicit class SchemaAccountOps[Self <: SchemaAccount] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdultContent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adultContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdultContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adultContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdwordsLinks(value: js.Array[SchemaAccountAdwordsLink]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adwordsLinks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdwordsLinks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adwordsLinks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBusinessInformation(value: SchemaAccountBusinessInformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("businessInformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBusinessInformation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("businessInformation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGoogleMyBusinessLink(value: SchemaAccountGoogleMyBusinessLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("googleMyBusinessLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoogleMyBusinessLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("googleMyBusinessLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReviewsUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reviewsUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReviewsUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reviewsUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSellerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sellerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSellerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sellerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsers(value: js.Array[SchemaAccountUser]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("users")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("users")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebsiteUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("websiteUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebsiteUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("websiteUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYoutubeChannelLinks(value: js.Array[SchemaAccountYouTubeChannelLink]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("youtubeChannelLinks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYoutubeChannelLinks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("youtubeChannelLinks")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

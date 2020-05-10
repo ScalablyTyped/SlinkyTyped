@@ -54,13 +54,13 @@ trait BLECentralPluginStatic extends BLECentralPluginCommon {
     device_id: String,
     service_uuid: String,
     characteristic_uuid: String,
-    success: js.Function1[/* rawData */ scala.scalajs.js.typedarray.ArrayBuffer, _]
+    success: js.Function1[/* rawData */ js.typedarray.ArrayBuffer, _]
   ): Unit = js.native
   def read(
     device_id: String,
     service_uuid: String,
     characteristic_uuid: String,
-    success: js.Function1[/* rawData */ scala.scalajs.js.typedarray.ArrayBuffer, _],
+    success: js.Function1[/* rawData */ js.typedarray.ArrayBuffer, _],
     failure: js.Function1[/* error */ String | BLEError, _]
   ): Unit = js.native
   def readRSSI(device_id: String, success: js.Function1[/* rssi */ Double, _]): Unit = js.native
@@ -111,20 +111,20 @@ trait BLECentralPluginStatic extends BLECentralPluginCommon {
     device_id: String,
     service_uuid: String,
     characteristic_uuid: String,
-    data: scala.scalajs.js.typedarray.ArrayBuffer
+    data: js.typedarray.ArrayBuffer
   ): Unit = js.native
   def write(
     device_id: String,
     service_uuid: String,
     characteristic_uuid: String,
-    data: scala.scalajs.js.typedarray.ArrayBuffer,
+    data: js.typedarray.ArrayBuffer,
     success: js.Function0[_]
   ): Unit = js.native
   def write(
     device_id: String,
     service_uuid: String,
     characteristic_uuid: String,
-    data: scala.scalajs.js.typedarray.ArrayBuffer,
+    data: js.typedarray.ArrayBuffer,
     success: js.Function0[_],
     failure: js.Function1[/* error */ String | BLEError, _]
   ): Unit = js.native
@@ -134,20 +134,20 @@ trait BLECentralPluginStatic extends BLECentralPluginCommon {
     device_id: String,
     service_uuid: String,
     characteristic_uuid: String,
-    data: scala.scalajs.js.typedarray.ArrayBuffer
+    data: js.typedarray.ArrayBuffer
   ): Unit = js.native
   def writeWithoutResponse(
     device_id: String,
     service_uuid: String,
     characteristic_uuid: String,
-    data: scala.scalajs.js.typedarray.ArrayBuffer,
+    data: js.typedarray.ArrayBuffer,
     success: js.Function0[_]
   ): Unit = js.native
   def writeWithoutResponse(
     device_id: String,
     service_uuid: String,
     characteristic_uuid: String,
-    data: scala.scalajs.js.typedarray.ArrayBuffer,
+    data: js.typedarray.ArrayBuffer,
     success: js.Function0[_],
     failure: js.Function1[/* error */ String, _]
   ): Unit = js.native

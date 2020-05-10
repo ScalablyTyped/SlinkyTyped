@@ -15,6 +15,10 @@ trait FocusEvent extends UIEvent {
 @JSGlobal("FocusEvent")
 @js.native
 object FocusEvent
-  extends Instantiable1[/* type */ java.lang.String, FocusEvent]
-     with Instantiable2[/* type */ java.lang.String, /* eventInitDict */ FocusEventInit, FocusEvent]
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.FocusEvent]
+     with Instantiable2[
+      /* type */ java.lang.String, 
+      /* eventInitDict */ FocusEventInit, 
+      org.scalajs.dom.raw.FocusEvent
+    ]
 

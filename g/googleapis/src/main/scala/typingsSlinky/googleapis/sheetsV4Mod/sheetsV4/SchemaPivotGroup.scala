@@ -69,26 +69,113 @@ trait SchemaPivotGroup extends js.Object {
 
 object SchemaPivotGroup {
   @scala.inline
-  def apply(
-    groupRule: SchemaPivotGroupRule = null,
-    label: String = null,
-    repeatHeadings: js.UndefOr[Boolean] = js.undefined,
-    showTotals: js.UndefOr[Boolean] = js.undefined,
-    sortOrder: String = null,
-    sourceColumnOffset: Int | Double = null,
-    valueBucket: SchemaPivotGroupSortValueBucket = null,
-    valueMetadata: js.Array[SchemaPivotGroupValueMetadata] = null
-  ): SchemaPivotGroup = {
+  def apply(): SchemaPivotGroup = {
     val __obj = js.Dynamic.literal()
-    if (groupRule != null) __obj.updateDynamic("groupRule")(groupRule.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (!js.isUndefined(repeatHeadings)) __obj.updateDynamic("repeatHeadings")(repeatHeadings.asInstanceOf[js.Any])
-    if (!js.isUndefined(showTotals)) __obj.updateDynamic("showTotals")(showTotals.asInstanceOf[js.Any])
-    if (sortOrder != null) __obj.updateDynamic("sortOrder")(sortOrder.asInstanceOf[js.Any])
-    if (sourceColumnOffset != null) __obj.updateDynamic("sourceColumnOffset")(sourceColumnOffset.asInstanceOf[js.Any])
-    if (valueBucket != null) __obj.updateDynamic("valueBucket")(valueBucket.asInstanceOf[js.Any])
-    if (valueMetadata != null) __obj.updateDynamic("valueMetadata")(valueMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPivotGroup]
   }
+  @scala.inline
+  implicit class SchemaPivotGroupOps[Self <: SchemaPivotGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroupRule(value: SchemaPivotGroupRule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupRule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupRule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupRule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepeatHeadings(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repeatHeadings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepeatHeadings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repeatHeadings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowTotals(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showTotals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowTotals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showTotals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortOrder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceColumnOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceColumnOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceColumnOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceColumnOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueBucket(value: SchemaPivotGroupSortValueBucket): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueBucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueBucket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueBucket")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueMetadata(value: js.Array[SchemaPivotGroupValueMetadata]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueMetadata")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,13 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DirectionsResponse extends js.Object {
   /**
     * contains an array of available travel modes. This field is returned when a request specifies a travel `mode` and gets no results.
     * The array contains the available travel modes in the countries of the given set of waypoints.
     * This field is not returned if one or more of the waypoints are `via:` waypoints.
     */
-  var available_travel_modes: js.Array[String]
+  var available_travel_modes: js.Array[String] = js.native
   /**
     * contains an array with details about the geocoding of origin, destination and waypoints.
     *
@@ -18,7 +19,7 @@ trait DirectionsResponse extends js.Object {
     * This is because such waypoints are only reverse geocoded to obtain their representative address after a route has been found.
     * An empty JSON object will occupy the corresponding places in the `geocoded_waypoints` array.
     */
-  var geocoded_waypoints: js.Array[GeocodedWaypoint]
+  var geocoded_waypoints: js.Array[GeocodedWaypoint] = js.native
   /**
     * contains an array of routes from the origin to the destination.
     *
@@ -31,9 +32,9 @@ trait DirectionsResponse extends js.Object {
     * As well, the route also contains copyright and warning information which must be displayed to the user in addition to the
     * routing information.
     */
-  var routes: js.Array[DirectionsRoute]
+  var routes: js.Array[DirectionsRoute] = js.native
   /** contains metadata on the request. */
-  var status: DirectionsReponseStatus
+  var status: DirectionsReponseStatus = js.native
 }
 
 object DirectionsResponse {
@@ -45,8 +46,39 @@ object DirectionsResponse {
     status: DirectionsReponseStatus
   ): DirectionsResponse = {
     val __obj = js.Dynamic.literal(available_travel_modes = available_travel_modes.asInstanceOf[js.Any], geocoded_waypoints = geocoded_waypoints.asInstanceOf[js.Any], routes = routes.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DirectionsResponse]
   }
+  @scala.inline
+  implicit class DirectionsResponseOps[Self <: DirectionsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailable_travel_modes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("available_travel_modes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGeocoded_waypoints(value: js.Array[GeocodedWaypoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geocoded_waypoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoutes(value: js.Array[DirectionsRoute]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: DirectionsReponseStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

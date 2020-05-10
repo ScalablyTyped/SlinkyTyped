@@ -26,18 +26,65 @@ trait ResourceServerType extends js.Object {
 
 object ResourceServerType {
   @scala.inline
-  def apply(
-    Identifier: ResourceServerIdentifierType = null,
-    Name: ResourceServerNameType = null,
-    Scopes: ResourceServerScopeListType = null,
-    UserPoolId: UserPoolIdType = null
-  ): ResourceServerType = {
+  def apply(): ResourceServerType = {
     val __obj = js.Dynamic.literal()
-    if (Identifier != null) __obj.updateDynamic("Identifier")(Identifier.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (Scopes != null) __obj.updateDynamic("Scopes")(Scopes.asInstanceOf[js.Any])
-    if (UserPoolId != null) __obj.updateDynamic("UserPoolId")(UserPoolId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceServerType]
   }
+  @scala.inline
+  implicit class ResourceServerTypeOps[Self <: ResourceServerType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIdentifier(value: ResourceServerIdentifierType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Identifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Identifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: ResourceServerNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScopes(value: ResourceServerScopeListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scopes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScopes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scopes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserPoolId(value: UserPoolIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserPoolId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

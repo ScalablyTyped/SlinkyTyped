@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CanvasGradient extends js.Object {
   /** [CanvasGradient.addColorStop(number stop, [Color](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/Color.html) color)](CanvasGradient.addColorStop.md)
   *
@@ -38,15 +39,28 @@ trait CanvasGradient extends js.Object {
     *
     * 渐变点的颜色。 */
   color: Color
-  ): Unit
+  ): Unit = js.native
 }
 
 object CanvasGradient {
   @scala.inline
   def apply(addColorStop: (Double, Color) => Unit): CanvasGradient = {
     val __obj = js.Dynamic.literal(addColorStop = js.Any.fromFunction2(addColorStop))
-  
     __obj.asInstanceOf[CanvasGradient]
   }
+  @scala.inline
+  implicit class CanvasGradientOps[Self <: CanvasGradient] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddColorStop(value: (Double, Color) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addColorStop")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

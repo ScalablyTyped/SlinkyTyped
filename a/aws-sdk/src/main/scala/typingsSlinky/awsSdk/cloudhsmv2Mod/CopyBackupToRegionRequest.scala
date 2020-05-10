@@ -19,10 +19,41 @@ trait CopyBackupToRegionRequest extends js.Object {
 
 object CopyBackupToRegionRequest {
   @scala.inline
-  def apply(BackupId: BackupId, DestinationRegion: Region, TagList: TagList = null): CopyBackupToRegionRequest = {
+  def apply(BackupId: BackupId, DestinationRegion: Region): CopyBackupToRegionRequest = {
     val __obj = js.Dynamic.literal(BackupId = BackupId.asInstanceOf[js.Any], DestinationRegion = DestinationRegion.asInstanceOf[js.Any])
-    if (TagList != null) __obj.updateDynamic("TagList")(TagList.asInstanceOf[js.Any])
     __obj.asInstanceOf[CopyBackupToRegionRequest]
   }
+  @scala.inline
+  implicit class CopyBackupToRegionRequestOps[Self <: CopyBackupToRegionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackupId(value: BackupId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestinationRegion(value: Region): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTagList(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

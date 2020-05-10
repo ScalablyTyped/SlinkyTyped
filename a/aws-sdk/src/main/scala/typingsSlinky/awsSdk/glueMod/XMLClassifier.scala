@@ -34,20 +34,77 @@ trait XMLClassifier extends js.Object {
 
 object XMLClassifier {
   @scala.inline
-  def apply(
-    Classification: Classification,
-    Name: NameString,
-    CreationTime: js.Date = null,
-    LastUpdated: js.Date = null,
-    RowTag: RowTag = null,
-    Version: Int | Double = null
-  ): XMLClassifier = {
+  def apply(Classification: Classification, Name: NameString): XMLClassifier = {
     val __obj = js.Dynamic.literal(Classification = Classification.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
-    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
-    if (LastUpdated != null) __obj.updateDynamic("LastUpdated")(LastUpdated.asInstanceOf[js.Any])
-    if (RowTag != null) __obj.updateDynamic("RowTag")(RowTag.asInstanceOf[js.Any])
-    if (Version != null) __obj.updateDynamic("Version")(Version.asInstanceOf[js.Any])
     __obj.asInstanceOf[XMLClassifier]
   }
+  @scala.inline
+  implicit class XMLClassifierOps[Self <: XMLClassifier] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassification(value: Classification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Classification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdated(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowTag(value: RowTag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RowTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RowTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: VersionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

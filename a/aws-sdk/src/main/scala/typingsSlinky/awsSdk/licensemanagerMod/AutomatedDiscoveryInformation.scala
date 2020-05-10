@@ -14,10 +14,29 @@ trait AutomatedDiscoveryInformation extends js.Object {
 
 object AutomatedDiscoveryInformation {
   @scala.inline
-  def apply(LastRunTime: js.Date = null): AutomatedDiscoveryInformation = {
+  def apply(): AutomatedDiscoveryInformation = {
     val __obj = js.Dynamic.literal()
-    if (LastRunTime != null) __obj.updateDynamic("LastRunTime")(LastRunTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutomatedDiscoveryInformation]
   }
+  @scala.inline
+  implicit class AutomatedDiscoveryInformationOps[Self <: AutomatedDiscoveryInformation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLastRunTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastRunTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastRunTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastRunTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

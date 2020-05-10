@@ -5,30 +5,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonEnableShiftSelect[T] extends js.Object {
-  var enableShiftSelect: js.UndefOr[Boolean] = js.undefined
-  var onRowsDeselected: js.UndefOr[js.Function1[/* rows */ js.Array[SelectionParams[T]], Unit]] = js.undefined
-  var onRowsSelected: js.UndefOr[js.Function1[/* rows */ js.Array[SelectionParams[T]], Unit]] = js.undefined
-  var selectBy: js.UndefOr[AnonIndexes] = js.undefined
-  var showCheckbox: js.UndefOr[Boolean] = js.undefined
+  var enableShiftSelect: js.UndefOr[Boolean] = js.native
+  var onRowsDeselected: js.UndefOr[js.Function1[/* rows */ js.Array[SelectionParams[T]], Unit]] = js.native
+  var onRowsSelected: js.UndefOr[js.Function1[/* rows */ js.Array[SelectionParams[T]], Unit]] = js.native
+  var selectBy: js.UndefOr[AnonIndexes] = js.native
+  var showCheckbox: js.UndefOr[Boolean] = js.native
 }
 
 object AnonEnableShiftSelect {
   @scala.inline
-  def apply[T](
-    enableShiftSelect: js.UndefOr[Boolean] = js.undefined,
-    onRowsDeselected: /* rows */ js.Array[SelectionParams[T]] => Unit = null,
-    onRowsSelected: /* rows */ js.Array[SelectionParams[T]] => Unit = null,
-    selectBy: AnonIndexes = null,
-    showCheckbox: js.UndefOr[Boolean] = js.undefined
-  ): AnonEnableShiftSelect[T] = {
+  def apply[T](): AnonEnableShiftSelect[T] = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enableShiftSelect)) __obj.updateDynamic("enableShiftSelect")(enableShiftSelect.asInstanceOf[js.Any])
-    if (onRowsDeselected != null) __obj.updateDynamic("onRowsDeselected")(js.Any.fromFunction1(onRowsDeselected))
-    if (onRowsSelected != null) __obj.updateDynamic("onRowsSelected")(js.Any.fromFunction1(onRowsSelected))
-    if (selectBy != null) __obj.updateDynamic("selectBy")(selectBy.asInstanceOf[js.Any])
-    if (!js.isUndefined(showCheckbox)) __obj.updateDynamic("showCheckbox")(showCheckbox.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonEnableShiftSelect[T]]
   }
+  @scala.inline
+  implicit class AnonEnableShiftSelectOps[Self[t] <: AnonEnableShiftSelect[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withEnableShiftSelect(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableShiftSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableShiftSelect: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableShiftSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowsDeselected(value: /* rows */ js.Array[SelectionParams[T]] => Unit): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowsDeselected")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowsDeselected: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowsDeselected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowsSelected(value: /* rows */ js.Array[SelectionParams[T]] => Unit): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowsSelected")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowsSelected: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowsSelected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectBy(value: AnonIndexes): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectBy: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowCheckbox(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showCheckbox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowCheckbox: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showCheckbox")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

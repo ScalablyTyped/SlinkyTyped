@@ -17,14 +17,12 @@ trait MessageType extends js.Object
 
 object MessageType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disconnect: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.disconnect = "disconnect".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.disconnect]
   @scala.inline
-  def disconnect: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.disconnect = this.cast("disconnect")
+  def set_size: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.set_size = "set_size".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.set_size]
   @scala.inline
-  def set_size: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.set_size = this.cast("set_size")
+  def stdin: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.stdin = "stdin".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.stdin]
   @scala.inline
-  def stdin: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.stdin = this.cast("stdin")
-  @scala.inline
-  def stdout: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.stdout = this.cast("stdout")
+  def stdout: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.stdout = "stdout".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.stdout]
 }
 

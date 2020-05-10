@@ -30,16 +30,53 @@ trait EfsLocationArgs extends js.Object {
 
 object EfsLocationArgs {
   @scala.inline
-  def apply(
-    ec2Config: Input[EfsLocationEc2Config],
-    efsFileSystemArn: Input[ARN],
-    subdirectory: Input[String] = null,
-    tags: Input[StringDictionary[_]] = null
-  ): EfsLocationArgs = {
+  def apply(ec2Config: Input[EfsLocationEc2Config], efsFileSystemArn: Input[ARN]): EfsLocationArgs = {
     val __obj = js.Dynamic.literal(ec2Config = ec2Config.asInstanceOf[js.Any], efsFileSystemArn = efsFileSystemArn.asInstanceOf[js.Any])
-    if (subdirectory != null) __obj.updateDynamic("subdirectory")(subdirectory.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[EfsLocationArgs]
   }
+  @scala.inline
+  implicit class EfsLocationArgsOps[Self <: EfsLocationArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEc2Config(value: Input[EfsLocationEc2Config]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ec2Config")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEfsFileSystemArn(value: Input[ARN]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("efsFileSystemArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubdirectory(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subdirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubdirectory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subdirectory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

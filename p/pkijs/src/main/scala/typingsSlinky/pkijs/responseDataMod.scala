@@ -13,12 +13,12 @@ object responseDataMod extends js.Object {
     var responderID: js.Any = js.native
     var responseExtensions: js.Array[typingsSlinky.pkijs.extensionMod.default] = js.native
     var responses: js.Array[typingsSlinky.pkijs.singleResponseMod.default] = js.native
-    var tds: scala.scalajs.js.typedarray.ArrayBuffer = js.native
+    var tds: js.typedarray.ArrayBuffer = js.native
     def fromSchema(schema: js.Any): Unit = js.native
     def toJSON(): js.Any = js.native
     /**
       * Convert current object to asn1js object and set correct values
-      * 
+      *
       * @param {boolean} [encodeFlag]
       * @returns {*}
       */

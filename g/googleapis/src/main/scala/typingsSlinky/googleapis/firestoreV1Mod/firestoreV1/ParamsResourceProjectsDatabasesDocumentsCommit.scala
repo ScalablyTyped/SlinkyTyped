@@ -25,3 +25,55 @@ trait ParamsResourceProjectsDatabasesDocumentsCommit extends StandardParameters 
   var requestBody: js.UndefOr[SchemaCommitRequest] = js.native
 }
 
+object ParamsResourceProjectsDatabasesDocumentsCommit {
+  @scala.inline
+  def apply(): ParamsResourceProjectsDatabasesDocumentsCommit = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ParamsResourceProjectsDatabasesDocumentsCommit]
+  }
+  @scala.inline
+  implicit class ParamsResourceProjectsDatabasesDocumentsCommitOps[Self <: ParamsResourceProjectsDatabasesDocumentsCommit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatabase(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestBody(value: SchemaCommitRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

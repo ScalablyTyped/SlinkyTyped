@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RefreshableLayer extends js.Object {
   /**
     * Refresh interval of the layer in minutes. Value of `0` indicates no refresh.
@@ -13,7 +14,7 @@ trait RefreshableLayer extends js.Object {
     *
     * @default 0
     */
-  var refreshInterval: Double
+  var refreshInterval: Double = js.native
   /**
     * Fetches all the data for the layer.
     *
@@ -21,7 +22,7 @@ trait RefreshableLayer extends js.Object {
     *
     *
     */
-  def refresh(): Unit
+  def refresh(): Unit = js.native
 }
 
 @JSGlobal("__esri.RefreshableLayer")

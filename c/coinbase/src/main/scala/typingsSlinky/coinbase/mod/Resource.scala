@@ -4,19 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Resource extends js.Object {
   /**
     * Resource type
     */
-  var resource: ResourceType
+  var resource: ResourceType = js.native
 }
 
 object Resource {
   @scala.inline
   def apply(resource: ResourceType): Resource = {
     val __obj = js.Dynamic.literal(resource = resource.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Resource]
   }
+  @scala.inline
+  implicit class ResourceOps[Self <: Resource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResource(value: ResourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

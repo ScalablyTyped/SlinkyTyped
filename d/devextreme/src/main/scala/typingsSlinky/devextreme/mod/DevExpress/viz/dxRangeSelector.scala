@@ -1,7 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +14,7 @@ trait dxRangeSelector extends BaseWidget {
   /** Redraws the widget. */
   def render(skipChartAnimation: Boolean): Unit = js.native
   /** Sets the selected range. */
-  def setValue(value: js.Array[Double | String | Date]): Unit = js.native
+  def setValue(value: js.Array[Double | String | js.Date]): Unit = js.native
   def setValue(value: VizRange): Unit = js.native
 }
 

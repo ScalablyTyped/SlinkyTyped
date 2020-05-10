@@ -4,7 +4,7 @@ import typingsSlinky.awsSdk.ec2Mod.Boolean
 import typingsSlinky.awsSdk.ec2Mod.DescribeVpcPeeringConnectionsMaxResults
 import typingsSlinky.awsSdk.ec2Mod.FilterList
 import typingsSlinky.awsSdk.ec2Mod.String
-import typingsSlinky.awsSdk.ec2Mod.ValueStringList
+import typingsSlinky.awsSdk.ec2Mod.VpcPeeringConnectionIdList
 import typingsSlinky.awsSdk.serviceMod.WaiterConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -34,6 +34,94 @@ trait DescribeVpcPeeringConnect extends js.Object {
   /**
     * One or more VPC peering connection IDs. Default: Describes all your VPC peering connections.
     */
-  var VpcPeeringConnectionIds: js.UndefOr[ValueStringList] = js.native
+  var VpcPeeringConnectionIds: js.UndefOr[VpcPeeringConnectionIdList] = js.native
+}
+
+object DescribeVpcPeeringConnect {
+  @scala.inline
+  def apply(): DescribeVpcPeeringConnect = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[DescribeVpcPeeringConnect]
+  }
+  @scala.inline
+  implicit class DescribeVpcPeeringConnectOps[Self <: DescribeVpcPeeringConnect] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$waiter(value: WaiterConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$waiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilters(value: FilterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: DescribeVpcPeeringConnectionsMaxResults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcPeeringConnectionIds(value: VpcPeeringConnectionIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcPeeringConnectionIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcPeeringConnectionIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcPeeringConnectionIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

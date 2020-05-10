@@ -5,19 +5,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Record<@formatjs/intl-utils.@formatjs/intl-utils/dist/number-types.DecimalFormatNum, @formatjs/intl-utils.@formatjs/intl-utils/dist/number-types.SignPattern> */
+@js.native
 trait CompactSignPattern extends js.Object {
-  var `1000`: SignPattern
-  var `10000`: SignPattern
-  var `100000`: SignPattern
-  var `1000000`: SignPattern
-  var `10000000`: SignPattern
-  var `100000000`: SignPattern
-  var `1000000000`: SignPattern
-  var `10000000000`: SignPattern
-  var `100000000000`: SignPattern
-  var `1000000000000`: SignPattern
-  var `10000000000000`: SignPattern
-  var `100000000000000`: SignPattern
+  var `1000`: SignPattern = js.native
+  var `10000`: SignPattern = js.native
+  var `100000`: SignPattern = js.native
+  var `1000000`: SignPattern = js.native
+  var `10000000`: SignPattern = js.native
+  var `100000000`: SignPattern = js.native
+  var `1000000000`: SignPattern = js.native
+  var `10000000000`: SignPattern = js.native
+  var `100000000000`: SignPattern = js.native
+  var `1000000000000`: SignPattern = js.native
+  var `10000000000000`: SignPattern = js.native
+  var `100000000000000`: SignPattern = js.native
 }
 
 object CompactSignPattern {
@@ -51,5 +52,85 @@ object CompactSignPattern {
     __obj.updateDynamic("100000000000000")(`100000000000000`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompactSignPattern]
   }
+  @scala.inline
+  implicit class CompactSignPatternOps[Self <: CompactSignPattern] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with1000(value: SignPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1000")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with10000(value: SignPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("10000")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with100000(value: SignPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("100000")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with1000000(value: SignPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1000000")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with10000000(value: SignPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("10000000")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with100000000(value: SignPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("100000000")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with1000000000(value: SignPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1000000000")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with10000000000(value: SignPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("10000000000")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with100000000000(value: SignPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("100000000000")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with1000000000000(value: SignPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1000000000000")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with10000000000000(value: SignPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("10000000000000")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with100000000000000(value: SignPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("100000000000000")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

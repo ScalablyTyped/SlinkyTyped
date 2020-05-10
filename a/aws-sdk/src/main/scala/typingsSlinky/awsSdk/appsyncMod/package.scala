@@ -130,7 +130,7 @@ package object appsyncMod {
   */
   type TypeDefinitionFormat = typingsSlinky.awsSdk.appsyncMod._TypeDefinitionFormat | java.lang.String
   type TypeList = js.Array[typingsSlinky.awsSdk.appsyncMod.Type]
-  type _Blob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.appsyncMod.Blob | java.lang.String
+  type _Blob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.appsyncMod.Blob | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2017-07-25`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

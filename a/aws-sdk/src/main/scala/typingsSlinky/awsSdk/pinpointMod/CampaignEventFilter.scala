@@ -20,8 +20,27 @@ object CampaignEventFilter {
   @scala.inline
   def apply(Dimensions: EventDimensions, FilterType: FilterType): CampaignEventFilter = {
     val __obj = js.Dynamic.literal(Dimensions = Dimensions.asInstanceOf[js.Any], FilterType = FilterType.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CampaignEventFilter]
   }
+  @scala.inline
+  implicit class CampaignEventFilterOps[Self <: CampaignEventFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDimensions(value: EventDimensions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFilterType(value: FilterType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

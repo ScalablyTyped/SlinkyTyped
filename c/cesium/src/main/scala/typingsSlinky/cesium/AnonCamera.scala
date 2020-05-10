@@ -7,20 +7,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCamera extends js.Object {
-  var camera: js.UndefOr[Camera] = js.undefined
-  var canvas: js.UndefOr[HTMLCanvasElement] = js.undefined
-  var ellipsoid: js.UndefOr[Ellipsoid] = js.undefined
+  var camera: js.UndefOr[Camera] = js.native
+  var canvas: js.UndefOr[HTMLCanvasElement] = js.native
+  var ellipsoid: js.UndefOr[Ellipsoid] = js.native
 }
 
 object AnonCamera {
   @scala.inline
-  def apply(camera: Camera = null, canvas: HTMLCanvasElement = null, ellipsoid: Ellipsoid = null): AnonCamera = {
+  def apply(): AnonCamera = {
     val __obj = js.Dynamic.literal()
-    if (camera != null) __obj.updateDynamic("camera")(camera.asInstanceOf[js.Any])
-    if (canvas != null) __obj.updateDynamic("canvas")(canvas.asInstanceOf[js.Any])
-    if (ellipsoid != null) __obj.updateDynamic("ellipsoid")(ellipsoid.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCamera]
   }
+  @scala.inline
+  implicit class AnonCameraOps[Self <: AnonCamera] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCamera(value: Camera): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("camera")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCamera: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("camera")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanvas(value: HTMLCanvasElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanvas: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEllipsoid(value: Ellipsoid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEllipsoid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

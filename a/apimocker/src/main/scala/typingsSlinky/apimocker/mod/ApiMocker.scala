@@ -3,6 +3,7 @@ package typingsSlinky.apimocker.mod
 import typingsSlinky.express.mod.Application_
 import typingsSlinky.express.mod.RequestHandler
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.expressServeStaticCore.mod.Request
 import typingsSlinky.expressServeStaticCore.mod.Response
 import typingsSlinky.node.httpMod.IncomingMessage
@@ -15,13 +16,13 @@ import scala.scalajs.js.annotation._
 trait ApiMocker extends js.Object {
   @JSName("express")
   var express_Original: Application_ = js.native
-  var middlewares: js.Array[RequestHandler[ParamsDictionary]] = js.native
+  var middlewares: js.Array[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
   /**
     * Express instance itself is a request handler, which could be invoked without
     * third argument.
     */
-  def express(req: Request[ParamsDictionary, _, _], res: Response[_]): js.Any = js.native
-  def express(req: Request[ParamsDictionary, _, _], res: ServerResponse): js.Any = js.native
+  def express(req: Request[ParamsDictionary, _, _, Query], res: Response[_]): js.Any = js.native
+  def express(req: Request[ParamsDictionary, _, _, Query], res: ServerResponse): js.Any = js.native
   def express(req: IncomingMessage, res: Response[_]): js.Any = js.native
   def express(req: IncomingMessage, res: ServerResponse): js.Any = js.native
   def loadConfigFile(): Unit = js.native

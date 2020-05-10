@@ -1,53 +1,118 @@
 package typingsSlinky.fundamentalReact.timeMod
 
-import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.fundamentalReact.AnonHour
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TimeBaseProps extends js.Object {
-  var customStyles: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var disableStyles: js.UndefOr[Boolean] = js.undefined
-  /* Set to **true** to use the 12-hour clock (hours ranging from 01 to 12) and to display a meridiem control. */
-  var format12Hours: js.UndefOr[Boolean] = js.undefined
-  /* Enables the input for hours. */
-  var showHour: js.UndefOr[Boolean] = js.undefined
-  /* Enables the input for minutes. */
-  var showMinute: js.UndefOr[Boolean] = js.undefined
-  /* Enables the input for seconds. */
-  var showSecond: js.UndefOr[Boolean] = js.undefined
-  /* Set to **true** to show up/down buttons for each input. */
-  var spinners: js.UndefOr[Boolean] = js.undefined
-  /* The time component values. Contains four properties:
-    **hour** (with values from 01 to 12 when `format12Hours` is true or 00 to 23 when `format12Hours` is false),
-    **minute** (with values from 00 to 59), **second** (with values from 00 to 59),
-    **meridiem** (with values 0 for AM or 1 for PM). */
-  var time: js.UndefOr[AnonHour] = js.undefined
+  var disableStyles: js.UndefOr[Boolean] = js.native
+  var format12Hours: js.UndefOr[Boolean] = js.native
+  var showHour: js.UndefOr[Boolean] = js.native
+  var showMinute: js.UndefOr[Boolean] = js.native
+  var showSecond: js.UndefOr[Boolean] = js.native
+  var spinners: js.UndefOr[Boolean] = js.native
+  var time: js.UndefOr[AnonHour] = js.native
 }
 
 object TimeBaseProps {
   @scala.inline
-  def apply(
-    customStyles: StringDictionary[js.Any] = null,
-    disableStyles: js.UndefOr[Boolean] = js.undefined,
-    format12Hours: js.UndefOr[Boolean] = js.undefined,
-    showHour: js.UndefOr[Boolean] = js.undefined,
-    showMinute: js.UndefOr[Boolean] = js.undefined,
-    showSecond: js.UndefOr[Boolean] = js.undefined,
-    spinners: js.UndefOr[Boolean] = js.undefined,
-    time: AnonHour = null
-  ): TimeBaseProps = {
+  def apply(): TimeBaseProps = {
     val __obj = js.Dynamic.literal()
-    if (customStyles != null) __obj.updateDynamic("customStyles")(customStyles.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableStyles)) __obj.updateDynamic("disableStyles")(disableStyles.asInstanceOf[js.Any])
-    if (!js.isUndefined(format12Hours)) __obj.updateDynamic("format12Hours")(format12Hours.asInstanceOf[js.Any])
-    if (!js.isUndefined(showHour)) __obj.updateDynamic("showHour")(showHour.asInstanceOf[js.Any])
-    if (!js.isUndefined(showMinute)) __obj.updateDynamic("showMinute")(showMinute.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSecond)) __obj.updateDynamic("showSecond")(showSecond.asInstanceOf[js.Any])
-    if (!js.isUndefined(spinners)) __obj.updateDynamic("spinners")(spinners.asInstanceOf[js.Any])
-    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimeBaseProps]
   }
+  @scala.inline
+  implicit class TimeBasePropsOps[Self <: TimeBaseProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisableStyles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat12Hours(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format12Hours")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat12Hours: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format12Hours")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowHour(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowHour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showHour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowMinute(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showMinute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowMinute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showMinute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowSecond(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showSecond")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowSecond: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showSecond")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpinners(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spinners")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpinners: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spinners")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTime(value: AnonHour): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

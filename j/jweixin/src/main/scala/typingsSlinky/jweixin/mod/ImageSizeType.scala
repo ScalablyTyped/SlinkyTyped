@@ -12,10 +12,8 @@ trait ImageSizeType extends js.Object
 
 object ImageSizeType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def compressed: typingsSlinky.jweixin.jweixinStrings.compressed = "compressed".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.compressed]
   @scala.inline
-  def compressed: typingsSlinky.jweixin.jweixinStrings.compressed = this.cast("compressed")
-  @scala.inline
-  def original: typingsSlinky.jweixin.jweixinStrings.original = this.cast("original")
+  def original: typingsSlinky.jweixin.jweixinStrings.original = "original".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.original]
 }
 

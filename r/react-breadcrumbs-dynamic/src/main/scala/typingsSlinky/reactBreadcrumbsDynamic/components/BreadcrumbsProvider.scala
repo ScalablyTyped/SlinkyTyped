@@ -1,34 +1,26 @@
 package typingsSlinky.reactBreadcrumbsDynamic.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBreadcrumbsDynamic.mod.BreadcrumbsProviderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BreadcrumbsProvider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactBreadcrumbsDynamic.mod.BreadcrumbsProvider] {
+object BreadcrumbsProvider {
   @JSImport("react-breadcrumbs-dynamic", "BreadcrumbsProvider")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    shouldBreadcrumbsUpdate: /* repeated */ js.Any => _ = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactBreadcrumbsDynamic.mod.BreadcrumbsProvider] = {
-    val __obj = js.Dynamic.literal()
-    if (shouldBreadcrumbsUpdate != null) __obj.updateDynamic("shouldBreadcrumbsUpdate")(js.Any.fromFunction1(shouldBreadcrumbsUpdate))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactBreadcrumbsDynamic.mod.BreadcrumbsProvider] {
+    @scala.inline
+    def shouldBreadcrumbsUpdate(value: /* repeated */ js.Any => _): this.type = set("shouldBreadcrumbsUpdate", js.Any.fromFunction1(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactBreadcrumbsDynamic.mod.BreadcrumbsProvider] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactBreadcrumbsDynamic.mod.BreadcrumbsProvider](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = BreadcrumbsProviderProps
+  
+  def withProps(p: BreadcrumbsProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: BreadcrumbsProvider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

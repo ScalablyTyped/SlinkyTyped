@@ -56,33 +56,155 @@ trait CreateTaskSetRequest extends js.Object {
 
 object CreateTaskSetRequest {
   @scala.inline
-  def apply(
-    cluster: String,
-    service: String,
-    taskDefinition: String,
-    capacityProviderStrategy: CapacityProviderStrategy = null,
-    clientToken: String = null,
-    externalId: String = null,
-    launchType: LaunchType = null,
-    loadBalancers: LoadBalancers = null,
-    networkConfiguration: NetworkConfiguration = null,
-    platformVersion: String = null,
-    scale: Scale = null,
-    serviceRegistries: ServiceRegistries = null,
-    tags: Tags = null
-  ): CreateTaskSetRequest = {
+  def apply(cluster: String, service: String, taskDefinition: String): CreateTaskSetRequest = {
     val __obj = js.Dynamic.literal(cluster = cluster.asInstanceOf[js.Any], service = service.asInstanceOf[js.Any], taskDefinition = taskDefinition.asInstanceOf[js.Any])
-    if (capacityProviderStrategy != null) __obj.updateDynamic("capacityProviderStrategy")(capacityProviderStrategy.asInstanceOf[js.Any])
-    if (clientToken != null) __obj.updateDynamic("clientToken")(clientToken.asInstanceOf[js.Any])
-    if (externalId != null) __obj.updateDynamic("externalId")(externalId.asInstanceOf[js.Any])
-    if (launchType != null) __obj.updateDynamic("launchType")(launchType.asInstanceOf[js.Any])
-    if (loadBalancers != null) __obj.updateDynamic("loadBalancers")(loadBalancers.asInstanceOf[js.Any])
-    if (networkConfiguration != null) __obj.updateDynamic("networkConfiguration")(networkConfiguration.asInstanceOf[js.Any])
-    if (platformVersion != null) __obj.updateDynamic("platformVersion")(platformVersion.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (serviceRegistries != null) __obj.updateDynamic("serviceRegistries")(serviceRegistries.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateTaskSetRequest]
   }
+  @scala.inline
+  implicit class CreateTaskSetRequestOps[Self <: CreateTaskSetRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCluster(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withService(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTaskDefinition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskDefinition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCapacityProviderStrategy(value: CapacityProviderStrategy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capacityProviderStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapacityProviderStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capacityProviderStrategy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchType(value: LaunchType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadBalancers(value: LoadBalancers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadBalancers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkConfiguration(value: NetworkConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScale(value: Scale): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceRegistries(value: ServiceRegistries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRegistries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceRegistries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRegistries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

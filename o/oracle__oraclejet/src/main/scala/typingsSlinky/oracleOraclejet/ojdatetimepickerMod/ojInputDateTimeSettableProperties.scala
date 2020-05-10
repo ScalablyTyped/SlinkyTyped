@@ -15,8 +15,6 @@ import typingsSlinky.oracleOraclejet.ojmessagingMod.^
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.AsyncValidator
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Converter
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Validation.RegisteredConverter
-import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Validation.RegisteredValidator
-import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Validator
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.all
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.disabled
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.enabled
@@ -32,10 +30,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ojInputDateTimeSettableProperties extends ojInputDateSettableProperties {
-  var timePicker: AnonFooterLayout
+  var timePicker: AnonFooterLayout = js.native
   @JSName("translations")
-  var translations_ojInputDateTimeSettableProperties: AnonCancel
+  var translations_ojInputDateTimeSettableProperties: AnonCancel = js.native
 }
 
 object ojInputDateTimeSettableProperties {
@@ -64,18 +63,30 @@ object ojInputDateTimeSettableProperties {
     timePicker: AnonFooterLayout,
     translations: AnonCancel,
     valid: valid | pending | invalidHidden | invalidShown,
-    value: String,
-    describedBy: String = null,
-    max: String = null,
-    min: String = null,
-    validators: js.Array[Validator[String] | RegisteredValidator] = null
+    value: String
   ): ojInputDateTimeSettableProperties = {
     val __obj = js.Dynamic.literal(asyncValidators = asyncValidators.asInstanceOf[js.Any], autocomplete = autocomplete.asInstanceOf[js.Any], autofocus = autofocus.asInstanceOf[js.Any], converter = converter.asInstanceOf[js.Any], datePicker = datePicker.asInstanceOf[js.Any], dayFormatter = js.Any.fromFunction1(dayFormatter), dayMetaData = dayMetaData.asInstanceOf[js.Any], disabled = disabled.asInstanceOf[js.Any], displayOptions = displayOptions.asInstanceOf[js.Any], help = help.asInstanceOf[js.Any], helpHints = helpHints.asInstanceOf[js.Any], keyboardEdit = keyboardEdit.asInstanceOf[js.Any], labelHint = labelHint.asInstanceOf[js.Any], messagesCustom = messagesCustom.asInstanceOf[js.Any], pickerAttributes = pickerAttributes.asInstanceOf[js.Any], placeholder = placeholder.asInstanceOf[js.Any], rawValue = rawValue.asInstanceOf[js.Any], readonly = readonly.asInstanceOf[js.Any], renderMode = renderMode.asInstanceOf[js.Any], required = required.asInstanceOf[js.Any], timePicker = timePicker.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any], valid = valid.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    if (describedBy != null) __obj.updateDynamic("describedBy")(describedBy.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (validators != null) __obj.updateDynamic("validators")(validators.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojInputDateTimeSettableProperties]
   }
+  @scala.inline
+  implicit class ojInputDateTimeSettablePropertiesOps[Self <: ojInputDateTimeSettableProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTimePicker(value: AnonFooterLayout): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timePicker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTranslations(value: AnonCancel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

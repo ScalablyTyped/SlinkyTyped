@@ -50,29 +50,131 @@ trait CreateDeliveryStreamInput extends js.Object {
 
 object CreateDeliveryStreamInput {
   @scala.inline
-  def apply(
-    DeliveryStreamName: DeliveryStreamName,
-    DeliveryStreamEncryptionConfigurationInput: DeliveryStreamEncryptionConfigurationInput = null,
-    DeliveryStreamType: DeliveryStreamType = null,
-    ElasticsearchDestinationConfiguration: ElasticsearchDestinationConfiguration = null,
-    ExtendedS3DestinationConfiguration: ExtendedS3DestinationConfiguration = null,
-    KinesisStreamSourceConfiguration: KinesisStreamSourceConfiguration = null,
-    RedshiftDestinationConfiguration: RedshiftDestinationConfiguration = null,
-    S3DestinationConfiguration: S3DestinationConfiguration = null,
-    SplunkDestinationConfiguration: SplunkDestinationConfiguration = null,
-    Tags: TagDeliveryStreamInputTagList = null
-  ): CreateDeliveryStreamInput = {
+  def apply(DeliveryStreamName: DeliveryStreamName): CreateDeliveryStreamInput = {
     val __obj = js.Dynamic.literal(DeliveryStreamName = DeliveryStreamName.asInstanceOf[js.Any])
-    if (DeliveryStreamEncryptionConfigurationInput != null) __obj.updateDynamic("DeliveryStreamEncryptionConfigurationInput")(DeliveryStreamEncryptionConfigurationInput.asInstanceOf[js.Any])
-    if (DeliveryStreamType != null) __obj.updateDynamic("DeliveryStreamType")(DeliveryStreamType.asInstanceOf[js.Any])
-    if (ElasticsearchDestinationConfiguration != null) __obj.updateDynamic("ElasticsearchDestinationConfiguration")(ElasticsearchDestinationConfiguration.asInstanceOf[js.Any])
-    if (ExtendedS3DestinationConfiguration != null) __obj.updateDynamic("ExtendedS3DestinationConfiguration")(ExtendedS3DestinationConfiguration.asInstanceOf[js.Any])
-    if (KinesisStreamSourceConfiguration != null) __obj.updateDynamic("KinesisStreamSourceConfiguration")(KinesisStreamSourceConfiguration.asInstanceOf[js.Any])
-    if (RedshiftDestinationConfiguration != null) __obj.updateDynamic("RedshiftDestinationConfiguration")(RedshiftDestinationConfiguration.asInstanceOf[js.Any])
-    if (S3DestinationConfiguration != null) __obj.updateDynamic("S3DestinationConfiguration")(S3DestinationConfiguration.asInstanceOf[js.Any])
-    if (SplunkDestinationConfiguration != null) __obj.updateDynamic("SplunkDestinationConfiguration")(SplunkDestinationConfiguration.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDeliveryStreamInput]
   }
+  @scala.inline
+  implicit class CreateDeliveryStreamInputOps[Self <: CreateDeliveryStreamInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeliveryStreamName(value: DeliveryStreamName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryStreamName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeliveryStreamEncryptionConfigurationInput(value: DeliveryStreamEncryptionConfigurationInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryStreamEncryptionConfigurationInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeliveryStreamEncryptionConfigurationInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryStreamEncryptionConfigurationInput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeliveryStreamType(value: DeliveryStreamType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryStreamType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeliveryStreamType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryStreamType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElasticsearchDestinationConfiguration(value: ElasticsearchDestinationConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticsearchDestinationConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticsearchDestinationConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticsearchDestinationConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtendedS3DestinationConfiguration(value: ExtendedS3DestinationConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendedS3DestinationConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtendedS3DestinationConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendedS3DestinationConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKinesisStreamSourceConfiguration(value: KinesisStreamSourceConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisStreamSourceConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKinesisStreamSourceConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisStreamSourceConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRedshiftDestinationConfiguration(value: RedshiftDestinationConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RedshiftDestinationConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRedshiftDestinationConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RedshiftDestinationConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3DestinationConfiguration(value: S3DestinationConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3DestinationConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3DestinationConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3DestinationConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSplunkDestinationConfiguration(value: SplunkDestinationConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SplunkDestinationConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSplunkDestinationConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SplunkDestinationConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagDeliveryStreamInputTagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

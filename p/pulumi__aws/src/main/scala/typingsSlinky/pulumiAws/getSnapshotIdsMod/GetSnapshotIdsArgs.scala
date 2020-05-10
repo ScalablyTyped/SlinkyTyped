@@ -25,16 +25,53 @@ trait GetSnapshotIdsArgs extends js.Object {
 
 object GetSnapshotIdsArgs {
   @scala.inline
-  def apply(
-    filters: js.Array[GetSnapshotIdsFilter] = null,
-    owners: js.Array[String] = null,
-    restorableByUserIds: js.Array[String] = null
-  ): GetSnapshotIdsArgs = {
+  def apply(): GetSnapshotIdsArgs = {
     val __obj = js.Dynamic.literal()
-    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
-    if (owners != null) __obj.updateDynamic("owners")(owners.asInstanceOf[js.Any])
-    if (restorableByUserIds != null) __obj.updateDynamic("restorableByUserIds")(restorableByUserIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSnapshotIdsArgs]
   }
+  @scala.inline
+  implicit class GetSnapshotIdsArgsOps[Self <: GetSnapshotIdsArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilters(value: js.Array[GetSnapshotIdsFilter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwners(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owners")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwners: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owners")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestorableByUserIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restorableByUserIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestorableByUserIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restorableByUserIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

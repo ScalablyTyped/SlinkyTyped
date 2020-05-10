@@ -12,10 +12,8 @@ trait BootstrapMenuSource extends js.Object
 
 object BootstrapMenuSource {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def element: typingsSlinky.bootstrapMenu.bootstrapMenuStrings.element = "element".asInstanceOf[typingsSlinky.bootstrapMenu.bootstrapMenuStrings.element]
   @scala.inline
-  def element: typingsSlinky.bootstrapMenu.bootstrapMenuStrings.element = this.cast("element")
-  @scala.inline
-  def mouse: typingsSlinky.bootstrapMenu.bootstrapMenuStrings.mouse = this.cast("mouse")
+  def mouse: typingsSlinky.bootstrapMenu.bootstrapMenuStrings.mouse = "mouse".asInstanceOf[typingsSlinky.bootstrapMenu.bootstrapMenuStrings.mouse]
 }
 

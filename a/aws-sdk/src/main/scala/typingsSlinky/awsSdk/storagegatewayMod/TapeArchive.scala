@@ -47,30 +47,137 @@ trait TapeArchive extends js.Object {
 
 object TapeArchive {
   @scala.inline
-  def apply(
-    CompletionTime: js.Date = null,
-    KMSKey: KMSKey = null,
-    PoolId: PoolId = null,
-    RetrievedTo: GatewayARN = null,
-    TapeARN: TapeARN = null,
-    TapeBarcode: TapeBarcode = null,
-    TapeCreatedDate: js.Date = null,
-    TapeSizeInBytes: Int | Double = null,
-    TapeStatus: TapeArchiveStatus = null,
-    TapeUsedInBytes: Int | Double = null
-  ): TapeArchive = {
+  def apply(): TapeArchive = {
     val __obj = js.Dynamic.literal()
-    if (CompletionTime != null) __obj.updateDynamic("CompletionTime")(CompletionTime.asInstanceOf[js.Any])
-    if (KMSKey != null) __obj.updateDynamic("KMSKey")(KMSKey.asInstanceOf[js.Any])
-    if (PoolId != null) __obj.updateDynamic("PoolId")(PoolId.asInstanceOf[js.Any])
-    if (RetrievedTo != null) __obj.updateDynamic("RetrievedTo")(RetrievedTo.asInstanceOf[js.Any])
-    if (TapeARN != null) __obj.updateDynamic("TapeARN")(TapeARN.asInstanceOf[js.Any])
-    if (TapeBarcode != null) __obj.updateDynamic("TapeBarcode")(TapeBarcode.asInstanceOf[js.Any])
-    if (TapeCreatedDate != null) __obj.updateDynamic("TapeCreatedDate")(TapeCreatedDate.asInstanceOf[js.Any])
-    if (TapeSizeInBytes != null) __obj.updateDynamic("TapeSizeInBytes")(TapeSizeInBytes.asInstanceOf[js.Any])
-    if (TapeStatus != null) __obj.updateDynamic("TapeStatus")(TapeStatus.asInstanceOf[js.Any])
-    if (TapeUsedInBytes != null) __obj.updateDynamic("TapeUsedInBytes")(TapeUsedInBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[TapeArchive]
   }
+  @scala.inline
+  implicit class TapeArchiveOps[Self <: TapeArchive] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompletionTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletionTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompletionTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletionTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKMSKey(value: KMSKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKMSKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoolId(value: PoolId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoolId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PoolId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetrievedTo(value: GatewayARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RetrievedTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetrievedTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RetrievedTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTapeARN(value: TapeARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTapeARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTapeBarcode(value: TapeBarcode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeBarcode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTapeBarcode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeBarcode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTapeCreatedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeCreatedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTapeCreatedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeCreatedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTapeSizeInBytes(value: TapeSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeSizeInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTapeSizeInBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeSizeInBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTapeStatus(value: TapeArchiveStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTapeStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTapeUsedInBytes(value: TapeUsage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeUsedInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTapeUsedInBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeUsedInBytes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

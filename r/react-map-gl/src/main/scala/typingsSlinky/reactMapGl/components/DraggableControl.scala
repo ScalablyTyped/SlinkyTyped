@@ -1,19 +1,24 @@
 package typingsSlinky.reactMapGl.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactMapGl.mod.DraggableControlProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Could't extract props from TypeRef(QualifiedName(IArray(Name(T))),IArray(),NoComments) because couldn't resolve ClassTree. */
-object DraggableControl
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactMapGl.mod.DraggableControl[js.Any]] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Could't extract props from T because couldn't resolve ClassTree. */
+object DraggableControl {
   @JSImport("react-map-gl", "DraggableControl")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = js.Any
+  @scala.inline
+  class Builder[T <: DraggableControlProps] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.DraggableControl[js.Any]]
+  
+  def apply[T <: DraggableControlProps](p: T): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[T <: DraggableControlProps](companion: DraggableControl.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

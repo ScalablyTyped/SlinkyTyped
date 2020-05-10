@@ -12,10 +12,8 @@ trait TreeWalkerDirection extends js.Object
 
 object TreeWalkerDirection {
   @scala.inline
-  def backward: typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.backward = this.cast("backward")
+  def backward: typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.backward = "backward".asInstanceOf[typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.backward]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def forward: typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.forward = this.cast("forward")
+  def forward: typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.forward = "forward".asInstanceOf[typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.forward]
 }
 

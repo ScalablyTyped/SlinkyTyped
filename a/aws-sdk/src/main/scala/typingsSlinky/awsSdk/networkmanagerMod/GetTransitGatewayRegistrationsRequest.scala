@@ -26,17 +26,59 @@ trait GetTransitGatewayRegistrationsRequest extends js.Object {
 
 object GetTransitGatewayRegistrationsRequest {
   @scala.inline
-  def apply(
-    GlobalNetworkId: String,
-    MaxResults: Int | Double = null,
-    NextToken: String = null,
-    TransitGatewayArns: StringList = null
-  ): GetTransitGatewayRegistrationsRequest = {
+  def apply(GlobalNetworkId: String): GetTransitGatewayRegistrationsRequest = {
     val __obj = js.Dynamic.literal(GlobalNetworkId = GlobalNetworkId.asInstanceOf[js.Any])
-    if (MaxResults != null) __obj.updateDynamic("MaxResults")(MaxResults.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (TransitGatewayArns != null) __obj.updateDynamic("TransitGatewayArns")(TransitGatewayArns.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTransitGatewayRegistrationsRequest]
   }
+  @scala.inline
+  implicit class GetTransitGatewayRegistrationsRequestOps[Self <: GetTransitGatewayRegistrationsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGlobalNetworkId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalNetworkId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: MaxResults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitGatewayArns(value: StringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitGatewayArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayArns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

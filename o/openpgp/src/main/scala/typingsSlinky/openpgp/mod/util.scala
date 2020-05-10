@@ -1,7 +1,6 @@
 package typingsSlinky.openpgp.mod
 
 import typingsSlinky.openpgp.AnonComment
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,16 +28,16 @@ object util extends js.Object {
     * @returns Base-64 encoded string
     */
   @JSName("Uint8Array_to_b64")
-  def Uint8ArrayToB64(bytes: scala.scalajs.js.typedarray.Uint8Array): String = js.native
+  def Uint8ArrayToB64(bytes: js.typedarray.Uint8Array): String = js.native
   @JSName("Uint8Array_to_b64")
-  def Uint8ArrayToB64(bytes: scala.scalajs.js.typedarray.Uint8Array, url: Boolean): String = js.native
+  def Uint8ArrayToB64(bytes: js.typedarray.Uint8Array, url: Boolean): String = js.native
   /**
     * Convert an array of 8-bit integers to a hex string
     * @param bytes Array of 8-bit integers to convert
     * @returns Hexadecimal representation of the array
     */
   @JSName("Uint8Array_to_hex")
-  def Uint8ArrayToHex(bytes: scala.scalajs.js.typedarray.Uint8Array): String = js.native
+  def Uint8ArrayToHex(bytes: js.typedarray.Uint8Array): String = js.native
   /**
     * Convert a Uint8Array to an MPI-formatted Uint8Array.
     * Note: the output is **not** an MPI object.
@@ -48,14 +47,14 @@ object util extends js.Object {
     * @returns MPI-formatted Uint8Array
     */
   @JSName("Uint8Array_to_MPI")
-  def Uint8ArrayToMPI(bin: scala.scalajs.js.typedarray.Uint8Array): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def Uint8ArrayToMPI(bin: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
   /**
     * Convert an array of 8-bit integers to a string
     * @param bytes An array of 8-bit integers to convert
     * @returns String representation of the array
     */
   @JSName("Uint8Array_to_str")
-  def Uint8ArrayToStr(bytes: scala.scalajs.js.typedarray.Uint8Array): String = js.native
+  def Uint8ArrayToStr(bytes: js.typedarray.Uint8Array): String = js.native
   /**
     * Convert a Base-64 encoded string an array of 8-bit integer
     * Note: accepts both Radix-64 and URL-safe strings
@@ -63,7 +62,7 @@ object util extends js.Object {
     * @returns An array of 8-bit integers
     */
   @JSName("b64_to_Uint8Array")
-  def b64ToUint8Array(base64: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def b64ToUint8Array(base64: String): js.typedarray.Uint8Array = js.native
   /**
     * Normalize line endings to \r\n
     */
@@ -76,7 +75,7 @@ object util extends js.Object {
     * @returns A native javascript string
     */
   @JSName("decode_utf8")
-  def decodeUtf8(utf8: Uint8Array): String | ReadableStream[String] = js.native
+  def decodeUtf8(utf8: js.typedarray.Uint8Array): String | ReadableStream[String] = js.native
   /**
     * Detect Node.js runtime.
     */
@@ -87,23 +86,23 @@ object util extends js.Object {
     * @returns A valid squence of utf8 bytes
     */
   @JSName("encode_utf8")
-  def encodeUtf8(str: String): scala.scalajs.js.typedarray.Uint8Array | ReadableStream[String] = js.native
+  def encodeUtf8(str: String): js.typedarray.Uint8Array | ReadableStream[String] = js.native
   @JSName("encode_utf8")
-  def encodeUtf8(str: ReadableStream[String]): scala.scalajs.js.typedarray.Uint8Array | ReadableStream[String] = js.native
+  def encodeUtf8(str: ReadableStream[String]): js.typedarray.Uint8Array | ReadableStream[String] = js.native
   /**
     * Encode input buffer using Z-Base32 encoding.
     * See: https://tools.ietf.org/html/rfc6189#section-5.1.6
     * @param data The binary data to encode
     * @returns Binary data encoded using Z-Base32
     */
-  def encodeZBase32(data: scala.scalajs.js.typedarray.Uint8Array): String = js.native
+  def encodeZBase32(data: js.typedarray.Uint8Array): String = js.native
   /**
     * Check Uint8Array equality
     * @param first array
     * @param second array
     * @returns equality
     */
-  def equalsUint8Array(first: scala.scalajs.js.typedarray.Uint8Array, second: scala.scalajs.js.typedarray.Uint8Array): Boolean = js.native
+  def equalsUint8Array(first: js.typedarray.Uint8Array, second: js.typedarray.Uint8Array): Boolean = js.native
   /**
     * Format user id for internal use.
     */
@@ -156,7 +155,7 @@ object util extends js.Object {
     * @returns An array of 8-bit integers
     */
   @JSName("hex_to_Uint8Array")
-  def hexToUint8Array(hex: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def hexToUint8Array(hex: String): js.typedarray.Uint8Array = js.native
   /**
     * Convert line endings from canonicalized \r\n to native \n
     */
@@ -210,7 +209,7 @@ object util extends js.Object {
   @JSName("print_entire_stream")
   def printEntireStream(str: String, input: ReadableStream[String], concat: js.Function): Unit = js.native
   @JSName("print_entire_stream")
-  def printEntireStream(str: String, input: Uint8Array, concat: js.Function): Unit = js.native
+  def printEntireStream(str: String, input: js.typedarray.Uint8Array, concat: js.Function): Unit = js.native
   /**
     * Remove trailing spaces and tabs from each line
     */
@@ -238,7 +237,7 @@ object util extends js.Object {
     *        than 8)
     * @returns Resulting array.
     */
-  def shiftRight(array: scala.scalajs.js.typedarray.Uint8Array, bits: Integer): String = js.native
+  def shiftRight(array: js.typedarray.Uint8Array, bits: Integer): String = js.native
   /**
     * Create hex string from a binary
     * @param str String to convert
@@ -252,7 +251,7 @@ object util extends js.Object {
     * @returns An array of 8-bit integers
     */
   @JSName("str_to_Uint8Array")
-  def strToUint8Array(str: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def strToUint8Array(str: String): js.typedarray.Uint8Array = js.native
   /**
     * Calculates a 16bit sum of a Uint8Array by adding each character
     * codes modulus 65535
@@ -260,6 +259,6 @@ object util extends js.Object {
     * @returns 2 bytes containing the sum of all charcodes % 65535
     */
   @JSName("write_checksum")
-  def writeChecksum(Uint8Array: scala.scalajs.js.typedarray.Uint8Array): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def writeChecksum(Uint8Array: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
 }
 

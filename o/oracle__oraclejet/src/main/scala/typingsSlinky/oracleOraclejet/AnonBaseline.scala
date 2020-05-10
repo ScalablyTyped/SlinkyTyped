@@ -8,39 +8,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBaseline extends js.Object {
-  var baseline: js.UndefOr[AnonSvgClassName] = js.undefined
-  var borderRadius: js.UndefOr[String] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var labelPosition: js.UndefOr[String | js.Array[String]] = js.undefined
-  var progress: js.UndefOr[AnonSvgStyle] = js.undefined
-  var svgClassName: js.UndefOr[String] = js.undefined
-  var svgStyle: js.UndefOr[js.Object] = js.undefined
-  var `type`: js.UndefOr[normal | milestone | summary | auto] = js.undefined
+  var baseline: js.UndefOr[AnonSvgClassName] = js.native
+  var borderRadius: js.UndefOr[String] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var labelPosition: js.UndefOr[String | js.Array[String]] = js.native
+  var progress: js.UndefOr[AnonSvgStyle] = js.native
+  var svgClassName: js.UndefOr[String] = js.native
+  var svgStyle: js.UndefOr[js.Object] = js.native
+  var `type`: js.UndefOr[normal | milestone | summary | auto] = js.native
 }
 
 object AnonBaseline {
   @scala.inline
-  def apply(
-    baseline: AnonSvgClassName = null,
-    borderRadius: String = null,
-    height: Int | Double = null,
-    labelPosition: String | js.Array[String] = null,
-    progress: AnonSvgStyle = null,
-    svgClassName: String = null,
-    svgStyle: js.Object = null,
-    `type`: normal | milestone | summary | auto = null
-  ): AnonBaseline = {
+  def apply(): AnonBaseline = {
     val __obj = js.Dynamic.literal()
-    if (baseline != null) __obj.updateDynamic("baseline")(baseline.asInstanceOf[js.Any])
-    if (borderRadius != null) __obj.updateDynamic("borderRadius")(borderRadius.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (labelPosition != null) __obj.updateDynamic("labelPosition")(labelPosition.asInstanceOf[js.Any])
-    if (progress != null) __obj.updateDynamic("progress")(progress.asInstanceOf[js.Any])
-    if (svgClassName != null) __obj.updateDynamic("svgClassName")(svgClassName.asInstanceOf[js.Any])
-    if (svgStyle != null) __obj.updateDynamic("svgStyle")(svgStyle.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBaseline]
   }
+  @scala.inline
+  implicit class AnonBaselineOps[Self <: AnonBaseline] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBaseline(value: AnonSvgClassName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderRadius(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelPosition(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgress(value: AnonSvgStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSvgClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svgClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSvgClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svgClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSvgStyle(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svgStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSvgStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svgStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: normal | milestone | summary | auto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

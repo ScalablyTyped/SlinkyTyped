@@ -6,7 +6,6 @@ import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import typingsSlinky.tstl.ipairMod.IPair
 import typingsSlinky.tstl.itreemapMod.ITreeMap
 import typingsSlinky.tstl.itreesetMod.ITreeSet
-import typingsSlinky.tstl.tstlStrings.experimental
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -230,7 +229,7 @@ object experimentalContainerMod extends js.Object {
           ]
         ]
       ] = js.native
-    val __MODULE: experimental = js.native
+    val __MODULE: /* "experimental" */ String = js.native
   }
   
   @js.native
@@ -285,7 +284,7 @@ object experimentalContainerMod extends js.Object {
           ]
         ]
       ] = js.native
-    val __MODULE: experimental = js.native
+    val __MODULE: /* "experimental" */ String = js.native
   }
   
   @js.native
@@ -332,7 +331,7 @@ object experimentalContainerMod extends js.Object {
           ]
         ]
       ] = js.native
-    val __MODULE: experimental = js.native
+    val __MODULE: /* "experimental" */ String = js.native
   }
   
   @js.native
@@ -379,7 +378,7 @@ object experimentalContainerMod extends js.Object {
           ]
         ]
       ] = js.native
-    val __MODULE: experimental = js.native
+    val __MODULE: /* "experimental" */ String = js.native
   }
   
 }

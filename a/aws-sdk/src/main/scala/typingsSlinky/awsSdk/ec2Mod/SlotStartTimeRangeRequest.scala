@@ -18,11 +18,41 @@ trait SlotStartTimeRangeRequest extends js.Object {
 
 object SlotStartTimeRangeRequest {
   @scala.inline
-  def apply(EarliestTime: js.Date = null, LatestTime: js.Date = null): SlotStartTimeRangeRequest = {
+  def apply(): SlotStartTimeRangeRequest = {
     val __obj = js.Dynamic.literal()
-    if (EarliestTime != null) __obj.updateDynamic("EarliestTime")(EarliestTime.asInstanceOf[js.Any])
-    if (LatestTime != null) __obj.updateDynamic("LatestTime")(LatestTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SlotStartTimeRangeRequest]
   }
+  @scala.inline
+  implicit class SlotStartTimeRangeRequestOps[Self <: SlotStartTimeRangeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEarliestTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EarliestTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEarliestTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EarliestTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatestTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LatestTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatestTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LatestTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

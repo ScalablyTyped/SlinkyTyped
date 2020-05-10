@@ -30,18 +30,65 @@ trait UpdateFlowEntitlementRequest extends js.Object {
 
 object UpdateFlowEntitlementRequest {
   @scala.inline
-  def apply(
-    EntitlementArn: string,
-    FlowArn: string,
-    Description: string = null,
-    Encryption: UpdateEncryption = null,
-    Subscribers: listOfString = null
-  ): UpdateFlowEntitlementRequest = {
+  def apply(EntitlementArn: string, FlowArn: string): UpdateFlowEntitlementRequest = {
     val __obj = js.Dynamic.literal(EntitlementArn = EntitlementArn.asInstanceOf[js.Any], FlowArn = FlowArn.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (Encryption != null) __obj.updateDynamic("Encryption")(Encryption.asInstanceOf[js.Any])
-    if (Subscribers != null) __obj.updateDynamic("Subscribers")(Subscribers.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateFlowEntitlementRequest]
   }
+  @scala.inline
+  implicit class UpdateFlowEntitlementRequestOps[Self <: UpdateFlowEntitlementRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntitlementArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntitlementArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlowArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryption(value: UpdateEncryption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubscribers(value: listOfString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subscribers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubscribers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subscribers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

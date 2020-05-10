@@ -47,12 +47,13 @@ trait SVGFEGaussianBlurElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def setStdDeviation(stdDeviationX: Double, stdDeviationY: Double): Unit = js.native
 }
 
 @JSGlobal("SVGFEGaussianBlurElement")
 @js.native
-object SVGFEGaussianBlurElement extends Instantiable0[SVGFEGaussianBlurElement]
+object SVGFEGaussianBlurElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFEGaussianBlurElement]
 

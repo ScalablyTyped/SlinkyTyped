@@ -14,15 +14,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SortablePaneProps extends js.Object {
-  var children: js.Array[ReactElement]
-  var className: js.UndefOr[String] = js.undefined
-  var defaultOrder: js.UndefOr[js.Array[String]] = js.undefined
-  var direction: js.UndefOr[horizontal | vertical] = js.undefined
-  var disableEffect: js.UndefOr[Boolean] = js.undefined
-  var dragHandleClassName: js.UndefOr[String] = js.undefined
-  var isSortable: js.UndefOr[Boolean] = js.undefined
-  var margin: js.UndefOr[Double] = js.undefined
+  var children: js.Array[ReactElement] = js.native
+  var className: js.UndefOr[String] = js.native
+  var defaultOrder: js.UndefOr[js.Array[String]] = js.native
+  var direction: js.UndefOr[horizontal | vertical] = js.native
+  var disableEffect: js.UndefOr[Boolean] = js.native
+  var dragHandleClassName: js.UndefOr[String] = js.native
+  var isSortable: js.UndefOr[Boolean] = js.native
+  var margin: js.UndefOr[Double] = js.native
   var onDragStart: js.UndefOr[
     js.Function3[
       /* e */ SyntheticMouseEvent[HTMLElement] | SyntheticTouchEvent[HTMLElement], 
@@ -30,7 +31,7 @@ trait SortablePaneProps extends js.Object {
       /* elementRef */ HTMLElement, 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   var onDragStop: js.UndefOr[
     js.Function4[
       /* e */ MouseEvent | TouchEvent, 
@@ -39,8 +40,8 @@ trait SortablePaneProps extends js.Object {
       /* order */ js.Array[String], 
       Unit
     ]
-  ] = js.undefined
-  var onOrderChange: js.UndefOr[js.Function1[/* order */ js.Array[String], Unit]] = js.undefined
+  ] = js.native
+  var onOrderChange: js.UndefOr[js.Function1[/* order */ js.Array[String], Unit]] = js.native
   var onResize: js.UndefOr[
     js.Function5[
       /* e */ MouseEvent | TouchEvent, 
@@ -50,7 +51,7 @@ trait SortablePaneProps extends js.Object {
       /* delta */ PaneSize, 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   var onResizeStart: js.UndefOr[
     js.Function3[
       /* e */ SyntheticMouseEvent[HTMLElement] | SyntheticTouchEvent[HTMLElement], 
@@ -58,7 +59,7 @@ trait SortablePaneProps extends js.Object {
       /* dir */ PaneResizeDirection, 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   var onResizeStop: js.UndefOr[
     js.Function5[
       /* e */ MouseEvent | TouchEvent, 
@@ -68,51 +69,233 @@ trait SortablePaneProps extends js.Object {
       /* delta */ PaneSize, 
       Unit
     ]
-  ] = js.undefined
-  var order: js.UndefOr[js.Array[String]] = js.undefined
-  var springConfig: js.UndefOr[SpringHelperConfig] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
+  ] = js.native
+  var order: js.UndefOr[js.Array[String]] = js.native
+  var springConfig: js.UndefOr[SpringHelperConfig] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
 }
 
 object SortablePaneProps {
   @scala.inline
-  def apply(
-    children: js.Array[ReactElement],
-    className: String = null,
-    defaultOrder: js.Array[String] = null,
-    direction: horizontal | vertical = null,
-    disableEffect: js.UndefOr[Boolean] = js.undefined,
-    dragHandleClassName: String = null,
-    isSortable: js.UndefOr[Boolean] = js.undefined,
-    margin: Int | Double = null,
-    onDragStart: (/* e */ SyntheticMouseEvent[HTMLElement] | SyntheticTouchEvent[HTMLElement], /* key */ PaneKey, /* elementRef */ HTMLElement) => Unit = null,
-    onDragStop: (/* e */ MouseEvent | TouchEvent, /* key */ PaneKey, /* elementRef */ HTMLElement, /* order */ js.Array[String]) => Unit = null,
-    onOrderChange: /* order */ js.Array[String] => Unit = null,
-    onResize: (/* e */ MouseEvent | TouchEvent, /* key */ PaneKey, /* dir */ PaneResizeDirection, /* elementRef */ HTMLElement, /* delta */ PaneSize) => Unit = null,
-    onResizeStart: (/* e */ SyntheticMouseEvent[HTMLElement] | SyntheticTouchEvent[HTMLElement], /* key */ PaneKey, /* dir */ PaneResizeDirection) => Unit = null,
-    onResizeStop: (/* e */ MouseEvent | TouchEvent, /* key */ PaneKey, /* dir */ PaneResizeDirection, /* elementRef */ HTMLElement, /* delta */ PaneSize) => Unit = null,
-    order: js.Array[String] = null,
-    springConfig: SpringHelperConfig = null,
-    style: CSSProperties = null
-  ): SortablePaneProps = {
+  def apply(children: js.Array[ReactElement]): SortablePaneProps = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (defaultOrder != null) __obj.updateDynamic("defaultOrder")(defaultOrder.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableEffect)) __obj.updateDynamic("disableEffect")(disableEffect.asInstanceOf[js.Any])
-    if (dragHandleClassName != null) __obj.updateDynamic("dragHandleClassName")(dragHandleClassName.asInstanceOf[js.Any])
-    if (!js.isUndefined(isSortable)) __obj.updateDynamic("isSortable")(isSortable.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction3(onDragStart))
-    if (onDragStop != null) __obj.updateDynamic("onDragStop")(js.Any.fromFunction4(onDragStop))
-    if (onOrderChange != null) __obj.updateDynamic("onOrderChange")(js.Any.fromFunction1(onOrderChange))
-    if (onResize != null) __obj.updateDynamic("onResize")(js.Any.fromFunction5(onResize))
-    if (onResizeStart != null) __obj.updateDynamic("onResizeStart")(js.Any.fromFunction3(onResizeStart))
-    if (onResizeStop != null) __obj.updateDynamic("onResizeStop")(js.Any.fromFunction5(onResizeStop))
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
-    if (springConfig != null) __obj.updateDynamic("springConfig")(springConfig.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[SortablePaneProps]
   }
+  @scala.inline
+  implicit class SortablePanePropsOps[Self <: SortablePaneProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildren(value: js.Array[ReactElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultOrder(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: horizontal | vertical): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableEffect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableEffect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableEffect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableEffect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDragHandleClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragHandleClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDragHandleClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragHandleClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsSortable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSortable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsSortable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSortable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragStart(
+      value: (/* e */ SyntheticMouseEvent[HTMLElement] | SyntheticTouchEvent[HTMLElement], /* key */ PaneKey, /* elementRef */ HTMLElement) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDragStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragStop(
+      value: (/* e */ MouseEvent | TouchEvent, /* key */ PaneKey, /* elementRef */ HTMLElement, /* order */ js.Array[String]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStop")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDragStop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOrderChange(value: /* order */ js.Array[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOrderChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnOrderChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOrderChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnResize(
+      value: (/* e */ MouseEvent | TouchEvent, /* key */ PaneKey, /* dir */ PaneResizeDirection, /* elementRef */ HTMLElement, /* delta */ PaneSize) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnResize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnResizeStart(
+      value: (/* e */ SyntheticMouseEvent[HTMLElement] | SyntheticTouchEvent[HTMLElement], /* key */ PaneKey, /* dir */ PaneResizeDirection) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onResizeStart")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnResizeStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onResizeStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnResizeStop(
+      value: (/* e */ MouseEvent | TouchEvent, /* key */ PaneKey, /* dir */ PaneResizeDirection, /* elementRef */ HTMLElement, /* delta */ PaneSize) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onResizeStop")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnResizeStop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onResizeStop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrder(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpringConfig(value: SpringHelperConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("springConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpringConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("springConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

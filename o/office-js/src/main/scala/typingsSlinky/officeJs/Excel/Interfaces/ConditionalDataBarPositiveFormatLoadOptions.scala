@@ -41,3 +41,67 @@ trait ConditionalDataBarPositiveFormatLoadOptions extends js.Object {
   var gradientFill: js.UndefOr[Boolean] = js.native
 }
 
+object ConditionalDataBarPositiveFormatLoadOptions {
+  @scala.inline
+  def apply(): ConditionalDataBarPositiveFormatLoadOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ConditionalDataBarPositiveFormatLoadOptions]
+  }
+  @scala.inline
+  implicit class ConditionalDataBarPositiveFormatLoadOptionsOps[Self <: ConditionalDataBarPositiveFormatLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$all(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$all: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderColor(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillColor(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGradientFill(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gradientFill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGradientFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gradientFill")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

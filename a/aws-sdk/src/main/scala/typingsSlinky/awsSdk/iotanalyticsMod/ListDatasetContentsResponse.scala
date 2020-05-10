@@ -18,11 +18,41 @@ trait ListDatasetContentsResponse extends js.Object {
 
 object ListDatasetContentsResponse {
   @scala.inline
-  def apply(datasetContentSummaries: DatasetContentSummaries = null, nextToken: NextToken = null): ListDatasetContentsResponse = {
+  def apply(): ListDatasetContentsResponse = {
     val __obj = js.Dynamic.literal()
-    if (datasetContentSummaries != null) __obj.updateDynamic("datasetContentSummaries")(datasetContentSummaries.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDatasetContentsResponse]
   }
+  @scala.inline
+  implicit class ListDatasetContentsResponseOps[Self <: ListDatasetContentsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDatasetContentSummaries(value: DatasetContentSummaries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetContentSummaries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatasetContentSummaries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetContentSummaries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

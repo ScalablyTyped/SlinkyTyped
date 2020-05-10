@@ -1,26 +1,42 @@
 package typingsSlinky.css.mod
 
-import typingsSlinky.css.AnonContent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Namespace
   extends Node
      with AtRule {
   /** The part following @namespace. */
-  var namespace: js.UndefOr[String] = js.undefined
+  var namespace: js.UndefOr[String] = js.native
 }
 
 object Namespace {
   @scala.inline
-  def apply(namespace: String = null, parent: Node = null, position: AnonContent = null, `type`: String = null): Namespace = {
+  def apply(): Namespace = {
     val __obj = js.Dynamic.literal()
-    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Namespace]
   }
+  @scala.inline
+  implicit class NamespaceOps[Self <: Namespace] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNamespace(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamespace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

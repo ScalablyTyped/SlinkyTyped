@@ -1,10 +1,9 @@
 package typingsSlinky.antdMobileRn.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobileRn.checkboxItemNativeMod.ICheckboxItemNativeProps
 import typingsSlinky.antdMobileRn.checkboxItemNativeMod.default
 import typingsSlinky.antdMobileRn.checkboxPropsTypeMod.OnChangeParams
@@ -16,38 +15,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CheckboxItemDotnative
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object CheckboxItemDotnative {
   @JSImport("antd-mobile-rn/lib/checkbox/CheckboxItem.native", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: checked, defaultChecked, disabled */
-  def apply(
-    checkboxStyle: StyleProp[ImageStyle] = null,
-    extra: TagMod[Any] = null,
-    onChange: /* params */ OnChangeParams => Unit = null,
-    onClick: /* e */ js.UndefOr[js.Any] => Unit = null,
-    prefixCls: String = null,
-    style: StyleProp[ViewStyle] = null,
-    styles: ICheckboxStyle = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (checkboxStyle != null) __obj.updateDynamic("checkboxStyle")(checkboxStyle.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def checkboxStyle(value: StyleProp[ImageStyle]): this.type = set("checkboxStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checkboxStyleNull: this.type = set("checkboxStyle", null)
+    @scala.inline
+    def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* params */ OnChangeParams => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClick(value: /* e */ js.UndefOr[js.Any] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def styles(value: ICheckboxStyle): this.type = set("styles", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.antdMobileRn.checkboxItemNativeMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ICheckboxItemNativeProps
+  
+  def withProps(p: ICheckboxItemNativeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CheckboxItemDotnative.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

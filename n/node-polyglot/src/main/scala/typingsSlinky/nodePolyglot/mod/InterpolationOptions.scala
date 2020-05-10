@@ -6,25 +6,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InterpolationOptions
   extends /* interpolationKey */ StringDictionary[js.Any] {
   @JSName("_")
-  var _underscore: js.UndefOr[String] = js.undefined
-  var smart_count: js.UndefOr[Double | AnonLength] = js.undefined
+  var _underscore: js.UndefOr[String] = js.native
+  var smart_count: js.UndefOr[Double | AnonLength] = js.native
 }
 
 object InterpolationOptions {
   @scala.inline
-  def apply(
-    StringDictionary: /* interpolationKey */ StringDictionary[js.Any] = null,
-    _underscore: String = null,
-    smart_count: Double | AnonLength = null
-  ): InterpolationOptions = {
+  def apply(): InterpolationOptions = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (_underscore != null) __obj.updateDynamic("_")(_underscore.asInstanceOf[js.Any])
-    if (smart_count != null) __obj.updateDynamic("smart_count")(smart_count.asInstanceOf[js.Any])
     __obj.asInstanceOf[InterpolationOptions]
   }
+  @scala.inline
+  implicit class InterpolationOptionsOps[Self <: InterpolationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_underscore(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_underscore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmart_count(value: Double | AnonLength): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smart_count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmart_count: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smart_count")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

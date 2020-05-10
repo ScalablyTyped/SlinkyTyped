@@ -12,10 +12,8 @@ trait BreadcrumbType extends js.Object
 
 object BreadcrumbType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def http: typingsSlinky.ravenJs.ravenJsStrings.http = "http".asInstanceOf[typingsSlinky.ravenJs.ravenJsStrings.http]
   @scala.inline
-  def http: typingsSlinky.ravenJs.ravenJsStrings.http = this.cast("http")
-  @scala.inline
-  def navigation: typingsSlinky.ravenJs.ravenJsStrings.navigation = this.cast("navigation")
+  def navigation: typingsSlinky.ravenJs.ravenJsStrings.navigation = "navigation".asInstanceOf[typingsSlinky.ravenJs.ravenJsStrings.navigation]
 }
 

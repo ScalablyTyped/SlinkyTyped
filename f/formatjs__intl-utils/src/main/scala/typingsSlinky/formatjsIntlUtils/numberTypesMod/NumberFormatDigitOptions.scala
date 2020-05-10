@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NumberFormatDigitOptions extends js.Object {
-  var maximumFractionDigits: js.UndefOr[Double] = js.undefined
-  var maximumSignificantDigits: js.UndefOr[Double] = js.undefined
-  var minimumFractionDigits: js.UndefOr[Double] = js.undefined
-  var minimumIntegerDigits: js.UndefOr[Double] = js.undefined
-  var minimumSignificantDigits: js.UndefOr[Double] = js.undefined
+  var maximumFractionDigits: js.UndefOr[Double] = js.native
+  var maximumSignificantDigits: js.UndefOr[Double] = js.native
+  var minimumFractionDigits: js.UndefOr[Double] = js.native
+  var minimumIntegerDigits: js.UndefOr[Double] = js.native
+  var minimumSignificantDigits: js.UndefOr[Double] = js.native
 }
 
 object NumberFormatDigitOptions {
   @scala.inline
-  def apply(
-    maximumFractionDigits: Int | Double = null,
-    maximumSignificantDigits: Int | Double = null,
-    minimumFractionDigits: Int | Double = null,
-    minimumIntegerDigits: Int | Double = null,
-    minimumSignificantDigits: Int | Double = null
-  ): NumberFormatDigitOptions = {
+  def apply(): NumberFormatDigitOptions = {
     val __obj = js.Dynamic.literal()
-    if (maximumFractionDigits != null) __obj.updateDynamic("maximumFractionDigits")(maximumFractionDigits.asInstanceOf[js.Any])
-    if (maximumSignificantDigits != null) __obj.updateDynamic("maximumSignificantDigits")(maximumSignificantDigits.asInstanceOf[js.Any])
-    if (minimumFractionDigits != null) __obj.updateDynamic("minimumFractionDigits")(minimumFractionDigits.asInstanceOf[js.Any])
-    if (minimumIntegerDigits != null) __obj.updateDynamic("minimumIntegerDigits")(minimumIntegerDigits.asInstanceOf[js.Any])
-    if (minimumSignificantDigits != null) __obj.updateDynamic("minimumSignificantDigits")(minimumSignificantDigits.asInstanceOf[js.Any])
     __obj.asInstanceOf[NumberFormatDigitOptions]
   }
+  @scala.inline
+  implicit class NumberFormatDigitOptionsOps[Self <: NumberFormatDigitOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaximumFractionDigits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumFractionDigits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumFractionDigits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumFractionDigits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumSignificantDigits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumSignificantDigits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumSignificantDigits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumSignificantDigits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumFractionDigits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumFractionDigits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumFractionDigits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumFractionDigits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumIntegerDigits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumIntegerDigits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumIntegerDigits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumIntegerDigits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumSignificantDigits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumSignificantDigits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumSignificantDigits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumSignificantDigits")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

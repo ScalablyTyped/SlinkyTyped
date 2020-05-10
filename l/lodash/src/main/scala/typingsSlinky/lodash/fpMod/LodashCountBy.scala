@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait LodashCountBy extends js.Object {
-  def apply[T](iteratee: ValueIteratee[T]): LodashCountBy1x1[T] = js.native
+  def apply[T](iteratee: ValueIteratee[T]): Dictionary[Double] = js.native
   def apply[T /* <: js.Object */](
     iteratee: ValueIteratee[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any

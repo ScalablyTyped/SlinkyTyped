@@ -23,7 +23,7 @@ package object mod {
   ]
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
     - scala.Null
     - typingsSlinky.csvParse.csvParseBooleans.`false`
     - typingsSlinky.csvParse.AnonName

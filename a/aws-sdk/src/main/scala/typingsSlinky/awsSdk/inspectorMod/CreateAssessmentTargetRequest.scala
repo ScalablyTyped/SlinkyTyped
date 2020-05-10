@@ -18,10 +18,35 @@ trait CreateAssessmentTargetRequest extends js.Object {
 
 object CreateAssessmentTargetRequest {
   @scala.inline
-  def apply(assessmentTargetName: AssessmentTargetName, resourceGroupArn: Arn = null): CreateAssessmentTargetRequest = {
+  def apply(assessmentTargetName: AssessmentTargetName): CreateAssessmentTargetRequest = {
     val __obj = js.Dynamic.literal(assessmentTargetName = assessmentTargetName.asInstanceOf[js.Any])
-    if (resourceGroupArn != null) __obj.updateDynamic("resourceGroupArn")(resourceGroupArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateAssessmentTargetRequest]
   }
+  @scala.inline
+  implicit class CreateAssessmentTargetRequestOps[Self <: CreateAssessmentTargetRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssessmentTargetName(value: AssessmentTargetName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assessmentTargetName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceGroupArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceGroupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceGroupArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceGroupArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

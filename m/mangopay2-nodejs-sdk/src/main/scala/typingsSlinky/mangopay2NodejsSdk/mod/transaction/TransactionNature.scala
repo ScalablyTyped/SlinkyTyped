@@ -14,14 +14,12 @@ trait TransactionNature extends js.Object
 
 object TransactionNature {
   @scala.inline
-  def REFUND: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.REFUND = this.cast("REFUND")
+  def REFUND: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.REFUND = "REFUND".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.REFUND]
   @scala.inline
-  def REGULAR: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.REGULAR = this.cast("REGULAR")
+  def REGULAR: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.REGULAR = "REGULAR".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.REGULAR]
   @scala.inline
-  def REPUDIATION: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.REPUDIATION = this.cast("REPUDIATION")
+  def REPUDIATION: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.REPUDIATION = "REPUDIATION".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.REPUDIATION]
   @scala.inline
-  def SETTLEMENT: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.SETTLEMENT = this.cast("SETTLEMENT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SETTLEMENT: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.SETTLEMENT = "SETTLEMENT".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.SETTLEMENT]
 }
 

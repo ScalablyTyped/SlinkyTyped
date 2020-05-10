@@ -11,5 +11,6 @@ import scala.scalajs.js.annotation._
   * this module.
   *
   */
+@js.native
 trait image_ extends js.Object
 

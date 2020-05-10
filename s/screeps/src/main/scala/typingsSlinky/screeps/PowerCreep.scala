@@ -210,8 +210,10 @@ trait PowerCreep
     */
   def usePower(power: PowerConstant): ScreepsReturnCode = js.native
   def usePower(power: PowerConstant, target: RoomObject): ScreepsReturnCode = js.native
+  def withdraw(target: Ruin, resourceType: ResourceConstant): ScreepsReturnCode = js.native
+  def withdraw(target: Ruin, resourceType: ResourceConstant, amount: Double): ScreepsReturnCode = js.native
   /**
-    * Withdraw resources from a structure.
+    * Withdraw resources from a structure, tombstone, or ruin.
     *
     * The target has to be at adjacent square to the creep.
     *

@@ -18,10 +18,35 @@ trait FieldToMatch extends js.Object {
 
 object FieldToMatch {
   @scala.inline
-  def apply(Type: MatchFieldType, Data: MatchFieldData = null): FieldToMatch = {
+  def apply(Type: MatchFieldType): FieldToMatch = {
     val __obj = js.Dynamic.literal(Type = Type.asInstanceOf[js.Any])
-    if (Data != null) __obj.updateDynamic("Data")(Data.asInstanceOf[js.Any])
     __obj.asInstanceOf[FieldToMatch]
   }
+  @scala.inline
+  implicit class FieldToMatchOps[Self <: FieldToMatch] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: MatchFieldType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: MatchFieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

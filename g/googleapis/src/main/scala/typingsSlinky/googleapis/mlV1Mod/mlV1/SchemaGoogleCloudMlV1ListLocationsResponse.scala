@@ -19,11 +19,41 @@ trait SchemaGoogleCloudMlV1ListLocationsResponse extends js.Object {
 
 object SchemaGoogleCloudMlV1ListLocationsResponse {
   @scala.inline
-  def apply(locations: js.Array[SchemaGoogleCloudMlV1Location] = null, nextPageToken: String = null): SchemaGoogleCloudMlV1ListLocationsResponse = {
+  def apply(): SchemaGoogleCloudMlV1ListLocationsResponse = {
     val __obj = js.Dynamic.literal()
-    if (locations != null) __obj.updateDynamic("locations")(locations.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudMlV1ListLocationsResponse]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudMlV1ListLocationsResponseOps[Self <: SchemaGoogleCloudMlV1ListLocationsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocations(value: js.Array[SchemaGoogleCloudMlV1Location]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

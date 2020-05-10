@@ -58,33 +58,155 @@ trait UpdateSMBFileShareInput extends js.Object {
 
 object UpdateSMBFileShareInput {
   @scala.inline
-  def apply(
-    FileShareARN: FileShareARN,
-    AdminUserList: FileShareUserList = null,
-    DefaultStorageClass: StorageClass = null,
-    GuessMIMETypeEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    InvalidUserList: FileShareUserList = null,
-    KMSEncrypted: js.UndefOr[scala.Boolean] = js.undefined,
-    KMSKey: KMSKey = null,
-    ObjectACL: ObjectACL = null,
-    ReadOnly: js.UndefOr[scala.Boolean] = js.undefined,
-    RequesterPays: js.UndefOr[scala.Boolean] = js.undefined,
-    SMBACLEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    ValidUserList: FileShareUserList = null
-  ): UpdateSMBFileShareInput = {
+  def apply(FileShareARN: FileShareARN): UpdateSMBFileShareInput = {
     val __obj = js.Dynamic.literal(FileShareARN = FileShareARN.asInstanceOf[js.Any])
-    if (AdminUserList != null) __obj.updateDynamic("AdminUserList")(AdminUserList.asInstanceOf[js.Any])
-    if (DefaultStorageClass != null) __obj.updateDynamic("DefaultStorageClass")(DefaultStorageClass.asInstanceOf[js.Any])
-    if (!js.isUndefined(GuessMIMETypeEnabled)) __obj.updateDynamic("GuessMIMETypeEnabled")(GuessMIMETypeEnabled.asInstanceOf[js.Any])
-    if (InvalidUserList != null) __obj.updateDynamic("InvalidUserList")(InvalidUserList.asInstanceOf[js.Any])
-    if (!js.isUndefined(KMSEncrypted)) __obj.updateDynamic("KMSEncrypted")(KMSEncrypted.asInstanceOf[js.Any])
-    if (KMSKey != null) __obj.updateDynamic("KMSKey")(KMSKey.asInstanceOf[js.Any])
-    if (ObjectACL != null) __obj.updateDynamic("ObjectACL")(ObjectACL.asInstanceOf[js.Any])
-    if (!js.isUndefined(ReadOnly)) __obj.updateDynamic("ReadOnly")(ReadOnly.asInstanceOf[js.Any])
-    if (!js.isUndefined(RequesterPays)) __obj.updateDynamic("RequesterPays")(RequesterPays.asInstanceOf[js.Any])
-    if (!js.isUndefined(SMBACLEnabled)) __obj.updateDynamic("SMBACLEnabled")(SMBACLEnabled.asInstanceOf[js.Any])
-    if (ValidUserList != null) __obj.updateDynamic("ValidUserList")(ValidUserList.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateSMBFileShareInput]
   }
+  @scala.inline
+  implicit class UpdateSMBFileShareInputOps[Self <: UpdateSMBFileShareInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileShareARN(value: FileShareARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdminUserList(value: FileShareUserList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdminUserList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdminUserList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdminUserList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultStorageClass(value: StorageClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultStorageClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultStorageClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultStorageClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGuessMIMETypeEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GuessMIMETypeEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGuessMIMETypeEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GuessMIMETypeEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvalidUserList(value: FileShareUserList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InvalidUserList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvalidUserList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InvalidUserList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKMSEncrypted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSEncrypted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKMSEncrypted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSEncrypted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKMSKey(value: KMSKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKMSKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectACL(value: ObjectACL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectACL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectACL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectACL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequesterPays(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterPays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequesterPays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterPays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSMBACLEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SMBACLEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSMBACLEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SMBACLEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidUserList(value: FileShareUserList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidUserList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidUserList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidUserList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

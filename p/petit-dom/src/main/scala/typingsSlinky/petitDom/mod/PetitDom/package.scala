@@ -9,7 +9,7 @@ package object PetitDom {
   type Content = java.lang.String | typingsSlinky.petitDom.mod.PetitDom.VNode
   type DOMElementProps[E /* <: org.scalajs.dom.raw.Element */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof E ]:? E[P]}
-    */ typingsSlinky.petitDom.petitDomStrings.DOMElementProps with E
+    */ typingsSlinky.petitDom.petitDomStrings.DOMElementProps with org.scalablytyped.runtime.TopLevel[E]
   type Key = java.lang.String | scala.Double
   type Props[E /* <: org.scalajs.dom.raw.Element */] = typingsSlinky.petitDom.mod.PetitDom.IntrinsicProps with typingsSlinky.petitDom.mod.PetitDom.DOMElementProps[E]
   type ShouldUpdate[P /* <: typingsSlinky.petitDom.mod.PetitDom.ComponentProps */] = js.Function4[

@@ -3,7 +3,6 @@ package typingsSlinky.algoliasearch.mod
 import typingsSlinky.algoliasearch.AnonForwardToReplicas
 import typingsSlinky.algoliasearch.AnonResults
 import typingsSlinky.algoliasearch.mod.SearchForFacetValues.Parameters
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +20,7 @@ trait Index extends js.Object {
   /**
     * Add key for this index
     */
-  def addApiKey(scopes: js.Array[String], cb: js.Function2[/* err */ Error, /* res */ AddApiKeyTask, Unit]): Unit = js.native
+  def addApiKey(scopes: js.Array[String], cb: js.Function2[/* err */ js.Error, /* res */ AddApiKeyTask, Unit]): Unit = js.native
   def addApiKey(scopes: js.Array[String], options: ApiKeyOptions): js.Promise[AddApiKeyTask] = js.native
   /**
     * Add key for this index
@@ -38,7 +37,7 @@ trait Index extends js.Object {
   /**
     * Add a specific object
     */
-  def addObject(`object`: js.Object, cb: js.Function2[/* err */ Error, /* res */ Task, Unit]): Unit = js.native
+  def addObject(`object`: js.Object, cb: js.Function2[/* err */ js.Error, /* res */ Task, Unit]): Unit = js.native
   def addObject(`object`: js.Object, objectID: String): js.Promise[Task] = js.native
   /**
     * Add a list of objects
@@ -86,7 +85,7 @@ trait Index extends js.Object {
   /**
     * Browse an index
     */
-  def browse(query: String, cb: js.Function2[/* err */ Error, /* res */ BrowseResponse, Unit]): Unit = js.native
+  def browse(query: String, cb: js.Function2[/* err */ js.Error, /* res */ BrowseResponse, Unit]): Unit = js.native
   def browse(query: String, parameters: BrowseParameters): js.Promise[BrowseResponse] = js.native
   /**
     * Browse an index
@@ -161,7 +160,7 @@ trait Index extends js.Object {
   /**
     * Delete objects that matches the query
     */
-  def deleteByQuery(query: String, cb: js.Function2[/* err */ Error, /* res */ js.Any, Unit]): Unit = js.native
+  def deleteByQuery(query: String, cb: js.Function2[/* err */ js.Error, /* res */ js.Any, Unit]): Unit = js.native
   def deleteByQuery(query: String, params: js.Object): js.Promise[_] = js.native
   /**
     * Delete objects that matches the query
@@ -231,7 +230,7 @@ trait Index extends js.Object {
   /**
     * Gets a specific object
     */
-  def getObject(objectID: String, cb: js.Function2[/* err */ Error, /* res */ js.Object, Unit]): Unit = js.native
+  def getObject(objectID: String, cb: js.Function2[/* err */ js.Error, /* res */ js.Object, Unit]): Unit = js.native
   /**
     * Gets a list of objects
     */
@@ -279,7 +278,7 @@ trait Index extends js.Object {
   /**
     * Update parameters of a specific object
     */
-  def partialUpdateObject(`object`: js.Object, cb: js.Function2[/* err */ Error, /* res */ Task, Unit]): Unit = js.native
+  def partialUpdateObject(`object`: js.Object, cb: js.Function2[/* err */ js.Error, /* res */ Task, Unit]): Unit = js.native
   def partialUpdateObject(`object`: js.Object, createIfNotExists: Boolean): js.Promise[Task] = js.native
   def partialUpdateObject(
     `object`: js.Object,
@@ -293,7 +292,7 @@ trait Index extends js.Object {
   /**
     * Update parameters of a list of objects
     */
-  def partialUpdateObjects(objects: js.Array[js.Object], cb: js.Function2[/* err */ Error, /* res */ Task, Unit]): Unit = js.native
+  def partialUpdateObjects(objects: js.Array[js.Object], cb: js.Function2[/* err */ js.Error, /* res */ Task, Unit]): Unit = js.native
   def partialUpdateObjects(objects: js.Array[js.Object], createIfNotExists: Boolean): js.Promise[Task] = js.native
   def partialUpdateObjects(
     objects: js.Array[js.Object],
@@ -382,7 +381,7 @@ trait Index extends js.Object {
   /**
     * Set an index settings
     */
-  def setSettings(settings: IndexSettings, cb: js.Function2[/* err */ Error, /* res */ Task, Unit]): Unit = js.native
+  def setSettings(settings: IndexSettings, cb: js.Function2[/* err */ js.Error, /* res */ Task, Unit]): Unit = js.native
   def setSettings(settings: IndexSettings, extra: AnonForwardToReplicas): js.Promise[Task] = js.native
   /**
     * Set an index settings
@@ -402,7 +401,7 @@ trait Index extends js.Object {
   def updateApiKey(
     key: String,
     scopes: js.Array[String],
-    cb: js.Function2[/* err */ Error, /* res */ UpdateApiKeyTask, Unit]
+    cb: js.Function2[/* err */ js.Error, /* res */ UpdateApiKeyTask, Unit]
   ): Unit = js.native
   /**
     * Update a key for this index

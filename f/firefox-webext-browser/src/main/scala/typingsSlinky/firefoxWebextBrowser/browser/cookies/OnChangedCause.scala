@@ -23,16 +23,14 @@ trait OnChangedCause extends js.Object
 
 object OnChangedCause {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def evicted: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.evicted = "evicted".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.evicted]
   @scala.inline
-  def evicted: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.evicted = this.cast("evicted")
+  def expired: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.expired = "expired".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.expired]
   @scala.inline
-  def expired: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.expired = this.cast("expired")
+  def expired_overwrite: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.expired_overwrite = "expired_overwrite".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.expired_overwrite]
   @scala.inline
-  def expired_overwrite: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.expired_overwrite = this.cast("expired_overwrite")
+  def explicit: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.explicit = "explicit".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.explicit]
   @scala.inline
-  def explicit: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.explicit = this.cast("explicit")
-  @scala.inline
-  def overwrite: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.overwrite = this.cast("overwrite")
+  def overwrite: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.overwrite = "overwrite".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.overwrite]
 }
 

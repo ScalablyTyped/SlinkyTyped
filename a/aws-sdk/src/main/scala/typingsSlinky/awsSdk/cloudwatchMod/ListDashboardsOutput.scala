@@ -18,11 +18,41 @@ trait ListDashboardsOutput extends js.Object {
 
 object ListDashboardsOutput {
   @scala.inline
-  def apply(DashboardEntries: DashboardEntries = null, NextToken: NextToken = null): ListDashboardsOutput = {
+  def apply(): ListDashboardsOutput = {
     val __obj = js.Dynamic.literal()
-    if (DashboardEntries != null) __obj.updateDynamic("DashboardEntries")(DashboardEntries.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDashboardsOutput]
   }
+  @scala.inline
+  implicit class ListDashboardsOutputOps[Self <: ListDashboardsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDashboardEntries(value: DashboardEntries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardEntries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDashboardEntries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardEntries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

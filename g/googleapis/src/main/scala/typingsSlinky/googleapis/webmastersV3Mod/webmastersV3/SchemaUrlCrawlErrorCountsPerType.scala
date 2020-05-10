@@ -27,16 +27,53 @@ trait SchemaUrlCrawlErrorCountsPerType extends js.Object {
 
 object SchemaUrlCrawlErrorCountsPerType {
   @scala.inline
-  def apply(
-    category: String = null,
-    entries: js.Array[SchemaUrlCrawlErrorCount] = null,
-    platform: String = null
-  ): SchemaUrlCrawlErrorCountsPerType = {
+  def apply(): SchemaUrlCrawlErrorCountsPerType = {
     val __obj = js.Dynamic.literal()
-    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
-    if (entries != null) __obj.updateDynamic("entries")(entries.asInstanceOf[js.Any])
-    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUrlCrawlErrorCountsPerType]
   }
+  @scala.inline
+  implicit class SchemaUrlCrawlErrorCountsPerTypeOps[Self <: SchemaUrlCrawlErrorCountsPerType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCategory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntries(value: js.Array[SchemaUrlCrawlErrorCount]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatform(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

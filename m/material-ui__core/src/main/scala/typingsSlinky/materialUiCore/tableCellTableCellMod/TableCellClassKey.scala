@@ -18,22 +18,20 @@ trait TableCellClassKey extends js.Object
 
 object TableCellClassKey {
   @scala.inline
-  def body: typingsSlinky.materialUiCore.materialUiCoreStrings.body = this.cast("body")
+  def body: typingsSlinky.materialUiCore.materialUiCoreStrings.body = "body".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.body]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def footer: typingsSlinky.materialUiCore.materialUiCoreStrings.footer = "footer".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.footer]
   @scala.inline
-  def footer: typingsSlinky.materialUiCore.materialUiCoreStrings.footer = this.cast("footer")
+  def head: typingsSlinky.materialUiCore.materialUiCoreStrings.head = "head".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.head]
   @scala.inline
-  def head: typingsSlinky.materialUiCore.materialUiCoreStrings.head = this.cast("head")
+  def numeric: typingsSlinky.materialUiCore.materialUiCoreStrings.numeric = "numeric".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.numeric]
   @scala.inline
-  def numeric: typingsSlinky.materialUiCore.materialUiCoreStrings.numeric = this.cast("numeric")
+  def paddingCheckbox: typingsSlinky.materialUiCore.materialUiCoreStrings.paddingCheckbox = "paddingCheckbox".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paddingCheckbox]
   @scala.inline
-  def paddingCheckbox: typingsSlinky.materialUiCore.materialUiCoreStrings.paddingCheckbox = this.cast("paddingCheckbox")
+  def paddingDense: typingsSlinky.materialUiCore.materialUiCoreStrings.paddingDense = "paddingDense".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paddingDense]
   @scala.inline
-  def paddingDense: typingsSlinky.materialUiCore.materialUiCoreStrings.paddingDense = this.cast("paddingDense")
+  def paddingNone: typingsSlinky.materialUiCore.materialUiCoreStrings.paddingNone = "paddingNone".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paddingNone]
   @scala.inline
-  def paddingNone: typingsSlinky.materialUiCore.materialUiCoreStrings.paddingNone = this.cast("paddingNone")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

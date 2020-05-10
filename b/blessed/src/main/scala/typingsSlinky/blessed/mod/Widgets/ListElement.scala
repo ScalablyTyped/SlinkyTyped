@@ -2,7 +2,6 @@ package typingsSlinky.blessed.mod.Widgets
 
 import typingsSlinky.blessed.blessedStrings.`select item`
 import typingsSlinky.blessed.blessedStrings.select
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,7 +36,7 @@ class ListElement protected () extends BoxElement {
     */
   def fuzzyFind(arg: String): Unit = js.native
   def fuzzyFind(arg: js.Function0[Unit]): Unit = js.native
-  def fuzzyFind(arg: RegExp): Unit = js.native
+  def fuzzyFind(arg: js.RegExp): Unit = js.native
   def getItem(child: String): BlessedElement = js.native
   def getItem(child: Double): BlessedElement = js.native
   /**

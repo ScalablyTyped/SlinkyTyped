@@ -41,20 +41,83 @@ trait DescribeConfigurationRevisionResponse extends js.Object {
 
 object DescribeConfigurationRevisionResponse {
   @scala.inline
-  def apply(
-    Arn: string = null,
-    CreationTime: js.Date = null,
-    Description: string = null,
-    Revision: Int | Double = null,
-    ServerProperties: _Blob = null
-  ): DescribeConfigurationRevisionResponse = {
+  def apply(): DescribeConfigurationRevisionResponse = {
     val __obj = js.Dynamic.literal()
-    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
-    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (Revision != null) __obj.updateDynamic("Revision")(Revision.asInstanceOf[js.Any])
-    if (ServerProperties != null) __obj.updateDynamic("ServerProperties")(ServerProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeConfigurationRevisionResponse]
   }
+  @scala.inline
+  implicit class DescribeConfigurationRevisionResponseOps[Self <: DescribeConfigurationRevisionResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevision(value: long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Revision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Revision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerPropertiesUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServerProperties(value: _Blob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerProperties")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

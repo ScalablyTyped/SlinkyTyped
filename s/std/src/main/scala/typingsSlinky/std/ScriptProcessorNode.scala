@@ -45,7 +45,7 @@ trait ScriptProcessorNode extends AudioNode {
   def removeEventListener_audioprocess(
     `type`: audioprocess,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ AudioProcessingEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

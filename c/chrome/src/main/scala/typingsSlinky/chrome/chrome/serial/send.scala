@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 object send extends js.Object {
   def apply(
     connectionId: Double,
-    data: scala.scalajs.js.typedarray.ArrayBuffer,
+    data: js.typedarray.ArrayBuffer,
     callback: js.Function1[/* sendInfo */ js.Object, Unit]
   ): Unit = js.native
 }

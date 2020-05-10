@@ -16,10 +16,8 @@ trait CmdBarDisplay extends js.Object
 
 object CmdBarDisplay {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `false`: typingsSlinky.xrm.xrmStrings.`false` = "false".asInstanceOf[typingsSlinky.xrm.xrmStrings.`false`]
   @scala.inline
-  def `false`: typingsSlinky.xrm.xrmStrings.`false` = this.cast("false")
-  @scala.inline
-  def `true`: typingsSlinky.xrm.xrmStrings.`true` = this.cast("true")
+  def `true`: typingsSlinky.xrm.xrmStrings.`true` = "true".asInstanceOf[typingsSlinky.xrm.xrmStrings.`true`]
 }
 

@@ -103,5 +103,6 @@ trait HTMLObjectElement extends HTMLElement {
 
 @JSGlobal("HTMLObjectElement")
 @js.native
-object HTMLObjectElement extends Instantiable0[HTMLObjectElement]
+object HTMLObjectElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLObjectElement]
 

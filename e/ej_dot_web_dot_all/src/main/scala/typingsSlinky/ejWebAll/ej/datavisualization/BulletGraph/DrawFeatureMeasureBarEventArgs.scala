@@ -5,35 +5,83 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DrawFeatureMeasureBarEventArgs extends js.Object {
   /** returns the object of the bullet graph.
     */
-  var Object: js.UndefOr[js.Any] = js.undefined
+  var Object: js.UndefOr[js.Any] = js.native
   /** returns the value of the feature measure bar.
     */
-  var Value: js.UndefOr[Double] = js.undefined
+  var Value: js.UndefOr[Double] = js.native
   /** returns the options of feature measure element.
     */
-  var currentElement: js.UndefOr[HTMLElement] = js.undefined
+  var currentElement: js.UndefOr[HTMLElement] = js.native
   /** returns the options of the scale element.
     */
-  var scaleElement: js.UndefOr[HTMLElement] = js.undefined
+  var scaleElement: js.UndefOr[HTMLElement] = js.native
 }
 
 object DrawFeatureMeasureBarEventArgs {
   @scala.inline
-  def apply(
-    Object: js.Any = null,
-    Value: Int | Double = null,
-    currentElement: HTMLElement = null,
-    scaleElement: HTMLElement = null
-  ): DrawFeatureMeasureBarEventArgs = {
+  def apply(): DrawFeatureMeasureBarEventArgs = {
     val __obj = js.Dynamic.literal()
-    if (Object != null) __obj.updateDynamic("Object")(Object.asInstanceOf[js.Any])
-    if (Value != null) __obj.updateDynamic("Value")(Value.asInstanceOf[js.Any])
-    if (currentElement != null) __obj.updateDynamic("currentElement")(currentElement.asInstanceOf[js.Any])
-    if (scaleElement != null) __obj.updateDynamic("scaleElement")(scaleElement.asInstanceOf[js.Any])
     __obj.asInstanceOf[DrawFeatureMeasureBarEventArgs]
   }
+  @scala.inline
+  implicit class DrawFeatureMeasureBarEventArgsOps[Self <: DrawFeatureMeasureBarEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withObject(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Object")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Object")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleElement")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

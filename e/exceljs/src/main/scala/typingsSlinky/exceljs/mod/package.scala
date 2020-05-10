@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type AutoFilter = java.lang.String | typingsSlinky.exceljs.AnonFrom
-  type Buffer = scala.scalajs.js.typedarray.ArrayBuffer
+  type Buffer = js.typedarray.ArrayBuffer
   /* Rewritten from type alias, can be one of: 
     - scala.Null
     - scala.Double

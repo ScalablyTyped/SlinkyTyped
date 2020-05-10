@@ -1,13 +1,15 @@
 package typingsSlinky.grommet.menuMod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.grommet.buttonMod.ButtonType
-import typingsSlinky.react.mod.FC
+import typingsSlinky.grommet.grommetStrings.icon
+import typingsSlinky.grommet.utilsMod.Omit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("grommet/components/Menu", "Menu")
 @js.native
-object Menu extends TopLevel[FC[MenuProps with ButtonType]]
+object Menu extends TopLevel[ReactComponentClass[MenuProps with (Omit[ButtonType, icon])]]
 

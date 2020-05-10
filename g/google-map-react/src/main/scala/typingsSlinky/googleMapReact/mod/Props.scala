@@ -7,122 +7,479 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Props extends js.Object {
-  var bootstrapURLKeys: js.UndefOr[BootstrapURLKeys] = js.undefined
-  var center: js.UndefOr[Coords] = js.undefined
-  var debounced: js.UndefOr[Boolean] = js.undefined
-  var defaultCenter: js.UndefOr[Coords] = js.undefined
-  var defaultZoom: js.UndefOr[Double] = js.undefined
+  var bootstrapURLKeys: js.UndefOr[BootstrapURLKeys] = js.native
+  var center: js.UndefOr[Coords] = js.native
+  var debounced: js.UndefOr[Boolean] = js.native
+  var defaultCenter: js.UndefOr[Coords] = js.native
+  var defaultZoom: js.UndefOr[Double] = js.native
   var distanceToMouse: js.UndefOr[
     js.Function3[/* pt */ Point, /* mousePos */ Point, /* markerProps */ js.UndefOr[js.Object], Double]
-  ] = js.undefined
-  var draggable: js.UndefOr[Boolean] = js.undefined
-  var googleMapLoader: js.UndefOr[js.Function1[/* bootstrapURLKeys */ js.Any, Unit]] = js.undefined
-  var heatmapLibrary: js.UndefOr[Boolean] = js.undefined
-  var hoverDistance: js.UndefOr[Double] = js.undefined
-  var layerTypes: js.UndefOr[js.Array[String]] = js.undefined
-  var margin: js.UndefOr[js.Array[_]] = js.undefined
-  var onChange: js.UndefOr[js.Function1[/* value */ ChangeEventValue, _]] = js.undefined
-  var onChildClick: js.UndefOr[js.Function2[/* hoverKey */ js.Any, /* childProps */ js.Any, Unit]] = js.undefined
+  ] = js.native
+  var draggable: js.UndefOr[Boolean] = js.native
+  var googleMapLoader: js.UndefOr[js.Function1[/* bootstrapURLKeys */ js.Any, Unit]] = js.native
+  var heatmap: js.UndefOr[Heatmap] = js.native
+  var heatmapLibrary: js.UndefOr[Boolean] = js.native
+  var hoverDistance: js.UndefOr[Double] = js.native
+  var layerTypes: js.UndefOr[js.Array[String]] = js.native
+  var margin: js.UndefOr[js.Array[_]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* value */ ChangeEventValue, _]] = js.native
+  var onChildClick: js.UndefOr[js.Function2[/* hoverKey */ js.Any, /* childProps */ js.Any, Unit]] = js.native
   var onChildMouseDown: js.UndefOr[
     js.Function3[/* childKey */ js.Any, /* childProps */ js.Any, /* mouse */ js.Any, Unit]
-  ] = js.undefined
-  var onChildMouseEnter: js.UndefOr[js.Function2[/* hoverKey */ js.Any, /* childProps */ js.Any, Unit]] = js.undefined
-  var onChildMouseLeave: js.UndefOr[js.Function2[/* hoverKey */ js.Any, /* childProps */ js.Any, Unit]] = js.undefined
+  ] = js.native
+  var onChildMouseEnter: js.UndefOr[js.Function2[/* hoverKey */ js.Any, /* childProps */ js.Any, Unit]] = js.native
+  var onChildMouseLeave: js.UndefOr[js.Function2[/* hoverKey */ js.Any, /* childProps */ js.Any, Unit]] = js.native
   var onChildMouseMove: js.UndefOr[
     js.Function3[/* childKey */ js.Any, /* childProps */ js.Any, /* mouse */ js.Any, Unit]
-  ] = js.undefined
+  ] = js.native
   var onChildMouseUp: js.UndefOr[
     js.Function3[/* childKey */ js.Any, /* childProps */ js.Any, /* mouse */ js.Any, Unit]
-  ] = js.undefined
-  var onClick: js.UndefOr[js.Function1[/* value */ ClickEventValue, _]] = js.undefined
-  var onDrag: js.UndefOr[js.Function1[/* map */ js.Any, Unit]] = js.undefined
-  var onDragEnd: js.UndefOr[js.Function1[/* map */ js.Any, Unit]] = js.undefined
-  var onGoogleApiLoaded: js.UndefOr[js.Function1[/* maps */ AnonMap, Unit]] = js.undefined
-  var onMapTypeIdChange: js.UndefOr[js.Function1[/* args */ js.Any, Unit]] = js.undefined
-  var onTilesLoaded: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onZoomAnimationEnd: js.UndefOr[js.Function1[/* args */ js.Any, Unit]] = js.undefined
-  var onZoomAnimationStart: js.UndefOr[js.Function1[/* args */ js.Any, Unit]] = js.undefined
-  var options: js.UndefOr[MapOptions | (js.Function1[/* maps */ Maps, MapOptions])] = js.undefined
-  var resetBoundsOnResize: js.UndefOr[Boolean] = js.undefined
-  var shouldUnregisterMapOnUnmount: js.UndefOr[Boolean] = js.undefined
-  var style: js.UndefOr[HTMLProps[HTMLDivElement]] = js.undefined
-  var yesIWantToUseGoogleMapApiInternals: js.UndefOr[Boolean] = js.undefined
-  var zoom: js.UndefOr[Double] = js.undefined
+  ] = js.native
+  var onClick: js.UndefOr[js.Function1[/* value */ ClickEventValue, _]] = js.native
+  var onDrag: js.UndefOr[js.Function1[/* map */ js.Any, Unit]] = js.native
+  var onDragEnd: js.UndefOr[js.Function1[/* map */ js.Any, Unit]] = js.native
+  var onGoogleApiLoaded: js.UndefOr[js.Function1[/* maps */ AnonMap, Unit]] = js.native
+  var onMapTypeIdChange: js.UndefOr[js.Function1[/* args */ js.Any, Unit]] = js.native
+  var onTilesLoaded: js.UndefOr[js.Function0[Unit]] = js.native
+  var onZoomAnimationEnd: js.UndefOr[js.Function1[/* args */ js.Any, Unit]] = js.native
+  var onZoomAnimationStart: js.UndefOr[js.Function1[/* args */ js.Any, Unit]] = js.native
+  var options: js.UndefOr[MapOptions | (js.Function1[/* maps */ Maps, MapOptions])] = js.native
+  var resetBoundsOnResize: js.UndefOr[Boolean] = js.native
+  var shouldUnregisterMapOnUnmount: js.UndefOr[Boolean] = js.native
+  var style: js.UndefOr[HTMLProps[HTMLDivElement]] = js.native
+  var yesIWantToUseGoogleMapApiInternals: js.UndefOr[Boolean] = js.native
+  var zoom: js.UndefOr[Double] = js.native
 }
 
 object Props {
   @scala.inline
-  def apply(
-    bootstrapURLKeys: BootstrapURLKeys = null,
-    center: Coords = null,
-    debounced: js.UndefOr[Boolean] = js.undefined,
-    defaultCenter: Coords = null,
-    defaultZoom: Int | Double = null,
-    distanceToMouse: (/* pt */ Point, /* mousePos */ Point, /* markerProps */ js.UndefOr[js.Object]) => Double = null,
-    draggable: js.UndefOr[Boolean] = js.undefined,
-    googleMapLoader: /* bootstrapURLKeys */ js.Any => Unit = null,
-    heatmapLibrary: js.UndefOr[Boolean] = js.undefined,
-    hoverDistance: Int | Double = null,
-    layerTypes: js.Array[String] = null,
-    margin: js.Array[_] = null,
-    onChange: /* value */ ChangeEventValue => _ = null,
-    onChildClick: (/* hoverKey */ js.Any, /* childProps */ js.Any) => Unit = null,
-    onChildMouseDown: (/* childKey */ js.Any, /* childProps */ js.Any, /* mouse */ js.Any) => Unit = null,
-    onChildMouseEnter: (/* hoverKey */ js.Any, /* childProps */ js.Any) => Unit = null,
-    onChildMouseLeave: (/* hoverKey */ js.Any, /* childProps */ js.Any) => Unit = null,
-    onChildMouseMove: (/* childKey */ js.Any, /* childProps */ js.Any, /* mouse */ js.Any) => Unit = null,
-    onChildMouseUp: (/* childKey */ js.Any, /* childProps */ js.Any, /* mouse */ js.Any) => Unit = null,
-    onClick: /* value */ ClickEventValue => _ = null,
-    onDrag: /* map */ js.Any => Unit = null,
-    onDragEnd: /* map */ js.Any => Unit = null,
-    onGoogleApiLoaded: /* maps */ AnonMap => Unit = null,
-    onMapTypeIdChange: /* args */ js.Any => Unit = null,
-    onTilesLoaded: () => Unit = null,
-    onZoomAnimationEnd: /* args */ js.Any => Unit = null,
-    onZoomAnimationStart: /* args */ js.Any => Unit = null,
-    options: MapOptions | (js.Function1[/* maps */ Maps, MapOptions]) = null,
-    resetBoundsOnResize: js.UndefOr[Boolean] = js.undefined,
-    shouldUnregisterMapOnUnmount: js.UndefOr[Boolean] = js.undefined,
-    style: HTMLProps[HTMLDivElement] = null,
-    yesIWantToUseGoogleMapApiInternals: js.UndefOr[Boolean] = js.undefined,
-    zoom: Int | Double = null
-  ): Props = {
+  def apply(): Props = {
     val __obj = js.Dynamic.literal()
-    if (bootstrapURLKeys != null) __obj.updateDynamic("bootstrapURLKeys")(bootstrapURLKeys.asInstanceOf[js.Any])
-    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (!js.isUndefined(debounced)) __obj.updateDynamic("debounced")(debounced.asInstanceOf[js.Any])
-    if (defaultCenter != null) __obj.updateDynamic("defaultCenter")(defaultCenter.asInstanceOf[js.Any])
-    if (defaultZoom != null) __obj.updateDynamic("defaultZoom")(defaultZoom.asInstanceOf[js.Any])
-    if (distanceToMouse != null) __obj.updateDynamic("distanceToMouse")(js.Any.fromFunction3(distanceToMouse))
-    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.asInstanceOf[js.Any])
-    if (googleMapLoader != null) __obj.updateDynamic("googleMapLoader")(js.Any.fromFunction1(googleMapLoader))
-    if (!js.isUndefined(heatmapLibrary)) __obj.updateDynamic("heatmapLibrary")(heatmapLibrary.asInstanceOf[js.Any])
-    if (hoverDistance != null) __obj.updateDynamic("hoverDistance")(hoverDistance.asInstanceOf[js.Any])
-    if (layerTypes != null) __obj.updateDynamic("layerTypes")(layerTypes.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onChildClick != null) __obj.updateDynamic("onChildClick")(js.Any.fromFunction2(onChildClick))
-    if (onChildMouseDown != null) __obj.updateDynamic("onChildMouseDown")(js.Any.fromFunction3(onChildMouseDown))
-    if (onChildMouseEnter != null) __obj.updateDynamic("onChildMouseEnter")(js.Any.fromFunction2(onChildMouseEnter))
-    if (onChildMouseLeave != null) __obj.updateDynamic("onChildMouseLeave")(js.Any.fromFunction2(onChildMouseLeave))
-    if (onChildMouseMove != null) __obj.updateDynamic("onChildMouseMove")(js.Any.fromFunction3(onChildMouseMove))
-    if (onChildMouseUp != null) __obj.updateDynamic("onChildMouseUp")(js.Any.fromFunction3(onChildMouseUp))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onDrag != null) __obj.updateDynamic("onDrag")(js.Any.fromFunction1(onDrag))
-    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(js.Any.fromFunction1(onDragEnd))
-    if (onGoogleApiLoaded != null) __obj.updateDynamic("onGoogleApiLoaded")(js.Any.fromFunction1(onGoogleApiLoaded))
-    if (onMapTypeIdChange != null) __obj.updateDynamic("onMapTypeIdChange")(js.Any.fromFunction1(onMapTypeIdChange))
-    if (onTilesLoaded != null) __obj.updateDynamic("onTilesLoaded")(js.Any.fromFunction0(onTilesLoaded))
-    if (onZoomAnimationEnd != null) __obj.updateDynamic("onZoomAnimationEnd")(js.Any.fromFunction1(onZoomAnimationEnd))
-    if (onZoomAnimationStart != null) __obj.updateDynamic("onZoomAnimationStart")(js.Any.fromFunction1(onZoomAnimationStart))
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (!js.isUndefined(resetBoundsOnResize)) __obj.updateDynamic("resetBoundsOnResize")(resetBoundsOnResize.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldUnregisterMapOnUnmount)) __obj.updateDynamic("shouldUnregisterMapOnUnmount")(shouldUnregisterMapOnUnmount.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(yesIWantToUseGoogleMapApiInternals)) __obj.updateDynamic("yesIWantToUseGoogleMapApiInternals")(yesIWantToUseGoogleMapApiInternals.asInstanceOf[js.Any])
-    if (zoom != null) __obj.updateDynamic("zoom")(zoom.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props]
   }
+  @scala.inline
+  implicit class PropsOps[Self <: Props] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBootstrapURLKeys(value: BootstrapURLKeys): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootstrapURLKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBootstrapURLKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootstrapURLKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCenter(value: Coords): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebounced(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debounced")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebounced: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debounced")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultCenter(value: Coords): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCenter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCenter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistanceToMouse(value: (/* pt */ Point, /* mousePos */ Point, /* markerProps */ js.UndefOr[js.Object]) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distanceToMouse")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutDistanceToMouse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distanceToMouse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDraggable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDraggable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGoogleMapLoader(value: /* bootstrapURLKeys */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("googleMapLoader")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGoogleMapLoader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("googleMapLoader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeatmap(value: Heatmap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heatmap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeatmap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heatmap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeatmapLibrary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heatmapLibrary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeatmapLibrary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heatmapLibrary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverDistance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoverDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverDistance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayerTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layerTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayerTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layerTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: /* value */ ChangeEventValue => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChildClick(value: (/* hoverKey */ js.Any, /* childProps */ js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChildClick")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChildClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChildClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChildMouseDown(value: (/* childKey */ js.Any, /* childProps */ js.Any, /* mouse */ js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChildMouseDown")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChildMouseDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChildMouseDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChildMouseEnter(value: (/* hoverKey */ js.Any, /* childProps */ js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChildMouseEnter")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChildMouseEnter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChildMouseEnter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChildMouseLeave(value: (/* hoverKey */ js.Any, /* childProps */ js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChildMouseLeave")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChildMouseLeave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChildMouseLeave")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChildMouseMove(value: (/* childKey */ js.Any, /* childProps */ js.Any, /* mouse */ js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChildMouseMove")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChildMouseMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChildMouseMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChildMouseUp(value: (/* childKey */ js.Any, /* childProps */ js.Any, /* mouse */ js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChildMouseUp")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChildMouseUp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChildMouseUp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClick(value: /* value */ ClickEventValue => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDrag(value: /* map */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDrag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragEnd(value: /* map */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDragEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnGoogleApiLoaded(value: /* maps */ AnonMap => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onGoogleApiLoaded")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnGoogleApiLoaded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onGoogleApiLoaded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMapTypeIdChange(value: /* args */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMapTypeIdChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMapTypeIdChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMapTypeIdChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTilesLoaded(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTilesLoaded")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTilesLoaded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTilesLoaded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnZoomAnimationEnd(value: /* args */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onZoomAnimationEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnZoomAnimationEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onZoomAnimationEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnZoomAnimationStart(value: /* args */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onZoomAnimationStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnZoomAnimationStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onZoomAnimationStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionsFunction1(value: /* maps */ Maps => MapOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOptions(value: MapOptions | (js.Function1[/* maps */ Maps, MapOptions])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResetBoundsOnResize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetBoundsOnResize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResetBoundsOnResize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetBoundsOnResize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShouldUnregisterMapOnUnmount(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldUnregisterMapOnUnmount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShouldUnregisterMapOnUnmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldUnregisterMapOnUnmount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: HTMLProps[HTMLDivElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYesIWantToUseGoogleMapApiInternals(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yesIWantToUseGoogleMapApiInternals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYesIWantToUseGoogleMapApiInternals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yesIWantToUseGoogleMapApiInternals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

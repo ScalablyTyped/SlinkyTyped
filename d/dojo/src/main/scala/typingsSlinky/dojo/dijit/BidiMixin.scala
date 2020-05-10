@@ -16,6 +16,7 @@ import scala.scalajs.js.annotation._
   * the widget should define the "textDir".
   * 
   */
+@js.native
 trait BidiMixin extends js.Object {
   /**
     * Bi-directional support, the main variable which is responsible for the direction of the text.
@@ -30,7 +31,7 @@ trait BidiMixin extends js.Object {
     * By default is as the page direction.
     * 
     */
-  var textDir: String
+  var textDir: String = js.native
   /**
     * Set element.dir according to this.textDir, assuming this.textDir has a value.
     * If textDir is ltr or rtl returns the value.
@@ -40,7 +41,7 @@ trait BidiMixin extends js.Object {
     * @param element The text element to be set. Should have dir property.             
     * @param text               OptionalIf specified, and this.textDir is "auto", for calculating the right transformationOtherwise text read from element.             
     */
-  def applyTextDir(element: HTMLElement, text: String): Unit
+  def applyTextDir(element: HTMLElement, text: String): Unit = js.native
   /**
     * Wraps by UCC (Unicode control characters) option's text according to this.textDir
     * There's a dir problem with some HTML elements. For some elements (e.g. <option>, <select>)
@@ -53,7 +54,7 @@ trait BidiMixin extends js.Object {
     * @param option The element (<option>) we wrapping the text for.             
     * @param text The text to be wrapped.             
     */
-  def enforceTextDirWithUcc(option: js.Any, text: js.Any): String
+  def enforceTextDirWithUcc(option: js.Any, text: js.Any): String = js.native
   /**
     * Gets the right direction of text.
     * If textDir is ltr or rtl returns the value.
@@ -62,7 +63,7 @@ trait BidiMixin extends js.Object {
     * 
     * @param text             
     */
-  def getTextDir(text: String): js.Any
+  def getTextDir(text: String): js.Any = js.native
   /**
     * Restores the text of origObj, if needed, after enforceTextDirWithUcc, e.g. set("textDir", textDir).
     * Sets the text of origObj to origObj.originalText, which is the original text, without the UCCs.
@@ -70,7 +71,7 @@ trait BidiMixin extends js.Object {
     * 
     * @param origObj The element (<option>) to restore.             
     */
-  def restoreOriginalText(origObj: js.Any): js.Any
+  def restoreOriginalText(origObj: js.Any): js.Any = js.native
 }
 
 object BidiMixin {
@@ -83,8 +84,45 @@ object BidiMixin {
     textDir: String
   ): BidiMixin = {
     val __obj = js.Dynamic.literal(applyTextDir = js.Any.fromFunction2(applyTextDir), enforceTextDirWithUcc = js.Any.fromFunction2(enforceTextDirWithUcc), getTextDir = js.Any.fromFunction1(getTextDir), restoreOriginalText = js.Any.fromFunction1(restoreOriginalText), textDir = textDir.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[BidiMixin]
   }
+  @scala.inline
+  implicit class BidiMixinOps[Self <: BidiMixin] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplyTextDir(value: (HTMLElement, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applyTextDir")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withEnforceTextDirWithUcc(value: (js.Any, js.Any) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enforceTextDirWithUcc")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetTextDir(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTextDir")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRestoreOriginalText(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreOriginalText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTextDir(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDir")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

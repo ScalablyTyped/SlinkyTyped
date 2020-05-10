@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait INamespacedStoreService extends js.Object {
   /**
   			 * Returns the saved value with they key name.
@@ -11,28 +12,53 @@ trait INamespacedStoreService extends js.Object {
   			 * @param {String} name - The key name for the location of the value
   			 * @returns The saved value; if you saved an object, you get an object
   			 */
-  def get(name: String): js.Any
+  def get(name: String): js.Any = js.native
   /**
   			 * Deletes the saved value with the key name
   			 *
   			 * @param {String} name - The key name for the location of the value to remove
   			 */
-  def remove(name: String): Unit
+  def remove(name: String): Unit = js.native
   /**
   			 * Sets a new value to the storage with the key name. It can be any object.
   			 *
   			 * @param {String} name - The key name for the location of the value
   			 * @param value - The value to store
   			 */
-  def set(name: String, value: js.Any): Unit
+  def set(name: String, value: js.Any): Unit = js.native
 }
 
 object INamespacedStoreService {
   @scala.inline
   def apply(get: String => js.Any, remove: String => Unit, set: (String, js.Any) => Unit): INamespacedStoreService = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), remove = js.Any.fromFunction1(remove), set = js.Any.fromFunction2(set))
-  
     __obj.asInstanceOf[INamespacedStoreService]
   }
+  @scala.inline
+  implicit class INamespacedStoreServiceOps[Self <: INamespacedStoreService] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGet(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemove(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet(value: (String, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

@@ -211,7 +211,7 @@ trait Form_ extends js.Object {
     name: onSuccess,
     value: js.ThisFunction2[
       /* this */ JQuery, 
-      /* event */ TriggeredEvent[typingsSlinky.std.HTMLElement, _, _, _], 
+      /* event */ TriggeredEvent[HTMLElement, _, _, _], 
       /* fields */ js.Any, 
       Unit
     ]
@@ -231,9 +231,7 @@ trait Form_ extends js.Object {
   def apply(
     behavior: setting,
     name: rules,
-    value: StringDictionary[
-      js.ThisFunction1[/* this */ typingsSlinky.std.HTMLElement, /* repeated */ js.Any, Boolean]
-    ]
+    value: StringDictionary[js.ThisFunction1[/* this */ HTMLElement, /* repeated */ js.Any, Boolean]]
   ): JQuery = js.native
   def apply(behavior: setting, name: selector): SelectorSettings = js.native
   def apply(behavior: setting, name: selector, value: SelectorSettings): JQuery = js.native

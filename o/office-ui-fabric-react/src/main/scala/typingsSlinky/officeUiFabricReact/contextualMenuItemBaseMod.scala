@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.officeUiFabricReact.contextualMenuItemTypesMod.IContextualMenuItemProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,8 +10,9 @@ import scala.scalajs.js.annotation._
 @js.native
 object contextualMenuItemBaseMod extends js.Object {
   @js.native
-  class ContextualMenuItemBase ()
-    extends BaseComponent[IContextualMenuItemProps, js.Object] {
+  class ContextualMenuItemBase protected ()
+    extends Component[IContextualMenuItemProps, js.Object, js.Any] {
+    def this(props: IContextualMenuItemProps) = this()
     def dismissMenu(): Unit = js.native
     def dismissMenu(dismissAll: Boolean): Unit = js.native
     def dismissSubMenu(): Unit = js.native

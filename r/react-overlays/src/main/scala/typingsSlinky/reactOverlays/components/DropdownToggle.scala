@@ -1,17 +1,18 @@
 package typingsSlinky.reactOverlays.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.reactOverlays.dropdownToggleMod.DropdownToggleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DropdownToggle
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.reactOverlays.mod.DropdownToggle] {
+object DropdownToggle {
   @JSImport("react-overlays", "DropdownToggle")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: DropdownToggleProps): Default[tag.type, typingsSlinky.reactOverlays.mod.DropdownToggle] = new Default[tag.type, typingsSlinky.reactOverlays.mod.DropdownToggle](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DropdownToggle.type): Default[tag.type, typingsSlinky.reactOverlays.mod.DropdownToggle] = new Default[tag.type, typingsSlinky.reactOverlays.mod.DropdownToggle](js.Array(this.component, js.Dictionary.empty))()
 }
 

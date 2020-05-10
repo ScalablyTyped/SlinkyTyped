@@ -1,33 +1,26 @@
 package typingsSlinky.reactGoogleMapsLoader.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactGoogleMapsLoader.mod.ReactGoogleMapsLoader.GoogleMaps
 import typingsSlinky.reactGoogleMapsLoader.mod.ReactGoogleMapsLoader.Params
+import typingsSlinky.reactGoogleMapsLoader.mod.ReactGoogleMapsLoader.Props
 import typingsSlinky.reactGoogleMapsLoader.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactGoogleMapsLoader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactGoogleMapsLoader {
   @JSImport("react-google-maps-loader", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    params: Params,
-    render: (GoogleMaps, js.UndefOr[String]) => TagMod[Any],
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(params = params.asInstanceOf[js.Any], render = js.Any.fromFunction2(render))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: Props): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(params: Params, render: (GoogleMaps, js.UndefOr[String]) => TagMod[Any]): Default[tag.type, default] = {
+    val __props = js.Dynamic.literal(params = params.asInstanceOf[js.Any], render = js.Any.fromFunction2(render))
+    new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[Props]))
   }
-  type Props = typingsSlinky.reactGoogleMapsLoader.mod.ReactGoogleMapsLoader.Props
 }
 

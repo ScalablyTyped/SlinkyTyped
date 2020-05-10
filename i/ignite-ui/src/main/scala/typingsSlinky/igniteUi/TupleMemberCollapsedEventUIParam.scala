@@ -4,45 +4,103 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TupleMemberCollapsedEventUIParam extends js.Object {
   /**
   	 * Gets the name of axis, which holds the member and the tuple.
   	 */
-  var axisName: js.UndefOr[String] = js.undefined
+  var axisName: js.UndefOr[String] = js.native
   /**
   	 * Gets a reference to the data source.
   	 */
-  var dataSource: js.UndefOr[js.Any] = js.undefined
+  var dataSource: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets the index of the member in the tuple.
   	 */
-  var memberIndex: js.UndefOr[Double] = js.undefined
+  var memberIndex: js.UndefOr[Double] = js.native
   /**
   	 * Gets a reference to the pivot grid.
   	 */
-  var owner: js.UndefOr[js.Any] = js.undefined
+  var owner: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets the index of the tuple in the axis.
   	 */
-  var tupleIndex: js.UndefOr[Double] = js.undefined
+  var tupleIndex: js.UndefOr[Double] = js.native
 }
 
 object TupleMemberCollapsedEventUIParam {
   @scala.inline
-  def apply(
-    axisName: String = null,
-    dataSource: js.Any = null,
-    memberIndex: Int | Double = null,
-    owner: js.Any = null,
-    tupleIndex: Int | Double = null
-  ): TupleMemberCollapsedEventUIParam = {
+  def apply(): TupleMemberCollapsedEventUIParam = {
     val __obj = js.Dynamic.literal()
-    if (axisName != null) __obj.updateDynamic("axisName")(axisName.asInstanceOf[js.Any])
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (memberIndex != null) __obj.updateDynamic("memberIndex")(memberIndex.asInstanceOf[js.Any])
-    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
-    if (tupleIndex != null) __obj.updateDynamic("tupleIndex")(tupleIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[TupleMemberCollapsedEventUIParam]
   }
+  @scala.inline
+  implicit class TupleMemberCollapsedEventUIParamOps[Self <: TupleMemberCollapsedEventUIParam] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAxisName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSource(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMemberIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memberIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMemberIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memberIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwner(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTupleIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tupleIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTupleIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tupleIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

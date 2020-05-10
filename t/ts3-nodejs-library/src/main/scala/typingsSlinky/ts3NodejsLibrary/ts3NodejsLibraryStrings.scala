@@ -6,6 +6,12 @@ import scala.scalajs.js.annotation._
 
 object ts3NodejsLibraryStrings {
   @js.native
+  sealed trait Asterisk extends js.Object
+  
+  @js.native
+  sealed trait apikey extends js.Object
+  
+  @js.native
   sealed trait average_speed extends js.Object
   
   @js.native
@@ -408,6 +414,9 @@ object ts3NodejsLibraryStrings {
   sealed trait created extends js.Object
   
   @js.native
+  sealed trait created_at extends js.Object
+  
+  @js.native
   sealed trait ctid extends js.Object
   
   @js.native
@@ -433,6 +442,9 @@ object ts3NodejsLibraryStrings {
   
   @js.native
   sealed trait error extends js.Object
+  
+  @js.native
+  sealed trait expires_at extends js.Object
   
   @js.native
   sealed trait extra_msg extends js.Object
@@ -609,6 +621,9 @@ object ts3NodejsLibraryStrings {
   sealed trait savedb extends js.Object
   
   @js.native
+  sealed trait scope extends js.Object
+  
+  @js.native
   sealed trait seconds_empty extends js.Object
   
   @js.native
@@ -712,6 +727,9 @@ object ts3NodejsLibraryStrings {
   
   @js.native
   sealed trait textmessage extends js.Object
+  
+  @js.native
+  sealed trait time_left extends js.Object
   
   @js.native
   sealed trait timestamp extends js.Object
@@ -1008,6 +1026,10 @@ object ts3NodejsLibraryStrings {
   sealed trait virtualservers_total_maxclients extends js.Object
   
   @scala.inline
+  def Asterisk: Asterisk = "*".asInstanceOf[Asterisk]
+  @scala.inline
+  def apikey: apikey = "apikey".asInstanceOf[apikey]
+  @scala.inline
   def average_speed: average_speed = "average_speed".asInstanceOf[average_speed]
   @scala.inline
   def banid: banid = "banid".asInstanceOf[banid]
@@ -1276,6 +1298,8 @@ object ts3NodejsLibraryStrings {
   @scala.inline
   def created: created = "created".asInstanceOf[created]
   @scala.inline
+  def created_at: created_at = "created_at".asInstanceOf[created_at]
+  @scala.inline
   def ctid: ctid = "ctid".asInstanceOf[ctid]
   @scala.inline
   def current_speed: current_speed = "current_speed".asInstanceOf[current_speed]
@@ -1293,6 +1317,8 @@ object ts3NodejsLibraryStrings {
   def enforcements: enforcements = "enforcements".asInstanceOf[enforcements]
   @scala.inline
   def error: error = "error".asInstanceOf[error]
+  @scala.inline
+  def expires_at: expires_at = "expires_at".asInstanceOf[expires_at]
   @scala.inline
   def extra_msg: extra_msg = "extra_msg".asInstanceOf[extra_msg]
   @scala.inline
@@ -1410,6 +1436,8 @@ object ts3NodejsLibraryStrings {
   @scala.inline
   def savedb: savedb = "savedb".asInstanceOf[savedb]
   @scala.inline
+  def scope: scope = "scope".asInstanceOf[scope]
+  @scala.inline
   def seconds_empty: seconds_empty = "seconds_empty".asInstanceOf[seconds_empty]
   @scala.inline
   def sender: sender = "sender".asInstanceOf[sender]
@@ -1479,6 +1507,8 @@ object ts3NodejsLibraryStrings {
   def tcldbid: tcldbid = "tcldbid".asInstanceOf[tcldbid]
   @scala.inline
   def textmessage: textmessage = "textmessage".asInstanceOf[textmessage]
+  @scala.inline
+  def time_left: time_left = "time_left".asInstanceOf[time_left]
   @scala.inline
   def timestamp: timestamp = "timestamp".asInstanceOf[timestamp]
   @scala.inline

@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonActual extends js.Object {
-  var actual: js.UndefOr[js.Any] = js.undefined
-  var expected: js.UndefOr[js.Any] = js.undefined
-  var message: js.UndefOr[java.lang.String] = js.undefined
-  var operator: js.UndefOr[java.lang.String] = js.undefined
-  var stackStartFn: js.UndefOr[js.Function] = js.undefined
+  var actual: js.UndefOr[js.Any] = js.native
+  var expected: js.UndefOr[js.Any] = js.native
+  var message: js.UndefOr[java.lang.String] = js.native
+  var operator: js.UndefOr[java.lang.String] = js.native
+  var stackStartFn: js.UndefOr[js.Function] = js.native
 }
 
 object AnonActual {
   @scala.inline
-  def apply(
-    actual: js.Any = null,
-    expected: js.Any = null,
-    message: java.lang.String = null,
-    operator: java.lang.String = null,
-    stackStartFn: js.Function = null
-  ): AnonActual = {
+  def apply(): AnonActual = {
     val __obj = js.Dynamic.literal()
-    if (actual != null) __obj.updateDynamic("actual")(actual.asInstanceOf[js.Any])
-    if (expected != null) __obj.updateDynamic("expected")(expected.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (operator != null) __obj.updateDynamic("operator")(operator.asInstanceOf[js.Any])
-    if (stackStartFn != null) __obj.updateDynamic("stackStartFn")(stackStartFn.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonActual]
   }
+  @scala.inline
+  implicit class AnonActualOps[Self <: AnonActual] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActual(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actual")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActual: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actual")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpected(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperator(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackStartFn(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stackStartFn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackStartFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stackStartFn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

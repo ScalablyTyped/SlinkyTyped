@@ -10,7 +10,7 @@ object createDataFile extends js.Object {
   def apply(
     parent: String,
     name: String,
-    data: scala.scalajs.js.typedarray.ArrayBufferView,
+    data: js.typedarray.ArrayBufferView,
     canRead: Boolean,
     canWrite: Boolean,
     canOwn: Boolean
@@ -18,7 +18,7 @@ object createDataFile extends js.Object {
   def apply(
     parent: FSNode,
     name: String,
-    data: scala.scalajs.js.typedarray.ArrayBufferView,
+    data: js.typedarray.ArrayBufferView,
     canRead: Boolean,
     canWrite: Boolean,
     canOwn: Boolean

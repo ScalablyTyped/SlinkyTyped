@@ -27,16 +27,53 @@ trait SchemaRichMediaExitOverride extends js.Object {
 
 object SchemaRichMediaExitOverride {
   @scala.inline
-  def apply(
-    clickThroughUrl: SchemaClickThroughUrl = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    exitId: String = null
-  ): SchemaRichMediaExitOverride = {
+  def apply(): SchemaRichMediaExitOverride = {
     val __obj = js.Dynamic.literal()
-    if (clickThroughUrl != null) __obj.updateDynamic("clickThroughUrl")(clickThroughUrl.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (exitId != null) __obj.updateDynamic("exitId")(exitId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRichMediaExitOverride]
   }
+  @scala.inline
+  implicit class SchemaRichMediaExitOverrideOps[Self <: SchemaRichMediaExitOverride] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClickThroughUrl(value: SchemaClickThroughUrl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickThroughUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClickThroughUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickThroughUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExitId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExitId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,44 +18,147 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAttributes extends js.Object {
-  var attributes: js.UndefOr[js.Array[JSXAttributeKind | JSXSpreadAttributeKind]] = js.undefined
+  var attributes: js.UndefOr[js.Array[JSXAttributeKind | JSXSpreadAttributeKind]] = js.native
   var children: js.UndefOr[
     js.Array[
       JSXElementKind | JSXExpressionContainerKind | JSXFragmentKind | JSXTextKind | LiteralKind
     ]
-  ] = js.undefined
-  var closingElement: js.UndefOr[JSXClosingElementKind | Null] = js.undefined
-  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
-  var name: js.UndefOr[JSXIdentifierKind | JSXNamespacedNameKind | JSXMemberExpressionKind] = js.undefined
-  var openingElement: JSXOpeningElementKind
-  var selfClosing: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var closingElement: js.UndefOr[JSXClosingElementKind | Null] = js.native
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  var name: js.UndefOr[JSXIdentifierKind | JSXNamespacedNameKind | JSXMemberExpressionKind] = js.native
+  var openingElement: JSXOpeningElementKind = js.native
+  var selfClosing: js.UndefOr[Boolean] = js.native
 }
 
 object AnonAttributes {
   @scala.inline
-  def apply(
-    openingElement: JSXOpeningElementKind,
-    attributes: js.Array[JSXAttributeKind | JSXSpreadAttributeKind] = null,
-    children: js.Array[
-      JSXElementKind | JSXExpressionContainerKind | JSXFragmentKind | JSXTextKind | LiteralKind
-    ] = null,
-    closingElement: JSXClosingElementKind = null,
-    comments: js.Array[CommentKind] = null,
-    loc: SourceLocationKind = null,
-    name: JSXIdentifierKind | JSXNamespacedNameKind | JSXMemberExpressionKind = null,
-    selfClosing: js.UndefOr[Boolean] = js.undefined
-  ): AnonAttributes = {
+  def apply(openingElement: JSXOpeningElementKind): AnonAttributes = {
     val __obj = js.Dynamic.literal(openingElement = openingElement.asInstanceOf[js.Any])
-    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (closingElement != null) __obj.updateDynamic("closingElement")(closingElement.asInstanceOf[js.Any])
-    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(selfClosing)) __obj.updateDynamic("selfClosing")(selfClosing.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAttributes]
   }
+  @scala.inline
+  implicit class AnonAttributesOps[Self <: AnonAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOpeningElement(value: JSXOpeningElementKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openingElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributes(value: js.Array[JSXAttributeKind | JSXSpreadAttributeKind]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildren(
+      value: js.Array[
+          JSXElementKind | JSXExpressionContainerKind | JSXFragmentKind | JSXTextKind | LiteralKind
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClosingElement(value: JSXClosingElementKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closingElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClosingElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closingElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClosingElementNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closingElement")(null)
+        ret
+    }
+    @scala.inline
+    def withComments(value: js.Array[CommentKind]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommentsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(null)
+        ret
+    }
+    @scala.inline
+    def withLoc(value: SourceLocationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(null)
+        ret
+    }
+    @scala.inline
+    def withName(value: JSXIdentifierKind | JSXNamespacedNameKind | JSXMemberExpressionKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelfClosing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfClosing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelfClosing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfClosing")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

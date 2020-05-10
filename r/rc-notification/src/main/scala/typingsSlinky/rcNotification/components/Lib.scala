@@ -1,15 +1,17 @@
 package typingsSlinky.rcNotification.components
 
 import typingsSlinky.rcNotification.mod.default
+import typingsSlinky.rcNotification.notificationMod.NotificationProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Lib extends SharedApply_NotificationProps1049459417[default] {
+object Lib {
   @JSImport("rc-notification/lib", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: NotificationProps): SharedBuilder_NotificationProps131694593[default] = new SharedBuilder_NotificationProps131694593[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Lib.type): SharedBuilder_NotificationProps131694593[default] = new SharedBuilder_NotificationProps131694593[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -32,81 +32,295 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<apollo-server-core.apollo-server-core/dist/graphqlOptions.GraphQLServerOptions<any, any>> */
+@js.native
 trait PartialGraphQLServerOptio extends js.Object {
-  var cache: js.UndefOr[KeyValueCache[String]] = js.undefined
-  var cacheControl: js.UndefOr[CacheControlExtensionOptions] = js.undefined
-  var context: js.UndefOr[js.Any | js.Function0[scala.Nothing]] = js.undefined
-  var dataSources: js.UndefOr[js.Function0[DataSources[_]]] = js.undefined
-  var debug: js.UndefOr[Boolean] = js.undefined
-  var documentStore: js.UndefOr[InMemoryLRUCache[DocumentNode]] = js.undefined
-  var executor: js.UndefOr[GraphQLExecutor[Record[String, _]]] = js.undefined
-  var extensions: js.UndefOr[js.Array[js.Function0[GraphQLExtension[_]]]] = js.undefined
-  var fieldResolver: js.UndefOr[GraphQLFieldResolver[_, _, StringDictionary[_]]] = js.undefined
-  var formatError: js.UndefOr[js.Function1[/* error */ GraphQLError, GraphQLFormattedError[Record[String, _]]]] = js.undefined
+  var cache: js.UndefOr[KeyValueCache[String]] = js.native
+  var cacheControl: js.UndefOr[CacheControlExtensionOptions] = js.native
+  var context: js.UndefOr[js.Any | js.Function0[scala.Nothing]] = js.native
+  var dataSources: js.UndefOr[js.Function0[DataSources[_]]] = js.native
+  var debug: js.UndefOr[Boolean] = js.native
+  var documentStore: js.UndefOr[InMemoryLRUCache[DocumentNode]] = js.native
+  var executor: js.UndefOr[GraphQLExecutor[Record[String, _]]] = js.native
+  var extensions: js.UndefOr[js.Array[js.Function0[GraphQLExtension[_]]]] = js.native
+  var fieldResolver: js.UndefOr[GraphQLFieldResolver[_, _, StringDictionary[_]]] = js.native
+  var formatError: js.UndefOr[js.Function1[/* error */ GraphQLError, GraphQLFormattedError[Record[String, _]]]] = js.native
   var formatResponse: js.UndefOr[
     js.Function2[
       /* response */ GraphQLResponse | Null, 
       /* requestContext */ GraphQLRequestContext[_], 
       GraphQLResponse
     ]
-  ] = js.undefined
-  var parseOptions: js.UndefOr[GraphQLParseOptions] = js.undefined
-  var persistedQueries: js.UndefOr[PersistedQueryOptions] = js.undefined
-  var plugins: js.UndefOr[js.Array[ApolloServerPlugin[Record[String, _]]]] = js.undefined
-  var reporting: js.UndefOr[Boolean] = js.undefined
-  var rootValue: js.UndefOr[(js.Function1[/* parsedQuery */ DocumentNode, _]) | js.Any] = js.undefined
-  var schema: js.UndefOr[GraphQLSchema] = js.undefined
-  var tracing: js.UndefOr[Boolean] = js.undefined
-  var validationRules: js.UndefOr[js.Array[js.Function1[/* context */ ValidationContext, _]]] = js.undefined
+  ] = js.native
+  var parseOptions: js.UndefOr[GraphQLParseOptions] = js.native
+  var persistedQueries: js.UndefOr[PersistedQueryOptions] = js.native
+  var plugins: js.UndefOr[js.Array[ApolloServerPlugin[Record[String, _]]]] = js.native
+  var reporting: js.UndefOr[Boolean] = js.native
+  var rootValue: js.UndefOr[(js.Function1[/* parsedQuery */ DocumentNode, _]) | js.Any] = js.native
+  var schema: js.UndefOr[GraphQLSchema] = js.native
+  var tracing: js.UndefOr[Boolean] = js.native
+  var validationRules: js.UndefOr[js.Array[js.Function1[/* context */ ValidationContext, _]]] = js.native
 }
 
 object PartialGraphQLServerOptio {
   @scala.inline
-  def apply(
-    cache: KeyValueCache[String] = null,
-    cacheControl: CacheControlExtensionOptions = null,
-    context: js.Any | js.Function0[scala.Nothing] = null,
-    dataSources: () => DataSources[_] = null,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    documentStore: InMemoryLRUCache[DocumentNode] = null,
-    executor: /* requestContext */ WithRequired[
-      GraphQLRequestContext[Record[String, _]], 
-      document | operationName | operation | queryHash
-    ] => ValueOrPromise[GraphQLExecutionResult] = null,
-    extensions: js.Array[js.Function0[GraphQLExtension[_]]] = null,
-    fieldResolver: (_, StringDictionary[_], _, /* info */ GraphQLResolveInfo) => js.Any = null,
-    formatError: /* error */ GraphQLError => GraphQLFormattedError[Record[String, _]] = null,
-    formatResponse: (/* response */ GraphQLResponse | Null, /* requestContext */ GraphQLRequestContext[_]) => GraphQLResponse = null,
-    parseOptions: GraphQLParseOptions = null,
-    persistedQueries: PersistedQueryOptions = null,
-    plugins: js.Array[ApolloServerPlugin[Record[String, _]]] = null,
-    reporting: js.UndefOr[Boolean] = js.undefined,
-    rootValue: (js.Function1[/* parsedQuery */ DocumentNode, _]) | js.Any = null,
-    schema: GraphQLSchema = null,
-    tracing: js.UndefOr[Boolean] = js.undefined,
-    validationRules: js.Array[js.Function1[/* context */ ValidationContext, _]] = null
-  ): PartialGraphQLServerOptio = {
+  def apply(): PartialGraphQLServerOptio = {
     val __obj = js.Dynamic.literal()
-    if (cache != null) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
-    if (cacheControl != null) __obj.updateDynamic("cacheControl")(cacheControl.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (dataSources != null) __obj.updateDynamic("dataSources")(js.Any.fromFunction0(dataSources))
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (documentStore != null) __obj.updateDynamic("documentStore")(documentStore.asInstanceOf[js.Any])
-    if (executor != null) __obj.updateDynamic("executor")(js.Any.fromFunction1(executor))
-    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
-    if (fieldResolver != null) __obj.updateDynamic("fieldResolver")(js.Any.fromFunction4(fieldResolver))
-    if (formatError != null) __obj.updateDynamic("formatError")(js.Any.fromFunction1(formatError))
-    if (formatResponse != null) __obj.updateDynamic("formatResponse")(js.Any.fromFunction2(formatResponse))
-    if (parseOptions != null) __obj.updateDynamic("parseOptions")(parseOptions.asInstanceOf[js.Any])
-    if (persistedQueries != null) __obj.updateDynamic("persistedQueries")(persistedQueries.asInstanceOf[js.Any])
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
-    if (!js.isUndefined(reporting)) __obj.updateDynamic("reporting")(reporting.asInstanceOf[js.Any])
-    if (rootValue != null) __obj.updateDynamic("rootValue")(rootValue.asInstanceOf[js.Any])
-    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
-    if (!js.isUndefined(tracing)) __obj.updateDynamic("tracing")(tracing.asInstanceOf[js.Any])
-    if (validationRules != null) __obj.updateDynamic("validationRules")(validationRules.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialGraphQLServerOptio]
   }
+  @scala.inline
+  implicit class PartialGraphQLServerOptioOps[Self <: PartialGraphQLServerOptio] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCache(value: KeyValueCache[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheControl(value: CacheControlExtensionOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContextFunction0(value: () => scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withContext(value: js.Any | js.Function0[scala.Nothing]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSources(value: () => DataSources[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSources")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutDataSources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebug: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentStore(value: InMemoryLRUCache[DocumentNode]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentStore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentStore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentStore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutor(
+      value: /* requestContext */ WithRequired[
+          GraphQLRequestContext[Record[String, _]], 
+          document | operationName | operation | queryHash
+        ] => ValueOrPromise[GraphQLExecutionResult]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutExecutor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensions(value: js.Array[js.Function0[GraphQLExtension[_]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFieldResolver(value: (_, StringDictionary[_], _, /* info */ GraphQLResolveInfo) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldResolver")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutFieldResolver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldResolver")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatError(value: /* error */ GraphQLError => GraphQLFormattedError[Record[String, _]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatError")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutFormatError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatResponse(
+      value: (/* response */ GraphQLResponse | Null, /* requestContext */ GraphQLRequestContext[_]) => GraphQLResponse
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatResponse")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutFormatResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatResponse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParseOptions(value: GraphQLParseOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parseOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParseOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parseOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPersistedQueries(value: PersistedQueryOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persistedQueries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPersistedQueries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persistedQueries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlugins(value: js.Array[ApolloServerPlugin[Record[String, _]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReporting(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reporting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReporting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reporting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRootValueFunction1(value: /* parsedQuery */ DocumentNode => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRootValue(value: (js.Function1[/* parsedQuery */ DocumentNode, _]) | js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRootValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchema(value: GraphQLSchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTracing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tracing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTracing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tracing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidationRules(value: js.Array[js.Function1[/* context */ ValidationContext, _]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidationRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationRules")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -47,16 +47,84 @@ object RestoreTableFromClusterSnapshotMessage {
     NewTableName: String,
     SnapshotIdentifier: String,
     SourceDatabaseName: String,
-    SourceTableName: String,
-    SourceSchemaName: String = null,
-    TargetDatabaseName: String = null,
-    TargetSchemaName: String = null
+    SourceTableName: String
   ): RestoreTableFromClusterSnapshotMessage = {
     val __obj = js.Dynamic.literal(ClusterIdentifier = ClusterIdentifier.asInstanceOf[js.Any], NewTableName = NewTableName.asInstanceOf[js.Any], SnapshotIdentifier = SnapshotIdentifier.asInstanceOf[js.Any], SourceDatabaseName = SourceDatabaseName.asInstanceOf[js.Any], SourceTableName = SourceTableName.asInstanceOf[js.Any])
-    if (SourceSchemaName != null) __obj.updateDynamic("SourceSchemaName")(SourceSchemaName.asInstanceOf[js.Any])
-    if (TargetDatabaseName != null) __obj.updateDynamic("TargetDatabaseName")(TargetDatabaseName.asInstanceOf[js.Any])
-    if (TargetSchemaName != null) __obj.updateDynamic("TargetSchemaName")(TargetSchemaName.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestoreTableFromClusterSnapshotMessage]
   }
+  @scala.inline
+  implicit class RestoreTableFromClusterSnapshotMessageOps[Self <: RestoreTableFromClusterSnapshotMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNewTableName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewTableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSnapshotIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceDatabaseName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceDatabaseName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceTableName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceTableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceSchemaName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceSchemaName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceSchemaName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceSchemaName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetDatabaseName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetDatabaseName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetDatabaseName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetDatabaseName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetSchemaName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetSchemaName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetSchemaName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetSchemaName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

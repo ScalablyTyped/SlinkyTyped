@@ -50,20 +50,102 @@ object CreateAutoMLJobRequest {
     AutoMLJobName: AutoMLJobName,
     InputDataConfig: AutoMLInputDataConfig,
     OutputDataConfig: AutoMLOutputDataConfig,
-    RoleArn: RoleArn,
-    AutoMLJobConfig: AutoMLJobConfig = null,
-    AutoMLJobObjective: AutoMLJobObjective = null,
-    GenerateCandidateDefinitionsOnly: js.UndefOr[scala.Boolean] = js.undefined,
-    ProblemType: ProblemType = null,
-    Tags: TagList = null
+    RoleArn: RoleArn
   ): CreateAutoMLJobRequest = {
     val __obj = js.Dynamic.literal(AutoMLJobName = AutoMLJobName.asInstanceOf[js.Any], InputDataConfig = InputDataConfig.asInstanceOf[js.Any], OutputDataConfig = OutputDataConfig.asInstanceOf[js.Any], RoleArn = RoleArn.asInstanceOf[js.Any])
-    if (AutoMLJobConfig != null) __obj.updateDynamic("AutoMLJobConfig")(AutoMLJobConfig.asInstanceOf[js.Any])
-    if (AutoMLJobObjective != null) __obj.updateDynamic("AutoMLJobObjective")(AutoMLJobObjective.asInstanceOf[js.Any])
-    if (!js.isUndefined(GenerateCandidateDefinitionsOnly)) __obj.updateDynamic("GenerateCandidateDefinitionsOnly")(GenerateCandidateDefinitionsOnly.asInstanceOf[js.Any])
-    if (ProblemType != null) __obj.updateDynamic("ProblemType")(ProblemType.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateAutoMLJobRequest]
   }
+  @scala.inline
+  implicit class CreateAutoMLJobRequestOps[Self <: CreateAutoMLJobRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoMLJobName(value: AutoMLJobName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoMLJobName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputDataConfig(value: AutoMLInputDataConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputDataConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutputDataConfig(value: AutoMLOutputDataConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputDataConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: RoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoMLJobConfig(value: AutoMLJobConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoMLJobConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoMLJobConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoMLJobConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoMLJobObjective(value: AutoMLJobObjective): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoMLJobObjective")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoMLJobObjective: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoMLJobObjective")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGenerateCandidateDefinitionsOnly(value: GenerateCandidateDefinitionsOnly): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GenerateCandidateDefinitionsOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGenerateCandidateDefinitionsOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GenerateCandidateDefinitionsOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProblemType(value: ProblemType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProblemType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProblemType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProblemType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

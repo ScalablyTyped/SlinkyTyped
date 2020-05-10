@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DeobfuscationFilesUploadResponse extends js.Object {
-  var deobfuscationFile: js.UndefOr[DeobfuscationFile] = js.undefined
+  var deobfuscationFile: js.UndefOr[DeobfuscationFile] = js.native
 }
 
 object DeobfuscationFilesUploadResponse {
   @scala.inline
-  def apply(deobfuscationFile: DeobfuscationFile = null): DeobfuscationFilesUploadResponse = {
+  def apply(): DeobfuscationFilesUploadResponse = {
     val __obj = js.Dynamic.literal()
-    if (deobfuscationFile != null) __obj.updateDynamic("deobfuscationFile")(deobfuscationFile.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeobfuscationFilesUploadResponse]
   }
+  @scala.inline
+  implicit class DeobfuscationFilesUploadResponseOps[Self <: DeobfuscationFilesUploadResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeobfuscationFile(value: DeobfuscationFile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deobfuscationFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeobfuscationFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deobfuscationFile")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

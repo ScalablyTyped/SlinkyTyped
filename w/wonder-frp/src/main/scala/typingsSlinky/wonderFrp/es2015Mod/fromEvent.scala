@@ -1,7 +1,7 @@
 package typingsSlinky.wonderFrp.es2015Mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

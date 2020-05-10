@@ -47,11 +47,12 @@ trait SVGFEOffsetElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGFEOffsetElement")
 @js.native
-object SVGFEOffsetElement extends Instantiable0[SVGFEOffsetElement]
+object SVGFEOffsetElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFEOffsetElement]
 

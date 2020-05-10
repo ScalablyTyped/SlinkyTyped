@@ -5,30 +5,78 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FractalConfig extends js.Object {
-  var project: js.UndefOr[AnonAuthor] = js.undefined
+  var project: js.UndefOr[AnonAuthor] = js.native
   @JSName("project.author")
-  var projectDotauthor: js.UndefOr[String] = js.undefined
+  var projectDotauthor: js.UndefOr[String] = js.native
   @JSName("project.title")
-  var projectDottitle: js.UndefOr[String] = js.undefined
+  var projectDottitle: js.UndefOr[String] = js.native
   @JSName("project.version")
-  var projectDotversion: js.UndefOr[String] = js.undefined
+  var projectDotversion: js.UndefOr[String] = js.native
 }
 
 object FractalConfig {
   @scala.inline
-  def apply(
-    project: AnonAuthor = null,
-    projectDotauthor: String = null,
-    projectDottitle: String = null,
-    projectDotversion: String = null
-  ): FractalConfig = {
+  def apply(): FractalConfig = {
     val __obj = js.Dynamic.literal()
-    if (project != null) __obj.updateDynamic("project")(project.asInstanceOf[js.Any])
-    if (projectDotauthor != null) __obj.updateDynamic("project.author")(projectDotauthor.asInstanceOf[js.Any])
-    if (projectDottitle != null) __obj.updateDynamic("project.title")(projectDottitle.asInstanceOf[js.Any])
-    if (projectDotversion != null) __obj.updateDynamic("project.version")(projectDotversion.asInstanceOf[js.Any])
     __obj.asInstanceOf[FractalConfig]
   }
+  @scala.inline
+  implicit class FractalConfigOps[Self <: FractalConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProject(value: AnonAuthor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("project")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("project")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectDotauthor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("project.author")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectDotauthor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("project.author")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectDottitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("project.title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectDottitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("project.title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectDotversion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("project.version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectDotversion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("project.version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

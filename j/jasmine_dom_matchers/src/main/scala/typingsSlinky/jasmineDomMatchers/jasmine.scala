@@ -1,7 +1,6 @@
 package typingsSlinky.jasmineDomMatchers
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,7 +43,7 @@ object jasmine extends js.Object {
       */
     def toContainText(text: String): Boolean = js.native
     def toContainText(text: Double): Boolean = js.native
-    def toContainText(text: RegExp): Boolean = js.native
+    def toContainText(text: js.RegExp): Boolean = js.native
     /**
       * True if the element exists, does not have to be in the DOM.
       */
@@ -56,7 +55,7 @@ object jasmine extends js.Object {
     def toHaveAttr(attributeName: String): Boolean = js.native
     def toHaveAttr(attributeName: String, attributeValue: String): Boolean = js.native
     def toHaveAttr(attributeName: String, attributeValue: Double): Boolean = js.native
-    def toHaveAttr(attributeName: String, attributeValue: RegExp): Boolean = js.native
+    def toHaveAttr(attributeName: String, attributeValue: js.RegExp): Boolean = js.native
     /**
       * Checks for presence of classes on the element.
       * If `className` is an Array, checks for all classes in the array.
@@ -80,19 +79,19 @@ object jasmine extends js.Object {
     def toHaveProp(propertyName: String): Boolean = js.native
     def toHaveProp(propertyName: String, propertyValue: String): Boolean = js.native
     def toHaveProp(propertyName: String, propertyValue: Double): Boolean = js.native
-    def toHaveProp(propertyName: String, propertyValue: RegExp): Boolean = js.native
+    def toHaveProp(propertyName: String, propertyValue: js.RegExp): Boolean = js.native
     /**
       * Checks for exact match with text, after trimming whitespace.
       */
     def toHaveText(text: String): Boolean = js.native
     def toHaveText(text: Double): Boolean = js.native
-    def toHaveText(text: RegExp): Boolean = js.native
+    def toHaveText(text: js.RegExp): Boolean = js.native
     /**
       * Checks the `value` of eligible elements (like inputs).
       */
     def toHaveValue(value: String): Boolean = js.native
     def toHaveValue(value: Double): Boolean = js.native
-    def toHaveValue(value: RegExp): Boolean = js.native
+    def toHaveValue(value: js.RegExp): Boolean = js.native
   }
   
 }

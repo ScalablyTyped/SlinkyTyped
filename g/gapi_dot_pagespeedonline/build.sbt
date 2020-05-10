@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "gapi_dot_pagespeedonline"
-version := "0.0-unknown-dt-20200226Z-205944"
+version := "0.0-unknown-dt-20200226Z-06207d"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.4",
-  "org.scalablytyped.slinky" %%% "gapi" % "0.0-unknown-dt-20200225Z-b02271",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "gapi" % "0.0-unknown-dt-20200225Z-0e129c",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

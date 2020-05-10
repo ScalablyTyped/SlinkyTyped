@@ -1,18 +1,19 @@
 package typingsSlinky.bizcharts.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.bizcharts.mod.Guide_
+import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Guide
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, Guide_] {
+object Guide {
   @JSImport("bizcharts", "Guide")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: Props[js.Any]): Default[tag.type, Guide_] = new Default[tag.type, Guide_](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Guide.type): Default[tag.type, Guide_] = new Default[tag.type, Guide_](js.Array(this.component, js.Dictionary.empty))()
 }
 

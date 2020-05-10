@@ -5,7 +5,6 @@ import typingsSlinky.bitcoreLib.mod.Transaction.Output
 import typingsSlinky.bitcoreLib.mod.Transaction.UnspentOutput
 import typingsSlinky.bitcoreLib.mod.crypto.Signature
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,7 +37,7 @@ class Transaction () extends js.Object {
   def isRBF(): Boolean = js.native
   def lockUntilBlockHeight(height: Double): this.type = js.native
   def lockUntilDate(time: Double): this.type = js.native
-  def lockUntilDate(time: Date): this.type = js.native
+  def lockUntilDate(time: js.Date): this.type = js.native
   def serialize(): String = js.native
   def sign(privateKey: String): this.type = js.native
   def sign(privateKey: PrivateKey): this.type = js.native

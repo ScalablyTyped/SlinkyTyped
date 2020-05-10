@@ -5,18 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SetupIntentNextActionUseStripeSdk extends js.Object {
   /**
     * Type of the next action to perform
     */
-  var `type`: use_stripe_sdk
+  var `type`: use_stripe_sdk = js.native
   /**
     * When confirming a SetupIntent with Stripe.js, Stripe.js depends on
     * the contents of this dictionary to invoke authentication flows. The
     * shape of the contents is subject to change and is only intended to
     * be used by Stripe.js.
     */
-  var use_stripe_sdk: js.Any
+  var use_stripe_sdk: js.Any = js.native
 }
 
 object SetupIntentNextActionUseStripeSdk {
@@ -26,5 +27,25 @@ object SetupIntentNextActionUseStripeSdk {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetupIntentNextActionUseStripeSdk]
   }
+  @scala.inline
+  implicit class SetupIntentNextActionUseStripeSdkOps[Self <: SetupIntentNextActionUseStripeSdk] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: use_stripe_sdk): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUse_stripe_sdk(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("use_stripe_sdk")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

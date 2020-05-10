@@ -34,18 +34,65 @@ trait SchemaImapSettings extends js.Object {
 
 object SchemaImapSettings {
   @scala.inline
-  def apply(
-    autoExpunge: js.UndefOr[Boolean] = js.undefined,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    expungeBehavior: String = null,
-    maxFolderSize: Int | Double = null
-  ): SchemaImapSettings = {
+  def apply(): SchemaImapSettings = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoExpunge)) __obj.updateDynamic("autoExpunge")(autoExpunge.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (expungeBehavior != null) __obj.updateDynamic("expungeBehavior")(expungeBehavior.asInstanceOf[js.Any])
-    if (maxFolderSize != null) __obj.updateDynamic("maxFolderSize")(maxFolderSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaImapSettings]
   }
+  @scala.inline
+  implicit class SchemaImapSettingsOps[Self <: SchemaImapSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoExpunge(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoExpunge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoExpunge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoExpunge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpungeBehavior(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expungeBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpungeBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expungeBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxFolderSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFolderSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxFolderSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFolderSize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

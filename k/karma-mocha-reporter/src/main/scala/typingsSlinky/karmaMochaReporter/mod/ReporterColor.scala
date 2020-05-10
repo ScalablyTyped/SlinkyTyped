@@ -14,14 +14,12 @@ trait ReporterColor extends js.Object
 
 object ReporterColor {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.error = "error".asInstanceOf[typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.error]
   @scala.inline
-  def error: typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.error = this.cast("error")
+  def info: typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.info = "info".asInstanceOf[typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.info]
   @scala.inline
-  def info: typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.info = this.cast("info")
+  def success: typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.success = "success".asInstanceOf[typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.success]
   @scala.inline
-  def success: typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.success = this.cast("success")
-  @scala.inline
-  def warning: typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.warning = this.cast("warning")
+  def warning: typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.warning = "warning".asInstanceOf[typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.warning]
 }
 

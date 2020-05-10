@@ -1,10 +1,7 @@
 package typingsSlinky.protonNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.protonNative.AnonH
 import typingsSlinky.protonNative.AnonX
 import typingsSlinky.protonNative.mod.PickerProps
@@ -12,48 +9,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Picker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.protonNative.mod.Picker] {
+object Picker {
   @JSImport("proton-native", "Picker")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: label */
-  def apply(
-    align: AnonH = null,
-    column: Int | Double = null,
-    editable: js.UndefOr[Boolean] = js.undefined,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    expand: AnonH = null,
-    onChange: /* text */ String => Unit = null,
-    onSelect: /* selection */ Double => Unit = null,
-    row: Int | Double = null,
-    selected: Int | Double = null,
-    span: AnonX = null,
-    stretchy: js.UndefOr[Boolean] = js.undefined,
-    text: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.protonNative.mod.Picker] = {
-    val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
-    if (!js.isUndefined(editable)) __obj.updateDynamic("editable")(editable.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
-    if (row != null) __obj.updateDynamic("row")(row.asInstanceOf[js.Any])
-    if (selected != null) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
-    if (span != null) __obj.updateDynamic("span")(span.asInstanceOf[js.Any])
-    if (!js.isUndefined(stretchy)) __obj.updateDynamic("stretchy")(stretchy.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.protonNative.mod.Picker] {
+    @scala.inline
+    def align(value: AnonH): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def column(value: Double): this.type = set("column", value.asInstanceOf[js.Any])
+    @scala.inline
+    def editable(value: Boolean): this.type = set("editable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enabled(value: Boolean): this.type = set("enabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expand(value: AnonH): this.type = set("expand", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* text */ String => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSelect(value: /* selection */ Double => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def row(value: Double): this.type = set("row", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selected(value: Double): this.type = set("selected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def span(value: AnonX): this.type = set("span", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stretchy(value: Boolean): this.type = set("stretchy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.protonNative.mod.Picker] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.protonNative.mod.Picker](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PickerProps
+  
+  def withProps(p: PickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Picker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

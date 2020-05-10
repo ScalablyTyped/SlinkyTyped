@@ -14,10 +14,29 @@ trait AwsEc2SecurityGroupIpv6Range extends js.Object {
 
 object AwsEc2SecurityGroupIpv6Range {
   @scala.inline
-  def apply(CidrIpv6: NonEmptyString = null): AwsEc2SecurityGroupIpv6Range = {
+  def apply(): AwsEc2SecurityGroupIpv6Range = {
     val __obj = js.Dynamic.literal()
-    if (CidrIpv6 != null) __obj.updateDynamic("CidrIpv6")(CidrIpv6.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsEc2SecurityGroupIpv6Range]
   }
+  @scala.inline
+  implicit class AwsEc2SecurityGroupIpv6RangeOps[Self <: AwsEc2SecurityGroupIpv6Range] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCidrIpv6(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrIpv6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCidrIpv6: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrIpv6")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -100,12 +100,7 @@ trait Sortable extends js.Object {
   @JSName("option")
   def option_direction(
     name: direction,
-    value: js.Function3[
-      /* evt */ SortableEvent, 
-      /* target */ typingsSlinky.std.HTMLElement, 
-      /* dragEl */ typingsSlinky.std.HTMLElement, 
-      Direction
-    ]
+    value: js.Function3[/* evt */ SortableEvent, /* target */ HTMLElement, /* dragEl */ HTMLElement, Direction]
   ): Unit = js.native
   @JSName("option")
   def option_direction(name: direction, value: Direction): Unit = js.native
@@ -168,8 +163,8 @@ trait Sortable extends js.Object {
     name: filter,
     value: js.ThisFunction3[
       /* this */ this.type, 
-      /* event */ Event_ | typingsSlinky.std.TouchEvent, 
-      /* target */ typingsSlinky.std.HTMLElement, 
+      /* event */ Event_ | TouchEvent, 
+      /* target */ HTMLElement, 
       /* sortable */ this.type, 
       Boolean
     ]
@@ -233,7 +228,7 @@ trait Sortable extends js.Object {
   @JSName("option")
   def option_scroll(name: scroll, value: Boolean): Unit = js.native
   @JSName("option")
-  def option_scroll(name: scroll, value: typingsSlinky.std.HTMLElement): Unit = js.native
+  def option_scroll(name: scroll, value: HTMLElement): Unit = js.native
   @JSName("option")
   def option_scrollSensitivity(name: scrollSensitivity): Double = js.native
   @JSName("option")

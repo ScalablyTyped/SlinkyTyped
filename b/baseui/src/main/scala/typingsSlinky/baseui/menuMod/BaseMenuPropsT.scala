@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BaseMenuPropsT extends js.Object {
-  var renderAll: js.UndefOr[Boolean] = js.undefined
+  var renderAll: js.UndefOr[Boolean] = js.native
 }
 
 object BaseMenuPropsT {
   @scala.inline
-  def apply(renderAll: js.UndefOr[Boolean] = js.undefined): BaseMenuPropsT = {
+  def apply(): BaseMenuPropsT = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(renderAll)) __obj.updateDynamic("renderAll")(renderAll.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseMenuPropsT]
   }
+  @scala.inline
+  implicit class BaseMenuPropsTOps[Self <: BaseMenuPropsT] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRenderAll(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenderAll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAll")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

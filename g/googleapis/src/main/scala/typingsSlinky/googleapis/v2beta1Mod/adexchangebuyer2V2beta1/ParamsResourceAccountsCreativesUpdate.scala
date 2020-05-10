@@ -30,3 +30,67 @@ trait ParamsResourceAccountsCreativesUpdate extends StandardParameters {
   var requestBody: js.UndefOr[SchemaCreative] = js.native
 }
 
+object ParamsResourceAccountsCreativesUpdate {
+  @scala.inline
+  def apply(): ParamsResourceAccountsCreativesUpdate = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ParamsResourceAccountsCreativesUpdate]
+  }
+  @scala.inline
+  implicit class ParamsResourceAccountsCreativesUpdateOps[Self <: ParamsResourceAccountsCreativesUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreativeId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreativeId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestBody(value: SchemaCreative): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

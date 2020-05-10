@@ -32,42 +32,209 @@ trait SchemaNotification extends js.Object {
 
 object SchemaNotification {
   @scala.inline
-  def apply(
-    body: String = null,
-    crmExperimentIds: js.Array[String] = null,
-    doc_id: String = null,
-    doc_type: String = null,
-    dont_show_notification: js.UndefOr[Boolean] = js.undefined,
-    iconUrl: String = null,
-    is_document_mature: js.UndefOr[Boolean] = js.undefined,
-    kind: String = null,
-    notificationGroup: String = null,
-    notification_type: String = null,
-    pcampaign_id: String = null,
-    reason: String = null,
-    show_notification_settings_action: js.UndefOr[Boolean] = js.undefined,
-    targetUrl: String = null,
-    timeToExpireMs: String = null,
-    title: String = null
-  ): SchemaNotification = {
+  def apply(): SchemaNotification = {
     val __obj = js.Dynamic.literal()
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (crmExperimentIds != null) __obj.updateDynamic("crmExperimentIds")(crmExperimentIds.asInstanceOf[js.Any])
-    if (doc_id != null) __obj.updateDynamic("doc_id")(doc_id.asInstanceOf[js.Any])
-    if (doc_type != null) __obj.updateDynamic("doc_type")(doc_type.asInstanceOf[js.Any])
-    if (!js.isUndefined(dont_show_notification)) __obj.updateDynamic("dont_show_notification")(dont_show_notification.asInstanceOf[js.Any])
-    if (iconUrl != null) __obj.updateDynamic("iconUrl")(iconUrl.asInstanceOf[js.Any])
-    if (!js.isUndefined(is_document_mature)) __obj.updateDynamic("is_document_mature")(is_document_mature.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (notificationGroup != null) __obj.updateDynamic("notificationGroup")(notificationGroup.asInstanceOf[js.Any])
-    if (notification_type != null) __obj.updateDynamic("notification_type")(notification_type.asInstanceOf[js.Any])
-    if (pcampaign_id != null) __obj.updateDynamic("pcampaign_id")(pcampaign_id.asInstanceOf[js.Any])
-    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
-    if (!js.isUndefined(show_notification_settings_action)) __obj.updateDynamic("show_notification_settings_action")(show_notification_settings_action.asInstanceOf[js.Any])
-    if (targetUrl != null) __obj.updateDynamic("targetUrl")(targetUrl.asInstanceOf[js.Any])
-    if (timeToExpireMs != null) __obj.updateDynamic("timeToExpireMs")(timeToExpireMs.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNotification]
   }
+  @scala.inline
+  implicit class SchemaNotificationOps[Self <: SchemaNotification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBody(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrmExperimentIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crmExperimentIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrmExperimentIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crmExperimentIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoc_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doc_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDoc_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doc_id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoc_type(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doc_type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDoc_type: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doc_type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDont_show_notification(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dont_show_notification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDont_show_notification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dont_show_notification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIs_document_mature(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is_document_mature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIs_document_mature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is_document_mature")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotificationGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotification_type(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notification_type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotification_type: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notification_type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPcampaign_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pcampaign_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPcampaign_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pcampaign_id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow_notification_settings_action(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show_notification_settings_action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow_notification_settings_action: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show_notification_settings_action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeToExpireMs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeToExpireMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeToExpireMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeToExpireMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

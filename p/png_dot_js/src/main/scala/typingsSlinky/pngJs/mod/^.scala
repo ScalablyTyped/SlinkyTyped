@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 class ^ protected () extends PNGReader {
   def this(bytes: String) = this()
   def this(bytes: Buffer) = this()
-  def this(bytes: scala.scalajs.js.typedarray.ArrayBuffer) = this()
-  def this(bytes: scala.scalajs.js.typedarray.Uint8Array) = this()
+  def this(bytes: js.typedarray.ArrayBuffer) = this()
+  def this(bytes: js.typedarray.Uint8Array) = this()
 }
 

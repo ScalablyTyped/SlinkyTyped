@@ -22,11 +22,47 @@ trait Instance extends js.Object {
 
 object Instance {
   @scala.inline
-  def apply(Id: ResourceId, Attributes: Attributes = null, CreatorRequestId: ResourceId = null): Instance = {
+  def apply(Id: ResourceId): Instance = {
     val __obj = js.Dynamic.literal(Id = Id.asInstanceOf[js.Any])
-    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
-    if (CreatorRequestId != null) __obj.updateDynamic("CreatorRequestId")(CreatorRequestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Instance]
   }
+  @scala.inline
+  implicit class InstanceOps[Self <: Instance] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributes(value: Attributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatorRequestId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatorRequestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatorRequestId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatorRequestId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

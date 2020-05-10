@@ -32,50 +32,48 @@ trait NumberingSystem extends js.Object
 
 object NumberingSystem {
   @scala.inline
-  def arab: typingsSlinky.luxon.luxonStrings.arab = this.cast("arab")
+  def arab: typingsSlinky.luxon.luxonStrings.arab = "arab".asInstanceOf[typingsSlinky.luxon.luxonStrings.arab]
   @scala.inline
-  def arabext: typingsSlinky.luxon.luxonStrings.arabext = this.cast("arabext")
+  def arabext: typingsSlinky.luxon.luxonStrings.arabext = "arabext".asInstanceOf[typingsSlinky.luxon.luxonStrings.arabext]
   @scala.inline
-  def bali: typingsSlinky.luxon.luxonStrings.bali = this.cast("bali")
+  def bali: typingsSlinky.luxon.luxonStrings.bali = "bali".asInstanceOf[typingsSlinky.luxon.luxonStrings.bali]
   @scala.inline
-  def beng: typingsSlinky.luxon.luxonStrings.beng = this.cast("beng")
+  def beng: typingsSlinky.luxon.luxonStrings.beng = "beng".asInstanceOf[typingsSlinky.luxon.luxonStrings.beng]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def deva: typingsSlinky.luxon.luxonStrings.deva = "deva".asInstanceOf[typingsSlinky.luxon.luxonStrings.deva]
   @scala.inline
-  def deva: typingsSlinky.luxon.luxonStrings.deva = this.cast("deva")
+  def fullwide: typingsSlinky.luxon.luxonStrings.fullwide = "fullwide".asInstanceOf[typingsSlinky.luxon.luxonStrings.fullwide]
   @scala.inline
-  def fullwide: typingsSlinky.luxon.luxonStrings.fullwide = this.cast("fullwide")
+  def gujr: typingsSlinky.luxon.luxonStrings.gujr = "gujr".asInstanceOf[typingsSlinky.luxon.luxonStrings.gujr]
   @scala.inline
-  def gujr: typingsSlinky.luxon.luxonStrings.gujr = this.cast("gujr")
+  def guru: typingsSlinky.luxon.luxonStrings.guru = "guru".asInstanceOf[typingsSlinky.luxon.luxonStrings.guru]
   @scala.inline
-  def guru: typingsSlinky.luxon.luxonStrings.guru = this.cast("guru")
+  def hanidec: typingsSlinky.luxon.luxonStrings.hanidec = "hanidec".asInstanceOf[typingsSlinky.luxon.luxonStrings.hanidec]
   @scala.inline
-  def hanidec: typingsSlinky.luxon.luxonStrings.hanidec = this.cast("hanidec")
+  def khmr: typingsSlinky.luxon.luxonStrings.khmr = "khmr".asInstanceOf[typingsSlinky.luxon.luxonStrings.khmr]
   @scala.inline
-  def khmr: typingsSlinky.luxon.luxonStrings.khmr = this.cast("khmr")
+  def knda: typingsSlinky.luxon.luxonStrings.knda = "knda".asInstanceOf[typingsSlinky.luxon.luxonStrings.knda]
   @scala.inline
-  def knda: typingsSlinky.luxon.luxonStrings.knda = this.cast("knda")
+  def laoo: typingsSlinky.luxon.luxonStrings.laoo = "laoo".asInstanceOf[typingsSlinky.luxon.luxonStrings.laoo]
   @scala.inline
-  def laoo: typingsSlinky.luxon.luxonStrings.laoo = this.cast("laoo")
+  def latn: typingsSlinky.luxon.luxonStrings.latn = "latn".asInstanceOf[typingsSlinky.luxon.luxonStrings.latn]
   @scala.inline
-  def latn: typingsSlinky.luxon.luxonStrings.latn = this.cast("latn")
+  def limb: typingsSlinky.luxon.luxonStrings.limb = "limb".asInstanceOf[typingsSlinky.luxon.luxonStrings.limb]
   @scala.inline
-  def limb: typingsSlinky.luxon.luxonStrings.limb = this.cast("limb")
+  def mlym: typingsSlinky.luxon.luxonStrings.mlym = "mlym".asInstanceOf[typingsSlinky.luxon.luxonStrings.mlym]
   @scala.inline
-  def mlym: typingsSlinky.luxon.luxonStrings.mlym = this.cast("mlym")
+  def mong: typingsSlinky.luxon.luxonStrings.mong = "mong".asInstanceOf[typingsSlinky.luxon.luxonStrings.mong]
   @scala.inline
-  def mong: typingsSlinky.luxon.luxonStrings.mong = this.cast("mong")
+  def mymr: typingsSlinky.luxon.luxonStrings.mymr = "mymr".asInstanceOf[typingsSlinky.luxon.luxonStrings.mymr]
   @scala.inline
-  def mymr: typingsSlinky.luxon.luxonStrings.mymr = this.cast("mymr")
+  def orya: typingsSlinky.luxon.luxonStrings.orya = "orya".asInstanceOf[typingsSlinky.luxon.luxonStrings.orya]
   @scala.inline
-  def orya: typingsSlinky.luxon.luxonStrings.orya = this.cast("orya")
+  def tamldec: typingsSlinky.luxon.luxonStrings.tamldec = "tamldec".asInstanceOf[typingsSlinky.luxon.luxonStrings.tamldec]
   @scala.inline
-  def tamldec: typingsSlinky.luxon.luxonStrings.tamldec = this.cast("tamldec")
+  def telu: typingsSlinky.luxon.luxonStrings.telu = "telu".asInstanceOf[typingsSlinky.luxon.luxonStrings.telu]
   @scala.inline
-  def telu: typingsSlinky.luxon.luxonStrings.telu = this.cast("telu")
+  def thai: typingsSlinky.luxon.luxonStrings.thai = "thai".asInstanceOf[typingsSlinky.luxon.luxonStrings.thai]
   @scala.inline
-  def thai: typingsSlinky.luxon.luxonStrings.thai = this.cast("thai")
-  @scala.inline
-  def tibt: typingsSlinky.luxon.luxonStrings.tibt = this.cast("tibt")
+  def tibt: typingsSlinky.luxon.luxonStrings.tibt = "tibt".asInstanceOf[typingsSlinky.luxon.luxonStrings.tibt]
 }
 

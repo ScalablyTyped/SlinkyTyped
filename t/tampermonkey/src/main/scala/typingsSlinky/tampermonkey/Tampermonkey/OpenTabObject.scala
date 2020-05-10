@@ -4,20 +4,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OpenTabObject extends js.Object {
-  var closed: Boolean
+  var closed: Boolean = js.native
   /** Set closed listener */
-  var onclosed: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onclosed: js.UndefOr[js.Function0[Unit]] = js.native
   /** Closes tab */
-  def close(): Unit
+  def close(): Unit = js.native
 }
 
 object OpenTabObject {
   @scala.inline
-  def apply(close: () => Unit, closed: Boolean, onclosed: () => Unit = null): OpenTabObject = {
+  def apply(close: () => Unit, closed: Boolean): OpenTabObject = {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), closed = closed.asInstanceOf[js.Any])
-    if (onclosed != null) __obj.updateDynamic("onclosed")(js.Any.fromFunction0(onclosed))
     __obj.asInstanceOf[OpenTabObject]
   }
+  @scala.inline
+  implicit class OpenTabObjectOps[Self <: OpenTabObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withClosed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnclosed(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onclosed")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnclosed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onclosed")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

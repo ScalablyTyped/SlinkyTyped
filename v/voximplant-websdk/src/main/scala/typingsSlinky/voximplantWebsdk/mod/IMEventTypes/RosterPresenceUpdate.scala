@@ -9,32 +9,75 @@ import scala.scalajs.js.annotation._
 /**
 		*	Event dispatched when roster item presence update happened
 		*/
+@js.native
 trait RosterPresenceUpdate extends VoxImplantIMEvent {
   /**
   			*	User id
   			*/
-  var id: String
+  var id: String = js.native
   /**
   			*	Status message
   			*/
-  var message: js.UndefOr[String] = js.undefined
+  var message: js.UndefOr[String] = js.native
   /**
   			*	Current presence status
   			*/
-  var presence: UserStatuses
+  var presence: UserStatuses = js.native
   /**
   			*	Resource name
   			*/
-  var resource: js.UndefOr[String] = js.undefined
+  var resource: js.UndefOr[String] = js.native
 }
 
 object RosterPresenceUpdate {
   @scala.inline
-  def apply(id: String, presence: UserStatuses, message: String = null, resource: String = null): RosterPresenceUpdate = {
+  def apply(id: String, presence: UserStatuses): RosterPresenceUpdate = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], presence = presence.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
     __obj.asInstanceOf[RosterPresenceUpdate]
   }
+  @scala.inline
+  implicit class RosterPresenceUpdateOps[Self <: RosterPresenceUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPresence(value: UserStatuses): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

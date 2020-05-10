@@ -50,29 +50,131 @@ trait CreateNetworkInterfaceRequest extends js.Object {
 
 object CreateNetworkInterfaceRequest {
   @scala.inline
-  def apply(
-    SubnetId: SubnetId,
-    Description: String = null,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    Groups: SecurityGroupIdStringList = null,
-    InterfaceType: NetworkInterfaceCreationType = null,
-    Ipv6AddressCount: Int | scala.Double = null,
-    Ipv6Addresses: InstanceIpv6AddressList = null,
-    PrivateIpAddress: String = null,
-    PrivateIpAddresses: PrivateIpAddressSpecificationList = null,
-    SecondaryPrivateIpAddressCount: Int | scala.Double = null
-  ): CreateNetworkInterfaceRequest = {
+  def apply(SubnetId: SubnetId): CreateNetworkInterfaceRequest = {
     val __obj = js.Dynamic.literal(SubnetId = SubnetId.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (Groups != null) __obj.updateDynamic("Groups")(Groups.asInstanceOf[js.Any])
-    if (InterfaceType != null) __obj.updateDynamic("InterfaceType")(InterfaceType.asInstanceOf[js.Any])
-    if (Ipv6AddressCount != null) __obj.updateDynamic("Ipv6AddressCount")(Ipv6AddressCount.asInstanceOf[js.Any])
-    if (Ipv6Addresses != null) __obj.updateDynamic("Ipv6Addresses")(Ipv6Addresses.asInstanceOf[js.Any])
-    if (PrivateIpAddress != null) __obj.updateDynamic("PrivateIpAddress")(PrivateIpAddress.asInstanceOf[js.Any])
-    if (PrivateIpAddresses != null) __obj.updateDynamic("PrivateIpAddresses")(PrivateIpAddresses.asInstanceOf[js.Any])
-    if (SecondaryPrivateIpAddressCount != null) __obj.updateDynamic("SecondaryPrivateIpAddressCount")(SecondaryPrivateIpAddressCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateNetworkInterfaceRequest]
   }
+  @scala.inline
+  implicit class CreateNetworkInterfaceRequestOps[Self <: CreateNetworkInterfaceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSubnetId(value: SubnetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroups(value: SecurityGroupIdStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterfaceType(value: NetworkInterfaceCreationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InterfaceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterfaceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InterfaceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv6AddressCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6AddressCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6AddressCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6AddressCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv6Addresses(value: InstanceIpv6AddressList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Addresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6Addresses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Addresses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateIpAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateIpAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateIpAddresses(value: PrivateIpAddressSpecificationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateIpAddresses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddresses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecondaryPrivateIpAddressCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondaryPrivateIpAddressCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecondaryPrivateIpAddressCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondaryPrivateIpAddressCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

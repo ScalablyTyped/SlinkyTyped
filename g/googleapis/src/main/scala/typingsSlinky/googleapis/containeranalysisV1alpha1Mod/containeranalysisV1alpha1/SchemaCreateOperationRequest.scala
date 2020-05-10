@@ -21,11 +21,41 @@ trait SchemaCreateOperationRequest extends js.Object {
 
 object SchemaCreateOperationRequest {
   @scala.inline
-  def apply(operation: SchemaOperation = null, operationId: String = null): SchemaCreateOperationRequest = {
+  def apply(): SchemaCreateOperationRequest = {
     val __obj = js.Dynamic.literal()
-    if (operation != null) __obj.updateDynamic("operation")(operation.asInstanceOf[js.Any])
-    if (operationId != null) __obj.updateDynamic("operationId")(operationId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateOperationRequest]
   }
+  @scala.inline
+  implicit class SchemaCreateOperationRequestOps[Self <: SchemaCreateOperationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOperation(value: SchemaOperation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

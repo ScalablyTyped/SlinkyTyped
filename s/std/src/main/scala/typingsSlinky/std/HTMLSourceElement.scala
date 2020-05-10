@@ -26,5 +26,6 @@ trait HTMLSourceElement extends HTMLElement {
 
 @JSGlobal("HTMLSourceElement")
 @js.native
-object HTMLSourceElement extends Instantiable0[HTMLSourceElement]
+object HTMLSourceElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLSourceElement]
 

@@ -20,6 +20,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ScaleThemeProperties extends js.Object {
   /**
     * | Prop        | CSS Property | Theme Field  |
@@ -28,7 +29,7 @@ trait ScaleThemeProperties extends js.Object {
     *
     * @see https://styled-system.com/table#border
     */
-  var borderStyles: js.UndefOr[ThemeValue[LineStyle]] = js.undefined
+  var borderStyles: js.UndefOr[ThemeValue[LineStyle]] = js.native
   /**
     * | Prop        | CSS Property | Theme Field  |
     * | :---------- | :----------- | :----------- |
@@ -36,7 +37,7 @@ trait ScaleThemeProperties extends js.Object {
     *
     * @see https://styled-system.com/table#border
     */
-  var borderWidths: js.UndefOr[ThemeValue[BorderWidthProperty[js.Object]]] = js.undefined
+  var borderWidths: js.UndefOr[ThemeValue[BorderWidthProperty[js.Object]]] = js.native
   /**
     * | Prop         | CSS Property               | Theme Field |
     * | :----------- | :------------------------- | :---------- |
@@ -50,7 +51,7 @@ trait ScaleThemeProperties extends js.Object {
     *
     * @see https://styled-system.com/table#border
     */
-  var borders: js.UndefOr[ThemeValue[BorderProperty[js.Object]]] = js.undefined
+  var borders: js.UndefOr[ThemeValue[BorderProperty[js.Object]]] = js.native
   /**
     * | Prop                | CSS Property     | Theme Field |
     * | :------------------ | :--------------- | :---------- |
@@ -59,7 +60,7 @@ trait ScaleThemeProperties extends js.Object {
     *
     * @see https://styled-system.com/table#color
     */
-  var colors: js.UndefOr[ThemeValue[ColorProperty]] = js.undefined
+  var colors: js.UndefOr[ThemeValue[ColorProperty]] = js.native
   /**
     * | Prop     | CSS Property | Theme Field |
     * | :------- | :----------- | :---------- |
@@ -67,7 +68,7 @@ trait ScaleThemeProperties extends js.Object {
     *
     * @see https://styled-system.com/table#typography
     */
-  var fontSizes: js.UndefOr[ThemeValue[FontSizeProperty[Double]]] = js.undefined
+  var fontSizes: js.UndefOr[ThemeValue[FontSizeProperty[Double]]] = js.native
   /**
     * | Prop       | CSS Property | Theme Field |
     * | :--------- | :----------- | :---------- |
@@ -75,7 +76,7 @@ trait ScaleThemeProperties extends js.Object {
     *
     * @see https://styled-system.com/table#typography
     */
-  var fontWeights: js.UndefOr[ThemeValue[FontWeightProperty]] = js.undefined
+  var fontWeights: js.UndefOr[ThemeValue[FontWeightProperty]] = js.native
   /**
     * | Prop       | CSS Property | Theme Field |
     * | :--------- | :----------- | :---------- |
@@ -83,7 +84,7 @@ trait ScaleThemeProperties extends js.Object {
     *
     * @see https://styled-system.com/table#typography
     */
-  var fonts: js.UndefOr[ThemeValue[FontFamilyProperty]] = js.undefined
+  var fonts: js.UndefOr[ThemeValue[FontFamilyProperty]] = js.native
   /**
     * | Prop          | CSS Property   | Theme Field    |
     * | :------------ | :------------- | :------------- |
@@ -91,7 +92,7 @@ trait ScaleThemeProperties extends js.Object {
     *
     * @see https://styled-system.com/table#typography
     */
-  var letterSpacings: js.UndefOr[ThemeValue[LetterSpacingProperty[String | Double]]] = js.undefined
+  var letterSpacings: js.UndefOr[ThemeValue[LetterSpacingProperty[String | Double]]] = js.native
   /**
     * | Prop       | CSS Property | Theme Field |
     * | :--------- | :----------- | :---------- |
@@ -99,7 +100,7 @@ trait ScaleThemeProperties extends js.Object {
     *
     * @see https://styled-system.com/table#typography
     */
-  var lineHeights: js.UndefOr[ThemeValue[LineHeightProperty[String]]] = js.undefined
+  var lineHeights: js.UndefOr[ThemeValue[LineHeightProperty[String]]] = js.native
   /**
     * | Prop         | CSS Property  | Theme Field |
     * | :----------- | :------------ | :---------- |
@@ -107,7 +108,7 @@ trait ScaleThemeProperties extends js.Object {
     *
     * @see https://styled-system.com/table#border
     */
-  var radii: js.UndefOr[ThemeValue[BorderRadiusProperty[js.Object]]] = js.undefined
+  var radii: js.UndefOr[ThemeValue[BorderRadiusProperty[js.Object]]] = js.native
   /**
     * | Prop       | CSS Property | Theme Field |
     * | :--------- | :----------- | :---------- |
@@ -116,7 +117,7 @@ trait ScaleThemeProperties extends js.Object {
     *
     * @see https://styled-system.com/table#shadow
     */
-  var shadows: js.UndefOr[ThemeValue[BoxShadowProperty]] = js.undefined
+  var shadows: js.UndefOr[ThemeValue[BoxShadowProperty]] = js.native
   /**
     * | Prop      | CSS Property | Theme Field |
     * | :-------- | :----------- | :---------- |
@@ -130,7 +131,7 @@ trait ScaleThemeProperties extends js.Object {
     *
     * @see https://styled-system.com/table#layout
     */
-  var sizes: js.UndefOr[ThemeValue[HeightProperty[js.Object] | WidthProperty[js.Object]]] = js.undefined
+  var sizes: js.UndefOr[ThemeValue[HeightProperty[js.Object] | WidthProperty[js.Object]]] = js.native
   /**
     * | Prop              | CSS Property                   | Theme Field |
     * | :---------------- | :----------------------------- | :---------- |
@@ -151,7 +152,7 @@ trait ScaleThemeProperties extends js.Object {
     *
     * @see https://styled-system.com/table#space
     */
-  var space: js.UndefOr[ThemeValue[MarginProperty[Double] with PaddingProperty[Double]]] = js.undefined
+  var space: js.UndefOr[ThemeValue[MarginProperty[Double] with PaddingProperty[Double]]] = js.native
   /**
     * | Prop    | CSS Property | Theme Field |
     * | :------ | :----------- | :---------- |
@@ -159,43 +160,190 @@ trait ScaleThemeProperties extends js.Object {
     *
     * @see https://styled-system.com/table#position
     */
-  var zIndices: js.UndefOr[ThemeValue[ZIndexProperty]] = js.undefined
+  var zIndices: js.UndefOr[ThemeValue[ZIndexProperty]] = js.native
 }
 
 object ScaleThemeProperties {
   @scala.inline
-  def apply(
-    borderStyles: ThemeValue[LineStyle] = null,
-    borderWidths: ThemeValue[BorderWidthProperty[js.Object]] = null,
-    borders: ThemeValue[BorderProperty[js.Object]] = null,
-    colors: ThemeValue[ColorProperty] = null,
-    fontSizes: ThemeValue[FontSizeProperty[Double]] = null,
-    fontWeights: ThemeValue[FontWeightProperty] = null,
-    fonts: ThemeValue[FontFamilyProperty] = null,
-    letterSpacings: ThemeValue[LetterSpacingProperty[String | Double]] = null,
-    lineHeights: ThemeValue[LineHeightProperty[String]] = null,
-    radii: ThemeValue[BorderRadiusProperty[js.Object]] = null,
-    shadows: ThemeValue[BoxShadowProperty] = null,
-    sizes: ThemeValue[HeightProperty[js.Object] | WidthProperty[js.Object]] = null,
-    space: ThemeValue[MarginProperty[Double] with PaddingProperty[Double]] = null,
-    zIndices: ThemeValue[ZIndexProperty] = null
-  ): ScaleThemeProperties = {
+  def apply(): ScaleThemeProperties = {
     val __obj = js.Dynamic.literal()
-    if (borderStyles != null) __obj.updateDynamic("borderStyles")(borderStyles.asInstanceOf[js.Any])
-    if (borderWidths != null) __obj.updateDynamic("borderWidths")(borderWidths.asInstanceOf[js.Any])
-    if (borders != null) __obj.updateDynamic("borders")(borders.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (fontSizes != null) __obj.updateDynamic("fontSizes")(fontSizes.asInstanceOf[js.Any])
-    if (fontWeights != null) __obj.updateDynamic("fontWeights")(fontWeights.asInstanceOf[js.Any])
-    if (fonts != null) __obj.updateDynamic("fonts")(fonts.asInstanceOf[js.Any])
-    if (letterSpacings != null) __obj.updateDynamic("letterSpacings")(letterSpacings.asInstanceOf[js.Any])
-    if (lineHeights != null) __obj.updateDynamic("lineHeights")(lineHeights.asInstanceOf[js.Any])
-    if (radii != null) __obj.updateDynamic("radii")(radii.asInstanceOf[js.Any])
-    if (shadows != null) __obj.updateDynamic("shadows")(shadows.asInstanceOf[js.Any])
-    if (sizes != null) __obj.updateDynamic("sizes")(sizes.asInstanceOf[js.Any])
-    if (space != null) __obj.updateDynamic("space")(space.asInstanceOf[js.Any])
-    if (zIndices != null) __obj.updateDynamic("zIndices")(zIndices.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScaleThemeProperties]
   }
+  @scala.inline
+  implicit class ScaleThemePropertiesOps[Self <: ScaleThemeProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBorderStyles(value: ThemeValue[LineStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderWidths(value: ThemeValue[BorderWidthProperty[js.Object]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWidths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorders(value: ThemeValue[BorderProperty[js.Object]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColors(value: ThemeValue[ColorProperty]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSizes(value: ThemeValue[FontSizeProperty[Double]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSizes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSizes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSizes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontWeights(value: ThemeValue[FontWeightProperty]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontWeights: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeights")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFonts(value: ThemeValue[FontFamilyProperty]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fonts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFonts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fonts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLetterSpacings(value: ThemeValue[LetterSpacingProperty[String | Double]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("letterSpacings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLetterSpacings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("letterSpacings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineHeights(value: ThemeValue[LineHeightProperty[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineHeights: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeights")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadii(value: ThemeValue[BorderRadiusProperty[js.Object]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radii")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadii: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radii")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadows(value: ThemeValue[BoxShadowProperty]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizes(value: ThemeValue[HeightProperty[js.Object] | WidthProperty[js.Object]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpace(value: ThemeValue[MarginProperty[Double] with PaddingProperty[Double]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("space")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("space")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZIndices(value: ThemeValue[ZIndexProperty]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZIndices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndices")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

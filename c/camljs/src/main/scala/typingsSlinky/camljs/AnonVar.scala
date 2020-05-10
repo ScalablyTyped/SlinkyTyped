@@ -5,8 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonVar extends Aggregation {
-  var `var`: String
+  var `var`: String = js.native
 }
 
 object AnonVar {
@@ -16,5 +17,19 @@ object AnonVar {
     __obj.updateDynamic("var")(`var`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonVar]
   }
+  @scala.inline
+  implicit class AnonVarOps[Self <: AnonVar] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVar(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("var")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

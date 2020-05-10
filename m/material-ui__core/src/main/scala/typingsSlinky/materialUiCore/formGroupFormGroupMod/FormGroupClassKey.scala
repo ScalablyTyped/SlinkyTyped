@@ -12,10 +12,8 @@ trait FormGroupClassKey extends js.Object
 
 object FormGroupClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
-  @scala.inline
-  def row: typingsSlinky.materialUiCore.materialUiCoreStrings.row = this.cast("row")
+  def row: typingsSlinky.materialUiCore.materialUiCoreStrings.row = "row".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.row]
 }
 

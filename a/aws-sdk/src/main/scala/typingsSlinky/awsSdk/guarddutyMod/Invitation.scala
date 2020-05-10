@@ -26,18 +26,65 @@ trait Invitation extends js.Object {
 
 object Invitation {
   @scala.inline
-  def apply(
-    AccountId: AccountId = null,
-    InvitationId: String = null,
-    InvitedAt: String = null,
-    RelationshipStatus: String = null
-  ): Invitation = {
+  def apply(): Invitation = {
     val __obj = js.Dynamic.literal()
-    if (AccountId != null) __obj.updateDynamic("AccountId")(AccountId.asInstanceOf[js.Any])
-    if (InvitationId != null) __obj.updateDynamic("InvitationId")(InvitationId.asInstanceOf[js.Any])
-    if (InvitedAt != null) __obj.updateDynamic("InvitedAt")(InvitedAt.asInstanceOf[js.Any])
-    if (RelationshipStatus != null) __obj.updateDynamic("RelationshipStatus")(RelationshipStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[Invitation]
   }
+  @scala.inline
+  implicit class InvitationOps[Self <: Invitation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: AccountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvitationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InvitationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvitationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InvitationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvitedAt(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InvitedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvitedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InvitedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelationshipStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RelationshipStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelationshipStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RelationshipStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

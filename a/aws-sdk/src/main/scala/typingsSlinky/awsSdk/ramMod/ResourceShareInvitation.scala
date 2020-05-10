@@ -42,26 +42,113 @@ trait ResourceShareInvitation extends js.Object {
 
 object ResourceShareInvitation {
   @scala.inline
-  def apply(
-    invitationTimestamp: js.Date = null,
-    receiverAccountId: String = null,
-    resourceShareArn: String = null,
-    resourceShareAssociations: ResourceShareAssociationList = null,
-    resourceShareInvitationArn: String = null,
-    resourceShareName: String = null,
-    senderAccountId: String = null,
-    status: ResourceShareInvitationStatus = null
-  ): ResourceShareInvitation = {
+  def apply(): ResourceShareInvitation = {
     val __obj = js.Dynamic.literal()
-    if (invitationTimestamp != null) __obj.updateDynamic("invitationTimestamp")(invitationTimestamp.asInstanceOf[js.Any])
-    if (receiverAccountId != null) __obj.updateDynamic("receiverAccountId")(receiverAccountId.asInstanceOf[js.Any])
-    if (resourceShareArn != null) __obj.updateDynamic("resourceShareArn")(resourceShareArn.asInstanceOf[js.Any])
-    if (resourceShareAssociations != null) __obj.updateDynamic("resourceShareAssociations")(resourceShareAssociations.asInstanceOf[js.Any])
-    if (resourceShareInvitationArn != null) __obj.updateDynamic("resourceShareInvitationArn")(resourceShareInvitationArn.asInstanceOf[js.Any])
-    if (resourceShareName != null) __obj.updateDynamic("resourceShareName")(resourceShareName.asInstanceOf[js.Any])
-    if (senderAccountId != null) __obj.updateDynamic("senderAccountId")(senderAccountId.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceShareInvitation]
   }
+  @scala.inline
+  implicit class ResourceShareInvitationOps[Self <: ResourceShareInvitation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInvitationTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitationTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvitationTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitationTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReceiverAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("receiverAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReceiverAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("receiverAccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceShareArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceShareArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceShareArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceShareArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceShareAssociations(value: ResourceShareAssociationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceShareAssociations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceShareAssociations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceShareAssociations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceShareInvitationArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceShareInvitationArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceShareInvitationArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceShareInvitationArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceShareName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceShareName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceShareName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceShareName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSenderAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("senderAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSenderAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("senderAccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: ResourceShareInvitationStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

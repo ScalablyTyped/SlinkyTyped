@@ -10,15 +10,16 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait hebrew extends js.Object {
   /**
     *
     */
-  var locale: js.Object
+  var locale: js.Object = js.native
   /**
     *
     */
-  var numerals: js.Object
+  var numerals: js.Object = js.native
   /**
     * Add to a Date in intervals of different size, from milliseconds to years
     *
@@ -26,7 +27,7 @@ trait hebrew extends js.Object {
     * @param interval A string representing the interval.  One of the following:"year", "month", "day", "hour", "minute", "second","millisecond", "week", "weekday"
     * @param amount How much to add to the date.
     */
-  def add(date: Date, interval: String, amount: Double): Unit
+  def add(date: Date, interval: String, amount: Double): Unit = js.native
   /**
     * Compare two hebrew date objects by date, time, or both.
     * Returns 0 if equal, positive if a > b, else negative.
@@ -35,7 +36,7 @@ trait hebrew extends js.Object {
     * @param dateheb2
     * @param portion               OptionalA string indicating the "date" or "time" portion of a Date object.Compares both "date" and "time" by default.  One of the following:"date", "time", "datetime"
     */
-  def compare(dateheb1: Date, dateheb2: Date, portion: String): Unit
+  def compare(dateheb1: Date, dateheb2: Date, portion: String): Unit = js.native
   /**
     * date2 - date1
     *
@@ -43,12 +44,12 @@ trait hebrew extends js.Object {
     * @param date2               OptionalIf not specified, the current dojox.date.hebrew.Date is used.
     * @param interval               OptionalA string representing the interval.  One of the following:"year", "month", "day", "hour", "minute", "second","millisecond",  "week", "weekday"Defaults to "day".
     */
-  def difference(date1: Date, date2: Date, interval: String): Unit
+  def difference(date1: Date, date2: Date, interval: String): Unit = js.native
   /**
     *
     * @param month
     */
-  def getDaysInMonth(month: Date): Unit
+  def getDaysInMonth(month: Date): Unit = js.native
 }
 
 object hebrew {
@@ -62,8 +63,51 @@ object hebrew {
     numerals: js.Object
   ): hebrew = {
     val __obj = js.Dynamic.literal(add = js.Any.fromFunction3(add), compare = js.Any.fromFunction3(compare), difference = js.Any.fromFunction3(difference), getDaysInMonth = js.Any.fromFunction1(getDaysInMonth), locale = locale.asInstanceOf[js.Any], numerals = numerals.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[hebrew]
   }
+  @scala.inline
+  implicit class hebrewOps[Self <: hebrew] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd(value: (Date, String, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withCompare(value: (Date, Date, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compare")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withDifference(value: (Date, Date, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("difference")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withGetDaysInMonth(value: Date => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDaysInMonth")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLocale(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumerals(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numerals")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

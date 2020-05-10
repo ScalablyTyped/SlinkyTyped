@@ -12,10 +12,8 @@ trait ClientCertType extends js.Object
 
 object ClientCertType {
   @scala.inline
-  def Pattern: typingsSlinky.chromeApps.chromeAppsStrings.Pattern = this.cast("Pattern")
+  def Pattern: typingsSlinky.chromeApps.chromeAppsStrings.Pattern = "Pattern".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.Pattern]
   @scala.inline
-  def Ref: typingsSlinky.chromeApps.chromeAppsStrings.Ref = this.cast("Ref")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Ref: typingsSlinky.chromeApps.chromeAppsStrings.Ref = "Ref".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.Ref]
 }
 

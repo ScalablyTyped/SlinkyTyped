@@ -18,22 +18,20 @@ trait ConfigurationType extends js.Object
 
 object ConfigurationType {
   @scala.inline
-  def bool: typingsSlinky.arangodb.arangodbStrings.bool = this.cast("bool")
+  def bool: typingsSlinky.arangodb.arangodbStrings.bool = "bool".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.bool]
   @scala.inline
-  def boolean: typingsSlinky.arangodb.arangodbStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.arangodb.arangodbStrings.boolean = "boolean".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.boolean]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def int: typingsSlinky.arangodb.arangodbStrings.int = "int".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.int]
   @scala.inline
-  def int: typingsSlinky.arangodb.arangodbStrings.int = this.cast("int")
+  def integer: typingsSlinky.arangodb.arangodbStrings.integer = "integer".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.integer]
   @scala.inline
-  def integer: typingsSlinky.arangodb.arangodbStrings.integer = this.cast("integer")
+  def json: typingsSlinky.arangodb.arangodbStrings.json = "json".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.json]
   @scala.inline
-  def json: typingsSlinky.arangodb.arangodbStrings.json = this.cast("json")
+  def number: typingsSlinky.arangodb.arangodbStrings.number = "number".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.number]
   @scala.inline
-  def number: typingsSlinky.arangodb.arangodbStrings.number = this.cast("number")
+  def password: typingsSlinky.arangodb.arangodbStrings.password = "password".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.password]
   @scala.inline
-  def password: typingsSlinky.arangodb.arangodbStrings.password = this.cast("password")
-  @scala.inline
-  def string: typingsSlinky.arangodb.arangodbStrings.string = this.cast("string")
+  def string: typingsSlinky.arangodb.arangodbStrings.string = "string".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.string]
 }
 

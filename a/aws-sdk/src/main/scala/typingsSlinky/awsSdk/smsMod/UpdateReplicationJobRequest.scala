@@ -46,27 +46,119 @@ trait UpdateReplicationJobRequest extends js.Object {
 
 object UpdateReplicationJobRequest {
   @scala.inline
-  def apply(
-    replicationJobId: ReplicationJobId,
-    description: Description = null,
-    encrypted: js.UndefOr[Boolean] = js.undefined,
-    frequency: Int | Double = null,
-    kmsKeyId: KmsKeyId = null,
-    licenseType: LicenseType = null,
-    nextReplicationRunStartTime: js.Date = null,
-    numberOfRecentAmisToKeep: Int | Double = null,
-    roleName: RoleName = null
-  ): UpdateReplicationJobRequest = {
+  def apply(replicationJobId: ReplicationJobId): UpdateReplicationJobRequest = {
     val __obj = js.Dynamic.literal(replicationJobId = replicationJobId.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (!js.isUndefined(encrypted)) __obj.updateDynamic("encrypted")(encrypted.asInstanceOf[js.Any])
-    if (frequency != null) __obj.updateDynamic("frequency")(frequency.asInstanceOf[js.Any])
-    if (kmsKeyId != null) __obj.updateDynamic("kmsKeyId")(kmsKeyId.asInstanceOf[js.Any])
-    if (licenseType != null) __obj.updateDynamic("licenseType")(licenseType.asInstanceOf[js.Any])
-    if (nextReplicationRunStartTime != null) __obj.updateDynamic("nextReplicationRunStartTime")(nextReplicationRunStartTime.asInstanceOf[js.Any])
-    if (numberOfRecentAmisToKeep != null) __obj.updateDynamic("numberOfRecentAmisToKeep")(numberOfRecentAmisToKeep.asInstanceOf[js.Any])
-    if (roleName != null) __obj.updateDynamic("roleName")(roleName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateReplicationJobRequest]
   }
+  @scala.inline
+  implicit class UpdateReplicationJobRequestOps[Self <: UpdateReplicationJobRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReplicationJobId(value: ReplicationJobId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationJobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncrypted(value: Encrypted): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encrypted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncrypted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encrypted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrequency(value: Frequency): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrequency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsKeyId(value: KmsKeyId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLicenseType(value: LicenseType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenseType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextReplicationRunStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextReplicationRunStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextReplicationRunStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextReplicationRunStartTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfRecentAmisToKeep(value: NumberOfRecentAmisToKeep): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfRecentAmisToKeep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfRecentAmisToKeep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfRecentAmisToKeep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleName(value: RoleName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

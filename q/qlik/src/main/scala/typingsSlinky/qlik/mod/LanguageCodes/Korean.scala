@@ -12,10 +12,8 @@ trait Korean extends _ALL
 
 object Korean {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ko: typingsSlinky.qlik.qlikStrings.ko = "ko".asInstanceOf[typingsSlinky.qlik.qlikStrings.ko]
   @scala.inline
-  def ko: typingsSlinky.qlik.qlikStrings.ko = this.cast("ko")
-  @scala.inline
-  def `ko-KR`: typingsSlinky.qlik.qlikStrings.`ko-KR` = this.cast("ko-KR")
+  def `ko-KR`: typingsSlinky.qlik.qlikStrings.`ko-KR` = "ko-KR".asInstanceOf[typingsSlinky.qlik.qlikStrings.`ko-KR`]
 }
 

@@ -7,18 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.Networking.NetworkOperators.MobileBroadbandAccount")
 @js.native
-class MobileBroadbandAccount () extends IMobileBroadbandAccount {
-  /* CompleteClass */
-  override var currentDeviceInformation: MobileBroadbandDeviceInformation = js.native
-  /* CompleteClass */
-  override var currentNetwork: MobileBroadbandNetwork = js.native
-  /* CompleteClass */
-  override var networkAccountId: String = js.native
-  /* CompleteClass */
-  override var serviceProviderGuid: String = js.native
-  /* CompleteClass */
-  override var serviceProviderName: String = js.native
-}
+class MobileBroadbandAccount () extends IMobileBroadbandAccount
 
 /* static members */
 @JSGlobal("Windows.Networking.NetworkOperators.MobileBroadbandAccount")

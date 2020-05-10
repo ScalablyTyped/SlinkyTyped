@@ -1,15 +1,17 @@
 package typingsSlinky.rcDrawer.components
 
 import typingsSlinky.rcDrawer.drawerWrapperMod.default
+import typingsSlinky.rcDrawer.idrawerproptypesMod.IDrawerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DrawerWrapper extends SharedApply_IDrawerProps_1256822632[default] {
+object DrawerWrapper {
   @JSImport("rc-drawer/lib/DrawerWrapper", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IDrawerProps): SharedBuilder_IDrawerProps1544561710[default] = new SharedBuilder_IDrawerProps1544561710[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DrawerWrapper.type): SharedBuilder_IDrawerProps1544561710[default] = new SharedBuilder_IDrawerProps1544561710[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

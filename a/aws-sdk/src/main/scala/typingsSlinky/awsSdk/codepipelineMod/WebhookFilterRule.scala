@@ -18,10 +18,35 @@ trait WebhookFilterRule extends js.Object {
 
 object WebhookFilterRule {
   @scala.inline
-  def apply(jsonPath: JsonPath, matchEquals: MatchEquals = null): WebhookFilterRule = {
+  def apply(jsonPath: JsonPath): WebhookFilterRule = {
     val __obj = js.Dynamic.literal(jsonPath = jsonPath.asInstanceOf[js.Any])
-    if (matchEquals != null) __obj.updateDynamic("matchEquals")(matchEquals.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebhookFilterRule]
   }
+  @scala.inline
+  implicit class WebhookFilterRuleOps[Self <: WebhookFilterRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJsonPath(value: JsonPath): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMatchEquals(value: MatchEquals): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchEquals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatchEquals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchEquals")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

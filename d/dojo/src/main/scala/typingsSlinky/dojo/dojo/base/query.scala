@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * Deprecated.   Use dojo/query instead.
   *
   */
+@js.native
 trait query extends js.Object
 

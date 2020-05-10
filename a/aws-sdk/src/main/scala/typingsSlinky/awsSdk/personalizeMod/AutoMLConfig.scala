@@ -18,11 +18,41 @@ trait AutoMLConfig extends js.Object {
 
 object AutoMLConfig {
   @scala.inline
-  def apply(metricName: MetricName = null, recipeList: ArnList = null): AutoMLConfig = {
+  def apply(): AutoMLConfig = {
     val __obj = js.Dynamic.literal()
-    if (metricName != null) __obj.updateDynamic("metricName")(metricName.asInstanceOf[js.Any])
-    if (recipeList != null) __obj.updateDynamic("recipeList")(recipeList.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoMLConfig]
   }
+  @scala.inline
+  implicit class AutoMLConfigOps[Self <: AutoMLConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMetricName(value: MetricName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipeList(value: ArnList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipeList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipeList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipeList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,14 +1,16 @@
 package typingsSlinky.antd.components
 
+import typingsSlinky.rcTree.mod.TreeNodeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TreeNode extends SharedApply_TreeNodeProps_2111940140 {
+object TreeNode {
   @JSImport("antd/lib/tree/Tree", "default.TreeNode")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: TreeNodeProps): SharedBuilder_TreeNodeProps2057099065 = new SharedBuilder_TreeNodeProps2057099065(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TreeNode.type): SharedBuilder_TreeNodeProps2057099065 = new SharedBuilder_TreeNodeProps2057099065(js.Array(this.component, js.Dictionary.empty))()
 }
 

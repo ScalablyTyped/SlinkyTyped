@@ -5,11 +5,11 @@ import typingsSlinky.csstype.mod.LeftProperty
 import typingsSlinky.csstype.mod.PositionProperty
 import typingsSlinky.csstype.mod.RightProperty
 import typingsSlinky.csstype.mod.TopProperty
-import typingsSlinky.csstype.mod.ZIndexProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PositionProps[ThemeType /* <: Theme[TLengthStyledSystem] */]
   extends ZIndexProps[ThemeType]
      with TopProps[ThemeType, TopProperty[TLengthStyledSystem]]
@@ -22,27 +22,40 @@ trait PositionProps[ThemeType /* <: Theme[TLengthStyledSystem] */]
     *
     * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
     */
-  var position: js.UndefOr[ResponsiveValue[PositionProperty, ThemeType]] = js.undefined
+  var position: js.UndefOr[ResponsiveValue[PositionProperty, ThemeType]] = js.native
 }
 
 object PositionProps {
   @scala.inline
-  def apply[ThemeType /* <: Theme[TLengthStyledSystem] */](
-    bottom: ResponsiveValue[BottomProperty[TLengthStyledSystem], ThemeType] = null,
-    left: ResponsiveValue[LeftProperty[TLengthStyledSystem], ThemeType] = null,
-    position: ResponsiveValue[PositionProperty, ThemeType] = null,
-    right: ResponsiveValue[RightProperty[TLengthStyledSystem], ThemeType] = null,
-    top: ResponsiveValue[TopProperty[TLengthStyledSystem], ThemeType] = null,
-    zIndex: ResponsiveValue[ZIndexProperty, ThemeType] = null
-  ): PositionProps[ThemeType] = {
+  def apply[ThemeType](): PositionProps[ThemeType] = {
     val __obj = js.Dynamic.literal()
-    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
-    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[PositionProps[ThemeType]]
   }
+  @scala.inline
+  implicit class PositionPropsOps[Self[themetype] <: PositionProps[themetype], ThemeType] (val x: Self[ThemeType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[ThemeType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[ThemeType]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[ThemeType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[ThemeType] with Other]
+    @scala.inline
+    def withPosition(value: ResponsiveValue[PositionProperty, ThemeType]): Self[ThemeType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self[ThemeType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositionNull: Self[ThemeType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(null)
+        ret
+    }
+  }
+  
 }
 

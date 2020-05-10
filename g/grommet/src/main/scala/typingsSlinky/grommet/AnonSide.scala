@@ -16,24 +16,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonSide extends js.Object {
-  var color: js.UndefOr[String | AnonLight] = js.undefined
-  var side: js.UndefOr[top | left | bottom | right | horizontal | vertical | all] = js.undefined
-  var size: js.UndefOr[xsmall | small | medium | large | xlarge | String] = js.undefined
+  var color: js.UndefOr[String | AnonLight] = js.native
+  var side: js.UndefOr[top | left | bottom | right | horizontal | vertical | all] = js.native
+  var size: js.UndefOr[xsmall | small | medium | large | xlarge | String] = js.native
 }
 
 object AnonSide {
   @scala.inline
-  def apply(
-    color: String | AnonLight = null,
-    side: top | left | bottom | right | horizontal | vertical | all = null,
-    size: xsmall | small | medium | large | xlarge | String = null
-  ): AnonSide = {
+  def apply(): AnonSide = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (side != null) __obj.updateDynamic("side")(side.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonSide]
   }
+  @scala.inline
+  implicit class AnonSideOps[Self <: AnonSide] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: String | AnonLight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSide(value: top | left | bottom | right | horizontal | vertical | all): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("side")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("side")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: xsmall | small | medium | large | xlarge | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

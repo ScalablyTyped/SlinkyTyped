@@ -37,20 +37,77 @@ trait SchemaAppVersion extends js.Object {
 
 object SchemaAppVersion {
   @scala.inline
-  def apply(
-    isProduction: js.UndefOr[Boolean] = js.undefined,
-    track: String = null,
-    trackId: js.Array[String] = null,
-    versionCode: Int | Double = null,
-    versionString: String = null
-  ): SchemaAppVersion = {
+  def apply(): SchemaAppVersion = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(isProduction)) __obj.updateDynamic("isProduction")(isProduction.asInstanceOf[js.Any])
-    if (track != null) __obj.updateDynamic("track")(track.asInstanceOf[js.Any])
-    if (trackId != null) __obj.updateDynamic("trackId")(trackId.asInstanceOf[js.Any])
-    if (versionCode != null) __obj.updateDynamic("versionCode")(versionCode.asInstanceOf[js.Any])
-    if (versionString != null) __obj.updateDynamic("versionString")(versionString.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAppVersion]
   }
+  @scala.inline
+  implicit class SchemaAppVersionOps[Self <: SchemaAppVersion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsProduction(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isProduction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsProduction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isProduction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrack(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrackId(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionString")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

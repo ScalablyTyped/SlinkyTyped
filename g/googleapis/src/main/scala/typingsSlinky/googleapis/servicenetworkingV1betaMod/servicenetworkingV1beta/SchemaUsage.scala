@@ -34,16 +34,53 @@ trait SchemaUsage extends js.Object {
 
 object SchemaUsage {
   @scala.inline
-  def apply(
-    producerNotificationChannel: String = null,
-    requirements: js.Array[String] = null,
-    rules: js.Array[SchemaUsageRule] = null
-  ): SchemaUsage = {
+  def apply(): SchemaUsage = {
     val __obj = js.Dynamic.literal()
-    if (producerNotificationChannel != null) __obj.updateDynamic("producerNotificationChannel")(producerNotificationChannel.asInstanceOf[js.Any])
-    if (requirements != null) __obj.updateDynamic("requirements")(requirements.asInstanceOf[js.Any])
-    if (rules != null) __obj.updateDynamic("rules")(rules.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUsage]
   }
+  @scala.inline
+  implicit class SchemaUsageOps[Self <: SchemaUsage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProducerNotificationChannel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("producerNotificationChannel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProducerNotificationChannel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("producerNotificationChannel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequirements(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequirements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRules(value: js.Array[SchemaUsageRule]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

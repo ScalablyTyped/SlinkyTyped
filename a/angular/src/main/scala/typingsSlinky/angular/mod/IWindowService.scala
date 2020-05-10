@@ -1,8 +1,8 @@
 package typingsSlinky.angular.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.EventListenerOptions
 import typingsSlinky.std.AddEventListenerOptions
-import typingsSlinky.std.EventListenerOptions
 import typingsSlinky.std.EventListenerOrEventListenerObject
 import typingsSlinky.std.Window_
 import scala.scalajs.js

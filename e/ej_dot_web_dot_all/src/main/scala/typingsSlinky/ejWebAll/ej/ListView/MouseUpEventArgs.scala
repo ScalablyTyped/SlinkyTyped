@@ -4,65 +4,173 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MouseUpEventArgs extends js.Object {
   /** returns true if the event should be canceled; otherwise, false.
     */
-  var cancel: js.UndefOr[Boolean] = js.undefined
+  var cancel: js.UndefOr[Boolean] = js.native
   /** returns the list of checked items.
     */
-  var checkedItems: js.UndefOr[Double] = js.undefined
+  var checkedItems: js.UndefOr[Double] = js.native
   /** returns the current checked item text.
     */
-  var checkedItemsText: js.UndefOr[String] = js.undefined
+  var checkedItemsText: js.UndefOr[String] = js.native
   /** If the child element exist return true; otherwise, false.
     */
-  var hasChild: js.UndefOr[Boolean] = js.undefined
+  var hasChild: js.UndefOr[Boolean] = js.native
   /** returns the current Index of the item.
     */
-  var index: js.UndefOr[Double] = js.undefined
+  var index: js.UndefOr[Double] = js.native
   /** If checked return true; otherwise, false.
     */
-  var isChecked: js.UndefOr[Boolean] = js.undefined
+  var isChecked: js.UndefOr[Boolean] = js.native
   /** returns the current list item.
     */
-  var item: js.UndefOr[String] = js.undefined
+  var item: js.UndefOr[String] = js.native
   /** returns the model value of the control.
     */
-  var model: js.UndefOr[Model] = js.undefined
+  var model: js.UndefOr[Model] = js.native
   /** returns the current text of item.
     */
-  var text: js.UndefOr[String] = js.undefined
+  var text: js.UndefOr[String] = js.native
   /** returns the name of the event.
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
 }
 
 object MouseUpEventArgs {
   @scala.inline
-  def apply(
-    cancel: js.UndefOr[Boolean] = js.undefined,
-    checkedItems: Int | Double = null,
-    checkedItemsText: String = null,
-    hasChild: js.UndefOr[Boolean] = js.undefined,
-    index: Int | Double = null,
-    isChecked: js.UndefOr[Boolean] = js.undefined,
-    item: String = null,
-    model: Model = null,
-    text: String = null,
-    `type`: String = null
-  ): MouseUpEventArgs = {
+  def apply(): MouseUpEventArgs = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.asInstanceOf[js.Any])
-    if (checkedItems != null) __obj.updateDynamic("checkedItems")(checkedItems.asInstanceOf[js.Any])
-    if (checkedItemsText != null) __obj.updateDynamic("checkedItemsText")(checkedItemsText.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasChild)) __obj.updateDynamic("hasChild")(hasChild.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (!js.isUndefined(isChecked)) __obj.updateDynamic("isChecked")(isChecked.asInstanceOf[js.Any])
-    if (item != null) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[MouseUpEventArgs]
   }
+  @scala.inline
+  implicit class MouseUpEventArgsOps[Self <: MouseUpEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCancel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckedItems(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckedItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckedItemsText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedItemsText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckedItemsText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedItemsText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasChild(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChild")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsChecked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isChecked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsChecked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isChecked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItem(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModel(value: Model): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

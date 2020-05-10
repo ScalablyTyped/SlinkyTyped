@@ -4,20 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ApiLevelCondition extends js.Object {
   /**
     * The minimum desired Android Framework API level. If the device does not meet the minimum requirement, this condition is satisfied. Must be greater than
     * zero.
     */
-  var minApiLevel: js.UndefOr[Double] = js.undefined
+  var minApiLevel: js.UndefOr[Double] = js.native
 }
 
 object ApiLevelCondition {
   @scala.inline
-  def apply(minApiLevel: Int | Double = null): ApiLevelCondition = {
+  def apply(): ApiLevelCondition = {
     val __obj = js.Dynamic.literal()
-    if (minApiLevel != null) __obj.updateDynamic("minApiLevel")(minApiLevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApiLevelCondition]
   }
+  @scala.inline
+  implicit class ApiLevelConditionOps[Self <: ApiLevelCondition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMinApiLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minApiLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinApiLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minApiLevel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

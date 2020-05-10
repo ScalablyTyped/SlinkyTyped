@@ -14,10 +14,29 @@ trait AddResourcePermissionsResponse extends js.Object {
 
 object AddResourcePermissionsResponse {
   @scala.inline
-  def apply(ShareResults: ShareResultsList = null): AddResourcePermissionsResponse = {
+  def apply(): AddResourcePermissionsResponse = {
     val __obj = js.Dynamic.literal()
-    if (ShareResults != null) __obj.updateDynamic("ShareResults")(ShareResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddResourcePermissionsResponse]
   }
+  @scala.inline
+  implicit class AddResourcePermissionsResponseOps[Self <: AddResourcePermissionsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withShareResults(value: ShareResultsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShareResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareResults")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait ToStringEncoding extends js.Object
 
 object ToStringEncoding {
   @scala.inline
-  def base64: typingsSlinky.hasha.hashaStrings.base64 = this.cast("base64")
+  def base64: typingsSlinky.hasha.hashaStrings.base64 = "base64".asInstanceOf[typingsSlinky.hasha.hashaStrings.base64]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hex: typingsSlinky.hasha.hashaStrings.hex = "hex".asInstanceOf[typingsSlinky.hasha.hashaStrings.hex]
   @scala.inline
-  def hex: typingsSlinky.hasha.hashaStrings.hex = this.cast("hex")
-  @scala.inline
-  def latin1: typingsSlinky.hasha.hashaStrings.latin1 = this.cast("latin1")
+  def latin1: typingsSlinky.hasha.hashaStrings.latin1 = "latin1".asInstanceOf[typingsSlinky.hasha.hashaStrings.latin1]
 }
 

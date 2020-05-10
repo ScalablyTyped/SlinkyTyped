@@ -1,17 +1,18 @@
 package typingsSlinky.primereact.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.primereact.bodyRowMod.BodyRowProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BodyRow
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.primereact.bodyRowMod.BodyRow] {
+object BodyRow {
   @JSImport("primereact/components/datatable/BodyRow", "BodyRow")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: BodyRowProps): Default[tag.type, typingsSlinky.primereact.bodyRowMod.BodyRow] = new Default[tag.type, typingsSlinky.primereact.bodyRowMod.BodyRow](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: BodyRow.type): Default[tag.type, typingsSlinky.primereact.bodyRowMod.BodyRow] = new Default[tag.type, typingsSlinky.primereact.bodyRowMod.BodyRow](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -52,13 +52,7 @@ class Dialog protected ()
   /* InferMemberOverrides */
   override def dismiss(): Unit = js.native
   def dismissDialog(): Unit = js.native
-  /* CompleteClass */
-  override def dispatchGenericMotionEvent(event: MotionEvent): Boolean = js.native
-  /* CompleteClass */
-  override def dispatchKeyEvent(event: KeyEvent): Boolean = js.native
   def dispatchOnCreate(savedInstanceState: Bundle): Unit = js.native
-  /* CompleteClass */
-  override def dispatchTouchEvent(event: MotionEvent): Boolean = js.native
   def findViewById(id: String): View = js.native
   def getContext(): Context = js.native
   def getCurrentFocus(): View = js.native
@@ -66,30 +60,14 @@ class Dialog protected ()
   def getWindow(): Window = js.native
   def hide(): Unit = js.native
   def isShowing(): Boolean = js.native
-  /* CompleteClass */
-  override def onAttachedToWindow(): Unit = js.native
   def onBackPressed(): Unit = js.native
-  /* CompleteClass */
-  override def onContentChanged(): Unit = js.native
   /* protected */ def onCreate(savedInstanceState: Bundle): Unit = js.native
-  /* CompleteClass */
-  override def onDetachedFromWindow(): Unit = js.native
   def onGenericMotionEvent(event: MotionEvent): Boolean = js.native
-  /* CompleteClass */
-  override def onKeyDown(keyCode: Double, event: KeyEvent): Boolean = js.native
-  /* CompleteClass */
-  override def onKeyLongPress(keyCode: Double, event: KeyEvent): Boolean = js.native
   def onKeyMultiple(keyCode: Double, repeatCount: Double, event: KeyEvent): Boolean = js.native
-  /* CompleteClass */
-  override def onKeyUp(keyCode: Double, event: KeyEvent): Boolean = js.native
   /* protected */ def onStart(): Unit = js.native
   /* protected */ def onStop(): Unit = js.native
   def onTouchEvent(event: MotionEvent): Boolean = js.native
   def onTrackballEvent(event: MotionEvent): Boolean = js.native
-  /* CompleteClass */
-  override def onWindowAttributesChanged(attrs: typingsSlinky.androiduix.android.view.WindowManager.LayoutParams): Unit = js.native
-  /* CompleteClass */
-  override def onWindowFocusChanged(hasFocus: Boolean): Unit = js.native
   /* private */ def sendDismissMessage(): js.Any = js.native
   /* private */ def sendShowMessage(): js.Any = js.native
   def setCancelMessage(msg: Message): Unit = js.native

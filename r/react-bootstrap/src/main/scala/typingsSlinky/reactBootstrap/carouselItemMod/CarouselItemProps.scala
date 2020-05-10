@@ -6,40 +6,104 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CarouselItemProps
   extends AllHTMLAttributes[CarouselItem]
      with ClassAttributes[CarouselItem] {
-  var active: js.UndefOr[Boolean] = js.undefined
-  var animateOut: js.UndefOr[Boolean] = js.undefined
-  var animtateIn: js.UndefOr[Boolean] = js.undefined
-  var direction: js.UndefOr[String] = js.undefined
-  var index: js.UndefOr[Double] = js.undefined
+  var active: js.UndefOr[Boolean] = js.native
+  var animateOut: js.UndefOr[Boolean] = js.native
+  var animtateIn: js.UndefOr[Boolean] = js.native
+  var direction: js.UndefOr[String] = js.native
+  var index: js.UndefOr[Double] = js.native
   // TODO: Add more specific type
-  var onAnimateOutEnd: js.UndefOr[js.Function] = js.undefined
+  var onAnimateOutEnd: js.UndefOr[js.Function] = js.native
 }
 
 object CarouselItemProps {
   @scala.inline
-  def apply(
-    AllHTMLAttributes: AllHTMLAttributes[CarouselItem] = null,
-    ClassAttributes: ClassAttributes[CarouselItem] = null,
-    active: js.UndefOr[Boolean] = js.undefined,
-    animateOut: js.UndefOr[Boolean] = js.undefined,
-    animtateIn: js.UndefOr[Boolean] = js.undefined,
-    direction: String = null,
-    index: Int | Double = null,
-    onAnimateOutEnd: js.Function = null
-  ): CarouselItemProps = {
+  def apply(): CarouselItemProps = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (!js.isUndefined(animateOut)) __obj.updateDynamic("animateOut")(animateOut.asInstanceOf[js.Any])
-    if (!js.isUndefined(animtateIn)) __obj.updateDynamic("animtateIn")(animtateIn.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (onAnimateOutEnd != null) __obj.updateDynamic("onAnimateOutEnd")(onAnimateOutEnd.asInstanceOf[js.Any])
     __obj.asInstanceOf[CarouselItemProps]
   }
+  @scala.inline
+  implicit class CarouselItemPropsOps[Self <: CarouselItemProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimateOut(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animateOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimateOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animateOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimtateIn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animtateIn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimtateIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animtateIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAnimateOutEnd(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimateOutEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnAnimateOutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimateOutEnd")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -21,8 +21,33 @@ object UpdateCampaignRequest {
   @scala.inline
   def apply(ApplicationId: string, CampaignId: string, WriteCampaignRequest: WriteCampaignRequest): UpdateCampaignRequest = {
     val __obj = js.Dynamic.literal(ApplicationId = ApplicationId.asInstanceOf[js.Any], CampaignId = CampaignId.asInstanceOf[js.Any], WriteCampaignRequest = WriteCampaignRequest.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[UpdateCampaignRequest]
   }
+  @scala.inline
+  implicit class UpdateCampaignRequestOps[Self <: UpdateCampaignRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCampaignId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CampaignId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWriteCampaignRequest(value: WriteCampaignRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteCampaignRequest")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

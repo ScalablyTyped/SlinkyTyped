@@ -1,10 +1,9 @@
 package typingsSlinky.reactEditext.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactEditext.mod.EdiTextProps
 import typingsSlinky.reactEditext.mod.EdiTextType
 import typingsSlinky.reactEditext.mod.default
@@ -12,52 +11,53 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactEditext
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactEditext {
   @JSImport("react-editext", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    onSave: /* repeated */ String => js.Any,
-    value: String,
-    `type`: EdiTextType,
-    cancelButtonClassName: String = null,
-    cancelButtonContent: js.Any = null,
-    editButtonClassName: String = null,
-    editButtonContent: js.Any = null,
-    hideIcons: js.UndefOr[Boolean] = js.undefined,
-    hint: TagMod[Any] = null,
-    inputProps: js.Object = null,
-    onCancel: /* repeated */ js.Any => _ = null,
-    onValidationFail: /* repeated */ String => _ = null,
-    saveButtonClassName: String = null,
-    saveButtonContent: js.Any = null,
-    validation: /* repeated */ String => Boolean = null,
-    validationMessage: String = null,
-    viewProps: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(onSave = js.Any.fromFunction1(onSave), value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (cancelButtonClassName != null) __obj.updateDynamic("cancelButtonClassName")(cancelButtonClassName.asInstanceOf[js.Any])
-    if (cancelButtonContent != null) __obj.updateDynamic("cancelButtonContent")(cancelButtonContent.asInstanceOf[js.Any])
-    if (editButtonClassName != null) __obj.updateDynamic("editButtonClassName")(editButtonClassName.asInstanceOf[js.Any])
-    if (editButtonContent != null) __obj.updateDynamic("editButtonContent")(editButtonContent.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideIcons)) __obj.updateDynamic("hideIcons")(hideIcons.asInstanceOf[js.Any])
-    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
-    if (inputProps != null) __obj.updateDynamic("inputProps")(inputProps.asInstanceOf[js.Any])
-    if (onCancel != null) __obj.updateDynamic("onCancel")(js.Any.fromFunction1(onCancel))
-    if (onValidationFail != null) __obj.updateDynamic("onValidationFail")(js.Any.fromFunction1(onValidationFail))
-    if (saveButtonClassName != null) __obj.updateDynamic("saveButtonClassName")(saveButtonClassName.asInstanceOf[js.Any])
-    if (saveButtonContent != null) __obj.updateDynamic("saveButtonContent")(saveButtonContent.asInstanceOf[js.Any])
-    if (validation != null) __obj.updateDynamic("validation")(js.Any.fromFunction1(validation))
-    if (validationMessage != null) __obj.updateDynamic("validationMessage")(validationMessage.asInstanceOf[js.Any])
-    if (viewProps != null) __obj.updateDynamic("viewProps")(viewProps.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def cancelButtonClassName(value: String): this.type = set("cancelButtonClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelButtonContent(value: js.Any): this.type = set("cancelButtonContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def editButtonClassName(value: String): this.type = set("editButtonClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def editButtonContent(value: js.Any): this.type = set("editButtonContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hideIcons(value: Boolean): this.type = set("hideIcons", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hintReactElement(value: ReactElement): this.type = set("hint", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hint(value: TagMod[Any]): this.type = set("hint", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputProps(value: js.Object): this.type = set("inputProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCancel(value: /* repeated */ js.Any => _): this.type = set("onCancel", js.Any.fromFunction1(value))
+    @scala.inline
+    def onValidationFail(value: /* repeated */ String => _): this.type = set("onValidationFail", js.Any.fromFunction1(value))
+    @scala.inline
+    def saveButtonClassName(value: String): this.type = set("saveButtonClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def saveButtonContent(value: js.Any): this.type = set("saveButtonContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def validation(value: /* repeated */ String => Boolean): this.type = set("validation", js.Any.fromFunction1(value))
+    @scala.inline
+    def validationMessage(value: String): this.type = set("validationMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def viewProps(value: js.Object): this.type = set("viewProps", value.asInstanceOf[js.Any])
   }
-  type Props = EdiTextProps
+  
+  def withProps(p: EdiTextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(onSave: /* repeated */ String => js.Any, `type`: EdiTextType, value: String): Builder = {
+    val __props = js.Dynamic.literal(onSave = js.Any.fromFunction1(onSave), value = value.asInstanceOf[js.Any])
+    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[EdiTextProps]))
+  }
 }
 

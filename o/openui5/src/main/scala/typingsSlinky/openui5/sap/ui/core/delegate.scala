@@ -1,11 +1,11 @@
 package typingsSlinky.openui5.sap.ui.core
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jquery.JQueryStatic
 import typingsSlinky.openui5.sap.m.IconTabBar
 import typingsSlinky.openui5.sap.m.ListGrowingDirection
 import typingsSlinky.openui5.sap.ui.base.EventProvider
 import typingsSlinky.openui5.sap.ui.base.Object
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -148,8 +148,8 @@ object delegate extends js.Object {
       * @param iTime The duration of animated scrolling in milliseconds. To scroll immediately without
       * animation, give 0 as value.
       */
-    def scrollToElement(oElement: org.scalajs.dom.raw.HTMLElement): ScrollEnablement = js.native
-    def scrollToElement(oElement: org.scalajs.dom.raw.HTMLElement, iTime: Double): ScrollEnablement = js.native
+    def scrollToElement(oElement: HTMLElement): ScrollEnablement = js.native
+    def scrollToElement(oElement: HTMLElement, iTime: Double): ScrollEnablement = js.native
     /**
       * Setter for property <code>bounce</code>.
       * @since 1.17

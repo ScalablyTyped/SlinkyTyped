@@ -20,8 +20,27 @@ object RunPipelineActivityRequest {
   @scala.inline
   def apply(payloads: MessagePayloads, pipelineActivity: PipelineActivity): RunPipelineActivityRequest = {
     val __obj = js.Dynamic.literal(payloads = payloads.asInstanceOf[js.Any], pipelineActivity = pipelineActivity.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[RunPipelineActivityRequest]
   }
+  @scala.inline
+  implicit class RunPipelineActivityRequestOps[Self <: RunPipelineActivityRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPayloads(value: MessagePayloads): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payloads")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPipelineActivity(value: PipelineActivity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineActivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

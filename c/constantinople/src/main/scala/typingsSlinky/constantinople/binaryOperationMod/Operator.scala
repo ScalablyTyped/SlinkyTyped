@@ -33,50 +33,48 @@ trait Operator extends js.Object
 
 object Operator {
   @scala.inline
-  def Ampersand: typingsSlinky.constantinople.constantinopleStrings.Ampersand = this.cast("&")
+  def Ampersand: typingsSlinky.constantinople.constantinopleStrings.Ampersand = "&".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.Ampersand]
   @scala.inline
-  def Asterisk: typingsSlinky.constantinople.constantinopleStrings.Asterisk = this.cast("*")
+  def Asterisk: typingsSlinky.constantinople.constantinopleStrings.Asterisk = "*".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.Asterisk]
   @scala.inline
-  def AsteriskAsterisk: typingsSlinky.constantinople.constantinopleStrings.AsteriskAsterisk = this.cast("**")
+  def AsteriskAsterisk: typingsSlinky.constantinople.constantinopleStrings.AsteriskAsterisk = "**".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.AsteriskAsterisk]
   @scala.inline
-  def EqualssignEqualssign: typingsSlinky.constantinople.constantinopleStrings.EqualssignEqualssign = this.cast("==")
+  def EqualssignEqualssign: typingsSlinky.constantinople.constantinopleStrings.EqualssignEqualssign = "==".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.EqualssignEqualssign]
   @scala.inline
-  def EqualssignEqualssignEqualssign: typingsSlinky.constantinople.constantinopleStrings.EqualssignEqualssignEqualssign = this.cast("===")
+  def EqualssignEqualssignEqualssign: typingsSlinky.constantinople.constantinopleStrings.EqualssignEqualssignEqualssign = "===".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.EqualssignEqualssignEqualssign]
   @scala.inline
-  def ExclamationmarkEqualssign: typingsSlinky.constantinople.constantinopleStrings.ExclamationmarkEqualssign = this.cast("!=")
+  def ExclamationmarkEqualssign: typingsSlinky.constantinople.constantinopleStrings.ExclamationmarkEqualssign = "!=".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.ExclamationmarkEqualssign]
   @scala.inline
-  def ExclamationmarkEqualssignEqualssign: typingsSlinky.constantinople.constantinopleStrings.ExclamationmarkEqualssignEqualssign = this.cast("!==")
+  def ExclamationmarkEqualssignEqualssign: typingsSlinky.constantinople.constantinopleStrings.ExclamationmarkEqualssignEqualssign = "!==".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.ExclamationmarkEqualssignEqualssign]
   @scala.inline
-  def Greaterthansign: typingsSlinky.constantinople.constantinopleStrings.Greaterthansign = this.cast(">")
+  def Greaterthansign: typingsSlinky.constantinople.constantinopleStrings.Greaterthansign = ">".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.Greaterthansign]
   @scala.inline
-  def GreaterthansignEqualssign: typingsSlinky.constantinople.constantinopleStrings.GreaterthansignEqualssign = this.cast(">=")
+  def GreaterthansignEqualssign: typingsSlinky.constantinople.constantinopleStrings.GreaterthansignEqualssign = ">=".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.GreaterthansignEqualssign]
   @scala.inline
-  def GreaterthansignGreaterthansign: typingsSlinky.constantinople.constantinopleStrings.GreaterthansignGreaterthansign = this.cast(">>")
+  def GreaterthansignGreaterthansign: typingsSlinky.constantinople.constantinopleStrings.GreaterthansignGreaterthansign = ">>".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.GreaterthansignGreaterthansign]
   @scala.inline
-  def GreaterthansignGreaterthansignGreaterthansign: typingsSlinky.constantinople.constantinopleStrings.GreaterthansignGreaterthansignGreaterthansign = this.cast(">>>")
+  def GreaterthansignGreaterthansignGreaterthansign: typingsSlinky.constantinople.constantinopleStrings.GreaterthansignGreaterthansignGreaterthansign = ">>>".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.GreaterthansignGreaterthansignGreaterthansign]
   @scala.inline
-  def Lessthansign: typingsSlinky.constantinople.constantinopleStrings.Lessthansign = this.cast("<")
+  def Lessthansign: typingsSlinky.constantinople.constantinopleStrings.Lessthansign = "<".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.Lessthansign]
   @scala.inline
-  def LessthansignEqualssign: typingsSlinky.constantinople.constantinopleStrings.LessthansignEqualssign = this.cast("<=")
+  def LessthansignEqualssign: typingsSlinky.constantinople.constantinopleStrings.LessthansignEqualssign = "<=".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.LessthansignEqualssign]
   @scala.inline
-  def LessthansignLessthansign: typingsSlinky.constantinople.constantinopleStrings.LessthansignLessthansign = this.cast("<<")
+  def LessthansignLessthansign: typingsSlinky.constantinople.constantinopleStrings.LessthansignLessthansign = "<<".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.LessthansignLessthansign]
   @scala.inline
-  def Percentsign: typingsSlinky.constantinople.constantinopleStrings.Percentsign = this.cast("%")
+  def Percentsign: typingsSlinky.constantinople.constantinopleStrings.Percentsign = "%".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.Percentsign]
   @scala.inline
-  def Plussign: typingsSlinky.constantinople.constantinopleStrings.Plussign = this.cast("+")
+  def Plussign: typingsSlinky.constantinople.constantinopleStrings.Plussign = "+".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.Plussign]
   @scala.inline
-  def Slash: typingsSlinky.constantinople.constantinopleStrings.Slash = this.cast("/")
+  def Slash: typingsSlinky.constantinople.constantinopleStrings.Slash = "/".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.Slash]
   @scala.inline
-  def Verticalline: typingsSlinky.constantinople.constantinopleStrings.Verticalline = this.cast("|")
+  def Verticalline: typingsSlinky.constantinople.constantinopleStrings.Verticalline = "|".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.Verticalline]
   @scala.inline
-  def ^ : typingsSlinky.constantinople.constantinopleStrings.^ = this.cast("^")
+  def ^ : typingsSlinky.constantinople.constantinopleStrings.^ = "^".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.^]
   @scala.inline
-  def _dash: `-_` = this.cast("-")
+  def _dash: `-_` = "-".asInstanceOf[`-_`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def in: typingsSlinky.constantinople.constantinopleStrings.in = "in".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.in]
   @scala.inline
-  def in: typingsSlinky.constantinople.constantinopleStrings.in = this.cast("in")
-  @scala.inline
-  def instanceof: typingsSlinky.constantinople.constantinopleStrings.instanceof = this.cast("instanceof")
+  def instanceof: typingsSlinky.constantinople.constantinopleStrings.instanceof = "instanceof".asInstanceOf[typingsSlinky.constantinople.constantinopleStrings.instanceof]
 }
 

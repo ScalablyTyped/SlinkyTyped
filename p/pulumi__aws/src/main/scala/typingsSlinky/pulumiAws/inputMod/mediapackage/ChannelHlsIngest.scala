@@ -15,10 +15,29 @@ trait ChannelHlsIngest extends js.Object {
 
 object ChannelHlsIngest {
   @scala.inline
-  def apply(ingestEndpoints: Input[js.Array[Input[ChannelHlsIngestIngestEndpoint]]] = null): ChannelHlsIngest = {
+  def apply(): ChannelHlsIngest = {
     val __obj = js.Dynamic.literal()
-    if (ingestEndpoints != null) __obj.updateDynamic("ingestEndpoints")(ingestEndpoints.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChannelHlsIngest]
   }
+  @scala.inline
+  implicit class ChannelHlsIngestOps[Self <: ChannelHlsIngest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIngestEndpoints(value: Input[js.Array[Input[ChannelHlsIngestIngestEndpoint]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ingestEndpoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIngestEndpoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ingestEndpoints")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -30,18 +30,65 @@ trait SchemaComputeEngine extends js.Object {
 
 object SchemaComputeEngine {
   @scala.inline
-  def apply(
-    diskNames: js.Array[String] = null,
-    instanceName: String = null,
-    machineType: String = null,
-    zone: String = null
-  ): SchemaComputeEngine = {
+  def apply(): SchemaComputeEngine = {
     val __obj = js.Dynamic.literal()
-    if (diskNames != null) __obj.updateDynamic("diskNames")(diskNames.asInstanceOf[js.Any])
-    if (instanceName != null) __obj.updateDynamic("instanceName")(instanceName.asInstanceOf[js.Any])
-    if (machineType != null) __obj.updateDynamic("machineType")(machineType.asInstanceOf[js.Any])
-    if (zone != null) __obj.updateDynamic("zone")(zone.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaComputeEngine]
   }
+  @scala.inline
+  implicit class SchemaComputeEngineOps[Self <: SchemaComputeEngine] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDiskNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMachineType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMachineType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zone")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

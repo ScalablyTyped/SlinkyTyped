@@ -38,24 +38,101 @@ trait HlsEncryptionSettings extends js.Object {
 
 object HlsEncryptionSettings {
   @scala.inline
-  def apply(
-    ConstantInitializationVector: stringMin32Max32Pattern09aFAF32 = null,
-    EncryptionMethod: HlsEncryptionType = null,
-    InitializationVectorInManifest: HlsInitializationVectorInManifest = null,
-    OfflineEncrypted: HlsOfflineEncrypted = null,
-    SpekeKeyProvider: SpekeKeyProvider = null,
-    StaticKeyProvider: StaticKeyProvider = null,
-    Type: HlsKeyProviderType = null
-  ): HlsEncryptionSettings = {
+  def apply(): HlsEncryptionSettings = {
     val __obj = js.Dynamic.literal()
-    if (ConstantInitializationVector != null) __obj.updateDynamic("ConstantInitializationVector")(ConstantInitializationVector.asInstanceOf[js.Any])
-    if (EncryptionMethod != null) __obj.updateDynamic("EncryptionMethod")(EncryptionMethod.asInstanceOf[js.Any])
-    if (InitializationVectorInManifest != null) __obj.updateDynamic("InitializationVectorInManifest")(InitializationVectorInManifest.asInstanceOf[js.Any])
-    if (OfflineEncrypted != null) __obj.updateDynamic("OfflineEncrypted")(OfflineEncrypted.asInstanceOf[js.Any])
-    if (SpekeKeyProvider != null) __obj.updateDynamic("SpekeKeyProvider")(SpekeKeyProvider.asInstanceOf[js.Any])
-    if (StaticKeyProvider != null) __obj.updateDynamic("StaticKeyProvider")(StaticKeyProvider.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[HlsEncryptionSettings]
   }
+  @scala.inline
+  implicit class HlsEncryptionSettingsOps[Self <: HlsEncryptionSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConstantInitializationVector(value: stringMin32Max32Pattern09aFAF32): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConstantInitializationVector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstantInitializationVector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConstantInitializationVector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptionMethod(value: HlsEncryptionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitializationVectorInManifest(value: HlsInitializationVectorInManifest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitializationVectorInManifest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitializationVectorInManifest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitializationVectorInManifest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOfflineEncrypted(value: HlsOfflineEncrypted): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OfflineEncrypted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOfflineEncrypted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OfflineEncrypted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpekeKeyProvider(value: SpekeKeyProvider): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpekeKeyProvider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpekeKeyProvider: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpekeKeyProvider")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStaticKeyProvider(value: StaticKeyProvider): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticKeyProvider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStaticKeyProvider: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticKeyProvider")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: HlsKeyProviderType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

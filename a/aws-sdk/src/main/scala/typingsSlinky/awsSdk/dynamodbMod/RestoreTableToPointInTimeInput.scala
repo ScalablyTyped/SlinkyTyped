@@ -27,9 +27,17 @@ trait RestoreTableToPointInTimeInput extends js.Object {
     */
   var RestoreDateTime: js.UndefOr[js.Date] = js.native
   /**
+    * The new server-side encryption settings for the restored table.
+    */
+  var SSESpecificationOverride: js.UndefOr[SSESpecification] = js.native
+  /**
+    * The DynamoDB table that will be restored. This value is an Amazon Resource Name (ARN).
+    */
+  var SourceTableArn: js.UndefOr[TableArn] = js.native
+  /**
     * Name of the source table that is being restored.
     */
-  var SourceTableName: TableName = js.native
+  var SourceTableName: js.UndefOr[TableName] = js.native
   /**
     * The name of the new table to which it must be restored to.
     */
@@ -42,24 +50,131 @@ trait RestoreTableToPointInTimeInput extends js.Object {
 
 object RestoreTableToPointInTimeInput {
   @scala.inline
-  def apply(
-    SourceTableName: TableName,
-    TargetTableName: TableName,
-    BillingModeOverride: BillingMode = null,
-    GlobalSecondaryIndexOverride: GlobalSecondaryIndexList = null,
-    LocalSecondaryIndexOverride: LocalSecondaryIndexList = null,
-    ProvisionedThroughputOverride: ProvisionedThroughput = null,
-    RestoreDateTime: js.Date = null,
-    UseLatestRestorableTime: js.UndefOr[Boolean] = js.undefined
-  ): RestoreTableToPointInTimeInput = {
-    val __obj = js.Dynamic.literal(SourceTableName = SourceTableName.asInstanceOf[js.Any], TargetTableName = TargetTableName.asInstanceOf[js.Any])
-    if (BillingModeOverride != null) __obj.updateDynamic("BillingModeOverride")(BillingModeOverride.asInstanceOf[js.Any])
-    if (GlobalSecondaryIndexOverride != null) __obj.updateDynamic("GlobalSecondaryIndexOverride")(GlobalSecondaryIndexOverride.asInstanceOf[js.Any])
-    if (LocalSecondaryIndexOverride != null) __obj.updateDynamic("LocalSecondaryIndexOverride")(LocalSecondaryIndexOverride.asInstanceOf[js.Any])
-    if (ProvisionedThroughputOverride != null) __obj.updateDynamic("ProvisionedThroughputOverride")(ProvisionedThroughputOverride.asInstanceOf[js.Any])
-    if (RestoreDateTime != null) __obj.updateDynamic("RestoreDateTime")(RestoreDateTime.asInstanceOf[js.Any])
-    if (!js.isUndefined(UseLatestRestorableTime)) __obj.updateDynamic("UseLatestRestorableTime")(UseLatestRestorableTime.asInstanceOf[js.Any])
+  def apply(TargetTableName: TableName): RestoreTableToPointInTimeInput = {
+    val __obj = js.Dynamic.literal(TargetTableName = TargetTableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestoreTableToPointInTimeInput]
   }
+  @scala.inline
+  implicit class RestoreTableToPointInTimeInputOps[Self <: RestoreTableToPointInTimeInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTargetTableName(value: TableName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetTableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBillingModeOverride(value: BillingMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillingModeOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBillingModeOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillingModeOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlobalSecondaryIndexOverride(value: GlobalSecondaryIndexList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalSecondaryIndexOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalSecondaryIndexOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalSecondaryIndexOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalSecondaryIndexOverride(value: LocalSecondaryIndexList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalSecondaryIndexOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalSecondaryIndexOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalSecondaryIndexOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisionedThroughputOverride(value: ProvisionedThroughput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughputOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedThroughputOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughputOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestoreDateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RestoreDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestoreDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RestoreDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSSESpecificationOverride(value: SSESpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSESpecificationOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSSESpecificationOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSESpecificationOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceTableArn(value: TableArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceTableArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceTableArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceTableArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceTableName(value: TableName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceTableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceTableName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceTableName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseLatestRestorableTime(value: BooleanObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UseLatestRestorableTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseLatestRestorableTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UseLatestRestorableTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

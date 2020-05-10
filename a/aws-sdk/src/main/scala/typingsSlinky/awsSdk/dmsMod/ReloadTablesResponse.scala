@@ -14,10 +14,29 @@ trait ReloadTablesResponse extends js.Object {
 
 object ReloadTablesResponse {
   @scala.inline
-  def apply(ReplicationTaskArn: String = null): ReloadTablesResponse = {
+  def apply(): ReloadTablesResponse = {
     val __obj = js.Dynamic.literal()
-    if (ReplicationTaskArn != null) __obj.updateDynamic("ReplicationTaskArn")(ReplicationTaskArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReloadTablesResponse]
   }
+  @scala.inline
+  implicit class ReloadTablesResponseOps[Self <: ReloadTablesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReplicationTaskArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationTaskArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

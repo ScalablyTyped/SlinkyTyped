@@ -43,7 +43,7 @@ class Socket () extends js.Object {
   		 * Fired when data is received from the server.
   		 */
   @JSName("on")
-  def on_message(ev: message, cb: js.Function1[/* data */ String | scala.scalajs.js.typedarray.ArrayBuffer, Unit]): this.type = js.native
+  def on_message(ev: message, cb: js.Function1[/* data */ String | js.typedarray.ArrayBuffer, Unit]): this.type = js.native
   /*
   		 * open: Fired upon successful connection.
   		 * flush: Fired upon completing a buffer flush

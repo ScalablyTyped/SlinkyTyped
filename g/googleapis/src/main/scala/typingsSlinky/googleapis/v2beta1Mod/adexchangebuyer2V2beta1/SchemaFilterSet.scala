@@ -96,36 +96,173 @@ trait SchemaFilterSet extends js.Object {
 
 object SchemaFilterSet {
   @scala.inline
-  def apply(
-    absoluteDateRange: SchemaAbsoluteDateRange = null,
-    breakdownDimensions: js.Array[String] = null,
-    creativeId: String = null,
-    dealId: String = null,
-    environment: String = null,
-    formats: js.Array[String] = null,
-    name: String = null,
-    platforms: js.Array[String] = null,
-    publisherIdentifiers: js.Array[String] = null,
-    realtimeTimeRange: SchemaRealtimeTimeRange = null,
-    relativeDateRange: SchemaRelativeDateRange = null,
-    sellerNetworkIds: js.Array[Double] = null,
-    timeSeriesGranularity: String = null
-  ): SchemaFilterSet = {
+  def apply(): SchemaFilterSet = {
     val __obj = js.Dynamic.literal()
-    if (absoluteDateRange != null) __obj.updateDynamic("absoluteDateRange")(absoluteDateRange.asInstanceOf[js.Any])
-    if (breakdownDimensions != null) __obj.updateDynamic("breakdownDimensions")(breakdownDimensions.asInstanceOf[js.Any])
-    if (creativeId != null) __obj.updateDynamic("creativeId")(creativeId.asInstanceOf[js.Any])
-    if (dealId != null) __obj.updateDynamic("dealId")(dealId.asInstanceOf[js.Any])
-    if (environment != null) __obj.updateDynamic("environment")(environment.asInstanceOf[js.Any])
-    if (formats != null) __obj.updateDynamic("formats")(formats.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (platforms != null) __obj.updateDynamic("platforms")(platforms.asInstanceOf[js.Any])
-    if (publisherIdentifiers != null) __obj.updateDynamic("publisherIdentifiers")(publisherIdentifiers.asInstanceOf[js.Any])
-    if (realtimeTimeRange != null) __obj.updateDynamic("realtimeTimeRange")(realtimeTimeRange.asInstanceOf[js.Any])
-    if (relativeDateRange != null) __obj.updateDynamic("relativeDateRange")(relativeDateRange.asInstanceOf[js.Any])
-    if (sellerNetworkIds != null) __obj.updateDynamic("sellerNetworkIds")(sellerNetworkIds.asInstanceOf[js.Any])
-    if (timeSeriesGranularity != null) __obj.updateDynamic("timeSeriesGranularity")(timeSeriesGranularity.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFilterSet]
   }
+  @scala.inline
+  implicit class SchemaFilterSetOps[Self <: SchemaFilterSet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAbsoluteDateRange(value: SchemaAbsoluteDateRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("absoluteDateRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbsoluteDateRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("absoluteDateRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBreakdownDimensions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakdownDimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBreakdownDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakdownDimensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreativeId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreativeId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDealId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dealId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDealId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dealId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormats(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formats")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatforms(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platforms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatforms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platforms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublisherIdentifiers(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherIdentifiers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublisherIdentifiers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherIdentifiers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRealtimeTimeRange(value: SchemaRealtimeTimeRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("realtimeTimeRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRealtimeTimeRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("realtimeTimeRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelativeDateRange(value: SchemaRelativeDateRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeDateRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelativeDateRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeDateRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSellerNetworkIds(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sellerNetworkIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSellerNetworkIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sellerNetworkIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeSeriesGranularity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeSeriesGranularity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeSeriesGranularity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeSeriesGranularity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

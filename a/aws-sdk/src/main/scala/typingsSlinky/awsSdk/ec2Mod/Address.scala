@@ -62,36 +62,173 @@ trait Address extends js.Object {
 
 object Address {
   @scala.inline
-  def apply(
-    AllocationId: String = null,
-    AssociationId: String = null,
-    CustomerOwnedIp: String = null,
-    CustomerOwnedIpv4Pool: String = null,
-    Domain: DomainType = null,
-    InstanceId: String = null,
-    NetworkBorderGroup: String = null,
-    NetworkInterfaceId: String = null,
-    NetworkInterfaceOwnerId: String = null,
-    PrivateIpAddress: String = null,
-    PublicIp: String = null,
-    PublicIpv4Pool: String = null,
-    Tags: TagList = null
-  ): Address = {
+  def apply(): Address = {
     val __obj = js.Dynamic.literal()
-    if (AllocationId != null) __obj.updateDynamic("AllocationId")(AllocationId.asInstanceOf[js.Any])
-    if (AssociationId != null) __obj.updateDynamic("AssociationId")(AssociationId.asInstanceOf[js.Any])
-    if (CustomerOwnedIp != null) __obj.updateDynamic("CustomerOwnedIp")(CustomerOwnedIp.asInstanceOf[js.Any])
-    if (CustomerOwnedIpv4Pool != null) __obj.updateDynamic("CustomerOwnedIpv4Pool")(CustomerOwnedIpv4Pool.asInstanceOf[js.Any])
-    if (Domain != null) __obj.updateDynamic("Domain")(Domain.asInstanceOf[js.Any])
-    if (InstanceId != null) __obj.updateDynamic("InstanceId")(InstanceId.asInstanceOf[js.Any])
-    if (NetworkBorderGroup != null) __obj.updateDynamic("NetworkBorderGroup")(NetworkBorderGroup.asInstanceOf[js.Any])
-    if (NetworkInterfaceId != null) __obj.updateDynamic("NetworkInterfaceId")(NetworkInterfaceId.asInstanceOf[js.Any])
-    if (NetworkInterfaceOwnerId != null) __obj.updateDynamic("NetworkInterfaceOwnerId")(NetworkInterfaceOwnerId.asInstanceOf[js.Any])
-    if (PrivateIpAddress != null) __obj.updateDynamic("PrivateIpAddress")(PrivateIpAddress.asInstanceOf[js.Any])
-    if (PublicIp != null) __obj.updateDynamic("PublicIp")(PublicIp.asInstanceOf[js.Any])
-    if (PublicIpv4Pool != null) __obj.updateDynamic("PublicIpv4Pool")(PublicIpv4Pool.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[Address]
   }
+  @scala.inline
+  implicit class AddressOps[Self <: Address] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllocationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllocationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAssociationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomerOwnedIp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomerOwnedIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomerOwnedIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomerOwnedIp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomerOwnedIpv4Pool(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomerOwnedIpv4Pool")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomerOwnedIpv4Pool: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomerOwnedIpv4Pool")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomain(value: DomainType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Domain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkBorderGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkBorderGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkBorderGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkBorderGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkInterfaceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInterfaceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkInterfaceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInterfaceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkInterfaceOwnerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInterfaceOwnerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkInterfaceOwnerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInterfaceOwnerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateIpAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateIpAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublicIp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublicIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicIp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublicIpv4Pool(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicIpv4Pool")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublicIpv4Pool: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicIpv4Pool")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

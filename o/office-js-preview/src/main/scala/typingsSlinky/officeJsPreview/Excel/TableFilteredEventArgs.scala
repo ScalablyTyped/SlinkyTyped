@@ -12,31 +12,32 @@ import scala.scalajs.js.annotation._
   * [Api set: ExcelApi BETA (PREVIEW ONLY)]
   * @beta
   */
+@js.native
 trait TableFilteredEventArgs extends js.Object {
   /**
     *
-    * Represents the id of the table in which the filter is applied.
+    * Gets the id of the table in which the filter is applied.
     *
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var tableId: String
+  var tableId: String = js.native
   /**
     *
-    * Represents the type of the event. See Excel.EventType for details.
+    * Gets the type of the event. See Excel.EventType for details.
     *
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var `type`: TableFiltered
+  var `type`: TableFiltered = js.native
   /**
     *
-    * Represents the id of the worksheet which contains the table.
+    * Gets the id of the worksheet which contains the table.
     *
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var worksheetId: String
+  var worksheetId: String = js.native
 }
 
 object TableFilteredEventArgs {
@@ -46,5 +47,31 @@ object TableFilteredEventArgs {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableFilteredEventArgs]
   }
+  @scala.inline
+  implicit class TableFilteredEventArgsOps[Self <: TableFilteredEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTableId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: TableFiltered): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWorksheetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("worksheetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

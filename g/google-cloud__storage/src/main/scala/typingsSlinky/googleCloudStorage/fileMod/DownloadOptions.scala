@@ -1,35 +1,39 @@
 package typingsSlinky.googleCloudStorage.fileMod
 
-import typingsSlinky.googleCloudStorage.googleCloudStorageBooleans.`false`
-import typingsSlinky.googleCloudStorage.googleCloudStorageBooleans.`true`
-import typingsSlinky.googleCloudStorage.googleCloudStorageStrings.crc32c
-import typingsSlinky.googleCloudStorage.googleCloudStorageStrings.md5
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DownloadOptions extends CreateReadStreamOptions {
-  var destination: js.UndefOr[String] = js.undefined
+  var destination: js.UndefOr[String] = js.native
 }
 
 object DownloadOptions {
   @scala.inline
-  def apply(
-    decompress: js.UndefOr[Boolean] = js.undefined,
-    destination: String = null,
-    end: Int | Double = null,
-    start: Int | Double = null,
-    userProject: String = null,
-    validation: md5 | crc32c | `false` | `true` = null
-  ): DownloadOptions = {
+  def apply(): DownloadOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(decompress)) __obj.updateDynamic("decompress")(decompress.asInstanceOf[js.Any])
-    if (destination != null) __obj.updateDynamic("destination")(destination.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (userProject != null) __obj.updateDynamic("userProject")(userProject.asInstanceOf[js.Any])
-    if (validation != null) __obj.updateDynamic("validation")(validation.asInstanceOf[js.Any])
     __obj.asInstanceOf[DownloadOptions]
   }
+  @scala.inline
+  implicit class DownloadOptionsOps[Self <: DownloadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestination(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

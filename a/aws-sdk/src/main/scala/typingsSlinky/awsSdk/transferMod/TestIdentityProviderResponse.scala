@@ -26,11 +26,53 @@ trait TestIdentityProviderResponse extends js.Object {
 
 object TestIdentityProviderResponse {
   @scala.inline
-  def apply(StatusCode: StatusCode, Url: Url, Message: Message = null, Response: Response = null): TestIdentityProviderResponse = {
+  def apply(StatusCode: StatusCode, Url: Url): TestIdentityProviderResponse = {
     val __obj = js.Dynamic.literal(StatusCode = StatusCode.asInstanceOf[js.Any], Url = Url.asInstanceOf[js.Any])
-    if (Message != null) __obj.updateDynamic("Message")(Message.asInstanceOf[js.Any])
-    if (Response != null) __obj.updateDynamic("Response")(Response.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestIdentityProviderResponse]
   }
+  @scala.inline
+  implicit class TestIdentityProviderResponseOps[Self <: TestIdentityProviderResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStatusCode(value: StatusCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: Url): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessage(value: Message): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponse(value: Response): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Response")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Response")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

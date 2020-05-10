@@ -1,9 +1,7 @@
 package typingsSlinky.reactFlagIconCss.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFlagIconCss.mod.FlagIconFlip
 import typingsSlinky.reactFlagIconCss.mod.FlagIconProps
 import typingsSlinky.reactFlagIconCss.mod.FlagIconRotate
@@ -12,34 +10,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FlagIcon
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactFlagIconCss.mod.FlagIcon] {
+object FlagIcon {
   @JSImport("react-flag-icon-css", "FlagIcon")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    code: String,
-    Component: String = null,
-    flip: FlagIconFlip = null,
-    rotate: FlagIconRotate = null,
-    size: FlagIconSize = null,
-    squared: js.UndefOr[Boolean] = js.undefined,
-    styleName: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactFlagIconCss.mod.FlagIcon] = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
-    if (Component != null) __obj.updateDynamic("Component")(Component.asInstanceOf[js.Any])
-    if (flip != null) __obj.updateDynamic("flip")(flip.asInstanceOf[js.Any])
-    if (rotate != null) __obj.updateDynamic("rotate")(rotate.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (!js.isUndefined(squared)) __obj.updateDynamic("squared")(squared.asInstanceOf[js.Any])
-    if (styleName != null) __obj.updateDynamic("styleName")(styleName.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactFlagIconCss.mod.FlagIcon] {
+    @scala.inline
+    def Component(value: String): this.type = set("Component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flip(value: FlagIconFlip): this.type = set("flip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rotate(value: FlagIconRotate): this.type = set("rotate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: FlagIconSize): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def squared(value: Boolean): this.type = set("squared", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleName(value: String): this.type = set("styleName", value.asInstanceOf[js.Any])
   }
-  type Props = FlagIconProps
+  
+  def withProps(p: FlagIconProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(code: String): Builder = {
+    val __props = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[FlagIconProps]))
+  }
 }
 

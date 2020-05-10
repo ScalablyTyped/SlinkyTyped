@@ -4,51 +4,179 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BarcodeOptions extends js.Object {
-  var background: js.UndefOr[String] = js.undefined
-  var border: js.UndefOr[BarcodeBorder] = js.undefined
-  var checksum: js.UndefOr[Boolean] = js.undefined
-  var color: js.UndefOr[String] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var padding: js.UndefOr[BarcodePadding] = js.undefined
-  var renderAs: js.UndefOr[String] = js.undefined
-  var text: js.UndefOr[BarcodeText] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
-  var value: js.UndefOr[String] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
+  var background: js.UndefOr[String] = js.native
+  var border: js.UndefOr[BarcodeBorder] = js.native
+  var checksum: js.UndefOr[Boolean] = js.native
+  var color: js.UndefOr[String] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var name: js.UndefOr[String] = js.native
+  var padding: js.UndefOr[BarcodePadding] = js.native
+  var renderAs: js.UndefOr[String] = js.native
+  var text: js.UndefOr[BarcodeText] = js.native
+  var `type`: js.UndefOr[String] = js.native
+  var value: js.UndefOr[String] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object BarcodeOptions {
   @scala.inline
-  def apply(
-    background: String = null,
-    border: BarcodeBorder = null,
-    checksum: js.UndefOr[Boolean] = js.undefined,
-    color: String = null,
-    height: Int | Double = null,
-    name: String = null,
-    padding: BarcodePadding = null,
-    renderAs: String = null,
-    text: BarcodeText = null,
-    `type`: String = null,
-    value: String = null,
-    width: Int | Double = null
-  ): BarcodeOptions = {
+  def apply(): BarcodeOptions = {
     val __obj = js.Dynamic.literal()
-    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
-    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
-    if (!js.isUndefined(checksum)) __obj.updateDynamic("checksum")(checksum.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (renderAs != null) __obj.updateDynamic("renderAs")(renderAs.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[BarcodeOptions]
   }
+  @scala.inline
+  implicit class BarcodeOptionsOps[Self <: BarcodeOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackground(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackground: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorder(value: BarcodeBorder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChecksum(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChecksum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: BarcodePadding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderAs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenderAs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: BarcodeText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

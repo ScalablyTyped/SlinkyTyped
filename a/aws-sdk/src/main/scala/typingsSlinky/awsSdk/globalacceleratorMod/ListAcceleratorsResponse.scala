@@ -18,11 +18,41 @@ trait ListAcceleratorsResponse extends js.Object {
 
 object ListAcceleratorsResponse {
   @scala.inline
-  def apply(Accelerators: Accelerators = null, NextToken: GenericString = null): ListAcceleratorsResponse = {
+  def apply(): ListAcceleratorsResponse = {
     val __obj = js.Dynamic.literal()
-    if (Accelerators != null) __obj.updateDynamic("Accelerators")(Accelerators.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListAcceleratorsResponse]
   }
+  @scala.inline
+  implicit class ListAcceleratorsResponseOps[Self <: ListAcceleratorsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccelerators(value: Accelerators): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Accelerators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccelerators: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Accelerators")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

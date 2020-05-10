@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
   * In version 7.21.0: deleted
   * In version 6.6.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -33,11 +33,11 @@ class FloatType protected () extends PrimitiveType {
   @JSName("model")
   var model_FFloatType: IModel = js.native
   @JSName("containerAsBasicParameterType")
-  def containerAsBasicParameterType_MFloatType(): BasicParameterType = js.native
+  def containerAsBasicParameterType_MFloatType: BasicParameterType = js.native
   @JSName("containerAsJavaActionParameter")
-  def containerAsJavaActionParameter_MFloatType(): JavaActionParameter = js.native
+  def containerAsJavaActionParameter_MFloatType: JavaActionParameter = js.native
   @JSName("containerAsJavaAction")
-  def containerAsJavaAction_MFloatType(): JavaAction = js.native
+  def containerAsJavaAction_MFloatType: JavaAction = js.native
 }
 
 /* static members */

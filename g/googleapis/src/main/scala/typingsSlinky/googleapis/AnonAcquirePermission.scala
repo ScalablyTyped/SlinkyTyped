@@ -15,20 +15,77 @@ trait AnonAcquirePermission extends js.Object {
 
 object AnonAcquirePermission {
   @scala.inline
-  def apply(
-    acquirePermission: String = null,
-    ageGroup: String = null,
-    allowedMaturityRating: String = null,
-    isInFamily: js.UndefOr[Boolean] = js.undefined,
-    role: String = null
-  ): AnonAcquirePermission = {
+  def apply(): AnonAcquirePermission = {
     val __obj = js.Dynamic.literal()
-    if (acquirePermission != null) __obj.updateDynamic("acquirePermission")(acquirePermission.asInstanceOf[js.Any])
-    if (ageGroup != null) __obj.updateDynamic("ageGroup")(ageGroup.asInstanceOf[js.Any])
-    if (allowedMaturityRating != null) __obj.updateDynamic("allowedMaturityRating")(allowedMaturityRating.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInFamily)) __obj.updateDynamic("isInFamily")(isInFamily.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAcquirePermission]
   }
+  @scala.inline
+  implicit class AnonAcquirePermissionOps[Self <: AnonAcquirePermission] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcquirePermission(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acquirePermission")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcquirePermission: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acquirePermission")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAgeGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ageGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgeGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ageGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowedMaturityRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedMaturityRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedMaturityRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedMaturityRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsInFamily(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsInFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRole(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

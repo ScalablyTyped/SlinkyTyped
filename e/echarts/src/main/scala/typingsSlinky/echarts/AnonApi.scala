@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonApi extends js.Object {
   /**
     * The second parameter of `renderItem`.
@@ -11,7 +12,7 @@ trait AnonApi extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.arguments.api
     */
-  var api: js.UndefOr[AnonBarLayout] = js.undefined
+  var api: js.UndefOr[AnonBarLayout] = js.native
   /**
     * The first parameter of `renderItem`, including:
     *
@@ -34,16 +35,46 @@ trait AnonApi extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.arguments.params
     */
-  var params: js.UndefOr[js.Object] = js.undefined
+  var params: js.UndefOr[js.Object] = js.native
 }
 
 object AnonApi {
   @scala.inline
-  def apply(api: AnonBarLayout = null, params: js.Object = null): AnonApi = {
+  def apply(): AnonApi = {
     val __obj = js.Dynamic.literal()
-    if (api != null) __obj.updateDynamic("api")(api.asInstanceOf[js.Any])
-    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonApi]
   }
+  @scala.inline
+  implicit class AnonApiOps[Self <: AnonApi] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApi(value: AnonBarLayout): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("api")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("api")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParams(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

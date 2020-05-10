@@ -39,127 +39,489 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ojChartItemSettableProperties extends JetSettableProperties {
-  var borderColor: js.UndefOr[String] = js.undefined
-  var borderWidth: js.UndefOr[Double] = js.undefined
-  var boxPlot: js.UndefOr[AnonMedianSvgStyle] = js.undefined
-  var categories: js.UndefOr[js.Array[String]] = js.undefined
-  var close: js.UndefOr[Double] = js.undefined
-  var color: js.UndefOr[String] = js.undefined
-  var drilling: js.UndefOr[on | off | inherit] = js.undefined
-  var groupId: js.Array[String | Double]
-  var high: js.UndefOr[Double] = js.undefined
-  var items: js.UndefOr[js.Array[Double | js.Object]] = js.undefined
-  var label: js.UndefOr[String | js.Array[String]] = js.undefined
+  var borderColor: js.UndefOr[String] = js.native
+  var borderWidth: js.UndefOr[Double] = js.native
+  var boxPlot: js.UndefOr[AnonMedianSvgStyle] = js.native
+  var categories: js.UndefOr[js.Array[String]] = js.native
+  var close: js.UndefOr[Double] = js.native
+  var color: js.UndefOr[String] = js.native
+  var drilling: js.UndefOr[on | off | inherit] = js.native
+  var groupId: js.Array[String | Double] = js.native
+  var high: js.UndefOr[Double] = js.native
+  var items: js.UndefOr[js.Array[Double | js.Object]] = js.native
+  var label: js.UndefOr[String | js.Array[String]] = js.native
   var labelPosition: js.UndefOr[
     center | outsideSlice | aboveMarker | belowMarker | beforeMarker | afterMarker | insideBarEdge | outsideBarEdge | none | auto
-  ] = js.undefined
-  var labelStyle: js.UndefOr[js.Object | js.Array[js.Object]] = js.undefined
-  var low: js.UndefOr[Double] = js.undefined
-  var markerDisplayed: js.UndefOr[on | off | auto] = js.undefined
+  ] = js.native
+  var labelStyle: js.UndefOr[js.Object | js.Array[js.Object]] = js.native
+  var low: js.UndefOr[Double] = js.native
+  var markerDisplayed: js.UndefOr[on | off | auto] = js.native
   var markerShape: js.UndefOr[
     circle | diamond | human | plus | square | star | triangleDown | triangleUp | auto | String
-  ] = js.undefined
-  var markerSize: js.UndefOr[Double] = js.undefined
-  var open: js.UndefOr[Double] = js.undefined
+  ] = js.native
+  var markerSize: js.UndefOr[Double] = js.native
+  var open: js.UndefOr[Double] = js.native
   var pattern: js.UndefOr[
     smallChecker | smallCrosshatch | smallDiagonalLeft | smallDiagonalRight | smallDiamond | smallTriangle | largeChecker | largeCrosshatch | largeDiagonalLeft | largeDiagonalRight | largeDiamond | largeTriangle | auto
-  ] = js.undefined
-  var q1: js.UndefOr[Double] = js.undefined
-  var q2: js.UndefOr[Double] = js.undefined
-  var q3: js.UndefOr[Double] = js.undefined
-  var seriesId: String | Double
-  var shortDesc: js.UndefOr[String] = js.undefined
-  var source: js.UndefOr[String] = js.undefined
-  var sourceHover: js.UndefOr[String] = js.undefined
-  var sourceHoverSelected: js.UndefOr[String] = js.undefined
-  var sourceSelected: js.UndefOr[String] = js.undefined
-  var svgClassName: js.UndefOr[String] = js.undefined
-  var svgStyle: js.UndefOr[js.Object] = js.undefined
-  var targetValue: js.UndefOr[Double] = js.undefined
-  var value: js.UndefOr[Double] = js.undefined
-  var volume: js.UndefOr[Double] = js.undefined
-  var x: js.UndefOr[Double | String] = js.undefined
-  var y: js.UndefOr[Double] = js.undefined
-  var z: js.UndefOr[Double] = js.undefined
+  ] = js.native
+  var q1: js.UndefOr[Double] = js.native
+  var q2: js.UndefOr[Double] = js.native
+  var q3: js.UndefOr[Double] = js.native
+  var seriesId: String | Double = js.native
+  var shortDesc: js.UndefOr[String] = js.native
+  var source: js.UndefOr[String] = js.native
+  var sourceHover: js.UndefOr[String] = js.native
+  var sourceHoverSelected: js.UndefOr[String] = js.native
+  var sourceSelected: js.UndefOr[String] = js.native
+  var svgClassName: js.UndefOr[String] = js.native
+  var svgStyle: js.UndefOr[js.Object] = js.native
+  var targetValue: js.UndefOr[Double] = js.native
+  var value: js.UndefOr[Double] = js.native
+  var volume: js.UndefOr[Double] = js.native
+  var x: js.UndefOr[Double | String] = js.native
+  var y: js.UndefOr[Double] = js.native
+  var z: js.UndefOr[Double] = js.native
 }
 
 object ojChartItemSettableProperties {
   @scala.inline
-  def apply(
-    groupId: js.Array[String | Double],
-    seriesId: String | Double,
-    borderColor: String = null,
-    borderWidth: Int | Double = null,
-    boxPlot: AnonMedianSvgStyle = null,
-    categories: js.Array[String] = null,
-    close: Int | Double = null,
-    color: String = null,
-    drilling: on | off | inherit = null,
-    high: Int | Double = null,
-    items: js.Array[Double | js.Object] = null,
-    label: String | js.Array[String] = null,
-    labelPosition: center | outsideSlice | aboveMarker | belowMarker | beforeMarker | afterMarker | insideBarEdge | outsideBarEdge | none | auto = null,
-    labelStyle: js.Object | js.Array[js.Object] = null,
-    low: Int | Double = null,
-    markerDisplayed: on | off | auto = null,
-    markerShape: circle | diamond | human | plus | square | star | triangleDown | triangleUp | auto | String = null,
-    markerSize: Int | Double = null,
-    open: Int | Double = null,
-    pattern: smallChecker | smallCrosshatch | smallDiagonalLeft | smallDiagonalRight | smallDiamond | smallTriangle | largeChecker | largeCrosshatch | largeDiagonalLeft | largeDiagonalRight | largeDiamond | largeTriangle | auto = null,
-    q1: Int | Double = null,
-    q2: Int | Double = null,
-    q3: Int | Double = null,
-    shortDesc: String = null,
-    source: String = null,
-    sourceHover: String = null,
-    sourceHoverSelected: String = null,
-    sourceSelected: String = null,
-    svgClassName: String = null,
-    svgStyle: js.Object = null,
-    targetValue: Int | Double = null,
-    value: Int | Double = null,
-    volume: Int | Double = null,
-    x: Double | String = null,
-    y: Int | Double = null,
-    z: Int | Double = null
-  ): ojChartItemSettableProperties = {
+  def apply(groupId: js.Array[String | Double], seriesId: String | Double): ojChartItemSettableProperties = {
     val __obj = js.Dynamic.literal(groupId = groupId.asInstanceOf[js.Any], seriesId = seriesId.asInstanceOf[js.Any])
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (boxPlot != null) __obj.updateDynamic("boxPlot")(boxPlot.asInstanceOf[js.Any])
-    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
-    if (close != null) __obj.updateDynamic("close")(close.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (drilling != null) __obj.updateDynamic("drilling")(drilling.asInstanceOf[js.Any])
-    if (high != null) __obj.updateDynamic("high")(high.asInstanceOf[js.Any])
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (labelPosition != null) __obj.updateDynamic("labelPosition")(labelPosition.asInstanceOf[js.Any])
-    if (labelStyle != null) __obj.updateDynamic("labelStyle")(labelStyle.asInstanceOf[js.Any])
-    if (low != null) __obj.updateDynamic("low")(low.asInstanceOf[js.Any])
-    if (markerDisplayed != null) __obj.updateDynamic("markerDisplayed")(markerDisplayed.asInstanceOf[js.Any])
-    if (markerShape != null) __obj.updateDynamic("markerShape")(markerShape.asInstanceOf[js.Any])
-    if (markerSize != null) __obj.updateDynamic("markerSize")(markerSize.asInstanceOf[js.Any])
-    if (open != null) __obj.updateDynamic("open")(open.asInstanceOf[js.Any])
-    if (pattern != null) __obj.updateDynamic("pattern")(pattern.asInstanceOf[js.Any])
-    if (q1 != null) __obj.updateDynamic("q1")(q1.asInstanceOf[js.Any])
-    if (q2 != null) __obj.updateDynamic("q2")(q2.asInstanceOf[js.Any])
-    if (q3 != null) __obj.updateDynamic("q3")(q3.asInstanceOf[js.Any])
-    if (shortDesc != null) __obj.updateDynamic("shortDesc")(shortDesc.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (sourceHover != null) __obj.updateDynamic("sourceHover")(sourceHover.asInstanceOf[js.Any])
-    if (sourceHoverSelected != null) __obj.updateDynamic("sourceHoverSelected")(sourceHoverSelected.asInstanceOf[js.Any])
-    if (sourceSelected != null) __obj.updateDynamic("sourceSelected")(sourceSelected.asInstanceOf[js.Any])
-    if (svgClassName != null) __obj.updateDynamic("svgClassName")(svgClassName.asInstanceOf[js.Any])
-    if (svgStyle != null) __obj.updateDynamic("svgStyle")(svgStyle.asInstanceOf[js.Any])
-    if (targetValue != null) __obj.updateDynamic("targetValue")(targetValue.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (volume != null) __obj.updateDynamic("volume")(volume.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
-    if (z != null) __obj.updateDynamic("z")(z.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojChartItemSettableProperties]
   }
+  @scala.inline
+  implicit class ojChartItemSettablePropertiesOps[Self <: ojChartItemSettableProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroupId(value: js.Array[String | Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSeriesId(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBorderColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoxPlot(value: AnonMedianSvgStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boxPlot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoxPlot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boxPlot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategories(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategories: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClose(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrilling(value: on | off | inherit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drilling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrilling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drilling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHigh(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("high")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHigh: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("high")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItems(value: js.Array[Double | js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelPosition(
+      value: center | outsideSlice | aboveMarker | belowMarker | beforeMarker | afterMarker | insideBarEdge | outsideBarEdge | none | auto
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelStyle(value: js.Object | js.Array[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("low")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("low")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkerDisplayed(value: on | off | auto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerDisplayed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkerDisplayed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerDisplayed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkerShape(value: circle | diamond | human | plus | square | star | triangleDown | triangleUp | auto | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerShape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkerShape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerShape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkerSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkerSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpen(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPattern(
+      value: smallChecker | smallCrosshatch | smallDiagonalLeft | smallDiagonalRight | smallDiamond | smallTriangle | largeChecker | largeCrosshatch | largeDiagonalLeft | largeDiagonalRight | largeDiamond | largeTriangle | auto
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPattern: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQ1(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQ1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQ2(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQ2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQ3(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQ3: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q3")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShortDesc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortDesc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShortDesc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortDesc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceHover(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceHover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceHover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceHover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceHoverSelected(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceHoverSelected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceHoverSelected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceHoverSelected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceSelected(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSelected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceSelected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSelected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSvgClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svgClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSvgClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svgClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSvgStyle(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svgStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSvgStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svgStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolume(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolume: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZ(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZ: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

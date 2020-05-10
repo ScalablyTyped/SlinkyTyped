@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Blob
 import typingsSlinky.jszip.AnonPromise
 import typingsSlinky.jszip.JSZipFileOptionsdirtrue
 import typingsSlinky.jszip.jszipStrings.array
@@ -17,10 +18,6 @@ import typingsSlinky.jszip.jszipStrings.text
 import typingsSlinky.jszip.jszipStrings.uint8array
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.Blob
-import typingsSlinky.std.RegExp
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,29 +57,33 @@ Instantiable0[JSZip]
   def file(path: String, data: js.Array[Double], options: JSZipFileOptions): this.type = js.native
   def file(
     path: String,
-    data: js.Promise[js.Array[Double] | ArrayBuffer | Blob | ReadableStream | String | Uint8Array]
+    data: js.Promise[
+      js.Array[Double] | js.typedarray.ArrayBuffer | Blob | ReadableStream | String | js.typedarray.Uint8Array
+    ]
   ): this.type = js.native
   def file(
     path: String,
-    data: js.Promise[js.Array[Double] | ArrayBuffer | Blob | ReadableStream | String | Uint8Array],
+    data: js.Promise[
+      js.Array[Double] | js.typedarray.ArrayBuffer | Blob | ReadableStream | String | js.typedarray.Uint8Array
+    ],
     options: JSZipFileOptions
   ): this.type = js.native
   def file(path: String, data: Null, options: JSZipFileOptionsdirtrue): this.type = js.native
   def file(path: String, data: ReadableStream): this.type = js.native
   def file(path: String, data: ReadableStream, options: JSZipFileOptions): this.type = js.native
-  def file(path: String, data: ArrayBuffer): this.type = js.native
-  def file(path: String, data: ArrayBuffer, options: JSZipFileOptions): this.type = js.native
+  def file(path: String, data: js.typedarray.ArrayBuffer): this.type = js.native
+  def file(path: String, data: js.typedarray.ArrayBuffer, options: JSZipFileOptions): this.type = js.native
   def file(path: String, data: Blob): this.type = js.native
   def file(path: String, data: Blob, options: JSZipFileOptions): this.type = js.native
-  def file(path: String, data: Uint8Array): this.type = js.native
-  def file(path: String, data: Uint8Array, options: JSZipFileOptions): this.type = js.native
+  def file(path: String, data: js.typedarray.Uint8Array): this.type = js.native
+  def file(path: String, data: js.typedarray.Uint8Array, options: JSZipFileOptions): this.type = js.native
   /**
     * Get files matching a RegExp from archive
     *
     * @param path RegExp to match
     * @return Return all matching files or an empty array
     */
-  def file(path: RegExp): js.Array[JSZipObject] = js.native
+  def file(path: js.RegExp): js.Array[JSZipObject] = js.native
   /**
     * Get a file from the archive
     *
@@ -111,7 +112,7 @@ Instantiable0[JSZip]
     * @param name RegExp to match
     * @return New array of JSZipFile objects which match the RegExp
     */
-  def folder(name: RegExp): js.Array[JSZipObject] = js.native
+  def folder(name: js.RegExp): js.Array[JSZipObject] = js.native
   /**
     * Call a callback function for each entry at this folder level.
     *
@@ -131,9 +132,9 @@ Instantiable0[JSZip]
   @JSName("generateAsync")
   def generateAsync_array(options: JSZipGeneratorOptions[array], onUpdate: OnUpdateCallback): js.Promise[js.Array[Double]] = js.native
   @JSName("generateAsync")
-  def generateAsync_arraybuffer(options: JSZipGeneratorOptions[arraybuffer]): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def generateAsync_arraybuffer(options: JSZipGeneratorOptions[arraybuffer]): js.Promise[js.typedarray.ArrayBuffer] = js.native
   @JSName("generateAsync")
-  def generateAsync_arraybuffer(options: JSZipGeneratorOptions[arraybuffer], onUpdate: OnUpdateCallback): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def generateAsync_arraybuffer(options: JSZipGeneratorOptions[arraybuffer], onUpdate: OnUpdateCallback): js.Promise[js.typedarray.ArrayBuffer] = js.native
   @JSName("generateAsync")
   def generateAsync_base64(options: JSZipGeneratorOptions[base64]): js.Promise[String] = js.native
   @JSName("generateAsync")
@@ -143,9 +144,9 @@ Instantiable0[JSZip]
   @JSName("generateAsync")
   def generateAsync_binarystring(options: JSZipGeneratorOptions[binarystring], onUpdate: OnUpdateCallback): js.Promise[String] = js.native
   @JSName("generateAsync")
-  def generateAsync_blob(options: JSZipGeneratorOptions[blob]): js.Promise[org.scalajs.dom.raw.Blob] = js.native
+  def generateAsync_blob(options: JSZipGeneratorOptions[blob]): js.Promise[Blob] = js.native
   @JSName("generateAsync")
-  def generateAsync_blob(options: JSZipGeneratorOptions[blob], onUpdate: OnUpdateCallback): js.Promise[org.scalajs.dom.raw.Blob] = js.native
+  def generateAsync_blob(options: JSZipGeneratorOptions[blob], onUpdate: OnUpdateCallback): js.Promise[Blob] = js.native
   @JSName("generateAsync")
   def generateAsync_nodebuffer(options: JSZipGeneratorOptions[nodebuffer]): js.Promise[Buffer] = js.native
   @JSName("generateAsync")
@@ -159,9 +160,9 @@ Instantiable0[JSZip]
   @JSName("generateAsync")
   def generateAsync_text(options: JSZipGeneratorOptions[text], onUpdate: OnUpdateCallback): js.Promise[String] = js.native
   @JSName("generateAsync")
-  def generateAsync_uint8array(options: JSZipGeneratorOptions[uint8array]): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def generateAsync_uint8array(options: JSZipGeneratorOptions[uint8array]): js.Promise[js.typedarray.Uint8Array] = js.native
   @JSName("generateAsync")
-  def generateAsync_uint8array(options: JSZipGeneratorOptions[uint8array], onUpdate: OnUpdateCallback): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def generateAsync_uint8array(options: JSZipGeneratorOptions[uint8array], onUpdate: OnUpdateCallback): js.Promise[js.typedarray.Uint8Array] = js.native
   /**
     * Generates a new archive asynchronously
     *

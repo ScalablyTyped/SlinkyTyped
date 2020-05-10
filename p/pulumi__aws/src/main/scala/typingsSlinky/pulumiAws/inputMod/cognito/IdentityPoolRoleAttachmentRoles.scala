@@ -13,11 +13,41 @@ trait IdentityPoolRoleAttachmentRoles extends js.Object {
 
 object IdentityPoolRoleAttachmentRoles {
   @scala.inline
-  def apply(authenticated: Input[String] = null, unauthenticated: Input[String] = null): IdentityPoolRoleAttachmentRoles = {
+  def apply(): IdentityPoolRoleAttachmentRoles = {
     val __obj = js.Dynamic.literal()
-    if (authenticated != null) __obj.updateDynamic("authenticated")(authenticated.asInstanceOf[js.Any])
-    if (unauthenticated != null) __obj.updateDynamic("unauthenticated")(unauthenticated.asInstanceOf[js.Any])
     __obj.asInstanceOf[IdentityPoolRoleAttachmentRoles]
   }
+  @scala.inline
+  implicit class IdentityPoolRoleAttachmentRolesOps[Self <: IdentityPoolRoleAttachmentRoles] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthenticated(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthenticated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnauthenticated(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unauthenticated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnauthenticated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unauthenticated")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

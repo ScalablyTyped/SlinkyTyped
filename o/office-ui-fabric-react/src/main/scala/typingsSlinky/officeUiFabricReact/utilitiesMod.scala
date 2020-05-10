@@ -1,9 +1,11 @@
 package typingsSlinky.officeUiFabricReact
 
+import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactBooleans.`false`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`100`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`101`
@@ -104,14 +106,9 @@ import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`97`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`98`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`99`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`9`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`data-is-scrollable`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`data-no-horizontal-wrap`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`data-no-vertical-wrap`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`data-portal-element`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`ms-Fabric--isFocusVisible`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.change
 import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.FunctionComponent
@@ -127,6 +124,7 @@ import typingsSlinky.uifabricMergeStyles.istylesetMod.IStyleSet
 import typingsSlinky.uifabricUtilities.AnonAsyncPlaceholder
 import typingsSlinky.uifabricUtilities.AnonConfigurable
 import typingsSlinky.uifabricUtilities.AnonFocus
+import typingsSlinky.uifabricUtilities.AnonRootRef
 import typingsSlinky.uifabricUtilities.AnonRtl
 import typingsSlinky.uifabricUtilities.asAsyncMod.IAsAsyncOptions
 import typingsSlinky.uifabricUtilities.baseComponentTypesMod.IBaseProps
@@ -235,10 +233,11 @@ object utilitiesMod extends js.Object {
   }
   
   val CustomizerContext: Context[ICustomizerContext] = js.native
-  val DATA_IS_SCROLLABLE_ATTRIBUTE: `data-is-scrollable` = js.native
-  val DATA_PORTAL_ATTRIBUTE: `data-portal-element` = js.native
-  val IsFocusVisibleClassName: `ms-Fabric--isFocusVisible` = js.native
-  val SELECTION_CHANGE: change = js.native
+  val DATA_IS_SCROLLABLE_ATTRIBUTE: /* "data-is-scrollable" */ String = js.native
+  val DATA_PORTAL_ATTRIBUTE: /* "data-portal-element" */ String = js.native
+  val FocusRects: ReactComponentClass[AnonRootRef] = js.native
+  val IsFocusVisibleClassName: /* "ms-Fabric--isFocusVisible" */ String = js.native
+  val SELECTION_CHANGE: /* "change" */ String = js.native
   val anchorProperties: js.Array[String] = js.native
   val audioProperties: js.Array[String] = js.native
   val baseElementEvents: js.Array[String] = js.native
@@ -267,15 +266,9 @@ object utilitiesMod extends js.Object {
   def addDirectionalKeyCode(which: Double): Unit = js.native
   def addElementAtIndex[T](array: js.Array[T], index: Double, itemToAdd: T): js.Array[T] = js.native
   def allowOverscrollOnElement(element: Null, events: typingsSlinky.uifabricUtilities.eventGroupMod.EventGroup): Unit = js.native
-  def allowOverscrollOnElement(
-    element: typingsSlinky.std.HTMLElement,
-    events: typingsSlinky.uifabricUtilities.eventGroupMod.EventGroup
-  ): Unit = js.native
+  def allowOverscrollOnElement(element: HTMLElement, events: typingsSlinky.uifabricUtilities.eventGroupMod.EventGroup): Unit = js.native
   def allowScrollOnElement(element: Null, events: typingsSlinky.uifabricUtilities.eventGroupMod.EventGroup): Unit = js.native
-  def allowScrollOnElement(
-    element: typingsSlinky.std.HTMLElement,
-    events: typingsSlinky.uifabricUtilities.eventGroupMod.EventGroup
-  ): Unit = js.native
+  def allowScrollOnElement(element: HTMLElement, events: typingsSlinky.uifabricUtilities.eventGroupMod.EventGroup): Unit = js.native
   def appendFunction(parent: js.Any, functions: js.Any*): js.Function0[Unit] = js.native
   def arraysEqual[T](array1: js.Array[T], array2: js.Array[T]): Boolean = js.native
   def asAsync[TProps](options: IAsAsyncOptions[TProps]): ForwardRefExoticComponent[PropsWithoutRef[TProps with AnonAsyncPlaceholder]] = js.native
@@ -304,38 +297,31 @@ object utilitiesMod extends js.Object {
   def doesElementContainFocus(element: HTMLElement): Boolean = js.native
   def elementContains(): Boolean = js.native
   def elementContains(parent: Null, child: Null, allowVirtualParents: Boolean): Boolean = js.native
-  def elementContains(parent: Null, child: typingsSlinky.std.HTMLElement): Boolean = js.native
-  def elementContains(parent: Null, child: typingsSlinky.std.HTMLElement, allowVirtualParents: Boolean): Boolean = js.native
-  def elementContains(parent: typingsSlinky.std.HTMLElement): Boolean = js.native
-  def elementContains(parent: typingsSlinky.std.HTMLElement, child: Null, allowVirtualParents: Boolean): Boolean = js.native
-  def elementContains(parent: typingsSlinky.std.HTMLElement, child: typingsSlinky.std.HTMLElement): Boolean = js.native
-  def elementContains(
-    parent: typingsSlinky.std.HTMLElement,
-    child: typingsSlinky.std.HTMLElement,
-    allowVirtualParents: Boolean
-  ): Boolean = js.native
+  def elementContains(parent: Null, child: HTMLElement): Boolean = js.native
+  def elementContains(parent: Null, child: HTMLElement, allowVirtualParents: Boolean): Boolean = js.native
+  def elementContains(parent: HTMLElement): Boolean = js.native
+  def elementContains(parent: HTMLElement, child: Null, allowVirtualParents: Boolean): Boolean = js.native
+  def elementContains(parent: HTMLElement, child: HTMLElement): Boolean = js.native
+  def elementContains(parent: HTMLElement, child: HTMLElement, allowVirtualParents: Boolean): Boolean = js.native
   def elementContainsAttribute(element: HTMLElement, attribute: String): String | Null = js.native
   def enableBodyScroll(): Unit = js.native
   def extendComponent[T /* <: ReactComponentClass[js.Object] */](
     parent: T,
     methods: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in keyof T ]:? T[key]}
-    */ typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.extendComponent with T
+    */ typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.extendComponent with TopLevel[T]
   ): Unit = js.native
   def filteredAssign(isAllowed: js.Function1[/* propName */ String, Boolean], target: js.Any, args: js.Any*): js.Any = js.native
   def find[T](array: js.Array[T], cb: js.Function2[/* item */ T, /* index */ Double, Boolean]): js.UndefOr[T] = js.native
   def findElementRecursive(element: Null, matchFunction: js.Function1[/* element */ HTMLElement, Boolean]): HTMLElement | Null = js.native
-  def findElementRecursive(
-    element: typingsSlinky.std.HTMLElement,
-    matchFunction: js.Function1[/* element */ HTMLElement, Boolean]
-  ): HTMLElement | Null = js.native
+  def findElementRecursive(element: HTMLElement, matchFunction: js.Function1[/* element */ HTMLElement, Boolean]): HTMLElement | Null = js.native
   def findIndex[T](array: js.Array[T], cb: js.Function2[/* item */ T, /* index */ Double, Boolean]): Double = js.native
   def findScrollableParent(): HTMLElement | Null = js.native
   def findScrollableParent(startingElement: HTMLElement): HTMLElement | Null = js.native
   def fitContentToBounds(options: IFitContentToBoundsOptions): ISize = js.native
   def flatten[T](array: js.Array[T | js.Array[T]]): js.Array[T] = js.native
   def focusAsync(): Unit = js.native
-  def focusAsync(element: typingsSlinky.std.HTMLElement): Unit = js.native
+  def focusAsync(element: HTMLElement): Unit = js.native
   def focusAsync(element: AnonFocus): Unit = js.native
   def focusFirstChild(rootElement: HTMLElement): Boolean = js.native
   def format(s: String, values: js.Any*): String = js.native
@@ -389,7 +375,7 @@ object utilitiesMod extends js.Object {
   ): HTMLElement | Null = js.native
   def getNextElement(
     rootElement: HTMLElement,
-    currentElement: typingsSlinky.std.HTMLElement,
+    currentElement: HTMLElement,
     checkNode: js.UndefOr[Boolean],
     suppressParentTraversal: js.UndefOr[Boolean],
     suppressChildTraversal: js.UndefOr[Boolean],
@@ -411,7 +397,7 @@ object utilitiesMod extends js.Object {
   ): HTMLElement | Null = js.native
   def getPreviousElement(
     rootElement: HTMLElement,
-    currentElement: typingsSlinky.std.HTMLElement,
+    currentElement: HTMLElement,
     checkNode: js.UndefOr[Boolean],
     suppressParentTraversal: js.UndefOr[Boolean],
     traverseChildren: js.UndefOr[Boolean],
@@ -424,7 +410,7 @@ object utilitiesMod extends js.Object {
   def getRTLSafeKeyCode(key: Double): Double = js.native
   def getRTLSafeKeyCode(key: Double, theme: AnonRtl): Double = js.native
   def getRect(): js.UndefOr[IRectangle] = js.native
-  def getRect(element: typingsSlinky.std.HTMLElement): js.UndefOr[IRectangle] = js.native
+  def getRect(element: HTMLElement): js.UndefOr[IRectangle] = js.native
   def getRect(element: Window_): js.UndefOr[IRectangle] = js.native
   def getResourceUrl(url: String): String = js.native
   def getScrollbarWidth(): Double = js.native
@@ -440,7 +426,7 @@ object utilitiesMod extends js.Object {
   def initializeComponentRef[TProps /* <: IBaseProps[_] */, TState](obj: ReactComponentClass[TProps]): Unit = js.native
   def initializeFocusRects(): Unit = js.native
   def initializeFocusRects(window: Window_): Unit = js.native
-  def isControlled[P](props: P, valueProp: String): Boolean = js.native
+  def isControlled[P](props: P, valueProp: /* keyof P */ String): Boolean = js.native
   def isDirectionalKeyCode(which: Double): Boolean = js.native
   def isElementFocusSubZone(): Boolean = js.native
   def isElementFocusSubZone(element: HTMLElement): Boolean = js.native
@@ -454,7 +440,7 @@ object utilitiesMod extends js.Object {
   def isIOS(): Boolean = js.native
   def isMac(): Boolean = js.native
   def isMac(reset: Boolean): Boolean = js.native
-  def isVirtualElement(element: typingsSlinky.std.HTMLElement): /* is @uifabric/utilities.@uifabric/utilities/lib/dom/IVirtualElement.IVirtualElement */ Boolean = js.native
+  def isVirtualElement(element: HTMLElement): /* is @uifabric/utilities.@uifabric/utilities/lib/dom/IVirtualElement.IVirtualElement */ Boolean = js.native
   def isVirtualElement(element: IVirtualElement): /* is @uifabric/utilities.@uifabric/utilities/lib/dom/IVirtualElement.IVirtualElement */ Boolean = js.native
   def mapEnumByName[T](
     theEnum: js.Any,
@@ -482,13 +468,9 @@ object utilitiesMod extends js.Object {
   @JSName("merge")
   def merge_false[T](target: Partial[T], args: (js.UndefOr[Partial[T] | Null | `false`])*): T = js.native
   def nullRender(): ReactElement | Null = js.native
+  def on(element: Element, eventName: String, callback: js.Function1[/* ev */ Event_, Unit]): js.Function0[Unit] = js.native
   def on(
-    element: typingsSlinky.std.Element,
-    eventName: String,
-    callback: js.Function1[/* ev */ Event_, Unit]
-  ): js.Function0[Unit] = js.native
-  def on(
-    element: typingsSlinky.std.Element,
+    element: Element,
     eventName: String,
     callback: js.Function1[/* ev */ Event_, Unit],
     options: Boolean
@@ -526,28 +508,28 @@ object utilitiesMod extends js.Object {
   def setVirtualParent(child: HTMLElement, parent: HTMLElement): Unit = js.native
   def setWarningCallback(): Unit = js.native
   def setWarningCallback(warningCallback: js.Function1[/* message */ String, Unit]): Unit = js.native
-  def shallowCompare[TA, TB](a: TA, b: TB): Boolean = js.native
+  def shallowCompare[TA /* <: js.Any */, TB /* <: js.Any */](a: TA, b: TB): Boolean = js.native
   @JSName("shouldWrapFocus")
   def shouldWrapFocus_datanohorizontalwrap(element: HTMLElement, noWrapDataAttribute: `data-no-horizontal-wrap`): Boolean = js.native
   @JSName("shouldWrapFocus")
   def shouldWrapFocus_datanoverticalwrap(element: HTMLElement, noWrapDataAttribute: `data-no-vertical-wrap`): Boolean = js.native
   def styled[TComponentProps /* <: IPropsWithStyles[TStyleProps, TStyleSet] */, TStyleProps, TStyleSet /* <: IStyleSet[TStyleSet] */](
-    Component: ComponentClass[TComponentProps, ComponentState],
+    Component: ComponentClass[TComponentProps, js.Object],
     baseStyles: IStyleFunctionOrObject[TStyleProps, TStyleSet]
   ): ReactComponentClass[TComponentProps] = js.native
   def styled[TComponentProps /* <: IPropsWithStyles[TStyleProps, TStyleSet] */, TStyleProps, TStyleSet /* <: IStyleSet[TStyleSet] */](
-    Component: ComponentClass[TComponentProps, ComponentState],
+    Component: ComponentClass[TComponentProps, js.Object],
     baseStyles: IStyleFunctionOrObject[TStyleProps, TStyleSet],
     getProps: js.Function1[/* props */ TComponentProps, Partial[TComponentProps]]
   ): ReactComponentClass[TComponentProps] = js.native
   def styled[TComponentProps /* <: IPropsWithStyles[TStyleProps, TStyleSet] */, TStyleProps, TStyleSet /* <: IStyleSet[TStyleSet] */](
-    Component: ComponentClass[TComponentProps, ComponentState],
+    Component: ComponentClass[TComponentProps, js.Object],
     baseStyles: IStyleFunctionOrObject[TStyleProps, TStyleSet],
     getProps: js.Function1[/* props */ TComponentProps, Partial[TComponentProps]],
     customizable: ICustomizableProps
   ): ReactComponentClass[TComponentProps] = js.native
   def styled[TComponentProps /* <: IPropsWithStyles[TStyleProps, TStyleSet] */, TStyleProps, TStyleSet /* <: IStyleSet[TStyleSet] */](
-    Component: ComponentClass[TComponentProps, ComponentState],
+    Component: ComponentClass[TComponentProps, js.Object],
     baseStyles: IStyleFunctionOrObject[TStyleProps, TStyleSet],
     getProps: js.Function1[/* props */ TComponentProps, Partial[TComponentProps]],
     customizable: ICustomizableProps,
@@ -577,6 +559,8 @@ object utilitiesMod extends js.Object {
   ): ReactComponentClass[TComponentProps] = js.native
   def toMatrix[T](items: js.Array[T], columnCount: Double): js.Array[js.Array[T]] = js.native
   def unhoistMethods(source: js.Any, methodNames: js.Array[String]): Unit = js.native
+  def useFocusRects(): Unit = js.native
+  def useFocusRects(rootRef: ReactRef[HTMLElement]): Unit = js.native
   def values[T](obj: js.Any): js.Array[T] = js.native
   def warn(message: String): Unit = js.native
   def warnConditionallyRequiredProps[P](

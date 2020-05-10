@@ -4,31 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AliasesMap extends js.Object {
   @JSName("\u2325")
-  var Optionkey: Double
+  var Optionkey: Double = js.native
   @JSName("\u2318")
-  var Placeofinterestsign: Double
+  var Placeofinterestsign: Double = js.native
   @JSName("\u2303")
-  var Uparrowhead: Double
+  var Uparrowhead: Double = js.native
   @JSName("\u21E7")
-  var Upwardswhitearrow: Double
-  var break: Double
-  var caps: Double
-  var cmd: Double
-  var control: Double
-  var ctl: Double
-  var del: Double
-  var escape: Double
-  var ins: Double
-  var option: Double
-  var pause: Double
-  var pgdn: Double
-  var pgup: Double
-  var `return`: Double
-  var spacebar: Double
-  var spc: Double
-  var windows: Double
+  var Upwardswhitearrow: Double = js.native
+  var break: Double = js.native
+  var caps: Double = js.native
+  var cmd: Double = js.native
+  var control: Double = js.native
+  var ctl: Double = js.native
+  var del: Double = js.native
+  var escape: Double = js.native
+  var ins: Double = js.native
+  var option: Double = js.native
+  var pause: Double = js.native
+  var pgdn: Double = js.native
+  var pgup: Double = js.native
+  var `return`: Double = js.native
+  var spacebar: Double = js.native
+  var spc: Double = js.native
+  var windows: Double = js.native
 }
 
 object AliasesMap {
@@ -63,5 +64,133 @@ object AliasesMap {
     __obj.updateDynamic("return")(`return`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AliasesMap]
   }
+  @scala.inline
+  implicit class AliasesMapOps[Self <: AliasesMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOptionkey(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("\u2325")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlaceofinterestsign(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("\u2318")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUparrowhead(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("\u2303")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpwardswhitearrow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("\u21E7")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBreak(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("break")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCaps(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCmd(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withControl(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCtl(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ctl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("del")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEscape(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("escape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIns(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOption(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("option")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPause(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPgdn(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pgdn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPgup(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pgup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReturn(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("return")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpacebar(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacebar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpc(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWindows(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("windows")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

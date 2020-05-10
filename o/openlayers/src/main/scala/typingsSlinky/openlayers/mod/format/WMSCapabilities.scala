@@ -1,8 +1,8 @@
 package typingsSlinky.openlayers.mod.format
 
+import org.scalajs.dom.raw.Node
 import typingsSlinky.openlayers.mod.GlobalObject
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

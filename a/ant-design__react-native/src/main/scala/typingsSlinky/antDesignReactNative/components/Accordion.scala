@@ -1,12 +1,9 @@
 package typingsSlinky.antDesignReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.PartialAccordionStyle
 import typingsSlinky.antDesignReactNative.accordionMod.AccordionHeader
 import typingsSlinky.antDesignReactNative.accordionMod.AccordionNativeProps
@@ -21,64 +18,64 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Accordion
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any]] {
+object Accordion {
   @JSImport("@ant-design/react-native/lib/accordion", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply[T /* <: AccordionHeader */](
-    activeSections: js.Array[Double] = null,
-    align: top | center | bottom = null,
-    containerStyle: StyleProp[ViewStyle] = null,
-    duration: Int | Double = null,
-    easing: EasingMode | js.Any = null,
-    expandFromBottom: js.UndefOr[Boolean] = js.undefined,
-    expandMultiple: js.UndefOr[Boolean] = js.undefined,
-    onChange: /* indexes */ js.Array[Double] => Unit = null,
-    renderContent: (T, /* index */ Double, /* isActive */ Boolean, /* sections */ js.Array[T]) => ReactElement = null,
-    renderFooter: (T, /* index */ Double, /* isActive */ Boolean, /* sections */ js.Array[T]) => ReactElement = null,
-    renderHeader: (T, /* index */ Double, /* isActive */ Boolean, /* sections */ js.Array[T]) => ReactElement = null,
-    renderSectionTitle: (T, /* index */ Double, /* isActive */ Boolean, /* sections */ js.Array[T]) => ReactElement = null,
-    sectionContainerStyle: StyleProp[ViewStyle] = null,
-    sections: js.Array[T] = null,
-    style: StyleProp[ViewStyle] = null,
-    styles: PartialAccordionStyle = null,
-    touchableComponent: ReactComponentClass[js.Object] = null,
-    touchableProps: js.Object = null,
-    underlayColor: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default[js.Any]] = {
-    val __obj = js.Dynamic.literal()
-    if (activeSections != null) __obj.updateDynamic("activeSections")(activeSections.asInstanceOf[js.Any])
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
-    if (!js.isUndefined(expandFromBottom)) __obj.updateDynamic("expandFromBottom")(expandFromBottom.asInstanceOf[js.Any])
-    if (!js.isUndefined(expandMultiple)) __obj.updateDynamic("expandMultiple")(expandMultiple.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (renderContent != null) __obj.updateDynamic("renderContent")(js.Any.fromFunction4(renderContent))
-    if (renderFooter != null) __obj.updateDynamic("renderFooter")(js.Any.fromFunction4(renderFooter))
-    if (renderHeader != null) __obj.updateDynamic("renderHeader")(js.Any.fromFunction4(renderHeader))
-    if (renderSectionTitle != null) __obj.updateDynamic("renderSectionTitle")(js.Any.fromFunction4(renderSectionTitle))
-    if (sectionContainerStyle != null) __obj.updateDynamic("sectionContainerStyle")(sectionContainerStyle.asInstanceOf[js.Any])
-    if (sections != null) __obj.updateDynamic("sections")(sections.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (touchableComponent != null) __obj.updateDynamic("touchableComponent")(touchableComponent.asInstanceOf[js.Any])
-    if (touchableProps != null) __obj.updateDynamic("touchableProps")(touchableProps.asInstanceOf[js.Any])
-    if (underlayColor != null) __obj.updateDynamic("underlayColor")(underlayColor.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.antDesignReactNative.accordionMod.default[js.Any]]]
+  @scala.inline
+  class Builder[T <: AccordionHeader] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default[js.Any]] {
+    @scala.inline
+    def activeSections(value: js.Array[Double]): this.type = set("activeSections", value.asInstanceOf[js.Any])
+    @scala.inline
+    def align(value: top | center | bottom): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyleNull: this.type = set("containerStyle", null)
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def duration(value: Double): this.type = set("duration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def easing(value: EasingMode | js.Any): this.type = set("easing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandFromBottom(value: Boolean): this.type = set("expandFromBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandMultiple(value: Boolean): this.type = set("expandMultiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* indexes */ js.Array[Double] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderContent(value: (T, /* index */ Double, /* isActive */ Boolean, /* sections */ js.Array[T]) => ReactElement): this.type = set("renderContent", js.Any.fromFunction4(value))
+    @scala.inline
+    def renderFooter(value: (T, /* index */ Double, /* isActive */ Boolean, /* sections */ js.Array[T]) => ReactElement): this.type = set("renderFooter", js.Any.fromFunction4(value))
+    @scala.inline
+    def renderHeader(value: (T, /* index */ Double, /* isActive */ Boolean, /* sections */ js.Array[T]) => ReactElement): this.type = set("renderHeader", js.Any.fromFunction4(value))
+    @scala.inline
+    def renderSectionTitle(value: (T, /* index */ Double, /* isActive */ Boolean, /* sections */ js.Array[T]) => ReactElement): this.type = set("renderSectionTitle", js.Any.fromFunction4(value))
+    @scala.inline
+    def sectionContainerStyle(value: StyleProp[ViewStyle]): this.type = set("sectionContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sectionContainerStyleNull: this.type = set("sectionContainerStyle", null)
+    @scala.inline
+    def sections(value: js.Array[T]): this.type = set("sections", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def styles(value: PartialAccordionStyle): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def touchableComponent(value: ReactComponentClass[js.Object]): this.type = set("touchableComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def touchableProps(value: js.Object): this.type = set("touchableProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def underlayColor(value: String): this.type = set("underlayColor", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default[js.Any]] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.antDesignReactNative.accordionMod.default[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = AccordionNativeProps[js.Any]
+  
+  def withProps[T <: AccordionHeader](p: AccordionNativeProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[T <: AccordionHeader](companion: Accordion.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

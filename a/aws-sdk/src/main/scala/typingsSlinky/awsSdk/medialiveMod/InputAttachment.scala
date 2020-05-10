@@ -22,12 +22,53 @@ trait InputAttachment extends js.Object {
 
 object InputAttachment {
   @scala.inline
-  def apply(InputAttachmentName: string = null, InputId: string = null, InputSettings: InputSettings = null): InputAttachment = {
+  def apply(): InputAttachment = {
     val __obj = js.Dynamic.literal()
-    if (InputAttachmentName != null) __obj.updateDynamic("InputAttachmentName")(InputAttachmentName.asInstanceOf[js.Any])
-    if (InputId != null) __obj.updateDynamic("InputId")(InputId.asInstanceOf[js.Any])
-    if (InputSettings != null) __obj.updateDynamic("InputSettings")(InputSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputAttachment]
   }
+  @scala.inline
+  implicit class InputAttachmentOps[Self <: InputAttachment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInputAttachmentName(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputAttachmentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputAttachmentName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputAttachmentName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputSettings(value: InputSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputSettings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

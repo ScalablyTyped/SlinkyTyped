@@ -24,9 +24,9 @@ object signature extends js.Object {
     algo: typingsSlinky.openpgp.mod.enums.publicKey,
     hash_algo: typingsSlinky.openpgp.mod.enums.hash,
     key_params: js.Array[MPI],
-    data: scala.scalajs.js.typedarray.Uint8Array,
-    hashed: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    data: js.typedarray.Uint8Array,
+    hashed: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   /**
     * Verifies the signature provided for data using specified algorithms and public key parameters.
     * See {@link https://tools.ietf.org/html/rfc4880#section-9.1|RFC 4880 9.1}
@@ -45,8 +45,8 @@ object signature extends js.Object {
     hash_algo: typingsSlinky.openpgp.mod.enums.hash,
     msg_MPIs: js.Array[MPI],
     pub_MPIs: js.Array[MPI],
-    data: scala.scalajs.js.typedarray.Uint8Array,
-    hashed: scala.scalajs.js.typedarray.Uint8Array
+    data: js.typedarray.Uint8Array,
+    hashed: js.typedarray.Uint8Array
   ): Boolean = js.native
 }
 

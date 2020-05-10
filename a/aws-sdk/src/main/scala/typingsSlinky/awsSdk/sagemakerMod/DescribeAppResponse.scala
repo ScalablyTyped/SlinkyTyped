@@ -54,32 +54,149 @@ trait DescribeAppResponse extends js.Object {
 
 object DescribeAppResponse {
   @scala.inline
-  def apply(
-    AppArn: AppArn = null,
-    AppName: AppName = null,
-    AppType: AppType = null,
-    CreationTime: js.Date = null,
-    DomainId: DomainId = null,
-    FailureReason: FailureReason = null,
-    LastHealthCheckTimestamp: js.Date = null,
-    LastUserActivityTimestamp: js.Date = null,
-    ResourceSpec: ResourceSpec = null,
-    Status: AppStatus = null,
-    UserProfileName: UserProfileName = null
-  ): DescribeAppResponse = {
+  def apply(): DescribeAppResponse = {
     val __obj = js.Dynamic.literal()
-    if (AppArn != null) __obj.updateDynamic("AppArn")(AppArn.asInstanceOf[js.Any])
-    if (AppName != null) __obj.updateDynamic("AppName")(AppName.asInstanceOf[js.Any])
-    if (AppType != null) __obj.updateDynamic("AppType")(AppType.asInstanceOf[js.Any])
-    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
-    if (DomainId != null) __obj.updateDynamic("DomainId")(DomainId.asInstanceOf[js.Any])
-    if (FailureReason != null) __obj.updateDynamic("FailureReason")(FailureReason.asInstanceOf[js.Any])
-    if (LastHealthCheckTimestamp != null) __obj.updateDynamic("LastHealthCheckTimestamp")(LastHealthCheckTimestamp.asInstanceOf[js.Any])
-    if (LastUserActivityTimestamp != null) __obj.updateDynamic("LastUserActivityTimestamp")(LastUserActivityTimestamp.asInstanceOf[js.Any])
-    if (ResourceSpec != null) __obj.updateDynamic("ResourceSpec")(ResourceSpec.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (UserProfileName != null) __obj.updateDynamic("UserProfileName")(UserProfileName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAppResponse]
   }
+  @scala.inline
+  implicit class DescribeAppResponseOps[Self <: DescribeAppResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppArn(value: AppArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AppArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AppArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppName(value: AppName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AppName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AppName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppType(value: AppType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AppType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AppType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomainId(value: DomainId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureReason(value: FailureReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastHealthCheckTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastHealthCheckTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastHealthCheckTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastHealthCheckTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUserActivityTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUserActivityTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUserActivityTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUserActivityTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceSpec(value: ResourceSpec): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceSpec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceSpec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceSpec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: AppStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserProfileName(value: UserProfileName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserProfileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserProfileName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserProfileName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,8 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Model extends Photo {
-  var thumbnails: js.Array[Photo]
+  var thumbnails: js.Array[Photo] = js.native
 }
 
 object Model {
@@ -27,5 +28,19 @@ object Model {
     __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Model]
   }
+  @scala.inline
+  implicit class ModelOps[Self <: Model] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withThumbnails(value: js.Array[Photo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnails")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

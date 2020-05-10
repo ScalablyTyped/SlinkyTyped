@@ -183,7 +183,7 @@ trait XMLHttpRequestEventTarget extends EventTarget {
   def removeEventListener_abort(
     `type`: abort,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
@@ -200,7 +200,7 @@ trait XMLHttpRequestEventTarget extends EventTarget {
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_load(
@@ -217,7 +217,7 @@ trait XMLHttpRequestEventTarget extends EventTarget {
   def removeEventListener_load(
     `type`: load,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadend(
@@ -234,7 +234,7 @@ trait XMLHttpRequestEventTarget extends EventTarget {
   def removeEventListener_loadend(
     `type`: loadend,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadstart(
@@ -251,7 +251,7 @@ trait XMLHttpRequestEventTarget extends EventTarget {
   def removeEventListener_loadstart(
     `type`: loadstart,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_progress(
@@ -268,7 +268,7 @@ trait XMLHttpRequestEventTarget extends EventTarget {
   def removeEventListener_progress(
     `type`: progress,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_timeout(
@@ -285,11 +285,12 @@ trait XMLHttpRequestEventTarget extends EventTarget {
   def removeEventListener_timeout(
     `type`: timeout,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("XMLHttpRequestEventTarget")
 @js.native
-object XMLHttpRequestEventTarget extends Instantiable0[XMLHttpRequestEventTarget]
+object XMLHttpRequestEventTarget
+  extends Instantiable0[org.scalajs.dom.raw.XMLHttpRequestEventTarget]
 

@@ -4,32 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ArcgisOnlineProviderOptions extends BaseProviderOptions {
-  var categories: js.UndefOr[String | js.Array[String]] = js.undefined
-  var countries: js.UndefOr[String | js.Array[String]] = js.undefined
-  var forStorage: js.UndefOr[Boolean] = js.undefined
+  var categories: js.UndefOr[String | js.Array[String]] = js.native
+  var countries: js.UndefOr[String | js.Array[String]] = js.native
+  var forStorage: js.UndefOr[Boolean] = js.native
 }
 
 object ArcgisOnlineProviderOptions {
   @scala.inline
-  def apply(
-    attribution: String = null,
-    categories: String | js.Array[String] = null,
-    countries: String | js.Array[String] = null,
-    forStorage: js.UndefOr[Boolean] = js.undefined,
-    label: String = null,
-    maxResults: Int | Double = null,
-    token: String = null
-  ): ArcgisOnlineProviderOptions = {
+  def apply(): ArcgisOnlineProviderOptions = {
     val __obj = js.Dynamic.literal()
-    if (attribution != null) __obj.updateDynamic("attribution")(attribution.asInstanceOf[js.Any])
-    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
-    if (countries != null) __obj.updateDynamic("countries")(countries.asInstanceOf[js.Any])
-    if (!js.isUndefined(forStorage)) __obj.updateDynamic("forStorage")(forStorage.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (maxResults != null) __obj.updateDynamic("maxResults")(maxResults.asInstanceOf[js.Any])
-    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArcgisOnlineProviderOptions]
   }
+  @scala.inline
+  implicit class ArcgisOnlineProviderOptionsOps[Self <: ArcgisOnlineProviderOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCategories(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategories: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountries(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForStorage(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forStorage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForStorage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forStorage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

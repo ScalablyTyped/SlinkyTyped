@@ -21,5 +21,6 @@ trait HTMLLabelElement extends HTMLElement {
 
 @JSGlobal("HTMLLabelElement")
 @js.native
-object HTMLLabelElement extends Instantiable0[HTMLLabelElement]
+object HTMLLabelElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLLabelElement]
 

@@ -11,5 +11,6 @@ import scala.scalajs.js.annotation._
   * when your application specifically targets the SVG renderer.
   *
   */
+@js.native
 trait svgext extends js.Object
 

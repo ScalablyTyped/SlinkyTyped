@@ -22,16 +22,53 @@ trait VerifyResponse extends js.Object {
 
 object VerifyResponse {
   @scala.inline
-  def apply(
-    KeyId: KeyIdType = null,
-    SignatureValid: js.UndefOr[Boolean] = js.undefined,
-    SigningAlgorithm: SigningAlgorithmSpec = null
-  ): VerifyResponse = {
+  def apply(): VerifyResponse = {
     val __obj = js.Dynamic.literal()
-    if (KeyId != null) __obj.updateDynamic("KeyId")(KeyId.asInstanceOf[js.Any])
-    if (!js.isUndefined(SignatureValid)) __obj.updateDynamic("SignatureValid")(SignatureValid.asInstanceOf[js.Any])
-    if (SigningAlgorithm != null) __obj.updateDynamic("SigningAlgorithm")(SigningAlgorithm.asInstanceOf[js.Any])
     __obj.asInstanceOf[VerifyResponse]
   }
+  @scala.inline
+  implicit class VerifyResponseOps[Self <: VerifyResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKeyId(value: KeyIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignatureValid(value: BooleanType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SignatureValid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignatureValid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SignatureValid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSigningAlgorithm(value: SigningAlgorithmSpec): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SigningAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSigningAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SigningAlgorithm")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

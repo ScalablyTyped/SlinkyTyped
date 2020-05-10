@@ -2,6 +2,7 @@ package typingsSlinky.oracleOraclejet.ojlistviewMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.oracleOraclejet.AnonAccessibleNavigateSkipItems
 import typingsSlinky.oracleOraclejet.AnonDragDrop
 import typingsSlinky.oracleOraclejet.AnonFetchSize
@@ -10,7 +11,6 @@ import typingsSlinky.oracleOraclejet.AnonKey
 import typingsSlinky.oracleOraclejet.AnonKeyK
 import typingsSlinky.oracleOraclejet.AnonOffsetX
 import typingsSlinky.oracleOraclejet.AnonParent
-import typingsSlinky.oracleOraclejet.mod.JetElementCustomEvent
 import typingsSlinky.oracleOraclejet.mod.baseComponent
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojkeysetMod.KeySet
@@ -64,7 +64,6 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.single
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.static
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.sticky
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.translations
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -114,282 +113,216 @@ trait ojListView_[K, D] extends baseComponent[ojListViewSettableProperties[K, D]
   var selectionRequired: Boolean = js.native
   @JSName("translations")
   var translations_ojListView_ : AnonAccessibleNavigateSkipItems = js.native
+  def addEventListener(`type`: drillModeChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: drillModeChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[collapsible | none], _]
-  ): Unit = js.native
-  def addEventListener(
-    `type`: drillModeChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[collapsible | none], _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   def addEventListener(
     `type`: groupHeaderPositionChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[static | sticky], _]
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]
   ): Unit = js.native
   def addEventListener(
     `type`: groupHeaderPositionChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[static | sticky], _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  def addEventListener(`type`: scrollPolicyChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: scrollPolicyChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[auto | loadMoreOnScroll], _]
-  ): Unit = js.native
-  def addEventListener(
-    `type`: scrollPolicyChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[auto | loadMoreOnScroll], _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  def addEventListener(`type`: selectionModeChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: selectionModeChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[none | single | multiple], _]
-  ): Unit = js.native
-  def addEventListener(
-    `type`: selectionModeChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[none | single | multiple], _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_asChanged(`type`: asChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_asChanged(
     `type`: asChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_asChanged(
-    `type`: asChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_currentItemChanged(`type`: currentItemChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_currentItemChanged(
     `type`: currentItemChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_currentItemChanged(
-    `type`: currentItemChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_dataChanged(`type`: dataChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dataChanged(
     `type`: dataChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_dataChanged(
-    `type`: dataChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_dndChanged(
-    `type`: dndChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
+  def addEventListener_dndChanged(`type`: dndChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dndChanged(
     `type`: dndChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_expandedChanged(
-    `type`: expandedChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
+  def addEventListener_expandedChanged(`type`: expandedChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_expandedChanged(
     `type`: expandedChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_firstSelectedItemChanged(
     `type`: firstSelectedItemChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_firstSelectedItemChanged(
     `type`: firstSelectedItemChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_itemChanged(`type`: itemChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_itemChanged(
     `type`: itemChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_itemChanged(
-    `type`: itemChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_ojAnimateEnd(`type`: ojAnimateEnd, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ojAnimateEnd(
     `type`: ojAnimateEnd,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_ojAnimateEnd(
-    `type`: ojAnimateEnd,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_ojAnimateStart(`type`: ojAnimateStart, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ojAnimateStart(
     `type`: ojAnimateStart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_ojAnimateStart(
-    `type`: ojAnimateStart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_ojBeforeCollapse(`type`: ojBeforeCollapse, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ojBeforeCollapse(
     `type`: ojBeforeCollapse,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_ojBeforeCollapse(
-    `type`: ojBeforeCollapse,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_ojBeforeCurrentItem(`type`: ojBeforeCurrentItem, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ojBeforeCurrentItem(
     `type`: ojBeforeCurrentItem,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_ojBeforeCurrentItem(
-    `type`: ojBeforeCurrentItem,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_ojBeforeExpand(`type`: ojBeforeExpand, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ojBeforeExpand(
     `type`: ojBeforeExpand,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_ojBeforeExpand(
-    `type`: ojBeforeExpand,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_ojCollapse(`type`: ojCollapse, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ojCollapse(
     `type`: ojCollapse,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_ojCollapse(
-    `type`: ojCollapse,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_ojCopy(`type`: ojCopy, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ojCopy(
     `type`: ojCopy,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_ojCopy(
-    `type`: ojCopy,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_ojCut(`type`: ojCut, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ojCut(
     `type`: ojCut,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_ojCut(
-    `type`: ojCut,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_ojExpand(`type`: ojExpand, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ojExpand(
     `type`: ojExpand,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_ojExpand(
-    `type`: ojExpand,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_ojPaste(
-    `type`: ojPaste,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
+  def addEventListener_ojPaste(`type`: ojPaste, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ojPaste(
     `type`: ojPaste,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_ojReorder(
-    `type`: ojReorder,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
+  def addEventListener_ojReorder(`type`: ojReorder, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ojReorder(
     `type`: ojReorder,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_scrollPolicyOptionsChanged(
     `type`: scrollPolicyOptionsChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_scrollPolicyOptionsChanged(
     `type`: scrollPolicyOptionsChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_scrollPositionChanged(
-    `type`: scrollPositionChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
+  def addEventListener_scrollPositionChanged(`type`: scrollPositionChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_scrollPositionChanged(
     `type`: scrollPositionChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_selectionChanged(
-    `type`: selectionChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
+  def addEventListener_selectionChanged(`type`: selectionChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_selectionChanged(
     `type`: selectionChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_selectionRequiredChanged(
     `type`: selectionRequiredChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_selectionRequiredChanged(
     `type`: selectionRequiredChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   def getContextByNode(node: Element): ContextByNode[K] | Null = js.native

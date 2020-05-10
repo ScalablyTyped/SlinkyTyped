@@ -1,7 +1,7 @@
 package typingsSlinky.jsdom
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.std.HTMLScriptElement
+import org.scalajs.dom.raw.HTMLScriptElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

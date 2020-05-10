@@ -13,12 +13,10 @@ trait Graph2dStyleType extends js.Object
 
 object Graph2dStyleType {
   @scala.inline
-  def bar: typingsSlinky.vis.visStrings.bar = this.cast("bar")
+  def bar: typingsSlinky.vis.visStrings.bar = "bar".asInstanceOf[typingsSlinky.vis.visStrings.bar]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def line: typingsSlinky.vis.visStrings.line = "line".asInstanceOf[typingsSlinky.vis.visStrings.line]
   @scala.inline
-  def line: typingsSlinky.vis.visStrings.line = this.cast("line")
-  @scala.inline
-  def points: typingsSlinky.vis.visStrings.points = this.cast("points")
+  def points: typingsSlinky.vis.visStrings.points = "points".asInstanceOf[typingsSlinky.vis.visStrings.points]
 }
 

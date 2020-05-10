@@ -2,7 +2,7 @@ package typingsSlinky.androiduix.android.view
 
 import typingsSlinky.androiduix.android.content.Context
 import typingsSlinky.androiduix.android.view.Menu_.Callback
-import typingsSlinky.androiduix.java.util.ArrayList
+import typingsSlinky.androiduix.java_.util.ArrayList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

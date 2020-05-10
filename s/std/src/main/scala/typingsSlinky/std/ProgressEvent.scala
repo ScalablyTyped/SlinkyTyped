@@ -19,10 +19,10 @@ trait ProgressEvent[T /* <: org.scalajs.dom.raw.EventTarget */] extends Event_ {
 @JSGlobal("ProgressEvent")
 @js.native
 object ProgressEvent
-  extends Instantiable1[/* type */ java.lang.String, ProgressEvent[EventTarget]]
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.ProgressEvent]
      with Instantiable2[
       /* type */ java.lang.String, 
       /* eventInitDict */ ProgressEventInit, 
-      ProgressEvent[EventTarget]
+      org.scalajs.dom.raw.ProgressEvent
     ]
 

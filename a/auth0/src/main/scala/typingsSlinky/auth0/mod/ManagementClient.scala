@@ -1,6 +1,5 @@
 package typingsSlinky.auth0.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -82,6 +81,8 @@ class ManagementClient[A, U] protected () extends js.Object {
   def deleteRole(params: ObjectWithId, cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def deleteRule(params: ObjectWithId): js.Promise[Unit] = js.native
   def deleteRule(params: ObjectWithId, cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def deleteRulesConfig(params: RulesConfig): js.Promise[Unit] = js.native
+  def deleteRulesConfig(params: RulesConfig, cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def deleteUser(params: ObjectWithId): Unit = js.native
   def deleteUser(params: ObjectWithId, cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def deleteUserMultifactor(params: DeleteMultifactorParams): js.Promise[Unit] = js.native
@@ -110,7 +111,7 @@ class ManagementClient[A, U] protected () extends js.Object {
   def getClientInfo(): ClientInfo = js.native
   // Clients
   def getClients(): js.Promise[js.Array[Client]] = js.native
-  def getClients(cb: js.Function2[/* err */ Error, /* clients */ js.Array[Client], Unit]): Unit = js.native
+  def getClients(cb: js.Function2[/* err */ js.Error, /* clients */ js.Array[Client], Unit]): Unit = js.native
   def getClients(params: GetClientsOptions): js.Promise[js.Array[Client]] = js.native
   def getClients(
     params: GetClientsOptions,
@@ -149,6 +150,16 @@ class ManagementClient[A, U] protected () extends js.Object {
   def getLogs(cb: js.Function2[/* err */ js.Error, /* data */ js.Any, Unit]): Unit = js.native
   @JSName("getLogs")
   def getLogs_Promise(): js.Promise[_] = js.native
+  def getPermissionsInRole(params: GetRolePermissionsData): js.Promise[js.Array[Permission]] = js.native
+  def getPermissionsInRole(params: GetRolePermissionsDataPaged): js.Promise[PermissionPage] = js.native
+  def getPermissionsInRole(
+    params: GetRolePermissionsDataPaged,
+    cb: js.Function2[/* err */ js.Error, /* permissionPage */ PermissionPage, Unit]
+  ): Unit = js.native
+  def getPermissionsInRole(
+    params: GetRolePermissionsData,
+    cb: js.Function2[/* err */ js.Error, /* permissions */ js.Array[Permission], Unit]
+  ): Unit = js.native
   def getPermissionsInRole(params: ObjectWithId): js.Promise[js.Array[Permission]] = js.native
   def getPermissionsInRole(
     params: ObjectWithId,
@@ -166,16 +177,19 @@ class ManagementClient[A, U] protected () extends js.Object {
   def getRole(params: ObjectWithId, cb: js.Function2[/* err */ js.Error, /* role */ Role, Unit]): Unit = js.native
   // Roles
   def getRoles(): js.Promise[js.Array[Role]] = js.native
-  def getRoles(cb: js.Function2[/* err */ Error, /* roles */ js.Array[Role], Unit]): Unit = js.native
+  def getRoles(cb: js.Function2[/* err */ js.Error, /* roles */ js.Array[Role], Unit]): Unit = js.native
   def getRoles(params: GetRolesData): js.Promise[js.Array[Role]] = js.native
   def getRoles(params: GetRolesDataPaged): js.Promise[RolePage] = js.native
-  def getRoles(params: GetRolesDataPaged, cb: js.Function2[/* err */ Error, /* rolePage */ RolePage, Unit]): Unit = js.native
-  def getRoles(params: GetRolesData, cb: js.Function2[/* err */ Error, /* roles */ js.Array[Role], Unit]): Unit = js.native
+  def getRoles(params: GetRolesDataPaged, cb: js.Function2[/* err */ js.Error, /* rolePage */ RolePage, Unit]): Unit = js.native
+  def getRoles(params: GetRolesData, cb: js.Function2[/* err */ js.Error, /* roles */ js.Array[Role], Unit]): Unit = js.native
   def getRule(params: ClientParams): js.Promise[Rule] = js.native
   def getRule(params: ClientParams, cb: js.Function2[/* err */ js.Error, /* rule */ Rule, Unit]): Unit = js.native
   // Rules
   def getRules(): js.Promise[js.Array[Rule]] = js.native
   def getRules(cb: js.Function2[/* err */ js.Error, /* rules */ js.Array[Rule], Unit]): Unit = js.native
+  // Rules Configurations
+  def getRulesConfigs(): js.Promise[js.Array[RulesConfig]] = js.native
+  def getRulesConfigs(cb: js.Function2[/* err */ js.Error, /* rulesConfigs */ js.Array[RulesConfig], Unit]): Unit = js.native
   def getTenantSettings(): Unit = js.native
   def getTenantSettings(cb: js.Function2[/* err */ js.Error, /* data */ js.Any, Unit]): Unit = js.native
   // Tenant
@@ -195,34 +209,37 @@ class ManagementClient[A, U] protected () extends js.Object {
   def getUserPermissions(params: GetUserPermissionsDataPaged): js.Promise[PermissionPage] = js.native
   def getUserPermissions(
     params: GetUserPermissionsDataPaged,
-    cb: js.Function2[/* err */ Error, /* permissionPage */ PermissionPage, Unit]
+    cb: js.Function2[/* err */ js.Error, /* permissionPage */ PermissionPage, Unit]
   ): Unit = js.native
   def getUserPermissions(
     params: GetUserPermissionsData,
-    cb: js.Function2[/* err */ Error, /* permissions */ js.Array[Permission], Unit]
+    cb: js.Function2[/* err */ js.Error, /* permissions */ js.Array[Permission], Unit]
   ): Unit = js.native
   // User permissions
   def getUserPermissions(params: ObjectWithId): js.Promise[js.Array[Permission]] = js.native
   def getUserPermissions(
     params: ObjectWithId,
-    cb: js.Function2[/* err */ Error, /* permissions */ js.Array[Permission], Unit]
+    cb: js.Function2[/* err */ js.Error, /* permissions */ js.Array[Permission], Unit]
   ): Unit = js.native
   def getUserRoles(params: GetUserRolesData): js.Promise[js.Array[Role]] = js.native
   def getUserRoles(params: GetUserRolesDataPaged): js.Promise[RolePage] = js.native
-  def getUserRoles(params: GetUserRolesDataPaged, cb: js.Function2[/* err */ Error, /* rolePage */ RolePage, Unit]): Unit = js.native
-  def getUserRoles(params: GetUserRolesData, cb: js.Function2[/* err */ Error, /* roles */ js.Array[Role], Unit]): Unit = js.native
+  def getUserRoles(params: GetUserRolesDataPaged, cb: js.Function2[/* err */ js.Error, /* rolePage */ RolePage, Unit]): Unit = js.native
+  def getUserRoles(params: GetUserRolesData, cb: js.Function2[/* err */ js.Error, /* roles */ js.Array[Role], Unit]): Unit = js.native
   // User roles
   def getUserRoles(params: ObjectWithId): js.Promise[js.Array[Role]] = js.native
-  def getUserRoles(params: ObjectWithId, cb: js.Function2[/* err */ Error, /* roles */ js.Array[Role], Unit]): Unit = js.native
+  def getUserRoles(params: ObjectWithId, cb: js.Function2[/* err */ js.Error, /* roles */ js.Array[Role], Unit]): Unit = js.native
   @JSName("getUser")
   def getUser_Promise(params: ObjectWithId): js.Promise[User[A, U]] = js.native
   def getUsers(): Unit = js.native
-  def getUsers(cb: js.Function2[/* err */ Error, /* users */ js.Array[User[A, U]], Unit]): Unit = js.native
+  def getUsers(cb: js.Function2[/* err */ js.Error, /* users */ js.Array[User[A, U]], Unit]): Unit = js.native
   def getUsers(params: GetUsersData): Unit = js.native
   // Users
   def getUsers(params: GetUsersDataPaged): js.Promise[UserPage[A, U]] = js.native
-  def getUsers(params: GetUsersDataPaged, cb: js.Function2[/* err */ Error, /* userPage */ UserPage[A, U], Unit]): Unit = js.native
-  def getUsers(params: GetUsersData, cb: js.Function2[/* err */ Error, /* users */ js.Array[User[A, U]], Unit]): Unit = js.native
+  def getUsers(
+    params: GetUsersDataPaged,
+    cb: js.Function2[/* err */ js.Error, /* userPage */ UserPage[A, U], Unit]
+  ): Unit = js.native
+  def getUsers(params: GetUsersData, cb: js.Function2[/* err */ js.Error, /* users */ js.Array[User[A, U]], Unit]): Unit = js.native
   def getUsersByEmail(email: String): Unit = js.native
   def getUsersByEmail(email: String, cb: js.Function2[/* err */ js.Error, /* users */ js.Array[User[A, U]], Unit]): Unit = js.native
   @JSName("getUsersByEmail")
@@ -231,14 +248,14 @@ class ManagementClient[A, U] protected () extends js.Object {
   def getUsersInRole(params: GetRoleUsersDataPaged): js.Promise[UserPage[A, U]] = js.native
   def getUsersInRole(
     params: GetRoleUsersDataPaged,
-    cb: js.Function2[/* err */ Error, /* userPage */ UserPage[A, U], Unit]
+    cb: js.Function2[/* err */ js.Error, /* userPage */ UserPage[A, U], Unit]
   ): Unit = js.native
   def getUsersInRole(
     params: GetRoleUsersData,
-    cb: js.Function2[/* err */ Error, /* users */ js.Array[User[A, U]], Unit]
+    cb: js.Function2[/* err */ js.Error, /* users */ js.Array[User[A, U]], Unit]
   ): Unit = js.native
   def getUsersInRole(params: ObjectWithId): js.Promise[js.Array[User[A, U]]] = js.native
-  def getUsersInRole(params: ObjectWithId, cb: js.Function2[/* err */ Error, /* users */ js.Array[User[A, U]], Unit]): Unit = js.native
+  def getUsersInRole(params: ObjectWithId, cb: js.Function2[/* err */ js.Error, /* users */ js.Array[User[A, U]], Unit]): Unit = js.native
   @JSName("getUsers")
   def getUsers_Promise(): js.Promise[js.Array[User[A, U]]] = js.native
   @JSName("getUsers")
@@ -263,6 +280,12 @@ class ManagementClient[A, U] protected () extends js.Object {
   def sendEmailVerification(data: UserIdParams, cb: js.Function2[/* err */ js.Error, /* data */ VerificationEmailJob, Unit]): Unit = js.native
   @JSName("sendEmailVerification")
   def sendEmailVerification_Promise(data: UserIdParams): js.Promise[VerificationEmailJob] = js.native
+  def setRulesConfig(params: RulesConfig, data: RulesConfigData): js.Promise[RulesConfig with RulesConfigData] = js.native
+  def setRulesConfig(
+    params: RulesConfig,
+    data: RulesConfigData,
+    cb: js.Function2[/* err */ js.Error, /* rulesConfig */ RulesConfig with RulesConfigData, Unit]
+  ): Unit = js.native
   def unblockUser(params: ObjectWithId): js.Promise[String] = js.native
   def unblockUser(params: ObjectWithId, cb: js.Function2[/* err */ js.Error, /* response */ String, Unit]): Unit = js.native
   def unblockUserByIdentifier(params: ObjectWithIdentifier): js.Promise[String] = js.native

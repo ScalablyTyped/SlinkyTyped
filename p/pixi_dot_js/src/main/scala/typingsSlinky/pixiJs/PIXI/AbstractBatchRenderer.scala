@@ -144,7 +144,7 @@ class AbstractBatchRenderer protected () extends ObjectRenderer {
   def packInterleavedGeometry(
     element: Sprite,
     attributeBuffer: ViewableBuffer,
-    indexBuffer: scala.scalajs.js.typedarray.Uint16Array,
+    indexBuffer: js.typedarray.Uint16Array,
     aIndex: Double,
     iIndex: Double
   ): Unit = js.native

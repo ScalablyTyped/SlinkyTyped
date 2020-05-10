@@ -1,30 +1,25 @@
 package typingsSlinky.rmcTabs.defaultTabBarNativeMod
 
-import slinky.core.TagMod
-import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.rmcTabs.AnonTabBar
 import typingsSlinky.rmcTabs.modelsMod.Models.TabData
 import typingsSlinky.rmcTabs.propsTypeMod.TabBarPropsType
-import typingsSlinky.rmcTabs.rmcTabsStrings.bottom
-import typingsSlinky.rmcTabs.rmcTabsStrings.left
-import typingsSlinky.rmcTabs.rmcTabsStrings.right
-import typingsSlinky.rmcTabs.rmcTabsStrings.top
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PropsType extends TabBarPropsType {
   /** default: false */
-  var dynamicTabUnderlineWidth: js.UndefOr[Boolean] = js.undefined
-  var keyboardShouldPersistTaps: js.UndefOr[Boolean] = js.undefined
-  var scrollValue: js.UndefOr[js.Any] = js.undefined
-  var styles: js.UndefOr[AnonTabBar] = js.undefined
+  var dynamicTabUnderlineWidth: js.UndefOr[Boolean] = js.native
+  var keyboardShouldPersistTaps: js.UndefOr[Boolean] = js.native
+  var scrollValue: js.UndefOr[js.Any] = js.native
+  var styles: js.UndefOr[AnonTabBar] = js.native
   var tabStyle: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RN.ViewStyle */ js.Any
-  ] = js.undefined
+  ] = js.native
   var tabsContainerStyle: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RN.ViewStyle */ js.Any
-  ] = js.undefined
+  ] = js.native
 }
 
 object PropsType {
@@ -34,42 +29,94 @@ object PropsType {
     animated: Boolean,
     goToTab: Double => Unit,
     instanceId: Double,
-    tabs: js.Array[TabData],
-    dynamicTabUnderlineWidth: js.UndefOr[Boolean] = js.undefined,
-    keyboardShouldPersistTaps: js.UndefOr[Boolean] = js.undefined,
-    onTabClick: (/* tab */ TabData, /* index */ Double) => Unit = null,
-    page: Int | Double = null,
-    renderTab: /* tab */ TabData => TagMod[Any] = null,
-    renderUnderline: /* style */ CSSProperties | js.Any => TagMod[Any] = null,
-    scrollValue: js.Any = null,
-    styles: AnonTabBar = null,
-    tabBarActiveTextColor: String = null,
-    tabBarBackgroundColor: String = null,
-    tabBarInactiveTextColor: String = null,
-    tabBarPosition: top | bottom | left | right = null,
-    tabBarTextStyle: CSSProperties | js.Any = null,
-    tabBarUnderlineStyle: CSSProperties | js.Any = null,
-    tabStyle: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RN.ViewStyle */ js.Any = null,
-    tabsContainerStyle: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RN.ViewStyle */ js.Any = null
+    tabs: js.Array[TabData]
   ): PropsType = {
     val __obj = js.Dynamic.literal(activeTab = activeTab.asInstanceOf[js.Any], animated = animated.asInstanceOf[js.Any], goToTab = js.Any.fromFunction1(goToTab), instanceId = instanceId.asInstanceOf[js.Any], tabs = tabs.asInstanceOf[js.Any])
-    if (!js.isUndefined(dynamicTabUnderlineWidth)) __obj.updateDynamic("dynamicTabUnderlineWidth")(dynamicTabUnderlineWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(keyboardShouldPersistTaps)) __obj.updateDynamic("keyboardShouldPersistTaps")(keyboardShouldPersistTaps.asInstanceOf[js.Any])
-    if (onTabClick != null) __obj.updateDynamic("onTabClick")(js.Any.fromFunction2(onTabClick))
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (renderTab != null) __obj.updateDynamic("renderTab")(js.Any.fromFunction1(renderTab))
-    if (renderUnderline != null) __obj.updateDynamic("renderUnderline")(js.Any.fromFunction1(renderUnderline))
-    if (scrollValue != null) __obj.updateDynamic("scrollValue")(scrollValue.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (tabBarActiveTextColor != null) __obj.updateDynamic("tabBarActiveTextColor")(tabBarActiveTextColor.asInstanceOf[js.Any])
-    if (tabBarBackgroundColor != null) __obj.updateDynamic("tabBarBackgroundColor")(tabBarBackgroundColor.asInstanceOf[js.Any])
-    if (tabBarInactiveTextColor != null) __obj.updateDynamic("tabBarInactiveTextColor")(tabBarInactiveTextColor.asInstanceOf[js.Any])
-    if (tabBarPosition != null) __obj.updateDynamic("tabBarPosition")(tabBarPosition.asInstanceOf[js.Any])
-    if (tabBarTextStyle != null) __obj.updateDynamic("tabBarTextStyle")(tabBarTextStyle.asInstanceOf[js.Any])
-    if (tabBarUnderlineStyle != null) __obj.updateDynamic("tabBarUnderlineStyle")(tabBarUnderlineStyle.asInstanceOf[js.Any])
-    if (tabStyle != null) __obj.updateDynamic("tabStyle")(tabStyle.asInstanceOf[js.Any])
-    if (tabsContainerStyle != null) __obj.updateDynamic("tabsContainerStyle")(tabsContainerStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[PropsType]
   }
+  @scala.inline
+  implicit class PropsTypeOps[Self <: PropsType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDynamicTabUnderlineWidth(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicTabUnderlineWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamicTabUnderlineWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicTabUnderlineWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyboardShouldPersistTaps(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardShouldPersistTaps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyboardShouldPersistTaps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardShouldPersistTaps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyles(value: AnonTabBar): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTabStyle(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RN.ViewStyle */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTabsContainerStyle(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RN.ViewStyle */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabsContainerStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabsContainerStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabsContainerStyle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

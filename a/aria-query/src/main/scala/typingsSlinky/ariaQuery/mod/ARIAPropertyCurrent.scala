@@ -21,26 +21,24 @@ trait ARIAPropertyCurrent extends js.Object
 
 object ARIAPropertyCurrent {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def date: typingsSlinky.ariaQuery.ariaQueryStrings.date = "date".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.date]
   @scala.inline
-  def date: typingsSlinky.ariaQuery.ariaQueryStrings.date = this.cast("date")
-  @scala.inline
-  def `false`: typingsSlinky.ariaQuery.ariaQueryBooleans.`false` = this.cast(false)
+  def `false`: typingsSlinky.ariaQuery.ariaQueryBooleans.`false` = false.asInstanceOf[typingsSlinky.ariaQuery.ariaQueryBooleans.`false`]
   @JSName("false")
   @scala.inline
-  def false_false: `false` = this.cast("false")
+  def false_false: `false` = "false".asInstanceOf[`false`]
   @scala.inline
-  def location: typingsSlinky.ariaQuery.ariaQueryStrings.location = this.cast("location")
+  def location: typingsSlinky.ariaQuery.ariaQueryStrings.location = "location".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.location]
   @scala.inline
-  def page: typingsSlinky.ariaQuery.ariaQueryStrings.page = this.cast("page")
+  def page: typingsSlinky.ariaQuery.ariaQueryStrings.page = "page".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.page]
   @scala.inline
-  def step: typingsSlinky.ariaQuery.ariaQueryStrings.step = this.cast("step")
+  def step: typingsSlinky.ariaQuery.ariaQueryStrings.step = "step".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.step]
   @scala.inline
-  def time: typingsSlinky.ariaQuery.ariaQueryStrings.time = this.cast("time")
+  def time: typingsSlinky.ariaQuery.ariaQueryStrings.time = "time".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.time]
   @scala.inline
-  def `true`: typingsSlinky.ariaQuery.ariaQueryBooleans.`true` = this.cast(true)
+  def `true`: typingsSlinky.ariaQuery.ariaQueryBooleans.`true` = true.asInstanceOf[typingsSlinky.ariaQuery.ariaQueryBooleans.`true`]
   @JSName("true")
   @scala.inline
-  def true_true: `true` = this.cast("true")
+  def true_true: `true` = "true".asInstanceOf[`true`]
 }
 

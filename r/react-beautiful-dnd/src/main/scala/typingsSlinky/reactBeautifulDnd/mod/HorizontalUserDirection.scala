@@ -12,10 +12,8 @@ trait HorizontalUserDirection extends js.Object
 
 object HorizontalUserDirection {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.left = "left".asInstanceOf[typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.left]
   @scala.inline
-  def left: typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.right = this.cast("right")
+  def right: typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.right = "right".asInstanceOf[typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.right]
 }
 

@@ -22,11 +22,47 @@ trait RuleGroup extends js.Object {
 
 object RuleGroup {
   @scala.inline
-  def apply(RuleGroupId: ResourceId, MetricName: MetricName = null, Name: ResourceName = null): RuleGroup = {
+  def apply(RuleGroupId: ResourceId): RuleGroup = {
     val __obj = js.Dynamic.literal(RuleGroupId = RuleGroupId.asInstanceOf[js.Any])
-    if (MetricName != null) __obj.updateDynamic("MetricName")(MetricName.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[RuleGroup]
   }
+  @scala.inline
+  implicit class RuleGroupOps[Self <: RuleGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRuleGroupId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetricName(value: MetricName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

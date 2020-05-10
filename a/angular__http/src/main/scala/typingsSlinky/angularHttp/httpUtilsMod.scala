@@ -12,7 +12,7 @@ object httpUtilsMod extends js.Object {
   def isSuccess(status: Double): Boolean = js.native
   def normalizeMethodName(method: String): RequestMethod = js.native
   def normalizeMethodName(method: RequestMethod): RequestMethod = js.native
-  def stringToArrayBuffer(input: String): scala.scalajs.js.typedarray.ArrayBuffer = js.native
-  def stringToArrayBuffer8(input: String): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def stringToArrayBuffer(input: String): js.typedarray.ArrayBuffer = js.native
+  def stringToArrayBuffer8(input: String): js.typedarray.ArrayBuffer = js.native
 }
 

@@ -18,22 +18,20 @@ trait Metric extends js.Object
 
 object Metric {
   @scala.inline
-  def GroupDesiredCapacity: typingsSlinky.pulumiAws.pulumiAwsStrings.GroupDesiredCapacity = this.cast("GroupDesiredCapacity")
+  def GroupDesiredCapacity: typingsSlinky.pulumiAws.pulumiAwsStrings.GroupDesiredCapacity = "GroupDesiredCapacity".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.GroupDesiredCapacity]
   @scala.inline
-  def GroupInServiceInstances: typingsSlinky.pulumiAws.pulumiAwsStrings.GroupInServiceInstances = this.cast("GroupInServiceInstances")
+  def GroupInServiceInstances: typingsSlinky.pulumiAws.pulumiAwsStrings.GroupInServiceInstances = "GroupInServiceInstances".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.GroupInServiceInstances]
   @scala.inline
-  def GroupMaxSize: typingsSlinky.pulumiAws.pulumiAwsStrings.GroupMaxSize = this.cast("GroupMaxSize")
+  def GroupMaxSize: typingsSlinky.pulumiAws.pulumiAwsStrings.GroupMaxSize = "GroupMaxSize".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.GroupMaxSize]
   @scala.inline
-  def GroupMinSize: typingsSlinky.pulumiAws.pulumiAwsStrings.GroupMinSize = this.cast("GroupMinSize")
+  def GroupMinSize: typingsSlinky.pulumiAws.pulumiAwsStrings.GroupMinSize = "GroupMinSize".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.GroupMinSize]
   @scala.inline
-  def GroupPendingInstances: typingsSlinky.pulumiAws.pulumiAwsStrings.GroupPendingInstances = this.cast("GroupPendingInstances")
+  def GroupPendingInstances: typingsSlinky.pulumiAws.pulumiAwsStrings.GroupPendingInstances = "GroupPendingInstances".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.GroupPendingInstances]
   @scala.inline
-  def GroupStandbyInstances: typingsSlinky.pulumiAws.pulumiAwsStrings.GroupStandbyInstances = this.cast("GroupStandbyInstances")
+  def GroupStandbyInstances: typingsSlinky.pulumiAws.pulumiAwsStrings.GroupStandbyInstances = "GroupStandbyInstances".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.GroupStandbyInstances]
   @scala.inline
-  def GroupTerminatingInstances: typingsSlinky.pulumiAws.pulumiAwsStrings.GroupTerminatingInstances = this.cast("GroupTerminatingInstances")
+  def GroupTerminatingInstances: typingsSlinky.pulumiAws.pulumiAwsStrings.GroupTerminatingInstances = "GroupTerminatingInstances".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.GroupTerminatingInstances]
   @scala.inline
-  def GroupTotalInstances: typingsSlinky.pulumiAws.pulumiAwsStrings.GroupTotalInstances = this.cast("GroupTotalInstances")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def GroupTotalInstances: typingsSlinky.pulumiAws.pulumiAwsStrings.GroupTotalInstances = "GroupTotalInstances".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.GroupTotalInstances]
 }
 

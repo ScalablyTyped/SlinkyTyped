@@ -34,22 +34,89 @@ trait MitigationActionParams extends js.Object {
 
 object MitigationActionParams {
   @scala.inline
-  def apply(
-    addThingsToThingGroupParams: AddThingsToThingGroupParams = null,
-    enableIoTLoggingParams: EnableIoTLoggingParams = null,
-    publishFindingToSnsParams: PublishFindingToSnsParams = null,
-    replaceDefaultPolicyVersionParams: ReplaceDefaultPolicyVersionParams = null,
-    updateCACertificateParams: UpdateCACertificateParams = null,
-    updateDeviceCertificateParams: UpdateDeviceCertificateParams = null
-  ): MitigationActionParams = {
+  def apply(): MitigationActionParams = {
     val __obj = js.Dynamic.literal()
-    if (addThingsToThingGroupParams != null) __obj.updateDynamic("addThingsToThingGroupParams")(addThingsToThingGroupParams.asInstanceOf[js.Any])
-    if (enableIoTLoggingParams != null) __obj.updateDynamic("enableIoTLoggingParams")(enableIoTLoggingParams.asInstanceOf[js.Any])
-    if (publishFindingToSnsParams != null) __obj.updateDynamic("publishFindingToSnsParams")(publishFindingToSnsParams.asInstanceOf[js.Any])
-    if (replaceDefaultPolicyVersionParams != null) __obj.updateDynamic("replaceDefaultPolicyVersionParams")(replaceDefaultPolicyVersionParams.asInstanceOf[js.Any])
-    if (updateCACertificateParams != null) __obj.updateDynamic("updateCACertificateParams")(updateCACertificateParams.asInstanceOf[js.Any])
-    if (updateDeviceCertificateParams != null) __obj.updateDynamic("updateDeviceCertificateParams")(updateDeviceCertificateParams.asInstanceOf[js.Any])
     __obj.asInstanceOf[MitigationActionParams]
   }
+  @scala.inline
+  implicit class MitigationActionParamsOps[Self <: MitigationActionParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddThingsToThingGroupParams(value: AddThingsToThingGroupParams): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addThingsToThingGroupParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddThingsToThingGroupParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addThingsToThingGroupParams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableIoTLoggingParams(value: EnableIoTLoggingParams): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableIoTLoggingParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableIoTLoggingParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableIoTLoggingParams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublishFindingToSnsParams(value: PublishFindingToSnsParams): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publishFindingToSnsParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublishFindingToSnsParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publishFindingToSnsParams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplaceDefaultPolicyVersionParams(value: ReplaceDefaultPolicyVersionParams): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceDefaultPolicyVersionParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplaceDefaultPolicyVersionParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceDefaultPolicyVersionParams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateCACertificateParams(value: UpdateCACertificateParams): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateCACertificateParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateCACertificateParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateCACertificateParams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateDeviceCertificateParams(value: UpdateDeviceCertificateParams): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDeviceCertificateParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateDeviceCertificateParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDeviceCertificateParams")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

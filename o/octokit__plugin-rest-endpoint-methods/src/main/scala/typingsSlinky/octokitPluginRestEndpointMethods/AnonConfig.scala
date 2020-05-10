@@ -4,20 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonConfig extends js.Object {
-  var active: AnonType
-  var config: AnonType
+  var active: AnonType = js.native
+  var config: AnonType = js.native
   @JSName("config.content_type")
-  var configDotcontent_type: AnonType
+  var configDotcontent_type: AnonType = js.native
   @JSName("config.insecure_ssl")
-  var configDotinsecure_ssl: AnonType
+  var configDotinsecure_ssl: AnonType = js.native
   @JSName("config.secret")
-  var configDotsecret: AnonType
+  var configDotsecret: AnonType = js.native
   @JSName("config.url")
-  var configDoturl: AnonRequired
-  var events: AnonType
-  var hook_id: AnonRequired
-  var org: AnonRequired
+  var configDoturl: AnonRequired = js.native
+  var events: AnonType = js.native
+  var hook_id: AnonRequired = js.native
+  var org: AnonRequired = js.native
 }
 
 object AnonConfig {
@@ -40,5 +41,67 @@ object AnonConfig {
     __obj.updateDynamic("config.url")(configDoturl.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonConfig]
   }
+  @scala.inline
+  implicit class AnonConfigOps[Self <: AnonConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConfig(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConfigDotcontent_type(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config.content_type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConfigDotinsecure_ssl(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config.insecure_ssl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConfigDotsecret(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config.secret")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConfigDoturl(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config.url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvents(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHook_id(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hook_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrg(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

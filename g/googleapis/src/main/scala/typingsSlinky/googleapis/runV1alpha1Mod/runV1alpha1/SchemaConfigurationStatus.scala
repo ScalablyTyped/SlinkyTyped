@@ -41,18 +41,65 @@ trait SchemaConfigurationStatus extends js.Object {
 
 object SchemaConfigurationStatus {
   @scala.inline
-  def apply(
-    conditions: js.Array[SchemaConfigurationCondition] = null,
-    latestCreatedRevisionName: String = null,
-    latestReadyRevisionName: String = null,
-    observedGeneration: Int | Double = null
-  ): SchemaConfigurationStatus = {
+  def apply(): SchemaConfigurationStatus = {
     val __obj = js.Dynamic.literal()
-    if (conditions != null) __obj.updateDynamic("conditions")(conditions.asInstanceOf[js.Any])
-    if (latestCreatedRevisionName != null) __obj.updateDynamic("latestCreatedRevisionName")(latestCreatedRevisionName.asInstanceOf[js.Any])
-    if (latestReadyRevisionName != null) __obj.updateDynamic("latestReadyRevisionName")(latestReadyRevisionName.asInstanceOf[js.Any])
-    if (observedGeneration != null) __obj.updateDynamic("observedGeneration")(observedGeneration.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaConfigurationStatus]
   }
+  @scala.inline
+  implicit class SchemaConfigurationStatusOps[Self <: SchemaConfigurationStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConditions(value: js.Array[SchemaConfigurationCondition]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConditions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatestCreatedRevisionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestCreatedRevisionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatestCreatedRevisionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestCreatedRevisionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatestReadyRevisionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestReadyRevisionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatestReadyRevisionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestReadyRevisionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObservedGeneration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("observedGeneration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObservedGeneration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("observedGeneration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,30 +7,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait getConnectionOptions extends js.Object {
-  var filter: js.UndefOr[nodeFilterFn] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var now: js.UndefOr[Double] = js.undefined
-  var requestId: js.UndefOr[String | Double] = js.undefined
-  var selector: js.UndefOr[nodeSelectorFn] = js.undefined
+  var filter: js.UndefOr[nodeFilterFn] = js.native
+  var name: js.UndefOr[String] = js.native
+  var now: js.UndefOr[Double] = js.native
+  var requestId: js.UndefOr[String | Double] = js.native
+  var selector: js.UndefOr[nodeSelectorFn] = js.native
 }
 
 object getConnectionOptions {
   @scala.inline
-  def apply(
-    filter: /* connection */ default => Boolean = null,
-    name: String = null,
-    now: Int | Double = null,
-    requestId: String | Double = null,
-    selector: /* connections */ js.Array[default] => default = null
-  ): getConnectionOptions = {
+  def apply(): getConnectionOptions = {
     val __obj = js.Dynamic.literal()
-    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction1(filter))
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (now != null) __obj.updateDynamic("now")(now.asInstanceOf[js.Any])
-    if (requestId != null) __obj.updateDynamic("requestId")(requestId.asInstanceOf[js.Any])
-    if (selector != null) __obj.updateDynamic("selector")(js.Any.fromFunction1(selector))
     __obj.asInstanceOf[getConnectionOptions]
   }
+  @scala.inline
+  implicit class getConnectionOptionsOps[Self <: getConnectionOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilter(value: /* connection */ default => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("now")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("now")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestId(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelector(value: /* connections */ js.Array[default] => default): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -17,20 +17,18 @@ trait TextStatus extends js.Object
 
 object TextStatus {
   @scala.inline
-  def abort: typingsSlinky.cypress.cypressStrings.abort = this.cast("abort")
+  def abort: typingsSlinky.cypress.cypressStrings.abort = "abort".asInstanceOf[typingsSlinky.cypress.cypressStrings.abort]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.cypress.cypressStrings.error = "error".asInstanceOf[typingsSlinky.cypress.cypressStrings.error]
   @scala.inline
-  def error: typingsSlinky.cypress.cypressStrings.error = this.cast("error")
+  def nocontent: typingsSlinky.cypress.cypressStrings.nocontent = "nocontent".asInstanceOf[typingsSlinky.cypress.cypressStrings.nocontent]
   @scala.inline
-  def nocontent: typingsSlinky.cypress.cypressStrings.nocontent = this.cast("nocontent")
+  def notmodified: typingsSlinky.cypress.cypressStrings.notmodified = "notmodified".asInstanceOf[typingsSlinky.cypress.cypressStrings.notmodified]
   @scala.inline
-  def notmodified: typingsSlinky.cypress.cypressStrings.notmodified = this.cast("notmodified")
+  def parsererror: typingsSlinky.cypress.cypressStrings.parsererror = "parsererror".asInstanceOf[typingsSlinky.cypress.cypressStrings.parsererror]
   @scala.inline
-  def parsererror: typingsSlinky.cypress.cypressStrings.parsererror = this.cast("parsererror")
+  def success: typingsSlinky.cypress.cypressStrings.success = "success".asInstanceOf[typingsSlinky.cypress.cypressStrings.success]
   @scala.inline
-  def success: typingsSlinky.cypress.cypressStrings.success = this.cast("success")
-  @scala.inline
-  def timeout: typingsSlinky.cypress.cypressStrings.timeout = this.cast("timeout")
+  def timeout: typingsSlinky.cypress.cypressStrings.timeout = "timeout".asInstanceOf[typingsSlinky.cypress.cypressStrings.timeout]
 }
 

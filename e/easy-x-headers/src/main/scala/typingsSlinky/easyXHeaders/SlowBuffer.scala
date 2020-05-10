@@ -2,7 +2,6 @@ package typingsSlinky.easyXHeaders
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +12,7 @@ class SlowBuffer protected ()
   extends typingsSlinky.node.Buffer {
   def this(array: js.Array[_]) = this()
   def this(size: Double) = this()
-  def this(size: scala.scalajs.js.typedarray.Uint8Array) = this()
+  def this(size: js.typedarray.Uint8Array) = this()
   def this(str: String) = this()
   def this(str: String, encoding: String) = this()
 }
@@ -22,7 +21,7 @@ class SlowBuffer protected ()
 @js.native
 object SlowBuffer
   extends Instantiable1[
-      (/* array */ js.Array[js.Any]) | (/* size */ Double) | (/* str */ String) | (/* size */ Uint8Array), 
+      (/* array */ js.Array[js.Any]) | (/* size */ Double) | (/* str */ String) | (/* size */ js.typedarray.Uint8Array), 
       typingsSlinky.node.Buffer
     ]
      with Instantiable2[/* str */ String, /* encoding */ String, typingsSlinky.node.Buffer] {

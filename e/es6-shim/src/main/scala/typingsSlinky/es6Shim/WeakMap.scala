@@ -5,11 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WeakMap[K /* <: js.Object */, V] extends js.Object {
-  def delete(key: K): Boolean
-  def get(key: K): js.UndefOr[V]
-  def has(key: K): Boolean
-  def set(key: K, value: V): WeakMap[K, V]
+  def delete(key: K): Boolean = js.native
+  def get(key: K): js.UndefOr[V] = js.native
+  def has(key: K): Boolean = js.native
+  def set(key: K, value: V): WeakMap[K, V] = js.native
 }
 
 @JSGlobal("WeakMap")

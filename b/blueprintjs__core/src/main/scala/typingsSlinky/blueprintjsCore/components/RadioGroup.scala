@@ -1,12 +1,10 @@
 package typingsSlinky.blueprintjsCore.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.web.html.input.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.propsMod.IOptionProps
 import typingsSlinky.blueprintjsCore.radioGroupMod.IRadioGroupProps
 import typingsSlinky.std.Event_
@@ -14,30 +12,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RadioGroup
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsCore.mod.RadioGroup] {
+object RadioGroup {
   @JSImport("@blueprintjs/core", "RadioGroup")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, name */
-  def apply(
-    onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit,
-    `inline`: js.UndefOr[Boolean] = js.undefined,
-    label: String = null,
-    options: js.Array[IOptionProps] = null,
-    selectedValue: String | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.RadioGroup] = {
-    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
-    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (selectedValue != null) __obj.updateDynamic("selectedValue")(selectedValue.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.RadioGroup] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def options(value: js.Array[IOptionProps]): this.type = set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedValue(value: String | Double): this.type = set("selectedValue", value.asInstanceOf[js.Any])
   }
-  type Props = IRadioGroupProps
+  
+  def withProps(p: IRadioGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit): Builder = {
+    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[IRadioGroupProps]))
+  }
 }
 

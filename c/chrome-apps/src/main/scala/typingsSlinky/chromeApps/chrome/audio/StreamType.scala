@@ -12,10 +12,8 @@ trait StreamType extends js.Object
 
 object StreamType {
   @scala.inline
-  def INPUT: typingsSlinky.chromeApps.chromeAppsStrings.INPUT = this.cast("INPUT")
+  def INPUT: typingsSlinky.chromeApps.chromeAppsStrings.INPUT = "INPUT".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.INPUT]
   @scala.inline
-  def OUTPUT: typingsSlinky.chromeApps.chromeAppsStrings.OUTPUT = this.cast("OUTPUT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def OUTPUT: typingsSlinky.chromeApps.chromeAppsStrings.OUTPUT = "OUTPUT".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.OUTPUT]
 }
 

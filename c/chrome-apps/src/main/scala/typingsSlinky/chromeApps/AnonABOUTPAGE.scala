@@ -1,82 +1,216 @@
 package typingsSlinky.chromeApps
 
-import typingsSlinky.chromeApps.chromeAppsStrings.about_page
-import typingsSlinky.chromeApps.chromeAppsStrings.app_launcher
-import typingsSlinky.chromeApps.chromeAppsStrings.background
-import typingsSlinky.chromeApps.chromeAppsStrings.chrome_internal
-import typingsSlinky.chromeApps.chromeAppsStrings.command_line
-import typingsSlinky.chromeApps.chromeAppsStrings.context_menu
-import typingsSlinky.chromeApps.chromeAppsStrings.ephemeral_app
-import typingsSlinky.chromeApps.chromeAppsStrings.extensions_page
-import typingsSlinky.chromeApps.chromeAppsStrings.file_handler
-import typingsSlinky.chromeApps.chromeAppsStrings.installed_notification
-import typingsSlinky.chromeApps.chromeAppsStrings.keyboard
-import typingsSlinky.chromeApps.chromeAppsStrings.kiosk
-import typingsSlinky.chromeApps.chromeAppsStrings.load_and_launch
-import typingsSlinky.chromeApps.chromeAppsStrings.management_api
-import typingsSlinky.chromeApps.chromeAppsStrings.new_tab_page
-import typingsSlinky.chromeApps.chromeAppsStrings.reload
-import typingsSlinky.chromeApps.chromeAppsStrings.restart
-import typingsSlinky.chromeApps.chromeAppsStrings.system_tray
-import typingsSlinky.chromeApps.chromeAppsStrings.test
-import typingsSlinky.chromeApps.chromeAppsStrings.untracked
-import typingsSlinky.chromeApps.chromeAppsStrings.url_handler
+import typingsSlinky.chromeApps.chromeAppsStrings.about_page_
+import typingsSlinky.chromeApps.chromeAppsStrings.app_launcher_
+import typingsSlinky.chromeApps.chromeAppsStrings.background_
+import typingsSlinky.chromeApps.chromeAppsStrings.chrome_internal_
+import typingsSlinky.chromeApps.chromeAppsStrings.command_line_
+import typingsSlinky.chromeApps.chromeAppsStrings.context_menu_
+import typingsSlinky.chromeApps.chromeAppsStrings.ephemeral_app_
+import typingsSlinky.chromeApps.chromeAppsStrings.extensions_page_
+import typingsSlinky.chromeApps.chromeAppsStrings.file_handler_
+import typingsSlinky.chromeApps.chromeAppsStrings.installed_notification_
+import typingsSlinky.chromeApps.chromeAppsStrings.keyboard_
+import typingsSlinky.chromeApps.chromeAppsStrings.kiosk_
+import typingsSlinky.chromeApps.chromeAppsStrings.load_and_launch_
+import typingsSlinky.chromeApps.chromeAppsStrings.management_api_
+import typingsSlinky.chromeApps.chromeAppsStrings.new_tab_page_
+import typingsSlinky.chromeApps.chromeAppsStrings.reload_
+import typingsSlinky.chromeApps.chromeAppsStrings.restart_
+import typingsSlinky.chromeApps.chromeAppsStrings.system_tray_
+import typingsSlinky.chromeApps.chromeAppsStrings.test_
+import typingsSlinky.chromeApps.chromeAppsStrings.untracked_
+import typingsSlinky.chromeApps.chromeAppsStrings.url_handler_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonABOUTPAGE extends js.Object {
-  var ABOUT_PAGE: about_page
-  var APP_LAUNCHER: app_launcher
-  var BACKGROUND: background
-  var CHROME_INTERNAL: chrome_internal
-  var COMMAND_LINE: command_line
-  var CONTEXT_MENU: context_menu
-  var EPHEMERAL_APP: ephemeral_app
-  var EXTENSIONS_PAGE: extensions_page
-  var FILE_HANDLER: file_handler
-  var INSTALLED_NOTIFICATION: installed_notification
-  var KEYBOARD: keyboard
-  var KIOSK: kiosk
-  var LOAD_AND_LAUNCH: load_and_launch
-  var MANAGEMENT_API: management_api
-  var NEW_TAB_PAGE: new_tab_page
-  var RELOAD: reload
-  var RESTART: restart
-  var SYSTEM_TRAY: system_tray
-  var TEST: test
-  var UNTRACKED: untracked
-  var URL_HANDLER: url_handler
+  var ABOUT_PAGE: about_page_ = js.native
+  var APP_LAUNCHER: app_launcher_ = js.native
+  var BACKGROUND: background_ = js.native
+  var CHROME_INTERNAL: chrome_internal_ = js.native
+  var COMMAND_LINE: command_line_ = js.native
+  var CONTEXT_MENU: context_menu_ = js.native
+  var EPHEMERAL_APP: ephemeral_app_ = js.native
+  var EXTENSIONS_PAGE: extensions_page_ = js.native
+  var FILE_HANDLER: file_handler_ = js.native
+  var INSTALLED_NOTIFICATION: installed_notification_ = js.native
+  var KEYBOARD: keyboard_ = js.native
+  var KIOSK: kiosk_ = js.native
+  var LOAD_AND_LAUNCH: load_and_launch_ = js.native
+  var MANAGEMENT_API: management_api_ = js.native
+  var NEW_TAB_PAGE: new_tab_page_ = js.native
+  var RELOAD: reload_ = js.native
+  var RESTART: restart_ = js.native
+  var SYSTEM_TRAY: system_tray_ = js.native
+  var TEST: test_ = js.native
+  var UNTRACKED: untracked_ = js.native
+  var URL_HANDLER: url_handler_ = js.native
 }
 
 object AnonABOUTPAGE {
   @scala.inline
   def apply(
-    ABOUT_PAGE: about_page,
-    APP_LAUNCHER: app_launcher,
-    BACKGROUND: background,
-    CHROME_INTERNAL: chrome_internal,
-    COMMAND_LINE: command_line,
-    CONTEXT_MENU: context_menu,
-    EPHEMERAL_APP: ephemeral_app,
-    EXTENSIONS_PAGE: extensions_page,
-    FILE_HANDLER: file_handler,
-    INSTALLED_NOTIFICATION: installed_notification,
-    KEYBOARD: keyboard,
-    KIOSK: kiosk,
-    LOAD_AND_LAUNCH: load_and_launch,
-    MANAGEMENT_API: management_api,
-    NEW_TAB_PAGE: new_tab_page,
-    RELOAD: reload,
-    RESTART: restart,
-    SYSTEM_TRAY: system_tray,
-    TEST: test,
-    UNTRACKED: untracked,
-    URL_HANDLER: url_handler
+    ABOUT_PAGE: about_page_,
+    APP_LAUNCHER: app_launcher_,
+    BACKGROUND: background_,
+    CHROME_INTERNAL: chrome_internal_,
+    COMMAND_LINE: command_line_,
+    CONTEXT_MENU: context_menu_,
+    EPHEMERAL_APP: ephemeral_app_,
+    EXTENSIONS_PAGE: extensions_page_,
+    FILE_HANDLER: file_handler_,
+    INSTALLED_NOTIFICATION: installed_notification_,
+    KEYBOARD: keyboard_,
+    KIOSK: kiosk_,
+    LOAD_AND_LAUNCH: load_and_launch_,
+    MANAGEMENT_API: management_api_,
+    NEW_TAB_PAGE: new_tab_page_,
+    RELOAD: reload_,
+    RESTART: restart_,
+    SYSTEM_TRAY: system_tray_,
+    TEST: test_,
+    UNTRACKED: untracked_,
+    URL_HANDLER: url_handler_
   ): AnonABOUTPAGE = {
     val __obj = js.Dynamic.literal(ABOUT_PAGE = ABOUT_PAGE.asInstanceOf[js.Any], APP_LAUNCHER = APP_LAUNCHER.asInstanceOf[js.Any], BACKGROUND = BACKGROUND.asInstanceOf[js.Any], CHROME_INTERNAL = CHROME_INTERNAL.asInstanceOf[js.Any], COMMAND_LINE = COMMAND_LINE.asInstanceOf[js.Any], CONTEXT_MENU = CONTEXT_MENU.asInstanceOf[js.Any], EPHEMERAL_APP = EPHEMERAL_APP.asInstanceOf[js.Any], EXTENSIONS_PAGE = EXTENSIONS_PAGE.asInstanceOf[js.Any], FILE_HANDLER = FILE_HANDLER.asInstanceOf[js.Any], INSTALLED_NOTIFICATION = INSTALLED_NOTIFICATION.asInstanceOf[js.Any], KEYBOARD = KEYBOARD.asInstanceOf[js.Any], KIOSK = KIOSK.asInstanceOf[js.Any], LOAD_AND_LAUNCH = LOAD_AND_LAUNCH.asInstanceOf[js.Any], MANAGEMENT_API = MANAGEMENT_API.asInstanceOf[js.Any], NEW_TAB_PAGE = NEW_TAB_PAGE.asInstanceOf[js.Any], RELOAD = RELOAD.asInstanceOf[js.Any], RESTART = RESTART.asInstanceOf[js.Any], SYSTEM_TRAY = SYSTEM_TRAY.asInstanceOf[js.Any], TEST = TEST.asInstanceOf[js.Any], UNTRACKED = UNTRACKED.asInstanceOf[js.Any], URL_HANDLER = URL_HANDLER.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonABOUTPAGE]
   }
+  @scala.inline
+  implicit class AnonABOUTPAGEOps[Self <: AnonABOUTPAGE] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withABOUT_PAGE(value: about_page_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ABOUT_PAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAPP_LAUNCHER(value: app_launcher_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("APP_LAUNCHER")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBACKGROUND(value: background_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BACKGROUND")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCHROME_INTERNAL(value: chrome_internal_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CHROME_INTERNAL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCOMMAND_LINE(value: command_line_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("COMMAND_LINE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCONTEXT_MENU(value: context_menu_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CONTEXT_MENU")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEPHEMERAL_APP(value: ephemeral_app_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EPHEMERAL_APP")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEXTENSIONS_PAGE(value: extensions_page_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EXTENSIONS_PAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFILE_HANDLER(value: file_handler_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FILE_HANDLER")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withINSTALLED_NOTIFICATION(value: installed_notification_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("INSTALLED_NOTIFICATION")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKEYBOARD(value: keyboard_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KEYBOARD")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKIOSK(value: kiosk_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KIOSK")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOAD_AND_LAUNCH(value: load_and_launch_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOAD_AND_LAUNCH")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMANAGEMENT_API(value: management_api_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MANAGEMENT_API")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNEW_TAB_PAGE(value: new_tab_page_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NEW_TAB_PAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRELOAD(value: reload_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RELOAD")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRESTART(value: restart_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RESTART")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSYSTEM_TRAY(value: system_tray_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SYSTEM_TRAY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTEST(value: test_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TEST")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUNTRACKED(value: untracked_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UNTRACKED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withURL_HANDLER(value: url_handler_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("URL_HANDLER")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

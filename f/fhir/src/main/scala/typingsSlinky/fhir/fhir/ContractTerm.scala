@@ -7,117 +7,263 @@ import scala.scalajs.js.annotation._
 /**
   * Contract Term List
   */
+@js.native
 trait ContractTerm extends BackboneElement {
   /**
     * Contains extended information for property 'issued'.
     */
-  var _issued: js.UndefOr[Element] = js.undefined
+  var _issued: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'text'.
     */
-  var _text: js.UndefOr[Element] = js.undefined
+  var _text: js.UndefOr[Element] = js.native
   /**
     * Contract Term Activity
     */
-  var action: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
+  var action: js.UndefOr[js.Array[CodeableConcept]] = js.native
   /**
     * Purpose for the Contract Term Action
     */
-  var actionReason: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
+  var actionReason: js.UndefOr[js.Array[CodeableConcept]] = js.native
   /**
     * Contract Term Agent List
     */
-  var agent: js.UndefOr[js.Array[ContractTermAgent]] = js.undefined
+  var agent: js.UndefOr[js.Array[ContractTermAgent]] = js.native
   /**
     * Contract Term Effective Time
     */
-  var applies: js.UndefOr[Period] = js.undefined
+  var applies: js.UndefOr[Period] = js.native
   /**
     * Nested Contract Term Group
     */
-  var group: js.UndefOr[js.Array[ContractTerm]] = js.undefined
+  var group: js.UndefOr[js.Array[ContractTerm]] = js.native
   /**
     * Contract Term Number
     */
-  var identifier: js.UndefOr[Identifier] = js.undefined
+  var identifier: js.UndefOr[Identifier] = js.native
   /**
     * Contract Term Issue Date Time
     */
-  var issued: js.UndefOr[dateTime] = js.undefined
+  var issued: js.UndefOr[dateTime] = js.native
   /**
     * Security Labels that define affected terms
     */
-  var securityLabel: js.UndefOr[js.Array[Coding]] = js.undefined
+  var securityLabel: js.UndefOr[js.Array[Coding]] = js.native
   /**
     * Contract Term Type specific classification
     */
-  var subType: js.UndefOr[CodeableConcept] = js.undefined
+  var subType: js.UndefOr[CodeableConcept] = js.native
   /**
     * Human readable Contract term text
     */
-  var text: js.UndefOr[String] = js.undefined
+  var text: js.UndefOr[String] = js.native
   /**
     * Context of the Contract term
     */
-  var topic: js.UndefOr[js.Array[Reference]] = js.undefined
+  var topic: js.UndefOr[js.Array[Reference]] = js.native
   /**
     * Contract Term Type or Form
     */
-  var `type`: js.UndefOr[CodeableConcept] = js.undefined
+  var `type`: js.UndefOr[CodeableConcept] = js.native
   /**
     * Contract Term Valued Item List
     */
-  var valuedItem: js.UndefOr[js.Array[ContractTermValuedItem]] = js.undefined
+  var valuedItem: js.UndefOr[js.Array[ContractTermValuedItem]] = js.native
 }
 
 object ContractTerm {
   @scala.inline
-  def apply(
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    _issued: Element = null,
-    _text: Element = null,
-    action: js.Array[CodeableConcept] = null,
-    actionReason: js.Array[CodeableConcept] = null,
-    agent: js.Array[ContractTermAgent] = null,
-    applies: Period = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    group: js.Array[ContractTerm] = null,
-    id: String = null,
-    identifier: Identifier = null,
-    issued: dateTime = null,
-    modifierExtension: js.Array[Extension] = null,
-    securityLabel: js.Array[Coding] = null,
-    subType: CodeableConcept = null,
-    text: String = null,
-    topic: js.Array[Reference] = null,
-    `type`: CodeableConcept = null,
-    valuedItem: js.Array[ContractTermValuedItem] = null
-  ): ContractTerm = {
+  def apply(): ContractTerm = {
     val __obj = js.Dynamic.literal()
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_issued != null) __obj.updateDynamic("_issued")(_issued.asInstanceOf[js.Any])
-    if (_text != null) __obj.updateDynamic("_text")(_text.asInstanceOf[js.Any])
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (actionReason != null) __obj.updateDynamic("actionReason")(actionReason.asInstanceOf[js.Any])
-    if (agent != null) __obj.updateDynamic("agent")(agent.asInstanceOf[js.Any])
-    if (applies != null) __obj.updateDynamic("applies")(applies.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
-    if (issued != null) __obj.updateDynamic("issued")(issued.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (securityLabel != null) __obj.updateDynamic("securityLabel")(securityLabel.asInstanceOf[js.Any])
-    if (subType != null) __obj.updateDynamic("subType")(subType.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (topic != null) __obj.updateDynamic("topic")(topic.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (valuedItem != null) __obj.updateDynamic("valuedItem")(valuedItem.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContractTerm]
   }
+  @scala.inline
+  implicit class ContractTermOps[Self <: ContractTerm] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_issued(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_issued")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_issued: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_issued")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_text(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_text: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAction(value: js.Array[CodeableConcept]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActionReason(value: js.Array[CodeableConcept]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAgent(value: js.Array[ContractTermAgent]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApplies(value: Period): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroup(value: js.Array[ContractTerm]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentifier(value: Identifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIssued(value: dateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issued")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIssued: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issued")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityLabel(value: js.Array[Coding]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubType(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopic(value: js.Array[Reference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValuedItem(value: js.Array[ContractTermValuedItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valuedItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValuedItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valuedItem")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

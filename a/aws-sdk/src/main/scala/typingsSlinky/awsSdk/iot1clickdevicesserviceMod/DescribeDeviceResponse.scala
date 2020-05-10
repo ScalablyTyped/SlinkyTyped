@@ -14,10 +14,29 @@ trait DescribeDeviceResponse extends js.Object {
 
 object DescribeDeviceResponse {
   @scala.inline
-  def apply(DeviceDescription: DeviceDescription = null): DescribeDeviceResponse = {
+  def apply(): DescribeDeviceResponse = {
     val __obj = js.Dynamic.literal()
-    if (DeviceDescription != null) __obj.updateDynamic("DeviceDescription")(DeviceDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDeviceResponse]
   }
+  @scala.inline
+  implicit class DescribeDeviceResponseOps[Self <: DescribeDeviceResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceDescription(value: DeviceDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceDescription")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

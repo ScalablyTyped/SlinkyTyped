@@ -1,25 +1,21 @@
 package typingsSlinky.reactToggled.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GetElementPropsOptions
   extends AllHTMLAttributes[HTMLElement]
      with ClassAttributes[HTMLElement]
 
 object GetElementPropsOptions {
   @scala.inline
-  def apply(
-    AllHTMLAttributes: AllHTMLAttributes[org.scalajs.dom.raw.HTMLElement] = null,
-    ClassAttributes: ClassAttributes[org.scalajs.dom.raw.HTMLElement] = null
-  ): GetElementPropsOptions = {
+  def apply(): GetElementPropsOptions = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
     __obj.asInstanceOf[GetElementPropsOptions]
   }
 }

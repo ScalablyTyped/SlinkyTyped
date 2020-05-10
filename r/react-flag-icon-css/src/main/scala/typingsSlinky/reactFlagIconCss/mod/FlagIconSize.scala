@@ -15,16 +15,14 @@ trait FlagIconSize extends js.Object
 
 object FlagIconSize {
   @scala.inline
-  def `2x`: typingsSlinky.reactFlagIconCss.reactFlagIconCssStrings.`2x` = this.cast("2x")
+  def `2x`: typingsSlinky.reactFlagIconCss.reactFlagIconCssStrings.`2x` = "2x".asInstanceOf[typingsSlinky.reactFlagIconCss.reactFlagIconCssStrings.`2x`]
   @scala.inline
-  def `3x`: typingsSlinky.reactFlagIconCss.reactFlagIconCssStrings.`3x` = this.cast("3x")
+  def `3x`: typingsSlinky.reactFlagIconCss.reactFlagIconCssStrings.`3x` = "3x".asInstanceOf[typingsSlinky.reactFlagIconCss.reactFlagIconCssStrings.`3x`]
   @scala.inline
-  def `4x`: typingsSlinky.reactFlagIconCss.reactFlagIconCssStrings.`4x` = this.cast("4x")
+  def `4x`: typingsSlinky.reactFlagIconCss.reactFlagIconCssStrings.`4x` = "4x".asInstanceOf[typingsSlinky.reactFlagIconCss.reactFlagIconCssStrings.`4x`]
   @scala.inline
-  def `5x`: typingsSlinky.reactFlagIconCss.reactFlagIconCssStrings.`5x` = this.cast("5x")
+  def `5x`: typingsSlinky.reactFlagIconCss.reactFlagIconCssStrings.`5x` = "5x".asInstanceOf[typingsSlinky.reactFlagIconCss.reactFlagIconCssStrings.`5x`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def lg: typingsSlinky.reactFlagIconCss.reactFlagIconCssStrings.lg = this.cast("lg")
+  def lg: typingsSlinky.reactFlagIconCss.reactFlagIconCssStrings.lg = "lg".asInstanceOf[typingsSlinky.reactFlagIconCss.reactFlagIconCssStrings.lg]
 }
 

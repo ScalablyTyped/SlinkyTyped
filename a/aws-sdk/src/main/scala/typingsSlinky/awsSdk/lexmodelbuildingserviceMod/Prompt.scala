@@ -22,10 +22,41 @@ trait Prompt extends js.Object {
 
 object Prompt {
   @scala.inline
-  def apply(maxAttempts: PromptMaxAttempts, messages: MessageList, responseCard: ResponseCard = null): Prompt = {
+  def apply(maxAttempts: PromptMaxAttempts, messages: MessageList): Prompt = {
     val __obj = js.Dynamic.literal(maxAttempts = maxAttempts.asInstanceOf[js.Any], messages = messages.asInstanceOf[js.Any])
-    if (responseCard != null) __obj.updateDynamic("responseCard")(responseCard.asInstanceOf[js.Any])
     __obj.asInstanceOf[Prompt]
   }
+  @scala.inline
+  implicit class PromptOps[Self <: Prompt] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxAttempts(value: PromptMaxAttempts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAttempts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessages(value: MessageList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResponseCard(value: ResponseCard): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseCard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseCard")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

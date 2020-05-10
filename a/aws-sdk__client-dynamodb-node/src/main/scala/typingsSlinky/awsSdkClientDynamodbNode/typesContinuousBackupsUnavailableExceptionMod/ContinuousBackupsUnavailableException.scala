@@ -3,6 +3,7 @@ package typingsSlinky.awsSdkClientDynamodbNode.typesContinuousBackupsUnavailable
 import typingsSlinky.awsSdkClientDynamodbNode.createBackupExceptionsUnionMod.CreateBackupExceptionsUnion
 import typingsSlinky.awsSdkClientDynamodbNode.updateContinuousBackupsExceptionsUnionMod.UpdateContinuousBackupsExceptionsUnion
 import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,5 +15,34 @@ trait ContinuousBackupsUnavailableException
      with UpdateContinuousBackupsExceptionsUnion {
   @JSName("name")
   var name_ContinuousBackupsUnavailableException: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.ContinuousBackupsUnavailableException = js.native
+}
+
+object ContinuousBackupsUnavailableException {
+  @scala.inline
+  def apply(
+    $metadata: ResponseMetadata,
+    details: ContinuousBackupsUnavailableExceptionDetails,
+    message: String,
+    name: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.ContinuousBackupsUnavailableException
+  ): ContinuousBackupsUnavailableException = {
+    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ContinuousBackupsUnavailableException]
+  }
+  @scala.inline
+  implicit class ContinuousBackupsUnavailableExceptionOps[Self <: ContinuousBackupsUnavailableException] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(
+      value: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.ContinuousBackupsUnavailableException
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

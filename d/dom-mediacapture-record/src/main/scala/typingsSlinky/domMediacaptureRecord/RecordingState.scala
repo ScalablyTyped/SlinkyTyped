@@ -13,12 +13,10 @@ trait RecordingState extends js.Object
 
 object RecordingState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inactive: typingsSlinky.domMediacaptureRecord.domMediacaptureRecordStrings.inactive = "inactive".asInstanceOf[typingsSlinky.domMediacaptureRecord.domMediacaptureRecordStrings.inactive]
   @scala.inline
-  def inactive: typingsSlinky.domMediacaptureRecord.domMediacaptureRecordStrings.inactive = this.cast("inactive")
+  def paused: typingsSlinky.domMediacaptureRecord.domMediacaptureRecordStrings.paused = "paused".asInstanceOf[typingsSlinky.domMediacaptureRecord.domMediacaptureRecordStrings.paused]
   @scala.inline
-  def paused: typingsSlinky.domMediacaptureRecord.domMediacaptureRecordStrings.paused = this.cast("paused")
-  @scala.inline
-  def recording: typingsSlinky.domMediacaptureRecord.domMediacaptureRecordStrings.recording = this.cast("recording")
+  def recording: typingsSlinky.domMediacaptureRecord.domMediacaptureRecordStrings.recording = "recording".asInstanceOf[typingsSlinky.domMediacaptureRecord.domMediacaptureRecordStrings.recording]
 }
 

@@ -16,8 +16,21 @@ object S3Parameters {
   @scala.inline
   def apply(ManifestFileLocation: ManifestFileLocation): S3Parameters = {
     val __obj = js.Dynamic.literal(ManifestFileLocation = ManifestFileLocation.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[S3Parameters]
   }
+  @scala.inline
+  implicit class S3ParametersOps[Self <: S3Parameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withManifestFileLocation(value: ManifestFileLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestFileLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.a11yDialog.mod
 
-import typingsSlinky.std.Element
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.NodeList
 import typingsSlinky.std.Event_
-import typingsSlinky.std.NodeList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

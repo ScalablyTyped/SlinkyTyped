@@ -130,179 +130,180 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {[ P in keyof petit-dom.petit-dom.PetitDom.DomElements ]: petit-dom.petit-dom.PetitDom.Props<petit-dom.petit-dom.PetitDom.DomElements[P]> & {  content? :petit-dom.petit-dom.PetitDom.Content | std.ReadonlyArray<petit-dom.petit-dom.PetitDom.Content>}} */
+@js.native
 trait IntrinsicElements extends js.Object {
-  var a: PropsHTMLAnchorElementcon
-  var abbr: PropsHTMLElementcontentCo
-  var address: PropsHTMLElementcontentCo
-  var applet: PropsHTMLAppletElementcon
-  var area: PropsHTMLAreaElementconte
-  var article: PropsHTMLElementcontentCo
-  var aside: PropsHTMLElementcontentCo
-  var audio: PropsHTMLAudioElementcont
-  var b: PropsHTMLElementcontentCo
-  var base: PropsHTMLBaseElementconte
-  var basefont: PropsHTMLBaseFontElementc
-  var bdi: PropsHTMLElementcontentCo
-  var bdo: PropsHTMLElementcontentCo
-  var blockquote: PropsHTMLQuoteElementcont
-  var body: PropsHTMLBodyElementconte
-  var br: PropsHTMLBRElementcontent
-  var button: PropsHTMLButtonElementcon
-  var canvas: PropsHTMLCanvasElementcon
-  var caption: PropsHTMLTableCaptionElem
-  var circle: PropsSVGCircleElementcont
-  var cite: PropsHTMLElementcontentCo
-  var clipPath: PropsSVGClipPathElementco
-  var code: PropsHTMLElementcontentCo
-  var col: PropsHTMLTableColElementc
-  var colgroup: PropsHTMLTableColElementc
-  var data: PropsHTMLDataElementconte
-  var datalist: PropsHTMLDataListElementc
-  var dd: PropsHTMLElementcontentCo
-  var defs: PropsSVGDefsElementconten
-  var del: PropsHTMLModElementconten
-  var desc: PropsSVGDescElementconten
-  var details: PropsHTMLDetailsElementco
-  var dfn: PropsHTMLElementcontentCo
-  var dialog: PropsHTMLDialogElementcon
-  var dir: PropsHTMLDirectoryElement
-  var div: PropsHTMLDivElementconten
-  var dl: PropsHTMLDListElementcont
-  var dt: PropsHTMLElementcontentCo
-  var ellipse: PropsSVGEllipseElementcon
-  var em: PropsHTMLElementcontentCo
-  var embed: PropsHTMLEmbedElementcont
-  var feBlend: PropsSVGFEBlendElementcon
-  var feColorMatrix: PropsSVGFEColorMatrixElem
-  var feComponentTransfer: PropsSVGFEComponentTransf
-  var feComposite: PropsSVGFECompositeElemen
-  var feConvolveMatrix: PropsSVGFEConvolveMatrixE
-  var feDiffuseLighting: PropsSVGFEDiffuseLighting
-  var feDisplacementMap: PropsSVGFEDisplacementMap
-  var feDistantLight: PropsSVGFEDistantLightEle
-  var feFlood: PropsSVGFEFloodElementcon
-  var feFuncA: PropsSVGFEFuncAElementcon
-  var feFuncB: PropsSVGFEFuncBElementcon
-  var feFuncG: PropsSVGFEFuncGElementcon
-  var feFuncR: PropsSVGFEFuncRElementcon
-  var feGaussianBlur: PropsSVGFEGaussianBlurEle
-  var feImage: PropsSVGFEImageElementcon
-  var feMerge: PropsSVGFEMergeElementcon
-  var feMergeNode: PropsSVGFEMergeNodeElemen
-  var feMorphology: PropsSVGFEMorphologyEleme
-  var feOffset: PropsSVGFEOffsetElementco
-  var fePointLight: PropsSVGFEPointLightEleme
-  var feSpecularLighting: PropsSVGFESpecularLightin
-  var feSpotLight: PropsSVGFESpotLightElemen
-  var feTile: PropsSVGFETileElementcont
-  var feTurbulence: PropsSVGFETurbulenceEleme
-  var fieldset: PropsHTMLFieldSetElementc
-  var figcaption: PropsHTMLElementcontentCo
-  var figure: PropsHTMLElementcontentCo
-  var filter: PropsSVGFilterElementcont
-  var font: PropsHTMLFontElementconte
-  var footer: PropsHTMLElementcontentCo
-  var foreignObject: PropsSVGForeignObjectElem
-  var form: PropsHTMLFormElementconte
-  var frame: PropsHTMLFrameElementcont
-  var frameset: PropsHTMLFrameSetElementc
-  var g: PropsSVGGElementcontentCo
-  var h1: PropsHTMLHeadingElementco
-  var h2: PropsHTMLHeadingElementco
-  var h3: PropsHTMLHeadingElementco
-  var h4: PropsHTMLHeadingElementco
-  var h5: PropsHTMLHeadingElementco
-  var h6: PropsHTMLHeadingElementco
-  var head: PropsHTMLHeadElementconte
-  var header: PropsHTMLElementcontentCo
-  var hgroup: PropsHTMLElementcontentCo
-  var hr: PropsHTMLHRElementcontent
-  var html: PropsHTMLHtmlElementconte
-  var i: PropsHTMLElementcontentCo
-  var iframe: PropsHTMLIFrameElementcon
-  var image: PropsSVGImageElementconte
-  var img: PropsHTMLImageElementcont
-  var input: PropsHTMLInputElementcont
-  var ins: PropsHTMLModElementconten
-  var kbd: PropsHTMLElementcontentCo
-  var label: PropsHTMLLabelElementcont
-  var legend: PropsHTMLLegendElementcon
-  var li: PropsHTMLLIElementcontent
-  var line: PropsSVGLineElementconten
-  var linearGradient: PropsSVGLinearGradientEle
-  var link: PropsHTMLLinkElementconte
-  var main: PropsHTMLElementcontentCo
-  var map: PropsHTMLMapElementconten
-  var mark: PropsHTMLElementcontentCo
-  var marker: PropsSVGMarkerElementcont
-  var marquee: PropsHTMLMarqueeElementco
-  var mask: PropsSVGMaskElementconten
-  var menu: PropsHTMLMenuElementconte
-  var meta: PropsHTMLMetaElementconte
-  var metadata: PropsSVGMetadataElementco
-  var meter: PropsHTMLMeterElementcont
-  var nav: PropsHTMLElementcontentCo
-  var noscript: PropsHTMLElementcontentCo
-  var `object`: PropsHTMLObjectElementcon
-  var ol: PropsHTMLOListElementcont
-  var optgroup: PropsHTMLOptGroupElementc
-  var option: PropsHTMLOptionElementcon
-  var output: PropsHTMLOutputElementcon
-  var p: PropsHTMLParagraphElement
-  var param: PropsHTMLParamElementcont
-  var path: PropsSVGPathElementconten
-  var pattern: PropsSVGPatternElementcon
-  var picture: PropsHTMLPictureElementco
-  var polygon: PropsSVGPolygonElementcon
-  var polyline: PropsSVGPolylineElementco
-  var pre: PropsHTMLPreElementconten
-  var progress: PropsHTMLProgressElementc
-  var q: PropsHTMLQuoteElementcont
-  var radialGradient: PropsSVGRadialGradientEle
-  var rect: PropsSVGRectElementconten
-  var rp: PropsHTMLElementcontentCo
-  var rt: PropsHTMLElementcontentCo
-  var ruby: PropsHTMLElementcontentCo
-  var s: PropsHTMLElementcontentCo
-  var samp: PropsHTMLElementcontentCo
-  var script: PropsHTMLScriptElementcon
-  var section: PropsHTMLElementcontentCo
-  var select: PropsHTMLSelectElementcon
-  var slot: PropsHTMLSlotElementconte
-  var small: PropsHTMLElementcontentCo
-  var source: PropsHTMLSourceElementcon
-  var span: PropsHTMLSpanElementconte
-  var stop: PropsSVGStopElementconten
-  var strong: PropsHTMLElementcontentCo
-  var style: PropsHTMLStyleElementcont
-  var sub: PropsHTMLElementcontentCo
-  var summary: PropsHTMLElementcontentCo
-  var sup: PropsHTMLElementcontentCo
-  var svg: PropsSVGSVGElementcontent
-  var switch: PropsSVGSwitchElementcont
-  var symbol: PropsSVGSymbolElementcont
-  var table: PropsHTMLTableElementcont
-  var tbody: PropsHTMLTableSectionElem
-  var td: PropsHTMLTableDataCellEle
-  var template: PropsHTMLTemplateElementc
-  var text: PropsSVGTextElementconten
-  var textPath: PropsSVGTextPathElementco
-  var textarea: PropsHTMLTextAreaElementc
-  var tfoot: PropsHTMLTableSectionElem
-  var th: PropsHTMLTableHeaderCellE
-  var thead: PropsHTMLTableSectionElem
-  var time: PropsHTMLTimeElementconte
-  var title: PropsHTMLTitleElementcont
-  var tr: PropsHTMLTableRowElementc
-  var track: PropsHTMLTrackElementcont
-  var tspan: PropsSVGTSpanElementconte
-  var u: PropsHTMLElementcontentCo
-  var ul: PropsHTMLUListElementcont
-  var use: PropsSVGUseElementcontent
-  var `var`: PropsHTMLElementcontentCo
-  var video: PropsHTMLVideoElementcont
-  var view: PropsSVGViewElementconten
-  var wbr: PropsHTMLElementcontentCo
+  var a: PropsHTMLAnchorElementcon = js.native
+  var abbr: PropsHTMLElementcontentCo = js.native
+  var address: PropsHTMLElementcontentCo = js.native
+  var applet: PropsHTMLAppletElementcon = js.native
+  var area: PropsHTMLAreaElementconte = js.native
+  var article: PropsHTMLElementcontentCo = js.native
+  var aside: PropsHTMLElementcontentCo = js.native
+  var audio: PropsHTMLAudioElementcont = js.native
+  var b: PropsHTMLElementcontentCo = js.native
+  var base: PropsHTMLBaseElementconte = js.native
+  var basefont: PropsHTMLBaseFontElementc = js.native
+  var bdi: PropsHTMLElementcontentCo = js.native
+  var bdo: PropsHTMLElementcontentCo = js.native
+  var blockquote: PropsHTMLQuoteElementcont = js.native
+  var body: PropsHTMLBodyElementconte = js.native
+  var br: PropsHTMLBRElementcontent = js.native
+  var button: PropsHTMLButtonElementcon = js.native
+  var canvas: PropsHTMLCanvasElementcon = js.native
+  var caption: PropsHTMLTableCaptionElem = js.native
+  var circle: PropsSVGCircleElementcont = js.native
+  var cite: PropsHTMLElementcontentCo = js.native
+  var clipPath: PropsSVGClipPathElementco = js.native
+  var code: PropsHTMLElementcontentCo = js.native
+  var col: PropsHTMLTableColElementc = js.native
+  var colgroup: PropsHTMLTableColElementc = js.native
+  var data: PropsHTMLDataElementconte = js.native
+  var datalist: PropsHTMLDataListElementc = js.native
+  var dd: PropsHTMLElementcontentCo = js.native
+  var defs: PropsSVGDefsElementconten = js.native
+  var del: PropsHTMLModElementconten = js.native
+  var desc: PropsSVGDescElementconten = js.native
+  var details: PropsHTMLDetailsElementco = js.native
+  var dfn: PropsHTMLElementcontentCo = js.native
+  var dialog: PropsHTMLDialogElementcon = js.native
+  var dir: PropsHTMLDirectoryElement = js.native
+  var div: PropsHTMLDivElementconten = js.native
+  var dl: PropsHTMLDListElementcont = js.native
+  var dt: PropsHTMLElementcontentCo = js.native
+  var ellipse: PropsSVGEllipseElementcon = js.native
+  var em: PropsHTMLElementcontentCo = js.native
+  var embed: PropsHTMLEmbedElementcont = js.native
+  var feBlend: PropsSVGFEBlendElementcon = js.native
+  var feColorMatrix: PropsSVGFEColorMatrixElem = js.native
+  var feComponentTransfer: PropsSVGFEComponentTransf = js.native
+  var feComposite: PropsSVGFECompositeElemen = js.native
+  var feConvolveMatrix: PropsSVGFEConvolveMatrixE = js.native
+  var feDiffuseLighting: PropsSVGFEDiffuseLighting = js.native
+  var feDisplacementMap: PropsSVGFEDisplacementMap = js.native
+  var feDistantLight: PropsSVGFEDistantLightEle = js.native
+  var feFlood: PropsSVGFEFloodElementcon = js.native
+  var feFuncA: PropsSVGFEFuncAElementcon = js.native
+  var feFuncB: PropsSVGFEFuncBElementcon = js.native
+  var feFuncG: PropsSVGFEFuncGElementcon = js.native
+  var feFuncR: PropsSVGFEFuncRElementcon = js.native
+  var feGaussianBlur: PropsSVGFEGaussianBlurEle = js.native
+  var feImage: PropsSVGFEImageElementcon = js.native
+  var feMerge: PropsSVGFEMergeElementcon = js.native
+  var feMergeNode: PropsSVGFEMergeNodeElemen = js.native
+  var feMorphology: PropsSVGFEMorphologyEleme = js.native
+  var feOffset: PropsSVGFEOffsetElementco = js.native
+  var fePointLight: PropsSVGFEPointLightEleme = js.native
+  var feSpecularLighting: PropsSVGFESpecularLightin = js.native
+  var feSpotLight: PropsSVGFESpotLightElemen = js.native
+  var feTile: PropsSVGFETileElementcont = js.native
+  var feTurbulence: PropsSVGFETurbulenceEleme = js.native
+  var fieldset: PropsHTMLFieldSetElementc = js.native
+  var figcaption: PropsHTMLElementcontentCo = js.native
+  var figure: PropsHTMLElementcontentCo = js.native
+  var filter: PropsSVGFilterElementcont = js.native
+  var font: PropsHTMLFontElementconte = js.native
+  var footer: PropsHTMLElementcontentCo = js.native
+  var foreignObject: PropsSVGForeignObjectElem = js.native
+  var form: PropsHTMLFormElementconte = js.native
+  var frame: PropsHTMLFrameElementcont = js.native
+  var frameset: PropsHTMLFrameSetElementc = js.native
+  var g: PropsSVGGElementcontentCo = js.native
+  var h1: PropsHTMLHeadingElementco = js.native
+  var h2: PropsHTMLHeadingElementco = js.native
+  var h3: PropsHTMLHeadingElementco = js.native
+  var h4: PropsHTMLHeadingElementco = js.native
+  var h5: PropsHTMLHeadingElementco = js.native
+  var h6: PropsHTMLHeadingElementco = js.native
+  var head: PropsHTMLHeadElementconte = js.native
+  var header: PropsHTMLElementcontentCo = js.native
+  var hgroup: PropsHTMLElementcontentCo = js.native
+  var hr: PropsHTMLHRElementcontent = js.native
+  var html: PropsHTMLHtmlElementconte = js.native
+  var i: PropsHTMLElementcontentCo = js.native
+  var iframe: PropsHTMLIFrameElementcon = js.native
+  var image: PropsSVGImageElementconte = js.native
+  var img: PropsHTMLImageElementcont = js.native
+  var input: PropsHTMLInputElementcont = js.native
+  var ins: PropsHTMLModElementconten = js.native
+  var kbd: PropsHTMLElementcontentCo = js.native
+  var label: PropsHTMLLabelElementcont = js.native
+  var legend: PropsHTMLLegendElementcon = js.native
+  var li: PropsHTMLLIElementcontent = js.native
+  var line: PropsSVGLineElementconten = js.native
+  var linearGradient: PropsSVGLinearGradientEle = js.native
+  var link: PropsHTMLLinkElementconte = js.native
+  var main: PropsHTMLElementcontentCo = js.native
+  var map: PropsHTMLMapElementconten = js.native
+  var mark: PropsHTMLElementcontentCo = js.native
+  var marker: PropsSVGMarkerElementcont = js.native
+  var marquee: PropsHTMLMarqueeElementco = js.native
+  var mask: PropsSVGMaskElementconten = js.native
+  var menu: PropsHTMLMenuElementconte = js.native
+  var meta: PropsHTMLMetaElementconte = js.native
+  var metadata: PropsSVGMetadataElementco = js.native
+  var meter: PropsHTMLMeterElementcont = js.native
+  var nav: PropsHTMLElementcontentCo = js.native
+  var noscript: PropsHTMLElementcontentCo = js.native
+  var `object`: PropsHTMLObjectElementcon = js.native
+  var ol: PropsHTMLOListElementcont = js.native
+  var optgroup: PropsHTMLOptGroupElementc = js.native
+  var option: PropsHTMLOptionElementcon = js.native
+  var output: PropsHTMLOutputElementcon = js.native
+  var p: PropsHTMLParagraphElement = js.native
+  var param: PropsHTMLParamElementcont = js.native
+  var path: PropsSVGPathElementconten = js.native
+  var pattern: PropsSVGPatternElementcon = js.native
+  var picture: PropsHTMLPictureElementco = js.native
+  var polygon: PropsSVGPolygonElementcon = js.native
+  var polyline: PropsSVGPolylineElementco = js.native
+  var pre: PropsHTMLPreElementconten = js.native
+  var progress: PropsHTMLProgressElementc = js.native
+  var q: PropsHTMLQuoteElementcont = js.native
+  var radialGradient: PropsSVGRadialGradientEle = js.native
+  var rect: PropsSVGRectElementconten = js.native
+  var rp: PropsHTMLElementcontentCo = js.native
+  var rt: PropsHTMLElementcontentCo = js.native
+  var ruby: PropsHTMLElementcontentCo = js.native
+  var s: PropsHTMLElementcontentCo = js.native
+  var samp: PropsHTMLElementcontentCo = js.native
+  var script: PropsHTMLScriptElementcon = js.native
+  var section: PropsHTMLElementcontentCo = js.native
+  var select: PropsHTMLSelectElementcon = js.native
+  var slot: PropsHTMLSlotElementconte = js.native
+  var small: PropsHTMLElementcontentCo = js.native
+  var source: PropsHTMLSourceElementcon = js.native
+  var span: PropsHTMLSpanElementconte = js.native
+  var stop: PropsSVGStopElementconten = js.native
+  var strong: PropsHTMLElementcontentCo = js.native
+  var style: PropsHTMLStyleElementcont = js.native
+  var sub: PropsHTMLElementcontentCo = js.native
+  var summary: PropsHTMLElementcontentCo = js.native
+  var sup: PropsHTMLElementcontentCo = js.native
+  var svg: PropsSVGSVGElementcontent = js.native
+  var switch: PropsSVGSwitchElementcont = js.native
+  var symbol: PropsSVGSymbolElementcont = js.native
+  var table: PropsHTMLTableElementcont = js.native
+  var tbody: PropsHTMLTableSectionElem = js.native
+  var td: PropsHTMLTableDataCellEle = js.native
+  var template: PropsHTMLTemplateElementc = js.native
+  var text: PropsSVGTextElementconten = js.native
+  var textPath: PropsSVGTextPathElementco = js.native
+  var textarea: PropsHTMLTextAreaElementc = js.native
+  var tfoot: PropsHTMLTableSectionElem = js.native
+  var th: PropsHTMLTableHeaderCellE = js.native
+  var thead: PropsHTMLTableSectionElem = js.native
+  var time: PropsHTMLTimeElementconte = js.native
+  var title: PropsHTMLTitleElementcont = js.native
+  var tr: PropsHTMLTableRowElementc = js.native
+  var track: PropsHTMLTrackElementcont = js.native
+  var tspan: PropsSVGTSpanElementconte = js.native
+  var u: PropsHTMLElementcontentCo = js.native
+  var ul: PropsHTMLUListElementcont = js.native
+  var use: PropsSVGUseElementcontent = js.native
+  var `var`: PropsHTMLElementcontentCo = js.native
+  var video: PropsHTMLVideoElementcont = js.native
+  var view: PropsSVGViewElementconten = js.native
+  var wbr: PropsHTMLElementcontentCo = js.native
 }
 
 object IntrinsicElements {
@@ -486,5 +487,1045 @@ object IntrinsicElements {
     __obj.updateDynamic("var")(`var`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntrinsicElements]
   }
+  @scala.inline
+  implicit class IntrinsicElementsOps[Self <: IntrinsicElements] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withA(value: PropsHTMLAnchorElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAbbr(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abbr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddress(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withApplet(value: PropsHTMLAppletElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArea(value: PropsHTMLAreaElementconte): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArticle(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("article")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAside(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aside")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAudio(value: PropsHTMLAudioElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withB(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBase(value: PropsHTMLBaseElementconte): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBasefont(value: PropsHTMLBaseFontElementc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basefont")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBdi(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bdi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBdo(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bdo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlockquote(value: PropsHTMLQuoteElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockquote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBody(value: PropsHTMLBodyElementconte): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBr(value: PropsHTMLBRElementcontent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("br")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withButton(value: PropsHTMLButtonElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCanvas(value: PropsHTMLCanvasElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCaption(value: PropsHTMLTableCaptionElem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCircle(value: PropsSVGCircleElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("circle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCite(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClipPath(value: PropsSVGClipPathElementco): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCode(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCol(value: PropsHTMLTableColElementc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("col")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColgroup(value: PropsHTMLTableColElementc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colgroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: PropsHTMLDataElementconte): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDatalist(value: PropsHTMLDataListElementc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datalist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDd(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefs(value: PropsSVGDefsElementconten): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDel(value: PropsHTMLModElementconten): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("del")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDesc(value: PropsSVGDescElementconten): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDetails(value: PropsHTMLDetailsElementco): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDfn(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dfn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDialog(value: PropsHTMLDialogElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDir(value: PropsHTMLDirectoryElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDiv(value: PropsHTMLDivElementconten): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("div")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDl(value: PropsHTMLDListElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDt(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEllipse(value: PropsSVGEllipseElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEm(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("em")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmbed(value: PropsHTMLEmbedElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeBlend(value: PropsSVGFEBlendElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feBlend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeColorMatrix(value: PropsSVGFEColorMatrixElem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feColorMatrix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeComponentTransfer(value: PropsSVGFEComponentTransf): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feComponentTransfer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeComposite(value: PropsSVGFECompositeElemen): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feComposite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeConvolveMatrix(value: PropsSVGFEConvolveMatrixE): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feConvolveMatrix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeDiffuseLighting(value: PropsSVGFEDiffuseLighting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feDiffuseLighting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeDisplacementMap(value: PropsSVGFEDisplacementMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feDisplacementMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeDistantLight(value: PropsSVGFEDistantLightEle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feDistantLight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeFlood(value: PropsSVGFEFloodElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feFlood")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeFuncA(value: PropsSVGFEFuncAElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feFuncA")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeFuncB(value: PropsSVGFEFuncBElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feFuncB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeFuncG(value: PropsSVGFEFuncGElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feFuncG")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeFuncR(value: PropsSVGFEFuncRElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feFuncR")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeGaussianBlur(value: PropsSVGFEGaussianBlurEle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feGaussianBlur")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeImage(value: PropsSVGFEImageElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeMerge(value: PropsSVGFEMergeElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feMerge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeMergeNode(value: PropsSVGFEMergeNodeElemen): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feMergeNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeMorphology(value: PropsSVGFEMorphologyEleme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feMorphology")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeOffset(value: PropsSVGFEOffsetElementco): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFePointLight(value: PropsSVGFEPointLightEleme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fePointLight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeSpecularLighting(value: PropsSVGFESpecularLightin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feSpecularLighting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeSpotLight(value: PropsSVGFESpotLightElemen): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feSpotLight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeTile(value: PropsSVGFETileElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feTile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeTurbulence(value: PropsSVGFETurbulenceEleme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feTurbulence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFieldset(value: PropsHTMLFieldSetElementc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFigcaption(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("figcaption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFigure(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("figure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFilter(value: PropsSVGFilterElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFont(value: PropsHTMLFontElementconte): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFooter(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForeignObject(value: PropsSVGForeignObjectElem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForm(value: PropsHTMLFormElementconte): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFrame(value: PropsHTMLFrameElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFrameset(value: PropsHTMLFrameSetElementc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withG(value: PropsSVGGElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("g")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH1(value: PropsHTMLHeadingElementco): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH2(value: PropsHTMLHeadingElementco): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH3(value: PropsHTMLHeadingElementco): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH4(value: PropsHTMLHeadingElementco): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH5(value: PropsHTMLHeadingElementco): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH6(value: PropsHTMLHeadingElementco): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHead(value: PropsHTMLHeadElementconte): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeader(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHgroup(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hgroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHr(value: PropsHTMLHRElementcontent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtml(value: PropsHTMLHtmlElementconte): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withI(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("i")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIframe(value: PropsHTMLIFrameElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iframe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImage(value: PropsSVGImageElementconte): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImg(value: PropsHTMLImageElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("img")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInput(value: PropsHTMLInputElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIns(value: PropsHTMLModElementconten): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKbd(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kbd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabel(value: PropsHTMLLabelElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLegend(value: PropsHTMLLegendElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLi(value: PropsHTMLLIElementcontent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("li")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLine(value: PropsSVGLineElementconten): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinearGradient(value: PropsSVGLinearGradientEle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearGradient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLink(value: PropsHTMLLinkElementconte): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMain(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMap(value: PropsHTMLMapElementconten): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMark(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mark")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMarker(value: PropsSVGMarkerElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMarquee(value: PropsHTMLMarqueeElementco): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marquee")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMask(value: PropsSVGMaskElementconten): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMenu(value: PropsHTMLMenuElementconte): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMeta(value: PropsHTMLMetaElementconte): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: PropsSVGMetadataElementco): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMeter(value: PropsHTMLMeterElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNav(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nav")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNoscript(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noscript")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObject(value: PropsHTMLObjectElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOl(value: PropsHTMLOListElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptgroup(value: PropsHTMLOptGroupElementc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optgroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOption(value: PropsHTMLOptionElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("option")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutput(value: PropsHTMLOutputElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withP(value: PropsHTMLParagraphElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParam(value: PropsHTMLParamElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("param")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPath(value: PropsSVGPathElementconten): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPattern(value: PropsSVGPatternElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPicture(value: PropsHTMLPictureElementco): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("picture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPolygon(value: PropsSVGPolygonElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polygon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPolyline(value: PropsSVGPolylineElementco): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polyline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPre(value: PropsHTMLPreElementconten): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pre")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProgress(value: PropsHTMLProgressElementc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQ(value: PropsHTMLQuoteElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRadialGradient(value: PropsSVGRadialGradientEle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radialGradient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRect(value: PropsSVGRectElementconten): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRp(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRt(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRuby(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ruby")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSamp(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("samp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScript(value: PropsHTMLScriptElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("script")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSection(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("section")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelect(value: PropsHTMLSelectElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSlot(value: PropsHTMLSlotElementconte): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSmall(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSource(value: PropsHTMLSourceElementcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpan(value: PropsHTMLSpanElementconte): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("span")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStop(value: PropsSVGStopElementconten): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStrong(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strong")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStyle(value: PropsHTMLStyleElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSub(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sub")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSummary(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSup(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSvg(value: PropsSVGSVGElementcontent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSwitch(value: PropsSVGSwitchElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("switch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSymbol(value: PropsSVGSymbolElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTable(value: PropsHTMLTableElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTbody(value: PropsHTMLTableSectionElem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tbody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTd(value: PropsHTMLTableDataCellEle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("td")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemplate(value: PropsHTMLTemplateElementc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withText(value: PropsSVGTextElementconten): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextPath(value: PropsSVGTextPathElementco): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextarea(value: PropsHTMLTextAreaElementc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textarea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTfoot(value: PropsHTMLTableSectionElem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tfoot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTh(value: PropsHTMLTableHeaderCellE): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("th")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThead(value: PropsHTMLTableSectionElem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTime(value: PropsHTMLTimeElementconte): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: PropsHTMLTitleElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTr(value: PropsHTMLTableRowElementc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrack(value: PropsHTMLTrackElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTspan(value: PropsSVGTSpanElementconte): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tspan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withU(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("u")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUl(value: PropsHTMLUListElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ul")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUse(value: PropsSVGUseElementcontent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("use")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVar(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("var")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVideo(value: PropsHTMLVideoElementcont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withView(value: PropsSVGViewElementconten): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWbr(value: PropsHTMLElementcontentCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wbr")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

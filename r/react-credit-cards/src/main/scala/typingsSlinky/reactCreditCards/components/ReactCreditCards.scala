@@ -1,9 +1,7 @@
 package typingsSlinky.reactCreditCards.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactCreditCards.AnonName
 import typingsSlinky.reactCreditCards.AnonValid
 import typingsSlinky.reactCreditCards.mod.CallbackArgument
@@ -14,38 +12,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactCreditCards
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactCreditCards {
   @JSImport("react-credit-cards", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    cvc: String | Double,
-    expiry: String | Double,
-    name: String,
-    number: String | Double,
-    acceptedCards: js.Array[String] = null,
-    callback: (/* type */ CallbackArgument, /* isValid */ Boolean) => Unit = null,
-    focused: Focused = null,
-    issuer: String = null,
-    locale: AnonValid = null,
-    placeholders: AnonName = null,
-    preview: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(cvc = cvc.asInstanceOf[js.Any], expiry = expiry.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any])
-    if (acceptedCards != null) __obj.updateDynamic("acceptedCards")(acceptedCards.asInstanceOf[js.Any])
-    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction2(callback))
-    if (focused != null) __obj.updateDynamic("focused")(focused.asInstanceOf[js.Any])
-    if (issuer != null) __obj.updateDynamic("issuer")(issuer.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (placeholders != null) __obj.updateDynamic("placeholders")(placeholders.asInstanceOf[js.Any])
-    if (!js.isUndefined(preview)) __obj.updateDynamic("preview")(preview.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def acceptedCards(value: js.Array[String]): this.type = set("acceptedCards", value.asInstanceOf[js.Any])
+    @scala.inline
+    def callback(value: (/* type */ CallbackArgument, /* isValid */ Boolean) => Unit): this.type = set("callback", js.Any.fromFunction2(value))
+    @scala.inline
+    def focused(value: Focused): this.type = set("focused", value.asInstanceOf[js.Any])
+    @scala.inline
+    def issuer(value: String): this.type = set("issuer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def locale(value: AnonValid): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholders(value: AnonName): this.type = set("placeholders", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preview(value: Boolean): this.type = set("preview", value.asInstanceOf[js.Any])
   }
-  type Props = ReactCreditCardProps
+  
+  def withProps(p: ReactCreditCardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(cvc: String | Double, expiry: String | Double, name: String, number: String | Double): Builder = {
+    val __props = js.Dynamic.literal(cvc = cvc.asInstanceOf[js.Any], expiry = expiry.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactCreditCardProps]))
+  }
 }
 

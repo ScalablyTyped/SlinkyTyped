@@ -17,11 +17,11 @@ trait LaunchTemplatePlacementRequest extends js.Object {
   /**
     * The name of the placement group for the instance.
     */
-  var GroupName: js.UndefOr[String] = js.native
+  var GroupName: js.UndefOr[PlacementGroupName] = js.native
   /**
     * The ID of the Dedicated Host for the instance.
     */
-  var HostId: js.UndefOr[String] = js.native
+  var HostId: js.UndefOr[DedicatedHostId] = js.native
   /**
     * The ARN of the host resource group in which to launch the instances. If you specify a host resource group ARN, omit the Tenancy parameter or set it to host.
     */
@@ -42,26 +42,113 @@ trait LaunchTemplatePlacementRequest extends js.Object {
 
 object LaunchTemplatePlacementRequest {
   @scala.inline
-  def apply(
-    Affinity: String = null,
-    AvailabilityZone: String = null,
-    GroupName: String = null,
-    HostId: String = null,
-    HostResourceGroupArn: String = null,
-    PartitionNumber: Int | scala.Double = null,
-    SpreadDomain: String = null,
-    Tenancy: Tenancy = null
-  ): LaunchTemplatePlacementRequest = {
+  def apply(): LaunchTemplatePlacementRequest = {
     val __obj = js.Dynamic.literal()
-    if (Affinity != null) __obj.updateDynamic("Affinity")(Affinity.asInstanceOf[js.Any])
-    if (AvailabilityZone != null) __obj.updateDynamic("AvailabilityZone")(AvailabilityZone.asInstanceOf[js.Any])
-    if (GroupName != null) __obj.updateDynamic("GroupName")(GroupName.asInstanceOf[js.Any])
-    if (HostId != null) __obj.updateDynamic("HostId")(HostId.asInstanceOf[js.Any])
-    if (HostResourceGroupArn != null) __obj.updateDynamic("HostResourceGroupArn")(HostResourceGroupArn.asInstanceOf[js.Any])
-    if (PartitionNumber != null) __obj.updateDynamic("PartitionNumber")(PartitionNumber.asInstanceOf[js.Any])
-    if (SpreadDomain != null) __obj.updateDynamic("SpreadDomain")(SpreadDomain.asInstanceOf[js.Any])
-    if (Tenancy != null) __obj.updateDynamic("Tenancy")(Tenancy.asInstanceOf[js.Any])
     __obj.asInstanceOf[LaunchTemplatePlacementRequest]
   }
+  @scala.inline
+  implicit class LaunchTemplatePlacementRequestOps[Self <: LaunchTemplatePlacementRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAffinity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Affinity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAffinity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Affinity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailabilityZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupName(value: PlacementGroupName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostId(value: DedicatedHostId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostResourceGroupArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostResourceGroupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostResourceGroupArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostResourceGroupArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartitionNumber(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartitionNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpreadDomain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpreadDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpreadDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpreadDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTenancy(value: Tenancy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tenancy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTenancy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tenancy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

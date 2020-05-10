@@ -34,18 +34,65 @@ trait SchemaMapTask extends js.Object {
 
 object SchemaMapTask {
   @scala.inline
-  def apply(
-    counterPrefix: String = null,
-    instructions: js.Array[SchemaParallelInstruction] = null,
-    stageName: String = null,
-    systemName: String = null
-  ): SchemaMapTask = {
+  def apply(): SchemaMapTask = {
     val __obj = js.Dynamic.literal()
-    if (counterPrefix != null) __obj.updateDynamic("counterPrefix")(counterPrefix.asInstanceOf[js.Any])
-    if (instructions != null) __obj.updateDynamic("instructions")(instructions.asInstanceOf[js.Any])
-    if (stageName != null) __obj.updateDynamic("stageName")(stageName.asInstanceOf[js.Any])
-    if (systemName != null) __obj.updateDynamic("systemName")(systemName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMapTask]
   }
+  @scala.inline
+  implicit class SchemaMapTaskOps[Self <: SchemaMapTask] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCounterPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("counterPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCounterPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("counterPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstructions(value: js.Array[SchemaParallelInstruction]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instructions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstructions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instructions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStageName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStageName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSystemName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("systemName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSystemName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("systemName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,0 +1,9 @@
+package typingsSlinky.awsSdkClientS3Browser.typesObjectAlreadyInActiveTierErrorMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ObjectAlreadyInActiveTierErrorDetails extends js.Object
+

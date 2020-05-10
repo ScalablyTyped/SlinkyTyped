@@ -5,7 +5,6 @@ import typingsSlinky.simpleCwNode.simpleCwNodeStrings.me
 import typingsSlinky.simpleCwNode.simpleCwNodeStrings.mySlashstatus
 import typingsSlinky.simpleCwNode.simpleCwNodeStrings.mySlashtasks
 import typingsSlinky.simpleCwNode.simpleCwNodeStrings.rooms
-import typingsSlinky.std.Error
 import typingsSlinky.superagent.mod.Response
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -43,15 +42,15 @@ trait ChatWork extends js.Object {
     callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]
   ): Unit = js.native
    // return same type as _.Deferred()
-  def api(method: String, api: String, callback: js.Function2[/* err */ Error, /* res */ Response, Unit]): Unit = js.native
+  def api(method: String, api: String, callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]): Unit = js.native
   def del(api: String): js.Any = js.native
   def del(api: String, args: js.Any, callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]): Unit = js.native
    // return same type as _.Deferred()
-  def del(api: String, callback: js.Function2[/* err */ Error, /* res */ Response, Unit]): Unit = js.native
+  def del(api: String, callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]): Unit = js.native
   def get(api: String): js.Any = js.native
   def get(api: String, args: js.Any, callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]): Unit = js.native
    // return same type as _.Deferred()
-  def get(api: String, callback: js.Function2[/* err */ Error, /* res */ Response, Unit]): Unit = js.native
+  def get(api: String, callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]): Unit = js.native
   // http://developer.chatwork.com/ja/endpoint_contacts.html
   @JSName("get")
   def get_contacts(api: contacts, callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]): Unit = js.native
@@ -71,12 +70,12 @@ trait ChatWork extends js.Object {
   def post(api: String): js.Any = js.native
   def post(api: String, args: js.Any, callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]): Unit = js.native
    // return same type as _.Deferred()
-  def post(api: String, callback: js.Function2[/* err */ Error, /* res */ Response, Unit]): Unit = js.native
+  def post(api: String, callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]): Unit = js.native
   @JSName("post")
   def post_rooms(api: rooms, args: js.Any, callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]): Unit = js.native
   def put(api: String): js.Any = js.native
   def put(api: String, args: js.Any, callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]): Unit = js.native
    // return same type as _.Deferred()
-  def put(api: String, callback: js.Function2[/* err */ Error, /* res */ Response, Unit]): Unit = js.native
+  def put(api: String, callback: js.Function2[/* err */ js.Error, /* res */ Response, Unit]): Unit = js.native
 }
 

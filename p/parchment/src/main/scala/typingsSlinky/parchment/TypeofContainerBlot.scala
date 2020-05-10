@@ -1,8 +1,8 @@
 package typingsSlinky.parchment
 
 import org.scalablytyped.runtime.Instantiable1
+import org.scalajs.dom.raw.Node
 import typingsSlinky.parchment.containerMod.default
-import typingsSlinky.std.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

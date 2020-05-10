@@ -2,6 +2,7 @@ package typingsSlinky.uirouterAngularjs.interfaceMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.uirouterCore.commonCommonMod.IInjectable
+import typingsSlinky.uirouterCore.transitionInterfaceMod.HookResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -243,5 +244,87 @@ trait Ng1StateDeclaration
     */
   @JSName("views")
   var views_Ng1StateDeclaration: js.UndefOr[StringDictionary[String | Ng1ViewDeclaration]] = js.native
+}
+
+object Ng1StateDeclaration {
+  @scala.inline
+  def apply(): Ng1StateDeclaration = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[Ng1StateDeclaration]
+  }
+  @scala.inline
+  implicit class Ng1StateDeclarationOps[Self <: Ng1StateDeclaration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnEnterFunction1(value: /* repeated */ js.Any => HookResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnEnter(value: Ng1StateTransitionHook | IInjectable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnEnter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnExitFunction1(value: /* repeated */ js.Any => HookResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExit")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnExit(value: Ng1StateTransitionHook | IInjectable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnExit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRetainFunction1(value: /* repeated */ js.Any => HookResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRetain")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnRetain(value: Ng1StateTransitionHook | IInjectable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRetain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnRetain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRetain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViews(value: StringDictionary[String | Ng1ViewDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViews: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

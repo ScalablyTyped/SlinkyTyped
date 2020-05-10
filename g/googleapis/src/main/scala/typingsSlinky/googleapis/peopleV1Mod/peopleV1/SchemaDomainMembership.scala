@@ -17,10 +17,29 @@ trait SchemaDomainMembership extends js.Object {
 
 object SchemaDomainMembership {
   @scala.inline
-  def apply(inViewerDomain: js.UndefOr[Boolean] = js.undefined): SchemaDomainMembership = {
+  def apply(): SchemaDomainMembership = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(inViewerDomain)) __obj.updateDynamic("inViewerDomain")(inViewerDomain.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDomainMembership]
   }
+  @scala.inline
+  implicit class SchemaDomainMembershipOps[Self <: SchemaDomainMembership] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInViewerDomain(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inViewerDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInViewerDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inViewerDomain")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

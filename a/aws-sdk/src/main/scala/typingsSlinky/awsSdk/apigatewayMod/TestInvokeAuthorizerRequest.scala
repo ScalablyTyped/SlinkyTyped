@@ -42,24 +42,101 @@ trait TestInvokeAuthorizerRequest extends js.Object {
 
 object TestInvokeAuthorizerRequest {
   @scala.inline
-  def apply(
-    authorizerId: String,
-    restApiId: String,
-    additionalContext: MapOfStringToString = null,
-    body: String = null,
-    headers: MapOfStringToString = null,
-    multiValueHeaders: MapOfStringToList = null,
-    pathWithQueryString: String = null,
-    stageVariables: MapOfStringToString = null
-  ): TestInvokeAuthorizerRequest = {
+  def apply(authorizerId: String, restApiId: String): TestInvokeAuthorizerRequest = {
     val __obj = js.Dynamic.literal(authorizerId = authorizerId.asInstanceOf[js.Any], restApiId = restApiId.asInstanceOf[js.Any])
-    if (additionalContext != null) __obj.updateDynamic("additionalContext")(additionalContext.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (multiValueHeaders != null) __obj.updateDynamic("multiValueHeaders")(multiValueHeaders.asInstanceOf[js.Any])
-    if (pathWithQueryString != null) __obj.updateDynamic("pathWithQueryString")(pathWithQueryString.asInstanceOf[js.Any])
-    if (stageVariables != null) __obj.updateDynamic("stageVariables")(stageVariables.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestInvokeAuthorizerRequest]
   }
+  @scala.inline
+  implicit class TestInvokeAuthorizerRequestOps[Self <: TestInvokeAuthorizerRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthorizerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRestApiId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restApiId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdditionalContext(value: MapOfStringToString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBody(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: MapOfStringToString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiValueHeaders(value: MapOfStringToList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiValueHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiValueHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiValueHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPathWithQueryString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathWithQueryString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPathWithQueryString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathWithQueryString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStageVariables(value: MapOfStringToString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stageVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStageVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stageVariables")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -556,7 +556,7 @@ trait appFrameworkCollection extends js.Object {
   def remove(): appFrameworkCollection = js.native
   def remove(elements: js.Array[_]): appFrameworkCollection = js.native
   def remove(elements: appFrameworkCollection): appFrameworkCollection = js.native
-  def remove(element: typingsSlinky.std.HTMLElement): appFrameworkCollection = js.native
+  def remove(element: HTMLElement): appFrameworkCollection = js.native
   def remove(selector: String): appFrameworkCollection = js.native
   /**
     * Removes an attribute on the elements

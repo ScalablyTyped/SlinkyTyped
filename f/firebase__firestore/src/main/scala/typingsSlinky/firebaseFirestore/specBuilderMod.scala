@@ -72,13 +72,13 @@ object specBuilderMod extends js.Object {
       */
     def ackLimbo(version: TestSnapshotVersion, doc: Document): this.type = js.native
     def ackLimbo(version: TestSnapshotVersion, doc: NoDocument): this.type = js.native
-    /* private */ def activeTargets(): js.Any = js.native
+    /* private */ def activeTargets: js.Any = js.native
     def becomeHidden(): this.type = js.native
     def becomeVisible(): this.type = js.native
     def changeUser(): this.type = js.native
     def changeUser(uid: String): this.type = js.native
     def clearPersistence(): this.type = js.native
-    /* protected */ def clientState(): ClientMemoryState = js.native
+    /* protected */ def clientState: ClientMemoryState = js.native
     def disableNetwork(): this.type = js.native
     def enableNetwork(): this.type = js.native
     /** Overrides the currently expected set of active targets. */
@@ -118,10 +118,10 @@ object specBuilderMod extends js.Object {
       */
     def failWrite(doc: String, error: RpcError): this.type = js.native
     def failWrite(doc: String, error: RpcError, options: AnonExpectUserCallback): this.type = js.native
-    /* private */ def limboIdGenerator(): js.Any = js.native
-    /* private */ def limboMapping(): js.Any = js.native
+    /* private */ def limboIdGenerator: js.Any = js.native
+    /* private */ def limboMapping: js.Any = js.native
     /* protected */ def nextStep(): Unit = js.native
-    /* private */ def queryMapping(): js.Any = js.native
+    /* private */ def queryMapping: js.Any = js.native
     def restart(): this.type = js.native
     /**
       * Registers a previously active target with the test expectations after a

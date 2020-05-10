@@ -4,20 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ISettingsStyle extends js.Object {
   /** A hex color value that all land is first flushed to before things are drawn on it. */
-  var landColor: js.UndefOr[String] = js.undefined
+  var landColor: js.UndefOr[String] = js.native
   /** Specifies whether or not to draw elevation shading on the map. */
-  var shadedReliefVisible: js.UndefOr[Boolean] = js.undefined
+  var shadedReliefVisible: js.UndefOr[Boolean] = js.native
 }
 
 object ISettingsStyle {
   @scala.inline
-  def apply(landColor: String = null, shadedReliefVisible: js.UndefOr[Boolean] = js.undefined): ISettingsStyle = {
+  def apply(): ISettingsStyle = {
     val __obj = js.Dynamic.literal()
-    if (landColor != null) __obj.updateDynamic("landColor")(landColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(shadedReliefVisible)) __obj.updateDynamic("shadedReliefVisible")(shadedReliefVisible.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISettingsStyle]
   }
+  @scala.inline
+  implicit class ISettingsStyleOps[Self <: ISettingsStyle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLandColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("landColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLandColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("landColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadedReliefVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadedReliefVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadedReliefVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadedReliefVisible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -9,34 +9,35 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Base interface for all service request interfaces. */
+@js.native
 trait IPlayReadyServiceRequest extends IMediaProtectionServiceRequest {
   /** Gets or sets the custom data of the request challenge. */
-  var challengeCustomData: String
+  var challengeCustomData: String = js.native
   /** Gets the custom data that was returned in the response from the service. */
-  var responseCustomData: String
+  var responseCustomData: String = js.native
   /** Gets or sets the URI used to perform a service request action. */
-  var uri: Uri
+  var uri: Uri = js.native
   /**
     * Begins an asynchronous service request operation.
     * @return The asynchronous service action.
     */
-  def beginServiceRequest(): IAsyncAction
+  def beginServiceRequest(): IAsyncAction = js.native
   /**
     * Begins the process of manually enabling.
     * @return Begins the process of manually enabling.
     */
-  def generateManualEnablingChallenge(): PlayReadySoapMessage
+  def generateManualEnablingChallenge(): PlayReadySoapMessage = js.native
   /**
     * Returns a new service request interface.
     * @return The new service request interface.
     */
-  def nextServiceRequest(): IPlayReadyServiceRequest
+  def nextServiceRequest(): IPlayReadyServiceRequest = js.native
   /**
     * Processes the raw binary result of a manual enabling challenge.
     * @param responseBytes The response result to be processed.
     * @return If the methods succeeds, it returns S_OK. If it fails, it returns an error code.
     */
-  def processManualEnablingResponse(responseBytes: js.Array[Double]): WinRTError
+  def processManualEnablingResponse(responseBytes: js.Array[Double]): WinRTError = js.native
 }
 
 object IPlayReadyServiceRequest {
@@ -56,5 +57,55 @@ object IPlayReadyServiceRequest {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPlayReadyServiceRequest]
   }
+  @scala.inline
+  implicit class IPlayReadyServiceRequestOps[Self <: IPlayReadyServiceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBeginServiceRequest(value: () => IAsyncAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beginServiceRequest")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withChallengeCustomData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("challengeCustomData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGenerateManualEnablingChallenge(value: () => PlayReadySoapMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateManualEnablingChallenge")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNextServiceRequest(value: () => IPlayReadyServiceRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextServiceRequest")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withProcessManualEnablingResponse(value: js.Array[Double] => WinRTError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processManualEnablingResponse")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withResponseCustomData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseCustomData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUri(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -5,16 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IToastNotificationFactory extends js.Object {
-  def createToastNotification(content: XmlDocument): ToastNotification
+  def createToastNotification(content: XmlDocument): ToastNotification = js.native
 }
 
 object IToastNotificationFactory {
   @scala.inline
   def apply(createToastNotification: XmlDocument => ToastNotification): IToastNotificationFactory = {
     val __obj = js.Dynamic.literal(createToastNotification = js.Any.fromFunction1(createToastNotification))
-  
     __obj.asInstanceOf[IToastNotificationFactory]
   }
+  @scala.inline
+  implicit class IToastNotificationFactoryOps[Self <: IToastNotificationFactory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateToastNotification(value: XmlDocument => ToastNotification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createToastNotification")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

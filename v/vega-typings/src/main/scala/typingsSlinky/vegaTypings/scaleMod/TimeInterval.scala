@@ -19,22 +19,20 @@ trait TimeInterval extends _TickCount
 
 object TimeInterval {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def day: typingsSlinky.vegaTypings.vegaTypingsStrings.day = "day".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.day]
   @scala.inline
-  def day: typingsSlinky.vegaTypings.vegaTypingsStrings.day = this.cast("day")
+  def hour: typingsSlinky.vegaTypings.vegaTypingsStrings.hour = "hour".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.hour]
   @scala.inline
-  def hour: typingsSlinky.vegaTypings.vegaTypingsStrings.hour = this.cast("hour")
+  def millisecond: typingsSlinky.vegaTypings.vegaTypingsStrings.millisecond = "millisecond".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.millisecond]
   @scala.inline
-  def millisecond: typingsSlinky.vegaTypings.vegaTypingsStrings.millisecond = this.cast("millisecond")
+  def minute: typingsSlinky.vegaTypings.vegaTypingsStrings.minute = "minute".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.minute]
   @scala.inline
-  def minute: typingsSlinky.vegaTypings.vegaTypingsStrings.minute = this.cast("minute")
+  def month: typingsSlinky.vegaTypings.vegaTypingsStrings.month = "month".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.month]
   @scala.inline
-  def month: typingsSlinky.vegaTypings.vegaTypingsStrings.month = this.cast("month")
+  def second: typingsSlinky.vegaTypings.vegaTypingsStrings.second = "second".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.second]
   @scala.inline
-  def second: typingsSlinky.vegaTypings.vegaTypingsStrings.second = this.cast("second")
+  def week: typingsSlinky.vegaTypings.vegaTypingsStrings.week = "week".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.week]
   @scala.inline
-  def week: typingsSlinky.vegaTypings.vegaTypingsStrings.week = this.cast("week")
-  @scala.inline
-  def year: typingsSlinky.vegaTypings.vegaTypingsStrings.year = this.cast("year")
+  def year: typingsSlinky.vegaTypings.vegaTypingsStrings.year = "year".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.year]
 }
 

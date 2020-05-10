@@ -4,19 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TransactionResponse extends js.Object {
-  var insertIds: js.Array[String]
-  var totalDeleted: Double
-  var totalInserted: Double
-  var totalUpdated: Double
+  var insertIds: js.Array[String] = js.native
+  var totalDeleted: Double = js.native
+  var totalInserted: Double = js.native
+  var totalUpdated: Double = js.native
 }
 
 object TransactionResponse {
   @scala.inline
   def apply(insertIds: js.Array[String], totalDeleted: Double, totalInserted: Double, totalUpdated: Double): TransactionResponse = {
     val __obj = js.Dynamic.literal(insertIds = insertIds.asInstanceOf[js.Any], totalDeleted = totalDeleted.asInstanceOf[js.Any], totalInserted = totalInserted.asInstanceOf[js.Any], totalUpdated = totalUpdated.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TransactionResponse]
   }
+  @scala.inline
+  implicit class TransactionResponseOps[Self <: TransactionResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInsertIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTotalDeleted(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalDeleted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTotalInserted(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalInserted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTotalUpdated(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalUpdated")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

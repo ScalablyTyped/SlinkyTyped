@@ -1,54 +1,127 @@
 package typingsSlinky.facebookJsSdk.facebook
 
-import typingsSlinky.facebookJsSdk.facebookJsSdkStrings.async
-import typingsSlinky.facebookJsSdk.facebookJsSdkStrings.iframe
-import typingsSlinky.facebookJsSdk.facebookJsSdkStrings.page
 import typingsSlinky.facebookJsSdk.facebookJsSdkStrings.pay
-import typingsSlinky.facebookJsSdk.facebookJsSdkStrings.popup
 import typingsSlinky.facebookJsSdk.facebookJsSdkStrings.purchaseitem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PayDialogParams extends DialogParams {
-  var action: purchaseitem
-  var method: pay
-  var pricepoint_id: js.UndefOr[String] = js.undefined
-  var product: String
-  var quantity: js.UndefOr[Double] = js.undefined
-  var quantity_max: js.UndefOr[Double] = js.undefined
-  var quantity_min: js.UndefOr[Double] = js.undefined
-  var request_id: js.UndefOr[String] = js.undefined
-  var test_currency: js.UndefOr[String] = js.undefined
+  var action: purchaseitem = js.native
+  var method: pay = js.native
+  var pricepoint_id: js.UndefOr[String] = js.native
+  var product: String = js.native
+  var quantity: js.UndefOr[Double] = js.native
+  var quantity_max: js.UndefOr[Double] = js.native
+  var quantity_min: js.UndefOr[Double] = js.native
+  var request_id: js.UndefOr[String] = js.native
+  var test_currency: js.UndefOr[String] = js.native
 }
 
 object PayDialogParams {
   @scala.inline
-  def apply(
-    action: purchaseitem,
-    method: pay,
-    product: String,
-    app_id: String = null,
-    display: page | iframe | async | popup = null,
-    pricepoint_id: String = null,
-    quantity: Int | Double = null,
-    quantity_max: Int | Double = null,
-    quantity_min: Int | Double = null,
-    redirect_uri: String = null,
-    request_id: String = null,
-    test_currency: String = null
-  ): PayDialogParams = {
+  def apply(action: purchaseitem, method: pay, product: String): PayDialogParams = {
     val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], product = product.asInstanceOf[js.Any])
-    if (app_id != null) __obj.updateDynamic("app_id")(app_id.asInstanceOf[js.Any])
-    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
-    if (pricepoint_id != null) __obj.updateDynamic("pricepoint_id")(pricepoint_id.asInstanceOf[js.Any])
-    if (quantity != null) __obj.updateDynamic("quantity")(quantity.asInstanceOf[js.Any])
-    if (quantity_max != null) __obj.updateDynamic("quantity_max")(quantity_max.asInstanceOf[js.Any])
-    if (quantity_min != null) __obj.updateDynamic("quantity_min")(quantity_min.asInstanceOf[js.Any])
-    if (redirect_uri != null) __obj.updateDynamic("redirect_uri")(redirect_uri.asInstanceOf[js.Any])
-    if (request_id != null) __obj.updateDynamic("request_id")(request_id.asInstanceOf[js.Any])
-    if (test_currency != null) __obj.updateDynamic("test_currency")(test_currency.asInstanceOf[js.Any])
     __obj.asInstanceOf[PayDialogParams]
   }
+  @scala.inline
+  implicit class PayDialogParamsOps[Self <: PayDialogParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: purchaseitem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMethod(value: pay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProduct(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPricepoint_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pricepoint_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPricepoint_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pricepoint_id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuantity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuantity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuantity_max(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity_max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuantity_max: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity_max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuantity_min(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity_min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuantity_min: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity_min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequest_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequest_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request_id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTest_currency(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("test_currency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTest_currency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("test_currency")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

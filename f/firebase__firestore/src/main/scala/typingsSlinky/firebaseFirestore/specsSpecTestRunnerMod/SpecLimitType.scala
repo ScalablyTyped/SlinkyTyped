@@ -12,10 +12,8 @@ trait SpecLimitType extends js.Object
 
 object SpecLimitType {
   @scala.inline
-  def LimitToFirst: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.LimitToFirst = this.cast("LimitToFirst")
+  def LimitToFirst: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.LimitToFirst = "LimitToFirst".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.LimitToFirst]
   @scala.inline
-  def LimitToLast: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.LimitToLast = this.cast("LimitToLast")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def LimitToLast: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.LimitToLast = "LimitToLast".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.LimitToLast]
 }
 

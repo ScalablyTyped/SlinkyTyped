@@ -4,30 +4,73 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AccessOption extends js.Object {
   /** 接口调用结束的回调函数（调用成功、失败都会执行） */
-  var complete: js.UndefOr[AccessCompleteCallback] = js.undefined
+  var complete: js.UndefOr[AccessCompleteCallback] = js.native
   /** 接口调用失败的回调函数 */
-  var fail: js.UndefOr[AccessFailCallback] = js.undefined
+  var fail: js.UndefOr[AccessFailCallback] = js.native
   /** 要判断是否存在的文件/目录路径 */
-  var path: String
+  var path: String = js.native
   /** 接口调用成功的回调函数 */
-  var success: js.UndefOr[AccessSuccessCallback] = js.undefined
+  var success: js.UndefOr[AccessSuccessCallback] = js.native
 }
 
 object AccessOption {
   @scala.inline
-  def apply(
-    path: String,
-    complete: /* res */ GeneralCallbackResult => Unit = null,
-    fail: /* result */ AccessFailCallbackResult => Unit = null,
-    success: /* res */ GeneralCallbackResult => Unit = null
-  ): AccessOption = {
+  def apply(path: String): AccessOption = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
-    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[AccessOption]
   }
+  @scala.inline
+  implicit class AccessOptionOps[Self <: AccessOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComplete(value: /* res */ GeneralCallbackResult => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFail(value: /* result */ AccessFailCallbackResult => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutFail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccess(value: /* res */ GeneralCallbackResult => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

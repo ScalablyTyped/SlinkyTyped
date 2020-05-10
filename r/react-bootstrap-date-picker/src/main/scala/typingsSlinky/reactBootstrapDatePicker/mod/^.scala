@@ -1,11 +1,12 @@
 package typingsSlinky.reactBootstrapDatePicker.mod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("react-bootstrap-date-picker", JSImport.Namespace)
 @js.native
-object ^ extends TopLevel[DatePicker]
+object ^ extends TopLevel[ReactComponentClass[DatePickerProps]]
 

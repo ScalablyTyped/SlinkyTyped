@@ -1,6 +1,5 @@
 package typingsSlinky.sqlite3Promise.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +17,7 @@ object sqlite3AugmentingMod extends js.Object {
       sql: String,
       cb: js.ThisFunction2[
           /* this */ typingsSlinky.sqlite3.mod.Statement, 
-          /* err */ Error | Null, 
+          /* err */ js.Error | Null, 
           /* row */ js.Any, 
           Unit
         ]

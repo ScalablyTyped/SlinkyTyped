@@ -18,14 +18,41 @@ trait OriginApprovalRuleTemplate extends js.Object {
 
 object OriginApprovalRuleTemplate {
   @scala.inline
-  def apply(
-    approvalRuleTemplateId: ApprovalRuleTemplateId = null,
-    approvalRuleTemplateName: ApprovalRuleTemplateName = null
-  ): OriginApprovalRuleTemplate = {
+  def apply(): OriginApprovalRuleTemplate = {
     val __obj = js.Dynamic.literal()
-    if (approvalRuleTemplateId != null) __obj.updateDynamic("approvalRuleTemplateId")(approvalRuleTemplateId.asInstanceOf[js.Any])
-    if (approvalRuleTemplateName != null) __obj.updateDynamic("approvalRuleTemplateName")(approvalRuleTemplateName.asInstanceOf[js.Any])
     __obj.asInstanceOf[OriginApprovalRuleTemplate]
   }
+  @scala.inline
+  implicit class OriginApprovalRuleTemplateOps[Self <: OriginApprovalRuleTemplate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApprovalRuleTemplateId(value: ApprovalRuleTemplateId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRuleTemplateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovalRuleTemplateId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRuleTemplateId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApprovalRuleTemplateName(value: ApprovalRuleTemplateName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRuleTemplateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovalRuleTemplateName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRuleTemplateName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

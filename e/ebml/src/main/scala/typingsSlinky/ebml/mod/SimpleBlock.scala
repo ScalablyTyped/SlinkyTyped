@@ -6,11 +6,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SimpleBlock extends Block {
   /** the value of the element's Discardable flag */
-  var discarable: Boolean
+  var discarable: Boolean = js.native
   /** set to `true` if the payload starts an I frame */
-  var keyframe: Boolean
+  var keyframe: Boolean = js.native
 }
 
 object SimpleBlock {
@@ -21,7 +22,7 @@ object SimpleBlock {
     discarable: Boolean,
     end: Double,
     keyframe: Boolean,
-    name: /* import warning: importer.ImportType#apply Failed type conversion: ebml.ebml.EBMLTagSchema['name'] */ js.Any,
+    name: String,
     payload: Buffer,
     start: Double,
     tag: Double,
@@ -34,5 +35,25 @@ object SimpleBlock {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SimpleBlock]
   }
+  @scala.inline
+  implicit class SimpleBlockOps[Self <: SimpleBlock] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDiscarable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("discarable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeyframe(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyframe")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

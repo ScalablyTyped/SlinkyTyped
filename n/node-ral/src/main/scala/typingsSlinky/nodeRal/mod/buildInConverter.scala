@@ -19,24 +19,22 @@ trait buildInConverter extends js.Object
 
 object buildInConverter {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def form: typingsSlinky.nodeRal.nodeRalStrings.form = "form".asInstanceOf[typingsSlinky.nodeRal.nodeRalStrings.form]
   @scala.inline
-  def form: typingsSlinky.nodeRal.nodeRalStrings.form = this.cast("form")
+  def formData: typingsSlinky.nodeRal.nodeRalStrings.formData = "formData".asInstanceOf[typingsSlinky.nodeRal.nodeRalStrings.formData]
   @scala.inline
-  def formData: typingsSlinky.nodeRal.nodeRalStrings.formData = this.cast("formData")
+  def json: typingsSlinky.nodeRal.nodeRalStrings.json = "json".asInstanceOf[typingsSlinky.nodeRal.nodeRalStrings.json]
   @scala.inline
-  def json: typingsSlinky.nodeRal.nodeRalStrings.json = this.cast("json")
+  def protobuf: typingsSlinky.nodeRal.nodeRalStrings.protobuf = "protobuf".asInstanceOf[typingsSlinky.nodeRal.nodeRalStrings.protobuf]
   @scala.inline
-  def protobuf: typingsSlinky.nodeRal.nodeRalStrings.protobuf = this.cast("protobuf")
+  def querystring: typingsSlinky.nodeRal.nodeRalStrings.querystring = "querystring".asInstanceOf[typingsSlinky.nodeRal.nodeRalStrings.querystring]
   @scala.inline
-  def querystring: typingsSlinky.nodeRal.nodeRalStrings.querystring = this.cast("querystring")
+  def raw: typingsSlinky.nodeRal.nodeRalStrings.raw = "raw".asInstanceOf[typingsSlinky.nodeRal.nodeRalStrings.raw]
   @scala.inline
-  def raw: typingsSlinky.nodeRal.nodeRalStrings.raw = this.cast("raw")
+  def redis: typingsSlinky.nodeRal.nodeRalStrings.redis = "redis".asInstanceOf[typingsSlinky.nodeRal.nodeRalStrings.redis]
   @scala.inline
-  def redis: typingsSlinky.nodeRal.nodeRalStrings.redis = this.cast("redis")
+  def stream: typingsSlinky.nodeRal.nodeRalStrings.stream = "stream".asInstanceOf[typingsSlinky.nodeRal.nodeRalStrings.stream]
   @scala.inline
-  def stream: typingsSlinky.nodeRal.nodeRalStrings.stream = this.cast("stream")
-  @scala.inline
-  def string: typingsSlinky.nodeRal.nodeRalStrings.string = this.cast("string")
+  def string: typingsSlinky.nodeRal.nodeRalStrings.string = "string".asInstanceOf[typingsSlinky.nodeRal.nodeRalStrings.string]
 }
 

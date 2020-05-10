@@ -18,14 +18,41 @@ trait EnableFastSnapshotRestoreErrorItem extends js.Object {
 
 object EnableFastSnapshotRestoreErrorItem {
   @scala.inline
-  def apply(
-    FastSnapshotRestoreStateErrors: EnableFastSnapshotRestoreStateErrorSet = null,
-    SnapshotId: String = null
-  ): EnableFastSnapshotRestoreErrorItem = {
+  def apply(): EnableFastSnapshotRestoreErrorItem = {
     val __obj = js.Dynamic.literal()
-    if (FastSnapshotRestoreStateErrors != null) __obj.updateDynamic("FastSnapshotRestoreStateErrors")(FastSnapshotRestoreStateErrors.asInstanceOf[js.Any])
-    if (SnapshotId != null) __obj.updateDynamic("SnapshotId")(SnapshotId.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnableFastSnapshotRestoreErrorItem]
   }
+  @scala.inline
+  implicit class EnableFastSnapshotRestoreErrorItemOps[Self <: EnableFastSnapshotRestoreErrorItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFastSnapshotRestoreStateErrors(value: EnableFastSnapshotRestoreStateErrorSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FastSnapshotRestoreStateErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFastSnapshotRestoreStateErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FastSnapshotRestoreStateErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnapshotId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnapshotId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

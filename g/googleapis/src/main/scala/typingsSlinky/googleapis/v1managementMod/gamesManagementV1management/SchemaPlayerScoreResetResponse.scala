@@ -29,12 +29,53 @@ trait SchemaPlayerScoreResetResponse extends js.Object {
 
 object SchemaPlayerScoreResetResponse {
   @scala.inline
-  def apply(definitionId: String = null, kind: String = null, resetScoreTimeSpans: js.Array[String] = null): SchemaPlayerScoreResetResponse = {
+  def apply(): SchemaPlayerScoreResetResponse = {
     val __obj = js.Dynamic.literal()
-    if (definitionId != null) __obj.updateDynamic("definitionId")(definitionId.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (resetScoreTimeSpans != null) __obj.updateDynamic("resetScoreTimeSpans")(resetScoreTimeSpans.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPlayerScoreResetResponse]
   }
+  @scala.inline
+  implicit class SchemaPlayerScoreResetResponseOps[Self <: SchemaPlayerScoreResetResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefinitionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definitionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefinitionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definitionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResetScoreTimeSpans(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetScoreTimeSpans")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResetScoreTimeSpans: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetScoreTimeSpans")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

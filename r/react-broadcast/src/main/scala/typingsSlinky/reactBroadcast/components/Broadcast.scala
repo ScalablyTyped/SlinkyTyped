@@ -1,32 +1,31 @@
 package typingsSlinky.reactBroadcast.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactBroadcast.mod.Broadcast.Props
 import typingsSlinky.reactBroadcast.mod.Broadcast_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Broadcast
-  extends ExternalComponentWithAttributesWithRefType[tag.type, Broadcast_[js.Any]] {
+object Broadcast {
   @JSImport("react-broadcast", "Broadcast")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[T](
-    channel: String,
-    value: T,
-    compareValues: (T, T) => Boolean = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, Broadcast_[js.Any]] = {
-    val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    if (compareValues != null) __obj.updateDynamic("compareValues")(js.Any.fromFunction2(compareValues))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactBroadcast.mod.Broadcast_[js.Any]]]
+  @scala.inline
+  class Builder[T] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, Broadcast_[js.Any]] {
+    @scala.inline
+    def compareValues(value: (T, T) => Boolean): this.type = set("compareValues", js.Any.fromFunction2(value))
   }
-  type Props = typingsSlinky.reactBroadcast.mod.Broadcast.Props[js.Any]
+  
+  def withProps[T](p: Props[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](channel: String, value: T): Builder[T] = {
+    val __props = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[Props[T]]))
+  }
 }
 

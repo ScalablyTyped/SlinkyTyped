@@ -16,12 +16,10 @@ trait VerticalAlignment extends js.Object
 
 object VerticalAlignment {
   @scala.inline
-  def bottom: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.bottom = "bottom".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.center = "center".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.center]
   @scala.inline
-  def center: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.center = this.cast("center")
-  @scala.inline
-  def top: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.top = this.cast("top")
+  def top: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.top = "top".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.top]
 }
 

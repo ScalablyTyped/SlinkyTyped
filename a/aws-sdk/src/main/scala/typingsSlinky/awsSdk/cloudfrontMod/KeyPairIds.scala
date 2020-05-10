@@ -18,10 +18,35 @@ trait KeyPairIds extends js.Object {
 
 object KeyPairIds {
   @scala.inline
-  def apply(Quantity: integer, Items: KeyPairIdList = null): KeyPairIds = {
+  def apply(Quantity: integer): KeyPairIds = {
     val __obj = js.Dynamic.literal(Quantity = Quantity.asInstanceOf[js.Any])
-    if (Items != null) __obj.updateDynamic("Items")(Items.asInstanceOf[js.Any])
     __obj.asInstanceOf[KeyPairIds]
   }
+  @scala.inline
+  implicit class KeyPairIdsOps[Self <: KeyPairIds] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQuantity(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Quantity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItems(value: KeyPairIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Items")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,29 +13,77 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAngle extends js.Object {
-  var angle: js.UndefOr[Double] = js.undefined
-  var colors: js.UndefOr[js.Array[Color]] = js.undefined
+  var angle: js.UndefOr[Double] = js.native
+  var colors: js.UndefOr[js.Array[Color]] = js.native
   var orientation: js.UndefOr[
     TOP_BOTTOM | TR_BL | RIGHT_LEFT | BR_TL | BOTTOM_TOP | BL_TR | LEFT_RIGHT | TL_BR
-  ] = js.undefined
-  var positions: js.UndefOr[js.Array[Double]] = js.undefined
+  ] = js.native
+  var positions: js.UndefOr[js.Array[Double]] = js.native
 }
 
 object AnonAngle {
   @scala.inline
-  def apply(
-    angle: Int | Double = null,
-    colors: js.Array[Color] = null,
-    orientation: TOP_BOTTOM | TR_BL | RIGHT_LEFT | BR_TL | BOTTOM_TOP | BL_TR | LEFT_RIGHT | TL_BR = null,
-    positions: js.Array[Double] = null
-  ): AnonAngle = {
+  def apply(): AnonAngle = {
     val __obj = js.Dynamic.literal()
-    if (angle != null) __obj.updateDynamic("angle")(angle.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (positions != null) __obj.updateDynamic("positions")(positions.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAngle]
   }
+  @scala.inline
+  implicit class AnonAngleOps[Self <: AnonAngle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColors(value: js.Array[Color]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrientation(value: TOP_BOTTOM | TR_BL | RIGHT_LEFT | BR_TL | BOTTOM_TOP | BL_TR | LEFT_RIGHT | TL_BR): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrientation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositions(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPositions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

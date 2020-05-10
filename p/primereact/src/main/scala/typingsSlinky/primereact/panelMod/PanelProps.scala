@@ -6,48 +6,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PanelProps extends js.Object {
-  var className: js.UndefOr[String] = js.undefined
-  var collapseIcon: js.UndefOr[String] = js.undefined
-  var collapsed: js.UndefOr[Boolean] = js.undefined
-  var expandIcon: js.UndefOr[String] = js.undefined
-  var header: js.UndefOr[js.Any] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var onCollapse: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.undefined
-  var onExpand: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.undefined
-  var onToggle: js.UndefOr[js.Function1[/* e */ AnonEvent, Unit]] = js.undefined
-  var style: js.UndefOr[js.Object] = js.undefined
-  var toggleable: js.UndefOr[Boolean] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var collapseIcon: js.UndefOr[String] = js.native
+  var collapsed: js.UndefOr[Boolean] = js.native
+  var expandIcon: js.UndefOr[String] = js.native
+  var header: js.UndefOr[js.Any] = js.native
+  var id: js.UndefOr[String] = js.native
+  var onCollapse: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onExpand: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onToggle: js.UndefOr[js.Function1[/* e */ AnonEvent, Unit]] = js.native
+  var style: js.UndefOr[js.Object] = js.native
+  var toggleable: js.UndefOr[Boolean] = js.native
 }
 
 object PanelProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    collapseIcon: String = null,
-    collapsed: js.UndefOr[Boolean] = js.undefined,
-    expandIcon: String = null,
-    header: js.Any = null,
-    id: String = null,
-    onCollapse: /* event */ Event_ => Unit = null,
-    onExpand: /* event */ Event_ => Unit = null,
-    onToggle: /* e */ AnonEvent => Unit = null,
-    style: js.Object = null,
-    toggleable: js.UndefOr[Boolean] = js.undefined
-  ): PanelProps = {
+  def apply(): PanelProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (collapseIcon != null) __obj.updateDynamic("collapseIcon")(collapseIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(collapsed)) __obj.updateDynamic("collapsed")(collapsed.asInstanceOf[js.Any])
-    if (expandIcon != null) __obj.updateDynamic("expandIcon")(expandIcon.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (onCollapse != null) __obj.updateDynamic("onCollapse")(js.Any.fromFunction1(onCollapse))
-    if (onExpand != null) __obj.updateDynamic("onExpand")(js.Any.fromFunction1(onExpand))
-    if (onToggle != null) __obj.updateDynamic("onToggle")(js.Any.fromFunction1(onToggle))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(toggleable)) __obj.updateDynamic("toggleable")(toggleable.asInstanceOf[js.Any])
     __obj.asInstanceOf[PanelProps]
   }
+  @scala.inline
+  implicit class PanelPropsOps[Self <: PanelProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollapseIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollapseIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollapsed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollapsed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpandIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpandIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeader(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCollapse(value: /* event */ Event_ => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCollapse")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCollapse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCollapse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnExpand(value: /* event */ Event_ => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExpand")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnExpand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExpand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnToggle(value: /* e */ AnonEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onToggle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnToggle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onToggle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggleable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggleable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleable")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

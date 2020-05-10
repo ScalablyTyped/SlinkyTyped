@@ -4,41 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MlGetCalendars[T] extends Generic {
-  var body: js.UndefOr[T] = js.undefined
-  var calendar_id: js.UndefOr[String] = js.undefined
-  var from: js.UndefOr[Double] = js.undefined
-  var size: js.UndefOr[Double] = js.undefined
+  var body: js.UndefOr[T] = js.native
+  var calendar_id: js.UndefOr[String] = js.native
+  var from: js.UndefOr[Double] = js.native
+  var size: js.UndefOr[Double] = js.native
 }
 
 object MlGetCalendars {
   @scala.inline
-  def apply[T](
-    body: T = null,
-    calendar_id: String = null,
-    error_trace: js.UndefOr[Boolean] = js.undefined,
-    filter_path: String | js.Array[String] = null,
-    from: Int | Double = null,
-    human: js.UndefOr[Boolean] = js.undefined,
-    ignore: Double | js.Array[Double] = null,
-    method: String = null,
-    pretty: js.UndefOr[Boolean] = js.undefined,
-    size: Int | Double = null,
-    source: String = null
-  ): MlGetCalendars[T] = {
+  def apply[T](): MlGetCalendars[T] = {
     val __obj = js.Dynamic.literal()
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (calendar_id != null) __obj.updateDynamic("calendar_id")(calendar_id.asInstanceOf[js.Any])
-    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.asInstanceOf[js.Any])
-    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
-    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
-    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.asInstanceOf[js.Any])
-    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[MlGetCalendars[T]]
   }
+  @scala.inline
+  implicit class MlGetCalendarsOps[Self[t] <: MlGetCalendars[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withBody(value: T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCalendar_id(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calendar_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCalendar_id: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calendar_id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrom(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrom: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

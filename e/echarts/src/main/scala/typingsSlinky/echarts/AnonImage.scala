@@ -11,25 +11,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonImage extends _Color {
   /**
     * HTMLImageElement, and HTMLCanvasElement are supported, while string path is not supported
     */
-  var image: HTMLImageElement | HTMLCanvasElement
+  var image: HTMLImageElement | HTMLCanvasElement = js.native
   var repeat: js.UndefOr[
     typingsSlinky.echarts.echartsStrings.repeat | `repeat-x` | `repeat-y` | `no-repeat`
-  ] = js.undefined
+  ] = js.native
 }
 
 object AnonImage {
   @scala.inline
-  def apply(
-    image: HTMLImageElement | HTMLCanvasElement,
-    repeat: repeat | `repeat-x` | `repeat-y` | `no-repeat` = null
-  ): AnonImage = {
+  def apply(image: HTMLImageElement | HTMLCanvasElement): AnonImage = {
     val __obj = js.Dynamic.literal(image = image.asInstanceOf[js.Any])
-    if (repeat != null) __obj.updateDynamic("repeat")(repeat.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonImage]
   }
+  @scala.inline
+  implicit class AnonImageOps[Self <: AnonImage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImageHTMLImageElement(value: HTMLImageElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImageHTMLCanvasElement(value: HTMLCanvasElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImage(value: HTMLImageElement | HTMLCanvasElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRepeat(value: repeat | `repeat-x` | `repeat-y` | `no-repeat`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repeat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepeat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repeat")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

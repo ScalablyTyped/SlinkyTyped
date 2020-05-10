@@ -22,16 +22,53 @@ trait SigningProfileParameter extends js.Object {
 
 object SigningProfileParameter {
   @scala.inline
-  def apply(
-    certificateArn: CertificateArn = null,
-    certificatePathOnDevice: CertificatePathOnDevice = null,
-    platform: Platform = null
-  ): SigningProfileParameter = {
+  def apply(): SigningProfileParameter = {
     val __obj = js.Dynamic.literal()
-    if (certificateArn != null) __obj.updateDynamic("certificateArn")(certificateArn.asInstanceOf[js.Any])
-    if (certificatePathOnDevice != null) __obj.updateDynamic("certificatePathOnDevice")(certificatePathOnDevice.asInstanceOf[js.Any])
-    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
     __obj.asInstanceOf[SigningProfileParameter]
   }
+  @scala.inline
+  implicit class SigningProfileParameterOps[Self <: SigningProfileParameter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateArn(value: CertificateArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCertificatePathOnDevice(value: CertificatePathOnDevice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificatePathOnDevice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificatePathOnDevice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificatePathOnDevice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatform(value: Platform): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

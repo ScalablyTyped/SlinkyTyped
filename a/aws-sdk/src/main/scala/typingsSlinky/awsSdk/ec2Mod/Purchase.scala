@@ -42,26 +42,113 @@ trait Purchase extends js.Object {
 
 object Purchase {
   @scala.inline
-  def apply(
-    CurrencyCode: CurrencyCodeValues = null,
-    Duration: Int | scala.Double = null,
-    HostIdSet: ResponseHostIdSet = null,
-    HostReservationId: String = null,
-    HourlyPrice: String = null,
-    InstanceFamily: String = null,
-    PaymentOption: PaymentOption = null,
-    UpfrontPrice: String = null
-  ): Purchase = {
+  def apply(): Purchase = {
     val __obj = js.Dynamic.literal()
-    if (CurrencyCode != null) __obj.updateDynamic("CurrencyCode")(CurrencyCode.asInstanceOf[js.Any])
-    if (Duration != null) __obj.updateDynamic("Duration")(Duration.asInstanceOf[js.Any])
-    if (HostIdSet != null) __obj.updateDynamic("HostIdSet")(HostIdSet.asInstanceOf[js.Any])
-    if (HostReservationId != null) __obj.updateDynamic("HostReservationId")(HostReservationId.asInstanceOf[js.Any])
-    if (HourlyPrice != null) __obj.updateDynamic("HourlyPrice")(HourlyPrice.asInstanceOf[js.Any])
-    if (InstanceFamily != null) __obj.updateDynamic("InstanceFamily")(InstanceFamily.asInstanceOf[js.Any])
-    if (PaymentOption != null) __obj.updateDynamic("PaymentOption")(PaymentOption.asInstanceOf[js.Any])
-    if (UpfrontPrice != null) __obj.updateDynamic("UpfrontPrice")(UpfrontPrice.asInstanceOf[js.Any])
     __obj.asInstanceOf[Purchase]
   }
+  @scala.inline
+  implicit class PurchaseOps[Self <: Purchase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrencyCode(value: CurrencyCodeValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrencyCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostIdSet(value: ResponseHostIdSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostIdSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostIdSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostIdSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostReservationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostReservationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostReservationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostReservationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHourlyPrice(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HourlyPrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHourlyPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HourlyPrice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaymentOption(value: PaymentOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaymentOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaymentOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaymentOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpfrontPrice(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpfrontPrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpfrontPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpfrontPrice")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -19,7 +19,7 @@ object Writer extends js.Object {
     * @param size Buffer size
     * @returns Buffer
     */
-  def alloc(size: Double): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def alloc(size: Double): js.typedarray.Uint8Array = js.native
   /**
     * Creates a new writer.
     * @returns A {@link BufferWriter} when Buffers are supported, otherwise a {@link Writer}

@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonName extends js.Object {
   /**
     * The format is \[start coordinate, end coordinate\],
@@ -16,7 +17,7 @@ trait AnonName extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markArea.data.1.coord
     */
-  var coord: js.UndefOr[js.Array[_]] = js.undefined
+  var coord: js.UndefOr[js.Array[_]] = js.native
   /**
     * Style of the item.
     * `itemStyle` of start point and end point will be
@@ -25,7 +26,7 @@ trait AnonName extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markArea.data.1.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonEmphasis] = js.undefined
+  var itemStyle: js.UndefOr[AnonEmphasis] = js.native
   /**
     * Label style of the item.
     * Label style of start point and end point will be
@@ -34,14 +35,14 @@ trait AnonName extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markArea.data.1.label
     */
-  var label: js.UndefOr[AnonFontFamily] = js.undefined
+  var label: js.UndefOr[AnonFontFamily] = js.native
   /**
     * Name of the marker, which will display as a label.
     *
     *
     * @see https://ecomfe.github.io/echarts-doc/public/en/option.html#series-scatter.markArea.data.1.name
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Specify this item is on min or max or average value.
     *
@@ -54,14 +55,14 @@ trait AnonName extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markArea.data.1.type
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /**
     * value of the item, not necessary.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markArea.data.1.value
     */
-  var value: js.UndefOr[Double] = js.undefined
+  var value: js.UndefOr[Double] = js.native
   /**
     * Specify the dimension on which min, max, average
     * are calculated, available when
@@ -74,7 +75,7 @@ trait AnonName extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markArea.data.1.valueDim
     */
-  var valueDim: js.UndefOr[String] = js.undefined
+  var valueDim: js.UndefOr[String] = js.native
   /**
     * Specify the dimension on which min, max, average
     * are calculated, available when
@@ -87,7 +88,7 @@ trait AnonName extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markArea.data.1.valueIndex
     */
-  var valueIndex: js.UndefOr[Double] = js.undefined
+  var valueIndex: js.UndefOr[Double] = js.native
   /**
     * x value on screen coordinate system, can be pixel
     * number (like `5`), or percent value (like `'20%'`).
@@ -95,7 +96,7 @@ trait AnonName extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markArea.data.1.x
     */
-  var x: js.UndefOr[Double] = js.undefined
+  var x: js.UndefOr[Double] = js.native
   /**
     * y value on screen coordinate system, can be pixel
     * number (like `5`), or percent value (like `'20%'`).
@@ -103,35 +104,142 @@ trait AnonName extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markArea.data.1.y
     */
-  var y: js.UndefOr[Double] = js.undefined
+  var y: js.UndefOr[Double] = js.native
 }
 
 object AnonName {
   @scala.inline
-  def apply(
-    coord: js.Array[_] = null,
-    itemStyle: AnonEmphasis = null,
-    label: AnonFontFamily = null,
-    name: String = null,
-    `type`: String = null,
-    value: Int | Double = null,
-    valueDim: String = null,
-    valueIndex: Int | Double = null,
-    x: Int | Double = null,
-    y: Int | Double = null
-  ): AnonName = {
+  def apply(): AnonName = {
     val __obj = js.Dynamic.literal()
-    if (coord != null) __obj.updateDynamic("coord")(coord.asInstanceOf[js.Any])
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (valueDim != null) __obj.updateDynamic("valueDim")(valueDim.asInstanceOf[js.Any])
-    if (valueIndex != null) __obj.updateDynamic("valueIndex")(valueIndex.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonName]
   }
+  @scala.inline
+  implicit class AnonNameOps[Self <: AnonName] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCoord(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coord")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoord: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coord")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemStyle(value: AnonEmphasis): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: AnonFontFamily): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueDim(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueDim")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueDim: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueDim")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

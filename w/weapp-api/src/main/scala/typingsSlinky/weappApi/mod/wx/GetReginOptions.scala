@@ -4,25 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GetReginOptions extends CommonCallbackOptions {
   @JSName("success")
   var success_GetReginOptions: js.UndefOr[
     js.Function1[/* callback */ js.Function1[/* res */ GetReginSuccessCallbackOptions, Unit], Unit]
-  ] = js.undefined
+  ] = js.native
 }
 
 object GetReginOptions {
   @scala.inline
-  def apply(
-    complete: /* res */ js.Any => Unit = null,
-    fail: /* res */ js.Any => Unit = null,
-    success: /* callback */ js.Function1[/* res */ GetReginSuccessCallbackOptions, Unit] => Unit = null
-  ): GetReginOptions = {
+  def apply(): GetReginOptions = {
     val __obj = js.Dynamic.literal()
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
-    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[GetReginOptions]
   }
+  @scala.inline
+  implicit class GetReginOptionsOps[Self <: GetReginOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSuccess(value: /* callback */ js.Function1[/* res */ GetReginSuccessCallbackOptions, Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

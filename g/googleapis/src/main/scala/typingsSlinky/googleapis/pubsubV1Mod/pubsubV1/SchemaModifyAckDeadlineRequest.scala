@@ -28,11 +28,41 @@ trait SchemaModifyAckDeadlineRequest extends js.Object {
 
 object SchemaModifyAckDeadlineRequest {
   @scala.inline
-  def apply(ackDeadlineSeconds: Int | Double = null, ackIds: js.Array[String] = null): SchemaModifyAckDeadlineRequest = {
+  def apply(): SchemaModifyAckDeadlineRequest = {
     val __obj = js.Dynamic.literal()
-    if (ackDeadlineSeconds != null) __obj.updateDynamic("ackDeadlineSeconds")(ackDeadlineSeconds.asInstanceOf[js.Any])
-    if (ackIds != null) __obj.updateDynamic("ackIds")(ackIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaModifyAckDeadlineRequest]
   }
+  @scala.inline
+  implicit class SchemaModifyAckDeadlineRequestOps[Self <: SchemaModifyAckDeadlineRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAckDeadlineSeconds(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ackDeadlineSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAckDeadlineSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ackDeadlineSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAckIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ackIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAckIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ackIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

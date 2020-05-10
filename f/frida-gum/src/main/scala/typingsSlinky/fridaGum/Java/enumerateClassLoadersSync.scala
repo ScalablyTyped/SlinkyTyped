@@ -10,6 +10,6 @@ object enumerateClassLoadersSync extends js.Object {
   /**
     * Synchronous version of `enumerateClassLoaders()`.
     */
-  def apply(): js.Array[Wrapper] = js.native
+  def apply(): js.Array[typingsSlinky.fridaGum.Wrapper] = js.native
 }
 

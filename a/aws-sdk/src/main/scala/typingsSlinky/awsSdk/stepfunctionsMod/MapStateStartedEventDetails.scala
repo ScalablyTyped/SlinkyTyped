@@ -14,10 +14,29 @@ trait MapStateStartedEventDetails extends js.Object {
 
 object MapStateStartedEventDetails {
   @scala.inline
-  def apply(length: Int | Double = null): MapStateStartedEventDetails = {
+  def apply(): MapStateStartedEventDetails = {
     val __obj = js.Dynamic.literal()
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapStateStartedEventDetails]
   }
+  @scala.inline
+  implicit class MapStateStartedEventDetailsOps[Self <: MapStateStartedEventDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLength(value: UnsignedInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

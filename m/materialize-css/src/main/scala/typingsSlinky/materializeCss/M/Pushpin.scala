@@ -32,7 +32,7 @@ object Pushpin extends js.Object {
   /**
     * Init Pushpin
     */
-  def init(els: typingsSlinky.std.Element): Pushpin = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialPushpinOptions): Pushpin = js.native
+  def init(els: Element): Pushpin = js.native
+  def init(els: Element, options: PartialPushpinOptions): Pushpin = js.native
 }
 

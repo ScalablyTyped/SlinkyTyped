@@ -1,15 +1,16 @@
 package typingsSlinky.materialUi.components
 
+import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CommunicationPortableWifiOff
-  extends SharedApply_SvgIconProps1666625642[typingsSlinky.materialUi.svgIconsMod.CommunicationPortableWifiOff] {
+object CommunicationPortableWifiOff {
   @JSImport("material-ui/svg-icons", "CommunicationPortableWifiOff")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.CommunicationPortableWifiOff] = new SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.CommunicationPortableWifiOff](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CommunicationPortableWifiOff.type): SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.CommunicationPortableWifiOff] = new SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.CommunicationPortableWifiOff](js.Array(this.component, js.Dictionary.empty))()
 }
 

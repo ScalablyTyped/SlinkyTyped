@@ -151,6 +151,7 @@ import typingsSlinky.react.mod.QuoteHTMLAttributes
 import typingsSlinky.react.mod.SVGProps
 import typingsSlinky.react.mod.ScriptHTMLAttributes
 import typingsSlinky.react.mod.SelectHTMLAttributes
+import typingsSlinky.react.mod.SlotHTMLAttributes
 import typingsSlinky.react.mod.SourceHTMLAttributes
 import typingsSlinky.react.mod.StyleHTMLAttributes
 import typingsSlinky.react.mod.TableHTMLAttributes
@@ -164,6 +165,7 @@ import typingsSlinky.react.mod.VideoHTMLAttributes
 import typingsSlinky.react.mod.WebViewHTMLAttributes
 import typingsSlinky.std.HTMLDataElement
 import typingsSlinky.std.HTMLDialogElement
+import typingsSlinky.std.HTMLSlotElement
 import typingsSlinky.std.HTMLTableDataCellElement
 import typingsSlinky.std.HTMLTableHeaderCellElement
 import typingsSlinky.std.HTMLTemplateElement
@@ -312,6 +314,7 @@ import typingsSlinky.storybookComponents.storybookComponentsStrings.samp
 import typingsSlinky.storybookComponents.storybookComponentsStrings.script
 import typingsSlinky.storybookComponents.storybookComponentsStrings.section
 import typingsSlinky.storybookComponents.storybookComponentsStrings.select
+import typingsSlinky.storybookComponents.storybookComponentsStrings.slot
 import typingsSlinky.storybookComponents.storybookComponentsStrings.small
 import typingsSlinky.storybookComponents.storybookComponentsStrings.source
 import typingsSlinky.storybookComponents.storybookComponentsStrings.span
@@ -860,6 +863,12 @@ object Input extends js.Object {
   @JSName("withComponent")
   def withComponent_select(tag: select): StyledComponent[
     DetailedHTMLProps[SelectHTMLAttributes[HTMLSelectElement], HTMLSelectElement], 
+    InputStyleProps, 
+    Theme
+  ] = js.native
+  @JSName("withComponent")
+  def withComponent_slot(tag: slot): StyledComponent[
+    DetailedHTMLProps[SlotHTMLAttributes[HTMLSlotElement], HTMLSlotElement], 
     InputStyleProps, 
     Theme
   ] = js.native

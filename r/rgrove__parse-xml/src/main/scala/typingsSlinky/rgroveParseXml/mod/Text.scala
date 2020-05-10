@@ -5,21 +5,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Text
   extends NodeBase
      with Node {
-  var text: String
+  var text: String = js.native
   @JSName("type")
-  var type_Text: text
+  var type_Text: text = js.native
 }
 
 object Text {
   @scala.inline
-  def apply(text: String, `type`: text, parent: NodeBase = null): Text = {
+  def apply(text: String, `type`: text): Text = {
     val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
     __obj.asInstanceOf[Text]
   }
+  @scala.inline
+  implicit class TextOps[Self <: Text] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: text): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

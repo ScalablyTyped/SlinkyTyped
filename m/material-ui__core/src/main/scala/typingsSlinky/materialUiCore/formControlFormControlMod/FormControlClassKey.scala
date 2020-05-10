@@ -14,14 +14,12 @@ trait FormControlClassKey extends js.Object
 
 object FormControlClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fullWidth: typingsSlinky.materialUiCore.materialUiCoreStrings.fullWidth = "fullWidth".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.fullWidth]
   @scala.inline
-  def fullWidth: typingsSlinky.materialUiCore.materialUiCoreStrings.fullWidth = this.cast("fullWidth")
+  def marginDense: typingsSlinky.materialUiCore.materialUiCoreStrings.marginDense = "marginDense".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.marginDense]
   @scala.inline
-  def marginDense: typingsSlinky.materialUiCore.materialUiCoreStrings.marginDense = this.cast("marginDense")
+  def marginNormal: typingsSlinky.materialUiCore.materialUiCoreStrings.marginNormal = "marginNormal".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.marginNormal]
   @scala.inline
-  def marginNormal: typingsSlinky.materialUiCore.materialUiCoreStrings.marginNormal = this.cast("marginNormal")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

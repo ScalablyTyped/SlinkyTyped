@@ -22,16 +22,53 @@ trait DeviceStatusInfo extends js.Object {
 
 object DeviceStatusInfo {
   @scala.inline
-  def apply(
-    ConnectionStatus: ConnectionStatus = null,
-    ConnectionStatusUpdatedTime: js.Date = null,
-    DeviceStatusDetails: DeviceStatusDetails = null
-  ): DeviceStatusInfo = {
+  def apply(): DeviceStatusInfo = {
     val __obj = js.Dynamic.literal()
-    if (ConnectionStatus != null) __obj.updateDynamic("ConnectionStatus")(ConnectionStatus.asInstanceOf[js.Any])
-    if (ConnectionStatusUpdatedTime != null) __obj.updateDynamic("ConnectionStatusUpdatedTime")(ConnectionStatusUpdatedTime.asInstanceOf[js.Any])
-    if (DeviceStatusDetails != null) __obj.updateDynamic("DeviceStatusDetails")(DeviceStatusDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceStatusInfo]
   }
+  @scala.inline
+  implicit class DeviceStatusInfoOps[Self <: DeviceStatusInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnectionStatus(value: ConnectionStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionStatusUpdatedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionStatusUpdatedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionStatusUpdatedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionStatusUpdatedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceStatusDetails(value: DeviceStatusDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceStatusDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceStatusDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceStatusDetails")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

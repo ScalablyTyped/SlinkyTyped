@@ -17,20 +17,18 @@ trait IdentifierSizes extends js.Object
 
 object IdentifierSizes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def l: typingsSlinky.fundamentalReact.fundamentalReactStrings.l = "l".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.l]
   @scala.inline
-  def l: typingsSlinky.fundamentalReact.fundamentalReactStrings.l = this.cast("l")
+  def m: typingsSlinky.fundamentalReact.fundamentalReactStrings.m = "m".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.m]
   @scala.inline
-  def m: typingsSlinky.fundamentalReact.fundamentalReactStrings.m = this.cast("m")
+  def s: typingsSlinky.fundamentalReact.fundamentalReactStrings.s = "s".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.s]
   @scala.inline
-  def s: typingsSlinky.fundamentalReact.fundamentalReactStrings.s = this.cast("s")
+  def xl: typingsSlinky.fundamentalReact.fundamentalReactStrings.xl = "xl".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.xl]
   @scala.inline
-  def xl: typingsSlinky.fundamentalReact.fundamentalReactStrings.xl = this.cast("xl")
+  def xs: typingsSlinky.fundamentalReact.fundamentalReactStrings.xs = "xs".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.xs]
   @scala.inline
-  def xs: typingsSlinky.fundamentalReact.fundamentalReactStrings.xs = this.cast("xs")
+  def xxl: typingsSlinky.fundamentalReact.fundamentalReactStrings.xxl = "xxl".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.xxl]
   @scala.inline
-  def xxl: typingsSlinky.fundamentalReact.fundamentalReactStrings.xxl = this.cast("xxl")
-  @scala.inline
-  def xxs: typingsSlinky.fundamentalReact.fundamentalReactStrings.xxs = this.cast("xxs")
+  def xxs: typingsSlinky.fundamentalReact.fundamentalReactStrings.xxs = "xxs".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.xxs]
 }
 

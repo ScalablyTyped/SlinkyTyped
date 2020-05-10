@@ -6,47 +6,160 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EventContent extends js.Object {
-  var avatar_url: Null | String
-  var body: js.UndefOr[String] = js.undefined
-  var displayname: js.UndefOr[String] = js.undefined
-  var info: js.UndefOr[js.Any] = js.undefined
-  var is_direct: Boolean
-  var membership: js.UndefOr[MembershipType] = js.undefined
-  var msgtype: js.UndefOr[MsgType] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var reason: js.UndefOr[String] = js.undefined
-  var topic: js.UndefOr[String] = js.undefined
-  var url: js.UndefOr[String] = js.undefined
+  var avatar_url: Null | String = js.native
+  var body: js.UndefOr[String] = js.native
+  var displayname: js.UndefOr[String] = js.native
+  var info: js.UndefOr[js.Any] = js.native
+  var is_direct: Boolean = js.native
+  var membership: js.UndefOr[MembershipType] = js.native
+  var msgtype: js.UndefOr[MsgType] = js.native
+  var name: js.UndefOr[String] = js.native
+  var reason: js.UndefOr[String] = js.native
+  var topic: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.native
 }
 
 object EventContent {
   @scala.inline
-  def apply(
-    is_direct: Boolean,
-    avatar_url: String = null,
-    body: String = null,
-    displayname: String = null,
-    info: js.Any = null,
-    membership: MembershipType = null,
-    msgtype: MsgType = null,
-    name: String = null,
-    reason: String = null,
-    topic: String = null,
-    url: String = null
-  ): EventContent = {
+  def apply(is_direct: Boolean): EventContent = {
     val __obj = js.Dynamic.literal(is_direct = is_direct.asInstanceOf[js.Any])
-    if (avatar_url != null) __obj.updateDynamic("avatar_url")(avatar_url.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (displayname != null) __obj.updateDynamic("displayname")(displayname.asInstanceOf[js.Any])
-    if (info != null) __obj.updateDynamic("info")(info.asInstanceOf[js.Any])
-    if (membership != null) __obj.updateDynamic("membership")(membership.asInstanceOf[js.Any])
-    if (msgtype != null) __obj.updateDynamic("msgtype")(msgtype.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
-    if (topic != null) __obj.updateDynamic("topic")(topic.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventContent]
   }
+  @scala.inline
+  implicit class EventContentOps[Self <: EventContent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIs_direct(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is_direct")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAvatar_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAvatar_urlNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar_url")(null)
+        ret
+    }
+    @scala.inline
+    def withBody(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInfo(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMembership(value: MembershipType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("membership")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMembership: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("membership")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMsgtype(value: MsgType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("msgtype")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMsgtype: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("msgtype")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopic(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

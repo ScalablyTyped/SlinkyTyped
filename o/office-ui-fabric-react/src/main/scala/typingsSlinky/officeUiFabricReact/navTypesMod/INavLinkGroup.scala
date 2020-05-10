@@ -6,35 +6,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait INavLinkGroup extends js.Object {
   /**
     * The name to use for functional automation tests
     */
-  var automationId: js.UndefOr[String] = js.undefined
+  var automationId: js.UndefOr[String] = js.native
   /**
     * ARIA label when group is collapsed and can be expanded.
     */
-  var collapseAriaLabel: js.UndefOr[String] = js.undefined
+  var collapseAriaLabel: js.UndefOr[String] = js.native
   /**
     * If true, the group should render collapsed by default
     */
-  var collapseByDefault: js.UndefOr[Boolean] = js.undefined
+  var collapseByDefault: js.UndefOr[Boolean] = js.native
   /**
     * ARIA label when group is collapsed and can be expanded.
     */
-  var expandAriaLabel: js.UndefOr[String] = js.undefined
+  var expandAriaLabel: js.UndefOr[String] = js.native
   /**
     * (Optional) Any additional properties to apply to a group.
     */
-  var groupData: js.UndefOr[js.Any] = js.undefined
+  var groupData: js.UndefOr[js.Any] = js.native
   /**
     * Links to render within this group
     */
-  var links: js.Array[INavLink]
+  var links: js.Array[INavLink] = js.native
   /**
     * Text to render as the header of a group
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Callback invoked when a group header is clicked
     */
@@ -44,30 +45,114 @@ trait INavLinkGroup extends js.Object {
       /* isCollapsing */ js.UndefOr[Boolean], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object INavLinkGroup {
   @scala.inline
-  def apply(
-    links: js.Array[INavLink],
-    automationId: String = null,
-    collapseAriaLabel: String = null,
-    collapseByDefault: js.UndefOr[Boolean] = js.undefined,
-    expandAriaLabel: String = null,
-    groupData: js.Any = null,
-    name: String = null,
-    onHeaderClick: (/* ev */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], /* isCollapsing */ js.UndefOr[Boolean]) => Unit = null
-  ): INavLinkGroup = {
+  def apply(links: js.Array[INavLink]): INavLinkGroup = {
     val __obj = js.Dynamic.literal(links = links.asInstanceOf[js.Any])
-    if (automationId != null) __obj.updateDynamic("automationId")(automationId.asInstanceOf[js.Any])
-    if (collapseAriaLabel != null) __obj.updateDynamic("collapseAriaLabel")(collapseAriaLabel.asInstanceOf[js.Any])
-    if (!js.isUndefined(collapseByDefault)) __obj.updateDynamic("collapseByDefault")(collapseByDefault.asInstanceOf[js.Any])
-    if (expandAriaLabel != null) __obj.updateDynamic("expandAriaLabel")(expandAriaLabel.asInstanceOf[js.Any])
-    if (groupData != null) __obj.updateDynamic("groupData")(groupData.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (onHeaderClick != null) __obj.updateDynamic("onHeaderClick")(js.Any.fromFunction2(onHeaderClick))
     __obj.asInstanceOf[INavLinkGroup]
   }
+  @scala.inline
+  implicit class INavLinkGroupOps[Self <: INavLinkGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLinks(value: js.Array[INavLink]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutomationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("automationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutomationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("automationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollapseAriaLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseAriaLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollapseAriaLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseAriaLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollapseByDefault(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseByDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollapseByDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseByDefault")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpandAriaLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandAriaLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpandAriaLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandAriaLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnHeaderClick(
+      value: (/* ev */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], /* isCollapsing */ js.UndefOr[Boolean]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHeaderClick")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnHeaderClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHeaderClick")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

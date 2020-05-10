@@ -41,20 +41,77 @@ trait SchemaAppProfile extends js.Object {
 
 object SchemaAppProfile {
   @scala.inline
-  def apply(
-    description: String = null,
-    etag: String = null,
-    multiClusterRoutingUseAny: SchemaMultiClusterRoutingUseAny = null,
-    name: String = null,
-    singleClusterRouting: SchemaSingleClusterRouting = null
-  ): SchemaAppProfile = {
+  def apply(): SchemaAppProfile = {
     val __obj = js.Dynamic.literal()
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
-    if (multiClusterRoutingUseAny != null) __obj.updateDynamic("multiClusterRoutingUseAny")(multiClusterRoutingUseAny.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (singleClusterRouting != null) __obj.updateDynamic("singleClusterRouting")(singleClusterRouting.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAppProfile]
   }
+  @scala.inline
+  implicit class SchemaAppProfileOps[Self <: SchemaAppProfile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEtag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEtag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiClusterRoutingUseAny(value: SchemaMultiClusterRoutingUseAny): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiClusterRoutingUseAny")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiClusterRoutingUseAny: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiClusterRoutingUseAny")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleClusterRouting(value: SchemaSingleClusterRouting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleClusterRouting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleClusterRouting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleClusterRouting")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

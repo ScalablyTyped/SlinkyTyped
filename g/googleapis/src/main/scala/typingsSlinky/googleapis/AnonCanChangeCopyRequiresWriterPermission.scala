@@ -34,58 +34,305 @@ trait AnonCanChangeCopyRequiresWriterPermission extends js.Object {
 
 object AnonCanChangeCopyRequiresWriterPermission {
   @scala.inline
-  def apply(
-    canAddChildren: js.UndefOr[Boolean] = js.undefined,
-    canChangeCopyRequiresWriterPermission: js.UndefOr[Boolean] = js.undefined,
-    canChangeViewersCanCopyContent: js.UndefOr[Boolean] = js.undefined,
-    canComment: js.UndefOr[Boolean] = js.undefined,
-    canCopy: js.UndefOr[Boolean] = js.undefined,
-    canDelete: js.UndefOr[Boolean] = js.undefined,
-    canDeleteChildren: js.UndefOr[Boolean] = js.undefined,
-    canDownload: js.UndefOr[Boolean] = js.undefined,
-    canEdit: js.UndefOr[Boolean] = js.undefined,
-    canListChildren: js.UndefOr[Boolean] = js.undefined,
-    canMoveChildrenOutOfTeamDrive: js.UndefOr[Boolean] = js.undefined,
-    canMoveChildrenWithinTeamDrive: js.UndefOr[Boolean] = js.undefined,
-    canMoveItemIntoTeamDrive: js.UndefOr[Boolean] = js.undefined,
-    canMoveItemOutOfTeamDrive: js.UndefOr[Boolean] = js.undefined,
-    canMoveItemWithinTeamDrive: js.UndefOr[Boolean] = js.undefined,
-    canMoveTeamDriveItem: js.UndefOr[Boolean] = js.undefined,
-    canReadRevisions: js.UndefOr[Boolean] = js.undefined,
-    canReadTeamDrive: js.UndefOr[Boolean] = js.undefined,
-    canRemoveChildren: js.UndefOr[Boolean] = js.undefined,
-    canRename: js.UndefOr[Boolean] = js.undefined,
-    canShare: js.UndefOr[Boolean] = js.undefined,
-    canTrash: js.UndefOr[Boolean] = js.undefined,
-    canTrashChildren: js.UndefOr[Boolean] = js.undefined,
-    canUntrash: js.UndefOr[Boolean] = js.undefined
-  ): AnonCanChangeCopyRequiresWriterPermission = {
+  def apply(): AnonCanChangeCopyRequiresWriterPermission = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(canAddChildren)) __obj.updateDynamic("canAddChildren")(canAddChildren.asInstanceOf[js.Any])
-    if (!js.isUndefined(canChangeCopyRequiresWriterPermission)) __obj.updateDynamic("canChangeCopyRequiresWriterPermission")(canChangeCopyRequiresWriterPermission.asInstanceOf[js.Any])
-    if (!js.isUndefined(canChangeViewersCanCopyContent)) __obj.updateDynamic("canChangeViewersCanCopyContent")(canChangeViewersCanCopyContent.asInstanceOf[js.Any])
-    if (!js.isUndefined(canComment)) __obj.updateDynamic("canComment")(canComment.asInstanceOf[js.Any])
-    if (!js.isUndefined(canCopy)) __obj.updateDynamic("canCopy")(canCopy.asInstanceOf[js.Any])
-    if (!js.isUndefined(canDelete)) __obj.updateDynamic("canDelete")(canDelete.asInstanceOf[js.Any])
-    if (!js.isUndefined(canDeleteChildren)) __obj.updateDynamic("canDeleteChildren")(canDeleteChildren.asInstanceOf[js.Any])
-    if (!js.isUndefined(canDownload)) __obj.updateDynamic("canDownload")(canDownload.asInstanceOf[js.Any])
-    if (!js.isUndefined(canEdit)) __obj.updateDynamic("canEdit")(canEdit.asInstanceOf[js.Any])
-    if (!js.isUndefined(canListChildren)) __obj.updateDynamic("canListChildren")(canListChildren.asInstanceOf[js.Any])
-    if (!js.isUndefined(canMoveChildrenOutOfTeamDrive)) __obj.updateDynamic("canMoveChildrenOutOfTeamDrive")(canMoveChildrenOutOfTeamDrive.asInstanceOf[js.Any])
-    if (!js.isUndefined(canMoveChildrenWithinTeamDrive)) __obj.updateDynamic("canMoveChildrenWithinTeamDrive")(canMoveChildrenWithinTeamDrive.asInstanceOf[js.Any])
-    if (!js.isUndefined(canMoveItemIntoTeamDrive)) __obj.updateDynamic("canMoveItemIntoTeamDrive")(canMoveItemIntoTeamDrive.asInstanceOf[js.Any])
-    if (!js.isUndefined(canMoveItemOutOfTeamDrive)) __obj.updateDynamic("canMoveItemOutOfTeamDrive")(canMoveItemOutOfTeamDrive.asInstanceOf[js.Any])
-    if (!js.isUndefined(canMoveItemWithinTeamDrive)) __obj.updateDynamic("canMoveItemWithinTeamDrive")(canMoveItemWithinTeamDrive.asInstanceOf[js.Any])
-    if (!js.isUndefined(canMoveTeamDriveItem)) __obj.updateDynamic("canMoveTeamDriveItem")(canMoveTeamDriveItem.asInstanceOf[js.Any])
-    if (!js.isUndefined(canReadRevisions)) __obj.updateDynamic("canReadRevisions")(canReadRevisions.asInstanceOf[js.Any])
-    if (!js.isUndefined(canReadTeamDrive)) __obj.updateDynamic("canReadTeamDrive")(canReadTeamDrive.asInstanceOf[js.Any])
-    if (!js.isUndefined(canRemoveChildren)) __obj.updateDynamic("canRemoveChildren")(canRemoveChildren.asInstanceOf[js.Any])
-    if (!js.isUndefined(canRename)) __obj.updateDynamic("canRename")(canRename.asInstanceOf[js.Any])
-    if (!js.isUndefined(canShare)) __obj.updateDynamic("canShare")(canShare.asInstanceOf[js.Any])
-    if (!js.isUndefined(canTrash)) __obj.updateDynamic("canTrash")(canTrash.asInstanceOf[js.Any])
-    if (!js.isUndefined(canTrashChildren)) __obj.updateDynamic("canTrashChildren")(canTrashChildren.asInstanceOf[js.Any])
-    if (!js.isUndefined(canUntrash)) __obj.updateDynamic("canUntrash")(canUntrash.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCanChangeCopyRequiresWriterPermission]
   }
+  @scala.inline
+  implicit class AnonCanChangeCopyRequiresWriterPermissionOps[Self <: AnonCanChangeCopyRequiresWriterPermission] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCanAddChildren(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canAddChildren")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanAddChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canAddChildren")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanChangeCopyRequiresWriterPermission(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canChangeCopyRequiresWriterPermission")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanChangeCopyRequiresWriterPermission: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canChangeCopyRequiresWriterPermission")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanChangeViewersCanCopyContent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canChangeViewersCanCopyContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanChangeViewersCanCopyContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canChangeViewersCanCopyContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanComment(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canComment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canComment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanCopy(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canCopy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanCopy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canCopy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanDelete(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canDelete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canDelete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanDeleteChildren(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canDeleteChildren")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanDeleteChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canDeleteChildren")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanDownload(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canDownload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanDownload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canDownload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanEdit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canEdit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanEdit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canEdit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanListChildren(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canListChildren")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanListChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canListChildren")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanMoveChildrenOutOfTeamDrive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canMoveChildrenOutOfTeamDrive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanMoveChildrenOutOfTeamDrive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canMoveChildrenOutOfTeamDrive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanMoveChildrenWithinTeamDrive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canMoveChildrenWithinTeamDrive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanMoveChildrenWithinTeamDrive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canMoveChildrenWithinTeamDrive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanMoveItemIntoTeamDrive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canMoveItemIntoTeamDrive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanMoveItemIntoTeamDrive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canMoveItemIntoTeamDrive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanMoveItemOutOfTeamDrive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canMoveItemOutOfTeamDrive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanMoveItemOutOfTeamDrive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canMoveItemOutOfTeamDrive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanMoveItemWithinTeamDrive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canMoveItemWithinTeamDrive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanMoveItemWithinTeamDrive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canMoveItemWithinTeamDrive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanMoveTeamDriveItem(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canMoveTeamDriveItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanMoveTeamDriveItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canMoveTeamDriveItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanReadRevisions(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canReadRevisions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanReadRevisions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canReadRevisions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanReadTeamDrive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canReadTeamDrive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanReadTeamDrive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canReadTeamDrive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanRemoveChildren(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canRemoveChildren")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanRemoveChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canRemoveChildren")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanRename(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canRename")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanRename: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canRename")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanShare(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canShare")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanShare: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canShare")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanTrash(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canTrash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanTrash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canTrash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanTrashChildren(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canTrashChildren")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanTrashChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canTrashChildren")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanUntrash(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canUntrash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanUntrash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canUntrash")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

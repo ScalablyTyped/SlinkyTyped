@@ -18,11 +18,41 @@ trait TextWithHighlights extends js.Object {
 
 object TextWithHighlights {
   @scala.inline
-  def apply(Highlights: HighlightList = null, Text: String = null): TextWithHighlights = {
+  def apply(): TextWithHighlights = {
     val __obj = js.Dynamic.literal()
-    if (Highlights != null) __obj.updateDynamic("Highlights")(Highlights.asInstanceOf[js.Any])
-    if (Text != null) __obj.updateDynamic("Text")(Text.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextWithHighlights]
   }
+  @scala.inline
+  implicit class TextWithHighlightsOps[Self <: TextWithHighlights] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHighlights(value: HighlightList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Highlights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlights: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Highlights")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -34,20 +34,77 @@ trait SchemaListUpdateRequest extends js.Object {
 
 object SchemaListUpdateRequest {
   @scala.inline
-  def apply(
-    constraints: SchemaConstraints = null,
-    platformType: String = null,
-    state: String = null,
-    threatEntryType: String = null,
-    threatType: String = null
-  ): SchemaListUpdateRequest = {
+  def apply(): SchemaListUpdateRequest = {
     val __obj = js.Dynamic.literal()
-    if (constraints != null) __obj.updateDynamic("constraints")(constraints.asInstanceOf[js.Any])
-    if (platformType != null) __obj.updateDynamic("platformType")(platformType.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
-    if (threatEntryType != null) __obj.updateDynamic("threatEntryType")(threatEntryType.asInstanceOf[js.Any])
-    if (threatType != null) __obj.updateDynamic("threatType")(threatType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListUpdateRequest]
   }
+  @scala.inline
+  implicit class SchemaListUpdateRequestOps[Self <: SchemaListUpdateRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConstraints(value: SchemaConstraints): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstraints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreatEntryType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatEntryType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreatEntryType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatEntryType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreatType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreatType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

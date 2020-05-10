@@ -34,12 +34,54 @@ object CodeRepositorySummary {
     CodeRepositoryArn: CodeRepositoryArn,
     CodeRepositoryName: EntityName,
     CreationTime: js.Date,
-    LastModifiedTime: js.Date,
-    GitConfig: GitConfig = null
+    LastModifiedTime: js.Date
   ): CodeRepositorySummary = {
     val __obj = js.Dynamic.literal(CodeRepositoryArn = CodeRepositoryArn.asInstanceOf[js.Any], CodeRepositoryName = CodeRepositoryName.asInstanceOf[js.Any], CreationTime = CreationTime.asInstanceOf[js.Any], LastModifiedTime = LastModifiedTime.asInstanceOf[js.Any])
-    if (GitConfig != null) __obj.updateDynamic("GitConfig")(GitConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[CodeRepositorySummary]
   }
+  @scala.inline
+  implicit class CodeRepositorySummaryOps[Self <: CodeRepositorySummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCodeRepositoryArn(value: CodeRepositoryArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeRepositoryArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCodeRepositoryName(value: EntityName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeRepositoryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLastModifiedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGitConfig(value: GitConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GitConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGitConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GitConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,22 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Operator
   extends CssNodeCommon
      with CssNode
      with CssNodePlain {
   @JSName("type")
-  var type_Operator: typingsSlinky.cssTree.cssTreeStrings.Operator
-  var value: String
+  var type_Operator: typingsSlinky.cssTree.cssTreeStrings.Operator = js.native
+  var value: String = js.native
 }
 
 object Operator {
   @scala.inline
-  def apply(`type`: typingsSlinky.cssTree.cssTreeStrings.Operator, value: String, loc: CssLocation = null): Operator = {
+  def apply(`type`: typingsSlinky.cssTree.cssTreeStrings.Operator, value: String): Operator = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     __obj.asInstanceOf[Operator]
   }
+  @scala.inline
+  implicit class OperatorOps[Self <: Operator] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: typingsSlinky.cssTree.cssTreeStrings.Operator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

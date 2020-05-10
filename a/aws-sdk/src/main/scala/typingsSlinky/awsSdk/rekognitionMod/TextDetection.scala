@@ -34,22 +34,89 @@ trait TextDetection extends js.Object {
 
 object TextDetection {
   @scala.inline
-  def apply(
-    Confidence: Int | Double = null,
-    DetectedText: String = null,
-    Geometry: Geometry = null,
-    Id: Int | Double = null,
-    ParentId: Int | Double = null,
-    Type: TextTypes = null
-  ): TextDetection = {
+  def apply(): TextDetection = {
     val __obj = js.Dynamic.literal()
-    if (Confidence != null) __obj.updateDynamic("Confidence")(Confidence.asInstanceOf[js.Any])
-    if (DetectedText != null) __obj.updateDynamic("DetectedText")(DetectedText.asInstanceOf[js.Any])
-    if (Geometry != null) __obj.updateDynamic("Geometry")(Geometry.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (ParentId != null) __obj.updateDynamic("ParentId")(ParentId.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextDetection]
   }
+  @scala.inline
+  implicit class TextDetectionOps[Self <: TextDetection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfidence(value: Percent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Confidence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfidence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Confidence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDetectedText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectedText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetectedText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectedText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeometry(value: Geometry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Geometry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeometry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Geometry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: UInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentId(value: UInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: TextTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,15 +1,16 @@
 package typingsSlinky.halogenium.components
 
+import typingsSlinky.halogenium.mod.RadiusLoaderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ScaleLoader
-  extends SharedApply_RadiusLoaderProps_249348158[typingsSlinky.halogenium.mod.ScaleLoader] {
+object ScaleLoader {
   @JSImport("halogenium", "ScaleLoader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: RadiusLoaderProps): SharedBuilder_RadiusLoaderProps801818636[typingsSlinky.halogenium.mod.ScaleLoader] = new SharedBuilder_RadiusLoaderProps801818636[typingsSlinky.halogenium.mod.ScaleLoader](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ScaleLoader.type): SharedBuilder_RadiusLoaderProps801818636[typingsSlinky.halogenium.mod.ScaleLoader] = new SharedBuilder_RadiusLoaderProps801818636[typingsSlinky.halogenium.mod.ScaleLoader](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.dropboxjs.Dropbox
 
+import org.scalajs.dom.raw.Blob
 import typingsSlinky.dropboxjs.Dropbox.File.Stat
-import typingsSlinky.std.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

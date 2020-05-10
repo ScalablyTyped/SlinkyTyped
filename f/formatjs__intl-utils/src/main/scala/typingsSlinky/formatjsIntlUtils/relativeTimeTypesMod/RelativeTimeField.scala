@@ -34,54 +34,52 @@ trait RelativeTimeField extends js.Object
 
 object RelativeTimeField {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def day: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.day = "day".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.day]
   @scala.inline
-  def day: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.day = this.cast("day")
+  def `day-narrow`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`day-narrow` = "day-narrow".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`day-narrow`]
   @scala.inline
-  def `day-narrow`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`day-narrow` = this.cast("day-narrow")
+  def `day-short`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`day-short` = "day-short".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`day-short`]
   @scala.inline
-  def `day-short`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`day-short` = this.cast("day-short")
+  def hour: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.hour = "hour".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.hour]
   @scala.inline
-  def hour: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.hour = this.cast("hour")
+  def `hour-narrow`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`hour-narrow` = "hour-narrow".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`hour-narrow`]
   @scala.inline
-  def `hour-narrow`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`hour-narrow` = this.cast("hour-narrow")
+  def `hour-short`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`hour-short` = "hour-short".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`hour-short`]
   @scala.inline
-  def `hour-short`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`hour-short` = this.cast("hour-short")
+  def minute: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.minute = "minute".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.minute]
   @scala.inline
-  def minute: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.minute = this.cast("minute")
+  def `minute-narrow`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`minute-narrow` = "minute-narrow".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`minute-narrow`]
   @scala.inline
-  def `minute-narrow`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`minute-narrow` = this.cast("minute-narrow")
+  def `minute-short`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`minute-short` = "minute-short".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`minute-short`]
   @scala.inline
-  def `minute-short`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`minute-short` = this.cast("minute-short")
+  def month: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.month = "month".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.month]
   @scala.inline
-  def month: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.month = this.cast("month")
+  def `month-narrow`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`month-narrow` = "month-narrow".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`month-narrow`]
   @scala.inline
-  def `month-narrow`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`month-narrow` = this.cast("month-narrow")
+  def `month-short`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`month-short` = "month-short".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`month-short`]
   @scala.inline
-  def `month-short`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`month-short` = this.cast("month-short")
+  def quarter: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.quarter = "quarter".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.quarter]
   @scala.inline
-  def quarter: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.quarter = this.cast("quarter")
+  def `quarter-narrow`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`quarter-narrow` = "quarter-narrow".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`quarter-narrow`]
   @scala.inline
-  def `quarter-narrow`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`quarter-narrow` = this.cast("quarter-narrow")
+  def `quarter-short`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`quarter-short` = "quarter-short".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`quarter-short`]
   @scala.inline
-  def `quarter-short`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`quarter-short` = this.cast("quarter-short")
+  def second: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.second = "second".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.second]
   @scala.inline
-  def second: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.second = this.cast("second")
+  def `second-narrow`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`second-narrow` = "second-narrow".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`second-narrow`]
   @scala.inline
-  def `second-narrow`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`second-narrow` = this.cast("second-narrow")
+  def `second-short`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`second-short` = "second-short".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`second-short`]
   @scala.inline
-  def `second-short`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`second-short` = this.cast("second-short")
+  def week: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.week = "week".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.week]
   @scala.inline
-  def week: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.week = this.cast("week")
+  def `week-narrow`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`week-narrow` = "week-narrow".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`week-narrow`]
   @scala.inline
-  def `week-narrow`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`week-narrow` = this.cast("week-narrow")
+  def `week-short`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`week-short` = "week-short".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`week-short`]
   @scala.inline
-  def `week-short`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`week-short` = this.cast("week-short")
+  def year: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.year = "year".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.year]
   @scala.inline
-  def year: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.year = this.cast("year")
+  def `year-narrow`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`year-narrow` = "year-narrow".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`year-narrow`]
   @scala.inline
-  def `year-narrow`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`year-narrow` = this.cast("year-narrow")
-  @scala.inline
-  def `year-short`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`year-short` = this.cast("year-short")
+  def `year-short`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`year-short` = "year-short".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`year-short`]
 }
 

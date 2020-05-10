@@ -58,34 +58,161 @@ trait ServiceQuota extends js.Object {
 
 object ServiceQuota {
   @scala.inline
-  def apply(
-    Adjustable: js.UndefOr[Boolean] = js.undefined,
-    ErrorReason: ErrorReason = null,
-    GlobalQuota: js.UndefOr[Boolean] = js.undefined,
-    Period: QuotaPeriod = null,
-    QuotaArn: QuotaArn = null,
-    QuotaCode: QuotaCode = null,
-    QuotaName: QuotaName = null,
-    ServiceCode: ServiceCode = null,
-    ServiceName: ServiceName = null,
-    Unit: QuotaUnit = null,
-    UsageMetric: MetricInfo = null,
-    Value: Int | Double = null
-  ): ServiceQuota = {
+  def apply(): ServiceQuota = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(Adjustable)) __obj.updateDynamic("Adjustable")(Adjustable.asInstanceOf[js.Any])
-    if (ErrorReason != null) __obj.updateDynamic("ErrorReason")(ErrorReason.asInstanceOf[js.Any])
-    if (!js.isUndefined(GlobalQuota)) __obj.updateDynamic("GlobalQuota")(GlobalQuota.asInstanceOf[js.Any])
-    if (Period != null) __obj.updateDynamic("Period")(Period.asInstanceOf[js.Any])
-    if (QuotaArn != null) __obj.updateDynamic("QuotaArn")(QuotaArn.asInstanceOf[js.Any])
-    if (QuotaCode != null) __obj.updateDynamic("QuotaCode")(QuotaCode.asInstanceOf[js.Any])
-    if (QuotaName != null) __obj.updateDynamic("QuotaName")(QuotaName.asInstanceOf[js.Any])
-    if (ServiceCode != null) __obj.updateDynamic("ServiceCode")(ServiceCode.asInstanceOf[js.Any])
-    if (ServiceName != null) __obj.updateDynamic("ServiceName")(ServiceName.asInstanceOf[js.Any])
-    if (Unit != null) __obj.updateDynamic("Unit")(Unit.asInstanceOf[js.Any])
-    if (UsageMetric != null) __obj.updateDynamic("UsageMetric")(UsageMetric.asInstanceOf[js.Any])
-    if (Value != null) __obj.updateDynamic("Value")(Value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceQuota]
   }
+  @scala.inline
+  implicit class ServiceQuotaOps[Self <: ServiceQuota] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdjustable(value: QuotaAdjustable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Adjustable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdjustable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Adjustable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorReason(value: ErrorReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlobalQuota(value: GlobalQuota): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalQuota")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalQuota: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalQuota")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeriod(value: QuotaPeriod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Period")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Period")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuotaArn(value: QuotaArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QuotaArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuotaArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QuotaArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuotaCode(value: QuotaCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QuotaCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuotaCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QuotaCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuotaName(value: QuotaName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QuotaName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuotaName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QuotaName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceCode(value: ServiceCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceName(value: ServiceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnit(value: QuotaUnit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsageMetric(value: MetricInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UsageMetric")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsageMetric: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UsageMetric")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: QuotaValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

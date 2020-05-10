@@ -4,17 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PKCS8Info extends js.Object {
   /** hexadecimal string of encrypted private key */
-  var ciphertext: String
+  var ciphertext: String = js.native
   /** encryption algorithm name (currently TripleDES only) */
-  var encryptionSchemeAlg: String
+  var encryptionSchemeAlg: String = js.native
   /** initial vector for encryption algorithm */
-  var encryptionSchemeIV: String
+  var encryptionSchemeIV: String = js.native
   /** hexadecimal string of PBKDF2 salt */
-  var pbkdf2Salt: String
+  var pbkdf2Salt: String = js.native
   /** iteration count */
-  var pkbdf2Iter: String
+  var pkbdf2Iter: String = js.native
 }
 
 object PKCS8Info {
@@ -27,8 +28,45 @@ object PKCS8Info {
     pkbdf2Iter: String
   ): PKCS8Info = {
     val __obj = js.Dynamic.literal(ciphertext = ciphertext.asInstanceOf[js.Any], encryptionSchemeAlg = encryptionSchemeAlg.asInstanceOf[js.Any], encryptionSchemeIV = encryptionSchemeIV.asInstanceOf[js.Any], pbkdf2Salt = pbkdf2Salt.asInstanceOf[js.Any], pkbdf2Iter = pkbdf2Iter.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PKCS8Info]
   }
+  @scala.inline
+  implicit class PKCS8InfoOps[Self <: PKCS8Info] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCiphertext(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ciphertext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEncryptionSchemeAlg(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionSchemeAlg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEncryptionSchemeIV(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionSchemeIV")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPbkdf2Salt(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pbkdf2Salt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPkbdf2Iter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pkbdf2Iter")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

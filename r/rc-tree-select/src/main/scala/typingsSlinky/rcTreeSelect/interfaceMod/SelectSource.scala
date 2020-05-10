@@ -14,14 +14,12 @@ trait SelectSource extends js.Object
 
 object SelectSource {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def clear: typingsSlinky.rcTreeSelect.rcTreeSelectStrings.clear = "clear".asInstanceOf[typingsSlinky.rcTreeSelect.rcTreeSelectStrings.clear]
   @scala.inline
-  def clear: typingsSlinky.rcTreeSelect.rcTreeSelectStrings.clear = this.cast("clear")
+  def input: typingsSlinky.rcTreeSelect.rcTreeSelectStrings.input = "input".asInstanceOf[typingsSlinky.rcTreeSelect.rcTreeSelectStrings.input]
   @scala.inline
-  def input: typingsSlinky.rcTreeSelect.rcTreeSelectStrings.input = this.cast("input")
+  def option: typingsSlinky.rcTreeSelect.rcTreeSelectStrings.option = "option".asInstanceOf[typingsSlinky.rcTreeSelect.rcTreeSelectStrings.option]
   @scala.inline
-  def option: typingsSlinky.rcTreeSelect.rcTreeSelectStrings.option = this.cast("option")
-  @scala.inline
-  def selection: typingsSlinky.rcTreeSelect.rcTreeSelectStrings.selection = this.cast("selection")
+  def selection: typingsSlinky.rcTreeSelect.rcTreeSelectStrings.selection = "selection".asInstanceOf[typingsSlinky.rcTreeSelect.rcTreeSelectStrings.selection]
 }
 

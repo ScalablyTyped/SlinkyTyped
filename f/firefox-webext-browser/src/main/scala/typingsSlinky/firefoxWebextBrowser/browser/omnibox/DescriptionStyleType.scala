@@ -15,12 +15,10 @@ trait DescriptionStyleType extends js.Object
 
 object DescriptionStyleType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dim: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.dim = "dim".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.dim]
   @scala.inline
-  def dim: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.dim = this.cast("dim")
+  def `match`: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.`match` = "match".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.`match`]
   @scala.inline
-  def `match`: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.`match` = this.cast("match")
-  @scala.inline
-  def url: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.url = this.cast("url")
+  def url: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.url = "url".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.url]
 }
 

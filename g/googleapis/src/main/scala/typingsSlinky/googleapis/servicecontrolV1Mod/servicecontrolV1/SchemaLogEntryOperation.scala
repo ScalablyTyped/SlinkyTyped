@@ -36,18 +36,65 @@ trait SchemaLogEntryOperation extends js.Object {
 
 object SchemaLogEntryOperation {
   @scala.inline
-  def apply(
-    first: js.UndefOr[Boolean] = js.undefined,
-    id: String = null,
-    last: js.UndefOr[Boolean] = js.undefined,
-    producer: String = null
-  ): SchemaLogEntryOperation = {
+  def apply(): SchemaLogEntryOperation = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(first)) __obj.updateDynamic("first")(first.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(last)) __obj.updateDynamic("last")(last.asInstanceOf[js.Any])
-    if (producer != null) __obj.updateDynamic("producer")(producer.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLogEntryOperation]
   }
+  @scala.inline
+  implicit class SchemaLogEntryOperationOps[Self <: SchemaLogEntryOperation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFirst(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirst: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLast(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("last")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLast: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("last")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProducer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("producer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProducer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("producer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

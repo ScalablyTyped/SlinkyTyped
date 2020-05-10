@@ -7,5 +7,6 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("caches")
 @js.native
-object caches extends TopLevel[CacheStorage]
+object caches
+  extends TopLevel[org.scalajs.dom.experimental.serviceworkers.CacheStorage]
 

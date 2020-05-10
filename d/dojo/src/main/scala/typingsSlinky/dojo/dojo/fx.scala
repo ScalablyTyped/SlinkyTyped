@@ -12,17 +12,18 @@ import scala.scalajs.js.annotation._
   * Effects library on top of Base animations
   *
   */
+@js.native
 trait fx extends js.Object {
   /**
     * Collection of easing functions to use beyond the default
     * dojo._defaultEasing function.
     *
     */
-  var easing: js.Object
+  var easing: js.Object = js.native
   /**
     *
     */
-  def Toggler(): Unit
+  def Toggler(): Unit = js.native
   /**
     * Chain a list of dojo/_base/fx.Animations to run in sequence
     * Return a dojo/_base/fx.Animation which will play all passed
@@ -33,7 +34,7 @@ trait fx extends js.Object {
     *
     * @param animations
     */
-  def chain(animations: js.Array[Animation]): js.Any
+  def chain(animations: js.Array[Animation]): js.Any = js.native
   /**
     * Combine a list of dojo/_base/fx.Animations to run in parallel
     * Combine an array of dojo/_base/fx.Animations to run in parallel,
@@ -42,7 +43,7 @@ trait fx extends js.Object {
     *
     * @param animations
     */
-  def combine(animations: js.Array[Animation]): js.Any
+  def combine(animations: js.Array[Animation]): js.Any = js.native
   /**
     * Slide a node to a new top/left position
     * Returns an animation that will slide "node"
@@ -51,7 +52,7 @@ trait fx extends js.Object {
     *
     * @param args A hash-map of standard dojo/_base/fx.Animation constructor properties(such as easing: node: duration: and so on). Special args membersare top and left, which indicate the new position to slide to.
     */
-  def slideTo(args: js.Object): js.Any
+  def slideTo(args: js.Object): js.Any = js.native
   /**
     * Expand a node to it's natural height.
     * Returns an animation that will expand the
@@ -61,7 +62,7 @@ trait fx extends js.Object {
     *
     * @param args A hash-map of standard dojo/_base/fx.Animation constructor properties(such as easing: node: duration: and so on)
     */
-  def wipeIn(args: js.Object): js.Any
+  def wipeIn(args: js.Object): js.Any = js.native
   /**
     * Shrink a node to nothing and hide it.
     * Returns an animation that will shrink node defined in "args"
@@ -69,7 +70,7 @@ trait fx extends js.Object {
     *
     * @param args A hash-map of standard dojo/_base/fx.Animation constructor properties(such as easing: node: duration: and so on)
     */
-  def wipeOut(args: js.Object): js.Any
+  def wipeOut(args: js.Object): js.Any = js.native
 }
 
 @JSGlobal("dojo.fx")

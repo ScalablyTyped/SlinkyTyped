@@ -18,11 +18,41 @@ trait EnvironmentPlatform extends js.Object {
 
 object EnvironmentPlatform {
   @scala.inline
-  def apply(languages: EnvironmentLanguages = null, platform: PlatformType = null): EnvironmentPlatform = {
+  def apply(): EnvironmentPlatform = {
     val __obj = js.Dynamic.literal()
-    if (languages != null) __obj.updateDynamic("languages")(languages.asInstanceOf[js.Any])
-    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnvironmentPlatform]
   }
+  @scala.inline
+  implicit class EnvironmentPlatformOps[Self <: EnvironmentPlatform] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLanguages(value: EnvironmentLanguages): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatform(value: PlatformType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

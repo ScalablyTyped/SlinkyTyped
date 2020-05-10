@@ -18,22 +18,20 @@ trait EditorOption extends js.Object
 
 object EditorOption {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def enableBasicAutocompletion: typingsSlinky.reactAce.reactAceStrings.enableBasicAutocompletion = "enableBasicAutocompletion".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.enableBasicAutocompletion]
   @scala.inline
-  def enableBasicAutocompletion: typingsSlinky.reactAce.reactAceStrings.enableBasicAutocompletion = this.cast("enableBasicAutocompletion")
+  def enableLiveAutocompletion: typingsSlinky.reactAce.reactAceStrings.enableLiveAutocompletion = "enableLiveAutocompletion".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.enableLiveAutocompletion]
   @scala.inline
-  def enableLiveAutocompletion: typingsSlinky.reactAce.reactAceStrings.enableLiveAutocompletion = this.cast("enableLiveAutocompletion")
+  def enableSnippets: typingsSlinky.reactAce.reactAceStrings.enableSnippets = "enableSnippets".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.enableSnippets]
   @scala.inline
-  def enableSnippets: typingsSlinky.reactAce.reactAceStrings.enableSnippets = this.cast("enableSnippets")
+  def highlightActiveLine: typingsSlinky.reactAce.reactAceStrings.highlightActiveLine = "highlightActiveLine".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.highlightActiveLine]
   @scala.inline
-  def highlightActiveLine: typingsSlinky.reactAce.reactAceStrings.highlightActiveLine = this.cast("highlightActiveLine")
+  def maxLines: typingsSlinky.reactAce.reactAceStrings.maxLines = "maxLines".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.maxLines]
   @scala.inline
-  def maxLines: typingsSlinky.reactAce.reactAceStrings.maxLines = this.cast("maxLines")
+  def minLines: typingsSlinky.reactAce.reactAceStrings.minLines = "minLines".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.minLines]
   @scala.inline
-  def minLines: typingsSlinky.reactAce.reactAceStrings.minLines = this.cast("minLines")
+  def readOnly: typingsSlinky.reactAce.reactAceStrings.readOnly = "readOnly".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.readOnly]
   @scala.inline
-  def readOnly: typingsSlinky.reactAce.reactAceStrings.readOnly = this.cast("readOnly")
-  @scala.inline
-  def tabSize: typingsSlinky.reactAce.reactAceStrings.tabSize = this.cast("tabSize")
+  def tabSize: typingsSlinky.reactAce.reactAceStrings.tabSize = "tabSize".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.tabSize]
 }
 

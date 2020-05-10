@@ -22,30 +22,28 @@ trait GoogleActionsOrdersV3VerticalsPurchasePurchaseItemExtensionStatus extends 
 
 object GoogleActionsOrdersV3VerticalsPurchasePurchaseItemExtensionStatus {
   @scala.inline
-  def CANCELLED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANCELLED = this.cast("CANCELLED")
+  def CANCELLED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANCELLED = "CANCELLED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANCELLED]
   @scala.inline
-  def CHANGE_REQUESTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CHANGE_REQUESTED = this.cast("CHANGE_REQUESTED")
+  def CHANGE_REQUESTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CHANGE_REQUESTED = "CHANGE_REQUESTED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CHANGE_REQUESTED]
   @scala.inline
-  def CONFIRMED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CONFIRMED = this.cast("CONFIRMED")
+  def CONFIRMED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CONFIRMED = "CONFIRMED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CONFIRMED]
   @scala.inline
-  def CREATED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CREATED = this.cast("CREATED")
+  def CREATED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CREATED = "CREATED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CREATED]
   @scala.inline
-  def DELIVERED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERED = this.cast("DELIVERED")
+  def DELIVERED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERED = "DELIVERED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERED]
   @scala.inline
-  def IN_PREPARATION: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.IN_PREPARATION = this.cast("IN_PREPARATION")
+  def IN_PREPARATION: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.IN_PREPARATION = "IN_PREPARATION".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.IN_PREPARATION]
   @scala.inline
-  def OUT_OF_STOCK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.OUT_OF_STOCK = this.cast("OUT_OF_STOCK")
+  def OUT_OF_STOCK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.OUT_OF_STOCK = "OUT_OF_STOCK".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.OUT_OF_STOCK]
   @scala.inline
-  def PURCHASE_STATUS_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_UNSPECIFIED = this.cast("PURCHASE_STATUS_UNSPECIFIED")
+  def PURCHASE_STATUS_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_UNSPECIFIED = "PURCHASE_STATUS_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_STATUS_UNSPECIFIED]
   @scala.inline
-  def READY_FOR_PICKUP: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.READY_FOR_PICKUP = this.cast("READY_FOR_PICKUP")
+  def READY_FOR_PICKUP: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.READY_FOR_PICKUP = "READY_FOR_PICKUP".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.READY_FOR_PICKUP]
   @scala.inline
-  def REJECTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REJECTED = this.cast("REJECTED")
+  def REJECTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REJECTED = "REJECTED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REJECTED]
   @scala.inline
-  def RETURNED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RETURNED = this.cast("RETURNED")
+  def RETURNED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RETURNED = "RETURNED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RETURNED]
   @scala.inline
-  def SHIPPED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SHIPPED = this.cast("SHIPPED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SHIPPED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SHIPPED = "SHIPPED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SHIPPED]
 }
 

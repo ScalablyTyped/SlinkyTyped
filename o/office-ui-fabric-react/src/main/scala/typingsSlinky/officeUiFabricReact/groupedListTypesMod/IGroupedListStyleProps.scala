@@ -6,28 +6,71 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Required<std.Pick<office-ui-fabric-react.office-ui-fabric-react/lib/components/GroupedList/GroupedList.types.IGroupedListProps, 'theme'>> & std.Pick<office-ui-fabric-react.office-ui-fabric-react/lib/components/GroupedList/GroupedList.types.IGroupedListProps, 'className'> & {  isCollapsed ? :boolean,   compact ? :boolean} */
+@js.native
 trait IGroupedListStyleProps extends js.Object {
-  var className: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
   /** Whether the group is in compact mode or not */
-  var compact: js.UndefOr[Boolean] = js.undefined
+  var compact: js.UndefOr[Boolean] = js.native
   /** whether or not the group is collapsed */
-  var isCollapsed: js.UndefOr[Boolean] = js.undefined
-  var theme: ITheme
+  var isCollapsed: js.UndefOr[Boolean] = js.native
+  var theme: ITheme = js.native
 }
 
 object IGroupedListStyleProps {
   @scala.inline
-  def apply(
-    theme: ITheme,
-    className: String = null,
-    compact: js.UndefOr[Boolean] = js.undefined,
-    isCollapsed: js.UndefOr[Boolean] = js.undefined
-  ): IGroupedListStyleProps = {
+  def apply(theme: ITheme): IGroupedListStyleProps = {
     val __obj = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
-    if (!js.isUndefined(isCollapsed)) __obj.updateDynamic("isCollapsed")(isCollapsed.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGroupedListStyleProps]
   }
+  @scala.inline
+  implicit class IGroupedListStylePropsOps[Self <: IGroupedListStyleProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTheme(value: ITheme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompact(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsCollapsed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCollapsed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsCollapsed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCollapsed")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait ShopCategory extends js.Object
 
 object ShopCategory {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def connection: typingsSlinky.amapJsApiIndoorMap.amapJsApiIndoorMapStrings.connection = "connection".asInstanceOf[typingsSlinky.amapJsApiIndoorMap.amapJsApiIndoorMapStrings.connection]
   @scala.inline
-  def connection: typingsSlinky.amapJsApiIndoorMap.amapJsApiIndoorMapStrings.connection = this.cast("connection")
+  def public: typingsSlinky.amapJsApiIndoorMap.amapJsApiIndoorMapStrings.public = "public".asInstanceOf[typingsSlinky.amapJsApiIndoorMap.amapJsApiIndoorMapStrings.public]
   @scala.inline
-  def public: typingsSlinky.amapJsApiIndoorMap.amapJsApiIndoorMapStrings.public = this.cast("public")
-  @scala.inline
-  def shop: typingsSlinky.amapJsApiIndoorMap.amapJsApiIndoorMapStrings.shop = this.cast("shop")
+  def shop: typingsSlinky.amapJsApiIndoorMap.amapJsApiIndoorMapStrings.shop = "shop".asInstanceOf[typingsSlinky.amapJsApiIndoorMap.amapJsApiIndoorMapStrings.shop]
 }
 

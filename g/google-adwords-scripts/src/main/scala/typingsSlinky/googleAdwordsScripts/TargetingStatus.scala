@@ -13,12 +13,10 @@ trait TargetingStatus extends js.Object
 
 object TargetingStatus {
   @scala.inline
-  def ACTIVE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.ACTIVE = this.cast("ACTIVE")
+  def ACTIVE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.ACTIVE = "ACTIVE".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.ACTIVE]
   @scala.inline
-  def OBSOLETE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.OBSOLETE = this.cast("OBSOLETE")
+  def OBSOLETE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.OBSOLETE = "OBSOLETE".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.OBSOLETE]
   @scala.inline
-  def PHASING_OUT: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.PHASING_OUT = this.cast("PHASING_OUT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def PHASING_OUT: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.PHASING_OUT = "PHASING_OUT".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.PHASING_OUT]
 }
 

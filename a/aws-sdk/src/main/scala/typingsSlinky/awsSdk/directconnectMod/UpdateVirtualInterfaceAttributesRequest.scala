@@ -18,10 +18,35 @@ trait UpdateVirtualInterfaceAttributesRequest extends js.Object {
 
 object UpdateVirtualInterfaceAttributesRequest {
   @scala.inline
-  def apply(virtualInterfaceId: VirtualInterfaceId, mtu: Int | Double = null): UpdateVirtualInterfaceAttributesRequest = {
+  def apply(virtualInterfaceId: VirtualInterfaceId): UpdateVirtualInterfaceAttributesRequest = {
     val __obj = js.Dynamic.literal(virtualInterfaceId = virtualInterfaceId.asInstanceOf[js.Any])
-    if (mtu != null) __obj.updateDynamic("mtu")(mtu.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateVirtualInterfaceAttributesRequest]
   }
+  @scala.inline
+  implicit class UpdateVirtualInterfaceAttributesRequestOps[Self <: UpdateVirtualInterfaceAttributesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVirtualInterfaceId(value: VirtualInterfaceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualInterfaceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMtu(value: MTU): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mtu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMtu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mtu")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

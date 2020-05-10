@@ -22,16 +22,53 @@ trait NotificationConfiguration extends js.Object {
 
 object NotificationConfiguration {
   @scala.inline
-  def apply(
-    LambdaFunctionConfigurations: LambdaFunctionConfigurationList = null,
-    QueueConfigurations: QueueConfigurationList = null,
-    TopicConfigurations: TopicConfigurationList = null
-  ): NotificationConfiguration = {
+  def apply(): NotificationConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (LambdaFunctionConfigurations != null) __obj.updateDynamic("LambdaFunctionConfigurations")(LambdaFunctionConfigurations.asInstanceOf[js.Any])
-    if (QueueConfigurations != null) __obj.updateDynamic("QueueConfigurations")(QueueConfigurations.asInstanceOf[js.Any])
-    if (TopicConfigurations != null) __obj.updateDynamic("TopicConfigurations")(TopicConfigurations.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotificationConfiguration]
   }
+  @scala.inline
+  implicit class NotificationConfigurationOps[Self <: NotificationConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLambdaFunctionConfigurations(value: LambdaFunctionConfigurationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LambdaFunctionConfigurations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaFunctionConfigurations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LambdaFunctionConfigurations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueueConfigurations(value: QueueConfigurationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueConfigurations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueueConfigurations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueConfigurations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopicConfigurations(value: TopicConfigurationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicConfigurations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopicConfigurations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicConfigurations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

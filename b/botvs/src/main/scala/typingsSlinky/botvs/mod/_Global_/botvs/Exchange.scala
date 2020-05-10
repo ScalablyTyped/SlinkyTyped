@@ -1,14 +1,42 @@
 package typingsSlinky.botvs.mod._Global_.botvs
 
+import typingsSlinky.botvs.botvsStrings.Buy
+import typingsSlinky.botvs.botvsStrings.CancelOrder
+import typingsSlinky.botvs.botvsStrings.GetAccount
+import typingsSlinky.botvs.botvsStrings.GetBaseCurrency
+import typingsSlinky.botvs.botvsStrings.GetCurrency
+import typingsSlinky.botvs.botvsStrings.GetDepth
+import typingsSlinky.botvs.botvsStrings.GetFee
+import typingsSlinky.botvs.botvsStrings.GetLabel
+import typingsSlinky.botvs.botvsStrings.GetMinPrice
+import typingsSlinky.botvs.botvsStrings.GetMinStock
+import typingsSlinky.botvs.botvsStrings.GetName
+import typingsSlinky.botvs.botvsStrings.GetOrder
+import typingsSlinky.botvs.botvsStrings.GetOrders
+import typingsSlinky.botvs.botvsStrings.GetPosition
+import typingsSlinky.botvs.botvsStrings.GetRate
+import typingsSlinky.botvs.botvsStrings.GetRawJSON
+import typingsSlinky.botvs.botvsStrings.GetRecords
+import typingsSlinky.botvs.botvsStrings.GetTicker
+import typingsSlinky.botvs.botvsStrings.GetTrades
+import typingsSlinky.botvs.botvsStrings.GetUSDCNY
+import typingsSlinky.botvs.botvsStrings.IO
+import typingsSlinky.botvs.botvsStrings.Log
+import typingsSlinky.botvs.botvsStrings.Sell
+import typingsSlinky.botvs.botvsStrings.SetContractType
+import typingsSlinky.botvs.botvsStrings.SetDirection
+import typingsSlinky.botvs.botvsStrings.SetMarginLevel
+import typingsSlinky.botvs.botvsStrings.SetPrecision
+import typingsSlinky.botvs.botvsStrings.SetRate
 import typingsSlinky.botvs.botvsStrings.api
-import typingsSlinky.botvs.botvsStrings.buy
+import typingsSlinky.botvs.botvsStrings.buy_
 import typingsSlinky.botvs.botvsStrings.closebuy
 import typingsSlinky.botvs.botvsStrings.closebuy_today
 import typingsSlinky.botvs.botvsStrings.closesell
 import typingsSlinky.botvs.botvsStrings.closesell_today
 import typingsSlinky.botvs.botvsStrings.cny
 import typingsSlinky.botvs.botvsStrings.currency
-import typingsSlinky.botvs.botvsStrings.sell
+import typingsSlinky.botvs.botvsStrings.sell_
 import typingsSlinky.botvs.botvsStrings.usd
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -192,7 +220,10 @@ trait Exchange extends js.Object {
     * @param Args
     * @return {botvs.AsyncJob<T>}
     */
-  def Go[T](Method: String, Args: js.Any*): AsyncJob[T] = js.native
+  def Go[T](
+    Method: /* keyof botvs.botvs._Global_.botvs.Exchange */ GetName | GetLabel | GetUSDCNY | GetRate | SetRate | SetPrecision | GetCurrency | GetBaseCurrency | GetTicker | GetDepth | GetTrades | GetRecords | GetAccount | Buy | Sell | GetOrders | GetOrder | CancelOrder | Log | GetMinStock | GetMinPrice | GetFee | GetRawJSON | typingsSlinky.botvs.botvsStrings.Go | IO | GetPosition | SetMarginLevel | SetDirection | SetContractType,
+    Args: js.Any*
+  ): AsyncJob[T] = js.native
   def IO[T](Api: String): T = js.native
   def IO[T](Api: String, ApiName: String): T = js.native
   def IO[T](Api: String, ApiName: String, Args: String): T = js.native
@@ -344,7 +375,7 @@ trait Exchange extends js.Object {
     * @constructor
     */
   @JSName("SetDirection")
-  def SetDirection_buy(Direction: buy): Unit = js.native
+  def SetDirection_buy(Direction: buy_): Unit = js.native
   @JSName("SetDirection")
   def SetDirection_closebuy(Direction: closebuy): Unit = js.native
   @JSName("SetDirection")
@@ -354,7 +385,7 @@ trait Exchange extends js.Object {
   @JSName("SetDirection")
   def SetDirection_closeselltoday(Direction: closesell_today): Unit = js.native
   @JSName("SetDirection")
-  def SetDirection_sell(Direction: sell): Unit = js.native
+  def SetDirection_sell(Direction: sell_): Unit = js.native
   /**
     * 设置杆杠大小
     *

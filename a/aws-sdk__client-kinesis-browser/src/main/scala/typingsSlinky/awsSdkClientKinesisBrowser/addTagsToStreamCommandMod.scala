@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkClientKinesisBrowser
 
+import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientKinesisBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientKinesisBrowser.kinesisConfigurationMod.KinesisResolvedConfiguration
 import typingsSlinky.awsSdkClientKinesisBrowser.outputTypesUnionMod.OutputTypesUnion
@@ -8,7 +9,6 @@ import typingsSlinky.awsSdkClientKinesisBrowser.typesAddTagsToStreamOutputMod.Ad
 import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.std.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,16 +26,9 @@ object addTagsToStreamCommandMod extends js.Object {
           Blob
         ] {
     def this(input: AddTagsToStreamInput) = this()
-    /* CompleteClass */
-    override val input: AddTagsToStreamInput = js.native
-    val middlewareStack: MiddlewareStack[AddTagsToStreamInput, AddTagsToStreamOutput, org.scalajs.dom.raw.Blob] = js.native
+    val middlewareStack: MiddlewareStack[AddTagsToStreamInput, AddTagsToStreamOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
-      configuration: KinesisResolvedConfiguration
-    ): Handler[AddTagsToStreamInput, AddTagsToStreamOutput] = js.native
-    /* CompleteClass */
-    override def resolveMiddleware(
-      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KinesisResolvedConfiguration
     ): Handler[AddTagsToStreamInput, AddTagsToStreamOutput] = js.native
   }

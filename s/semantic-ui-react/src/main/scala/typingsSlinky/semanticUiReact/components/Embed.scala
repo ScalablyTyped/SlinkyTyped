@@ -1,12 +1,13 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.semanticUiReact.embedEmbedMod.EmbedProps
 import typingsSlinky.semanticUiReact.embedMod.default
 import typingsSlinky.semanticUiReact.genericMod.HtmlIframeProps
@@ -22,52 +23,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Embed
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Embed {
   @JSImport("semantic-ui-react/dist/commonjs/modules/Embed", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id */
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    as: js.Any = null,
-    aspectRatio: `4Colon3` | `16Colon9` | `21Colon9` = null,
-    autoplay: js.UndefOr[Boolean] = js.undefined,
-    brandedUI: js.UndefOr[Boolean] = js.undefined,
-    color: String = null,
-    content: SemanticShorthandContent = null,
-    defaultActive: js.UndefOr[Boolean] = js.undefined,
-    hd: js.UndefOr[Boolean] = js.undefined,
-    icon: SemanticShorthandItem[IconProps] = null,
-    iframe: SemanticShorthandItem[HtmlIframeProps] = null,
-    onClick: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ EmbedProps) => Unit = null,
-    placeholder: String = null,
-    source: youtube | vimeo = null,
-    url: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (aspectRatio != null) __obj.updateDynamic("aspectRatio")(aspectRatio.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.asInstanceOf[js.Any])
-    if (!js.isUndefined(brandedUI)) __obj.updateDynamic("brandedUI")(brandedUI.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultActive)) __obj.updateDynamic("defaultActive")(defaultActive.asInstanceOf[js.Any])
-    if (!js.isUndefined(hd)) __obj.updateDynamic("hd")(hd.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (iframe != null) __obj.updateDynamic("iframe")(iframe.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def aspectRatio(value: `4Colon3` | `16Colon9` | `21Colon9`): this.type = set("aspectRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoplay(value: Boolean): this.type = set("autoplay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def brandedUI(value: Boolean): this.type = set("brandedUI", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultActive(value: Boolean): this.type = set("defaultActive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hd(value: Boolean): this.type = set("hd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconFunction3(
+      value: (/* component */ ReactComponentClass[IconProps], IconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("icon", js.Any.fromFunction3(value))
+    @scala.inline
+    def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iframeReactElement(value: ReactElement): this.type = set("iframe", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iframeFunction3(
+      value: (/* component */ ReactComponentClass[HtmlIframeProps], HtmlIframeProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("iframe", js.Any.fromFunction3(value))
+    @scala.inline
+    def iframe(value: SemanticShorthandItem[HtmlIframeProps]): this.type = set("iframe", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ EmbedProps) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def source(value: youtube | vimeo): this.type = set("source", value.asInstanceOf[js.Any])
+    @scala.inline
+    def url(value: String): this.type = set("url", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.div.tag.type, typingsSlinky.semanticUiReact.embedMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = EmbedProps
+  
+  def withProps(p: EmbedProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Embed.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

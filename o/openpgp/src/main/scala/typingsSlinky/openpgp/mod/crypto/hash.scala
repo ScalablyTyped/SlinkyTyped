@@ -46,7 +46,7 @@ object hash extends js.Object {
     * @param data Data to be hashed
     * @returns hash value
     */
-  def digest(algo: typingsSlinky.openpgp.mod.enums.hash, data: scala.scalajs.js.typedarray.Uint8Array): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def digest(algo: typingsSlinky.openpgp.mod.enums.hash, data: js.typedarray.Uint8Array): js.Promise[js.typedarray.Uint8Array] = js.native
   /**
     * Returns the hash size in bytes of the specified hash algorithm type
     * @param algo Hash algorithm type (See {@link https://tools.ietf.org/html/rfc4880#section-9.4|RFC 4880 9.4})

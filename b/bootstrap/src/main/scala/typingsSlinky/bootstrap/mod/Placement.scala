@@ -15,16 +15,14 @@ trait Placement extends js.Object
 
 object Placement {
   @scala.inline
-  def auto: typingsSlinky.bootstrap.bootstrapStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.bootstrap.bootstrapStrings.auto = "auto".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.auto]
   @scala.inline
-  def bottom: typingsSlinky.bootstrap.bootstrapStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.bootstrap.bootstrapStrings.bottom = "bottom".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.bootstrap.bootstrapStrings.left = "left".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.left]
   @scala.inline
-  def left: typingsSlinky.bootstrap.bootstrapStrings.left = this.cast("left")
+  def right: typingsSlinky.bootstrap.bootstrapStrings.right = "right".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.right]
   @scala.inline
-  def right: typingsSlinky.bootstrap.bootstrapStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.bootstrap.bootstrapStrings.top = this.cast("top")
+  def top: typingsSlinky.bootstrap.bootstrapStrings.top = "top".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.top]
 }
 

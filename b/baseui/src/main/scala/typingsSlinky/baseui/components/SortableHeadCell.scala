@@ -1,9 +1,7 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.AnonHeadCell
 import typingsSlinky.baseui.baseuiStrings.ASC
 import typingsSlinky.baseui.baseuiStrings.DESC
@@ -12,30 +10,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SortableHeadCell
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object SortableHeadCell {
   @JSImport("baseui/table", "SortableHeadCell")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    title: String,
-    direction: ASC | DESC = null,
-    fillClickTarget: js.UndefOr[Boolean] = js.undefined,
-    onSort: () => _ = null,
-    overrides: AnonHeadCell = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (!js.isUndefined(fillClickTarget)) __obj.updateDynamic("fillClickTarget")(fillClickTarget.asInstanceOf[js.Any])
-    if (onSort != null) __obj.updateDynamic("onSort")(js.Any.fromFunction0(onSort))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def direction(value: ASC | DESC): this.type = set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def directionNull: this.type = set("direction", null)
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fillClickTarget(value: Boolean): this.type = set("fillClickTarget", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onSort(value: () => _): this.type = set("onSort", js.Any.fromFunction0(value))
+    @scala.inline
+    def overrides(value: AnonHeadCell): this.type = set("overrides", value.asInstanceOf[js.Any])
   }
-  type Props = SortableHeadCellProps
+  
+  def withProps(p: SortableHeadCellProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(title: String): Builder = {
+    val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SortableHeadCellProps]))
+  }
 }
 

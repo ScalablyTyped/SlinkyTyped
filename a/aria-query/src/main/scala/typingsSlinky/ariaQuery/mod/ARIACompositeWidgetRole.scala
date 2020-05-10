@@ -19,24 +19,22 @@ trait ARIACompositeWidgetRole extends js.Object
 
 object ARIACompositeWidgetRole {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def combobox: typingsSlinky.ariaQuery.ariaQueryStrings.combobox = "combobox".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.combobox]
   @scala.inline
-  def combobox: typingsSlinky.ariaQuery.ariaQueryStrings.combobox = this.cast("combobox")
+  def grid: typingsSlinky.ariaQuery.ariaQueryStrings.grid = "grid".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.grid]
   @scala.inline
-  def grid: typingsSlinky.ariaQuery.ariaQueryStrings.grid = this.cast("grid")
+  def listbox: typingsSlinky.ariaQuery.ariaQueryStrings.listbox = "listbox".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.listbox]
   @scala.inline
-  def listbox: typingsSlinky.ariaQuery.ariaQueryStrings.listbox = this.cast("listbox")
+  def menu: typingsSlinky.ariaQuery.ariaQueryStrings.menu = "menu".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.menu]
   @scala.inline
-  def menu: typingsSlinky.ariaQuery.ariaQueryStrings.menu = this.cast("menu")
+  def menubar: typingsSlinky.ariaQuery.ariaQueryStrings.menubar = "menubar".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.menubar]
   @scala.inline
-  def menubar: typingsSlinky.ariaQuery.ariaQueryStrings.menubar = this.cast("menubar")
+  def radiogroup: typingsSlinky.ariaQuery.ariaQueryStrings.radiogroup = "radiogroup".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.radiogroup]
   @scala.inline
-  def radiogroup: typingsSlinky.ariaQuery.ariaQueryStrings.radiogroup = this.cast("radiogroup")
+  def tablist: typingsSlinky.ariaQuery.ariaQueryStrings.tablist = "tablist".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.tablist]
   @scala.inline
-  def tablist: typingsSlinky.ariaQuery.ariaQueryStrings.tablist = this.cast("tablist")
+  def tree: typingsSlinky.ariaQuery.ariaQueryStrings.tree = "tree".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.tree]
   @scala.inline
-  def tree: typingsSlinky.ariaQuery.ariaQueryStrings.tree = this.cast("tree")
-  @scala.inline
-  def treegrid: typingsSlinky.ariaQuery.ariaQueryStrings.treegrid = this.cast("treegrid")
+  def treegrid: typingsSlinky.ariaQuery.ariaQueryStrings.treegrid = "treegrid".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.treegrid]
 }
 

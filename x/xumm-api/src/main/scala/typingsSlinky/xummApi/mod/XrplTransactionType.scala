@@ -28,42 +28,40 @@ trait XrplTransactionType extends js.Object
 
 object XrplTransactionType {
   @scala.inline
-  def AccountSet: typingsSlinky.xummApi.xummApiStrings.AccountSet = this.cast("AccountSet")
+  def AccountSet: typingsSlinky.xummApi.xummApiStrings.AccountSet = "AccountSet".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.AccountSet]
   @scala.inline
-  def CheckCancel: typingsSlinky.xummApi.xummApiStrings.CheckCancel = this.cast("CheckCancel")
+  def CheckCancel: typingsSlinky.xummApi.xummApiStrings.CheckCancel = "CheckCancel".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.CheckCancel]
   @scala.inline
-  def CheckCash: typingsSlinky.xummApi.xummApiStrings.CheckCash = this.cast("CheckCash")
+  def CheckCash: typingsSlinky.xummApi.xummApiStrings.CheckCash = "CheckCash".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.CheckCash]
   @scala.inline
-  def CheckCreate: typingsSlinky.xummApi.xummApiStrings.CheckCreate = this.cast("CheckCreate")
+  def CheckCreate: typingsSlinky.xummApi.xummApiStrings.CheckCreate = "CheckCreate".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.CheckCreate]
   @scala.inline
-  def DepositPreauth: typingsSlinky.xummApi.xummApiStrings.DepositPreauth = this.cast("DepositPreauth")
+  def DepositPreauth: typingsSlinky.xummApi.xummApiStrings.DepositPreauth = "DepositPreauth".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.DepositPreauth]
   @scala.inline
-  def EnableAmendment: typingsSlinky.xummApi.xummApiStrings.EnableAmendment = this.cast("EnableAmendment")
+  def EnableAmendment: typingsSlinky.xummApi.xummApiStrings.EnableAmendment = "EnableAmendment".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.EnableAmendment]
   @scala.inline
-  def EscrowCancel: typingsSlinky.xummApi.xummApiStrings.EscrowCancel = this.cast("EscrowCancel")
+  def EscrowCancel: typingsSlinky.xummApi.xummApiStrings.EscrowCancel = "EscrowCancel".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.EscrowCancel]
   @scala.inline
-  def EscrowCreate: typingsSlinky.xummApi.xummApiStrings.EscrowCreate = this.cast("EscrowCreate")
+  def EscrowCreate: typingsSlinky.xummApi.xummApiStrings.EscrowCreate = "EscrowCreate".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.EscrowCreate]
   @scala.inline
-  def EscrowFinish: typingsSlinky.xummApi.xummApiStrings.EscrowFinish = this.cast("EscrowFinish")
+  def EscrowFinish: typingsSlinky.xummApi.xummApiStrings.EscrowFinish = "EscrowFinish".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.EscrowFinish]
   @scala.inline
-  def OfferCancel: typingsSlinky.xummApi.xummApiStrings.OfferCancel = this.cast("OfferCancel")
+  def OfferCancel: typingsSlinky.xummApi.xummApiStrings.OfferCancel = "OfferCancel".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.OfferCancel]
   @scala.inline
-  def OfferCreate: typingsSlinky.xummApi.xummApiStrings.OfferCreate = this.cast("OfferCreate")
+  def OfferCreate: typingsSlinky.xummApi.xummApiStrings.OfferCreate = "OfferCreate".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.OfferCreate]
   @scala.inline
-  def Payment: typingsSlinky.xummApi.xummApiStrings.Payment = this.cast("Payment")
+  def Payment: typingsSlinky.xummApi.xummApiStrings.Payment = "Payment".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.Payment]
   @scala.inline
-  def PaymentChannelCreate: typingsSlinky.xummApi.xummApiStrings.PaymentChannelCreate = this.cast("PaymentChannelCreate")
+  def PaymentChannelCreate: typingsSlinky.xummApi.xummApiStrings.PaymentChannelCreate = "PaymentChannelCreate".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.PaymentChannelCreate]
   @scala.inline
-  def PaymentChannelFund: typingsSlinky.xummApi.xummApiStrings.PaymentChannelFund = this.cast("PaymentChannelFund")
+  def PaymentChannelFund: typingsSlinky.xummApi.xummApiStrings.PaymentChannelFund = "PaymentChannelFund".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.PaymentChannelFund]
   @scala.inline
-  def SetFee: typingsSlinky.xummApi.xummApiStrings.SetFee = this.cast("SetFee")
+  def SetFee: typingsSlinky.xummApi.xummApiStrings.SetFee = "SetFee".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.SetFee]
   @scala.inline
-  def SetRegularKey: typingsSlinky.xummApi.xummApiStrings.SetRegularKey = this.cast("SetRegularKey")
+  def SetRegularKey: typingsSlinky.xummApi.xummApiStrings.SetRegularKey = "SetRegularKey".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.SetRegularKey]
   @scala.inline
-  def SignerListSet: typingsSlinky.xummApi.xummApiStrings.SignerListSet = this.cast("SignerListSet")
+  def SignerListSet: typingsSlinky.xummApi.xummApiStrings.SignerListSet = "SignerListSet".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.SignerListSet]
   @scala.inline
-  def TrustSet: typingsSlinky.xummApi.xummApiStrings.TrustSet = this.cast("TrustSet")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TrustSet: typingsSlinky.xummApi.xummApiStrings.TrustSet = "TrustSet".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.TrustSet]
 }
 

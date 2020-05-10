@@ -1,9 +1,8 @@
 package typingsSlinky.reactOnsenui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameIgnoreEdgeWidth
 import typingsSlinky.reactOnsenui.mod.AnimationOptions
 import typingsSlinky.reactOnsenui.mod.TabbarRenderTab
@@ -16,43 +15,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tabbar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactOnsenui.mod.Tabbar] {
+object Tabbar {
   @JSImport("react-onsenui", "Tabbar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, style */
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.Tabbar] {
+    @scala.inline
+    def animation(value: none | slide): this.type = set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animationOptions(value: AnimationOptions): this.type = set("animationOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ignoreEdgeWidth(value: Double): this.type = set("ignoreEdgeWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onPostChange(value: () => Unit): this.type = set("onPostChange", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPreChange(value: () => Unit): this.type = set("onPreChange", js.Any.fromFunction0(value))
+    @scala.inline
+    def onReactive(value: () => Unit): this.type = set("onReactive", js.Any.fromFunction0(value))
+    @scala.inline
+    def onSwipe(value: (/* index */ Double, /* animationOptions */ AnimationOptions) => Unit): this.type = set("onSwipe", js.Any.fromFunction2(value))
+    @scala.inline
+    def position(value: bottom | top | auto): this.type = set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def swipeable(value: Boolean): this.type = set("swipeable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabBorder(value: Boolean): this.type = set("tabBorder", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: HTMLAttributesidclassNameIgnoreEdgeWidth): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     index: Double,
-    renderTabs: () => js.Array[TabbarRenderTab],
-    animation: none | slide = null,
-    animationOptions: AnimationOptions = null,
-    ignoreEdgeWidth: Int | Double = null,
-    onPostChange: () => Unit = null,
-    onPreChange: () => Unit = null,
-    onReactive: () => Unit = null,
-    onSwipe: (/* index */ Double, /* animationOptions */ AnimationOptions) => Unit = null,
-    position: bottom | top | auto = null,
-    swipeable: js.UndefOr[Boolean] = js.undefined,
-    tabBorder: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.Tabbar] = {
-    val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], renderTabs = js.Any.fromFunction0(renderTabs))
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (animationOptions != null) __obj.updateDynamic("animationOptions")(animationOptions.asInstanceOf[js.Any])
-    if (ignoreEdgeWidth != null) __obj.updateDynamic("ignoreEdgeWidth")(ignoreEdgeWidth.asInstanceOf[js.Any])
-    if (onPostChange != null) __obj.updateDynamic("onPostChange")(js.Any.fromFunction0(onPostChange))
-    if (onPreChange != null) __obj.updateDynamic("onPreChange")(js.Any.fromFunction0(onPreChange))
-    if (onReactive != null) __obj.updateDynamic("onReactive")(js.Any.fromFunction0(onReactive))
-    if (onSwipe != null) __obj.updateDynamic("onSwipe")(js.Any.fromFunction2(onSwipe))
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(swipeable)) __obj.updateDynamic("swipeable")(swipeable.asInstanceOf[js.Any])
-    if (!js.isUndefined(tabBorder)) __obj.updateDynamic("tabBorder")(tabBorder.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    renderTabs: (Double, typingsSlinky.reactOnsenui.mod.Tabbar) => js.Array[TabbarRenderTab]
+  ): Builder = {
+    val __props = js.Dynamic.literal(index = index.asInstanceOf[js.Any], renderTabs = js.Any.fromFunction2(renderTabs))
+    new Builder(js.Array(this.component, __props.asInstanceOf[HTMLAttributesidclassNameIgnoreEdgeWidth]))
   }
-  type Props = HTMLAttributesidclassNameIgnoreEdgeWidth
 }
 

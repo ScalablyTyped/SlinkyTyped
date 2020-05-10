@@ -19,11 +19,41 @@ trait UserPoolSchemaStringAttributeConstraints extends js.Object {
 
 object UserPoolSchemaStringAttributeConstraints {
   @scala.inline
-  def apply(maxLength: Input[String] = null, minLength: Input[String] = null): UserPoolSchemaStringAttributeConstraints = {
+  def apply(): UserPoolSchemaStringAttributeConstraints = {
     val __obj = js.Dynamic.literal()
-    if (maxLength != null) __obj.updateDynamic("maxLength")(maxLength.asInstanceOf[js.Any])
-    if (minLength != null) __obj.updateDynamic("minLength")(minLength.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPoolSchemaStringAttributeConstraints]
   }
+  @scala.inline
+  implicit class UserPoolSchemaStringAttributeConstraintsOps[Self <: UserPoolSchemaStringAttributeConstraints] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxLength(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinLength(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minLength")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

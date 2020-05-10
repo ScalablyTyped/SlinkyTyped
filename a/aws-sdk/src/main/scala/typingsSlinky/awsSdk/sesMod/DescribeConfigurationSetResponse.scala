@@ -27,20 +27,77 @@ trait DescribeConfigurationSetResponse extends js.Object {
 
 object DescribeConfigurationSetResponse {
   @scala.inline
-  def apply(
-    ConfigurationSet: ConfigurationSet = null,
-    DeliveryOptions: DeliveryOptions = null,
-    EventDestinations: EventDestinations = null,
-    ReputationOptions: ReputationOptions = null,
-    TrackingOptions: TrackingOptions = null
-  ): DescribeConfigurationSetResponse = {
+  def apply(): DescribeConfigurationSetResponse = {
     val __obj = js.Dynamic.literal()
-    if (ConfigurationSet != null) __obj.updateDynamic("ConfigurationSet")(ConfigurationSet.asInstanceOf[js.Any])
-    if (DeliveryOptions != null) __obj.updateDynamic("DeliveryOptions")(DeliveryOptions.asInstanceOf[js.Any])
-    if (EventDestinations != null) __obj.updateDynamic("EventDestinations")(EventDestinations.asInstanceOf[js.Any])
-    if (ReputationOptions != null) __obj.updateDynamic("ReputationOptions")(ReputationOptions.asInstanceOf[js.Any])
-    if (TrackingOptions != null) __obj.updateDynamic("TrackingOptions")(TrackingOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeConfigurationSetResponse]
   }
+  @scala.inline
+  implicit class DescribeConfigurationSetResponseOps[Self <: DescribeConfigurationSetResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigurationSet(value: ConfigurationSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigurationSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeliveryOptions(value: DeliveryOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeliveryOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventDestinations(value: EventDestinations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventDestinations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventDestinations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventDestinations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReputationOptions(value: ReputationOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReputationOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReputationOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReputationOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrackingOptions(value: TrackingOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrackingOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackingOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrackingOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

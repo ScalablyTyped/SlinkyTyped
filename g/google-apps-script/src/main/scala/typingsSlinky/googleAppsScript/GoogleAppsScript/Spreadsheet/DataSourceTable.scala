@@ -49,13 +49,14 @@ import scala.scalajs.js.annotation._
   *     // Check status after execution.
   *     Logger.log("Data execution state: %s.", dataSourceTable.getStatus().getExecutionState());
   */
+@js.native
 trait DataSourceTable extends js.Object {
-  def forceRefreshData(): DataSourceTable
-  def getDataSource(): DataSource
-  def getRange(): Range
-  def getStatus(): DataExecutionStatus
-  def refreshData(): DataSourceTable
-  def waitForCompletion(timeoutInSeconds: Integer): DataExecutionStatus
+  def forceRefreshData(): DataSourceTable = js.native
+  def getDataSource(): DataSource = js.native
+  def getRange(): Range = js.native
+  def getStatus(): DataExecutionStatus = js.native
+  def refreshData(): DataSourceTable = js.native
+  def waitForCompletion(timeoutInSeconds: Integer): DataExecutionStatus = js.native
 }
 
 object DataSourceTable {
@@ -69,8 +70,51 @@ object DataSourceTable {
     waitForCompletion: Integer => DataExecutionStatus
   ): DataSourceTable = {
     val __obj = js.Dynamic.literal(forceRefreshData = js.Any.fromFunction0(forceRefreshData), getDataSource = js.Any.fromFunction0(getDataSource), getRange = js.Any.fromFunction0(getRange), getStatus = js.Any.fromFunction0(getStatus), refreshData = js.Any.fromFunction0(refreshData), waitForCompletion = js.Any.fromFunction1(waitForCompletion))
-  
     __obj.asInstanceOf[DataSourceTable]
   }
+  @scala.inline
+  implicit class DataSourceTableOps[Self <: DataSourceTable] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withForceRefreshData(value: () => DataSourceTable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceRefreshData")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDataSource(value: () => DataSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDataSource")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRange(value: () => Range): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRange")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStatus(value: () => DataExecutionStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStatus")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRefreshData(value: () => DataSourceTable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshData")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withWaitForCompletion(value: Integer => DataExecutionStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForCompletion")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -26,16 +26,53 @@ trait CreateLedgerRequest extends js.Object {
 
 object CreateLedgerRequest {
   @scala.inline
-  def apply(
-    Name: LedgerName,
-    PermissionsMode: PermissionsMode,
-    DeletionProtection: js.UndefOr[Boolean] = js.undefined,
-    Tags: Tags = null
-  ): CreateLedgerRequest = {
+  def apply(Name: LedgerName, PermissionsMode: PermissionsMode): CreateLedgerRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], PermissionsMode = PermissionsMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(DeletionProtection)) __obj.updateDynamic("DeletionProtection")(DeletionProtection.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateLedgerRequest]
   }
+  @scala.inline
+  implicit class CreateLedgerRequestOps[Self <: CreateLedgerRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: LedgerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPermissionsMode(value: PermissionsMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeletionProtection(value: DeletionProtection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionProtection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeletionProtection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionProtection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

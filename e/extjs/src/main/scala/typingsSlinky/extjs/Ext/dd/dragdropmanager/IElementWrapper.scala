@@ -4,23 +4,65 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IElementWrapper extends js.Object {
   /** [Property] (Object) */
-  var css: js.UndefOr[js.Any] = js.undefined
+  var css: js.UndefOr[js.Any] = js.native
   /** [Property] (Object) */
-  var el: js.UndefOr[js.Any] = js.undefined
+  var el: js.UndefOr[js.Any] = js.native
   /** [Property] (Object) */
-  var id: js.UndefOr[js.Any] = js.undefined
+  var id: js.UndefOr[js.Any] = js.native
 }
 
 object IElementWrapper {
   @scala.inline
-  def apply(css: js.Any = null, el: js.Any = null, id: js.Any = null): IElementWrapper = {
+  def apply(): IElementWrapper = {
     val __obj = js.Dynamic.literal()
-    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
-    if (el != null) __obj.updateDynamic("el")(el.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
     __obj.asInstanceOf[IElementWrapper]
   }
+  @scala.inline
+  implicit class IElementWrapperOps[Self <: IElementWrapper] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCss(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEl(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("el")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("el")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

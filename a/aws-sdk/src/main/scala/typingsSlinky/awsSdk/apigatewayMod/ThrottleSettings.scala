@@ -18,11 +18,41 @@ trait ThrottleSettings extends js.Object {
 
 object ThrottleSettings {
   @scala.inline
-  def apply(burstLimit: Int | scala.Double = null, rateLimit: Int | scala.Double = null): ThrottleSettings = {
+  def apply(): ThrottleSettings = {
     val __obj = js.Dynamic.literal()
-    if (burstLimit != null) __obj.updateDynamic("burstLimit")(burstLimit.asInstanceOf[js.Any])
-    if (rateLimit != null) __obj.updateDynamic("rateLimit")(rateLimit.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThrottleSettings]
   }
+  @scala.inline
+  implicit class ThrottleSettingsOps[Self <: ThrottleSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBurstLimit(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("burstLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBurstLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("burstLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRateLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rateLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRateLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rateLimit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

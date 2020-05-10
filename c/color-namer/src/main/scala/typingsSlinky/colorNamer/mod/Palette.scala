@@ -16,18 +16,16 @@ trait Palette extends js.Object
 
 object Palette {
   @scala.inline
-  def basic: typingsSlinky.colorNamer.colorNamerStrings.basic = this.cast("basic")
+  def basic: typingsSlinky.colorNamer.colorNamerStrings.basic = "basic".asInstanceOf[typingsSlinky.colorNamer.colorNamerStrings.basic]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def html: typingsSlinky.colorNamer.colorNamerStrings.html = "html".asInstanceOf[typingsSlinky.colorNamer.colorNamerStrings.html]
   @scala.inline
-  def html: typingsSlinky.colorNamer.colorNamerStrings.html = this.cast("html")
+  def ntc: typingsSlinky.colorNamer.colorNamerStrings.ntc = "ntc".asInstanceOf[typingsSlinky.colorNamer.colorNamerStrings.ntc]
   @scala.inline
-  def ntc: typingsSlinky.colorNamer.colorNamerStrings.ntc = this.cast("ntc")
+  def pantone: typingsSlinky.colorNamer.colorNamerStrings.pantone = "pantone".asInstanceOf[typingsSlinky.colorNamer.colorNamerStrings.pantone]
   @scala.inline
-  def pantone: typingsSlinky.colorNamer.colorNamerStrings.pantone = this.cast("pantone")
+  def roygbiv: typingsSlinky.colorNamer.colorNamerStrings.roygbiv = "roygbiv".asInstanceOf[typingsSlinky.colorNamer.colorNamerStrings.roygbiv]
   @scala.inline
-  def roygbiv: typingsSlinky.colorNamer.colorNamerStrings.roygbiv = this.cast("roygbiv")
-  @scala.inline
-  def x11: typingsSlinky.colorNamer.colorNamerStrings.x11 = this.cast("x11")
+  def x11: typingsSlinky.colorNamer.colorNamerStrings.x11 = "x11".asInstanceOf[typingsSlinky.colorNamer.colorNamerStrings.x11]
 }
 

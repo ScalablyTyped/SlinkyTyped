@@ -16,18 +16,16 @@ trait ResponseType extends js.Object
 
 object ResponseType {
   @scala.inline
-  def arraybuffer: typingsSlinky.axios.axiosStrings.arraybuffer = this.cast("arraybuffer")
+  def arraybuffer: typingsSlinky.axios.axiosStrings.arraybuffer = "arraybuffer".asInstanceOf[typingsSlinky.axios.axiosStrings.arraybuffer]
   @scala.inline
-  def blob: typingsSlinky.axios.axiosStrings.blob = this.cast("blob")
+  def blob: typingsSlinky.axios.axiosStrings.blob = "blob".asInstanceOf[typingsSlinky.axios.axiosStrings.blob]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def document: typingsSlinky.axios.axiosStrings.document = "document".asInstanceOf[typingsSlinky.axios.axiosStrings.document]
   @scala.inline
-  def document: typingsSlinky.axios.axiosStrings.document = this.cast("document")
+  def json: typingsSlinky.axios.axiosStrings.json = "json".asInstanceOf[typingsSlinky.axios.axiosStrings.json]
   @scala.inline
-  def json: typingsSlinky.axios.axiosStrings.json = this.cast("json")
+  def stream: typingsSlinky.axios.axiosStrings.stream = "stream".asInstanceOf[typingsSlinky.axios.axiosStrings.stream]
   @scala.inline
-  def stream: typingsSlinky.axios.axiosStrings.stream = this.cast("stream")
-  @scala.inline
-  def text: typingsSlinky.axios.axiosStrings.text = this.cast("text")
+  def text: typingsSlinky.axios.axiosStrings.text = "text".asInstanceOf[typingsSlinky.axios.axiosStrings.text]
 }
 

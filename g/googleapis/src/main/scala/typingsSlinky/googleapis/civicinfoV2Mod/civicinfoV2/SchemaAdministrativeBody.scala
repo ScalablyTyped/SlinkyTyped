@@ -73,38 +73,185 @@ trait SchemaAdministrativeBody extends js.Object {
 
 object SchemaAdministrativeBody {
   @scala.inline
-  def apply(
-    absenteeVotingInfoUrl: String = null,
-    addressLines: js.Array[String] = null,
-    ballotInfoUrl: String = null,
-    correspondenceAddress: SchemaSimpleAddressType = null,
-    electionInfoUrl: String = null,
-    electionOfficials: js.Array[SchemaElectionOfficial] = null,
-    electionRegistrationConfirmationUrl: String = null,
-    electionRegistrationUrl: String = null,
-    electionRulesUrl: String = null,
-    hoursOfOperation: String = null,
-    name: String = null,
-    physicalAddress: SchemaSimpleAddressType = null,
-    voter_services: js.Array[String] = null,
-    votingLocationFinderUrl: String = null
-  ): SchemaAdministrativeBody = {
+  def apply(): SchemaAdministrativeBody = {
     val __obj = js.Dynamic.literal()
-    if (absenteeVotingInfoUrl != null) __obj.updateDynamic("absenteeVotingInfoUrl")(absenteeVotingInfoUrl.asInstanceOf[js.Any])
-    if (addressLines != null) __obj.updateDynamic("addressLines")(addressLines.asInstanceOf[js.Any])
-    if (ballotInfoUrl != null) __obj.updateDynamic("ballotInfoUrl")(ballotInfoUrl.asInstanceOf[js.Any])
-    if (correspondenceAddress != null) __obj.updateDynamic("correspondenceAddress")(correspondenceAddress.asInstanceOf[js.Any])
-    if (electionInfoUrl != null) __obj.updateDynamic("electionInfoUrl")(electionInfoUrl.asInstanceOf[js.Any])
-    if (electionOfficials != null) __obj.updateDynamic("electionOfficials")(electionOfficials.asInstanceOf[js.Any])
-    if (electionRegistrationConfirmationUrl != null) __obj.updateDynamic("electionRegistrationConfirmationUrl")(electionRegistrationConfirmationUrl.asInstanceOf[js.Any])
-    if (electionRegistrationUrl != null) __obj.updateDynamic("electionRegistrationUrl")(electionRegistrationUrl.asInstanceOf[js.Any])
-    if (electionRulesUrl != null) __obj.updateDynamic("electionRulesUrl")(electionRulesUrl.asInstanceOf[js.Any])
-    if (hoursOfOperation != null) __obj.updateDynamic("hoursOfOperation")(hoursOfOperation.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (physicalAddress != null) __obj.updateDynamic("physicalAddress")(physicalAddress.asInstanceOf[js.Any])
-    if (voter_services != null) __obj.updateDynamic("voter_services")(voter_services.asInstanceOf[js.Any])
-    if (votingLocationFinderUrl != null) __obj.updateDynamic("votingLocationFinderUrl")(votingLocationFinderUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAdministrativeBody]
   }
+  @scala.inline
+  implicit class SchemaAdministrativeBodyOps[Self <: SchemaAdministrativeBody] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAbsenteeVotingInfoUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("absenteeVotingInfoUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbsenteeVotingInfoUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("absenteeVotingInfoUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddressLines(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddressLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBallotInfoUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ballotInfoUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBallotInfoUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ballotInfoUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCorrespondenceAddress(value: SchemaSimpleAddressType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("correspondenceAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCorrespondenceAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("correspondenceAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElectionInfoUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("electionInfoUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElectionInfoUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("electionInfoUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElectionOfficials(value: js.Array[SchemaElectionOfficial]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("electionOfficials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElectionOfficials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("electionOfficials")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElectionRegistrationConfirmationUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("electionRegistrationConfirmationUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElectionRegistrationConfirmationUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("electionRegistrationConfirmationUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElectionRegistrationUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("electionRegistrationUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElectionRegistrationUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("electionRegistrationUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElectionRulesUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("electionRulesUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElectionRulesUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("electionRulesUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoursOfOperation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoursOfOperation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoursOfOperation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoursOfOperation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPhysicalAddress(value: SchemaSimpleAddressType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("physicalAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhysicalAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("physicalAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVoter_services(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("voter_services")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVoter_services: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("voter_services")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVotingLocationFinderUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("votingLocationFinderUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVotingLocationFinderUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("votingLocationFinderUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

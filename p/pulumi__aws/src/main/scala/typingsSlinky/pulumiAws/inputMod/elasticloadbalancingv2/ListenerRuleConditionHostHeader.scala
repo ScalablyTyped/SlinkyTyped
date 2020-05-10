@@ -15,10 +15,29 @@ trait ListenerRuleConditionHostHeader extends js.Object {
 
 object ListenerRuleConditionHostHeader {
   @scala.inline
-  def apply(values: Input[js.Array[Input[String]]] = null): ListenerRuleConditionHostHeader = {
+  def apply(): ListenerRuleConditionHostHeader = {
     val __obj = js.Dynamic.literal()
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListenerRuleConditionHostHeader]
   }
+  @scala.inline
+  implicit class ListenerRuleConditionHostHeaderOps[Self <: ListenerRuleConditionHostHeader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValues(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

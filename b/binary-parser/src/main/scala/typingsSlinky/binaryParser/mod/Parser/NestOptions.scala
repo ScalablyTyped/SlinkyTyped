@@ -4,22 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NestOptions extends Options {
-  var `type`: typingsSlinky.binaryParser.mod.Parser[_]
+  var `type`: typingsSlinky.binaryParser.mod.Parser[_] = js.native
 }
 
 object NestOptions {
   @scala.inline
-  def apply(
-    `type`: typingsSlinky.binaryParser.mod.Parser[_],
-    assert: String | Double | (js.Function1[/* value */ Data, Boolean]) = null,
-    formatter: /* value */ Data => _ = null
-  ): NestOptions = {
+  def apply(`type`: typingsSlinky.binaryParser.mod.Parser[_]): NestOptions = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (assert != null) __obj.updateDynamic("assert")(assert.asInstanceOf[js.Any])
-    if (formatter != null) __obj.updateDynamic("formatter")(js.Any.fromFunction1(formatter))
     __obj.asInstanceOf[NestOptions]
   }
+  @scala.inline
+  implicit class NestOptionsOps[Self <: NestOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: typingsSlinky.binaryParser.mod.Parser[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

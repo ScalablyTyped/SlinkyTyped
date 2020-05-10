@@ -33,20 +33,77 @@ trait SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCard extends js.Object
 
 object SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCard {
   @scala.inline
-  def apply(
-    buttons: js.Array[SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCardButton] = null,
-    formattedText: String = null,
-    image: SchemaGoogleCloudDialogflowV2beta1IntentMessageImage = null,
-    subtitle: String = null,
-    title: String = null
-  ): SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCard = {
+  def apply(): SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCard = {
     val __obj = js.Dynamic.literal()
-    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
-    if (formattedText != null) __obj.updateDynamic("formattedText")(formattedText.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (subtitle != null) __obj.updateDynamic("subtitle")(subtitle.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCard]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCardOps[Self <: SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCard] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withButtons(value: js.Array[SchemaGoogleCloudDialogflowV2beta1IntentMessageBasicCardButton]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormattedText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormattedText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage(value: SchemaGoogleCloudDialogflowV2beta1IntentMessageImage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubtitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubtitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

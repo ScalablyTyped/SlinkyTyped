@@ -38,22 +38,89 @@ trait RecipientDsnFields extends js.Object {
 
 object RecipientDsnFields {
   @scala.inline
-  def apply(
-    Action: DsnAction,
-    Status: DsnStatus,
-    DiagnosticCode: DiagnosticCode = null,
-    ExtensionFields: ExtensionFieldList = null,
-    FinalRecipient: Address = null,
-    LastAttemptDate: js.Date = null,
-    RemoteMta: RemoteMta = null
-  ): RecipientDsnFields = {
+  def apply(Action: DsnAction, Status: DsnStatus): RecipientDsnFields = {
     val __obj = js.Dynamic.literal(Action = Action.asInstanceOf[js.Any], Status = Status.asInstanceOf[js.Any])
-    if (DiagnosticCode != null) __obj.updateDynamic("DiagnosticCode")(DiagnosticCode.asInstanceOf[js.Any])
-    if (ExtensionFields != null) __obj.updateDynamic("ExtensionFields")(ExtensionFields.asInstanceOf[js.Any])
-    if (FinalRecipient != null) __obj.updateDynamic("FinalRecipient")(FinalRecipient.asInstanceOf[js.Any])
-    if (LastAttemptDate != null) __obj.updateDynamic("LastAttemptDate")(LastAttemptDate.asInstanceOf[js.Any])
-    if (RemoteMta != null) __obj.updateDynamic("RemoteMta")(RemoteMta.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecipientDsnFields]
   }
+  @scala.inline
+  implicit class RecipientDsnFieldsOps[Self <: RecipientDsnFields] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: DsnAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: DsnStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDiagnosticCode(value: DiagnosticCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiagnosticCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiagnosticCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiagnosticCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensionFields(value: ExtensionFieldList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtensionFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensionFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtensionFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFinalRecipient(value: Address): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalRecipient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFinalRecipient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalRecipient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastAttemptDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAttemptDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastAttemptDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAttemptDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoteMta(value: RemoteMta): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoteMta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoteMta: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoteMta")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,5 +18,6 @@ trait Attr extends Node {
 
 @JSGlobal("Attr")
 @js.native
-object Attr extends Instantiable0[Attr]
+object Attr
+  extends Instantiable0[org.scalajs.dom.raw.Attr]
 

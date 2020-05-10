@@ -30,20 +30,77 @@ trait FpgaImageAttribute extends js.Object {
 
 object FpgaImageAttribute {
   @scala.inline
-  def apply(
-    Description: String = null,
-    FpgaImageId: String = null,
-    LoadPermissions: LoadPermissionList = null,
-    Name: String = null,
-    ProductCodes: ProductCodeList = null
-  ): FpgaImageAttribute = {
+  def apply(): FpgaImageAttribute = {
     val __obj = js.Dynamic.literal()
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (FpgaImageId != null) __obj.updateDynamic("FpgaImageId")(FpgaImageId.asInstanceOf[js.Any])
-    if (LoadPermissions != null) __obj.updateDynamic("LoadPermissions")(LoadPermissions.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (ProductCodes != null) __obj.updateDynamic("ProductCodes")(ProductCodes.asInstanceOf[js.Any])
     __obj.asInstanceOf[FpgaImageAttribute]
   }
+  @scala.inline
+  implicit class FpgaImageAttributeOps[Self <: FpgaImageAttribute] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFpgaImageId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FpgaImageId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFpgaImageId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FpgaImageId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadPermissions(value: LoadPermissionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadPermissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadPermissions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductCodes(value: ProductCodeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductCodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductCodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductCodes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

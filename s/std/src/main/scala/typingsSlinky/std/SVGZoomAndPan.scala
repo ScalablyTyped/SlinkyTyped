@@ -5,8 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Used to reflect the zoomAndPan attribute, and is mixed in to other interfaces for elements that support this attribute. */
+@js.native
 trait SVGZoomAndPan extends js.Object {
-  val zoomAndPan: Double
+  val zoomAndPan: Double = js.native
 }
 
 @JSGlobal("SVGZoomAndPan")

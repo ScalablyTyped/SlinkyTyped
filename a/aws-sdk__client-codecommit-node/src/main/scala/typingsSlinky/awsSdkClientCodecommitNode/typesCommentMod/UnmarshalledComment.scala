@@ -4,41 +4,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UnmarshalledComment extends Comment {
   /**
     * <p>The date and time the comment was created, in timestamp format.</p>
     */
   @JSName("creationDate")
-  var creationDate_UnmarshalledComment: js.UndefOr[js.Date] = js.undefined
+  var creationDate_UnmarshalledComment: js.UndefOr[js.Date] = js.native
   /**
     * <p>The date and time the comment was most recently modified, in timestamp format.</p>
     */
   @JSName("lastModifiedDate")
-  var lastModifiedDate_UnmarshalledComment: js.UndefOr[js.Date] = js.undefined
+  var lastModifiedDate_UnmarshalledComment: js.UndefOr[js.Date] = js.native
 }
 
 object UnmarshalledComment {
   @scala.inline
-  def apply(
-    authorArn: String = null,
-    clientRequestToken: String = null,
-    commentId: String = null,
-    content: String = null,
-    creationDate: js.Date = null,
-    deleted: js.UndefOr[Boolean] = js.undefined,
-    inReplyTo: String = null,
-    lastModifiedDate: js.Date = null
-  ): UnmarshalledComment = {
+  def apply(): UnmarshalledComment = {
     val __obj = js.Dynamic.literal()
-    if (authorArn != null) __obj.updateDynamic("authorArn")(authorArn.asInstanceOf[js.Any])
-    if (clientRequestToken != null) __obj.updateDynamic("clientRequestToken")(clientRequestToken.asInstanceOf[js.Any])
-    if (commentId != null) __obj.updateDynamic("commentId")(commentId.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (creationDate != null) __obj.updateDynamic("creationDate")(creationDate.asInstanceOf[js.Any])
-    if (!js.isUndefined(deleted)) __obj.updateDynamic("deleted")(deleted.asInstanceOf[js.Any])
-    if (inReplyTo != null) __obj.updateDynamic("inReplyTo")(inReplyTo.asInstanceOf[js.Any])
-    if (lastModifiedDate != null) __obj.updateDynamic("lastModifiedDate")(lastModifiedDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledComment]
   }
+  @scala.inline
+  implicit class UnmarshalledCommentOps[Self <: UnmarshalledComment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedDate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

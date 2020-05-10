@@ -5,10 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UnifiedNumberFormat extends js.Object {
-  def format(x: Double): String
-  def formatToParts(x: Double): js.Array[UnifiedNumberFormatPart]
-  def resolvedOptions(): ResolvedUnifiedNumberFormatOptions
+  def format(x: Double): String = js.native
+  def formatToParts(x: Double): js.Array[UnifiedNumberFormatPart] = js.native
+  def resolvedOptions(): ResolvedUnifiedNumberFormatOptions = js.native
 }
 
 @JSImport("@formatjs/intl-unified-numberformat/lib/core", "UnifiedNumberFormat")

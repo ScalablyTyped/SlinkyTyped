@@ -1,6 +1,6 @@
 package typingsSlinky.androiduix.android.widget.AbsListView
 
-import typingsSlinky.androiduix.java.lang.Runnable
+import typingsSlinky.androiduix.java_.lang.Runnable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,5 @@ class PerformClick protected ()
      with Runnable {
   def this(arg: typingsSlinky.androiduix.android.widget.AbsListView) = this()
   var mClickMotionPosition: Double = js.native
-  /* CompleteClass */
-  override def run(): js.Any = js.native
 }
 

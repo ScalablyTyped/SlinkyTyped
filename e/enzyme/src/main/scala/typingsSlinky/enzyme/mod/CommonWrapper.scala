@@ -1,12 +1,11 @@
 package typingsSlinky.enzyme.mod
 
 import org.scalajs.dom.raw.Element
+import slinky.core.facade.ReactElement
 import typingsSlinky.cheerio.Cheerio_
 import typingsSlinky.enzyme.AnonIgnoreProps
-import typingsSlinky.react.mod.ReactElement
 import typingsSlinky.std.NonNullable
 import typingsSlinky.std.Pick
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +26,11 @@ trait CommonWrapper[P, S, C] extends js.Object {
   /**
     * Returns whether or not all the given react elements exists in the shallow render tree
     */
-  def containsAllMatchingElements(nodes: js.Array[js.Array[slinky.core.facade.ReactElement] | slinky.core.facade.ReactElement]): Boolean = js.native
+  def containsAllMatchingElements(nodes: js.Array[js.Array[ReactElement] | ReactElement]): Boolean = js.native
   /**
     * Returns whether or not one of the given react elements exists in the shallow render tree.
     */
-  def containsAnyMatchingElements(nodes: js.Array[js.Array[slinky.core.facade.ReactElement] | slinky.core.facade.ReactElement]): Boolean = js.native
+  def containsAnyMatchingElements(nodes: js.Array[js.Array[ReactElement] | ReactElement]): Boolean = js.native
   def containsMatchingElement(node: js.Array[ReactElement]): Boolean = js.native
   /**
     * Returns whether or not a given react element exists in the shallow render tree.
@@ -51,7 +50,7 @@ trait CommonWrapper[P, S, C] extends js.Object {
   /**
     * Returns whether or not the current render tree is equal to the given node, based on the expected value.
     */
-  def equals(node: slinky.core.facade.ReactElement): Boolean = js.native
+  def equals(node: ReactElement): Boolean = js.native
   /**
     * Returns whether or not all of the nodes in the wrapper match the provided selector.
     */
@@ -85,7 +84,7 @@ trait CommonWrapper[P, S, C] extends js.Object {
   /**
     * Returns the node at a given index of the current wrapper.
     */
-  def get(index: Double): slinky.core.facade.ReactElement = js.native
+  def get(index: Double): ReactElement = js.native
   /**
     * Returns the outer most DOMComponent of the current wrapper.
     */
@@ -93,24 +92,24 @@ trait CommonWrapper[P, S, C] extends js.Object {
   /**
     * Returns the wrapper's underlying node.
     */
-  def getElement(): slinky.core.facade.ReactElement = js.native
+  def getElement(): ReactElement = js.native
   /**
     * Returns the wrapper's underlying node.
     */
-  def getElements(): js.Array[slinky.core.facade.ReactElement] = js.native
+  def getElements(): js.Array[ReactElement] = js.native
   /**
     * Returns the wrapper's underlying node.
     */
-  def getNode(): slinky.core.facade.ReactElement = js.native
+  def getNode(): ReactElement = js.native
   /**
     * Returns the wrapper's underlying nodes.
     */
-  def getNodes(): js.Array[slinky.core.facade.ReactElement] = js.native
+  def getNodes(): js.Array[ReactElement] = js.native
   /**
     * Returns whether or not the current node has a className prop including the passed in class name.
     */
   def hasClass(className: String): Boolean = js.native
-  def hasClass(className: RegExp): Boolean = js.native
+  def hasClass(className: js.RegExp): Boolean = js.native
   /**
     * Returns a string of the rendered HTML markup of the current render tree.
     *
@@ -166,7 +165,7 @@ trait CommonWrapper[P, S, C] extends js.Object {
   /**
     * Returns whether or not a given react element matches the shallow render tree.
     */
-  def matchesElement(node: slinky.core.facade.ReactElement): Boolean = js.native
+  def matchesElement(node: ReactElement): Boolean = js.native
   /**
     * Returns the name of the current node of the wrapper.
     */
@@ -181,7 +180,7 @@ trait CommonWrapper[P, S, C] extends js.Object {
     *
     * NOTE: can only be called on a wrapper of a single node.
     */
-  def prop[K /* <: String */](key: K): /* import warning: importer.ImportType#apply Failed type conversion: P[K] */ js.Any = js.native
+  def prop[K /* <: /* keyof P */ String */](key: K): /* import warning: importer.ImportType#apply Failed type conversion: P[K] */ js.Any = js.native
   def prop[T](key: String): T = js.native
   /**
     * Returns the props hash for the current node of the wrapper.
@@ -223,8 +222,8 @@ trait CommonWrapper[P, S, C] extends js.Object {
     *
     * NOTE: can only be called on a wrapper instance that is also the root instance.
     */
-  def setProps[K /* <: String */](props: Pick[P, K]): this.type = js.native
-  def setProps[K /* <: String */](props: Pick[P, K], callback: js.Function0[Unit]): this.type = js.native
+  def setProps[K /* <: /* keyof P */ String */](props: Pick[P, K]): this.type = js.native
+  def setProps[K /* <: /* keyof P */ String */](props: Pick[P, K], callback: js.Function0[Unit]): this.type = js.native
   /**
     * A method to invoke setState() on the root component instance similar to how you might in the definition of
     * the component, and re-renders. This method is useful for testing your component in hard to achieve states,
@@ -235,8 +234,8 @@ trait CommonWrapper[P, S, C] extends js.Object {
     *
     * NOTE: can only be called on a wrapper instance that is also the root instance.
     */
-  def setState[K /* <: String */](state: Pick[S, K]): this.type = js.native
-  def setState[K /* <: String */](state: Pick[S, K], callback: js.Function0[Unit]): this.type = js.native
+  def setState[K /* <: /* keyof S */ String */](state: Pick[S, K]): this.type = js.native
+  def setState[K /* <: /* keyof S */ String */](state: Pick[S, K], callback: js.Function0[Unit]): this.type = js.native
   /**
     * Simulate events.
     * Returns itself.
@@ -267,7 +266,7 @@ trait CommonWrapper[P, S, C] extends js.Object {
     * Returns the state hash for the root node of the wrapper. Optionally pass in a prop name and it will return just that value.
     */
   def state(): S = js.native
-  def state[K /* <: String */](key: K): /* import warning: importer.ImportType#apply Failed type conversion: S[K] */ js.Any = js.native
+  def state[K /* <: /* keyof S */ String */](key: K): /* import warning: importer.ImportType#apply Failed type conversion: S[K] */ js.Any = js.native
   def state[T](key: String): T = js.native
   /**
     * Taps into the wrapper method chain. Helpful for debugging.

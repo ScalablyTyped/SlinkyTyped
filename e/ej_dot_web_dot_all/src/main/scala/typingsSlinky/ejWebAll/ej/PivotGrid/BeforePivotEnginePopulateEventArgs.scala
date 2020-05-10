@@ -4,18 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BeforePivotEnginePopulateEventArgs extends js.Object {
   /** returns the PivotGrid object
     */
-  var pivotGridObject: js.UndefOr[js.Any] = js.undefined
+  var pivotGridObject: js.UndefOr[js.Any] = js.native
 }
 
 object BeforePivotEnginePopulateEventArgs {
   @scala.inline
-  def apply(pivotGridObject: js.Any = null): BeforePivotEnginePopulateEventArgs = {
+  def apply(): BeforePivotEnginePopulateEventArgs = {
     val __obj = js.Dynamic.literal()
-    if (pivotGridObject != null) __obj.updateDynamic("pivotGridObject")(pivotGridObject.asInstanceOf[js.Any])
     __obj.asInstanceOf[BeforePivotEnginePopulateEventArgs]
   }
+  @scala.inline
+  implicit class BeforePivotEnginePopulateEventArgsOps[Self <: BeforePivotEnginePopulateEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPivotGridObject(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotGridObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPivotGridObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotGridObject")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

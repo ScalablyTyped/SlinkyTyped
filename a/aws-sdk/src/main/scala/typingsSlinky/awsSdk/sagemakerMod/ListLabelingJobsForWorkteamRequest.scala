@@ -42,25 +42,107 @@ trait ListLabelingJobsForWorkteamRequest extends js.Object {
 
 object ListLabelingJobsForWorkteamRequest {
   @scala.inline
-  def apply(
-    WorkteamArn: WorkteamArn,
-    CreationTimeAfter: js.Date = null,
-    CreationTimeBefore: js.Date = null,
-    JobReferenceCodeContains: JobReferenceCodeContains = null,
-    MaxResults: Int | Double = null,
-    NextToken: NextToken = null,
-    SortBy: ListLabelingJobsForWorkteamSortByOptions = null,
-    SortOrder: SortOrder = null
-  ): ListLabelingJobsForWorkteamRequest = {
+  def apply(WorkteamArn: WorkteamArn): ListLabelingJobsForWorkteamRequest = {
     val __obj = js.Dynamic.literal(WorkteamArn = WorkteamArn.asInstanceOf[js.Any])
-    if (CreationTimeAfter != null) __obj.updateDynamic("CreationTimeAfter")(CreationTimeAfter.asInstanceOf[js.Any])
-    if (CreationTimeBefore != null) __obj.updateDynamic("CreationTimeBefore")(CreationTimeBefore.asInstanceOf[js.Any])
-    if (JobReferenceCodeContains != null) __obj.updateDynamic("JobReferenceCodeContains")(JobReferenceCodeContains.asInstanceOf[js.Any])
-    if (MaxResults != null) __obj.updateDynamic("MaxResults")(MaxResults.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (SortBy != null) __obj.updateDynamic("SortBy")(SortBy.asInstanceOf[js.Any])
-    if (SortOrder != null) __obj.updateDynamic("SortOrder")(SortOrder.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListLabelingJobsForWorkteamRequest]
   }
+  @scala.inline
+  implicit class ListLabelingJobsForWorkteamRequestOps[Self <: ListLabelingJobsForWorkteamRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWorkteamArn(value: WorkteamArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkteamArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreationTimeAfter(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTimeAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTimeAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTimeAfter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTimeBefore(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTimeBefore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTimeBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTimeBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobReferenceCodeContains(value: JobReferenceCodeContains): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobReferenceCodeContains")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobReferenceCodeContains: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobReferenceCodeContains")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: MaxResults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortBy(value: ListLabelingJobsForWorkteamSortByOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SortBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SortBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortOrder(value: SortOrder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SortOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SortOrder")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

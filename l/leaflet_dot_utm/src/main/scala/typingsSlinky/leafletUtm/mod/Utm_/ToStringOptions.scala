@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ToStringOptions extends js.Object {
   /** Number of decimals for x and y. Default 1. */
-  var decimals: js.UndefOr[Double] = js.undefined
+  var decimals: js.UndefOr[Double] = js.native
   /**
     * String defining the format to use.
     * Default `{x}{sep} {y}{sep} {zone}{band}{sep} {datum}`, where:
@@ -18,31 +19,88 @@ trait ToStringOptions extends js.Object {
     * `{hemi}: Hemisphere, north or south`
     * `{sep}: separator`
     */
-  var format: js.UndefOr[String] = js.undefined
+  var format: js.UndefOr[String] = js.native
   /** String used in the format for field {hemi} in the north hemisphere. Default 'North'. */
-  var north: js.UndefOr[String] = js.undefined
+  var north: js.UndefOr[String] = js.native
   /** Separator used in the format. Default ','. */
-  var sep: js.UndefOr[String] = js.undefined
+  var sep: js.UndefOr[String] = js.native
   /** String used in the format for field {hemi} in the south hemisphere. Default 'South'. */
-  var south: js.UndefOr[String] = js.undefined
+  var south: js.UndefOr[String] = js.native
 }
 
 object ToStringOptions {
   @scala.inline
-  def apply(
-    decimals: Int | Double = null,
-    format: String = null,
-    north: String = null,
-    sep: String = null,
-    south: String = null
-  ): ToStringOptions = {
+  def apply(): ToStringOptions = {
     val __obj = js.Dynamic.literal()
-    if (decimals != null) __obj.updateDynamic("decimals")(decimals.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (north != null) __obj.updateDynamic("north")(north.asInstanceOf[js.Any])
-    if (sep != null) __obj.updateDynamic("sep")(sep.asInstanceOf[js.Any])
-    if (south != null) __obj.updateDynamic("south")(south.asInstanceOf[js.Any])
     __obj.asInstanceOf[ToStringOptions]
   }
+  @scala.inline
+  implicit class ToStringOptionsOps[Self <: ToStringOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDecimals(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decimals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecimals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decimals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNorth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("north")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNorth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("north")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSep(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSouth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("south")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSouth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("south")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

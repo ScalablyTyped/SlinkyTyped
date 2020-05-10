@@ -7,43 +7,44 @@ import scala.scalajs.js.annotation._
 /**
 			 * Metadata about a column in a dataset
 			 */
+@js.native
 trait Column extends js.Object {
   /**
   				 * The alias of this column.
   				 */
-  var alias: String
+  var alias: String = js.native
   /**
   				 * The manifest type of this column's values.
   				 */
-  var dataType: String
+  var dataType: String = js.native
   /**
   				 * Prevents the UI from making the column sortable.
   				 */
-  var disableSorting: js.UndefOr[Boolean] = js.undefined
+  var disableSorting: js.UndefOr[Boolean] = js.native
   /**
   				 * Localized display name for the column
   				 */
-  var displayName: String
+  var displayName: String = js.native
   /**
   				 * The column visibility state.
   				 */
-  var isHidden: js.UndefOr[Boolean] = js.undefined
+  var isHidden: js.UndefOr[Boolean] = js.native
   /**
   				 * Is specific column the primary attrribute of the view's entity
   				 */
-  var isPrimary: js.UndefOr[Boolean] = js.undefined
+  var isPrimary: js.UndefOr[Boolean] = js.native
   /**
   				 * Name of the column, unique in this dataset
   				 */
-  var name: String
+  var name: String = js.native
   /**
   				 * The column order for the layout
   				 */
-  var order: Double
+  var order: Double = js.native
   /**
   				 * Customized column width ratios
   				 */
-  var visualSizeFactor: Double
+  var visualSizeFactor: Double = js.native
 }
 
 object Column {
@@ -54,16 +55,90 @@ object Column {
     displayName: String,
     name: String,
     order: Double,
-    visualSizeFactor: Double,
-    disableSorting: js.UndefOr[Boolean] = js.undefined,
-    isHidden: js.UndefOr[Boolean] = js.undefined,
-    isPrimary: js.UndefOr[Boolean] = js.undefined
+    visualSizeFactor: Double
   ): Column = {
     val __obj = js.Dynamic.literal(alias = alias.asInstanceOf[js.Any], dataType = dataType.asInstanceOf[js.Any], displayName = displayName.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], order = order.asInstanceOf[js.Any], visualSizeFactor = visualSizeFactor.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableSorting)) __obj.updateDynamic("disableSorting")(disableSorting.asInstanceOf[js.Any])
-    if (!js.isUndefined(isHidden)) __obj.updateDynamic("isHidden")(isHidden.asInstanceOf[js.Any])
-    if (!js.isUndefined(isPrimary)) __obj.updateDynamic("isPrimary")(isPrimary.asInstanceOf[js.Any])
     __obj.asInstanceOf[Column]
   }
+  @scala.inline
+  implicit class ColumnOps[Self <: Column] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlias(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDataType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrder(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVisualSizeFactor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visualSizeFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableSorting(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableSorting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableSorting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableSorting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsPrimary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPrimary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsPrimary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPrimary")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

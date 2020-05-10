@@ -44,24 +44,101 @@ trait SchemaRoleAssignment extends js.Object {
 
 object SchemaRoleAssignment {
   @scala.inline
-  def apply(
-    assignedTo: String = null,
-    etag: String = null,
-    kind: String = null,
-    orgUnitId: String = null,
-    roleAssignmentId: String = null,
-    roleId: String = null,
-    scopeType: String = null
-  ): SchemaRoleAssignment = {
+  def apply(): SchemaRoleAssignment = {
     val __obj = js.Dynamic.literal()
-    if (assignedTo != null) __obj.updateDynamic("assignedTo")(assignedTo.asInstanceOf[js.Any])
-    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (orgUnitId != null) __obj.updateDynamic("orgUnitId")(orgUnitId.asInstanceOf[js.Any])
-    if (roleAssignmentId != null) __obj.updateDynamic("roleAssignmentId")(roleAssignmentId.asInstanceOf[js.Any])
-    if (roleId != null) __obj.updateDynamic("roleId")(roleId.asInstanceOf[js.Any])
-    if (scopeType != null) __obj.updateDynamic("scopeType")(scopeType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRoleAssignment]
   }
+  @scala.inline
+  implicit class SchemaRoleAssignmentOps[Self <: SchemaRoleAssignment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssignedTo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assignedTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssignedTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assignedTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEtag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEtag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrgUnitId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orgUnitId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrgUnitId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orgUnitId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleAssignmentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleAssignmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleAssignmentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleAssignmentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScopeType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scopeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScopeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scopeType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

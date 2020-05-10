@@ -5,17 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SortOption extends js.Object {
-  var column: Column
-  var inverter: Double
+  var column: Column = js.native
+  var inverter: Double = js.native
 }
 
 object SortOption {
   @scala.inline
   def apply(column: Column, inverter: Double): SortOption = {
     val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any], inverter = inverter.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SortOption]
   }
+  @scala.inline
+  implicit class SortOptionOps[Self <: SortOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumn(value: Column): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInverter(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inverter")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

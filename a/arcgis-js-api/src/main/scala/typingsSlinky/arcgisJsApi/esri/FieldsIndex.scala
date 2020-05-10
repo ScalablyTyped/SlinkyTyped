@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FieldsIndex extends js.Object {
   /**
     * An array of date fields or field json objects.
@@ -13,7 +14,7 @@ trait FieldsIndex extends js.Object {
     *
     * @default []
     */
-  var dateFields: js.Array[_ | Field]
+  var dateFields: js.Array[_ | Field] = js.native
   /**
     * Returns a field with the specified field name.
     *
@@ -22,7 +23,7 @@ trait FieldsIndex extends js.Object {
     * @param fieldName The name of the field. The name is case-insensitive.
     *
     */
-  def get(fieldName: String): Field
+  def get(fieldName: String): Field = js.native
   /**
     * Checks if a field with the specified field name exists in the layer.
     *
@@ -31,7 +32,7 @@ trait FieldsIndex extends js.Object {
     * @param fieldName The name of the field. The name is case-insensitive.
     *
     */
-  def has(fieldName: String): Boolean
+  def has(fieldName: String): Boolean = js.native
   /**
     * Checks if a field with the specified field name is a date field.
     *
@@ -40,7 +41,7 @@ trait FieldsIndex extends js.Object {
     * @param fieldName The name of the field.
     *
     */
-  def isDateField(fieldName: String): Boolean
+  def isDateField(fieldName: String): Boolean = js.native
 }
 
 @JSGlobal("__esri.FieldsIndex")

@@ -20,16 +20,10 @@ object foundationMod extends js.Object {
       */
     def close(): Unit = js.native
     def close(skipRestoreFocus: Boolean): Unit = js.native
-    // Subclasses should override this method to perform de-initialization routines (de-registering events, etc.)
-    /* CompleteClass */
-    override def destroy(): Unit = js.native
     /** Handle clicks and close if not within menu-surface element. */
     def handleBodyClick(evt: MouseEvent): Unit = js.native
     /** Handle keys that close the surface. */
     def handleKeydown(evt: KeyboardEvent): Unit = js.native
-    // Subclasses should override this method to perform initialization routines (registering events, etc.)
-    /* CompleteClass */
-    override def init(): Unit = js.native
     def isOpen(): Boolean = js.native
     /**
       * Open the menu surface.

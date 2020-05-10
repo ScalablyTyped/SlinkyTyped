@@ -6,17 +6,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonIDBKeyRange extends js.Object {
-  var IDBKeyRange: org.scalajs.dom.raw.IDBKeyRange
-  var indexedDB: IDBFactory
+  var IDBKeyRange: org.scalajs.dom.raw.IDBKeyRange = js.native
+  var indexedDB: IDBFactory = js.native
 }
 
 object AnonIDBKeyRange {
   @scala.inline
   def apply(IDBKeyRange: IDBKeyRange, indexedDB: IDBFactory): AnonIDBKeyRange = {
     val __obj = js.Dynamic.literal(IDBKeyRange = IDBKeyRange.asInstanceOf[js.Any], indexedDB = indexedDB.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonIDBKeyRange]
   }
+  @scala.inline
+  implicit class AnonIDBKeyRangeOps[Self <: AnonIDBKeyRange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIDBKeyRange(value: IDBKeyRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IDBKeyRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndexedDB(value: IDBFactory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexedDB")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

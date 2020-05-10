@@ -1,45 +1,39 @@
 package typingsSlinky.reactTouch.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactTouch.mod.SwipeableConfig
 import typingsSlinky.reactTouch.mod.SwipeableProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Swipeable
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactTouch.mod.Swipeable] {
+object Swipeable {
   @JSImport("react-touch", "Swipeable")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    config: SwipeableConfig = null,
-    onMouseDown: () => Unit = null,
-    onSwipeDown: () => Unit = null,
-    onSwipeLeft: () => Unit = null,
-    onSwipeRight: () => Unit = null,
-    onSwipeUp: () => Unit = null,
-    onTouchStart: () => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactTouch.mod.Swipeable] = {
-    val __obj = js.Dynamic.literal()
-    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction0(onMouseDown))
-    if (onSwipeDown != null) __obj.updateDynamic("onSwipeDown")(js.Any.fromFunction0(onSwipeDown))
-    if (onSwipeLeft != null) __obj.updateDynamic("onSwipeLeft")(js.Any.fromFunction0(onSwipeLeft))
-    if (onSwipeRight != null) __obj.updateDynamic("onSwipeRight")(js.Any.fromFunction0(onSwipeRight))
-    if (onSwipeUp != null) __obj.updateDynamic("onSwipeUp")(js.Any.fromFunction0(onSwipeUp))
-    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction0(onTouchStart))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactTouch.mod.Swipeable] {
+    @scala.inline
+    def config(value: SwipeableConfig): this.type = set("config", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onMouseDown(value: () => Unit): this.type = set("onMouseDown", js.Any.fromFunction0(value))
+    @scala.inline
+    def onSwipeDown(value: () => Unit): this.type = set("onSwipeDown", js.Any.fromFunction0(value))
+    @scala.inline
+    def onSwipeLeft(value: () => Unit): this.type = set("onSwipeLeft", js.Any.fromFunction0(value))
+    @scala.inline
+    def onSwipeRight(value: () => Unit): this.type = set("onSwipeRight", js.Any.fromFunction0(value))
+    @scala.inline
+    def onSwipeUp(value: () => Unit): this.type = set("onSwipeUp", js.Any.fromFunction0(value))
+    @scala.inline
+    def onTouchStart(value: () => Unit): this.type = set("onTouchStart", js.Any.fromFunction0(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactTouch.mod.Swipeable] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactTouch.mod.Swipeable](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SwipeableProps
+  
+  def withProps(p: SwipeableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Swipeable.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

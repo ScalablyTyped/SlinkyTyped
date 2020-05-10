@@ -15,16 +15,14 @@ trait StackOrder extends js.Object
 
 object StackOrder {
   @scala.inline
-  def ascending: typingsSlinky.nivoCore.nivoCoreStrings.ascending = this.cast("ascending")
+  def ascending: typingsSlinky.nivoCore.nivoCoreStrings.ascending = "ascending".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.ascending]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def descending: typingsSlinky.nivoCore.nivoCoreStrings.descending = "descending".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.descending]
   @scala.inline
-  def descending: typingsSlinky.nivoCore.nivoCoreStrings.descending = this.cast("descending")
+  def insideOut: typingsSlinky.nivoCore.nivoCoreStrings.insideOut = "insideOut".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.insideOut]
   @scala.inline
-  def insideOut: typingsSlinky.nivoCore.nivoCoreStrings.insideOut = this.cast("insideOut")
+  def none: typingsSlinky.nivoCore.nivoCoreStrings.none = "none".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.none]
   @scala.inline
-  def none: typingsSlinky.nivoCore.nivoCoreStrings.none = this.cast("none")
-  @scala.inline
-  def reverse: typingsSlinky.nivoCore.nivoCoreStrings.reverse = this.cast("reverse")
+  def reverse: typingsSlinky.nivoCore.nivoCoreStrings.reverse = "reverse".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.reverse]
 }
 

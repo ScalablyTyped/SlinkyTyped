@@ -31,20 +31,77 @@ trait TriggerPredicateCondition extends js.Object {
 
 object TriggerPredicateCondition {
   @scala.inline
-  def apply(
-    crawlState: Input[String] = null,
-    crawlerName: Input[String] = null,
-    jobName: Input[String] = null,
-    logicalOperator: Input[String] = null,
-    state: Input[String] = null
-  ): TriggerPredicateCondition = {
+  def apply(): TriggerPredicateCondition = {
     val __obj = js.Dynamic.literal()
-    if (crawlState != null) __obj.updateDynamic("crawlState")(crawlState.asInstanceOf[js.Any])
-    if (crawlerName != null) __obj.updateDynamic("crawlerName")(crawlerName.asInstanceOf[js.Any])
-    if (jobName != null) __obj.updateDynamic("jobName")(jobName.asInstanceOf[js.Any])
-    if (logicalOperator != null) __obj.updateDynamic("logicalOperator")(logicalOperator.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[TriggerPredicateCondition]
   }
+  @scala.inline
+  implicit class TriggerPredicateConditionOps[Self <: TriggerPredicateCondition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCrawlState(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crawlState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrawlState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crawlState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrawlerName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crawlerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrawlerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crawlerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogicalOperator(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logicalOperator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogicalOperator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logicalOperator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

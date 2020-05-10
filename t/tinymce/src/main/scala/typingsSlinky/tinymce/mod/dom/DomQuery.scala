@@ -1,7 +1,7 @@
 package typingsSlinky.tinymce.mod.dom
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

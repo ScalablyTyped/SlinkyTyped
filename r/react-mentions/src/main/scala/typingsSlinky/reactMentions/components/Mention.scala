@@ -1,10 +1,8 @@
 package typingsSlinky.reactMentions.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMentions.mod.DataFunc
 import typingsSlinky.reactMentions.mod.MentionProps
 import typingsSlinky.reactMentions.mod.SuggestionDataItem
@@ -12,39 +10,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Mention
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Mention {
   @JSImport("react-mentions", "Mention")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    data: js.Array[SuggestionDataItem] | DataFunc,
-    trigger: String | js.RegExp,
-    appendSpaceOnAdd: js.UndefOr[Boolean] = js.undefined,
-    displayTransform: (/* id */ String, /* display */ String) => String = null,
-    isLoading: js.UndefOr[Boolean] = js.undefined,
-    markup: String = null,
-    onAdd: (/* id */ String | Double, /* display */ String) => Unit = null,
-    regex: js.RegExp = null,
-    renderSuggestion: (/* suggestion */ SuggestionDataItem, /* search */ String, /* highlightedDisplay */ TagMod[Any], /* index */ Double, /* focused */ Boolean) => TagMod[Any] = null,
-    style: js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], trigger = trigger.asInstanceOf[js.Any])
-    if (!js.isUndefined(appendSpaceOnAdd)) __obj.updateDynamic("appendSpaceOnAdd")(appendSpaceOnAdd.asInstanceOf[js.Any])
-    if (displayTransform != null) __obj.updateDynamic("displayTransform")(js.Any.fromFunction2(displayTransform))
-    if (!js.isUndefined(isLoading)) __obj.updateDynamic("isLoading")(isLoading.asInstanceOf[js.Any])
-    if (markup != null) __obj.updateDynamic("markup")(markup.asInstanceOf[js.Any])
-    if (onAdd != null) __obj.updateDynamic("onAdd")(js.Any.fromFunction2(onAdd))
-    if (regex != null) __obj.updateDynamic("regex")(regex.asInstanceOf[js.Any])
-    if (renderSuggestion != null) __obj.updateDynamic("renderSuggestion")(js.Any.fromFunction5(renderSuggestion))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def appendSpaceOnAdd(value: Boolean): this.type = set("appendSpaceOnAdd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def displayTransform(value: (/* id */ String, /* display */ String) => String): this.type = set("displayTransform", js.Any.fromFunction2(value))
+    @scala.inline
+    def isLoading(value: Boolean): this.type = set("isLoading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def markup(value: String): this.type = set("markup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAdd(value: (/* id */ String | Double, /* display */ String) => Unit): this.type = set("onAdd", js.Any.fromFunction2(value))
+    @scala.inline
+    def regex(value: js.RegExp): this.type = set("regex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderSuggestion(
+      value: (/* suggestion */ SuggestionDataItem, /* search */ String, /* highlightedDisplay */ TagMod[Any], /* index */ Double, /* focused */ Boolean) => TagMod[Any]
+    ): this.type = set("renderSuggestion", js.Any.fromFunction5(value))
+    @scala.inline
+    def style(value: js.Any): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = MentionProps
+  
+  def withProps(p: MentionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(data: js.Array[SuggestionDataItem] | DataFunc, trigger: String | js.RegExp): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], trigger = trigger.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MentionProps]))
+  }
 }
 

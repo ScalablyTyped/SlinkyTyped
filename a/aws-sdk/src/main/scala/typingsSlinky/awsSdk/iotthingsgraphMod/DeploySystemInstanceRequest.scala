@@ -14,10 +14,29 @@ trait DeploySystemInstanceRequest extends js.Object {
 
 object DeploySystemInstanceRequest {
   @scala.inline
-  def apply(id: Urn = null): DeploySystemInstanceRequest = {
+  def apply(): DeploySystemInstanceRequest = {
     val __obj = js.Dynamic.literal()
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploySystemInstanceRequest]
   }
+  @scala.inline
+  implicit class DeploySystemInstanceRequestOps[Self <: DeploySystemInstanceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: Urn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

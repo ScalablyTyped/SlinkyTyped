@@ -4,42 +4,152 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ConnectionOptions extends js.Object {
-  var application_name: js.UndefOr[String] = js.undefined
-  var client_encoding: js.UndefOr[String] = js.undefined
-  var database: js.UndefOr[String | Null] = js.undefined
-  var fallback_application_name: js.UndefOr[String] = js.undefined
-  var host: String | Null
-  var password: js.UndefOr[String] = js.undefined
-  var port: js.UndefOr[String | Null] = js.undefined
-  var ssl: js.UndefOr[Boolean | String] = js.undefined
-  var user: js.UndefOr[String] = js.undefined
+  var application_name: js.UndefOr[String] = js.native
+  var client_encoding: js.UndefOr[String] = js.native
+  var database: js.UndefOr[String | Null] = js.native
+  var fallback_application_name: js.UndefOr[String] = js.native
+  var host: String | Null = js.native
+  var password: js.UndefOr[String] = js.native
+  var port: js.UndefOr[String | Null] = js.native
+  var ssl: js.UndefOr[Boolean | String] = js.native
+  var user: js.UndefOr[String] = js.native
 }
 
 object ConnectionOptions {
   @scala.inline
-  def apply(
-    application_name: String = null,
-    client_encoding: String = null,
-    database: String = null,
-    fallback_application_name: String = null,
-    host: String = null,
-    password: String = null,
-    port: String = null,
-    ssl: Boolean | String = null,
-    user: String = null
-  ): ConnectionOptions = {
+  def apply(): ConnectionOptions = {
     val __obj = js.Dynamic.literal()
-    if (application_name != null) __obj.updateDynamic("application_name")(application_name.asInstanceOf[js.Any])
-    if (client_encoding != null) __obj.updateDynamic("client_encoding")(client_encoding.asInstanceOf[js.Any])
-    if (database != null) __obj.updateDynamic("database")(database.asInstanceOf[js.Any])
-    if (fallback_application_name != null) __obj.updateDynamic("fallback_application_name")(fallback_application_name.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (ssl != null) __obj.updateDynamic("ssl")(ssl.asInstanceOf[js.Any])
-    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectionOptions]
   }
+  @scala.inline
+  implicit class ConnectionOptionsOps[Self <: ConnectionOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplication_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("application_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplication_name: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("application_name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClient_encoding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client_encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClient_encoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client_encoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatabase(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatabaseNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(null)
+        ret
+    }
+    @scala.inline
+    def withFallback_application_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback_application_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFallback_application_name: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback_application_name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHostNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(null)
+        ret
+    }
+    @scala.inline
+    def withPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPortNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(null)
+        ret
+    }
+    @scala.inline
+    def withSsl(value: Boolean | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSsl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

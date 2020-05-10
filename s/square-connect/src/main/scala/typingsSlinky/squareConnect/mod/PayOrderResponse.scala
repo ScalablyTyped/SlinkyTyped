@@ -12,7 +12,7 @@ class PayOrderResponse () extends js.Object {
     */
   var errors: js.UndefOr[js.Array[js.Error]] = js.native
   /**
-    * The paid, updated [order](#type-order).
+    * The paid, updated `order`.
     */
   var order: js.UndefOr[Order] = js.native
 }

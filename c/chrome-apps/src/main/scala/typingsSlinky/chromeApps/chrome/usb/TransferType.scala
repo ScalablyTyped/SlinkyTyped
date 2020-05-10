@@ -1,9 +1,9 @@
 package typingsSlinky.chromeApps.chrome.usb
 
-import typingsSlinky.chromeApps.chromeAppsStrings.bulk
-import typingsSlinky.chromeApps.chromeAppsStrings.control
-import typingsSlinky.chromeApps.chromeAppsStrings.interrupt
-import typingsSlinky.chromeApps.chromeAppsStrings.isochronous
+import typingsSlinky.chromeApps.chromeAppsStrings.bulk_
+import typingsSlinky.chromeApps.chromeAppsStrings.control_
+import typingsSlinky.chromeApps.chromeAppsStrings.interrupt_
+import typingsSlinky.chromeApps.chromeAppsStrings.isochronous_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,9 +12,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.usb.TransferType")
 @js.native
 object TransferType extends js.Object {
-  var BULK: bulk = js.native
-  var CONTROL: control = js.native
-  var INTERRUPT: interrupt = js.native
-  var ISOCHRONOUS: isochronous = js.native
+  var BULK: bulk_ = js.native
+  var CONTROL: control_ = js.native
+  var INTERRUPT: interrupt_ = js.native
+  var ISOCHRONOUS: isochronous_ = js.native
 }
 

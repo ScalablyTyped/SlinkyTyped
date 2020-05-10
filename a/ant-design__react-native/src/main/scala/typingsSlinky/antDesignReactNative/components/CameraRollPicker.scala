@@ -1,10 +1,8 @@
 package typingsSlinky.antDesignReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.cameraRollPickerMod.CameraRollPickerProps
 import typingsSlinky.antDesignReactNative.cameraRollPickerMod.default
 import typingsSlinky.reactNative.mod.CameraRollAssetType
@@ -13,46 +11,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CameraRollPicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object CameraRollPicker {
   @JSImport("@ant-design/react-native/lib/image-picker/CameraRollPicker", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    first: Double,
-    imageMargin: Double,
-    imagesPerRow: Double,
-    maximum: Double,
-    after: String = null,
-    assetType: CameraRollAssetType = null,
-    backgroundColor: String = null,
-    callback: /* repeated */ js.Any => _ = null,
-    containerWidth: Int | Double = null,
-    groupName: String = null,
-    groupTypes: CameraRollGroupType = null,
-    mimeTypes: js.Array[String] = null,
-    selectSingleItem: js.UndefOr[Boolean] = js.undefined,
-    selected: js.Array[_] = null,
-    selectedMarker: ReactElement = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(first = first.asInstanceOf[js.Any], imageMargin = imageMargin.asInstanceOf[js.Any], imagesPerRow = imagesPerRow.asInstanceOf[js.Any], maximum = maximum.asInstanceOf[js.Any])
-    if (after != null) __obj.updateDynamic("after")(after.asInstanceOf[js.Any])
-    if (assetType != null) __obj.updateDynamic("assetType")(assetType.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction1(callback))
-    if (containerWidth != null) __obj.updateDynamic("containerWidth")(containerWidth.asInstanceOf[js.Any])
-    if (groupName != null) __obj.updateDynamic("groupName")(groupName.asInstanceOf[js.Any])
-    if (groupTypes != null) __obj.updateDynamic("groupTypes")(groupTypes.asInstanceOf[js.Any])
-    if (mimeTypes != null) __obj.updateDynamic("mimeTypes")(mimeTypes.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectSingleItem)) __obj.updateDynamic("selectSingleItem")(selectSingleItem.asInstanceOf[js.Any])
-    if (selected != null) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
-    if (selectedMarker != null) __obj.updateDynamic("selectedMarker")(selectedMarker.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def after(value: String): this.type = set("after", value.asInstanceOf[js.Any])
+    @scala.inline
+    def assetType(value: CameraRollAssetType): this.type = set("assetType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def callback(value: /* repeated */ js.Any => _): this.type = set("callback", js.Any.fromFunction1(value))
+    @scala.inline
+    def containerWidth(value: Double): this.type = set("containerWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupName(value: String): this.type = set("groupName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupTypes(value: CameraRollGroupType): this.type = set("groupTypes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mimeTypes(value: js.Array[String]): this.type = set("mimeTypes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectSingleItem(value: Boolean): this.type = set("selectSingleItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selected(value: js.Array[_]): this.type = set("selected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedMarker(value: ReactElement): this.type = set("selectedMarker", value.asInstanceOf[js.Any])
   }
-  type Props = CameraRollPickerProps
+  
+  def withProps(p: CameraRollPickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(first: Double, imageMargin: Double, imagesPerRow: Double, maximum: Double): Builder = {
+    val __props = js.Dynamic.literal(first = first.asInstanceOf[js.Any], imageMargin = imageMargin.asInstanceOf[js.Any], imagesPerRow = imagesPerRow.asInstanceOf[js.Any], maximum = maximum.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CameraRollPickerProps]))
+  }
 }
 

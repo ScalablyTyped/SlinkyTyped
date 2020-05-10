@@ -3,31 +3,6 @@ package typingsSlinky.tslint
 import typingsSlinky.tslint.exclusionDescriptorsMod.IInputExclusionDescriptors
 import typingsSlinky.tslint.mod.Rules.AbstractRule
 import typingsSlinky.tslint.ruleMod.IRuleMetadata
-import typingsSlinky.tslint.tslintStrings.`enum-members`
-import typingsSlinky.tslint.tslintStrings.`private`
-import typingsSlinky.tslint.tslintStrings.`protected`
-import typingsSlinky.tslint.tslintStrings.all
-import typingsSlinky.tslint.tslintStrings.classes
-import typingsSlinky.tslint.tslintStrings.content
-import typingsSlinky.tslint.tslintStrings.enums
-import typingsSlinky.tslint.tslintStrings.existence
-import typingsSlinky.tslint.tslintStrings.exported
-import typingsSlinky.tslint.tslintStrings.functions
-import typingsSlinky.tslint.tslintStrings.instance
-import typingsSlinky.tslint.tslintStrings.interfaces
-import typingsSlinky.tslint.tslintStrings.internal
-import typingsSlinky.tslint.tslintStrings.locations
-import typingsSlinky.tslint.tslintStrings.methods
-import typingsSlinky.tslint.tslintStrings.namespaces
-import typingsSlinky.tslint.tslintStrings.overloads
-import typingsSlinky.tslint.tslintStrings.privacies
-import typingsSlinky.tslint.tslintStrings.properties
-import typingsSlinky.tslint.tslintStrings.public
-import typingsSlinky.tslint.tslintStrings.static
-import typingsSlinky.tslint.tslintStrings.tags
-import typingsSlinky.tslint.tslintStrings.types
-import typingsSlinky.tslint.tslintStrings.variables
-import typingsSlinky.tslint.tslintStrings.visibilities
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,40 +15,32 @@ object completedDocsRuleMod extends js.Object {
     var getExclusionsMap: js.Any = js.native
   }
   
-  trait _DocType extends js.Object
-  
-  trait _Location extends js.Object
-  
-  trait _Privacy extends js.Object
-  
-  trait _Visibility extends js.Object
-  
   @JSName("ALL")
-  val ALL_ : all = js.native
-  val ARGUMENT_CLASSES: classes = js.native
-  val ARGUMENT_ENUMS: enums = js.native
-  val ARGUMENT_ENUM_MEMBERS: `enum-members` = js.native
-  val ARGUMENT_FUNCTIONS: functions = js.native
-  val ARGUMENT_INTERFACES: interfaces = js.native
-  val ARGUMENT_METHODS: methods = js.native
-  val ARGUMENT_NAMESPACES: namespaces = js.native
-  val ARGUMENT_PROPERTIES: properties = js.native
-  val ARGUMENT_TYPES: types = js.native
-  val ARGUMENT_VARIABLES: variables = js.native
-  val DESCRIPTOR_LOCATIONS: locations = js.native
-  val DESCRIPTOR_OVERLOADS: overloads = js.native
-  val DESCRIPTOR_PRIVACIES: privacies = js.native
-  val DESCRIPTOR_TAGS: tags = js.native
-  val DESCRIPTOR_VISIBILITIES: visibilities = js.native
-  val LOCATION_INSTANCE: instance = js.native
-  val LOCATION_STATIC: static = js.native
-  val PRIVACY_PRIVATE: `private` = js.native
-  val PRIVACY_PROTECTED: `protected` = js.native
-  val PRIVACY_PUBLIC: public = js.native
-  val TAGS_FOR_CONTENT: content = js.native
-  val TAGS_FOR_EXISTENCE: existence = js.native
-  val VISIBILITY_EXPORTED: exported = js.native
-  val VISIBILITY_INTERNAL: internal = js.native
+  val ALL_ : /* "all" */ String = js.native
+  val ARGUMENT_CLASSES: /* "classes" */ String = js.native
+  val ARGUMENT_ENUMS: /* "enums" */ String = js.native
+  val ARGUMENT_ENUM_MEMBERS: /* "enum-members" */ String = js.native
+  val ARGUMENT_FUNCTIONS: /* "functions" */ String = js.native
+  val ARGUMENT_INTERFACES: /* "interfaces" */ String = js.native
+  val ARGUMENT_METHODS: /* "methods" */ String = js.native
+  val ARGUMENT_NAMESPACES: /* "namespaces" */ String = js.native
+  val ARGUMENT_PROPERTIES: /* "properties" */ String = js.native
+  val ARGUMENT_TYPES: /* "types" */ String = js.native
+  val ARGUMENT_VARIABLES: /* "variables" */ String = js.native
+  val DESCRIPTOR_LOCATIONS: /* "locations" */ String = js.native
+  val DESCRIPTOR_OVERLOADS: /* "overloads" */ String = js.native
+  val DESCRIPTOR_PRIVACIES: /* "privacies" */ String = js.native
+  val DESCRIPTOR_TAGS: /* "tags" */ String = js.native
+  val DESCRIPTOR_VISIBILITIES: /* "visibilities" */ String = js.native
+  val LOCATION_INSTANCE: /* "instance" */ String = js.native
+  val LOCATION_STATIC: /* "static" */ String = js.native
+  val PRIVACY_PRIVATE: /* "private" */ String = js.native
+  val PRIVACY_PROTECTED: /* "protected" */ String = js.native
+  val PRIVACY_PUBLIC: /* "public" */ String = js.native
+  val TAGS_FOR_CONTENT: /* "content" */ String = js.native
+  val TAGS_FOR_EXISTENCE: /* "existence" */ String = js.native
+  val VISIBILITY_EXPORTED: /* "exported" */ String = js.native
+  val VISIBILITY_INTERNAL: /* "internal" */ String = js.native
   /* static members */
   @js.native
   object Rule extends js.Object {
@@ -86,39 +53,10 @@ object completedDocsRuleMod extends js.Object {
     var metadata: IRuleMetadata = js.native
   }
   
-  type All = all
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.tslint.completedDocsRuleMod.All
-    - typingsSlinky.tslint.tslintStrings.classes
-    - typingsSlinky.tslint.tslintStrings.enums
-    - typingsSlinky.tslint.tslintStrings.`enum-members`
-    - typingsSlinky.tslint.tslintStrings.functions
-    - typingsSlinky.tslint.tslintStrings.interfaces
-    - typingsSlinky.tslint.tslintStrings.methods
-    - typingsSlinky.tslint.tslintStrings.namespaces
-    - typingsSlinky.tslint.tslintStrings.properties
-    - typingsSlinky.tslint.tslintStrings.types
-    - typingsSlinky.tslint.tslintStrings.variables
-  */
-  type DocType = _DocType | All
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.tslint.completedDocsRuleMod.All
-    - typingsSlinky.tslint.tslintStrings.instance
-    - typingsSlinky.tslint.tslintStrings.static
-  */
-  type Location = _Location | All
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.tslint.completedDocsRuleMod.All
-    - typingsSlinky.tslint.tslintStrings.`private`
-    - typingsSlinky.tslint.tslintStrings.`protected`
-    - typingsSlinky.tslint.tslintStrings.public
-  */
-  type Privacy = _Privacy | All
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.tslint.completedDocsRuleMod.All
-    - typingsSlinky.tslint.tslintStrings.exported
-    - typingsSlinky.tslint.tslintStrings.internal
-  */
-  type Visibility = _Visibility | All
+  type All = /* "all" */ String
+  type DocType = All | (/* "classes" */ String)
+  type Location = All | (/* "instance" */ String)
+  type Privacy = All | (/* "private" */ String)
+  type Visibility = All | (/* "exported" */ String)
 }
 

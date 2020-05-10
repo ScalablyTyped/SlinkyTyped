@@ -14,49 +14,147 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BasicPaginateOptions[T] extends js.Object {
    // the before cursor
-  var after: js.UndefOr[String] = js.undefined
-  var attributes: js.UndefOr[FindOptionsAttributesArray | AnonExclude] = js.undefined
+  var after: js.UndefOr[String] = js.native
+  var attributes: js.UndefOr[FindOptionsAttributesArray | AnonExclude] = js.native
    // [default: false]
-  var before: js.UndefOr[String] = js.undefined
+  var before: js.UndefOr[String] = js.native
    // limit the number of records returned
-  var desc: js.UndefOr[Boolean] = js.undefined
-  var include: js.UndefOr[js.Array[(Model[_, _, _]) | IncludeOptions]] = js.undefined
-  var limit: js.UndefOr[Double] = js.undefined
+  var desc: js.UndefOr[Boolean] = js.native
+  var include: js.UndefOr[js.Array[(Model[_, _, _]) | IncludeOptions]] = js.native
+  var limit: js.UndefOr[Double] = js.native
    // the after cursor
-  var paginationField: js.UndefOr[String] = js.undefined
+  var paginationField: js.UndefOr[String] = js.native
    // [default: primaryKeyField]
-  var subQuery: js.UndefOr[Boolean] = js.undefined
+  var subQuery: js.UndefOr[Boolean] = js.native
   var where: js.UndefOr[
     WhereOptions[T] | typingsSlinky.sequelize.mod.where | fn | (js.Array[col | and | or | String])
-  ] = js.undefined
+  ] = js.native
 }
 
 object BasicPaginateOptions {
   @scala.inline
-  def apply[T](
-    after: String = null,
-    attributes: FindOptionsAttributesArray | AnonExclude = null,
-    before: String = null,
-    desc: js.UndefOr[Boolean] = js.undefined,
-    include: js.Array[(Model[_, _, _]) | IncludeOptions] = null,
-    limit: Int | Double = null,
-    paginationField: String = null,
-    subQuery: js.UndefOr[Boolean] = js.undefined,
-    where: WhereOptions[T] | where | fn | (js.Array[col | and | or | String]) = null
-  ): BasicPaginateOptions[T] = {
+  def apply[T](): BasicPaginateOptions[T] = {
     val __obj = js.Dynamic.literal()
-    if (after != null) __obj.updateDynamic("after")(after.asInstanceOf[js.Any])
-    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
-    if (before != null) __obj.updateDynamic("before")(before.asInstanceOf[js.Any])
-    if (!js.isUndefined(desc)) __obj.updateDynamic("desc")(desc.asInstanceOf[js.Any])
-    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (paginationField != null) __obj.updateDynamic("paginationField")(paginationField.asInstanceOf[js.Any])
-    if (!js.isUndefined(subQuery)) __obj.updateDynamic("subQuery")(subQuery.asInstanceOf[js.Any])
-    if (where != null) __obj.updateDynamic("where")(where.asInstanceOf[js.Any])
     __obj.asInstanceOf[BasicPaginateOptions[T]]
   }
+  @scala.inline
+  implicit class BasicPaginateOptionsOps[Self[t] <: BasicPaginateOptions[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withAfter(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAfter: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttributes(value: FindOptionsAttributesArray | AnonExclude): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBefore(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBefore: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesc(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesc: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInclude(value: js.Array[(Model[_, _, _]) | IncludeOptions]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInclude: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaginationField(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paginationField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaginationField: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paginationField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubQuery(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subQuery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubQuery: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subQuery")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhere(value: WhereOptions[T] | where | fn | (js.Array[col | and | or | String])): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhere: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

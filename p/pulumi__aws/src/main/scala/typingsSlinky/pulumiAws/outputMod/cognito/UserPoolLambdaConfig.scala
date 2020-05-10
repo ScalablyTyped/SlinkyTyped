@@ -50,30 +50,137 @@ trait UserPoolLambdaConfig extends js.Object {
 
 object UserPoolLambdaConfig {
   @scala.inline
-  def apply(
-    createAuthChallenge: String = null,
-    customMessage: String = null,
-    defineAuthChallenge: String = null,
-    postAuthentication: String = null,
-    postConfirmation: String = null,
-    preAuthentication: String = null,
-    preSignUp: String = null,
-    preTokenGeneration: String = null,
-    userMigration: String = null,
-    verifyAuthChallengeResponse: String = null
-  ): UserPoolLambdaConfig = {
+  def apply(): UserPoolLambdaConfig = {
     val __obj = js.Dynamic.literal()
-    if (createAuthChallenge != null) __obj.updateDynamic("createAuthChallenge")(createAuthChallenge.asInstanceOf[js.Any])
-    if (customMessage != null) __obj.updateDynamic("customMessage")(customMessage.asInstanceOf[js.Any])
-    if (defineAuthChallenge != null) __obj.updateDynamic("defineAuthChallenge")(defineAuthChallenge.asInstanceOf[js.Any])
-    if (postAuthentication != null) __obj.updateDynamic("postAuthentication")(postAuthentication.asInstanceOf[js.Any])
-    if (postConfirmation != null) __obj.updateDynamic("postConfirmation")(postConfirmation.asInstanceOf[js.Any])
-    if (preAuthentication != null) __obj.updateDynamic("preAuthentication")(preAuthentication.asInstanceOf[js.Any])
-    if (preSignUp != null) __obj.updateDynamic("preSignUp")(preSignUp.asInstanceOf[js.Any])
-    if (preTokenGeneration != null) __obj.updateDynamic("preTokenGeneration")(preTokenGeneration.asInstanceOf[js.Any])
-    if (userMigration != null) __obj.updateDynamic("userMigration")(userMigration.asInstanceOf[js.Any])
-    if (verifyAuthChallengeResponse != null) __obj.updateDynamic("verifyAuthChallengeResponse")(verifyAuthChallengeResponse.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPoolLambdaConfig]
   }
+  @scala.inline
+  implicit class UserPoolLambdaConfigOps[Self <: UserPoolLambdaConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateAuthChallenge(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createAuthChallenge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateAuthChallenge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createAuthChallenge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefineAuthChallenge(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defineAuthChallenge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefineAuthChallenge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defineAuthChallenge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostAuthentication(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postAuthentication")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostAuthentication: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postAuthentication")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostConfirmation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postConfirmation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostConfirmation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postConfirmation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreAuthentication(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preAuthentication")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreAuthentication: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preAuthentication")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreSignUp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preSignUp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreSignUp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preSignUp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreTokenGeneration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preTokenGeneration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreTokenGeneration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preTokenGeneration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserMigration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userMigration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserMigration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userMigration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerifyAuthChallengeResponse(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verifyAuthChallengeResponse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerifyAuthChallengeResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verifyAuthChallengeResponse")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

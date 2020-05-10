@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ITimeLine extends js.Object {
-  var asset: js.UndefOr[ITimeLineAsset] = js.undefined
-  var date: js.UndefOr[js.Array[ITimelineDate]] = js.undefined
-  var era: js.UndefOr[js.Array[ITimelineEra]] = js.undefined
-  var headline: js.UndefOr[String] = js.undefined
-  var text: js.UndefOr[String] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
+  var asset: js.UndefOr[ITimeLineAsset] = js.native
+  var date: js.UndefOr[js.Array[ITimelineDate]] = js.native
+  var era: js.UndefOr[js.Array[ITimelineEra]] = js.native
+  var headline: js.UndefOr[String] = js.native
+  var text: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.native
 }
 
 object ITimeLine {
   @scala.inline
-  def apply(
-    asset: ITimeLineAsset = null,
-    date: js.Array[ITimelineDate] = null,
-    era: js.Array[ITimelineEra] = null,
-    headline: String = null,
-    text: String = null,
-    `type`: String = null
-  ): ITimeLine = {
+  def apply(): ITimeLine = {
     val __obj = js.Dynamic.literal()
-    if (asset != null) __obj.updateDynamic("asset")(asset.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (era != null) __obj.updateDynamic("era")(era.asInstanceOf[js.Any])
-    if (headline != null) __obj.updateDynamic("headline")(headline.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITimeLine]
   }
+  @scala.inline
+  implicit class ITimeLineOps[Self <: ITimeLine] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAsset(value: ITimeLineAsset): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAsset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDate(value: js.Array[ITimelineDate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEra(value: js.Array[ITimelineEra]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("era")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEra: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("era")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeadline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeadline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

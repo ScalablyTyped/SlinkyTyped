@@ -11,10 +11,29 @@ trait PutEventsConfigurationResponse extends js.Object {
 
 object PutEventsConfigurationResponse {
   @scala.inline
-  def apply(EventsConfiguration: EventsConfiguration = null): PutEventsConfigurationResponse = {
+  def apply(): PutEventsConfigurationResponse = {
     val __obj = js.Dynamic.literal()
-    if (EventsConfiguration != null) __obj.updateDynamic("EventsConfiguration")(EventsConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutEventsConfigurationResponse]
   }
+  @scala.inline
+  implicit class PutEventsConfigurationResponseOps[Self <: PutEventsConfigurationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventsConfiguration(value: EventsConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventsConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventsConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventsConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

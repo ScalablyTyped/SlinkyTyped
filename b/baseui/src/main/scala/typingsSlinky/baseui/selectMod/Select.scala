@@ -3,6 +3,9 @@ package typingsSlinky.baseui.selectMod
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
+import org.scalajs.dom.raw.KeyboardEvent
+import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.TouchEvent
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.SyntheticFocusEvent
@@ -13,9 +16,6 @@ import typingsSlinky.baseui.AnonOptionState
 import typingsSlinky.dateFns.Locale
 import typingsSlinky.react.mod.Component
 import typingsSlinky.std.Event_
-import typingsSlinky.std.KeyboardEvent
-import typingsSlinky.std.MouseEvent
-import typingsSlinky.std.TouchEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,14 +39,14 @@ class Select ()
   def handleBlur(event: Event_): Unit = js.native
   def handleClick(event: MouseEvent): Unit = js.native
   def handleClick(event: TouchEvent): Unit = js.native
-  def handleClickOutside(event: org.scalajs.dom.raw.MouseEvent): Unit = js.native
+  def handleClickOutside(event: MouseEvent): Unit = js.native
   def handleInputChange(event: SyntheticEvent[EventTarget with HTMLInputElement, Event_]): Unit = js.native
   def handleInputFocus(event: SyntheticFocusEvent[HTMLElement]): Unit = js.native
-  def handleKeyDown(event: org.scalajs.dom.raw.KeyboardEvent): Unit = js.native
-  def handleTouchEnd(event: org.scalajs.dom.raw.TouchEvent): Unit = js.native
-  def handleTouchEndClearValue(event: org.scalajs.dom.raw.TouchEvent): Unit = js.native
+  def handleKeyDown(event: KeyboardEvent): Unit = js.native
+  def handleTouchEnd(event: TouchEvent): Unit = js.native
+  def handleTouchEndClearValue(event: TouchEvent): Unit = js.native
   def handleTouchMove(): Unit = js.native
-  def handleTouchOutside(event: org.scalajs.dom.raw.TouchEvent): Unit = js.native
+  def handleTouchOutside(event: TouchEvent): Unit = js.native
   def handleTouchStart(): Unit = js.native
   def popValue(): Unit = js.native
   def removeValue(item: Option): Unit = js.native

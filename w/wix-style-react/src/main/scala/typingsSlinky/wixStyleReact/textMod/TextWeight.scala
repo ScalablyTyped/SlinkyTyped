@@ -13,12 +13,10 @@ trait TextWeight extends js.Object
 
 object TextWeight {
   @scala.inline
-  def bold: typingsSlinky.wixStyleReact.wixStyleReactStrings.bold = this.cast("bold")
+  def bold: typingsSlinky.wixStyleReact.wixStyleReactStrings.bold = "bold".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.bold]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def normal: typingsSlinky.wixStyleReact.wixStyleReactStrings.normal = "normal".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.wixStyleReact.wixStyleReactStrings.normal = this.cast("normal")
-  @scala.inline
-  def thin: typingsSlinky.wixStyleReact.wixStyleReactStrings.thin = this.cast("thin")
+  def thin: typingsSlinky.wixStyleReact.wixStyleReactStrings.thin = "thin".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.thin]
 }
 

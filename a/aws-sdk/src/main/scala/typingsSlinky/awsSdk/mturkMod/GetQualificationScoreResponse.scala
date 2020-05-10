@@ -14,10 +14,29 @@ trait GetQualificationScoreResponse extends js.Object {
 
 object GetQualificationScoreResponse {
   @scala.inline
-  def apply(Qualification: Qualification = null): GetQualificationScoreResponse = {
+  def apply(): GetQualificationScoreResponse = {
     val __obj = js.Dynamic.literal()
-    if (Qualification != null) __obj.updateDynamic("Qualification")(Qualification.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetQualificationScoreResponse]
   }
+  @scala.inline
+  implicit class GetQualificationScoreResponseOps[Self <: GetQualificationScoreResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQualification(value: Qualification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Qualification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQualification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Qualification")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

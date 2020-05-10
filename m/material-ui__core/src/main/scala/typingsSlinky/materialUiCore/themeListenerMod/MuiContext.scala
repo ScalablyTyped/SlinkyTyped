@@ -11,10 +11,29 @@ trait MuiContext[S] extends js.Object {
 
 object MuiContext {
   @scala.inline
-  def apply[S](__THEMING__ : Broadcast[S] = null): MuiContext[S] = {
+  def apply[S](): MuiContext[S] = {
     val __obj = js.Dynamic.literal()
-    if (__THEMING__ != null) __obj.updateDynamic("__THEMING__")(__THEMING__.asInstanceOf[js.Any])
     __obj.asInstanceOf[MuiContext[S]]
   }
+  @scala.inline
+  implicit class MuiContextOps[Self[s] <: MuiContext[s], S] (val x: Self[S]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[S] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[S]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[S] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[S] with Other]
+    @scala.inline
+    def with__THEMING__(value: Broadcast[S]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("__THEMING__")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without__THEMING__ : Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("__THEMING__")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

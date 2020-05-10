@@ -17,18 +17,16 @@ trait networkType extends js.Object
 
 object networkType {
   @scala.inline
-  def `2g`: typingsSlinky.weixinApp.weixinAppStrings.`2g` = this.cast("2g")
+  def `2g`: typingsSlinky.weixinApp.weixinAppStrings.`2g` = "2g".asInstanceOf[typingsSlinky.weixinApp.weixinAppStrings.`2g`]
   @scala.inline
-  def `3g`: typingsSlinky.weixinApp.weixinAppStrings.`3g` = this.cast("3g")
+  def `3g`: typingsSlinky.weixinApp.weixinAppStrings.`3g` = "3g".asInstanceOf[typingsSlinky.weixinApp.weixinAppStrings.`3g`]
   @scala.inline
-  def `4g`: typingsSlinky.weixinApp.weixinAppStrings.`4g` = this.cast("4g")
+  def `4g`: typingsSlinky.weixinApp.weixinAppStrings.`4g` = "4g".asInstanceOf[typingsSlinky.weixinApp.weixinAppStrings.`4g`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def none: typingsSlinky.weixinApp.weixinAppStrings.none = "none".asInstanceOf[typingsSlinky.weixinApp.weixinAppStrings.none]
   @scala.inline
-  def none: typingsSlinky.weixinApp.weixinAppStrings.none = this.cast("none")
+  def unknown: typingsSlinky.weixinApp.weixinAppStrings.unknown = "unknown".asInstanceOf[typingsSlinky.weixinApp.weixinAppStrings.unknown]
   @scala.inline
-  def unknown: typingsSlinky.weixinApp.weixinAppStrings.unknown = this.cast("unknown")
-  @scala.inline
-  def wifi: typingsSlinky.weixinApp.weixinAppStrings.wifi = this.cast("wifi")
+  def wifi: typingsSlinky.weixinApp.weixinAppStrings.wifi = "wifi".asInstanceOf[typingsSlinky.weixinApp.weixinAppStrings.wifi]
 }
 

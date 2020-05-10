@@ -16,18 +16,16 @@ trait EmberRunQueues extends js.Object
 
 object EmberRunQueues {
   @scala.inline
-  def actions: typingsSlinky.emberRunloop.emberRunloopStrings.actions = this.cast("actions")
+  def actions: typingsSlinky.emberRunloop.emberRunloopStrings.actions = "actions".asInstanceOf[typingsSlinky.emberRunloop.emberRunloopStrings.actions]
   @scala.inline
-  def afterRender: typingsSlinky.emberRunloop.emberRunloopStrings.afterRender = this.cast("afterRender")
+  def afterRender: typingsSlinky.emberRunloop.emberRunloopStrings.afterRender = "afterRender".asInstanceOf[typingsSlinky.emberRunloop.emberRunloopStrings.afterRender]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def destroy: typingsSlinky.emberRunloop.emberRunloopStrings.destroy = "destroy".asInstanceOf[typingsSlinky.emberRunloop.emberRunloopStrings.destroy]
   @scala.inline
-  def destroy: typingsSlinky.emberRunloop.emberRunloopStrings.destroy = this.cast("destroy")
+  def render: typingsSlinky.emberRunloop.emberRunloopStrings.render = "render".asInstanceOf[typingsSlinky.emberRunloop.emberRunloopStrings.render]
   @scala.inline
-  def render: typingsSlinky.emberRunloop.emberRunloopStrings.render = this.cast("render")
+  def routerTransitions: typingsSlinky.emberRunloop.emberRunloopStrings.routerTransitions = "routerTransitions".asInstanceOf[typingsSlinky.emberRunloop.emberRunloopStrings.routerTransitions]
   @scala.inline
-  def routerTransitions: typingsSlinky.emberRunloop.emberRunloopStrings.routerTransitions = this.cast("routerTransitions")
-  @scala.inline
-  def sync: typingsSlinky.emberRunloop.emberRunloopStrings.sync = this.cast("sync")
+  def sync: typingsSlinky.emberRunloop.emberRunloopStrings.sync = "sync".asInstanceOf[typingsSlinky.emberRunloop.emberRunloopStrings.sync]
 }
 

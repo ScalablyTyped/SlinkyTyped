@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TimeExtent extends JSONSupport {
   /**
     * The end time of the time extent.
@@ -13,7 +14,7 @@ trait TimeExtent extends JSONSupport {
     *
     * @default null
     */
-  var end: js.Date
+  var end: js.Date = js.native
   /**
     * The start time of the time extent.
     *
@@ -21,7 +22,7 @@ trait TimeExtent extends JSONSupport {
     *
     * @default null
     */
-  var start: js.Date
+  var start: js.Date = js.native
   /**
     * Returns the time extent resulting from the intersection of the current time extent and parsed time extent. Returns `null` if two time extents do not intersect.
     *
@@ -30,7 +31,7 @@ trait TimeExtent extends JSONSupport {
     * @param timeExtent The time extent to be intersected with the time extent on which `intersection()` is being called on.
     *
     */
-  def intersection(timeExtent: TimeExtent): TimeExtent
+  def intersection(timeExtent: TimeExtent): TimeExtent = js.native
 }
 
 @JSGlobal("__esri.TimeExtent")

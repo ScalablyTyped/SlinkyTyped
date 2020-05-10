@@ -9,10 +9,10 @@ import scala.scalajs.js.annotation._
 object getRandomValues extends js.Object {
   /**
     * Initialize input Uint8Array by random values (with help from current "crypto engine")
-    * 
+    *
     * @param {ArrayBufferView} view
     * @returns {ArrayBufferView}
     */
-  def apply(view: scala.scalajs.js.typedarray.ArrayBufferView): scala.scalajs.js.typedarray.ArrayBufferView = js.native
+  def apply(view: js.typedarray.ArrayBufferView): js.typedarray.ArrayBufferView = js.native
 }
 

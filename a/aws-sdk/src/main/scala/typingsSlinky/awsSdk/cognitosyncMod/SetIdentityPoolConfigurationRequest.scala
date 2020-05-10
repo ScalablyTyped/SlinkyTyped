@@ -22,11 +22,47 @@ trait SetIdentityPoolConfigurationRequest extends js.Object {
 
 object SetIdentityPoolConfigurationRequest {
   @scala.inline
-  def apply(IdentityPoolId: IdentityPoolId, CognitoStreams: CognitoStreams = null, PushSync: PushSync = null): SetIdentityPoolConfigurationRequest = {
+  def apply(IdentityPoolId: IdentityPoolId): SetIdentityPoolConfigurationRequest = {
     val __obj = js.Dynamic.literal(IdentityPoolId = IdentityPoolId.asInstanceOf[js.Any])
-    if (CognitoStreams != null) __obj.updateDynamic("CognitoStreams")(CognitoStreams.asInstanceOf[js.Any])
-    if (PushSync != null) __obj.updateDynamic("PushSync")(PushSync.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetIdentityPoolConfigurationRequest]
   }
+  @scala.inline
+  implicit class SetIdentityPoolConfigurationRequestOps[Self <: SetIdentityPoolConfigurationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIdentityPoolId(value: IdentityPoolId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityPoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCognitoStreams(value: CognitoStreams): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CognitoStreams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCognitoStreams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CognitoStreams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPushSync(value: PushSync): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PushSync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPushSync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PushSync")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

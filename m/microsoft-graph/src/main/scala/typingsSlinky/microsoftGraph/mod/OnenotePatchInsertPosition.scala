@@ -12,10 +12,8 @@ trait OnenotePatchInsertPosition extends js.Object
 
 object OnenotePatchInsertPosition {
   @scala.inline
-  def After: typingsSlinky.microsoftGraph.microsoftGraphStrings.After = this.cast("After")
+  def After: typingsSlinky.microsoftGraph.microsoftGraphStrings.After = "After".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.After]
   @scala.inline
-  def Before: typingsSlinky.microsoftGraph.microsoftGraphStrings.Before = this.cast("Before")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Before: typingsSlinky.microsoftGraph.microsoftGraphStrings.Before = "Before".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.Before]
 }
 

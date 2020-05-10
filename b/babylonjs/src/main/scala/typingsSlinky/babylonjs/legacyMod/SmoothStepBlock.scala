@@ -1,0 +1,17 @@
+package typingsSlinky.babylonjs.legacyMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("babylonjs/Legacy/legacy", "SmoothStepBlock")
+@js.native
+class SmoothStepBlock protected ()
+  extends typingsSlinky.babylonjs.indexMod.SmoothStepBlock {
+  /**
+    * Creates a new SmoothStepBlock
+    * @param name defines the block name
+    */
+  def this(name: String) = this()
+}
+

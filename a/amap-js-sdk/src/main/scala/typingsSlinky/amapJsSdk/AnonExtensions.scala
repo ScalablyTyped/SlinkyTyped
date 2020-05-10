@@ -7,33 +7,107 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonExtensions extends js.Object {
-  var extensions: js.UndefOr[String] = js.undefined
-  var hideMarkers: js.UndefOr[Boolean] = js.undefined
-  var map: js.UndefOr[Map] = js.undefined
-  var panel: js.UndefOr[String | HTMLElement] = js.undefined
-  var policy: js.UndefOr[DrivingPolicy] = js.undefined
-  var showTraffic: js.UndefOr[Boolean] = js.undefined
+  var extensions: js.UndefOr[String] = js.native
+  var hideMarkers: js.UndefOr[Boolean] = js.native
+  var map: js.UndefOr[Map] = js.native
+  var panel: js.UndefOr[String | HTMLElement] = js.native
+  var policy: js.UndefOr[DrivingPolicy] = js.native
+  var showTraffic: js.UndefOr[Boolean] = js.native
 }
 
 object AnonExtensions {
   @scala.inline
-  def apply(
-    extensions: String = null,
-    hideMarkers: js.UndefOr[Boolean] = js.undefined,
-    map: Map = null,
-    panel: String | HTMLElement = null,
-    policy: DrivingPolicy = null,
-    showTraffic: js.UndefOr[Boolean] = js.undefined
-  ): AnonExtensions = {
+  def apply(): AnonExtensions = {
     val __obj = js.Dynamic.literal()
-    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideMarkers)) __obj.updateDynamic("hideMarkers")(hideMarkers.asInstanceOf[js.Any])
-    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
-    if (panel != null) __obj.updateDynamic("panel")(panel.asInstanceOf[js.Any])
-    if (policy != null) __obj.updateDynamic("policy")(policy.asInstanceOf[js.Any])
-    if (!js.isUndefined(showTraffic)) __obj.updateDynamic("showTraffic")(showTraffic.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonExtensions]
   }
+  @scala.inline
+  implicit class AnonExtensionsOps[Self <: AnonExtensions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExtensions(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideMarkers(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideMarkers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideMarkers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideMarkers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMap(value: Map): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPanelHTMLElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPanel(value: String | HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPanel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicy(value: DrivingPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowTraffic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showTraffic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowTraffic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showTraffic")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

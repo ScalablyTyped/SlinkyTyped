@@ -1,40 +1,39 @@
 package typingsSlinky.storybookReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.storybookReactNative.onDeviceUIMod.OnDeviceUIProps
 import typingsSlinky.storybookReactNative.onDeviceUIMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object OnDeviceUI
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object OnDeviceUI {
   @JSImport("@storybook/react-native/dist/preview/components/OnDeviceUI", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    stories: js.Any,
-    isUIHidden: js.UndefOr[Boolean] = js.undefined,
-    keyboardAvoidingViewVerticalOffset: Int | Double = null,
-    shouldDisableKeyboardAvoidingView: js.UndefOr[Boolean] = js.undefined,
-    tabOpen: Int | Double = null,
-    url: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(stories = stories.asInstanceOf[js.Any])
-    if (!js.isUndefined(isUIHidden)) __obj.updateDynamic("isUIHidden")(isUIHidden.asInstanceOf[js.Any])
-    if (keyboardAvoidingViewVerticalOffset != null) __obj.updateDynamic("keyboardAvoidingViewVerticalOffset")(keyboardAvoidingViewVerticalOffset.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldDisableKeyboardAvoidingView)) __obj.updateDynamic("shouldDisableKeyboardAvoidingView")(shouldDisableKeyboardAvoidingView.asInstanceOf[js.Any])
-    if (tabOpen != null) __obj.updateDynamic("tabOpen")(tabOpen.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def isUIHidden(value: Boolean): this.type = set("isUIHidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keyboardAvoidingViewVerticalOffset(value: Double): this.type = set("keyboardAvoidingViewVerticalOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shouldDisableKeyboardAvoidingView(value: Boolean): this.type = set("shouldDisableKeyboardAvoidingView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabOpen(value: Double): this.type = set("tabOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def url(value: String): this.type = set("url", value.asInstanceOf[js.Any])
   }
-  type Props = OnDeviceUIProps
+  
+  def withProps(p: OnDeviceUIProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(stories: js.Any): Builder = {
+    val __props = js.Dynamic.literal(stories = stories.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[OnDeviceUIProps]))
+  }
 }
 

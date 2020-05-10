@@ -365,7 +365,7 @@ object E extends js.Object {
     * @return  
     * @url http://www.espruino.com/Reference#l_E_toArrayBuffer
     */
-  def toArrayBuffer(str: js.Any): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def toArrayBuffer(str: js.Any): js.typedarray.ArrayBuffer = js.native
   /**
     * <p>This creates a Uint8Array from the given arguments. If an argument is a String or an Array,
     * each element is traversed and added as if it were an 8 bit value. If it is anything else, it is
@@ -375,7 +375,7 @@ object E extends js.Object {
     * @return  
     * @url http://www.espruino.com/Reference#l_E_toUint8Array
     */
-  def toUint8Array(args: js.Any): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def toUint8Array(args: js.Any): js.typedarray.Uint8Array = js.native
   /**
     * <p>Unmount the SD card, so it can be removed. If you remove the SD card without calling this you may cause corruption, and you will be unable to access another SD card until you reset Espruino or call <code>E.unmountSD()</code>.</p>
     * 

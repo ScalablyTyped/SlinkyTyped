@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TableDataInsertAllResponse extends js.Object {
-  var insertErrors: js.UndefOr[js.Array[TableDataInsertAllResponseInsertErrors]] = js.undefined
-  var kind: js.UndefOr[String] = js.undefined
+  var insertErrors: js.UndefOr[js.Array[TableDataInsertAllResponseInsertErrors]] = js.native
+  var kind: js.UndefOr[String] = js.native
 }
 
 object TableDataInsertAllResponse {
   @scala.inline
-  def apply(insertErrors: js.Array[TableDataInsertAllResponseInsertErrors] = null, kind: String = null): TableDataInsertAllResponse = {
+  def apply(): TableDataInsertAllResponse = {
     val __obj = js.Dynamic.literal()
-    if (insertErrors != null) __obj.updateDynamic("insertErrors")(insertErrors.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableDataInsertAllResponse]
   }
+  @scala.inline
+  implicit class TableDataInsertAllResponseOps[Self <: TableDataInsertAllResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInsertErrors(value: js.Array[TableDataInsertAllResponseInsertErrors]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsertErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

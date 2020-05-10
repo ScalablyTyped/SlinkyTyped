@@ -3,7 +3,6 @@ package typingsSlinky.elasticApmNode.mod
 import typingsSlinky.elasticApmNode.AnonConnect
 import typingsSlinky.elasticApmNode.AnonName
 import typingsSlinky.elasticApmNode.mod.AwsLambda.Handler
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,10 +37,10 @@ trait Agent
   def captureError(err: ParameterizedMessageObject, options: CaptureErrorOptions): Unit = js.native
   def captureError(err: ParameterizedMessageObject, options: CaptureErrorOptions, callback: CaptureErrorCallback): Unit = js.native
   // Errors
-  def captureError(err: Error): Unit = js.native
-  def captureError(err: Error, callback: CaptureErrorCallback): Unit = js.native
-  def captureError(err: Error, options: CaptureErrorOptions): Unit = js.native
-  def captureError(err: Error, options: CaptureErrorOptions, callback: CaptureErrorCallback): Unit = js.native
+  def captureError(err: js.Error): Unit = js.native
+  def captureError(err: js.Error, callback: CaptureErrorCallback): Unit = js.native
+  def captureError(err: js.Error, options: CaptureErrorOptions): Unit = js.native
+  def captureError(err: js.Error, options: CaptureErrorOptions, callback: CaptureErrorCallback): Unit = js.native
   def clearPatches(modules: String): Unit = js.native
   def clearPatches(modules: js.Array[String]): Unit = js.native
   def destroy(): Unit = js.native
@@ -57,6 +56,9 @@ trait Agent
   def isStarted(): Boolean = js.native
   def lambda(handler: Handler[_, _]): Handler[_, _] = js.native
   def lambda(`type`: String, handler: Handler[_, _]): Handler[_, _] = js.native
+  // Custom metrics
+  def registerMetric(name: String, callback: js.Function): Unit = js.native
+  def registerMetric(name: String, labels: Labels, callback: js.Function): Unit = js.native
   def removePatch(modules: String, handler: String): Unit = js.native
   def removePatch(modules: String, handler: PatchHandler): Unit = js.native
   def removePatch(modules: js.Array[String], handler: String): Unit = js.native

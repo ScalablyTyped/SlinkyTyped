@@ -1,45 +1,40 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.overlayPanelMod.OverlayPanelProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object OverlayPanel
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactOverlaypanelMod.OverlayPanel] {
+object OverlayPanel {
   @JSImport("primereact/overlaypanel", "OverlayPanel")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id */
-  def apply(
-    appendTo: js.Any = null,
-    ariaCloseLabel: String = null,
-    dismissable: js.UndefOr[Boolean] = js.undefined,
-    onHide: () => Unit = null,
-    showCloseIcon: js.UndefOr[Boolean] = js.undefined,
-    style: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactOverlaypanelMod.OverlayPanel] = {
-    val __obj = js.Dynamic.literal()
-    if (appendTo != null) __obj.updateDynamic("appendTo")(appendTo.asInstanceOf[js.Any])
-    if (ariaCloseLabel != null) __obj.updateDynamic("ariaCloseLabel")(ariaCloseLabel.asInstanceOf[js.Any])
-    if (!js.isUndefined(dismissable)) __obj.updateDynamic("dismissable")(dismissable.asInstanceOf[js.Any])
-    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction0(onHide))
-    if (!js.isUndefined(showCloseIcon)) __obj.updateDynamic("showCloseIcon")(showCloseIcon.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.primereactOverlaypanelMod.OverlayPanel] {
+    @scala.inline
+    def appendTo(value: js.Any): this.type = set("appendTo", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaCloseLabel(value: String): this.type = set("ariaCloseLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dismissable(value: Boolean): this.type = set("dismissable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onHide(value: () => Unit): this.type = set("onHide", js.Any.fromFunction0(value))
+    @scala.inline
+    def showCloseIcon(value: Boolean): this.type = set("showCloseIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactOverlaypanelMod.OverlayPanel] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.primereactOverlaypanelMod.OverlayPanel](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = OverlayPanelProps
+  
+  def withProps(p: OverlayPanelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: OverlayPanel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

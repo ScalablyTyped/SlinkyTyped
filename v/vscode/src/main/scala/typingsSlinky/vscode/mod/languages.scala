@@ -27,12 +27,19 @@ object languages extends js.Object {
   def registerDocumentHighlightProvider(selector: DocumentSelector, provider: DocumentHighlightProvider): Disposable = js.native
   def registerDocumentLinkProvider(selector: DocumentSelector, provider: DocumentLinkProvider): Disposable = js.native
   def registerDocumentRangeFormattingEditProvider(selector: DocumentSelector, provider: DocumentRangeFormattingEditProvider): Disposable = js.native
+  def registerDocumentRangeSemanticTokensProvider(
+    selector: DocumentSelector,
+    provider: DocumentRangeSemanticTokensProvider,
+    legend: SemanticTokensLegend
+  ): Disposable = js.native
+  def registerDocumentSemanticTokensProvider(selector: DocumentSelector, provider: DocumentSemanticTokensProvider, legend: SemanticTokensLegend): Disposable = js.native
   def registerDocumentSymbolProvider(selector: DocumentSelector, provider: DocumentSymbolProvider): Disposable = js.native
   def registerDocumentSymbolProvider(
     selector: DocumentSelector,
     provider: DocumentSymbolProvider,
     metaData: DocumentSymbolProviderMetadata
   ): Disposable = js.native
+  def registerEvaluatableExpressionProvider(selector: DocumentSelector, provider: EvaluatableExpressionProvider): Disposable = js.native
   def registerFoldingRangeProvider(selector: DocumentSelector, provider: FoldingRangeProvider): Disposable = js.native
   def registerHoverProvider(selector: DocumentSelector, provider: HoverProvider): Disposable = js.native
   def registerImplementationProvider(selector: DocumentSelector, provider: ImplementationProvider): Disposable = js.native

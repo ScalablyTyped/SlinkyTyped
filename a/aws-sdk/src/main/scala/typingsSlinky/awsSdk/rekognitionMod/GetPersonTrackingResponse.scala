@@ -30,20 +30,77 @@ trait GetPersonTrackingResponse extends js.Object {
 
 object GetPersonTrackingResponse {
   @scala.inline
-  def apply(
-    JobStatus: VideoJobStatus = null,
-    NextToken: PaginationToken = null,
-    Persons: PersonDetections = null,
-    StatusMessage: StatusMessage = null,
-    VideoMetadata: VideoMetadata = null
-  ): GetPersonTrackingResponse = {
+  def apply(): GetPersonTrackingResponse = {
     val __obj = js.Dynamic.literal()
-    if (JobStatus != null) __obj.updateDynamic("JobStatus")(JobStatus.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (Persons != null) __obj.updateDynamic("Persons")(Persons.asInstanceOf[js.Any])
-    if (StatusMessage != null) __obj.updateDynamic("StatusMessage")(StatusMessage.asInstanceOf[js.Any])
-    if (VideoMetadata != null) __obj.updateDynamic("VideoMetadata")(VideoMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPersonTrackingResponse]
   }
+  @scala.inline
+  implicit class GetPersonTrackingResponseOps[Self <: GetPersonTrackingResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobStatus(value: VideoJobStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPersons(value: PersonDetections): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Persons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPersons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Persons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusMessage(value: StatusMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoMetadata(value: VideoMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoMetadata")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

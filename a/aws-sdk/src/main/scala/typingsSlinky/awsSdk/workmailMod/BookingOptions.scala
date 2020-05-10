@@ -22,16 +22,53 @@ trait BookingOptions extends js.Object {
 
 object BookingOptions {
   @scala.inline
-  def apply(
-    AutoAcceptRequests: js.UndefOr[scala.Boolean] = js.undefined,
-    AutoDeclineConflictingRequests: js.UndefOr[scala.Boolean] = js.undefined,
-    AutoDeclineRecurringRequests: js.UndefOr[scala.Boolean] = js.undefined
-  ): BookingOptions = {
+  def apply(): BookingOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(AutoAcceptRequests)) __obj.updateDynamic("AutoAcceptRequests")(AutoAcceptRequests.asInstanceOf[js.Any])
-    if (!js.isUndefined(AutoDeclineConflictingRequests)) __obj.updateDynamic("AutoDeclineConflictingRequests")(AutoDeclineConflictingRequests.asInstanceOf[js.Any])
-    if (!js.isUndefined(AutoDeclineRecurringRequests)) __obj.updateDynamic("AutoDeclineRecurringRequests")(AutoDeclineRecurringRequests.asInstanceOf[js.Any])
     __obj.asInstanceOf[BookingOptions]
   }
+  @scala.inline
+  implicit class BookingOptionsOps[Self <: BookingOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoAcceptRequests(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoAcceptRequests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoAcceptRequests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoAcceptRequests")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoDeclineConflictingRequests(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoDeclineConflictingRequests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoDeclineConflictingRequests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoDeclineConflictingRequests")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoDeclineRecurringRequests(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoDeclineRecurringRequests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoDeclineRecurringRequests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoDeclineRecurringRequests")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

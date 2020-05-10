@@ -42,26 +42,113 @@ trait AffectedEntity extends js.Object {
 
 object AffectedEntity {
   @scala.inline
-  def apply(
-    awsAccountId: accountId = null,
-    entityArn: entityArn = null,
-    entityUrl: entityUrl = null,
-    entityValue: entityValue = null,
-    eventArn: eventArn = null,
-    lastUpdatedTime: js.Date = null,
-    statusCode: entityStatusCode = null,
-    tags: tagSet = null
-  ): AffectedEntity = {
+  def apply(): AffectedEntity = {
     val __obj = js.Dynamic.literal()
-    if (awsAccountId != null) __obj.updateDynamic("awsAccountId")(awsAccountId.asInstanceOf[js.Any])
-    if (entityArn != null) __obj.updateDynamic("entityArn")(entityArn.asInstanceOf[js.Any])
-    if (entityUrl != null) __obj.updateDynamic("entityUrl")(entityUrl.asInstanceOf[js.Any])
-    if (entityValue != null) __obj.updateDynamic("entityValue")(entityValue.asInstanceOf[js.Any])
-    if (eventArn != null) __obj.updateDynamic("eventArn")(eventArn.asInstanceOf[js.Any])
-    if (lastUpdatedTime != null) __obj.updateDynamic("lastUpdatedTime")(lastUpdatedTime.asInstanceOf[js.Any])
-    if (statusCode != null) __obj.updateDynamic("statusCode")(statusCode.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[AffectedEntity]
   }
+  @scala.inline
+  implicit class AffectedEntityOps[Self <: AffectedEntity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAwsAccountId(value: accountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsAccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntityArn(value: entityArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntityUrl(value: entityUrl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntityValue(value: entityValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventArn(value: eventArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdatedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdatedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusCode(value: entityStatusCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: tagSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

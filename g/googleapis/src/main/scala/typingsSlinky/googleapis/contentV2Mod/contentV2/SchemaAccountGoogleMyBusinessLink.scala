@@ -21,11 +21,41 @@ trait SchemaAccountGoogleMyBusinessLink extends js.Object {
 
 object SchemaAccountGoogleMyBusinessLink {
   @scala.inline
-  def apply(gmbEmail: String = null, status: String = null): SchemaAccountGoogleMyBusinessLink = {
+  def apply(): SchemaAccountGoogleMyBusinessLink = {
     val __obj = js.Dynamic.literal()
-    if (gmbEmail != null) __obj.updateDynamic("gmbEmail")(gmbEmail.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAccountGoogleMyBusinessLink]
   }
+  @scala.inline
+  implicit class SchemaAccountGoogleMyBusinessLinkOps[Self <: SchemaAccountGoogleMyBusinessLink] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGmbEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gmbEmail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGmbEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gmbEmail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

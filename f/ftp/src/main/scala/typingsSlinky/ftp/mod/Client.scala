@@ -3,7 +3,6 @@ package typingsSlinky.ftp.mod
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,21 +24,21 @@ trait Client extends EventEmitter {
     * Aborts the current data transfer (e.g. from get(), put(), or list())
     */
   def abort(callback: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
-  def append(input: String, destPath: String, callback: js.Function1[/* error */ Error, Unit]): Unit = js.native
+  def append(input: String, destPath: String, callback: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
   def append(
     input: String,
     destPath: String,
     useCompression: Boolean,
     callback: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
-  def append(input: Buffer, destPath: String, callback: js.Function1[/* error */ Error, Unit]): Unit = js.native
+  def append(input: Buffer, destPath: String, callback: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
   def append(
     input: Buffer,
     destPath: String,
     useCompression: Boolean,
     callback: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
-  def append(input: ReadableStream, destPath: String, callback: js.Function1[/* error */ Error, Unit]): Unit = js.native
+  def append(input: ReadableStream, destPath: String, callback: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
   /**
     * Same as put(), except if destPath already exists, it will be appended to instead of overwritten.
     * @param input can be a ReadableStream, a Buffer, or a path to a local file.
@@ -93,7 +92,7 @@ trait Client extends EventEmitter {
   /**
     * Retrieves a file at path from the server. useCompression defaults to false
     */
-  def get(path: String, callback: js.Function2[/* error */ Error, /* stream */ ReadableStream, Unit]): Unit = js.native
+  def get(path: String, callback: js.Function2[/* error */ js.Error, /* stream */ ReadableStream, Unit]): Unit = js.native
   def get(
     path: String,
     useCompression: Boolean,
@@ -104,10 +103,10 @@ trait Client extends EventEmitter {
     * Retrieves the last modified date and time for path
     */
   def lastMod(path: String, callback: js.Function2[/* error */ js.Error, /* lastMod */ js.Date, Unit]): Unit = js.native
-  def list(callback: js.Function2[/* error */ Error, /* listing */ js.Array[ListingElement], Unit]): Unit = js.native
+  def list(callback: js.Function2[/* error */ js.Error, /* listing */ js.Array[ListingElement], Unit]): Unit = js.native
   def list(
     path: String,
-    callback: js.Function2[/* error */ Error, /* listing */ js.Array[ListingElement], Unit]
+    callback: js.Function2[/* error */ js.Error, /* listing */ js.Array[ListingElement], Unit]
   ): Unit = js.native
   /**
     * Retrieves the directory listing of path.
@@ -121,12 +120,12 @@ trait Client extends EventEmitter {
   ): Unit = js.native
   def list(
     useCompression: Boolean,
-    callback: js.Function2[/* error */ Error, /* listing */ js.Array[ListingElement], Unit]
+    callback: js.Function2[/* error */ js.Error, /* listing */ js.Array[ListingElement], Unit]
   ): Unit = js.native
-  def listSafe(callback: js.Function2[/* error */ Error, /* listing */ js.Array[ListingElement], Unit]): Unit = js.native
+  def listSafe(callback: js.Function2[/* error */ js.Error, /* listing */ js.Array[ListingElement], Unit]): Unit = js.native
   def listSafe(
     path: String,
-    callback: js.Function2[/* error */ Error, /* listing */ js.Array[ListingElement], Unit]
+    callback: js.Function2[/* error */ js.Error, /* listing */ js.Array[ListingElement], Unit]
   ): Unit = js.native
   /**
     * Optional "standard" commands (RFC 959)
@@ -141,33 +140,33 @@ trait Client extends EventEmitter {
   ): Unit = js.native
   def listSafe(
     useCompression: Boolean,
-    callback: js.Function2[/* error */ Error, /* listing */ js.Array[ListingElement], Unit]
+    callback: js.Function2[/* error */ js.Error, /* listing */ js.Array[ListingElement], Unit]
   ): Unit = js.native
   /**
     * Logout the user from the server.
     */
   def logout(callback: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
-  def mkdir(path: String, callback: js.Function1[/* error */ Error, Unit]): Unit = js.native
+  def mkdir(path: String, callback: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
   /**
     * Optional "standard" commands (RFC 959)
     * Creates a new directory, path, on the server. recursive is for enabling a 'mkdir -p' algorithm and defaults to false
     */
   def mkdir(path: String, recursive: Boolean, callback: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
-  def put(input: String, destPath: String, callback: js.Function1[/* error */ Error, Unit]): Unit = js.native
+  def put(input: String, destPath: String, callback: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
   def put(
     input: String,
     destPath: String,
     useCompression: Boolean,
     callback: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
-  def put(input: Buffer, destPath: String, callback: js.Function1[/* error */ Error, Unit]): Unit = js.native
+  def put(input: Buffer, destPath: String, callback: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
   def put(
     input: Buffer,
     destPath: String,
     useCompression: Boolean,
     callback: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
-  def put(input: ReadableStream, destPath: String, callback: js.Function1[/* error */ Error, Unit]): Unit = js.native
+  def put(input: ReadableStream, destPath: String, callback: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
   /**
     * Sends data to the server to be stored as destPath.
     * @param input can be a ReadableStream, a Buffer, or a path to a local file.
@@ -194,7 +193,7 @@ trait Client extends EventEmitter {
     * Sets the file byte offset for the next file transfer action (get/put) to byteOffset
     */
   def restart(byteOffset: Double, callback: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
-  def rmdir(path: String, callback: js.Function1[/* error */ Error, Unit]): Unit = js.native
+  def rmdir(path: String, callback: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
   /**
     * Optional "standard" commands (RFC 959)
     * Removes a directory, path, on the server. If recursive, this call will delete the contents of the directory if it is not empty

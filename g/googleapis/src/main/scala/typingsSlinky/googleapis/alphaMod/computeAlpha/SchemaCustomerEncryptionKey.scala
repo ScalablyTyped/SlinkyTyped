@@ -39,20 +39,77 @@ trait SchemaCustomerEncryptionKey extends js.Object {
 
 object SchemaCustomerEncryptionKey {
   @scala.inline
-  def apply(
-    kmsKeyName: String = null,
-    kmsKeyServiceAccount: String = null,
-    rawKey: String = null,
-    rsaEncryptedKey: String = null,
-    sha256: String = null
-  ): SchemaCustomerEncryptionKey = {
+  def apply(): SchemaCustomerEncryptionKey = {
     val __obj = js.Dynamic.literal()
-    if (kmsKeyName != null) __obj.updateDynamic("kmsKeyName")(kmsKeyName.asInstanceOf[js.Any])
-    if (kmsKeyServiceAccount != null) __obj.updateDynamic("kmsKeyServiceAccount")(kmsKeyServiceAccount.asInstanceOf[js.Any])
-    if (rawKey != null) __obj.updateDynamic("rawKey")(rawKey.asInstanceOf[js.Any])
-    if (rsaEncryptedKey != null) __obj.updateDynamic("rsaEncryptedKey")(rsaEncryptedKey.asInstanceOf[js.Any])
-    if (sha256 != null) __obj.updateDynamic("sha256")(sha256.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCustomerEncryptionKey]
   }
+  @scala.inline
+  implicit class SchemaCustomerEncryptionKeyOps[Self <: SchemaCustomerEncryptionKey] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKmsKeyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsKeyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsKeyServiceAccount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyServiceAccount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsKeyServiceAccount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyServiceAccount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRawKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRawKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRsaEncryptedKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rsaEncryptedKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRsaEncryptedKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rsaEncryptedKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSha256(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sha256")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSha256: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sha256")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

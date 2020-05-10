@@ -11,10 +11,29 @@ trait SchemaImagesUploadResponse extends js.Object {
 
 object SchemaImagesUploadResponse {
   @scala.inline
-  def apply(image: SchemaImage = null): SchemaImagesUploadResponse = {
+  def apply(): SchemaImagesUploadResponse = {
     val __obj = js.Dynamic.literal()
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaImagesUploadResponse]
   }
+  @scala.inline
+  implicit class SchemaImagesUploadResponseOps[Self <: SchemaImagesUploadResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImage(value: SchemaImage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

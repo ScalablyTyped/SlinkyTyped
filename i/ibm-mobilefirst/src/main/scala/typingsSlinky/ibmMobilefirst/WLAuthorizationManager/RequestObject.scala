@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RequestObject extends js.Object {
-  def setRequestHeader(header: String, value: String): Unit
+  def setRequestHeader(header: String, value: String): Unit = js.native
 }
 
 object RequestObject {
   @scala.inline
   def apply(setRequestHeader: (String, String) => Unit): RequestObject = {
     val __obj = js.Dynamic.literal(setRequestHeader = js.Any.fromFunction2(setRequestHeader))
-  
     __obj.asInstanceOf[RequestObject]
   }
+  @scala.inline
+  implicit class RequestObjectOps[Self <: RequestObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSetRequestHeader(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setRequestHeader")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

@@ -33,24 +33,101 @@ trait Rule extends js.Object {
 
 object Rule {
   @scala.inline
-  def apply(
-    Prefix: Prefix,
-    Status: ExpirationStatus,
-    AbortIncompleteMultipartUpload: AbortIncompleteMultipartUpload = null,
-    Expiration: LifecycleExpiration = null,
-    ID: ID = null,
-    NoncurrentVersionExpiration: NoncurrentVersionExpiration = null,
-    NoncurrentVersionTransition: NoncurrentVersionTransition = null,
-    Transition: Transition = null
-  ): Rule = {
+  def apply(Prefix: Prefix, Status: ExpirationStatus): Rule = {
     val __obj = js.Dynamic.literal(Prefix = Prefix.asInstanceOf[js.Any], Status = Status.asInstanceOf[js.Any])
-    if (AbortIncompleteMultipartUpload != null) __obj.updateDynamic("AbortIncompleteMultipartUpload")(AbortIncompleteMultipartUpload.asInstanceOf[js.Any])
-    if (Expiration != null) __obj.updateDynamic("Expiration")(Expiration.asInstanceOf[js.Any])
-    if (ID != null) __obj.updateDynamic("ID")(ID.asInstanceOf[js.Any])
-    if (NoncurrentVersionExpiration != null) __obj.updateDynamic("NoncurrentVersionExpiration")(NoncurrentVersionExpiration.asInstanceOf[js.Any])
-    if (NoncurrentVersionTransition != null) __obj.updateDynamic("NoncurrentVersionTransition")(NoncurrentVersionTransition.asInstanceOf[js.Any])
-    if (Transition != null) __obj.updateDynamic("Transition")(Transition.asInstanceOf[js.Any])
     __obj.asInstanceOf[Rule]
   }
+  @scala.inline
+  implicit class RuleOps[Self <: Rule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPrefix(value: Prefix): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: ExpirationStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAbortIncompleteMultipartUpload(value: AbortIncompleteMultipartUpload): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AbortIncompleteMultipartUpload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbortIncompleteMultipartUpload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AbortIncompleteMultipartUpload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpiration(value: LifecycleExpiration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Expiration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpiration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Expiration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withID(value: ID): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ID")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoncurrentVersionExpiration(value: NoncurrentVersionExpiration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NoncurrentVersionExpiration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoncurrentVersionExpiration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NoncurrentVersionExpiration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoncurrentVersionTransition(value: NoncurrentVersionTransition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NoncurrentVersionTransition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoncurrentVersionTransition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NoncurrentVersionTransition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransition(value: Transition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Transition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Transition")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

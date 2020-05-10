@@ -55,20 +55,108 @@ object Activity {
     AutoScalingGroupName: XmlStringMaxLen255,
     Cause: XmlStringMaxLen1023,
     StartTime: js.Date,
-    StatusCode: ScalingActivityStatusCode,
-    Description: XmlString = null,
-    Details: XmlString = null,
-    EndTime: js.Date = null,
-    Progress: Int | Double = null,
-    StatusMessage: XmlStringMaxLen255 = null
+    StatusCode: ScalingActivityStatusCode
   ): Activity = {
     val __obj = js.Dynamic.literal(ActivityId = ActivityId.asInstanceOf[js.Any], AutoScalingGroupName = AutoScalingGroupName.asInstanceOf[js.Any], Cause = Cause.asInstanceOf[js.Any], StartTime = StartTime.asInstanceOf[js.Any], StatusCode = StatusCode.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (Details != null) __obj.updateDynamic("Details")(Details.asInstanceOf[js.Any])
-    if (EndTime != null) __obj.updateDynamic("EndTime")(EndTime.asInstanceOf[js.Any])
-    if (Progress != null) __obj.updateDynamic("Progress")(Progress.asInstanceOf[js.Any])
-    if (StatusMessage != null) __obj.updateDynamic("StatusMessage")(StatusMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[Activity]
   }
+  @scala.inline
+  implicit class ActivityOps[Self <: Activity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActivityId(value: XmlString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivityId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoScalingGroupName(value: XmlStringMaxLen255): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCause(value: XmlStringMaxLen1023): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cause")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatusCode(value: ScalingActivityStatusCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: XmlString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDetails(value: XmlString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Details")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgress(value: Progress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Progress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Progress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusMessage(value: XmlStringMaxLen255): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

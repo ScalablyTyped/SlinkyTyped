@@ -65,20 +65,77 @@ trait SchemaAppEngineHttpTarget extends js.Object {
 
 object SchemaAppEngineHttpTarget {
   @scala.inline
-  def apply(
-    appEngineRouting: SchemaAppEngineRouting = null,
-    body: String = null,
-    headers: StringDictionary[String] = null,
-    httpMethod: String = null,
-    relativeUri: String = null
-  ): SchemaAppEngineHttpTarget = {
+  def apply(): SchemaAppEngineHttpTarget = {
     val __obj = js.Dynamic.literal()
-    if (appEngineRouting != null) __obj.updateDynamic("appEngineRouting")(appEngineRouting.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (httpMethod != null) __obj.updateDynamic("httpMethod")(httpMethod.asInstanceOf[js.Any])
-    if (relativeUri != null) __obj.updateDynamic("relativeUri")(relativeUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAppEngineHttpTarget]
   }
+  @scala.inline
+  implicit class SchemaAppEngineHttpTargetOps[Self <: SchemaAppEngineHttpTarget] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppEngineRouting(value: SchemaAppEngineRouting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineRouting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppEngineRouting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineRouting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBody(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttpMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelativeUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelativeUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeUri")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,9 @@
 package typingsSlinky.semanticUiReact.itemContentMod
 
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.genericMod.SemanticVERTICALALIGNMENTS
@@ -12,51 +15,217 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StrictItemContentProps extends js.Object {
   /** An element type to render as (string or function). */
-  var as: js.UndefOr[js.Any] = js.undefined
+  var as: js.UndefOr[js.Any] = js.native
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[TagMod[Any]] = js.native
   /** Additional classes. */
-  var className: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
   /** Shorthand for primary content. */
-  var content: js.UndefOr[SemanticShorthandContent] = js.undefined
+  var content: js.UndefOr[SemanticShorthandContent] = js.native
   /** Shorthand for ItemDescription component. */
-  var description: js.UndefOr[SemanticShorthandItem[ItemDescriptionProps]] = js.undefined
+  var description: js.UndefOr[SemanticShorthandItem[ItemDescriptionProps]] = js.native
   /** Shorthand for ItemExtra component. */
-  var extra: js.UndefOr[SemanticShorthandItem[ItemExtraProps]] = js.undefined
+  var extra: js.UndefOr[SemanticShorthandItem[ItemExtraProps]] = js.native
   /** Shorthand for ItemHeader component. */
-  var header: js.UndefOr[SemanticShorthandItem[ItemHeaderProps]] = js.undefined
+  var header: js.UndefOr[SemanticShorthandItem[ItemHeaderProps]] = js.native
   /** Shorthand for ItemMeta component. */
-  var meta: js.UndefOr[SemanticShorthandItem[ItemMetaProps]] = js.undefined
+  var meta: js.UndefOr[SemanticShorthandItem[ItemMetaProps]] = js.native
   /** Content can specify its vertical alignment. */
-  var verticalAlign: js.UndefOr[SemanticVERTICALALIGNMENTS] = js.undefined
+  var verticalAlign: js.UndefOr[SemanticVERTICALALIGNMENTS] = js.native
 }
 
 object StrictItemContentProps {
   @scala.inline
-  def apply(
-    as: js.Any = null,
-    children: TagMod[Any] = null,
-    className: String = null,
-    content: SemanticShorthandContent = null,
-    description: SemanticShorthandItem[ItemDescriptionProps] = null,
-    extra: SemanticShorthandItem[ItemExtraProps] = null,
-    header: SemanticShorthandItem[ItemHeaderProps] = null,
-    meta: SemanticShorthandItem[ItemMetaProps] = null,
-    verticalAlign: SemanticVERTICALALIGNMENTS = null
-  ): StrictItemContentProps = {
+  def apply(): StrictItemContentProps = {
     val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
-    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictItemContentProps]
   }
+  @scala.inline
+  implicit class StrictItemContentPropsOps[Self <: StrictItemContentProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAs(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildrenReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildren(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContent(value: SemanticShorthandContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescriptionReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescriptionFunction3(
+      value: (/* component */ ReactComponentClass[ItemDescriptionProps], ItemDescriptionProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withDescription(value: SemanticShorthandItem[ItemDescriptionProps]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtraReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtraFunction3(
+      value: (/* component */ ReactComponentClass[ItemExtraProps], ItemExtraProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withExtra(value: SemanticShorthandItem[ItemExtraProps]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtra: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeaderFunction3(
+      value: (/* component */ ReactComponentClass[ItemHeaderProps], ItemHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withHeader(value: SemanticShorthandItem[ItemHeaderProps]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetaReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetaFunction3(
+      value: (/* component */ ReactComponentClass[ItemMetaProps], ItemMetaProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withMeta(value: SemanticShorthandItem[ItemMetaProps]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeta: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalAlign(value: SemanticVERTICALALIGNMENTS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlign")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,14 +14,12 @@ trait ButtonSize extends js.Object
 
 object ButtonSize {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def large: typingsSlinky.wixStyleReact.wixStyleReactStrings.large = "large".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.large]
   @scala.inline
-  def large: typingsSlinky.wixStyleReact.wixStyleReactStrings.large = this.cast("large")
+  def medium: typingsSlinky.wixStyleReact.wixStyleReactStrings.medium = "medium".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.medium]
   @scala.inline
-  def medium: typingsSlinky.wixStyleReact.wixStyleReactStrings.medium = this.cast("medium")
+  def small: typingsSlinky.wixStyleReact.wixStyleReactStrings.small = "small".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.small]
   @scala.inline
-  def small: typingsSlinky.wixStyleReact.wixStyleReactStrings.small = this.cast("small")
-  @scala.inline
-  def tiny: typingsSlinky.wixStyleReact.wixStyleReactStrings.tiny = this.cast("tiny")
+  def tiny: typingsSlinky.wixStyleReact.wixStyleReactStrings.tiny = "tiny".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.tiny]
 }
 

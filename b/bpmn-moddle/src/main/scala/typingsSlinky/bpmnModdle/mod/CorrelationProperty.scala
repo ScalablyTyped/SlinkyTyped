@@ -11,3 +11,45 @@ trait CorrelationProperty extends BaseElement {
   var `type`: ItemDefinition = js.native
 }
 
+object CorrelationProperty {
+  @scala.inline
+  def apply(
+    $parent: TypeDerived,
+    $type: ElementType,
+    correlationPropertyRetrievalExpression: CorrelationPropertyRetrievalExpression,
+    id: String,
+    name: String,
+    `type`: ItemDefinition
+  ): CorrelationProperty = {
+    val __obj = js.Dynamic.literal($parent = $parent.asInstanceOf[js.Any], $type = $type.asInstanceOf[js.Any], correlationPropertyRetrievalExpression = correlationPropertyRetrievalExpression.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CorrelationProperty]
+  }
+  @scala.inline
+  implicit class CorrelationPropertyOps[Self <: CorrelationProperty] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCorrelationPropertyRetrievalExpression(value: CorrelationPropertyRetrievalExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("correlationPropertyRetrievalExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: ItemDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

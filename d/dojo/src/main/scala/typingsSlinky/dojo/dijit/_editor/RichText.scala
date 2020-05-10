@@ -42,7 +42,7 @@ import scala.scalajs.js.annotation._
   * @param params Initial settings for any of the widget attributes, except readonly attributes.     
   * @param srcNodeRef The widget replaces the specified DOMNode.     
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dijit.CssStateMixin because Inheritance from two classes. Inlined active, cssStateNodes, hovering */ @JSGlobal("dijit._editor.RichText")
 @js.native
 class RichText protected () extends Widget {

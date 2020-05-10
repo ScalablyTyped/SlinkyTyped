@@ -125,7 +125,7 @@ package object pinpointemailMod {
   type Percentage = scala.Double
   type Percentage100Wrapper = scala.Double
   type PoolName = java.lang.String
-  type RawMessageData = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.pinpointemailMod.Blob | java.lang.String
+  type RawMessageData = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.pinpointemailMod.Blob | java.lang.String
   type RblName = java.lang.String
   type ReportId = java.lang.String
   type ReportName = java.lang.String

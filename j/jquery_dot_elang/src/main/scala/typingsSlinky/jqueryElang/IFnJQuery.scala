@@ -6,6 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IFnJQuery extends js.Object {
   def fnPlugin(
     context: JQuery_[HTMLElement],
@@ -13,15 +14,28 @@ trait IFnJQuery extends js.Object {
     command: String,
     pluginName: String,
     pluginDataAttribute: String
-  ): JQuery_[HTMLElement]
+  ): JQuery_[HTMLElement] = js.native
 }
 
 object IFnJQuery {
   @scala.inline
   def apply(fnPlugin: (JQuery_[HTMLElement], js.Any, String, String, String) => JQuery_[HTMLElement]): IFnJQuery = {
     val __obj = js.Dynamic.literal(fnPlugin = js.Any.fromFunction5(fnPlugin))
-  
     __obj.asInstanceOf[IFnJQuery]
   }
+  @scala.inline
+  implicit class IFnJQueryOps[Self <: IFnJQuery] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFnPlugin(value: (JQuery_[HTMLElement], js.Any, String, String, String) => JQuery_[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fnPlugin")(js.Any.fromFunction5(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,9 @@
 package typingsSlinky.blueprintjsCore.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.propsMod.IActionProps
 import typingsSlinky.blueprintjsCore.propsMod.ILinkProps
@@ -15,32 +14,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Toast
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsCore.mod.Toast] {
+object Toast {
   @JSImport("@blueprintjs/core", "Toast")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    message: TagMod[Any],
-    action: IActionProps with ILinkProps = null,
-    icon: IconName | MaybeElement = null,
-    intent: Intent = null,
-    onDismiss: /* didTimeoutExpire */ Boolean => Unit = null,
-    timeout: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Toast] = {
-    val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (intent != null) __obj.updateDynamic("intent")(intent.asInstanceOf[js.Any])
-    if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction1(onDismiss))
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Toast] {
+    @scala.inline
+    def action(value: IActionProps with ILinkProps): this.type = set("action", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: IconName | MaybeElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconNull: this.type = set("icon", null)
+    @scala.inline
+    def intent(value: Intent): this.type = set("intent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def message(value: TagMod[Any]): this.type = set("message", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDismiss(value: /* didTimeoutExpire */ Boolean => Unit): this.type = set("onDismiss", js.Any.fromFunction1(value))
+    @scala.inline
+    def timeout(value: Double): this.type = set("timeout", value.asInstanceOf[js.Any])
   }
-  type Props = IToastProps
+  
+  def withProps(p: IToastProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Toast.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

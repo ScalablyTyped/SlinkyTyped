@@ -13,12 +13,10 @@ trait AppStateStatus extends js.Object
 
 object AppStateStatus {
   @scala.inline
-  def active: typingsSlinky.reactNative.reactNativeStrings.active = this.cast("active")
+  def active: typingsSlinky.reactNative.reactNativeStrings.active = "active".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.active]
   @scala.inline
-  def background: typingsSlinky.reactNative.reactNativeStrings.background = this.cast("background")
+  def background: typingsSlinky.reactNative.reactNativeStrings.background = "background".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.background]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def inactive: typingsSlinky.reactNative.reactNativeStrings.inactive = this.cast("inactive")
+  def inactive: typingsSlinky.reactNative.reactNativeStrings.inactive = "inactive".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.inactive]
 }
 

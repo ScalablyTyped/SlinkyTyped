@@ -12,10 +12,8 @@ trait ScrollKey extends js.Object
 
 object ScrollKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def scrollLeft: typingsSlinky.blueprintjsTable.blueprintjsTableStrings.scrollLeft = "scrollLeft".asInstanceOf[typingsSlinky.blueprintjsTable.blueprintjsTableStrings.scrollLeft]
   @scala.inline
-  def scrollLeft: typingsSlinky.blueprintjsTable.blueprintjsTableStrings.scrollLeft = this.cast("scrollLeft")
-  @scala.inline
-  def scrollTop: typingsSlinky.blueprintjsTable.blueprintjsTableStrings.scrollTop = this.cast("scrollTop")
+  def scrollTop: typingsSlinky.blueprintjsTable.blueprintjsTableStrings.scrollTop = "scrollTop".asInstanceOf[typingsSlinky.blueprintjsTable.blueprintjsTableStrings.scrollTop]
 }
 

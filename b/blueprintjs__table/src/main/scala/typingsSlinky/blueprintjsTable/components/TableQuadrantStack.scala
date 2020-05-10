@@ -1,12 +1,10 @@
 package typingsSlinky.blueprintjsTable.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsTable.esmRegionsMod.TableLoadingOption
 import typingsSlinky.blueprintjsTable.gridMod.Grid
 import typingsSlinky.blueprintjsTable.tableQuadrantMod.QuadrantType
@@ -16,71 +14,76 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TableQuadrantStack
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsTable.tableQuadrantStackMod.TableQuadrantStack] {
+object TableQuadrantStack {
   @JSImport("@blueprintjs/table/lib/esm/quadrants/tableQuadrantStack", "TableQuadrantStack")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    bodyRenderer: (QuadrantType, js.UndefOr[Boolean], js.UndefOr[Boolean]) => ReactElement,
-    grid: Grid,
-    bodyRef: /* ref */ HTMLElement | Null => _ = null,
-    columnHeaderCellRenderer: (/* refHandler */ js.Function1[/* ref */ HTMLElement, Unit], /* resizeHandler */ js.Function1[/* verticalGuides */ js.Array[Double], Unit], /* reorderingHandler */ js.Function3[/* oldIndex */ Double, /* newIndex */ Double, /* length */ Double, Unit], /* showFrozenColumnsOnly */ js.UndefOr[Boolean]) => ReactElement = null,
-    columnHeaderRef: /* ref */ HTMLElement | Null => Unit = null,
-    enableColumnInteractionBar: js.UndefOr[Boolean] = js.undefined,
-    enableRowHeader: js.UndefOr[Boolean] = js.undefined,
-    handleColumnResizeGuide: /* verticalGuides */ js.Array[Double] => Unit = null,
-    handleColumnsReordering: /* verticalGuides */ js.Array[Double] => Unit = null,
-    handleRowResizeGuide: /* horizontalGuides */ js.Array[Double] => Unit = null,
-    handleRowsReordering: /* horizontalGuides */ js.Array[Double] => Unit = null,
-    isHorizontalScrollDisabled: js.UndefOr[Boolean] = js.undefined,
-    isVerticalScrollDisabled: js.UndefOr[Boolean] = js.undefined,
-    loadingOptions: js.Array[TableLoadingOption] = null,
-    menuRenderer: /* refHandler */ js.Function1[/* ref */ HTMLElement, Unit] => ReactElement = null,
-    numColumns: Int | Double = null,
-    numFrozenColumns: Int | Double = null,
-    numFrozenRows: Int | Double = null,
-    numRows: Int | Double = null,
-    onScroll: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    quadrantRef: /* ref */ HTMLElement | Null => Unit = null,
-    rowHeaderCellRenderer: (/* refHandler */ js.Function1[/* ref */ HTMLElement, Unit], /* resizeHandler */ js.Function1[/* verticalGuides */ js.Array[Double], Unit], /* reorderingHandler */ js.Function3[/* oldIndex */ Double, /* newIndex */ Double, /* length */ Double, Unit], /* showFrozenRowsOnly */ js.UndefOr[Boolean]) => ReactElement = null,
-    rowHeaderRef: /* ref */ HTMLElement | Null => _ = null,
-    scrollContainerRef: /* ref */ HTMLElement | Null => _ = null,
-    throttleScrolling: js.UndefOr[Boolean] = js.undefined,
-    viewSyncDelay: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsTable.tableQuadrantStackMod.TableQuadrantStack] = {
-    val __obj = js.Dynamic.literal(bodyRenderer = js.Any.fromFunction3(bodyRenderer), grid = grid.asInstanceOf[js.Any])
-    if (bodyRef != null) __obj.updateDynamic("bodyRef")(js.Any.fromFunction1(bodyRef))
-    if (columnHeaderCellRenderer != null) __obj.updateDynamic("columnHeaderCellRenderer")(js.Any.fromFunction4(columnHeaderCellRenderer))
-    if (columnHeaderRef != null) __obj.updateDynamic("columnHeaderRef")(js.Any.fromFunction1(columnHeaderRef))
-    if (!js.isUndefined(enableColumnInteractionBar)) __obj.updateDynamic("enableColumnInteractionBar")(enableColumnInteractionBar.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableRowHeader)) __obj.updateDynamic("enableRowHeader")(enableRowHeader.asInstanceOf[js.Any])
-    if (handleColumnResizeGuide != null) __obj.updateDynamic("handleColumnResizeGuide")(js.Any.fromFunction1(handleColumnResizeGuide))
-    if (handleColumnsReordering != null) __obj.updateDynamic("handleColumnsReordering")(js.Any.fromFunction1(handleColumnsReordering))
-    if (handleRowResizeGuide != null) __obj.updateDynamic("handleRowResizeGuide")(js.Any.fromFunction1(handleRowResizeGuide))
-    if (handleRowsReordering != null) __obj.updateDynamic("handleRowsReordering")(js.Any.fromFunction1(handleRowsReordering))
-    if (!js.isUndefined(isHorizontalScrollDisabled)) __obj.updateDynamic("isHorizontalScrollDisabled")(isHorizontalScrollDisabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(isVerticalScrollDisabled)) __obj.updateDynamic("isVerticalScrollDisabled")(isVerticalScrollDisabled.asInstanceOf[js.Any])
-    if (loadingOptions != null) __obj.updateDynamic("loadingOptions")(loadingOptions.asInstanceOf[js.Any])
-    if (menuRenderer != null) __obj.updateDynamic("menuRenderer")(js.Any.fromFunction1(menuRenderer))
-    if (numColumns != null) __obj.updateDynamic("numColumns")(numColumns.asInstanceOf[js.Any])
-    if (numFrozenColumns != null) __obj.updateDynamic("numFrozenColumns")(numFrozenColumns.asInstanceOf[js.Any])
-    if (numFrozenRows != null) __obj.updateDynamic("numFrozenRows")(numFrozenRows.asInstanceOf[js.Any])
-    if (numRows != null) __obj.updateDynamic("numRows")(numRows.asInstanceOf[js.Any])
-    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
-    if (quadrantRef != null) __obj.updateDynamic("quadrantRef")(js.Any.fromFunction1(quadrantRef))
-    if (rowHeaderCellRenderer != null) __obj.updateDynamic("rowHeaderCellRenderer")(js.Any.fromFunction4(rowHeaderCellRenderer))
-    if (rowHeaderRef != null) __obj.updateDynamic("rowHeaderRef")(js.Any.fromFunction1(rowHeaderRef))
-    if (scrollContainerRef != null) __obj.updateDynamic("scrollContainerRef")(js.Any.fromFunction1(scrollContainerRef))
-    if (!js.isUndefined(throttleScrolling)) __obj.updateDynamic("throttleScrolling")(throttleScrolling.asInstanceOf[js.Any])
-    if (viewSyncDelay != null) __obj.updateDynamic("viewSyncDelay")(viewSyncDelay.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsTable.tableQuadrantStackMod.TableQuadrantStack] {
+    @scala.inline
+    def bodyRef(value: /* ref */ HTMLElement | Null => _): this.type = set("bodyRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columnHeaderCellRenderer(
+      value: (/* refHandler */ js.Function1[/* ref */ HTMLElement, Unit], /* resizeHandler */ js.Function1[/* verticalGuides */ js.Array[Double], Unit], /* reorderingHandler */ js.Function3[/* oldIndex */ Double, /* newIndex */ Double, /* length */ Double, Unit], /* showFrozenColumnsOnly */ js.UndefOr[Boolean]) => ReactElement
+    ): this.type = set("columnHeaderCellRenderer", js.Any.fromFunction4(value))
+    @scala.inline
+    def columnHeaderRef(value: /* ref */ HTMLElement | Null => Unit): this.type = set("columnHeaderRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def enableColumnInteractionBar(value: Boolean): this.type = set("enableColumnInteractionBar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableRowHeader(value: Boolean): this.type = set("enableRowHeader", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handleColumnResizeGuide(value: /* verticalGuides */ js.Array[Double] => Unit): this.type = set("handleColumnResizeGuide", js.Any.fromFunction1(value))
+    @scala.inline
+    def handleColumnsReordering(value: /* verticalGuides */ js.Array[Double] => Unit): this.type = set("handleColumnsReordering", js.Any.fromFunction1(value))
+    @scala.inline
+    def handleRowResizeGuide(value: /* horizontalGuides */ js.Array[Double] => Unit): this.type = set("handleRowResizeGuide", js.Any.fromFunction1(value))
+    @scala.inline
+    def handleRowsReordering(value: /* horizontalGuides */ js.Array[Double] => Unit): this.type = set("handleRowsReordering", js.Any.fromFunction1(value))
+    @scala.inline
+    def isHorizontalScrollDisabled(value: Boolean): this.type = set("isHorizontalScrollDisabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isVerticalScrollDisabled(value: Boolean): this.type = set("isVerticalScrollDisabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loadingOptions(value: js.Array[TableLoadingOption]): this.type = set("loadingOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuRenderer(value: /* refHandler */ js.Function1[/* ref */ HTMLElement, Unit] => ReactElement): this.type = set("menuRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def numColumns(value: Double): this.type = set("numColumns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def numFrozenColumns(value: Double): this.type = set("numFrozenColumns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def numFrozenRows(value: Double): this.type = set("numFrozenRows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def numRows(value: Double): this.type = set("numRows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onScroll(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
+    @scala.inline
+    def quadrantRef(value: /* ref */ HTMLElement | Null => Unit): this.type = set("quadrantRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def rowHeaderCellRenderer(
+      value: (/* refHandler */ js.Function1[/* ref */ HTMLElement, Unit], /* resizeHandler */ js.Function1[/* verticalGuides */ js.Array[Double], Unit], /* reorderingHandler */ js.Function3[/* oldIndex */ Double, /* newIndex */ Double, /* length */ Double, Unit], /* showFrozenRowsOnly */ js.UndefOr[Boolean]) => ReactElement
+    ): this.type = set("rowHeaderCellRenderer", js.Any.fromFunction4(value))
+    @scala.inline
+    def rowHeaderRef(value: /* ref */ HTMLElement | Null => _): this.type = set("rowHeaderRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def scrollContainerRef(value: /* ref */ HTMLElement | Null => _): this.type = set("scrollContainerRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def throttleScrolling(value: Boolean): this.type = set("throttleScrolling", value.asInstanceOf[js.Any])
+    @scala.inline
+    def viewSyncDelay(value: Double): this.type = set("viewSyncDelay", value.asInstanceOf[js.Any])
   }
-  type Props = ITableQuadrantStackProps
+  
+  def withProps(p: ITableQuadrantStackProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(bodyRenderer: (QuadrantType, js.UndefOr[Boolean], js.UndefOr[Boolean]) => ReactElement, grid: Grid): Builder = {
+    val __props = js.Dynamic.literal(bodyRenderer = js.Any.fromFunction3(bodyRenderer), grid = grid.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ITableQuadrantStackProps]))
+  }
 }
 

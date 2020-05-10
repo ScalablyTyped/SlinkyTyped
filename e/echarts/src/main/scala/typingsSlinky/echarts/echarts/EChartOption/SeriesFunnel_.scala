@@ -23,6 +23,7 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-funnel
   */
+@js.native
 trait SeriesFunnel_ extends js.Object {
   /**
     * Whether to enable animation.
@@ -32,7 +33,7 @@ trait SeriesFunnel_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-funnel.animation
     */
-  var animation: js.UndefOr[Boolean] = js.undefined
+  var animation: js.UndefOr[Boolean] = js.native
   /**
     * Delay before updating the first animation, which supports callback
     * function for different data to have different animation effect.
@@ -48,7 +49,7 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.animationDelay
     */
-  var animationDelay: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDelay: js.UndefOr[js.Function | Double] = js.native
   /**
     * Delay before updating animation, which supports callback function
     * for different data to have different animation effect.
@@ -64,7 +65,7 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.animationDelayUpdate
     */
-  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.native
   /**
     * Duration of the first animation, which supports callback function
     * for different data to have different animation effect:
@@ -76,7 +77,7 @@ trait SeriesFunnel_ extends js.Object {
     * 1000
     * @see https://echarts.apache.org/en/option.html#series-funnel.animationDuration
     */
-  var animationDuration: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDuration: js.UndefOr[js.Function | Double] = js.native
   /**
     * Time for animation to complete, which supports callback function
     * for different data to have different animation effect:
@@ -88,7 +89,7 @@ trait SeriesFunnel_ extends js.Object {
     * 300
     * @see https://echarts.apache.org/en/option.html#series-funnel.animationDurationUpdate
     */
-  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.native
   /**
     * Easing method used for the first animation.
     * Varied easing effects can be found at
@@ -100,7 +101,7 @@ trait SeriesFunnel_ extends js.Object {
     * "cubicOut"
     * @see https://echarts.apache.org/en/option.html#series-funnel.animationEasing
     */
-  var animationEasing: js.UndefOr[String] = js.undefined
+  var animationEasing: js.UndefOr[String] = js.native
   /**
     * Easing method used for animation.
     *
@@ -109,7 +110,7 @@ trait SeriesFunnel_ extends js.Object {
     * "cubicOut"
     * @see https://echarts.apache.org/en/option.html#series-funnel.animationEasingUpdate
     */
-  var animationEasingUpdate: js.UndefOr[String] = js.undefined
+  var animationEasingUpdate: js.UndefOr[String] = js.native
   /**
     * Whether to set graphic number threshold to animation.
     * Animation will be disabled when graphic number is larger than
@@ -120,7 +121,7 @@ trait SeriesFunnel_ extends js.Object {
     * 2000
     * @see https://echarts.apache.org/en/option.html#series-funnel.animationThreshold
     */
-  var animationThreshold: js.UndefOr[Double] = js.undefined
+  var animationThreshold: js.UndefOr[Double] = js.native
   /**
     * Data array of series, which can be a single data value, like:
     *
@@ -156,7 +157,7 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.data
     */
-  var data: js.UndefOr[js.Array[js.Array[Double] | DataObject | Double]] = js.undefined
+  var data: js.UndefOr[js.Array[js.Array[Double] | DataObject | Double]] = js.native
   /**
     * If
     * [series.data](https://echarts.apache.org/en/option.html#series.data)
@@ -168,11 +169,11 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.datasetIndex
     */
-  var datasetIndex: js.UndefOr[Double] = js.undefined
+  var datasetIndex: js.UndefOr[Double] = js.native
   /**
     * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis
     */
-  var emphasis: js.UndefOr[AnonLabelLine] = js.undefined
+  var emphasis: js.UndefOr[AnonLabelLine] = js.native
   /**
     * Horizontal align.
     * Defaults to align center. Can be 'left', 'right', 'center'.
@@ -182,14 +183,14 @@ trait SeriesFunnel_ extends js.Object {
     * "center"
     * @see https://echarts.apache.org/en/option.html#series-funnel.funnelAlign
     */
-  var funnelAlign: js.UndefOr[String] = js.undefined
+  var funnelAlign: js.UndefOr[String] = js.native
   /**
     * Gap between each trapezoid.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.gap
     */
-  var gap: js.UndefOr[Double] = js.undefined
+  var gap: js.UndefOr[Double] = js.native
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component in option
@@ -198,7 +199,7 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.id
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * Graphic style of , `emphasis` is the style when it is highlighted,
     * like being hovered by mouse, or highlighted via legend connect.
@@ -206,7 +207,7 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonShadowOffsetY] = js.undefined
+  var itemStyle: js.UndefOr[AnonShadowOffsetY] = js.native
   /**
     * Text label of funnel chart, to explain some data information
     * about graphic item like value, name and so on.
@@ -218,7 +219,7 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.label
     */
-  var label: js.UndefOr[AnonFontStyle] = js.undefined
+  var label: js.UndefOr[AnonFontStyle] = js.native
   /**
     * The visual guide line style of label. When
     * [label position](https://echarts.apache.org/en/option.html#series-funnel.label.position)
@@ -227,7 +228,7 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine
     */
-  var labelLine: js.UndefOr[AnonLength] = js.undefined
+  var labelLine: js.UndefOr[AnonLength] = js.native
   /**
     * Whether to enable highlighting chart when
     * [legend](https://echarts.apache.org/en/option.html#legend)
@@ -238,7 +239,7 @@ trait SeriesFunnel_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-funnel.legendHoverLink
     */
-  var legendHoverLink: js.UndefOr[Boolean] = js.undefined
+  var legendHoverLink: js.UndefOr[Boolean] = js.native
   /**
     * Used to mark an area in chart.
     * For example, mark a time interval.
@@ -246,21 +247,21 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.markArea
     */
-  var markArea: js.UndefOr[AnonAnimationEasingUpdate] = js.undefined
+  var markArea: js.UndefOr[AnonAnimationEasingUpdate] = js.native
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.markLine
     */
-  var markLine: js.UndefOr[AnonAnimationEasing] = js.undefined
+  var markLine: js.UndefOr[AnonAnimationEasing] = js.native
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint
     */
-  var markPoint: js.UndefOr[AnonAnimationDurationUpdate] = js.undefined
+  var markPoint: js.UndefOr[AnonAnimationDurationUpdate] = js.native
   /**
     * The specified maximum value.
     *
@@ -269,7 +270,7 @@ trait SeriesFunnel_ extends js.Object {
     * 100
     * @see https://echarts.apache.org/en/option.html#series-funnel.max
     */
-  var max: js.UndefOr[Double] = js.undefined
+  var max: js.UndefOr[Double] = js.native
   /**
     * The mapped width from maximum data value
     * [max](https://echarts.apache.org/en/option.html#series-funnel.max)
@@ -284,14 +285,14 @@ trait SeriesFunnel_ extends js.Object {
     * '100%'
     * @see https://echarts.apache.org/en/option.html#series-funnel.maxSize
     */
-  var maxSize: js.UndefOr[String] = js.undefined
+  var maxSize: js.UndefOr[String] = js.native
   /**
     * The specified minimum value.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.min
     */
-  var min: js.UndefOr[Double] = js.undefined
+  var min: js.UndefOr[Double] = js.native
   /**
     * The mapped width from minimum data value
     * [min](https://echarts.apache.org/en/option.html#series-funnel.min)
@@ -308,7 +309,7 @@ trait SeriesFunnel_ extends js.Object {
     * '0%'
     * @see https://echarts.apache.org/en/option.html#series-funnel.minSize
     */
-  var minSize: js.UndefOr[String] = js.undefined
+  var minSize: js.UndefOr[String] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -319,7 +320,7 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.name
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * When
     * [dataset](https://echarts.apache.org/en/option.html#dataset)
@@ -341,7 +342,7 @@ trait SeriesFunnel_ extends js.Object {
     * "column"
     * @see https://echarts.apache.org/en/option.html#series-funnel.seriesLayoutBy
     */
-  var seriesLayoutBy: js.UndefOr[String] = js.undefined
+  var seriesLayoutBy: js.UndefOr[String] = js.native
   /**
     * Data sorting, which can be whether `'ascending'`, `'descending'`,
     * `'none'`(in data order) or a function, which is the same as `Array.prototype.sort(function
@@ -352,88 +353,395 @@ trait SeriesFunnel_ extends js.Object {
     * "descending"
     * @see https://echarts.apache.org/en/option.html#series-funnel.sort
     */
-  var sort: js.UndefOr[String] = js.undefined
+  var sort: js.UndefOr[String] = js.native
   /**
     * tooltip settings in this series.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
   /**
     * @default
     * "funnel"
     * @see https://echarts.apache.org/en/option.html#series-funnel.type
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
 }
 
 object SeriesFunnel_ {
   @scala.inline
-  def apply(
-    animation: js.UndefOr[Boolean] = js.undefined,
-    animationDelay: js.Function | Double = null,
-    animationDelayUpdate: js.Function | Double = null,
-    animationDuration: js.Function | Double = null,
-    animationDurationUpdate: js.Function | Double = null,
-    animationEasing: String = null,
-    animationEasingUpdate: String = null,
-    animationThreshold: Int | Double = null,
-    data: js.Array[js.Array[Double] | DataObject | Double] = null,
-    datasetIndex: Int | Double = null,
-    emphasis: AnonLabelLine = null,
-    funnelAlign: String = null,
-    gap: Int | Double = null,
-    id: String = null,
-    itemStyle: AnonShadowOffsetY = null,
-    label: AnonFontStyle = null,
-    labelLine: AnonLength = null,
-    legendHoverLink: js.UndefOr[Boolean] = js.undefined,
-    markArea: AnonAnimationEasingUpdate = null,
-    markLine: AnonAnimationEasing = null,
-    markPoint: AnonAnimationDurationUpdate = null,
-    max: Int | Double = null,
-    maxSize: String = null,
-    min: Int | Double = null,
-    minSize: String = null,
-    name: String = null,
-    seriesLayoutBy: String = null,
-    sort: String = null,
-    tooltip: AnonExtraCssText = null,
-    `type`: String = null
-  ): SeriesFunnel_ = {
+  def apply(): SeriesFunnel_ = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animation)) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (animationDelay != null) __obj.updateDynamic("animationDelay")(animationDelay.asInstanceOf[js.Any])
-    if (animationDelayUpdate != null) __obj.updateDynamic("animationDelayUpdate")(animationDelayUpdate.asInstanceOf[js.Any])
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (animationDurationUpdate != null) __obj.updateDynamic("animationDurationUpdate")(animationDurationUpdate.asInstanceOf[js.Any])
-    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
-    if (animationEasingUpdate != null) __obj.updateDynamic("animationEasingUpdate")(animationEasingUpdate.asInstanceOf[js.Any])
-    if (animationThreshold != null) __obj.updateDynamic("animationThreshold")(animationThreshold.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (datasetIndex != null) __obj.updateDynamic("datasetIndex")(datasetIndex.asInstanceOf[js.Any])
-    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
-    if (funnelAlign != null) __obj.updateDynamic("funnelAlign")(funnelAlign.asInstanceOf[js.Any])
-    if (gap != null) __obj.updateDynamic("gap")(gap.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (labelLine != null) __obj.updateDynamic("labelLine")(labelLine.asInstanceOf[js.Any])
-    if (!js.isUndefined(legendHoverLink)) __obj.updateDynamic("legendHoverLink")(legendHoverLink.asInstanceOf[js.Any])
-    if (markArea != null) __obj.updateDynamic("markArea")(markArea.asInstanceOf[js.Any])
-    if (markLine != null) __obj.updateDynamic("markLine")(markLine.asInstanceOf[js.Any])
-    if (markPoint != null) __obj.updateDynamic("markPoint")(markPoint.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maxSize != null) __obj.updateDynamic("maxSize")(maxSize.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minSize != null) __obj.updateDynamic("minSize")(minSize.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (seriesLayoutBy != null) __obj.updateDynamic("seriesLayoutBy")(seriesLayoutBy.asInstanceOf[js.Any])
-    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesFunnel_]
   }
+  @scala.inline
+  implicit class SeriesFunnel_Ops[Self <: SeriesFunnel_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDelay(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDelayUpdate(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDelayUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDuration(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDurationUpdate(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDurationUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationEasing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationEasingUpdate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationEasingUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Array[js.Array[Double] | DataObject | Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatasetIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatasetIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmphasis(value: AnonLabelLine): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmphasis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFunnelAlign(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("funnelAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFunnelAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("funnelAlign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGap(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemStyle(value: AnonShadowOffsetY): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: AnonFontStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelLine(value: AnonLength): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLegendHoverLink(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendHoverLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegendHoverLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendHoverLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkArea(value: AnonAnimationEasingUpdate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkLine(value: AnonAnimationEasing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkPoint(value: AnonAnimationDurationUpdate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeriesLayoutBy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesLayoutBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeriesLayoutBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesLayoutBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSort(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: AnonExtraCssText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait FormLayout extends js.Object
 
 object FormLayout {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def horizontal: typingsSlinky.antd.antdStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.antd.antdStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.antd.antdStrings.horizontal = this.cast("horizontal")
+  def `inline`: typingsSlinky.antd.antdStrings.`inline` = "inline".asInstanceOf[typingsSlinky.antd.antdStrings.`inline`]
   @scala.inline
-  def `inline`: typingsSlinky.antd.antdStrings.`inline` = this.cast("inline")
-  @scala.inline
-  def vertical: typingsSlinky.antd.antdStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.antd.antdStrings.vertical = "vertical".asInstanceOf[typingsSlinky.antd.antdStrings.vertical]
 }
 

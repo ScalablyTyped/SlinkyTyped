@@ -22,14 +22,41 @@ trait UpdateDeviceStatusRequest extends js.Object {
 
 object UpdateDeviceStatusRequest {
   @scala.inline
-  def apply(
-    AccessToken: TokenModelType,
-    DeviceKey: DeviceKeyType,
-    DeviceRememberedStatus: DeviceRememberedStatusType = null
-  ): UpdateDeviceStatusRequest = {
+  def apply(AccessToken: TokenModelType, DeviceKey: DeviceKeyType): UpdateDeviceStatusRequest = {
     val __obj = js.Dynamic.literal(AccessToken = AccessToken.asInstanceOf[js.Any], DeviceKey = DeviceKey.asInstanceOf[js.Any])
-    if (DeviceRememberedStatus != null) __obj.updateDynamic("DeviceRememberedStatus")(DeviceRememberedStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateDeviceStatusRequest]
   }
+  @scala.inline
+  implicit class UpdateDeviceStatusRequestOps[Self <: UpdateDeviceStatusRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessToken(value: TokenModelType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeviceKey(value: DeviceKeyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeviceRememberedStatus(value: DeviceRememberedStatusType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceRememberedStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceRememberedStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceRememberedStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

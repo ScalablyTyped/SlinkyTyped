@@ -20,8 +20,27 @@ object SetVisibleToAllUsersInput {
   @scala.inline
   def apply(JobFlowIds: XmlStringList, VisibleToAllUsers: Boolean): SetVisibleToAllUsersInput = {
     val __obj = js.Dynamic.literal(JobFlowIds = JobFlowIds.asInstanceOf[js.Any], VisibleToAllUsers = VisibleToAllUsers.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SetVisibleToAllUsersInput]
   }
+  @scala.inline
+  implicit class SetVisibleToAllUsersInputOps[Self <: SetVisibleToAllUsersInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobFlowIds(value: XmlStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobFlowIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVisibleToAllUsers(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VisibleToAllUsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

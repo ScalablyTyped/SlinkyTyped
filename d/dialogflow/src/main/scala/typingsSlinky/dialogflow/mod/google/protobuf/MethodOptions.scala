@@ -6,7 +6,6 @@ import typingsSlinky.dialogflow.mod.google.protobuf.MethodOptions.IdempotencyLev
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,8 +59,8 @@ object MethodOptions extends js.Object {
     */
   def decode(reader: Reader): MethodOptions = js.native
   def decode(reader: Reader, length: Double): MethodOptions = js.native
-  def decode(reader: Uint8Array): MethodOptions = js.native
-  def decode(reader: Uint8Array, length: Double): MethodOptions = js.native
+  def decode(reader: js.typedarray.Uint8Array): MethodOptions = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): MethodOptions = js.native
   /**
     * Decodes a MethodOptions message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -70,7 +69,7 @@ object MethodOptions extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): MethodOptions = js.native
-  def decodeDelimited(reader: Uint8Array): MethodOptions = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): MethodOptions = js.native
   /**
     * Encodes the specified MethodOptions message. Does not implicitly {@link google.protobuf.MethodOptions.verify|verify} messages.
     * @param message MethodOptions message or plain object to encode

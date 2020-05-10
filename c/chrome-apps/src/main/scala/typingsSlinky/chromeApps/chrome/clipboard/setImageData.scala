@@ -18,14 +18,10 @@ object setImageData extends js.Object {
     *      *Since Chrome 71. Warning: this is the current Dev channel.*
     * @param [callback]
     */
-  def apply(imageData: scala.scalajs.js.typedarray.ArrayBuffer, `type`: ImageType): Unit = js.native
+  def apply(imageData: js.typedarray.ArrayBuffer, `type`: ImageType): Unit = js.native
+  def apply(imageData: js.typedarray.ArrayBuffer, `type`: ImageType, additionalItems: AdditionalItems): Unit = js.native
   def apply(
-    imageData: scala.scalajs.js.typedarray.ArrayBuffer,
-    `type`: ImageType,
-    additionalItems: AdditionalItems
-  ): Unit = js.native
-  def apply(
-    imageData: scala.scalajs.js.typedarray.ArrayBuffer,
+    imageData: js.typedarray.ArrayBuffer,
     `type`: ImageType,
     additionalItems: AdditionalItems,
     callback: js.Function0[Unit]

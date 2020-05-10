@@ -1,20 +1,19 @@
 package typingsSlinky.fluxibleRouter.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.fluxibleRouter.mod.NavLinkProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Not a trait */
-object NavLink
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.fluxibleRouter.mod.NavLink] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Not a trait */
+object NavLink {
   @JSImport("fluxible-router", "NavLink")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = NavLinkProps
+  def apply(p: NavLinkProps): Default[tag.type, typingsSlinky.fluxibleRouter.mod.NavLink] = new Default[tag.type, typingsSlinky.fluxibleRouter.mod.NavLink](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: NavLink.type): Default[tag.type, typingsSlinky.fluxibleRouter.mod.NavLink] = new Default[tag.type, typingsSlinky.fluxibleRouter.mod.NavLink](js.Array(this.component, js.Dictionary.empty))()
 }
 

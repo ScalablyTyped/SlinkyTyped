@@ -22,16 +22,53 @@ trait DescribeVpcClassicLinkRequest extends js.Object {
 
 object DescribeVpcClassicLinkRequest {
   @scala.inline
-  def apply(
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    Filters: FilterList = null,
-    VpcIds: VpcClassicLinkIdList = null
-  ): DescribeVpcClassicLinkRequest = {
+  def apply(): DescribeVpcClassicLinkRequest = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
-    if (VpcIds != null) __obj.updateDynamic("VpcIds")(VpcIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeVpcClassicLinkRequest]
   }
+  @scala.inline
+  implicit class DescribeVpcClassicLinkRequestOps[Self <: DescribeVpcClassicLinkRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilters(value: FilterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcIds(value: VpcClassicLinkIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

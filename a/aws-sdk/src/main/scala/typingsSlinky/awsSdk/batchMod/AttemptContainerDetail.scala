@@ -34,22 +34,89 @@ trait AttemptContainerDetail extends js.Object {
 
 object AttemptContainerDetail {
   @scala.inline
-  def apply(
-    containerInstanceArn: String = null,
-    exitCode: Int | Double = null,
-    logStreamName: String = null,
-    networkInterfaces: NetworkInterfaceList = null,
-    reason: String = null,
-    taskArn: String = null
-  ): AttemptContainerDetail = {
+  def apply(): AttemptContainerDetail = {
     val __obj = js.Dynamic.literal()
-    if (containerInstanceArn != null) __obj.updateDynamic("containerInstanceArn")(containerInstanceArn.asInstanceOf[js.Any])
-    if (exitCode != null) __obj.updateDynamic("exitCode")(exitCode.asInstanceOf[js.Any])
-    if (logStreamName != null) __obj.updateDynamic("logStreamName")(logStreamName.asInstanceOf[js.Any])
-    if (networkInterfaces != null) __obj.updateDynamic("networkInterfaces")(networkInterfaces.asInstanceOf[js.Any])
-    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
-    if (taskArn != null) __obj.updateDynamic("taskArn")(taskArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttemptContainerDetail]
   }
+  @scala.inline
+  implicit class AttemptContainerDetailOps[Self <: AttemptContainerDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainerInstanceArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerInstanceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerInstanceArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerInstanceArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExitCode(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExitCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogStreamName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logStreamName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogStreamName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logStreamName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkInterfaces(value: NetworkInterfaceList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkInterfaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

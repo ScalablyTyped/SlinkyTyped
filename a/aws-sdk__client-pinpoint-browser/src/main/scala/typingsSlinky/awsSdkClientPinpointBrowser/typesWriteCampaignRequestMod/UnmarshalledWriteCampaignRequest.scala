@@ -9,66 +9,108 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UnmarshalledWriteCampaignRequest extends WriteCampaignRequest {
   /**
     * Treatments that are defined in addition to the default treatment.
     */
   @JSName("AdditionalTreatments")
-  var AdditionalTreatments_UnmarshalledWriteCampaignRequest: js.UndefOr[js.Array[UnmarshalledWriteTreatmentResource]] = js.undefined
+  var AdditionalTreatments_UnmarshalledWriteCampaignRequest: js.UndefOr[js.Array[UnmarshalledWriteTreatmentResource]] = js.native
   /**
     * Campaign hook information.
     */
   @JSName("Hook")
-  var Hook_UnmarshalledWriteCampaignRequest: js.UndefOr[UnmarshalledCampaignHook] = js.undefined
+  var Hook_UnmarshalledWriteCampaignRequest: js.UndefOr[UnmarshalledCampaignHook] = js.native
   /**
     * The campaign limits settings.
     */
   @JSName("Limits")
-  var Limits_UnmarshalledWriteCampaignRequest: js.UndefOr[UnmarshalledCampaignLimits] = js.undefined
+  var Limits_UnmarshalledWriteCampaignRequest: js.UndefOr[UnmarshalledCampaignLimits] = js.native
   /**
     * The message configuration settings.
     */
   @JSName("MessageConfiguration")
-  var MessageConfiguration_UnmarshalledWriteCampaignRequest: js.UndefOr[UnmarshalledMessageConfiguration] = js.undefined
+  var MessageConfiguration_UnmarshalledWriteCampaignRequest: js.UndefOr[UnmarshalledMessageConfiguration] = js.native
   /**
     * The campaign schedule.
     */
   @JSName("Schedule")
-  var Schedule_UnmarshalledWriteCampaignRequest: js.UndefOr[UnmarshalledSchedule] = js.undefined
+  var Schedule_UnmarshalledWriteCampaignRequest: js.UndefOr[UnmarshalledSchedule] = js.native
 }
 
 object UnmarshalledWriteCampaignRequest {
   @scala.inline
-  def apply(
-    AdditionalTreatments: js.Array[UnmarshalledWriteTreatmentResource] = null,
-    Description: String = null,
-    HoldoutPercent: Int | Double = null,
-    Hook: UnmarshalledCampaignHook = null,
-    IsPaused: js.UndefOr[Boolean] = js.undefined,
-    Limits: UnmarshalledCampaignLimits = null,
-    MessageConfiguration: UnmarshalledMessageConfiguration = null,
-    Name: String = null,
-    Schedule: UnmarshalledSchedule = null,
-    SegmentId: String = null,
-    SegmentVersion: Int | Double = null,
-    TreatmentDescription: String = null,
-    TreatmentName: String = null
-  ): UnmarshalledWriteCampaignRequest = {
+  def apply(): UnmarshalledWriteCampaignRequest = {
     val __obj = js.Dynamic.literal()
-    if (AdditionalTreatments != null) __obj.updateDynamic("AdditionalTreatments")(AdditionalTreatments.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (HoldoutPercent != null) __obj.updateDynamic("HoldoutPercent")(HoldoutPercent.asInstanceOf[js.Any])
-    if (Hook != null) __obj.updateDynamic("Hook")(Hook.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsPaused)) __obj.updateDynamic("IsPaused")(IsPaused.asInstanceOf[js.Any])
-    if (Limits != null) __obj.updateDynamic("Limits")(Limits.asInstanceOf[js.Any])
-    if (MessageConfiguration != null) __obj.updateDynamic("MessageConfiguration")(MessageConfiguration.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (Schedule != null) __obj.updateDynamic("Schedule")(Schedule.asInstanceOf[js.Any])
-    if (SegmentId != null) __obj.updateDynamic("SegmentId")(SegmentId.asInstanceOf[js.Any])
-    if (SegmentVersion != null) __obj.updateDynamic("SegmentVersion")(SegmentVersion.asInstanceOf[js.Any])
-    if (TreatmentDescription != null) __obj.updateDynamic("TreatmentDescription")(TreatmentDescription.asInstanceOf[js.Any])
-    if (TreatmentName != null) __obj.updateDynamic("TreatmentName")(TreatmentName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledWriteCampaignRequest]
   }
+  @scala.inline
+  implicit class UnmarshalledWriteCampaignRequestOps[Self <: UnmarshalledWriteCampaignRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdditionalTreatments(value: js.Array[UnmarshalledWriteTreatmentResource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalTreatments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalTreatments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalTreatments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHook(value: UnmarshalledCampaignHook): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hook")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHook: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hook")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimits(value: UnmarshalledCampaignLimits): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessageConfiguration(value: UnmarshalledMessageConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchedule(value: UnmarshalledSchedule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchedule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

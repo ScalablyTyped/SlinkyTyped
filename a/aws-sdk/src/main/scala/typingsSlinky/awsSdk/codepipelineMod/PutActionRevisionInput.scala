@@ -33,8 +33,39 @@ object PutActionRevisionInput {
     stageName: StageName
   ): PutActionRevisionInput = {
     val __obj = js.Dynamic.literal(actionName = actionName.asInstanceOf[js.Any], actionRevision = actionRevision.asInstanceOf[js.Any], pipelineName = pipelineName.asInstanceOf[js.Any], stageName = stageName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PutActionRevisionInput]
   }
+  @scala.inline
+  implicit class PutActionRevisionInputOps[Self <: PutActionRevisionInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionName(value: ActionName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActionRevision(value: ActionRevision): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionRevision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPipelineName(value: PipelineName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStageName(value: StageName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

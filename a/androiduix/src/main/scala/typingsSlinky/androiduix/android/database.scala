@@ -1,6 +1,6 @@
 package typingsSlinky.androiduix.android
 
-import typingsSlinky.androiduix.java.util.ArrayList
+import typingsSlinky.androiduix.java_.util.ArrayList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

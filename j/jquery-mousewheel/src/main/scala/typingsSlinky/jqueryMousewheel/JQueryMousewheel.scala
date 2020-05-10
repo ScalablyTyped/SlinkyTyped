@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("JQueryMousewheel")
 @js.native
 object JQueryMousewheel extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.std.Event_ because Already inherited
   - typingsSlinky.jquery.BaseJQueryEventObject because Already inherited
   - typingsSlinky.jquery.JQueryInputEventObject because Already inherited

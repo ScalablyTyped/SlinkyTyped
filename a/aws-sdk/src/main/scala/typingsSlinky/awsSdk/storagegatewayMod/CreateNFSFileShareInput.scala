@@ -70,36 +70,173 @@ trait CreateNFSFileShareInput extends js.Object {
 
 object CreateNFSFileShareInput {
   @scala.inline
-  def apply(
-    ClientToken: ClientToken,
-    GatewayARN: GatewayARN,
-    LocationARN: LocationARN,
-    Role: Role,
-    ClientList: FileShareClientList = null,
-    DefaultStorageClass: StorageClass = null,
-    GuessMIMETypeEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    KMSEncrypted: js.UndefOr[scala.Boolean] = js.undefined,
-    KMSKey: KMSKey = null,
-    NFSFileShareDefaults: NFSFileShareDefaults = null,
-    ObjectACL: ObjectACL = null,
-    ReadOnly: js.UndefOr[scala.Boolean] = js.undefined,
-    RequesterPays: js.UndefOr[scala.Boolean] = js.undefined,
-    Squash: Squash = null,
-    Tags: Tags = null
-  ): CreateNFSFileShareInput = {
+  def apply(ClientToken: ClientToken, GatewayARN: GatewayARN, LocationARN: LocationARN, Role: Role): CreateNFSFileShareInput = {
     val __obj = js.Dynamic.literal(ClientToken = ClientToken.asInstanceOf[js.Any], GatewayARN = GatewayARN.asInstanceOf[js.Any], LocationARN = LocationARN.asInstanceOf[js.Any], Role = Role.asInstanceOf[js.Any])
-    if (ClientList != null) __obj.updateDynamic("ClientList")(ClientList.asInstanceOf[js.Any])
-    if (DefaultStorageClass != null) __obj.updateDynamic("DefaultStorageClass")(DefaultStorageClass.asInstanceOf[js.Any])
-    if (!js.isUndefined(GuessMIMETypeEnabled)) __obj.updateDynamic("GuessMIMETypeEnabled")(GuessMIMETypeEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(KMSEncrypted)) __obj.updateDynamic("KMSEncrypted")(KMSEncrypted.asInstanceOf[js.Any])
-    if (KMSKey != null) __obj.updateDynamic("KMSKey")(KMSKey.asInstanceOf[js.Any])
-    if (NFSFileShareDefaults != null) __obj.updateDynamic("NFSFileShareDefaults")(NFSFileShareDefaults.asInstanceOf[js.Any])
-    if (ObjectACL != null) __obj.updateDynamic("ObjectACL")(ObjectACL.asInstanceOf[js.Any])
-    if (!js.isUndefined(ReadOnly)) __obj.updateDynamic("ReadOnly")(ReadOnly.asInstanceOf[js.Any])
-    if (!js.isUndefined(RequesterPays)) __obj.updateDynamic("RequesterPays")(RequesterPays.asInstanceOf[js.Any])
-    if (Squash != null) __obj.updateDynamic("Squash")(Squash.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateNFSFileShareInput]
   }
+  @scala.inline
+  implicit class CreateNFSFileShareInputOps[Self <: CreateNFSFileShareInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientToken(value: ClientToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGatewayARN(value: GatewayARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocationARN(value: LocationARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRole(value: Role): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientList(value: FileShareClientList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultStorageClass(value: StorageClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultStorageClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultStorageClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultStorageClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGuessMIMETypeEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GuessMIMETypeEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGuessMIMETypeEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GuessMIMETypeEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKMSEncrypted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSEncrypted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKMSEncrypted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSEncrypted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKMSKey(value: KMSKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKMSKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNFSFileShareDefaults(value: NFSFileShareDefaults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NFSFileShareDefaults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNFSFileShareDefaults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NFSFileShareDefaults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectACL(value: ObjectACL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectACL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectACL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectACL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequesterPays(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterPays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequesterPays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterPays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSquash(value: Squash): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Squash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSquash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Squash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,11 +12,41 @@ trait AnonMainPageSuffix extends js.Object {
 
 object AnonMainPageSuffix {
   @scala.inline
-  def apply(mainPageSuffix: String = null, notFoundPage: String = null): AnonMainPageSuffix = {
+  def apply(): AnonMainPageSuffix = {
     val __obj = js.Dynamic.literal()
-    if (mainPageSuffix != null) __obj.updateDynamic("mainPageSuffix")(mainPageSuffix.asInstanceOf[js.Any])
-    if (notFoundPage != null) __obj.updateDynamic("notFoundPage")(notFoundPage.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonMainPageSuffix]
   }
+  @scala.inline
+  implicit class AnonMainPageSuffixOps[Self <: AnonMainPageSuffix] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMainPageSuffix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mainPageSuffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMainPageSuffix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mainPageSuffix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotFoundPage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notFoundPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotFoundPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notFoundPage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

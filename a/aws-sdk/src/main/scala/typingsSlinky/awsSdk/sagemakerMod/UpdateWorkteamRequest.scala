@@ -26,17 +26,59 @@ trait UpdateWorkteamRequest extends js.Object {
 
 object UpdateWorkteamRequest {
   @scala.inline
-  def apply(
-    WorkteamName: WorkteamName,
-    Description: String200 = null,
-    MemberDefinitions: MemberDefinitions = null,
-    NotificationConfiguration: NotificationConfiguration = null
-  ): UpdateWorkteamRequest = {
+  def apply(WorkteamName: WorkteamName): UpdateWorkteamRequest = {
     val __obj = js.Dynamic.literal(WorkteamName = WorkteamName.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (MemberDefinitions != null) __obj.updateDynamic("MemberDefinitions")(MemberDefinitions.asInstanceOf[js.Any])
-    if (NotificationConfiguration != null) __obj.updateDynamic("NotificationConfiguration")(NotificationConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateWorkteamRequest]
   }
+  @scala.inline
+  implicit class UpdateWorkteamRequestOps[Self <: UpdateWorkteamRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWorkteamName(value: WorkteamName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkteamName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String200): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMemberDefinitions(value: MemberDefinitions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MemberDefinitions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMemberDefinitions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MemberDefinitions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotificationConfiguration(value: NotificationConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

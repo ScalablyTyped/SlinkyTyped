@@ -79,20 +79,77 @@ trait SchemaSoftwareConfig extends js.Object {
 
 object SchemaSoftwareConfig {
   @scala.inline
-  def apply(
-    airflowConfigOverrides: StringDictionary[String] = null,
-    envVariables: StringDictionary[String] = null,
-    imageVersion: String = null,
-    pypiPackages: StringDictionary[String] = null,
-    pythonVersion: String = null
-  ): SchemaSoftwareConfig = {
+  def apply(): SchemaSoftwareConfig = {
     val __obj = js.Dynamic.literal()
-    if (airflowConfigOverrides != null) __obj.updateDynamic("airflowConfigOverrides")(airflowConfigOverrides.asInstanceOf[js.Any])
-    if (envVariables != null) __obj.updateDynamic("envVariables")(envVariables.asInstanceOf[js.Any])
-    if (imageVersion != null) __obj.updateDynamic("imageVersion")(imageVersion.asInstanceOf[js.Any])
-    if (pypiPackages != null) __obj.updateDynamic("pypiPackages")(pypiPackages.asInstanceOf[js.Any])
-    if (pythonVersion != null) __obj.updateDynamic("pythonVersion")(pythonVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSoftwareConfig]
   }
+  @scala.inline
+  implicit class SchemaSoftwareConfigOps[Self <: SchemaSoftwareConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAirflowConfigOverrides(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("airflowConfigOverrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAirflowConfigOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("airflowConfigOverrides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvVariables(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("envVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("envVariables")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPypiPackages(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pypiPackages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPypiPackages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pypiPackages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPythonVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pythonVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPythonVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pythonVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,10 @@
 package typingsSlinky.storybookComponents.propJsDocMod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLTableElement
 import typingsSlinky.emotionStyledBase.mod.StyledComponent
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.TableHTMLAttributes
-import typingsSlinky.std.HTMLTableElement
 import typingsSlinky.storybookComponents.PickDetailedHTMLPropsTabl
 import typingsSlinky.storybookTheming.typesMod.Theme
 import scala.scalajs.js

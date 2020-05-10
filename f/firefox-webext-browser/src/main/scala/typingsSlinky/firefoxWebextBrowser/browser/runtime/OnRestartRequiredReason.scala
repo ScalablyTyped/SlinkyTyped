@@ -19,12 +19,10 @@ trait OnRestartRequiredReason extends js.Object
 
 object OnRestartRequiredReason {
   @scala.inline
-  def app_update: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.app_update = this.cast("app_update")
+  def app_update: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.app_update = "app_update".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.app_update]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def os_update: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.os_update = "os_update".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.os_update]
   @scala.inline
-  def os_update: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.os_update = this.cast("os_update")
-  @scala.inline
-  def periodic: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.periodic = this.cast("periodic")
+  def periodic: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.periodic = "periodic".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.periodic]
 }
 

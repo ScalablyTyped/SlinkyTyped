@@ -13,12 +13,10 @@ trait Overflow extends js.Object
 
 object Overflow {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hidden: typingsSlinky.reactSketchapp.reactSketchappStrings.hidden = "hidden".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.hidden]
   @scala.inline
-  def hidden: typingsSlinky.reactSketchapp.reactSketchappStrings.hidden = this.cast("hidden")
+  def scroll: typingsSlinky.reactSketchapp.reactSketchappStrings.scroll = "scroll".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.scroll]
   @scala.inline
-  def scroll: typingsSlinky.reactSketchapp.reactSketchappStrings.scroll = this.cast("scroll")
-  @scala.inline
-  def visible: typingsSlinky.reactSketchapp.reactSketchappStrings.visible = this.cast("visible")
+  def visible: typingsSlinky.reactSketchapp.reactSketchappStrings.visible = "visible".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.visible]
 }
 

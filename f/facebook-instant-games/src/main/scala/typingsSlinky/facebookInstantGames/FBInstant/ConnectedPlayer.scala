@@ -7,33 +7,59 @@ import scala.scalajs.js.annotation._
 /**
   * Represents information about a player who is connected to the current player.
   */
+@js.native
 trait ConnectedPlayer extends js.Object {
   /**
     * Get the id of the connected player.
     *
     * @returns The ID of the connected player
     */
-  def getID(): String
+  def getID(): String = js.native
   /**
     * Get the player's full name.
     *
     * @returns The player's full name
     */
-  def getName(): String | Null
+  def getName(): String | Null = js.native
   /**
     * Get the player's public profile photo.
     *
     * @returns A url to the player's public profile photo
     */
-  def getPhoto(): String | Null
+  def getPhoto(): String | Null = js.native
 }
 
 object ConnectedPlayer {
   @scala.inline
   def apply(getID: () => String, getName: () => String | Null, getPhoto: () => String | Null): ConnectedPlayer = {
     val __obj = js.Dynamic.literal(getID = js.Any.fromFunction0(getID), getName = js.Any.fromFunction0(getName), getPhoto = js.Any.fromFunction0(getPhoto))
-  
     __obj.asInstanceOf[ConnectedPlayer]
   }
+  @scala.inline
+  implicit class ConnectedPlayerOps[Self <: ConnectedPlayer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetID(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getID")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetName(value: () => String | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPhoto(value: () => String | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPhoto")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

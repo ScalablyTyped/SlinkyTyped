@@ -6,17 +6,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SdfResource extends js.Object {
   /** Retrieves entities in SDF format. */
-  def download(request: AnonAlt): Request_[DownloadResponse]
+  def download(request: AnonAlt): Request_[DownloadResponse] = js.native
 }
 
 object SdfResource {
   @scala.inline
   def apply(download: AnonAlt => Request_[DownloadResponse]): SdfResource = {
     val __obj = js.Dynamic.literal(download = js.Any.fromFunction1(download))
-  
     __obj.asInstanceOf[SdfResource]
   }
+  @scala.inline
+  implicit class SdfResourceOps[Self <: SdfResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDownload(value: AnonAlt => Request_[DownloadResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("download")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

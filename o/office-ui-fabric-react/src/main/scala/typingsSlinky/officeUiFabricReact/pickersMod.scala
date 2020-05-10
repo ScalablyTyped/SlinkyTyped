@@ -9,6 +9,7 @@ import typingsSlinky.officeUiFabricReact.peoplePickerItemTypesMod.IPeoplePickerI
 import typingsSlinky.officeUiFabricReact.peoplePickerItemTypesMod.IPeoplePickerItemSuggestionProps
 import typingsSlinky.officeUiFabricReact.peoplePickerMod.IPeoplePickerProps
 import typingsSlinky.officeUiFabricReact.personaTypesMod.IPersonaProps
+import typingsSlinky.officeUiFabricReact.suggestionsItemTypesMod.ISuggestionItemProps
 import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionsProps
 import typingsSlinky.officeUiFabricReact.tagPickerTypesMod.ITagItemProps
 import typingsSlinky.officeUiFabricReact.tagPickerTypesMod.ITagItemSuggestionProps
@@ -71,12 +72,16 @@ object pickersMod extends js.Object {
     extends typingsSlinky.officeUiFabricReact.suggestionsControllerMod.SuggestionsController[T]
   
   @js.native
-  class SuggestionsItem[T] ()
-    extends typingsSlinky.officeUiFabricReact.suggestionsItemMod.SuggestionsItem[T]
+  class SuggestionsItem[T] protected ()
+    extends typingsSlinky.officeUiFabricReact.suggestionsItemMod.SuggestionsItem[T] {
+    def this(props: ISuggestionItemProps[T]) = this()
+  }
   
   @js.native
-  class TagPickerBase ()
-    extends typingsSlinky.officeUiFabricReact.tagPickerMod.TagPickerBase
+  class TagPickerBase protected ()
+    extends typingsSlinky.officeUiFabricReact.tagPickerMod.TagPickerBase {
+    def this(props: ITagPickerProps) = this()
+  }
   
   val CompactPeoplePicker: ReactComponentClass[IPeoplePickerProps] = js.native
   val ListPeoplePicker: ReactComponentClass[IPeoplePickerProps] = js.native

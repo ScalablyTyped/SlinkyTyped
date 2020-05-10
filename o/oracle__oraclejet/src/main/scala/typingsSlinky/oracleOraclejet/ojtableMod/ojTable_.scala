@@ -14,7 +14,6 @@ import typingsSlinky.oracleOraclejet.AnonIndexSubId
 import typingsSlinky.oracleOraclejet.AnonLabelAccSelectionAffordanceBottom
 import typingsSlinky.oracleOraclejet.AnonMaxCount
 import typingsSlinky.oracleOraclejet.AnonRowHeader
-import typingsSlinky.oracleOraclejet.mod.JetElementCustomEvent
 import typingsSlinky.oracleOraclejet.mod.baseComponent
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojtableMod.ojTable.ColumnSelectionEnd
@@ -129,110 +128,49 @@ trait ojTable_[K, D] extends baseComponent[ojTableSettableProperties[K, D]] {
   @JSName("translations")
   var translations_ojTable_ : AnonLabelAccSelectionAffordanceBottom = js.native
   var verticalGridVisible: auto | enabled | disabled = js.native
+  def addEventListener(`type`: displayChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: displayChanged,
-    listener: js.ThisFunction1[
-      /* this */ typingsSlinky.std.HTMLElement, 
-      /* ev */ JetElementCustomEvent[list | grid], 
-      _
-    ]
-  ): Unit = js.native
-  def addEventListener(
-    `type`: displayChanged,
-    listener: js.ThisFunction1[
-      /* this */ typingsSlinky.std.HTMLElement, 
-      /* ev */ JetElementCustomEvent[list | grid], 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  def addEventListener(`type`: editModeChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: editModeChanged,
-    listener: js.ThisFunction1[
-      /* this */ typingsSlinky.std.HTMLElement, 
-      /* ev */ JetElementCustomEvent[none | rowEdit], 
-      _
-    ]
-  ): Unit = js.native
-  def addEventListener(
-    `type`: editModeChanged,
-    listener: js.ThisFunction1[
-      /* this */ typingsSlinky.std.HTMLElement, 
-      /* ev */ JetElementCustomEvent[none | rowEdit], 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   def addEventListener(
     `type`: firstSelectedRowChanged,
-    listener: js.ThisFunction1[
-      /* this */ typingsSlinky.std.HTMLElement, 
-      /* ev */ JetElementCustomEvent[
-        /* import warning: importer.ImportType#apply Failed type conversion: @oracle/oraclejet.@oracle/oraclejet/ojtable.ojTable<K, D>['firstSelectedRow'] */ js.Any
-      ], 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]
   ): Unit = js.native
   def addEventListener(
     `type`: firstSelectedRowChanged,
-    listener: js.ThisFunction1[
-      /* this */ typingsSlinky.std.HTMLElement, 
-      /* ev */ JetElementCustomEvent[
-        /* import warning: importer.ImportType#apply Failed type conversion: @oracle/oraclejet.@oracle/oraclejet/ojtable.ojTable<K, D>['firstSelectedRow'] */ js.Any
-      ], 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   def addEventListener(
     `type`: horizontalGridVisibleChanged,
-    listener: js.ThisFunction1[
-      /* this */ typingsSlinky.std.HTMLElement, 
-      /* ev */ JetElementCustomEvent[auto | enabled | disabled], 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]
   ): Unit = js.native
   def addEventListener(
     `type`: horizontalGridVisibleChanged,
-    listener: js.ThisFunction1[
-      /* this */ typingsSlinky.std.HTMLElement, 
-      /* ev */ JetElementCustomEvent[auto | enabled | disabled], 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  def addEventListener(`type`: scrollPolicyChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: scrollPolicyChanged,
-    listener: js.ThisFunction1[
-      /* this */ typingsSlinky.std.HTMLElement, 
-      /* ev */ JetElementCustomEvent[auto | loadMoreOnScroll], 
-      _
-    ]
-  ): Unit = js.native
-  def addEventListener(
-    `type`: scrollPolicyChanged,
-    listener: js.ThisFunction1[
-      /* this */ typingsSlinky.std.HTMLElement, 
-      /* ev */ JetElementCustomEvent[auto | loadMoreOnScroll], 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   def addEventListener(
     `type`: verticalGridVisibleChanged,
-    listener: js.ThisFunction1[
-      /* this */ typingsSlinky.std.HTMLElement, 
-      /* ev */ JetElementCustomEvent[auto | enabled | disabled], 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]
   ): Unit = js.native
   def addEventListener(
     `type`: verticalGridVisibleChanged,
-    listener: js.ThisFunction1[
-      /* this */ typingsSlinky.std.HTMLElement, 
-      /* ev */ JetElementCustomEvent[auto | enabled | disabled], 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")

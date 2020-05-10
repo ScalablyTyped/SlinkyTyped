@@ -1,35 +1,36 @@
 package typingsSlinky.fundamentalReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.fundamentalReact.iconMod.IconGlyph
 import typingsSlinky.fundamentalReact.iconMod.IconProps
 import typingsSlinky.fundamentalReact.iconMod.IconSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Icon
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Icon {
   @JSImport("fundamental-react/lib/Icon/Icon", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    glyph: String,
-    disableStyles: js.UndefOr[Boolean] = js.undefined,
-    size: IconSize = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(glyph = glyph.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableStyles)) __obj.updateDynamic("disableStyles")(disableStyles.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableStyles(value: Boolean): this.type = set("disableStyles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: IconSize): this.type = set("size", value.asInstanceOf[js.Any])
   }
-  type Props = IconProps
+  
+  def withProps(p: IconProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(glyph: IconGlyph): Builder = {
+    val __props = js.Dynamic.literal(glyph = glyph.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IconProps]))
+  }
 }
 

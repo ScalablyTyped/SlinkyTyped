@@ -20,10 +20,29 @@ trait SchemaSetIamPolicyRequest extends js.Object {
 
 object SchemaSetIamPolicyRequest {
   @scala.inline
-  def apply(policy: SchemaIamPolicy = null): SchemaSetIamPolicyRequest = {
+  def apply(): SchemaSetIamPolicyRequest = {
     val __obj = js.Dynamic.literal()
-    if (policy != null) __obj.updateDynamic("policy")(policy.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSetIamPolicyRequest]
   }
+  @scala.inline
+  implicit class SchemaSetIamPolicyRequestOps[Self <: SchemaSetIamPolicyRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPolicy(value: SchemaIamPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

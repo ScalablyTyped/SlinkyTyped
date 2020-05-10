@@ -25,36 +25,34 @@ trait EventType extends js.Object
 
 object EventType {
   @scala.inline
-  def animationend: typingsSlinky.baiduApp.baiduAppStrings.animationend = this.cast("animationend")
+  def animationend: typingsSlinky.baiduApp.baiduAppStrings.animationend = "animationend".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.animationend]
   @scala.inline
-  def animationiteration: typingsSlinky.baiduApp.baiduAppStrings.animationiteration = this.cast("animationiteration")
+  def animationiteration: typingsSlinky.baiduApp.baiduAppStrings.animationiteration = "animationiteration".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.animationiteration]
   @scala.inline
-  def animationstart: typingsSlinky.baiduApp.baiduAppStrings.animationstart = this.cast("animationstart")
+  def animationstart: typingsSlinky.baiduApp.baiduAppStrings.animationstart = "animationstart".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.animationstart]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def form: typingsSlinky.baiduApp.baiduAppStrings.form = "form".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.form]
   @scala.inline
-  def form: typingsSlinky.baiduApp.baiduAppStrings.form = this.cast("form")
+  def input: typingsSlinky.baiduApp.baiduAppStrings.input = "input".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.input]
   @scala.inline
-  def input: typingsSlinky.baiduApp.baiduAppStrings.input = this.cast("input")
+  def longpress: typingsSlinky.baiduApp.baiduAppStrings.longpress = "longpress".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.longpress]
   @scala.inline
-  def longpress: typingsSlinky.baiduApp.baiduAppStrings.longpress = this.cast("longpress")
+  def scroll: typingsSlinky.baiduApp.baiduAppStrings.scroll = "scroll".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.scroll]
   @scala.inline
-  def scroll: typingsSlinky.baiduApp.baiduAppStrings.scroll = this.cast("scroll")
+  def submit: typingsSlinky.baiduApp.baiduAppStrings.submit = "submit".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.submit]
   @scala.inline
-  def submit: typingsSlinky.baiduApp.baiduAppStrings.submit = this.cast("submit")
+  def tap: typingsSlinky.baiduApp.baiduAppStrings.tap = "tap".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.tap]
   @scala.inline
-  def tap: typingsSlinky.baiduApp.baiduAppStrings.tap = this.cast("tap")
+  def touchcancel: typingsSlinky.baiduApp.baiduAppStrings.touchcancel = "touchcancel".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.touchcancel]
   @scala.inline
-  def touchcancel: typingsSlinky.baiduApp.baiduAppStrings.touchcancel = this.cast("touchcancel")
+  def touchend: typingsSlinky.baiduApp.baiduAppStrings.touchend = "touchend".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.touchend]
   @scala.inline
-  def touchend: typingsSlinky.baiduApp.baiduAppStrings.touchend = this.cast("touchend")
+  def touchforcechange: typingsSlinky.baiduApp.baiduAppStrings.touchforcechange = "touchforcechange".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.touchforcechange]
   @scala.inline
-  def touchforcechange: typingsSlinky.baiduApp.baiduAppStrings.touchforcechange = this.cast("touchforcechange")
+  def touchmove: typingsSlinky.baiduApp.baiduAppStrings.touchmove = "touchmove".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.touchmove]
   @scala.inline
-  def touchmove: typingsSlinky.baiduApp.baiduAppStrings.touchmove = this.cast("touchmove")
+  def touchstart: typingsSlinky.baiduApp.baiduAppStrings.touchstart = "touchstart".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.touchstart]
   @scala.inline
-  def touchstart: typingsSlinky.baiduApp.baiduAppStrings.touchstart = this.cast("touchstart")
-  @scala.inline
-  def transitionend: typingsSlinky.baiduApp.baiduAppStrings.transitionend = this.cast("transitionend")
+  def transitionend: typingsSlinky.baiduApp.baiduAppStrings.transitionend = "transitionend".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.transitionend]
 }
 

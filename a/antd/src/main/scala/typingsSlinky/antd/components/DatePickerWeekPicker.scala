@@ -1,14 +1,16 @@
 package typingsSlinky.antd.components
 
+import typingsSlinky.antd.PickPickPickerDatePropsMo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DatePickerWeekPicker extends SharedApply_PickPickPickerDatePropsMo1120493360 {
+object DatePickerWeekPicker {
   @JSImport("antd", "DatePicker.WeekPicker")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: PickPickPickerDatePropsMo): SharedBuilder_PickPickPickerDatePropsMo1183398999 = new SharedBuilder_PickPickPickerDatePropsMo1183398999(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DatePickerWeekPicker.type): SharedBuilder_PickPickPickerDatePropsMo1183398999 = new SharedBuilder_PickPickPickerDatePropsMo1183398999(js.Array(this.component, js.Dictionary.empty))()
 }
 

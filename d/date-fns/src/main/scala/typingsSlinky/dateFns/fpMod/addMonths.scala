@@ -2,12 +2,12 @@ package typingsSlinky.dateFns.fpMod
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.dateFns.CurriedFn2
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("date-fns/esm/fp", "addMonths")
 @js.native
-object addMonths extends TopLevel[CurriedFn2[Double, Date | Double, Date]]
+object addMonths
+  extends TopLevel[CurriedFn2[Double, js.Date | Double, js.Date]]
 

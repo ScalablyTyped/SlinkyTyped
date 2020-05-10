@@ -1,18 +1,19 @@
 package typingsSlinky.jsoneditorForReact.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.jsoneditorForReact.mod.ReactJsonEditorProps
 import typingsSlinky.jsoneditorForReact.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object JsoneditorForReact
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, default] {
+object JsoneditorForReact {
   @JSImport("jsoneditor-for-react", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ReactJsonEditorProps): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: JsoneditorForReact.type): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, js.Dictionary.empty))()
 }
 

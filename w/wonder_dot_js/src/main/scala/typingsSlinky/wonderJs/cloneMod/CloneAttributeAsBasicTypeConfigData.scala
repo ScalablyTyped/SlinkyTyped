@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CloneAttributeAsBasicTypeConfigData extends js.Object {
-  var order: js.UndefOr[Double] = js.undefined
+  var order: js.UndefOr[Double] = js.native
 }
 
 object CloneAttributeAsBasicTypeConfigData {
   @scala.inline
-  def apply(order: Int | Double = null): CloneAttributeAsBasicTypeConfigData = {
+  def apply(): CloneAttributeAsBasicTypeConfigData = {
     val __obj = js.Dynamic.literal()
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
     __obj.asInstanceOf[CloneAttributeAsBasicTypeConfigData]
   }
+  @scala.inline
+  implicit class CloneAttributeAsBasicTypeConfigDataOps[Self <: CloneAttributeAsBasicTypeConfigData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOrder(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

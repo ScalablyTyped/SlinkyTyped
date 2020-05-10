@@ -20,26 +20,24 @@ trait Events extends js.Object
 
 object Events {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def end: typingsSlinky.annyang.annyangStrings.end = "end".asInstanceOf[typingsSlinky.annyang.annyangStrings.end]
   @scala.inline
-  def end: typingsSlinky.annyang.annyangStrings.end = this.cast("end")
+  def error: typingsSlinky.annyang.annyangStrings.error = "error".asInstanceOf[typingsSlinky.annyang.annyangStrings.error]
   @scala.inline
-  def error: typingsSlinky.annyang.annyangStrings.error = this.cast("error")
+  def errorNetwork: typingsSlinky.annyang.annyangStrings.errorNetwork = "errorNetwork".asInstanceOf[typingsSlinky.annyang.annyangStrings.errorNetwork]
   @scala.inline
-  def errorNetwork: typingsSlinky.annyang.annyangStrings.errorNetwork = this.cast("errorNetwork")
+  def errorPermissionBlocked: typingsSlinky.annyang.annyangStrings.errorPermissionBlocked = "errorPermissionBlocked".asInstanceOf[typingsSlinky.annyang.annyangStrings.errorPermissionBlocked]
   @scala.inline
-  def errorPermissionBlocked: typingsSlinky.annyang.annyangStrings.errorPermissionBlocked = this.cast("errorPermissionBlocked")
+  def errorPermissionDenied: typingsSlinky.annyang.annyangStrings.errorPermissionDenied = "errorPermissionDenied".asInstanceOf[typingsSlinky.annyang.annyangStrings.errorPermissionDenied]
   @scala.inline
-  def errorPermissionDenied: typingsSlinky.annyang.annyangStrings.errorPermissionDenied = this.cast("errorPermissionDenied")
+  def result: typingsSlinky.annyang.annyangStrings.result = "result".asInstanceOf[typingsSlinky.annyang.annyangStrings.result]
   @scala.inline
-  def result: typingsSlinky.annyang.annyangStrings.result = this.cast("result")
+  def resultMatch: typingsSlinky.annyang.annyangStrings.resultMatch = "resultMatch".asInstanceOf[typingsSlinky.annyang.annyangStrings.resultMatch]
   @scala.inline
-  def resultMatch: typingsSlinky.annyang.annyangStrings.resultMatch = this.cast("resultMatch")
+  def resultNoMatch: typingsSlinky.annyang.annyangStrings.resultNoMatch = "resultNoMatch".asInstanceOf[typingsSlinky.annyang.annyangStrings.resultNoMatch]
   @scala.inline
-  def resultNoMatch: typingsSlinky.annyang.annyangStrings.resultNoMatch = this.cast("resultNoMatch")
+  def soundstart: typingsSlinky.annyang.annyangStrings.soundstart = "soundstart".asInstanceOf[typingsSlinky.annyang.annyangStrings.soundstart]
   @scala.inline
-  def soundstart: typingsSlinky.annyang.annyangStrings.soundstart = this.cast("soundstart")
-  @scala.inline
-  def start: typingsSlinky.annyang.annyangStrings.start = this.cast("start")
+  def start: typingsSlinky.annyang.annyangStrings.start = "start".asInstanceOf[typingsSlinky.annyang.annyangStrings.start]
 }
 

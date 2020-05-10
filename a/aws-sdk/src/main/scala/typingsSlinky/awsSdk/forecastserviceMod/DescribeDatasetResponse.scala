@@ -50,30 +50,137 @@ trait DescribeDatasetResponse extends js.Object {
 
 object DescribeDatasetResponse {
   @scala.inline
-  def apply(
-    CreationTime: js.Date = null,
-    DataFrequency: Frequency = null,
-    DatasetArn: Arn = null,
-    DatasetName: Name = null,
-    DatasetType: DatasetType = null,
-    Domain: Domain = null,
-    EncryptionConfig: EncryptionConfig = null,
-    LastModificationTime: js.Date = null,
-    Schema: Schema = null,
-    Status: Status = null
-  ): DescribeDatasetResponse = {
+  def apply(): DescribeDatasetResponse = {
     val __obj = js.Dynamic.literal()
-    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
-    if (DataFrequency != null) __obj.updateDynamic("DataFrequency")(DataFrequency.asInstanceOf[js.Any])
-    if (DatasetArn != null) __obj.updateDynamic("DatasetArn")(DatasetArn.asInstanceOf[js.Any])
-    if (DatasetName != null) __obj.updateDynamic("DatasetName")(DatasetName.asInstanceOf[js.Any])
-    if (DatasetType != null) __obj.updateDynamic("DatasetType")(DatasetType.asInstanceOf[js.Any])
-    if (Domain != null) __obj.updateDynamic("Domain")(Domain.asInstanceOf[js.Any])
-    if (EncryptionConfig != null) __obj.updateDynamic("EncryptionConfig")(EncryptionConfig.asInstanceOf[js.Any])
-    if (LastModificationTime != null) __obj.updateDynamic("LastModificationTime")(LastModificationTime.asInstanceOf[js.Any])
-    if (Schema != null) __obj.updateDynamic("Schema")(Schema.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDatasetResponse]
   }
+  @scala.inline
+  implicit class DescribeDatasetResponseOps[Self <: DescribeDatasetResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataFrequency(value: Frequency): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataFrequency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataFrequency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataFrequency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatasetArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatasetArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatasetName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatasetName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatasetType(value: DatasetType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatasetType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomain(value: Domain): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Domain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptionConfig(value: EncryptionConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModificationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModificationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModificationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModificationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchema(value: Schema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: Status): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

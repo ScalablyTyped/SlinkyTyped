@@ -26,18 +26,65 @@ trait GetResourcePolicyResponse extends js.Object {
 
 object GetResourcePolicyResponse {
   @scala.inline
-  def apply(
-    CreateTime: js.Date = null,
-    PolicyHash: HashString = null,
-    PolicyInJson: PolicyJsonString = null,
-    UpdateTime: js.Date = null
-  ): GetResourcePolicyResponse = {
+  def apply(): GetResourcePolicyResponse = {
     val __obj = js.Dynamic.literal()
-    if (CreateTime != null) __obj.updateDynamic("CreateTime")(CreateTime.asInstanceOf[js.Any])
-    if (PolicyHash != null) __obj.updateDynamic("PolicyHash")(PolicyHash.asInstanceOf[js.Any])
-    if (PolicyInJson != null) __obj.updateDynamic("PolicyInJson")(PolicyInJson.asInstanceOf[js.Any])
-    if (UpdateTime != null) __obj.updateDynamic("UpdateTime")(UpdateTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetResourcePolicyResponse]
   }
+  @scala.inline
+  implicit class GetResourcePolicyResponseOps[Self <: GetResourcePolicyResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyHash(value: HashString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyHash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyHash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyHash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyInJson(value: PolicyJsonString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyInJson")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyInJson: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyInJson")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

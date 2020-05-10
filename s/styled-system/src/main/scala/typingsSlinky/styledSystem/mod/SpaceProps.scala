@@ -4,127 +4,583 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SpaceProps[ThemeType /* <: Theme[TLengthStyledSystem] */, TVal] extends js.Object {
   /** Margin on top, left, bottom and right */
-  var m: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var m: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Margin on top, left, bottom and right */
-  var margin: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var margin: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Margin on bottom */
-  var marginBottom: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var marginBottom: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Margin on left */
-  var marginLeft: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var marginLeft: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Margin on right */
-  var marginRight: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var marginRight: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Margin on top */
-  var marginTop: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var marginTop: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Margin on left and right */
-  var marginX: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var marginX: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Margin on top and bottom */
-  var marginY: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var marginY: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Margin on bottom */
-  var mb: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var mb: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Margin on left */
-  var ml: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var ml: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Margin on right */
-  var mr: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var mr: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Margin on top */
-  var mt: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var mt: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Margin on left and right */
-  var mx: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var mx: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Margin on top and bottom */
-  var my: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var my: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Padding on top, left, bottom and right */
-  var p: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var p: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Padding on top, left, bottom and right */
-  var padding: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var padding: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Padding on bottom */
-  var paddingBottom: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var paddingBottom: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Padding on left */
-  var paddingLeft: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var paddingLeft: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Padding on right */
-  var paddingRight: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var paddingRight: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Padding on top */
-  var paddingTop: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var paddingTop: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Padding on left and right */
-  var paddingX: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var paddingX: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Padding on top and bottom */
-  var paddingY: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var paddingY: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Padding on bottom */
-  var pb: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var pb: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Padding on left */
-  var pl: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var pl: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Padding on right */
-  var pr: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var pr: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Padding on top */
-  var pt: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var pt: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Padding on left and right */
-  var px: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var px: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
   /** Padding on top and bottom */
-  var py: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
+  var py: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
 }
 
 object SpaceProps {
   @scala.inline
-  def apply[ThemeType /* <: Theme[TLengthStyledSystem] */, TVal](
-    m: ResponsiveValue[TVal, ThemeType] = null,
-    margin: ResponsiveValue[TVal, ThemeType] = null,
-    marginBottom: ResponsiveValue[TVal, ThemeType] = null,
-    marginLeft: ResponsiveValue[TVal, ThemeType] = null,
-    marginRight: ResponsiveValue[TVal, ThemeType] = null,
-    marginTop: ResponsiveValue[TVal, ThemeType] = null,
-    marginX: ResponsiveValue[TVal, ThemeType] = null,
-    marginY: ResponsiveValue[TVal, ThemeType] = null,
-    mb: ResponsiveValue[TVal, ThemeType] = null,
-    ml: ResponsiveValue[TVal, ThemeType] = null,
-    mr: ResponsiveValue[TVal, ThemeType] = null,
-    mt: ResponsiveValue[TVal, ThemeType] = null,
-    mx: ResponsiveValue[TVal, ThemeType] = null,
-    my: ResponsiveValue[TVal, ThemeType] = null,
-    p: ResponsiveValue[TVal, ThemeType] = null,
-    padding: ResponsiveValue[TVal, ThemeType] = null,
-    paddingBottom: ResponsiveValue[TVal, ThemeType] = null,
-    paddingLeft: ResponsiveValue[TVal, ThemeType] = null,
-    paddingRight: ResponsiveValue[TVal, ThemeType] = null,
-    paddingTop: ResponsiveValue[TVal, ThemeType] = null,
-    paddingX: ResponsiveValue[TVal, ThemeType] = null,
-    paddingY: ResponsiveValue[TVal, ThemeType] = null,
-    pb: ResponsiveValue[TVal, ThemeType] = null,
-    pl: ResponsiveValue[TVal, ThemeType] = null,
-    pr: ResponsiveValue[TVal, ThemeType] = null,
-    pt: ResponsiveValue[TVal, ThemeType] = null,
-    px: ResponsiveValue[TVal, ThemeType] = null,
-    py: ResponsiveValue[TVal, ThemeType] = null
-  ): SpaceProps[ThemeType, TVal] = {
+  def apply[ThemeType, TVal](): SpaceProps[ThemeType, TVal] = {
     val __obj = js.Dynamic.literal()
-    if (m != null) __obj.updateDynamic("m")(m.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (marginBottom != null) __obj.updateDynamic("marginBottom")(marginBottom.asInstanceOf[js.Any])
-    if (marginLeft != null) __obj.updateDynamic("marginLeft")(marginLeft.asInstanceOf[js.Any])
-    if (marginRight != null) __obj.updateDynamic("marginRight")(marginRight.asInstanceOf[js.Any])
-    if (marginTop != null) __obj.updateDynamic("marginTop")(marginTop.asInstanceOf[js.Any])
-    if (marginX != null) __obj.updateDynamic("marginX")(marginX.asInstanceOf[js.Any])
-    if (marginY != null) __obj.updateDynamic("marginY")(marginY.asInstanceOf[js.Any])
-    if (mb != null) __obj.updateDynamic("mb")(mb.asInstanceOf[js.Any])
-    if (ml != null) __obj.updateDynamic("ml")(ml.asInstanceOf[js.Any])
-    if (mr != null) __obj.updateDynamic("mr")(mr.asInstanceOf[js.Any])
-    if (mt != null) __obj.updateDynamic("mt")(mt.asInstanceOf[js.Any])
-    if (mx != null) __obj.updateDynamic("mx")(mx.asInstanceOf[js.Any])
-    if (my != null) __obj.updateDynamic("my")(my.asInstanceOf[js.Any])
-    if (p != null) __obj.updateDynamic("p")(p.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (paddingBottom != null) __obj.updateDynamic("paddingBottom")(paddingBottom.asInstanceOf[js.Any])
-    if (paddingLeft != null) __obj.updateDynamic("paddingLeft")(paddingLeft.asInstanceOf[js.Any])
-    if (paddingRight != null) __obj.updateDynamic("paddingRight")(paddingRight.asInstanceOf[js.Any])
-    if (paddingTop != null) __obj.updateDynamic("paddingTop")(paddingTop.asInstanceOf[js.Any])
-    if (paddingX != null) __obj.updateDynamic("paddingX")(paddingX.asInstanceOf[js.Any])
-    if (paddingY != null) __obj.updateDynamic("paddingY")(paddingY.asInstanceOf[js.Any])
-    if (pb != null) __obj.updateDynamic("pb")(pb.asInstanceOf[js.Any])
-    if (pl != null) __obj.updateDynamic("pl")(pl.asInstanceOf[js.Any])
-    if (pr != null) __obj.updateDynamic("pr")(pr.asInstanceOf[js.Any])
-    if (pt != null) __obj.updateDynamic("pt")(pt.asInstanceOf[js.Any])
-    if (px != null) __obj.updateDynamic("px")(px.asInstanceOf[js.Any])
-    if (py != null) __obj.updateDynamic("py")(py.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpaceProps[ThemeType, TVal]]
   }
+  @scala.inline
+  implicit class SpacePropsOps[Self[themetype, tval] <: SpaceProps[themetype, tval], ThemeType, TVal] (val x: Self[ThemeType, TVal]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[ThemeType, TVal] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[ThemeType, TVal]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[ThemeType, TVal]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[ThemeType, TVal]) with Other]
+    @scala.inline
+    def withM(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutM: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m")(null)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(null)
+        ret
+    }
+    @scala.inline
+    def withMarginBottom(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginBottom: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginBottomNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBottom")(null)
+        ret
+    }
+    @scala.inline
+    def withMarginLeft(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginLeft: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginLeftNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginLeft")(null)
+        ret
+    }
+    @scala.inline
+    def withMarginRight(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginRight: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginRightNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginRight")(null)
+        ret
+    }
+    @scala.inline
+    def withMarginTop(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginTop: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginTopNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTop")(null)
+        ret
+    }
+    @scala.inline
+    def withMarginX(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginX: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginXNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginX")(null)
+        ret
+    }
+    @scala.inline
+    def withMarginY(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginY: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginYNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginY")(null)
+        ret
+    }
+    @scala.inline
+    def withMb(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMb: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMbNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mb")(null)
+        ret
+    }
+    @scala.inline
+    def withMl(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ml")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMl: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ml")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMlNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ml")(null)
+        ret
+    }
+    @scala.inline
+    def withMr(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMr: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMrNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mr")(null)
+        ret
+    }
+    @scala.inline
+    def withMt(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMt: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMtNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mt")(null)
+        ret
+    }
+    @scala.inline
+    def withMx(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMx: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mx")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMxNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mx")(null)
+        ret
+    }
+    @scala.inline
+    def withMy(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("my")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMy: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("my")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMyNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("my")(null)
+        ret
+    }
+    @scala.inline
+    def withP(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutP: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(null)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(null)
+        ret
+    }
+    @scala.inline
+    def withPaddingBottom(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingBottom: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingBottomNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBottom")(null)
+        ret
+    }
+    @scala.inline
+    def withPaddingLeft(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingLeft: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingLeftNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingLeft")(null)
+        ret
+    }
+    @scala.inline
+    def withPaddingRight(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingRight: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingRightNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingRight")(null)
+        ret
+    }
+    @scala.inline
+    def withPaddingTop(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingTop: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingTopNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingTop")(null)
+        ret
+    }
+    @scala.inline
+    def withPaddingX(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingX: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingXNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingX")(null)
+        ret
+    }
+    @scala.inline
+    def withPaddingY(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingY: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingYNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingY")(null)
+        ret
+    }
+    @scala.inline
+    def withPb(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPb: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPbNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pb")(null)
+        ret
+    }
+    @scala.inline
+    def withPl(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPl: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pl")(null)
+        ret
+    }
+    @scala.inline
+    def withPr(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPr: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pr")(null)
+        ret
+    }
+    @scala.inline
+    def withPt(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPt: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPtNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pt")(null)
+        ret
+    }
+    @scala.inline
+    def withPx(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("px")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPx: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("px")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPxNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("px")(null)
+        ret
+    }
+    @scala.inline
+    def withPy(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("py")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPy: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("py")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPyNull: Self[ThemeType, TVal] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("py")(null)
+        ret
+    }
+  }
+  
 }
 

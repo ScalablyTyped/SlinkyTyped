@@ -73,7 +73,7 @@ class Menu () extends DropDownMenu {
     * 
     * @param node             
     */
-  def bindDomNode(node: typingsSlinky.std.HTMLElement): Unit = js.native
+  def bindDomNode(node: HTMLElement): Unit = js.native
   /**
     * Returns an array of placeholders with the given label.  There
     * can be multiples.
@@ -116,7 +116,7 @@ class Menu () extends DropDownMenu {
     * 
     * @param nodeName             
     */
-  def unBindDomNode(nodeName: typingsSlinky.std.HTMLElement): Unit = js.native
+  def unBindDomNode(nodeName: HTMLElement): Unit = js.native
   @JSName("watch")
   def watch_contextMenuForWindow(
     property: contextMenuForWindow,

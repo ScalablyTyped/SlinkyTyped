@@ -18,11 +18,41 @@ trait NodeConfigurationOptionsMessage extends js.Object {
 
 object NodeConfigurationOptionsMessage {
   @scala.inline
-  def apply(Marker: String = null, NodeConfigurationOptionList: NodeConfigurationOptionList = null): NodeConfigurationOptionsMessage = {
+  def apply(): NodeConfigurationOptionsMessage = {
     val __obj = js.Dynamic.literal()
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (NodeConfigurationOptionList != null) __obj.updateDynamic("NodeConfigurationOptionList")(NodeConfigurationOptionList.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeConfigurationOptionsMessage]
   }
+  @scala.inline
+  implicit class NodeConfigurationOptionsMessageOps[Self <: NodeConfigurationOptionsMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMarker(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeConfigurationOptionList(value: NodeConfigurationOptionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeConfigurationOptionList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeConfigurationOptionList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeConfigurationOptionList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

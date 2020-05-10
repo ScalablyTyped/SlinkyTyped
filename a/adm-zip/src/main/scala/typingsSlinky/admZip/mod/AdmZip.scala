@@ -1,7 +1,6 @@
 package typingsSlinky.admZip.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,7 +40,7 @@ trait AdmZip extends js.Object {
   def addLocalFolder(localPath: String): Unit = js.native
   def addLocalFolder(localPath: String, zipPath: String): Unit = js.native
   def addLocalFolder(localPath: String, zipPath: String, filter: js.Function1[/* filename */ String, Boolean]): Unit = js.native
-  def addLocalFolder(localPath: String, zipPath: String, filter: RegExp): Unit = js.native
+  def addLocalFolder(localPath: String, zipPath: String, filter: js.RegExp): Unit = js.native
   /**
     * Adds a comment to the zip. The zip must be rewritten after
     * adding the comment.
@@ -160,6 +159,29 @@ trait AdmZip extends js.Object {
     * Returns the content of the entire zip file.
     */
   def toBuffer(): Buffer = js.native
+  /**
+    * Asynchronously returns the content of the entire zip file.
+    * @param onSuccess called with the content of the zip file, once it has been generated.
+    * @param onFail unused.
+    * @param onItemStart called before an entry is compressed.
+    * @param onItemEnd called after an entry is compressed.
+    */
+  def toBuffer(onSuccess: js.Function1[/* buffer */ Buffer, Unit]): Unit = js.native
+  def toBuffer(
+    onSuccess: js.Function1[/* buffer */ Buffer, Unit],
+    onFail: js.Function1[/* repeated */ js.Any, Unit]
+  ): Unit = js.native
+  def toBuffer(
+    onSuccess: js.Function1[/* buffer */ Buffer, Unit],
+    onFail: js.Function1[/* repeated */ js.Any, Unit],
+    onItemStart: js.Function1[/* name */ String, Unit]
+  ): Unit = js.native
+  def toBuffer(
+    onSuccess: js.Function1[/* buffer */ Buffer, Unit],
+    onFail: js.Function1[/* repeated */ js.Any, Unit],
+    onItemStart: js.Function1[/* name */ String, Unit],
+    onItemEnd: js.Function1[/* name */ String, Unit]
+  ): Unit = js.native
   /**
     * Updates the content of an existing entry inside the archive. The zip
     * must be rewritten after updating the content.

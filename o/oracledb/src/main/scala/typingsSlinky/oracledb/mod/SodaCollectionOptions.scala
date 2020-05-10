@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SodaCollectionOptions extends js.Object {
   /**
     * Metadata specifying various details about the collection, such as its database storage, whether it should
@@ -16,7 +17,7 @@ trait SodaCollectionOptions extends js.Object {
     * @see https://oracle.github.io/node-oracledb/doc/api.html#sodaclientkeys
     * @see https://www.oracle.com/pls/topic/lookup?ctx=dblatest&id=GUID-49EFF3D3-9FAB-4DA6-BDE2-2650383566A3
     */
-  var metaData: js.UndefOr[SodaMetadata] = js.undefined
+  var metaData: js.UndefOr[SodaMetadata] = js.native
   /**
     * If mode is SODA_COLL_MAP_MODE, the collection will be stored in an externally,
     * previously created table. A future sodaCollection.drop() will not drop the collection table.
@@ -24,16 +25,46 @@ trait SodaCollectionOptions extends js.Object {
     *
     * Most users will leave mode undefined.
     */
-  var mode: js.UndefOr[Double] = js.undefined
+  var mode: js.UndefOr[Double] = js.native
 }
 
 object SodaCollectionOptions {
   @scala.inline
-  def apply(metaData: SodaMetadata = null, mode: Int | Double = null): SodaCollectionOptions = {
+  def apply(): SodaCollectionOptions = {
     val __obj = js.Dynamic.literal()
-    if (metaData != null) __obj.updateDynamic("metaData")(metaData.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SodaCollectionOptions]
   }
+  @scala.inline
+  implicit class SodaCollectionOptionsOps[Self <: SodaCollectionOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMetaData(value: SodaMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metaData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetaData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metaData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

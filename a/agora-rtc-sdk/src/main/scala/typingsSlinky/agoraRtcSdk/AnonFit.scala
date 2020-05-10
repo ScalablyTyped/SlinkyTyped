@@ -6,6 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFit extends js.Object {
   /**
     * Video display mode:
@@ -18,7 +19,7 @@ trait AnonFit extends js.Object {
     *
     * For local streams, by default the cover mode is used for video playing and the contain mode is used for screen sharing; for remote streams, by default the cover mode is used.
     */
-  var fit: js.UndefOr[cover | contain] = js.undefined
+  var fit: js.UndefOr[cover | contain] = js.native
   /**
     * Sets whether to mute the playing stream.
     *
@@ -29,16 +30,46 @@ trait AnonFit extends js.Object {
     *
     * For more information, see [Autoplay Policy Changes](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes).
     */
-  var muted: js.UndefOr[Boolean] = js.undefined
+  var muted: js.UndefOr[Boolean] = js.native
 }
 
 object AnonFit {
   @scala.inline
-  def apply(fit: cover | contain = null, muted: js.UndefOr[Boolean] = js.undefined): AnonFit = {
+  def apply(): AnonFit = {
     val __obj = js.Dynamic.literal()
-    if (fit != null) __obj.updateDynamic("fit")(fit.asInstanceOf[js.Any])
-    if (!js.isUndefined(muted)) __obj.updateDynamic("muted")(muted.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonFit]
   }
+  @scala.inline
+  implicit class AnonFitOps[Self <: AnonFit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFit(value: cover | contain): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("muted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("muted")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

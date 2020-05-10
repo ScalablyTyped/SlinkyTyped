@@ -1,8 +1,8 @@
 package typingsSlinky.downloadjs
 
+import org.scalajs.dom.raw.Blob
+import org.scalajs.dom.raw.File
 import org.scalajs.dom.raw.XMLHttpRequest
-import typingsSlinky.std.Blob
-import typingsSlinky.std.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,5 +19,8 @@ object mod extends js.Object {
   def apply(data: File): XMLHttpRequest | Boolean = js.native
   def apply(data: File, filename: String): XMLHttpRequest | Boolean = js.native
   def apply(data: File, filename: String, mimeType: String): XMLHttpRequest | Boolean = js.native
+  def apply(data: js.typedarray.Uint8Array): XMLHttpRequest | Boolean = js.native
+  def apply(data: js.typedarray.Uint8Array, filename: String): XMLHttpRequest | Boolean = js.native
+  def apply(data: js.typedarray.Uint8Array, filename: String, mimeType: String): XMLHttpRequest | Boolean = js.native
 }
 

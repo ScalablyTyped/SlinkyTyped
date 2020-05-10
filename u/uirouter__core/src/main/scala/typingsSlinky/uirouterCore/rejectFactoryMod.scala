@@ -1,7 +1,6 @@
 package typingsSlinky.uirouterCore
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -150,7 +149,7 @@ object rejectFactoryMod extends js.Object {
       */
     def normalize(): Rejection = js.native
     def normalize(detail: js.Any): Rejection = js.native
-    def normalize(detail: Error): Rejection = js.native
+    def normalize(detail: js.Error): Rejection = js.native
     def normalize(detail: Rejection): Rejection = js.native
     /** Returns a Rejection due to redirected transition */
     def redirected(): Rejection = js.native

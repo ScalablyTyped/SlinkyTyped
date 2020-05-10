@@ -5,309 +5,310 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HttpStatus extends js.Object {
-  val `100`: String
-  val `100_CLASS`: String
-  val `100_MESSAGE`: String
-  val `100_NAME`: String
-  val `101`: String
-  val `101_CLASS`: String
-  val `101_MESSAGE`: String
-  val `101_NAME`: String
-  val `200`: String
-  val `200_CLASS`: String
-  val `200_MESSAGE`: String
-  val `200_NAME`: String
-  val `201`: String
-  val `201_CLASS`: String
-  val `201_MESSAGE`: String
-  val `201_NAME`: String
-  val `202`: String
-  val `202_CLASS`: String
-  val `202_MESSAGE`: String
-  val `202_NAME`: String
-  val `203`: String
-  val `203_CLASS`: String
-  val `203_MESSAGE`: String
-  val `203_NAME`: String
-  val `204`: String
-  val `204_CLASS`: String
-  val `204_MESSAGE`: String
-  val `204_NAME`: String
-  val `205`: String
-  val `205_CLASS`: String
-  val `205_MESSAGE`: String
-  val `205_NAME`: String
-  val `206`: String
-  val `206_CLASS`: String
-  val `206_MESSAGE`: String
-  val `206_NAME`: String
-  val `207`: String
-  val `207_CLASS`: String
-  val `207_MESSAGE`: String
-  val `207_NAME`: String
-  val `208`: String
-  val `208_CLASS`: String
-  val `208_MESSAGE`: String
-  val `208_NAME`: String
-  val `226`: String
-  val `226_CLASS`: String
-  val `226_MESSAGE`: String
-  val `226_NAME`: String
-  val `300`: String
-  val `300_CLASS`: String
-  val `300_MESSAGE`: String
-  val `300_NAME`: String
-  val `301`: String
-  val `301_CLASS`: String
-  val `301_MESSAGE`: String
-  val `301_NAME`: String
-  val `302`: String
-  val `302_CLASS`: String
-  val `302_MESSAGE`: String
-  val `302_NAME`: String
-  val `303`: String
-  val `303_CLASS`: String
-  val `303_MESSAGE`: String
-  val `303_NAME`: String
-  val `304`: String
-  val `304_CLASS`: String
-  val `304_MESSAGE`: String
-  val `304_NAME`: String
-  val `305`: String
-  val `305_CLASS`: String
-  val `305_MESSAGE`: String
-  val `305_NAME`: String
-  val `306`: String
-  val `306_CLASS`: String
-  val `306_MESSAGE`: String
-  val `306_NAME`: String
-  val `307`: String
-  val `307_CLASS`: String
-  val `307_MESSAGE`: String
-  val `307_NAME`: String
-  val `308`: String
-  val `308_CLASS`: String
-  val `308_MESSAGE`: String
-  val `308_NAME`: String
-  val `400`: String
-  val `400_CLASS`: String
-  val `400_MESSAGE`: String
-  val `400_NAME`: String
-  val `401`: String
-  val `401_CLASS`: String
-  val `401_MESSAGE`: String
-  val `401_NAME`: String
-  val `402`: String
-  val `402_CLASS`: String
-  val `402_MESSAGE`: String
-  val `402_NAME`: String
-  val `403`: String
-  val `403_CLASS`: String
-  val `403_MESSAGE`: String
-  val `403_NAME`: String
-  val `404`: String
-  val `404_CLASS`: String
-  val `404_MESSAGE`: String
-  val `404_NAME`: String
-  val `405`: String
-  val `405_CLASS`: String
-  val `405_MESSAGE`: String
-  val `405_NAME`: String
-  val `406`: String
-  val `406_CLASS`: String
-  val `406_MESSAGE`: String
-  val `406_NAME`: String
-  val `407`: String
-  val `407_CLASS`: String
-  val `407_MESSAGE`: String
-  val `407_NAME`: String
-  val `408`: String
-  val `408_CLASS`: String
-  val `408_MESSAGE`: String
-  val `408_NAME`: String
-  val `409`: String
-  val `409_CLASS`: String
-  val `409_MESSAGE`: String
-  val `409_NAME`: String
-  val `410`: String
-  val `410_CLASS`: String
-  val `410_MESSAGE`: String
-  val `410_NAME`: String
-  val `411`: String
-  val `411_CLASS`: String
-  val `411_MESSAGE`: String
-  val `411_NAME`: String
-  val `412`: String
-  val `412_CLASS`: String
-  val `412_MESSAGE`: String
-  val `412_NAME`: String
-  val `413`: String
-  val `413_CLASS`: String
-  val `413_MESSAGE`: String
-  val `413_NAME`: String
-  val `414`: String
-  val `414_CLASS`: String
-  val `414_MESSAGE`: String
-  val `414_NAME`: String
-  val `415`: String
-  val `415_CLASS`: String
-  val `415_MESSAGE`: String
-  val `415_NAME`: String
-  val `416`: String
-  val `416_CLASS`: String
-  val `416_MESSAGE`: String
-  val `416_NAME`: String
-  val `417`: String
-  val `417_CLASS`: String
-  val `417_MESSAGE`: String
-  val `417_NAME`: String
-  val `418`: String
-  val `418_CLASS`: String
-  val `418_MESSAGE`: String
-  val `418_NAME`: String
-  val `421`: String
-  val `421_CLASS`: String
-  val `421_MESSAGE`: String
-  val `421_NAME`: String
-  val `422`: String
-  val `422_CLASS`: String
-  val `422_MESSAGE`: String
-  val `422_NAME`: String
-  val `423`: String
-  val `423_CLASS`: String
-  val `423_MESSAGE`: String
-  val `423_NAME`: String
-  val `424`: String
-  val `424_CLASS`: String
-  val `424_MESSAGE`: String
-  val `424_NAME`: String
-  val `426`: String
-  val `426_CLASS`: String
-  val `426_MESSAGE`: String
-  val `426_NAME`: String
-  val `428`: String
-  val `428_CLASS`: String
-  val `428_MESSAGE`: String
-  val `428_NAME`: String
-  val `429`: String
-  val `429_CLASS`: String
-  val `429_MESSAGE`: String
-  val `429_NAME`: String
-  val `431`: String
-  val `431_CLASS`: String
-  val `431_MESSAGE`: String
-  val `431_NAME`: String
-  val `451`: String
-  val `451_CLASS`: String
-  val `451_MESSAGE`: String
-  val `451_NAME`: String
-  val `500`: String
-  val `500_CLASS`: String
-  val `500_MESSAGE`: String
-  val `500_NAME`: String
-  val `501`: String
-  val `501_CLASS`: String
-  val `501_MESSAGE`: String
-  val `501_NAME`: String
-  val `502`: String
-  val `503`: String
-  val `503_CLASS`: String
-  val `503_MESSAGE`: String
-  val `503_NAME`: String
-  val `504`: String
-  val `504_CLASS`: String
-  val `504_MESSAGE`: String
-  val `504_NAME`: String
-  val `505`: String
-  val `505_CLASS`: String
-  val `505_MESSAGE`: String
-  val `505_NAME`: String
-  val `506`: String
-  val `506_CLASS`: String
-  val `506_MESSAGE`: String
-  val `506_NAME`: String
-  val `507`: String
-  val `507_CLASS`: String
-  val `507_MESSAGE`: String
-  val `507_NAME`: String
-  val `508`: String
-  val `508_CLASS`: String
-  val `508_MESSAGE`: String
-  val `508_NAME`: String
-  val `510`: String
-  val `510_CLASS`: String
-  val `510_MESSAGE`: String
-  val `510_NAME`: String
-  val `511`: String
-  val `511_CLASS`: String
-  val `511_MESSAGE`: String
-  val `511_NAME`: String
-  val ACCEPTED: Double
-  val ALREADY_REPORTED: Double
-  val BAD_GATEWAY: Double
-  val BAD_REQUEST: Double
-  val CONFLICT: Double
-  val CONTINUE: Double
-  val CREATED: Double
-  val EXPECTATION_FAILED: Double
-  val FAILED_DEPENDENCY: Double
-  val FORBIDDEN: Double
-  val FOUND: Double
-  val GATEWAY_TIMEOUT: Double
-  val GONE: Double
-  val HTTP_VERSION_NOT_SUPPORTED: Double
-  val IM_A_TEAPOT: Double
-  val IM_USED: Double
-  val INSUFFICIENT_STORAGE: Double
-  val INTERNAL_SERVER_ERROR: Double
-  val LENGTH_REQUIRED: Double
-  val LOCKED: Double
-  val LOOP_DETECTED: Double
-  val METHOD_NOT_ALLOWED: Double
-  val MISDIRECTED_REQUEST: Double
-  val MOVED_PERMANENTLY: Double
-  val MULTIPLE_CHOICES: Double
-  val MULTI_STATUS: Double
-  val NETWORK_AUTHENTICATION_REQUIRED: Double
-  val NON_AUTHORITATIVE_INFORMATION: Double
-  val NOT_ACCEPTABLE: Double
-  val NOT_EXTENDED: Double
-  val NOT_FOUND: Double
-  val NOT_IMPLEMENTED: Double
-  val NOT_MODIFIED: Double
-  val NO_CONTENT: Double
-  val OK: Double
-  val PARTIAL_CONTENT: Double
-  val PAYMENT_REQUIRED: Double
-  val PERMANENT_REDIRECT: Double
-  val PRECONDITION_FAILED: Double
-  val PRECONDITION_REQUIRED: Double
-  val PROXY_AUTHENTICATION_REQUIRED: Double
-  val REQUESTED_RANGE_NOT_SATISFIABLE: Double
-  val REQUEST_ENTITY_TOO_LARGE: Double
-  val REQUEST_HEADER_FIELDS_TOO_LARGE: Double
-  val REQUEST_TIMEOUT: Double
-  val REQUEST_URI_TOO_LONG: Double
-  val RESET_CONTENT: Double
-  val SEE_OTHER: Double
-  val SERVICE_UNAVAILABLE: Double
-  val SWITCHING_PROTOCOLS: Double
-  val SWITCH_PROXY: Double
-  val TEMPORARY_REDIRECT: Double
-  val TOO_MANY_REQUESTS: Double
-  val UNAUTHORIZED: Double
-  val UNAVAILABLE_FOR_LEGAL_REASONS: Double
-  val UNPROCESSABLE_ENTITY: Double
-  val UNSUPPORTED_MEDIA_TYPE: Double
-  val UPGRADE_REQUIRED: Double
-  val USE_PROXY: Double
-  val VARIANT_ALSO_NEGOTIATES: Double
-  val _CLASS: String
-  val _MESSAGE: String
-  val _NAME: String
-  var classes: HttpStatusClasses
-  var extra: AnonCloudflare
+  val `100`: String = js.native
+  val `100_CLASS`: String = js.native
+  val `100_MESSAGE`: String = js.native
+  val `100_NAME`: String = js.native
+  val `101`: String = js.native
+  val `101_CLASS`: String = js.native
+  val `101_MESSAGE`: String = js.native
+  val `101_NAME`: String = js.native
+  val `200`: String = js.native
+  val `200_CLASS`: String = js.native
+  val `200_MESSAGE`: String = js.native
+  val `200_NAME`: String = js.native
+  val `201`: String = js.native
+  val `201_CLASS`: String = js.native
+  val `201_MESSAGE`: String = js.native
+  val `201_NAME`: String = js.native
+  val `202`: String = js.native
+  val `202_CLASS`: String = js.native
+  val `202_MESSAGE`: String = js.native
+  val `202_NAME`: String = js.native
+  val `203`: String = js.native
+  val `203_CLASS`: String = js.native
+  val `203_MESSAGE`: String = js.native
+  val `203_NAME`: String = js.native
+  val `204`: String = js.native
+  val `204_CLASS`: String = js.native
+  val `204_MESSAGE`: String = js.native
+  val `204_NAME`: String = js.native
+  val `205`: String = js.native
+  val `205_CLASS`: String = js.native
+  val `205_MESSAGE`: String = js.native
+  val `205_NAME`: String = js.native
+  val `206`: String = js.native
+  val `206_CLASS`: String = js.native
+  val `206_MESSAGE`: String = js.native
+  val `206_NAME`: String = js.native
+  val `207`: String = js.native
+  val `207_CLASS`: String = js.native
+  val `207_MESSAGE`: String = js.native
+  val `207_NAME`: String = js.native
+  val `208`: String = js.native
+  val `208_CLASS`: String = js.native
+  val `208_MESSAGE`: String = js.native
+  val `208_NAME`: String = js.native
+  val `226`: String = js.native
+  val `226_CLASS`: String = js.native
+  val `226_MESSAGE`: String = js.native
+  val `226_NAME`: String = js.native
+  val `300`: String = js.native
+  val `300_CLASS`: String = js.native
+  val `300_MESSAGE`: String = js.native
+  val `300_NAME`: String = js.native
+  val `301`: String = js.native
+  val `301_CLASS`: String = js.native
+  val `301_MESSAGE`: String = js.native
+  val `301_NAME`: String = js.native
+  val `302`: String = js.native
+  val `302_CLASS`: String = js.native
+  val `302_MESSAGE`: String = js.native
+  val `302_NAME`: String = js.native
+  val `303`: String = js.native
+  val `303_CLASS`: String = js.native
+  val `303_MESSAGE`: String = js.native
+  val `303_NAME`: String = js.native
+  val `304`: String = js.native
+  val `304_CLASS`: String = js.native
+  val `304_MESSAGE`: String = js.native
+  val `304_NAME`: String = js.native
+  val `305`: String = js.native
+  val `305_CLASS`: String = js.native
+  val `305_MESSAGE`: String = js.native
+  val `305_NAME`: String = js.native
+  val `306`: String = js.native
+  val `306_CLASS`: String = js.native
+  val `306_MESSAGE`: String = js.native
+  val `306_NAME`: String = js.native
+  val `307`: String = js.native
+  val `307_CLASS`: String = js.native
+  val `307_MESSAGE`: String = js.native
+  val `307_NAME`: String = js.native
+  val `308`: String = js.native
+  val `308_CLASS`: String = js.native
+  val `308_MESSAGE`: String = js.native
+  val `308_NAME`: String = js.native
+  val `400`: String = js.native
+  val `400_CLASS`: String = js.native
+  val `400_MESSAGE`: String = js.native
+  val `400_NAME`: String = js.native
+  val `401`: String = js.native
+  val `401_CLASS`: String = js.native
+  val `401_MESSAGE`: String = js.native
+  val `401_NAME`: String = js.native
+  val `402`: String = js.native
+  val `402_CLASS`: String = js.native
+  val `402_MESSAGE`: String = js.native
+  val `402_NAME`: String = js.native
+  val `403`: String = js.native
+  val `403_CLASS`: String = js.native
+  val `403_MESSAGE`: String = js.native
+  val `403_NAME`: String = js.native
+  val `404`: String = js.native
+  val `404_CLASS`: String = js.native
+  val `404_MESSAGE`: String = js.native
+  val `404_NAME`: String = js.native
+  val `405`: String = js.native
+  val `405_CLASS`: String = js.native
+  val `405_MESSAGE`: String = js.native
+  val `405_NAME`: String = js.native
+  val `406`: String = js.native
+  val `406_CLASS`: String = js.native
+  val `406_MESSAGE`: String = js.native
+  val `406_NAME`: String = js.native
+  val `407`: String = js.native
+  val `407_CLASS`: String = js.native
+  val `407_MESSAGE`: String = js.native
+  val `407_NAME`: String = js.native
+  val `408`: String = js.native
+  val `408_CLASS`: String = js.native
+  val `408_MESSAGE`: String = js.native
+  val `408_NAME`: String = js.native
+  val `409`: String = js.native
+  val `409_CLASS`: String = js.native
+  val `409_MESSAGE`: String = js.native
+  val `409_NAME`: String = js.native
+  val `410`: String = js.native
+  val `410_CLASS`: String = js.native
+  val `410_MESSAGE`: String = js.native
+  val `410_NAME`: String = js.native
+  val `411`: String = js.native
+  val `411_CLASS`: String = js.native
+  val `411_MESSAGE`: String = js.native
+  val `411_NAME`: String = js.native
+  val `412`: String = js.native
+  val `412_CLASS`: String = js.native
+  val `412_MESSAGE`: String = js.native
+  val `412_NAME`: String = js.native
+  val `413`: String = js.native
+  val `413_CLASS`: String = js.native
+  val `413_MESSAGE`: String = js.native
+  val `413_NAME`: String = js.native
+  val `414`: String = js.native
+  val `414_CLASS`: String = js.native
+  val `414_MESSAGE`: String = js.native
+  val `414_NAME`: String = js.native
+  val `415`: String = js.native
+  val `415_CLASS`: String = js.native
+  val `415_MESSAGE`: String = js.native
+  val `415_NAME`: String = js.native
+  val `416`: String = js.native
+  val `416_CLASS`: String = js.native
+  val `416_MESSAGE`: String = js.native
+  val `416_NAME`: String = js.native
+  val `417`: String = js.native
+  val `417_CLASS`: String = js.native
+  val `417_MESSAGE`: String = js.native
+  val `417_NAME`: String = js.native
+  val `418`: String = js.native
+  val `418_CLASS`: String = js.native
+  val `418_MESSAGE`: String = js.native
+  val `418_NAME`: String = js.native
+  val `421`: String = js.native
+  val `421_CLASS`: String = js.native
+  val `421_MESSAGE`: String = js.native
+  val `421_NAME`: String = js.native
+  val `422`: String = js.native
+  val `422_CLASS`: String = js.native
+  val `422_MESSAGE`: String = js.native
+  val `422_NAME`: String = js.native
+  val `423`: String = js.native
+  val `423_CLASS`: String = js.native
+  val `423_MESSAGE`: String = js.native
+  val `423_NAME`: String = js.native
+  val `424`: String = js.native
+  val `424_CLASS`: String = js.native
+  val `424_MESSAGE`: String = js.native
+  val `424_NAME`: String = js.native
+  val `426`: String = js.native
+  val `426_CLASS`: String = js.native
+  val `426_MESSAGE`: String = js.native
+  val `426_NAME`: String = js.native
+  val `428`: String = js.native
+  val `428_CLASS`: String = js.native
+  val `428_MESSAGE`: String = js.native
+  val `428_NAME`: String = js.native
+  val `429`: String = js.native
+  val `429_CLASS`: String = js.native
+  val `429_MESSAGE`: String = js.native
+  val `429_NAME`: String = js.native
+  val `431`: String = js.native
+  val `431_CLASS`: String = js.native
+  val `431_MESSAGE`: String = js.native
+  val `431_NAME`: String = js.native
+  val `451`: String = js.native
+  val `451_CLASS`: String = js.native
+  val `451_MESSAGE`: String = js.native
+  val `451_NAME`: String = js.native
+  val `500`: String = js.native
+  val `500_CLASS`: String = js.native
+  val `500_MESSAGE`: String = js.native
+  val `500_NAME`: String = js.native
+  val `501`: String = js.native
+  val `501_CLASS`: String = js.native
+  val `501_MESSAGE`: String = js.native
+  val `501_NAME`: String = js.native
+  val `502`: String = js.native
+  val `503`: String = js.native
+  val `503_CLASS`: String = js.native
+  val `503_MESSAGE`: String = js.native
+  val `503_NAME`: String = js.native
+  val `504`: String = js.native
+  val `504_CLASS`: String = js.native
+  val `504_MESSAGE`: String = js.native
+  val `504_NAME`: String = js.native
+  val `505`: String = js.native
+  val `505_CLASS`: String = js.native
+  val `505_MESSAGE`: String = js.native
+  val `505_NAME`: String = js.native
+  val `506`: String = js.native
+  val `506_CLASS`: String = js.native
+  val `506_MESSAGE`: String = js.native
+  val `506_NAME`: String = js.native
+  val `507`: String = js.native
+  val `507_CLASS`: String = js.native
+  val `507_MESSAGE`: String = js.native
+  val `507_NAME`: String = js.native
+  val `508`: String = js.native
+  val `508_CLASS`: String = js.native
+  val `508_MESSAGE`: String = js.native
+  val `508_NAME`: String = js.native
+  val `510`: String = js.native
+  val `510_CLASS`: String = js.native
+  val `510_MESSAGE`: String = js.native
+  val `510_NAME`: String = js.native
+  val `511`: String = js.native
+  val `511_CLASS`: String = js.native
+  val `511_MESSAGE`: String = js.native
+  val `511_NAME`: String = js.native
+  val ACCEPTED: Double = js.native
+  val ALREADY_REPORTED: Double = js.native
+  val BAD_GATEWAY: Double = js.native
+  val BAD_REQUEST: Double = js.native
+  val CONFLICT: Double = js.native
+  val CONTINUE: Double = js.native
+  val CREATED: Double = js.native
+  val EXPECTATION_FAILED: Double = js.native
+  val FAILED_DEPENDENCY: Double = js.native
+  val FORBIDDEN: Double = js.native
+  val FOUND: Double = js.native
+  val GATEWAY_TIMEOUT: Double = js.native
+  val GONE: Double = js.native
+  val HTTP_VERSION_NOT_SUPPORTED: Double = js.native
+  val IM_A_TEAPOT: Double = js.native
+  val IM_USED: Double = js.native
+  val INSUFFICIENT_STORAGE: Double = js.native
+  val INTERNAL_SERVER_ERROR: Double = js.native
+  val LENGTH_REQUIRED: Double = js.native
+  val LOCKED: Double = js.native
+  val LOOP_DETECTED: Double = js.native
+  val METHOD_NOT_ALLOWED: Double = js.native
+  val MISDIRECTED_REQUEST: Double = js.native
+  val MOVED_PERMANENTLY: Double = js.native
+  val MULTIPLE_CHOICES: Double = js.native
+  val MULTI_STATUS: Double = js.native
+  val NETWORK_AUTHENTICATION_REQUIRED: Double = js.native
+  val NON_AUTHORITATIVE_INFORMATION: Double = js.native
+  val NOT_ACCEPTABLE: Double = js.native
+  val NOT_EXTENDED: Double = js.native
+  val NOT_FOUND: Double = js.native
+  val NOT_IMPLEMENTED: Double = js.native
+  val NOT_MODIFIED: Double = js.native
+  val NO_CONTENT: Double = js.native
+  val OK: Double = js.native
+  val PARTIAL_CONTENT: Double = js.native
+  val PAYMENT_REQUIRED: Double = js.native
+  val PERMANENT_REDIRECT: Double = js.native
+  val PRECONDITION_FAILED: Double = js.native
+  val PRECONDITION_REQUIRED: Double = js.native
+  val PROXY_AUTHENTICATION_REQUIRED: Double = js.native
+  val REQUESTED_RANGE_NOT_SATISFIABLE: Double = js.native
+  val REQUEST_ENTITY_TOO_LARGE: Double = js.native
+  val REQUEST_HEADER_FIELDS_TOO_LARGE: Double = js.native
+  val REQUEST_TIMEOUT: Double = js.native
+  val REQUEST_URI_TOO_LONG: Double = js.native
+  val RESET_CONTENT: Double = js.native
+  val SEE_OTHER: Double = js.native
+  val SERVICE_UNAVAILABLE: Double = js.native
+  val SWITCHING_PROTOCOLS: Double = js.native
+  val SWITCH_PROXY: Double = js.native
+  val TEMPORARY_REDIRECT: Double = js.native
+  val TOO_MANY_REQUESTS: Double = js.native
+  val UNAUTHORIZED: Double = js.native
+  val UNAVAILABLE_FOR_LEGAL_REASONS: Double = js.native
+  val UNPROCESSABLE_ENTITY: Double = js.native
+  val UNSUPPORTED_MEDIA_TYPE: Double = js.native
+  val UPGRADE_REQUIRED: Double = js.native
+  val USE_PROXY: Double = js.native
+  val VARIANT_ALSO_NEGOTIATES: Double = js.native
+  val _CLASS: String = js.native
+  val _MESSAGE: String = js.native
+  val _NAME: String = js.native
+  var classes: HttpStatusClasses = js.native
+  var extra: AnonCloudflare = js.native
 }
 
 object HttpStatus {
@@ -808,5 +809,1537 @@ object HttpStatus {
     __obj.updateDynamic("511_NAME")(`511_NAME`.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpStatus]
   }
+  @scala.inline
+  implicit class HttpStatusOps[Self <: HttpStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with100(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("100")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with100_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("100_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with100_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("100_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with100_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("100_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with101(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("101")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with101_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("101_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with101_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("101_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with101_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("101_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with200(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("200")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with200_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("200_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with200_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("200_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with200_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("200_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with201(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("201")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with201_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("201_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with201_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("201_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with201_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("201_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with202(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("202")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with202_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("202_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with202_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("202_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with202_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("202_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with203(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("203")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with203_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("203_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with203_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("203_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with203_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("203_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with204(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("204")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with204_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("204_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with204_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("204_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with204_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("204_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with205(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("205")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with205_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("205_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with205_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("205_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with205_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("205_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with206(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("206")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with206_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("206_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with206_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("206_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with206_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("206_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with207(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("207")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with207_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("207_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with207_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("207_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with207_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("207_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with208(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("208")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with208_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("208_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with208_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("208_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with208_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("208_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with226(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("226")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with226_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("226_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with226_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("226_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with226_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("226_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with300(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("300")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with300_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("300_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with300_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("300_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with300_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("300_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with301(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("301")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with301_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("301_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with301_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("301_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with301_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("301_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with302(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("302")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with302_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("302_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with302_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("302_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with302_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("302_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with303(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("303")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with303_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("303_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with303_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("303_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with303_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("303_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with304(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("304")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with304_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("304_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with304_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("304_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with304_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("304_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with305(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("305")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with305_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("305_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with305_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("305_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with305_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("305_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with306(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("306")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with306_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("306_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with306_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("306_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with306_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("306_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with307(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("307")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with307_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("307_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with307_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("307_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with307_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("307_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with308(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("308")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with308_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("308_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with308_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("308_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with308_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("308_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with400(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("400")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with400_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("400_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with400_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("400_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with400_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("400_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with401(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("401")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with401_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("401_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with401_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("401_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with401_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("401_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with402(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("402")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with402_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("402_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with402_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("402_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with402_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("402_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with403(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("403")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with403_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("403_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with403_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("403_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with403_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("403_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with404(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("404")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with404_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("404_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with404_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("404_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with404_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("404_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with405(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("405")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with405_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("405_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with405_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("405_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with405_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("405_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with406(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("406")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with406_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("406_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with406_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("406_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with406_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("406_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with407(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("407")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with407_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("407_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with407_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("407_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with407_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("407_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with408(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("408")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with408_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("408_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with408_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("408_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with408_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("408_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with409(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("409")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with409_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("409_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with409_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("409_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with409_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("409_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with410(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("410")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with410_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("410_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with410_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("410_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with410_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("410_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with411(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("411")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with411_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("411_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with411_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("411_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with411_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("411_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with412(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("412")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with412_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("412_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with412_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("412_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with412_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("412_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with413(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("413")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with413_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("413_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with413_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("413_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with413_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("413_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with414(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("414")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with414_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("414_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with414_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("414_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with414_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("414_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with415(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("415")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with415_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("415_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with415_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("415_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with415_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("415_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with416(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("416")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with416_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("416_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with416_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("416_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with416_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("416_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with417(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("417")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with417_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("417_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with417_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("417_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with417_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("417_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with418(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("418")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with418_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("418_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with418_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("418_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with418_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("418_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with421(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("421")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with421_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("421_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with421_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("421_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with421_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("421_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with422(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("422")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with422_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("422_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with422_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("422_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with422_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("422_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with423(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("423")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with423_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("423_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with423_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("423_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with423_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("423_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with424(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("424")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with424_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("424_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with424_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("424_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with424_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("424_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with426(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("426")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with426_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("426_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with426_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("426_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with426_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("426_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with428(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("428")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with428_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("428_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with428_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("428_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with428_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("428_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with429(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("429")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with429_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("429_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with429_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("429_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with429_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("429_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with431(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("431")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with431_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("431_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with431_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("431_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with431_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("431_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with451(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("451")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with451_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("451_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with451_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("451_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with451_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("451_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with500(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("500")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with500_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("500_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with500_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("500_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with500_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("500_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with501(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("501")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with501_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("501_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with501_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("501_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with501_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("501_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with502(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("502")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with503(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("503")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with503_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("503_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with503_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("503_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with503_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("503_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with504(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("504")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with504_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("504_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with504_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("504_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with504_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("504_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with505(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("505")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with505_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("505_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with505_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("505_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with505_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("505_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with506(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("506")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with506_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("506_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with506_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("506_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with506_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("506_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with507(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("507")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with507_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("507_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with507_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("507_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with507_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("507_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with508(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("508")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with508_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("508_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with508_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("508_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with508_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("508_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with510(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("510")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with510_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("510_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with510_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("510_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with510_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("510_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with511(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("511")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with511_CLASS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("511_CLASS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with511_MESSAGE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("511_MESSAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with511_NAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("511_NAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withACCEPTED(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ACCEPTED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withALREADY_REPORTED(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ALREADY_REPORTED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBAD_GATEWAY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BAD_GATEWAY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBAD_REQUEST(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BAD_REQUEST")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCONFLICT(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CONFLICT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCONTINUE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CONTINUE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCREATED(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CREATED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEXPECTATION_FAILED(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EXPECTATION_FAILED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFAILED_DEPENDENCY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FAILED_DEPENDENCY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFORBIDDEN(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FORBIDDEN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFOUND(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FOUND")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGATEWAY_TIMEOUT(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GATEWAY_TIMEOUT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGONE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GONE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHTTP_VERSION_NOT_SUPPORTED(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HTTP_VERSION_NOT_SUPPORTED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIM_A_TEAPOT(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IM_A_TEAPOT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIM_USED(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IM_USED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withINSUFFICIENT_STORAGE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("INSUFFICIENT_STORAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

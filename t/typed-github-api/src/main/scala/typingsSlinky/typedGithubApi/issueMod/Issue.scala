@@ -10,31 +10,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Issue extends js.Object {
-  var assignee: UserSummary | Null
-  var assignees: js.Array[UserSummary]
-  var body: String
-  var closed_at: js.Date | Null
-  var closed_by: UserSummary | Null
-  var comments: Double
-  var comments_url: String
-  var created_at: js.Date
-  var events_url: String
-  var html_url: String
-  var id: Double
-  var labels: js.Array[Label]
-  var labels_url: String
-  var locked: Boolean
-  var milestone: Milestone | Null
-  var number: Double
-  var pull_request: js.UndefOr[PullRequestExtension] = js.undefined
-  var repository: js.UndefOr[Repository] = js.undefined
-  var repository_url: String
-  var state: open | closed
-  var title: String
-  var updated_at: js.Date
-  var url: String
-  var user: UserSummary
+  var assignee: UserSummary | Null = js.native
+  var assignees: js.Array[UserSummary] = js.native
+  var body: String = js.native
+  var closed_at: js.Date | Null = js.native
+  var closed_by: UserSummary | Null = js.native
+  var comments: Double = js.native
+  var comments_url: String = js.native
+  var created_at: js.Date = js.native
+  var events_url: String = js.native
+  var html_url: String = js.native
+  var id: Double = js.native
+  var labels: js.Array[Label] = js.native
+  var labels_url: String = js.native
+  var locked: Boolean = js.native
+  var milestone: Milestone | Null = js.native
+  var number: Double = js.native
+  var pull_request: js.UndefOr[PullRequestExtension] = js.native
+  var repository: js.UndefOr[Repository] = js.native
+  var repository_url: String = js.native
+  var state: open | closed = js.native
+  var title: String = js.native
+  var updated_at: js.Date = js.native
+  var url: String = js.native
+  var user: UserSummary = js.native
 }
 
 object Issue {
@@ -57,22 +58,198 @@ object Issue {
     title: String,
     updated_at: js.Date,
     url: String,
-    user: UserSummary,
-    assignee: UserSummary = null,
-    closed_at: js.Date = null,
-    closed_by: UserSummary = null,
-    milestone: Milestone = null,
-    pull_request: PullRequestExtension = null,
-    repository: Repository = null
+    user: UserSummary
   ): Issue = {
     val __obj = js.Dynamic.literal(assignees = assignees.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], comments = comments.asInstanceOf[js.Any], comments_url = comments_url.asInstanceOf[js.Any], created_at = created_at.asInstanceOf[js.Any], events_url = events_url.asInstanceOf[js.Any], html_url = html_url.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], labels = labels.asInstanceOf[js.Any], labels_url = labels_url.asInstanceOf[js.Any], locked = locked.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any], repository_url = repository_url.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], updated_at = updated_at.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
-    if (assignee != null) __obj.updateDynamic("assignee")(assignee.asInstanceOf[js.Any])
-    if (closed_at != null) __obj.updateDynamic("closed_at")(closed_at.asInstanceOf[js.Any])
-    if (closed_by != null) __obj.updateDynamic("closed_by")(closed_by.asInstanceOf[js.Any])
-    if (milestone != null) __obj.updateDynamic("milestone")(milestone.asInstanceOf[js.Any])
-    if (pull_request != null) __obj.updateDynamic("pull_request")(pull_request.asInstanceOf[js.Any])
-    if (repository != null) __obj.updateDynamic("repository")(repository.asInstanceOf[js.Any])
     __obj.asInstanceOf[Issue]
   }
+  @scala.inline
+  implicit class IssueOps[Self <: Issue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssignees(value: js.Array[UserSummary]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assignees")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBody(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComments(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComments_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreated_at(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvents_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtml_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabels(value: js.Array[Label]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabels_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRepository_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repository_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withState(value: open | closed): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdated_at(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUser(value: UserSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAssignee(value: UserSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assignee")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAssigneeNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assignee")(null)
+        ret
+    }
+    @scala.inline
+    def withClosed_at(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closed_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClosed_atNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closed_at")(null)
+        ret
+    }
+    @scala.inline
+    def withClosed_by(value: UserSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closed_by")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClosed_byNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closed_by")(null)
+        ret
+    }
+    @scala.inline
+    def withMilestone(value: Milestone): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("milestone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMilestoneNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("milestone")(null)
+        ret
+    }
+    @scala.inline
+    def withPull_request(value: PullRequestExtension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pull_request")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPull_request: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pull_request")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepository(value: Repository): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepository: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

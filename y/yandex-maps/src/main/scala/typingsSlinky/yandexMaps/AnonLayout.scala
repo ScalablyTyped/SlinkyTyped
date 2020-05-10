@@ -8,33 +8,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonLayout extends js.Object {
-  var layout: js.UndefOr[String | IClassConstructor[ISelectableControlLayout]] = js.undefined
-  var selectOnClick: js.UndefOr[Boolean] = js.undefined
-  var selectableLayout: js.UndefOr[String | IClassConstructor[ISelectableControlLayout]] = js.undefined
-  var separatorLayout: js.UndefOr[String | IClassConstructor[ISelectableControlLayout]] = js.undefined
-  var `type`: js.UndefOr[selectable | separator] = js.undefined
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var layout: js.UndefOr[String | IClassConstructor[ISelectableControlLayout]] = js.native
+  var selectOnClick: js.UndefOr[Boolean] = js.native
+  var selectableLayout: js.UndefOr[String | IClassConstructor[ISelectableControlLayout]] = js.native
+  var separatorLayout: js.UndefOr[String | IClassConstructor[ISelectableControlLayout]] = js.native
+  var `type`: js.UndefOr[selectable | separator] = js.native
+  var visible: js.UndefOr[Boolean] = js.native
 }
 
 object AnonLayout {
   @scala.inline
-  def apply(
-    layout: String | IClassConstructor[ISelectableControlLayout] = null,
-    selectOnClick: js.UndefOr[Boolean] = js.undefined,
-    selectableLayout: String | IClassConstructor[ISelectableControlLayout] = null,
-    separatorLayout: String | IClassConstructor[ISelectableControlLayout] = null,
-    `type`: selectable | separator = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): AnonLayout = {
+  def apply(): AnonLayout = {
     val __obj = js.Dynamic.literal()
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectOnClick)) __obj.updateDynamic("selectOnClick")(selectOnClick.asInstanceOf[js.Any])
-    if (selectableLayout != null) __obj.updateDynamic("selectableLayout")(selectableLayout.asInstanceOf[js.Any])
-    if (separatorLayout != null) __obj.updateDynamic("separatorLayout")(separatorLayout.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonLayout]
   }
+  @scala.inline
+  implicit class AnonLayoutOps[Self <: AnonLayout] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLayout(value: String | IClassConstructor[ISelectableControlLayout]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectOnClick(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectOnClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectOnClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectableLayout(value: String | IClassConstructor[ISelectableControlLayout]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectableLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableLayout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeparatorLayout(value: String | IClassConstructor[ISelectableControlLayout]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("separatorLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeparatorLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("separatorLayout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: selectable | separator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

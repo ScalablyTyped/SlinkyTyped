@@ -1,7 +1,7 @@
 package typingsSlinky.androiduix.android.os
 
 import typingsSlinky.androiduix.android.os.Handler.Callback
-import typingsSlinky.androiduix.java.lang.Runnable
+import typingsSlinky.androiduix.java_.lang.Runnable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

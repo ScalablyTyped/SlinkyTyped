@@ -11,7 +11,7 @@ trait GetDashboardOutput extends js.Object {
     */
   var DashboardArn: js.UndefOr[typingsSlinky.awsSdk.cloudwatchMod.DashboardArn] = js.native
   /**
-    * The detailed information about the dashboard, including what widgets are included and their location on the dashboard. For more information about the DashboardBody syntax, see CloudWatch-Dashboard-Body-Structure. 
+    * The detailed information about the dashboard, including what widgets are included and their location on the dashboard. For more information about the DashboardBody syntax, see Dashboard Body Structure and Syntax. 
     */
   var DashboardBody: js.UndefOr[typingsSlinky.awsSdk.cloudwatchMod.DashboardBody] = js.native
   /**
@@ -22,16 +22,53 @@ trait GetDashboardOutput extends js.Object {
 
 object GetDashboardOutput {
   @scala.inline
-  def apply(
-    DashboardArn: DashboardArn = null,
-    DashboardBody: DashboardBody = null,
-    DashboardName: DashboardName = null
-  ): GetDashboardOutput = {
+  def apply(): GetDashboardOutput = {
     val __obj = js.Dynamic.literal()
-    if (DashboardArn != null) __obj.updateDynamic("DashboardArn")(DashboardArn.asInstanceOf[js.Any])
-    if (DashboardBody != null) __obj.updateDynamic("DashboardBody")(DashboardBody.asInstanceOf[js.Any])
-    if (DashboardName != null) __obj.updateDynamic("DashboardName")(DashboardName.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDashboardOutput]
   }
+  @scala.inline
+  implicit class GetDashboardOutputOps[Self <: GetDashboardOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDashboardArn(value: DashboardArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDashboardArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDashboardBody(value: DashboardBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDashboardBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDashboardName(value: DashboardName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDashboardName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

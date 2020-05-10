@@ -13,10 +13,8 @@ trait CSSOrigin extends js.Object
 
 object CSSOrigin {
   @scala.inline
-  def author: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.author = this.cast("author")
+  def author: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.author = "author".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.author]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def user: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.user = this.cast("user")
+  def user: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.user = "user".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.user]
 }
 

@@ -26,17 +26,59 @@ trait DeleteRouteRequest extends js.Object {
 
 object DeleteRouteRequest {
   @scala.inline
-  def apply(
-    RouteTableId: RouteTableId,
-    DestinationCidrBlock: String = null,
-    DestinationIpv6CidrBlock: String = null,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined
-  ): DeleteRouteRequest = {
+  def apply(RouteTableId: RouteTableId): DeleteRouteRequest = {
     val __obj = js.Dynamic.literal(RouteTableId = RouteTableId.asInstanceOf[js.Any])
-    if (DestinationCidrBlock != null) __obj.updateDynamic("DestinationCidrBlock")(DestinationCidrBlock.asInstanceOf[js.Any])
-    if (DestinationIpv6CidrBlock != null) __obj.updateDynamic("DestinationIpv6CidrBlock")(DestinationIpv6CidrBlock.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteRouteRequest]
   }
+  @scala.inline
+  implicit class DeleteRouteRequestOps[Self <: DeleteRouteRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRouteTableId(value: RouteTableId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteTableId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestinationCidrBlock(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationCidrBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationCidrBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationCidrBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationIpv6CidrBlock(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationIpv6CidrBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationIpv6CidrBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationIpv6CidrBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

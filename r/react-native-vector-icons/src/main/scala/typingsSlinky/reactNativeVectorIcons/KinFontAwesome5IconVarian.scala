@@ -7,6 +7,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityStates
 import typingsSlinky.reactNative.mod.AccessibilityTrait
+import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
@@ -34,11 +35,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {[ K in react-native-vector-icons.react-native-vector-icons/FontAwesome5.FontAwesome5IconVariants ]:? boolean} & react-native-vector-icons.react-native-vector-icons/Icon.IconProps */
+@js.native
 trait KinFontAwesome5IconVarian extends js.Object {
   /**
     * Provides an array of custom actions available for accessibility.
     */
-  var accessibilityActions: js.UndefOr[js.Array[AccessibilityActionInfo]] = js.undefined
+  var accessibilityActions: js.UndefOr[js.Array[AccessibilityActionInfo]] = js.native
   /**
     * In some cases, we also want to alert the end user of the type of selected component (i.e., that it is a “button”).
     * If we were using native buttons, this would work automatically. Since we are using javascript, we need to
@@ -46,78 +48,83 @@ trait KinFontAwesome5IconVarian extends js.Object {
     * for any UI component. For instances, we support ‘button’, ‘radiobutton_checked’ and ‘radiobutton_unchecked’ and so on.
     * @platform android
     */
-  var accessibilityComponentType: js.UndefOr[none | button | radiobutton_checked | radiobutton_unchecked] = js.undefined
+  var accessibilityComponentType: js.UndefOr[none | button | radiobutton_checked | radiobutton_unchecked] = js.native
   /**
     * A Boolean value indicating whether the accessibility elements contained within this accessibility element
     * are hidden to the screen reader.
     * @platform ios
     */
-  var accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined
+  var accessibilityElementsHidden: js.UndefOr[Boolean] = js.native
   /**
     * An accessibility hint helps users understand what will happen when they perform an action on the accessibility element when that result is not obvious from the accessibility label.
     */
-  var accessibilityHint: js.UndefOr[String] = js.undefined
+  var accessibilityHint: js.UndefOr[String] = js.native
   /**
     * https://facebook.github.io/react-native/docs/accessibility#accessibilityignoresinvertcolorsios
     * @platform ios
     */
-  var accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.undefined
+  var accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.native
   /**
     * Overrides the text that's read by the screen reader when the user interacts with the element. By default, the
     * label is constructed by traversing all the children and accumulating all the Text nodes separated by space.
     */
-  var accessibilityLabel: js.UndefOr[String] = js.undefined
+  var accessibilityLabel: js.UndefOr[String] = js.native
   /**
     * Indicates to accessibility services whether the user should be notified when this view changes.
     * Works for Android API >= 19 only.
     * See http://developer.android.com/reference/android/view/View.html#attr_android:accessibilityLiveRegion for references.
     * @platform android
     */
-  var accessibilityLiveRegion: js.UndefOr[none | polite | assertive] = js.undefined
+  var accessibilityLiveRegion: js.UndefOr[none | polite | assertive] = js.native
   /**
     * Accessibility Role tells a person using either VoiceOver on iOS or TalkBack on Android the type of element that is focused on.
     */
-  var accessibilityRole: js.UndefOr[AccessibilityRole] = js.undefined
+  var accessibilityRole: js.UndefOr[AccessibilityRole] = js.native
   /**
     * Accessibility State tells a person using either VoiceOver on iOS or TalkBack on Android the state of the element currently focused on.
     */
-  var accessibilityState: js.UndefOr[AccessibilityState] = js.undefined
+  var accessibilityState: js.UndefOr[AccessibilityState] = js.native
   /**
     * Accessibility State tells a person using either VoiceOver on iOS or TalkBack on Android the state of the element currently focused on.
     * @deprecated: accessibilityState available in 0.60+
     */
-  var accessibilityStates: js.UndefOr[js.Array[AccessibilityStates]] = js.undefined
+  var accessibilityStates: js.UndefOr[js.Array[AccessibilityStates]] = js.native
   /**
     * Accessibility traits tell a person using VoiceOver what kind of element they have selected.
     * Is this element a label? A button? A header? These questions are answered by accessibilityTraits.
     * @platform ios
     */
-  var accessibilityTraits: js.UndefOr[AccessibilityTrait | js.Array[AccessibilityTrait]] = js.undefined
+  var accessibilityTraits: js.UndefOr[AccessibilityTrait | js.Array[AccessibilityTrait]] = js.native
+  /**
+    * Represents the current value of a component. It can be a textual description of a component's value, or for range-based components, such as sliders and progress bars,
+    * it contains range information (minimum, current, and maximum).
+    */
+  var accessibilityValue: js.UndefOr[AccessibilityValue] = js.native
   /**
     * A Boolean value indicating whether VoiceOver should ignore the elements within views that are siblings of the receiver.
     * @platform ios
     */
-  var accessibilityViewIsModal: js.UndefOr[Boolean] = js.undefined
+  var accessibilityViewIsModal: js.UndefOr[Boolean] = js.native
   /**
     * When true, indicates that the view is an accessibility element.
     * By default, all the touchable elements are accessible.
     */
-  var accessible: js.UndefOr[Boolean] = js.undefined
+  var accessible: js.UndefOr[Boolean] = js.native
   /**
     * Specifies whether font should be scaled down automatically to fit given style constraints.
     */
-  var adjustsFontSizeToFit: js.UndefOr[Boolean] = js.undefined
+  var adjustsFontSizeToFit: js.UndefOr[Boolean] = js.native
   /**
     * Specifies whether fonts should scale to respect Text Size accessibility settings.
     * The default is `true`.
     */
-  var allowFontScaling: js.UndefOr[Boolean] = js.undefined
-  var brand: js.UndefOr[Boolean] = js.undefined
+  var allowFontScaling: js.UndefOr[Boolean] = js.native
+  var brand: js.UndefOr[Boolean] = js.native
   /**
     * Color of the icon
     *
     */
-  var color: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[String] = js.native
   /**
     * This can be one of the following values:
     *
@@ -135,7 +142,7 @@ trait KinFontAwesome5IconVarian extends js.Object {
     *
     * > `clip` is working only for iOS
     */
-  var ellipsizeMode: js.UndefOr[head | middle | tail | clip] = js.undefined
+  var ellipsizeMode: js.UndefOr[head | middle | tail | clip] = js.native
   /**
     * Controls how view is important for accessibility which is if it fires accessibility events
     * and if it is reported to accessibility services that query the screen.
@@ -147,35 +154,35 @@ trait KinFontAwesome5IconVarian extends js.Object {
     *      'no' - The view is not important for accessibility.
     *      'no-hide-descendants' - The view is not important for accessibility, nor are any of its descendant views.
     */
-  var importantForAccessibility: js.UndefOr[auto | yes | no | `no-hide-descendants`] = js.undefined
-  var light: js.UndefOr[Boolean] = js.undefined
+  var importantForAccessibility: js.UndefOr[auto | yes | no | `no-hide-descendants`] = js.native
+  var light: js.UndefOr[Boolean] = js.native
   /**
     * Line Break mode. Works only with numberOfLines.
     * clip is working only for iOS
     */
-  var lineBreakMode: js.UndefOr[head | middle | tail | clip] = js.undefined
+  var lineBreakMode: js.UndefOr[head | middle | tail | clip] = js.native
   /**
     * Specifies largest possible scale a font can reach when allowFontScaling is enabled. Possible values:
     * - null/undefined (default): inherit from the parent node or the global default (0)
     * - 0: no max, ignore parent/global default
     * - >= 1: sets the maxFontSizeMultiplier of this node to this value
     */
-  var maxFontSizeMultiplier: js.UndefOr[Double | Null] = js.undefined
+  var maxFontSizeMultiplier: js.UndefOr[Double | Null] = js.native
   /**
     * Specifies smallest possible scale a font can reach when adjustsFontSizeToFit is enabled. (values 0.01-1.0).
     */
-  var minimumFontScale: js.UndefOr[Double] = js.undefined
+  var minimumFontScale: js.UndefOr[Double] = js.native
   /**
     * Name of the icon to show
     *
     * See Icon Explorer app
     * {@link https://github.com/oblador/react-native-vector-icons/tree/master/Examples/IconExplorer}
     */
-  var name: String
+  var name: String = js.native
   /**
     * Used to reference react managed views from native code.
     */
-  var nativeID: js.UndefOr[String] = js.undefined
+  var nativeID: js.UndefOr[String] = js.native
   /**
     * Used to truncate the text with an ellipsis after computing the text
     * layout, including line wrapping, such that the total number of lines
@@ -183,164 +190,600 @@ trait KinFontAwesome5IconVarian extends js.Object {
     *
     * This prop is commonly used with `ellipsizeMode`.
     */
-  var numberOfLines: js.UndefOr[Double] = js.undefined
+  var numberOfLines: js.UndefOr[Double] = js.native
   /**
     * When `accessible` is true, the system will try to invoke this function when the user performs an accessibility custom action.
     */
-  var onAccessibilityAction: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, ReadonlyactionNamestring], Unit]] = js.undefined
+  var onAccessibilityAction: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, ReadonlyactionNamestring], Unit]] = js.native
   /**
     * When accessibile is true, the system will invoke this function when the user performs the escape gesture (scrub with two fingers).
     * @platform ios
     */
-  var onAccessibilityEscape: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onAccessibilityEscape: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * When `accessible` is true, the system will try to invoke this function when the user performs accessibility tap gesture.
     * @platform ios
     */
-  var onAccessibilityTap: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onAccessibilityTap: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * Invoked on mount and layout changes with
     *
     * {nativeEvent: { layout: {x, y, width, height}}}.
     */
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.undefined
+  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
   /**
     * This function is called on long press.
     * e.g., `onLongPress={this.increaseSize}>``
     */
-  var onLongPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
+  var onLongPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
   /**
     * When accessible is true, the system will invoke this function when the user performs the magic tap gesture.
     * @platform ios
     */
-  var onMagicTap: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onMagicTap: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * This function is called on press.
     * Text intrinsically supports press handling with a default highlight state (which can be disabled with suppressHighlighting).
     */
-  var onPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
+  var onPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
   /**
     * Lets the user select text, to use the native copy and paste functionality.
     */
-  var selectable: js.UndefOr[Boolean] = js.undefined
+  var selectable: js.UndefOr[Boolean] = js.native
   /**
     * The highlight color of the text.
     */
-  var selectionColor: js.UndefOr[String] = js.undefined
+  var selectionColor: js.UndefOr[String] = js.native
   /**
     * Size of the icon, can also be passed as fontSize in the style object.
     *
     * @default 12
     */
-  var size: js.UndefOr[Double] = js.undefined
-  var solid: js.UndefOr[Boolean] = js.undefined
+  var size: js.UndefOr[Double] = js.native
+  var solid: js.UndefOr[Boolean] = js.native
   /**
     * @see https://facebook.github.io/react-native/docs/text.html#style
     */
-  var style: js.UndefOr[StyleProp[TextStyle]] = js.undefined
+  var style: js.UndefOr[StyleProp[TextStyle]] = js.native
   /**
     * When `true`, no visual change is made when text is pressed down. By
     * default, a gray oval highlights the text on press down.
     */
-  var suppressHighlighting: js.UndefOr[Boolean] = js.undefined
+  var suppressHighlighting: js.UndefOr[Boolean] = js.native
   /**
     * Used to locate this view in end-to-end tests.
     */
-  var testID: js.UndefOr[String] = js.undefined
+  var testID: js.UndefOr[String] = js.native
   /**
     * Set text break strategy on Android API Level 23+
     * default is `highQuality`.
     */
-  var textBreakStrategy: js.UndefOr[simple | highQuality | balanced] = js.undefined
+  var textBreakStrategy: js.UndefOr[simple | highQuality | balanced] = js.native
 }
 
 object KinFontAwesome5IconVarian {
   @scala.inline
-  def apply(
-    name: String,
-    accessibilityActions: js.Array[AccessibilityActionInfo] = null,
-    accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
-    accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,
-    accessibilityHint: String = null,
-    accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.undefined,
-    accessibilityLabel: String = null,
-    accessibilityLiveRegion: none | polite | assertive = null,
-    accessibilityRole: AccessibilityRole = null,
-    accessibilityState: AccessibilityState = null,
-    accessibilityStates: js.Array[AccessibilityStates] = null,
-    accessibilityTraits: AccessibilityTrait | js.Array[AccessibilityTrait] = null,
-    accessibilityViewIsModal: js.UndefOr[Boolean] = js.undefined,
-    accessible: js.UndefOr[Boolean] = js.undefined,
-    adjustsFontSizeToFit: js.UndefOr[Boolean] = js.undefined,
-    allowFontScaling: js.UndefOr[Boolean] = js.undefined,
-    brand: js.UndefOr[Boolean] = js.undefined,
-    color: String = null,
-    ellipsizeMode: head | middle | tail | clip = null,
-    importantForAccessibility: auto | yes | no | `no-hide-descendants` = null,
-    light: js.UndefOr[Boolean] = js.undefined,
-    lineBreakMode: head | middle | tail | clip = null,
-    maxFontSizeMultiplier: Int | Double = null,
-    minimumFontScale: Int | Double = null,
-    nativeID: String = null,
-    numberOfLines: Int | Double = null,
-    onAccessibilityAction: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit = null,
-    onAccessibilityEscape: () => Unit = null,
-    onAccessibilityTap: () => Unit = null,
-    onLayout: /* event */ LayoutChangeEvent => Unit = null,
-    onLongPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onMagicTap: () => Unit = null,
-    onPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    selectable: js.UndefOr[Boolean] = js.undefined,
-    selectionColor: String = null,
-    size: Int | Double = null,
-    solid: js.UndefOr[Boolean] = js.undefined,
-    style: StyleProp[TextStyle] = null,
-    suppressHighlighting: js.UndefOr[Boolean] = js.undefined,
-    testID: String = null,
-    textBreakStrategy: simple | highQuality | balanced = null
-  ): KinFontAwesome5IconVarian = {
+  def apply(name: String): KinFontAwesome5IconVarian = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
-    if (accessibilityComponentType != null) __obj.updateDynamic("accessibilityComponentType")(accessibilityComponentType.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityElementsHidden)) __obj.updateDynamic("accessibilityElementsHidden")(accessibilityElementsHidden.asInstanceOf[js.Any])
-    if (accessibilityHint != null) __obj.updateDynamic("accessibilityHint")(accessibilityHint.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityIgnoresInvertColors)) __obj.updateDynamic("accessibilityIgnoresInvertColors")(accessibilityIgnoresInvertColors.asInstanceOf[js.Any])
-    if (accessibilityLabel != null) __obj.updateDynamic("accessibilityLabel")(accessibilityLabel.asInstanceOf[js.Any])
-    if (accessibilityLiveRegion != null) __obj.updateDynamic("accessibilityLiveRegion")(accessibilityLiveRegion.asInstanceOf[js.Any])
-    if (accessibilityRole != null) __obj.updateDynamic("accessibilityRole")(accessibilityRole.asInstanceOf[js.Any])
-    if (accessibilityState != null) __obj.updateDynamic("accessibilityState")(accessibilityState.asInstanceOf[js.Any])
-    if (accessibilityStates != null) __obj.updateDynamic("accessibilityStates")(accessibilityStates.asInstanceOf[js.Any])
-    if (accessibilityTraits != null) __obj.updateDynamic("accessibilityTraits")(accessibilityTraits.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityViewIsModal)) __obj.updateDynamic("accessibilityViewIsModal")(accessibilityViewIsModal.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessible)) __obj.updateDynamic("accessible")(accessible.asInstanceOf[js.Any])
-    if (!js.isUndefined(adjustsFontSizeToFit)) __obj.updateDynamic("adjustsFontSizeToFit")(adjustsFontSizeToFit.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowFontScaling)) __obj.updateDynamic("allowFontScaling")(allowFontScaling.asInstanceOf[js.Any])
-    if (!js.isUndefined(brand)) __obj.updateDynamic("brand")(brand.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (ellipsizeMode != null) __obj.updateDynamic("ellipsizeMode")(ellipsizeMode.asInstanceOf[js.Any])
-    if (importantForAccessibility != null) __obj.updateDynamic("importantForAccessibility")(importantForAccessibility.asInstanceOf[js.Any])
-    if (!js.isUndefined(light)) __obj.updateDynamic("light")(light.asInstanceOf[js.Any])
-    if (lineBreakMode != null) __obj.updateDynamic("lineBreakMode")(lineBreakMode.asInstanceOf[js.Any])
-    if (maxFontSizeMultiplier != null) __obj.updateDynamic("maxFontSizeMultiplier")(maxFontSizeMultiplier.asInstanceOf[js.Any])
-    if (minimumFontScale != null) __obj.updateDynamic("minimumFontScale")(minimumFontScale.asInstanceOf[js.Any])
-    if (nativeID != null) __obj.updateDynamic("nativeID")(nativeID.asInstanceOf[js.Any])
-    if (numberOfLines != null) __obj.updateDynamic("numberOfLines")(numberOfLines.asInstanceOf[js.Any])
-    if (onAccessibilityAction != null) __obj.updateDynamic("onAccessibilityAction")(js.Any.fromFunction1(onAccessibilityAction))
-    if (onAccessibilityEscape != null) __obj.updateDynamic("onAccessibilityEscape")(js.Any.fromFunction0(onAccessibilityEscape))
-    if (onAccessibilityTap != null) __obj.updateDynamic("onAccessibilityTap")(js.Any.fromFunction0(onAccessibilityTap))
-    if (onLayout != null) __obj.updateDynamic("onLayout")(js.Any.fromFunction1(onLayout))
-    if (onLongPress != null) __obj.updateDynamic("onLongPress")(js.Any.fromFunction1(onLongPress))
-    if (onMagicTap != null) __obj.updateDynamic("onMagicTap")(js.Any.fromFunction0(onMagicTap))
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction1(onPress))
-    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.asInstanceOf[js.Any])
-    if (selectionColor != null) __obj.updateDynamic("selectionColor")(selectionColor.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (!js.isUndefined(solid)) __obj.updateDynamic("solid")(solid.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(suppressHighlighting)) __obj.updateDynamic("suppressHighlighting")(suppressHighlighting.asInstanceOf[js.Any])
-    if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
-    if (textBreakStrategy != null) __obj.updateDynamic("textBreakStrategy")(textBreakStrategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[KinFontAwesome5IconVarian]
   }
+  @scala.inline
+  implicit class KinFontAwesome5IconVarianOps[Self <: KinFontAwesome5IconVarian] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccessibilityActions(value: js.Array[AccessibilityActionInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibilityActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityActions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityComponentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibilityComponentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityComponentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessibilityElementsHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityElementsHidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibilityElementsHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityElementsHidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessibilityHint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityHint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibilityHint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityHint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessibilityIgnoresInvertColors(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityIgnoresInvertColors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibilityIgnoresInvertColors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityIgnoresInvertColors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessibilityLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibilityLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessibilityLiveRegion(value: none | polite | assertive): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityLiveRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibilityLiveRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityLiveRegion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessibilityRole(value: AccessibilityRole): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibilityRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityRole")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessibilityState(value: AccessibilityState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibilityState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessibilityStates(value: js.Array[AccessibilityStates]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityStates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibilityStates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityStates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityTraits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibilityTraits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityTraits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessibilityValue(value: AccessibilityValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibilityValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessibilityViewIsModal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityViewIsModal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibilityViewIsModal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityViewIsModal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdjustsFontSizeToFit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustsFontSizeToFit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdjustsFontSizeToFit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustsFontSizeToFit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowFontScaling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFontScaling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowFontScaling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFontScaling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrand(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brand")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEllipsizeMode(value: head | middle | tail | clip): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsizeMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEllipsizeMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsizeMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImportantForAccessibility(value: auto | yes | no | `no-hide-descendants`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("importantForAccessibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImportantForAccessibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("importantForAccessibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLight(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("light")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("light")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineBreakMode(value: head | middle | tail | clip): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineBreakMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineBreakMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineBreakMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxFontSizeMultiplier(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFontSizeMultiplier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxFontSizeMultiplier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFontSizeMultiplier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxFontSizeMultiplierNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFontSizeMultiplier")(null)
+        ret
+    }
+    @scala.inline
+    def withMinimumFontScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumFontScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumFontScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumFontScale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNativeID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNativeID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeID")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfLines(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAccessibilityAction(value: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAccessibilityAction")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAccessibilityAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAccessibilityAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAccessibilityEscape(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAccessibilityEscape")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAccessibilityEscape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAccessibilityEscape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAccessibilityTap(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAccessibilityTap")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAccessibilityTap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAccessibilityTap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLayout")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLayout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLongPress(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongPress")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLongPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMagicTap(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMagicTap")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMagicTap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMagicTap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPress(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectionColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSolid(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("solid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSolid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("solid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: StyleProp[TextStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
+        ret
+    }
+    @scala.inline
+    def withSuppressHighlighting(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressHighlighting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuppressHighlighting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressHighlighting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testID")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextBreakStrategy(value: simple | highQuality | balanced): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textBreakStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextBreakStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textBreakStrategy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

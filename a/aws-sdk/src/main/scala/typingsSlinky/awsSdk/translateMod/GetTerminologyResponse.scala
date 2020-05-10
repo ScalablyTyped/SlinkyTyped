@@ -18,14 +18,41 @@ trait GetTerminologyResponse extends js.Object {
 
 object GetTerminologyResponse {
   @scala.inline
-  def apply(
-    TerminologyDataLocation: TerminologyDataLocation = null,
-    TerminologyProperties: TerminologyProperties = null
-  ): GetTerminologyResponse = {
+  def apply(): GetTerminologyResponse = {
     val __obj = js.Dynamic.literal()
-    if (TerminologyDataLocation != null) __obj.updateDynamic("TerminologyDataLocation")(TerminologyDataLocation.asInstanceOf[js.Any])
-    if (TerminologyProperties != null) __obj.updateDynamic("TerminologyProperties")(TerminologyProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTerminologyResponse]
   }
+  @scala.inline
+  implicit class GetTerminologyResponseOps[Self <: GetTerminologyResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTerminologyDataLocation(value: TerminologyDataLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminologyDataLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerminologyDataLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminologyDataLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerminologyProperties(value: TerminologyProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminologyProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerminologyProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminologyProperties")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

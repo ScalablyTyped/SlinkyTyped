@@ -24,6 +24,7 @@ import scala.scalajs.js.annotation._
   * 6. The methods `getStorageStatistics`, `getStorageStatisticsFast`, `optimizeStorage`, `addProxy` and
   * `getFileDownloadedPrefixSize` are not supported.
   */
+@js.native
 trait TdClient extends js.Object {
   /**
     * Send a query to TDLib.
@@ -33,15 +34,28 @@ trait TdClient extends js.Object {
     * @link https://core.telegram.org/tdlib/docs/classtd_1_1td__api_1_1_function.html - a list of all available TDLib methods
     * @link https://core.telegram.org/tdlib/docs/classtd_1_1td__api_1_1_object.html - a list of all available TDLib classes
     */
-  def send(query: TdObject): js.Promise[TdError | TdObject]
+  def send(query: TdObject): js.Promise[TdError | TdObject] = js.native
 }
 
 object TdClient {
   @scala.inline
   def apply(send: TdObject => js.Promise[TdError | TdObject]): TdClient = {
     val __obj = js.Dynamic.literal(send = js.Any.fromFunction1(send))
-  
     __obj.asInstanceOf[TdClient]
   }
+  @scala.inline
+  implicit class TdClientOps[Self <: TdClient] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSend(value: TdObject => js.Promise[TdError | TdObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("send")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

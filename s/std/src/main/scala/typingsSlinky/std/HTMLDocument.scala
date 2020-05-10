@@ -11,5 +11,6 @@ trait HTMLDocument extends Document_
 
 @JSGlobal("HTMLDocument")
 @js.native
-object HTMLDocument extends Instantiable0[HTMLDocument]
+object HTMLDocument
+  extends Instantiable0[org.scalajs.dom.raw.HTMLDocument]
 

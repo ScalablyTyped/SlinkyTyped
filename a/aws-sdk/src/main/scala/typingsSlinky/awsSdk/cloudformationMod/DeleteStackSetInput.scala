@@ -16,8 +16,21 @@ object DeleteStackSetInput {
   @scala.inline
   def apply(StackSetName: StackSetName): DeleteStackSetInput = {
     val __obj = js.Dynamic.literal(StackSetName = StackSetName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DeleteStackSetInput]
   }
+  @scala.inline
+  implicit class DeleteStackSetInputOps[Self <: DeleteStackSetInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStackSetName(value: StackSetName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

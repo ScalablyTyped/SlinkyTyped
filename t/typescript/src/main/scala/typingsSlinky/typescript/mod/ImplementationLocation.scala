@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ImplementationLocation extends DocumentSpan {
-  var displayParts: js.Array[SymbolDisplayPart]
-  var kind: ScriptElementKind
+  var displayParts: js.Array[SymbolDisplayPart] = js.native
+  var kind: ScriptElementKind = js.native
 }
 
 object ImplementationLocation {
@@ -15,18 +16,30 @@ object ImplementationLocation {
     displayParts: js.Array[SymbolDisplayPart],
     fileName: java.lang.String,
     kind: ScriptElementKind,
-    textSpan: TextSpan,
-    contextSpan: TextSpan = null,
-    originalContextSpan: TextSpan = null,
-    originalFileName: java.lang.String = null,
-    originalTextSpan: TextSpan = null
+    textSpan: TextSpan
   ): ImplementationLocation = {
     val __obj = js.Dynamic.literal(displayParts = displayParts.asInstanceOf[js.Any], fileName = fileName.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], textSpan = textSpan.asInstanceOf[js.Any])
-    if (contextSpan != null) __obj.updateDynamic("contextSpan")(contextSpan.asInstanceOf[js.Any])
-    if (originalContextSpan != null) __obj.updateDynamic("originalContextSpan")(originalContextSpan.asInstanceOf[js.Any])
-    if (originalFileName != null) __obj.updateDynamic("originalFileName")(originalFileName.asInstanceOf[js.Any])
-    if (originalTextSpan != null) __obj.updateDynamic("originalTextSpan")(originalTextSpan.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImplementationLocation]
   }
+  @scala.inline
+  implicit class ImplementationLocationOps[Self <: ImplementationLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisplayParts(value: js.Array[SymbolDisplayPart]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayParts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: ScriptElementKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

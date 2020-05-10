@@ -1,27 +1,23 @@
 package typingsSlinky.reactTouch.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactTouch.mod.CustomGestureProps
 import typingsSlinky.reactTouch.mod.moves
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CustomGesture
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactTouch.mod.CustomGesture] {
+object CustomGesture {
   @JSImport("react-touch", "CustomGesture")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(config: js.Array[moves], onGesture: () => Unit, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactTouch.mod.CustomGesture] = {
-    val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any], onGesture = js.Any.fromFunction0(onGesture))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: CustomGestureProps): Default[tag.type, typingsSlinky.reactTouch.mod.CustomGesture] = new Default[tag.type, typingsSlinky.reactTouch.mod.CustomGesture](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(config: js.Array[moves], onGesture: () => Unit): Default[tag.type, typingsSlinky.reactTouch.mod.CustomGesture] = {
+    val __props = js.Dynamic.literal(config = config.asInstanceOf[js.Any], onGesture = js.Any.fromFunction0(onGesture))
+    new Default[tag.type, typingsSlinky.reactTouch.mod.CustomGesture](js.Array(this.component, __props.asInstanceOf[CustomGestureProps]))
   }
-  type Props = CustomGestureProps
 }
 

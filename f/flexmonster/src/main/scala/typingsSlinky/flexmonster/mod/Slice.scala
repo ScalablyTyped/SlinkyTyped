@@ -7,42 +7,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Slice extends js.Object {
-  var columns: js.UndefOr[js.Array[Hierarchy]] = js.undefined
-  var drillThrough: js.UndefOr[js.Array[String]] = js.undefined
-  var drills: js.UndefOr[AnonDrillAll] = js.undefined
-  var expands: js.UndefOr[AnonExpandAll] = js.undefined
-  var flatOrder: js.UndefOr[js.Array[String]] = js.undefined
-  var measures: js.UndefOr[js.Array[Measure]] = js.undefined
-  var reportFilters: js.UndefOr[js.Array[Hierarchy]] = js.undefined
-  var rows: js.UndefOr[js.Array[Hierarchy]] = js.undefined
-  var sorting: js.UndefOr[AnonColumn] = js.undefined
+  var columns: js.UndefOr[js.Array[Hierarchy]] = js.native
+  var drillThrough: js.UndefOr[js.Array[String]] = js.native
+  var drills: js.UndefOr[AnonDrillAll] = js.native
+  var expands: js.UndefOr[AnonExpandAll] = js.native
+  var flatOrder: js.UndefOr[js.Array[String]] = js.native
+  var measures: js.UndefOr[js.Array[Measure]] = js.native
+  var reportFilters: js.UndefOr[js.Array[Hierarchy]] = js.native
+  var rows: js.UndefOr[js.Array[Hierarchy]] = js.native
+  var sorting: js.UndefOr[AnonColumn] = js.native
 }
 
 object Slice {
   @scala.inline
-  def apply(
-    columns: js.Array[Hierarchy] = null,
-    drillThrough: js.Array[String] = null,
-    drills: AnonDrillAll = null,
-    expands: AnonExpandAll = null,
-    flatOrder: js.Array[String] = null,
-    measures: js.Array[Measure] = null,
-    reportFilters: js.Array[Hierarchy] = null,
-    rows: js.Array[Hierarchy] = null,
-    sorting: AnonColumn = null
-  ): Slice = {
+  def apply(): Slice = {
     val __obj = js.Dynamic.literal()
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (drillThrough != null) __obj.updateDynamic("drillThrough")(drillThrough.asInstanceOf[js.Any])
-    if (drills != null) __obj.updateDynamic("drills")(drills.asInstanceOf[js.Any])
-    if (expands != null) __obj.updateDynamic("expands")(expands.asInstanceOf[js.Any])
-    if (flatOrder != null) __obj.updateDynamic("flatOrder")(flatOrder.asInstanceOf[js.Any])
-    if (measures != null) __obj.updateDynamic("measures")(measures.asInstanceOf[js.Any])
-    if (reportFilters != null) __obj.updateDynamic("reportFilters")(reportFilters.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
-    if (sorting != null) __obj.updateDynamic("sorting")(sorting.asInstanceOf[js.Any])
     __obj.asInstanceOf[Slice]
   }
+  @scala.inline
+  implicit class SliceOps[Self <: Slice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumns(value: js.Array[Hierarchy]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrillThrough(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drillThrough")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrillThrough: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drillThrough")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrills(value: AnonDrillAll): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drills")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrills: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drills")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpands(value: AnonExpandAll): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expands")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpands: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expands")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlatOrder(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flatOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlatOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flatOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMeasures(value: js.Array[Measure]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeasures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportFilters(value: js.Array[Hierarchy]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: js.Array[Hierarchy]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSorting(value: AnonColumn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sorting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSorting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sorting")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

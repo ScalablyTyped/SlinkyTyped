@@ -16,13 +16,12 @@ package object mod {
     - typingsSlinky.mapboxGl.mod.HeatmapLayout
     - typingsSlinky.mapboxGl.mod.HillshadeLayout
   */
-  type AnyLayout = typingsSlinky.mapboxGl.mod._AnyLayout | typingsSlinky.mapboxGl.mod.BackgroundLayout | typingsSlinky.mapboxGl.mod.FillLayout | typingsSlinky.mapboxGl.mod.FillExtrusionLayout | typingsSlinky.mapboxGl.mod.RasterLayout | typingsSlinky.mapboxGl.mod.CircleLayout | typingsSlinky.mapboxGl.mod.HeatmapLayout | typingsSlinky.mapboxGl.mod.HillshadeLayout
+  type AnyLayout = typingsSlinky.mapboxGl.mod._AnyLayout | typingsSlinky.mapboxGl.mod.BackgroundLayout | typingsSlinky.mapboxGl.mod.FillExtrusionLayout | typingsSlinky.mapboxGl.mod.RasterLayout | typingsSlinky.mapboxGl.mod.CircleLayout | typingsSlinky.mapboxGl.mod.HeatmapLayout | typingsSlinky.mapboxGl.mod.HillshadeLayout
   type BackgroundLayout = typingsSlinky.mapboxGl.mod.Layout
   type CircleLayout = typingsSlinky.mapboxGl.mod.Layout
   type EventData = org.scalablytyped.runtime.StringDictionary[js.Any]
   type Expression = Array[typingsSlinky.mapboxGl.mod.ExpressionName | js.Any]
   type FillExtrusionLayout = typingsSlinky.mapboxGl.mod.Layout
-  type FillLayout = typingsSlinky.mapboxGl.mod.Layout
   type HeatmapLayout = typingsSlinky.mapboxGl.mod.Layout
   type HillshadeLayout = typingsSlinky.mapboxGl.mod.Layout
   type LngLatBoundsLike = typingsSlinky.mapboxGl.mod.LngLatBounds | (js.Tuple2[typingsSlinky.mapboxGl.mod.LngLatLike, typingsSlinky.mapboxGl.mod.LngLatLike]) | (js.Tuple4[scala.Double, scala.Double, scala.Double, scala.Double])

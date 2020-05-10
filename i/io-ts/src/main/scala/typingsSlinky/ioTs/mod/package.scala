@@ -25,7 +25,7 @@ package object mod {
   type Branded[A, B] = A with typingsSlinky.ioTs.mod.Brand_[B]
   type Compact[A] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof A ]: A[K]}
-    */ typingsSlinky.ioTs.ioTsStrings.Compact with A
+    */ typingsSlinky.ioTs.ioTsStrings.Compact with org.scalablytyped.runtime.TopLevel[A]
   type Context = js.Array[typingsSlinky.ioTs.mod.ContextEntry]
   type Decode[I, A] = js.Function1[/* i */ I, typingsSlinky.ioTs.mod.Validation[A]]
   type Encode[A, O] = js.Function1[/* a */ A, O]
@@ -36,7 +36,7 @@ package object mod {
     typingsSlinky.ioTs.mod.OutputOf[C], 
     typingsSlinky.ioTs.mod.InputOf[C]
   ]
-  type Exact_[T, X /* <: T */] = T with typingsSlinky.ioTs.ioTsStrings.Exact with js.Any
+  type Exact_[T, X /* <: T */] = T with typingsSlinky.ioTs.ioTsStrings.Exact with org.scalablytyped.runtime.TopLevel[js.Any]
   type FunctionC = typingsSlinky.ioTs.mod.FunctionType
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.ioTs.mod.HasPropsRefinement
@@ -71,21 +71,21 @@ package object mod {
   type OutputOf[C /* <: typingsSlinky.ioTs.mod.Any_ */] = /* import warning: importer.ImportType#apply Failed type conversion: C['_O'] */ js.Any
   type OutputOfDictionary[D /* <: typingsSlinky.ioTs.mod.Any_ */, C /* <: typingsSlinky.ioTs.mod.Any_ */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in io-ts.io-ts.OutputOf<D> ]: io-ts.io-ts.OutputOf<C>}
-    */ typingsSlinky.ioTs.ioTsStrings.OutputOfDictionary with js.Any
+    */ typingsSlinky.ioTs.ioTsStrings.OutputOfDictionary with org.scalablytyped.runtime.TopLevel[js.Any]
   type OutputOfPartialProps[P /* <: typingsSlinky.ioTs.mod.AnyProps */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof P ]:? io-ts.io-ts.OutputOf<P[K]>}
-    */ typingsSlinky.ioTs.ioTsStrings.OutputOfPartialProps with P
+    */ typingsSlinky.ioTs.ioTsStrings.OutputOfPartialProps with org.scalablytyped.runtime.TopLevel[P]
   type OutputOfProps[P /* <: typingsSlinky.ioTs.mod.AnyProps */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof P ]: io-ts.io-ts.OutputOf<P[K]>}
-    */ typingsSlinky.ioTs.ioTsStrings.OutputOfProps with P
+    */ typingsSlinky.ioTs.ioTsStrings.OutputOfProps with org.scalablytyped.runtime.TopLevel[P]
   type PartialC[P /* <: typingsSlinky.ioTs.mod.Props */] = typingsSlinky.ioTs.mod.PartialType[
     P, 
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof P ]:? io-ts.io-ts.TypeOf<P[K]>}
-    */ typingsSlinky.ioTs.ioTsStrings.PartialC with P, 
+    */ typingsSlinky.ioTs.ioTsStrings.PartialC with org.scalablytyped.runtime.TopLevel[P], 
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof P ]:? io-ts.io-ts.OutputOf<P[K]>}
-    */ typingsSlinky.ioTs.ioTsStrings.PartialC with P, 
+    */ typingsSlinky.ioTs.ioTsStrings.PartialC with org.scalablytyped.runtime.TopLevel[P], 
     js.Any
   ]
   type Props = org.scalablytyped.runtime.StringDictionary[typingsSlinky.ioTs.mod.Mixed_]
@@ -100,10 +100,10 @@ package object mod {
     C, 
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {readonly [ K in keyof io-ts.io-ts.TypeOf<C> ]: io-ts.io-ts.TypeOf<C>[K]}
-    */ typingsSlinky.ioTs.ioTsStrings.ReadonlyC with typingsSlinky.ioTs.mod.TypeOf[C], 
+    */ typingsSlinky.ioTs.ioTsStrings.ReadonlyC with org.scalablytyped.runtime.TopLevel[typingsSlinky.ioTs.mod.TypeOf[C]], 
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {readonly [ K in keyof io-ts.io-ts.OutputOf<C> ]: io-ts.io-ts.OutputOf<C>[K]}
-    */ typingsSlinky.ioTs.ioTsStrings.ReadonlyC with typingsSlinky.ioTs.mod.OutputOf[C], 
+    */ typingsSlinky.ioTs.ioTsStrings.ReadonlyC with org.scalablytyped.runtime.TopLevel[typingsSlinky.ioTs.mod.OutputOf[C]], 
     js.Any
   ]
   type RecordC[D /* <: typingsSlinky.ioTs.mod.Mixed_ */, C /* <: typingsSlinky.ioTs.mod.Mixed_ */] = typingsSlinky.ioTs.mod.DictionaryType[
@@ -111,10 +111,10 @@ package object mod {
     C, 
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in io-ts.io-ts.TypeOf<D> ]: io-ts.io-ts.TypeOf<C>}
-    */ typingsSlinky.ioTs.ioTsStrings.RecordC with js.Any, 
+    */ typingsSlinky.ioTs.ioTsStrings.RecordC with org.scalablytyped.runtime.TopLevel[js.Any], 
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in io-ts.io-ts.OutputOf<D> ]: io-ts.io-ts.OutputOf<C>}
-    */ typingsSlinky.ioTs.ioTsStrings.RecordC with js.Any, 
+    */ typingsSlinky.ioTs.ioTsStrings.RecordC with org.scalablytyped.runtime.TopLevel[js.Any], 
     js.Any
   ]
   type RefinementC[C /* <: typingsSlinky.ioTs.mod.Any_ */] = typingsSlinky.ioTs.mod.RefinementType[
@@ -127,10 +127,10 @@ package object mod {
     P, 
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof P ]: io-ts.io-ts.TypeOf<P[K]>}
-    */ typingsSlinky.ioTs.ioTsStrings.StrictC with P, 
+    */ typingsSlinky.ioTs.ioTsStrings.StrictC with org.scalablytyped.runtime.TopLevel[P], 
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof P ]: io-ts.io-ts.OutputOf<P[K]>}
-    */ typingsSlinky.ioTs.ioTsStrings.StrictC with P, 
+    */ typingsSlinky.ioTs.ioTsStrings.StrictC with org.scalablytyped.runtime.TopLevel[P], 
     js.Any
   ]
   type StringC = typingsSlinky.ioTs.mod.StringType
@@ -165,7 +165,7 @@ package object mod {
   ])
   type TaggedProps[Tag /* <: java.lang.String */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in Tag ]: io-ts.io-ts.LiteralType<any>}
-    */ typingsSlinky.ioTs.ioTsStrings.TaggedProps with js.Any
+    */ typingsSlinky.ioTs.ioTsStrings.TaggedProps with org.scalablytyped.runtime.TopLevel[js.Any]
   type TaggedUnionC[Tag /* <: java.lang.String */, CS /* <: Array[typingsSlinky.ioTs.mod.Mixed_] */] = typingsSlinky.ioTs.mod.TaggedUnionType[
     Tag, 
     CS, 
@@ -287,22 +287,22 @@ package object mod {
     P, 
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof P ]: io-ts.io-ts.TypeOf<P[K]>}
-    */ typingsSlinky.ioTs.ioTsStrings.TypeC with P, 
+    */ typingsSlinky.ioTs.ioTsStrings.TypeC with org.scalablytyped.runtime.TopLevel[P], 
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof P ]: io-ts.io-ts.OutputOf<P[K]>}
-    */ typingsSlinky.ioTs.ioTsStrings.TypeC with P, 
+    */ typingsSlinky.ioTs.ioTsStrings.TypeC with org.scalablytyped.runtime.TopLevel[P], 
     js.Any
   ]
   type TypeOf[C /* <: typingsSlinky.ioTs.mod.Any_ */] = /* import warning: importer.ImportType#apply Failed type conversion: C['_A'] */ js.Any
   type TypeOfDictionary[D /* <: typingsSlinky.ioTs.mod.Any_ */, C /* <: typingsSlinky.ioTs.mod.Any_ */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in io-ts.io-ts.TypeOf<D> ]: io-ts.io-ts.TypeOf<C>}
-    */ typingsSlinky.ioTs.ioTsStrings.TypeOfDictionary with js.Any
+    */ typingsSlinky.ioTs.ioTsStrings.TypeOfDictionary with org.scalablytyped.runtime.TopLevel[js.Any]
   type TypeOfPartialProps[P /* <: typingsSlinky.ioTs.mod.AnyProps */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof P ]:? io-ts.io-ts.TypeOf<P[K]>}
-    */ typingsSlinky.ioTs.ioTsStrings.TypeOfPartialProps with P
+    */ typingsSlinky.ioTs.ioTsStrings.TypeOfPartialProps with org.scalablytyped.runtime.TopLevel[P]
   type TypeOfProps[P /* <: typingsSlinky.ioTs.mod.AnyProps */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof P ]: io-ts.io-ts.TypeOf<P[K]>}
-    */ typingsSlinky.ioTs.ioTsStrings.TypeOfProps with P
+    */ typingsSlinky.ioTs.ioTsStrings.TypeOfProps with org.scalablytyped.runtime.TopLevel[P]
   type UndefinedC = typingsSlinky.ioTs.mod.UndefinedType
   type UnionC[CS /* <: Array[typingsSlinky.ioTs.mod.Mixed_] */] = typingsSlinky.ioTs.mod.UnionType[
     CS, 

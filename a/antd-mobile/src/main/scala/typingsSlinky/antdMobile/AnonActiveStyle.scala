@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonActiveStyle extends js.Object {
-  var disabled: Boolean
-  var `inline`: Boolean
-  var loading: Boolean
-  var prefixCls: String
-  var size: String
+  var disabled: Boolean = js.native
+  var `inline`: Boolean = js.native
+  var loading: Boolean = js.native
+  var prefixCls: String = js.native
+  var size: String = js.native
 }
 
 object AnonActiveStyle {
@@ -19,5 +20,43 @@ object AnonActiveStyle {
     __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonActiveStyle]
   }
+  @scala.inline
+  implicit class AnonActiveStyleOps[Self <: AnonActiveStyle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInline(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoading(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * An Alias to dojo.fx.easing. Moved to Core in Dojo 1.2.
   *
   */
+@js.native
 trait easing extends js.Object
 

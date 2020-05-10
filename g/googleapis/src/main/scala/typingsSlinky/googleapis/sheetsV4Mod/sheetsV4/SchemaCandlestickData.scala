@@ -36,18 +36,65 @@ trait SchemaCandlestickData extends js.Object {
 
 object SchemaCandlestickData {
   @scala.inline
-  def apply(
-    closeSeries: SchemaCandlestickSeries = null,
-    highSeries: SchemaCandlestickSeries = null,
-    lowSeries: SchemaCandlestickSeries = null,
-    openSeries: SchemaCandlestickSeries = null
-  ): SchemaCandlestickData = {
+  def apply(): SchemaCandlestickData = {
     val __obj = js.Dynamic.literal()
-    if (closeSeries != null) __obj.updateDynamic("closeSeries")(closeSeries.asInstanceOf[js.Any])
-    if (highSeries != null) __obj.updateDynamic("highSeries")(highSeries.asInstanceOf[js.Any])
-    if (lowSeries != null) __obj.updateDynamic("lowSeries")(lowSeries.asInstanceOf[js.Any])
-    if (openSeries != null) __obj.updateDynamic("openSeries")(openSeries.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCandlestickData]
   }
+  @scala.inline
+  implicit class SchemaCandlestickDataOps[Self <: SchemaCandlestickData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloseSeries(value: SchemaCandlestickSeries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeSeries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseSeries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeSeries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighSeries(value: SchemaCandlestickSeries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highSeries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighSeries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highSeries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLowSeries(value: SchemaCandlestickSeries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowSeries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLowSeries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowSeries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenSeries(value: SchemaCandlestickSeries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openSeries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenSeries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openSeries")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

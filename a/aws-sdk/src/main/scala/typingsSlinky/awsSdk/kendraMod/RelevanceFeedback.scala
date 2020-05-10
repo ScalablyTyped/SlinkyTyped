@@ -20,8 +20,27 @@ object RelevanceFeedback {
   @scala.inline
   def apply(RelevanceValue: RelevanceType, ResultId: ResultId): RelevanceFeedback = {
     val __obj = js.Dynamic.literal(RelevanceValue = RelevanceValue.asInstanceOf[js.Any], ResultId = ResultId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[RelevanceFeedback]
   }
+  @scala.inline
+  implicit class RelevanceFeedbackOps[Self <: RelevanceFeedback] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRelevanceValue(value: RelevanceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RelevanceValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResultId(value: ResultId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

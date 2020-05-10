@@ -22,10 +22,41 @@ trait CreateForecastRequest extends js.Object {
 
 object CreateForecastRequest {
   @scala.inline
-  def apply(ForecastName: Name, PredictorArn: Arn, ForecastTypes: ForecastTypes = null): CreateForecastRequest = {
+  def apply(ForecastName: Name, PredictorArn: Arn): CreateForecastRequest = {
     val __obj = js.Dynamic.literal(ForecastName = ForecastName.asInstanceOf[js.Any], PredictorArn = PredictorArn.asInstanceOf[js.Any])
-    if (ForecastTypes != null) __obj.updateDynamic("ForecastTypes")(ForecastTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateForecastRequest]
   }
+  @scala.inline
+  implicit class CreateForecastRequestOps[Self <: CreateForecastRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withForecastName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForecastName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPredictorArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictorArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForecastTypes(value: ForecastTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForecastTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForecastTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForecastTypes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

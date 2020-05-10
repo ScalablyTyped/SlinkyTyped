@@ -12,11 +12,41 @@ trait AnonWords extends js.Object {
 
 object AnonWords {
   @scala.inline
-  def apply(source: AnonAttribution = null, words: js.Array[AnonDerivatives] = null): AnonWords = {
+  def apply(): AnonWords = {
     val __obj = js.Dynamic.literal()
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (words != null) __obj.updateDynamic("words")(words.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonWords]
   }
+  @scala.inline
+  implicit class AnonWordsOps[Self <: AnonWords] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSource(value: AnonAttribution): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWords(value: js.Array[AnonDerivatives]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("words")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("words")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

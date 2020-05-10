@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait StoreLayer_ extends js.Object {
   /**
     * Wrap the store with the given layer.
@@ -23,7 +24,7 @@ trait StoreLayer_ extends js.Object {
     funcName: js.Any,
     layer: typingsSlinky.dojo.dojox.grid.enhanced.plugins.StoreLayer.StoreLayer,
     layerFuncName: js.Any
-  ): js.Any
+  ): js.Any = js.native
 }
 
 object StoreLayer_ {
@@ -32,8 +33,23 @@ object StoreLayer_ {
     wrap: (js.Any, js.Any, typingsSlinky.dojo.dojox.grid.enhanced.plugins.StoreLayer.StoreLayer, js.Any) => js.Any
   ): StoreLayer_ = {
     val __obj = js.Dynamic.literal(wrap = js.Any.fromFunction4(wrap))
-  
     __obj.asInstanceOf[StoreLayer_]
   }
+  @scala.inline
+  implicit class StoreLayer_Ops[Self <: StoreLayer_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWrap(
+      value: (js.Any, js.Any, typingsSlinky.dojo.dojox.grid.enhanced.plugins.StoreLayer.StoreLayer, js.Any) => js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(js.Any.fromFunction4(value))
+        ret
+    }
+  }
+  
 }
 

@@ -14,14 +14,12 @@ trait GameClubButtonIcon extends js.Object
 
 object GameClubButtonIcon {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dark: typingsSlinky.wegameApi.wegameApiStrings.dark = "dark".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.dark]
   @scala.inline
-  def dark: typingsSlinky.wegameApi.wegameApiStrings.dark = this.cast("dark")
+  def green: typingsSlinky.wegameApi.wegameApiStrings.green = "green".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.green]
   @scala.inline
-  def green: typingsSlinky.wegameApi.wegameApiStrings.green = this.cast("green")
+  def light: typingsSlinky.wegameApi.wegameApiStrings.light = "light".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.light]
   @scala.inline
-  def light: typingsSlinky.wegameApi.wegameApiStrings.light = this.cast("light")
-  @scala.inline
-  def white: typingsSlinky.wegameApi.wegameApiStrings.white = this.cast("white")
+  def white: typingsSlinky.wegameApi.wegameApiStrings.white = "white".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.white]
 }
 

@@ -7,6 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/* Inlined {  MILLISECOND  :'millisecond',   MINUTE  :'minute',   SECOND  :'second'}[keyof {  MILLISECOND  :'millisecond',   MINUTE  :'minute',   SECOND  :'second'}] */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeStrings.millisecond
   - typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeStrings.minute

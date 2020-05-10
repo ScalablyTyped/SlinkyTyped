@@ -1,5 +1,6 @@
 package typingsSlinky.nivoStream.mod
 
+import slinky.core.TagMod
 import typingsSlinky.nivoAxes.mod.AxisProps
 import typingsSlinky.nivoColors.mod.InheritedColorProp
 import typingsSlinky.nivoColors.mod.OrdinalColorsInstruction
@@ -21,124 +22,534 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@nivo/stream.@nivo/stream.OptionalStreamProps<T>> */
+@js.native
 trait StreamProps[T] extends js.Object {
-  var animate: js.UndefOr[Boolean] = js.undefined
-  var axisBottom: js.UndefOr[AxisProps] = js.undefined
-  var axisLeft: js.UndefOr[AxisProps] = js.undefined
-  var axisRight: js.UndefOr[AxisProps] = js.undefined
-  var axisTop: js.UndefOr[AxisProps] = js.undefined
-  var borderColor: js.UndefOr[InheritedColorProp[_]] = js.undefined
-  var borderWidth: js.UndefOr[Double] = js.undefined
-  var colors: js.UndefOr[OrdinalColorsInstruction[_]] = js.undefined
-  var curve: js.UndefOr[AreaCurve] = js.undefined
-  var data: js.Array[T]
-  var defs: js.UndefOr[js.Array[AnonDictkey]] = js.undefined
-  var dotBorderColor: js.UndefOr[InheritedColorProp[_]] = js.undefined
-  var dotBorderWidth: js.UndefOr[DatumToNumber | Double] = js.undefined
-  var dotColor: js.UndefOr[InheritedColorProp[_]] = js.undefined
-  var dotPosition: js.UndefOr[start | center | end] = js.undefined
-  var dotSize: js.UndefOr[DatumToNumber | Double] = js.undefined
-  var enableDots: js.UndefOr[Boolean] = js.undefined
-  var enableGridX: js.UndefOr[Boolean] = js.undefined
-  var enableGridY: js.UndefOr[Boolean] = js.undefined
-  var enableStackTooltip: js.UndefOr[Boolean] = js.undefined
-  var fill: js.UndefOr[js.Array[AnonId[T]]] = js.undefined
-  var fillOpacity: js.UndefOr[Double] = js.undefined
-  var isInteractive: js.UndefOr[Boolean] = js.undefined
-  var keys: js.Array[String]
-  var legends: js.UndefOr[js.Array[LegendProps]] = js.undefined
-  var margin: js.UndefOr[Box] = js.undefined
-  var motionDamping: js.UndefOr[Double] = js.undefined
-  var motionStiffness: js.UndefOr[Double] = js.undefined
-  var offsetType: js.UndefOr[StackOffset] = js.undefined
-  var order: js.UndefOr[StackOrder] = js.undefined
-  var renderDot: js.UndefOr[StreamDotsItem] = js.undefined
-  var stack: js.UndefOr[StackFunc[T]] = js.undefined
-  var theme: js.UndefOr[Theme] = js.undefined
-  var tooltipFormat: js.UndefOr[TooltipFormatter[T] | String] = js.undefined
-  var tooltipLabel: js.UndefOr[TooltipLabel[T]] = js.undefined
-  var xScale: js.UndefOr[Scale] = js.undefined
-  var yScale: js.UndefOr[Scale] = js.undefined
+  var animate: js.UndefOr[Boolean] = js.native
+  var axisBottom: js.UndefOr[AxisProps] = js.native
+  var axisLeft: js.UndefOr[AxisProps] = js.native
+  var axisRight: js.UndefOr[AxisProps] = js.native
+  var axisTop: js.UndefOr[AxisProps] = js.native
+  var borderColor: js.UndefOr[InheritedColorProp[_]] = js.native
+  var borderWidth: js.UndefOr[Double] = js.native
+  var colors: js.UndefOr[OrdinalColorsInstruction[_]] = js.native
+  var curve: js.UndefOr[AreaCurve] = js.native
+  var data: js.Array[T] = js.native
+  var defs: js.UndefOr[js.Array[AnonDictkey]] = js.native
+  var dotBorderColor: js.UndefOr[InheritedColorProp[_]] = js.native
+  var dotBorderWidth: js.UndefOr[DatumToNumber | Double] = js.native
+  var dotColor: js.UndefOr[InheritedColorProp[_]] = js.native
+  var dotPosition: js.UndefOr[start | center | end] = js.native
+  var dotSize: js.UndefOr[DatumToNumber | Double] = js.native
+  var enableDots: js.UndefOr[Boolean] = js.native
+  var enableGridX: js.UndefOr[Boolean] = js.native
+  var enableGridY: js.UndefOr[Boolean] = js.native
+  var enableStackTooltip: js.UndefOr[Boolean] = js.native
+  var fill: js.UndefOr[js.Array[AnonId[T]]] = js.native
+  var fillOpacity: js.UndefOr[Double] = js.native
+  var isInteractive: js.UndefOr[Boolean] = js.native
+  var keys: js.Array[String] = js.native
+  var legends: js.UndefOr[js.Array[LegendProps]] = js.native
+  var margin: js.UndefOr[Box] = js.native
+  var motionDamping: js.UndefOr[Double] = js.native
+  var motionStiffness: js.UndefOr[Double] = js.native
+  var offsetType: js.UndefOr[StackOffset] = js.native
+  var order: js.UndefOr[StackOrder] = js.native
+  var renderDot: js.UndefOr[StreamDotsItem] = js.native
+  var stack: js.UndefOr[StackFunc[T]] = js.native
+  var theme: js.UndefOr[Theme] = js.native
+  var tooltipFormat: js.UndefOr[TooltipFormatter[T] | String] = js.native
+  var tooltipLabel: js.UndefOr[TooltipLabel[T]] = js.native
+  var xScale: js.UndefOr[Scale] = js.native
+  var yScale: js.UndefOr[Scale] = js.native
 }
 
 object StreamProps {
   @scala.inline
-  def apply[T](
-    data: js.Array[T],
-    keys: js.Array[String],
-    animate: js.UndefOr[Boolean] = js.undefined,
-    axisBottom: AxisProps = null,
-    axisLeft: AxisProps = null,
-    axisRight: AxisProps = null,
-    axisTop: AxisProps = null,
-    borderColor: InheritedColorProp[_] = null,
-    borderWidth: Int | Double = null,
-    colors: OrdinalColorsInstruction[_] = null,
-    curve: AreaCurve = null,
-    defs: js.Array[AnonDictkey] = null,
-    dotBorderColor: InheritedColorProp[_] = null,
-    dotBorderWidth: DatumToNumber | Double = null,
-    dotColor: InheritedColorProp[_] = null,
-    dotPosition: start | center | end = null,
-    dotSize: DatumToNumber | Double = null,
-    enableDots: js.UndefOr[Boolean] = js.undefined,
-    enableGridX: js.UndefOr[Boolean] = js.undefined,
-    enableGridY: js.UndefOr[Boolean] = js.undefined,
-    enableStackTooltip: js.UndefOr[Boolean] = js.undefined,
-    fill: js.Array[AnonId[T]] = null,
-    fillOpacity: Int | Double = null,
-    isInteractive: js.UndefOr[Boolean] = js.undefined,
-    legends: js.Array[LegendProps] = null,
-    margin: Box = null,
-    motionDamping: Int | Double = null,
-    motionStiffness: Int | Double = null,
-    offsetType: StackOffset = null,
-    order: StackOrder = null,
-    renderDot: StreamDotsItem = null,
-    stack: /* data */ js.Array[T] => js.Array[js.Array[Anon0[T]]] = null,
-    theme: Theme = null,
-    tooltipFormat: TooltipFormatter[T] | String = null,
-    tooltipLabel: T => String = null,
-    xScale: Scale = null,
-    yScale: Scale = null
-  ): StreamProps[T] = {
+  def apply[T](data: js.Array[T], keys: js.Array[String]): StreamProps[T] = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], keys = keys.asInstanceOf[js.Any])
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (axisBottom != null) __obj.updateDynamic("axisBottom")(axisBottom.asInstanceOf[js.Any])
-    if (axisLeft != null) __obj.updateDynamic("axisLeft")(axisLeft.asInstanceOf[js.Any])
-    if (axisRight != null) __obj.updateDynamic("axisRight")(axisRight.asInstanceOf[js.Any])
-    if (axisTop != null) __obj.updateDynamic("axisTop")(axisTop.asInstanceOf[js.Any])
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (curve != null) __obj.updateDynamic("curve")(curve.asInstanceOf[js.Any])
-    if (defs != null) __obj.updateDynamic("defs")(defs.asInstanceOf[js.Any])
-    if (dotBorderColor != null) __obj.updateDynamic("dotBorderColor")(dotBorderColor.asInstanceOf[js.Any])
-    if (dotBorderWidth != null) __obj.updateDynamic("dotBorderWidth")(dotBorderWidth.asInstanceOf[js.Any])
-    if (dotColor != null) __obj.updateDynamic("dotColor")(dotColor.asInstanceOf[js.Any])
-    if (dotPosition != null) __obj.updateDynamic("dotPosition")(dotPosition.asInstanceOf[js.Any])
-    if (dotSize != null) __obj.updateDynamic("dotSize")(dotSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableDots)) __obj.updateDynamic("enableDots")(enableDots.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableGridX)) __obj.updateDynamic("enableGridX")(enableGridX.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableGridY)) __obj.updateDynamic("enableGridY")(enableGridY.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableStackTooltip)) __obj.updateDynamic("enableStackTooltip")(enableStackTooltip.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInteractive)) __obj.updateDynamic("isInteractive")(isInteractive.asInstanceOf[js.Any])
-    if (legends != null) __obj.updateDynamic("legends")(legends.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (motionDamping != null) __obj.updateDynamic("motionDamping")(motionDamping.asInstanceOf[js.Any])
-    if (motionStiffness != null) __obj.updateDynamic("motionStiffness")(motionStiffness.asInstanceOf[js.Any])
-    if (offsetType != null) __obj.updateDynamic("offsetType")(offsetType.asInstanceOf[js.Any])
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
-    if (renderDot != null) __obj.updateDynamic("renderDot")(renderDot.asInstanceOf[js.Any])
-    if (stack != null) __obj.updateDynamic("stack")(js.Any.fromFunction1(stack))
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (tooltipFormat != null) __obj.updateDynamic("tooltipFormat")(tooltipFormat.asInstanceOf[js.Any])
-    if (tooltipLabel != null) __obj.updateDynamic("tooltipLabel")(js.Any.fromFunction1(tooltipLabel))
-    if (xScale != null) __obj.updateDynamic("xScale")(xScale.asInstanceOf[js.Any])
-    if (yScale != null) __obj.updateDynamic("yScale")(yScale.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreamProps[T]]
   }
+  @scala.inline
+  implicit class StreamPropsOps[Self[t] <: StreamProps[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withData(value: js.Array[T]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeys(value: js.Array[String]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAnimate(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimate: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxisBottom(value: AxisProps): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisBottom: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisBottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxisLeft(value: AxisProps): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisLeft: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxisRight(value: AxisProps): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisRight: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxisTop(value: AxisProps): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisTop: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderColorFunction1(value: _ => String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBorderColor(value: InheritedColorProp[_]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderColor: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderWidth(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWidth: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorsFunction1(value: _ => String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withColors(value: OrdinalColorsInstruction[_]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColors: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurve(value: AreaCurve): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curve")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurve: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curve")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefs(value: js.Array[AnonDictkey]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefs: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotBorderColorFunction1(value: _ => String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotBorderColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDotBorderColor(value: InheritedColorProp[_]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotBorderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotBorderColor: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotBorderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotBorderWidthFunction1(value: /* datum */ Datum => Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotBorderWidth")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDotBorderWidth(value: DatumToNumber | Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotBorderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotBorderWidth: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotBorderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotColorFunction1(value: _ => String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDotColor(value: InheritedColorProp[_]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotColor: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotPosition(value: start | center | end): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotPosition: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotSizeFunction1(value: /* datum */ Datum => Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotSize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDotSize(value: DatumToNumber | Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotSize: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableDots(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableDots: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDots")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableGridX(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGridX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableGridX: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGridX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableGridY(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGridY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableGridY: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGridY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableStackTooltip(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableStackTooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableStackTooltip: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableStackTooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFill(value: js.Array[AnonId[T]]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFill: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillOpacity(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillOpacity: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsInteractive(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInteractive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsInteractive: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInteractive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLegends(value: js.Array[LegendProps]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legends")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegends: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legends")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: Box): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMotionDamping(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("motionDamping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMotionDamping: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("motionDamping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMotionStiffness(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("motionStiffness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMotionStiffness: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("motionStiffness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsetType(value: StackOffset): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsetType: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrder(value: StackOrder): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrder: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderDot(value: StreamDotsItem): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderDot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenderDot: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderDot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStack(value: /* data */ js.Array[T] => js.Array[js.Array[Anon0[T]]]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutStack: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTheme(value: Theme): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTheme: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipFormatFunction1(value: T => TagMod[Any]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipFormat")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTooltipFormat(value: TooltipFormatter[T] | String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipFormat: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipLabel(value: T => String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipLabel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTooltipLabel: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXScale(value: Scale): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXScale: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xScale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYScale(value: Scale): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYScale: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yScale")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

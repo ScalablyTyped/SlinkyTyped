@@ -12,10 +12,8 @@ trait ScrollMode extends js.Object
 
 object ScrollMode {
   @scala.inline
-  def always: typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.always = this.cast("always")
+  def always: typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.always = "always".asInstanceOf[typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.always]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def `if-needed`: typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.`if-needed` = this.cast("if-needed")
+  def `if-needed`: typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.`if-needed` = "if-needed".asInstanceOf[typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.`if-needed`]
 }
 

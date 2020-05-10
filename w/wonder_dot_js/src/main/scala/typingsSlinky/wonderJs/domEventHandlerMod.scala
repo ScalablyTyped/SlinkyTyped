@@ -21,11 +21,11 @@ object domEventHandlerMod extends js.Object {
     /* protected */ def getDefaultDom(): HTMLElement = js.native
     /* protected */ def handler(dom: HTMLElement, eventName: EEventName, handler: js.Function, priority: Double): Unit = js.native
     def off(): Unit = js.native
-    def off(dom: typingsSlinky.std.HTMLElement, eventName: EEventName): Unit = js.native
-    def off(dom: typingsSlinky.std.HTMLElement, eventName: EEventName, handler: js.Function): Unit = js.native
+    def off(dom: HTMLElement, eventName: EEventName): Unit = js.native
+    def off(dom: HTMLElement, eventName: EEventName, handler: js.Function): Unit = js.native
     def off(eventName: EEventName): Unit = js.native
     def off(eventName: EEventName, handler: js.Function): Unit = js.native
-    def trigger(dom: typingsSlinky.std.HTMLElement, event: Event): Unit = js.native
+    def trigger(dom: HTMLElement, event: Event): Unit = js.native
     def trigger(event: Event): Unit = js.native
     /* protected */ def triggerDomEvent(dom: HTMLElement, event: IEventData, eventName: EEventName): js.Any = js.native
   }

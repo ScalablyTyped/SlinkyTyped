@@ -62,33 +62,155 @@ trait JobFlowInstancesDetail extends js.Object {
 
 object JobFlowInstancesDetail {
   @scala.inline
-  def apply(
-    InstanceCount: Integer,
-    MasterInstanceType: InstanceType,
-    SlaveInstanceType: InstanceType,
-    Ec2KeyName: XmlStringMaxLen256 = null,
-    Ec2SubnetId: XmlStringMaxLen256 = null,
-    HadoopVersion: XmlStringMaxLen256 = null,
-    InstanceGroups: InstanceGroupDetailList = null,
-    KeepJobFlowAliveWhenNoSteps: js.UndefOr[scala.Boolean] = js.undefined,
-    MasterInstanceId: XmlString = null,
-    MasterPublicDnsName: XmlString = null,
-    NormalizedInstanceHours: Int | Double = null,
-    Placement: PlacementType = null,
-    TerminationProtected: js.UndefOr[scala.Boolean] = js.undefined
-  ): JobFlowInstancesDetail = {
+  def apply(InstanceCount: Integer, MasterInstanceType: InstanceType, SlaveInstanceType: InstanceType): JobFlowInstancesDetail = {
     val __obj = js.Dynamic.literal(InstanceCount = InstanceCount.asInstanceOf[js.Any], MasterInstanceType = MasterInstanceType.asInstanceOf[js.Any], SlaveInstanceType = SlaveInstanceType.asInstanceOf[js.Any])
-    if (Ec2KeyName != null) __obj.updateDynamic("Ec2KeyName")(Ec2KeyName.asInstanceOf[js.Any])
-    if (Ec2SubnetId != null) __obj.updateDynamic("Ec2SubnetId")(Ec2SubnetId.asInstanceOf[js.Any])
-    if (HadoopVersion != null) __obj.updateDynamic("HadoopVersion")(HadoopVersion.asInstanceOf[js.Any])
-    if (InstanceGroups != null) __obj.updateDynamic("InstanceGroups")(InstanceGroups.asInstanceOf[js.Any])
-    if (!js.isUndefined(KeepJobFlowAliveWhenNoSteps)) __obj.updateDynamic("KeepJobFlowAliveWhenNoSteps")(KeepJobFlowAliveWhenNoSteps.asInstanceOf[js.Any])
-    if (MasterInstanceId != null) __obj.updateDynamic("MasterInstanceId")(MasterInstanceId.asInstanceOf[js.Any])
-    if (MasterPublicDnsName != null) __obj.updateDynamic("MasterPublicDnsName")(MasterPublicDnsName.asInstanceOf[js.Any])
-    if (NormalizedInstanceHours != null) __obj.updateDynamic("NormalizedInstanceHours")(NormalizedInstanceHours.asInstanceOf[js.Any])
-    if (Placement != null) __obj.updateDynamic("Placement")(Placement.asInstanceOf[js.Any])
-    if (!js.isUndefined(TerminationProtected)) __obj.updateDynamic("TerminationProtected")(TerminationProtected.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobFlowInstancesDetail]
   }
+  @scala.inline
+  implicit class JobFlowInstancesDetailOps[Self <: JobFlowInstancesDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMasterInstanceType(value: InstanceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterInstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSlaveInstanceType(value: InstanceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SlaveInstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEc2KeyName(value: XmlStringMaxLen256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ec2KeyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEc2KeyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ec2KeyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEc2SubnetId(value: XmlStringMaxLen256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ec2SubnetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEc2SubnetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ec2SubnetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHadoopVersion(value: XmlStringMaxLen256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HadoopVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHadoopVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HadoopVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceGroups(value: InstanceGroupDetailList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepJobFlowAliveWhenNoSteps(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeepJobFlowAliveWhenNoSteps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepJobFlowAliveWhenNoSteps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeepJobFlowAliveWhenNoSteps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterInstanceId(value: XmlString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterInstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterInstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterInstanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterPublicDnsName(value: XmlString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterPublicDnsName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterPublicDnsName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterPublicDnsName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNormalizedInstanceHours(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NormalizedInstanceHours")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNormalizedInstanceHours: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NormalizedInstanceHours")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacement(value: PlacementType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Placement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Placement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerminationProtected(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminationProtected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerminationProtected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminationProtected")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

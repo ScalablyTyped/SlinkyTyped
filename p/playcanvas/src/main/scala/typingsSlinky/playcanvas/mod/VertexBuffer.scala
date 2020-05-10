@@ -36,7 +36,7 @@ class VertexBuffer protected ()
     format: typingsSlinky.playcanvas.pc.VertexFormat,
     numVertices: Double,
     usage: Double,
-    initialData: scala.scalajs.js.typedarray.ArrayBuffer
+    initialData: js.typedarray.ArrayBuffer
   ) = this()
 }
 

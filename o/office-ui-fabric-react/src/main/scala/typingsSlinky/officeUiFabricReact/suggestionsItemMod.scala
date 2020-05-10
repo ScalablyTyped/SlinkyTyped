@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.officeUiFabricReact.suggestionsItemTypesMod.ISuggestionItemProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,8 +10,10 @@ import scala.scalajs.js.annotation._
 @js.native
 object suggestionsItemMod extends js.Object {
   @js.native
-  class SuggestionsItem[T] ()
-    extends BaseComponent[ISuggestionItemProps[T], js.Object]
+  class SuggestionsItem[T] protected ()
+    extends Component[ISuggestionItemProps[T], js.Object, js.Any] {
+    def this(props: ISuggestionItemProps[T]) = this()
+  }
   
 }
 

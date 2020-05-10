@@ -20,7 +20,7 @@ object removeEventListener_drop extends js.Object {
   def apply(
     `type`: drop,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.DragEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

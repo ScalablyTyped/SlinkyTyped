@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonImage extends js.Object {
-  var image: scala.scalajs.js.typedarray.Uint8Array
-  var mimType: String
+  var image: js.typedarray.Uint8Array = js.native
+  var mimType: String = js.native
 }
 
 object AnonImage {
   @scala.inline
-  def apply(image: scala.scalajs.js.typedarray.Uint8Array, mimType: String): AnonImage = {
+  def apply(image: js.typedarray.Uint8Array, mimType: String): AnonImage = {
     val __obj = js.Dynamic.literal(image = image.asInstanceOf[js.Any], mimType = mimType.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonImage]
   }
+  @scala.inline
+  implicit class AnonImageOps[Self <: AnonImage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImage(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMimType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mimType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

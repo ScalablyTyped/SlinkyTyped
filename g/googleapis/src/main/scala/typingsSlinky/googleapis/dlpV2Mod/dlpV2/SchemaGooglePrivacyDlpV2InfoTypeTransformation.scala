@@ -24,14 +24,41 @@ trait SchemaGooglePrivacyDlpV2InfoTypeTransformation extends js.Object {
 
 object SchemaGooglePrivacyDlpV2InfoTypeTransformation {
   @scala.inline
-  def apply(
-    infoTypes: js.Array[SchemaGooglePrivacyDlpV2InfoType] = null,
-    primitiveTransformation: SchemaGooglePrivacyDlpV2PrimitiveTransformation = null
-  ): SchemaGooglePrivacyDlpV2InfoTypeTransformation = {
+  def apply(): SchemaGooglePrivacyDlpV2InfoTypeTransformation = {
     val __obj = js.Dynamic.literal()
-    if (infoTypes != null) __obj.updateDynamic("infoTypes")(infoTypes.asInstanceOf[js.Any])
-    if (primitiveTransformation != null) __obj.updateDynamic("primitiveTransformation")(primitiveTransformation.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2InfoTypeTransformation]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2InfoTypeTransformationOps[Self <: SchemaGooglePrivacyDlpV2InfoTypeTransformation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInfoTypes(value: js.Array[SchemaGooglePrivacyDlpV2InfoType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infoTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInfoTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infoTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimitiveTransformation(value: SchemaGooglePrivacyDlpV2PrimitiveTransformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primitiveTransformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimitiveTransformation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primitiveTransformation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

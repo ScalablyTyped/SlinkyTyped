@@ -4,60 +4,158 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CellSaveEventArgs extends js.Object {
   /** Returns the cell object.
     */
-  var cell: js.UndefOr[js.Any] = js.undefined
+  var cell: js.UndefOr[js.Any] = js.native
   /** Returns the column name.
     */
-  var columnName: js.UndefOr[String] = js.undefined
+  var columnName: js.UndefOr[String] = js.native
   /** Returns the column object.
     */
-  var columnObject: js.UndefOr[js.Any] = js.undefined
+  var columnObject: js.UndefOr[js.Any] = js.native
   /** Returns isForeignKey option value.
     */
-  var isForeignKey: js.UndefOr[Boolean] = js.undefined
+  var isForeignKey: js.UndefOr[Boolean] = js.native
   /** Returns the grid model.
     */
-  var model: js.UndefOr[js.Any] = js.undefined
+  var model: js.UndefOr[js.Any] = js.native
   /** Returns the previous value of the cell.
     */
-  var previousValue: js.UndefOr[String] = js.undefined
+  var previousValue: js.UndefOr[String] = js.native
   /** Returns the row data object.
     */
-  var rowData: js.UndefOr[js.Any] = js.undefined
+  var rowData: js.UndefOr[js.Any] = js.native
   /** Returns the name of the event.
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /** Returns the cell value.
     */
-  var value: js.UndefOr[String] = js.undefined
+  var value: js.UndefOr[String] = js.native
 }
 
 object CellSaveEventArgs {
   @scala.inline
-  def apply(
-    cell: js.Any = null,
-    columnName: String = null,
-    columnObject: js.Any = null,
-    isForeignKey: js.UndefOr[Boolean] = js.undefined,
-    model: js.Any = null,
-    previousValue: String = null,
-    rowData: js.Any = null,
-    `type`: String = null,
-    value: String = null
-  ): CellSaveEventArgs = {
+  def apply(): CellSaveEventArgs = {
     val __obj = js.Dynamic.literal()
-    if (cell != null) __obj.updateDynamic("cell")(cell.asInstanceOf[js.Any])
-    if (columnName != null) __obj.updateDynamic("columnName")(columnName.asInstanceOf[js.Any])
-    if (columnObject != null) __obj.updateDynamic("columnObject")(columnObject.asInstanceOf[js.Any])
-    if (!js.isUndefined(isForeignKey)) __obj.updateDynamic("isForeignKey")(isForeignKey.asInstanceOf[js.Any])
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
-    if (previousValue != null) __obj.updateDynamic("previousValue")(previousValue.asInstanceOf[js.Any])
-    if (rowData != null) __obj.updateDynamic("rowData")(rowData.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellSaveEventArgs]
   }
+  @scala.inline
+  implicit class CellSaveEventArgsOps[Self <: CellSaveEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCell(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCell: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cell")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnObject(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsForeignKey(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isForeignKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsForeignKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isForeignKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModel(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreviousValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreviousValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -17,20 +17,18 @@ trait QueryableMethods extends js.Object
 
 object QueryableMethods {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.mobxTask.mobxTaskStrings.error = "error".asInstanceOf[typingsSlinky.mobxTask.mobxTaskStrings.error]
   @scala.inline
-  def error: typingsSlinky.mobxTask.mobxTaskStrings.error = this.cast("error")
+  def `match`: typingsSlinky.mobxTask.mobxTaskStrings.`match` = "match".asInstanceOf[typingsSlinky.mobxTask.mobxTaskStrings.`match`]
   @scala.inline
-  def `match`: typingsSlinky.mobxTask.mobxTaskStrings.`match` = this.cast("match")
+  def pending: typingsSlinky.mobxTask.mobxTaskStrings.pending = "pending".asInstanceOf[typingsSlinky.mobxTask.mobxTaskStrings.pending]
   @scala.inline
-  def pending: typingsSlinky.mobxTask.mobxTaskStrings.pending = this.cast("pending")
+  def rejected: typingsSlinky.mobxTask.mobxTaskStrings.rejected = "rejected".asInstanceOf[typingsSlinky.mobxTask.mobxTaskStrings.rejected]
   @scala.inline
-  def rejected: typingsSlinky.mobxTask.mobxTaskStrings.rejected = this.cast("rejected")
+  def resolved: typingsSlinky.mobxTask.mobxTaskStrings.resolved = "resolved".asInstanceOf[typingsSlinky.mobxTask.mobxTaskStrings.resolved]
   @scala.inline
-  def resolved: typingsSlinky.mobxTask.mobxTaskStrings.resolved = this.cast("resolved")
+  def result: typingsSlinky.mobxTask.mobxTaskStrings.result = "result".asInstanceOf[typingsSlinky.mobxTask.mobxTaskStrings.result]
   @scala.inline
-  def result: typingsSlinky.mobxTask.mobxTaskStrings.result = this.cast("result")
-  @scala.inline
-  def state: typingsSlinky.mobxTask.mobxTaskStrings.state = this.cast("state")
+  def state: typingsSlinky.mobxTask.mobxTaskStrings.state = "state".asInstanceOf[typingsSlinky.mobxTask.mobxTaskStrings.state]
 }
 

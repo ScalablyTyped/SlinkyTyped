@@ -1,5 +1,6 @@
 package typingsSlinky.tstl
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.tstl.generalMod.General
 import typingsSlinky.tstl.icomputableMod.IComputable
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
@@ -135,7 +136,7 @@ object numericMod extends js.Object {
   def plus[Y, Ret](x: Double, y: Y): Ret = js.native
   def plus[X /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in 'plus' ]: tstl.tstl/numeric/IComputable.IComputable<Y, Ret>[P]}
-    */ typingsSlinky.tstl.tstlStrings.plus with (IComputable[Y, Ret]) */, Y, Ret](x: X, y: Y): Ret = js.native
+    */ typingsSlinky.tstl.tstlStrings.plus with (TopLevel[IComputable[Y, Ret]]) */, Y, Ret](x: X, y: Y): Ret = js.native
   @JSName("riemann_zeta")
   def riemannZeta(arg: Double): Double = js.native
   @JSName("sph_bessel")

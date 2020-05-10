@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait XAxisOptions extends AxisOptions {
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Accessibility options for an
     * axis. Requires the accessibility module.
     */
-  var accessibility: js.UndefOr[js.Object | XAxisAccessibilityOptions] = js.undefined
+  var accessibility: js.UndefOr[js.Object | XAxisAccessibilityOptions] = js.native
   /**
     * (Highcharts, Highstock, Gantt) When using multiple axis, the ticks of two
     * or more opposite axes will automatically be aligned by adding ticks to
@@ -24,25 +25,25 @@ trait XAxisOptions extends AxisOptions {
     *
     * Disabled for logarithmic axes.
     */
-  var alignTicks: js.UndefOr[Boolean] = js.undefined
+  var alignTicks: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether to allow decimals in
     * this axis' ticks. When counting integers, like persons or hits on a web
     * page, decimals should be avoided in the labels.
     */
-  var allowDecimals: js.UndefOr[Boolean] = js.undefined
+  var allowDecimals: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) When using an alternate grid
     * color, a band is painted across the plot area between every other grid
     * line.
     */
-  var alternateGridColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var alternateGridColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts, Highstock, Gantt) An array defining breaks in the axis, the
     * sections defined will be left out and all the points shifted closer to
     * each other.
     */
-  var breaks: js.UndefOr[js.Array[XAxisBreaksOptions]] = js.undefined
+  var breaks: js.UndefOr[js.Array[XAxisBreaksOptions]] = js.native
   /**
     * (Highcharts, Gantt) If categories are present for the xAxis, names are
     * used instead of numbers for that axis. Since Highcharts 3.0, categories
@@ -54,18 +55,18 @@ trait XAxisOptions extends AxisOptions {
     *
     *  (see online documentation for example)
     */
-  var categories: js.UndefOr[js.Array[String]] = js.undefined
+  var categories: js.UndefOr[js.Array[String]] = js.native
   /**
     * (Highcharts, Highstock, Gantt) The highest allowed value for
     * automatically computed axis extremes.
     */
-  var ceiling: js.UndefOr[Double] = js.undefined
+  var ceiling: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) A class name that opens for
     * styling the axis by CSS, especially in Highcharts styled mode. The class
     * name is applied to group elements for the grid, axis elements and labels.
     */
-  var className: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Configure a crosshair that
     * follows either the mouse pointer or the hovered point.
@@ -73,12 +74,12 @@ trait XAxisOptions extends AxisOptions {
     * In styled mode, the crosshairs are styled in the `.highcharts-crosshair`,
     * `.highcharts-crosshair-thin` or `.highcharts-xaxis-category` classes.
     */
-  var crosshair: js.UndefOr[Boolean | XAxisCrosshairOptions] = js.undefined
+  var crosshair: js.UndefOr[Boolean | XAxisCrosshairOptions] = js.native
   /**
     * (Gantt) Show an indicator on the axis for the current date and time. Can
     * be a boolean or a configuration object similar to xAxis.plotLines.
     */
-  var currentDateIndicator: js.UndefOr[Boolean | XAxisCurrentDateIndicatorOptions] = js.undefined
+  var currentDateIndicator: js.UndefOr[Boolean | XAxisCurrentDateIndicatorOptions] = js.native
   /**
     * (Highcharts, Highstock, Gantt) For a datetime axis, the scale will
     * automatically adjust to the appropriate unit. This member gives the
@@ -90,38 +91,38 @@ trait XAxisOptions extends AxisOptions {
     *
     *  (see online documentation for example)
     */
-  var dateTimeLabelFormats: js.UndefOr[XAxisDateTimeLabelFormatsOptions] = js.undefined
+  var dateTimeLabelFormats: js.UndefOr[XAxisDateTimeLabelFormatsOptions] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether to force the axis to end
     * on a tick. Use this option with the `maxPadding` option to control the
     * axis end.
     */
-  var endOnTick: js.UndefOr[Boolean] = js.undefined
+  var endOnTick: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Event handlers for the axis.
     */
-  var events: js.UndefOr[XAxisEventsOptions] = js.undefined
+  var events: js.UndefOr[XAxisEventsOptions] = js.native
   /**
     * (Highcharts, Highstock, Gantt) The lowest allowed value for automatically
     * computed axis extremes.
     */
-  var floor: js.UndefOr[Double] = js.undefined
+  var floor: js.UndefOr[Double] = js.native
   /**
     * (Gantt) Set grid options for the axis labels. Requires Highcharts Gantt.
     */
-  var grid: js.UndefOr[XAxisGridOptions] = js.undefined
+  var grid: js.UndefOr[XAxisGridOptions] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Color of the grid lines
     * extending the ticks across the plot area.
     *
     * In styled mode, the stroke is given in the `.highcharts-grid-line` class.
     */
-  var gridLineColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var gridLineColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The dash or dot style of the
     * grid lines. For possible values, see this demonstration.
     */
-  var gridLineDashStyle: js.UndefOr[DashStyleValue] = js.undefined
+  var gridLineDashStyle: js.UndefOr[DashStyleValue] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The width of the grid lines
     * extending the ticks across the plot area.
@@ -129,22 +130,22 @@ trait XAxisOptions extends AxisOptions {
     * In styled mode, the stroke width is given in the `.highcharts-grid-line`
     * class.
     */
-  var gridLineWidth: js.UndefOr[Double] = js.undefined
+  var gridLineWidth: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Gantt) The Z index of the grid lines.
     */
-  var gridZIndex: js.UndefOr[Double] = js.undefined
+  var gridZIndex: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) An id for the axis. This can be
     * used after render time to get a pointer to the axis object through
     * `chart.get()`.
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The axis labels show the number
     * or category for each tick.
     */
-  var labels: js.UndefOr[XAxisLabelsOptions] = js.undefined
+  var labels: js.UndefOr[XAxisLabelsOptions] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The color of the line marking
     * the axis itself.
@@ -152,7 +153,7 @@ trait XAxisOptions extends AxisOptions {
     * In styled mode, the line stroke is given in the `.highcharts-axis-line`
     * or `.highcharts-xaxis-line` class.
     */
-  var lineColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var lineColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The width of the line marking
     * the axis itself.
@@ -160,7 +161,7 @@ trait XAxisOptions extends AxisOptions {
     * In styled mode, the stroke width is given in the `.highcharts-axis-line`
     * or `.highcharts-xaxis-line` class.
     */
-  var lineWidth: js.UndefOr[Double] = js.undefined
+  var lineWidth: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Index of another axis that this axis is
     * linked to. When an axis is linked to a master axis, it will take the same
@@ -168,13 +169,13 @@ trait XAxisOptions extends AxisOptions {
     * It can be used to show additional info, or to ease reading the chart by
     * duplicating the scales.
     */
-  var linkedTo: js.UndefOr[Double] = js.undefined
+  var linkedTo: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) If there are multiple axes on
     * the same side of the chart, the pixel margin between the axes. Defaults
     * to 0 on vertical axes, 15 on horizontal axes.
     */
-  var margin: js.UndefOr[Double] = js.undefined
+  var margin: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The maximum value of the axis.
     * If `null`, the max value is automatically calculated.
@@ -186,7 +187,7 @@ trait XAxisOptions extends AxisOptions {
     * with multiple axes, determined by chart. alignTicks, where a `tickAmount`
     * is applied internally.
     */
-  var max: js.UndefOr[Double | Null] = js.undefined
+  var max: js.UndefOr[Double | Null] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Padding of the max value
     * relative to the length of the axis. A padding of 0.05 will make a 100px
@@ -195,12 +196,12 @@ trait XAxisOptions extends AxisOptions {
     * is set or a max extreme is set using `axis.setExtremes()`, the maxPadding
     * will be ignored.
     */
-  var maxPadding: js.UndefOr[Double] = js.undefined
+  var maxPadding: js.UndefOr[Double] = js.native
   /**
     * (Highstock, Gantt) Maximum range which can be set using the navigator's
     * handles. Opposite of xAxis.minRange.
     */
-  var maxRange: js.UndefOr[Double] = js.undefined
+  var maxRange: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The minimum value of the axis.
     * If `null` the min value is automatically calculated.
@@ -212,7 +213,7 @@ trait XAxisOptions extends AxisOptions {
     * softMin, minPadding, minRange as well as series.threshold and
     * series.softThreshold.
     */
-  var min: js.UndefOr[Double | Null] = js.undefined
+  var min: js.UndefOr[Double | Null] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Padding of the min value relative to the
     * length of the axis. A padding of 0.05 will make a 100px axis 5px longer.
@@ -221,7 +222,7 @@ trait XAxisOptions extends AxisOptions {
     * extreme is set using `axis.setExtremes()`, the minPadding will be
     * ignored.
     */
-  var minPadding: js.UndefOr[Double] = js.undefined
+  var minPadding: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The minimum range to display on
     * this axis. The entire axis will not be allowed to span over a smaller
@@ -239,14 +240,14 @@ trait XAxisOptions extends AxisOptions {
     * Note that the `minPadding`, `maxPadding`, `startOnTick` and `endOnTick`
     * settings also affect how the extremes of the axis are computed.
     */
-  var minRange: js.UndefOr[Double] = js.undefined
+  var minRange: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The minimum tick interval
     * allowed in axis values. For example on zooming in on an axis with daily
     * data, this can be used to prevent the axis from showing hours. Defaults
     * to the closest distance between two points on the axis.
     */
-  var minTickInterval: js.UndefOr[Double] = js.undefined
+  var minTickInterval: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Color of the minor, secondary
     * grid lines.
@@ -254,12 +255,12 @@ trait XAxisOptions extends AxisOptions {
     * In styled mode, the stroke width is given in the
     * `.highcharts-minor-grid-line` class.
     */
-  var minorGridLineColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var minorGridLineColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The dash or dot style of the
     * minor grid lines. For possible values, see this demonstration.
     */
-  var minorGridLineDashStyle: js.UndefOr[DashStyleValue] = js.undefined
+  var minorGridLineDashStyle: js.UndefOr[DashStyleValue] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Width of the minor, secondary
     * grid lines.
@@ -267,11 +268,11 @@ trait XAxisOptions extends AxisOptions {
     * In styled mode, the stroke width is given in the `.highcharts-grid-line`
     * class.
     */
-  var minorGridLineWidth: js.UndefOr[Double] = js.undefined
+  var minorGridLineWidth: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Color for the minor tick marks.
     */
-  var minorTickColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var minorTickColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Specific tick interval in axis
     * units for the minor ticks. On a linear axis, if `"auto"`, the minor tick
@@ -286,22 +287,22 @@ trait XAxisOptions extends AxisOptions {
     * If user settings dictate minor ticks to become too dense, they don't make
     * sense, and will be ignored to prevent performance problems.
     */
-  var minorTickInterval: js.UndefOr[Double | String | Null] = js.undefined
+  var minorTickInterval: js.UndefOr[Double | String | Null] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The pixel length of the minor
     * tick marks.
     */
-  var minorTickLength: js.UndefOr[Double] = js.undefined
+  var minorTickLength: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The position of the minor tick
     * marks relative to the axis line. Can be one of `inside` and `outside`.
     */
-  var minorTickPosition: js.UndefOr[OptionsMinorTickPositionValue] = js.undefined
+  var minorTickPosition: js.UndefOr[OptionsMinorTickPositionValue] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The pixel width of the minor
     * tick mark.
     */
-  var minorTickWidth: js.UndefOr[Double] = js.undefined
+  var minorTickWidth: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Enable or disable minor ticks.
     * Unless minorTickInterval is set, the tick interval is calculated as a
@@ -313,7 +314,7 @@ trait XAxisOptions extends AxisOptions {
     * Prior to v6.0.0, ticks were unabled in auto layout by setting
     * `minorTickInterval` to `"auto"`.
     */
-  var minorTicks: js.UndefOr[Boolean] = js.undefined
+  var minorTicks: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The distance in pixels from the
     * plot area to the axis line. A positive offset moves the axis with it's
@@ -322,7 +323,7 @@ trait XAxisOptions extends AxisOptions {
     * multiple axes the offset is dynamically adjusted to avoid collision, this
     * can be overridden by setting offset explicitly.
     */
-  var offset: js.UndefOr[Double] = js.undefined
+  var offset: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether to display the axis on
     * the opposite side of the normal. The normal is on the left side for
@@ -330,7 +331,7 @@ trait XAxisOptions extends AxisOptions {
     * right and top respectively. This is typically used with dual or multiple
     * axes.
     */
-  var opposite: js.UndefOr[Boolean] = js.undefined
+  var opposite: js.UndefOr[Boolean] = js.native
   /**
     * (Highstock) In an ordinal axis, the points are equally spaced in the
     * chart regardless of the actual time or x distance between them. This
@@ -343,19 +344,19 @@ trait XAxisOptions extends AxisOptions {
     * is used and at least one of the series' data length exceeds the
     * boostThreshold.
     */
-  var ordinal: js.UndefOr[Boolean] = js.undefined
+  var ordinal: js.UndefOr[Boolean] = js.native
   /**
     * (Highstock) Additional range on the right side of the xAxis. Works
     * similar to `xAxis.maxPadding`, but value is set in milliseconds. Can be
     * set for both main `xAxis` and the navigator's `xAxis`.
     */
-  var overscroll: js.UndefOr[Double] = js.undefined
+  var overscroll: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) Refers to the index in the panes array. Used for circular
     * gauges and polar charts. When the option is not set then first pane will
     * be used.
     */
-  var pane: js.UndefOr[Double] = js.undefined
+  var pane: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Gantt) An array of colored bands stretching
     * across the plot area marking an interval on the axis.
@@ -363,7 +364,7 @@ trait XAxisOptions extends AxisOptions {
     * In styled mode, the plot bands are styled by the `.highcharts-plot-band`
     * class in addition to the `className` option.
     */
-  var plotBands: js.UndefOr[js.Array[XAxisPlotBandsOptions]] = js.undefined
+  var plotBands: js.UndefOr[js.Array[XAxisPlotBandsOptions]] = js.native
   /**
     * (Highcharts, Highstock, Gantt) An array of lines stretching across the
     * plot area, marking a specific value on one of the axes.
@@ -371,26 +372,26 @@ trait XAxisOptions extends AxisOptions {
     * In styled mode, the plot lines are styled by the `.highcharts-plot-line`
     * class in addition to the `className` option.
     */
-  var plotLines: js.UndefOr[js.Array[XAxisPlotLinesOptions]] = js.undefined
+  var plotLines: js.UndefOr[js.Array[XAxisPlotLinesOptions]] = js.native
   /**
     * (Highstock) The zoomed range to display when only defining one or none of
     * `min` or `max`. For example, to show the latest month, a range of one
     * month can be set.
     */
-  var range: js.UndefOr[Double] = js.undefined
+  var range: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether to reverse the axis so
     * that the highest number is closest to the origin. If the chart is
     * inverted, the x axis is reversed by default.
     */
-  var reversed: js.UndefOr[Boolean] = js.undefined
+  var reversed: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock) This option determines how stacks should be
     * ordered within a group. For example reversed xAxis also reverses stacks,
     * so first series comes last in a group. To keep order like for
     * non-reversed xAxis enable this option.
     */
-  var reversedStacks: js.UndefOr[Boolean] = js.undefined
+  var reversedStacks: js.UndefOr[Boolean] = js.native
   /**
     * (Highstock) An optional scrollbar to display on the X axis in response to
     * limiting the minimum and maximum of the axis values.
@@ -400,47 +401,47 @@ trait XAxisOptions extends AxisOptions {
     * `.highcharts-scrollbar-arrow`, `.highcharts-scrollbar-button`,
     * `.highcharts-scrollbar-rifles` and `.highcharts-scrollbar-track`.
     */
-  var scrollbar: js.UndefOr[XAxisScrollbarOptions] = js.undefined
+  var scrollbar: js.UndefOr[XAxisScrollbarOptions] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether to show the axis line
     * and title when the axis has no data.
     */
-  var showEmpty: js.UndefOr[Boolean] = js.undefined
+  var showEmpty: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether to show the first tick
     * label.
     */
-  var showFirstLabel: js.UndefOr[Boolean] = js.undefined
+  var showFirstLabel: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Whether to show the last tick label.
     * Defaults to `true` on cartesian charts, and `false` on polar charts.
     */
-  var showLastLabel: js.UndefOr[Boolean] = js.undefined
+  var showLastLabel: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock, Gantt) A soft maximum for the axis. If the series
     * data maximum is less than this, the axis will stay at this maximum, but
     * if the series data maximum is higher, the axis will flex to show all
     * data.
     */
-  var softMax: js.UndefOr[Double] = js.undefined
+  var softMax: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Gantt) A soft minimum for the axis. If the series
     * data minimum is greater than this, the axis will stay at this minimum,
     * but if the series data minimum is lower, the axis will flex to show all
     * data.
     */
-  var softMin: js.UndefOr[Double] = js.undefined
+  var softMin: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Gantt) For datetime axes, this decides where to
     * put the tick between weeks. 0 = Sunday, 1 = Monday.
     */
-  var startOfWeek: js.UndefOr[Double] = js.undefined
+  var startOfWeek: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether to force the axis to
     * start on a tick. Use this option with the `minPadding` option to control
     * the axis start.
     */
-  var startOnTick: js.UndefOr[Boolean] = js.undefined
+  var startOnTick: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock, Gantt) The amount of ticks to draw on the axis.
     * This opens up for aligning the ticks of multiple charts or panes within a
@@ -449,13 +450,13 @@ trait XAxisOptions extends AxisOptions {
     * This option only has an effect on linear axes. Datetime, logarithmic or
     * category axes are not affected.
     */
-  var tickAmount: js.UndefOr[Double] = js.undefined
+  var tickAmount: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Color for the main tick marks.
     *
     * In styled mode, the stroke is given in the `.highcharts-tick` class.
     */
-  var tickColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var tickColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The interval of the tick marks
     * in axis units. When `undefined`, the tick interval is computed to
@@ -476,12 +477,12 @@ trait XAxisOptions extends AxisOptions {
     * If the chart has multiple axes, the alignTicks option may interfere with
     * the `tickInterval` setting.
     */
-  var tickInterval: js.UndefOr[Double] = js.undefined
+  var tickInterval: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The pixel length of the main
     * tick marks.
     */
-  var tickLength: js.UndefOr[Double] = js.undefined
+  var tickLength: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) If tickInterval is `null` this
     * option sets the approximate pixel interval of the tick marks. Not
@@ -490,12 +491,12 @@ trait XAxisOptions extends AxisOptions {
     * The tick interval is also influenced by the minTickInterval option, that,
     * by default prevents ticks from being denser than the data points.
     */
-  var tickPixelInterval: js.UndefOr[Double] = js.undefined
+  var tickPixelInterval: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The position of the major tick
     * marks relative to the axis line. Can be one of `inside` and `outside`.
     */
-  var tickPosition: js.UndefOr[OptionsTickPositionValue] = js.undefined
+  var tickPosition: js.UndefOr[OptionsTickPositionValue] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) A callback function returning
     * array defining where the ticks are laid out on the axis. This overrides
@@ -503,13 +504,13 @@ trait XAxisOptions extends AxisOptions {
     * automatic tick positions are accessible through `this.tickPositions` and
     * can be modified by the callback.
     */
-  var tickPositioner: js.UndefOr[AxisTickPositionerCallbackFunction] = js.undefined
+  var tickPositioner: js.UndefOr[AxisTickPositionerCallbackFunction] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) An array defining where the
     * ticks are laid out on the axis. This overrides the default behaviour of
     * tickPixelInterval and tickInterval.
     */
-  var tickPositions: js.UndefOr[js.Array[Double]] = js.undefined
+  var tickPositions: js.UndefOr[js.Array[Double]] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The pixel width of the major
     * tick marks. Defaults to 0 on category axes, otherwise 1.
@@ -518,19 +519,19 @@ trait XAxisOptions extends AxisOptions {
     * class, but in order for the element to be generated on category axes, the
     * option must be explicitly set to 1.
     */
-  var tickWidth: js.UndefOr[Double] = js.undefined
+  var tickWidth: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Gantt) For categorized axes only. If `on` the tick mark is
     * placed in the center of the category, if `between` the tick mark is
     * placed between categories. The default is `between` if the `tickInterval`
     * is 1, else `on`.
     */
-  var tickmarkPlacement: js.UndefOr[OptionsTickmarkPlacementValue] = js.undefined
+  var tickmarkPlacement: js.UndefOr[OptionsTickmarkPlacementValue] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The axis title, showing next to
     * the axis line.
     */
-  var title: js.UndefOr[XAxisTitleOptions] = js.undefined
+  var title: js.UndefOr[XAxisTitleOptions] = js.native
   /**
     * (Highcharts, Gantt) The type of axis. Can be one of `linear`,
     * `logarithmic`, `datetime` or `category`. In a datetime axis, the numbers
@@ -539,7 +540,7 @@ trait XAxisOptions extends AxisOptions {
     * the chart's series are used for categories, if not a categories array is
     * defined.
     */
-  var `type`: js.UndefOr[AxisTypeValue] = js.undefined
+  var `type`: js.UndefOr[AxisTypeValue] = js.native
   /**
     * (Highcharts, Gantt) Applies only when the axis `type` is `category`. When
     * `uniqueNames` is true, points are placed on the X axis according to their
@@ -549,7 +550,7 @@ trait XAxisOptions extends AxisOptions {
     * X positions regardless of their names, and the X axis category will take
     * the name of the last point in each position.
     */
-  var uniqueNames: js.UndefOr[Boolean] = js.undefined
+  var uniqueNames: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Datetime axis only. An array determining
     * what time intervals the ticks are allowed to fall on. Each array item is
@@ -558,176 +559,951 @@ trait XAxisOptions extends AxisOptions {
     *
     *  (see online documentation for example)
     */
-  var units: js.UndefOr[js.Array[js.Tuple2[String, js.Array[Double] | Null]]] = js.undefined
+  var units: js.UndefOr[js.Array[js.Tuple2[String, js.Array[Double] | Null]]] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Whether axis, including axis title, line,
     * ticks and labels, should be visible.
     */
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether to zoom axis. If
     * `chart.zoomType` is set, the option allows to disable zooming on an
     * individual axis.
     */
-  var zoomEnabled: js.UndefOr[Boolean] = js.undefined
+  var zoomEnabled: js.UndefOr[Boolean] = js.native
 }
 
 object XAxisOptions {
   @scala.inline
-  def apply(
-    accessibility: js.Object | XAxisAccessibilityOptions = null,
-    alignTicks: js.UndefOr[Boolean] = js.undefined,
-    allowDecimals: js.UndefOr[Boolean] = js.undefined,
-    alternateGridColor: ColorString | GradientColorObject | PatternObject = null,
-    breaks: js.Array[XAxisBreaksOptions] = null,
-    categories: js.Array[String] = null,
-    ceiling: Int | Double = null,
-    className: String = null,
-    crosshair: Boolean | XAxisCrosshairOptions = null,
-    currentDateIndicator: Boolean | XAxisCurrentDateIndicatorOptions = null,
-    dateTimeLabelFormats: XAxisDateTimeLabelFormatsOptions = null,
-    endOnTick: js.UndefOr[Boolean] = js.undefined,
-    events: XAxisEventsOptions = null,
-    floor: Int | Double = null,
-    grid: XAxisGridOptions = null,
-    gridLineColor: ColorString | GradientColorObject | PatternObject = null,
-    gridLineDashStyle: DashStyleValue = null,
-    gridLineWidth: Int | Double = null,
-    gridZIndex: Int | Double = null,
-    id: String = null,
-    labels: XAxisLabelsOptions = null,
-    lineColor: ColorString | GradientColorObject | PatternObject = null,
-    lineWidth: Int | Double = null,
-    linkedTo: Int | Double = null,
-    margin: Int | Double = null,
-    max: Int | Double = null,
-    maxPadding: Int | Double = null,
-    maxRange: Int | Double = null,
-    min: Int | Double = null,
-    minPadding: Int | Double = null,
-    minRange: Int | Double = null,
-    minTickInterval: Int | Double = null,
-    minorGridLineColor: ColorString | GradientColorObject | PatternObject = null,
-    minorGridLineDashStyle: DashStyleValue = null,
-    minorGridLineWidth: Int | Double = null,
-    minorTickColor: ColorString | GradientColorObject | PatternObject = null,
-    minorTickInterval: Double | String = null,
-    minorTickLength: Int | Double = null,
-    minorTickPosition: OptionsMinorTickPositionValue = null,
-    minorTickWidth: Int | Double = null,
-    minorTicks: js.UndefOr[Boolean] = js.undefined,
-    offset: Int | Double = null,
-    opposite: js.UndefOr[Boolean] = js.undefined,
-    ordinal: js.UndefOr[Boolean] = js.undefined,
-    overscroll: Int | Double = null,
-    pane: Int | Double = null,
-    plotBands: js.Array[XAxisPlotBandsOptions] = null,
-    plotLines: js.Array[XAxisPlotLinesOptions] = null,
-    range: Int | Double = null,
-    reversed: js.UndefOr[Boolean] = js.undefined,
-    reversedStacks: js.UndefOr[Boolean] = js.undefined,
-    scrollbar: XAxisScrollbarOptions = null,
-    showEmpty: js.UndefOr[Boolean] = js.undefined,
-    showFirstLabel: js.UndefOr[Boolean] = js.undefined,
-    showLastLabel: js.UndefOr[Boolean] = js.undefined,
-    softMax: Int | Double = null,
-    softMin: Int | Double = null,
-    startOfWeek: Int | Double = null,
-    startOnTick: js.UndefOr[Boolean] = js.undefined,
-    tickAmount: Int | Double = null,
-    tickColor: ColorString | GradientColorObject | PatternObject = null,
-    tickInterval: Int | Double = null,
-    tickLength: Int | Double = null,
-    tickPixelInterval: Int | Double = null,
-    tickPosition: OptionsTickPositionValue = null,
-    tickPositioner: AxisTickPositionerCallbackFunction = null,
-    tickPositions: js.Array[Double] = null,
-    tickWidth: Int | Double = null,
-    tickmarkPlacement: OptionsTickmarkPlacementValue = null,
-    title: XAxisTitleOptions = null,
-    `type`: AxisTypeValue = null,
-    uniqueNames: js.UndefOr[Boolean] = js.undefined,
-    units: js.Array[js.Tuple2[String, js.Array[Double] | Null]] = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    zoomEnabled: js.UndefOr[Boolean] = js.undefined
-  ): XAxisOptions = {
+  def apply(): XAxisOptions = {
     val __obj = js.Dynamic.literal()
-    if (accessibility != null) __obj.updateDynamic("accessibility")(accessibility.asInstanceOf[js.Any])
-    if (!js.isUndefined(alignTicks)) __obj.updateDynamic("alignTicks")(alignTicks.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowDecimals)) __obj.updateDynamic("allowDecimals")(allowDecimals.asInstanceOf[js.Any])
-    if (alternateGridColor != null) __obj.updateDynamic("alternateGridColor")(alternateGridColor.asInstanceOf[js.Any])
-    if (breaks != null) __obj.updateDynamic("breaks")(breaks.asInstanceOf[js.Any])
-    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
-    if (ceiling != null) __obj.updateDynamic("ceiling")(ceiling.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (crosshair != null) __obj.updateDynamic("crosshair")(crosshair.asInstanceOf[js.Any])
-    if (currentDateIndicator != null) __obj.updateDynamic("currentDateIndicator")(currentDateIndicator.asInstanceOf[js.Any])
-    if (dateTimeLabelFormats != null) __obj.updateDynamic("dateTimeLabelFormats")(dateTimeLabelFormats.asInstanceOf[js.Any])
-    if (!js.isUndefined(endOnTick)) __obj.updateDynamic("endOnTick")(endOnTick.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (floor != null) __obj.updateDynamic("floor")(floor.asInstanceOf[js.Any])
-    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
-    if (gridLineColor != null) __obj.updateDynamic("gridLineColor")(gridLineColor.asInstanceOf[js.Any])
-    if (gridLineDashStyle != null) __obj.updateDynamic("gridLineDashStyle")(gridLineDashStyle.asInstanceOf[js.Any])
-    if (gridLineWidth != null) __obj.updateDynamic("gridLineWidth")(gridLineWidth.asInstanceOf[js.Any])
-    if (gridZIndex != null) __obj.updateDynamic("gridZIndex")(gridZIndex.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (lineColor != null) __obj.updateDynamic("lineColor")(lineColor.asInstanceOf[js.Any])
-    if (lineWidth != null) __obj.updateDynamic("lineWidth")(lineWidth.asInstanceOf[js.Any])
-    if (linkedTo != null) __obj.updateDynamic("linkedTo")(linkedTo.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maxPadding != null) __obj.updateDynamic("maxPadding")(maxPadding.asInstanceOf[js.Any])
-    if (maxRange != null) __obj.updateDynamic("maxRange")(maxRange.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minPadding != null) __obj.updateDynamic("minPadding")(minPadding.asInstanceOf[js.Any])
-    if (minRange != null) __obj.updateDynamic("minRange")(minRange.asInstanceOf[js.Any])
-    if (minTickInterval != null) __obj.updateDynamic("minTickInterval")(minTickInterval.asInstanceOf[js.Any])
-    if (minorGridLineColor != null) __obj.updateDynamic("minorGridLineColor")(minorGridLineColor.asInstanceOf[js.Any])
-    if (minorGridLineDashStyle != null) __obj.updateDynamic("minorGridLineDashStyle")(minorGridLineDashStyle.asInstanceOf[js.Any])
-    if (minorGridLineWidth != null) __obj.updateDynamic("minorGridLineWidth")(minorGridLineWidth.asInstanceOf[js.Any])
-    if (minorTickColor != null) __obj.updateDynamic("minorTickColor")(minorTickColor.asInstanceOf[js.Any])
-    if (minorTickInterval != null) __obj.updateDynamic("minorTickInterval")(minorTickInterval.asInstanceOf[js.Any])
-    if (minorTickLength != null) __obj.updateDynamic("minorTickLength")(minorTickLength.asInstanceOf[js.Any])
-    if (minorTickPosition != null) __obj.updateDynamic("minorTickPosition")(minorTickPosition.asInstanceOf[js.Any])
-    if (minorTickWidth != null) __obj.updateDynamic("minorTickWidth")(minorTickWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(minorTicks)) __obj.updateDynamic("minorTicks")(minorTicks.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (!js.isUndefined(opposite)) __obj.updateDynamic("opposite")(opposite.asInstanceOf[js.Any])
-    if (!js.isUndefined(ordinal)) __obj.updateDynamic("ordinal")(ordinal.asInstanceOf[js.Any])
-    if (overscroll != null) __obj.updateDynamic("overscroll")(overscroll.asInstanceOf[js.Any])
-    if (pane != null) __obj.updateDynamic("pane")(pane.asInstanceOf[js.Any])
-    if (plotBands != null) __obj.updateDynamic("plotBands")(plotBands.asInstanceOf[js.Any])
-    if (plotLines != null) __obj.updateDynamic("plotLines")(plotLines.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (!js.isUndefined(reversed)) __obj.updateDynamic("reversed")(reversed.asInstanceOf[js.Any])
-    if (!js.isUndefined(reversedStacks)) __obj.updateDynamic("reversedStacks")(reversedStacks.asInstanceOf[js.Any])
-    if (scrollbar != null) __obj.updateDynamic("scrollbar")(scrollbar.asInstanceOf[js.Any])
-    if (!js.isUndefined(showEmpty)) __obj.updateDynamic("showEmpty")(showEmpty.asInstanceOf[js.Any])
-    if (!js.isUndefined(showFirstLabel)) __obj.updateDynamic("showFirstLabel")(showFirstLabel.asInstanceOf[js.Any])
-    if (!js.isUndefined(showLastLabel)) __obj.updateDynamic("showLastLabel")(showLastLabel.asInstanceOf[js.Any])
-    if (softMax != null) __obj.updateDynamic("softMax")(softMax.asInstanceOf[js.Any])
-    if (softMin != null) __obj.updateDynamic("softMin")(softMin.asInstanceOf[js.Any])
-    if (startOfWeek != null) __obj.updateDynamic("startOfWeek")(startOfWeek.asInstanceOf[js.Any])
-    if (!js.isUndefined(startOnTick)) __obj.updateDynamic("startOnTick")(startOnTick.asInstanceOf[js.Any])
-    if (tickAmount != null) __obj.updateDynamic("tickAmount")(tickAmount.asInstanceOf[js.Any])
-    if (tickColor != null) __obj.updateDynamic("tickColor")(tickColor.asInstanceOf[js.Any])
-    if (tickInterval != null) __obj.updateDynamic("tickInterval")(tickInterval.asInstanceOf[js.Any])
-    if (tickLength != null) __obj.updateDynamic("tickLength")(tickLength.asInstanceOf[js.Any])
-    if (tickPixelInterval != null) __obj.updateDynamic("tickPixelInterval")(tickPixelInterval.asInstanceOf[js.Any])
-    if (tickPosition != null) __obj.updateDynamic("tickPosition")(tickPosition.asInstanceOf[js.Any])
-    if (tickPositioner != null) __obj.updateDynamic("tickPositioner")(tickPositioner.asInstanceOf[js.Any])
-    if (tickPositions != null) __obj.updateDynamic("tickPositions")(tickPositions.asInstanceOf[js.Any])
-    if (tickWidth != null) __obj.updateDynamic("tickWidth")(tickWidth.asInstanceOf[js.Any])
-    if (tickmarkPlacement != null) __obj.updateDynamic("tickmarkPlacement")(tickmarkPlacement.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(uniqueNames)) __obj.updateDynamic("uniqueNames")(uniqueNames.asInstanceOf[js.Any])
-    if (units != null) __obj.updateDynamic("units")(units.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (!js.isUndefined(zoomEnabled)) __obj.updateDynamic("zoomEnabled")(zoomEnabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[XAxisOptions]
   }
+  @scala.inline
+  implicit class XAxisOptionsOps[Self <: XAxisOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessibility(value: js.Object | XAxisAccessibilityOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlignTicks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignTicks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignTicks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignTicks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowDecimals(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDecimals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowDecimals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDecimals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlternateGridColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alternateGridColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlternateGridColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alternateGridColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBreaks(value: js.Array[XAxisBreaksOptions]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breaks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBreaks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breaks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategories(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategories: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCeiling(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ceiling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCeiling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ceiling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrosshair(value: Boolean | XAxisCrosshairOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crosshair")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrosshair: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crosshair")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentDateIndicator(value: Boolean | XAxisCurrentDateIndicatorOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentDateIndicator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentDateIndicator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentDateIndicator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateTimeLabelFormats(value: XAxisDateTimeLabelFormatsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTimeLabelFormats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateTimeLabelFormats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTimeLabelFormats")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndOnTick(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endOnTick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndOnTick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endOnTick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvents(value: XAxisEventsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrid(value: XAxisGridOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridLineColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridLineColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridLineColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridLineColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridLineDashStyle(value: DashStyleValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridLineDashStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridLineDashStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridLineDashStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridLineWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridLineWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridLineWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridLineWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridZIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridZIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: XAxisLabelsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkedTo(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkedTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(null)
+        ret
+    }
+    @scala.inline
+    def withMaxPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRange(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(null)
+        ret
+    }
+    @scala.inline
+    def withMinPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minPadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minPadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinRange(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinTickInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minTickInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinTickInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minTickInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorGridLineColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorGridLineColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorGridLineColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorGridLineColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorGridLineDashStyle(value: DashStyleValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorGridLineDashStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorGridLineDashStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorGridLineDashStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorGridLineWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorGridLineWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorGridLineWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorGridLineWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickInterval(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickIntervalNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickInterval")(null)
+        ret
+    }
+    @scala.inline
+    def withMinorTickLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickPosition(value: OptionsMinorTickPositionValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTicks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTicks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTicks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTicks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpposite(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opposite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpposite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opposite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrdinal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ordinal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrdinal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ordinal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverscroll(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overscroll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverscroll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overscroll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPane(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pane")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPane: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pane")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlotBands(value: js.Array[XAxisPlotBandsOptions]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plotBands")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlotBands: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plotBands")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlotLines(value: js.Array[XAxisPlotLinesOptions]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plotLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlotLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plotLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReversed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reversed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReversed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reversed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReversedStacks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reversedStacks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReversedStacks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reversedStacks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollbar(value: XAxisScrollbarOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollbar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollbar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowEmpty(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showEmpty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowEmpty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showEmpty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowFirstLabel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showFirstLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowFirstLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showFirstLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowLastLabel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showLastLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowLastLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showLastLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSoftMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("softMax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSoftMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("softMax")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSoftMin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("softMin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSoftMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("softMin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartOfWeek(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startOfWeek")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartOfWeek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startOfWeek")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartOnTick(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startOnTick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartOnTick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startOnTick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickAmount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickAmount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickAmount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickPixelInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickPixelInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickPixelInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickPixelInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickPosition(value: OptionsTickPositionValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickPositioner(value: AxisTickPositionerCallbackFunction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickPositioner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickPositioner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickPositioner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickPositions(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickPositions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickPositions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickPositions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickmarkPlacement(value: OptionsTickmarkPlacementValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickmarkPlacement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickmarkPlacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickmarkPlacement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: XAxisTitleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: AxisTypeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUniqueNames(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUniqueNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnits(value: js.Array[js.Tuple2[String, js.Array[Double] | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("units")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("units")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

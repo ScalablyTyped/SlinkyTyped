@@ -143,60 +143,372 @@ object DescribeTrainingJobResponse {
     StoppingCondition: StoppingCondition,
     TrainingJobArn: TrainingJobArn,
     TrainingJobName: TrainingJobName,
-    TrainingJobStatus: TrainingJobStatus,
-    AutoMLJobArn: AutoMLJobArn = null,
-    BillableTimeInSeconds: Int | Double = null,
-    CheckpointConfig: CheckpointConfig = null,
-    DebugHookConfig: DebugHookConfig = null,
-    DebugRuleConfigurations: DebugRuleConfigurations = null,
-    DebugRuleEvaluationStatuses: DebugRuleEvaluationStatuses = null,
-    EnableInterContainerTrafficEncryption: js.UndefOr[scala.Boolean] = js.undefined,
-    EnableManagedSpotTraining: js.UndefOr[scala.Boolean] = js.undefined,
-    EnableNetworkIsolation: js.UndefOr[scala.Boolean] = js.undefined,
-    ExperimentConfig: ExperimentConfig = null,
-    FailureReason: FailureReason = null,
-    FinalMetricDataList: FinalMetricDataList = null,
-    HyperParameters: HyperParameters = null,
-    InputDataConfig: InputDataConfig = null,
-    LabelingJobArn: LabelingJobArn = null,
-    LastModifiedTime: js.Date = null,
-    OutputDataConfig: OutputDataConfig = null,
-    RoleArn: RoleArn = null,
-    SecondaryStatusTransitions: SecondaryStatusTransitions = null,
-    TensorBoardOutputConfig: TensorBoardOutputConfig = null,
-    TrainingEndTime: js.Date = null,
-    TrainingStartTime: js.Date = null,
-    TrainingTimeInSeconds: Int | Double = null,
-    TuningJobArn: HyperParameterTuningJobArn = null,
-    VpcConfig: VpcConfig = null
+    TrainingJobStatus: TrainingJobStatus
   ): DescribeTrainingJobResponse = {
     val __obj = js.Dynamic.literal(AlgorithmSpecification = AlgorithmSpecification.asInstanceOf[js.Any], CreationTime = CreationTime.asInstanceOf[js.Any], ModelArtifacts = ModelArtifacts.asInstanceOf[js.Any], ResourceConfig = ResourceConfig.asInstanceOf[js.Any], SecondaryStatus = SecondaryStatus.asInstanceOf[js.Any], StoppingCondition = StoppingCondition.asInstanceOf[js.Any], TrainingJobArn = TrainingJobArn.asInstanceOf[js.Any], TrainingJobName = TrainingJobName.asInstanceOf[js.Any], TrainingJobStatus = TrainingJobStatus.asInstanceOf[js.Any])
-    if (AutoMLJobArn != null) __obj.updateDynamic("AutoMLJobArn")(AutoMLJobArn.asInstanceOf[js.Any])
-    if (BillableTimeInSeconds != null) __obj.updateDynamic("BillableTimeInSeconds")(BillableTimeInSeconds.asInstanceOf[js.Any])
-    if (CheckpointConfig != null) __obj.updateDynamic("CheckpointConfig")(CheckpointConfig.asInstanceOf[js.Any])
-    if (DebugHookConfig != null) __obj.updateDynamic("DebugHookConfig")(DebugHookConfig.asInstanceOf[js.Any])
-    if (DebugRuleConfigurations != null) __obj.updateDynamic("DebugRuleConfigurations")(DebugRuleConfigurations.asInstanceOf[js.Any])
-    if (DebugRuleEvaluationStatuses != null) __obj.updateDynamic("DebugRuleEvaluationStatuses")(DebugRuleEvaluationStatuses.asInstanceOf[js.Any])
-    if (!js.isUndefined(EnableInterContainerTrafficEncryption)) __obj.updateDynamic("EnableInterContainerTrafficEncryption")(EnableInterContainerTrafficEncryption.asInstanceOf[js.Any])
-    if (!js.isUndefined(EnableManagedSpotTraining)) __obj.updateDynamic("EnableManagedSpotTraining")(EnableManagedSpotTraining.asInstanceOf[js.Any])
-    if (!js.isUndefined(EnableNetworkIsolation)) __obj.updateDynamic("EnableNetworkIsolation")(EnableNetworkIsolation.asInstanceOf[js.Any])
-    if (ExperimentConfig != null) __obj.updateDynamic("ExperimentConfig")(ExperimentConfig.asInstanceOf[js.Any])
-    if (FailureReason != null) __obj.updateDynamic("FailureReason")(FailureReason.asInstanceOf[js.Any])
-    if (FinalMetricDataList != null) __obj.updateDynamic("FinalMetricDataList")(FinalMetricDataList.asInstanceOf[js.Any])
-    if (HyperParameters != null) __obj.updateDynamic("HyperParameters")(HyperParameters.asInstanceOf[js.Any])
-    if (InputDataConfig != null) __obj.updateDynamic("InputDataConfig")(InputDataConfig.asInstanceOf[js.Any])
-    if (LabelingJobArn != null) __obj.updateDynamic("LabelingJobArn")(LabelingJobArn.asInstanceOf[js.Any])
-    if (LastModifiedTime != null) __obj.updateDynamic("LastModifiedTime")(LastModifiedTime.asInstanceOf[js.Any])
-    if (OutputDataConfig != null) __obj.updateDynamic("OutputDataConfig")(OutputDataConfig.asInstanceOf[js.Any])
-    if (RoleArn != null) __obj.updateDynamic("RoleArn")(RoleArn.asInstanceOf[js.Any])
-    if (SecondaryStatusTransitions != null) __obj.updateDynamic("SecondaryStatusTransitions")(SecondaryStatusTransitions.asInstanceOf[js.Any])
-    if (TensorBoardOutputConfig != null) __obj.updateDynamic("TensorBoardOutputConfig")(TensorBoardOutputConfig.asInstanceOf[js.Any])
-    if (TrainingEndTime != null) __obj.updateDynamic("TrainingEndTime")(TrainingEndTime.asInstanceOf[js.Any])
-    if (TrainingStartTime != null) __obj.updateDynamic("TrainingStartTime")(TrainingStartTime.asInstanceOf[js.Any])
-    if (TrainingTimeInSeconds != null) __obj.updateDynamic("TrainingTimeInSeconds")(TrainingTimeInSeconds.asInstanceOf[js.Any])
-    if (TuningJobArn != null) __obj.updateDynamic("TuningJobArn")(TuningJobArn.asInstanceOf[js.Any])
-    if (VpcConfig != null) __obj.updateDynamic("VpcConfig")(VpcConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTrainingJobResponse]
   }
+  @scala.inline
+  implicit class DescribeTrainingJobResponseOps[Self <: DescribeTrainingJobResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlgorithmSpecification(value: AlgorithmSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlgorithmSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModelArtifacts(value: ModelArtifacts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelArtifacts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceConfig(value: ResourceConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSecondaryStatus(value: SecondaryStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondaryStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStoppingCondition(value: StoppingCondition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StoppingCondition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrainingJobArn(value: TrainingJobArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingJobArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrainingJobName(value: TrainingJobName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingJobName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrainingJobStatus(value: TrainingJobStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingJobStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoMLJobArn(value: AutoMLJobArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoMLJobArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoMLJobArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoMLJobArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBillableTimeInSeconds(value: BillableTimeInSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillableTimeInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBillableTimeInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillableTimeInSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckpointConfig(value: CheckpointConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CheckpointConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckpointConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CheckpointConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugHookConfig(value: DebugHookConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DebugHookConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugHookConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DebugHookConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugRuleConfigurations(value: DebugRuleConfigurations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DebugRuleConfigurations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugRuleConfigurations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DebugRuleConfigurations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugRuleEvaluationStatuses(value: DebugRuleEvaluationStatuses): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DebugRuleEvaluationStatuses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugRuleEvaluationStatuses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DebugRuleEvaluationStatuses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableInterContainerTrafficEncryption(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableInterContainerTrafficEncryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableInterContainerTrafficEncryption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableInterContainerTrafficEncryption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableManagedSpotTraining(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableManagedSpotTraining")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableManagedSpotTraining: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableManagedSpotTraining")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableNetworkIsolation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableNetworkIsolation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableNetworkIsolation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableNetworkIsolation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExperimentConfig(value: ExperimentConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExperimentConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExperimentConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExperimentConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureReason(value: FailureReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFinalMetricDataList(value: FinalMetricDataList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalMetricDataList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFinalMetricDataList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalMetricDataList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHyperParameters(value: HyperParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HyperParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHyperParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HyperParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputDataConfig(value: InputDataConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputDataConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputDataConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputDataConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelingJobArn(value: LabelingJobArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelingJobArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputDataConfig(value: OutputDataConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputDataConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputDataConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputDataConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: RoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecondaryStatusTransitions(value: SecondaryStatusTransitions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondaryStatusTransitions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecondaryStatusTransitions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondaryStatusTransitions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTensorBoardOutputConfig(value: TensorBoardOutputConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TensorBoardOutputConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTensorBoardOutputConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TensorBoardOutputConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrainingEndTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingEndTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrainingEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingEndTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrainingStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrainingStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingStartTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrainingTimeInSeconds(value: TrainingTimeInSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingTimeInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrainingTimeInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingTimeInSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTuningJobArn(value: HyperParameterTuningJobArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TuningJobArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTuningJobArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TuningJobArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcConfig(value: VpcConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

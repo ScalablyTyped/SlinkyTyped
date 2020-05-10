@@ -23,14 +23,41 @@ trait ServiceDnsConfig extends js.Object {
 
 object ServiceDnsConfig {
   @scala.inline
-  def apply(
-    dnsRecords: Input[js.Array[Input[ServiceDnsConfigDnsRecord]]],
-    namespaceId: Input[String],
-    routingPolicy: Input[String] = null
-  ): ServiceDnsConfig = {
+  def apply(dnsRecords: Input[js.Array[Input[ServiceDnsConfigDnsRecord]]], namespaceId: Input[String]): ServiceDnsConfig = {
     val __obj = js.Dynamic.literal(dnsRecords = dnsRecords.asInstanceOf[js.Any], namespaceId = namespaceId.asInstanceOf[js.Any])
-    if (routingPolicy != null) __obj.updateDynamic("routingPolicy")(routingPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceDnsConfig]
   }
+  @scala.inline
+  implicit class ServiceDnsConfigOps[Self <: ServiceDnsConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDnsRecords(value: Input[js.Array[Input[ServiceDnsConfigDnsRecord]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsRecords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNamespaceId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoutingPolicy(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routingPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoutingPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routingPolicy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

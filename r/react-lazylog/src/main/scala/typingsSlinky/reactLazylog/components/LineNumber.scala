@@ -1,33 +1,38 @@
 package typingsSlinky.reactLazylog.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.raw.HTMLAnchorElement
+import slinky.web.SyntheticMouseEvent
 import slinky.web.html.a.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactLazylog.lineNumberMod.LineNumberProps
 import typingsSlinky.reactLazylog.lineNumberMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LineNumber
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object LineNumber {
   @JSImport("react-lazylog/build/LineNumber", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: onClick, style */
-  def apply(
-    number: Double,
-    highlight: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(number = number.asInstanceOf[js.Any])
-    if (!js.isUndefined(highlight)) __obj.updateDynamic("highlight")(highlight.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def highlight(value: Boolean): this.type = set("highlight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: SyntheticMouseEvent[HTMLAnchorElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = LineNumberProps
+  
+  def withProps(p: LineNumberProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(number: Double): Builder = {
+    val __props = js.Dynamic.literal(number = number.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[LineNumberProps]))
+  }
 }
 

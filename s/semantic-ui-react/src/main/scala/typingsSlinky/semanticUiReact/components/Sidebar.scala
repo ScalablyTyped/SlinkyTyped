@@ -1,13 +1,11 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.`scale down`
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.`slide along`
@@ -29,44 +27,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Sidebar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Sidebar {
   @JSImport("semantic-ui-react/dist/commonjs/modules/Sidebar", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    animation: overlay | push | (`scale down`) | uncover | (`slide out`) | (`slide along`) = null,
-    as: js.Any = null,
-    content: SemanticShorthandContent = null,
-    direction: top | right | bottom | left = null,
-    onHidden: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit = null,
-    onHide: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit = null,
-    onShow: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit = null,
-    onVisible: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit = null,
-    target: js.Object | ReactRef[HTMLElement] = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    width: (`very thin`) | thin | wide | (`very wide`) = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (onHidden != null) __obj.updateDynamic("onHidden")(js.Any.fromFunction2(onHidden))
-    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction2(onHide))
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction2(onShow))
-    if (onVisible != null) __obj.updateDynamic("onVisible")(js.Any.fromFunction2(onVisible))
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def animation(value: overlay | push | (`scale down`) | uncover | (`slide out`) | (`slide along`)): this.type = set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def direction(value: top | right | bottom | left): this.type = set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onHidden(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit): this.type = set("onHidden", js.Any.fromFunction2(value))
+    @scala.inline
+    def onHide(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit): this.type = set("onHide", js.Any.fromFunction2(value))
+    @scala.inline
+    def onShow(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit): this.type = set("onShow", js.Any.fromFunction2(value))
+    @scala.inline
+    def onVisible(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit): this.type = set("onVisible", js.Any.fromFunction2(value))
+    @scala.inline
+    def targetRefObject(value: ReactRef[HTMLElement]): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def target(value: js.Object | ReactRef[HTMLElement]): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: (`very thin`) | thin | wide | (`very wide`)): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.semanticUiReact.sidebarMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SidebarProps
+  
+  def withProps(p: SidebarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Sidebar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

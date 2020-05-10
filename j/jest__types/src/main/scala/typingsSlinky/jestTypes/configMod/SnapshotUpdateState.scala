@@ -13,12 +13,10 @@ trait SnapshotUpdateState extends js.Object
 
 object SnapshotUpdateState {
   @scala.inline
-  def all: typingsSlinky.jestTypes.jestTypesStrings.all = this.cast("all")
+  def all: typingsSlinky.jestTypes.jestTypesStrings.all = "all".asInstanceOf[typingsSlinky.jestTypes.jestTypesStrings.all]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `new`: typingsSlinky.jestTypes.jestTypesStrings.`new` = "new".asInstanceOf[typingsSlinky.jestTypes.jestTypesStrings.`new`]
   @scala.inline
-  def `new`: typingsSlinky.jestTypes.jestTypesStrings.`new` = this.cast("new")
-  @scala.inline
-  def none: typingsSlinky.jestTypes.jestTypesStrings.none = this.cast("none")
+  def none: typingsSlinky.jestTypes.jestTypesStrings.none = "none".asInstanceOf[typingsSlinky.jestTypes.jestTypesStrings.none]
 }
 

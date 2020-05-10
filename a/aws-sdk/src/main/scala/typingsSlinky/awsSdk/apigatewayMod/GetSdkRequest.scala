@@ -26,10 +26,47 @@ trait GetSdkRequest extends js.Object {
 
 object GetSdkRequest {
   @scala.inline
-  def apply(restApiId: String, sdkType: String, stageName: String, parameters: MapOfStringToString = null): GetSdkRequest = {
+  def apply(restApiId: String, sdkType: String, stageName: String): GetSdkRequest = {
     val __obj = js.Dynamic.literal(restApiId = restApiId.asInstanceOf[js.Any], sdkType = sdkType.asInstanceOf[js.Any], stageName = stageName.asInstanceOf[js.Any])
-    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSdkRequest]
   }
+  @scala.inline
+  implicit class GetSdkRequestOps[Self <: GetSdkRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRestApiId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restApiId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSdkType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sdkType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStageName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParameters(value: MapOfStringToString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

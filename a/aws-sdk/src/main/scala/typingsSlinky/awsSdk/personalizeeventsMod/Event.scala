@@ -26,15 +26,47 @@ trait Event extends js.Object {
 
 object Event {
   @scala.inline
-  def apply(
-    eventType: StringType,
-    properties: EventPropertiesJSON,
-    sentAt: js.Date,
-    eventId: StringType = null
-  ): Event = {
+  def apply(eventType: StringType, properties: EventPropertiesJSON, sentAt: js.Date): Event = {
     val __obj = js.Dynamic.literal(eventType = eventType.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], sentAt = sentAt.asInstanceOf[js.Any])
-    if (eventId != null) __obj.updateDynamic("eventId")(eventId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Event]
   }
+  @scala.inline
+  implicit class EventOps[Self <: Event] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventType(value: StringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProperties(value: EventPropertiesJSON): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSentAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sentAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEventId(value: StringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

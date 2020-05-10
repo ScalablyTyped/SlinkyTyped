@@ -7,108 +7,200 @@ import scala.scalajs.js.annotation._
 /**
   * Prescription for vision correction products for a patient
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait VisionPrescription extends DomainResource {
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ @js.native
+trait VisionPrescription extends DomainResource {
   /**
     * Contains extended information for property 'dateWritten'.
     */
-  var _dateWritten: js.UndefOr[Element] = js.undefined
+  var _dateWritten: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'status'.
     */
-  var _status: js.UndefOr[Element] = js.undefined
+  var _status: js.UndefOr[Element] = js.native
   /**
     * When prescription was authorized
     */
-  var dateWritten: js.UndefOr[dateTime] = js.undefined
+  var dateWritten: js.UndefOr[dateTime] = js.native
   /**
     * Vision supply authorization
     */
-  var dispense: js.UndefOr[js.Array[VisionPrescriptionDispense]] = js.undefined
+  var dispense: js.UndefOr[js.Array[VisionPrescriptionDispense]] = js.native
   /**
     * Created during encounter / admission / stay
     */
-  var encounter: js.UndefOr[Reference] = js.undefined
+  var encounter: js.UndefOr[Reference] = js.native
   /**
     * Business identifier
     */
-  var identifier: js.UndefOr[js.Array[Identifier]] = js.undefined
+  var identifier: js.UndefOr[js.Array[Identifier]] = js.native
   /**
     * Who prescription is for
     */
-  var patient: js.UndefOr[Reference] = js.undefined
+  var patient: js.UndefOr[Reference] = js.native
   /**
     * Who authorizes the vision product
     */
-  var prescriber: js.UndefOr[Reference] = js.undefined
+  var prescriber: js.UndefOr[Reference] = js.native
   /**
     * Reason or indication for writing the prescription
     */
-  var reasonCodeableConcept: js.UndefOr[CodeableConcept] = js.undefined
+  var reasonCodeableConcept: js.UndefOr[CodeableConcept] = js.native
   /**
     * Reason or indication for writing the prescription
     */
-  var reasonReference: js.UndefOr[Reference] = js.undefined
+  var reasonReference: js.UndefOr[Reference] = js.native
   /**
     * active | cancelled | draft | entered-in-error
     */
-  var status: js.UndefOr[code] = js.undefined
+  var status: js.UndefOr[code] = js.native
 }
 
 object VisionPrescription {
   @scala.inline
-  def apply(
-    _dateWritten: Element = null,
-    _id: Element = null,
-    _implicitRules: Element = null,
-    _language: Element = null,
-    _resourceType: Element = null,
-    _status: Element = null,
-    contained: js.Array[Resource] = null,
-    dateWritten: dateTime = null,
-    dispense: js.Array[VisionPrescriptionDispense] = null,
-    encounter: Reference = null,
-    extension: js.Array[Extension] = null,
-    id: id = null,
-    identifier: js.Array[Identifier] = null,
-    implicitRules: uri = null,
-    language: code = null,
-    meta: Meta = null,
-    modifierExtension: js.Array[Extension] = null,
-    patient: Reference = null,
-    prescriber: Reference = null,
-    reasonCodeableConcept: CodeableConcept = null,
-    reasonReference: Reference = null,
-    resourceType: code = null,
-    status: code = null,
-    text: Narrative = null
-  ): VisionPrescription = {
+  def apply(): VisionPrescription = {
     val __obj = js.Dynamic.literal()
-    if (_dateWritten != null) __obj.updateDynamic("_dateWritten")(_dateWritten.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_implicitRules != null) __obj.updateDynamic("_implicitRules")(_implicitRules.asInstanceOf[js.Any])
-    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
-    if (_resourceType != null) __obj.updateDynamic("_resourceType")(_resourceType.asInstanceOf[js.Any])
-    if (_status != null) __obj.updateDynamic("_status")(_status.asInstanceOf[js.Any])
-    if (contained != null) __obj.updateDynamic("contained")(contained.asInstanceOf[js.Any])
-    if (dateWritten != null) __obj.updateDynamic("dateWritten")(dateWritten.asInstanceOf[js.Any])
-    if (dispense != null) __obj.updateDynamic("dispense")(dispense.asInstanceOf[js.Any])
-    if (encounter != null) __obj.updateDynamic("encounter")(encounter.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
-    if (implicitRules != null) __obj.updateDynamic("implicitRules")(implicitRules.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (patient != null) __obj.updateDynamic("patient")(patient.asInstanceOf[js.Any])
-    if (prescriber != null) __obj.updateDynamic("prescriber")(prescriber.asInstanceOf[js.Any])
-    if (reasonCodeableConcept != null) __obj.updateDynamic("reasonCodeableConcept")(reasonCodeableConcept.asInstanceOf[js.Any])
-    if (reasonReference != null) __obj.updateDynamic("reasonReference")(reasonReference.asInstanceOf[js.Any])
-    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisionPrescription]
   }
+  @scala.inline
+  implicit class VisionPrescriptionOps[Self <: VisionPrescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_dateWritten(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_dateWritten")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_dateWritten: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_dateWritten")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_status(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_status: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateWritten(value: dateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateWritten")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateWritten: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateWritten")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDispense(value: js.Array[VisionPrescriptionDispense]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispense")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDispense: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispense")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncounter(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encounter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncounter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encounter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentifier(value: js.Array[Identifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatient(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrescriber(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prescriber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrescriber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prescriber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReasonCodeableConcept(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonCodeableConcept")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReasonCodeableConcept: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonCodeableConcept")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReasonReference(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReasonReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

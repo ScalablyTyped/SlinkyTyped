@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCamelcase extends js.Object {
-  var camelcase: js.UndefOr[Boolean] = js.undefined
+  var camelcase: js.UndefOr[Boolean] = js.native
 }
 
 object AnonCamelcase {
   @scala.inline
-  def apply(camelcase: js.UndefOr[Boolean] = js.undefined): AnonCamelcase = {
+  def apply(): AnonCamelcase = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(camelcase)) __obj.updateDynamic("camelcase")(camelcase.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCamelcase]
   }
+  @scala.inline
+  implicit class AnonCamelcaseOps[Self <: AnonCamelcase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCamelcase(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("camelcase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCamelcase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("camelcase")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

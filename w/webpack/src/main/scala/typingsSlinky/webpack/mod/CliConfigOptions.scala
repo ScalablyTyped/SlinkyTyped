@@ -7,36 +7,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CliConfigOptions extends js.Object {
-  var config: js.UndefOr[String] = js.undefined
-  var `config-name`: js.UndefOr[String] = js.undefined
-  var `config-register`: js.UndefOr[String] = js.undefined
-  var configName: js.UndefOr[String] = js.undefined
-  var configRegister: js.UndefOr[String] = js.undefined
-  var env: js.UndefOr[String] = js.undefined
-  var mode: js.UndefOr[development | production | none] = js.undefined
+  var config: js.UndefOr[String] = js.native
+  var `config-name`: js.UndefOr[String] = js.native
+  var `config-register`: js.UndefOr[String] = js.native
+  var configName: js.UndefOr[String] = js.native
+  var configRegister: js.UndefOr[String] = js.native
+  var env: js.UndefOr[String] = js.native
+  var mode: js.UndefOr[development | production | none] = js.native
 }
 
 object CliConfigOptions {
   @scala.inline
-  def apply(
-    config: String = null,
-    `config-name`: String = null,
-    `config-register`: String = null,
-    configName: String = null,
-    configRegister: String = null,
-    env: String = null,
-    mode: development | production | none = null
-  ): CliConfigOptions = {
+  def apply(): CliConfigOptions = {
     val __obj = js.Dynamic.literal()
-    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
-    if (`config-name` != null) __obj.updateDynamic("config-name")(`config-name`.asInstanceOf[js.Any])
-    if (`config-register` != null) __obj.updateDynamic("config-register")(`config-register`.asInstanceOf[js.Any])
-    if (configName != null) __obj.updateDynamic("configName")(configName.asInstanceOf[js.Any])
-    if (configRegister != null) __obj.updateDynamic("configRegister")(configRegister.asInstanceOf[js.Any])
-    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
     __obj.asInstanceOf[CliConfigOptions]
   }
+  @scala.inline
+  implicit class CliConfigOptionsOps[Self <: CliConfigOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfig(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withConfig-name`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config-name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutConfig-name`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config-name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withConfig-register`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config-register")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutConfig-register`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config-register")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigRegister(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configRegister")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigRegister: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configRegister")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnv(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnv: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: development | production | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

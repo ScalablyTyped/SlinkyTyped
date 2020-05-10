@@ -5,6 +5,7 @@ import typingsSlinky.pulumiAws.outputMod.msk.ClusterBrokerNodeGroupInfo
 import typingsSlinky.pulumiAws.outputMod.msk.ClusterClientAuthentication
 import typingsSlinky.pulumiAws.outputMod.msk.ClusterConfigurationInfo
 import typingsSlinky.pulumiAws.outputMod.msk.ClusterEncryptionInfo
+import typingsSlinky.pulumiAws.outputMod.msk.ClusterOpenMonitoring
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -76,11 +77,15 @@ class Cluster protected () extends CustomResource {
     */
   val numberOfBrokerNodes: Output_[Double] = js.native
   /**
+    * Configuration block for JMX and Node monitoring for the MSK cluster. See below.
+    */
+  val openMonitoring: Output_[js.UndefOr[ClusterOpenMonitoring]] = js.native
+  /**
     * A mapping of tags to assign to the resource
     */
   val tags: Output_[js.UndefOr[StringDictionary[_]]] = js.native
   /**
-    * A comma separated list of one or more IP:port pairs to use to connect to the Apache Zookeeper cluster.
+    * A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster.
     */
   val zookeeperConnectString: Output_[String] = js.native
 }

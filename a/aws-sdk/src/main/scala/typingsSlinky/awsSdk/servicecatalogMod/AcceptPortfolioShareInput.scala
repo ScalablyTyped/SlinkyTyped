@@ -22,15 +22,47 @@ trait AcceptPortfolioShareInput extends js.Object {
 
 object AcceptPortfolioShareInput {
   @scala.inline
-  def apply(
-    PortfolioId: Id,
-    AcceptLanguage: AcceptLanguage = null,
-    PortfolioShareType: PortfolioShareType = null
-  ): AcceptPortfolioShareInput = {
+  def apply(PortfolioId: Id): AcceptPortfolioShareInput = {
     val __obj = js.Dynamic.literal(PortfolioId = PortfolioId.asInstanceOf[js.Any])
-    if (AcceptLanguage != null) __obj.updateDynamic("AcceptLanguage")(AcceptLanguage.asInstanceOf[js.Any])
-    if (PortfolioShareType != null) __obj.updateDynamic("PortfolioShareType")(PortfolioShareType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AcceptPortfolioShareInput]
   }
+  @scala.inline
+  implicit class AcceptPortfolioShareInputOps[Self <: AcceptPortfolioShareInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPortfolioId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortfolioId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAcceptLanguage(value: AcceptLanguage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceptLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPortfolioShareType(value: PortfolioShareType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortfolioShareType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPortfolioShareType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortfolioShareType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

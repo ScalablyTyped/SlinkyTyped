@@ -5,16 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OnMatrixChangedListener extends js.Object {
-  def onMatrixChanged(rect: RectF): Unit
+  def onMatrixChanged(rect: RectF): Unit = js.native
 }
 
 object OnMatrixChangedListener {
   @scala.inline
   def apply(onMatrixChanged: RectF => Unit): OnMatrixChangedListener = {
     val __obj = js.Dynamic.literal(onMatrixChanged = js.Any.fromFunction1(onMatrixChanged))
-  
     __obj.asInstanceOf[OnMatrixChangedListener]
   }
+  @scala.inline
+  implicit class OnMatrixChangedListenerOps[Self <: OnMatrixChangedListener] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnMatrixChanged(value: RectF => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMatrixChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

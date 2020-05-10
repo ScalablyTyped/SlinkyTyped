@@ -42,25 +42,107 @@ trait UpdateClusterRequest extends js.Object {
 
 object UpdateClusterRequest {
   @scala.inline
-  def apply(
-    ClusterId: ClusterId,
-    AddressId: AddressId = null,
-    Description: String = null,
-    ForwardingAddressId: AddressId = null,
-    Notification: Notification = null,
-    Resources: JobResource = null,
-    RoleARN: RoleARN = null,
-    ShippingOption: ShippingOption = null
-  ): UpdateClusterRequest = {
+  def apply(ClusterId: ClusterId): UpdateClusterRequest = {
     val __obj = js.Dynamic.literal(ClusterId = ClusterId.asInstanceOf[js.Any])
-    if (AddressId != null) __obj.updateDynamic("AddressId")(AddressId.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (ForwardingAddressId != null) __obj.updateDynamic("ForwardingAddressId")(ForwardingAddressId.asInstanceOf[js.Any])
-    if (Notification != null) __obj.updateDynamic("Notification")(Notification.asInstanceOf[js.Any])
-    if (Resources != null) __obj.updateDynamic("Resources")(Resources.asInstanceOf[js.Any])
-    if (RoleARN != null) __obj.updateDynamic("RoleARN")(RoleARN.asInstanceOf[js.Any])
-    if (ShippingOption != null) __obj.updateDynamic("ShippingOption")(ShippingOption.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateClusterRequest]
   }
+  @scala.inline
+  implicit class UpdateClusterRequestOps[Self <: UpdateClusterRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterId(value: ClusterId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddressId(value: AddressId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddressId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddressId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddressId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForwardingAddressId(value: AddressId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForwardingAddressId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForwardingAddressId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForwardingAddressId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotification(value: Notification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Notification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Notification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResources(value: JobResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Resources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Resources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleARN(value: RoleARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShippingOption(value: ShippingOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShippingOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShippingOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShippingOption")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

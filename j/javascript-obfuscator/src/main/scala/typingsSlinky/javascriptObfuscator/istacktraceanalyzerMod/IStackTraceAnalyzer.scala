@@ -6,6 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IStackTraceAnalyzer extends IAnalyzer[IStackTraceData]
 
 object IStackTraceAnalyzer {
@@ -14,7 +15,6 @@ object IStackTraceAnalyzer {
     analyze: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ESTree.Program */ js.Any => js.Array[IStackTraceData]
   ): IStackTraceAnalyzer = {
     val __obj = js.Dynamic.literal(analyze = js.Any.fromFunction1(analyze))
-  
     __obj.asInstanceOf[IStackTraceAnalyzer]
   }
 }

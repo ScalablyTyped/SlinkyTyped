@@ -7,49 +7,173 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HeatmapOptions extends js.Object {
-  var blur: js.UndefOr[Double] = js.undefined
-  var extent: js.UndefOr[Extent_] = js.undefined
-  var gradient: js.UndefOr[js.Array[String]] = js.undefined
-  var maxResolution: js.UndefOr[Double] = js.undefined
-  var minResolution: js.UndefOr[Double] = js.undefined
-  var opacity: js.UndefOr[Double] = js.undefined
-  var radius: js.UndefOr[Double] = js.undefined
-  var shadow: js.UndefOr[Double] = js.undefined
-  var source: Vector
-  var visible: js.UndefOr[Boolean] = js.undefined
-  var weight: String | (js.Function1[/* feature */ Feature, Double])
-  var zIndex: js.UndefOr[Double] = js.undefined
+  var blur: js.UndefOr[Double] = js.native
+  var extent: js.UndefOr[Extent_] = js.native
+  var gradient: js.UndefOr[js.Array[String]] = js.native
+  var maxResolution: js.UndefOr[Double] = js.native
+  var minResolution: js.UndefOr[Double] = js.native
+  var opacity: js.UndefOr[Double] = js.native
+  var radius: js.UndefOr[Double] = js.native
+  var shadow: js.UndefOr[Double] = js.native
+  var source: Vector = js.native
+  var visible: js.UndefOr[Boolean] = js.native
+  var weight: String | (js.Function1[/* feature */ Feature, Double]) = js.native
+  var zIndex: js.UndefOr[Double] = js.native
 }
 
 object HeatmapOptions {
   @scala.inline
-  def apply(
-    source: Vector,
-    weight: String | (js.Function1[/* feature */ Feature, Double]),
-    blur: Int | Double = null,
-    extent: Extent_ = null,
-    gradient: js.Array[String] = null,
-    maxResolution: Int | Double = null,
-    minResolution: Int | Double = null,
-    opacity: Int | Double = null,
-    radius: Int | Double = null,
-    shadow: Int | Double = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    zIndex: Int | Double = null
-  ): HeatmapOptions = {
+  def apply(source: Vector, weight: String | (js.Function1[/* feature */ Feature, Double])): HeatmapOptions = {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any], weight = weight.asInstanceOf[js.Any])
-    if (blur != null) __obj.updateDynamic("blur")(blur.asInstanceOf[js.Any])
-    if (extent != null) __obj.updateDynamic("extent")(extent.asInstanceOf[js.Any])
-    if (gradient != null) __obj.updateDynamic("gradient")(gradient.asInstanceOf[js.Any])
-    if (maxResolution != null) __obj.updateDynamic("maxResolution")(maxResolution.asInstanceOf[js.Any])
-    if (minResolution != null) __obj.updateDynamic("minResolution")(minResolution.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
-    if (shadow != null) __obj.updateDynamic("shadow")(shadow.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeatmapOptions]
   }
+  @scala.inline
+  implicit class HeatmapOptionsOps[Self <: HeatmapOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSource(value: Vector): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWeightFunction1(value: /* feature */ Feature => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWeight(value: String | (js.Function1[/* feature */ Feature, Double])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlur(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blur")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtent(value: Extent_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGradient(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gradient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGradient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gradient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResolution(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResolution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResolution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinResolution(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minResolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinResolution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minResolution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

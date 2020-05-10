@@ -22,10 +22,41 @@ trait ExecuteProvisionedProductPlanInput extends js.Object {
 
 object ExecuteProvisionedProductPlanInput {
   @scala.inline
-  def apply(IdempotencyToken: IdempotencyToken, PlanId: Id, AcceptLanguage: AcceptLanguage = null): ExecuteProvisionedProductPlanInput = {
+  def apply(IdempotencyToken: IdempotencyToken, PlanId: Id): ExecuteProvisionedProductPlanInput = {
     val __obj = js.Dynamic.literal(IdempotencyToken = IdempotencyToken.asInstanceOf[js.Any], PlanId = PlanId.asInstanceOf[js.Any])
-    if (AcceptLanguage != null) __obj.updateDynamic("AcceptLanguage")(AcceptLanguage.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecuteProvisionedProductPlanInput]
   }
+  @scala.inline
+  implicit class ExecuteProvisionedProductPlanInputOps[Self <: ExecuteProvisionedProductPlanInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIdempotencyToken(value: IdempotencyToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdempotencyToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlanId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlanId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAcceptLanguage(value: AcceptLanguage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceptLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

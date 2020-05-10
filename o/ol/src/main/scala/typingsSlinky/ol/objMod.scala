@@ -1,5 +1,6 @@
 package typingsSlinky.ol
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +12,7 @@ object objMod extends js.Object {
   def getValues[V](
     `object`: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in string | number ]: V}
-    */ typingsSlinky.ol.olStrings.getValues with js.Any
+    */ typingsSlinky.ol.olStrings.getValues with TopLevel[js.Any]
   ): js.Array[V] = js.native
   def isEmpty(`object`: js.Any): Boolean = js.native
 }

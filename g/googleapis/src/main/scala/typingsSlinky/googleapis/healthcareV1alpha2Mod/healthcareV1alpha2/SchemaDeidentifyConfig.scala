@@ -34,18 +34,65 @@ trait SchemaDeidentifyConfig extends js.Object {
 
 object SchemaDeidentifyConfig {
   @scala.inline
-  def apply(
-    dicom: SchemaDicomConfig = null,
-    fhir: SchemaFhirConfig = null,
-    image: SchemaImageConfig = null,
-    text: SchemaTextConfig = null
-  ): SchemaDeidentifyConfig = {
+  def apply(): SchemaDeidentifyConfig = {
     val __obj = js.Dynamic.literal()
-    if (dicom != null) __obj.updateDynamic("dicom")(dicom.asInstanceOf[js.Any])
-    if (fhir != null) __obj.updateDynamic("fhir")(fhir.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeidentifyConfig]
   }
+  @scala.inline
+  implicit class SchemaDeidentifyConfigOps[Self <: SchemaDeidentifyConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDicom(value: SchemaDicomConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dicom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDicom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dicom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFhir(value: SchemaFhirConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fhir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFhir: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fhir")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage(value: SchemaImageConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: SchemaTextConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

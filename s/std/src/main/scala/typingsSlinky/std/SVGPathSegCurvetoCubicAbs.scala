@@ -5,16 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SVGPathSegCurvetoCubicAbs extends SVGPathSeg {
-  var x: Double
-  var x1: Double
-  var x2: Double
-  var y: Double
-  var y1: Double
-  var y2: Double
+  var x: Double = js.native
+  var x1: Double = js.native
+  var x2: Double = js.native
+  var y: Double = js.native
+  var y1: Double = js.native
+  var y2: Double = js.native
 }
 
 @JSGlobal("SVGPathSegCurvetoCubicAbs")
 @js.native
-object SVGPathSegCurvetoCubicAbs extends Instantiable0[SVGPathSegCurvetoCubicAbs]
+object SVGPathSegCurvetoCubicAbs
+  extends Instantiable0[org.scalajs.dom.raw.SVGPathSegCurvetoCubicAbs]
 

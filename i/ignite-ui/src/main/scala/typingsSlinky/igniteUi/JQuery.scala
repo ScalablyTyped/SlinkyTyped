@@ -2319,7 +2319,6 @@ import typingsSlinky.igniteUi.igniteUiStrings.zoomToGeographic
 import typingsSlinky.igniteUi.igniteUiStrings.zoomWindowMinWidth
 import typingsSlinky.igniteUi.igniteUiStrings.zoomWindowMoveDistance
 import typingsSlinky.igniteUi.igniteUiStrings.zoomable
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10564,7 +10563,7 @@ trait JQuery extends js.Object {
   	 *
   	 * @optionValue New value to be set.
   	 */
-  def igDateEditor(optionLiteral: option, optionName: maxValue, optionValue: Date): Unit = js.native
+  def igDateEditor(optionLiteral: option, optionName: maxValue, optionValue: js.Date): Unit = js.native
   /**
   	 * Gets the minimum value which can be entered in editor by user. Date object can be set as value. String value can be passed and the editor will use the javascript Date object constructor to create date object and will use it for the comparison. MVC date format can be used too.
   	 * Note! This option doesn't use the dateInputFormat to extract the date.
@@ -10578,7 +10577,7 @@ trait JQuery extends js.Object {
   	 *
   	 * @optionValue New value to be set.
   	 */
-  def igDateEditor(optionLiteral: option, optionName: minValue, optionValue: Date): Unit = js.native
+  def igDateEditor(optionLiteral: option, optionName: minValue, optionValue: js.Date): Unit = js.native
   /**
   	 * Gets/Sets the representation of null value. In case of default the value for the input is set to null, which makes the input to hold an empty string
   	 *
@@ -10592,7 +10591,7 @@ trait JQuery extends js.Object {
   	 */
   def igDateEditor(optionLiteral: option, optionName: nullValue, optionValue: String): Unit = js.native
   def igDateEditor(optionLiteral: option, optionName: nullValue, optionValue: Double): Unit = js.native
-  def igDateEditor(optionLiteral: option, optionName: nullValue, optionValue: Date): Unit = js.native
+  def igDateEditor(optionLiteral: option, optionName: nullValue, optionValue: js.Date): Unit = js.native
   /**
   	 * This option is inherited from a parent widget and it's not applicable for igDateEditor
   	 */
@@ -10822,7 +10821,7 @@ trait JQuery extends js.Object {
   	 *
   	 * @optionValue New value to be set.
   	 */
-  def igDateEditor(optionLiteral: option, optionName: value, optionValue: Date): Unit = js.native
+  def igDateEditor(optionLiteral: option, optionName: value, optionValue: js.Date): Unit = js.native
   /**
   	 * Gets/Sets how many items should be shown at once.
   	 * Notes:
@@ -11470,7 +11469,7 @@ trait JQuery extends js.Object {
   	 *
   	 * @optionValue New value to be set.
   	 */
-  def igDatePicker(optionLiteral: option, optionName: maxValue, optionValue: Date): Unit = js.native
+  def igDatePicker(optionLiteral: option, optionName: maxValue, optionValue: js.Date): Unit = js.native
   /**
   	 * Gets the minimum value which can be entered in editor by user. Date object can be set as value. String value can be passed and the editor will use the javascript Date object constructor to create date object and will use it for the comparison. MVC date format can be used too.
   	 * Note! This option doesn't use the dateInputFormat to extract the date.
@@ -11484,7 +11483,7 @@ trait JQuery extends js.Object {
   	 *
   	 * @optionValue New value to be set.
   	 */
-  def igDatePicker(optionLiteral: option, optionName: minValue, optionValue: Date): Unit = js.native
+  def igDatePicker(optionLiteral: option, optionName: minValue, optionValue: js.Date): Unit = js.native
   /**
   	 * Gets/Sets the representation of null value. In case of default the value for the input is set to null, which makes the input to hold an empty string
   	 *
@@ -11498,7 +11497,7 @@ trait JQuery extends js.Object {
   	 */
   def igDatePicker(optionLiteral: option, optionName: nullValue, optionValue: String): Unit = js.native
   def igDatePicker(optionLiteral: option, optionName: nullValue, optionValue: Double): Unit = js.native
-  def igDatePicker(optionLiteral: option, optionName: nullValue, optionValue: Date): Unit = js.native
+  def igDatePicker(optionLiteral: option, optionName: nullValue, optionValue: js.Date): Unit = js.native
   /**
   	 * This option is inherited from a parent widget and it's not applicable for igDateEditor
   	 */
@@ -11740,7 +11739,7 @@ trait JQuery extends js.Object {
   	 *
   	 * @optionValue New value to be set.
   	 */
-  def igDatePicker(optionLiteral: option, optionName: value, optionValue: Date): Unit = js.native
+  def igDatePicker(optionLiteral: option, optionName: value, optionValue: js.Date): Unit = js.native
   /**
   	 * Gets/Sets how many items should be shown at once.
   	 * Notes:
@@ -12056,7 +12055,7 @@ trait JQuery extends js.Object {
   	 *
   	 * @optionValue New value to be set.
   	 */
-  def igDialog(optionLiteral: option, optionName: mainElement, optionValue: typingsSlinky.std.Element): Unit = js.native
+  def igDialog(optionLiteral: option, optionName: mainElement, optionValue: Element): Unit = js.native
   /**
   	 * Gets/Sets the maximal height of the dialog in normal state. Note: that option has effect only while resizing the dialog by the end user.
   	 *
@@ -34769,7 +34768,7 @@ trait JQuery extends js.Object {
   	 *
   	 * @optionValue New value to be set.
   	 */
-  def igScheduler(optionLiteral: option, optionName: selectedDate, optionValue: Date): Unit = js.native
+  def igScheduler(optionLiteral: option, optionName: selectedDate, optionValue: js.Date): Unit = js.native
   /**
   	 * Fired after the view is changed, when using the menu buttons.
   	 */
@@ -40963,7 +40962,7 @@ trait JQuery extends js.Object {
   	 *
   	 * @optionValue New value to be set.
   	 */
-  def igTimePicker(optionLiteral: option, optionName: maxValue, optionValue: Date): Unit = js.native
+  def igTimePicker(optionLiteral: option, optionName: maxValue, optionValue: js.Date): Unit = js.native
   /**
   	 * Gets the minimum value which can be entered in editor by user. Date object can be set as value. String value can be passed and the editor will use the javascript Date object constructor to create date object and will use it for the comparison. MVC date format can be used too.
   	 * Note! This option doesn't use the dateInputFormat to extract the date.
@@ -40977,7 +40976,7 @@ trait JQuery extends js.Object {
   	 *
   	 * @optionValue New value to be set.
   	 */
-  def igTimePicker(optionLiteral: option, optionName: minValue, optionValue: Date): Unit = js.native
+  def igTimePicker(optionLiteral: option, optionName: minValue, optionValue: js.Date): Unit = js.native
   /**
   	 * Gets/Sets the representation of null value. In case of default the value for the input is set to null, which makes the input to hold an empty string
   	 *
@@ -40991,7 +40990,7 @@ trait JQuery extends js.Object {
   	 */
   def igTimePicker(optionLiteral: option, optionName: nullValue, optionValue: String): Unit = js.native
   def igTimePicker(optionLiteral: option, optionName: nullValue, optionValue: Double): Unit = js.native
-  def igTimePicker(optionLiteral: option, optionName: nullValue, optionValue: Date): Unit = js.native
+  def igTimePicker(optionLiteral: option, optionName: nullValue, optionValue: js.Date): Unit = js.native
   /**
   	 * This option is inherited from a parent widget and it's not applicable for igDateEditor
   	 */
@@ -41310,7 +41309,7 @@ trait JQuery extends js.Object {
   	 *
   	 * @optionValue New value to be set.
   	 */
-  def igTimePicker(optionLiteral: option, optionName: value, optionValue: Date): Unit = js.native
+  def igTimePicker(optionLiteral: option, optionName: value, optionValue: js.Date): Unit = js.native
   /**
   	 * Gets the number of the items to be shown at once when the drop-down list get opened.
   	 * Notes:
@@ -49624,7 +49623,7 @@ trait JQuery extends js.Object {
   	 *
   	 * @optionValue New value to be set.
   	 */
-  def igValidator(optionLiteral: option, optionName: messageTarget, optionValue: typingsSlinky.std.Element): Unit = js.native
+  def igValidator(optionLiteral: option, optionName: messageTarget, optionValue: Element): Unit = js.native
   /**
   	 * Gets/Sets the options for the [igNotifier](ui.ignotifier#options) used to show error messages.
   	 *

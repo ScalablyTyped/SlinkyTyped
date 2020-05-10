@@ -9,43 +9,44 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait truncateSinglets extends js.Object {
   /**
     *
     */
-  var area: Boolean
+  var area: Boolean = js.native
   /**
     *
     */
-  var base: Boolean
+  var base: Boolean = js.native
   /**
     *
     */
-  var br: Boolean
+  var br: Boolean = js.native
   /**
     *
     */
-  var col: Boolean
+  var col: Boolean = js.native
   /**
     *
     */
-  var hr: Boolean
+  var hr: Boolean = js.native
   /**
     *
     */
-  var img: Boolean
+  var img: Boolean = js.native
   /**
     *
     */
-  var input: Boolean
+  var input: Boolean = js.native
   /**
     *
     */
-  var link: Boolean
+  var link: Boolean = js.native
   /**
     *
     */
-  var param: Boolean
+  var param: Boolean = js.native
 }
 
 object truncateSinglets {
@@ -62,8 +63,69 @@ object truncateSinglets {
     param: Boolean
   ): truncateSinglets = {
     val __obj = js.Dynamic.literal(area = area.asInstanceOf[js.Any], base = base.asInstanceOf[js.Any], br = br.asInstanceOf[js.Any], col = col.asInstanceOf[js.Any], hr = hr.asInstanceOf[js.Any], img = img.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], link = link.asInstanceOf[js.Any], param = param.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[truncateSinglets]
   }
+  @scala.inline
+  implicit class truncateSingletsOps[Self <: truncateSinglets] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArea(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBase(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBr(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("br")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCol(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("col")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHr(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImg(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("img")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInput(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLink(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParam(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("param")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

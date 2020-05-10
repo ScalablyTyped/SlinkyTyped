@@ -11,8 +11,6 @@ import scala.scalajs.js.annotation._
 class Optimization ()
   extends typingsSlinky.webpackChain.mod._Config.TypedChainedMap[Config, js.Any] {
   def concatenateModules(value: Boolean): this.type = js.native
-  /* CompleteClass */
-  override def end(): Config = js.native
   def flagIncludedChunks(value: Boolean): this.type = js.native
   def mergeDuplicateChunks(value: Boolean): this.type = js.native
   def minimize(value: Boolean): this.type = js.native

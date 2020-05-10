@@ -4,28 +4,76 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ProviderStatus extends js.Object {
-  var backgroundModeEnabled: Boolean
-  var gpsAvailable: js.UndefOr[Boolean] = js.undefined
-  var locationServicesEnabled: Boolean
-  var networkAvailable: js.UndefOr[Boolean] = js.undefined
-  var passiveAvailable: js.UndefOr[Boolean] = js.undefined
+  var backgroundModeEnabled: Boolean = js.native
+  var gpsAvailable: js.UndefOr[Boolean] = js.native
+  var locationServicesEnabled: Boolean = js.native
+  var networkAvailable: js.UndefOr[Boolean] = js.native
+  var passiveAvailable: js.UndefOr[Boolean] = js.native
 }
 
 object ProviderStatus {
   @scala.inline
-  def apply(
-    backgroundModeEnabled: Boolean,
-    locationServicesEnabled: Boolean,
-    gpsAvailable: js.UndefOr[Boolean] = js.undefined,
-    networkAvailable: js.UndefOr[Boolean] = js.undefined,
-    passiveAvailable: js.UndefOr[Boolean] = js.undefined
-  ): ProviderStatus = {
+  def apply(backgroundModeEnabled: Boolean, locationServicesEnabled: Boolean): ProviderStatus = {
     val __obj = js.Dynamic.literal(backgroundModeEnabled = backgroundModeEnabled.asInstanceOf[js.Any], locationServicesEnabled = locationServicesEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(gpsAvailable)) __obj.updateDynamic("gpsAvailable")(gpsAvailable.asInstanceOf[js.Any])
-    if (!js.isUndefined(networkAvailable)) __obj.updateDynamic("networkAvailable")(networkAvailable.asInstanceOf[js.Any])
-    if (!js.isUndefined(passiveAvailable)) __obj.updateDynamic("passiveAvailable")(passiveAvailable.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProviderStatus]
   }
+  @scala.inline
+  implicit class ProviderStatusOps[Self <: ProviderStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundModeEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundModeEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocationServicesEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locationServicesEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGpsAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gpsAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGpsAvailable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gpsAvailable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkAvailable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkAvailable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassiveAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passiveAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassiveAvailable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passiveAvailable")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

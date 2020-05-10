@@ -7,75 +7,151 @@ import scala.scalajs.js.annotation._
 /**
   * Details of how medication was taken
   */
+@js.native
 trait MedicationAdministrationDosage extends BackboneElement {
   /**
     * Contains extended information for property 'text'.
     */
-  var _text: js.UndefOr[Element] = js.undefined
+  var _text: js.UndefOr[Element] = js.native
   /**
     * Amount of medication per dose
     */
-  var dose: js.UndefOr[Quantity] = js.undefined
+  var dose: js.UndefOr[Quantity] = js.native
   /**
     * How drug was administered
     */
-  var method: js.UndefOr[CodeableConcept] = js.undefined
+  var method: js.UndefOr[CodeableConcept] = js.native
   /**
     * Dose quantity per unit of time
     */
-  var rateQuantity: js.UndefOr[Quantity] = js.undefined
+  var rateQuantity: js.UndefOr[Quantity] = js.native
   /**
     * Dose quantity per unit of time
     */
-  var rateRatio: js.UndefOr[Ratio] = js.undefined
+  var rateRatio: js.UndefOr[Ratio] = js.native
   /**
     * Path of substance into body
     */
-  var route: js.UndefOr[CodeableConcept] = js.undefined
+  var route: js.UndefOr[CodeableConcept] = js.native
   /**
     * Body site administered to
     */
-  var site: js.UndefOr[CodeableConcept] = js.undefined
+  var site: js.UndefOr[CodeableConcept] = js.native
   /**
     * Free text dosage instructions e.g. SIG
     */
-  var text: js.UndefOr[String] = js.undefined
+  var text: js.UndefOr[String] = js.native
 }
 
 object MedicationAdministrationDosage {
   @scala.inline
-  def apply(
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    _text: Element = null,
-    dose: Quantity = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    id: String = null,
-    method: CodeableConcept = null,
-    modifierExtension: js.Array[Extension] = null,
-    rateQuantity: Quantity = null,
-    rateRatio: Ratio = null,
-    route: CodeableConcept = null,
-    site: CodeableConcept = null,
-    text: String = null
-  ): MedicationAdministrationDosage = {
+  def apply(): MedicationAdministrationDosage = {
     val __obj = js.Dynamic.literal()
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_text != null) __obj.updateDynamic("_text")(_text.asInstanceOf[js.Any])
-    if (dose != null) __obj.updateDynamic("dose")(dose.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (rateQuantity != null) __obj.updateDynamic("rateQuantity")(rateQuantity.asInstanceOf[js.Any])
-    if (rateRatio != null) __obj.updateDynamic("rateRatio")(rateRatio.asInstanceOf[js.Any])
-    if (route != null) __obj.updateDynamic("route")(route.asInstanceOf[js.Any])
-    if (site != null) __obj.updateDynamic("site")(site.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[MedicationAdministrationDosage]
   }
+  @scala.inline
+  implicit class MedicationAdministrationDosageOps[Self <: MedicationAdministrationDosage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_text(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_text: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDose(value: Quantity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRateQuantity(value: Quantity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rateQuantity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRateQuantity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rateQuantity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRateRatio(value: Ratio): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rateRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRateRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rateRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoute(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("route")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("route")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSite(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("site")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("site")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

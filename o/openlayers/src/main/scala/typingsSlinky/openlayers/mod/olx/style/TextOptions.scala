@@ -6,66 +6,244 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TextOptions extends js.Object {
-  var backgroundFill: js.UndefOr[Fill] = js.undefined
-  var backgroundStroke: js.UndefOr[Stroke] = js.undefined
-  var fill: js.UndefOr[Fill] = js.undefined
-  var font: js.UndefOr[String] = js.undefined
-  var maxAngle: js.UndefOr[Boolean] = js.undefined
-  var offsetX: js.UndefOr[Double] = js.undefined
-  var offsetY: js.UndefOr[Double] = js.undefined
-  var overflow: js.UndefOr[Boolean] = js.undefined
-  var padding: js.UndefOr[js.Array[Double]] = js.undefined
-  var placement: js.UndefOr[TextPlacement] = js.undefined
-  var rotateWithView: js.UndefOr[Boolean] = js.undefined
-  var rotation: js.UndefOr[Double] = js.undefined
-  var scale: js.UndefOr[Double] = js.undefined
-  var stroke: js.UndefOr[Stroke] = js.undefined
-  var text: js.UndefOr[String] = js.undefined
-  var textAlign: js.UndefOr[String] = js.undefined
-  var textBaseline: js.UndefOr[String] = js.undefined
+  var backgroundFill: js.UndefOr[Fill] = js.native
+  var backgroundStroke: js.UndefOr[Stroke] = js.native
+  var fill: js.UndefOr[Fill] = js.native
+  var font: js.UndefOr[String] = js.native
+  var maxAngle: js.UndefOr[Boolean] = js.native
+  var offsetX: js.UndefOr[Double] = js.native
+  var offsetY: js.UndefOr[Double] = js.native
+  var overflow: js.UndefOr[Boolean] = js.native
+  var padding: js.UndefOr[js.Array[Double]] = js.native
+  var placement: js.UndefOr[TextPlacement] = js.native
+  var rotateWithView: js.UndefOr[Boolean] = js.native
+  var rotation: js.UndefOr[Double] = js.native
+  var scale: js.UndefOr[Double] = js.native
+  var stroke: js.UndefOr[Stroke] = js.native
+  var text: js.UndefOr[String] = js.native
+  var textAlign: js.UndefOr[String] = js.native
+  var textBaseline: js.UndefOr[String] = js.native
 }
 
 object TextOptions {
   @scala.inline
-  def apply(
-    backgroundFill: Fill = null,
-    backgroundStroke: Stroke = null,
-    fill: Fill = null,
-    font: String = null,
-    maxAngle: js.UndefOr[Boolean] = js.undefined,
-    offsetX: Int | Double = null,
-    offsetY: Int | Double = null,
-    overflow: js.UndefOr[Boolean] = js.undefined,
-    padding: js.Array[Double] = null,
-    placement: TextPlacement = null,
-    rotateWithView: js.UndefOr[Boolean] = js.undefined,
-    rotation: Int | Double = null,
-    scale: Int | Double = null,
-    stroke: Stroke = null,
-    text: String = null,
-    textAlign: String = null,
-    textBaseline: String = null
-  ): TextOptions = {
+  def apply(): TextOptions = {
     val __obj = js.Dynamic.literal()
-    if (backgroundFill != null) __obj.updateDynamic("backgroundFill")(backgroundFill.asInstanceOf[js.Any])
-    if (backgroundStroke != null) __obj.updateDynamic("backgroundStroke")(backgroundStroke.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxAngle)) __obj.updateDynamic("maxAngle")(maxAngle.asInstanceOf[js.Any])
-    if (offsetX != null) __obj.updateDynamic("offsetX")(offsetX.asInstanceOf[js.Any])
-    if (offsetY != null) __obj.updateDynamic("offsetY")(offsetY.asInstanceOf[js.Any])
-    if (!js.isUndefined(overflow)) __obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (!js.isUndefined(rotateWithView)) __obj.updateDynamic("rotateWithView")(rotateWithView.asInstanceOf[js.Any])
-    if (rotation != null) __obj.updateDynamic("rotation")(rotation.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
-    if (textBaseline != null) __obj.updateDynamic("textBaseline")(textBaseline.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextOptions]
   }
+  @scala.inline
+  implicit class TextOptionsOps[Self <: TextOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundFill(value: Fill): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundFill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundFill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundStroke(value: Stroke): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundStroke")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundStroke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundStroke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFill(value: Fill): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFont(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFont: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAngle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsetX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsetX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsetY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsetY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacement(value: TextPlacement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotateWithView(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateWithView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotateWithView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateWithView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStroke(value: Stroke): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStroke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextAlign(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextBaseline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textBaseline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextBaseline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textBaseline")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

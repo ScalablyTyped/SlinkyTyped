@@ -8,99 +8,387 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ICarouselProps extends js.Object {
-  var afterSlide: js.UndefOr[js.Function1[/* index */ Double, Unit]] = js.undefined
-  var autoplay: js.UndefOr[Boolean] = js.undefined
-  var autoplayInterval: js.UndefOr[Double] = js.undefined
-  var beforeSlide: js.UndefOr[js.Function2[/* currentIndex */ Double, /* endIndex */ Double, Unit]] = js.undefined
-  var cellAlign: js.UndefOr[left | center | right] = js.undefined
-  var cellSpacing: js.UndefOr[Double] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var data: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var decorators: js.UndefOr[js.Array[_]] = js.undefined
-  var dragging: js.UndefOr[Boolean] = js.undefined
-  var easing: js.UndefOr[js.Function] = js.undefined
-  var edgeEasing: js.UndefOr[js.Function] = js.undefined
-  var frameOverflow: js.UndefOr[String] = js.undefined
-  var framePadding: js.UndefOr[String] = js.undefined
-  var initialSlideHeight: js.UndefOr[Double] = js.undefined
-  var initialSlideWidth: js.UndefOr[Double] = js.undefined
-  var resetAutoplay: js.UndefOr[Boolean] = js.undefined
-  var slideIndex: js.UndefOr[Double] = js.undefined
-  var slideWidth: js.UndefOr[String | Double] = js.undefined
-  var slidesToScroll: js.UndefOr[Double | auto] = js.undefined
-  var slidesToShow: js.UndefOr[Double] = js.undefined
-  var speed: js.UndefOr[Double] = js.undefined
-  var style: js.UndefOr[js.Any] = js.undefined
-  var swipeSpeed: js.UndefOr[Double] = js.undefined
-  var swiping: js.UndefOr[Boolean] = js.undefined
-  var vertical: js.UndefOr[Boolean] = js.undefined
-  var width: js.UndefOr[String] = js.undefined
-  var wrapAround: js.UndefOr[Boolean] = js.undefined
+  var afterSlide: js.UndefOr[js.Function1[/* index */ Double, Unit]] = js.native
+  var autoplay: js.UndefOr[Boolean] = js.native
+  var autoplayInterval: js.UndefOr[Double] = js.native
+  var beforeSlide: js.UndefOr[js.Function2[/* currentIndex */ Double, /* endIndex */ Double, Unit]] = js.native
+  var cellAlign: js.UndefOr[left | center | right] = js.native
+  var cellSpacing: js.UndefOr[Double] = js.native
+  var className: js.UndefOr[String] = js.native
+  var data: js.UndefOr[js.Function0[Unit]] = js.native
+  var decorators: js.UndefOr[js.Array[_]] = js.native
+  var dragging: js.UndefOr[Boolean] = js.native
+  var easing: js.UndefOr[js.Function] = js.native
+  var edgeEasing: js.UndefOr[js.Function] = js.native
+  var frameOverflow: js.UndefOr[String] = js.native
+  var framePadding: js.UndefOr[String] = js.native
+  var initialSlideHeight: js.UndefOr[Double] = js.native
+  var initialSlideWidth: js.UndefOr[Double] = js.native
+  var resetAutoplay: js.UndefOr[Boolean] = js.native
+  var slideIndex: js.UndefOr[Double] = js.native
+  var slideWidth: js.UndefOr[String | Double] = js.native
+  var slidesToScroll: js.UndefOr[Double | auto] = js.native
+  var slidesToShow: js.UndefOr[Double] = js.native
+  var speed: js.UndefOr[Double] = js.native
+  var style: js.UndefOr[js.Any] = js.native
+  var swipeSpeed: js.UndefOr[Double] = js.native
+  var swiping: js.UndefOr[Boolean] = js.native
+  var vertical: js.UndefOr[Boolean] = js.native
+  var width: js.UndefOr[String] = js.native
+  var wrapAround: js.UndefOr[Boolean] = js.native
 }
 
 object ICarouselProps {
   @scala.inline
-  def apply(
-    afterSlide: /* index */ Double => Unit = null,
-    autoplay: js.UndefOr[Boolean] = js.undefined,
-    autoplayInterval: Int | Double = null,
-    beforeSlide: (/* currentIndex */ Double, /* endIndex */ Double) => Unit = null,
-    cellAlign: left | center | right = null,
-    cellSpacing: Int | Double = null,
-    className: String = null,
-    data: () => Unit = null,
-    decorators: js.Array[_] = null,
-    dragging: js.UndefOr[Boolean] = js.undefined,
-    easing: js.Function = null,
-    edgeEasing: js.Function = null,
-    frameOverflow: String = null,
-    framePadding: String = null,
-    initialSlideHeight: Int | Double = null,
-    initialSlideWidth: Int | Double = null,
-    resetAutoplay: js.UndefOr[Boolean] = js.undefined,
-    slideIndex: Int | Double = null,
-    slideWidth: String | Double = null,
-    slidesToScroll: Double | auto = null,
-    slidesToShow: Int | Double = null,
-    speed: Int | Double = null,
-    style: js.Any = null,
-    swipeSpeed: Int | Double = null,
-    swiping: js.UndefOr[Boolean] = js.undefined,
-    vertical: js.UndefOr[Boolean] = js.undefined,
-    width: String = null,
-    wrapAround: js.UndefOr[Boolean] = js.undefined
-  ): ICarouselProps = {
+  def apply(): ICarouselProps = {
     val __obj = js.Dynamic.literal()
-    if (afterSlide != null) __obj.updateDynamic("afterSlide")(js.Any.fromFunction1(afterSlide))
-    if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.asInstanceOf[js.Any])
-    if (autoplayInterval != null) __obj.updateDynamic("autoplayInterval")(autoplayInterval.asInstanceOf[js.Any])
-    if (beforeSlide != null) __obj.updateDynamic("beforeSlide")(js.Any.fromFunction2(beforeSlide))
-    if (cellAlign != null) __obj.updateDynamic("cellAlign")(cellAlign.asInstanceOf[js.Any])
-    if (cellSpacing != null) __obj.updateDynamic("cellSpacing")(cellSpacing.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(js.Any.fromFunction0(data))
-    if (decorators != null) __obj.updateDynamic("decorators")(decorators.asInstanceOf[js.Any])
-    if (!js.isUndefined(dragging)) __obj.updateDynamic("dragging")(dragging.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
-    if (edgeEasing != null) __obj.updateDynamic("edgeEasing")(edgeEasing.asInstanceOf[js.Any])
-    if (frameOverflow != null) __obj.updateDynamic("frameOverflow")(frameOverflow.asInstanceOf[js.Any])
-    if (framePadding != null) __obj.updateDynamic("framePadding")(framePadding.asInstanceOf[js.Any])
-    if (initialSlideHeight != null) __obj.updateDynamic("initialSlideHeight")(initialSlideHeight.asInstanceOf[js.Any])
-    if (initialSlideWidth != null) __obj.updateDynamic("initialSlideWidth")(initialSlideWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(resetAutoplay)) __obj.updateDynamic("resetAutoplay")(resetAutoplay.asInstanceOf[js.Any])
-    if (slideIndex != null) __obj.updateDynamic("slideIndex")(slideIndex.asInstanceOf[js.Any])
-    if (slideWidth != null) __obj.updateDynamic("slideWidth")(slideWidth.asInstanceOf[js.Any])
-    if (slidesToScroll != null) __obj.updateDynamic("slidesToScroll")(slidesToScroll.asInstanceOf[js.Any])
-    if (slidesToShow != null) __obj.updateDynamic("slidesToShow")(slidesToShow.asInstanceOf[js.Any])
-    if (speed != null) __obj.updateDynamic("speed")(speed.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (swipeSpeed != null) __obj.updateDynamic("swipeSpeed")(swipeSpeed.asInstanceOf[js.Any])
-    if (!js.isUndefined(swiping)) __obj.updateDynamic("swiping")(swiping.asInstanceOf[js.Any])
-    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrapAround)) __obj.updateDynamic("wrapAround")(wrapAround.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICarouselProps]
   }
+  @scala.inline
+  implicit class ICarouselPropsOps[Self <: ICarouselProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfterSlide(value: /* index */ Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterSlide")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterSlide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterSlide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoplay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoplayInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoplayInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeSlide(value: (/* currentIndex */ Double, /* endIndex */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSlide")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeSlide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSlide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellAlign(value: left | center | right): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellAlign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellSpacing(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellSpacing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSpacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecorators(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decorators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecorators: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decorators")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDragging(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDragging: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEasing(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEdgeEasing(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeEasing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEdgeEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeEasing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrameOverflow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameOverflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameOverflow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameOverflow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFramePadding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("framePadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFramePadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("framePadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialSlideHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialSlideHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialSlideHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialSlideHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialSlideWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialSlideWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialSlideWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialSlideWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResetAutoplay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetAutoplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResetAutoplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetAutoplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlideIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlideIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlideWidth(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlideWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlidesToScroll(value: Double | auto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slidesToScroll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlidesToScroll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slidesToScroll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlidesToShow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slidesToShow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlidesToShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slidesToShow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSwipeSpeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeSpeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSwipeSpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeSpeed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSwiping(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swiping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSwiping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swiping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVertical(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVertical: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrapAround(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapAround")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrapAround: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapAround")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

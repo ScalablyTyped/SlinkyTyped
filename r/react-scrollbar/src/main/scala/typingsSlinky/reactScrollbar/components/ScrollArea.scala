@@ -1,15 +1,16 @@
 package typingsSlinky.reactScrollbar.components
 
+import typingsSlinky.reactScrollbar.ScrollAreaProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ScrollArea
-  extends SharedApply_ScrollAreaProps_7566602[typingsSlinky.reactScrollbar.ScrollArea] {
+object ScrollArea {
   @JSGlobal("ScrollArea")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ScrollAreaProps): SharedBuilder_ScrollAreaProps_622662951[typingsSlinky.reactScrollbar.ScrollArea] = new SharedBuilder_ScrollAreaProps_622662951[typingsSlinky.reactScrollbar.ScrollArea](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ScrollArea.type): SharedBuilder_ScrollAreaProps_622662951[typingsSlinky.reactScrollbar.ScrollArea] = new SharedBuilder_ScrollAreaProps_622662951[typingsSlinky.reactScrollbar.ScrollArea](js.Array(this.component, js.Dictionary.empty))()
 }
 

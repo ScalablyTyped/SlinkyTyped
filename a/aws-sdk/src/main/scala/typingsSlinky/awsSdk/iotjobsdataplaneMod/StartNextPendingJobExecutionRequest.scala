@@ -22,11 +22,47 @@ trait StartNextPendingJobExecutionRequest extends js.Object {
 
 object StartNextPendingJobExecutionRequest {
   @scala.inline
-  def apply(thingName: ThingName, statusDetails: DetailsMap = null, stepTimeoutInMinutes: Int | Double = null): StartNextPendingJobExecutionRequest = {
+  def apply(thingName: ThingName): StartNextPendingJobExecutionRequest = {
     val __obj = js.Dynamic.literal(thingName = thingName.asInstanceOf[js.Any])
-    if (statusDetails != null) __obj.updateDynamic("statusDetails")(statusDetails.asInstanceOf[js.Any])
-    if (stepTimeoutInMinutes != null) __obj.updateDynamic("stepTimeoutInMinutes")(stepTimeoutInMinutes.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartNextPendingJobExecutionRequest]
   }
+  @scala.inline
+  implicit class StartNextPendingJobExecutionRequestOps[Self <: StartNextPendingJobExecutionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withThingName(value: ThingName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatusDetails(value: DetailsMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStepTimeoutInMinutes(value: StepTimeoutInMinutes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepTimeoutInMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepTimeoutInMinutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepTimeoutInMinutes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

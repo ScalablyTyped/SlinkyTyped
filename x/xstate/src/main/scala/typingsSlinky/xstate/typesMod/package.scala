@@ -78,7 +78,7 @@ package object typesMod {
   ]
   type ExtractStateValue[TS /* <: typingsSlinky.xstate.typesMod.StateSchema[_] */, TSS] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof TSS ]:? TSS[K] extends {  states  :any}? keyof TSS[K]['states'] : never | / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias xstate.xstate/lib/types.ExtractStateValue<TSS[K], TSS[K]['states']> * / object}
-    */ typingsSlinky.xstate.xstateStrings.ExtractStateValue with TSS
+    */ typingsSlinky.xstate.xstateStrings.ExtractStateValue with org.scalablytyped.runtime.TopLevel[TSS]
   type Guard[TContext, TEvent /* <: typingsSlinky.xstate.typesMod.EventObject */] = (typingsSlinky.xstate.typesMod.GuardPredicate[TContext, TEvent]) | ((typingsSlinky.std.Record[java.lang.String, _]) with typingsSlinky.xstate.AnonTypeString)
   type InvokeCallback = js.Function2[
     /* callback */ typingsSlinky.xstate.typesMod.Sender[js.Any], 
@@ -98,7 +98,7 @@ package object typesMod {
   type PathsMap[TContext, TEvent /* <: typingsSlinky.xstate.typesMod.EventObject */] = org.scalablytyped.runtime.StringDictionary[typingsSlinky.xstate.typesMod.PathsItem[TContext, TEvent]]
   type PropertyAssigner[TContext, TEvent /* <: typingsSlinky.xstate.typesMod.EventObject */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof TContext ]:? (context : TContext, event : TEvent, meta : xstate.xstate/lib/types.AssignMeta<TContext, TEvent>): TContext[K] | TContext[K]}
-    */ typingsSlinky.xstate.xstateStrings.PropertyAssigner with js.Any
+    */ typingsSlinky.xstate.xstateStrings.PropertyAssigner with org.scalablytyped.runtime.TopLevel[js.Any]
   type Receiver[TEvent /* <: typingsSlinky.xstate.typesMod.EventObject */] = js.Function1[/* listener */ js.Function1[/* event */ TEvent, scala.Unit], scala.Unit]
   type SendExpr[TContext, TEvent /* <: typingsSlinky.xstate.typesMod.EventObject */] = typingsSlinky.xstate.typesMod.ExprWithMeta[TContext, TEvent, TEvent]
   type Sender[TEvent /* <: typingsSlinky.xstate.typesMod.EventObject */] = js.Function1[/* event */ typingsSlinky.xstate.typesMod.Event[TEvent], scala.Unit]
@@ -112,7 +112,7 @@ package object typesMod {
   type StateKey = java.lang.String | (typingsSlinky.xstate.stateMod.State[js.Any, typingsSlinky.xstate.typesMod.EventObject, js.Any, js.Any])
   type StateNodesConfig[TContext, TStateSchema /* <: typingsSlinky.xstate.typesMod.StateSchema[_] */, TEvent /* <: typingsSlinky.xstate.typesMod.EventObject */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof TStateSchema['states'] ]: xstate.xstate/lib/StateNode.StateNode<TContext, TStateSchema['states'][K], TEvent, any>}
-    */ typingsSlinky.xstate.xstateStrings.StateNodesConfig with TStateSchema
+    */ typingsSlinky.xstate.xstateStrings.StateNodesConfig with org.scalablytyped.runtime.TopLevel[TStateSchema]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.xstate.xstateStrings.atomic
     - typingsSlinky.xstate.xstateStrings.compound
@@ -125,17 +125,17 @@ package object typesMod {
   type StateValue = java.lang.String | typingsSlinky.xstate.typesMod.StateValueMap
   type StatesConfig[TContext, TStateSchema /* <: typingsSlinky.xstate.typesMod.StateSchema[_] */, TEvent /* <: typingsSlinky.xstate.typesMod.EventObject */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof TStateSchema['states'] ]: xstate.xstate/lib/types.StateNodeConfig<TContext, TStateSchema['states'][K], TEvent>}
-    */ typingsSlinky.xstate.xstateStrings.StatesConfig with TStateSchema
+    */ typingsSlinky.xstate.xstateStrings.StatesConfig with org.scalablytyped.runtime.TopLevel[TStateSchema]
   type StatesDefinition[TContext, TStateSchema /* <: typingsSlinky.xstate.typesMod.StateSchema[_] */, TEvent /* <: typingsSlinky.xstate.typesMod.EventObject */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof TStateSchema['states'] ]: xstate.xstate/lib/types.StateNodeDefinition<TContext, TStateSchema['states'][K], TEvent>}
-    */ typingsSlinky.xstate.xstateStrings.StatesDefinition with TStateSchema
+    */ typingsSlinky.xstate.xstateStrings.StatesDefinition with org.scalablytyped.runtime.TopLevel[TStateSchema]
   type Transition[TContext, TEvent /* <: typingsSlinky.xstate.typesMod.EventObject */] = java.lang.String | (typingsSlinky.xstate.typesMod.TransitionConfig[TContext, TEvent]) | (typingsSlinky.xstate.typesMod.ConditionalTransitionConfig[TContext, TEvent])
   type TransitionConfigTargetShortcut[TContext, TEvent /* <: typingsSlinky.xstate.typesMod.EventObject */] = js.UndefOr[
     java.lang.String | (typingsSlinky.xstate.stateNodeMod.StateNode[TContext, js.Any, TEvent, js.Any])
   ]
   type TransitionDefinitionMap[TContext, TEvent /* <: typingsSlinky.xstate.typesMod.EventObject */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in TEvent['type'] | xstate.xstate/lib/types.ActionTypes.NullEvent | '*' ]: std.Array<xstate.xstate/lib/types.TransitionDefinition<TContext, K extends TEvent['type']? std.Extract<TEvent, {  type  :K}> : xstate.xstate/lib/types.EventObject>>}
-    */ typingsSlinky.xstate.xstateStrings.TransitionDefinitionMap with TEvent
+    */ typingsSlinky.xstate.xstateStrings.TransitionDefinitionMap with org.scalablytyped.runtime.TopLevel[TEvent]
   type TransitionTarget[TContext, TEvent /* <: typingsSlinky.xstate.typesMod.EventObject */] = typingsSlinky.xstate.typesMod.SingleOrArray[
     java.lang.String | (typingsSlinky.xstate.stateNodeMod.StateNode[TContext, js.Any, TEvent, js.Any])
   ]
@@ -148,7 +148,7 @@ package object typesMod {
   ]
   type TransitionsConfigMap[TContext, TEvent /* <: typingsSlinky.xstate.typesMod.EventObject */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in TEvent['type'] | xstate.xstate/lib/types.ActionTypes.NullEvent | '*' ]:? xstate.xstate/lib/types.SingleOrArray<xstate.xstate/lib/types.TransitionConfigTargetShortcut<TContext, TEvent> | xstate.xstate/lib/types.TransitionConfig<TContext, K extends TEvent['type']? std.Extract<TEvent, {  type  :K}> : xstate.xstate/lib/types.EventObject> & {  event? :undefined}>}
-    */ typingsSlinky.xstate.xstateStrings.TransitionsConfigMap with TEvent
+    */ typingsSlinky.xstate.xstateStrings.TransitionsConfigMap with org.scalablytyped.runtime.TopLevel[TEvent]
   type ValueAdjacencyMap[TContext, TEvent /* <: typingsSlinky.xstate.typesMod.EventObject */] = org.scalablytyped.runtime.StringDictionary[
     typingsSlinky.std.Record[
       java.lang.String, 

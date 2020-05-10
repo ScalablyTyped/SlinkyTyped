@@ -5,18 +5,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonOpen extends js.Object {
-  var extend: js.UndefOr[ExtendType] = js.undefined
-  var open: js.UndefOr[Boolean] = js.undefined
+  var extend: js.UndefOr[ExtendType] = js.native
+  var open: js.UndefOr[Boolean] = js.native
 }
 
 object AnonOpen {
   @scala.inline
-  def apply(extend: ExtendType = null, open: js.UndefOr[Boolean] = js.undefined): AnonOpen = {
+  def apply(): AnonOpen = {
     val __obj = js.Dynamic.literal()
-    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
-    if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonOpen]
   }
+  @scala.inline
+  implicit class AnonOpenOps[Self <: AnonOpen] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExtendFunction1(value: /* args */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extend")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withExtend(value: ExtendType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

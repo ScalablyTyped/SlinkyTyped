@@ -1,7 +1,5 @@
 package typingsSlinky.pixiJs.PIXI
 
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.ArrayBufferView
 import typingsSlinky.std.SharedArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,21 +14,21 @@ import scala.scalajs.js.annotation._
 @JSGlobal("PIXI.Buffer")
 @js.native
 class Buffer protected () extends js.Object {
-  def this(data: scala.scalajs.js.typedarray.ArrayBuffer) = this()
-  def this(data: scala.scalajs.js.typedarray.ArrayBufferView) = this()
+  def this(data: js.typedarray.ArrayBuffer) = this()
+  def this(data: js.typedarray.ArrayBufferView) = this()
   def this(data: SharedArrayBuffer) = this()
-  def this(data: scala.scalajs.js.typedarray.ArrayBufferView, _static: Boolean) = this()
-  def this(data: scala.scalajs.js.typedarray.ArrayBuffer, _static: Boolean) = this()
+  def this(data: js.typedarray.ArrayBufferView, _static: Boolean) = this()
+  def this(data: js.typedarray.ArrayBuffer, _static: Boolean) = this()
   def this(data: SharedArrayBuffer, _static: Boolean) = this()
-  def this(data: scala.scalajs.js.typedarray.ArrayBufferView, _static: Boolean, index: Boolean) = this()
-  def this(data: scala.scalajs.js.typedarray.ArrayBuffer, _static: Boolean, index: Boolean) = this()
+  def this(data: js.typedarray.ArrayBufferView, _static: Boolean, index: Boolean) = this()
+  def this(data: js.typedarray.ArrayBuffer, _static: Boolean, index: Boolean) = this()
   def this(data: SharedArrayBuffer, _static: Boolean, index: Boolean) = this()
   /**
     * The data in the buffer, as a typed array
     *
     * @member {ArrayBuffer| SharedArrayBuffer|ArrayBufferView} PIXI.Buffer#data
     */
-  var data: scala.scalajs.js.typedarray.ArrayBuffer | SharedArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView = js.native
+  var data: js.typedarray.ArrayBuffer | SharedArrayBuffer | js.typedarray.ArrayBufferView = js.native
   /**
     * Destroys the buffer
     */
@@ -44,8 +42,8 @@ class Buffer protected () extends js.Object {
     * @param {ArrayBuffer|SharedArrayBuffer|ArrayBufferView} [data] the data to update in the buffer.
     */
   def update(): Unit = js.native
-  def update(data: ArrayBuffer): Unit = js.native
-  def update(data: ArrayBufferView): Unit = js.native
+  def update(data: js.typedarray.ArrayBuffer): Unit = js.native
+  def update(data: js.typedarray.ArrayBufferView): Unit = js.native
   def update(data: SharedArrayBuffer): Unit = js.native
 }
 
@@ -61,6 +59,6 @@ object Buffer extends js.Object {
     * @param {ArrayBufferView | number[]} data the TypedArray that the buffer will store. If this is a regular Array it will be converted to a Float32Array.
     * @return {PIXI.Buffer} A new Buffer based on the data provided.
     */
-  def from(data: ArrayBufferView): Buffer = js.native
+  def from(data: js.typedarray.ArrayBufferView): Buffer = js.native
 }
 

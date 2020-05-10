@@ -4,45 +4,153 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDuration extends js.Object {
-  var duration: js.UndefOr[Double] = js.undefined
-  var loop: js.UndefOr[Boolean] = js.undefined
-  var onEnd: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.undefined
-  var onPause: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.undefined
-  var onPlay: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.undefined
-  var onResume: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.undefined
-  var onStop: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.undefined
-  var pitch: js.UndefOr[Double] = js.undefined
-  var startTime: js.UndefOr[Double] = js.undefined
-  var volume: js.UndefOr[Double] = js.undefined
+  var duration: js.UndefOr[Double] = js.native
+  var loop: js.UndefOr[Boolean] = js.native
+  var onEnd: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  var onPause: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  var onPlay: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  var onResume: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  var onStop: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  var pitch: js.UndefOr[Double] = js.native
+  var startTime: js.UndefOr[Double] = js.native
+  var volume: js.UndefOr[Double] = js.native
 }
 
 object AnonDuration {
   @scala.inline
-  def apply(
-    duration: Int | Double = null,
-    loop: js.UndefOr[Boolean] = js.undefined,
-    onEnd: /* repeated */ js.Any => _ = null,
-    onPause: /* repeated */ js.Any => _ = null,
-    onPlay: /* repeated */ js.Any => _ = null,
-    onResume: /* repeated */ js.Any => _ = null,
-    onStop: /* repeated */ js.Any => _ = null,
-    pitch: Int | Double = null,
-    startTime: Int | Double = null,
-    volume: Int | Double = null
-  ): AnonDuration = {
+  def apply(): AnonDuration = {
     val __obj = js.Dynamic.literal()
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.asInstanceOf[js.Any])
-    if (onEnd != null) __obj.updateDynamic("onEnd")(js.Any.fromFunction1(onEnd))
-    if (onPause != null) __obj.updateDynamic("onPause")(js.Any.fromFunction1(onPause))
-    if (onPlay != null) __obj.updateDynamic("onPlay")(js.Any.fromFunction1(onPlay))
-    if (onResume != null) __obj.updateDynamic("onResume")(js.Any.fromFunction1(onResume))
-    if (onStop != null) __obj.updateDynamic("onStop")(js.Any.fromFunction1(onStop))
-    if (pitch != null) __obj.updateDynamic("pitch")(pitch.asInstanceOf[js.Any])
-    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
-    if (volume != null) __obj.updateDynamic("volume")(volume.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDuration]
   }
+  @scala.inline
+  implicit class AnonDurationOps[Self <: AnonDuration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnEnd(value: /* repeated */ js.Any => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPause(value: /* repeated */ js.Any => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPause: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPlay(value: /* repeated */ js.Any => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPlay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnResume(value: /* repeated */ js.Any => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onResume")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnResume: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onResume")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnStop(value: /* repeated */ js.Any => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStop")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnStop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPitch(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPitch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolume(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolume: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,12 +14,10 @@ trait OnInstalledReason extends js.Object
 
 object OnInstalledReason {
   @scala.inline
-  def browser_update: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.browser_update = this.cast("browser_update")
+  def browser_update: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.browser_update = "browser_update".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.browser_update]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def install: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.install = "install".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.install]
   @scala.inline
-  def install: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.install = this.cast("install")
-  @scala.inline
-  def update: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.update = this.cast("update")
+  def update: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.update = "update".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.update]
 }
 

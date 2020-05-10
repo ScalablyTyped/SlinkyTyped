@@ -4,14 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Seats extends js.Object {
   /** Identifies the resource as a subscription change plan request. Value: subscriptions#seats */
-  var kind: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.native
   /**
     * Read-only field containing the current number of licensed seats for FLEXIBLE Google-Apps subscriptions and secondary subscriptions such as Google-Vault
     * and Drive-storage.
     */
-  var licensedNumberOfSeats: js.UndefOr[Double] = js.undefined
+  var licensedNumberOfSeats: js.UndefOr[Double] = js.native
   /**
     * The maximumNumberOfSeats property is the maximum number of licenses that the customer can purchase. This property applies to plans other than the
     * annual commitment plan. How a user's licenses are managed depends on the subscription's payment plan:
@@ -22,7 +23,7 @@ trait Seats extends js.Object {
     * contract. And the minimum quantity is the current number of users in the customer account.
     * - 30-day free trial plan — A subscription in a 30-day free trial is restricted to maximum 10 seats.
     */
-  var maximumNumberOfSeats: js.UndefOr[Double] = js.undefined
+  var maximumNumberOfSeats: js.UndefOr[Double] = js.native
   /**
     * The numberOfSeats property holds the customer's number of user licenses. How a user's licenses are managed depends on the subscription's plan:
     * - annual commitment plan (with monthly or yearly pay) — For this plan, a reseller is invoiced on the number of user licenses in the numberOfSeats
@@ -33,23 +34,70 @@ trait Seats extends js.Object {
     * property is not used in the request or response for flexible plan customers.
     * - 30-day free trial plan — The numberOfSeats property is not used in the request or response for an account in a 30-day trial.
     */
-  var numberOfSeats: js.UndefOr[Double] = js.undefined
+  var numberOfSeats: js.UndefOr[Double] = js.native
 }
 
 object Seats {
   @scala.inline
-  def apply(
-    kind: String = null,
-    licensedNumberOfSeats: Int | Double = null,
-    maximumNumberOfSeats: Int | Double = null,
-    numberOfSeats: Int | Double = null
-  ): Seats = {
+  def apply(): Seats = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (licensedNumberOfSeats != null) __obj.updateDynamic("licensedNumberOfSeats")(licensedNumberOfSeats.asInstanceOf[js.Any])
-    if (maximumNumberOfSeats != null) __obj.updateDynamic("maximumNumberOfSeats")(maximumNumberOfSeats.asInstanceOf[js.Any])
-    if (numberOfSeats != null) __obj.updateDynamic("numberOfSeats")(numberOfSeats.asInstanceOf[js.Any])
     __obj.asInstanceOf[Seats]
   }
+  @scala.inline
+  implicit class SeatsOps[Self <: Seats] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLicensedNumberOfSeats(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("licensedNumberOfSeats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicensedNumberOfSeats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("licensedNumberOfSeats")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumNumberOfSeats(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumNumberOfSeats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumNumberOfSeats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumNumberOfSeats")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfSeats(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfSeats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfSeats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfSeats")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

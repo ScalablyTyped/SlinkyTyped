@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait BLAKE2s extends js.Object {
-  def digest(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def digest(): js.typedarray.Uint8Array = js.native
   def hexDigest(): String = js.native
   def update(p: ByteArray): this.type = js.native
   def update(p: ByteArray, offset: Double): this.type = js.native

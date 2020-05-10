@@ -1,7 +1,7 @@
 package typingsSlinky.aureliaTemplating.mod
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.aureliaDependencyInjection.mod.Container
-import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

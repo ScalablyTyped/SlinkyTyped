@@ -1,15 +1,16 @@
 package typingsSlinky.reactStripeElements.components
 
+import typingsSlinky.reactStripeElements.mod.ReactStripeElements.ElementProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CardNumberElement
-  extends SharedApply_ElementProps659214741[typingsSlinky.reactStripeElements.mod.CardNumberElement] {
+object CardNumberElement {
   @JSImport("react-stripe-elements", "CardNumberElement")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ElementProps): SharedBuilder_ElementProps_2011987615[typingsSlinky.reactStripeElements.mod.CardNumberElement] = new SharedBuilder_ElementProps_2011987615[typingsSlinky.reactStripeElements.mod.CardNumberElement](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CardNumberElement.type): SharedBuilder_ElementProps_2011987615[typingsSlinky.reactStripeElements.mod.CardNumberElement] = new SharedBuilder_ElementProps_2011987615[typingsSlinky.reactStripeElements.mod.CardNumberElement](js.Array(this.component, js.Dictionary.empty))()
 }
 

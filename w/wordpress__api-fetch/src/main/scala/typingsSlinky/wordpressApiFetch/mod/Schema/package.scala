@@ -17,19 +17,41 @@ package object Schema {
   ])
   type Contextual[T /* <: typingsSlinky.wordpressApiFetch.mod.Schema.Context */, TAdditional, TEditAdditional] = (typingsSlinky.wordpressApiFetch.AnonRendered with TAdditional) | (typingsSlinky.wordpressApiFetch.AnonRaw with TAdditional with TEditAdditional)
   type Decontextualize[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ k in keyof T ]: T[k] extends / * Inlined @wordpress/api-fetch.@wordpress/api-fetch.Schema.Contextual<any, {}, {}> * /
-  {  rendered  :string}? string : T[k]}
-    */ typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.Decontextualize with js.Any
+  {[ k in keyof T ]: T[k] extends @wordpress/api-fetch.@wordpress/api-fetch.Schema.Contextual<any, {}, {}>? string : T[k]}
+    */ typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.Decontextualize with org.scalablytyped.runtime.TopLevel[js.Any]
   // prettier-ignore
   type Media[T /* <: typingsSlinky.wordpressApiFetch.mod.Schema.Context */] = typingsSlinky.wordpressApiFetch.mod.Schema.BaseMedia[T] | (typingsSlinky.std.Pick[
     typingsSlinky.wordpressApiFetch.mod.Schema.BaseMedia[T], 
     typingsSlinky.wordpressApiFetch.mod.Schema.ViewKeys.Media | typingsSlinky.wordpressApiFetch.mod.Schema.EmbedKeys.Media
   ])
   // prettier-ignore
+  type Page[T /* <: typingsSlinky.wordpressApiFetch.mod.Schema.Context */] = typingsSlinky.wordpressApiFetch.mod.Schema.BasePage[T] | (typingsSlinky.std.Pick[
+    typingsSlinky.wordpressApiFetch.mod.Schema.BasePage[T], 
+    typingsSlinky.wordpressApiFetch.mod.Schema.ViewKeys.Page | typingsSlinky.wordpressApiFetch.mod.Schema.EmbedKeys.Page
+  ])
+  // prettier-ignore
   type Post[T /* <: typingsSlinky.wordpressApiFetch.mod.Schema.Context */] = typingsSlinky.wordpressApiFetch.mod.Schema.BasePost[T] | (typingsSlinky.std.Pick[
     typingsSlinky.wordpressApiFetch.mod.Schema.BasePost[T], 
     typingsSlinky.wordpressApiFetch.mod.Schema.ViewKeys.Post | typingsSlinky.wordpressApiFetch.mod.Schema.EmbedKeys.Post
   ])
+  // prettier-ignore
+  type PostOrPage[T /* <: typingsSlinky.wordpressApiFetch.mod.Schema.Context */] = (typingsSlinky.wordpressApiFetch.mod.Schema.BasePost[T] with typingsSlinky.std.Partial[typingsSlinky.wordpressApiFetch.mod.Schema.BasePage[T]]) | ((typingsSlinky.std.Pick[
+    typingsSlinky.wordpressApiFetch.mod.Schema.BasePost[T], 
+    typingsSlinky.wordpressApiFetch.mod.Schema.ViewKeys.Post
+  ]) with (typingsSlinky.std.Partial[
+    typingsSlinky.std.Pick[
+      typingsSlinky.wordpressApiFetch.mod.Schema.BasePage[T], 
+      typingsSlinky.wordpressApiFetch.mod.Schema.ViewKeys.Page
+    ]
+  ])) | ((typingsSlinky.std.Pick[
+    typingsSlinky.wordpressApiFetch.mod.Schema.BasePost[T], 
+    typingsSlinky.wordpressApiFetch.mod.Schema.EmbedKeys.Post
+  ]) with (typingsSlinky.std.Partial[
+    typingsSlinky.std.Pick[
+      typingsSlinky.wordpressApiFetch.mod.Schema.BasePage[T], 
+      typingsSlinky.wordpressApiFetch.mod.Schema.EmbedKeys.Page
+    ]
+  ]))
   // prettier-ignore
   type PostRevision[T /* <: typingsSlinky.wordpressApiFetch.mod.Schema.Context */] = typingsSlinky.wordpressApiFetch.mod.Schema.BasePostRevision[T] | (typingsSlinky.std.Pick[
     typingsSlinky.wordpressApiFetch.mod.Schema.BasePostRevision[T], 

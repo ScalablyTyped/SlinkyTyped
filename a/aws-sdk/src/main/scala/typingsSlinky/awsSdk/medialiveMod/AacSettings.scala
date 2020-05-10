@@ -47,28 +47,125 @@ trait AacSettings extends js.Object {
 
 object AacSettings {
   @scala.inline
-  def apply(
-    Bitrate: Int | Double = null,
-    CodingMode: AacCodingMode = null,
-    InputType: AacInputType = null,
-    Profile: AacProfile = null,
-    RateControlMode: AacRateControlMode = null,
-    RawFormat: AacRawFormat = null,
-    SampleRate: Int | Double = null,
-    Spec: AacSpec = null,
-    VbrQuality: AacVbrQuality = null
-  ): AacSettings = {
+  def apply(): AacSettings = {
     val __obj = js.Dynamic.literal()
-    if (Bitrate != null) __obj.updateDynamic("Bitrate")(Bitrate.asInstanceOf[js.Any])
-    if (CodingMode != null) __obj.updateDynamic("CodingMode")(CodingMode.asInstanceOf[js.Any])
-    if (InputType != null) __obj.updateDynamic("InputType")(InputType.asInstanceOf[js.Any])
-    if (Profile != null) __obj.updateDynamic("Profile")(Profile.asInstanceOf[js.Any])
-    if (RateControlMode != null) __obj.updateDynamic("RateControlMode")(RateControlMode.asInstanceOf[js.Any])
-    if (RawFormat != null) __obj.updateDynamic("RawFormat")(RawFormat.asInstanceOf[js.Any])
-    if (SampleRate != null) __obj.updateDynamic("SampleRate")(SampleRate.asInstanceOf[js.Any])
-    if (Spec != null) __obj.updateDynamic("Spec")(Spec.asInstanceOf[js.Any])
-    if (VbrQuality != null) __obj.updateDynamic("VbrQuality")(VbrQuality.asInstanceOf[js.Any])
     __obj.asInstanceOf[AacSettings]
   }
+  @scala.inline
+  implicit class AacSettingsOps[Self <: AacSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBitrate(value: double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bitrate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBitrate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bitrate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodingMode(value: AacCodingMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodingMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodingMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputType(value: AacInputType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfile(value: AacProfile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Profile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Profile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRateControlMode(value: AacRateControlMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RateControlMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRateControlMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RateControlMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRawFormat(value: AacRawFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RawFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRawFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RawFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleRate(value: double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpec(value: AacSpec): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Spec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Spec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVbrQuality(value: AacVbrQuality): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VbrQuality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVbrQuality: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VbrQuality")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -72,130 +72,128 @@ trait Animation extends js.Object
 
 object Animation {
   @scala.inline
-  def bounce: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounce = this.cast("bounce")
+  def bounce: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounce = "bounce".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounce]
   @scala.inline
-  def bounceIn: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceIn = this.cast("bounceIn")
+  def bounceIn: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceIn = "bounceIn".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceIn]
   @scala.inline
-  def bounceInDown: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceInDown = this.cast("bounceInDown")
+  def bounceInDown: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceInDown = "bounceInDown".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceInDown]
   @scala.inline
-  def bounceInLeft: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceInLeft = this.cast("bounceInLeft")
+  def bounceInLeft: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceInLeft = "bounceInLeft".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceInLeft]
   @scala.inline
-  def bounceInRight: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceInRight = this.cast("bounceInRight")
+  def bounceInRight: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceInRight = "bounceInRight".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceInRight]
   @scala.inline
-  def bounceInUp: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceInUp = this.cast("bounceInUp")
+  def bounceInUp: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceInUp = "bounceInUp".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceInUp]
   @scala.inline
-  def bounceOut: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceOut = this.cast("bounceOut")
+  def bounceOut: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceOut = "bounceOut".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceOut]
   @scala.inline
-  def bounceOutDown: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceOutDown = this.cast("bounceOutDown")
+  def bounceOutDown: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceOutDown = "bounceOutDown".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceOutDown]
   @scala.inline
-  def bounceOutLeft: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceOutLeft = this.cast("bounceOutLeft")
+  def bounceOutLeft: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceOutLeft = "bounceOutLeft".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceOutLeft]
   @scala.inline
-  def bounceOutRight: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceOutRight = this.cast("bounceOutRight")
+  def bounceOutRight: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceOutRight = "bounceOutRight".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceOutRight]
   @scala.inline
-  def bounceOutUp: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceOutUp = this.cast("bounceOutUp")
+  def bounceOutUp: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceOutUp = "bounceOutUp".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.bounceOutUp]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fadeIn: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeIn = "fadeIn".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeIn]
   @scala.inline
-  def fadeIn: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeIn = this.cast("fadeIn")
+  def fadeInDown: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInDown = "fadeInDown".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInDown]
   @scala.inline
-  def fadeInDown: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInDown = this.cast("fadeInDown")
+  def fadeInDownBig: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInDownBig = "fadeInDownBig".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInDownBig]
   @scala.inline
-  def fadeInDownBig: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInDownBig = this.cast("fadeInDownBig")
+  def fadeInLeft: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInLeft = "fadeInLeft".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInLeft]
   @scala.inline
-  def fadeInLeft: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInLeft = this.cast("fadeInLeft")
+  def fadeInLeftBig: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInLeftBig = "fadeInLeftBig".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInLeftBig]
   @scala.inline
-  def fadeInLeftBig: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInLeftBig = this.cast("fadeInLeftBig")
+  def fadeInRight: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInRight = "fadeInRight".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInRight]
   @scala.inline
-  def fadeInRight: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInRight = this.cast("fadeInRight")
+  def fadeInRightBig: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInRightBig = "fadeInRightBig".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInRightBig]
   @scala.inline
-  def fadeInRightBig: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInRightBig = this.cast("fadeInRightBig")
+  def fadeInUp: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInUp = "fadeInUp".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInUp]
   @scala.inline
-  def fadeInUp: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInUp = this.cast("fadeInUp")
+  def fadeInUpBig: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInUpBig = "fadeInUpBig".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInUpBig]
   @scala.inline
-  def fadeInUpBig: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeInUpBig = this.cast("fadeInUpBig")
+  def fadeOut: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOut = "fadeOut".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOut]
   @scala.inline
-  def fadeOut: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOut = this.cast("fadeOut")
+  def fadeOutDown: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutDown = "fadeOutDown".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutDown]
   @scala.inline
-  def fadeOutDown: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutDown = this.cast("fadeOutDown")
+  def fadeOutDownBig: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutDownBig = "fadeOutDownBig".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutDownBig]
   @scala.inline
-  def fadeOutDownBig: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutDownBig = this.cast("fadeOutDownBig")
+  def fadeOutLeft: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutLeft = "fadeOutLeft".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutLeft]
   @scala.inline
-  def fadeOutLeft: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutLeft = this.cast("fadeOutLeft")
+  def fadeOutLeftBig: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutLeftBig = "fadeOutLeftBig".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutLeftBig]
   @scala.inline
-  def fadeOutLeftBig: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutLeftBig = this.cast("fadeOutLeftBig")
+  def fadeOutRight: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutRight = "fadeOutRight".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutRight]
   @scala.inline
-  def fadeOutRight: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutRight = this.cast("fadeOutRight")
+  def fadeOutRightBig: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutRightBig = "fadeOutRightBig".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutRightBig]
   @scala.inline
-  def fadeOutRightBig: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutRightBig = this.cast("fadeOutRightBig")
+  def fadeOutUp: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutUp = "fadeOutUp".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutUp]
   @scala.inline
-  def fadeOutUp: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutUp = this.cast("fadeOutUp")
+  def fadeOutUpBig: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutUpBig = "fadeOutUpBig".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutUpBig]
   @scala.inline
-  def fadeOutUpBig: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.fadeOutUpBig = this.cast("fadeOutUpBig")
+  def flash: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.flash = "flash".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.flash]
   @scala.inline
-  def flash: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.flash = this.cast("flash")
+  def flipInX: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.flipInX = "flipInX".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.flipInX]
   @scala.inline
-  def flipInX: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.flipInX = this.cast("flipInX")
+  def flipInY: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.flipInY = "flipInY".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.flipInY]
   @scala.inline
-  def flipInY: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.flipInY = this.cast("flipInY")
+  def flipOutX: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.flipOutX = "flipOutX".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.flipOutX]
   @scala.inline
-  def flipOutX: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.flipOutX = this.cast("flipOutX")
+  def flipOutY: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.flipOutY = "flipOutY".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.flipOutY]
   @scala.inline
-  def flipOutY: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.flipOutY = this.cast("flipOutY")
+  def jello: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.jello = "jello".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.jello]
   @scala.inline
-  def jello: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.jello = this.cast("jello")
+  def lightSpeedIn: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.lightSpeedIn = "lightSpeedIn".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.lightSpeedIn]
   @scala.inline
-  def lightSpeedIn: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.lightSpeedIn = this.cast("lightSpeedIn")
+  def lightSpeedOut: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.lightSpeedOut = "lightSpeedOut".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.lightSpeedOut]
   @scala.inline
-  def lightSpeedOut: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.lightSpeedOut = this.cast("lightSpeedOut")
+  def pulse: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.pulse = "pulse".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.pulse]
   @scala.inline
-  def pulse: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.pulse = this.cast("pulse")
+  def rotate: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.rotate = "rotate".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.rotate]
   @scala.inline
-  def rotate: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.rotate = this.cast("rotate")
+  def rubberBand: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.rubberBand = "rubberBand".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.rubberBand]
   @scala.inline
-  def rubberBand: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.rubberBand = this.cast("rubberBand")
+  def shake: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.shake = "shake".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.shake]
   @scala.inline
-  def shake: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.shake = this.cast("shake")
+  def slideInDown: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideInDown = "slideInDown".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideInDown]
   @scala.inline
-  def slideInDown: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideInDown = this.cast("slideInDown")
+  def slideInLeft: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideInLeft = "slideInLeft".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideInLeft]
   @scala.inline
-  def slideInLeft: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideInLeft = this.cast("slideInLeft")
+  def slideInRight: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideInRight = "slideInRight".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideInRight]
   @scala.inline
-  def slideInRight: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideInRight = this.cast("slideInRight")
+  def slideInUp: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideInUp = "slideInUp".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideInUp]
   @scala.inline
-  def slideInUp: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideInUp = this.cast("slideInUp")
+  def slideOutDown: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideOutDown = "slideOutDown".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideOutDown]
   @scala.inline
-  def slideOutDown: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideOutDown = this.cast("slideOutDown")
+  def slideOutLeft: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideOutLeft = "slideOutLeft".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideOutLeft]
   @scala.inline
-  def slideOutLeft: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideOutLeft = this.cast("slideOutLeft")
+  def slideOutRight: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideOutRight = "slideOutRight".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideOutRight]
   @scala.inline
-  def slideOutRight: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideOutRight = this.cast("slideOutRight")
+  def slideOutUp: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideOutUp = "slideOutUp".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideOutUp]
   @scala.inline
-  def slideOutUp: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.slideOutUp = this.cast("slideOutUp")
+  def swing: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.swing = "swing".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.swing]
   @scala.inline
-  def swing: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.swing = this.cast("swing")
+  def tada: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.tada = "tada".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.tada]
   @scala.inline
-  def tada: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.tada = this.cast("tada")
+  def wobble: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.wobble = "wobble".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.wobble]
   @scala.inline
-  def wobble: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.wobble = this.cast("wobble")
+  def zoomIn: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomIn = "zoomIn".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomIn]
   @scala.inline
-  def zoomIn: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomIn = this.cast("zoomIn")
+  def zoomInDown: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomInDown = "zoomInDown".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomInDown]
   @scala.inline
-  def zoomInDown: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomInDown = this.cast("zoomInDown")
+  def zoomInLeft: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomInLeft = "zoomInLeft".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomInLeft]
   @scala.inline
-  def zoomInLeft: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomInLeft = this.cast("zoomInLeft")
+  def zoomInRight: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomInRight = "zoomInRight".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomInRight]
   @scala.inline
-  def zoomInRight: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomInRight = this.cast("zoomInRight")
+  def zoomInUp: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomInUp = "zoomInUp".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomInUp]
   @scala.inline
-  def zoomInUp: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomInUp = this.cast("zoomInUp")
+  def zoomOut: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomOut = "zoomOut".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomOut]
   @scala.inline
-  def zoomOut: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomOut = this.cast("zoomOut")
+  def zoomOutDown: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomOutDown = "zoomOutDown".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomOutDown]
   @scala.inline
-  def zoomOutDown: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomOutDown = this.cast("zoomOutDown")
+  def zoomOutLeft: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomOutLeft = "zoomOutLeft".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomOutLeft]
   @scala.inline
-  def zoomOutLeft: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomOutLeft = this.cast("zoomOutLeft")
+  def zoomOutRight: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomOutRight = "zoomOutRight".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomOutRight]
   @scala.inline
-  def zoomOutRight: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomOutRight = this.cast("zoomOutRight")
-  @scala.inline
-  def zoomOutUp: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomOutUp = this.cast("zoomOutUp")
+  def zoomOutUp: typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomOutUp = "zoomOutUp".asInstanceOf[typingsSlinky.reactNativeAnimatable.reactNativeAnimatableStrings.zoomOutUp]
 }
 

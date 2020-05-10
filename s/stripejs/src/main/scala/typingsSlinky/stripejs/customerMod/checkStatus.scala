@@ -14,14 +14,12 @@ trait checkStatus extends js.Object
 
 object checkStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fail: typingsSlinky.stripejs.stripejsStrings.fail = "fail".asInstanceOf[typingsSlinky.stripejs.stripejsStrings.fail]
   @scala.inline
-  def fail: typingsSlinky.stripejs.stripejsStrings.fail = this.cast("fail")
+  def pass: typingsSlinky.stripejs.stripejsStrings.pass = "pass".asInstanceOf[typingsSlinky.stripejs.stripejsStrings.pass]
   @scala.inline
-  def pass: typingsSlinky.stripejs.stripejsStrings.pass = this.cast("pass")
+  def unavailable: typingsSlinky.stripejs.stripejsStrings.unavailable = "unavailable".asInstanceOf[typingsSlinky.stripejs.stripejsStrings.unavailable]
   @scala.inline
-  def unavailable: typingsSlinky.stripejs.stripejsStrings.unavailable = this.cast("unavailable")
-  @scala.inline
-  def unchecked: typingsSlinky.stripejs.stripejsStrings.unchecked = this.cast("unchecked")
+  def unchecked: typingsSlinky.stripejs.stripejsStrings.unchecked = "unchecked".asInstanceOf[typingsSlinky.stripejs.stripejsStrings.unchecked]
 }
 

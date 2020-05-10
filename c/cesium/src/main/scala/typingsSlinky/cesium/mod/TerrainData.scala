@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class TerrainData () extends js.Object {
   var credits: js.Array[Credit] = js.native
-  var waterMask: scala.scalajs.js.typedarray.Uint8Array | HTMLImageElement | HTMLCanvasElement = js.native
+  var waterMask: js.typedarray.Uint8Array | HTMLImageElement | HTMLCanvasElement = js.native
   def interpolateHeight(rectangle: Rectangle, longitude: Double, latitude: Double): Double = js.native
   def isChildAvailable(thisX: Double, thisY: Double, childX: Double, childY: Double): Boolean = js.native
   def upsample(

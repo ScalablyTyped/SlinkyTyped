@@ -16,11 +16,41 @@ trait SchemaListItemNamesForUnmappedIdentityResponse extends js.Object {
 
 object SchemaListItemNamesForUnmappedIdentityResponse {
   @scala.inline
-  def apply(itemNames: js.Array[String] = null, nextPageToken: String = null): SchemaListItemNamesForUnmappedIdentityResponse = {
+  def apply(): SchemaListItemNamesForUnmappedIdentityResponse = {
     val __obj = js.Dynamic.literal()
-    if (itemNames != null) __obj.updateDynamic("itemNames")(itemNames.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListItemNamesForUnmappedIdentityResponse]
   }
+  @scala.inline
+  implicit class SchemaListItemNamesForUnmappedIdentityResponseOps[Self <: SchemaListItemNamesForUnmappedIdentityResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItemNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

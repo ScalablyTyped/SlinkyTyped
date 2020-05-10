@@ -1,7 +1,7 @@
 package typingsSlinky.storybookAddonJsx.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.ReactElement
+import slinky.core.facade.ReactElement
 import typingsSlinky.storybookAddons.typesMod.DecoratorFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`

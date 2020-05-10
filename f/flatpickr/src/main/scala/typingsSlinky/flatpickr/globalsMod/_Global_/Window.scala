@@ -1,10 +1,10 @@
 package typingsSlinky.flatpickr.globalsMod._Global_
 
+import org.scalajs.dom.raw.Node
 import typingsSlinky.flatpickr.instanceMod.FlatpickrFn
 import typingsSlinky.flatpickr.instanceMod.Instance
 import typingsSlinky.flatpickr.optionsMod.Options
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

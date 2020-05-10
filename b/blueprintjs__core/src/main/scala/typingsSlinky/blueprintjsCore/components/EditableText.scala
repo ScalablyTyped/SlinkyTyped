@@ -1,64 +1,65 @@
 package typingsSlinky.blueprintjsCore.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.editableTextMod.IEditableTextProps
 import typingsSlinky.blueprintjsCore.intentMod.Intent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object EditableText
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsCore.mod.EditableText] {
+object EditableText {
   @JSImport("@blueprintjs/core", "EditableText")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, placeholder, type */
-  def apply(
-    alwaysRenderInput: js.UndefOr[Boolean] = js.undefined,
-    confirmOnEnterKey: js.UndefOr[Boolean] = js.undefined,
-    defaultValue: String = null,
-    intent: Intent = null,
-    isEditing: js.UndefOr[Boolean] = js.undefined,
-    maxLength: Int | Double = null,
-    maxLines: Int | Double = null,
-    minLines: Int | Double = null,
-    minWidth: Int | Double = null,
-    multiline: js.UndefOr[Boolean] = js.undefined,
-    onCancel: /* value */ String => Unit = null,
-    onChange: /* value */ String => Unit = null,
-    onConfirm: /* value */ String => Unit = null,
-    onEdit: /* value */ String => Unit = null,
-    selectAllOnFocus: js.UndefOr[Boolean] = js.undefined,
-    value: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.EditableText] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alwaysRenderInput)) __obj.updateDynamic("alwaysRenderInput")(alwaysRenderInput.asInstanceOf[js.Any])
-    if (!js.isUndefined(confirmOnEnterKey)) __obj.updateDynamic("confirmOnEnterKey")(confirmOnEnterKey.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (intent != null) __obj.updateDynamic("intent")(intent.asInstanceOf[js.Any])
-    if (!js.isUndefined(isEditing)) __obj.updateDynamic("isEditing")(isEditing.asInstanceOf[js.Any])
-    if (maxLength != null) __obj.updateDynamic("maxLength")(maxLength.asInstanceOf[js.Any])
-    if (maxLines != null) __obj.updateDynamic("maxLines")(maxLines.asInstanceOf[js.Any])
-    if (minLines != null) __obj.updateDynamic("minLines")(minLines.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiline)) __obj.updateDynamic("multiline")(multiline.asInstanceOf[js.Any])
-    if (onCancel != null) __obj.updateDynamic("onCancel")(js.Any.fromFunction1(onCancel))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onConfirm != null) __obj.updateDynamic("onConfirm")(js.Any.fromFunction1(onConfirm))
-    if (onEdit != null) __obj.updateDynamic("onEdit")(js.Any.fromFunction1(onEdit))
-    if (!js.isUndefined(selectAllOnFocus)) __obj.updateDynamic("selectAllOnFocus")(selectAllOnFocus.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.EditableText] {
+    @scala.inline
+    def alwaysRenderInput(value: Boolean): this.type = set("alwaysRenderInput", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def confirmOnEnterKey(value: Boolean): this.type = set("confirmOnEnterKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: String): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def intent(value: Intent): this.type = set("intent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isEditing(value: Boolean): this.type = set("isEditing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxLength(value: Double): this.type = set("maxLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxLines(value: Double): this.type = set("maxLines", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minLines(value: Double): this.type = set("minLines", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minWidth(value: Double): this.type = set("minWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiline(value: Boolean): this.type = set("multiline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCancel(value: /* value */ String => Unit): this.type = set("onCancel", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: /* value */ String => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onConfirm(value: /* value */ String => Unit): this.type = set("onConfirm", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEdit(value: /* value */ String => Unit): this.type = set("onEdit", js.Any.fromFunction1(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectAllOnFocus(value: Boolean): this.type = set("selectAllOnFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.EditableText] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.blueprintjsCore.mod.EditableText](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IEditableTextProps
+  
+  def withProps(p: IEditableTextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: EditableText.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

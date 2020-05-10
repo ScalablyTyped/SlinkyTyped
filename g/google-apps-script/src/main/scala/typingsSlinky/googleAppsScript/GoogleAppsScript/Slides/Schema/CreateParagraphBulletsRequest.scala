@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CreateParagraphBulletsRequest extends js.Object {
-  var bulletPreset: js.UndefOr[String] = js.undefined
-  var cellLocation: js.UndefOr[TableCellLocation] = js.undefined
-  var objectId: js.UndefOr[String] = js.undefined
-  var textRange: js.UndefOr[Range] = js.undefined
+  var bulletPreset: js.UndefOr[String] = js.native
+  var cellLocation: js.UndefOr[TableCellLocation] = js.native
+  var objectId: js.UndefOr[String] = js.native
+  var textRange: js.UndefOr[Range] = js.native
 }
 
 object CreateParagraphBulletsRequest {
   @scala.inline
-  def apply(
-    bulletPreset: String = null,
-    cellLocation: TableCellLocation = null,
-    objectId: String = null,
-    textRange: Range = null
-  ): CreateParagraphBulletsRequest = {
+  def apply(): CreateParagraphBulletsRequest = {
     val __obj = js.Dynamic.literal()
-    if (bulletPreset != null) __obj.updateDynamic("bulletPreset")(bulletPreset.asInstanceOf[js.Any])
-    if (cellLocation != null) __obj.updateDynamic("cellLocation")(cellLocation.asInstanceOf[js.Any])
-    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
-    if (textRange != null) __obj.updateDynamic("textRange")(textRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateParagraphBulletsRequest]
   }
+  @scala.inline
+  implicit class CreateParagraphBulletsRequestOps[Self <: CreateParagraphBulletsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBulletPreset(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletPreset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBulletPreset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletPreset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellLocation(value: TableCellLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextRange(value: Range): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textRange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -19,10 +19,29 @@ trait SchemaTableRowStyleSuggestionState extends js.Object {
 
 object SchemaTableRowStyleSuggestionState {
   @scala.inline
-  def apply(minRowHeightSuggested: js.UndefOr[Boolean] = js.undefined): SchemaTableRowStyleSuggestionState = {
+  def apply(): SchemaTableRowStyleSuggestionState = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(minRowHeightSuggested)) __obj.updateDynamic("minRowHeightSuggested")(minRowHeightSuggested.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTableRowStyleSuggestionState]
   }
+  @scala.inline
+  implicit class SchemaTableRowStyleSuggestionStateOps[Self <: SchemaTableRowStyleSuggestionState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMinRowHeightSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minRowHeightSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinRowHeightSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minRowHeightSuggested")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,15 +1,15 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.documentCardActivityTypesMod.IDocumentCardActivity
 import typingsSlinky.officeUiFabricReact.documentCardActivityTypesMod.IDocumentCardActivityPerson
 import typingsSlinky.officeUiFabricReact.documentCardActivityTypesMod.IDocumentCardActivityProps
 import typingsSlinky.officeUiFabricReact.documentCardActivityTypesMod.IDocumentCardActivityStyleProps
 import typingsSlinky.officeUiFabricReact.documentCardActivityTypesMod.IDocumentCardActivityStyles
 import typingsSlinky.react.mod.LegacyRef
+import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -17,29 +17,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DocumentCardActivity
-  extends ExternalComponentWithAttributesWithRefType[tag.type, LegacyRef[js.Any] with js.Object] {
+object DocumentCardActivity {
   @JSImport("office-ui-fabric-react", "DocumentCardActivity")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    activity: String,
-    people: js.Array[IDocumentCardActivityPerson],
-    componentRef: IRefObject[IDocumentCardActivity] = null,
-    styles: IStyleFunctionOrObject[IDocumentCardActivityStyleProps, IDocumentCardActivityStyles] = null,
-    theme: ITheme = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] = {
-    val __obj = js.Dynamic.literal(activity = activity.asInstanceOf[js.Any], people = people.asInstanceOf[js.Any])
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ IDocumentCardActivity | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[IDocumentCardActivity]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[IDocumentCardActivity]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stylesFunction1(value: IDocumentCardActivityStyleProps => Partial[IDocumentCardActivityStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: IStyleFunctionOrObject[IDocumentCardActivityStyleProps, IDocumentCardActivityStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
-  type Props = IDocumentCardActivityProps
+  
+  def withProps(p: IDocumentCardActivityProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(activity: String, people: js.Array[IDocumentCardActivityPerson]): Builder = {
+    val __props = js.Dynamic.literal(activity = activity.asInstanceOf[js.Any], people = people.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IDocumentCardActivityProps]))
+  }
 }
 

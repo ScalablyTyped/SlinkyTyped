@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.knockout.KnockoutSubscribableFunctions because Already inherited
 - typingsSlinky.knockout.KnockoutObservableFunctions because Already inherited
 - typingsSlinky.knockout.KnockoutSubscribable because Already inherited

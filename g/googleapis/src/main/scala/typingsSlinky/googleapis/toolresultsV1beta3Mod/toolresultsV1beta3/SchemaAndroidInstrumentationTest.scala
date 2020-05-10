@@ -36,18 +36,65 @@ trait SchemaAndroidInstrumentationTest extends js.Object {
 
 object SchemaAndroidInstrumentationTest {
   @scala.inline
-  def apply(
-    testPackageId: String = null,
-    testRunnerClass: String = null,
-    testTargets: js.Array[String] = null,
-    useOrchestrator: js.UndefOr[Boolean] = js.undefined
-  ): SchemaAndroidInstrumentationTest = {
+  def apply(): SchemaAndroidInstrumentationTest = {
     val __obj = js.Dynamic.literal()
-    if (testPackageId != null) __obj.updateDynamic("testPackageId")(testPackageId.asInstanceOf[js.Any])
-    if (testRunnerClass != null) __obj.updateDynamic("testRunnerClass")(testRunnerClass.asInstanceOf[js.Any])
-    if (testTargets != null) __obj.updateDynamic("testTargets")(testTargets.asInstanceOf[js.Any])
-    if (!js.isUndefined(useOrchestrator)) __obj.updateDynamic("useOrchestrator")(useOrchestrator.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAndroidInstrumentationTest]
   }
+  @scala.inline
+  implicit class SchemaAndroidInstrumentationTestOps[Self <: SchemaAndroidInstrumentationTest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTestPackageId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testPackageId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestPackageId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testPackageId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestRunnerClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testRunnerClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestRunnerClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testRunnerClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestTargets(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testTargets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestTargets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testTargets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseOrchestrator(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useOrchestrator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseOrchestrator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useOrchestrator")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonExpression extends js.Object {
-  var attribute: js.UndefOr[String] = js.undefined
-  var expression: js.UndefOr[js.RegExp] = js.undefined
-  var key: js.UndefOr[String] = js.undefined
+  var attribute: js.UndefOr[String] = js.native
+  var expression: js.UndefOr[js.RegExp] = js.native
+  var key: js.UndefOr[String] = js.native
 }
 
 object AnonExpression {
   @scala.inline
-  def apply(attribute: String = null, expression: js.RegExp = null, key: String = null): AnonExpression = {
+  def apply(): AnonExpression = {
     val __obj = js.Dynamic.literal()
-    if (attribute != null) __obj.updateDynamic("attribute")(attribute.asInstanceOf[js.Any])
-    if (expression != null) __obj.updateDynamic("expression")(expression.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonExpression]
   }
+  @scala.inline
+  implicit class AnonExpressionOps[Self <: AnonExpression] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttribute(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attribute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttribute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attribute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpression(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

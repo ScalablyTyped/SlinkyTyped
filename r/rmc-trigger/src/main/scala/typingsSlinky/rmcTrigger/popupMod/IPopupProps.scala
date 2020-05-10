@@ -4,63 +4,231 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IPopupProps extends js.Object {
-  var align: js.UndefOr[js.Any] = js.undefined
-  var animation: js.UndefOr[String] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var destroyPopupOnHide: js.UndefOr[Boolean] = js.undefined
-  var getClassNameFromAlign: js.UndefOr[js.Function] = js.undefined
-  var getRootDomNode: js.UndefOr[js.Function] = js.undefined
-  var mask: js.UndefOr[Boolean] = js.undefined
-  var maskAnimation: js.UndefOr[String] = js.undefined
-  var maskTransitionName: js.UndefOr[String | js.Object] = js.undefined
-  var onAlign: js.UndefOr[js.Function] = js.undefined
-  var onAnimateLeave: js.UndefOr[js.Function] = js.undefined
-  var prefixCls: js.UndefOr[String] = js.undefined
-  var style: js.UndefOr[js.Any] = js.undefined
-  var transitionName: js.UndefOr[String | js.Object] = js.undefined
-  var visible: js.UndefOr[Boolean] = js.undefined
-  var zIndex: js.UndefOr[Double] = js.undefined
+  var align: js.UndefOr[js.Any] = js.native
+  var animation: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.native
+  var destroyPopupOnHide: js.UndefOr[Boolean] = js.native
+  var getClassNameFromAlign: js.UndefOr[js.Function] = js.native
+  var getRootDomNode: js.UndefOr[js.Function] = js.native
+  var mask: js.UndefOr[Boolean] = js.native
+  var maskAnimation: js.UndefOr[String] = js.native
+  var maskTransitionName: js.UndefOr[String | js.Object] = js.native
+  var onAlign: js.UndefOr[js.Function] = js.native
+  var onAnimateLeave: js.UndefOr[js.Function] = js.native
+  var prefixCls: js.UndefOr[String] = js.native
+  var style: js.UndefOr[js.Any] = js.native
+  var transitionName: js.UndefOr[String | js.Object] = js.native
+  var visible: js.UndefOr[Boolean] = js.native
+  var zIndex: js.UndefOr[Double] = js.native
 }
 
 object IPopupProps {
   @scala.inline
-  def apply(
-    align: js.Any = null,
-    animation: String = null,
-    className: String = null,
-    destroyPopupOnHide: js.UndefOr[Boolean] = js.undefined,
-    getClassNameFromAlign: js.Function = null,
-    getRootDomNode: js.Function = null,
-    mask: js.UndefOr[Boolean] = js.undefined,
-    maskAnimation: String = null,
-    maskTransitionName: String | js.Object = null,
-    onAlign: js.Function = null,
-    onAnimateLeave: js.Function = null,
-    prefixCls: String = null,
-    style: js.Any = null,
-    transitionName: String | js.Object = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    zIndex: Int | Double = null
-  ): IPopupProps = {
+  def apply(): IPopupProps = {
     val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(destroyPopupOnHide)) __obj.updateDynamic("destroyPopupOnHide")(destroyPopupOnHide.asInstanceOf[js.Any])
-    if (getClassNameFromAlign != null) __obj.updateDynamic("getClassNameFromAlign")(getClassNameFromAlign.asInstanceOf[js.Any])
-    if (getRootDomNode != null) __obj.updateDynamic("getRootDomNode")(getRootDomNode.asInstanceOf[js.Any])
-    if (!js.isUndefined(mask)) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
-    if (maskAnimation != null) __obj.updateDynamic("maskAnimation")(maskAnimation.asInstanceOf[js.Any])
-    if (maskTransitionName != null) __obj.updateDynamic("maskTransitionName")(maskTransitionName.asInstanceOf[js.Any])
-    if (onAlign != null) __obj.updateDynamic("onAlign")(onAlign.asInstanceOf[js.Any])
-    if (onAnimateLeave != null) __obj.updateDynamic("onAnimateLeave")(onAnimateLeave.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPopupProps]
   }
+  @scala.inline
+  implicit class IPopupPropsOps[Self <: IPopupProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlign(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestroyPopupOnHide(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroyPopupOnHide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestroyPopupOnHide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroyPopupOnHide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetClassNameFromAlign(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getClassNameFromAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGetClassNameFromAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getClassNameFromAlign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetRootDomNode(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRootDomNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGetRootDomNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRootDomNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMask(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskAnimation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskTransitionName(value: String | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskTransitionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskTransitionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskTransitionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAlign(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAlign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAnimateLeave(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimateLeave")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnAnimateLeave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimateLeave")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionName(value: String | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

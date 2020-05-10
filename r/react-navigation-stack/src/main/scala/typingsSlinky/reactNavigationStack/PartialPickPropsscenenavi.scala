@@ -15,69 +15,257 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<std.Pick<react-navigation-stack.react-navigation-stack/lib/typescript/views/Header/Header.Props, 'scene' | 'navigation' | 'position' | 'layoutPreset' | 'backTitleVisible' | 'scenes' | 'layout' | 'mode' | 'transitionPreset' | 'leftInterpolator' | 'titleInterpolator' | 'rightInterpolator' | 'backgroundInterpolator' | 'leftLabelInterpolator' | 'leftButtonInterpolator' | 'titleFromLeftInterpolator' | 'layoutInterpolator' | 'theme'>> */
+@js.native
 trait PartialPickPropsscenenavi extends js.Object {
-  var backTitleVisible: js.UndefOr[Boolean] = js.undefined
-  var backgroundInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.undefined
-  var layout: js.UndefOr[TransitionerLayout] = js.undefined
-  var layoutInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.undefined
-  var layoutPreset: js.UndefOr[HeaderLayoutPreset] = js.undefined
-  var leftButtonInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.undefined
-  var leftInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.undefined
-  var leftLabelInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.undefined
-  var mode: js.UndefOr[HeaderMode] = js.undefined
-  var navigation: js.UndefOr[NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams]] = js.undefined
-  var position: js.UndefOr[Value] = js.undefined
-  var rightInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.undefined
-  var scene: js.UndefOr[Scene] = js.undefined
-  var scenes: js.UndefOr[js.Array[Scene]] = js.undefined
-  var theme: js.UndefOr[String] = js.undefined
-  var titleFromLeftInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.undefined
-  var titleInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.undefined
-  var transitionPreset: js.UndefOr[HeaderTransitionPreset] = js.undefined
+  var backTitleVisible: js.UndefOr[Boolean] = js.native
+  var backgroundInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.native
+  var layout: js.UndefOr[TransitionerLayout] = js.native
+  var layoutInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.native
+  var layoutPreset: js.UndefOr[HeaderLayoutPreset] = js.native
+  var leftButtonInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.native
+  var leftInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.native
+  var leftLabelInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.native
+  var mode: js.UndefOr[HeaderMode] = js.native
+  var navigation: js.UndefOr[NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams]] = js.native
+  var position: js.UndefOr[Value] = js.native
+  var rightInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.native
+  var scene: js.UndefOr[Scene] = js.native
+  var scenes: js.UndefOr[js.Array[Scene]] = js.native
+  var theme: js.UndefOr[String] = js.native
+  var titleFromLeftInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.native
+  var titleInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.native
+  var transitionPreset: js.UndefOr[HeaderTransitionPreset] = js.native
 }
 
 object PartialPickPropsscenenavi {
   @scala.inline
-  def apply(
-    backTitleVisible: js.UndefOr[Boolean] = js.undefined,
-    backgroundInterpolator: /* props */ SceneInterpolatorProps => _ = null,
-    layout: TransitionerLayout = null,
-    layoutInterpolator: /* props */ SceneInterpolatorProps => _ = null,
-    layoutPreset: HeaderLayoutPreset = null,
-    leftButtonInterpolator: /* props */ SceneInterpolatorProps => _ = null,
-    leftInterpolator: /* props */ SceneInterpolatorProps => _ = null,
-    leftLabelInterpolator: /* props */ SceneInterpolatorProps => _ = null,
-    mode: HeaderMode = null,
-    navigation: NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams] = null,
-    position: Value = null,
-    rightInterpolator: /* props */ SceneInterpolatorProps => _ = null,
-    scene: Scene = null,
-    scenes: js.Array[Scene] = null,
-    theme: String = null,
-    titleFromLeftInterpolator: /* props */ SceneInterpolatorProps => _ = null,
-    titleInterpolator: /* props */ SceneInterpolatorProps => _ = null,
-    transitionPreset: HeaderTransitionPreset = null
-  ): PartialPickPropsscenenavi = {
+  def apply(): PartialPickPropsscenenavi = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(backTitleVisible)) __obj.updateDynamic("backTitleVisible")(backTitleVisible.asInstanceOf[js.Any])
-    if (backgroundInterpolator != null) __obj.updateDynamic("backgroundInterpolator")(js.Any.fromFunction1(backgroundInterpolator))
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (layoutInterpolator != null) __obj.updateDynamic("layoutInterpolator")(js.Any.fromFunction1(layoutInterpolator))
-    if (layoutPreset != null) __obj.updateDynamic("layoutPreset")(layoutPreset.asInstanceOf[js.Any])
-    if (leftButtonInterpolator != null) __obj.updateDynamic("leftButtonInterpolator")(js.Any.fromFunction1(leftButtonInterpolator))
-    if (leftInterpolator != null) __obj.updateDynamic("leftInterpolator")(js.Any.fromFunction1(leftInterpolator))
-    if (leftLabelInterpolator != null) __obj.updateDynamic("leftLabelInterpolator")(js.Any.fromFunction1(leftLabelInterpolator))
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (navigation != null) __obj.updateDynamic("navigation")(navigation.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (rightInterpolator != null) __obj.updateDynamic("rightInterpolator")(js.Any.fromFunction1(rightInterpolator))
-    if (scene != null) __obj.updateDynamic("scene")(scene.asInstanceOf[js.Any])
-    if (scenes != null) __obj.updateDynamic("scenes")(scenes.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (titleFromLeftInterpolator != null) __obj.updateDynamic("titleFromLeftInterpolator")(js.Any.fromFunction1(titleFromLeftInterpolator))
-    if (titleInterpolator != null) __obj.updateDynamic("titleInterpolator")(js.Any.fromFunction1(titleInterpolator))
-    if (transitionPreset != null) __obj.updateDynamic("transitionPreset")(transitionPreset.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialPickPropsscenenavi]
   }
+  @scala.inline
+  implicit class PartialPickPropsscenenaviOps[Self <: PartialPickPropsscenenavi] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackTitleVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backTitleVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackTitleVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backTitleVisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundInterpolator(value: /* props */ SceneInterpolatorProps => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundInterpolator")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundInterpolator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundInterpolator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayout(value: TransitionerLayout): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayoutInterpolator(value: /* props */ SceneInterpolatorProps => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutInterpolator")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLayoutInterpolator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutInterpolator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayoutPreset(value: HeaderLayoutPreset): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutPreset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayoutPreset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutPreset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeftButtonInterpolator(value: /* props */ SceneInterpolatorProps => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftButtonInterpolator")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLeftButtonInterpolator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftButtonInterpolator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeftInterpolator(value: /* props */ SceneInterpolatorProps => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftInterpolator")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLeftInterpolator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftInterpolator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeftLabelInterpolator(value: /* props */ SceneInterpolatorProps => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftLabelInterpolator")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLeftLabelInterpolator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftLabelInterpolator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: HeaderMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavigation(value: NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavigation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: Value): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRightInterpolator(value: /* props */ SceneInterpolatorProps => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightInterpolator")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRightInterpolator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightInterpolator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScene(value: Scene): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scene")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScene: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scene")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScenes(value: js.Array[Scene]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scenes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScenes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scenes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTheme(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleFromLeftInterpolator(value: /* props */ SceneInterpolatorProps => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleFromLeftInterpolator")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTitleFromLeftInterpolator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleFromLeftInterpolator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleInterpolator(value: /* props */ SceneInterpolatorProps => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleInterpolator")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTitleInterpolator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleInterpolator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionPreset(value: HeaderTransitionPreset): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionPreset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionPreset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionPreset")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

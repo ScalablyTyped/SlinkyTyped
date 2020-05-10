@@ -44,23 +44,95 @@ trait VpcAttachmentArgs extends js.Object {
 
 object VpcAttachmentArgs {
   @scala.inline
-  def apply(
-    subnetIds: Input[js.Array[Input[String]]],
-    transitGatewayId: Input[String],
-    vpcId: Input[String],
-    dnsSupport: Input[String] = null,
-    ipv6Support: Input[String] = null,
-    tags: Input[StringDictionary[_]] = null,
-    transitGatewayDefaultRouteTableAssociation: Input[Boolean] = null,
-    transitGatewayDefaultRouteTablePropagation: Input[Boolean] = null
-  ): VpcAttachmentArgs = {
+  def apply(subnetIds: Input[js.Array[Input[String]]], transitGatewayId: Input[String], vpcId: Input[String]): VpcAttachmentArgs = {
     val __obj = js.Dynamic.literal(subnetIds = subnetIds.asInstanceOf[js.Any], transitGatewayId = transitGatewayId.asInstanceOf[js.Any], vpcId = vpcId.asInstanceOf[js.Any])
-    if (dnsSupport != null) __obj.updateDynamic("dnsSupport")(dnsSupport.asInstanceOf[js.Any])
-    if (ipv6Support != null) __obj.updateDynamic("ipv6Support")(ipv6Support.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (transitGatewayDefaultRouteTableAssociation != null) __obj.updateDynamic("transitGatewayDefaultRouteTableAssociation")(transitGatewayDefaultRouteTableAssociation.asInstanceOf[js.Any])
-    if (transitGatewayDefaultRouteTablePropagation != null) __obj.updateDynamic("transitGatewayDefaultRouteTablePropagation")(transitGatewayDefaultRouteTablePropagation.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpcAttachmentArgs]
   }
+  @scala.inline
+  implicit class VpcAttachmentArgsOps[Self <: VpcAttachmentArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSubnetIds(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTransitGatewayId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitGatewayId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVpcId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDnsSupport(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsSupport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDnsSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsSupport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv6Support(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv6Support")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6Support: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv6Support")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitGatewayDefaultRouteTableAssociation(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitGatewayDefaultRouteTableAssociation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitGatewayDefaultRouteTableAssociation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitGatewayDefaultRouteTableAssociation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitGatewayDefaultRouteTablePropagation(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitGatewayDefaultRouteTablePropagation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitGatewayDefaultRouteTablePropagation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitGatewayDefaultRouteTablePropagation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

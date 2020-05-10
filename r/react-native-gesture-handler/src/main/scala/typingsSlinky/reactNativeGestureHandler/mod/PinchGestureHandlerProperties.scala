@@ -1,42 +1,52 @@
 package typingsSlinky.reactNativeGestureHandler.mod
 
-import typingsSlinky.react.mod.Ref
-import typingsSlinky.reactNativeGestureHandler.AnonBottom
-import typingsSlinky.reactNativeGestureHandler.AnonBottomHeight
-import typingsSlinky.reactNativeGestureHandler.AnonHeight
-import typingsSlinky.reactNativeGestureHandler.AnonLeft
-import typingsSlinky.reactNativeGestureHandler.AnonRight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PinchGestureHandlerProperties extends GestureHandlerProperties {
-  var onGestureEvent: js.UndefOr[js.Function1[/* event */ PinchGestureHandlerGestureEvent, Unit]] = js.undefined
-  var onHandlerStateChange: js.UndefOr[js.Function1[/* event */ PinchGestureHandlerStateChangeEvent, Unit]] = js.undefined
+  var onGestureEvent: js.UndefOr[js.Function1[/* event */ PinchGestureHandlerGestureEvent, Unit]] = js.native
+  var onHandlerStateChange: js.UndefOr[js.Function1[/* event */ PinchGestureHandlerStateChangeEvent, Unit]] = js.native
 }
 
 object PinchGestureHandlerProperties {
   @scala.inline
-  def apply(
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    hitSlop: Double | AnonBottom | AnonLeft | AnonRight | AnonHeight | AnonBottomHeight = null,
-    id: String = null,
-    onGestureEvent: /* event */ PinchGestureHandlerGestureEvent => Unit = null,
-    onHandlerStateChange: /* event */ PinchGestureHandlerStateChangeEvent => Unit = null,
-    shouldCancelWhenOutside: js.UndefOr[Boolean] = js.undefined,
-    simultaneousHandlers: Ref[_] | js.Array[Ref[_]] = null,
-    waitFor: Ref[_] | js.Array[Ref[_]] = null
-  ): PinchGestureHandlerProperties = {
+  def apply(): PinchGestureHandlerProperties = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (onGestureEvent != null) __obj.updateDynamic("onGestureEvent")(js.Any.fromFunction1(onGestureEvent))
-    if (onHandlerStateChange != null) __obj.updateDynamic("onHandlerStateChange")(js.Any.fromFunction1(onHandlerStateChange))
-    if (!js.isUndefined(shouldCancelWhenOutside)) __obj.updateDynamic("shouldCancelWhenOutside")(shouldCancelWhenOutside.asInstanceOf[js.Any])
-    if (simultaneousHandlers != null) __obj.updateDynamic("simultaneousHandlers")(simultaneousHandlers.asInstanceOf[js.Any])
-    if (waitFor != null) __obj.updateDynamic("waitFor")(waitFor.asInstanceOf[js.Any])
     __obj.asInstanceOf[PinchGestureHandlerProperties]
   }
+  @scala.inline
+  implicit class PinchGestureHandlerPropertiesOps[Self <: PinchGestureHandlerProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnGestureEvent(value: /* event */ PinchGestureHandlerGestureEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onGestureEvent")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnGestureEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onGestureEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnHandlerStateChange(value: /* event */ PinchGestureHandlerStateChangeEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHandlerStateChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnHandlerStateChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHandlerStateChange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

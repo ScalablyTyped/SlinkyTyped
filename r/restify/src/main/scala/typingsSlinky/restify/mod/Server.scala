@@ -3,7 +3,6 @@ package typingsSlinky.restify.mod
 import typingsSlinky.bunyan.mod.^
 import typingsSlinky.node.Buffer
 import typingsSlinky.spdy.mod.Server_
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,7 +54,7 @@ trait Server
     */
   def del(opts: String, handlers: RequestHandlerType*): Route | Boolean = js.native
   def del(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
-  def del(opts: RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
+  def del(opts: js.RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
   /**
     * Mounts a chain on the given path against this HTTP verb
     *
@@ -65,7 +64,7 @@ trait Server
     */
   def get(opts: String, handlers: RequestHandlerType*): Route | Boolean = js.native
   def get(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
-  def get(opts: RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
+  def get(opts: js.RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
   /**
     * Return debug information about the server.
     */
@@ -79,7 +78,7 @@ trait Server
     */
   def head(opts: String, handlers: RequestHandlerType*): Route | Boolean = js.native
   def head(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
-  def head(opts: RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
+  def head(opts: js.RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
   /**
     * Returns the number of currently inflight requests.
     */
@@ -105,7 +104,7 @@ trait Server
     */
   def opts(opts: String, handlers: RequestHandlerType*): Route | Boolean = js.native
   def opts(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
-  def opts(opts: RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
+  def opts(opts: js.RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
   /**
     * Minimal port of the functionality offered by Express.js Route Param
     * Pre-conditions
@@ -134,7 +133,7 @@ trait Server
     */
   def patch(opts: String, handlers: RequestHandlerType*): Route | Boolean = js.native
   def patch(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
-  def patch(opts: RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
+  def patch(opts: js.RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
   /**
     * Mounts a chain on the given path against this HTTP verb
     *
@@ -144,7 +143,7 @@ trait Server
     */
   def post(opts: String, handlers: RequestHandlerType*): Route | Boolean = js.native
   def post(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
-  def post(opts: RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
+  def post(opts: js.RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
   /**
     * Gives you hooks to run _before_ any routes are located.  This gives you
     * a chance to intercept the request and change headers, etc., that routing
@@ -161,7 +160,7 @@ trait Server
     */
   def put(opts: String, handlers: RequestHandlerType*): Route | Boolean = js.native
   def put(opts: RouteOptions, handlers: RequestHandlerType*): Route | Boolean = js.native
-  def put(opts: RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
+  def put(opts: js.RegExp, handlers: RequestHandlerType*): Route | Boolean = js.native
   /**
     * Removes a route from the server.
     * You pass in the route 'blob' you got from a mount call.

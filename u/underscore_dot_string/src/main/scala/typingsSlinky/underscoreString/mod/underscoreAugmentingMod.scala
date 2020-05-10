@@ -1,6 +1,5 @@
 package typingsSlinky.underscoreString.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -543,7 +542,7 @@ object underscoreAugmentingMod extends js.Object {
       * @param str
       * @param delimiter
       */
-    def words(str: String, delimiter: RegExp): js.Array[String] = js.native
+    def words(str: String, delimiter: js.RegExp): js.Array[String] = js.native
   }
   
 }

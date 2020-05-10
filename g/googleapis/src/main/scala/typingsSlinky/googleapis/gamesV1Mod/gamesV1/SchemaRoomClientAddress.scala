@@ -22,11 +22,41 @@ trait SchemaRoomClientAddress extends js.Object {
 
 object SchemaRoomClientAddress {
   @scala.inline
-  def apply(kind: String = null, xmppAddress: String = null): SchemaRoomClientAddress = {
+  def apply(): SchemaRoomClientAddress = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (xmppAddress != null) __obj.updateDynamic("xmppAddress")(xmppAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRoomClientAddress]
   }
+  @scala.inline
+  implicit class SchemaRoomClientAddressOps[Self <: SchemaRoomClientAddress] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXmppAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmppAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXmppAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmppAddress")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

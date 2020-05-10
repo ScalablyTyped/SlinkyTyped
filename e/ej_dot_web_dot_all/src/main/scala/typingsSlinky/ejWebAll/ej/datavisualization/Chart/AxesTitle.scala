@@ -4,61 +4,149 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AxesTitle extends js.Object {
   /** Specifies the position of the axis title.
     * @Default {center. See Alignment}
     */
-  var alignment: js.UndefOr[TextAlignment | String] = js.undefined
+  var alignment: js.UndefOr[TextAlignment | String] = js.native
   /** Specifies whether to trim the axis title when it exceeds the chart area or the maximum width of the title.
     * @Default {false}
     */
-  var enableTrim: js.UndefOr[Boolean] = js.undefined
+  var enableTrim: js.UndefOr[Boolean] = js.native
   /** Options for customizing the title font.
     */
-  var font: js.UndefOr[AxesTitleFont] = js.undefined
+  var font: js.UndefOr[AxesTitleFont] = js.native
   /** Maximum width of the title, when the title exceeds this width, the title gets trimmed, when enableTrim is true.
     * @Default {34}
     */
-  var maximumTitleWidth: js.UndefOr[Double] = js.undefined
+  var maximumTitleWidth: js.UndefOr[Double] = js.native
   /** offset value for axis title.
     * @Default {0}
     */
-  var offset: js.UndefOr[Double] = js.undefined
+  var offset: js.UndefOr[Double] = js.native
   /** Specifies the position of the axis title.
     * @Default {outside. See Position}
     */
-  var position: js.UndefOr[LabelPosition | String] = js.undefined
+  var position: js.UndefOr[LabelPosition | String] = js.native
   /** Title for the axis.
     */
-  var text: js.UndefOr[String] = js.undefined
+  var text: js.UndefOr[String] = js.native
   /** Controls the visibility of axis title.
     * @Default {true}
     */
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.native
 }
 
 object AxesTitle {
   @scala.inline
-  def apply(
-    alignment: TextAlignment | String = null,
-    enableTrim: js.UndefOr[Boolean] = js.undefined,
-    font: AxesTitleFont = null,
-    maximumTitleWidth: Int | Double = null,
-    offset: Int | Double = null,
-    position: LabelPosition | String = null,
-    text: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): AxesTitle = {
+  def apply(): AxesTitle = {
     val __obj = js.Dynamic.literal()
-    if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableTrim)) __obj.updateDynamic("enableTrim")(enableTrim.asInstanceOf[js.Any])
-    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
-    if (maximumTitleWidth != null) __obj.updateDynamic("maximumTitleWidth")(maximumTitleWidth.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[AxesTitle]
   }
+  @scala.inline
+  implicit class AxesTitleOps[Self <: AxesTitle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlignment(value: TextAlignment | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableTrim(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTrim")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableTrim: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTrim")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFont(value: AxesTitleFont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFont: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumTitleWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumTitleWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumTitleWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumTitleWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: LabelPosition | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

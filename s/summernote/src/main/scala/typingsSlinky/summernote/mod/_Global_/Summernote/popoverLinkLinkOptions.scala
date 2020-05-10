@@ -12,10 +12,8 @@ trait popoverLinkLinkOptions extends js.Object
 
 object popoverLinkLinkOptions {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def linkDialogShow: typingsSlinky.summernote.summernoteStrings.linkDialogShow = "linkDialogShow".asInstanceOf[typingsSlinky.summernote.summernoteStrings.linkDialogShow]
   @scala.inline
-  def linkDialogShow: typingsSlinky.summernote.summernoteStrings.linkDialogShow = this.cast("linkDialogShow")
-  @scala.inline
-  def unlink: typingsSlinky.summernote.summernoteStrings.unlink = this.cast("unlink")
+  def unlink: typingsSlinky.summernote.summernoteStrings.unlink = "unlink".asInstanceOf[typingsSlinky.summernote.summernoteStrings.unlink]
 }
 

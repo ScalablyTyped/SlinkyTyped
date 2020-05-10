@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCurX extends js.Object {
-  var curX: js.UndefOr[Double] = js.undefined
-  var curY: js.UndefOr[Double] = js.undefined
-  var edgeHit: js.UndefOr[Boolean] = js.undefined
-  var fingerCount: js.UndefOr[Double] = js.undefined
-  var minSwipe: js.UndefOr[Double] = js.undefined
-  var startX: js.UndefOr[Double] = js.undefined
-  var startY: js.UndefOr[Double] = js.undefined
-  var swipeLength: js.UndefOr[Double] = js.undefined
-  var verticalSwiping: js.UndefOr[Boolean] = js.undefined
+  var curX: js.UndefOr[Double] = js.native
+  var curY: js.UndefOr[Double] = js.native
+  var edgeHit: js.UndefOr[Boolean] = js.native
+  var fingerCount: js.UndefOr[Double] = js.native
+  var minSwipe: js.UndefOr[Double] = js.native
+  var startX: js.UndefOr[Double] = js.native
+  var startY: js.UndefOr[Double] = js.native
+  var swipeLength: js.UndefOr[Double] = js.native
+  var verticalSwiping: js.UndefOr[Boolean] = js.native
 }
 
 object AnonCurX {
   @scala.inline
-  def apply(
-    curX: Int | Double = null,
-    curY: Int | Double = null,
-    edgeHit: js.UndefOr[Boolean] = js.undefined,
-    fingerCount: Int | Double = null,
-    minSwipe: Int | Double = null,
-    startX: Int | Double = null,
-    startY: Int | Double = null,
-    swipeLength: Int | Double = null,
-    verticalSwiping: js.UndefOr[Boolean] = js.undefined
-  ): AnonCurX = {
+  def apply(): AnonCurX = {
     val __obj = js.Dynamic.literal()
-    if (curX != null) __obj.updateDynamic("curX")(curX.asInstanceOf[js.Any])
-    if (curY != null) __obj.updateDynamic("curY")(curY.asInstanceOf[js.Any])
-    if (!js.isUndefined(edgeHit)) __obj.updateDynamic("edgeHit")(edgeHit.asInstanceOf[js.Any])
-    if (fingerCount != null) __obj.updateDynamic("fingerCount")(fingerCount.asInstanceOf[js.Any])
-    if (minSwipe != null) __obj.updateDynamic("minSwipe")(minSwipe.asInstanceOf[js.Any])
-    if (startX != null) __obj.updateDynamic("startX")(startX.asInstanceOf[js.Any])
-    if (startY != null) __obj.updateDynamic("startY")(startY.asInstanceOf[js.Any])
-    if (swipeLength != null) __obj.updateDynamic("swipeLength")(swipeLength.asInstanceOf[js.Any])
-    if (!js.isUndefined(verticalSwiping)) __obj.updateDynamic("verticalSwiping")(verticalSwiping.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCurX]
   }
+  @scala.inline
+  implicit class AnonCurXOps[Self <: AnonCurX] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEdgeHit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeHit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEdgeHit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeHit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFingerCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFingerCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinSwipe(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSwipe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinSwipe: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSwipe")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSwipeLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSwipeLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalSwiping(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalSwiping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalSwiping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalSwiping")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

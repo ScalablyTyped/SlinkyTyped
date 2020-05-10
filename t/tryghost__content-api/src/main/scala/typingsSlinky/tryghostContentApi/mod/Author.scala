@@ -5,54 +5,204 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Author
   extends Identification
      with Metadata
      with GhostData {
-  var bio: js.UndefOr[Nullable[String]] = js.undefined
-  var count: js.UndefOr[AnonPosts] = js.undefined
-  var cover_image: js.UndefOr[Nullable[String]] = js.undefined
-  var facebook: js.UndefOr[Nullable[String]] = js.undefined
-  var location: js.UndefOr[Nullable[String]] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var profile_image: js.UndefOr[Nullable[String]] = js.undefined
-  var twitter: js.UndefOr[Nullable[String]] = js.undefined
-  var url: js.UndefOr[Nullable[String]] = js.undefined
-  var website: js.UndefOr[Nullable[String]] = js.undefined
+  var bio: js.UndefOr[Nullable[String]] = js.native
+  var count: js.UndefOr[AnonPosts] = js.native
+  var cover_image: js.UndefOr[Nullable[String]] = js.native
+  var facebook: js.UndefOr[Nullable[String]] = js.native
+  var location: js.UndefOr[Nullable[String]] = js.native
+  var name: js.UndefOr[String] = js.native
+  var profile_image: js.UndefOr[Nullable[String]] = js.native
+  var twitter: js.UndefOr[Nullable[String]] = js.native
+  var url: js.UndefOr[Nullable[String]] = js.native
+  var website: js.UndefOr[Nullable[String]] = js.native
 }
 
 object Author {
   @scala.inline
-  def apply(
-    id: String,
-    slug: String,
-    bio: Nullable[String] = null,
-    count: AnonPosts = null,
-    cover_image: Nullable[String] = null,
-    facebook: Nullable[String] = null,
-    location: Nullable[String] = null,
-    meta_description: Nullable[String] = null,
-    meta_title: Nullable[String] = null,
-    name: String = null,
-    profile_image: Nullable[String] = null,
-    twitter: Nullable[String] = null,
-    url: Nullable[String] = null,
-    website: Nullable[String] = null
-  ): Author = {
+  def apply(id: String, slug: String): Author = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], slug = slug.asInstanceOf[js.Any])
-    if (bio != null) __obj.updateDynamic("bio")(bio.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (cover_image != null) __obj.updateDynamic("cover_image")(cover_image.asInstanceOf[js.Any])
-    if (facebook != null) __obj.updateDynamic("facebook")(facebook.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (meta_description != null) __obj.updateDynamic("meta_description")(meta_description.asInstanceOf[js.Any])
-    if (meta_title != null) __obj.updateDynamic("meta_title")(meta_title.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (profile_image != null) __obj.updateDynamic("profile_image")(profile_image.asInstanceOf[js.Any])
-    if (twitter != null) __obj.updateDynamic("twitter")(twitter.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (website != null) __obj.updateDynamic("website")(website.asInstanceOf[js.Any])
     __obj.asInstanceOf[Author]
   }
+  @scala.inline
+  implicit class AuthorOps[Self <: Author] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBio(value: Nullable[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBioNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bio")(null)
+        ret
+    }
+    @scala.inline
+    def withCount(value: AnonPosts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCover_image(value: Nullable[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cover_image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCover_image: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cover_image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCover_imageNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cover_image")(null)
+        ret
+    }
+    @scala.inline
+    def withFacebook(value: Nullable[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("facebook")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFacebook: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("facebook")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFacebookNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("facebook")(null)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: Nullable[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocationNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(null)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfile_image(value: Nullable[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profile_image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfile_image: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profile_image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfile_imageNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profile_image")(null)
+        ret
+    }
+    @scala.inline
+    def withTwitter(value: Nullable[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("twitter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTwitter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("twitter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTwitterNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("twitter")(null)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: Nullable[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrlNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(null)
+        ret
+    }
+    @scala.inline
+    def withWebsite(value: Nullable[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("website")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebsite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("website")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebsiteNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("website")(null)
+        ret
+    }
+  }
+  
 }
 

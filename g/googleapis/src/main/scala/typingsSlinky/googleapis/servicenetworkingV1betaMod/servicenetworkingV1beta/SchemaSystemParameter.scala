@@ -30,12 +30,53 @@ trait SchemaSystemParameter extends js.Object {
 
 object SchemaSystemParameter {
   @scala.inline
-  def apply(httpHeader: String = null, name: String = null, urlQueryParameter: String = null): SchemaSystemParameter = {
+  def apply(): SchemaSystemParameter = {
     val __obj = js.Dynamic.literal()
-    if (httpHeader != null) __obj.updateDynamic("httpHeader")(httpHeader.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (urlQueryParameter != null) __obj.updateDynamic("urlQueryParameter")(urlQueryParameter.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSystemParameter]
   }
+  @scala.inline
+  implicit class SchemaSystemParameterOps[Self <: SchemaSystemParameter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHttpHeader(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpHeader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrlQueryParameter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlQueryParameter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrlQueryParameter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlQueryParameter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

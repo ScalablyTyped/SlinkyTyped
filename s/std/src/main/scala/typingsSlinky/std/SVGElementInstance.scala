@@ -13,5 +13,6 @@ trait SVGElementInstance extends EventTarget {
 
 @JSGlobal("SVGElementInstance")
 @js.native
-object SVGElementInstance extends Instantiable0[SVGElementInstance]
+object SVGElementInstance
+  extends Instantiable0[org.scalajs.dom.raw.SVGElementInstance]
 

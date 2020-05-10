@@ -114,62 +114,329 @@ trait CertificateDetail extends js.Object {
 
 object CertificateDetail {
   @scala.inline
-  def apply(
-    CertificateArn: Arn = null,
-    CertificateAuthorityArn: Arn = null,
-    CreatedAt: js.Date = null,
-    DomainName: DomainNameString = null,
-    DomainValidationOptions: DomainValidationList = null,
-    ExtendedKeyUsages: ExtendedKeyUsageList = null,
-    FailureReason: FailureReason = null,
-    ImportedAt: js.Date = null,
-    InUseBy: InUseList = null,
-    IssuedAt: js.Date = null,
-    Issuer: String = null,
-    KeyAlgorithm: KeyAlgorithm = null,
-    KeyUsages: KeyUsageList = null,
-    NotAfter: js.Date = null,
-    NotBefore: js.Date = null,
-    Options: CertificateOptions = null,
-    RenewalEligibility: RenewalEligibility = null,
-    RenewalSummary: RenewalSummary = null,
-    RevocationReason: RevocationReason = null,
-    RevokedAt: js.Date = null,
-    Serial: String = null,
-    SignatureAlgorithm: String = null,
-    Status: CertificateStatus = null,
-    Subject: String = null,
-    SubjectAlternativeNames: DomainList = null,
-    Type: CertificateType = null
-  ): CertificateDetail = {
+  def apply(): CertificateDetail = {
     val __obj = js.Dynamic.literal()
-    if (CertificateArn != null) __obj.updateDynamic("CertificateArn")(CertificateArn.asInstanceOf[js.Any])
-    if (CertificateAuthorityArn != null) __obj.updateDynamic("CertificateAuthorityArn")(CertificateAuthorityArn.asInstanceOf[js.Any])
-    if (CreatedAt != null) __obj.updateDynamic("CreatedAt")(CreatedAt.asInstanceOf[js.Any])
-    if (DomainName != null) __obj.updateDynamic("DomainName")(DomainName.asInstanceOf[js.Any])
-    if (DomainValidationOptions != null) __obj.updateDynamic("DomainValidationOptions")(DomainValidationOptions.asInstanceOf[js.Any])
-    if (ExtendedKeyUsages != null) __obj.updateDynamic("ExtendedKeyUsages")(ExtendedKeyUsages.asInstanceOf[js.Any])
-    if (FailureReason != null) __obj.updateDynamic("FailureReason")(FailureReason.asInstanceOf[js.Any])
-    if (ImportedAt != null) __obj.updateDynamic("ImportedAt")(ImportedAt.asInstanceOf[js.Any])
-    if (InUseBy != null) __obj.updateDynamic("InUseBy")(InUseBy.asInstanceOf[js.Any])
-    if (IssuedAt != null) __obj.updateDynamic("IssuedAt")(IssuedAt.asInstanceOf[js.Any])
-    if (Issuer != null) __obj.updateDynamic("Issuer")(Issuer.asInstanceOf[js.Any])
-    if (KeyAlgorithm != null) __obj.updateDynamic("KeyAlgorithm")(KeyAlgorithm.asInstanceOf[js.Any])
-    if (KeyUsages != null) __obj.updateDynamic("KeyUsages")(KeyUsages.asInstanceOf[js.Any])
-    if (NotAfter != null) __obj.updateDynamic("NotAfter")(NotAfter.asInstanceOf[js.Any])
-    if (NotBefore != null) __obj.updateDynamic("NotBefore")(NotBefore.asInstanceOf[js.Any])
-    if (Options != null) __obj.updateDynamic("Options")(Options.asInstanceOf[js.Any])
-    if (RenewalEligibility != null) __obj.updateDynamic("RenewalEligibility")(RenewalEligibility.asInstanceOf[js.Any])
-    if (RenewalSummary != null) __obj.updateDynamic("RenewalSummary")(RenewalSummary.asInstanceOf[js.Any])
-    if (RevocationReason != null) __obj.updateDynamic("RevocationReason")(RevocationReason.asInstanceOf[js.Any])
-    if (RevokedAt != null) __obj.updateDynamic("RevokedAt")(RevokedAt.asInstanceOf[js.Any])
-    if (Serial != null) __obj.updateDynamic("Serial")(Serial.asInstanceOf[js.Any])
-    if (SignatureAlgorithm != null) __obj.updateDynamic("SignatureAlgorithm")(SignatureAlgorithm.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (Subject != null) __obj.updateDynamic("Subject")(Subject.asInstanceOf[js.Any])
-    if (SubjectAlternativeNames != null) __obj.updateDynamic("SubjectAlternativeNames")(SubjectAlternativeNames.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[CertificateDetail]
   }
+  @scala.inline
+  implicit class CertificateDetailOps[Self <: CertificateDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCertificateAuthorityArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateAuthorityArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomainName(value: DomainNameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomainValidationOptions(value: DomainValidationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainValidationOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainValidationOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainValidationOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtendedKeyUsages(value: ExtendedKeyUsageList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendedKeyUsages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtendedKeyUsages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendedKeyUsages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureReason(value: FailureReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImportedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImportedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInUseBy(value: InUseList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InUseBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInUseBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InUseBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIssuedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IssuedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIssuedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IssuedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIssuer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Issuer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIssuer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Issuer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyAlgorithm(value: KeyAlgorithm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyAlgorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyUsages(value: KeyUsageList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyUsages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyUsages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyUsages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotAfter(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotAfter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotBefore(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotBefore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: CertificateOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Options")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenewalEligibility(value: RenewalEligibility): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RenewalEligibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenewalEligibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RenewalEligibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenewalSummary(value: RenewalSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RenewalSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenewalSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RenewalSummary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevocationReason(value: RevocationReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RevocationReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevocationReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RevocationReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevokedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RevokedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevokedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RevokedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSerial(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Serial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSerial: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Serial")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignatureAlgorithm(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SignatureAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignatureAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SignatureAlgorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: CertificateStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubject(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubjectAlternativeNames(value: DomainList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubjectAlternativeNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubjectAlternativeNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubjectAlternativeNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: CertificateType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

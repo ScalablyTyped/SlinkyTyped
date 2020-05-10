@@ -42,26 +42,113 @@ trait EC2InstanceDetails extends js.Object {
 
 object EC2InstanceDetails {
   @scala.inline
-  def apply(
-    AvailabilityZone: GenericString = null,
-    CurrentGeneration: js.UndefOr[Boolean] = js.undefined,
-    Family: GenericString = null,
-    InstanceType: GenericString = null,
-    Platform: GenericString = null,
-    Region: GenericString = null,
-    SizeFlexEligible: js.UndefOr[Boolean] = js.undefined,
-    Tenancy: GenericString = null
-  ): EC2InstanceDetails = {
+  def apply(): EC2InstanceDetails = {
     val __obj = js.Dynamic.literal()
-    if (AvailabilityZone != null) __obj.updateDynamic("AvailabilityZone")(AvailabilityZone.asInstanceOf[js.Any])
-    if (!js.isUndefined(CurrentGeneration)) __obj.updateDynamic("CurrentGeneration")(CurrentGeneration.asInstanceOf[js.Any])
-    if (Family != null) __obj.updateDynamic("Family")(Family.asInstanceOf[js.Any])
-    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
-    if (Platform != null) __obj.updateDynamic("Platform")(Platform.asInstanceOf[js.Any])
-    if (Region != null) __obj.updateDynamic("Region")(Region.asInstanceOf[js.Any])
-    if (!js.isUndefined(SizeFlexEligible)) __obj.updateDynamic("SizeFlexEligible")(SizeFlexEligible.asInstanceOf[js.Any])
-    if (Tenancy != null) __obj.updateDynamic("Tenancy")(Tenancy.asInstanceOf[js.Any])
     __obj.asInstanceOf[EC2InstanceDetails]
   }
+  @scala.inline
+  implicit class EC2InstanceDetailsOps[Self <: EC2InstanceDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailabilityZone(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentGeneration(value: GenericBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentGeneration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentGeneration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentGeneration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFamily(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Family")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Family")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatform(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizeFlexEligible(value: GenericBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeFlexEligible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizeFlexEligible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeFlexEligible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTenancy(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tenancy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTenancy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tenancy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

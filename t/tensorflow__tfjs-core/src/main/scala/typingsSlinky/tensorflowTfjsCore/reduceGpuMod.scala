@@ -23,12 +23,6 @@ object reduceGpuMod extends js.Object {
     def this(reduceInfo: ReduceInfo, reduceType: min) = this()
     def this(reduceInfo: ReduceInfo, reduceType: prod) = this()
     def this(reduceInfo: ReduceInfo, reduceType: sum) = this()
-    /* CompleteClass */
-    override var outputShape: js.Array[Double] = js.native
-    /* CompleteClass */
-    override var userCode: String = js.native
-    /* CompleteClass */
-    override var variableNames: js.Array[String] = js.native
   }
   
 }

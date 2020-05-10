@@ -5,33 +5,113 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDeps extends js.Object {
-  var deps: js.UndefOr[js.Array[js.Object] | Null] = js.undefined
-  var multi: js.UndefOr[Boolean] = js.undefined
-  var useClass: js.UndefOr[Type] = js.undefined
-  var useExisting: js.UndefOr[js.Any] = js.undefined
-  var useFactory: js.UndefOr[js.Function | Null] = js.undefined
-  var useValue: js.UndefOr[js.Any] = js.undefined
+  var deps: js.UndefOr[js.Array[js.Object] | Null] = js.native
+  var multi: js.UndefOr[Boolean] = js.native
+  var useClass: js.UndefOr[Type] = js.native
+  var useExisting: js.UndefOr[js.Any] = js.native
+  var useFactory: js.UndefOr[js.Function | Null] = js.native
+  var useValue: js.UndefOr[js.Any] = js.native
 }
 
 object AnonDeps {
   @scala.inline
-  def apply(
-    deps: js.Array[js.Object] = null,
-    multi: js.UndefOr[Boolean] = js.undefined,
-    useClass: Type = null,
-    useExisting: js.Any = null,
-    useFactory: js.Function = null,
-    useValue: js.Any = null
-  ): AnonDeps = {
+  def apply(): AnonDeps = {
     val __obj = js.Dynamic.literal()
-    if (deps != null) __obj.updateDynamic("deps")(deps.asInstanceOf[js.Any])
-    if (!js.isUndefined(multi)) __obj.updateDynamic("multi")(multi.asInstanceOf[js.Any])
-    if (useClass != null) __obj.updateDynamic("useClass")(useClass.asInstanceOf[js.Any])
-    if (useExisting != null) __obj.updateDynamic("useExisting")(useExisting.asInstanceOf[js.Any])
-    if (useFactory != null) __obj.updateDynamic("useFactory")(useFactory.asInstanceOf[js.Any])
-    if (useValue != null) __obj.updateDynamic("useValue")(useValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDeps]
   }
+  @scala.inline
+  implicit class AnonDepsOps[Self <: AnonDeps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeps(value: js.Array[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDepsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deps")(null)
+        ret
+    }
+    @scala.inline
+    def withMulti(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMulti: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseClass(value: Type): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseExisting(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useExisting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseExisting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useExisting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseFactory(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useFactory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseFactory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useFactory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseFactoryNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useFactory")(null)
+        ret
+    }
+    @scala.inline
+    def withUseValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

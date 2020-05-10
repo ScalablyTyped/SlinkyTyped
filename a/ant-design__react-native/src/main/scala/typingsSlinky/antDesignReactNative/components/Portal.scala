@@ -1,18 +1,19 @@
 package typingsSlinky.antDesignReactNative.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.antDesignReactNative.portalMod.default
+import typingsSlinky.antDesignReactNative.portalPortalMod.PortalProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Portal
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, default] {
+object Portal {
   @JSImport("@ant-design/react-native/lib/portal", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: PortalProps): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Portal.type): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, js.Dictionary.empty))()
 }
 

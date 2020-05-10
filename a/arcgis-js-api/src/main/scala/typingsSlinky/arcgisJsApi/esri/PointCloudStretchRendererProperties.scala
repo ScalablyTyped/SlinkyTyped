@@ -9,13 +9,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PointCloudStretchRendererProperties extends PointCloudRendererProperties {
   /**
     * The name of the number field whose values are used to drive the continuous color visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudStretchRenderer.html#field)
     */
-  var field: js.UndefOr[String] = js.undefined
+  var field: js.UndefOr[String] = js.native
   /**
     * A transform that is applied to the field value before evaluating the renderer.
     *
@@ -23,41 +24,82 @@ trait PointCloudStretchRendererProperties extends PointCloudRendererProperties {
     *
     * @default null
     */
-  var fieldTransformType: js.UndefOr[none | `low-four-bit` | `high-four-bit` | `absolute-value` | `modulo-ten`] = js.undefined
+  var fieldTransformType: js.UndefOr[none | `low-four-bit` | `high-four-bit` | `absolute-value` | `modulo-ten`] = js.native
   /**
     * An object providing options for displaying the renderer in the Legend.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudStretchRenderer.html#legendOptions)
     */
-  var legendOptions: js.UndefOr[PointCloudStretchRendererLegendOptions] = js.undefined
+  var legendOptions: js.UndefOr[PointCloudStretchRendererLegendOptions] = js.native
   /**
     * An array of color value pairs. Points with values between the specified stops are colorized with linearly interpolated colors.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudStretchRenderer.html#stops)
     */
-  var stops: js.UndefOr[js.Array[PointCloudStretchRendererStops]] = js.undefined
+  var stops: js.UndefOr[js.Array[PointCloudStretchRendererStops]] = js.native
 }
 
 object PointCloudStretchRendererProperties {
   @scala.inline
-  def apply(
-    colorModulation: PointCloudRendererColorModulation = null,
-    field: String = null,
-    fieldTransformType: none | `low-four-bit` | `high-four-bit` | `absolute-value` | `modulo-ten` = null,
-    legendOptions: PointCloudStretchRendererLegendOptions = null,
-    pointSizeAlgorithm: PointCloudRendererPointSizeAlgorithm = null,
-    pointsPerInch: Int | Double = null,
-    stops: js.Array[PointCloudStretchRendererStops] = null
-  ): PointCloudStretchRendererProperties = {
+  def apply(): PointCloudStretchRendererProperties = {
     val __obj = js.Dynamic.literal()
-    if (colorModulation != null) __obj.updateDynamic("colorModulation")(colorModulation.asInstanceOf[js.Any])
-    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
-    if (fieldTransformType != null) __obj.updateDynamic("fieldTransformType")(fieldTransformType.asInstanceOf[js.Any])
-    if (legendOptions != null) __obj.updateDynamic("legendOptions")(legendOptions.asInstanceOf[js.Any])
-    if (pointSizeAlgorithm != null) __obj.updateDynamic("pointSizeAlgorithm")(pointSizeAlgorithm.asInstanceOf[js.Any])
-    if (pointsPerInch != null) __obj.updateDynamic("pointsPerInch")(pointsPerInch.asInstanceOf[js.Any])
-    if (stops != null) __obj.updateDynamic("stops")(stops.asInstanceOf[js.Any])
     __obj.asInstanceOf[PointCloudStretchRendererProperties]
   }
+  @scala.inline
+  implicit class PointCloudStretchRendererPropertiesOps[Self <: PointCloudStretchRendererProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFieldTransformType(value: none | `low-four-bit` | `high-four-bit` | `absolute-value` | `modulo-ten`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldTransformType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldTransformType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldTransformType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLegendOptions(value: PointCloudStretchRendererLegendOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegendOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStops(value: js.Array[PointCloudStretchRendererStops]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stops")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStops: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stops")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

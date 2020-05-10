@@ -2,7 +2,7 @@ package typingsSlinky.officeUiFabricReact.calendarCalendarMod
 
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendar
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("office-ui-fabric-react/lib/components/Calendar/Calendar", "Calendar")
 @js.native
 class Calendar protected ()
-  extends BaseComponent[ICalendarProps, ICalendarState]
+  extends Component[ICalendarProps, ICalendarState, js.Any]
      with ICalendar {
   def this(props: ICalendarProps) = this()
   var _dayPicker: js.Any = js.native
@@ -31,9 +31,6 @@ class Calendar protected ()
   def UNSAFE_componentWillReceiveProps_MCalendar(nextProps: ICalendarProps): Unit = js.native
   @JSName("componentDidUpdate")
   def componentDidUpdate_MCalendar(): Unit = js.native
-  /** Sets focus to the selected date. */
-  /* CompleteClass */
-  override def focus(): Unit = js.native
 }
 
 /* static members */

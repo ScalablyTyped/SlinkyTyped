@@ -54,3 +54,127 @@ trait ParamsResourceProjectsLocationsDomainmappingsList extends StandardParamete
   var watch: js.UndefOr[Boolean] = js.native
 }
 
+object ParamsResourceProjectsLocationsDomainmappingsList {
+  @scala.inline
+  def apply(): ParamsResourceProjectsLocationsDomainmappingsList = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ParamsResourceProjectsLocationsDomainmappingsList]
+  }
+  @scala.inline
+  implicit class ParamsResourceProjectsLocationsDomainmappingsListOps[Self <: ParamsResourceProjectsLocationsDomainmappingsList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContinue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFieldSelector(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldSelector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldSelector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeUninitialized(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeUninitialized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeUninitialized: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeUninitialized")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelSelector(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelSelector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelSelector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWatch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watch")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

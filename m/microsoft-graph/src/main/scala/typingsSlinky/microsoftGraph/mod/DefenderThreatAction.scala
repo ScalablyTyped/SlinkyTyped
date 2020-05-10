@@ -17,20 +17,18 @@ trait DefenderThreatAction extends js.Object
 
 object DefenderThreatAction {
   @scala.inline
-  def allow: typingsSlinky.microsoftGraph.microsoftGraphStrings.allow = this.cast("allow")
+  def allow: typingsSlinky.microsoftGraph.microsoftGraphStrings.allow = "allow".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.allow]
   @scala.inline
-  def block: typingsSlinky.microsoftGraph.microsoftGraphStrings.block = this.cast("block")
+  def block: typingsSlinky.microsoftGraph.microsoftGraphStrings.block = "block".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.block]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def clean: typingsSlinky.microsoftGraph.microsoftGraphStrings.clean = "clean".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.clean]
   @scala.inline
-  def clean: typingsSlinky.microsoftGraph.microsoftGraphStrings.clean = this.cast("clean")
+  def deviceDefault: typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault = "deviceDefault".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault]
   @scala.inline
-  def deviceDefault: typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault = this.cast("deviceDefault")
+  def quarantine: typingsSlinky.microsoftGraph.microsoftGraphStrings.quarantine = "quarantine".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.quarantine]
   @scala.inline
-  def quarantine: typingsSlinky.microsoftGraph.microsoftGraphStrings.quarantine = this.cast("quarantine")
+  def remove: typingsSlinky.microsoftGraph.microsoftGraphStrings.remove = "remove".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.remove]
   @scala.inline
-  def remove: typingsSlinky.microsoftGraph.microsoftGraphStrings.remove = this.cast("remove")
-  @scala.inline
-  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = this.cast("userDefined")
+  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = "userDefined".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined]
 }
 

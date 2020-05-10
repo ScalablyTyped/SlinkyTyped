@@ -6,24 +6,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var projection: js.UndefOr[ProjectionLike] = js.undefined
-  var tracking: js.UndefOr[Boolean] = js.undefined
-  var trackingOptions: js.UndefOr[PositionOptions] = js.undefined
+  var projection: js.UndefOr[ProjectionLike] = js.native
+  var tracking: js.UndefOr[Boolean] = js.native
+  var trackingOptions: js.UndefOr[PositionOptions] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    projection: ProjectionLike = null,
-    tracking: js.UndefOr[Boolean] = js.undefined,
-    trackingOptions: PositionOptions = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (projection != null) __obj.updateDynamic("projection")(projection.asInstanceOf[js.Any])
-    if (!js.isUndefined(tracking)) __obj.updateDynamic("tracking")(tracking.asInstanceOf[js.Any])
-    if (trackingOptions != null) __obj.updateDynamic("trackingOptions")(trackingOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProjection(value: ProjectionLike): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTracking(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tracking")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTracking: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tracking")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrackingOptions(value: PositionOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackingOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackingOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackingOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

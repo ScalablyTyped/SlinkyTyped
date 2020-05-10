@@ -26,17 +26,59 @@ trait GetOrganizationConformancePackDetailedStatusRequest extends js.Object {
 
 object GetOrganizationConformancePackDetailedStatusRequest {
   @scala.inline
-  def apply(
-    OrganizationConformancePackName: OrganizationConformancePackName,
-    Filters: OrganizationResourceDetailedStatusFilters = null,
-    Limit: Int | Double = null,
-    NextToken: String = null
-  ): GetOrganizationConformancePackDetailedStatusRequest = {
+  def apply(OrganizationConformancePackName: OrganizationConformancePackName): GetOrganizationConformancePackDetailedStatusRequest = {
     val __obj = js.Dynamic.literal(OrganizationConformancePackName = OrganizationConformancePackName.asInstanceOf[js.Any])
-    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
-    if (Limit != null) __obj.updateDynamic("Limit")(Limit.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetOrganizationConformancePackDetailedStatusRequest]
   }
+  @scala.inline
+  implicit class GetOrganizationConformancePackDetailedStatusRequestOps[Self <: GetOrganizationConformancePackDetailedStatusRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOrganizationConformancePackName(value: OrganizationConformancePackName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationConformancePackName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFilters(value: OrganizationResourceDetailedStatusFilters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: CosmosPageLimit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

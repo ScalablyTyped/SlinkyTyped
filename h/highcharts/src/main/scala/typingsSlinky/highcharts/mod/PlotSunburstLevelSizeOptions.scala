@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotSunburstLevelSizeOptions extends js.Object {
   /**
     * (Highcharts) How to interpret `levelSize.value`.
@@ -17,21 +18,51 @@ trait PlotSunburstLevelSizeOptions extends js.Object {
     * distributes it accross all "weighted" levels. The value relative to the
     * sum of all weights determines the width.
     */
-  var unit: js.UndefOr[OptionsUnitValue] = js.undefined
+  var unit: js.UndefOr[OptionsUnitValue] = js.native
   /**
     * (Highcharts) The value used for calculating the width of the ring. Its'
     * affect is determined by `levelSize.unit`.
     */
-  var value: js.UndefOr[Double] = js.undefined
+  var value: js.UndefOr[Double] = js.native
 }
 
 object PlotSunburstLevelSizeOptions {
   @scala.inline
-  def apply(unit: OptionsUnitValue = null, value: Int | Double = null): PlotSunburstLevelSizeOptions = {
+  def apply(): PlotSunburstLevelSizeOptions = {
     val __obj = js.Dynamic.literal()
-    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotSunburstLevelSizeOptions]
   }
+  @scala.inline
+  implicit class PlotSunburstLevelSizeOptionsOps[Self <: PlotSunburstLevelSizeOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUnit(value: OptionsUnitValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

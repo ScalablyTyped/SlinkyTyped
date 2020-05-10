@@ -15,16 +15,14 @@ trait platform extends js.Object
 
 object platform {
   @scala.inline
-  def all: typingsSlinky.electronPackager.electronPackagerStrings.all = this.cast("all")
+  def all: typingsSlinky.electronPackager.electronPackagerStrings.all = "all".asInstanceOf[typingsSlinky.electronPackager.electronPackagerStrings.all]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def darwin: typingsSlinky.electronPackager.electronPackagerStrings.darwin = "darwin".asInstanceOf[typingsSlinky.electronPackager.electronPackagerStrings.darwin]
   @scala.inline
-  def darwin: typingsSlinky.electronPackager.electronPackagerStrings.darwin = this.cast("darwin")
+  def linux: typingsSlinky.electronPackager.electronPackagerStrings.linux = "linux".asInstanceOf[typingsSlinky.electronPackager.electronPackagerStrings.linux]
   @scala.inline
-  def linux: typingsSlinky.electronPackager.electronPackagerStrings.linux = this.cast("linux")
+  def mas: typingsSlinky.electronPackager.electronPackagerStrings.mas = "mas".asInstanceOf[typingsSlinky.electronPackager.electronPackagerStrings.mas]
   @scala.inline
-  def mas: typingsSlinky.electronPackager.electronPackagerStrings.mas = this.cast("mas")
-  @scala.inline
-  def win32: typingsSlinky.electronPackager.electronPackagerStrings.win32 = this.cast("win32")
+  def win32: typingsSlinky.electronPackager.electronPackagerStrings.win32 = "win32".asInstanceOf[typingsSlinky.electronPackager.electronPackagerStrings.win32]
 }
 

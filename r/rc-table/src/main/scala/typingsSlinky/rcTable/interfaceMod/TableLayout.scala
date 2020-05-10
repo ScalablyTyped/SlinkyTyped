@@ -12,10 +12,8 @@ trait TableLayout extends js.Object
 
 object TableLayout {
   @scala.inline
-  def auto: typingsSlinky.rcTable.rcTableStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.rcTable.rcTableStrings.auto = "auto".asInstanceOf[typingsSlinky.rcTable.rcTableStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def fixed: typingsSlinky.rcTable.rcTableStrings.fixed = this.cast("fixed")
+  def fixed: typingsSlinky.rcTable.rcTableStrings.fixed = "fixed".asInstanceOf[typingsSlinky.rcTable.rcTableStrings.fixed]
 }
 

@@ -30,18 +30,65 @@ trait PurchaseHostReservationRequest extends js.Object {
 
 object PurchaseHostReservationRequest {
   @scala.inline
-  def apply(
-    HostIdSet: RequestHostIdSet,
-    OfferingId: OfferingId,
-    ClientToken: String = null,
-    CurrencyCode: CurrencyCodeValues = null,
-    LimitPrice: String = null
-  ): PurchaseHostReservationRequest = {
+  def apply(HostIdSet: RequestHostIdSet, OfferingId: OfferingId): PurchaseHostReservationRequest = {
     val __obj = js.Dynamic.literal(HostIdSet = HostIdSet.asInstanceOf[js.Any], OfferingId = OfferingId.asInstanceOf[js.Any])
-    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
-    if (CurrencyCode != null) __obj.updateDynamic("CurrencyCode")(CurrencyCode.asInstanceOf[js.Any])
-    if (LimitPrice != null) __obj.updateDynamic("LimitPrice")(LimitPrice.asInstanceOf[js.Any])
     __obj.asInstanceOf[PurchaseHostReservationRequest]
   }
+  @scala.inline
+  implicit class PurchaseHostReservationRequestOps[Self <: PurchaseHostReservationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHostIdSet(value: RequestHostIdSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostIdSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOfferingId(value: OfferingId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OfferingId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrencyCode(value: CurrencyCodeValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrencyCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimitPrice(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LimitPrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimitPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LimitPrice")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -6,19 +6,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ImageryLayerViewPixelData extends Object {
   /**
     * The extent of the `pixelBlock`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-ImageryLayerView.html#pixelData)
     */
-  var extent: js.UndefOr[Extent] = js.undefined
+  var extent: js.UndefOr[Extent] = js.native
   /**
     * An object representing the pixels in the view. This provides the user access to each pixel on the client via the `pixels` property of this object.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-ImageryLayerView.html#pixelData)
     */
-  var pixelBlock: PixelBlock
+  var pixelBlock: PixelBlock = js.native
 }
 
 object ImageryLayerViewPixelData {
@@ -27,12 +28,36 @@ object ImageryLayerViewPixelData {
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
     pixelBlock: PixelBlock,
-    propertyIsEnumerable: PropertyKey => Boolean,
-    extent: Extent = null
+    propertyIsEnumerable: PropertyKey => Boolean
   ): ImageryLayerViewPixelData = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), pixelBlock = pixelBlock.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
-    if (extent != null) __obj.updateDynamic("extent")(extent.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageryLayerViewPixelData]
   }
+  @scala.inline
+  implicit class ImageryLayerViewPixelDataOps[Self <: ImageryLayerViewPixelData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPixelBlock(value: PixelBlock): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtent(value: Extent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

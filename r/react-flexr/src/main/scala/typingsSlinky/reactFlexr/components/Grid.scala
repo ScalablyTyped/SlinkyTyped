@@ -1,10 +1,7 @@
 package typingsSlinky.reactFlexr.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFlexr.ReactFlexr.GridProps
 import typingsSlinky.reactFlexr.reactFlexrStrings.bottom
 import typingsSlinky.reactFlexr.reactFlexrStrings.center
@@ -15,29 +12,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Grid
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactFlexr.mod.Grid] {
+object Grid {
   @JSImport("react-flexr", "Grid")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    align: top | center | bottom = null,
-    flexCells: js.UndefOr[Boolean] = js.undefined,
-    gutter: String = null,
-    hAlign: left | center | right = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactFlexr.mod.Grid] = {
-    val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (!js.isUndefined(flexCells)) __obj.updateDynamic("flexCells")(flexCells.asInstanceOf[js.Any])
-    if (gutter != null) __obj.updateDynamic("gutter")(gutter.asInstanceOf[js.Any])
-    if (hAlign != null) __obj.updateDynamic("hAlign")(hAlign.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactFlexr.mod.Grid] {
+    @scala.inline
+    def align(value: top | center | bottom): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flexCells(value: Boolean): this.type = set("flexCells", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gutter(value: String): this.type = set("gutter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hAlign(value: left | center | right): this.type = set("hAlign", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactFlexr.mod.Grid] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactFlexr.mod.Grid](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = GridProps
+  
+  def withProps(p: GridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Grid.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

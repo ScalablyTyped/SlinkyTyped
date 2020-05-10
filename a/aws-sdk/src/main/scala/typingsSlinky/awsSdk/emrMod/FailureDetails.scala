@@ -22,12 +22,53 @@ trait FailureDetails extends js.Object {
 
 object FailureDetails {
   @scala.inline
-  def apply(LogFile: String = null, Message: String = null, Reason: String = null): FailureDetails = {
+  def apply(): FailureDetails = {
     val __obj = js.Dynamic.literal()
-    if (LogFile != null) __obj.updateDynamic("LogFile")(LogFile.asInstanceOf[js.Any])
-    if (Message != null) __obj.updateDynamic("Message")(Message.asInstanceOf[js.Any])
-    if (Reason != null) __obj.updateDynamic("Reason")(Reason.asInstanceOf[js.Any])
     __obj.asInstanceOf[FailureDetails]
   }
+  @scala.inline
+  implicit class FailureDetailsOps[Self <: FailureDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLogFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

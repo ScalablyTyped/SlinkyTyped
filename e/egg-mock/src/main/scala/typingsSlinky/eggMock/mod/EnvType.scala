@@ -15,16 +15,14 @@ trait EnvType extends js.Object
 
 object EnvType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def default: typingsSlinky.eggMock.eggMockStrings.default = "default".asInstanceOf[typingsSlinky.eggMock.eggMockStrings.default]
   @scala.inline
-  def default: typingsSlinky.eggMock.eggMockStrings.default = this.cast("default")
+  def local: typingsSlinky.eggMock.eggMockStrings.local = "local".asInstanceOf[typingsSlinky.eggMock.eggMockStrings.local]
   @scala.inline
-  def local: typingsSlinky.eggMock.eggMockStrings.local = this.cast("local")
+  def prod: typingsSlinky.eggMock.eggMockStrings.prod = "prod".asInstanceOf[typingsSlinky.eggMock.eggMockStrings.prod]
   @scala.inline
-  def prod: typingsSlinky.eggMock.eggMockStrings.prod = this.cast("prod")
+  def test: typingsSlinky.eggMock.eggMockStrings.test = "test".asInstanceOf[typingsSlinky.eggMock.eggMockStrings.test]
   @scala.inline
-  def test: typingsSlinky.eggMock.eggMockStrings.test = this.cast("test")
-  @scala.inline
-  def unittest: typingsSlinky.eggMock.eggMockStrings.unittest = this.cast("unittest")
+  def unittest: typingsSlinky.eggMock.eggMockStrings.unittest = "unittest".asInstanceOf[typingsSlinky.eggMock.eggMockStrings.unittest]
 }
 

@@ -1,29 +1,33 @@
 package typingsSlinky.rmcCalendar.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rmcCalendar.animateWrapperMod.PropsType
 import typingsSlinky.rmcCalendar.animateWrapperMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AnimateWrapper
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object AnimateWrapper {
   @JSImport("rmc-calendar/lib/calendar/AnimateWrapper", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(visible: Boolean, displayType: String = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(visible = visible.asInstanceOf[js.Any])
-    if (displayType != null) __obj.updateDynamic("displayType")(displayType.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def displayType(value: String): this.type = set("displayType", value.asInstanceOf[js.Any])
   }
-  type Props = PropsType
+  
+  def withProps(p: PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(visible: Boolean): Builder = {
+    val __props = js.Dynamic.literal(visible = visible.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PropsType]))
+  }
 }
 

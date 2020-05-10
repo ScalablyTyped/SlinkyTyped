@@ -26,18 +26,65 @@ trait ListAcceptedPortfolioSharesInput extends js.Object {
 
 object ListAcceptedPortfolioSharesInput {
   @scala.inline
-  def apply(
-    AcceptLanguage: AcceptLanguage = null,
-    PageSize: Int | Double = null,
-    PageToken: PageToken = null,
-    PortfolioShareType: PortfolioShareType = null
-  ): ListAcceptedPortfolioSharesInput = {
+  def apply(): ListAcceptedPortfolioSharesInput = {
     val __obj = js.Dynamic.literal()
-    if (AcceptLanguage != null) __obj.updateDynamic("AcceptLanguage")(AcceptLanguage.asInstanceOf[js.Any])
-    if (PageSize != null) __obj.updateDynamic("PageSize")(PageSize.asInstanceOf[js.Any])
-    if (PageToken != null) __obj.updateDynamic("PageToken")(PageToken.asInstanceOf[js.Any])
-    if (PortfolioShareType != null) __obj.updateDynamic("PortfolioShareType")(PortfolioShareType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListAcceptedPortfolioSharesInput]
   }
+  @scala.inline
+  implicit class ListAcceptedPortfolioSharesInputOps[Self <: ListAcceptedPortfolioSharesInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcceptLanguage(value: AcceptLanguage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceptLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageSize(value: PageSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageToken(value: PageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPortfolioShareType(value: PortfolioShareType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortfolioShareType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPortfolioShareType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortfolioShareType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

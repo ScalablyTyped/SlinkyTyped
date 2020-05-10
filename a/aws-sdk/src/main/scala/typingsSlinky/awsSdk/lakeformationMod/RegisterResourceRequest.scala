@@ -22,15 +22,47 @@ trait RegisterResourceRequest extends js.Object {
 
 object RegisterResourceRequest {
   @scala.inline
-  def apply(
-    ResourceArn: ResourceArnString,
-    RoleArn: IAMRoleArn = null,
-    UseServiceLinkedRole: js.UndefOr[Boolean] = js.undefined
-  ): RegisterResourceRequest = {
+  def apply(ResourceArn: ResourceArnString): RegisterResourceRequest = {
     val __obj = js.Dynamic.literal(ResourceArn = ResourceArn.asInstanceOf[js.Any])
-    if (RoleArn != null) __obj.updateDynamic("RoleArn")(RoleArn.asInstanceOf[js.Any])
-    if (!js.isUndefined(UseServiceLinkedRole)) __obj.updateDynamic("UseServiceLinkedRole")(UseServiceLinkedRole.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterResourceRequest]
   }
+  @scala.inline
+  implicit class RegisterResourceRequestOps[Self <: RegisterResourceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResourceArn(value: ResourceArnString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: IAMRoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseServiceLinkedRole(value: NullableBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UseServiceLinkedRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseServiceLinkedRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UseServiceLinkedRole")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

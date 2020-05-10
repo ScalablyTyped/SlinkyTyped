@@ -62,35 +62,167 @@ trait UpdateAssociationRequest extends js.Object {
 
 object UpdateAssociationRequest {
   @scala.inline
-  def apply(
-    AssociationId: AssociationId,
-    AssociationName: AssociationName = null,
-    AssociationVersion: AssociationVersion = null,
-    AutomationTargetParameterName: AutomationTargetParameterName = null,
-    ComplianceSeverity: AssociationComplianceSeverity = null,
-    DocumentVersion: DocumentVersion = null,
-    MaxConcurrency: MaxConcurrency = null,
-    MaxErrors: MaxErrors = null,
-    Name: DocumentARN = null,
-    OutputLocation: InstanceAssociationOutputLocation = null,
-    Parameters: Parameters = null,
-    ScheduleExpression: ScheduleExpression = null,
-    Targets: Targets = null
-  ): UpdateAssociationRequest = {
+  def apply(AssociationId: AssociationId): UpdateAssociationRequest = {
     val __obj = js.Dynamic.literal(AssociationId = AssociationId.asInstanceOf[js.Any])
-    if (AssociationName != null) __obj.updateDynamic("AssociationName")(AssociationName.asInstanceOf[js.Any])
-    if (AssociationVersion != null) __obj.updateDynamic("AssociationVersion")(AssociationVersion.asInstanceOf[js.Any])
-    if (AutomationTargetParameterName != null) __obj.updateDynamic("AutomationTargetParameterName")(AutomationTargetParameterName.asInstanceOf[js.Any])
-    if (ComplianceSeverity != null) __obj.updateDynamic("ComplianceSeverity")(ComplianceSeverity.asInstanceOf[js.Any])
-    if (DocumentVersion != null) __obj.updateDynamic("DocumentVersion")(DocumentVersion.asInstanceOf[js.Any])
-    if (MaxConcurrency != null) __obj.updateDynamic("MaxConcurrency")(MaxConcurrency.asInstanceOf[js.Any])
-    if (MaxErrors != null) __obj.updateDynamic("MaxErrors")(MaxErrors.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (OutputLocation != null) __obj.updateDynamic("OutputLocation")(OutputLocation.asInstanceOf[js.Any])
-    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
-    if (ScheduleExpression != null) __obj.updateDynamic("ScheduleExpression")(ScheduleExpression.asInstanceOf[js.Any])
-    if (Targets != null) __obj.updateDynamic("Targets")(Targets.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateAssociationRequest]
   }
+  @scala.inline
+  implicit class UpdateAssociationRequestOps[Self <: UpdateAssociationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssociationId(value: AssociationId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAssociationName(value: AssociationName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociationName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAssociationVersion(value: AssociationVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociationVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutomationTargetParameterName(value: AutomationTargetParameterName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomationTargetParameterName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutomationTargetParameterName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomationTargetParameterName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComplianceSeverity(value: AssociationComplianceSeverity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceSeverity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComplianceSeverity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceSeverity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentVersion(value: DocumentVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxConcurrency(value: MaxConcurrency): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxConcurrency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxErrors(value: MaxErrors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: DocumentARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputLocation(value: InstanceAssociationOutputLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: Parameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduleExpression(value: ScheduleExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduleExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleExpression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargets(value: Targets): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Targets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Targets")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

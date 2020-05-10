@@ -6,36 +6,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAnonymous extends js.Object {
-  var anonymous: js.UndefOr[Boolean] = js.undefined
-  var content: js.UndefOr[String | js.Object] = js.undefined
-  var contentType: js.UndefOr[String] = js.undefined
-  var headers: js.UndefOr[js.Object] = js.undefined
-  var onComplete: js.UndefOr[js.Function1[/* response */ Response, _]] = js.undefined
-  var overrideMimeType: js.UndefOr[String] = js.undefined
-  var url: js.UndefOr[String | SDKURL] = js.undefined
+  var anonymous: js.UndefOr[Boolean] = js.native
+  var content: js.UndefOr[String | js.Object] = js.native
+  var contentType: js.UndefOr[String] = js.native
+  var headers: js.UndefOr[js.Object] = js.native
+  var onComplete: js.UndefOr[js.Function1[/* response */ Response, _]] = js.native
+  var overrideMimeType: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String | SDKURL] = js.native
 }
 
 object AnonAnonymous {
   @scala.inline
-  def apply(
-    anonymous: js.UndefOr[Boolean] = js.undefined,
-    content: String | js.Object = null,
-    contentType: String = null,
-    headers: js.Object = null,
-    onComplete: /* response */ Response => _ = null,
-    overrideMimeType: String = null,
-    url: String | SDKURL = null
-  ): AnonAnonymous = {
+  def apply(): AnonAnonymous = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(anonymous)) __obj.updateDynamic("anonymous")(anonymous.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (onComplete != null) __obj.updateDynamic("onComplete")(js.Any.fromFunction1(onComplete))
-    if (overrideMimeType != null) __obj.updateDynamic("overrideMimeType")(overrideMimeType.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAnonymous]
   }
+  @scala.inline
+  implicit class AnonAnonymousOps[Self <: AnonAnonymous] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnonymous(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anonymous")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnonymous: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anonymous")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContent(value: String | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnComplete(value: /* response */ Response => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverrideMimeType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideMimeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverrideMimeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideMimeType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String | SDKURL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

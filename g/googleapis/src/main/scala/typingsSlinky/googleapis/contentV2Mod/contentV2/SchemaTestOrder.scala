@@ -58,32 +58,149 @@ trait SchemaTestOrder extends js.Object {
 
 object SchemaTestOrder {
   @scala.inline
-  def apply(
-    customer: SchemaTestOrderCustomer = null,
-    enableOrderinvoices: js.UndefOr[Boolean] = js.undefined,
-    kind: String = null,
-    lineItems: js.Array[SchemaTestOrderLineItem] = null,
-    notificationMode: String = null,
-    paymentMethod: SchemaTestOrderPaymentMethod = null,
-    predefinedDeliveryAddress: String = null,
-    promotions: js.Array[SchemaOrderLegacyPromotion] = null,
-    shippingCost: SchemaPrice = null,
-    shippingCostTax: SchemaPrice = null,
-    shippingOption: String = null
-  ): SchemaTestOrder = {
+  def apply(): SchemaTestOrder = {
     val __obj = js.Dynamic.literal()
-    if (customer != null) __obj.updateDynamic("customer")(customer.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableOrderinvoices)) __obj.updateDynamic("enableOrderinvoices")(enableOrderinvoices.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (lineItems != null) __obj.updateDynamic("lineItems")(lineItems.asInstanceOf[js.Any])
-    if (notificationMode != null) __obj.updateDynamic("notificationMode")(notificationMode.asInstanceOf[js.Any])
-    if (paymentMethod != null) __obj.updateDynamic("paymentMethod")(paymentMethod.asInstanceOf[js.Any])
-    if (predefinedDeliveryAddress != null) __obj.updateDynamic("predefinedDeliveryAddress")(predefinedDeliveryAddress.asInstanceOf[js.Any])
-    if (promotions != null) __obj.updateDynamic("promotions")(promotions.asInstanceOf[js.Any])
-    if (shippingCost != null) __obj.updateDynamic("shippingCost")(shippingCost.asInstanceOf[js.Any])
-    if (shippingCostTax != null) __obj.updateDynamic("shippingCostTax")(shippingCostTax.asInstanceOf[js.Any])
-    if (shippingOption != null) __obj.updateDynamic("shippingOption")(shippingOption.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTestOrder]
   }
+  @scala.inline
+  implicit class SchemaTestOrderOps[Self <: SchemaTestOrder] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomer(value: SchemaTestOrderCustomer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableOrderinvoices(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableOrderinvoices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableOrderinvoices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableOrderinvoices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineItems(value: js.Array[SchemaTestOrderLineItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotificationMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaymentMethod(value: SchemaTestOrderPaymentMethod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaymentMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPredefinedDeliveryAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("predefinedDeliveryAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPredefinedDeliveryAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("predefinedDeliveryAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPromotions(value: js.Array[SchemaOrderLegacyPromotion]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promotions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPromotions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promotions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShippingCost(value: SchemaPrice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingCost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShippingCost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingCost")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShippingCostTax(value: SchemaPrice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingCostTax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShippingCostTax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingCostTax")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShippingOption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShippingOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingOption")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

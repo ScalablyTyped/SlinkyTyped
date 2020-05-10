@@ -4,6 +4,21 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.color.colorStrings.ansi16
+import typingsSlinky.color.colorStrings.ansi256
+import typingsSlinky.color.colorStrings.apple
+import typingsSlinky.color.colorStrings.cmyk
+import typingsSlinky.color.colorStrings.gray
+import typingsSlinky.color.colorStrings.hcg
+import typingsSlinky.color.colorStrings.hex
+import typingsSlinky.color.colorStrings.hsl
+import typingsSlinky.color.colorStrings.hsv
+import typingsSlinky.color.colorStrings.hwb
+import typingsSlinky.color.colorStrings.keyword
+import typingsSlinky.color.colorStrings.lab
+import typingsSlinky.color.colorStrings.lch
+import typingsSlinky.color.colorStrings.rgb
+import typingsSlinky.color.colorStrings.xyz
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,18 +28,37 @@ import scala.scalajs.js.annotation._
 trait ColorConstructor
   extends Instantiable0[Color[ColorParam]]
      with Instantiable1[/* obj */ ColorParam, Color[ColorParam]]
-     with Instantiable2[/* obj */ ColorParam, /* model */ String, Color[ColorParam]] {
+     with Instantiable2[
+      /* obj */ ColorParam, 
+      /* keyof color.Typeofconvert */ /* model */ rgb | xyz | hcg | ansi256 | ansi16 | hex | lch | cmyk | hsl | keyword | gray | hsv | apple | hwb | lab, 
+      Color[ColorParam]
+    ] {
   def apply(): Color[Color[ColorParam]] = js.native
   def apply(obj: String): Color[String] = js.native
-  def apply(obj: String, model: String): Color[String] = js.native
+  def apply(
+    obj: String,
+    model: /* keyof color.Typeofconvert */ rgb | xyz | hcg | ansi256 | ansi16 | hex | lch | cmyk | hsl | keyword | gray | hsv | apple | hwb | lab
+  ): Color[String] = js.native
   def apply(obj: Double): Color[Double] = js.native
-  def apply(obj: Double, model: String): Color[Double] = js.native
+  def apply(
+    obj: Double,
+    model: /* keyof color.Typeofconvert */ rgb | xyz | hcg | ansi256 | ansi16 | hex | lch | cmyk | hsl | keyword | gray | hsv | apple | hwb | lab
+  ): Color[Double] = js.native
   def apply(obj: Color[ColorParam]): Color[Color[ColorParam]] = js.native
-  def apply(obj: Color[ColorParam], model: String): Color[Color[ColorParam]] = js.native
+  def apply(
+    obj: Color[ColorParam],
+    model: /* keyof color.Typeofconvert */ rgb | xyz | hcg | ansi256 | ansi16 | hex | lch | cmyk | hsl | keyword | gray | hsv | apple | hwb | lab
+  ): Color[Color[ColorParam]] = js.native
   def apply(obj: ArrayLike[Double]): Color[ArrayLike[Double]] = js.native
-  def apply(obj: ArrayLike[Double], model: String): Color[ArrayLike[Double]] = js.native
+  def apply(
+    obj: ArrayLike[Double],
+    model: /* keyof color.Typeofconvert */ rgb | xyz | hcg | ansi256 | ansi16 | hex | lch | cmyk | hsl | keyword | gray | hsv | apple | hwb | lab
+  ): Color[ArrayLike[Double]] = js.native
   def apply[T /* <: StringDictionary[js.Any] */](obj: T): Color[T] = js.native
-  def apply[T /* <: StringDictionary[js.Any] */](obj: T, model: String): Color[T] = js.native
+  def apply[T /* <: StringDictionary[js.Any] */](
+    obj: T,
+    model: /* keyof color.Typeofconvert */ rgb | xyz | hcg | ansi256 | ansi16 | hex | lch | cmyk | hsl | keyword | gray | hsv | apple | hwb | lab
+  ): Color[T] = js.native
   def ansi16(color: ColorParam): Color[ColorParam] = js.native
   def ansi16(`val`: Double*): Color[ColorParam] = js.native
   def ansi256(color: ColorParam): Color[ColorParam] = js.native

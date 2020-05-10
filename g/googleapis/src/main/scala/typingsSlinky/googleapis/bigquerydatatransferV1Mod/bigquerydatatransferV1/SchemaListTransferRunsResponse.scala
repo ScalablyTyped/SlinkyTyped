@@ -23,11 +23,41 @@ trait SchemaListTransferRunsResponse extends js.Object {
 
 object SchemaListTransferRunsResponse {
   @scala.inline
-  def apply(nextPageToken: String = null, transferRuns: js.Array[SchemaTransferRun] = null): SchemaListTransferRunsResponse = {
+  def apply(): SchemaListTransferRunsResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (transferRuns != null) __obj.updateDynamic("transferRuns")(transferRuns.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListTransferRunsResponse]
   }
+  @scala.inline
+  implicit class SchemaListTransferRunsResponseOps[Self <: SchemaListTransferRunsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransferRuns(value: js.Array[SchemaTransferRun]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferRuns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransferRuns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferRuns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

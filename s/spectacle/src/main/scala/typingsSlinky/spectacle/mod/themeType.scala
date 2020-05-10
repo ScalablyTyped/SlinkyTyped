@@ -16,12 +16,10 @@ trait themeType extends js.Object
 
 object themeType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dark: typingsSlinky.spectacle.spectacleStrings.dark = "dark".asInstanceOf[typingsSlinky.spectacle.spectacleStrings.dark]
   @scala.inline
-  def dark: typingsSlinky.spectacle.spectacleStrings.dark = this.cast("dark")
+  def external: typingsSlinky.spectacle.spectacleStrings.external = "external".asInstanceOf[typingsSlinky.spectacle.spectacleStrings.external]
   @scala.inline
-  def external: typingsSlinky.spectacle.spectacleStrings.external = this.cast("external")
-  @scala.inline
-  def light: typingsSlinky.spectacle.spectacleStrings.light = this.cast("light")
+  def light: typingsSlinky.spectacle.spectacleStrings.light = "light".asInstanceOf[typingsSlinky.spectacle.spectacleStrings.light]
 }
 

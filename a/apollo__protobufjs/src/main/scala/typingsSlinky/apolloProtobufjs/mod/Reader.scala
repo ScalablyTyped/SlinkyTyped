@@ -12,9 +12,9 @@ class Reader protected () extends js.Object {
     * Constructs a new reader instance using the specified buffer.
     * @param buffer Buffer to read from
     */
-  def this(buffer: scala.scalajs.js.typedarray.Uint8Array) = this()
+  def this(buffer: js.typedarray.Uint8Array) = this()
   /** Read buffer. */
-  var buf: scala.scalajs.js.typedarray.Uint8Array = js.native
+  var buf: js.typedarray.Uint8Array = js.native
   /** Read buffer length. */
   var len: Double = js.native
   /** Read buffer position. */
@@ -28,7 +28,7 @@ class Reader protected () extends js.Object {
     * Reads a sequence of bytes preceeded by its length as a varint.
     * @returns Value read
     */
-  def bytes(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def bytes(): js.typedarray.Uint8Array = js.native
   /**
     * Reads a double (64 bit float) as a number.
     * @returns Value read
@@ -119,6 +119,6 @@ object Reader extends js.Object {
     * @returns A {@link BufferReader} if `buffer` is a Buffer, otherwise a {@link Reader}
     * @throws {Error} If `buffer` is not a valid buffer
     */
-  def create(buffer: scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint8Array): Reader | BufferReader = js.native
+  def create(buffer: js.typedarray.Uint8Array): Reader | BufferReader = js.native
 }
 

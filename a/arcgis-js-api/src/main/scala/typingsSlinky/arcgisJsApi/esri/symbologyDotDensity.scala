@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait symbologyDotDensity extends js.Object {
   /**
     * Clones a dot density scheme object.
@@ -14,7 +15,7 @@ trait symbologyDotDensity extends js.Object {
     * @param scheme The dot density scheme object to clone.
     *
     */
-  def cloneScheme(scheme: DotDensityScheme): DotDensityScheme
+  def cloneScheme(scheme: DotDensityScheme): DotDensityScheme = js.native
   /**
     * Returns a dot density scheme with the provided name.
     *
@@ -27,7 +28,7 @@ trait symbologyDotDensity extends js.Object {
     * @param params.numColors The number of colors to visualize.
     *
     */
-  def getSchemeByName(params: dotDensityGetSchemeByNameParams): DotDensityScheme
+  def getSchemeByName(params: dotDensityGetSchemeByNameParams): DotDensityScheme = js.native
   /**
     * Returns a primary scheme and secondary schemes defining symbol properties for dot density-based data-driven visualizations in a [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html). The `basemap` parameter determines the color of the dots used to visualize each attribute. The `geometryType` determines which type of symbol to return.
     *
@@ -39,7 +40,7 @@ trait symbologyDotDensity extends js.Object {
     * @param params.numColors The number of colors to visualize.
     *
     */
-  def getSchemes(params: dotDensityGetSchemesParams): DotDensitySchemes
+  def getSchemes(params: dotDensityGetSchemesParams): DotDensitySchemes = js.native
   /**
     * Returns an array of dot density schemes with the provided tags. These schemes define symbol properties for dot density visualizations in any layer that can be rendered with a [DotDensityRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DotDensityRenderer.html).
     *
@@ -53,7 +54,7 @@ trait symbologyDotDensity extends js.Object {
     * @param params.numColors The number of colors to visualize.
     *
     */
-  def getSchemesByTag(params: dotDensityGetSchemesByTagParams): js.Array[DotDensityScheme]
+  def getSchemesByTag(params: dotDensityGetSchemesByTagParams): js.Array[DotDensityScheme] = js.native
 }
 
 @JSGlobal("__esri.symbologyDotDensity")

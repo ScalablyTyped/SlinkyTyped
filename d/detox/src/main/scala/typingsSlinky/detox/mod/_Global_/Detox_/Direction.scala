@@ -16,18 +16,16 @@ trait Direction extends js.Object
 
 object Direction {
   @scala.inline
-  def bottom: typingsSlinky.detox.detoxStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.detox.detoxStrings.bottom = "bottom".asInstanceOf[typingsSlinky.detox.detoxStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def down: typingsSlinky.detox.detoxStrings.down = "down".asInstanceOf[typingsSlinky.detox.detoxStrings.down]
   @scala.inline
-  def down: typingsSlinky.detox.detoxStrings.down = this.cast("down")
+  def left: typingsSlinky.detox.detoxStrings.left = "left".asInstanceOf[typingsSlinky.detox.detoxStrings.left]
   @scala.inline
-  def left: typingsSlinky.detox.detoxStrings.left = this.cast("left")
+  def right: typingsSlinky.detox.detoxStrings.right = "right".asInstanceOf[typingsSlinky.detox.detoxStrings.right]
   @scala.inline
-  def right: typingsSlinky.detox.detoxStrings.right = this.cast("right")
+  def top: typingsSlinky.detox.detoxStrings.top = "top".asInstanceOf[typingsSlinky.detox.detoxStrings.top]
   @scala.inline
-  def top: typingsSlinky.detox.detoxStrings.top = this.cast("top")
-  @scala.inline
-  def up: typingsSlinky.detox.detoxStrings.up = this.cast("up")
+  def up: typingsSlinky.detox.detoxStrings.up = "up".asInstanceOf[typingsSlinky.detox.detoxStrings.up]
 }
 

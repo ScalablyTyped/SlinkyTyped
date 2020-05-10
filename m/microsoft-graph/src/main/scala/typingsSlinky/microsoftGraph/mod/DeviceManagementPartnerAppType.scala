@@ -14,12 +14,10 @@ trait DeviceManagementPartnerAppType extends js.Object
 
 object DeviceManagementPartnerAppType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def multiTenantApp: typingsSlinky.microsoftGraph.microsoftGraphStrings.multiTenantApp = "multiTenantApp".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.multiTenantApp]
   @scala.inline
-  def multiTenantApp: typingsSlinky.microsoftGraph.microsoftGraphStrings.multiTenantApp = this.cast("multiTenantApp")
+  def singleTenantApp: typingsSlinky.microsoftGraph.microsoftGraphStrings.singleTenantApp = "singleTenantApp".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.singleTenantApp]
   @scala.inline
-  def singleTenantApp: typingsSlinky.microsoftGraph.microsoftGraphStrings.singleTenantApp = this.cast("singleTenantApp")
-  @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
 }
 

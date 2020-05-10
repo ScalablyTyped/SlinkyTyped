@@ -23,9 +23,6 @@ class Layer () extends IDataLayer {
     */
   def add(primitive: IPrimitive): Unit = js.native
   def add(primitive: IPrimitive, index: Double): Unit = js.native
-  /** Clears all data in the layer. */
-  /* CompleteClass */
-  override def clear(): Unit = js.native
   /**
     * Cleans up any resources this object is consuming
     */

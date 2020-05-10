@@ -8,9 +8,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NumberFormat extends js.Object {
-  def format(value: Double): String
-  def resolvedOptions(): ResolvedNumberFormatOptions
+  def format(value: Double): String = js.native
+  def resolvedOptions(): ResolvedNumberFormatOptions = js.native
 }
 
 @JSGlobal("Intl.NumberFormat")

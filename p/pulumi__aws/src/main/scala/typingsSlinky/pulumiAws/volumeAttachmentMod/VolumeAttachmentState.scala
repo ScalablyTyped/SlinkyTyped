@@ -39,20 +39,77 @@ trait VolumeAttachmentState extends js.Object {
 
 object VolumeAttachmentState {
   @scala.inline
-  def apply(
-    deviceName: Input[String] = null,
-    forceDetach: Input[Boolean] = null,
-    instanceId: Input[String] = null,
-    skipDestroy: Input[Boolean] = null,
-    volumeId: Input[String] = null
-  ): VolumeAttachmentState = {
+  def apply(): VolumeAttachmentState = {
     val __obj = js.Dynamic.literal()
-    if (deviceName != null) __obj.updateDynamic("deviceName")(deviceName.asInstanceOf[js.Any])
-    if (forceDetach != null) __obj.updateDynamic("forceDetach")(forceDetach.asInstanceOf[js.Any])
-    if (instanceId != null) __obj.updateDynamic("instanceId")(instanceId.asInstanceOf[js.Any])
-    if (skipDestroy != null) __obj.updateDynamic("skipDestroy")(skipDestroy.asInstanceOf[js.Any])
-    if (volumeId != null) __obj.updateDynamic("volumeId")(volumeId.asInstanceOf[js.Any])
     __obj.asInstanceOf[VolumeAttachmentState]
   }
+  @scala.inline
+  implicit class VolumeAttachmentStateOps[Self <: VolumeAttachmentState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceDetach(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceDetach")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceDetach: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceDetach")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipDestroy(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipDestroy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipDestroy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipDestroy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

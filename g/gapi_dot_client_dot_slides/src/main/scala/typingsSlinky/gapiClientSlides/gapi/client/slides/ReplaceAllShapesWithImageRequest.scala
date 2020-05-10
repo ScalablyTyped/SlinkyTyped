@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReplaceAllShapesWithImageRequest extends js.Object {
   /**
     * If set, this request will replace all of the shapes that contain the
     * given text.
     */
-  var containsText: js.UndefOr[SubstringMatchCriteria] = js.undefined
+  var containsText: js.UndefOr[SubstringMatchCriteria] = js.native
   /**
     * The image URL.
     *
@@ -20,7 +21,7 @@ trait ReplaceAllShapesWithImageRequest extends js.Object {
     *
     * The provided URL can be at maximum 2K bytes large.
     */
-  var imageUrl: js.UndefOr[String] = js.undefined
+  var imageUrl: js.UndefOr[String] = js.native
   /**
     * If non-empty, limits the matches to page elements only on the given pages.
     *
@@ -29,25 +30,72 @@ trait ReplaceAllShapesWithImageRequest extends js.Object {
     * notes master, or if a
     * page with that object ID doesn't exist in the presentation.
     */
-  var pageObjectIds: js.UndefOr[js.Array[String]] = js.undefined
+  var pageObjectIds: js.UndefOr[js.Array[String]] = js.native
   /** The replace method. */
-  var replaceMethod: js.UndefOr[String] = js.undefined
+  var replaceMethod: js.UndefOr[String] = js.native
 }
 
 object ReplaceAllShapesWithImageRequest {
   @scala.inline
-  def apply(
-    containsText: SubstringMatchCriteria = null,
-    imageUrl: String = null,
-    pageObjectIds: js.Array[String] = null,
-    replaceMethod: String = null
-  ): ReplaceAllShapesWithImageRequest = {
+  def apply(): ReplaceAllShapesWithImageRequest = {
     val __obj = js.Dynamic.literal()
-    if (containsText != null) __obj.updateDynamic("containsText")(containsText.asInstanceOf[js.Any])
-    if (imageUrl != null) __obj.updateDynamic("imageUrl")(imageUrl.asInstanceOf[js.Any])
-    if (pageObjectIds != null) __obj.updateDynamic("pageObjectIds")(pageObjectIds.asInstanceOf[js.Any])
-    if (replaceMethod != null) __obj.updateDynamic("replaceMethod")(replaceMethod.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplaceAllShapesWithImageRequest]
   }
+  @scala.inline
+  implicit class ReplaceAllShapesWithImageRequestOps[Self <: ReplaceAllShapesWithImageRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainsText(value: SubstringMatchCriteria): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containsText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainsText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containsText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageObjectIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageObjectIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageObjectIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageObjectIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplaceMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplaceMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceMethod")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

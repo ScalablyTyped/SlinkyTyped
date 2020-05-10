@@ -19,24 +19,22 @@ trait LineLayerType extends js.Object
 
 object LineLayerType {
   @scala.inline
-  def areas: typingsSlinky.nivoLine.nivoLineStrings.areas = this.cast("areas")
+  def areas: typingsSlinky.nivoLine.nivoLineStrings.areas = "areas".asInstanceOf[typingsSlinky.nivoLine.nivoLineStrings.areas]
   @scala.inline
-  def axes: typingsSlinky.nivoLine.nivoLineStrings.axes = this.cast("axes")
+  def axes: typingsSlinky.nivoLine.nivoLineStrings.axes = "axes".asInstanceOf[typingsSlinky.nivoLine.nivoLineStrings.axes]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def grid: typingsSlinky.nivoLine.nivoLineStrings.grid = "grid".asInstanceOf[typingsSlinky.nivoLine.nivoLineStrings.grid]
   @scala.inline
-  def grid: typingsSlinky.nivoLine.nivoLineStrings.grid = this.cast("grid")
+  def legends: typingsSlinky.nivoLine.nivoLineStrings.legends = "legends".asInstanceOf[typingsSlinky.nivoLine.nivoLineStrings.legends]
   @scala.inline
-  def legends: typingsSlinky.nivoLine.nivoLineStrings.legends = this.cast("legends")
+  def lines: typingsSlinky.nivoLine.nivoLineStrings.lines = "lines".asInstanceOf[typingsSlinky.nivoLine.nivoLineStrings.lines]
   @scala.inline
-  def lines: typingsSlinky.nivoLine.nivoLineStrings.lines = this.cast("lines")
+  def markers: typingsSlinky.nivoLine.nivoLineStrings.markers = "markers".asInstanceOf[typingsSlinky.nivoLine.nivoLineStrings.markers]
   @scala.inline
-  def markers: typingsSlinky.nivoLine.nivoLineStrings.markers = this.cast("markers")
+  def mesh: typingsSlinky.nivoLine.nivoLineStrings.mesh = "mesh".asInstanceOf[typingsSlinky.nivoLine.nivoLineStrings.mesh]
   @scala.inline
-  def mesh: typingsSlinky.nivoLine.nivoLineStrings.mesh = this.cast("mesh")
+  def points: typingsSlinky.nivoLine.nivoLineStrings.points = "points".asInstanceOf[typingsSlinky.nivoLine.nivoLineStrings.points]
   @scala.inline
-  def points: typingsSlinky.nivoLine.nivoLineStrings.points = this.cast("points")
-  @scala.inline
-  def slices: typingsSlinky.nivoLine.nivoLineStrings.slices = this.cast("slices")
+  def slices: typingsSlinky.nivoLine.nivoLineStrings.slices = "slices".asInstanceOf[typingsSlinky.nivoLine.nivoLineStrings.slices]
 }
 

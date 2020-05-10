@@ -12,10 +12,8 @@ trait PolicyWhen extends js.Object
 
 object PolicyWhen {
   @scala.inline
-  def EAGER: typingsSlinky.uirouterCore.uirouterCoreStrings.EAGER = this.cast("EAGER")
+  def EAGER: typingsSlinky.uirouterCore.uirouterCoreStrings.EAGER = "EAGER".asInstanceOf[typingsSlinky.uirouterCore.uirouterCoreStrings.EAGER]
   @scala.inline
-  def LAZY: typingsSlinky.uirouterCore.uirouterCoreStrings.LAZY = this.cast("LAZY")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def LAZY: typingsSlinky.uirouterCore.uirouterCoreStrings.LAZY = "LAZY".asInstanceOf[typingsSlinky.uirouterCore.uirouterCoreStrings.LAZY]
 }
 

@@ -21,7 +21,6 @@ object ICellMetadata {
   @scala.inline
   def IBaseCellMetadata(jupyter: PartialIBaseCellJupyterMe, name: String, tags: js.Array[String], trusted: Boolean): ICellMetadata = {
     val __obj = js.Dynamic.literal(jupyter = jupyter.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any], trusted = trusted.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ICellMetadata]
   }
   @scala.inline
@@ -33,7 +32,6 @@ object ICellMetadata {
     trusted: Boolean
   ): ICellMetadata = {
     val __obj = js.Dynamic.literal(format = format.asInstanceOf[js.Any], jupyter = jupyter.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any], trusted = trusted.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ICellMetadata]
   }
   @scala.inline
@@ -46,7 +44,6 @@ object ICellMetadata {
     trusted: Boolean
   ): ICellMetadata = {
     val __obj = js.Dynamic.literal(collapsed = collapsed.asInstanceOf[js.Any], jupyter = jupyter.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], scrolled = scrolled.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any], trusted = trusted.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ICellMetadata]
   }
 }

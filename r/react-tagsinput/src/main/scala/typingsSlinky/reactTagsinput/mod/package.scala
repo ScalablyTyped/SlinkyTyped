@@ -11,6 +11,5 @@ package object mod {
     /* inputElement */ slinky.core.facade.ReactElement, 
     typingsSlinky.react.mod.ReactChild
   ]
-  type Tag = js.Any
   type TagProps = org.scalablytyped.runtime.StringDictionary[js.Any]
 }

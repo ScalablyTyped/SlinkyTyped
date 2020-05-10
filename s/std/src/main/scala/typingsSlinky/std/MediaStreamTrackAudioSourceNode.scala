@@ -7,9 +7,10 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MediaStreamTrackAudioSourceNode")
 @js.native
-object MediaStreamTrackAudioSourceNode extends Instantiable2[
-      /* context */ AudioContext, 
+object MediaStreamTrackAudioSourceNode
+  extends Instantiable2[
+      /* context */ org.scalajs.dom.raw.AudioContext, 
       /* options */ MediaStreamTrackAudioSourceOptions, 
-      MediaStreamTrackAudioSourceNode
+      org.scalajs.dom.raw.AudioNode
     ]
 

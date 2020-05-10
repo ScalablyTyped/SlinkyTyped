@@ -1,62 +1,61 @@
 package typingsSlinky.awsSdkClientPinpointBrowser.typesImportJobResponseMod
 
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.COMPLETED
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.COMPLETING
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.CREATED
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.FAILED
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.FAILING
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.INITIALIZING
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.PROCESSING
 import typingsSlinky.awsSdkClientPinpointBrowser.typesImportJobResourceMod.UnmarshalledImportJobResource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UnmarshalledImportJobResponse extends ImportJobResponse {
   /**
     * The import job settings.
     */
   @JSName("Definition")
-  var Definition_UnmarshalledImportJobResponse: js.UndefOr[UnmarshalledImportJobResource] = js.undefined
+  var Definition_UnmarshalledImportJobResponse: js.UndefOr[UnmarshalledImportJobResource] = js.native
   /**
     * Provides up to 100 of the first failed entries for the job, if any exist.
     */
   @JSName("Failures")
-  var Failures_UnmarshalledImportJobResponse: js.UndefOr[js.Array[String]] = js.undefined
+  var Failures_UnmarshalledImportJobResponse: js.UndefOr[js.Array[String]] = js.native
 }
 
 object UnmarshalledImportJobResponse {
   @scala.inline
-  def apply(
-    ApplicationId: String = null,
-    CompletedPieces: Int | Double = null,
-    CompletionDate: String = null,
-    CreationDate: String = null,
-    Definition: UnmarshalledImportJobResource = null,
-    FailedPieces: Int | Double = null,
-    Failures: js.Array[String] = null,
-    Id: String = null,
-    JobStatus: CREATED | INITIALIZING | PROCESSING | COMPLETING | COMPLETED | FAILING | FAILED | String = null,
-    TotalFailures: Int | Double = null,
-    TotalPieces: Int | Double = null,
-    TotalProcessed: Int | Double = null,
-    Type: String = null
-  ): UnmarshalledImportJobResponse = {
+  def apply(): UnmarshalledImportJobResponse = {
     val __obj = js.Dynamic.literal()
-    if (ApplicationId != null) __obj.updateDynamic("ApplicationId")(ApplicationId.asInstanceOf[js.Any])
-    if (CompletedPieces != null) __obj.updateDynamic("CompletedPieces")(CompletedPieces.asInstanceOf[js.Any])
-    if (CompletionDate != null) __obj.updateDynamic("CompletionDate")(CompletionDate.asInstanceOf[js.Any])
-    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
-    if (Definition != null) __obj.updateDynamic("Definition")(Definition.asInstanceOf[js.Any])
-    if (FailedPieces != null) __obj.updateDynamic("FailedPieces")(FailedPieces.asInstanceOf[js.Any])
-    if (Failures != null) __obj.updateDynamic("Failures")(Failures.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (JobStatus != null) __obj.updateDynamic("JobStatus")(JobStatus.asInstanceOf[js.Any])
-    if (TotalFailures != null) __obj.updateDynamic("TotalFailures")(TotalFailures.asInstanceOf[js.Any])
-    if (TotalPieces != null) __obj.updateDynamic("TotalPieces")(TotalPieces.asInstanceOf[js.Any])
-    if (TotalProcessed != null) __obj.updateDynamic("TotalProcessed")(TotalProcessed.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledImportJobResponse]
   }
+  @scala.inline
+  implicit class UnmarshalledImportJobResponseOps[Self <: UnmarshalledImportJobResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefinition(value: UnmarshalledImportJobResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Definition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Definition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailures(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Failures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Failures")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

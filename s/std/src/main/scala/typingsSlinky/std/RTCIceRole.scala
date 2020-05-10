@@ -13,12 +13,10 @@ trait RTCIceRole extends js.Object
 
 object RTCIceRole {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def controlled: typingsSlinky.std.stdStrings.controlled = "controlled".asInstanceOf[typingsSlinky.std.stdStrings.controlled]
   @scala.inline
-  def controlled: typingsSlinky.std.stdStrings.controlled = this.cast("controlled")
+  def controlling: typingsSlinky.std.stdStrings.controlling = "controlling".asInstanceOf[typingsSlinky.std.stdStrings.controlling]
   @scala.inline
-  def controlling: typingsSlinky.std.stdStrings.controlling = this.cast("controlling")
-  @scala.inline
-  def unknown: typingsSlinky.std.stdStrings.unknown = this.cast("unknown")
+  def unknown: typingsSlinky.std.stdStrings.unknown = "unknown".asInstanceOf[typingsSlinky.std.stdStrings.unknown]
 }
 

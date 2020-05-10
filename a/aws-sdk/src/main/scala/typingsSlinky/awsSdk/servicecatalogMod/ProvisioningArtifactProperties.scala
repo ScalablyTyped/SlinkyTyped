@@ -30,19 +30,71 @@ trait ProvisioningArtifactProperties extends js.Object {
 
 object ProvisioningArtifactProperties {
   @scala.inline
-  def apply(
-    Info: ProvisioningArtifactInfo,
-    Description: ProvisioningArtifactDescription = null,
-    DisableTemplateValidation: js.UndefOr[Boolean] = js.undefined,
-    Name: ProvisioningArtifactName = null,
-    Type: ProvisioningArtifactType = null
-  ): ProvisioningArtifactProperties = {
+  def apply(Info: ProvisioningArtifactInfo): ProvisioningArtifactProperties = {
     val __obj = js.Dynamic.literal(Info = Info.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (!js.isUndefined(DisableTemplateValidation)) __obj.updateDynamic("DisableTemplateValidation")(DisableTemplateValidation.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProvisioningArtifactProperties]
   }
+  @scala.inline
+  implicit class ProvisioningArtifactPropertiesOps[Self <: ProvisioningArtifactProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInfo(value: ProvisioningArtifactInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Info")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: ProvisioningArtifactDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableTemplateValidation(value: DisableTemplateValidation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableTemplateValidation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableTemplateValidation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableTemplateValidation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: ProvisioningArtifactName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: ProvisioningArtifactType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

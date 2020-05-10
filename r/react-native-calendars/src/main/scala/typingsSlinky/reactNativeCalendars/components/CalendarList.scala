@@ -1,21 +1,20 @@
 package typingsSlinky.reactNativeCalendars.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactNativeCalendars.mod.CalendarListBaseProps
 import typingsSlinky.reactNativeCalendars.mod.CalendarMarkingProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Couldn't find props for TypeRef(QualifiedName(IArray(Name(<intersection>))),IArray(TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reactNativeCalendars), Name(mod), Name(CalendarMarkingProps))),IArray(),NoComments), TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reactNativeCalendars), Name(mod), Name(CalendarListBaseProps))),IArray(),NoComments)),NoComments) because: Not a trait */
-object CalendarList
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeCalendars.mod.CalendarList] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for typingsSlinky.reactNativeCalendars.mod.CalendarMarkingProps with typingsSlinky.reactNativeCalendars.mod.CalendarListBaseProps because: IArray(Not a trait) */
+object CalendarList {
   @JSImport("react-native-calendars", "CalendarList")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = CalendarMarkingProps with CalendarListBaseProps
+  def apply(p: CalendarMarkingProps with CalendarListBaseProps): Default[tag.type, typingsSlinky.reactNativeCalendars.mod.CalendarList] = new Default[tag.type, typingsSlinky.reactNativeCalendars.mod.CalendarList](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CalendarList.type): Default[tag.type, typingsSlinky.reactNativeCalendars.mod.CalendarList] = new Default[tag.type, typingsSlinky.reactNativeCalendars.mod.CalendarList](js.Array(this.component, js.Dictionary.empty))()
 }
 

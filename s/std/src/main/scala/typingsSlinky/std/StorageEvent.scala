@@ -34,6 +34,10 @@ trait StorageEvent extends Event_ {
 @JSGlobal("StorageEvent")
 @js.native
 object StorageEvent
-  extends Instantiable1[/* type */ java.lang.String, StorageEvent]
-     with Instantiable2[/* type */ java.lang.String, /* eventInitDict */ StorageEventInit, StorageEvent]
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.StorageEvent]
+     with Instantiable2[
+      /* type */ java.lang.String, 
+      /* eventInitDict */ StorageEventInit, 
+      org.scalajs.dom.raw.StorageEvent
+    ]
 

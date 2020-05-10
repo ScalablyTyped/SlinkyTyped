@@ -15,16 +15,14 @@ trait DataType extends js.Object
 
 object DataType {
   @scala.inline
-  def bool: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.bool = this.cast("bool")
+  def bool: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.bool = "bool".asInstanceOf[typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.bool]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def complex64: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.complex64 = "complex64".asInstanceOf[typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.complex64]
   @scala.inline
-  def complex64: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.complex64 = this.cast("complex64")
+  def float32: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.float32 = "float32".asInstanceOf[typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.float32]
   @scala.inline
-  def float32: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.float32 = this.cast("float32")
+  def int32: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.int32 = "int32".asInstanceOf[typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.int32]
   @scala.inline
-  def int32: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.int32 = this.cast("int32")
-  @scala.inline
-  def string: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.string = this.cast("string")
+  def string: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.string = "string".asInstanceOf[typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.string]
 }
 

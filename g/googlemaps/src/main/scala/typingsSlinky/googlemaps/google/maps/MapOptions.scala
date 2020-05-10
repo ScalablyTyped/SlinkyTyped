@@ -4,20 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MapOptions extends js.Object {
   /**
     * Color used for the background of the Map div. This color will be visible
     * when tiles have not yet loaded as the user pans. This option can only be
     * set when the map is initialized.
     */
-  var backgroundColor: js.UndefOr[String] = js.undefined
+  var backgroundColor: js.UndefOr[String] = js.native
   /** The initial Map center. Required. */
-  var center: js.UndefOr[LatLng | LatLngLiteral] = js.undefined
+  var center: js.UndefOr[LatLng | LatLngLiteral] = js.native
   /**
     * When false, map icons are not clickable. A map icon represents a point of
     * interest, also known as a POI. By default map icons are clickable.
     */
-  var clickableIcons: js.UndefOr[Boolean] = js.undefined
+  var clickableIcons: js.UndefOr[Boolean] = js.native
   /**
     * Size in pixels of the controls appearing on the map. This value must be
     * supplied directly when creating the Map, updating this value later may
@@ -25,16 +26,16 @@ trait MapOptions extends js.Object {
     * made by the Maps API itself. Does not scale developer created custom
     * controls.
     */
-  var controlSize: js.UndefOr[Double] = js.undefined
+  var controlSize: js.UndefOr[Double] = js.native
   /** Enables/disables all default UI. May be overridden individually. */
-  var disableDefaultUI: js.UndefOr[Boolean] = js.undefined
+  var disableDefaultUI: js.UndefOr[Boolean] = js.native
   /** Enables/disables zoom and center on double click. Enabled by default. */
-  var disableDoubleClickZoom: js.UndefOr[Boolean] = js.undefined
+  var disableDoubleClickZoom: js.UndefOr[Boolean] = js.native
   /**
     * If false, prevents the map from being dragged. Dragging is enabled by
     * default.
     */
-  var draggable: js.UndefOr[Boolean] = js.undefined
+  var draggable: js.UndefOr[Boolean] = js.native
   /**
     * The name or url of the cursor to display when mousing over a draggable
     * map. This property uses the css cursor attribute to change the icon. As
@@ -42,7 +43,7 @@ trait MapOptions extends js.Object {
     * is not a URL. For example: draggableCursor:
     * 'url(http://www.example.com/icon.png), auto;'.
     */
-  var draggableCursor: js.UndefOr[String] = js.undefined
+  var draggableCursor: js.UndefOr[String] = js.native
   /**
     * The name or url of the cursor to display when the map is being dragged.
     * This property uses the css cursor attribute to change the icon. As with
@@ -50,48 +51,48 @@ trait MapOptions extends js.Object {
     * not a URL. For example: draggingCursor:
     * 'url(http://www.example.com/icon.png), auto;'.
     */
-  var draggingCursor: js.UndefOr[String] = js.undefined
+  var draggingCursor: js.UndefOr[String] = js.native
   /** The enabled/disabled state of the Fullscreen control. */
-  var fullscreenControl: js.UndefOr[Boolean] = js.undefined
+  var fullscreenControl: js.UndefOr[Boolean] = js.native
   /** The display options for the Fullscreen control. */
-  var fullscreenControlOptions: js.UndefOr[FullscreenControlOptions] = js.undefined
+  var fullscreenControlOptions: js.UndefOr[FullscreenControlOptions] = js.native
   /**
     * This setting controls how gestures on the map are handled.
     */
-  var gestureHandling: js.UndefOr[GestureHandlingOptions] = js.undefined
+  var gestureHandling: js.UndefOr[GestureHandlingOptions] = js.native
   /**
     * The heading for aerial imagery in degrees measured clockwise from
     * cardinal direction North. Headings are snapped to the nearest available
     * angle for which imagery is available.
     */
-  var heading: js.UndefOr[Double] = js.undefined
+  var heading: js.UndefOr[Double] = js.native
   /**
     * If false, prevents the map from being controlled by the keyboard.
     * Keyboard shortcuts are enabled by default.
     */
-  var keyboardShortcuts: js.UndefOr[Boolean] = js.undefined
+  var keyboardShortcuts: js.UndefOr[Boolean] = js.native
   /** The initial enabled/disabled state of the Map type control. */
-  var mapTypeControl: js.UndefOr[Boolean] = js.undefined
+  var mapTypeControl: js.UndefOr[Boolean] = js.native
   /** The initial display options for the Map type control. */
-  var mapTypeControlOptions: js.UndefOr[MapTypeControlOptions] = js.undefined
+  var mapTypeControlOptions: js.UndefOr[MapTypeControlOptions] = js.native
   /** The initial Map mapTypeId. Defaults to ROADMAP. */
-  var mapTypeId: js.UndefOr[MapTypeId | String] = js.undefined
+  var mapTypeId: js.UndefOr[MapTypeId | String] = js.native
   /**
     * The maximum zoom level which will be displayed on the map. If omitted, or
     * set to null, the maximum zoom from the current map type is used instead.
     * Valid values: Integers between zero, and up to the supported maximum zoom
     * level.
     */
-  var maxZoom: js.UndefOr[Double] = js.undefined
+  var maxZoom: js.UndefOr[Double] = js.native
   /**
     * The minimum zoom level which will be displayed on the map. If omitted, or
     * set to null, the minimum zoom from the current map type is used instead.
     * Valid values: Integers between zero, and up to the supported maximum zoom
     * level.
     */
-  var minZoom: js.UndefOr[Double] = js.undefined
+  var minZoom: js.UndefOr[Double] = js.native
   /** If true, do not clear the contents of the Map div. */
-  var noClear: js.UndefOr[Boolean] = js.undefined
+  var noClear: js.UndefOr[Boolean] = js.native
   /**
     * The enabled/disabled state of the Pan control.
     * Note: The Pan control is not available in the new set of controls
@@ -102,7 +103,7 @@ trait MapOptions extends js.Object {
     * https://developers.google.com/maps/articles/v322-controls-diff|What's New
     * in the v3.22 Map Controls}.
     */
-  var panControl: js.UndefOr[Boolean] = js.undefined
+  var panControl: js.UndefOr[Boolean] = js.native
   /**
     * The display options for the Pan control.
     * Note: The Pan control is not available in the new set of controls
@@ -113,48 +114,48 @@ trait MapOptions extends js.Object {
     * https://developers.google.com/maps/articles/v322-controls-diff|What's New
     * in the v3.22 Map Controls}.
     */
-  var panControlOptions: js.UndefOr[PanControlOptions] = js.undefined
+  var panControlOptions: js.UndefOr[PanControlOptions] = js.native
   /**
     * Defines a boundary that restricts the area of the map accessible to users.
     * When set, a user can only pan and zoom while the camera view stays inside the
     * limits of the boundary.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#MapOptions.restriction Maps JavaScript API}
     */
-  var restriction: js.UndefOr[MapRestriction] = js.undefined
+  var restriction: js.UndefOr[MapRestriction] = js.native
   /** The enabled/disabled state of the Rotate control. */
-  var rotateControl: js.UndefOr[Boolean] = js.undefined
+  var rotateControl: js.UndefOr[Boolean] = js.native
   /** The display options for the Rotate control. */
-  var rotateControlOptions: js.UndefOr[RotateControlOptions] = js.undefined
+  var rotateControlOptions: js.UndefOr[RotateControlOptions] = js.native
   /** The initial enabled/disabled state of the Scale control. */
-  var scaleControl: js.UndefOr[Boolean] = js.undefined
+  var scaleControl: js.UndefOr[Boolean] = js.native
   /** The initial display options for the Scale control. */
-  var scaleControlOptions: js.UndefOr[ScaleControlOptions] = js.undefined
+  var scaleControlOptions: js.UndefOr[ScaleControlOptions] = js.native
   /**
     * If false, disables scrollwheel zooming on the map. The scrollwheel is
     * enabled by default.
     */
-  var scrollwheel: js.UndefOr[Boolean] = js.undefined
+  var scrollwheel: js.UndefOr[Boolean] = js.native
   /**
     * A StreetViewPanorama to display when the Street View pegman is dropped on
     * the map. If no panorama is specified, a default StreetViewPanorama will
     * be displayed in the map's div when the pegman is dropped.
     */
-  var streetView: js.UndefOr[StreetViewPanorama] = js.undefined
+  var streetView: js.UndefOr[StreetViewPanorama] = js.native
   /**
     * The initial enabled/disabled state of the Street View Pegman control.
     * This control is part of the default UI, and should be set to false when
     * displaying a map type on which the Street View road overlay should not
     * appear (e.g. a non-Earth map type).
     */
-  var streetViewControl: js.UndefOr[Boolean] = js.undefined
+  var streetViewControl: js.UndefOr[Boolean] = js.native
   /** The initial display options for the Street View Pegman control. */
-  var streetViewControlOptions: js.UndefOr[StreetViewControlOptions] = js.undefined
+  var streetViewControlOptions: js.UndefOr[StreetViewControlOptions] = js.native
   /**
     * Styles to apply to each of the default map types. Note that for
     * satellite/hybrid and terrain modes, these styles will only apply to
     * labels and geometry.
     */
-  var styles: js.UndefOr[js.Array[MapTypeStyle]] = js.undefined
+  var styles: js.UndefOr[js.Array[MapTypeStyle]] = js.native
   /**
     * Controls the automatic switching behavior for the angle of incidence of
     * the map. The only allowed values are 0 and 45. The value 0 causes the map
@@ -169,96 +170,463 @@ trait MapOptions extends js.Object {
     * different things, do not bind() the tilt property; doing so may yield
     * unpredictable effects.
     */
-  var tilt: js.UndefOr[Double] = js.undefined
+  var tilt: js.UndefOr[Double] = js.native
   /**
     * The initial Map zoom level. Required. Valid values: Integers between
     * zero, and up to the supported maximum zoom level.
     */
-  var zoom: js.UndefOr[Double] = js.undefined
+  var zoom: js.UndefOr[Double] = js.native
   /** The enabled/disabled state of the Zoom control. */
-  var zoomControl: js.UndefOr[Boolean] = js.undefined
+  var zoomControl: js.UndefOr[Boolean] = js.native
   /** The display options for the Zoom control. */
-  var zoomControlOptions: js.UndefOr[ZoomControlOptions] = js.undefined
+  var zoomControlOptions: js.UndefOr[ZoomControlOptions] = js.native
 }
 
 object MapOptions {
   @scala.inline
-  def apply(
-    backgroundColor: String = null,
-    center: LatLng | LatLngLiteral = null,
-    clickableIcons: js.UndefOr[Boolean] = js.undefined,
-    controlSize: Int | Double = null,
-    disableDefaultUI: js.UndefOr[Boolean] = js.undefined,
-    disableDoubleClickZoom: js.UndefOr[Boolean] = js.undefined,
-    draggable: js.UndefOr[Boolean] = js.undefined,
-    draggableCursor: String = null,
-    draggingCursor: String = null,
-    fullscreenControl: js.UndefOr[Boolean] = js.undefined,
-    fullscreenControlOptions: FullscreenControlOptions = null,
-    gestureHandling: GestureHandlingOptions = null,
-    heading: Int | Double = null,
-    keyboardShortcuts: js.UndefOr[Boolean] = js.undefined,
-    mapTypeControl: js.UndefOr[Boolean] = js.undefined,
-    mapTypeControlOptions: MapTypeControlOptions = null,
-    mapTypeId: MapTypeId | String = null,
-    maxZoom: Int | Double = null,
-    minZoom: Int | Double = null,
-    noClear: js.UndefOr[Boolean] = js.undefined,
-    panControl: js.UndefOr[Boolean] = js.undefined,
-    panControlOptions: PanControlOptions = null,
-    restriction: MapRestriction = null,
-    rotateControl: js.UndefOr[Boolean] = js.undefined,
-    rotateControlOptions: RotateControlOptions = null,
-    scaleControl: js.UndefOr[Boolean] = js.undefined,
-    scaleControlOptions: ScaleControlOptions = null,
-    scrollwheel: js.UndefOr[Boolean] = js.undefined,
-    streetView: StreetViewPanorama = null,
-    streetViewControl: js.UndefOr[Boolean] = js.undefined,
-    streetViewControlOptions: StreetViewControlOptions = null,
-    styles: js.Array[MapTypeStyle] = null,
-    tilt: Int | Double = null,
-    zoom: Int | Double = null,
-    zoomControl: js.UndefOr[Boolean] = js.undefined,
-    zoomControlOptions: ZoomControlOptions = null
-  ): MapOptions = {
+  def apply(): MapOptions = {
     val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (!js.isUndefined(clickableIcons)) __obj.updateDynamic("clickableIcons")(clickableIcons.asInstanceOf[js.Any])
-    if (controlSize != null) __obj.updateDynamic("controlSize")(controlSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableDefaultUI)) __obj.updateDynamic("disableDefaultUI")(disableDefaultUI.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableDoubleClickZoom)) __obj.updateDynamic("disableDoubleClickZoom")(disableDoubleClickZoom.asInstanceOf[js.Any])
-    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.asInstanceOf[js.Any])
-    if (draggableCursor != null) __obj.updateDynamic("draggableCursor")(draggableCursor.asInstanceOf[js.Any])
-    if (draggingCursor != null) __obj.updateDynamic("draggingCursor")(draggingCursor.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullscreenControl)) __obj.updateDynamic("fullscreenControl")(fullscreenControl.asInstanceOf[js.Any])
-    if (fullscreenControlOptions != null) __obj.updateDynamic("fullscreenControlOptions")(fullscreenControlOptions.asInstanceOf[js.Any])
-    if (gestureHandling != null) __obj.updateDynamic("gestureHandling")(gestureHandling.asInstanceOf[js.Any])
-    if (heading != null) __obj.updateDynamic("heading")(heading.asInstanceOf[js.Any])
-    if (!js.isUndefined(keyboardShortcuts)) __obj.updateDynamic("keyboardShortcuts")(keyboardShortcuts.asInstanceOf[js.Any])
-    if (!js.isUndefined(mapTypeControl)) __obj.updateDynamic("mapTypeControl")(mapTypeControl.asInstanceOf[js.Any])
-    if (mapTypeControlOptions != null) __obj.updateDynamic("mapTypeControlOptions")(mapTypeControlOptions.asInstanceOf[js.Any])
-    if (mapTypeId != null) __obj.updateDynamic("mapTypeId")(mapTypeId.asInstanceOf[js.Any])
-    if (maxZoom != null) __obj.updateDynamic("maxZoom")(maxZoom.asInstanceOf[js.Any])
-    if (minZoom != null) __obj.updateDynamic("minZoom")(minZoom.asInstanceOf[js.Any])
-    if (!js.isUndefined(noClear)) __obj.updateDynamic("noClear")(noClear.asInstanceOf[js.Any])
-    if (!js.isUndefined(panControl)) __obj.updateDynamic("panControl")(panControl.asInstanceOf[js.Any])
-    if (panControlOptions != null) __obj.updateDynamic("panControlOptions")(panControlOptions.asInstanceOf[js.Any])
-    if (restriction != null) __obj.updateDynamic("restriction")(restriction.asInstanceOf[js.Any])
-    if (!js.isUndefined(rotateControl)) __obj.updateDynamic("rotateControl")(rotateControl.asInstanceOf[js.Any])
-    if (rotateControlOptions != null) __obj.updateDynamic("rotateControlOptions")(rotateControlOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(scaleControl)) __obj.updateDynamic("scaleControl")(scaleControl.asInstanceOf[js.Any])
-    if (scaleControlOptions != null) __obj.updateDynamic("scaleControlOptions")(scaleControlOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollwheel)) __obj.updateDynamic("scrollwheel")(scrollwheel.asInstanceOf[js.Any])
-    if (streetView != null) __obj.updateDynamic("streetView")(streetView.asInstanceOf[js.Any])
-    if (!js.isUndefined(streetViewControl)) __obj.updateDynamic("streetViewControl")(streetViewControl.asInstanceOf[js.Any])
-    if (streetViewControlOptions != null) __obj.updateDynamic("streetViewControlOptions")(streetViewControlOptions.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (tilt != null) __obj.updateDynamic("tilt")(tilt.asInstanceOf[js.Any])
-    if (zoom != null) __obj.updateDynamic("zoom")(zoom.asInstanceOf[js.Any])
-    if (!js.isUndefined(zoomControl)) __obj.updateDynamic("zoomControl")(zoomControl.asInstanceOf[js.Any])
-    if (zoomControlOptions != null) __obj.updateDynamic("zoomControlOptions")(zoomControlOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapOptions]
   }
+  @scala.inline
+  implicit class MapOptionsOps[Self <: MapOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCenter(value: LatLng | LatLngLiteral): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClickableIcons(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickableIcons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClickableIcons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickableIcons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withControlSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controlSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutControlSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controlSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableDefaultUI(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableDefaultUI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableDefaultUI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableDefaultUI")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableDoubleClickZoom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableDoubleClickZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableDoubleClickZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableDoubleClickZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDraggable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDraggable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDraggableCursor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggableCursor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDraggableCursor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggableCursor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDraggingCursor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggingCursor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDraggingCursor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggingCursor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFullscreenControl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreenControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullscreenControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreenControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFullscreenControlOptions(value: FullscreenControlOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreenControlOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullscreenControlOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreenControlOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGestureHandling(value: GestureHandlingOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gestureHandling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGestureHandling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gestureHandling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeading(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyboardShortcuts(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardShortcuts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyboardShortcuts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardShortcuts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapTypeControl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapTypeControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapTypeControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapTypeControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapTypeControlOptions(value: MapTypeControlOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapTypeControlOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapTypeControlOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapTypeControlOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapTypeId(value: MapTypeId | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapTypeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapTypeId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapTypeId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoClear(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noClear")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoClear: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noClear")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPanControl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPanControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPanControlOptions(value: PanControlOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panControlOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPanControlOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panControlOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestriction(value: MapRestriction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restriction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestriction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restriction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotateControl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotateControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotateControlOptions(value: RotateControlOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateControlOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotateControlOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateControlOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleControl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleControlOptions(value: ScaleControlOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleControlOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleControlOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleControlOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollwheel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollwheel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollwheel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollwheel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreetView(value: StreetViewPanorama): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streetView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreetView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streetView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreetViewControl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streetViewControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreetViewControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streetViewControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreetViewControlOptions(value: StreetViewControlOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streetViewControlOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreetViewControlOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streetViewControlOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyles(value: js.Array[MapTypeStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTilt(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tilt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTilt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tilt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomControl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomControlOptions(value: ZoomControlOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomControlOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomControlOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomControlOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

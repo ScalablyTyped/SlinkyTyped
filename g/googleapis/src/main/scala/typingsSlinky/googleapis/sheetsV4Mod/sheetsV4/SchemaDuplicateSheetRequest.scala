@@ -32,18 +32,65 @@ trait SchemaDuplicateSheetRequest extends js.Object {
 
 object SchemaDuplicateSheetRequest {
   @scala.inline
-  def apply(
-    insertSheetIndex: Int | Double = null,
-    newSheetId: Int | Double = null,
-    newSheetName: String = null,
-    sourceSheetId: Int | Double = null
-  ): SchemaDuplicateSheetRequest = {
+  def apply(): SchemaDuplicateSheetRequest = {
     val __obj = js.Dynamic.literal()
-    if (insertSheetIndex != null) __obj.updateDynamic("insertSheetIndex")(insertSheetIndex.asInstanceOf[js.Any])
-    if (newSheetId != null) __obj.updateDynamic("newSheetId")(newSheetId.asInstanceOf[js.Any])
-    if (newSheetName != null) __obj.updateDynamic("newSheetName")(newSheetName.asInstanceOf[js.Any])
-    if (sourceSheetId != null) __obj.updateDynamic("sourceSheetId")(sourceSheetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDuplicateSheetRequest]
   }
+  @scala.inline
+  implicit class SchemaDuplicateSheetRequestOps[Self <: SchemaDuplicateSheetRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInsertSheetIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertSheetIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsertSheetIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertSheetIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewSheetId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSheetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewSheetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSheetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewSheetName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSheetName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewSheetName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSheetName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceSheetId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSheetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceSheetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSheetId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

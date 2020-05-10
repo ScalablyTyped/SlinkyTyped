@@ -13,12 +13,10 @@ trait StepContentClasskey extends js.Object
 
 object StepContentClasskey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def last: typingsSlinky.materialUiCore.materialUiCoreStrings.last = "last".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.last]
   @scala.inline
-  def last: typingsSlinky.materialUiCore.materialUiCoreStrings.last = this.cast("last")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
-  @scala.inline
-  def transition: typingsSlinky.materialUiCore.materialUiCoreStrings.transition = this.cast("transition")
+  def transition: typingsSlinky.materialUiCore.materialUiCoreStrings.transition = "transition".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.transition]
 }
 

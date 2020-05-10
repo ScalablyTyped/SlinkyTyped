@@ -9,38 +9,121 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonArcType extends js.Object {
-  var arcType: js.UndefOr[ArcType] = js.undefined
-  var colors: js.UndefOr[js.Array[Color]] = js.undefined
-  var colorsPerVertex: js.UndefOr[Boolean] = js.undefined
-  var ellipsoid: js.UndefOr[Ellipsoid] = js.undefined
-  var granularity: js.UndefOr[Double] = js.undefined
-  var positions: js.Array[Cartesian3]
-  var vertexFormat: js.UndefOr[VertexFormat] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
+  var arcType: js.UndefOr[ArcType] = js.native
+  var colors: js.UndefOr[js.Array[Color]] = js.native
+  var colorsPerVertex: js.UndefOr[Boolean] = js.native
+  var ellipsoid: js.UndefOr[Ellipsoid] = js.native
+  var granularity: js.UndefOr[Double] = js.native
+  var positions: js.Array[Cartesian3] = js.native
+  var vertexFormat: js.UndefOr[VertexFormat] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object AnonArcType {
   @scala.inline
-  def apply(
-    positions: js.Array[Cartesian3],
-    arcType: ArcType = null,
-    colors: js.Array[Color] = null,
-    colorsPerVertex: js.UndefOr[Boolean] = js.undefined,
-    ellipsoid: Ellipsoid = null,
-    granularity: Int | Double = null,
-    vertexFormat: VertexFormat = null,
-    width: Int | Double = null
-  ): AnonArcType = {
+  def apply(positions: js.Array[Cartesian3]): AnonArcType = {
     val __obj = js.Dynamic.literal(positions = positions.asInstanceOf[js.Any])
-    if (arcType != null) __obj.updateDynamic("arcType")(arcType.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (!js.isUndefined(colorsPerVertex)) __obj.updateDynamic("colorsPerVertex")(colorsPerVertex.asInstanceOf[js.Any])
-    if (ellipsoid != null) __obj.updateDynamic("ellipsoid")(ellipsoid.asInstanceOf[js.Any])
-    if (granularity != null) __obj.updateDynamic("granularity")(granularity.asInstanceOf[js.Any])
-    if (vertexFormat != null) __obj.updateDynamic("vertexFormat")(vertexFormat.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonArcType]
   }
+  @scala.inline
+  implicit class AnonArcTypeOps[Self <: AnonArcType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPositions(value: js.Array[Cartesian3]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArcType(value: ArcType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arcType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArcType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arcType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColors(value: js.Array[Color]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorsPerVertex(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorsPerVertex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorsPerVertex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorsPerVertex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEllipsoid(value: Ellipsoid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEllipsoid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGranularity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGranularity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVertexFormat(value: VertexFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVertexFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

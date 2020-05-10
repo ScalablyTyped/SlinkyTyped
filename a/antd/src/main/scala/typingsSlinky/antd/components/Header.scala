@@ -1,9 +1,7 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.generateCalendarMod.CalendarMode
 import typingsSlinky.antd.headerMod.CalendarHeaderProps
 import typingsSlinky.rcPicker.generateMod.GenerateConfig
@@ -12,13 +10,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Header
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Header {
   @JSImport("antd/lib/calendar/Header", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder[DateType] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def validRange(value: js.Tuple2[DateType, DateType]): this.type = set("validRange", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps[DateType](p: CalendarHeaderProps[DateType]): Builder[DateType] = new Builder[DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply[DateType](
     fullscreen: Boolean,
     generateConfig: GenerateConfig[DateType],
@@ -27,15 +33,10 @@ object Header
     onChange: DateType => Unit,
     onModeChange: CalendarMode => Unit,
     prefixCls: String,
-    value: DateType,
-    validRange: js.Tuple2[DateType, DateType] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(fullscreen = fullscreen.asInstanceOf[js.Any], generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), onModeChange = js.Any.fromFunction1(onModeChange), prefixCls = prefixCls.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    if (validRange != null) __obj.updateDynamic("validRange")(validRange.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object]]
+    value: DateType
+  ): Builder[DateType] = {
+    val __props = js.Dynamic.literal(fullscreen = fullscreen.asInstanceOf[js.Any], generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), onModeChange = js.Any.fromFunction1(onModeChange), prefixCls = prefixCls.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    new Builder[DateType](js.Array(this.component, __props.asInstanceOf[CalendarHeaderProps[DateType]]))
   }
-  type Props = CalendarHeaderProps[js.Any]
 }
 

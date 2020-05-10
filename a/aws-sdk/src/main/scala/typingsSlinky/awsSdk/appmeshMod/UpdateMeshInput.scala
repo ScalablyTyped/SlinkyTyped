@@ -23,11 +23,47 @@ trait UpdateMeshInput extends js.Object {
 
 object UpdateMeshInput {
   @scala.inline
-  def apply(meshName: ResourceName, clientToken: String = null, spec: MeshSpec = null): UpdateMeshInput = {
+  def apply(meshName: ResourceName): UpdateMeshInput = {
     val __obj = js.Dynamic.literal(meshName = meshName.asInstanceOf[js.Any])
-    if (clientToken != null) __obj.updateDynamic("clientToken")(clientToken.asInstanceOf[js.Any])
-    if (spec != null) __obj.updateDynamic("spec")(spec.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateMeshInput]
   }
+  @scala.inline
+  implicit class UpdateMeshInputOps[Self <: UpdateMeshInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMeshName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meshName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpec(value: MeshSpec): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

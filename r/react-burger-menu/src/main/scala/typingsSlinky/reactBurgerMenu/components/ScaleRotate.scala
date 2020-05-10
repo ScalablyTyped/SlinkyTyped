@@ -1,15 +1,17 @@
 package typingsSlinky.reactBurgerMenu.components
 
+import typingsSlinky.reactBurgerMenu.mod.Props
 import typingsSlinky.reactBurgerMenu.mod.scaleRotate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ScaleRotate extends SharedApply_Props1553393975[scaleRotate] {
+object ScaleRotate {
   @JSImport("react-burger-menu", "scaleRotate")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: Props): SharedBuilder_Props_1590065578[scaleRotate] = new SharedBuilder_Props_1590065578[scaleRotate](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ScaleRotate.type): SharedBuilder_Props_1590065578[scaleRotate] = new SharedBuilder_Props_1590065578[scaleRotate](js.Array(this.component, js.Dictionary.empty))()
 }
 

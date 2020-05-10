@@ -1,38 +1,31 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.AnonDataObject
 import typingsSlinky.primereact.rowRadioButtonMod.RowRadioButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RowRadioButton
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.rowRadioButtonMod.RowRadioButton] {
+object RowRadioButton {
   @JSImport("primereact/components/datatable/RowRadioButton", "RowRadioButton")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: selected */
-  def apply(
-    onClick: /* e */ AnonDataObject => Unit = null,
-    rowData: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.rowRadioButtonMod.RowRadioButton] = {
-    val __obj = js.Dynamic.literal()
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (rowData != null) __obj.updateDynamic("rowData")(rowData.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.rowRadioButtonMod.RowRadioButton] {
+    @scala.inline
+    def onClick(value: /* e */ AnonDataObject => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def rowData(value: js.Object): this.type = set("rowData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selected(value: Boolean): this.type = set("selected", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.rowRadioButtonMod.RowRadioButton] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.rowRadioButtonMod.RowRadioButton](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = RowRadioButtonProps
+  
+  def withProps(p: RowRadioButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: RowRadioButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

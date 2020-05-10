@@ -39,20 +39,77 @@ trait SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimRating extends js.Objec
 
 object SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimRating {
   @scala.inline
-  def apply(
-    bestRating: Int | Double = null,
-    imageUrl: String = null,
-    ratingValue: Int | Double = null,
-    textualRating: String = null,
-    worstRating: Int | Double = null
-  ): SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimRating = {
+  def apply(): SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimRating = {
     val __obj = js.Dynamic.literal()
-    if (bestRating != null) __obj.updateDynamic("bestRating")(bestRating.asInstanceOf[js.Any])
-    if (imageUrl != null) __obj.updateDynamic("imageUrl")(imageUrl.asInstanceOf[js.Any])
-    if (ratingValue != null) __obj.updateDynamic("ratingValue")(ratingValue.asInstanceOf[js.Any])
-    if (textualRating != null) __obj.updateDynamic("textualRating")(textualRating.asInstanceOf[js.Any])
-    if (worstRating != null) __obj.updateDynamic("worstRating")(worstRating.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimRating]
   }
+  @scala.inline
+  implicit class SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimRatingOps[Self <: SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimRating] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBestRating(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bestRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBestRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bestRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRatingValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ratingValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRatingValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ratingValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextualRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textualRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextualRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textualRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorstRating(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("worstRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorstRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("worstRating")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

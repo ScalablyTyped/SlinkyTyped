@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DecoratorConfigOptions extends js.Object {
-  var bound: js.UndefOr[Boolean] = js.undefined
-  var getter: js.UndefOr[Boolean] = js.undefined
-  var method: js.UndefOr[Boolean] = js.undefined
-  var optionalParams: js.UndefOr[Boolean] = js.undefined
-  var property: js.UndefOr[Boolean] = js.undefined
-  var setter: js.UndefOr[Boolean] = js.undefined
+  var bound: js.UndefOr[Boolean] = js.native
+  var getter: js.UndefOr[Boolean] = js.native
+  var method: js.UndefOr[Boolean] = js.native
+  var optionalParams: js.UndefOr[Boolean] = js.native
+  var property: js.UndefOr[Boolean] = js.native
+  var setter: js.UndefOr[Boolean] = js.native
 }
 
 object DecoratorConfigOptions {
   @scala.inline
-  def apply(
-    bound: js.UndefOr[Boolean] = js.undefined,
-    getter: js.UndefOr[Boolean] = js.undefined,
-    method: js.UndefOr[Boolean] = js.undefined,
-    optionalParams: js.UndefOr[Boolean] = js.undefined,
-    property: js.UndefOr[Boolean] = js.undefined,
-    setter: js.UndefOr[Boolean] = js.undefined
-  ): DecoratorConfigOptions = {
+  def apply(): DecoratorConfigOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bound)) __obj.updateDynamic("bound")(bound.asInstanceOf[js.Any])
-    if (!js.isUndefined(getter)) __obj.updateDynamic("getter")(getter.asInstanceOf[js.Any])
-    if (!js.isUndefined(method)) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (!js.isUndefined(optionalParams)) __obj.updateDynamic("optionalParams")(optionalParams.asInstanceOf[js.Any])
-    if (!js.isUndefined(property)) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
-    if (!js.isUndefined(setter)) __obj.updateDynamic("setter")(setter.asInstanceOf[js.Any])
     __obj.asInstanceOf[DecoratorConfigOptions]
   }
+  @scala.inline
+  implicit class DecoratorConfigOptionsOps[Self <: DecoratorConfigOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBound(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bound")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBound: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bound")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGetter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionalParams(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optionalParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionalParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optionalParams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProperty(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProperty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

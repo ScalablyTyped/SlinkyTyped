@@ -6,57 +6,193 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DiffOptions
   extends /* key */ StringDictionary[js.Any] {
-  var contextLines: js.UndefOr[Double] = js.undefined
-  var flags: js.UndefOr[Double] = js.undefined
-  var idAbbrev: js.UndefOr[Double] = js.undefined
-  var ignoreSubmodules: js.UndefOr[Double] = js.undefined
-  var interhunkLines: js.UndefOr[Double] = js.undefined
-  var maxSize: js.UndefOr[Double] = js.undefined
-  var newPrefix: js.UndefOr[String] = js.undefined
-  var notifyCb: js.UndefOr[js.Function] = js.undefined
-  var oldPrefix: js.UndefOr[String] = js.undefined
-  var pathspec: js.UndefOr[Strarray | String | js.Array[String]] = js.undefined
-  var payload: js.UndefOr[js.Any] = js.undefined
-  var progressCb: js.UndefOr[js.Any] = js.undefined
-  var version: js.UndefOr[Double] = js.undefined
+  var contextLines: js.UndefOr[Double] = js.native
+  var flags: js.UndefOr[Double] = js.native
+  var idAbbrev: js.UndefOr[Double] = js.native
+  var ignoreSubmodules: js.UndefOr[Double] = js.native
+  var interhunkLines: js.UndefOr[Double] = js.native
+  var maxSize: js.UndefOr[Double] = js.native
+  var newPrefix: js.UndefOr[String] = js.native
+  var notifyCb: js.UndefOr[js.Function] = js.native
+  var oldPrefix: js.UndefOr[String] = js.native
+  var pathspec: js.UndefOr[Strarray | String | js.Array[String]] = js.native
+  var payload: js.UndefOr[js.Any] = js.native
+  var progressCb: js.UndefOr[js.Any] = js.native
+  var version: js.UndefOr[Double] = js.native
 }
 
 object DiffOptions {
   @scala.inline
-  def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    contextLines: Int | Double = null,
-    flags: Int | Double = null,
-    idAbbrev: Int | Double = null,
-    ignoreSubmodules: Int | Double = null,
-    interhunkLines: Int | Double = null,
-    maxSize: Int | Double = null,
-    newPrefix: String = null,
-    notifyCb: js.Function = null,
-    oldPrefix: String = null,
-    pathspec: Strarray | String | js.Array[String] = null,
-    payload: js.Any = null,
-    progressCb: js.Any = null,
-    version: Int | Double = null
-  ): DiffOptions = {
+  def apply(): DiffOptions = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (contextLines != null) __obj.updateDynamic("contextLines")(contextLines.asInstanceOf[js.Any])
-    if (flags != null) __obj.updateDynamic("flags")(flags.asInstanceOf[js.Any])
-    if (idAbbrev != null) __obj.updateDynamic("idAbbrev")(idAbbrev.asInstanceOf[js.Any])
-    if (ignoreSubmodules != null) __obj.updateDynamic("ignoreSubmodules")(ignoreSubmodules.asInstanceOf[js.Any])
-    if (interhunkLines != null) __obj.updateDynamic("interhunkLines")(interhunkLines.asInstanceOf[js.Any])
-    if (maxSize != null) __obj.updateDynamic("maxSize")(maxSize.asInstanceOf[js.Any])
-    if (newPrefix != null) __obj.updateDynamic("newPrefix")(newPrefix.asInstanceOf[js.Any])
-    if (notifyCb != null) __obj.updateDynamic("notifyCb")(notifyCb.asInstanceOf[js.Any])
-    if (oldPrefix != null) __obj.updateDynamic("oldPrefix")(oldPrefix.asInstanceOf[js.Any])
-    if (pathspec != null) __obj.updateDynamic("pathspec")(pathspec.asInstanceOf[js.Any])
-    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
-    if (progressCb != null) __obj.updateDynamic("progressCb")(progressCb.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiffOptions]
   }
+  @scala.inline
+  implicit class DiffOptionsOps[Self <: DiffOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContextLines(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlags(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdAbbrev(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idAbbrev")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdAbbrev: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idAbbrev")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreSubmodules(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreSubmodules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreSubmodules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreSubmodules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterhunkLines(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interhunkLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterhunkLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interhunkLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotifyCb(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyCb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotifyCb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyCb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOldPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOldPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPathspec(value: Strarray | String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathspec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPathspec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathspec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPayload(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPayload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressCb(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressCb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressCb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressCb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

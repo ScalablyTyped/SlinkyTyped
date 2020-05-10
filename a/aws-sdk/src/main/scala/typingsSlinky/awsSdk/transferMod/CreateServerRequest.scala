@@ -38,24 +38,101 @@ trait CreateServerRequest extends js.Object {
 
 object CreateServerRequest {
   @scala.inline
-  def apply(
-    EndpointDetails: EndpointDetails = null,
-    EndpointType: EndpointType = null,
-    HostKey: HostKey = null,
-    IdentityProviderDetails: IdentityProviderDetails = null,
-    IdentityProviderType: IdentityProviderType = null,
-    LoggingRole: Role = null,
-    Tags: Tags = null
-  ): CreateServerRequest = {
+  def apply(): CreateServerRequest = {
     val __obj = js.Dynamic.literal()
-    if (EndpointDetails != null) __obj.updateDynamic("EndpointDetails")(EndpointDetails.asInstanceOf[js.Any])
-    if (EndpointType != null) __obj.updateDynamic("EndpointType")(EndpointType.asInstanceOf[js.Any])
-    if (HostKey != null) __obj.updateDynamic("HostKey")(HostKey.asInstanceOf[js.Any])
-    if (IdentityProviderDetails != null) __obj.updateDynamic("IdentityProviderDetails")(IdentityProviderDetails.asInstanceOf[js.Any])
-    if (IdentityProviderType != null) __obj.updateDynamic("IdentityProviderType")(IdentityProviderType.asInstanceOf[js.Any])
-    if (LoggingRole != null) __obj.updateDynamic("LoggingRole")(LoggingRole.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateServerRequest]
   }
+  @scala.inline
+  implicit class CreateServerRequestOps[Self <: CreateServerRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndpointDetails(value: EndpointDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpointDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpointType(value: EndpointType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpointType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostKey(value: HostKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentityProviderDetails(value: IdentityProviderDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityProviderDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentityProviderDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityProviderDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentityProviderType(value: IdentityProviderType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityProviderType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentityProviderType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityProviderType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoggingRole(value: Role): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoggingRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoggingRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoggingRole")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

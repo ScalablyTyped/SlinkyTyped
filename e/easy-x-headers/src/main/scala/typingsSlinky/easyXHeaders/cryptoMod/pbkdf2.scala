@@ -1,7 +1,6 @@
 package typingsSlinky.easyXHeaders.cryptoMod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +13,7 @@ object pbkdf2 extends js.Object {
     salt: String,
     iterations: Double,
     keylen: Double,
-    callback: js.Function2[/* err */ Error, /* derivedKey */ Buffer, _]
+    callback: js.Function2[/* err */ js.Error, /* derivedKey */ Buffer, _]
   ): Unit = js.native
   def apply(
     password: String,

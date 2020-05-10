@@ -21,11 +21,41 @@ trait SchemaWriteInstruction extends js.Object {
 
 object SchemaWriteInstruction {
   @scala.inline
-  def apply(input: SchemaInstructionInput = null, sink: SchemaSink = null): SchemaWriteInstruction = {
+  def apply(): SchemaWriteInstruction = {
     val __obj = js.Dynamic.literal()
-    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
-    if (sink != null) __obj.updateDynamic("sink")(sink.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWriteInstruction]
   }
+  @scala.inline
+  implicit class SchemaWriteInstructionOps[Self <: SchemaWriteInstruction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInput(value: SchemaInstructionInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSink(value: SchemaSink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sink")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

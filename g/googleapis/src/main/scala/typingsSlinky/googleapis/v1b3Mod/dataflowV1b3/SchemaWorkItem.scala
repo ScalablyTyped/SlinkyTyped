@@ -75,40 +75,197 @@ trait SchemaWorkItem extends js.Object {
 
 object SchemaWorkItem {
   @scala.inline
-  def apply(
-    configuration: String = null,
-    id: String = null,
-    initialReportIndex: String = null,
-    jobId: String = null,
-    leaseExpireTime: String = null,
-    mapTask: SchemaMapTask = null,
-    packages: js.Array[SchemaPackage] = null,
-    projectId: String = null,
-    reportStatusInterval: String = null,
-    seqMapTask: SchemaSeqMapTask = null,
-    shellTask: SchemaShellTask = null,
-    sourceOperationTask: SchemaSourceOperationRequest = null,
-    streamingComputationTask: SchemaStreamingComputationTask = null,
-    streamingConfigTask: SchemaStreamingConfigTask = null,
-    streamingSetupTask: SchemaStreamingSetupTask = null
-  ): SchemaWorkItem = {
+  def apply(): SchemaWorkItem = {
     val __obj = js.Dynamic.literal()
-    if (configuration != null) __obj.updateDynamic("configuration")(configuration.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (initialReportIndex != null) __obj.updateDynamic("initialReportIndex")(initialReportIndex.asInstanceOf[js.Any])
-    if (jobId != null) __obj.updateDynamic("jobId")(jobId.asInstanceOf[js.Any])
-    if (leaseExpireTime != null) __obj.updateDynamic("leaseExpireTime")(leaseExpireTime.asInstanceOf[js.Any])
-    if (mapTask != null) __obj.updateDynamic("mapTask")(mapTask.asInstanceOf[js.Any])
-    if (packages != null) __obj.updateDynamic("packages")(packages.asInstanceOf[js.Any])
-    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
-    if (reportStatusInterval != null) __obj.updateDynamic("reportStatusInterval")(reportStatusInterval.asInstanceOf[js.Any])
-    if (seqMapTask != null) __obj.updateDynamic("seqMapTask")(seqMapTask.asInstanceOf[js.Any])
-    if (shellTask != null) __obj.updateDynamic("shellTask")(shellTask.asInstanceOf[js.Any])
-    if (sourceOperationTask != null) __obj.updateDynamic("sourceOperationTask")(sourceOperationTask.asInstanceOf[js.Any])
-    if (streamingComputationTask != null) __obj.updateDynamic("streamingComputationTask")(streamingComputationTask.asInstanceOf[js.Any])
-    if (streamingConfigTask != null) __obj.updateDynamic("streamingConfigTask")(streamingConfigTask.asInstanceOf[js.Any])
-    if (streamingSetupTask != null) __obj.updateDynamic("streamingSetupTask")(streamingSetupTask.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWorkItem]
   }
+  @scala.inline
+  implicit class SchemaWorkItemOps[Self <: SchemaWorkItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfiguration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialReportIndex(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialReportIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialReportIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialReportIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeaseExpireTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseExpireTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeaseExpireTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseExpireTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapTask(value: SchemaMapTask): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapTask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapTask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapTask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPackages(value: js.Array[SchemaPackage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportStatusInterval(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportStatusInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportStatusInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportStatusInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeqMapTask(value: SchemaSeqMapTask): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seqMapTask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeqMapTask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seqMapTask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShellTask(value: SchemaShellTask): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shellTask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShellTask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shellTask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceOperationTask(value: SchemaSourceOperationRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceOperationTask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceOperationTask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceOperationTask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamingComputationTask(value: SchemaStreamingComputationTask): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingComputationTask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamingComputationTask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingComputationTask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamingConfigTask(value: SchemaStreamingConfigTask): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingConfigTask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamingConfigTask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingConfigTask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamingSetupTask(value: SchemaStreamingSetupTask): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingSetupTask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamingSetupTask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingSetupTask")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

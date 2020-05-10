@@ -26,18 +26,65 @@ trait PciId extends js.Object {
 
 object PciId {
   @scala.inline
-  def apply(
-    DeviceId: String = null,
-    SubsystemId: String = null,
-    SubsystemVendorId: String = null,
-    VendorId: String = null
-  ): PciId = {
+  def apply(): PciId = {
     val __obj = js.Dynamic.literal()
-    if (DeviceId != null) __obj.updateDynamic("DeviceId")(DeviceId.asInstanceOf[js.Any])
-    if (SubsystemId != null) __obj.updateDynamic("SubsystemId")(SubsystemId.asInstanceOf[js.Any])
-    if (SubsystemVendorId != null) __obj.updateDynamic("SubsystemVendorId")(SubsystemVendorId.asInstanceOf[js.Any])
-    if (VendorId != null) __obj.updateDynamic("VendorId")(VendorId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PciId]
   }
+  @scala.inline
+  implicit class PciIdOps[Self <: PciId] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubsystemId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubsystemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubsystemId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubsystemId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubsystemVendorId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubsystemVendorId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubsystemVendorId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubsystemVendorId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVendorId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VendorId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVendorId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VendorId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

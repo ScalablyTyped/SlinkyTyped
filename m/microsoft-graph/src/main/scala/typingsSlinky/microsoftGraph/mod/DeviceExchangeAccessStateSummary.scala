@@ -4,35 +4,93 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DeviceExchangeAccessStateSummary extends js.Object {
   // Total count of devices with Exchange Access State: Allowed.
-  var allowedDeviceCount: js.UndefOr[Double] = js.undefined
+  var allowedDeviceCount: js.UndefOr[Double] = js.native
   // Total count of devices with Exchange Access State: Blocked.
-  var blockedDeviceCount: js.UndefOr[Double] = js.undefined
+  var blockedDeviceCount: js.UndefOr[Double] = js.native
   // Total count of devices with Exchange Access State: Quarantined.
-  var quarantinedDeviceCount: js.UndefOr[Double] = js.undefined
+  var quarantinedDeviceCount: js.UndefOr[Double] = js.native
   // Total count of devices for which no Exchange Access State could be found.
-  var unavailableDeviceCount: js.UndefOr[Double] = js.undefined
+  var unavailableDeviceCount: js.UndefOr[Double] = js.native
   // Total count of devices with Exchange Access State: Unknown.
-  var unknownDeviceCount: js.UndefOr[Double] = js.undefined
+  var unknownDeviceCount: js.UndefOr[Double] = js.native
 }
 
 object DeviceExchangeAccessStateSummary {
   @scala.inline
-  def apply(
-    allowedDeviceCount: Int | Double = null,
-    blockedDeviceCount: Int | Double = null,
-    quarantinedDeviceCount: Int | Double = null,
-    unavailableDeviceCount: Int | Double = null,
-    unknownDeviceCount: Int | Double = null
-  ): DeviceExchangeAccessStateSummary = {
+  def apply(): DeviceExchangeAccessStateSummary = {
     val __obj = js.Dynamic.literal()
-    if (allowedDeviceCount != null) __obj.updateDynamic("allowedDeviceCount")(allowedDeviceCount.asInstanceOf[js.Any])
-    if (blockedDeviceCount != null) __obj.updateDynamic("blockedDeviceCount")(blockedDeviceCount.asInstanceOf[js.Any])
-    if (quarantinedDeviceCount != null) __obj.updateDynamic("quarantinedDeviceCount")(quarantinedDeviceCount.asInstanceOf[js.Any])
-    if (unavailableDeviceCount != null) __obj.updateDynamic("unavailableDeviceCount")(unavailableDeviceCount.asInstanceOf[js.Any])
-    if (unknownDeviceCount != null) __obj.updateDynamic("unknownDeviceCount")(unknownDeviceCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceExchangeAccessStateSummary]
   }
+  @scala.inline
+  implicit class DeviceExchangeAccessStateSummaryOps[Self <: DeviceExchangeAccessStateSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowedDeviceCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedDeviceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedDeviceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedDeviceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlockedDeviceCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockedDeviceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockedDeviceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockedDeviceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuarantinedDeviceCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quarantinedDeviceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuarantinedDeviceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quarantinedDeviceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnavailableDeviceCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unavailableDeviceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnavailableDeviceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unavailableDeviceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnknownDeviceCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unknownDeviceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnknownDeviceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unknownDeviceCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

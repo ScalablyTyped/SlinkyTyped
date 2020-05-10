@@ -2,6 +2,7 @@ package typingsSlinky.ramda
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.ramda.ramdaBooleans.`false`
 import typingsSlinky.ramda.ramdaNumbers.`10`
 import typingsSlinky.ramda.ramdaNumbers.`1`
@@ -17,6 +18,7 @@ import typingsSlinky.ramda.ramdaStrings.Array
 import typingsSlinky.ramda.ramdaStrings.Function
 import typingsSlinky.ramda.ramdaStrings.Number
 import typingsSlinky.ramda.ramdaStrings.Object
+import typingsSlinky.ramda.ramdaStrings.RegExp
 import typingsSlinky.ramda.ramdaStrings.Undefined
 import typingsSlinky.ramda.ramdaStrings.deep
 import typingsSlinky.ramda.ramdaStrings.flat
@@ -42,14 +44,12 @@ import typingsSlinky.ramda.toolsMod.Pred
 import typingsSlinky.ramda.toolsMod.Reduced
 import typingsSlinky.ramda.toolsMod.SafePred
 import typingsSlinky.ramda.toolsMod.ValueOfRecord
-import typingsSlinky.std.Date
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.Omit
 import typingsSlinky.std.Parameters
 import typingsSlinky.std.Partial
 import typingsSlinky.std.Pick
 import typingsSlinky.std.Record
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -62,8 +62,6 @@ object mod extends js.Object {
   val reject: Filter = js.native
   def F(): Boolean = js.native
   def T(): Boolean = js.native
-  def add(a: String): js.Function1[/* b */ String, String] = js.native
-  def add(a: String, b: String): String = js.native
   def add(a: Double): js.Function1[/* b */ Double, Double] = js.native
   def add(a: Double, b: Double): Double = js.native
   def addIndex[T](fn: js.Function2[/* f */ js.Function1[/* item */ T, Unit], /* list */ js.Array[T], js.Array[T]]): js.Any = js.native
@@ -93,6 +91,8 @@ object mod extends js.Object {
   def and(fn1: Null, val2: js.Any): Boolean = js.native
   def and[T /* <: AnonAnd */](fn1: T): js.Function1[/* val2 */ js.Any, Boolean] = js.native
   def and[T /* <: AnonAnd */](fn1: T, val2: js.Any): Boolean = js.native
+  def andThen[A, B](onSuccess: js.Function1[/* a */ A, B | js.Promise[B]]): js.Function1[/* promise */ js.Promise[A], js.Promise[B]] = js.native
+  def andThen[A, B](onSuccess: js.Function1[/* a */ A, B | js.Promise[B]], promise: js.Promise[A]): js.Promise[B] = js.native
   def any[T](fn: js.Function1[/* a */ T, Boolean]): js.Function1[/* list */ js.Array[T], Boolean] = js.native
   def any[T](fn: js.Function1[/* a */ T, Boolean], list: js.Array[T]): Boolean = js.native
   def anyPass[T](preds: js.Array[SafePred[T]]): SafePred[T] = js.native
@@ -131,7 +131,7 @@ object mod extends js.Object {
     /* args */ Parameters[ValueOfRecord[Obj]], 
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ Key in keyof Obj ]: std.ReturnType<Obj[Key]>}
-    */ typingsSlinky.ramda.ramdaStrings.applySpec with Obj
+    */ typingsSlinky.ramda.ramdaStrings.applySpec with TopLevel[Obj]
   ] = js.native
   def applySpec[T](obj: js.Any): js.Function1[/* repeated */ js.Any, T] = js.native
   def applyTo[T](el: T): js.Function1[/* fn */ js.Function1[/* t */ T, _], _] = js.native
@@ -406,6 +406,7 @@ object mod extends js.Object {
   def eqProps[P /* <: String */](prop: P): js.Function2[/* obj1 */ Record[P, _], /* obj2 */ Record[P, _], Boolean] = js.native
   def eqProps[T](prop: String, obj1: T): js.Function1[/* obj2 */ js.Any, Boolean] = js.native
   def eqProps[T, U](prop: String, obj1: T, obj2: U): Boolean = js.native
+  def equals[T](__ : Placeholder, b: T): js.Function1[/* a */ T, Boolean] = js.native
   def equals[T](a: T, b: T): Boolean = js.native
   def evolve[E /* <: Evolver[_] */](transformations: E): js.Function1[/* obj */ Evolvable[E], Evolve[Evolvable[E], E]] = js.native
   def evolve[E /* <: Evolver[_] */, V /* <: Evolvable[E] */](transformations: E, obj: V): Evolve[V, E] = js.native
@@ -425,7 +426,7 @@ object mod extends js.Object {
   def forEachObjIndexed[T](
     fn: js.Function3[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 
-      /* key */ String, 
+      /* keyof T */ /* key */ String, 
       /* obj */ T, 
       Unit
     ]
@@ -433,7 +434,7 @@ object mod extends js.Object {
   def forEachObjIndexed[T](
     fn: js.Function3[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 
-      /* key */ String, 
+      /* keyof T */ /* key */ String, 
       /* obj */ T, 
       Unit
     ],
@@ -501,6 +502,8 @@ object mod extends js.Object {
   def into(acc: js.Any): js.Function2[/* xf */ js.Function1[/* repeated */ js.Any, _], /* list */ js.Array[_], js.Array[_]] = js.native
   def into(acc: js.Any, xf: js.Function1[/* repeated */ js.Any, _]): js.Function1[/* list */ js.Array[_], js.Array[_]] = js.native
   def into[T](acc: js.Any, xf: js.Function1[/* repeated */ js.Any, _], list: js.Array[T]): js.Array[T] = js.native
+  @JSName("into")
+  def into_TR[T, R](acc: js.Any, xf: js.Function1[/* repeated */ js.Any, js.Array[R]], list: js.Array[T]): js.Array[R] = js.native
   def invert[T](obj: T): StringDictionary[js.Array[String]] = js.native
   def invertObj(obj: NumberDictionary[String]): StringDictionary[String] = js.native
   def invertObj(obj: StringDictionary[String]): StringDictionary[String] = js.native
@@ -540,7 +543,7 @@ object mod extends js.Object {
   def keys[T](x: T): js.Array[String] = js.native
   def keysIn[T](obj: T): js.Array[String] = js.native
   @JSName("keys")
-  def keys_T_Object[T /* <: js.Object */](x: T): js.Array[String] = js.native
+  def keys_T_Object[T /* <: js.Object */](x: T): js.Array[/* keyof T */ String] = js.native
   def last(list: js.Array[js.Any]): js.UndefOr[scala.Nothing] = js.native
   def last(str: String): String = js.native
   def lastIndexOf[T](target: T, list: js.Array[T]): Double = js.native
@@ -610,8 +613,8 @@ object mod extends js.Object {
   def max(a: Boolean, b: Boolean): Boolean = js.native
   def max(a: Double): js.Function1[/* b */ Double, Double] = js.native
   def max(a: Double, b: Double): Double = js.native
-  def max(a: Date): js.Function1[/* b */ js.Date, js.Date] = js.native
-  def max(a: Date, b: Date): js.Date = js.native
+  def max(a: js.Date): js.Function1[/* b */ js.Date, js.Date] = js.native
+  def max(a: js.Date, b: js.Date): js.Date = js.native
   def maxBy[T](keyFn: js.Function1[/* a */ T, Ord]): js.Any = js.native
   def maxBy[T](keyFn: js.Function1[/* a */ T, Ord], a: T): js.Function1[/* b */ T, T] = js.native
   def maxBy[T](keyFn: js.Function1[/* a */ T, Ord], a: T, b: T): T = js.native
@@ -649,8 +652,8 @@ object mod extends js.Object {
   def min(a: Boolean, b: Boolean): Boolean = js.native
   def min(a: Double): js.Function1[/* b */ Double, Double] = js.native
   def min(a: Double, b: Double): Double = js.native
-  def min(a: Date): js.Function1[/* b */ js.Date, js.Date] = js.native
-  def min(a: Date, b: Date): js.Date = js.native
+  def min(a: js.Date): js.Function1[/* b */ js.Date, js.Date] = js.native
+  def min(a: js.Date, b: js.Date): js.Date = js.native
   def minBy[T](keyFn: js.Function1[/* a */ T, Ord]): js.Any = js.native
   def minBy[T](keyFn: js.Function1[/* a */ T, Ord], a: T): js.Function1[/* b */ T, T] = js.native
   def minBy[T](keyFn: js.Function1[/* a */ T, Ord], a: T, b: T): T = js.native
@@ -683,12 +686,12 @@ object mod extends js.Object {
   def once(fn: js.Function1[/* repeated */ js.Any, _]): js.Function1[/* repeated */ js.Any, _] = js.native
   @JSName("once")
   def once_T[T](fn: js.Function1[/* repeated */ js.Any, T]): js.Function1[/* repeated */ js.Any, T] = js.native
-  def or[T](a: T): js.Function1[/* b */ js.Any, T | _] = js.native
-  def or[T, U](a: T, b: U): T | U = js.native
+  def or[T /* <: AnonOr */](fn1: T): js.Function1[/* val2 */ js.Any, T | _] = js.native
+  def or[T /* <: AnonOr */, U](fn1: T, val2: U): T | U = js.native
   @JSName("or")
-  def or_T_AnonOr[T /* <: AnonOr */](fn1: T): js.Function1[/* val2 */ js.Any, T | _] = js.native
+  def or_T[T](a: T): js.Function1[/* b */ js.Any, T | _] = js.native
   @JSName("or")
-  def or_T_AnonOrU[T /* <: AnonOr */, U](fn1: T, val2: U): T | U = js.native
+  def or_TU[T, U](a: T, b: U): T | U = js.native
   def otherwise[A, B](onError: js.Function1[/* error */ js.Any, B | js.Promise[B]]): js.Function1[/* promise */ js.Promise[A], js.Promise[B]] = js.native
   def otherwise[A, B](onError: js.Function1[/* error */ js.Any, B | js.Promise[B]], promise: js.Promise[A]): js.Promise[B] = js.native
   def over(lens: Lens): js.Function2[/* fn */ Arity1Fn, /* value */ js.Any, _] = js.native
@@ -733,8 +736,13 @@ object mod extends js.Object {
   def pathSatisfies[T, U](pred: js.Function1[/* val */ T, Boolean]): js.Any = js.native
   def pathSatisfies[T, U](pred: js.Function1[/* val */ T, Boolean], path: Path): js.Function1[/* obj */ U, Boolean] = js.native
   def pathSatisfies[T, U](pred: js.Function1[/* val */ T, Boolean], path: Path, obj: U): Boolean = js.native
-  def pick[K /* <: String */](names: js.Array[K]): js.Function1[/* obj */ js.Any, Pick[_, Exclude[String, Exclude[String, K]]]] = js.native
-  def pick[T, K /* <: String */](names: js.Array[K], obj: T): Pick[T, Exclude[String, Exclude[String, K]]] = js.native
+  def paths[T](paths: js.Array[Path]): js.Function1[/* obj */ js.Any, js.UndefOr[js.Array[T]]] = js.native
+  def paths[T](paths: js.Array[Path], obj: js.Any): js.UndefOr[js.Array[T]] = js.native
+  def pick[K /* <: String */](names: js.Array[K]): js.Function1[
+    /* obj */ js.Any, 
+    Pick[_, Exclude[/* keyof any */ String, Exclude[/* keyof any */ String, K]]]
+  ] = js.native
+  def pick[T, K /* <: String */](names: js.Array[K], obj: T): Pick[T, Exclude[/* keyof T */ String, Exclude[/* keyof T */ String, K]]] = js.native
   def pickAll(names: js.Array[String]): js.Function1[/* obj */ js.Any, _] = js.native
   def pickAll[T, U](names: js.Array[String], obj: T): U = js.native
   def pickBy(pred: ObjPred): js.Function1[/* obj */ js.Any, _] = js.native
@@ -1160,7 +1168,7 @@ object mod extends js.Object {
   def pluck(p: Double): js.Function1[/* list */ js.Array[NumberDictionary[_]], js.Array[_]] = js.native
   def pluck[P /* <: String */](p: P): js.Function1[/* list */ js.Array[Record[P, _]], js.Array[_]] = js.native
   def pluck[T](p: Double, list: js.Array[NumberDictionary[T]]): js.Array[T] = js.native
-  def pluck[K /* <: String */, T](p: K, list: js.Array[T]): js.Array[
+  def pluck[K /* <: /* keyof T */ String */, T](p: K, list: js.Array[T]): js.Array[
     /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any
   ] = js.native
   def prepend[T](el: T): js.Function1[/* list */ js.Array[T], js.Array[T]] = js.native
@@ -1169,11 +1177,11 @@ object mod extends js.Object {
   def project[T, U](props: js.Array[String]): js.Function1[/* objs */ js.Array[T], js.Array[U]] = js.native
   def project[T, U](props: js.Array[String], objs: js.Array[T]): js.Array[U] = js.native
   def prop[T](__ : Placeholder, obj: T): js.Function1[
-    /* p */ String, 
+    /* keyof T */ /* p */ String, 
     /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
   ] = js.native
   def prop[P /* <: String */](p: P): js.Function1[/* obj */ Record[P, _], _] = js.native
-  def prop[P /* <: String */, T](p: P, obj: T): /* import warning: importer.ImportType#apply Failed type conversion: T[P] */ js.Any = js.native
+  def prop[P /* <: /* keyof T */ String */, T](p: P, obj: T): /* import warning: importer.ImportType#apply Failed type conversion: T[P] */ js.Any = js.native
   def propEq(name: String): FnCallValObj = js.native
   def propEq(name: Double): Fn0 = js.native
   def propEq[V](name: String, `val`: V): js.Function1[/* obj */ Record[String, V], Boolean] = js.native
@@ -1256,15 +1264,15 @@ object mod extends js.Object {
     replacement: js.Function2[/* match */ String, /* repeated */ js.Any, String],
     str: String
   ): String = js.native
-  def replace(pattern: RegExp): js.Function1[
+  def replace(pattern: js.RegExp): js.Function1[
     /* replacement */ String | (js.Function2[/* match */ String, /* repeated */ js.Any, String]), 
     js.Function1[/* str */ String, String]
   ] = js.native
-  def replace(pattern: RegExp, replacement: String): js.Function1[/* str */ String, String] = js.native
-  def replace(pattern: RegExp, replacement: String, str: String): String = js.native
-  def replace(pattern: RegExp, replacement: js.Function2[/* match */ String, /* repeated */ js.Any, String]): js.Function1[/* str */ String, String] = js.native
+  def replace(pattern: js.RegExp, replacement: String): js.Function1[/* str */ String, String] = js.native
+  def replace(pattern: js.RegExp, replacement: String, str: String): String = js.native
+  def replace(pattern: js.RegExp, replacement: js.Function2[/* match */ String, /* repeated */ js.Any, String]): js.Function1[/* str */ String, String] = js.native
   def replace(
-    pattern: RegExp,
+    pattern: js.RegExp,
     replacement: js.Function2[/* match */ String, /* repeated */ js.Any, String],
     str: String
   ): String = js.native
@@ -1288,8 +1296,8 @@ object mod extends js.Object {
   def sortWith[T](fns: js.Array[js.Function2[/* a */ T, /* b */ T, Double]], list: js.Array[T]): js.Array[T] = js.native
   def split(sep: String): js.Function1[/* str */ String, js.Array[String]] = js.native
   def split(sep: String, str: String): js.Array[String] = js.native
-  def split(sep: RegExp): js.Function1[/* str */ String, js.Array[String]] = js.native
-  def split(sep: RegExp, str: String): js.Array[String] = js.native
+  def split(sep: js.RegExp): js.Function1[/* str */ String, js.Array[String]] = js.native
+  def split(sep: js.RegExp, str: String): js.Array[String] = js.native
   def splitAt(index: Double): Fn1 = js.native
   def splitAt(index: Double, list: String): js.Tuple2[String, String] = js.native
   def splitAt[T](index: Double, list: js.Array[T]): js.Tuple2[js.Array[T], js.Array[T]] = js.native
@@ -1329,8 +1337,6 @@ object mod extends js.Object {
   def tap[T](fn: js.Function1[/* a */ T, _], value: T): T = js.native
   def test(regexp: js.RegExp): js.Function1[/* str */ String, Boolean] = js.native
   def test(regexp: js.RegExp, str: String): Boolean = js.native
-  def `then`[A, B](onSuccess: js.Function1[/* a */ A, B | js.Promise[B]]): js.Function1[/* promise */ js.Promise[A], js.Promise[B]] = js.native
-  def `then`[A, B](onSuccess: js.Function1[/* a */ A, B | js.Promise[B]], promise: js.Promise[A]): js.Promise[B] = js.native
   def thunkify[F /* <: js.Function1[/* repeated */ js.Any, _] */](fn: F): js.Any = js.native
   def times[T](fn: js.Function1[/* i */ Double, T]): js.Function1[/* n */ Double, js.Array[T]] = js.native
   def times[T](fn: js.Function1[/* i */ Double, T], n: Double): js.Array[T] = js.native
@@ -1376,7 +1382,7 @@ object mod extends js.Object {
   ): js.Array[js.Array[B]] = js.native
   def trim(str: String): String = js.native
   def tryCatch[T](tryer: js.Function1[/* repeated */ js.Any, T], catcher: js.Function1[/* repeated */ js.Any, T]): js.Function1[/* repeated */ js.Any, T] = js.native
-  def `type`(`val`: js.Any): Object | Number | typingsSlinky.ramda.ramdaStrings.Boolean | typingsSlinky.ramda.ramdaStrings.String | typingsSlinky.ramda.ramdaStrings.Null | Array | typingsSlinky.ramda.ramdaStrings.RegExp | Function | Undefined = js.native
+  def `type`(`val`: js.Any): Object | Number | typingsSlinky.ramda.ramdaStrings.Boolean | typingsSlinky.ramda.ramdaStrings.String | typingsSlinky.ramda.ramdaStrings.Null | Array | RegExp | Function | Undefined = js.native
   def unapply[T](fn: js.Function1[/* args */ js.Array[_], T]): js.Function1[/* repeated */ js.Any, T] = js.native
   def unary[T](fn: js.Function2[/* a */ T, /* repeated */ js.Any, _]): js.Function1[/* a */ T, _] = js.native
   def uncurryN[T](len: Double, fn: js.Function1[/* a */ js.Any, _]): js.Function1[/* repeated */ js.Any, T] = js.native
@@ -1404,7 +1410,7 @@ object mod extends js.Object {
     fn: js.Function1[/* repeated */ js.Any, _],
     transformers: js.Array[js.Function1[/* repeated */ _, _]]
   ): js.Function1[/* repeated */ js.Any, _] = js.native
-  def values[T /* <: js.Object */, K /* <: String */](obj: T): js.Array[
+  def values[T /* <: js.Object */, K /* <: /* keyof T */ String */](obj: T): js.Array[
     /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any
   ] = js.native
   def valuesIn[T](obj: js.Any): js.Array[T] = js.native
@@ -1412,14 +1418,14 @@ object mod extends js.Object {
   def view[T, U](lens: Lens, obj: T): U = js.native
   def when[T, U](pred: js.Function1[/* a */ T, Boolean], whenTrueFn: js.Function1[/* a */ T, U]): js.Function1[/* obj */ T, U] = js.native
   def when[T, U](pred: js.Function1[/* a */ T, Boolean], whenTrueFn: js.Function1[/* a */ T, U], obj: T): U = js.native
-  def where[T](spec: T): js.Function1[/* testObj */ js.Any, Boolean] = js.native
+  def where[ObjFunc2](spec: ObjFunc2): js.Function1[/* testObj */ js.Any, Boolean] = js.native
   def where[T, U](spec: T, testObj: U): Boolean = js.native
   def whereEq[T](spec: T): js.Function1[/* obj */ js.Any, Boolean] = js.native
   def whereEq[T, U](spec: T, obj: U): Boolean = js.native
   @JSName("where")
-  def where_ObjFunc2[ObjFunc2](spec: ObjFunc2): js.Function1[/* testObj */ js.Any, Boolean] = js.native
-  @JSName("where")
   def where_ObjFunc2U[ObjFunc2, U](spec: ObjFunc2, testObj: U): Boolean = js.native
+  @JSName("where")
+  def where_T[T](spec: T): js.Function1[/* testObj */ js.Any, Boolean] = js.native
   def without[T](list1: js.Array[T]): js.Function1[/* list2 */ js.Array[T], js.Array[T]] = js.native
   def without[T](list1: js.Array[T], list2: js.Array[T]): js.Array[T] = js.native
   def xprod[K](as: js.Array[K]): js.Function1[/* bs */ js.Array[_], js.Array[KeyValuePair[K, _]]] = js.native

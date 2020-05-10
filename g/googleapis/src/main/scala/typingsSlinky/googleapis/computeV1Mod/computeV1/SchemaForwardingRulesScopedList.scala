@@ -20,11 +20,41 @@ trait SchemaForwardingRulesScopedList extends js.Object {
 
 object SchemaForwardingRulesScopedList {
   @scala.inline
-  def apply(forwardingRules: js.Array[SchemaForwardingRule] = null, warning: AnonCode = null): SchemaForwardingRulesScopedList = {
+  def apply(): SchemaForwardingRulesScopedList = {
     val __obj = js.Dynamic.literal()
-    if (forwardingRules != null) __obj.updateDynamic("forwardingRules")(forwardingRules.asInstanceOf[js.Any])
-    if (warning != null) __obj.updateDynamic("warning")(warning.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaForwardingRulesScopedList]
   }
+  @scala.inline
+  implicit class SchemaForwardingRulesScopedListOps[Self <: SchemaForwardingRulesScopedList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withForwardingRules(value: js.Array[SchemaForwardingRule]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forwardingRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForwardingRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forwardingRules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarning(value: AnonCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

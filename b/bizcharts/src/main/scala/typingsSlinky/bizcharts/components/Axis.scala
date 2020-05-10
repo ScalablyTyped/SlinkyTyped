@@ -1,13 +1,9 @@
 package typingsSlinky.bizcharts.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antvG2.mod.AxisGrid
 import typingsSlinky.antvG2.mod.AxisLabel
-import typingsSlinky.antvG2.mod.Styles.line
 import typingsSlinky.antvG2.mod.Styles.tickLine
 import typingsSlinky.bizcharts.mod.AxisProps
 import typingsSlinky.bizcharts.mod.PositionType
@@ -15,44 +11,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Axis
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.mod.Axis] {
+object Axis {
   @JSImport("bizcharts", "Axis")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name */
-  def apply(
-    grid: AxisGrid = null,
-    label: AxisLabel = null,
-    line: line = null,
-    min: Int | Double = null,
-    position: PositionType = null,
-    subTickCount: Int | Double = null,
-    subTickLine: tickLine = null,
-    tickLine: tickLine = null,
-    title: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify G2.AxisTile */ js.Any) | Boolean = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    zIndex: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Axis] = {
-    val __obj = js.Dynamic.literal()
-    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (subTickCount != null) __obj.updateDynamic("subTickCount")(subTickCount.asInstanceOf[js.Any])
-    if (subTickLine != null) __obj.updateDynamic("subTickLine")(subTickLine.asInstanceOf[js.Any])
-    if (tickLine != null) __obj.updateDynamic("tickLine")(tickLine.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Axis] {
+    @scala.inline
+    def grid(value: AxisGrid): this.type = set("grid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridNull: this.type = set("grid", null)
+    @scala.inline
+    def label(value: AxisLabel): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelNull: this.type = set("label", null)
+    @scala.inline
+    def line(value: typingsSlinky.antvG2.mod.Styles.line): this.type = set("line", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lineNull: this.type = set("line", null)
+    @scala.inline
+    def min(value: Double): this.type = set("min", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def position(value: PositionType): this.type = set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subTickCount(value: Double): this.type = set("subTickCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subTickLine(value: tickLine): this.type = set("subTickLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tickLine(value: typingsSlinky.antvG2.mod.Styles.tickLine): this.type = set("tickLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tickLineNull: this.type = set("tickLine", null)
+    @scala.inline
+    def title(
+      value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify G2.AxisTile */ js.Any) | Boolean
+    ): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleNull: this.type = set("title", null)
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def zIndex(value: Double): this.type = set("zIndex", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Axis] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.mod.Axis](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = AxisProps
+  
+  def withProps(p: AxisProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Axis.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

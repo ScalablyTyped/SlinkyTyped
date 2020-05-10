@@ -12,14 +12,7 @@ import typingsSlinky.mongoose.mod.Connection_
 import typingsSlinky.mongoose.mod.Document
 import typingsSlinky.mongoose.mod.Model_
 import typingsSlinky.mongoose.mod.Schema
-import typingsSlinky.mongoose.mongooseStrings.autoCreate
-import typingsSlinky.mongoose.mongooseStrings.autoIndex
-import typingsSlinky.mongoose.mongooseStrings.bufferCommands
-import typingsSlinky.mongoose.mongooseStrings.useCreateIndex
-import typingsSlinky.mongoose.mongooseStrings.useFindAndModify
 import typingsSlinky.node.eventsMod.EventEmitterOptions
-import typingsSlinky.std.Pick
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,10 +25,7 @@ trait ConnectionthenPromiseConn extends js.Object {
   /** A hash of the collections associated with this connection */
   var collections: StringDictionary[Collection] = js.native
   /** A hash of the global options that are associated with this connection */
-  var config: Pick[
-    ConnectionOptions, 
-    autoIndex | autoCreate | useCreateIndex | useFindAndModify | bufferCommands
-  ] = js.native
+  var config: PickConnectionOptionsauto = js.native
   /** The mongodb.Db instance, set when the connection is opened */
   var db: Db = js.native
   /** Connected host */
@@ -101,7 +91,7 @@ trait ConnectionthenPromiseConn extends js.Object {
     * @returns this
     */
   def deleteModel(name: String): Connection_ = js.native
-  def deleteModel(name: RegExp): Connection_ = js.native
+  def deleteModel(name: js.RegExp): Connection_ = js.native
   /** Helper for dropCollection() */
   def dropCollection(name: String): js.Promise[Unit] = js.native
   def dropCollection(name: String, callback: js.Function1[/* err */ js.Any, Unit]): js.Promise[Unit] = js.native

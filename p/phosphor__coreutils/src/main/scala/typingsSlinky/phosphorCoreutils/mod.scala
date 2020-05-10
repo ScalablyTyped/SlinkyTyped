@@ -111,7 +111,7 @@ object mod extends js.Object {
       *   - `require('crypto').randomBytes
       *   - `Math.random`
       */
-    def getRandomValues(buffer: scala.scalajs.js.typedarray.Uint8Array): Unit = js.native
+    def getRandomValues(buffer: js.typedarray.Uint8Array): Unit = js.native
   }
   
   @js.native

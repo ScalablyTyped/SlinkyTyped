@@ -1,11 +1,8 @@
 package typingsSlinky.inkSelectInput.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.inkSelectInput.mod.ItemOfSelectInput
 import typingsSlinky.inkSelectInput.mod.SelectInputProps
 import typingsSlinky.inkSelectInput.mod.default
@@ -13,35 +10,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object InkSelectInput
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object InkSelectInput {
   @JSImport("ink-select-input", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    focus: js.UndefOr[Boolean] = js.undefined,
-    indicatorComponent: ReactComponentClass[js.Object] = null,
-    initialIndex: Int | Double = null,
-    itemComponent: ReactComponentClass[js.Object] = null,
-    items: js.Array[ItemOfSelectInput] = null,
-    limit: Int | Double = null,
-    onSelect: ItemOfSelectInput => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(focus)) __obj.updateDynamic("focus")(focus.asInstanceOf[js.Any])
-    if (indicatorComponent != null) __obj.updateDynamic("indicatorComponent")(indicatorComponent.asInstanceOf[js.Any])
-    if (initialIndex != null) __obj.updateDynamic("initialIndex")(initialIndex.asInstanceOf[js.Any])
-    if (itemComponent != null) __obj.updateDynamic("itemComponent")(itemComponent.asInstanceOf[js.Any])
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def focus(value: Boolean): this.type = set("focus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indicatorComponent(value: ReactComponentClass[js.Object]): this.type = set("indicatorComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialIndex(value: Double): this.type = set("initialIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemComponent(value: ReactComponentClass[js.Object]): this.type = set("itemComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def items(value: js.Array[ItemOfSelectInput]): this.type = set("items", value.asInstanceOf[js.Any])
+    @scala.inline
+    def limit(value: Double): this.type = set("limit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onSelect(value: ItemOfSelectInput => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.inkSelectInput.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SelectInputProps[ItemOfSelectInput]
+  
+  def withProps(p: SelectInputProps[ItemOfSelectInput]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: InkSelectInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

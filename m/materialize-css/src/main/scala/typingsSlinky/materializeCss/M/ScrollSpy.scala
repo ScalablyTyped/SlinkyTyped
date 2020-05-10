@@ -27,7 +27,7 @@ object ScrollSpy extends js.Object {
   /**
     * Init ScrollSpy
     */
-  def init(els: typingsSlinky.std.Element): ScrollSpy = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialScrollSpyOptions): ScrollSpy = js.native
+  def init(els: Element): ScrollSpy = js.native
+  def init(els: Element, options: PartialScrollSpyOptions): ScrollSpy = js.native
 }
 

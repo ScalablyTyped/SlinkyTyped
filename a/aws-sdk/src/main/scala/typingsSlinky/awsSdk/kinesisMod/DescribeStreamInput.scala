@@ -22,11 +22,47 @@ trait DescribeStreamInput extends js.Object {
 
 object DescribeStreamInput {
   @scala.inline
-  def apply(StreamName: StreamName, ExclusiveStartShardId: ShardId = null, Limit: Int | Double = null): DescribeStreamInput = {
+  def apply(StreamName: StreamName): DescribeStreamInput = {
     val __obj = js.Dynamic.literal(StreamName = StreamName.asInstanceOf[js.Any])
-    if (ExclusiveStartShardId != null) __obj.updateDynamic("ExclusiveStartShardId")(ExclusiveStartShardId.asInstanceOf[js.Any])
-    if (Limit != null) __obj.updateDynamic("Limit")(Limit.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeStreamInput]
   }
+  @scala.inline
+  implicit class DescribeStreamInputOps[Self <: DescribeStreamInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStreamName(value: StreamName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExclusiveStartShardId(value: ShardId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExclusiveStartShardId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclusiveStartShardId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExclusiveStartShardId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: DescribeStreamInputLimit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

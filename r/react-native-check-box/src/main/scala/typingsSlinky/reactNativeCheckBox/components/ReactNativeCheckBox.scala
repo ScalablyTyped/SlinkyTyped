@@ -1,11 +1,9 @@
 package typingsSlinky.reactNativeCheckBox.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -15,47 +13,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativeCheckBox
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactNativeCheckBox {
   @JSImport("react-native-check-box", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    isChecked: Boolean,
-    onClick: () => Unit,
-    checkBoxColor: String = null,
-    checkedCheckBoxColor: String = null,
-    checkedImage: ReactElement = null,
-    leftText: String = null,
-    leftTextStyle: StyleProp[TextStyle] = null,
-    leftTextView: TagMod[Any] = null,
-    rightText: String = null,
-    rightTextStyle: StyleProp[TextStyle] = null,
-    rightTextView: TagMod[Any] = null,
-    style: StyleProp[ViewStyle] = null,
-    unCheckedImage: ReactElement = null,
-    uncheckedCheckBoxColor: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(isChecked = isChecked.asInstanceOf[js.Any], onClick = js.Any.fromFunction0(onClick))
-    if (checkBoxColor != null) __obj.updateDynamic("checkBoxColor")(checkBoxColor.asInstanceOf[js.Any])
-    if (checkedCheckBoxColor != null) __obj.updateDynamic("checkedCheckBoxColor")(checkedCheckBoxColor.asInstanceOf[js.Any])
-    if (checkedImage != null) __obj.updateDynamic("checkedImage")(checkedImage.asInstanceOf[js.Any])
-    if (leftText != null) __obj.updateDynamic("leftText")(leftText.asInstanceOf[js.Any])
-    if (leftTextStyle != null) __obj.updateDynamic("leftTextStyle")(leftTextStyle.asInstanceOf[js.Any])
-    if (leftTextView != null) __obj.updateDynamic("leftTextView")(leftTextView.asInstanceOf[js.Any])
-    if (rightText != null) __obj.updateDynamic("rightText")(rightText.asInstanceOf[js.Any])
-    if (rightTextStyle != null) __obj.updateDynamic("rightTextStyle")(rightTextStyle.asInstanceOf[js.Any])
-    if (rightTextView != null) __obj.updateDynamic("rightTextView")(rightTextView.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (unCheckedImage != null) __obj.updateDynamic("unCheckedImage")(unCheckedImage.asInstanceOf[js.Any])
-    if (uncheckedCheckBoxColor != null) __obj.updateDynamic("uncheckedCheckBoxColor")(uncheckedCheckBoxColor.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def checkBoxColor(value: String): this.type = set("checkBoxColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checkedCheckBoxColor(value: String): this.type = set("checkedCheckBoxColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checkedImage(value: ReactElement): this.type = set("checkedImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def leftText(value: String): this.type = set("leftText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def leftTextStyle(value: StyleProp[TextStyle]): this.type = set("leftTextStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def leftTextStyleNull: this.type = set("leftTextStyle", null)
+    @scala.inline
+    def leftTextViewReactElement(value: ReactElement): this.type = set("leftTextView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def leftTextView(value: TagMod[Any]): this.type = set("leftTextView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rightText(value: String): this.type = set("rightText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rightTextStyle(value: StyleProp[TextStyle]): this.type = set("rightTextStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rightTextStyleNull: this.type = set("rightTextStyle", null)
+    @scala.inline
+    def rightTextViewReactElement(value: ReactElement): this.type = set("rightTextView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rightTextView(value: TagMod[Any]): this.type = set("rightTextView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def unCheckedImage(value: ReactElement): this.type = set("unCheckedImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def uncheckedCheckBoxColor(value: String): this.type = set("uncheckedCheckBoxColor", value.asInstanceOf[js.Any])
   }
-  type Props = CheckBoxProps
+  
+  def withProps(p: CheckBoxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(isChecked: Boolean, onClick: () => Unit): Builder = {
+    val __props = js.Dynamic.literal(isChecked = isChecked.asInstanceOf[js.Any], onClick = js.Any.fromFunction0(onClick))
+    new Builder(js.Array(this.component, __props.asInstanceOf[CheckBoxProps]))
+  }
 }
 

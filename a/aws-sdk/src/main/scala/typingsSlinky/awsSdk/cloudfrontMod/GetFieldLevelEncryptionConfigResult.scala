@@ -18,11 +18,41 @@ trait GetFieldLevelEncryptionConfigResult extends js.Object {
 
 object GetFieldLevelEncryptionConfigResult {
   @scala.inline
-  def apply(ETag: String = null, FieldLevelEncryptionConfig: FieldLevelEncryptionConfig = null): GetFieldLevelEncryptionConfigResult = {
+  def apply(): GetFieldLevelEncryptionConfigResult = {
     val __obj = js.Dynamic.literal()
-    if (ETag != null) __obj.updateDynamic("ETag")(ETag.asInstanceOf[js.Any])
-    if (FieldLevelEncryptionConfig != null) __obj.updateDynamic("FieldLevelEncryptionConfig")(FieldLevelEncryptionConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetFieldLevelEncryptionConfigResult]
   }
+  @scala.inline
+  implicit class GetFieldLevelEncryptionConfigResultOps[Self <: GetFieldLevelEncryptionConfigResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withETag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutETag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFieldLevelEncryptionConfig(value: FieldLevelEncryptionConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldLevelEncryptionConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldLevelEncryptionConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldLevelEncryptionConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

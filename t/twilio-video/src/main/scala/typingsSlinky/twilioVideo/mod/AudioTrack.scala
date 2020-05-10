@@ -20,9 +20,9 @@ class AudioTrack () extends Track {
   var mediaStreamTrack: MediaStreamTrack = js.native
   def attach(): HTMLMediaElement = js.native
   def attach(element: String): HTMLMediaElement = js.native
-  def attach(element: typingsSlinky.std.HTMLMediaElement): HTMLMediaElement = js.native
+  def attach(element: HTMLMediaElement): HTMLMediaElement = js.native
   def detach(): js.Array[HTMLMediaElement] = js.native
   def detach(element: String): js.Array[HTMLMediaElement] = js.native
-  def detach(element: typingsSlinky.std.HTMLMediaElement): js.Array[HTMLMediaElement] = js.native
+  def detach(element: HTMLMediaElement): js.Array[HTMLMediaElement] = js.native
 }
 

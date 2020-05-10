@@ -4,46 +4,124 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Rule extends js.Object {
   /** Required */
-  var action: js.UndefOr[String] = js.undefined
+  var action: js.UndefOr[String] = js.native
   /** Additional restrictions that must be met. All conditions must pass for the rule to match. */
-  var conditions: js.UndefOr[js.Array[Condition]] = js.undefined
+  var conditions: js.UndefOr[js.Array[Condition]] = js.native
   /** Human-readable description of the rule. */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /** If one or more 'in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in at least one of these entries. */
-  var ins: js.UndefOr[js.Array[String]] = js.undefined
+  var ins: js.UndefOr[js.Array[String]] = js.native
   /** The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG action. */
-  var logConfigs: js.UndefOr[js.Array[LogConfig]] = js.undefined
+  var logConfigs: js.UndefOr[js.Array[LogConfig]] = js.native
   /** If one or more 'not_in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries. */
-  var notIns: js.UndefOr[js.Array[String]] = js.undefined
+  var notIns: js.UndefOr[js.Array[String]] = js.native
   /**
     * A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '&#42;' matches all permissions, and a verb part of '&#42;' (e.g.,
     * 'storage.buckets.&#42;') matches all verbs.
     */
-  var permissions: js.UndefOr[js.Array[String]] = js.undefined
+  var permissions: js.UndefOr[js.Array[String]] = js.native
 }
 
 object Rule {
   @scala.inline
-  def apply(
-    action: String = null,
-    conditions: js.Array[Condition] = null,
-    description: String = null,
-    ins: js.Array[String] = null,
-    logConfigs: js.Array[LogConfig] = null,
-    notIns: js.Array[String] = null,
-    permissions: js.Array[String] = null
-  ): Rule = {
+  def apply(): Rule = {
     val __obj = js.Dynamic.literal()
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (conditions != null) __obj.updateDynamic("conditions")(conditions.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (ins != null) __obj.updateDynamic("ins")(ins.asInstanceOf[js.Any])
-    if (logConfigs != null) __obj.updateDynamic("logConfigs")(logConfigs.asInstanceOf[js.Any])
-    if (notIns != null) __obj.updateDynamic("notIns")(notIns.asInstanceOf[js.Any])
-    if (permissions != null) __obj.updateDynamic("permissions")(permissions.asInstanceOf[js.Any])
     __obj.asInstanceOf[Rule]
   }
+  @scala.inline
+  implicit class RuleOps[Self <: Rule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConditions(value: js.Array[Condition]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConditions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIns(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogConfigs(value: js.Array[LogConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logConfigs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogConfigs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logConfigs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotIns(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notIns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotIns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notIns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermissions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

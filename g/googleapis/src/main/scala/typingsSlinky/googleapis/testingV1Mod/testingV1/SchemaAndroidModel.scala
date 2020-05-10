@@ -81,38 +81,185 @@ trait SchemaAndroidModel extends js.Object {
 
 object SchemaAndroidModel {
   @scala.inline
-  def apply(
-    brand: String = null,
-    codename: String = null,
-    form: String = null,
-    formFactor: String = null,
-    id: String = null,
-    lowFpsVideoRecording: js.UndefOr[Boolean] = js.undefined,
-    manufacturer: String = null,
-    name: String = null,
-    screenDensity: Int | Double = null,
-    screenX: Int | Double = null,
-    screenY: Int | Double = null,
-    supportedAbis: js.Array[String] = null,
-    supportedVersionIds: js.Array[String] = null,
-    tags: js.Array[String] = null
-  ): SchemaAndroidModel = {
+  def apply(): SchemaAndroidModel = {
     val __obj = js.Dynamic.literal()
-    if (brand != null) __obj.updateDynamic("brand")(brand.asInstanceOf[js.Any])
-    if (codename != null) __obj.updateDynamic("codename")(codename.asInstanceOf[js.Any])
-    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
-    if (formFactor != null) __obj.updateDynamic("formFactor")(formFactor.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(lowFpsVideoRecording)) __obj.updateDynamic("lowFpsVideoRecording")(lowFpsVideoRecording.asInstanceOf[js.Any])
-    if (manufacturer != null) __obj.updateDynamic("manufacturer")(manufacturer.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (screenDensity != null) __obj.updateDynamic("screenDensity")(screenDensity.asInstanceOf[js.Any])
-    if (screenX != null) __obj.updateDynamic("screenX")(screenX.asInstanceOf[js.Any])
-    if (screenY != null) __obj.updateDynamic("screenY")(screenY.asInstanceOf[js.Any])
-    if (supportedAbis != null) __obj.updateDynamic("supportedAbis")(supportedAbis.asInstanceOf[js.Any])
-    if (supportedVersionIds != null) __obj.updateDynamic("supportedVersionIds")(supportedVersionIds.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAndroidModel]
   }
+  @scala.inline
+  implicit class SchemaAndroidModelOps[Self <: SchemaAndroidModel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBrand(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brand")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodename(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codename")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodename: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codename")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForm(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormFactor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormFactor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formFactor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLowFpsVideoRecording(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowFpsVideoRecording")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLowFpsVideoRecording: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowFpsVideoRecording")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManufacturer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManufacturer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreenDensity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenDensity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreenDensity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenDensity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreenX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreenX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreenY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreenY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportedAbis(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedAbis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportedAbis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedAbis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportedVersionIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedVersionIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportedVersionIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedVersionIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

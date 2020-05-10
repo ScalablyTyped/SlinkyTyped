@@ -139,3 +139,262 @@ trait JQuerySlickInitials extends js.Object {
   var unslicked: Boolean = js.native
 }
 
+object JQuerySlickInitials {
+  @scala.inline
+  def apply(
+    $list: Null,
+    animating: Boolean,
+    currentDirection: Double,
+    currentSlide: Double,
+    direction: Double,
+    dragging: Boolean,
+    loadIndex: Double,
+    scrolling: Boolean,
+    slideOffset: Double,
+    sliding: Boolean,
+    swiping: Boolean,
+    touchObject: AnonCurX,
+    transformsEnabled: Boolean,
+    unslicked: Boolean
+  ): JQuerySlickInitials = {
+    val __obj = js.Dynamic.literal($list = $list.asInstanceOf[js.Any], animating = animating.asInstanceOf[js.Any], currentDirection = currentDirection.asInstanceOf[js.Any], currentSlide = currentSlide.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], dragging = dragging.asInstanceOf[js.Any], loadIndex = loadIndex.asInstanceOf[js.Any], scrolling = scrolling.asInstanceOf[js.Any], slideOffset = slideOffset.asInstanceOf[js.Any], sliding = sliding.asInstanceOf[js.Any], swiping = swiping.asInstanceOf[js.Any], touchObject = touchObject.asInstanceOf[js.Any], transformsEnabled = transformsEnabled.asInstanceOf[js.Any], unslicked = unslicked.asInstanceOf[js.Any])
+    __obj.asInstanceOf[JQuerySlickInitials]
+  }
+  @scala.inline
+  implicit class JQuerySlickInitialsOps[Self <: JQuerySlickInitials] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$list(value: Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$list")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAnimating(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentDirection(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentSlide(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentSlide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDirection(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDragging(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoadIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScrolling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrolling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSlideOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSliding(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sliding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSwiping(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swiping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTouchObject(value: AnonCurX): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touchObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTransformsEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformsEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnslicked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unslicked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$dots(value: JQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$dots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$dotsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$dots")(null)
+        ret
+    }
+    @scala.inline
+    def with$nextArrow(value: JQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$nextArrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$nextArrowNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$nextArrow")(null)
+        ret
+    }
+    @scala.inline
+    def with$prevArrow(value: JQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$prevArrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$prevArrowNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$prevArrow")(null)
+        ret
+    }
+    @scala.inline
+    def with$slideTrack(value: JQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$slideTrack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$slideTrackNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$slideTrack")(null)
+        ret
+    }
+    @scala.inline
+    def with$slides(value: JQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$slides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$slidesNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$slides")(null)
+        ret
+    }
+    @scala.inline
+    def withAutoPlayTimer(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPlayTimer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoPlayTimerNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPlayTimer")(null)
+        ret
+    }
+    @scala.inline
+    def withCurrentLeft(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentLeftNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentLeft")(null)
+        ret
+    }
+    @scala.inline
+    def withListHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withListHeightNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listHeight")(null)
+        ret
+    }
+    @scala.inline
+    def withListWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withListWidthNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listWidth")(null)
+        ret
+    }
+    @scala.inline
+    def withSlideCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSlideCountNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideCount")(null)
+        ret
+    }
+    @scala.inline
+    def withSlideWidth(value: Number): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSlideWidthNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideWidth")(null)
+        ret
+    }
+    @scala.inline
+    def withSwipeLeft(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSwipeLeftNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeLeft")(null)
+        ret
+    }
+  }
+  
+}
+

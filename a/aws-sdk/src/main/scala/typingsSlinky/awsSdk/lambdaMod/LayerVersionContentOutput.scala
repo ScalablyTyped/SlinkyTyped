@@ -22,12 +22,53 @@ trait LayerVersionContentOutput extends js.Object {
 
 object LayerVersionContentOutput {
   @scala.inline
-  def apply(CodeSha256: String = null, CodeSize: Int | Double = null, Location: String = null): LayerVersionContentOutput = {
+  def apply(): LayerVersionContentOutput = {
     val __obj = js.Dynamic.literal()
-    if (CodeSha256 != null) __obj.updateDynamic("CodeSha256")(CodeSha256.asInstanceOf[js.Any])
-    if (CodeSize != null) __obj.updateDynamic("CodeSize")(CodeSize.asInstanceOf[js.Any])
-    if (Location != null) __obj.updateDynamic("Location")(Location.asInstanceOf[js.Any])
     __obj.asInstanceOf[LayerVersionContentOutput]
   }
+  @scala.inline
+  implicit class LayerVersionContentOutputOps[Self <: LayerVersionContentOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCodeSha256(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeSha256")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodeSha256: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeSha256")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodeSize(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodeSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -19,7 +19,7 @@ object wkd extends js.Object {
       * @param options.rawBytes Returns Uint8Array instead of parsed key.
       * @returns The public key.
       */
-    def lookup(): js.Promise[scala.scalajs.js.typedarray.Uint8Array | AnonErr] = js.native
+    def lookup(): js.Promise[js.typedarray.Uint8Array | AnonErr] = js.native
   }
   
 }

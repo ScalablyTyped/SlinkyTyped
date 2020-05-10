@@ -15,7 +15,7 @@ trait RTCDataChannelEvent extends Event_ {
 object RTCDataChannelEvent
   extends Instantiable2[
       /* type */ java.lang.String, 
-      /* eventInitDict */ RTCDataChannelEventInit, 
-      RTCDataChannelEvent
+      /* eventInitDict */ org.scalajs.dom.experimental.webrtc.RTCDataChannelEventInit, 
+      org.scalajs.dom.experimental.webrtc.RTCDataChannelEvent
     ]
 

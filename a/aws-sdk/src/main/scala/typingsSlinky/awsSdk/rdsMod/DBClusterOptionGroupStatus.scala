@@ -18,11 +18,41 @@ trait DBClusterOptionGroupStatus extends js.Object {
 
 object DBClusterOptionGroupStatus {
   @scala.inline
-  def apply(DBClusterOptionGroupName: String = null, Status: String = null): DBClusterOptionGroupStatus = {
+  def apply(): DBClusterOptionGroupStatus = {
     val __obj = js.Dynamic.literal()
-    if (DBClusterOptionGroupName != null) __obj.updateDynamic("DBClusterOptionGroupName")(DBClusterOptionGroupName.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[DBClusterOptionGroupStatus]
   }
+  @scala.inline
+  implicit class DBClusterOptionGroupStatusOps[Self <: DBClusterOptionGroupStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDBClusterOptionGroupName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterOptionGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBClusterOptionGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterOptionGroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

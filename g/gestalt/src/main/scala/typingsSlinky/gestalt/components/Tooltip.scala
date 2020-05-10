@@ -1,45 +1,42 @@
 package typingsSlinky.gestalt.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.gestalt.gestaltStrings.down
 import typingsSlinky.gestalt.gestaltStrings.left
-import typingsSlinky.gestalt.gestaltStrings.lg
-import typingsSlinky.gestalt.gestaltStrings.md
 import typingsSlinky.gestalt.gestaltStrings.right
-import typingsSlinky.gestalt.gestaltStrings.sm
 import typingsSlinky.gestalt.gestaltStrings.up
-import typingsSlinky.gestalt.gestaltStrings.xl
-import typingsSlinky.gestalt.gestaltStrings.xs
 import typingsSlinky.gestalt.mod.TooltipProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tooltip
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Tooltip] {
+object Tooltip {
   @JSImport("gestalt", "Tooltip")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    anchor: js.Any,
-    onDismiss: () => Unit,
-    idealDirection: up | right | down | left = null,
-    positionRelativeToAnchor: js.UndefOr[Boolean] = js.undefined,
-    size: xs | sm | md | lg | xl = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Tooltip] = {
-    val __obj = js.Dynamic.literal(anchor = anchor.asInstanceOf[js.Any], onDismiss = js.Any.fromFunction0(onDismiss))
-    if (idealDirection != null) __obj.updateDynamic("idealDirection")(idealDirection.asInstanceOf[js.Any])
-    if (!js.isUndefined(positionRelativeToAnchor)) __obj.updateDynamic("positionRelativeToAnchor")(positionRelativeToAnchor.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.gestalt.mod.Tooltip] {
+    @scala.inline
+    def idealDirection(value: up | right | down | left): this.type = set("idealDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkReactElement(value: ReactElement): this.type = set("link", value.asInstanceOf[js.Any])
+    @scala.inline
+    def link(value: TagMod[Any]): this.type = set("link", value.asInstanceOf[js.Any])
   }
-  type Props = TooltipProps
+  
+  def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(text: String): Builder = {
+    val __props = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TooltipProps]))
+  }
 }
 

@@ -38,8 +38,45 @@ object CreateProjectVersionRequest {
     VersionName: VersionName
   ): CreateProjectVersionRequest = {
     val __obj = js.Dynamic.literal(OutputConfig = OutputConfig.asInstanceOf[js.Any], ProjectArn = ProjectArn.asInstanceOf[js.Any], TestingData = TestingData.asInstanceOf[js.Any], TrainingData = TrainingData.asInstanceOf[js.Any], VersionName = VersionName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateProjectVersionRequest]
   }
+  @scala.inline
+  implicit class CreateProjectVersionRequestOps[Self <: CreateProjectVersionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOutputConfig(value: OutputConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProjectArn(value: ProjectArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTestingData(value: TestingData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TestingData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrainingData(value: TrainingData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVersionName(value: VersionName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

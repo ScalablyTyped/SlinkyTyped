@@ -18,16 +18,14 @@ trait OutputType extends js.Object
 
 object OutputType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def display_data: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.display_data = "display_data".asInstanceOf[typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.display_data]
   @scala.inline
-  def display_data: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.display_data = this.cast("display_data")
+  def error: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.error = "error".asInstanceOf[typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.error]
   @scala.inline
-  def error: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.error = this.cast("error")
+  def execute_result: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.execute_result = "execute_result".asInstanceOf[typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.execute_result]
   @scala.inline
-  def execute_result: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.execute_result = this.cast("execute_result")
+  def stream: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.stream = "stream".asInstanceOf[typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.stream]
   @scala.inline
-  def stream: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.stream = this.cast("stream")
-  @scala.inline
-  def update_display_data: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.update_display_data = this.cast("update_display_data")
+  def update_display_data: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.update_display_data = "update_display_data".asInstanceOf[typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.update_display_data]
 }
 

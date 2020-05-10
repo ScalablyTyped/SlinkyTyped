@@ -676,13 +676,6 @@ object Particles extends js.Object {
       */
     var trackVisible: Boolean = js.native
     /**
-      * The visible state of the Game Object.
-      * 
-      * An invisible Game Object will skip rendering, but will still process update logic.
-      */
-    /* CompleteClass */
-    override var visible: Boolean = js.native
-    /**
       * The x-coordinate of the particle origin (where particles will be emitted).
       */
     var x: EmitterOp = js.native
@@ -970,14 +963,6 @@ object Particles extends js.Object {
       */
     def setTint(value: EmitterOpOnEmitType | EmitterOpOnUpdateType): ParticleEmitter = js.native
     /**
-      * Sets the visibility of this Game Object.
-      * 
-      * An invisible Game Object will skip rendering, but will still process update logic.
-      * @param value The visible state of the Game Object.
-      */
-    /* CompleteClass */
-    override def setVisible(value: Boolean): this.type = js.native
-    /**
       * Turns {@link Phaser.GameObjects.Particles.ParticleEmitter#on} the emitter and resets the flow counter.
       * 
       * If this emitter is in flow mode (frequency >= 0; the default), the particle flow will start (or restart).
@@ -1039,19 +1024,6 @@ object Particles extends js.Object {
     def this(scene: Scene, texture: String, frame: integer, emitters: js.Array[ParticleEmitterConfig]) = this()
     def this(scene: Scene, texture: String, frame: integer, emitters: ParticleEmitterConfig) = this()
     /**
-      * The depth of this Game Object within the Scene.
-      * 
-      * The depth is also known as the 'z-index' in some environments, and allows you to change the rendering order
-      * of Game Objects, without actually moving their position in the display list.
-      * 
-      * The depth starts from zero (the default value) and increases from that point. A Game Object with a higher depth
-      * value will always render in front of one with a lower value.
-      * 
-      * Setting the depth will queue a depth sort event within the Scene.
-      */
-    /* CompleteClass */
-    override var depth: Double = js.native
-    /**
       * A list of Emitters being managed by this Emitter Manager.
       */
     var emitters: List[ParticleEmitter] = js.native
@@ -1073,13 +1045,6 @@ object Particles extends js.Object {
       * This is multiplied with any timeScale set on each individual emitter.
       */
     var timeScale: Double = js.native
-    /**
-      * The visible state of the Game Object.
-      * 
-      * An invisible Game Object will skip rendering, but will still process update logic.
-      */
-    /* CompleteClass */
-    override var visible: Boolean = js.native
     /**
       * A list of Gravity Wells being managed by this Emitter Manager.
       */
@@ -1150,20 +1115,6 @@ object Particles extends js.Object {
       * Resumes this Emitter Manager, should it have been previously paused.
       */
     def resume(): ParticleEmitterManager = js.native
-    /**
-      * The depth of this Game Object within the Scene.
-      * 
-      * The depth is also known as the 'z-index' in some environments, and allows you to change the rendering order
-      * of Game Objects, without actually moving their position in the display list.
-      * 
-      * The depth starts from zero (the default value) and increases from that point. A Game Object with a higher depth
-      * value will always render in front of one with a lower value.
-      * 
-      * Setting the depth will queue a depth sort event within the Scene.
-      * @param value The depth of this Game Object.
-      */
-    /* CompleteClass */
-    override def setDepth(value: integer): this.type = js.native
     def setEmitterFrames(frames: js.Array[Frame], emitter: ParticleEmitter): ParticleEmitterManager = js.native
     /**
       * Assigns texture frames to an emitter.
@@ -1192,14 +1143,6 @@ object Particles extends js.Object {
     def setTexture(key: String): ParticleEmitterManager = js.native
     def setTexture(key: String, frame: String): ParticleEmitterManager = js.native
     def setTexture(key: String, frame: integer): ParticleEmitterManager = js.native
-    /**
-      * Sets the visibility of this Game Object.
-      * 
-      * An invisible Game Object will skip rendering, but will still process update logic.
-      * @param value The visible state of the Game Object.
-      */
-    /* CompleteClass */
-    override def setVisible(value: Boolean): this.type = js.native
   }
   
   @js.native

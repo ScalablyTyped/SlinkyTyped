@@ -12,10 +12,8 @@ trait Speed extends js.Object
 
 object Speed {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fast: typingsSlinky.detox.detoxStrings.fast = "fast".asInstanceOf[typingsSlinky.detox.detoxStrings.fast]
   @scala.inline
-  def fast: typingsSlinky.detox.detoxStrings.fast = this.cast("fast")
-  @scala.inline
-  def slow: typingsSlinky.detox.detoxStrings.slow = this.cast("slow")
+  def slow: typingsSlinky.detox.detoxStrings.slow = "slow".asInstanceOf[typingsSlinky.detox.detoxStrings.slow]
 }
 

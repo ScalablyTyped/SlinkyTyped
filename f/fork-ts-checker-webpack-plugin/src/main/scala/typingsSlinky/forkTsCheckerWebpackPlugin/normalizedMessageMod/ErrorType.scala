@@ -12,10 +12,8 @@ trait ErrorType extends js.Object
 
 object ErrorType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def diagnostic: typingsSlinky.forkTsCheckerWebpackPlugin.forkTsCheckerWebpackPluginStrings.diagnostic = "diagnostic".asInstanceOf[typingsSlinky.forkTsCheckerWebpackPlugin.forkTsCheckerWebpackPluginStrings.diagnostic]
   @scala.inline
-  def diagnostic: typingsSlinky.forkTsCheckerWebpackPlugin.forkTsCheckerWebpackPluginStrings.diagnostic = this.cast("diagnostic")
-  @scala.inline
-  def lint: typingsSlinky.forkTsCheckerWebpackPlugin.forkTsCheckerWebpackPluginStrings.lint = this.cast("lint")
+  def lint: typingsSlinky.forkTsCheckerWebpackPlugin.forkTsCheckerWebpackPluginStrings.lint = "lint".asInstanceOf[typingsSlinky.forkTsCheckerWebpackPlugin.forkTsCheckerWebpackPluginStrings.lint]
 }
 

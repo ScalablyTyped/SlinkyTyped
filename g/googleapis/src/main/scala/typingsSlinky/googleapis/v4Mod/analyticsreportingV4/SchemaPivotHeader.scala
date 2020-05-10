@@ -21,14 +21,41 @@ trait SchemaPivotHeader extends js.Object {
 
 object SchemaPivotHeader {
   @scala.inline
-  def apply(
-    pivotHeaderEntries: js.Array[SchemaPivotHeaderEntry] = null,
-    totalPivotGroupsCount: Int | Double = null
-  ): SchemaPivotHeader = {
+  def apply(): SchemaPivotHeader = {
     val __obj = js.Dynamic.literal()
-    if (pivotHeaderEntries != null) __obj.updateDynamic("pivotHeaderEntries")(pivotHeaderEntries.asInstanceOf[js.Any])
-    if (totalPivotGroupsCount != null) __obj.updateDynamic("totalPivotGroupsCount")(totalPivotGroupsCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPivotHeader]
   }
+  @scala.inline
+  implicit class SchemaPivotHeaderOps[Self <: SchemaPivotHeader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPivotHeaderEntries(value: js.Array[SchemaPivotHeaderEntry]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotHeaderEntries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPivotHeaderEntries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotHeaderEntries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalPivotGroupsCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPivotGroupsCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalPivotGroupsCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPivotGroupsCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

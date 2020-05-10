@@ -4,33 +4,113 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InputAttributes extends js.Object {
-  var atime: js.UndefOr[Double | js.Date] = js.undefined
-  var gid: js.UndefOr[Double] = js.undefined
-  var mode: js.UndefOr[Double | String] = js.undefined
-  var mtime: js.UndefOr[Double | js.Date] = js.undefined
-  var size: js.UndefOr[Double] = js.undefined
-  var uid: js.UndefOr[Double] = js.undefined
+  var atime: js.UndefOr[Double | js.Date] = js.native
+  var gid: js.UndefOr[Double] = js.native
+  var mode: js.UndefOr[Double | String] = js.native
+  var mtime: js.UndefOr[Double | js.Date] = js.native
+  var size: js.UndefOr[Double] = js.native
+  var uid: js.UndefOr[Double] = js.native
 }
 
 object InputAttributes {
   @scala.inline
-  def apply(
-    atime: Double | js.Date = null,
-    gid: Int | Double = null,
-    mode: Double | String = null,
-    mtime: Double | js.Date = null,
-    size: Int | Double = null,
-    uid: Int | Double = null
-  ): InputAttributes = {
+  def apply(): InputAttributes = {
     val __obj = js.Dynamic.literal()
-    if (atime != null) __obj.updateDynamic("atime")(atime.asInstanceOf[js.Any])
-    if (gid != null) __obj.updateDynamic("gid")(gid.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (mtime != null) __obj.updateDynamic("mtime")(mtime.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (uid != null) __obj.updateDynamic("uid")(uid.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputAttributes]
   }
+  @scala.inline
+  implicit class InputAttributesOps[Self <: InputAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAtimeDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("atime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAtime(value: Double | js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("atime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAtime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("atime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGid(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMtimeDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mtime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMtime(value: Double | js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mtime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMtime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mtime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUid(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

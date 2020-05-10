@@ -15,7 +15,7 @@ trait CreateFileSystemRequest extends js.Object {
     */
   var Encrypted: js.UndefOr[typingsSlinky.awsSdk.efsMod.Encrypted] = js.native
   /**
-    * The ID of the AWS KMS CMK to be used to protect the encrypted file system. This parameter is only required if you want to use a nondefault CMK. If this parameter is not specified, the default CMK for Amazon EFS is used. This ID can be in one of the following formats:   Key ID - A unique identifier of the key, for example 1234abcd-12ab-34cd-56ef-1234567890ab.   ARN - An Amazon Resource Name (ARN) for the key, for example arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab.   Key alias - A previously created display name for a key, for example alias/projectKey1.   Key alias ARN - An ARN for a key alias, for example arn:aws:kms:us-west-2:444455556666:alias/projectKey1.   If KmsKeyId is specified, the CreateFileSystemRequest$Encrypted parameter must be set to true.
+    * The ID of the AWS KMS CMK to be used to protect the encrypted file system. This parameter is only required if you want to use a nondefault CMK. If this parameter is not specified, the default CMK for Amazon EFS is used. This ID can be in one of the following formats:   Key ID - A unique identifier of the key, for example 1234abcd-12ab-34cd-56ef-1234567890ab.   ARN - An Amazon Resource Name (ARN) for the key, for example arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab.   Key alias - A previously created display name for a key, for example alias/projectKey1.   Key alias ARN - An ARN for a key alias, for example arn:aws:kms:us-west-2:444455556666:alias/projectKey1.   If KmsKeyId is specified, the CreateFileSystemRequest$Encrypted parameter must be set to true.  EFS accepts only symmetric CMKs. You cannot use asymmetric CMKs with EFS file systems. 
     */
   var KmsKeyId: js.UndefOr[typingsSlinky.awsSdk.efsMod.KmsKeyId] = js.native
   /**
@@ -38,23 +38,95 @@ trait CreateFileSystemRequest extends js.Object {
 
 object CreateFileSystemRequest {
   @scala.inline
-  def apply(
-    CreationToken: CreationToken,
-    Encrypted: js.UndefOr[Boolean] = js.undefined,
-    KmsKeyId: KmsKeyId = null,
-    PerformanceMode: PerformanceMode = null,
-    ProvisionedThroughputInMibps: Int | Double = null,
-    Tags: Tags = null,
-    ThroughputMode: ThroughputMode = null
-  ): CreateFileSystemRequest = {
+  def apply(CreationToken: CreationToken): CreateFileSystemRequest = {
     val __obj = js.Dynamic.literal(CreationToken = CreationToken.asInstanceOf[js.Any])
-    if (!js.isUndefined(Encrypted)) __obj.updateDynamic("Encrypted")(Encrypted.asInstanceOf[js.Any])
-    if (KmsKeyId != null) __obj.updateDynamic("KmsKeyId")(KmsKeyId.asInstanceOf[js.Any])
-    if (PerformanceMode != null) __obj.updateDynamic("PerformanceMode")(PerformanceMode.asInstanceOf[js.Any])
-    if (ProvisionedThroughputInMibps != null) __obj.updateDynamic("ProvisionedThroughputInMibps")(ProvisionedThroughputInMibps.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (ThroughputMode != null) __obj.updateDynamic("ThroughputMode")(ThroughputMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateFileSystemRequest]
   }
+  @scala.inline
+  implicit class CreateFileSystemRequestOps[Self <: CreateFileSystemRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationToken(value: CreationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEncrypted(value: Encrypted): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encrypted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncrypted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encrypted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsKeyId(value: KmsKeyId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPerformanceMode(value: PerformanceMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PerformanceMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPerformanceMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PerformanceMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisionedThroughputInMibps(value: ProvisionedThroughputInMibps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughputInMibps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedThroughputInMibps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughputInMibps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThroughputMode(value: ThroughputMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThroughputMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThroughputMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThroughputMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

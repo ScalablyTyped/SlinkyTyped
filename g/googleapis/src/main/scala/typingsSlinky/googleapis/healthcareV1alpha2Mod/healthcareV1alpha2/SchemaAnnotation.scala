@@ -34,20 +34,77 @@ trait SchemaAnnotation extends js.Object {
 
 object SchemaAnnotation {
   @scala.inline
-  def apply(
-    annotationSource: SchemaAnnotationSource = null,
-    imageAnnotation: SchemaImageAnnotation = null,
-    name: String = null,
-    resourceAnnotation: SchemaResourceAnnotation = null,
-    textAnnotation: SchemaSensitiveTextAnnotation = null
-  ): SchemaAnnotation = {
+  def apply(): SchemaAnnotation = {
     val __obj = js.Dynamic.literal()
-    if (annotationSource != null) __obj.updateDynamic("annotationSource")(annotationSource.asInstanceOf[js.Any])
-    if (imageAnnotation != null) __obj.updateDynamic("imageAnnotation")(imageAnnotation.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (resourceAnnotation != null) __obj.updateDynamic("resourceAnnotation")(resourceAnnotation.asInstanceOf[js.Any])
-    if (textAnnotation != null) __obj.updateDynamic("textAnnotation")(textAnnotation.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAnnotation]
   }
+  @scala.inline
+  implicit class SchemaAnnotationOps[Self <: SchemaAnnotation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnnotationSource(value: SchemaAnnotationSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("annotationSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnnotationSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("annotationSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageAnnotation(value: SchemaImageAnnotation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageAnnotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageAnnotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceAnnotation(value: SchemaResourceAnnotation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceAnnotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceAnnotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextAnnotation(value: SchemaSensitiveTextAnnotation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextAnnotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textAnnotation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,61 +1,113 @@
 package typingsSlinky.reactBootstrap.dropdownButtonMod
 
-import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import typingsSlinky.reactBootstrap.dropdownMod.DropdownBaseProps
-import typingsSlinky.reactBootstrap.mod.SelectCallback
 import typingsSlinky.reactBootstrap.mod.Sizes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DropdownButtonBaseProps extends DropdownBaseProps {
-  var block: js.UndefOr[Boolean] = js.undefined
-  var bsSize: js.UndefOr[Sizes] = js.undefined
-  var bsStyle: js.UndefOr[String | Null] = js.undefined
-  var navItem: js.UndefOr[Boolean] = js.undefined
-  var noCaret: js.UndefOr[Boolean] = js.undefined
-  var title: TagMod[Any]
+  var block: js.UndefOr[Boolean] = js.native
+  var bsSize: js.UndefOr[Sizes] = js.native
+  var bsStyle: js.UndefOr[String | Null] = js.native
+  var navItem: js.UndefOr[Boolean] = js.native
+  var noCaret: js.UndefOr[Boolean] = js.native
+  var title: TagMod[Any] = js.native
 }
 
 object DropdownButtonBaseProps {
   @scala.inline
-  def apply(
-    id: String,
-    title: TagMod[Any],
-    block: js.UndefOr[Boolean] = js.undefined,
-    bsClass: String = null,
-    bsSize: Sizes = null,
-    bsStyle: String = null,
-    componentClass: ReactComponentClass[_] = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    dropup: js.UndefOr[Boolean] = js.undefined,
-    navItem: js.UndefOr[Boolean] = js.undefined,
-    noCaret: js.UndefOr[Boolean] = js.undefined,
-    onClose: js.Function = null,
-    onSelect: SelectCallback = null,
-    onToggle: /* isOpen */ Boolean => Unit = null,
-    open: js.UndefOr[Boolean] = js.undefined,
-    pullRight: js.UndefOr[Boolean] = js.undefined,
-    role: String = null
-  ): DropdownButtonBaseProps = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
-    if (!js.isUndefined(block)) __obj.updateDynamic("block")(block.asInstanceOf[js.Any])
-    if (bsClass != null) __obj.updateDynamic("bsClass")(bsClass.asInstanceOf[js.Any])
-    if (bsSize != null) __obj.updateDynamic("bsSize")(bsSize.asInstanceOf[js.Any])
-    if (bsStyle != null) __obj.updateDynamic("bsStyle")(bsStyle.asInstanceOf[js.Any])
-    if (componentClass != null) __obj.updateDynamic("componentClass")(componentClass.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(dropup)) __obj.updateDynamic("dropup")(dropup.asInstanceOf[js.Any])
-    if (!js.isUndefined(navItem)) __obj.updateDynamic("navItem")(navItem.asInstanceOf[js.Any])
-    if (!js.isUndefined(noCaret)) __obj.updateDynamic("noCaret")(noCaret.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(onClose.asInstanceOf[js.Any])
-    if (onSelect != null) __obj.updateDynamic("onSelect")(onSelect.asInstanceOf[js.Any])
-    if (onToggle != null) __obj.updateDynamic("onToggle")(js.Any.fromFunction1(onToggle))
-    if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.asInstanceOf[js.Any])
-    if (!js.isUndefined(pullRight)) __obj.updateDynamic("pullRight")(pullRight.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+  def apply(id: String): DropdownButtonBaseProps = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
     __obj.asInstanceOf[DropdownButtonBaseProps]
   }
+  @scala.inline
+  implicit class DropdownButtonBasePropsOps[Self <: DropdownButtonBaseProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlock(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("block")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("block")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBsSize(value: Sizes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBsSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBsStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBsStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBsStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withNavItem(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoCaret(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noCaret")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoCaret: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noCaret")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -21,16 +21,53 @@ trait SchemaAggregationInfo extends js.Object {
 
 object SchemaAggregationInfo {
   @scala.inline
-  def apply(
-    aggregationCount: Int | Double = null,
-    aggregationInterval: String = null,
-    aggregationLevel: String = null
-  ): SchemaAggregationInfo = {
+  def apply(): SchemaAggregationInfo = {
     val __obj = js.Dynamic.literal()
-    if (aggregationCount != null) __obj.updateDynamic("aggregationCount")(aggregationCount.asInstanceOf[js.Any])
-    if (aggregationInterval != null) __obj.updateDynamic("aggregationInterval")(aggregationInterval.asInstanceOf[js.Any])
-    if (aggregationLevel != null) __obj.updateDynamic("aggregationLevel")(aggregationLevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAggregationInfo]
   }
+  @scala.inline
+  implicit class SchemaAggregationInfoOps[Self <: SchemaAggregationInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggregationCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregationCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAggregationInterval(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregationInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAggregationLevel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregationLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationLevel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

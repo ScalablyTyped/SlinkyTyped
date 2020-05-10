@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 object ^ extends js.Object {
   var extensions: NumberDictionary[ExtensionFieldInfo[Message]] = js.native
   var extensionsBinary: NumberDictionary[ExtensionFieldBinaryInfo[Message]] = js.native
-  def deserializeBinary(bytes: scala.scalajs.js.typedarray.Uint8Array): typingsSlinky.googleProtobuf.apiPbMod.Method = js.native
+  def deserializeBinary(bytes: js.typedarray.Uint8Array): typingsSlinky.googleProtobuf.apiPbMod.Method = js.native
   def deserializeBinaryFromReader(message: typingsSlinky.googleProtobuf.apiPbMod.Method, reader: BinaryReader): typingsSlinky.googleProtobuf.apiPbMod.Method = js.native
   def serializeBinaryToWriter(message: typingsSlinky.googleProtobuf.apiPbMod.Method, writer: BinaryWriter): Unit = js.native
   def toObject(includeInstance: Boolean, msg: typingsSlinky.googleProtobuf.apiPbMod.Method): AsObject = js.native

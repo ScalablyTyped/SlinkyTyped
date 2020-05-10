@@ -1,7 +1,7 @@
 package typingsSlinky.mapboxGl.mod
 
+import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.mapboxGl.mapboxGlStrings.wheel
-import typingsSlinky.std.WheelEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -18,12 +18,12 @@ object eventStreamMarshallerMod extends js.Object {
       * Convert a structured JavaScript object with tagged headers into a binary
       * event stream message.
       */
-    def marshall(hasHeadersBody: Message): scala.scalajs.js.typedarray.Uint8Array = js.native
+    def marshall(hasHeadersBody: Message): js.typedarray.Uint8Array = js.native
     /**
       * Convert a binary event stream message into a JavaScript object with an
       * opaque, binary body and tagged, parsed headers.
       */
-    def unmarshall(message: scala.scalajs.js.typedarray.ArrayBufferView): Message = js.native
+    def unmarshall(message: js.typedarray.ArrayBufferView): Message = js.native
   }
   
 }

@@ -13,45 +13,63 @@ import scala.scalajs.js.annotation._
   * @template TChoiceMap
   * The valid choices for the question.
   */
+@js.native
 trait ListQuestionOptionsBase[T, TChoiceMap] extends Question[T] {
   /**
     * The choices of the prompt.
     */
-  var choices: js.UndefOr[AsyncDynamicQuestionProperty[js.Array[DistinctChoice[TChoiceMap]], T]] = js.undefined
+  var choices: js.UndefOr[AsyncDynamicQuestionProperty[js.Array[DistinctChoice[TChoiceMap]], T]] = js.native
   /**
     * The number of elements to show on each page.
     */
-  var pageSize: js.UndefOr[Double] = js.undefined
+  var pageSize: js.UndefOr[Double] = js.native
 }
 
 object ListQuestionOptionsBase {
   @scala.inline
-  def apply[T, TChoiceMap](
-    choices: AsyncDynamicQuestionProperty[js.Array[DistinctChoice[TChoiceMap]], T] = null,
-    default: AsyncDynamicQuestionProperty[_, T] = null,
-    filter: /* input */ js.Any => _ = null,
-    message: AsyncDynamicQuestionProperty[String, T] = null,
-    name: KeyUnion[T] = null,
-    pageSize: Int | Double = null,
-    prefix: String = null,
-    suffix: String = null,
-    `type`: String = null,
-    validate: (/* input */ js.Any, /* answers */ js.UndefOr[T]) => Boolean | String | (js.Promise[Boolean | String]) = null,
-    when: AsyncDynamicQuestionProperty[Boolean, T] = null
-  ): ListQuestionOptionsBase[T, TChoiceMap] = {
+  def apply[T, TChoiceMap](): ListQuestionOptionsBase[T, TChoiceMap] = {
     val __obj = js.Dynamic.literal()
-    if (choices != null) __obj.updateDynamic("choices")(choices.asInstanceOf[js.Any])
-    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction1(filter))
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (pageSize != null) __obj.updateDynamic("pageSize")(pageSize.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (validate != null) __obj.updateDynamic("validate")(js.Any.fromFunction2(validate))
-    if (when != null) __obj.updateDynamic("when")(when.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListQuestionOptionsBase[T, TChoiceMap]]
   }
+  @scala.inline
+  implicit class ListQuestionOptionsBaseOps[Self[t, tchoicemap] <: ListQuestionOptionsBase[t, tchoicemap], T, TChoiceMap] (val x: Self[T, TChoiceMap]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T, TChoiceMap] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T, TChoiceMap]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[T, TChoiceMap]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[T, TChoiceMap]) with Other]
+    @scala.inline
+    def withChoicesFunction1(
+      value: T => js.Array[DistinctChoice[TChoiceMap]] | js.Promise[js.Array[DistinctChoice[TChoiceMap]]]
+    ): Self[T, TChoiceMap] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("choices")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withChoices(value: AsyncDynamicQuestionProperty[js.Array[DistinctChoice[TChoiceMap]], T]): Self[T, TChoiceMap] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("choices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChoices: Self[T, TChoiceMap] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("choices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageSize(value: Double): Self[T, TChoiceMap] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageSize: Self[T, TChoiceMap] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

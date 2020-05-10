@@ -1,7 +1,6 @@
 package typingsSlinky.escpos.mod
 
 import typingsSlinky.escpos.escposBooleans.`false`
-import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,11 +13,7 @@ class USB () extends Adapter {
   def close(): USB = js.native
   def close(callback: js.Function1[/* error */ js.UndefOr[js.Any], Unit]): USB = js.native
   def open(): USB = js.native
-  /* CompleteClass */
-  override def open(args: js.Any*): Adapter = js.native
   def open(callback: js.Function2[/* error */ js.Any, /* device */ js.UndefOr[this.type], Unit]): USB = js.native
-  /* CompleteClass */
-  override def write(data: Buffer, callback: js.Function1[/* error */ js.UndefOr[js.Any], Unit]): Adapter = js.native
 }
 
 /* static members */

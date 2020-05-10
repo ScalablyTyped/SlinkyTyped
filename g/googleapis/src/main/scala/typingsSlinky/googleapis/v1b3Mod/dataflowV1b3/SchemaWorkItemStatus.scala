@@ -105,38 +105,185 @@ trait SchemaWorkItemStatus extends js.Object {
 
 object SchemaWorkItemStatus {
   @scala.inline
-  def apply(
-    completed: js.UndefOr[Boolean] = js.undefined,
-    counterUpdates: js.Array[SchemaCounterUpdate] = null,
-    dynamicSourceSplit: SchemaDynamicSourceSplit = null,
-    errors: js.Array[SchemaStatus] = null,
-    metricUpdates: js.Array[SchemaMetricUpdate] = null,
-    progress: SchemaApproximateProgress = null,
-    reportIndex: String = null,
-    reportedProgress: SchemaApproximateReportedProgress = null,
-    requestedLeaseDuration: String = null,
-    sourceFork: SchemaSourceFork = null,
-    sourceOperationResponse: SchemaSourceOperationResponse = null,
-    stopPosition: SchemaPosition = null,
-    totalThrottlerWaitTimeSeconds: Int | Double = null,
-    workItemId: String = null
-  ): SchemaWorkItemStatus = {
+  def apply(): SchemaWorkItemStatus = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(completed)) __obj.updateDynamic("completed")(completed.asInstanceOf[js.Any])
-    if (counterUpdates != null) __obj.updateDynamic("counterUpdates")(counterUpdates.asInstanceOf[js.Any])
-    if (dynamicSourceSplit != null) __obj.updateDynamic("dynamicSourceSplit")(dynamicSourceSplit.asInstanceOf[js.Any])
-    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
-    if (metricUpdates != null) __obj.updateDynamic("metricUpdates")(metricUpdates.asInstanceOf[js.Any])
-    if (progress != null) __obj.updateDynamic("progress")(progress.asInstanceOf[js.Any])
-    if (reportIndex != null) __obj.updateDynamic("reportIndex")(reportIndex.asInstanceOf[js.Any])
-    if (reportedProgress != null) __obj.updateDynamic("reportedProgress")(reportedProgress.asInstanceOf[js.Any])
-    if (requestedLeaseDuration != null) __obj.updateDynamic("requestedLeaseDuration")(requestedLeaseDuration.asInstanceOf[js.Any])
-    if (sourceFork != null) __obj.updateDynamic("sourceFork")(sourceFork.asInstanceOf[js.Any])
-    if (sourceOperationResponse != null) __obj.updateDynamic("sourceOperationResponse")(sourceOperationResponse.asInstanceOf[js.Any])
-    if (stopPosition != null) __obj.updateDynamic("stopPosition")(stopPosition.asInstanceOf[js.Any])
-    if (totalThrottlerWaitTimeSeconds != null) __obj.updateDynamic("totalThrottlerWaitTimeSeconds")(totalThrottlerWaitTimeSeconds.asInstanceOf[js.Any])
-    if (workItemId != null) __obj.updateDynamic("workItemId")(workItemId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWorkItemStatus]
   }
+  @scala.inline
+  implicit class SchemaWorkItemStatusOps[Self <: SchemaWorkItemStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompleted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompleted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCounterUpdates(value: js.Array[SchemaCounterUpdate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("counterUpdates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCounterUpdates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("counterUpdates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamicSourceSplit(value: SchemaDynamicSourceSplit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicSourceSplit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamicSourceSplit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicSourceSplit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrors(value: js.Array[SchemaStatus]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricUpdates(value: js.Array[SchemaMetricUpdate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricUpdates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricUpdates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricUpdates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgress(value: SchemaApproximateProgress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportIndex(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportedProgress(value: SchemaApproximateReportedProgress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportedProgress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportedProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportedProgress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestedLeaseDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedLeaseDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestedLeaseDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedLeaseDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceFork(value: SchemaSourceFork): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFork")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceFork: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFork")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceOperationResponse(value: SchemaSourceOperationResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceOperationResponse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceOperationResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceOperationResponse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopPosition(value: SchemaPosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalThrottlerWaitTimeSeconds(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalThrottlerWaitTimeSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalThrottlerWaitTimeSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalThrottlerWaitTimeSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkItemId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workItemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkItemId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workItemId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

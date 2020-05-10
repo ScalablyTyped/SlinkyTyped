@@ -231,450 +231,2657 @@ trait ConfigurationServiceApiVersions extends js.Object {
 
 object ConfigurationServiceApiVersions {
   @scala.inline
-  def apply(
-    accessanalyzer: apiVersion = null,
-    acm: typingsSlinky.awsSdk.acmMod.apiVersion = null,
-    acmpca: typingsSlinky.awsSdk.acmpcaMod.apiVersion = null,
-    alexaforbusiness: typingsSlinky.awsSdk.alexaforbusinessMod.apiVersion = null,
-    amplify: typingsSlinky.awsSdk.amplifyMod.apiVersion = null,
-    apigateway: typingsSlinky.awsSdk.apigatewayMod.apiVersion = null,
-    apigatewaymanagementapi: typingsSlinky.awsSdk.apigatewaymanagementapiMod.apiVersion = null,
-    apigatewayv2: typingsSlinky.awsSdk.apigatewayv2Mod.apiVersion = null,
-    appconfig: typingsSlinky.awsSdk.appconfigMod.apiVersion = null,
-    applicationautoscaling: typingsSlinky.awsSdk.applicationautoscalingMod.apiVersion = null,
-    applicationinsights: typingsSlinky.awsSdk.applicationinsightsMod.apiVersion = null,
-    appmesh: typingsSlinky.awsSdk.appmeshMod.apiVersion = null,
-    appstream: typingsSlinky.awsSdk.appstreamMod.apiVersion = null,
-    appsync: typingsSlinky.awsSdk.appsyncMod.apiVersion = null,
-    athena: typingsSlinky.awsSdk.athenaMod.apiVersion = null,
-    augmentedairuntime: typingsSlinky.awsSdk.augmentedairuntimeMod.apiVersion = null,
-    autoscaling: typingsSlinky.awsSdk.autoscalingMod.apiVersion = null,
-    autoscalingplans: typingsSlinky.awsSdk.autoscalingplansMod.apiVersion = null,
-    backup: typingsSlinky.awsSdk.backupMod.apiVersion = null,
-    batch: typingsSlinky.awsSdk.batchMod.apiVersion = null,
-    budgets: typingsSlinky.awsSdk.budgetsMod.apiVersion = null,
-    chime: typingsSlinky.awsSdk.chimeMod.apiVersion = null,
-    cloud9: typingsSlinky.awsSdk.cloud9Mod.apiVersion = null,
-    clouddirectory: typingsSlinky.awsSdk.clouddirectoryMod.apiVersion = null,
-    cloudformation: typingsSlinky.awsSdk.cloudformationMod.apiVersion = null,
-    cloudfront: typingsSlinky.awsSdk.cloudfrontMod.apiVersion = null,
-    cloudhsm: typingsSlinky.awsSdk.cloudhsmMod.apiVersion = null,
-    cloudhsmv2: typingsSlinky.awsSdk.cloudhsmv2Mod.apiVersion = null,
-    cloudsearch: typingsSlinky.awsSdk.cloudsearchMod.apiVersion = null,
-    cloudsearchdomain: typingsSlinky.awsSdk.cloudsearchdomainMod.apiVersion = null,
-    cloudtrail: typingsSlinky.awsSdk.cloudtrailMod.apiVersion = null,
-    cloudwatch: typingsSlinky.awsSdk.cloudwatchMod.apiVersion = null,
-    cloudwatchevents: typingsSlinky.awsSdk.cloudwatcheventsMod.apiVersion = null,
-    cloudwatchlogs: typingsSlinky.awsSdk.cloudwatchlogsMod.apiVersion = null,
-    codebuild: typingsSlinky.awsSdk.codebuildMod.apiVersion = null,
-    codecommit: typingsSlinky.awsSdk.codecommitMod.apiVersion = null,
-    codedeploy: typingsSlinky.awsSdk.codedeployMod.apiVersion = null,
-    codeguruprofiler: typingsSlinky.awsSdk.codeguruprofilerMod.apiVersion = null,
-    codegurureviewer: typingsSlinky.awsSdk.codegurureviewerMod.apiVersion = null,
-    codepipeline: typingsSlinky.awsSdk.codepipelineMod.apiVersion = null,
-    codestar: typingsSlinky.awsSdk.codestarMod.apiVersion = null,
-    codestarconnections: typingsSlinky.awsSdk.codestarconnectionsMod.apiVersion = null,
-    codestarnotifications: typingsSlinky.awsSdk.codestarnotificationsMod.apiVersion = null,
-    cognitoidentity: typingsSlinky.awsSdk.cognitoidentityMod.apiVersion = null,
-    cognitoidentityserviceprovider: typingsSlinky.awsSdk.cognitoidentityserviceproviderMod.apiVersion = null,
-    cognitosync: typingsSlinky.awsSdk.cognitosyncMod.apiVersion = null,
-    comprehend: typingsSlinky.awsSdk.comprehendMod.apiVersion = null,
-    comprehendmedical: typingsSlinky.awsSdk.comprehendmedicalMod.apiVersion = null,
-    computeoptimizer: typingsSlinky.awsSdk.computeoptimizerMod.apiVersion = null,
-    configservice: typingsSlinky.awsSdk.configserviceMod.apiVersion = null,
-    connect: typingsSlinky.awsSdk.connectMod.apiVersion = null,
-    connectparticipant: typingsSlinky.awsSdk.connectparticipantMod.apiVersion = null,
-    costexplorer: typingsSlinky.awsSdk.costexplorerMod.apiVersion = null,
-    cur: typingsSlinky.awsSdk.curMod.apiVersion = null,
-    dataexchange: typingsSlinky.awsSdk.dataexchangeMod.apiVersion = null,
-    datapipeline: typingsSlinky.awsSdk.datapipelineMod.apiVersion = null,
-    datasync: typingsSlinky.awsSdk.datasyncMod.apiVersion = null,
-    dax: typingsSlinky.awsSdk.daxMod.apiVersion = null,
-    detective: typingsSlinky.awsSdk.detectiveMod.apiVersion = null,
-    devicefarm: typingsSlinky.awsSdk.devicefarmMod.apiVersion = null,
-    directconnect: typingsSlinky.awsSdk.directconnectMod.apiVersion = null,
-    directoryservice: typingsSlinky.awsSdk.directoryserviceMod.apiVersion = null,
-    discovery: typingsSlinky.awsSdk.discoveryMod.apiVersion = null,
-    dlm: typingsSlinky.awsSdk.dlmMod.apiVersion = null,
-    dms: typingsSlinky.awsSdk.dmsMod.apiVersion = null,
-    docdb: typingsSlinky.awsSdk.docdbMod.apiVersion = null,
-    dynamodb: typingsSlinky.awsSdk.dynamodbMod.apiVersion = null,
-    dynamodbstreams: typingsSlinky.awsSdk.dynamodbstreamsMod.apiVersion = null,
-    ebs: typingsSlinky.awsSdk.ebsMod.apiVersion = null,
-    ec2: typingsSlinky.awsSdk.ec2Mod.apiVersion = null,
-    ec2instanceconnect: typingsSlinky.awsSdk.ec2instanceconnectMod.apiVersion = null,
-    ecr: typingsSlinky.awsSdk.ecrMod.apiVersion = null,
-    ecs: typingsSlinky.awsSdk.ecsMod.apiVersion = null,
-    efs: typingsSlinky.awsSdk.efsMod.apiVersion = null,
-    eks: typingsSlinky.awsSdk.eksMod.apiVersion = null,
-    elasticache: typingsSlinky.awsSdk.elasticacheMod.apiVersion = null,
-    elasticbeanstalk: typingsSlinky.awsSdk.elasticbeanstalkMod.apiVersion = null,
-    elasticinference: typingsSlinky.awsSdk.elasticinferenceMod.apiVersion = null,
-    elastictranscoder: typingsSlinky.awsSdk.elastictranscoderMod.apiVersion = null,
-    elb: typingsSlinky.awsSdk.elbMod.apiVersion = null,
-    elbv2: typingsSlinky.awsSdk.elbv2Mod.apiVersion = null,
-    emr: typingsSlinky.awsSdk.emrMod.apiVersion = null,
-    es: typingsSlinky.awsSdk.esMod.apiVersion = null,
-    eventbridge: typingsSlinky.awsSdk.eventbridgeMod.apiVersion = null,
-    firehose: typingsSlinky.awsSdk.firehoseMod.apiVersion = null,
-    fms: typingsSlinky.awsSdk.fmsMod.apiVersion = null,
-    forecastqueryservice: typingsSlinky.awsSdk.forecastqueryserviceMod.apiVersion = null,
-    forecastservice: typingsSlinky.awsSdk.forecastserviceMod.apiVersion = null,
-    frauddetector: typingsSlinky.awsSdk.frauddetectorMod.apiVersion = null,
-    fsx: typingsSlinky.awsSdk.fsxMod.apiVersion = null,
-    gamelift: typingsSlinky.awsSdk.gameliftMod.apiVersion = null,
-    glacier: typingsSlinky.awsSdk.glacierMod.apiVersion = null,
-    globalaccelerator: typingsSlinky.awsSdk.globalacceleratorMod.apiVersion = null,
-    glue: typingsSlinky.awsSdk.glueMod.apiVersion = null,
-    greengrass: typingsSlinky.awsSdk.greengrassMod.apiVersion = null,
-    groundstation: typingsSlinky.awsSdk.groundstationMod.apiVersion = null,
-    guardduty: typingsSlinky.awsSdk.guarddutyMod.apiVersion = null,
-    health: typingsSlinky.awsSdk.healthMod.apiVersion = null,
-    iam: typingsSlinky.awsSdk.iamMod.apiVersion = null,
-    imagebuilder: typingsSlinky.awsSdk.imagebuilderMod.apiVersion = null,
-    importexport: typingsSlinky.awsSdk.importexportMod.apiVersion = null,
-    inspector: typingsSlinky.awsSdk.inspectorMod.apiVersion = null,
-    iot: typingsSlinky.awsSdk.iotMod.apiVersion = null,
-    iot1clickdevicesservice: typingsSlinky.awsSdk.iot1clickdevicesserviceMod.apiVersion = null,
-    iot1clickprojects: typingsSlinky.awsSdk.iot1clickprojectsMod.apiVersion = null,
-    iotanalytics: typingsSlinky.awsSdk.iotanalyticsMod.apiVersion = null,
-    iotdata: typingsSlinky.awsSdk.iotdataMod.apiVersion = null,
-    iotevents: typingsSlinky.awsSdk.ioteventsMod.apiVersion = null,
-    ioteventsdata: typingsSlinky.awsSdk.ioteventsdataMod.apiVersion = null,
-    iotjobsdataplane: typingsSlinky.awsSdk.iotjobsdataplaneMod.apiVersion = null,
-    iotsecuretunneling: typingsSlinky.awsSdk.iotsecuretunnelingMod.apiVersion = null,
-    iotthingsgraph: typingsSlinky.awsSdk.iotthingsgraphMod.apiVersion = null,
-    kafka: typingsSlinky.awsSdk.kafkaMod.apiVersion = null,
-    kendra: typingsSlinky.awsSdk.kendraMod.apiVersion = null,
-    kinesis: typingsSlinky.awsSdk.kinesisMod.apiVersion = null,
-    kinesisanalytics: typingsSlinky.awsSdk.kinesisanalyticsMod.apiVersion = null,
-    kinesisanalyticsv2: typingsSlinky.awsSdk.kinesisanalyticsv2Mod.apiVersion = null,
-    kinesisvideo: typingsSlinky.awsSdk.kinesisvideoMod.apiVersion = null,
-    kinesisvideoarchivedmedia: typingsSlinky.awsSdk.kinesisvideoarchivedmediaMod.apiVersion = null,
-    kinesisvideomedia: typingsSlinky.awsSdk.kinesisvideomediaMod.apiVersion = null,
-    kinesisvideosignalingchannels: typingsSlinky.awsSdk.kinesisvideosignalingchannelsMod.apiVersion = null,
-    kms: typingsSlinky.awsSdk.kmsMod.apiVersion = null,
-    lakeformation: typingsSlinky.awsSdk.lakeformationMod.apiVersion = null,
-    lambda: typingsSlinky.awsSdk.lambdaMod.apiVersion = null,
-    lexmodelbuildingservice: typingsSlinky.awsSdk.lexmodelbuildingserviceMod.apiVersion = null,
-    lexruntime: typingsSlinky.awsSdk.lexruntimeMod.apiVersion = null,
-    licensemanager: typingsSlinky.awsSdk.licensemanagerMod.apiVersion = null,
-    lightsail: typingsSlinky.awsSdk.lightsailMod.apiVersion = null,
-    machinelearning: typingsSlinky.awsSdk.machinelearningMod.apiVersion = null,
-    macie: typingsSlinky.awsSdk.macieMod.apiVersion = null,
-    managedblockchain: typingsSlinky.awsSdk.managedblockchainMod.apiVersion = null,
-    marketplacecatalog: typingsSlinky.awsSdk.marketplacecatalogMod.apiVersion = null,
-    marketplacecommerceanalytics: typingsSlinky.awsSdk.marketplacecommerceanalyticsMod.apiVersion = null,
-    marketplaceentitlementservice: typingsSlinky.awsSdk.marketplaceentitlementserviceMod.apiVersion = null,
-    marketplacemetering: typingsSlinky.awsSdk.marketplacemeteringMod.apiVersion = null,
-    mediaconnect: typingsSlinky.awsSdk.mediaconnectMod.apiVersion = null,
-    mediaconvert: typingsSlinky.awsSdk.mediaconvertMod.apiVersion = null,
-    medialive: typingsSlinky.awsSdk.medialiveMod.apiVersion = null,
-    mediapackage: typingsSlinky.awsSdk.mediapackageMod.apiVersion = null,
-    mediapackagevod: typingsSlinky.awsSdk.mediapackagevodMod.apiVersion = null,
-    mediastore: typingsSlinky.awsSdk.mediastoreMod.apiVersion = null,
-    mediastoredata: typingsSlinky.awsSdk.mediastoredataMod.apiVersion = null,
-    mediatailor: typingsSlinky.awsSdk.mediatailorMod.apiVersion = null,
-    migrationhub: typingsSlinky.awsSdk.migrationhubMod.apiVersion = null,
-    migrationhubconfig: typingsSlinky.awsSdk.migrationhubconfigMod.apiVersion = null,
-    mobile: typingsSlinky.awsSdk.mobileMod.apiVersion = null,
-    mobileanalytics: typingsSlinky.awsSdk.mobileanalyticsMod.apiVersion = null,
-    mq: typingsSlinky.awsSdk.mqMod.apiVersion = null,
-    mturk: typingsSlinky.awsSdk.mturkMod.apiVersion = null,
-    neptune: typingsSlinky.awsSdk.neptuneMod.apiVersion = null,
-    networkmanager: typingsSlinky.awsSdk.networkmanagerMod.apiVersion = null,
-    opsworks: typingsSlinky.awsSdk.opsworksMod.apiVersion = null,
-    opsworkscm: typingsSlinky.awsSdk.opsworkscmMod.apiVersion = null,
-    organizations: typingsSlinky.awsSdk.organizationsMod.apiVersion = null,
-    outposts: typingsSlinky.awsSdk.outpostsMod.apiVersion = null,
-    personalize: typingsSlinky.awsSdk.personalizeMod.apiVersion = null,
-    personalizeevents: typingsSlinky.awsSdk.personalizeeventsMod.apiVersion = null,
-    personalizeruntime: typingsSlinky.awsSdk.personalizeruntimeMod.apiVersion = null,
-    pi: typingsSlinky.awsSdk.piMod.apiVersion = null,
-    pinpoint: typingsSlinky.awsSdk.pinpointMod.apiVersion = null,
-    pinpointemail: typingsSlinky.awsSdk.pinpointemailMod.apiVersion = null,
-    pinpointsmsvoice: typingsSlinky.awsSdk.pinpointsmsvoiceMod.apiVersion = null,
-    polly: typingsSlinky.awsSdk.pollyMod.apiVersion = null,
-    pricing: typingsSlinky.awsSdk.pricingMod.apiVersion = null,
-    qldb: typingsSlinky.awsSdk.qldbMod.apiVersion = null,
-    qldbsession: typingsSlinky.awsSdk.qldbsessionMod.apiVersion = null,
-    quicksight: typingsSlinky.awsSdk.quicksightMod.apiVersion = null,
-    ram: typingsSlinky.awsSdk.ramMod.apiVersion = null,
-    rds: typingsSlinky.awsSdk.rdsMod.apiVersion = null,
-    rdsdataservice: typingsSlinky.awsSdk.rdsdataserviceMod.apiVersion = null,
-    redshift: typingsSlinky.awsSdk.redshiftMod.apiVersion = null,
-    rekognition: typingsSlinky.awsSdk.rekognitionMod.apiVersion = null,
-    resourcegroups: typingsSlinky.awsSdk.resourcegroupsMod.apiVersion = null,
-    resourcegroupstaggingapi: typingsSlinky.awsSdk.resourcegroupstaggingapiMod.apiVersion = null,
-    robomaker: typingsSlinky.awsSdk.robomakerMod.apiVersion = null,
-    route53: typingsSlinky.awsSdk.route53Mod.apiVersion = null,
-    route53domains: typingsSlinky.awsSdk.route53domainsMod.apiVersion = null,
-    route53resolver: typingsSlinky.awsSdk.route53resolverMod.apiVersion = null,
-    s3: typingsSlinky.awsSdk.s3Mod.apiVersion = null,
-    s3control: typingsSlinky.awsSdk.s3controlMod.apiVersion = null,
-    sagemaker: typingsSlinky.awsSdk.sagemakerMod.apiVersion = null,
-    sagemakerruntime: typingsSlinky.awsSdk.sagemakerruntimeMod.apiVersion = null,
-    savingsplans: typingsSlinky.awsSdk.savingsplansMod.apiVersion = null,
-    schemas: typingsSlinky.awsSdk.schemasMod.apiVersion = null,
-    secretsmanager: typingsSlinky.awsSdk.secretsmanagerMod.apiVersion = null,
-    securityhub: typingsSlinky.awsSdk.securityhubMod.apiVersion = null,
-    serverlessapplicationrepository: typingsSlinky.awsSdk.serverlessapplicationrepositoryMod.apiVersion = null,
-    servicecatalog: typingsSlinky.awsSdk.servicecatalogMod.apiVersion = null,
-    servicediscovery: typingsSlinky.awsSdk.servicediscoveryMod.apiVersion = null,
-    servicequotas: typingsSlinky.awsSdk.servicequotasMod.apiVersion = null,
-    ses: typingsSlinky.awsSdk.sesMod.apiVersion = null,
-    sesv2: typingsSlinky.awsSdk.sesv2Mod.apiVersion = null,
-    shield: typingsSlinky.awsSdk.shieldMod.apiVersion = null,
-    signer: typingsSlinky.awsSdk.signerMod.apiVersion = null,
-    simpledb: typingsSlinky.awsSdk.simpledbMod.apiVersion = null,
-    sms: typingsSlinky.awsSdk.smsMod.apiVersion = null,
-    snowball: typingsSlinky.awsSdk.snowballMod.apiVersion = null,
-    sns: typingsSlinky.awsSdk.snsMod.apiVersion = null,
-    sqs: typingsSlinky.awsSdk.sqsMod.apiVersion = null,
-    ssm: typingsSlinky.awsSdk.ssmMod.apiVersion = null,
-    sso: typingsSlinky.awsSdk.ssoMod.apiVersion = null,
-    ssooidc: typingsSlinky.awsSdk.ssooidcMod.apiVersion = null,
-    stepfunctions: typingsSlinky.awsSdk.stepfunctionsMod.apiVersion = null,
-    storagegateway: typingsSlinky.awsSdk.storagegatewayMod.apiVersion = null,
-    sts: typingsSlinky.awsSdk.stsMod.apiVersion = null,
-    support: typingsSlinky.awsSdk.supportMod.apiVersion = null,
-    swf: typingsSlinky.awsSdk.swfMod.apiVersion = null,
-    textract: typingsSlinky.awsSdk.textractMod.apiVersion = null,
-    transcribeservice: typingsSlinky.awsSdk.transcribeserviceMod.apiVersion = null,
-    transfer: typingsSlinky.awsSdk.transferMod.apiVersion = null,
-    translate: typingsSlinky.awsSdk.translateMod.apiVersion = null,
-    waf: typingsSlinky.awsSdk.wafMod.apiVersion = null,
-    wafregional: typingsSlinky.awsSdk.wafregionalMod.apiVersion = null,
-    wafv2: typingsSlinky.awsSdk.wafv2Mod.apiVersion = null,
-    workdocs: typingsSlinky.awsSdk.workdocsMod.apiVersion = null,
-    worklink: typingsSlinky.awsSdk.worklinkMod.apiVersion = null,
-    workmail: typingsSlinky.awsSdk.workmailMod.apiVersion = null,
-    workmailmessageflow: typingsSlinky.awsSdk.workmailmessageflowMod.apiVersion = null,
-    workspaces: typingsSlinky.awsSdk.workspacesMod.apiVersion = null,
-    xray: typingsSlinky.awsSdk.xrayMod.apiVersion = null
-  ): ConfigurationServiceApiVersions = {
+  def apply(): ConfigurationServiceApiVersions = {
     val __obj = js.Dynamic.literal()
-    if (accessanalyzer != null) __obj.updateDynamic("accessanalyzer")(accessanalyzer.asInstanceOf[js.Any])
-    if (acm != null) __obj.updateDynamic("acm")(acm.asInstanceOf[js.Any])
-    if (acmpca != null) __obj.updateDynamic("acmpca")(acmpca.asInstanceOf[js.Any])
-    if (alexaforbusiness != null) __obj.updateDynamic("alexaforbusiness")(alexaforbusiness.asInstanceOf[js.Any])
-    if (amplify != null) __obj.updateDynamic("amplify")(amplify.asInstanceOf[js.Any])
-    if (apigateway != null) __obj.updateDynamic("apigateway")(apigateway.asInstanceOf[js.Any])
-    if (apigatewaymanagementapi != null) __obj.updateDynamic("apigatewaymanagementapi")(apigatewaymanagementapi.asInstanceOf[js.Any])
-    if (apigatewayv2 != null) __obj.updateDynamic("apigatewayv2")(apigatewayv2.asInstanceOf[js.Any])
-    if (appconfig != null) __obj.updateDynamic("appconfig")(appconfig.asInstanceOf[js.Any])
-    if (applicationautoscaling != null) __obj.updateDynamic("applicationautoscaling")(applicationautoscaling.asInstanceOf[js.Any])
-    if (applicationinsights != null) __obj.updateDynamic("applicationinsights")(applicationinsights.asInstanceOf[js.Any])
-    if (appmesh != null) __obj.updateDynamic("appmesh")(appmesh.asInstanceOf[js.Any])
-    if (appstream != null) __obj.updateDynamic("appstream")(appstream.asInstanceOf[js.Any])
-    if (appsync != null) __obj.updateDynamic("appsync")(appsync.asInstanceOf[js.Any])
-    if (athena != null) __obj.updateDynamic("athena")(athena.asInstanceOf[js.Any])
-    if (augmentedairuntime != null) __obj.updateDynamic("augmentedairuntime")(augmentedairuntime.asInstanceOf[js.Any])
-    if (autoscaling != null) __obj.updateDynamic("autoscaling")(autoscaling.asInstanceOf[js.Any])
-    if (autoscalingplans != null) __obj.updateDynamic("autoscalingplans")(autoscalingplans.asInstanceOf[js.Any])
-    if (backup != null) __obj.updateDynamic("backup")(backup.asInstanceOf[js.Any])
-    if (batch != null) __obj.updateDynamic("batch")(batch.asInstanceOf[js.Any])
-    if (budgets != null) __obj.updateDynamic("budgets")(budgets.asInstanceOf[js.Any])
-    if (chime != null) __obj.updateDynamic("chime")(chime.asInstanceOf[js.Any])
-    if (cloud9 != null) __obj.updateDynamic("cloud9")(cloud9.asInstanceOf[js.Any])
-    if (clouddirectory != null) __obj.updateDynamic("clouddirectory")(clouddirectory.asInstanceOf[js.Any])
-    if (cloudformation != null) __obj.updateDynamic("cloudformation")(cloudformation.asInstanceOf[js.Any])
-    if (cloudfront != null) __obj.updateDynamic("cloudfront")(cloudfront.asInstanceOf[js.Any])
-    if (cloudhsm != null) __obj.updateDynamic("cloudhsm")(cloudhsm.asInstanceOf[js.Any])
-    if (cloudhsmv2 != null) __obj.updateDynamic("cloudhsmv2")(cloudhsmv2.asInstanceOf[js.Any])
-    if (cloudsearch != null) __obj.updateDynamic("cloudsearch")(cloudsearch.asInstanceOf[js.Any])
-    if (cloudsearchdomain != null) __obj.updateDynamic("cloudsearchdomain")(cloudsearchdomain.asInstanceOf[js.Any])
-    if (cloudtrail != null) __obj.updateDynamic("cloudtrail")(cloudtrail.asInstanceOf[js.Any])
-    if (cloudwatch != null) __obj.updateDynamic("cloudwatch")(cloudwatch.asInstanceOf[js.Any])
-    if (cloudwatchevents != null) __obj.updateDynamic("cloudwatchevents")(cloudwatchevents.asInstanceOf[js.Any])
-    if (cloudwatchlogs != null) __obj.updateDynamic("cloudwatchlogs")(cloudwatchlogs.asInstanceOf[js.Any])
-    if (codebuild != null) __obj.updateDynamic("codebuild")(codebuild.asInstanceOf[js.Any])
-    if (codecommit != null) __obj.updateDynamic("codecommit")(codecommit.asInstanceOf[js.Any])
-    if (codedeploy != null) __obj.updateDynamic("codedeploy")(codedeploy.asInstanceOf[js.Any])
-    if (codeguruprofiler != null) __obj.updateDynamic("codeguruprofiler")(codeguruprofiler.asInstanceOf[js.Any])
-    if (codegurureviewer != null) __obj.updateDynamic("codegurureviewer")(codegurureviewer.asInstanceOf[js.Any])
-    if (codepipeline != null) __obj.updateDynamic("codepipeline")(codepipeline.asInstanceOf[js.Any])
-    if (codestar != null) __obj.updateDynamic("codestar")(codestar.asInstanceOf[js.Any])
-    if (codestarconnections != null) __obj.updateDynamic("codestarconnections")(codestarconnections.asInstanceOf[js.Any])
-    if (codestarnotifications != null) __obj.updateDynamic("codestarnotifications")(codestarnotifications.asInstanceOf[js.Any])
-    if (cognitoidentity != null) __obj.updateDynamic("cognitoidentity")(cognitoidentity.asInstanceOf[js.Any])
-    if (cognitoidentityserviceprovider != null) __obj.updateDynamic("cognitoidentityserviceprovider")(cognitoidentityserviceprovider.asInstanceOf[js.Any])
-    if (cognitosync != null) __obj.updateDynamic("cognitosync")(cognitosync.asInstanceOf[js.Any])
-    if (comprehend != null) __obj.updateDynamic("comprehend")(comprehend.asInstanceOf[js.Any])
-    if (comprehendmedical != null) __obj.updateDynamic("comprehendmedical")(comprehendmedical.asInstanceOf[js.Any])
-    if (computeoptimizer != null) __obj.updateDynamic("computeoptimizer")(computeoptimizer.asInstanceOf[js.Any])
-    if (configservice != null) __obj.updateDynamic("configservice")(configservice.asInstanceOf[js.Any])
-    if (connect != null) __obj.updateDynamic("connect")(connect.asInstanceOf[js.Any])
-    if (connectparticipant != null) __obj.updateDynamic("connectparticipant")(connectparticipant.asInstanceOf[js.Any])
-    if (costexplorer != null) __obj.updateDynamic("costexplorer")(costexplorer.asInstanceOf[js.Any])
-    if (cur != null) __obj.updateDynamic("cur")(cur.asInstanceOf[js.Any])
-    if (dataexchange != null) __obj.updateDynamic("dataexchange")(dataexchange.asInstanceOf[js.Any])
-    if (datapipeline != null) __obj.updateDynamic("datapipeline")(datapipeline.asInstanceOf[js.Any])
-    if (datasync != null) __obj.updateDynamic("datasync")(datasync.asInstanceOf[js.Any])
-    if (dax != null) __obj.updateDynamic("dax")(dax.asInstanceOf[js.Any])
-    if (detective != null) __obj.updateDynamic("detective")(detective.asInstanceOf[js.Any])
-    if (devicefarm != null) __obj.updateDynamic("devicefarm")(devicefarm.asInstanceOf[js.Any])
-    if (directconnect != null) __obj.updateDynamic("directconnect")(directconnect.asInstanceOf[js.Any])
-    if (directoryservice != null) __obj.updateDynamic("directoryservice")(directoryservice.asInstanceOf[js.Any])
-    if (discovery != null) __obj.updateDynamic("discovery")(discovery.asInstanceOf[js.Any])
-    if (dlm != null) __obj.updateDynamic("dlm")(dlm.asInstanceOf[js.Any])
-    if (dms != null) __obj.updateDynamic("dms")(dms.asInstanceOf[js.Any])
-    if (docdb != null) __obj.updateDynamic("docdb")(docdb.asInstanceOf[js.Any])
-    if (dynamodb != null) __obj.updateDynamic("dynamodb")(dynamodb.asInstanceOf[js.Any])
-    if (dynamodbstreams != null) __obj.updateDynamic("dynamodbstreams")(dynamodbstreams.asInstanceOf[js.Any])
-    if (ebs != null) __obj.updateDynamic("ebs")(ebs.asInstanceOf[js.Any])
-    if (ec2 != null) __obj.updateDynamic("ec2")(ec2.asInstanceOf[js.Any])
-    if (ec2instanceconnect != null) __obj.updateDynamic("ec2instanceconnect")(ec2instanceconnect.asInstanceOf[js.Any])
-    if (ecr != null) __obj.updateDynamic("ecr")(ecr.asInstanceOf[js.Any])
-    if (ecs != null) __obj.updateDynamic("ecs")(ecs.asInstanceOf[js.Any])
-    if (efs != null) __obj.updateDynamic("efs")(efs.asInstanceOf[js.Any])
-    if (eks != null) __obj.updateDynamic("eks")(eks.asInstanceOf[js.Any])
-    if (elasticache != null) __obj.updateDynamic("elasticache")(elasticache.asInstanceOf[js.Any])
-    if (elasticbeanstalk != null) __obj.updateDynamic("elasticbeanstalk")(elasticbeanstalk.asInstanceOf[js.Any])
-    if (elasticinference != null) __obj.updateDynamic("elasticinference")(elasticinference.asInstanceOf[js.Any])
-    if (elastictranscoder != null) __obj.updateDynamic("elastictranscoder")(elastictranscoder.asInstanceOf[js.Any])
-    if (elb != null) __obj.updateDynamic("elb")(elb.asInstanceOf[js.Any])
-    if (elbv2 != null) __obj.updateDynamic("elbv2")(elbv2.asInstanceOf[js.Any])
-    if (emr != null) __obj.updateDynamic("emr")(emr.asInstanceOf[js.Any])
-    if (es != null) __obj.updateDynamic("es")(es.asInstanceOf[js.Any])
-    if (eventbridge != null) __obj.updateDynamic("eventbridge")(eventbridge.asInstanceOf[js.Any])
-    if (firehose != null) __obj.updateDynamic("firehose")(firehose.asInstanceOf[js.Any])
-    if (fms != null) __obj.updateDynamic("fms")(fms.asInstanceOf[js.Any])
-    if (forecastqueryservice != null) __obj.updateDynamic("forecastqueryservice")(forecastqueryservice.asInstanceOf[js.Any])
-    if (forecastservice != null) __obj.updateDynamic("forecastservice")(forecastservice.asInstanceOf[js.Any])
-    if (frauddetector != null) __obj.updateDynamic("frauddetector")(frauddetector.asInstanceOf[js.Any])
-    if (fsx != null) __obj.updateDynamic("fsx")(fsx.asInstanceOf[js.Any])
-    if (gamelift != null) __obj.updateDynamic("gamelift")(gamelift.asInstanceOf[js.Any])
-    if (glacier != null) __obj.updateDynamic("glacier")(glacier.asInstanceOf[js.Any])
-    if (globalaccelerator != null) __obj.updateDynamic("globalaccelerator")(globalaccelerator.asInstanceOf[js.Any])
-    if (glue != null) __obj.updateDynamic("glue")(glue.asInstanceOf[js.Any])
-    if (greengrass != null) __obj.updateDynamic("greengrass")(greengrass.asInstanceOf[js.Any])
-    if (groundstation != null) __obj.updateDynamic("groundstation")(groundstation.asInstanceOf[js.Any])
-    if (guardduty != null) __obj.updateDynamic("guardduty")(guardduty.asInstanceOf[js.Any])
-    if (health != null) __obj.updateDynamic("health")(health.asInstanceOf[js.Any])
-    if (iam != null) __obj.updateDynamic("iam")(iam.asInstanceOf[js.Any])
-    if (imagebuilder != null) __obj.updateDynamic("imagebuilder")(imagebuilder.asInstanceOf[js.Any])
-    if (importexport != null) __obj.updateDynamic("importexport")(importexport.asInstanceOf[js.Any])
-    if (inspector != null) __obj.updateDynamic("inspector")(inspector.asInstanceOf[js.Any])
-    if (iot != null) __obj.updateDynamic("iot")(iot.asInstanceOf[js.Any])
-    if (iot1clickdevicesservice != null) __obj.updateDynamic("iot1clickdevicesservice")(iot1clickdevicesservice.asInstanceOf[js.Any])
-    if (iot1clickprojects != null) __obj.updateDynamic("iot1clickprojects")(iot1clickprojects.asInstanceOf[js.Any])
-    if (iotanalytics != null) __obj.updateDynamic("iotanalytics")(iotanalytics.asInstanceOf[js.Any])
-    if (iotdata != null) __obj.updateDynamic("iotdata")(iotdata.asInstanceOf[js.Any])
-    if (iotevents != null) __obj.updateDynamic("iotevents")(iotevents.asInstanceOf[js.Any])
-    if (ioteventsdata != null) __obj.updateDynamic("ioteventsdata")(ioteventsdata.asInstanceOf[js.Any])
-    if (iotjobsdataplane != null) __obj.updateDynamic("iotjobsdataplane")(iotjobsdataplane.asInstanceOf[js.Any])
-    if (iotsecuretunneling != null) __obj.updateDynamic("iotsecuretunneling")(iotsecuretunneling.asInstanceOf[js.Any])
-    if (iotthingsgraph != null) __obj.updateDynamic("iotthingsgraph")(iotthingsgraph.asInstanceOf[js.Any])
-    if (kafka != null) __obj.updateDynamic("kafka")(kafka.asInstanceOf[js.Any])
-    if (kendra != null) __obj.updateDynamic("kendra")(kendra.asInstanceOf[js.Any])
-    if (kinesis != null) __obj.updateDynamic("kinesis")(kinesis.asInstanceOf[js.Any])
-    if (kinesisanalytics != null) __obj.updateDynamic("kinesisanalytics")(kinesisanalytics.asInstanceOf[js.Any])
-    if (kinesisanalyticsv2 != null) __obj.updateDynamic("kinesisanalyticsv2")(kinesisanalyticsv2.asInstanceOf[js.Any])
-    if (kinesisvideo != null) __obj.updateDynamic("kinesisvideo")(kinesisvideo.asInstanceOf[js.Any])
-    if (kinesisvideoarchivedmedia != null) __obj.updateDynamic("kinesisvideoarchivedmedia")(kinesisvideoarchivedmedia.asInstanceOf[js.Any])
-    if (kinesisvideomedia != null) __obj.updateDynamic("kinesisvideomedia")(kinesisvideomedia.asInstanceOf[js.Any])
-    if (kinesisvideosignalingchannels != null) __obj.updateDynamic("kinesisvideosignalingchannels")(kinesisvideosignalingchannels.asInstanceOf[js.Any])
-    if (kms != null) __obj.updateDynamic("kms")(kms.asInstanceOf[js.Any])
-    if (lakeformation != null) __obj.updateDynamic("lakeformation")(lakeformation.asInstanceOf[js.Any])
-    if (lambda != null) __obj.updateDynamic("lambda")(lambda.asInstanceOf[js.Any])
-    if (lexmodelbuildingservice != null) __obj.updateDynamic("lexmodelbuildingservice")(lexmodelbuildingservice.asInstanceOf[js.Any])
-    if (lexruntime != null) __obj.updateDynamic("lexruntime")(lexruntime.asInstanceOf[js.Any])
-    if (licensemanager != null) __obj.updateDynamic("licensemanager")(licensemanager.asInstanceOf[js.Any])
-    if (lightsail != null) __obj.updateDynamic("lightsail")(lightsail.asInstanceOf[js.Any])
-    if (machinelearning != null) __obj.updateDynamic("machinelearning")(machinelearning.asInstanceOf[js.Any])
-    if (macie != null) __obj.updateDynamic("macie")(macie.asInstanceOf[js.Any])
-    if (managedblockchain != null) __obj.updateDynamic("managedblockchain")(managedblockchain.asInstanceOf[js.Any])
-    if (marketplacecatalog != null) __obj.updateDynamic("marketplacecatalog")(marketplacecatalog.asInstanceOf[js.Any])
-    if (marketplacecommerceanalytics != null) __obj.updateDynamic("marketplacecommerceanalytics")(marketplacecommerceanalytics.asInstanceOf[js.Any])
-    if (marketplaceentitlementservice != null) __obj.updateDynamic("marketplaceentitlementservice")(marketplaceentitlementservice.asInstanceOf[js.Any])
-    if (marketplacemetering != null) __obj.updateDynamic("marketplacemetering")(marketplacemetering.asInstanceOf[js.Any])
-    if (mediaconnect != null) __obj.updateDynamic("mediaconnect")(mediaconnect.asInstanceOf[js.Any])
-    if (mediaconvert != null) __obj.updateDynamic("mediaconvert")(mediaconvert.asInstanceOf[js.Any])
-    if (medialive != null) __obj.updateDynamic("medialive")(medialive.asInstanceOf[js.Any])
-    if (mediapackage != null) __obj.updateDynamic("mediapackage")(mediapackage.asInstanceOf[js.Any])
-    if (mediapackagevod != null) __obj.updateDynamic("mediapackagevod")(mediapackagevod.asInstanceOf[js.Any])
-    if (mediastore != null) __obj.updateDynamic("mediastore")(mediastore.asInstanceOf[js.Any])
-    if (mediastoredata != null) __obj.updateDynamic("mediastoredata")(mediastoredata.asInstanceOf[js.Any])
-    if (mediatailor != null) __obj.updateDynamic("mediatailor")(mediatailor.asInstanceOf[js.Any])
-    if (migrationhub != null) __obj.updateDynamic("migrationhub")(migrationhub.asInstanceOf[js.Any])
-    if (migrationhubconfig != null) __obj.updateDynamic("migrationhubconfig")(migrationhubconfig.asInstanceOf[js.Any])
-    if (mobile != null) __obj.updateDynamic("mobile")(mobile.asInstanceOf[js.Any])
-    if (mobileanalytics != null) __obj.updateDynamic("mobileanalytics")(mobileanalytics.asInstanceOf[js.Any])
-    if (mq != null) __obj.updateDynamic("mq")(mq.asInstanceOf[js.Any])
-    if (mturk != null) __obj.updateDynamic("mturk")(mturk.asInstanceOf[js.Any])
-    if (neptune != null) __obj.updateDynamic("neptune")(neptune.asInstanceOf[js.Any])
-    if (networkmanager != null) __obj.updateDynamic("networkmanager")(networkmanager.asInstanceOf[js.Any])
-    if (opsworks != null) __obj.updateDynamic("opsworks")(opsworks.asInstanceOf[js.Any])
-    if (opsworkscm != null) __obj.updateDynamic("opsworkscm")(opsworkscm.asInstanceOf[js.Any])
-    if (organizations != null) __obj.updateDynamic("organizations")(organizations.asInstanceOf[js.Any])
-    if (outposts != null) __obj.updateDynamic("outposts")(outposts.asInstanceOf[js.Any])
-    if (personalize != null) __obj.updateDynamic("personalize")(personalize.asInstanceOf[js.Any])
-    if (personalizeevents != null) __obj.updateDynamic("personalizeevents")(personalizeevents.asInstanceOf[js.Any])
-    if (personalizeruntime != null) __obj.updateDynamic("personalizeruntime")(personalizeruntime.asInstanceOf[js.Any])
-    if (pi != null) __obj.updateDynamic("pi")(pi.asInstanceOf[js.Any])
-    if (pinpoint != null) __obj.updateDynamic("pinpoint")(pinpoint.asInstanceOf[js.Any])
-    if (pinpointemail != null) __obj.updateDynamic("pinpointemail")(pinpointemail.asInstanceOf[js.Any])
-    if (pinpointsmsvoice != null) __obj.updateDynamic("pinpointsmsvoice")(pinpointsmsvoice.asInstanceOf[js.Any])
-    if (polly != null) __obj.updateDynamic("polly")(polly.asInstanceOf[js.Any])
-    if (pricing != null) __obj.updateDynamic("pricing")(pricing.asInstanceOf[js.Any])
-    if (qldb != null) __obj.updateDynamic("qldb")(qldb.asInstanceOf[js.Any])
-    if (qldbsession != null) __obj.updateDynamic("qldbsession")(qldbsession.asInstanceOf[js.Any])
-    if (quicksight != null) __obj.updateDynamic("quicksight")(quicksight.asInstanceOf[js.Any])
-    if (ram != null) __obj.updateDynamic("ram")(ram.asInstanceOf[js.Any])
-    if (rds != null) __obj.updateDynamic("rds")(rds.asInstanceOf[js.Any])
-    if (rdsdataservice != null) __obj.updateDynamic("rdsdataservice")(rdsdataservice.asInstanceOf[js.Any])
-    if (redshift != null) __obj.updateDynamic("redshift")(redshift.asInstanceOf[js.Any])
-    if (rekognition != null) __obj.updateDynamic("rekognition")(rekognition.asInstanceOf[js.Any])
-    if (resourcegroups != null) __obj.updateDynamic("resourcegroups")(resourcegroups.asInstanceOf[js.Any])
-    if (resourcegroupstaggingapi != null) __obj.updateDynamic("resourcegroupstaggingapi")(resourcegroupstaggingapi.asInstanceOf[js.Any])
-    if (robomaker != null) __obj.updateDynamic("robomaker")(robomaker.asInstanceOf[js.Any])
-    if (route53 != null) __obj.updateDynamic("route53")(route53.asInstanceOf[js.Any])
-    if (route53domains != null) __obj.updateDynamic("route53domains")(route53domains.asInstanceOf[js.Any])
-    if (route53resolver != null) __obj.updateDynamic("route53resolver")(route53resolver.asInstanceOf[js.Any])
-    if (s3 != null) __obj.updateDynamic("s3")(s3.asInstanceOf[js.Any])
-    if (s3control != null) __obj.updateDynamic("s3control")(s3control.asInstanceOf[js.Any])
-    if (sagemaker != null) __obj.updateDynamic("sagemaker")(sagemaker.asInstanceOf[js.Any])
-    if (sagemakerruntime != null) __obj.updateDynamic("sagemakerruntime")(sagemakerruntime.asInstanceOf[js.Any])
-    if (savingsplans != null) __obj.updateDynamic("savingsplans")(savingsplans.asInstanceOf[js.Any])
-    if (schemas != null) __obj.updateDynamic("schemas")(schemas.asInstanceOf[js.Any])
-    if (secretsmanager != null) __obj.updateDynamic("secretsmanager")(secretsmanager.asInstanceOf[js.Any])
-    if (securityhub != null) __obj.updateDynamic("securityhub")(securityhub.asInstanceOf[js.Any])
-    if (serverlessapplicationrepository != null) __obj.updateDynamic("serverlessapplicationrepository")(serverlessapplicationrepository.asInstanceOf[js.Any])
-    if (servicecatalog != null) __obj.updateDynamic("servicecatalog")(servicecatalog.asInstanceOf[js.Any])
-    if (servicediscovery != null) __obj.updateDynamic("servicediscovery")(servicediscovery.asInstanceOf[js.Any])
-    if (servicequotas != null) __obj.updateDynamic("servicequotas")(servicequotas.asInstanceOf[js.Any])
-    if (ses != null) __obj.updateDynamic("ses")(ses.asInstanceOf[js.Any])
-    if (sesv2 != null) __obj.updateDynamic("sesv2")(sesv2.asInstanceOf[js.Any])
-    if (shield != null) __obj.updateDynamic("shield")(shield.asInstanceOf[js.Any])
-    if (signer != null) __obj.updateDynamic("signer")(signer.asInstanceOf[js.Any])
-    if (simpledb != null) __obj.updateDynamic("simpledb")(simpledb.asInstanceOf[js.Any])
-    if (sms != null) __obj.updateDynamic("sms")(sms.asInstanceOf[js.Any])
-    if (snowball != null) __obj.updateDynamic("snowball")(snowball.asInstanceOf[js.Any])
-    if (sns != null) __obj.updateDynamic("sns")(sns.asInstanceOf[js.Any])
-    if (sqs != null) __obj.updateDynamic("sqs")(sqs.asInstanceOf[js.Any])
-    if (ssm != null) __obj.updateDynamic("ssm")(ssm.asInstanceOf[js.Any])
-    if (sso != null) __obj.updateDynamic("sso")(sso.asInstanceOf[js.Any])
-    if (ssooidc != null) __obj.updateDynamic("ssooidc")(ssooidc.asInstanceOf[js.Any])
-    if (stepfunctions != null) __obj.updateDynamic("stepfunctions")(stepfunctions.asInstanceOf[js.Any])
-    if (storagegateway != null) __obj.updateDynamic("storagegateway")(storagegateway.asInstanceOf[js.Any])
-    if (sts != null) __obj.updateDynamic("sts")(sts.asInstanceOf[js.Any])
-    if (support != null) __obj.updateDynamic("support")(support.asInstanceOf[js.Any])
-    if (swf != null) __obj.updateDynamic("swf")(swf.asInstanceOf[js.Any])
-    if (textract != null) __obj.updateDynamic("textract")(textract.asInstanceOf[js.Any])
-    if (transcribeservice != null) __obj.updateDynamic("transcribeservice")(transcribeservice.asInstanceOf[js.Any])
-    if (transfer != null) __obj.updateDynamic("transfer")(transfer.asInstanceOf[js.Any])
-    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
-    if (waf != null) __obj.updateDynamic("waf")(waf.asInstanceOf[js.Any])
-    if (wafregional != null) __obj.updateDynamic("wafregional")(wafregional.asInstanceOf[js.Any])
-    if (wafv2 != null) __obj.updateDynamic("wafv2")(wafv2.asInstanceOf[js.Any])
-    if (workdocs != null) __obj.updateDynamic("workdocs")(workdocs.asInstanceOf[js.Any])
-    if (worklink != null) __obj.updateDynamic("worklink")(worklink.asInstanceOf[js.Any])
-    if (workmail != null) __obj.updateDynamic("workmail")(workmail.asInstanceOf[js.Any])
-    if (workmailmessageflow != null) __obj.updateDynamic("workmailmessageflow")(workmailmessageflow.asInstanceOf[js.Any])
-    if (workspaces != null) __obj.updateDynamic("workspaces")(workspaces.asInstanceOf[js.Any])
-    if (xray != null) __obj.updateDynamic("xray")(xray.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigurationServiceApiVersions]
   }
+  @scala.inline
+  implicit class ConfigurationServiceApiVersionsOps[Self <: ConfigurationServiceApiVersions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessanalyzer(value: apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessanalyzer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessanalyzer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessanalyzer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAcm(value: typingsSlinky.awsSdk.acmMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAcmpca(value: typingsSlinky.awsSdk.acmpcaMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acmpca")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcmpca: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acmpca")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlexaforbusiness(value: typingsSlinky.awsSdk.alexaforbusinessMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alexaforbusiness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlexaforbusiness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alexaforbusiness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmplify(value: typingsSlinky.awsSdk.amplifyMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amplify")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmplify: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amplify")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApigateway(value: typingsSlinky.awsSdk.apigatewayMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apigateway")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApigateway: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apigateway")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApigatewaymanagementapi(value: typingsSlinky.awsSdk.apigatewaymanagementapiMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apigatewaymanagementapi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApigatewaymanagementapi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apigatewaymanagementapi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApigatewayv2(value: typingsSlinky.awsSdk.apigatewayv2Mod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apigatewayv2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApigatewayv2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apigatewayv2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppconfig(value: typingsSlinky.awsSdk.appconfigMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appconfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppconfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appconfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApplicationautoscaling(value: typingsSlinky.awsSdk.applicationautoscalingMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationautoscaling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationautoscaling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationautoscaling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApplicationinsights(value: typingsSlinky.awsSdk.applicationinsightsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationinsights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationinsights: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationinsights")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppmesh(value: typingsSlinky.awsSdk.appmeshMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appmesh")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppmesh: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appmesh")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppstream(value: typingsSlinky.awsSdk.appstreamMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appstream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppstream: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appstream")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppsync(value: typingsSlinky.awsSdk.appsyncMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appsync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAthena(value: typingsSlinky.awsSdk.athenaMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("athena")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAthena: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("athena")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAugmentedairuntime(value: typingsSlinky.awsSdk.augmentedairuntimeMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("augmentedairuntime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAugmentedairuntime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("augmentedairuntime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoscaling(value: typingsSlinky.awsSdk.autoscalingMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscaling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoscaling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscaling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoscalingplans(value: typingsSlinky.awsSdk.autoscalingplansMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscalingplans")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoscalingplans: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscalingplans")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackup(value: typingsSlinky.awsSdk.backupMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBatch(value: typingsSlinky.awsSdk.batchMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBudgets(value: typingsSlinky.awsSdk.budgetsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("budgets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBudgets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("budgets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChime(value: typingsSlinky.awsSdk.chimeMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloud9(value: typingsSlinky.awsSdk.cloud9Mod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloud9")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloud9: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloud9")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClouddirectory(value: typingsSlinky.awsSdk.clouddirectoryMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clouddirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClouddirectory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clouddirectory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudformation(value: typingsSlinky.awsSdk.cloudformationMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudformation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudformation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudfront(value: typingsSlinky.awsSdk.cloudfrontMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudfront")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudfront: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudfront")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudhsm(value: typingsSlinky.awsSdk.cloudhsmMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudhsm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudhsm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudhsm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudhsmv2(value: typingsSlinky.awsSdk.cloudhsmv2Mod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudhsmv2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudhsmv2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudhsmv2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudsearch(value: typingsSlinky.awsSdk.cloudsearchMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudsearch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudsearch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudsearch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudsearchdomain(value: typingsSlinky.awsSdk.cloudsearchdomainMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudsearchdomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudsearchdomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudsearchdomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudtrail(value: typingsSlinky.awsSdk.cloudtrailMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudtrail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudtrail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudtrail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudwatch(value: typingsSlinky.awsSdk.cloudwatchMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudwatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudwatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudwatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudwatchevents(value: typingsSlinky.awsSdk.cloudwatcheventsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudwatchevents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudwatchevents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudwatchevents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudwatchlogs(value: typingsSlinky.awsSdk.cloudwatchlogsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudwatchlogs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudwatchlogs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudwatchlogs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodebuild(value: typingsSlinky.awsSdk.codebuildMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codebuild")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodebuild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codebuild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodecommit(value: typingsSlinky.awsSdk.codecommitMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codecommit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodecommit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codecommit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodedeploy(value: typingsSlinky.awsSdk.codedeployMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codedeploy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodedeploy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codedeploy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodeguruprofiler(value: typingsSlinky.awsSdk.codeguruprofilerMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeguruprofiler")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodeguruprofiler: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeguruprofiler")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodegurureviewer(value: typingsSlinky.awsSdk.codegurureviewerMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codegurureviewer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodegurureviewer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codegurureviewer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodepipeline(value: typingsSlinky.awsSdk.codepipelineMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codepipeline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodepipeline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codepipeline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodestar(value: typingsSlinky.awsSdk.codestarMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codestar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodestar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codestar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodestarconnections(value: typingsSlinky.awsSdk.codestarconnectionsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codestarconnections")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodestarconnections: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codestarconnections")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodestarnotifications(value: typingsSlinky.awsSdk.codestarnotificationsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codestarnotifications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodestarnotifications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codestarnotifications")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCognitoidentity(value: typingsSlinky.awsSdk.cognitoidentityMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cognitoidentity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCognitoidentity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cognitoidentity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCognitoidentityserviceprovider(value: typingsSlinky.awsSdk.cognitoidentityserviceproviderMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cognitoidentityserviceprovider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCognitoidentityserviceprovider: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cognitoidentityserviceprovider")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCognitosync(value: typingsSlinky.awsSdk.cognitosyncMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cognitosync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCognitosync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cognitosync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComprehend(value: typingsSlinky.awsSdk.comprehendMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comprehend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComprehend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comprehend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComprehendmedical(value: typingsSlinky.awsSdk.comprehendmedicalMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comprehendmedical")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComprehendmedical: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comprehendmedical")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComputeoptimizer(value: typingsSlinky.awsSdk.computeoptimizerMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeoptimizer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputeoptimizer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeoptimizer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigservice(value: typingsSlinky.awsSdk.configserviceMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configservice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigservice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configservice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnect(value: typingsSlinky.awsSdk.connectMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectparticipant(value: typingsSlinky.awsSdk.connectparticipantMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectparticipant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectparticipant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectparticipant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCostexplorer(value: typingsSlinky.awsSdk.costexplorerMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("costexplorer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCostexplorer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("costexplorer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCur(value: typingsSlinky.awsSdk.curMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cur")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataexchange(value: typingsSlinky.awsSdk.dataexchangeMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataexchange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataexchange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataexchange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatapipeline(value: typingsSlinky.awsSdk.datapipelineMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datapipeline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatapipeline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datapipeline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatasync(value: typingsSlinky.awsSdk.datasyncMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datasync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatasync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datasync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDax(value: typingsSlinky.awsSdk.daxMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dax")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDetective(value: typingsSlinky.awsSdk.detectiveMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detective")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetective: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detective")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDevicefarm(value: typingsSlinky.awsSdk.devicefarmMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devicefarm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevicefarm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devicefarm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectconnect(value: typingsSlinky.awsSdk.directconnectMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directconnect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectconnect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directconnect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectoryservice(value: typingsSlinky.awsSdk.directoryserviceMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directoryservice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectoryservice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directoryservice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiscovery(value: typingsSlinky.awsSdk.discoveryMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("discovery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiscovery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("discovery")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDlm(value: typingsSlinky.awsSdk.dlmMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dlm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDlm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dlm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDms(value: typingsSlinky.awsSdk.dmsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocdb(value: typingsSlinky.awsSdk.docdbMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("docdb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocdb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("docdb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamodb(value: typingsSlinky.awsSdk.dynamodbMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamodb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamodb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamodb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamodbstreams(value: typingsSlinky.awsSdk.dynamodbstreamsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamodbstreams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamodbstreams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamodbstreams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEbs(value: typingsSlinky.awsSdk.ebsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ebs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEbs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ebs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEc2(value: typingsSlinky.awsSdk.ec2Mod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ec2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEc2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ec2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEc2instanceconnect(value: typingsSlinky.awsSdk.ec2instanceconnectMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ec2instanceconnect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEc2instanceconnect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ec2instanceconnect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEcr(value: typingsSlinky.awsSdk.ecrMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ecr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEcr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ecr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEcs(value: typingsSlinky.awsSdk.ecsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ecs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEcs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ecs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEfs(value: typingsSlinky.awsSdk.efsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("efs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEfs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("efs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEks(value: typingsSlinky.awsSdk.eksMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElasticache(value: typingsSlinky.awsSdk.elasticacheMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticache")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElasticbeanstalk(value: typingsSlinky.awsSdk.elasticbeanstalkMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticbeanstalk")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticbeanstalk: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticbeanstalk")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElasticinference(value: typingsSlinky.awsSdk.elasticinferenceMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticinference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticinference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticinference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElastictranscoder(value: typingsSlinky.awsSdk.elastictranscoderMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elastictranscoder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElastictranscoder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elastictranscoder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElb(value: typingsSlinky.awsSdk.elbMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElbv2(value: typingsSlinky.awsSdk.elbv2Mod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elbv2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElbv2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elbv2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmr(value: typingsSlinky.awsSdk.emrMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEs(value: typingsSlinky.awsSdk.esMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("es")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("es")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventbridge(value: typingsSlinky.awsSdk.eventbridgeMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventbridge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventbridge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventbridge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirehose(value: typingsSlinky.awsSdk.firehoseMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firehose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirehose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firehose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFms(value: typingsSlinky.awsSdk.fmsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForecastqueryservice(value: typingsSlinky.awsSdk.forecastqueryserviceMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forecastqueryservice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForecastqueryservice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forecastqueryservice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForecastservice(value: typingsSlinky.awsSdk.forecastserviceMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forecastservice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForecastservice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forecastservice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrauddetector(value: typingsSlinky.awsSdk.frauddetectorMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frauddetector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrauddetector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frauddetector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFsx(value: typingsSlinky.awsSdk.fsxMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fsx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFsx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fsx")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGamelift(value: typingsSlinky.awsSdk.gameliftMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gamelift")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGamelift: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gamelift")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlacier(value: typingsSlinky.awsSdk.glacierMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("glacier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlacier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("glacier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlobalaccelerator(value: typingsSlinky.awsSdk.globalacceleratorMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("globalaccelerator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalaccelerator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("globalaccelerator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlue(value: typingsSlinky.awsSdk.glueMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("glue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("glue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGreengrass(value: typingsSlinky.awsSdk.greengrassMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("greengrass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGreengrass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("greengrass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroundstation(value: typingsSlinky.awsSdk.groundstationMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groundstation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroundstation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groundstation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGuardduty(value: typingsSlinky.awsSdk.guarddutyMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guardduty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGuardduty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guardduty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHealth(value: typingsSlinky.awsSdk.healthMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("health")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHealth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("health")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIam(value: typingsSlinky.awsSdk.iamMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iam")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIam: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iam")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImagebuilder(value: typingsSlinky.awsSdk.imagebuilderMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imagebuilder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImagebuilder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imagebuilder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImportexport(value: typingsSlinky.awsSdk.importexportMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("importexport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImportexport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("importexport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInspector(value: typingsSlinky.awsSdk.inspectorMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inspector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInspector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inspector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIot(value: typingsSlinky.awsSdk.iotMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIot1clickdevicesservice(value: typingsSlinky.awsSdk.iot1clickdevicesserviceMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iot1clickdevicesservice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIot1clickdevicesservice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iot1clickdevicesservice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIot1clickprojects(value: typingsSlinky.awsSdk.iot1clickprojectsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iot1clickprojects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIot1clickprojects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iot1clickprojects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIotanalytics(value: typingsSlinky.awsSdk.iotanalyticsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotanalytics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIotanalytics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotanalytics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIotdata(value: typingsSlinky.awsSdk.iotdataMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotdata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIotdata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotdata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIotevents(value: typingsSlinky.awsSdk.ioteventsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotevents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIotevents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotevents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIoteventsdata(value: typingsSlinky.awsSdk.ioteventsdataMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ioteventsdata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIoteventsdata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ioteventsdata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIotjobsdataplane(value: typingsSlinky.awsSdk.iotjobsdataplaneMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotjobsdataplane")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIotjobsdataplane: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotjobsdataplane")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIotsecuretunneling(value: typingsSlinky.awsSdk.iotsecuretunnelingMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotsecuretunneling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIotsecuretunneling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotsecuretunneling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIotthingsgraph(value: typingsSlinky.awsSdk.iotthingsgraphMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotthingsgraph")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIotthingsgraph: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotthingsgraph")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKafka(value: typingsSlinky.awsSdk.kafkaMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kafka")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKafka: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kafka")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKendra(value: typingsSlinky.awsSdk.kendraMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kendra")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKendra: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kendra")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKinesis(value: typingsSlinky.awsSdk.kinesisMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKinesis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKinesisanalytics(value: typingsSlinky.awsSdk.kinesisanalyticsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisanalytics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKinesisanalytics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisanalytics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKinesisanalyticsv2(value: typingsSlinky.awsSdk.kinesisanalyticsv2Mod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisanalyticsv2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKinesisanalyticsv2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisanalyticsv2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKinesisvideo(value: typingsSlinky.awsSdk.kinesisvideoMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisvideo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKinesisvideo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisvideo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKinesisvideoarchivedmedia(value: typingsSlinky.awsSdk.kinesisvideoarchivedmediaMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisvideoarchivedmedia")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKinesisvideoarchivedmedia: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisvideoarchivedmedia")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKinesisvideomedia(value: typingsSlinky.awsSdk.kinesisvideomediaMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisvideomedia")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKinesisvideomedia: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisvideomedia")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKinesisvideosignalingchannels(value: typingsSlinky.awsSdk.kinesisvideosignalingchannelsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisvideosignalingchannels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKinesisvideosignalingchannels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesisvideosignalingchannels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKms(value: typingsSlinky.awsSdk.kmsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLakeformation(value: typingsSlinky.awsSdk.lakeformationMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lakeformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLakeformation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lakeformation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLambda(value: typingsSlinky.awsSdk.lambdaMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambda")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambda: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambda")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLexmodelbuildingservice(value: typingsSlinky.awsSdk.lexmodelbuildingserviceMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lexmodelbuildingservice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLexmodelbuildingservice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lexmodelbuildingservice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLexruntime(value: typingsSlinky.awsSdk.lexruntimeMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lexruntime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLexruntime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lexruntime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLicensemanager(value: typingsSlinky.awsSdk.licensemanagerMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("licensemanager")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicensemanager: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("licensemanager")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLightsail(value: typingsSlinky.awsSdk.lightsailMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lightsail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLightsail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lightsail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMachinelearning(value: typingsSlinky.awsSdk.machinelearningMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("machinelearning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMachinelearning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("machinelearning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMacie(value: typingsSlinky.awsSdk.macieMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("macie")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMacie: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("macie")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManagedblockchain(value: typingsSlinky.awsSdk.managedblockchainMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedblockchain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManagedblockchain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedblockchain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarketplacecatalog(value: typingsSlinky.awsSdk.marketplacecatalogMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marketplacecatalog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarketplacecatalog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marketplacecatalog")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarketplacecommerceanalytics(value: typingsSlinky.awsSdk.marketplacecommerceanalyticsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marketplacecommerceanalytics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarketplacecommerceanalytics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marketplacecommerceanalytics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarketplaceentitlementservice(value: typingsSlinky.awsSdk.marketplaceentitlementserviceMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marketplaceentitlementservice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarketplaceentitlementservice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marketplaceentitlementservice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarketplacemetering(value: typingsSlinky.awsSdk.marketplacemeteringMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marketplacemetering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarketplacemetering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marketplacemetering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMediaconnect(value: typingsSlinky.awsSdk.mediaconnectMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaconnect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediaconnect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaconnect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMediaconvert(value: typingsSlinky.awsSdk.mediaconvertMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaconvert")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediaconvert: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaconvert")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMedialive(value: typingsSlinky.awsSdk.medialiveMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("medialive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMedialive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("medialive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMediapackage(value: typingsSlinky.awsSdk.mediapackageMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediapackage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediapackage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediapackage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMediapackagevod(value: typingsSlinky.awsSdk.mediapackagevodMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediapackagevod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediapackagevod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediapackagevod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMediastore(value: typingsSlinky.awsSdk.mediastoreMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediastore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediastore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediastore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMediastoredata(value: typingsSlinky.awsSdk.mediastoredataMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediastoredata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediastoredata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediastoredata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMediatailor(value: typingsSlinky.awsSdk.mediatailorMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediatailor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediatailor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediatailor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMigrationhub(value: typingsSlinky.awsSdk.migrationhubMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("migrationhub")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMigrationhub: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("migrationhub")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMigrationhubconfig(value: typingsSlinky.awsSdk.migrationhubconfigMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("migrationhubconfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMigrationhubconfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("migrationhubconfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMobile(value: typingsSlinky.awsSdk.mobileMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mobile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMobile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mobile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMobileanalytics(value: typingsSlinky.awsSdk.mobileanalyticsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileanalytics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMobileanalytics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileanalytics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMq(value: typingsSlinky.awsSdk.mqMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mq")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMq: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mq")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMturk(value: typingsSlinky.awsSdk.mturkMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mturk")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMturk: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mturk")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeptune(value: typingsSlinky.awsSdk.neptuneMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("neptune")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeptune: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("neptune")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkmanager(value: typingsSlinky.awsSdk.networkmanagerMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkmanager")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkmanager: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkmanager")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpsworks(value: typingsSlinky.awsSdk.opsworksMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opsworks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpsworks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opsworks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpsworkscm(value: typingsSlinky.awsSdk.opsworkscmMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opsworkscm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpsworkscm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opsworkscm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizations(value: typingsSlinky.awsSdk.organizationsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("organizations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("organizations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutposts(value: typingsSlinky.awsSdk.outpostsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outposts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutposts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outposts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPersonalize(value: typingsSlinky.awsSdk.personalizeMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("personalize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPersonalize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("personalize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPersonalizeevents(value: typingsSlinky.awsSdk.personalizeeventsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("personalizeevents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPersonalizeevents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("personalizeevents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPersonalizeruntime(value: typingsSlinky.awsSdk.personalizeruntimeMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("personalizeruntime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPersonalizeruntime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("personalizeruntime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPi(value: typingsSlinky.awsSdk.piMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPinpoint(value: typingsSlinky.awsSdk.pinpointMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pinpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPinpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pinpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPinpointemail(value: typingsSlinky.awsSdk.pinpointemailMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pinpointemail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPinpointemail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pinpointemail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPinpointsmsvoice(value: typingsSlinky.awsSdk.pinpointsmsvoiceMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pinpointsmsvoice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPinpointsmsvoice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pinpointsmsvoice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolly(value: typingsSlinky.awsSdk.pollyMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPricing(value: typingsSlinky.awsSdk.pricingMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pricing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPricing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pricing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQldb(value: typingsSlinky.awsSdk.qldbMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qldb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQldb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qldb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQldbsession(value: typingsSlinky.awsSdk.qldbsessionMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qldbsession")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQldbsession: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qldbsession")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuicksight(value: typingsSlinky.awsSdk.quicksightMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quicksight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuicksight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quicksight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRam(value: typingsSlinky.awsSdk.ramMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ram")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRam: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ram")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRds(value: typingsSlinky.awsSdk.rdsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRdsdataservice(value: typingsSlinky.awsSdk.rdsdataserviceMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rdsdataservice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRdsdataservice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rdsdataservice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRedshift(value: typingsSlinky.awsSdk.redshiftMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redshift")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRedshift: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redshift")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRekognition(value: typingsSlinky.awsSdk.rekognitionMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rekognition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRekognition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rekognition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourcegroups(value: typingsSlinky.awsSdk.resourcegroupsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourcegroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourcegroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourcegroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourcegroupstaggingapi(value: typingsSlinky.awsSdk.resourcegroupstaggingapiMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourcegroupstaggingapi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourcegroupstaggingapi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourcegroupstaggingapi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRobomaker(value: typingsSlinky.awsSdk.robomakerMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("robomaker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRobomaker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("robomaker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoute53(value: typingsSlinky.awsSdk.route53Mod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("route53")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoute53: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("route53")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoute53domains(value: typingsSlinky.awsSdk.route53domainsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("route53domains")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoute53domains: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("route53domains")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoute53resolver(value: typingsSlinky.awsSdk.route53resolverMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("route53resolver")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoute53resolver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("route53resolver")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3(value: typingsSlinky.awsSdk.s3Mod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3control(value: typingsSlinky.awsSdk.s3controlMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3control")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3control: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3control")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSagemaker(value: typingsSlinky.awsSdk.sagemakerMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sagemaker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSagemaker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sagemaker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSagemakerruntime(value: typingsSlinky.awsSdk.sagemakerruntimeMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sagemakerruntime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSagemakerruntime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sagemakerruntime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSavingsplans(value: typingsSlinky.awsSdk.savingsplansMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("savingsplans")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSavingsplans: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("savingsplans")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemas(value: typingsSlinky.awsSdk.schemasMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchemas: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemas")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecretsmanager(value: typingsSlinky.awsSdk.secretsmanagerMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secretsmanager")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecretsmanager: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secretsmanager")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityhub(value: typingsSlinky.awsSdk.securityhubMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityhub")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityhub: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityhub")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerlessapplicationrepository(value: typingsSlinky.awsSdk.serverlessapplicationrepositoryMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverlessapplicationrepository")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerlessapplicationrepository: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverlessapplicationrepository")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServicecatalog(value: typingsSlinky.awsSdk.servicecatalogMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servicecatalog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServicecatalog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servicecatalog")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServicediscovery(value: typingsSlinky.awsSdk.servicediscoveryMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servicediscovery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServicediscovery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servicediscovery")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServicequotas(value: typingsSlinky.awsSdk.servicequotasMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servicequotas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServicequotas: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servicequotas")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSes(value: typingsSlinky.awsSdk.sesMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSesv2(value: typingsSlinky.awsSdk.sesv2Mod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sesv2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSesv2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sesv2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShield(value: typingsSlinky.awsSdk.shieldMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shield")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShield: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shield")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSigner(value: typingsSlinky.awsSdk.signerMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSigner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSimpledb(value: typingsSlinky.awsSdk.simpledbMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simpledb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSimpledb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simpledb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSms(value: typingsSlinky.awsSdk.smsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnowball(value: typingsSlinky.awsSdk.snowballMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snowball")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnowball: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snowball")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSns(value: typingsSlinky.awsSdk.snsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSqs(value: typingsSlinky.awsSdk.sqsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sqs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSqs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sqs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSsm(value: typingsSlinky.awsSdk.ssmMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ssm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSsm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ssm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSso(value: typingsSlinky.awsSdk.ssoMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sso")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSso: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sso")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSsooidc(value: typingsSlinky.awsSdk.ssooidcMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ssooidc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSsooidc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ssooidc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStepfunctions(value: typingsSlinky.awsSdk.stepfunctionsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepfunctions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepfunctions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepfunctions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoragegateway(value: typingsSlinky.awsSdk.storagegatewayMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storagegateway")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoragegateway: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storagegateway")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSts(value: typingsSlinky.awsSdk.stsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupport(value: typingsSlinky.awsSdk.supportMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("support")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("support")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSwf(value: typingsSlinky.awsSdk.swfMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSwf: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextract(value: typingsSlinky.awsSdk.textractMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textract")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextract: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textract")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranscribeservice(value: typingsSlinky.awsSdk.transcribeserviceMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transcribeservice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranscribeservice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transcribeservice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransfer(value: typingsSlinky.awsSdk.transferMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transfer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransfer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transfer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranslate(value: typingsSlinky.awsSdk.translateMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranslate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWaf(value: typingsSlinky.awsSdk.wafMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWaf: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWafregional(value: typingsSlinky.awsSdk.wafregionalMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wafregional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWafregional: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wafregional")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWafv2(value: typingsSlinky.awsSdk.wafv2Mod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wafv2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWafv2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wafv2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkdocs(value: typingsSlinky.awsSdk.workdocsMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workdocs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkdocs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workdocs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorklink(value: typingsSlinky.awsSdk.worklinkMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("worklink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorklink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("worklink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkmail(value: typingsSlinky.awsSdk.workmailMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workmail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workmail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkmailmessageflow(value: typingsSlinky.awsSdk.workmailmessageflowMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workmailmessageflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkmailmessageflow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workmailmessageflow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkspaces(value: typingsSlinky.awsSdk.workspacesMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workspaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkspaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workspaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXray(value: typingsSlinky.awsSdk.xrayMod.apiVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xray")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXray: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xray")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

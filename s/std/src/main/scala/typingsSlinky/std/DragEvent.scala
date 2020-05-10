@@ -18,6 +18,10 @@ trait DragEvent extends MouseEvent {
 @JSGlobal("DragEvent")
 @js.native
 object DragEvent
-  extends Instantiable1[/* type */ java.lang.String, DragEvent]
-     with Instantiable2[/* type */ java.lang.String, /* eventInitDict */ DragEventInit, DragEvent]
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.DragEvent]
+     with Instantiable2[
+      /* type */ java.lang.String, 
+      /* eventInitDict */ DragEventInit, 
+      org.scalajs.dom.raw.DragEvent
+    ]
 

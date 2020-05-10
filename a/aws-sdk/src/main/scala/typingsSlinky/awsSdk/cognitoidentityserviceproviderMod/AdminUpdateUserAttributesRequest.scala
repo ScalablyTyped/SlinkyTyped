@@ -26,15 +26,47 @@ trait AdminUpdateUserAttributesRequest extends js.Object {
 
 object AdminUpdateUserAttributesRequest {
   @scala.inline
-  def apply(
-    UserAttributes: AttributeListType,
-    UserPoolId: UserPoolIdType,
-    Username: UsernameType,
-    ClientMetadata: ClientMetadataType = null
-  ): AdminUpdateUserAttributesRequest = {
+  def apply(UserAttributes: AttributeListType, UserPoolId: UserPoolIdType, Username: UsernameType): AdminUpdateUserAttributesRequest = {
     val __obj = js.Dynamic.literal(UserAttributes = UserAttributes.asInstanceOf[js.Any], UserPoolId = UserPoolId.asInstanceOf[js.Any], Username = Username.asInstanceOf[js.Any])
-    if (ClientMetadata != null) __obj.updateDynamic("ClientMetadata")(ClientMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdminUpdateUserAttributesRequest]
   }
+  @scala.inline
+  implicit class AdminUpdateUserAttributesRequestOps[Self <: AdminUpdateUserAttributesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUserAttributes(value: AttributeListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserPoolId(value: UserPoolIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsername(value: UsernameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientMetadata(value: ClientMetadataType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientMetadata")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

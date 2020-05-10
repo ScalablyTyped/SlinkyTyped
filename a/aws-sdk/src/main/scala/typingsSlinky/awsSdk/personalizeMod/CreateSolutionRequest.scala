@@ -38,22 +38,89 @@ trait CreateSolutionRequest extends js.Object {
 
 object CreateSolutionRequest {
   @scala.inline
-  def apply(
-    datasetGroupArn: Arn,
-    name: Name,
-    eventType: EventType = null,
-    performAutoML: js.UndefOr[scala.Boolean] = js.undefined,
-    performHPO: js.UndefOr[scala.Boolean] = js.undefined,
-    recipeArn: Arn = null,
-    solutionConfig: SolutionConfig = null
-  ): CreateSolutionRequest = {
+  def apply(datasetGroupArn: Arn, name: Name): CreateSolutionRequest = {
     val __obj = js.Dynamic.literal(datasetGroupArn = datasetGroupArn.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (eventType != null) __obj.updateDynamic("eventType")(eventType.asInstanceOf[js.Any])
-    if (!js.isUndefined(performAutoML)) __obj.updateDynamic("performAutoML")(performAutoML.asInstanceOf[js.Any])
-    if (!js.isUndefined(performHPO)) __obj.updateDynamic("performHPO")(performHPO.asInstanceOf[js.Any])
-    if (recipeArn != null) __obj.updateDynamic("recipeArn")(recipeArn.asInstanceOf[js.Any])
-    if (solutionConfig != null) __obj.updateDynamic("solutionConfig")(solutionConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSolutionRequest]
   }
+  @scala.inline
+  implicit class CreateSolutionRequestOps[Self <: CreateSolutionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDatasetGroupArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetGroupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEventType(value: EventType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPerformAutoML(value: PerformAutoML): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("performAutoML")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPerformAutoML: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("performAutoML")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPerformHPO(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("performHPO")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPerformHPO: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("performHPO")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipeArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipeArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipeArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipeArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSolutionConfig(value: SolutionConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("solutionConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSolutionConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("solutionConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

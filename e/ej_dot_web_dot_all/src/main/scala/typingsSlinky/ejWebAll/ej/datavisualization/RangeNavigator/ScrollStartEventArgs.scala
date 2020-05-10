@@ -4,45 +4,113 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ScrollStartEventArgs extends js.Object {
   /** if the event should be canceled; otherwise, false.
     */
-  var cancel: js.UndefOr[Boolean] = js.undefined
+  var cancel: js.UndefOr[Boolean] = js.native
   /** parameters from RangeNavigator
     */
-  var data: js.UndefOr[js.Any] = js.undefined
+  var data: js.UndefOr[js.Any] = js.native
   /** returns the scrollbar position end range value on changing scrollbar
     */
-  var dataEndRange: js.UndefOr[String] = js.undefined
+  var dataEndRange: js.UndefOr[String] = js.native
   /** returns the scrollbar position starting range value on changing scrollbar
     */
-  var dataStartRange: js.UndefOr[String] = js.undefined
+  var dataStartRange: js.UndefOr[String] = js.native
   /** returns the RangeNavigator model
     */
-  var model: js.UndefOr[js.Any] = js.undefined
+  var model: js.UndefOr[js.Any] = js.native
   /** returns the name of the event
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
 }
 
 object ScrollStartEventArgs {
   @scala.inline
-  def apply(
-    cancel: js.UndefOr[Boolean] = js.undefined,
-    data: js.Any = null,
-    dataEndRange: String = null,
-    dataStartRange: String = null,
-    model: js.Any = null,
-    `type`: String = null
-  ): ScrollStartEventArgs = {
+  def apply(): ScrollStartEventArgs = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dataEndRange != null) __obj.updateDynamic("dataEndRange")(dataEndRange.asInstanceOf[js.Any])
-    if (dataStartRange != null) __obj.updateDynamic("dataStartRange")(dataStartRange.asInstanceOf[js.Any])
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScrollStartEventArgs]
   }
+  @scala.inline
+  implicit class ScrollStartEventArgsOps[Self <: ScrollStartEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCancel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataEndRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataEndRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataEndRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataEndRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataStartRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataStartRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataStartRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataStartRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModel(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

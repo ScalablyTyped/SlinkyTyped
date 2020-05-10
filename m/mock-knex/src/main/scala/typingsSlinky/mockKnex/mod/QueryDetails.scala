@@ -1,7 +1,6 @@
 package typingsSlinky.mockKnex.mod
 
 import typingsSlinky.knex.mod.Sql
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +14,7 @@ trait QueryDetails extends Sql {
     *
     * @param error The Error, string or instance of Error, which represents why the result was rejected
     */
-  def reject(error: Error): Unit = js.native
+  def reject(error: js.Error): Unit = js.native
   /**
     * Function that needs to be called to mock database query result for knex.
     *

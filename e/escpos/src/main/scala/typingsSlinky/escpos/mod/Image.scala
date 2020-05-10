@@ -3,7 +3,6 @@ package typingsSlinky.escpos.mod
 import typingsSlinky.escpos.AnonColors
 import typingsSlinky.escpos.AnonData
 import typingsSlinky.escpos.AnonHeight
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +22,7 @@ class Image protected () extends js.Object {
 @js.native
 object Image extends js.Object {
   def load(url: String): Unit = js.native
-  def load(url: String, callback: js.Function1[/* result */ this.type | Error, Unit]): Unit = js.native
+  def load(url: String, callback: js.Function1[/* result */ this.type | js.Error, Unit]): Unit = js.native
   def load(url: String, `type`: MIME_TYPE): Unit = js.native
   def load(url: String, `type`: MIME_TYPE, callback: js.Function1[/* result */ this.type | js.Error, Unit]): Unit = js.native
 }

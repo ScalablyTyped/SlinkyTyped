@@ -19,24 +19,22 @@ trait HTTPMethods extends js.Object
 
 object HTTPMethods {
   @scala.inline
-  def CONNECT: typingsSlinky.simplecrawler.simplecrawlerStrings.CONNECT = this.cast("CONNECT")
+  def CONNECT: typingsSlinky.simplecrawler.simplecrawlerStrings.CONNECT = "CONNECT".asInstanceOf[typingsSlinky.simplecrawler.simplecrawlerStrings.CONNECT]
   @scala.inline
-  def DELETE: typingsSlinky.simplecrawler.simplecrawlerStrings.DELETE = this.cast("DELETE")
+  def DELETE: typingsSlinky.simplecrawler.simplecrawlerStrings.DELETE = "DELETE".asInstanceOf[typingsSlinky.simplecrawler.simplecrawlerStrings.DELETE]
   @scala.inline
-  def GET: typingsSlinky.simplecrawler.simplecrawlerStrings.GET = this.cast("GET")
+  def GET: typingsSlinky.simplecrawler.simplecrawlerStrings.GET = "GET".asInstanceOf[typingsSlinky.simplecrawler.simplecrawlerStrings.GET]
   @scala.inline
-  def HEAD: typingsSlinky.simplecrawler.simplecrawlerStrings.HEAD = this.cast("HEAD")
+  def HEAD: typingsSlinky.simplecrawler.simplecrawlerStrings.HEAD = "HEAD".asInstanceOf[typingsSlinky.simplecrawler.simplecrawlerStrings.HEAD]
   @scala.inline
-  def OPTIONS: typingsSlinky.simplecrawler.simplecrawlerStrings.OPTIONS = this.cast("OPTIONS")
+  def OPTIONS: typingsSlinky.simplecrawler.simplecrawlerStrings.OPTIONS = "OPTIONS".asInstanceOf[typingsSlinky.simplecrawler.simplecrawlerStrings.OPTIONS]
   @scala.inline
-  def PATCH: typingsSlinky.simplecrawler.simplecrawlerStrings.PATCH = this.cast("PATCH")
+  def PATCH: typingsSlinky.simplecrawler.simplecrawlerStrings.PATCH = "PATCH".asInstanceOf[typingsSlinky.simplecrawler.simplecrawlerStrings.PATCH]
   @scala.inline
-  def POST: typingsSlinky.simplecrawler.simplecrawlerStrings.POST = this.cast("POST")
+  def POST: typingsSlinky.simplecrawler.simplecrawlerStrings.POST = "POST".asInstanceOf[typingsSlinky.simplecrawler.simplecrawlerStrings.POST]
   @scala.inline
-  def PUT: typingsSlinky.simplecrawler.simplecrawlerStrings.PUT = this.cast("PUT")
+  def PUT: typingsSlinky.simplecrawler.simplecrawlerStrings.PUT = "PUT".asInstanceOf[typingsSlinky.simplecrawler.simplecrawlerStrings.PUT]
   @scala.inline
-  def TRACE: typingsSlinky.simplecrawler.simplecrawlerStrings.TRACE = this.cast("TRACE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TRACE: typingsSlinky.simplecrawler.simplecrawlerStrings.TRACE = "TRACE".asInstanceOf[typingsSlinky.simplecrawler.simplecrawlerStrings.TRACE]
 }
 

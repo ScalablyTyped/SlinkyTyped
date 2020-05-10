@@ -4,16 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var arrayValueSize: js.UndefOr[Double] = js.undefined
+  var arrayValueSize: js.UndefOr[Double] = js.native
   /**
   		 * time in seconds to check all data and delete expired keys
   		 *
   		 * @type {number}
   		 * @memberof Options
   		 */
-  var checkperiod: js.UndefOr[Double] = js.undefined
-  var deleteOnExpire: js.UndefOr[Boolean] = js.undefined
+  var checkperiod: js.UndefOr[Double] = js.native
+  var deleteOnExpire: js.UndefOr[Boolean] = js.native
   /**
   		 * enable legacy callbacks.
   		 * legacy callback support will drop in v6.x!
@@ -21,15 +22,15 @@ trait Options extends js.Object {
   		 * @type {boolean}
   		 * @memberof Options
   		 */
-  var enableLegacyCallbacks: js.UndefOr[Boolean] = js.undefined
-  var errorOnMissing: js.UndefOr[Boolean] = js.undefined
+  var enableLegacyCallbacks: js.UndefOr[Boolean] = js.native
+  var errorOnMissing: js.UndefOr[Boolean] = js.native
   /**
   		 * If enabled, all values will be stringified during the set operation
   		 *
   		 * @type {boolean}
   		 * @memberof Options
   		 */
-  var forceString: js.UndefOr[Boolean] = js.undefined
+  var forceString: js.UndefOr[Boolean] = js.native
   /**
   		 * max amount of keys that are being stored.
   		 * set operations will throw an error when the cache is full
@@ -37,16 +38,16 @@ trait Options extends js.Object {
   		 * @type {number}
   		 * @memberof Options
   		 */
-  var maxKeys: js.UndefOr[Double] = js.undefined
-  var objectValueSize: js.UndefOr[Double] = js.undefined
-  var promiseValueSize: js.UndefOr[Double] = js.undefined
+  var maxKeys: js.UndefOr[Double] = js.native
+  var objectValueSize: js.UndefOr[Double] = js.native
+  var promiseValueSize: js.UndefOr[Double] = js.native
   /**
   		 * standard time to live in seconds. 0 = infinity
   		 *
   		 * @type {number}
   		 * @memberof Options
   		 */
-  var stdTTL: js.UndefOr[Double] = js.undefined
+  var stdTTL: js.UndefOr[Double] = js.native
   /**
   		 * en/disable cloning of variables.
   		 * disabling this is strongly encouraged when aiming for performance!
@@ -57,37 +58,154 @@ trait Options extends js.Object {
   		 * @type {boolean}
   		 * @memberof Options
   		 */
-  var useClones: js.UndefOr[Boolean] = js.undefined
+  var useClones: js.UndefOr[Boolean] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    arrayValueSize: Int | Double = null,
-    checkperiod: Int | Double = null,
-    deleteOnExpire: js.UndefOr[Boolean] = js.undefined,
-    enableLegacyCallbacks: js.UndefOr[Boolean] = js.undefined,
-    errorOnMissing: js.UndefOr[Boolean] = js.undefined,
-    forceString: js.UndefOr[Boolean] = js.undefined,
-    maxKeys: Int | Double = null,
-    objectValueSize: Int | Double = null,
-    promiseValueSize: Int | Double = null,
-    stdTTL: Int | Double = null,
-    useClones: js.UndefOr[Boolean] = js.undefined
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (arrayValueSize != null) __obj.updateDynamic("arrayValueSize")(arrayValueSize.asInstanceOf[js.Any])
-    if (checkperiod != null) __obj.updateDynamic("checkperiod")(checkperiod.asInstanceOf[js.Any])
-    if (!js.isUndefined(deleteOnExpire)) __obj.updateDynamic("deleteOnExpire")(deleteOnExpire.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableLegacyCallbacks)) __obj.updateDynamic("enableLegacyCallbacks")(enableLegacyCallbacks.asInstanceOf[js.Any])
-    if (!js.isUndefined(errorOnMissing)) __obj.updateDynamic("errorOnMissing")(errorOnMissing.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceString)) __obj.updateDynamic("forceString")(forceString.asInstanceOf[js.Any])
-    if (maxKeys != null) __obj.updateDynamic("maxKeys")(maxKeys.asInstanceOf[js.Any])
-    if (objectValueSize != null) __obj.updateDynamic("objectValueSize")(objectValueSize.asInstanceOf[js.Any])
-    if (promiseValueSize != null) __obj.updateDynamic("promiseValueSize")(promiseValueSize.asInstanceOf[js.Any])
-    if (stdTTL != null) __obj.updateDynamic("stdTTL")(stdTTL.asInstanceOf[js.Any])
-    if (!js.isUndefined(useClones)) __obj.updateDynamic("useClones")(useClones.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrayValueSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayValueSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrayValueSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayValueSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckperiod(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkperiod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckperiod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkperiod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteOnExpire(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteOnExpire")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteOnExpire: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteOnExpire")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableLegacyCallbacks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLegacyCallbacks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableLegacyCallbacks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLegacyCallbacks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorOnMissing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorOnMissing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorOnMissing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorOnMissing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceString(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxKeys(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectValueSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectValueSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectValueSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectValueSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPromiseValueSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promiseValueSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPromiseValueSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promiseValueSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStdTTL(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stdTTL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStdTTL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stdTTL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseClones(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useClones")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseClones: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useClones")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

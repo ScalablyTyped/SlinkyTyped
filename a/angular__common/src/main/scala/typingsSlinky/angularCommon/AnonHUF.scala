@@ -4,24 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonHUF extends js.Object {
-  var AUD: js.Array[js.UndefOr[String]]
-  var BRL: js.Array[js.UndefOr[String]]
-  var CAD: js.Array[js.UndefOr[String]]
-  var CNY: js.Array[js.UndefOr[String]]
-  var EUR: js.Array[js.UndefOr[String]]
-  var GBP: js.Array[js.UndefOr[String]]
-  var HKD: js.Array[js.UndefOr[String]]
-  var HUF: js.Array[String]
-  var ILS: js.Array[js.UndefOr[String]]
-  var INR: js.Array[js.UndefOr[String]]
-  var KRW: js.Array[js.UndefOr[String]]
-  var MXN: js.Array[js.UndefOr[String]]
-  var NZD: js.Array[js.UndefOr[String]]
-  var TWD: js.Array[js.UndefOr[String]]
-  var USD: js.Array[js.UndefOr[String]]
-  var VND: js.Array[js.UndefOr[String]]
-  var XCD: js.Array[js.UndefOr[String]]
+  var AUD: js.Array[js.UndefOr[String]] = js.native
+  var BRL: js.Array[js.UndefOr[String]] = js.native
+  var CAD: js.Array[js.UndefOr[String]] = js.native
+  var CNY: js.Array[js.UndefOr[String]] = js.native
+  var EUR: js.Array[js.UndefOr[String]] = js.native
+  var GBP: js.Array[js.UndefOr[String]] = js.native
+  var HKD: js.Array[js.UndefOr[String]] = js.native
+  var HUF: js.Array[String] = js.native
+  var ILS: js.Array[js.UndefOr[String]] = js.native
+  var INR: js.Array[js.UndefOr[String]] = js.native
+  var KRW: js.Array[js.UndefOr[String]] = js.native
+  var MXN: js.Array[js.UndefOr[String]] = js.native
+  var NZD: js.Array[js.UndefOr[String]] = js.native
+  var TWD: js.Array[js.UndefOr[String]] = js.native
+  var USD: js.Array[js.UndefOr[String]] = js.native
+  var VND: js.Array[js.UndefOr[String]] = js.native
+  var XCD: js.Array[js.UndefOr[String]] = js.native
 }
 
 object AnonHUF {
@@ -46,8 +47,117 @@ object AnonHUF {
     XCD: js.Array[js.UndefOr[String]]
   ): AnonHUF = {
     val __obj = js.Dynamic.literal(AUD = AUD.asInstanceOf[js.Any], BRL = BRL.asInstanceOf[js.Any], CAD = CAD.asInstanceOf[js.Any], CNY = CNY.asInstanceOf[js.Any], EUR = EUR.asInstanceOf[js.Any], GBP = GBP.asInstanceOf[js.Any], HKD = HKD.asInstanceOf[js.Any], HUF = HUF.asInstanceOf[js.Any], ILS = ILS.asInstanceOf[js.Any], INR = INR.asInstanceOf[js.Any], KRW = KRW.asInstanceOf[js.Any], MXN = MXN.asInstanceOf[js.Any], NZD = NZD.asInstanceOf[js.Any], TWD = TWD.asInstanceOf[js.Any], USD = USD.asInstanceOf[js.Any], VND = VND.asInstanceOf[js.Any], XCD = XCD.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonHUF]
   }
+  @scala.inline
+  implicit class AnonHUFOps[Self <: AnonHUF] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAUD(value: js.Array[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AUD")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBRL(value: js.Array[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BRL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCAD(value: js.Array[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CAD")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCNY(value: js.Array[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CNY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEUR(value: js.Array[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EUR")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGBP(value: js.Array[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GBP")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHKD(value: js.Array[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HKD")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHUF(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HUF")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withILS(value: js.Array[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ILS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withINR(value: js.Array[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("INR")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKRW(value: js.Array[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KRW")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMXN(value: js.Array[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MXN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNZD(value: js.Array[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NZD")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTWD(value: js.Array[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TWD")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUSD(value: js.Array[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("USD")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVND(value: js.Array[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VND")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withXCD(value: js.Array[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("XCD")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

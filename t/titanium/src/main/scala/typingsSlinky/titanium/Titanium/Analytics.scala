@@ -11,6 +11,11 @@ import scala.scalajs.js.annotation._
 	 */
 @JSGlobal("Titanium.Analytics")
 @js.native
+class Analytics () extends Module
+
+/* static members */
+@JSGlobal("Titanium.Analytics")
+@js.native
 object Analytics extends js.Object {
   /**
   		 * The name of the API that this proxy corresponds to.
@@ -33,12 +38,6 @@ object Analytics extends js.Object {
   		 */
   var optedOut: Boolean = js.native
   /**
-  		 * Sends a generic event for this application session.
-  		 * **Not displayed in Analytics UI**.
-  		 */
-  def addEvent(`type`: String, name: String): Unit = js.native
-  def addEvent(`type`: String, name: String, data: js.Any): Unit = js.native
-  /**
   		 * Sends a feature event for this application session.
   		 */
   def featureEvent(name: String): Double = js.native
@@ -49,63 +48,52 @@ object Analytics extends js.Object {
   def filterEvents(events: js.Array[String]): Unit = js.native
   /**
   		 * Gets the value of the <Titanium.Analytics.apiName> property.
+  		 * @deprecated Access <Titanium.Analytics.apiName> instead.
   		 */
   def getApiName(): String = js.native
   /**
   		 * Gets the value of the <Titanium.Analytics.bubbleParent> property.
+  		 * @deprecated Access <Titanium.Analytics.bubbleParent> instead.
   		 */
   def getBubbleParent(): Boolean = js.native
   /**
   		 * Gets the value of the <Titanium.Analytics.lastEvent> property.
+  		 * @deprecated Access <Titanium.Analytics.lastEvent> instead.
   		 */
   def getLastEvent(): String = js.native
   /**
   		 * Gets the value of the <Titanium.Analytics.lifecycleContainer> property.
+  		 * @deprecated Access <Titanium.Analytics.lifecycleContainer> instead.
   		 */
   def getLifecycleContainer(): Window | TabGroup = js.native
   /**
   		 * Gets the value of the <Titanium.Analytics.optedOut> property.
+  		 * @deprecated Access <Titanium.Analytics.optedOut> instead.
   		 */
   def getOptedOut(): Boolean = js.native
   /**
   		 * Sends a navigation event for this application session.
   		 * **Not displayed in Analytics UI**.
+  		 * @deprecated
   		 */
   def navEvent(from: String, to: String): Unit = js.native
   def navEvent(from: String, to: String, name: String): Unit = js.native
   def navEvent(from: String, to: String, name: String, data: js.Any): Unit = js.native
   /**
   		 * Sets the value of the <Titanium.Analytics.bubbleParent> property.
+  		 * @deprecated Set the value using <Titanium.Analytics.bubbleParent> instead.
   		 */
   def setBubbleParent(bubbleParent: Boolean): Unit = js.native
-  /**
-  		 * Sets the value of the <Titanium.Analytics.lifecycleContainer> property.
-  		 */
   def setLifecycleContainer(lifecycleContainer: TabGroup): Unit = js.native
   /**
   		 * Sets the value of the <Titanium.Analytics.lifecycleContainer> property.
+  		 * @deprecated Set the value using <Titanium.Analytics.lifecycleContainer> instead.
   		 */
   def setLifecycleContainer(lifecycleContainer: Window): Unit = js.native
   /**
   		 * Sets the value of the <Titanium.Analytics.optedOut> property.
+  		 * @deprecated Set the value using <Titanium.Analytics.optedOut> instead.
   		 */
   def setOptedOut(optedOut: Boolean): Unit = js.native
-  /**
-  		 * Sends a settings event for this application session.
-  		 * **Not displayed in Analytics UI**.
-  		 */
-  def settingsEvent(name: String): Unit = js.native
-  def settingsEvent(name: String, data: js.Any): Unit = js.native
-  /**
-  		 * Send a timed event for this application session.
-  		 * **Not displayed in Analytics UI**.
-  		 */
-  def timedEvent(name: String, start: js.Date, stop: js.Date, duration: Double): Unit = js.native
-  def timedEvent(name: String, start: js.Date, stop: js.Date, duration: Double, data: js.Any): Unit = js.native
-  /**
-  		 * Sends a user event for this application session. **Not displayed in Analytics UI**.
-  		 */
-  def userEvent(name: String): Unit = js.native
-  def userEvent(name: String, data: js.Any): Unit = js.native
 }
 

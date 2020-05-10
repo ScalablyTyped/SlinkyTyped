@@ -18,10 +18,35 @@ trait EventCondition extends js.Object {
 
 object EventCondition {
   @scala.inline
-  def apply(Dimensions: EventDimensions, MessageActivity: string = null): EventCondition = {
+  def apply(Dimensions: EventDimensions): EventCondition = {
     val __obj = js.Dynamic.literal(Dimensions = Dimensions.asInstanceOf[js.Any])
-    if (MessageActivity != null) __obj.updateDynamic("MessageActivity")(MessageActivity.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventCondition]
   }
+  @scala.inline
+  implicit class EventConditionOps[Self <: EventCondition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDimensions(value: EventDimensions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessageActivity(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageActivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageActivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageActivity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

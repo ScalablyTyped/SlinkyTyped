@@ -5,20 +5,51 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A list of `begin` and `end` indexes that indicate the locations of the elements in the input document. */
+@js.native
 trait ElementLocations extends js.Object {
   /** An integer that indicates the starting position of the element in the input document. */
-  var begin: js.UndefOr[Double] = js.undefined
+  var begin: js.UndefOr[Double] = js.native
   /** An integer that indicates the ending position of the element in the input document. */
-  var end: js.UndefOr[Double] = js.undefined
+  var end: js.UndefOr[Double] = js.native
 }
 
 object ElementLocations {
   @scala.inline
-  def apply(begin: Int | Double = null, end: Int | Double = null): ElementLocations = {
+  def apply(): ElementLocations = {
     val __obj = js.Dynamic.literal()
-    if (begin != null) __obj.updateDynamic("begin")(begin.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElementLocations]
   }
+  @scala.inline
+  implicit class ElementLocationsOps[Self <: ElementLocations] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBegin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("begin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBegin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("begin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnd(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

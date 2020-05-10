@@ -42,25 +42,107 @@ trait OrganizationManagedRuleMetadata extends js.Object {
 
 object OrganizationManagedRuleMetadata {
   @scala.inline
-  def apply(
-    RuleIdentifier: StringWithCharLimit256,
-    Description: StringWithCharLimit256Min0 = null,
-    InputParameters: StringWithCharLimit2048 = null,
-    MaximumExecutionFrequency: MaximumExecutionFrequency = null,
-    ResourceIdScope: StringWithCharLimit768 = null,
-    ResourceTypesScope: ResourceTypesScope = null,
-    TagKeyScope: StringWithCharLimit128 = null,
-    TagValueScope: StringWithCharLimit256 = null
-  ): OrganizationManagedRuleMetadata = {
+  def apply(RuleIdentifier: StringWithCharLimit256): OrganizationManagedRuleMetadata = {
     val __obj = js.Dynamic.literal(RuleIdentifier = RuleIdentifier.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (InputParameters != null) __obj.updateDynamic("InputParameters")(InputParameters.asInstanceOf[js.Any])
-    if (MaximumExecutionFrequency != null) __obj.updateDynamic("MaximumExecutionFrequency")(MaximumExecutionFrequency.asInstanceOf[js.Any])
-    if (ResourceIdScope != null) __obj.updateDynamic("ResourceIdScope")(ResourceIdScope.asInstanceOf[js.Any])
-    if (ResourceTypesScope != null) __obj.updateDynamic("ResourceTypesScope")(ResourceTypesScope.asInstanceOf[js.Any])
-    if (TagKeyScope != null) __obj.updateDynamic("TagKeyScope")(TagKeyScope.asInstanceOf[js.Any])
-    if (TagValueScope != null) __obj.updateDynamic("TagValueScope")(TagValueScope.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrganizationManagedRuleMetadata]
   }
+  @scala.inline
+  implicit class OrganizationManagedRuleMetadataOps[Self <: OrganizationManagedRuleMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRuleIdentifier(value: StringWithCharLimit256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: StringWithCharLimit256Min0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputParameters(value: StringWithCharLimit2048): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumExecutionFrequency(value: MaximumExecutionFrequency): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumExecutionFrequency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumExecutionFrequency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumExecutionFrequency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceIdScope(value: StringWithCharLimit768): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceIdScope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceIdScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceIdScope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceTypesScope(value: ResourceTypesScope): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTypesScope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceTypesScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTypesScope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagKeyScope(value: StringWithCharLimit128): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagKeyScope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagKeyScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagKeyScope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagValueScope(value: StringWithCharLimit256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagValueScope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagValueScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagValueScope")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

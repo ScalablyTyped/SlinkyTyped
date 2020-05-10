@@ -5,16 +5,19 @@ import slinky.web.SyntheticKeyboardEvent
 import typingsSlinky.officeUiFabricReact.ikeytiptransitionkeyMod.IKeytipTransitionKey
 import typingsSlinky.officeUiFabricReact.keytipLayerTypesMod.IKeytipLayerProps
 import typingsSlinky.officeUiFabricReact.keytipTreeMod.KeytipTree
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("office-ui-fabric-react/lib/components/KeytipLayer/KeytipLayer.base", "KeytipLayerBase")
 @js.native
-class KeytipLayerBase protected () extends BaseComponent[IKeytipLayerProps, IKeytipLayerState] {
+class KeytipLayerBase protected ()
+  extends Component[IKeytipLayerProps, IKeytipLayerState, js.Any] {
   def this(props: IKeytipLayerProps, context: js.Any) = this()
   var _addKeytipToQueue: js.Any = js.native
+  var _async: js.Any = js.native
+  var _buildTree: js.Any = js.native
   var _classNames: js.Any = js.native
   var _currentSequence: js.Any = js.native
   var _delayedKeytipQueue: js.Any = js.native
@@ -23,16 +26,17 @@ class KeytipLayerBase protected () extends BaseComponent[IKeytipLayerProps, IKey
     * Enters keytip mode for this layer
     */
   var _enterKeytipMode: js.Any = js.native
+  var _events: js.Any = js.native
   /**
     * Exits keytip mode for this layer
     */
   var _exitKeytipMode: js.Any = js.native
   /**
-    * Returns duplicates among keytip IDs
-    * If the returned array is empty, no duplicates were found
+    * Returns duplicates among keytip IDs.
+    * If the returned array is empty, no duplicates were found.
     *
     * @param keytipIds - Array of keytip IDs to find duplicates for
-    * @returns - Array of duplicates that were found. If multiple duplicates were found it will only be added once to this array
+    * @returns - Array of duplicates that were found. Each duplicate will only be added once to this array.
     */
   var _getDuplicateIds: js.Any = js.native
   var _getKtpExecuteTarget: js.Any = js.native

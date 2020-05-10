@@ -1,10 +1,7 @@
 package typingsSlinky.antDesignPro.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.bizcharts.AnonStyle
 import typingsSlinky.bizcharts.mod.PositionType
 import typingsSlinky.bizcharts.mod.TooltipProps
@@ -14,58 +11,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tooltip
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.antDesignPro.bizchartsMod.Tooltip] {
+object Tooltip {
   @JSImport("ant-design-pro/lib/Charts/bizcharts", "Tooltip")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: title, type */
-  def apply(
-    containerTpl: String = null,
-    crosshairs: AnonStyle | Boolean = null,
-    enterable: js.UndefOr[Boolean] = js.undefined,
-    follow: js.UndefOr[Boolean] = js.undefined,
-    `g2-tooltip`: CSSProperties = null,
-    `g2-tooltip-list`: CSSProperties = null,
-    `g2-tooltip-list-item`: CSSProperties = null,
-    `g2-tooltip-marker`: CSSProperties = null,
-    `g2-tooltip-title`: CSSProperties = null,
-    htmlContent: (/* title */ js.UndefOr[String], /* items */ js.UndefOr[js.Array[_]]) => String = null,
-    inPlot: js.UndefOr[Boolean] = js.undefined,
-    itemTpl: String = null,
-    offset: Int | Double = null,
-    position: PositionType = null,
-    shared: js.UndefOr[Boolean] = js.undefined,
-    showTitle: js.UndefOr[Boolean] = js.undefined,
-    triggerOn: triggerOnType = null,
-    useHtml: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.antDesignPro.bizchartsMod.Tooltip] = {
-    val __obj = js.Dynamic.literal()
-    if (containerTpl != null) __obj.updateDynamic("containerTpl")(containerTpl.asInstanceOf[js.Any])
-    if (crosshairs != null) __obj.updateDynamic("crosshairs")(crosshairs.asInstanceOf[js.Any])
-    if (!js.isUndefined(enterable)) __obj.updateDynamic("enterable")(enterable.asInstanceOf[js.Any])
-    if (!js.isUndefined(follow)) __obj.updateDynamic("follow")(follow.asInstanceOf[js.Any])
-    if (`g2-tooltip` != null) __obj.updateDynamic("g2-tooltip")(`g2-tooltip`.asInstanceOf[js.Any])
-    if (`g2-tooltip-list` != null) __obj.updateDynamic("g2-tooltip-list")(`g2-tooltip-list`.asInstanceOf[js.Any])
-    if (`g2-tooltip-list-item` != null) __obj.updateDynamic("g2-tooltip-list-item")(`g2-tooltip-list-item`.asInstanceOf[js.Any])
-    if (`g2-tooltip-marker` != null) __obj.updateDynamic("g2-tooltip-marker")(`g2-tooltip-marker`.asInstanceOf[js.Any])
-    if (`g2-tooltip-title` != null) __obj.updateDynamic("g2-tooltip-title")(`g2-tooltip-title`.asInstanceOf[js.Any])
-    if (htmlContent != null) __obj.updateDynamic("htmlContent")(js.Any.fromFunction2(htmlContent))
-    if (!js.isUndefined(inPlot)) __obj.updateDynamic("inPlot")(inPlot.asInstanceOf[js.Any])
-    if (itemTpl != null) __obj.updateDynamic("itemTpl")(itemTpl.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(shared)) __obj.updateDynamic("shared")(shared.asInstanceOf[js.Any])
-    if (!js.isUndefined(showTitle)) __obj.updateDynamic("showTitle")(showTitle.asInstanceOf[js.Any])
-    if (triggerOn != null) __obj.updateDynamic("triggerOn")(triggerOn.asInstanceOf[js.Any])
-    if (!js.isUndefined(useHtml)) __obj.updateDynamic("useHtml")(useHtml.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.bizchartsMod.Tooltip] {
+    @scala.inline
+    def containerTpl(value: String): this.type = set("containerTpl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def crosshairs(value: AnonStyle | Boolean): this.type = set("crosshairs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enterable(value: Boolean): this.type = set("enterable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def follow(value: Boolean): this.type = set("follow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `g2-tooltip`(value: CSSProperties): this.type = set("g2-tooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `g2-tooltip-list`(value: CSSProperties): this.type = set("g2-tooltip-list", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `g2-tooltip-list-item`(value: CSSProperties): this.type = set("g2-tooltip-list-item", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `g2-tooltip-marker`(value: CSSProperties): this.type = set("g2-tooltip-marker", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `g2-tooltip-title`(value: CSSProperties): this.type = set("g2-tooltip-title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def htmlContent(value: (/* title */ js.UndefOr[String], /* items */ js.UndefOr[js.Array[_]]) => String): this.type = set("htmlContent", js.Any.fromFunction2(value))
+    @scala.inline
+    def inPlot(value: Boolean): this.type = set("inPlot", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemTpl(value: String): this.type = set("itemTpl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offset(value: Double): this.type = set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def position(value: PositionType): this.type = set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shared(value: Boolean): this.type = set("shared", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showTitle(value: Boolean): this.type = set("showTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def triggerOn(value: triggerOnType): this.type = set("triggerOn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useHtml(value: Boolean): this.type = set("useHtml", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.antDesignPro.bizchartsMod.Tooltip] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antDesignPro.bizchartsMod.Tooltip](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TooltipProps
+  
+  def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Tooltip.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

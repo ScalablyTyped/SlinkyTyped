@@ -1,11 +1,9 @@
 package typingsSlinky.reactMapGl.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.mapboxGl.mod.FitBoundsOptions
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactMapGl.mod.GeolocateControlProps
 import typingsSlinky.reactMapGl.mod.PositionOptions
 import typingsSlinky.reactMapGl.mod.ViewStateChangeInfo
@@ -14,44 +12,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GeolocateControl
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactMapGl.mod.GeolocateControl] {
+object GeolocateControl {
   @JSImport("react-map-gl", "GeolocateControl")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, label, style */
-  def apply(
-    captureClick: js.UndefOr[Boolean] = js.undefined,
-    captureDoubleClick: js.UndefOr[Boolean] = js.undefined,
-    captureDrag: js.UndefOr[Boolean] = js.undefined,
-    captureScroll: js.UndefOr[Boolean] = js.undefined,
-    fitBoundsOptions: FitBoundsOptions = null,
-    onGeolocate: /* options */ PositionOptions => Unit = null,
-    onViewStateChange: /* info */ ViewStateChangeInfo => Unit = null,
-    onViewportChange: /* viewState */ ViewportProps => Unit = null,
-    positionOptions: typingsSlinky.mapboxGl.mod.PositionOptions = null,
-    showUserLocation: js.UndefOr[Boolean] = js.undefined,
-    trackUserLocation: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.GeolocateControl] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(captureClick)) __obj.updateDynamic("captureClick")(captureClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureDoubleClick)) __obj.updateDynamic("captureDoubleClick")(captureDoubleClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureDrag)) __obj.updateDynamic("captureDrag")(captureDrag.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureScroll)) __obj.updateDynamic("captureScroll")(captureScroll.asInstanceOf[js.Any])
-    if (fitBoundsOptions != null) __obj.updateDynamic("fitBoundsOptions")(fitBoundsOptions.asInstanceOf[js.Any])
-    if (onGeolocate != null) __obj.updateDynamic("onGeolocate")(js.Any.fromFunction1(onGeolocate))
-    if (onViewStateChange != null) __obj.updateDynamic("onViewStateChange")(js.Any.fromFunction1(onViewStateChange))
-    if (onViewportChange != null) __obj.updateDynamic("onViewportChange")(js.Any.fromFunction1(onViewportChange))
-    if (positionOptions != null) __obj.updateDynamic("positionOptions")(positionOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(showUserLocation)) __obj.updateDynamic("showUserLocation")(showUserLocation.asInstanceOf[js.Any])
-    if (!js.isUndefined(trackUserLocation)) __obj.updateDynamic("trackUserLocation")(trackUserLocation.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.GeolocateControl] {
+    @scala.inline
+    def captureClick(value: Boolean): this.type = set("captureClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureDoubleClick(value: Boolean): this.type = set("captureDoubleClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureDrag(value: Boolean): this.type = set("captureDrag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureScroll(value: Boolean): this.type = set("captureScroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fitBoundsOptions(value: FitBoundsOptions): this.type = set("fitBoundsOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onGeolocate(value: /* options */ PositionOptions => Unit): this.type = set("onGeolocate", js.Any.fromFunction1(value))
+    @scala.inline
+    def onViewStateChange(value: /* info */ ViewStateChangeInfo => Unit): this.type = set("onViewStateChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onViewportChange(value: /* viewState */ ViewportProps => Unit): this.type = set("onViewportChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def positionOptions(value: typingsSlinky.mapboxGl.mod.PositionOptions): this.type = set("positionOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showUserLocation(value: Boolean): this.type = set("showUserLocation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def trackUserLocation(value: Boolean): this.type = set("trackUserLocation", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.GeolocateControl] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactMapGl.mod.GeolocateControl](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = GeolocateControlProps
+  
+  def withProps(p: GeolocateControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: GeolocateControl.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

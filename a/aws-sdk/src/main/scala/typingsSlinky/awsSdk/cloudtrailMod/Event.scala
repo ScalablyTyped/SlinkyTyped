@@ -46,28 +46,125 @@ trait Event extends js.Object {
 
 object Event {
   @scala.inline
-  def apply(
-    AccessKeyId: String = null,
-    CloudTrailEvent: String = null,
-    EventId: String = null,
-    EventName: String = null,
-    EventSource: String = null,
-    EventTime: js.Date = null,
-    ReadOnly: String = null,
-    Resources: ResourceList = null,
-    Username: String = null
-  ): Event = {
+  def apply(): Event = {
     val __obj = js.Dynamic.literal()
-    if (AccessKeyId != null) __obj.updateDynamic("AccessKeyId")(AccessKeyId.asInstanceOf[js.Any])
-    if (CloudTrailEvent != null) __obj.updateDynamic("CloudTrailEvent")(CloudTrailEvent.asInstanceOf[js.Any])
-    if (EventId != null) __obj.updateDynamic("EventId")(EventId.asInstanceOf[js.Any])
-    if (EventName != null) __obj.updateDynamic("EventName")(EventName.asInstanceOf[js.Any])
-    if (EventSource != null) __obj.updateDynamic("EventSource")(EventSource.asInstanceOf[js.Any])
-    if (EventTime != null) __obj.updateDynamic("EventTime")(EventTime.asInstanceOf[js.Any])
-    if (ReadOnly != null) __obj.updateDynamic("ReadOnly")(ReadOnly.asInstanceOf[js.Any])
-    if (Resources != null) __obj.updateDynamic("Resources")(Resources.asInstanceOf[js.Any])
-    if (Username != null) __obj.updateDynamic("Username")(Username.asInstanceOf[js.Any])
     __obj.asInstanceOf[Event]
   }
+  @scala.inline
+  implicit class EventOps[Self <: Event] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessKeyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudTrailEvent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudTrailEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudTrailEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudTrailEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventSource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadOnly(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResources(value: ResourceList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Resources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Resources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

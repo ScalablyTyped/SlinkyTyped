@@ -12,14 +12,41 @@ trait AnalyticsApplicationInputsSchemaRecordFormatMappingParameters extends js.O
 
 object AnalyticsApplicationInputsSchemaRecordFormatMappingParameters {
   @scala.inline
-  def apply(
-    csv: AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv = null,
-    json: AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson = null
-  ): AnalyticsApplicationInputsSchemaRecordFormatMappingParameters = {
+  def apply(): AnalyticsApplicationInputsSchemaRecordFormatMappingParameters = {
     val __obj = js.Dynamic.literal()
-    if (csv != null) __obj.updateDynamic("csv")(csv.asInstanceOf[js.Any])
-    if (json != null) __obj.updateDynamic("json")(json.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalyticsApplicationInputsSchemaRecordFormatMappingParameters]
   }
+  @scala.inline
+  implicit class AnalyticsApplicationInputsSchemaRecordFormatMappingParametersOps[Self <: AnalyticsApplicationInputsSchemaRecordFormatMappingParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCsv(value: AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("csv")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCsv: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("csv")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJson(value: AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJson: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

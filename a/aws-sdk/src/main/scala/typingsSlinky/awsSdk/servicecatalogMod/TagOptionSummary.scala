@@ -18,11 +18,41 @@ trait TagOptionSummary extends js.Object {
 
 object TagOptionSummary {
   @scala.inline
-  def apply(Key: TagOptionKey = null, Values: TagOptionValues = null): TagOptionSummary = {
+  def apply(): TagOptionSummary = {
     val __obj = js.Dynamic.literal()
-    if (Key != null) __obj.updateDynamic("Key")(Key.asInstanceOf[js.Any])
-    if (Values != null) __obj.updateDynamic("Values")(Values.asInstanceOf[js.Any])
     __obj.asInstanceOf[TagOptionSummary]
   }
+  @scala.inline
+  implicit class TagOptionSummaryOps[Self <: TagOptionSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKey(value: TagOptionKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValues(value: TagOptionValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

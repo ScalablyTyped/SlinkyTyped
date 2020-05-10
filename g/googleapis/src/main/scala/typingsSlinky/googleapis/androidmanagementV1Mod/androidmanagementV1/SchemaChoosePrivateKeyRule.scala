@@ -33,12 +33,53 @@ trait SchemaChoosePrivateKeyRule extends js.Object {
 
 object SchemaChoosePrivateKeyRule {
   @scala.inline
-  def apply(packageNames: js.Array[String] = null, privateKeyAlias: String = null, urlPattern: String = null): SchemaChoosePrivateKeyRule = {
+  def apply(): SchemaChoosePrivateKeyRule = {
     val __obj = js.Dynamic.literal()
-    if (packageNames != null) __obj.updateDynamic("packageNames")(packageNames.asInstanceOf[js.Any])
-    if (privateKeyAlias != null) __obj.updateDynamic("privateKeyAlias")(privateKeyAlias.asInstanceOf[js.Any])
-    if (urlPattern != null) __obj.updateDynamic("urlPattern")(urlPattern.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaChoosePrivateKeyRule]
   }
+  @scala.inline
+  implicit class SchemaChoosePrivateKeyRuleOps[Self <: SchemaChoosePrivateKeyRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPackageNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackageNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateKeyAlias(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeyAlias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateKeyAlias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeyAlias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrlPattern(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrlPattern: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlPattern")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

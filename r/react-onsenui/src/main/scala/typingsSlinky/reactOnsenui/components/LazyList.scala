@@ -1,35 +1,39 @@
 package typingsSlinky.reactOnsenui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameCalculateItemHeight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LazyList
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactOnsenui.mod.LazyList] {
+object LazyList {
   @JSImport("react-onsenui", "LazyList")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, style */
-  def apply(
-    calculateItemHeight: Double => js.Any,
-    renderRow: Double => js.Any,
-    length: Int | Double = null,
-    modifier: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.LazyList] = {
-    val __obj = js.Dynamic.literal(calculateItemHeight = js.Any.fromFunction1(calculateItemHeight), renderRow = js.Any.fromFunction1(renderRow))
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
-    if (modifier != null) __obj.updateDynamic("modifier")(modifier.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.LazyList] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def length(value: Double): this.type = set("length", value.asInstanceOf[js.Any])
+    @scala.inline
+    def modifier(value: String): this.type = set("modifier", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = HTMLAttributesidclassNameCalculateItemHeight
+  
+  def withProps(p: HTMLAttributesidclassNameCalculateItemHeight): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(calculateItemHeight: Double => js.Any, renderRow: Double => js.Any): Builder = {
+    val __props = js.Dynamic.literal(calculateItemHeight = js.Any.fromFunction1(calculateItemHeight), renderRow = js.Any.fromFunction1(renderRow))
+    new Builder(js.Array(this.component, __props.asInstanceOf[HTMLAttributesidclassNameCalculateItemHeight]))
+  }
 }
 

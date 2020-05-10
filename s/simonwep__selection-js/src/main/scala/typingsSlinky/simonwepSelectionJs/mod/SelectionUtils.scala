@@ -2,9 +2,9 @@ package typingsSlinky.simonwepSelectionJs.mod
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.Event_
-import typingsSlinky.std.HTMLElement
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`

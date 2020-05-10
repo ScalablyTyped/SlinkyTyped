@@ -1,11 +1,11 @@
 package typingsSlinky.dwt
 
 import org.scalajs.dom.experimental.mediastream.MediaStreamConstraints
+import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLInputElement
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLImageElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -551,7 +551,7 @@ trait KPainter extends js.Object {
   document.getElementById('image-container').appendChild(imgCopyed);
   ```
     */
-  def getImage(isOri: Boolean, index: Double): org.scalajs.dom.raw.HTMLImageElement = js.native
+  def getImage(isOri: Boolean, index: Double): HTMLImageElement = js.native
   /**
     * Get All protected steps.Can only process in `Editing` mode.
     
@@ -609,9 +609,9 @@ trait KPainter extends js.Object {
     |  |  |  |
     | callback * (optional) * | `function(boolean bSuccess)` | |
     */
-  def grabVideo(): org.scalajs.dom.raw.HTMLCanvasElement | Unit = js.native
-  def grabVideo(isAutoAdd: Boolean): org.scalajs.dom.raw.HTMLCanvasElement | Unit = js.native
-  def grabVideo(isAutoAdd: Boolean, callback: js.Function0[Unit]): org.scalajs.dom.raw.HTMLCanvasElement | Unit = js.native
+  def grabVideo(): HTMLCanvasElement | Unit = js.native
+  def grabVideo(isAutoAdd: Boolean): HTMLCanvasElement | Unit = js.native
+  def grabVideo(isAutoAdd: Boolean, callback: js.Function0[Unit]): HTMLCanvasElement | Unit = js.native
   /**
     * Hide`Crop Rect`.Can only process in `Editing` mode.
     

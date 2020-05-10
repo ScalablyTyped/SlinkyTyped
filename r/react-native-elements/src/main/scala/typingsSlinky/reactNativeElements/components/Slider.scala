@@ -1,10 +1,7 @@
 package typingsSlinky.reactNativeElements.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.Animated.SpringAnimationConfig
 import typingsSlinky.reactNative.mod.Animated.TimingAnimationConfig
 import typingsSlinky.reactNative.mod.StyleProp
@@ -19,60 +16,64 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Slider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeElements.mod.Slider] {
+object Slider {
   @JSImport("react-native-elements", "Slider")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    animateTransitions: js.UndefOr[Boolean] = js.undefined,
-    animationConfig: TimingAnimationConfig | SpringAnimationConfig = null,
-    animationType: spring | timing = null,
-    debugTouchArea: js.UndefOr[Boolean] = js.undefined,
-    maximumTrackTintColor: String = null,
-    maximumValue: Int | Double = null,
-    minimumTrackTintColor: String = null,
-    minimumValue: Int | Double = null,
-    onSlidingComplete: /* value */ Double => Unit = null,
-    onSlidingStart: /* value */ Double => Unit = null,
-    onValueChange: /* value */ Double => Unit = null,
-    orientation: horizontal | vertical = null,
-    step: Int | Double = null,
-    style: StyleProp[ViewStyle] = null,
-    thumbStyle: StyleProp[ViewStyle] = null,
-    thumbTintColor: String = null,
-    thumbTouchSize: AnonHeight = null,
-    trackStyle: StyleProp[ViewStyle] = null,
-    value: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Slider] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animateTransitions)) __obj.updateDynamic("animateTransitions")(animateTransitions.asInstanceOf[js.Any])
-    if (animationConfig != null) __obj.updateDynamic("animationConfig")(animationConfig.asInstanceOf[js.Any])
-    if (animationType != null) __obj.updateDynamic("animationType")(animationType.asInstanceOf[js.Any])
-    if (!js.isUndefined(debugTouchArea)) __obj.updateDynamic("debugTouchArea")(debugTouchArea.asInstanceOf[js.Any])
-    if (maximumTrackTintColor != null) __obj.updateDynamic("maximumTrackTintColor")(maximumTrackTintColor.asInstanceOf[js.Any])
-    if (maximumValue != null) __obj.updateDynamic("maximumValue")(maximumValue.asInstanceOf[js.Any])
-    if (minimumTrackTintColor != null) __obj.updateDynamic("minimumTrackTintColor")(minimumTrackTintColor.asInstanceOf[js.Any])
-    if (minimumValue != null) __obj.updateDynamic("minimumValue")(minimumValue.asInstanceOf[js.Any])
-    if (onSlidingComplete != null) __obj.updateDynamic("onSlidingComplete")(js.Any.fromFunction1(onSlidingComplete))
-    if (onSlidingStart != null) __obj.updateDynamic("onSlidingStart")(js.Any.fromFunction1(onSlidingStart))
-    if (onValueChange != null) __obj.updateDynamic("onValueChange")(js.Any.fromFunction1(onValueChange))
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (thumbStyle != null) __obj.updateDynamic("thumbStyle")(thumbStyle.asInstanceOf[js.Any])
-    if (thumbTintColor != null) __obj.updateDynamic("thumbTintColor")(thumbTintColor.asInstanceOf[js.Any])
-    if (thumbTouchSize != null) __obj.updateDynamic("thumbTouchSize")(thumbTouchSize.asInstanceOf[js.Any])
-    if (trackStyle != null) __obj.updateDynamic("trackStyle")(trackStyle.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Slider] {
+    @scala.inline
+    def animateTransitions(value: Boolean): this.type = set("animateTransitions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animationConfig(value: TimingAnimationConfig | SpringAnimationConfig): this.type = set("animationConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animationType(value: spring | timing): this.type = set("animationType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def debugTouchArea(value: Boolean): this.type = set("debugTouchArea", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maximumTrackTintColor(value: String): this.type = set("maximumTrackTintColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maximumValue(value: Double): this.type = set("maximumValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minimumTrackTintColor(value: String): this.type = set("minimumTrackTintColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minimumValue(value: Double): this.type = set("minimumValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onSlidingComplete(value: /* value */ Double => Unit): this.type = set("onSlidingComplete", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSlidingStart(value: /* value */ Double => Unit): this.type = set("onSlidingStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onValueChange(value: /* value */ Double => Unit): this.type = set("onValueChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def orientation(value: horizontal | vertical): this.type = set("orientation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def thumbStyle(value: StyleProp[ViewStyle]): this.type = set("thumbStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def thumbStyleNull: this.type = set("thumbStyle", null)
+    @scala.inline
+    def thumbTintColor(value: String): this.type = set("thumbTintColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def thumbTouchSize(value: AnonHeight): this.type = set("thumbTouchSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def trackStyle(value: StyleProp[ViewStyle]): this.type = set("trackStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def trackStyleNull: this.type = set("trackStyle", null)
+    @scala.inline
+    def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Slider] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactNativeElements.mod.Slider](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SliderProps
+  
+  def withProps(p: SliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Slider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -29,7 +29,7 @@ import scala.scalajs.js.annotation._
   *
   * @param options
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dojox.av.Media because Inheritance from two classes. Inlined allowFullScreen, allowNetworking, allowScriptAccess, autoPlay, bufferTime, flashMedia, initialVolume, isDebug, mediaUrl, minBufferTime, percentDownloaded, updateTime, wmode, destroy, getTime, onBuffer, onClick, onDownloaded, onEnd, onError, onLoad, onMetaData, onPause, onPlay, onPlayerStatus, onPosition, onResize, onStart, onStatus, onStop, onSwfSized */ @JSGlobal("dojox.av.FLVideo")
 @js.native
 class FLVideo protected () extends Widget {

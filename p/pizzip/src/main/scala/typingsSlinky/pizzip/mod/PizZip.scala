@@ -8,7 +8,6 @@ import typingsSlinky.pizzip.GenerateOptionstypeblob
 import typingsSlinky.pizzip.GenerateOptionstypenodebu
 import typingsSlinky.pizzip.GenerateOptionstypestring
 import typingsSlinky.pizzip.GenerateOptionstypeuint8a
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +41,7 @@ trait PizZip extends js.Object {
     * Search a file in the current folder and subfolders with a regular expression. The regex is tested against the relative filename.
     * @param regex the regex to use.
     */
-  def file(regex: RegExp): js.Array[ZipObject] = js.native
+  def file(regex: js.RegExp): js.Array[ZipObject] = js.native
   /**
     * Filter nested files/folders with the specified function. The predicate must return true if the file should be included, false otherwise.
     * @param predicate the predicate to use.
@@ -57,7 +56,7 @@ trait PizZip extends js.Object {
     * Search a subdirectory in the current directory with a regular expression. The regex is tested against the relative path.
     * @param regex the regex to use.
     */
-  def folder(regex: RegExp): js.Array[ZipObject] = js.native
+  def folder(regex: js.RegExp): js.Array[ZipObject] = js.native
   /**
     * Generates the complete zip file.
     * Throws an exception if the asked type is not available in the browser,
@@ -65,11 +64,11 @@ trait PizZip extends js.Object {
     * @param options the options to generate the zip file
     */
   def generate(): String = js.native
-  def generate(options: GenerateOptionstypearrayb): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def generate(options: GenerateOptionstypearrayb): js.typedarray.ArrayBuffer = js.native
   def generate(options: GenerateOptionstypeblob): Blob = js.native
   def generate(options: GenerateOptionstypenodebu): Buffer = js.native
   def generate(options: GenerateOptionstypestring): String = js.native
-  def generate(options: GenerateOptionstypeuint8a): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def generate(options: GenerateOptionstypeuint8a): js.typedarray.Uint8Array = js.native
   /**
     * Read an existing zip and merge the data in the current PizZip object at the current folder level.
     * This technique has some limitations, see https://github.com/open-xml-templating/pizzip/blob/master/documentation/limitations.md

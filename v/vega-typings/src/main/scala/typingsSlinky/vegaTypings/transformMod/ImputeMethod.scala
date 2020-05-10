@@ -15,16 +15,14 @@ trait ImputeMethod extends js.Object
 
 object ImputeMethod {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def max: typingsSlinky.vegaTypings.vegaTypingsStrings.max = "max".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.max]
   @scala.inline
-  def max: typingsSlinky.vegaTypings.vegaTypingsStrings.max = this.cast("max")
+  def mean: typingsSlinky.vegaTypings.vegaTypingsStrings.mean = "mean".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.mean]
   @scala.inline
-  def mean: typingsSlinky.vegaTypings.vegaTypingsStrings.mean = this.cast("mean")
+  def median: typingsSlinky.vegaTypings.vegaTypingsStrings.median = "median".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.median]
   @scala.inline
-  def median: typingsSlinky.vegaTypings.vegaTypingsStrings.median = this.cast("median")
+  def min: typingsSlinky.vegaTypings.vegaTypingsStrings.min = "min".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.min]
   @scala.inline
-  def min: typingsSlinky.vegaTypings.vegaTypingsStrings.min = this.cast("min")
-  @scala.inline
-  def value: typingsSlinky.vegaTypings.vegaTypingsStrings.value = this.cast("value")
+  def value: typingsSlinky.vegaTypings.vegaTypingsStrings.value = "value".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.value]
 }
 

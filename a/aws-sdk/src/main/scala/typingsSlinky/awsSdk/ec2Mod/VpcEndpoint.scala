@@ -78,44 +78,221 @@ trait VpcEndpoint extends js.Object {
 
 object VpcEndpoint {
   @scala.inline
-  def apply(
-    CreationTimestamp: js.Date = null,
-    DnsEntries: DnsEntrySet = null,
-    Groups: GroupIdentifierSet = null,
-    LastError: LastError = null,
-    NetworkInterfaceIds: ValueStringList = null,
-    OwnerId: String = null,
-    PolicyDocument: String = null,
-    PrivateDnsEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    RequesterManaged: js.UndefOr[scala.Boolean] = js.undefined,
-    RouteTableIds: ValueStringList = null,
-    ServiceName: String = null,
-    State: State = null,
-    SubnetIds: ValueStringList = null,
-    Tags: TagList = null,
-    VpcEndpointId: String = null,
-    VpcEndpointType: VpcEndpointType = null,
-    VpcId: String = null
-  ): VpcEndpoint = {
+  def apply(): VpcEndpoint = {
     val __obj = js.Dynamic.literal()
-    if (CreationTimestamp != null) __obj.updateDynamic("CreationTimestamp")(CreationTimestamp.asInstanceOf[js.Any])
-    if (DnsEntries != null) __obj.updateDynamic("DnsEntries")(DnsEntries.asInstanceOf[js.Any])
-    if (Groups != null) __obj.updateDynamic("Groups")(Groups.asInstanceOf[js.Any])
-    if (LastError != null) __obj.updateDynamic("LastError")(LastError.asInstanceOf[js.Any])
-    if (NetworkInterfaceIds != null) __obj.updateDynamic("NetworkInterfaceIds")(NetworkInterfaceIds.asInstanceOf[js.Any])
-    if (OwnerId != null) __obj.updateDynamic("OwnerId")(OwnerId.asInstanceOf[js.Any])
-    if (PolicyDocument != null) __obj.updateDynamic("PolicyDocument")(PolicyDocument.asInstanceOf[js.Any])
-    if (!js.isUndefined(PrivateDnsEnabled)) __obj.updateDynamic("PrivateDnsEnabled")(PrivateDnsEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(RequesterManaged)) __obj.updateDynamic("RequesterManaged")(RequesterManaged.asInstanceOf[js.Any])
-    if (RouteTableIds != null) __obj.updateDynamic("RouteTableIds")(RouteTableIds.asInstanceOf[js.Any])
-    if (ServiceName != null) __obj.updateDynamic("ServiceName")(ServiceName.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
-    if (SubnetIds != null) __obj.updateDynamic("SubnetIds")(SubnetIds.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (VpcEndpointId != null) __obj.updateDynamic("VpcEndpointId")(VpcEndpointId.asInstanceOf[js.Any])
-    if (VpcEndpointType != null) __obj.updateDynamic("VpcEndpointType")(VpcEndpointType.asInstanceOf[js.Any])
-    if (VpcId != null) __obj.updateDynamic("VpcId")(VpcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpcEndpoint]
   }
+  @scala.inline
+  implicit class VpcEndpointOps[Self <: VpcEndpoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDnsEntries(value: DnsEntrySet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsEntries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDnsEntries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsEntries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroups(value: GroupIdentifierSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastError(value: LastError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkInterfaceIds(value: ValueStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInterfaceIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkInterfaceIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInterfaceIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwnerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwnerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyDocument(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyDocument")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyDocument: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyDocument")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateDnsEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateDnsEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateDnsEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateDnsEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequesterManaged(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterManaged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequesterManaged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterManaged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRouteTableIds(value: ValueStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteTableIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRouteTableIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteTableIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: State): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetIds(value: ValueStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcEndpointId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcEndpointId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcEndpointId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcEndpointId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcEndpointType(value: VpcEndpointType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcEndpointType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcEndpointType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcEndpointType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

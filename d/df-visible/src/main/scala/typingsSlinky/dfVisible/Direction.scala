@@ -13,12 +13,10 @@ trait Direction extends js.Object
 
 object Direction {
   @scala.inline
-  def both: typingsSlinky.dfVisible.dfVisibleStrings.both = this.cast("both")
+  def both: typingsSlinky.dfVisible.dfVisibleStrings.both = "both".asInstanceOf[typingsSlinky.dfVisible.dfVisibleStrings.both]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def horizontal: typingsSlinky.dfVisible.dfVisibleStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.dfVisible.dfVisibleStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.dfVisible.dfVisibleStrings.horizontal = this.cast("horizontal")
-  @scala.inline
-  def vertical: typingsSlinky.dfVisible.dfVisibleStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.dfVisible.dfVisibleStrings.vertical = "vertical".asInstanceOf[typingsSlinky.dfVisible.dfVisibleStrings.vertical]
 }
 

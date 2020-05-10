@@ -47,6 +47,6 @@ class SymEncryptedSessionKey () extends js.Object {
     *        input at position
     * @returns Object representation
     */
-  def read(input: scala.scalajs.js.typedarray.Uint8Array, position: Integer, len: Integer): SymEncryptedSessionKey = js.native
+  def read(input: js.typedarray.Uint8Array, position: Integer, len: Integer): SymEncryptedSessionKey = js.native
 }
 

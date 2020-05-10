@@ -4,36 +4,106 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MessageEventInit extends EventInit {
-  var data: js.UndefOr[js.Any] = js.undefined
-  var lastEventId: js.UndefOr[java.lang.String] = js.undefined
-  var origin: js.UndefOr[java.lang.String] = js.undefined
-  var ports: js.UndefOr[js.Array[org.scalajs.dom.raw.MessagePort]] = js.undefined
-  var source: js.UndefOr[MessageEventSource | Null] = js.undefined
+  var data: js.UndefOr[js.Any] = js.native
+  var lastEventId: js.UndefOr[java.lang.String] = js.native
+  var origin: js.UndefOr[java.lang.String] = js.native
+  var ports: js.UndefOr[js.Array[org.scalajs.dom.raw.MessagePort]] = js.native
+  var source: js.UndefOr[MessageEventSource | Null] = js.native
 }
 
 object MessageEventInit {
   @scala.inline
-  def apply(
-    bubbles: js.UndefOr[scala.Boolean] = js.undefined,
-    cancelable: js.UndefOr[scala.Boolean] = js.undefined,
-    composed: js.UndefOr[scala.Boolean] = js.undefined,
-    data: js.Any = null,
-    lastEventId: java.lang.String = null,
-    origin: java.lang.String = null,
-    ports: js.Array[org.scalajs.dom.raw.MessagePort] = null,
-    source: MessageEventSource = null
-  ): MessageEventInit = {
+  def apply(): MessageEventInit = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.asInstanceOf[js.Any])
-    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.asInstanceOf[js.Any])
-    if (!js.isUndefined(composed)) __obj.updateDynamic("composed")(composed.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (lastEventId != null) __obj.updateDynamic("lastEventId")(lastEventId.asInstanceOf[js.Any])
-    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
-    if (ports != null) __obj.updateDynamic("ports")(ports.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageEventInit]
   }
+  @scala.inline
+  implicit class MessageEventInitOps[Self <: MessageEventInit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastEventId(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastEventId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastEventId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrigin(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPorts(value: js.Array[org.scalajs.dom.raw.MessagePort]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPorts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceServiceWorker(value: org.scalajs.dom.experimental.serviceworkers.ServiceWorker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceMessagePort(value: org.scalajs.dom.raw.MessagePort): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSource(value: MessageEventSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(null)
+        ret
+    }
+  }
+  
 }
 

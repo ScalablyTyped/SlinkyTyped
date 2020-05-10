@@ -5,36 +5,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait TSTypeQuery_
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ @js.native
+trait TSTypeQuery_
   extends TSType
      with BaseNode {
-  var exprName: TSEntityName | TSImportType_
+  var exprName: TSEntityName | TSImportType_ = js.native
   @JSName("type")
-  var type_TSTypeQuery_ : TSTypeQuery
+  var type_TSTypeQuery_ : TSTypeQuery = js.native
 }
 
 object TSTypeQuery_ {
   @scala.inline
-  def apply(
-    exprName: TSEntityName | TSImportType_,
-    `type`: TSTypeQuery,
-    end: Int | Double = null,
-    innerComments: js.Array[Comment] = null,
-    leadingComments: js.Array[Comment] = null,
-    loc: SourceLocation = null,
-    start: Int | Double = null,
-    trailingComments: js.Array[Comment] = null
-  ): TSTypeQuery_ = {
+  def apply(exprName: TSEntityName | TSImportType_, `type`: TSTypeQuery): TSTypeQuery_ = {
     val __obj = js.Dynamic.literal(exprName = exprName.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
-    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSTypeQuery_]
   }
+  @scala.inline
+  implicit class TSTypeQuery_Ops[Self <: TSTypeQuery_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExprName(value: TSEntityName | TSImportType_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exprName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: TSTypeQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

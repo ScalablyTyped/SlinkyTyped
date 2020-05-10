@@ -48,24 +48,101 @@ trait SchemaCommand extends js.Object {
 
 object SchemaCommand {
   @scala.inline
-  def apply(
-    createTime: String = null,
-    duration: String = null,
-    errorCode: String = null,
-    newPassword: String = null,
-    resetPasswordFlags: js.Array[String] = null,
-    `type`: String = null,
-    userName: String = null
-  ): SchemaCommand = {
+  def apply(): SchemaCommand = {
     val __obj = js.Dynamic.literal()
-    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (errorCode != null) __obj.updateDynamic("errorCode")(errorCode.asInstanceOf[js.Any])
-    if (newPassword != null) __obj.updateDynamic("newPassword")(newPassword.asInstanceOf[js.Any])
-    if (resetPasswordFlags != null) __obj.updateDynamic("resetPasswordFlags")(resetPasswordFlags.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (userName != null) __obj.updateDynamic("userName")(userName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCommand]
   }
+  @scala.inline
+  implicit class SchemaCommandOps[Self <: SchemaCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newPassword")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResetPasswordFlags(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetPasswordFlags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResetPasswordFlags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetPasswordFlags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

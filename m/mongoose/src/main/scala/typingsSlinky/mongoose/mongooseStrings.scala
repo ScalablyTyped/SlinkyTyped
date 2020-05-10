@@ -21,6 +21,9 @@ object mongooseStrings {
   sealed trait MongooseError extends js.Object
   
   @js.native
+  sealed trait MongooseFilterQuery extends js.Object
+  
+  @js.native
   sealed trait OverwriteModelError extends js.Object
   
   @js.native
@@ -39,13 +42,13 @@ object mongooseStrings {
   sealed trait VersionError extends js.Object
   
   @js.native
+  sealed trait __v extends js.Object
+  
+  @js.native
   sealed trait _id extends js.Object
   
   @js.native
   sealed trait aggregate extends js.Object
-  
-  @js.native
-  sealed trait autoCreate extends js.Object
   
   @js.native
   sealed trait autoIndex extends js.Object
@@ -64,6 +67,9 @@ object mongooseStrings {
   
   @js.native
   sealed trait count extends js.Object
+  
+  @js.native
+  sealed trait default extends js.Object
   
   @js.native
   sealed trait discriminatorKey extends js.Object
@@ -165,16 +171,13 @@ object mongooseStrings {
   sealed trait update extends js.Object
   
   @js.native
+  sealed trait updateLookup extends js.Object
+  
+  @js.native
   sealed trait updateMany extends js.Object
   
   @js.native
   sealed trait updateOne extends js.Object
-  
-  @js.native
-  sealed trait useCreateIndex extends js.Object
-  
-  @js.native
-  sealed trait useFindAndModify extends js.Object
   
   @js.native
   sealed trait useNestedStrict extends js.Object
@@ -205,6 +208,8 @@ object mongooseStrings {
   @scala.inline
   def MongooseError: MongooseError = "MongooseError".asInstanceOf[MongooseError]
   @scala.inline
+  def MongooseFilterQuery: MongooseFilterQuery = "MongooseFilterQuery".asInstanceOf[MongooseFilterQuery]
+  @scala.inline
   def OverwriteModelError: OverwriteModelError = "OverwriteModelError".asInstanceOf[OverwriteModelError]
   @scala.inline
   def ParallelSaveError: ParallelSaveError = "ParallelSaveError".asInstanceOf[ParallelSaveError]
@@ -217,11 +222,11 @@ object mongooseStrings {
   @scala.inline
   def VersionError: VersionError = "VersionError".asInstanceOf[VersionError]
   @scala.inline
+  def __v: __v = "__v".asInstanceOf[__v]
+  @scala.inline
   def _id: _id = "_id".asInstanceOf[_id]
   @scala.inline
   def aggregate: aggregate = "aggregate".asInstanceOf[aggregate]
-  @scala.inline
-  def autoCreate: autoCreate = "autoCreate".asInstanceOf[autoCreate]
   @scala.inline
   def autoIndex: autoIndex = "autoIndex".asInstanceOf[autoIndex]
   @scala.inline
@@ -234,6 +239,8 @@ object mongooseStrings {
   def collection: collection = "collection".asInstanceOf[collection]
   @scala.inline
   def count: count = "count".asInstanceOf[count]
+  @scala.inline
+  def default: default = "default".asInstanceOf[default]
   @scala.inline
   def discriminatorKey: discriminatorKey = "discriminatorKey".asInstanceOf[discriminatorKey]
   @scala.inline
@@ -301,13 +308,11 @@ object mongooseStrings {
   @scala.inline
   def update: update = "update".asInstanceOf[update]
   @scala.inline
+  def updateLookup: updateLookup = "updateLookup".asInstanceOf[updateLookup]
+  @scala.inline
   def updateMany: updateMany = "updateMany".asInstanceOf[updateMany]
   @scala.inline
   def updateOne: updateOne = "updateOne".asInstanceOf[updateOne]
-  @scala.inline
-  def useCreateIndex: useCreateIndex = "useCreateIndex".asInstanceOf[useCreateIndex]
-  @scala.inline
-  def useFindAndModify: useFindAndModify = "useFindAndModify".asInstanceOf[useFindAndModify]
   @scala.inline
   def useNestedStrict: useNestedStrict = "useNestedStrict".asInstanceOf[useNestedStrict]
   @scala.inline

@@ -11,35 +11,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonChildren extends js.Object {
-  var children: TagMod[Any]
-  var classNamePrefix: js.UndefOr[String] = js.undefined
-  var disableStylesGeneration: js.UndefOr[Boolean] = js.undefined
-  var generateId: js.UndefOr[GenerateId] = js.undefined
-  var id: js.UndefOr[CreateGenerateIdOptions] = js.undefined
-  var jss: js.UndefOr[Jss] = js.undefined
-  var registry: js.UndefOr[SheetsRegistry] = js.undefined
+  var children: TagMod[Any] = js.native
+  var classNamePrefix: js.UndefOr[String] = js.native
+  var disableStylesGeneration: js.UndefOr[Boolean] = js.native
+  var generateId: js.UndefOr[GenerateId] = js.native
+  var id: js.UndefOr[CreateGenerateIdOptions] = js.native
+  var jss: js.UndefOr[Jss] = js.native
+  var registry: js.UndefOr[SheetsRegistry] = js.native
 }
 
 object AnonChildren {
   @scala.inline
-  def apply(
-    children: TagMod[Any],
-    classNamePrefix: String = null,
-    disableStylesGeneration: js.UndefOr[Boolean] = js.undefined,
-    generateId: (/* rule */ Rule, /* sheet */ js.UndefOr[StyleSheet[String]]) => String = null,
-    id: CreateGenerateIdOptions = null,
-    jss: Jss = null,
-    registry: SheetsRegistry = null
-  ): AnonChildren = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    if (classNamePrefix != null) __obj.updateDynamic("classNamePrefix")(classNamePrefix.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableStylesGeneration)) __obj.updateDynamic("disableStylesGeneration")(disableStylesGeneration.asInstanceOf[js.Any])
-    if (generateId != null) __obj.updateDynamic("generateId")(js.Any.fromFunction2(generateId))
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (jss != null) __obj.updateDynamic("jss")(jss.asInstanceOf[js.Any])
-    if (registry != null) __obj.updateDynamic("registry")(registry.asInstanceOf[js.Any])
+  def apply(): AnonChildren = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[AnonChildren]
   }
+  @scala.inline
+  implicit class AnonChildrenOps[Self <: AnonChildren] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildren(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassNamePrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classNamePrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassNamePrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classNamePrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableStylesGeneration(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStylesGeneration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableStylesGeneration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStylesGeneration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGenerateId(value: (/* rule */ Rule, /* sheet */ js.UndefOr[StyleSheet[String]]) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateId")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutGenerateId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: CreateGenerateIdOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJss(value: Jss): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jss")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegistry(value: SheetsRegistry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegistry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registry")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

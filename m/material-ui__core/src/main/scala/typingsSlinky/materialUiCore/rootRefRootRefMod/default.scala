@@ -1,9 +1,8 @@
 package typingsSlinky.materialUiCore.rootRefRootRefMod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@material-ui/core/RootRef/RootRef", JSImport.Default)
 @js.native
 class default protected ()
-  extends Component[RootRefProps[js.Any], ComponentState, js.Any] {
+  extends Component[RootRefProps[js.Any], js.Object, js.Any] {
   def this(props: RootRefProps[_]) = this()
   def this(props: RootRefProps[_], context: js.Any) = this()
 }
@@ -19,5 +18,5 @@ class default protected ()
 @JSImport("@material-ui/core/RootRef/RootRef", JSImport.Default)
 @js.native
 object default
-  extends TopLevel[ComponentType[RootRefProps[js.Any]]]
+  extends TopLevel[ReactComponentClass[RootRefProps[js.Any]]]
 

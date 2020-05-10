@@ -16,11 +16,41 @@ trait SchemaApkListingsListResponse extends js.Object {
 
 object SchemaApkListingsListResponse {
   @scala.inline
-  def apply(kind: String = null, listings: js.Array[SchemaApkListing] = null): SchemaApkListingsListResponse = {
+  def apply(): SchemaApkListingsListResponse = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (listings != null) __obj.updateDynamic("listings")(listings.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaApkListingsListResponse]
   }
+  @scala.inline
+  implicit class SchemaApkListingsListResponseOps[Self <: SchemaApkListingsListResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListings(value: js.Array[SchemaApkListing]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

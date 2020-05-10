@@ -1,6 +1,6 @@
 package typingsSlinky.std.WebAssembly
 
-import typingsSlinky.std.Response
+import org.scalajs.dom.experimental.Response
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

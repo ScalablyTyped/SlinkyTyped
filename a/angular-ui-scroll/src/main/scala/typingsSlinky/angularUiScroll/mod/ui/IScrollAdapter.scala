@@ -1,12 +1,12 @@
 package typingsSlinky.angularUiScroll.mod.ui
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.angular.JQLite
 import typingsSlinky.angular.JQuery
 import typingsSlinky.angular.mod.IAugmentedJQueryStatic
 import typingsSlinky.angular.mod.IRepeatScope
 import typingsSlinky.std.ArrayLike
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Element
 import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,6 +1,5 @@
 package typingsSlinky.ckeditorCkeditor5Engine.mod.model
 
-import typingsSlinky.std.Iterable
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,11 +21,11 @@ class Element protected () extends Node {
   val maxOffset: Double = js.native
   val name: String = js.native
   /* protected */ def _appendChild(nodes: Item): Unit = js.native
-  /* protected */ def _appendChild(nodes: Iterable[Item]): Unit = js.native
+  /* protected */ def _appendChild(nodes: js.Iterable[Item]): Unit = js.native
   /* protected */ def _clone(): Element = js.native
   /* protected */ def _clone(deep: Boolean): Element = js.native
   /* protected */ def _insertChild(index: Double, items: Item): Unit = js.native
-  /* protected */ def _insertChild(index: Double, items: Iterable[Item]): Unit = js.native
+  /* protected */ def _insertChild(index: Double, items: js.Iterable[Item]): Unit = js.native
   /* protected */ def _removeChildren(index: Double): js.Array[Node] = js.native
   /* protected */ def _removeChildren(index: Double, howMany: Double): js.Array[Node] = js.native
   def getChild(index: Double): Node = js.native

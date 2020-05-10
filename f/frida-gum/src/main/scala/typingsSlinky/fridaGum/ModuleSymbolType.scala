@@ -21,28 +21,26 @@ trait ModuleSymbolType extends js.Object
 
 object ModuleSymbolType {
   @scala.inline
-  def absolute: typingsSlinky.fridaGum.fridaGumStrings.absolute = this.cast("absolute")
+  def absolute: typingsSlinky.fridaGum.fridaGumStrings.absolute = "absolute".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.absolute]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def common: typingsSlinky.fridaGum.fridaGumStrings.common = "common".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.common]
   @scala.inline
-  def common: typingsSlinky.fridaGum.fridaGumStrings.common = this.cast("common")
+  def file: typingsSlinky.fridaGum.fridaGumStrings.file = "file".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.file]
   @scala.inline
-  def file: typingsSlinky.fridaGum.fridaGumStrings.file = this.cast("file")
+  def function: typingsSlinky.fridaGum.fridaGumStrings.function = "function".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.function]
   @scala.inline
-  def function: typingsSlinky.fridaGum.fridaGumStrings.function = this.cast("function")
+  def indirect: typingsSlinky.fridaGum.fridaGumStrings.indirect = "indirect".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.indirect]
   @scala.inline
-  def indirect: typingsSlinky.fridaGum.fridaGumStrings.indirect = this.cast("indirect")
+  def `object`: typingsSlinky.fridaGum.fridaGumStrings.`object` = "object".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.`object`]
   @scala.inline
-  def `object`: typingsSlinky.fridaGum.fridaGumStrings.`object` = this.cast("object")
+  def `prebound-undefined`: typingsSlinky.fridaGum.fridaGumStrings.`prebound-undefined` = "prebound-undefined".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.`prebound-undefined`]
   @scala.inline
-  def `prebound-undefined`: typingsSlinky.fridaGum.fridaGumStrings.`prebound-undefined` = this.cast("prebound-undefined")
+  def section: typingsSlinky.fridaGum.fridaGumStrings.section = "section".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.section]
   @scala.inline
-  def section: typingsSlinky.fridaGum.fridaGumStrings.section = this.cast("section")
+  def tls: typingsSlinky.fridaGum.fridaGumStrings.tls = "tls".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.tls]
   @scala.inline
-  def tls: typingsSlinky.fridaGum.fridaGumStrings.tls = this.cast("tls")
+  def undefined: typingsSlinky.fridaGum.fridaGumStrings.undefined = "undefined".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.undefined]
   @scala.inline
-  def undefined: typingsSlinky.fridaGum.fridaGumStrings.undefined = this.cast("undefined")
-  @scala.inline
-  def unknown: typingsSlinky.fridaGum.fridaGumStrings.unknown = this.cast("unknown")
+  def unknown: typingsSlinky.fridaGum.fridaGumStrings.unknown = "unknown".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.unknown]
 }
 

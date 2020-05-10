@@ -14,14 +14,12 @@ trait WriteLevel extends js.Object
 
 object WriteLevel {
   @scala.inline
-  def DEBUG: typingsSlinky.consoleUi.consoleUiStrings.DEBUG = this.cast("DEBUG")
+  def DEBUG: typingsSlinky.consoleUi.consoleUiStrings.DEBUG = "DEBUG".asInstanceOf[typingsSlinky.consoleUi.consoleUiStrings.DEBUG]
   @scala.inline
-  def ERROR: typingsSlinky.consoleUi.consoleUiStrings.ERROR = this.cast("ERROR")
+  def ERROR: typingsSlinky.consoleUi.consoleUiStrings.ERROR = "ERROR".asInstanceOf[typingsSlinky.consoleUi.consoleUiStrings.ERROR]
   @scala.inline
-  def INFO: typingsSlinky.consoleUi.consoleUiStrings.INFO = this.cast("INFO")
+  def INFO: typingsSlinky.consoleUi.consoleUiStrings.INFO = "INFO".asInstanceOf[typingsSlinky.consoleUi.consoleUiStrings.INFO]
   @scala.inline
-  def WARNING: typingsSlinky.consoleUi.consoleUiStrings.WARNING = this.cast("WARNING")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def WARNING: typingsSlinky.consoleUi.consoleUiStrings.WARNING = "WARNING".asInstanceOf[typingsSlinky.consoleUi.consoleUiStrings.WARNING]
 }
 

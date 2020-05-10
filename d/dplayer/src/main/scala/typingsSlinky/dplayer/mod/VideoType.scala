@@ -16,18 +16,16 @@ trait VideoType extends js.Object
 
 object VideoType {
   @scala.inline
-  def auto: typingsSlinky.dplayer.dplayerStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.dplayer.dplayerStrings.auto = "auto".asInstanceOf[typingsSlinky.dplayer.dplayerStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dash: typingsSlinky.dplayer.dplayerStrings.dash = "dash".asInstanceOf[typingsSlinky.dplayer.dplayerStrings.dash]
   @scala.inline
-  def dash: typingsSlinky.dplayer.dplayerStrings.dash = this.cast("dash")
+  def flv: typingsSlinky.dplayer.dplayerStrings.flv = "flv".asInstanceOf[typingsSlinky.dplayer.dplayerStrings.flv]
   @scala.inline
-  def flv: typingsSlinky.dplayer.dplayerStrings.flv = this.cast("flv")
+  def hls: typingsSlinky.dplayer.dplayerStrings.hls = "hls".asInstanceOf[typingsSlinky.dplayer.dplayerStrings.hls]
   @scala.inline
-  def hls: typingsSlinky.dplayer.dplayerStrings.hls = this.cast("hls")
+  def normal: typingsSlinky.dplayer.dplayerStrings.normal = "normal".asInstanceOf[typingsSlinky.dplayer.dplayerStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.dplayer.dplayerStrings.normal = this.cast("normal")
-  @scala.inline
-  def webtorrent: typingsSlinky.dplayer.dplayerStrings.webtorrent = this.cast("webtorrent")
+  def webtorrent: typingsSlinky.dplayer.dplayerStrings.webtorrent = "webtorrent".asInstanceOf[typingsSlinky.dplayer.dplayerStrings.webtorrent]
 }
 

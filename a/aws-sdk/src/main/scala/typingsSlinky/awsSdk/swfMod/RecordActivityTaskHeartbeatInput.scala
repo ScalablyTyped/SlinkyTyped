@@ -18,10 +18,35 @@ trait RecordActivityTaskHeartbeatInput extends js.Object {
 
 object RecordActivityTaskHeartbeatInput {
   @scala.inline
-  def apply(taskToken: TaskToken, details: LimitedData = null): RecordActivityTaskHeartbeatInput = {
+  def apply(taskToken: TaskToken): RecordActivityTaskHeartbeatInput = {
     val __obj = js.Dynamic.literal(taskToken = taskToken.asInstanceOf[js.Any])
-    if (details != null) __obj.updateDynamic("details")(details.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecordActivityTaskHeartbeatInput]
   }
+  @scala.inline
+  implicit class RecordActivityTaskHeartbeatInputOps[Self <: RecordActivityTaskHeartbeatInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTaskToken(value: TaskToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDetails(value: LimitedData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

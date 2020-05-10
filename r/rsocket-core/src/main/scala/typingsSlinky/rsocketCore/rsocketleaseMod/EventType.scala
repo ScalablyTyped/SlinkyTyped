@@ -13,12 +13,10 @@ trait EventType extends js.Object
 
 object EventType {
   @scala.inline
-  def Accept: typingsSlinky.rsocketCore.rsocketCoreStrings.Accept = this.cast("Accept")
+  def Accept: typingsSlinky.rsocketCore.rsocketCoreStrings.Accept = "Accept".asInstanceOf[typingsSlinky.rsocketCore.rsocketCoreStrings.Accept]
   @scala.inline
-  def Reject: typingsSlinky.rsocketCore.rsocketCoreStrings.Reject = this.cast("Reject")
+  def Reject: typingsSlinky.rsocketCore.rsocketCoreStrings.Reject = "Reject".asInstanceOf[typingsSlinky.rsocketCore.rsocketCoreStrings.Reject]
   @scala.inline
-  def Terminate: typingsSlinky.rsocketCore.rsocketCoreStrings.Terminate = this.cast("Terminate")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Terminate: typingsSlinky.rsocketCore.rsocketCoreStrings.Terminate = "Terminate".asInstanceOf[typingsSlinky.rsocketCore.rsocketCoreStrings.Terminate]
 }
 

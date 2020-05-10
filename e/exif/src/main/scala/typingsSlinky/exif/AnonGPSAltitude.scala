@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonGPSAltitude extends js.Object {
-  var GPSAltitude: js.UndefOr[Double] = js.undefined
-  var GPSAltitudeRef: js.UndefOr[Double] = js.undefined
-  var GPSDateStamp: js.UndefOr[String] = js.undefined
-  var GPSLatitude: js.UndefOr[js.Array[Double]] = js.undefined
-  var GPSLatitudeRef: js.UndefOr[String] = js.undefined
-  var GPSLongitude: js.UndefOr[js.Array[Double]] = js.undefined
-  var GPSLongitudeRef: js.UndefOr[String] = js.undefined
-  var GPSTimeStamp: js.UndefOr[js.Array[Double]] = js.undefined
-  var GPSVersionId: js.UndefOr[js.Array[Double]] = js.undefined
+  var GPSAltitude: js.UndefOr[Double] = js.native
+  var GPSAltitudeRef: js.UndefOr[Double] = js.native
+  var GPSDateStamp: js.UndefOr[String] = js.native
+  var GPSLatitude: js.UndefOr[js.Array[Double]] = js.native
+  var GPSLatitudeRef: js.UndefOr[String] = js.native
+  var GPSLongitude: js.UndefOr[js.Array[Double]] = js.native
+  var GPSLongitudeRef: js.UndefOr[String] = js.native
+  var GPSTimeStamp: js.UndefOr[js.Array[Double]] = js.native
+  var GPSVersionId: js.UndefOr[js.Array[Double]] = js.native
 }
 
 object AnonGPSAltitude {
   @scala.inline
-  def apply(
-    GPSAltitude: Int | Double = null,
-    GPSAltitudeRef: Int | Double = null,
-    GPSDateStamp: String = null,
-    GPSLatitude: js.Array[Double] = null,
-    GPSLatitudeRef: String = null,
-    GPSLongitude: js.Array[Double] = null,
-    GPSLongitudeRef: String = null,
-    GPSTimeStamp: js.Array[Double] = null,
-    GPSVersionId: js.Array[Double] = null
-  ): AnonGPSAltitude = {
+  def apply(): AnonGPSAltitude = {
     val __obj = js.Dynamic.literal()
-    if (GPSAltitude != null) __obj.updateDynamic("GPSAltitude")(GPSAltitude.asInstanceOf[js.Any])
-    if (GPSAltitudeRef != null) __obj.updateDynamic("GPSAltitudeRef")(GPSAltitudeRef.asInstanceOf[js.Any])
-    if (GPSDateStamp != null) __obj.updateDynamic("GPSDateStamp")(GPSDateStamp.asInstanceOf[js.Any])
-    if (GPSLatitude != null) __obj.updateDynamic("GPSLatitude")(GPSLatitude.asInstanceOf[js.Any])
-    if (GPSLatitudeRef != null) __obj.updateDynamic("GPSLatitudeRef")(GPSLatitudeRef.asInstanceOf[js.Any])
-    if (GPSLongitude != null) __obj.updateDynamic("GPSLongitude")(GPSLongitude.asInstanceOf[js.Any])
-    if (GPSLongitudeRef != null) __obj.updateDynamic("GPSLongitudeRef")(GPSLongitudeRef.asInstanceOf[js.Any])
-    if (GPSTimeStamp != null) __obj.updateDynamic("GPSTimeStamp")(GPSTimeStamp.asInstanceOf[js.Any])
-    if (GPSVersionId != null) __obj.updateDynamic("GPSVersionId")(GPSVersionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonGPSAltitude]
   }
+  @scala.inline
+  implicit class AnonGPSAltitudeOps[Self <: AnonGPSAltitude] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGPSAltitude(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSAltitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGPSAltitude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSAltitude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGPSAltitudeRef(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSAltitudeRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGPSAltitudeRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSAltitudeRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGPSDateStamp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSDateStamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGPSDateStamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSDateStamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGPSLatitude(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSLatitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGPSLatitude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSLatitude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGPSLatitudeRef(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSLatitudeRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGPSLatitudeRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSLatitudeRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGPSLongitude(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSLongitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGPSLongitude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSLongitude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGPSLongitudeRef(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSLongitudeRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGPSLongitudeRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSLongitudeRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGPSTimeStamp(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSTimeStamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGPSTimeStamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSTimeStamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGPSVersionId(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSVersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGPSVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GPSVersionId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -23,11 +23,41 @@ trait SchemaContent extends js.Object {
 
 object SchemaContent {
   @scala.inline
-  def apply(files: js.Array[SchemaFile] = null, scriptId: String = null): SchemaContent = {
+  def apply(): SchemaContent = {
     val __obj = js.Dynamic.literal()
-    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
-    if (scriptId != null) __obj.updateDynamic("scriptId")(scriptId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaContent]
   }
+  @scala.inline
+  implicit class SchemaContentOps[Self <: SchemaContent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFiles(value: js.Array[SchemaFile]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScriptId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScriptId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

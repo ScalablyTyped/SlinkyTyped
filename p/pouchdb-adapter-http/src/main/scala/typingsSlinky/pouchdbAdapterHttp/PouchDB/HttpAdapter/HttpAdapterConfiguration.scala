@@ -1,35 +1,36 @@
 package typingsSlinky.pouchdbAdapterHttp.PouchDB.HttpAdapter
 
-import org.scalajs.dom.experimental.Request
-import org.scalajs.dom.experimental.RequestInit
-import org.scalajs.dom.experimental.Response
 import typingsSlinky.pouchdbAdapterHttp.pouchdbAdapterHttpStrings.http
-import typingsSlinky.pouchdbCore.AnonPassword
 import typingsSlinky.pouchdbCore.PouchDB.Configuration.RemoteDatabaseConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HttpAdapterConfiguration extends RemoteDatabaseConfiguration {
   @JSName("adapter")
-  var adapter_HttpAdapterConfiguration: http
+  var adapter_HttpAdapterConfiguration: http = js.native
 }
 
 object HttpAdapterConfiguration {
   @scala.inline
-  def apply(
-    adapter: http,
-    auth: AnonPassword = null,
-    fetch: (/* url */ String | Request, /* opts */ js.UndefOr[RequestInit]) => js.Promise[Response] = null,
-    name: String = null,
-    skip_setup: js.UndefOr[Boolean] = js.undefined
-  ): HttpAdapterConfiguration = {
+  def apply(adapter: http): HttpAdapterConfiguration = {
     val __obj = js.Dynamic.literal(adapter = adapter.asInstanceOf[js.Any])
-    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
-    if (fetch != null) __obj.updateDynamic("fetch")(js.Any.fromFunction2(fetch))
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(skip_setup)) __obj.updateDynamic("skip_setup")(skip_setup.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpAdapterConfiguration]
   }
+  @scala.inline
+  implicit class HttpAdapterConfigurationOps[Self <: HttpAdapterConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdapter(value: http): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adapter")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

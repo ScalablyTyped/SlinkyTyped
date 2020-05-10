@@ -23,11 +23,41 @@ trait SchemaFetchThreatListUpdatesRequest extends js.Object {
 
 object SchemaFetchThreatListUpdatesRequest {
   @scala.inline
-  def apply(client: SchemaClientInfo = null, listUpdateRequests: js.Array[SchemaListUpdateRequest] = null): SchemaFetchThreatListUpdatesRequest = {
+  def apply(): SchemaFetchThreatListUpdatesRequest = {
     val __obj = js.Dynamic.literal()
-    if (client != null) __obj.updateDynamic("client")(client.asInstanceOf[js.Any])
-    if (listUpdateRequests != null) __obj.updateDynamic("listUpdateRequests")(listUpdateRequests.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFetchThreatListUpdatesRequest]
   }
+  @scala.inline
+  implicit class SchemaFetchThreatListUpdatesRequestOps[Self <: SchemaFetchThreatListUpdatesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClient(value: SchemaClientInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListUpdateRequests(value: js.Array[SchemaListUpdateRequest]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listUpdateRequests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListUpdateRequests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listUpdateRequests")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

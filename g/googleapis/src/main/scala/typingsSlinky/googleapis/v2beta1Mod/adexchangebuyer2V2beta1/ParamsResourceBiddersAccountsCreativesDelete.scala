@@ -28,3 +28,55 @@ trait ParamsResourceBiddersAccountsCreativesDelete extends StandardParameters {
   var ownerName: js.UndefOr[String] = js.native
 }
 
+object ParamsResourceBiddersAccountsCreativesDelete {
+  @scala.inline
+  def apply(): ParamsResourceBiddersAccountsCreativesDelete = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ParamsResourceBiddersAccountsCreativesDelete]
+  }
+  @scala.inline
+  implicit class ParamsResourceBiddersAccountsCreativesDeleteOps[Self <: ParamsResourceBiddersAccountsCreativesDelete] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreativeId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreativeId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwnerName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwnerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerName")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

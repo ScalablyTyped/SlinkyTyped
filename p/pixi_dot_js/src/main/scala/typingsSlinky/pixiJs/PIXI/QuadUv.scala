@@ -19,13 +19,13 @@ class QuadUv () extends Geometry {
     *
     * @member {Float32Array} PIXI.QuadUv#uvs
     */
-  var uvs: scala.scalajs.js.typedarray.Float32Array = js.native
+  var uvs: js.typedarray.Float32Array = js.native
   /**
     * An array of vertices
     *
     * @member {Float32Array} PIXI.QuadUv#vertices
     */
-  var vertices: scala.scalajs.js.typedarray.Float32Array = js.native
+  var vertices: js.typedarray.Float32Array = js.native
   /**
     * legacy upload method, just marks buffers dirty
     * @returns {PIXI.QuadUv} Returns itself.

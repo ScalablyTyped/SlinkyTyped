@@ -346,10 +346,10 @@ trait Auth extends js.Object {
     * });
     * ```
     */
-  def onAuthStateChanged(nextOrObserver: Observer[_, typingsSlinky.std.Error]): Unsubscribe = js.native
-  def onAuthStateChanged(nextOrObserver: Observer[_, typingsSlinky.std.Error], error: js.Function1[/* a */ Error, _]): Unsubscribe = js.native
+  def onAuthStateChanged(nextOrObserver: Observer[_, js.Error]): Unsubscribe = js.native
+  def onAuthStateChanged(nextOrObserver: Observer[_, js.Error], error: js.Function1[/* a */ Error, _]): Unsubscribe = js.native
   def onAuthStateChanged(
-    nextOrObserver: Observer[_, typingsSlinky.std.Error],
+    nextOrObserver: Observer[_, js.Error],
     error: js.Function1[/* a */ Error, _],
     completed: Unsubscribe
   ): Unsubscribe = js.native
@@ -380,10 +380,10 @@ trait Auth extends js.Object {
     * @param completed Optional A function triggered when the
     *     observer is removed.
     */
-  def onIdTokenChanged(nextOrObserver: Observer[_, typingsSlinky.std.Error]): Unsubscribe = js.native
-  def onIdTokenChanged(nextOrObserver: Observer[_, typingsSlinky.std.Error], error: js.Function1[/* a */ Error, _]): Unsubscribe = js.native
+  def onIdTokenChanged(nextOrObserver: Observer[_, js.Error]): Unsubscribe = js.native
+  def onIdTokenChanged(nextOrObserver: Observer[_, js.Error], error: js.Function1[/* a */ Error, _]): Unsubscribe = js.native
   def onIdTokenChanged(
-    nextOrObserver: Observer[_, typingsSlinky.std.Error],
+    nextOrObserver: Observer[_, js.Error],
     error: js.Function1[/* a */ Error, _],
     completed: Unsubscribe
   ): Unsubscribe = js.native

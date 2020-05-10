@@ -5,28 +5,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GoogleLongrunningOperation extends js.Object {
   /**
     * If the value is `false`, it means the operation is still in progress.
     * If `true`, the operation is completed, and either `error` or `response` is
     * available.
     */
-  var done: js.UndefOr[Boolean] = js.undefined
+  var done: js.UndefOr[Boolean] = js.native
   /** The error result of the operation in case of failure or cancellation. */
-  var error: js.UndefOr[Status] = js.undefined
+  var error: js.UndefOr[Status] = js.native
   /**
     * Service-specific metadata associated with the operation.  It typically
     * contains progress information and common metadata such as create time.
     * Some services might not provide such metadata.  Any method that returns a
     * long-running operation should document the metadata type, if any.
     */
-  var metadata: js.UndefOr[Record[String, _]] = js.undefined
+  var metadata: js.UndefOr[Record[String, _]] = js.native
   /**
     * The server-assigned name, which is only unique within the same service that
     * originally returns it. If you use the default HTTP mapping, the
     * `name` should have the format of `operations/some/unique/name`.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * The normal response of the operation in case of success.  If the original
     * method returns no data on success, such as `Delete`, the response is
@@ -37,25 +38,82 @@ trait GoogleLongrunningOperation extends js.Object {
     * is `TakeSnapshot()`, the inferred response type is
     * `TakeSnapshotResponse`.
     */
-  var response: js.UndefOr[Record[String, _]] = js.undefined
+  var response: js.UndefOr[Record[String, _]] = js.native
 }
 
 object GoogleLongrunningOperation {
   @scala.inline
-  def apply(
-    done: js.UndefOr[Boolean] = js.undefined,
-    error: Status = null,
-    metadata: Record[String, _] = null,
-    name: String = null,
-    response: Record[String, _] = null
-  ): GoogleLongrunningOperation = {
+  def apply(): GoogleLongrunningOperation = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(done)) __obj.updateDynamic("done")(done.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (response != null) __obj.updateDynamic("response")(response.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleLongrunningOperation]
   }
+  @scala.inline
+  implicit class GoogleLongrunningOperationOps[Self <: GoogleLongrunningOperation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDone(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("done")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("done")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: Status): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: Record[String, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponse(value: Record[String, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

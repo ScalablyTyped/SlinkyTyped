@@ -4,50 +4,142 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonListItemProfile extends js.Object {
   var ListItemProfile: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var ProfileBody: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var ProfileImg: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var ProfileImgContainer: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var ProfileLabelsContainer: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var ProfileSubtitle: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var ProfileTitle: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
-  ] = js.undefined
+  ] = js.native
 }
 
 object AnonListItemProfile {
   @scala.inline
-  def apply(
-    ListItemProfile: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any = null,
-    ProfileBody: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any = null,
-    ProfileImg: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any = null,
-    ProfileImgContainer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any = null,
-    ProfileLabelsContainer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any = null,
-    ProfileSubtitle: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any = null,
-    ProfileTitle: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any = null
-  ): AnonListItemProfile = {
+  def apply(): AnonListItemProfile = {
     val __obj = js.Dynamic.literal()
-    if (ListItemProfile != null) __obj.updateDynamic("ListItemProfile")(ListItemProfile.asInstanceOf[js.Any])
-    if (ProfileBody != null) __obj.updateDynamic("ProfileBody")(ProfileBody.asInstanceOf[js.Any])
-    if (ProfileImg != null) __obj.updateDynamic("ProfileImg")(ProfileImg.asInstanceOf[js.Any])
-    if (ProfileImgContainer != null) __obj.updateDynamic("ProfileImgContainer")(ProfileImgContainer.asInstanceOf[js.Any])
-    if (ProfileLabelsContainer != null) __obj.updateDynamic("ProfileLabelsContainer")(ProfileLabelsContainer.asInstanceOf[js.Any])
-    if (ProfileSubtitle != null) __obj.updateDynamic("ProfileSubtitle")(ProfileSubtitle.asInstanceOf[js.Any])
-    if (ProfileTitle != null) __obj.updateDynamic("ProfileTitle")(ProfileTitle.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonListItemProfile]
   }
+  @scala.inline
+  implicit class AnonListItemProfileOps[Self <: AnonListItemProfile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withListItemProfile(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListItemProfile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListItemProfile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListItemProfile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfileBody(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfileBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfileImg(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileImg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfileImg: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileImg")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfileImgContainer(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileImgContainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfileImgContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileImgContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfileLabelsContainer(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileLabelsContainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfileLabelsContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileLabelsContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfileSubtitle(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileSubtitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfileSubtitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileSubtitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfileTitle(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfileTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileTitle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

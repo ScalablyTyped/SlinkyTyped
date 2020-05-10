@@ -18,11 +18,41 @@ trait PutLogEventsResponse extends js.Object {
 
 object PutLogEventsResponse {
   @scala.inline
-  def apply(nextSequenceToken: SequenceToken = null, rejectedLogEventsInfo: RejectedLogEventsInfo = null): PutLogEventsResponse = {
+  def apply(): PutLogEventsResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextSequenceToken != null) __obj.updateDynamic("nextSequenceToken")(nextSequenceToken.asInstanceOf[js.Any])
-    if (rejectedLogEventsInfo != null) __obj.updateDynamic("rejectedLogEventsInfo")(rejectedLogEventsInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutLogEventsResponse]
   }
+  @scala.inline
+  implicit class PutLogEventsResponseOps[Self <: PutLogEventsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextSequenceToken(value: SequenceToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextSequenceToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextSequenceToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextSequenceToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRejectedLogEventsInfo(value: RejectedLogEventsInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectedLogEventsInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRejectedLogEventsInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectedLogEventsInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -16,5 +16,6 @@ trait SVGEllipseElement extends SVGGeometryElement {
 
 @JSGlobal("SVGEllipseElement")
 @js.native
-object SVGEllipseElement extends Instantiable0[SVGEllipseElement]
+object SVGEllipseElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGEllipseElement]
 

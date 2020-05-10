@@ -14,14 +14,12 @@ trait StrokeLinejoin extends js.Object
 
 object StrokeLinejoin {
   @scala.inline
-  def bevel: typingsSlinky.reactBytesizeIcons.reactBytesizeIconsStrings.bevel = this.cast("bevel")
+  def bevel: typingsSlinky.reactBytesizeIcons.reactBytesizeIconsStrings.bevel = "bevel".asInstanceOf[typingsSlinky.reactBytesizeIcons.reactBytesizeIconsStrings.bevel]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inherit: typingsSlinky.reactBytesizeIcons.reactBytesizeIconsStrings.inherit = "inherit".asInstanceOf[typingsSlinky.reactBytesizeIcons.reactBytesizeIconsStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.reactBytesizeIcons.reactBytesizeIconsStrings.inherit = this.cast("inherit")
+  def miter: typingsSlinky.reactBytesizeIcons.reactBytesizeIconsStrings.miter = "miter".asInstanceOf[typingsSlinky.reactBytesizeIcons.reactBytesizeIconsStrings.miter]
   @scala.inline
-  def miter: typingsSlinky.reactBytesizeIcons.reactBytesizeIconsStrings.miter = this.cast("miter")
-  @scala.inline
-  def round: typingsSlinky.reactBytesizeIcons.reactBytesizeIconsStrings.round = this.cast("round")
+  def round: typingsSlinky.reactBytesizeIcons.reactBytesizeIconsStrings.round = "round".asInstanceOf[typingsSlinky.reactBytesizeIcons.reactBytesizeIconsStrings.round]
 }
 

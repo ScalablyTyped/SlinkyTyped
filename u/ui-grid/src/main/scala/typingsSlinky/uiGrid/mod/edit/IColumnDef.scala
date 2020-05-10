@@ -8,18 +8,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IColumnDef[TEntity] extends js.Object {
   /**
     * If specified, either a value or function evaluated before editing cell.
     * If falsy, then editing of cell is not allowed.
     */
-  var cellEditableCondition: js.UndefOr[js.Any | (js.Function1[/* $scope */ IScope, Boolean])] = js.undefined
+  var cellEditableCondition: js.UndefOr[js.Any | (js.Function1[/* $scope */ IScope, Boolean])] = js.native
   /** A filter that you would like to apply to the values in the options list of the dropdown */
-  var editDropdownFilter: js.UndefOr[String] = js.undefined
+  var editDropdownFilter: js.UndefOr[String] = js.native
   /** the label for the "id" field in the editDropdownOptionsArray. Defaults to 'id' */
-  var editDropdownIdLabel: js.UndefOr[String] = js.undefined
+  var editDropdownIdLabel: js.UndefOr[String] = js.native
   /** an array of values in the format [ {id: xxx, value: xxx} ], which is populated into the edit dropdown */
-  var editDropdownOptionsArray: js.UndefOr[js.Array[IEditDropdown]] = js.undefined
+  var editDropdownOptionsArray: js.UndefOr[js.Array[IEditDropdown]] = js.native
   /**
     * a path to a property on row.entity containing an array of values in the format `[{id: xxx, value:
     * xxx}]`,
@@ -27,9 +28,9 @@ trait IColumnDef[TEntity] extends js.Object {
     * dependent on the backing row entity.  If this property is set then editDropdownOptionsArray will be
     * ignored.
     */
-  var editDropdownRowEntityOptionsArrayPath: js.UndefOr[String] = js.undefined
+  var editDropdownRowEntityOptionsArrayPath: js.UndefOr[String] = js.native
   /** the label of the 'value' field in the editDropdownOptionsArray.  Defaults to 'value' */
-  var editDropdownValueLabel: js.UndefOr[String] = js.undefined
+  var editDropdownValueLabel: js.UndefOr[String] = js.native
   /**
     * A function that should be called when any files have been chosen by the user.
     * You should use this to process the files appropriately for your application.
@@ -66,7 +67,7 @@ trait IColumnDef[TEntity] extends js.Object {
       /* files */ FileList, 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * A bindable string value that is used when binding to edit controls instead of colDef.field
     * For example if you have a complex property on an object like:
@@ -79,48 +80,173 @@ trait IColumnDef[TEntity] extends js.Object {
     colDef.field = 'state.name';
     colDef.editModelField = 'state';
     */
-  var editModelField: js.UndefOr[String] = js.undefined
+  var editModelField: js.UndefOr[String] = js.native
   /**
     * Cell template to be used when editing this column. Can be Url or text template.
     * Defaults to gridOptions.editableCellTemplate
     */
-  var editableCellTemplate: js.UndefOr[String] = js.undefined
+  var editableCellTemplate: js.UndefOr[String] = js.native
   /** Enable editing on a column */
-  var enableCellEdit: js.UndefOr[Boolean] = js.undefined
+  var enableCellEdit: js.UndefOr[Boolean] = js.native
   /** If true, then editor is invoked as soon as cell receives focus. Default false.
     * _Requires both the cellNav feature and the edit feature to be enabled_
     */
-  var enableCellEditOnFocus: js.UndefOr[Boolean] = js.undefined
+  var enableCellEditOnFocus: js.UndefOr[Boolean] = js.native
 }
 
 object IColumnDef {
   @scala.inline
-  def apply[TEntity](
-    cellEditableCondition: js.Any | (js.Function1[/* $scope */ IScope, Boolean]) = null,
-    editDropdownFilter: String = null,
-    editDropdownIdLabel: String = null,
-    editDropdownOptionsArray: js.Array[IEditDropdown] = null,
-    editDropdownRowEntityOptionsArrayPath: String = null,
-    editDropdownValueLabel: String = null,
-    editFileChooserCallback: (/* gridRow */ IGridRowOf[TEntity], /* gridCol */ IGridColumnOf[TEntity], /* files */ FileList) => Unit = null,
-    editModelField: String = null,
-    editableCellTemplate: String = null,
-    enableCellEdit: js.UndefOr[Boolean] = js.undefined,
-    enableCellEditOnFocus: js.UndefOr[Boolean] = js.undefined
-  ): IColumnDef[TEntity] = {
+  def apply[TEntity](): IColumnDef[TEntity] = {
     val __obj = js.Dynamic.literal()
-    if (cellEditableCondition != null) __obj.updateDynamic("cellEditableCondition")(cellEditableCondition.asInstanceOf[js.Any])
-    if (editDropdownFilter != null) __obj.updateDynamic("editDropdownFilter")(editDropdownFilter.asInstanceOf[js.Any])
-    if (editDropdownIdLabel != null) __obj.updateDynamic("editDropdownIdLabel")(editDropdownIdLabel.asInstanceOf[js.Any])
-    if (editDropdownOptionsArray != null) __obj.updateDynamic("editDropdownOptionsArray")(editDropdownOptionsArray.asInstanceOf[js.Any])
-    if (editDropdownRowEntityOptionsArrayPath != null) __obj.updateDynamic("editDropdownRowEntityOptionsArrayPath")(editDropdownRowEntityOptionsArrayPath.asInstanceOf[js.Any])
-    if (editDropdownValueLabel != null) __obj.updateDynamic("editDropdownValueLabel")(editDropdownValueLabel.asInstanceOf[js.Any])
-    if (editFileChooserCallback != null) __obj.updateDynamic("editFileChooserCallback")(js.Any.fromFunction3(editFileChooserCallback))
-    if (editModelField != null) __obj.updateDynamic("editModelField")(editModelField.asInstanceOf[js.Any])
-    if (editableCellTemplate != null) __obj.updateDynamic("editableCellTemplate")(editableCellTemplate.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableCellEdit)) __obj.updateDynamic("enableCellEdit")(enableCellEdit.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableCellEditOnFocus)) __obj.updateDynamic("enableCellEditOnFocus")(enableCellEditOnFocus.asInstanceOf[js.Any])
     __obj.asInstanceOf[IColumnDef[TEntity]]
   }
+  @scala.inline
+  implicit class IColumnDefOps[Self[tentity] <: IColumnDef[tentity], TEntity] (val x: Self[TEntity]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TEntity] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TEntity]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[TEntity] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TEntity] with Other]
+    @scala.inline
+    def withCellEditableConditionFunction1(value: /* $scope */ IScope => Boolean): Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellEditableCondition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCellEditableCondition(value: js.Any | (js.Function1[/* $scope */ IScope, Boolean])): Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellEditableCondition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellEditableCondition: Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellEditableCondition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditDropdownFilter(value: String): Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editDropdownFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEditDropdownFilter: Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editDropdownFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditDropdownIdLabel(value: String): Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editDropdownIdLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEditDropdownIdLabel: Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editDropdownIdLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditDropdownOptionsArray(value: js.Array[IEditDropdown]): Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editDropdownOptionsArray")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEditDropdownOptionsArray: Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editDropdownOptionsArray")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditDropdownRowEntityOptionsArrayPath(value: String): Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editDropdownRowEntityOptionsArrayPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEditDropdownRowEntityOptionsArrayPath: Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editDropdownRowEntityOptionsArrayPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditDropdownValueLabel(value: String): Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editDropdownValueLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEditDropdownValueLabel: Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editDropdownValueLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditFileChooserCallback(
+      value: (/* gridRow */ IGridRowOf[TEntity], /* gridCol */ IGridColumnOf[TEntity], /* files */ FileList) => Unit
+    ): Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editFileChooserCallback")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutEditFileChooserCallback: Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editFileChooserCallback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditModelField(value: String): Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editModelField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEditModelField: Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editModelField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditableCellTemplate(value: String): Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editableCellTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEditableCellTemplate: Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editableCellTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableCellEdit(value: Boolean): Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCellEdit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableCellEdit: Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCellEdit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableCellEditOnFocus(value: Boolean): Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCellEditOnFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableCellEditOnFocus: Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCellEditOnFocus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

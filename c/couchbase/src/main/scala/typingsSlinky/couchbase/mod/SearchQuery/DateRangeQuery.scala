@@ -1,6 +1,5 @@
 package typingsSlinky.couchbase.mod.SearchQuery
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,8 +19,8 @@ abstract class DateRangeQuery () extends Query {
     * @param end The upper bound of the query.
     * @param inclusive True to set an inclusive bound. Defaults to false.
     */
-  def end(end: Date): this.type = js.native
-  def end(end: Date, inclusive: Boolean): this.type = js.native
+  def end(end: js.Date): this.type = js.native
+  def end(end: js.Date, inclusive: Boolean): this.type = js.native
   /**
     * Specifies the field to query.
     * @param field The field to query.
@@ -34,7 +33,7 @@ abstract class DateRangeQuery () extends Query {
     * @param start The lower bound of the query.
     * @param inclusive True to set an inclusive bound. Defaults to true.
     */
-  def start(start: Date): this.type = js.native
-  def start(start: Date, inclusive: Boolean): this.type = js.native
+  def start(start: js.Date): this.type = js.native
+  def start(start: js.Date, inclusive: Boolean): this.type = js.native
 }
 

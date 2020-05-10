@@ -28,8 +28,33 @@ object PutClusterCapacityProvidersRequest {
     defaultCapacityProviderStrategy: CapacityProviderStrategy
   ): PutClusterCapacityProvidersRequest = {
     val __obj = js.Dynamic.literal(capacityProviders = capacityProviders.asInstanceOf[js.Any], cluster = cluster.asInstanceOf[js.Any], defaultCapacityProviderStrategy = defaultCapacityProviderStrategy.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PutClusterCapacityProvidersRequest]
   }
+  @scala.inline
+  implicit class PutClusterCapacityProvidersRequestOps[Self <: PutClusterCapacityProvidersRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCapacityProviders(value: StringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capacityProviders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCluster(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultCapacityProviderStrategy(value: CapacityProviderStrategy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCapacityProviderStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -14,10 +14,29 @@ trait DeleteIdentitiesResponse extends js.Object {
 
 object DeleteIdentitiesResponse {
   @scala.inline
-  def apply(UnprocessedIdentityIds: UnprocessedIdentityIdList = null): DeleteIdentitiesResponse = {
+  def apply(): DeleteIdentitiesResponse = {
     val __obj = js.Dynamic.literal()
-    if (UnprocessedIdentityIds != null) __obj.updateDynamic("UnprocessedIdentityIds")(UnprocessedIdentityIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteIdentitiesResponse]
   }
+  @scala.inline
+  implicit class DeleteIdentitiesResponseOps[Self <: DeleteIdentitiesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUnprocessedIdentityIds(value: UnprocessedIdentityIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnprocessedIdentityIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnprocessedIdentityIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnprocessedIdentityIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

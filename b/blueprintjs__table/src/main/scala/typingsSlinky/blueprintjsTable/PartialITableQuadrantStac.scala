@@ -13,8 +13,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@blueprintjs/table.@blueprintjs/table/lib/esm/quadrants/tableQuadrantStack.ITableQuadrantStackProps> */
+@js.native
 trait PartialITableQuadrantStac extends js.Object {
-  var bodyRef: js.UndefOr[js.Function1[/* ref */ HTMLElement | Null, _]] = js.undefined
+  var bodyRef: js.UndefOr[js.Function1[/* ref */ HTMLElement | Null, _]] = js.native
   var bodyRenderer: js.UndefOr[
     js.Function3[
       /* quadrantType */ QuadrantType, 
@@ -22,8 +23,8 @@ trait PartialITableQuadrantStac extends js.Object {
       /* showFrozenColumnsOnly */ js.UndefOr[Boolean], 
       ReactElement
     ]
-  ] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var className: js.UndefOr[String] = js.native
   var columnHeaderCellRenderer: js.UndefOr[
     js.Function4[
       /* refHandler */ js.Function1[/* ref */ HTMLElement, Unit], 
@@ -32,27 +33,27 @@ trait PartialITableQuadrantStac extends js.Object {
       /* showFrozenColumnsOnly */ js.UndefOr[Boolean], 
       ReactElement
     ]
-  ] = js.undefined
-  var columnHeaderRef: js.UndefOr[js.Function1[/* ref */ HTMLElement | Null, Unit]] = js.undefined
-  var enableColumnInteractionBar: js.UndefOr[Boolean] = js.undefined
-  var enableRowHeader: js.UndefOr[Boolean] = js.undefined
-  var grid: js.UndefOr[Grid] = js.undefined
-  var handleColumnResizeGuide: js.UndefOr[js.Function1[/* verticalGuides */ js.Array[Double], Unit]] = js.undefined
-  var handleColumnsReordering: js.UndefOr[js.Function1[/* verticalGuides */ js.Array[Double], Unit]] = js.undefined
-  var handleRowResizeGuide: js.UndefOr[js.Function1[/* horizontalGuides */ js.Array[Double], Unit]] = js.undefined
-  var handleRowsReordering: js.UndefOr[js.Function1[/* horizontalGuides */ js.Array[Double], Unit]] = js.undefined
-  var isHorizontalScrollDisabled: js.UndefOr[Boolean] = js.undefined
-  var isVerticalScrollDisabled: js.UndefOr[Boolean] = js.undefined
-  var loadingOptions: js.UndefOr[js.Array[TableLoadingOption]] = js.undefined
+  ] = js.native
+  var columnHeaderRef: js.UndefOr[js.Function1[/* ref */ HTMLElement | Null, Unit]] = js.native
+  var enableColumnInteractionBar: js.UndefOr[Boolean] = js.native
+  var enableRowHeader: js.UndefOr[Boolean] = js.native
+  var grid: js.UndefOr[Grid] = js.native
+  var handleColumnResizeGuide: js.UndefOr[js.Function1[/* verticalGuides */ js.Array[Double], Unit]] = js.native
+  var handleColumnsReordering: js.UndefOr[js.Function1[/* verticalGuides */ js.Array[Double], Unit]] = js.native
+  var handleRowResizeGuide: js.UndefOr[js.Function1[/* horizontalGuides */ js.Array[Double], Unit]] = js.native
+  var handleRowsReordering: js.UndefOr[js.Function1[/* horizontalGuides */ js.Array[Double], Unit]] = js.native
+  var isHorizontalScrollDisabled: js.UndefOr[Boolean] = js.native
+  var isVerticalScrollDisabled: js.UndefOr[Boolean] = js.native
+  var loadingOptions: js.UndefOr[js.Array[TableLoadingOption]] = js.native
   var menuRenderer: js.UndefOr[
     js.Function1[/* refHandler */ js.Function1[/* ref */ HTMLElement, Unit], ReactElement]
-  ] = js.undefined
-  var numColumns: js.UndefOr[Double] = js.undefined
-  var numFrozenColumns: js.UndefOr[Double] = js.undefined
-  var numFrozenRows: js.UndefOr[Double] = js.undefined
-  var numRows: js.UndefOr[Double] = js.undefined
-  var onScroll: js.UndefOr[EventHandler[SyntheticEvent[Event_, HTMLElement]]] = js.undefined
-  var quadrantRef: js.UndefOr[js.Function1[/* ref */ HTMLElement | Null, Unit]] = js.undefined
+  ] = js.native
+  var numColumns: js.UndefOr[Double] = js.native
+  var numFrozenColumns: js.UndefOr[Double] = js.native
+  var numFrozenRows: js.UndefOr[Double] = js.native
+  var numRows: js.UndefOr[Double] = js.native
+  var onScroll: js.UndefOr[EventHandler[SyntheticEvent[Event_, HTMLElement]]] = js.native
+  var quadrantRef: js.UndefOr[js.Function1[/* ref */ HTMLElement | Null, Unit]] = js.native
   var rowHeaderCellRenderer: js.UndefOr[
     js.Function4[
       /* refHandler */ js.Function1[/* ref */ HTMLElement, Unit], 
@@ -61,73 +62,356 @@ trait PartialITableQuadrantStac extends js.Object {
       /* showFrozenRowsOnly */ js.UndefOr[Boolean], 
       ReactElement
     ]
-  ] = js.undefined
-  var rowHeaderRef: js.UndefOr[js.Function1[/* ref */ HTMLElement | Null, _]] = js.undefined
-  var scrollContainerRef: js.UndefOr[js.Function1[/* ref */ HTMLElement | Null, _]] = js.undefined
-  var throttleScrolling: js.UndefOr[Boolean] = js.undefined
-  var viewSyncDelay: js.UndefOr[Double] = js.undefined
+  ] = js.native
+  var rowHeaderRef: js.UndefOr[js.Function1[/* ref */ HTMLElement | Null, _]] = js.native
+  var scrollContainerRef: js.UndefOr[js.Function1[/* ref */ HTMLElement | Null, _]] = js.native
+  var throttleScrolling: js.UndefOr[Boolean] = js.native
+  var viewSyncDelay: js.UndefOr[Double] = js.native
 }
 
 object PartialITableQuadrantStac {
   @scala.inline
-  def apply(
-    bodyRef: /* ref */ HTMLElement | Null => _ = null,
-    bodyRenderer: (/* quadrantType */ QuadrantType, /* showFrozenRowsOnly */ js.UndefOr[Boolean], /* showFrozenColumnsOnly */ js.UndefOr[Boolean]) => ReactElement = null,
-    className: String = null,
-    columnHeaderCellRenderer: (/* refHandler */ js.Function1[/* ref */ HTMLElement, Unit], /* resizeHandler */ js.Function1[/* verticalGuides */ js.Array[Double], Unit], /* reorderingHandler */ js.Function3[/* oldIndex */ Double, /* newIndex */ Double, /* length */ Double, Unit], /* showFrozenColumnsOnly */ js.UndefOr[Boolean]) => ReactElement = null,
-    columnHeaderRef: /* ref */ HTMLElement | Null => Unit = null,
-    enableColumnInteractionBar: js.UndefOr[Boolean] = js.undefined,
-    enableRowHeader: js.UndefOr[Boolean] = js.undefined,
-    grid: Grid = null,
-    handleColumnResizeGuide: /* verticalGuides */ js.Array[Double] => Unit = null,
-    handleColumnsReordering: /* verticalGuides */ js.Array[Double] => Unit = null,
-    handleRowResizeGuide: /* horizontalGuides */ js.Array[Double] => Unit = null,
-    handleRowsReordering: /* horizontalGuides */ js.Array[Double] => Unit = null,
-    isHorizontalScrollDisabled: js.UndefOr[Boolean] = js.undefined,
-    isVerticalScrollDisabled: js.UndefOr[Boolean] = js.undefined,
-    loadingOptions: js.Array[TableLoadingOption] = null,
-    menuRenderer: /* refHandler */ js.Function1[/* ref */ HTMLElement, Unit] => ReactElement = null,
-    numColumns: Int | Double = null,
-    numFrozenColumns: Int | Double = null,
-    numFrozenRows: Int | Double = null,
-    numRows: Int | Double = null,
-    onScroll: SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    quadrantRef: /* ref */ HTMLElement | Null => Unit = null,
-    rowHeaderCellRenderer: (/* refHandler */ js.Function1[/* ref */ HTMLElement, Unit], /* resizeHandler */ js.Function1[/* verticalGuides */ js.Array[Double], Unit], /* reorderingHandler */ js.Function3[/* oldIndex */ Double, /* newIndex */ Double, /* length */ Double, Unit], /* showFrozenRowsOnly */ js.UndefOr[Boolean]) => ReactElement = null,
-    rowHeaderRef: /* ref */ HTMLElement | Null => _ = null,
-    scrollContainerRef: /* ref */ HTMLElement | Null => _ = null,
-    throttleScrolling: js.UndefOr[Boolean] = js.undefined,
-    viewSyncDelay: Int | Double = null
-  ): PartialITableQuadrantStac = {
+  def apply(): PartialITableQuadrantStac = {
     val __obj = js.Dynamic.literal()
-    if (bodyRef != null) __obj.updateDynamic("bodyRef")(js.Any.fromFunction1(bodyRef))
-    if (bodyRenderer != null) __obj.updateDynamic("bodyRenderer")(js.Any.fromFunction3(bodyRenderer))
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (columnHeaderCellRenderer != null) __obj.updateDynamic("columnHeaderCellRenderer")(js.Any.fromFunction4(columnHeaderCellRenderer))
-    if (columnHeaderRef != null) __obj.updateDynamic("columnHeaderRef")(js.Any.fromFunction1(columnHeaderRef))
-    if (!js.isUndefined(enableColumnInteractionBar)) __obj.updateDynamic("enableColumnInteractionBar")(enableColumnInteractionBar.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableRowHeader)) __obj.updateDynamic("enableRowHeader")(enableRowHeader.asInstanceOf[js.Any])
-    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
-    if (handleColumnResizeGuide != null) __obj.updateDynamic("handleColumnResizeGuide")(js.Any.fromFunction1(handleColumnResizeGuide))
-    if (handleColumnsReordering != null) __obj.updateDynamic("handleColumnsReordering")(js.Any.fromFunction1(handleColumnsReordering))
-    if (handleRowResizeGuide != null) __obj.updateDynamic("handleRowResizeGuide")(js.Any.fromFunction1(handleRowResizeGuide))
-    if (handleRowsReordering != null) __obj.updateDynamic("handleRowsReordering")(js.Any.fromFunction1(handleRowsReordering))
-    if (!js.isUndefined(isHorizontalScrollDisabled)) __obj.updateDynamic("isHorizontalScrollDisabled")(isHorizontalScrollDisabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(isVerticalScrollDisabled)) __obj.updateDynamic("isVerticalScrollDisabled")(isVerticalScrollDisabled.asInstanceOf[js.Any])
-    if (loadingOptions != null) __obj.updateDynamic("loadingOptions")(loadingOptions.asInstanceOf[js.Any])
-    if (menuRenderer != null) __obj.updateDynamic("menuRenderer")(js.Any.fromFunction1(menuRenderer))
-    if (numColumns != null) __obj.updateDynamic("numColumns")(numColumns.asInstanceOf[js.Any])
-    if (numFrozenColumns != null) __obj.updateDynamic("numFrozenColumns")(numFrozenColumns.asInstanceOf[js.Any])
-    if (numFrozenRows != null) __obj.updateDynamic("numFrozenRows")(numFrozenRows.asInstanceOf[js.Any])
-    if (numRows != null) __obj.updateDynamic("numRows")(numRows.asInstanceOf[js.Any])
-    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
-    if (quadrantRef != null) __obj.updateDynamic("quadrantRef")(js.Any.fromFunction1(quadrantRef))
-    if (rowHeaderCellRenderer != null) __obj.updateDynamic("rowHeaderCellRenderer")(js.Any.fromFunction4(rowHeaderCellRenderer))
-    if (rowHeaderRef != null) __obj.updateDynamic("rowHeaderRef")(js.Any.fromFunction1(rowHeaderRef))
-    if (scrollContainerRef != null) __obj.updateDynamic("scrollContainerRef")(js.Any.fromFunction1(scrollContainerRef))
-    if (!js.isUndefined(throttleScrolling)) __obj.updateDynamic("throttleScrolling")(throttleScrolling.asInstanceOf[js.Any])
-    if (viewSyncDelay != null) __obj.updateDynamic("viewSyncDelay")(viewSyncDelay.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialITableQuadrantStac]
   }
+  @scala.inline
+  implicit class PartialITableQuadrantStacOps[Self <: PartialITableQuadrantStac] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBodyRef(value: /* ref */ HTMLElement | Null => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyRef")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBodyRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBodyRenderer(
+      value: (/* quadrantType */ QuadrantType, /* showFrozenRowsOnly */ js.UndefOr[Boolean], /* showFrozenColumnsOnly */ js.UndefOr[Boolean]) => ReactElement
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyRenderer")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutBodyRenderer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyRenderer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnHeaderCellRenderer(
+      value: (/* refHandler */ js.Function1[/* ref */ HTMLElement, Unit], /* resizeHandler */ js.Function1[/* verticalGuides */ js.Array[Double], Unit], /* reorderingHandler */ js.Function3[/* oldIndex */ Double, /* newIndex */ Double, /* length */ Double, Unit], /* showFrozenColumnsOnly */ js.UndefOr[Boolean]) => ReactElement
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHeaderCellRenderer")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutColumnHeaderCellRenderer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHeaderCellRenderer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnHeaderRef(value: /* ref */ HTMLElement | Null => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHeaderRef")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutColumnHeaderRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHeaderRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableColumnInteractionBar(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableColumnInteractionBar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableColumnInteractionBar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableColumnInteractionBar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableRowHeader(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRowHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableRowHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRowHeader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrid(value: Grid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleColumnResizeGuide(value: /* verticalGuides */ js.Array[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleColumnResizeGuide")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandleColumnResizeGuide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleColumnResizeGuide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleColumnsReordering(value: /* verticalGuides */ js.Array[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleColumnsReordering")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandleColumnsReordering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleColumnsReordering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleRowResizeGuide(value: /* horizontalGuides */ js.Array[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleRowResizeGuide")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandleRowResizeGuide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleRowResizeGuide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleRowsReordering(value: /* horizontalGuides */ js.Array[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleRowsReordering")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandleRowsReordering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleRowsReordering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsHorizontalScrollDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHorizontalScrollDisabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsHorizontalScrollDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHorizontalScrollDisabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsVerticalScrollDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isVerticalScrollDisabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsVerticalScrollDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isVerticalScrollDisabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadingOptions(value: js.Array[TableLoadingOption]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadingOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenuRenderer(value: /* refHandler */ js.Function1[/* ref */ HTMLElement, Unit] => ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutMenuRenderer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuRenderer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumColumns(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumFrozenColumns(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numFrozenColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumFrozenColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numFrozenColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumFrozenRows(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numFrozenRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumFrozenRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numFrozenRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumRows(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnScroll(value: SyntheticEvent[Event_, HTMLElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnScroll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuadrantRef(value: /* ref */ HTMLElement | Null => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quadrantRef")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutQuadrantRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quadrantRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowHeaderCellRenderer(
+      value: (/* refHandler */ js.Function1[/* ref */ HTMLElement, Unit], /* resizeHandler */ js.Function1[/* verticalGuides */ js.Array[Double], Unit], /* reorderingHandler */ js.Function3[/* oldIndex */ Double, /* newIndex */ Double, /* length */ Double, Unit], /* showFrozenRowsOnly */ js.UndefOr[Boolean]) => ReactElement
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeaderCellRenderer")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutRowHeaderCellRenderer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeaderCellRenderer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowHeaderRef(value: /* ref */ HTMLElement | Null => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeaderRef")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRowHeaderRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeaderRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollContainerRef(value: /* ref */ HTMLElement | Null => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollContainerRef")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutScrollContainerRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollContainerRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThrottleScrolling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("throttleScrolling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThrottleScrolling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("throttleScrolling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewSyncDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewSyncDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViewSyncDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewSyncDelay")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

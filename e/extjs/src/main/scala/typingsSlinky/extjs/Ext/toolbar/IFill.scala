@@ -5,18 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IFill extends IComponent {
   /** [Property] (Boolean) */
-  var isFill: js.UndefOr[Boolean] = js.undefined
+  var isFill: js.UndefOr[Boolean] = js.native
 }
 
 object IFill {
   @scala.inline
-  def apply(IComponent: IComponent = null, isFill: js.UndefOr[Boolean] = js.undefined): IFill = {
+  def apply(): IFill = {
     val __obj = js.Dynamic.literal()
-    if (IComponent != null) js.Dynamic.global.Object.assign(__obj, IComponent)
-    if (!js.isUndefined(isFill)) __obj.updateDynamic("isFill")(isFill.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFill]
   }
+  @scala.inline
+  implicit class IFillOps[Self <: IFill] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsFill(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFill")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,5 +13,6 @@ trait HTMLDataListElement extends HTMLElement {
 
 @JSGlobal("HTMLDataListElement")
 @js.native
-object HTMLDataListElement extends Instantiable0[HTMLDataListElement]
+object HTMLDataListElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLDataListElement]
 

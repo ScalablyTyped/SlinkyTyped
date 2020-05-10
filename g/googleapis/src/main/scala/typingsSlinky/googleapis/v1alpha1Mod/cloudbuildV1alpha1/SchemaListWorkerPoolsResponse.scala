@@ -17,10 +17,29 @@ trait SchemaListWorkerPoolsResponse extends js.Object {
 
 object SchemaListWorkerPoolsResponse {
   @scala.inline
-  def apply(workerPools: js.Array[SchemaWorkerPool] = null): SchemaListWorkerPoolsResponse = {
+  def apply(): SchemaListWorkerPoolsResponse = {
     val __obj = js.Dynamic.literal()
-    if (workerPools != null) __obj.updateDynamic("workerPools")(workerPools.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListWorkerPoolsResponse]
   }
+  @scala.inline
+  implicit class SchemaListWorkerPoolsResponseOps[Self <: SchemaListWorkerPoolsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWorkerPools(value: js.Array[SchemaWorkerPool]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerPools")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerPools: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerPools")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,17 +7,36 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetInstanceSnapshotsRequest extends js.Object {
   /**
-    * A token used for advancing to the next page of results from your get instance snapshots request.
+    * The token to advance to the next page of results from your request. To get a page token, perform an initial GetInstanceSnapshots request. If your results are paginated, the response will return a next page token that you can specify as the page token in a subsequent request.
     */
   var pageToken: js.UndefOr[String] = js.native
 }
 
 object GetInstanceSnapshotsRequest {
   @scala.inline
-  def apply(pageToken: String = null): GetInstanceSnapshotsRequest = {
+  def apply(): GetInstanceSnapshotsRequest = {
     val __obj = js.Dynamic.literal()
-    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetInstanceSnapshotsRequest]
   }
+  @scala.inline
+  implicit class GetInstanceSnapshotsRequestOps[Self <: GetInstanceSnapshotsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

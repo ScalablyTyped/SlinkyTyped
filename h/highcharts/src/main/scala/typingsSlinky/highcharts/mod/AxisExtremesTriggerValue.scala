@@ -17,20 +17,18 @@ trait AxisExtremesTriggerValue extends js.Object
 
 object AxisExtremesTriggerValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def navigator: typingsSlinky.highcharts.highchartsStrings.navigator = "navigator".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.navigator]
   @scala.inline
-  def navigator: typingsSlinky.highcharts.highchartsStrings.navigator = this.cast("navigator")
+  def pan: typingsSlinky.highcharts.highchartsStrings.pan = "pan".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.pan]
   @scala.inline
-  def pan: typingsSlinky.highcharts.highchartsStrings.pan = this.cast("pan")
+  def rangeSelectorButton: typingsSlinky.highcharts.highchartsStrings.rangeSelectorButton = "rangeSelectorButton".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.rangeSelectorButton]
   @scala.inline
-  def rangeSelectorButton: typingsSlinky.highcharts.highchartsStrings.rangeSelectorButton = this.cast("rangeSelectorButton")
+  def rangeSelectorInput: typingsSlinky.highcharts.highchartsStrings.rangeSelectorInput = "rangeSelectorInput".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.rangeSelectorInput]
   @scala.inline
-  def rangeSelectorInput: typingsSlinky.highcharts.highchartsStrings.rangeSelectorInput = this.cast("rangeSelectorInput")
+  def scrollbar: typingsSlinky.highcharts.highchartsStrings.scrollbar = "scrollbar".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.scrollbar]
   @scala.inline
-  def scrollbar: typingsSlinky.highcharts.highchartsStrings.scrollbar = this.cast("scrollbar")
+  def traverseUpButton: typingsSlinky.highcharts.highchartsStrings.traverseUpButton = "traverseUpButton".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.traverseUpButton]
   @scala.inline
-  def traverseUpButton: typingsSlinky.highcharts.highchartsStrings.traverseUpButton = this.cast("traverseUpButton")
-  @scala.inline
-  def zoom: typingsSlinky.highcharts.highchartsStrings.zoom = this.cast("zoom")
+  def zoom: typingsSlinky.highcharts.highchartsStrings.zoom = "zoom".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.zoom]
 }
 

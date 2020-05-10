@@ -22,23 +22,73 @@ trait GroupPolicyState extends js.Object {
     * prefix. Conflicts with `name`.
     */
   val namePrefix: js.UndefOr[Input[String]] = js.native
+  /**
+    * The policy document attached to the group.
+    */
   val policy: js.UndefOr[Input[String | PolicyDocument]] = js.native
 }
 
 object GroupPolicyState {
   @scala.inline
-  def apply(
-    group: Input[String] = null,
-    name: Input[String] = null,
-    namePrefix: Input[String] = null,
-    policy: Input[String | PolicyDocument] = null
-  ): GroupPolicyState = {
+  def apply(): GroupPolicyState = {
     val __obj = js.Dynamic.literal()
-    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (namePrefix != null) __obj.updateDynamic("namePrefix")(namePrefix.asInstanceOf[js.Any])
-    if (policy != null) __obj.updateDynamic("policy")(policy.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroupPolicyState]
   }
+  @scala.inline
+  implicit class GroupPolicyStateOps[Self <: GroupPolicyState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroup(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamePrefix(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamePrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicy(value: Input[String | PolicyDocument]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

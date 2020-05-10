@@ -50,27 +50,119 @@ trait PutScalingPolicyInput extends js.Object {
 
 object PutScalingPolicyInput {
   @scala.inline
-  def apply(
-    FleetId: FleetId,
-    MetricName: MetricName,
-    Name: NonZeroAndMaxString,
-    ComparisonOperator: ComparisonOperatorType = null,
-    EvaluationPeriods: Int | scala.Double = null,
-    PolicyType: PolicyType = null,
-    ScalingAdjustment: Int | scala.Double = null,
-    ScalingAdjustmentType: ScalingAdjustmentType = null,
-    TargetConfiguration: TargetConfiguration = null,
-    Threshold: Int | scala.Double = null
-  ): PutScalingPolicyInput = {
+  def apply(FleetId: FleetId, MetricName: MetricName, Name: NonZeroAndMaxString): PutScalingPolicyInput = {
     val __obj = js.Dynamic.literal(FleetId = FleetId.asInstanceOf[js.Any], MetricName = MetricName.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
-    if (ComparisonOperator != null) __obj.updateDynamic("ComparisonOperator")(ComparisonOperator.asInstanceOf[js.Any])
-    if (EvaluationPeriods != null) __obj.updateDynamic("EvaluationPeriods")(EvaluationPeriods.asInstanceOf[js.Any])
-    if (PolicyType != null) __obj.updateDynamic("PolicyType")(PolicyType.asInstanceOf[js.Any])
-    if (ScalingAdjustment != null) __obj.updateDynamic("ScalingAdjustment")(ScalingAdjustment.asInstanceOf[js.Any])
-    if (ScalingAdjustmentType != null) __obj.updateDynamic("ScalingAdjustmentType")(ScalingAdjustmentType.asInstanceOf[js.Any])
-    if (TargetConfiguration != null) __obj.updateDynamic("TargetConfiguration")(TargetConfiguration.asInstanceOf[js.Any])
-    if (Threshold != null) __obj.updateDynamic("Threshold")(Threshold.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutScalingPolicyInput]
   }
+  @scala.inline
+  implicit class PutScalingPolicyInputOps[Self <: PutScalingPolicyInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFleetId(value: FleetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetricName(value: MetricName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComparisonOperator(value: ComparisonOperatorType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComparisonOperator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComparisonOperator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComparisonOperator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvaluationPeriods(value: PositiveInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationPeriods")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvaluationPeriods: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationPeriods")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyType(value: PolicyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScalingAdjustment(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingAdjustment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScalingAdjustment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingAdjustment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScalingAdjustmentType(value: ScalingAdjustmentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingAdjustmentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScalingAdjustmentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingAdjustmentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetConfiguration(value: TargetConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Threshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Threshold")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

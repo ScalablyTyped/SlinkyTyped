@@ -21,14 +21,12 @@ trait NxHypercubeMode extends js.Object
 
 object NxHypercubeMode {
   @scala.inline
-  def K: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.K = this.cast("K")
+  def K: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.K = "K".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.K]
   @scala.inline
-  def P: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.P = this.cast("P")
+  def P: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.P = "P".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.P]
   @scala.inline
-  def S: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.S = this.cast("S")
+  def S: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.S = "S".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.S]
   @scala.inline
-  def T: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.T = this.cast("T")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def T: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.T = "T".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.T]
 }
 

@@ -47,11 +47,41 @@ trait SchemaCohortGroup extends js.Object {
 
 object SchemaCohortGroup {
   @scala.inline
-  def apply(cohorts: js.Array[SchemaCohort] = null, lifetimeValue: js.UndefOr[Boolean] = js.undefined): SchemaCohortGroup = {
+  def apply(): SchemaCohortGroup = {
     val __obj = js.Dynamic.literal()
-    if (cohorts != null) __obj.updateDynamic("cohorts")(cohorts.asInstanceOf[js.Any])
-    if (!js.isUndefined(lifetimeValue)) __obj.updateDynamic("lifetimeValue")(lifetimeValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCohortGroup]
   }
+  @scala.inline
+  implicit class SchemaCohortGroupOps[Self <: SchemaCohortGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCohorts(value: js.Array[SchemaCohort]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cohorts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCohorts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cohorts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLifetimeValue(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lifetimeValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLifetimeValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lifetimeValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

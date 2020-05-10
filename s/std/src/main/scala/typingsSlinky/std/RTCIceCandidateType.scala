@@ -14,14 +14,12 @@ trait RTCIceCandidateType extends js.Object
 
 object RTCIceCandidateType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def host: typingsSlinky.std.stdStrings.host = "host".asInstanceOf[typingsSlinky.std.stdStrings.host]
   @scala.inline
-  def host: typingsSlinky.std.stdStrings.host = this.cast("host")
+  def prflx: typingsSlinky.std.stdStrings.prflx = "prflx".asInstanceOf[typingsSlinky.std.stdStrings.prflx]
   @scala.inline
-  def prflx: typingsSlinky.std.stdStrings.prflx = this.cast("prflx")
+  def relay: typingsSlinky.std.stdStrings.relay = "relay".asInstanceOf[typingsSlinky.std.stdStrings.relay]
   @scala.inline
-  def relay: typingsSlinky.std.stdStrings.relay = this.cast("relay")
-  @scala.inline
-  def srflx: typingsSlinky.std.stdStrings.srflx = this.cast("srflx")
+  def srflx: typingsSlinky.std.stdStrings.srflx = "srflx".asInstanceOf[typingsSlinky.std.stdStrings.srflx]
 }
 

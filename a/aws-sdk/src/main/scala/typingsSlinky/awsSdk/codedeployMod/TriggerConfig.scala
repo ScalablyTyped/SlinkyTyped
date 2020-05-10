@@ -22,16 +22,53 @@ trait TriggerConfig extends js.Object {
 
 object TriggerConfig {
   @scala.inline
-  def apply(
-    triggerEvents: TriggerEventTypeList = null,
-    triggerName: TriggerName = null,
-    triggerTargetArn: TriggerTargetArn = null
-  ): TriggerConfig = {
+  def apply(): TriggerConfig = {
     val __obj = js.Dynamic.literal()
-    if (triggerEvents != null) __obj.updateDynamic("triggerEvents")(triggerEvents.asInstanceOf[js.Any])
-    if (triggerName != null) __obj.updateDynamic("triggerName")(triggerName.asInstanceOf[js.Any])
-    if (triggerTargetArn != null) __obj.updateDynamic("triggerTargetArn")(triggerTargetArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[TriggerConfig]
   }
+  @scala.inline
+  implicit class TriggerConfigOps[Self <: TriggerConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTriggerEvents(value: TriggerEventTypeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggerEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerEvents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriggerName(value: TriggerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriggerTargetArn(value: TriggerTargetArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerTargetArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggerTargetArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerTargetArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

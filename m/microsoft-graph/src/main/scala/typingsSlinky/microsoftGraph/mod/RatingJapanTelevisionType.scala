@@ -13,12 +13,10 @@ trait RatingJapanTelevisionType extends js.Object
 
 object RatingJapanTelevisionType {
   @scala.inline
-  def allAllowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.allAllowed = this.cast("allAllowed")
+  def allAllowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.allAllowed = "allAllowed".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.allAllowed]
   @scala.inline
-  def allBlocked: typingsSlinky.microsoftGraph.microsoftGraphStrings.allBlocked = this.cast("allBlocked")
+  def allBlocked: typingsSlinky.microsoftGraph.microsoftGraphStrings.allBlocked = "allBlocked".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.allBlocked]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def explicitAllowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.explicitAllowed = this.cast("explicitAllowed")
+  def explicitAllowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.explicitAllowed = "explicitAllowed".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.explicitAllowed]
 }
 

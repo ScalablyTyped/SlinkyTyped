@@ -13,12 +13,10 @@ trait Type extends js.Object
 
 object Type {
   @scala.inline
-  def baidu: typingsSlinky.amapJsApi.amapJsApiStrings.baidu = this.cast("baidu")
+  def baidu: typingsSlinky.amapJsApi.amapJsApiStrings.baidu = "baidu".asInstanceOf[typingsSlinky.amapJsApi.amapJsApiStrings.baidu]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def gps: typingsSlinky.amapJsApi.amapJsApiStrings.gps = "gps".asInstanceOf[typingsSlinky.amapJsApi.amapJsApiStrings.gps]
   @scala.inline
-  def gps: typingsSlinky.amapJsApi.amapJsApiStrings.gps = this.cast("gps")
-  @scala.inline
-  def mapbar: typingsSlinky.amapJsApi.amapJsApiStrings.mapbar = this.cast("mapbar")
+  def mapbar: typingsSlinky.amapJsApi.amapJsApiStrings.mapbar = "mapbar".asInstanceOf[typingsSlinky.amapJsApi.amapJsApiStrings.mapbar]
 }
 

@@ -1,15 +1,16 @@
 package typingsSlinky.spectacle.components
 
+import typingsSlinky.spectacle.mod.BaseProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Quote
-  extends SharedApply_BaseProps40439418[typingsSlinky.spectacle.mod.Quote] {
+object Quote {
   @JSImport("spectacle", "Quote")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: BaseProps): SharedBuilder_BaseProps_65666440[typingsSlinky.spectacle.mod.Quote] = new SharedBuilder_BaseProps_65666440[typingsSlinky.spectacle.mod.Quote](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Quote.type): SharedBuilder_BaseProps_65666440[typingsSlinky.spectacle.mod.Quote] = new SharedBuilder_BaseProps_65666440[typingsSlinky.spectacle.mod.Quote](js.Array(this.component, js.Dictionary.empty))()
 }
 

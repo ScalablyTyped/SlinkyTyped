@@ -22,16 +22,53 @@ trait TransitGatewayRegistration extends js.Object {
 
 object TransitGatewayRegistration {
   @scala.inline
-  def apply(
-    GlobalNetworkId: String = null,
-    State: TransitGatewayRegistrationStateReason = null,
-    TransitGatewayArn: String = null
-  ): TransitGatewayRegistration = {
+  def apply(): TransitGatewayRegistration = {
     val __obj = js.Dynamic.literal()
-    if (GlobalNetworkId != null) __obj.updateDynamic("GlobalNetworkId")(GlobalNetworkId.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
-    if (TransitGatewayArn != null) __obj.updateDynamic("TransitGatewayArn")(TransitGatewayArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransitGatewayRegistration]
   }
+  @scala.inline
+  implicit class TransitGatewayRegistrationOps[Self <: TransitGatewayRegistration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGlobalNetworkId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalNetworkId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalNetworkId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalNetworkId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: TransitGatewayRegistrationStateReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitGatewayArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitGatewayArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

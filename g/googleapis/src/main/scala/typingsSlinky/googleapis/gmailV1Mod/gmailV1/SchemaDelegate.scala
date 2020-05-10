@@ -24,11 +24,41 @@ trait SchemaDelegate extends js.Object {
 
 object SchemaDelegate {
   @scala.inline
-  def apply(delegateEmail: String = null, verificationStatus: String = null): SchemaDelegate = {
+  def apply(): SchemaDelegate = {
     val __obj = js.Dynamic.literal()
-    if (delegateEmail != null) __obj.updateDynamic("delegateEmail")(delegateEmail.asInstanceOf[js.Any])
-    if (verificationStatus != null) __obj.updateDynamic("verificationStatus")(verificationStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDelegate]
   }
+  @scala.inline
+  implicit class SchemaDelegateOps[Self <: SchemaDelegate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDelegateEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delegateEmail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelegateEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delegateEmail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerificationStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verificationStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerificationStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verificationStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -78,43 +78,215 @@ trait CreateAppRequest extends js.Object {
 
 object CreateAppRequest {
   @scala.inline
-  def apply(
-    name: Name,
-    accessToken: AccessToken = null,
-    autoBranchCreationConfig: AutoBranchCreationConfig = null,
-    autoBranchCreationPatterns: AutoBranchCreationPatterns = null,
-    basicAuthCredentials: BasicAuthCredentials = null,
-    buildSpec: BuildSpec = null,
-    customRules: CustomRules = null,
-    description: Description = null,
-    enableAutoBranchCreation: js.UndefOr[Boolean] = js.undefined,
-    enableBasicAuth: js.UndefOr[Boolean] = js.undefined,
-    enableBranchAutoBuild: js.UndefOr[Boolean] = js.undefined,
-    environmentVariables: EnvironmentVariables = null,
-    iamServiceRoleArn: ServiceRoleArn = null,
-    oauthToken: OauthToken = null,
-    platform: Platform = null,
-    repository: Repository = null,
-    tags: TagMap = null
-  ): CreateAppRequest = {
+  def apply(name: Name): CreateAppRequest = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (accessToken != null) __obj.updateDynamic("accessToken")(accessToken.asInstanceOf[js.Any])
-    if (autoBranchCreationConfig != null) __obj.updateDynamic("autoBranchCreationConfig")(autoBranchCreationConfig.asInstanceOf[js.Any])
-    if (autoBranchCreationPatterns != null) __obj.updateDynamic("autoBranchCreationPatterns")(autoBranchCreationPatterns.asInstanceOf[js.Any])
-    if (basicAuthCredentials != null) __obj.updateDynamic("basicAuthCredentials")(basicAuthCredentials.asInstanceOf[js.Any])
-    if (buildSpec != null) __obj.updateDynamic("buildSpec")(buildSpec.asInstanceOf[js.Any])
-    if (customRules != null) __obj.updateDynamic("customRules")(customRules.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableAutoBranchCreation)) __obj.updateDynamic("enableAutoBranchCreation")(enableAutoBranchCreation.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableBasicAuth)) __obj.updateDynamic("enableBasicAuth")(enableBasicAuth.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableBranchAutoBuild)) __obj.updateDynamic("enableBranchAutoBuild")(enableBranchAutoBuild.asInstanceOf[js.Any])
-    if (environmentVariables != null) __obj.updateDynamic("environmentVariables")(environmentVariables.asInstanceOf[js.Any])
-    if (iamServiceRoleArn != null) __obj.updateDynamic("iamServiceRoleArn")(iamServiceRoleArn.asInstanceOf[js.Any])
-    if (oauthToken != null) __obj.updateDynamic("oauthToken")(oauthToken.asInstanceOf[js.Any])
-    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
-    if (repository != null) __obj.updateDynamic("repository")(repository.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateAppRequest]
   }
+  @scala.inline
+  implicit class CreateAppRequestOps[Self <: CreateAppRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccessToken(value: AccessToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoBranchCreationConfig(value: AutoBranchCreationConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBranchCreationConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoBranchCreationConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBranchCreationConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoBranchCreationPatterns(value: AutoBranchCreationPatterns): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBranchCreationPatterns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoBranchCreationPatterns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBranchCreationPatterns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBasicAuthCredentials(value: BasicAuthCredentials): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basicAuthCredentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBasicAuthCredentials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basicAuthCredentials")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuildSpec(value: BuildSpec): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buildSpec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuildSpec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buildSpec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomRules(value: CustomRules): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customRules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableAutoBranchCreation(value: EnableAutoBranchCreation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAutoBranchCreation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableAutoBranchCreation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAutoBranchCreation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableBasicAuth(value: EnableBasicAuth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableBasicAuth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableBasicAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableBasicAuth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableBranchAutoBuild(value: EnableBranchAutoBuild): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableBranchAutoBuild")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableBranchAutoBuild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableBranchAutoBuild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironmentVariables(value: EnvironmentVariables): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironmentVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariables")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIamServiceRoleArn(value: ServiceRoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iamServiceRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIamServiceRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iamServiceRoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOauthToken(value: OauthToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOauthToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatform(value: Platform): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepository(value: Repository): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepository: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

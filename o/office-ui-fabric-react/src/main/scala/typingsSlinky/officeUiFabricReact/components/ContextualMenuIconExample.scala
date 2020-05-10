@@ -1,17 +1,17 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ContextualMenuIconExample
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, js.Object] {
+object ContextualMenuIconExample {
   @JSImport("office-ui-fabric-react/lib/components/ContextualMenu/examples/ContextualMenu.Icon.Example", "ContextualMenuIconExample")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: js.Object): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ContextualMenuIconExample.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

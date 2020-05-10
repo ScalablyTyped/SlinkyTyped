@@ -50,30 +50,137 @@ trait CurrentInstance extends js.Object {
 
 object CurrentInstance {
   @scala.inline
-  def apply(
-    CurrencyCode: GenericString = null,
-    MonthlyCost: GenericString = null,
-    OnDemandHoursInLookbackPeriod: GenericString = null,
-    ReservationCoveredHoursInLookbackPeriod: GenericString = null,
-    ResourceDetails: ResourceDetails = null,
-    ResourceId: GenericString = null,
-    ResourceUtilization: ResourceUtilization = null,
-    SavingsPlansCoveredHoursInLookbackPeriod: GenericString = null,
-    Tags: TagValuesList = null,
-    TotalRunningHoursInLookbackPeriod: GenericString = null
-  ): CurrentInstance = {
+  def apply(): CurrentInstance = {
     val __obj = js.Dynamic.literal()
-    if (CurrencyCode != null) __obj.updateDynamic("CurrencyCode")(CurrencyCode.asInstanceOf[js.Any])
-    if (MonthlyCost != null) __obj.updateDynamic("MonthlyCost")(MonthlyCost.asInstanceOf[js.Any])
-    if (OnDemandHoursInLookbackPeriod != null) __obj.updateDynamic("OnDemandHoursInLookbackPeriod")(OnDemandHoursInLookbackPeriod.asInstanceOf[js.Any])
-    if (ReservationCoveredHoursInLookbackPeriod != null) __obj.updateDynamic("ReservationCoveredHoursInLookbackPeriod")(ReservationCoveredHoursInLookbackPeriod.asInstanceOf[js.Any])
-    if (ResourceDetails != null) __obj.updateDynamic("ResourceDetails")(ResourceDetails.asInstanceOf[js.Any])
-    if (ResourceId != null) __obj.updateDynamic("ResourceId")(ResourceId.asInstanceOf[js.Any])
-    if (ResourceUtilization != null) __obj.updateDynamic("ResourceUtilization")(ResourceUtilization.asInstanceOf[js.Any])
-    if (SavingsPlansCoveredHoursInLookbackPeriod != null) __obj.updateDynamic("SavingsPlansCoveredHoursInLookbackPeriod")(SavingsPlansCoveredHoursInLookbackPeriod.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (TotalRunningHoursInLookbackPeriod != null) __obj.updateDynamic("TotalRunningHoursInLookbackPeriod")(TotalRunningHoursInLookbackPeriod.asInstanceOf[js.Any])
     __obj.asInstanceOf[CurrentInstance]
   }
+  @scala.inline
+  implicit class CurrentInstanceOps[Self <: CurrentInstance] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrencyCode(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrencyCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonthlyCost(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MonthlyCost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonthlyCost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MonthlyCost")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDemandHoursInLookbackPeriod(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDemandHoursInLookbackPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDemandHoursInLookbackPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDemandHoursInLookbackPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReservationCoveredHoursInLookbackPeriod(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservationCoveredHoursInLookbackPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReservationCoveredHoursInLookbackPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservationCoveredHoursInLookbackPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceDetails(value: ResourceDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceId(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceUtilization(value: ResourceUtilization): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceUtilization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceUtilization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceUtilization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSavingsPlansCoveredHoursInLookbackPeriod(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SavingsPlansCoveredHoursInLookbackPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSavingsPlansCoveredHoursInLookbackPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SavingsPlansCoveredHoursInLookbackPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagValuesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalRunningHoursInLookbackPeriod(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalRunningHoursInLookbackPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalRunningHoursInLookbackPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalRunningHoursInLookbackPeriod")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

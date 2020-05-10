@@ -20,8 +20,27 @@ object UplinkEchoConfig {
   @scala.inline
   def apply(antennaUplinkConfigArn: ConfigArn, enabled: Boolean): UplinkEchoConfig = {
     val __obj = js.Dynamic.literal(antennaUplinkConfigArn = antennaUplinkConfigArn.asInstanceOf[js.Any], enabled = enabled.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[UplinkEchoConfig]
   }
+  @scala.inline
+  implicit class UplinkEchoConfigOps[Self <: UplinkEchoConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAntennaUplinkConfigArn(value: ConfigArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("antennaUplinkConfigArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

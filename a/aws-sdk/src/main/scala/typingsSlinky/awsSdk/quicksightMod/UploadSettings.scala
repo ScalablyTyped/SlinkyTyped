@@ -30,20 +30,77 @@ trait UploadSettings extends js.Object {
 
 object UploadSettings {
   @scala.inline
-  def apply(
-    ContainsHeader: js.UndefOr[scala.Boolean] = js.undefined,
-    Delimiter: Delimiter = null,
-    Format: FileFormat = null,
-    StartFromRow: Int | scala.Double = null,
-    TextQualifier: TextQualifier = null
-  ): UploadSettings = {
+  def apply(): UploadSettings = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(ContainsHeader)) __obj.updateDynamic("ContainsHeader")(ContainsHeader.asInstanceOf[js.Any])
-    if (Delimiter != null) __obj.updateDynamic("Delimiter")(Delimiter.asInstanceOf[js.Any])
-    if (Format != null) __obj.updateDynamic("Format")(Format.asInstanceOf[js.Any])
-    if (StartFromRow != null) __obj.updateDynamic("StartFromRow")(StartFromRow.asInstanceOf[js.Any])
-    if (TextQualifier != null) __obj.updateDynamic("TextQualifier")(TextQualifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[UploadSettings]
   }
+  @scala.inline
+  implicit class UploadSettingsOps[Self <: UploadSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainsHeader(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainsHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainsHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainsHeader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelimiter(value: Delimiter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Delimiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelimiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Delimiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: FileFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartFromRow(value: PositiveInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartFromRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartFromRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartFromRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextQualifier(value: TextQualifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TextQualifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextQualifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TextQualifier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,11 +13,41 @@ trait AnonPrivate extends js.Object {
 
 object AnonPrivate {
   @scala.inline
-  def apply(`private`: StringDictionary[String] = null, shared: StringDictionary[String] = null): AnonPrivate = {
+  def apply(): AnonPrivate = {
     val __obj = js.Dynamic.literal()
-    if (`private` != null) __obj.updateDynamic("private")(`private`.asInstanceOf[js.Any])
-    if (shared != null) __obj.updateDynamic("shared")(shared.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonPrivate]
   }
+  @scala.inline
+  implicit class AnonPrivateOps[Self <: AnonPrivate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPrivate(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("private")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("private")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShared(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shared")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShared: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shared")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

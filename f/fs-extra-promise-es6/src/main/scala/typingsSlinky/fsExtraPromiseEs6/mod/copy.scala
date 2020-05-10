@@ -1,6 +1,5 @@
 package typingsSlinky.fsExtraPromiseEs6.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ object copy extends js.Object {
   def apply(
     src: String,
     dest: String,
-    callback: js.Function1[(/* err */ Error) | (/* src */ String), Boolean | Unit]
+    callback: js.Function1[(/* err */ js.Error) | (/* src */ String), Boolean | Unit]
   ): Unit = js.native
   def apply(
     src: String,

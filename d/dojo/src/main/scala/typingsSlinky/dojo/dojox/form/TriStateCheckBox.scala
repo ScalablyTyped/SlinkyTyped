@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
   * Checkbox with three states
   *
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dijit.form.ToggleButtonMixin because Inheritance from two classes. Inlined checked, postCreate, reset */ @JSGlobal("dojox.form.TriStateCheckBox")
 @js.native
 class TriStateCheckBox () extends Button {

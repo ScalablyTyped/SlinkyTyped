@@ -23,12 +23,53 @@ trait RecordGeolocationRoutingPolicy extends js.Object {
 
 object RecordGeolocationRoutingPolicy {
   @scala.inline
-  def apply(continent: Input[String] = null, country: Input[String] = null, subdivision: Input[String] = null): RecordGeolocationRoutingPolicy = {
+  def apply(): RecordGeolocationRoutingPolicy = {
     val __obj = js.Dynamic.literal()
-    if (continent != null) __obj.updateDynamic("continent")(continent.asInstanceOf[js.Any])
-    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
-    if (subdivision != null) __obj.updateDynamic("subdivision")(subdivision.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecordGeolocationRoutingPolicy]
   }
+  @scala.inline
+  implicit class RecordGeolocationRoutingPolicyOps[Self <: RecordGeolocationRoutingPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContinent(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountry(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubdivision(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subdivision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubdivision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subdivision")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -49,6 +49,7 @@ trait RegistrationsResource extends js.Object {
     * Deletes a `Registration`, causing Classroom to stop sending notifications
     * for that `Registration`.
     */
+  def delete(): Request_[js.Object] = js.native
   def delete(request: AnonRegistrationId): Request_[js.Object] = js.native
 }
 

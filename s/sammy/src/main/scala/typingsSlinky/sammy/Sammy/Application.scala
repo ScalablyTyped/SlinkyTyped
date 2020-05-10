@@ -2,7 +2,6 @@ package typingsSlinky.sammy.Sammy
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jquery.JQuery_
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,12 +30,12 @@ trait Application extends Object {
   def contextMatchesOptions(context: js.Any, match_options: js.Any): Boolean = js.native
   def contextMatchesOptions(context: js.Any, match_options: js.Any, positive: Boolean): Boolean = js.native
   def del(path: String, callback: js.Function): Application = js.native
-  def del(path: RegExp, callback: js.Function): Application = js.native
+  def del(path: js.RegExp, callback: js.Function): Application = js.native
   def destroy(): Application = js.native
   def error(message: String, original_error: js.Error): Unit = js.native
   def eventNamespace(): String = js.native
   def get(path: String, callback: js.Function): Application = js.native
-  def get(path: RegExp, callback: js.Function): Application = js.native
+  def get(path: js.RegExp, callback: js.Function): Application = js.native
   def getLocation(): String = js.native
   def helper(name: String, method: js.Function): js.Any = js.native
    // Behaviour similar to _.extend
@@ -47,16 +46,16 @@ trait Application extends Object {
   def mapRoutes(route_array: js.Array[_]): Application = js.native
   def notFound(verb: String, path: String): js.Any = js.native
   def post(path: String, callback: js.Function): Application = js.native
-  def post(path: RegExp, callback: js.Function): Application = js.native
+  def post(path: js.RegExp, callback: js.Function): Application = js.native
   def put(path: String, callback: js.Function): Application = js.native
-  def put(path: RegExp, callback: js.Function): Application = js.native
+  def put(path: js.RegExp, callback: js.Function): Application = js.native
   def refresh(): Application = js.native
   def requireOAuth(): js.Any = js.native
   def requireOAuth(callback: js.Function): js.Any = js.native
   def requireOAuth(path: String): js.Any = js.native
   def routablePath(path: String): String = js.native
   def route(verb: String, path: String, callback: js.Function): Application = js.native
-  def route(verb: String, path: RegExp, callback: js.Function): Application = js.native
+  def route(verb: String, path: js.RegExp, callback: js.Function): Application = js.native
   def run(): Application = js.native
   def run(start_url: String): Application = js.native
   def runRoute(verb: String): js.Any = js.native

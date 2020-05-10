@@ -6,23 +6,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IFileCreationOptions extends IDataOptions {
-  var file: AnonData
-  var purpose: IPurpose
+  var file: AnonData = js.native
+  var purpose: IPurpose = js.native
 }
 
 object IFileCreationOptions {
   @scala.inline
-  def apply(
-    file: AnonData,
-    purpose: IPurpose,
-    expand: js.Array[String] = null,
-    include: js.Array[String] = null
-  ): IFileCreationOptions = {
+  def apply(file: AnonData, purpose: IPurpose): IFileCreationOptions = {
     val __obj = js.Dynamic.literal(file = file.asInstanceOf[js.Any], purpose = purpose.asInstanceOf[js.Any])
-    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
-    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFileCreationOptions]
   }
+  @scala.inline
+  implicit class IFileCreationOptionsOps[Self <: IFileCreationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFile(value: AnonData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPurpose(value: IPurpose): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("purpose")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

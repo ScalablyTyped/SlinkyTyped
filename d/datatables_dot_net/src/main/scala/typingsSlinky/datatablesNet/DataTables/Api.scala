@@ -1,8 +1,8 @@
 package typingsSlinky.datatablesNet.DataTables
 
 import org.scalablytyped.runtime.NumberDictionary
+import org.scalajs.dom.raw.Node
 import typingsSlinky.datatablesNet.JQuery
-import typingsSlinky.std.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,9 +1,7 @@
 package typingsSlinky.reactEasyCrop.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactEasyCrop.AnonContainerClassName
 import typingsSlinky.reactEasyCrop.AnonContainerStyle
 import typingsSlinky.reactEasyCrop.mod.Area
@@ -18,65 +16,64 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactEasyCrop
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactEasyCrop {
   @JSImport("react-easy-crop", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    crop: Location,
-    image: String,
-    onCropChange: Location => Unit,
-    aspect: Int | Double = null,
-    classes: AnonContainerClassName = null,
-    cropShape: rect | round = null,
-    cropSize: Size = null,
-    crossOrigin: String = null,
-    initialCroppedAreaPixels: Area = null,
-    maxZoom: Int | Double = null,
-    minZoom: Int | Double = null,
-    onCropComplete: (/* croppedArea */ Area, /* croppedAreaPixels */ Area) => Unit = null,
-    onImageLoaded: /* imageSize */ ImageSize => Unit = null,
-    onImgError: () => Unit = null,
-    onInteractionEnd: () => Unit = null,
-    onInteractionStart: () => Unit = null,
-    onRotationChange: /* rotation */ Double => Unit = null,
-    onZoomChange: /* zoom */ Double => Unit = null,
-    restrictPosition: js.UndefOr[Boolean] = js.undefined,
-    rotation: Int | Double = null,
-    showGrid: js.UndefOr[Boolean] = js.undefined,
-    style: AnonContainerStyle = null,
-    zoom: Int | Double = null,
-    zoomSpeed: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(crop = crop.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], onCropChange = js.Any.fromFunction1(onCropChange))
-    if (aspect != null) __obj.updateDynamic("aspect")(aspect.asInstanceOf[js.Any])
-    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
-    if (cropShape != null) __obj.updateDynamic("cropShape")(cropShape.asInstanceOf[js.Any])
-    if (cropSize != null) __obj.updateDynamic("cropSize")(cropSize.asInstanceOf[js.Any])
-    if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
-    if (initialCroppedAreaPixels != null) __obj.updateDynamic("initialCroppedAreaPixels")(initialCroppedAreaPixels.asInstanceOf[js.Any])
-    if (maxZoom != null) __obj.updateDynamic("maxZoom")(maxZoom.asInstanceOf[js.Any])
-    if (minZoom != null) __obj.updateDynamic("minZoom")(minZoom.asInstanceOf[js.Any])
-    if (onCropComplete != null) __obj.updateDynamic("onCropComplete")(js.Any.fromFunction2(onCropComplete))
-    if (onImageLoaded != null) __obj.updateDynamic("onImageLoaded")(js.Any.fromFunction1(onImageLoaded))
-    if (onImgError != null) __obj.updateDynamic("onImgError")(js.Any.fromFunction0(onImgError))
-    if (onInteractionEnd != null) __obj.updateDynamic("onInteractionEnd")(js.Any.fromFunction0(onInteractionEnd))
-    if (onInteractionStart != null) __obj.updateDynamic("onInteractionStart")(js.Any.fromFunction0(onInteractionStart))
-    if (onRotationChange != null) __obj.updateDynamic("onRotationChange")(js.Any.fromFunction1(onRotationChange))
-    if (onZoomChange != null) __obj.updateDynamic("onZoomChange")(js.Any.fromFunction1(onZoomChange))
-    if (!js.isUndefined(restrictPosition)) __obj.updateDynamic("restrictPosition")(restrictPosition.asInstanceOf[js.Any])
-    if (rotation != null) __obj.updateDynamic("rotation")(rotation.asInstanceOf[js.Any])
-    if (!js.isUndefined(showGrid)) __obj.updateDynamic("showGrid")(showGrid.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (zoom != null) __obj.updateDynamic("zoom")(zoom.asInstanceOf[js.Any])
-    if (zoomSpeed != null) __obj.updateDynamic("zoomSpeed")(zoomSpeed.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def aspect(value: Double): this.type = set("aspect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def classes(value: AnonContainerClassName): this.type = set("classes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cropShape(value: rect | round): this.type = set("cropShape", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cropSize(value: Size): this.type = set("cropSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def crossOrigin(value: String): this.type = set("crossOrigin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialCroppedAreaPixels(value: Area): this.type = set("initialCroppedAreaPixels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxZoom(value: Double): this.type = set("maxZoom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minZoom(value: Double): this.type = set("minZoom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCropComplete(value: (/* croppedArea */ Area, /* croppedAreaPixels */ Area) => Unit): this.type = set("onCropComplete", js.Any.fromFunction2(value))
+    @scala.inline
+    def onImageLoaded(value: /* imageSize */ ImageSize => Unit): this.type = set("onImageLoaded", js.Any.fromFunction1(value))
+    @scala.inline
+    def onImgError(value: () => Unit): this.type = set("onImgError", js.Any.fromFunction0(value))
+    @scala.inline
+    def onInteractionEnd(value: () => Unit): this.type = set("onInteractionEnd", js.Any.fromFunction0(value))
+    @scala.inline
+    def onInteractionStart(value: () => Unit): this.type = set("onInteractionStart", js.Any.fromFunction0(value))
+    @scala.inline
+    def onRotationChange(value: /* rotation */ Double => Unit): this.type = set("onRotationChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onZoomChange(value: /* zoom */ Double => Unit): this.type = set("onZoomChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def restrictPosition(value: Boolean): this.type = set("restrictPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rotation(value: Double): this.type = set("rotation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showGrid(value: Boolean): this.type = set("showGrid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: AnonContainerStyle): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def zoom(value: Double): this.type = set("zoom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def zoomSpeed(value: Double): this.type = set("zoomSpeed", value.asInstanceOf[js.Any])
   }
-  type Props = CropperProps
+  
+  def withProps(p: CropperProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(crop: Location, image: String, onCropChange: Location => Unit): Builder = {
+    val __props = js.Dynamic.literal(crop = crop.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], onCropChange = js.Any.fromFunction1(onCropChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[CropperProps]))
+  }
 }
 

@@ -42,24 +42,101 @@ trait QueryRequest extends js.Object {
 
 object QueryRequest {
   @scala.inline
-  def apply(
-    IndexId: IndexId,
-    QueryText: QueryText,
-    AttributeFilter: AttributeFilter = null,
-    Facets: FacetList = null,
-    PageNumber: Int | Double = null,
-    PageSize: Int | Double = null,
-    QueryResultTypeFilter: QueryResultType = null,
-    RequestedDocumentAttributes: DocumentAttributeKeyList = null
-  ): QueryRequest = {
+  def apply(IndexId: IndexId, QueryText: QueryText): QueryRequest = {
     val __obj = js.Dynamic.literal(IndexId = IndexId.asInstanceOf[js.Any], QueryText = QueryText.asInstanceOf[js.Any])
-    if (AttributeFilter != null) __obj.updateDynamic("AttributeFilter")(AttributeFilter.asInstanceOf[js.Any])
-    if (Facets != null) __obj.updateDynamic("Facets")(Facets.asInstanceOf[js.Any])
-    if (PageNumber != null) __obj.updateDynamic("PageNumber")(PageNumber.asInstanceOf[js.Any])
-    if (PageSize != null) __obj.updateDynamic("PageSize")(PageSize.asInstanceOf[js.Any])
-    if (QueryResultTypeFilter != null) __obj.updateDynamic("QueryResultTypeFilter")(QueryResultTypeFilter.asInstanceOf[js.Any])
-    if (RequestedDocumentAttributes != null) __obj.updateDynamic("RequestedDocumentAttributes")(RequestedDocumentAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryRequest]
   }
+  @scala.inline
+  implicit class QueryRequestOps[Self <: QueryRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIndexId(value: IndexId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQueryText(value: QueryText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributeFilter(value: AttributeFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFacets(value: FacetList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Facets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFacets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Facets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageNumber(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PageNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PageNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageSize(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryResultTypeFilter(value: QueryResultType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryResultTypeFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryResultTypeFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryResultTypeFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestedDocumentAttributes(value: DocumentAttributeKeyList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestedDocumentAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestedDocumentAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestedDocumentAttributes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

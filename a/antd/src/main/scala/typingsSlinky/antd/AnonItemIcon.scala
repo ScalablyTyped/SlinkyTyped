@@ -5,26 +5,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonItemIcon extends js.Object {
-  var clearIcon: TagMod[Any]
-  var itemIcon: js.Object | Null
-  var removeIcon: js.Object | Null
-  var suffixIcon: js.Object | Null
+  var clearIcon: TagMod[Any] = js.native
+  var itemIcon: js.Object | Null = js.native
+  var removeIcon: js.Object | Null = js.native
+  var suffixIcon: js.Object | Null = js.native
 }
 
 object AnonItemIcon {
   @scala.inline
-  def apply(
-    clearIcon: TagMod[Any],
-    itemIcon: js.Object = null,
-    removeIcon: js.Object = null,
-    suffixIcon: js.Object = null
-  ): AnonItemIcon = {
-    val __obj = js.Dynamic.literal(clearIcon = clearIcon.asInstanceOf[js.Any])
-    if (itemIcon != null) __obj.updateDynamic("itemIcon")(itemIcon.asInstanceOf[js.Any])
-    if (removeIcon != null) __obj.updateDynamic("removeIcon")(removeIcon.asInstanceOf[js.Any])
-    if (suffixIcon != null) __obj.updateDynamic("suffixIcon")(suffixIcon.asInstanceOf[js.Any])
+  def apply(): AnonItemIcon = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[AnonItemIcon]
   }
+  @scala.inline
+  implicit class AnonItemIconOps[Self <: AnonItemIcon] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClearIcon(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClearIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemIcon(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItemIconNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemIcon")(null)
+        ret
+    }
+    @scala.inline
+    def withRemoveIcon(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoveIconNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeIcon")(null)
+        ret
+    }
+    @scala.inline
+    def withSuffixIcon(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suffixIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuffixIconNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suffixIcon")(null)
+        ret
+    }
+  }
+  
 }
 

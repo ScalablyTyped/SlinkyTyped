@@ -4,36 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgColorPickerMethods extends js.Object {
   /**
   	 * Gets the color for an element from the color picker in RGB format.
   	 *
   	 * @param $element A jQuery element in the color picker from which the color will be retrieved.
   	 */
-  def colorFromElement($element: js.Object): String
+  def colorFromElement($element: js.Object): String = js.native
   /**
   	 * Gets a reference to the div element of the color table
   	 */
-  def colorTable(): js.Object
+  def colorTable(): js.Object = js.native
   /**
   	 * Gets a reference to the div element with the default or custom colors table.
   	 */
-  def customColorTable(): js.Object
+  def customColorTable(): js.Object = js.native
   /**
   	 * Select a color.
   	 *
   	 * @param color The #RGB value of the color to be selected.
   	 */
-  def selectColor(color: String): js.Object
+  def selectColor(color: String): js.Object = js.native
   /**
   	 * Returns the hexademical string of the currently selected color in the color picker. Returns null if no color is selected.
   	 * @return string|null Returns the selected color if available. Null if no color is selected.
   	 */
-  def selectedColor(): String
+  def selectedColor(): String = js.native
   /**
   	 * Returns the div element with the standard color table.
   	 */
-  def standardColorsTable(): js.Object
+  def standardColorsTable(): js.Object = js.native
 }
 
 object IgColorPickerMethods {
@@ -47,8 +48,51 @@ object IgColorPickerMethods {
     standardColorsTable: () => js.Object
   ): IgColorPickerMethods = {
     val __obj = js.Dynamic.literal(colorFromElement = js.Any.fromFunction1(colorFromElement), colorTable = js.Any.fromFunction0(colorTable), customColorTable = js.Any.fromFunction0(customColorTable), selectColor = js.Any.fromFunction1(selectColor), selectedColor = js.Any.fromFunction0(selectedColor), standardColorsTable = js.Any.fromFunction0(standardColorsTable))
-  
     __obj.asInstanceOf[IgColorPickerMethods]
   }
+  @scala.inline
+  implicit class IgColorPickerMethodsOps[Self <: IgColorPickerMethods] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColorFromElement(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorFromElement")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withColorTable(value: () => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorTable")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCustomColorTable(value: () => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customColorTable")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSelectColor(value: String => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSelectedColor(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedColor")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStandardColorsTable(value: () => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("standardColorsTable")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

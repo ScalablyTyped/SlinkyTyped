@@ -23,14 +23,41 @@ trait SchemaGoogleCloudDialogflowV2ListSessionEntityTypesResponse extends js.Obj
 
 object SchemaGoogleCloudDialogflowV2ListSessionEntityTypesResponse {
   @scala.inline
-  def apply(
-    nextPageToken: String = null,
-    sessionEntityTypes: js.Array[SchemaGoogleCloudDialogflowV2SessionEntityType] = null
-  ): SchemaGoogleCloudDialogflowV2ListSessionEntityTypesResponse = {
+  def apply(): SchemaGoogleCloudDialogflowV2ListSessionEntityTypesResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (sessionEntityTypes != null) __obj.updateDynamic("sessionEntityTypes")(sessionEntityTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2ListSessionEntityTypesResponse]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudDialogflowV2ListSessionEntityTypesResponseOps[Self <: SchemaGoogleCloudDialogflowV2ListSessionEntityTypesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionEntityTypes(value: js.Array[SchemaGoogleCloudDialogflowV2SessionEntityType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionEntityTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionEntityTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionEntityTypes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,34 +1,33 @@
 package typingsSlinky.nodePgMigrate.mod
 
-import typingsSlinky.nodePgMigrate.nodePgMigrateStrings.FULL
-import typingsSlinky.nodePgMigrate.nodePgMigrateStrings.SIMPLE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ForeignKeyOptions extends ReferencesOptions {
-  var columns: Name | js.Array[Name]
+  var columns: Name | js.Array[Name] = js.native
 }
 
 object ForeignKeyOptions {
   @scala.inline
-  def apply(
-    columns: Name | js.Array[Name],
-    `match`: FULL | SIMPLE = null,
-    onDelete: Action = null,
-    onUpdate: Action = null,
-    references: Name = null,
-    referencesConstraintComment: String = null,
-    referencesConstraintName: String = null
-  ): ForeignKeyOptions = {
+  def apply(columns: Name | js.Array[Name]): ForeignKeyOptions = {
     val __obj = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any])
-    if (`match` != null) __obj.updateDynamic("match")(`match`.asInstanceOf[js.Any])
-    if (onDelete != null) __obj.updateDynamic("onDelete")(onDelete.asInstanceOf[js.Any])
-    if (onUpdate != null) __obj.updateDynamic("onUpdate")(onUpdate.asInstanceOf[js.Any])
-    if (references != null) __obj.updateDynamic("references")(references.asInstanceOf[js.Any])
-    if (referencesConstraintComment != null) __obj.updateDynamic("referencesConstraintComment")(referencesConstraintComment.asInstanceOf[js.Any])
-    if (referencesConstraintName != null) __obj.updateDynamic("referencesConstraintName")(referencesConstraintName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ForeignKeyOptions]
   }
+  @scala.inline
+  implicit class ForeignKeyOptionsOps[Self <: ForeignKeyOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumns(value: Name | js.Array[Name]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

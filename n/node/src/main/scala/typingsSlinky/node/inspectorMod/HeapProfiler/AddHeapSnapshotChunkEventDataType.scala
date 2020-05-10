@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AddHeapSnapshotChunkEventDataType extends js.Object {
-  var chunk: String
+  var chunk: String = js.native
 }
 
 object AddHeapSnapshotChunkEventDataType {
   @scala.inline
   def apply(chunk: String): AddHeapSnapshotChunkEventDataType = {
     val __obj = js.Dynamic.literal(chunk = chunk.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AddHeapSnapshotChunkEventDataType]
   }
+  @scala.inline
+  implicit class AddHeapSnapshotChunkEventDataTypeOps[Self <: AddHeapSnapshotChunkEventDataType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChunk(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chunk")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

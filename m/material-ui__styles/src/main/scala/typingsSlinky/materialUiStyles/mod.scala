@@ -8,6 +8,8 @@ import typingsSlinky.jss.mod.JssOptions
 import typingsSlinky.materialUiStyles.createGenerateClassNameCreateGenerateClassNameMod.GenerateClassNameOptions
 import typingsSlinky.materialUiStyles.getThemePropsGetThemePropsMod.ThemeWithProps
 import typingsSlinky.materialUiStyles.getThemePropsGetThemePropsMod.ThemedProps
+import typingsSlinky.materialUiStyles.materialUiStylesStrings.innerRef
+import typingsSlinky.materialUiStyles.materialUiStylesStrings.theme
 import typingsSlinky.materialUiStyles.materialUiStylesStrings.withTheme
 import typingsSlinky.materialUiStyles.mergeClassesMergeClassesMod.Classes
 import typingsSlinky.materialUiStyles.mergeClassesMergeClassesMod.MergeClassesOption
@@ -34,8 +36,6 @@ import typingsSlinky.materialUiTypes.mod.PropInjector
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.ComponentClass
 import typingsSlinky.react.mod.ComponentProps
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.FunctionComponent
 import typingsSlinky.react.mod._Global_.JSX.LibraryManagedAttributes
@@ -54,7 +54,7 @@ object mod extends js.Object {
   
   @js.native
   class StylesProvider protected ()
-    extends Component[StylesProviderProps, ComponentState, js.Any] {
+    extends Component[StylesProviderProps, js.Object, js.Any] {
     def this(props: StylesProviderProps) = this()
     def this(props: StylesProviderProps, context: js.Any) = this()
   }
@@ -64,7 +64,7 @@ object mod extends js.Object {
   def createGenerateClassName(): GenerateId = js.native
   def createGenerateClassName(options: GenerateClassNameOptions): GenerateId = js.native
   def createStyles[ClassKey /* <: String */, Props /* <: js.Object */](styles: StyleRules[Props, ClassKey]): StyleRules[Props, ClassKey] = js.native
-  def getThemeProps[Theme /* <: ThemeWithProps[_] */, Props, Name /* <: String */](params: AnonName[Props, Name, Theme]): Props with (ThemedProps[Theme, Name]) = js.native
+  def getThemeProps[Theme /* <: ThemeWithProps[_] */, Props, Name /* <: /* keyof any */ String */](params: AnonName[Props, Name, Theme]): Props with (ThemedProps[Theme, Name]) = js.native
   def jssPreset(): JssOptions = js.native
   def makeStyles[Theme, ClassKey /* <: String */](style: Styles[Theme, js.Object, ClassKey]): js.Function1[/* props */ js.UndefOr[js.Any], ClassNameMap[ClassKey]] = js.native
   @JSName("makeStyles")
@@ -91,13 +91,13 @@ object mod extends js.Object {
     ], 
     StyledComponentProps[ClassKeyOfStyles[StylesType]] with PropsOfStyles[StylesType]
   ] = js.native
-  def withTheme[Theme](component: ComponentClass[ConsistentWith[ComponentProps[_], WithTheme[Theme]], ComponentState]): ReactComponentClass[
+  def withTheme[Theme](component: ComponentClass[ConsistentWith[ComponentProps[_], WithTheme[Theme]], js.Object]): ReactComponentClass[
     (Omit[
       LibraryManagedAttributes[
         ReactComponentClass[ConsistentWith[ComponentProps[_], WithTheme[Theme]]], 
         ComponentProps[ReactComponentClass[ConsistentWith[ComponentProps[_], WithTheme[Theme]]]]
       ], 
-      String
+      /* keyof @material-ui/styles.@material-ui/styles/withTheme/withTheme.WithTheme<Theme> */ theme | innerRef
     ]) with Partial[WithTheme[Theme]] with ThemedComponentProps
   ] = js.native
   def withTheme[Theme](component: FunctionComponent[ConsistentWith[ComponentProps[_], WithTheme[Theme]]]): ReactComponentClass[
@@ -106,13 +106,13 @@ object mod extends js.Object {
         ReactComponentClass[ConsistentWith[ComponentProps[_], WithTheme[Theme]]], 
         ComponentProps[ReactComponentClass[ConsistentWith[ComponentProps[_], WithTheme[Theme]]]]
       ], 
-      String
+      /* keyof @material-ui/styles.@material-ui/styles/withTheme/withTheme.WithTheme<Theme> */ theme | innerRef
     ]) with Partial[WithTheme[Theme]] with ThemedComponentProps
   ] = js.native
   def withThemeCreator[Theme](): PropInjector[WithTheme[Theme], ThemedComponentProps] = js.native
   def withThemeCreator[Theme](option: WithThemeCreatorOption[Theme]): PropInjector[WithTheme[Theme], ThemedComponentProps] = js.native
   @js.native
-  object StylesProvider extends TopLevel[ComponentType[StylesProviderProps]]
+  object StylesProvider extends TopLevel[ReactComponentClass[StylesProviderProps]]
   
 }
 

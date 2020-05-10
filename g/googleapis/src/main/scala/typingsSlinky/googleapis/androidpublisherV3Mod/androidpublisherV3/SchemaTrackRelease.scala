@@ -38,22 +38,89 @@ trait SchemaTrackRelease extends js.Object {
 
 object SchemaTrackRelease {
   @scala.inline
-  def apply(
-    countryTargeting: SchemaCountryTargeting = null,
-    name: String = null,
-    releaseNotes: js.Array[SchemaLocalizedText] = null,
-    status: String = null,
-    userFraction: Int | Double = null,
-    versionCodes: js.Array[String] = null
-  ): SchemaTrackRelease = {
+  def apply(): SchemaTrackRelease = {
     val __obj = js.Dynamic.literal()
-    if (countryTargeting != null) __obj.updateDynamic("countryTargeting")(countryTargeting.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (releaseNotes != null) __obj.updateDynamic("releaseNotes")(releaseNotes.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (userFraction != null) __obj.updateDynamic("userFraction")(userFraction.asInstanceOf[js.Any])
-    if (versionCodes != null) __obj.updateDynamic("versionCodes")(versionCodes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTrackRelease]
   }
+  @scala.inline
+  implicit class SchemaTrackReleaseOps[Self <: SchemaTrackRelease] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCountryTargeting(value: SchemaCountryTargeting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countryTargeting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountryTargeting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countryTargeting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReleaseNotes(value: js.Array[SchemaLocalizedText]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseNotes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReleaseNotes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseNotes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserFraction(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userFraction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserFraction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userFraction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionCodes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionCodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionCodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionCodes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

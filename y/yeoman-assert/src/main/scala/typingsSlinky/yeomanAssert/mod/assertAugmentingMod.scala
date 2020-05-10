@@ -1,6 +1,5 @@
 package typingsSlinky.yeomanAssert.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -64,7 +63,7 @@ object assertAugmentingMod extends js.Object {
     * ]
     * assert.fileContent(arg);
     */
-  def fileContent(pairs: js.Array[js.Tuple2[String, RegExp]]): Unit = js.native
+  def fileContent(pairs: js.Array[js.Tuple2[String, js.RegExp]]): Unit = js.native
   /**
     * Assert an Object implements an interface
     * @param subject subject implementing the façade
@@ -101,7 +100,7 @@ object assertAugmentingMod extends js.Object {
     * ]
     * assert.noFileContent(arg);
     */
-  def noFileContent(pairs: js.Array[js.Tuple2[String, RegExp]]): Unit = js.native
+  def noFileContent(pairs: js.Array[js.Tuple2[String, js.RegExp]]): Unit = js.native
   /**
     * Assert a JSON file does not contain the provided keys
     * @param filename

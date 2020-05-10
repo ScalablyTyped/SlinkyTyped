@@ -22,7 +22,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.frctlFractal.mod.fractal.core.mixins.Configurable because Inheritance from two classes. Inlined config, config, set, set, get, get */ @JSImport("@frctl/fractal", "WebTheme")
 @js.native
 class WebTheme protected () extends EventEmitter {
@@ -36,10 +36,10 @@ class WebTheme protected () extends EventEmitter {
   def config(): WebThemeOptions = js.native
   def config(config: WebThemeOptions): this.type = js.native
   def errorView(): String = js.native
-  def get[K /* <: String */, V](path: K): js.UndefOr[
+  def get[K /* <: /* keyof T */ String */, V](path: K): js.UndefOr[
     (/* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any) | V | Null
   ] = js.native
-  def get[K /* <: String */, V](path: K, defaultValue: V): js.UndefOr[
+  def get[K /* <: /* keyof T */ String */, V](path: K, defaultValue: V): js.UndefOr[
     (/* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any) | V | Null
   ] = js.native
   @JSName("getOption")
@@ -73,8 +73,8 @@ class WebTheme protected () extends EventEmitter {
   def redirectView(): String = js.native
   def resolvers(): js.Any = js.native
   def routes(): js.Array[_] = js.native
-  def set[K /* <: String */](path: K): this.type = js.native
-  def set[K /* <: String */](
+  def set[K /* <: /* keyof T */ String */](path: K): this.type = js.native
+  def set[K /* <: /* keyof T */ String */](
     path: K,
     value: /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any
   ): this.type = js.native

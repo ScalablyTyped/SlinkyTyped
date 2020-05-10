@@ -1,40 +1,37 @@
 package typingsSlinky.fundamentalReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.formRadioGroupMod.FormRadioGroupProps
 import typingsSlinky.fundamentalReact.formRadioGroupMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FormRadioGroup
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object FormRadioGroup {
   @JSImport("fundamental-react/lib/Forms/FormRadioGroup", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    disableStyles: js.UndefOr[Boolean] = js.undefined,
-    `inline`: js.UndefOr[Boolean] = js.undefined,
-    onChange: /* repeated */ js.Any => _ = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(disableStyles)) __obj.updateDynamic("disableStyles")(disableStyles.asInstanceOf[js.Any])
-    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableStyles(value: Boolean): this.type = set("disableStyles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* repeated */ js.Any => _): this.type = set("onChange", js.Any.fromFunction1(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.fundamentalReact.formRadioGroupMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FormRadioGroupProps
+  
+  def withProps(p: FormRadioGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FormRadioGroup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

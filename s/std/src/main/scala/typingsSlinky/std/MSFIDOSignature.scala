@@ -5,10 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MSFIDOSignature extends js.Object {
-  val authnrData: java.lang.String
-  val clientData: java.lang.String
-  val signature: java.lang.String
+  val authnrData: java.lang.String = js.native
+  val clientData: java.lang.String = js.native
+  val signature: java.lang.String = js.native
 }
 
 @JSGlobal("MSFIDOSignature")

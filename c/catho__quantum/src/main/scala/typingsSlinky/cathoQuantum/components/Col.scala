@@ -1,55 +1,49 @@
 package typingsSlinky.cathoQuantum.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.cathoQuantum.gridMod.BreakpointsType
 import typingsSlinky.cathoQuantum.gridMod.ColProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Col
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.cathoQuantum.gridMod.Col] {
+object Col {
   @JSImport("@catho/quantum/Grid", "Col")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    hide: BreakpointsType | js.Array[BreakpointsType] = null,
-    large: Int | Double = null,
-    `large-offset`: Int | Double = null,
-    medium: Int | Double = null,
-    `medium-offset`: Int | Double = null,
-    `no-gutters`: js.UndefOr[Boolean] = js.undefined,
-    small: Int | Double = null,
-    `small-offset`: Int | Double = null,
-    xlarge: Int | Double = null,
-    `xlarge-offset`: Int | Double = null,
-    xsmall: Int | Double = null,
-    `xsmall-offset`: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.cathoQuantum.gridMod.Col] = {
-    val __obj = js.Dynamic.literal()
-    if (hide != null) __obj.updateDynamic("hide")(hide.asInstanceOf[js.Any])
-    if (large != null) __obj.updateDynamic("large")(large.asInstanceOf[js.Any])
-    if (`large-offset` != null) __obj.updateDynamic("large-offset")(`large-offset`.asInstanceOf[js.Any])
-    if (medium != null) __obj.updateDynamic("medium")(medium.asInstanceOf[js.Any])
-    if (`medium-offset` != null) __obj.updateDynamic("medium-offset")(`medium-offset`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`no-gutters`)) __obj.updateDynamic("no-gutters")(`no-gutters`.asInstanceOf[js.Any])
-    if (small != null) __obj.updateDynamic("small")(small.asInstanceOf[js.Any])
-    if (`small-offset` != null) __obj.updateDynamic("small-offset")(`small-offset`.asInstanceOf[js.Any])
-    if (xlarge != null) __obj.updateDynamic("xlarge")(xlarge.asInstanceOf[js.Any])
-    if (`xlarge-offset` != null) __obj.updateDynamic("xlarge-offset")(`xlarge-offset`.asInstanceOf[js.Any])
-    if (xsmall != null) __obj.updateDynamic("xsmall")(xsmall.asInstanceOf[js.Any])
-    if (`xsmall-offset` != null) __obj.updateDynamic("xsmall-offset")(`xsmall-offset`.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.cathoQuantum.gridMod.Col] {
+    @scala.inline
+    def hide(value: BreakpointsType | js.Array[BreakpointsType]): this.type = set("hide", value.asInstanceOf[js.Any])
+    @scala.inline
+    def large(value: Double): this.type = set("large", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `large-offset`(value: Double): this.type = set("large-offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def medium(value: Double): this.type = set("medium", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `medium-offset`(value: Double): this.type = set("medium-offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `no-gutters`(value: Boolean): this.type = set("no-gutters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def small(value: Double): this.type = set("small", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `small-offset`(value: Double): this.type = set("small-offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xlarge(value: Double): this.type = set("xlarge", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `xlarge-offset`(value: Double): this.type = set("xlarge-offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xsmall(value: Double): this.type = set("xsmall", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `xsmall-offset`(value: Double): this.type = set("xsmall-offset", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.cathoQuantum.gridMod.Col] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.cathoQuantum.gridMod.Col](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ColProps
+  
+  def withProps(p: ColProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Col.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -5,13 +5,12 @@ import typingsSlinky.node.nodeStrings.drain
 import typingsSlinky.node.nodeStrings.finish
 import typingsSlinky.node.nodeStrings.pipe
 import typingsSlinky.node.nodeStrings.unpipe
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // Note: Duplex extends both Readable and Writable.
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.node.NodeJS.EventEmitter because Already inherited
 - typingsSlinky.node.eventsMod.EventEmitter because Already inherited
 - typingsSlinky.node.NodeJS.EventEmitter because Already inherited
@@ -105,7 +104,7 @@ class Duplex () extends Readable {
   def setDefaultEncoding(encoding: String): this.type = js.native
   def uncork(): Unit = js.native
   def write(chunk: js.Any): Boolean = js.native
-  def write(chunk: js.Any, cb: js.Function1[js.UndefOr[Error | Null], Unit]): Boolean = js.native
+  def write(chunk: js.Any, cb: js.Function1[js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
   def write(chunk: js.Any, encoding: String): Boolean = js.native
   def write(chunk: js.Any, encoding: String, cb: js.Function1[js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
 }

@@ -7,19 +7,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TextAreaParams
   extends SharedEditorParams
      with _EditorParams {
-  var verticalNavigation: js.UndefOr[editor | table | hybrid] = js.undefined
+  var verticalNavigation: js.UndefOr[editor | table | hybrid] = js.native
 }
 
 object TextAreaParams {
   @scala.inline
-  def apply(elementAttributes: JSONRecord = null, verticalNavigation: editor | table | hybrid = null): TextAreaParams = {
+  def apply(): TextAreaParams = {
     val __obj = js.Dynamic.literal()
-    if (elementAttributes != null) __obj.updateDynamic("elementAttributes")(elementAttributes.asInstanceOf[js.Any])
-    if (verticalNavigation != null) __obj.updateDynamic("verticalNavigation")(verticalNavigation.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextAreaParams]
   }
+  @scala.inline
+  implicit class TextAreaParamsOps[Self <: TextAreaParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVerticalNavigation(value: editor | table | hybrid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalNavigation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalNavigation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalNavigation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

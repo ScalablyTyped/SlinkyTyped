@@ -17,14 +17,12 @@ trait HeaderVisibility extends js.Object
 
 object HeaderVisibility {
   @scala.inline
-  def all: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.all = this.cast("all")
+  def all: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.all = "all".asInstanceOf[typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.all]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def column: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.column = "column".asInstanceOf[typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.column]
   @scala.inline
-  def column: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.column = this.cast("column")
+  def none: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.none = "none".asInstanceOf[typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.none]
   @scala.inline
-  def none: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.none = this.cast("none")
-  @scala.inline
-  def row: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.row = this.cast("row")
+  def row: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.row = "row".asInstanceOf[typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.row]
 }
 

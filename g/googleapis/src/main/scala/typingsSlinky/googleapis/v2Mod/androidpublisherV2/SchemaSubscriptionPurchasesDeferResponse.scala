@@ -14,10 +14,29 @@ trait SchemaSubscriptionPurchasesDeferResponse extends js.Object {
 
 object SchemaSubscriptionPurchasesDeferResponse {
   @scala.inline
-  def apply(newExpiryTimeMillis: String = null): SchemaSubscriptionPurchasesDeferResponse = {
+  def apply(): SchemaSubscriptionPurchasesDeferResponse = {
     val __obj = js.Dynamic.literal()
-    if (newExpiryTimeMillis != null) __obj.updateDynamic("newExpiryTimeMillis")(newExpiryTimeMillis.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSubscriptionPurchasesDeferResponse]
   }
+  @scala.inline
+  implicit class SchemaSubscriptionPurchasesDeferResponseOps[Self <: SchemaSubscriptionPurchasesDeferResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNewExpiryTimeMillis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newExpiryTimeMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewExpiryTimeMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newExpiryTimeMillis")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -8,32 +8,95 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBoundaries extends js.Object {
-  var boundaries: js.UndefOr[Range] = js.undefined
-  var direction: js.UndefOr[forward | backward] = js.undefined
-  var ignoreElementEnd: js.UndefOr[Boolean] = js.undefined
-  var shallow: js.UndefOr[Boolean] = js.undefined
-  var singleCharacters: js.UndefOr[Boolean] = js.undefined
-  var startPosition: Position
+  var boundaries: js.UndefOr[Range] = js.native
+  var direction: js.UndefOr[forward | backward] = js.native
+  var ignoreElementEnd: js.UndefOr[Boolean] = js.native
+  var shallow: js.UndefOr[Boolean] = js.native
+  var singleCharacters: js.UndefOr[Boolean] = js.native
+  var startPosition: Position = js.native
 }
 
 object AnonBoundaries {
   @scala.inline
-  def apply(
-    startPosition: Position,
-    boundaries: Range = null,
-    direction: forward | backward = null,
-    ignoreElementEnd: js.UndefOr[Boolean] = js.undefined,
-    shallow: js.UndefOr[Boolean] = js.undefined,
-    singleCharacters: js.UndefOr[Boolean] = js.undefined
-  ): AnonBoundaries = {
+  def apply(startPosition: Position): AnonBoundaries = {
     val __obj = js.Dynamic.literal(startPosition = startPosition.asInstanceOf[js.Any])
-    if (boundaries != null) __obj.updateDynamic("boundaries")(boundaries.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreElementEnd)) __obj.updateDynamic("ignoreElementEnd")(ignoreElementEnd.asInstanceOf[js.Any])
-    if (!js.isUndefined(shallow)) __obj.updateDynamic("shallow")(shallow.asInstanceOf[js.Any])
-    if (!js.isUndefined(singleCharacters)) __obj.updateDynamic("singleCharacters")(singleCharacters.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBoundaries]
   }
+  @scala.inline
+  implicit class AnonBoundariesOps[Self <: AnonBoundaries] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStartPosition(value: Position): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBoundaries(value: Range): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundaries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoundaries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundaries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: forward | backward): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreElementEnd(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreElementEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreElementEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreElementEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShallow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shallow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShallow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shallow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleCharacters(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleCharacters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleCharacters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleCharacters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

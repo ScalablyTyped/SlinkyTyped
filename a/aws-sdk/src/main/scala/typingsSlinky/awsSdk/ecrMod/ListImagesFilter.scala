@@ -14,10 +14,29 @@ trait ListImagesFilter extends js.Object {
 
 object ListImagesFilter {
   @scala.inline
-  def apply(tagStatus: TagStatus = null): ListImagesFilter = {
+  def apply(): ListImagesFilter = {
     val __obj = js.Dynamic.literal()
-    if (tagStatus != null) __obj.updateDynamic("tagStatus")(tagStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListImagesFilter]
   }
+  @scala.inline
+  implicit class ListImagesFilterOps[Self <: ListImagesFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTagStatus(value: TagStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

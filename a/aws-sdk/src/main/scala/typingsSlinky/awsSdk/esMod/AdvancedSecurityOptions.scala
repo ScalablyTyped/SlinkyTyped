@@ -18,14 +18,41 @@ trait AdvancedSecurityOptions extends js.Object {
 
 object AdvancedSecurityOptions {
   @scala.inline
-  def apply(
-    Enabled: js.UndefOr[scala.Boolean] = js.undefined,
-    InternalUserDatabaseEnabled: js.UndefOr[scala.Boolean] = js.undefined
-  ): AdvancedSecurityOptions = {
+  def apply(): AdvancedSecurityOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(InternalUserDatabaseEnabled)) __obj.updateDynamic("InternalUserDatabaseEnabled")(InternalUserDatabaseEnabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdvancedSecurityOptions]
   }
+  @scala.inline
+  implicit class AdvancedSecurityOptionsOps[Self <: AdvancedSecurityOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInternalUserDatabaseEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InternalUserDatabaseEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInternalUserDatabaseEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InternalUserDatabaseEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

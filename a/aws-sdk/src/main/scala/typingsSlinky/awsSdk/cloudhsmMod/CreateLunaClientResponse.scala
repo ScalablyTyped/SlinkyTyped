@@ -14,10 +14,29 @@ trait CreateLunaClientResponse extends js.Object {
 
 object CreateLunaClientResponse {
   @scala.inline
-  def apply(ClientArn: ClientArn = null): CreateLunaClientResponse = {
+  def apply(): CreateLunaClientResponse = {
     val __obj = js.Dynamic.literal()
-    if (ClientArn != null) __obj.updateDynamic("ClientArn")(ClientArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateLunaClientResponse]
   }
+  @scala.inline
+  implicit class CreateLunaClientResponseOps[Self <: CreateLunaClientResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientArn(value: ClientArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

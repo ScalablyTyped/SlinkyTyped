@@ -30,17 +30,59 @@ trait BounceAction extends js.Object {
 
 object BounceAction {
   @scala.inline
-  def apply(
-    Message: BounceMessage,
-    Sender: Address,
-    SmtpReplyCode: BounceSmtpReplyCode,
-    StatusCode: BounceStatusCode = null,
-    TopicArn: AmazonResourceName = null
-  ): BounceAction = {
+  def apply(Message: BounceMessage, Sender: Address, SmtpReplyCode: BounceSmtpReplyCode): BounceAction = {
     val __obj = js.Dynamic.literal(Message = Message.asInstanceOf[js.Any], Sender = Sender.asInstanceOf[js.Any], SmtpReplyCode = SmtpReplyCode.asInstanceOf[js.Any])
-    if (StatusCode != null) __obj.updateDynamic("StatusCode")(StatusCode.asInstanceOf[js.Any])
-    if (TopicArn != null) __obj.updateDynamic("TopicArn")(TopicArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[BounceAction]
   }
+  @scala.inline
+  implicit class BounceActionOps[Self <: BounceAction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMessage(value: BounceMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSender(value: Address): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSmtpReplyCode(value: BounceSmtpReplyCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SmtpReplyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatusCode(value: BounceStatusCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopicArn(value: AmazonResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopicArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

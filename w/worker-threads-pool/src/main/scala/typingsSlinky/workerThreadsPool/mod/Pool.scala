@@ -2,7 +2,6 @@ package typingsSlinky.workerThreadsPool.mod
 
 import typingsSlinky.node.workerThreadsMod.Worker
 import typingsSlinky.node.workerThreadsMod.WorkerOptions
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +17,7 @@ trait Pool extends js.Object {
     * @param options argument passed directly to `new Worker(filename, options)`
     * @param callback will be called once the worker is created
     */
-  def acquire(filename: String, callback: js.Function2[/* error */ Error | Null, /* worker */ Worker, Unit]): Unit = js.native
+  def acquire(filename: String, callback: js.Function2[/* error */ js.Error | Null, /* worker */ Worker, Unit]): Unit = js.native
   def acquire(
     filename: String,
     options: WorkerOptions,

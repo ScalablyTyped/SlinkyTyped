@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/nativeobj.html](http://www.html5plus.org/doc/zh_cn/nativeobj.html)
   */
+@js.native
 trait PlusNativeObjRect extends js.Object {
   /**
     * 区域的高度
@@ -20,7 +21,7 @@ trait PlusNativeObjRect extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeobj.html](http://www.html5plus.org/doc/zh_cn/nativeobj.html)
     */
-  var height: js.UndefOr[String] = js.undefined
+  var height: js.UndefOr[String] = js.native
   /**
     * 区域左上角的水平偏移量
     * 可取值：
@@ -30,7 +31,7 @@ trait PlusNativeObjRect extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeobj.html](http://www.html5plus.org/doc/zh_cn/nativeobj.html)
     */
-  var left: js.UndefOr[String] = js.undefined
+  var left: js.UndefOr[String] = js.native
   /**
     * 区域左上角的垂直偏移量
     * 可取值：
@@ -40,7 +41,7 @@ trait PlusNativeObjRect extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeobj.html](http://www.html5plus.org/doc/zh_cn/nativeobj.html)
     */
-  var top: js.UndefOr[String] = js.undefined
+  var top: js.UndefOr[String] = js.native
   /**
     * 区域的宽度
     * 可取值：
@@ -49,18 +50,70 @@ trait PlusNativeObjRect extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeobj.html](http://www.html5plus.org/doc/zh_cn/nativeobj.html)
     */
-  var width: js.UndefOr[String] = js.undefined
+  var width: js.UndefOr[String] = js.native
 }
 
 object PlusNativeObjRect {
   @scala.inline
-  def apply(height: String = null, left: String = null, top: String = null, width: String = null): PlusNativeObjRect = {
+  def apply(): PlusNativeObjRect = {
     val __obj = js.Dynamic.literal()
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusNativeObjRect]
   }
+  @scala.inline
+  implicit class PlusNativeObjRectOps[Self <: PlusNativeObjRect] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeft(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTop(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

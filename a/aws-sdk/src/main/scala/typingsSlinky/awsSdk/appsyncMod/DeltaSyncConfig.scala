@@ -22,16 +22,53 @@ trait DeltaSyncConfig extends js.Object {
 
 object DeltaSyncConfig {
   @scala.inline
-  def apply(
-    baseTableTTL: Int | Double = null,
-    deltaSyncTableName: String = null,
-    deltaSyncTableTTL: Int | Double = null
-  ): DeltaSyncConfig = {
+  def apply(): DeltaSyncConfig = {
     val __obj = js.Dynamic.literal()
-    if (baseTableTTL != null) __obj.updateDynamic("baseTableTTL")(baseTableTTL.asInstanceOf[js.Any])
-    if (deltaSyncTableName != null) __obj.updateDynamic("deltaSyncTableName")(deltaSyncTableName.asInstanceOf[js.Any])
-    if (deltaSyncTableTTL != null) __obj.updateDynamic("deltaSyncTableTTL")(deltaSyncTableTTL.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeltaSyncConfig]
   }
+  @scala.inline
+  implicit class DeltaSyncConfigOps[Self <: DeltaSyncConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBaseTableTTL(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseTableTTL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseTableTTL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseTableTTL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeltaSyncTableName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaSyncTableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeltaSyncTableName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaSyncTableName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeltaSyncTableTTL(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaSyncTableTTL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeltaSyncTableTTL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaSyncTableTTL")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

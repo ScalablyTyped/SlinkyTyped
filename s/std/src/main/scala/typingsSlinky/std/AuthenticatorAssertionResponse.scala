@@ -5,10 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AuthenticatorAssertionResponse extends AuthenticatorResponse {
-  val authenticatorData: scala.scalajs.js.typedarray.ArrayBuffer
-  val signature: scala.scalajs.js.typedarray.ArrayBuffer
-  val userHandle: scala.scalajs.js.typedarray.ArrayBuffer | Null
+  val authenticatorData: js.typedarray.ArrayBuffer = js.native
+  val signature: js.typedarray.ArrayBuffer = js.native
+  val userHandle: js.typedarray.ArrayBuffer | Null = js.native
 }
 
 @JSGlobal("AuthenticatorAssertionResponse")

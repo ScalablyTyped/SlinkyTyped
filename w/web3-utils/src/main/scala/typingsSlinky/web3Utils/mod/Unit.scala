@@ -40,60 +40,58 @@ trait Unit extends js.Object
 
 object Unit {
   @scala.inline
-  def Gwei: typingsSlinky.web3Utils.web3UtilsStrings.Gwei = this.cast("Gwei")
+  def Gwei: typingsSlinky.web3Utils.web3UtilsStrings.Gwei = "Gwei".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.Gwei]
   @scala.inline
-  def Kwei: typingsSlinky.web3Utils.web3UtilsStrings.Kwei = this.cast("Kwei")
+  def Kwei: typingsSlinky.web3Utils.web3UtilsStrings.Kwei = "Kwei".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.Kwei]
   @scala.inline
-  def Mwei: typingsSlinky.web3Utils.web3UtilsStrings.Mwei = this.cast("Mwei")
+  def Mwei: typingsSlinky.web3Utils.web3UtilsStrings.Mwei = "Mwei".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.Mwei]
   @scala.inline
-  def babbage: typingsSlinky.web3Utils.web3UtilsStrings.babbage = this.cast("babbage")
+  def babbage: typingsSlinky.web3Utils.web3UtilsStrings.babbage = "babbage".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.babbage]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ether: typingsSlinky.web3Utils.web3UtilsStrings.ether = "ether".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.ether]
   @scala.inline
-  def ether: typingsSlinky.web3Utils.web3UtilsStrings.ether = this.cast("ether")
+  def femtoether: typingsSlinky.web3Utils.web3UtilsStrings.femtoether = "femtoether".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.femtoether]
   @scala.inline
-  def femtoether: typingsSlinky.web3Utils.web3UtilsStrings.femtoether = this.cast("femtoether")
+  def finney: typingsSlinky.web3Utils.web3UtilsStrings.finney = "finney".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.finney]
   @scala.inline
-  def finney: typingsSlinky.web3Utils.web3UtilsStrings.finney = this.cast("finney")
+  def gether: typingsSlinky.web3Utils.web3UtilsStrings.gether = "gether".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.gether]
   @scala.inline
-  def gether: typingsSlinky.web3Utils.web3UtilsStrings.gether = this.cast("gether")
+  def grand: typingsSlinky.web3Utils.web3UtilsStrings.grand = "grand".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.grand]
   @scala.inline
-  def grand: typingsSlinky.web3Utils.web3UtilsStrings.grand = this.cast("grand")
+  def gwei: gwei_ = "gwei".asInstanceOf[gwei_]
   @scala.inline
-  def gwei: gwei_ = this.cast("gwei")
+  def kether: typingsSlinky.web3Utils.web3UtilsStrings.kether = "kether".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.kether]
   @scala.inline
-  def kether: typingsSlinky.web3Utils.web3UtilsStrings.kether = this.cast("kether")
+  def kwei: kwei_ = "kwei".asInstanceOf[kwei_]
   @scala.inline
-  def kwei: kwei_ = this.cast("kwei")
+  def lovelace: typingsSlinky.web3Utils.web3UtilsStrings.lovelace = "lovelace".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.lovelace]
   @scala.inline
-  def lovelace: typingsSlinky.web3Utils.web3UtilsStrings.lovelace = this.cast("lovelace")
+  def mether: typingsSlinky.web3Utils.web3UtilsStrings.mether = "mether".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.mether]
   @scala.inline
-  def mether: typingsSlinky.web3Utils.web3UtilsStrings.mether = this.cast("mether")
+  def micro: typingsSlinky.web3Utils.web3UtilsStrings.micro = "micro".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.micro]
   @scala.inline
-  def micro: typingsSlinky.web3Utils.web3UtilsStrings.micro = this.cast("micro")
+  def microether: typingsSlinky.web3Utils.web3UtilsStrings.microether = "microether".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.microether]
   @scala.inline
-  def microether: typingsSlinky.web3Utils.web3UtilsStrings.microether = this.cast("microether")
+  def milli: typingsSlinky.web3Utils.web3UtilsStrings.milli = "milli".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.milli]
   @scala.inline
-  def milli: typingsSlinky.web3Utils.web3UtilsStrings.milli = this.cast("milli")
+  def milliether: typingsSlinky.web3Utils.web3UtilsStrings.milliether = "milliether".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.milliether]
   @scala.inline
-  def milliether: typingsSlinky.web3Utils.web3UtilsStrings.milliether = this.cast("milliether")
+  def mwei: mwei_ = "mwei".asInstanceOf[mwei_]
   @scala.inline
-  def mwei: mwei_ = this.cast("mwei")
+  def nano: typingsSlinky.web3Utils.web3UtilsStrings.nano = "nano".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.nano]
   @scala.inline
-  def nano: typingsSlinky.web3Utils.web3UtilsStrings.nano = this.cast("nano")
+  def nanoether: typingsSlinky.web3Utils.web3UtilsStrings.nanoether = "nanoether".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.nanoether]
   @scala.inline
-  def nanoether: typingsSlinky.web3Utils.web3UtilsStrings.nanoether = this.cast("nanoether")
+  def noether: typingsSlinky.web3Utils.web3UtilsStrings.noether = "noether".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.noether]
   @scala.inline
-  def noether: typingsSlinky.web3Utils.web3UtilsStrings.noether = this.cast("noether")
+  def picoether: typingsSlinky.web3Utils.web3UtilsStrings.picoether = "picoether".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.picoether]
   @scala.inline
-  def picoether: typingsSlinky.web3Utils.web3UtilsStrings.picoether = this.cast("picoether")
+  def shannon: typingsSlinky.web3Utils.web3UtilsStrings.shannon = "shannon".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.shannon]
   @scala.inline
-  def shannon: typingsSlinky.web3Utils.web3UtilsStrings.shannon = this.cast("shannon")
+  def szabo: typingsSlinky.web3Utils.web3UtilsStrings.szabo = "szabo".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.szabo]
   @scala.inline
-  def szabo: typingsSlinky.web3Utils.web3UtilsStrings.szabo = this.cast("szabo")
+  def tether: typingsSlinky.web3Utils.web3UtilsStrings.tether = "tether".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.tether]
   @scala.inline
-  def tether: typingsSlinky.web3Utils.web3UtilsStrings.tether = this.cast("tether")
-  @scala.inline
-  def wei: typingsSlinky.web3Utils.web3UtilsStrings.wei = this.cast("wei")
+  def wei: typingsSlinky.web3Utils.web3UtilsStrings.wei = "wei".asInstanceOf[typingsSlinky.web3Utils.web3UtilsStrings.wei]
 }
 

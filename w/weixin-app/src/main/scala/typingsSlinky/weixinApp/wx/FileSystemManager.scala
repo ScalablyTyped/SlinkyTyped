@@ -1,6 +1,5 @@
 package typingsSlinky.weixinApp.wx
 
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +11,8 @@ trait FileSystemManager extends js.Object {
   def appendFile(options: AppendFileOptions): Unit = js.native
   def appendFileSync(filePath: String, data: String): Unit = js.native
   def appendFileSync(filePath: String, data: String, encoding: String): Unit = js.native
-  def appendFileSync(filePath: String, data: ArrayBuffer): Unit = js.native
-  def appendFileSync(filePath: String, data: ArrayBuffer, encoding: String): Unit = js.native
+  def appendFileSync(filePath: String, data: js.typedarray.ArrayBuffer): Unit = js.native
+  def appendFileSync(filePath: String, data: js.typedarray.ArrayBuffer, encoding: String): Unit = js.native
   def copyFile(options: CopyFileOptions): Unit = js.native
   def copyFileSync(srcPath: String, destPath: String): Unit = js.native
   def getFileInfo(options: FsGetFileInfoOptions): Unit = js.native
@@ -22,8 +21,8 @@ trait FileSystemManager extends js.Object {
   def mkdirSync(dirPath: String): Unit = js.native
   def mkdirSync(dirPath: String, recursive: Boolean): Unit = js.native
   def readFile(options: ReadFileOptions): Unit = js.native
-  def readFileSync(filePath: String): String | scala.scalajs.js.typedarray.ArrayBuffer = js.native
-  def readFileSync(filePath: String, encoding: String): String | scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def readFileSync(filePath: String): String | js.typedarray.ArrayBuffer = js.native
+  def readFileSync(filePath: String, encoding: String): String | js.typedarray.ArrayBuffer = js.native
   def readdir(options: ReaddirOptions): Unit = js.native
   def readdirSync(dirPath: String): js.Array[String] = js.native
   def removeSavedFile(options: FsRemoveSavedFileOptions): Unit = js.native
@@ -45,7 +44,7 @@ trait FileSystemManager extends js.Object {
   def writeFile(options: WriteFileOptions): Unit = js.native
   def writeFileSync(filePath: String, data: String): Unit = js.native
   def writeFileSync(filePath: String, data: String, encoding: String): Unit = js.native
-  def writeFileSync(filePath: String, data: ArrayBuffer): Unit = js.native
-  def writeFileSync(filePath: String, data: ArrayBuffer, encoding: String): Unit = js.native
+  def writeFileSync(filePath: String, data: js.typedarray.ArrayBuffer): Unit = js.native
+  def writeFileSync(filePath: String, data: js.typedarray.ArrayBuffer, encoding: String): Unit = js.native
 }
 

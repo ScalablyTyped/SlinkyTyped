@@ -12,5 +12,6 @@ import scala.scalajs.js.annotation._
   * These are experimental animations, in an experimental
   *
   */
+@js.native
 trait NodeList extends js.Object
 

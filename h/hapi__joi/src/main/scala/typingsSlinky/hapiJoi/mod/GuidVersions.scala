@@ -15,16 +15,14 @@ trait GuidVersions extends js.Object
 
 object GuidVersions {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def uuidv1: typingsSlinky.hapiJoi.hapiJoiStrings.uuidv1 = "uuidv1".asInstanceOf[typingsSlinky.hapiJoi.hapiJoiStrings.uuidv1]
   @scala.inline
-  def uuidv1: typingsSlinky.hapiJoi.hapiJoiStrings.uuidv1 = this.cast("uuidv1")
+  def uuidv2: typingsSlinky.hapiJoi.hapiJoiStrings.uuidv2 = "uuidv2".asInstanceOf[typingsSlinky.hapiJoi.hapiJoiStrings.uuidv2]
   @scala.inline
-  def uuidv2: typingsSlinky.hapiJoi.hapiJoiStrings.uuidv2 = this.cast("uuidv2")
+  def uuidv3: typingsSlinky.hapiJoi.hapiJoiStrings.uuidv3 = "uuidv3".asInstanceOf[typingsSlinky.hapiJoi.hapiJoiStrings.uuidv3]
   @scala.inline
-  def uuidv3: typingsSlinky.hapiJoi.hapiJoiStrings.uuidv3 = this.cast("uuidv3")
+  def uuidv4: typingsSlinky.hapiJoi.hapiJoiStrings.uuidv4 = "uuidv4".asInstanceOf[typingsSlinky.hapiJoi.hapiJoiStrings.uuidv4]
   @scala.inline
-  def uuidv4: typingsSlinky.hapiJoi.hapiJoiStrings.uuidv4 = this.cast("uuidv4")
-  @scala.inline
-  def uuidv5: typingsSlinky.hapiJoi.hapiJoiStrings.uuidv5 = this.cast("uuidv5")
+  def uuidv5: typingsSlinky.hapiJoi.hapiJoiStrings.uuidv5 = "uuidv5".asInstanceOf[typingsSlinky.hapiJoi.hapiJoiStrings.uuidv5]
 }
 

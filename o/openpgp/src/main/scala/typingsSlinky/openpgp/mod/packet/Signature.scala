@@ -67,11 +67,11 @@ class Signature protected () extends js.Object {
     * Creates Uint8Array of bytes of all subpacket data except Issuer and Embedded Signature subpackets
     * @returns subpacket data
     */
-  def write_hashed_sub_packets(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def write_hashed_sub_packets(): js.typedarray.Uint8Array = js.native
   /**
     * Creates Uint8Array of bytes of Issuer and Embedded Signature subpackets
     * @returns subpacket data
     */
-  def write_unhashed_sub_packets(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def write_unhashed_sub_packets(): js.typedarray.Uint8Array = js.native
 }
 

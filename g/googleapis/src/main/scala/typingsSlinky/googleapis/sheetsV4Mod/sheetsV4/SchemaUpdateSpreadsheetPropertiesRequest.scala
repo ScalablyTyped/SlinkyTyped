@@ -23,11 +23,41 @@ trait SchemaUpdateSpreadsheetPropertiesRequest extends js.Object {
 
 object SchemaUpdateSpreadsheetPropertiesRequest {
   @scala.inline
-  def apply(fields: String = null, properties: SchemaSpreadsheetProperties = null): SchemaUpdateSpreadsheetPropertiesRequest = {
+  def apply(): SchemaUpdateSpreadsheetPropertiesRequest = {
     val __obj = js.Dynamic.literal()
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateSpreadsheetPropertiesRequest]
   }
+  @scala.inline
+  implicit class SchemaUpdateSpreadsheetPropertiesRequestOps[Self <: SchemaUpdateSpreadsheetPropertiesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFields(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProperties(value: SchemaSpreadsheetProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

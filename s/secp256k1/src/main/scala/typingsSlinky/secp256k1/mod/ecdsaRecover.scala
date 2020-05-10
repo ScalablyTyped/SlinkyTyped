@@ -7,16 +7,12 @@ import scala.scalajs.js.annotation._
 @JSImport("secp256k1", "ecdsaRecover")
 @js.native
 object ecdsaRecover extends js.Object {
+  def apply(signature: js.typedarray.Uint8Array, recid: Double, message: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
   def apply(
-    signature: scala.scalajs.js.typedarray.Uint8Array,
-    recovery: Double,
-    message: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def apply(
-    signature: scala.scalajs.js.typedarray.Uint8Array,
-    recovery: Double,
-    message: scala.scalajs.js.typedarray.Uint8Array,
+    signature: js.typedarray.Uint8Array,
+    recid: Double,
+    message: js.typedarray.Uint8Array,
     compressed: Boolean
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
 }
 

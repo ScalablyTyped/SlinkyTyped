@@ -11,7 +11,6 @@ import typingsSlinky.natsHemera.natsHemeraStrings.onResponse
 import typingsSlinky.natsHemera.natsHemeraStrings.onSend
 import typingsSlinky.natsHemera.natsHemeraStrings.preHandler
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -184,7 +183,7 @@ trait Hemera[Request, Response] extends js.Object {
     handler: js.Function3[
       /* instance */ Hemera[ServerRequest, ServerResponse], 
       (/* payload */ js.Any) | (/* reply */ Reply), 
-      (/* error */ Error) | (/* next */ js.Function1[/* err */ js.UndefOr[Error], Unit]), 
+      (/* error */ js.Error) | (/* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit]), 
       js.Promise[Unit] | Unit
     ]
   ): Hemera[ServerRequest, ServerResponse] = js.native
@@ -205,7 +204,7 @@ trait Hemera[Request, Response] extends js.Object {
       /* instance */ Hemera[ServerRequest, ServerResponse], 
       /* request */ ServerRequest, 
       /* reply */ Reply, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): Hemera[ServerRequest, ServerResponse] = js.native

@@ -4,33 +4,81 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RowInfo extends js.Object {
   /* --- visibility --- */
   /** if true, the column is hidden */
-  var hidden: js.UndefOr[Boolean] = js.undefined
+  var hidden: js.UndefOr[Boolean] = js.native
   /** height in points */
-  var hpt: js.UndefOr[Double] = js.undefined
+  var hpt: js.UndefOr[Double] = js.native
   /* --- row height --- */
   /** height in screen pixels */
-  var hpx: js.UndefOr[Double] = js.undefined
+  var hpx: js.UndefOr[Double] = js.native
   /** outline / group level */
-  var level: js.UndefOr[Double] = js.undefined
+  var level: js.UndefOr[Double] = js.native
 }
 
 object RowInfo {
   @scala.inline
-  def apply(
-    hidden: js.UndefOr[Boolean] = js.undefined,
-    hpt: Int | Double = null,
-    hpx: Int | Double = null,
-    level: Int | Double = null
-  ): RowInfo = {
+  def apply(): RowInfo = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
-    if (hpt != null) __obj.updateDynamic("hpt")(hpt.asInstanceOf[js.Any])
-    if (hpx != null) __obj.updateDynamic("hpx")(hpx.asInstanceOf[js.Any])
-    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
     __obj.asInstanceOf[RowInfo]
   }
+  @scala.inline
+  implicit class RowInfoOps[Self <: RowInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHpt(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hpt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHpt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hpt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHpx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hpx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHpx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hpx")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

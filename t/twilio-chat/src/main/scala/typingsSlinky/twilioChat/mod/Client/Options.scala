@@ -8,66 +8,250 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var Chat: js.UndefOr[js.Any] = js.undefined
-  var Notification: js.UndefOr[js.Any] = js.undefined
-  var Sync: js.UndefOr[js.Any] = js.undefined
-  var Twilsock: js.UndefOr[js.Any] = js.undefined
-  var backoffConfigOverride: js.UndefOr[js.Any] = js.undefined
-  var consumptionReportIntervalOverride: js.UndefOr[String] = js.undefined
-  var httpCacheIntervalOverride: js.UndefOr[String] = js.undefined
-  var logLevel: js.UndefOr[LogLevel] = js.undefined
-  var notificationsClient: js.UndefOr[Notifications] = js.undefined
-  var productId: js.UndefOr[String] = js.undefined
-  var region: js.UndefOr[String] = js.undefined
-  var retryWhenThrottledOverride: js.UndefOr[Boolean] = js.undefined
-  var syncClient: js.UndefOr[SyncClient] = js.undefined
-  var transport: js.UndefOr[Transport] = js.undefined
-  var twilsockClient: js.UndefOr[Twilsock] = js.undefined
-  var typingIndicatorTimeoutOverride: js.UndefOr[Double] = js.undefined
-  var userInfosToSubscribeOverride: js.UndefOr[Double] = js.undefined
+  var Chat: js.UndefOr[js.Any] = js.native
+  var Notification: js.UndefOr[js.Any] = js.native
+  var Sync: js.UndefOr[js.Any] = js.native
+  var Twilsock: js.UndefOr[js.Any] = js.native
+  var backoffConfigOverride: js.UndefOr[js.Any] = js.native
+  var consumptionReportIntervalOverride: js.UndefOr[String] = js.native
+  var httpCacheIntervalOverride: js.UndefOr[String] = js.native
+  var logLevel: js.UndefOr[LogLevel] = js.native
+  var notificationsClient: js.UndefOr[Notifications] = js.native
+  var productId: js.UndefOr[String] = js.native
+  var region: js.UndefOr[String] = js.native
+  var retryWhenThrottledOverride: js.UndefOr[Boolean] = js.native
+  var syncClient: js.UndefOr[SyncClient] = js.native
+  var transport: js.UndefOr[Transport] = js.native
+  var twilsockClient: js.UndefOr[Twilsock] = js.native
+  var typingIndicatorTimeoutOverride: js.UndefOr[Double] = js.native
+  var userInfosToSubscribeOverride: js.UndefOr[Double] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    Chat: js.Any = null,
-    Notification: js.Any = null,
-    Sync: js.Any = null,
-    Twilsock: js.Any = null,
-    backoffConfigOverride: js.Any = null,
-    consumptionReportIntervalOverride: String = null,
-    httpCacheIntervalOverride: String = null,
-    logLevel: LogLevel = null,
-    notificationsClient: Notifications = null,
-    productId: String = null,
-    region: String = null,
-    retryWhenThrottledOverride: js.UndefOr[Boolean] = js.undefined,
-    syncClient: SyncClient = null,
-    transport: Transport = null,
-    twilsockClient: Twilsock = null,
-    typingIndicatorTimeoutOverride: Int | Double = null,
-    userInfosToSubscribeOverride: Int | Double = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (Chat != null) __obj.updateDynamic("Chat")(Chat.asInstanceOf[js.Any])
-    if (Notification != null) __obj.updateDynamic("Notification")(Notification.asInstanceOf[js.Any])
-    if (Sync != null) __obj.updateDynamic("Sync")(Sync.asInstanceOf[js.Any])
-    if (Twilsock != null) __obj.updateDynamic("Twilsock")(Twilsock.asInstanceOf[js.Any])
-    if (backoffConfigOverride != null) __obj.updateDynamic("backoffConfigOverride")(backoffConfigOverride.asInstanceOf[js.Any])
-    if (consumptionReportIntervalOverride != null) __obj.updateDynamic("consumptionReportIntervalOverride")(consumptionReportIntervalOverride.asInstanceOf[js.Any])
-    if (httpCacheIntervalOverride != null) __obj.updateDynamic("httpCacheIntervalOverride")(httpCacheIntervalOverride.asInstanceOf[js.Any])
-    if (logLevel != null) __obj.updateDynamic("logLevel")(logLevel.asInstanceOf[js.Any])
-    if (notificationsClient != null) __obj.updateDynamic("notificationsClient")(notificationsClient.asInstanceOf[js.Any])
-    if (productId != null) __obj.updateDynamic("productId")(productId.asInstanceOf[js.Any])
-    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
-    if (!js.isUndefined(retryWhenThrottledOverride)) __obj.updateDynamic("retryWhenThrottledOverride")(retryWhenThrottledOverride.asInstanceOf[js.Any])
-    if (syncClient != null) __obj.updateDynamic("syncClient")(syncClient.asInstanceOf[js.Any])
-    if (transport != null) __obj.updateDynamic("transport")(transport.asInstanceOf[js.Any])
-    if (twilsockClient != null) __obj.updateDynamic("twilsockClient")(twilsockClient.asInstanceOf[js.Any])
-    if (typingIndicatorTimeoutOverride != null) __obj.updateDynamic("typingIndicatorTimeoutOverride")(typingIndicatorTimeoutOverride.asInstanceOf[js.Any])
-    if (userInfosToSubscribeOverride != null) __obj.updateDynamic("userInfosToSubscribeOverride")(userInfosToSubscribeOverride.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChat(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Chat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Chat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotification(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Notification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Notification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSync(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTwilsock(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Twilsock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTwilsock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Twilsock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackoffConfigOverride(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backoffConfigOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackoffConfigOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backoffConfigOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConsumptionReportIntervalOverride(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("consumptionReportIntervalOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConsumptionReportIntervalOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("consumptionReportIntervalOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttpCacheIntervalOverride(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpCacheIntervalOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpCacheIntervalOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpCacheIntervalOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogLevel(value: LogLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogLevelNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(null)
+        ret
+    }
+    @scala.inline
+    def withNotificationsClient(value: Notifications): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationsClient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationsClient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationsClient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetryWhenThrottledOverride(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryWhenThrottledOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetryWhenThrottledOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryWhenThrottledOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSyncClient(value: SyncClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syncClient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSyncClient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syncClient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransport(value: Transport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTwilsockClient(value: Twilsock): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("twilsockClient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTwilsockClient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("twilsockClient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypingIndicatorTimeoutOverride(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typingIndicatorTimeoutOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypingIndicatorTimeoutOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typingIndicatorTimeoutOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserInfosToSubscribeOverride(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userInfosToSubscribeOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserInfosToSubscribeOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userInfosToSubscribeOverride")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

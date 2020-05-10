@@ -13,7 +13,6 @@ class SearchBoxBase protected ()
   extends Component[ISearchBoxProps, ISearchBoxState, js.Any] {
   def this(props: ISearchBoxProps) = this()
   var _callOnChange: js.Any = js.native
-  var _events: js.Any = js.native
   var _fallbackId: js.Any = js.native
   var _inputElement: js.Any = js.native
   var _latestValue: js.Any = js.native
@@ -27,8 +26,6 @@ class SearchBoxBase protected ()
   var _rootElement: js.Any = js.native
   @JSName("UNSAFE_componentWillReceiveProps")
   def UNSAFE_componentWillReceiveProps_MSearchBoxBase(newProps: ISearchBoxProps): Unit = js.native
-  @JSName("componentWillUnmount")
-  def componentWillUnmount_MSearchBoxBase(): Unit = js.native
   /**
     * Sets focus to the search box input field
     */

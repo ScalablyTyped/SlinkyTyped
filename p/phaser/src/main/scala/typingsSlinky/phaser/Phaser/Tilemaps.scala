@@ -50,7 +50,7 @@ object Tilemaps extends js.Object {
     * 
     * Use this over a Static Tilemap Layer when you need those features.
     */
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType because Already inherited */ @js.native
   class DynamicTilemapLayer protected ()
     extends GameObject
@@ -128,67 +128,9 @@ object Tilemaps extends js.Object {
       */
     var culledTiles: js.Array[_] = js.native
     /**
-      * The depth of this Game Object within the Scene.
-      * 
-      * The depth is also known as the 'z-index' in some environments, and allows you to change the rendering order
-      * of Game Objects, without actually moving their position in the display list.
-      * 
-      * The depth starts from zero (the default value) and increases from that point. A Game Object with a higher depth
-      * value will always render in front of one with a lower value.
-      * 
-      * Setting the depth will queue a depth sort event within the Scene.
-      */
-    /* CompleteClass */
-    override var depth: Double = js.native
-    /**
-      * The displayed height of this Game Object.
-      * 
-      * This value takes into account the scale factor.
-      * 
-      * Setting this value will adjust the Game Object's scale property.
-      */
-    /* CompleteClass */
-    override var displayHeight: Double = js.native
-    /**
-      * The displayed width of this Game Object.
-      * 
-      * This value takes into account the scale factor.
-      * 
-      * Setting this value will adjust the Game Object's scale property.
-      */
-    /* CompleteClass */
-    override var displayWidth: Double = js.native
-    /**
-      * The horizontally flipped state of the Game Object.
-      * 
-      * A Game Object that is flipped horizontally will render inversed on the horizontal axis.
-      * Flipping always takes place from the middle of the texture and does not impact the scale value.
-      * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-      */
-    /* CompleteClass */
-    override var flipX: Boolean = js.native
-    /**
-      * The vertically flipped state of the Game Object.
-      * 
-      * A Game Object that is flipped vertically will render inversed on the vertical axis (i.e. upside down)
-      * Flipping always takes place from the middle of the texture and does not impact the scale value.
-      * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-      */
-    /* CompleteClass */
-    override var flipY: Boolean = js.native
-    /**
       * An array holding the mapping between the tile indexes and the tileset they belong to.
       */
     var gidMap: js.Array[Tileset] = js.native
-    /**
-      * The native (un-scaled) height of this Game Object.
-      * 
-      * Changing this value will not change the size that the Game Object is rendered in-game.
-      * For that you need to either set the scale of the Game Object (`setScale`) or use
-      * the `displayHeight` property.
-      */
-    /* CompleteClass */
-    override var height: Double = js.native
     /**
       * Used internally by physics system to perform fast type checks.
       */
@@ -228,22 +170,6 @@ object Tilemaps extends js.Object {
       * As of Phaser 3.14 this property is now an array of Tileset objects, previously it was a single reference.
       */
     var tileset: js.Array[Tileset] = js.native
-    /**
-      * The visible state of the Game Object.
-      * 
-      * An invisible Game Object will skip rendering, but will still process update logic.
-      */
-    /* CompleteClass */
-    override var visible: Boolean = js.native
-    /**
-      * The native (un-scaled) width of this Game Object.
-      * 
-      * Changing this value will not change the size that the Game Object is rendered in-game.
-      * For that you need to either set the scale of the Game Object (`setScale`) or use
-      * the `displayWidth` property.
-      */
-    /* CompleteClass */
-    override var width: Double = js.native
     /**
       * Calculates interesting faces at the given tile coordinates of the specified layer. Interesting
       * faces are used internally for optimizing collisions against tiles. This method is mostly used
@@ -669,11 +595,6 @@ object Tilemaps extends js.Object {
       width: integer,
       height: integer
     ): DynamicTilemapLayer = js.native
-    /**
-      * Resets the horizontal and vertical flipped state of this Game Object back to their default un-flipped state.
-      */
-    /* CompleteClass */
-    override def resetFlip(): this.type = js.native
     def setCollision(indexes: js.Array[_]): Tilemap = js.native
     def setCollision(indexes: js.Array[_], collides: Boolean): Tilemap = js.native
     def setCollision(indexes: js.Array[_], collides: Boolean, recalculateFaces: Boolean): Tilemap = js.native
@@ -756,56 +677,6 @@ object Tilemaps extends js.Object {
     def setCullPadding(): this.type = js.native
     def setCullPadding(paddingX: integer): this.type = js.native
     def setCullPadding(paddingX: integer, paddingY: integer): this.type = js.native
-    /**
-      * The depth of this Game Object within the Scene.
-      * 
-      * The depth is also known as the 'z-index' in some environments, and allows you to change the rendering order
-      * of Game Objects, without actually moving their position in the display list.
-      * 
-      * The depth starts from zero (the default value) and increases from that point. A Game Object with a higher depth
-      * value will always render in front of one with a lower value.
-      * 
-      * Setting the depth will queue a depth sort event within the Scene.
-      * @param value The depth of this Game Object.
-      */
-    /* CompleteClass */
-    override def setDepth(value: integer): this.type = js.native
-    /**
-      * Sets the display size of this Game Object.
-      * 
-      * Calling this will adjust the scale.
-      * @param width The width of this Game Object.
-      * @param height The height of this Game Object.
-      */
-    /* CompleteClass */
-    override def setDisplaySize(width: Double, height: Double): this.type = js.native
-    /**
-      * Sets the horizontal and vertical flipped state of this Game Object.
-      * 
-      * A Game Object that is flipped will render inversed on the flipped axis.
-      * Flipping always takes place from the middle of the texture and does not impact the scale value.
-      * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-      * @param x The horizontal flipped state. `false` for no flip, or `true` to be flipped.
-      * @param y The horizontal flipped state. `false` for no flip, or `true` to be flipped.
-      */
-    /* CompleteClass */
-    override def setFlip(x: Boolean, y: Boolean): this.type = js.native
-    /**
-      * Sets the horizontal flipped state of this Game Object.
-      * 
-      * A Game Object that is flipped horizontally will render inversed on the horizontal axis.
-      * Flipping always takes place from the middle of the texture and does not impact the scale value.
-      * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-      * @param value The flipped state. `false` for no flip, or `true` to be flipped.
-      */
-    /* CompleteClass */
-    override def setFlipX(value: Boolean): this.type = js.native
-    /**
-      * Sets the vertical flipped state of this Game Object.
-      * @param value The flipped state. `false` for no flip, or `true` to be flipped.
-      */
-    /* CompleteClass */
-    override def setFlipY(value: Boolean): this.type = js.native
     def setRenderOrder(renderOrder: String): this.type = js.native
     /**
       * Sets the rendering (draw) order of the tiles in this layer.
@@ -827,21 +698,6 @@ object Tilemaps extends js.Object {
       * @param renderOrder The render (draw) order value. Either an integer between 0 and 3, or a string: 'right-down', 'left-down', 'right-up' or 'left-up'.
       */
     def setRenderOrder(renderOrder: integer): this.type = js.native
-    /**
-      * Sets the internal size of this Game Object, as used for frame or physics body creation.
-      * 
-      * This will not change the size that the Game Object is rendered in-game.
-      * For that you need to either set the scale of the Game Object (`setScale`) or call the
-      * `setDisplaySize` method, which is the same thing as changing the scale but allows you
-      * to do so by giving pixel values.
-      * 
-      * If you have enabled this Game Object for input, changing the size will _not_ change the
-      * size of the hit area. To do this you should adjust the `input.hitArea` object directly.
-      * @param width The width of this Game Object.
-      * @param height The height of this Game Object.
-      */
-    /* CompleteClass */
-    override def setSize(width: Double, height: Double): this.type = js.native
     /**
       * You can control if the Cameras should cull tiles before rendering them or not.
       * By default the camera will try to cull the tiles in this layer, to avoid over-drawing to the renderer.
@@ -881,14 +737,6 @@ object Tilemaps extends js.Object {
       callback: js.UndefOr[js.Function],
       callbackContext: js.UndefOr[js.Object]
     ): DynamicTilemapLayer = js.native
-    /**
-      * Sets the visibility of this Game Object.
-      * 
-      * An invisible Game Object will skip rendering, but will still process update logic.
-      * @param value The visible state of the Game Object.
-      */
-    /* CompleteClass */
-    override def setVisible(value: Boolean): this.type = js.native
     /**
       * Shuffles the tiles in a rectangular region (specified in tile coordinates) within the given
       * layer. It will only randomize the tiles in that area, so if they're all the same nothing will
@@ -948,20 +796,6 @@ object Tilemaps extends js.Object {
       */
     def tileToWorldY(tileY: integer): Double = js.native
     def tileToWorldY(tileY: integer, camera: Camera): Double = js.native
-    /**
-      * Toggles the horizontal flipped state of this Game Object.
-      * 
-      * A Game Object that is flipped horizontally will render inversed on the horizontal axis.
-      * Flipping always takes place from the middle of the texture and does not impact the scale value.
-      * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-      */
-    /* CompleteClass */
-    override def toggleFlipX(): this.type = js.native
-    /**
-      * Toggles the vertical flipped state of this Game Object.
-      */
-    /* CompleteClass */
-    override def toggleFlipY(): this.type = js.native
     /**
       * Randomizes the indexes of a rectangular region of tiles (in tile coordinates) within the
       * specified layer. Each tile will receive a new index. New indexes are drawn from the given
@@ -1385,7 +1219,7 @@ object Tilemaps extends js.Object {
     * 
     * Use a Static Tilemap Layer instead of a Dynamic Tilemap Layer when you don't need tile manipulation features.
     */
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType because Already inherited */ @js.native
   class StaticTilemapLayer protected ()
     extends GameObject
@@ -1469,67 +1303,9 @@ object Tilemaps extends js.Object {
       */
     var culledTiles: js.Array[_] = js.native
     /**
-      * The depth of this Game Object within the Scene.
-      * 
-      * The depth is also known as the 'z-index' in some environments, and allows you to change the rendering order
-      * of Game Objects, without actually moving their position in the display list.
-      * 
-      * The depth starts from zero (the default value) and increases from that point. A Game Object with a higher depth
-      * value will always render in front of one with a lower value.
-      * 
-      * Setting the depth will queue a depth sort event within the Scene.
-      */
-    /* CompleteClass */
-    override var depth: Double = js.native
-    /**
-      * The displayed height of this Game Object.
-      * 
-      * This value takes into account the scale factor.
-      * 
-      * Setting this value will adjust the Game Object's scale property.
-      */
-    /* CompleteClass */
-    override var displayHeight: Double = js.native
-    /**
-      * The displayed width of this Game Object.
-      * 
-      * This value takes into account the scale factor.
-      * 
-      * Setting this value will adjust the Game Object's scale property.
-      */
-    /* CompleteClass */
-    override var displayWidth: Double = js.native
-    /**
-      * The horizontally flipped state of the Game Object.
-      * 
-      * A Game Object that is flipped horizontally will render inversed on the horizontal axis.
-      * Flipping always takes place from the middle of the texture and does not impact the scale value.
-      * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-      */
-    /* CompleteClass */
-    override var flipX: Boolean = js.native
-    /**
-      * The vertically flipped state of the Game Object.
-      * 
-      * A Game Object that is flipped vertically will render inversed on the vertical axis (i.e. upside down)
-      * Flipping always takes place from the middle of the texture and does not impact the scale value.
-      * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-      */
-    /* CompleteClass */
-    override var flipY: Boolean = js.native
-    /**
       * An array holding the mapping between the tile indexes and the tileset they belong to.
       */
     var gidMap: js.Array[Tileset] = js.native
-    /**
-      * The native (un-scaled) height of this Game Object.
-      * 
-      * Changing this value will not change the size that the Game Object is rendered in-game.
-      * For that you need to either set the scale of the Game Object (`setScale`) or use
-      * the `displayHeight` property.
-      */
-    /* CompleteClass */
-    override var height: Double = js.native
     /**
       * Used internally by physics system to perform fast type checks.
       */
@@ -1577,22 +1353,6 @@ object Tilemaps extends js.Object {
       * As of Phaser 3.14 this property is now an array of Tileset objects, previously it was a single reference.
       */
     var tileset: js.Array[Tileset] = js.native
-    /**
-      * The visible state of the Game Object.
-      * 
-      * An invisible Game Object will skip rendering, but will still process update logic.
-      */
-    /* CompleteClass */
-    override var visible: Boolean = js.native
-    /**
-      * The native (un-scaled) width of this Game Object.
-      * 
-      * Changing this value will not change the size that the Game Object is rendered in-game.
-      * For that you need to either set the scale of the Game Object (`setScale`) or use
-      * the `displayWidth` property.
-      */
-    /* CompleteClass */
-    override var width: Double = js.native
     /**
       * Calculates interesting faces at the given tile coordinates of the specified layer. Interesting
       * faces are used internally for optimizing collisions against tiles. This method is mostly used
@@ -1849,11 +1609,6 @@ object Tilemaps extends js.Object {
       * @param styleConfig An object specifying the colors to use for the debug drawing.
       */
     def renderDebug(graphics: Graphics, styleConfig: StyleConfig): StaticTilemapLayer = js.native
-    /**
-      * Resets the horizontal and vertical flipped state of this Game Object back to their default un-flipped state.
-      */
-    /* CompleteClass */
-    override def resetFlip(): this.type = js.native
     def setCollision(indexes: js.Array[_]): StaticTilemapLayer = js.native
     def setCollision(indexes: js.Array[_], collides: Boolean): StaticTilemapLayer = js.native
     def setCollision(indexes: js.Array[_], collides: Boolean, recalculateFaces: Boolean): StaticTilemapLayer = js.native
@@ -1947,56 +1702,6 @@ object Tilemaps extends js.Object {
     def setCullPadding(): this.type = js.native
     def setCullPadding(paddingX: integer): this.type = js.native
     def setCullPadding(paddingX: integer, paddingY: integer): this.type = js.native
-    /**
-      * The depth of this Game Object within the Scene.
-      * 
-      * The depth is also known as the 'z-index' in some environments, and allows you to change the rendering order
-      * of Game Objects, without actually moving their position in the display list.
-      * 
-      * The depth starts from zero (the default value) and increases from that point. A Game Object with a higher depth
-      * value will always render in front of one with a lower value.
-      * 
-      * Setting the depth will queue a depth sort event within the Scene.
-      * @param value The depth of this Game Object.
-      */
-    /* CompleteClass */
-    override def setDepth(value: integer): this.type = js.native
-    /**
-      * Sets the display size of this Game Object.
-      * 
-      * Calling this will adjust the scale.
-      * @param width The width of this Game Object.
-      * @param height The height of this Game Object.
-      */
-    /* CompleteClass */
-    override def setDisplaySize(width: Double, height: Double): this.type = js.native
-    /**
-      * Sets the horizontal and vertical flipped state of this Game Object.
-      * 
-      * A Game Object that is flipped will render inversed on the flipped axis.
-      * Flipping always takes place from the middle of the texture and does not impact the scale value.
-      * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-      * @param x The horizontal flipped state. `false` for no flip, or `true` to be flipped.
-      * @param y The horizontal flipped state. `false` for no flip, or `true` to be flipped.
-      */
-    /* CompleteClass */
-    override def setFlip(x: Boolean, y: Boolean): this.type = js.native
-    /**
-      * Sets the horizontal flipped state of this Game Object.
-      * 
-      * A Game Object that is flipped horizontally will render inversed on the horizontal axis.
-      * Flipping always takes place from the middle of the texture and does not impact the scale value.
-      * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-      * @param value The flipped state. `false` for no flip, or `true` to be flipped.
-      */
-    /* CompleteClass */
-    override def setFlipX(value: Boolean): this.type = js.native
-    /**
-      * Sets the vertical flipped state of this Game Object.
-      * @param value The flipped state. `false` for no flip, or `true` to be flipped.
-      */
-    /* CompleteClass */
-    override def setFlipY(value: Boolean): this.type = js.native
     def setRenderOrder(renderOrder: String): this.type = js.native
     /**
       * Sets the rendering (draw) order of the tiles in this layer.
@@ -2018,21 +1723,6 @@ object Tilemaps extends js.Object {
       * @param renderOrder The render (draw) order value. Either an integer between 0 and 3, or a string: 'right-down', 'left-down', 'right-up' or 'left-up'.
       */
     def setRenderOrder(renderOrder: integer): this.type = js.native
-    /**
-      * Sets the internal size of this Game Object, as used for frame or physics body creation.
-      * 
-      * This will not change the size that the Game Object is rendered in-game.
-      * For that you need to either set the scale of the Game Object (`setScale`) or call the
-      * `setDisplaySize` method, which is the same thing as changing the scale but allows you
-      * to do so by giving pixel values.
-      * 
-      * If you have enabled this Game Object for input, changing the size will _not_ change the
-      * size of the hit area. To do this you should adjust the `input.hitArea` object directly.
-      * @param width The width of this Game Object.
-      * @param height The height of this Game Object.
-      */
-    /* CompleteClass */
-    override def setSize(width: Double, height: Double): this.type = js.native
     /**
       * Canvas only.
       * 
@@ -2077,14 +1767,6 @@ object Tilemaps extends js.Object {
       callbackContext: js.Object
     ): StaticTilemapLayer = js.native
     /**
-      * Sets the visibility of this Game Object.
-      * 
-      * An invisible Game Object will skip rendering, but will still process update logic.
-      * @param value The visible state of the Game Object.
-      */
-    /* CompleteClass */
-    override def setVisible(value: Boolean): this.type = js.native
-    /**
       * Converts from tile X coordinates (tile units) to world X coordinates (pixels), factoring in the
       * layers position, scale and scroll.
       * @param tileX The X coordinate, in tile coordinates.
@@ -2112,20 +1794,6 @@ object Tilemaps extends js.Object {
       */
     def tileToWorldY(tileY: integer): Double = js.native
     def tileToWorldY(tileY: integer, camera: Camera): Double = js.native
-    /**
-      * Toggles the horizontal flipped state of this Game Object.
-      * 
-      * A Game Object that is flipped horizontally will render inversed on the horizontal axis.
-      * Flipping always takes place from the middle of the texture and does not impact the scale value.
-      * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-      */
-    /* CompleteClass */
-    override def toggleFlipX(): this.type = js.native
-    /**
-      * Toggles the vertical flipped state of this Game Object.
-      */
-    /* CompleteClass */
-    override def toggleFlipY(): this.type = js.native
     /**
       * Upload the tile data to a VBO.
       * @param camera The camera to render to.
@@ -2265,24 +1933,6 @@ object Tilemaps extends js.Object {
       */
     var faceTop: Boolean = js.native
     /**
-      * The horizontally flipped state of the Game Object.
-      * 
-      * A Game Object that is flipped horizontally will render inversed on the horizontal axis.
-      * Flipping always takes place from the middle of the texture and does not impact the scale value.
-      * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-      */
-    /* CompleteClass */
-    override var flipX: Boolean = js.native
-    /**
-      * The vertically flipped state of the Game Object.
-      * 
-      * A Game Object that is flipped vertically will render inversed on the vertical axis (i.e. upside down)
-      * Flipping always takes place from the middle of the texture and does not impact the scale value.
-      * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-      */
-    /* CompleteClass */
-    override var flipY: Boolean = js.native
-    /**
       * True if this tile has any interesting faces.
       */
     val hasInterestingFace: Boolean = js.native
@@ -2345,13 +1995,6 @@ object Tilemaps extends js.Object {
       * the 4 corner tint component on other GameObjects.
       */
     var tint: Double = js.native
-    /**
-      * The visible state of the Game Object.
-      * 
-      * An invisible Game Object will skip rendering, but will still process update logic.
-      */
-    /* CompleteClass */
-    override var visible: Boolean = js.native
     /**
       * The width of the tile in pixels.
       */
@@ -2471,11 +2114,6 @@ object Tilemaps extends js.Object {
       */
     def resetFaces(): Tile = js.native
     /**
-      * Resets the horizontal and vertical flipped state of this Game Object back to their default un-flipped state.
-      */
-    /* CompleteClass */
-    override def resetFlip(): this.type = js.native
-    /**
       * Sets the collision flags for each side of this tile and updates the interesting faces list.
       * @param left Indicating collide with any object on the left.
       * @param right Indicating collide with any object on the right.
@@ -2497,33 +2135,6 @@ object Tilemaps extends js.Object {
       */
     def setCollisionCallback(callback: js.Function, context: js.Object): Tile = js.native
     /**
-      * Sets the horizontal and vertical flipped state of this Game Object.
-      * 
-      * A Game Object that is flipped will render inversed on the flipped axis.
-      * Flipping always takes place from the middle of the texture and does not impact the scale value.
-      * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-      * @param x The horizontal flipped state. `false` for no flip, or `true` to be flipped.
-      * @param y The horizontal flipped state. `false` for no flip, or `true` to be flipped.
-      */
-    /* CompleteClass */
-    override def setFlip(x: Boolean, y: Boolean): this.type = js.native
-    /**
-      * Sets the horizontal flipped state of this Game Object.
-      * 
-      * A Game Object that is flipped horizontally will render inversed on the horizontal axis.
-      * Flipping always takes place from the middle of the texture and does not impact the scale value.
-      * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-      * @param value The flipped state. `false` for no flip, or `true` to be flipped.
-      */
-    /* CompleteClass */
-    override def setFlipX(value: Boolean): this.type = js.native
-    /**
-      * Sets the vertical flipped state of this Game Object.
-      * @param value The flipped state. `false` for no flip, or `true` to be flipped.
-      */
-    /* CompleteClass */
-    override def setFlipY(value: Boolean): this.type = js.native
-    /**
       * Sets the size of the tile and updates its pixelX and pixelY.
       * @param tileWidth The width of the tile in pixels.
       * @param tileHeight The height of the tile in pixels.
@@ -2531,28 +2142,6 @@ object Tilemaps extends js.Object {
       * @param baseHeight The base height of the tile in pixels (in pixels).
       */
     def setSize(tileWidth: integer, tileHeight: integer, baseWidth: integer, baseHeight: integer): Tile = js.native
-    /**
-      * Sets the visibility of this Game Object.
-      * 
-      * An invisible Game Object will skip rendering, but will still process update logic.
-      * @param value The visible state of the Game Object.
-      */
-    /* CompleteClass */
-    override def setVisible(value: Boolean): this.type = js.native
-    /**
-      * Toggles the horizontal flipped state of this Game Object.
-      * 
-      * A Game Object that is flipped horizontally will render inversed on the horizontal axis.
-      * Flipping always takes place from the middle of the texture and does not impact the scale value.
-      * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-      */
-    /* CompleteClass */
-    override def toggleFlipX(): this.type = js.native
-    /**
-      * Toggles the vertical flipped state of this Game Object.
-      */
-    /* CompleteClass */
-    override def toggleFlipY(): this.type = js.native
     /**
       * Used internally. Updates the tile's world XY position based on the current tile size.
       */

@@ -18,10 +18,29 @@ trait SchemaGoogleCloudVisionV1p2beta1AsyncBatchAnnotateFilesRequest extends js.
 
 object SchemaGoogleCloudVisionV1p2beta1AsyncBatchAnnotateFilesRequest {
   @scala.inline
-  def apply(requests: js.Array[SchemaGoogleCloudVisionV1p2beta1AsyncAnnotateFileRequest] = null): SchemaGoogleCloudVisionV1p2beta1AsyncBatchAnnotateFilesRequest = {
+  def apply(): SchemaGoogleCloudVisionV1p2beta1AsyncBatchAnnotateFilesRequest = {
     val __obj = js.Dynamic.literal()
-    if (requests != null) __obj.updateDynamic("requests")(requests.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p2beta1AsyncBatchAnnotateFilesRequest]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVisionV1p2beta1AsyncBatchAnnotateFilesRequestOps[Self <: SchemaGoogleCloudVisionV1p2beta1AsyncBatchAnnotateFilesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRequests(value: js.Array[SchemaGoogleCloudVisionV1p2beta1AsyncAnnotateFileRequest]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requests")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

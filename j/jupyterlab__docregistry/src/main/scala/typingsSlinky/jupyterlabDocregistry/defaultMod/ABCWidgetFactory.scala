@@ -47,28 +47,10 @@ abstract class ABCWidgetFactory[T /* <: IDocumentWidget[Widget, IModel] */, U /*
   @JSName("defaultRendered")
   val defaultRendered_ABCWidgetFactory: js.Array[String] = js.native
   /**
-    * The file types the widget can view.
-    */
-  /* CompleteClass */
-  override val fileTypes: js.Array[String] = js.native
-  /**
-    * Test whether the object has been disposed.
-    *
-    * #### Notes
-    * This property is always safe to access.
-    */
-  /* CompleteClass */
-  override val isDisposed: Boolean = js.native
-  /**
     * The registered name of the model type used to create the widgets.
     */
   @JSName("modelName")
   val modelName_ABCWidgetFactory: String = js.native
-  /**
-    * The name of the widget to display in dialogs.
-    */
-  /* CompleteClass */
-  override val name: String = js.native
   /**
     * Whether the widgets prefer having a kernel started.
     */
@@ -93,18 +75,5 @@ abstract class ABCWidgetFactory[T /* <: IDocumentWidget[Widget, IModel] */, U /*
     * Default factory for toolbar items to be added after the widget is created.
     */
   /* protected */ def defaultToolbarFactory(widget: T): js.Array[IToolbarItem] = js.native
-  /**
-    * Dispose of the resources held by the object.
-    *
-    * #### Notes
-    * If the object's `dispose` method is called more than once, all
-    * calls made after the first will be a no-op.
-    *
-    * #### Undefined Behavior
-    * It is undefined behavior to use any functionality of the object
-    * after it has been disposed unless otherwise explicitly noted.
-    */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
 }
 

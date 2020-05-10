@@ -63,26 +63,113 @@ trait SchemaAggregateRequest extends js.Object {
 
 object SchemaAggregateRequest {
   @scala.inline
-  def apply(
-    aggregateBy: js.Array[SchemaAggregateBy] = null,
-    bucketByActivitySegment: SchemaBucketByActivity = null,
-    bucketByActivityType: SchemaBucketByActivity = null,
-    bucketBySession: SchemaBucketBySession = null,
-    bucketByTime: SchemaBucketByTime = null,
-    endTimeMillis: String = null,
-    filteredDataQualityStandard: js.Array[String] = null,
-    startTimeMillis: String = null
-  ): SchemaAggregateRequest = {
+  def apply(): SchemaAggregateRequest = {
     val __obj = js.Dynamic.literal()
-    if (aggregateBy != null) __obj.updateDynamic("aggregateBy")(aggregateBy.asInstanceOf[js.Any])
-    if (bucketByActivitySegment != null) __obj.updateDynamic("bucketByActivitySegment")(bucketByActivitySegment.asInstanceOf[js.Any])
-    if (bucketByActivityType != null) __obj.updateDynamic("bucketByActivityType")(bucketByActivityType.asInstanceOf[js.Any])
-    if (bucketBySession != null) __obj.updateDynamic("bucketBySession")(bucketBySession.asInstanceOf[js.Any])
-    if (bucketByTime != null) __obj.updateDynamic("bucketByTime")(bucketByTime.asInstanceOf[js.Any])
-    if (endTimeMillis != null) __obj.updateDynamic("endTimeMillis")(endTimeMillis.asInstanceOf[js.Any])
-    if (filteredDataQualityStandard != null) __obj.updateDynamic("filteredDataQualityStandard")(filteredDataQualityStandard.asInstanceOf[js.Any])
-    if (startTimeMillis != null) __obj.updateDynamic("startTimeMillis")(startTimeMillis.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAggregateRequest]
   }
+  @scala.inline
+  implicit class SchemaAggregateRequestOps[Self <: SchemaAggregateRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggregateBy(value: js.Array[SchemaAggregateBy]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregateBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregateBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregateBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucketByActivitySegment(value: SchemaBucketByActivity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketByActivitySegment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketByActivitySegment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketByActivitySegment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucketByActivityType(value: SchemaBucketByActivity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketByActivityType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketByActivityType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketByActivityType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucketBySession(value: SchemaBucketBySession): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketBySession")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketBySession: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketBySession")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucketByTime(value: SchemaBucketByTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketByTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketByTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketByTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTimeMillis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimeMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTimeMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimeMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilteredDataQualityStandard(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filteredDataQualityStandard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilteredDataQualityStandard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filteredDataQualityStandard")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTimeMillis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTimeMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeMillis")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

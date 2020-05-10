@@ -22,16 +22,53 @@ trait AudioNormalizationSettings extends js.Object {
 
 object AudioNormalizationSettings {
   @scala.inline
-  def apply(
-    Algorithm: AudioNormalizationAlgorithm = null,
-    AlgorithmControl: AudioNormalizationAlgorithmControl = null,
-    TargetLkfs: Int | Double = null
-  ): AudioNormalizationSettings = {
+  def apply(): AudioNormalizationSettings = {
     val __obj = js.Dynamic.literal()
-    if (Algorithm != null) __obj.updateDynamic("Algorithm")(Algorithm.asInstanceOf[js.Any])
-    if (AlgorithmControl != null) __obj.updateDynamic("AlgorithmControl")(AlgorithmControl.asInstanceOf[js.Any])
-    if (TargetLkfs != null) __obj.updateDynamic("TargetLkfs")(TargetLkfs.asInstanceOf[js.Any])
     __obj.asInstanceOf[AudioNormalizationSettings]
   }
+  @scala.inline
+  implicit class AudioNormalizationSettingsOps[Self <: AudioNormalizationSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlgorithm(value: AudioNormalizationAlgorithm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Algorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Algorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlgorithmControl(value: AudioNormalizationAlgorithmControl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlgorithmControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlgorithmControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlgorithmControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetLkfs(value: doubleMinNegative59Max0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetLkfs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetLkfs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetLkfs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

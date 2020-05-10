@@ -1,16 +1,18 @@
 package typingsSlinky.videoJs.mod
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLTrackElement
 import org.scalajs.dom.raw.MediaError
 import org.scalajs.dom.raw.TextTrackList
 import org.scalajs.dom.raw.TimeRanges
-import typingsSlinky.std.Element
 import typingsSlinky.videoJs.mod.videojs.Button
 import typingsSlinky.videoJs.mod.videojs.Component
 import typingsSlinky.videoJs.mod.videojs.ControlBar
+import typingsSlinky.videoJs.mod.videojs.LiveTracker
 import typingsSlinky.videoJs.mod.videojs.ModalDialog
 import typingsSlinky.videoJs.mod.videojs.NetworkState
 import typingsSlinky.videoJs.mod.videojs.Player
+import typingsSlinky.videoJs.mod.videojs.Player.MediaObject
 import typingsSlinky.videoJs.mod.videojs.PlayerOptions
 import typingsSlinky.videoJs.mod.videojs.ReadyState
 import typingsSlinky.videoJs.mod.videojs.Tech
@@ -29,6 +31,7 @@ trait VideoJsPlayer extends Component {
   var bigPlayButton: Button = js.native
   var controlBar: ControlBar = js.native
   var errorDisplay: ModalDialog = js.native
+  var liveTracker: LiveTracker = js.native
   var loadingSpinner: Component = js.native
   @JSName("options_")
   var options__VideoJsPlayer: PlayerOptions = js.native
@@ -306,7 +309,7 @@ trait VideoJsPlayer extends Component {
     *
     * @return The current MediaError when getting (or null)
     */
-  def error(err: typingsSlinky.std.MediaError): Unit = js.native
+  def error(err: MediaError): Unit = js.native
   @JSName("error")
   def error_Unit(): Unit = js.native
   /**
@@ -340,6 +343,11 @@ trait VideoJsPlayer extends Component {
     * @return get the current object cache
     */
   def getCache(): js.Any = js.native
+  /**
+    * Get a clone of the current Player~MediaObject for this player.
+    * If the loadMedia method has not been used, will attempt to return a Player~MediaObject based on the current state of the player.
+    */
+  def getMedia(): MediaObject = js.native
   /**
     * Gets available media playback quality metrics as specified by the W3C's Media
     * Playback Quality API.
@@ -428,6 +436,10 @@ trait VideoJsPlayer extends Component {
     * Begin loading the src data.
     */
   def load(): Unit = js.native
+  /**
+    * Populate the player using a MediaObject.
+    */
+  def loadMedia(media: MediaObject, ready: js.Function0[_]): Unit = js.native
   def loop(): Boolean = js.native
   def loop(value: Boolean): Unit = js.native
   /**

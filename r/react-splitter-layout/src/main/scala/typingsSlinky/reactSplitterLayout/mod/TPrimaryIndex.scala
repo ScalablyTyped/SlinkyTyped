@@ -12,10 +12,8 @@ trait TPrimaryIndex extends js.Object
 
 object TPrimaryIndex {
   @scala.inline
-  def `0`: typingsSlinky.reactSplitterLayout.reactSplitterLayoutNumbers.`0` = this.cast(0)
+  def `0`: typingsSlinky.reactSplitterLayout.reactSplitterLayoutNumbers.`0` = 0.asInstanceOf[typingsSlinky.reactSplitterLayout.reactSplitterLayoutNumbers.`0`]
   @scala.inline
-  def `1`: typingsSlinky.reactSplitterLayout.reactSplitterLayoutNumbers.`1` = this.cast(1)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `1`: typingsSlinky.reactSplitterLayout.reactSplitterLayoutNumbers.`1` = 1.asInstanceOf[typingsSlinky.reactSplitterLayout.reactSplitterLayoutNumbers.`1`]
 }
 

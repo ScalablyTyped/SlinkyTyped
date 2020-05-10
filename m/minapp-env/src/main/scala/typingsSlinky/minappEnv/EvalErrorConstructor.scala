@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait EvalErrorConstructor
-  extends Instantiable0[typingsSlinky.std.EvalError]
-     with Instantiable1[/* message */ java.lang.String, typingsSlinky.std.EvalError] {
+  extends Instantiable0[js.EvalError]
+     with Instantiable1[/* message */ java.lang.String, js.EvalError] {
   def apply(): js.EvalError = js.native
   def apply(message: java.lang.String): js.EvalError = js.native
 }

@@ -5,81 +5,304 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ExponentFileSystemModule extends js.Object {
-  val bundleDirectory: String | Null
-  val bundledAssets: String | Null
-  val cacheDirectory: String | Null
-  val copyAsync: js.UndefOr[PlatformMethod] = js.undefined
-  val deleteAsync: js.UndefOr[PlatformMethod] = js.undefined
-  val documentDirectory: String | Null
-  val downloadAsync: js.UndefOr[PlatformMethod] = js.undefined
-  val downloadResumablePauseAsync: js.UndefOr[PlatformMethod] = js.undefined
-  val downloadResumableStartAsync: js.UndefOr[PlatformMethod] = js.undefined
-  val getContentUriAsync: js.UndefOr[PlatformMethod] = js.undefined
-  val getFreeDiskStorageAsync: js.UndefOr[PlatformMethod] = js.undefined
-  val getInfoAsync: js.UndefOr[PlatformMethod] = js.undefined
-  val getTotalDiskCapacityAsync: js.UndefOr[PlatformMethod] = js.undefined
-  val makeDirectoryAsync: js.UndefOr[PlatformMethod] = js.undefined
-  val moveAsync: js.UndefOr[PlatformMethod] = js.undefined
-  val name: ExponentFileSystem
-  val readAsStringAsync: js.UndefOr[PlatformMethod] = js.undefined
-  val readDirectoryAsync: js.UndefOr[PlatformMethod] = js.undefined
-  var startObserving: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var stopObserving: js.UndefOr[js.Function0[Unit]] = js.undefined
-  val writeAsStringAsync: js.UndefOr[PlatformMethod] = js.undefined
-  def addListener(eventName: String): Unit
-  def removeListeners(count: Double): Unit
+  val bundleDirectory: String | Null = js.native
+  val bundledAssets: String | Null = js.native
+  val cacheDirectory: String | Null = js.native
+  val copyAsync: js.UndefOr[PlatformMethod] = js.native
+  val deleteAsync: js.UndefOr[PlatformMethod] = js.native
+  val documentDirectory: String | Null = js.native
+  val downloadAsync: js.UndefOr[PlatformMethod] = js.native
+  val downloadResumablePauseAsync: js.UndefOr[PlatformMethod] = js.native
+  val downloadResumableStartAsync: js.UndefOr[PlatformMethod] = js.native
+  val getContentUriAsync: js.UndefOr[PlatformMethod] = js.native
+  val getFreeDiskStorageAsync: js.UndefOr[PlatformMethod] = js.native
+  val getInfoAsync: js.UndefOr[PlatformMethod] = js.native
+  val getTotalDiskCapacityAsync: js.UndefOr[PlatformMethod] = js.native
+  val makeDirectoryAsync: js.UndefOr[PlatformMethod] = js.native
+  val moveAsync: js.UndefOr[PlatformMethod] = js.native
+  val name: ExponentFileSystem = js.native
+  val readAsStringAsync: js.UndefOr[PlatformMethod] = js.native
+  val readDirectoryAsync: js.UndefOr[PlatformMethod] = js.native
+  var startObserving: js.UndefOr[js.Function0[Unit]] = js.native
+  var stopObserving: js.UndefOr[js.Function0[Unit]] = js.native
+  val writeAsStringAsync: js.UndefOr[PlatformMethod] = js.native
+  def addListener(eventName: String): Unit = js.native
+  def removeListeners(count: Double): Unit = js.native
 }
 
 object ExponentFileSystemModule {
   @scala.inline
-  def apply(
-    addListener: String => Unit,
-    name: ExponentFileSystem,
-    removeListeners: Double => Unit,
-    bundleDirectory: String = null,
-    bundledAssets: String = null,
-    cacheDirectory: String = null,
-    copyAsync: /* repeated */ js.Any => js.Promise[js.Any] = null,
-    deleteAsync: /* repeated */ js.Any => js.Promise[js.Any] = null,
-    documentDirectory: String = null,
-    downloadAsync: /* repeated */ js.Any => js.Promise[js.Any] = null,
-    downloadResumablePauseAsync: /* repeated */ js.Any => js.Promise[js.Any] = null,
-    downloadResumableStartAsync: /* repeated */ js.Any => js.Promise[js.Any] = null,
-    getContentUriAsync: /* repeated */ js.Any => js.Promise[js.Any] = null,
-    getFreeDiskStorageAsync: /* repeated */ js.Any => js.Promise[js.Any] = null,
-    getInfoAsync: /* repeated */ js.Any => js.Promise[js.Any] = null,
-    getTotalDiskCapacityAsync: /* repeated */ js.Any => js.Promise[js.Any] = null,
-    makeDirectoryAsync: /* repeated */ js.Any => js.Promise[js.Any] = null,
-    moveAsync: /* repeated */ js.Any => js.Promise[js.Any] = null,
-    readAsStringAsync: /* repeated */ js.Any => js.Promise[js.Any] = null,
-    readDirectoryAsync: /* repeated */ js.Any => js.Promise[js.Any] = null,
-    startObserving: () => Unit = null,
-    stopObserving: () => Unit = null,
-    writeAsStringAsync: /* repeated */ js.Any => js.Promise[js.Any] = null
-  ): ExponentFileSystemModule = {
+  def apply(addListener: String => Unit, name: ExponentFileSystem, removeListeners: Double => Unit): ExponentFileSystemModule = {
     val __obj = js.Dynamic.literal(addListener = js.Any.fromFunction1(addListener), name = name.asInstanceOf[js.Any], removeListeners = js.Any.fromFunction1(removeListeners))
-    if (bundleDirectory != null) __obj.updateDynamic("bundleDirectory")(bundleDirectory.asInstanceOf[js.Any])
-    if (bundledAssets != null) __obj.updateDynamic("bundledAssets")(bundledAssets.asInstanceOf[js.Any])
-    if (cacheDirectory != null) __obj.updateDynamic("cacheDirectory")(cacheDirectory.asInstanceOf[js.Any])
-    if (copyAsync != null) __obj.updateDynamic("copyAsync")(js.Any.fromFunction1(copyAsync))
-    if (deleteAsync != null) __obj.updateDynamic("deleteAsync")(js.Any.fromFunction1(deleteAsync))
-    if (documentDirectory != null) __obj.updateDynamic("documentDirectory")(documentDirectory.asInstanceOf[js.Any])
-    if (downloadAsync != null) __obj.updateDynamic("downloadAsync")(js.Any.fromFunction1(downloadAsync))
-    if (downloadResumablePauseAsync != null) __obj.updateDynamic("downloadResumablePauseAsync")(js.Any.fromFunction1(downloadResumablePauseAsync))
-    if (downloadResumableStartAsync != null) __obj.updateDynamic("downloadResumableStartAsync")(js.Any.fromFunction1(downloadResumableStartAsync))
-    if (getContentUriAsync != null) __obj.updateDynamic("getContentUriAsync")(js.Any.fromFunction1(getContentUriAsync))
-    if (getFreeDiskStorageAsync != null) __obj.updateDynamic("getFreeDiskStorageAsync")(js.Any.fromFunction1(getFreeDiskStorageAsync))
-    if (getInfoAsync != null) __obj.updateDynamic("getInfoAsync")(js.Any.fromFunction1(getInfoAsync))
-    if (getTotalDiskCapacityAsync != null) __obj.updateDynamic("getTotalDiskCapacityAsync")(js.Any.fromFunction1(getTotalDiskCapacityAsync))
-    if (makeDirectoryAsync != null) __obj.updateDynamic("makeDirectoryAsync")(js.Any.fromFunction1(makeDirectoryAsync))
-    if (moveAsync != null) __obj.updateDynamic("moveAsync")(js.Any.fromFunction1(moveAsync))
-    if (readAsStringAsync != null) __obj.updateDynamic("readAsStringAsync")(js.Any.fromFunction1(readAsStringAsync))
-    if (readDirectoryAsync != null) __obj.updateDynamic("readDirectoryAsync")(js.Any.fromFunction1(readDirectoryAsync))
-    if (startObserving != null) __obj.updateDynamic("startObserving")(js.Any.fromFunction0(startObserving))
-    if (stopObserving != null) __obj.updateDynamic("stopObserving")(js.Any.fromFunction0(stopObserving))
-    if (writeAsStringAsync != null) __obj.updateDynamic("writeAsStringAsync")(js.Any.fromFunction1(writeAsStringAsync))
     __obj.asInstanceOf[ExponentFileSystemModule]
   }
+  @scala.inline
+  implicit class ExponentFileSystemModuleOps[Self <: ExponentFileSystemModule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddListener(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addListener")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withName(value: ExponentFileSystem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoveListeners(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeListeners")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBundleDirectory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleDirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBundleDirectoryNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleDirectory")(null)
+        ret
+    }
+    @scala.inline
+    def withBundledAssets(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bundledAssets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBundledAssetsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bundledAssets")(null)
+        ret
+    }
+    @scala.inline
+    def withCacheDirectory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheDirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCacheDirectoryNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheDirectory")(null)
+        ret
+    }
+    @scala.inline
+    def withCopyAsync(value: /* repeated */ js.Any => js.Promise[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCopyAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyAsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteAsync(value: /* repeated */ js.Any => js.Promise[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDeleteAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteAsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentDirectory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentDirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDocumentDirectoryNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentDirectory")(null)
+        ret
+    }
+    @scala.inline
+    def withDownloadAsync(value: /* repeated */ js.Any => js.Promise[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDownloadAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadAsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDownloadResumablePauseAsync(value: /* repeated */ js.Any => js.Promise[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadResumablePauseAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDownloadResumablePauseAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadResumablePauseAsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDownloadResumableStartAsync(value: /* repeated */ js.Any => js.Promise[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadResumableStartAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDownloadResumableStartAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadResumableStartAsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetContentUriAsync(value: /* repeated */ js.Any => js.Promise[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getContentUriAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetContentUriAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getContentUriAsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetFreeDiskStorageAsync(value: /* repeated */ js.Any => js.Promise[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFreeDiskStorageAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetFreeDiskStorageAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFreeDiskStorageAsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetInfoAsync(value: /* repeated */ js.Any => js.Promise[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getInfoAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetInfoAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getInfoAsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetTotalDiskCapacityAsync(value: /* repeated */ js.Any => js.Promise[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTotalDiskCapacityAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetTotalDiskCapacityAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTotalDiskCapacityAsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMakeDirectoryAsync(value: /* repeated */ js.Any => js.Promise[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("makeDirectoryAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutMakeDirectoryAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("makeDirectoryAsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMoveAsync(value: /* repeated */ js.Any => js.Promise[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutMoveAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveAsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadAsStringAsync(value: /* repeated */ js.Any => js.Promise[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readAsStringAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutReadAsStringAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readAsStringAsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadDirectoryAsync(value: /* repeated */ js.Any => js.Promise[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readDirectoryAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutReadDirectoryAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readDirectoryAsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartObserving(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startObserving")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutStartObserving: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startObserving")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopObserving(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopObserving")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutStopObserving: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopObserving")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWriteAsStringAsync(value: /* repeated */ js.Any => js.Promise[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeAsStringAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutWriteAsStringAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeAsStringAsync")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

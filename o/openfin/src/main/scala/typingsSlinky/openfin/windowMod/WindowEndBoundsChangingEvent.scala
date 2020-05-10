@@ -8,12 +8,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WindowEndBoundsChangingEvent[Topic, Type] extends WindowEvent[Topic, Type] {
-  var height: Double
-  var left: Double
-  var top: Double
-  var width: Double
-  var windowState: minimized | normal | maximized
+  var height: Double = js.native
+  var left: Double = js.native
+  var top: Double = js.native
+  var width: Double = js.native
+  var windowState: minimized | normal | maximized = js.native
 }
 
 object WindowEndBoundsChangingEvent {
@@ -33,5 +34,43 @@ object WindowEndBoundsChangingEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WindowEndBoundsChangingEvent[Topic, Type]]
   }
+  @scala.inline
+  implicit class WindowEndBoundsChangingEventOps[Self[topic, `type`] <: WindowEndBoundsChangingEvent[topic, `type`], Topic, Type] (val x: Self[Topic, Type]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[Topic, Type] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Topic, Type]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[Topic, Type]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[Topic, Type]) with Other]
+    @scala.inline
+    def withHeight(value: Double): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLeft(value: Double): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTop(value: Double): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWindowState(value: minimized | normal | maximized): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("windowState")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

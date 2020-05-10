@@ -13,12 +13,10 @@ trait OptionsRotationOriginValue extends js.Object
 
 object OptionsRotationOriginValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.highcharts.highchartsStrings.center = "center".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.center]
   @scala.inline
-  def center: typingsSlinky.highcharts.highchartsStrings.center = this.cast("center")
+  def end: typingsSlinky.highcharts.highchartsStrings.end = "end".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.end]
   @scala.inline
-  def end: typingsSlinky.highcharts.highchartsStrings.end = this.cast("end")
-  @scala.inline
-  def start: typingsSlinky.highcharts.highchartsStrings.start = this.cast("start")
+  def start: typingsSlinky.highcharts.highchartsStrings.start = "start".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.start]
 }
 

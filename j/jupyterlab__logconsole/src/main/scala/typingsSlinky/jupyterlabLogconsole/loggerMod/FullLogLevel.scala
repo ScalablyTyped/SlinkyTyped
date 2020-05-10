@@ -19,18 +19,16 @@ trait FullLogLevel extends js.Object
 
 object FullLogLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def critical: typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.critical = "critical".asInstanceOf[typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.critical]
   @scala.inline
-  def critical: typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.critical = this.cast("critical")
+  def debug: typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.debug = "debug".asInstanceOf[typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.debug]
   @scala.inline
-  def debug: typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.debug = this.cast("debug")
+  def error: typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.error = "error".asInstanceOf[typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.error]
   @scala.inline
-  def error: typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.error = this.cast("error")
+  def info: typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.info = "info".asInstanceOf[typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.info]
   @scala.inline
-  def info: typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.info = this.cast("info")
+  def metadata: typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.metadata = "metadata".asInstanceOf[typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.metadata]
   @scala.inline
-  def metadata: typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.metadata = this.cast("metadata")
-  @scala.inline
-  def warning: typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.warning = this.cast("warning")
+  def warning: typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.warning = "warning".asInstanceOf[typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.warning]
 }
 

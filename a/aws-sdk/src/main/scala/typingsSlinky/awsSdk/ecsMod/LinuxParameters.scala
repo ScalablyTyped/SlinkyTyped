@@ -38,24 +38,101 @@ trait LinuxParameters extends js.Object {
 
 object LinuxParameters {
   @scala.inline
-  def apply(
-    capabilities: KernelCapabilities = null,
-    devices: DevicesList = null,
-    initProcessEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    maxSwap: Int | scala.Double = null,
-    sharedMemorySize: Int | scala.Double = null,
-    swappiness: Int | scala.Double = null,
-    tmpfs: TmpfsList = null
-  ): LinuxParameters = {
+  def apply(): LinuxParameters = {
     val __obj = js.Dynamic.literal()
-    if (capabilities != null) __obj.updateDynamic("capabilities")(capabilities.asInstanceOf[js.Any])
-    if (devices != null) __obj.updateDynamic("devices")(devices.asInstanceOf[js.Any])
-    if (!js.isUndefined(initProcessEnabled)) __obj.updateDynamic("initProcessEnabled")(initProcessEnabled.asInstanceOf[js.Any])
-    if (maxSwap != null) __obj.updateDynamic("maxSwap")(maxSwap.asInstanceOf[js.Any])
-    if (sharedMemorySize != null) __obj.updateDynamic("sharedMemorySize")(sharedMemorySize.asInstanceOf[js.Any])
-    if (swappiness != null) __obj.updateDynamic("swappiness")(swappiness.asInstanceOf[js.Any])
-    if (tmpfs != null) __obj.updateDynamic("tmpfs")(tmpfs.asInstanceOf[js.Any])
     __obj.asInstanceOf[LinuxParameters]
   }
+  @scala.inline
+  implicit class LinuxParametersOps[Self <: LinuxParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCapabilities(value: KernelCapabilities): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapabilities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDevices(value: DevicesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitProcessEnabled(value: BoxedBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initProcessEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitProcessEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initProcessEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSwap(value: BoxedInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSwap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSwap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSwap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSharedMemorySize(value: BoxedInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sharedMemorySize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSharedMemorySize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sharedMemorySize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSwappiness(value: BoxedInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swappiness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSwappiness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swappiness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTmpfs(value: TmpfsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tmpfs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTmpfs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tmpfs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -9,23 +9,43 @@ import scala.scalajs.js.annotation._
 /**
 		*	Event dispatched when info about chat room participants received
 		*/
+@js.native
 trait ChatRoomParticipants extends VoxImplantIMEvent {
   /**
   			* Participants list
   			*/
-  var participants: js.Array[ChatRoomParticipant]
+  var participants: js.Array[ChatRoomParticipant] = js.native
   /**
   			* Room id
   			*/
-  var room: String
+  var room: String = js.native
 }
 
 object ChatRoomParticipants {
   @scala.inline
   def apply(participants: js.Array[ChatRoomParticipant], room: String): ChatRoomParticipants = {
     val __obj = js.Dynamic.literal(participants = participants.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ChatRoomParticipants]
   }
+  @scala.inline
+  implicit class ChatRoomParticipantsOps[Self <: ChatRoomParticipants] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParticipants(value: js.Array[ChatRoomParticipant]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("participants")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("room")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

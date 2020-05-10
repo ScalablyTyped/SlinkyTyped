@@ -12,10 +12,8 @@ trait SecureMode extends js.Object
 
 object SecureMode {
   @scala.inline
-  def DEFAULT: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.DEFAULT = this.cast("DEFAULT")
+  def DEFAULT: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.DEFAULT = "DEFAULT".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.DEFAULT]
   @scala.inline
-  def FORCE: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.FORCE = this.cast("FORCE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def FORCE: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.FORCE = "FORCE".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.FORCE]
 }
 

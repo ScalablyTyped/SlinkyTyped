@@ -30,7 +30,7 @@ object keyInfosMod extends js.Object {
   class KeyInfoX509Data ()
     extends typingsSlinky.xmldsigjs.x509DataMod.KeyInfoX509Data {
     def this(cert: X509Certificate) = this()
-    def this(rgbCert: scala.scalajs.js.typedarray.Uint8Array) = this()
+    def this(rgbCert: js.typedarray.Uint8Array) = this()
     def this(cert: X509Certificate, includeOptions: X509IncludeOption) = this()
   }
   

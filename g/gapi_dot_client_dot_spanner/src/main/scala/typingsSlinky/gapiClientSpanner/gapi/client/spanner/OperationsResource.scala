@@ -7,6 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OperationsResource extends js.Object {
   /**
     * Starts asynchronous cancellation on a long-running operation.  The server
@@ -20,20 +21,20 @@ trait OperationsResource extends js.Object {
     * an Operation.error value with a google.rpc.Status.code of 1,
     * corresponding to `Code.CANCELLED`.
     */
-  def cancel(request: AnonAccesstoken): Request_[js.Object]
+  def cancel(request: AnonAccesstoken): Request_[js.Object] = js.native
   /**
     * Deletes a long-running operation. This method indicates that the client is
     * no longer interested in the operation result. It does not cancel the
     * operation. If the server doesn't support this method, it returns
     * `google.rpc.Code.UNIMPLEMENTED`.
     */
-  def delete(request: AnonAccesstoken): Request_[js.Object]
+  def delete(request: AnonAccesstoken): Request_[js.Object] = js.native
   /**
     * Gets the latest state of a long-running operation.  Clients can use this
     * method to poll the operation result at intervals as recommended by the API
     * service.
     */
-  def get(request: AnonAccesstoken): Request_[Operation]
+  def get(request: AnonAccesstoken): Request_[Operation] = js.native
   /**
     * Lists operations that match the specified filter in the request. If the
     * server doesn't support this method, it returns `UNIMPLEMENTED`.
@@ -46,7 +47,7 @@ trait OperationsResource extends js.Object {
     * collection id, however overriding users must ensure the name binding
     * is the parent resource, without the operations collection id.
     */
-  def list(request: AnonBearertoken): Request_[ListOperationsResponse]
+  def list(request: AnonBearertoken): Request_[ListOperationsResponse] = js.native
 }
 
 object OperationsResource {
@@ -58,8 +59,39 @@ object OperationsResource {
     list: AnonBearertoken => Request_[ListOperationsResponse]
   ): OperationsResource = {
     val __obj = js.Dynamic.literal(cancel = js.Any.fromFunction1(cancel), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
-  
     __obj.asInstanceOf[OperationsResource]
   }
+  @scala.inline
+  implicit class OperationsResourceOps[Self <: OperationsResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCancel(value: AnonAccesstoken => Request_[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDelete(value: AnonAccesstoken => Request_[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: AnonAccesstoken => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withList(value: AnonBearertoken => Request_[ListOperationsResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -8,16 +8,30 @@ import scala.scalajs.js.annotation._
   * ObjectClass
   * @see { @link https://realm.io/docs/javascript/latest/api/Realm.html#~ObjectClass }
   */
+@js.native
 trait ObjectClass extends js.Object {
-  var schema: ObjectSchema
+  var schema: ObjectSchema = js.native
 }
 
 object ObjectClass {
   @scala.inline
   def apply(schema: ObjectSchema): ObjectClass = {
     val __obj = js.Dynamic.literal(schema = schema.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ObjectClass]
   }
+  @scala.inline
+  implicit class ObjectClassOps[Self <: ObjectClass] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSchema(value: ObjectSchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

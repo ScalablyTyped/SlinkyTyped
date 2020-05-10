@@ -16,6 +16,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface for updating data on the ChartTitle object, for use in `chartTitle.set({ ... })`. */
+@js.native
 trait ChartTitleUpdateData extends js.Object {
   /**
     *
@@ -23,107 +24,224 @@ trait ChartTitleUpdateData extends js.Object {
     *
     * [Api set: ExcelApi 1.1]
     */
-  var format: js.UndefOr[ChartTitleFormatUpdateData] = js.undefined
+  var format: js.UndefOr[ChartTitleFormatUpdateData] = js.native
   /**
     *
     * Represents the horizontal alignment for chart title.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var horizontalAlignment: js.UndefOr[ChartTextHorizontalAlignment | Center | Left | Right | Justify | Distributed] = js.undefined
+  var horizontalAlignment: js.UndefOr[ChartTextHorizontalAlignment | Center | Left | Right | Justify | Distributed] = js.native
   /**
     *
     * Represents the distance, in points, from the left edge of chart title to the left edge of chart area. Null if chart title is not visible.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var left: js.UndefOr[Double] = js.undefined
+  var left: js.UndefOr[Double] = js.native
   /**
     *
     * Boolean value representing if the chart title will overlay the chart or not.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var overlay: js.UndefOr[Boolean] = js.undefined
+  var overlay: js.UndefOr[Boolean] = js.native
   /**
     *
     * Represents the position of chart title. See Excel.ChartTitlePosition for details.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var position: js.UndefOr[ChartTitlePosition | Automatic | Top | Bottom | Left | Right] = js.undefined
+  var position: js.UndefOr[ChartTitlePosition | Automatic | Top | Bottom | Left | Right] = js.native
   /**
     *
     * Represents a boolean value that determines if the chart title has a shadow.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var showShadow: js.UndefOr[Boolean] = js.undefined
+  var showShadow: js.UndefOr[Boolean] = js.native
   /**
     *
     * Represents the title text of a chart.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var text: js.UndefOr[String] = js.undefined
+  var text: js.UndefOr[String] = js.native
   /**
     *
-    * Represents the angle to which the text is oriented for the chart title. The value should be an integer either from -90 to 90, or 180 for vertically-oriented text.
+    * Represents the angle to which the text is oriented for the chart title. The value should either be an integer from -90 to 90 or the integer 180 for vertically-oriented text.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var textOrientation: js.UndefOr[Double] = js.undefined
+  var textOrientation: js.UndefOr[Double] = js.native
   /**
     *
     * Represents the distance, in points, from the top edge of chart title to the top of chart area. Null if chart title is not visible.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var top: js.UndefOr[Double] = js.undefined
+  var top: js.UndefOr[Double] = js.native
   /**
     *
     * Represents the vertical alignment of chart title. See Excel.ChartTextVerticalAlignment for details.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var verticalAlignment: js.UndefOr[ChartTextVerticalAlignment | Center | Bottom | Top | Justify | Distributed] = js.undefined
+  var verticalAlignment: js.UndefOr[ChartTextVerticalAlignment | Center | Bottom | Top | Justify | Distributed] = js.native
   /**
     *
     * A boolean value the represents the visibility of a chart title object.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.native
 }
 
 object ChartTitleUpdateData {
   @scala.inline
-  def apply(
-    format: ChartTitleFormatUpdateData = null,
-    horizontalAlignment: ChartTextHorizontalAlignment | Center | Left | Right | Justify | Distributed = null,
-    left: Int | Double = null,
-    overlay: js.UndefOr[Boolean] = js.undefined,
-    position: ChartTitlePosition | Automatic | Top | Bottom | Left | Right = null,
-    showShadow: js.UndefOr[Boolean] = js.undefined,
-    text: String = null,
-    textOrientation: Int | Double = null,
-    top: Int | Double = null,
-    verticalAlignment: ChartTextVerticalAlignment | Center | Bottom | Top | Justify | Distributed = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): ChartTitleUpdateData = {
+  def apply(): ChartTitleUpdateData = {
     val __obj = js.Dynamic.literal()
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (horizontalAlignment != null) __obj.updateDynamic("horizontalAlignment")(horizontalAlignment.asInstanceOf[js.Any])
-    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (!js.isUndefined(overlay)) __obj.updateDynamic("overlay")(overlay.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(showShadow)) __obj.updateDynamic("showShadow")(showShadow.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (textOrientation != null) __obj.updateDynamic("textOrientation")(textOrientation.asInstanceOf[js.Any])
-    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
-    if (verticalAlignment != null) __obj.updateDynamic("verticalAlignment")(verticalAlignment.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartTitleUpdateData]
   }
+  @scala.inline
+  implicit class ChartTitleUpdateDataOps[Self <: ChartTitleUpdateData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormat(value: ChartTitleFormatUpdateData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHorizontalAlignment(value: ChartTextHorizontalAlignment | Center | Left | Right | Justify | Distributed): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizontalAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeft(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: ChartTitlePosition | Automatic | Top | Bottom | Left | Right): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowShadow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showShadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowShadow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showShadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextOrientation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textOrientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextOrientation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textOrientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalAlignment(value: ChartTextVerticalAlignment | Center | Bottom | Top | Justify | Distributed): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

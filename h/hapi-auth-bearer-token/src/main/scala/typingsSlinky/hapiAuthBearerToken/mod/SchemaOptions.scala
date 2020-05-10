@@ -1,7 +1,7 @@
 package typingsSlinky.hapiAuthBearerToken.mod
 
-import typingsSlinky.hapi.mod.Request
-import typingsSlinky.hapi.mod.ResponseToolkit
+import typingsSlinky.hapiHapi.mod.Request
+import typingsSlinky.hapiHapi.mod.ResponseToolkit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

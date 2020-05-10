@@ -78,7 +78,7 @@ package object kinesisvideoarchivedmediaMod {
   type HLSStreamingSessionURL = java.lang.String
   type Long = scala.Double
   type PageLimit = scala.Double
-  type Payload = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.kinesisvideoarchivedmediaMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
+  type Payload = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.kinesisvideoarchivedmediaMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
   type ResourceARN = java.lang.String
   type StreamName = java.lang.String
   type String = java.lang.String

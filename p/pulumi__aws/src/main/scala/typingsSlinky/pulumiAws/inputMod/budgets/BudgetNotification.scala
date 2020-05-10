@@ -39,14 +39,66 @@ object BudgetNotification {
     comparisonOperator: Input[String],
     notificationType: Input[String],
     threshold: Input[Double],
-    thresholdType: Input[String],
-    subscriberEmailAddresses: Input[js.Array[Input[String]]] = null,
-    subscriberSnsTopicArns: Input[js.Array[Input[String]]] = null
+    thresholdType: Input[String]
   ): BudgetNotification = {
     val __obj = js.Dynamic.literal(comparisonOperator = comparisonOperator.asInstanceOf[js.Any], notificationType = notificationType.asInstanceOf[js.Any], threshold = threshold.asInstanceOf[js.Any], thresholdType = thresholdType.asInstanceOf[js.Any])
-    if (subscriberEmailAddresses != null) __obj.updateDynamic("subscriberEmailAddresses")(subscriberEmailAddresses.asInstanceOf[js.Any])
-    if (subscriberSnsTopicArns != null) __obj.updateDynamic("subscriberSnsTopicArns")(subscriberSnsTopicArns.asInstanceOf[js.Any])
     __obj.asInstanceOf[BudgetNotification]
   }
+  @scala.inline
+  implicit class BudgetNotificationOps[Self <: BudgetNotification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComparisonOperator(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comparisonOperator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNotificationType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThreshold(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThresholdType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thresholdType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubscriberEmailAddresses(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriberEmailAddresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubscriberEmailAddresses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriberEmailAddresses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubscriberSnsTopicArns(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriberSnsTopicArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubscriberSnsTopicArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriberSnsTopicArns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

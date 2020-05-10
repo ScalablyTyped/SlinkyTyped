@@ -145,7 +145,7 @@ object componentsMod extends js.Object {
   /* static members */
   @js.native
   object IonTabs extends js.Object {
-    def contextType(): Context[NavContextState] = js.native
+    def contextType: Context[NavContextState] = js.native
   }
   
 }

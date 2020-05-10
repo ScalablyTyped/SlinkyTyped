@@ -1,39 +1,44 @@
 package typingsSlinky.reactBreadcrumbs.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBreadcrumbs.mod.BreadcrumbsProps
 import typingsSlinky.reactBreadcrumbs.mod.Crumbs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Breadcrumbs
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactBreadcrumbs.mod.Breadcrumbs] {
+object Breadcrumbs {
   @JSImport("react-breadcrumbs", "Breadcrumbs")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, hidden */
-  def apply(
-    separator: TagMod[Any] = null,
-    setCrumbs: /* crumbs */ Crumbs => TagMod[Any] = null,
-    wrapper: ReactComponentClass[js.Object] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactBreadcrumbs.mod.Breadcrumbs] = {
-    val __obj = js.Dynamic.literal()
-    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
-    if (setCrumbs != null) __obj.updateDynamic("setCrumbs")(js.Any.fromFunction1(setCrumbs))
-    if (wrapper != null) __obj.updateDynamic("wrapper")(wrapper.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactBreadcrumbs.mod.Breadcrumbs] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def separatorReactElement(value: ReactElement): this.type = set("separator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def separator(value: TagMod[Any]): this.type = set("separator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCrumbs(value: /* crumbs */ Crumbs => TagMod[Any]): this.type = set("setCrumbs", js.Any.fromFunction1(value))
+    @scala.inline
+    def wrapperFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("wrapper", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapperComponentClass(value: ReactComponentClass[js.Object]): this.type = set("wrapper", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapper(value: ReactComponentClass[js.Object]): this.type = set("wrapper", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactBreadcrumbs.mod.Breadcrumbs] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactBreadcrumbs.mod.Breadcrumbs](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = BreadcrumbsProps
+  
+  def withProps(p: BreadcrumbsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Breadcrumbs.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

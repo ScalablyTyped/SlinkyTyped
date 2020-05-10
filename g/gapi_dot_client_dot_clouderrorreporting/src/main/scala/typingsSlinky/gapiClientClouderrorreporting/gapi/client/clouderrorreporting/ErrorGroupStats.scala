@@ -4,13 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ErrorGroupStats extends js.Object {
   /**
     * Service contexts with a non-zero error count for the given filter
     * criteria. This list can be truncated if multiple services are affected.
     * Refer to `num_affected_services` for the total count.
     */
-  var affectedServices: js.UndefOr[js.Array[ServiceContext]] = js.undefined
+  var affectedServices: js.UndefOr[js.Array[ServiceContext]] = js.native
   /**
     * Approximate number of affected users in the given group that
     * match the filter criteria.
@@ -25,31 +26,31 @@ trait ErrorGroupStats extends js.Object {
     * implicitly affected, such as due to a crash of the whole service,
     * this is not reflected here.
     */
-  var affectedUsersCount: js.UndefOr[String] = js.undefined
+  var affectedUsersCount: js.UndefOr[String] = js.native
   /**
     * Approximate total number of events in the given group that match
     * the filter criteria.
     */
-  var count: js.UndefOr[String] = js.undefined
+  var count: js.UndefOr[String] = js.native
   /**
     * Approximate first occurrence that was ever seen for this group
     * and which matches the given filter criteria, ignoring the
     * time_range that was specified in the request.
     */
-  var firstSeenTime: js.UndefOr[String] = js.undefined
+  var firstSeenTime: js.UndefOr[String] = js.native
   /** Group data that is independent of the filter criteria. */
-  var group: js.UndefOr[ErrorGroup] = js.undefined
+  var group: js.UndefOr[ErrorGroup] = js.native
   /**
     * Approximate last occurrence that was ever seen for this group and
     * which matches the given filter criteria, ignoring the time_range
     * that was specified in the request.
     */
-  var lastSeenTime: js.UndefOr[String] = js.undefined
+  var lastSeenTime: js.UndefOr[String] = js.native
   /**
     * The total number of services with a non-zero error count for the given
     * filter criteria.
     */
-  var numAffectedServices: js.UndefOr[Double] = js.undefined
+  var numAffectedServices: js.UndefOr[Double] = js.native
   /**
     * An arbitrary event that is chosen as representative for the whole group.
     * The representative event is intended to be used as a quick preview for
@@ -57,7 +58,7 @@ trait ErrorGroupStats extends js.Object {
     * to each other such that showing an arbitrary representative provides
     * insight into the characteristics of the group as a whole.
     */
-  var representative: js.UndefOr[ErrorEvent] = js.undefined
+  var representative: js.UndefOr[ErrorEvent] = js.native
   /**
     * Approximate number of occurrences over time.
     * Timed counts returned by ListGroups are guaranteed to be:
@@ -66,33 +67,130 @@ trait ErrorGroupStats extends js.Object {
     * - Non-overlapping, and
     * - Ordered by ascending time.
     */
-  var timedCounts: js.UndefOr[js.Array[TimedCount]] = js.undefined
+  var timedCounts: js.UndefOr[js.Array[TimedCount]] = js.native
 }
 
 object ErrorGroupStats {
   @scala.inline
-  def apply(
-    affectedServices: js.Array[ServiceContext] = null,
-    affectedUsersCount: String = null,
-    count: String = null,
-    firstSeenTime: String = null,
-    group: ErrorGroup = null,
-    lastSeenTime: String = null,
-    numAffectedServices: Int | Double = null,
-    representative: ErrorEvent = null,
-    timedCounts: js.Array[TimedCount] = null
-  ): ErrorGroupStats = {
+  def apply(): ErrorGroupStats = {
     val __obj = js.Dynamic.literal()
-    if (affectedServices != null) __obj.updateDynamic("affectedServices")(affectedServices.asInstanceOf[js.Any])
-    if (affectedUsersCount != null) __obj.updateDynamic("affectedUsersCount")(affectedUsersCount.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (firstSeenTime != null) __obj.updateDynamic("firstSeenTime")(firstSeenTime.asInstanceOf[js.Any])
-    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
-    if (lastSeenTime != null) __obj.updateDynamic("lastSeenTime")(lastSeenTime.asInstanceOf[js.Any])
-    if (numAffectedServices != null) __obj.updateDynamic("numAffectedServices")(numAffectedServices.asInstanceOf[js.Any])
-    if (representative != null) __obj.updateDynamic("representative")(representative.asInstanceOf[js.Any])
-    if (timedCounts != null) __obj.updateDynamic("timedCounts")(timedCounts.asInstanceOf[js.Any])
     __obj.asInstanceOf[ErrorGroupStats]
   }
+  @scala.inline
+  implicit class ErrorGroupStatsOps[Self <: ErrorGroupStats] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAffectedServices(value: js.Array[ServiceContext]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("affectedServices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAffectedServices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("affectedServices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAffectedUsersCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("affectedUsersCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAffectedUsersCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("affectedUsersCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstSeenTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstSeenTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstSeenTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstSeenTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroup(value: ErrorGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastSeenTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastSeenTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastSeenTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastSeenTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumAffectedServices(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numAffectedServices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumAffectedServices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numAffectedServices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepresentative(value: ErrorEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("representative")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepresentative: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("representative")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimedCounts(value: js.Array[TimedCount]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timedCounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimedCounts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timedCounts")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

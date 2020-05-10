@@ -22,30 +22,28 @@ trait PageBreakBeforeProperty extends js.Object
 
 object PageBreakBeforeProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  def always: typingsSlinky.csstype.csstypeStrings.always = this.cast("always")
+  def always: typingsSlinky.csstype.csstypeStrings.always = "always".asInstanceOf[typingsSlinky.csstype.csstypeStrings.always]
   @scala.inline
-  def auto: typingsSlinky.csstype.csstypeStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.csstype.csstypeStrings.auto = "auto".asInstanceOf[typingsSlinky.csstype.csstypeStrings.auto]
   @scala.inline
-  def avoid: typingsSlinky.csstype.csstypeStrings.avoid = this.cast("avoid")
+  def avoid: typingsSlinky.csstype.csstypeStrings.avoid = "avoid".asInstanceOf[typingsSlinky.csstype.csstypeStrings.avoid]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def left: typingsSlinky.csstype.csstypeStrings.left = "left".asInstanceOf[typingsSlinky.csstype.csstypeStrings.left]
   @scala.inline
-  def left: typingsSlinky.csstype.csstypeStrings.left = this.cast("left")
+  def recto: typingsSlinky.csstype.csstypeStrings.recto = "recto".asInstanceOf[typingsSlinky.csstype.csstypeStrings.recto]
   @scala.inline
-  def recto: typingsSlinky.csstype.csstypeStrings.recto = this.cast("recto")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
+  def right: typingsSlinky.csstype.csstypeStrings.right = "right".asInstanceOf[typingsSlinky.csstype.csstypeStrings.right]
   @scala.inline
-  def right: typingsSlinky.csstype.csstypeStrings.right = this.cast("right")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
   @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
-  @scala.inline
-  def verso: typingsSlinky.csstype.csstypeStrings.verso = this.cast("verso")
+  def verso: typingsSlinky.csstype.csstypeStrings.verso = "verso".asInstanceOf[typingsSlinky.csstype.csstypeStrings.verso]
 }
 

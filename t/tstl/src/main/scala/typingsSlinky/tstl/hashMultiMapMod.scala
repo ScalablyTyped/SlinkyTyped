@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
 @JSImport("tstl/container/HashMultiMap", JSImport.Namespace)
 @js.native
 object hashMultiMapMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.tstl.isizeMod.ISize because Already inherited
   - typingsSlinky.tstl.iforwardcontainerMod.IForwardContainer because Already inherited
   - typingsSlinky.tstl.ipushMod.IPush because Already inherited
@@ -258,7 +258,7 @@ object hashMultiMapMod extends js.Object {
             /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
             /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
             /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
-            IteratoranyanyanyanyEquals, 
+            Iteratoranyanyanyany, 
             typingsSlinky.tstl.mapElementListMod.MapElementList.ReverseIterator[
               /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
               /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
@@ -278,7 +278,7 @@ object hashMultiMapMod extends js.Object {
             /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
             /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
             /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
-            IteratoranyanyanyanyEquals, 
+            Iteratoranyanyanyany, 
             typingsSlinky.tstl.mapElementListMod.MapElementList.ReverseIterator[
               /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
               /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 

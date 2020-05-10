@@ -10,13 +10,13 @@ class FinderPatternFinder () extends js.Object {
   val CrossCheckStateCount: js.Tuple5[Double, Double, Double, Double, Double] = js.native
   var crossCheckStateCount: js.Tuple5[Double, Double, Double, Double, Double] = js.native
   var hasSkipped: Boolean = js.native
-  var image: scala.scalajs.js.typedarray.Uint8Array = js.native
+  var image: js.typedarray.Uint8Array = js.native
   var possibleCenters: js.Array[FinderPattern] = js.native
   var resultPointCallback: ResultPointCallback = js.native
   def centerFromEnd(stateCount: js.Tuple5[Double, Double, Double, Double, Double], end: Double): Double = js.native
   def crossCheckHorizontal(startJ: Double, centerI: Double, maxCount: Double, originalStateCountTotal: Double): Double = js.native
   def crossCheckVertical(startI: Double, centerJ: Double, maxCount: Double, originalStateCountTotal: Double): Double = js.native
-  def findFinderPattern(image: scala.scalajs.js.typedarray.Uint8Array): FinderPatternInfo = js.native
+  def findFinderPattern(image: js.typedarray.Uint8Array): FinderPatternInfo = js.native
   def findRowSkip(): Double = js.native
   def foundPatternCross(stateCount: js.Tuple5[Double, Double, Double, Double, Double]): Boolean = js.native
   def handlePossibleCenter(stateCount: js.Tuple5[Double, Double, Double, Double, Double], i: Double, j: Double): Boolean = js.native

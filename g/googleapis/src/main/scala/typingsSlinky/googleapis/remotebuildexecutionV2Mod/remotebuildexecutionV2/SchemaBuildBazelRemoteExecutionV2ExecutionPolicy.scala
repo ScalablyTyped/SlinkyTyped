@@ -25,10 +25,29 @@ trait SchemaBuildBazelRemoteExecutionV2ExecutionPolicy extends js.Object {
 
 object SchemaBuildBazelRemoteExecutionV2ExecutionPolicy {
   @scala.inline
-  def apply(priority: Int | Double = null): SchemaBuildBazelRemoteExecutionV2ExecutionPolicy = {
+  def apply(): SchemaBuildBazelRemoteExecutionV2ExecutionPolicy = {
     val __obj = js.Dynamic.literal()
-    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2ExecutionPolicy]
   }
+  @scala.inline
+  implicit class SchemaBuildBazelRemoteExecutionV2ExecutionPolicyOps[Self <: SchemaBuildBazelRemoteExecutionV2ExecutionPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPriority(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

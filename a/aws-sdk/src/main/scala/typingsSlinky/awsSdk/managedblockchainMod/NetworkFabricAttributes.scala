@@ -18,11 +18,41 @@ trait NetworkFabricAttributes extends js.Object {
 
 object NetworkFabricAttributes {
   @scala.inline
-  def apply(Edition: Edition = null, OrderingServiceEndpoint: String = null): NetworkFabricAttributes = {
+  def apply(): NetworkFabricAttributes = {
     val __obj = js.Dynamic.literal()
-    if (Edition != null) __obj.updateDynamic("Edition")(Edition.asInstanceOf[js.Any])
-    if (OrderingServiceEndpoint != null) __obj.updateDynamic("OrderingServiceEndpoint")(OrderingServiceEndpoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkFabricAttributes]
   }
+  @scala.inline
+  implicit class NetworkFabricAttributesOps[Self <: NetworkFabricAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEdition(value: Edition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Edition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEdition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Edition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrderingServiceEndpoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrderingServiceEndpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrderingServiceEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrderingServiceEndpoint")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

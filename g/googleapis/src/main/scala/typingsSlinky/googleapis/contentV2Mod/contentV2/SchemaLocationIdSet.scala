@@ -15,10 +15,29 @@ trait SchemaLocationIdSet extends js.Object {
 
 object SchemaLocationIdSet {
   @scala.inline
-  def apply(locationIds: js.Array[String] = null): SchemaLocationIdSet = {
+  def apply(): SchemaLocationIdSet = {
     val __obj = js.Dynamic.literal()
-    if (locationIds != null) __obj.updateDynamic("locationIds")(locationIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLocationIdSet]
   }
+  @scala.inline
+  implicit class SchemaLocationIdSetOps[Self <: SchemaLocationIdSet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocationIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locationIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocationIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locationIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -29,7 +29,7 @@ object default extends js.Object {
     * A circular gauge widget.
     *
     */
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.dojo.dojox.dgauges.components.DefaultPropertiesMixin because Inheritance from two classes. Inlined animationDuration, interactionArea, interactionMode, majorTickInterval, maximum, minimum, minorTickInterval, minorTicksEnabled, snapInterval */ @js.native
   class CircularLinearGauge () extends CircularGauge {
     /**
@@ -288,7 +288,7 @@ object default extends js.Object {
     * A horizontal gauge widget.
     *
     */
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.dojo.dojox.dgauges.components.DefaultPropertiesMixin because Inheritance from two classes. Inlined animationDuration, interactionArea, interactionMode, majorTickInterval, maximum, minimum, minorTickInterval, minorTicksEnabled, snapInterval */ @js.native
   class HorizontalLinearGauge () extends RectangularGauge {
     /**
@@ -543,7 +543,7 @@ object default extends js.Object {
     * A semi circular gauge widget.
     *
     */
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.dojo.dojox.dgauges.components.DefaultPropertiesMixin because Inheritance from two classes. Inlined animationDuration, interactionArea, interactionMode, majorTickInterval, maximum, minimum, minorTickInterval, minorTicksEnabled, snapInterval */ @js.native
   class SemiCircularLinearGauge () extends CircularGauge {
     /**
@@ -802,7 +802,7 @@ object default extends js.Object {
     * A vertical gauge widget.
     *
     */
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.dojo.dojox.dgauges.components.DefaultPropertiesMixin because Inheritance from two classes. Inlined animationDuration, interactionArea, interactionMode, majorTickInterval, maximum, minimum, minorTickInterval, minorTicksEnabled, snapInterval */ @js.native
   class VerticalLinearGauge () extends RectangularGauge {
     /**

@@ -22,16 +22,53 @@ trait WorkflowExecutionCancelRequestedEventAttributes extends js.Object {
 
 object WorkflowExecutionCancelRequestedEventAttributes {
   @scala.inline
-  def apply(
-    cause: WorkflowExecutionCancelRequestedCause = null,
-    externalInitiatedEventId: Int | Double = null,
-    externalWorkflowExecution: WorkflowExecution = null
-  ): WorkflowExecutionCancelRequestedEventAttributes = {
+  def apply(): WorkflowExecutionCancelRequestedEventAttributes = {
     val __obj = js.Dynamic.literal()
-    if (cause != null) __obj.updateDynamic("cause")(cause.asInstanceOf[js.Any])
-    if (externalInitiatedEventId != null) __obj.updateDynamic("externalInitiatedEventId")(externalInitiatedEventId.asInstanceOf[js.Any])
-    if (externalWorkflowExecution != null) __obj.updateDynamic("externalWorkflowExecution")(externalWorkflowExecution.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkflowExecutionCancelRequestedEventAttributes]
   }
+  @scala.inline
+  implicit class WorkflowExecutionCancelRequestedEventAttributesOps[Self <: WorkflowExecutionCancelRequestedEventAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCause(value: WorkflowExecutionCancelRequestedCause): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cause")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCause: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cause")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalInitiatedEventId(value: EventId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalInitiatedEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalInitiatedEventId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalInitiatedEventId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalWorkflowExecution(value: WorkflowExecution): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalWorkflowExecution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalWorkflowExecution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalWorkflowExecution")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

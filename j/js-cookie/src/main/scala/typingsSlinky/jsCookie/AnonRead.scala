@@ -6,21 +6,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonRead[TConv /* <: js.Object */] extends js.Object {
-  var read: js.UndefOr[CookieReadConverter] = js.undefined
-  var write: js.UndefOr[CookieWriteConverter[TConv]] = js.undefined
+  var read: js.UndefOr[CookieReadConverter] = js.native
+  var write: js.UndefOr[CookieWriteConverter[TConv]] = js.native
 }
 
 object AnonRead {
   @scala.inline
-  def apply[TConv /* <: js.Object */](
-    read: (/* value */ String, /* name */ String) => String = null,
-    write: (/* value */ String | TConv, /* name */ String) => String = null
-  ): AnonRead[TConv] = {
+  def apply[TConv](): AnonRead[TConv] = {
     val __obj = js.Dynamic.literal()
-    if (read != null) __obj.updateDynamic("read")(js.Any.fromFunction2(read))
-    if (write != null) __obj.updateDynamic("write")(js.Any.fromFunction2(write))
     __obj.asInstanceOf[AnonRead[TConv]]
   }
+  @scala.inline
+  implicit class AnonReadOps[Self[tconv] <: AnonRead[tconv], TConv] (val x: Self[TConv]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TConv] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TConv]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[TConv] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TConv] with Other]
+    @scala.inline
+    def withRead(value: (/* value */ String, /* name */ String) => String): Self[TConv] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRead: Self[TConv] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrite(value: (/* value */ String | TConv, /* name */ String) => String): Self[TConv] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutWrite: Self[TConv] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,67 +4,245 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Reference extends js.Object {
-  var assetId: js.UndefOr[String] = js.undefined
-  var audioswapEnabled: js.UndefOr[Boolean] = js.undefined
-  var claimId: js.UndefOr[String] = js.undefined
-  var contentType: js.UndefOr[String] = js.undefined
-  var duplicateLeader: js.UndefOr[String] = js.undefined
-  var excludedIntervals: js.UndefOr[js.Array[ExcludedInterval]] = js.undefined
-  var fpDirect: js.UndefOr[Boolean] = js.undefined
+  var assetId: js.UndefOr[String] = js.native
+  var audioswapEnabled: js.UndefOr[Boolean] = js.native
+  var claimId: js.UndefOr[String] = js.native
+  var contentType: js.UndefOr[String] = js.native
+  var duplicateLeader: js.UndefOr[String] = js.native
+  var excludedIntervals: js.UndefOr[js.Array[ExcludedInterval]] = js.native
+  var fpDirect: js.UndefOr[Boolean] = js.native
   @JSName("hashCode")
-  var hashCode_FReference: js.UndefOr[String] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var ignoreFpMatch: js.UndefOr[Boolean] = js.undefined
-  var kind: js.UndefOr[String] = js.undefined
-  var length: js.UndefOr[Double] = js.undefined
-  var origination: js.UndefOr[Origination] = js.undefined
-  var status: js.UndefOr[String] = js.undefined
-  var statusReason: js.UndefOr[String] = js.undefined
-  var urgent: js.UndefOr[Boolean] = js.undefined
-  var videoId: js.UndefOr[String] = js.undefined
+  var hashCode_FReference: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.native
+  var ignoreFpMatch: js.UndefOr[Boolean] = js.native
+  var kind: js.UndefOr[String] = js.native
+  var length: js.UndefOr[Double] = js.native
+  var origination: js.UndefOr[Origination] = js.native
+  var status: js.UndefOr[String] = js.native
+  var statusReason: js.UndefOr[String] = js.native
+  var urgent: js.UndefOr[Boolean] = js.native
+  var videoId: js.UndefOr[String] = js.native
 }
 
 object Reference {
   @scala.inline
-  def apply(
-    assetId: String = null,
-    audioswapEnabled: js.UndefOr[Boolean] = js.undefined,
-    claimId: String = null,
-    contentType: String = null,
-    duplicateLeader: String = null,
-    excludedIntervals: js.Array[ExcludedInterval] = null,
-    fpDirect: js.UndefOr[Boolean] = js.undefined,
-    hashCode: String = null,
-    id: String = null,
-    ignoreFpMatch: js.UndefOr[Boolean] = js.undefined,
-    kind: String = null,
-    length: Int | Double = null,
-    origination: Origination = null,
-    status: String = null,
-    statusReason: String = null,
-    urgent: js.UndefOr[Boolean] = js.undefined,
-    videoId: String = null
-  ): Reference = {
+  def apply(): Reference = {
     val __obj = js.Dynamic.literal()
-    if (assetId != null) __obj.updateDynamic("assetId")(assetId.asInstanceOf[js.Any])
-    if (!js.isUndefined(audioswapEnabled)) __obj.updateDynamic("audioswapEnabled")(audioswapEnabled.asInstanceOf[js.Any])
-    if (claimId != null) __obj.updateDynamic("claimId")(claimId.asInstanceOf[js.Any])
-    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
-    if (duplicateLeader != null) __obj.updateDynamic("duplicateLeader")(duplicateLeader.asInstanceOf[js.Any])
-    if (excludedIntervals != null) __obj.updateDynamic("excludedIntervals")(excludedIntervals.asInstanceOf[js.Any])
-    if (!js.isUndefined(fpDirect)) __obj.updateDynamic("fpDirect")(fpDirect.asInstanceOf[js.Any])
-    if (hashCode != null) __obj.updateDynamic("hashCode")(hashCode.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreFpMatch)) __obj.updateDynamic("ignoreFpMatch")(ignoreFpMatch.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
-    if (origination != null) __obj.updateDynamic("origination")(origination.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (statusReason != null) __obj.updateDynamic("statusReason")(statusReason.asInstanceOf[js.Any])
-    if (!js.isUndefined(urgent)) __obj.updateDynamic("urgent")(urgent.asInstanceOf[js.Any])
-    if (videoId != null) __obj.updateDynamic("videoId")(videoId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Reference]
   }
+  @scala.inline
+  implicit class ReferenceOps[Self <: Reference] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAudioswapEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audioswapEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudioswapEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audioswapEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClaimId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claimId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClaimId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claimId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuplicateLeader(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicateLeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuplicateLeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicateLeader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcludedIntervals(value: js.Array[ExcludedInterval]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedIntervals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludedIntervals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedIntervals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFpDirect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fpDirect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFpDirect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fpDirect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHashCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHashCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreFpMatch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreFpMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreFpMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreFpMatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrigination(value: Origination): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrigination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrgent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urgent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urgent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

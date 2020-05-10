@@ -50,27 +50,119 @@ trait ExecuteStatementRequest extends js.Object {
 
 object ExecuteStatementRequest {
   @scala.inline
-  def apply(
-    resourceArn: Arn,
-    secretArn: Arn,
-    sql: SqlStatement,
-    continueAfterTimeout: js.UndefOr[scala.Boolean] = js.undefined,
-    database: DbName = null,
-    includeResultMetadata: js.UndefOr[scala.Boolean] = js.undefined,
-    parameters: SqlParametersList = null,
-    resultSetOptions: ResultSetOptions = null,
-    schema: DbName = null,
-    transactionId: Id = null
-  ): ExecuteStatementRequest = {
+  def apply(resourceArn: Arn, secretArn: Arn, sql: SqlStatement): ExecuteStatementRequest = {
     val __obj = js.Dynamic.literal(resourceArn = resourceArn.asInstanceOf[js.Any], secretArn = secretArn.asInstanceOf[js.Any], sql = sql.asInstanceOf[js.Any])
-    if (!js.isUndefined(continueAfterTimeout)) __obj.updateDynamic("continueAfterTimeout")(continueAfterTimeout.asInstanceOf[js.Any])
-    if (database != null) __obj.updateDynamic("database")(database.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeResultMetadata)) __obj.updateDynamic("includeResultMetadata")(includeResultMetadata.asInstanceOf[js.Any])
-    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
-    if (resultSetOptions != null) __obj.updateDynamic("resultSetOptions")(resultSetOptions.asInstanceOf[js.Any])
-    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
-    if (transactionId != null) __obj.updateDynamic("transactionId")(transactionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecuteStatementRequest]
   }
+  @scala.inline
+  implicit class ExecuteStatementRequestOps[Self <: ExecuteStatementRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResourceArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSecretArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secretArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSql(value: SqlStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sql")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContinueAfterTimeout(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continueAfterTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinueAfterTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continueAfterTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatabase(value: DbName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeResultMetadata(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeResultMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeResultMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeResultMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: SqlParametersList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResultSetOptions(value: ResultSetOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resultSetOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResultSetOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resultSetOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchema(value: DbName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransactionId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransactionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

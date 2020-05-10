@@ -6,24 +6,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StackEvent extends js.Object {
-  var animation: js.UndefOr[NavDirection] = js.undefined
-  var direction: RouterDirection
-  var enteringView: RouteView
-  var tabSwitch: Boolean
+  var animation: js.UndefOr[NavDirection] = js.native
+  var direction: RouterDirection = js.native
+  var enteringView: RouteView = js.native
+  var tabSwitch: Boolean = js.native
 }
 
 object StackEvent {
   @scala.inline
-  def apply(
-    direction: RouterDirection,
-    enteringView: RouteView,
-    tabSwitch: Boolean,
-    animation: NavDirection = null
-  ): StackEvent = {
+  def apply(direction: RouterDirection, enteringView: RouteView, tabSwitch: Boolean): StackEvent = {
     val __obj = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any], enteringView = enteringView.asInstanceOf[js.Any], tabSwitch = tabSwitch.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
     __obj.asInstanceOf[StackEvent]
   }
+  @scala.inline
+  implicit class StackEventOps[Self <: StackEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirection(value: RouterDirection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnteringView(value: RouteView): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enteringView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTabSwitch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabSwitch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAnimation(value: NavDirection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,66 +1,61 @@
 package typingsSlinky.awsSdkClientPinpointBrowser.typesApnsmessageMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.DEEP_LINK
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.OPEN_APP
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.URL
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UnmarshalledAPNSMessage extends APNSMessage {
   /**
     * The data payload used for a silent push. This payload is added to the notifications' data.pinpoint.jsonBody' object
     */
   @JSName("Data")
-  var Data_UnmarshalledAPNSMessage: js.UndefOr[StringDictionary[String]] = js.undefined
+  var Data_UnmarshalledAPNSMessage: js.UndefOr[StringDictionary[String]] = js.native
   /**
     * Default message substitutions. Can be overridden by individual address substitutions.
     */
   @JSName("Substitutions")
-  var Substitutions_UnmarshalledAPNSMessage: js.UndefOr[StringDictionary[js.Array[String]]] = js.undefined
+  var Substitutions_UnmarshalledAPNSMessage: js.UndefOr[StringDictionary[js.Array[String]]] = js.native
 }
 
 object UnmarshalledAPNSMessage {
   @scala.inline
-  def apply(
-    Action: OPEN_APP | DEEP_LINK | URL | String = null,
-    Badge: Int | Double = null,
-    Body: String = null,
-    Category: String = null,
-    CollapseId: String = null,
-    Data: StringDictionary[String] = null,
-    MediaUrl: String = null,
-    PreferredAuthenticationMethod: String = null,
-    Priority: String = null,
-    RawContent: String = null,
-    SilentPush: js.UndefOr[Boolean] = js.undefined,
-    Sound: String = null,
-    Substitutions: StringDictionary[js.Array[String]] = null,
-    ThreadId: String = null,
-    TimeToLive: Int | Double = null,
-    Title: String = null,
-    Url: String = null
-  ): UnmarshalledAPNSMessage = {
+  def apply(): UnmarshalledAPNSMessage = {
     val __obj = js.Dynamic.literal()
-    if (Action != null) __obj.updateDynamic("Action")(Action.asInstanceOf[js.Any])
-    if (Badge != null) __obj.updateDynamic("Badge")(Badge.asInstanceOf[js.Any])
-    if (Body != null) __obj.updateDynamic("Body")(Body.asInstanceOf[js.Any])
-    if (Category != null) __obj.updateDynamic("Category")(Category.asInstanceOf[js.Any])
-    if (CollapseId != null) __obj.updateDynamic("CollapseId")(CollapseId.asInstanceOf[js.Any])
-    if (Data != null) __obj.updateDynamic("Data")(Data.asInstanceOf[js.Any])
-    if (MediaUrl != null) __obj.updateDynamic("MediaUrl")(MediaUrl.asInstanceOf[js.Any])
-    if (PreferredAuthenticationMethod != null) __obj.updateDynamic("PreferredAuthenticationMethod")(PreferredAuthenticationMethod.asInstanceOf[js.Any])
-    if (Priority != null) __obj.updateDynamic("Priority")(Priority.asInstanceOf[js.Any])
-    if (RawContent != null) __obj.updateDynamic("RawContent")(RawContent.asInstanceOf[js.Any])
-    if (!js.isUndefined(SilentPush)) __obj.updateDynamic("SilentPush")(SilentPush.asInstanceOf[js.Any])
-    if (Sound != null) __obj.updateDynamic("Sound")(Sound.asInstanceOf[js.Any])
-    if (Substitutions != null) __obj.updateDynamic("Substitutions")(Substitutions.asInstanceOf[js.Any])
-    if (ThreadId != null) __obj.updateDynamic("ThreadId")(ThreadId.asInstanceOf[js.Any])
-    if (TimeToLive != null) __obj.updateDynamic("TimeToLive")(TimeToLive.asInstanceOf[js.Any])
-    if (Title != null) __obj.updateDynamic("Title")(Title.asInstanceOf[js.Any])
-    if (Url != null) __obj.updateDynamic("Url")(Url.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledAPNSMessage]
   }
+  @scala.inline
+  implicit class UnmarshalledAPNSMessageOps[Self <: UnmarshalledAPNSMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubstitutions(value: StringDictionary[js.Array[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Substitutions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubstitutions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Substitutions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

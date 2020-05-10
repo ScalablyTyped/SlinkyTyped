@@ -27,8 +27,8 @@ import typingsSlinky.androiduix.android.view.ViewGroup.OnHierarchyChangeListener
 import typingsSlinky.androiduix.android.view.animation.Animation
 import typingsSlinky.androiduix.android.view.animation.Transformation
 import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderMap
-import typingsSlinky.androiduix.java.lang.Runnable
-import typingsSlinky.androiduix.java.util.ArrayList
+import typingsSlinky.androiduix.java_.lang.Runnable
+import typingsSlinky.androiduix.java_.util.ArrayList
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -109,8 +109,6 @@ abstract class ViewGroup_ protected ()
   override def awakenScrollBars(startDelay: Double): Boolean = js.native
   /* InferMemberOverrides */
   override def awakenScrollBars(startDelay: Double, invalidate: Boolean): Boolean = js.native
-  /* CompleteClass */
-  override def bringChildToFront(child: View): js.Any = js.native
   /* InferMemberOverrides */
   override def bringToFront(): Unit = js.native
   /* InferMemberOverrides */
@@ -135,18 +133,12 @@ abstract class ViewGroup_ protected ()
   /* InferMemberOverrides */
   /* private */ override def checkForLongClick(delayOffset: js.Any): js.Any = js.native
   /* protected */ def checkLayoutParams(p: LayoutParams): Boolean = js.native
-  /* CompleteClass */
-  override def childDrawableStateChanged(child: View): js.Any = js.native
-  /* CompleteClass */
-  override def childHasTransientStateChanged(child: View, hasTransientState: Boolean): js.Any = js.native
   /* InferMemberOverrides */
   override def cleanupDraw(): Unit = js.native
   def cleanupLayoutState(child: View): Unit = js.native
   /* InferMemberOverrides */
   override def clearAnimation(): Unit = js.native
   def clearCachedLayoutMode(): Unit = js.native
-  /* CompleteClass */
-  override def clearChildFocus(child: View): js.Any = js.native
   def clearDisappearingChildren(): Unit = js.native
   /* InferMemberOverrides */
   override def clearFocus(): Unit = js.native
@@ -265,10 +257,6 @@ abstract class ViewGroup_ protected ()
   def finishAnimatingView(view: View, animation: Animation): Unit = js.native
   /* InferMemberOverrides */
   override def focusSearch(direction: Double): View = js.native
-  /* CompleteClass */
-  override def focusSearch(v: View, direction: Double): View = js.native
-  /* CompleteClass */
-  override def focusableViewAvailable(v: View): js.Any = js.native
   /* InferMemberOverrides */
   override def forceLayout(): Unit = js.native
   /* protected */ def generateDefaultLayoutParams(): LayoutParams = js.native
@@ -291,8 +279,6 @@ abstract class ViewGroup_ protected ()
   def getChildDrawingOrder(childCount: Double, i: Double): Double = js.native
   /* protected */ def getChildStaticTransformation(child: View, t: Transformation): Boolean = js.native
   def getChildTransformation(): Transformation = js.native
-  /* CompleteClass */
-  override def getChildVisibleRect(child: View, r: Rect, offset: Point): Boolean = js.native
   /* InferMemberOverrides */
   override def getClipBounds(): Rect = js.native
   def getClipChildren(): Boolean = js.native
@@ -533,11 +519,7 @@ abstract class ViewGroup_ protected ()
   override def invalidate(invalidateCache: Boolean): js.Any = js.native
   /* InferMemberOverrides */
   override def invalidate(l: Double, t: Double, r: Double, b: Double): js.Any = js.native
-  /* CompleteClass */
-  override def invalidateChild(child: View, r: Rect): js.Any = js.native
   def invalidateChildFast(child: View, dirty: Rect): Unit = js.native
-  /* CompleteClass */
-  override def invalidateChildInParent(location: js.Array[Double], r: Rect): ViewParent = js.native
   def invalidateChildInParentFast(left: Double, top: Double, dirty: Rect): ViewParent = js.native
   /* InferMemberOverrides */
   override def invalidateParentCaches(): Unit = js.native
@@ -798,12 +780,6 @@ abstract class ViewGroup_ protected ()
   def removeViews(start: Double, count: Double): Unit = js.native
   def removeViewsInLayout(start: Double, count: Double): Unit = js.native
   /* private */ def removeViewsInternal(start: js.Any, count: js.Any): js.Any = js.native
-  /* CompleteClass */
-  override def requestChildFocus(child: View, focused: View): js.Any = js.native
-  /* CompleteClass */
-  override def requestChildRectangleOnScreen(child: View, rectangle: Rect, immediate: Boolean): Boolean = js.native
-  /* CompleteClass */
-  override def requestDisallowInterceptTouchEvent(disallowIntercept: Boolean): js.Any = js.native
   /* InferMemberOverrides */
   override def requestFocus(): Boolean = js.native
   /* InferMemberOverrides */

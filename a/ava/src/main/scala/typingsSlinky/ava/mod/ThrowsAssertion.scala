@@ -1,6 +1,5 @@
 package typingsSlinky.ava.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,8 +33,8 @@ trait ThrowsAssertion extends js.Object {
   	 * Assert that the function throws [an error](https://www.npmjs.com/package/is-error). If so, returns the error value.
   	 * The error must have a message that matches the regular expression.
   	 */
-  def apply[ThrownError /* <: js.Error */](fn: js.Function0[_], regex: RegExp): ThrownError = js.native
-  def apply[ThrownError /* <: js.Error */](fn: js.Function0[_], regex: RegExp, message: String): ThrownError = js.native
+  def apply[ThrownError /* <: js.Error */](fn: js.Function0[_], regex: js.RegExp): ThrownError = js.native
+  def apply[ThrownError /* <: js.Error */](fn: js.Function0[_], regex: js.RegExp, message: String): ThrownError = js.native
   /** Skip this assertion. */
   def skip(fn: js.Function0[_]): Unit = js.native
   def skip(fn: js.Function0[_], expectations: js.Any): Unit = js.native

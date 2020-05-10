@@ -5,27 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends ContractOptions {
-  var address: String
-  var jsonInterface: js.Array[AbiItem]
+  var address: String = js.native
+  var jsonInterface: js.Array[AbiItem] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    address: String,
-    jsonInterface: js.Array[AbiItem],
-    data: String = null,
-    from: String = null,
-    gas: Int | Double = null,
-    gasPrice: String = null
-  ): Options = {
+  def apply(address: String, jsonInterface: js.Array[AbiItem]): Options = {
     val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], jsonInterface = jsonInterface.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
-    if (gas != null) __obj.updateDynamic("gas")(gas.asInstanceOf[js.Any])
-    if (gasPrice != null) __obj.updateDynamic("gasPrice")(gasPrice.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJsonInterface(value: js.Array[AbiItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonInterface")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

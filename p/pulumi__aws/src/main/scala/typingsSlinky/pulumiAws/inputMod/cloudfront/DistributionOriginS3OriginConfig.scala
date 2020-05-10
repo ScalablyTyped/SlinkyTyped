@@ -18,8 +18,21 @@ object DistributionOriginS3OriginConfig {
   @scala.inline
   def apply(originAccessIdentity: Input[String]): DistributionOriginS3OriginConfig = {
     val __obj = js.Dynamic.literal(originAccessIdentity = originAccessIdentity.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DistributionOriginS3OriginConfig]
   }
+  @scala.inline
+  implicit class DistributionOriginS3OriginConfigOps[Self <: DistributionOriginS3OriginConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOriginAccessIdentity(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originAccessIdentity")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

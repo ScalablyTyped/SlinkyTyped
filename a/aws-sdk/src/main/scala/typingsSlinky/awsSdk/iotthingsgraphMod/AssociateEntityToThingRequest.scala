@@ -22,10 +22,41 @@ trait AssociateEntityToThingRequest extends js.Object {
 
 object AssociateEntityToThingRequest {
   @scala.inline
-  def apply(entityId: Urn, thingName: ThingName, namespaceVersion: Int | Double = null): AssociateEntityToThingRequest = {
+  def apply(entityId: Urn, thingName: ThingName): AssociateEntityToThingRequest = {
     val __obj = js.Dynamic.literal(entityId = entityId.asInstanceOf[js.Any], thingName = thingName.asInstanceOf[js.Any])
-    if (namespaceVersion != null) __obj.updateDynamic("namespaceVersion")(namespaceVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociateEntityToThingRequest]
   }
+  @scala.inline
+  implicit class AssociateEntityToThingRequestOps[Self <: AssociateEntityToThingRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntityId(value: Urn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThingName(value: ThingName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNamespaceVersion(value: Version): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamespaceVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

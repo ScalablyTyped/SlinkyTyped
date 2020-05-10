@@ -1,14 +1,25 @@
 package typingsSlinky.reactRouterBootstrap.components
 
+import typingsSlinky.history.mod.Location
+import typingsSlinky.history.mod.LocationDescriptor
+import typingsSlinky.history.mod.LocationState
+import typingsSlinky.reactRouterDom.mod.NavLinkProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LinkContainer extends SharedApply_NavLinkProps_2111126861 {
+object LinkContainer {
   @JSImport("react-router-bootstrap/lib/LinkContainer", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: NavLinkProps[LocationState]): SharedBuilder_NavLinkProps_2092935726 = new SharedBuilder_NavLinkProps_2092935726(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(
+    to: LocationDescriptor[LocationState] | (js.Function1[/* location */ Location[LocationState], LocationDescriptor[LocationState]])
+  ): SharedBuilder_NavLinkProps_2092935726 = {
+    val __props = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
+    new SharedBuilder_NavLinkProps_2092935726(js.Array(this.component, __props.asInstanceOf[NavLinkProps[LocationState]]))
+  }
 }
 

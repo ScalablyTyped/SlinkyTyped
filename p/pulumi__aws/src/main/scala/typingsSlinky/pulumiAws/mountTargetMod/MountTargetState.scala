@@ -41,24 +41,101 @@ trait MountTargetState extends js.Object {
 
 object MountTargetState {
   @scala.inline
-  def apply(
-    dnsName: Input[String] = null,
-    fileSystemArn: Input[String] = null,
-    fileSystemId: Input[String] = null,
-    ipAddress: Input[String] = null,
-    networkInterfaceId: Input[String] = null,
-    securityGroups: Input[js.Array[Input[String]]] = null,
-    subnetId: Input[String] = null
-  ): MountTargetState = {
+  def apply(): MountTargetState = {
     val __obj = js.Dynamic.literal()
-    if (dnsName != null) __obj.updateDynamic("dnsName")(dnsName.asInstanceOf[js.Any])
-    if (fileSystemArn != null) __obj.updateDynamic("fileSystemArn")(fileSystemArn.asInstanceOf[js.Any])
-    if (fileSystemId != null) __obj.updateDynamic("fileSystemId")(fileSystemId.asInstanceOf[js.Any])
-    if (ipAddress != null) __obj.updateDynamic("ipAddress")(ipAddress.asInstanceOf[js.Any])
-    if (networkInterfaceId != null) __obj.updateDynamic("networkInterfaceId")(networkInterfaceId.asInstanceOf[js.Any])
-    if (securityGroups != null) __obj.updateDynamic("securityGroups")(securityGroups.asInstanceOf[js.Any])
-    if (subnetId != null) __obj.updateDynamic("subnetId")(subnetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[MountTargetState]
   }
+  @scala.inline
+  implicit class MountTargetStateOps[Self <: MountTargetState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDnsName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDnsName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileSystemArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystemArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileSystemArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystemArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileSystemId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileSystemId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystemId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpAddress(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkInterfaceId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkInterfaceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityGroups(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

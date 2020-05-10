@@ -1,15 +1,17 @@
 package typingsSlinky.materialUi.components
 
+import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.materialUi.signalCellularNullMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SignalCellularNull extends SharedApply_SvgIconProps1666625642[default] {
+object SignalCellularNull {
   @JSImport("material-ui/svg-icons/device/signal-cellular-null", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1073724525[default] = new SharedBuilder_SvgIconProps_1073724525[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SignalCellularNull.type): SharedBuilder_SvgIconProps_1073724525[default] = new SharedBuilder_SvgIconProps_1073724525[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

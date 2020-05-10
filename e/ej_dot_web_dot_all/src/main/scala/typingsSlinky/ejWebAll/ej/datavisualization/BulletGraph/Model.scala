@@ -4,191 +4,519 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Model extends js.Object {
   /** Fires, on clicking the bullet graph.
     */
-  var Click: js.UndefOr[js.Function1[/* e */ ClickEventArgs, Unit]] = js.undefined
+  var Click: js.UndefOr[js.Function1[/* e */ ClickEventArgs, Unit]] = js.native
   /** Toggles the visibility of the range stroke color of the labels.
     * @Default {false}
     */
-  var applyRangeStrokeToLabels: js.UndefOr[Boolean] = js.undefined
+  var applyRangeStrokeToLabels: js.UndefOr[Boolean] = js.native
   /** Toggles the visibility of the range stroke color of the ticks.
     * @Default {false}
     */
-  var applyRangeStrokeToTicks: js.UndefOr[Boolean] = js.undefined
+  var applyRangeStrokeToTicks: js.UndefOr[Boolean] = js.native
   /** Contains property to customize the caption in bullet graph.
     */
-  var captionSettings: js.UndefOr[CaptionSettings] = js.undefined
+  var captionSettings: js.UndefOr[CaptionSettings] = js.native
   /** Comparative measure bar in bullet graph render till the specified value.
     * @Default {0}
     */
-  var comparativeMeasureValue: js.UndefOr[Double] = js.undefined
+  var comparativeMeasureValue: js.UndefOr[Double] = js.native
   /** Fires, on double clicking the bullet graph.
     */
-  var doubleClick: js.UndefOr[js.Function1[/* e */ DoubleClickEventArgs, Unit]] = js.undefined
+  var doubleClick: js.UndefOr[js.Function1[/* e */ DoubleClickEventArgs, Unit]] = js.native
   /** Fires on rendering the caption of bullet graph.
     */
-  var drawCaption: js.UndefOr[js.Function1[/* e */ DrawCaptionEventArgs, Unit]] = js.undefined
+  var drawCaption: js.UndefOr[js.Function1[/* e */ DrawCaptionEventArgs, Unit]] = js.native
   /** Fires on rendering the category.
     */
-  var drawCategory: js.UndefOr[js.Function1[/* e */ DrawCategoryEventArgs, Unit]] = js.undefined
+  var drawCategory: js.UndefOr[js.Function1[/* e */ DrawCategoryEventArgs, Unit]] = js.native
   /** Fires on rendering the comparative measure symbol.
     */
-  var drawComparativeMeasureSymbol: js.UndefOr[js.Function1[/* e */ DrawComparativeMeasureSymbolEventArgs, Unit]] = js.undefined
+  var drawComparativeMeasureSymbol: js.UndefOr[js.Function1[/* e */ DrawComparativeMeasureSymbolEventArgs, Unit]] = js.native
   /** Fires on rendering the feature measure bar.
     */
-  var drawFeatureMeasureBar: js.UndefOr[js.Function1[/* e */ DrawFeatureMeasureBarEventArgs, Unit]] = js.undefined
+  var drawFeatureMeasureBar: js.UndefOr[js.Function1[/* e */ DrawFeatureMeasureBarEventArgs, Unit]] = js.native
   /** Fires on rendering the indicator of bullet graph.
     */
-  var drawIndicator: js.UndefOr[js.Function1[/* e */ DrawIndicatorEventArgs, Unit]] = js.undefined
+  var drawIndicator: js.UndefOr[js.Function1[/* e */ DrawIndicatorEventArgs, Unit]] = js.native
   /** Fires on rendering the labels.
     */
-  var drawLabels: js.UndefOr[js.Function1[/* e */ DrawLabelsEventArgs, Unit]] = js.undefined
+  var drawLabels: js.UndefOr[js.Function1[/* e */ DrawLabelsEventArgs, Unit]] = js.native
   /** Fires on rendering the qualitative ranges.
     */
-  var drawQualitativeRanges: js.UndefOr[js.Function1[/* e */ DrawQualitativeRangesEventArgs, Unit]] = js.undefined
+  var drawQualitativeRanges: js.UndefOr[js.Function1[/* e */ DrawQualitativeRangesEventArgs, Unit]] = js.native
   /** Fires on rendering the ticks.
     */
-  var drawTicks: js.UndefOr[js.Function1[/* e */ DrawTicksEventArgs, Unit]] = js.undefined
+  var drawTicks: js.UndefOr[js.Function1[/* e */ DrawTicksEventArgs, Unit]] = js.native
   /** Toggles the animation of bullet graph.
     * @Default {true}
     */
-  var enableAnimation: js.UndefOr[Boolean] = js.undefined
+  var enableAnimation: js.UndefOr[Boolean] = js.native
   /** Specifies to convert the date object to string, using locale settings.
     * @Default {false}
     */
-  var enableGroupSeparator: js.UndefOr[Boolean] = js.undefined
+  var enableGroupSeparator: js.UndefOr[Boolean] = js.native
   /** Controls whether bullet graph has to be responsive while resizing.
     * @Default {true}
     */
-  var enableResizing: js.UndefOr[Boolean] = js.undefined
+  var enableResizing: js.UndefOr[Boolean] = js.native
   /** Specifies the direction of flow in bullet graph. Neither it may be backward nor forward.
     * @Default {forward}
     */
-  var flowDirection: js.UndefOr[FlowDirection | String] = js.undefined
+  var flowDirection: js.UndefOr[FlowDirection | String] = js.native
   /** Specifies the height of the bullet graph.
     * @Default {90}
     */
-  var height: js.UndefOr[Double] = js.undefined
+  var height: js.UndefOr[Double] = js.native
   /** Sets a value whether to make the bullet graph responsive on resize.
     * @Default {true}
     */
-  var isResponsive: js.UndefOr[Boolean] = js.undefined
+  var isResponsive: js.UndefOr[Boolean] = js.native
   /** Fires on loading bullet graph.
     */
-  var load: js.UndefOr[js.Function1[/* e */ LoadEventArgs, Unit]] = js.undefined
+  var load: js.UndefOr[js.Function1[/* e */ LoadEventArgs, Unit]] = js.native
   /** Name of the culture based on which bulletgraph should be localized.
     * @Default {en-US}
     */
-  var locale: js.UndefOr[String] = js.undefined
+  var locale: js.UndefOr[String] = js.native
   /** Bullet graph will render in the specified orientation.
     * @Default {horizontal}
     */
-  var orientation: js.UndefOr[Orientation | String] = js.undefined
+  var orientation: js.UndefOr[Orientation | String] = js.native
   /** Size of the qualitative range depends up on the specified value.
     * @Default {32}
     */
-  var qualitativeRangeSize: js.UndefOr[Double] = js.undefined
+  var qualitativeRangeSize: js.UndefOr[Double] = js.native
   /** Contains property to customize the qualitative ranges.
     */
-  var qualitativeRanges: js.UndefOr[js.Array[QualitativeRange]] = js.undefined
+  var qualitativeRanges: js.UndefOr[js.Array[QualitativeRange]] = js.native
   /** Length of the quantitative range depends up on the specified value.
     * @Default {475}
     */
-  var quantitativeScaleLength: js.UndefOr[Double] = js.undefined
+  var quantitativeScaleLength: js.UndefOr[Double] = js.native
   /** Contains all the properties to customize quantitative scale.
     */
-  var quantitativeScaleSettings: js.UndefOr[QuantitativeScaleSettings] = js.undefined
+  var quantitativeScaleSettings: js.UndefOr[QuantitativeScaleSettings] = js.native
   /** Fires, on right clicking the bullet graph.
     */
-  var rightClick: js.UndefOr[js.Function1[/* e */ RightClickEventArgs, Unit]] = js.undefined
+  var rightClick: js.UndefOr[js.Function1[/* e */ RightClickEventArgs, Unit]] = js.native
   /** By specifying this property the user can change the theme of the bullet graph.
     * @Default {flatlight}
     */
-  var theme: js.UndefOr[String] = js.undefined
+  var theme: js.UndefOr[String] = js.native
   /** Contains all the properties to customize tooltip.
     */
-  var tooltipSettings: js.UndefOr[TooltipSettings] = js.undefined
+  var tooltipSettings: js.UndefOr[TooltipSettings] = js.native
   /** Feature measure bar in bullet graph render till the specified value.
     * @Default {0}
     */
-  var value: js.UndefOr[Double] = js.undefined
+  var value: js.UndefOr[Double] = js.native
   /** Specifies the width of the bullet graph.
     * @Default {595}
     */
-  var width: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.native
 }
 
 object Model {
   @scala.inline
-  def apply(
-    Click: /* e */ ClickEventArgs => Unit = null,
-    applyRangeStrokeToLabels: js.UndefOr[Boolean] = js.undefined,
-    applyRangeStrokeToTicks: js.UndefOr[Boolean] = js.undefined,
-    captionSettings: CaptionSettings = null,
-    comparativeMeasureValue: Int | Double = null,
-    doubleClick: /* e */ DoubleClickEventArgs => Unit = null,
-    drawCaption: /* e */ DrawCaptionEventArgs => Unit = null,
-    drawCategory: /* e */ DrawCategoryEventArgs => Unit = null,
-    drawComparativeMeasureSymbol: /* e */ DrawComparativeMeasureSymbolEventArgs => Unit = null,
-    drawFeatureMeasureBar: /* e */ DrawFeatureMeasureBarEventArgs => Unit = null,
-    drawIndicator: /* e */ DrawIndicatorEventArgs => Unit = null,
-    drawLabels: /* e */ DrawLabelsEventArgs => Unit = null,
-    drawQualitativeRanges: /* e */ DrawQualitativeRangesEventArgs => Unit = null,
-    drawTicks: /* e */ DrawTicksEventArgs => Unit = null,
-    enableAnimation: js.UndefOr[Boolean] = js.undefined,
-    enableGroupSeparator: js.UndefOr[Boolean] = js.undefined,
-    enableResizing: js.UndefOr[Boolean] = js.undefined,
-    flowDirection: FlowDirection | String = null,
-    height: Int | Double = null,
-    isResponsive: js.UndefOr[Boolean] = js.undefined,
-    load: /* e */ LoadEventArgs => Unit = null,
-    locale: String = null,
-    orientation: Orientation | String = null,
-    qualitativeRangeSize: Int | Double = null,
-    qualitativeRanges: js.Array[QualitativeRange] = null,
-    quantitativeScaleLength: Int | Double = null,
-    quantitativeScaleSettings: QuantitativeScaleSettings = null,
-    rightClick: /* e */ RightClickEventArgs => Unit = null,
-    theme: String = null,
-    tooltipSettings: TooltipSettings = null,
-    value: Int | Double = null,
-    width: Int | Double = null
-  ): Model = {
+  def apply(): Model = {
     val __obj = js.Dynamic.literal()
-    if (Click != null) __obj.updateDynamic("Click")(js.Any.fromFunction1(Click))
-    if (!js.isUndefined(applyRangeStrokeToLabels)) __obj.updateDynamic("applyRangeStrokeToLabels")(applyRangeStrokeToLabels.asInstanceOf[js.Any])
-    if (!js.isUndefined(applyRangeStrokeToTicks)) __obj.updateDynamic("applyRangeStrokeToTicks")(applyRangeStrokeToTicks.asInstanceOf[js.Any])
-    if (captionSettings != null) __obj.updateDynamic("captionSettings")(captionSettings.asInstanceOf[js.Any])
-    if (comparativeMeasureValue != null) __obj.updateDynamic("comparativeMeasureValue")(comparativeMeasureValue.asInstanceOf[js.Any])
-    if (doubleClick != null) __obj.updateDynamic("doubleClick")(js.Any.fromFunction1(doubleClick))
-    if (drawCaption != null) __obj.updateDynamic("drawCaption")(js.Any.fromFunction1(drawCaption))
-    if (drawCategory != null) __obj.updateDynamic("drawCategory")(js.Any.fromFunction1(drawCategory))
-    if (drawComparativeMeasureSymbol != null) __obj.updateDynamic("drawComparativeMeasureSymbol")(js.Any.fromFunction1(drawComparativeMeasureSymbol))
-    if (drawFeatureMeasureBar != null) __obj.updateDynamic("drawFeatureMeasureBar")(js.Any.fromFunction1(drawFeatureMeasureBar))
-    if (drawIndicator != null) __obj.updateDynamic("drawIndicator")(js.Any.fromFunction1(drawIndicator))
-    if (drawLabels != null) __obj.updateDynamic("drawLabels")(js.Any.fromFunction1(drawLabels))
-    if (drawQualitativeRanges != null) __obj.updateDynamic("drawQualitativeRanges")(js.Any.fromFunction1(drawQualitativeRanges))
-    if (drawTicks != null) __obj.updateDynamic("drawTicks")(js.Any.fromFunction1(drawTicks))
-    if (!js.isUndefined(enableAnimation)) __obj.updateDynamic("enableAnimation")(enableAnimation.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableGroupSeparator)) __obj.updateDynamic("enableGroupSeparator")(enableGroupSeparator.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableResizing)) __obj.updateDynamic("enableResizing")(enableResizing.asInstanceOf[js.Any])
-    if (flowDirection != null) __obj.updateDynamic("flowDirection")(flowDirection.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(isResponsive)) __obj.updateDynamic("isResponsive")(isResponsive.asInstanceOf[js.Any])
-    if (load != null) __obj.updateDynamic("load")(js.Any.fromFunction1(load))
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (qualitativeRangeSize != null) __obj.updateDynamic("qualitativeRangeSize")(qualitativeRangeSize.asInstanceOf[js.Any])
-    if (qualitativeRanges != null) __obj.updateDynamic("qualitativeRanges")(qualitativeRanges.asInstanceOf[js.Any])
-    if (quantitativeScaleLength != null) __obj.updateDynamic("quantitativeScaleLength")(quantitativeScaleLength.asInstanceOf[js.Any])
-    if (quantitativeScaleSettings != null) __obj.updateDynamic("quantitativeScaleSettings")(quantitativeScaleSettings.asInstanceOf[js.Any])
-    if (rightClick != null) __obj.updateDynamic("rightClick")(js.Any.fromFunction1(rightClick))
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (tooltipSettings != null) __obj.updateDynamic("tooltipSettings")(tooltipSettings.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[Model]
   }
+  @scala.inline
+  implicit class ModelOps[Self <: Model] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClick(value: /* e */ ClickEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Click")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Click")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApplyRangeStrokeToLabels(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applyRangeStrokeToLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplyRangeStrokeToLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applyRangeStrokeToLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApplyRangeStrokeToTicks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applyRangeStrokeToTicks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplyRangeStrokeToTicks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applyRangeStrokeToTicks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaptionSettings(value: CaptionSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptionSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComparativeMeasureValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comparativeMeasureValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComparativeMeasureValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comparativeMeasureValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoubleClick(value: /* e */ DoubleClickEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDoubleClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrawCaption(value: /* e */ DrawCaptionEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawCaption")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDrawCaption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawCaption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrawCategory(value: /* e */ DrawCategoryEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawCategory")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDrawCategory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawCategory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrawComparativeMeasureSymbol(value: /* e */ DrawComparativeMeasureSymbolEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawComparativeMeasureSymbol")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDrawComparativeMeasureSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawComparativeMeasureSymbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrawFeatureMeasureBar(value: /* e */ DrawFeatureMeasureBarEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawFeatureMeasureBar")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDrawFeatureMeasureBar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawFeatureMeasureBar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrawIndicator(value: /* e */ DrawIndicatorEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawIndicator")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDrawIndicator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawIndicator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrawLabels(value: /* e */ DrawLabelsEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawLabels")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDrawLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrawQualitativeRanges(value: /* e */ DrawQualitativeRangesEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawQualitativeRanges")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDrawQualitativeRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawQualitativeRanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrawTicks(value: /* e */ DrawTicksEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawTicks")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDrawTicks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawTicks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableAnimation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableGroupSeparator(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGroupSeparator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableGroupSeparator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGroupSeparator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableResizing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableResizing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableResizing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableResizing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlowDirection(value: FlowDirection | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flowDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlowDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flowDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsResponsive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isResponsive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsResponsive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isResponsive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoad(value: /* e */ LoadEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrientation(value: Orientation | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrientation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQualitativeRangeSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qualitativeRangeSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQualitativeRangeSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qualitativeRangeSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQualitativeRanges(value: js.Array[QualitativeRange]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qualitativeRanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQualitativeRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qualitativeRanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuantitativeScaleLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantitativeScaleLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuantitativeScaleLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantitativeScaleLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuantitativeScaleSettings(value: QuantitativeScaleSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantitativeScaleSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuantitativeScaleSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantitativeScaleSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRightClick(value: /* e */ RightClickEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRightClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTheme(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipSettings(value: TooltipSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

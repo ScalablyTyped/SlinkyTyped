@@ -40,3 +40,67 @@ trait ChartAxesLoadOptions extends js.Object {
   var valueAxis: js.UndefOr[ChartAxisLoadOptions] = js.native
 }
 
+object ChartAxesLoadOptions {
+  @scala.inline
+  def apply(): ChartAxesLoadOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ChartAxesLoadOptions]
+  }
+  @scala.inline
+  implicit class ChartAxesLoadOptionsOps[Self <: ChartAxesLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$all(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$all: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategoryAxis(value: ChartAxisLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategoryAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeriesAxis(value: ChartAxisLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeriesAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueAxis(value: ChartAxisLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAxis")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

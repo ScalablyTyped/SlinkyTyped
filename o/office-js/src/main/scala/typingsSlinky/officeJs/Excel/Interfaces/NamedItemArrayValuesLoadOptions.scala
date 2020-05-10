@@ -33,3 +33,55 @@ trait NamedItemArrayValuesLoadOptions extends js.Object {
   var values: js.UndefOr[Boolean] = js.native
 }
 
+object NamedItemArrayValuesLoadOptions {
+  @scala.inline
+  def apply(): NamedItemArrayValuesLoadOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[NamedItemArrayValuesLoadOptions]
+  }
+  @scala.inline
+  implicit class NamedItemArrayValuesLoadOptionsOps[Self <: NamedItemArrayValuesLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$all(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$all: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValues(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

@@ -18,11 +18,41 @@ trait TrialComponentParameterValue extends js.Object {
 
 object TrialComponentParameterValue {
   @scala.inline
-  def apply(NumberValue: Int | Double = null, StringValue: StringParameterValue = null): TrialComponentParameterValue = {
+  def apply(): TrialComponentParameterValue = {
     val __obj = js.Dynamic.literal()
-    if (NumberValue != null) __obj.updateDynamic("NumberValue")(NumberValue.asInstanceOf[js.Any])
-    if (StringValue != null) __obj.updateDynamic("StringValue")(StringValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrialComponentParameterValue]
   }
+  @scala.inline
+  implicit class TrialComponentParameterValueOps[Self <: TrialComponentParameterValue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNumberValue(value: DoubleParameterValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStringValue(value: StringParameterValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StringValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStringValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StringValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

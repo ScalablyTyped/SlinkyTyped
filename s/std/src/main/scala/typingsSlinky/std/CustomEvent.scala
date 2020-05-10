@@ -18,10 +18,10 @@ trait CustomEvent[T] extends Event_ {
 @JSGlobal("CustomEvent")
 @js.native
 object CustomEvent
-  extends Instantiable1[/* typeArg */ java.lang.String, CustomEvent[js.Object]]
+  extends Instantiable1[/* typeArg */ java.lang.String, org.scalajs.dom.raw.CustomEvent]
      with Instantiable2[
       /* typeArg */ java.lang.String, 
       /* eventInitDict */ CustomEventInit[js.Object], 
-      CustomEvent[js.Object]
+      org.scalajs.dom.raw.CustomEvent
     ]
 

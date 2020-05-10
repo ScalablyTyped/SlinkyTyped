@@ -21,11 +21,41 @@ trait SchemaTargetReference extends js.Object {
 
 object SchemaTargetReference {
   @scala.inline
-  def apply(driveItem: SchemaDriveItemReference = null, teamDrive: SchemaTeamDriveReference = null): SchemaTargetReference = {
+  def apply(): SchemaTargetReference = {
     val __obj = js.Dynamic.literal()
-    if (driveItem != null) __obj.updateDynamic("driveItem")(driveItem.asInstanceOf[js.Any])
-    if (teamDrive != null) __obj.updateDynamic("teamDrive")(teamDrive.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTargetReference]
   }
+  @scala.inline
+  implicit class SchemaTargetReferenceOps[Self <: SchemaTargetReference] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDriveItem(value: SchemaDriveItemReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driveItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDriveItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driveItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTeamDrive(value: SchemaTeamDriveReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teamDrive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTeamDrive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teamDrive")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,11 +22,41 @@ trait SchemaCollectdValueError extends js.Object {
 
 object SchemaCollectdValueError {
   @scala.inline
-  def apply(error: SchemaStatus = null, index: Int | Double = null): SchemaCollectdValueError = {
+  def apply(): SchemaCollectdValueError = {
     val __obj = js.Dynamic.literal()
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCollectdValueError]
   }
+  @scala.inline
+  implicit class SchemaCollectdValueErrorOps[Self <: SchemaCollectdValueError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withError(value: SchemaStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

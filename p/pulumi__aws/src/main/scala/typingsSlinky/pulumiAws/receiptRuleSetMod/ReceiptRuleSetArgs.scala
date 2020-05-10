@@ -17,8 +17,21 @@ object ReceiptRuleSetArgs {
   @scala.inline
   def apply(ruleSetName: Input[String]): ReceiptRuleSetArgs = {
     val __obj = js.Dynamic.literal(ruleSetName = ruleSetName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ReceiptRuleSetArgs]
   }
+  @scala.inline
+  implicit class ReceiptRuleSetArgsOps[Self <: ReceiptRuleSetArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRuleSetName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleSetName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

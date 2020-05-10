@@ -1,6 +1,5 @@
 package typingsSlinky.swiz.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,13 +60,13 @@ trait IChain extends IValveSchemaMember {
   def notNull(): IChain = js.native
   def notRegex(pattern: String): IChain = js.native
   def notRegex(pattern: String, modifiers: String): IChain = js.native
-  def notRegex(pattern: RegExp): IChain = js.native
+  def notRegex(pattern: js.RegExp): IChain = js.native
   def numItems(min: Double, max: Double): IChain = js.native
   def optional(): IChain = js.native
   def range(min: js.Any, max: js.Any): IChain = js.native
   def regex(pattern: String): IChain = js.native
   def regex(pattern: String, modifiers: String): IChain = js.native
-  def regex(pattern: RegExp): IChain = js.native
+  def regex(pattern: js.RegExp): IChain = js.native
   def rename(target: String): IChain = js.native
   def rtrim(chars: String): IChain = js.native
   def toBoolean(): IChain = js.native

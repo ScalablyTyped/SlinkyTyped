@@ -23,7 +23,7 @@ trait Tooltip
   def renderTooltip(hasGetPopupContainerGetPrefixClsDirection: ConfigConsumerProps): ReactElement = js.native
   def saveTooltip(
     node: ForwardRefExoticComponent[
-      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify imported_Tooltip.TooltipProps */ js.Any) with RefAttributes[_]
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RcTooltipProps */ js.Any) with RefAttributes[_]
     ]
   ): Unit = js.native
 }

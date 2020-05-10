@@ -15,16 +15,14 @@ trait ClonableTeamParts extends js.Object
 
 object ClonableTeamParts {
   @scala.inline
-  def apps: typingsSlinky.microsoftGraph.microsoftGraphStrings.apps = this.cast("apps")
+  def apps: typingsSlinky.microsoftGraph.microsoftGraphStrings.apps = "apps".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.apps]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def channels: typingsSlinky.microsoftGraph.microsoftGraphStrings.channels = "channels".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.channels]
   @scala.inline
-  def channels: typingsSlinky.microsoftGraph.microsoftGraphStrings.channels = this.cast("channels")
+  def members: typingsSlinky.microsoftGraph.microsoftGraphStrings.members = "members".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.members]
   @scala.inline
-  def members: typingsSlinky.microsoftGraph.microsoftGraphStrings.members = this.cast("members")
+  def settings: typingsSlinky.microsoftGraph.microsoftGraphStrings.settings = "settings".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.settings]
   @scala.inline
-  def settings: typingsSlinky.microsoftGraph.microsoftGraphStrings.settings = this.cast("settings")
-  @scala.inline
-  def tabs: typingsSlinky.microsoftGraph.microsoftGraphStrings.tabs = this.cast("tabs")
+  def tabs: typingsSlinky.microsoftGraph.microsoftGraphStrings.tabs = "tabs".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.tabs]
 }
 

@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.versionChecksMod.VersionInfo because Already inherited
 - typingsSlinky.mendixmodelsdk.versionChecksMod.StructureVersionInfo because Already inherited
 - typingsSlinky.mendixmodelsdk.internalMod.StructureVersionInfo because Already inherited

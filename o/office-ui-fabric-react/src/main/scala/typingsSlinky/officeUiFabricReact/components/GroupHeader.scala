@@ -1,18 +1,17 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLButtonElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.html.button.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.groupHeaderTypesMod.IGroupHeaderProps
 import typingsSlinky.officeUiFabricReact.groupHeaderTypesMod.IGroupHeaderStyleProps
 import typingsSlinky.officeUiFabricReact.groupHeaderTypesMod.IGroupHeaderStyles
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroup
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
 import typingsSlinky.react.mod.HTMLAttributes
+import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -21,78 +20,84 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GroupHeader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object GroupHeader {
   @JSImport("office-ui-fabric-react", "GroupHeader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    ariaPosInSet: Int | Double = null,
-    ariaSetSize: Int | Double = null,
-    compact: js.UndefOr[Boolean] = js.undefined,
-    componentRef: IRefObject[js.Object] = null,
-    expandButtonProps: HTMLAttributes[HTMLButtonElement] = null,
-    footerText: String = null,
-    group: IGroup = null,
-    groupIndex: Int | Double = null,
-    groupLevel: Int | Double = null,
-    groupedListId: String = null,
-    groups: js.Array[IGroup] = null,
-    indentWidth: Int | Double = null,
-    isCollapsedGroupSelectVisible: js.UndefOr[Boolean] = js.undefined,
-    isGroupLoading: /* group */ IGroup => Boolean = null,
-    isSelected: js.UndefOr[Boolean] = js.undefined,
-    loadingText: String = null,
-    onGroupHeaderClick: /* group */ IGroup => Unit = null,
-    onRenderTitle: (/* props */ js.UndefOr[IGroupHeaderProps], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IGroupHeaderProps], ReactElement | Null]]) => ReactElement | Null = null,
-    onToggleCollapse: /* group */ IGroup => Unit = null,
-    onToggleSelectGroup: /* group */ IGroup => Unit = null,
-    onToggleSummarize: /* group */ IGroup => Unit = null,
-    selectAllButtonProps: HTMLAttributes[HTMLButtonElement] = null,
-    selected: js.UndefOr[Boolean] = js.undefined,
-    selectionMode: SelectionMode = null,
-    showAllLinkText: String = null,
-    styles: IStyleFunctionOrObject[IGroupHeaderStyleProps, IGroupHeaderStyles] = null,
-    theme: ITheme = null,
-    viewport: IViewport = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (ariaPosInSet != null) __obj.updateDynamic("ariaPosInSet")(ariaPosInSet.asInstanceOf[js.Any])
-    if (ariaSetSize != null) __obj.updateDynamic("ariaSetSize")(ariaSetSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (expandButtonProps != null) __obj.updateDynamic("expandButtonProps")(expandButtonProps.asInstanceOf[js.Any])
-    if (footerText != null) __obj.updateDynamic("footerText")(footerText.asInstanceOf[js.Any])
-    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
-    if (groupIndex != null) __obj.updateDynamic("groupIndex")(groupIndex.asInstanceOf[js.Any])
-    if (groupLevel != null) __obj.updateDynamic("groupLevel")(groupLevel.asInstanceOf[js.Any])
-    if (groupedListId != null) __obj.updateDynamic("groupedListId")(groupedListId.asInstanceOf[js.Any])
-    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
-    if (indentWidth != null) __obj.updateDynamic("indentWidth")(indentWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(isCollapsedGroupSelectVisible)) __obj.updateDynamic("isCollapsedGroupSelectVisible")(isCollapsedGroupSelectVisible.asInstanceOf[js.Any])
-    if (isGroupLoading != null) __obj.updateDynamic("isGroupLoading")(js.Any.fromFunction1(isGroupLoading))
-    if (!js.isUndefined(isSelected)) __obj.updateDynamic("isSelected")(isSelected.asInstanceOf[js.Any])
-    if (loadingText != null) __obj.updateDynamic("loadingText")(loadingText.asInstanceOf[js.Any])
-    if (onGroupHeaderClick != null) __obj.updateDynamic("onGroupHeaderClick")(js.Any.fromFunction1(onGroupHeaderClick))
-    if (onRenderTitle != null) __obj.updateDynamic("onRenderTitle")(js.Any.fromFunction2(onRenderTitle))
-    if (onToggleCollapse != null) __obj.updateDynamic("onToggleCollapse")(js.Any.fromFunction1(onToggleCollapse))
-    if (onToggleSelectGroup != null) __obj.updateDynamic("onToggleSelectGroup")(js.Any.fromFunction1(onToggleSelectGroup))
-    if (onToggleSummarize != null) __obj.updateDynamic("onToggleSummarize")(js.Any.fromFunction1(onToggleSummarize))
-    if (selectAllButtonProps != null) __obj.updateDynamic("selectAllButtonProps")(selectAllButtonProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
-    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
-    if (showAllLinkText != null) __obj.updateDynamic("showAllLinkText")(showAllLinkText.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (viewport != null) __obj.updateDynamic("viewport")(viewport.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def ariaPosInSet(value: Double): this.type = set("ariaPosInSet", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaSetSize(value: Double): this.type = set("ariaSetSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ js.Object | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[js.Object]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[js.Object]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandButtonProps(value: HTMLAttributes[HTMLButtonElement]): this.type = set("expandButtonProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footerText(value: String): this.type = set("footerText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def group(value: IGroup): this.type = set("group", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupIndex(value: Double): this.type = set("groupIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupLevel(value: Double): this.type = set("groupLevel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupedListId(value: String): this.type = set("groupedListId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groups(value: js.Array[IGroup]): this.type = set("groups", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indentWidth(value: Double): this.type = set("indentWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isCollapsedGroupSelectVisible(value: Boolean): this.type = set("isCollapsedGroupSelectVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isGroupLoading(value: /* group */ IGroup => Boolean): this.type = set("isGroupLoading", js.Any.fromFunction1(value))
+    @scala.inline
+    def isSelected(value: Boolean): this.type = set("isSelected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loadingText(value: String): this.type = set("loadingText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onGroupHeaderClick(value: /* group */ IGroup => Unit): this.type = set("onGroupHeaderClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRenderTitle(
+      value: (/* props */ js.UndefOr[IGroupHeaderProps], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IGroupHeaderProps], ReactElement | Null]]) => ReactElement | Null
+    ): this.type = set("onRenderTitle", js.Any.fromFunction2(value))
+    @scala.inline
+    def onToggleCollapse(value: /* group */ IGroup => Unit): this.type = set("onToggleCollapse", js.Any.fromFunction1(value))
+    @scala.inline
+    def onToggleSelectGroup(value: /* group */ IGroup => Unit): this.type = set("onToggleSelectGroup", js.Any.fromFunction1(value))
+    @scala.inline
+    def onToggleSummarize(value: /* group */ IGroup => Unit): this.type = set("onToggleSummarize", js.Any.fromFunction1(value))
+    @scala.inline
+    def selectAllButtonProps(value: HTMLAttributes[HTMLButtonElement]): this.type = set("selectAllButtonProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selected(value: Boolean): this.type = set("selected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectionMode(value: SelectionMode): this.type = set("selectionMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showAllLinkText(value: String): this.type = set("showAllLinkText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stylesFunction1(value: IGroupHeaderStyleProps => Partial[IGroupHeaderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: IStyleFunctionOrObject[IGroupHeaderStyleProps, IGroupHeaderStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def viewport(value: IViewport): this.type = set("viewport", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.button.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IGroupHeaderProps
+  
+  def withProps(p: IGroupHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: GroupHeader.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

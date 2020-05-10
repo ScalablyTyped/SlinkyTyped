@@ -17,8 +17,21 @@ object DataSourceLambdaConfig {
   @scala.inline
   def apply(functionArn: Input[String]): DataSourceLambdaConfig = {
     val __obj = js.Dynamic.literal(functionArn = functionArn.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DataSourceLambdaConfig]
   }
+  @scala.inline
+  implicit class DataSourceLambdaConfigOps[Self <: DataSourceLambdaConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFunctionArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("functionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

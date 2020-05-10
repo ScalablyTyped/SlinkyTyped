@@ -1,15 +1,17 @@
 package typingsSlinky.materialUiIcons.components
 
+import typingsSlinky.materialUiCore.svgIconSvgIconMod.SvgIconProps
 import typingsSlinky.materialUiIcons.forward10RoundedMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Forward10Rounded extends SharedApply_SvgIconProps1442979138[default] {
-  @JSImport("@material-ui/icons/Forward10Rounded", "default")
+object Forward10Rounded {
+  @JSImport("@material-ui/icons/Forward10Rounded", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1164301990[default] = new SharedBuilder_SvgIconProps_1164301990[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Forward10Rounded.type): SharedBuilder_SvgIconProps_1164301990[default] = new SharedBuilder_SvgIconProps_1164301990[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

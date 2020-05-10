@@ -14,10 +14,29 @@ trait GetStackPolicyOutput extends js.Object {
 
 object GetStackPolicyOutput {
   @scala.inline
-  def apply(StackPolicyBody: StackPolicyBody = null): GetStackPolicyOutput = {
+  def apply(): GetStackPolicyOutput = {
     val __obj = js.Dynamic.literal()
-    if (StackPolicyBody != null) __obj.updateDynamic("StackPolicyBody")(StackPolicyBody.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetStackPolicyOutput]
   }
+  @scala.inline
+  implicit class GetStackPolicyOutputOps[Self <: GetStackPolicyOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStackPolicyBody(value: StackPolicyBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackPolicyBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackPolicyBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackPolicyBody")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Aws extends js.Object {
   var naming: StringDictionary[js.Function0[String]] = js.native
+  def getAccountId(): js.Promise[String] = js.native
   def getProviderName(): String = js.native
   def getRegion(): String = js.native
   def getServerlessDeploymentBucketName(): String = js.native

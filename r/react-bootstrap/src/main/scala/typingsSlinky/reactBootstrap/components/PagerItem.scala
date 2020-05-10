@@ -1,15 +1,17 @@
 package typingsSlinky.reactBootstrap.components
 
+import typingsSlinky.reactBootstrap.pagerItemMod.PagerItemProps
 import typingsSlinky.reactBootstrap.pagerItemMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PagerItem extends SharedApply_PagerItemProps_871734100[^] {
+object PagerItem {
   @JSImport("react-bootstrap/lib/PagerItem", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: PagerItemProps): SharedBuilder_PagerItemProps_1528535100[^] = new SharedBuilder_PagerItemProps_1528535100[^](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PagerItem.type): SharedBuilder_PagerItemProps_1528535100[^] = new SharedBuilder_PagerItemProps_1528535100[^](js.Array(this.component, js.Dictionary.empty))()
 }
 

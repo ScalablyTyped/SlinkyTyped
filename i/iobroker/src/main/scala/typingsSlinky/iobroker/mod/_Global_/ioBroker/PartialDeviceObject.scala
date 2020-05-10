@@ -7,34 +7,154 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined parent std.Partial<std.Pick<iobroker.iobroker._Global_.ioBroker.DeviceObject, '_id' | 'native' | 'enums' | 'type' | 'acl'>> */
+/* Inlined parent std.Partial<std.Omit<iobroker.iobroker._Global_.ioBroker.DeviceObject, 'common'>> */
+@js.native
 trait PartialDeviceObject extends PartialObject {
-  var _id: js.UndefOr[String] = js.undefined
-  var acl: js.UndefOr[ObjectACL] = js.undefined
-  var common: js.UndefOr[PartialDeviceCommon] = js.undefined
-  var enums: js.UndefOr[Record[String, String]] = js.undefined
-  var native: js.UndefOr[Record[String, _]] = js.undefined
-  var `type`: js.UndefOr[device] = js.undefined
+  var _id: js.UndefOr[String] = js.native
+  var acl: js.UndefOr[ObjectACL] = js.native
+  var common: js.UndefOr[PartialDeviceCommon] = js.native
+  var encryptedNative: js.UndefOr[js.Array[String]] = js.native
+  var enums: js.UndefOr[Record[String, String]] = js.native
+  var from: js.UndefOr[String] = js.native
+  var native: js.UndefOr[Record[String, ObjectField]] = js.native
+  var protectedNative: js.UndefOr[js.Array[String]] = js.native
+  var ts: js.UndefOr[Double] = js.native
+  var `type`: js.UndefOr[device] = js.native
 }
 
 object PartialDeviceObject {
   @scala.inline
-  def apply(
-    _id: String = null,
-    acl: ObjectACL = null,
-    common: PartialDeviceCommon = null,
-    enums: Record[String, String] = null,
-    native: Record[String, _] = null,
-    `type`: device = null
-  ): PartialDeviceObject = {
+  def apply(): PartialDeviceObject = {
     val __obj = js.Dynamic.literal()
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (acl != null) __obj.updateDynamic("acl")(acl.asInstanceOf[js.Any])
-    if (common != null) __obj.updateDynamic("common")(common.asInstanceOf[js.Any])
-    if (enums != null) __obj.updateDynamic("enums")(enums.asInstanceOf[js.Any])
-    if (native != null) __obj.updateDynamic("native")(native.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialDeviceObject]
   }
+  @scala.inline
+  implicit class PartialDeviceObjectOps[Self <: PartialDeviceObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAcl(value: ObjectACL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommon(value: PartialDeviceCommon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("common")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("common")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptedNative(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptedNative")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptedNative: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptedNative")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnums(value: Record[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enums")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnums: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enums")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNative(value: Record[String, ObjectField]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("native")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNative: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("native")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtectedNative(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protectedNative")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtectedNative: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protectedNative")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTs(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: device): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait QoS extends js.Object
 
 object QoS {
   @scala.inline
-  def `0`: typingsSlinky.mqttPacket.mqttPacketNumbers.`0` = this.cast(0)
+  def `0`: typingsSlinky.mqttPacket.mqttPacketNumbers.`0` = 0.asInstanceOf[typingsSlinky.mqttPacket.mqttPacketNumbers.`0`]
   @scala.inline
-  def `1`: typingsSlinky.mqttPacket.mqttPacketNumbers.`1` = this.cast(1)
+  def `1`: typingsSlinky.mqttPacket.mqttPacketNumbers.`1` = 1.asInstanceOf[typingsSlinky.mqttPacket.mqttPacketNumbers.`1`]
   @scala.inline
-  def `2`: typingsSlinky.mqttPacket.mqttPacketNumbers.`2` = this.cast(2)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `2`: typingsSlinky.mqttPacket.mqttPacketNumbers.`2` = 2.asInstanceOf[typingsSlinky.mqttPacket.mqttPacketNumbers.`2`]
 }
 

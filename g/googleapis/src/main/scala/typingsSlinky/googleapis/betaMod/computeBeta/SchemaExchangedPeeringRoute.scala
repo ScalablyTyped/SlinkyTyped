@@ -30,20 +30,77 @@ trait SchemaExchangedPeeringRoute extends js.Object {
 
 object SchemaExchangedPeeringRoute {
   @scala.inline
-  def apply(
-    destRange: String = null,
-    imported: js.UndefOr[Boolean] = js.undefined,
-    nextHopRegion: String = null,
-    priority: Int | Double = null,
-    `type`: String = null
-  ): SchemaExchangedPeeringRoute = {
+  def apply(): SchemaExchangedPeeringRoute = {
     val __obj = js.Dynamic.literal()
-    if (destRange != null) __obj.updateDynamic("destRange")(destRange.asInstanceOf[js.Any])
-    if (!js.isUndefined(imported)) __obj.updateDynamic("imported")(imported.asInstanceOf[js.Any])
-    if (nextHopRegion != null) __obj.updateDynamic("nextHopRegion")(nextHopRegion.asInstanceOf[js.Any])
-    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExchangedPeeringRoute]
   }
+  @scala.inline
+  implicit class SchemaExchangedPeeringRouteOps[Self <: SchemaExchangedPeeringRoute] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImported: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imported")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextHopRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextHopRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextHopRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextHopRegion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriority(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

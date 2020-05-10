@@ -8,42 +8,68 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait TSParameterProperty_
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ @js.native
+trait TSParameterProperty_
   extends LVal
      with BaseNode {
-  var accessibility: public | `private` | `protected` | Null
-  var parameter: Identifier_ | AssignmentPattern_
-  var readonly: Boolean | Null
+  var accessibility: public | `private` | `protected` | Null = js.native
+  var parameter: Identifier_ | AssignmentPattern_ = js.native
+  var readonly: Boolean | Null = js.native
   @JSName("type")
-  var type_TSParameterProperty_ : TSParameterProperty
+  var type_TSParameterProperty_ : TSParameterProperty = js.native
 }
 
 object TSParameterProperty_ {
   @scala.inline
-  def apply(
-    parameter: Identifier_ | AssignmentPattern_,
-    `type`: TSParameterProperty,
-    accessibility: public | `private` | `protected` = null,
-    end: Int | Double = null,
-    innerComments: js.Array[Comment] = null,
-    leadingComments: js.Array[Comment] = null,
-    loc: SourceLocation = null,
-    readonly: js.UndefOr[Boolean] = js.undefined,
-    start: Int | Double = null,
-    trailingComments: js.Array[Comment] = null
-  ): TSParameterProperty_ = {
+  def apply(parameter: Identifier_ | AssignmentPattern_, `type`: TSParameterProperty): TSParameterProperty_ = {
     val __obj = js.Dynamic.literal(parameter = parameter.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (accessibility != null) __obj.updateDynamic("accessibility")(accessibility.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
-    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (!js.isUndefined(readonly)) __obj.updateDynamic("readonly")(readonly.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSParameterProperty_]
   }
+  @scala.inline
+  implicit class TSParameterProperty_Ops[Self <: TSParameterProperty_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParameter(value: Identifier_ | AssignmentPattern_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: TSParameterProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccessibility(value: public | `private` | `protected`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccessibilityNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(null)
+        ret
+    }
+    @scala.inline
+    def withReadonly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReadonlyNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(null)
+        ret
+    }
+  }
+  
 }
 

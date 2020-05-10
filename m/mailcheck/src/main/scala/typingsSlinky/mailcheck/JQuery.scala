@@ -1,20 +1,15 @@
 package typingsSlinky.mailcheck
 
-import typingsSlinky.mailcheck.MailcheckModule.IOptions
+import typingsSlinky.mailcheck.MailcheckModule.IAsynchronousOptions
+import typingsSlinky.mailcheck.MailcheckModule.ISuggestion
+import typingsSlinky.mailcheck.MailcheckModule.ISynchronousOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait JQuery extends js.Object {
-  def mailcheck(opts: IOptions): Unit
-}
-
-object JQuery {
-  @scala.inline
-  def apply(mailcheck: IOptions => Unit): JQuery = {
-    val __obj = js.Dynamic.literal(mailcheck = js.Any.fromFunction1(mailcheck))
-  
-    __obj.asInstanceOf[JQuery]
-  }
+  def mailcheck(opts: IAsynchronousOptions): Unit = js.native
+  def mailcheck(opts: ISynchronousOptions): ISuggestion | Unit = js.native
 }
 

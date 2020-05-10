@@ -39,22 +39,89 @@ trait SchemaGoogleCloudVideointelligenceV1beta2VideoContext extends js.Object {
 
 object SchemaGoogleCloudVideointelligenceV1beta2VideoContext {
   @scala.inline
-  def apply(
-    explicitContentDetectionConfig: SchemaGoogleCloudVideointelligenceV1beta2ExplicitContentDetectionConfig = null,
-    labelDetectionConfig: SchemaGoogleCloudVideointelligenceV1beta2LabelDetectionConfig = null,
-    segments: js.Array[SchemaGoogleCloudVideointelligenceV1beta2VideoSegment] = null,
-    shotChangeDetectionConfig: SchemaGoogleCloudVideointelligenceV1beta2ShotChangeDetectionConfig = null,
-    speechTranscriptionConfig: SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscriptionConfig = null,
-    textDetectionConfig: SchemaGoogleCloudVideointelligenceV1beta2TextDetectionConfig = null
-  ): SchemaGoogleCloudVideointelligenceV1beta2VideoContext = {
+  def apply(): SchemaGoogleCloudVideointelligenceV1beta2VideoContext = {
     val __obj = js.Dynamic.literal()
-    if (explicitContentDetectionConfig != null) __obj.updateDynamic("explicitContentDetectionConfig")(explicitContentDetectionConfig.asInstanceOf[js.Any])
-    if (labelDetectionConfig != null) __obj.updateDynamic("labelDetectionConfig")(labelDetectionConfig.asInstanceOf[js.Any])
-    if (segments != null) __obj.updateDynamic("segments")(segments.asInstanceOf[js.Any])
-    if (shotChangeDetectionConfig != null) __obj.updateDynamic("shotChangeDetectionConfig")(shotChangeDetectionConfig.asInstanceOf[js.Any])
-    if (speechTranscriptionConfig != null) __obj.updateDynamic("speechTranscriptionConfig")(speechTranscriptionConfig.asInstanceOf[js.Any])
-    if (textDetectionConfig != null) __obj.updateDynamic("textDetectionConfig")(textDetectionConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1beta2VideoContext]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVideointelligenceV1beta2VideoContextOps[Self <: SchemaGoogleCloudVideointelligenceV1beta2VideoContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExplicitContentDetectionConfig(value: SchemaGoogleCloudVideointelligenceV1beta2ExplicitContentDetectionConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("explicitContentDetectionConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExplicitContentDetectionConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("explicitContentDetectionConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelDetectionConfig(value: SchemaGoogleCloudVideointelligenceV1beta2LabelDetectionConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelDetectionConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelDetectionConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelDetectionConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegments(value: js.Array[SchemaGoogleCloudVideointelligenceV1beta2VideoSegment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShotChangeDetectionConfig(value: SchemaGoogleCloudVideointelligenceV1beta2ShotChangeDetectionConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shotChangeDetectionConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShotChangeDetectionConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shotChangeDetectionConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpeechTranscriptionConfig(value: SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscriptionConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speechTranscriptionConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpeechTranscriptionConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speechTranscriptionConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextDetectionConfig(value: SchemaGoogleCloudVideointelligenceV1beta2TextDetectionConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDetectionConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextDetectionConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDetectionConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

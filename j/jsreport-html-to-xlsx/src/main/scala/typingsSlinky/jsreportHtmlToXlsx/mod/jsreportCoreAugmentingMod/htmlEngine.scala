@@ -12,10 +12,8 @@ trait htmlEngine extends js.Object
 
 object htmlEngine {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def chrome: typingsSlinky.jsreportHtmlToXlsx.jsreportHtmlToXlsxStrings.chrome = "chrome".asInstanceOf[typingsSlinky.jsreportHtmlToXlsx.jsreportHtmlToXlsxStrings.chrome]
   @scala.inline
-  def chrome: typingsSlinky.jsreportHtmlToXlsx.jsreportHtmlToXlsxStrings.chrome = this.cast("chrome")
-  @scala.inline
-  def phantom: typingsSlinky.jsreportHtmlToXlsx.jsreportHtmlToXlsxStrings.phantom = this.cast("phantom")
+  def phantom: typingsSlinky.jsreportHtmlToXlsx.jsreportHtmlToXlsxStrings.phantom = "phantom".asInstanceOf[typingsSlinky.jsreportHtmlToXlsx.jsreportHtmlToXlsxStrings.phantom]
 }
 

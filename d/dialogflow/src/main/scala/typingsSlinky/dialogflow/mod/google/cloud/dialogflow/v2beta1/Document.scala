@@ -9,7 +9,6 @@ import typingsSlinky.dialogflow.mod.google.cloud.dialogflow.v2beta1.Document.Kno
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +42,7 @@ class Document () extends IDocument {
   var name_Document: String = js.native
   /** Document rawContent. */
   @JSName("rawContent")
-  var rawContent_Document: scala.scalajs.js.typedarray.Uint8Array = js.native
+  var rawContent_Document: js.typedarray.Uint8Array = js.native
   /** Document source. */
   var source: js.UndefOr[contentUri | content | rawContent] = js.native
   /**
@@ -77,8 +76,8 @@ object Document extends js.Object {
     */
   def decode(reader: Reader): Document = js.native
   def decode(reader: Reader, length: Double): Document = js.native
-  def decode(reader: Uint8Array): Document = js.native
-  def decode(reader: Uint8Array, length: Double): Document = js.native
+  def decode(reader: js.typedarray.Uint8Array): Document = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): Document = js.native
   /**
     * Decodes a Document message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -87,7 +86,7 @@ object Document extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): Document = js.native
-  def decodeDelimited(reader: Uint8Array): Document = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): Document = js.native
   /**
     * Encodes the specified Document message. Does not implicitly {@link google.cloud.dialogflow.v2beta1.Document.verify|verify} messages.
     * @param message Document message or plain object to encode

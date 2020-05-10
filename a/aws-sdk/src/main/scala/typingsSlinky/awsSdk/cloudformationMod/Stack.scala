@@ -98,51 +98,263 @@ trait Stack extends js.Object {
 
 object Stack {
   @scala.inline
-  def apply(
-    CreationTime: js.Date,
-    StackName: StackName,
-    StackStatus: StackStatus,
-    Capabilities: Capabilities = null,
-    ChangeSetId: ChangeSetId = null,
-    DeletionTime: js.Date = null,
-    Description: Description = null,
-    DisableRollback: js.UndefOr[Boolean] = js.undefined,
-    DriftInformation: StackDriftInformation = null,
-    EnableTerminationProtection: js.UndefOr[Boolean] = js.undefined,
-    LastUpdatedTime: js.Date = null,
-    NotificationARNs: NotificationARNs = null,
-    Outputs: Outputs = null,
-    Parameters: Parameters = null,
-    ParentId: StackId = null,
-    RoleARN: RoleARN_ = null,
-    RollbackConfiguration: RollbackConfiguration = null,
-    RootId: StackId = null,
-    StackId: StackId = null,
-    StackStatusReason: StackStatusReason = null,
-    Tags: Tags = null,
-    TimeoutInMinutes: Int | Double = null
-  ): Stack = {
+  def apply(CreationTime: js.Date, StackName: StackName, StackStatus: StackStatus): Stack = {
     val __obj = js.Dynamic.literal(CreationTime = CreationTime.asInstanceOf[js.Any], StackName = StackName.asInstanceOf[js.Any], StackStatus = StackStatus.asInstanceOf[js.Any])
-    if (Capabilities != null) __obj.updateDynamic("Capabilities")(Capabilities.asInstanceOf[js.Any])
-    if (ChangeSetId != null) __obj.updateDynamic("ChangeSetId")(ChangeSetId.asInstanceOf[js.Any])
-    if (DeletionTime != null) __obj.updateDynamic("DeletionTime")(DeletionTime.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (!js.isUndefined(DisableRollback)) __obj.updateDynamic("DisableRollback")(DisableRollback.asInstanceOf[js.Any])
-    if (DriftInformation != null) __obj.updateDynamic("DriftInformation")(DriftInformation.asInstanceOf[js.Any])
-    if (!js.isUndefined(EnableTerminationProtection)) __obj.updateDynamic("EnableTerminationProtection")(EnableTerminationProtection.asInstanceOf[js.Any])
-    if (LastUpdatedTime != null) __obj.updateDynamic("LastUpdatedTime")(LastUpdatedTime.asInstanceOf[js.Any])
-    if (NotificationARNs != null) __obj.updateDynamic("NotificationARNs")(NotificationARNs.asInstanceOf[js.Any])
-    if (Outputs != null) __obj.updateDynamic("Outputs")(Outputs.asInstanceOf[js.Any])
-    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
-    if (ParentId != null) __obj.updateDynamic("ParentId")(ParentId.asInstanceOf[js.Any])
-    if (RoleARN != null) __obj.updateDynamic("RoleARN")(RoleARN.asInstanceOf[js.Any])
-    if (RollbackConfiguration != null) __obj.updateDynamic("RollbackConfiguration")(RollbackConfiguration.asInstanceOf[js.Any])
-    if (RootId != null) __obj.updateDynamic("RootId")(RootId.asInstanceOf[js.Any])
-    if (StackId != null) __obj.updateDynamic("StackId")(StackId.asInstanceOf[js.Any])
-    if (StackStatusReason != null) __obj.updateDynamic("StackStatusReason")(StackStatusReason.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (TimeoutInMinutes != null) __obj.updateDynamic("TimeoutInMinutes")(TimeoutInMinutes.asInstanceOf[js.Any])
     __obj.asInstanceOf[Stack]
   }
+  @scala.inline
+  implicit class StackOps[Self <: Stack] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStackName(value: StackName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStackStatus(value: StackStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCapabilities(value: Capabilities): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Capabilities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapabilities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Capabilities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChangeSetId(value: ChangeSetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeSetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChangeSetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeSetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeletionTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeletionTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableRollback(value: DisableRollback): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableRollback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableRollback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableRollback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDriftInformation(value: StackDriftInformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DriftInformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDriftInformation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DriftInformation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableTerminationProtection(value: EnableTerminationProtection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableTerminationProtection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableTerminationProtection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableTerminationProtection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdatedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdatedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotificationARNs(value: NotificationARNs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationARNs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationARNs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationARNs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputs(value: Outputs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Outputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Outputs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: Parameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentId(value: StackId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleARN(value: RoleARN_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRollbackConfiguration(value: RollbackConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RollbackConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRollbackConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RollbackConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRootId(value: StackId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RootId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRootId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RootId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackId(value: StackId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackStatusReason(value: StackStatusReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackStatusReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackStatusReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackStatusReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeoutInMinutes(value: TimeoutMinutes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutInMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeoutInMinutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutInMinutes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

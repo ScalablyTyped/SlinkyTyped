@@ -30,20 +30,77 @@ trait DetectedProperties extends js.Object {
 
 object DetectedProperties {
   @scala.inline
-  def apply(
-    DurationMillis: Int | Double = null,
-    FileSize: Int | Double = null,
-    FrameRate: FloatString = null,
-    Height: Int | Double = null,
-    Width: Int | Double = null
-  ): DetectedProperties = {
+  def apply(): DetectedProperties = {
     val __obj = js.Dynamic.literal()
-    if (DurationMillis != null) __obj.updateDynamic("DurationMillis")(DurationMillis.asInstanceOf[js.Any])
-    if (FileSize != null) __obj.updateDynamic("FileSize")(FileSize.asInstanceOf[js.Any])
-    if (FrameRate != null) __obj.updateDynamic("FrameRate")(FrameRate.asInstanceOf[js.Any])
-    if (Height != null) __obj.updateDynamic("Height")(Height.asInstanceOf[js.Any])
-    if (Width != null) __obj.updateDynamic("Width")(Width.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetectedProperties]
   }
+  @scala.inline
+  implicit class DetectedPropertiesOps[Self <: DetectedProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDurationMillis(value: NullableLong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDurationMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileSize(value: NullableLong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrameRate(value: FloatString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FrameRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FrameRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: NullableInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: NullableInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

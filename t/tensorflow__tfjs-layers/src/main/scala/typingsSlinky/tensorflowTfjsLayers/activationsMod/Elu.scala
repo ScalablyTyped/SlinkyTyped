@@ -1,6 +1,5 @@
 package typingsSlinky.tensorflowTfjsLayers.activationsMod
 
-import typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.elu_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +13,6 @@ class Elu () extends Activation
 @js.native
 object Elu extends js.Object {
   /** @nocollapse */
-  val className: elu_ = js.native
+  val className: /* "elu" */ String = js.native
 }
 

@@ -1,28 +1,54 @@
 package typingsSlinky.reactVirtualized.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactVirtualized.AnonClientHeight
-import typingsSlinky.reactVirtualized.AnonStartIndex
 import typingsSlinky.reactVirtualized.esCellMeasurerMod.CellMeasurerCacheInterface
 import typingsSlinky.reactVirtualized.esMasonryMod.MasonryCellProps
 import typingsSlinky.reactVirtualized.esMasonryMod.MasonryProps
 import typingsSlinky.reactVirtualized.esMasonryMod.Positioner
+import typingsSlinky.reactVirtualized.mod.IndexRange
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Masonry
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactVirtualized.mod.Masonry] {
+object Masonry {
   @JSImport("react-virtualized", "Masonry")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, style, tabIndex */
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactVirtualized.mod.Masonry] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keyMapper(value: (/* rowIndex */ Double, /* columnIndex */ Double) => js.Any): this.type = set("keyMapper", js.Any.fromFunction2(value))
+    @scala.inline
+    def onCellsRendered(value: /* params */ IndexRange => Unit): this.type = set("onCellsRendered", js.Any.fromFunction1(value))
+    @scala.inline
+    def onScroll(value: /* params */ AnonClientHeight => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
+    @scala.inline
+    def overscanByPixels(value: Double): this.type = set("overscanByPixels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollingResetTimeInterval(value: Double): this.type = set("scrollingResetTimeInterval", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabIndexNull: this.type = set("tabIndex", null)
+  }
+  
+  def withProps(p: MasonryProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     autoHeight: Boolean,
     cellCount: Double,
@@ -30,25 +56,10 @@ object Masonry
     cellPositioner: Positioner,
     cellRenderer: /* props */ MasonryCellProps => TagMod[Any],
     height: Double,
-    width: Double,
-    keyMapper: (/* rowIndex */ Double, /* columnIndex */ Double) => js.Any = null,
-    onCellsRendered: /* params */ AnonStartIndex => Unit = null,
-    onScroll: /* params */ AnonClientHeight => Unit = null,
-    overscanByPixels: Int | Double = null,
-    role: String = null,
-    scrollingResetTimeInterval: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactVirtualized.mod.Masonry] = {
-    val __obj = js.Dynamic.literal(autoHeight = autoHeight.asInstanceOf[js.Any], cellCount = cellCount.asInstanceOf[js.Any], cellMeasurerCache = cellMeasurerCache.asInstanceOf[js.Any], cellPositioner = cellPositioner.asInstanceOf[js.Any], cellRenderer = js.Any.fromFunction1(cellRenderer), height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    if (keyMapper != null) __obj.updateDynamic("keyMapper")(js.Any.fromFunction2(keyMapper))
-    if (onCellsRendered != null) __obj.updateDynamic("onCellsRendered")(js.Any.fromFunction1(onCellsRendered))
-    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
-    if (overscanByPixels != null) __obj.updateDynamic("overscanByPixels")(overscanByPixels.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (scrollingResetTimeInterval != null) __obj.updateDynamic("scrollingResetTimeInterval")(scrollingResetTimeInterval.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    width: Double
+  ): Builder = {
+    val __props = js.Dynamic.literal(autoHeight = autoHeight.asInstanceOf[js.Any], cellCount = cellCount.asInstanceOf[js.Any], cellMeasurerCache = cellMeasurerCache.asInstanceOf[js.Any], cellPositioner = cellPositioner.asInstanceOf[js.Any], cellRenderer = js.Any.fromFunction1(cellRenderer), height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MasonryProps]))
   }
-  type Props = MasonryProps
 }
 

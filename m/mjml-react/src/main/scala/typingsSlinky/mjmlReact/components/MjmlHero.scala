@@ -1,10 +1,7 @@
 package typingsSlinky.mjmlReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.csstype.mod.BackgroundColorProperty
 import typingsSlinky.csstype.mod.BackgroundPositionProperty
 import typingsSlinky.csstype.mod.VerticalAlignProperty
@@ -17,51 +14,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MjmlHero
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mjmlReact.mod.MjmlHero] {
+object MjmlHero {
   @JSImport("mjml-react", "MjmlHero")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    backgroundColor: BackgroundColorProperty = null,
-    backgroundHeight: String = null,
-    backgroundPosition: BackgroundPositionProperty[String | Double] = null,
-    backgroundUrl: String = null,
-    backgroundWidth: String = null,
-    cssClass: String = null,
-    height: String | Double = null,
-    mode: `fluid-height` | `fixed-height` = null,
-    padding: String | Double = null,
-    paddingBottom: String | Double = null,
-    paddingLeft: String | Double = null,
-    paddingRight: String | Double = null,
-    paddingTop: String | Double = null,
-    verticalAlign: VerticalAlignProperty[String | Double] = null,
-    width: String | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlHero] = {
-    val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (backgroundHeight != null) __obj.updateDynamic("backgroundHeight")(backgroundHeight.asInstanceOf[js.Any])
-    if (backgroundPosition != null) __obj.updateDynamic("backgroundPosition")(backgroundPosition.asInstanceOf[js.Any])
-    if (backgroundUrl != null) __obj.updateDynamic("backgroundUrl")(backgroundUrl.asInstanceOf[js.Any])
-    if (backgroundWidth != null) __obj.updateDynamic("backgroundWidth")(backgroundWidth.asInstanceOf[js.Any])
-    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (paddingBottom != null) __obj.updateDynamic("paddingBottom")(paddingBottom.asInstanceOf[js.Any])
-    if (paddingLeft != null) __obj.updateDynamic("paddingLeft")(paddingLeft.asInstanceOf[js.Any])
-    if (paddingRight != null) __obj.updateDynamic("paddingRight")(paddingRight.asInstanceOf[js.Any])
-    if (paddingTop != null) __obj.updateDynamic("paddingTop")(paddingTop.asInstanceOf[js.Any])
-    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlHero] {
+    @scala.inline
+    def backgroundColor(value: BackgroundColorProperty): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundHeight(value: String): this.type = set("backgroundHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundPosition(value: BackgroundPositionProperty[String | Double]): this.type = set("backgroundPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundUrl(value: String): this.type = set("backgroundUrl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundWidth(value: String): this.type = set("backgroundWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cssClass(value: String): this.type = set("cssClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: String | Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mode(value: `fluid-height` | `fixed-height`): this.type = set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def padding(value: String | Double): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingBottom(value: String | Double): this.type = set("paddingBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingLeft(value: String | Double): this.type = set("paddingLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingRight(value: String | Double): this.type = set("paddingRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingTop(value: String | Double): this.type = set("paddingTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalAlign(value: VerticalAlignProperty[String | Double]): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlHero] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.mjmlReact.mod.MjmlHero](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MjmlHeroProps with ClassNameProps with PaddingProps
+  
+  def withProps(p: MjmlHeroProps with ClassNameProps with PaddingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MjmlHero.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

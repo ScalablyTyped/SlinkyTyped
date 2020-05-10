@@ -7,38 +7,121 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonPerPositionHeight extends js.Object {
-  var ellipsoid: js.UndefOr[Ellipsoid] = js.undefined
-  var extrudedHeight: js.UndefOr[Double] = js.undefined
-  var granularity: js.UndefOr[Double] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var perPositionHeight: js.UndefOr[Boolean] = js.undefined
-  var polygonHierarchy: PolygonHierarchy
-  var stRotation: js.UndefOr[Double] = js.undefined
-  var vertexFormat: js.UndefOr[VertexFormat] = js.undefined
+  var ellipsoid: js.UndefOr[Ellipsoid] = js.native
+  var extrudedHeight: js.UndefOr[Double] = js.native
+  var granularity: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var perPositionHeight: js.UndefOr[Boolean] = js.native
+  var polygonHierarchy: PolygonHierarchy = js.native
+  var stRotation: js.UndefOr[Double] = js.native
+  var vertexFormat: js.UndefOr[VertexFormat] = js.native
 }
 
 object AnonPerPositionHeight {
   @scala.inline
-  def apply(
-    polygonHierarchy: PolygonHierarchy,
-    ellipsoid: Ellipsoid = null,
-    extrudedHeight: Int | Double = null,
-    granularity: Int | Double = null,
-    height: Int | Double = null,
-    perPositionHeight: js.UndefOr[Boolean] = js.undefined,
-    stRotation: Int | Double = null,
-    vertexFormat: VertexFormat = null
-  ): AnonPerPositionHeight = {
+  def apply(polygonHierarchy: PolygonHierarchy): AnonPerPositionHeight = {
     val __obj = js.Dynamic.literal(polygonHierarchy = polygonHierarchy.asInstanceOf[js.Any])
-    if (ellipsoid != null) __obj.updateDynamic("ellipsoid")(ellipsoid.asInstanceOf[js.Any])
-    if (extrudedHeight != null) __obj.updateDynamic("extrudedHeight")(extrudedHeight.asInstanceOf[js.Any])
-    if (granularity != null) __obj.updateDynamic("granularity")(granularity.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(perPositionHeight)) __obj.updateDynamic("perPositionHeight")(perPositionHeight.asInstanceOf[js.Any])
-    if (stRotation != null) __obj.updateDynamic("stRotation")(stRotation.asInstanceOf[js.Any])
-    if (vertexFormat != null) __obj.updateDynamic("vertexFormat")(vertexFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonPerPositionHeight]
   }
+  @scala.inline
+  implicit class AnonPerPositionHeightOps[Self <: AnonPerPositionHeight] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPolygonHierarchy(value: PolygonHierarchy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polygonHierarchy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEllipsoid(value: Ellipsoid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEllipsoid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtrudedHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extrudedHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtrudedHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extrudedHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGranularity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGranularity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPerPositionHeight(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("perPositionHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPerPositionHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("perPositionHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStRotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stRotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStRotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stRotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVertexFormat(value: VertexFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVertexFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexFormat")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

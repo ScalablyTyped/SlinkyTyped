@@ -13,15 +13,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Node, 'type'> */
+@js.native
 trait TSTypeAnnotation
   extends ASTNode
      with NodeKind
      with PrintableKind
      with TSTypeAnnotationKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSTypeAnnotation
-  var typeAnnotation: TSTypeKind | TSTypeAnnotationKind
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSTypeAnnotation = js.native
+  var typeAnnotation: TSTypeKind | TSTypeAnnotationKind = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSTypeAnnotation")

@@ -6,7 +6,6 @@ import typingsSlinky.cypress.Mocha_.MochaOptions
 import typingsSlinky.cypress.Mocha_.Reporter
 import typingsSlinky.cypress.Mocha_.Runner
 import typingsSlinky.cypress.Mocha_.Suite_
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -102,7 +101,7 @@ class Mocha__ () extends js.Object {
     * @see https://mochajs.org/api/mocha#grep
     */
   def grep(re: String): this.type = js.native
-  def grep(re: RegExp): this.type = js.native
+  def grep(re: js.RegExp): this.type = js.native
   /**
     * Enable growl support.
     *

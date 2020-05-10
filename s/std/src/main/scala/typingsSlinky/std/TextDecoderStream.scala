@@ -7,13 +7,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TextDecoderStream
   extends GenericTransformStream
      with TextDecoderCommon {
   @JSName("readable")
-  val readable_TextDecoderStream: org.scalajs.dom.experimental.ReadableStream[java.lang.String]
+  val readable_TextDecoderStream: org.scalajs.dom.experimental.ReadableStream[java.lang.String] = js.native
   @JSName("writable")
-  val writable_TextDecoderStream: WritableStream[BufferSource]
+  val writable_TextDecoderStream: WritableStream[BufferSource] = js.native
 }
 
 @JSGlobal("TextDecoderStream")

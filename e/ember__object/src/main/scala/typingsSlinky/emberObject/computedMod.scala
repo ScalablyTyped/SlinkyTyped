@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@ember/object/computed", JSImport.Namespace)
 @js.native
 object computedMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.emberObject.typesMod.ComputedPropertyMarker because Inheritance from two classes. Inlined ______getType, ______setType */ @js.native
   trait ComputedProperty[Get, Set] extends PropertyDecorator {
     // Necessary in order to avoid losing type information

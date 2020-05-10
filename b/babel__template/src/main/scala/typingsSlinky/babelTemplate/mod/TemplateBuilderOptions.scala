@@ -1,70 +1,84 @@
 package typingsSlinky.babelTemplate.mod
 
-import typingsSlinky.babelParser.babelParserStrings.module
-import typingsSlinky.babelParser.babelParserStrings.script
-import typingsSlinky.babelParser.babelParserStrings.unambiguous
 import typingsSlinky.babelParser.mod.ParserOptions
-import typingsSlinky.babelParser.mod.ParserPlugin
 import typingsSlinky.babelTemplate.babelTemplateBooleans.`false`
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TemplateBuilderOptions extends ParserOptions {
   /**
     * A pattern to search for when looking for Identifier and StringLiteral nodes that should be considered placeholders. `false` will
     * disable placeholder searching entirely, leaving only the `placeholderWhitelist` value to find placeholders.
     */
-  var placeholderPattern: js.UndefOr[js.RegExp | `false`] = js.undefined
+  var placeholderPattern: js.UndefOr[js.RegExp | `false`] = js.native
   /**
     * A set of placeholder names to automatically accept. Items in this list do not need to match the given placeholder pattern.
     */
-  var placeholderWhitelist: js.UndefOr[Set[String]] = js.undefined
+  var placeholderWhitelist: js.UndefOr[Set[String]] = js.native
   /**
     * Set this to `true` to preserve any comments from the `code` parameter.
     */
-  var preserveComments: js.UndefOr[Boolean] = js.undefined
+  var preserveComments: js.UndefOr[Boolean] = js.native
 }
 
 object TemplateBuilderOptions {
   @scala.inline
-  def apply(
-    allowAwaitOutsideFunction: js.UndefOr[Boolean] = js.undefined,
-    allowImportExportEverywhere: js.UndefOr[Boolean] = js.undefined,
-    allowReturnOutsideFunction: js.UndefOr[Boolean] = js.undefined,
-    allowSuperOutsideMethod: js.UndefOr[Boolean] = js.undefined,
-    allowUndeclaredExports: js.UndefOr[Boolean] = js.undefined,
-    createParenthesizedExpressions: js.UndefOr[Boolean] = js.undefined,
-    placeholderPattern: js.RegExp | `false` = null,
-    placeholderWhitelist: Set[String] = null,
-    plugins: js.Array[ParserPlugin] = null,
-    preserveComments: js.UndefOr[Boolean] = js.undefined,
-    ranges: js.UndefOr[Boolean] = js.undefined,
-    sourceFilename: String = null,
-    sourceType: script | module | unambiguous = null,
-    startLine: Int | Double = null,
-    strictMode: js.UndefOr[Boolean] = js.undefined,
-    tokens: js.UndefOr[Boolean] = js.undefined
-  ): TemplateBuilderOptions = {
+  def apply(): TemplateBuilderOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowAwaitOutsideFunction)) __obj.updateDynamic("allowAwaitOutsideFunction")(allowAwaitOutsideFunction.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowImportExportEverywhere)) __obj.updateDynamic("allowImportExportEverywhere")(allowImportExportEverywhere.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowReturnOutsideFunction)) __obj.updateDynamic("allowReturnOutsideFunction")(allowReturnOutsideFunction.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowSuperOutsideMethod)) __obj.updateDynamic("allowSuperOutsideMethod")(allowSuperOutsideMethod.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowUndeclaredExports)) __obj.updateDynamic("allowUndeclaredExports")(allowUndeclaredExports.asInstanceOf[js.Any])
-    if (!js.isUndefined(createParenthesizedExpressions)) __obj.updateDynamic("createParenthesizedExpressions")(createParenthesizedExpressions.asInstanceOf[js.Any])
-    if (placeholderPattern != null) __obj.updateDynamic("placeholderPattern")(placeholderPattern.asInstanceOf[js.Any])
-    if (placeholderWhitelist != null) __obj.updateDynamic("placeholderWhitelist")(placeholderWhitelist.asInstanceOf[js.Any])
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
-    if (!js.isUndefined(preserveComments)) __obj.updateDynamic("preserveComments")(preserveComments.asInstanceOf[js.Any])
-    if (!js.isUndefined(ranges)) __obj.updateDynamic("ranges")(ranges.asInstanceOf[js.Any])
-    if (sourceFilename != null) __obj.updateDynamic("sourceFilename")(sourceFilename.asInstanceOf[js.Any])
-    if (sourceType != null) __obj.updateDynamic("sourceType")(sourceType.asInstanceOf[js.Any])
-    if (startLine != null) __obj.updateDynamic("startLine")(startLine.asInstanceOf[js.Any])
-    if (!js.isUndefined(strictMode)) __obj.updateDynamic("strictMode")(strictMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(tokens)) __obj.updateDynamic("tokens")(tokens.asInstanceOf[js.Any])
     __obj.asInstanceOf[TemplateBuilderOptions]
   }
+  @scala.inline
+  implicit class TemplateBuilderOptionsOps[Self <: TemplateBuilderOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPlaceholderPatternRegExp(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlaceholderPattern(value: js.RegExp | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholderPattern: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderPattern")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholderWhitelist(value: Set[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderWhitelist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholderWhitelist: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderWhitelist")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreserveComments(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveComments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreserveComments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveComments")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

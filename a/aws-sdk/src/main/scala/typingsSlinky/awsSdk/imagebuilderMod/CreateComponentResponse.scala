@@ -22,16 +22,53 @@ trait CreateComponentResponse extends js.Object {
 
 object CreateComponentResponse {
   @scala.inline
-  def apply(
-    clientToken: ClientToken = null,
-    componentBuildVersionArn: ComponentBuildVersionArn = null,
-    requestId: NonEmptyString = null
-  ): CreateComponentResponse = {
+  def apply(): CreateComponentResponse = {
     val __obj = js.Dynamic.literal()
-    if (clientToken != null) __obj.updateDynamic("clientToken")(clientToken.asInstanceOf[js.Any])
-    if (componentBuildVersionArn != null) __obj.updateDynamic("componentBuildVersionArn")(componentBuildVersionArn.asInstanceOf[js.Any])
-    if (requestId != null) __obj.updateDynamic("requestId")(requestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateComponentResponse]
   }
+  @scala.inline
+  implicit class CreateComponentResponseOps[Self <: CreateComponentResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientToken(value: ClientToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponentBuildVersionArn(value: ComponentBuildVersionArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentBuildVersionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponentBuildVersionArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentBuildVersionArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

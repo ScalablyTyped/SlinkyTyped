@@ -9,7 +9,6 @@ import typingsSlinky.browserfs.nodeFsStatsMod.FileType
 import typingsSlinky.browserfs.nodeFsStatsMod.Stats
 import typingsSlinky.browserfs.nodeFsStatsMod.default
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,22 +17,28 @@ import scala.scalajs.js.annotation._
 trait TypeofStats
   extends Instantiable2[/* itemType */ FileType, /* size */ Double, default]
      with Instantiable3[/* itemType */ FileType, /* size */ Double, /* mode */ Double, default]
-     with Instantiable4[/* itemType */ FileType, /* size */ Double, /* mode */ Double, /* atime */ Date, default]
+     with Instantiable4[
+      /* itemType */ FileType, 
+      /* size */ Double, 
+      /* mode */ Double, 
+      /* atime */ js.Date, 
+      default
+    ]
      with Instantiable5[
       /* itemType */ FileType, 
       /* size */ Double, 
       /* mode */ Double, 
-      /* atime */ Date, 
-      /* mtime */ Date, 
+      /* atime */ js.Date, 
+      /* mtime */ js.Date, 
       default
     ]
      with Instantiable6[
       /* itemType */ FileType, 
       /* size */ Double, 
       /* mode */ Double, 
-      /* atime */ Date, 
-      /* mtime */ Date, 
-      /* ctime */ Date, 
+      /* atime */ js.Date, 
+      /* mtime */ js.Date, 
+      /* ctime */ js.Date, 
       default
     ] {
   def fromBuffer(buffer: Buffer): Stats = js.native

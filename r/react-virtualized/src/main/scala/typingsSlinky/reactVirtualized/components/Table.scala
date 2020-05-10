@@ -1,11 +1,9 @@
 package typingsSlinky.reactVirtualized.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactVirtualized.AnonSortBy
 import typingsSlinky.reactVirtualized.esCellMeasurerMod.CellMeasurerCache
@@ -30,126 +28,142 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Table
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactVirtualized.mod.Table] {
+object Table {
   @JSImport("react-virtualized", "Table")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, style, tabIndex */
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactVirtualized.mod.Table] {
+    @scala.inline
+    def `aria-label`(value: String): this.type = set("aria-label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoContainerWidth(value: Boolean): this.type = set("autoContainerWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoHeight(value: Boolean): this.type = set("autoHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoWidth(value: Boolean): this.type = set("autoWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cellRangeRenderer(value: /* params */ GridCellRangeProps => js.Array[TagMod[Any]]): this.type = set("cellRangeRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerProps(value: js.Object): this.type = set("containerProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerRole(value: String): this.type = set("containerRole", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyle(value: CSSProperties): this.type = set("containerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deferredMeasurementCache(value: CellMeasurerCache): this.type = set("deferredMeasurementCache", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableHeader(value: Boolean): this.type = set("disableHeader", value.asInstanceOf[js.Any])
+    @scala.inline
+    def estimatedColumnSize(value: Double): this.type = set("estimatedColumnSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def estimatedRowSize(value: Double): this.type = set("estimatedRowSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getScrollbarSize(value: () => Double): this.type = set("getScrollbarSize", js.Any.fromFunction0(value))
+    @scala.inline
+    def gridClassName(value: String): this.type = set("gridClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridStyle(value: js.Any): this.type = set("gridStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerClassName(value: String): this.type = set("headerClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerRowRenderer(value: /* props */ TableHeaderRowProps => TagMod[Any]): this.type = set("headerRowRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def headerStyle(value: js.Any): this.type = set("headerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isScrolling(value: Boolean): this.type = set("isScrolling", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noContentRenderer(value: () => TagMod[Any]): this.type = set("noContentRenderer", js.Any.fromFunction0(value))
+    @scala.inline
+    def noRowsRenderer(value: () => ReactElement | Null): this.type = set("noRowsRenderer", js.Any.fromFunction0(value))
+    @scala.inline
+    def onHeaderClick(value: /* params */ HeaderMouseEventHandlerParams => Unit): this.type = set("onHeaderClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRowClick(value: /* info */ RowMouseEventHandlerParams => Unit): this.type = set("onRowClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRowDoubleClick(value: /* info */ RowMouseEventHandlerParams => Unit): this.type = set("onRowDoubleClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRowMouseOut(value: /* info */ RowMouseEventHandlerParams => Unit): this.type = set("onRowMouseOut", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRowMouseOver(value: /* info */ RowMouseEventHandlerParams => Unit): this.type = set("onRowMouseOver", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRowsRendered(value: /* info */ IndexRange with OverscanIndexRange => Unit): this.type = set("onRowsRendered", js.Any.fromFunction1(value))
+    @scala.inline
+    def onScroll(value: (/* info */ ScrollEventData) | (/* params */ ScrollParams) => _ | Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
+    @scala.inline
+    def onScrollbarPresenceChange(value: /* params */ ScrollbarPresenceParams => _): this.type = set("onScrollbarPresenceChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSectionRendered(value: /* params */ SectionRenderedParams => _): this.type = set("onSectionRendered", js.Any.fromFunction1(value))
+    @scala.inline
+    def overscanColumnCount(value: Double): this.type = set("overscanColumnCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overscanIndicesGetter(value: /* params */ OverscanIndicesGetterParams => OverscanIndices): this.type = set("overscanIndicesGetter", js.Any.fromFunction1(value))
+    @scala.inline
+    def overscanRowCount(value: Double): this.type = set("overscanRowCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowClassNameFunction1(value: /* info */ Index => String): this.type = set("rowClassName", js.Any.fromFunction1(value))
+    @scala.inline
+    def rowClassName(value: String | (js.Function1[/* info */ Index, String])): this.type = set("rowClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowGetter(value: /* info */ Index => _): this.type = set("rowGetter", js.Any.fromFunction1(value))
+    @scala.inline
+    def rowRenderer(value: /* props */ TableRowProps => TagMod[Any]): this.type = set("rowRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def rowStyleFunction1(value: /* info */ Index => CSSProperties): this.type = set("rowStyle", js.Any.fromFunction1(value))
+    @scala.inline
+    def rowStyle(value: CSSProperties | (js.Function1[/* info */ Index, CSSProperties])): this.type = set("rowStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollLeft(value: Double): this.type = set("scrollLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollToAlignment(value: Alignment with String): this.type = set("scrollToAlignment", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollToColumn(value: Double): this.type = set("scrollToColumn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollToIndex(value: Double): this.type = set("scrollToIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollToRow(value: Double): this.type = set("scrollToRow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollTop(value: Double): this.type = set("scrollTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollingResetTimeInterval(value: Double): this.type = set("scrollingResetTimeInterval", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sort(value: /* info */ AnonSortBy => Unit): this.type = set("sort", js.Any.fromFunction1(value))
+    @scala.inline
+    def sortBy(value: String): this.type = set("sortBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sortDirection(value: SortDirectionType): this.type = set("sortDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabIndexNull: this.type = set("tabIndex", null)
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: TableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     headerHeight: Double,
     rowCount: Double,
-    rowHeight: Double | (js.Function1[/* params */ Index, Double]),
-    `aria-label`: String = null,
-    `aria-readonly`: js.UndefOr[Boolean] = js.undefined,
-    autoContainerWidth: js.UndefOr[Boolean] = js.undefined,
-    autoHeight: js.UndefOr[Boolean] = js.undefined,
-    autoWidth: js.UndefOr[Boolean] = js.undefined,
-    cellRangeRenderer: /* params */ GridCellRangeProps => js.Array[TagMod[Any]] = null,
-    containerProps: js.Object = null,
-    containerRole: String = null,
-    containerStyle: CSSProperties = null,
-    deferredMeasurementCache: CellMeasurerCache = null,
-    disableHeader: js.UndefOr[Boolean] = js.undefined,
-    estimatedColumnSize: Int | Double = null,
-    estimatedRowSize: Int | Double = null,
-    getScrollbarSize: () => Double = null,
-    gridClassName: String = null,
-    gridStyle: js.Any = null,
-    headerClassName: String = null,
-    headerRowRenderer: /* props */ TableHeaderRowProps => TagMod[Any] = null,
-    headerStyle: js.Any = null,
-    height: Int | Double = null,
-    isScrolling: js.UndefOr[Boolean] = js.undefined,
-    noContentRenderer: () => TagMod[Any] = null,
-    noRowsRenderer: () => ReactElement | Null = null,
-    onHeaderClick: /* params */ HeaderMouseEventHandlerParams => Unit = null,
-    onRowClick: /* info */ RowMouseEventHandlerParams => Unit = null,
-    onRowDoubleClick: /* info */ RowMouseEventHandlerParams => Unit = null,
-    onRowMouseOut: /* info */ RowMouseEventHandlerParams => Unit = null,
-    onRowMouseOver: /* info */ RowMouseEventHandlerParams => Unit = null,
-    onRowsRendered: /* info */ IndexRange with OverscanIndexRange => Unit = null,
-    onScroll: (/* info */ ScrollEventData) | (/* params */ ScrollParams) => _ | Unit = null,
-    onScrollbarPresenceChange: /* params */ ScrollbarPresenceParams => _ = null,
-    onSectionRendered: /* params */ SectionRenderedParams => _ = null,
-    overscanColumnCount: Int | Double = null,
-    overscanIndicesGetter: /* params */ OverscanIndicesGetterParams => OverscanIndices = null,
-    overscanRowCount: Int | Double = null,
-    role: String = null,
-    rowClassName: String | (js.Function1[/* info */ Index, String]) = null,
-    rowGetter: /* info */ Index => _ = null,
-    rowRenderer: /* props */ TableRowProps => TagMod[Any] = null,
-    rowStyle: CSSProperties | (js.Function1[/* info */ Index, CSSProperties]) = null,
-    scrollLeft: Int | Double = null,
-    scrollToAlignment: Alignment with String = null,
-    scrollToColumn: Int | Double = null,
-    scrollToIndex: Int | Double = null,
-    scrollToRow: Int | Double = null,
-    scrollTop: Int | Double = null,
-    scrollingResetTimeInterval: Int | Double = null,
-    sort: /* info */ AnonSortBy => Unit = null,
-    sortBy: String = null,
-    sortDirection: SortDirectionType = null,
-    width: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactVirtualized.mod.Table] = {
-    val __obj = js.Dynamic.literal(headerHeight = headerHeight.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any])
-    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-readonly`)) __obj.updateDynamic("aria-readonly")(`aria-readonly`.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoContainerWidth)) __obj.updateDynamic("autoContainerWidth")(autoContainerWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoHeight)) __obj.updateDynamic("autoHeight")(autoHeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoWidth)) __obj.updateDynamic("autoWidth")(autoWidth.asInstanceOf[js.Any])
-    if (cellRangeRenderer != null) __obj.updateDynamic("cellRangeRenderer")(js.Any.fromFunction1(cellRangeRenderer))
-    if (containerProps != null) __obj.updateDynamic("containerProps")(containerProps.asInstanceOf[js.Any])
-    if (containerRole != null) __obj.updateDynamic("containerRole")(containerRole.asInstanceOf[js.Any])
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (deferredMeasurementCache != null) __obj.updateDynamic("deferredMeasurementCache")(deferredMeasurementCache.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableHeader)) __obj.updateDynamic("disableHeader")(disableHeader.asInstanceOf[js.Any])
-    if (estimatedColumnSize != null) __obj.updateDynamic("estimatedColumnSize")(estimatedColumnSize.asInstanceOf[js.Any])
-    if (estimatedRowSize != null) __obj.updateDynamic("estimatedRowSize")(estimatedRowSize.asInstanceOf[js.Any])
-    if (getScrollbarSize != null) __obj.updateDynamic("getScrollbarSize")(js.Any.fromFunction0(getScrollbarSize))
-    if (gridClassName != null) __obj.updateDynamic("gridClassName")(gridClassName.asInstanceOf[js.Any])
-    if (gridStyle != null) __obj.updateDynamic("gridStyle")(gridStyle.asInstanceOf[js.Any])
-    if (headerClassName != null) __obj.updateDynamic("headerClassName")(headerClassName.asInstanceOf[js.Any])
-    if (headerRowRenderer != null) __obj.updateDynamic("headerRowRenderer")(js.Any.fromFunction1(headerRowRenderer))
-    if (headerStyle != null) __obj.updateDynamic("headerStyle")(headerStyle.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(isScrolling)) __obj.updateDynamic("isScrolling")(isScrolling.asInstanceOf[js.Any])
-    if (noContentRenderer != null) __obj.updateDynamic("noContentRenderer")(js.Any.fromFunction0(noContentRenderer))
-    if (noRowsRenderer != null) __obj.updateDynamic("noRowsRenderer")(js.Any.fromFunction0(noRowsRenderer))
-    if (onHeaderClick != null) __obj.updateDynamic("onHeaderClick")(js.Any.fromFunction1(onHeaderClick))
-    if (onRowClick != null) __obj.updateDynamic("onRowClick")(js.Any.fromFunction1(onRowClick))
-    if (onRowDoubleClick != null) __obj.updateDynamic("onRowDoubleClick")(js.Any.fromFunction1(onRowDoubleClick))
-    if (onRowMouseOut != null) __obj.updateDynamic("onRowMouseOut")(js.Any.fromFunction1(onRowMouseOut))
-    if (onRowMouseOver != null) __obj.updateDynamic("onRowMouseOver")(js.Any.fromFunction1(onRowMouseOver))
-    if (onRowsRendered != null) __obj.updateDynamic("onRowsRendered")(js.Any.fromFunction1(onRowsRendered))
-    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
-    if (onScrollbarPresenceChange != null) __obj.updateDynamic("onScrollbarPresenceChange")(js.Any.fromFunction1(onScrollbarPresenceChange))
-    if (onSectionRendered != null) __obj.updateDynamic("onSectionRendered")(js.Any.fromFunction1(onSectionRendered))
-    if (overscanColumnCount != null) __obj.updateDynamic("overscanColumnCount")(overscanColumnCount.asInstanceOf[js.Any])
-    if (overscanIndicesGetter != null) __obj.updateDynamic("overscanIndicesGetter")(js.Any.fromFunction1(overscanIndicesGetter))
-    if (overscanRowCount != null) __obj.updateDynamic("overscanRowCount")(overscanRowCount.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (rowClassName != null) __obj.updateDynamic("rowClassName")(rowClassName.asInstanceOf[js.Any])
-    if (rowGetter != null) __obj.updateDynamic("rowGetter")(js.Any.fromFunction1(rowGetter))
-    if (rowRenderer != null) __obj.updateDynamic("rowRenderer")(js.Any.fromFunction1(rowRenderer))
-    if (rowStyle != null) __obj.updateDynamic("rowStyle")(rowStyle.asInstanceOf[js.Any])
-    if (scrollLeft != null) __obj.updateDynamic("scrollLeft")(scrollLeft.asInstanceOf[js.Any])
-    if (scrollToAlignment != null) __obj.updateDynamic("scrollToAlignment")(scrollToAlignment.asInstanceOf[js.Any])
-    if (scrollToColumn != null) __obj.updateDynamic("scrollToColumn")(scrollToColumn.asInstanceOf[js.Any])
-    if (scrollToIndex != null) __obj.updateDynamic("scrollToIndex")(scrollToIndex.asInstanceOf[js.Any])
-    if (scrollToRow != null) __obj.updateDynamic("scrollToRow")(scrollToRow.asInstanceOf[js.Any])
-    if (scrollTop != null) __obj.updateDynamic("scrollTop")(scrollTop.asInstanceOf[js.Any])
-    if (scrollingResetTimeInterval != null) __obj.updateDynamic("scrollingResetTimeInterval")(scrollingResetTimeInterval.asInstanceOf[js.Any])
-    if (sort != null) __obj.updateDynamic("sort")(js.Any.fromFunction1(sort))
-    if (sortBy != null) __obj.updateDynamic("sortBy")(sortBy.asInstanceOf[js.Any])
-    if (sortDirection != null) __obj.updateDynamic("sortDirection")(sortDirection.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    rowHeight: Double | (js.Function1[/* params */ Index, Double])
+  ): Builder = {
+    val __props = js.Dynamic.literal(headerHeight = headerHeight.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TableProps]))
   }
-  type Props = TableProps
 }
 

@@ -22,30 +22,137 @@ trait PartialStyleRulesTablePag extends js.Object {
 
 object PartialStyleRulesTablePag {
   @scala.inline
-  def apply(
-    actions: CSSProperties = null,
-    caption: CSSProperties = null,
-    input: CSSProperties = null,
-    menuItem: CSSProperties = null,
-    root: CSSProperties = null,
-    select: CSSProperties = null,
-    selectIcon: CSSProperties = null,
-    selectRoot: CSSProperties = null,
-    spacer: CSSProperties = null,
-    toolbar: CSSProperties = null
-  ): PartialStyleRulesTablePag = {
+  def apply(): PartialStyleRulesTablePag = {
     val __obj = js.Dynamic.literal()
-    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
-    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
-    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
-    if (menuItem != null) __obj.updateDynamic("menuItem")(menuItem.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
-    if (select != null) __obj.updateDynamic("select")(select.asInstanceOf[js.Any])
-    if (selectIcon != null) __obj.updateDynamic("selectIcon")(selectIcon.asInstanceOf[js.Any])
-    if (selectRoot != null) __obj.updateDynamic("selectRoot")(selectRoot.asInstanceOf[js.Any])
-    if (spacer != null) __obj.updateDynamic("spacer")(spacer.asInstanceOf[js.Any])
-    if (toolbar != null) __obj.updateDynamic("toolbar")(toolbar.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialStyleRulesTablePag]
   }
+  @scala.inline
+  implicit class PartialStyleRulesTablePagOps[Self <: PartialStyleRulesTablePag] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActions(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaption(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInput(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenuItem(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenuItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelect(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectIcon(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectRoot(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectRoot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectRoot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpacer(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpacer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

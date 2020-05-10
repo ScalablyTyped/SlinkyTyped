@@ -1,20 +1,22 @@
 package typingsSlinky.grommet.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.grommet.buttonMod.ButtonProps
 import typingsSlinky.grommet.grommetStrings._blank
 import typingsSlinky.grommet.grommetStrings._parent
 import typingsSlinky.grommet.grommetStrings._self
 import typingsSlinky.grommet.grommetStrings._top
 import typingsSlinky.grommet.grommetStrings.button
+import typingsSlinky.grommet.grommetStrings.large
+import typingsSlinky.grommet.grommetStrings.medium
 import typingsSlinky.grommet.grommetStrings.push
 import typingsSlinky.grommet.grommetStrings.replace
 import typingsSlinky.grommet.grommetStrings.reset
+import typingsSlinky.grommet.grommetStrings.small
 import typingsSlinky.grommet.grommetStrings.submit
 import typingsSlinky.grommet.routedButtonMod.RoutedButtonProps
 import typingsSlinky.grommet.utilsMod.A11yTitleType
@@ -30,59 +32,72 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RoutedButton
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.grommet.mod.RoutedButton] {
+object RoutedButton {
   @JSImport("grommet", "RoutedButton")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    path: String,
-    a11yTitle: A11yTitleType = null,
-    active: js.UndefOr[Boolean] = js.undefined,
-    alignSelf: AlignSelfType = null,
-    as: PolymorphicType = null,
-    color: ColorType = null,
-    fill: FillType = null,
-    focusIndicator: js.UndefOr[Boolean] = js.undefined,
-    gap: GapType = null,
-    gridArea: GridAreaType = null,
-    hoverIndicator: BackgroundType | Boolean = null,
-    icon: ReactElement = null,
-    label: TagMod[Any] = null,
-    margin: MarginType = null,
-    method: push | replace = null,
-    plain: js.UndefOr[Boolean] = js.undefined,
-    primary: js.UndefOr[Boolean] = js.undefined,
-    reverse: js.UndefOr[Boolean] = js.undefined,
-    target: _self | _blank | _parent | _top = null,
-    `type`: button | reset | submit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.grommet.mod.RoutedButton] = {
-    val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
-    if (a11yTitle != null) __obj.updateDynamic("a11yTitle")(a11yTitle.asInstanceOf[js.Any])
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (alignSelf != null) __obj.updateDynamic("alignSelf")(alignSelf.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (!js.isUndefined(focusIndicator)) __obj.updateDynamic("focusIndicator")(focusIndicator.asInstanceOf[js.Any])
-    if (gap != null) __obj.updateDynamic("gap")(gap.asInstanceOf[js.Any])
-    if (gridArea != null) __obj.updateDynamic("gridArea")(gridArea.asInstanceOf[js.Any])
-    if (hoverIndicator != null) __obj.updateDynamic("hoverIndicator")(hoverIndicator.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (!js.isUndefined(plain)) __obj.updateDynamic("plain")(plain.asInstanceOf[js.Any])
-    if (!js.isUndefined(primary)) __obj.updateDynamic("primary")(primary.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.grommet.mod.RoutedButton] {
+    @scala.inline
+    def a11yTitle(value: A11yTitleType): this.type = set("a11yTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def alignSelf(value: AlignSelfType): this.type = set("alignSelf", value.asInstanceOf[js.Any])
+    @scala.inline
+    def asFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def asComponentClass(value: ReactComponentClass[js.Any]): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def as(value: PolymorphicType): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: ColorType): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fill(value: FillType): this.type = set("fill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusIndicator(value: Boolean): this.type = set("focusIndicator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gap(value: GapType): this.type = set("gap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridArea(value: GridAreaType): this.type = set("gridArea", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hoverIndicator(value: BackgroundType | Boolean): this.type = set("hoverIndicator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: MarginType): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def method(value: push | replace): this.type = set("method", value.asInstanceOf[js.Any])
+    @scala.inline
+    def plain(value: Boolean): this.type = set("plain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def primary(value: Boolean): this.type = set("primary", value.asInstanceOf[js.Any])
+    @scala.inline
+    def reverse(value: Boolean): this.type = set("reverse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: small | medium | large): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def target(value: _self | _blank | _parent | _top): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: button | reset | submit): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  type Props = RoutedButtonProps with ButtonProps
+  
+  def withProps(p: RoutedButtonProps with ButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(path: String): Builder = {
+    val __props = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[RoutedButtonProps with ButtonProps]))
+  }
 }
 

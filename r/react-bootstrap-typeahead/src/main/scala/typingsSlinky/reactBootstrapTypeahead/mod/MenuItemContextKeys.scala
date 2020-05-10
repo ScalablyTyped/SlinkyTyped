@@ -15,16 +15,14 @@ trait MenuItemContextKeys extends js.Object
 
 object MenuItemContextKeys {
   @scala.inline
-  def activeIndex: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.activeIndex = this.cast("activeIndex")
+  def activeIndex: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.activeIndex = "activeIndex".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.activeIndex]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def isOnlyResult: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.isOnlyResult = "isOnlyResult".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.isOnlyResult]
   @scala.inline
-  def isOnlyResult: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.isOnlyResult = this.cast("isOnlyResult")
+  def onActiveItemChange: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onActiveItemChange = "onActiveItemChange".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onActiveItemChange]
   @scala.inline
-  def onActiveItemChange: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onActiveItemChange = this.cast("onActiveItemChange")
+  def onInitialItemChange: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onInitialItemChange = "onInitialItemChange".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onInitialItemChange]
   @scala.inline
-  def onInitialItemChange: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onInitialItemChange = this.cast("onInitialItemChange")
-  @scala.inline
-  def onMenuItemClick: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onMenuItemClick = this.cast("onMenuItemClick")
+  def onMenuItemClick: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onMenuItemClick = "onMenuItemClick".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onMenuItemClick]
 }
 

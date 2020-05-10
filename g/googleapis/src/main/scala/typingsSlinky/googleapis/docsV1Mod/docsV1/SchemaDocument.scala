@@ -91,42 +91,209 @@ trait SchemaDocument extends js.Object {
 
 object SchemaDocument {
   @scala.inline
-  def apply(
-    body: SchemaBody = null,
-    documentId: String = null,
-    documentStyle: SchemaDocumentStyle = null,
-    footers: StringDictionary[SchemaFooter] = null,
-    footnotes: StringDictionary[SchemaFootnote] = null,
-    headers: StringDictionary[SchemaHeader] = null,
-    inlineObjects: StringDictionary[SchemaInlineObject] = null,
-    lists: StringDictionary[SchemaList] = null,
-    namedRanges: StringDictionary[SchemaNamedRanges] = null,
-    namedStyles: SchemaNamedStyles = null,
-    positionedObjects: StringDictionary[SchemaPositionedObject] = null,
-    revisionId: String = null,
-    suggestedDocumentStyleChanges: StringDictionary[SchemaSuggestedDocumentStyle] = null,
-    suggestedNamedStylesChanges: StringDictionary[SchemaSuggestedNamedStyles] = null,
-    suggestionsViewMode: String = null,
-    title: String = null
-  ): SchemaDocument = {
+  def apply(): SchemaDocument = {
     val __obj = js.Dynamic.literal()
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (documentId != null) __obj.updateDynamic("documentId")(documentId.asInstanceOf[js.Any])
-    if (documentStyle != null) __obj.updateDynamic("documentStyle")(documentStyle.asInstanceOf[js.Any])
-    if (footers != null) __obj.updateDynamic("footers")(footers.asInstanceOf[js.Any])
-    if (footnotes != null) __obj.updateDynamic("footnotes")(footnotes.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (inlineObjects != null) __obj.updateDynamic("inlineObjects")(inlineObjects.asInstanceOf[js.Any])
-    if (lists != null) __obj.updateDynamic("lists")(lists.asInstanceOf[js.Any])
-    if (namedRanges != null) __obj.updateDynamic("namedRanges")(namedRanges.asInstanceOf[js.Any])
-    if (namedStyles != null) __obj.updateDynamic("namedStyles")(namedStyles.asInstanceOf[js.Any])
-    if (positionedObjects != null) __obj.updateDynamic("positionedObjects")(positionedObjects.asInstanceOf[js.Any])
-    if (revisionId != null) __obj.updateDynamic("revisionId")(revisionId.asInstanceOf[js.Any])
-    if (suggestedDocumentStyleChanges != null) __obj.updateDynamic("suggestedDocumentStyleChanges")(suggestedDocumentStyleChanges.asInstanceOf[js.Any])
-    if (suggestedNamedStylesChanges != null) __obj.updateDynamic("suggestedNamedStylesChanges")(suggestedNamedStylesChanges.asInstanceOf[js.Any])
-    if (suggestionsViewMode != null) __obj.updateDynamic("suggestionsViewMode")(suggestionsViewMode.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDocument]
   }
+  @scala.inline
+  implicit class SchemaDocumentOps[Self <: SchemaDocument] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBody(value: SchemaBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentStyle(value: SchemaDocumentStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFooters(value: StringDictionary[SchemaFooter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFooters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFootnotes(value: StringDictionary[SchemaFootnote]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footnotes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFootnotes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footnotes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: StringDictionary[SchemaHeader]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlineObjects(value: StringDictionary[SchemaInlineObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineObjects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlineObjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineObjects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLists(value: StringDictionary[SchemaList]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lists")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLists: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lists")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamedRanges(value: StringDictionary[SchemaNamedRanges]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedRanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamedRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedRanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamedStyles(value: SchemaNamedStyles): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamedStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositionedObjects(value: StringDictionary[SchemaPositionedObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionedObjects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPositionedObjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionedObjects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedDocumentStyleChanges(value: StringDictionary[SchemaSuggestedDocumentStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedDocumentStyleChanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedDocumentStyleChanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedDocumentStyleChanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedNamedStylesChanges(value: StringDictionary[SchemaSuggestedNamedStyles]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedNamedStylesChanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedNamedStylesChanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedNamedStylesChanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestionsViewMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestionsViewMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestionsViewMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestionsViewMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

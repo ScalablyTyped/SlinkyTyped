@@ -29,13 +29,13 @@ trait Uint8Array extends /* index */ NumberDictionary[Double] {
     * The offset in bytes of the array.
     */
   val byteOffset: Double = js.native
-  @JSName(scala.scalajs.js.Symbol.iterator)
+  @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[Double]] = js.native
   /**
     * The length of the array.
     */
   val length: Double = js.native
-  @JSName(scala.scalajs.js.Symbol.toStringTag)
+  @JSName(js.Symbol.toStringTag)
   val toStringTag: UInt8Array = js.native
   /**
     * Returns the this object after copying a section of the array identified by start and end
@@ -83,11 +83,11 @@ trait Uint8Array extends /* index */ NumberDictionary[Double] {
     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
     * If thisArg is omitted, undefined is used as the this value.
     */
-  def filter(callbackfn: js.Function3[/* value */ Double, /* index */ Double, /* array */ this.type, _]): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def filter(callbackfn: js.Function3[/* value */ Double, /* index */ Double, /* array */ this.type, _]): js.typedarray.Uint8Array = js.native
   def filter(
     callbackfn: js.Function3[/* value */ Double, /* index */ Double, /* array */ this.type, _],
     thisArg: js.Any
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   /**
     * Returns the value of the first element in the array where predicate is true, and undefined
     * otherwise.
@@ -174,11 +174,11 @@ trait Uint8Array extends /* index */ NumberDictionary[Double] {
     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
     * If thisArg is omitted, undefined is used as the this value.
     */
-  def map(callbackfn: js.Function3[/* value */ Double, /* index */ Double, /* array */ this.type, Double]): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def map(callbackfn: js.Function3[/* value */ Double, /* index */ Double, /* array */ this.type, Double]): js.typedarray.Uint8Array = js.native
   def map(
     callbackfn: js.Function3[/* value */ Double, /* index */ Double, /* array */ this.type, Double],
     thisArg: js.Any
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   /**
     * Calls the specified callback function for all the elements in an array. The return value of
     * the callback function is the accumulated result, and is provided as an argument in the next
@@ -280,7 +280,7 @@ trait Uint8Array extends /* index */ NumberDictionary[Double] {
   /**
     * Reverses the elements in an Array.
     */
-  def reverse(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def reverse(): js.typedarray.Uint8Array = js.native
   /**
     * Sets a value or an array of values.
     * @param array A typed or untyped array of values to set.
@@ -293,9 +293,9 @@ trait Uint8Array extends /* index */ NumberDictionary[Double] {
     * @param start The beginning of the specified portion of the array.
     * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
     */
-  def slice(): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def slice(start: Double): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def slice(start: Double, end: Double): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def slice(): js.typedarray.Uint8Array = js.native
+  def slice(start: Double): js.typedarray.Uint8Array = js.native
+  def slice(start: Double, end: Double): js.typedarray.Uint8Array = js.native
   /**
     * Determines whether the specified callback function returns true for any element of an array.
     * @param callbackfn A function that accepts up to three arguments. The some method calls
@@ -326,9 +326,9 @@ trait Uint8Array extends /* index */ NumberDictionary[Double] {
     * @param begin The index of the beginning of the array.
     * @param end The index of the end of the array.
     */
-  def subarray(): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def subarray(begin: Double): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def subarray(begin: Double, end: Double): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def subarray(): js.typedarray.Uint8Array = js.native
+  def subarray(begin: Double): js.typedarray.Uint8Array = js.native
+  def subarray(begin: Double, end: Double): js.typedarray.Uint8Array = js.native
   /**
     * Returns an list of values in the array
     */

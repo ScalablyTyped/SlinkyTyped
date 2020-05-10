@@ -24,8 +24,33 @@ object SigV4Authorization {
   @scala.inline
   def apply(roleArn: AwsArn, serviceName: ServiceName, signingRegion: SigningRegion): SigV4Authorization = {
     val __obj = js.Dynamic.literal(roleArn = roleArn.asInstanceOf[js.Any], serviceName = serviceName.asInstanceOf[js.Any], signingRegion = signingRegion.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SigV4Authorization]
   }
+  @scala.inline
+  implicit class SigV4AuthorizationOps[Self <: SigV4Authorization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRoleArn(value: AwsArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServiceName(value: ServiceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSigningRegion(value: SigningRegion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signingRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

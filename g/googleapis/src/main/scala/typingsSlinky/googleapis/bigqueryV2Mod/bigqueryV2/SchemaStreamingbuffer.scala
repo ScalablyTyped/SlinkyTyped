@@ -26,12 +26,53 @@ trait SchemaStreamingbuffer extends js.Object {
 
 object SchemaStreamingbuffer {
   @scala.inline
-  def apply(estimatedBytes: String = null, estimatedRows: String = null, oldestEntryTime: String = null): SchemaStreamingbuffer = {
+  def apply(): SchemaStreamingbuffer = {
     val __obj = js.Dynamic.literal()
-    if (estimatedBytes != null) __obj.updateDynamic("estimatedBytes")(estimatedBytes.asInstanceOf[js.Any])
-    if (estimatedRows != null) __obj.updateDynamic("estimatedRows")(estimatedRows.asInstanceOf[js.Any])
-    if (oldestEntryTime != null) __obj.updateDynamic("oldestEntryTime")(oldestEntryTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStreamingbuffer]
   }
+  @scala.inline
+  implicit class SchemaStreamingbufferOps[Self <: SchemaStreamingbuffer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEstimatedBytes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedRows(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOldestEntryTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldestEntryTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOldestEntryTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldestEntryTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

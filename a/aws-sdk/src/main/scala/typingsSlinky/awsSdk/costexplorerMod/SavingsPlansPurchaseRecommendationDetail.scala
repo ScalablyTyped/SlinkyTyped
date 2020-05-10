@@ -74,42 +74,209 @@ trait SavingsPlansPurchaseRecommendationDetail extends js.Object {
 
 object SavingsPlansPurchaseRecommendationDetail {
   @scala.inline
-  def apply(
-    AccountId: GenericString = null,
-    CurrencyCode: GenericString = null,
-    CurrentAverageHourlyOnDemandSpend: GenericString = null,
-    CurrentMaximumHourlyOnDemandSpend: GenericString = null,
-    CurrentMinimumHourlyOnDemandSpend: GenericString = null,
-    EstimatedAverageUtilization: GenericString = null,
-    EstimatedMonthlySavingsAmount: GenericString = null,
-    EstimatedOnDemandCost: GenericString = null,
-    EstimatedOnDemandCostWithCurrentCommitment: GenericString = null,
-    EstimatedROI: GenericString = null,
-    EstimatedSPCost: GenericString = null,
-    EstimatedSavingsAmount: GenericString = null,
-    EstimatedSavingsPercentage: GenericString = null,
-    HourlyCommitmentToPurchase: GenericString = null,
-    SavingsPlansDetails: SavingsPlansDetails = null,
-    UpfrontCost: GenericString = null
-  ): SavingsPlansPurchaseRecommendationDetail = {
+  def apply(): SavingsPlansPurchaseRecommendationDetail = {
     val __obj = js.Dynamic.literal()
-    if (AccountId != null) __obj.updateDynamic("AccountId")(AccountId.asInstanceOf[js.Any])
-    if (CurrencyCode != null) __obj.updateDynamic("CurrencyCode")(CurrencyCode.asInstanceOf[js.Any])
-    if (CurrentAverageHourlyOnDemandSpend != null) __obj.updateDynamic("CurrentAverageHourlyOnDemandSpend")(CurrentAverageHourlyOnDemandSpend.asInstanceOf[js.Any])
-    if (CurrentMaximumHourlyOnDemandSpend != null) __obj.updateDynamic("CurrentMaximumHourlyOnDemandSpend")(CurrentMaximumHourlyOnDemandSpend.asInstanceOf[js.Any])
-    if (CurrentMinimumHourlyOnDemandSpend != null) __obj.updateDynamic("CurrentMinimumHourlyOnDemandSpend")(CurrentMinimumHourlyOnDemandSpend.asInstanceOf[js.Any])
-    if (EstimatedAverageUtilization != null) __obj.updateDynamic("EstimatedAverageUtilization")(EstimatedAverageUtilization.asInstanceOf[js.Any])
-    if (EstimatedMonthlySavingsAmount != null) __obj.updateDynamic("EstimatedMonthlySavingsAmount")(EstimatedMonthlySavingsAmount.asInstanceOf[js.Any])
-    if (EstimatedOnDemandCost != null) __obj.updateDynamic("EstimatedOnDemandCost")(EstimatedOnDemandCost.asInstanceOf[js.Any])
-    if (EstimatedOnDemandCostWithCurrentCommitment != null) __obj.updateDynamic("EstimatedOnDemandCostWithCurrentCommitment")(EstimatedOnDemandCostWithCurrentCommitment.asInstanceOf[js.Any])
-    if (EstimatedROI != null) __obj.updateDynamic("EstimatedROI")(EstimatedROI.asInstanceOf[js.Any])
-    if (EstimatedSPCost != null) __obj.updateDynamic("EstimatedSPCost")(EstimatedSPCost.asInstanceOf[js.Any])
-    if (EstimatedSavingsAmount != null) __obj.updateDynamic("EstimatedSavingsAmount")(EstimatedSavingsAmount.asInstanceOf[js.Any])
-    if (EstimatedSavingsPercentage != null) __obj.updateDynamic("EstimatedSavingsPercentage")(EstimatedSavingsPercentage.asInstanceOf[js.Any])
-    if (HourlyCommitmentToPurchase != null) __obj.updateDynamic("HourlyCommitmentToPurchase")(HourlyCommitmentToPurchase.asInstanceOf[js.Any])
-    if (SavingsPlansDetails != null) __obj.updateDynamic("SavingsPlansDetails")(SavingsPlansDetails.asInstanceOf[js.Any])
-    if (UpfrontCost != null) __obj.updateDynamic("UpfrontCost")(UpfrontCost.asInstanceOf[js.Any])
     __obj.asInstanceOf[SavingsPlansPurchaseRecommendationDetail]
   }
+  @scala.inline
+  implicit class SavingsPlansPurchaseRecommendationDetailOps[Self <: SavingsPlansPurchaseRecommendationDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrencyCode(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrencyCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentAverageHourlyOnDemandSpend(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentAverageHourlyOnDemandSpend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentAverageHourlyOnDemandSpend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentAverageHourlyOnDemandSpend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentMaximumHourlyOnDemandSpend(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentMaximumHourlyOnDemandSpend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentMaximumHourlyOnDemandSpend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentMaximumHourlyOnDemandSpend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentMinimumHourlyOnDemandSpend(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentMinimumHourlyOnDemandSpend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentMinimumHourlyOnDemandSpend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentMinimumHourlyOnDemandSpend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedAverageUtilization(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedAverageUtilization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedAverageUtilization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedAverageUtilization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedMonthlySavingsAmount(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedMonthlySavingsAmount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedMonthlySavingsAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedMonthlySavingsAmount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedOnDemandCost(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedOnDemandCost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedOnDemandCost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedOnDemandCost")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedOnDemandCostWithCurrentCommitment(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedOnDemandCostWithCurrentCommitment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedOnDemandCostWithCurrentCommitment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedOnDemandCostWithCurrentCommitment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedROI(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedROI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedROI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedROI")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedSPCost(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedSPCost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedSPCost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedSPCost")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedSavingsAmount(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedSavingsAmount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedSavingsAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedSavingsAmount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedSavingsPercentage(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedSavingsPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedSavingsPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedSavingsPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHourlyCommitmentToPurchase(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HourlyCommitmentToPurchase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHourlyCommitmentToPurchase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HourlyCommitmentToPurchase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSavingsPlansDetails(value: SavingsPlansDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SavingsPlansDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSavingsPlansDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SavingsPlansDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpfrontCost(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpfrontCost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpfrontCost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpfrontCost")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

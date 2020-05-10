@@ -4,31 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DraggableCallbackArgument extends DraggableStyle {
-  var dx: Double
-  var dy: Double
+  var dx: Double = js.native
+  var dy: Double = js.native
 }
 
 object DraggableCallbackArgument {
   @scala.inline
-  def apply(
-    dx: Double,
-    dy: Double,
-    bottom: Int | Double = null,
-    left: Int | Double = null,
-    right: Int | Double = null,
-    top: Int | Double = null,
-    translateX: Int | Double = null,
-    translateY: Int | Double = null
-  ): DraggableCallbackArgument = {
+  def apply(dx: Double, dy: Double): DraggableCallbackArgument = {
     val __obj = js.Dynamic.literal(dx = dx.asInstanceOf[js.Any], dy = dy.asInstanceOf[js.Any])
-    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
-    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
-    if (translateX != null) __obj.updateDynamic("translateX")(translateX.asInstanceOf[js.Any])
-    if (translateY != null) __obj.updateDynamic("translateY")(translateY.asInstanceOf[js.Any])
     __obj.asInstanceOf[DraggableCallbackArgument]
   }
+  @scala.inline
+  implicit class DraggableCallbackArgumentOps[Self <: DraggableCallbackArgument] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dy")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,9 +1,7 @@
 package typingsSlinky.gestalt.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.gestalt.AnonEvent
 import typingsSlinky.gestalt.AnonPath
 import typingsSlinky.gestalt.gestaltStrings.blue
@@ -12,6 +10,7 @@ import typingsSlinky.gestalt.gestaltStrings.gray
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.lightGray
 import typingsSlinky.gestalt.gestaltStrings.md
+import typingsSlinky.gestalt.gestaltStrings.orange
 import typingsSlinky.gestalt.gestaltStrings.red
 import typingsSlinky.gestalt.gestaltStrings.sm
 import typingsSlinky.gestalt.gestaltStrings.transparent
@@ -25,37 +24,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IconButton
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.IconButton] {
+object IconButton {
   @JSImport("gestalt", "IconButton")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    accessibilityLabel: String,
-    icon: Icons,
-    accessibilityExpanded: js.UndefOr[Boolean] = js.undefined,
-    accessibilityHaspopup: js.UndefOr[Boolean] = js.undefined,
-    bgColor: transparent | transparentDarkGray | gray | lightGray | white | blue = null,
-    dangerouslySetSvgPath: AnonPath = null,
-    iconColor: blue | darkGray | gray | red | white = null,
-    onClick: /* args */ AnonEvent => Unit = null,
-    size: xs | sm | md | lg | xl = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.IconButton] = {
-    val __obj = js.Dynamic.literal(accessibilityLabel = accessibilityLabel.asInstanceOf[js.Any], icon = icon.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityExpanded)) __obj.updateDynamic("accessibilityExpanded")(accessibilityExpanded.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityHaspopup)) __obj.updateDynamic("accessibilityHaspopup")(accessibilityHaspopup.asInstanceOf[js.Any])
-    if (bgColor != null) __obj.updateDynamic("bgColor")(bgColor.asInstanceOf[js.Any])
-    if (dangerouslySetSvgPath != null) __obj.updateDynamic("dangerouslySetSvgPath")(dangerouslySetSvgPath.asInstanceOf[js.Any])
-    if (iconColor != null) __obj.updateDynamic("iconColor")(iconColor.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.gestalt.mod.IconButton] {
+    @scala.inline
+    def accessibilityExpanded(value: Boolean): this.type = set("accessibilityExpanded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityHaspopup(value: Boolean): this.type = set("accessibilityHaspopup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgColor(value: transparent | transparentDarkGray | gray | lightGray | white | blue): this.type = set("bgColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dangerouslySetSvgPath(value: AnonPath): this.type = set("dangerouslySetSvgPath", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: Icons): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconColor(value: blue | darkGray | gray | red | white | orange): this.type = set("iconColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* args */ AnonEvent => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def selected(value: Boolean): this.type = set("selected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: xs | sm | md | lg | xl): this.type = set("size", value.asInstanceOf[js.Any])
   }
-  type Props = IconButtonProps
+  
+  def withProps(p: IconButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(accessibilityLabel: String): Builder = {
+    val __props = js.Dynamic.literal(accessibilityLabel = accessibilityLabel.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IconButtonProps]))
+  }
 }
 

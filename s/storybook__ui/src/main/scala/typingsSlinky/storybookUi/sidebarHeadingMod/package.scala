@@ -6,4 +6,5 @@ import scala.scalajs.js.annotation._
 
 package object sidebarHeadingMod {
   type BrandAreaProps = typingsSlinky.react.mod.ComponentProps[typingsSlinky.storybookUi.storybookUiStrings.div]
+  type MenuButtonProps = typingsSlinky.react.mod.ComponentProps[typingsSlinky.storybookUi.ForwardRefExoticComponent] with typingsSlinky.react.mod.ComponentProps[typingsSlinky.storybookUi.storybookUiStrings.button] with typingsSlinky.storybookUi.AnonHighlighted
 }

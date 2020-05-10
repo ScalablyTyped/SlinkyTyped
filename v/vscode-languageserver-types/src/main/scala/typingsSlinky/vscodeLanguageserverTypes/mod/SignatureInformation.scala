@@ -4,21 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SignatureInformation extends js.Object {
   /**
     * The human-readable doc-comment of this signature. Will be shown
     * in the UI but can be omitted.
     */
-  var documentation: js.UndefOr[String | MarkupContent] = js.undefined
+  var documentation: js.UndefOr[String | MarkupContent] = js.native
   /**
     * The label of this signature. Will be shown in
     * the UI.
     */
-  var label: String
+  var label: String = js.native
   /**
     * The parameters of this signature.
     */
-  var parameters: js.UndefOr[js.Array[ParameterInformation]] = js.undefined
+  var parameters: js.UndefOr[js.Array[ParameterInformation]] = js.native
 }
 
 @JSImport("vscode-languageserver-types", "SignatureInformation")

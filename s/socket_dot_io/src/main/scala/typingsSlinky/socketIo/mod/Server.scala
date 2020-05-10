@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.socketIo.AnonWs
 import typingsSlinky.socketIo.socketIoStrings.connect
 import typingsSlinky.socketIo.socketIoStrings.connection
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -120,7 +119,7 @@ trait Server extends js.Object {
   		 */
   def of(nsp: String): Namespace = js.native
   def of(nsp: js.Function): Namespace = js.native
-  def of(nsp: RegExp): Namespace = js.native
+  def of(nsp: js.RegExp): Namespace = js.native
   /**
   		 * Base 'on' method to add a listener for an event
   		 * @param event The event that we want to add a listener for

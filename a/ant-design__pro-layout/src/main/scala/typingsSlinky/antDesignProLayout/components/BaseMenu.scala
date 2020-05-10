@@ -1,63 +1,76 @@
 package typingsSlinky.antDesignProLayout.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignProLayout.MenuDataItemisUrlboolean
 import typingsSlinky.antDesignProLayout.baseMenuMod.BaseMenuProps
 import typingsSlinky.antDesignProLayout.typingsMod.MenuDataItem
 import typingsSlinky.antDesignProLayout.typingsMod.MessageDescriptor
 import typingsSlinky.antDesignProLayout.typingsMod.WithFalse
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BaseMenu
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object BaseMenu {
   @JSImport("@ant-design/pro-layout/lib/SiderMenu/BaseMenu", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    collapsed: js.UndefOr[Boolean] = js.undefined,
-    formatMessage: /* message */ MessageDescriptor => String = null,
-    handleOpenChange: /* openKeys */ js.Array[String] => Unit = null,
-    isMobile: js.UndefOr[Boolean] = js.undefined,
-    menuData: js.Array[MenuDataItem] = null,
-    menuItemRender: WithFalse[
-      js.Function2[/* item */ MenuDataItemisUrlboolean, /* defaultDom */ TagMod[Any], TagMod[Any]]
-    ] = null,
-    menuProps: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MenuProps */ js.Any = null,
-    mode: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MenuMode */ js.Any = null,
-    onCollapse: /* collapsed */ Boolean => Unit = null,
-    openKeys: WithFalse[js.Array[String]] = null,
-    subMenuItemRender: WithFalse[
-      js.Function2[/* item */ MenuDataItemisUrlboolean, /* defaultDom */ TagMod[Any], TagMod[Any]]
-    ] = null,
-    theme: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MenuTheme */ js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(collapsed)) __obj.updateDynamic("collapsed")(collapsed.asInstanceOf[js.Any])
-    if (formatMessage != null) __obj.updateDynamic("formatMessage")(js.Any.fromFunction1(formatMessage))
-    if (handleOpenChange != null) __obj.updateDynamic("handleOpenChange")(js.Any.fromFunction1(handleOpenChange))
-    if (!js.isUndefined(isMobile)) __obj.updateDynamic("isMobile")(isMobile.asInstanceOf[js.Any])
-    if (menuData != null) __obj.updateDynamic("menuData")(menuData.asInstanceOf[js.Any])
-    if (menuItemRender != null) __obj.updateDynamic("menuItemRender")(menuItemRender.asInstanceOf[js.Any])
-    if (menuProps != null) __obj.updateDynamic("menuProps")(menuProps.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (onCollapse != null) __obj.updateDynamic("onCollapse")(js.Any.fromFunction1(onCollapse))
-    if (openKeys != null) __obj.updateDynamic("openKeys")(openKeys.asInstanceOf[js.Any])
-    if (subMenuItemRender != null) __obj.updateDynamic("subMenuItemRender")(subMenuItemRender.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def collapsed(value: Boolean): this.type = set("collapsed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formatMessage(value: /* message */ MessageDescriptor => String): this.type = set("formatMessage", js.Any.fromFunction1(value))
+    @scala.inline
+    def handleOpenChange(value: /* openKeys */ js.Array[String] => Unit): this.type = set("handleOpenChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def isMobile(value: Boolean): this.type = set("isMobile", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuData(value: js.Array[MenuDataItem]): this.type = set("menuData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuItemRenderFunction2(value: (/* item */ MenuDataItemisUrlboolean, /* defaultDom */ TagMod[Any]) => TagMod[Any]): this.type = set("menuItemRender", js.Any.fromFunction2(value))
+    @scala.inline
+    def menuItemRender(
+      value: WithFalse[
+          js.Function2[/* item */ MenuDataItemisUrlboolean, /* defaultDom */ TagMod[Any], TagMod[Any]]
+        ]
+    ): this.type = set("menuItemRender", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuProps(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MenuProps */ js.Any
+    ): this.type = set("menuProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mode(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MenuMode */ js.Any
+    ): this.type = set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCollapse(value: /* collapsed */ Boolean => Unit): this.type = set("onCollapse", js.Any.fromFunction1(value))
+    @scala.inline
+    def openKeys(value: WithFalse[js.Array[String]]): this.type = set("openKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subMenuItemRenderFunction2(value: (/* item */ MenuDataItemisUrlboolean, /* defaultDom */ TagMod[Any]) => TagMod[Any]): this.type = set("subMenuItemRender", js.Any.fromFunction2(value))
+    @scala.inline
+    def subMenuItemRender(
+      value: WithFalse[
+          js.Function2[/* item */ MenuDataItemisUrlboolean, /* defaultDom */ TagMod[Any], TagMod[Any]]
+        ]
+    ): this.type = set("subMenuItemRender", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MenuTheme */ js.Any
+    ): this.type = set("theme", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = BaseMenuProps
+  
+  def withProps(p: BaseMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: BaseMenu.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -50,26 +50,113 @@ trait CreateDataSourceRequest extends js.Object {
 
 object CreateDataSourceRequest {
   @scala.inline
-  def apply(
-    AwsAccountId: AwsAccountId,
-    DataSourceId: ResourceId,
-    Name: ResourceName,
-    Type: DataSourceType,
-    Credentials: DataSourceCredentials = null,
-    DataSourceParameters: DataSourceParameters = null,
-    Permissions: ResourcePermissionList = null,
-    SslProperties: SslProperties = null,
-    Tags: TagList = null,
-    VpcConnectionProperties: VpcConnectionProperties = null
-  ): CreateDataSourceRequest = {
+  def apply(AwsAccountId: AwsAccountId, DataSourceId: ResourceId, Name: ResourceName, Type: DataSourceType): CreateDataSourceRequest = {
     val __obj = js.Dynamic.literal(AwsAccountId = AwsAccountId.asInstanceOf[js.Any], DataSourceId = DataSourceId.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
-    if (Credentials != null) __obj.updateDynamic("Credentials")(Credentials.asInstanceOf[js.Any])
-    if (DataSourceParameters != null) __obj.updateDynamic("DataSourceParameters")(DataSourceParameters.asInstanceOf[js.Any])
-    if (Permissions != null) __obj.updateDynamic("Permissions")(Permissions.asInstanceOf[js.Any])
-    if (SslProperties != null) __obj.updateDynamic("SslProperties")(SslProperties.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (VpcConnectionProperties != null) __obj.updateDynamic("VpcConnectionProperties")(VpcConnectionProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDataSourceRequest]
   }
+  @scala.inline
+  implicit class CreateDataSourceRequestOps[Self <: CreateDataSourceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAwsAccountId(value: AwsAccountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDataSourceId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: DataSourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCredentials(value: DataSourceCredentials): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Credentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCredentials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Credentials")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSourceParameters(value: DataSourceParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSourceParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSourceParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSourceParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermissions(value: ResourcePermissionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Permissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Permissions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSslProperties(value: SslProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SslProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSslProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SslProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcConnectionProperties(value: VpcConnectionProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConnectionProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcConnectionProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConnectionProperties")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

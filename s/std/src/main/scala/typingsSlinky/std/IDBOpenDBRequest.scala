@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation._
 
 /** Also inherits methods from its parents IDBRequest and EventTarget. */
 @js.native
-trait IDBOpenDBRequest extends IDBRequest[IDBDatabase] {
+trait IDBOpenDBRequest
+  extends IDBRequest[org.scalajs.dom.raw.IDBDatabase] {
   var onblocked: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   var onupgradeneeded: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.IDBVersionChangeEvent, _]) | Null = js.native
   @JSName("addEventListener")
@@ -55,7 +56,7 @@ trait IDBOpenDBRequest extends IDBRequest[IDBDatabase] {
   def removeEventListener_blocked(
     `type`: blocked,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_upgradeneeded(
@@ -72,11 +73,12 @@ trait IDBOpenDBRequest extends IDBRequest[IDBDatabase] {
   def removeEventListener_upgradeneeded(
     `type`: upgradeneeded,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.IDBVersionChangeEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("IDBOpenDBRequest")
 @js.native
-object IDBOpenDBRequest extends Instantiable0[IDBOpenDBRequest]
+object IDBOpenDBRequest
+  extends Instantiable0[org.scalajs.dom.raw.IDBOpenDBRequest]
 

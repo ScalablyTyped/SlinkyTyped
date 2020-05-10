@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DbManagerConfig extends js.Object {
-  var collate: js.UndefOr[js.Array[String]] = js.undefined
-  var superPassword: js.UndefOr[String] = js.undefined
-  var superUser: js.UndefOr[String] = js.undefined
+  var collate: js.UndefOr[js.Array[String]] = js.native
+  var superPassword: js.UndefOr[String] = js.native
+  var superUser: js.UndefOr[String] = js.native
 }
 
 object DbManagerConfig {
   @scala.inline
-  def apply(collate: js.Array[String] = null, superPassword: String = null, superUser: String = null): DbManagerConfig = {
+  def apply(): DbManagerConfig = {
     val __obj = js.Dynamic.literal()
-    if (collate != null) __obj.updateDynamic("collate")(collate.asInstanceOf[js.Any])
-    if (superPassword != null) __obj.updateDynamic("superPassword")(superPassword.asInstanceOf[js.Any])
-    if (superUser != null) __obj.updateDynamic("superUser")(superUser.asInstanceOf[js.Any])
     __obj.asInstanceOf[DbManagerConfig]
   }
+  @scala.inline
+  implicit class DbManagerConfigOps[Self <: DbManagerConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCollate(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuperPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("superPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuperPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("superPassword")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuperUser(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("superUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuperUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("superUser")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

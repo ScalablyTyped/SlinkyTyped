@@ -232,450 +232,448 @@ trait ColorScheme extends js.Object
 
 object ColorScheme {
   @scala.inline
-  def accent: typingsSlinky.vegaTypings.vegaTypingsStrings.accent = this.cast("accent")
+  def accent: typingsSlinky.vegaTypings.vegaTypingsStrings.accent = "accent".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.accent]
   @scala.inline
-  def bluegreen: typingsSlinky.vegaTypings.vegaTypingsStrings.bluegreen = this.cast("bluegreen")
+  def bluegreen: typingsSlinky.vegaTypings.vegaTypingsStrings.bluegreen = "bluegreen".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.bluegreen]
   @scala.inline
-  def `bluegreen-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-3` = this.cast("bluegreen-3")
+  def `bluegreen-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-3` = "bluegreen-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-3`]
   @scala.inline
-  def `bluegreen-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-4` = this.cast("bluegreen-4")
+  def `bluegreen-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-4` = "bluegreen-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-4`]
   @scala.inline
-  def `bluegreen-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-5` = this.cast("bluegreen-5")
+  def `bluegreen-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-5` = "bluegreen-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-5`]
   @scala.inline
-  def `bluegreen-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-6` = this.cast("bluegreen-6")
+  def `bluegreen-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-6` = "bluegreen-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-6`]
   @scala.inline
-  def `bluegreen-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-7` = this.cast("bluegreen-7")
+  def `bluegreen-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-7` = "bluegreen-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-7`]
   @scala.inline
-  def `bluegreen-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-8` = this.cast("bluegreen-8")
+  def `bluegreen-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-8` = "bluegreen-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-8`]
   @scala.inline
-  def `bluegreen-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-9` = this.cast("bluegreen-9")
+  def `bluegreen-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-9` = "bluegreen-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-9`]
   @scala.inline
-  def blueorange: typingsSlinky.vegaTypings.vegaTypingsStrings.blueorange = this.cast("blueorange")
+  def blueorange: typingsSlinky.vegaTypings.vegaTypingsStrings.blueorange = "blueorange".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.blueorange]
   @scala.inline
-  def `blueorange-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-10` = this.cast("blueorange-10")
+  def `blueorange-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-10` = "blueorange-10".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-10`]
   @scala.inline
-  def `blueorange-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-11` = this.cast("blueorange-11")
+  def `blueorange-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-11` = "blueorange-11".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-11`]
   @scala.inline
-  def `blueorange-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-3` = this.cast("blueorange-3")
+  def `blueorange-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-3` = "blueorange-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-3`]
   @scala.inline
-  def `blueorange-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-4` = this.cast("blueorange-4")
+  def `blueorange-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-4` = "blueorange-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-4`]
   @scala.inline
-  def `blueorange-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-5` = this.cast("blueorange-5")
+  def `blueorange-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-5` = "blueorange-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-5`]
   @scala.inline
-  def `blueorange-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-6` = this.cast("blueorange-6")
+  def `blueorange-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-6` = "blueorange-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-6`]
   @scala.inline
-  def `blueorange-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-7` = this.cast("blueorange-7")
+  def `blueorange-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-7` = "blueorange-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-7`]
   @scala.inline
-  def `blueorange-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-8` = this.cast("blueorange-8")
+  def `blueorange-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-8` = "blueorange-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-8`]
   @scala.inline
-  def `blueorange-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-9` = this.cast("blueorange-9")
+  def `blueorange-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-9` = "blueorange-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`blueorange-9`]
   @scala.inline
-  def bluepurple: typingsSlinky.vegaTypings.vegaTypingsStrings.bluepurple = this.cast("bluepurple")
+  def bluepurple: typingsSlinky.vegaTypings.vegaTypingsStrings.bluepurple = "bluepurple".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.bluepurple]
   @scala.inline
-  def `bluepurple-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-3` = this.cast("bluepurple-3")
+  def `bluepurple-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-3` = "bluepurple-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-3`]
   @scala.inline
-  def `bluepurple-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-4` = this.cast("bluepurple-4")
+  def `bluepurple-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-4` = "bluepurple-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-4`]
   @scala.inline
-  def `bluepurple-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-5` = this.cast("bluepurple-5")
+  def `bluepurple-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-5` = "bluepurple-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-5`]
   @scala.inline
-  def `bluepurple-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-6` = this.cast("bluepurple-6")
+  def `bluepurple-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-6` = "bluepurple-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-6`]
   @scala.inline
-  def `bluepurple-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-7` = this.cast("bluepurple-7")
+  def `bluepurple-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-7` = "bluepurple-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-7`]
   @scala.inline
-  def `bluepurple-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-8` = this.cast("bluepurple-8")
+  def `bluepurple-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-8` = "bluepurple-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-8`]
   @scala.inline
-  def `bluepurple-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-9` = this.cast("bluepurple-9")
+  def `bluepurple-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-9` = "bluepurple-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-9`]
   @scala.inline
-  def blues: typingsSlinky.vegaTypings.vegaTypingsStrings.blues = this.cast("blues")
+  def blues: typingsSlinky.vegaTypings.vegaTypingsStrings.blues = "blues".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.blues]
   @scala.inline
-  def brownbluegreen: typingsSlinky.vegaTypings.vegaTypingsStrings.brownbluegreen = this.cast("brownbluegreen")
+  def brownbluegreen: typingsSlinky.vegaTypings.vegaTypingsStrings.brownbluegreen = "brownbluegreen".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.brownbluegreen]
   @scala.inline
-  def `brownbluegreen-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-10` = this.cast("brownbluegreen-10")
+  def `brownbluegreen-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-10` = "brownbluegreen-10".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-10`]
   @scala.inline
-  def `brownbluegreen-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-11` = this.cast("brownbluegreen-11")
+  def `brownbluegreen-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-11` = "brownbluegreen-11".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-11`]
   @scala.inline
-  def `brownbluegreen-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-3` = this.cast("brownbluegreen-3")
+  def `brownbluegreen-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-3` = "brownbluegreen-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-3`]
   @scala.inline
-  def `brownbluegreen-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-4` = this.cast("brownbluegreen-4")
+  def `brownbluegreen-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-4` = "brownbluegreen-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-4`]
   @scala.inline
-  def `brownbluegreen-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-5` = this.cast("brownbluegreen-5")
+  def `brownbluegreen-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-5` = "brownbluegreen-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-5`]
   @scala.inline
-  def `brownbluegreen-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-6` = this.cast("brownbluegreen-6")
+  def `brownbluegreen-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-6` = "brownbluegreen-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-6`]
   @scala.inline
-  def `brownbluegreen-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-7` = this.cast("brownbluegreen-7")
+  def `brownbluegreen-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-7` = "brownbluegreen-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-7`]
   @scala.inline
-  def `brownbluegreen-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-8` = this.cast("brownbluegreen-8")
+  def `brownbluegreen-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-8` = "brownbluegreen-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-8`]
   @scala.inline
-  def `brownbluegreen-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-9` = this.cast("brownbluegreen-9")
+  def `brownbluegreen-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-9` = "brownbluegreen-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`brownbluegreen-9`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def category10: typingsSlinky.vegaTypings.vegaTypingsStrings.category10 = "category10".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.category10]
   @scala.inline
-  def category10: typingsSlinky.vegaTypings.vegaTypingsStrings.category10 = this.cast("category10")
+  def category20: typingsSlinky.vegaTypings.vegaTypingsStrings.category20 = "category20".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.category20]
   @scala.inline
-  def category20: typingsSlinky.vegaTypings.vegaTypingsStrings.category20 = this.cast("category20")
+  def category20b: typingsSlinky.vegaTypings.vegaTypingsStrings.category20b = "category20b".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.category20b]
   @scala.inline
-  def category20b: typingsSlinky.vegaTypings.vegaTypingsStrings.category20b = this.cast("category20b")
+  def category20c: typingsSlinky.vegaTypings.vegaTypingsStrings.category20c = "category20c".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.category20c]
   @scala.inline
-  def category20c: typingsSlinky.vegaTypings.vegaTypingsStrings.category20c = this.cast("category20c")
+  def dark2: typingsSlinky.vegaTypings.vegaTypingsStrings.dark2 = "dark2".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.dark2]
   @scala.inline
-  def dark2: typingsSlinky.vegaTypings.vegaTypingsStrings.dark2 = this.cast("dark2")
+  def greenblue: typingsSlinky.vegaTypings.vegaTypingsStrings.greenblue = "greenblue".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.greenblue]
   @scala.inline
-  def greenblue: typingsSlinky.vegaTypings.vegaTypingsStrings.greenblue = this.cast("greenblue")
+  def `greenblue-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-3` = "greenblue-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-3`]
   @scala.inline
-  def `greenblue-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-3` = this.cast("greenblue-3")
+  def `greenblue-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-4` = "greenblue-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-4`]
   @scala.inline
-  def `greenblue-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-4` = this.cast("greenblue-4")
+  def `greenblue-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-5` = "greenblue-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-5`]
   @scala.inline
-  def `greenblue-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-5` = this.cast("greenblue-5")
+  def `greenblue-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-6` = "greenblue-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-6`]
   @scala.inline
-  def `greenblue-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-6` = this.cast("greenblue-6")
+  def `greenblue-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-7` = "greenblue-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-7`]
   @scala.inline
-  def `greenblue-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-7` = this.cast("greenblue-7")
+  def `greenblue-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-8` = "greenblue-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-8`]
   @scala.inline
-  def `greenblue-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-8` = this.cast("greenblue-8")
+  def `greenblue-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-9` = "greenblue-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-9`]
   @scala.inline
-  def `greenblue-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`greenblue-9` = this.cast("greenblue-9")
+  def greens: typingsSlinky.vegaTypings.vegaTypingsStrings.greens = "greens".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.greens]
   @scala.inline
-  def greens: typingsSlinky.vegaTypings.vegaTypingsStrings.greens = this.cast("greens")
+  def greys: typingsSlinky.vegaTypings.vegaTypingsStrings.greys = "greys".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.greys]
   @scala.inline
-  def greys: typingsSlinky.vegaTypings.vegaTypingsStrings.greys = this.cast("greys")
+  def inferno: typingsSlinky.vegaTypings.vegaTypingsStrings.inferno = "inferno".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.inferno]
   @scala.inline
-  def inferno: typingsSlinky.vegaTypings.vegaTypingsStrings.inferno = this.cast("inferno")
+  def magma: typingsSlinky.vegaTypings.vegaTypingsStrings.magma = "magma".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.magma]
   @scala.inline
-  def magma: typingsSlinky.vegaTypings.vegaTypingsStrings.magma = this.cast("magma")
+  def orangered: typingsSlinky.vegaTypings.vegaTypingsStrings.orangered = "orangered".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.orangered]
   @scala.inline
-  def orangered: typingsSlinky.vegaTypings.vegaTypingsStrings.orangered = this.cast("orangered")
+  def `orangered-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-3` = "orangered-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-3`]
   @scala.inline
-  def `orangered-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-3` = this.cast("orangered-3")
+  def `orangered-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-4` = "orangered-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-4`]
   @scala.inline
-  def `orangered-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-4` = this.cast("orangered-4")
+  def `orangered-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-5` = "orangered-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-5`]
   @scala.inline
-  def `orangered-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-5` = this.cast("orangered-5")
+  def `orangered-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-6` = "orangered-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-6`]
   @scala.inline
-  def `orangered-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-6` = this.cast("orangered-6")
+  def `orangered-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-7` = "orangered-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-7`]
   @scala.inline
-  def `orangered-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-7` = this.cast("orangered-7")
+  def `orangered-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-8` = "orangered-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-8`]
   @scala.inline
-  def `orangered-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-8` = this.cast("orangered-8")
+  def `orangered-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-9` = "orangered-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-9`]
   @scala.inline
-  def `orangered-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`orangered-9` = this.cast("orangered-9")
+  def oranges: typingsSlinky.vegaTypings.vegaTypingsStrings.oranges = "oranges".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.oranges]
   @scala.inline
-  def oranges: typingsSlinky.vegaTypings.vegaTypingsStrings.oranges = this.cast("oranges")
+  def paired: typingsSlinky.vegaTypings.vegaTypingsStrings.paired = "paired".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.paired]
   @scala.inline
-  def paired: typingsSlinky.vegaTypings.vegaTypingsStrings.paired = this.cast("paired")
+  def pastel1: typingsSlinky.vegaTypings.vegaTypingsStrings.pastel1 = "pastel1".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.pastel1]
   @scala.inline
-  def pastel1: typingsSlinky.vegaTypings.vegaTypingsStrings.pastel1 = this.cast("pastel1")
+  def pastel2: typingsSlinky.vegaTypings.vegaTypingsStrings.pastel2 = "pastel2".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.pastel2]
   @scala.inline
-  def pastel2: typingsSlinky.vegaTypings.vegaTypingsStrings.pastel2 = this.cast("pastel2")
+  def pinkyellowgreen: typingsSlinky.vegaTypings.vegaTypingsStrings.pinkyellowgreen = "pinkyellowgreen".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.pinkyellowgreen]
   @scala.inline
-  def pinkyellowgreen: typingsSlinky.vegaTypings.vegaTypingsStrings.pinkyellowgreen = this.cast("pinkyellowgreen")
+  def `pinkyellowgreen-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-10` = "pinkyellowgreen-10".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-10`]
   @scala.inline
-  def `pinkyellowgreen-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-10` = this.cast("pinkyellowgreen-10")
+  def `pinkyellowgreen-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-11` = "pinkyellowgreen-11".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-11`]
   @scala.inline
-  def `pinkyellowgreen-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-11` = this.cast("pinkyellowgreen-11")
+  def `pinkyellowgreen-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-3` = "pinkyellowgreen-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-3`]
   @scala.inline
-  def `pinkyellowgreen-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-3` = this.cast("pinkyellowgreen-3")
+  def `pinkyellowgreen-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-4` = "pinkyellowgreen-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-4`]
   @scala.inline
-  def `pinkyellowgreen-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-4` = this.cast("pinkyellowgreen-4")
+  def `pinkyellowgreen-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-5` = "pinkyellowgreen-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-5`]
   @scala.inline
-  def `pinkyellowgreen-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-5` = this.cast("pinkyellowgreen-5")
+  def `pinkyellowgreen-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-6` = "pinkyellowgreen-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-6`]
   @scala.inline
-  def `pinkyellowgreen-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-6` = this.cast("pinkyellowgreen-6")
+  def `pinkyellowgreen-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-7` = "pinkyellowgreen-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-7`]
   @scala.inline
-  def `pinkyellowgreen-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-7` = this.cast("pinkyellowgreen-7")
+  def `pinkyellowgreen-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-8` = "pinkyellowgreen-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-8`]
   @scala.inline
-  def `pinkyellowgreen-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-8` = this.cast("pinkyellowgreen-8")
+  def `pinkyellowgreen-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-9` = "pinkyellowgreen-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-9`]
   @scala.inline
-  def `pinkyellowgreen-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`pinkyellowgreen-9` = this.cast("pinkyellowgreen-9")
+  def plasma: typingsSlinky.vegaTypings.vegaTypingsStrings.plasma = "plasma".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.plasma]
   @scala.inline
-  def plasma: typingsSlinky.vegaTypings.vegaTypingsStrings.plasma = this.cast("plasma")
+  def purpleblue: typingsSlinky.vegaTypings.vegaTypingsStrings.purpleblue = "purpleblue".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.purpleblue]
   @scala.inline
-  def purpleblue: typingsSlinky.vegaTypings.vegaTypingsStrings.purpleblue = this.cast("purpleblue")
+  def `purpleblue-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-3` = "purpleblue-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-3`]
   @scala.inline
-  def `purpleblue-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-3` = this.cast("purpleblue-3")
+  def `purpleblue-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-4` = "purpleblue-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-4`]
   @scala.inline
-  def `purpleblue-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-4` = this.cast("purpleblue-4")
+  def `purpleblue-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-5` = "purpleblue-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-5`]
   @scala.inline
-  def `purpleblue-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-5` = this.cast("purpleblue-5")
+  def `purpleblue-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-6` = "purpleblue-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-6`]
   @scala.inline
-  def `purpleblue-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-6` = this.cast("purpleblue-6")
+  def `purpleblue-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-7` = "purpleblue-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-7`]
   @scala.inline
-  def `purpleblue-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-7` = this.cast("purpleblue-7")
+  def `purpleblue-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-8` = "purpleblue-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-8`]
   @scala.inline
-  def `purpleblue-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-8` = this.cast("purpleblue-8")
+  def `purpleblue-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-9` = "purpleblue-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-9`]
   @scala.inline
-  def `purpleblue-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleblue-9` = this.cast("purpleblue-9")
+  def purplebluegreen: typingsSlinky.vegaTypings.vegaTypingsStrings.purplebluegreen = "purplebluegreen".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.purplebluegreen]
   @scala.inline
-  def purplebluegreen: typingsSlinky.vegaTypings.vegaTypingsStrings.purplebluegreen = this.cast("purplebluegreen")
+  def `purplebluegreen-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-3` = "purplebluegreen-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-3`]
   @scala.inline
-  def `purplebluegreen-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-3` = this.cast("purplebluegreen-3")
+  def `purplebluegreen-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-4` = "purplebluegreen-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-4`]
   @scala.inline
-  def `purplebluegreen-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-4` = this.cast("purplebluegreen-4")
+  def `purplebluegreen-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-5` = "purplebluegreen-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-5`]
   @scala.inline
-  def `purplebluegreen-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-5` = this.cast("purplebluegreen-5")
+  def `purplebluegreen-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-6` = "purplebluegreen-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-6`]
   @scala.inline
-  def `purplebluegreen-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-6` = this.cast("purplebluegreen-6")
+  def `purplebluegreen-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-7` = "purplebluegreen-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-7`]
   @scala.inline
-  def `purplebluegreen-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-7` = this.cast("purplebluegreen-7")
+  def `purplebluegreen-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-8` = "purplebluegreen-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-8`]
   @scala.inline
-  def `purplebluegreen-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-8` = this.cast("purplebluegreen-8")
+  def `purplebluegreen-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-9` = "purplebluegreen-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-9`]
   @scala.inline
-  def `purplebluegreen-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplebluegreen-9` = this.cast("purplebluegreen-9")
+  def purplegreen: typingsSlinky.vegaTypings.vegaTypingsStrings.purplegreen = "purplegreen".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.purplegreen]
   @scala.inline
-  def purplegreen: typingsSlinky.vegaTypings.vegaTypingsStrings.purplegreen = this.cast("purplegreen")
+  def `purplegreen-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-10` = "purplegreen-10".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-10`]
   @scala.inline
-  def `purplegreen-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-10` = this.cast("purplegreen-10")
+  def `purplegreen-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-11` = "purplegreen-11".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-11`]
   @scala.inline
-  def `purplegreen-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-11` = this.cast("purplegreen-11")
+  def `purplegreen-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-3` = "purplegreen-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-3`]
   @scala.inline
-  def `purplegreen-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-3` = this.cast("purplegreen-3")
+  def `purplegreen-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-4` = "purplegreen-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-4`]
   @scala.inline
-  def `purplegreen-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-4` = this.cast("purplegreen-4")
+  def `purplegreen-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-5` = "purplegreen-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-5`]
   @scala.inline
-  def `purplegreen-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-5` = this.cast("purplegreen-5")
+  def `purplegreen-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-6` = "purplegreen-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-6`]
   @scala.inline
-  def `purplegreen-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-6` = this.cast("purplegreen-6")
+  def `purplegreen-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-7` = "purplegreen-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-7`]
   @scala.inline
-  def `purplegreen-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-7` = this.cast("purplegreen-7")
+  def `purplegreen-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-8` = "purplegreen-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-8`]
   @scala.inline
-  def `purplegreen-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-8` = this.cast("purplegreen-8")
+  def `purplegreen-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-9` = "purplegreen-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-9`]
   @scala.inline
-  def `purplegreen-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplegreen-9` = this.cast("purplegreen-9")
+  def purpleorange: typingsSlinky.vegaTypings.vegaTypingsStrings.purpleorange = "purpleorange".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.purpleorange]
   @scala.inline
-  def purpleorange: typingsSlinky.vegaTypings.vegaTypingsStrings.purpleorange = this.cast("purpleorange")
+  def `purpleorange-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-10` = "purpleorange-10".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-10`]
   @scala.inline
-  def `purpleorange-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-10` = this.cast("purpleorange-10")
+  def `purpleorange-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-11` = "purpleorange-11".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-11`]
   @scala.inline
-  def `purpleorange-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-11` = this.cast("purpleorange-11")
+  def `purpleorange-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-3` = "purpleorange-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-3`]
   @scala.inline
-  def `purpleorange-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-3` = this.cast("purpleorange-3")
+  def `purpleorange-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-4` = "purpleorange-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-4`]
   @scala.inline
-  def `purpleorange-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-4` = this.cast("purpleorange-4")
+  def `purpleorange-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-5` = "purpleorange-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-5`]
   @scala.inline
-  def `purpleorange-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-5` = this.cast("purpleorange-5")
+  def `purpleorange-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-6` = "purpleorange-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-6`]
   @scala.inline
-  def `purpleorange-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-6` = this.cast("purpleorange-6")
+  def `purpleorange-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-7` = "purpleorange-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-7`]
   @scala.inline
-  def `purpleorange-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-7` = this.cast("purpleorange-7")
+  def `purpleorange-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-8` = "purpleorange-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-8`]
   @scala.inline
-  def `purpleorange-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-8` = this.cast("purpleorange-8")
+  def `purpleorange-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-9` = "purpleorange-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-9`]
   @scala.inline
-  def `purpleorange-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purpleorange-9` = this.cast("purpleorange-9")
+  def purplered: typingsSlinky.vegaTypings.vegaTypingsStrings.purplered = "purplered".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.purplered]
   @scala.inline
-  def purplered: typingsSlinky.vegaTypings.vegaTypingsStrings.purplered = this.cast("purplered")
+  def `purplered-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-3` = "purplered-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-3`]
   @scala.inline
-  def `purplered-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-3` = this.cast("purplered-3")
+  def `purplered-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-4` = "purplered-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-4`]
   @scala.inline
-  def `purplered-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-4` = this.cast("purplered-4")
+  def `purplered-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-5` = "purplered-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-5`]
   @scala.inline
-  def `purplered-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-5` = this.cast("purplered-5")
+  def `purplered-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-6` = "purplered-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-6`]
   @scala.inline
-  def `purplered-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-6` = this.cast("purplered-6")
+  def `purplered-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-7` = "purplered-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-7`]
   @scala.inline
-  def `purplered-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-7` = this.cast("purplered-7")
+  def `purplered-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-8` = "purplered-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-8`]
   @scala.inline
-  def `purplered-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-8` = this.cast("purplered-8")
+  def `purplered-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-9` = "purplered-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-9`]
   @scala.inline
-  def `purplered-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`purplered-9` = this.cast("purplered-9")
+  def purples: typingsSlinky.vegaTypings.vegaTypingsStrings.purples = "purples".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.purples]
   @scala.inline
-  def purples: typingsSlinky.vegaTypings.vegaTypingsStrings.purples = this.cast("purples")
+  def rainbow: typingsSlinky.vegaTypings.vegaTypingsStrings.rainbow = "rainbow".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.rainbow]
   @scala.inline
-  def rainbow: typingsSlinky.vegaTypings.vegaTypingsStrings.rainbow = this.cast("rainbow")
+  def redblue: typingsSlinky.vegaTypings.vegaTypingsStrings.redblue = "redblue".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.redblue]
   @scala.inline
-  def redblue: typingsSlinky.vegaTypings.vegaTypingsStrings.redblue = this.cast("redblue")
+  def `redblue-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-10` = "redblue-10".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-10`]
   @scala.inline
-  def `redblue-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-10` = this.cast("redblue-10")
+  def `redblue-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-11` = "redblue-11".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-11`]
   @scala.inline
-  def `redblue-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-11` = this.cast("redblue-11")
+  def `redblue-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-3` = "redblue-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-3`]
   @scala.inline
-  def `redblue-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-3` = this.cast("redblue-3")
+  def `redblue-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-4` = "redblue-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-4`]
   @scala.inline
-  def `redblue-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-4` = this.cast("redblue-4")
+  def `redblue-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-5` = "redblue-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-5`]
   @scala.inline
-  def `redblue-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-5` = this.cast("redblue-5")
+  def `redblue-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-6` = "redblue-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-6`]
   @scala.inline
-  def `redblue-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-6` = this.cast("redblue-6")
+  def `redblue-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-7` = "redblue-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-7`]
   @scala.inline
-  def `redblue-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-7` = this.cast("redblue-7")
+  def `redblue-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-8` = "redblue-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-8`]
   @scala.inline
-  def `redblue-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-8` = this.cast("redblue-8")
+  def `redblue-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-9` = "redblue-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-9`]
   @scala.inline
-  def `redblue-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redblue-9` = this.cast("redblue-9")
+  def redgrey: typingsSlinky.vegaTypings.vegaTypingsStrings.redgrey = "redgrey".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.redgrey]
   @scala.inline
-  def redgrey: typingsSlinky.vegaTypings.vegaTypingsStrings.redgrey = this.cast("redgrey")
+  def `redgrey-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-10` = "redgrey-10".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-10`]
   @scala.inline
-  def `redgrey-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-10` = this.cast("redgrey-10")
+  def `redgrey-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-11` = "redgrey-11".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-11`]
   @scala.inline
-  def `redgrey-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-11` = this.cast("redgrey-11")
+  def `redgrey-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-3` = "redgrey-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-3`]
   @scala.inline
-  def `redgrey-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-3` = this.cast("redgrey-3")
+  def `redgrey-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-4` = "redgrey-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-4`]
   @scala.inline
-  def `redgrey-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-4` = this.cast("redgrey-4")
+  def `redgrey-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-5` = "redgrey-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-5`]
   @scala.inline
-  def `redgrey-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-5` = this.cast("redgrey-5")
+  def `redgrey-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-6` = "redgrey-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-6`]
   @scala.inline
-  def `redgrey-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-6` = this.cast("redgrey-6")
+  def `redgrey-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-7` = "redgrey-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-7`]
   @scala.inline
-  def `redgrey-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-7` = this.cast("redgrey-7")
+  def `redgrey-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-8` = "redgrey-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-8`]
   @scala.inline
-  def `redgrey-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-8` = this.cast("redgrey-8")
+  def `redgrey-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-9` = "redgrey-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-9`]
   @scala.inline
-  def `redgrey-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redgrey-9` = this.cast("redgrey-9")
+  def redpurple: typingsSlinky.vegaTypings.vegaTypingsStrings.redpurple = "redpurple".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.redpurple]
   @scala.inline
-  def redpurple: typingsSlinky.vegaTypings.vegaTypingsStrings.redpurple = this.cast("redpurple")
+  def `redpurple-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-3` = "redpurple-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-3`]
   @scala.inline
-  def `redpurple-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-3` = this.cast("redpurple-3")
+  def `redpurple-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-4` = "redpurple-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-4`]
   @scala.inline
-  def `redpurple-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-4` = this.cast("redpurple-4")
+  def `redpurple-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-5` = "redpurple-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-5`]
   @scala.inline
-  def `redpurple-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-5` = this.cast("redpurple-5")
+  def `redpurple-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-6` = "redpurple-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-6`]
   @scala.inline
-  def `redpurple-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-6` = this.cast("redpurple-6")
+  def `redpurple-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-7` = "redpurple-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-7`]
   @scala.inline
-  def `redpurple-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-7` = this.cast("redpurple-7")
+  def `redpurple-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-8` = "redpurple-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-8`]
   @scala.inline
-  def `redpurple-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-8` = this.cast("redpurple-8")
+  def `redpurple-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-9` = "redpurple-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-9`]
   @scala.inline
-  def `redpurple-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-9` = this.cast("redpurple-9")
+  def reds: typingsSlinky.vegaTypings.vegaTypingsStrings.reds = "reds".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.reds]
   @scala.inline
-  def reds: typingsSlinky.vegaTypings.vegaTypingsStrings.reds = this.cast("reds")
+  def redyellowblue: typingsSlinky.vegaTypings.vegaTypingsStrings.redyellowblue = "redyellowblue".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.redyellowblue]
   @scala.inline
-  def redyellowblue: typingsSlinky.vegaTypings.vegaTypingsStrings.redyellowblue = this.cast("redyellowblue")
+  def `redyellowblue-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-10` = "redyellowblue-10".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-10`]
   @scala.inline
-  def `redyellowblue-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-10` = this.cast("redyellowblue-10")
+  def `redyellowblue-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-11` = "redyellowblue-11".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-11`]
   @scala.inline
-  def `redyellowblue-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-11` = this.cast("redyellowblue-11")
+  def `redyellowblue-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-3` = "redyellowblue-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-3`]
   @scala.inline
-  def `redyellowblue-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-3` = this.cast("redyellowblue-3")
+  def `redyellowblue-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-4` = "redyellowblue-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-4`]
   @scala.inline
-  def `redyellowblue-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-4` = this.cast("redyellowblue-4")
+  def `redyellowblue-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-5` = "redyellowblue-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-5`]
   @scala.inline
-  def `redyellowblue-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-5` = this.cast("redyellowblue-5")
+  def `redyellowblue-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-6` = "redyellowblue-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-6`]
   @scala.inline
-  def `redyellowblue-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-6` = this.cast("redyellowblue-6")
+  def `redyellowblue-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-7` = "redyellowblue-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-7`]
   @scala.inline
-  def `redyellowblue-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-7` = this.cast("redyellowblue-7")
+  def `redyellowblue-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-8` = "redyellowblue-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-8`]
   @scala.inline
-  def `redyellowblue-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-8` = this.cast("redyellowblue-8")
+  def `redyellowblue-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-9` = "redyellowblue-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-9`]
   @scala.inline
-  def `redyellowblue-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowblue-9` = this.cast("redyellowblue-9")
+  def redyellowgreen: typingsSlinky.vegaTypings.vegaTypingsStrings.redyellowgreen = "redyellowgreen".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.redyellowgreen]
   @scala.inline
-  def redyellowgreen: typingsSlinky.vegaTypings.vegaTypingsStrings.redyellowgreen = this.cast("redyellowgreen")
+  def `redyellowgreen-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-10` = "redyellowgreen-10".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-10`]
   @scala.inline
-  def `redyellowgreen-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-10` = this.cast("redyellowgreen-10")
+  def `redyellowgreen-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-11` = "redyellowgreen-11".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-11`]
   @scala.inline
-  def `redyellowgreen-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-11` = this.cast("redyellowgreen-11")
+  def `redyellowgreen-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-3` = "redyellowgreen-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-3`]
   @scala.inline
-  def `redyellowgreen-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-3` = this.cast("redyellowgreen-3")
+  def `redyellowgreen-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-4` = "redyellowgreen-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-4`]
   @scala.inline
-  def `redyellowgreen-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-4` = this.cast("redyellowgreen-4")
+  def `redyellowgreen-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-5` = "redyellowgreen-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-5`]
   @scala.inline
-  def `redyellowgreen-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-5` = this.cast("redyellowgreen-5")
+  def `redyellowgreen-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-6` = "redyellowgreen-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-6`]
   @scala.inline
-  def `redyellowgreen-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-6` = this.cast("redyellowgreen-6")
+  def `redyellowgreen-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-7` = "redyellowgreen-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-7`]
   @scala.inline
-  def `redyellowgreen-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-7` = this.cast("redyellowgreen-7")
+  def `redyellowgreen-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-8` = "redyellowgreen-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-8`]
   @scala.inline
-  def `redyellowgreen-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-8` = this.cast("redyellowgreen-8")
+  def `redyellowgreen-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-9` = "redyellowgreen-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-9`]
   @scala.inline
-  def `redyellowgreen-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redyellowgreen-9` = this.cast("redyellowgreen-9")
+  def set1: typingsSlinky.vegaTypings.vegaTypingsStrings.set1 = "set1".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.set1]
   @scala.inline
-  def set1: typingsSlinky.vegaTypings.vegaTypingsStrings.set1 = this.cast("set1")
+  def set2: typingsSlinky.vegaTypings.vegaTypingsStrings.set2 = "set2".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.set2]
   @scala.inline
-  def set2: typingsSlinky.vegaTypings.vegaTypingsStrings.set2 = this.cast("set2")
+  def set3: typingsSlinky.vegaTypings.vegaTypingsStrings.set3 = "set3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.set3]
   @scala.inline
-  def set3: typingsSlinky.vegaTypings.vegaTypingsStrings.set3 = this.cast("set3")
+  def sinebow: typingsSlinky.vegaTypings.vegaTypingsStrings.sinebow = "sinebow".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.sinebow]
   @scala.inline
-  def sinebow: typingsSlinky.vegaTypings.vegaTypingsStrings.sinebow = this.cast("sinebow")
+  def spectral: typingsSlinky.vegaTypings.vegaTypingsStrings.spectral = "spectral".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.spectral]
   @scala.inline
-  def spectral: typingsSlinky.vegaTypings.vegaTypingsStrings.spectral = this.cast("spectral")
+  def `spectral-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-10` = "spectral-10".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-10`]
   @scala.inline
-  def `spectral-10`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-10` = this.cast("spectral-10")
+  def `spectral-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-11` = "spectral-11".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-11`]
   @scala.inline
-  def `spectral-11`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-11` = this.cast("spectral-11")
+  def `spectral-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-3` = "spectral-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-3`]
   @scala.inline
-  def `spectral-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-3` = this.cast("spectral-3")
+  def `spectral-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-4` = "spectral-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-4`]
   @scala.inline
-  def `spectral-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-4` = this.cast("spectral-4")
+  def `spectral-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-5` = "spectral-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-5`]
   @scala.inline
-  def `spectral-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-5` = this.cast("spectral-5")
+  def `spectral-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-6` = "spectral-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-6`]
   @scala.inline
-  def `spectral-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-6` = this.cast("spectral-6")
+  def `spectral-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-7` = "spectral-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-7`]
   @scala.inline
-  def `spectral-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-7` = this.cast("spectral-7")
+  def `spectral-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-8` = "spectral-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-8`]
   @scala.inline
-  def `spectral-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-8` = this.cast("spectral-8")
+  def `spectral-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-9` = "spectral-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-9`]
   @scala.inline
-  def `spectral-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`spectral-9` = this.cast("spectral-9")
+  def tableau10: typingsSlinky.vegaTypings.vegaTypingsStrings.tableau10 = "tableau10".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.tableau10]
   @scala.inline
-  def tableau10: typingsSlinky.vegaTypings.vegaTypingsStrings.tableau10 = this.cast("tableau10")
+  def tableau20: typingsSlinky.vegaTypings.vegaTypingsStrings.tableau20 = "tableau20".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.tableau20]
   @scala.inline
-  def tableau20: typingsSlinky.vegaTypings.vegaTypingsStrings.tableau20 = this.cast("tableau20")
+  def viridis: typingsSlinky.vegaTypings.vegaTypingsStrings.viridis = "viridis".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.viridis]
   @scala.inline
-  def viridis: typingsSlinky.vegaTypings.vegaTypingsStrings.viridis = this.cast("viridis")
+  def yellowgreen: typingsSlinky.vegaTypings.vegaTypingsStrings.yellowgreen = "yellowgreen".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.yellowgreen]
   @scala.inline
-  def yellowgreen: typingsSlinky.vegaTypings.vegaTypingsStrings.yellowgreen = this.cast("yellowgreen")
+  def `yellowgreen-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-3` = "yellowgreen-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-3`]
   @scala.inline
-  def `yellowgreen-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-3` = this.cast("yellowgreen-3")
+  def `yellowgreen-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-4` = "yellowgreen-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-4`]
   @scala.inline
-  def `yellowgreen-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-4` = this.cast("yellowgreen-4")
+  def `yellowgreen-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-5` = "yellowgreen-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-5`]
   @scala.inline
-  def `yellowgreen-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-5` = this.cast("yellowgreen-5")
+  def `yellowgreen-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-6` = "yellowgreen-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-6`]
   @scala.inline
-  def `yellowgreen-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-6` = this.cast("yellowgreen-6")
+  def `yellowgreen-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-7` = "yellowgreen-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-7`]
   @scala.inline
-  def `yellowgreen-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-7` = this.cast("yellowgreen-7")
+  def `yellowgreen-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-8` = "yellowgreen-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-8`]
   @scala.inline
-  def `yellowgreen-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-8` = this.cast("yellowgreen-8")
+  def `yellowgreen-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-9` = "yellowgreen-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-9`]
   @scala.inline
-  def `yellowgreen-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreen-9` = this.cast("yellowgreen-9")
+  def yellowgreenblue: typingsSlinky.vegaTypings.vegaTypingsStrings.yellowgreenblue = "yellowgreenblue".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.yellowgreenblue]
   @scala.inline
-  def yellowgreenblue: typingsSlinky.vegaTypings.vegaTypingsStrings.yellowgreenblue = this.cast("yellowgreenblue")
+  def `yellowgreenblue-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-3` = "yellowgreenblue-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-3`]
   @scala.inline
-  def `yellowgreenblue-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-3` = this.cast("yellowgreenblue-3")
+  def `yellowgreenblue-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-4` = "yellowgreenblue-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-4`]
   @scala.inline
-  def `yellowgreenblue-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-4` = this.cast("yellowgreenblue-4")
+  def `yellowgreenblue-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-5` = "yellowgreenblue-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-5`]
   @scala.inline
-  def `yellowgreenblue-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-5` = this.cast("yellowgreenblue-5")
+  def `yellowgreenblue-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-6` = "yellowgreenblue-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-6`]
   @scala.inline
-  def `yellowgreenblue-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-6` = this.cast("yellowgreenblue-6")
+  def `yellowgreenblue-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-7` = "yellowgreenblue-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-7`]
   @scala.inline
-  def `yellowgreenblue-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-7` = this.cast("yellowgreenblue-7")
+  def `yellowgreenblue-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-8` = "yellowgreenblue-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-8`]
   @scala.inline
-  def `yellowgreenblue-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-8` = this.cast("yellowgreenblue-8")
+  def `yellowgreenblue-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-9` = "yellowgreenblue-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-9`]
   @scala.inline
-  def `yellowgreenblue-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yellowgreenblue-9` = this.cast("yellowgreenblue-9")
+  def yelloworangebrown: typingsSlinky.vegaTypings.vegaTypingsStrings.yelloworangebrown = "yelloworangebrown".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.yelloworangebrown]
   @scala.inline
-  def yelloworangebrown: typingsSlinky.vegaTypings.vegaTypingsStrings.yelloworangebrown = this.cast("yelloworangebrown")
+  def `yelloworangebrown-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-3` = "yelloworangebrown-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-3`]
   @scala.inline
-  def `yelloworangebrown-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-3` = this.cast("yelloworangebrown-3")
+  def `yelloworangebrown-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-4` = "yelloworangebrown-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-4`]
   @scala.inline
-  def `yelloworangebrown-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-4` = this.cast("yelloworangebrown-4")
+  def `yelloworangebrown-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-5` = "yelloworangebrown-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-5`]
   @scala.inline
-  def `yelloworangebrown-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-5` = this.cast("yelloworangebrown-5")
+  def `yelloworangebrown-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-6` = "yelloworangebrown-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-6`]
   @scala.inline
-  def `yelloworangebrown-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-6` = this.cast("yelloworangebrown-6")
+  def `yelloworangebrown-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-7` = "yelloworangebrown-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-7`]
   @scala.inline
-  def `yelloworangebrown-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-7` = this.cast("yelloworangebrown-7")
+  def `yelloworangebrown-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-8` = "yelloworangebrown-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-8`]
   @scala.inline
-  def `yelloworangebrown-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-8` = this.cast("yelloworangebrown-8")
+  def `yelloworangebrown-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-9` = "yelloworangebrown-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-9`]
   @scala.inline
-  def `yelloworangebrown-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangebrown-9` = this.cast("yelloworangebrown-9")
+  def yelloworangered: typingsSlinky.vegaTypings.vegaTypingsStrings.yelloworangered = "yelloworangered".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.yelloworangered]
   @scala.inline
-  def yelloworangered: typingsSlinky.vegaTypings.vegaTypingsStrings.yelloworangered = this.cast("yelloworangered")
+  def `yelloworangered-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-3` = "yelloworangered-3".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-3`]
   @scala.inline
-  def `yelloworangered-3`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-3` = this.cast("yelloworangered-3")
+  def `yelloworangered-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-4` = "yelloworangered-4".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-4`]
   @scala.inline
-  def `yelloworangered-4`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-4` = this.cast("yelloworangered-4")
+  def `yelloworangered-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-5` = "yelloworangered-5".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-5`]
   @scala.inline
-  def `yelloworangered-5`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-5` = this.cast("yelloworangered-5")
+  def `yelloworangered-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-6` = "yelloworangered-6".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-6`]
   @scala.inline
-  def `yelloworangered-6`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-6` = this.cast("yelloworangered-6")
+  def `yelloworangered-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-7` = "yelloworangered-7".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-7`]
   @scala.inline
-  def `yelloworangered-7`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-7` = this.cast("yelloworangered-7")
+  def `yelloworangered-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-8` = "yelloworangered-8".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-8`]
   @scala.inline
-  def `yelloworangered-8`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-8` = this.cast("yelloworangered-8")
-  @scala.inline
-  def `yelloworangered-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-9` = this.cast("yelloworangered-9")
+  def `yelloworangered-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-9` = "yelloworangered-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`yelloworangered-9`]
 }
 

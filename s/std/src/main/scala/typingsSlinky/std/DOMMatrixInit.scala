@@ -4,72 +4,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DOMMatrixInit extends DOMMatrix2DInit {
-  var is2D: js.UndefOr[scala.Boolean] = js.undefined
-  var m13: js.UndefOr[Double] = js.undefined
-  var m14: js.UndefOr[Double] = js.undefined
-  var m23: js.UndefOr[Double] = js.undefined
-  var m24: js.UndefOr[Double] = js.undefined
-  var m31: js.UndefOr[Double] = js.undefined
-  var m32: js.UndefOr[Double] = js.undefined
-  var m33: js.UndefOr[Double] = js.undefined
-  var m34: js.UndefOr[Double] = js.undefined
-  var m43: js.UndefOr[Double] = js.undefined
-  var m44: js.UndefOr[Double] = js.undefined
+  var is2D: js.UndefOr[scala.Boolean] = js.native
+  var m13: js.UndefOr[Double] = js.native
+  var m14: js.UndefOr[Double] = js.native
+  var m23: js.UndefOr[Double] = js.native
+  var m24: js.UndefOr[Double] = js.native
+  var m31: js.UndefOr[Double] = js.native
+  var m32: js.UndefOr[Double] = js.native
+  var m33: js.UndefOr[Double] = js.native
+  var m34: js.UndefOr[Double] = js.native
+  var m43: js.UndefOr[Double] = js.native
+  var m44: js.UndefOr[Double] = js.native
 }
 
 object DOMMatrixInit {
   @scala.inline
-  def apply(
-    a: Int | Double = null,
-    b: Int | Double = null,
-    c: Int | Double = null,
-    d: Int | Double = null,
-    e: Int | Double = null,
-    f: Int | Double = null,
-    is2D: js.UndefOr[scala.Boolean] = js.undefined,
-    m11: Int | Double = null,
-    m12: Int | Double = null,
-    m13: Int | Double = null,
-    m14: Int | Double = null,
-    m21: Int | Double = null,
-    m22: Int | Double = null,
-    m23: Int | Double = null,
-    m24: Int | Double = null,
-    m31: Int | Double = null,
-    m32: Int | Double = null,
-    m33: Int | Double = null,
-    m34: Int | Double = null,
-    m41: Int | Double = null,
-    m42: Int | Double = null,
-    m43: Int | Double = null,
-    m44: Int | Double = null
-  ): DOMMatrixInit = {
+  def apply(): DOMMatrixInit = {
     val __obj = js.Dynamic.literal()
-    if (a != null) __obj.updateDynamic("a")(a.asInstanceOf[js.Any])
-    if (b != null) __obj.updateDynamic("b")(b.asInstanceOf[js.Any])
-    if (c != null) __obj.updateDynamic("c")(c.asInstanceOf[js.Any])
-    if (d != null) __obj.updateDynamic("d")(d.asInstanceOf[js.Any])
-    if (e != null) __obj.updateDynamic("e")(e.asInstanceOf[js.Any])
-    if (f != null) __obj.updateDynamic("f")(f.asInstanceOf[js.Any])
-    if (!js.isUndefined(is2D)) __obj.updateDynamic("is2D")(is2D.asInstanceOf[js.Any])
-    if (m11 != null) __obj.updateDynamic("m11")(m11.asInstanceOf[js.Any])
-    if (m12 != null) __obj.updateDynamic("m12")(m12.asInstanceOf[js.Any])
-    if (m13 != null) __obj.updateDynamic("m13")(m13.asInstanceOf[js.Any])
-    if (m14 != null) __obj.updateDynamic("m14")(m14.asInstanceOf[js.Any])
-    if (m21 != null) __obj.updateDynamic("m21")(m21.asInstanceOf[js.Any])
-    if (m22 != null) __obj.updateDynamic("m22")(m22.asInstanceOf[js.Any])
-    if (m23 != null) __obj.updateDynamic("m23")(m23.asInstanceOf[js.Any])
-    if (m24 != null) __obj.updateDynamic("m24")(m24.asInstanceOf[js.Any])
-    if (m31 != null) __obj.updateDynamic("m31")(m31.asInstanceOf[js.Any])
-    if (m32 != null) __obj.updateDynamic("m32")(m32.asInstanceOf[js.Any])
-    if (m33 != null) __obj.updateDynamic("m33")(m33.asInstanceOf[js.Any])
-    if (m34 != null) __obj.updateDynamic("m34")(m34.asInstanceOf[js.Any])
-    if (m41 != null) __obj.updateDynamic("m41")(m41.asInstanceOf[js.Any])
-    if (m42 != null) __obj.updateDynamic("m42")(m42.asInstanceOf[js.Any])
-    if (m43 != null) __obj.updateDynamic("m43")(m43.asInstanceOf[js.Any])
-    if (m44 != null) __obj.updateDynamic("m44")(m44.asInstanceOf[js.Any])
     __obj.asInstanceOf[DOMMatrixInit]
   }
+  @scala.inline
+  implicit class DOMMatrixInitOps[Self <: DOMMatrixInit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIs2D(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is2D")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIs2D: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is2D")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withM13(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m13")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutM13: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m13")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withM14(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m14")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutM14: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m14")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withM23(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m23")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutM23: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m23")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withM24(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m24")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutM24: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m24")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withM31(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m31")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutM31: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m31")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withM32(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m32")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutM32: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m32")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withM33(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m33")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutM33: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m33")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withM34(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m34")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutM34: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m34")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withM43(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m43")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutM43: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m43")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withM44(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m44")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutM44: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m44")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

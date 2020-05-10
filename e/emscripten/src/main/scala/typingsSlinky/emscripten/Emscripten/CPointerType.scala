@@ -17,20 +17,18 @@ trait CPointerType extends js.Object
 
 object CPointerType {
   @scala.inline
-  def Asterisk: typingsSlinky.emscripten.emscriptenStrings.Asterisk = this.cast("*")
+  def Asterisk: typingsSlinky.emscripten.emscriptenStrings.Asterisk = "*".asInstanceOf[typingsSlinky.emscripten.emscriptenStrings.Asterisk]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def doubleAsterisk: typingsSlinky.emscripten.emscriptenStrings.doubleAsterisk = "double*".asInstanceOf[typingsSlinky.emscripten.emscriptenStrings.doubleAsterisk]
   @scala.inline
-  def doubleAsterisk: typingsSlinky.emscripten.emscriptenStrings.doubleAsterisk = this.cast("double*")
+  def floatAsterisk: typingsSlinky.emscripten.emscriptenStrings.floatAsterisk = "float*".asInstanceOf[typingsSlinky.emscripten.emscriptenStrings.floatAsterisk]
   @scala.inline
-  def floatAsterisk: typingsSlinky.emscripten.emscriptenStrings.floatAsterisk = this.cast("float*")
+  def i16Asterisk: typingsSlinky.emscripten.emscriptenStrings.i16Asterisk = "i16*".asInstanceOf[typingsSlinky.emscripten.emscriptenStrings.i16Asterisk]
   @scala.inline
-  def i16Asterisk: typingsSlinky.emscripten.emscriptenStrings.i16Asterisk = this.cast("i16*")
+  def i32Asterisk: typingsSlinky.emscripten.emscriptenStrings.i32Asterisk = "i32*".asInstanceOf[typingsSlinky.emscripten.emscriptenStrings.i32Asterisk]
   @scala.inline
-  def i32Asterisk: typingsSlinky.emscripten.emscriptenStrings.i32Asterisk = this.cast("i32*")
+  def i64Asterisk: typingsSlinky.emscripten.emscriptenStrings.i64Asterisk = "i64*".asInstanceOf[typingsSlinky.emscripten.emscriptenStrings.i64Asterisk]
   @scala.inline
-  def i64Asterisk: typingsSlinky.emscripten.emscriptenStrings.i64Asterisk = this.cast("i64*")
-  @scala.inline
-  def i8Asterisk: typingsSlinky.emscripten.emscriptenStrings.i8Asterisk = this.cast("i8*")
+  def i8Asterisk: typingsSlinky.emscripten.emscriptenStrings.i8Asterisk = "i8*".asInstanceOf[typingsSlinky.emscripten.emscriptenStrings.i8Asterisk]
 }
 

@@ -30,17 +30,59 @@ trait ImportTerminologyRequest extends js.Object {
 
 object ImportTerminologyRequest {
   @scala.inline
-  def apply(
-    MergeStrategy: MergeStrategy,
-    Name: ResourceName,
-    TerminologyData: TerminologyData,
-    Description: Description = null,
-    EncryptionKey: EncryptionKey = null
-  ): ImportTerminologyRequest = {
+  def apply(MergeStrategy: MergeStrategy, Name: ResourceName, TerminologyData: TerminologyData): ImportTerminologyRequest = {
     val __obj = js.Dynamic.literal(MergeStrategy = MergeStrategy.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], TerminologyData = TerminologyData.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (EncryptionKey != null) __obj.updateDynamic("EncryptionKey")(EncryptionKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportTerminologyRequest]
   }
+  @scala.inline
+  implicit class ImportTerminologyRequestOps[Self <: ImportTerminologyRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMergeStrategy(value: MergeStrategy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MergeStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTerminologyData(value: TerminologyData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminologyData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptionKey(value: EncryptionKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionKey")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

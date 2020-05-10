@@ -3,7 +3,6 @@ package typingsSlinky.expect.typesMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.expect.AnonExpected
 import typingsSlinky.std.Record
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,6 +24,6 @@ trait Expect extends /* id */ StringDictionary[AsymmetricMatcher] {
   def setState(arg0: js.Any): Unit = js.native
   def stringContaining(expected: String): AsymmetricMatcher = js.native
   def stringMatching(expected: String): AsymmetricMatcher = js.native
-  def stringMatching(expected: RegExp): AsymmetricMatcher = js.native
+  def stringMatching(expected: js.RegExp): AsymmetricMatcher = js.native
 }
 

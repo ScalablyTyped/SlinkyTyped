@@ -13,12 +13,10 @@ trait date extends js.Object
 
 object date {
   @scala.inline
-  def D: typingsSlinky.momentMini.momentMiniStrings.D = this.cast("D")
+  def D: typingsSlinky.momentMini.momentMiniStrings.D = "D".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.D]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def date: typingsSlinky.momentMini.momentMiniStrings.date = "date".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.date]
   @scala.inline
-  def date: typingsSlinky.momentMini.momentMiniStrings.date = this.cast("date")
-  @scala.inline
-  def dates: typingsSlinky.momentMini.momentMiniStrings.dates = this.cast("dates")
+  def dates: typingsSlinky.momentMini.momentMiniStrings.dates = "dates".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.dates]
 }
 

@@ -1,16 +1,16 @@
 package typingsSlinky.skatejs.typesMod
 
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.EventListenerOptions
+import org.scalajs.dom.raw.Node
 import typingsSlinky.std.AddEventListenerOptions
-import typingsSlinky.std.Element
-import typingsSlinky.std.EventListenerOptions
 import typingsSlinky.std.EventListenerOrEventListenerObject
-import typingsSlinky.std.Node
 import typingsSlinky.std.ShadowRoot
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.std.EventTarget because Already inherited
 - typingsSlinky.std.Node because Already inherited
 - typingsSlinky.std.Slotable because Already inherited

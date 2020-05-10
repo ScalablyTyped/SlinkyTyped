@@ -66,38 +66,185 @@ trait BaseConfigurationItem extends js.Object {
 
 object BaseConfigurationItem {
   @scala.inline
-  def apply(
-    accountId: AccountId = null,
-    arn: ARN = null,
-    availabilityZone: AvailabilityZone = null,
-    awsRegion: AwsRegion = null,
-    configuration: Configuration = null,
-    configurationItemCaptureTime: js.Date = null,
-    configurationItemStatus: ConfigurationItemStatus = null,
-    configurationStateId: ConfigurationStateId = null,
-    resourceCreationTime: js.Date = null,
-    resourceId: ResourceId = null,
-    resourceName: ResourceName = null,
-    resourceType: ResourceType = null,
-    supplementaryConfiguration: SupplementaryConfiguration = null,
-    version: Version = null
-  ): BaseConfigurationItem = {
+  def apply(): BaseConfigurationItem = {
     val __obj = js.Dynamic.literal()
-    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
-    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
-    if (availabilityZone != null) __obj.updateDynamic("availabilityZone")(availabilityZone.asInstanceOf[js.Any])
-    if (awsRegion != null) __obj.updateDynamic("awsRegion")(awsRegion.asInstanceOf[js.Any])
-    if (configuration != null) __obj.updateDynamic("configuration")(configuration.asInstanceOf[js.Any])
-    if (configurationItemCaptureTime != null) __obj.updateDynamic("configurationItemCaptureTime")(configurationItemCaptureTime.asInstanceOf[js.Any])
-    if (configurationItemStatus != null) __obj.updateDynamic("configurationItemStatus")(configurationItemStatus.asInstanceOf[js.Any])
-    if (configurationStateId != null) __obj.updateDynamic("configurationStateId")(configurationStateId.asInstanceOf[js.Any])
-    if (resourceCreationTime != null) __obj.updateDynamic("resourceCreationTime")(resourceCreationTime.asInstanceOf[js.Any])
-    if (resourceId != null) __obj.updateDynamic("resourceId")(resourceId.asInstanceOf[js.Any])
-    if (resourceName != null) __obj.updateDynamic("resourceName")(resourceName.asInstanceOf[js.Any])
-    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
-    if (supplementaryConfiguration != null) __obj.updateDynamic("supplementaryConfiguration")(supplementaryConfiguration.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseConfigurationItem]
   }
+  @scala.inline
+  implicit class BaseConfigurationItemOps[Self <: BaseConfigurationItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: AccountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArn(value: ARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailabilityZone(value: AvailabilityZone): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsRegion(value: AwsRegion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsRegion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfiguration(value: Configuration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigurationItemCaptureTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationItemCaptureTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigurationItemCaptureTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationItemCaptureTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigurationItemStatus(value: ConfigurationItemStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationItemStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigurationItemStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationItemStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigurationStateId(value: ConfigurationStateId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationStateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigurationStateId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationStateId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceCreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceCreationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceType(value: ResourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupplementaryConfiguration(value: SupplementaryConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supplementaryConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupplementaryConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supplementaryConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: Version): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

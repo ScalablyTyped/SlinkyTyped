@@ -5,10 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MSGesture extends js.Object {
-  var target: org.scalajs.dom.raw.Element
-  def addPointer(pointerId: Double): Unit
-  def stop(): Unit
+  var target: org.scalajs.dom.raw.Element = js.native
+  def addPointer(pointerId: Double): Unit = js.native
+  def stop(): Unit = js.native
 }
 
 @JSGlobal("MSGesture")

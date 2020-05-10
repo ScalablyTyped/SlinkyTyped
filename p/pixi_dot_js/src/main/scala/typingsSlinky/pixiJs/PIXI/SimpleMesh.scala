@@ -16,23 +16,19 @@ import scala.scalajs.js.annotation._
 @js.native
 class SimpleMesh () extends Mesh {
   def this(texture: Texture) = this()
-  def this(texture: Texture, vertices: scala.scalajs.js.typedarray.Float32Array) = this()
+  def this(texture: Texture, vertices: js.typedarray.Float32Array) = this()
+  def this(texture: Texture, vertices: js.typedarray.Float32Array, uvs: js.typedarray.Float32Array) = this()
   def this(
     texture: Texture,
-    vertices: scala.scalajs.js.typedarray.Float32Array,
-    uvs: scala.scalajs.js.typedarray.Float32Array
+    vertices: js.typedarray.Float32Array,
+    uvs: js.typedarray.Float32Array,
+    indices: js.typedarray.Uint16Array
   ) = this()
   def this(
     texture: Texture,
-    vertices: scala.scalajs.js.typedarray.Float32Array,
-    uvs: scala.scalajs.js.typedarray.Float32Array,
-    indices: scala.scalajs.js.typedarray.Uint16Array
-  ) = this()
-  def this(
-    texture: Texture,
-    vertices: scala.scalajs.js.typedarray.Float32Array,
-    uvs: scala.scalajs.js.typedarray.Float32Array,
-    indices: scala.scalajs.js.typedarray.Uint16Array,
+    vertices: js.typedarray.Float32Array,
+    uvs: js.typedarray.Float32Array,
+    indices: js.typedarray.Uint16Array,
     drawMode: Double
   ) = this()
   /**
@@ -44,6 +40,6 @@ class SimpleMesh () extends Mesh {
     * Collection of vertices data.
     * @member {Float32Array}
     */
-  var vertices: scala.scalajs.js.typedarray.Float32Array = js.native
+  var vertices: js.typedarray.Float32Array = js.native
 }
 

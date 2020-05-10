@@ -46,25 +46,107 @@ trait NewPublicVirtualInterface extends js.Object {
 
 object NewPublicVirtualInterface {
   @scala.inline
-  def apply(
-    asn: ASN,
-    virtualInterfaceName: VirtualInterfaceName,
-    vlan: VLAN,
-    addressFamily: AddressFamily = null,
-    amazonAddress: AmazonAddress = null,
-    authKey: BGPAuthKey = null,
-    customerAddress: CustomerAddress = null,
-    routeFilterPrefixes: RouteFilterPrefixList = null,
-    tags: TagList = null
-  ): NewPublicVirtualInterface = {
+  def apply(asn: ASN, virtualInterfaceName: VirtualInterfaceName, vlan: VLAN): NewPublicVirtualInterface = {
     val __obj = js.Dynamic.literal(asn = asn.asInstanceOf[js.Any], virtualInterfaceName = virtualInterfaceName.asInstanceOf[js.Any], vlan = vlan.asInstanceOf[js.Any])
-    if (addressFamily != null) __obj.updateDynamic("addressFamily")(addressFamily.asInstanceOf[js.Any])
-    if (amazonAddress != null) __obj.updateDynamic("amazonAddress")(amazonAddress.asInstanceOf[js.Any])
-    if (authKey != null) __obj.updateDynamic("authKey")(authKey.asInstanceOf[js.Any])
-    if (customerAddress != null) __obj.updateDynamic("customerAddress")(customerAddress.asInstanceOf[js.Any])
-    if (routeFilterPrefixes != null) __obj.updateDynamic("routeFilterPrefixes")(routeFilterPrefixes.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[NewPublicVirtualInterface]
   }
+  @scala.inline
+  implicit class NewPublicVirtualInterfaceOps[Self <: NewPublicVirtualInterface] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAsn(value: ASN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVirtualInterfaceName(value: VirtualInterfaceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualInterfaceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVlan(value: VLAN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vlan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddressFamily(value: AddressFamily): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddressFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmazonAddress(value: AmazonAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amazonAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmazonAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amazonAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthKey(value: BGPAuthKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomerAddress(value: CustomerAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomerAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRouteFilterPrefixes(value: RouteFilterPrefixList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routeFilterPrefixes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRouteFilterPrefixes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routeFilterPrefixes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

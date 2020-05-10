@@ -20,8 +20,27 @@ object GetDeploymentInstanceInput {
   @scala.inline
   def apply(deploymentId: DeploymentId, instanceId: InstanceId): GetDeploymentInstanceInput = {
     val __obj = js.Dynamic.literal(deploymentId = deploymentId.asInstanceOf[js.Any], instanceId = instanceId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetDeploymentInstanceInput]
   }
+  @scala.inline
+  implicit class GetDeploymentInstanceInputOps[Self <: GetDeploymentInstanceInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeploymentId(value: DeploymentId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstanceId(value: InstanceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

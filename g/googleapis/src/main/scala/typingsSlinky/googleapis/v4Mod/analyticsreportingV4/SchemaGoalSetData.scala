@@ -17,10 +17,29 @@ trait SchemaGoalSetData extends js.Object {
 
 object SchemaGoalSetData {
   @scala.inline
-  def apply(goals: js.Array[SchemaGoalData] = null): SchemaGoalSetData = {
+  def apply(): SchemaGoalSetData = {
     val __obj = js.Dynamic.literal()
-    if (goals != null) __obj.updateDynamic("goals")(goals.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoalSetData]
   }
+  @scala.inline
+  implicit class SchemaGoalSetDataOps[Self <: SchemaGoalSetData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGoals(value: js.Array[SchemaGoalData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goals")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

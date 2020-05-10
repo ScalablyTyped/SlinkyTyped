@@ -30,20 +30,77 @@ trait GenericRevisionInfo extends js.Object {
 
 object GenericRevisionInfo {
   @scala.inline
-  def apply(
-    deploymentGroups: DeploymentGroupsList = null,
-    description: Description = null,
-    firstUsedTime: js.Date = null,
-    lastUsedTime: js.Date = null,
-    registerTime: js.Date = null
-  ): GenericRevisionInfo = {
+  def apply(): GenericRevisionInfo = {
     val __obj = js.Dynamic.literal()
-    if (deploymentGroups != null) __obj.updateDynamic("deploymentGroups")(deploymentGroups.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (firstUsedTime != null) __obj.updateDynamic("firstUsedTime")(firstUsedTime.asInstanceOf[js.Any])
-    if (lastUsedTime != null) __obj.updateDynamic("lastUsedTime")(lastUsedTime.asInstanceOf[js.Any])
-    if (registerTime != null) __obj.updateDynamic("registerTime")(registerTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenericRevisionInfo]
   }
+  @scala.inline
+  implicit class GenericRevisionInfoOps[Self <: GenericRevisionInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeploymentGroups(value: DeploymentGroupsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeploymentGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstUsedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstUsedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstUsedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstUsedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUsedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUsedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUsedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUsedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegisterTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registerTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegisterTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registerTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

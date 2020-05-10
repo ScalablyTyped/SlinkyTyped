@@ -6,19 +6,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {[ K in ag-grid.ag-grid/dist/lib/gridPanel/gridPanel.RowContainerComponentNames ]: ag-grid.ag-grid/dist/lib/rendering/rowContainerComponent.RowContainerComponent} */
+@js.native
 trait RowContainerComponents extends js.Object {
-  var body: RowContainerComponent
-  var floatingBottom: RowContainerComponent
-  var floatingBottomFullWith: RowContainerComponent
-  var floatingBottomPinnedLeft: RowContainerComponent
-  var floatingBottomPinnedRight: RowContainerComponent
-  var floatingTop: RowContainerComponent
-  var floatingTopFullWidth: RowContainerComponent
-  var floatingTopPinnedLeft: RowContainerComponent
-  var floatingTopPinnedRight: RowContainerComponent
-  var fullWidth: RowContainerComponent
-  var pinnedLeft: RowContainerComponent
-  var pinnedRight: RowContainerComponent
+  var body: RowContainerComponent = js.native
+  var floatingBottom: RowContainerComponent = js.native
+  var floatingBottomFullWith: RowContainerComponent = js.native
+  var floatingBottomPinnedLeft: RowContainerComponent = js.native
+  var floatingBottomPinnedRight: RowContainerComponent = js.native
+  var floatingTop: RowContainerComponent = js.native
+  var floatingTopFullWidth: RowContainerComponent = js.native
+  var floatingTopPinnedLeft: RowContainerComponent = js.native
+  var floatingTopPinnedRight: RowContainerComponent = js.native
+  var fullWidth: RowContainerComponent = js.native
+  var pinnedLeft: RowContainerComponent = js.native
+  var pinnedRight: RowContainerComponent = js.native
 }
 
 object RowContainerComponents {
@@ -38,8 +39,87 @@ object RowContainerComponents {
     pinnedRight: RowContainerComponent
   ): RowContainerComponents = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], floatingBottom = floatingBottom.asInstanceOf[js.Any], floatingBottomFullWith = floatingBottomFullWith.asInstanceOf[js.Any], floatingBottomPinnedLeft = floatingBottomPinnedLeft.asInstanceOf[js.Any], floatingBottomPinnedRight = floatingBottomPinnedRight.asInstanceOf[js.Any], floatingTop = floatingTop.asInstanceOf[js.Any], floatingTopFullWidth = floatingTopFullWidth.asInstanceOf[js.Any], floatingTopPinnedLeft = floatingTopPinnedLeft.asInstanceOf[js.Any], floatingTopPinnedRight = floatingTopPinnedRight.asInstanceOf[js.Any], fullWidth = fullWidth.asInstanceOf[js.Any], pinnedLeft = pinnedLeft.asInstanceOf[js.Any], pinnedRight = pinnedRight.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[RowContainerComponents]
   }
+  @scala.inline
+  implicit class RowContainerComponentsOps[Self <: RowContainerComponents] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBody(value: RowContainerComponent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFloatingBottom(value: RowContainerComponent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFloatingBottomFullWith(value: RowContainerComponent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingBottomFullWith")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFloatingBottomPinnedLeft(value: RowContainerComponent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingBottomPinnedLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFloatingBottomPinnedRight(value: RowContainerComponent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingBottomPinnedRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFloatingTop(value: RowContainerComponent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFloatingTopFullWidth(value: RowContainerComponent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingTopFullWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFloatingTopPinnedLeft(value: RowContainerComponent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingTopPinnedLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFloatingTopPinnedRight(value: RowContainerComponent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingTopPinnedRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFullWidth(value: RowContainerComponent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPinnedLeft(value: RowContainerComponent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pinnedLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPinnedRight(value: RowContainerComponent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pinnedRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

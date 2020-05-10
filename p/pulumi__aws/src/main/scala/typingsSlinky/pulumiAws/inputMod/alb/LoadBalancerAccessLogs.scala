@@ -23,11 +23,47 @@ trait LoadBalancerAccessLogs extends js.Object {
 
 object LoadBalancerAccessLogs {
   @scala.inline
-  def apply(bucket: Input[String], enabled: Input[Boolean] = null, prefix: Input[String] = null): LoadBalancerAccessLogs = {
+  def apply(bucket: Input[String]): LoadBalancerAccessLogs = {
     val __obj = js.Dynamic.literal(bucket = bucket.asInstanceOf[js.Any])
-    if (enabled != null) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoadBalancerAccessLogs]
   }
+  @scala.inline
+  implicit class LoadBalancerAccessLogsOps[Self <: LoadBalancerAccessLogs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucket(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

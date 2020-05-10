@@ -7,16 +7,25 @@ import scala.scalajs.js.annotation._
 
 /** HTMLOptionsCollection is an interface representing a collection of HTML option elements (in document order) and offers methods and properties for traversing the list as well as optionally altering its items. This type is returned solely by the "options" property of select. */
 @js.native
-trait HTMLOptionsCollection extends HTMLCollectionOf[HTMLOptionElement] {
+trait HTMLOptionsCollection
+  extends HTMLCollectionOf[org.scalajs.dom.raw.HTMLOptionElement] {
+  /**
+    * Returns the number of elements in the collection.
+    * 
+    * When set to a smaller number, truncates the number of option elements in the corresponding container.
+    * 
+    * When set to a greater number, adds new blank option elements to that container.
+    */
+  var length: Double = js.native
   /**
     * Returns the index of the first selected item, if any, or −1 if there is no selected item.
     * 
     * Can be set, to change the selection.
     */
   var selectedIndex: Double = js.native
-  def add(element: HTMLOptGroupElement): Unit = js.native
-  def add(element: HTMLOptGroupElement, before: Double): Unit = js.native
-  def add(element: HTMLOptGroupElement, before: HTMLElement): Unit = js.native
+  def add(element: org.scalajs.dom.raw.HTMLOptGroupElement): Unit = js.native
+  def add(element: org.scalajs.dom.raw.HTMLOptGroupElement, before: Double): Unit = js.native
+  def add(element: org.scalajs.dom.raw.HTMLOptGroupElement, before: org.scalajs.dom.raw.HTMLElement): Unit = js.native
   /**
     * Inserts element before the node given by before.
     * 
@@ -26,9 +35,9 @@ trait HTMLOptionsCollection extends HTMLCollectionOf[HTMLOptionElement] {
     * 
     * This method will throw a "HierarchyRequestError" DOMException if element is an ancestor of the element into which it is to be inserted.
     */
-  def add(element: HTMLOptionElement): Unit = js.native
-  def add(element: HTMLOptionElement, before: Double): Unit = js.native
-  def add(element: HTMLOptionElement, before: HTMLElement): Unit = js.native
+  def add(element: org.scalajs.dom.raw.HTMLOptionElement): Unit = js.native
+  def add(element: org.scalajs.dom.raw.HTMLOptionElement, before: Double): Unit = js.native
+  def add(element: org.scalajs.dom.raw.HTMLOptionElement, before: org.scalajs.dom.raw.HTMLElement): Unit = js.native
   /**
     * Removes the item with index index from the collection.
     */

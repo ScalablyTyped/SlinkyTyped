@@ -4,27 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IDBVersionChangeEventInit extends EventInit {
-  var newVersion: js.UndefOr[Double | Null] = js.undefined
-  var oldVersion: js.UndefOr[Double] = js.undefined
+  var newVersion: js.UndefOr[Double | Null] = js.native
+  var oldVersion: js.UndefOr[Double] = js.native
 }
 
 object IDBVersionChangeEventInit {
   @scala.inline
-  def apply(
-    bubbles: js.UndefOr[scala.Boolean] = js.undefined,
-    cancelable: js.UndefOr[scala.Boolean] = js.undefined,
-    composed: js.UndefOr[scala.Boolean] = js.undefined,
-    newVersion: Int | Double = null,
-    oldVersion: Int | Double = null
-  ): IDBVersionChangeEventInit = {
+  def apply(): IDBVersionChangeEventInit = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.asInstanceOf[js.Any])
-    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.asInstanceOf[js.Any])
-    if (!js.isUndefined(composed)) __obj.updateDynamic("composed")(composed.asInstanceOf[js.Any])
-    if (newVersion != null) __obj.updateDynamic("newVersion")(newVersion.asInstanceOf[js.Any])
-    if (oldVersion != null) __obj.updateDynamic("oldVersion")(oldVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDBVersionChangeEventInit]
   }
+  @scala.inline
+  implicit class IDBVersionChangeEventInitOps[Self <: IDBVersionChangeEventInit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNewVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewVersionNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newVersion")(null)
+        ret
+    }
+    @scala.inline
+    def withOldVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOldVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,10 +18,35 @@ trait RespondActivityTaskCanceledInput extends js.Object {
 
 object RespondActivityTaskCanceledInput {
   @scala.inline
-  def apply(taskToken: TaskToken, details: Data = null): RespondActivityTaskCanceledInput = {
+  def apply(taskToken: TaskToken): RespondActivityTaskCanceledInput = {
     val __obj = js.Dynamic.literal(taskToken = taskToken.asInstanceOf[js.Any])
-    if (details != null) __obj.updateDynamic("details")(details.asInstanceOf[js.Any])
     __obj.asInstanceOf[RespondActivityTaskCanceledInput]
   }
+  @scala.inline
+  implicit class RespondActivityTaskCanceledInputOps[Self <: RespondActivityTaskCanceledInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTaskToken(value: TaskToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDetails(value: Data): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,18 +26,65 @@ trait HlsInputSettings extends js.Object {
 
 object HlsInputSettings {
   @scala.inline
-  def apply(
-    Bandwidth: Int | Double = null,
-    BufferSegments: Int | Double = null,
-    Retries: Int | Double = null,
-    RetryInterval: Int | Double = null
-  ): HlsInputSettings = {
+  def apply(): HlsInputSettings = {
     val __obj = js.Dynamic.literal()
-    if (Bandwidth != null) __obj.updateDynamic("Bandwidth")(Bandwidth.asInstanceOf[js.Any])
-    if (BufferSegments != null) __obj.updateDynamic("BufferSegments")(BufferSegments.asInstanceOf[js.Any])
-    if (Retries != null) __obj.updateDynamic("Retries")(Retries.asInstanceOf[js.Any])
-    if (RetryInterval != null) __obj.updateDynamic("RetryInterval")(RetryInterval.asInstanceOf[js.Any])
     __obj.asInstanceOf[HlsInputSettings]
   }
+  @scala.inline
+  implicit class HlsInputSettingsOps[Self <: HlsInputSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBandwidth(value: integerMin0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bandwidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBandwidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bandwidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBufferSegments(value: integerMin0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BufferSegments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBufferSegments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BufferSegments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetries(value: integerMin0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Retries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Retries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetryInterval(value: integerMin0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RetryInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetryInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RetryInterval")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

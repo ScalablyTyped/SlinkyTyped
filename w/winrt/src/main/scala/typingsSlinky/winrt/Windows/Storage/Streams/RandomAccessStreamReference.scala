@@ -1,6 +1,5 @@
 package typingsSlinky.winrt.Windows.Storage.Streams
 
-import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
 import typingsSlinky.winrt.Windows.Foundation.Uri
 import typingsSlinky.winrt.Windows.Storage.IStorageFile
 import scala.scalajs.js
@@ -9,10 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.Storage.Streams.RandomAccessStreamReference")
 @js.native
-class RandomAccessStreamReference () extends IRandomAccessStreamReference {
-  /* CompleteClass */
-  override def openReadAsync(): IAsyncOperation[IRandomAccessStreamWithContentType] = js.native
-}
+class RandomAccessStreamReference () extends IRandomAccessStreamReference
 
 /* static members */
 @JSGlobal("Windows.Storage.Streams.RandomAccessStreamReference")

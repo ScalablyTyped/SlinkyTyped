@@ -18,5 +18,6 @@ import scala.scalajs.js.annotation._
   * "dj_ipad" when running on iPad.
   *
   */
+@js.native
 trait uacss extends js.Object
 

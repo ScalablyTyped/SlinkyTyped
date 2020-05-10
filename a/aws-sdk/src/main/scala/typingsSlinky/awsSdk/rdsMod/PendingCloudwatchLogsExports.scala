@@ -18,11 +18,41 @@ trait PendingCloudwatchLogsExports extends js.Object {
 
 object PendingCloudwatchLogsExports {
   @scala.inline
-  def apply(LogTypesToDisable: LogTypeList = null, LogTypesToEnable: LogTypeList = null): PendingCloudwatchLogsExports = {
+  def apply(): PendingCloudwatchLogsExports = {
     val __obj = js.Dynamic.literal()
-    if (LogTypesToDisable != null) __obj.updateDynamic("LogTypesToDisable")(LogTypesToDisable.asInstanceOf[js.Any])
-    if (LogTypesToEnable != null) __obj.updateDynamic("LogTypesToEnable")(LogTypesToEnable.asInstanceOf[js.Any])
     __obj.asInstanceOf[PendingCloudwatchLogsExports]
   }
+  @scala.inline
+  implicit class PendingCloudwatchLogsExportsOps[Self <: PendingCloudwatchLogsExports] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLogTypesToDisable(value: LogTypeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogTypesToDisable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogTypesToDisable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogTypesToDisable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogTypesToEnable(value: LogTypeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogTypesToEnable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogTypesToEnable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogTypesToEnable")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,12 +1,9 @@
 package typingsSlinky.jupyterlabNotebook
 
 import typingsSlinky.jupyterlabApputils.mod.WidgetTracker
-import typingsSlinky.jupyterlabCells.mod.Cell
 import typingsSlinky.jupyterlabCoreutils.interfacesMod.IRestorable.IOptions
 import typingsSlinky.jupyterlabNotebook.panelMod.NotebookPanel
 import typingsSlinky.jupyterlabNotebook.tokensMod.INotebookTracker
-import typingsSlinky.phosphorSignaling.mod.ISignal
-import typingsSlinky.phosphorWidgets.mod.Widget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,47 +21,6 @@ object trackerMod extends js.Object {
     var _onSelectionChanged: js.Any = js.native
     var _selectionChanged: js.Any = js.native
     /**
-      * The currently focused cell.
-      *
-      * #### Notes
-      * If there is no cell with the focus, then this value is `null`.
-      */
-    /* CompleteClass */
-    override val activeCell: Cell = js.native
-    /**
-      * A signal emitted when the current active cell changes.
-      *
-      * #### Notes
-      * If there is no cell with the focus, then `null` will be emitted.
-      */
-    /* CompleteClass */
-    override val activeCellChanged: ISignal[this.type, Cell] = js.native
-    /**
-      * A signal emitted when the current instance changes.
-      *
-      * #### Notes
-      * If the last instance being tracked is disposed, `null` will be emitted.
-      */
-    /* InferMemberOverrides */
-    override val currentChanged: ISignal[this.type, NotebookPanel | Null] = js.native
-    /**
-      * The current widget is the most recently focused or added widget.
-      *
-      * #### Notes
-      * It is the most recently focused widget, or the most recently added
-      * widget if no widget has taken focus.
-      */
-    /* InferMemberOverrides */
-    override val currentWidget: NotebookPanel | Null = js.native
-    /**
-      * Test whether the object has been disposed.
-      *
-      * #### Notes
-      * This property is always safe to access.
-      */
-    /* InferMemberOverrides */
-    override val isDisposed: Boolean = js.native
-    /**
       * A promise that is resolved when the widget tracker has been
       * restored from a serialized state.
       *
@@ -78,26 +34,6 @@ object trackerMod extends js.Object {
     /* InferMemberOverrides */
     override val restored: js.Promise[Unit] with js.Promise[js.Any] = js.native
     /**
-      * A signal emitted when the selection state changes.
-      */
-    /* CompleteClass */
-    override val selectionChanged: ISignal[this.type, Unit] = js.native
-    /**
-      * The number of instances held by the tracker.
-      */
-    /* InferMemberOverrides */
-    override val size: Double = js.native
-    /**
-      * A signal emitted when a widget is added.
-      */
-    /* InferMemberOverrides */
-    override val widgetAdded: ISignal[this.type, NotebookPanel] = js.native
-    /**
-      * A signal emitted when a widget is updated.
-      */
-    /* InferMemberOverrides */
-    override val widgetUpdated: ISignal[this.type, NotebookPanel] = js.native
-    /**
       * Add a new widget to the tracker.
       *
       * @param widget - The widget being added.
@@ -110,59 +46,6 @@ object trackerMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def add(widget: NotebookPanel): js.Promise[Unit] = js.native
-    /**
-      * Dispose of the resources held by the object.
-      *
-      * #### Notes
-      * If the object's `dispose` method is called more than once, all
-      * calls made after the first will be a no-op.
-      *
-      * #### Undefined Behavior
-      * It is undefined behavior to use any functionality of the object
-      * after it has been disposed unless otherwise explicitly noted.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def dispose(): Unit = js.native
-    /**
-      * Filter the instances in the tracker based on a predicate.
-      *
-      * @param fn - The function by which to filter.
-      */
-    /* InferMemberOverrides */
-    override def filter(fn: js.Function1[NotebookPanel, Boolean]): js.Array[NotebookPanel] = js.native
-    /**
-      * Find the first instance in the tracker that satisfies a filter function.
-      *
-      * @param - fn The filter function to call on each instance.
-      *
-      * #### Notes
-      * If nothing is found, the value returned is `undefined`.
-      */
-    /* InferMemberOverrides */
-    override def find(fn: js.Function1[NotebookPanel, Boolean]): js.UndefOr[NotebookPanel] = js.native
-    /**
-      * Iterate through each instance in the tracker.
-      *
-      * @param fn - The function to call on each instance.
-      */
-    /* InferMemberOverrides */
-    override def forEach(fn: js.Function1[NotebookPanel, Unit]): Unit = js.native
-    /**
-      * Check if this tracker has the specified instance.
-      *
-      * @param obj - The object whose existence is being checked.
-      */
-    /* InferMemberOverrides */
-    override def has(obj: Widget): Boolean = js.native
-    /**
-      * Inject an instance into the widget tracker without the tracker handling
-      * its restoration lifecycle.
-      *
-      * @param obj - The instance to inject into the tracker.
-      */
-    /* InferMemberOverrides */
-    override def inject(obj: NotebookPanel): Unit = js.native
     /* InferMemberOverrides */
     /* protected */ override def onCurrentChanged(): Unit = js.native
     /**

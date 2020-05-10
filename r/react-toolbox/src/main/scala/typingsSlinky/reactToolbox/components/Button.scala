@@ -1,10 +1,10 @@
 package typingsSlinky.reactToolbox.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactToolbox.buttonBaseMod.ButtonTheme
 import typingsSlinky.reactToolbox.libButtonButtonMod.ButtonProps
 import typingsSlinky.reactToolbox.libButtonMod.default
@@ -13,92 +13,104 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Button
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Button {
   @JSImport("react-toolbox/lib/button", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, href, label, style, target, type */
-  def apply(
-    accent: js.UndefOr[Boolean] = js.undefined,
-    flat: js.UndefOr[Boolean] = js.undefined,
-    floating: js.UndefOr[Boolean] = js.undefined,
-    icon: TagMod[Any] = null,
-    inverse: js.UndefOr[Boolean] = js.undefined,
-    mini: js.UndefOr[Boolean] = js.undefined,
-    neutral: js.UndefOr[Boolean] = js.undefined,
-    onClick: js.Function = null,
-    onContextMenu: js.Function = null,
-    onDoubleClick: js.Function = null,
-    onDrag: js.Function = null,
-    onDragEnd: js.Function = null,
-    onDragEnter: js.Function = null,
-    onDragExit: js.Function = null,
-    onDragLeave: js.Function = null,
-    onDragOver: js.Function = null,
-    onDragStart: js.Function = null,
-    onDrop: js.Function = null,
-    onMouseDown: js.Function = null,
-    onMouseEnter: js.Function = null,
-    onMouseLeave: js.Function = null,
-    onMouseMove: js.Function = null,
-    onMouseOut: js.Function = null,
-    onMouseOver: js.Function = null,
-    onMouseUp: js.Function = null,
-    onRippleEnded: js.Function = null,
-    onTouchCancel: js.Function = null,
-    onTouchEnd: js.Function = null,
-    onTouchMove: js.Function = null,
-    onTouchStart: js.Function = null,
-    primary: js.UndefOr[Boolean] = js.undefined,
-    raised: js.UndefOr[Boolean] = js.undefined,
-    ripple: js.UndefOr[Boolean] = js.undefined,
-    spread: Int | Double = null,
-    theme: ButtonTheme | RippleTheme = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(accent)) __obj.updateDynamic("accent")(accent.asInstanceOf[js.Any])
-    if (!js.isUndefined(flat)) __obj.updateDynamic("flat")(flat.asInstanceOf[js.Any])
-    if (!js.isUndefined(floating)) __obj.updateDynamic("floating")(floating.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (!js.isUndefined(inverse)) __obj.updateDynamic("inverse")(inverse.asInstanceOf[js.Any])
-    if (!js.isUndefined(mini)) __obj.updateDynamic("mini")(mini.asInstanceOf[js.Any])
-    if (!js.isUndefined(neutral)) __obj.updateDynamic("neutral")(neutral.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
-    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(onContextMenu.asInstanceOf[js.Any])
-    if (onDoubleClick != null) __obj.updateDynamic("onDoubleClick")(onDoubleClick.asInstanceOf[js.Any])
-    if (onDrag != null) __obj.updateDynamic("onDrag")(onDrag.asInstanceOf[js.Any])
-    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(onDragEnd.asInstanceOf[js.Any])
-    if (onDragEnter != null) __obj.updateDynamic("onDragEnter")(onDragEnter.asInstanceOf[js.Any])
-    if (onDragExit != null) __obj.updateDynamic("onDragExit")(onDragExit.asInstanceOf[js.Any])
-    if (onDragLeave != null) __obj.updateDynamic("onDragLeave")(onDragLeave.asInstanceOf[js.Any])
-    if (onDragOver != null) __obj.updateDynamic("onDragOver")(onDragOver.asInstanceOf[js.Any])
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(onDragStart.asInstanceOf[js.Any])
-    if (onDrop != null) __obj.updateDynamic("onDrop")(onDrop.asInstanceOf[js.Any])
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(onMouseDown.asInstanceOf[js.Any])
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(onMouseEnter.asInstanceOf[js.Any])
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(onMouseLeave.asInstanceOf[js.Any])
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(onMouseMove.asInstanceOf[js.Any])
-    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(onMouseOut.asInstanceOf[js.Any])
-    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(onMouseOver.asInstanceOf[js.Any])
-    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(onMouseUp.asInstanceOf[js.Any])
-    if (onRippleEnded != null) __obj.updateDynamic("onRippleEnded")(onRippleEnded.asInstanceOf[js.Any])
-    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(onTouchCancel.asInstanceOf[js.Any])
-    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(onTouchEnd.asInstanceOf[js.Any])
-    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(onTouchMove.asInstanceOf[js.Any])
-    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(onTouchStart.asInstanceOf[js.Any])
-    if (!js.isUndefined(primary)) __obj.updateDynamic("primary")(primary.asInstanceOf[js.Any])
-    if (!js.isUndefined(raised)) __obj.updateDynamic("raised")(raised.asInstanceOf[js.Any])
-    if (!js.isUndefined(ripple)) __obj.updateDynamic("ripple")(ripple.asInstanceOf[js.Any])
-    if (spread != null) __obj.updateDynamic("spread")(spread.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def accent(value: Boolean): this.type = set("accent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flat(value: Boolean): this.type = set("flat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floating(value: Boolean): this.type = set("floating", value.asInstanceOf[js.Any])
+    @scala.inline
+    def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inverse(value: Boolean): this.type = set("inverse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mini(value: Boolean): this.type = set("mini", value.asInstanceOf[js.Any])
+    @scala.inline
+    def neutral(value: Boolean): this.type = set("neutral", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: js.Function): this.type = set("onClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onContextMenu(value: js.Function): this.type = set("onContextMenu", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDoubleClick(value: js.Function): this.type = set("onDoubleClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDrag(value: js.Function): this.type = set("onDrag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDragEnd(value: js.Function): this.type = set("onDragEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDragEnter(value: js.Function): this.type = set("onDragEnter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDragExit(value: js.Function): this.type = set("onDragExit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDragLeave(value: js.Function): this.type = set("onDragLeave", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDragOver(value: js.Function): this.type = set("onDragOver", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDragStart(value: js.Function): this.type = set("onDragStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDrop(value: js.Function): this.type = set("onDrop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onMouseDown(value: js.Function): this.type = set("onMouseDown", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onMouseEnter(value: js.Function): this.type = set("onMouseEnter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onMouseLeave(value: js.Function): this.type = set("onMouseLeave", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onMouseMove(value: js.Function): this.type = set("onMouseMove", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onMouseOut(value: js.Function): this.type = set("onMouseOut", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onMouseOver(value: js.Function): this.type = set("onMouseOver", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onMouseUp(value: js.Function): this.type = set("onMouseUp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onRippleEnded(value: js.Function): this.type = set("onRippleEnded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onTouchCancel(value: js.Function): this.type = set("onTouchCancel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onTouchEnd(value: js.Function): this.type = set("onTouchEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onTouchMove(value: js.Function): this.type = set("onTouchMove", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onTouchStart(value: js.Function): this.type = set("onTouchStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def primary(value: Boolean): this.type = set("primary", value.asInstanceOf[js.Any])
+    @scala.inline
+    def raised(value: Boolean): this.type = set("raised", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ripple(value: Boolean): this.type = set("ripple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def spread(value: Double): this.type = set("spread", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: ButtonTheme | RippleTheme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactToolbox.libButtonMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ButtonProps
+  
+  def withProps(p: ButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Button.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

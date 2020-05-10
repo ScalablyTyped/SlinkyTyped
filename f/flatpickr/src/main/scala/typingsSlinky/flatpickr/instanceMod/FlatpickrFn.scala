@@ -1,5 +1,6 @@
 package typingsSlinky.flatpickr.instanceMod
 
+import org.scalajs.dom.raw.Node
 import typingsSlinky.flatpickr.PartialParsedOptions
 import typingsSlinky.flatpickr.globalsMod._Global_.Date
 import typingsSlinky.flatpickr.kinkeyCustomLocaledefault
@@ -7,7 +8,6 @@ import typingsSlinky.flatpickr.localeMod.CustomLocale
 import typingsSlinky.flatpickr.optionsMod.DateOption
 import typingsSlinky.flatpickr.optionsMod.Options
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

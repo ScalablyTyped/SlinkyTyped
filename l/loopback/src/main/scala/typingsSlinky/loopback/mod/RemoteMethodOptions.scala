@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation._
   * @property {string | string[]} notes Additional notes, used by API documentation generators like Swagger.
   * @property {RemoteMethodArgument} returns Describes the remote method's callback arguments
   */
+@js.native
 trait RemoteMethodOptions extends js.Object {
   /**
     * Defines arguments that the remote method accepts. These arguments map to the static method you define. For the example above, you can see the function signature:
@@ -26,28 +27,28 @@ trait RemoteMethodOptions extends js.Object {
     {arg: 'age', type: 'number'},...],
     ... }
     */
-  var accepts: js.UndefOr[js.Array[RemoteMethodArgument]] = js.undefined
+  var accepts: js.UndefOr[js.Array[RemoteMethodArgument]] = js.native
   /**
     * Text description of the method, used by API documentation generators such as Swagger.
     You can put long strings in an array if needed (see note below).
     */
-  var description: js.UndefOr[String | js.Array[String]] = js.undefined
+  var description: js.UndefOr[String | js.Array[String]] = js.native
   /**
     *
     */
-  var http: js.UndefOr[RemoteHttpOptions] = js.undefined
+  var http: js.UndefOr[RemoteHttpOptions] = js.native
   /**
     *
     * boolean. Whether the method is static (eg. `MyModel.myMethod`). Use `false` to define the method on the prototype (for example, `MyModel.prototype.myMethod`). Default is true.
     * default: true
     */
-  var isStatic: js.UndefOr[Boolean] = js.undefined
+  var isStatic: js.UndefOr[Boolean] = js.native
   /**
     *
     Additional notes, used by API documentation generators like Swagger.
     You can put long strings in an array if needed (see note below).
     */
-  var notes: js.UndefOr[String | js.Array[String]] = js.undefined
+  var notes: js.UndefOr[String | js.Array[String]] = js.native
   /**
     * Describes the remote method's callback arguments; See Argument descriptions. The err argument is assumed; do not specify.
     * Default if not provided is the empty array,  [].
@@ -55,27 +56,94 @@ trait RemoteMethodOptions extends js.Object {
     * returns: {arg: 'greeting', type: 'string'}`
     * ```
     */
-  var returns: js.UndefOr[RemoteMethodArgument] = js.undefined
+  var returns: js.UndefOr[RemoteMethodArgument] = js.native
 }
 
 object RemoteMethodOptions {
   @scala.inline
-  def apply(
-    accepts: js.Array[RemoteMethodArgument] = null,
-    description: String | js.Array[String] = null,
-    http: RemoteHttpOptions = null,
-    isStatic: js.UndefOr[Boolean] = js.undefined,
-    notes: String | js.Array[String] = null,
-    returns: RemoteMethodArgument = null
-  ): RemoteMethodOptions = {
+  def apply(): RemoteMethodOptions = {
     val __obj = js.Dynamic.literal()
-    if (accepts != null) __obj.updateDynamic("accepts")(accepts.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (http != null) __obj.updateDynamic("http")(http.asInstanceOf[js.Any])
-    if (!js.isUndefined(isStatic)) __obj.updateDynamic("isStatic")(isStatic.asInstanceOf[js.Any])
-    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
-    if (returns != null) __obj.updateDynamic("returns")(returns.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemoteMethodOptions]
   }
+  @scala.inline
+  implicit class RemoteMethodOptionsOps[Self <: RemoteMethodOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccepts(value: js.Array[RemoteMethodArgument]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accepts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccepts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accepts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttp(value: RemoteHttpOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("http")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("http")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsStatic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isStatic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsStatic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isStatic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotes(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturns(value: RemoteMethodArgument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

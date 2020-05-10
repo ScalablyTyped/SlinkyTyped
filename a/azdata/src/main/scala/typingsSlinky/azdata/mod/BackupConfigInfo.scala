@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BackupConfigInfo extends js.Object {
-  var defaultBackupFolder: String
-  var recoveryModel: String
+  var defaultBackupFolder: String = js.native
+  var recoveryModel: String = js.native
 }
 
 object BackupConfigInfo {
   @scala.inline
   def apply(defaultBackupFolder: String, recoveryModel: String): BackupConfigInfo = {
     val __obj = js.Dynamic.literal(defaultBackupFolder = defaultBackupFolder.asInstanceOf[js.Any], recoveryModel = recoveryModel.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[BackupConfigInfo]
   }
+  @scala.inline
+  implicit class BackupConfigInfoOps[Self <: BackupConfigInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultBackupFolder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultBackupFolder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRecoveryModel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recoveryModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Typeofsystem extends js.Object {
   // #endregion
   // #region chrome.system.*
@@ -15,7 +16,7 @@ trait Typeofsystem extends js.Object {
     * Permissions: 'system.cpu'
     * @since Chrome 32.
     */
-  val cpu: Typeofcpu
+  val cpu: Typeofcpu = js.native
   ////////////////////
   // System Display //
   ////////////////////
@@ -24,7 +25,7 @@ trait Typeofsystem extends js.Object {
     * Permissions: 'system.display'
     * @since Chrome 30.
     */
-  val display: Typeofdisplay
+  val display: Typeofdisplay = js.native
   ///////////////////
   // System Memory //
   ///////////////////
@@ -33,7 +34,7 @@ trait Typeofsystem extends js.Object {
     * @requires Permissions: 'system.memory'
     * @since Chrome 32.
     */
-  val memory: Typeofmemory
+  val memory: Typeofmemory = js.native
   //////////////////////
   // System - Network //
   //////////////////////
@@ -41,7 +42,7 @@ trait Typeofsystem extends js.Object {
     * The chrome.system.network API.
     * @requires Permissions: 'system.network'
     */
-  val network: Typeofnetwork
+  val network: Typeofnetwork = js.native
   /////////////////////////
   // System Power Source //
   /////////////////////////
@@ -51,7 +52,7 @@ trait Typeofsystem extends js.Object {
     * @description The chrome.system.powerSource API allows Chrome Kiosk Apps to query the state of connected power sources.
     * @since Latest
     */
-  val powerSource: TypeofpowerSource
+  val powerSource: TypeofpowerSource = js.native
   ////////////////////
   // System Storage //
   ////////////////////
@@ -60,7 +61,7 @@ trait Typeofsystem extends js.Object {
     * @requires Permissions: 'system.storage'
     * @since Chrome 30.
     */
-  val storage: TypeofstorageEjectDevice
+  val storage: TypeofstorageEjectDevice = js.native
 }
 
 object Typeofsystem {
@@ -74,8 +75,51 @@ object Typeofsystem {
     storage: TypeofstorageEjectDevice
   ): Typeofsystem = {
     val __obj = js.Dynamic.literal(cpu = cpu.asInstanceOf[js.Any], display = display.asInstanceOf[js.Any], memory = memory.asInstanceOf[js.Any], network = network.asInstanceOf[js.Any], powerSource = powerSource.asInstanceOf[js.Any], storage = storage.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Typeofsystem]
   }
+  @scala.inline
+  implicit class TypeofsystemOps[Self <: Typeofsystem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCpu(value: Typeofcpu): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisplay(value: Typeofdisplay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMemory(value: Typeofmemory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNetwork(value: Typeofnetwork): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPowerSource(value: TypeofpowerSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("powerSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStorage(value: TypeofstorageEjectDevice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

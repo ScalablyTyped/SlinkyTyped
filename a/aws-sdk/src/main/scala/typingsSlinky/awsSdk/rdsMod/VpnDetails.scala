@@ -34,22 +34,89 @@ trait VpnDetails extends js.Object {
 
 object VpnDetails {
   @scala.inline
-  def apply(
-    VpnGatewayIp: String = null,
-    VpnId: String = null,
-    VpnName: String = null,
-    VpnPSK: StringSensitive = null,
-    VpnState: String = null,
-    VpnTunnelOriginatorIP: String = null
-  ): VpnDetails = {
+  def apply(): VpnDetails = {
     val __obj = js.Dynamic.literal()
-    if (VpnGatewayIp != null) __obj.updateDynamic("VpnGatewayIp")(VpnGatewayIp.asInstanceOf[js.Any])
-    if (VpnId != null) __obj.updateDynamic("VpnId")(VpnId.asInstanceOf[js.Any])
-    if (VpnName != null) __obj.updateDynamic("VpnName")(VpnName.asInstanceOf[js.Any])
-    if (VpnPSK != null) __obj.updateDynamic("VpnPSK")(VpnPSK.asInstanceOf[js.Any])
-    if (VpnState != null) __obj.updateDynamic("VpnState")(VpnState.asInstanceOf[js.Any])
-    if (VpnTunnelOriginatorIP != null) __obj.updateDynamic("VpnTunnelOriginatorIP")(VpnTunnelOriginatorIP.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpnDetails]
   }
+  @scala.inline
+  implicit class VpnDetailsOps[Self <: VpnDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVpnGatewayIp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnGatewayIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpnGatewayIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnGatewayIp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpnId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpnId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpnName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpnName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpnPSK(value: StringSensitive): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnPSK")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpnPSK: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnPSK")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpnState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpnState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpnTunnelOriginatorIP(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnTunnelOriginatorIP")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpnTunnelOriginatorIP: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnTunnelOriginatorIP")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

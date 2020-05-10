@@ -22,16 +22,53 @@ trait PlayerLatency extends js.Object {
 
 object PlayerLatency {
   @scala.inline
-  def apply(
-    LatencyInMilliseconds: Int | scala.Double = null,
-    PlayerId: NonZeroAndMaxString = null,
-    RegionIdentifier: NonZeroAndMaxString = null
-  ): PlayerLatency = {
+  def apply(): PlayerLatency = {
     val __obj = js.Dynamic.literal()
-    if (LatencyInMilliseconds != null) __obj.updateDynamic("LatencyInMilliseconds")(LatencyInMilliseconds.asInstanceOf[js.Any])
-    if (PlayerId != null) __obj.updateDynamic("PlayerId")(PlayerId.asInstanceOf[js.Any])
-    if (RegionIdentifier != null) __obj.updateDynamic("RegionIdentifier")(RegionIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlayerLatency]
   }
+  @scala.inline
+  implicit class PlayerLatencyOps[Self <: PlayerLatency] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLatencyInMilliseconds(value: Float): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LatencyInMilliseconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatencyInMilliseconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LatencyInMilliseconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlayerId(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlayerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegionIdentifier(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegionIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionIdentifier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

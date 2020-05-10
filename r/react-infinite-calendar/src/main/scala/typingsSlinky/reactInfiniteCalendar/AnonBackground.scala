@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBackground extends js.Object {
-  var background: js.UndefOr[String] = js.undefined
-  var chevron: js.UndefOr[String] = js.undefined
-  var color: js.UndefOr[String] = js.undefined
+  var background: js.UndefOr[String] = js.native
+  var chevron: js.UndefOr[String] = js.native
+  var color: js.UndefOr[String] = js.native
 }
 
 object AnonBackground {
   @scala.inline
-  def apply(background: String = null, chevron: String = null, color: String = null): AnonBackground = {
+  def apply(): AnonBackground = {
     val __obj = js.Dynamic.literal()
-    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
-    if (chevron != null) __obj.updateDynamic("chevron")(chevron.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBackground]
   }
+  @scala.inline
+  implicit class AnonBackgroundOps[Self <: AnonBackground] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackground(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackground: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChevron(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chevron")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChevron: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chevron")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

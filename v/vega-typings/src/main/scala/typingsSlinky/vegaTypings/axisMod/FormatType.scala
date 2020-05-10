@@ -13,12 +13,10 @@ trait FormatType extends js.Object
 
 object FormatType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def number: typingsSlinky.vegaTypings.vegaTypingsStrings.number = "number".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.number]
   @scala.inline
-  def number: typingsSlinky.vegaTypings.vegaTypingsStrings.number = this.cast("number")
+  def time: typingsSlinky.vegaTypings.vegaTypingsStrings.time = "time".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.time]
   @scala.inline
-  def time: typingsSlinky.vegaTypings.vegaTypingsStrings.time = this.cast("time")
-  @scala.inline
-  def utc: typingsSlinky.vegaTypings.vegaTypingsStrings.utc = this.cast("utc")
+  def utc: typingsSlinky.vegaTypings.vegaTypingsStrings.utc = "utc".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.utc]
 }
 

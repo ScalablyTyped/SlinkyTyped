@@ -42,22 +42,89 @@ trait SchemaRateGroup extends js.Object {
 
 object SchemaRateGroup {
   @scala.inline
-  def apply(
-    applicableShippingLabels: js.Array[String] = null,
-    carrierRates: js.Array[SchemaCarrierRate] = null,
-    mainTable: SchemaTable = null,
-    name: String = null,
-    singleValue: SchemaValue = null,
-    subtables: js.Array[SchemaTable] = null
-  ): SchemaRateGroup = {
+  def apply(): SchemaRateGroup = {
     val __obj = js.Dynamic.literal()
-    if (applicableShippingLabels != null) __obj.updateDynamic("applicableShippingLabels")(applicableShippingLabels.asInstanceOf[js.Any])
-    if (carrierRates != null) __obj.updateDynamic("carrierRates")(carrierRates.asInstanceOf[js.Any])
-    if (mainTable != null) __obj.updateDynamic("mainTable")(mainTable.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (singleValue != null) __obj.updateDynamic("singleValue")(singleValue.asInstanceOf[js.Any])
-    if (subtables != null) __obj.updateDynamic("subtables")(subtables.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRateGroup]
   }
+  @scala.inline
+  implicit class SchemaRateGroupOps[Self <: SchemaRateGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicableShippingLabels(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicableShippingLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicableShippingLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicableShippingLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCarrierRates(value: js.Array[SchemaCarrierRate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("carrierRates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCarrierRates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("carrierRates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMainTable(value: SchemaTable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mainTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMainTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mainTable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleValue(value: SchemaValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubtables(value: js.Array[SchemaTable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubtables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtables")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

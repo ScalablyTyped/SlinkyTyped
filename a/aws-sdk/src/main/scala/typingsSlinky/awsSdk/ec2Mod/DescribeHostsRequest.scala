@@ -26,18 +26,65 @@ trait DescribeHostsRequest extends js.Object {
 
 object DescribeHostsRequest {
   @scala.inline
-  def apply(
-    Filter: FilterList = null,
-    HostIds: RequestHostIdList = null,
-    MaxResults: Int | scala.Double = null,
-    NextToken: String = null
-  ): DescribeHostsRequest = {
+  def apply(): DescribeHostsRequest = {
     val __obj = js.Dynamic.literal()
-    if (Filter != null) __obj.updateDynamic("Filter")(Filter.asInstanceOf[js.Any])
-    if (HostIds != null) __obj.updateDynamic("HostIds")(HostIds.asInstanceOf[js.Any])
-    if (MaxResults != null) __obj.updateDynamic("MaxResults")(MaxResults.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeHostsRequest]
   }
+  @scala.inline
+  implicit class DescribeHostsRequestOps[Self <: DescribeHostsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilter(value: FilterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostIds(value: RequestHostIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

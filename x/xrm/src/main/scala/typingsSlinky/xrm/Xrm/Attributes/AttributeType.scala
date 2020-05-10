@@ -25,28 +25,26 @@ trait AttributeType extends js.Object
 
 object AttributeType {
   @scala.inline
-  def boolean: typingsSlinky.xrm.xrmStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.xrm.xrmStrings.boolean = "boolean".asInstanceOf[typingsSlinky.xrm.xrmStrings.boolean]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def datetime: typingsSlinky.xrm.xrmStrings.datetime = "datetime".asInstanceOf[typingsSlinky.xrm.xrmStrings.datetime]
   @scala.inline
-  def datetime: typingsSlinky.xrm.xrmStrings.datetime = this.cast("datetime")
+  def decimal: typingsSlinky.xrm.xrmStrings.decimal = "decimal".asInstanceOf[typingsSlinky.xrm.xrmStrings.decimal]
   @scala.inline
-  def decimal: typingsSlinky.xrm.xrmStrings.decimal = this.cast("decimal")
+  def double: typingsSlinky.xrm.xrmStrings.double = "double".asInstanceOf[typingsSlinky.xrm.xrmStrings.double]
   @scala.inline
-  def double: typingsSlinky.xrm.xrmStrings.double = this.cast("double")
+  def integer: typingsSlinky.xrm.xrmStrings.integer = "integer".asInstanceOf[typingsSlinky.xrm.xrmStrings.integer]
   @scala.inline
-  def integer: typingsSlinky.xrm.xrmStrings.integer = this.cast("integer")
+  def lookup: typingsSlinky.xrm.xrmStrings.lookup = "lookup".asInstanceOf[typingsSlinky.xrm.xrmStrings.lookup]
   @scala.inline
-  def lookup: typingsSlinky.xrm.xrmStrings.lookup = this.cast("lookup")
+  def memo: typingsSlinky.xrm.xrmStrings.memo = "memo".asInstanceOf[typingsSlinky.xrm.xrmStrings.memo]
   @scala.inline
-  def memo: typingsSlinky.xrm.xrmStrings.memo = this.cast("memo")
+  def money: typingsSlinky.xrm.xrmStrings.money = "money".asInstanceOf[typingsSlinky.xrm.xrmStrings.money]
   @scala.inline
-  def money: typingsSlinky.xrm.xrmStrings.money = this.cast("money")
+  def multioptionset: typingsSlinky.xrm.xrmStrings.multioptionset = "multioptionset".asInstanceOf[typingsSlinky.xrm.xrmStrings.multioptionset]
   @scala.inline
-  def multioptionset: typingsSlinky.xrm.xrmStrings.multioptionset = this.cast("multioptionset")
+  def optionset: typingsSlinky.xrm.xrmStrings.optionset = "optionset".asInstanceOf[typingsSlinky.xrm.xrmStrings.optionset]
   @scala.inline
-  def optionset: typingsSlinky.xrm.xrmStrings.optionset = this.cast("optionset")
-  @scala.inline
-  def string: typingsSlinky.xrm.xrmStrings.string = this.cast("string")
+  def string: typingsSlinky.xrm.xrmStrings.string = "string".asInstanceOf[typingsSlinky.xrm.xrmStrings.string]
 }
 

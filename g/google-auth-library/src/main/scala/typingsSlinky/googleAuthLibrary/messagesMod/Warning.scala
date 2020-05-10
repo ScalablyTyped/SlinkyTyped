@@ -4,20 +4,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Warning extends js.Object {
-  var code: String
-  var message: String
-  var `type`: WarningTypes
-  var warned: js.UndefOr[Boolean] = js.undefined
+  var code: String = js.native
+  var message: String = js.native
+  var `type`: WarningTypes = js.native
+  var warned: js.UndefOr[Boolean] = js.native
 }
 
 object Warning {
   @scala.inline
-  def apply(code: String, message: String, `type`: WarningTypes, warned: js.UndefOr[Boolean] = js.undefined): Warning = {
+  def apply(code: String, message: String, `type`: WarningTypes): Warning = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(warned)) __obj.updateDynamic("warned")(warned.asInstanceOf[js.Any])
     __obj.asInstanceOf[Warning]
   }
+  @scala.inline
+  implicit class WarningOps[Self <: Warning] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: WarningTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWarned(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warned")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarned: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warned")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

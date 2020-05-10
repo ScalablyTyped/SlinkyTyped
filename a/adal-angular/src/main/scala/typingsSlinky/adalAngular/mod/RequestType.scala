@@ -13,12 +13,10 @@ trait RequestType extends js.Object
 
 object RequestType {
   @scala.inline
-  def LOGIN: typingsSlinky.adalAngular.adalAngularStrings.LOGIN = this.cast("LOGIN")
+  def LOGIN: typingsSlinky.adalAngular.adalAngularStrings.LOGIN = "LOGIN".asInstanceOf[typingsSlinky.adalAngular.adalAngularStrings.LOGIN]
   @scala.inline
-  def RENEW_TOKEN: typingsSlinky.adalAngular.adalAngularStrings.RENEW_TOKEN = this.cast("RENEW_TOKEN")
+  def RENEW_TOKEN: typingsSlinky.adalAngular.adalAngularStrings.RENEW_TOKEN = "RENEW_TOKEN".asInstanceOf[typingsSlinky.adalAngular.adalAngularStrings.RENEW_TOKEN]
   @scala.inline
-  def UNKNOWN: typingsSlinky.adalAngular.adalAngularStrings.UNKNOWN = this.cast("UNKNOWN")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UNKNOWN: typingsSlinky.adalAngular.adalAngularStrings.UNKNOWN = "UNKNOWN".asInstanceOf[typingsSlinky.adalAngular.adalAngularStrings.UNKNOWN]
 }
 

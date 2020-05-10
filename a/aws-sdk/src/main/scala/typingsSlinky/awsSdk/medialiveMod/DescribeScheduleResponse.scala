@@ -18,11 +18,41 @@ trait DescribeScheduleResponse extends js.Object {
 
 object DescribeScheduleResponse {
   @scala.inline
-  def apply(NextToken: string = null, ScheduleActions: listOfScheduleAction = null): DescribeScheduleResponse = {
+  def apply(): DescribeScheduleResponse = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (ScheduleActions != null) __obj.updateDynamic("ScheduleActions")(ScheduleActions.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeScheduleResponse]
   }
+  @scala.inline
+  implicit class DescribeScheduleResponseOps[Self <: DescribeScheduleResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduleActions(value: listOfScheduleAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduleActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleActions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

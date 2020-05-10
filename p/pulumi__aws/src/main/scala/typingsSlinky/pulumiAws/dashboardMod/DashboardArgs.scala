@@ -21,8 +21,27 @@ object DashboardArgs {
   @scala.inline
   def apply(dashboardBody: Input[String], dashboardName: Input[String]): DashboardArgs = {
     val __obj = js.Dynamic.literal(dashboardBody = dashboardBody.asInstanceOf[js.Any], dashboardName = dashboardName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DashboardArgs]
   }
+  @scala.inline
+  implicit class DashboardArgsOps[Self <: DashboardArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDashboardBody(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dashboardBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDashboardName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dashboardName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

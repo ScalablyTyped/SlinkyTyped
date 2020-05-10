@@ -74,41 +74,203 @@ trait UpdateStackInput extends js.Object {
 
 object UpdateStackInput {
   @scala.inline
-  def apply(
-    StackName: StackName,
-    Capabilities: Capabilities = null,
-    ClientRequestToken: ClientRequestToken = null,
-    NotificationARNs: NotificationARNs = null,
-    Parameters: Parameters = null,
-    ResourceTypes: ResourceTypes = null,
-    RoleARN: RoleARN_ = null,
-    RollbackConfiguration: RollbackConfiguration = null,
-    StackPolicyBody: StackPolicyBody = null,
-    StackPolicyDuringUpdateBody: StackPolicyDuringUpdateBody = null,
-    StackPolicyDuringUpdateURL: StackPolicyDuringUpdateURL = null,
-    StackPolicyURL: StackPolicyURL = null,
-    Tags: Tags = null,
-    TemplateBody: TemplateBody = null,
-    TemplateURL: TemplateURL = null,
-    UsePreviousTemplate: js.UndefOr[Boolean] = js.undefined
-  ): UpdateStackInput = {
+  def apply(StackName: StackName): UpdateStackInput = {
     val __obj = js.Dynamic.literal(StackName = StackName.asInstanceOf[js.Any])
-    if (Capabilities != null) __obj.updateDynamic("Capabilities")(Capabilities.asInstanceOf[js.Any])
-    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
-    if (NotificationARNs != null) __obj.updateDynamic("NotificationARNs")(NotificationARNs.asInstanceOf[js.Any])
-    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
-    if (ResourceTypes != null) __obj.updateDynamic("ResourceTypes")(ResourceTypes.asInstanceOf[js.Any])
-    if (RoleARN != null) __obj.updateDynamic("RoleARN")(RoleARN.asInstanceOf[js.Any])
-    if (RollbackConfiguration != null) __obj.updateDynamic("RollbackConfiguration")(RollbackConfiguration.asInstanceOf[js.Any])
-    if (StackPolicyBody != null) __obj.updateDynamic("StackPolicyBody")(StackPolicyBody.asInstanceOf[js.Any])
-    if (StackPolicyDuringUpdateBody != null) __obj.updateDynamic("StackPolicyDuringUpdateBody")(StackPolicyDuringUpdateBody.asInstanceOf[js.Any])
-    if (StackPolicyDuringUpdateURL != null) __obj.updateDynamic("StackPolicyDuringUpdateURL")(StackPolicyDuringUpdateURL.asInstanceOf[js.Any])
-    if (StackPolicyURL != null) __obj.updateDynamic("StackPolicyURL")(StackPolicyURL.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (TemplateBody != null) __obj.updateDynamic("TemplateBody")(TemplateBody.asInstanceOf[js.Any])
-    if (TemplateURL != null) __obj.updateDynamic("TemplateURL")(TemplateURL.asInstanceOf[js.Any])
-    if (!js.isUndefined(UsePreviousTemplate)) __obj.updateDynamic("UsePreviousTemplate")(UsePreviousTemplate.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateStackInput]
   }
+  @scala.inline
+  implicit class UpdateStackInputOps[Self <: UpdateStackInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStackName(value: StackName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCapabilities(value: Capabilities): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Capabilities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapabilities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Capabilities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientRequestToken(value: ClientRequestToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientRequestToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotificationARNs(value: NotificationARNs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationARNs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationARNs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationARNs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: Parameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceTypes(value: ResourceTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleARN(value: RoleARN_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRollbackConfiguration(value: RollbackConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RollbackConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRollbackConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RollbackConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackPolicyBody(value: StackPolicyBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackPolicyBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackPolicyBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackPolicyBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackPolicyDuringUpdateBody(value: StackPolicyDuringUpdateBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackPolicyDuringUpdateBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackPolicyDuringUpdateBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackPolicyDuringUpdateBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackPolicyDuringUpdateURL(value: StackPolicyDuringUpdateURL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackPolicyDuringUpdateURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackPolicyDuringUpdateURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackPolicyDuringUpdateURL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackPolicyURL(value: StackPolicyURL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackPolicyURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackPolicyURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackPolicyURL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateBody(value: TemplateBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateURL(value: TemplateURL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateURL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsePreviousTemplate(value: UsePreviousTemplate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UsePreviousTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsePreviousTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UsePreviousTemplate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

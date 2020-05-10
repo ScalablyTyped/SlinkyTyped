@@ -18,11 +18,41 @@ trait DescribeAffectedEntitiesResponse extends js.Object {
 
 object DescribeAffectedEntitiesResponse {
   @scala.inline
-  def apply(entities: EntityList = null, nextToken: nextToken = null): DescribeAffectedEntitiesResponse = {
+  def apply(): DescribeAffectedEntitiesResponse = {
     val __obj = js.Dynamic.literal()
-    if (entities != null) __obj.updateDynamic("entities")(entities.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAffectedEntitiesResponse]
   }
+  @scala.inline
+  implicit class DescribeAffectedEntitiesResponseOps[Self <: DescribeAffectedEntitiesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntities(value: EntityList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: nextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

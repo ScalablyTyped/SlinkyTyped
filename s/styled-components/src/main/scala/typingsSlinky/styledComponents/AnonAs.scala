@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAs extends js.Object {
   /**
     * Typing Note: prefer using .withComponent for now as it is actually type-safe.
@@ -11,23 +12,50 @@ trait AnonAs extends js.Object {
     * String types need to be cast to themselves to become literal types (as={'a' as 'a'}).
     */
   var as: js.UndefOr[
-    /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any
-  ] = js.undefined
+    /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 177 */ js.Any
+  ] = js.native
   var forwardedAs: js.UndefOr[
-    /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any
-  ] = js.undefined
+    /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 177 */ js.Any
+  ] = js.native
 }
 
 object AnonAs {
   @scala.inline
-  def apply(
-    as: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any = null,
-    forwardedAs: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any = null
-  ): AnonAs = {
+  def apply(): AnonAs = {
     val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (forwardedAs != null) __obj.updateDynamic("forwardedAs")(forwardedAs.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAs]
   }
+  @scala.inline
+  implicit class AnonAsOps[Self <: AnonAs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAs(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 177 */ js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForwardedAs(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 177 */ js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forwardedAs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForwardedAs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forwardedAs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

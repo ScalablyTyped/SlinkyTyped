@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HOTPVerifyOpt extends HOTPGenOpt {
   /**
     * The allowable margin for the counter. The function will check 'W' codes in
@@ -17,16 +18,34 @@ trait HOTPVerifyOpt extends HOTPGenOpt {
     *
     * Default - 50
     */
-  var window: js.UndefOr[Double] = js.undefined
+  var window: js.UndefOr[Double] = js.native
 }
 
 object HOTPVerifyOpt {
   @scala.inline
-  def apply(counter: Int | Double = null, window: Int | Double = null): HOTPVerifyOpt = {
+  def apply(): HOTPVerifyOpt = {
     val __obj = js.Dynamic.literal()
-    if (counter != null) __obj.updateDynamic("counter")(counter.asInstanceOf[js.Any])
-    if (window != null) __obj.updateDynamic("window")(window.asInstanceOf[js.Any])
     __obj.asInstanceOf[HOTPVerifyOpt]
   }
+  @scala.inline
+  implicit class HOTPVerifyOptOps[Self <: HOTPVerifyOpt] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWindow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWindow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

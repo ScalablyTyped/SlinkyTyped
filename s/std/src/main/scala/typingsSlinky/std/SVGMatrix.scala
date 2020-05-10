@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
 object SVGMatrix
   extends Instantiable0[DOMMatrix]
      with Instantiable1[(/* init */ js.Array[Double]) | (/* init */ java.lang.String), DOMMatrix] {
-  def fromFloat32Array(array32: scala.scalajs.js.typedarray.Float32Array): DOMMatrix = js.native
-  def fromFloat64Array(array64: scala.scalajs.js.typedarray.Float64Array): DOMMatrix = js.native
+  def fromFloat32Array(array32: js.typedarray.Float32Array): DOMMatrix = js.native
+  def fromFloat64Array(array64: js.typedarray.Float64Array): DOMMatrix = js.native
   def fromMatrix(): DOMMatrix = js.native
   def fromMatrix(other: DOMMatrixInit): DOMMatrix = js.native
 }

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 object kdf extends js.Object {
   /**
     * ANS X9.63 Key Derivation Function
-    * 
+    *
     * @param {string} hashFunction Used hash function
     * @param {ArrayBuffer} Zbuffer ArrayBuffer containing ECDH shared secret to derive from
     * @param {number} keydatalen Length (!!! in BITS !!!) of used kew derivation function
@@ -17,9 +17,9 @@ object kdf extends js.Object {
     */
   def apply(
     hashFunction: String,
-    Zbuffer: scala.scalajs.js.typedarray.ArrayBuffer,
+    Zbuffer: js.typedarray.ArrayBuffer,
     keydatalen: Double,
-    SharedInfo: scala.scalajs.js.typedarray.ArrayBuffer
-  ): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+    SharedInfo: js.typedarray.ArrayBuffer
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
 }
 

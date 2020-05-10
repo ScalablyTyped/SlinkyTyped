@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonEmitEvent extends js.Object {
-  var emitEvent: js.UndefOr[Boolean] = js.undefined
-  var onlySelf: js.UndefOr[Boolean] = js.undefined
+  var emitEvent: js.UndefOr[Boolean] = js.native
+  var onlySelf: js.UndefOr[Boolean] = js.native
 }
 
 object AnonEmitEvent {
   @scala.inline
-  def apply(emitEvent: js.UndefOr[Boolean] = js.undefined, onlySelf: js.UndefOr[Boolean] = js.undefined): AnonEmitEvent = {
+  def apply(): AnonEmitEvent = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(emitEvent)) __obj.updateDynamic("emitEvent")(emitEvent.asInstanceOf[js.Any])
-    if (!js.isUndefined(onlySelf)) __obj.updateDynamic("onlySelf")(onlySelf.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonEmitEvent]
   }
+  @scala.inline
+  implicit class AnonEmitEventOps[Self <: AnonEmitEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmitEvent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emitEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmitEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emitEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnlySelf(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlySelf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnlySelf: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlySelf")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

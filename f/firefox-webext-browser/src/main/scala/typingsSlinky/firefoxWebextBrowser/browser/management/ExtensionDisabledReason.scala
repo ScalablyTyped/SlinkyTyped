@@ -13,10 +13,8 @@ trait ExtensionDisabledReason extends js.Object
 
 object ExtensionDisabledReason {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def permissions_increase: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.permissions_increase = "permissions_increase".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.permissions_increase]
   @scala.inline
-  def permissions_increase: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.permissions_increase = this.cast("permissions_increase")
-  @scala.inline
-  def unknown: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.unknown = this.cast("unknown")
+  def unknown: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.unknown = "unknown".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.unknown]
 }
 

@@ -1,14 +1,14 @@
 package typingsSlinky.tensorflowTfjsCore.gpgpuContextMod
 
+import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLImageElement
+import org.scalajs.dom.raw.ImageData
 import org.scalajs.dom.raw.WebGLBuffer
 import org.scalajs.dom.raw.WebGLFramebuffer
 import org.scalajs.dom.raw.WebGLProgram
 import org.scalajs.dom.raw.WebGLRenderingContext
 import org.scalajs.dom.raw.WebGLTexture
 import org.scalajs.dom.raw.WebGLUniformLocation
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLImageElement
-import typingsSlinky.std.ImageData
 import typingsSlinky.std.WebGLQuery
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.PixelData
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TypedArray
@@ -63,9 +63,9 @@ class GPGPUContext () extends js.Object {
   def deleteMatrixTexture(texture: WebGLTexture): Unit = js.native
   def deleteProgram(program: WebGLProgram): Unit = js.native
   def dispose(): Unit = js.native
-  def downloadByteEncodedFloatMatrixFromOutputTexture(texture: WebGLTexture, rows: Double, columns: Double): scala.scalajs.js.typedarray.Float32Array = js.native
-  def downloadFloat32MatrixFromBuffer(buffer: WebGLBuffer, size: Double): scala.scalajs.js.typedarray.Float32Array = js.native
-  def downloadMatrixFromPackedTexture(texture: WebGLTexture, physicalRows: Double, physicalCols: Double): scala.scalajs.js.typedarray.Float32Array = js.native
+  def downloadByteEncodedFloatMatrixFromOutputTexture(texture: WebGLTexture, rows: Double, columns: Double): js.typedarray.Float32Array = js.native
+  def downloadFloat32MatrixFromBuffer(buffer: WebGLBuffer, size: Double): js.typedarray.Float32Array = js.native
+  def downloadMatrixFromPackedTexture(texture: WebGLTexture, physicalRows: Double, physicalCols: Double): js.typedarray.Float32Array = js.native
   def downloadPackedMatrixFromBuffer(
     buffer: WebGLBuffer,
     batch: Double,
@@ -73,7 +73,7 @@ class GPGPUContext () extends js.Object {
     columns: Double,
     physicalRows: Double,
     physicalCols: Double
-  ): scala.scalajs.js.typedarray.Float32Array = js.native
+  ): js.typedarray.Float32Array = js.native
   def endQuery(): Unit = js.native
   def executeProgram(): Unit = js.native
   def getAttributeLocation(program: WebGLProgram, attribute: String): Double = js.native

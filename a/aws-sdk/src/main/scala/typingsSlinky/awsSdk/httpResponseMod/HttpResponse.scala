@@ -13,7 +13,7 @@ class HttpResponse () extends js.Object {
   /**
     * The response body payload.
     */
-  var body: String | Buffer | scala.scalajs.js.typedarray.Uint8Array = js.native
+  var body: String | Buffer | js.typedarray.Uint8Array = js.native
   /**
     * A map of response header keys and their respective values.
     */

@@ -18,6 +18,10 @@ trait OscillatorNode extends AudioScheduledSourceNode {
 @JSGlobal("OscillatorNode")
 @js.native
 object OscillatorNode
-  extends Instantiable1[/* context */ BaseAudioContext, OscillatorNode]
-     with Instantiable2[/* context */ BaseAudioContext, /* options */ OscillatorOptions, OscillatorNode]
+  extends Instantiable1[/* context */ BaseAudioContext, org.scalajs.dom.raw.OscillatorNode]
+     with Instantiable2[
+      /* context */ BaseAudioContext, 
+      /* options */ OscillatorOptions, 
+      org.scalajs.dom.raw.OscillatorNode
+    ]
 

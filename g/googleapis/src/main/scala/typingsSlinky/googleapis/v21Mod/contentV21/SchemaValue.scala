@@ -39,20 +39,77 @@ trait SchemaValue extends js.Object {
 
 object SchemaValue {
   @scala.inline
-  def apply(
-    carrierRateName: String = null,
-    flatRate: SchemaPrice = null,
-    noShipping: js.UndefOr[Boolean] = js.undefined,
-    pricePercentage: String = null,
-    subtableName: String = null
-  ): SchemaValue = {
+  def apply(): SchemaValue = {
     val __obj = js.Dynamic.literal()
-    if (carrierRateName != null) __obj.updateDynamic("carrierRateName")(carrierRateName.asInstanceOf[js.Any])
-    if (flatRate != null) __obj.updateDynamic("flatRate")(flatRate.asInstanceOf[js.Any])
-    if (!js.isUndefined(noShipping)) __obj.updateDynamic("noShipping")(noShipping.asInstanceOf[js.Any])
-    if (pricePercentage != null) __obj.updateDynamic("pricePercentage")(pricePercentage.asInstanceOf[js.Any])
-    if (subtableName != null) __obj.updateDynamic("subtableName")(subtableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaValue]
   }
+  @scala.inline
+  implicit class SchemaValueOps[Self <: SchemaValue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCarrierRateName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("carrierRateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCarrierRateName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("carrierRateName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlatRate(value: SchemaPrice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flatRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlatRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flatRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoShipping(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noShipping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoShipping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noShipping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPricePercentage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pricePercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPricePercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pricePercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubtableName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubtableName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtableName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

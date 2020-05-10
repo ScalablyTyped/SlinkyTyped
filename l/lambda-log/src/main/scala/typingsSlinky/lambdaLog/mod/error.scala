@@ -1,6 +1,5 @@
 package typingsSlinky.lambdaLog.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,8 +10,8 @@ object error extends js.Object {
   def apply(msg: String): LogMessage = js.native
   def apply(msg: String, meta: js.Object): LogMessage = js.native
   def apply(msg: String, meta: js.Object, tags: js.Array[String]): LogMessage = js.native
-  def apply(msg: Error): LogMessage = js.native
-  def apply(msg: Error, meta: js.Object): LogMessage = js.native
-  def apply(msg: Error, meta: js.Object, tags: js.Array[String]): LogMessage = js.native
+  def apply(msg: js.Error): LogMessage = js.native
+  def apply(msg: js.Error, meta: js.Object): LogMessage = js.native
+  def apply(msg: js.Error, meta: js.Object, tags: js.Array[String]): LogMessage = js.native
 }
 

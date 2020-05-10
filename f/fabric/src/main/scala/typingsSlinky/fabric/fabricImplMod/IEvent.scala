@@ -6,38 +6,121 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IEvent extends js.Object {
-  var absolutePointer: js.UndefOr[Point] = js.undefined
-  var button: js.UndefOr[Double] = js.undefined
-  var e: Event_
-  var isClick: js.UndefOr[Boolean] = js.undefined
-  var pointer: js.UndefOr[Point] = js.undefined
-  var subTargets: js.UndefOr[js.Array[Object]] = js.undefined
-  var target: js.UndefOr[Object] = js.undefined
-  var transform: js.UndefOr[AnonCorner] = js.undefined
+  var absolutePointer: js.UndefOr[Point] = js.native
+  var button: js.UndefOr[Double] = js.native
+  var e: Event_ = js.native
+  var isClick: js.UndefOr[Boolean] = js.native
+  var pointer: js.UndefOr[Point] = js.native
+  var subTargets: js.UndefOr[js.Array[Object]] = js.native
+  var target: js.UndefOr[Object] = js.native
+  var transform: js.UndefOr[AnonCorner] = js.native
 }
 
 object IEvent {
   @scala.inline
-  def apply(
-    e: Event_,
-    absolutePointer: Point = null,
-    button: Int | Double = null,
-    isClick: js.UndefOr[Boolean] = js.undefined,
-    pointer: Point = null,
-    subTargets: js.Array[Object] = null,
-    target: Object = null,
-    transform: AnonCorner = null
-  ): IEvent = {
+  def apply(e: Event_): IEvent = {
     val __obj = js.Dynamic.literal(e = e.asInstanceOf[js.Any])
-    if (absolutePointer != null) __obj.updateDynamic("absolutePointer")(absolutePointer.asInstanceOf[js.Any])
-    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
-    if (!js.isUndefined(isClick)) __obj.updateDynamic("isClick")(isClick.asInstanceOf[js.Any])
-    if (pointer != null) __obj.updateDynamic("pointer")(pointer.asInstanceOf[js.Any])
-    if (subTargets != null) __obj.updateDynamic("subTargets")(subTargets.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
     __obj.asInstanceOf[IEvent]
   }
+  @scala.inline
+  implicit class IEventOps[Self <: IEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withE(value: Event_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("e")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAbsolutePointer(value: Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("absolutePointer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbsolutePointer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("absolutePointer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButton(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsClick(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointer(value: Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubTargets(value: js.Array[Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subTargets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubTargets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subTargets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTarget(value: Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransform(value: AnonCorner): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

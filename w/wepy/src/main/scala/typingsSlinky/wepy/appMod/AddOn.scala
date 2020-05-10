@@ -12,10 +12,8 @@ trait AddOn extends js.Object
 
 object AddOn {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def promisify: typingsSlinky.wepy.wepyStrings.promisify = "promisify".asInstanceOf[typingsSlinky.wepy.wepyStrings.promisify]
   @scala.inline
-  def promisify: typingsSlinky.wepy.wepyStrings.promisify = this.cast("promisify")
-  @scala.inline
-  def requestfix: typingsSlinky.wepy.wepyStrings.requestfix = this.cast("requestfix")
+  def requestfix: typingsSlinky.wepy.wepyStrings.requestfix = "requestfix".asInstanceOf[typingsSlinky.wepy.wepyStrings.requestfix]
 }
 

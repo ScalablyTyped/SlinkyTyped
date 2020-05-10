@@ -35,20 +35,77 @@ trait SchemaTopologyConfig extends js.Object {
 
 object SchemaTopologyConfig {
   @scala.inline
-  def apply(
-    computations: js.Array[SchemaComputationTopology] = null,
-    dataDiskAssignments: js.Array[SchemaDataDiskAssignment] = null,
-    forwardingKeyBits: Int | Double = null,
-    persistentStateVersion: Int | Double = null,
-    userStageToComputationNameMap: StringDictionary[String] = null
-  ): SchemaTopologyConfig = {
+  def apply(): SchemaTopologyConfig = {
     val __obj = js.Dynamic.literal()
-    if (computations != null) __obj.updateDynamic("computations")(computations.asInstanceOf[js.Any])
-    if (dataDiskAssignments != null) __obj.updateDynamic("dataDiskAssignments")(dataDiskAssignments.asInstanceOf[js.Any])
-    if (forwardingKeyBits != null) __obj.updateDynamic("forwardingKeyBits")(forwardingKeyBits.asInstanceOf[js.Any])
-    if (persistentStateVersion != null) __obj.updateDynamic("persistentStateVersion")(persistentStateVersion.asInstanceOf[js.Any])
-    if (userStageToComputationNameMap != null) __obj.updateDynamic("userStageToComputationNameMap")(userStageToComputationNameMap.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTopologyConfig]
   }
+  @scala.inline
+  implicit class SchemaTopologyConfigOps[Self <: SchemaTopologyConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComputations(value: js.Array[SchemaComputationTopology]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataDiskAssignments(value: js.Array[SchemaDataDiskAssignment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataDiskAssignments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataDiskAssignments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataDiskAssignments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForwardingKeyBits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forwardingKeyBits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForwardingKeyBits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forwardingKeyBits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPersistentStateVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persistentStateVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPersistentStateVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persistentStateVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserStageToComputationNameMap(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userStageToComputationNameMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserStageToComputationNameMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userStageToComputationNameMap")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

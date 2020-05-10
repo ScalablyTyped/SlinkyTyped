@@ -19,6 +19,6 @@ trait IXmlSerializable extends js.Object {
     * @param  {Node} node
     * @returns void
     */
-  def LoadXml(node: typingsSlinky.std.Node): Unit = js.native
+  def LoadXml(node: Node): Unit = js.native
 }
 

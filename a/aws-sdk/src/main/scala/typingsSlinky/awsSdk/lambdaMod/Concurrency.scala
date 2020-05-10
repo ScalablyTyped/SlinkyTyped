@@ -14,10 +14,29 @@ trait Concurrency extends js.Object {
 
 object Concurrency {
   @scala.inline
-  def apply(ReservedConcurrentExecutions: Int | Double = null): Concurrency = {
+  def apply(): Concurrency = {
     val __obj = js.Dynamic.literal()
-    if (ReservedConcurrentExecutions != null) __obj.updateDynamic("ReservedConcurrentExecutions")(ReservedConcurrentExecutions.asInstanceOf[js.Any])
     __obj.asInstanceOf[Concurrency]
   }
+  @scala.inline
+  implicit class ConcurrencyOps[Self <: Concurrency] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReservedConcurrentExecutions(value: ReservedConcurrentExecutions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedConcurrentExecutions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReservedConcurrentExecutions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedConcurrentExecutions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

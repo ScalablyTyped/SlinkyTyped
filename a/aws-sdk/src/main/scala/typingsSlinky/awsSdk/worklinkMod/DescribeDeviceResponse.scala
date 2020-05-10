@@ -46,28 +46,125 @@ trait DescribeDeviceResponse extends js.Object {
 
 object DescribeDeviceResponse {
   @scala.inline
-  def apply(
-    FirstAccessedTime: js.Date = null,
-    LastAccessedTime: js.Date = null,
-    Manufacturer: DeviceManufacturer = null,
-    Model: DeviceModel = null,
-    OperatingSystem: DeviceOperatingSystemName = null,
-    OperatingSystemVersion: DeviceOperatingSystemVersion = null,
-    PatchLevel: DevicePatchLevel = null,
-    Status: DeviceStatus = null,
-    Username: Username = null
-  ): DescribeDeviceResponse = {
+  def apply(): DescribeDeviceResponse = {
     val __obj = js.Dynamic.literal()
-    if (FirstAccessedTime != null) __obj.updateDynamic("FirstAccessedTime")(FirstAccessedTime.asInstanceOf[js.Any])
-    if (LastAccessedTime != null) __obj.updateDynamic("LastAccessedTime")(LastAccessedTime.asInstanceOf[js.Any])
-    if (Manufacturer != null) __obj.updateDynamic("Manufacturer")(Manufacturer.asInstanceOf[js.Any])
-    if (Model != null) __obj.updateDynamic("Model")(Model.asInstanceOf[js.Any])
-    if (OperatingSystem != null) __obj.updateDynamic("OperatingSystem")(OperatingSystem.asInstanceOf[js.Any])
-    if (OperatingSystemVersion != null) __obj.updateDynamic("OperatingSystemVersion")(OperatingSystemVersion.asInstanceOf[js.Any])
-    if (PatchLevel != null) __obj.updateDynamic("PatchLevel")(PatchLevel.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (Username != null) __obj.updateDynamic("Username")(Username.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDeviceResponse]
   }
+  @scala.inline
+  implicit class DescribeDeviceResponseOps[Self <: DescribeDeviceResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFirstAccessedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstAccessedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstAccessedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstAccessedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastAccessedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAccessedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastAccessedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAccessedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManufacturer(value: DeviceManufacturer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Manufacturer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManufacturer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Manufacturer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModel(value: DeviceModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Model")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperatingSystem(value: DeviceOperatingSystemName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatingSystem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperatingSystemVersion(value: DeviceOperatingSystemVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystemVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatingSystemVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystemVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatchLevel(value: DevicePatchLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PatchLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatchLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PatchLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: DeviceStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: Username): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

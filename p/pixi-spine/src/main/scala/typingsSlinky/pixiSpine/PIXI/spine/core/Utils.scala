@@ -29,7 +29,7 @@ object Utils extends js.Object {
   def newShortArray(size: Double): ArrayLike[Double] = js.native
   def setArraySize[T](array: js.Array[T], size: Double): js.Array[T] = js.native
   def setArraySize[T](array: js.Array[T], size: Double, value: js.Any): js.Array[T] = js.native
-  def toFloatArray(array: js.Array[Double]): js.Array[Double] | scala.scalajs.js.typedarray.Float32Array = js.native
+  def toFloatArray(array: js.Array[Double]): js.Array[Double] | js.typedarray.Float32Array = js.native
   def toSinglePrecision(value: Double): Double = js.native
   def webkit602BugfixHelper(alpha: Double, blend: MixBlend): Unit = js.native
 }

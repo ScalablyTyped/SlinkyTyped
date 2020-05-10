@@ -39,36 +39,89 @@ trait ParamsResourceManagementCustomdimensionsUpdate extends StandardParameters 
 
 object ParamsResourceManagementCustomdimensionsUpdate {
   @scala.inline
-  def apply(
-    accountId: String = null,
-    alt: String = null,
-    auth: String | OAuth2Client | JWT | Compute | UserRefreshClient = null,
-    customDimensionId: String = null,
-    fields: String = null,
-    ignoreCustomDataSourceLinks: js.UndefOr[Boolean] = js.undefined,
-    key: String = null,
-    oauth_token: String = null,
-    prettyPrint: js.UndefOr[Boolean] = js.undefined,
-    quotaUser: String = null,
-    requestBody: SchemaCustomDimension = null,
-    userIp: String = null,
-    webPropertyId: String = null
-  ): ParamsResourceManagementCustomdimensionsUpdate = {
+  def apply(): ParamsResourceManagementCustomdimensionsUpdate = {
     val __obj = js.Dynamic.literal()
-    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
-    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
-    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
-    if (customDimensionId != null) __obj.updateDynamic("customDimensionId")(customDimensionId.asInstanceOf[js.Any])
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreCustomDataSourceLinks)) __obj.updateDynamic("ignoreCustomDataSourceLinks")(ignoreCustomDataSourceLinks.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (oauth_token != null) __obj.updateDynamic("oauth_token")(oauth_token.asInstanceOf[js.Any])
-    if (!js.isUndefined(prettyPrint)) __obj.updateDynamic("prettyPrint")(prettyPrint.asInstanceOf[js.Any])
-    if (quotaUser != null) __obj.updateDynamic("quotaUser")(quotaUser.asInstanceOf[js.Any])
-    if (requestBody != null) __obj.updateDynamic("requestBody")(requestBody.asInstanceOf[js.Any])
-    if (userIp != null) __obj.updateDynamic("userIp")(userIp.asInstanceOf[js.Any])
-    if (webPropertyId != null) __obj.updateDynamic("webPropertyId")(webPropertyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParamsResourceManagementCustomdimensionsUpdate]
   }
+  @scala.inline
+  implicit class ParamsResourceManagementCustomdimensionsUpdateOps[Self <: ParamsResourceManagementCustomdimensionsUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomDimensionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customDimensionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomDimensionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customDimensionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreCustomDataSourceLinks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreCustomDataSourceLinks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreCustomDataSourceLinks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreCustomDataSourceLinks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestBody(value: SchemaCustomDimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebPropertyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebPropertyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

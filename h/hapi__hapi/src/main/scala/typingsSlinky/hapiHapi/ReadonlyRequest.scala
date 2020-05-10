@@ -11,7 +11,7 @@ import typingsSlinky.hapiHapi.mod.RequestOrig
 import typingsSlinky.hapiHapi.mod.RequestQuery
 import typingsSlinky.hapiHapi.mod.RequestRoute
 import typingsSlinky.hapiHapi.mod.ResponseObject
-import typingsSlinky.hapiHapi.mod.Server
+import typingsSlinky.hapiHapi.mod.Server_
 import typingsSlinky.hapiHapi.mod.Util.Dictionary
 import typingsSlinky.hapiHapi.mod.Util.HTTP_METHODS_PARTIAL
 import typingsSlinky.hapiHapi.mod.Util.HTTP_METHODS_PARTIAL_LOWERCASE
@@ -48,7 +48,7 @@ trait ReadonlyRequest extends js.Object {
   val raw: AnonReq = js.native
   val response: ResponseObject | Boom[_] = js.native
   val route: RequestRoute = js.native
-  val server: Server = js.native
+  val server: Server_ = js.native
   val state: Dictionary[_] = js.native
   val url: URL_ = js.native
   def active(): Boolean = js.native

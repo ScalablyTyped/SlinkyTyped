@@ -16,67 +16,245 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AxisPointer extends js.Object {
-  var animation: js.UndefOr[Boolean] = js.undefined
-  var animationDelay: js.UndefOr[Double | js.Function] = js.undefined
-  var animationDelayUpdate: js.UndefOr[Double | js.Function] = js.undefined
-  var animationDuration: js.UndefOr[Double] = js.undefined
-  var animationDurationUpdate: js.UndefOr[Double | js.Function] = js.undefined
-  var animationEasing: js.UndefOr[String] = js.undefined
-  var animationEasingUpdate: js.UndefOr[String] = js.undefined
-  var animationThreshold: js.UndefOr[Double] = js.undefined
-  var axis: js.UndefOr[auto | x | y | radius | angle] = js.undefined
+  var animation: js.UndefOr[Boolean] = js.native
+  var animationDelay: js.UndefOr[Double | js.Function] = js.native
+  var animationDelayUpdate: js.UndefOr[Double | js.Function] = js.native
+  var animationDuration: js.UndefOr[Double] = js.native
+  var animationDurationUpdate: js.UndefOr[Double | js.Function] = js.native
+  var animationEasing: js.UndefOr[String] = js.native
+  var animationEasingUpdate: js.UndefOr[String] = js.native
+  var animationThreshold: js.UndefOr[Double] = js.native
+  var axis: js.UndefOr[auto | x | y | radius | angle] = js.native
   // It is valid when axisPointer.type is 'cross'.
-  var crossStyle: js.UndefOr[LineStyle] = js.undefined
-  var label: js.UndefOr[PointerLabel] = js.undefined
-  var lineStyle: js.UndefOr[LineStyle] = js.undefined
-  var shadowStyle: js.UndefOr[AnonOpacity] = js.undefined
-  var show: js.UndefOr[Boolean] = js.undefined
-  var snap: js.UndefOr[Boolean] = js.undefined
-  var `type`: js.UndefOr[line | shadow | none | cross] = js.undefined
-  var z: js.UndefOr[Double] = js.undefined
+  var crossStyle: js.UndefOr[LineStyle] = js.native
+  var label: js.UndefOr[PointerLabel] = js.native
+  var lineStyle: js.UndefOr[LineStyle] = js.native
+  var shadowStyle: js.UndefOr[AnonOpacity] = js.native
+  var show: js.UndefOr[Boolean] = js.native
+  var snap: js.UndefOr[Boolean] = js.native
+  var `type`: js.UndefOr[line | shadow | none | cross] = js.native
+  var z: js.UndefOr[Double] = js.native
 }
 
 object AxisPointer {
   @scala.inline
-  def apply(
-    animation: js.UndefOr[Boolean] = js.undefined,
-    animationDelay: Double | js.Function = null,
-    animationDelayUpdate: Double | js.Function = null,
-    animationDuration: Int | Double = null,
-    animationDurationUpdate: Double | js.Function = null,
-    animationEasing: String = null,
-    animationEasingUpdate: String = null,
-    animationThreshold: Int | Double = null,
-    axis: auto | x | y | radius | angle = null,
-    crossStyle: LineStyle = null,
-    label: PointerLabel = null,
-    lineStyle: LineStyle = null,
-    shadowStyle: AnonOpacity = null,
-    show: js.UndefOr[Boolean] = js.undefined,
-    snap: js.UndefOr[Boolean] = js.undefined,
-    `type`: line | shadow | none | cross = null,
-    z: Int | Double = null
-  ): AxisPointer = {
+  def apply(): AxisPointer = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animation)) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (animationDelay != null) __obj.updateDynamic("animationDelay")(animationDelay.asInstanceOf[js.Any])
-    if (animationDelayUpdate != null) __obj.updateDynamic("animationDelayUpdate")(animationDelayUpdate.asInstanceOf[js.Any])
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (animationDurationUpdate != null) __obj.updateDynamic("animationDurationUpdate")(animationDurationUpdate.asInstanceOf[js.Any])
-    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
-    if (animationEasingUpdate != null) __obj.updateDynamic("animationEasingUpdate")(animationEasingUpdate.asInstanceOf[js.Any])
-    if (animationThreshold != null) __obj.updateDynamic("animationThreshold")(animationThreshold.asInstanceOf[js.Any])
-    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
-    if (crossStyle != null) __obj.updateDynamic("crossStyle")(crossStyle.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (lineStyle != null) __obj.updateDynamic("lineStyle")(lineStyle.asInstanceOf[js.Any])
-    if (shadowStyle != null) __obj.updateDynamic("shadowStyle")(shadowStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (!js.isUndefined(snap)) __obj.updateDynamic("snap")(snap.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (z != null) __obj.updateDynamic("z")(z.asInstanceOf[js.Any])
     __obj.asInstanceOf[AxisPointer]
   }
+  @scala.inline
+  implicit class AxisPointerOps[Self <: AxisPointer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDelay(value: Double | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDelayUpdate(value: Double | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDelayUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDurationUpdate(value: Double | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDurationUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationEasing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationEasingUpdate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationEasingUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxis(value: auto | x | y | radius | angle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrossStyle(value: LineStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrossStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: PointerLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineStyle(value: LineStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowStyle(value: AnonOpacity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: line | shadow | none | cross): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZ(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZ: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

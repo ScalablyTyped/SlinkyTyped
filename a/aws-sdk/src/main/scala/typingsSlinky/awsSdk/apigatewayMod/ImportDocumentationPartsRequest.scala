@@ -26,16 +26,59 @@ trait ImportDocumentationPartsRequest extends js.Object {
 
 object ImportDocumentationPartsRequest {
   @scala.inline
-  def apply(
-    body: _Blob,
-    restApiId: String,
-    failOnWarnings: js.UndefOr[scala.Boolean] = js.undefined,
-    mode: PutMode = null
-  ): ImportDocumentationPartsRequest = {
+  def apply(body: _Blob, restApiId: String): ImportDocumentationPartsRequest = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], restApiId = restApiId.asInstanceOf[js.Any])
-    if (!js.isUndefined(failOnWarnings)) __obj.updateDynamic("failOnWarnings")(failOnWarnings.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportDocumentationPartsRequest]
   }
+  @scala.inline
+  implicit class ImportDocumentationPartsRequestOps[Self <: ImportDocumentationPartsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBodyUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBody(value: _Blob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRestApiId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restApiId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFailOnWarnings(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failOnWarnings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailOnWarnings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failOnWarnings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: PutMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

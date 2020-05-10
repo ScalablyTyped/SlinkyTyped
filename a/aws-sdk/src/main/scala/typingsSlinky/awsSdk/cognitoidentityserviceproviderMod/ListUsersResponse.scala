@@ -18,11 +18,41 @@ trait ListUsersResponse extends js.Object {
 
 object ListUsersResponse {
   @scala.inline
-  def apply(PaginationToken: SearchPaginationTokenType = null, Users: UsersListType = null): ListUsersResponse = {
+  def apply(): ListUsersResponse = {
     val __obj = js.Dynamic.literal()
-    if (PaginationToken != null) __obj.updateDynamic("PaginationToken")(PaginationToken.asInstanceOf[js.Any])
-    if (Users != null) __obj.updateDynamic("Users")(Users.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListUsersResponse]
   }
+  @scala.inline
+  implicit class ListUsersResponseOps[Self <: ListUsersResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPaginationToken(value: SearchPaginationTokenType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaginationToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaginationToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaginationToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsers(value: UsersListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Users")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Users")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

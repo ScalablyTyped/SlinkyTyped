@@ -12,10 +12,8 @@ trait DirectionsApproach extends js.Object
 
 object DirectionsApproach {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def curb: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.curb = "curb".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.curb]
   @scala.inline
-  def curb: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.curb = this.cast("curb")
-  @scala.inline
-  def unrestricted: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.unrestricted = this.cast("unrestricted")
+  def unrestricted: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.unrestricted = "unrestricted".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.unrestricted]
 }
 

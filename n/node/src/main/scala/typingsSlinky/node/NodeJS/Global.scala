@@ -160,8 +160,8 @@ trait Global extends js.Object {
   def ReferenceError_Error(message: String): js.Error = js.native
   def RegExp(pattern: String): js.RegExp = js.native
   def RegExp(pattern: String, flags: String): js.RegExp = js.native
-  def RegExp(pattern: typingsSlinky.std.RegExp): js.RegExp = js.native
-  def RegExp(pattern: typingsSlinky.std.RegExp, flags: String): js.RegExp = js.native
+  def RegExp(pattern: js.RegExp): js.RegExp = js.native
+  def RegExp(pattern: js.RegExp, flags: String): js.RegExp = js.native
   def String(): java.lang.String = js.native
   def String(value: js.Any): java.lang.String = js.native
   def SyntaxError(): js.SyntaxError = js.native

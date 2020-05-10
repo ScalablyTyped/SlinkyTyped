@@ -25,18 +25,18 @@ object mod extends js.Object {
   val axpy: js.Function3[/* x */ FloatArray, /* y */ FloatArray, /* a */ js.UndefOr[Double], scala.Unit] = js.native
   val caxpy: js.Function6[
     /* n */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float32Array, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* alpha */ js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
   val ccopy: js.Function5[
     /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
@@ -46,13 +46,13 @@ object mod extends js.Object {
     /* n */ Double, 
     /* kl */ Double, 
     /* ku */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float32Array, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* alpha */ js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
-    /* beta */ scala.scalajs.js.typedarray.Float32Array, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* beta */ js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
@@ -62,13 +62,13 @@ object mod extends js.Object {
     /* m */ Double, 
     /* n */ Double, 
     /* k */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float32Array, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* alpha */ js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float32Array, 
+    /* b */ js.typedarray.Float32Array, 
     /* ldb */ Double, 
-    /* beta */ scala.scalajs.js.typedarray.Float32Array, 
-    /* c */ scala.scalajs.js.typedarray.Float32Array, 
+    /* beta */ js.typedarray.Float32Array, 
+    /* c */ js.typedarray.Float32Array, 
     /* ldc */ Double, 
     scala.Unit
   ] = js.native
@@ -76,29 +76,29 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* m */ Double, 
     /* n */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float32Array, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* alpha */ js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
-    /* beta */ scala.scalajs.js.typedarray.Float32Array, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* beta */ js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
   val copy: js.Function2[/* x */ FloatArray, /* y */ FloatArray, scala.Unit] = js.native
   val cscal: js.Function4[
     /* n */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
   val cswap: js.Function5[
     /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
@@ -107,13 +107,13 @@ object mod extends js.Object {
     /* uplo */ MatrixUpperLower, 
     /* m */ Double, 
     /* n */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float32Array, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* alpha */ js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float32Array, 
+    /* b */ js.typedarray.Float32Array, 
     /* ldb */ Double, 
-    /* beta */ scala.scalajs.js.typedarray.Float32Array, 
-    /* c */ scala.scalajs.js.typedarray.Float32Array, 
+    /* beta */ js.typedarray.Float32Array, 
+    /* c */ js.typedarray.Float32Array, 
     /* ldc */ Double, 
     scala.Unit
   ] = js.native
@@ -122,13 +122,13 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* n */ Double, 
     /* k */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float32Array, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* alpha */ js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float32Array, 
+    /* b */ js.typedarray.Float32Array, 
     /* ldb */ Double, 
-    /* beta */ scala.scalajs.js.typedarray.Float32Array, 
-    /* c */ scala.scalajs.js.typedarray.Float32Array, 
+    /* beta */ js.typedarray.Float32Array, 
+    /* c */ js.typedarray.Float32Array, 
     /* ldc */ Double, 
     scala.Unit
   ] = js.native
@@ -137,11 +137,11 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* n */ Double, 
     /* k */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float32Array, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* alpha */ js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* beta */ scala.scalajs.js.typedarray.Float32Array, 
-    /* c */ scala.scalajs.js.typedarray.Float32Array, 
+    /* beta */ js.typedarray.Float32Array, 
+    /* c */ js.typedarray.Float32Array, 
     /* ldc */ Double, 
     scala.Unit
   ] = js.native
@@ -151,9 +151,9 @@ object mod extends js.Object {
     /* diag */ MatrixUnit, 
     /* n */ Double, 
     /* k */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -163,9 +163,9 @@ object mod extends js.Object {
     /* diag */ MatrixUnit, 
     /* n */ Double, 
     /* k */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -174,8 +174,8 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* diag */ MatrixUnit, 
     /* n */ Double, 
-    /* ap */ scala.scalajs.js.typedarray.Float32Array, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* ap */ js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -184,8 +184,8 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* diag */ MatrixUnit, 
     /* n */ Double, 
-    /* ap */ scala.scalajs.js.typedarray.Float32Array, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* ap */ js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -196,10 +196,10 @@ object mod extends js.Object {
     /* diag */ MatrixUnit, 
     /* m */ Double, 
     /* n */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float32Array, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* alpha */ js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float32Array, 
+    /* b */ js.typedarray.Float32Array, 
     /* ldb */ Double, 
     scala.Unit
   ] = js.native
@@ -208,9 +208,9 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* diag */ MatrixUnit, 
     /* n */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -221,10 +221,10 @@ object mod extends js.Object {
     /* diag */ MatrixUnit, 
     /* m */ Double, 
     /* n */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float32Array, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* alpha */ js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float32Array, 
+    /* b */ js.typedarray.Float32Array, 
     /* ldb */ Double, 
     scala.Unit
   ] = js.native
@@ -233,40 +233,35 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* diag */ MatrixUnit, 
     /* n */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
-  val dasum: js.Function3[
-    /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
-    /* incx */ Double, 
-    Double
-  ] = js.native
+  val dasum: js.Function3[/* n */ Double, /* x */ js.typedarray.Float64Array, /* incx */ Double, Double] = js.native
   val daxpy: js.Function6[
     /* n */ Double, 
     /* alpha */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
   val dcopy: js.Function5[
     /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
   val ddot: js.Function5[
     /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
     Double
   ] = js.native
@@ -277,12 +272,12 @@ object mod extends js.Object {
     /* kl */ Double, 
     /* ku */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     /* beta */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
@@ -293,12 +288,12 @@ object mod extends js.Object {
     /* n */ Double, 
     /* k */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float64Array, 
+    /* b */ js.typedarray.Float64Array, 
     /* ldb */ Double, 
     /* beta */ Double, 
-    /* c */ scala.scalajs.js.typedarray.Float64Array, 
+    /* c */ js.typedarray.Float64Array, 
     /* ldc */ Double, 
     scala.Unit
   ] = js.native
@@ -307,12 +302,12 @@ object mod extends js.Object {
     /* m */ Double, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     /* beta */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
@@ -320,52 +315,47 @@ object mod extends js.Object {
     /* m */ Double, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
     scala.Unit
   ] = js.native
-  val dnrm2: js.Function3[
-    /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
-    /* incx */ Double, 
-    Double
-  ] = js.native
+  val dnrm2: js.Function3[/* n */ Double, /* x */ js.typedarray.Float64Array, /* incx */ Double, Double] = js.native
   val dot: js.Function2[/* x */ FloatArray, /* y */ FloatArray, Double] = js.native
   val drot: js.Function7[
     /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
     /* c */ Double, 
     /* s */ Double, 
     scala.Unit
   ] = js.native
   val drotg: js.Function4[
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
-    /* b */ scala.scalajs.js.typedarray.Float64Array, 
-    /* c */ scala.scalajs.js.typedarray.Float64Array, 
-    /* s */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
+    /* b */ js.typedarray.Float64Array, 
+    /* c */ js.typedarray.Float64Array, 
+    /* s */ js.typedarray.Float64Array, 
     scala.Unit
   ] = js.native
   val drotm: js.Function5[
     /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
   val drotmg: js.Function5[
-    /* d1 */ scala.scalajs.js.typedarray.Float64Array, 
-    /* d2 */ scala.scalajs.js.typedarray.Float64Array, 
-    /* x1 */ scala.scalajs.js.typedarray.Float64Array, 
-    /* y1 */ scala.scalajs.js.typedarray.Float64Array, 
-    /* param */ scala.scalajs.js.typedarray.Float64Array, 
+    /* d1 */ js.typedarray.Float64Array, 
+    /* d2 */ js.typedarray.Float64Array, 
+    /* x1 */ js.typedarray.Float64Array, 
+    /* y1 */ js.typedarray.Float64Array, 
+    /* param */ js.typedarray.Float64Array, 
     scala.Unit
   ] = js.native
   val dsbmv: js.Function11[
@@ -373,19 +363,19 @@ object mod extends js.Object {
     /* n */ Double, 
     /* k */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     /* beta */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
   val dscal: js.Function4[
     /* n */ Double, 
     /* a */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -393,11 +383,11 @@ object mod extends js.Object {
     /* uplo */ MatrixUpperLower, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* ap */ scala.scalajs.js.typedarray.Float64Array, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* ap */ js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     /* beta */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
@@ -405,27 +395,27 @@ object mod extends js.Object {
     /* uplo */ MatrixUpperLower, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
-    /* ap */ scala.scalajs.js.typedarray.Float64Array, 
+    /* ap */ js.typedarray.Float64Array, 
     scala.Unit
   ] = js.native
   val dspr2: js.Function8[
     /* uplo */ MatrixUpperLower, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
-    /* ap */ scala.scalajs.js.typedarray.Float64Array, 
+    /* ap */ js.typedarray.Float64Array, 
     scala.Unit
   ] = js.native
   val dswap: js.Function5[
     /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
@@ -435,12 +425,12 @@ object mod extends js.Object {
     /* m */ Double, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float64Array, 
+    /* b */ js.typedarray.Float64Array, 
     /* ldb */ Double, 
     /* beta */ Double, 
-    /* c */ scala.scalajs.js.typedarray.Float64Array, 
+    /* c */ js.typedarray.Float64Array, 
     /* ldc */ Double, 
     scala.Unit
   ] = js.native
@@ -448,12 +438,12 @@ object mod extends js.Object {
     /* uplo */ MatrixUpperLower, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     /* beta */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
@@ -461,9 +451,9 @@ object mod extends js.Object {
     /* uplo */ MatrixUpperLower, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
     scala.Unit
   ] = js.native
@@ -471,11 +461,11 @@ object mod extends js.Object {
     /* uplo */ MatrixUpperLower, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
     scala.Unit
   ] = js.native
@@ -485,12 +475,12 @@ object mod extends js.Object {
     /* n */ Double, 
     /* k */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float64Array, 
+    /* b */ js.typedarray.Float64Array, 
     /* ldb */ Double, 
     /* beta */ Double, 
-    /* c */ scala.scalajs.js.typedarray.Float64Array, 
+    /* c */ js.typedarray.Float64Array, 
     /* ldc */ Double, 
     scala.Unit
   ] = js.native
@@ -500,10 +490,10 @@ object mod extends js.Object {
     /* n */ Double, 
     /* k */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
     /* beta */ Double, 
-    /* c */ scala.scalajs.js.typedarray.Float64Array, 
+    /* c */ js.typedarray.Float64Array, 
     /* ldc */ Double, 
     scala.Unit
   ] = js.native
@@ -513,9 +503,9 @@ object mod extends js.Object {
     /* diag */ MatrixUnit, 
     /* n */ Double, 
     /* k */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -525,9 +515,9 @@ object mod extends js.Object {
     /* diag */ MatrixUnit, 
     /* n */ Double, 
     /* k */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -536,8 +526,8 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* diag */ MatrixUnit, 
     /* n */ Double, 
-    /* ap */ scala.scalajs.js.typedarray.Float64Array, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* ap */ js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -546,8 +536,8 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* diag */ MatrixUnit, 
     /* n */ Double, 
-    /* ap */ scala.scalajs.js.typedarray.Float64Array, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* ap */ js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -559,9 +549,9 @@ object mod extends js.Object {
     /* m */ Double, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float64Array, 
+    /* b */ js.typedarray.Float64Array, 
     /* ldb */ Double, 
     scala.Unit
   ] = js.native
@@ -570,9 +560,9 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* diag */ MatrixUnit, 
     /* n */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -584,9 +574,9 @@ object mod extends js.Object {
     /* m */ Double, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float64Array, 
+    /* b */ js.typedarray.Float64Array, 
     /* ldb */ Double, 
     scala.Unit
   ] = js.native
@@ -595,24 +585,14 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* diag */ MatrixUnit, 
     /* n */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
-  val dzasum: js.Function3[
-    /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
-    /* incx */ Double, 
-    Double
-  ] = js.native
-  val dznrm2: js.Function3[
-    /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
-    /* incx */ Double, 
-    Double
-  ] = js.native
+  val dzasum: js.Function3[/* n */ Double, /* x */ js.typedarray.Float64Array, /* incx */ Double, Double] = js.native
+  val dznrm2: js.Function3[/* n */ Double, /* x */ js.typedarray.Float64Array, /* incx */ Double, Double] = js.native
   val gbmv: js.Function8[
     /* a */ FloatArray, 
     /* x */ FloatArray, 
@@ -654,30 +634,10 @@ object mod extends js.Object {
     scala.Unit
   ] = js.native
   val iamax: js.Function1[/* x */ FloatArray, Double] = js.native
-  val icamax: js.Function3[
-    /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
-    /* incx */ Double, 
-    Double
-  ] = js.native
-  val idamax: js.Function3[
-    /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
-    /* incx */ Double, 
-    Double
-  ] = js.native
-  val isamax: js.Function3[
-    /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
-    /* incx */ Double, 
-    Double
-  ] = js.native
-  val izamax: js.Function3[
-    /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
-    /* incx */ Double, 
-    Double
-  ] = js.native
+  val icamax: js.Function3[/* n */ Double, /* x */ js.typedarray.Float32Array, /* incx */ Double, Double] = js.native
+  val idamax: js.Function3[/* n */ Double, /* x */ js.typedarray.Float64Array, /* incx */ Double, Double] = js.native
+  val isamax: js.Function3[/* n */ Double, /* x */ js.typedarray.Float32Array, /* incx */ Double, Double] = js.native
+  val izamax: js.Function3[/* n */ Double, /* x */ js.typedarray.Float64Array, /* incx */ Double, Double] = js.native
   val nrm2: js.Function1[/* x */ FloatArray, Double] = js.native
   val rot: js.Function4[/* x */ FloatArray, /* y */ FloatArray, /* c */ Double, /* s */ Double, scala.Unit] = js.native
   val rotg: js.Function4[
@@ -696,18 +656,13 @@ object mod extends js.Object {
     /* param */ FloatArray, 
     scala.Unit
   ] = js.native
-  val sasum: js.Function3[
-    /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
-    /* incx */ Double, 
-    Double
-  ] = js.native
+  val sasum: js.Function3[/* n */ Double, /* x */ js.typedarray.Float32Array, /* incx */ Double, Double] = js.native
   val saxpy: js.Function6[
     /* n */ Double, 
     /* alpha */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
@@ -722,31 +677,21 @@ object mod extends js.Object {
     scala.Unit
   ] = js.native
   val scal: js.Function2[/* x */ FloatArray, /* a */ Double, scala.Unit] = js.native
-  val scasum: js.Function3[
-    /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
-    /* incx */ Double, 
-    Double
-  ] = js.native
-  val scnrm2: js.Function3[
-    /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
-    /* incx */ Double, 
-    Double
-  ] = js.native
+  val scasum: js.Function3[/* n */ Double, /* x */ js.typedarray.Float32Array, /* incx */ Double, Double] = js.native
+  val scnrm2: js.Function3[/* n */ Double, /* x */ js.typedarray.Float32Array, /* incx */ Double, Double] = js.native
   val scopy: js.Function5[
     /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
   val sdot: js.Function5[
     /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
     Double
   ] = js.native
@@ -757,12 +702,12 @@ object mod extends js.Object {
     /* kl */ Double, 
     /* ku */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     /* beta */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
@@ -773,12 +718,12 @@ object mod extends js.Object {
     /* n */ Double, 
     /* k */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float32Array, 
+    /* b */ js.typedarray.Float32Array, 
     /* ldb */ Double, 
     /* beta */ Double, 
-    /* c */ scala.scalajs.js.typedarray.Float32Array, 
+    /* c */ js.typedarray.Float32Array, 
     /* ldc */ Double, 
     scala.Unit
   ] = js.native
@@ -787,12 +732,12 @@ object mod extends js.Object {
     /* m */ Double, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     /* beta */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
@@ -800,20 +745,15 @@ object mod extends js.Object {
     /* m */ Double, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
     scala.Unit
   ] = js.native
-  val snrm2: js.Function3[
-    /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
-    /* incx */ Double, 
-    Double
-  ] = js.native
+  val snrm2: js.Function3[/* n */ Double, /* x */ js.typedarray.Float32Array, /* incx */ Double, Double] = js.native
   val spmv: js.Function6[
     /* ap */ FloatArray, 
     /* x */ FloatArray, 
@@ -840,35 +780,35 @@ object mod extends js.Object {
   ] = js.native
   val srot: js.Function7[
     /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
     /* c */ Double, 
     /* s */ Double, 
     scala.Unit
   ] = js.native
   val srotg: js.Function4[
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
-    /* b */ scala.scalajs.js.typedarray.Float32Array, 
-    /* c */ scala.scalajs.js.typedarray.Float32Array, 
-    /* s */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
+    /* b */ js.typedarray.Float32Array, 
+    /* c */ js.typedarray.Float32Array, 
+    /* s */ js.typedarray.Float32Array, 
     scala.Unit
   ] = js.native
   val srotm: js.Function5[
     /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
   val srotmg: js.Function5[
-    /* d1 */ scala.scalajs.js.typedarray.Float32Array, 
-    /* d2 */ scala.scalajs.js.typedarray.Float32Array, 
-    /* x1 */ scala.scalajs.js.typedarray.Float32Array, 
-    /* y1 */ scala.scalajs.js.typedarray.Float32Array, 
-    /* param */ scala.scalajs.js.typedarray.Float32Array, 
+    /* d1 */ js.typedarray.Float32Array, 
+    /* d2 */ js.typedarray.Float32Array, 
+    /* x1 */ js.typedarray.Float32Array, 
+    /* y1 */ js.typedarray.Float32Array, 
+    /* param */ js.typedarray.Float32Array, 
     scala.Unit
   ] = js.native
   val ssbmv: js.Function11[
@@ -876,19 +816,19 @@ object mod extends js.Object {
     /* n */ Double, 
     /* k */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     /* beta */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
   val sscal: js.Function4[
     /* n */ Double, 
     /* a */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -896,11 +836,11 @@ object mod extends js.Object {
     /* uplo */ MatrixUpperLower, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* ap */ scala.scalajs.js.typedarray.Float32Array, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* ap */ js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     /* beta */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
@@ -908,27 +848,27 @@ object mod extends js.Object {
     /* uplo */ MatrixUpperLower, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
-    /* ap */ scala.scalajs.js.typedarray.Float32Array, 
+    /* ap */ js.typedarray.Float32Array, 
     scala.Unit
   ] = js.native
   val sspr2: js.Function8[
     /* uplo */ MatrixUpperLower, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
-    /* ap */ scala.scalajs.js.typedarray.Float32Array, 
+    /* ap */ js.typedarray.Float32Array, 
     scala.Unit
   ] = js.native
   val sswap: js.Function5[
     /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
@@ -938,12 +878,12 @@ object mod extends js.Object {
     /* m */ Double, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float32Array, 
+    /* b */ js.typedarray.Float32Array, 
     /* ldb */ Double, 
     /* beta */ Double, 
-    /* c */ scala.scalajs.js.typedarray.Float32Array, 
+    /* c */ js.typedarray.Float32Array, 
     /* ldc */ Double, 
     scala.Unit
   ] = js.native
@@ -951,12 +891,12 @@ object mod extends js.Object {
     /* uplo */ MatrixUpperLower, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     /* beta */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
@@ -964,9 +904,9 @@ object mod extends js.Object {
     /* uplo */ MatrixUpperLower, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
     scala.Unit
   ] = js.native
@@ -974,11 +914,11 @@ object mod extends js.Object {
     /* uplo */ MatrixUpperLower, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float32Array, 
+    /* y */ js.typedarray.Float32Array, 
     /* incy */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
     scala.Unit
   ] = js.native
@@ -988,12 +928,12 @@ object mod extends js.Object {
     /* n */ Double, 
     /* k */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float32Array, 
+    /* b */ js.typedarray.Float32Array, 
     /* ldb */ Double, 
     /* beta */ Double, 
-    /* c */ scala.scalajs.js.typedarray.Float32Array, 
+    /* c */ js.typedarray.Float32Array, 
     /* ldc */ Double, 
     scala.Unit
   ] = js.native
@@ -1003,10 +943,10 @@ object mod extends js.Object {
     /* n */ Double, 
     /* k */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
     /* beta */ Double, 
-    /* c */ scala.scalajs.js.typedarray.Float32Array, 
+    /* c */ js.typedarray.Float32Array, 
     /* ldc */ Double, 
     scala.Unit
   ] = js.native
@@ -1016,9 +956,9 @@ object mod extends js.Object {
     /* diag */ MatrixUnit, 
     /* n */ Double, 
     /* k */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -1028,9 +968,9 @@ object mod extends js.Object {
     /* diag */ MatrixUnit, 
     /* n */ Double, 
     /* k */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -1039,8 +979,8 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* diag */ MatrixUnit, 
     /* n */ Double, 
-    /* ap */ scala.scalajs.js.typedarray.Float32Array, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* ap */ js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -1049,8 +989,8 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* diag */ MatrixUnit, 
     /* n */ Double, 
-    /* ap */ scala.scalajs.js.typedarray.Float32Array, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* ap */ js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -1062,9 +1002,9 @@ object mod extends js.Object {
     /* m */ Double, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float32Array, 
+    /* b */ js.typedarray.Float32Array, 
     /* ldb */ Double, 
     scala.Unit
   ] = js.native
@@ -1073,9 +1013,9 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* diag */ MatrixUnit, 
     /* n */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -1087,9 +1027,9 @@ object mod extends js.Object {
     /* m */ Double, 
     /* n */ Double, 
     /* alpha */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float32Array, 
+    /* b */ js.typedarray.Float32Array, 
     /* ldb */ Double, 
     scala.Unit
   ] = js.native
@@ -1098,9 +1038,9 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* diag */ MatrixUnit, 
     /* n */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float32Array, 
+    /* a */ js.typedarray.Float32Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float32Array, 
+    /* x */ js.typedarray.Float32Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -1238,18 +1178,18 @@ object mod extends js.Object {
   ] = js.native
   val zaxpy: js.Function6[
     /* n */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float64Array, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* alpha */ js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
   val zcopy: js.Function5[
     /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
@@ -1259,13 +1199,13 @@ object mod extends js.Object {
     /* n */ Double, 
     /* kl */ Double, 
     /* ku */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float64Array, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* alpha */ js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
-    /* beta */ scala.scalajs.js.typedarray.Float64Array, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* beta */ js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
@@ -1275,13 +1215,13 @@ object mod extends js.Object {
     /* m */ Double, 
     /* n */ Double, 
     /* k */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float64Array, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* alpha */ js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float64Array, 
+    /* b */ js.typedarray.Float64Array, 
     /* ldb */ Double, 
-    /* beta */ scala.scalajs.js.typedarray.Float64Array, 
-    /* c */ scala.scalajs.js.typedarray.Float64Array, 
+    /* beta */ js.typedarray.Float64Array, 
+    /* c */ js.typedarray.Float64Array, 
     /* ldc */ Double, 
     scala.Unit
   ] = js.native
@@ -1289,28 +1229,28 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* m */ Double, 
     /* n */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float64Array, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* alpha */ js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
-    /* beta */ scala.scalajs.js.typedarray.Float64Array, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* beta */ js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
   val zscal: js.Function4[
     /* n */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
   val zswap: js.Function5[
     /* n */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
-    /* y */ scala.scalajs.js.typedarray.Float64Array, 
+    /* y */ js.typedarray.Float64Array, 
     /* incy */ Double, 
     scala.Unit
   ] = js.native
@@ -1319,13 +1259,13 @@ object mod extends js.Object {
     /* uplo */ MatrixUpperLower, 
     /* m */ Double, 
     /* n */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float64Array, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* alpha */ js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float64Array, 
+    /* b */ js.typedarray.Float64Array, 
     /* ldb */ Double, 
-    /* beta */ scala.scalajs.js.typedarray.Float64Array, 
-    /* c */ scala.scalajs.js.typedarray.Float64Array, 
+    /* beta */ js.typedarray.Float64Array, 
+    /* c */ js.typedarray.Float64Array, 
     /* ldc */ Double, 
     scala.Unit
   ] = js.native
@@ -1334,13 +1274,13 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* n */ Double, 
     /* k */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float64Array, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* alpha */ js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float64Array, 
+    /* b */ js.typedarray.Float64Array, 
     /* ldb */ Double, 
-    /* beta */ scala.scalajs.js.typedarray.Float64Array, 
-    /* c */ scala.scalajs.js.typedarray.Float64Array, 
+    /* beta */ js.typedarray.Float64Array, 
+    /* c */ js.typedarray.Float64Array, 
     /* ldc */ Double, 
     scala.Unit
   ] = js.native
@@ -1349,11 +1289,11 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* n */ Double, 
     /* k */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float64Array, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* alpha */ js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* beta */ scala.scalajs.js.typedarray.Float64Array, 
-    /* c */ scala.scalajs.js.typedarray.Float64Array, 
+    /* beta */ js.typedarray.Float64Array, 
+    /* c */ js.typedarray.Float64Array, 
     /* ldc */ Double, 
     scala.Unit
   ] = js.native
@@ -1363,9 +1303,9 @@ object mod extends js.Object {
     /* diag */ MatrixUnit, 
     /* n */ Double, 
     /* k */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -1375,9 +1315,9 @@ object mod extends js.Object {
     /* diag */ MatrixUnit, 
     /* n */ Double, 
     /* k */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -1386,8 +1326,8 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* diag */ MatrixUnit, 
     /* n */ Double, 
-    /* ap */ scala.scalajs.js.typedarray.Float64Array, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* ap */ js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -1396,8 +1336,8 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* diag */ MatrixUnit, 
     /* n */ Double, 
-    /* ap */ scala.scalajs.js.typedarray.Float64Array, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* ap */ js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -1408,10 +1348,10 @@ object mod extends js.Object {
     /* diag */ MatrixUnit, 
     /* m */ Double, 
     /* n */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float64Array, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* alpha */ js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float64Array, 
+    /* b */ js.typedarray.Float64Array, 
     /* ldb */ Double, 
     scala.Unit
   ] = js.native
@@ -1420,9 +1360,9 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* diag */ MatrixUnit, 
     /* n */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native
@@ -1433,10 +1373,10 @@ object mod extends js.Object {
     /* diag */ MatrixUnit, 
     /* m */ Double, 
     /* n */ Double, 
-    /* alpha */ scala.scalajs.js.typedarray.Float64Array, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* alpha */ js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* b */ scala.scalajs.js.typedarray.Float64Array, 
+    /* b */ js.typedarray.Float64Array, 
     /* ldb */ Double, 
     scala.Unit
   ] = js.native
@@ -1445,9 +1385,9 @@ object mod extends js.Object {
     /* trans */ MatrixTrans, 
     /* diag */ MatrixUnit, 
     /* n */ Double, 
-    /* a */ scala.scalajs.js.typedarray.Float64Array, 
+    /* a */ js.typedarray.Float64Array, 
     /* lda */ Double, 
-    /* x */ scala.scalajs.js.typedarray.Float64Array, 
+    /* x */ js.typedarray.Float64Array, 
     /* incx */ Double, 
     scala.Unit
   ] = js.native

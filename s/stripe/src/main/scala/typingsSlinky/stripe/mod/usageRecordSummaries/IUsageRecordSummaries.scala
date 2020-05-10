@@ -11,24 +11,32 @@ import scala.scalajs.js.annotation._
   * starting after summary starting_after. Each entry in the array is a separate summary object.
   * If no more summaries are available, the resulting array is empty.
   */
+@js.native
 trait IUsageRecordSummaries extends IList[IUsageRecordSummariesItem] {
   @JSName("object")
-  var object_IUsageRecordSummaries: list
+  var object_IUsageRecordSummaries: list = js.native
 }
 
 object IUsageRecordSummaries {
   @scala.inline
-  def apply(
-    data: js.Array[IUsageRecordSummariesItem],
-    has_more: Boolean,
-    `object`: list,
-    url: String,
-    total_count: Int | Double = null
-  ): IUsageRecordSummaries = {
+  def apply(data: js.Array[IUsageRecordSummariesItem], has_more: Boolean, `object`: list, url: String): IUsageRecordSummaries = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], has_more = has_more.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
-    if (total_count != null) __obj.updateDynamic("total_count")(total_count.asInstanceOf[js.Any])
     __obj.asInstanceOf[IUsageRecordSummaries]
   }
+  @scala.inline
+  implicit class IUsageRecordSummariesOps[Self <: IUsageRecordSummaries] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withObject(value: list): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

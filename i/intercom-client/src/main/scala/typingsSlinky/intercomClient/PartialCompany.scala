@@ -7,63 +7,231 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<intercom-client.intercom-client/Company.Company> */
+@js.native
 trait PartialCompany extends js.Object {
-  var app_id: js.UndefOr[String] = js.undefined
-  var company_id: js.UndefOr[String] = js.undefined
-  var created_at: js.UndefOr[Double] = js.undefined
-  var custom_attributes: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var industry: js.UndefOr[String] = js.undefined
-  var monthly_spend: js.UndefOr[Double] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var plan: js.UndefOr[String | AnonName] = js.undefined
-  var remote_created_at: js.UndefOr[Double] = js.undefined
-  var session_count: js.UndefOr[Double] = js.undefined
-  var size: js.UndefOr[Double] = js.undefined
-  var `type`: js.UndefOr[company] = js.undefined
-  var updated_at: js.UndefOr[Double] = js.undefined
-  var user_count: js.UndefOr[Double] = js.undefined
-  var website: js.UndefOr[String] = js.undefined
+  var app_id: js.UndefOr[String] = js.native
+  var company_id: js.UndefOr[String] = js.native
+  var created_at: js.UndefOr[Double] = js.native
+  var custom_attributes: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var id: js.UndefOr[String] = js.native
+  var industry: js.UndefOr[String] = js.native
+  var monthly_spend: js.UndefOr[Double] = js.native
+  var name: js.UndefOr[String] = js.native
+  var plan: js.UndefOr[String | AnonName] = js.native
+  var remote_created_at: js.UndefOr[Double] = js.native
+  var session_count: js.UndefOr[Double] = js.native
+  var size: js.UndefOr[Double] = js.native
+  var `type`: js.UndefOr[company] = js.native
+  var updated_at: js.UndefOr[Double] = js.native
+  var user_count: js.UndefOr[Double] = js.native
+  var website: js.UndefOr[String] = js.native
 }
 
 object PartialCompany {
   @scala.inline
-  def apply(
-    app_id: String = null,
-    company_id: String = null,
-    created_at: Int | Double = null,
-    custom_attributes: StringDictionary[js.Any] = null,
-    id: String = null,
-    industry: String = null,
-    monthly_spend: Int | Double = null,
-    name: String = null,
-    plan: String | AnonName = null,
-    remote_created_at: Int | Double = null,
-    session_count: Int | Double = null,
-    size: Int | Double = null,
-    `type`: company = null,
-    updated_at: Int | Double = null,
-    user_count: Int | Double = null,
-    website: String = null
-  ): PartialCompany = {
+  def apply(): PartialCompany = {
     val __obj = js.Dynamic.literal()
-    if (app_id != null) __obj.updateDynamic("app_id")(app_id.asInstanceOf[js.Any])
-    if (company_id != null) __obj.updateDynamic("company_id")(company_id.asInstanceOf[js.Any])
-    if (created_at != null) __obj.updateDynamic("created_at")(created_at.asInstanceOf[js.Any])
-    if (custom_attributes != null) __obj.updateDynamic("custom_attributes")(custom_attributes.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (industry != null) __obj.updateDynamic("industry")(industry.asInstanceOf[js.Any])
-    if (monthly_spend != null) __obj.updateDynamic("monthly_spend")(monthly_spend.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (plan != null) __obj.updateDynamic("plan")(plan.asInstanceOf[js.Any])
-    if (remote_created_at != null) __obj.updateDynamic("remote_created_at")(remote_created_at.asInstanceOf[js.Any])
-    if (session_count != null) __obj.updateDynamic("session_count")(session_count.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (updated_at != null) __obj.updateDynamic("updated_at")(updated_at.asInstanceOf[js.Any])
-    if (user_count != null) __obj.updateDynamic("user_count")(user_count.asInstanceOf[js.Any])
-    if (website != null) __obj.updateDynamic("website")(website.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialCompany]
   }
+  @scala.inline
+  implicit class PartialCompanyOps[Self <: PartialCompany] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApp_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("app_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApp_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("app_id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompany_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("company_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompany_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("company_id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreated_at(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreated_at: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustom_attributes(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustom_attributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndustry(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("industry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndustry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("industry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonthly_spend(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monthly_spend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonthly_spend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monthly_spend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlan(value: String | AnonName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemote_created_at(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remote_created_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemote_created_at: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remote_created_at")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSession_count(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session_count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSession_count: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session_count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: company): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdated_at(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdated_at: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_at")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser_count(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user_count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser_count: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user_count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebsite(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("website")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebsite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("website")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

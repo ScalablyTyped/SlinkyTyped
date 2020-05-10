@@ -16,12 +16,12 @@ object keyframeTrackMod extends js.Object {
     def this(name: String, times: js.Array[_], values: js.Array[_]) = this()
     def this(name: String, times: js.Array[_], values: js.Array[_], interpolation: InterpolationModes) = this()
     var DefaultInterpolation: InterpolationModes = js.native
-    var TimeBufferType: scala.scalajs.js.typedarray.Float32Array = js.native
-    var ValueBufferType: scala.scalajs.js.typedarray.Float32Array = js.native
+    var TimeBufferType: js.typedarray.Float32Array = js.native
+    var ValueBufferType: js.typedarray.Float32Array = js.native
     var ValueTypeName: String = js.native
     var name: String = js.native
-    var times: scala.scalajs.js.typedarray.Float32Array = js.native
-    var values: scala.scalajs.js.typedarray.Float32Array = js.native
+    var times: js.typedarray.Float32Array = js.native
+    var values: js.typedarray.Float32Array = js.native
     def InterpolantFactoryMethodDiscrete(result: js.Any): DiscreteInterpolant = js.native
     def InterpolantFactoryMethodLinear(result: js.Any): LinearInterpolant = js.native
     def InterpolantFactoryMethodSmooth(result: js.Any): CubicInterpolant = js.native

@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation._
   *
   * Depending on the OS, browser, and camera, the actual resolution, frame rate, and bitrate might be different from the set values.
   */
+@js.native
 trait VideoEncoderConfiguration extends js.Object {
   /**
     * The video bitrate (Kbps). The value range is [1,10000000].
@@ -21,7 +22,7 @@ trait VideoEncoderConfiguration extends js.Object {
     *
     * [[include:VideoProfileDefinition.md]]
     */
-  var bitrate: js.UndefOr[AnonMax] = js.undefined
+  var bitrate: js.UndefOr[AnonMax] = js.native
   /**
     * The video frame rate (fps).
     *
@@ -31,7 +32,7 @@ trait VideoEncoderConfiguration extends js.Object {
     * - This parameter sets the local capturing video frame rate. The actual encoding frame rate depends on the device, system, and browser.
     * - When the network conditions change, the browser adjusts the encoding frame rate automatically.
     */
-  var frameRate: js.UndefOr[AnonMax] = js.undefined
+  var frameRate: js.UndefOr[AnonMax] = js.native
   /**
     * Resolution of the video.
     *
@@ -42,17 +43,58 @@ trait VideoEncoderConfiguration extends js.Object {
     * - 960 &times; 720
     *
     */
-  var resolution: js.UndefOr[AnonHeight] = js.undefined
+  var resolution: js.UndefOr[AnonHeight] = js.native
 }
 
 object VideoEncoderConfiguration {
   @scala.inline
-  def apply(bitrate: AnonMax = null, frameRate: AnonMax = null, resolution: AnonHeight = null): VideoEncoderConfiguration = {
+  def apply(): VideoEncoderConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (bitrate != null) __obj.updateDynamic("bitrate")(bitrate.asInstanceOf[js.Any])
-    if (frameRate != null) __obj.updateDynamic("frameRate")(frameRate.asInstanceOf[js.Any])
-    if (resolution != null) __obj.updateDynamic("resolution")(resolution.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoEncoderConfiguration]
   }
+  @scala.inline
+  implicit class VideoEncoderConfigurationOps[Self <: VideoEncoderConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBitrate(value: AnonMax): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitrate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBitrate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitrate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrameRate(value: AnonMax): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolution(value: AnonHeight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,22 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ParseRequestOptions extends js.Object {
-  var host: js.UndefOr[String] = js.undefined
-  var hostHeaderName: js.UndefOr[String] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var port: js.UndefOr[Double] = js.undefined
+  var host: js.UndefOr[String] = js.native
+  var hostHeaderName: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.native
+  var port: js.UndefOr[Double] = js.native
 }
 
 object ParseRequestOptions {
   @scala.inline
-  def apply(host: String = null, hostHeaderName: String = null, name: String = null, port: Int | Double = null): ParseRequestOptions = {
+  def apply(): ParseRequestOptions = {
     val __obj = js.Dynamic.literal()
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (hostHeaderName != null) __obj.updateDynamic("hostHeaderName")(hostHeaderName.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParseRequestOptions]
   }
+  @scala.inline
+  implicit class ParseRequestOptionsOps[Self <: ParseRequestOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostHeaderName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostHeaderName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostHeaderName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostHeaderName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

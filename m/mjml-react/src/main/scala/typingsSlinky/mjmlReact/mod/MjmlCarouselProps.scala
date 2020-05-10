@@ -9,51 +9,179 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MjmlCarouselProps extends js.Object {
-  var align: js.UndefOr[String] = js.undefined
-  var backgroundColor: js.UndefOr[BackgroundColorProperty] = js.undefined
-  var borderRadius: js.UndefOr[String | Double] = js.undefined
-  var iconWidth: js.UndefOr[String] = js.undefined
-  var leftIcon: js.UndefOr[String] = js.undefined
-  var rightIcon: js.UndefOr[String] = js.undefined
-  var tbBorder: js.UndefOr[BorderProperty[String | Double]] = js.undefined
-  var tbBorderRadius: js.UndefOr[BorderRadiusProperty[String | Double]] = js.undefined
-  var tbHoverBorderColor: js.UndefOr[String] = js.undefined
-  var tbSelectedBorderColor: js.UndefOr[String] = js.undefined
-  var tbWidth: js.UndefOr[String] = js.undefined
-  var thumbnails: js.UndefOr[hidden | visible] = js.undefined
+  var align: js.UndefOr[String] = js.native
+  var backgroundColor: js.UndefOr[BackgroundColorProperty] = js.native
+  var borderRadius: js.UndefOr[String | Double] = js.native
+  var iconWidth: js.UndefOr[String] = js.native
+  var leftIcon: js.UndefOr[String] = js.native
+  var rightIcon: js.UndefOr[String] = js.native
+  var tbBorder: js.UndefOr[BorderProperty[String | Double]] = js.native
+  var tbBorderRadius: js.UndefOr[BorderRadiusProperty[String | Double]] = js.native
+  var tbHoverBorderColor: js.UndefOr[String] = js.native
+  var tbSelectedBorderColor: js.UndefOr[String] = js.native
+  var tbWidth: js.UndefOr[String] = js.native
+  var thumbnails: js.UndefOr[hidden | visible] = js.native
 }
 
 object MjmlCarouselProps {
   @scala.inline
-  def apply(
-    align: String = null,
-    backgroundColor: BackgroundColorProperty = null,
-    borderRadius: String | Double = null,
-    iconWidth: String = null,
-    leftIcon: String = null,
-    rightIcon: String = null,
-    tbBorder: BorderProperty[String | Double] = null,
-    tbBorderRadius: BorderRadiusProperty[String | Double] = null,
-    tbHoverBorderColor: String = null,
-    tbSelectedBorderColor: String = null,
-    tbWidth: String = null,
-    thumbnails: hidden | visible = null
-  ): MjmlCarouselProps = {
+  def apply(): MjmlCarouselProps = {
     val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (borderRadius != null) __obj.updateDynamic("borderRadius")(borderRadius.asInstanceOf[js.Any])
-    if (iconWidth != null) __obj.updateDynamic("iconWidth")(iconWidth.asInstanceOf[js.Any])
-    if (leftIcon != null) __obj.updateDynamic("leftIcon")(leftIcon.asInstanceOf[js.Any])
-    if (rightIcon != null) __obj.updateDynamic("rightIcon")(rightIcon.asInstanceOf[js.Any])
-    if (tbBorder != null) __obj.updateDynamic("tbBorder")(tbBorder.asInstanceOf[js.Any])
-    if (tbBorderRadius != null) __obj.updateDynamic("tbBorderRadius")(tbBorderRadius.asInstanceOf[js.Any])
-    if (tbHoverBorderColor != null) __obj.updateDynamic("tbHoverBorderColor")(tbHoverBorderColor.asInstanceOf[js.Any])
-    if (tbSelectedBorderColor != null) __obj.updateDynamic("tbSelectedBorderColor")(tbSelectedBorderColor.asInstanceOf[js.Any])
-    if (tbWidth != null) __obj.updateDynamic("tbWidth")(tbWidth.asInstanceOf[js.Any])
-    if (thumbnails != null) __obj.updateDynamic("thumbnails")(thumbnails.asInstanceOf[js.Any])
     __obj.asInstanceOf[MjmlCarouselProps]
   }
+  @scala.inline
+  implicit class MjmlCarouselPropsOps[Self <: MjmlCarouselProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlign(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundColor(value: BackgroundColorProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderRadius(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeftIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeftIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRightIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRightIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTbBorder(value: BorderProperty[String | Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tbBorder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTbBorder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tbBorder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTbBorderRadius(value: BorderRadiusProperty[String | Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tbBorderRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTbBorderRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tbBorderRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTbHoverBorderColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tbHoverBorderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTbHoverBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tbHoverBorderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTbSelectedBorderColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tbSelectedBorderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTbSelectedBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tbSelectedBorderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTbWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tbWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTbWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tbWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThumbnails(value: hidden | visible): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThumbnails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnails")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

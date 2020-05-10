@@ -5,7 +5,6 @@ import typingsSlinky.dialogflow.mod.google.cloud.dialogflow.v2beta1.EntityType.I
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,8 +55,8 @@ object BatchCreateEntitiesRequest extends js.Object {
     */
   def decode(reader: Reader): BatchCreateEntitiesRequest = js.native
   def decode(reader: Reader, length: Double): BatchCreateEntitiesRequest = js.native
-  def decode(reader: Uint8Array): BatchCreateEntitiesRequest = js.native
-  def decode(reader: Uint8Array, length: Double): BatchCreateEntitiesRequest = js.native
+  def decode(reader: js.typedarray.Uint8Array): BatchCreateEntitiesRequest = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): BatchCreateEntitiesRequest = js.native
   /**
     * Decodes a BatchCreateEntitiesRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -66,7 +65,7 @@ object BatchCreateEntitiesRequest extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): BatchCreateEntitiesRequest = js.native
-  def decodeDelimited(reader: Uint8Array): BatchCreateEntitiesRequest = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): BatchCreateEntitiesRequest = js.native
   /**
     * Encodes the specified BatchCreateEntitiesRequest message. Does not implicitly {@link google.cloud.dialogflow.v2beta1.BatchCreateEntitiesRequest.verify|verify} messages.
     * @param message BatchCreateEntitiesRequest message or plain object to encode

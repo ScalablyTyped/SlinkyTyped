@@ -13,12 +13,10 @@ trait triggerOnType extends js.Object
 
 object triggerOnType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def click: typingsSlinky.bizcharts.bizchartsStrings.click = "click".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.click]
   @scala.inline
-  def click: typingsSlinky.bizcharts.bizchartsStrings.click = this.cast("click")
+  def mousemove: typingsSlinky.bizcharts.bizchartsStrings.mousemove = "mousemove".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.mousemove]
   @scala.inline
-  def mousemove: typingsSlinky.bizcharts.bizchartsStrings.mousemove = this.cast("mousemove")
-  @scala.inline
-  def none: typingsSlinky.bizcharts.bizchartsStrings.none = this.cast("none")
+  def none: typingsSlinky.bizcharts.bizchartsStrings.none = "none".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.none]
 }
 

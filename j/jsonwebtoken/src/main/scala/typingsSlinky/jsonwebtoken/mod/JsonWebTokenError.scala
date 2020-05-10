@@ -13,9 +13,5 @@ class JsonWebTokenError protected ()
   def this(message: String) = this()
   def this(message: String, error: js.Error) = this()
   var inner: js.Error = js.native
-  /* CompleteClass */
-  override var message: String = js.native
-  /* CompleteClass */
-  override var name: String = js.native
 }
 

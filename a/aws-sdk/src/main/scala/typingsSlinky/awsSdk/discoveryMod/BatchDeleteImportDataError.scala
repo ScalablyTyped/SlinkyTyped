@@ -22,16 +22,53 @@ trait BatchDeleteImportDataError extends js.Object {
 
 object BatchDeleteImportDataError {
   @scala.inline
-  def apply(
-    errorCode: BatchDeleteImportDataErrorCode = null,
-    errorDescription: BatchDeleteImportDataErrorDescription = null,
-    importTaskId: ImportTaskIdentifier = null
-  ): BatchDeleteImportDataError = {
+  def apply(): BatchDeleteImportDataError = {
     val __obj = js.Dynamic.literal()
-    if (errorCode != null) __obj.updateDynamic("errorCode")(errorCode.asInstanceOf[js.Any])
-    if (errorDescription != null) __obj.updateDynamic("errorDescription")(errorDescription.asInstanceOf[js.Any])
-    if (importTaskId != null) __obj.updateDynamic("importTaskId")(importTaskId.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchDeleteImportDataError]
   }
+  @scala.inline
+  implicit class BatchDeleteImportDataErrorOps[Self <: BatchDeleteImportDataError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorCode(value: BatchDeleteImportDataErrorCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorDescription(value: BatchDeleteImportDataErrorDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImportTaskId(value: ImportTaskIdentifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("importTaskId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImportTaskId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("importTaskId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

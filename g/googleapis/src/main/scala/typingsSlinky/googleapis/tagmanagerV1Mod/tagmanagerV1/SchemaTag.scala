@@ -106,52 +106,269 @@ trait SchemaTag extends js.Object {
 
 object SchemaTag {
   @scala.inline
-  def apply(
-    accountId: String = null,
-    blockingRuleId: js.Array[String] = null,
-    blockingTriggerId: js.Array[String] = null,
-    containerId: String = null,
-    fingerprint: String = null,
-    firingRuleId: js.Array[String] = null,
-    firingTriggerId: js.Array[String] = null,
-    liveOnly: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    notes: String = null,
-    parameter: js.Array[SchemaParameter] = null,
-    parentFolderId: String = null,
-    paused: js.UndefOr[Boolean] = js.undefined,
-    priority: SchemaParameter = null,
-    scheduleEndMs: String = null,
-    scheduleStartMs: String = null,
-    setupTag: js.Array[SchemaSetupTag] = null,
-    tagFiringOption: String = null,
-    tagId: String = null,
-    teardownTag: js.Array[SchemaTeardownTag] = null,
-    `type`: String = null
-  ): SchemaTag = {
+  def apply(): SchemaTag = {
     val __obj = js.Dynamic.literal()
-    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
-    if (blockingRuleId != null) __obj.updateDynamic("blockingRuleId")(blockingRuleId.asInstanceOf[js.Any])
-    if (blockingTriggerId != null) __obj.updateDynamic("blockingTriggerId")(blockingTriggerId.asInstanceOf[js.Any])
-    if (containerId != null) __obj.updateDynamic("containerId")(containerId.asInstanceOf[js.Any])
-    if (fingerprint != null) __obj.updateDynamic("fingerprint")(fingerprint.asInstanceOf[js.Any])
-    if (firingRuleId != null) __obj.updateDynamic("firingRuleId")(firingRuleId.asInstanceOf[js.Any])
-    if (firingTriggerId != null) __obj.updateDynamic("firingTriggerId")(firingTriggerId.asInstanceOf[js.Any])
-    if (!js.isUndefined(liveOnly)) __obj.updateDynamic("liveOnly")(liveOnly.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
-    if (parameter != null) __obj.updateDynamic("parameter")(parameter.asInstanceOf[js.Any])
-    if (parentFolderId != null) __obj.updateDynamic("parentFolderId")(parentFolderId.asInstanceOf[js.Any])
-    if (!js.isUndefined(paused)) __obj.updateDynamic("paused")(paused.asInstanceOf[js.Any])
-    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
-    if (scheduleEndMs != null) __obj.updateDynamic("scheduleEndMs")(scheduleEndMs.asInstanceOf[js.Any])
-    if (scheduleStartMs != null) __obj.updateDynamic("scheduleStartMs")(scheduleStartMs.asInstanceOf[js.Any])
-    if (setupTag != null) __obj.updateDynamic("setupTag")(setupTag.asInstanceOf[js.Any])
-    if (tagFiringOption != null) __obj.updateDynamic("tagFiringOption")(tagFiringOption.asInstanceOf[js.Any])
-    if (tagId != null) __obj.updateDynamic("tagId")(tagId.asInstanceOf[js.Any])
-    if (teardownTag != null) __obj.updateDynamic("teardownTag")(teardownTag.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTag]
   }
+  @scala.inline
+  implicit class SchemaTagOps[Self <: SchemaTag] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlockingRuleId(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockingRuleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockingRuleId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockingRuleId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlockingTriggerId(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockingTriggerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockingTriggerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockingTriggerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFingerprint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFingerprint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFiringRuleId(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firingRuleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFiringRuleId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firingRuleId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFiringTriggerId(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firingTriggerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFiringTriggerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firingTriggerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLiveOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("liveOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLiveOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("liveOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameter(value: js.Array[SchemaParameter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentFolderId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentFolderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentFolderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentFolderId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaused(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaused: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriority(value: SchemaParameter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduleEndMs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleEndMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduleEndMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleEndMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduleStartMs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleStartMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduleStartMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleStartMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetupTag(value: js.Array[SchemaSetupTag]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setupTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetupTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setupTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagFiringOption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFiringOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagFiringOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFiringOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTeardownTag(value: js.Array[SchemaTeardownTag]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teardownTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTeardownTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teardownTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

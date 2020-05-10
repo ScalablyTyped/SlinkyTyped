@@ -48,7 +48,7 @@ trait SVGFEDropShadowElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def setStdDeviation(stdDeviationX: Double, stdDeviationY: Double): Unit = js.native
 }

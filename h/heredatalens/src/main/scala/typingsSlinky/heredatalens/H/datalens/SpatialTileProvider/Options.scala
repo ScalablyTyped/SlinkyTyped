@@ -8,19 +8,45 @@ import scala.scalajs.js.annotation._
   * Defines layer name and data accessibility parameters for SpatialTileProvider
   * This defines the layer name and dynamic parameters required for fetching tiled geometry data with the Data Lens REST API. Other options from Provider.Options are available.
   */
+@js.native
 trait Options extends js.Object {
   /** The name of the layer to fetch with the Data Lens REST API query */
-  var layerName: String
+  var layerName: String = js.native
   /** The query's dynamic parameters. The dynamic parameters can be used to filter data provided by the query. */
-  var queryParams: js.UndefOr[js.Any] = js.undefined
+  var queryParams: js.UndefOr[js.Any] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(layerName: String, queryParams: js.Any = null): Options = {
+  def apply(layerName: String): Options = {
     val __obj = js.Dynamic.literal(layerName = layerName.asInstanceOf[js.Any])
-    if (queryParams != null) __obj.updateDynamic("queryParams")(queryParams.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLayerName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQueryParams(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParams")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

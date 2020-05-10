@@ -13,12 +13,10 @@ trait StorageType extends js.Object
 
 object StorageType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def gp2: typingsSlinky.pulumiAws.pulumiAwsStrings.gp2 = "gp2".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.gp2]
   @scala.inline
-  def gp2: typingsSlinky.pulumiAws.pulumiAwsStrings.gp2 = this.cast("gp2")
+  def io1: typingsSlinky.pulumiAws.pulumiAwsStrings.io1 = "io1".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.io1]
   @scala.inline
-  def io1: typingsSlinky.pulumiAws.pulumiAwsStrings.io1 = this.cast("io1")
-  @scala.inline
-  def standard: typingsSlinky.pulumiAws.pulumiAwsStrings.standard = this.cast("standard")
+  def standard: typingsSlinky.pulumiAws.pulumiAwsStrings.standard = "standard".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.standard]
 }
 

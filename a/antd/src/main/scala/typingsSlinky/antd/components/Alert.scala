@@ -1,58 +1,66 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLButtonElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.alertMod.AlertProps
 import typingsSlinky.antd.alertMod.default
 import typingsSlinky.antd.antdStrings.error
 import typingsSlinky.antd.antdStrings.info
 import typingsSlinky.antd.antdStrings.success
 import typingsSlinky.antd.antdStrings.warning
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Alert
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Alert {
   @JSImport("antd/lib/alert", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    message: TagMod[Any],
-    afterClose: () => Unit = null,
-    banner: js.UndefOr[Boolean] = js.undefined,
-    closable: js.UndefOr[Boolean] = js.undefined,
-    closeText: TagMod[Any] = null,
-    description: TagMod[Any] = null,
-    icon: TagMod[Any] = null,
-    onClose: SyntheticMouseEvent[HTMLButtonElement] => Unit = null,
-    prefixCls: String = null,
-    showIcon: js.UndefOr[Boolean] = js.undefined,
-    `type`: success | info | warning | error = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
-    if (afterClose != null) __obj.updateDynamic("afterClose")(js.Any.fromFunction0(afterClose))
-    if (!js.isUndefined(banner)) __obj.updateDynamic("banner")(banner.asInstanceOf[js.Any])
-    if (!js.isUndefined(closable)) __obj.updateDynamic("closable")(closable.asInstanceOf[js.Any])
-    if (closeText != null) __obj.updateDynamic("closeText")(closeText.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(showIcon)) __obj.updateDynamic("showIcon")(showIcon.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def afterClose(value: () => Unit): this.type = set("afterClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def banner(value: Boolean): this.type = set("banner", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeTextReactElement(value: ReactElement): this.type = set("closeText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeText(value: TagMod[Any]): this.type = set("closeText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def description(value: TagMod[Any]): this.type = set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def message(value: TagMod[Any]): this.type = set("message", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClose(value: SyntheticMouseEvent[HTMLButtonElement] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showIcon(value: Boolean): this.type = set("showIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: success | info | warning | error): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  type Props = AlertProps
+  
+  def withProps(p: AlertProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Alert.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

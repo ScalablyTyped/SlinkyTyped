@@ -32,24 +32,22 @@ trait Scope extends js.Object
 
 object Scope {
   @scala.inline
-  def address: typingsSlinky.weappApi.weappApiStrings.address = this.cast("address")
+  def address: typingsSlinky.weappApi.weappApiStrings.address = "address".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.address]
   @scala.inline
-  def camera: typingsSlinky.weappApi.weappApiStrings.camera = this.cast("camera")
+  def camera: typingsSlinky.weappApi.weappApiStrings.camera = "camera".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.camera]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def invoice: typingsSlinky.weappApi.weappApiStrings.invoice = "invoice".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.invoice]
   @scala.inline
-  def invoice: typingsSlinky.weappApi.weappApiStrings.invoice = this.cast("invoice")
+  def invoiceTitle: typingsSlinky.weappApi.weappApiStrings.invoiceTitle = "invoiceTitle".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.invoiceTitle]
   @scala.inline
-  def invoiceTitle: typingsSlinky.weappApi.weappApiStrings.invoiceTitle = this.cast("invoiceTitle")
+  def record: typingsSlinky.weappApi.weappApiStrings.record = "record".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.record]
   @scala.inline
-  def record: typingsSlinky.weappApi.weappApiStrings.record = this.cast("record")
+  def userInfo: typingsSlinky.weappApi.weappApiStrings.userInfo = "userInfo".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.userInfo]
   @scala.inline
-  def userInfo: typingsSlinky.weappApi.weappApiStrings.userInfo = this.cast("userInfo")
+  def userLocation: typingsSlinky.weappApi.weappApiStrings.userLocation = "userLocation".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.userLocation]
   @scala.inline
-  def userLocation: typingsSlinky.weappApi.weappApiStrings.userLocation = this.cast("userLocation")
+  def werun: typingsSlinky.weappApi.weappApiStrings.werun = "werun".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.werun]
   @scala.inline
-  def werun: typingsSlinky.weappApi.weappApiStrings.werun = this.cast("werun")
-  @scala.inline
-  def writePhotosAlbum: typingsSlinky.weappApi.weappApiStrings.writePhotosAlbum = this.cast("writePhotosAlbum")
+  def writePhotosAlbum: typingsSlinky.weappApi.weappApiStrings.writePhotosAlbum = "writePhotosAlbum".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.writePhotosAlbum]
 }
 

@@ -28,16 +28,53 @@ trait SchemaApproximateSplitRequest extends js.Object {
 
 object SchemaApproximateSplitRequest {
   @scala.inline
-  def apply(
-    fractionConsumed: Int | Double = null,
-    fractionOfRemainder: Int | Double = null,
-    position: SchemaPosition = null
-  ): SchemaApproximateSplitRequest = {
+  def apply(): SchemaApproximateSplitRequest = {
     val __obj = js.Dynamic.literal()
-    if (fractionConsumed != null) __obj.updateDynamic("fractionConsumed")(fractionConsumed.asInstanceOf[js.Any])
-    if (fractionOfRemainder != null) __obj.updateDynamic("fractionOfRemainder")(fractionOfRemainder.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaApproximateSplitRequest]
   }
+  @scala.inline
+  implicit class SchemaApproximateSplitRequestOps[Self <: SchemaApproximateSplitRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFractionConsumed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fractionConsumed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFractionConsumed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fractionConsumed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFractionOfRemainder(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fractionOfRemainder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFractionOfRemainder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fractionOfRemainder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: SchemaPosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

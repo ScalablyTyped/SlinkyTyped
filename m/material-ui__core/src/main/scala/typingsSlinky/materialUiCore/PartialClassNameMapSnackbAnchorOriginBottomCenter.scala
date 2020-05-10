@@ -18,24 +18,101 @@ trait PartialClassNameMapSnackbAnchorOriginBottomCenter extends js.Object {
 
 object PartialClassNameMapSnackbAnchorOriginBottomCenter {
   @scala.inline
-  def apply(
-    anchorOriginBottomCenter: String = null,
-    anchorOriginBottomLeft: String = null,
-    anchorOriginBottomRight: String = null,
-    anchorOriginTopCenter: String = null,
-    anchorOriginTopLeft: String = null,
-    anchorOriginTopRight: String = null,
-    root: String = null
-  ): PartialClassNameMapSnackbAnchorOriginBottomCenter = {
+  def apply(): PartialClassNameMapSnackbAnchorOriginBottomCenter = {
     val __obj = js.Dynamic.literal()
-    if (anchorOriginBottomCenter != null) __obj.updateDynamic("anchorOriginBottomCenter")(anchorOriginBottomCenter.asInstanceOf[js.Any])
-    if (anchorOriginBottomLeft != null) __obj.updateDynamic("anchorOriginBottomLeft")(anchorOriginBottomLeft.asInstanceOf[js.Any])
-    if (anchorOriginBottomRight != null) __obj.updateDynamic("anchorOriginBottomRight")(anchorOriginBottomRight.asInstanceOf[js.Any])
-    if (anchorOriginTopCenter != null) __obj.updateDynamic("anchorOriginTopCenter")(anchorOriginTopCenter.asInstanceOf[js.Any])
-    if (anchorOriginTopLeft != null) __obj.updateDynamic("anchorOriginTopLeft")(anchorOriginTopLeft.asInstanceOf[js.Any])
-    if (anchorOriginTopRight != null) __obj.updateDynamic("anchorOriginTopRight")(anchorOriginTopRight.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapSnackbAnchorOriginBottomCenter]
   }
+  @scala.inline
+  implicit class PartialClassNameMapSnackbAnchorOriginBottomCenterOps[Self <: PartialClassNameMapSnackbAnchorOriginBottomCenter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnchorOriginBottomCenter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorOriginBottomCenter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnchorOriginBottomCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorOriginBottomCenter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnchorOriginBottomLeft(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorOriginBottomLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnchorOriginBottomLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorOriginBottomLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnchorOriginBottomRight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorOriginBottomRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnchorOriginBottomRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorOriginBottomRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnchorOriginTopCenter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorOriginTopCenter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnchorOriginTopCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorOriginTopCenter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnchorOriginTopLeft(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorOriginTopLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnchorOriginTopLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorOriginTopLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnchorOriginTopRight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorOriginTopRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnchorOriginTopRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorOriginTopRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

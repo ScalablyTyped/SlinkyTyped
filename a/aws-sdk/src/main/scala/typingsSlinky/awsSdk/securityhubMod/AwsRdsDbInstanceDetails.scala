@@ -86,48 +86,245 @@ trait AwsRdsDbInstanceDetails extends js.Object {
 
 object AwsRdsDbInstanceDetails {
   @scala.inline
-  def apply(
-    AssociatedRoles: AwsRdsDbInstanceAssociatedRoles = null,
-    CACertificateIdentifier: NonEmptyString = null,
-    DBClusterIdentifier: NonEmptyString = null,
-    DBInstanceClass: NonEmptyString = null,
-    DBInstanceIdentifier: NonEmptyString = null,
-    DBName: NonEmptyString = null,
-    DbInstancePort: Int | scala.Double = null,
-    DbiResourceId: NonEmptyString = null,
-    DeletionProtection: js.UndefOr[scala.Boolean] = js.undefined,
-    Endpoint: AwsRdsDbInstanceEndpoint = null,
-    Engine: NonEmptyString = null,
-    EngineVersion: NonEmptyString = null,
-    IAMDatabaseAuthenticationEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    InstanceCreateTime: NonEmptyString = null,
-    KmsKeyId: NonEmptyString = null,
-    PubliclyAccessible: js.UndefOr[scala.Boolean] = js.undefined,
-    StorageEncrypted: js.UndefOr[scala.Boolean] = js.undefined,
-    TdeCredentialArn: NonEmptyString = null,
-    VpcSecurityGroups: AwsRdsDbInstanceVpcSecurityGroups = null
-  ): AwsRdsDbInstanceDetails = {
+  def apply(): AwsRdsDbInstanceDetails = {
     val __obj = js.Dynamic.literal()
-    if (AssociatedRoles != null) __obj.updateDynamic("AssociatedRoles")(AssociatedRoles.asInstanceOf[js.Any])
-    if (CACertificateIdentifier != null) __obj.updateDynamic("CACertificateIdentifier")(CACertificateIdentifier.asInstanceOf[js.Any])
-    if (DBClusterIdentifier != null) __obj.updateDynamic("DBClusterIdentifier")(DBClusterIdentifier.asInstanceOf[js.Any])
-    if (DBInstanceClass != null) __obj.updateDynamic("DBInstanceClass")(DBInstanceClass.asInstanceOf[js.Any])
-    if (DBInstanceIdentifier != null) __obj.updateDynamic("DBInstanceIdentifier")(DBInstanceIdentifier.asInstanceOf[js.Any])
-    if (DBName != null) __obj.updateDynamic("DBName")(DBName.asInstanceOf[js.Any])
-    if (DbInstancePort != null) __obj.updateDynamic("DbInstancePort")(DbInstancePort.asInstanceOf[js.Any])
-    if (DbiResourceId != null) __obj.updateDynamic("DbiResourceId")(DbiResourceId.asInstanceOf[js.Any])
-    if (!js.isUndefined(DeletionProtection)) __obj.updateDynamic("DeletionProtection")(DeletionProtection.asInstanceOf[js.Any])
-    if (Endpoint != null) __obj.updateDynamic("Endpoint")(Endpoint.asInstanceOf[js.Any])
-    if (Engine != null) __obj.updateDynamic("Engine")(Engine.asInstanceOf[js.Any])
-    if (EngineVersion != null) __obj.updateDynamic("EngineVersion")(EngineVersion.asInstanceOf[js.Any])
-    if (!js.isUndefined(IAMDatabaseAuthenticationEnabled)) __obj.updateDynamic("IAMDatabaseAuthenticationEnabled")(IAMDatabaseAuthenticationEnabled.asInstanceOf[js.Any])
-    if (InstanceCreateTime != null) __obj.updateDynamic("InstanceCreateTime")(InstanceCreateTime.asInstanceOf[js.Any])
-    if (KmsKeyId != null) __obj.updateDynamic("KmsKeyId")(KmsKeyId.asInstanceOf[js.Any])
-    if (!js.isUndefined(PubliclyAccessible)) __obj.updateDynamic("PubliclyAccessible")(PubliclyAccessible.asInstanceOf[js.Any])
-    if (!js.isUndefined(StorageEncrypted)) __obj.updateDynamic("StorageEncrypted")(StorageEncrypted.asInstanceOf[js.Any])
-    if (TdeCredentialArn != null) __obj.updateDynamic("TdeCredentialArn")(TdeCredentialArn.asInstanceOf[js.Any])
-    if (VpcSecurityGroups != null) __obj.updateDynamic("VpcSecurityGroups")(VpcSecurityGroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsRdsDbInstanceDetails]
   }
+  @scala.inline
+  implicit class AwsRdsDbInstanceDetailsOps[Self <: AwsRdsDbInstanceDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssociatedRoles(value: AwsRdsDbInstanceAssociatedRoles): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociatedRoles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociatedRoles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociatedRoles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCACertificateIdentifier(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CACertificateIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCACertificateIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CACertificateIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDBClusterIdentifier(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBClusterIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDBInstanceClass(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstanceClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBInstanceClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstanceClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDBInstanceIdentifier(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstanceIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBInstanceIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstanceIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDBName(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDbInstancePort(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DbInstancePort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDbInstancePort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DbInstancePort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDbiResourceId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DbiResourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDbiResourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DbiResourceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeletionProtection(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionProtection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeletionProtection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionProtection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpoint(value: AwsRdsDbInstanceEndpoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEngine(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEngineVersion(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngineVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIAMDatabaseAuthenticationEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IAMDatabaseAuthenticationEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIAMDatabaseAuthenticationEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IAMDatabaseAuthenticationEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceCreateTime(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceCreateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceCreateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceCreateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsKeyId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPubliclyAccessible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PubliclyAccessible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPubliclyAccessible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PubliclyAccessible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStorageEncrypted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageEncrypted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorageEncrypted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageEncrypted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTdeCredentialArn(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TdeCredentialArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTdeCredentialArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TdeCredentialArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcSecurityGroups(value: AwsRdsDbInstanceVpcSecurityGroups): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcSecurityGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcSecurityGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcSecurityGroups")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

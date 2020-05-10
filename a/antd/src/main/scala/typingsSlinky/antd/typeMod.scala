@@ -15,6 +15,6 @@ object typeMod extends js.Object {
   def tupleNum[T /* <: js.Array[Double] */](
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type T is not an array type */ args: T
   ): T = js.native
-  type Omit[T, K /* <: String */] = Pick[T, Exclude[String, K]]
+  type Omit[T, K /* <: /* keyof T */ String */] = Pick[T, Exclude[/* keyof T */ String, K]]
 }
 

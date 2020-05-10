@@ -27,40 +27,38 @@ trait Category extends js.Object
 
 object Category {
   @scala.inline
-  def arithmetic: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.arithmetic = this.cast("arithmetic")
+  def arithmetic: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.arithmetic = "arithmetic".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.arithmetic]
   @scala.inline
-  def basic_math: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.basic_math = this.cast("basic_math")
+  def basic_math: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.basic_math = "basic_math".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.basic_math]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def control: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.control = "control".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.control]
   @scala.inline
-  def control: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.control = this.cast("control")
+  def convolution: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.convolution = "convolution".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.convolution]
   @scala.inline
-  def convolution: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.convolution = this.cast("convolution")
+  def creation: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.creation = "creation".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.creation]
   @scala.inline
-  def creation: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.creation = this.cast("creation")
+  def custom: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.custom = "custom".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.custom]
   @scala.inline
-  def custom: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.custom = this.cast("custom")
+  def dynamic: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.dynamic = "dynamic".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.dynamic]
   @scala.inline
-  def dynamic: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.dynamic = this.cast("dynamic")
+  def evaluation: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.evaluation = "evaluation".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.evaluation]
   @scala.inline
-  def evaluation: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.evaluation = this.cast("evaluation")
+  def graph: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.graph = "graph".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.graph]
   @scala.inline
-  def graph: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.graph = this.cast("graph")
+  def image: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.image = "image".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.image]
   @scala.inline
-  def image: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.image = this.cast("image")
+  def logical: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.logical = "logical".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.logical]
   @scala.inline
-  def logical: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.logical = this.cast("logical")
+  def matrices: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.matrices = "matrices".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.matrices]
   @scala.inline
-  def matrices: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.matrices = this.cast("matrices")
+  def normalization: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.normalization = "normalization".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.normalization]
   @scala.inline
-  def normalization: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.normalization = this.cast("normalization")
+  def reduction: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.reduction = "reduction".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.reduction]
   @scala.inline
-  def reduction: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.reduction = this.cast("reduction")
+  def slice_join: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.slice_join = "slice_join".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.slice_join]
   @scala.inline
-  def slice_join: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.slice_join = this.cast("slice_join")
+  def spectral: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.spectral = "spectral".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.spectral]
   @scala.inline
-  def spectral: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.spectral = this.cast("spectral")
-  @scala.inline
-  def transformation: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.transformation = this.cast("transformation")
+  def transformation: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.transformation = "transformation".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.transformation]
 }
 

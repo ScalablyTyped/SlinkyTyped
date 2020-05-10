@@ -12,10 +12,8 @@ trait DataValueEventName extends js.Object
 
 object DataValueEventName {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def onBindRequest: typingsSlinky.webix.webixStrings.onBindRequest = "onBindRequest".asInstanceOf[typingsSlinky.webix.webixStrings.onBindRequest]
   @scala.inline
-  def onBindRequest: typingsSlinky.webix.webixStrings.onBindRequest = this.cast("onBindRequest")
-  @scala.inline
-  def onChange: typingsSlinky.webix.webixStrings.onChange = this.cast("onChange")
+  def onChange: typingsSlinky.webix.webixStrings.onChange = "onChange".asInstanceOf[typingsSlinky.webix.webixStrings.onChange]
 }
 

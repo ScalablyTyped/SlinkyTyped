@@ -27,12 +27,53 @@ trait SchemaGoogleCloudVisionV1p4beta1ColorInfo extends js.Object {
 
 object SchemaGoogleCloudVisionV1p4beta1ColorInfo {
   @scala.inline
-  def apply(color: SchemaColor = null, pixelFraction: Int | Double = null, score: Int | Double = null): SchemaGoogleCloudVisionV1p4beta1ColorInfo = {
+  def apply(): SchemaGoogleCloudVisionV1p4beta1ColorInfo = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (pixelFraction != null) __obj.updateDynamic("pixelFraction")(pixelFraction.asInstanceOf[js.Any])
-    if (score != null) __obj.updateDynamic("score")(score.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p4beta1ColorInfo]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVisionV1p4beta1ColorInfoOps[Self <: SchemaGoogleCloudVisionV1p4beta1ColorInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: SchemaColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPixelFraction(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelFraction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPixelFraction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelFraction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScore(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

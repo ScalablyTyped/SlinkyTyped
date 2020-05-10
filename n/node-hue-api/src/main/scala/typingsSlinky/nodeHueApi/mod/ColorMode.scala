@@ -13,12 +13,10 @@ trait ColorMode extends js.Object
 
 object ColorMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ct: typingsSlinky.nodeHueApi.nodeHueApiStrings.ct = "ct".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.ct]
   @scala.inline
-  def ct: typingsSlinky.nodeHueApi.nodeHueApiStrings.ct = this.cast("ct")
+  def hs: typingsSlinky.nodeHueApi.nodeHueApiStrings.hs = "hs".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.hs]
   @scala.inline
-  def hs: typingsSlinky.nodeHueApi.nodeHueApiStrings.hs = this.cast("hs")
-  @scala.inline
-  def xy: typingsSlinky.nodeHueApi.nodeHueApiStrings.xy = this.cast("xy")
+  def xy: typingsSlinky.nodeHueApi.nodeHueApiStrings.xy = "xy".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.xy]
 }
 

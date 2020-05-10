@@ -5,42 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait AnonDictx
-  extends /* x */ StringDictionary[js.UndefOr[String]] {
-  var full: js.UndefOr[String] = js.undefined
-  var large: js.UndefOr[String] = js.undefined
-  var medium: js.UndefOr[String] = js.undefined
-  var small: js.UndefOr[String] = js.undefined
-  var xlarge: js.UndefOr[String] = js.undefined
-  var xsmall: js.UndefOr[String] = js.undefined
-  var xxlarge: js.UndefOr[String] = js.undefined
-  var xxsmall: js.UndefOr[String] = js.undefined
+@js.native
+trait AnonDictx extends /* x */ StringDictionary[AnonBorderSize] {
+  var large: js.UndefOr[AnonBorderSize] = js.native
+  var medium: js.UndefOr[AnonBorderSize] = js.native
+  var small: js.UndefOr[AnonBorderSize] = js.native
 }
 
 object AnonDictx {
   @scala.inline
-  def apply(
-    StringDictionary: /* x */ StringDictionary[js.UndefOr[String]] = null,
-    full: String = null,
-    large: String = null,
-    medium: String = null,
-    small: String = null,
-    xlarge: String = null,
-    xsmall: String = null,
-    xxlarge: String = null,
-    xxsmall: String = null
-  ): AnonDictx = {
+  def apply(): AnonDictx = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (full != null) __obj.updateDynamic("full")(full.asInstanceOf[js.Any])
-    if (large != null) __obj.updateDynamic("large")(large.asInstanceOf[js.Any])
-    if (medium != null) __obj.updateDynamic("medium")(medium.asInstanceOf[js.Any])
-    if (small != null) __obj.updateDynamic("small")(small.asInstanceOf[js.Any])
-    if (xlarge != null) __obj.updateDynamic("xlarge")(xlarge.asInstanceOf[js.Any])
-    if (xsmall != null) __obj.updateDynamic("xsmall")(xsmall.asInstanceOf[js.Any])
-    if (xxlarge != null) __obj.updateDynamic("xxlarge")(xxlarge.asInstanceOf[js.Any])
-    if (xxsmall != null) __obj.updateDynamic("xxsmall")(xxsmall.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDictx]
   }
+  @scala.inline
+  implicit class AnonDictxOps[Self <: AnonDictx] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLarge(value: AnonBorderSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLarge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMedium(value: AnonBorderSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("medium")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMedium: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("medium")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmall(value: AnonBorderSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmall: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

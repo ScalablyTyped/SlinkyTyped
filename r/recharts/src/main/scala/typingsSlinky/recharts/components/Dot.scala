@@ -1,61 +1,56 @@
 package typingsSlinky.recharts.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.recharts.mod.DotProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Dot
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.Dot] {
+object Dot {
   @JSImport("recharts", "Dot")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    cx: Int | Double = null,
-    cy: Int | Double = null,
-    onClick: /* repeated */ js.Any => Unit = null,
-    onMouseDown: /* repeated */ js.Any => Unit = null,
-    onMouseEnter: /* repeated */ js.Any => Unit = null,
-    onMouseLeave: /* repeated */ js.Any => Unit = null,
-    onMouseMove: /* repeated */ js.Any => Unit = null,
-    onMouseOut: /* repeated */ js.Any => Unit = null,
-    onMouseOver: /* repeated */ js.Any => Unit = null,
-    onMouseUp: /* repeated */ js.Any => Unit = null,
-    onTouchCancel: /* repeated */ js.Any => Unit = null,
-    onTouchEnd: /* repeated */ js.Any => Unit = null,
-    onTouchMove: /* repeated */ js.Any => Unit = null,
-    onTouchStart: /* repeated */ js.Any => Unit = null,
-    r: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.Dot] = {
-    val __obj = js.Dynamic.literal()
-    if (cx != null) __obj.updateDynamic("cx")(cx.asInstanceOf[js.Any])
-    if (cy != null) __obj.updateDynamic("cy")(cy.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
-    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(js.Any.fromFunction1(onMouseOut))
-    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(js.Any.fromFunction1(onMouseOver))
-    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
-    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
-    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
-    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
-    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
-    if (r != null) __obj.updateDynamic("r")(r.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.recharts.mod.Dot] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cx(value: Double): this.type = set("cx", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cy(value: Double): this.type = set("cy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* repeated */ js.Any => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseDown(value: /* repeated */ js.Any => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseEnter(value: /* repeated */ js.Any => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseLeave(value: /* repeated */ js.Any => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseMove(value: /* repeated */ js.Any => Unit): this.type = set("onMouseMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseOut(value: /* repeated */ js.Any => Unit): this.type = set("onMouseOut", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseOver(value: /* repeated */ js.Any => Unit): this.type = set("onMouseOver", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseUp(value: /* repeated */ js.Any => Unit): this.type = set("onMouseUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchCancel(value: /* repeated */ js.Any => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchEnd(value: /* repeated */ js.Any => Unit): this.type = set("onTouchEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchMove(value: /* repeated */ js.Any => Unit): this.type = set("onTouchMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchStart(value: /* repeated */ js.Any => Unit): this.type = set("onTouchStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def r(value: Double): this.type = set("r", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.mod.Dot] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.mod.Dot](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DotProps
+  
+  def withProps(p: DotProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Dot.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

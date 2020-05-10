@@ -6,17 +6,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonLabel extends js.Object {
-  var label: TagMod[Any]
-  var style: CSSProperties
+  var label: TagMod[Any] = js.native
+  var style: CSSProperties = js.native
 }
 
 object AnonLabel {
   @scala.inline
-  def apply(label: TagMod[Any], style: CSSProperties): AnonLabel = {
-    val __obj = js.Dynamic.literal(label = label.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any])
-  
+  def apply(style: CSSProperties): AnonLabel = {
+    val __obj = js.Dynamic.literal(style = style.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonLabel]
   }
+  @scala.inline
+  implicit class AnonLabelOps[Self <: AnonLabel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabel(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

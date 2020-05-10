@@ -7,6 +7,161 @@ import scala.scalajs.js.annotation._
 @JSImport("@storybook/components/dist/icon/icons", JSImport.Namespace)
 @js.native
 object iconsMod extends js.Object {
+  /* keyof @storybook/components.AnonAdd */ /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.mobile
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.watch
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.tablet
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.browser
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.sidebar
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.sidebaralt
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.bottombar
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.useralt
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.user
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.useradd
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.users
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.profile
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.bookmark
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.bookmarkhollow
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.book
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.repository
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.star
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.starhollow
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.circle
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.circlehollow
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.heart
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.hearthollow
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.facehappy
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.facesad
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.faceneutral
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.lock
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.unlock
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.key
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.arrowleftalt
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.arrowrightalt
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.sync
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.reply
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.undo
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.transfer
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.redirect
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.expand
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.expandalt
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.grow
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.arrowleft
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.arrowup
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.arrowdown
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.arrowright
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.chevrondown
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.back
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.download
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.upload
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.proceed
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.info
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.question
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.support
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.alert
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.bell
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.rss
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.edit
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.paintbrush
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.close
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.closeAlt
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.trash
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.cross
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.delete
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.add
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.subtract
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.plus
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.document
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.folder
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.component
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.calendar
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.graphline
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.docchart
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.doclist
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.category
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.grid
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.copy
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.certificate
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.print
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.listunordered
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.graphbar
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.menu
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.filter
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.ellipsis
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.cog
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.wrench
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.nut
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.camera
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.eye
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.eyeclose
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.photo
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.video
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.speaker
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.phone
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.flag
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.pin
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.compass
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.globe
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.location
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.search
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.zoom
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.zoomout
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.zoomreset
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.timer
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.time
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.lightning
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.dashboard
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.hourglass
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.play
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.stop
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.email
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.comment
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.requestchange
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.link
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.paperclip
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.box
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.structure
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.cpu
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.memory
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.database
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.power
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.outbox
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.share
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.button
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.form
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.check
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.batchaccept
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.batchdeny
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.home
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.admin
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.paragraph
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.basket
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.credit
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.shield
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.beaker
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.thumbsup
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.mirror
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.switchalt
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.commit
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.branch
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.merge
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.pullrequest
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.chroma
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.twitter
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.google
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.gdrive
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.youtube
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.facebook
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.medium
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.graphql
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.redux
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.github
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.bitbucket
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.gitlab
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.discord
+  */
+  trait IconKey extends js.Object
+  
   @js.native
   object default extends js.Object {
     var add: String = js.native
@@ -317,6 +472,5 @@ object iconsMod extends js.Object {
     var zoomreset: String = js.native
   }
   
-  type IconKey = String
 }
 

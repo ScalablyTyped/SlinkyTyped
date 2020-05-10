@@ -27,16 +27,53 @@ trait SchemaMetagameConfig extends js.Object {
 
 object SchemaMetagameConfig {
   @scala.inline
-  def apply(
-    currentVersion: Int | Double = null,
-    kind: String = null,
-    playerLevels: js.Array[SchemaPlayerLevel] = null
-  ): SchemaMetagameConfig = {
+  def apply(): SchemaMetagameConfig = {
     val __obj = js.Dynamic.literal()
-    if (currentVersion != null) __obj.updateDynamic("currentVersion")(currentVersion.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (playerLevels != null) __obj.updateDynamic("playerLevels")(playerLevels.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMetagameConfig]
   }
+  @scala.inline
+  implicit class SchemaMetagameConfigOps[Self <: SchemaMetagameConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlayerLevels(value: js.Array[SchemaPlayerLevel]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("playerLevels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlayerLevels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("playerLevels")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

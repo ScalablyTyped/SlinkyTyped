@@ -22,15 +22,47 @@ trait ModifySubnetAttributeRequest extends js.Object {
 
 object ModifySubnetAttributeRequest {
   @scala.inline
-  def apply(
-    SubnetId: SubnetId,
-    AssignIpv6AddressOnCreation: AttributeBooleanValue = null,
-    MapPublicIpOnLaunch: AttributeBooleanValue = null
-  ): ModifySubnetAttributeRequest = {
+  def apply(SubnetId: SubnetId): ModifySubnetAttributeRequest = {
     val __obj = js.Dynamic.literal(SubnetId = SubnetId.asInstanceOf[js.Any])
-    if (AssignIpv6AddressOnCreation != null) __obj.updateDynamic("AssignIpv6AddressOnCreation")(AssignIpv6AddressOnCreation.asInstanceOf[js.Any])
-    if (MapPublicIpOnLaunch != null) __obj.updateDynamic("MapPublicIpOnLaunch")(MapPublicIpOnLaunch.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifySubnetAttributeRequest]
   }
+  @scala.inline
+  implicit class ModifySubnetAttributeRequestOps[Self <: ModifySubnetAttributeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSubnetId(value: SubnetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAssignIpv6AddressOnCreation(value: AttributeBooleanValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignIpv6AddressOnCreation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssignIpv6AddressOnCreation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignIpv6AddressOnCreation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapPublicIpOnLaunch(value: AttributeBooleanValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MapPublicIpOnLaunch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapPublicIpOnLaunch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MapPublicIpOnLaunch")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

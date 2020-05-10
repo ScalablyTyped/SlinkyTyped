@@ -50,20 +50,102 @@ object WorkflowExecutionInfo {
     execution: WorkflowExecution,
     executionStatus: ExecutionStatus,
     startTimestamp: js.Date,
-    workflowType: WorkflowType,
-    cancelRequested: js.UndefOr[Boolean] = js.undefined,
-    closeStatus: CloseStatus = null,
-    closeTimestamp: js.Date = null,
-    parent: WorkflowExecution = null,
-    tagList: TagList = null
+    workflowType: WorkflowType
   ): WorkflowExecutionInfo = {
     val __obj = js.Dynamic.literal(execution = execution.asInstanceOf[js.Any], executionStatus = executionStatus.asInstanceOf[js.Any], startTimestamp = startTimestamp.asInstanceOf[js.Any], workflowType = workflowType.asInstanceOf[js.Any])
-    if (!js.isUndefined(cancelRequested)) __obj.updateDynamic("cancelRequested")(cancelRequested.asInstanceOf[js.Any])
-    if (closeStatus != null) __obj.updateDynamic("closeStatus")(closeStatus.asInstanceOf[js.Any])
-    if (closeTimestamp != null) __obj.updateDynamic("closeTimestamp")(closeTimestamp.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
-    if (tagList != null) __obj.updateDynamic("tagList")(tagList.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkflowExecutionInfo]
   }
+  @scala.inline
+  implicit class WorkflowExecutionInfoOps[Self <: WorkflowExecutionInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecution(value: WorkflowExecution): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExecutionStatus(value: ExecutionStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWorkflowType(value: WorkflowType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCancelRequested(value: Canceled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelRequested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelRequested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelRequested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloseStatus(value: CloseStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloseTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParent(value: WorkflowExecution): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagList(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

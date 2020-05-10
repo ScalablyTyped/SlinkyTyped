@@ -39,7 +39,7 @@ class Widget () extends Base {
 object Widget extends js.Object {
   def domInsert(widget: Widget): Unit = js.native
   def domInsert(widget: Widget, element: String): Unit = js.native
-  def domInsert(widget: Widget, element: typingsSlinky.std.HTMLElement): Unit = js.native
+  def domInsert(widget: Widget, element: HTMLElement): Unit = js.native
   def getWidget(name: String): Widget = js.native
 }
 

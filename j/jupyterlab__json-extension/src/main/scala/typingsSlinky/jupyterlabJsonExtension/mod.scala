@@ -1,7 +1,6 @@
 package typingsSlinky.jupyterlabJsonExtension
 
 import typingsSlinky.jupyterlabApputils.printingMod.Printing.IPrintable
-import typingsSlinky.jupyterlabJsonExtension.jupyterlabJsonExtensionStrings.applicationSlashjson
 import typingsSlinky.jupyterlabRendermimeInterfaces.mod.IRenderMime.IExtension
 import typingsSlinky.jupyterlabRendermimeInterfaces.mod.IRenderMime.IRenderer
 import typingsSlinky.jupyterlabRendermimeInterfaces.mod.IRenderMime.IRendererFactory
@@ -85,20 +84,6 @@ object mod extends js.Object {
       */
     /* InferMemberOverrides */
     override def contains(widget: Widget): Boolean = js.native
-    /**
-      * Dispose of the resources held by the object.
-      *
-      * #### Notes
-      * If the object's `dispose` method is called more than once, all
-      * calls made after the first will be a no-op.
-      *
-      * #### Undefined Behavior
-      * It is undefined behavior to use any functionality of the object
-      * after it has been disposed unless otherwise explicitly noted.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def dispose(): Unit = js.native
     /**
       * Post a `'fit-request'` message to the widget.
       *
@@ -259,14 +244,6 @@ object mod extends js.Object {
     /* InferMemberOverrides */
     /* protected */ override def onUpdateRequest(msg: Message): Unit = js.native
     /**
-      * Process a message sent to the handler.
-      *
-      * @param msg - The message to be processed.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def processMessage(msg: Message): Unit = js.native
-    /**
       * Remove a class name from the widget's DOM node.
       *
       * @param name - The class name to remove from the node.
@@ -342,7 +319,7 @@ object mod extends js.Object {
     override def update(): Unit = js.native
   }
   
-  val MIME_TYPE: applicationSlashjson = js.native
+  val MIME_TYPE: /* "application/json" */ String = js.native
   val default: IExtension | js.Array[IExtension] = js.native
   val rendererFactory: IRendererFactory = js.native
 }

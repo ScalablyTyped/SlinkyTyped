@@ -26,16 +26,53 @@ trait SchemaAppendValuesResponse extends js.Object {
 
 object SchemaAppendValuesResponse {
   @scala.inline
-  def apply(
-    spreadsheetId: String = null,
-    tableRange: String = null,
-    updates: SchemaUpdateValuesResponse = null
-  ): SchemaAppendValuesResponse = {
+  def apply(): SchemaAppendValuesResponse = {
     val __obj = js.Dynamic.literal()
-    if (spreadsheetId != null) __obj.updateDynamic("spreadsheetId")(spreadsheetId.asInstanceOf[js.Any])
-    if (tableRange != null) __obj.updateDynamic("tableRange")(tableRange.asInstanceOf[js.Any])
-    if (updates != null) __obj.updateDynamic("updates")(updates.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAppendValuesResponse]
   }
+  @scala.inline
+  implicit class SchemaAppendValuesResponseOps[Self <: SchemaAppendValuesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSpreadsheetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpreadsheetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdates(value: SchemaUpdateValuesResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updates")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

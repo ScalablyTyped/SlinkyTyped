@@ -15,16 +15,14 @@ trait AnimationFill extends js.Object
 
 object AnimationFill {
   @scala.inline
-  def auto: typingsSlinky.ionicCore.ionicCoreStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.ionicCore.ionicCoreStrings.auto = "auto".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.auto]
   @scala.inline
-  def backwards: typingsSlinky.ionicCore.ionicCoreStrings.backwards = this.cast("backwards")
+  def backwards: typingsSlinky.ionicCore.ionicCoreStrings.backwards = "backwards".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.backwards]
   @scala.inline
-  def both: typingsSlinky.ionicCore.ionicCoreStrings.both = this.cast("both")
+  def both: typingsSlinky.ionicCore.ionicCoreStrings.both = "both".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.both]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def forwards: typingsSlinky.ionicCore.ionicCoreStrings.forwards = "forwards".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.forwards]
   @scala.inline
-  def forwards: typingsSlinky.ionicCore.ionicCoreStrings.forwards = this.cast("forwards")
-  @scala.inline
-  def none: typingsSlinky.ionicCore.ionicCoreStrings.none = this.cast("none")
+  def none: typingsSlinky.ionicCore.ionicCoreStrings.none = "none".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.none]
 }
 

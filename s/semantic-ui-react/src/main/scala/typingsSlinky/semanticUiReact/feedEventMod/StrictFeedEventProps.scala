@@ -1,6 +1,9 @@
 package typingsSlinky.semanticUiReact.feedEventMod
 
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.semanticUiReact.feedContentMod.FeedContentProps
 import typingsSlinky.semanticUiReact.feedDateMod.FeedDateProps
 import typingsSlinky.semanticUiReact.feedExtraMod.FeedExtraProps
@@ -12,59 +15,295 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StrictFeedEventProps extends js.Object {
   /** An element type to render as (string or function). */
-  var as: js.UndefOr[js.Any] = js.undefined
+  var as: js.UndefOr[js.Any] = js.native
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[TagMod[Any]] = js.native
   /** Additional classes. */
-  var className: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
   /** Shorthand for FeedContent. */
-  var content: js.UndefOr[SemanticShorthandItem[FeedContentProps]] = js.undefined
+  var content: js.UndefOr[SemanticShorthandItem[FeedContentProps]] = js.native
   /** Shorthand for FeedDate. */
-  var date: js.UndefOr[SemanticShorthandItem[FeedDateProps]] = js.undefined
+  var date: js.UndefOr[SemanticShorthandItem[FeedDateProps]] = js.native
   /** Shorthand for FeedExtra with images. */
-  var extraImages: js.UndefOr[SemanticShorthandItem[FeedExtraProps]] = js.undefined
+  var extraImages: js.UndefOr[SemanticShorthandItem[FeedExtraProps]] = js.native
   /** Shorthand for FeedExtra with content. */
-  var extraText: js.UndefOr[SemanticShorthandItem[FeedExtraProps]] = js.undefined
+  var extraText: js.UndefOr[SemanticShorthandItem[FeedExtraProps]] = js.native
   /** An event can contain icon label. */
-  var icon: js.UndefOr[SemanticShorthandItem[FeedLabelProps]] = js.undefined
+  var icon: js.UndefOr[SemanticShorthandItem[FeedLabelProps]] = js.native
   /** An event can contain image label. */
-  var image: js.UndefOr[SemanticShorthandItem[FeedLabelProps]] = js.undefined
+  var image: js.UndefOr[SemanticShorthandItem[FeedLabelProps]] = js.native
   /** Shorthand for FeedMeta. */
-  var meta: js.UndefOr[SemanticShorthandItem[FeedMetaProps]] = js.undefined
+  var meta: js.UndefOr[SemanticShorthandItem[FeedMetaProps]] = js.native
   /** Shorthand for FeedSummary. */
-  var summary: js.UndefOr[SemanticShorthandItem[FeedSummaryProps]] = js.undefined
+  var summary: js.UndefOr[SemanticShorthandItem[FeedSummaryProps]] = js.native
 }
 
 object StrictFeedEventProps {
   @scala.inline
-  def apply(
-    as: js.Any = null,
-    children: TagMod[Any] = null,
-    className: String = null,
-    content: SemanticShorthandItem[FeedContentProps] = null,
-    date: SemanticShorthandItem[FeedDateProps] = null,
-    extraImages: SemanticShorthandItem[FeedExtraProps] = null,
-    extraText: SemanticShorthandItem[FeedExtraProps] = null,
-    icon: SemanticShorthandItem[FeedLabelProps] = null,
-    image: SemanticShorthandItem[FeedLabelProps] = null,
-    meta: SemanticShorthandItem[FeedMetaProps] = null,
-    summary: SemanticShorthandItem[FeedSummaryProps] = null
-  ): StrictFeedEventProps = {
+  def apply(): StrictFeedEventProps = {
     val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (extraImages != null) __obj.updateDynamic("extraImages")(extraImages.asInstanceOf[js.Any])
-    if (extraText != null) __obj.updateDynamic("extraText")(extraText.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
-    if (summary != null) __obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictFeedEventProps]
   }
+  @scala.inline
+  implicit class StrictFeedEventPropsOps[Self <: StrictFeedEventProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAs(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildrenReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildren(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentFunction3(
+      value: (/* component */ ReactComponentClass[FeedContentProps], FeedContentProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withContent(value: SemanticShorthandItem[FeedContentProps]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDateFunction3(
+      value: (/* component */ ReactComponentClass[FeedDateProps], FeedDateProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withDate(value: SemanticShorthandItem[FeedDateProps]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtraImagesReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraImages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtraImagesFunction3(
+      value: (/* component */ ReactComponentClass[FeedExtraProps], FeedExtraProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraImages")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withExtraImages(value: SemanticShorthandItem[FeedExtraProps]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraImages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtraImages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraImages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtraTextReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtraTextFunction3(
+      value: (/* component */ ReactComponentClass[FeedExtraProps], FeedExtraProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraText")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withExtraText(value: SemanticShorthandItem[FeedExtraProps]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtraText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIconFunction3(
+      value: (/* component */ ReactComponentClass[FeedLabelProps], FeedLabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withIcon(value: SemanticShorthandItem[FeedLabelProps]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImageFunction3(
+      value: (/* component */ ReactComponentClass[FeedLabelProps], FeedLabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withImage(value: SemanticShorthandItem[FeedLabelProps]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetaReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetaFunction3(
+      value: (/* component */ ReactComponentClass[FeedMetaProps], FeedMetaProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withMeta(value: SemanticShorthandItem[FeedMetaProps]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeta: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSummaryReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSummaryFunction3(
+      value: (/* component */ ReactComponentClass[FeedSummaryProps], FeedSummaryProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSummary(value: SemanticShorthandItem[FeedSummaryProps]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

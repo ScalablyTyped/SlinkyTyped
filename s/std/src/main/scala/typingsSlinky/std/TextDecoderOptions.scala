@@ -4,21 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TextDecoderOptions extends js.Object {
-  var fatal: js.UndefOr[scala.Boolean] = js.undefined
-  var ignoreBOM: js.UndefOr[scala.Boolean] = js.undefined
+  var fatal: js.UndefOr[scala.Boolean] = js.native
+  var ignoreBOM: js.UndefOr[scala.Boolean] = js.native
 }
 
 object TextDecoderOptions {
   @scala.inline
-  def apply(
-    fatal: js.UndefOr[scala.Boolean] = js.undefined,
-    ignoreBOM: js.UndefOr[scala.Boolean] = js.undefined
-  ): TextDecoderOptions = {
+  def apply(): TextDecoderOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(fatal)) __obj.updateDynamic("fatal")(fatal.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreBOM)) __obj.updateDynamic("ignoreBOM")(ignoreBOM.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextDecoderOptions]
   }
+  @scala.inline
+  implicit class TextDecoderOptionsOps[Self <: TextDecoderOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFatal(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fatal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFatal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fatal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreBOM(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreBOM")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreBOM: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreBOM")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

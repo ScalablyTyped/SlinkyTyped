@@ -70,40 +70,197 @@ trait ReservedInstancesOffering extends js.Object {
 
 object ReservedInstancesOffering {
   @scala.inline
-  def apply(
-    AvailabilityZone: String = null,
-    CurrencyCode: CurrencyCodeValues = null,
-    Duration: Int | scala.Double = null,
-    FixedPrice: Int | scala.Double = null,
-    InstanceTenancy: Tenancy = null,
-    InstanceType: InstanceType = null,
-    Marketplace: js.UndefOr[scala.Boolean] = js.undefined,
-    OfferingClass: OfferingClassType = null,
-    OfferingType: OfferingTypeValues = null,
-    PricingDetails: PricingDetailsList = null,
-    ProductDescription: RIProductDescription = null,
-    RecurringCharges: RecurringChargesList = null,
-    ReservedInstancesOfferingId: String = null,
-    Scope: scope = null,
-    UsagePrice: Int | scala.Double = null
-  ): ReservedInstancesOffering = {
+  def apply(): ReservedInstancesOffering = {
     val __obj = js.Dynamic.literal()
-    if (AvailabilityZone != null) __obj.updateDynamic("AvailabilityZone")(AvailabilityZone.asInstanceOf[js.Any])
-    if (CurrencyCode != null) __obj.updateDynamic("CurrencyCode")(CurrencyCode.asInstanceOf[js.Any])
-    if (Duration != null) __obj.updateDynamic("Duration")(Duration.asInstanceOf[js.Any])
-    if (FixedPrice != null) __obj.updateDynamic("FixedPrice")(FixedPrice.asInstanceOf[js.Any])
-    if (InstanceTenancy != null) __obj.updateDynamic("InstanceTenancy")(InstanceTenancy.asInstanceOf[js.Any])
-    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
-    if (!js.isUndefined(Marketplace)) __obj.updateDynamic("Marketplace")(Marketplace.asInstanceOf[js.Any])
-    if (OfferingClass != null) __obj.updateDynamic("OfferingClass")(OfferingClass.asInstanceOf[js.Any])
-    if (OfferingType != null) __obj.updateDynamic("OfferingType")(OfferingType.asInstanceOf[js.Any])
-    if (PricingDetails != null) __obj.updateDynamic("PricingDetails")(PricingDetails.asInstanceOf[js.Any])
-    if (ProductDescription != null) __obj.updateDynamic("ProductDescription")(ProductDescription.asInstanceOf[js.Any])
-    if (RecurringCharges != null) __obj.updateDynamic("RecurringCharges")(RecurringCharges.asInstanceOf[js.Any])
-    if (ReservedInstancesOfferingId != null) __obj.updateDynamic("ReservedInstancesOfferingId")(ReservedInstancesOfferingId.asInstanceOf[js.Any])
-    if (Scope != null) __obj.updateDynamic("Scope")(Scope.asInstanceOf[js.Any])
-    if (UsagePrice != null) __obj.updateDynamic("UsagePrice")(UsagePrice.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReservedInstancesOffering]
   }
+  @scala.inline
+  implicit class ReservedInstancesOfferingOps[Self <: ReservedInstancesOffering] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailabilityZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrencyCode(value: CurrencyCodeValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrencyCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedPrice(value: Float): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FixedPrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FixedPrice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceTenancy(value: Tenancy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceTenancy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceTenancy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceTenancy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: InstanceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarketplace(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marketplace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarketplace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marketplace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOfferingClass(value: OfferingClassType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OfferingClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOfferingClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OfferingClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOfferingType(value: OfferingTypeValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OfferingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOfferingType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OfferingType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPricingDetails(value: PricingDetailsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PricingDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPricingDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PricingDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductDescription(value: RIProductDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecurringCharges(value: RecurringChargesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecurringCharges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecurringCharges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecurringCharges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReservedInstancesOfferingId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstancesOfferingId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReservedInstancesOfferingId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstancesOfferingId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScope(value: scope): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsagePrice(value: Float): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UsagePrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsagePrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UsagePrice")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

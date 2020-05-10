@@ -16,8 +16,21 @@ object DeleteHealthCheckRequest {
   @scala.inline
   def apply(HealthCheckId: HealthCheckId): DeleteHealthCheckRequest = {
     val __obj = js.Dynamic.literal(HealthCheckId = HealthCheckId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DeleteHealthCheckRequest]
   }
+  @scala.inline
+  implicit class DeleteHealthCheckRequestOps[Self <: DeleteHealthCheckRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHealthCheckId(value: HealthCheckId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

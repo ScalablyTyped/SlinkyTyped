@@ -208,8 +208,255 @@ object GetInstanceResult {
     vpcSecurityGroups: js.Array[String]
   ): GetInstanceResult = {
     val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], allocatedStorage = allocatedStorage.asInstanceOf[js.Any], autoMinorVersionUpgrade = autoMinorVersionUpgrade.asInstanceOf[js.Any], availabilityZone = availabilityZone.asInstanceOf[js.Any], backupRetentionPeriod = backupRetentionPeriod.asInstanceOf[js.Any], caCertIdentifier = caCertIdentifier.asInstanceOf[js.Any], dbClusterIdentifier = dbClusterIdentifier.asInstanceOf[js.Any], dbInstanceArn = dbInstanceArn.asInstanceOf[js.Any], dbInstanceClass = dbInstanceClass.asInstanceOf[js.Any], dbInstanceIdentifier = dbInstanceIdentifier.asInstanceOf[js.Any], dbInstancePort = dbInstancePort.asInstanceOf[js.Any], dbName = dbName.asInstanceOf[js.Any], dbParameterGroups = dbParameterGroups.asInstanceOf[js.Any], dbSecurityGroups = dbSecurityGroups.asInstanceOf[js.Any], dbSubnetGroup = dbSubnetGroup.asInstanceOf[js.Any], enabledCloudwatchLogsExports = enabledCloudwatchLogsExports.asInstanceOf[js.Any], endpoint = endpoint.asInstanceOf[js.Any], engine = engine.asInstanceOf[js.Any], engineVersion = engineVersion.asInstanceOf[js.Any], hostedZoneId = hostedZoneId.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], iops = iops.asInstanceOf[js.Any], kmsKeyId = kmsKeyId.asInstanceOf[js.Any], licenseModel = licenseModel.asInstanceOf[js.Any], masterUsername = masterUsername.asInstanceOf[js.Any], monitoringInterval = monitoringInterval.asInstanceOf[js.Any], monitoringRoleArn = monitoringRoleArn.asInstanceOf[js.Any], multiAz = multiAz.asInstanceOf[js.Any], optionGroupMemberships = optionGroupMemberships.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any], preferredBackupWindow = preferredBackupWindow.asInstanceOf[js.Any], preferredMaintenanceWindow = preferredMaintenanceWindow.asInstanceOf[js.Any], publiclyAccessible = publiclyAccessible.asInstanceOf[js.Any], replicateSourceDb = replicateSourceDb.asInstanceOf[js.Any], resourceId = resourceId.asInstanceOf[js.Any], storageEncrypted = storageEncrypted.asInstanceOf[js.Any], storageType = storageType.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any], timezone = timezone.asInstanceOf[js.Any], vpcSecurityGroups = vpcSecurityGroups.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetInstanceResult]
   }
+  @scala.inline
+  implicit class GetInstanceResultOps[Self <: GetInstanceResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllocatedStorage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allocatedStorage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoMinorVersionUpgrade(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoMinorVersionUpgrade")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAvailabilityZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBackupRetentionPeriod(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backupRetentionPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCaCertIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caCertIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDbClusterIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbClusterIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDbInstanceArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbInstanceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDbInstanceClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbInstanceClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDbInstanceIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbInstanceIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDbInstancePort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbInstancePort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDbName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDbParameterGroups(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbParameterGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDbSecurityGroups(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbSecurityGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDbSubnetGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbSubnetGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnabledCloudwatchLogsExports(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledCloudwatchLogsExports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndpoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEngine(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("engine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEngineVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("engineVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHostedZoneId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostedZoneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIops(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iops")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKmsKeyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLicenseModel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMasterUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterUsername")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMonitoringInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monitoringInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMonitoringRoleArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monitoringRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMultiAz(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiAz")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptionGroupMemberships(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optionGroupMemberships")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreferredBackupWindow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preferredBackupWindow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreferredMaintenanceWindow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preferredMaintenanceWindow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPubliclyAccessible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publiclyAccessible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReplicateSourceDb(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicateSourceDb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStorageEncrypted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storageEncrypted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStorageType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storageType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTags(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimezone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVpcSecurityGroups(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcSecurityGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

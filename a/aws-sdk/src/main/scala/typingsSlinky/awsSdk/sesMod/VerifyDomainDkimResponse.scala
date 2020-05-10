@@ -16,8 +16,21 @@ object VerifyDomainDkimResponse {
   @scala.inline
   def apply(DkimTokens: VerificationTokenList): VerifyDomainDkimResponse = {
     val __obj = js.Dynamic.literal(DkimTokens = DkimTokens.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[VerifyDomainDkimResponse]
   }
+  @scala.inline
+  implicit class VerifyDomainDkimResponseOps[Self <: VerifyDomainDkimResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDkimTokens(value: VerificationTokenList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DkimTokens")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

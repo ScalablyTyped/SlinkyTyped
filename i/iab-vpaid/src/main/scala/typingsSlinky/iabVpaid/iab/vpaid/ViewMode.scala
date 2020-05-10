@@ -14,12 +14,10 @@ trait ViewMode extends js.Object
 
 object ViewMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fullscreen: typingsSlinky.iabVpaid.iabVpaidStrings.fullscreen = "fullscreen".asInstanceOf[typingsSlinky.iabVpaid.iabVpaidStrings.fullscreen]
   @scala.inline
-  def fullscreen: typingsSlinky.iabVpaid.iabVpaidStrings.fullscreen = this.cast("fullscreen")
+  def normal: typingsSlinky.iabVpaid.iabVpaidStrings.normal = "normal".asInstanceOf[typingsSlinky.iabVpaid.iabVpaidStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.iabVpaid.iabVpaidStrings.normal = this.cast("normal")
-  @scala.inline
-  def thumbnail: typingsSlinky.iabVpaid.iabVpaidStrings.thumbnail = this.cast("thumbnail")
+  def thumbnail: typingsSlinky.iabVpaid.iabVpaidStrings.thumbnail = "thumbnail".asInstanceOf[typingsSlinky.iabVpaid.iabVpaidStrings.thumbnail]
 }
 

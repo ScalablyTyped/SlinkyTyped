@@ -14,14 +14,12 @@ trait DefenderCloudBlockLevelType extends js.Object
 
 object DefenderCloudBlockLevelType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def high: typingsSlinky.microsoftGraph.microsoftGraphStrings.high = "high".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.high]
   @scala.inline
-  def high: typingsSlinky.microsoftGraph.microsoftGraphStrings.high = this.cast("high")
+  def highPlus: typingsSlinky.microsoftGraph.microsoftGraphStrings.highPlus = "highPlus".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.highPlus]
   @scala.inline
-  def highPlus: typingsSlinky.microsoftGraph.microsoftGraphStrings.highPlus = this.cast("highPlus")
+  def notConfigured: typingsSlinky.microsoftGraph.microsoftGraphStrings.notConfigured = "notConfigured".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.notConfigured]
   @scala.inline
-  def notConfigured: typingsSlinky.microsoftGraph.microsoftGraphStrings.notConfigured = this.cast("notConfigured")
-  @scala.inline
-  def zeroTolerance: typingsSlinky.microsoftGraph.microsoftGraphStrings.zeroTolerance = this.cast("zeroTolerance")
+  def zeroTolerance: typingsSlinky.microsoftGraph.microsoftGraphStrings.zeroTolerance = "zeroTolerance".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.zeroTolerance]
 }
 

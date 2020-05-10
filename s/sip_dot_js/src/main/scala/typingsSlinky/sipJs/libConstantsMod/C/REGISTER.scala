@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @JSImport("sip.js/lib/Constants", "C.REGISTER")
 @js.native
 object REGISTER
-  extends TopLevel[typingsSlinky.sipJs.sipJsStrings.REGISTER]
+  extends TopLevel[/* "0.15.10" */ String]
 

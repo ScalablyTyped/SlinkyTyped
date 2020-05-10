@@ -26,17 +26,59 @@ trait CreateRequestValidatorRequest extends js.Object {
 
 object CreateRequestValidatorRequest {
   @scala.inline
-  def apply(
-    restApiId: String,
-    name: String = null,
-    validateRequestBody: js.UndefOr[scala.Boolean] = js.undefined,
-    validateRequestParameters: js.UndefOr[scala.Boolean] = js.undefined
-  ): CreateRequestValidatorRequest = {
+  def apply(restApiId: String): CreateRequestValidatorRequest = {
     val __obj = js.Dynamic.literal(restApiId = restApiId.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(validateRequestBody)) __obj.updateDynamic("validateRequestBody")(validateRequestBody.asInstanceOf[js.Any])
-    if (!js.isUndefined(validateRequestParameters)) __obj.updateDynamic("validateRequestParameters")(validateRequestParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateRequestValidatorRequest]
   }
+  @scala.inline
+  implicit class CreateRequestValidatorRequestOps[Self <: CreateRequestValidatorRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRestApiId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restApiId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidateRequestBody(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validateRequestBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidateRequestBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validateRequestBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidateRequestParameters(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validateRequestParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidateRequestParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validateRequestParameters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

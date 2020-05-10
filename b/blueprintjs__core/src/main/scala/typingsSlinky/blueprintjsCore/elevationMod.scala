@@ -12,12 +12,13 @@ import scala.scalajs.js.annotation._
 @JSImport("@blueprintjs/core/lib/esm/common/elevation", JSImport.Namespace)
 @js.native
 object elevationMod extends js.Object {
+  /* Inlined {  ZERO  :0,   ONE  :1,   TWO  :2,   THREE  :3,   FOUR  :4}[keyof {  ZERO  :0,   ONE  :1,   TWO  :2,   THREE  :3,   FOUR  :4}] */
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.blueprintjsCore.blueprintjsCoreNumbers.`3`
-    - typingsSlinky.blueprintjsCore.blueprintjsCoreNumbers.`2`
     - typingsSlinky.blueprintjsCore.blueprintjsCoreNumbers.`4`
+    - typingsSlinky.blueprintjsCore.blueprintjsCoreNumbers.`3`
     - typingsSlinky.blueprintjsCore.blueprintjsCoreNumbers.`0`
     - typingsSlinky.blueprintjsCore.blueprintjsCoreNumbers.`1`
+    - typingsSlinky.blueprintjsCore.blueprintjsCoreNumbers.`2`
   */
   trait Elevation extends js.Object
   

@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation._
 /**
   * The options used to create a launcher item.
   */
+@js.native
 trait IItemOptions extends js.Object {
   /**
     * The arguments given to the command for
@@ -19,13 +20,13 @@ trait IItemOptions extends js.Object {
     * of the args, which a command may use to create
     * the activity with respect to the right directory.
     */
-  var args: js.UndefOr[ReadonlyJSONObject] = js.undefined
+  var args: js.UndefOr[ReadonlyJSONObject] = js.native
   /**
     * The category for the launcher item.
     *
     * The default value is the an empty string.
     */
-  var category: js.UndefOr[String] = js.undefined
+  var category: js.UndefOr[String] = js.native
   /**
     * The command ID for the launcher item.
     *
@@ -37,7 +38,7 @@ trait IItemOptions extends js.Object {
     * (i.e., create a modal dialog), then the launcher will not be
     * disposed.
     */
-  var command: String
+  var command: String = js.native
   /**
     * For items that have a kernel associated with them, the URL of the kernel
     * icon.
@@ -45,7 +46,7 @@ trait IItemOptions extends js.Object {
     * This is not a CSS class, but the URL that points to the icon in the kernel
     * spec.
     */
-  var kernelIconUrl: js.UndefOr[String] = js.undefined
+  var kernelIconUrl: js.UndefOr[String] = js.native
   /**
     * The rank for the launcher item.
     *
@@ -56,24 +57,76 @@ trait IItemOptions extends js.Object {
     *
     * The default rank is `Infinity`.
     */
-  var rank: js.UndefOr[Double] = js.undefined
+  var rank: js.UndefOr[Double] = js.native
 }
 
 object IItemOptions {
   @scala.inline
-  def apply(
-    command: String,
-    args: ReadonlyJSONObject = null,
-    category: String = null,
-    kernelIconUrl: String = null,
-    rank: Int | Double = null
-  ): IItemOptions = {
+  def apply(command: String): IItemOptions = {
     val __obj = js.Dynamic.literal(command = command.asInstanceOf[js.Any])
-    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
-    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
-    if (kernelIconUrl != null) __obj.updateDynamic("kernelIconUrl")(kernelIconUrl.asInstanceOf[js.Any])
-    if (rank != null) __obj.updateDynamic("rank")(rank.asInstanceOf[js.Any])
     __obj.asInstanceOf[IItemOptions]
   }
+  @scala.inline
+  implicit class IItemOptionsOps[Self <: IItemOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommand(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArgs(value: ReadonlyJSONObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArgs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKernelIconUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelIconUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKernelIconUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelIconUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRank(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRank: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

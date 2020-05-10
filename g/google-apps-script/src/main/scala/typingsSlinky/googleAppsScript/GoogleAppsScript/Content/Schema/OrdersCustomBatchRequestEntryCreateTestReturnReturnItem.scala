@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OrdersCustomBatchRequestEntryCreateTestReturnReturnItem extends js.Object {
-  var lineItemId: js.UndefOr[String] = js.undefined
-  var quantity: js.UndefOr[Double] = js.undefined
+  var lineItemId: js.UndefOr[String] = js.native
+  var quantity: js.UndefOr[Double] = js.native
 }
 
 object OrdersCustomBatchRequestEntryCreateTestReturnReturnItem {
   @scala.inline
-  def apply(lineItemId: String = null, quantity: Int | Double = null): OrdersCustomBatchRequestEntryCreateTestReturnReturnItem = {
+  def apply(): OrdersCustomBatchRequestEntryCreateTestReturnReturnItem = {
     val __obj = js.Dynamic.literal()
-    if (lineItemId != null) __obj.updateDynamic("lineItemId")(lineItemId.asInstanceOf[js.Any])
-    if (quantity != null) __obj.updateDynamic("quantity")(quantity.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrdersCustomBatchRequestEntryCreateTestReturnReturnItem]
   }
+  @scala.inline
+  implicit class OrdersCustomBatchRequestEntryCreateTestReturnReturnItemOps[Self <: OrdersCustomBatchRequestEntryCreateTestReturnReturnItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLineItemId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineItemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineItemId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineItemId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuantity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuantity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

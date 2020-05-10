@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
 /**
   * See: {@link https://docs.mendix.com/refguide7/entities relevant section in reference guide}
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -53,14 +53,6 @@ class Entity protected ()
   var model_FEntity: IModel = js.native
   @JSName("name")
   val name_FEntity: String = js.native
-  /**
-    * Returns the qualified name of this element, or
-    * null if this element is not a part of the model,
-    * or if it or one of its namespace containers does not have a
-    * valid name.
-    */
-  /* CompleteClass */
-  override val qualifiedName: String | Null = js.native
   @JSName("remoteSourceDocumentQualifiedName")
   val remoteSourceDocumentQualifiedName_FEntity: String | Null = js.native
   /**
@@ -70,50 +62,50 @@ class Entity protected ()
     */
   @JSName("remoteSourceDocument")
   val remoteSourceDocument_FEntity: IRemoteEntitySourceDocument | Null = js.native
-  def accessRules(): IList[AccessRule] = js.native
-  def attributes(): IList[Attribute] = js.native
-  def containerAsDomainModel(): DomainModel = js.native
-  def dataStorageGuid(): String = js.native
+  def accessRules: IList[AccessRule] = js.native
+  def attributes: IList[Attribute] = js.native
+  def containerAsDomainModel: DomainModel = js.native
+  def dataStorageGuid: String = js.native
   def dataStorageGuid(newValue: String): js.Any = js.native
-  def documentation(): String = js.native
+  def documentation: String = js.native
   def documentation(newValue: String): js.Any = js.native
-  def eventHandlers(): IList[EventHandler] = js.native
-  def generalization(): GeneralizationBase = js.native
+  def eventHandlers: IList[EventHandler] = js.native
+  def generalization: GeneralizationBase = js.native
   def generalization(newValue: GeneralizationBase): js.Any = js.native
   def image(): js.Any = js.native
   def image(newValue: IImage): js.Any = js.native
-  def imageQualifiedName(): String | Null = js.native
+  def imageQualifiedName: String | Null = js.native
   @JSName("image")
-  def image_Union(): IImage | Null = js.native
-  def indexes(): IList[Index] = js.native
+  def image_Union: IImage | Null = js.native
+  def indexes: IList[Index] = js.native
   /**
     * In version 8.2.0: added public
     * In version 7.17.0: introduced
     */
-  def isRemote(): Boolean = js.native
+  def isRemote: Boolean = js.native
   def isRemote(newValue: Boolean): js.Any = js.native
-  def location(): IPoint = js.native
+  def location: IPoint = js.native
   def location(newValue: IPoint): js.Any = js.native
-  def name(): String = js.native
+  def name: String = js.native
   def name(newValue: String): js.Any = js.native
   @JSName("qualifiedName")
-  def qualifiedName_MEntity(): String | Null = js.native
+  def qualifiedName_MEntity: String | Null = js.native
   /**
     * In version 7.17.0: introduced
     */
-  def remoteSource(): String = js.native
+  def remoteSource: String = js.native
   def remoteSource(newValue: String): js.Any = js.native
   def remoteSourceDocument(): js.Any = js.native
   def remoteSourceDocument(newValue: IRemoteEntitySourceDocument): js.Any = js.native
-  def remoteSourceDocumentQualifiedName(): String | Null = js.native
+  def remoteSourceDocumentQualifiedName: String | Null = js.native
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
     * In version 8.2.0: introduced
     */
   @JSName("remoteSourceDocument")
-  def remoteSourceDocument_Union(): IRemoteEntitySourceDocument | Null = js.native
-  def validationRules(): IList[ValidationRule] = js.native
+  def remoteSourceDocument_Union: IRemoteEntitySourceDocument | Null = js.native
+  def validationRules: IList[ValidationRule] = js.native
 }
 
 /* static members */

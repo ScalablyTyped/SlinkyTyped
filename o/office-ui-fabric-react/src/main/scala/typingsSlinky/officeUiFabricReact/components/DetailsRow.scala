@@ -1,12 +1,11 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.AnonEventName
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.CheckboxVisibility
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IColumn
@@ -22,6 +21,7 @@ import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropEvents
 import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropHelper
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.CollapseAllVisibility
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
+import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -32,85 +32,106 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DetailsRow
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object DetailsRow {
   @JSImport("office-ui-fabric-react", "DetailsRow")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    item: js.Any,
-    itemIndex: Double,
-    cellStyleProps: ICellStyleProps = null,
-    checkButtonAriaLabel: String = null,
-    checkboxCellClassName: String = null,
-    checkboxVisibility: CheckboxVisibility = null,
-    collapseAllVisibility: CollapseAllVisibility = null,
-    columns: js.Array[IColumn] = null,
-    compact: js.UndefOr[Boolean] = js.undefined,
-    componentRef: IRefObject[IDetailsRow] = null,
-    dragDropEvents: IDragDropEvents = null,
-    dragDropHelper: IDragDropHelper = null,
-    enableUpdateAnimations: js.UndefOr[Boolean] = js.undefined,
-    eventsToRegister: js.Array[AnonEventName] = null,
-    getCellValueKey: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => String = null,
-    getRowAriaDescribedBy: /* item */ js.Any => String = null,
-    getRowAriaLabel: /* item */ js.Any => String = null,
-    groupNestingDepth: Int | Double = null,
-    indentWidth: Int | Double = null,
-    onDidMount: /* row */ js.UndefOr[typingsSlinky.officeUiFabricReact.detailsRowBaseMod.DetailsRowBase] => Unit = null,
-    onRenderCheck: /* props */ IDetailsRowCheckProps => ReactElement = null,
-    onRenderDetailsCheckbox: (/* props */ js.UndefOr[IDetailsCheckboxProps], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IDetailsCheckboxProps], ReactElement | Null]]) => ReactElement | Null = null,
-    onRenderItemColumn: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => TagMod[Any] = null,
-    onWillUnmount: /* row */ js.UndefOr[typingsSlinky.officeUiFabricReact.detailsRowBaseMod.DetailsRowBase] => Unit = null,
-    rowFieldsAs: ReactComponentClass[IDetailsRowFieldsProps] = null,
-    rowWidth: Int | Double = null,
-    selection: ISelection[IObjectWithKey] = null,
-    selectionMode: SelectionMode = null,
-    styles: IStyleFunctionOrObject[IDetailsRowStyleProps, IDetailsRowStyles] = null,
-    theme: ITheme = null,
-    useFastIcons: js.UndefOr[Boolean] = js.undefined,
-    useReducedRowRenderer: js.UndefOr[Boolean] = js.undefined,
-    viewport: IViewport = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any], itemIndex = itemIndex.asInstanceOf[js.Any])
-    if (cellStyleProps != null) __obj.updateDynamic("cellStyleProps")(cellStyleProps.asInstanceOf[js.Any])
-    if (checkButtonAriaLabel != null) __obj.updateDynamic("checkButtonAriaLabel")(checkButtonAriaLabel.asInstanceOf[js.Any])
-    if (checkboxCellClassName != null) __obj.updateDynamic("checkboxCellClassName")(checkboxCellClassName.asInstanceOf[js.Any])
-    if (checkboxVisibility != null) __obj.updateDynamic("checkboxVisibility")(checkboxVisibility.asInstanceOf[js.Any])
-    if (collapseAllVisibility != null) __obj.updateDynamic("collapseAllVisibility")(collapseAllVisibility.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (dragDropEvents != null) __obj.updateDynamic("dragDropEvents")(dragDropEvents.asInstanceOf[js.Any])
-    if (dragDropHelper != null) __obj.updateDynamic("dragDropHelper")(dragDropHelper.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableUpdateAnimations)) __obj.updateDynamic("enableUpdateAnimations")(enableUpdateAnimations.asInstanceOf[js.Any])
-    if (eventsToRegister != null) __obj.updateDynamic("eventsToRegister")(eventsToRegister.asInstanceOf[js.Any])
-    if (getCellValueKey != null) __obj.updateDynamic("getCellValueKey")(js.Any.fromFunction3(getCellValueKey))
-    if (getRowAriaDescribedBy != null) __obj.updateDynamic("getRowAriaDescribedBy")(js.Any.fromFunction1(getRowAriaDescribedBy))
-    if (getRowAriaLabel != null) __obj.updateDynamic("getRowAriaLabel")(js.Any.fromFunction1(getRowAriaLabel))
-    if (groupNestingDepth != null) __obj.updateDynamic("groupNestingDepth")(groupNestingDepth.asInstanceOf[js.Any])
-    if (indentWidth != null) __obj.updateDynamic("indentWidth")(indentWidth.asInstanceOf[js.Any])
-    if (onDidMount != null) __obj.updateDynamic("onDidMount")(js.Any.fromFunction1(onDidMount))
-    if (onRenderCheck != null) __obj.updateDynamic("onRenderCheck")(js.Any.fromFunction1(onRenderCheck))
-    if (onRenderDetailsCheckbox != null) __obj.updateDynamic("onRenderDetailsCheckbox")(js.Any.fromFunction2(onRenderDetailsCheckbox))
-    if (onRenderItemColumn != null) __obj.updateDynamic("onRenderItemColumn")(js.Any.fromFunction3(onRenderItemColumn))
-    if (onWillUnmount != null) __obj.updateDynamic("onWillUnmount")(js.Any.fromFunction1(onWillUnmount))
-    if (rowFieldsAs != null) __obj.updateDynamic("rowFieldsAs")(rowFieldsAs.asInstanceOf[js.Any])
-    if (rowWidth != null) __obj.updateDynamic("rowWidth")(rowWidth.asInstanceOf[js.Any])
-    if (selection != null) __obj.updateDynamic("selection")(selection.asInstanceOf[js.Any])
-    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (!js.isUndefined(useFastIcons)) __obj.updateDynamic("useFastIcons")(useFastIcons.asInstanceOf[js.Any])
-    if (!js.isUndefined(useReducedRowRenderer)) __obj.updateDynamic("useReducedRowRenderer")(useReducedRowRenderer.asInstanceOf[js.Any])
-    if (viewport != null) __obj.updateDynamic("viewport")(viewport.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def cellStyleProps(value: ICellStyleProps): this.type = set("cellStyleProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checkButtonAriaLabel(value: String): this.type = set("checkButtonAriaLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checkboxCellClassName(value: String): this.type = set("checkboxCellClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checkboxVisibility(value: CheckboxVisibility): this.type = set("checkboxVisibility", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def collapseAllVisibility(value: CollapseAllVisibility): this.type = set("collapseAllVisibility", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columns(value: js.Array[IColumn]): this.type = set("columns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ IDetailsRow | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[IDetailsRow]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[IDetailsRow]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dragDropEvents(value: IDragDropEvents): this.type = set("dragDropEvents", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dragDropHelper(value: IDragDropHelper): this.type = set("dragDropHelper", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableUpdateAnimations(value: Boolean): this.type = set("enableUpdateAnimations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def eventsToRegister(value: js.Array[AnonEventName]): this.type = set("eventsToRegister", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getCellValueKey(
+      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => String
+    ): this.type = set("getCellValueKey", js.Any.fromFunction3(value))
+    @scala.inline
+    def getRowAriaDescribedBy(value: /* item */ js.Any => String): this.type = set("getRowAriaDescribedBy", js.Any.fromFunction1(value))
+    @scala.inline
+    def getRowAriaLabel(value: /* item */ js.Any => String): this.type = set("getRowAriaLabel", js.Any.fromFunction1(value))
+    @scala.inline
+    def groupNestingDepth(value: Double): this.type = set("groupNestingDepth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indentWidth(value: Double): this.type = set("indentWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDidMount(
+      value: /* row */ js.UndefOr[typingsSlinky.officeUiFabricReact.detailsRowBaseMod.DetailsRowBase] => Unit
+    ): this.type = set("onDidMount", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRenderCheck(value: /* props */ IDetailsRowCheckProps => ReactElement): this.type = set("onRenderCheck", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRenderDetailsCheckbox(
+      value: (/* props */ js.UndefOr[IDetailsCheckboxProps], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IDetailsCheckboxProps], ReactElement | Null]]) => ReactElement | Null
+    ): this.type = set("onRenderDetailsCheckbox", js.Any.fromFunction2(value))
+    @scala.inline
+    def onRenderItemColumn(
+      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => TagMod[Any]
+    ): this.type = set("onRenderItemColumn", js.Any.fromFunction3(value))
+    @scala.inline
+    def onWillUnmount(
+      value: /* row */ js.UndefOr[typingsSlinky.officeUiFabricReact.detailsRowBaseMod.DetailsRowBase] => Unit
+    ): this.type = set("onWillUnmount", js.Any.fromFunction1(value))
+    @scala.inline
+    def rowFieldsAsFunctionComponent(value: ReactComponentClass[IDetailsRowFieldsProps]): this.type = set("rowFieldsAs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowFieldsAsComponentClass(value: ReactComponentClass[IDetailsRowFieldsProps]): this.type = set("rowFieldsAs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowFieldsAs(value: ReactComponentClass[IDetailsRowFieldsProps]): this.type = set("rowFieldsAs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowWidth(value: Double): this.type = set("rowWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selection(value: ISelection[IObjectWithKey]): this.type = set("selection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectionMode(value: SelectionMode): this.type = set("selectionMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stylesFunction1(value: IDetailsRowStyleProps => Partial[IDetailsRowStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: IStyleFunctionOrObject[IDetailsRowStyleProps, IDetailsRowStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useFastIcons(value: Boolean): this.type = set("useFastIcons", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useReducedRowRenderer(value: Boolean): this.type = set("useReducedRowRenderer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def viewport(value: IViewport): this.type = set("viewport", value.asInstanceOf[js.Any])
   }
-  type Props = IDetailsRowBaseProps
+  
+  def withProps(p: IDetailsRowBaseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(item: js.Any, itemIndex: Double): Builder = {
+    val __props = js.Dynamic.literal(item = item.asInstanceOf[js.Any], itemIndex = itemIndex.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IDetailsRowBaseProps]))
+  }
 }
 

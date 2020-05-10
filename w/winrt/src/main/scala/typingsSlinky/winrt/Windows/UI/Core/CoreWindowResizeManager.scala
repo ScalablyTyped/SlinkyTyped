@@ -6,10 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.UI.Core.CoreWindowResizeManager")
 @js.native
-class CoreWindowResizeManager () extends ICoreWindowResizeManager {
-  /* CompleteClass */
-  override def notifyLayoutCompleted(): Unit = js.native
-}
+class CoreWindowResizeManager () extends ICoreWindowResizeManager
 
 /* static members */
 @JSGlobal("Windows.UI.Core.CoreWindowResizeManager")

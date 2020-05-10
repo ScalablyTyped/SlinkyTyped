@@ -97,48 +97,245 @@ trait UserPoolArgs extends js.Object {
 
 object UserPoolArgs {
   @scala.inline
-  def apply(
-    adminCreateUserConfig: Input[UserPoolAdminCreateUserConfig] = null,
-    aliasAttributes: Input[js.Array[Input[String]]] = null,
-    autoVerifiedAttributes: Input[js.Array[Input[String]]] = null,
-    deviceConfiguration: Input[UserPoolDeviceConfiguration] = null,
-    emailConfiguration: Input[UserPoolEmailConfiguration] = null,
-    emailVerificationMessage: Input[String] = null,
-    emailVerificationSubject: Input[String] = null,
-    lambdaConfig: Input[UserPoolLambdaConfig] = null,
-    mfaConfiguration: Input[String] = null,
-    name: Input[String] = null,
-    passwordPolicy: Input[UserPoolPasswordPolicy] = null,
-    schemas: Input[js.Array[Input[UserPoolSchema]]] = null,
-    smsAuthenticationMessage: Input[String] = null,
-    smsConfiguration: Input[UserPoolSmsConfiguration] = null,
-    smsVerificationMessage: Input[String] = null,
-    tags: Input[StringDictionary[_]] = null,
-    userPoolAddOns: Input[UserPoolUserPoolAddOns] = null,
-    usernameAttributes: Input[js.Array[Input[String]]] = null,
-    verificationMessageTemplate: Input[UserPoolVerificationMessageTemplate] = null
-  ): UserPoolArgs = {
+  def apply(): UserPoolArgs = {
     val __obj = js.Dynamic.literal()
-    if (adminCreateUserConfig != null) __obj.updateDynamic("adminCreateUserConfig")(adminCreateUserConfig.asInstanceOf[js.Any])
-    if (aliasAttributes != null) __obj.updateDynamic("aliasAttributes")(aliasAttributes.asInstanceOf[js.Any])
-    if (autoVerifiedAttributes != null) __obj.updateDynamic("autoVerifiedAttributes")(autoVerifiedAttributes.asInstanceOf[js.Any])
-    if (deviceConfiguration != null) __obj.updateDynamic("deviceConfiguration")(deviceConfiguration.asInstanceOf[js.Any])
-    if (emailConfiguration != null) __obj.updateDynamic("emailConfiguration")(emailConfiguration.asInstanceOf[js.Any])
-    if (emailVerificationMessage != null) __obj.updateDynamic("emailVerificationMessage")(emailVerificationMessage.asInstanceOf[js.Any])
-    if (emailVerificationSubject != null) __obj.updateDynamic("emailVerificationSubject")(emailVerificationSubject.asInstanceOf[js.Any])
-    if (lambdaConfig != null) __obj.updateDynamic("lambdaConfig")(lambdaConfig.asInstanceOf[js.Any])
-    if (mfaConfiguration != null) __obj.updateDynamic("mfaConfiguration")(mfaConfiguration.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (passwordPolicy != null) __obj.updateDynamic("passwordPolicy")(passwordPolicy.asInstanceOf[js.Any])
-    if (schemas != null) __obj.updateDynamic("schemas")(schemas.asInstanceOf[js.Any])
-    if (smsAuthenticationMessage != null) __obj.updateDynamic("smsAuthenticationMessage")(smsAuthenticationMessage.asInstanceOf[js.Any])
-    if (smsConfiguration != null) __obj.updateDynamic("smsConfiguration")(smsConfiguration.asInstanceOf[js.Any])
-    if (smsVerificationMessage != null) __obj.updateDynamic("smsVerificationMessage")(smsVerificationMessage.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (userPoolAddOns != null) __obj.updateDynamic("userPoolAddOns")(userPoolAddOns.asInstanceOf[js.Any])
-    if (usernameAttributes != null) __obj.updateDynamic("usernameAttributes")(usernameAttributes.asInstanceOf[js.Any])
-    if (verificationMessageTemplate != null) __obj.updateDynamic("verificationMessageTemplate")(verificationMessageTemplate.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPoolArgs]
   }
+  @scala.inline
+  implicit class UserPoolArgsOps[Self <: UserPoolArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdminCreateUserConfig(value: Input[UserPoolAdminCreateUserConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adminCreateUserConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdminCreateUserConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adminCreateUserConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAliasAttributes(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aliasAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAliasAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aliasAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoVerifiedAttributes(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoVerifiedAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoVerifiedAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoVerifiedAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceConfiguration(value: Input[UserPoolDeviceConfiguration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmailConfiguration(value: Input[UserPoolEmailConfiguration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emailConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmailConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emailConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmailVerificationMessage(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emailVerificationMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmailVerificationMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emailVerificationMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmailVerificationSubject(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emailVerificationSubject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmailVerificationSubject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emailVerificationSubject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLambdaConfig(value: Input[UserPoolLambdaConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMfaConfiguration(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mfaConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMfaConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mfaConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPasswordPolicy(value: Input[UserPoolPasswordPolicy]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPasswordPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemas(value: Input[js.Array[Input[UserPoolSchema]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchemas: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemas")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmsAuthenticationMessage(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smsAuthenticationMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmsAuthenticationMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smsAuthenticationMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmsConfiguration(value: Input[UserPoolSmsConfiguration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smsConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmsConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smsConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmsVerificationMessage(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smsVerificationMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmsVerificationMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smsVerificationMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserPoolAddOns(value: Input[UserPoolUserPoolAddOns]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userPoolAddOns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserPoolAddOns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userPoolAddOns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsernameAttributes(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usernameAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsernameAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usernameAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerificationMessageTemplate(value: Input[UserPoolVerificationMessageTemplate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verificationMessageTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerificationMessageTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verificationMessageTemplate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

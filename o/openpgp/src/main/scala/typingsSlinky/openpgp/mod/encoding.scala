@@ -1,6 +1,5 @@
 package typingsSlinky.openpgp.mod
 
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +12,6 @@ object encoding extends js.Object {
     /**
       * Add additional information to the armor version of an OpenPGP binary
       * packet block.
-      * @author Alex
       * @version 2011-12-16
       * @param customComment (optional) additional comment to add to the armored string
       * @returns The header information
@@ -35,8 +33,8 @@ object encoding extends js.Object {
       * @param data Data to create a CRC-24 checksum for
       * @returns The CRC-24 checksum
       */
-    def createcrc24(data: String): scala.scalajs.js.typedarray.Uint8Array | ReadableStream[scala.scalajs.js.typedarray.Uint8Array] = js.native
-    def createcrc24(data: ReadableStream[String]): scala.scalajs.js.typedarray.Uint8Array | ReadableStream[scala.scalajs.js.typedarray.Uint8Array] = js.native
+    def createcrc24(data: String): js.typedarray.Uint8Array | ReadableStream[js.typedarray.Uint8Array] = js.native
+    def createcrc24(data: ReadableStream[String]): js.typedarray.Uint8Array | ReadableStream[js.typedarray.Uint8Array] = js.native
     /**
       * DeArmor an OpenPGP armored message; verify the checksum and return
       * the encoded bytes
@@ -69,18 +67,18 @@ object encoding extends js.Object {
       * @param u if true, input is interpreted as URL-safe
       * @returns binary array version of input string
       */
-    def r2s(t: String, u: Boolean): scala.scalajs.js.typedarray.Uint8Array | ReadableStream[scala.scalajs.js.typedarray.Uint8Array] = js.native
-    def r2s(t: ReadableStream[String], u: Boolean): scala.scalajs.js.typedarray.Uint8Array | ReadableStream[scala.scalajs.js.typedarray.Uint8Array] = js.native
-    def s2r(t: ReadableStream[Uint8Array]): String | ReadableStream[String] = js.native
-    def s2r(t: ReadableStream[Uint8Array], u: Boolean): String | ReadableStream[String] = js.native
+    def r2s(t: String, u: Boolean): js.typedarray.Uint8Array | ReadableStream[js.typedarray.Uint8Array] = js.native
+    def r2s(t: ReadableStream[String], u: Boolean): js.typedarray.Uint8Array | ReadableStream[js.typedarray.Uint8Array] = js.native
+    def s2r(t: ReadableStream[js.typedarray.Uint8Array]): String | ReadableStream[String] = js.native
+    def s2r(t: ReadableStream[js.typedarray.Uint8Array], u: Boolean): String | ReadableStream[String] = js.native
     /**
       * Convert binary array to radix-64
       * @param t Uint8Array to convert
       * @param u if true, output is URL-safe
       * @returns radix-64 version of input string
       */
-    def s2r(t: Uint8Array): String | ReadableStream[String] = js.native
-    def s2r(t: Uint8Array, u: Boolean): String | ReadableStream[String] = js.native
+    def s2r(t: js.typedarray.Uint8Array): String | ReadableStream[String] = js.native
+    def s2r(t: js.typedarray.Uint8Array, u: Boolean): String | ReadableStream[String] = js.native
   }
   
 }

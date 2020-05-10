@@ -1,10 +1,11 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.semanticUiReact.cardContentMod.CardContentProps
 import typingsSlinky.semanticUiReact.cardDescriptionMod.CardDescriptionProps
 import typingsSlinky.semanticUiReact.cardHeaderMod.CardHeaderProps
@@ -18,36 +19,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CardContent
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object CardContent {
   @JSImport("semantic-ui-react/dist/commonjs/views/Card/CardContent", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    as: js.Any = null,
-    content: SemanticShorthandContent = null,
-    description: SemanticShorthandItem[CardDescriptionProps] = null,
-    extra: js.UndefOr[Boolean] = js.undefined,
-    header: SemanticShorthandItem[CardHeaderProps] = null,
-    meta: SemanticShorthandItem[CardMetaProps] = null,
-    textAlign: center | left | right = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (!js.isUndefined(extra)) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
-    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def descriptionFunction3(
+      value: (/* component */ ReactComponentClass[CardDescriptionProps], CardDescriptionProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("description", js.Any.fromFunction3(value))
+    @scala.inline
+    def description(value: SemanticShorthandItem[CardDescriptionProps]): this.type = set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extra(value: Boolean): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerFunction3(
+      value: (/* component */ ReactComponentClass[CardHeaderProps], CardHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("header", js.Any.fromFunction3(value))
+    @scala.inline
+    def header(value: SemanticShorthandItem[CardHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])
+    @scala.inline
+    def metaReactElement(value: ReactElement): this.type = set("meta", value.asInstanceOf[js.Any])
+    @scala.inline
+    def metaFunction3(
+      value: (/* component */ ReactComponentClass[CardMetaProps], CardMetaProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("meta", js.Any.fromFunction3(value))
+    @scala.inline
+    def meta(value: SemanticShorthandItem[CardMetaProps]): this.type = set("meta", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textAlign(value: center | left | right): this.type = set("textAlign", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = CardContentProps
+  
+  def withProps(p: CardContentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CardContent.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

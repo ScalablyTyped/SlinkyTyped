@@ -10,9 +10,5 @@ import scala.scalajs.js.annotation._
 class TokenRangeAccess protected () extends ITokenAccess {
   def this(from: SyntaxKind, to: SyntaxKind, except: js.Array[SyntaxKind]) = this()
   var tokens: js.Any = js.native
-  /* CompleteClass */
-  override def Contains(token: SyntaxKind): Boolean = js.native
-  /* CompleteClass */
-  override def GetTokens(): js.Array[SyntaxKind] = js.native
 }
 

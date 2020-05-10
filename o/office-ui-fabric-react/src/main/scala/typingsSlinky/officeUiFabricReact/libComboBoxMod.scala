@@ -15,8 +15,10 @@ object libComboBoxMod extends js.Object {
   }
   
   @js.native
-  class VirtualizedComboBox ()
-    extends typingsSlinky.officeUiFabricReact.virtualizedComboBoxMod.VirtualizedComboBox
+  class VirtualizedComboBox protected ()
+    extends typingsSlinky.officeUiFabricReact.comboBoxMod.VirtualizedComboBox {
+    def this(props: IComboBoxProps) = this()
+  }
   
   /* static members */
   @js.native

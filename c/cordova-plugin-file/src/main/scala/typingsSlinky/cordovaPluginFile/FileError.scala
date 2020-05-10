@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FileError extends js.Object {
   /** Error code */
-  var code: Double
+  var code: Double = js.native
 }
 
 @JSGlobal("FileError")

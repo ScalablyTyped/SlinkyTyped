@@ -26,99 +26,443 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a Message. */
+@js.native
 trait IMessage extends js.Object {
   /** Message basicCard */
-  var basicCard: js.UndefOr[IBasicCard | Null] = js.undefined
+  var basicCard: js.UndefOr[IBasicCard | Null] = js.native
   /** Message browseCarouselCard */
-  var browseCarouselCard: js.UndefOr[IBrowseCarouselCard | Null] = js.undefined
+  var browseCarouselCard: js.UndefOr[IBrowseCarouselCard | Null] = js.native
   /** Message card */
-  var card: js.UndefOr[ICard | Null] = js.undefined
+  var card: js.UndefOr[ICard | Null] = js.native
   /** Message carouselSelect */
-  var carouselSelect: js.UndefOr[ICarouselSelect | Null] = js.undefined
+  var carouselSelect: js.UndefOr[ICarouselSelect | Null] = js.native
   /** Message image */
-  var image: js.UndefOr[IImage | Null] = js.undefined
+  var image: js.UndefOr[IImage | Null] = js.native
   /** Message linkOutSuggestion */
-  var linkOutSuggestion: js.UndefOr[ILinkOutSuggestion | Null] = js.undefined
+  var linkOutSuggestion: js.UndefOr[ILinkOutSuggestion | Null] = js.native
   /** Message listSelect */
-  var listSelect: js.UndefOr[IListSelect | Null] = js.undefined
+  var listSelect: js.UndefOr[IListSelect | Null] = js.native
   /** Message mediaContent */
-  var mediaContent: js.UndefOr[IMediaContent | Null] = js.undefined
+  var mediaContent: js.UndefOr[IMediaContent | Null] = js.native
   /** Message payload */
-  var payload: js.UndefOr[IStruct | Null] = js.undefined
+  var payload: js.UndefOr[IStruct | Null] = js.native
   /** Message platform */
-  var platform: js.UndefOr[Platform | Null] = js.undefined
+  var platform: js.UndefOr[Platform | Null] = js.native
   /** Message quickReplies */
-  var quickReplies: js.UndefOr[IQuickReplies | Null] = js.undefined
+  var quickReplies: js.UndefOr[IQuickReplies | Null] = js.native
   /** Message rbmCarouselRichCard */
-  var rbmCarouselRichCard: js.UndefOr[IRbmCarouselCard | Null] = js.undefined
+  var rbmCarouselRichCard: js.UndefOr[IRbmCarouselCard | Null] = js.native
   /** Message rbmStandaloneRichCard */
-  var rbmStandaloneRichCard: js.UndefOr[IRbmStandaloneCard | Null] = js.undefined
+  var rbmStandaloneRichCard: js.UndefOr[IRbmStandaloneCard | Null] = js.native
   /** Message rbmText */
-  var rbmText: js.UndefOr[IRbmText | Null] = js.undefined
+  var rbmText: js.UndefOr[IRbmText | Null] = js.native
   /** Message simpleResponses */
-  var simpleResponses: js.UndefOr[ISimpleResponses | Null] = js.undefined
+  var simpleResponses: js.UndefOr[ISimpleResponses | Null] = js.native
   /** Message suggestions */
-  var suggestions: js.UndefOr[ISuggestions | Null] = js.undefined
+  var suggestions: js.UndefOr[ISuggestions | Null] = js.native
   /** Message tableCard */
-  var tableCard: js.UndefOr[ITableCard | Null] = js.undefined
+  var tableCard: js.UndefOr[ITableCard | Null] = js.native
   /** Message telephonyPlayAudio */
-  var telephonyPlayAudio: js.UndefOr[ITelephonyPlayAudio | Null] = js.undefined
+  var telephonyPlayAudio: js.UndefOr[ITelephonyPlayAudio | Null] = js.native
   /** Message telephonySynthesizeSpeech */
-  var telephonySynthesizeSpeech: js.UndefOr[ITelephonySynthesizeSpeech | Null] = js.undefined
+  var telephonySynthesizeSpeech: js.UndefOr[ITelephonySynthesizeSpeech | Null] = js.native
   /** Message telephonyTransferCall */
-  var telephonyTransferCall: js.UndefOr[ITelephonyTransferCall | Null] = js.undefined
+  var telephonyTransferCall: js.UndefOr[ITelephonyTransferCall | Null] = js.native
   /** Message text */
-  var text: js.UndefOr[IText | Null] = js.undefined
+  var text: js.UndefOr[IText | Null] = js.native
 }
 
 object IMessage {
   @scala.inline
-  def apply(
-    basicCard: IBasicCard = null,
-    browseCarouselCard: IBrowseCarouselCard = null,
-    card: ICard = null,
-    carouselSelect: ICarouselSelect = null,
-    image: IImage = null,
-    linkOutSuggestion: ILinkOutSuggestion = null,
-    listSelect: IListSelect = null,
-    mediaContent: IMediaContent = null,
-    payload: IStruct = null,
-    platform: Platform = null,
-    quickReplies: IQuickReplies = null,
-    rbmCarouselRichCard: IRbmCarouselCard = null,
-    rbmStandaloneRichCard: IRbmStandaloneCard = null,
-    rbmText: IRbmText = null,
-    simpleResponses: ISimpleResponses = null,
-    suggestions: ISuggestions = null,
-    tableCard: ITableCard = null,
-    telephonyPlayAudio: ITelephonyPlayAudio = null,
-    telephonySynthesizeSpeech: ITelephonySynthesizeSpeech = null,
-    telephonyTransferCall: ITelephonyTransferCall = null,
-    text: IText = null
-  ): IMessage = {
+  def apply(): IMessage = {
     val __obj = js.Dynamic.literal()
-    if (basicCard != null) __obj.updateDynamic("basicCard")(basicCard.asInstanceOf[js.Any])
-    if (browseCarouselCard != null) __obj.updateDynamic("browseCarouselCard")(browseCarouselCard.asInstanceOf[js.Any])
-    if (card != null) __obj.updateDynamic("card")(card.asInstanceOf[js.Any])
-    if (carouselSelect != null) __obj.updateDynamic("carouselSelect")(carouselSelect.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (linkOutSuggestion != null) __obj.updateDynamic("linkOutSuggestion")(linkOutSuggestion.asInstanceOf[js.Any])
-    if (listSelect != null) __obj.updateDynamic("listSelect")(listSelect.asInstanceOf[js.Any])
-    if (mediaContent != null) __obj.updateDynamic("mediaContent")(mediaContent.asInstanceOf[js.Any])
-    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
-    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
-    if (quickReplies != null) __obj.updateDynamic("quickReplies")(quickReplies.asInstanceOf[js.Any])
-    if (rbmCarouselRichCard != null) __obj.updateDynamic("rbmCarouselRichCard")(rbmCarouselRichCard.asInstanceOf[js.Any])
-    if (rbmStandaloneRichCard != null) __obj.updateDynamic("rbmStandaloneRichCard")(rbmStandaloneRichCard.asInstanceOf[js.Any])
-    if (rbmText != null) __obj.updateDynamic("rbmText")(rbmText.asInstanceOf[js.Any])
-    if (simpleResponses != null) __obj.updateDynamic("simpleResponses")(simpleResponses.asInstanceOf[js.Any])
-    if (suggestions != null) __obj.updateDynamic("suggestions")(suggestions.asInstanceOf[js.Any])
-    if (tableCard != null) __obj.updateDynamic("tableCard")(tableCard.asInstanceOf[js.Any])
-    if (telephonyPlayAudio != null) __obj.updateDynamic("telephonyPlayAudio")(telephonyPlayAudio.asInstanceOf[js.Any])
-    if (telephonySynthesizeSpeech != null) __obj.updateDynamic("telephonySynthesizeSpeech")(telephonySynthesizeSpeech.asInstanceOf[js.Any])
-    if (telephonyTransferCall != null) __obj.updateDynamic("telephonyTransferCall")(telephonyTransferCall.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMessage]
   }
+  @scala.inline
+  implicit class IMessageOps[Self <: IMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBasicCard(value: IBasicCard): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basicCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBasicCard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basicCard")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBasicCardNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basicCard")(null)
+        ret
+    }
+    @scala.inline
+    def withBrowseCarouselCard(value: IBrowseCarouselCard): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browseCarouselCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrowseCarouselCard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browseCarouselCard")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrowseCarouselCardNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browseCarouselCard")(null)
+        ret
+    }
+    @scala.inline
+    def withCard(value: ICard): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("card")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("card")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCardNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("card")(null)
+        ret
+    }
+    @scala.inline
+    def withCarouselSelect(value: ICarouselSelect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("carouselSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCarouselSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("carouselSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCarouselSelectNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("carouselSelect")(null)
+        ret
+    }
+    @scala.inline
+    def withImage(value: IImage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(null)
+        ret
+    }
+    @scala.inline
+    def withLinkOutSuggestion(value: ILinkOutSuggestion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkOutSuggestion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkOutSuggestion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkOutSuggestion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkOutSuggestionNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkOutSuggestion")(null)
+        ret
+    }
+    @scala.inline
+    def withListSelect(value: IListSelect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListSelectNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listSelect")(null)
+        ret
+    }
+    @scala.inline
+    def withMediaContent(value: IMediaContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediaContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMediaContentNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaContent")(null)
+        ret
+    }
+    @scala.inline
+    def withPayload(value: IStruct): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPayload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPayloadNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(null)
+        ret
+    }
+    @scala.inline
+    def withPlatform(value: Platform): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(null)
+        ret
+    }
+    @scala.inline
+    def withQuickReplies(value: IQuickReplies): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quickReplies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuickReplies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quickReplies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuickRepliesNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quickReplies")(null)
+        ret
+    }
+    @scala.inline
+    def withRbmCarouselRichCard(value: IRbmCarouselCard): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rbmCarouselRichCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRbmCarouselRichCard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rbmCarouselRichCard")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRbmCarouselRichCardNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rbmCarouselRichCard")(null)
+        ret
+    }
+    @scala.inline
+    def withRbmStandaloneRichCard(value: IRbmStandaloneCard): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rbmStandaloneRichCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRbmStandaloneRichCard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rbmStandaloneRichCard")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRbmStandaloneRichCardNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rbmStandaloneRichCard")(null)
+        ret
+    }
+    @scala.inline
+    def withRbmText(value: IRbmText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rbmText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRbmText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rbmText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRbmTextNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rbmText")(null)
+        ret
+    }
+    @scala.inline
+    def withSimpleResponses(value: ISimpleResponses): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simpleResponses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSimpleResponses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simpleResponses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSimpleResponsesNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simpleResponses")(null)
+        ret
+    }
+    @scala.inline
+    def withSuggestions(value: ISuggestions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestionsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestions")(null)
+        ret
+    }
+    @scala.inline
+    def withTableCard(value: ITableCard): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableCard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCard")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableCardNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCard")(null)
+        ret
+    }
+    @scala.inline
+    def withTelephonyPlayAudio(value: ITelephonyPlayAudio): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telephonyPlayAudio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTelephonyPlayAudio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telephonyPlayAudio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTelephonyPlayAudioNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telephonyPlayAudio")(null)
+        ret
+    }
+    @scala.inline
+    def withTelephonySynthesizeSpeech(value: ITelephonySynthesizeSpeech): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telephonySynthesizeSpeech")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTelephonySynthesizeSpeech: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telephonySynthesizeSpeech")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTelephonySynthesizeSpeechNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telephonySynthesizeSpeech")(null)
+        ret
+    }
+    @scala.inline
+    def withTelephonyTransferCall(value: ITelephonyTransferCall): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telephonyTransferCall")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTelephonyTransferCall: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telephonyTransferCall")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTelephonyTransferCallNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telephonyTransferCall")(null)
+        ret
+    }
+    @scala.inline
+    def withText(value: IText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(null)
+        ret
+    }
+  }
+  
 }
 

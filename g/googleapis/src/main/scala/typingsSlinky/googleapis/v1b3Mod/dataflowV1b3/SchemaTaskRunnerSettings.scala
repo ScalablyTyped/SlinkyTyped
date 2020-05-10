@@ -104,48 +104,245 @@ trait SchemaTaskRunnerSettings extends js.Object {
 
 object SchemaTaskRunnerSettings {
   @scala.inline
-  def apply(
-    alsologtostderr: js.UndefOr[Boolean] = js.undefined,
-    baseTaskDir: String = null,
-    baseUrl: String = null,
-    commandlinesFileName: String = null,
-    continueOnException: js.UndefOr[Boolean] = js.undefined,
-    dataflowApiVersion: String = null,
-    harnessCommand: String = null,
-    languageHint: String = null,
-    logDir: String = null,
-    logToSerialconsole: js.UndefOr[Boolean] = js.undefined,
-    logUploadLocation: String = null,
-    oauthScopes: js.Array[String] = null,
-    parallelWorkerSettings: SchemaWorkerSettings = null,
-    streamingWorkerMainClass: String = null,
-    taskGroup: String = null,
-    taskUser: String = null,
-    tempStoragePrefix: String = null,
-    vmId: String = null,
-    workflowFileName: String = null
-  ): SchemaTaskRunnerSettings = {
+  def apply(): SchemaTaskRunnerSettings = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alsologtostderr)) __obj.updateDynamic("alsologtostderr")(alsologtostderr.asInstanceOf[js.Any])
-    if (baseTaskDir != null) __obj.updateDynamic("baseTaskDir")(baseTaskDir.asInstanceOf[js.Any])
-    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
-    if (commandlinesFileName != null) __obj.updateDynamic("commandlinesFileName")(commandlinesFileName.asInstanceOf[js.Any])
-    if (!js.isUndefined(continueOnException)) __obj.updateDynamic("continueOnException")(continueOnException.asInstanceOf[js.Any])
-    if (dataflowApiVersion != null) __obj.updateDynamic("dataflowApiVersion")(dataflowApiVersion.asInstanceOf[js.Any])
-    if (harnessCommand != null) __obj.updateDynamic("harnessCommand")(harnessCommand.asInstanceOf[js.Any])
-    if (languageHint != null) __obj.updateDynamic("languageHint")(languageHint.asInstanceOf[js.Any])
-    if (logDir != null) __obj.updateDynamic("logDir")(logDir.asInstanceOf[js.Any])
-    if (!js.isUndefined(logToSerialconsole)) __obj.updateDynamic("logToSerialconsole")(logToSerialconsole.asInstanceOf[js.Any])
-    if (logUploadLocation != null) __obj.updateDynamic("logUploadLocation")(logUploadLocation.asInstanceOf[js.Any])
-    if (oauthScopes != null) __obj.updateDynamic("oauthScopes")(oauthScopes.asInstanceOf[js.Any])
-    if (parallelWorkerSettings != null) __obj.updateDynamic("parallelWorkerSettings")(parallelWorkerSettings.asInstanceOf[js.Any])
-    if (streamingWorkerMainClass != null) __obj.updateDynamic("streamingWorkerMainClass")(streamingWorkerMainClass.asInstanceOf[js.Any])
-    if (taskGroup != null) __obj.updateDynamic("taskGroup")(taskGroup.asInstanceOf[js.Any])
-    if (taskUser != null) __obj.updateDynamic("taskUser")(taskUser.asInstanceOf[js.Any])
-    if (tempStoragePrefix != null) __obj.updateDynamic("tempStoragePrefix")(tempStoragePrefix.asInstanceOf[js.Any])
-    if (vmId != null) __obj.updateDynamic("vmId")(vmId.asInstanceOf[js.Any])
-    if (workflowFileName != null) __obj.updateDynamic("workflowFileName")(workflowFileName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTaskRunnerSettings]
   }
+  @scala.inline
+  implicit class SchemaTaskRunnerSettingsOps[Self <: SchemaTaskRunnerSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlsologtostderr(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alsologtostderr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlsologtostderr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alsologtostderr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseTaskDir(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseTaskDir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseTaskDir: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseTaskDir")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommandlinesFileName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commandlinesFileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommandlinesFileName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commandlinesFileName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContinueOnException(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continueOnException")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinueOnException: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continueOnException")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataflowApiVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataflowApiVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataflowApiVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataflowApiVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHarnessCommand(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("harnessCommand")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHarnessCommand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("harnessCommand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguageHint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageHint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageHint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageHint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogDir(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logDir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogDir: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logDir")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogToSerialconsole(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logToSerialconsole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogToSerialconsole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logToSerialconsole")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogUploadLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logUploadLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogUploadLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logUploadLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOauthScopes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthScopes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOauthScopes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthScopes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParallelWorkerSettings(value: SchemaWorkerSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parallelWorkerSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParallelWorkerSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parallelWorkerSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamingWorkerMainClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingWorkerMainClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamingWorkerMainClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingWorkerMainClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskUser(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskUser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTempStoragePrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tempStoragePrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTempStoragePrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tempStoragePrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVmId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVmId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkflowFileName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowFileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkflowFileName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowFileName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

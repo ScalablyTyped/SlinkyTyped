@@ -14,10 +14,29 @@ trait DescribeEntityAggregatesResponse extends js.Object {
 
 object DescribeEntityAggregatesResponse {
   @scala.inline
-  def apply(entityAggregates: EntityAggregateList = null): DescribeEntityAggregatesResponse = {
+  def apply(): DescribeEntityAggregatesResponse = {
     val __obj = js.Dynamic.literal()
-    if (entityAggregates != null) __obj.updateDynamic("entityAggregates")(entityAggregates.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEntityAggregatesResponse]
   }
+  @scala.inline
+  implicit class DescribeEntityAggregatesResponseOps[Self <: DescribeEntityAggregatesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntityAggregates(value: EntityAggregateList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityAggregates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityAggregates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityAggregates")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

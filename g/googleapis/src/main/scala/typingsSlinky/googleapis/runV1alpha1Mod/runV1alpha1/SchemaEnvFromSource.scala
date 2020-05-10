@@ -26,16 +26,53 @@ trait SchemaEnvFromSource extends js.Object {
 
 object SchemaEnvFromSource {
   @scala.inline
-  def apply(
-    configMapRef: SchemaConfigMapEnvSource = null,
-    prefix: String = null,
-    secretRef: SchemaSecretEnvSource = null
-  ): SchemaEnvFromSource = {
+  def apply(): SchemaEnvFromSource = {
     val __obj = js.Dynamic.literal()
-    if (configMapRef != null) __obj.updateDynamic("configMapRef")(configMapRef.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (secretRef != null) __obj.updateDynamic("secretRef")(secretRef.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEnvFromSource]
   }
+  @scala.inline
+  implicit class SchemaEnvFromSourceOps[Self <: SchemaEnvFromSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigMapRef(value: SchemaConfigMapEnvSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configMapRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigMapRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configMapRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecretRef(value: SchemaSecretEnvSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secretRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecretRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secretRef")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

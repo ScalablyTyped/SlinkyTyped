@@ -4,24 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GoogleActionsV2OrdersOrderLocation extends js.Object {
   /**
     * Contains actual location info.
     */
-  var location: js.UndefOr[GoogleActionsV2Location] = js.undefined
+  var location: js.UndefOr[GoogleActionsV2Location] = js.native
   /**
     * Address type. Determines icon and placement. Required.
     */
-  var `type`: js.UndefOr[GoogleActionsV2OrdersOrderLocationType] = js.undefined
+  var `type`: js.UndefOr[GoogleActionsV2OrdersOrderLocationType] = js.native
 }
 
 object GoogleActionsV2OrdersOrderLocation {
   @scala.inline
-  def apply(location: GoogleActionsV2Location = null, `type`: GoogleActionsV2OrdersOrderLocationType = null): GoogleActionsV2OrdersOrderLocation = {
+  def apply(): GoogleActionsV2OrdersOrderLocation = {
     val __obj = js.Dynamic.literal()
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleActionsV2OrdersOrderLocation]
   }
+  @scala.inline
+  implicit class GoogleActionsV2OrdersOrderLocationOps[Self <: GoogleActionsV2OrdersOrderLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocation(value: GoogleActionsV2Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: GoogleActionsV2OrdersOrderLocationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

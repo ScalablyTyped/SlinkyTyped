@@ -31,16 +31,53 @@ trait SchemaSourceSplitResponse extends js.Object {
 
 object SchemaSourceSplitResponse {
   @scala.inline
-  def apply(
-    bundles: js.Array[SchemaDerivedSource] = null,
-    outcome: String = null,
-    shards: js.Array[SchemaSourceSplitShard] = null
-  ): SchemaSourceSplitResponse = {
+  def apply(): SchemaSourceSplitResponse = {
     val __obj = js.Dynamic.literal()
-    if (bundles != null) __obj.updateDynamic("bundles")(bundles.asInstanceOf[js.Any])
-    if (outcome != null) __obj.updateDynamic("outcome")(outcome.asInstanceOf[js.Any])
-    if (shards != null) __obj.updateDynamic("shards")(shards.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSourceSplitResponse]
   }
+  @scala.inline
+  implicit class SchemaSourceSplitResponseOps[Self <: SchemaSourceSplitResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBundles(value: js.Array[SchemaDerivedSource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bundles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBundles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bundles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutcome(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outcome")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutcome: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outcome")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShards(value: js.Array[SchemaSourceSplitShard]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shards")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShards: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shards")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

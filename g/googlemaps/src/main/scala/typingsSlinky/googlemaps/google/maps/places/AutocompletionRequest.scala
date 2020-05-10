@@ -7,38 +7,121 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AutocompletionRequest extends js.Object {
-  var bounds: js.UndefOr[LatLngBounds | LatLngBoundsLiteral] = js.undefined
-  var componentRestrictions: js.UndefOr[ComponentRestrictions] = js.undefined
-  var input: String
-  var location: js.UndefOr[LatLng] = js.undefined
-  var offset: js.UndefOr[Double] = js.undefined
-  var radius: js.UndefOr[Double] = js.undefined
-  var sessionToken: js.UndefOr[AutocompleteSessionToken] = js.undefined
-  var types: js.UndefOr[js.Array[String]] = js.undefined
+  var bounds: js.UndefOr[LatLngBounds | LatLngBoundsLiteral] = js.native
+  var componentRestrictions: js.UndefOr[ComponentRestrictions] = js.native
+  var input: String = js.native
+  var location: js.UndefOr[LatLng] = js.native
+  var offset: js.UndefOr[Double] = js.native
+  var radius: js.UndefOr[Double] = js.native
+  var sessionToken: js.UndefOr[AutocompleteSessionToken] = js.native
+  var types: js.UndefOr[js.Array[String]] = js.native
 }
 
 object AutocompletionRequest {
   @scala.inline
-  def apply(
-    input: String,
-    bounds: LatLngBounds | LatLngBoundsLiteral = null,
-    componentRestrictions: ComponentRestrictions = null,
-    location: LatLng = null,
-    offset: Int | Double = null,
-    radius: Int | Double = null,
-    sessionToken: AutocompleteSessionToken = null,
-    types: js.Array[String] = null
-  ): AutocompletionRequest = {
+  def apply(input: String): AutocompletionRequest = {
     val __obj = js.Dynamic.literal(input = input.asInstanceOf[js.Any])
-    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
-    if (componentRestrictions != null) __obj.updateDynamic("componentRestrictions")(componentRestrictions.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
-    if (sessionToken != null) __obj.updateDynamic("sessionToken")(sessionToken.asInstanceOf[js.Any])
-    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutocompletionRequest]
   }
+  @scala.inline
+  implicit class AutocompletionRequestOps[Self <: AutocompletionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInput(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBounds(value: LatLngBounds | LatLngBoundsLiteral): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponentRestrictions(value: ComponentRestrictions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRestrictions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponentRestrictions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRestrictions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: LatLng): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionToken(value: AutocompleteSessionToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

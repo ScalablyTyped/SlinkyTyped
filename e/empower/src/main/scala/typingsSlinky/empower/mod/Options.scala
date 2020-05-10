@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var destructive: js.UndefOr[Boolean] = js.undefined
-  var modifyMessageOnRethrow: js.UndefOr[Boolean] = js.undefined
-  var patterns: js.UndefOr[js.Array[String]] = js.undefined
-  var saveContextOnRethrow: js.UndefOr[Boolean] = js.undefined
+  var destructive: js.UndefOr[Boolean] = js.native
+  var modifyMessageOnRethrow: js.UndefOr[Boolean] = js.native
+  var patterns: js.UndefOr[js.Array[String]] = js.native
+  var saveContextOnRethrow: js.UndefOr[Boolean] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    destructive: js.UndefOr[Boolean] = js.undefined,
-    modifyMessageOnRethrow: js.UndefOr[Boolean] = js.undefined,
-    patterns: js.Array[String] = null,
-    saveContextOnRethrow: js.UndefOr[Boolean] = js.undefined
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(destructive)) __obj.updateDynamic("destructive")(destructive.asInstanceOf[js.Any])
-    if (!js.isUndefined(modifyMessageOnRethrow)) __obj.updateDynamic("modifyMessageOnRethrow")(modifyMessageOnRethrow.asInstanceOf[js.Any])
-    if (patterns != null) __obj.updateDynamic("patterns")(patterns.asInstanceOf[js.Any])
-    if (!js.isUndefined(saveContextOnRethrow)) __obj.updateDynamic("saveContextOnRethrow")(saveContextOnRethrow.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestructive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destructive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestructive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destructive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModifyMessageOnRethrow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modifyMessageOnRethrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModifyMessageOnRethrow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modifyMessageOnRethrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatterns(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patterns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatterns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patterns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSaveContextOnRethrow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saveContextOnRethrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSaveContextOnRethrow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saveContextOnRethrow")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

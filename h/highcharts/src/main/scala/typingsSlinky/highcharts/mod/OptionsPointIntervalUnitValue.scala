@@ -13,12 +13,10 @@ trait OptionsPointIntervalUnitValue extends js.Object
 
 object OptionsPointIntervalUnitValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def day: typingsSlinky.highcharts.highchartsStrings.day = "day".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.day]
   @scala.inline
-  def day: typingsSlinky.highcharts.highchartsStrings.day = this.cast("day")
+  def month: typingsSlinky.highcharts.highchartsStrings.month = "month".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.month]
   @scala.inline
-  def month: typingsSlinky.highcharts.highchartsStrings.month = this.cast("month")
-  @scala.inline
-  def year: typingsSlinky.highcharts.highchartsStrings.year = this.cast("year")
+  def year: typingsSlinky.highcharts.highchartsStrings.year = "year".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.year]
 }
 

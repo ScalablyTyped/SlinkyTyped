@@ -11,21 +11,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ActiveXObjectNameMap extends js.Object {
   @JSName("ADOX.Catalog")
-  var ADOXDotCatalog: Catalog
+  var ADOXDotCatalog: Catalog = js.native
   @JSName("ADOX.Column")
-  var ADOXDotColumn: Column
+  var ADOXDotColumn: Column = js.native
   @JSName("ADOX.Group")
-  var ADOXDotGroup: Group
+  var ADOXDotGroup: Group = js.native
   @JSName("ADOX.Index")
-  var ADOXDotIndex: Index
+  var ADOXDotIndex: Index = js.native
   @JSName("ADOX.Key")
-  var ADOXDotKey: Key
+  var ADOXDotKey: Key = js.native
   @JSName("ADOX.Table")
-  var ADOXDotTable: Table
+  var ADOXDotTable: Table = js.native
   @JSName("ADOX.User")
-  var ADOXDotUser: User
+  var ADOXDotUser: User = js.native
 }
 
 object ActiveXObjectNameMap {
@@ -49,5 +50,55 @@ object ActiveXObjectNameMap {
     __obj.updateDynamic("ADOX.User")(ADOXDotUser.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActiveXObjectNameMap]
   }
+  @scala.inline
+  implicit class ActiveXObjectNameMapOps[Self <: ActiveXObjectNameMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withADOXDotCatalog(value: Catalog): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ADOX.Catalog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withADOXDotColumn(value: Column): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ADOX.Column")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withADOXDotGroup(value: Group): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ADOX.Group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withADOXDotIndex(value: Index): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ADOX.Index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withADOXDotKey(value: Key): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ADOX.Key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withADOXDotTable(value: Table): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ADOX.Table")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withADOXDotUser(value: User): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ADOX.User")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

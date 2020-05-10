@@ -1,10 +1,10 @@
 package typingsSlinky.dojo.dojox.mvc.base
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojo.Stateful
 import typingsSlinky.dojo.dojoStrings.`data-mvc-bindings`
 import typingsSlinky.dojo.dojoStrings.dataBindAttr
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
   *
   *
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dojox.mvc.atBindingMixin because Inheritance from two classes. Inlined `data-mvc-bindings`, dataBindAttr, mixin */ @JSGlobal("dojox.mvc._base._Controller")
 @js.native
 class Controller () extends Stateful {

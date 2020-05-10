@@ -34,22 +34,89 @@ trait SeveritySummary extends js.Object {
 
 object SeveritySummary {
   @scala.inline
-  def apply(
-    CriticalCount: Int | Double = null,
-    HighCount: Int | Double = null,
-    InformationalCount: Int | Double = null,
-    LowCount: Int | Double = null,
-    MediumCount: Int | Double = null,
-    UnspecifiedCount: Int | Double = null
-  ): SeveritySummary = {
+  def apply(): SeveritySummary = {
     val __obj = js.Dynamic.literal()
-    if (CriticalCount != null) __obj.updateDynamic("CriticalCount")(CriticalCount.asInstanceOf[js.Any])
-    if (HighCount != null) __obj.updateDynamic("HighCount")(HighCount.asInstanceOf[js.Any])
-    if (InformationalCount != null) __obj.updateDynamic("InformationalCount")(InformationalCount.asInstanceOf[js.Any])
-    if (LowCount != null) __obj.updateDynamic("LowCount")(LowCount.asInstanceOf[js.Any])
-    if (MediumCount != null) __obj.updateDynamic("MediumCount")(MediumCount.asInstanceOf[js.Any])
-    if (UnspecifiedCount != null) __obj.updateDynamic("UnspecifiedCount")(UnspecifiedCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeveritySummary]
   }
+  @scala.inline
+  implicit class SeveritySummaryOps[Self <: SeveritySummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCriticalCount(value: ComplianceSummaryCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CriticalCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCriticalCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CriticalCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighCount(value: ComplianceSummaryCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HighCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HighCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInformationalCount(value: ComplianceSummaryCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InformationalCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInformationalCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InformationalCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLowCount(value: ComplianceSummaryCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LowCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLowCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LowCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMediumCount(value: ComplianceSummaryCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MediumCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediumCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MediumCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnspecifiedCount(value: ComplianceSummaryCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnspecifiedCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnspecifiedCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnspecifiedCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

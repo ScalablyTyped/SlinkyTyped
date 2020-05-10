@@ -20,8 +20,27 @@ object AttachUserPolicyRequest {
   @scala.inline
   def apply(PolicyArn: arnType, UserName: userNameType): AttachUserPolicyRequest = {
     val __obj = js.Dynamic.literal(PolicyArn = PolicyArn.asInstanceOf[js.Any], UserName = UserName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AttachUserPolicyRequest]
   }
+  @scala.inline
+  implicit class AttachUserPolicyRequestOps[Self <: AttachUserPolicyRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPolicyArn(value: arnType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserName(value: userNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -32,18 +32,65 @@ trait SchemaAttestor extends js.Object {
 
 object SchemaAttestor {
   @scala.inline
-  def apply(
-    description: String = null,
-    name: String = null,
-    updateTime: String = null,
-    userOwnedDrydockNote: SchemaUserOwnedDrydockNote = null
-  ): SchemaAttestor = {
+  def apply(): SchemaAttestor = {
     val __obj = js.Dynamic.literal()
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (updateTime != null) __obj.updateDynamic("updateTime")(updateTime.asInstanceOf[js.Any])
-    if (userOwnedDrydockNote != null) __obj.updateDynamic("userOwnedDrydockNote")(userOwnedDrydockNote.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAttestor]
   }
+  @scala.inline
+  implicit class SchemaAttestorOps[Self <: SchemaAttestor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserOwnedDrydockNote(value: SchemaUserOwnedDrydockNote): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userOwnedDrydockNote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserOwnedDrydockNote: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userOwnedDrydockNote")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

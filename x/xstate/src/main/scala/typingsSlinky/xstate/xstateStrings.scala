@@ -10,9 +10,6 @@ object xstateStrings {
   sealed trait Asterisk extends js.Object
   
   @js.native
-  sealed trait Dot extends js.Object
-  
-  @js.native
   sealed trait ExtractStateValue extends js.Object
   
   @js.native
@@ -32,9 +29,6 @@ object xstateStrings {
   
   @js.native
   sealed trait TransitionsConfigMap extends js.Object
-  
-  @js.native
-  sealed trait _empty extends js.Object
   
   @js.native
   sealed trait atomic extends _StateTypes
@@ -81,8 +75,6 @@ object xstateStrings {
   @scala.inline
   def Asterisk: Asterisk = "*".asInstanceOf[Asterisk]
   @scala.inline
-  def Dot: Dot = ".".asInstanceOf[Dot]
-  @scala.inline
   def ExtractStateValue: ExtractStateValue = "ExtractStateValue".asInstanceOf[ExtractStateValue]
   @scala.inline
   def PropertyAssigner: PropertyAssigner = "PropertyAssigner".asInstanceOf[PropertyAssigner]
@@ -96,8 +88,6 @@ object xstateStrings {
   def TransitionDefinitionMap: TransitionDefinitionMap = "TransitionDefinitionMap".asInstanceOf[TransitionDefinitionMap]
   @scala.inline
   def TransitionsConfigMap: TransitionsConfigMap = "TransitionsConfigMap".asInstanceOf[TransitionsConfigMap]
-  @scala.inline
-  def _empty: _empty = "".asInstanceOf[_empty]
   @scala.inline
   def atomic: atomic = "atomic".asInstanceOf[atomic]
   @scala.inline

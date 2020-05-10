@@ -1,77 +1,111 @@
 package typingsSlinky.extjs.Ext.slider
 
-import typingsSlinky.extjs.Ext.Array
 import typingsSlinky.extjs.Ext.IBase
-import typingsSlinky.extjs.Ext.IClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IThumb extends IBase {
   /** [Config Option] (Boolean) */
-  var constrain: js.UndefOr[Boolean] = js.undefined
+  var constrain: js.UndefOr[Boolean] = js.native
   /** [Method] Disables the thumb if it is currently enabled */
-  var disable: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var disable: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Enables the thumb if it is currently disabled */
-  var enable: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var enable: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Sets up an Ext dd DragTracker for this thumb */
-  var initEvents: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var initEvents: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Renders the thumb into a slider */
-  var render: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var render: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Config Option] (Ext.slider.MultiSlider) */
-  var slider: js.UndefOr[IMultiSlider] = js.undefined
+  var slider: js.UndefOr[IMultiSlider] = js.native
 }
 
 object IThumb {
   @scala.inline
-  def apply(
-    alias: Array = null,
-    alternateClassName: js.Any = null,
-    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
-    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
-    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
-    config: js.Any = null,
-    constrain: js.UndefOr[Boolean] = js.undefined,
-    disable: () => Unit = null,
-    enable: () => Unit = null,
-    extend: String = null,
-    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
-    inheritableStatics: js.Any = null,
-    initConfig: /* config */ js.UndefOr[js.Any] => IThumb = null,
-    initEvents: () => Unit = null,
-    mixins: js.Any = null,
-    render: () => Unit = null,
-    requires: Array = null,
-    self: IClass = null,
-    singleton: js.UndefOr[Boolean] = js.undefined,
-    slider: IMultiSlider = null,
-    statics: js.Any = null,
-    uses: Array = null
-  ): IThumb = {
+  def apply(): IThumb = {
     val __obj = js.Dynamic.literal()
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
-    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
-    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
-    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
-    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
-    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
-    if (!js.isUndefined(constrain)) __obj.updateDynamic("constrain")(constrain.asInstanceOf[js.Any])
-    if (disable != null) __obj.updateDynamic("disable")(js.Any.fromFunction0(disable))
-    if (enable != null) __obj.updateDynamic("enable")(js.Any.fromFunction0(enable))
-    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
-    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
-    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
-    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
-    if (initEvents != null) __obj.updateDynamic("initEvents")(js.Any.fromFunction0(initEvents))
-    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
-    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction0(render))
-    if (requires != null) __obj.updateDynamic("requires")(requires.asInstanceOf[js.Any])
-    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
-    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.asInstanceOf[js.Any])
-    if (slider != null) __obj.updateDynamic("slider")(slider.asInstanceOf[js.Any])
-    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
-    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
     __obj.asInstanceOf[IThumb]
   }
+  @scala.inline
+  implicit class IThumbOps[Self <: IThumb] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConstrain(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constrain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstrain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constrain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisable(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutDisable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnable(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutEnable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitEvents(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initEvents")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutInitEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initEvents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRender(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlider(value: IMultiSlider): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlider: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slider")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

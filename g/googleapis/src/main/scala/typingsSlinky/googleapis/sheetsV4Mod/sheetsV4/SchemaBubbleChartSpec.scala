@@ -70,32 +70,149 @@ trait SchemaBubbleChartSpec extends js.Object {
 
 object SchemaBubbleChartSpec {
   @scala.inline
-  def apply(
-    bubbleBorderColor: SchemaColor = null,
-    bubbleLabels: SchemaChartData = null,
-    bubbleMaxRadiusSize: Int | Double = null,
-    bubbleMinRadiusSize: Int | Double = null,
-    bubbleOpacity: Int | Double = null,
-    bubbleSizes: SchemaChartData = null,
-    bubbleTextStyle: SchemaTextFormat = null,
-    domain: SchemaChartData = null,
-    groupIds: SchemaChartData = null,
-    legendPosition: String = null,
-    series: SchemaChartData = null
-  ): SchemaBubbleChartSpec = {
+  def apply(): SchemaBubbleChartSpec = {
     val __obj = js.Dynamic.literal()
-    if (bubbleBorderColor != null) __obj.updateDynamic("bubbleBorderColor")(bubbleBorderColor.asInstanceOf[js.Any])
-    if (bubbleLabels != null) __obj.updateDynamic("bubbleLabels")(bubbleLabels.asInstanceOf[js.Any])
-    if (bubbleMaxRadiusSize != null) __obj.updateDynamic("bubbleMaxRadiusSize")(bubbleMaxRadiusSize.asInstanceOf[js.Any])
-    if (bubbleMinRadiusSize != null) __obj.updateDynamic("bubbleMinRadiusSize")(bubbleMinRadiusSize.asInstanceOf[js.Any])
-    if (bubbleOpacity != null) __obj.updateDynamic("bubbleOpacity")(bubbleOpacity.asInstanceOf[js.Any])
-    if (bubbleSizes != null) __obj.updateDynamic("bubbleSizes")(bubbleSizes.asInstanceOf[js.Any])
-    if (bubbleTextStyle != null) __obj.updateDynamic("bubbleTextStyle")(bubbleTextStyle.asInstanceOf[js.Any])
-    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
-    if (groupIds != null) __obj.updateDynamic("groupIds")(groupIds.asInstanceOf[js.Any])
-    if (legendPosition != null) __obj.updateDynamic("legendPosition")(legendPosition.asInstanceOf[js.Any])
-    if (series != null) __obj.updateDynamic("series")(series.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBubbleChartSpec]
   }
+  @scala.inline
+  implicit class SchemaBubbleChartSpecOps[Self <: SchemaBubbleChartSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBubbleBorderColor(value: SchemaColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbleBorderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBubbleBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbleBorderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBubbleLabels(value: SchemaChartData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbleLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBubbleLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbleLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBubbleMaxRadiusSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbleMaxRadiusSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBubbleMaxRadiusSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbleMaxRadiusSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBubbleMinRadiusSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbleMinRadiusSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBubbleMinRadiusSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbleMinRadiusSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBubbleOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbleOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBubbleOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbleOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBubbleSizes(value: SchemaChartData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbleSizes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBubbleSizes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbleSizes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBubbleTextStyle(value: SchemaTextFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbleTextStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBubbleTextStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbleTextStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomain(value: SchemaChartData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupIds(value: SchemaChartData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLegendPosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegendPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeries(value: SchemaChartData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

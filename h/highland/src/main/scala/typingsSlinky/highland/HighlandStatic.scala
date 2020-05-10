@@ -6,9 +6,6 @@ import typingsSlinky.highland.Highland_.OnFinished
 import typingsSlinky.highland.Highland_.Stream
 import typingsSlinky.node.NodeJS.EventEmitter
 import typingsSlinky.node.NodeJS.ReadableStream
-import typingsSlinky.std.Error
-import typingsSlinky.std.Iterable
-import typingsSlinky.std.Iterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -133,7 +130,7 @@ trait HighlandStatic extends js.Object {
   def apply[R](source: js.Array[R]): Stream[R] = js.native
   def apply[R](
     source: js.Function2[
-      /* push */ js.Function2[/* err */ Error | Null, /* x */ js.UndefOr[R | Nil], Unit], 
+      /* push */ js.Function2[/* err */ js.Error | Null, /* x */ js.UndefOr[R | Nil], Unit], 
       /* next */ js.Function0[Unit], 
       Unit
     ]
@@ -143,8 +140,8 @@ trait HighlandStatic extends js.Object {
   def apply[R](source: Stream[R]): Stream[R] = js.native
   def apply[R](source: ReadableStream): Stream[R] = js.native
   def apply[R](source: ReadableStream, onFinished: OnFinished): Stream[R] = js.native
-  def apply[R](source: Iterable[R]): Stream[R] = js.native
-  def apply[R](source: Iterator[R, _, js.UndefOr[scala.Nothing]]): Stream[R] = js.native
+  def apply[R](source: js.Iterable[R]): Stream[R] = js.native
+  def apply[R](source: js.Iterator[R]): Stream[R] = js.native
   def add(a: Double): js.Function1[/* b */ Double, Double] = js.native
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   // OPERATORS

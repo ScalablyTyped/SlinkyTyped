@@ -1,8 +1,6 @@
 package typingsSlinky.jupyterlabApputils.inputdialogMod.InputDialog
 
-import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jupyterlabApputils.dialogMod.Dialog.Header
-import typingsSlinky.jupyterlabApputils.dialogMod.Dialog.IRenderer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +8,7 @@ import scala.scalajs.js.annotation._
 /**
   * Constructor options for item selection input dialogs
   */
+@js.native
 trait IItemOptions extends IOptions {
   /**
     * Default choice
@@ -17,45 +16,76 @@ trait IItemOptions extends IOptions {
     * If the list is editable a string with a default value can be provided
     * otherwise the index of the default choice should be given.
     */
-  var current: js.UndefOr[Double | String] = js.undefined
+  var current: js.UndefOr[Double | String] = js.native
   /**
     * Is the item editable?
     */
-  var editable: js.UndefOr[Boolean] = js.undefined
+  var editable: js.UndefOr[Boolean] = js.native
   /**
     * List of choices
     */
-  var items: js.Array[String]
+  var items: js.Array[String] = js.native
   /**
     * Placeholder text for editable input
     */
-  var placeholder: js.UndefOr[String] = js.undefined
+  var placeholder: js.UndefOr[String] = js.native
 }
 
 object IItemOptions {
   @scala.inline
-  def apply(
-    items: js.Array[String],
-    title: Header,
-    cancelLabel: String = null,
-    current: Double | String = null,
-    editable: js.UndefOr[Boolean] = js.undefined,
-    host: HTMLElement = null,
-    label: String = null,
-    okLabel: String = null,
-    placeholder: String = null,
-    renderer: IRenderer = null
-  ): IItemOptions = {
+  def apply(items: js.Array[String], title: Header): IItemOptions = {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
-    if (cancelLabel != null) __obj.updateDynamic("cancelLabel")(cancelLabel.asInstanceOf[js.Any])
-    if (current != null) __obj.updateDynamic("current")(current.asInstanceOf[js.Any])
-    if (!js.isUndefined(editable)) __obj.updateDynamic("editable")(editable.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (okLabel != null) __obj.updateDynamic("okLabel")(okLabel.asInstanceOf[js.Any])
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (renderer != null) __obj.updateDynamic("renderer")(renderer.asInstanceOf[js.Any])
     __obj.asInstanceOf[IItemOptions]
   }
+  @scala.inline
+  implicit class IItemOptionsOps[Self <: IItemOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItems(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrent(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("current")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("current")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEditable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,12 +1,11 @@
 package typingsSlinky.webtorrent.mod
 
 import org.scalajs.dom.raw.Blob
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.HTMLMediaElement
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.EventEmitter
 import typingsSlinky.node.NodeJS.ReadableStream
-import typingsSlinky.std.Error
-import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.HTMLMediaElement
 import typingsSlinky.webtorrent.AnonAutoplay
 import typingsSlinky.webtorrent.AnonEnd
 import scala.scalajs.js
@@ -19,35 +18,28 @@ trait TorrentFile extends EventEmitter {
   val length: Double = js.native
   val name: String = js.native
   val path: String = js.native
+  val progress: Double = js.native
   def appendTo(rootElement: String): Unit = js.native
   def appendTo(
     rootElement: String,
-    callback: js.Function2[/* err */ js.UndefOr[Error], /* element */ HTMLMediaElement, Unit]
+    callback: js.Function2[/* err */ js.UndefOr[js.Error], /* element */ HTMLMediaElement, Unit]
   ): Unit = js.native
   def appendTo(rootElement: String, opts: AnonAutoplay): Unit = js.native
   def appendTo(
     rootElement: String,
     opts: AnonAutoplay,
-    callback: js.Function2[
-      /* err */ js.UndefOr[js.Error], 
-      /* element */ org.scalajs.dom.raw.HTMLMediaElement, 
-      Unit
-    ]
+    callback: js.Function2[/* err */ js.UndefOr[js.Error], /* element */ HTMLMediaElement, Unit]
   ): Unit = js.native
   def appendTo(rootElement: HTMLElement): Unit = js.native
   def appendTo(
     rootElement: HTMLElement,
-    callback: js.Function2[/* err */ js.UndefOr[Error], /* element */ HTMLMediaElement, Unit]
+    callback: js.Function2[/* err */ js.UndefOr[js.Error], /* element */ HTMLMediaElement, Unit]
   ): Unit = js.native
   def appendTo(rootElement: HTMLElement, opts: AnonAutoplay): Unit = js.native
   def appendTo(
     rootElement: HTMLElement,
     opts: AnonAutoplay,
-    callback: js.Function2[
-      /* err */ js.UndefOr[js.Error], 
-      /* element */ org.scalajs.dom.raw.HTMLMediaElement, 
-      Unit
-    ]
+    callback: js.Function2[/* err */ js.UndefOr[js.Error], /* element */ HTMLMediaElement, Unit]
   ): Unit = js.native
   def createReadStream(): ReadableStream = js.native
   def createReadStream(opts: AnonEnd): ReadableStream = js.native
@@ -62,32 +54,24 @@ trait TorrentFile extends EventEmitter {
   def renderTo(rootElement: String): Unit = js.native
   def renderTo(
     rootElement: String,
-    callback: js.Function2[/* err */ js.UndefOr[Error], /* element */ HTMLMediaElement, Unit]
+    callback: js.Function2[/* err */ js.UndefOr[js.Error], /* element */ HTMLMediaElement, Unit]
   ): Unit = js.native
   def renderTo(rootElement: String, opts: AnonAutoplay): Unit = js.native
   def renderTo(
     rootElement: String,
     opts: AnonAutoplay,
-    callback: js.Function2[
-      /* err */ js.UndefOr[js.Error], 
-      /* element */ org.scalajs.dom.raw.HTMLMediaElement, 
-      Unit
-    ]
+    callback: js.Function2[/* err */ js.UndefOr[js.Error], /* element */ HTMLMediaElement, Unit]
   ): Unit = js.native
   def renderTo(rootElement: HTMLMediaElement): Unit = js.native
   def renderTo(
     rootElement: HTMLMediaElement,
-    callback: js.Function2[/* err */ js.UndefOr[Error], /* element */ HTMLMediaElement, Unit]
+    callback: js.Function2[/* err */ js.UndefOr[js.Error], /* element */ HTMLMediaElement, Unit]
   ): Unit = js.native
   def renderTo(rootElement: HTMLMediaElement, opts: AnonAutoplay): Unit = js.native
   def renderTo(
     rootElement: HTMLMediaElement,
     opts: AnonAutoplay,
-    callback: js.Function2[
-      /* err */ js.UndefOr[js.Error], 
-      /* element */ org.scalajs.dom.raw.HTMLMediaElement, 
-      Unit
-    ]
+    callback: js.Function2[/* err */ js.UndefOr[js.Error], /* element */ HTMLMediaElement, Unit]
   ): Unit = js.native
   def select(): Unit = js.native
 }

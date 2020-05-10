@@ -2,7 +2,7 @@ package typingsSlinky.officeUiFabricReact.datePickerBaseMod
 
 import typingsSlinky.officeUiFabricReact.datePickerTypesMod.IDatePicker
 import typingsSlinky.officeUiFabricReact.datePickerTypesMod.IDatePickerProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("office-ui-fabric-react/lib/components/DatePicker/DatePicker.base", "DatePickerBase")
 @js.native
 class DatePickerBase protected ()
-  extends BaseComponent[IDatePickerProps, IDatePickerState]
+  extends Component[IDatePickerProps, IDatePickerState, js.Any]
      with IDatePicker {
   def this(props: IDatePickerProps) = this()
   var _calendar: js.Any = js.native
@@ -42,12 +42,6 @@ class DatePickerBase protected ()
   def UNSAFE_componentWillReceiveProps_MDatePickerBase(nextProps: IDatePickerProps): Unit = js.native
   @JSName("componentDidUpdate")
   def componentDidUpdate_MDatePickerBase(prevProps: IDatePickerProps, prevState: IDatePickerState): Unit = js.native
-  /** Sets focus to the text field */
-  /* CompleteClass */
-  override def focus(): Unit = js.native
-  /** Reset the state of the picker to the default */
-  /* CompleteClass */
-  override def reset(): Unit = js.native
 }
 
 /* static members */

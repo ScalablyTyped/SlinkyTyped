@@ -25,11 +25,41 @@ trait SchemaInstanceMoveRequest extends js.Object {
 
 object SchemaInstanceMoveRequest {
   @scala.inline
-  def apply(destinationZone: String = null, targetInstance: String = null): SchemaInstanceMoveRequest = {
+  def apply(): SchemaInstanceMoveRequest = {
     val __obj = js.Dynamic.literal()
-    if (destinationZone != null) __obj.updateDynamic("destinationZone")(destinationZone.asInstanceOf[js.Any])
-    if (targetInstance != null) __obj.updateDynamic("targetInstance")(targetInstance.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstanceMoveRequest]
   }
+  @scala.inline
+  implicit class SchemaInstanceMoveRequestOps[Self <: SchemaInstanceMoveRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestinationZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetInstance(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetInstance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetInstance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetInstance")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

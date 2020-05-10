@@ -2,7 +2,6 @@ package typingsSlinky.webpack.mod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.sourceMap.mod.RawSourceMap
-import typingsSlinky.std.Error
 import typingsSlinky.webpack.webpackStrings.`async-node`
 import typingsSlinky.webpack.webpackStrings.`electron-main`
 import typingsSlinky.webpack.webpackStrings.`electron-renderer`
@@ -205,11 +204,11 @@ object loader extends js.Object {
     def callback(err: Null, content: String, sourceMap: RawSourceMap): Unit = js.native
     def callback(err: Null, content: Buffer): Unit = js.native
     def callback(err: Null, content: Buffer, sourceMap: RawSourceMap): Unit = js.native
-    def callback(err: Error): Unit = js.native
-    def callback(err: Error, content: String): Unit = js.native
-    def callback(err: Error, content: String, sourceMap: RawSourceMap): Unit = js.native
-    def callback(err: Error, content: Buffer): Unit = js.native
-    def callback(err: Error, content: Buffer, sourceMap: RawSourceMap): Unit = js.native
+    def callback(err: js.Error): Unit = js.native
+    def callback(err: js.Error, content: String): Unit = js.native
+    def callback(err: js.Error, content: String, sourceMap: RawSourceMap): Unit = js.native
+    def callback(err: js.Error, content: Buffer): Unit = js.native
+    def callback(err: js.Error, content: Buffer, sourceMap: RawSourceMap): Unit = js.native
     /**
       * Remove all dependencies of the loader result. Even initial dependencies and these of other loaders. Consider using pitch.
       */
@@ -224,7 +223,7 @@ object loader extends js.Object {
       * Emit a error.
       */
     def emitError(message: String): Unit = js.native
-    def emitError(message: Error): Unit = js.native
+    def emitError(message: js.Error): Unit = js.native
     def emitFile(name: String, content: String, sourceMap: js.Any): Unit = js.native
     /**
       * Emit a file. This is webpack-specific.
@@ -234,7 +233,7 @@ object loader extends js.Object {
       * Emit a warning.
       */
     def emitWarning(message: String): Unit = js.native
-    def emitWarning(message: Error): Unit = js.native
+    def emitWarning(message: js.Error): Unit = js.native
     /**
       * Execute some code fragment like a module.
       *

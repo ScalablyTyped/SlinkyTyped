@@ -22,8 +22,6 @@ class BindingScope protected () extends LocalResolver {
   def generateSharedContextVar(retrievalLevel: Double): Unit = js.native
   def get(name: String): Expression | Null = js.native
   def getComponentProperty(name: String): Expression = js.native
-  /* CompleteClass */
-  override def getLocal(name: String): Expression | Null = js.native
   /**
     * Gets or creates a shared context variable and returns its expression. Note that
     * this does not mean that the shared variable will be declared. Variables in the
@@ -35,8 +33,6 @@ class BindingScope protected () extends LocalResolver {
   def maybeGenerateSharedContextVar(value: BindingData): Unit = js.native
   def maybeRestoreView(retrievalLevel: Double, localRefLookup: Boolean): Unit = js.native
   def nestedScope(level: Double): BindingScope = js.native
-  /* CompleteClass */
-  override def notifyImplicitReceiverUse(): Unit = js.native
   def restoreViewStatement(): js.Array[Statement] = js.native
   /**
     * Create a local variable for later reference.

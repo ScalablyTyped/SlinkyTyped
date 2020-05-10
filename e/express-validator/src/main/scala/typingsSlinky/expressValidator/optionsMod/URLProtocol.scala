@@ -13,12 +13,10 @@ trait URLProtocol extends js.Object
 
 object URLProtocol {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ftp: typingsSlinky.expressValidator.expressValidatorStrings.ftp = "ftp".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.ftp]
   @scala.inline
-  def ftp: typingsSlinky.expressValidator.expressValidatorStrings.ftp = this.cast("ftp")
+  def http: typingsSlinky.expressValidator.expressValidatorStrings.http = "http".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.http]
   @scala.inline
-  def http: typingsSlinky.expressValidator.expressValidatorStrings.http = this.cast("http")
-  @scala.inline
-  def https: typingsSlinky.expressValidator.expressValidatorStrings.https = this.cast("https")
+  def https: typingsSlinky.expressValidator.expressValidatorStrings.https = "https".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.https]
 }
 

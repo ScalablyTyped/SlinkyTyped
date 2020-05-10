@@ -5,63 +5,161 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MetricValue extends js.Object {
   /** A boolean value. */
-  var boolValue: js.UndefOr[Boolean] = js.undefined
+  var boolValue: js.UndefOr[Boolean] = js.native
   /** A distribution value. */
-  var distributionValue: js.UndefOr[Distribution] = js.undefined
+  var distributionValue: js.UndefOr[Distribution] = js.native
   /** A double precision floating point value. */
-  var doubleValue: js.UndefOr[Double] = js.undefined
+  var doubleValue: js.UndefOr[Double] = js.native
   /**
     * The end of the time period over which this metric value's measurement
     * applies.
     */
-  var endTime: js.UndefOr[String] = js.undefined
+  var endTime: js.UndefOr[String] = js.native
   /** A signed 64-bit integer value. */
-  var int64Value: js.UndefOr[String] = js.undefined
+  var int64Value: js.UndefOr[String] = js.native
   /**
     * The labels describing the metric value.
     * See comments on google.api.servicecontrol.v1.Operation.labels for
     * the overriding relationship.
     */
-  var labels: js.UndefOr[Record[String, String]] = js.undefined
+  var labels: js.UndefOr[Record[String, String]] = js.native
   /** A money value. */
-  var moneyValue: js.UndefOr[Money] = js.undefined
+  var moneyValue: js.UndefOr[Money] = js.native
   /**
     * The start of the time period over which this metric value's measurement
     * applies. The time period has different semantics for different metric
     * types (cumulative, delta, and gauge). See the metric definition
     * documentation in the service configuration for details.
     */
-  var startTime: js.UndefOr[String] = js.undefined
+  var startTime: js.UndefOr[String] = js.native
   /** A text string value. */
-  var stringValue: js.UndefOr[String] = js.undefined
+  var stringValue: js.UndefOr[String] = js.native
 }
 
 object MetricValue {
   @scala.inline
-  def apply(
-    boolValue: js.UndefOr[Boolean] = js.undefined,
-    distributionValue: Distribution = null,
-    doubleValue: Int | Double = null,
-    endTime: String = null,
-    int64Value: String = null,
-    labels: Record[String, String] = null,
-    moneyValue: Money = null,
-    startTime: String = null,
-    stringValue: String = null
-  ): MetricValue = {
+  def apply(): MetricValue = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(boolValue)) __obj.updateDynamic("boolValue")(boolValue.asInstanceOf[js.Any])
-    if (distributionValue != null) __obj.updateDynamic("distributionValue")(distributionValue.asInstanceOf[js.Any])
-    if (doubleValue != null) __obj.updateDynamic("doubleValue")(doubleValue.asInstanceOf[js.Any])
-    if (endTime != null) __obj.updateDynamic("endTime")(endTime.asInstanceOf[js.Any])
-    if (int64Value != null) __obj.updateDynamic("int64Value")(int64Value.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (moneyValue != null) __obj.updateDynamic("moneyValue")(moneyValue.asInstanceOf[js.Any])
-    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
-    if (stringValue != null) __obj.updateDynamic("stringValue")(stringValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricValue]
   }
+  @scala.inline
+  implicit class MetricValueOps[Self <: MetricValue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBoolValue(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boolValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoolValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boolValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistributionValue(value: Distribution): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distributionValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistributionValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distributionValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoubleValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDoubleValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInt64Value(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("int64Value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInt64Value: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("int64Value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: Record[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMoneyValue(value: Money): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moneyValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMoneyValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moneyValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStringValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStringValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

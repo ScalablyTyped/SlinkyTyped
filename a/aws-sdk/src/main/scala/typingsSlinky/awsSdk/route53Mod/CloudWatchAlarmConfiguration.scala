@@ -49,12 +49,72 @@ object CloudWatchAlarmConfiguration {
     Namespace: Namespace,
     Period: Period,
     Statistic: Statistic,
-    Threshold: Threshold,
-    Dimensions: DimensionList = null
+    Threshold: Threshold
   ): CloudWatchAlarmConfiguration = {
     val __obj = js.Dynamic.literal(ComparisonOperator = ComparisonOperator.asInstanceOf[js.Any], EvaluationPeriods = EvaluationPeriods.asInstanceOf[js.Any], MetricName = MetricName.asInstanceOf[js.Any], Namespace = Namespace.asInstanceOf[js.Any], Period = Period.asInstanceOf[js.Any], Statistic = Statistic.asInstanceOf[js.Any], Threshold = Threshold.asInstanceOf[js.Any])
-    if (Dimensions != null) __obj.updateDynamic("Dimensions")(Dimensions.asInstanceOf[js.Any])
     __obj.asInstanceOf[CloudWatchAlarmConfiguration]
   }
+  @scala.inline
+  implicit class CloudWatchAlarmConfigurationOps[Self <: CloudWatchAlarmConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComparisonOperator(value: ComparisonOperator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComparisonOperator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvaluationPeriods(value: EvaluationPeriods): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationPeriods")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetricName(value: MetricName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNamespace(value: Namespace): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Namespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPeriod(value: Period): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Period")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatistic(value: Statistic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Statistic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThreshold(value: Threshold): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Threshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDimensions(value: DimensionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimensions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,15 +1,21 @@
 package typingsSlinky.reactSortableTree.components
 
+import typingsSlinky.reactSortableTree.mod.ReactSortableTreeProps
+import typingsSlinky.reactSortableTree.mod.TreeItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SortableTreeWithoutDndContext
-  extends SharedApply_ReactSortableTreeProps687313914[typingsSlinky.reactSortableTree.mod.SortableTreeWithoutDndContext] {
+object SortableTreeWithoutDndContext {
   @JSImport("react-sortable-tree", "SortableTreeWithoutDndContext")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ReactSortableTreeProps): SharedBuilder_ReactSortableTreeProps1293311059[typingsSlinky.reactSortableTree.mod.SortableTreeWithoutDndContext] = new SharedBuilder_ReactSortableTreeProps1293311059[typingsSlinky.reactSortableTree.mod.SortableTreeWithoutDndContext](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(onChange: js.Array[TreeItem] => Unit, treeData: js.Array[TreeItem]): SharedBuilder_ReactSortableTreeProps1293311059[typingsSlinky.reactSortableTree.mod.SortableTreeWithoutDndContext] = {
+    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange), treeData = treeData.asInstanceOf[js.Any])
+    new SharedBuilder_ReactSortableTreeProps1293311059[typingsSlinky.reactSortableTree.mod.SortableTreeWithoutDndContext](js.Array(this.component, __props.asInstanceOf[ReactSortableTreeProps]))
+  }
 }
 

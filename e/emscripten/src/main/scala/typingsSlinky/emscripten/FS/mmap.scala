@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 object mmap extends js.Object {
   def apply(
     stream: FSStream,
-    buffer: scala.scalajs.js.typedarray.ArrayBufferView,
+    buffer: js.typedarray.ArrayBufferView,
     offset: Double,
     length: Double,
     position: Double,

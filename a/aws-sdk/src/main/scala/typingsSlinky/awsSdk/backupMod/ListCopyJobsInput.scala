@@ -42,26 +42,113 @@ trait ListCopyJobsInput extends js.Object {
 
 object ListCopyJobsInput {
   @scala.inline
-  def apply(
-    ByCreatedAfter: js.Date = null,
-    ByCreatedBefore: js.Date = null,
-    ByDestinationVaultArn: String = null,
-    ByResourceArn: ARN = null,
-    ByResourceType: ResourceType = null,
-    ByState: CopyJobState = null,
-    MaxResults: Int | Double = null,
-    NextToken: String = null
-  ): ListCopyJobsInput = {
+  def apply(): ListCopyJobsInput = {
     val __obj = js.Dynamic.literal()
-    if (ByCreatedAfter != null) __obj.updateDynamic("ByCreatedAfter")(ByCreatedAfter.asInstanceOf[js.Any])
-    if (ByCreatedBefore != null) __obj.updateDynamic("ByCreatedBefore")(ByCreatedBefore.asInstanceOf[js.Any])
-    if (ByDestinationVaultArn != null) __obj.updateDynamic("ByDestinationVaultArn")(ByDestinationVaultArn.asInstanceOf[js.Any])
-    if (ByResourceArn != null) __obj.updateDynamic("ByResourceArn")(ByResourceArn.asInstanceOf[js.Any])
-    if (ByResourceType != null) __obj.updateDynamic("ByResourceType")(ByResourceType.asInstanceOf[js.Any])
-    if (ByState != null) __obj.updateDynamic("ByState")(ByState.asInstanceOf[js.Any])
-    if (MaxResults != null) __obj.updateDynamic("MaxResults")(MaxResults.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListCopyJobsInput]
   }
+  @scala.inline
+  implicit class ListCopyJobsInputOps[Self <: ListCopyJobsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withByCreatedAfter(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByCreatedAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutByCreatedAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByCreatedAfter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withByCreatedBefore(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByCreatedBefore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutByCreatedBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByCreatedBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withByDestinationVaultArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByDestinationVaultArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutByDestinationVaultArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByDestinationVaultArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withByResourceArn(value: ARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByResourceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutByResourceArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByResourceArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withByResourceType(value: ResourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByResourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutByResourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByResourceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withByState(value: CopyJobState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutByState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: MaxResults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,12 +22,53 @@ trait Mp2Settings extends js.Object {
 
 object Mp2Settings {
   @scala.inline
-  def apply(Bitrate: Int | Double = null, Channels: Int | Double = null, SampleRate: Int | Double = null): Mp2Settings = {
+  def apply(): Mp2Settings = {
     val __obj = js.Dynamic.literal()
-    if (Bitrate != null) __obj.updateDynamic("Bitrate")(Bitrate.asInstanceOf[js.Any])
-    if (Channels != null) __obj.updateDynamic("Channels")(Channels.asInstanceOf[js.Any])
-    if (SampleRate != null) __obj.updateDynamic("SampleRate")(SampleRate.asInstanceOf[js.Any])
     __obj.asInstanceOf[Mp2Settings]
   }
+  @scala.inline
+  implicit class Mp2SettingsOps[Self <: Mp2Settings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBitrate(value: integerMin32000Max384000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bitrate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBitrate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bitrate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChannels(value: integerMin1Max2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Channels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Channels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleRate(value: integerMin32000Max48000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

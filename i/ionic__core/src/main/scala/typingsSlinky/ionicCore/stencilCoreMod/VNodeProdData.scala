@@ -5,30 +5,76 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VNodeProdData
-  extends /* key */ StringDictionary[js.Any] {
-  var `class`: js.UndefOr[StringDictionary[Boolean] | String] = js.undefined
-  var className: js.UndefOr[StringDictionary[Boolean] | String] = js.undefined
-  var key: js.UndefOr[String | Double] = js.undefined
-  var style: js.UndefOr[js.Any] = js.undefined
+  extends /* state */ StringDictionary[js.Any] {
+  var `class`: js.UndefOr[StringDictionary[Boolean] | String] = js.native
+  var className: js.UndefOr[StringDictionary[Boolean] | String] = js.native
+  var key: js.UndefOr[String | Double] = js.native
+  var style: js.UndefOr[js.Any] = js.native
 }
 
 object VNodeProdData {
   @scala.inline
-  def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    `class`: StringDictionary[Boolean] | String = null,
-    className: StringDictionary[Boolean] | String = null,
-    key: String | Double = null,
-    style: js.Any = null
-  ): VNodeProdData = {
+  def apply(): VNodeProdData = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (`class` != null) __obj.updateDynamic("class")(`class`.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[VNodeProdData]
   }
+  @scala.inline
+  implicit class VNodeProdDataOps[Self <: VNodeProdData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClass(value: StringDictionary[Boolean] | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("class")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("class")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: StringDictionary[Boolean] | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -25,36 +25,34 @@ trait UlimitName extends js.Object
 
 object UlimitName {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def core: typingsSlinky.pulumiAws.pulumiAwsStrings.core = "core".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.core]
   @scala.inline
-  def core: typingsSlinky.pulumiAws.pulumiAwsStrings.core = this.cast("core")
+  def cpu: typingsSlinky.pulumiAws.pulumiAwsStrings.cpu = "cpu".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.cpu]
   @scala.inline
-  def cpu: typingsSlinky.pulumiAws.pulumiAwsStrings.cpu = this.cast("cpu")
+  def data: typingsSlinky.pulumiAws.pulumiAwsStrings.data = "data".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.data]
   @scala.inline
-  def data: typingsSlinky.pulumiAws.pulumiAwsStrings.data = this.cast("data")
+  def fsize: typingsSlinky.pulumiAws.pulumiAwsStrings.fsize = "fsize".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.fsize]
   @scala.inline
-  def fsize: typingsSlinky.pulumiAws.pulumiAwsStrings.fsize = this.cast("fsize")
+  def locks: typingsSlinky.pulumiAws.pulumiAwsStrings.locks = "locks".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.locks]
   @scala.inline
-  def locks: typingsSlinky.pulumiAws.pulumiAwsStrings.locks = this.cast("locks")
+  def memlock: typingsSlinky.pulumiAws.pulumiAwsStrings.memlock = "memlock".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.memlock]
   @scala.inline
-  def memlock: typingsSlinky.pulumiAws.pulumiAwsStrings.memlock = this.cast("memlock")
+  def msgqueue: typingsSlinky.pulumiAws.pulumiAwsStrings.msgqueue = "msgqueue".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.msgqueue]
   @scala.inline
-  def msgqueue: typingsSlinky.pulumiAws.pulumiAwsStrings.msgqueue = this.cast("msgqueue")
+  def nice: typingsSlinky.pulumiAws.pulumiAwsStrings.nice = "nice".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.nice]
   @scala.inline
-  def nice: typingsSlinky.pulumiAws.pulumiAwsStrings.nice = this.cast("nice")
+  def nofile: typingsSlinky.pulumiAws.pulumiAwsStrings.nofile = "nofile".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.nofile]
   @scala.inline
-  def nofile: typingsSlinky.pulumiAws.pulumiAwsStrings.nofile = this.cast("nofile")
+  def nproc: typingsSlinky.pulumiAws.pulumiAwsStrings.nproc = "nproc".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.nproc]
   @scala.inline
-  def nproc: typingsSlinky.pulumiAws.pulumiAwsStrings.nproc = this.cast("nproc")
+  def rss: typingsSlinky.pulumiAws.pulumiAwsStrings.rss = "rss".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.rss]
   @scala.inline
-  def rss: typingsSlinky.pulumiAws.pulumiAwsStrings.rss = this.cast("rss")
+  def rtprio: typingsSlinky.pulumiAws.pulumiAwsStrings.rtprio = "rtprio".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.rtprio]
   @scala.inline
-  def rtprio: typingsSlinky.pulumiAws.pulumiAwsStrings.rtprio = this.cast("rtprio")
+  def rttime: typingsSlinky.pulumiAws.pulumiAwsStrings.rttime = "rttime".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.rttime]
   @scala.inline
-  def rttime: typingsSlinky.pulumiAws.pulumiAwsStrings.rttime = this.cast("rttime")
+  def sigpending: typingsSlinky.pulumiAws.pulumiAwsStrings.sigpending = "sigpending".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.sigpending]
   @scala.inline
-  def sigpending: typingsSlinky.pulumiAws.pulumiAwsStrings.sigpending = this.cast("sigpending")
-  @scala.inline
-  def stack: typingsSlinky.pulumiAws.pulumiAwsStrings.stack = this.cast("stack")
+  def stack: typingsSlinky.pulumiAws.pulumiAwsStrings.stack = "stack".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.stack]
 }
 

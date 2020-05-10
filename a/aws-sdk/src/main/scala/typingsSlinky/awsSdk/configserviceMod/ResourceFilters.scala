@@ -26,18 +26,65 @@ trait ResourceFilters extends js.Object {
 
 object ResourceFilters {
   @scala.inline
-  def apply(
-    AccountId: AccountId = null,
-    Region: AwsRegion = null,
-    ResourceId: ResourceId = null,
-    ResourceName: ResourceName = null
-  ): ResourceFilters = {
+  def apply(): ResourceFilters = {
     val __obj = js.Dynamic.literal()
-    if (AccountId != null) __obj.updateDynamic("AccountId")(AccountId.asInstanceOf[js.Any])
-    if (Region != null) __obj.updateDynamic("Region")(Region.asInstanceOf[js.Any])
-    if (ResourceId != null) __obj.updateDynamic("ResourceId")(ResourceId.asInstanceOf[js.Any])
-    if (ResourceName != null) __obj.updateDynamic("ResourceName")(ResourceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceFilters]
   }
+  @scala.inline
+  implicit class ResourceFiltersOps[Self <: ResourceFilters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: AccountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: AwsRegion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

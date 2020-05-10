@@ -24,8 +24,33 @@ object GetDeploymentRequest {
   @scala.inline
   def apply(ApplicationId: Id, DeploymentNumber: Integer, EnvironmentId: Id): GetDeploymentRequest = {
     val __obj = js.Dynamic.literal(ApplicationId = ApplicationId.asInstanceOf[js.Any], DeploymentNumber = DeploymentNumber.asInstanceOf[js.Any], EnvironmentId = EnvironmentId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetDeploymentRequest]
   }
+  @scala.inline
+  implicit class GetDeploymentRequestOps[Self <: GetDeploymentRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeploymentNumber(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnvironmentId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

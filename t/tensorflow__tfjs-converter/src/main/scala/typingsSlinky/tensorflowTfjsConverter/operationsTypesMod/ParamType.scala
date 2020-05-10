@@ -22,30 +22,28 @@ trait ParamType extends js.Object
 
 object ParamType {
   @scala.inline
-  def bool: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.bool = this.cast("bool")
+  def bool: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.bool = "bool".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.bool]
   @scala.inline
-  def `bool[]`: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`bool[]` = this.cast("bool[]")
+  def `bool[]`: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`bool[]` = "bool[]".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`bool[]`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dtype: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.dtype = "dtype".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.dtype]
   @scala.inline
-  def dtype: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.dtype = this.cast("dtype")
+  def `dtype[]`: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`dtype[]` = "dtype[]".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`dtype[]`]
   @scala.inline
-  def `dtype[]`: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`dtype[]` = this.cast("dtype[]")
+  def number: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.number = "number".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.number]
   @scala.inline
-  def number: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.number = this.cast("number")
+  def `number[]`: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`number[]` = "number[]".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`number[]`]
   @scala.inline
-  def `number[]`: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`number[]` = this.cast("number[]")
+  def shape: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.shape = "shape".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.shape]
   @scala.inline
-  def shape: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.shape = this.cast("shape")
+  def `shape[]`: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`shape[]` = "shape[]".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`shape[]`]
   @scala.inline
-  def `shape[]`: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`shape[]` = this.cast("shape[]")
+  def string: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.string = "string".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.string]
   @scala.inline
-  def string: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.string = this.cast("string")
+  def `string[]`: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`string[]` = "string[]".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`string[]`]
   @scala.inline
-  def `string[]`: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.`string[]` = this.cast("string[]")
+  def tensor: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.tensor = "tensor".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.tensor]
   @scala.inline
-  def tensor: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.tensor = this.cast("tensor")
-  @scala.inline
-  def tensors: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.tensors = this.cast("tensors")
+  def tensors: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.tensors = "tensors".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.tensors]
 }
 

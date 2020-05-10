@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsCore
 
-import typingsSlinky.std.Element
-import typingsSlinky.std.Text
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

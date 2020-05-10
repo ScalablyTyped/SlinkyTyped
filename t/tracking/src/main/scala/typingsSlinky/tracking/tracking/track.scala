@@ -1,6 +1,6 @@
 package typingsSlinky.tracking.tracking
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.tracking.AnonAudio
 import scala.scalajs.js
 import scala.scalajs.js.`|`

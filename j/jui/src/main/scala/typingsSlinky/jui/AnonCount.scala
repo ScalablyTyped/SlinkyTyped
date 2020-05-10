@@ -4,42 +4,100 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCount extends js.Object {
   /**
     * @cfg {Integer} [count=0]
     * Total number of data records subject to paging)
     */
-  var count: js.UndefOr[Double] = js.undefined
-  var event: js.UndefOr[js.Any] = js.undefined
+  var count: js.UndefOr[Double] = js.native
+  var event: js.UndefOr[js.Any] = js.native
   /**
     * @cfg {Integer} [pageCount=10]
     * Number of data records per page
     */
-  var pageCount: js.UndefOr[Double] = js.undefined
+  var pageCount: js.UndefOr[Double] = js.native
   /**
     * @cfg {Integer} [screenCount=5]
     * Number of pages shown on the paging screen
     */
-  var screenCount: js.UndefOr[Double] = js.undefined
-  var tpl: js.UndefOr[js.Any] = js.undefined
+  var screenCount: js.UndefOr[Double] = js.native
+  var tpl: js.UndefOr[js.Any] = js.native
 }
 
 object AnonCount {
   @scala.inline
-  def apply(
-    count: Int | Double = null,
-    event: js.Any = null,
-    pageCount: Int | Double = null,
-    screenCount: Int | Double = null,
-    tpl: js.Any = null
-  ): AnonCount = {
+  def apply(): AnonCount = {
     val __obj = js.Dynamic.literal()
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
-    if (pageCount != null) __obj.updateDynamic("pageCount")(pageCount.asInstanceOf[js.Any])
-    if (screenCount != null) __obj.updateDynamic("screenCount")(screenCount.asInstanceOf[js.Any])
-    if (tpl != null) __obj.updateDynamic("tpl")(tpl.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCount]
   }
+  @scala.inline
+  implicit class AnonCountOps[Self <: AnonCount] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreenCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreenCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTpl(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tpl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTpl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tpl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

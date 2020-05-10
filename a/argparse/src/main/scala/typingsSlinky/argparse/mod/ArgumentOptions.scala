@@ -5,50 +5,168 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ArgumentOptions extends js.Object {
-  var action: js.UndefOr[String | AnonInstantiableAction] = js.undefined
+  var action: js.UndefOr[String | AnonInstantiableAction] = js.native
    // tslint:disable-line:ban-types
-  var choices: js.UndefOr[String | js.Array[String]] = js.undefined
-  var constant: js.UndefOr[js.Any] = js.undefined
-  var defaultValue: js.UndefOr[js.Any] = js.undefined
-  var dest: js.UndefOr[String] = js.undefined
-  var help: js.UndefOr[String] = js.undefined
-  var metavar: js.UndefOr[String | js.Array[String]] = js.undefined
-  var nargs: js.UndefOr[String | Double] = js.undefined
-  var optionStrings: js.UndefOr[js.Array[String]] = js.undefined
-  var required: js.UndefOr[Boolean] = js.undefined
+  var choices: js.UndefOr[String | js.Array[String]] = js.native
+  var constant: js.UndefOr[js.Any] = js.native
+  var defaultValue: js.UndefOr[js.Any] = js.native
+  var dest: js.UndefOr[String] = js.native
+  var help: js.UndefOr[String] = js.native
+  var metavar: js.UndefOr[String | js.Array[String]] = js.native
+  var nargs: js.UndefOr[String | Double] = js.native
+  var optionStrings: js.UndefOr[js.Array[String]] = js.native
+  var required: js.UndefOr[Boolean] = js.native
   // type may be a string (primitive) or a Function (constructor)
-  var `type`: js.UndefOr[String | js.Function] = js.undefined
+  var `type`: js.UndefOr[String | js.Function] = js.native
 }
 
 object ArgumentOptions {
   @scala.inline
-  def apply(
-    action: String | AnonInstantiableAction = null,
-    choices: String | js.Array[String] = null,
-    constant: js.Any = null,
-    defaultValue: js.Any = null,
-    dest: String = null,
-    help: String = null,
-    metavar: String | js.Array[String] = null,
-    nargs: String | Double = null,
-    optionStrings: js.Array[String] = null,
-    required: js.UndefOr[Boolean] = js.undefined,
-    `type`: String | js.Function = null
-  ): ArgumentOptions = {
+  def apply(): ArgumentOptions = {
     val __obj = js.Dynamic.literal()
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (choices != null) __obj.updateDynamic("choices")(choices.asInstanceOf[js.Any])
-    if (constant != null) __obj.updateDynamic("constant")(constant.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (dest != null) __obj.updateDynamic("dest")(dest.asInstanceOf[js.Any])
-    if (help != null) __obj.updateDynamic("help")(help.asInstanceOf[js.Any])
-    if (metavar != null) __obj.updateDynamic("metavar")(metavar.asInstanceOf[js.Any])
-    if (nargs != null) __obj.updateDynamic("nargs")(nargs.asInstanceOf[js.Any])
-    if (optionStrings != null) __obj.updateDynamic("optionStrings")(optionStrings.asInstanceOf[js.Any])
-    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArgumentOptions]
   }
+  @scala.inline
+  implicit class ArgumentOptionsOps[Self <: ArgumentOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: String | AnonInstantiableAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChoices(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("choices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChoices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("choices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConstant(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDest(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHelp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHelp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetavar(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metavar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetavar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metavar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNargs(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nargs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNargs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nargs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionStrings(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optionStrings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionStrings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optionStrings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequired(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequired: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

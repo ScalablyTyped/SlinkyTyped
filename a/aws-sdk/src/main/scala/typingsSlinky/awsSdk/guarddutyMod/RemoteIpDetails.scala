@@ -30,20 +30,77 @@ trait RemoteIpDetails extends js.Object {
 
 object RemoteIpDetails {
   @scala.inline
-  def apply(
-    City: City = null,
-    Country: Country = null,
-    GeoLocation: GeoLocation = null,
-    IpAddressV4: String = null,
-    Organization: Organization = null
-  ): RemoteIpDetails = {
+  def apply(): RemoteIpDetails = {
     val __obj = js.Dynamic.literal()
-    if (City != null) __obj.updateDynamic("City")(City.asInstanceOf[js.Any])
-    if (Country != null) __obj.updateDynamic("Country")(Country.asInstanceOf[js.Any])
-    if (GeoLocation != null) __obj.updateDynamic("GeoLocation")(GeoLocation.asInstanceOf[js.Any])
-    if (IpAddressV4 != null) __obj.updateDynamic("IpAddressV4")(IpAddressV4.asInstanceOf[js.Any])
-    if (Organization != null) __obj.updateDynamic("Organization")(Organization.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemoteIpDetails]
   }
+  @scala.inline
+  implicit class RemoteIpDetailsOps[Self <: RemoteIpDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCity(value: City): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("City")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("City")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountry(value: Country): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Country")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeoLocation(value: GeoLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeoLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpAddressV4(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddressV4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpAddressV4: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddressV4")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganization(value: Organization): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Organization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Organization")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

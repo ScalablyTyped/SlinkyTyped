@@ -21,11 +21,41 @@ trait SchemaUserInfo extends js.Object {
 
 object SchemaUserInfo {
   @scala.inline
-  def apply(regionCode: String = null, userId: String = null): SchemaUserInfo = {
+  def apply(): SchemaUserInfo = {
     val __obj = js.Dynamic.literal()
-    if (regionCode != null) __obj.updateDynamic("regionCode")(regionCode.asInstanceOf[js.Any])
-    if (userId != null) __obj.updateDynamic("userId")(userId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUserInfo]
   }
+  @scala.inline
+  implicit class SchemaUserInfoOps[Self <: SchemaUserInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRegionCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regionCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegionCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regionCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

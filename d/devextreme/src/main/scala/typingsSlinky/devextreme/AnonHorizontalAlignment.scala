@@ -10,36 +10,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonHorizontalAlignment extends js.Object {
-  var font: js.UndefOr[Font] = js.undefined
-  var horizontalAlignment: js.UndefOr[center | left | right] = js.undefined
-  var margin: js.UndefOr[AnonBottom] = js.undefined
-  var placeholderSize: js.UndefOr[Double] = js.undefined
-  var subtitle: js.UndefOr[AnonFont | String] = js.undefined
-  var text: js.UndefOr[String] = js.undefined
-  var verticalAlignment: js.UndefOr[bottom | top] = js.undefined
+  var font: js.UndefOr[Font] = js.native
+  var horizontalAlignment: js.UndefOr[center | left | right] = js.native
+  var margin: js.UndefOr[AnonBottom] = js.native
+  var placeholderSize: js.UndefOr[Double] = js.native
+  var subtitle: js.UndefOr[AnonFont | String] = js.native
+  var text: js.UndefOr[String] = js.native
+  var verticalAlignment: js.UndefOr[bottom | top] = js.native
 }
 
 object AnonHorizontalAlignment {
   @scala.inline
-  def apply(
-    font: Font = null,
-    horizontalAlignment: center | left | right = null,
-    margin: AnonBottom = null,
-    placeholderSize: Int | Double = null,
-    subtitle: AnonFont | String = null,
-    text: String = null,
-    verticalAlignment: bottom | top = null
-  ): AnonHorizontalAlignment = {
+  def apply(): AnonHorizontalAlignment = {
     val __obj = js.Dynamic.literal()
-    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
-    if (horizontalAlignment != null) __obj.updateDynamic("horizontalAlignment")(horizontalAlignment.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (placeholderSize != null) __obj.updateDynamic("placeholderSize")(placeholderSize.asInstanceOf[js.Any])
-    if (subtitle != null) __obj.updateDynamic("subtitle")(subtitle.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (verticalAlignment != null) __obj.updateDynamic("verticalAlignment")(verticalAlignment.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonHorizontalAlignment]
   }
+  @scala.inline
+  implicit class AnonHorizontalAlignmentOps[Self <: AnonHorizontalAlignment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFont(value: Font): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFont: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHorizontalAlignment(value: center | left | right): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizontalAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: AnonBottom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholderSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholderSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubtitle(value: AnonFont | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubtitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalAlignment(value: bottom | top): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

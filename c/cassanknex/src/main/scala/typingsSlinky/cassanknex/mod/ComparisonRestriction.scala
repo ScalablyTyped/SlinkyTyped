@@ -15,16 +15,14 @@ trait ComparisonRestriction extends js.Object
 
 object ComparisonRestriction {
   @scala.inline
-  def Equalssign: typingsSlinky.cassanknex.cassanknexStrings.Equalssign = this.cast("=")
+  def Equalssign: typingsSlinky.cassanknex.cassanknexStrings.Equalssign = "=".asInstanceOf[typingsSlinky.cassanknex.cassanknexStrings.Equalssign]
   @scala.inline
-  def Greaterthansign: typingsSlinky.cassanknex.cassanknexStrings.Greaterthansign = this.cast(">")
+  def Greaterthansign: typingsSlinky.cassanknex.cassanknexStrings.Greaterthansign = ">".asInstanceOf[typingsSlinky.cassanknex.cassanknexStrings.Greaterthansign]
   @scala.inline
-  def GreaterthansignEqualssign: typingsSlinky.cassanknex.cassanknexStrings.GreaterthansignEqualssign = this.cast(">=")
+  def GreaterthansignEqualssign: typingsSlinky.cassanknex.cassanknexStrings.GreaterthansignEqualssign = ">=".asInstanceOf[typingsSlinky.cassanknex.cassanknexStrings.GreaterthansignEqualssign]
   @scala.inline
-  def Lessthansign: typingsSlinky.cassanknex.cassanknexStrings.Lessthansign = this.cast("<")
+  def Lessthansign: typingsSlinky.cassanknex.cassanknexStrings.Lessthansign = "<".asInstanceOf[typingsSlinky.cassanknex.cassanknexStrings.Lessthansign]
   @scala.inline
-  def LessthansignEqualssign: typingsSlinky.cassanknex.cassanknexStrings.LessthansignEqualssign = this.cast("<=")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def LessthansignEqualssign: typingsSlinky.cassanknex.cassanknexStrings.LessthansignEqualssign = "<=".asInstanceOf[typingsSlinky.cassanknex.cassanknexStrings.LessthansignEqualssign]
 }
 

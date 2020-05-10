@@ -19,5 +19,6 @@ import scala.scalajs.js.annotation._
   * Returns the has() method.
   *
   */
+@js.native
 trait uacss extends js.Object
 

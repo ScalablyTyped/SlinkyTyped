@@ -4,19 +4,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait S3BatchEventTask extends js.Object {
-  var s3BucketArn: String
-  var s3Key: String
-  var s3VersionId: String | Null
-  var taskId: String
+  var s3BucketArn: String = js.native
+  var s3Key: String = js.native
+  var s3VersionId: String | Null = js.native
+  var taskId: String = js.native
 }
 
 object S3BatchEventTask {
   @scala.inline
-  def apply(s3BucketArn: String, s3Key: String, taskId: String, s3VersionId: String = null): S3BatchEventTask = {
+  def apply(s3BucketArn: String, s3Key: String, taskId: String): S3BatchEventTask = {
     val __obj = js.Dynamic.literal(s3BucketArn = s3BucketArn.asInstanceOf[js.Any], s3Key = s3Key.asInstanceOf[js.Any], taskId = taskId.asInstanceOf[js.Any])
-    if (s3VersionId != null) __obj.updateDynamic("s3VersionId")(s3VersionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3BatchEventTask]
   }
+  @scala.inline
+  implicit class S3BatchEventTaskOps[Self <: S3BatchEventTask] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withS3BucketArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3BucketArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3Key(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTaskId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3VersionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3VersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3VersionIdNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3VersionId")(null)
+        ret
+    }
+  }
+  
 }
 

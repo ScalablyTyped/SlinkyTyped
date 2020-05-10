@@ -15,11 +15,11 @@ trait Target extends js.Object {
     */
   var BatchParameters: js.UndefOr[typingsSlinky.awsSdk.eventbridgeMod.BatchParameters] = js.native
   /**
-    * Contains the Amazon ECS task definition and task count to be used if the event target is an Amazon ECS task. For more information about Amazon ECS tasks, see Task Definitions  in the Amazon EC2 Container Service Developer Guide.
+    * Contains the Amazon ECS task definition and task count to be used, if the event target is an Amazon ECS task. For more information about Amazon ECS tasks, see Task Definitions  in the Amazon EC2 Container Service Developer Guide.
     */
   var EcsParameters: js.UndefOr[typingsSlinky.awsSdk.eventbridgeMod.EcsParameters] = js.native
   /**
-    * A name for the target. Use a string that will help you identify the target. Each target associated with a rule must have an Id unique for that rule.
+    * The ID of the target.
     */
   var Id: TargetId = js.native
   /**
@@ -35,7 +35,7 @@ trait Target extends js.Object {
     */
   var InputTransformer: js.UndefOr[typingsSlinky.awsSdk.eventbridgeMod.InputTransformer] = js.native
   /**
-    * The custom parameter that you can use to control the shard assignment when the target is a Kinesis data stream. If you don't include this parameter, the default is to use the eventId as the partition key.
+    * The custom parameter you can use to control the shard assignment, when the target is a Kinesis data stream. If you do not include this parameter, the default is to use the eventId as the partition key.
     */
   var KinesisParameters: js.UndefOr[typingsSlinky.awsSdk.eventbridgeMod.KinesisParameters] = js.native
   /**
@@ -54,30 +54,137 @@ trait Target extends js.Object {
 
 object Target {
   @scala.inline
-  def apply(
-    Arn: TargetArn,
-    Id: TargetId,
-    BatchParameters: BatchParameters = null,
-    EcsParameters: EcsParameters = null,
-    Input: TargetInput = null,
-    InputPath: TargetInputPath = null,
-    InputTransformer: InputTransformer = null,
-    KinesisParameters: KinesisParameters = null,
-    RoleArn: RoleArn = null,
-    RunCommandParameters: RunCommandParameters = null,
-    SqsParameters: SqsParameters = null
-  ): Target = {
+  def apply(Arn: TargetArn, Id: TargetId): Target = {
     val __obj = js.Dynamic.literal(Arn = Arn.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any])
-    if (BatchParameters != null) __obj.updateDynamic("BatchParameters")(BatchParameters.asInstanceOf[js.Any])
-    if (EcsParameters != null) __obj.updateDynamic("EcsParameters")(EcsParameters.asInstanceOf[js.Any])
-    if (Input != null) __obj.updateDynamic("Input")(Input.asInstanceOf[js.Any])
-    if (InputPath != null) __obj.updateDynamic("InputPath")(InputPath.asInstanceOf[js.Any])
-    if (InputTransformer != null) __obj.updateDynamic("InputTransformer")(InputTransformer.asInstanceOf[js.Any])
-    if (KinesisParameters != null) __obj.updateDynamic("KinesisParameters")(KinesisParameters.asInstanceOf[js.Any])
-    if (RoleArn != null) __obj.updateDynamic("RoleArn")(RoleArn.asInstanceOf[js.Any])
-    if (RunCommandParameters != null) __obj.updateDynamic("RunCommandParameters")(RunCommandParameters.asInstanceOf[js.Any])
-    if (SqsParameters != null) __obj.updateDynamic("SqsParameters")(SqsParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[Target]
   }
+  @scala.inline
+  implicit class TargetOps[Self <: Target] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: TargetArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: TargetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBatchParameters(value: BatchParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBatchParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEcsParameters(value: EcsParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EcsParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEcsParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EcsParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInput(value: TargetInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Input")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputPath(value: TargetInputPath): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputTransformer(value: InputTransformer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputTransformer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputTransformer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputTransformer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKinesisParameters(value: KinesisParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKinesisParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: RoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRunCommandParameters(value: RunCommandParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RunCommandParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRunCommandParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RunCommandParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSqsParameters(value: SqsParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SqsParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSqsParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SqsParameters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

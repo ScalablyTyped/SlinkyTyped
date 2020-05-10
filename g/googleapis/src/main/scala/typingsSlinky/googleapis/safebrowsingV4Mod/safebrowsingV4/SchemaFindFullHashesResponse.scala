@@ -25,16 +25,53 @@ trait SchemaFindFullHashesResponse extends js.Object {
 
 object SchemaFindFullHashesResponse {
   @scala.inline
-  def apply(
-    matches: js.Array[SchemaThreatMatch] = null,
-    minimumWaitDuration: String = null,
-    negativeCacheDuration: String = null
-  ): SchemaFindFullHashesResponse = {
+  def apply(): SchemaFindFullHashesResponse = {
     val __obj = js.Dynamic.literal()
-    if (matches != null) __obj.updateDynamic("matches")(matches.asInstanceOf[js.Any])
-    if (minimumWaitDuration != null) __obj.updateDynamic("minimumWaitDuration")(minimumWaitDuration.asInstanceOf[js.Any])
-    if (negativeCacheDuration != null) __obj.updateDynamic("negativeCacheDuration")(negativeCacheDuration.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFindFullHashesResponse]
   }
+  @scala.inline
+  implicit class SchemaFindFullHashesResponseOps[Self <: SchemaFindFullHashesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMatches(value: js.Array[SchemaThreatMatch]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumWaitDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumWaitDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumWaitDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumWaitDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNegativeCacheDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeCacheDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNegativeCacheDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeCacheDuration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

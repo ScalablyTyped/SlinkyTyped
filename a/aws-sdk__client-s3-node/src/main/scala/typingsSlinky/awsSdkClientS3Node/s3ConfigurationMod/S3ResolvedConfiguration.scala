@@ -79,9 +79,9 @@ trait S3ResolvedConfiguration extends S3Configuration {
   @JSName("utf8Encoder")
   var utf8Encoder_Original: Encoder = js.native
   @JSName("base64Decoder")
-  def base64Decoder_MS3ResolvedConfiguration(input: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def base64Decoder_MS3ResolvedConfiguration(input: String): js.typedarray.Uint8Array = js.native
   @JSName("base64Encoder")
-  def base64Encoder_MS3ResolvedConfiguration(input: scala.scalajs.js.typedarray.Uint8Array): String = js.native
+  def base64Encoder_MS3ResolvedConfiguration(input: js.typedarray.Uint8Array): String = js.native
   def bodyLengthChecker(body: js.Any): js.UndefOr[Double] = js.native
   @JSName("credentials")
   def credentials_MS3ResolvedConfiguration(): js.Promise[Credentials] = js.native
@@ -93,14 +93,14 @@ trait S3ResolvedConfiguration extends S3Configuration {
   def region_MS3ResolvedConfiguration(): js.Promise[String] = js.native
   def serializer(): js.Promise[RequestSerializer[Readable]] = js.native
   @JSName("streamCollector")
-  def streamCollector_MS3ResolvedConfiguration(stream: Readable): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def streamCollector_MS3ResolvedConfiguration(stream: Readable): js.Promise[js.typedarray.Uint8Array] = js.native
   @JSName("streamHasher")
-  def streamHasher_MS3ResolvedConfiguration(hashCtor: typingsSlinky.awsSdkTypes.AnonInstantiable, stream: Readable): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def streamHasher_MS3ResolvedConfiguration(hashCtor: typingsSlinky.awsSdkTypes.AnonInstantiable, stream: Readable): js.Promise[js.typedarray.Uint8Array] = js.native
   @JSName("urlParser")
   def urlParser_MS3ResolvedConfiguration(url: String): HttpEndpoint = js.native
   @JSName("utf8Decoder")
-  def utf8Decoder_MS3ResolvedConfiguration(input: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def utf8Decoder_MS3ResolvedConfiguration(input: String): js.typedarray.Uint8Array = js.native
   @JSName("utf8Encoder")
-  def utf8Encoder_MS3ResolvedConfiguration(input: scala.scalajs.js.typedarray.Uint8Array): String = js.native
+  def utf8Encoder_MS3ResolvedConfiguration(input: js.typedarray.Uint8Array): String = js.native
 }
 

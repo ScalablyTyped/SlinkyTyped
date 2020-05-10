@@ -17,20 +17,18 @@ trait RatingIrelandTelevisionType extends js.Object
 
 object RatingIrelandTelevisionType {
   @scala.inline
-  def allAllowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.allAllowed = this.cast("allAllowed")
+  def allAllowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.allAllowed = "allAllowed".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.allAllowed]
   @scala.inline
-  def allBlocked: typingsSlinky.microsoftGraph.microsoftGraphStrings.allBlocked = this.cast("allBlocked")
+  def allBlocked: typingsSlinky.microsoftGraph.microsoftGraphStrings.allBlocked = "allBlocked".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.allBlocked]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def children: typingsSlinky.microsoftGraph.microsoftGraphStrings.children = "children".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.children]
   @scala.inline
-  def children: typingsSlinky.microsoftGraph.microsoftGraphStrings.children = this.cast("children")
+  def general: typingsSlinky.microsoftGraph.microsoftGraphStrings.general = "general".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.general]
   @scala.inline
-  def general: typingsSlinky.microsoftGraph.microsoftGraphStrings.general = this.cast("general")
+  def mature: typingsSlinky.microsoftGraph.microsoftGraphStrings.mature = "mature".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.mature]
   @scala.inline
-  def mature: typingsSlinky.microsoftGraph.microsoftGraphStrings.mature = this.cast("mature")
+  def parentalSupervision: typingsSlinky.microsoftGraph.microsoftGraphStrings.parentalSupervision = "parentalSupervision".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.parentalSupervision]
   @scala.inline
-  def parentalSupervision: typingsSlinky.microsoftGraph.microsoftGraphStrings.parentalSupervision = this.cast("parentalSupervision")
-  @scala.inline
-  def youngAdults: typingsSlinky.microsoftGraph.microsoftGraphStrings.youngAdults = this.cast("youngAdults")
+  def youngAdults: typingsSlinky.microsoftGraph.microsoftGraphStrings.youngAdults = "youngAdults".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.youngAdults]
 }
 

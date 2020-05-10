@@ -16,36 +16,74 @@ import scala.scalajs.js.annotation._
   *     a: [ 10.10.1.1:8675, 10.10.2.2:8675 ],
   *     b: [ 10.10.1.1:309, 10.10.2.2:309 ]
   */
+@js.native
 trait EndpointSubset extends js.Object {
   /**
     * IP addresses which offer the related ports that are marked as ready. These endpoints should
     * be considered safe for load balancers and clients to utilize.
     */
-  var addresses: js.UndefOr[Input[js.Array[Input[EndpointAddress]]]] = js.undefined
+  var addresses: js.UndefOr[Input[js.Array[Input[EndpointAddress]]]] = js.native
   /**
     * IP addresses which offer the related ports but are not currently marked as ready because
     * they have not yet finished starting, have recently failed a readiness check, or have
     * recently failed a liveness check.
     */
-  var notReadyAddresses: js.UndefOr[Input[js.Array[Input[EndpointAddress]]]] = js.undefined
+  var notReadyAddresses: js.UndefOr[Input[js.Array[Input[EndpointAddress]]]] = js.native
   /**
     * Port numbers available on the related IP addresses.
     */
-  var ports: js.UndefOr[Input[js.Array[Input[EndpointPort]]]] = js.undefined
+  var ports: js.UndefOr[Input[js.Array[Input[EndpointPort]]]] = js.native
 }
 
 object EndpointSubset {
   @scala.inline
-  def apply(
-    addresses: Input[js.Array[Input[EndpointAddress]]] = null,
-    notReadyAddresses: Input[js.Array[Input[EndpointAddress]]] = null,
-    ports: Input[js.Array[Input[EndpointPort]]] = null
-  ): EndpointSubset = {
+  def apply(): EndpointSubset = {
     val __obj = js.Dynamic.literal()
-    if (addresses != null) __obj.updateDynamic("addresses")(addresses.asInstanceOf[js.Any])
-    if (notReadyAddresses != null) __obj.updateDynamic("notReadyAddresses")(notReadyAddresses.asInstanceOf[js.Any])
-    if (ports != null) __obj.updateDynamic("ports")(ports.asInstanceOf[js.Any])
     __obj.asInstanceOf[EndpointSubset]
   }
+  @scala.inline
+  implicit class EndpointSubsetOps[Self <: EndpointSubset] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddresses(value: Input[js.Array[Input[EndpointAddress]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddresses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addresses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotReadyAddresses(value: Input[js.Array[Input[EndpointAddress]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notReadyAddresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotReadyAddresses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notReadyAddresses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPorts(value: Input[js.Array[Input[EndpointPort]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPorts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

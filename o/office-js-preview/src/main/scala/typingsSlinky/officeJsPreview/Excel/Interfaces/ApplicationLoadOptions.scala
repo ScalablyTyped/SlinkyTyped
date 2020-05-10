@@ -82,3 +82,127 @@ trait ApplicationLoadOptions extends js.Object {
   var useSystemSeparators: js.UndefOr[Boolean] = js.native
 }
 
+object ApplicationLoadOptions {
+  @scala.inline
+  def apply(): ApplicationLoadOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ApplicationLoadOptions]
+  }
+  @scala.inline
+  implicit class ApplicationLoadOptionsOps[Self <: ApplicationLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$all(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$all: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCalculationEngineVersion(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculationEngineVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCalculationEngineVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculationEngineVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCalculationMode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculationMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCalculationMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculationMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCalculationState(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculationState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCalculationState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculationState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCultureInfo(value: CultureInfoLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cultureInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCultureInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cultureInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecimalSeparator(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalSeparator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecimalSeparator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalSeparator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIterativeCalculation(value: IterativeCalculationLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iterativeCalculation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIterativeCalculation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iterativeCalculation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThousandsSeparator(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thousandsSeparator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThousandsSeparator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thousandsSeparator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseSystemSeparators(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useSystemSeparators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseSystemSeparators: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useSystemSeparators")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

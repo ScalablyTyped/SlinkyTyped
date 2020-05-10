@@ -4,25 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ShareMenuOptions
   extends BaseOptions[js.Any, js.Any] {
-  var withShareTicket: js.UndefOr[Boolean] = js.undefined
+  var withShareTicket: js.UndefOr[Boolean] = js.native
 }
 
 object ShareMenuOptions {
   @scala.inline
-  def apply(
-    complete: /* res */ js.Any => Unit = null,
-    fail: js.Any => Unit = null,
-    success: js.Any => Unit = null,
-    withShareTicket: js.UndefOr[Boolean] = js.undefined
-  ): ShareMenuOptions = {
+  def apply(): ShareMenuOptions = {
     val __obj = js.Dynamic.literal()
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
-    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
-    if (!js.isUndefined(withShareTicket)) __obj.updateDynamic("withShareTicket")(withShareTicket.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShareMenuOptions]
   }
+  @scala.inline
+  implicit class ShareMenuOptionsOps[Self <: ShareMenuOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWithShareTicket(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withShareTicket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWithShareTicket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withShareTicket")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

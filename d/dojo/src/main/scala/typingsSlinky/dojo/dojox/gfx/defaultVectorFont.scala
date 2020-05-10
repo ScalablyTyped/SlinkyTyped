@@ -9,19 +9,20 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait defaultVectorFont extends js.Object {
   /**
     *
     */
-  var family: js.Object
+  var family: js.Object = js.native
   /**
     *
     */
-  var size: String
+  var size: String = js.native
   /**
     *
     */
-  var `type`: String
+  var `type`: String = js.native
 }
 
 object defaultVectorFont {
@@ -31,5 +32,31 @@ object defaultVectorFont {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[defaultVectorFont]
   }
+  @scala.inline
+  implicit class defaultVectorFontOps[Self <: defaultVectorFont] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFamily(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("family")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

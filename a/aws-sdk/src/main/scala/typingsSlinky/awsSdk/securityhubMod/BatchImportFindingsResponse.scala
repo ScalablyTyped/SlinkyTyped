@@ -22,10 +22,41 @@ trait BatchImportFindingsResponse extends js.Object {
 
 object BatchImportFindingsResponse {
   @scala.inline
-  def apply(FailedCount: Integer, SuccessCount: Integer, FailedFindings: ImportFindingsErrorList = null): BatchImportFindingsResponse = {
+  def apply(FailedCount: Integer, SuccessCount: Integer): BatchImportFindingsResponse = {
     val __obj = js.Dynamic.literal(FailedCount = FailedCount.asInstanceOf[js.Any], SuccessCount = SuccessCount.asInstanceOf[js.Any])
-    if (FailedFindings != null) __obj.updateDynamic("FailedFindings")(FailedFindings.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchImportFindingsResponse]
   }
+  @scala.inline
+  implicit class BatchImportFindingsResponseOps[Self <: BatchImportFindingsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailedCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuccessCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SuccessCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFailedFindings(value: ImportFindingsErrorList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedFindings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailedFindings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedFindings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

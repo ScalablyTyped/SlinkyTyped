@@ -8,27 +8,28 @@ import scala.scalajs.js.annotation._
   * HorizontalPodAutoscalerCondition describes the state of a HorizontalPodAutoscaler at a
   * certain point.
   */
+@js.native
 trait HorizontalPodAutoscalerCondition extends js.Object {
   /**
     * lastTransitionTime is the last time the condition transitioned from one status to another
     */
-  val lastTransitionTime: String
+  val lastTransitionTime: String = js.native
   /**
     * message is a human-readable explanation containing details about the transition
     */
-  val message: String
+  val message: String = js.native
   /**
     * reason is the reason for the condition's last transition.
     */
-  val reason: String
+  val reason: String = js.native
   /**
     * status is the status of the condition (True, False, Unknown)
     */
-  val status: String
+  val status: String = js.native
   /**
     * type describes the current condition
     */
-  val `type`: String
+  val `type`: String = js.native
 }
 
 object HorizontalPodAutoscalerCondition {
@@ -38,5 +39,43 @@ object HorizontalPodAutoscalerCondition {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[HorizontalPodAutoscalerCondition]
   }
+  @scala.inline
+  implicit class HorizontalPodAutoscalerConditionOps[Self <: HorizontalPodAutoscalerCondition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLastTransitionTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastTransitionTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

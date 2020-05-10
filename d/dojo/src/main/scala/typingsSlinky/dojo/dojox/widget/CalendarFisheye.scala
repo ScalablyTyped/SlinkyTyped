@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
   * FisheyeLite effects are included.
   *
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dojox.widget.FisheyeFX because Inheritance from two classes. Inlined addFx */ @JSGlobal("dojox.widget.CalendarFisheye")
 @js.native
 class CalendarFisheye () extends Calendar

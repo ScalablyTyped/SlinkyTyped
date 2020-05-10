@@ -13,12 +13,10 @@ trait DefaultTransportType extends js.Object
 
 object DefaultTransportType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def longpoll: typingsSlinky.autobahn.autobahnStrings.longpoll = "longpoll".asInstanceOf[typingsSlinky.autobahn.autobahnStrings.longpoll]
   @scala.inline
-  def longpoll: typingsSlinky.autobahn.autobahnStrings.longpoll = this.cast("longpoll")
+  def rawsocket: typingsSlinky.autobahn.autobahnStrings.rawsocket = "rawsocket".asInstanceOf[typingsSlinky.autobahn.autobahnStrings.rawsocket]
   @scala.inline
-  def rawsocket: typingsSlinky.autobahn.autobahnStrings.rawsocket = this.cast("rawsocket")
-  @scala.inline
-  def websocket: typingsSlinky.autobahn.autobahnStrings.websocket = this.cast("websocket")
+  def websocket: typingsSlinky.autobahn.autobahnStrings.websocket = "websocket".asInstanceOf[typingsSlinky.autobahn.autobahnStrings.websocket]
 }
 

@@ -10,13 +10,11 @@ object _OrdinalColorsInstruction {
   @scala.inline
   def DatumColorInstruction[D](datum: String): _OrdinalColorsInstruction[D] = {
     val __obj = js.Dynamic.literal(datum = datum.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[_OrdinalColorsInstruction[D]]
   }
   @scala.inline
-  def SchemeColorInstruction[D](scheme: ColorSchemeId, size: Int | Double = null): _OrdinalColorsInstruction[D] = {
+  def SchemeColorInstruction[D](scheme: ColorSchemeId): _OrdinalColorsInstruction[D] = {
     val __obj = js.Dynamic.literal(scheme = scheme.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[_OrdinalColorsInstruction[D]]
   }
 }

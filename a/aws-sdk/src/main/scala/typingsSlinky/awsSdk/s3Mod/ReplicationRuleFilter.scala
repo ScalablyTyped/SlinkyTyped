@@ -22,12 +22,53 @@ trait ReplicationRuleFilter extends js.Object {
 
 object ReplicationRuleFilter {
   @scala.inline
-  def apply(And: ReplicationRuleAndOperator = null, Prefix: Prefix = null, Tag: Tag = null): ReplicationRuleFilter = {
+  def apply(): ReplicationRuleFilter = {
     val __obj = js.Dynamic.literal()
-    if (And != null) __obj.updateDynamic("And")(And.asInstanceOf[js.Any])
-    if (Prefix != null) __obj.updateDynamic("Prefix")(Prefix.asInstanceOf[js.Any])
-    if (Tag != null) __obj.updateDynamic("Tag")(Tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplicationRuleFilter]
   }
+  @scala.inline
+  implicit class ReplicationRuleFilterOps[Self <: ReplicationRuleFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnd(value: ReplicationRuleAndOperator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("And")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("And")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: Prefix): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTag(value: Tag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

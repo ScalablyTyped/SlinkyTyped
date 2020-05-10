@@ -23,16 +23,53 @@ trait StaticIpAttachmentState extends js.Object {
 
 object StaticIpAttachmentState {
   @scala.inline
-  def apply(
-    instanceName: Input[String] = null,
-    ipAddress: Input[String] = null,
-    staticIpName: Input[String] = null
-  ): StaticIpAttachmentState = {
+  def apply(): StaticIpAttachmentState = {
     val __obj = js.Dynamic.literal()
-    if (instanceName != null) __obj.updateDynamic("instanceName")(instanceName.asInstanceOf[js.Any])
-    if (ipAddress != null) __obj.updateDynamic("ipAddress")(ipAddress.asInstanceOf[js.Any])
-    if (staticIpName != null) __obj.updateDynamic("staticIpName")(staticIpName.asInstanceOf[js.Any])
     __obj.asInstanceOf[StaticIpAttachmentState]
   }
+  @scala.inline
+  implicit class StaticIpAttachmentStateOps[Self <: StaticIpAttachmentState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpAddress(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStaticIpName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("staticIpName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStaticIpName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("staticIpName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

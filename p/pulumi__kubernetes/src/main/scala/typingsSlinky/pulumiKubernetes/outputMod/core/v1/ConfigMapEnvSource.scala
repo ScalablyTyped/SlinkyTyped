@@ -10,24 +10,44 @@ import scala.scalajs.js.annotation._
   * The contents of the target ConfigMap's Data field will represent the key-value pairs as
   * environment variables.
   */
+@js.native
 trait ConfigMapEnvSource extends js.Object {
   /**
     * Name of the referent. More info:
     * https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
     */
-  val name: String
+  val name: String = js.native
   /**
     * Specify whether the ConfigMap must be defined
     */
-  val optional: Boolean
+  val optional: Boolean = js.native
 }
 
 object ConfigMapEnvSource {
   @scala.inline
   def apply(name: String, optional: Boolean): ConfigMapEnvSource = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ConfigMapEnvSource]
   }
+  @scala.inline
+  implicit class ConfigMapEnvSourceOps[Self <: ConfigMapEnvSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptional(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

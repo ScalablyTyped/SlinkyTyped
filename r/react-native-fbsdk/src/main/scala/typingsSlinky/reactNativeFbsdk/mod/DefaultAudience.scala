@@ -13,12 +13,10 @@ trait DefaultAudience extends js.Object
 
 object DefaultAudience {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def everyone: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.everyone = "everyone".asInstanceOf[typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.everyone]
   @scala.inline
-  def everyone: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.everyone = this.cast("everyone")
+  def friends: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.friends = "friends".asInstanceOf[typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.friends]
   @scala.inline
-  def friends: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.friends = this.cast("friends")
-  @scala.inline
-  def only_me: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.only_me = this.cast("only_me")
+  def only_me: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.only_me = "only_me".asInstanceOf[typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.only_me]
 }
 

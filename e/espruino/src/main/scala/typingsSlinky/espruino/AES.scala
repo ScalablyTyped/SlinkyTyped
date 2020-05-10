@@ -32,7 +32,7 @@ object AES extends js.Object {
     * @return  
     * @url http://www.espruino.com/Reference#l_AES_decrypt
     */
-  def decrypt(passphrase: js.Any, key: js.Any, options: js.Any): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def decrypt(passphrase: js.Any, key: js.Any, options: js.Any): js.typedarray.ArrayBuffer = js.native
   /**
     * 
     * @param passphrase 
@@ -41,6 +41,6 @@ object AES extends js.Object {
     * @return  
     * @url http://www.espruino.com/Reference#l_AES_encrypt
     */
-  def encrypt(passphrase: js.Any, key: js.Any, options: js.Any): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def encrypt(passphrase: js.Any, key: js.Any, options: js.Any): js.typedarray.ArrayBuffer = js.native
 }
 

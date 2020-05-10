@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SocketProtocolIgnoreStatuses_ extends js.Object {
-  var `1000`: String
-  var `1001`: String
+  var `1000`: String = js.native
+  var `1001`: String = js.native
 }
 
 object SocketProtocolIgnoreStatuses_ {
@@ -17,5 +18,25 @@ object SocketProtocolIgnoreStatuses_ {
     __obj.updateDynamic("1001")(`1001`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SocketProtocolIgnoreStatuses_]
   }
+  @scala.inline
+  implicit class SocketProtocolIgnoreStatuses_Ops[Self <: SocketProtocolIgnoreStatuses_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with1000(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1000")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with1001(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1001")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,8 @@
 package typingsSlinky.atlaskitTree.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.atlaskitTree.mod.ItemId
 import typingsSlinky.atlaskitTree.mod.Path
 import typingsSlinky.atlaskitTree.mod.RenderItemParams
@@ -17,13 +15,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tree
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Tree {
   @JSImport("@atlaskit/tree", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: TreeProps): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     isDragEnabled: Boolean,
     isNestingEnabled: Boolean,
@@ -33,13 +31,10 @@ object Tree
     onDragStart: ItemId => Unit,
     onExpand: (ItemId, Path) => Unit,
     renderItem: RenderItemParams => TagMod[Any],
-    tree: TreeData,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(isDragEnabled = isDragEnabled.asInstanceOf[js.Any], isNestingEnabled = isNestingEnabled.asInstanceOf[js.Any], offsetPerLevel = offsetPerLevel.asInstanceOf[js.Any], onCollapse = js.Any.fromFunction2(onCollapse), onDragEnd = js.Any.fromFunction2(onDragEnd), onDragStart = js.Any.fromFunction1(onDragStart), onExpand = js.Any.fromFunction2(onExpand), renderItem = js.Any.fromFunction1(renderItem), tree = tree.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    tree: TreeData
+  ): Default[tag.type, default] = {
+    val __props = js.Dynamic.literal(isDragEnabled = isDragEnabled.asInstanceOf[js.Any], isNestingEnabled = isNestingEnabled.asInstanceOf[js.Any], offsetPerLevel = offsetPerLevel.asInstanceOf[js.Any], onCollapse = js.Any.fromFunction2(onCollapse), onDragEnd = js.Any.fromFunction2(onDragEnd), onDragStart = js.Any.fromFunction1(onDragStart), onExpand = js.Any.fromFunction2(onExpand), renderItem = js.Any.fromFunction1(renderItem), tree = tree.asInstanceOf[js.Any])
+    new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[TreeProps]))
   }
-  type Props = TreeProps
 }
 

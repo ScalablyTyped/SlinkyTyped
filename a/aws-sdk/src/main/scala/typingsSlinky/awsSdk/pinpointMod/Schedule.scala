@@ -27,7 +27,7 @@ trait Schedule extends js.Object {
     */
   var QuietTime: js.UndefOr[typingsSlinky.awsSdk.pinpointMod.QuietTime] = js.native
   /**
-    * The scheduled time, in ISO 8601 format, when the campaign began or will begin.
+    * The scheduled time when the campaign began or will begin. Valid values are: IMMEDIATE, to start the campaign immediately; or, a specific time in ISO 8601 format.
     */
   var StartTime: string = js.native
   /**
@@ -41,23 +41,95 @@ trait Schedule extends js.Object {
 
 object Schedule {
   @scala.inline
-  def apply(
-    StartTime: string,
-    EndTime: string = null,
-    EventFilter: CampaignEventFilter = null,
-    Frequency: Frequency = null,
-    IsLocalTime: js.UndefOr[Boolean] = js.undefined,
-    QuietTime: QuietTime = null,
-    Timezone: string = null
-  ): Schedule = {
+  def apply(StartTime: string): Schedule = {
     val __obj = js.Dynamic.literal(StartTime = StartTime.asInstanceOf[js.Any])
-    if (EndTime != null) __obj.updateDynamic("EndTime")(EndTime.asInstanceOf[js.Any])
-    if (EventFilter != null) __obj.updateDynamic("EventFilter")(EventFilter.asInstanceOf[js.Any])
-    if (Frequency != null) __obj.updateDynamic("Frequency")(Frequency.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsLocalTime)) __obj.updateDynamic("IsLocalTime")(IsLocalTime.asInstanceOf[js.Any])
-    if (QuietTime != null) __obj.updateDynamic("QuietTime")(QuietTime.asInstanceOf[js.Any])
-    if (Timezone != null) __obj.updateDynamic("Timezone")(Timezone.asInstanceOf[js.Any])
     __obj.asInstanceOf[Schedule]
   }
+  @scala.inline
+  implicit class ScheduleOps[Self <: Schedule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStartTime(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndTime(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventFilter(value: CampaignEventFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrequency(value: Frequency): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Frequency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrequency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Frequency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsLocalTime(value: boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsLocalTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsLocalTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsLocalTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuietTime(value: QuietTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QuietTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuietTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QuietTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimezone(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timezone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimezone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timezone")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

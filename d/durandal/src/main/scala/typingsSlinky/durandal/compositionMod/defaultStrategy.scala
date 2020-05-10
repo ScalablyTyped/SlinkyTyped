@@ -1,8 +1,8 @@
 package typingsSlinky.durandal.compositionMod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.durandal.DurandalPromise
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

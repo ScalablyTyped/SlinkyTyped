@@ -15,10 +15,6 @@ object lang extends js.Object {
   class IllegalOperationError () extends Error {
     def this(opt_caller: js.Function1[/* repeated */ js.Any, _]) = this()
     def this(opt_caller: js.Function1[/* repeated */ js.Any, _], opt_message: js.Any) = this()
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
   }
   
   /**
@@ -29,10 +25,6 @@ object lang extends js.Object {
     def this(opt_caller: js.Function1[/* repeated */ js.Any, _]) = this()
     def this(opt_caller: js.Function1[/* repeated */ js.Any, _], opt_argNr: Double) = this()
     def this(opt_caller: js.Function1[/* repeated */ js.Any, _], opt_argNr: Double, opt_message: js.Any) = this()
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
   }
   
   /**
@@ -43,10 +35,6 @@ object lang extends js.Object {
     def this(opt_caller: js.Function1[/* repeated */ js.Any, _]) = this()
     def this(opt_caller: js.Function1[/* repeated */ js.Any, _], opt_val: Double) = this()
     def this(opt_caller: js.Function1[/* repeated */ js.Any, _], opt_val: Double, opt_range: js.Array[Double]) = this()
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
   }
   
 }

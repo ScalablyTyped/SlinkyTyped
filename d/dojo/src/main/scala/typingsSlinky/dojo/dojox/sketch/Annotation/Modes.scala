@@ -10,15 +10,16 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait Modes extends js.Object {
   /**
     *
     */
-  var Edit: Double
+  var Edit: Double = js.native
   /**
     *
     */
-  var View: Double
+  var View: Double = js.native
 }
 
 /**

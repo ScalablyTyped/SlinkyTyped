@@ -14,10 +14,29 @@ trait BatchGetApplicationsOutput extends js.Object {
 
 object BatchGetApplicationsOutput {
   @scala.inline
-  def apply(applicationsInfo: ApplicationsInfoList = null): BatchGetApplicationsOutput = {
+  def apply(): BatchGetApplicationsOutput = {
     val __obj = js.Dynamic.literal()
-    if (applicationsInfo != null) __obj.updateDynamic("applicationsInfo")(applicationsInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchGetApplicationsOutput]
   }
+  @scala.inline
+  implicit class BatchGetApplicationsOutputOps[Self <: BatchGetApplicationsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationsInfo(value: ApplicationsInfoList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationsInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationsInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationsInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

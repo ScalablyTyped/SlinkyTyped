@@ -16,18 +16,16 @@ trait EmojiSet extends js.Object
 
 object EmojiSet {
   @scala.inline
-  def apple: typingsSlinky.emojiMart.emojiMartStrings.apple = this.cast("apple")
+  def apple: typingsSlinky.emojiMart.emojiMartStrings.apple = "apple".asInstanceOf[typingsSlinky.emojiMart.emojiMartStrings.apple]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def emojione: typingsSlinky.emojiMart.emojiMartStrings.emojione = "emojione".asInstanceOf[typingsSlinky.emojiMart.emojiMartStrings.emojione]
   @scala.inline
-  def emojione: typingsSlinky.emojiMart.emojiMartStrings.emojione = this.cast("emojione")
+  def facebook: typingsSlinky.emojiMart.emojiMartStrings.facebook = "facebook".asInstanceOf[typingsSlinky.emojiMart.emojiMartStrings.facebook]
   @scala.inline
-  def facebook: typingsSlinky.emojiMart.emojiMartStrings.facebook = this.cast("facebook")
+  def google: typingsSlinky.emojiMart.emojiMartStrings.google = "google".asInstanceOf[typingsSlinky.emojiMart.emojiMartStrings.google]
   @scala.inline
-  def google: typingsSlinky.emojiMart.emojiMartStrings.google = this.cast("google")
+  def messenger: typingsSlinky.emojiMart.emojiMartStrings.messenger = "messenger".asInstanceOf[typingsSlinky.emojiMart.emojiMartStrings.messenger]
   @scala.inline
-  def messenger: typingsSlinky.emojiMart.emojiMartStrings.messenger = this.cast("messenger")
-  @scala.inline
-  def twitter: typingsSlinky.emojiMart.emojiMartStrings.twitter = this.cast("twitter")
+  def twitter: typingsSlinky.emojiMart.emojiMartStrings.twitter = "twitter".asInstanceOf[typingsSlinky.emojiMart.emojiMartStrings.twitter]
 }
 

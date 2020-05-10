@@ -18,11 +18,41 @@ trait SchemaApk extends js.Object {
 
 object SchemaApk {
   @scala.inline
-  def apply(binary: SchemaApkBinary = null, versionCode: Int | Double = null): SchemaApk = {
+  def apply(): SchemaApk = {
     val __obj = js.Dynamic.literal()
-    if (binary != null) __obj.updateDynamic("binary")(binary.asInstanceOf[js.Any])
-    if (versionCode != null) __obj.updateDynamic("versionCode")(versionCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaApk]
   }
+  @scala.inline
+  implicit class SchemaApkOps[Self <: SchemaApk] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBinary(value: SchemaApkBinary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBinary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

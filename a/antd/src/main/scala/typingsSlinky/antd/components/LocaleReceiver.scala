@@ -1,35 +1,29 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.localeReceiverMod.LocaleReceiverProps
 import typingsSlinky.antd.localeReceiverMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LocaleReceiver
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object LocaleReceiver {
   @JSImport("antd/lib/locale-provider/LocaleReceiver", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    componentName: String = null,
-    defaultLocale: js.Object | js.Function = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (componentName != null) __obj.updateDynamic("componentName")(componentName.asInstanceOf[js.Any])
-    if (defaultLocale != null) __obj.updateDynamic("defaultLocale")(defaultLocale.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def componentName(value: String): this.type = set("componentName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultLocale(value: js.Object | js.Function): this.type = set("defaultLocale", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.localeReceiverMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = LocaleReceiverProps
+  
+  def withProps(p: LocaleReceiverProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: LocaleReceiver.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -6,64 +6,227 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RunnerOptionConfig extends js.Object {
-  var checkOrder: js.UndefOr[Boolean] = js.undefined
-  var count: Double
-  var createMigrationsSchema: js.UndefOr[Boolean] = js.undefined
-  var createSchema: js.UndefOr[Boolean] = js.undefined
-  var decamelize: js.UndefOr[Boolean] = js.undefined
-  var dir: String
-  var direction: up | down
-  var dryRun: js.UndefOr[Boolean] = js.undefined
-  var fake: js.UndefOr[Boolean] = js.undefined
-  var file: js.UndefOr[String] = js.undefined
-  var ignorePattern: String
-  var log: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.undefined
-  var migrationsSchema: js.UndefOr[String] = js.undefined
-  var migrationsTable: String
-  var noLock: js.UndefOr[Boolean] = js.undefined
-  var schema: js.UndefOr[String | js.Array[String]] = js.undefined
-  var singleTransaction: js.UndefOr[Boolean] = js.undefined
-  var timestamp: js.UndefOr[Boolean] = js.undefined
+  var checkOrder: js.UndefOr[Boolean] = js.native
+  var count: Double = js.native
+  var createMigrationsSchema: js.UndefOr[Boolean] = js.native
+  var createSchema: js.UndefOr[Boolean] = js.native
+  var decamelize: js.UndefOr[Boolean] = js.native
+  var dir: String = js.native
+  var direction: up | down = js.native
+  var dryRun: js.UndefOr[Boolean] = js.native
+  var fake: js.UndefOr[Boolean] = js.native
+  var file: js.UndefOr[String] = js.native
+  var ignorePattern: String = js.native
+  var log: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.native
+  var migrationsSchema: js.UndefOr[String] = js.native
+  var migrationsTable: String = js.native
+  var noLock: js.UndefOr[Boolean] = js.native
+  var schema: js.UndefOr[String | js.Array[String]] = js.native
+  var singleTransaction: js.UndefOr[Boolean] = js.native
+  var timestamp: js.UndefOr[Boolean] = js.native
 }
 
 object RunnerOptionConfig {
   @scala.inline
-  def apply(
-    count: Double,
-    dir: String,
-    direction: up | down,
-    ignorePattern: String,
-    migrationsTable: String,
-    checkOrder: js.UndefOr[Boolean] = js.undefined,
-    createMigrationsSchema: js.UndefOr[Boolean] = js.undefined,
-    createSchema: js.UndefOr[Boolean] = js.undefined,
-    decamelize: js.UndefOr[Boolean] = js.undefined,
-    dryRun: js.UndefOr[Boolean] = js.undefined,
-    fake: js.UndefOr[Boolean] = js.undefined,
-    file: String = null,
-    log: /* msg */ String => Unit = null,
-    migrationsSchema: String = null,
-    noLock: js.UndefOr[Boolean] = js.undefined,
-    schema: String | js.Array[String] = null,
-    singleTransaction: js.UndefOr[Boolean] = js.undefined,
-    timestamp: js.UndefOr[Boolean] = js.undefined
-  ): RunnerOptionConfig = {
+  def apply(count: Double, dir: String, direction: up | down, ignorePattern: String, migrationsTable: String): RunnerOptionConfig = {
     val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any], dir = dir.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], ignorePattern = ignorePattern.asInstanceOf[js.Any], migrationsTable = migrationsTable.asInstanceOf[js.Any])
-    if (!js.isUndefined(checkOrder)) __obj.updateDynamic("checkOrder")(checkOrder.asInstanceOf[js.Any])
-    if (!js.isUndefined(createMigrationsSchema)) __obj.updateDynamic("createMigrationsSchema")(createMigrationsSchema.asInstanceOf[js.Any])
-    if (!js.isUndefined(createSchema)) __obj.updateDynamic("createSchema")(createSchema.asInstanceOf[js.Any])
-    if (!js.isUndefined(decamelize)) __obj.updateDynamic("decamelize")(decamelize.asInstanceOf[js.Any])
-    if (!js.isUndefined(dryRun)) __obj.updateDynamic("dryRun")(dryRun.asInstanceOf[js.Any])
-    if (!js.isUndefined(fake)) __obj.updateDynamic("fake")(fake.asInstanceOf[js.Any])
-    if (file != null) __obj.updateDynamic("file")(file.asInstanceOf[js.Any])
-    if (log != null) __obj.updateDynamic("log")(js.Any.fromFunction1(log))
-    if (migrationsSchema != null) __obj.updateDynamic("migrationsSchema")(migrationsSchema.asInstanceOf[js.Any])
-    if (!js.isUndefined(noLock)) __obj.updateDynamic("noLock")(noLock.asInstanceOf[js.Any])
-    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
-    if (!js.isUndefined(singleTransaction)) __obj.updateDynamic("singleTransaction")(singleTransaction.asInstanceOf[js.Any])
-    if (!js.isUndefined(timestamp)) __obj.updateDynamic("timestamp")(timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[RunnerOptionConfig]
   }
+  @scala.inline
+  implicit class RunnerOptionConfigOps[Self <: RunnerOptionConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDir(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDirection(value: up | down): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIgnorePattern(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMigrationsTable(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("migrationsTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCheckOrder(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateMigrationsSchema(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createMigrationsSchema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateMigrationsSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createMigrationsSchema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateSchema(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createSchema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createSchema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecamelize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decamelize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecamelize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decamelize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFake(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fake")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFake: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fake")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLog(value: /* msg */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMigrationsSchema(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("migrationsSchema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMigrationsSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("migrationsSchema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoLock(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noLock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoLock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noLock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchema(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleTransaction(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleTransaction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleTransaction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleTransaction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

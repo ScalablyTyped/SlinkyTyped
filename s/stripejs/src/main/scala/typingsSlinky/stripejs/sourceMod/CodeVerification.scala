@@ -8,24 +8,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CodeVerification extends js.Object {
   /**
     * The number of attempts remaining to authenticate the
     * source object with a verification code
     */
-  var attempts_remaining: Double
+  var attempts_remaining: Double = js.native
   /**
     * The status of the code verification
     */
-  var status: pending | attempts_remaining | succeeded | failed
+  var status: pending | attempts_remaining | succeeded | failed = js.native
 }
 
 object CodeVerification {
   @scala.inline
   def apply(attempts_remaining: Double, status: pending | attempts_remaining | succeeded | failed): CodeVerification = {
     val __obj = js.Dynamic.literal(attempts_remaining = attempts_remaining.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CodeVerification]
   }
+  @scala.inline
+  implicit class CodeVerificationOps[Self <: CodeVerification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttempts_remaining(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attempts_remaining")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: pending | attempts_remaining | succeeded | failed): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -6,13 +6,13 @@ import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.Instantiable4
 import org.scalablytyped.runtime.Instantiable6
-import typingsSlinky.firebaseAppTypes.mod.FirebaseApp
 import typingsSlinky.firebaseAuthInteropTypes.mod.FirebaseAuthInternalName
 import typingsSlinky.firebaseComponent.mod.Provider
 import typingsSlinky.firebaseFirestore.databaseMod.FirestoreDatabase
 import typingsSlinky.firebaseFirestore.documentKeyMod.DocumentKey
 import typingsSlinky.firebaseFirestore.documentMod.Document
 import typingsSlinky.firebaseFirestore.fieldValueMod.FieldValueImpl
+import typingsSlinky.firebaseFirestore.mod.FirebaseApp
 import typingsSlinky.firebaseFirestore.pathMod.ResourcePath
 import typingsSlinky.firebaseFirestore.queryMod.Query
 import typingsSlinky.firebaseFirestore.viewSnapshotMod.ViewSnapshot
@@ -60,8 +60,8 @@ object indexDotconsoleMod extends js.Object {
   @js.native
   class Firestore protected ()
     extends typingsSlinky.firebaseFirestore.databaseMod.Firestore {
-    def this(databaseIdOrApp: FirebaseApp, authProvider: Provider[FirebaseAuthInternalName]) = this()
     def this(databaseIdOrApp: FirestoreDatabase, authProvider: Provider[FirebaseAuthInternalName]) = this()
+    def this(databaseIdOrApp: FirebaseApp, authProvider: Provider[FirebaseAuthInternalName]) = this()
   }
   
   @js.native
@@ -108,7 +108,7 @@ object indexDotconsoleMod extends js.Object {
   object Blob
     extends Instantiable0[typingsSlinky.firebaseFirestore.blobMod.Blob] {
     def fromBase64String(base64: String): typingsSlinky.firebaseFirestore.blobMod.Blob = js.native
-    def fromUint8Array(array: scala.scalajs.js.typedarray.Uint8Array): typingsSlinky.firebaseFirestore.blobMod.Blob = js.native
+    def fromUint8Array(array: js.typedarray.Uint8Array): typingsSlinky.firebaseFirestore.blobMod.Blob = js.native
   }
   
   @js.native
@@ -158,7 +158,7 @@ object indexDotconsoleMod extends js.Object {
   @js.native
   object Firestore extends js.Object {
     var databaseIdFromApp: js.Any = js.native
-    def logLevel(): LogLevel = js.native
+    def logLevel: LogLevel = js.native
     def setLogLevel(level: LogLevel): Unit = js.native
   }
   

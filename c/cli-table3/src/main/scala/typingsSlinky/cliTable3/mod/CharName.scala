@@ -25,36 +25,34 @@ trait CharName extends js.Object
 
 object CharName {
   @scala.inline
-  def bottom: typingsSlinky.cliTable3.cliTable3Strings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.cliTable3.cliTable3Strings.bottom = "bottom".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.bottom]
   @scala.inline
-  def `bottom-left`: typingsSlinky.cliTable3.cliTable3Strings.`bottom-left` = this.cast("bottom-left")
+  def `bottom-left`: typingsSlinky.cliTable3.cliTable3Strings.`bottom-left` = "bottom-left".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.`bottom-left`]
   @scala.inline
-  def `bottom-mid`: typingsSlinky.cliTable3.cliTable3Strings.`bottom-mid` = this.cast("bottom-mid")
+  def `bottom-mid`: typingsSlinky.cliTable3.cliTable3Strings.`bottom-mid` = "bottom-mid".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.`bottom-mid`]
   @scala.inline
-  def `bottom-right`: typingsSlinky.cliTable3.cliTable3Strings.`bottom-right` = this.cast("bottom-right")
+  def `bottom-right`: typingsSlinky.cliTable3.cliTable3Strings.`bottom-right` = "bottom-right".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.`bottom-right`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.cliTable3.cliTable3Strings.left = "left".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.left]
   @scala.inline
-  def left: typingsSlinky.cliTable3.cliTable3Strings.left = this.cast("left")
+  def `left-mid`: typingsSlinky.cliTable3.cliTable3Strings.`left-mid` = "left-mid".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.`left-mid`]
   @scala.inline
-  def `left-mid`: typingsSlinky.cliTable3.cliTable3Strings.`left-mid` = this.cast("left-mid")
+  def mid: typingsSlinky.cliTable3.cliTable3Strings.mid = "mid".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.mid]
   @scala.inline
-  def mid: typingsSlinky.cliTable3.cliTable3Strings.mid = this.cast("mid")
+  def `mid-mid`: typingsSlinky.cliTable3.cliTable3Strings.`mid-mid` = "mid-mid".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.`mid-mid`]
   @scala.inline
-  def `mid-mid`: typingsSlinky.cliTable3.cliTable3Strings.`mid-mid` = this.cast("mid-mid")
+  def middle: typingsSlinky.cliTable3.cliTable3Strings.middle = "middle".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.middle]
   @scala.inline
-  def middle: typingsSlinky.cliTable3.cliTable3Strings.middle = this.cast("middle")
+  def right: typingsSlinky.cliTable3.cliTable3Strings.right = "right".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.right]
   @scala.inline
-  def right: typingsSlinky.cliTable3.cliTable3Strings.right = this.cast("right")
+  def `right-mid`: typingsSlinky.cliTable3.cliTable3Strings.`right-mid` = "right-mid".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.`right-mid`]
   @scala.inline
-  def `right-mid`: typingsSlinky.cliTable3.cliTable3Strings.`right-mid` = this.cast("right-mid")
+  def top: typingsSlinky.cliTable3.cliTable3Strings.top = "top".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.top]
   @scala.inline
-  def top: typingsSlinky.cliTable3.cliTable3Strings.top = this.cast("top")
+  def `top-left`: typingsSlinky.cliTable3.cliTable3Strings.`top-left` = "top-left".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.`top-left`]
   @scala.inline
-  def `top-left`: typingsSlinky.cliTable3.cliTable3Strings.`top-left` = this.cast("top-left")
+  def `top-mid`: typingsSlinky.cliTable3.cliTable3Strings.`top-mid` = "top-mid".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.`top-mid`]
   @scala.inline
-  def `top-mid`: typingsSlinky.cliTable3.cliTable3Strings.`top-mid` = this.cast("top-mid")
-  @scala.inline
-  def `top-right`: typingsSlinky.cliTable3.cliTable3Strings.`top-right` = this.cast("top-right")
+  def `top-right`: typingsSlinky.cliTable3.cliTable3Strings.`top-right` = "top-right".asInstanceOf[typingsSlinky.cliTable3.cliTable3Strings.`top-right`]
 }
 

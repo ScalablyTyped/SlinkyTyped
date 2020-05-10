@@ -42,70 +42,68 @@ trait PredefinedMenuItemKey extends js.Object
 
 object PredefinedMenuItemKey {
   @scala.inline
-  def `---------`: typingsSlinky.handsontable.handsontableStrings.`---------` = this.cast("---------")
+  def `---------`: typingsSlinky.handsontable.handsontableStrings.`---------` = "---------".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.`---------`]
   @scala.inline
-  def add_child: typingsSlinky.handsontable.handsontableStrings.add_child = this.cast("add_child")
+  def add_child: typingsSlinky.handsontable.handsontableStrings.add_child = "add_child".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.add_child]
   @scala.inline
-  def alignment: typingsSlinky.handsontable.handsontableStrings.alignment = this.cast("alignment")
+  def alignment: typingsSlinky.handsontable.handsontableStrings.alignment = "alignment".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.alignment]
   @scala.inline
-  def borders: typingsSlinky.handsontable.handsontableStrings.borders = this.cast("borders")
+  def borders: typingsSlinky.handsontable.handsontableStrings.borders = "borders".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.borders]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def clear_column: typingsSlinky.handsontable.handsontableStrings.clear_column = "clear_column".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.clear_column]
   @scala.inline
-  def clear_column: typingsSlinky.handsontable.handsontableStrings.clear_column = this.cast("clear_column")
+  def col_left: typingsSlinky.handsontable.handsontableStrings.col_left = "col_left".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.col_left]
   @scala.inline
-  def col_left: typingsSlinky.handsontable.handsontableStrings.col_left = this.cast("col_left")
+  def col_right: typingsSlinky.handsontable.handsontableStrings.col_right = "col_right".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.col_right]
   @scala.inline
-  def col_right: typingsSlinky.handsontable.handsontableStrings.col_right = this.cast("col_right")
+  def commentsAddEdit: typingsSlinky.handsontable.handsontableStrings.commentsAddEdit = "commentsAddEdit".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.commentsAddEdit]
   @scala.inline
-  def commentsAddEdit: typingsSlinky.handsontable.handsontableStrings.commentsAddEdit = this.cast("commentsAddEdit")
+  def commentsReadOnly: typingsSlinky.handsontable.handsontableStrings.commentsReadOnly = "commentsReadOnly".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.commentsReadOnly]
   @scala.inline
-  def commentsReadOnly: typingsSlinky.handsontable.handsontableStrings.commentsReadOnly = this.cast("commentsReadOnly")
+  def commentsRemove: typingsSlinky.handsontable.handsontableStrings.commentsRemove = "commentsRemove".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.commentsRemove]
   @scala.inline
-  def commentsRemove: typingsSlinky.handsontable.handsontableStrings.commentsRemove = this.cast("commentsRemove")
+  def copy: typingsSlinky.handsontable.handsontableStrings.copy = "copy".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.copy]
   @scala.inline
-  def copy: typingsSlinky.handsontable.handsontableStrings.copy = this.cast("copy")
+  def cut: typingsSlinky.handsontable.handsontableStrings.cut = "cut".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.cut]
   @scala.inline
-  def cut: typingsSlinky.handsontable.handsontableStrings.cut = this.cast("cut")
+  def detach_from_parent: typingsSlinky.handsontable.handsontableStrings.detach_from_parent = "detach_from_parent".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.detach_from_parent]
   @scala.inline
-  def detach_from_parent: typingsSlinky.handsontable.handsontableStrings.detach_from_parent = this.cast("detach_from_parent")
+  def filter_action_bar: typingsSlinky.handsontable.handsontableStrings.filter_action_bar = "filter_action_bar".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.filter_action_bar]
   @scala.inline
-  def filter_action_bar: typingsSlinky.handsontable.handsontableStrings.filter_action_bar = this.cast("filter_action_bar")
+  def filter_by_condition: typingsSlinky.handsontable.handsontableStrings.filter_by_condition = "filter_by_condition".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.filter_by_condition]
   @scala.inline
-  def filter_by_condition: typingsSlinky.handsontable.handsontableStrings.filter_by_condition = this.cast("filter_by_condition")
+  def filter_by_condition2: typingsSlinky.handsontable.handsontableStrings.filter_by_condition2 = "filter_by_condition2".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.filter_by_condition2]
   @scala.inline
-  def filter_by_condition2: typingsSlinky.handsontable.handsontableStrings.filter_by_condition2 = this.cast("filter_by_condition2")
+  def filter_by_value: typingsSlinky.handsontable.handsontableStrings.filter_by_value = "filter_by_value".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.filter_by_value]
   @scala.inline
-  def filter_by_value: typingsSlinky.handsontable.handsontableStrings.filter_by_value = this.cast("filter_by_value")
+  def filter_operators: typingsSlinky.handsontable.handsontableStrings.filter_operators = "filter_operators".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.filter_operators]
   @scala.inline
-  def filter_operators: typingsSlinky.handsontable.handsontableStrings.filter_operators = this.cast("filter_operators")
+  def freeze_column: typingsSlinky.handsontable.handsontableStrings.freeze_column = "freeze_column".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.freeze_column]
   @scala.inline
-  def freeze_column: typingsSlinky.handsontable.handsontableStrings.freeze_column = this.cast("freeze_column")
+  def hidden_columns_hide: typingsSlinky.handsontable.handsontableStrings.hidden_columns_hide = "hidden_columns_hide".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.hidden_columns_hide]
   @scala.inline
-  def hidden_columns_hide: typingsSlinky.handsontable.handsontableStrings.hidden_columns_hide = this.cast("hidden_columns_hide")
+  def hidden_columns_show: typingsSlinky.handsontable.handsontableStrings.hidden_columns_show = "hidden_columns_show".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.hidden_columns_show]
   @scala.inline
-  def hidden_columns_show: typingsSlinky.handsontable.handsontableStrings.hidden_columns_show = this.cast("hidden_columns_show")
+  def hidden_rows_hide: typingsSlinky.handsontable.handsontableStrings.hidden_rows_hide = "hidden_rows_hide".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.hidden_rows_hide]
   @scala.inline
-  def hidden_rows_hide: typingsSlinky.handsontable.handsontableStrings.hidden_rows_hide = this.cast("hidden_rows_hide")
+  def hidden_rows_show: typingsSlinky.handsontable.handsontableStrings.hidden_rows_show = "hidden_rows_show".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.hidden_rows_show]
   @scala.inline
-  def hidden_rows_show: typingsSlinky.handsontable.handsontableStrings.hidden_rows_show = this.cast("hidden_rows_show")
+  def make_read_only: typingsSlinky.handsontable.handsontableStrings.make_read_only = "make_read_only".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.make_read_only]
   @scala.inline
-  def make_read_only: typingsSlinky.handsontable.handsontableStrings.make_read_only = this.cast("make_read_only")
+  def mergeCells: typingsSlinky.handsontable.handsontableStrings.mergeCells = "mergeCells".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.mergeCells]
   @scala.inline
-  def mergeCells: typingsSlinky.handsontable.handsontableStrings.mergeCells = this.cast("mergeCells")
+  def redo: typingsSlinky.handsontable.handsontableStrings.redo = "redo".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.redo]
   @scala.inline
-  def redo: typingsSlinky.handsontable.handsontableStrings.redo = this.cast("redo")
+  def remove_col: typingsSlinky.handsontable.handsontableStrings.remove_col = "remove_col".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.remove_col]
   @scala.inline
-  def remove_col: typingsSlinky.handsontable.handsontableStrings.remove_col = this.cast("remove_col")
+  def remove_row: typingsSlinky.handsontable.handsontableStrings.remove_row = "remove_row".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.remove_row]
   @scala.inline
-  def remove_row: typingsSlinky.handsontable.handsontableStrings.remove_row = this.cast("remove_row")
+  def row_above: typingsSlinky.handsontable.handsontableStrings.row_above = "row_above".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.row_above]
   @scala.inline
-  def row_above: typingsSlinky.handsontable.handsontableStrings.row_above = this.cast("row_above")
+  def row_below: typingsSlinky.handsontable.handsontableStrings.row_below = "row_below".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.row_below]
   @scala.inline
-  def row_below: typingsSlinky.handsontable.handsontableStrings.row_below = this.cast("row_below")
+  def undo: typingsSlinky.handsontable.handsontableStrings.undo = "undo".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.undo]
   @scala.inline
-  def undo: typingsSlinky.handsontable.handsontableStrings.undo = this.cast("undo")
-  @scala.inline
-  def unfreeze_column: typingsSlinky.handsontable.handsontableStrings.unfreeze_column = this.cast("unfreeze_column")
+  def unfreeze_column: typingsSlinky.handsontable.handsontableStrings.unfreeze_column = "unfreeze_column".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.unfreeze_column]
 }
 

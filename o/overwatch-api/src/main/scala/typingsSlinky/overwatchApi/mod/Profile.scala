@@ -8,17 +8,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Profile extends js.Object {
-  var competitive: AnonDamage
-  var endorsement: AnonFrame
-  var games: AnonCompetitive
-  var level: Double
-  var levelFrame: String
-  var playtime: AnonQuickplay
-  var portrait: String
-  var `private`: Boolean
-  var star: String
-  var username: String
+  var competitive: AnonDamage = js.native
+  var endorsement: AnonFrame = js.native
+  var games: AnonCompetitive = js.native
+  var level: Double = js.native
+  var levelFrame: String = js.native
+  var playtime: AnonQuickplay = js.native
+  var portrait: String = js.native
+  var `private`: Boolean = js.native
+  var star: String = js.native
+  var username: String = js.native
 }
 
 object Profile {
@@ -39,5 +40,73 @@ object Profile {
     __obj.updateDynamic("private")(`private`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Profile]
   }
+  @scala.inline
+  implicit class ProfileOps[Self <: Profile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompetitive(value: AnonDamage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("competitive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndorsement(value: AnonFrame): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endorsement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGames(value: AnonCompetitive): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("games")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLevelFrame(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levelFrame")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlaytime(value: AnonQuickplay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("playtime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPortrait(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portrait")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrivate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("private")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStar(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("star")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

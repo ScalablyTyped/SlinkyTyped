@@ -19,94 +19,95 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IPayout extends IResourceObject {
   /**
     * Amount (in cents) to be transferred to your bank account or debit card
     */
-  var amount: Double
+  var amount: Double = js.native
   /**
     * Date the payout is expected to arrive in the bank. This factors in delays like weekends or bank holidays
     */
-  var arrival_date: Double
+  var arrival_date: Double = js.native
   /**
     * Returns true if the payout was created by an automated payout schedule, and false if it was requested manually.
     */
-  var automatic: Boolean
+  var automatic: Boolean = js.native
   /**
     * Balance transaction that describes the impact of this transfer on your account balance. [Expandable]
     */
-  var balance_transaction: String | IBalanceTransaction
+  var balance_transaction: String | IBalanceTransaction = js.native
   /**
     * Time at which the object was created. Measured in seconds since the Unix epoch
     */
-  var created: Double
+  var created: Double = js.native
   /**
     * Three-letter ISO currency code, in lowercase. Must be a supported currency.
     * https://stripe.com/docs/currencies
     */
-  var currency: String
+  var currency: String = js.native
   /**
     * An arbitrary string attached to the object. Often useful for displaying to users
     */
-  var description: String
+  var description: String = js.native
   /**
     * ID of the bank account or card the payout was sent to. [Expandable]
     */
-  var destination: String | IBankAccount | ICardHash
+  var destination: String | IBankAccount | ICardHash = js.native
   /**
     * If the payout failed or was canceled, this will be the ID of the balance
     * transaction that reversed the initial balance transaction, and puts the
     * funds from the failed payout back in your balance. [Expandable]
     */
-  var failure_balance_transaction: String | IBalanceTransaction
+  var failure_balance_transaction: String | IBalanceTransaction = js.native
   /**
     * Error code explaining reason for payout failure if available. See Types of payout failures for a
     * list of failure codes: https://stripe.com/docs/api#payout_failures
     */
-  var failure_code: String
+  var failure_code: String = js.native
   /**
     * Message to user further explaining reason for the payout failure if available
     */
-  var failure_message: String
+  var failure_message: String = js.native
   /**
     * Flag indicating whether the object exists in live mode or test mode
     */
-  var livemode: Boolean
+  var livemode: Boolean = js.native
   /**
     * Set of key/value pairs that you can attach to an object. It can be useful for storing additional
     * information about the object in a structured format.
     */
-  var metadata: IMetadata
+  var metadata: IMetadata = js.native
   /**
     * The method used to send this payout, which can be standard or instant. instant is only supported
     * for payouts to debit cards.
     */
-  var method: PayoutMethods
+  var method: PayoutMethods = js.native
   /**
     * Value is "payout"
     */
   @JSName("object")
-  var object_IPayout: payout
+  var object_IPayout: payout = js.native
   /**
     * The source balance this payout came from.
     * One of card, bank_account, bitcoin_receiver, or alipay_account
     */
-  var source_type: alipay_account | bank_account | bitcoin_receiver | card
+  var source_type: alipay_account | bank_account | bitcoin_receiver | card = js.native
   /**
     * Extra information about a payout to be displayed on the user's bank statement
     */
-  var statement_descriptor: String
+  var statement_descriptor: String = js.native
   /**
     * Current status of the payout (paid, pending, in_transit, canceled or failed).
     * A payout will be pending until it is submitted to the bank, at which point it
     * becomes in_transit. It will then change to paid if the transaction goes through.
     * If it does not go through successfully, its status will change to failed or canceled.
     */
-  var status: canceled | failed | in_transit | paid | pending
+  var status: canceled | failed | in_transit | paid | pending = js.native
   /**
     * Can be bank_account or card.
     */
-  var `type`: PayoutTypes
+  var `type`: PayoutTypes = js.native
 }
 
 object IPayout {
@@ -138,5 +139,127 @@ object IPayout {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPayout]
   }
+  @scala.inline
+  implicit class IPayoutOps[Self <: IPayout] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAmount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArrival_date(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrival_date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutomatic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("automatic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBalance_transaction(value: String | IBalanceTransaction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("balance_transaction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreated(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrency(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestination(value: String | IBankAccount | ICardHash): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFailure_balance_transaction(value: String | IBalanceTransaction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failure_balance_transaction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFailure_code(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failure_code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFailure_message(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failure_message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLivemode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("livemode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: IMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMethod(value: PayoutMethods): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObject(value: payout): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSource_type(value: alipay_account | bank_account | bitcoin_receiver | card): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source_type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatement_descriptor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statement_descriptor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: canceled | failed | in_transit | paid | pending): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: PayoutTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

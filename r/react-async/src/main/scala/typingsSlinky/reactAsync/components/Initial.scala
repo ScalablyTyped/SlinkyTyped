@@ -1,14 +1,16 @@
 package typingsSlinky.reactAsync.components
 
+import typingsSlinky.reactAsync.AnonChildren
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Initial extends SharedApply_AnonChildren1395615879 {
+object Initial {
   @JSImport("react-async", "default.Initial")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps[T](p: AnonChildren[T]): SharedBuilder_AnonChildren1879072467[T] = new SharedBuilder_AnonChildren1879072467[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[T](companion: Initial.type): SharedBuilder_AnonChildren1879072467[T] = new SharedBuilder_AnonChildren1879072467[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

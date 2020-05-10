@@ -57,28 +57,125 @@ trait GetPolicyDocumentStatement extends js.Object {
 
 object GetPolicyDocumentStatement {
   @scala.inline
-  def apply(
-    actions: js.Array[String] = null,
-    conditions: js.Array[GetPolicyDocumentStatementCondition] = null,
-    effect: String = null,
-    notActions: js.Array[String] = null,
-    notPrincipals: js.Array[GetPolicyDocumentStatementNotPrincipal] = null,
-    notResources: js.Array[String] = null,
-    principals: js.Array[GetPolicyDocumentStatementPrincipal] = null,
-    resources: js.Array[String] = null,
-    sid: String = null
-  ): GetPolicyDocumentStatement = {
+  def apply(): GetPolicyDocumentStatement = {
     val __obj = js.Dynamic.literal()
-    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
-    if (conditions != null) __obj.updateDynamic("conditions")(conditions.asInstanceOf[js.Any])
-    if (effect != null) __obj.updateDynamic("effect")(effect.asInstanceOf[js.Any])
-    if (notActions != null) __obj.updateDynamic("notActions")(notActions.asInstanceOf[js.Any])
-    if (notPrincipals != null) __obj.updateDynamic("notPrincipals")(notPrincipals.asInstanceOf[js.Any])
-    if (notResources != null) __obj.updateDynamic("notResources")(notResources.asInstanceOf[js.Any])
-    if (principals != null) __obj.updateDynamic("principals")(principals.asInstanceOf[js.Any])
-    if (resources != null) __obj.updateDynamic("resources")(resources.asInstanceOf[js.Any])
-    if (sid != null) __obj.updateDynamic("sid")(sid.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPolicyDocumentStatement]
   }
+  @scala.inline
+  implicit class GetPolicyDocumentStatementOps[Self <: GetPolicyDocumentStatement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConditions(value: js.Array[GetPolicyDocumentStatementCondition]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConditions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEffect(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEffect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotActions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notActions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotPrincipals(value: js.Array[GetPolicyDocumentStatementNotPrincipal]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notPrincipals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotPrincipals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notPrincipals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotResources(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notResources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notResources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrincipals(value: js.Array[GetPolicyDocumentStatementPrincipal]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("principals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrincipals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("principals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResources(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sid")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,39 +1,33 @@
 package typingsSlinky.reactSparklines.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSparklines.mod.Point
 import typingsSlinky.reactSparklines.mod.SparklinesTextProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SparklinesText
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactSparklines.mod.SparklinesText] {
+object SparklinesText {
   @JSImport("react-sparklines", "SparklinesText")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    fontFamily: String = null,
-    fontSize: Int | Double = null,
-    point: Point = null,
-    text: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactSparklines.mod.SparklinesText] = {
-    val __obj = js.Dynamic.literal()
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
-    if (point != null) __obj.updateDynamic("point")(point.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactSparklines.mod.SparklinesText] {
+    @scala.inline
+    def fontFamily(value: String): this.type = set("fontFamily", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fontSize(value: Double): this.type = set("fontSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def point(value: Point): this.type = set("point", value.asInstanceOf[js.Any])
+    @scala.inline
+    def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactSparklines.mod.SparklinesText] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactSparklines.mod.SparklinesText](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SparklinesTextProps
+  
+  def withProps(p: SparklinesTextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SparklinesText.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,10 +1,8 @@
 package typingsSlinky.reactNativeSortableList.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeSortableList.mod.DataByNumber
@@ -16,62 +14,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativeSortableList
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any, js.Any]] {
+object ReactNativeSortableList {
   @JSImport("react-native-sortable-list", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[T, K](
-    data: DataByNumber[T] | DataByString[T],
-    renderRow: RowProps[T, K] => ReactElement | Null,
-    autoscrollAreaSize: Int | Double = null,
-    contentContainerStyle: StyleProp[ViewStyle] = null,
-    horizontal: js.UndefOr[Boolean] = js.undefined,
-    innerContainerStyle: StyleProp[ViewStyle] = null,
-    manuallyActivateRows: js.UndefOr[Boolean] = js.undefined,
-    onActivateRow: K => Unit = null,
-    onChangeOrder: /* nextOrder */ js.Array[K] => Unit = null,
-    onPressRow: K => Unit = null,
-    onReleaseRow: (K, /* currentOrder */ js.Array[K]) => Unit = null,
-    order: js.Array[K] = null,
-    refreshControl: ReactElement = null,
-    renderFooter: () => ReactElement = null,
-    renderHeader: () => ReactElement = null,
-    rowActivationTime: Int | Double = null,
-    scrollEnabled: js.UndefOr[Boolean] = js.undefined,
-    showsHorizontalScrollIndicator: js.UndefOr[Boolean] = js.undefined,
-    showsVerticalScrollIndicator: js.UndefOr[Boolean] = js.undefined,
-    sortingEnabled: js.UndefOr[Boolean] = js.undefined,
-    style: StyleProp[ViewStyle] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default[js.Any, js.Any]] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], renderRow = js.Any.fromFunction1(renderRow))
-    if (autoscrollAreaSize != null) __obj.updateDynamic("autoscrollAreaSize")(autoscrollAreaSize.asInstanceOf[js.Any])
-    if (contentContainerStyle != null) __obj.updateDynamic("contentContainerStyle")(contentContainerStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.asInstanceOf[js.Any])
-    if (innerContainerStyle != null) __obj.updateDynamic("innerContainerStyle")(innerContainerStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(manuallyActivateRows)) __obj.updateDynamic("manuallyActivateRows")(manuallyActivateRows.asInstanceOf[js.Any])
-    if (onActivateRow != null) __obj.updateDynamic("onActivateRow")(js.Any.fromFunction1(onActivateRow))
-    if (onChangeOrder != null) __obj.updateDynamic("onChangeOrder")(js.Any.fromFunction1(onChangeOrder))
-    if (onPressRow != null) __obj.updateDynamic("onPressRow")(js.Any.fromFunction1(onPressRow))
-    if (onReleaseRow != null) __obj.updateDynamic("onReleaseRow")(js.Any.fromFunction2(onReleaseRow))
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
-    if (refreshControl != null) __obj.updateDynamic("refreshControl")(refreshControl.asInstanceOf[js.Any])
-    if (renderFooter != null) __obj.updateDynamic("renderFooter")(js.Any.fromFunction0(renderFooter))
-    if (renderHeader != null) __obj.updateDynamic("renderHeader")(js.Any.fromFunction0(renderHeader))
-    if (rowActivationTime != null) __obj.updateDynamic("rowActivationTime")(rowActivationTime.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollEnabled)) __obj.updateDynamic("scrollEnabled")(scrollEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(showsHorizontalScrollIndicator)) __obj.updateDynamic("showsHorizontalScrollIndicator")(showsHorizontalScrollIndicator.asInstanceOf[js.Any])
-    if (!js.isUndefined(showsVerticalScrollIndicator)) __obj.updateDynamic("showsVerticalScrollIndicator")(showsVerticalScrollIndicator.asInstanceOf[js.Any])
-    if (!js.isUndefined(sortingEnabled)) __obj.updateDynamic("sortingEnabled")(sortingEnabled.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactNativeSortableList.mod.default[js.Any, js.Any]]]
+  @scala.inline
+  class Builder[T, K] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default[js.Any, js.Any]] {
+    @scala.inline
+    def autoscrollAreaSize(value: Double): this.type = set("autoscrollAreaSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentContainerStyle(value: StyleProp[ViewStyle]): this.type = set("contentContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentContainerStyleNull: this.type = set("contentContainerStyle", null)
+    @scala.inline
+    def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerContainerStyle(value: StyleProp[ViewStyle]): this.type = set("innerContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerContainerStyleNull: this.type = set("innerContainerStyle", null)
+    @scala.inline
+    def manuallyActivateRows(value: Boolean): this.type = set("manuallyActivateRows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onActivateRow(value: K => Unit): this.type = set("onActivateRow", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChangeOrder(value: /* nextOrder */ js.Array[K] => Unit): this.type = set("onChangeOrder", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPressRow(value: K => Unit): this.type = set("onPressRow", js.Any.fromFunction1(value))
+    @scala.inline
+    def onReleaseRow(value: (K, /* currentOrder */ js.Array[K]) => Unit): this.type = set("onReleaseRow", js.Any.fromFunction2(value))
+    @scala.inline
+    def order(value: js.Array[K]): this.type = set("order", value.asInstanceOf[js.Any])
+    @scala.inline
+    def refreshControl(value: ReactElement): this.type = set("refreshControl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderFooter(value: () => ReactElement): this.type = set("renderFooter", js.Any.fromFunction0(value))
+    @scala.inline
+    def renderHeader(value: () => ReactElement): this.type = set("renderHeader", js.Any.fromFunction0(value))
+    @scala.inline
+    def rowActivationTime(value: Double): this.type = set("rowActivationTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollEnabled(value: Boolean): this.type = set("scrollEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showsHorizontalScrollIndicator(value: Boolean): this.type = set("showsHorizontalScrollIndicator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showsVerticalScrollIndicator(value: Boolean): this.type = set("showsVerticalScrollIndicator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sortingEnabled(value: Boolean): this.type = set("sortingEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
   }
-  type Props = SortableListProps[js.Any, js.Any]
+  
+  def withProps[T, K](p: SortableListProps[T, K]): Builder[T, K] = new Builder[T, K](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T, K](data: DataByNumber[T] | DataByString[T], renderRow: RowProps[T, K] => ReactElement | Null): Builder[T, K] = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], renderRow = js.Any.fromFunction1(renderRow))
+    new Builder[T, K](js.Array(this.component, __props.asInstanceOf[SortableListProps[T, K]]))
+  }
 }
 

@@ -30,18 +30,65 @@ trait SchemaInitialStateConfig extends js.Object {
 
 object SchemaInitialStateConfig {
   @scala.inline
-  def apply(
-    dbs: js.Array[SchemaFileContentBuffer] = null,
-    dbxs: js.Array[SchemaFileContentBuffer] = null,
-    keks: js.Array[SchemaFileContentBuffer] = null,
-    pk: SchemaFileContentBuffer = null
-  ): SchemaInitialStateConfig = {
+  def apply(): SchemaInitialStateConfig = {
     val __obj = js.Dynamic.literal()
-    if (dbs != null) __obj.updateDynamic("dbs")(dbs.asInstanceOf[js.Any])
-    if (dbxs != null) __obj.updateDynamic("dbxs")(dbxs.asInstanceOf[js.Any])
-    if (keks != null) __obj.updateDynamic("keks")(keks.asInstanceOf[js.Any])
-    if (pk != null) __obj.updateDynamic("pk")(pk.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInitialStateConfig]
   }
+  @scala.inline
+  implicit class SchemaInitialStateConfigOps[Self <: SchemaInitialStateConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDbs(value: js.Array[SchemaFileContentBuffer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDbs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDbxs(value: js.Array[SchemaFileContentBuffer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbxs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDbxs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbxs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeks(value: js.Array[SchemaFileContentBuffer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPk(value: SchemaFileContentBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pk")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPk: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pk")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

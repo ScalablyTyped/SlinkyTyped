@@ -43,22 +43,89 @@ trait SchemaGooglePrivacyDlpV2Finding extends js.Object {
 
 object SchemaGooglePrivacyDlpV2Finding {
   @scala.inline
-  def apply(
-    createTime: String = null,
-    infoType: SchemaGooglePrivacyDlpV2InfoType = null,
-    likelihood: String = null,
-    location: SchemaGooglePrivacyDlpV2Location = null,
-    quote: String = null,
-    quoteInfo: SchemaGooglePrivacyDlpV2QuoteInfo = null
-  ): SchemaGooglePrivacyDlpV2Finding = {
+  def apply(): SchemaGooglePrivacyDlpV2Finding = {
     val __obj = js.Dynamic.literal()
-    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
-    if (infoType != null) __obj.updateDynamic("infoType")(infoType.asInstanceOf[js.Any])
-    if (likelihood != null) __obj.updateDynamic("likelihood")(likelihood.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (quote != null) __obj.updateDynamic("quote")(quote.asInstanceOf[js.Any])
-    if (quoteInfo != null) __obj.updateDynamic("quoteInfo")(quoteInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2Finding]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2FindingOps[Self <: SchemaGooglePrivacyDlpV2Finding] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInfoType(value: SchemaGooglePrivacyDlpV2InfoType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infoType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInfoType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infoType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLikelihood(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("likelihood")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLikelihood: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("likelihood")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: SchemaGooglePrivacyDlpV2Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuote(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuote: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quote")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuoteInfo(value: SchemaGooglePrivacyDlpV2QuoteInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quoteInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuoteInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quoteInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

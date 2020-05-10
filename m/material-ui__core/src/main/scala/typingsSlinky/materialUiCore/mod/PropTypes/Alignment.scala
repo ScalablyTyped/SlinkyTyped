@@ -15,16 +15,14 @@ trait Alignment extends js.Object
 
 object Alignment {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.materialUiCore.materialUiCoreStrings.center = "center".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.center]
   @scala.inline
-  def center: typingsSlinky.materialUiCore.materialUiCoreStrings.center = this.cast("center")
+  def inherit: typingsSlinky.materialUiCore.materialUiCoreStrings.inherit = "inherit".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.materialUiCore.materialUiCoreStrings.inherit = this.cast("inherit")
+  def justify: typingsSlinky.materialUiCore.materialUiCoreStrings.justify = "justify".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.justify]
   @scala.inline
-  def justify: typingsSlinky.materialUiCore.materialUiCoreStrings.justify = this.cast("justify")
+  def left: typingsSlinky.materialUiCore.materialUiCoreStrings.left = "left".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.left]
   @scala.inline
-  def left: typingsSlinky.materialUiCore.materialUiCoreStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.materialUiCore.materialUiCoreStrings.right = this.cast("right")
+  def right: typingsSlinky.materialUiCore.materialUiCoreStrings.right = "right".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.right]
 }
 

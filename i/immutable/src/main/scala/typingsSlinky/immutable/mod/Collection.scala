@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.immutable.Immutable.Seq.Indexed
 import typingsSlinky.immutable.Immutable.Seq.Keyed
 import typingsSlinky.immutable.Immutable.Seq.Set
-import typingsSlinky.std.Iterable
 import typingsSlinky.std.IterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -837,7 +836,7 @@ object Collection extends js.Object {
   @js.native
   trait Indexed[T]
     extends typingsSlinky.immutable.Immutable.Collection[Double, T] {
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[IterableIterator[T]] = js.native
     /**
       * Returns a new Collection with only the values for which the `predicate`
@@ -1023,7 +1022,7 @@ object Collection extends js.Object {
   @js.native
   trait Keyed[K, V]
     extends typingsSlinky.immutable.Immutable.Collection[K, V] {
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[IterableIterator[js.Tuple2[K, V]]] = js.native
     /**
       * Returns a new Collection with other collections concatenated to this one.
@@ -1110,7 +1109,7 @@ object Collection extends js.Object {
   @js.native
   trait Set[T]
     extends typingsSlinky.immutable.Immutable.Collection[T, T] {
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[IterableIterator[T]] = js.native
     /**
       * Returns a new Collection with only the values for which the `predicate`
@@ -1129,7 +1128,7 @@ object Collection extends js.Object {
   }
   
   def apply[I /* <: typingsSlinky.immutable.Immutable.Collection[_, _] */](collection: I): I = js.native
-  def apply[T](collection: Iterable[T]): typingsSlinky.immutable.Immutable.Collection.Indexed[T] = js.native
+  def apply[T](collection: js.Iterable[T]): typingsSlinky.immutable.Immutable.Collection.Indexed[T] = js.native
   def apply[V](obj: StringDictionary[V]): typingsSlinky.immutable.Immutable.Collection.Keyed[String, V] = js.native
   /**
     * @deprecated use `const { isAssociative } = require('immutable')`
@@ -1155,7 +1154,7 @@ object Collection extends js.Object {
   @js.native
   object Keyed extends js.Object {
     def apply[V](obj: StringDictionary[V]): typingsSlinky.immutable.Immutable.Collection.Keyed[String, V] = js.native
-    def apply[K, V](collection: Iterable[js.Tuple2[K, V]]): typingsSlinky.immutable.Immutable.Collection.Keyed[K, V] = js.native
+    def apply[K, V](collection: js.Iterable[js.Tuple2[K, V]]): typingsSlinky.immutable.Immutable.Collection.Keyed[K, V] = js.native
   }
   
   @js.native

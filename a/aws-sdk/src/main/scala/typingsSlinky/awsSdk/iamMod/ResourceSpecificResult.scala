@@ -34,20 +34,77 @@ trait ResourceSpecificResult extends js.Object {
 
 object ResourceSpecificResult {
   @scala.inline
-  def apply(
-    EvalResourceDecision: PolicyEvaluationDecisionType,
-    EvalResourceName: ResourceNameType,
-    EvalDecisionDetails: EvalDecisionDetailsType = null,
-    MatchedStatements: StatementListType = null,
-    MissingContextValues: ContextKeyNamesResultListType = null,
-    PermissionsBoundaryDecisionDetail: PermissionsBoundaryDecisionDetail = null
-  ): ResourceSpecificResult = {
+  def apply(EvalResourceDecision: PolicyEvaluationDecisionType, EvalResourceName: ResourceNameType): ResourceSpecificResult = {
     val __obj = js.Dynamic.literal(EvalResourceDecision = EvalResourceDecision.asInstanceOf[js.Any], EvalResourceName = EvalResourceName.asInstanceOf[js.Any])
-    if (EvalDecisionDetails != null) __obj.updateDynamic("EvalDecisionDetails")(EvalDecisionDetails.asInstanceOf[js.Any])
-    if (MatchedStatements != null) __obj.updateDynamic("MatchedStatements")(MatchedStatements.asInstanceOf[js.Any])
-    if (MissingContextValues != null) __obj.updateDynamic("MissingContextValues")(MissingContextValues.asInstanceOf[js.Any])
-    if (PermissionsBoundaryDecisionDetail != null) __obj.updateDynamic("PermissionsBoundaryDecisionDetail")(PermissionsBoundaryDecisionDetail.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceSpecificResult]
   }
+  @scala.inline
+  implicit class ResourceSpecificResultOps[Self <: ResourceSpecificResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEvalResourceDecision(value: PolicyEvaluationDecisionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvalResourceDecision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvalResourceName(value: ResourceNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvalResourceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvalDecisionDetails(value: EvalDecisionDetailsType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvalDecisionDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvalDecisionDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvalDecisionDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatchedStatements(value: StatementListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchedStatements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatchedStatements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchedStatements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMissingContextValues(value: ContextKeyNamesResultListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MissingContextValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMissingContextValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MissingContextValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermissionsBoundaryDecisionDetail(value: PermissionsBoundaryDecisionDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsBoundaryDecisionDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermissionsBoundaryDecisionDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsBoundaryDecisionDetail")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -28,8 +28,39 @@ object GetRateBasedStatementManagedKeysRequest {
   @scala.inline
   def apply(RuleName: EntityName, Scope: Scope, WebACLId: EntityId, WebACLName: EntityName): GetRateBasedStatementManagedKeysRequest = {
     val __obj = js.Dynamic.literal(RuleName = RuleName.asInstanceOf[js.Any], Scope = Scope.asInstanceOf[js.Any], WebACLId = WebACLId.asInstanceOf[js.Any], WebACLName = WebACLName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetRateBasedStatementManagedKeysRequest]
   }
+  @scala.inline
+  implicit class GetRateBasedStatementManagedKeysRequestOps[Self <: GetRateBasedStatementManagedKeysRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRuleName(value: EntityName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScope(value: Scope): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWebACLId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebACLId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWebACLName(value: EntityName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebACLName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

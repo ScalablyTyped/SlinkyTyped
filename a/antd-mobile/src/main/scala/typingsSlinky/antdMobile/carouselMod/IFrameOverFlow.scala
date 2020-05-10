@@ -12,10 +12,8 @@ trait IFrameOverFlow extends js.Object
 
 object IFrameOverFlow {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hidden: typingsSlinky.antdMobile.antdMobileStrings.hidden = "hidden".asInstanceOf[typingsSlinky.antdMobile.antdMobileStrings.hidden]
   @scala.inline
-  def hidden: typingsSlinky.antdMobile.antdMobileStrings.hidden = this.cast("hidden")
-  @scala.inline
-  def visible: typingsSlinky.antdMobile.antdMobileStrings.visible = this.cast("visible")
+  def visible: typingsSlinky.antdMobile.antdMobileStrings.visible = "visible".asInstanceOf[typingsSlinky.antdMobile.antdMobileStrings.visible]
 }
 

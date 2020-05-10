@@ -14,10 +14,29 @@ trait GetPullRequestApprovalStatesOutput extends js.Object {
 
 object GetPullRequestApprovalStatesOutput {
   @scala.inline
-  def apply(approvals: ApprovalList = null): GetPullRequestApprovalStatesOutput = {
+  def apply(): GetPullRequestApprovalStatesOutput = {
     val __obj = js.Dynamic.literal()
-    if (approvals != null) __obj.updateDynamic("approvals")(approvals.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPullRequestApprovalStatesOutput]
   }
+  @scala.inline
+  implicit class GetPullRequestApprovalStatesOutputOps[Self <: GetPullRequestApprovalStatesOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApprovals(value: ApprovalList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvals")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

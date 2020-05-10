@@ -6,10 +6,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StringMetadata extends Metadata {
-  var Format: String
-  var ImeMode: typingsSlinky.powerappsComponentFramework.ComponentFramework.PropertyHelper.Types.ImeMode
-  var MaxLength: Double
+  var Format: String = js.native
+  var ImeMode: typingsSlinky.powerappsComponentFramework.ComponentFramework.PropertyHelper.Types.ImeMode = js.native
+  var MaxLength: Double = js.native
 }
 
 object StringMetadata {
@@ -26,8 +27,33 @@ object StringMetadata {
     SourceType: Double
   ): StringMetadata = {
     val __obj = js.Dynamic.literal(Description = Description.asInstanceOf[js.Any], DisplayName = DisplayName.asInstanceOf[js.Any], Format = Format.asInstanceOf[js.Any], ImeMode = ImeMode.asInstanceOf[js.Any], IsSecured = IsSecured.asInstanceOf[js.Any], LogicalName = LogicalName.asInstanceOf[js.Any], MaxLength = MaxLength.asInstanceOf[js.Any], RequiredLevel = RequiredLevel.asInstanceOf[js.Any], SourceType = SourceType.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[StringMetadata]
   }
+  @scala.inline
+  implicit class StringMetadataOps[Self <: StringMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImeMode(value: ImeMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImeMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

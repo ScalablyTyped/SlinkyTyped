@@ -23,32 +23,30 @@ trait FRAMEWORK_QUERY_KEY extends js.Object
 
 object FRAMEWORK_QUERY_KEY {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `high-resolution`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`high-resolution` = "high-resolution".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`high-resolution`]
   @scala.inline
-  def `high-resolution`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`high-resolution` = this.cast("high-resolution")
+  def `lg-down`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`lg-down` = "lg-down".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`lg-down`]
   @scala.inline
-  def `lg-down`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`lg-down` = this.cast("lg-down")
+  def `lg-only`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`lg-only` = "lg-only".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`lg-only`]
   @scala.inline
-  def `lg-only`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`lg-only` = this.cast("lg-only")
+  def `lg-up`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`lg-up` = "lg-up".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`lg-up`]
   @scala.inline
-  def `lg-up`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`lg-up` = this.cast("lg-up")
+  def `md-down`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`md-down` = "md-down".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`md-down`]
   @scala.inline
-  def `md-down`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`md-down` = this.cast("md-down")
+  def `md-only`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`md-only` = "md-only".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`md-only`]
   @scala.inline
-  def `md-only`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`md-only` = this.cast("md-only")
+  def `md-up`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`md-up` = "md-up".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`md-up`]
   @scala.inline
-  def `md-up`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`md-up` = this.cast("md-up")
+  def `sm-only`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`sm-only` = "sm-only".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`sm-only`]
   @scala.inline
-  def `sm-only`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`sm-only` = this.cast("sm-only")
+  def `sm-up`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`sm-up` = "sm-up".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`sm-up`]
   @scala.inline
-  def `sm-up`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`sm-up` = this.cast("sm-up")
+  def `xl-down`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`xl-down` = "xl-down".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`xl-down`]
   @scala.inline
-  def `xl-down`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`xl-down` = this.cast("xl-down")
+  def `xl-only`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`xl-only` = "xl-only".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`xl-only`]
   @scala.inline
-  def `xl-only`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`xl-only` = this.cast("xl-only")
+  def `xl-up`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`xl-up` = "xl-up".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`xl-up`]
   @scala.inline
-  def `xl-up`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`xl-up` = this.cast("xl-up")
-  @scala.inline
-  def `xxl-up`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`xxl-up` = this.cast("xxl-up")
+  def `xxl-up`: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`xxl-up` = "xxl-up".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`xxl-up`]
 }
 

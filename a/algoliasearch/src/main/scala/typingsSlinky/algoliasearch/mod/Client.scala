@@ -6,7 +6,6 @@ import typingsSlinky.algoliasearch.AnonParams
 import typingsSlinky.algoliasearch.algoliasearchStrings.rules
 import typingsSlinky.algoliasearch.algoliasearchStrings.settings
 import typingsSlinky.algoliasearch.algoliasearchStrings.synonyms
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +26,7 @@ trait Client extends js.Object {
   /**
     * Add global API Keys
     */
-  def addApiKey(scopes: js.Array[String], cb: js.Function2[/* err */ Error, /* res */ AddApiKeyTask, Unit]): Unit = js.native
+  def addApiKey(scopes: js.Array[String], cb: js.Function2[/* err */ js.Error, /* res */ AddApiKeyTask, Unit]): Unit = js.native
   def addApiKey(scopes: js.Array[String], options: ApiKeyOptions): js.Promise[AddApiKeyTask] = js.native
   /**
     * Add global API Key
@@ -56,7 +55,7 @@ trait Client extends js.Object {
   /**
     * Copy an index from a specific index to a new one
     */
-  def copyIndex(from: String, to: String, cb: js.Function2[/* err */ Error, /* res */ UpdateIndexTask, Unit]): Unit = js.native
+  def copyIndex(from: String, to: String, cb: js.Function2[/* err */ js.Error, /* res */ UpdateIndexTask, Unit]): Unit = js.native
   def copyIndex(from: String, to: String, scope: js.Array[settings | synonyms | rules]): js.Promise[UpdateIndexTask] = js.native
   /**
     * Copy settings of an index from a specific index to a new one
@@ -172,7 +171,7 @@ trait Client extends js.Object {
   def updateApiKey(
     key: String,
     scopes: js.Array[String],
-    cb: js.Function2[/* err */ Error, /* res */ UpdateApiKeyTask, Unit]
+    cb: js.Function2[/* err */ js.Error, /* res */ UpdateApiKeyTask, Unit]
   ): Unit = js.native
   def updateApiKey(key: String, scopes: js.Array[String], options: ApiKeyOptions): js.Promise[UpdateApiKeyTask] = js.native
   /**

@@ -4,43 +4,138 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TextFormat extends js.Object {
   /** True if the text is bold. */
-  var bold: js.UndefOr[Boolean] = js.undefined
+  var bold: js.UndefOr[Boolean] = js.native
   /** The font family. */
-  var fontFamily: js.UndefOr[String] = js.undefined
+  var fontFamily: js.UndefOr[String] = js.native
   /** The size of the font. */
-  var fontSize: js.UndefOr[Double] = js.undefined
+  var fontSize: js.UndefOr[Double] = js.native
   /** The foreground color of the text. */
-  var foregroundColor: js.UndefOr[Color] = js.undefined
+  var foregroundColor: js.UndefOr[Color] = js.native
+  /**
+    * The foreground color of the text.
+    * If foreground_color is also set, this field takes precedence.
+    */
+  var foregroundColorStyle: js.UndefOr[ColorStyle] = js.native
   /** True if the text is italicized. */
-  var italic: js.UndefOr[Boolean] = js.undefined
+  var italic: js.UndefOr[Boolean] = js.native
   /** True if the text has a strikethrough. */
-  var strikethrough: js.UndefOr[Boolean] = js.undefined
+  var strikethrough: js.UndefOr[Boolean] = js.native
   /** True if the text is underlined. */
-  var underline: js.UndefOr[Boolean] = js.undefined
+  var underline: js.UndefOr[Boolean] = js.native
 }
 
 object TextFormat {
   @scala.inline
-  def apply(
-    bold: js.UndefOr[Boolean] = js.undefined,
-    fontFamily: String = null,
-    fontSize: Int | Double = null,
-    foregroundColor: Color = null,
-    italic: js.UndefOr[Boolean] = js.undefined,
-    strikethrough: js.UndefOr[Boolean] = js.undefined,
-    underline: js.UndefOr[Boolean] = js.undefined
-  ): TextFormat = {
+  def apply(): TextFormat = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bold)) __obj.updateDynamic("bold")(bold.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
-    if (foregroundColor != null) __obj.updateDynamic("foregroundColor")(foregroundColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(italic)) __obj.updateDynamic("italic")(italic.asInstanceOf[js.Any])
-    if (!js.isUndefined(strikethrough)) __obj.updateDynamic("strikethrough")(strikethrough.asInstanceOf[js.Any])
-    if (!js.isUndefined(underline)) __obj.updateDynamic("underline")(underline.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextFormat]
   }
+  @scala.inline
+  implicit class TextFormatOps[Self <: TextFormat] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBold(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForegroundColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foregroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForegroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foregroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForegroundColorStyle(value: ColorStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foregroundColorStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForegroundColorStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foregroundColorStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItalic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("italic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItalic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("italic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrikethrough(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strikethrough")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrikethrough: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strikethrough")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnderline(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnderline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underline")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

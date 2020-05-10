@@ -57,5 +57,6 @@ trait DataTransfer extends js.Object {
 
 @JSGlobal("DataTransfer")
 @js.native
-object DataTransfer extends Instantiable0[DataTransfer]
+object DataTransfer
+  extends Instantiable0[org.scalajs.dom.raw.DataTransfer]
 

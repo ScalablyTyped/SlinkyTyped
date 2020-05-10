@@ -29,5 +29,5 @@ package object tensorTypesMod {
     - typingsSlinky.std.Int32Array
     - typingsSlinky.std.Uint8Array
   */
-  type TensorContainer = typingsSlinky.tensorflowTfjsCore.tensorTypesMod._TensorContainer | typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] | scala.Unit | java.lang.String | scala.Double | scala.Boolean | scala.scalajs.js.typedarray.Float32Array | scala.scalajs.js.typedarray.Int32Array | scala.scalajs.js.typedarray.Uint8Array
+  type TensorContainer = typingsSlinky.tensorflowTfjsCore.tensorTypesMod._TensorContainer | typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] | scala.Unit | java.lang.String | scala.Double | scala.Boolean | js.typedarray.Float32Array | js.typedarray.Int32Array | js.typedarray.Uint8Array
 }

@@ -46,28 +46,125 @@ trait AuthorizerDescription extends js.Object {
 
 object AuthorizerDescription {
   @scala.inline
-  def apply(
-    authorizerArn: AuthorizerArn = null,
-    authorizerFunctionArn: AuthorizerFunctionArn = null,
-    authorizerName: AuthorizerName = null,
-    creationDate: js.Date = null,
-    lastModifiedDate: js.Date = null,
-    signingDisabled: js.UndefOr[scala.Boolean] = js.undefined,
-    status: AuthorizerStatus = null,
-    tokenKeyName: TokenKeyName = null,
-    tokenSigningPublicKeys: PublicKeyMap = null
-  ): AuthorizerDescription = {
+  def apply(): AuthorizerDescription = {
     val __obj = js.Dynamic.literal()
-    if (authorizerArn != null) __obj.updateDynamic("authorizerArn")(authorizerArn.asInstanceOf[js.Any])
-    if (authorizerFunctionArn != null) __obj.updateDynamic("authorizerFunctionArn")(authorizerFunctionArn.asInstanceOf[js.Any])
-    if (authorizerName != null) __obj.updateDynamic("authorizerName")(authorizerName.asInstanceOf[js.Any])
-    if (creationDate != null) __obj.updateDynamic("creationDate")(creationDate.asInstanceOf[js.Any])
-    if (lastModifiedDate != null) __obj.updateDynamic("lastModifiedDate")(lastModifiedDate.asInstanceOf[js.Any])
-    if (!js.isUndefined(signingDisabled)) __obj.updateDynamic("signingDisabled")(signingDisabled.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (tokenKeyName != null) __obj.updateDynamic("tokenKeyName")(tokenKeyName.asInstanceOf[js.Any])
-    if (tokenSigningPublicKeys != null) __obj.updateDynamic("tokenSigningPublicKeys")(tokenSigningPublicKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthorizerDescription]
   }
+  @scala.inline
+  implicit class AuthorizerDescriptionOps[Self <: AuthorizerDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthorizerArn(value: AuthorizerArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizerArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthorizerFunctionArn(value: AuthorizerFunctionArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerFunctionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizerFunctionArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerFunctionArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthorizerName(value: AuthorizerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSigningDisabled(value: BooleanKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signingDisabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSigningDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signingDisabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: AuthorizerStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTokenKeyName(value: TokenKeyName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenKeyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTokenKeyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenKeyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTokenSigningPublicKeys(value: PublicKeyMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenSigningPublicKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTokenSigningPublicKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenSigningPublicKeys")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

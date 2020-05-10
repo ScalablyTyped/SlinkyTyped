@@ -228,7 +228,7 @@ trait Swiper extends js.Object {
     *  '<div class="swiper-slide">Slide 11"</div>'
     * ]);
     */
-  def addSlide(index: Double, slides: typingsSlinky.std.HTMLElement): Unit = js.native
+  def addSlide(index: Double, slides: HTMLElement): Unit = js.native
   def appendSlide(slides: String): Unit = js.native
   def appendSlide(slides: js.Array[String]): Unit = js.native
   /**
@@ -243,7 +243,7 @@ trait Swiper extends js.Object {
     *  '<div class="swiper-slide">Slide 11"</div>'
     * ]);
     */
-  def appendSlide(slides: typingsSlinky.std.HTMLElement): Unit = js.native
+  def appendSlide(slides: HTMLElement): Unit = js.native
   /**
     * Atach all events listeners again
     */
@@ -302,7 +302,7 @@ trait Swiper extends js.Object {
     *  '<div class="swiper-slide">Slide 2"</div>'
     * ]);
     */
-  def prependSlide(slides: typingsSlinky.std.HTMLElement): Unit = js.native
+  def prependSlide(slides: HTMLElement): Unit = js.native
   /**
     * Remove all slides
     */
@@ -390,6 +390,12 @@ trait Swiper extends js.Object {
   def slideToLoop(index: Double): Unit = js.native
   def slideToLoop(index: Double, speed: Double): Unit = js.native
   def slideToLoop(index: Double, speed: Double, runCallbacks: Boolean): Unit = js.native
+  /**
+    * Animate custom css3 transform's translate value for swiper wrapper
+    */
+  def translateTo(translate: Double, speed: Double): js.Any = js.native
+  def translateTo(translate: Double, speed: Double, runCallbacks: Boolean): js.Any = js.native
+  def translateTo(translate: Double, speed: Double, runCallbacks: Boolean, translateBounds: Boolean): js.Any = js.native
   /**
     * Unset grab cursor
     */

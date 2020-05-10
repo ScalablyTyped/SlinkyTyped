@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-heatmap.html)
   */
+@js.native
 trait heatmap extends js.Object {
   /**
     * Generates a [HeatmapRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-HeatmapRenderer.html) that may be applied directly to the layer used to call this method. The renderer represents points as a continuous surface using optimal colors for the indicated basemap.  This method should be called when at least some points are visible in the input view's extent. If no points are visible in the view, then the response will not return a useful visualization.  In most cases you will provide a `layer`, `basemap`, and optional `field` to generate this renderer. This is a scenario in which the statistics and the distribution of the data aren't well known and the user doesn't know what colors to use in the visualization.  The other options are provided for convenience for more involved custom visualization authoring applications. For example, if you already generated statistics in another operation, you can pass the statistics object to the `statistics` parameter to avoid making an extra call to the server.
@@ -27,9 +28,10 @@ trait heatmap extends js.Object {
     * @param params.blurRadius The [blurRadius](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-HeatmapRenderer.html#blurRadius) in pixels that determines the area of influence of each point. A higher blur radius indicates points have more influence on surrounding points.
     * @param params.minRatio The minimum [ratio](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-support-HeatmapColorStop.html#ratio) used in the [HeatmapRenderer.colorStops](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-HeatmapRenderer.html#colorStops) of the output renderer.
     * @param params.maxRatio The maximum [ratio](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-support-HeatmapColorStop.html#ratio) used in the [HeatmapRenderer.colorStops](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-HeatmapRenderer.html#colorStops) of the output renderer.
+    * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     */
-  def createRenderer(params: heatmapCreateRendererParams): js.Promise[HeatmapRendererResult]
+  def createRenderer(params: heatmapCreateRendererParams): js.Promise[HeatmapRendererResult] = js.native
 }
 
 @JSGlobal("__esri.heatmap")

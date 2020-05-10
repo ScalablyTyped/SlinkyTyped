@@ -5,42 +5,68 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait TSIndexSignature_
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ @js.native
+trait TSIndexSignature_
   extends TSTypeElement
      with BaseNode {
-  var parameters: js.Array[Identifier_]
-  var readonly: Boolean | Null
-  var typeAnnotation: TSTypeAnnotation_ | Null
+  var parameters: js.Array[Identifier_] = js.native
+  var readonly: Boolean | Null = js.native
+  var typeAnnotation: TSTypeAnnotation_ | Null = js.native
   @JSName("type")
-  var type_TSIndexSignature_ : TSIndexSignature
+  var type_TSIndexSignature_ : TSIndexSignature = js.native
 }
 
 object TSIndexSignature_ {
   @scala.inline
-  def apply(
-    parameters: js.Array[Identifier_],
-    `type`: TSIndexSignature,
-    end: Int | Double = null,
-    innerComments: js.Array[Comment] = null,
-    leadingComments: js.Array[Comment] = null,
-    loc: SourceLocation = null,
-    readonly: js.UndefOr[Boolean] = js.undefined,
-    start: Int | Double = null,
-    trailingComments: js.Array[Comment] = null,
-    typeAnnotation: TSTypeAnnotation_ = null
-  ): TSIndexSignature_ = {
+  def apply(parameters: js.Array[Identifier_], `type`: TSIndexSignature): TSIndexSignature_ = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
-    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (!js.isUndefined(readonly)) __obj.updateDynamic("readonly")(readonly.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
-    if (typeAnnotation != null) __obj.updateDynamic("typeAnnotation")(typeAnnotation.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSIndexSignature_]
   }
+  @scala.inline
+  implicit class TSIndexSignature_Ops[Self <: TSIndexSignature_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParameters(value: js.Array[Identifier_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: TSIndexSignature): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReadonly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReadonlyNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(null)
+        ret
+    }
+    @scala.inline
+    def withTypeAnnotation(value: TSTypeAnnotation_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypeAnnotationNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(null)
+        ret
+    }
+  }
+  
 }
 

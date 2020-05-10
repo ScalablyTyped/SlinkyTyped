@@ -113,212 +113,210 @@ trait GanttEventName extends js.Object
 
 object GanttEventName {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def onAfterAutoSchedule: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterAutoSchedule = "onAfterAutoSchedule".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterAutoSchedule]
   @scala.inline
-  def onAfterAutoSchedule: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterAutoSchedule = this.cast("onAfterAutoSchedule")
+  def onAfterBatchUpdate: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterBatchUpdate = "onAfterBatchUpdate".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterBatchUpdate]
   @scala.inline
-  def onAfterBatchUpdate: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterBatchUpdate = this.cast("onAfterBatchUpdate")
+  def onAfterLightbox: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterLightbox = "onAfterLightbox".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterLightbox]
   @scala.inline
-  def onAfterLightbox: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterLightbox = this.cast("onAfterLightbox")
+  def onAfterLinkAdd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterLinkAdd = "onAfterLinkAdd".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterLinkAdd]
   @scala.inline
-  def onAfterLinkAdd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterLinkAdd = this.cast("onAfterLinkAdd")
+  def onAfterLinkDelete: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterLinkDelete = "onAfterLinkDelete".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterLinkDelete]
   @scala.inline
-  def onAfterLinkDelete: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterLinkDelete = this.cast("onAfterLinkDelete")
+  def onAfterLinkUpdate: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterLinkUpdate = "onAfterLinkUpdate".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterLinkUpdate]
   @scala.inline
-  def onAfterLinkUpdate: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterLinkUpdate = this.cast("onAfterLinkUpdate")
+  def onAfterQuickInfo: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterQuickInfo = "onAfterQuickInfo".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterQuickInfo]
   @scala.inline
-  def onAfterQuickInfo: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterQuickInfo = this.cast("onAfterQuickInfo")
+  def onAfterRedo: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterRedo = "onAfterRedo".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterRedo]
   @scala.inline
-  def onAfterRedo: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterRedo = this.cast("onAfterRedo")
+  def onAfterSort: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterSort = "onAfterSort".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterSort]
   @scala.inline
-  def onAfterSort: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterSort = this.cast("onAfterSort")
+  def onAfterTaskAdd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskAdd = "onAfterTaskAdd".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskAdd]
   @scala.inline
-  def onAfterTaskAdd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskAdd = this.cast("onAfterTaskAdd")
+  def onAfterTaskAutoSchedule: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskAutoSchedule = "onAfterTaskAutoSchedule".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskAutoSchedule]
   @scala.inline
-  def onAfterTaskAutoSchedule: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskAutoSchedule = this.cast("onAfterTaskAutoSchedule")
+  def onAfterTaskDelete: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskDelete = "onAfterTaskDelete".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskDelete]
   @scala.inline
-  def onAfterTaskDelete: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskDelete = this.cast("onAfterTaskDelete")
+  def onAfterTaskDrag: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskDrag = "onAfterTaskDrag".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskDrag]
   @scala.inline
-  def onAfterTaskDrag: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskDrag = this.cast("onAfterTaskDrag")
+  def onAfterTaskMove: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskMove = "onAfterTaskMove".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskMove]
   @scala.inline
-  def onAfterTaskMove: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskMove = this.cast("onAfterTaskMove")
+  def onAfterTaskUpdate: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskUpdate = "onAfterTaskUpdate".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskUpdate]
   @scala.inline
-  def onAfterTaskUpdate: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterTaskUpdate = this.cast("onAfterTaskUpdate")
+  def onAfterUndo: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterUndo = "onAfterUndo".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterUndo]
   @scala.inline
-  def onAfterUndo: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAfterUndo = this.cast("onAfterUndo")
+  def onAjaxError: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAjaxError = "onAjaxError".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAjaxError]
   @scala.inline
-  def onAjaxError: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAjaxError = this.cast("onAjaxError")
+  def onAutoScheduleCircularLink: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAutoScheduleCircularLink = "onAutoScheduleCircularLink".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAutoScheduleCircularLink]
   @scala.inline
-  def onAutoScheduleCircularLink: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onAutoScheduleCircularLink = this.cast("onAutoScheduleCircularLink")
+  def onBeforeAutoSchedule: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeAutoSchedule = "onBeforeAutoSchedule".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeAutoSchedule]
   @scala.inline
-  def onBeforeAutoSchedule: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeAutoSchedule = this.cast("onBeforeAutoSchedule")
+  def onBeforeBatchUpdate: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeBatchUpdate = "onBeforeBatchUpdate".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeBatchUpdate]
   @scala.inline
-  def onBeforeBatchUpdate: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeBatchUpdate = this.cast("onBeforeBatchUpdate")
+  def onBeforeCollapse: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeCollapse = "onBeforeCollapse".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeCollapse]
   @scala.inline
-  def onBeforeCollapse: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeCollapse = this.cast("onBeforeCollapse")
+  def onBeforeDataRender: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeDataRender = "onBeforeDataRender".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeDataRender]
   @scala.inline
-  def onBeforeDataRender: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeDataRender = this.cast("onBeforeDataRender")
+  def onBeforeExpand: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeExpand = "onBeforeExpand".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeExpand]
   @scala.inline
-  def onBeforeExpand: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeExpand = this.cast("onBeforeExpand")
+  def onBeforeGanttReady: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeGanttReady = "onBeforeGanttReady".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeGanttReady]
   @scala.inline
-  def onBeforeGanttReady: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeGanttReady = this.cast("onBeforeGanttReady")
+  def onBeforeGanttRender: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeGanttRender = "onBeforeGanttRender".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeGanttRender]
   @scala.inline
-  def onBeforeGanttRender: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeGanttRender = this.cast("onBeforeGanttRender")
+  def onBeforeLightbox: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeLightbox = "onBeforeLightbox".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeLightbox]
   @scala.inline
-  def onBeforeLightbox: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeLightbox = this.cast("onBeforeLightbox")
+  def onBeforeLinkAdd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeLinkAdd = "onBeforeLinkAdd".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeLinkAdd]
   @scala.inline
-  def onBeforeLinkAdd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeLinkAdd = this.cast("onBeforeLinkAdd")
+  def onBeforeLinkDelete: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeLinkDelete = "onBeforeLinkDelete".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeLinkDelete]
   @scala.inline
-  def onBeforeLinkDelete: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeLinkDelete = this.cast("onBeforeLinkDelete")
+  def onBeforeLinkDisplay: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeLinkDisplay = "onBeforeLinkDisplay".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeLinkDisplay]
   @scala.inline
-  def onBeforeLinkDisplay: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeLinkDisplay = this.cast("onBeforeLinkDisplay")
+  def onBeforeLinkUpdate: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeLinkUpdate = "onBeforeLinkUpdate".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeLinkUpdate]
   @scala.inline
-  def onBeforeLinkUpdate: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeLinkUpdate = this.cast("onBeforeLinkUpdate")
+  def onBeforeMultiSelect: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeMultiSelect = "onBeforeMultiSelect".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeMultiSelect]
   @scala.inline
-  def onBeforeMultiSelect: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeMultiSelect = this.cast("onBeforeMultiSelect")
+  def onBeforeParse: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeParse = "onBeforeParse".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeParse]
   @scala.inline
-  def onBeforeParse: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeParse = this.cast("onBeforeParse")
+  def onBeforeRedo: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeRedo = "onBeforeRedo".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeRedo]
   @scala.inline
-  def onBeforeRedo: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeRedo = this.cast("onBeforeRedo")
+  def onBeforeRedoStack: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeRedoStack = "onBeforeRedoStack".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeRedoStack]
   @scala.inline
-  def onBeforeRedoStack: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeRedoStack = this.cast("onBeforeRedoStack")
+  def onBeforeRowDragEnd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeRowDragEnd = "onBeforeRowDragEnd".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeRowDragEnd]
   @scala.inline
-  def onBeforeRowDragEnd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeRowDragEnd = this.cast("onBeforeRowDragEnd")
+  def onBeforeRowDragMove: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeRowDragMove = "onBeforeRowDragMove".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeRowDragMove]
   @scala.inline
-  def onBeforeRowDragMove: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeRowDragMove = this.cast("onBeforeRowDragMove")
+  def onBeforeTaskAdd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskAdd = "onBeforeTaskAdd".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskAdd]
   @scala.inline
-  def onBeforeTaskAdd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskAdd = this.cast("onBeforeTaskAdd")
+  def onBeforeTaskAutoSchedule: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskAutoSchedule = "onBeforeTaskAutoSchedule".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskAutoSchedule]
   @scala.inline
-  def onBeforeTaskAutoSchedule: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskAutoSchedule = this.cast("onBeforeTaskAutoSchedule")
+  def onBeforeTaskChanged: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskChanged = "onBeforeTaskChanged".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskChanged]
   @scala.inline
-  def onBeforeTaskChanged: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskChanged = this.cast("onBeforeTaskChanged")
+  def onBeforeTaskDelete: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskDelete = "onBeforeTaskDelete".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskDelete]
   @scala.inline
-  def onBeforeTaskDelete: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskDelete = this.cast("onBeforeTaskDelete")
+  def onBeforeTaskDisplay: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskDisplay = "onBeforeTaskDisplay".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskDisplay]
   @scala.inline
-  def onBeforeTaskDisplay: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskDisplay = this.cast("onBeforeTaskDisplay")
+  def onBeforeTaskDrag: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskDrag = "onBeforeTaskDrag".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskDrag]
   @scala.inline
-  def onBeforeTaskDrag: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskDrag = this.cast("onBeforeTaskDrag")
+  def onBeforeTaskMove: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskMove = "onBeforeTaskMove".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskMove]
   @scala.inline
-  def onBeforeTaskMove: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskMove = this.cast("onBeforeTaskMove")
+  def onBeforeTaskMultiSelect: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskMultiSelect = "onBeforeTaskMultiSelect".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskMultiSelect]
   @scala.inline
-  def onBeforeTaskMultiSelect: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskMultiSelect = this.cast("onBeforeTaskMultiSelect")
+  def onBeforeTaskSelected: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskSelected = "onBeforeTaskSelected".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskSelected]
   @scala.inline
-  def onBeforeTaskSelected: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskSelected = this.cast("onBeforeTaskSelected")
+  def onBeforeTaskUpdate: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskUpdate = "onBeforeTaskUpdate".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskUpdate]
   @scala.inline
-  def onBeforeTaskUpdate: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeTaskUpdate = this.cast("onBeforeTaskUpdate")
+  def onBeforeUndo: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeUndo = "onBeforeUndo".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeUndo]
   @scala.inline
-  def onBeforeUndo: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeUndo = this.cast("onBeforeUndo")
+  def onBeforeUndoStack: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeUndoStack = "onBeforeUndoStack".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeUndoStack]
   @scala.inline
-  def onBeforeUndoStack: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onBeforeUndoStack = this.cast("onBeforeUndoStack")
+  def onCircularLinkError: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onCircularLinkError = "onCircularLinkError".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onCircularLinkError]
   @scala.inline
-  def onCircularLinkError: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onCircularLinkError = this.cast("onCircularLinkError")
+  def onClear: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onClear = "onClear".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onClear]
   @scala.inline
-  def onClear: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onClear = this.cast("onClear")
+  def onCollapse: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onCollapse = "onCollapse".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onCollapse]
   @scala.inline
-  def onCollapse: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onCollapse = this.cast("onCollapse")
+  def onColumnResize: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onColumnResize = "onColumnResize".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onColumnResize]
   @scala.inline
-  def onColumnResize: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onColumnResize = this.cast("onColumnResize")
+  def onColumnResizeEnd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onColumnResizeEnd = "onColumnResizeEnd".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onColumnResizeEnd]
   @scala.inline
-  def onColumnResizeEnd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onColumnResizeEnd = this.cast("onColumnResizeEnd")
+  def onColumnResizeStart: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onColumnResizeStart = "onColumnResizeStart".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onColumnResizeStart]
   @scala.inline
-  def onColumnResizeStart: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onColumnResizeStart = this.cast("onColumnResizeStart")
+  def onContextMenu: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onContextMenu = "onContextMenu".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onContextMenu]
   @scala.inline
-  def onContextMenu: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onContextMenu = this.cast("onContextMenu")
+  def onDataProcessorReady: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onDataProcessorReady = "onDataProcessorReady".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onDataProcessorReady]
   @scala.inline
-  def onDataProcessorReady: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onDataProcessorReady = this.cast("onDataProcessorReady")
+  def onDataRender: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onDataRender = "onDataRender".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onDataRender]
   @scala.inline
-  def onDataRender: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onDataRender = this.cast("onDataRender")
+  def onDestroy: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onDestroy = "onDestroy".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onDestroy]
   @scala.inline
-  def onDestroy: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onDestroy = this.cast("onDestroy")
+  def onEmptyClick: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onEmptyClick = "onEmptyClick".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onEmptyClick]
   @scala.inline
-  def onEmptyClick: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onEmptyClick = this.cast("onEmptyClick")
+  def onError: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onError = "onError".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onError]
   @scala.inline
-  def onError: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onError = this.cast("onError")
+  def onExpand: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onExpand = "onExpand".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onExpand]
   @scala.inline
-  def onExpand: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onExpand = this.cast("onExpand")
+  def onGanttLayoutReady: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGanttLayoutReady = "onGanttLayoutReady".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGanttLayoutReady]
   @scala.inline
-  def onGanttLayoutReady: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGanttLayoutReady = this.cast("onGanttLayoutReady")
+  def onGanttReady: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGanttReady = "onGanttReady".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGanttReady]
   @scala.inline
-  def onGanttReady: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGanttReady = this.cast("onGanttReady")
+  def onGanttRender: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGanttRender = "onGanttRender".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGanttRender]
   @scala.inline
-  def onGanttRender: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGanttRender = this.cast("onGanttRender")
+  def onGanttScroll: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGanttScroll = "onGanttScroll".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGanttScroll]
   @scala.inline
-  def onGanttScroll: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGanttScroll = this.cast("onGanttScroll")
+  def onGridHeaderClick: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGridHeaderClick = "onGridHeaderClick".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGridHeaderClick]
   @scala.inline
-  def onGridHeaderClick: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGridHeaderClick = this.cast("onGridHeaderClick")
+  def onGridResize: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGridResize = "onGridResize".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGridResize]
   @scala.inline
-  def onGridResize: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGridResize = this.cast("onGridResize")
+  def onGridResizeEnd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGridResizeEnd = "onGridResizeEnd".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGridResizeEnd]
   @scala.inline
-  def onGridResizeEnd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGridResizeEnd = this.cast("onGridResizeEnd")
+  def onGridResizeStart: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGridResizeStart = "onGridResizeStart".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGridResizeStart]
   @scala.inline
-  def onGridResizeStart: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onGridResizeStart = this.cast("onGridResizeStart")
+  def onLightbox: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightbox = "onLightbox".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightbox]
   @scala.inline
-  def onLightbox: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightbox = this.cast("onLightbox")
+  def onLightboxButton: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightboxButton = "onLightboxButton".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightboxButton]
   @scala.inline
-  def onLightboxButton: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightboxButton = this.cast("onLightboxButton")
+  def onLightboxCancel: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightboxCancel = "onLightboxCancel".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightboxCancel]
   @scala.inline
-  def onLightboxCancel: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightboxCancel = this.cast("onLightboxCancel")
+  def onLightboxChange: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightboxChange = "onLightboxChange".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightboxChange]
   @scala.inline
-  def onLightboxChange: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightboxChange = this.cast("onLightboxChange")
+  def onLightboxDelete: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightboxDelete = "onLightboxDelete".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightboxDelete]
   @scala.inline
-  def onLightboxDelete: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightboxDelete = this.cast("onLightboxDelete")
+  def onLightboxSave: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightboxSave = "onLightboxSave".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightboxSave]
   @scala.inline
-  def onLightboxSave: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLightboxSave = this.cast("onLightboxSave")
+  def onLinkClick: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLinkClick = "onLinkClick".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLinkClick]
   @scala.inline
-  def onLinkClick: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLinkClick = this.cast("onLinkClick")
+  def onLinkDblClick: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLinkDblClick = "onLinkDblClick".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLinkDblClick]
   @scala.inline
-  def onLinkDblClick: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLinkDblClick = this.cast("onLinkDblClick")
+  def onLinkIdChange: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLinkIdChange = "onLinkIdChange".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLinkIdChange]
   @scala.inline
-  def onLinkIdChange: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLinkIdChange = this.cast("onLinkIdChange")
+  def onLinkValidation: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLinkValidation = "onLinkValidation".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLinkValidation]
   @scala.inline
-  def onLinkValidation: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLinkValidation = this.cast("onLinkValidation")
+  def onLoadEnd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLoadEnd = "onLoadEnd".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLoadEnd]
   @scala.inline
-  def onLoadEnd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLoadEnd = this.cast("onLoadEnd")
+  def onLoadStart: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLoadStart = "onLoadStart".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLoadStart]
   @scala.inline
-  def onLoadStart: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onLoadStart = this.cast("onLoadStart")
+  def onMouseMove: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onMouseMove = "onMouseMove".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onMouseMove]
   @scala.inline
-  def onMouseMove: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onMouseMove = this.cast("onMouseMove")
+  def onMultiSelect: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onMultiSelect = "onMultiSelect".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onMultiSelect]
   @scala.inline
-  def onMultiSelect: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onMultiSelect = this.cast("onMultiSelect")
+  def onOptionsLoad: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onOptionsLoad = "onOptionsLoad".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onOptionsLoad]
   @scala.inline
-  def onOptionsLoad: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onOptionsLoad = this.cast("onOptionsLoad")
+  def onParse: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onParse = "onParse".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onParse]
   @scala.inline
-  def onParse: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onParse = this.cast("onParse")
+  def onQuickInfo: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onQuickInfo = "onQuickInfo".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onQuickInfo]
   @scala.inline
-  def onQuickInfo: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onQuickInfo = this.cast("onQuickInfo")
+  def onRowDragEnd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onRowDragEnd = "onRowDragEnd".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onRowDragEnd]
   @scala.inline
-  def onRowDragEnd: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onRowDragEnd = this.cast("onRowDragEnd")
+  def onRowDragStart: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onRowDragStart = "onRowDragStart".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onRowDragStart]
   @scala.inline
-  def onRowDragStart: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onRowDragStart = this.cast("onRowDragStart")
+  def onScaleAdjusted: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onScaleAdjusted = "onScaleAdjusted".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onScaleAdjusted]
   @scala.inline
-  def onScaleAdjusted: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onScaleAdjusted = this.cast("onScaleAdjusted")
+  def onScaleClick: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onScaleClick = "onScaleClick".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onScaleClick]
   @scala.inline
-  def onScaleClick: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onScaleClick = this.cast("onScaleClick")
+  def onTaskClick: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskClick = "onTaskClick".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskClick]
   @scala.inline
-  def onTaskClick: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskClick = this.cast("onTaskClick")
+  def onTaskClosed: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskClosed = "onTaskClosed".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskClosed]
   @scala.inline
-  def onTaskClosed: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskClosed = this.cast("onTaskClosed")
+  def onTaskCreated: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskCreated = "onTaskCreated".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskCreated]
   @scala.inline
-  def onTaskCreated: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskCreated = this.cast("onTaskCreated")
+  def onTaskDblClick: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskDblClick = "onTaskDblClick".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskDblClick]
   @scala.inline
-  def onTaskDblClick: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskDblClick = this.cast("onTaskDblClick")
+  def onTaskDrag: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskDrag = "onTaskDrag".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskDrag]
   @scala.inline
-  def onTaskDrag: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskDrag = this.cast("onTaskDrag")
+  def onTaskIdChange: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskIdChange = "onTaskIdChange".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskIdChange]
   @scala.inline
-  def onTaskIdChange: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskIdChange = this.cast("onTaskIdChange")
+  def onTaskLoading: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskLoading = "onTaskLoading".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskLoading]
   @scala.inline
-  def onTaskLoading: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskLoading = this.cast("onTaskLoading")
+  def onTaskMultiSelect: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskMultiSelect = "onTaskMultiSelect".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskMultiSelect]
   @scala.inline
-  def onTaskMultiSelect: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskMultiSelect = this.cast("onTaskMultiSelect")
+  def onTaskOpened: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskOpened = "onTaskOpened".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskOpened]
   @scala.inline
-  def onTaskOpened: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskOpened = this.cast("onTaskOpened")
+  def onTaskRowClick: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskRowClick = "onTaskRowClick".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskRowClick]
   @scala.inline
-  def onTaskRowClick: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskRowClick = this.cast("onTaskRowClick")
+  def onTaskSelected: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskSelected = "onTaskSelected".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskSelected]
   @scala.inline
-  def onTaskSelected: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskSelected = this.cast("onTaskSelected")
+  def onTaskUnselected: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskUnselected = "onTaskUnselected".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskUnselected]
   @scala.inline
-  def onTaskUnselected: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTaskUnselected = this.cast("onTaskUnselected")
-  @scala.inline
-  def onTemplatesReady: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTemplatesReady = this.cast("onTemplatesReady")
+  def onTemplatesReady: typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTemplatesReady = "onTemplatesReady".asInstanceOf[typingsSlinky.dhtmlxgantt.dhtmlxganttStrings.onTemplatesReady]
 }
 

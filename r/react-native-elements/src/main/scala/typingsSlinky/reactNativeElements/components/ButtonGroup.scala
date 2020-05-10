@@ -1,10 +1,8 @@
 package typingsSlinky.reactNativeElements.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -15,66 +13,92 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ButtonGroup
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeElements.mod.ButtonGroup] {
+object ButtonGroup {
   @JSImport("react-native-elements", "ButtonGroup")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    buttons: js.Array[ElementObject | String],
-    onPress: Double => Unit,
-    Component: ReactComponentClass[_] = null,
-    activeOpacity: Int | Double = null,
-    buttonStyle: StyleProp[ViewStyle] = null,
-    containerBorderRadius: Int | Double = null,
-    containerStyle: StyleProp[ViewStyle] = null,
-    disabled: Boolean | js.Array[Double] = null,
-    disabledSelectedStyle: StyleProp[ViewStyle] = null,
-    disabledSelectedTextStyle: StyleProp[TextStyle] = null,
-    disabledStyle: StyleProp[ViewStyle] = null,
-    disabledTextStyle: StyleProp[TextStyle] = null,
-    innerBorderStyle: InnerBorderStyleProperty = null,
-    lastBorderStyle: StyleProp[TextStyle | ViewStyle] = null,
-    onHideUnderlay: () => Unit = null,
-    onShowUnderlay: () => Unit = null,
-    selectMultiple: js.UndefOr[Boolean] = js.undefined,
-    selectedButtonStyle: StyleProp[ViewStyle] = null,
-    selectedIndex: Int | Double = null,
-    selectedIndexes: js.Array[Double] = null,
-    selectedTextStyle: StyleProp[TextStyle] = null,
-    setOpacityTo: /* value */ Double => Unit = null,
-    textStyle: StyleProp[TextStyle] = null,
-    underlayColor: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.ButtonGroup] = {
-    val __obj = js.Dynamic.literal(buttons = buttons.asInstanceOf[js.Any], onPress = js.Any.fromFunction1(onPress))
-    if (Component != null) __obj.updateDynamic("Component")(Component.asInstanceOf[js.Any])
-    if (activeOpacity != null) __obj.updateDynamic("activeOpacity")(activeOpacity.asInstanceOf[js.Any])
-    if (buttonStyle != null) __obj.updateDynamic("buttonStyle")(buttonStyle.asInstanceOf[js.Any])
-    if (containerBorderRadius != null) __obj.updateDynamic("containerBorderRadius")(containerBorderRadius.asInstanceOf[js.Any])
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (disabledSelectedStyle != null) __obj.updateDynamic("disabledSelectedStyle")(disabledSelectedStyle.asInstanceOf[js.Any])
-    if (disabledSelectedTextStyle != null) __obj.updateDynamic("disabledSelectedTextStyle")(disabledSelectedTextStyle.asInstanceOf[js.Any])
-    if (disabledStyle != null) __obj.updateDynamic("disabledStyle")(disabledStyle.asInstanceOf[js.Any])
-    if (disabledTextStyle != null) __obj.updateDynamic("disabledTextStyle")(disabledTextStyle.asInstanceOf[js.Any])
-    if (innerBorderStyle != null) __obj.updateDynamic("innerBorderStyle")(innerBorderStyle.asInstanceOf[js.Any])
-    if (lastBorderStyle != null) __obj.updateDynamic("lastBorderStyle")(lastBorderStyle.asInstanceOf[js.Any])
-    if (onHideUnderlay != null) __obj.updateDynamic("onHideUnderlay")(js.Any.fromFunction0(onHideUnderlay))
-    if (onShowUnderlay != null) __obj.updateDynamic("onShowUnderlay")(js.Any.fromFunction0(onShowUnderlay))
-    if (!js.isUndefined(selectMultiple)) __obj.updateDynamic("selectMultiple")(selectMultiple.asInstanceOf[js.Any])
-    if (selectedButtonStyle != null) __obj.updateDynamic("selectedButtonStyle")(selectedButtonStyle.asInstanceOf[js.Any])
-    if (selectedIndex != null) __obj.updateDynamic("selectedIndex")(selectedIndex.asInstanceOf[js.Any])
-    if (selectedIndexes != null) __obj.updateDynamic("selectedIndexes")(selectedIndexes.asInstanceOf[js.Any])
-    if (selectedTextStyle != null) __obj.updateDynamic("selectedTextStyle")(selectedTextStyle.asInstanceOf[js.Any])
-    if (setOpacityTo != null) __obj.updateDynamic("setOpacityTo")(js.Any.fromFunction1(setOpacityTo))
-    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
-    if (underlayColor != null) __obj.updateDynamic("underlayColor")(underlayColor.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.ButtonGroup] {
+    @scala.inline
+    def ComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("Component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ComponentComponentClass(value: ReactComponentClass[_]): this.type = set("Component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def Component(value: ReactComponentClass[_]): this.type = set("Component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def activeOpacity(value: Double): this.type = set("activeOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def buttonStyle(value: StyleProp[ViewStyle]): this.type = set("buttonStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def buttonStyleNull: this.type = set("buttonStyle", null)
+    @scala.inline
+    def containerBorderRadius(value: Double): this.type = set("containerBorderRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyleNull: this.type = set("containerStyle", null)
+    @scala.inline
+    def disabled(value: Boolean | js.Array[Double]): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledSelectedStyle(value: StyleProp[ViewStyle]): this.type = set("disabledSelectedStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledSelectedStyleNull: this.type = set("disabledSelectedStyle", null)
+    @scala.inline
+    def disabledSelectedTextStyle(value: StyleProp[TextStyle]): this.type = set("disabledSelectedTextStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledSelectedTextStyleNull: this.type = set("disabledSelectedTextStyle", null)
+    @scala.inline
+    def disabledStyle(value: StyleProp[ViewStyle]): this.type = set("disabledStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledStyleNull: this.type = set("disabledStyle", null)
+    @scala.inline
+    def disabledTextStyle(value: StyleProp[TextStyle]): this.type = set("disabledTextStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledTextStyleNull: this.type = set("disabledTextStyle", null)
+    @scala.inline
+    def innerBorderStyle(value: InnerBorderStyleProperty): this.type = set("innerBorderStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lastBorderStyle(value: StyleProp[TextStyle | ViewStyle]): this.type = set("lastBorderStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lastBorderStyleNull: this.type = set("lastBorderStyle", null)
+    @scala.inline
+    def onHideUnderlay(value: () => Unit): this.type = set("onHideUnderlay", js.Any.fromFunction0(value))
+    @scala.inline
+    def onShowUnderlay(value: () => Unit): this.type = set("onShowUnderlay", js.Any.fromFunction0(value))
+    @scala.inline
+    def selectMultiple(value: Boolean): this.type = set("selectMultiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedButtonStyle(value: StyleProp[ViewStyle]): this.type = set("selectedButtonStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedButtonStyleNull: this.type = set("selectedButtonStyle", null)
+    @scala.inline
+    def selectedIndex(value: Double): this.type = set("selectedIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedIndexNull: this.type = set("selectedIndex", null)
+    @scala.inline
+    def selectedIndexes(value: js.Array[Double]): this.type = set("selectedIndexes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedTextStyle(value: StyleProp[TextStyle]): this.type = set("selectedTextStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedTextStyleNull: this.type = set("selectedTextStyle", null)
+    @scala.inline
+    def setOpacityTo(value: /* value */ Double => Unit): this.type = set("setOpacityTo", js.Any.fromFunction1(value))
+    @scala.inline
+    def textStyle(value: StyleProp[TextStyle]): this.type = set("textStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textStyleNull: this.type = set("textStyle", null)
+    @scala.inline
+    def underlayColor(value: String): this.type = set("underlayColor", value.asInstanceOf[js.Any])
   }
-  type Props = ButtonGroupProps
+  
+  def withProps(p: ButtonGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(buttons: js.Array[ElementObject | String], onPress: Double => Unit): Builder = {
+    val __props = js.Dynamic.literal(buttons = buttons.asInstanceOf[js.Any], onPress = js.Any.fromFunction1(onPress))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ButtonGroupProps]))
+  }
 }
 

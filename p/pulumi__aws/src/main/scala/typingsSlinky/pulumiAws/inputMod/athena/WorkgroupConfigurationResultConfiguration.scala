@@ -19,14 +19,41 @@ trait WorkgroupConfigurationResultConfiguration extends js.Object {
 
 object WorkgroupConfigurationResultConfiguration {
   @scala.inline
-  def apply(
-    encryptionConfiguration: Input[WorkgroupConfigurationResultConfigurationEncryptionConfiguration] = null,
-    outputLocation: Input[String] = null
-  ): WorkgroupConfigurationResultConfiguration = {
+  def apply(): WorkgroupConfigurationResultConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (encryptionConfiguration != null) __obj.updateDynamic("encryptionConfiguration")(encryptionConfiguration.asInstanceOf[js.Any])
-    if (outputLocation != null) __obj.updateDynamic("outputLocation")(outputLocation.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkgroupConfigurationResultConfiguration]
   }
+  @scala.inline
+  implicit class WorkgroupConfigurationResultConfigurationOps[Self <: WorkgroupConfigurationResultConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncryptionConfiguration(value: Input[WorkgroupConfigurationResultConfigurationEncryptionConfiguration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputLocation(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputLocation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

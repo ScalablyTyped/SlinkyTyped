@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GoogleActionsV2OrdersReceipt extends js.Object {
   /**
     * Confirmed order id when order has been received by the integrator. This is
@@ -13,7 +14,7 @@ trait GoogleActionsV2OrdersReceipt extends js.Object {
     * Note that this field is deprecated. Please pass the field through
     * OrderUpdate.action_order_id instead.
     */
-  var confirmedActionOrderId: js.UndefOr[String] = js.undefined
+  var confirmedActionOrderId: js.UndefOr[String] = js.native
   /**
     * Optional. The user facing id referencing to current order, which will show
     * up in the receipt card if present. This should be the id that usually
@@ -23,16 +24,46 @@ trait GoogleActionsV2OrdersReceipt extends js.Object {
     * generate user facing id for an order with a printed receipt / email
     * receipt.
     */
-  var userVisibleOrderId: js.UndefOr[String] = js.undefined
+  var userVisibleOrderId: js.UndefOr[String] = js.native
 }
 
 object GoogleActionsV2OrdersReceipt {
   @scala.inline
-  def apply(confirmedActionOrderId: String = null, userVisibleOrderId: String = null): GoogleActionsV2OrdersReceipt = {
+  def apply(): GoogleActionsV2OrdersReceipt = {
     val __obj = js.Dynamic.literal()
-    if (confirmedActionOrderId != null) __obj.updateDynamic("confirmedActionOrderId")(confirmedActionOrderId.asInstanceOf[js.Any])
-    if (userVisibleOrderId != null) __obj.updateDynamic("userVisibleOrderId")(userVisibleOrderId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleActionsV2OrdersReceipt]
   }
+  @scala.inline
+  implicit class GoogleActionsV2OrdersReceiptOps[Self <: GoogleActionsV2OrdersReceipt] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfirmedActionOrderId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confirmedActionOrderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfirmedActionOrderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confirmedActionOrderId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserVisibleOrderId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userVisibleOrderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserVisibleOrderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userVisibleOrderId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

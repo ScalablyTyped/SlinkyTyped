@@ -14,14 +14,12 @@ trait EventType extends js.Object
 
 object EventType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hide: typingsSlinky.bulmaCalendar.bulmaCalendarStrings.hide = "hide".asInstanceOf[typingsSlinky.bulmaCalendar.bulmaCalendarStrings.hide]
   @scala.inline
-  def hide: typingsSlinky.bulmaCalendar.bulmaCalendarStrings.hide = this.cast("hide")
+  def select: typingsSlinky.bulmaCalendar.bulmaCalendarStrings.select = "select".asInstanceOf[typingsSlinky.bulmaCalendar.bulmaCalendarStrings.select]
   @scala.inline
-  def select: typingsSlinky.bulmaCalendar.bulmaCalendarStrings.select = this.cast("select")
+  def selectColonstart: typingsSlinky.bulmaCalendar.bulmaCalendarStrings.selectColonstart = "select:start".asInstanceOf[typingsSlinky.bulmaCalendar.bulmaCalendarStrings.selectColonstart]
   @scala.inline
-  def selectColonstart: typingsSlinky.bulmaCalendar.bulmaCalendarStrings.selectColonstart = this.cast("select:start")
-  @scala.inline
-  def show: typingsSlinky.bulmaCalendar.bulmaCalendarStrings.show = this.cast("show")
+  def show: typingsSlinky.bulmaCalendar.bulmaCalendarStrings.show = "show".asInstanceOf[typingsSlinky.bulmaCalendar.bulmaCalendarStrings.show]
 }
 

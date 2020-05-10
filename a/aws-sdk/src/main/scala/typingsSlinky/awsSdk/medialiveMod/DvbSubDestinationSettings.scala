@@ -78,44 +78,221 @@ trait DvbSubDestinationSettings extends js.Object {
 
 object DvbSubDestinationSettings {
   @scala.inline
-  def apply(
-    Alignment: DvbSubDestinationAlignment = null,
-    BackgroundColor: DvbSubDestinationBackgroundColor = null,
-    BackgroundOpacity: Int | Double = null,
-    Font: InputLocation = null,
-    FontColor: DvbSubDestinationFontColor = null,
-    FontOpacity: Int | Double = null,
-    FontResolution: Int | Double = null,
-    FontSize: string = null,
-    OutlineColor: DvbSubDestinationOutlineColor = null,
-    OutlineSize: Int | Double = null,
-    ShadowColor: DvbSubDestinationShadowColor = null,
-    ShadowOpacity: Int | Double = null,
-    ShadowXOffset: Int | Double = null,
-    ShadowYOffset: Int | Double = null,
-    TeletextGridControl: DvbSubDestinationTeletextGridControl = null,
-    XPosition: Int | Double = null,
-    YPosition: Int | Double = null
-  ): DvbSubDestinationSettings = {
+  def apply(): DvbSubDestinationSettings = {
     val __obj = js.Dynamic.literal()
-    if (Alignment != null) __obj.updateDynamic("Alignment")(Alignment.asInstanceOf[js.Any])
-    if (BackgroundColor != null) __obj.updateDynamic("BackgroundColor")(BackgroundColor.asInstanceOf[js.Any])
-    if (BackgroundOpacity != null) __obj.updateDynamic("BackgroundOpacity")(BackgroundOpacity.asInstanceOf[js.Any])
-    if (Font != null) __obj.updateDynamic("Font")(Font.asInstanceOf[js.Any])
-    if (FontColor != null) __obj.updateDynamic("FontColor")(FontColor.asInstanceOf[js.Any])
-    if (FontOpacity != null) __obj.updateDynamic("FontOpacity")(FontOpacity.asInstanceOf[js.Any])
-    if (FontResolution != null) __obj.updateDynamic("FontResolution")(FontResolution.asInstanceOf[js.Any])
-    if (FontSize != null) __obj.updateDynamic("FontSize")(FontSize.asInstanceOf[js.Any])
-    if (OutlineColor != null) __obj.updateDynamic("OutlineColor")(OutlineColor.asInstanceOf[js.Any])
-    if (OutlineSize != null) __obj.updateDynamic("OutlineSize")(OutlineSize.asInstanceOf[js.Any])
-    if (ShadowColor != null) __obj.updateDynamic("ShadowColor")(ShadowColor.asInstanceOf[js.Any])
-    if (ShadowOpacity != null) __obj.updateDynamic("ShadowOpacity")(ShadowOpacity.asInstanceOf[js.Any])
-    if (ShadowXOffset != null) __obj.updateDynamic("ShadowXOffset")(ShadowXOffset.asInstanceOf[js.Any])
-    if (ShadowYOffset != null) __obj.updateDynamic("ShadowYOffset")(ShadowYOffset.asInstanceOf[js.Any])
-    if (TeletextGridControl != null) __obj.updateDynamic("TeletextGridControl")(TeletextGridControl.asInstanceOf[js.Any])
-    if (XPosition != null) __obj.updateDynamic("XPosition")(XPosition.asInstanceOf[js.Any])
-    if (YPosition != null) __obj.updateDynamic("YPosition")(YPosition.asInstanceOf[js.Any])
     __obj.asInstanceOf[DvbSubDestinationSettings]
   }
+  @scala.inline
+  implicit class DvbSubDestinationSettingsOps[Self <: DvbSubDestinationSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlignment(value: DvbSubDestinationAlignment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Alignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Alignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundColor(value: DvbSubDestinationBackgroundColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundOpacity(value: integerMin0Max255): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackgroundOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackgroundOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFont(value: InputLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFont: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Font")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontColor(value: DvbSubDestinationFontColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FontColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FontColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontOpacity(value: integerMin0Max255): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FontOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FontOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontResolution(value: integerMin96Max600): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FontResolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontResolution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FontResolution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSize(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutlineColor(value: DvbSubDestinationOutlineColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutlineColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutlineColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutlineColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutlineSize(value: integerMin0Max10): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutlineSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutlineSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutlineSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowColor(value: DvbSubDestinationShadowColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShadowColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShadowColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowOpacity(value: integerMin0Max255): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShadowOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShadowOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowXOffset(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShadowXOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowXOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShadowXOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowYOffset(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShadowYOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowYOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShadowYOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTeletextGridControl(value: DvbSubDestinationTeletextGridControl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TeletextGridControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTeletextGridControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TeletextGridControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXPosition(value: integerMin0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("XPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("XPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYPosition(value: integerMin0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("YPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("YPosition")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

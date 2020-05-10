@@ -16,18 +16,16 @@ trait XMLHttpRequestResponseType extends js.Object
 
 object XMLHttpRequestResponseType {
   @scala.inline
-  def _empty: typingsSlinky.reactNative.reactNativeStrings._empty = this.cast("")
+  def _empty: typingsSlinky.reactNative.reactNativeStrings._empty = "".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings._empty]
   @scala.inline
-  def arraybuffer: typingsSlinky.reactNative.reactNativeStrings.arraybuffer = this.cast("arraybuffer")
+  def arraybuffer: typingsSlinky.reactNative.reactNativeStrings.arraybuffer = "arraybuffer".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.arraybuffer]
   @scala.inline
-  def blob: typingsSlinky.reactNative.reactNativeStrings.blob = this.cast("blob")
+  def blob: typingsSlinky.reactNative.reactNativeStrings.blob = "blob".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.blob]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def document: typingsSlinky.reactNative.reactNativeStrings.document = "document".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.document]
   @scala.inline
-  def document: typingsSlinky.reactNative.reactNativeStrings.document = this.cast("document")
+  def json: typingsSlinky.reactNative.reactNativeStrings.json = "json".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.json]
   @scala.inline
-  def json: typingsSlinky.reactNative.reactNativeStrings.json = this.cast("json")
-  @scala.inline
-  def text: typingsSlinky.reactNative.reactNativeStrings.text = this.cast("text")
+  def text: typingsSlinky.reactNative.reactNativeStrings.text = "text".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.text]
 }
 

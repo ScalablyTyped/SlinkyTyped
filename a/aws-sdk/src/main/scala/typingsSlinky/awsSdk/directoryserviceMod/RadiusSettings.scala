@@ -42,26 +42,113 @@ trait RadiusSettings extends js.Object {
 
 object RadiusSettings {
   @scala.inline
-  def apply(
-    AuthenticationProtocol: RadiusAuthenticationProtocol = null,
-    DisplayLabel: RadiusDisplayLabel = null,
-    RadiusPort: Int | Double = null,
-    RadiusRetries: Int | Double = null,
-    RadiusServers: Servers = null,
-    RadiusTimeout: Int | Double = null,
-    SharedSecret: RadiusSharedSecret = null,
-    UseSameUsername: js.UndefOr[Boolean] = js.undefined
-  ): RadiusSettings = {
+  def apply(): RadiusSettings = {
     val __obj = js.Dynamic.literal()
-    if (AuthenticationProtocol != null) __obj.updateDynamic("AuthenticationProtocol")(AuthenticationProtocol.asInstanceOf[js.Any])
-    if (DisplayLabel != null) __obj.updateDynamic("DisplayLabel")(DisplayLabel.asInstanceOf[js.Any])
-    if (RadiusPort != null) __obj.updateDynamic("RadiusPort")(RadiusPort.asInstanceOf[js.Any])
-    if (RadiusRetries != null) __obj.updateDynamic("RadiusRetries")(RadiusRetries.asInstanceOf[js.Any])
-    if (RadiusServers != null) __obj.updateDynamic("RadiusServers")(RadiusServers.asInstanceOf[js.Any])
-    if (RadiusTimeout != null) __obj.updateDynamic("RadiusTimeout")(RadiusTimeout.asInstanceOf[js.Any])
-    if (SharedSecret != null) __obj.updateDynamic("SharedSecret")(SharedSecret.asInstanceOf[js.Any])
-    if (!js.isUndefined(UseSameUsername)) __obj.updateDynamic("UseSameUsername")(UseSameUsername.asInstanceOf[js.Any])
     __obj.asInstanceOf[RadiusSettings]
   }
+  @scala.inline
+  implicit class RadiusSettingsOps[Self <: RadiusSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthenticationProtocol(value: RadiusAuthenticationProtocol): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationProtocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthenticationProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationProtocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayLabel(value: RadiusDisplayLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadiusPort(value: PortNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadiusPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadiusRetries(value: RadiusRetries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusRetries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadiusRetries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusRetries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadiusServers(value: Servers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusServers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadiusServers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusServers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadiusTimeout(value: RadiusTimeout): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadiusTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSharedSecret(value: RadiusSharedSecret): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedSecret")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSharedSecret: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedSecret")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseSameUsername(value: UseSameUsername): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UseSameUsername")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseSameUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UseSameUsername")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

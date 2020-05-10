@@ -12,10 +12,8 @@ trait SpeedLimitUnit extends js.Object
 
 object SpeedLimitUnit {
   @scala.inline
-  def KPH: typingsSlinky.googleMaps.googleMapsStrings.KPH = this.cast("KPH")
+  def KPH: typingsSlinky.googleMaps.googleMapsStrings.KPH = "KPH".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.KPH]
   @scala.inline
-  def MPH: typingsSlinky.googleMaps.googleMapsStrings.MPH = this.cast("MPH")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def MPH: typingsSlinky.googleMaps.googleMapsStrings.MPH = "MPH".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.MPH]
 }
 

@@ -20,8 +20,27 @@ object DeregisterTaskFromMaintenanceWindowRequest {
   @scala.inline
   def apply(WindowId: MaintenanceWindowId, WindowTaskId: MaintenanceWindowTaskId): DeregisterTaskFromMaintenanceWindowRequest = {
     val __obj = js.Dynamic.literal(WindowId = WindowId.asInstanceOf[js.Any], WindowTaskId = WindowTaskId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DeregisterTaskFromMaintenanceWindowRequest]
   }
+  @scala.inline
+  implicit class DeregisterTaskFromMaintenanceWindowRequestOps[Self <: DeregisterTaskFromMaintenanceWindowRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWindowId(value: MaintenanceWindowId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWindowTaskId(value: MaintenanceWindowTaskId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowTaskId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

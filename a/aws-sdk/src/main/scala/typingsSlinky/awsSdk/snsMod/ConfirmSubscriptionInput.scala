@@ -22,10 +22,41 @@ trait ConfirmSubscriptionInput extends js.Object {
 
 object ConfirmSubscriptionInput {
   @scala.inline
-  def apply(Token: token, TopicArn: topicARN, AuthenticateOnUnsubscribe: authenticateOnUnsubscribe = null): ConfirmSubscriptionInput = {
+  def apply(Token: token, TopicArn: topicARN): ConfirmSubscriptionInput = {
     val __obj = js.Dynamic.literal(Token = Token.asInstanceOf[js.Any], TopicArn = TopicArn.asInstanceOf[js.Any])
-    if (AuthenticateOnUnsubscribe != null) __obj.updateDynamic("AuthenticateOnUnsubscribe")(AuthenticateOnUnsubscribe.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfirmSubscriptionInput]
   }
+  @scala.inline
+  implicit class ConfirmSubscriptionInputOps[Self <: ConfirmSubscriptionInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withToken(value: token): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Token")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTopicArn(value: topicARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthenticateOnUnsubscribe(value: authenticateOnUnsubscribe): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticateOnUnsubscribe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthenticateOnUnsubscribe: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticateOnUnsubscribe")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

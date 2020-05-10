@@ -17,8 +17,21 @@ object RouteSpecHttpRouteAction {
   @scala.inline
   def apply(weightedTargets: js.Array[RouteSpecHttpRouteActionWeightedTarget]): RouteSpecHttpRouteAction = {
     val __obj = js.Dynamic.literal(weightedTargets = weightedTargets.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[RouteSpecHttpRouteAction]
   }
+  @scala.inline
+  implicit class RouteSpecHttpRouteActionOps[Self <: RouteSpecHttpRouteAction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWeightedTargets(value: js.Array[RouteSpecHttpRouteActionWeightedTarget]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weightedTargets")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

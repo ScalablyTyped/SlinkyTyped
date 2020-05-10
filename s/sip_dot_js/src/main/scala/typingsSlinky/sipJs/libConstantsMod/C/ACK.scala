@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @JSImport("sip.js/lib/Constants", "C.ACK")
 @js.native
 object ACK
-  extends TopLevel[typingsSlinky.sipJs.sipJsStrings.ACK]
+  extends TopLevel[/* "0.15.10" */ String]
 

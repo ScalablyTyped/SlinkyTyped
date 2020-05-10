@@ -26,18 +26,65 @@ trait GetDataflowEndpointGroupResponse extends js.Object {
 
 object GetDataflowEndpointGroupResponse {
   @scala.inline
-  def apply(
-    dataflowEndpointGroupArn: DataflowEndpointGroupArn = null,
-    dataflowEndpointGroupId: String = null,
-    endpointsDetails: EndpointDetailsList = null,
-    tags: TagsMap = null
-  ): GetDataflowEndpointGroupResponse = {
+  def apply(): GetDataflowEndpointGroupResponse = {
     val __obj = js.Dynamic.literal()
-    if (dataflowEndpointGroupArn != null) __obj.updateDynamic("dataflowEndpointGroupArn")(dataflowEndpointGroupArn.asInstanceOf[js.Any])
-    if (dataflowEndpointGroupId != null) __obj.updateDynamic("dataflowEndpointGroupId")(dataflowEndpointGroupId.asInstanceOf[js.Any])
-    if (endpointsDetails != null) __obj.updateDynamic("endpointsDetails")(endpointsDetails.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDataflowEndpointGroupResponse]
   }
+  @scala.inline
+  implicit class GetDataflowEndpointGroupResponseOps[Self <: GetDataflowEndpointGroupResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataflowEndpointGroupArn(value: DataflowEndpointGroupArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataflowEndpointGroupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataflowEndpointGroupArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataflowEndpointGroupArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataflowEndpointGroupId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataflowEndpointGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataflowEndpointGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataflowEndpointGroupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpointsDetails(value: EndpointDetailsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointsDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpointsDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointsDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagsMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

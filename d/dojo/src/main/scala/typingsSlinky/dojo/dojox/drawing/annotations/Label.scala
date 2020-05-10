@@ -10,11 +10,12 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait Label extends js.Object {
   /**
     *
     */
-  def Label(): Unit
+  def Label(): Unit = js.native
 }
 
 @JSGlobal("dojox.drawing.annotations.Label")

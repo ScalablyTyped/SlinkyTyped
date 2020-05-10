@@ -20,8 +20,27 @@ object InputDataConfig {
   @scala.inline
   def apply(ContentType: ContentType, S3Uri: S3Uri): InputDataConfig = {
     val __obj = js.Dynamic.literal(ContentType = ContentType.asInstanceOf[js.Any], S3Uri = S3Uri.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[InputDataConfig]
   }
+  @scala.inline
+  implicit class InputDataConfigOps[Self <: InputDataConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentType(value: ContentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3Uri(value: S3Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

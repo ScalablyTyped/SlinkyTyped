@@ -1,26 +1,22 @@
 package typingsSlinky.mjmlReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.mjmlReact.AnonCondition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MjmlConditionalComment
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mjmlReact.extensionsMod.MjmlConditionalComment] {
+object MjmlConditionalComment {
   @JSImport("mjml-react/extensions", "MjmlConditionalComment")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(condition: String, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.mjmlReact.extensionsMod.MjmlConditionalComment] = {
-    val __obj = js.Dynamic.literal(condition = condition.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: AnonCondition): Default[tag.type, typingsSlinky.mjmlReact.extensionsMod.MjmlConditionalComment] = new Default[tag.type, typingsSlinky.mjmlReact.extensionsMod.MjmlConditionalComment](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(condition: String): Default[tag.type, typingsSlinky.mjmlReact.extensionsMod.MjmlConditionalComment] = {
+    val __props = js.Dynamic.literal(condition = condition.asInstanceOf[js.Any])
+    new Default[tag.type, typingsSlinky.mjmlReact.extensionsMod.MjmlConditionalComment](js.Array(this.component, __props.asInstanceOf[AnonCondition]))
   }
-  type Props = AnonCondition
 }
 

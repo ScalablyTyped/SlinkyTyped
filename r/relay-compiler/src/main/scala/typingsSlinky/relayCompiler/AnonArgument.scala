@@ -25,110 +25,346 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonArgument extends js.Object {
-  var Argument: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Argument]] = js.undefined
-  var ClientExtension: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.ClientExtension]] = js.undefined
-  var Condition: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Condition]] = js.undefined
-  var Defer: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Defer]] = js.undefined
-  var Directive: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Directive]] = js.undefined
-  var Fragment: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Fragment]] = js.undefined
-  var FragmentSpread: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.FragmentSpread]] = js.undefined
-  var InlineFragment: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.InlineFragment]] = js.undefined
-  var LinkedField: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.LinkedField]] = js.undefined
-  var Literal: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Literal]] = js.undefined
-  var LocalArgumentDefinition: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.LocalArgumentDefinition]] = js.undefined
-  var ModuleImport: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.ModuleImport]] = js.undefined
-  var Request: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Request]] = js.undefined
-  var Root: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Root]] = js.undefined
-  var RootArgumentDefinition: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.RootArgumentDefinition]] = js.undefined
-  var ScalarField: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.ScalarField]] = js.undefined
-  var SplitOperation: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.SplitOperation]] = js.undefined
-  var Stream: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Stream]] = js.undefined
-  var Variable: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Variable]] = js.undefined
+  var Argument: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Argument]] = js.native
+  var ClientExtension: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.ClientExtension]] = js.native
+  var Condition: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Condition]] = js.native
+  var Defer: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Defer]] = js.native
+  var Directive: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Directive]] = js.native
+  var Fragment: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Fragment]] = js.native
+  var FragmentSpread: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.FragmentSpread]] = js.native
+  var InlineFragment: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.InlineFragment]] = js.native
+  var LinkedField: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.LinkedField]] = js.native
+  var Literal: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Literal]] = js.native
+  var LocalArgumentDefinition: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.LocalArgumentDefinition]] = js.native
+  var ModuleImport: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.ModuleImport]] = js.native
+  var Request: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Request]] = js.native
+  var Root: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Root]] = js.native
+  var RootArgumentDefinition: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.RootArgumentDefinition]] = js.native
+  var ScalarField: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.ScalarField]] = js.native
+  var SplitOperation: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.SplitOperation]] = js.native
+  var Stream: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Stream]] = js.native
+  var Variable: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.Variable]] = js.native
 }
 
 object AnonArgument {
   @scala.inline
-  def apply(
-    Argument: (Argument, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    ClientExtension: (ClientExtension, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    Condition: (Condition, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    Defer: (Defer, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    Directive: (Directive, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    Fragment: (Fragment, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    FragmentSpread: (FragmentSpread, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    InlineFragment: (InlineFragment, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    LinkedField: (LinkedField, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    Literal: (Literal, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    LocalArgumentDefinition: (LocalArgumentDefinition, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    ModuleImport: (ModuleImport, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    Request: (Request, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    Root: (Root, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    RootArgumentDefinition: (RootArgumentDefinition, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    ScalarField: (ScalarField, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    SplitOperation: (SplitOperation, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    Stream: (Stream, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    Variable: (Variable, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null
-  ): AnonArgument = {
+  def apply(): AnonArgument = {
     val __obj = js.Dynamic.literal()
-    if (Argument != null) __obj.updateDynamic("Argument")(js.Any.fromFunction5(Argument))
-    if (ClientExtension != null) __obj.updateDynamic("ClientExtension")(js.Any.fromFunction5(ClientExtension))
-    if (Condition != null) __obj.updateDynamic("Condition")(js.Any.fromFunction5(Condition))
-    if (Defer != null) __obj.updateDynamic("Defer")(js.Any.fromFunction5(Defer))
-    if (Directive != null) __obj.updateDynamic("Directive")(js.Any.fromFunction5(Directive))
-    if (Fragment != null) __obj.updateDynamic("Fragment")(js.Any.fromFunction5(Fragment))
-    if (FragmentSpread != null) __obj.updateDynamic("FragmentSpread")(js.Any.fromFunction5(FragmentSpread))
-    if (InlineFragment != null) __obj.updateDynamic("InlineFragment")(js.Any.fromFunction5(InlineFragment))
-    if (LinkedField != null) __obj.updateDynamic("LinkedField")(js.Any.fromFunction5(LinkedField))
-    if (Literal != null) __obj.updateDynamic("Literal")(js.Any.fromFunction5(Literal))
-    if (LocalArgumentDefinition != null) __obj.updateDynamic("LocalArgumentDefinition")(js.Any.fromFunction5(LocalArgumentDefinition))
-    if (ModuleImport != null) __obj.updateDynamic("ModuleImport")(js.Any.fromFunction5(ModuleImport))
-    if (Request != null) __obj.updateDynamic("Request")(js.Any.fromFunction5(Request))
-    if (Root != null) __obj.updateDynamic("Root")(js.Any.fromFunction5(Root))
-    if (RootArgumentDefinition != null) __obj.updateDynamic("RootArgumentDefinition")(js.Any.fromFunction5(RootArgumentDefinition))
-    if (ScalarField != null) __obj.updateDynamic("ScalarField")(js.Any.fromFunction5(ScalarField))
-    if (SplitOperation != null) __obj.updateDynamic("SplitOperation")(js.Any.fromFunction5(SplitOperation))
-    if (Stream != null) __obj.updateDynamic("Stream")(js.Any.fromFunction5(Stream))
-    if (Variable != null) __obj.updateDynamic("Variable")(js.Any.fromFunction5(Variable))
     __obj.asInstanceOf[AnonArgument]
   }
+  @scala.inline
+  implicit class AnonArgumentOps[Self <: AnonArgument] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArgument(
+      value: (Argument, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Argument")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutArgument: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Argument")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientExtension(
+      value: (ClientExtension, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientExtension")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutClientExtension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientExtension")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCondition(
+      value: (Condition, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Condition")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Condition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefer(
+      value: (Defer, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Defer")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutDefer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Defer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirective(
+      value: (Directive, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Directive")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutDirective: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Directive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFragment(
+      value: (Fragment, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fragment")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutFragment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fragment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFragmentSpread(
+      value: (FragmentSpread, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentSpread")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutFragmentSpread: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentSpread")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlineFragment(
+      value: (InlineFragment, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InlineFragment")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutInlineFragment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InlineFragment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkedField(
+      value: (LinkedField, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkedField")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutLinkedField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkedField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLiteral(
+      value: (Literal, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Literal")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutLiteral: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Literal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalArgumentDefinition(
+      value: (LocalArgumentDefinition, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalArgumentDefinition")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutLocalArgumentDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalArgumentDefinition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModuleImport(
+      value: (ModuleImport, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModuleImport")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutModuleImport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModuleImport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequest(
+      value: (Request, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Request")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Request")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(
+      value: (Root, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRootArgumentDefinition(
+      value: (RootArgumentDefinition, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RootArgumentDefinition")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutRootArgumentDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RootArgumentDefinition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScalarField(
+      value: (ScalarField, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalarField")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutScalarField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalarField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSplitOperation(
+      value: (SplitOperation, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SplitOperation")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutSplitOperation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SplitOperation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStream(
+      value: (Stream, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Stream")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutStream: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Stream")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVariable(
+      value: (Variable, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Variable")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutVariable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Variable")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

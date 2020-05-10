@@ -15,5 +15,6 @@ trait SVGFEPointLightElement extends SVGElement {
 
 @JSGlobal("SVGFEPointLightElement")
 @js.native
-object SVGFEPointLightElement extends Instantiable0[SVGFEPointLightElement]
+object SVGFEPointLightElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFEPointLightElement]
 

@@ -7,36 +7,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BadgeProps extends js.Object {
-  var accent: js.UndefOr[Boolean] = js.undefined
-  var children: js.UndefOr[ReactElement] = js.undefined
-  var icon: js.UndefOr[String | AnonColor] = js.undefined
-  var size: js.UndefOr[Double] = js.undefined
-  var stroke: js.UndefOr[Double] = js.undefined
-  var style: js.UndefOr[AnonStrokeContainer] = js.undefined
-  var text: js.UndefOr[String] = js.undefined
+  var accent: js.UndefOr[Boolean] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
+  var icon: js.UndefOr[String | AnonColor] = js.native
+  var size: js.UndefOr[Double] = js.native
+  var stroke: js.UndefOr[Double] = js.native
+  var style: js.UndefOr[AnonStrokeContainer] = js.native
+  var text: js.UndefOr[String] = js.native
 }
 
 object BadgeProps {
   @scala.inline
-  def apply(
-    accent: js.UndefOr[Boolean] = js.undefined,
-    children: ReactElement = null,
-    icon: String | AnonColor = null,
-    size: Int | Double = null,
-    stroke: Int | Double = null,
-    style: AnonStrokeContainer = null,
-    text: String = null
-  ): BadgeProps = {
+  def apply(): BadgeProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(accent)) __obj.updateDynamic("accent")(accent.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[BadgeProps]
   }
+  @scala.inline
+  implicit class BadgePropsOps[Self <: BadgeProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildren(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: String | AnonColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStroke(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStroke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: AnonStrokeContainer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

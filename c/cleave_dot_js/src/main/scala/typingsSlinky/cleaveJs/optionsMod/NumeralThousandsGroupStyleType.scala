@@ -14,14 +14,12 @@ trait NumeralThousandsGroupStyleType extends js.Object
 
 object NumeralThousandsGroupStyleType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def lakh: typingsSlinky.cleaveJs.cleaveJsStrings.lakh = "lakh".asInstanceOf[typingsSlinky.cleaveJs.cleaveJsStrings.lakh]
   @scala.inline
-  def lakh: typingsSlinky.cleaveJs.cleaveJsStrings.lakh = this.cast("lakh")
+  def none: typingsSlinky.cleaveJs.cleaveJsStrings.none = "none".asInstanceOf[typingsSlinky.cleaveJs.cleaveJsStrings.none]
   @scala.inline
-  def none: typingsSlinky.cleaveJs.cleaveJsStrings.none = this.cast("none")
+  def thousand: typingsSlinky.cleaveJs.cleaveJsStrings.thousand = "thousand".asInstanceOf[typingsSlinky.cleaveJs.cleaveJsStrings.thousand]
   @scala.inline
-  def thousand: typingsSlinky.cleaveJs.cleaveJsStrings.thousand = this.cast("thousand")
-  @scala.inline
-  def wan: typingsSlinky.cleaveJs.cleaveJsStrings.wan = this.cast("wan")
+  def wan: typingsSlinky.cleaveJs.cleaveJsStrings.wan = "wan".asInstanceOf[typingsSlinky.cleaveJs.cleaveJsStrings.wan]
 }
 

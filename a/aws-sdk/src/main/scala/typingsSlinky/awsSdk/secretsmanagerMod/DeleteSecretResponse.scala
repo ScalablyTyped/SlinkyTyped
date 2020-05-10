@@ -22,12 +22,53 @@ trait DeleteSecretResponse extends js.Object {
 
 object DeleteSecretResponse {
   @scala.inline
-  def apply(ARN: SecretARNType = null, DeletionDate: js.Date = null, Name: SecretNameType = null): DeleteSecretResponse = {
+  def apply(): DeleteSecretResponse = {
     val __obj = js.Dynamic.literal()
-    if (ARN != null) __obj.updateDynamic("ARN")(ARN.asInstanceOf[js.Any])
-    if (DeletionDate != null) __obj.updateDynamic("DeletionDate")(DeletionDate.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteSecretResponse]
   }
+  @scala.inline
+  implicit class DeleteSecretResponseOps[Self <: DeleteSecretResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withARN(value: SecretARNType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeletionDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeletionDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: SecretNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

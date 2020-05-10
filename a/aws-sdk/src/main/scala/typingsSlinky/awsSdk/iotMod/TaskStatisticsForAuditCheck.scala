@@ -30,20 +30,77 @@ trait TaskStatisticsForAuditCheck extends js.Object {
 
 object TaskStatisticsForAuditCheck {
   @scala.inline
-  def apply(
-    canceledFindingsCount: Int | Double = null,
-    failedFindingsCount: Int | Double = null,
-    skippedFindingsCount: Int | Double = null,
-    succeededFindingsCount: Int | Double = null,
-    totalFindingsCount: Int | Double = null
-  ): TaskStatisticsForAuditCheck = {
+  def apply(): TaskStatisticsForAuditCheck = {
     val __obj = js.Dynamic.literal()
-    if (canceledFindingsCount != null) __obj.updateDynamic("canceledFindingsCount")(canceledFindingsCount.asInstanceOf[js.Any])
-    if (failedFindingsCount != null) __obj.updateDynamic("failedFindingsCount")(failedFindingsCount.asInstanceOf[js.Any])
-    if (skippedFindingsCount != null) __obj.updateDynamic("skippedFindingsCount")(skippedFindingsCount.asInstanceOf[js.Any])
-    if (succeededFindingsCount != null) __obj.updateDynamic("succeededFindingsCount")(succeededFindingsCount.asInstanceOf[js.Any])
-    if (totalFindingsCount != null) __obj.updateDynamic("totalFindingsCount")(totalFindingsCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[TaskStatisticsForAuditCheck]
   }
+  @scala.inline
+  implicit class TaskStatisticsForAuditCheckOps[Self <: TaskStatisticsForAuditCheck] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCanceledFindingsCount(value: CanceledFindingsCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canceledFindingsCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanceledFindingsCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canceledFindingsCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailedFindingsCount(value: FailedFindingsCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failedFindingsCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailedFindingsCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failedFindingsCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkippedFindingsCount(value: SkippedFindingsCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skippedFindingsCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkippedFindingsCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skippedFindingsCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSucceededFindingsCount(value: SucceededFindingsCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("succeededFindingsCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSucceededFindingsCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("succeededFindingsCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalFindingsCount(value: TotalFindingsCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalFindingsCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalFindingsCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalFindingsCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

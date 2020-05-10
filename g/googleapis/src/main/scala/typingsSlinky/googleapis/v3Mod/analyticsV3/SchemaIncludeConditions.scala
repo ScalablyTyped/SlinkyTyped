@@ -39,20 +39,77 @@ trait SchemaIncludeConditions extends js.Object {
 
 object SchemaIncludeConditions {
   @scala.inline
-  def apply(
-    daysToLookBack: Int | Double = null,
-    isSmartList: js.UndefOr[Boolean] = js.undefined,
-    kind: String = null,
-    membershipDurationDays: Int | Double = null,
-    segment: String = null
-  ): SchemaIncludeConditions = {
+  def apply(): SchemaIncludeConditions = {
     val __obj = js.Dynamic.literal()
-    if (daysToLookBack != null) __obj.updateDynamic("daysToLookBack")(daysToLookBack.asInstanceOf[js.Any])
-    if (!js.isUndefined(isSmartList)) __obj.updateDynamic("isSmartList")(isSmartList.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (membershipDurationDays != null) __obj.updateDynamic("membershipDurationDays")(membershipDurationDays.asInstanceOf[js.Any])
-    if (segment != null) __obj.updateDynamic("segment")(segment.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIncludeConditions]
   }
+  @scala.inline
+  implicit class SchemaIncludeConditionsOps[Self <: SchemaIncludeConditions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDaysToLookBack(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("daysToLookBack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDaysToLookBack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("daysToLookBack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsSmartList(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSmartList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsSmartList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSmartList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMembershipDurationDays(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("membershipDurationDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMembershipDurationDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("membershipDurationDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

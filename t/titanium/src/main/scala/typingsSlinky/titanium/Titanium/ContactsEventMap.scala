@@ -1,0 +1,34 @@
+package typingsSlinky.titanium.Titanium
+
+import typingsSlinky.titanium.ProxyEventMap
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ContactsEventMap extends ProxyEventMap {
+  var reload: ContactsReloadEvent = js.native
+}
+
+object ContactsEventMap {
+  @scala.inline
+  def apply(reload: ContactsReloadEvent): ContactsEventMap = {
+    val __obj = js.Dynamic.literal(reload = reload.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ContactsEventMap]
+  }
+  @scala.inline
+  implicit class ContactsEventMapOps[Self <: ContactsEventMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReload(value: ContactsReloadEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reload")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

@@ -4,8 +4,6 @@ import typingsSlinky.mongodb.mod.Collection
 import typingsSlinky.mongodb.mod.Db
 import typingsSlinky.mongodb.mod.DefaultSchema
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.Date
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,7 +58,11 @@ trait Agenda extends EventEmitter {
     */
   def define[T /* <: JobAttributesData */](
     name: String,
-    handler: js.Function2[/* job */ Job[T], /* done */ js.Function1[/* err */ js.UndefOr[Error], Unit], Unit]
+    handler: js.Function2[
+      /* job */ Job[T], 
+      /* done */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
   ): Unit = js.native
   def define[T /* <: JobAttributesData */](
     name: String,
@@ -144,10 +146,10 @@ trait Agenda extends EventEmitter {
     * @param names The name or names of the job(s) to run.
     * @param data An optional argument that will be passed to the processing function under job.attrs.data.
     */
-  def schedule[T /* <: JobAttributesData */](when: Date, names: String): js.Promise[Job[T]] = js.native
-  def schedule[T /* <: JobAttributesData */](when: Date, names: String, data: T): js.Promise[Job[T]] = js.native
-  def schedule[T /* <: JobAttributesData */](when: Date, names: js.Array[String]): js.Promise[js.Array[Job[T]]] = js.native
-  def schedule[T /* <: JobAttributesData */](when: Date, names: js.Array[String], data: T): js.Promise[js.Array[Job[T]]] = js.native
+  def schedule[T /* <: JobAttributesData */](when: js.Date, names: String): js.Promise[Job[T]] = js.native
+  def schedule[T /* <: JobAttributesData */](when: js.Date, names: String, data: T): js.Promise[Job[T]] = js.native
+  def schedule[T /* <: JobAttributesData */](when: js.Date, names: js.Array[String]): js.Promise[js.Array[Job[T]]] = js.native
+  def schedule[T /* <: JobAttributesData */](when: js.Date, names: js.Array[String], data: T): js.Promise[js.Array[Job[T]]] = js.native
   /**
     * Starts the job queue processing, checking processEvery time to see if there are new jobs.
     */

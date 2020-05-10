@@ -7,6 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClassBreaksRendererProperties
   extends RendererProperties
      with VisualVariablesMixinProperties {
@@ -15,50 +16,50 @@ trait ClassBreaksRendererProperties
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#backgroundFillSymbol)
     */
-  var backgroundFillSymbol: js.UndefOr[FillSymbolProperties | PolygonSymbol3DProperties] = js.undefined
+  var backgroundFillSymbol: js.UndefOr[FillSymbolProperties | PolygonSymbol3DProperties] = js.native
   /**
     * Each element in the array is an object that provides information about a class break associated with the renderer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#classBreakInfos)
     */
-  var classBreakInfos: js.UndefOr[js.Array[ClassBreakInfoProperties]] = js.undefined
+  var classBreakInfos: js.UndefOr[js.Array[ClassBreakInfoProperties]] = js.native
   /**
     * Label used in the [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html) to describe features assigned the [default symbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#defaultSymbol). The [default symbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#defaultSymbol) is used to draw all features with unspecified, unmatched values.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#defaultLabel)
     */
-  var defaultLabel: js.UndefOr[String] = js.undefined
+  var defaultLabel: js.UndefOr[String] = js.native
   /**
     * The default symbol assigned to features with a value not matched to a given break. If `null`, unmatched features will not be assigned a symbol.
     * > **Known Limitations**  SceneLayers with a `mesh` [geometryType](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-SceneLayer.html#geometryType) will display unmatching features with a generic symbol even if the `defaultSymbol` is `null`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#defaultSymbol)
     */
-  var defaultSymbol: js.UndefOr[SymbolProperties] = js.undefined
+  var defaultSymbol: js.UndefOr[SymbolProperties] = js.native
   /**
     * The name of a numeric attribute field whose data determines the symbol of each feature based on the class breaks defined in [classBreakInfos](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#classBreakInfos).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#field)
     */
-  var field: js.UndefOr[String] = js.undefined
+  var field: js.UndefOr[String] = js.native
   /**
     * An object providing options for displaying the renderer in the Legend.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#legendOptions)
     */
-  var legendOptions: js.UndefOr[ClassBreaksRendererLegendOptions] = js.undefined
+  var legendOptions: js.UndefOr[ClassBreaksRendererLegendOptions] = js.native
   /**
     * When [normalizationType](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#normalizationType) is `field`, this property contains the attribute field name used for normalization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#normalizationField)
     */
-  var normalizationField: js.UndefOr[String] = js.undefined
+  var normalizationField: js.UndefOr[String] = js.native
   /**
     * When [normalizationType](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#normalizationType) is `percent-of-total`, this property contains the total of all data values.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#normalizationTotal)
     */
-  var normalizationTotal: js.UndefOr[Double] = js.undefined
+  var normalizationTotal: js.UndefOr[Double] = js.native
   /**
     * Indicates how the data is normalized. If this property is defined, then the class breaks contain a normalized min/max value instead of the value in the given [field](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#field). The data value obtained from the field is normalized in one of the following ways before it is compared with the class breaks. See the table below for a list of possible values.
     *
@@ -72,53 +73,166 @@ trait ClassBreaksRendererProperties
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#normalizationType)
     */
-  var normalizationType: js.UndefOr[field | log | `percent-of-total`] = js.undefined
+  var normalizationType: js.UndefOr[field | log | `percent-of-total`] = js.native
   /**
     * An [Arcade](https://developers.arcgis.com/javascript/latest/guide/arcade/index.html) expression evaluating to a number. This expression can reference field values using the `$feature` global variable and perform mathematical calculations and logical evaluations at runtime.  This property is typically used as an alternative to [field](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#field) for data-driven visualizations.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#valueExpression)
     */
-  var valueExpression: js.UndefOr[String] = js.undefined
+  var valueExpression: js.UndefOr[String] = js.native
   /**
     * The title identifying and describing the associated [Arcade](https://developers.arcgis.com/javascript/latest/guide/arcade/index.html) expression as defined in the [valueExpression](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#valueExpression) property. This is displayed as the title of the corresponding renderer in the [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html) in the absence of a provided `title` in the [legendOptions](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#legendOptions) property.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html#valueExpressionTitle)
     */
-  var valueExpressionTitle: js.UndefOr[String] = js.undefined
+  var valueExpressionTitle: js.UndefOr[String] = js.native
 }
 
 object ClassBreaksRendererProperties {
   @scala.inline
-  def apply(
-    authoringInfo: AuthoringInfoProperties = null,
-    backgroundFillSymbol: FillSymbolProperties | PolygonSymbol3DProperties = null,
-    classBreakInfos: js.Array[ClassBreakInfoProperties] = null,
-    defaultLabel: String = null,
-    defaultSymbol: SymbolProperties = null,
-    field: String = null,
-    legendOptions: ClassBreaksRendererLegendOptions = null,
-    normalizationField: String = null,
-    normalizationTotal: Int | Double = null,
-    normalizationType: field | log | `percent-of-total` = null,
-    valueExpression: String = null,
-    valueExpressionTitle: String = null,
-    visualVariables: js.Array[VisualVariableProperties] = null
-  ): ClassBreaksRendererProperties = {
+  def apply(): ClassBreaksRendererProperties = {
     val __obj = js.Dynamic.literal()
-    if (authoringInfo != null) __obj.updateDynamic("authoringInfo")(authoringInfo.asInstanceOf[js.Any])
-    if (backgroundFillSymbol != null) __obj.updateDynamic("backgroundFillSymbol")(backgroundFillSymbol.asInstanceOf[js.Any])
-    if (classBreakInfos != null) __obj.updateDynamic("classBreakInfos")(classBreakInfos.asInstanceOf[js.Any])
-    if (defaultLabel != null) __obj.updateDynamic("defaultLabel")(defaultLabel.asInstanceOf[js.Any])
-    if (defaultSymbol != null) __obj.updateDynamic("defaultSymbol")(defaultSymbol.asInstanceOf[js.Any])
-    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
-    if (legendOptions != null) __obj.updateDynamic("legendOptions")(legendOptions.asInstanceOf[js.Any])
-    if (normalizationField != null) __obj.updateDynamic("normalizationField")(normalizationField.asInstanceOf[js.Any])
-    if (normalizationTotal != null) __obj.updateDynamic("normalizationTotal")(normalizationTotal.asInstanceOf[js.Any])
-    if (normalizationType != null) __obj.updateDynamic("normalizationType")(normalizationType.asInstanceOf[js.Any])
-    if (valueExpression != null) __obj.updateDynamic("valueExpression")(valueExpression.asInstanceOf[js.Any])
-    if (valueExpressionTitle != null) __obj.updateDynamic("valueExpressionTitle")(valueExpressionTitle.asInstanceOf[js.Any])
-    if (visualVariables != null) __obj.updateDynamic("visualVariables")(visualVariables.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassBreaksRendererProperties]
   }
+  @scala.inline
+  implicit class ClassBreaksRendererPropertiesOps[Self <: ClassBreaksRendererProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundFillSymbol(value: FillSymbolProperties | PolygonSymbol3DProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundFillSymbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundFillSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundFillSymbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassBreakInfos(value: js.Array[ClassBreakInfoProperties]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classBreakInfos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassBreakInfos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classBreakInfos")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultSymbol(value: SymbolProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSymbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSymbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLegendOptions(value: ClassBreaksRendererLegendOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegendOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNormalizationField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizationField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNormalizationField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizationField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNormalizationTotal(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizationTotal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNormalizationTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizationTotal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNormalizationType(value: field | log | `percent-of-total`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNormalizationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueExpression(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueExpression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueExpressionTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueExpressionTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueExpressionTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueExpressionTitle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,38 +12,71 @@ import scala.scalajs.js.annotation._
   * one member of subjects matches the request and (b) at least one member of resourceRules or
   * nonResourceRules matches the request.
   */
+@js.native
 trait PolicyRulesWithSubjects extends js.Object {
   /**
     * `nonResourceRules` is a list of NonResourcePolicyRules that identify matching requests
     * according to their verb and the target non-resource URL.
     */
-  var nonResourceRules: js.UndefOr[Input[js.Array[Input[NonResourcePolicyRule]]]] = js.undefined
+  var nonResourceRules: js.UndefOr[Input[js.Array[Input[NonResourcePolicyRule]]]] = js.native
   /**
     * `resourceRules` is a slice of ResourcePolicyRules that identify matching requests according
     * to their verb and the target resource. At least one of `resourceRules` and
     * `nonResourceRules` has to be non-empty.
     */
-  var resourceRules: js.UndefOr[Input[js.Array[Input[ResourcePolicyRule]]]] = js.undefined
+  var resourceRules: js.UndefOr[Input[js.Array[Input[ResourcePolicyRule]]]] = js.native
   /**
     * subjects is the list of normal user, serviceaccount, or group that this rule cares about.
     * There must be at least one member in this slice. A slice that includes both the
     * system:authenticated and system:unauthenticated user groups matches every request.
     * Required.
     */
-  var subjects: Input[js.Array[Input[Subject]]]
+  var subjects: Input[js.Array[Input[Subject]]] = js.native
 }
 
 object PolicyRulesWithSubjects {
   @scala.inline
-  def apply(
-    subjects: Input[js.Array[Input[Subject]]],
-    nonResourceRules: Input[js.Array[Input[NonResourcePolicyRule]]] = null,
-    resourceRules: Input[js.Array[Input[ResourcePolicyRule]]] = null
-  ): PolicyRulesWithSubjects = {
+  def apply(subjects: Input[js.Array[Input[Subject]]]): PolicyRulesWithSubjects = {
     val __obj = js.Dynamic.literal(subjects = subjects.asInstanceOf[js.Any])
-    if (nonResourceRules != null) __obj.updateDynamic("nonResourceRules")(nonResourceRules.asInstanceOf[js.Any])
-    if (resourceRules != null) __obj.updateDynamic("resourceRules")(resourceRules.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolicyRulesWithSubjects]
   }
+  @scala.inline
+  implicit class PolicyRulesWithSubjectsOps[Self <: PolicyRulesWithSubjects] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSubjects(value: Input[js.Array[Input[Subject]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subjects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNonResourceRules(value: Input[js.Array[Input[NonResourcePolicyRule]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonResourceRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNonResourceRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonResourceRules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceRules(value: Input[js.Array[Input[ResourcePolicyRule]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceRules")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,9 @@
 package typingsSlinky.reactToolbox.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactToolbox.libTimePickerMod.default
 import typingsSlinky.reactToolbox.libTimePickerTimePickerMod.TimePickerProps
 import typingsSlinky.reactToolbox.libTimePickerTimePickerMod.TimePickerTheme
@@ -14,54 +13,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TimePicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object TimePicker {
   @JSImport("react-toolbox/lib/time_picker", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: label */
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    cancelLabel: String = null,
-    error: String = null,
-    format: `24hr` | ampm = null,
-    icon: TagMod[Any] = null,
-    inputClassName: String = null,
-    okLabel: String = null,
-    onChange: js.Function = null,
-    onClick: js.Function = null,
-    onDismiss: js.Function = null,
-    onEscKeyDown: js.Function = null,
-    onKeyPress: js.Function = null,
-    onOverlayClick: js.Function = null,
-    readonly: js.UndefOr[Boolean] = js.undefined,
-    theme: TimePickerTheme = null,
-    value: js.Date = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (cancelLabel != null) __obj.updateDynamic("cancelLabel")(cancelLabel.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (inputClassName != null) __obj.updateDynamic("inputClassName")(inputClassName.asInstanceOf[js.Any])
-    if (okLabel != null) __obj.updateDynamic("okLabel")(okLabel.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(onChange.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
-    if (onDismiss != null) __obj.updateDynamic("onDismiss")(onDismiss.asInstanceOf[js.Any])
-    if (onEscKeyDown != null) __obj.updateDynamic("onEscKeyDown")(onEscKeyDown.asInstanceOf[js.Any])
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(onKeyPress.asInstanceOf[js.Any])
-    if (onOverlayClick != null) __obj.updateDynamic("onOverlayClick")(onOverlayClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(readonly)) __obj.updateDynamic("readonly")(readonly.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelLabel(value: String): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def error(value: String): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def format(value: `24hr` | ampm): this.type = set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputClassName(value: String): this.type = set("inputClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def okLabel(value: String): this.type = set("okLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: js.Function): this.type = set("onChange", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: js.Function): this.type = set("onClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDismiss(value: js.Function): this.type = set("onDismiss", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onEscKeyDown(value: js.Function): this.type = set("onEscKeyDown", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onKeyPress(value: js.Function): this.type = set("onKeyPress", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onOverlayClick(value: js.Function): this.type = set("onOverlayClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def readonly(value: Boolean): this.type = set("readonly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: TimePickerTheme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactToolbox.libTimePickerMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TimePickerProps
+  
+  def withProps(p: TimePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TimePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

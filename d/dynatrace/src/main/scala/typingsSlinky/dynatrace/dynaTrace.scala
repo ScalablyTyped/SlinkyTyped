@@ -7,7 +7,6 @@ import typingsSlinky.dynatrace.dynatraceStrings._warn_
 import typingsSlinky.dynatrace.dynatraceStrings.c
 import typingsSlinky.dynatrace.dynatraceStrings.i
 import typingsSlinky.dynatrace.dynatraceStrings.s
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -161,8 +160,8 @@ trait dynaTrace extends js.Object {
     */
   def reportError(error: String): Unit = js.native
   def reportError(error: String, parentAction: Double): Unit = js.native
-  def reportError(error: Error): Unit = js.native
-  def reportError(error: Error, parentAction: Double): Unit = js.native
+  def reportError(error: js.Error): Unit = js.native
+  def reportError(error: js.Error, parentAction: Double): Unit = js.native
   /**
     * @description Reports an event
     * @param parentAction - parent action id. if not passed or null, error is added to current action

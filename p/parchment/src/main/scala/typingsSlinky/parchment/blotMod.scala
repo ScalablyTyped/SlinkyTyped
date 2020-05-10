@@ -2,10 +2,10 @@ package typingsSlinky.parchment
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.MutationRecord
 import org.scalajs.dom.raw.Node
 import typingsSlinky.parchment.linkedListMod.default
 import typingsSlinky.parchment.linkedNodeMod.LinkedNode
-import typingsSlinky.std.MutationRecord
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,7 +41,7 @@ object blotMod extends js.Object {
     def replaceWith(replacement: Blot): Blot = js.native
     def split(index: Double): Blot = js.native
     def split(index: Double, force: Boolean): Blot = js.native
-    def update(mutations: js.Array[org.scalajs.dom.raw.MutationRecord], context: StringDictionary[js.Any]): Unit = js.native
+    def update(mutations: js.Array[MutationRecord], context: StringDictionary[js.Any]): Unit = js.native
     def wrap(name: String, value: js.Any): Parent = js.native
     def wrap(wrapper: Parent): Parent = js.native
   }

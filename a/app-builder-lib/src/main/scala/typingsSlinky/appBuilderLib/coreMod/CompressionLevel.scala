@@ -13,12 +13,10 @@ trait CompressionLevel extends js.Object
 
 object CompressionLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def maximum: typingsSlinky.appBuilderLib.appBuilderLibStrings.maximum = "maximum".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.maximum]
   @scala.inline
-  def maximum: typingsSlinky.appBuilderLib.appBuilderLibStrings.maximum = this.cast("maximum")
+  def normal: typingsSlinky.appBuilderLib.appBuilderLibStrings.normal = "normal".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.appBuilderLib.appBuilderLibStrings.normal = this.cast("normal")
-  @scala.inline
-  def store: typingsSlinky.appBuilderLib.appBuilderLibStrings.store = this.cast("store")
+  def store: typingsSlinky.appBuilderLib.appBuilderLibStrings.store = "store".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.store]
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.firebaseFirestore
 
 import typingsSlinky.firebaseFirestore.remoteConnectivityMonitorMod.ConnectivityMonitor
-import typingsSlinky.firebaseFirestore.remoteConnectivityMonitorMod.ConnectivityMonitorCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,23 +16,6 @@ object platformBrowserBrowserConnectivityMonitorMod extends js.Object {
     val networkUnavailableListener: js.Any = js.native
     var onNetworkAvailable: js.Any = js.native
     var onNetworkUnavailable: js.Any = js.native
-    /**
-      * Adds a callback to be called when connectivity changes.
-      *
-      * Callbacks are not made on the initial state of connectivity, since this
-      * monitor is primarily used for resetting backoff in the remote store when
-      * connectivity changes. As such, the initial connectivity state is
-      * irrelevant here.
-      */
-    /* CompleteClass */
-    override def addCallback(callback: ConnectivityMonitorCallback): Unit = js.native
-    /**
-      * Stops monitoring connectivity. After this call completes, no further
-      * callbacks will be triggered. After shutdown() is called, no further calls
-      * are allowed on this instance.
-      */
-    /* CompleteClass */
-    override def shutdown(): Unit = js.native
   }
   
   /* static members */

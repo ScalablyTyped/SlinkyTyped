@@ -35,19 +35,71 @@ trait MemberArgs extends js.Object {
 
 object MemberArgs {
   @scala.inline
-  def apply(
-    accountId: Input[String],
-    detectorId: Input[String],
-    email: Input[String],
-    disableEmailNotification: Input[Boolean] = null,
-    invitationMessage: Input[String] = null,
-    invite: Input[Boolean] = null
-  ): MemberArgs = {
+  def apply(accountId: Input[String], detectorId: Input[String], email: Input[String]): MemberArgs = {
     val __obj = js.Dynamic.literal(accountId = accountId.asInstanceOf[js.Any], detectorId = detectorId.asInstanceOf[js.Any], email = email.asInstanceOf[js.Any])
-    if (disableEmailNotification != null) __obj.updateDynamic("disableEmailNotification")(disableEmailNotification.asInstanceOf[js.Any])
-    if (invitationMessage != null) __obj.updateDynamic("invitationMessage")(invitationMessage.asInstanceOf[js.Any])
-    if (invite != null) __obj.updateDynamic("invite")(invite.asInstanceOf[js.Any])
     __obj.asInstanceOf[MemberArgs]
   }
+  @scala.inline
+  implicit class MemberArgsOps[Self <: MemberArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDetectorId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmail(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableEmailNotification(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableEmailNotification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableEmailNotification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableEmailNotification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvitationMessage(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitationMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvitationMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitationMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvite(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invite")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

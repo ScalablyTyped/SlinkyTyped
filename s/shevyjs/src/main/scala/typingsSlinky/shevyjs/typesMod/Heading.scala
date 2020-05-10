@@ -16,18 +16,16 @@ trait Heading extends js.Object
 
 object Heading {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def h1: typingsSlinky.shevyjs.shevyjsStrings.h1 = "h1".asInstanceOf[typingsSlinky.shevyjs.shevyjsStrings.h1]
   @scala.inline
-  def h1: typingsSlinky.shevyjs.shevyjsStrings.h1 = this.cast("h1")
+  def h2: typingsSlinky.shevyjs.shevyjsStrings.h2 = "h2".asInstanceOf[typingsSlinky.shevyjs.shevyjsStrings.h2]
   @scala.inline
-  def h2: typingsSlinky.shevyjs.shevyjsStrings.h2 = this.cast("h2")
+  def h3: typingsSlinky.shevyjs.shevyjsStrings.h3 = "h3".asInstanceOf[typingsSlinky.shevyjs.shevyjsStrings.h3]
   @scala.inline
-  def h3: typingsSlinky.shevyjs.shevyjsStrings.h3 = this.cast("h3")
+  def h4: typingsSlinky.shevyjs.shevyjsStrings.h4 = "h4".asInstanceOf[typingsSlinky.shevyjs.shevyjsStrings.h4]
   @scala.inline
-  def h4: typingsSlinky.shevyjs.shevyjsStrings.h4 = this.cast("h4")
+  def h5: typingsSlinky.shevyjs.shevyjsStrings.h5 = "h5".asInstanceOf[typingsSlinky.shevyjs.shevyjsStrings.h5]
   @scala.inline
-  def h5: typingsSlinky.shevyjs.shevyjsStrings.h5 = this.cast("h5")
-  @scala.inline
-  def h6: typingsSlinky.shevyjs.shevyjsStrings.h6 = this.cast("h6")
+  def h6: typingsSlinky.shevyjs.shevyjsStrings.h6 = "h6".asInstanceOf[typingsSlinky.shevyjs.shevyjsStrings.h6]
 }
 

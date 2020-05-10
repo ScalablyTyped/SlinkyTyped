@@ -1,27 +1,30 @@
 package typingsSlinky.solidReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.solidReact.mod.LoginButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LoginButton
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.solidReact.mod.LoginButton] {
+object LoginButton {
   @JSImport("@solid/react", "LoginButton")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(popup: String, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.solidReact.mod.LoginButton] = {
-    val __obj = js.Dynamic.literal(popup = popup.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.solidReact.mod.LoginButton] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   }
-  type Props = LoginButtonProps
+  
+  def withProps(p: LoginButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(popup: String): Builder = {
+    val __props = js.Dynamic.literal(popup = popup.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[LoginButtonProps]))
+  }
 }
 

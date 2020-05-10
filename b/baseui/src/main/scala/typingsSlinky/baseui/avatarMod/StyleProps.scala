@@ -12,3 +12,37 @@ trait StyleProps extends js.Object {
   var $size: js.UndefOr[String] = js.native
 }
 
+object StyleProps {
+  @scala.inline
+  def apply($didImageFailToLoad: Boolean): StyleProps = {
+    val __obj = js.Dynamic.literal($didImageFailToLoad = $didImageFailToLoad.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StyleProps]
+  }
+  @scala.inline
+  implicit class StylePropsOps[Self <: StyleProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$didImageFailToLoad(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$didImageFailToLoad")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$size(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$size: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$size")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

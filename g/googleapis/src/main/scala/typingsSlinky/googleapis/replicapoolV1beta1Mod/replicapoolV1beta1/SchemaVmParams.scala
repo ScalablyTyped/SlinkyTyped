@@ -64,32 +64,149 @@ trait SchemaVmParams extends js.Object {
 
 object SchemaVmParams {
   @scala.inline
-  def apply(
-    baseInstanceName: String = null,
-    canIpForward: js.UndefOr[Boolean] = js.undefined,
-    description: String = null,
-    disksToAttach: js.Array[SchemaExistingDisk] = null,
-    disksToCreate: js.Array[SchemaNewDisk] = null,
-    machineType: String = null,
-    metadata: SchemaMetadata = null,
-    networkInterfaces: js.Array[SchemaNetworkInterface] = null,
-    onHostMaintenance: String = null,
-    serviceAccounts: js.Array[SchemaServiceAccount] = null,
-    tags: SchemaTag = null
-  ): SchemaVmParams = {
+  def apply(): SchemaVmParams = {
     val __obj = js.Dynamic.literal()
-    if (baseInstanceName != null) __obj.updateDynamic("baseInstanceName")(baseInstanceName.asInstanceOf[js.Any])
-    if (!js.isUndefined(canIpForward)) __obj.updateDynamic("canIpForward")(canIpForward.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (disksToAttach != null) __obj.updateDynamic("disksToAttach")(disksToAttach.asInstanceOf[js.Any])
-    if (disksToCreate != null) __obj.updateDynamic("disksToCreate")(disksToCreate.asInstanceOf[js.Any])
-    if (machineType != null) __obj.updateDynamic("machineType")(machineType.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (networkInterfaces != null) __obj.updateDynamic("networkInterfaces")(networkInterfaces.asInstanceOf[js.Any])
-    if (onHostMaintenance != null) __obj.updateDynamic("onHostMaintenance")(onHostMaintenance.asInstanceOf[js.Any])
-    if (serviceAccounts != null) __obj.updateDynamic("serviceAccounts")(serviceAccounts.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVmParams]
   }
+  @scala.inline
+  implicit class SchemaVmParamsOps[Self <: SchemaVmParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBaseInstanceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseInstanceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseInstanceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseInstanceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanIpForward(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canIpForward")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanIpForward: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canIpForward")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisksToAttach(value: js.Array[SchemaExistingDisk]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disksToAttach")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisksToAttach: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disksToAttach")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisksToCreate(value: js.Array[SchemaNewDisk]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disksToCreate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisksToCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disksToCreate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMachineType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMachineType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: SchemaMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkInterfaces(value: js.Array[SchemaNetworkInterface]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkInterfaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnHostMaintenance(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHostMaintenance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnHostMaintenance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHostMaintenance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceAccounts(value: js.Array[SchemaServiceAccount]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceAccounts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccounts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: SchemaTag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

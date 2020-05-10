@@ -18,22 +18,20 @@ trait capabilityOp extends js.Object
 
 object capabilityOp {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `channel-metadata`: typingsSlinky.ably.ablyStrings.`channel-metadata` = "channel-metadata".asInstanceOf[typingsSlinky.ably.ablyStrings.`channel-metadata`]
   @scala.inline
-  def `channel-metadata`: typingsSlinky.ably.ablyStrings.`channel-metadata` = this.cast("channel-metadata")
+  def history: typingsSlinky.ably.ablyStrings.history = "history".asInstanceOf[typingsSlinky.ably.ablyStrings.history]
   @scala.inline
-  def history: typingsSlinky.ably.ablyStrings.history = this.cast("history")
+  def presence: typingsSlinky.ably.ablyStrings.presence = "presence".asInstanceOf[typingsSlinky.ably.ablyStrings.presence]
   @scala.inline
-  def presence: typingsSlinky.ably.ablyStrings.presence = this.cast("presence")
+  def publish: typingsSlinky.ably.ablyStrings.publish = "publish".asInstanceOf[typingsSlinky.ably.ablyStrings.publish]
   @scala.inline
-  def publish: typingsSlinky.ably.ablyStrings.publish = this.cast("publish")
+  def `push-admin`: typingsSlinky.ably.ablyStrings.`push-admin` = "push-admin".asInstanceOf[typingsSlinky.ably.ablyStrings.`push-admin`]
   @scala.inline
-  def `push-admin`: typingsSlinky.ably.ablyStrings.`push-admin` = this.cast("push-admin")
+  def `push-subscribe`: typingsSlinky.ably.ablyStrings.`push-subscribe` = "push-subscribe".asInstanceOf[typingsSlinky.ably.ablyStrings.`push-subscribe`]
   @scala.inline
-  def `push-subscribe`: typingsSlinky.ably.ablyStrings.`push-subscribe` = this.cast("push-subscribe")
+  def stats: typingsSlinky.ably.ablyStrings.stats = "stats".asInstanceOf[typingsSlinky.ably.ablyStrings.stats]
   @scala.inline
-  def stats: typingsSlinky.ably.ablyStrings.stats = this.cast("stats")
-  @scala.inline
-  def subscribe: typingsSlinky.ably.ablyStrings.subscribe = this.cast("subscribe")
+  def subscribe: typingsSlinky.ably.ablyStrings.subscribe = "subscribe".asInstanceOf[typingsSlinky.ably.ablyStrings.subscribe]
 }
 

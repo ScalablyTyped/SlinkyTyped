@@ -8,18 +8,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FormatOptions extends js.Object {
   /**
     * Available values: 'ratio' (default) or 'decimal'. For example
     * format(fraction(1, 3)) will output '1/3' when 'ratio' is configured,
     * and will output 0.(3) when 'decimal' is configured.
     */
-  var fraction: js.UndefOr[String] = js.undefined
+  var fraction: js.UndefOr[String] = js.native
   /**
     * Exponent determining the lower boundary for formatting a value with
     * an exponent when notation='auto. Default value is -3.
     */
-  var lowerExp: js.UndefOr[Double] = js.undefined
+  var lowerExp: js.UndefOr[Double] = js.native
   /**
     * Number notation. Choose from: 'fixed' Always use regular number
     * notation. For example '123.40' and '14000000' 'exponential' Always
@@ -29,7 +30,7 @@ trait FormatOptions extends js.Object {
     * elsewhere. Lower bound is included, upper bound is excluded. For
     * example '123.4' and '1.4e7'.
     */
-  var notation: js.UndefOr[fixed | exponential | engineering | auto] = js.undefined
+  var notation: js.UndefOr[fixed | exponential | engineering | auto] = js.native
   /**
     * A number between 0 and 16 to round the digits of the number. In case
     * of notations 'exponential' and 'auto', precision defines the total
@@ -37,30 +38,87 @@ trait FormatOptions extends js.Object {
     * case of notation 'fixed', precision defines the number of significant
     * digits after the decimal point, and is 0 by default.
     */
-  var precision: js.UndefOr[Double] = js.undefined
+  var precision: js.UndefOr[Double] = js.native
   /**
     * Exponent determining the upper boundary for formatting a value with
     * an exponent when notation='auto. Default value is 5.
     */
-  var upperExp: js.UndefOr[Double] = js.undefined
+  var upperExp: js.UndefOr[Double] = js.native
 }
 
 object FormatOptions {
   @scala.inline
-  def apply(
-    fraction: String = null,
-    lowerExp: Int | Double = null,
-    notation: fixed | exponential | engineering | auto = null,
-    precision: Int | Double = null,
-    upperExp: Int | Double = null
-  ): FormatOptions = {
+  def apply(): FormatOptions = {
     val __obj = js.Dynamic.literal()
-    if (fraction != null) __obj.updateDynamic("fraction")(fraction.asInstanceOf[js.Any])
-    if (lowerExp != null) __obj.updateDynamic("lowerExp")(lowerExp.asInstanceOf[js.Any])
-    if (notation != null) __obj.updateDynamic("notation")(notation.asInstanceOf[js.Any])
-    if (precision != null) __obj.updateDynamic("precision")(precision.asInstanceOf[js.Any])
-    if (upperExp != null) __obj.updateDynamic("upperExp")(upperExp.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormatOptions]
   }
+  @scala.inline
+  implicit class FormatOptionsOps[Self <: FormatOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFraction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fraction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFraction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fraction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLowerExp(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerExp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLowerExp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerExp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotation(value: fixed | exponential | engineering | auto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrecision(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrecision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpperExp(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upperExp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpperExp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upperExp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

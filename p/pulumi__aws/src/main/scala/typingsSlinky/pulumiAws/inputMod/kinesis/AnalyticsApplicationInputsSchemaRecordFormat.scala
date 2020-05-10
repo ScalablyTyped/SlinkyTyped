@@ -13,14 +13,41 @@ trait AnalyticsApplicationInputsSchemaRecordFormat extends js.Object {
 
 object AnalyticsApplicationInputsSchemaRecordFormat {
   @scala.inline
-  def apply(
-    mappingParameters: Input[AnalyticsApplicationInputsSchemaRecordFormatMappingParameters] = null,
-    recordFormatType: Input[String] = null
-  ): AnalyticsApplicationInputsSchemaRecordFormat = {
+  def apply(): AnalyticsApplicationInputsSchemaRecordFormat = {
     val __obj = js.Dynamic.literal()
-    if (mappingParameters != null) __obj.updateDynamic("mappingParameters")(mappingParameters.asInstanceOf[js.Any])
-    if (recordFormatType != null) __obj.updateDynamic("recordFormatType")(recordFormatType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalyticsApplicationInputsSchemaRecordFormat]
   }
+  @scala.inline
+  implicit class AnalyticsApplicationInputsSchemaRecordFormatOps[Self <: AnalyticsApplicationInputsSchemaRecordFormat] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMappingParameters(value: Input[AnalyticsApplicationInputsSchemaRecordFormatMappingParameters]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mappingParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMappingParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mappingParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecordFormatType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordFormatType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecordFormatType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordFormatType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.firebaseFirestore
 
+import typingsSlinky.firebaseFirestore.coreQueryMod.LimitType
 import typingsSlinky.firebaseFirestore.credentialsMod.TokenType
 import typingsSlinky.firebaseFirestore.firestoreProtoApiMod.CompositeFilterOp
 import typingsSlinky.firebaseFirestore.firestoreProtoApiMod.FieldFilterOp
@@ -19,6 +20,8 @@ import typingsSlinky.firebaseFirestore.persistenceMod.PersistenceTransactionMode
 import typingsSlinky.firebaseFirestore.simpleDbMod.SimpleDbTransactionMode
 import typingsSlinky.firebaseFirestore.specTestRunnerMod.SpecLimitType
 import typingsSlinky.firebaseFirestore.typesMod.MutationBatchState
+import typingsSlinky.firebaseFirestore.typesMod.OnlineState
+import typingsSlinky.firebaseFirestore.utilAsyncQueueMod.TimerId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,6 +75,11 @@ object firebaseFirestoreStrings {
   sealed trait ERROR extends IndexState
   
   @js.native
+  sealed trait F
+    extends LimitType
+       with typingsSlinky.firebaseFirestore.queryMod.LimitType
+  
+  @js.native
   sealed trait FirstParty
     extends TokenType
        with typingsSlinky.firebaseFirestore.apiCredentialsMod.TokenType
@@ -92,13 +100,15 @@ object firebaseFirestoreStrings {
   sealed trait IS_NULL extends UnaryFilterOp
   
   @js.native
+  sealed trait L
+    extends LimitType
+       with typingsSlinky.firebaseFirestore.queryMod.LimitType
+  
+  @js.native
   sealed trait LESS_THAN extends FieldFilterOp
   
   @js.native
   sealed trait LESS_THAN_OR_EQUAL extends FieldFilterOp
-  
-  @js.native
-  sealed trait LessthansignDELETEGreaterthansign extends js.Object
   
   @js.native
   sealed trait LimitToFirst
@@ -131,6 +141,16 @@ object firebaseFirestoreStrings {
        with UnaryFilterOp
   
   @js.native
+  sealed trait Offline
+    extends OnlineState
+       with typingsSlinky.firebaseFirestore.coreTypesMod.OnlineState
+  
+  @js.native
+  sealed trait Online
+    extends OnlineState
+       with typingsSlinky.firebaseFirestore.coreTypesMod.OnlineState
+  
+  @js.native
   sealed trait READY extends IndexState
   
   @js.native
@@ -149,10 +169,9 @@ object firebaseFirestoreStrings {
   sealed trait STATE_UNSPECIFIED extends IndexState
   
   @js.native
-  sealed trait __name__ extends js.Object
-  
-  @js.native
-  sealed trait _empty extends js.Object
+  sealed trait Unknown
+    extends OnlineState
+       with typingsSlinky.firebaseFirestore.coreTypesMod.OnlineState
   
   @js.native
   sealed trait acknowledged
@@ -160,29 +179,24 @@ object firebaseFirestoreStrings {
        with typingsSlinky.firebaseFirestore.coreTypesMod.MutationBatchState
   
   @js.native
+  sealed trait all
+    extends TimerId
+       with typingsSlinky.firebaseFirestore.asyncQueueMod.TimerId
+  
+  @js.native
   sealed trait boolean
     extends ValidationType
        with typingsSlinky.firebaseFirestore.utilInputValidationMod.ValidationType
   
   @js.native
+  sealed trait client_metadata_refresh
+    extends TimerId
+       with typingsSlinky.firebaseFirestore.asyncQueueMod.TimerId
+  
+  @js.native
   sealed trait current_
     extends QueryTargetState
        with typingsSlinky.firebaseFirestore.sharedClientStateSyncerMod.QueryTargetState
-  
-  @js.native
-  sealed trait firestore_clients extends js.Object
-  
-  @js.native
-  sealed trait firestore_mutations extends js.Object
-  
-  @js.native
-  sealed trait firestore_online_state extends js.Object
-  
-  @js.native
-  sealed trait firestore_sequence_number extends js.Object
-  
-  @js.native
-  sealed trait firestore_targets extends js.Object
   
   @js.native
   sealed trait function
@@ -198,12 +212,24 @@ object firebaseFirestoreStrings {
        with ProjectsDatabasesIndexesApiClientAlt
   
   @js.native
+  sealed trait listen_stream_connection_backoff
+    extends TimerId
+       with typingsSlinky.firebaseFirestore.asyncQueueMod.TimerId
+  
+  @js.native
+  sealed trait listen_stream_idle
+    extends TimerId
+       with typingsSlinky.firebaseFirestore.asyncQueueMod.TimerId
+  
+  @js.native
+  sealed trait lru_garbage_collection
+    extends TimerId
+       with typingsSlinky.firebaseFirestore.asyncQueueMod.TimerId
+  
+  @js.native
   sealed trait media
     extends ProjectsDatabasesDocumentsApiClientAlt
        with ProjectsDatabasesIndexesApiClientAlt
-  
-  @js.native
-  sealed trait `multi-client` extends js.Object
   
   @js.native
   sealed trait `non-empty string`
@@ -224,6 +250,11 @@ object firebaseFirestoreStrings {
   sealed trait `object`
     extends ValidationType
        with typingsSlinky.firebaseFirestore.utilInputValidationMod.ValidationType
+  
+  @js.native
+  sealed trait online_state_timeout
+    extends TimerId
+       with typingsSlinky.firebaseFirestore.asyncQueueMod.TimerId
   
   @js.native
   sealed trait pending
@@ -284,17 +315,29 @@ object firebaseFirestoreStrings {
        with typingsSlinky.firebaseFirestore.sharedClientStateSyncerMod.QueryTargetState
   
   @js.native
+  sealed trait retry_transaction
+    extends TimerId
+       with typingsSlinky.firebaseFirestore.asyncQueueMod.TimerId
+  
+  @js.native
   sealed trait string
     extends ValidationType
        with typingsSlinky.firebaseFirestore.utilInputValidationMod.ValidationType
   
   @js.native
-  sealed trait `test-db2` extends js.Object
-  
-  @js.native
   sealed trait undefined
     extends ValidationType
        with typingsSlinky.firebaseFirestore.utilInputValidationMod.ValidationType
+  
+  @js.native
+  sealed trait write_stream_connection_backoff
+    extends TimerId
+       with typingsSlinky.firebaseFirestore.asyncQueueMod.TimerId
+  
+  @js.native
+  sealed trait write_stream_idle
+    extends TimerId
+       with typingsSlinky.firebaseFirestore.asyncQueueMod.TimerId
   
   @scala.inline
   def `1`: `1` = "1".asInstanceOf[`1`]
@@ -323,6 +366,8 @@ object firebaseFirestoreStrings {
   @scala.inline
   def ERROR: ERROR = "ERROR".asInstanceOf[ERROR]
   @scala.inline
+  def F: F = "F".asInstanceOf[F]
+  @scala.inline
   def FirstParty: FirstParty = "FirstParty".asInstanceOf[FirstParty]
   @scala.inline
   def GREATER_THAN: GREATER_THAN = "GREATER_THAN".asInstanceOf[GREATER_THAN]
@@ -335,11 +380,11 @@ object firebaseFirestoreStrings {
   @scala.inline
   def IS_NULL: IS_NULL = "IS_NULL".asInstanceOf[IS_NULL]
   @scala.inline
+  def L: L = "L".asInstanceOf[L]
+  @scala.inline
   def LESS_THAN: LESS_THAN = "LESS_THAN".asInstanceOf[LESS_THAN]
   @scala.inline
   def LESS_THAN_OR_EQUAL: LESS_THAN_OR_EQUAL = "LESS_THAN_OR_EQUAL".asInstanceOf[LESS_THAN_OR_EQUAL]
-  @scala.inline
-  def LessthansignDELETEGreaterthansign: LessthansignDELETEGreaterthansign = "<DELETE>".asInstanceOf[LessthansignDELETEGreaterthansign]
   @scala.inline
   def LimitToFirst: LimitToFirst = "LimitToFirst".asInstanceOf[LimitToFirst]
   @scala.inline
@@ -355,6 +400,10 @@ object firebaseFirestoreStrings {
   @scala.inline
   def OPERATOR_UNSPECIFIED: OPERATOR_UNSPECIFIED = "OPERATOR_UNSPECIFIED".asInstanceOf[OPERATOR_UNSPECIFIED]
   @scala.inline
+  def Offline: Offline = "Offline".asInstanceOf[Offline]
+  @scala.inline
+  def Online: Online = "Online".asInstanceOf[Online]
+  @scala.inline
   def READY: READY = "READY".asInstanceOf[READY]
   @scala.inline
   def REMOVE: REMOVE = "REMOVE".asInstanceOf[REMOVE]
@@ -367,25 +416,17 @@ object firebaseFirestoreStrings {
   @scala.inline
   def STATE_UNSPECIFIED: STATE_UNSPECIFIED = "STATE_UNSPECIFIED".asInstanceOf[STATE_UNSPECIFIED]
   @scala.inline
-  def __name__ : __name__ = "__name__".asInstanceOf[__name__]
-  @scala.inline
-  def _empty: _empty = "".asInstanceOf[_empty]
+  def Unknown: Unknown = "Unknown".asInstanceOf[Unknown]
   @scala.inline
   def acknowledged: acknowledged = "acknowledged".asInstanceOf[acknowledged]
   @scala.inline
+  def all: all = "all".asInstanceOf[all]
+  @scala.inline
   def boolean: boolean = "boolean".asInstanceOf[boolean]
   @scala.inline
+  def client_metadata_refresh: client_metadata_refresh = "client_metadata_refresh".asInstanceOf[client_metadata_refresh]
+  @scala.inline
   def current_ : current_ = "current".asInstanceOf[current_]
-  @scala.inline
-  def firestore_clients: firestore_clients = "firestore_clients".asInstanceOf[firestore_clients]
-  @scala.inline
-  def firestore_mutations: firestore_mutations = "firestore_mutations".asInstanceOf[firestore_mutations]
-  @scala.inline
-  def firestore_online_state: firestore_online_state = "firestore_online_state".asInstanceOf[firestore_online_state]
-  @scala.inline
-  def firestore_sequence_number: firestore_sequence_number = "firestore_sequence_number".asInstanceOf[firestore_sequence_number]
-  @scala.inline
-  def firestore_targets: firestore_targets = "firestore_targets".asInstanceOf[firestore_targets]
   @scala.inline
   def function: function = "function".asInstanceOf[function]
   @scala.inline
@@ -393,17 +434,23 @@ object firebaseFirestoreStrings {
   @scala.inline
   def json: json = "json".asInstanceOf[json]
   @scala.inline
+  def listen_stream_connection_backoff: listen_stream_connection_backoff = "listen_stream_connection_backoff".asInstanceOf[listen_stream_connection_backoff]
+  @scala.inline
+  def listen_stream_idle: listen_stream_idle = "listen_stream_idle".asInstanceOf[listen_stream_idle]
+  @scala.inline
+  def lru_garbage_collection: lru_garbage_collection = "lru_garbage_collection".asInstanceOf[lru_garbage_collection]
+  @scala.inline
   def media: media = "media".asInstanceOf[media]
   @scala.inline
-  def `multi-client`: `multi-client` = "multi-client".asInstanceOf[`multi-client`]
-  @scala.inline
-  def `non-empty string`: `non-empty string` = "non-empty string".asInstanceOf[`non-empty string`]
+  def `non-empty string`: `non-empty string` = ("non-empty string").asInstanceOf[`non-empty string`]
   @scala.inline
   def `not-current`: `not-current` = "not-current".asInstanceOf[`not-current`]
   @scala.inline
   def number: number = "number".asInstanceOf[number]
   @scala.inline
   def `object`: `object` = "object".asInstanceOf[`object`]
+  @scala.inline
+  def online_state_timeout: online_state_timeout = "online_state_timeout".asInstanceOf[online_state_timeout]
   @scala.inline
   def pending: pending = "pending".asInstanceOf[pending]
   @scala.inline
@@ -425,10 +472,14 @@ object firebaseFirestoreStrings {
   @scala.inline
   def rejected: rejected = "rejected".asInstanceOf[rejected]
   @scala.inline
+  def retry_transaction: retry_transaction = "retry_transaction".asInstanceOf[retry_transaction]
+  @scala.inline
   def string: string = "string".asInstanceOf[string]
   @scala.inline
-  def `test-db2`: `test-db2` = "test-db2".asInstanceOf[`test-db2`]
-  @scala.inline
   def undefined: undefined = "undefined".asInstanceOf[undefined]
+  @scala.inline
+  def write_stream_connection_backoff: write_stream_connection_backoff = "write_stream_connection_backoff".asInstanceOf[write_stream_connection_backoff]
+  @scala.inline
+  def write_stream_idle: write_stream_idle = "write_stream_idle".asInstanceOf[write_stream_idle]
 }
 

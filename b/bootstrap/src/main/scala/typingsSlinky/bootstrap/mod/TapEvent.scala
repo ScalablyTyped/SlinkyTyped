@@ -14,14 +14,12 @@ trait TapEvent extends js.Object
 
 object TapEvent {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hiddenDotbsDottab: typingsSlinky.bootstrap.bootstrapStrings.hiddenDotbsDottab = "hidden.bs.tab".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.hiddenDotbsDottab]
   @scala.inline
-  def hiddenDotbsDottab: typingsSlinky.bootstrap.bootstrapStrings.hiddenDotbsDottab = this.cast("hidden.bs.tab")
+  def hideDotbsDottab: typingsSlinky.bootstrap.bootstrapStrings.hideDotbsDottab = "hide.bs.tab".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.hideDotbsDottab]
   @scala.inline
-  def hideDotbsDottab: typingsSlinky.bootstrap.bootstrapStrings.hideDotbsDottab = this.cast("hide.bs.tab")
+  def showDotbsDottab: typingsSlinky.bootstrap.bootstrapStrings.showDotbsDottab = "show.bs.tab".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.showDotbsDottab]
   @scala.inline
-  def showDotbsDottab: typingsSlinky.bootstrap.bootstrapStrings.showDotbsDottab = this.cast("show.bs.tab")
-  @scala.inline
-  def shownDotbsDottab: typingsSlinky.bootstrap.bootstrapStrings.shownDotbsDottab = this.cast("shown.bs.tab")
+  def shownDotbsDottab: typingsSlinky.bootstrap.bootstrapStrings.shownDotbsDottab = "shown.bs.tab".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.shownDotbsDottab]
 }
 

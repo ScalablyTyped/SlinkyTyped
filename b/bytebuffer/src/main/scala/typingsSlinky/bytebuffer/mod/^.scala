@@ -2,8 +2,6 @@ package typingsSlinky.bytebuffer.mod
 
 import typingsSlinky.long.mod.Long
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -101,27 +99,49 @@ object ^ extends js.Object {
   /**
     * Concatenates multiple ByteBuffers into one.
     */
-  def concat(buffers: js.Array[ArrayBuffer | Buffer | ByteBuffer | String | Uint8Array]): ByteBuffer = js.native
-  def concat(buffers: js.Array[ByteBuffer | Buffer | ArrayBuffer | Uint8Array | String], encoding: String): ByteBuffer = js.native
   def concat(
-    buffers: js.Array[ByteBuffer | Buffer | ArrayBuffer | Uint8Array | String],
+    buffers: js.Array[
+      js.typedarray.ArrayBuffer | Buffer | ByteBuffer | String | js.typedarray.Uint8Array
+    ]
+  ): ByteBuffer = js.native
+  def concat(
+    buffers: js.Array[
+      ByteBuffer | Buffer | js.typedarray.ArrayBuffer | js.typedarray.Uint8Array | String
+    ],
+    encoding: String
+  ): ByteBuffer = js.native
+  def concat(
+    buffers: js.Array[
+      ByteBuffer | Buffer | js.typedarray.ArrayBuffer | js.typedarray.Uint8Array | String
+    ],
     encoding: String,
     litteEndian: Boolean
   ): ByteBuffer = js.native
   def concat(
-    buffers: js.Array[ByteBuffer | Buffer | ArrayBuffer | Uint8Array | String],
+    buffers: js.Array[
+      ByteBuffer | Buffer | js.typedarray.ArrayBuffer | js.typedarray.Uint8Array | String
+    ],
     encoding: String,
     litteEndian: Boolean,
     noAssert: Boolean
   ): ByteBuffer = js.native
-  def concat(buffers: js.Array[ByteBuffer | Buffer | ArrayBuffer | Uint8Array | String], encoding: Boolean): ByteBuffer = js.native
   def concat(
-    buffers: js.Array[ByteBuffer | Buffer | ArrayBuffer | Uint8Array | String],
+    buffers: js.Array[
+      ByteBuffer | Buffer | js.typedarray.ArrayBuffer | js.typedarray.Uint8Array | String
+    ],
+    encoding: Boolean
+  ): ByteBuffer = js.native
+  def concat(
+    buffers: js.Array[
+      ByteBuffer | Buffer | js.typedarray.ArrayBuffer | js.typedarray.Uint8Array | String
+    ],
     encoding: Boolean,
     litteEndian: Boolean
   ): ByteBuffer = js.native
   def concat(
-    buffers: js.Array[ByteBuffer | Buffer | ArrayBuffer | Uint8Array | String],
+    buffers: js.Array[
+      ByteBuffer | Buffer | js.typedarray.ArrayBuffer | js.typedarray.Uint8Array | String
+    ],
     encoding: Boolean,
     litteEndian: Boolean,
     noAssert: Boolean
@@ -188,20 +208,20 @@ object ^ extends js.Object {
   def wrap(buffer: Buffer, enc: Boolean): ByteBuffer = js.native
   def wrap(buffer: Buffer, enc: Boolean, littleEndian: Boolean): ByteBuffer = js.native
   def wrap(buffer: Buffer, enc: Boolean, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
-  def wrap(buffer: ArrayBuffer): ByteBuffer = js.native
-  def wrap(buffer: ArrayBuffer, enc: String): ByteBuffer = js.native
-  def wrap(buffer: ArrayBuffer, enc: String, littleEndian: Boolean): ByteBuffer = js.native
-  def wrap(buffer: ArrayBuffer, enc: String, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
-  def wrap(buffer: ArrayBuffer, enc: Boolean): ByteBuffer = js.native
-  def wrap(buffer: ArrayBuffer, enc: Boolean, littleEndian: Boolean): ByteBuffer = js.native
-  def wrap(buffer: ArrayBuffer, enc: Boolean, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
-  def wrap(buffer: Uint8Array): ByteBuffer = js.native
-  def wrap(buffer: Uint8Array, enc: String): ByteBuffer = js.native
-  def wrap(buffer: Uint8Array, enc: String, littleEndian: Boolean): ByteBuffer = js.native
-  def wrap(buffer: Uint8Array, enc: String, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
-  def wrap(buffer: Uint8Array, enc: Boolean): ByteBuffer = js.native
-  def wrap(buffer: Uint8Array, enc: Boolean, littleEndian: Boolean): ByteBuffer = js.native
-  def wrap(buffer: Uint8Array, enc: Boolean, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
+  def wrap(buffer: js.typedarray.ArrayBuffer): ByteBuffer = js.native
+  def wrap(buffer: js.typedarray.ArrayBuffer, enc: String): ByteBuffer = js.native
+  def wrap(buffer: js.typedarray.ArrayBuffer, enc: String, littleEndian: Boolean): ByteBuffer = js.native
+  def wrap(buffer: js.typedarray.ArrayBuffer, enc: String, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
+  def wrap(buffer: js.typedarray.ArrayBuffer, enc: Boolean): ByteBuffer = js.native
+  def wrap(buffer: js.typedarray.ArrayBuffer, enc: Boolean, littleEndian: Boolean): ByteBuffer = js.native
+  def wrap(buffer: js.typedarray.ArrayBuffer, enc: Boolean, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
+  def wrap(buffer: js.typedarray.Uint8Array): ByteBuffer = js.native
+  def wrap(buffer: js.typedarray.Uint8Array, enc: String): ByteBuffer = js.native
+  def wrap(buffer: js.typedarray.Uint8Array, enc: String, littleEndian: Boolean): ByteBuffer = js.native
+  def wrap(buffer: js.typedarray.Uint8Array, enc: String, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
+  def wrap(buffer: js.typedarray.Uint8Array, enc: Boolean): ByteBuffer = js.native
+  def wrap(buffer: js.typedarray.Uint8Array, enc: Boolean, littleEndian: Boolean): ByteBuffer = js.native
+  def wrap(buffer: js.typedarray.Uint8Array, enc: Boolean, littleEndian: Boolean, noAssert: Boolean): ByteBuffer = js.native
   /**
     * Decodes a zigzag encoded signed 32bit integer.
     */

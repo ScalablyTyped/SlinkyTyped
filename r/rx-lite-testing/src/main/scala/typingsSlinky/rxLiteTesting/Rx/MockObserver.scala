@@ -6,8 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MockObserver[T] extends Observer[T] {
-  var messages: js.Array[Recorded]
+  var messages: js.Array[Recorded] = js.native
 }
 
 @JSGlobal("Rx.MockObserver")

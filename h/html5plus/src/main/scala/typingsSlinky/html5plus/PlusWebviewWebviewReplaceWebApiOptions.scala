@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
   */
+@js.native
 trait PlusWebviewWebviewReplaceWebApiOptions extends js.Object {
   /**
     * 替换H5标准定位接口(navigator.geolocation.*)
@@ -34,15 +35,34 @@ trait PlusWebviewWebviewReplaceWebApiOptions extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var geolocation: js.UndefOr[alldevice | auto | none] = js.undefined
+  var geolocation: js.UndefOr[alldevice | auto | none] = js.native
 }
 
 object PlusWebviewWebviewReplaceWebApiOptions {
   @scala.inline
-  def apply(geolocation: alldevice | auto | none = null): PlusWebviewWebviewReplaceWebApiOptions = {
+  def apply(): PlusWebviewWebviewReplaceWebApiOptions = {
     val __obj = js.Dynamic.literal()
-    if (geolocation != null) __obj.updateDynamic("geolocation")(geolocation.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusWebviewWebviewReplaceWebApiOptions]
   }
+  @scala.inline
+  implicit class PlusWebviewWebviewReplaceWebApiOptionsOps[Self <: PlusWebviewWebviewReplaceWebApiOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGeolocation(value: alldevice | auto | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geolocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeolocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geolocation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

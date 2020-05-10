@@ -18,11 +18,41 @@ trait DeleteFileSystemWindowsConfiguration extends js.Object {
 
 object DeleteFileSystemWindowsConfiguration {
   @scala.inline
-  def apply(FinalBackupTags: Tags = null, SkipFinalBackup: js.UndefOr[Boolean] = js.undefined): DeleteFileSystemWindowsConfiguration = {
+  def apply(): DeleteFileSystemWindowsConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (FinalBackupTags != null) __obj.updateDynamic("FinalBackupTags")(FinalBackupTags.asInstanceOf[js.Any])
-    if (!js.isUndefined(SkipFinalBackup)) __obj.updateDynamic("SkipFinalBackup")(SkipFinalBackup.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteFileSystemWindowsConfiguration]
   }
+  @scala.inline
+  implicit class DeleteFileSystemWindowsConfigurationOps[Self <: DeleteFileSystemWindowsConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFinalBackupTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalBackupTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFinalBackupTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalBackupTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipFinalBackup(value: Flag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SkipFinalBackup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipFinalBackup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SkipFinalBackup")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

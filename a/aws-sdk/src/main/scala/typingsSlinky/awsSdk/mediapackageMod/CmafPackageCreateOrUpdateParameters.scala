@@ -25,20 +25,77 @@ trait CmafPackageCreateOrUpdateParameters extends js.Object {
 
 object CmafPackageCreateOrUpdateParameters {
   @scala.inline
-  def apply(
-    Encryption: CmafEncryption = null,
-    HlsManifests: listOfHlsManifestCreateOrUpdateParameters = null,
-    SegmentDurationSeconds: Int | Double = null,
-    SegmentPrefix: string = null,
-    StreamSelection: StreamSelection = null
-  ): CmafPackageCreateOrUpdateParameters = {
+  def apply(): CmafPackageCreateOrUpdateParameters = {
     val __obj = js.Dynamic.literal()
-    if (Encryption != null) __obj.updateDynamic("Encryption")(Encryption.asInstanceOf[js.Any])
-    if (HlsManifests != null) __obj.updateDynamic("HlsManifests")(HlsManifests.asInstanceOf[js.Any])
-    if (SegmentDurationSeconds != null) __obj.updateDynamic("SegmentDurationSeconds")(SegmentDurationSeconds.asInstanceOf[js.Any])
-    if (SegmentPrefix != null) __obj.updateDynamic("SegmentPrefix")(SegmentPrefix.asInstanceOf[js.Any])
-    if (StreamSelection != null) __obj.updateDynamic("StreamSelection")(StreamSelection.asInstanceOf[js.Any])
     __obj.asInstanceOf[CmafPackageCreateOrUpdateParameters]
   }
+  @scala.inline
+  implicit class CmafPackageCreateOrUpdateParametersOps[Self <: CmafPackageCreateOrUpdateParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncryption(value: CmafEncryption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHlsManifests(value: listOfHlsManifestCreateOrUpdateParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsManifests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHlsManifests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsManifests")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentDurationSeconds(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentDurationSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentDurationSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentDurationSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentPrefix(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamSelection(value: StreamSelection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamSelection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamSelection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamSelection")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -51,26 +51,113 @@ trait SchemaQuery extends js.Object {
 
 object SchemaQuery {
   @scala.inline
-  def apply(
-    kind: String = null,
-    metadata: SchemaQueryMetadata = null,
-    params: SchemaParameters = null,
-    queryId: String = null,
-    reportDataEndTimeMs: String = null,
-    reportDataStartTimeMs: String = null,
-    schedule: SchemaQuerySchedule = null,
-    timezoneCode: String = null
-  ): SchemaQuery = {
+  def apply(): SchemaQuery = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
-    if (queryId != null) __obj.updateDynamic("queryId")(queryId.asInstanceOf[js.Any])
-    if (reportDataEndTimeMs != null) __obj.updateDynamic("reportDataEndTimeMs")(reportDataEndTimeMs.asInstanceOf[js.Any])
-    if (reportDataStartTimeMs != null) __obj.updateDynamic("reportDataStartTimeMs")(reportDataStartTimeMs.asInstanceOf[js.Any])
-    if (schedule != null) __obj.updateDynamic("schedule")(schedule.asInstanceOf[js.Any])
-    if (timezoneCode != null) __obj.updateDynamic("timezoneCode")(timezoneCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaQuery]
   }
+  @scala.inline
+  implicit class SchemaQueryOps[Self <: SchemaQuery] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: SchemaQueryMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParams(value: SchemaParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportDataEndTimeMs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportDataEndTimeMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportDataEndTimeMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportDataEndTimeMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportDataStartTimeMs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportDataStartTimeMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportDataStartTimeMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportDataStartTimeMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchedule(value: SchemaQuerySchedule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchedule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimezoneCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timezoneCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimezoneCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timezoneCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

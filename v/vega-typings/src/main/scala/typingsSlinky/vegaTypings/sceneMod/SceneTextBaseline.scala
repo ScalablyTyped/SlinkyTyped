@@ -13,12 +13,10 @@ trait SceneTextBaseline extends js.Object
 
 object SceneTextBaseline {
   @scala.inline
-  def bottom: typingsSlinky.vegaTypings.vegaTypingsStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.vegaTypings.vegaTypingsStrings.bottom = "bottom".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def middle: typingsSlinky.vegaTypings.vegaTypingsStrings.middle = "middle".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.middle]
   @scala.inline
-  def middle: typingsSlinky.vegaTypings.vegaTypingsStrings.middle = this.cast("middle")
-  @scala.inline
-  def top: typingsSlinky.vegaTypings.vegaTypingsStrings.top = this.cast("top")
+  def top: typingsSlinky.vegaTypings.vegaTypingsStrings.top = "top".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.top]
 }
 

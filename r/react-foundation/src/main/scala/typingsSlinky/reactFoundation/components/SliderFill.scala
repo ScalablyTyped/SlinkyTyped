@@ -1,17 +1,26 @@
 package typingsSlinky.reactFoundation.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactFoundation.sliderMod.SliderFillProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SliderFill
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, js.Object] {
+object SliderFill {
   @JSImport("react-foundation", "SliderFill")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: SliderFillProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SliderFill.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

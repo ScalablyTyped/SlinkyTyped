@@ -13,12 +13,10 @@ trait HeaderBackgroundTransitionPreset extends js.Object
 
 object HeaderBackgroundTransitionPreset {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fade: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.fade = "fade".asInstanceOf[typingsSlinky.reactNavigationStack.reactNavigationStackStrings.fade]
   @scala.inline
-  def fade: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.fade = this.cast("fade")
+  def toggle: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.toggle = "toggle".asInstanceOf[typingsSlinky.reactNavigationStack.reactNavigationStackStrings.toggle]
   @scala.inline
-  def toggle: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.toggle = this.cast("toggle")
-  @scala.inline
-  def translate: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.translate = this.cast("translate")
+  def translate: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.translate = "translate".asInstanceOf[typingsSlinky.reactNavigationStack.reactNavigationStackStrings.translate]
 }
 

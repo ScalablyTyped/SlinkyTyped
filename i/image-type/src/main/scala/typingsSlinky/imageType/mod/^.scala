@@ -1,7 +1,6 @@
 package typingsSlinky.imageType.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,6 +38,6 @@ object ^ extends js.Object {
   	```
   	*/
   def apply(input: Buffer): ImageTypeResult | Null = js.native
-  def apply(input: Uint8Array): ImageTypeResult | Null = js.native
+  def apply(input: js.typedarray.Uint8Array): ImageTypeResult | Null = js.native
 }
 

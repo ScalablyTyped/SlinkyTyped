@@ -7,18 +7,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonVertical extends js.Object {
-  var horizontal: js.UndefOr[hidden | visible | auto] = js.undefined
-  var vertical: js.UndefOr[hidden | visible | auto] = js.undefined
+  var horizontal: js.UndefOr[hidden | visible | auto] = js.native
+  var vertical: js.UndefOr[hidden | visible | auto] = js.native
 }
 
 object AnonVertical {
   @scala.inline
-  def apply(horizontal: hidden | visible | auto = null, vertical: hidden | visible | auto = null): AnonVertical = {
+  def apply(): AnonVertical = {
     val __obj = js.Dynamic.literal()
-    if (horizontal != null) __obj.updateDynamic("horizontal")(horizontal.asInstanceOf[js.Any])
-    if (vertical != null) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonVertical]
   }
+  @scala.inline
+  implicit class AnonVerticalOps[Self <: AnonVertical] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHorizontal(value: hidden | visible | auto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizontal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVertical(value: hidden | visible | auto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVertical: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

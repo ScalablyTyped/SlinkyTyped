@@ -14,11 +14,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NavigateBackOptions extends js.Object {
   /**
     * 窗口关闭动画的持续时间，单位为 ms
     */
-  var animationDuration: js.UndefOr[Double] = js.undefined
+  var animationDuration: js.UndefOr[Double] = js.native
   /**
     * 窗口关闭的动画类型
     * - auto: 自动选择动画效果
@@ -34,25 +35,64 @@ trait NavigateBackOptions extends js.Object {
     */
   var animationType: js.UndefOr[
     auto | none | `slide-out-right` | `slide-out-left` | `slide-out-top` | `slide-out-bottom` | `fade-out` | `zoom-in` | `zoom-fade-in` | `pop-out`
-  ] = js.undefined
+  ] = js.native
   /**
     * 返回的页面数，如果 delta 大于现有页面数，则返回到首页
     */
-  var delta: js.UndefOr[Double] = js.undefined
+  var delta: js.UndefOr[Double] = js.native
 }
 
 object NavigateBackOptions {
   @scala.inline
-  def apply(
-    animationDuration: Int | Double = null,
-    animationType: auto | none | `slide-out-right` | `slide-out-left` | `slide-out-top` | `slide-out-bottom` | `fade-out` | `zoom-in` | `zoom-fade-in` | `pop-out` = null,
-    delta: Int | Double = null
-  ): NavigateBackOptions = {
+  def apply(): NavigateBackOptions = {
     val __obj = js.Dynamic.literal()
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (animationType != null) __obj.updateDynamic("animationType")(animationType.asInstanceOf[js.Any])
-    if (delta != null) __obj.updateDynamic("delta")(delta.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigateBackOptions]
   }
+  @scala.inline
+  implicit class NavigateBackOptionsOps[Self <: NavigateBackOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimationDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationType(
+      value: auto | none | `slide-out-right` | `slide-out-left` | `slide-out-top` | `slide-out-bottom` | `fade-out` | `zoom-in` | `zoom-fade-in` | `pop-out`
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelta(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelta: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

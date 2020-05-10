@@ -18,11 +18,41 @@ trait Recommendation extends js.Object {
 
 object Recommendation {
   @scala.inline
-  def apply(Text: NonEmptyString = null, Url: NonEmptyString = null): Recommendation = {
+  def apply(): Recommendation = {
     val __obj = js.Dynamic.literal()
-    if (Text != null) __obj.updateDynamic("Text")(Text.asInstanceOf[js.Any])
-    if (Url != null) __obj.updateDynamic("Url")(Url.asInstanceOf[js.Any])
     __obj.asInstanceOf[Recommendation]
   }
+  @scala.inline
+  implicit class RecommendationOps[Self <: Recommendation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withText(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

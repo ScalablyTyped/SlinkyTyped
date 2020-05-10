@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
   * @param params Hash of initialization parameters for widget, including scalar values (like title, duration etc.)and functions, typically callbacks like onClick.The hash can contain any of the widget's properties, excluding read-only properties.     
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified, replace srcNodeRef with my generated DOM tree.     
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dijit.CssStateMixin because Inheritance from two classes. Inlined active, cssStateNodes, hovering
 - typingsSlinky.dojo.dijit.DialogMixin because Inheritance from two classes. Inlined execute, onCancel, onExecute
 - typingsSlinky.dojo.dijit.form.FormMixin because Inheritance from two classes. Inlined state, connectChildren, destroy, disconnectChildren, getValues, isValid, reset, setValues, startup, validate, onValidStateChange */ @JSGlobal("dijit.Dialog._DialogBase")

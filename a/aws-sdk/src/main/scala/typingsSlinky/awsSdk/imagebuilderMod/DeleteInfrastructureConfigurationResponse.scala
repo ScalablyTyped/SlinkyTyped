@@ -18,14 +18,41 @@ trait DeleteInfrastructureConfigurationResponse extends js.Object {
 
 object DeleteInfrastructureConfigurationResponse {
   @scala.inline
-  def apply(
-    infrastructureConfigurationArn: InfrastructureConfigurationArn = null,
-    requestId: NonEmptyString = null
-  ): DeleteInfrastructureConfigurationResponse = {
+  def apply(): DeleteInfrastructureConfigurationResponse = {
     val __obj = js.Dynamic.literal()
-    if (infrastructureConfigurationArn != null) __obj.updateDynamic("infrastructureConfigurationArn")(infrastructureConfigurationArn.asInstanceOf[js.Any])
-    if (requestId != null) __obj.updateDynamic("requestId")(requestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteInfrastructureConfigurationResponse]
   }
+  @scala.inline
+  implicit class DeleteInfrastructureConfigurationResponseOps[Self <: DeleteInfrastructureConfigurationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInfrastructureConfigurationArn(value: InfrastructureConfigurationArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infrastructureConfigurationArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInfrastructureConfigurationArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infrastructureConfigurationArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -15,16 +15,14 @@ trait HttpMethods extends js.Object
 
 object HttpMethods {
   @scala.inline
-  def DELETE: typingsSlinky.hyperAws4.hyperAws4Strings.DELETE = this.cast("DELETE")
+  def DELETE: typingsSlinky.hyperAws4.hyperAws4Strings.DELETE = "DELETE".asInstanceOf[typingsSlinky.hyperAws4.hyperAws4Strings.DELETE]
   @scala.inline
-  def GET: typingsSlinky.hyperAws4.hyperAws4Strings.GET = this.cast("GET")
+  def GET: typingsSlinky.hyperAws4.hyperAws4Strings.GET = "GET".asInstanceOf[typingsSlinky.hyperAws4.hyperAws4Strings.GET]
   @scala.inline
-  def PATCH: typingsSlinky.hyperAws4.hyperAws4Strings.PATCH = this.cast("PATCH")
+  def PATCH: typingsSlinky.hyperAws4.hyperAws4Strings.PATCH = "PATCH".asInstanceOf[typingsSlinky.hyperAws4.hyperAws4Strings.PATCH]
   @scala.inline
-  def POST: typingsSlinky.hyperAws4.hyperAws4Strings.POST = this.cast("POST")
+  def POST: typingsSlinky.hyperAws4.hyperAws4Strings.POST = "POST".asInstanceOf[typingsSlinky.hyperAws4.hyperAws4Strings.POST]
   @scala.inline
-  def PUT: typingsSlinky.hyperAws4.hyperAws4Strings.PUT = this.cast("PUT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def PUT: typingsSlinky.hyperAws4.hyperAws4Strings.PUT = "PUT".asInstanceOf[typingsSlinky.hyperAws4.hyperAws4Strings.PUT]
 }
 

@@ -38,22 +38,89 @@ trait UpdateDocumentRequest extends js.Object {
 
 object UpdateDocumentRequest {
   @scala.inline
-  def apply(
-    Content: DocumentContent,
-    Name: DocumentName,
-    Attachments: AttachmentsSourceList = null,
-    DocumentFormat: DocumentFormat = null,
-    DocumentVersion: DocumentVersion = null,
-    TargetType: TargetType = null,
-    VersionName: DocumentVersionName = null
-  ): UpdateDocumentRequest = {
+  def apply(Content: DocumentContent, Name: DocumentName): UpdateDocumentRequest = {
     val __obj = js.Dynamic.literal(Content = Content.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
-    if (Attachments != null) __obj.updateDynamic("Attachments")(Attachments.asInstanceOf[js.Any])
-    if (DocumentFormat != null) __obj.updateDynamic("DocumentFormat")(DocumentFormat.asInstanceOf[js.Any])
-    if (DocumentVersion != null) __obj.updateDynamic("DocumentVersion")(DocumentVersion.asInstanceOf[js.Any])
-    if (TargetType != null) __obj.updateDynamic("TargetType")(TargetType.asInstanceOf[js.Any])
-    if (VersionName != null) __obj.updateDynamic("VersionName")(VersionName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateDocumentRequest]
   }
+  @scala.inline
+  implicit class UpdateDocumentRequestOps[Self <: UpdateDocumentRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: DocumentContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: DocumentName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttachments(value: AttachmentsSourceList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attachments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttachments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attachments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentFormat(value: DocumentFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentVersion(value: DocumentVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetType(value: TargetType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionName(value: DocumentVersionName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

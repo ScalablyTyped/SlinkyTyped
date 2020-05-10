@@ -24,14 +24,41 @@ trait SchemaSequenceSegment extends js.Object {
 
 object SchemaSequenceSegment {
   @scala.inline
-  def apply(
-    firstStepShouldMatchFirstHit: js.UndefOr[Boolean] = js.undefined,
-    segmentSequenceSteps: js.Array[SchemaSegmentSequenceStep] = null
-  ): SchemaSequenceSegment = {
+  def apply(): SchemaSequenceSegment = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(firstStepShouldMatchFirstHit)) __obj.updateDynamic("firstStepShouldMatchFirstHit")(firstStepShouldMatchFirstHit.asInstanceOf[js.Any])
-    if (segmentSequenceSteps != null) __obj.updateDynamic("segmentSequenceSteps")(segmentSequenceSteps.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSequenceSegment]
   }
+  @scala.inline
+  implicit class SchemaSequenceSegmentOps[Self <: SchemaSequenceSegment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFirstStepShouldMatchFirstHit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstStepShouldMatchFirstHit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstStepShouldMatchFirstHit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstStepShouldMatchFirstHit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentSequenceSteps(value: js.Array[SchemaSegmentSequenceStep]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentSequenceSteps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentSequenceSteps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentSequenceSteps")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

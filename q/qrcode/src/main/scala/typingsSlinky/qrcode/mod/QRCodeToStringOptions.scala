@@ -1,6 +1,5 @@
 package typingsSlinky.qrcode.mod
 
-import typingsSlinky.qrcode.AnonDark
 import typingsSlinky.qrcode.qrcodeStrings.svg
 import typingsSlinky.qrcode.qrcodeStrings.terminal
 import typingsSlinky.qrcode.qrcodeStrings.utf8
@@ -8,36 +7,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait QRCodeToStringOptions extends QRCodeRenderersOptions {
   /**
     * Output format.
     * Default: utf8
     */
-  var `type`: js.UndefOr[utf8 | svg | terminal] = js.undefined
+  var `type`: js.UndefOr[utf8 | svg | terminal] = js.native
 }
 
 object QRCodeToStringOptions {
   @scala.inline
-  def apply(
-    color: AnonDark = null,
-    errorCorrectionLevel: QRCodeErrorCorrectionLevel = null,
-    margin: Int | Double = null,
-    scale: Int | Double = null,
-    toSJISFunc: /* codePoint */ String => Double = null,
-    `type`: utf8 | svg | terminal = null,
-    version: Int | Double = null,
-    width: Int | Double = null
-  ): QRCodeToStringOptions = {
+  def apply(): QRCodeToStringOptions = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (errorCorrectionLevel != null) __obj.updateDynamic("errorCorrectionLevel")(errorCorrectionLevel.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (toSJISFunc != null) __obj.updateDynamic("toSJISFunc")(js.Any.fromFunction1(toSJISFunc))
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[QRCodeToStringOptions]
   }
+  @scala.inline
+  implicit class QRCodeToStringOptionsOps[Self <: QRCodeToStringOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: utf8 | svg | terminal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

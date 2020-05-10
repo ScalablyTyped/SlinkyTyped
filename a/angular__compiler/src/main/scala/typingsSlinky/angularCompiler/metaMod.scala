@@ -1,12 +1,6 @@
 package typingsSlinky.angularCompiler
 
 import typingsSlinky.angularCompiler.interpolationConfigMod.InterpolationConfig
-import typingsSlinky.angularCompiler.mlParserAstMod.Attribute
-import typingsSlinky.angularCompiler.mlParserAstMod.Comment
-import typingsSlinky.angularCompiler.mlParserAstMod.Element
-import typingsSlinky.angularCompiler.mlParserAstMod.Expansion
-import typingsSlinky.angularCompiler.mlParserAstMod.ExpansionCase
-import typingsSlinky.angularCompiler.mlParserAstMod.Text
 import typingsSlinky.angularCompiler.mlParserAstMod.Visitor
 import typingsSlinky.angularCompiler.mlParserParserMod.ParseTreeResult
 import scala.scalajs.js
@@ -24,18 +18,6 @@ object metaMod extends js.Object {
     var _generateI18nMessage: js.Any = js.native
     var interpolationConfig: js.Any = js.native
     var keepI18nAttrs: js.Any = js.native
-    /* CompleteClass */
-    override def visitAttribute(attribute: Attribute, context: js.Any): js.Any = js.native
-    /* CompleteClass */
-    override def visitComment(comment: Comment, context: js.Any): js.Any = js.native
-    /* CompleteClass */
-    override def visitElement(element: Element, context: js.Any): js.Any = js.native
-    /* CompleteClass */
-    override def visitExpansion(expansion: Expansion, context: js.Any): js.Any = js.native
-    /* CompleteClass */
-    override def visitExpansionCase(expansionCase: ExpansionCase, context: js.Any): js.Any = js.native
-    /* CompleteClass */
-    override def visitText(text: Text, context: js.Any): js.Any = js.native
   }
   
   def processI18nMeta(htmlAstWithErrors: ParseTreeResult): ParseTreeResult = js.native

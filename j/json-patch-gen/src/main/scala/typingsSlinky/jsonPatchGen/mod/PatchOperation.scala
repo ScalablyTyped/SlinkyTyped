@@ -13,12 +13,10 @@ trait PatchOperation extends js.Object
 
 object PatchOperation {
   @scala.inline
-  def add: typingsSlinky.jsonPatchGen.jsonPatchGenStrings.add = this.cast("add")
+  def add: typingsSlinky.jsonPatchGen.jsonPatchGenStrings.add = "add".asInstanceOf[typingsSlinky.jsonPatchGen.jsonPatchGenStrings.add]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def remove: typingsSlinky.jsonPatchGen.jsonPatchGenStrings.remove = "remove".asInstanceOf[typingsSlinky.jsonPatchGen.jsonPatchGenStrings.remove]
   @scala.inline
-  def remove: typingsSlinky.jsonPatchGen.jsonPatchGenStrings.remove = this.cast("remove")
-  @scala.inline
-  def replace: typingsSlinky.jsonPatchGen.jsonPatchGenStrings.replace = this.cast("replace")
+  def replace: typingsSlinky.jsonPatchGen.jsonPatchGenStrings.replace = "replace".asInstanceOf[typingsSlinky.jsonPatchGen.jsonPatchGenStrings.replace]
 }
 

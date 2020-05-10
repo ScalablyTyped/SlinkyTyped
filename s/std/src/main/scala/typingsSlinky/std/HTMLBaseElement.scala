@@ -20,5 +20,6 @@ trait HTMLBaseElement extends HTMLElement {
 
 @JSGlobal("HTMLBaseElement")
 @js.native
-object HTMLBaseElement extends Instantiable0[HTMLBaseElement]
+object HTMLBaseElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLBaseElement]
 

@@ -6,6 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DiagnosticsResource extends js.Object {
   /**
     * List the diagnostics for a single beacon. You can also list diagnostics for
@@ -16,15 +17,28 @@ trait DiagnosticsResource extends js.Object {
     * from a signed-in user with &#42;&#42;viewer&#42;&#42;, &#42;&#42;Is owner&#42;&#42; or &#42;&#42;Can edit&#42;&#42;
     * permissions in the Google Developers Console project.
     */
-  def list(request: AnonAlertFilter): Request_[ListDiagnosticsResponse]
+  def list(request: AnonAlertFilter): Request_[ListDiagnosticsResponse] = js.native
 }
 
 object DiagnosticsResource {
   @scala.inline
   def apply(list: AnonAlertFilter => Request_[ListDiagnosticsResponse]): DiagnosticsResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
-  
     __obj.asInstanceOf[DiagnosticsResource]
   }
+  @scala.inline
+  implicit class DiagnosticsResourceOps[Self <: DiagnosticsResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withList(value: AnonAlertFilter => Request_[ListDiagnosticsResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

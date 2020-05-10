@@ -66,38 +66,185 @@ trait HostReservation extends js.Object {
 
 object HostReservation {
   @scala.inline
-  def apply(
-    Count: Int | scala.Double = null,
-    CurrencyCode: CurrencyCodeValues = null,
-    Duration: Int | scala.Double = null,
-    End: js.Date = null,
-    HostIdSet: ResponseHostIdSet = null,
-    HostReservationId: String = null,
-    HourlyPrice: String = null,
-    InstanceFamily: String = null,
-    OfferingId: String = null,
-    PaymentOption: PaymentOption = null,
-    Start: js.Date = null,
-    State: ReservationState = null,
-    Tags: TagList = null,
-    UpfrontPrice: String = null
-  ): HostReservation = {
+  def apply(): HostReservation = {
     val __obj = js.Dynamic.literal()
-    if (Count != null) __obj.updateDynamic("Count")(Count.asInstanceOf[js.Any])
-    if (CurrencyCode != null) __obj.updateDynamic("CurrencyCode")(CurrencyCode.asInstanceOf[js.Any])
-    if (Duration != null) __obj.updateDynamic("Duration")(Duration.asInstanceOf[js.Any])
-    if (End != null) __obj.updateDynamic("End")(End.asInstanceOf[js.Any])
-    if (HostIdSet != null) __obj.updateDynamic("HostIdSet")(HostIdSet.asInstanceOf[js.Any])
-    if (HostReservationId != null) __obj.updateDynamic("HostReservationId")(HostReservationId.asInstanceOf[js.Any])
-    if (HourlyPrice != null) __obj.updateDynamic("HourlyPrice")(HourlyPrice.asInstanceOf[js.Any])
-    if (InstanceFamily != null) __obj.updateDynamic("InstanceFamily")(InstanceFamily.asInstanceOf[js.Any])
-    if (OfferingId != null) __obj.updateDynamic("OfferingId")(OfferingId.asInstanceOf[js.Any])
-    if (PaymentOption != null) __obj.updateDynamic("PaymentOption")(PaymentOption.asInstanceOf[js.Any])
-    if (Start != null) __obj.updateDynamic("Start")(Start.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (UpfrontPrice != null) __obj.updateDynamic("UpfrontPrice")(UpfrontPrice.asInstanceOf[js.Any])
     __obj.asInstanceOf[HostReservation]
   }
+  @scala.inline
+  implicit class HostReservationOps[Self <: HostReservation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrencyCode(value: CurrencyCodeValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrencyCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencyCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnd(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("End")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("End")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostIdSet(value: ResponseHostIdSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostIdSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostIdSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostIdSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostReservationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostReservationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostReservationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostReservationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHourlyPrice(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HourlyPrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHourlyPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HourlyPrice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOfferingId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OfferingId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOfferingId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OfferingId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaymentOption(value: PaymentOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaymentOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaymentOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaymentOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Start")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: ReservationState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpfrontPrice(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpfrontPrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpfrontPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpfrontPrice")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

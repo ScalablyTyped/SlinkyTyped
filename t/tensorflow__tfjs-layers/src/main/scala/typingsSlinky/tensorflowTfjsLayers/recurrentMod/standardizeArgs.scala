@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsLayers.recurrentMod
 
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
+import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.AnonConstants
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.SymbolicTensor
 import scala.scalajs.js
@@ -12,14 +12,14 @@ import scala.scalajs.js.annotation._
 @js.native
 object standardizeArgs extends js.Object {
   def apply(
-    inputs: Tensor_[Rank] | (js.Array[SymbolicTensor | Tensor_[Rank]]) | SymbolicTensor,
-    initialState: Tensor_[Rank] | (js.Array[SymbolicTensor | Tensor_[Rank]]) | SymbolicTensor,
-    constants: Tensor_[Rank] | (js.Array[SymbolicTensor | Tensor_[Rank]]) | SymbolicTensor
+    inputs: Tensor[Rank] | (js.Array[SymbolicTensor | Tensor[Rank]]) | SymbolicTensor,
+    initialState: Tensor[Rank] | (js.Array[SymbolicTensor | Tensor[Rank]]) | SymbolicTensor,
+    constants: Tensor[Rank] | (js.Array[SymbolicTensor | Tensor[Rank]]) | SymbolicTensor
   ): AnonConstants = js.native
   def apply(
-    inputs: Tensor_[Rank] | (js.Array[SymbolicTensor | Tensor_[Rank]]) | SymbolicTensor,
-    initialState: Tensor_[Rank] | (js.Array[SymbolicTensor | Tensor_[Rank]]) | SymbolicTensor,
-    constants: Tensor_[Rank] | (js.Array[SymbolicTensor | Tensor_[Rank]]) | SymbolicTensor,
+    inputs: Tensor[Rank] | (js.Array[SymbolicTensor | Tensor[Rank]]) | SymbolicTensor,
+    initialState: Tensor[Rank] | (js.Array[SymbolicTensor | Tensor[Rank]]) | SymbolicTensor,
+    constants: Tensor[Rank] | (js.Array[SymbolicTensor | Tensor[Rank]]) | SymbolicTensor,
     numConstants: Double
   ): AnonConstants = js.native
 }

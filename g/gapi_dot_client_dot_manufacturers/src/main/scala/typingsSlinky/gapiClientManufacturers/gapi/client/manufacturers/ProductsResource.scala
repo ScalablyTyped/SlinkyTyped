@@ -7,9 +7,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ProductsResource extends js.Object {
   /** Deletes the product from a Manufacturer Center account. */
-  def delete(request: AnonAccesstoken): Request_[js.Object]
+  def delete(request: AnonAccesstoken): Request_[js.Object] = js.native
   /**
     * Gets the product from a Manufacturer Center account, including product
     * issues.
@@ -19,9 +20,9 @@ trait ProductsResource extends js.Object {
     * available once the product has been processed, other issues may take days
     * to appear.
     */
-  def get(request: AnonAccesstoken): Request_[Product]
+  def get(request: AnonAccesstoken): Request_[Product] = js.native
   /** Lists all the products in a Manufacturer Center account. */
-  def list(request: AnonAlt): Request_[ListProductsResponse]
+  def list(request: AnonAlt): Request_[ListProductsResponse] = js.native
   /**
     * Inserts or updates the product in a Manufacturer Center account.
     *
@@ -36,7 +37,7 @@ trait ProductsResource extends js.Object {
     * retrieved. Until then, new products will be unavailable, and retrieval
     * of updated products will return the original state of the product.
     */
-  def update(request: AnonAccesstoken): Request_[Product]
+  def update(request: AnonAccesstoken): Request_[Product] = js.native
 }
 
 object ProductsResource {
@@ -48,8 +49,39 @@ object ProductsResource {
     update: AnonAccesstoken => Request_[Product]
   ): ProductsResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), update = js.Any.fromFunction1(update))
-  
     __obj.asInstanceOf[ProductsResource]
   }
+  @scala.inline
+  implicit class ProductsResourceOps[Self <: ProductsResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDelete(value: AnonAccesstoken => Request_[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: AnonAccesstoken => Request_[Product]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withList(value: AnonAlt => Request_[ListProductsResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: AnonAccesstoken => Request_[Product]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

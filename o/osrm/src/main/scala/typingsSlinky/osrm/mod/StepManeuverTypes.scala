@@ -28,42 +28,40 @@ trait StepManeuverTypes extends js.Object
 
 object StepManeuverTypes {
   @scala.inline
-  def arrive: typingsSlinky.osrm.osrmStrings.arrive = this.cast("arrive")
+  def arrive: typingsSlinky.osrm.osrmStrings.arrive = "arrive".asInstanceOf[typingsSlinky.osrm.osrmStrings.arrive]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def continue: typingsSlinky.osrm.osrmStrings.continue = "continue".asInstanceOf[typingsSlinky.osrm.osrmStrings.continue]
   @scala.inline
-  def continue: typingsSlinky.osrm.osrmStrings.continue = this.cast("continue")
+  def depart: typingsSlinky.osrm.osrmStrings.depart = "depart".asInstanceOf[typingsSlinky.osrm.osrmStrings.depart]
   @scala.inline
-  def depart: typingsSlinky.osrm.osrmStrings.depart = this.cast("depart")
+  def `end of road`: typingsSlinky.osrm.osrmStrings.`end of road` = ("end of road").asInstanceOf[typingsSlinky.osrm.osrmStrings.`end of road`]
   @scala.inline
-  def `end of road`: typingsSlinky.osrm.osrmStrings.`end of road` = this.cast("end of road")
+  def `exit rotary`: typingsSlinky.osrm.osrmStrings.`exit rotary` = ("exit rotary").asInstanceOf[typingsSlinky.osrm.osrmStrings.`exit rotary`]
   @scala.inline
-  def `exit rotary`: typingsSlinky.osrm.osrmStrings.`exit rotary` = this.cast("exit rotary")
+  def `exit roundabout`: typingsSlinky.osrm.osrmStrings.`exit roundabout` = ("exit roundabout").asInstanceOf[typingsSlinky.osrm.osrmStrings.`exit roundabout`]
   @scala.inline
-  def `exit roundabout`: typingsSlinky.osrm.osrmStrings.`exit roundabout` = this.cast("exit roundabout")
+  def fork: typingsSlinky.osrm.osrmStrings.fork = "fork".asInstanceOf[typingsSlinky.osrm.osrmStrings.fork]
   @scala.inline
-  def fork: typingsSlinky.osrm.osrmStrings.fork = this.cast("fork")
+  def merge: typingsSlinky.osrm.osrmStrings.merge = "merge".asInstanceOf[typingsSlinky.osrm.osrmStrings.merge]
   @scala.inline
-  def merge: typingsSlinky.osrm.osrmStrings.merge = this.cast("merge")
+  def `new name`: typingsSlinky.osrm.osrmStrings.`new name` = ("new name").asInstanceOf[typingsSlinky.osrm.osrmStrings.`new name`]
   @scala.inline
-  def `new name`: typingsSlinky.osrm.osrmStrings.`new name` = this.cast("new name")
+  def notification: typingsSlinky.osrm.osrmStrings.notification = "notification".asInstanceOf[typingsSlinky.osrm.osrmStrings.notification]
   @scala.inline
-  def notification: typingsSlinky.osrm.osrmStrings.notification = this.cast("notification")
+  def `off ramp`: typingsSlinky.osrm.osrmStrings.`off ramp` = ("off ramp").asInstanceOf[typingsSlinky.osrm.osrmStrings.`off ramp`]
   @scala.inline
-  def `off ramp`: typingsSlinky.osrm.osrmStrings.`off ramp` = this.cast("off ramp")
+  def `on ramp`: typingsSlinky.osrm.osrmStrings.`on ramp` = ("on ramp").asInstanceOf[typingsSlinky.osrm.osrmStrings.`on ramp`]
   @scala.inline
-  def `on ramp`: typingsSlinky.osrm.osrmStrings.`on ramp` = this.cast("on ramp")
+  def ramp: typingsSlinky.osrm.osrmStrings.ramp = "ramp".asInstanceOf[typingsSlinky.osrm.osrmStrings.ramp]
   @scala.inline
-  def ramp: typingsSlinky.osrm.osrmStrings.ramp = this.cast("ramp")
+  def rotary: typingsSlinky.osrm.osrmStrings.rotary = "rotary".asInstanceOf[typingsSlinky.osrm.osrmStrings.rotary]
   @scala.inline
-  def rotary: typingsSlinky.osrm.osrmStrings.rotary = this.cast("rotary")
+  def roundabout: typingsSlinky.osrm.osrmStrings.roundabout = "roundabout".asInstanceOf[typingsSlinky.osrm.osrmStrings.roundabout]
   @scala.inline
-  def roundabout: typingsSlinky.osrm.osrmStrings.roundabout = this.cast("roundabout")
+  def `roundabout turn`: typingsSlinky.osrm.osrmStrings.`roundabout turn` = ("roundabout turn").asInstanceOf[typingsSlinky.osrm.osrmStrings.`roundabout turn`]
   @scala.inline
-  def `roundabout turn`: typingsSlinky.osrm.osrmStrings.`roundabout turn` = this.cast("roundabout turn")
+  def turn: typingsSlinky.osrm.osrmStrings.turn = "turn".asInstanceOf[typingsSlinky.osrm.osrmStrings.turn]
   @scala.inline
-  def turn: typingsSlinky.osrm.osrmStrings.turn = this.cast("turn")
-  @scala.inline
-  def `use lane`: typingsSlinky.osrm.osrmStrings.`use lane` = this.cast("use lane")
+  def `use lane`: typingsSlinky.osrm.osrmStrings.`use lane` = ("use lane").asInstanceOf[typingsSlinky.osrm.osrmStrings.`use lane`]
 }
 

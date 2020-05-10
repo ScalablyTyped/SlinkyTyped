@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation._
 /**
   * InteractDef
   */
+@js.native
 trait IInteractDef extends js.Object {
   /**
     * Buttons displayed in the message box dialog.
@@ -16,35 +17,35 @@ trait IInteractDef extends js.Object {
     * - 0 means that the qButtons property is not relevant.
     * - 17 means that the message box contains the OK and Cancel buttons or the stop-sign icon.
     */
-  var qButtons: js.UndefOr[Double] = js.undefined
+  var qButtons: js.UndefOr[Double] = js.native
   /**
     * This property is set to true if the returned statement is an hidden script statement.
     */
-  var qHidden: js.UndefOr[Boolean] = js.undefined
+  var qHidden: js.UndefOr[Boolean] = js.native
   /**
     * Is not used in Qlik Sense.
     */
-  var qInput: js.UndefOr[String] = js.undefined
+  var qInput: js.UndefOr[String] = js.native
   /**
     * Next script statement to be executed.
     * This property is used if the type of interaction is IT_SCRIPTLINE.
     */
-  var qLine: js.UndefOr[String] = js.undefined
+  var qLine: js.UndefOr[String] = js.native
   /**
     * Message used in the message box dialog.
     * This property is relevant if qType is IT_MSGBOX.
     */
-  var qMsg: js.UndefOr[String] = js.undefined
+  var qMsg: js.UndefOr[String] = js.native
   /**
     * First line number of the next statement to be executed.
     * This property is used if the type of interaction is IT_SCRIPTLINE.
     */
-  var qNewLineNr: js.UndefOr[Double] = js.undefined
+  var qNewLineNr: js.UndefOr[Double] = js.native
   /**
     * First line number of the previously executed statement.
     * This property is used if the type of interaction is IT_SCRIPTLINE.
     */
-  var qOldLineNr: js.UndefOr[Double] = js.undefined
+  var qOldLineNr: js.UndefOr[Double] = js.native
   /**
     * Path specified by the Include script variable.
     * This property is used if the type of interaction is IT_SCRIPTLINE.
@@ -52,49 +53,161 @@ trait IInteractDef extends js.Object {
     *
     * $(Include=lib:\\MyDataFiles\abc.txt);
     */
-  var qPath: js.UndefOr[String] = js.undefined
+  var qPath: js.UndefOr[String] = js.native
   /**
     * Not relevant for describing the requested user interaction.
     */
-  var qResult: Double
+  var qResult: Double = js.native
   /**
     * Title used in the message box dialog.
     * This property is relevant if qType is IT_MSGBOX.
     */
-  var qTitle: js.UndefOr[String] = js.undefined
+  var qTitle: js.UndefOr[String] = js.native
   /**
     * Interaction type.
     */
-  var qType: js.UndefOr[InteractionType] = js.undefined
+  var qType: js.UndefOr[InteractionType] = js.native
 }
 
 object IInteractDef {
   @scala.inline
-  def apply(
-    qResult: Double,
-    qButtons: Int | Double = null,
-    qHidden: js.UndefOr[Boolean] = js.undefined,
-    qInput: String = null,
-    qLine: String = null,
-    qMsg: String = null,
-    qNewLineNr: Int | Double = null,
-    qOldLineNr: Int | Double = null,
-    qPath: String = null,
-    qTitle: String = null,
-    qType: InteractionType = null
-  ): IInteractDef = {
+  def apply(qResult: Double): IInteractDef = {
     val __obj = js.Dynamic.literal(qResult = qResult.asInstanceOf[js.Any])
-    if (qButtons != null) __obj.updateDynamic("qButtons")(qButtons.asInstanceOf[js.Any])
-    if (!js.isUndefined(qHidden)) __obj.updateDynamic("qHidden")(qHidden.asInstanceOf[js.Any])
-    if (qInput != null) __obj.updateDynamic("qInput")(qInput.asInstanceOf[js.Any])
-    if (qLine != null) __obj.updateDynamic("qLine")(qLine.asInstanceOf[js.Any])
-    if (qMsg != null) __obj.updateDynamic("qMsg")(qMsg.asInstanceOf[js.Any])
-    if (qNewLineNr != null) __obj.updateDynamic("qNewLineNr")(qNewLineNr.asInstanceOf[js.Any])
-    if (qOldLineNr != null) __obj.updateDynamic("qOldLineNr")(qOldLineNr.asInstanceOf[js.Any])
-    if (qPath != null) __obj.updateDynamic("qPath")(qPath.asInstanceOf[js.Any])
-    if (qTitle != null) __obj.updateDynamic("qTitle")(qTitle.asInstanceOf[js.Any])
-    if (qType != null) __obj.updateDynamic("qType")(qType.asInstanceOf[js.Any])
     __obj.asInstanceOf[IInteractDef]
   }
+  @scala.inline
+  implicit class IInteractDefOps[Self <: IInteractDef] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQResult(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qResult")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQButtons(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qButtons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qButtons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qHidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qHidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQInput(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qInput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQLine(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQMsg(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qMsg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQMsg: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qMsg")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQNewLineNr(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qNewLineNr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQNewLineNr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qNewLineNr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQOldLineNr(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qOldLineNr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQOldLineNr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qOldLineNr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQType(value: InteractionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

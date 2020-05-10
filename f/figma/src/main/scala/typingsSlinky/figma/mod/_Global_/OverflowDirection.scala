@@ -14,14 +14,12 @@ trait OverflowDirection extends js.Object
 
 object OverflowDirection {
   @scala.inline
-  def BOTH: typingsSlinky.figma.figmaStrings.BOTH = this.cast("BOTH")
+  def BOTH: typingsSlinky.figma.figmaStrings.BOTH = "BOTH".asInstanceOf[typingsSlinky.figma.figmaStrings.BOTH]
   @scala.inline
-  def HORIZONTAL: typingsSlinky.figma.figmaStrings.HORIZONTAL = this.cast("HORIZONTAL")
+  def HORIZONTAL: typingsSlinky.figma.figmaStrings.HORIZONTAL = "HORIZONTAL".asInstanceOf[typingsSlinky.figma.figmaStrings.HORIZONTAL]
   @scala.inline
-  def NONE: typingsSlinky.figma.figmaStrings.NONE = this.cast("NONE")
+  def NONE: typingsSlinky.figma.figmaStrings.NONE = "NONE".asInstanceOf[typingsSlinky.figma.figmaStrings.NONE]
   @scala.inline
-  def VERTICAL: typingsSlinky.figma.figmaStrings.VERTICAL = this.cast("VERTICAL")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def VERTICAL: typingsSlinky.figma.figmaStrings.VERTICAL = "VERTICAL".asInstanceOf[typingsSlinky.figma.figmaStrings.VERTICAL]
 }
 

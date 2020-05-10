@@ -18,11 +18,41 @@ trait ListBackupSelectionsOutput extends js.Object {
 
 object ListBackupSelectionsOutput {
   @scala.inline
-  def apply(BackupSelectionsList: BackupSelectionsList = null, NextToken: String = null): ListBackupSelectionsOutput = {
+  def apply(): ListBackupSelectionsOutput = {
     val __obj = js.Dynamic.literal()
-    if (BackupSelectionsList != null) __obj.updateDynamic("BackupSelectionsList")(BackupSelectionsList.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListBackupSelectionsOutput]
   }
+  @scala.inline
+  implicit class ListBackupSelectionsOutputOps[Self <: ListBackupSelectionsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackupSelectionsList(value: BackupSelectionsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupSelectionsList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackupSelectionsList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupSelectionsList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

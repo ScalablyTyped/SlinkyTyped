@@ -5,17 +5,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StreamConfiguration extends js.Object {
-  var name: String
-  var params: js.UndefOr[AnonHost] = js.undefined
+  var name: String = js.native
+  var params: js.UndefOr[AnonHost] = js.native
 }
 
 object StreamConfiguration {
   @scala.inline
-  def apply(name: String, params: AnonHost = null): StreamConfiguration = {
+  def apply(name: String): StreamConfiguration = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreamConfiguration]
   }
+  @scala.inline
+  implicit class StreamConfigurationOps[Self <: StreamConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParams(value: AnonHost): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

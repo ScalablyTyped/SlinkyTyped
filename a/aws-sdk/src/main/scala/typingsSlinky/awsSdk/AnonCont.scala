@@ -20,20 +20,77 @@ trait AnonCont extends js.Object {
 
 object AnonCont {
   @scala.inline
-  def apply(
-    Cont: ContinuationEvent = null,
-    End: EndEvent = null,
-    Progress: ProgressEvent = null,
-    Records: RecordsEvent = null,
-    Stats: StatsEvent = null
-  ): AnonCont = {
+  def apply(): AnonCont = {
     val __obj = js.Dynamic.literal()
-    if (Cont != null) __obj.updateDynamic("Cont")(Cont.asInstanceOf[js.Any])
-    if (End != null) __obj.updateDynamic("End")(End.asInstanceOf[js.Any])
-    if (Progress != null) __obj.updateDynamic("Progress")(Progress.asInstanceOf[js.Any])
-    if (Records != null) __obj.updateDynamic("Records")(Records.asInstanceOf[js.Any])
-    if (Stats != null) __obj.updateDynamic("Stats")(Stats.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCont]
   }
+  @scala.inline
+  implicit class AnonContOps[Self <: AnonCont] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCont(value: ContinuationEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cont")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCont: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cont")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnd(value: EndEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("End")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("End")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgress(value: ProgressEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Progress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Progress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecords(value: RecordsEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Records")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Records")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStats(value: StatsEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Stats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Stats")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,15 +1,18 @@
 package typingsSlinky.reactNativeDialog.components
 
+import typingsSlinky.reactNative.mod.ViewProps
+import typingsSlinky.reactNativeDialog.mod.ContainerProps
+import typingsSlinky.reactNativeDialog.mod.reactNativeModalContainerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Container
-  extends `SharedApply_<intersection>1002738407`[typingsSlinky.reactNativeDialog.mod.default.Container] {
+object Container {
   @JSImport("react-native-dialog", "default.Container")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ContainerProps with ViewProps with reactNativeModalContainerProps): `SharedBuilder_<intersection>890884832`[typingsSlinky.reactNativeDialog.mod.default.Container] = new `SharedBuilder_<intersection>890884832`[typingsSlinky.reactNativeDialog.mod.default.Container](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Container.type): `SharedBuilder_<intersection>890884832`[typingsSlinky.reactNativeDialog.mod.default.Container] = new `SharedBuilder_<intersection>890884832`[typingsSlinky.reactNativeDialog.mod.default.Container](js.Array(this.component, js.Dictionary.empty))()
 }
 

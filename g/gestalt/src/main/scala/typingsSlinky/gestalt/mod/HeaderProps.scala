@@ -1,6 +1,7 @@
 package typingsSlinky.gestalt.mod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.gestalt.gestaltNumbers.`1`
 import typingsSlinky.gestalt.gestaltNumbers.`2`
 import typingsSlinky.gestalt.gestaltNumbers.`3`
@@ -29,53 +30,128 @@ import typingsSlinky.gestalt.gestaltStrings.red
 import typingsSlinky.gestalt.gestaltStrings.sm
 import typingsSlinky.gestalt.gestaltStrings.watermelon
 import typingsSlinky.gestalt.gestaltStrings.white
-import typingsSlinky.gestalt.gestaltStrings.xl
-import typingsSlinky.gestalt.gestaltStrings.xs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HeaderProps extends js.Object {
-  var accessibilityLevel: js.UndefOr[`1` | `2` | `3` | `4` | `5` | `6`] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var accessibilityLevel: js.UndefOr[`1` | `2` | `3` | `4` | `5` | `6`] = js.native
+  var children: js.UndefOr[TagMod[Any]] = js.native
   var color: js.UndefOr[
     blue | darkGray | eggplant | gray | green | lightGray | maroon | midnight | navy | olive | orange | orchid | pine | purple | red | watermelon | white
-  ] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var lgSize: js.UndefOr[xs | sm | md | lg | xl] = js.undefined
-  var mdSize: js.UndefOr[xs | sm | md | lg | xl] = js.undefined
-  var overflow: js.UndefOr[normal | breakWord] = js.undefined
-  var size: js.UndefOr[xs | sm | md | lg | xl] = js.undefined
-  var smSize: js.UndefOr[xs | sm | md | lg | xl] = js.undefined
-  var truncate: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var id: js.UndefOr[String] = js.native
+  var overflow: js.UndefOr[normal | breakWord] = js.native
+  var size: js.UndefOr[sm | md | lg] = js.native
+  var truncate: js.UndefOr[Boolean] = js.native
 }
 
 object HeaderProps {
   @scala.inline
-  def apply(
-    accessibilityLevel: `1` | `2` | `3` | `4` | `5` | `6` = null,
-    children: TagMod[Any] = null,
-    color: blue | darkGray | eggplant | gray | green | lightGray | maroon | midnight | navy | olive | orange | orchid | pine | purple | red | watermelon | white = null,
-    id: String = null,
-    lgSize: xs | sm | md | lg | xl = null,
-    mdSize: xs | sm | md | lg | xl = null,
-    overflow: normal | breakWord = null,
-    size: xs | sm | md | lg | xl = null,
-    smSize: xs | sm | md | lg | xl = null,
-    truncate: js.UndefOr[Boolean] = js.undefined
-  ): HeaderProps = {
+  def apply(): HeaderProps = {
     val __obj = js.Dynamic.literal()
-    if (accessibilityLevel != null) __obj.updateDynamic("accessibilityLevel")(accessibilityLevel.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (lgSize != null) __obj.updateDynamic("lgSize")(lgSize.asInstanceOf[js.Any])
-    if (mdSize != null) __obj.updateDynamic("mdSize")(mdSize.asInstanceOf[js.Any])
-    if (overflow != null) __obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (smSize != null) __obj.updateDynamic("smSize")(smSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(truncate)) __obj.updateDynamic("truncate")(truncate.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeaderProps]
   }
+  @scala.inline
+  implicit class HeaderPropsOps[Self <: HeaderProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessibilityLevel(value: `1` | `2` | `3` | `4` | `5` | `6`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibilityLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibilityLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildrenReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildren(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(
+      value: blue | darkGray | eggplant | gray | green | lightGray | maroon | midnight | navy | olive | orange | orchid | pine | purple | red | watermelon | white
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflow(value: normal | breakWord): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: sm | md | lg): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTruncate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("truncate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTruncate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("truncate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

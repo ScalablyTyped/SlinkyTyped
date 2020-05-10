@@ -4,42 +4,91 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UDPSendParams extends js.Object {
   /**
     * 要发消息的地址。可以是一个和本机同网段的 IP 地址，也可以是在安全域名列表内的域名地址
     */
-  var address: String
+  var address: String = js.native
   /**
     * 发送数据的长度，仅当 message 为 ArrayBuffer 类型时有效，默认值message.byteLength
     */
-  var length: js.UndefOr[Double] = js.undefined
+  var length: js.UndefOr[Double] = js.native
   /**
     * 要发送的数据
     */
-  var message: String | scala.scalajs.js.typedarray.ArrayBuffer
+  var message: String | js.typedarray.ArrayBuffer = js.native
   /**
     * 发送数据的偏移量，仅当 message 为 ArrayBuffer 类型时有效，默认值0
     */
-  var offset: js.UndefOr[Double] = js.undefined
+  var offset: js.UndefOr[Double] = js.native
   /**
     * 要发送消息的端口号
     */
-  var port: Double
+  var port: Double = js.native
 }
 
 object UDPSendParams {
   @scala.inline
-  def apply(
-    address: String,
-    message: String | scala.scalajs.js.typedarray.ArrayBuffer,
-    port: Double,
-    length: Int | Double = null,
-    offset: Int | Double = null
-  ): UDPSendParams = {
+  def apply(address: String, message: String | js.typedarray.ArrayBuffer, port: Double): UDPSendParams = {
     val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any])
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
     __obj.asInstanceOf[UDPSendParams]
   }
+  @scala.inline
+  implicit class UDPSendParamsOps[Self <: UDPSendParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessageArrayBuffer(value: js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessage(value: String | js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

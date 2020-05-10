@@ -1,6 +1,5 @@
 package typingsSlinky.rxjsCompat
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -518,9 +517,9 @@ object internalObservableMod extends js.Object {
       delay: Double,
       scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
     ): js.Any = js.native
-    def delay[T](delay: Date): js.Any = js.native
+    def delay[T](delay: js.Date): js.Any = js.native
     def delay[T](
-      delay: Date,
+      delay: js.Date,
       scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
     ): js.Any = js.native
     def delayWhen[T](
@@ -546,8 +545,8 @@ object internalObservableMod extends js.Object {
     def distinctUntilChanged[T](): js.Any = js.native
     def distinctUntilChanged[T](compare: js.Function2[/* x */ T, /* y */ T, Boolean]): js.Any = js.native
     def distinctUntilChanged[T, K](compare: js.Function2[/* x */ K, /* y */ K, Boolean], keySelector: js.Function1[/* x */ T, K]): js.Any = js.native
-    def distinctUntilKeyChanged[T](key: String): js.Any = js.native
-    def distinctUntilKeyChanged[T, K /* <: String */](
+    def distinctUntilKeyChanged[T](key: /* keyof T */ String): js.Any = js.native
+    def distinctUntilKeyChanged[T, K /* <: /* keyof T */ String */](
       key: K,
       compare: js.Function2[
           /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ /* x */ js.Any, 
@@ -1352,9 +1351,9 @@ object internalObservableMod extends js.Object {
       due: Double,
       scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
     ): js.Any = js.native
-    def timeout[T](due: Date): js.Any = js.native
+    def timeout[T](due: js.Date): js.Any = js.native
     def timeout[T](
-      due: Date,
+      due: js.Date,
       scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
     ): js.Any = js.native
     def timeoutWith[T](
@@ -1367,11 +1366,11 @@ object internalObservableMod extends js.Object {
       scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
     ): js.Any = js.native
     def timeoutWith[T](
-      due: Date,
+      due: js.Date,
       withObservable: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ObservableInput<T> */ js.Any
     ): js.Any = js.native
     def timeoutWith[T](
-      due: Date,
+      due: js.Date,
       withObservable: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ObservableInput<T> */ js.Any,
       scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
     ): js.Any = js.native
@@ -1388,12 +1387,12 @@ object internalObservableMod extends js.Object {
     ): js.Any = js.native
     @JSName("timeoutWith")
     def timeoutWith_TR[T, R](
-      due: Date,
+      due: js.Date,
       withObservable: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ObservableInput<R> */ js.Any
     ): js.Any = js.native
     @JSName("timeoutWith")
     def timeoutWith_TR[T, R](
-      due: Date,
+      due: js.Date,
       withObservable: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ObservableInput<R> */ js.Any,
       scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
     ): js.Any = js.native

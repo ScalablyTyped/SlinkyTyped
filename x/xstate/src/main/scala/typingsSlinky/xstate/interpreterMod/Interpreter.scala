@@ -104,7 +104,7 @@ class Interpreter[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: E
   def init(initialState: String): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
   def init(initialState: State[TContext, TEvent, _, _]): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
   def init(initialState: StateValueMap): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
-  def initialState(): State[TContext, TEvent, _, _] = js.native
+  def initialState: State[TContext, TEvent, _, _] = js.native
   /**
     * Returns the next state given the interpreter's current state and the event.
     *
@@ -177,7 +177,7 @@ class Interpreter[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: E
   def start(initialState: State[TContext, TEvent, _, _]): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
   def start(initialState: StateValue): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
   @JSName("state")
-  def state_MInterpreter(): State[TContext, TEvent, _, _] = js.native
+  def state_MInterpreter: State[TContext, TEvent, _, _] = js.native
   /**
     * Stops the interpreter and unsubscribe all listeners.
     *

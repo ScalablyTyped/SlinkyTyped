@@ -4,10 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Interactive extends js.Object {
-  def interactive(options: Option): Interactive
-  def `then`(callback: js.Function1[/* result */ js.Any, _]): Interactive
-  def usage(usage: String): Interactive
+  def interactive(options: Option): Interactive = js.native
+  def `then`(callback: js.Function1[/* result */ js.Any, _]): Interactive = js.native
+  def usage(usage: String): Interactive = js.native
 }
 
 object Interactive {
@@ -21,5 +22,31 @@ object Interactive {
     __obj.updateDynamic("then")(js.Any.fromFunction1(`then`))
     __obj.asInstanceOf[Interactive]
   }
+  @scala.inline
+  implicit class InteractiveOps[Self <: Interactive] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInteractive(value: Option => Interactive): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interactive")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withThen(value: js.Function1[/* result */ js.Any, _] => Interactive): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("then")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUsage(value: String => Interactive): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

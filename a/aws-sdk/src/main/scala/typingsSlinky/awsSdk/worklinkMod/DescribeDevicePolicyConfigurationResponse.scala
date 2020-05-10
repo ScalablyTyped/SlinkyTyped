@@ -14,10 +14,29 @@ trait DescribeDevicePolicyConfigurationResponse extends js.Object {
 
 object DescribeDevicePolicyConfigurationResponse {
   @scala.inline
-  def apply(DeviceCaCertificate: Certificate = null): DescribeDevicePolicyConfigurationResponse = {
+  def apply(): DescribeDevicePolicyConfigurationResponse = {
     val __obj = js.Dynamic.literal()
-    if (DeviceCaCertificate != null) __obj.updateDynamic("DeviceCaCertificate")(DeviceCaCertificate.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDevicePolicyConfigurationResponse]
   }
+  @scala.inline
+  implicit class DescribeDevicePolicyConfigurationResponseOps[Self <: DescribeDevicePolicyConfigurationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceCaCertificate(value: Certificate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceCaCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceCaCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceCaCertificate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,20 +18,18 @@ trait TimingFunction extends js.Object
 
 object TimingFunction {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ease: typingsSlinky.baiduApp.baiduAppStrings.ease = "ease".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.ease]
   @scala.inline
-  def ease: typingsSlinky.baiduApp.baiduAppStrings.ease = this.cast("ease")
+  def `ease-in`: typingsSlinky.baiduApp.baiduAppStrings.`ease-in` = "ease-in".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.`ease-in`]
   @scala.inline
-  def `ease-in`: typingsSlinky.baiduApp.baiduAppStrings.`ease-in` = this.cast("ease-in")
+  def `ease-in-out`: typingsSlinky.baiduApp.baiduAppStrings.`ease-in-out` = "ease-in-out".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.`ease-in-out`]
   @scala.inline
-  def `ease-in-out`: typingsSlinky.baiduApp.baiduAppStrings.`ease-in-out` = this.cast("ease-in-out")
+  def `ease-out`: typingsSlinky.baiduApp.baiduAppStrings.`ease-out` = "ease-out".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.`ease-out`]
   @scala.inline
-  def `ease-out`: typingsSlinky.baiduApp.baiduAppStrings.`ease-out` = this.cast("ease-out")
+  def linear: typingsSlinky.baiduApp.baiduAppStrings.linear = "linear".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.linear]
   @scala.inline
-  def linear: typingsSlinky.baiduApp.baiduAppStrings.linear = this.cast("linear")
+  def `step-end`: typingsSlinky.baiduApp.baiduAppStrings.`step-end` = "step-end".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.`step-end`]
   @scala.inline
-  def `step-end`: typingsSlinky.baiduApp.baiduAppStrings.`step-end` = this.cast("step-end")
-  @scala.inline
-  def `step-start`: typingsSlinky.baiduApp.baiduAppStrings.`step-start` = this.cast("step-start")
+  def `step-start`: typingsSlinky.baiduApp.baiduAppStrings.`step-start` = "step-start".asInstanceOf[typingsSlinky.baiduApp.baiduAppStrings.`step-start`]
 }
 

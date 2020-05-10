@@ -1,10 +1,7 @@
 package typingsSlinky.reactNativeSwipeout.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeSwipeout.mod.SwipeoutButtonProperties
 import typingsSlinky.reactNativeSwipeout.mod.SwipeoutProperties
 import typingsSlinky.reactNativeSwipeout.mod.default
@@ -12,52 +9,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativeSwipeout
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactNativeSwipeout {
   @JSImport("react-native-swipeout", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    autoClose: js.UndefOr[Boolean] = js.undefined,
-    backgroundColor: String = null,
-    buttonWidth: Int | Double = null,
-    close: js.UndefOr[Boolean] = js.undefined,
-    left: js.Array[SwipeoutButtonProperties] = null,
-    onClose: (/* sectionId */ Double, /* rowId */ Double, /* direction */ String) => Unit = null,
-    onOpen: (/* sectionId */ Double, /* rowId */ Double, /* direction */ String) => Unit = null,
-    openLeft: js.UndefOr[Boolean] = js.undefined,
-    openRight: js.UndefOr[Boolean] = js.undefined,
-    right: js.Array[SwipeoutButtonProperties] = null,
-    rowId: Int | Double = null,
-    scroll: /* scrollEnabled */ Boolean => Unit = null,
-    sectionId: Int | Double = null,
-    sensitivity: Int | Double = null,
-    style: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoClose)) __obj.updateDynamic("autoClose")(autoClose.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (buttonWidth != null) __obj.updateDynamic("buttonWidth")(buttonWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(close)) __obj.updateDynamic("close")(close.asInstanceOf[js.Any])
-    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction3(onClose))
-    if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction3(onOpen))
-    if (!js.isUndefined(openLeft)) __obj.updateDynamic("openLeft")(openLeft.asInstanceOf[js.Any])
-    if (!js.isUndefined(openRight)) __obj.updateDynamic("openRight")(openRight.asInstanceOf[js.Any])
-    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (rowId != null) __obj.updateDynamic("rowId")(rowId.asInstanceOf[js.Any])
-    if (scroll != null) __obj.updateDynamic("scroll")(js.Any.fromFunction1(scroll))
-    if (sectionId != null) __obj.updateDynamic("sectionId")(sectionId.asInstanceOf[js.Any])
-    if (sensitivity != null) __obj.updateDynamic("sensitivity")(sensitivity.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def autoClose(value: Boolean): this.type = set("autoClose", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def buttonWidth(value: Double): this.type = set("buttonWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def close(value: Boolean): this.type = set("close", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def left(value: js.Array[SwipeoutButtonProperties]): this.type = set("left", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClose(value: (/* sectionId */ Double, /* rowId */ Double, /* direction */ String) => Unit): this.type = set("onClose", js.Any.fromFunction3(value))
+    @scala.inline
+    def onOpen(value: (/* sectionId */ Double, /* rowId */ Double, /* direction */ String) => Unit): this.type = set("onOpen", js.Any.fromFunction3(value))
+    @scala.inline
+    def openLeft(value: Boolean): this.type = set("openLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def openRight(value: Boolean): this.type = set("openRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def right(value: js.Array[SwipeoutButtonProperties]): this.type = set("right", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowId(value: Double): this.type = set("rowId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scroll(value: /* scrollEnabled */ Boolean => Unit): this.type = set("scroll", js.Any.fromFunction1(value))
+    @scala.inline
+    def sectionId(value: Double): this.type = set("sectionId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sensitivity(value: Double): this.type = set("sensitivity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactNativeSwipeout.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SwipeoutProperties
+  
+  def withProps(p: SwipeoutProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactNativeSwipeout.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

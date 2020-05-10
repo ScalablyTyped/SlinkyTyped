@@ -1,42 +1,35 @@
 package typingsSlinky.phin.mod
 
-import typingsSlinky.node.httpMod.ClientRequestArgs
 import typingsSlinky.phin.phinBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IStreamResponseOptions extends IOptionsBase {
   @JSName("stream")
-  var stream_IStreamResponseOptions: `true`
+  var stream_IStreamResponseOptions: `true` = js.native
 }
 
 object IStreamResponseOptions {
   @scala.inline
-  def apply(
-    stream: `true`,
-    url: String,
-    compression: js.UndefOr[Boolean] = js.undefined,
-    core: ClientRequestArgs = null,
-    followRedirects: js.UndefOr[Boolean] = js.undefined,
-    headers: js.Object = null,
-    hostname: String = null,
-    method: String = null,
-    path: String = null,
-    port: Int | Double = null,
-    timeout: Int | Double = null
-  ): IStreamResponseOptions = {
+  def apply(stream: `true`, url: String): IStreamResponseOptions = {
     val __obj = js.Dynamic.literal(stream = stream.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-    if (!js.isUndefined(compression)) __obj.updateDynamic("compression")(compression.asInstanceOf[js.Any])
-    if (core != null) __obj.updateDynamic("core")(core.asInstanceOf[js.Any])
-    if (!js.isUndefined(followRedirects)) __obj.updateDynamic("followRedirects")(followRedirects.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[IStreamResponseOptions]
   }
+  @scala.inline
+  implicit class IStreamResponseOptionsOps[Self <: IStreamResponseOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStream(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

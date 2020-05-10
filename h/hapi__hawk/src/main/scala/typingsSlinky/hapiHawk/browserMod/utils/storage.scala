@@ -1,7 +1,7 @@
 package typingsSlinky.hapiHawk.browserMod.utils
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.Storage
+import org.scalajs.dom.raw.Storage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

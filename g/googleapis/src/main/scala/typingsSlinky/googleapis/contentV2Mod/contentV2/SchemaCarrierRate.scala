@@ -44,22 +44,89 @@ trait SchemaCarrierRate extends js.Object {
 
 object SchemaCarrierRate {
   @scala.inline
-  def apply(
-    carrierName: String = null,
-    carrierService: String = null,
-    flatAdjustment: SchemaPrice = null,
-    name: String = null,
-    originPostalCode: String = null,
-    percentageAdjustment: String = null
-  ): SchemaCarrierRate = {
+  def apply(): SchemaCarrierRate = {
     val __obj = js.Dynamic.literal()
-    if (carrierName != null) __obj.updateDynamic("carrierName")(carrierName.asInstanceOf[js.Any])
-    if (carrierService != null) __obj.updateDynamic("carrierService")(carrierService.asInstanceOf[js.Any])
-    if (flatAdjustment != null) __obj.updateDynamic("flatAdjustment")(flatAdjustment.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (originPostalCode != null) __obj.updateDynamic("originPostalCode")(originPostalCode.asInstanceOf[js.Any])
-    if (percentageAdjustment != null) __obj.updateDynamic("percentageAdjustment")(percentageAdjustment.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCarrierRate]
   }
+  @scala.inline
+  implicit class SchemaCarrierRateOps[Self <: SchemaCarrierRate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCarrierName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("carrierName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCarrierName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("carrierName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCarrierService(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("carrierService")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCarrierService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("carrierService")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlatAdjustment(value: SchemaPrice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flatAdjustment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlatAdjustment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flatAdjustment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginPostalCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originPostalCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginPostalCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originPostalCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPercentageAdjustment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percentageAdjustment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPercentageAdjustment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percentageAdjustment")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

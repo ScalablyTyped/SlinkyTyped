@@ -35,22 +35,89 @@ trait SmsPreferencesState extends js.Object {
 
 object SmsPreferencesState {
   @scala.inline
-  def apply(
-    defaultSenderId: Input[String] = null,
-    defaultSmsType: Input[String] = null,
-    deliveryStatusIamRoleArn: Input[String] = null,
-    deliveryStatusSuccessSamplingRate: Input[String] = null,
-    monthlySpendLimit: Input[String] = null,
-    usageReportS3Bucket: Input[String] = null
-  ): SmsPreferencesState = {
+  def apply(): SmsPreferencesState = {
     val __obj = js.Dynamic.literal()
-    if (defaultSenderId != null) __obj.updateDynamic("defaultSenderId")(defaultSenderId.asInstanceOf[js.Any])
-    if (defaultSmsType != null) __obj.updateDynamic("defaultSmsType")(defaultSmsType.asInstanceOf[js.Any])
-    if (deliveryStatusIamRoleArn != null) __obj.updateDynamic("deliveryStatusIamRoleArn")(deliveryStatusIamRoleArn.asInstanceOf[js.Any])
-    if (deliveryStatusSuccessSamplingRate != null) __obj.updateDynamic("deliveryStatusSuccessSamplingRate")(deliveryStatusSuccessSamplingRate.asInstanceOf[js.Any])
-    if (monthlySpendLimit != null) __obj.updateDynamic("monthlySpendLimit")(monthlySpendLimit.asInstanceOf[js.Any])
-    if (usageReportS3Bucket != null) __obj.updateDynamic("usageReportS3Bucket")(usageReportS3Bucket.asInstanceOf[js.Any])
     __obj.asInstanceOf[SmsPreferencesState]
   }
+  @scala.inline
+  implicit class SmsPreferencesStateOps[Self <: SmsPreferencesState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultSenderId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSenderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultSenderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSenderId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultSmsType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSmsType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultSmsType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSmsType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeliveryStatusIamRoleArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryStatusIamRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeliveryStatusIamRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryStatusIamRoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeliveryStatusSuccessSamplingRate(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryStatusSuccessSamplingRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeliveryStatusSuccessSamplingRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryStatusSuccessSamplingRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonthlySpendLimit(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monthlySpendLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonthlySpendLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monthlySpendLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsageReportS3Bucket(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usageReportS3Bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsageReportS3Bucket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usageReportS3Bucket")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

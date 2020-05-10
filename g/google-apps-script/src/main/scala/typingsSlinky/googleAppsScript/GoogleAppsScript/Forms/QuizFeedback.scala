@@ -19,17 +19,37 @@ import scala.scalajs.js.annotation._
   *       .addLink("http://wikipedia.com/osmosis");
   *     textItem.setFeedbackForIncorrect(feedback);
   */
+@js.native
 trait QuizFeedback extends js.Object {
-  def getLinkUrls(): js.Array[String]
-  def getText(): String
+  def getLinkUrls(): js.Array[String] = js.native
+  def getText(): String = js.native
 }
 
 object QuizFeedback {
   @scala.inline
   def apply(getLinkUrls: () => js.Array[String], getText: () => String): QuizFeedback = {
     val __obj = js.Dynamic.literal(getLinkUrls = js.Any.fromFunction0(getLinkUrls), getText = js.Any.fromFunction0(getText))
-  
     __obj.asInstanceOf[QuizFeedback]
   }
+  @scala.inline
+  implicit class QuizFeedbackOps[Self <: QuizFeedback] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetLinkUrls(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLinkUrls")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetText(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getText")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

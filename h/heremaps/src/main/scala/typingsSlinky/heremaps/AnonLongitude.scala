@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonLongitude extends js.Object {
-  var Latitude: Double
-  var Longitude: Double
+  var Latitude: Double = js.native
+  var Longitude: Double = js.native
 }
 
 object AnonLongitude {
   @scala.inline
   def apply(Latitude: Double, Longitude: Double): AnonLongitude = {
     val __obj = js.Dynamic.literal(Latitude = Latitude.asInstanceOf[js.Any], Longitude = Longitude.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonLongitude]
   }
+  @scala.inline
+  implicit class AnonLongitudeOps[Self <: AnonLongitude] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLatitude(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Latitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLongitude(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Longitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

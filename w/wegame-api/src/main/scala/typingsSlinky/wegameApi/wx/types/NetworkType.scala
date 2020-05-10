@@ -16,18 +16,16 @@ trait NetworkType extends js.Object
 
 object NetworkType {
   @scala.inline
-  def `2g`: typingsSlinky.wegameApi.wegameApiStrings.`2g` = this.cast("2g")
+  def `2g`: typingsSlinky.wegameApi.wegameApiStrings.`2g` = "2g".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.`2g`]
   @scala.inline
-  def `3g`: typingsSlinky.wegameApi.wegameApiStrings.`3g` = this.cast("3g")
+  def `3g`: typingsSlinky.wegameApi.wegameApiStrings.`3g` = "3g".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.`3g`]
   @scala.inline
-  def `4g`: typingsSlinky.wegameApi.wegameApiStrings.`4g` = this.cast("4g")
+  def `4g`: typingsSlinky.wegameApi.wegameApiStrings.`4g` = "4g".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.`4g`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def none: typingsSlinky.wegameApi.wegameApiStrings.none = "none".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.none]
   @scala.inline
-  def none: typingsSlinky.wegameApi.wegameApiStrings.none = this.cast("none")
+  def unknown: typingsSlinky.wegameApi.wegameApiStrings.unknown = "unknown".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.unknown]
   @scala.inline
-  def unknown: typingsSlinky.wegameApi.wegameApiStrings.unknown = this.cast("unknown")
-  @scala.inline
-  def wifi: typingsSlinky.wegameApi.wegameApiStrings.wifi = this.cast("wifi")
+  def wifi: typingsSlinky.wegameApi.wegameApiStrings.wifi = "wifi".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.wifi]
 }
 

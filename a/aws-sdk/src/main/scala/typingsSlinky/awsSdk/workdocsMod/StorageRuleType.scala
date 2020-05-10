@@ -18,11 +18,41 @@ trait StorageRuleType extends js.Object {
 
 object StorageRuleType {
   @scala.inline
-  def apply(StorageAllocatedInBytes: Int | Double = null, StorageType: StorageType = null): StorageRuleType = {
+  def apply(): StorageRuleType = {
     val __obj = js.Dynamic.literal()
-    if (StorageAllocatedInBytes != null) __obj.updateDynamic("StorageAllocatedInBytes")(StorageAllocatedInBytes.asInstanceOf[js.Any])
-    if (StorageType != null) __obj.updateDynamic("StorageType")(StorageType.asInstanceOf[js.Any])
     __obj.asInstanceOf[StorageRuleType]
   }
+  @scala.inline
+  implicit class StorageRuleTypeOps[Self <: StorageRuleType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStorageAllocatedInBytes(value: PositiveSizeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageAllocatedInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorageAllocatedInBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageAllocatedInBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStorageType(value: StorageType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorageType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

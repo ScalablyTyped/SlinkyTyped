@@ -21,28 +21,26 @@ trait WorkerEvent extends js.Object
 
 object WorkerEvent {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cleaning_worker: typingsSlinky.nodeResque.nodeResqueStrings.cleaning_worker = "cleaning_worker".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.cleaning_worker]
   @scala.inline
-  def cleaning_worker: typingsSlinky.nodeResque.nodeResqueStrings.cleaning_worker = this.cast("cleaning_worker")
+  def end: typingsSlinky.nodeResque.nodeResqueStrings.end = "end".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.end]
   @scala.inline
-  def end: typingsSlinky.nodeResque.nodeResqueStrings.end = this.cast("end")
+  def error: typingsSlinky.nodeResque.nodeResqueStrings.error = "error".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.error]
   @scala.inline
-  def error: typingsSlinky.nodeResque.nodeResqueStrings.error = this.cast("error")
+  def failure: typingsSlinky.nodeResque.nodeResqueStrings.failure = "failure".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.failure]
   @scala.inline
-  def failure: typingsSlinky.nodeResque.nodeResqueStrings.failure = this.cast("failure")
+  def job: typingsSlinky.nodeResque.nodeResqueStrings.job = "job".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.job]
   @scala.inline
-  def job: typingsSlinky.nodeResque.nodeResqueStrings.job = this.cast("job")
+  def pause: typingsSlinky.nodeResque.nodeResqueStrings.pause = "pause".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.pause]
   @scala.inline
-  def pause: typingsSlinky.nodeResque.nodeResqueStrings.pause = this.cast("pause")
+  def ping: typingsSlinky.nodeResque.nodeResqueStrings.ping = "ping".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.ping]
   @scala.inline
-  def ping: typingsSlinky.nodeResque.nodeResqueStrings.ping = this.cast("ping")
+  def poll: typingsSlinky.nodeResque.nodeResqueStrings.poll = "poll".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.poll]
   @scala.inline
-  def poll: typingsSlinky.nodeResque.nodeResqueStrings.poll = this.cast("poll")
+  def reEnqueue: typingsSlinky.nodeResque.nodeResqueStrings.reEnqueue = "reEnqueue".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.reEnqueue]
   @scala.inline
-  def reEnqueue: typingsSlinky.nodeResque.nodeResqueStrings.reEnqueue = this.cast("reEnqueue")
+  def start: typingsSlinky.nodeResque.nodeResqueStrings.start = "start".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.start]
   @scala.inline
-  def start: typingsSlinky.nodeResque.nodeResqueStrings.start = this.cast("start")
-  @scala.inline
-  def success: typingsSlinky.nodeResque.nodeResqueStrings.success = this.cast("success")
+  def success: typingsSlinky.nodeResque.nodeResqueStrings.success = "success".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.success]
 }
 

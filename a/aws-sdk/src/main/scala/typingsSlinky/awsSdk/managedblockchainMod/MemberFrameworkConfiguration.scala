@@ -14,10 +14,29 @@ trait MemberFrameworkConfiguration extends js.Object {
 
 object MemberFrameworkConfiguration {
   @scala.inline
-  def apply(Fabric: MemberFabricConfiguration = null): MemberFrameworkConfiguration = {
+  def apply(): MemberFrameworkConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (Fabric != null) __obj.updateDynamic("Fabric")(Fabric.asInstanceOf[js.Any])
     __obj.asInstanceOf[MemberFrameworkConfiguration]
   }
+  @scala.inline
+  implicit class MemberFrameworkConfigurationOps[Self <: MemberFrameworkConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFabric(value: MemberFabricConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fabric")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFabric: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fabric")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

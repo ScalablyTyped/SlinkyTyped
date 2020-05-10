@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Credentials extends js.Object {
-  var authzid: js.UndefOr[String] = js.undefined
+  var authzid: js.UndefOr[String] = js.native
 }
 
 object Credentials {
   @scala.inline
-  def apply(authzid: String = null): Credentials = {
+  def apply(): Credentials = {
     val __obj = js.Dynamic.literal()
-    if (authzid != null) __obj.updateDynamic("authzid")(authzid.asInstanceOf[js.Any])
     __obj.asInstanceOf[Credentials]
   }
+  @scala.inline
+  implicit class CredentialsOps[Self <: Credentials] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthzid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authzid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthzid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authzid")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

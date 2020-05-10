@@ -4,18 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnimateTimings extends js.Object {
   /**
     * The delay in applying an animation step. A number and optional time unit.
     * The default unit is milliseconds.
     */
-  var delay: Double
+  var delay: Double = js.native
   /**
     * The full duration of an animation step. A number and optional time unit,
     * such as "1s" or "10ms" for one second and 10 milliseconds, respectively.
     * The default unit is milliseconds.
     */
-  var duration: Double
+  var duration: Double = js.native
   /**
     * An easing style that controls how an animations step accelerates
     * and decelerates during its run time. An easing function such as `cubic-bezier()`,
@@ -24,15 +25,46 @@ trait AnimateTimings extends js.Object {
     * - `ease-out`
     * - `ease-in-and-out`
     */
-  var easing: String | Null
+  var easing: String | Null = js.native
 }
 
 object AnimateTimings {
   @scala.inline
-  def apply(delay: Double, duration: Double, easing: String = null): AnimateTimings = {
+  def apply(delay: Double, duration: Double): AnimateTimings = {
     val __obj = js.Dynamic.literal(delay = delay.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnimateTimings]
   }
+  @scala.inline
+  implicit class AnimateTimingsOps[Self <: AnimateTimings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEasing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEasingNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(null)
+        ret
+    }
+  }
+  
 }
 

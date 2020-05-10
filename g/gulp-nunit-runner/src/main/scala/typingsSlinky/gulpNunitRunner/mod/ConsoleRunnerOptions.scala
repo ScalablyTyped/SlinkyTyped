@@ -4,214 +4,612 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ConsoleRunnerOptions extends js.Object {
    // true|false,
   // [2.x] Apartment for running tests (Default is MTA).
-  var apartment: js.UndefOr[String] = js.undefined
+  var apartment: js.UndefOr[String] = js.native
    // true|false,
   // [2.x] Base path to be used when loading the assemblies.
-  var basepath: js.UndefOr[String] = js.undefined
+  var basepath: js.UndefOr[String] = js.native
    // ['lib', 'bin'],
   // [2.x] Erase any leftover cache files and exit.
-  var cleanup: js.UndefOr[Boolean] = js.undefined
+  var cleanup: js.UndefOr[Boolean] = js.native
    // ['Database', 'Network'],
   // Project configuration (e.g.: Debug) to load.
-  var config: js.UndefOr[String] = js.undefined
+  var config: js.UndefOr[String] = js.native
    // true|false,
   // [3.x] Dispose each test runner after it has finished running its tests.
-  var `dispose-runners`: js.UndefOr[Boolean] = js.undefined
+  var `dispose-runners`: js.UndefOr[Boolean] = js.native
    // 'Single|Separate|Multiple',
   // AppDomain Usage for tests.
-  var domain: js.UndefOr[String] = js.undefined
+  var domain: js.UndefOr[String] = js.native
    // 'TestOutput.txt',
   // File to receive test error output.
-  var err: js.UndefOr[String] = js.undefined
+  var err: js.UndefOr[String] = js.native
    // ['BaseLine', 'Unit'],
   // List of categories to exclude.
-  var exclude: js.UndefOr[js.Array[String]] = js.undefined
+  var exclude: js.UndefOr[js.Array[String]] = js.native
    // 'TestResult.xml',
   // [3.x] Save test info rather than running tests. Name of output file.
-  var explore: js.UndefOr[String] = js.undefined
+  var explore: js.UndefOr[String] = js.native
    // 'None|Single|Multiple',
   // Framework version to be used for tests.
-  var framework: js.UndefOr[String] = js.undefined
+  var framework: js.UndefOr[String] = js.native
    // 'TestsToRun.txt',
   // List of categories to include.
-  var include: js.UndefOr[js.Array[String]] = js.undefined
+  var include: js.UndefOr[js.Array[String]] = js.native
    // true|false,
   // Label each test in stdOut.
-  var labels: js.UndefOr[Boolean] = js.undefined
+  var labels: js.UndefOr[Boolean] = js.native
    // true|false,
   // [3.x] Displays console output without color.
-  var nocolor: js.UndefOr[Boolean] = js.undefined
+  var nocolor: js.UndefOr[Boolean] = js.native
    // true|false,
   // [2.x] Do not display progress.
-  var nodots: js.UndefOr[Boolean] = js.undefined
+  var nodots: js.UndefOr[Boolean] = js.native
    // true|false,
   // [3.x] Suppress display of program information at start of run.
-  var noheader: js.UndefOr[Boolean] = js.undefined
+  var noheader: js.UndefOr[Boolean] = js.native
    // true|false,
   // [2.x] Do not display the logo.
-  var nologo: js.UndefOr[Boolean] = js.undefined
+  var nologo: js.UndefOr[Boolean] = js.native
    // 'TestInfo.xml',
   // Suppress XML result output.
-  var noresult: js.UndefOr[Boolean] = js.undefined
+  var noresult: js.UndefOr[Boolean] = js.native
    // true|false,
   // [2.x] Disable shadow copy when running in separate domain.
   // NOTE In 3.x, The console runner now disables shadow copy by
   // default. use new 'shadowcopy' option in 3.x to turn it on.
-  var noshadow: js.UndefOr[Boolean] = js.undefined
+  var noshadow: js.UndefOr[Boolean] = js.native
    // 'MTA|STA',
   // [2.x] Disable use of a separate thread for tests.
-  var nothread: js.UndefOr[Boolean] = js.undefined
+  var nothread: js.UndefOr[Boolean] = js.native
    // 'BuildArtifacts',
   // File to receive test output.
-  var output: js.UndefOr[String] = js.undefined
+  var output: js.UndefOr[String] = js.native
    // true|false,
   // [3.x] Pause before run to allow debugging.
-  var pause: js.UndefOr[Boolean] = js.undefined
+  var pause: js.UndefOr[Boolean] = js.native
    // 'src',
   // [2.x] Additional directories to be probed when loading assemblies.
-  var privatebinpath: js.UndefOr[js.Array[String]] = js.undefined
+  var privatebinpath: js.UndefOr[js.Array[String]] = js.native
    // 'Debug',
   // Process model for tests.
-  var process: js.UndefOr[String] = js.undefined
+  var process: js.UndefOr[String] = js.native
    // 'TestErrors.txt',
   // Name of XML result file (Default: TestResult.xml)
-  var result: js.UndefOr[String] = js.undefined
+  var result: js.UndefOr[String] = js.native
    // 'TestsToRun.txt',
   // [2.x] Name of the test case(s), fixture(s) or namespace(s) to run.
   // NOTE: This has been superseded by the 'test' option above in 3.x.
-  var run: js.UndefOr[js.Array[String]] = js.undefined
+  var run: js.UndefOr[js.Array[String]] = js.native
    // ['TestSuite.Unit', 'TestSuite.Integration'],
   // [2.x] Name of a file containing a list of the tests to run, one per line.
   // NOTE: This has been superseded by the 'testlist' option above in 3.x.
-  var runlist: js.UndefOr[String] = js.undefined
+  var runlist: js.UndefOr[String] = js.native
    // 1000,
   // [3.x] Random seed used to generate test cases.
-  var seed: js.UndefOr[Double] = js.undefined
+  var seed: js.UndefOr[Double] = js.native
    // 'Off|Error|Warning|Info|Verbose',
   // [3.x] Tells .NET to copy loaded assemblies to the shadowcopy directory.
-  var shadowcopy: js.UndefOr[Boolean] = js.undefined
+  var shadowcopy: js.UndefOr[Boolean] = js.native
    // 5,
   // Stop after the first test failure or error.
-  var stoponerror: js.UndefOr[Boolean] = js.undefined
+  var stoponerror: js.UndefOr[Boolean] = js.native
    // true|false,
   // [3.x] Turns on use of TeamCity service messages.
-  var teamcity: js.UndefOr[Boolean] = js.undefined
+  var teamcity: js.UndefOr[Boolean] = js.native
   // [3.x] Name of the test case(s), fixture(s) or namespace(s) to run.
-  var test: js.UndefOr[js.Array[String]] = js.undefined
+  var test: js.UndefOr[js.Array[String]] = js.native
    // ['TestSuite.Unit', 'TestSuite.Integration'],
   // [3.x] Name of a file containing a list of the tests to run, one per line.
-  var testist: js.UndefOr[String] = js.undefined
+  var testist: js.UndefOr[String] = js.native
    // true|false,
   // Timeout for each test case in milliseconds.
-  var timeout: js.UndefOr[Double] = js.undefined
+  var timeout: js.UndefOr[Double] = js.native
    // true|false,
   // Set internal trace level.
-  var trace: js.UndefOr[String] = js.undefined
+  var trace: js.UndefOr[String] = js.native
    // true|false,
   // [3.x] Display additional information as the test runs.
-  var verbose: js.UndefOr[Boolean] = js.undefined
+  var verbose: js.UndefOr[Boolean] = js.native
    // true|false,
   // Wait for input before closing console window.
   @JSName("wait")
-  var wait_FConsoleRunnerOptions: js.UndefOr[Boolean] = js.undefined
+  var wait_FConsoleRunnerOptions: js.UndefOr[Boolean] = js.native
    // true|false,
   // Work directory for output files.
-  var work: js.UndefOr[String] = js.undefined
+  var work: js.UndefOr[String] = js.native
    // 5150,
   // [3.x] Number of worker threads to be used in running tests.
-  var workers: js.UndefOr[Double] = js.undefined
+  var workers: js.UndefOr[Double] = js.native
    // 'net-1.1',
   // [3.x] Run tests in a 32-bit process on 64-bit systems.
-  var x86: js.UndefOr[Boolean] = js.undefined
+  var x86: js.UndefOr[Boolean] = js.native
 }
 
 object ConsoleRunnerOptions {
   @scala.inline
-  def apply(
-    apartment: String = null,
-    basepath: String = null,
-    cleanup: js.UndefOr[Boolean] = js.undefined,
-    config: String = null,
-    `dispose-runners`: js.UndefOr[Boolean] = js.undefined,
-    domain: String = null,
-    err: String = null,
-    exclude: js.Array[String] = null,
-    explore: String = null,
-    framework: String = null,
-    include: js.Array[String] = null,
-    labels: js.UndefOr[Boolean] = js.undefined,
-    nocolor: js.UndefOr[Boolean] = js.undefined,
-    nodots: js.UndefOr[Boolean] = js.undefined,
-    noheader: js.UndefOr[Boolean] = js.undefined,
-    nologo: js.UndefOr[Boolean] = js.undefined,
-    noresult: js.UndefOr[Boolean] = js.undefined,
-    noshadow: js.UndefOr[Boolean] = js.undefined,
-    nothread: js.UndefOr[Boolean] = js.undefined,
-    output: String = null,
-    pause: js.UndefOr[Boolean] = js.undefined,
-    privatebinpath: js.Array[String] = null,
-    process: String = null,
-    result: String = null,
-    run: js.Array[String] = null,
-    runlist: String = null,
-    seed: Int | Double = null,
-    shadowcopy: js.UndefOr[Boolean] = js.undefined,
-    stoponerror: js.UndefOr[Boolean] = js.undefined,
-    teamcity: js.UndefOr[Boolean] = js.undefined,
-    test: js.Array[String] = null,
-    testist: String = null,
-    timeout: Int | Double = null,
-    trace: String = null,
-    verbose: js.UndefOr[Boolean] = js.undefined,
-    wait: js.UndefOr[Boolean] = js.undefined,
-    work: String = null,
-    workers: Int | Double = null,
-    x86: js.UndefOr[Boolean] = js.undefined
-  ): ConsoleRunnerOptions = {
+  def apply(): ConsoleRunnerOptions = {
     val __obj = js.Dynamic.literal()
-    if (apartment != null) __obj.updateDynamic("apartment")(apartment.asInstanceOf[js.Any])
-    if (basepath != null) __obj.updateDynamic("basepath")(basepath.asInstanceOf[js.Any])
-    if (!js.isUndefined(cleanup)) __obj.updateDynamic("cleanup")(cleanup.asInstanceOf[js.Any])
-    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
-    if (!js.isUndefined(`dispose-runners`)) __obj.updateDynamic("dispose-runners")(`dispose-runners`.asInstanceOf[js.Any])
-    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
-    if (err != null) __obj.updateDynamic("err")(err.asInstanceOf[js.Any])
-    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
-    if (explore != null) __obj.updateDynamic("explore")(explore.asInstanceOf[js.Any])
-    if (framework != null) __obj.updateDynamic("framework")(framework.asInstanceOf[js.Any])
-    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
-    if (!js.isUndefined(labels)) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (!js.isUndefined(nocolor)) __obj.updateDynamic("nocolor")(nocolor.asInstanceOf[js.Any])
-    if (!js.isUndefined(nodots)) __obj.updateDynamic("nodots")(nodots.asInstanceOf[js.Any])
-    if (!js.isUndefined(noheader)) __obj.updateDynamic("noheader")(noheader.asInstanceOf[js.Any])
-    if (!js.isUndefined(nologo)) __obj.updateDynamic("nologo")(nologo.asInstanceOf[js.Any])
-    if (!js.isUndefined(noresult)) __obj.updateDynamic("noresult")(noresult.asInstanceOf[js.Any])
-    if (!js.isUndefined(noshadow)) __obj.updateDynamic("noshadow")(noshadow.asInstanceOf[js.Any])
-    if (!js.isUndefined(nothread)) __obj.updateDynamic("nothread")(nothread.asInstanceOf[js.Any])
-    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
-    if (!js.isUndefined(pause)) __obj.updateDynamic("pause")(pause.asInstanceOf[js.Any])
-    if (privatebinpath != null) __obj.updateDynamic("privatebinpath")(privatebinpath.asInstanceOf[js.Any])
-    if (process != null) __obj.updateDynamic("process")(process.asInstanceOf[js.Any])
-    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
-    if (run != null) __obj.updateDynamic("run")(run.asInstanceOf[js.Any])
-    if (runlist != null) __obj.updateDynamic("runlist")(runlist.asInstanceOf[js.Any])
-    if (seed != null) __obj.updateDynamic("seed")(seed.asInstanceOf[js.Any])
-    if (!js.isUndefined(shadowcopy)) __obj.updateDynamic("shadowcopy")(shadowcopy.asInstanceOf[js.Any])
-    if (!js.isUndefined(stoponerror)) __obj.updateDynamic("stoponerror")(stoponerror.asInstanceOf[js.Any])
-    if (!js.isUndefined(teamcity)) __obj.updateDynamic("teamcity")(teamcity.asInstanceOf[js.Any])
-    if (test != null) __obj.updateDynamic("test")(test.asInstanceOf[js.Any])
-    if (testist != null) __obj.updateDynamic("testist")(testist.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (trace != null) __obj.updateDynamic("trace")(trace.asInstanceOf[js.Any])
-    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.asInstanceOf[js.Any])
-    if (!js.isUndefined(wait)) __obj.updateDynamic("wait")(wait.asInstanceOf[js.Any])
-    if (work != null) __obj.updateDynamic("work")(work.asInstanceOf[js.Any])
-    if (workers != null) __obj.updateDynamic("workers")(workers.asInstanceOf[js.Any])
-    if (!js.isUndefined(x86)) __obj.updateDynamic("x86")(x86.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConsoleRunnerOptions]
   }
+  @scala.inline
+  implicit class ConsoleRunnerOptionsOps[Self <: ConsoleRunnerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApartment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apartment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApartment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apartment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBasepath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basepath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBasepath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basepath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCleanup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cleanup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCleanup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cleanup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfig(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withDispose-runners`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispose-runners")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutDispose-runners`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispose-runners")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErr(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("err")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("err")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclude(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExplore(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("explore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExplore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("explore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFramework(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("framework")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFramework: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("framework")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInclude(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNocolor(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nocolor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNocolor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nocolor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodots(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodots: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodots")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoheader(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noheader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoheader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noheader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNologo(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nologo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNologo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nologo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoresult(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noresult")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoresult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noresult")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoshadow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noshadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoshadow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noshadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNothread(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nothread")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNothread: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nothread")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutput(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPause(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPause: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivatebinpath(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privatebinpath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivatebinpath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privatebinpath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProcess(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("process")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProcess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("process")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResult(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRun(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("run")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("run")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRunlist(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runlist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRunlist: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runlist")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowcopy(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowcopy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowcopy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowcopy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoponerror(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stoponerror")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoponerror: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stoponerror")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTeamcity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teamcity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTeamcity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teamcity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTest(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestist(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestist: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testist")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrace(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerbose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerbose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWait(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wait")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWait: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wait")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWork(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("work")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWork: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("work")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkers(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX86(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x86")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX86: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x86")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

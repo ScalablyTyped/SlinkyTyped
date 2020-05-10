@@ -15,16 +15,14 @@ trait PositionType extends js.Object
 
 object PositionType {
   @scala.inline
-  def bottom: typingsSlinky.chartJs.chartJsStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.chartJs.chartJsStrings.bottom = "bottom".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def chartArea: typingsSlinky.chartJs.chartJsStrings.chartArea = "chartArea".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.chartArea]
   @scala.inline
-  def chartArea: typingsSlinky.chartJs.chartJsStrings.chartArea = this.cast("chartArea")
+  def left: typingsSlinky.chartJs.chartJsStrings.left = "left".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.left]
   @scala.inline
-  def left: typingsSlinky.chartJs.chartJsStrings.left = this.cast("left")
+  def right: typingsSlinky.chartJs.chartJsStrings.right = "right".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.right]
   @scala.inline
-  def right: typingsSlinky.chartJs.chartJsStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.chartJs.chartJsStrings.top = this.cast("top")
+  def top: typingsSlinky.chartJs.chartJsStrings.top = "top".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.top]
 }
 

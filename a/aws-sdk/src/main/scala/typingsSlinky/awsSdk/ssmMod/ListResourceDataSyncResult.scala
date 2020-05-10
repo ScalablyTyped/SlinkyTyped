@@ -18,11 +18,41 @@ trait ListResourceDataSyncResult extends js.Object {
 
 object ListResourceDataSyncResult {
   @scala.inline
-  def apply(NextToken: NextToken = null, ResourceDataSyncItems: ResourceDataSyncItemList = null): ListResourceDataSyncResult = {
+  def apply(): ListResourceDataSyncResult = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (ResourceDataSyncItems != null) __obj.updateDynamic("ResourceDataSyncItems")(ResourceDataSyncItems.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListResourceDataSyncResult]
   }
+  @scala.inline
+  implicit class ListResourceDataSyncResultOps[Self <: ListResourceDataSyncResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceDataSyncItems(value: ResourceDataSyncItemList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceDataSyncItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceDataSyncItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceDataSyncItems")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

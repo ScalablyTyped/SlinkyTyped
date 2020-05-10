@@ -1,9 +1,7 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.AnonIndexItem
 import typingsSlinky.primereact.menuItemMod.MenuItem
 import typingsSlinky.primereact.stepsMod.StepsProps
@@ -11,28 +9,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Steps
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactStepsMod.Steps] {
+object Steps {
   @JSImport("primereact/steps", "Steps")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, readOnly */
-  def apply(
-    model: js.Array[MenuItem],
-    activeIndex: Int | Double = null,
-    onSelect: /* e */ AnonIndexItem => Unit = null,
-    style: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactStepsMod.Steps] = {
-    val __obj = js.Dynamic.literal(model = model.asInstanceOf[js.Any])
-    if (activeIndex != null) __obj.updateDynamic("activeIndex")(activeIndex.asInstanceOf[js.Any])
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.primereactStepsMod.Steps] {
+    @scala.inline
+    def activeIndex(value: Double): this.type = set("activeIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onSelect(value: /* e */ AnonIndexItem => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = StepsProps
+  
+  def withProps(p: StepsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(model: js.Array[MenuItem]): Builder = {
+    val __props = js.Dynamic.literal(model = model.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StepsProps]))
+  }
 }
 

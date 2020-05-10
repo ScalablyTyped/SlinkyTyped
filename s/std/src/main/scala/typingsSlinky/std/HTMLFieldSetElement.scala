@@ -42,5 +42,6 @@ trait HTMLFieldSetElement extends HTMLElement {
 
 @JSGlobal("HTMLFieldSetElement")
 @js.native
-object HTMLFieldSetElement extends Instantiable0[HTMLFieldSetElement]
+object HTMLFieldSetElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLFieldSetElement]
 

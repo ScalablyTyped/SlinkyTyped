@@ -1,10 +1,7 @@
 package typingsSlinky.tinySliderReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.std.Event_
 import typingsSlinky.tinySliderReact.mod.TinySliderInfo
 import typingsSlinky.tinySliderReact.mod.TinySliderProps
@@ -14,39 +11,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TinySliderReact
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object TinySliderReact {
   @JSImport("tiny-slider-react", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    onClick: (/* slideClicked */ Double, /* info */ String, /* event */ Event_) => Unit = null,
-    onIndexChanged: /* info */ TinySliderInfo => Unit = null,
-    onTouchEnd: /* info */ TinySliderInfo => Unit = null,
-    onTouchMove: /* info */ TinySliderInfo => Unit = null,
-    onTouchStart: /* info */ TinySliderInfo => Unit = null,
-    onTransitionEnd: /* info */ TinySliderInfo => Unit = null,
-    onTransitionStart: /* info */ TinySliderInfo => Unit = null,
-    settings: TinySliderSettings = null,
-    startIndex: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction3(onClick))
-    if (onIndexChanged != null) __obj.updateDynamic("onIndexChanged")(js.Any.fromFunction1(onIndexChanged))
-    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
-    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
-    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
-    if (onTransitionEnd != null) __obj.updateDynamic("onTransitionEnd")(js.Any.fromFunction1(onTransitionEnd))
-    if (onTransitionStart != null) __obj.updateDynamic("onTransitionStart")(js.Any.fromFunction1(onTransitionStart))
-    if (settings != null) __obj.updateDynamic("settings")(settings.asInstanceOf[js.Any])
-    if (startIndex != null) __obj.updateDynamic("startIndex")(startIndex.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def onClick(value: (/* slideClicked */ Double, /* info */ String, /* event */ Event_) => Unit): this.type = set("onClick", js.Any.fromFunction3(value))
+    @scala.inline
+    def onIndexChanged(value: /* info */ TinySliderInfo => Unit): this.type = set("onIndexChanged", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchEnd(value: /* info */ TinySliderInfo => Unit): this.type = set("onTouchEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchMove(value: /* info */ TinySliderInfo => Unit): this.type = set("onTouchMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchStart(value: /* info */ TinySliderInfo => Unit): this.type = set("onTouchStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTransitionEnd(value: /* info */ TinySliderInfo => Unit): this.type = set("onTransitionEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTransitionStart(value: /* info */ TinySliderInfo => Unit): this.type = set("onTransitionStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def settings(value: TinySliderSettings): this.type = set("settings", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startIndex(value: Double): this.type = set("startIndex", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.tinySliderReact.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TinySliderProps
+  
+  def withProps(p: TinySliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TinySliderReact.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

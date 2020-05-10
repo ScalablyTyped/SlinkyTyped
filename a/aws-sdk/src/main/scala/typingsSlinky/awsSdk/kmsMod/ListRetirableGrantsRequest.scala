@@ -22,11 +22,47 @@ trait ListRetirableGrantsRequest extends js.Object {
 
 object ListRetirableGrantsRequest {
   @scala.inline
-  def apply(RetiringPrincipal: PrincipalIdType, Limit: Int | Double = null, Marker: MarkerType = null): ListRetirableGrantsRequest = {
+  def apply(RetiringPrincipal: PrincipalIdType): ListRetirableGrantsRequest = {
     val __obj = js.Dynamic.literal(RetiringPrincipal = RetiringPrincipal.asInstanceOf[js.Any])
-    if (Limit != null) __obj.updateDynamic("Limit")(Limit.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListRetirableGrantsRequest]
   }
+  @scala.inline
+  implicit class ListRetirableGrantsRequestOps[Self <: ListRetirableGrantsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRetiringPrincipal(value: PrincipalIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RetiringPrincipal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLimit(value: LimitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: MarkerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

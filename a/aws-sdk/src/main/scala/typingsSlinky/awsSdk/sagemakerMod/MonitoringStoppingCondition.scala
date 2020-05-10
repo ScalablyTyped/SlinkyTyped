@@ -16,8 +16,21 @@ object MonitoringStoppingCondition {
   @scala.inline
   def apply(MaxRuntimeInSeconds: MonitoringMaxRuntimeInSeconds): MonitoringStoppingCondition = {
     val __obj = js.Dynamic.literal(MaxRuntimeInSeconds = MaxRuntimeInSeconds.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[MonitoringStoppingCondition]
   }
+  @scala.inline
+  implicit class MonitoringStoppingConditionOps[Self <: MonitoringStoppingCondition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxRuntimeInSeconds(value: MonitoringMaxRuntimeInSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRuntimeInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

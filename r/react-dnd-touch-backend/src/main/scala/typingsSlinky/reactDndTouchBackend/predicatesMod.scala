@@ -1,8 +1,8 @@
 package typingsSlinky.reactDndTouchBackend
 
-import typingsSlinky.std.MouseEvent
-import typingsSlinky.std.Touch
-import typingsSlinky.std.TouchEvent
+import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.Touch
+import org.scalajs.dom.raw.TouchEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

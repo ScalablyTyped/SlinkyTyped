@@ -1,14 +1,13 @@
 package typingsSlinky.jssha.mod
 
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Hasher[InputT] extends js.Object {
-  def getHMAC(format: ArrayBufferDataFormat): scala.scalajs.js.typedarray.ArrayBuffer = js.native
-  def getHMAC(format: ArrayBufferDataFormat, outputFormatOpts: OutputFormatOptions): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def getHMAC(format: ArrayBufferDataFormat): js.typedarray.ArrayBuffer = js.native
+  def getHMAC(format: ArrayBufferDataFormat, outputFormatOpts: OutputFormatOptions): js.typedarray.ArrayBuffer = js.native
   /**
     * Returns the the HMAC in the specified format using the key given by
     * a previous setHMACKey call.
@@ -19,8 +18,8 @@ trait Hasher[InputT] extends js.Object {
     */
   def getHMAC(format: StringDataFormat): String = js.native
   def getHMAC(format: StringDataFormat, outputFormatOpts: OutputFormatOptions): String = js.native
-  def getHash(format: ArrayBufferDataFormat): scala.scalajs.js.typedarray.ArrayBuffer = js.native
-  def getHash(format: ArrayBufferDataFormat, outputFormatOpts: OutputFormatOptions): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def getHash(format: ArrayBufferDataFormat): js.typedarray.ArrayBuffer = js.native
+  def getHash(format: ArrayBufferDataFormat, outputFormatOpts: OutputFormatOptions): js.typedarray.ArrayBuffer = js.native
   /**
     * Returns the desired SHA hash of the string specified at instantiation
     * using the specified parameters
@@ -41,8 +40,8 @@ trait Hasher[InputT] extends js.Object {
     */
   def setHMACKey(key: String, inputFormat: StringDataFormat): Unit = js.native
   def setHMACKey(key: String, inputFormat: StringDataFormat, encodingOpts: EncodingOptions): Unit = js.native
-  def setHMACKey(key: ArrayBuffer, inputFormat: ArrayBufferDataFormat): Unit = js.native
-  def setHMACKey(key: ArrayBuffer, inputFormat: ArrayBufferDataFormat, encodingOpts: EncodingOptions): Unit = js.native
+  def setHMACKey(key: js.typedarray.ArrayBuffer, inputFormat: ArrayBufferDataFormat): Unit = js.native
+  def setHMACKey(key: js.typedarray.ArrayBuffer, inputFormat: ArrayBufferDataFormat, encodingOpts: EncodingOptions): Unit = js.native
   /**
     * Takes strString and hashes as many blocks as possible.  Stores the
     * rest for either a future update or getHash call.

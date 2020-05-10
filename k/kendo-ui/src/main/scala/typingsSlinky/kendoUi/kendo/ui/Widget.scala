@@ -22,8 +22,8 @@ class Widget protected () extends Observable_ {
   def destroy(): Unit = js.native
   def init(element: JQuery): Unit = js.native
   def init(element: JQuery, options: js.Object): Unit = js.native
-  def init(element: typingsSlinky.std.Element): Unit = js.native
-  def init(element: typingsSlinky.std.Element, options: js.Object): Unit = js.native
+  def init(element: Element): Unit = js.native
+  def init(element: Element, options: js.Object): Unit = js.native
   def init(selector: String): Unit = js.native
   def init(selector: String, options: js.Object): Unit = js.native
   def resize(): Unit = js.native

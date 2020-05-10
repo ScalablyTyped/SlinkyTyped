@@ -29,12 +29,12 @@ object kdfParams extends js.Object {
       * @param input Where to read the KDFParams from
       * @returns Number of read bytes
       */
-    def read(input: scala.scalajs.js.typedarray.Uint8Array): Double = js.native
+    def read(input: js.typedarray.Uint8Array): Double = js.native
     /**
       * Write KDFParams to an Uint8Array
       * @returns Array with the KDFParams value
       */
-    def write(): scala.scalajs.js.typedarray.Uint8Array = js.native
+    def write(): js.typedarray.Uint8Array = js.native
   }
   
 }

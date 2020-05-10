@@ -22,12 +22,53 @@ trait BudgetedAndActualAmounts extends js.Object {
 
 object BudgetedAndActualAmounts {
   @scala.inline
-  def apply(ActualAmount: Spend = null, BudgetedAmount: Spend = null, TimePeriod: TimePeriod = null): BudgetedAndActualAmounts = {
+  def apply(): BudgetedAndActualAmounts = {
     val __obj = js.Dynamic.literal()
-    if (ActualAmount != null) __obj.updateDynamic("ActualAmount")(ActualAmount.asInstanceOf[js.Any])
-    if (BudgetedAmount != null) __obj.updateDynamic("BudgetedAmount")(BudgetedAmount.asInstanceOf[js.Any])
-    if (TimePeriod != null) __obj.updateDynamic("TimePeriod")(TimePeriod.asInstanceOf[js.Any])
     __obj.asInstanceOf[BudgetedAndActualAmounts]
   }
+  @scala.inline
+  implicit class BudgetedAndActualAmountsOps[Self <: BudgetedAndActualAmounts] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActualAmount(value: Spend): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActualAmount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActualAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActualAmount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBudgetedAmount(value: Spend): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BudgetedAmount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBudgetedAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BudgetedAmount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimePeriod(value: TimePeriod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimePeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimePeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimePeriod")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

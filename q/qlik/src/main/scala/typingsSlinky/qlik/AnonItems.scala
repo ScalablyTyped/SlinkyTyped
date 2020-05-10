@@ -7,29 +7,82 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonItems extends js.Object {
-  var items: js.UndefOr[StringDictionary[CustomProperty]] = js.undefined
-  var max: js.UndefOr[Double] = js.undefined
-  var min: js.UndefOr[Double] = js.undefined
-  var ref: js.UndefOr[String] = js.undefined
-  var uses: dimensions
+  var items: js.UndefOr[StringDictionary[CustomProperty]] = js.native
+  var max: js.UndefOr[Double] = js.native
+  var min: js.UndefOr[Double] = js.native
+  var ref: js.UndefOr[String] = js.native
+  var uses: dimensions = js.native
 }
 
 object AnonItems {
   @scala.inline
-  def apply(
-    uses: dimensions,
-    items: StringDictionary[CustomProperty] = null,
-    max: Int | Double = null,
-    min: Int | Double = null,
-    ref: String = null
-  ): AnonItems = {
+  def apply(uses: dimensions): AnonItems = {
     val __obj = js.Dynamic.literal(uses = uses.asInstanceOf[js.Any])
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonItems]
   }
+  @scala.inline
+  implicit class AnonItemsOps[Self <: AnonItems] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUses(value: dimensions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItems(value: StringDictionary[CustomProperty]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRef(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

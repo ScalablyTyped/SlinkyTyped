@@ -1,7 +1,6 @@
 package typingsSlinky.sinonChai.mod._Global_.Chai
 
 import typingsSlinky.sinon.mod.SinonSpy
-import typingsSlinky.std.Error
 import typingsSlinky.std.ErrorConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -90,7 +89,7 @@ trait Assertion extends js.Object {
     */
   def thrown(): Assertion = js.native
   def thrown(obj: String): Assertion = js.native
-  def thrown(obj: Error): Assertion = js.native
+  def thrown(obj: js.Error): Assertion = js.native
   def thrown(obj: ErrorConstructor): Assertion = js.native
 }
 

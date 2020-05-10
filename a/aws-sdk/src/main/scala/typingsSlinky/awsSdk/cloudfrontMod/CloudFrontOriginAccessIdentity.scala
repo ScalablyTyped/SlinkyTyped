@@ -22,14 +22,41 @@ trait CloudFrontOriginAccessIdentity extends js.Object {
 
 object CloudFrontOriginAccessIdentity {
   @scala.inline
-  def apply(
-    Id: String,
-    S3CanonicalUserId: String,
-    CloudFrontOriginAccessIdentityConfig: CloudFrontOriginAccessIdentityConfig = null
-  ): CloudFrontOriginAccessIdentity = {
+  def apply(Id: String, S3CanonicalUserId: String): CloudFrontOriginAccessIdentity = {
     val __obj = js.Dynamic.literal(Id = Id.asInstanceOf[js.Any], S3CanonicalUserId = S3CanonicalUserId.asInstanceOf[js.Any])
-    if (CloudFrontOriginAccessIdentityConfig != null) __obj.updateDynamic("CloudFrontOriginAccessIdentityConfig")(CloudFrontOriginAccessIdentityConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[CloudFrontOriginAccessIdentity]
   }
+  @scala.inline
+  implicit class CloudFrontOriginAccessIdentityOps[Self <: CloudFrontOriginAccessIdentity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3CanonicalUserId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3CanonicalUserId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCloudFrontOriginAccessIdentityConfig(value: CloudFrontOriginAccessIdentityConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFrontOriginAccessIdentityConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudFrontOriginAccessIdentityConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFrontOriginAccessIdentityConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

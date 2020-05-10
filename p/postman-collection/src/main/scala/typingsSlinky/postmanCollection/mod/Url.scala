@@ -8,7 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.postmanCollection.mod.PropertyBaseDefinition because Already inherited
 - typingsSlinky.postmanCollection.mod.UrlDefinition because var conflicts: description. Inlined auth, hash, host, path, port, query, variable, protocol */ @JSImport("postman-collection", "Url")
 @js.native
@@ -18,7 +18,7 @@ class Url protected () extends PropertyBase[UrlDefinition] {
   var auth: js.UndefOr[AnonPassword] = js.native
   var hash: js.UndefOr[String] = js.native
   var host: js.UndefOr[js.Array[String] | String] = js.native
-  var path: js.Array[String] | String = js.native
+  var path: js.UndefOr[js.Array[String] | String] = js.native
   var port: js.UndefOr[String] = js.native
   var protocol: js.UndefOr[String] = js.native
   var query: js.UndefOr[js.Array[QueryParamDefinition] | PropertyList[QueryParam] | String] = js.native

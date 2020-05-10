@@ -22,12 +22,53 @@ trait CreateBackupSelectionOutput extends js.Object {
 
 object CreateBackupSelectionOutput {
   @scala.inline
-  def apply(BackupPlanId: String = null, CreationDate: js.Date = null, SelectionId: String = null): CreateBackupSelectionOutput = {
+  def apply(): CreateBackupSelectionOutput = {
     val __obj = js.Dynamic.literal()
-    if (BackupPlanId != null) __obj.updateDynamic("BackupPlanId")(BackupPlanId.asInstanceOf[js.Any])
-    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
-    if (SelectionId != null) __obj.updateDynamic("SelectionId")(SelectionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateBackupSelectionOutput]
   }
+  @scala.inline
+  implicit class CreateBackupSelectionOutputOps[Self <: CreateBackupSelectionOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackupPlanId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackupPlanId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectionId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

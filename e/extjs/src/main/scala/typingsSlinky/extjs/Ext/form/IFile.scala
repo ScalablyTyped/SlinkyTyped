@@ -7,74 +7,200 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IFile
   extends typingsSlinky.extjs.Ext.form.field.ITrigger {
   /** [Property] (Ext.button.Button) */
-  var button: js.UndefOr[IButton] = js.undefined
+  var button: js.UndefOr[IButton] = js.native
   /** [Config Option] (Object) */
-  var buttonConfig: js.UndefOr[js.Any] = js.undefined
+  var buttonConfig: js.UndefOr[js.Any] = js.native
   /** [Config Option] (Number) */
-  var buttonMargin: js.UndefOr[Double] = js.undefined
+  var buttonMargin: js.UndefOr[Double] = js.native
   /** [Config Option] (Boolean) */
-  var buttonOnly: js.UndefOr[Boolean] = js.undefined
+  var buttonOnly: js.UndefOr[Boolean] = js.native
   /** [Config Option] (String) */
-  var buttonText: js.UndefOr[String] = js.undefined
+  var buttonText: js.UndefOr[String] = js.native
   /** [Config Option] (Boolean) */
-  var clearOnSubmit: js.UndefOr[Boolean] = js.undefined
+  var clearOnSubmit: js.UndefOr[Boolean] = js.native
   /** [Method] Only relevant if the instance s isFileUpload method returns true
   		* @returns HTMLElement
   		*/
   @JSName("extractFileInput")
-  var extractFileInput_IFile: js.UndefOr[js.Function0[HTMLElement]] = js.undefined
+  var extractFileInput_IFile: js.UndefOr[js.Function0[HTMLElement]] = js.native
   /** [Property] (Ext.Element) */
-  var fileInputEl: js.UndefOr[IElement] = js.undefined
+  var fileInputEl: js.UndefOr[IElement] = js.native
   /** [Method] Gets the markup to be inserted into the subTplMarkup  */
-  var getTriggerMarkup: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var getTriggerMarkup: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Returns whether this Field is a file upload field if it returns true forms will use special techniques for submitti
   		* @returns Boolean
   		*/
   @JSName("isFileUpload")
-  var isFileUpload_IFile: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var isFileUpload_IFile: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Allows addition of behavior to the show operation  */
   @JSName("onShow")
-  var onShow_IFile: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onShow_IFile: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Overridden to do nothing */
   @JSName("setValue")
-  var setValue_IFile: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var setValue_IFile: js.UndefOr[js.Function0[Unit]] = js.native
 }
 
 object IFile {
   @scala.inline
-  def apply(
-    ITrigger: typingsSlinky.extjs.Ext.form.field.ITrigger = null,
-    button: IButton = null,
-    buttonConfig: js.Any = null,
-    buttonMargin: Int | Double = null,
-    buttonOnly: js.UndefOr[Boolean] = js.undefined,
-    buttonText: String = null,
-    clearOnSubmit: js.UndefOr[Boolean] = js.undefined,
-    extractFileInput: () => HTMLElement = null,
-    fileInputEl: IElement = null,
-    getTriggerMarkup: () => Unit = null,
-    isFileUpload: () => Boolean = null,
-    onShow: () => Unit = null,
-    setValue: () => Unit = null
-  ): IFile = {
+  def apply(): IFile = {
     val __obj = js.Dynamic.literal()
-    if (ITrigger != null) js.Dynamic.global.Object.assign(__obj, ITrigger)
-    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
-    if (buttonConfig != null) __obj.updateDynamic("buttonConfig")(buttonConfig.asInstanceOf[js.Any])
-    if (buttonMargin != null) __obj.updateDynamic("buttonMargin")(buttonMargin.asInstanceOf[js.Any])
-    if (!js.isUndefined(buttonOnly)) __obj.updateDynamic("buttonOnly")(buttonOnly.asInstanceOf[js.Any])
-    if (buttonText != null) __obj.updateDynamic("buttonText")(buttonText.asInstanceOf[js.Any])
-    if (!js.isUndefined(clearOnSubmit)) __obj.updateDynamic("clearOnSubmit")(clearOnSubmit.asInstanceOf[js.Any])
-    if (extractFileInput != null) __obj.updateDynamic("extractFileInput")(js.Any.fromFunction0(extractFileInput))
-    if (fileInputEl != null) __obj.updateDynamic("fileInputEl")(fileInputEl.asInstanceOf[js.Any])
-    if (getTriggerMarkup != null) __obj.updateDynamic("getTriggerMarkup")(js.Any.fromFunction0(getTriggerMarkup))
-    if (isFileUpload != null) __obj.updateDynamic("isFileUpload")(js.Any.fromFunction0(isFileUpload))
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction0(onShow))
-    if (setValue != null) __obj.updateDynamic("setValue")(js.Any.fromFunction0(setValue))
     __obj.asInstanceOf[IFile]
   }
+  @scala.inline
+  implicit class IFileOps[Self <: IFile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withButton(value: IButton): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtonConfig(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtonConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtonMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtonMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonMargin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtonOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtonOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtonText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtonText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClearOnSubmit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearOnSubmit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClearOnSubmit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearOnSubmit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtractFileInput(value: () => HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extractFileInput")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutExtractFileInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extractFileInput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileInputEl(value: IElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileInputEl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileInputEl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileInputEl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetTriggerMarkup(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTriggerMarkup")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetTriggerMarkup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTriggerMarkup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsFileUpload(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFileUpload")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsFileUpload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFileUpload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnShow(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetValue(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

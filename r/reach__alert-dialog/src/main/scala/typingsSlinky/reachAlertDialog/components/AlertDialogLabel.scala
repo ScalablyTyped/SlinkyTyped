@@ -1,14 +1,18 @@
 package typingsSlinky.reachAlertDialog.components
 
+import org.scalajs.dom.raw.HTMLDivElement
+import typingsSlinky.react.mod.HTMLProps
+import typingsSlinky.react.mod.LegacyRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AlertDialogLabel extends SharedApply_HTMLProps_1170633739 {
+object AlertDialogLabel {
   @JSImport("@reach/alert-dialog", "AlertDialogLabel")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: HTMLProps[HTMLDivElement]): SharedBuilder_HTMLProps74936298[LegacyRef[js.Any] with js.Object] = new SharedBuilder_HTMLProps74936298[LegacyRef[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: AlertDialogLabel.type): SharedBuilder_HTMLProps74936298[LegacyRef[js.Any] with js.Object] = new SharedBuilder_HTMLProps74936298[LegacyRef[js.Any] with js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

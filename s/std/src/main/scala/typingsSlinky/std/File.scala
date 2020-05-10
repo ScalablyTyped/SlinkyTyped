@@ -16,11 +16,15 @@ trait File extends Blob {
 @JSGlobal("File")
 @js.native
 object File
-  extends Instantiable2[/* fileBits */ js.Array[BlobPart], /* fileName */ java.lang.String, File]
+  extends Instantiable2[
+      /* fileBits */ js.Array[BlobPart], 
+      /* fileName */ java.lang.String, 
+      org.scalajs.dom.raw.File
+    ]
      with Instantiable3[
       /* fileBits */ js.Array[BlobPart], 
       /* fileName */ java.lang.String, 
       /* options */ FilePropertyBag, 
-      File
+      org.scalajs.dom.raw.File
     ]
 

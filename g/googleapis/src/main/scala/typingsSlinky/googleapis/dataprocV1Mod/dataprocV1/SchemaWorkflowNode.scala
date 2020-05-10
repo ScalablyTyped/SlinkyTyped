@@ -33,20 +33,77 @@ trait SchemaWorkflowNode extends js.Object {
 
 object SchemaWorkflowNode {
   @scala.inline
-  def apply(
-    error: String = null,
-    jobId: String = null,
-    prerequisiteStepIds: js.Array[String] = null,
-    state: String = null,
-    stepId: String = null
-  ): SchemaWorkflowNode = {
+  def apply(): SchemaWorkflowNode = {
     val __obj = js.Dynamic.literal()
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (jobId != null) __obj.updateDynamic("jobId")(jobId.asInstanceOf[js.Any])
-    if (prerequisiteStepIds != null) __obj.updateDynamic("prerequisiteStepIds")(prerequisiteStepIds.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
-    if (stepId != null) __obj.updateDynamic("stepId")(stepId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWorkflowNode]
   }
+  @scala.inline
+  implicit class SchemaWorkflowNodeOps[Self <: SchemaWorkflowNode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withError(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrerequisiteStepIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prerequisiteStepIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrerequisiteStepIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prerequisiteStepIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStepId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

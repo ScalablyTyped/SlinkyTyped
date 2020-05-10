@@ -12,10 +12,8 @@ trait AppendMode extends js.Object
 
 object AppendMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def segments: typingsSlinky.std.stdStrings.segments = "segments".asInstanceOf[typingsSlinky.std.stdStrings.segments]
   @scala.inline
-  def segments: typingsSlinky.std.stdStrings.segments = this.cast("segments")
-  @scala.inline
-  def sequence: typingsSlinky.std.stdStrings.sequence = this.cast("sequence")
+  def sequence: typingsSlinky.std.stdStrings.sequence = "sequence".asInstanceOf[typingsSlinky.std.stdStrings.sequence]
 }
 

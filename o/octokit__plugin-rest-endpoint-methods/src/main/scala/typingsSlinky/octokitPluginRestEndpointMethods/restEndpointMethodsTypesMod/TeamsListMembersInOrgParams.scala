@@ -7,40 +7,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TeamsListMembersInOrgParams extends js.Object {
-  var org: String
+  var org: String = js.native
   /**
     * Page number of the results to fetch.
     */
-  var page: js.UndefOr[Double] = js.undefined
+  var page: js.UndefOr[Double] = js.native
   /**
     * Results per page (max 100)
     */
-  var per_page: js.UndefOr[Double] = js.undefined
+  var per_page: js.UndefOr[Double] = js.native
   /**
     * Filters members returned by their role in the team. Can be one of:
     * \* `member` - normal members of the team.
     * \* `maintainer` - team maintainers.
     * \* `all` - all members of the team.
     */
-  var role: js.UndefOr[member | maintainer | all] = js.undefined
-  var team_slug: String
+  var role: js.UndefOr[member | maintainer | all] = js.native
+  var team_slug: String = js.native
 }
 
 object TeamsListMembersInOrgParams {
   @scala.inline
-  def apply(
-    org: String,
-    team_slug: String,
-    page: Int | Double = null,
-    per_page: Int | Double = null,
-    role: member | maintainer | all = null
-  ): TeamsListMembersInOrgParams = {
+  def apply(org: String, team_slug: String): TeamsListMembersInOrgParams = {
     val __obj = js.Dynamic.literal(org = org.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (per_page != null) __obj.updateDynamic("per_page")(per_page.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamsListMembersInOrgParams]
   }
+  @scala.inline
+  implicit class TeamsListMembersInOrgParamsOps[Self <: TeamsListMembersInOrgParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOrg(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTeam_slug(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("team_slug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPer_page(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("per_page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPer_page: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("per_page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRole(value: member | maintainer | all): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

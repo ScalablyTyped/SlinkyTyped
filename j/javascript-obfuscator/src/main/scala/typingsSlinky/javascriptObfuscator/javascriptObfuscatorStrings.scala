@@ -31,6 +31,6 @@ object javascriptObfuscatorStrings {
   @scala.inline
   def script: script = "script".asInstanceOf[script]
   @scala.inline
-  def `use strict`: `use strict` = "use strict".asInstanceOf[`use strict`]
+  def `use strict`: `use strict` = ("use strict").asInstanceOf[`use strict`]
 }
 

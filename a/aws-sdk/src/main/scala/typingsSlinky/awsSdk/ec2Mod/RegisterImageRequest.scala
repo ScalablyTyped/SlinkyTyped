@@ -62,35 +62,167 @@ trait RegisterImageRequest extends js.Object {
 
 object RegisterImageRequest {
   @scala.inline
-  def apply(
-    Name: String,
-    Architecture: ArchitectureValues = null,
-    BillingProducts: BillingProductList = null,
-    BlockDeviceMappings: BlockDeviceMappingRequestList = null,
-    Description: String = null,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    EnaSupport: js.UndefOr[scala.Boolean] = js.undefined,
-    ImageLocation: String = null,
-    KernelId: KernelId = null,
-    RamdiskId: RamdiskId = null,
-    RootDeviceName: String = null,
-    SriovNetSupport: String = null,
-    VirtualizationType: String = null
-  ): RegisterImageRequest = {
+  def apply(Name: String): RegisterImageRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
-    if (Architecture != null) __obj.updateDynamic("Architecture")(Architecture.asInstanceOf[js.Any])
-    if (BillingProducts != null) __obj.updateDynamic("BillingProducts")(BillingProducts.asInstanceOf[js.Any])
-    if (BlockDeviceMappings != null) __obj.updateDynamic("BlockDeviceMappings")(BlockDeviceMappings.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (!js.isUndefined(EnaSupport)) __obj.updateDynamic("EnaSupport")(EnaSupport.asInstanceOf[js.Any])
-    if (ImageLocation != null) __obj.updateDynamic("ImageLocation")(ImageLocation.asInstanceOf[js.Any])
-    if (KernelId != null) __obj.updateDynamic("KernelId")(KernelId.asInstanceOf[js.Any])
-    if (RamdiskId != null) __obj.updateDynamic("RamdiskId")(RamdiskId.asInstanceOf[js.Any])
-    if (RootDeviceName != null) __obj.updateDynamic("RootDeviceName")(RootDeviceName.asInstanceOf[js.Any])
-    if (SriovNetSupport != null) __obj.updateDynamic("SriovNetSupport")(SriovNetSupport.asInstanceOf[js.Any])
-    if (VirtualizationType != null) __obj.updateDynamic("VirtualizationType")(VirtualizationType.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterImageRequest]
   }
+  @scala.inline
+  implicit class RegisterImageRequestOps[Self <: RegisterImageRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArchitecture(value: ArchitectureValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Architecture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArchitecture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Architecture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBillingProducts(value: BillingProductList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillingProducts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBillingProducts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillingProducts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlockDeviceMappings(value: BlockDeviceMappingRequestList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockDeviceMappings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockDeviceMappings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockDeviceMappings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnaSupport(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnaSupport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnaSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnaSupport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKernelId(value: KernelId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KernelId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKernelId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KernelId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRamdiskId(value: RamdiskId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RamdiskId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRamdiskId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RamdiskId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRootDeviceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RootDeviceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRootDeviceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RootDeviceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSriovNetSupport(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SriovNetSupport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSriovNetSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SriovNetSupport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVirtualizationType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VirtualizationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVirtualizationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VirtualizationType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

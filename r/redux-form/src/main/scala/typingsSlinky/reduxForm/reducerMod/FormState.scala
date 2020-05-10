@@ -5,41 +5,134 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FormState extends js.Object {
-  var active: js.UndefOr[String] = js.undefined
-  var anyTouched: js.UndefOr[Boolean] = js.undefined
-  var error: js.UndefOr[js.Any] = js.undefined
-  var fields: js.UndefOr[StringDictionary[FieldState]] = js.undefined
-  var registeredFields: js.Array[RegisteredFieldState]
-  var submitErrors: js.UndefOr[StringDictionary[String]] = js.undefined
-  var submitFailed: js.UndefOr[Boolean] = js.undefined
-  var submitting: js.UndefOr[Boolean] = js.undefined
-  var values: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  var active: js.UndefOr[String] = js.native
+  var anyTouched: js.UndefOr[Boolean] = js.native
+  var error: js.UndefOr[js.Any] = js.native
+  var fields: js.UndefOr[StringDictionary[FieldState]] = js.native
+  var registeredFields: js.Array[RegisteredFieldState] = js.native
+  var submitErrors: js.UndefOr[StringDictionary[String]] = js.native
+  var submitFailed: js.UndefOr[Boolean] = js.native
+  var submitting: js.UndefOr[Boolean] = js.native
+  var values: js.UndefOr[StringDictionary[js.Any]] = js.native
 }
 
 object FormState {
   @scala.inline
-  def apply(
-    registeredFields: js.Array[RegisteredFieldState],
-    active: String = null,
-    anyTouched: js.UndefOr[Boolean] = js.undefined,
-    error: js.Any = null,
-    fields: StringDictionary[FieldState] = null,
-    submitErrors: StringDictionary[String] = null,
-    submitFailed: js.UndefOr[Boolean] = js.undefined,
-    submitting: js.UndefOr[Boolean] = js.undefined,
-    values: StringDictionary[js.Any] = null
-  ): FormState = {
+  def apply(registeredFields: js.Array[RegisteredFieldState]): FormState = {
     val __obj = js.Dynamic.literal(registeredFields = registeredFields.asInstanceOf[js.Any])
-    if (active != null) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (!js.isUndefined(anyTouched)) __obj.updateDynamic("anyTouched")(anyTouched.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (submitErrors != null) __obj.updateDynamic("submitErrors")(submitErrors.asInstanceOf[js.Any])
-    if (!js.isUndefined(submitFailed)) __obj.updateDynamic("submitFailed")(submitFailed.asInstanceOf[js.Any])
-    if (!js.isUndefined(submitting)) __obj.updateDynamic("submitting")(submitting.asInstanceOf[js.Any])
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormState]
   }
+  @scala.inline
+  implicit class FormStateOps[Self <: FormState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRegisteredFields(value: js.Array[RegisteredFieldState]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registeredFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActive(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnyTouched(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anyTouched")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnyTouched: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anyTouched")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFields(value: StringDictionary[FieldState]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubmitErrors(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submitErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubmitErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submitErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubmitFailed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submitFailed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubmitFailed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submitFailed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubmitting(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submitting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubmitting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submitting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValues(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

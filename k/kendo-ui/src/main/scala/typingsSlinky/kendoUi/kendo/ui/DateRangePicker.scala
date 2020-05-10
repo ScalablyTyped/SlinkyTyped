@@ -2,7 +2,6 @@ package typingsSlinky.kendoUi.kendo.ui
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +18,10 @@ class DateRangePicker protected () extends Widget {
   def enable(enable: Boolean): Unit = js.native
   def max(): js.Date = js.native
   def max(value: String): Unit = js.native
-  def max(value: Date): Unit = js.native
+  def max(value: js.Date): Unit = js.native
   def min(): js.Date = js.native
   def min(value: String): Unit = js.native
-  def min(value: Date): Unit = js.native
+  def min(value: js.Date): Unit = js.native
   def open(): Unit = js.native
   def range(): js.Any = js.native
   def range(range: DateRangePickerRange): Unit = js.native

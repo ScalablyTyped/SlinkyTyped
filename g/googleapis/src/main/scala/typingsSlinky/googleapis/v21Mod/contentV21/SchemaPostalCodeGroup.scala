@@ -23,16 +23,53 @@ trait SchemaPostalCodeGroup extends js.Object {
 
 object SchemaPostalCodeGroup {
   @scala.inline
-  def apply(
-    country: String = null,
-    name: String = null,
-    postalCodeRanges: js.Array[SchemaPostalCodeRange] = null
-  ): SchemaPostalCodeGroup = {
+  def apply(): SchemaPostalCodeGroup = {
     val __obj = js.Dynamic.literal()
-    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (postalCodeRanges != null) __obj.updateDynamic("postalCodeRanges")(postalCodeRanges.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPostalCodeGroup]
   }
+  @scala.inline
+  implicit class SchemaPostalCodeGroupOps[Self <: SchemaPostalCodeGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCountry(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostalCodeRanges(value: js.Array[SchemaPostalCodeRange]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCodeRanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostalCodeRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCodeRanges")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

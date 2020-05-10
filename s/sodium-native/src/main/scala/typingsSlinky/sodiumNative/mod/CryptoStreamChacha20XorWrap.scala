@@ -5,15 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CryptoStreamChacha20XorWrap extends js.Object {
   /**
     * Finalize the stream. Zeros out internal state.
     */
-  def `final`(): Unit
+  def `final`(): Unit = js.native
   /**
     * Encrypt the next message
     */
-  def update(ciphertext: Buffer, message: Buffer): Unit
+  def update(ciphertext: Buffer, message: Buffer): Unit = js.native
 }
 
 object CryptoStreamChacha20XorWrap {
@@ -23,5 +24,25 @@ object CryptoStreamChacha20XorWrap {
     __obj.updateDynamic("final")(js.Any.fromFunction0(`final`))
     __obj.asInstanceOf[CryptoStreamChacha20XorWrap]
   }
+  @scala.inline
+  implicit class CryptoStreamChacha20XorWrapOps[Self <: CryptoStreamChacha20XorWrap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFinal(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("final")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: (Buffer, Buffer) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

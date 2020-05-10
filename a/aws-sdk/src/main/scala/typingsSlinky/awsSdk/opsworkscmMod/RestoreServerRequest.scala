@@ -26,11 +26,53 @@ trait RestoreServerRequest extends js.Object {
 
 object RestoreServerRequest {
   @scala.inline
-  def apply(BackupId: BackupId, ServerName: ServerName, InstanceType: String = null, KeyPair: KeyPair = null): RestoreServerRequest = {
+  def apply(BackupId: BackupId, ServerName: ServerName): RestoreServerRequest = {
     val __obj = js.Dynamic.literal(BackupId = BackupId.asInstanceOf[js.Any], ServerName = ServerName.asInstanceOf[js.Any])
-    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
-    if (KeyPair != null) __obj.updateDynamic("KeyPair")(KeyPair.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestoreServerRequest]
   }
+  @scala.inline
+  implicit class RestoreServerRequestOps[Self <: RestoreServerRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackupId(value: BackupId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServerName(value: ServerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyPair(value: KeyPair): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyPair")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyPair: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyPair")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -30,20 +30,77 @@ trait AnalysisOptions extends js.Object {
 
 object AnalysisOptions {
   @scala.inline
-  def apply(
-    AlgorithmicStemming: AlgorithmicStemming = null,
-    JapaneseTokenizationDictionary: String = null,
-    StemmingDictionary: String = null,
-    Stopwords: String = null,
-    Synonyms: String = null
-  ): AnalysisOptions = {
+  def apply(): AnalysisOptions = {
     val __obj = js.Dynamic.literal()
-    if (AlgorithmicStemming != null) __obj.updateDynamic("AlgorithmicStemming")(AlgorithmicStemming.asInstanceOf[js.Any])
-    if (JapaneseTokenizationDictionary != null) __obj.updateDynamic("JapaneseTokenizationDictionary")(JapaneseTokenizationDictionary.asInstanceOf[js.Any])
-    if (StemmingDictionary != null) __obj.updateDynamic("StemmingDictionary")(StemmingDictionary.asInstanceOf[js.Any])
-    if (Stopwords != null) __obj.updateDynamic("Stopwords")(Stopwords.asInstanceOf[js.Any])
-    if (Synonyms != null) __obj.updateDynamic("Synonyms")(Synonyms.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalysisOptions]
   }
+  @scala.inline
+  implicit class AnalysisOptionsOps[Self <: AnalysisOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlgorithmicStemming(value: AlgorithmicStemming): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlgorithmicStemming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlgorithmicStemming: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlgorithmicStemming")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJapaneseTokenizationDictionary(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JapaneseTokenizationDictionary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJapaneseTokenizationDictionary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JapaneseTokenizationDictionary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStemmingDictionary(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StemmingDictionary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStemmingDictionary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StemmingDictionary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopwords(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Stopwords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopwords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Stopwords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSynonyms(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Synonyms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSynonyms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Synonyms")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

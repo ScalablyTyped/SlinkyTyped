@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait MSMediaKeyNeededEvent extends Event_ {
-  val initData: scala.scalajs.js.typedarray.Uint8Array | Null = js.native
+  val initData: js.typedarray.Uint8Array | Null = js.native
 }
 
 @JSGlobal("MSMediaKeyNeededEvent")

@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation._
 /* Inlined std.Record<keyof ts3-nodejs-library.ts3-nodejs-library/lib/types/QueryResponse.QueryResponseTypes, (value : string): any> */
 @js.native
 trait RecordkeyofQueryResponseT extends js.Object {
+  @JSName("apikey")
+  var apikey_Original: js.Function1[/* value */ String, _] = js.native
   @JSName("average_speed")
   var average_speed_Original: js.Function1[/* value */ String, _] = js.native
   @JSName("banid")
@@ -259,6 +261,8 @@ trait RecordkeyofQueryResponseT extends js.Object {
   var cpid_Original: js.Function1[/* value */ String, _] = js.native
   @JSName("created")
   var created_Original: js.Function1[/* value */ String, _] = js.native
+  @JSName("created_at")
+  var created_at_Original: js.Function1[/* value */ String, _] = js.native
   @JSName("ctid")
   var ctid_Original: js.Function1[/* value */ String, _] = js.native
   @JSName("current_speed")
@@ -273,6 +277,8 @@ trait RecordkeyofQueryResponseT extends js.Object {
   var end_Original: js.Function1[/* value */ String, _] = js.native
   @JSName("enforcements")
   var enforcements_Original: js.Function1[/* value */ String, _] = js.native
+  @JSName("expires_at")
+  var expires_at_Original: js.Function1[/* value */ String, _] = js.native
   @JSName("extra_msg")
   var extra_msg_Original: js.Function1[/* value */ String, _] = js.native
   @JSName("failed_permid")
@@ -385,6 +391,8 @@ trait RecordkeyofQueryResponseT extends js.Object {
   var salt_Original: js.Function1[/* value */ String, _] = js.native
   @JSName("savedb")
   var savedb_Original: js.Function1[/* value */ String, _] = js.native
+  @JSName("scope")
+  var scope_Original: js.Function1[/* value */ String, _] = js.native
   @JSName("seconds_empty")
   var seconds_empty_Original: js.Function1[/* value */ String, _] = js.native
   @JSName("sender")
@@ -451,6 +459,8 @@ trait RecordkeyofQueryResponseT extends js.Object {
   var tcid_Original: js.Function1[/* value */ String, _] = js.native
   @JSName("tcldbid")
   var tcldbid_Original: js.Function1[/* value */ String, _] = js.native
+  @JSName("time_left")
+  var time_left_Original: js.Function1[/* value */ String, _] = js.native
   @JSName("timestamp")
   var timestamp_Original: js.Function1[/* value */ String, _] = js.native
   @JSName("tname")
@@ -645,6 +655,7 @@ trait RecordkeyofQueryResponseT extends js.Object {
   var virtualservers_total_clients_online_Original: js.Function1[/* value */ String, _] = js.native
   @JSName("virtualservers_total_maxclients")
   var virtualservers_total_maxclients_Original: js.Function1[/* value */ String, _] = js.native
+  def apikey(value: String): js.Any = js.native
   def average_speed(value: String): js.Any = js.native
   def banid(value: String): js.Any = js.native
   def build(value: String): js.Any = js.native
@@ -771,6 +782,7 @@ trait RecordkeyofQueryResponseT extends js.Object {
   def count(value: String): js.Any = js.native
   def cpid(value: String): js.Any = js.native
   def created(value: String): js.Any = js.native
+  def created_at(value: String): js.Any = js.native
   def ctid(value: String): js.Any = js.native
   def current_speed(value: String): js.Any = js.native
   def datetime(value: String): js.Any = js.native
@@ -778,6 +790,7 @@ trait RecordkeyofQueryResponseT extends js.Object {
   def duration(value: String): js.Any = js.native
   def end(value: String): js.Any = js.native
   def enforcements(value: String): js.Any = js.native
+  def expires_at(value: String): js.Any = js.native
   def extra_msg(value: String): js.Any = js.native
   def failed_permid(value: String): js.Any = js.native
   def fcldbid(value: String): js.Any = js.native
@@ -834,6 +847,7 @@ trait RecordkeyofQueryResponseT extends js.Object {
   def s(value: String): js.Any = js.native
   def salt(value: String): js.Any = js.native
   def savedb(value: String): js.Any = js.native
+  def scope(value: String): js.Any = js.native
   def seconds_empty(value: String): js.Any = js.native
   def sender(value: String): js.Any = js.native
   def server_id(value: String): js.Any = js.native
@@ -867,6 +881,7 @@ trait RecordkeyofQueryResponseT extends js.Object {
   def targetmode(value: String): js.Any = js.native
   def tcid(value: String): js.Any = js.native
   def tcldbid(value: String): js.Any = js.native
+  def time_left(value: String): js.Any = js.native
   def timestamp(value: String): js.Any = js.native
   def tname(value: String): js.Any = js.native
   def token(value: String): js.Any = js.native

@@ -1,17 +1,18 @@
 package typingsSlinky.reactPopper.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.reactPopper.mod.ManagerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Manager
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.reactPopper.mod.Manager] {
+object Manager {
   @JSImport("react-popper", "Manager")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ManagerProps): Default[tag.type, typingsSlinky.reactPopper.mod.Manager] = new Default[tag.type, typingsSlinky.reactPopper.mod.Manager](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Manager.type): Default[tag.type, typingsSlinky.reactPopper.mod.Manager] = new Default[tag.type, typingsSlinky.reactPopper.mod.Manager](js.Array(this.component, js.Dictionary.empty))()
 }
 

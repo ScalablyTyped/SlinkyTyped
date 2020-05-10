@@ -18,13 +18,35 @@ trait ClusterEncryptionInfo extends js.Object {
 
 object ClusterEncryptionInfo {
   @scala.inline
-  def apply(
-    encryptionAtRestKmsKeyArn: String,
-    encryptionInTransit: ClusterEncryptionInfoEncryptionInTransit = null
-  ): ClusterEncryptionInfo = {
+  def apply(encryptionAtRestKmsKeyArn: String): ClusterEncryptionInfo = {
     val __obj = js.Dynamic.literal(encryptionAtRestKmsKeyArn = encryptionAtRestKmsKeyArn.asInstanceOf[js.Any])
-    if (encryptionInTransit != null) __obj.updateDynamic("encryptionInTransit")(encryptionInTransit.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterEncryptionInfo]
   }
+  @scala.inline
+  implicit class ClusterEncryptionInfoOps[Self <: ClusterEncryptionInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncryptionAtRestKmsKeyArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionAtRestKmsKeyArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEncryptionInTransit(value: ClusterEncryptionInfoEncryptionInTransit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionInTransit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionInTransit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionInTransit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

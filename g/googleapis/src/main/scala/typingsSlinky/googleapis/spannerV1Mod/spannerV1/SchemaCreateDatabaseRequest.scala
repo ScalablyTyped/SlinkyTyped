@@ -28,11 +28,41 @@ trait SchemaCreateDatabaseRequest extends js.Object {
 
 object SchemaCreateDatabaseRequest {
   @scala.inline
-  def apply(createStatement: String = null, extraStatements: js.Array[String] = null): SchemaCreateDatabaseRequest = {
+  def apply(): SchemaCreateDatabaseRequest = {
     val __obj = js.Dynamic.literal()
-    if (createStatement != null) __obj.updateDynamic("createStatement")(createStatement.asInstanceOf[js.Any])
-    if (extraStatements != null) __obj.updateDynamic("extraStatements")(extraStatements.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateDatabaseRequest]
   }
+  @scala.inline
+  implicit class SchemaCreateDatabaseRequestOps[Self <: SchemaCreateDatabaseRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateStatement(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createStatement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtraStatements(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraStatements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtraStatements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraStatements")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

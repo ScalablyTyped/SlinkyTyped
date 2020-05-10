@@ -38,14 +38,66 @@ object GetSavingsPlansPurchaseRecommendationRequest {
     LookbackPeriodInDays: LookbackPeriodInDays,
     PaymentOption: PaymentOption,
     SavingsPlansType: SupportedSavingsPlansType,
-    TermInYears: TermInYears,
-    NextPageToken: NextPageToken = null,
-    PageSize: Int | Double = null
+    TermInYears: TermInYears
   ): GetSavingsPlansPurchaseRecommendationRequest = {
     val __obj = js.Dynamic.literal(LookbackPeriodInDays = LookbackPeriodInDays.asInstanceOf[js.Any], PaymentOption = PaymentOption.asInstanceOf[js.Any], SavingsPlansType = SavingsPlansType.asInstanceOf[js.Any], TermInYears = TermInYears.asInstanceOf[js.Any])
-    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
-    if (PageSize != null) __obj.updateDynamic("PageSize")(PageSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSavingsPlansPurchaseRecommendationRequest]
   }
+  @scala.inline
+  implicit class GetSavingsPlansPurchaseRecommendationRequestOps[Self <: GetSavingsPlansPurchaseRecommendationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLookbackPeriodInDays(value: LookbackPeriodInDays): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LookbackPeriodInDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaymentOption(value: PaymentOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaymentOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSavingsPlansType(value: SupportedSavingsPlansType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SavingsPlansType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTermInYears(value: TermInYears): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TermInYears")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: NextPageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageSize(value: NonNegativeInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

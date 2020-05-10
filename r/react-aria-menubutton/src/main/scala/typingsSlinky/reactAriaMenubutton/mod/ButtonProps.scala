@@ -7,6 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ButtonProps[T /* <: HTMLElement */]
   extends AllHTMLAttributes[T]
      with ClassAttributes[T] {
@@ -15,21 +16,34 @@ trait ButtonProps[T /* <: HTMLElement */]
   	 */
   var tag: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: T['tagName'] */ js.Any
-  ] = js.undefined
+  ] = js.native
 }
 
 object ButtonProps {
   @scala.inline
-  def apply[T /* <: HTMLElement */](
-    AllHTMLAttributes: AllHTMLAttributes[T] = null,
-    ClassAttributes: ClassAttributes[T] = null,
-    tag: /* import warning: importer.ImportType#apply Failed type conversion: T['tagName'] */ js.Any = null
-  ): ButtonProps[T] = {
+  def apply[T](): ButtonProps[T] = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
-    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[ButtonProps[T]]
   }
+  @scala.inline
+  implicit class ButtonPropsOps[Self[t] <: ButtonProps[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withTag(value: /* import warning: importer.ImportType#apply Failed type conversion: T['tagName'] */ js.Any): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTag: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

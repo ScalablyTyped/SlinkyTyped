@@ -53,13 +53,14 @@ trait SVGTextPathElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGTextPathElement")
 @js.native
-object SVGTextPathElement extends Instantiable0[SVGTextPathElement] {
+object SVGTextPathElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGTextPathElement] {
   val TEXTPATH_METHODTYPE_ALIGN: Double = js.native
   val TEXTPATH_METHODTYPE_STRETCH: Double = js.native
   val TEXTPATH_METHODTYPE_UNKNOWN: Double = js.native

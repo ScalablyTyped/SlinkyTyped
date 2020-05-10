@@ -7,19 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * An interface for the rect() method of the CanvasPathMethods API.
   */
+@js.native
 trait RectContext extends js.Object {
   /**
     * rect() method of the CanvasPathMethods API.
     */
-  def rect(x: Double, y: Double, width: Double, height: Double): Unit
+  def rect(x: Double, y: Double, width: Double, height: Double): Unit = js.native
 }
 
 object RectContext {
   @scala.inline
   def apply(rect: (Double, Double, Double, Double) => Unit): RectContext = {
     val __obj = js.Dynamic.literal(rect = js.Any.fromFunction4(rect))
-  
     __obj.asInstanceOf[RectContext]
   }
+  @scala.inline
+  implicit class RectContextOps[Self <: RectContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRect(value: (Double, Double, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rect")(js.Any.fromFunction4(value))
+        ret
+    }
+  }
+  
 }
 

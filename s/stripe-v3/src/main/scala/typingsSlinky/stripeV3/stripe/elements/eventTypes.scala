@@ -14,14 +14,12 @@ trait eventTypes extends js.Object
 
 object eventTypes {
   @scala.inline
-  def blur: typingsSlinky.stripeV3.stripeV3Strings.blur = this.cast("blur")
+  def blur: typingsSlinky.stripeV3.stripeV3Strings.blur = "blur".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.blur]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def change: typingsSlinky.stripeV3.stripeV3Strings.change = "change".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.change]
   @scala.inline
-  def change: typingsSlinky.stripeV3.stripeV3Strings.change = this.cast("change")
+  def focus: typingsSlinky.stripeV3.stripeV3Strings.focus = "focus".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.focus]
   @scala.inline
-  def focus: typingsSlinky.stripeV3.stripeV3Strings.focus = this.cast("focus")
-  @scala.inline
-  def ready: typingsSlinky.stripeV3.stripeV3Strings.ready = this.cast("ready")
+  def ready: typingsSlinky.stripeV3.stripeV3Strings.ready = "ready".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.ready]
 }
 

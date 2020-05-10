@@ -4,40 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MlDeleteForecast extends Generic {
-  var allow_no_forecasts: js.UndefOr[Boolean] = js.undefined
-  var forecast_id: js.UndefOr[String] = js.undefined
-  var job_id: String
-  var timeout: js.UndefOr[String] = js.undefined
+  var allow_no_forecasts: js.UndefOr[Boolean] = js.native
+  var forecast_id: js.UndefOr[String] = js.native
+  var job_id: String = js.native
+  var timeout: js.UndefOr[String] = js.native
 }
 
 object MlDeleteForecast {
   @scala.inline
-  def apply(
-    job_id: String,
-    allow_no_forecasts: js.UndefOr[Boolean] = js.undefined,
-    error_trace: js.UndefOr[Boolean] = js.undefined,
-    filter_path: String | js.Array[String] = null,
-    forecast_id: String = null,
-    human: js.UndefOr[Boolean] = js.undefined,
-    ignore: Double | js.Array[Double] = null,
-    method: String = null,
-    pretty: js.UndefOr[Boolean] = js.undefined,
-    source: String = null,
-    timeout: String = null
-  ): MlDeleteForecast = {
+  def apply(job_id: String): MlDeleteForecast = {
     val __obj = js.Dynamic.literal(job_id = job_id.asInstanceOf[js.Any])
-    if (!js.isUndefined(allow_no_forecasts)) __obj.updateDynamic("allow_no_forecasts")(allow_no_forecasts.asInstanceOf[js.Any])
-    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.asInstanceOf[js.Any])
-    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
-    if (forecast_id != null) __obj.updateDynamic("forecast_id")(forecast_id.asInstanceOf[js.Any])
-    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.asInstanceOf[js.Any])
-    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[MlDeleteForecast]
   }
+  @scala.inline
+  implicit class MlDeleteForecastOps[Self <: MlDeleteForecast] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJob_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("job_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllow_no_forecasts(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_no_forecasts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllow_no_forecasts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_no_forecasts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForecast_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forecast_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForecast_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forecast_id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

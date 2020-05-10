@@ -38,20 +38,77 @@ trait SchemaGooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket extends js.
 
 object SchemaGooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket {
   @scala.inline
-  def apply(
-    bucketSize: String = null,
-    bucketValueCount: String = null,
-    bucketValues: js.Array[SchemaGooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues] = null,
-    maxProbability: Int | Double = null,
-    minProbability: Int | Double = null
-  ): SchemaGooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket = {
+  def apply(): SchemaGooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket = {
     val __obj = js.Dynamic.literal()
-    if (bucketSize != null) __obj.updateDynamic("bucketSize")(bucketSize.asInstanceOf[js.Any])
-    if (bucketValueCount != null) __obj.updateDynamic("bucketValueCount")(bucketValueCount.asInstanceOf[js.Any])
-    if (bucketValues != null) __obj.updateDynamic("bucketValues")(bucketValues.asInstanceOf[js.Any])
-    if (maxProbability != null) __obj.updateDynamic("maxProbability")(maxProbability.asInstanceOf[js.Any])
-    if (minProbability != null) __obj.updateDynamic("minProbability")(minProbability.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketOps[Self <: SchemaGooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucketSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucketValueCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValueCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketValueCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValueCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucketValues(value: js.Array[SchemaGooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxProbability(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxProbability")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxProbability: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxProbability")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinProbability(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minProbability")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinProbability: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minProbability")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

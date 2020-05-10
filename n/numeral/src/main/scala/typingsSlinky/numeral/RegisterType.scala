@@ -12,10 +12,8 @@ trait RegisterType extends js.Object
 
 object RegisterType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def format: typingsSlinky.numeral.numeralStrings.format = "format".asInstanceOf[typingsSlinky.numeral.numeralStrings.format]
   @scala.inline
-  def format: typingsSlinky.numeral.numeralStrings.format = this.cast("format")
-  @scala.inline
-  def locale: typingsSlinky.numeral.numeralStrings.locale = this.cast("locale")
+  def locale: typingsSlinky.numeral.numeralStrings.locale = "locale".asInstanceOf[typingsSlinky.numeral.numeralStrings.locale]
 }
 

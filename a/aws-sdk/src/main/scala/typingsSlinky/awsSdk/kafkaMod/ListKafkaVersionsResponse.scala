@@ -12,11 +12,41 @@ trait ListKafkaVersionsResponse extends js.Object {
 
 object ListKafkaVersionsResponse {
   @scala.inline
-  def apply(KafkaVersions: listOfKafkaVersion = null, NextToken: string = null): ListKafkaVersionsResponse = {
+  def apply(): ListKafkaVersionsResponse = {
     val __obj = js.Dynamic.literal()
-    if (KafkaVersions != null) __obj.updateDynamic("KafkaVersions")(KafkaVersions.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListKafkaVersionsResponse]
   }
+  @scala.inline
+  implicit class ListKafkaVersionsResponseOps[Self <: ListKafkaVersionsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKafkaVersions(value: listOfKafkaVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KafkaVersions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKafkaVersions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KafkaVersions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

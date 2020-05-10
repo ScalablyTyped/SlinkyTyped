@@ -1,15 +1,16 @@
 package typingsSlinky.materialUi.components
 
+import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AvPlayCircleFilled
-  extends SharedApply_SvgIconProps1666625642[typingsSlinky.materialUi.svgIconsMod.AvPlayCircleFilled] {
+object AvPlayCircleFilled {
   @JSImport("material-ui/svg-icons", "AvPlayCircleFilled")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.AvPlayCircleFilled] = new SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.AvPlayCircleFilled](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: AvPlayCircleFilled.type): SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.AvPlayCircleFilled] = new SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.AvPlayCircleFilled](js.Array(this.component, js.Dictionary.empty))()
 }
 

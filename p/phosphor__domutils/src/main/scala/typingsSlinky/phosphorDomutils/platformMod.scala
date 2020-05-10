@@ -1,7 +1,7 @@
 package typingsSlinky.phosphorDomutils
 
-import typingsSlinky.std.KeyboardEvent
-import typingsSlinky.std.MouseEvent
+import org.scalajs.dom.raw.KeyboardEvent
+import org.scalajs.dom.raw.MouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

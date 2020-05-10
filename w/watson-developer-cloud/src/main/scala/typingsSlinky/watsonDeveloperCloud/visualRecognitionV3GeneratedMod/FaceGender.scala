@@ -5,21 +5,47 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Information about the gender of the face. */
+@js.native
 trait FaceGender extends js.Object {
   /** Gender identified by the face. For example, `MALE` or `FEMALE`. */
-  var gender: String
+  var gender: String = js.native
   /** The word for "male" or "female" in the language defined by the **Accept-Language** request header. */
-  var gender_label: String
+  var gender_label: String = js.native
   /** Confidence score in the range of 0 to 1. A higher score indicates greater confidence in the estimated value for the property. */
-  var score: Double
+  var score: Double = js.native
 }
 
 object FaceGender {
   @scala.inline
   def apply(gender: String, gender_label: String, score: Double): FaceGender = {
     val __obj = js.Dynamic.literal(gender = gender.asInstanceOf[js.Any], gender_label = gender_label.asInstanceOf[js.Any], score = score.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[FaceGender]
   }
+  @scala.inline
+  implicit class FaceGenderOps[Self <: FaceGender] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGender(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGender_label(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gender_label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScore(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

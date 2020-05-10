@@ -5,16 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MatchingData extends js.Object {
-  var `match`: Null | AnonPath
+  var `match`: Null | AnonPath = js.native
 }
 
 object MatchingData {
   @scala.inline
-  def apply(`match`: AnonPath = null): MatchingData = {
+  def apply(): MatchingData = {
     val __obj = js.Dynamic.literal()
-    if (`match` != null) __obj.updateDynamic("match")(`match`.asInstanceOf[js.Any])
     __obj.asInstanceOf[MatchingData]
   }
+  @scala.inline
+  implicit class MatchingDataOps[Self <: MatchingData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMatch(value: AnonPath): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("match")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMatchNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("match")(null)
+        ret
+    }
+  }
+  
 }
 

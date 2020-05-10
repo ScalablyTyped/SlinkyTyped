@@ -14,14 +14,12 @@ trait DevOnly extends js.Object
 
 object DevOnly {
   @scala.inline
-  def appDotwindowDotalpha: typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotalpha = this.cast("app.window.alpha")
+  def appDotwindowDotalpha: typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotalpha = "app.window.alpha".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotalpha]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def diagnostics: typingsSlinky.chromeApps.chromeAppsStrings.diagnostics = "diagnostics".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.diagnostics]
   @scala.inline
-  def diagnostics: typingsSlinky.chromeApps.chromeAppsStrings.diagnostics = this.cast("diagnostics")
+  def displaySource: typingsSlinky.chromeApps.chromeAppsStrings.displaySource = "displaySource".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.displaySource]
   @scala.inline
-  def displaySource: typingsSlinky.chromeApps.chromeAppsStrings.displaySource = this.cast("displaySource")
-  @scala.inline
-  def signedInDevices: typingsSlinky.chromeApps.chromeAppsStrings.signedInDevices = this.cast("signedInDevices")
+  def signedInDevices: typingsSlinky.chromeApps.chromeAppsStrings.signedInDevices = "signedInDevices".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.signedInDevices]
 }
 

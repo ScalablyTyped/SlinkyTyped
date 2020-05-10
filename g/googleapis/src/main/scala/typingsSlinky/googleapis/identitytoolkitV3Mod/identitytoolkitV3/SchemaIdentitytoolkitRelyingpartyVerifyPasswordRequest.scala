@@ -61,32 +61,149 @@ trait SchemaIdentitytoolkitRelyingpartyVerifyPasswordRequest extends js.Object {
 
 object SchemaIdentitytoolkitRelyingpartyVerifyPasswordRequest {
   @scala.inline
-  def apply(
-    captchaChallenge: String = null,
-    captchaResponse: String = null,
-    delegatedProjectNumber: String = null,
-    email: String = null,
-    idToken: String = null,
-    instanceId: String = null,
-    password: String = null,
-    pendingIdToken: String = null,
-    returnSecureToken: js.UndefOr[Boolean] = js.undefined,
-    tenantId: String = null,
-    tenantProjectNumber: String = null
-  ): SchemaIdentitytoolkitRelyingpartyVerifyPasswordRequest = {
+  def apply(): SchemaIdentitytoolkitRelyingpartyVerifyPasswordRequest = {
     val __obj = js.Dynamic.literal()
-    if (captchaChallenge != null) __obj.updateDynamic("captchaChallenge")(captchaChallenge.asInstanceOf[js.Any])
-    if (captchaResponse != null) __obj.updateDynamic("captchaResponse")(captchaResponse.asInstanceOf[js.Any])
-    if (delegatedProjectNumber != null) __obj.updateDynamic("delegatedProjectNumber")(delegatedProjectNumber.asInstanceOf[js.Any])
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (idToken != null) __obj.updateDynamic("idToken")(idToken.asInstanceOf[js.Any])
-    if (instanceId != null) __obj.updateDynamic("instanceId")(instanceId.asInstanceOf[js.Any])
-    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
-    if (pendingIdToken != null) __obj.updateDynamic("pendingIdToken")(pendingIdToken.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnSecureToken)) __obj.updateDynamic("returnSecureToken")(returnSecureToken.asInstanceOf[js.Any])
-    if (tenantId != null) __obj.updateDynamic("tenantId")(tenantId.asInstanceOf[js.Any])
-    if (tenantProjectNumber != null) __obj.updateDynamic("tenantProjectNumber")(tenantProjectNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIdentitytoolkitRelyingpartyVerifyPasswordRequest]
   }
+  @scala.inline
+  implicit class SchemaIdentitytoolkitRelyingpartyVerifyPasswordRequestOps[Self <: SchemaIdentitytoolkitRelyingpartyVerifyPasswordRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCaptchaChallenge(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captchaChallenge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptchaChallenge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captchaChallenge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaptchaResponse(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captchaResponse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptchaResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captchaResponse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelegatedProjectNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delegatedProjectNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelegatedProjectNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delegatedProjectNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPendingIdToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pendingIdToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPendingIdToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pendingIdToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnSecureToken(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnSecureToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnSecureToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnSecureToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTenantId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTenantId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTenantProjectNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantProjectNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTenantProjectNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantProjectNumber")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

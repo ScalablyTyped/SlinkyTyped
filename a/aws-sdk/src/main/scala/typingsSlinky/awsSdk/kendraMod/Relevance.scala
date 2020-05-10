@@ -30,20 +30,77 @@ trait Relevance extends js.Object {
 
 object Relevance {
   @scala.inline
-  def apply(
-    Duration: Duration = null,
-    Freshness: js.UndefOr[scala.Boolean] = js.undefined,
-    Importance: Int | Double = null,
-    RankOrder: Order = null,
-    ValueImportanceMap: ValueImportanceMap = null
-  ): Relevance = {
+  def apply(): Relevance = {
     val __obj = js.Dynamic.literal()
-    if (Duration != null) __obj.updateDynamic("Duration")(Duration.asInstanceOf[js.Any])
-    if (!js.isUndefined(Freshness)) __obj.updateDynamic("Freshness")(Freshness.asInstanceOf[js.Any])
-    if (Importance != null) __obj.updateDynamic("Importance")(Importance.asInstanceOf[js.Any])
-    if (RankOrder != null) __obj.updateDynamic("RankOrder")(RankOrder.asInstanceOf[js.Any])
-    if (ValueImportanceMap != null) __obj.updateDynamic("ValueImportanceMap")(ValueImportanceMap.asInstanceOf[js.Any])
     __obj.asInstanceOf[Relevance]
   }
+  @scala.inline
+  implicit class RelevanceOps[Self <: Relevance] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDuration(value: Duration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFreshness(value: DocumentMetadataBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Freshness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFreshness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Freshness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImportance(value: Importance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Importance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImportance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Importance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRankOrder(value: Order): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RankOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRankOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RankOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueImportanceMap(value: ValueImportanceMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValueImportanceMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueImportanceMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValueImportanceMap")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

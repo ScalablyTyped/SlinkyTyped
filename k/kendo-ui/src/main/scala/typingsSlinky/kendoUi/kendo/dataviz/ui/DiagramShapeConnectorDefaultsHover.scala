@@ -4,21 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DiagramShapeConnectorDefaultsHover extends js.Object {
-  var fill: js.UndefOr[String | DiagramShapeConnectorDefaultsHoverFill] = js.undefined
-  var stroke: js.UndefOr[String | DiagramShapeConnectorDefaultsHoverStroke] = js.undefined
+  var fill: js.UndefOr[String | DiagramShapeConnectorDefaultsHoverFill] = js.native
+  var stroke: js.UndefOr[String | DiagramShapeConnectorDefaultsHoverStroke] = js.native
 }
 
 object DiagramShapeConnectorDefaultsHover {
   @scala.inline
-  def apply(
-    fill: String | DiagramShapeConnectorDefaultsHoverFill = null,
-    stroke: String | DiagramShapeConnectorDefaultsHoverStroke = null
-  ): DiagramShapeConnectorDefaultsHover = {
+  def apply(): DiagramShapeConnectorDefaultsHover = {
     val __obj = js.Dynamic.literal()
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiagramShapeConnectorDefaultsHover]
   }
+  @scala.inline
+  implicit class DiagramShapeConnectorDefaultsHoverOps[Self <: DiagramShapeConnectorDefaultsHover] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFill(value: String | DiagramShapeConnectorDefaultsHoverFill): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStroke(value: String | DiagramShapeConnectorDefaultsHoverStroke): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStroke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

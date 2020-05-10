@@ -1,13 +1,12 @@
 package typingsSlinky.grommet.mod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLDivElement
+import slinky.core.ReactComponentClass
 import typingsSlinky.grommet.carouselMod.CarouselProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.std.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,18 +16,12 @@ import scala.scalajs.js.annotation._
 class Carousel protected ()
   extends Component[
       CarouselProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]), 
-      ComponentState, 
+      js.Object, 
       js.Any
     ] {
-  def this(props: CarouselProps with (DetailedHTMLProps[
-        HTMLAttributes[org.scalajs.dom.raw.HTMLDivElement], 
-        org.scalajs.dom.raw.HTMLDivElement
-      ])) = this()
+  def this(props: CarouselProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement])) = this()
   def this(
-    props: CarouselProps with (DetailedHTMLProps[
-        HTMLAttributes[org.scalajs.dom.raw.HTMLDivElement], 
-        org.scalajs.dom.raw.HTMLDivElement
-      ]),
+    props: CarouselProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]),
     context: js.Any
   ) = this()
 }
@@ -36,9 +29,8 @@ class Carousel protected ()
 @JSImport("grommet", "Carousel")
 @js.native
 object Carousel extends TopLevel[
-      ComponentClass[
-        CarouselProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]), 
-        ComponentState
+      ReactComponentClass[
+        CarouselProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement])
       ]
     ]
 

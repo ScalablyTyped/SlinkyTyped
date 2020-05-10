@@ -1,51 +1,45 @@
 package typingsSlinky.antDesignProLayout.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignProLayout.MergerSettingsTypeSetting
 import typingsSlinky.antDesignProLayout.libSettingDrawerMod.SettingDrawerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SettingDrawer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object SettingDrawer {
   @JSImport("@ant-design/pro-layout/lib/SettingDrawer", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    collapse: js.UndefOr[Boolean] = js.undefined,
-    getContainer: js.Any = null,
-    hideColors: js.UndefOr[Boolean] = js.undefined,
-    hideCopyButton: js.UndefOr[Boolean] = js.undefined,
-    hideHintAlert: js.UndefOr[Boolean] = js.undefined,
-    hideLoading: js.UndefOr[Boolean] = js.undefined,
-    onCollapseChange: /* collapse */ Boolean => Unit = null,
-    onSettingChange: /* settings */ MergerSettingsTypeSetting => Unit = null,
-    publicPath: String = null,
-    settings: MergerSettingsTypeSetting = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(collapse)) __obj.updateDynamic("collapse")(collapse.asInstanceOf[js.Any])
-    if (getContainer != null) __obj.updateDynamic("getContainer")(getContainer.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideColors)) __obj.updateDynamic("hideColors")(hideColors.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideCopyButton)) __obj.updateDynamic("hideCopyButton")(hideCopyButton.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideHintAlert)) __obj.updateDynamic("hideHintAlert")(hideHintAlert.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideLoading)) __obj.updateDynamic("hideLoading")(hideLoading.asInstanceOf[js.Any])
-    if (onCollapseChange != null) __obj.updateDynamic("onCollapseChange")(js.Any.fromFunction1(onCollapseChange))
-    if (onSettingChange != null) __obj.updateDynamic("onSettingChange")(js.Any.fromFunction1(onSettingChange))
-    if (publicPath != null) __obj.updateDynamic("publicPath")(publicPath.asInstanceOf[js.Any])
-    if (settings != null) __obj.updateDynamic("settings")(settings.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def collapse(value: Boolean): this.type = set("collapse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getContainer(value: js.Any): this.type = set("getContainer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hideColors(value: Boolean): this.type = set("hideColors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hideCopyButton(value: Boolean): this.type = set("hideCopyButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hideHintAlert(value: Boolean): this.type = set("hideHintAlert", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hideLoading(value: Boolean): this.type = set("hideLoading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCollapseChange(value: /* collapse */ Boolean => Unit): this.type = set("onCollapseChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSettingChange(value: /* settings */ MergerSettingsTypeSetting => Unit): this.type = set("onSettingChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def publicPath(value: String): this.type = set("publicPath", value.asInstanceOf[js.Any])
+    @scala.inline
+    def settings(value: MergerSettingsTypeSetting): this.type = set("settings", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SettingDrawerProps
+  
+  def withProps(p: SettingDrawerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SettingDrawer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

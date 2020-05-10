@@ -31,6 +31,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
 /* Inlined parent ast-types.ast-types/gen/namedTypes.namedTypes.TSHasOptionalTypeParameters */
+@js.native
 trait TSDeclareMethod
   extends ASTNode
      with DeclarationKind
@@ -38,23 +39,23 @@ trait TSDeclareMethod
      with PrintableKind
      with StatementKind
      with TSHasOptionalTypeParametersKind {
-  var `abstract`: js.UndefOr[Boolean] = js.undefined
-  var access: js.UndefOr[public | `private` | `protected`] = js.undefined
-  var accessibility: js.UndefOr[public | `private` | `protected`] = js.undefined
-  var async: js.UndefOr[Boolean] = js.undefined
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var computed: js.UndefOr[Boolean] = js.undefined
-  var decorators: js.UndefOr[js.Array[DecoratorKind] | Null] = js.undefined
-  var generator: js.UndefOr[Boolean] = js.undefined
-  var key: IdentifierKind | StringLiteralKind | NumericLiteralKind | ExpressionKind
-  var kind: js.UndefOr[get | set | method | constructor] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var optional: js.UndefOr[Boolean] = js.undefined
-  var params: js.Array[PatternKind]
-  var returnType: js.UndefOr[TSTypeAnnotationKind | NoopKind | Null] = js.undefined
-  var static: js.UndefOr[Boolean] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSDeclareMethod
-  var typeParameters: js.UndefOr[TSTypeParameterDeclarationKind | Null] = js.undefined
+  var `abstract`: js.UndefOr[Boolean] = js.native
+  var access: js.UndefOr[public | `private` | `protected`] = js.native
+  var accessibility: js.UndefOr[public | `private` | `protected`] = js.native
+  var async: js.UndefOr[Boolean] = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var computed: js.UndefOr[Boolean] = js.native
+  var decorators: js.UndefOr[js.Array[DecoratorKind] | Null] = js.native
+  var generator: js.UndefOr[Boolean] = js.native
+  var key: IdentifierKind | StringLiteralKind | NumericLiteralKind | ExpressionKind = js.native
+  var kind: js.UndefOr[get | set | method | constructor] = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var optional: js.UndefOr[Boolean] = js.native
+  var params: js.Array[PatternKind] = js.native
+  var returnType: js.UndefOr[TSTypeAnnotationKind | NoopKind | Null] = js.native
+  var static: js.UndefOr[Boolean] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSDeclareMethod = js.native
+  var typeParameters: js.UndefOr[TSTypeParameterDeclarationKind | Null] = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSDeclareMethod")

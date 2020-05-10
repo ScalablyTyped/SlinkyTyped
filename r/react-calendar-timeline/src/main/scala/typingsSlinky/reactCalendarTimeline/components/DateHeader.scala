@@ -1,11 +1,10 @@
 package typingsSlinky.reactCalendarTimeline.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.moment.mod.Moment
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactCalendarTimeline.mod.DateHeaderProps
 import typingsSlinky.reactCalendarTimeline.mod.IntervalRenderer
 import typingsSlinky.reactCalendarTimeline.mod.Unit
@@ -14,41 +13,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DateHeader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactCalendarTimeline.mod.DateHeader[js.Any]] {
+object DateHeader {
   @JSImport("react-calendar-timeline", "DateHeader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply[Data](
-    headerData: Data = null,
-    height: Int | Double = null,
-    intervalRenderer: /* props */ js.UndefOr[IntervalRenderer[Data]] => TagMod[Any] = null,
-    labelFormat: String | (js.Function3[
-      /* hasStartTimeEndTime */ js.Tuple2[Moment, Moment], 
-      /* unit */ Unit, 
-      /* labelWidth */ Double, 
-      String
-    ]) = null,
-    unit: Unit | primaryHeader = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactCalendarTimeline.mod.DateHeader[js.Any]] = {
-    val __obj = js.Dynamic.literal()
-    if (headerData != null) __obj.updateDynamic("headerData")(headerData.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (intervalRenderer != null) __obj.updateDynamic("intervalRenderer")(js.Any.fromFunction1(intervalRenderer))
-    if (labelFormat != null) __obj.updateDynamic("labelFormat")(labelFormat.asInstanceOf[js.Any])
-    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactCalendarTimeline.mod.DateHeader[js.Any]]]
+  @scala.inline
+  class Builder[Data] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactCalendarTimeline.mod.DateHeader[js.Any]] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerData(value: Data): this.type = set("headerData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def intervalRenderer(value: /* props */ js.UndefOr[IntervalRenderer[Data]] => TagMod[Any]): this.type = set("intervalRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def labelFormatFunction3(
+      value: (/* hasStartTimeEndTime */ js.Tuple2[Moment, Moment], /* unit */ Unit, /* labelWidth */ Double) => String
+    ): this.type = set("labelFormat", js.Any.fromFunction3(value))
+    @scala.inline
+    def labelFormat(
+      value: String | (js.Function3[
+          /* hasStartTimeEndTime */ js.Tuple2[Moment, Moment], 
+          /* unit */ Unit, 
+          /* labelWidth */ Double, 
+          String
+        ])
+    ): this.type = set("labelFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unit(value: Unit | primaryHeader): this.type = set("unit", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactCalendarTimeline.mod.DateHeader[js.Any]] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactCalendarTimeline.mod.DateHeader[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DateHeaderProps[js.Any]
+  
+  def withProps[Data](p: DateHeaderProps[Data]): Builder[Data] = new Builder[Data](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[Data](companion: DateHeader.type): Builder[Data] = new Builder[Data](js.Array(this.component, js.Dictionary.empty))()
 }
 

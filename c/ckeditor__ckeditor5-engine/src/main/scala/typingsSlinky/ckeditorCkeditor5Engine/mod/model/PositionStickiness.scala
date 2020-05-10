@@ -13,12 +13,10 @@ trait PositionStickiness extends js.Object
 
 object PositionStickiness {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def toNext: typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.toNext = "toNext".asInstanceOf[typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.toNext]
   @scala.inline
-  def toNext: typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.toNext = this.cast("toNext")
+  def toNone: typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.toNone = "toNone".asInstanceOf[typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.toNone]
   @scala.inline
-  def toNone: typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.toNone = this.cast("toNone")
-  @scala.inline
-  def toPrevious: typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.toPrevious = this.cast("toPrevious")
+  def toPrevious: typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.toPrevious = "toPrevious".asInstanceOf[typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.toPrevious]
 }
 

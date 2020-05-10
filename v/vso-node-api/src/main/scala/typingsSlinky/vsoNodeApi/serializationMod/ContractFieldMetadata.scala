@@ -4,48 +4,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ContractFieldMetadata extends js.Object {
-  var dictionaryKeyEnumType: js.UndefOr[ContractEnumMetadata] = js.undefined
-  var dictionaryKeyIsDate: js.UndefOr[Boolean] = js.undefined
-  var dictionaryValueEnumType: js.UndefOr[ContractEnumMetadata] = js.undefined
-  var dictionaryValueFieldInfo: js.UndefOr[ContractFieldMetadata] = js.undefined
-  var dictionaryValueIsDate: js.UndefOr[Boolean] = js.undefined
-  var dictionaryValueTypeInfo: js.UndefOr[ContractMetadata] = js.undefined
-  var enumType: js.UndefOr[ContractEnumMetadata] = js.undefined
-  var isArray: js.UndefOr[Boolean] = js.undefined
-  var isDate: js.UndefOr[Boolean] = js.undefined
-  var isDictionary: js.UndefOr[Boolean] = js.undefined
-  var typeInfo: js.UndefOr[ContractMetadata] = js.undefined
+  var dictionaryKeyEnumType: js.UndefOr[ContractEnumMetadata] = js.native
+  var dictionaryKeyIsDate: js.UndefOr[Boolean] = js.native
+  var dictionaryValueEnumType: js.UndefOr[ContractEnumMetadata] = js.native
+  var dictionaryValueFieldInfo: js.UndefOr[ContractFieldMetadata] = js.native
+  var dictionaryValueIsDate: js.UndefOr[Boolean] = js.native
+  var dictionaryValueTypeInfo: js.UndefOr[ContractMetadata] = js.native
+  var enumType: js.UndefOr[ContractEnumMetadata] = js.native
+  var isArray: js.UndefOr[Boolean] = js.native
+  var isDate: js.UndefOr[Boolean] = js.native
+  var isDictionary: js.UndefOr[Boolean] = js.native
+  var typeInfo: js.UndefOr[ContractMetadata] = js.native
 }
 
 object ContractFieldMetadata {
   @scala.inline
-  def apply(
-    dictionaryKeyEnumType: ContractEnumMetadata = null,
-    dictionaryKeyIsDate: js.UndefOr[Boolean] = js.undefined,
-    dictionaryValueEnumType: ContractEnumMetadata = null,
-    dictionaryValueFieldInfo: ContractFieldMetadata = null,
-    dictionaryValueIsDate: js.UndefOr[Boolean] = js.undefined,
-    dictionaryValueTypeInfo: ContractMetadata = null,
-    enumType: ContractEnumMetadata = null,
-    isArray: js.UndefOr[Boolean] = js.undefined,
-    isDate: js.UndefOr[Boolean] = js.undefined,
-    isDictionary: js.UndefOr[Boolean] = js.undefined,
-    typeInfo: ContractMetadata = null
-  ): ContractFieldMetadata = {
+  def apply(): ContractFieldMetadata = {
     val __obj = js.Dynamic.literal()
-    if (dictionaryKeyEnumType != null) __obj.updateDynamic("dictionaryKeyEnumType")(dictionaryKeyEnumType.asInstanceOf[js.Any])
-    if (!js.isUndefined(dictionaryKeyIsDate)) __obj.updateDynamic("dictionaryKeyIsDate")(dictionaryKeyIsDate.asInstanceOf[js.Any])
-    if (dictionaryValueEnumType != null) __obj.updateDynamic("dictionaryValueEnumType")(dictionaryValueEnumType.asInstanceOf[js.Any])
-    if (dictionaryValueFieldInfo != null) __obj.updateDynamic("dictionaryValueFieldInfo")(dictionaryValueFieldInfo.asInstanceOf[js.Any])
-    if (!js.isUndefined(dictionaryValueIsDate)) __obj.updateDynamic("dictionaryValueIsDate")(dictionaryValueIsDate.asInstanceOf[js.Any])
-    if (dictionaryValueTypeInfo != null) __obj.updateDynamic("dictionaryValueTypeInfo")(dictionaryValueTypeInfo.asInstanceOf[js.Any])
-    if (enumType != null) __obj.updateDynamic("enumType")(enumType.asInstanceOf[js.Any])
-    if (!js.isUndefined(isArray)) __obj.updateDynamic("isArray")(isArray.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDate)) __obj.updateDynamic("isDate")(isDate.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDictionary)) __obj.updateDynamic("isDictionary")(isDictionary.asInstanceOf[js.Any])
-    if (typeInfo != null) __obj.updateDynamic("typeInfo")(typeInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContractFieldMetadata]
   }
+  @scala.inline
+  implicit class ContractFieldMetadataOps[Self <: ContractFieldMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDictionaryKeyEnumType(value: ContractEnumMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionaryKeyEnumType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDictionaryKeyEnumType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionaryKeyEnumType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDictionaryKeyIsDate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionaryKeyIsDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDictionaryKeyIsDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionaryKeyIsDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDictionaryValueEnumType(value: ContractEnumMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionaryValueEnumType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDictionaryValueEnumType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionaryValueEnumType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDictionaryValueFieldInfo(value: ContractFieldMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionaryValueFieldInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDictionaryValueFieldInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionaryValueFieldInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDictionaryValueIsDate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionaryValueIsDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDictionaryValueIsDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionaryValueIsDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDictionaryValueTypeInfo(value: ContractMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionaryValueTypeInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDictionaryValueTypeInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionaryValueTypeInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnumType(value: ContractEnumMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enumType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnumType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enumType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsArray(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isArray")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsArray: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isArray")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDictionary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDictionary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDictionary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDictionary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypeInfo(value: ContractMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypeInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

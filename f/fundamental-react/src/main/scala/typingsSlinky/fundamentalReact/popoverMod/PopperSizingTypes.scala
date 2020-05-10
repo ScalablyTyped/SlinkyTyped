@@ -14,14 +14,12 @@ trait PopperSizingTypes extends js.Object
 
 object PopperSizingTypes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def matchTarget: typingsSlinky.fundamentalReact.fundamentalReactStrings.matchTarget = "matchTarget".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.matchTarget]
   @scala.inline
-  def matchTarget: typingsSlinky.fundamentalReact.fundamentalReactStrings.matchTarget = this.cast("matchTarget")
+  def maxTarget: typingsSlinky.fundamentalReact.fundamentalReactStrings.maxTarget = "maxTarget".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.maxTarget]
   @scala.inline
-  def maxTarget: typingsSlinky.fundamentalReact.fundamentalReactStrings.maxTarget = this.cast("maxTarget")
+  def minTarget: typingsSlinky.fundamentalReact.fundamentalReactStrings.minTarget = "minTarget".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.minTarget]
   @scala.inline
-  def minTarget: typingsSlinky.fundamentalReact.fundamentalReactStrings.minTarget = this.cast("minTarget")
-  @scala.inline
-  def none: typingsSlinky.fundamentalReact.fundamentalReactStrings.none = this.cast("none")
+  def none: typingsSlinky.fundamentalReact.fundamentalReactStrings.none = "none".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.none]
 }
 

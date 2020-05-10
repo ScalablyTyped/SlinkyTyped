@@ -1,44 +1,46 @@
 package typingsSlinky.reactOnsenui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameFixedContent
 import typingsSlinky.reactOnsenui.mod.PullHookChangeEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PullHook
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactOnsenui.mod.PullHook] {
+object PullHook {
   @JSImport("react-onsenui", "PullHook")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, id, style */
-  def apply(
-    fixedContent: js.UndefOr[Boolean] = js.undefined,
-    height: Int | Double = null,
-    onChange: /* e */ PullHookChangeEvent => Unit = null,
-    onLoad: /* done */ js.Function0[Unit] => Unit = null,
-    onPull: () => Unit = null,
-    thresholdHeight: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.PullHook] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(fixedContent)) __obj.updateDynamic("fixedContent")(fixedContent.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
-    if (onPull != null) __obj.updateDynamic("onPull")(js.Any.fromFunction0(onPull))
-    if (thresholdHeight != null) __obj.updateDynamic("thresholdHeight")(thresholdHeight.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.PullHook] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fixedContent(value: Boolean): this.type = set("fixedContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* e */ PullHookChangeEvent => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoad(value: /* done */ js.Function0[Unit] => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPull(value: () => Unit): this.type = set("onPull", js.Any.fromFunction0(value))
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def thresholdHeight(value: Double): this.type = set("thresholdHeight", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.PullHook] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactOnsenui.mod.PullHook](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = HTMLAttributesidclassNameFixedContent
+  
+  def withProps(p: HTMLAttributesidclassNameFixedContent): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PullHook.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

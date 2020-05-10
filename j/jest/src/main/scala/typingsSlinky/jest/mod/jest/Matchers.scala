@@ -1,8 +1,7 @@
 package typingsSlinky.jest.mod.jest
 
-import typingsSlinky.std.Error
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.Partial
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -130,6 +129,7 @@ trait Matchers[R, T] extends js.Object {
   /**
     * Used when you want to check that an item is in a list.
     * For testing the items in the list, this uses `===`, a strict equality check.
+    * It can also check whether a string is a substring of another string.
     *
     * Optionally, you can provide a type for the expected value via a generic.
     * This is particuarly useful for ensuring expected objects have the right structure.
@@ -249,7 +249,7 @@ trait Matchers[R, T] extends js.Object {
     * Check that a string matches a regular expression.
     */
   def toMatch(expected: String): R = js.native
-  def toMatch(expected: RegExp): R = js.native
+  def toMatch(expected: js.RegExp): R = js.native
   /**
     * This ensures that a value matches the most recent snapshot with property matchers.
     * Instead of writing the snapshot value to a .snap file, it will be written into the source code automatically.
@@ -264,10 +264,10 @@ trait Matchers[R, T] extends js.Object {
     */
   def toMatchInlineSnapshot[U /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: any}
-    */ typingsSlinky.jest.jestStrings.Matchers with js.Any */](propertyMatchers: Partial[U]): R = js.native
+    */ typingsSlinky.jest.jestStrings.Matchers with TopLevel[js.Any] */](propertyMatchers: Partial[U]): R = js.native
   def toMatchInlineSnapshot[U /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: any}
-    */ typingsSlinky.jest.jestStrings.Matchers with js.Any */](propertyMatchers: Partial[U], snapshot: String): R = js.native
+    */ typingsSlinky.jest.jestStrings.Matchers with TopLevel[js.Any] */](propertyMatchers: Partial[U], snapshot: String): R = js.native
   /**
     * Used to check that a JavaScript object matches a subset of the properties of an object
     *
@@ -301,10 +301,10 @@ trait Matchers[R, T] extends js.Object {
     */
   def toMatchSnapshot[U /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: any}
-    */ typingsSlinky.jest.jestStrings.Matchers with js.Any */](propertyMatchers: Partial[U]): R = js.native
+    */ typingsSlinky.jest.jestStrings.Matchers with TopLevel[js.Any] */](propertyMatchers: Partial[U]): R = js.native
   def toMatchSnapshot[U /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: any}
-    */ typingsSlinky.jest.jestStrings.Matchers with js.Any */](propertyMatchers: Partial[U], snapshotName: String): R = js.native
+    */ typingsSlinky.jest.jestStrings.Matchers with TopLevel[js.Any] */](propertyMatchers: Partial[U], snapshotName: String): R = js.native
   /**
     * Ensure that a mock function has returned (as opposed to thrown) at least once.
     */
@@ -333,16 +333,16 @@ trait Matchers[R, T] extends js.Object {
   def toThrow(): R = js.native
   def toThrow(error: String): R = js.native
   def toThrow(error: Constructable): R = js.native
-  def toThrow(error: Error): R = js.native
-  def toThrow(error: RegExp): R = js.native
+  def toThrow(error: js.Error): R = js.native
+  def toThrow(error: js.RegExp): R = js.native
   /**
     * If you want to test that a specific error is thrown inside a function.
     */
   def toThrowError(): R = js.native
   def toThrowError(error: String): R = js.native
   def toThrowError(error: Constructable): R = js.native
-  def toThrowError(error: Error): R = js.native
-  def toThrowError(error: RegExp): R = js.native
+  def toThrowError(error: js.Error): R = js.native
+  def toThrowError(error: js.RegExp): R = js.native
   /**
     * Used to test that a function throws a error matching the most recent snapshot when it is called.
     * Instead of writing the snapshot value to a .snap file, it will be written into the source code automatically.

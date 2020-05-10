@@ -5,20 +5,70 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFormat extends js.Object {
-  var format: js.UndefOr[Format] = js.undefined
-  var level: js.UndefOr[String] = js.undefined
-  var nolog: js.UndefOr[js.Any] = js.undefined
+  var format: js.UndefOr[Format] = js.native
+  var level: js.UndefOr[String] = js.native
+  var nolog: js.UndefOr[js.Any] = js.native
 }
 
 object AnonFormat {
   @scala.inline
-  def apply(format: Format = null, level: String = null, nolog: js.Any = null): AnonFormat = {
+  def apply(): AnonFormat = {
     val __obj = js.Dynamic.literal()
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
-    if (nolog != null) __obj.updateDynamic("nolog")(nolog.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonFormat]
   }
+  @scala.inline
+  implicit class AnonFormatOps[Self <: AnonFormat] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormatFunction3(
+      value: (/* req */ js.Any, /* res */ js.Any, /* formatter */ js.Function1[/* str */ String, String]) => String
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withFormat(value: Format): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNolog(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nolog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNolog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nolog")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

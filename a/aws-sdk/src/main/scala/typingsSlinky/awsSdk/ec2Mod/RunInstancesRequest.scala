@@ -19,7 +19,7 @@ trait RunInstancesRequest extends js.Object {
     */
   var CapacityReservationSpecification: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.CapacityReservationSpecification] = js.native
   /**
-    * Unique, case-sensitive identifier you provide to ensure the idempotency of the request. For more information, see Ensuring Idempotency. Constraints: Maximum 64 ASCII characters
+    * Unique, case-sensitive identifier you provide to ensure the idempotency of the request. If you do not specify a client token, a randomly generated token is used for the request to ensure idempotency. For more information, see Ensuring Idempotency. Constraints: Maximum 64 ASCII characters
     */
   var ClientToken: js.UndefOr[String] = js.native
   /**
@@ -85,11 +85,11 @@ trait RunInstancesRequest extends js.Object {
   /**
     * The ID of the kernel.  We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see  PV-GRUB in the Amazon Elastic Compute Cloud User Guide. 
     */
-  var KernelId: js.UndefOr[String] = js.native
+  var KernelId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.KernelId] = js.native
   /**
     * The name of the key pair. You can create a key pair using CreateKeyPair or ImportKeyPair.  If you do not specify a key pair, you can't connect to the instance unless you choose an AMI that is configured to allow users another way to log in. 
     */
-  var KeyName: js.UndefOr[String] = js.native
+  var KeyName: js.UndefOr[KeyPairName] = js.native
   /**
     * The launch template to use to launch the instances. Any parameters that you specify in RunInstances override the same parameters in the launch template. You can specify either the name or ID of a launch template, but not both.
     */
@@ -129,7 +129,7 @@ trait RunInstancesRequest extends js.Object {
   /**
     * The ID of the RAM disk to select. Some kernels require additional drivers at launch. Check the kernel requirements for information about whether you need to specify a RAM disk. To find kernel requirements, go to the AWS Resource Center and search for the kernel ID.  We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see  PV-GRUB in the Amazon Elastic Compute Cloud User Guide. 
     */
-  var RamdiskId: js.UndefOr[String] = js.native
+  var RamdiskId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.RamdiskId] = js.native
   /**
     * The IDs of the security groups. You can create a security group using CreateSecurityGroup. If you specify a network interface, you must specify any security groups as part of the network interface.
     */
@@ -141,7 +141,7 @@ trait RunInstancesRequest extends js.Object {
   /**
     * [EC2-VPC] The ID of the subnet to launch the instance into. If you specify a network interface, you must specify any subnets as part of the network interface.
     */
-  var SubnetId: js.UndefOr[String] = js.native
+  var SubnetId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.SubnetId] = js.native
   /**
     * The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The specified tags are applied to all instances or volumes that are created during launch. To tag a resource after it has been created, see CreateTags.
     */
@@ -154,80 +154,437 @@ trait RunInstancesRequest extends js.Object {
 
 object RunInstancesRequest {
   @scala.inline
-  def apply(
-    MaxCount: Integer,
-    MinCount: Integer,
-    AdditionalInfo: String = null,
-    BlockDeviceMappings: BlockDeviceMappingRequestList = null,
-    CapacityReservationSpecification: CapacityReservationSpecification = null,
-    ClientToken: String = null,
-    CpuOptions: CpuOptionsRequest = null,
-    CreditSpecification: CreditSpecificationRequest = null,
-    DisableApiTermination: js.UndefOr[scala.Boolean] = js.undefined,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    EbsOptimized: js.UndefOr[scala.Boolean] = js.undefined,
-    ElasticGpuSpecification: ElasticGpuSpecifications = null,
-    ElasticInferenceAccelerators: ElasticInferenceAccelerators = null,
-    HibernationOptions: HibernationOptionsRequest = null,
-    IamInstanceProfile: IamInstanceProfileSpecification = null,
-    ImageId: ImageId = null,
-    InstanceInitiatedShutdownBehavior: ShutdownBehavior = null,
-    InstanceMarketOptions: InstanceMarketOptionsRequest = null,
-    InstanceType: InstanceType = null,
-    Ipv6AddressCount: Int | scala.Double = null,
-    Ipv6Addresses: InstanceIpv6AddressList = null,
-    KernelId: String = null,
-    KeyName: String = null,
-    LaunchTemplate: LaunchTemplateSpecification = null,
-    LicenseSpecifications: LicenseSpecificationListRequest = null,
-    MetadataOptions: InstanceMetadataOptionsRequest = null,
-    Monitoring: RunInstancesMonitoringEnabled = null,
-    NetworkInterfaces: InstanceNetworkInterfaceSpecificationList = null,
-    Placement: Placement = null,
-    PrivateIpAddress: String = null,
-    RamdiskId: String = null,
-    SecurityGroupIds: SecurityGroupIdStringList = null,
-    SecurityGroups: SecurityGroupStringList = null,
-    SubnetId: String = null,
-    TagSpecifications: TagSpecificationList = null,
-    UserData: String = null
-  ): RunInstancesRequest = {
+  def apply(MaxCount: Integer, MinCount: Integer): RunInstancesRequest = {
     val __obj = js.Dynamic.literal(MaxCount = MaxCount.asInstanceOf[js.Any], MinCount = MinCount.asInstanceOf[js.Any])
-    if (AdditionalInfo != null) __obj.updateDynamic("AdditionalInfo")(AdditionalInfo.asInstanceOf[js.Any])
-    if (BlockDeviceMappings != null) __obj.updateDynamic("BlockDeviceMappings")(BlockDeviceMappings.asInstanceOf[js.Any])
-    if (CapacityReservationSpecification != null) __obj.updateDynamic("CapacityReservationSpecification")(CapacityReservationSpecification.asInstanceOf[js.Any])
-    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
-    if (CpuOptions != null) __obj.updateDynamic("CpuOptions")(CpuOptions.asInstanceOf[js.Any])
-    if (CreditSpecification != null) __obj.updateDynamic("CreditSpecification")(CreditSpecification.asInstanceOf[js.Any])
-    if (!js.isUndefined(DisableApiTermination)) __obj.updateDynamic("DisableApiTermination")(DisableApiTermination.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (!js.isUndefined(EbsOptimized)) __obj.updateDynamic("EbsOptimized")(EbsOptimized.asInstanceOf[js.Any])
-    if (ElasticGpuSpecification != null) __obj.updateDynamic("ElasticGpuSpecification")(ElasticGpuSpecification.asInstanceOf[js.Any])
-    if (ElasticInferenceAccelerators != null) __obj.updateDynamic("ElasticInferenceAccelerators")(ElasticInferenceAccelerators.asInstanceOf[js.Any])
-    if (HibernationOptions != null) __obj.updateDynamic("HibernationOptions")(HibernationOptions.asInstanceOf[js.Any])
-    if (IamInstanceProfile != null) __obj.updateDynamic("IamInstanceProfile")(IamInstanceProfile.asInstanceOf[js.Any])
-    if (ImageId != null) __obj.updateDynamic("ImageId")(ImageId.asInstanceOf[js.Any])
-    if (InstanceInitiatedShutdownBehavior != null) __obj.updateDynamic("InstanceInitiatedShutdownBehavior")(InstanceInitiatedShutdownBehavior.asInstanceOf[js.Any])
-    if (InstanceMarketOptions != null) __obj.updateDynamic("InstanceMarketOptions")(InstanceMarketOptions.asInstanceOf[js.Any])
-    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
-    if (Ipv6AddressCount != null) __obj.updateDynamic("Ipv6AddressCount")(Ipv6AddressCount.asInstanceOf[js.Any])
-    if (Ipv6Addresses != null) __obj.updateDynamic("Ipv6Addresses")(Ipv6Addresses.asInstanceOf[js.Any])
-    if (KernelId != null) __obj.updateDynamic("KernelId")(KernelId.asInstanceOf[js.Any])
-    if (KeyName != null) __obj.updateDynamic("KeyName")(KeyName.asInstanceOf[js.Any])
-    if (LaunchTemplate != null) __obj.updateDynamic("LaunchTemplate")(LaunchTemplate.asInstanceOf[js.Any])
-    if (LicenseSpecifications != null) __obj.updateDynamic("LicenseSpecifications")(LicenseSpecifications.asInstanceOf[js.Any])
-    if (MetadataOptions != null) __obj.updateDynamic("MetadataOptions")(MetadataOptions.asInstanceOf[js.Any])
-    if (Monitoring != null) __obj.updateDynamic("Monitoring")(Monitoring.asInstanceOf[js.Any])
-    if (NetworkInterfaces != null) __obj.updateDynamic("NetworkInterfaces")(NetworkInterfaces.asInstanceOf[js.Any])
-    if (Placement != null) __obj.updateDynamic("Placement")(Placement.asInstanceOf[js.Any])
-    if (PrivateIpAddress != null) __obj.updateDynamic("PrivateIpAddress")(PrivateIpAddress.asInstanceOf[js.Any])
-    if (RamdiskId != null) __obj.updateDynamic("RamdiskId")(RamdiskId.asInstanceOf[js.Any])
-    if (SecurityGroupIds != null) __obj.updateDynamic("SecurityGroupIds")(SecurityGroupIds.asInstanceOf[js.Any])
-    if (SecurityGroups != null) __obj.updateDynamic("SecurityGroups")(SecurityGroups.asInstanceOf[js.Any])
-    if (SubnetId != null) __obj.updateDynamic("SubnetId")(SubnetId.asInstanceOf[js.Any])
-    if (TagSpecifications != null) __obj.updateDynamic("TagSpecifications")(TagSpecifications.asInstanceOf[js.Any])
-    if (UserData != null) __obj.updateDynamic("UserData")(UserData.asInstanceOf[js.Any])
     __obj.asInstanceOf[RunInstancesRequest]
   }
+  @scala.inline
+  implicit class RunInstancesRequestOps[Self <: RunInstancesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdditionalInfo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlockDeviceMappings(value: BlockDeviceMappingRequestList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockDeviceMappings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockDeviceMappings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockDeviceMappings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCapacityReservationSpecification(value: CapacityReservationSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CapacityReservationSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapacityReservationSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CapacityReservationSpecification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCpuOptions(value: CpuOptionsRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CpuOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCpuOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CpuOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreditSpecification(value: CreditSpecificationRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreditSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreditSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreditSpecification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableApiTermination(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableApiTermination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableApiTermination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableApiTermination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEbsOptimized(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsOptimized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEbsOptimized: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsOptimized")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElasticGpuSpecification(value: ElasticGpuSpecifications): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticGpuSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticGpuSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticGpuSpecification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElasticInferenceAccelerators(value: ElasticInferenceAccelerators): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticInferenceAccelerators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticInferenceAccelerators: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticInferenceAccelerators")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHibernationOptions(value: HibernationOptionsRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HibernationOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHibernationOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HibernationOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIamInstanceProfile(value: IamInstanceProfileSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IamInstanceProfile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIamInstanceProfile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IamInstanceProfile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageId(value: ImageId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceInitiatedShutdownBehavior(value: ShutdownBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceInitiatedShutdownBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceInitiatedShutdownBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceInitiatedShutdownBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceMarketOptions(value: InstanceMarketOptionsRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceMarketOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceMarketOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceMarketOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: InstanceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv6AddressCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6AddressCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6AddressCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6AddressCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv6Addresses(value: InstanceIpv6AddressList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Addresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6Addresses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Addresses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKernelId(value: KernelId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KernelId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKernelId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KernelId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyName(value: KeyPairName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchTemplate(value: LaunchTemplateSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLicenseSpecifications(value: LicenseSpecificationListRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseSpecifications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenseSpecifications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseSpecifications")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadataOptions(value: InstanceMetadataOptionsRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetadataOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadataOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetadataOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonitoring(value: RunInstancesMonitoringEnabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Monitoring")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonitoring: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Monitoring")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkInterfaces(value: InstanceNetworkInterfaceSpecificationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInterfaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkInterfaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInterfaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacement(value: Placement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Placement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Placement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateIpAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateIpAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRamdiskId(value: RamdiskId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RamdiskId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRamdiskId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RamdiskId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityGroupIds(value: SecurityGroupIdStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityGroupIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityGroups(value: SecurityGroupStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetId(value: SubnetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagSpecifications(value: TagSpecificationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagSpecifications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagSpecifications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagSpecifications")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserData")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

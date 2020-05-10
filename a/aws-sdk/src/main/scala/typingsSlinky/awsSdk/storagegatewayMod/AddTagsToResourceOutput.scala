@@ -14,10 +14,29 @@ trait AddTagsToResourceOutput extends js.Object {
 
 object AddTagsToResourceOutput {
   @scala.inline
-  def apply(ResourceARN: ResourceARN = null): AddTagsToResourceOutput = {
+  def apply(): AddTagsToResourceOutput = {
     val __obj = js.Dynamic.literal()
-    if (ResourceARN != null) __obj.updateDynamic("ResourceARN")(ResourceARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddTagsToResourceOutput]
   }
+  @scala.inline
+  implicit class AddTagsToResourceOutputOps[Self <: AddTagsToResourceOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResourceARN(value: ResourceARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceARN")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

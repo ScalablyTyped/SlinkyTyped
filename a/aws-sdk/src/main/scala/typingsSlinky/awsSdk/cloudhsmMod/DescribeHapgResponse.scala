@@ -46,28 +46,125 @@ trait DescribeHapgResponse extends js.Object {
 
 object DescribeHapgResponse {
   @scala.inline
-  def apply(
-    HapgArn: HapgArn = null,
-    HapgSerial: String = null,
-    HsmsLastActionFailed: HsmList = null,
-    HsmsPendingDeletion: HsmList = null,
-    HsmsPendingRegistration: HsmList = null,
-    Label: Label = null,
-    LastModifiedTimestamp: Timestamp = null,
-    PartitionSerialList: PartitionSerialList = null,
-    State: CloudHsmObjectState = null
-  ): DescribeHapgResponse = {
+  def apply(): DescribeHapgResponse = {
     val __obj = js.Dynamic.literal()
-    if (HapgArn != null) __obj.updateDynamic("HapgArn")(HapgArn.asInstanceOf[js.Any])
-    if (HapgSerial != null) __obj.updateDynamic("HapgSerial")(HapgSerial.asInstanceOf[js.Any])
-    if (HsmsLastActionFailed != null) __obj.updateDynamic("HsmsLastActionFailed")(HsmsLastActionFailed.asInstanceOf[js.Any])
-    if (HsmsPendingDeletion != null) __obj.updateDynamic("HsmsPendingDeletion")(HsmsPendingDeletion.asInstanceOf[js.Any])
-    if (HsmsPendingRegistration != null) __obj.updateDynamic("HsmsPendingRegistration")(HsmsPendingRegistration.asInstanceOf[js.Any])
-    if (Label != null) __obj.updateDynamic("Label")(Label.asInstanceOf[js.Any])
-    if (LastModifiedTimestamp != null) __obj.updateDynamic("LastModifiedTimestamp")(LastModifiedTimestamp.asInstanceOf[js.Any])
-    if (PartitionSerialList != null) __obj.updateDynamic("PartitionSerialList")(PartitionSerialList.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeHapgResponse]
   }
+  @scala.inline
+  implicit class DescribeHapgResponseOps[Self <: DescribeHapgResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHapgArn(value: HapgArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HapgArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHapgArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HapgArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHapgSerial(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HapgSerial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHapgSerial: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HapgSerial")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHsmsLastActionFailed(value: HsmList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmsLastActionFailed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHsmsLastActionFailed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmsLastActionFailed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHsmsPendingDeletion(value: HsmList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmsPendingDeletion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHsmsPendingDeletion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmsPendingDeletion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHsmsPendingRegistration(value: HsmList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmsPendingRegistration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHsmsPendingRegistration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmsPendingRegistration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: Label): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedTimestamp(value: Timestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartitionSerialList(value: PartitionSerialList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionSerialList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartitionSerialList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionSerialList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: CloudHsmObjectState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

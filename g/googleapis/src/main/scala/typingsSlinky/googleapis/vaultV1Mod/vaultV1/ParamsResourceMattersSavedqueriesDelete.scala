@@ -25,3 +25,55 @@ trait ParamsResourceMattersSavedqueriesDelete extends StandardParameters {
   var savedQueryId: js.UndefOr[String] = js.native
 }
 
+object ParamsResourceMattersSavedqueriesDelete {
+  @scala.inline
+  def apply(): ParamsResourceMattersSavedqueriesDelete = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ParamsResourceMattersSavedqueriesDelete]
+  }
+  @scala.inline
+  implicit class ParamsResourceMattersSavedqueriesDeleteOps[Self <: ParamsResourceMattersSavedqueriesDelete] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatterId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matterId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatterId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matterId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSavedQueryId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("savedQueryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSavedQueryId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("savedQueryId")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

@@ -6,12 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.ApplicationModel.DataTransfer.DataTransferManager")
 @js.native
-class DataTransferManager () extends IDataTransferManager {
-  /* CompleteClass */
-  override var ondatarequested: js.Any = js.native
-  /* CompleteClass */
-  override var ontargetapplicationchosen: js.Any = js.native
-}
+class DataTransferManager () extends IDataTransferManager
 
 /* static members */
 @JSGlobal("Windows.ApplicationModel.DataTransfer.DataTransferManager")

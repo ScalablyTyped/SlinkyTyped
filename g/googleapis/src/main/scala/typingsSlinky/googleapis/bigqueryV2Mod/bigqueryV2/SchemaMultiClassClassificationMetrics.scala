@@ -21,14 +21,41 @@ trait SchemaMultiClassClassificationMetrics extends js.Object {
 
 object SchemaMultiClassClassificationMetrics {
   @scala.inline
-  def apply(
-    aggregateClassificationMetrics: SchemaAggregateClassificationMetrics = null,
-    confusionMatrixList: js.Array[SchemaConfusionMatrix] = null
-  ): SchemaMultiClassClassificationMetrics = {
+  def apply(): SchemaMultiClassClassificationMetrics = {
     val __obj = js.Dynamic.literal()
-    if (aggregateClassificationMetrics != null) __obj.updateDynamic("aggregateClassificationMetrics")(aggregateClassificationMetrics.asInstanceOf[js.Any])
-    if (confusionMatrixList != null) __obj.updateDynamic("confusionMatrixList")(confusionMatrixList.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMultiClassClassificationMetrics]
   }
+  @scala.inline
+  implicit class SchemaMultiClassClassificationMetricsOps[Self <: SchemaMultiClassClassificationMetrics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggregateClassificationMetrics(value: SchemaAggregateClassificationMetrics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregateClassificationMetrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregateClassificationMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregateClassificationMetrics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfusionMatrixList(value: js.Array[SchemaConfusionMatrix]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confusionMatrixList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfusionMatrixList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confusionMatrixList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

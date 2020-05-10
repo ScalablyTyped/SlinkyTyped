@@ -19,16 +19,53 @@ trait ListQualificationTypesResponse extends js.Object {
 
 object ListQualificationTypesResponse {
   @scala.inline
-  def apply(
-    NextToken: PaginationToken = null,
-    NumResults: Int | Double = null,
-    QualificationTypes: QualificationTypeList = null
-  ): ListQualificationTypesResponse = {
+  def apply(): ListQualificationTypesResponse = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (NumResults != null) __obj.updateDynamic("NumResults")(NumResults.asInstanceOf[js.Any])
-    if (QualificationTypes != null) __obj.updateDynamic("QualificationTypes")(QualificationTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListQualificationTypesResponse]
   }
+  @scala.inline
+  implicit class ListQualificationTypesResponseOps[Self <: ListQualificationTypesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumResults(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQualificationTypes(value: QualificationTypeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QualificationTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQualificationTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QualificationTypes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

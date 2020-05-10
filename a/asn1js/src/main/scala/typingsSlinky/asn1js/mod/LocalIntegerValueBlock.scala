@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.asn1js.mod.ILocalHexBlock because var conflicts: isHexOnly, valueHex. Inlined 
 - typingsSlinky.asn1js.mod.LocalHexBlock because Inheritance from two classes. Inlined isHexOnly, valueHex, fromBER, toBER, toBER, toJSON */ @JSImport("asn1js", "LocalIntegerValueBlock")
 @js.native
@@ -12,7 +12,7 @@ class LocalIntegerValueBlock () extends LocalValueBlock {
   def this(params: LocalIntegerValueBlockParams) = this()
   var isHexOnly: scala.Boolean = js.native
   var valueDec: Double = js.native
-  var valueHex: scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  var valueHex: js.typedarray.ArrayBuffer = js.native
   /**
     * Base function for converting block from DER encoded array of bytes
     * 
@@ -22,9 +22,9 @@ class LocalIntegerValueBlock () extends LocalValueBlock {
     * @param {number} [expectedLength=0] Expected length of converted "valueHex" buffer
     * @returns {number} Offset after least decoded byte
     */
-  def fromDER(inputBuffer: scala.scalajs.js.typedarray.ArrayBuffer, inputOffset: Double, inputLength: Double): Double = js.native
+  def fromDER(inputBuffer: js.typedarray.ArrayBuffer, inputOffset: Double, inputLength: Double): Double = js.native
   def fromDER(
-    inputBuffer: scala.scalajs.js.typedarray.ArrayBuffer,
+    inputBuffer: js.typedarray.ArrayBuffer,
     inputOffset: Double,
     inputLength: Double,
     expectedLength: Double
@@ -35,7 +35,7 @@ class LocalIntegerValueBlock () extends LocalValueBlock {
     * @param {boolean} [sizeOnly=false] Flag that we need only a size of encoding, not a real array of bytes
     * @returns {ArrayBuffer}
     */
-  def toDER(): scala.scalajs.js.typedarray.ArrayBuffer = js.native
-  def toDER(sizeOnly: scala.Boolean): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def toDER(): js.typedarray.ArrayBuffer = js.native
+  def toDER(sizeOnly: scala.Boolean): js.typedarray.ArrayBuffer = js.native
 }
 

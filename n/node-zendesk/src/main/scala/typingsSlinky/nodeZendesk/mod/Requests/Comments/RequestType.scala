@@ -12,10 +12,8 @@ trait RequestType extends js.Object
 
 object RequestType {
   @scala.inline
-  def Comment: typingsSlinky.nodeZendesk.nodeZendeskStrings.Comment = this.cast("Comment")
+  def Comment: typingsSlinky.nodeZendesk.nodeZendeskStrings.Comment = "Comment".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.Comment]
   @scala.inline
-  def VoiceComment: typingsSlinky.nodeZendesk.nodeZendeskStrings.VoiceComment = this.cast("VoiceComment")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def VoiceComment: typingsSlinky.nodeZendesk.nodeZendeskStrings.VoiceComment = "VoiceComment".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.VoiceComment]
 }
 

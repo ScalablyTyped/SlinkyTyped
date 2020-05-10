@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait bidiutils extends js.Object {
   /**
     *
@@ -17,15 +18,28 @@ trait bidiutils extends js.Object {
     * @param offsets
     * @param rtl
     */
-  def reverseMatrix(plot: js.Any, dim: js.Any, offsets: js.Any, rtl: js.Any): Unit
+  def reverseMatrix(plot: js.Any, dim: js.Any, offsets: js.Any, rtl: js.Any): Unit = js.native
 }
 
 object bidiutils {
   @scala.inline
   def apply(reverseMatrix: (js.Any, js.Any, js.Any, js.Any) => Unit): bidiutils = {
     val __obj = js.Dynamic.literal(reverseMatrix = js.Any.fromFunction4(reverseMatrix))
-  
     __obj.asInstanceOf[bidiutils]
   }
+  @scala.inline
+  implicit class bidiutilsOps[Self <: bidiutils] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReverseMatrix(value: (js.Any, js.Any, js.Any, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseMatrix")(js.Any.fromFunction4(value))
+        ret
+    }
+  }
+  
 }
 

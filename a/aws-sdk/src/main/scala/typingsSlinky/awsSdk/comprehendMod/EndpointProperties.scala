@@ -42,26 +42,113 @@ trait EndpointProperties extends js.Object {
 
 object EndpointProperties {
   @scala.inline
-  def apply(
-    CreationTime: js.Date = null,
-    CurrentInferenceUnits: Int | scala.Double = null,
-    DesiredInferenceUnits: Int | scala.Double = null,
-    EndpointArn: ComprehendEndpointArn = null,
-    LastModifiedTime: js.Date = null,
-    Message: AnyLengthString = null,
-    ModelArn: ComprehendModelArn = null,
-    Status: EndpointStatus = null
-  ): EndpointProperties = {
+  def apply(): EndpointProperties = {
     val __obj = js.Dynamic.literal()
-    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
-    if (CurrentInferenceUnits != null) __obj.updateDynamic("CurrentInferenceUnits")(CurrentInferenceUnits.asInstanceOf[js.Any])
-    if (DesiredInferenceUnits != null) __obj.updateDynamic("DesiredInferenceUnits")(DesiredInferenceUnits.asInstanceOf[js.Any])
-    if (EndpointArn != null) __obj.updateDynamic("EndpointArn")(EndpointArn.asInstanceOf[js.Any])
-    if (LastModifiedTime != null) __obj.updateDynamic("LastModifiedTime")(LastModifiedTime.asInstanceOf[js.Any])
-    if (Message != null) __obj.updateDynamic("Message")(Message.asInstanceOf[js.Any])
-    if (ModelArn != null) __obj.updateDynamic("ModelArn")(ModelArn.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[EndpointProperties]
   }
+  @scala.inline
+  implicit class EndpointPropertiesOps[Self <: EndpointProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentInferenceUnits(value: InferenceUnitsInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentInferenceUnits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentInferenceUnits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentInferenceUnits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredInferenceUnits(value: InferenceUnitsInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredInferenceUnits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredInferenceUnits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredInferenceUnits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpointArn(value: ComprehendEndpointArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpointArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: AnyLengthString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModelArn(value: ComprehendModelArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModelArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: EndpointStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

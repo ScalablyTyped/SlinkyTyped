@@ -79,7 +79,7 @@ trait HTMLCanvasElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def toBlob(callback: BlobCallback): Unit = js.native
   def toBlob(callback: BlobCallback, `type`: java.lang.String): Unit = js.native
@@ -96,5 +96,6 @@ trait HTMLCanvasElement
 
 @JSGlobal("HTMLCanvasElement")
 @js.native
-object HTMLCanvasElement extends Instantiable0[HTMLCanvasElement]
+object HTMLCanvasElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLCanvasElement]
 

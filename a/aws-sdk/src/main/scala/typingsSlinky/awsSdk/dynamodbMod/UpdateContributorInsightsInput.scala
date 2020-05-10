@@ -22,14 +22,41 @@ trait UpdateContributorInsightsInput extends js.Object {
 
 object UpdateContributorInsightsInput {
   @scala.inline
-  def apply(
-    ContributorInsightsAction: ContributorInsightsAction,
-    TableName: TableName,
-    IndexName: IndexName = null
-  ): UpdateContributorInsightsInput = {
+  def apply(ContributorInsightsAction: ContributorInsightsAction, TableName: TableName): UpdateContributorInsightsInput = {
     val __obj = js.Dynamic.literal(ContributorInsightsAction = ContributorInsightsAction.asInstanceOf[js.Any], TableName = TableName.asInstanceOf[js.Any])
-    if (IndexName != null) __obj.updateDynamic("IndexName")(IndexName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateContributorInsightsInput]
   }
+  @scala.inline
+  implicit class UpdateContributorInsightsInputOps[Self <: UpdateContributorInsightsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContributorInsightsAction(value: ContributorInsightsAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContributorInsightsAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTableName(value: TableName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndexName(value: IndexName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

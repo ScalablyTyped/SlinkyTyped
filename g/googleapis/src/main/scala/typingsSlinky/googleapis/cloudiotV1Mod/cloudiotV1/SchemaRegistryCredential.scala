@@ -17,10 +17,29 @@ trait SchemaRegistryCredential extends js.Object {
 
 object SchemaRegistryCredential {
   @scala.inline
-  def apply(publicKeyCertificate: SchemaPublicKeyCertificate = null): SchemaRegistryCredential = {
+  def apply(): SchemaRegistryCredential = {
     val __obj = js.Dynamic.literal()
-    if (publicKeyCertificate != null) __obj.updateDynamic("publicKeyCertificate")(publicKeyCertificate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRegistryCredential]
   }
+  @scala.inline
+  implicit class SchemaRegistryCredentialOps[Self <: SchemaRegistryCredential] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPublicKeyCertificate(value: SchemaPublicKeyCertificate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKeyCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublicKeyCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKeyCertificate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

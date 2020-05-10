@@ -1,33 +1,32 @@
 package typingsSlinky.muiDatatables.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.muiDatatables.mod.MUIDataTableFilterList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TableFilterList
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object TableFilterList {
   @JSImport("mui-datatables", "TableFilterList")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    filterList: js.Array[js.Array[String]],
-    classes: js.Object = null,
-    onFilterUpdate: /* args */ js.Any => _ = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(filterList = filterList.asInstanceOf[js.Any])
-    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
-    if (onFilterUpdate != null) __obj.updateDynamic("onFilterUpdate")(js.Any.fromFunction1(onFilterUpdate))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def classes(value: js.Object): this.type = set("classes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onFilterUpdate(value: /* args */ js.Any => _): this.type = set("onFilterUpdate", js.Any.fromFunction1(value))
   }
-  type Props = MUIDataTableFilterList
+  
+  def withProps(p: MUIDataTableFilterList): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(filterList: js.Array[js.Array[String]]): Builder = {
+    val __props = js.Dynamic.literal(filterList = filterList.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MUIDataTableFilterList]))
+  }
 }
 

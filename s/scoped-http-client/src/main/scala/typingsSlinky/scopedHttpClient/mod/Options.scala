@@ -2,78 +2,118 @@ package typingsSlinky.scopedHttpClient.mod
 
 import typingsSlinky.node.httpMod.Agent
 import typingsSlinky.node.httpMod.ClientRequestArgs
-import typingsSlinky.node.httpMod.OutgoingHttpHeaders
-import typingsSlinky.node.netMod.Socket
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends ClientRequestArgs {
-  var encoding: js.UndefOr[String] = js.undefined
-  var hash: js.UndefOr[String] = js.undefined
-  var httpAgent: js.UndefOr[Agent | Boolean] = js.undefined
-  var httpsAgent: js.UndefOr[Agent | Boolean] = js.undefined
-  var pathname: js.UndefOr[String] = js.undefined
-  var query: js.UndefOr[js.Any] = js.undefined
-  var slashes: js.UndefOr[js.Any] = js.undefined
+  var encoding: js.UndefOr[String] = js.native
+  var hash: js.UndefOr[String] = js.native
+  var httpAgent: js.UndefOr[Agent | Boolean] = js.native
+  var httpsAgent: js.UndefOr[Agent | Boolean] = js.native
+  var pathname: js.UndefOr[String] = js.native
+  var query: js.UndefOr[js.Any] = js.native
+  var slashes: js.UndefOr[js.Any] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    _defaultAgent: Agent = null,
-    agent: Agent | Boolean = null,
-    auth: String = null,
-    createConnection: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ js.Error, /* socket */ Socket, Unit]) => Socket = null,
-    defaultPort: Double | String = null,
-    encoding: String = null,
-    family: Int | Double = null,
-    hash: String = null,
-    headers: OutgoingHttpHeaders = null,
-    host: String = null,
-    hostname: String = null,
-    httpAgent: Agent | Boolean = null,
-    httpsAgent: Agent | Boolean = null,
-    localAddress: String = null,
-    maxHeaderSize: Int | Double = null,
-    method: String = null,
-    path: String = null,
-    pathname: String = null,
-    port: Double | String = null,
-    protocol: String = null,
-    query: js.Any = null,
-    setHost: js.UndefOr[Boolean] = js.undefined,
-    slashes: js.Any = null,
-    socketPath: String = null,
-    timeout: Int | Double = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (_defaultAgent != null) __obj.updateDynamic("_defaultAgent")(_defaultAgent.asInstanceOf[js.Any])
-    if (agent != null) __obj.updateDynamic("agent")(agent.asInstanceOf[js.Any])
-    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
-    if (createConnection != null) __obj.updateDynamic("createConnection")(js.Any.fromFunction2(createConnection))
-    if (defaultPort != null) __obj.updateDynamic("defaultPort")(defaultPort.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (family != null) __obj.updateDynamic("family")(family.asInstanceOf[js.Any])
-    if (hash != null) __obj.updateDynamic("hash")(hash.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
-    if (httpAgent != null) __obj.updateDynamic("httpAgent")(httpAgent.asInstanceOf[js.Any])
-    if (httpsAgent != null) __obj.updateDynamic("httpsAgent")(httpsAgent.asInstanceOf[js.Any])
-    if (localAddress != null) __obj.updateDynamic("localAddress")(localAddress.asInstanceOf[js.Any])
-    if (maxHeaderSize != null) __obj.updateDynamic("maxHeaderSize")(maxHeaderSize.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (pathname != null) __obj.updateDynamic("pathname")(pathname.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
-    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
-    if (!js.isUndefined(setHost)) __obj.updateDynamic("setHost")(setHost.asInstanceOf[js.Any])
-    if (slashes != null) __obj.updateDynamic("slashes")(slashes.asInstanceOf[js.Any])
-    if (socketPath != null) __obj.updateDynamic("socketPath")(socketPath.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncoding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHash(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttpAgent(value: Agent | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpAgent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpAgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpAgent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttpsAgent(value: Agent | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpsAgent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpsAgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpsAgent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPathname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPathname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuery(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlashes(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slashes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlashes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slashes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

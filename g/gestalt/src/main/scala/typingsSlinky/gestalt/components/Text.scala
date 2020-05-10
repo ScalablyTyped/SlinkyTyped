@@ -1,11 +1,9 @@
 package typingsSlinky.gestalt.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.gestalt.gestaltStrings.blue
+import typingsSlinky.gestalt.gestaltStrings.bold
 import typingsSlinky.gestalt.gestaltStrings.breakWord
 import typingsSlinky.gestalt.gestaltStrings.center
 import typingsSlinky.gestalt.gestaltStrings.darkGray
@@ -33,52 +31,43 @@ import typingsSlinky.gestalt.gestaltStrings.sm
 import typingsSlinky.gestalt.gestaltStrings.tall
 import typingsSlinky.gestalt.gestaltStrings.watermelon
 import typingsSlinky.gestalt.gestaltStrings.white
-import typingsSlinky.gestalt.gestaltStrings.xl
-import typingsSlinky.gestalt.gestaltStrings.xs
 import typingsSlinky.gestalt.mod.TextProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Text
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Text] {
+object Text {
   @JSImport("gestalt", "Text")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    align: left | right | center | justify = null,
-    bold: js.UndefOr[Boolean] = js.undefined,
-    color: blue | darkGray | eggplant | gray | green | lightGray | maroon | midnight | navy | olive | orange | orchid | pine | purple | red | watermelon | white = null,
-    `inline`: js.UndefOr[Boolean] = js.undefined,
-    italic: js.UndefOr[Boolean] = js.undefined,
-    leading: short | tall = null,
-    lgSize: xs | sm | md | lg | xl = null,
-    mdSize: xs | sm | md | lg | xl = null,
-    overflow: normal | breakWord = null,
-    size: xs | sm | md | lg | xl = null,
-    smSize: xs | sm | md | lg | xl = null,
-    truncate: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Text] = {
-    val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (!js.isUndefined(bold)) __obj.updateDynamic("bold")(bold.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
-    if (!js.isUndefined(italic)) __obj.updateDynamic("italic")(italic.asInstanceOf[js.Any])
-    if (leading != null) __obj.updateDynamic("leading")(leading.asInstanceOf[js.Any])
-    if (lgSize != null) __obj.updateDynamic("lgSize")(lgSize.asInstanceOf[js.Any])
-    if (mdSize != null) __obj.updateDynamic("mdSize")(mdSize.asInstanceOf[js.Any])
-    if (overflow != null) __obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (smSize != null) __obj.updateDynamic("smSize")(smSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(truncate)) __obj.updateDynamic("truncate")(truncate.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.gestalt.mod.Text] {
+    @scala.inline
+    def align(value: left | right | center | justify): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(
+      value: blue | darkGray | eggplant | gray | green | lightGray | maroon | midnight | navy | olive | orange | orchid | pine | purple | red | watermelon | white
+    ): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def italic(value: Boolean): this.type = set("italic", value.asInstanceOf[js.Any])
+    @scala.inline
+    def leading(value: short | tall): this.type = set("leading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overflow(value: normal | breakWord): this.type = set("overflow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: sm | md | lg): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def truncate(value: Boolean): this.type = set("truncate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def weight(value: bold | normal): this.type = set("weight", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Text] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.gestalt.mod.Text](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TextProps
+  
+  def withProps(p: TextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Text.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

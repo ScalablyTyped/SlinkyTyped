@@ -30,16 +30,53 @@ trait SchemaGoogleCloudVideointelligenceV1p1beta1SpeechRecognitionAlternative ex
 
 object SchemaGoogleCloudVideointelligenceV1p1beta1SpeechRecognitionAlternative {
   @scala.inline
-  def apply(
-    confidence: Int | Double = null,
-    transcript: String = null,
-    words: js.Array[SchemaGoogleCloudVideointelligenceV1p1beta1WordInfo] = null
-  ): SchemaGoogleCloudVideointelligenceV1p1beta1SpeechRecognitionAlternative = {
+  def apply(): SchemaGoogleCloudVideointelligenceV1p1beta1SpeechRecognitionAlternative = {
     val __obj = js.Dynamic.literal()
-    if (confidence != null) __obj.updateDynamic("confidence")(confidence.asInstanceOf[js.Any])
-    if (transcript != null) __obj.updateDynamic("transcript")(transcript.asInstanceOf[js.Any])
-    if (words != null) __obj.updateDynamic("words")(words.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1p1beta1SpeechRecognitionAlternative]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVideointelligenceV1p1beta1SpeechRecognitionAlternativeOps[Self <: SchemaGoogleCloudVideointelligenceV1p1beta1SpeechRecognitionAlternative] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfidence(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfidence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranscript(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transcript")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranscript: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transcript")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWords(value: js.Array[SchemaGoogleCloudVideointelligenceV1p1beta1WordInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("words")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("words")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

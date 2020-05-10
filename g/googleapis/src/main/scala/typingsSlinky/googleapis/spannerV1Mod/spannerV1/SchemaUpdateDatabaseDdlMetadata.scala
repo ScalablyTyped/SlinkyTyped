@@ -28,16 +28,53 @@ trait SchemaUpdateDatabaseDdlMetadata extends js.Object {
 
 object SchemaUpdateDatabaseDdlMetadata {
   @scala.inline
-  def apply(
-    commitTimestamps: js.Array[String] = null,
-    database: String = null,
-    statements: js.Array[String] = null
-  ): SchemaUpdateDatabaseDdlMetadata = {
+  def apply(): SchemaUpdateDatabaseDdlMetadata = {
     val __obj = js.Dynamic.literal()
-    if (commitTimestamps != null) __obj.updateDynamic("commitTimestamps")(commitTimestamps.asInstanceOf[js.Any])
-    if (database != null) __obj.updateDynamic("database")(database.asInstanceOf[js.Any])
-    if (statements != null) __obj.updateDynamic("statements")(statements.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateDatabaseDdlMetadata]
   }
+  @scala.inline
+  implicit class SchemaUpdateDatabaseDdlMetadataOps[Self <: SchemaUpdateDatabaseDdlMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommitTimestamps(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitTimestamps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommitTimestamps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitTimestamps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatabase(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatements(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statements")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

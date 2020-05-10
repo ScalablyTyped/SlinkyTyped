@@ -22,16 +22,53 @@ trait GetPatchBaselineForPatchGroupResult extends js.Object {
 
 object GetPatchBaselineForPatchGroupResult {
   @scala.inline
-  def apply(
-    BaselineId: BaselineId = null,
-    OperatingSystem: OperatingSystem = null,
-    PatchGroup: PatchGroup = null
-  ): GetPatchBaselineForPatchGroupResult = {
+  def apply(): GetPatchBaselineForPatchGroupResult = {
     val __obj = js.Dynamic.literal()
-    if (BaselineId != null) __obj.updateDynamic("BaselineId")(BaselineId.asInstanceOf[js.Any])
-    if (OperatingSystem != null) __obj.updateDynamic("OperatingSystem")(OperatingSystem.asInstanceOf[js.Any])
-    if (PatchGroup != null) __obj.updateDynamic("PatchGroup")(PatchGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPatchBaselineForPatchGroupResult]
   }
+  @scala.inline
+  implicit class GetPatchBaselineForPatchGroupResultOps[Self <: GetPatchBaselineForPatchGroupResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBaselineId(value: BaselineId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BaselineId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaselineId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BaselineId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperatingSystem(value: OperatingSystem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatingSystem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatchGroup(value: PatchGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PatchGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatchGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PatchGroup")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

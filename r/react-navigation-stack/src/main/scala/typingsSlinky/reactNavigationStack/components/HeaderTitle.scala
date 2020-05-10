@@ -1,7 +1,7 @@
 package typingsSlinky.reactNavigationStack.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.reactNative.mod.Animated.AnimatedComponent
 import typingsSlinky.reactNative.mod.Text
@@ -10,14 +10,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Not a trait, Could't extract props from TypeRef(QualifiedName(IArray(Name(scala), Name(scalajs), Name(js), Name(Any))),IArray(),Comments(1)) because couldn't resolve ClassTree. */
-object HeaderTitle
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Not a trait, Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree. */
+object HeaderTitle {
   @JSImport("react-navigation-stack/lib/typescript/views/Header/HeaderTitle", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = ComponentProps[AnimatedComponent[Text]]
+  def apply(p: ComponentProps[AnimatedComponent[Text]]): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: HeaderTitle.type): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, js.Dictionary.empty))()
 }
 

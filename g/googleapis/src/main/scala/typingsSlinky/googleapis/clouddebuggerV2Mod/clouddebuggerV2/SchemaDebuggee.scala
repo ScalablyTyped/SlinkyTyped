@@ -78,32 +78,149 @@ trait SchemaDebuggee extends js.Object {
 
 object SchemaDebuggee {
   @scala.inline
-  def apply(
-    agentVersion: String = null,
-    description: String = null,
-    extSourceContexts: js.Array[SchemaExtendedSourceContext] = null,
-    id: String = null,
-    isDisabled: js.UndefOr[Boolean] = js.undefined,
-    isInactive: js.UndefOr[Boolean] = js.undefined,
-    labels: StringDictionary[String] = null,
-    project: String = null,
-    sourceContexts: js.Array[SchemaSourceContext] = null,
-    status: SchemaStatusMessage = null,
-    uniquifier: String = null
-  ): SchemaDebuggee = {
+  def apply(): SchemaDebuggee = {
     val __obj = js.Dynamic.literal()
-    if (agentVersion != null) __obj.updateDynamic("agentVersion")(agentVersion.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (extSourceContexts != null) __obj.updateDynamic("extSourceContexts")(extSourceContexts.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDisabled)) __obj.updateDynamic("isDisabled")(isDisabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInactive)) __obj.updateDynamic("isInactive")(isInactive.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (project != null) __obj.updateDynamic("project")(project.asInstanceOf[js.Any])
-    if (sourceContexts != null) __obj.updateDynamic("sourceContexts")(sourceContexts.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (uniquifier != null) __obj.updateDynamic("uniquifier")(uniquifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDebuggee]
   }
+  @scala.inline
+  implicit class SchemaDebuggeeOps[Self <: SchemaDebuggee] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAgentVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgentVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtSourceContexts(value: js.Array[SchemaExtendedSourceContext]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extSourceContexts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtSourceContexts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extSourceContexts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsInactive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInactive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsInactive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInactive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProject(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("project")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("project")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceContexts(value: js.Array[SchemaSourceContext]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceContexts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceContexts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceContexts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: SchemaStatusMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUniquifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniquifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUniquifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniquifier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -45,12 +45,53 @@ trait SchemaRoomLeaveRequest extends js.Object {
 
 object SchemaRoomLeaveRequest {
   @scala.inline
-  def apply(kind: String = null, leaveDiagnostics: SchemaRoomLeaveDiagnostics = null, reason: String = null): SchemaRoomLeaveRequest = {
+  def apply(): SchemaRoomLeaveRequest = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (leaveDiagnostics != null) __obj.updateDynamic("leaveDiagnostics")(leaveDiagnostics.asInstanceOf[js.Any])
-    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRoomLeaveRequest]
   }
+  @scala.inline
+  implicit class SchemaRoomLeaveRequestOps[Self <: SchemaRoomLeaveRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeaveDiagnostics(value: SchemaRoomLeaveDiagnostics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaveDiagnostics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeaveDiagnostics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaveDiagnostics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

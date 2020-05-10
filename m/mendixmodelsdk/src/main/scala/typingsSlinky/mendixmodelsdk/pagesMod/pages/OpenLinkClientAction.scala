@@ -28,9 +28,9 @@ class OpenLinkClientAction protected () extends ClientAction {
   ) = this()
   @JSName("model")
   var model_FOpenLinkClientAction: IModel = js.native
-  def address(): StaticOrDynamicString = js.native
+  def address: StaticOrDynamicString = js.native
   def address(newValue: StaticOrDynamicString): js.Any = js.native
-  def linkType(): LinkType = js.native
+  def linkType: LinkType = js.native
   def linkType(newValue: LinkType): js.Any = js.native
 }
 
@@ -181,6 +181,15 @@ object OpenLinkClientAction extends js.Object {
     *  7.3.0 and higher
     */
   def createInStaticImageViewerUnderClickAction(container: StaticImageViewer): OpenLinkClientAction = js.native
+  /**
+    * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
+    * The new OpenLinkClientAction will be automatically stored in the 'onEnterKeyPressAction' property
+    * of the parent TextBox element passed as argument.
+    *
+    * Warning! Can only be used on models with the following Mendix meta model versions:
+    *  8.7.0 and higher
+    */
+  def createInTextBoxUnderOnEnterKeyPressAction(container: TextBox): OpenLinkClientAction = js.native
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'action' property

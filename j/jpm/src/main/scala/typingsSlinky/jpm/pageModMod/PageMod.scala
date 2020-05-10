@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PageMod extends js.Object {
-  var include: String | (js.Array[js.RegExp | String]) | js.RegExp
-  def destroy(): Unit
+  var include: String | (js.Array[js.RegExp | String]) | js.RegExp = js.native
+  def destroy(): Unit = js.native
 }
 
 @JSImport("sdk/page-mod", "PageMod")

@@ -13,48 +13,172 @@ import scala.scalajs.js.annotation._
   * @property visibility {boolean}
   * Indicates whether the map object is visible, the default is true A map object is only treated as visible, if it self and all of its nesting parent groups are visible.
   */
+@js.native
 trait Options extends js.Object {
-  var arrows: js.UndefOr[ArrowStyle | typingsSlinky.heremaps.H.map.ArrowStyle.Options] = js.undefined
-  var data: js.UndefOr[js.Any] = js.undefined
-  var elevation: js.UndefOr[Double] = js.undefined
-  var extrusion: js.UndefOr[Double] = js.undefined
-  var max: js.UndefOr[Double] = js.undefined
-  var min: js.UndefOr[Double] = js.undefined
-  var provider: js.UndefOr[Provider | Null] = js.undefined
-  var style: js.UndefOr[SpatialStyle | typingsSlinky.heremaps.H.map.SpatialStyle.Options] = js.undefined
-  var visibility: js.UndefOr[Boolean] = js.undefined
-  var volatility: js.UndefOr[Boolean] = js.undefined
-  var zIndex: js.UndefOr[Double] = js.undefined
+  var arrows: js.UndefOr[ArrowStyle | typingsSlinky.heremaps.H.map.ArrowStyle.Options] = js.native
+  var data: js.UndefOr[js.Any] = js.native
+  var elevation: js.UndefOr[Double] = js.native
+  var extrusion: js.UndefOr[Double] = js.native
+  var max: js.UndefOr[Double] = js.native
+  var min: js.UndefOr[Double] = js.native
+  var provider: js.UndefOr[Provider | Null] = js.native
+  var style: js.UndefOr[SpatialStyle | typingsSlinky.heremaps.H.map.SpatialStyle.Options] = js.native
+  var visibility: js.UndefOr[Boolean] = js.native
+  var volatility: js.UndefOr[Boolean] = js.native
+  var zIndex: js.UndefOr[Double] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    arrows: ArrowStyle | typingsSlinky.heremaps.H.map.ArrowStyle.Options = null,
-    data: js.Any = null,
-    elevation: Int | Double = null,
-    extrusion: Int | Double = null,
-    max: Int | Double = null,
-    min: Int | Double = null,
-    provider: Provider = null,
-    style: SpatialStyle | typingsSlinky.heremaps.H.map.SpatialStyle.Options = null,
-    visibility: js.UndefOr[Boolean] = js.undefined,
-    volatility: js.UndefOr[Boolean] = js.undefined,
-    zIndex: Int | Double = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (arrows != null) __obj.updateDynamic("arrows")(arrows.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (elevation != null) __obj.updateDynamic("elevation")(elevation.asInstanceOf[js.Any])
-    if (extrusion != null) __obj.updateDynamic("extrusion")(extrusion.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (provider != null) __obj.updateDynamic("provider")(provider.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(visibility)) __obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
-    if (!js.isUndefined(volatility)) __obj.updateDynamic("volatility")(volatility.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrows(value: ArrowStyle | typingsSlinky.heremaps.H.map.ArrowStyle.Options): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtrusion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extrusion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtrusion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extrusion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvider(value: Provider): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvider: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProviderNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(null)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: SpatialStyle | typingsSlinky.heremaps.H.map.SpatialStyle.Options): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibility(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolatility(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volatility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolatility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volatility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

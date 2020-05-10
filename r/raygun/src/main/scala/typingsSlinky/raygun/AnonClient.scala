@@ -8,17 +8,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonClient extends js.Object {
-  var client: AnonName
-  var environment: AnonArchitecture
-  var error: RaygunErrorObject
-  var groupingKey: js.UndefOr[String] = js.undefined
-  var machineName: String
-  var request: js.UndefOr[RaygunRequest] = js.undefined
-  var tags: js.Array[String]
-  var user: js.UndefOr[RaygunUser | AnonIdentifier] = js.undefined
-  var userCustomData: js.UndefOr[KeyValueObject] = js.undefined
-  var version: js.UndefOr[String] = js.undefined
+  var client: AnonName = js.native
+  var environment: AnonArchitecture = js.native
+  var error: RaygunErrorObject = js.native
+  var groupingKey: js.UndefOr[String] = js.native
+  var machineName: String = js.native
+  var request: js.UndefOr[RaygunRequest] = js.native
+  var tags: js.Array[String] = js.native
+  var user: js.UndefOr[RaygunUser | AnonIdentifier] = js.native
+  var userCustomData: js.UndefOr[KeyValueObject] = js.native
+  var version: js.UndefOr[String] = js.native
 }
 
 object AnonClient {
@@ -28,20 +29,108 @@ object AnonClient {
     environment: AnonArchitecture,
     error: RaygunErrorObject,
     machineName: String,
-    tags: js.Array[String],
-    groupingKey: String = null,
-    request: RaygunRequest = null,
-    user: RaygunUser | AnonIdentifier = null,
-    userCustomData: KeyValueObject = null,
-    version: String = null
+    tags: js.Array[String]
   ): AnonClient = {
     val __obj = js.Dynamic.literal(client = client.asInstanceOf[js.Any], environment = environment.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], machineName = machineName.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any])
-    if (groupingKey != null) __obj.updateDynamic("groupingKey")(groupingKey.asInstanceOf[js.Any])
-    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
-    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
-    if (userCustomData != null) __obj.updateDynamic("userCustomData")(userCustomData.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonClient]
   }
+  @scala.inline
+  implicit class AnonClientOps[Self <: AnonClient] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClient(value: AnonName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnvironment(value: AnonArchitecture): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withError(value: RaygunErrorObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMachineName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("machineName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTags(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGroupingKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupingKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupingKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupingKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequest(value: RaygunRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser(value: RaygunUser | AnonIdentifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserCustomData(value: KeyValueObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userCustomData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserCustomData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userCustomData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,6 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type Chunk = java.lang.String | typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array
+  type Chunk = java.lang.String | typingsSlinky.node.Buffer | js.typedarray.Uint8Array
   type NonNull = js.UndefOr[js.Object]
 }

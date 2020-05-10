@@ -18,11 +18,41 @@ trait SchemaInstancesSetServiceAccountRequest extends js.Object {
 
 object SchemaInstancesSetServiceAccountRequest {
   @scala.inline
-  def apply(email: String = null, scopes: js.Array[String] = null): SchemaInstancesSetServiceAccountRequest = {
+  def apply(): SchemaInstancesSetServiceAccountRequest = {
     val __obj = js.Dynamic.literal()
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (scopes != null) __obj.updateDynamic("scopes")(scopes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstancesSetServiceAccountRequest]
   }
+  @scala.inline
+  implicit class SchemaInstancesSetServiceAccountRequestOps[Self <: SchemaInstancesSetServiceAccountRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScopes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scopes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScopes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scopes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

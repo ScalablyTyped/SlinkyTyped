@@ -5,24 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAccount extends js.Object {
-  var account: js.UndefOr[AccountInfo] = js.undefined
-  var interactive: js.UndefOr[Boolean] = js.undefined
-  var scopes: js.UndefOr[js.Array[String]] = js.undefined
+  var account: js.UndefOr[AccountInfo] = js.native
+  var interactive: js.UndefOr[Boolean] = js.native
+  var scopes: js.UndefOr[js.Array[String]] = js.native
 }
 
 object AnonAccount {
   @scala.inline
-  def apply(
-    account: AccountInfo = null,
-    interactive: js.UndefOr[Boolean] = js.undefined,
-    scopes: js.Array[String] = null
-  ): AnonAccount = {
+  def apply(): AnonAccount = {
     val __obj = js.Dynamic.literal()
-    if (account != null) __obj.updateDynamic("account")(account.asInstanceOf[js.Any])
-    if (!js.isUndefined(interactive)) __obj.updateDynamic("interactive")(interactive.asInstanceOf[js.Any])
-    if (scopes != null) __obj.updateDynamic("scopes")(scopes.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAccount]
   }
+  @scala.inline
+  implicit class AnonAccountOps[Self <: AnonAccount] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccount(value: AccountInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("account")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("account")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInteractive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interactive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInteractive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interactive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScopes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scopes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScopes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scopes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

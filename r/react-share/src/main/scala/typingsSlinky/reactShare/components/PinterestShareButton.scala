@@ -1,10 +1,9 @@
 package typingsSlinky.reactShare.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.div.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.StyleHTMLAttributes
 import typingsSlinky.reactShare.CommonShareButtonPropsmed
@@ -14,47 +13,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PinterestShareButton
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object PinterestShareButton {
   @JSImport("react-share", "PinterestShareButton")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style, tabIndex */
-  def apply(
-    media: String,
-    url: String,
-    additionalProps: HTMLAttributes[HTMLDivElement] = null,
-    beforeOnClick: () => js.Promise[Unit] | Unit = null,
-    description: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    disabledStyle: StyleHTMLAttributes[HTMLDivElement] = null,
-    onClick: /* link */ String => Unit = null,
-    onShareWindowClose: () => Unit = null,
-    openWindow: js.UndefOr[Boolean] = js.undefined,
-    role: String = null,
-    windowHeight: Int | Double = null,
-    windowPosition: windowCenter | screenCenter = null,
-    windowWidth: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(media = media.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-    if (additionalProps != null) __obj.updateDynamic("additionalProps")(additionalProps.asInstanceOf[js.Any])
-    if (beforeOnClick != null) __obj.updateDynamic("beforeOnClick")(js.Any.fromFunction0(beforeOnClick))
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (disabledStyle != null) __obj.updateDynamic("disabledStyle")(disabledStyle.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onShareWindowClose != null) __obj.updateDynamic("onShareWindowClose")(js.Any.fromFunction0(onShareWindowClose))
-    if (!js.isUndefined(openWindow)) __obj.updateDynamic("openWindow")(openWindow.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (windowHeight != null) __obj.updateDynamic("windowHeight")(windowHeight.asInstanceOf[js.Any])
-    if (windowPosition != null) __obj.updateDynamic("windowPosition")(windowPosition.asInstanceOf[js.Any])
-    if (windowWidth != null) __obj.updateDynamic("windowWidth")(windowWidth.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def additionalProps(value: HTMLAttributes[HTMLDivElement]): this.type = set("additionalProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def beforeOnClick(value: () => js.Promise[Unit] | Unit): this.type = set("beforeOnClick", js.Any.fromFunction0(value))
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def description(value: String): this.type = set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledStyle(value: StyleHTMLAttributes[HTMLDivElement]): this.type = set("disabledStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* link */ String => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onShareWindowClose(value: () => Unit): this.type = set("onShareWindowClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def openWindow(value: Boolean): this.type = set("openWindow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def windowHeight(value: Double): this.type = set("windowHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def windowPosition(value: windowCenter | screenCenter): this.type = set("windowPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def windowWidth(value: Double): this.type = set("windowWidth", value.asInstanceOf[js.Any])
   }
-  type Props = CommonShareButtonPropsmed
+  
+  def withProps(p: CommonShareButtonPropsmed): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(media: String, url: String): Builder = {
+    val __props = js.Dynamic.literal(media = media.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CommonShareButtonPropsmed]))
+  }
 }
 

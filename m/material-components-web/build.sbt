@@ -1,44 +1,44 @@
 organization := "org.scalablytyped.slinky"
 name := "material-components-web"
-version := "4.0.0-f20d0f"
+version := "4.0.0-01fdbc"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.4",
-  "org.scalablytyped.slinky" %%% "material__auto-init" % "0.35-dt-20190213Z-ce07e3",
-  "org.scalablytyped.slinky" %%% "material__base" % "0.35-dt-20191126Z-80ccb3",
-  "org.scalablytyped.slinky" %%% "material__checkbox" % "0.35-dt-20191126Z-412db5",
-  "org.scalablytyped.slinky" %%% "material__chips" % "0.35-dt-20191126Z-d57dd4",
-  "org.scalablytyped.slinky" %%% "material__data-table" % "4.0.0-c85e84",
-  "org.scalablytyped.slinky" %%% "material__dialog" % "0.35-dt-20191126Z-502ade",
-  "org.scalablytyped.slinky" %%% "material__drawer" % "0.43-dt-20191126Z-8c0854",
-  "org.scalablytyped.slinky" %%% "material__floating-label" % "0.35-dt-20191126Z-86c1e6",
-  "org.scalablytyped.slinky" %%% "material__form-field" % "0.35-dt-20191126Z-403e45",
-  "org.scalablytyped.slinky" %%% "material__grid-list" % "0.35-dt-20191126Z-b0d196",
-  "org.scalablytyped.slinky" %%% "material__icon-button" % "4.0.0-201427",
-  "org.scalablytyped.slinky" %%% "material__line-ripple" % "0.35-dt-20191126Z-15774f",
-  "org.scalablytyped.slinky" %%% "material__linear-progress" % "0.35-dt-20191126Z-d83247",
-  "org.scalablytyped.slinky" %%% "material__list" % "0.43-dt-20191126Z-77871a",
-  "org.scalablytyped.slinky" %%% "material__menu" % "0.35-dt-20191126Z-b44d5f",
-  "org.scalablytyped.slinky" %%% "material__menu-surface" % "4.0.0-72603e",
-  "org.scalablytyped.slinky" %%% "material__notched-outline" % "0.35-dt-20191126Z-a6c773",
-  "org.scalablytyped.slinky" %%% "material__radio" % "0.35-dt-20191126Z-c32ba0",
-  "org.scalablytyped.slinky" %%% "material__ripple" % "0.35-dt-20191126Z-ef7835",
-  "org.scalablytyped.slinky" %%% "material__select" % "0.35-dt-20191126Z-118c1c",
-  "org.scalablytyped.slinky" %%% "material__selection-control" % "0.35-dt-20190213Z-5fa5c2",
-  "org.scalablytyped.slinky" %%% "material__slider" % "0.35-dt-20191126Z-2b74b1",
-  "org.scalablytyped.slinky" %%% "material__snackbar" % "0.35-dt-20191126Z-8b2e9d",
-  "org.scalablytyped.slinky" %%% "material__switch" % "4.0.0-edd841",
-  "org.scalablytyped.slinky" %%% "material__tab" % "0.35-dt-20191126Z-ec5da4",
-  "org.scalablytyped.slinky" %%% "material__tab-bar" % "4.0.0-94ec67",
-  "org.scalablytyped.slinky" %%% "material__tab-indicator" % "4.0.0-733305",
-  "org.scalablytyped.slinky" %%% "material__tab-scroller" % "4.0.0-646f39",
-  "org.scalablytyped.slinky" %%% "material__textfield" % "0.35-dt-20191126Z-72eb4c",
-  "org.scalablytyped.slinky" %%% "material__top-app-bar" % "0.35-dt-20191126Z-e4dcb2",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "material__auto-init" % "0.35-dt-20190213Z-0ffed5",
+  "org.scalablytyped.slinky" %%% "material__base" % "0.35-dt-20191126Z-f8744b",
+  "org.scalablytyped.slinky" %%% "material__checkbox" % "0.35-dt-20191126Z-3ef169",
+  "org.scalablytyped.slinky" %%% "material__chips" % "0.35-dt-20191126Z-891ecc",
+  "org.scalablytyped.slinky" %%% "material__data-table" % "4.0.0-e8be34",
+  "org.scalablytyped.slinky" %%% "material__dialog" % "0.35-dt-20191126Z-1bc6fa",
+  "org.scalablytyped.slinky" %%% "material__drawer" % "0.43-dt-20191126Z-ae5651",
+  "org.scalablytyped.slinky" %%% "material__floating-label" % "0.35-dt-20191126Z-3556e9",
+  "org.scalablytyped.slinky" %%% "material__form-field" % "0.35-dt-20191126Z-942b86",
+  "org.scalablytyped.slinky" %%% "material__grid-list" % "0.35-dt-20191126Z-3d9b5f",
+  "org.scalablytyped.slinky" %%% "material__icon-button" % "4.0.0-9e00d7",
+  "org.scalablytyped.slinky" %%% "material__line-ripple" % "0.35-dt-20191126Z-99917c",
+  "org.scalablytyped.slinky" %%% "material__linear-progress" % "0.35-dt-20191126Z-11318e",
+  "org.scalablytyped.slinky" %%% "material__list" % "0.43-dt-20191126Z-c103db",
+  "org.scalablytyped.slinky" %%% "material__menu" % "0.35-dt-20191126Z-421505",
+  "org.scalablytyped.slinky" %%% "material__menu-surface" % "4.0.0-f28d7f",
+  "org.scalablytyped.slinky" %%% "material__notched-outline" % "0.35-dt-20191126Z-c9864e",
+  "org.scalablytyped.slinky" %%% "material__radio" % "0.35-dt-20191126Z-c7b108",
+  "org.scalablytyped.slinky" %%% "material__ripple" % "0.35-dt-20191126Z-097dde",
+  "org.scalablytyped.slinky" %%% "material__select" % "0.35-dt-20191126Z-6b5b4e",
+  "org.scalablytyped.slinky" %%% "material__selection-control" % "0.35-dt-20190213Z-9020bd",
+  "org.scalablytyped.slinky" %%% "material__slider" % "0.35-dt-20191126Z-bf96c5",
+  "org.scalablytyped.slinky" %%% "material__snackbar" % "0.35-dt-20191126Z-84fb22",
+  "org.scalablytyped.slinky" %%% "material__switch" % "4.0.0-4a63f3",
+  "org.scalablytyped.slinky" %%% "material__tab" % "0.35-dt-20191126Z-ab6bd9",
+  "org.scalablytyped.slinky" %%% "material__tab-bar" % "4.0.0-f9cac7",
+  "org.scalablytyped.slinky" %%% "material__tab-indicator" % "4.0.0-f1ed60",
+  "org.scalablytyped.slinky" %%% "material__tab-scroller" % "4.0.0-c198f0",
+  "org.scalablytyped.slinky" %%% "material__textfield" % "0.35-dt-20191126Z-ab4b15",
+  "org.scalablytyped.slinky" %%% "material__top-app-bar" % "0.35-dt-20191126Z-1eecda",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

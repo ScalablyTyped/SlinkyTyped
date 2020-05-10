@@ -5,7 +5,6 @@ import typingsSlinky.relayRuntime.relayNetworkTypesMod.GraphQLResponse
 import typingsSlinky.relayRuntime.relayRuntimeTypesMod.CacheConfig
 import typingsSlinky.relayRuntime.relayRuntimeTypesMod.Variables
 import typingsSlinky.relayRuntime.relayStoreTypesMod.OperationDescriptor
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,11 +27,11 @@ trait MockFunctions extends js.Object {
   def nextValue(request: OperationDescriptor, payload: GraphQLResponse): Unit = js.native
   def queueOperationResolver(resolver: OperationMockResolver): Unit = js.native
   def reject(request: ConcreteRequest, error: String): Unit = js.native
-  def reject(request: ConcreteRequest, error: Error): Unit = js.native
+  def reject(request: ConcreteRequest, error: js.Error): Unit = js.native
   def reject(request: OperationDescriptor, error: String): Unit = js.native
-  def reject(request: OperationDescriptor, error: Error): Unit = js.native
-  def rejectMostRecentOperation(error: js.Function1[/* operation */ OperationDescriptor, Error]): Unit = js.native
-  def rejectMostRecentOperation(error: Error): Unit = js.native
+  def reject(request: OperationDescriptor, error: js.Error): Unit = js.native
+  def rejectMostRecentOperation(error: js.Function1[/* operation */ OperationDescriptor, js.Error]): Unit = js.native
+  def rejectMostRecentOperation(error: js.Error): Unit = js.native
   def resolve(request: ConcreteRequest, payload: GraphQLResponse): Unit = js.native
   def resolve(request: OperationDescriptor, payload: GraphQLResponse): Unit = js.native
   def resolveMostRecentOperation(payload: js.Function1[/* operation */ OperationDescriptor, GraphQLResponse | Unit]): Unit = js.native

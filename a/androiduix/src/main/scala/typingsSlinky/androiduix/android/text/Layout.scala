@@ -156,7 +156,7 @@ object Layout extends js.Object {
     var mWidth: Double = js.native
   }
   
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - org.scalablytyped.runtime.NumberDictionary because Already inherited
   - typingsSlinky.std.String because Already inherited
   - typingsSlinky.androiduix.android.text.Spanned because var conflicts: iterator. Inlined getSpans, getSpanStart, getSpanEnd, getSpanFlags, nextSpanTransition */ @js.native

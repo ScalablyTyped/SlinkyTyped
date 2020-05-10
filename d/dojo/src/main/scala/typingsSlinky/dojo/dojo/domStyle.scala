@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojo
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,7 +54,7 @@ trait domStyle extends js.Object {
     *
     * @param node A reference to a DOM node. Does NOT support taking anID string for speed reasons.
     */
-  def getComputedStyle(node: org.scalajs.dom.raw.HTMLElement): Unit = js.native
+  def getComputedStyle(node: HTMLElement): Unit = js.native
   /**
     *
     * @param node
@@ -93,6 +93,6 @@ trait domStyle extends js.Object {
     * @param node
     * @param value
     */
-  def toPixelValue(node: org.scalajs.dom.raw.HTMLElement, value: String): Double = js.native
+  def toPixelValue(node: HTMLElement, value: String): Double = js.native
 }
 

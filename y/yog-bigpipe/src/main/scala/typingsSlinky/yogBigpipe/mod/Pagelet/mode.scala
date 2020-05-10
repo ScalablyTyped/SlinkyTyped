@@ -13,12 +13,10 @@ trait mode extends js.Object
 
 object mode {
   @scala.inline
-  def async: typingsSlinky.yogBigpipe.yogBigpipeStrings.async = this.cast("async")
+  def async: typingsSlinky.yogBigpipe.yogBigpipeStrings.async = "async".asInstanceOf[typingsSlinky.yogBigpipe.yogBigpipeStrings.async]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def pipeline: typingsSlinky.yogBigpipe.yogBigpipeStrings.pipeline = "pipeline".asInstanceOf[typingsSlinky.yogBigpipe.yogBigpipeStrings.pipeline]
   @scala.inline
-  def pipeline: typingsSlinky.yogBigpipe.yogBigpipeStrings.pipeline = this.cast("pipeline")
-  @scala.inline
-  def quickling: typingsSlinky.yogBigpipe.yogBigpipeStrings.quickling = this.cast("quickling")
+  def quickling: typingsSlinky.yogBigpipe.yogBigpipeStrings.quickling = "quickling".asInstanceOf[typingsSlinky.yogBigpipe.yogBigpipeStrings.quickling]
 }
 

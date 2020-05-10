@@ -5,18 +5,61 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonContainerContentContainer extends js.Object {
-  var container: js.UndefOr[ViewStyle] = js.undefined
-  var contentContainer: js.UndefOr[ViewStyle] = js.undefined
+  var container: js.UndefOr[ViewStyle] = js.native
+  var contentContainer: js.UndefOr[ViewStyle] = js.native
 }
 
 object AnonContainerContentContainer {
   @scala.inline
-  def apply(container: ViewStyle = null, contentContainer: ViewStyle = null): AnonContainerContentContainer = {
+  def apply(): AnonContainerContentContainer = {
     val __obj = js.Dynamic.literal()
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (contentContainer != null) __obj.updateDynamic("contentContainer")(contentContainer.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonContainerContentContainer]
   }
+  @scala.inline
+  implicit class AnonContainerContentContainerOps[Self <: AnonContainerContentContainer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainer(value: ViewStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(null)
+        ret
+    }
+    @scala.inline
+    def withContentContainer(value: ViewStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentContainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentContainerNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentContainer")(null)
+        ret
+    }
+  }
+  
 }
 

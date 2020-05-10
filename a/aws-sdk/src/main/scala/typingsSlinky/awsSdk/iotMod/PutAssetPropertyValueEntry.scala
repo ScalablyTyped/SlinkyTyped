@@ -30,19 +30,71 @@ trait PutAssetPropertyValueEntry extends js.Object {
 
 object PutAssetPropertyValueEntry {
   @scala.inline
-  def apply(
-    propertyValues: AssetPropertyValueList,
-    assetId: AssetId = null,
-    entryId: AssetPropertyEntryId = null,
-    propertyAlias: AssetPropertyAlias = null,
-    propertyId: AssetPropertyId = null
-  ): PutAssetPropertyValueEntry = {
+  def apply(propertyValues: AssetPropertyValueList): PutAssetPropertyValueEntry = {
     val __obj = js.Dynamic.literal(propertyValues = propertyValues.asInstanceOf[js.Any])
-    if (assetId != null) __obj.updateDynamic("assetId")(assetId.asInstanceOf[js.Any])
-    if (entryId != null) __obj.updateDynamic("entryId")(entryId.asInstanceOf[js.Any])
-    if (propertyAlias != null) __obj.updateDynamic("propertyAlias")(propertyAlias.asInstanceOf[js.Any])
-    if (propertyId != null) __obj.updateDynamic("propertyId")(propertyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutAssetPropertyValueEntry]
   }
+  @scala.inline
+  implicit class PutAssetPropertyValueEntryOps[Self <: PutAssetPropertyValueEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPropertyValues(value: AssetPropertyValueList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAssetId(value: AssetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntryId(value: AssetPropertyEntryId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntryId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entryId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPropertyAlias(value: AssetPropertyAlias): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyAlias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPropertyAlias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyAlias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPropertyId(value: AssetPropertyId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPropertyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

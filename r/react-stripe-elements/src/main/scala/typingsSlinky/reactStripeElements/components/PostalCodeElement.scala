@@ -1,15 +1,16 @@
 package typingsSlinky.reactStripeElements.components
 
+import typingsSlinky.reactStripeElements.mod.ReactStripeElements.ElementProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PostalCodeElement
-  extends SharedApply_ElementProps659214741[typingsSlinky.reactStripeElements.mod.PostalCodeElement] {
+object PostalCodeElement {
   @JSImport("react-stripe-elements", "PostalCodeElement")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ElementProps): SharedBuilder_ElementProps_2011987615[typingsSlinky.reactStripeElements.mod.PostalCodeElement] = new SharedBuilder_ElementProps_2011987615[typingsSlinky.reactStripeElements.mod.PostalCodeElement](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PostalCodeElement.type): SharedBuilder_ElementProps_2011987615[typingsSlinky.reactStripeElements.mod.PostalCodeElement] = new SharedBuilder_ElementProps_2011987615[typingsSlinky.reactStripeElements.mod.PostalCodeElement](js.Array(this.component, js.Dictionary.empty))()
 }
 

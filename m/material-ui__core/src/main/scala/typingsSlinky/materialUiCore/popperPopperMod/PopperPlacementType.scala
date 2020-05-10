@@ -22,30 +22,28 @@ trait PopperPlacementType extends js.Object
 
 object PopperPlacementType {
   @scala.inline
-  def bottom: typingsSlinky.materialUiCore.materialUiCoreStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.materialUiCore.materialUiCoreStrings.bottom = "bottom".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.bottom]
   @scala.inline
-  def `bottom-end`: typingsSlinky.materialUiCore.materialUiCoreStrings.`bottom-end` = this.cast("bottom-end")
+  def `bottom-end`: typingsSlinky.materialUiCore.materialUiCoreStrings.`bottom-end` = "bottom-end".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.`bottom-end`]
   @scala.inline
-  def `bottom-start`: typingsSlinky.materialUiCore.materialUiCoreStrings.`bottom-start` = this.cast("bottom-start")
+  def `bottom-start`: typingsSlinky.materialUiCore.materialUiCoreStrings.`bottom-start` = "bottom-start".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.`bottom-start`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.materialUiCore.materialUiCoreStrings.left = "left".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.left]
   @scala.inline
-  def left: typingsSlinky.materialUiCore.materialUiCoreStrings.left = this.cast("left")
+  def `left-end`: typingsSlinky.materialUiCore.materialUiCoreStrings.`left-end` = "left-end".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.`left-end`]
   @scala.inline
-  def `left-end`: typingsSlinky.materialUiCore.materialUiCoreStrings.`left-end` = this.cast("left-end")
+  def `left-start`: typingsSlinky.materialUiCore.materialUiCoreStrings.`left-start` = "left-start".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.`left-start`]
   @scala.inline
-  def `left-start`: typingsSlinky.materialUiCore.materialUiCoreStrings.`left-start` = this.cast("left-start")
+  def right: typingsSlinky.materialUiCore.materialUiCoreStrings.right = "right".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.right]
   @scala.inline
-  def right: typingsSlinky.materialUiCore.materialUiCoreStrings.right = this.cast("right")
+  def `right-end`: typingsSlinky.materialUiCore.materialUiCoreStrings.`right-end` = "right-end".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.`right-end`]
   @scala.inline
-  def `right-end`: typingsSlinky.materialUiCore.materialUiCoreStrings.`right-end` = this.cast("right-end")
+  def `right-start`: typingsSlinky.materialUiCore.materialUiCoreStrings.`right-start` = "right-start".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.`right-start`]
   @scala.inline
-  def `right-start`: typingsSlinky.materialUiCore.materialUiCoreStrings.`right-start` = this.cast("right-start")
+  def top: typingsSlinky.materialUiCore.materialUiCoreStrings.top = "top".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.top]
   @scala.inline
-  def top: typingsSlinky.materialUiCore.materialUiCoreStrings.top = this.cast("top")
+  def `top-end`: typingsSlinky.materialUiCore.materialUiCoreStrings.`top-end` = "top-end".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.`top-end`]
   @scala.inline
-  def `top-end`: typingsSlinky.materialUiCore.materialUiCoreStrings.`top-end` = this.cast("top-end")
-  @scala.inline
-  def `top-start`: typingsSlinky.materialUiCore.materialUiCoreStrings.`top-start` = this.cast("top-start")
+  def `top-start`: typingsSlinky.materialUiCore.materialUiCoreStrings.`top-start` = "top-start".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.`top-start`]
 }
 

@@ -23,11 +23,41 @@ trait SchemaClassificationCategory extends js.Object {
 
 object SchemaClassificationCategory {
   @scala.inline
-  def apply(confidence: Int | Double = null, name: String = null): SchemaClassificationCategory = {
+  def apply(): SchemaClassificationCategory = {
     val __obj = js.Dynamic.literal()
-    if (confidence != null) __obj.updateDynamic("confidence")(confidence.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaClassificationCategory]
   }
+  @scala.inline
+  implicit class SchemaClassificationCategoryOps[Self <: SchemaClassificationCategory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfidence(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfidence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

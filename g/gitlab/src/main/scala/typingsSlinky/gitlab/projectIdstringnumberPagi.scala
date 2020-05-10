@@ -6,36 +6,102 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {  projectId ? :string | number} & gitlab.gitlab/dist/types/core/infrastructure.PaginatedRequestOptions */
+@js.native
 trait projectIdstringnumberPagi
   extends /* key */ StringDictionary[js.Any] {
-  var maxPages: js.UndefOr[Double] = js.undefined
-  var page: js.UndefOr[Double] = js.undefined
-  var perPage: js.UndefOr[Double] = js.undefined
-  var projectId: js.UndefOr[String | Double] = js.undefined
-  var showPagination: js.UndefOr[Boolean] = js.undefined
-  var sudo: js.UndefOr[String | Double] = js.undefined
+  var maxPages: js.UndefOr[Double] = js.native
+  var page: js.UndefOr[Double] = js.native
+  var perPage: js.UndefOr[Double] = js.native
+  var projectId: js.UndefOr[String | Double] = js.native
+  var showPagination: js.UndefOr[Boolean] = js.native
+  var sudo: js.UndefOr[String | Double] = js.native
 }
 
 object projectIdstringnumberPagi {
   @scala.inline
-  def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    maxPages: Int | Double = null,
-    page: Int | Double = null,
-    perPage: Int | Double = null,
-    projectId: String | Double = null,
-    showPagination: js.UndefOr[Boolean] = js.undefined,
-    sudo: String | Double = null
-  ): projectIdstringnumberPagi = {
+  def apply(): projectIdstringnumberPagi = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (maxPages != null) __obj.updateDynamic("maxPages")(maxPages.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (perPage != null) __obj.updateDynamic("perPage")(perPage.asInstanceOf[js.Any])
-    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
-    if (!js.isUndefined(showPagination)) __obj.updateDynamic("showPagination")(showPagination.asInstanceOf[js.Any])
-    if (sudo != null) __obj.updateDynamic("sudo")(sudo.asInstanceOf[js.Any])
     __obj.asInstanceOf[projectIdstringnumberPagi]
   }
+  @scala.inline
+  implicit class projectIdstringnumberPagiOps[Self <: projectIdstringnumberPagi] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxPages(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxPages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPerPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("perPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPerPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("perPage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectId(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowPagination(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showPagination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowPagination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showPagination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSudo(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sudo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSudo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sudo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

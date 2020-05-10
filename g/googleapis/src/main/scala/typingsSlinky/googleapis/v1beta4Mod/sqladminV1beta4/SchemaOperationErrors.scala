@@ -21,11 +21,41 @@ trait SchemaOperationErrors extends js.Object {
 
 object SchemaOperationErrors {
   @scala.inline
-  def apply(errors: js.Array[SchemaOperationError] = null, kind: String = null): SchemaOperationErrors = {
+  def apply(): SchemaOperationErrors = {
     val __obj = js.Dynamic.literal()
-    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOperationErrors]
   }
+  @scala.inline
+  implicit class SchemaOperationErrorsOps[Self <: SchemaOperationErrors] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrors(value: js.Array[SchemaOperationError]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

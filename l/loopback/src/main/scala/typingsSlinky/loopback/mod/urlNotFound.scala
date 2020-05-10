@@ -2,6 +2,7 @@ package typingsSlinky.loopback.mod
 
 import typingsSlinky.express.mod.RequestHandler
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +15,6 @@ object urlNotFound extends js.Object {
     * to be handled by error-handling middleware.
     * @header loopback.urlNotFound(
     */
-  def apply(): RequestHandler[ParamsDictionary] = js.native
+  def apply(): RequestHandler[ParamsDictionary, _, _, Query] = js.native
 }
 

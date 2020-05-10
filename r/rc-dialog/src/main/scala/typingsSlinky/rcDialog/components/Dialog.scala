@@ -1,100 +1,115 @@
 package typingsSlinky.rcDialog.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.div.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcDialog.AnonX
 import typingsSlinky.rcDialog.dialogMod.IDialogChildProps
 import typingsSlinky.rcDialog.dialogMod.default
 import typingsSlinky.rcDialog.idialogproptypesMod.IStringOrHtmlElement
 import typingsSlinky.rcDialog.rcDialogBooleans.`false`
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Dialog
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Dialog {
   @JSImport("rc-dialog/lib/Dialog", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    getOpenCount: () => Double,
-    afterClose: () => _ = null,
-    animation: js.Any = null,
-    bodyProps: js.Any = null,
-    bodyStyle: js.Object = null,
-    closable: js.UndefOr[Boolean] = js.undefined,
-    closeIcon: TagMod[Any] = null,
-    destroyOnClose: js.UndefOr[Boolean] = js.undefined,
-    focusTriggerAfterClose: js.UndefOr[Boolean] = js.undefined,
-    footer: TagMod[Any] = null,
-    forceRender: js.UndefOr[Boolean] = js.undefined,
-    getContainer: IStringOrHtmlElement | js.Function0[IStringOrHtmlElement] | `false` = null,
-    height: Int | Double = null,
-    keyboard: js.UndefOr[Boolean] = js.undefined,
-    mask: js.UndefOr[Boolean] = js.undefined,
-    maskAnimation: js.Any = null,
-    maskClosable: js.UndefOr[Boolean] = js.undefined,
-    maskProps: js.Any = null,
-    maskStyle: js.Object = null,
-    maskTransitionName: String = null,
-    mousePosition: AnonX = null,
-    onClose: /* e */ SyntheticEvent[Event_, HTMLDivElement] => _ = null,
-    prefixCls: String = null,
-    switchScrollingEffect: () => Unit = null,
-    title: TagMod[Any] = null,
-    transitionName: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    width: Int | Double = null,
-    wrapClassName: String = null,
-    wrapProps: js.Any = null,
-    wrapStyle: js.Object = null,
-    zIndex: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(getOpenCount = js.Any.fromFunction0(getOpenCount))
-    if (afterClose != null) __obj.updateDynamic("afterClose")(js.Any.fromFunction0(afterClose))
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (bodyProps != null) __obj.updateDynamic("bodyProps")(bodyProps.asInstanceOf[js.Any])
-    if (bodyStyle != null) __obj.updateDynamic("bodyStyle")(bodyStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(closable)) __obj.updateDynamic("closable")(closable.asInstanceOf[js.Any])
-    if (closeIcon != null) __obj.updateDynamic("closeIcon")(closeIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(destroyOnClose)) __obj.updateDynamic("destroyOnClose")(destroyOnClose.asInstanceOf[js.Any])
-    if (!js.isUndefined(focusTriggerAfterClose)) __obj.updateDynamic("focusTriggerAfterClose")(focusTriggerAfterClose.asInstanceOf[js.Any])
-    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceRender)) __obj.updateDynamic("forceRender")(forceRender.asInstanceOf[js.Any])
-    if (getContainer != null) __obj.updateDynamic("getContainer")(getContainer.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(keyboard)) __obj.updateDynamic("keyboard")(keyboard.asInstanceOf[js.Any])
-    if (!js.isUndefined(mask)) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
-    if (maskAnimation != null) __obj.updateDynamic("maskAnimation")(maskAnimation.asInstanceOf[js.Any])
-    if (!js.isUndefined(maskClosable)) __obj.updateDynamic("maskClosable")(maskClosable.asInstanceOf[js.Any])
-    if (maskProps != null) __obj.updateDynamic("maskProps")(maskProps.asInstanceOf[js.Any])
-    if (maskStyle != null) __obj.updateDynamic("maskStyle")(maskStyle.asInstanceOf[js.Any])
-    if (maskTransitionName != null) __obj.updateDynamic("maskTransitionName")(maskTransitionName.asInstanceOf[js.Any])
-    if (mousePosition != null) __obj.updateDynamic("mousePosition")(mousePosition.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (switchScrollingEffect != null) __obj.updateDynamic("switchScrollingEffect")(js.Any.fromFunction0(switchScrollingEffect))
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (wrapClassName != null) __obj.updateDynamic("wrapClassName")(wrapClassName.asInstanceOf[js.Any])
-    if (wrapProps != null) __obj.updateDynamic("wrapProps")(wrapProps.asInstanceOf[js.Any])
-    if (wrapStyle != null) __obj.updateDynamic("wrapStyle")(wrapStyle.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def afterClose(value: () => _): this.type = set("afterClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def animation(value: js.Any): this.type = set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bodyProps(value: js.Any): this.type = set("bodyProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bodyStyle(value: js.Object): this.type = set("bodyStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeIcon(value: TagMod[Any]): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def destroyOnClose(value: Boolean): this.type = set("destroyOnClose", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusTriggerAfterClose(value: Boolean): this.type = set("focusTriggerAfterClose", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footer(value: TagMod[Any]): this.type = set("footer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def forceRender(value: Boolean): this.type = set("forceRender", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getContainerHTMLElement(value: HTMLElement): this.type = set("getContainer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getContainerFunction0(value: () => IStringOrHtmlElement): this.type = set("getContainer", js.Any.fromFunction0(value))
+    @scala.inline
+    def getContainer(value: IStringOrHtmlElement | js.Function0[IStringOrHtmlElement] | `false`): this.type = set("getContainer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keyboard(value: Boolean): this.type = set("keyboard", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mask(value: Boolean): this.type = set("mask", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maskAnimation(value: js.Any): this.type = set("maskAnimation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maskClosable(value: Boolean): this.type = set("maskClosable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maskProps(value: js.Any): this.type = set("maskProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maskStyle(value: js.Object): this.type = set("maskStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maskTransitionName(value: String): this.type = set("maskTransitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mousePosition(value: AnonX): this.type = set("mousePosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClose(value: /* e */ SyntheticEvent[Event_, HTMLDivElement] => _): this.type = set("onClose", js.Any.fromFunction1(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def switchScrollingEffect(value: () => Unit): this.type = set("switchScrollingEffect", js.Any.fromFunction0(value))
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapClassName(value: String): this.type = set("wrapClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapProps(value: js.Any): this.type = set("wrapProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapStyle(value: js.Object): this.type = set("wrapStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def zIndex(value: Double): this.type = set("zIndex", value.asInstanceOf[js.Any])
   }
-  type Props = IDialogChildProps
+  
+  def withProps(p: IDialogChildProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(getOpenCount: () => Double): Builder = {
+    val __props = js.Dynamic.literal(getOpenCount = js.Any.fromFunction0(getOpenCount))
+    new Builder(js.Array(this.component, __props.asInstanceOf[IDialogChildProps]))
+  }
 }
 

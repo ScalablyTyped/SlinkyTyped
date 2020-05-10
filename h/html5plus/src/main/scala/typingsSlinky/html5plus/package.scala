@@ -11,7 +11,7 @@ package object html5plus {
     * 参考: [http://www.html5plus.org/doc/zh_cn/downloader.html](http://www.html5plus.org/doc/zh_cn/downloader.html)
     */
   /* Rewritten from type alias, can be one of: 
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
     - typingsSlinky.html5plus.html5plusNumbers.`0`
     - typingsSlinky.html5plus.html5plusNumbers.`1`
     - typingsSlinky.html5plus.html5plusNumbers.`2`
@@ -51,7 +51,7 @@ package object html5plus {
     * 参考: [http://www.html5plus.org/doc/zh_cn/uploader.html](http://www.html5plus.org/doc/zh_cn/uploader.html)
     */
   /* Rewritten from type alias, can be one of: 
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
     - typingsSlinky.html5plus.html5plusNumbers.`0`
     - typingsSlinky.html5plus.html5plusNumbers.`1`
     - typingsSlinky.html5plus.html5plusNumbers.`2`

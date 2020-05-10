@@ -7,19 +7,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonHeadersHeadersOptionsOptions extends js.Object {
-  var headers: js.UndefOr[Headers] = js.undefined
-  var options: js.UndefOr[Options] = js.undefined
-  var resourceType: ResourceType
+  var headers: js.UndefOr[Headers] = js.native
+  var options: js.UndefOr[Options] = js.native
+  var resourceType: ResourceType = js.native
 }
 
 object AnonHeadersHeadersOptionsOptions {
   @scala.inline
-  def apply(resourceType: ResourceType, headers: Headers = null, options: Options = null): AnonHeadersHeadersOptionsOptions = {
+  def apply(resourceType: ResourceType): AnonHeadersHeadersOptionsOptions = {
     val __obj = js.Dynamic.literal(resourceType = resourceType.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonHeadersHeadersOptionsOptions]
   }
+  @scala.inline
+  implicit class AnonHeadersHeadersOptionsOptionsOps[Self <: AnonHeadersHeadersOptionsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResourceType(value: ResourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: Headers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: Options): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -8,11 +8,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined node.stream.TransformOptions & {  lineLength ? :number,   prefix ? :string} */
+@js.native
 trait TransformOptionslineLengt extends js.Object {
-  var allowHalfOpen: js.UndefOr[Boolean] = js.undefined
-  var autoDestroy: js.UndefOr[Boolean] = js.undefined
-  var decodeStrings: js.UndefOr[Boolean] = js.undefined
-  var defaultEncoding: js.UndefOr[String] = js.undefined
+  var allowHalfOpen: js.UndefOr[Boolean] = js.native
+  var autoDestroy: js.UndefOr[Boolean] = js.native
+  var decodeStrings: js.UndefOr[Boolean] = js.native
+  var defaultEncoding: js.UndefOr[String] = js.native
   var destroy: js.UndefOr[
     js.ThisFunction2[
       /* this */ Transform, 
@@ -20,24 +21,24 @@ trait TransformOptionslineLengt extends js.Object {
       /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
       Unit
     ]
-  ] = js.undefined
-  var emitClose: js.UndefOr[Boolean] = js.undefined
-  var encoding: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var emitClose: js.UndefOr[Boolean] = js.native
+  var encoding: js.UndefOr[String] = js.native
   var `final`: js.UndefOr[
     js.ThisFunction1[
       /* this */ Transform, 
       /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]
-  ] = js.undefined
-  var flush: js.UndefOr[js.ThisFunction1[/* this */ Transform, /* callback */ TransformCallback, Unit]] = js.undefined
-  var highWaterMark: js.UndefOr[Double] = js.undefined
-  var lineLength: js.UndefOr[Double] = js.undefined
-  var objectMode: js.UndefOr[Boolean] = js.undefined
-  var prefix: js.UndefOr[String] = js.undefined
-  var read: js.UndefOr[js.ThisFunction1[/* this */ Transform, /* size */ Double, Unit]] = js.undefined
-  var readableHighWaterMark: js.UndefOr[Double] = js.undefined
-  var readableObjectMode: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var flush: js.UndefOr[js.ThisFunction1[/* this */ Transform, /* callback */ TransformCallback, Unit]] = js.native
+  var highWaterMark: js.UndefOr[Double] = js.native
+  var lineLength: js.UndefOr[Double] = js.native
+  var objectMode: js.UndefOr[Boolean] = js.native
+  var prefix: js.UndefOr[String] = js.native
+  var read: js.UndefOr[js.ThisFunction1[/* this */ Transform, /* size */ Double, Unit]] = js.native
+  var readableHighWaterMark: js.UndefOr[Double] = js.native
+  var readableObjectMode: js.UndefOr[Boolean] = js.native
   var transform: js.UndefOr[
     js.ThisFunction3[
       /* this */ Transform, 
@@ -46,10 +47,10 @@ trait TransformOptionslineLengt extends js.Object {
       /* callback */ TransformCallback, 
       Unit
     ]
-  ] = js.undefined
-  var writableCorked: js.UndefOr[Double] = js.undefined
-  var writableHighWaterMark: js.UndefOr[Double] = js.undefined
-  var writableObjectMode: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var writableCorked: js.UndefOr[Double] = js.native
+  var writableHighWaterMark: js.UndefOr[Double] = js.native
+  var writableObjectMode: js.UndefOr[Boolean] = js.native
   var write: js.UndefOr[
     js.ThisFunction3[
       /* this */ Transform, 
@@ -58,7 +59,7 @@ trait TransformOptionslineLengt extends js.Object {
       /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   var writev: js.UndefOr[
     js.ThisFunction2[
       /* this */ Transform, 
@@ -66,85 +67,322 @@ trait TransformOptionslineLengt extends js.Object {
       /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object TransformOptionslineLengt {
   @scala.inline
-  def apply(
-    allowHalfOpen: js.UndefOr[Boolean] = js.undefined,
-    autoDestroy: js.UndefOr[Boolean] = js.undefined,
-    decodeStrings: js.UndefOr[Boolean] = js.undefined,
-    defaultEncoding: String = null,
-    destroy: js.ThisFunction2[
-      /* this */ Transform, 
-      /* error */ js.Error | Null, 
-      /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
-      Unit
-    ] = null,
-    emitClose: js.UndefOr[Boolean] = js.undefined,
-    encoding: String = null,
-    `final`: js.ThisFunction1[
-      /* this */ Transform, 
-      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
-      Unit
-    ] = null,
-    flush: js.ThisFunction1[/* this */ Transform, /* callback */ TransformCallback, Unit] = null,
-    highWaterMark: Int | Double = null,
-    lineLength: Int | Double = null,
-    objectMode: js.UndefOr[Boolean] = js.undefined,
-    prefix: String = null,
-    read: js.ThisFunction1[/* this */ Transform, /* size */ Double, Unit] = null,
-    readableHighWaterMark: Int | Double = null,
-    readableObjectMode: js.UndefOr[Boolean] = js.undefined,
-    transform: js.ThisFunction3[
-      /* this */ Transform, 
-      /* chunk */ js.Any, 
-      /* encoding */ String, 
-      /* callback */ TransformCallback, 
-      Unit
-    ] = null,
-    writableCorked: Int | Double = null,
-    writableHighWaterMark: Int | Double = null,
-    writableObjectMode: js.UndefOr[Boolean] = js.undefined,
-    write: js.ThisFunction3[
-      /* this */ Transform, 
-      /* chunk */ js.Any, 
-      /* encoding */ String, 
-      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
-      Unit
-    ] = null,
-    writev: js.ThisFunction2[
-      /* this */ Transform, 
-      /* chunks */ js.Array[AnonChunk], 
-      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
-      Unit
-    ] = null
-  ): TransformOptionslineLengt = {
+  def apply(): TransformOptionslineLengt = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowHalfOpen)) __obj.updateDynamic("allowHalfOpen")(allowHalfOpen.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoDestroy)) __obj.updateDynamic("autoDestroy")(autoDestroy.asInstanceOf[js.Any])
-    if (!js.isUndefined(decodeStrings)) __obj.updateDynamic("decodeStrings")(decodeStrings.asInstanceOf[js.Any])
-    if (defaultEncoding != null) __obj.updateDynamic("defaultEncoding")(defaultEncoding.asInstanceOf[js.Any])
-    if (destroy != null) __obj.updateDynamic("destroy")(destroy.asInstanceOf[js.Any])
-    if (!js.isUndefined(emitClose)) __obj.updateDynamic("emitClose")(emitClose.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (`final` != null) __obj.updateDynamic("final")(`final`.asInstanceOf[js.Any])
-    if (flush != null) __obj.updateDynamic("flush")(flush.asInstanceOf[js.Any])
-    if (highWaterMark != null) __obj.updateDynamic("highWaterMark")(highWaterMark.asInstanceOf[js.Any])
-    if (lineLength != null) __obj.updateDynamic("lineLength")(lineLength.asInstanceOf[js.Any])
-    if (!js.isUndefined(objectMode)) __obj.updateDynamic("objectMode")(objectMode.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (read != null) __obj.updateDynamic("read")(read.asInstanceOf[js.Any])
-    if (readableHighWaterMark != null) __obj.updateDynamic("readableHighWaterMark")(readableHighWaterMark.asInstanceOf[js.Any])
-    if (!js.isUndefined(readableObjectMode)) __obj.updateDynamic("readableObjectMode")(readableObjectMode.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
-    if (writableCorked != null) __obj.updateDynamic("writableCorked")(writableCorked.asInstanceOf[js.Any])
-    if (writableHighWaterMark != null) __obj.updateDynamic("writableHighWaterMark")(writableHighWaterMark.asInstanceOf[js.Any])
-    if (!js.isUndefined(writableObjectMode)) __obj.updateDynamic("writableObjectMode")(writableObjectMode.asInstanceOf[js.Any])
-    if (write != null) __obj.updateDynamic("write")(write.asInstanceOf[js.Any])
-    if (writev != null) __obj.updateDynamic("writev")(writev.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransformOptionslineLengt]
   }
+  @scala.inline
+  implicit class TransformOptionslineLengtOps[Self <: TransformOptionslineLengt] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowHalfOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHalfOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowHalfOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHalfOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoDestroy(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDestroy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoDestroy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDestroy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecodeStrings(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decodeStrings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecodeStrings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decodeStrings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultEncoding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultEncoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultEncoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestroy(
+      value: js.ThisFunction2[
+          /* this */ Transform, 
+          /* error */ js.Error | Null, 
+          /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
+          Unit
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestroy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmitClose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emitClose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmitClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emitClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncoding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFinal(
+      value: js.ThisFunction1[
+          /* this */ Transform, 
+          /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
+          Unit
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("final")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFinal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("final")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlush(value: js.ThisFunction1[/* this */ Transform, /* callback */ TransformCallback, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighWaterMark(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highWaterMark")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighWaterMark: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highWaterMark")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectMode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRead(value: js.ThisFunction1[/* this */ Transform, /* size */ Double, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRead: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadableHighWaterMark(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readableHighWaterMark")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadableHighWaterMark: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readableHighWaterMark")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadableObjectMode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readableObjectMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadableObjectMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readableObjectMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransform(
+      value: js.ThisFunction3[
+          /* this */ Transform, 
+          /* chunk */ js.Any, 
+          /* encoding */ String, 
+          /* callback */ TransformCallback, 
+          Unit
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWritableCorked(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writableCorked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWritableCorked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writableCorked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWritableHighWaterMark(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writableHighWaterMark")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWritableHighWaterMark: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writableHighWaterMark")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWritableObjectMode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writableObjectMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWritableObjectMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writableObjectMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrite(
+      value: js.ThisFunction3[
+          /* this */ Transform, 
+          /* chunk */ js.Any, 
+          /* encoding */ String, 
+          /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
+          Unit
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWritev(
+      value: js.ThisFunction2[
+          /* this */ Transform, 
+          /* chunks */ js.Array[AnonChunk], 
+          /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
+          Unit
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writev")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWritev: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writev")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

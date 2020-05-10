@@ -1,7 +1,7 @@
 package typingsSlinky.themeUi.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.HTMLImageElement
+import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.themeUiComponents.mod.AspectImageProps
 import typingsSlinky.themeUiComponents.mod.ForwardRef
 import scala.scalajs.js

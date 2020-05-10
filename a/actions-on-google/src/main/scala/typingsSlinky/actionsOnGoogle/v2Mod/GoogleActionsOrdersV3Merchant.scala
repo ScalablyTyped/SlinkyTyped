@@ -4,45 +4,103 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GoogleActionsOrdersV3Merchant extends js.Object {
   /**
     * Merchant's address.
     */
-  var address: js.UndefOr[GoogleActionsV2Location] = js.undefined
+  var address: js.UndefOr[GoogleActionsV2Location] = js.native
   /**
     * Optional ID assigned to merchant if any.
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * The image associated with the merchant.
     */
-  var image: js.UndefOr[GoogleActionsV2UiElementsImage] = js.undefined
+  var image: js.UndefOr[GoogleActionsV2UiElementsImage] = js.native
   /**
     * The name of the merchant like \"Panera Bread\".
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Merchant's phone numbers.
     */
-  var phoneNumbers: js.UndefOr[js.Array[GoogleActionsOrdersV3PhoneNumber]] = js.undefined
+  var phoneNumbers: js.UndefOr[js.Array[GoogleActionsOrdersV3PhoneNumber]] = js.native
 }
 
 object GoogleActionsOrdersV3Merchant {
   @scala.inline
-  def apply(
-    address: GoogleActionsV2Location = null,
-    id: String = null,
-    image: GoogleActionsV2UiElementsImage = null,
-    name: String = null,
-    phoneNumbers: js.Array[GoogleActionsOrdersV3PhoneNumber] = null
-  ): GoogleActionsOrdersV3Merchant = {
+  def apply(): GoogleActionsOrdersV3Merchant = {
     val __obj = js.Dynamic.literal()
-    if (address != null) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (phoneNumbers != null) __obj.updateDynamic("phoneNumbers")(phoneNumbers.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleActionsOrdersV3Merchant]
   }
+  @scala.inline
+  implicit class GoogleActionsOrdersV3MerchantOps[Self <: GoogleActionsOrdersV3Merchant] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: GoogleActionsV2Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage(value: GoogleActionsV2UiElementsImage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPhoneNumbers(value: js.Array[GoogleActionsOrdersV3PhoneNumber]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneNumbers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhoneNumbers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneNumbers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

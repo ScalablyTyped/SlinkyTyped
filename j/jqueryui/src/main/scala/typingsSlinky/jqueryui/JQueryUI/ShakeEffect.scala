@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ShakeEffect extends js.Object {
-  var direction: js.UndefOr[String] = js.undefined
-  var distance: js.UndefOr[Double] = js.undefined
-  var times: js.UndefOr[Double] = js.undefined
+  var direction: js.UndefOr[String] = js.native
+  var distance: js.UndefOr[Double] = js.native
+  var times: js.UndefOr[Double] = js.native
 }
 
 object ShakeEffect {
   @scala.inline
-  def apply(direction: String = null, distance: Int | Double = null, times: Int | Double = null): ShakeEffect = {
+  def apply(): ShakeEffect = {
     val __obj = js.Dynamic.literal()
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (distance != null) __obj.updateDynamic("distance")(distance.asInstanceOf[js.Any])
-    if (times != null) __obj.updateDynamic("times")(times.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShakeEffect]
   }
+  @scala.inline
+  implicit class ShakeEffectOps[Self <: ShakeEffect] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimes(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("times")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("times")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

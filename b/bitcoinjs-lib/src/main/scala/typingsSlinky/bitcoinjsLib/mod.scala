@@ -4,12 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.bip32.bip32Mod.BIP32Interface
 import typingsSlinky.bitcoinjsLib.addressMod.Base58CheckResult
 import typingsSlinky.bitcoinjsLib.addressMod.Bech32Result
-import typingsSlinky.bitcoinjsLib.bitcoinjsLibNumbers._4294967295
-import typingsSlinky.bitcoinjsLib.bitcoinjsLibNumbers.`0`
-import typingsSlinky.bitcoinjsLib.bitcoinjsLibNumbers.`128`
-import typingsSlinky.bitcoinjsLib.bitcoinjsLibNumbers.`1`
-import typingsSlinky.bitcoinjsLib.bitcoinjsLibNumbers.`2`
-import typingsSlinky.bitcoinjsLib.bitcoinjsLibNumbers.`3`
 import typingsSlinky.bitcoinjsLib.ecpairMod.ECPairOptions
 import typingsSlinky.bitcoinjsLib.networksMod.Network
 import typingsSlinky.bitcoinjsLib.paymentsMod.Payment
@@ -84,13 +78,13 @@ object mod extends js.Object {
   /* static members */
   @js.native
   object Transaction extends js.Object {
-    val ADVANCED_TRANSACTION_FLAG: `1` = js.native
-    val ADVANCED_TRANSACTION_MARKER: `0` = js.native
-    val DEFAULT_SEQUENCE: _4294967295 = js.native
-    val SIGHASH_ALL: `1` = js.native
-    val SIGHASH_ANYONECANPAY: `128` = js.native
-    val SIGHASH_NONE: `2` = js.native
-    val SIGHASH_SINGLE: `3` = js.native
+    val ADVANCED_TRANSACTION_FLAG: /* 1 */ Double = js.native
+    val ADVANCED_TRANSACTION_MARKER: /* 0 */ Double = js.native
+    val DEFAULT_SEQUENCE: /* 4294967295.0 */ Double = js.native
+    val SIGHASH_ALL: /* 1 */ Double = js.native
+    val SIGHASH_ANYONECANPAY: /* 128 */ Double = js.native
+    val SIGHASH_NONE: /* 2 */ Double = js.native
+    val SIGHASH_SINGLE: /* 3 */ Double = js.native
     def fromBuffer(buffer: Buffer): typingsSlinky.bitcoinjsLib.transactionMod.Transaction = js.native
     def fromBuffer(buffer: Buffer, _NO_STRICT: Boolean): typingsSlinky.bitcoinjsLib.transactionMod.Transaction = js.native
     def fromHex(hex: String): typingsSlinky.bitcoinjsLib.transactionMod.Transaction = js.native

@@ -9,7 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class default protected () extends ColumnFormatter {
   def this(parserOptions: ParserOptions) = this()
-  /* CompleteClass */
-  override def format(col: String): String = js.native
 }
 

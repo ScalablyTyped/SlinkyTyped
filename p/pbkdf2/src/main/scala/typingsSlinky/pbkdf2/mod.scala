@@ -1,7 +1,6 @@
 package typingsSlinky.pbkdf2
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +13,7 @@ object mod extends js.Object {
     salt: String,
     iterations: Double,
     keylen: Double,
-    callback: js.Function2[/* err */ Error, /* derivedKey */ Buffer, Unit]
+    callback: js.Function2[/* err */ js.Error, /* derivedKey */ Buffer, Unit]
   ): Unit = js.native
   def pbkdf2(
     password: String,
@@ -29,7 +28,7 @@ object mod extends js.Object {
     salt: Buffer,
     iterations: Double,
     keylen: Double,
-    callback: js.Function2[/* err */ Error, /* derivedKey */ Buffer, Unit]
+    callback: js.Function2[/* err */ js.Error, /* derivedKey */ Buffer, Unit]
   ): Unit = js.native
   def pbkdf2(
     password: String,
@@ -44,7 +43,7 @@ object mod extends js.Object {
     salt: String,
     iterations: Double,
     keylen: Double,
-    callback: js.Function2[/* err */ Error, /* derivedKey */ Buffer, Unit]
+    callback: js.Function2[/* err */ js.Error, /* derivedKey */ Buffer, Unit]
   ): Unit = js.native
   def pbkdf2(
     password: Buffer,
@@ -59,7 +58,7 @@ object mod extends js.Object {
     salt: Buffer,
     iterations: Double,
     keylen: Double,
-    callback: js.Function2[/* err */ Error, /* derivedKey */ Buffer, Unit]
+    callback: js.Function2[/* err */ js.Error, /* derivedKey */ Buffer, Unit]
   ): Unit = js.native
   def pbkdf2(
     password: Buffer,

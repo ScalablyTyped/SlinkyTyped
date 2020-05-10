@@ -53,30 +53,137 @@ trait SchemaContainerVersionHeader extends js.Object {
 
 object SchemaContainerVersionHeader {
   @scala.inline
-  def apply(
-    accountId: String = null,
-    containerId: String = null,
-    containerVersionId: String = null,
-    deleted: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    numMacros: String = null,
-    numRules: String = null,
-    numTags: String = null,
-    numTriggers: String = null,
-    numVariables: String = null
-  ): SchemaContainerVersionHeader = {
+  def apply(): SchemaContainerVersionHeader = {
     val __obj = js.Dynamic.literal()
-    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
-    if (containerId != null) __obj.updateDynamic("containerId")(containerId.asInstanceOf[js.Any])
-    if (containerVersionId != null) __obj.updateDynamic("containerVersionId")(containerVersionId.asInstanceOf[js.Any])
-    if (!js.isUndefined(deleted)) __obj.updateDynamic("deleted")(deleted.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (numMacros != null) __obj.updateDynamic("numMacros")(numMacros.asInstanceOf[js.Any])
-    if (numRules != null) __obj.updateDynamic("numRules")(numRules.asInstanceOf[js.Any])
-    if (numTags != null) __obj.updateDynamic("numTags")(numTags.asInstanceOf[js.Any])
-    if (numTriggers != null) __obj.updateDynamic("numTriggers")(numTriggers.asInstanceOf[js.Any])
-    if (numVariables != null) __obj.updateDynamic("numVariables")(numVariables.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaContainerVersionHeader]
   }
+  @scala.inline
+  implicit class SchemaContainerVersionHeaderOps[Self <: SchemaContainerVersionHeader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerVersionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerVersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerVersionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumMacros(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numMacros")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumMacros: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numMacros")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumRules(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numRules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumTags(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumTriggers(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numTriggers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumTriggers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numTriggers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumVariables(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numVariables")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

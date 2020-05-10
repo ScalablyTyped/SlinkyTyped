@@ -26,18 +26,65 @@ trait GetTemplateSummaryInput extends js.Object {
 
 object GetTemplateSummaryInput {
   @scala.inline
-  def apply(
-    StackName: StackNameOrId = null,
-    StackSetName: StackSetNameOrId = null,
-    TemplateBody: TemplateBody = null,
-    TemplateURL: TemplateURL = null
-  ): GetTemplateSummaryInput = {
+  def apply(): GetTemplateSummaryInput = {
     val __obj = js.Dynamic.literal()
-    if (StackName != null) __obj.updateDynamic("StackName")(StackName.asInstanceOf[js.Any])
-    if (StackSetName != null) __obj.updateDynamic("StackSetName")(StackSetName.asInstanceOf[js.Any])
-    if (TemplateBody != null) __obj.updateDynamic("TemplateBody")(TemplateBody.asInstanceOf[js.Any])
-    if (TemplateURL != null) __obj.updateDynamic("TemplateURL")(TemplateURL.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTemplateSummaryInput]
   }
+  @scala.inline
+  implicit class GetTemplateSummaryInputOps[Self <: GetTemplateSummaryInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStackName(value: StackNameOrId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackSetName(value: StackSetNameOrId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackSetName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateBody(value: TemplateBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateURL(value: TemplateURL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateURL")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

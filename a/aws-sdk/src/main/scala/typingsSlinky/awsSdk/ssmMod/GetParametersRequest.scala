@@ -18,10 +18,35 @@ trait GetParametersRequest extends js.Object {
 
 object GetParametersRequest {
   @scala.inline
-  def apply(Names: ParameterNameList, WithDecryption: js.UndefOr[scala.Boolean] = js.undefined): GetParametersRequest = {
+  def apply(Names: ParameterNameList): GetParametersRequest = {
     val __obj = js.Dynamic.literal(Names = Names.asInstanceOf[js.Any])
-    if (!js.isUndefined(WithDecryption)) __obj.updateDynamic("WithDecryption")(WithDecryption.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetParametersRequest]
   }
+  @scala.inline
+  implicit class GetParametersRequestOps[Self <: GetParametersRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNames(value: ParameterNameList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Names")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWithDecryption(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WithDecryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWithDecryption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WithDecryption")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

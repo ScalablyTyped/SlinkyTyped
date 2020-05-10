@@ -18,11 +18,41 @@ trait Country extends js.Object {
 
 object Country {
   @scala.inline
-  def apply(CountryCode: String = null, CountryName: String = null): Country = {
+  def apply(): Country = {
     val __obj = js.Dynamic.literal()
-    if (CountryCode != null) __obj.updateDynamic("CountryCode")(CountryCode.asInstanceOf[js.Any])
-    if (CountryName != null) __obj.updateDynamic("CountryName")(CountryName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Country]
   }
+  @scala.inline
+  implicit class CountryOps[Self <: Country] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCountryCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CountryCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountryCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CountryCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountryName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CountryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountryName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CountryName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

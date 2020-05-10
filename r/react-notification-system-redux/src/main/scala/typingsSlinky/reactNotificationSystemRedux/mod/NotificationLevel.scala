@@ -14,14 +14,12 @@ trait NotificationLevel extends js.Object
 
 object NotificationLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.reactNotificationSystemRedux.reactNotificationSystemReduxStrings.error = "error".asInstanceOf[typingsSlinky.reactNotificationSystemRedux.reactNotificationSystemReduxStrings.error]
   @scala.inline
-  def error: typingsSlinky.reactNotificationSystemRedux.reactNotificationSystemReduxStrings.error = this.cast("error")
+  def info: typingsSlinky.reactNotificationSystemRedux.reactNotificationSystemReduxStrings.info = "info".asInstanceOf[typingsSlinky.reactNotificationSystemRedux.reactNotificationSystemReduxStrings.info]
   @scala.inline
-  def info: typingsSlinky.reactNotificationSystemRedux.reactNotificationSystemReduxStrings.info = this.cast("info")
+  def success: typingsSlinky.reactNotificationSystemRedux.reactNotificationSystemReduxStrings.success = "success".asInstanceOf[typingsSlinky.reactNotificationSystemRedux.reactNotificationSystemReduxStrings.success]
   @scala.inline
-  def success: typingsSlinky.reactNotificationSystemRedux.reactNotificationSystemReduxStrings.success = this.cast("success")
-  @scala.inline
-  def warning: typingsSlinky.reactNotificationSystemRedux.reactNotificationSystemReduxStrings.warning = this.cast("warning")
+  def warning: typingsSlinky.reactNotificationSystemRedux.reactNotificationSystemReduxStrings.warning = "warning".asInstanceOf[typingsSlinky.reactNotificationSystemRedux.reactNotificationSystemReduxStrings.warning]
 }
 

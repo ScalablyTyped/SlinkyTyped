@@ -21,10 +21,29 @@ trait SchemaGoogleCloudHealthcareV1alpha2FhirRestGcsDestination extends js.Objec
 
 object SchemaGoogleCloudHealthcareV1alpha2FhirRestGcsDestination {
   @scala.inline
-  def apply(uriPrefix: String = null): SchemaGoogleCloudHealthcareV1alpha2FhirRestGcsDestination = {
+  def apply(): SchemaGoogleCloudHealthcareV1alpha2FhirRestGcsDestination = {
     val __obj = js.Dynamic.literal()
-    if (uriPrefix != null) __obj.updateDynamic("uriPrefix")(uriPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudHealthcareV1alpha2FhirRestGcsDestination]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudHealthcareV1alpha2FhirRestGcsDestinationOps[Self <: SchemaGoogleCloudHealthcareV1alpha2FhirRestGcsDestination] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUriPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uriPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUriPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uriPrefix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

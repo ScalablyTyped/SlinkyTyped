@@ -34,22 +34,89 @@ trait SavingsPlansPurchaseRecommendation extends js.Object {
 
 object SavingsPlansPurchaseRecommendation {
   @scala.inline
-  def apply(
-    LookbackPeriodInDays: LookbackPeriodInDays = null,
-    PaymentOption: PaymentOption = null,
-    SavingsPlansPurchaseRecommendationDetails: SavingsPlansPurchaseRecommendationDetailList = null,
-    SavingsPlansPurchaseRecommendationSummary: SavingsPlansPurchaseRecommendationSummary = null,
-    SavingsPlansType: SupportedSavingsPlansType = null,
-    TermInYears: TermInYears = null
-  ): SavingsPlansPurchaseRecommendation = {
+  def apply(): SavingsPlansPurchaseRecommendation = {
     val __obj = js.Dynamic.literal()
-    if (LookbackPeriodInDays != null) __obj.updateDynamic("LookbackPeriodInDays")(LookbackPeriodInDays.asInstanceOf[js.Any])
-    if (PaymentOption != null) __obj.updateDynamic("PaymentOption")(PaymentOption.asInstanceOf[js.Any])
-    if (SavingsPlansPurchaseRecommendationDetails != null) __obj.updateDynamic("SavingsPlansPurchaseRecommendationDetails")(SavingsPlansPurchaseRecommendationDetails.asInstanceOf[js.Any])
-    if (SavingsPlansPurchaseRecommendationSummary != null) __obj.updateDynamic("SavingsPlansPurchaseRecommendationSummary")(SavingsPlansPurchaseRecommendationSummary.asInstanceOf[js.Any])
-    if (SavingsPlansType != null) __obj.updateDynamic("SavingsPlansType")(SavingsPlansType.asInstanceOf[js.Any])
-    if (TermInYears != null) __obj.updateDynamic("TermInYears")(TermInYears.asInstanceOf[js.Any])
     __obj.asInstanceOf[SavingsPlansPurchaseRecommendation]
   }
+  @scala.inline
+  implicit class SavingsPlansPurchaseRecommendationOps[Self <: SavingsPlansPurchaseRecommendation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLookbackPeriodInDays(value: LookbackPeriodInDays): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LookbackPeriodInDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLookbackPeriodInDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LookbackPeriodInDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaymentOption(value: PaymentOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaymentOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaymentOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaymentOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSavingsPlansPurchaseRecommendationDetails(value: SavingsPlansPurchaseRecommendationDetailList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SavingsPlansPurchaseRecommendationDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSavingsPlansPurchaseRecommendationDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SavingsPlansPurchaseRecommendationDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSavingsPlansPurchaseRecommendationSummary(value: SavingsPlansPurchaseRecommendationSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SavingsPlansPurchaseRecommendationSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSavingsPlansPurchaseRecommendationSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SavingsPlansPurchaseRecommendationSummary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSavingsPlansType(value: SupportedSavingsPlansType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SavingsPlansType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSavingsPlansType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SavingsPlansType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTermInYears(value: TermInYears): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TermInYears")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTermInYears: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TermInYears")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

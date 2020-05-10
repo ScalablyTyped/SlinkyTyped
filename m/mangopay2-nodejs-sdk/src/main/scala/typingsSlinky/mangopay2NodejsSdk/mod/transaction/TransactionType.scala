@@ -13,12 +13,10 @@ trait TransactionType extends js.Object
 
 object TransactionType {
   @scala.inline
-  def PAYIN: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.PAYIN = this.cast("PAYIN")
+  def PAYIN: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.PAYIN = "PAYIN".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.PAYIN]
   @scala.inline
-  def PAYOUT: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.PAYOUT = this.cast("PAYOUT")
+  def PAYOUT: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.PAYOUT = "PAYOUT".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.PAYOUT]
   @scala.inline
-  def TRANSFER: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.TRANSFER = this.cast("TRANSFER")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TRANSFER: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.TRANSFER = "TRANSFER".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.TRANSFER]
 }
 

@@ -106,7 +106,7 @@ object coreFirestoreClientMod extends js.Object {
       */
     var verifyNotTerminated: js.Any = js.native
     def addSnapshotsInSyncListener(observer: Observer[Unit]): Unit = js.native
-    def clientTerminated(): Boolean = js.native
+    def clientTerminated: Boolean = js.native
     def databaseId(): DatabaseId = js.native
     /** Disables the network connection. Pending operations will not complete. */
     def disableNetwork(): js.Promise[Unit] = js.native

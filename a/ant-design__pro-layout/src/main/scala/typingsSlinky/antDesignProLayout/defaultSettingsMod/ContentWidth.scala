@@ -12,10 +12,8 @@ trait ContentWidth extends js.Object
 
 object ContentWidth {
   @scala.inline
-  def Fixed: typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.Fixed = this.cast("Fixed")
+  def Fixed: typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.Fixed = "Fixed".asInstanceOf[typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.Fixed]
   @scala.inline
-  def Fluid: typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.Fluid = this.cast("Fluid")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Fluid: typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.Fluid = "Fluid".asInstanceOf[typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.Fluid]
 }
 

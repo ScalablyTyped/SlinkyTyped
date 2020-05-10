@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   def convertKeyPair(keyPair: SignKeyPair): BoxKeyPair | Null = js.native
-  def convertPublicKey(publicKey: scala.scalajs.js.typedarray.Uint8Array): scala.scalajs.js.typedarray.Uint8Array | Null = js.native
-  def convertSecretKey(secretKey: scala.scalajs.js.typedarray.Uint8Array): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def convertPublicKey(publicKey: js.typedarray.Uint8Array): js.typedarray.Uint8Array | Null = js.native
+  def convertSecretKey(secretKey: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
 }
 

@@ -18,22 +18,20 @@ trait RatingIrelandMoviesType extends js.Object
 
 object RatingIrelandMoviesType {
   @scala.inline
-  def adults: typingsSlinky.microsoftGraph.microsoftGraphStrings.adults = this.cast("adults")
+  def adults: typingsSlinky.microsoftGraph.microsoftGraphStrings.adults = "adults".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.adults]
   @scala.inline
-  def agesAbove12: typingsSlinky.microsoftGraph.microsoftGraphStrings.agesAbove12 = this.cast("agesAbove12")
+  def agesAbove12: typingsSlinky.microsoftGraph.microsoftGraphStrings.agesAbove12 = "agesAbove12".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.agesAbove12]
   @scala.inline
-  def agesAbove15: typingsSlinky.microsoftGraph.microsoftGraphStrings.agesAbove15 = this.cast("agesAbove15")
+  def agesAbove15: typingsSlinky.microsoftGraph.microsoftGraphStrings.agesAbove15 = "agesAbove15".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.agesAbove15]
   @scala.inline
-  def agesAbove16: typingsSlinky.microsoftGraph.microsoftGraphStrings.agesAbove16 = this.cast("agesAbove16")
+  def agesAbove16: typingsSlinky.microsoftGraph.microsoftGraphStrings.agesAbove16 = "agesAbove16".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.agesAbove16]
   @scala.inline
-  def allAllowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.allAllowed = this.cast("allAllowed")
+  def allAllowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.allAllowed = "allAllowed".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.allAllowed]
   @scala.inline
-  def allBlocked: typingsSlinky.microsoftGraph.microsoftGraphStrings.allBlocked = this.cast("allBlocked")
+  def allBlocked: typingsSlinky.microsoftGraph.microsoftGraphStrings.allBlocked = "allBlocked".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.allBlocked]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def general: typingsSlinky.microsoftGraph.microsoftGraphStrings.general = "general".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.general]
   @scala.inline
-  def general: typingsSlinky.microsoftGraph.microsoftGraphStrings.general = this.cast("general")
-  @scala.inline
-  def parentalGuidance: typingsSlinky.microsoftGraph.microsoftGraphStrings.parentalGuidance = this.cast("parentalGuidance")
+  def parentalGuidance: typingsSlinky.microsoftGraph.microsoftGraphStrings.parentalGuidance = "parentalGuidance".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.parentalGuidance]
 }
 

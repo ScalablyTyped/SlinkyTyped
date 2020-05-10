@@ -34,22 +34,89 @@ trait DeliverabilityTestReport extends js.Object {
 
 object DeliverabilityTestReport {
   @scala.inline
-  def apply(
-    CreateDate: js.Date = null,
-    DeliverabilityTestStatus: DeliverabilityTestStatus = null,
-    FromEmailAddress: EmailAddress = null,
-    ReportId: ReportId = null,
-    ReportName: ReportName = null,
-    Subject: DeliverabilityTestSubject = null
-  ): DeliverabilityTestReport = {
+  def apply(): DeliverabilityTestReport = {
     val __obj = js.Dynamic.literal()
-    if (CreateDate != null) __obj.updateDynamic("CreateDate")(CreateDate.asInstanceOf[js.Any])
-    if (DeliverabilityTestStatus != null) __obj.updateDynamic("DeliverabilityTestStatus")(DeliverabilityTestStatus.asInstanceOf[js.Any])
-    if (FromEmailAddress != null) __obj.updateDynamic("FromEmailAddress")(FromEmailAddress.asInstanceOf[js.Any])
-    if (ReportId != null) __obj.updateDynamic("ReportId")(ReportId.asInstanceOf[js.Any])
-    if (ReportName != null) __obj.updateDynamic("ReportName")(ReportName.asInstanceOf[js.Any])
-    if (Subject != null) __obj.updateDynamic("Subject")(Subject.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeliverabilityTestReport]
   }
+  @scala.inline
+  implicit class DeliverabilityTestReportOps[Self <: DeliverabilityTestReport] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeliverabilityTestStatus(value: DeliverabilityTestStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliverabilityTestStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeliverabilityTestStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliverabilityTestStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFromEmailAddress(value: EmailAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FromEmailAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromEmailAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FromEmailAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportId(value: ReportId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportName(value: ReportName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubject(value: DeliverabilityTestSubject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

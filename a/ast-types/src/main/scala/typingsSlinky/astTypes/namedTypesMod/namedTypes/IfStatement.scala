@@ -13,17 +13,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Statement, 'type'> */
+@js.native
 trait IfStatement
   extends ASTNode
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var alternate: js.UndefOr[StatementKind | Null] = js.undefined
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var consequent: StatementKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var test: ExpressionKind
-  var `type`: typingsSlinky.astTypes.astTypesStrings.IfStatement
+  var alternate: js.UndefOr[StatementKind | Null] = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var consequent: StatementKind = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var test: ExpressionKind = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.IfStatement = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.IfStatement")

@@ -6,8 +6,5 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.ApplicationModel.Background.BackgroundTaskDeferral")
 @js.native
-class BackgroundTaskDeferral () extends IBackgroundTaskDeferral {
-  /* CompleteClass */
-  override def complete(): Unit = js.native
-}
+class BackgroundTaskDeferral () extends IBackgroundTaskDeferral
 

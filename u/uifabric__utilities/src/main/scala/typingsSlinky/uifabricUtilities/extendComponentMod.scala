@@ -1,5 +1,6 @@
 package typingsSlinky.uifabricUtilities
 
+import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +13,7 @@ object extendComponentMod extends js.Object {
     parent: T,
     methods: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in keyof T ]:? T[key]}
-    */ typingsSlinky.uifabricUtilities.uifabricUtilitiesStrings.extendComponent with T
+    */ typingsSlinky.uifabricUtilities.uifabricUtilitiesStrings.extendComponent with TopLevel[T]
   ): Unit = js.native
 }
 

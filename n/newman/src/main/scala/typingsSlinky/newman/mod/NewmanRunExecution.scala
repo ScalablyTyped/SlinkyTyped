@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NewmanRunExecution extends js.Object {
-  var assertions: js.Array[NewmanRunExecutionAssertion]
-  var item: NewmanRunExecutionItem
+  var assertions: js.Array[NewmanRunExecutionAssertion] = js.native
+  var item: NewmanRunExecutionItem = js.native
 }
 
 object NewmanRunExecution {
   @scala.inline
   def apply(assertions: js.Array[NewmanRunExecutionAssertion], item: NewmanRunExecutionItem): NewmanRunExecution = {
     val __obj = js.Dynamic.literal(assertions = assertions.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[NewmanRunExecution]
   }
+  @scala.inline
+  implicit class NewmanRunExecutionOps[Self <: NewmanRunExecution] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssertions(value: js.Array[NewmanRunExecutionAssertion]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assertions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItem(value: NewmanRunExecutionItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

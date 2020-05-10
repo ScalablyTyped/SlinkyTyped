@@ -89,26 +89,113 @@ trait SchemaDataSource extends js.Object {
 
 object SchemaDataSource {
   @scala.inline
-  def apply(
-    application: SchemaApplication = null,
-    dataQualityStandard: js.Array[String] = null,
-    dataStreamId: String = null,
-    dataStreamName: String = null,
-    dataType: SchemaDataType = null,
-    device: SchemaDevice = null,
-    name: String = null,
-    `type`: String = null
-  ): SchemaDataSource = {
+  def apply(): SchemaDataSource = {
     val __obj = js.Dynamic.literal()
-    if (application != null) __obj.updateDynamic("application")(application.asInstanceOf[js.Any])
-    if (dataQualityStandard != null) __obj.updateDynamic("dataQualityStandard")(dataQualityStandard.asInstanceOf[js.Any])
-    if (dataStreamId != null) __obj.updateDynamic("dataStreamId")(dataStreamId.asInstanceOf[js.Any])
-    if (dataStreamName != null) __obj.updateDynamic("dataStreamName")(dataStreamName.asInstanceOf[js.Any])
-    if (dataType != null) __obj.updateDynamic("dataType")(dataType.asInstanceOf[js.Any])
-    if (device != null) __obj.updateDynamic("device")(device.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDataSource]
   }
+  @scala.inline
+  implicit class SchemaDataSourceOps[Self <: SchemaDataSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplication(value: SchemaApplication): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("application")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplication: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("application")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataQualityStandard(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataQualityStandard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataQualityStandard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataQualityStandard")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataStreamId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataStreamId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataStreamId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataStreamId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataStreamName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataStreamName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataStreamName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataStreamName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataType(value: SchemaDataType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDevice(value: SchemaDevice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,11 +18,41 @@ trait DescribeSpotFleetRequestsResponse extends js.Object {
 
 object DescribeSpotFleetRequestsResponse {
   @scala.inline
-  def apply(NextToken: String = null, SpotFleetRequestConfigs: SpotFleetRequestConfigSet = null): DescribeSpotFleetRequestsResponse = {
+  def apply(): DescribeSpotFleetRequestsResponse = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (SpotFleetRequestConfigs != null) __obj.updateDynamic("SpotFleetRequestConfigs")(SpotFleetRequestConfigs.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeSpotFleetRequestsResponse]
   }
+  @scala.inline
+  implicit class DescribeSpotFleetRequestsResponseOps[Self <: DescribeSpotFleetRequestsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpotFleetRequestConfigs(value: SpotFleetRequestConfigSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotFleetRequestConfigs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpotFleetRequestConfigs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotFleetRequestConfigs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

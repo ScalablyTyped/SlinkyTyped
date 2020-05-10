@@ -13,12 +13,10 @@ trait LifeCycleAction extends js.Object
 
 object LifeCycleAction {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def create: typingsSlinky.dynogels.dynogelsStrings.create = "create".asInstanceOf[typingsSlinky.dynogels.dynogelsStrings.create]
   @scala.inline
-  def create: typingsSlinky.dynogels.dynogelsStrings.create = this.cast("create")
+  def destroy: typingsSlinky.dynogels.dynogelsStrings.destroy = "destroy".asInstanceOf[typingsSlinky.dynogels.dynogelsStrings.destroy]
   @scala.inline
-  def destroy: typingsSlinky.dynogels.dynogelsStrings.destroy = this.cast("destroy")
-  @scala.inline
-  def update: typingsSlinky.dynogels.dynogelsStrings.update = this.cast("update")
+  def update: typingsSlinky.dynogels.dynogelsStrings.update = "update".asInstanceOf[typingsSlinky.dynogels.dynogelsStrings.update]
 }
 

@@ -62,36 +62,173 @@ trait DocumentVersionMetadata extends js.Object {
 
 object DocumentVersionMetadata {
   @scala.inline
-  def apply(
-    ContentCreatedTimestamp: js.Date = null,
-    ContentModifiedTimestamp: js.Date = null,
-    ContentType: DocumentContentType = null,
-    CreatedTimestamp: js.Date = null,
-    CreatorId: IdType = null,
-    Id: DocumentVersionIdType = null,
-    ModifiedTimestamp: js.Date = null,
-    Name: ResourceNameType = null,
-    Signature: HashType = null,
-    Size: Int | Double = null,
-    Source: DocumentSourceUrlMap = null,
-    Status: DocumentStatusType = null,
-    Thumbnail: DocumentThumbnailUrlMap = null
-  ): DocumentVersionMetadata = {
+  def apply(): DocumentVersionMetadata = {
     val __obj = js.Dynamic.literal()
-    if (ContentCreatedTimestamp != null) __obj.updateDynamic("ContentCreatedTimestamp")(ContentCreatedTimestamp.asInstanceOf[js.Any])
-    if (ContentModifiedTimestamp != null) __obj.updateDynamic("ContentModifiedTimestamp")(ContentModifiedTimestamp.asInstanceOf[js.Any])
-    if (ContentType != null) __obj.updateDynamic("ContentType")(ContentType.asInstanceOf[js.Any])
-    if (CreatedTimestamp != null) __obj.updateDynamic("CreatedTimestamp")(CreatedTimestamp.asInstanceOf[js.Any])
-    if (CreatorId != null) __obj.updateDynamic("CreatorId")(CreatorId.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (ModifiedTimestamp != null) __obj.updateDynamic("ModifiedTimestamp")(ModifiedTimestamp.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (Signature != null) __obj.updateDynamic("Signature")(Signature.asInstanceOf[js.Any])
-    if (Size != null) __obj.updateDynamic("Size")(Size.asInstanceOf[js.Any])
-    if (Source != null) __obj.updateDynamic("Source")(Source.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (Thumbnail != null) __obj.updateDynamic("Thumbnail")(Thumbnail.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentVersionMetadata]
   }
+  @scala.inline
+  implicit class DocumentVersionMetadataOps[Self <: DocumentVersionMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentCreatedTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentCreatedTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentCreatedTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentCreatedTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentModifiedTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentModifiedTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentModifiedTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentModifiedTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentType(value: DocumentContentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatedTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatorId(value: IdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatorId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatorId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatorId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: DocumentVersionIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModifiedTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModifiedTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModifiedTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModifiedTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: ResourceNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignature(value: HashType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Signature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Signature")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: SizeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: DocumentSourceUrlMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: DocumentStatusType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThumbnail(value: DocumentThumbnailUrlMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Thumbnail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThumbnail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Thumbnail")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

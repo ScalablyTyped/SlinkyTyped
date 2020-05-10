@@ -45,24 +45,101 @@ trait SchemaTableCell extends js.Object {
 
 object SchemaTableCell {
   @scala.inline
-  def apply(
-    content: js.Array[SchemaStructuralElement] = null,
-    endIndex: Int | Double = null,
-    startIndex: Int | Double = null,
-    suggestedDeletionIds: js.Array[String] = null,
-    suggestedInsertionIds: js.Array[String] = null,
-    suggestedTableCellStyleChanges: StringDictionary[SchemaSuggestedTableCellStyle] = null,
-    tableCellStyle: SchemaTableCellStyle = null
-  ): SchemaTableCell = {
+  def apply(): SchemaTableCell = {
     val __obj = js.Dynamic.literal()
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (endIndex != null) __obj.updateDynamic("endIndex")(endIndex.asInstanceOf[js.Any])
-    if (startIndex != null) __obj.updateDynamic("startIndex")(startIndex.asInstanceOf[js.Any])
-    if (suggestedDeletionIds != null) __obj.updateDynamic("suggestedDeletionIds")(suggestedDeletionIds.asInstanceOf[js.Any])
-    if (suggestedInsertionIds != null) __obj.updateDynamic("suggestedInsertionIds")(suggestedInsertionIds.asInstanceOf[js.Any])
-    if (suggestedTableCellStyleChanges != null) __obj.updateDynamic("suggestedTableCellStyleChanges")(suggestedTableCellStyleChanges.asInstanceOf[js.Any])
-    if (tableCellStyle != null) __obj.updateDynamic("tableCellStyle")(tableCellStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTableCell]
   }
+  @scala.inline
+  implicit class SchemaTableCellOps[Self <: SchemaTableCell] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: js.Array[SchemaStructuralElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedDeletionIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedDeletionIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedDeletionIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedDeletionIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedInsertionIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedInsertionIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedInsertionIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedInsertionIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedTableCellStyleChanges(value: StringDictionary[SchemaSuggestedTableCellStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedTableCellStyleChanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedTableCellStyleChanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedTableCellStyleChanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableCellStyle(value: SchemaTableCellStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableCellStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellStyle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 object kdfWithCounter extends js.Object {
   /**
     * ANS X9.63 Key Derivation Function having a "Counter" as a parameter
-    * 
+    *
     * @param {string} hashFunction Used hash function
     * @param {ArrayBuffer} Zbuffer ArrayBuffer containing ECDH shared secret to derive from
     * @param {number} Counter
@@ -18,9 +18,9 @@ object kdfWithCounter extends js.Object {
     */
   def apply(
     hashFunction: String,
-    Zbuffer: scala.scalajs.js.typedarray.ArrayBuffer,
+    Zbuffer: js.typedarray.ArrayBuffer,
     Counter: Double,
-    SharedInfo: scala.scalajs.js.typedarray.ArrayBuffer
+    SharedInfo: js.typedarray.ArrayBuffer
   ): js.Thenable[AnonCounter] = js.native
 }
 

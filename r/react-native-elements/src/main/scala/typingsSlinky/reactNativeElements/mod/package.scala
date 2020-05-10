@@ -30,7 +30,7 @@ package object mod {
   type IconType = typingsSlinky.reactNativeElements.mod._IconType | java.lang.String
   type RecursivePartial[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]:? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias react-native-elements.react-native-elements.RecursivePartial<T[P]> * / object}
-    */ typingsSlinky.reactNativeElements.reactNativeElementsStrings.RecursivePartial with js.Any
+    */ typingsSlinky.reactNativeElements.reactNativeElementsStrings.RecursivePartial with org.scalablytyped.runtime.TopLevel[js.Any]
   type ReplaceTheme = js.Function1[
     /* updates */ typingsSlinky.reactNativeElements.RecursivePartialFullTheme, 
     scala.Unit

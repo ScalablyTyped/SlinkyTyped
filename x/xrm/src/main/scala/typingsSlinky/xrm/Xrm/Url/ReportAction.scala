@@ -16,10 +16,8 @@ trait ReportAction extends js.Object
 
 object ReportAction {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def filter: typingsSlinky.xrm.xrmStrings.filter = "filter".asInstanceOf[typingsSlinky.xrm.xrmStrings.filter]
   @scala.inline
-  def filter: typingsSlinky.xrm.xrmStrings.filter = this.cast("filter")
-  @scala.inline
-  def run: typingsSlinky.xrm.xrmStrings.run = this.cast("run")
+  def run: typingsSlinky.xrm.xrmStrings.run = "run".asInstanceOf[typingsSlinky.xrm.xrmStrings.run]
 }
 

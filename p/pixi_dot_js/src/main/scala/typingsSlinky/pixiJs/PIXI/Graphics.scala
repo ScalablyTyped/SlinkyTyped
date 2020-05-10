@@ -138,7 +138,7 @@ class Graphics () extends Container {
     * @protected
     * @member {Float32Array} PIXI.Graphics#vertexData
     */
-  var vertexData: scala.scalajs.js.typedarray.Float32Array = js.native
+  var vertexData: js.typedarray.Float32Array = js.native
   /**
     * Initialize the curve
     *

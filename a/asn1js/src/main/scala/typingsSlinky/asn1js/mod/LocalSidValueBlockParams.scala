@@ -4,33 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LocalSidValueBlockParams extends LocalHexBlockParams {
-  var isFirstSid: js.UndefOr[scala.Boolean] = js.undefined
-  var valueDec: js.UndefOr[Double] = js.undefined
+  var isFirstSid: js.UndefOr[scala.Boolean] = js.native
+  var valueDec: js.UndefOr[Double] = js.native
 }
 
 object LocalSidValueBlockParams {
   @scala.inline
-  def apply(
-    blockLength: Int | Double = null,
-    error: String = null,
-    isFirstSid: js.UndefOr[scala.Boolean] = js.undefined,
-    isHexOnly: js.UndefOr[scala.Boolean] = js.undefined,
-    valueBeforeDecode: scala.scalajs.js.typedarray.ArrayBuffer = null,
-    valueDec: Int | Double = null,
-    valueHex: scala.scalajs.js.typedarray.ArrayBuffer = null,
-    warnings: js.Array[String] = null
-  ): LocalSidValueBlockParams = {
+  def apply(): LocalSidValueBlockParams = {
     val __obj = js.Dynamic.literal()
-    if (blockLength != null) __obj.updateDynamic("blockLength")(blockLength.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (!js.isUndefined(isFirstSid)) __obj.updateDynamic("isFirstSid")(isFirstSid.asInstanceOf[js.Any])
-    if (!js.isUndefined(isHexOnly)) __obj.updateDynamic("isHexOnly")(isHexOnly.asInstanceOf[js.Any])
-    if (valueBeforeDecode != null) __obj.updateDynamic("valueBeforeDecode")(valueBeforeDecode.asInstanceOf[js.Any])
-    if (valueDec != null) __obj.updateDynamic("valueDec")(valueDec.asInstanceOf[js.Any])
-    if (valueHex != null) __obj.updateDynamic("valueHex")(valueHex.asInstanceOf[js.Any])
-    if (warnings != null) __obj.updateDynamic("warnings")(warnings.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocalSidValueBlockParams]
   }
+  @scala.inline
+  implicit class LocalSidValueBlockParamsOps[Self <: LocalSidValueBlockParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsFirstSid(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFirstSid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsFirstSid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFirstSid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueDec(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueDec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueDec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueDec")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

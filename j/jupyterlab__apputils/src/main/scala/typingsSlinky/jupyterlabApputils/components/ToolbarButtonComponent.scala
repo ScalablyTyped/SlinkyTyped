@@ -1,41 +1,38 @@
 package typingsSlinky.jupyterlabApputils.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.jupyterlabApputils.toolbarMod.ToolbarButtonComponent.IProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ToolbarButtonComponent
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object ToolbarButtonComponent {
   @JSImport("@jupyterlab/apputils", "ToolbarButtonComponent")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, label */
-  def apply(
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    iconClassName: String = null,
-    iconLabel: String = null,
-    onClick: () => Unit = null,
-    tooltip: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (iconClassName != null) __obj.updateDynamic("iconClassName")(iconClassName.asInstanceOf[js.Any])
-    if (iconLabel != null) __obj.updateDynamic("iconLabel")(iconLabel.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction0(onClick))
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enabled(value: Boolean): this.type = set("enabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconClassName(value: String): this.type = set("iconClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconLabel(value: String): this.type = set("iconLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: () => Unit): this.type = set("onClick", js.Any.fromFunction0(value))
+    @scala.inline
+    def tooltip(value: String): this.type = set("tooltip", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IProps
+  
+  def withProps(p: IProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ToolbarButtonComponent.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

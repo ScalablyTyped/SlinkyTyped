@@ -33,12 +33,53 @@ trait SchemaPricePerBuyer extends js.Object {
 
 object SchemaPricePerBuyer {
   @scala.inline
-  def apply(advertiserIds: js.Array[String] = null, buyer: SchemaBuyer = null, price: SchemaPrice = null): SchemaPricePerBuyer = {
+  def apply(): SchemaPricePerBuyer = {
     val __obj = js.Dynamic.literal()
-    if (advertiserIds != null) __obj.updateDynamic("advertiserIds")(advertiserIds.asInstanceOf[js.Any])
-    if (buyer != null) __obj.updateDynamic("buyer")(buyer.asInstanceOf[js.Any])
-    if (price != null) __obj.updateDynamic("price")(price.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPricePerBuyer]
   }
+  @scala.inline
+  implicit class SchemaPricePerBuyerOps[Self <: SchemaPricePerBuyer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdvertiserIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdvertiserIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuyer(value: SchemaBuyer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buyer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuyer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buyer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrice(value: SchemaPrice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

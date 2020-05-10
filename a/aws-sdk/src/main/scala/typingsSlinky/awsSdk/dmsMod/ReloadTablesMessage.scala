@@ -22,14 +22,41 @@ trait ReloadTablesMessage extends js.Object {
 
 object ReloadTablesMessage {
   @scala.inline
-  def apply(
-    ReplicationTaskArn: String,
-    TablesToReload: TableListToReload,
-    ReloadOption: ReloadOptionValue = null
-  ): ReloadTablesMessage = {
+  def apply(ReplicationTaskArn: String, TablesToReload: TableListToReload): ReloadTablesMessage = {
     val __obj = js.Dynamic.literal(ReplicationTaskArn = ReplicationTaskArn.asInstanceOf[js.Any], TablesToReload = TablesToReload.asInstanceOf[js.Any])
-    if (ReloadOption != null) __obj.updateDynamic("ReloadOption")(ReloadOption.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReloadTablesMessage]
   }
+  @scala.inline
+  implicit class ReloadTablesMessageOps[Self <: ReloadTablesMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReplicationTaskArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTablesToReload(value: TableListToReload): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TablesToReload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReloadOption(value: ReloadOptionValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReloadOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReloadOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReloadOption")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

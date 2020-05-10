@@ -15,16 +15,14 @@ trait OscillatorType extends js.Object
 
 object OscillatorType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def custom: typingsSlinky.std.stdStrings.custom = "custom".asInstanceOf[typingsSlinky.std.stdStrings.custom]
   @scala.inline
-  def custom: typingsSlinky.std.stdStrings.custom = this.cast("custom")
+  def sawtooth: typingsSlinky.std.stdStrings.sawtooth = "sawtooth".asInstanceOf[typingsSlinky.std.stdStrings.sawtooth]
   @scala.inline
-  def sawtooth: typingsSlinky.std.stdStrings.sawtooth = this.cast("sawtooth")
+  def sine: typingsSlinky.std.stdStrings.sine = "sine".asInstanceOf[typingsSlinky.std.stdStrings.sine]
   @scala.inline
-  def sine: typingsSlinky.std.stdStrings.sine = this.cast("sine")
+  def square: typingsSlinky.std.stdStrings.square = "square".asInstanceOf[typingsSlinky.std.stdStrings.square]
   @scala.inline
-  def square: typingsSlinky.std.stdStrings.square = this.cast("square")
-  @scala.inline
-  def triangle: typingsSlinky.std.stdStrings.triangle = this.cast("triangle")
+  def triangle: typingsSlinky.std.stdStrings.triangle = "triangle".asInstanceOf[typingsSlinky.std.stdStrings.triangle]
 }
 

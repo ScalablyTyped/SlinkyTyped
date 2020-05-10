@@ -16,18 +16,16 @@ trait RTCStatsIceCandidatePairState extends js.Object
 
 object RTCStatsIceCandidatePairState {
   @scala.inline
-  def cancelled: typingsSlinky.std.stdStrings.cancelled = this.cast("cancelled")
+  def cancelled: typingsSlinky.std.stdStrings.cancelled = "cancelled".asInstanceOf[typingsSlinky.std.stdStrings.cancelled]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def failed: typingsSlinky.std.stdStrings.failed = "failed".asInstanceOf[typingsSlinky.std.stdStrings.failed]
   @scala.inline
-  def failed: typingsSlinky.std.stdStrings.failed = this.cast("failed")
+  def frozen: typingsSlinky.std.stdStrings.frozen = "frozen".asInstanceOf[typingsSlinky.std.stdStrings.frozen]
   @scala.inline
-  def frozen: typingsSlinky.std.stdStrings.frozen = this.cast("frozen")
+  def inprogress: typingsSlinky.std.stdStrings.inprogress = "inprogress".asInstanceOf[typingsSlinky.std.stdStrings.inprogress]
   @scala.inline
-  def inprogress: typingsSlinky.std.stdStrings.inprogress = this.cast("inprogress")
+  def succeeded: typingsSlinky.std.stdStrings.succeeded = "succeeded".asInstanceOf[typingsSlinky.std.stdStrings.succeeded]
   @scala.inline
-  def succeeded: typingsSlinky.std.stdStrings.succeeded = this.cast("succeeded")
-  @scala.inline
-  def waiting: typingsSlinky.std.stdStrings.waiting = this.cast("waiting")
+  def waiting: typingsSlinky.std.stdStrings.waiting = "waiting".asInstanceOf[typingsSlinky.std.stdStrings.waiting]
 }
 

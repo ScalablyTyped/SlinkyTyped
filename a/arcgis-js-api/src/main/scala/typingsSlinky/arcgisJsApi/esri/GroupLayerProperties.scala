@@ -1,15 +1,13 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`hide-children`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.exclusive
-import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.hide
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.independent
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.inherited
-import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.show
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GroupLayerProperties
   extends LayerProperties
      with LayersMixinProperties
@@ -26,33 +24,34 @@ trait GroupLayerProperties
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GroupLayer.html#visibilityMode)
     */
-  var visibilityMode: js.UndefOr[independent | inherited | exclusive] = js.undefined
+  var visibilityMode: js.UndefOr[independent | inherited | exclusive] = js.native
 }
 
 object GroupLayerProperties {
   @scala.inline
-  def apply(
-    fullExtent: ExtentProperties = null,
-    id: String = null,
-    layers: CollectionProperties[LayerProperties] | js.Array[LayerProperties] = null,
-    listMode: show | hide | `hide-children` = null,
-    opacity: Int | Double = null,
-    portalItem: PortalItemProperties = null,
-    title: String = null,
-    visibilityMode: independent | inherited | exclusive = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): GroupLayerProperties = {
+  def apply(): GroupLayerProperties = {
     val __obj = js.Dynamic.literal()
-    if (fullExtent != null) __obj.updateDynamic("fullExtent")(fullExtent.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (layers != null) __obj.updateDynamic("layers")(layers.asInstanceOf[js.Any])
-    if (listMode != null) __obj.updateDynamic("listMode")(listMode.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (portalItem != null) __obj.updateDynamic("portalItem")(portalItem.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (visibilityMode != null) __obj.updateDynamic("visibilityMode")(visibilityMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroupLayerProperties]
   }
+  @scala.inline
+  implicit class GroupLayerPropertiesOps[Self <: GroupLayerProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVisibilityMode(value: independent | inherited | exclusive): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibilityMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibilityMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibilityMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

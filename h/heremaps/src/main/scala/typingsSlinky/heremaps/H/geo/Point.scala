@@ -30,10 +30,6 @@ class Point protected ()
   var alt_Point: Altitude = js.native
   @JSName("ctx")
   var ctx_Point: AltitudeContext = js.native
-  /* CompleteClass */
-  override var lat: Latitude = js.native
-  /* CompleteClass */
-  override var lng: Longitude = js.native
   /**
     * To calculate the distance between this point and the supplied other point. The method uses the Haversine formula. The altitude is not considered.
     * @param other {H.geo.IPoint}

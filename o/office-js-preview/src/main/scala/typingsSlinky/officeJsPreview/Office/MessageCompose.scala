@@ -54,6 +54,8 @@ trait MessageCompose extends Item {
   /**
     * Gets an object that provides methods for managing the item's categories.
     *
+    * **Important**: In Outlook on the web, you can't use the API to manage categories on a message in Compose mode.
+    *
     * [Api set: Mailbox 1.8]
     *
     * @remarks
@@ -424,6 +426,33 @@ trait MessageCompose extends Item {
     */
   def close(): Unit = js.native
   /**
+    * Disables the Outlook client signature.
+    *  
+    * For Windows and Mac rich clients, this API sets the signature under the "New Message" and "Replies/Forwards" sections
+    * for the sending account to "(none)", effectively disabling the signature.
+    * For Outlook on the web, the API should disable the signature option for new mails, replies, and forwards. 
+    * If the signature is selected, this API call should disable it. 
+    *
+    * [Api set: Mailbox Preview]
+    * 
+    * @remarks
+    *
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadWriteItem`
+    *
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/#extension-points | Applicable Outlook mode}**: Message Compose
+    *
+    * @param options - Optional. An object literal that contains one or more of the following properties.
+    *        `asyncContext`: Developers can provide any object they wish to access in the callback method.
+    * @param callback - Optional. When the method completes, the function passed in the callback parameter is called with a single parameter,
+    *                `asyncResult`, which is an `Office.AsyncResult` object.
+    * 
+    * @beta
+    */
+  def disableClientSignatureAsync(): Unit = js.native
+  def disableClientSignatureAsync(callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
+  def disableClientSignatureAsync(options: AsyncContextOptions): Unit = js.native
+  def disableClientSignatureAsync(options: AsyncContextOptions, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
+  /**
     * Gets an attachment from a message or appointment and returns it as an `AttachmentContent` object.
     * 
     * The `getAttachmentContentAsync` method gets the attachment with the specified identifier from the item. As a best practice, you should use
@@ -489,6 +518,52 @@ trait MessageCompose extends Item {
     options: AsyncContextOptions,
     callback: js.Function1[/* asyncResult */ AsyncResult[js.Array[AttachmentDetails]], Unit]
   ): Unit = js.native
+  /**
+    * Specifies the type of message compose and its coercion type. The message can be new, or a reply or forward.
+    * The coercion type can be HTML or plain text.
+    * 
+    * [Api set: Mailbox Preview]
+    *
+    * @remarks
+    * 
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
+    * 
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/#extension-points | Applicable Outlook mode}**: Message Compose
+    * 
+    * @param callback - When the method completes, the function passed in the `callback` parameter is called with a single parameter of 
+    *                 type `Office.AsyncResult`. On success, the `asyncResult.value` property contains an object with the item's compose type
+    *                 and coercion type.
+    * 
+    * @returns
+    * An object with `ComposeType` and `CoercionType` enum values for the message item.
+    * 
+    * @beta
+    */
+  def getComposeTypeAsync(callback: js.Function1[/* asyncResult */ AsyncResult[_], Unit]): Unit = js.native
+  /**
+    * Specifies the type of message compose and its coercion type. The message can be new, or a reply or forward.
+    * The coercion type can be HTML or plain text.
+    *
+    * [Api set: Mailbox Preview]
+    *
+    * @remarks
+    * 
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
+    * 
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/#extension-points | Applicable Outlook mode}**: Message Compose
+    * 
+    * @param options - An object literal that contains one or more of the following properties.
+    *        `asyncContext`: Developers can provide any object they wish to access in the callback method.
+    * @param callback - When the method completes, the function passed in the `callback` parameter is called with a single parameter of 
+    *                 type `Office.AsyncResult`. On success, the `asyncResult.value` property contains an object with the item's compose type
+    *                 and coercion type.
+    * 
+    * @returns
+    * An object with `ComposeType` and `CoercionType` enum values for the message item.
+    * 
+    * @beta
+    */
+  def getComposeTypeAsync(options: AsyncContextOptions, callback: js.Function1[/* asyncResult */ AsyncResult[_], Unit]): Unit = js.native
   /**
     * Gets initialization data passed when the add-in is activated by an actionable message.
     *
@@ -673,6 +748,52 @@ trait MessageCompose extends Item {
     options: AsyncContextOptions,
     callback: js.Function1[/* asyncResult */ AsyncResult[SharedProperties], Unit]
   ): Unit = js.native
+  /**
+    * Gets if the client signature is enabled.
+    * 
+    * For Windows and Mac rich clients, the API call should return `true` if the default signature for new messages, replies, or forwards is set
+    * to a template for the sending Outlook account.
+    * For Outlook on the web, the API call should return `true` if the signature is enabled for compose types `newMail`, `reply`, or `forward`.
+    * If the settings are set to "(none)" in Mac or Windows rich clients or disabled in Outlook on the Web, the API call should return `false`.
+    *
+    * [Api set: Mailbox Preview]
+    *
+    * @remarks
+    * 
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
+    * 
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/#extension-points | Applicable Outlook mode}**: Message Compose
+    *
+    * @param callback - When the method completes, the function passed in the `callback` parameter is called with a single parameter of
+    *                   type `Office.AsyncResult`.
+    * 
+    * @beta
+    */
+  def isClientSignatureEnabledAsync(callback: js.Function1[/* asyncResult */ AsyncResult[Boolean], Unit]): Unit = js.native
+  /**
+    * Gets if the client signature is enabled.
+    * 
+    * For Windows and Mac rich clients, the API call should return `true` if the default signature for new messages, replies, or forwards is set
+    * to a template for the sending Outlook account.
+    * For Outlook on the web, the API call should return `true` if the signature is enabled for compose types `newMail`, `reply`, or `forward`.
+    * If the settings are set to "(none)" in Mac or Windows rich clients or disabled in Outlook on the Web, the API call should return `false`.
+    *
+    * [Api set: Mailbox Preview]
+    *
+    * @remarks
+    * 
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
+    * 
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/#extension-points | Applicable Outlook mode}**: Message Compose
+    *
+    * @param options - An object literal that contains one or more of the following properties.
+    *        `asyncContext`: Developers can provide any object they wish to access in the callback method.
+    * @param callback - When the method completes, the function passed in the `callback` parameter is called with a single parameter of
+    *                   type `Office.AsyncResult`.
+    * 
+    * @beta
+    */
+  def isClientSignatureEnabledAsync(options: AsyncContextOptions, callback: js.Function1[/* asyncResult */ AsyncResult[Boolean], Unit]): Unit = js.native
   /**
     * Asynchronously loads custom properties for this add-in on the selected item.
     *

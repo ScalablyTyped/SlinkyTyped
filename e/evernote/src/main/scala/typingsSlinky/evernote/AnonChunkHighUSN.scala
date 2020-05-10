@@ -12,57 +12,205 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonChunkHighUSN extends js.Object {
-  var chunkHighUSN: js.UndefOr[Double] = js.undefined
-  var currentTime: js.UndefOr[Timestamp] = js.undefined
-  var expungedLinkedNotebooks: js.UndefOr[js.Array[Guid]] = js.undefined
-  var expungedNotebooks: js.UndefOr[js.Array[Guid]] = js.undefined
-  var expungedNotes: js.UndefOr[js.Array[Guid]] = js.undefined
-  var expungedSearches: js.UndefOr[js.Array[Guid]] = js.undefined
-  var expungedTags: js.UndefOr[js.Array[Guid]] = js.undefined
-  var linkedNotebooks: js.UndefOr[js.Array[LinkedNotebook]] = js.undefined
-  var notebooks: js.UndefOr[js.Array[Notebook]] = js.undefined
-  var notes: js.UndefOr[js.Array[Note]] = js.undefined
-  var resources: js.UndefOr[js.Array[Resource]] = js.undefined
-  var searches: js.UndefOr[js.Array[SavedSearch]] = js.undefined
-  var tags: js.UndefOr[js.Array[Tag]] = js.undefined
-  var updateCount: js.UndefOr[Double] = js.undefined
+  var chunkHighUSN: js.UndefOr[Double] = js.native
+  var currentTime: js.UndefOr[Timestamp] = js.native
+  var expungedLinkedNotebooks: js.UndefOr[js.Array[Guid]] = js.native
+  var expungedNotebooks: js.UndefOr[js.Array[Guid]] = js.native
+  var expungedNotes: js.UndefOr[js.Array[Guid]] = js.native
+  var expungedSearches: js.UndefOr[js.Array[Guid]] = js.native
+  var expungedTags: js.UndefOr[js.Array[Guid]] = js.native
+  var linkedNotebooks: js.UndefOr[js.Array[LinkedNotebook]] = js.native
+  var notebooks: js.UndefOr[js.Array[Notebook]] = js.native
+  var notes: js.UndefOr[js.Array[Note]] = js.native
+  var resources: js.UndefOr[js.Array[Resource]] = js.native
+  var searches: js.UndefOr[js.Array[SavedSearch]] = js.native
+  var tags: js.UndefOr[js.Array[Tag]] = js.native
+  var updateCount: js.UndefOr[Double] = js.native
 }
 
 object AnonChunkHighUSN {
   @scala.inline
-  def apply(
-    chunkHighUSN: Int | Double = null,
-    currentTime: Int | Double = null,
-    expungedLinkedNotebooks: js.Array[Guid] = null,
-    expungedNotebooks: js.Array[Guid] = null,
-    expungedNotes: js.Array[Guid] = null,
-    expungedSearches: js.Array[Guid] = null,
-    expungedTags: js.Array[Guid] = null,
-    linkedNotebooks: js.Array[LinkedNotebook] = null,
-    notebooks: js.Array[Notebook] = null,
-    notes: js.Array[Note] = null,
-    resources: js.Array[Resource] = null,
-    searches: js.Array[SavedSearch] = null,
-    tags: js.Array[Tag] = null,
-    updateCount: Int | Double = null
-  ): AnonChunkHighUSN = {
+  def apply(): AnonChunkHighUSN = {
     val __obj = js.Dynamic.literal()
-    if (chunkHighUSN != null) __obj.updateDynamic("chunkHighUSN")(chunkHighUSN.asInstanceOf[js.Any])
-    if (currentTime != null) __obj.updateDynamic("currentTime")(currentTime.asInstanceOf[js.Any])
-    if (expungedLinkedNotebooks != null) __obj.updateDynamic("expungedLinkedNotebooks")(expungedLinkedNotebooks.asInstanceOf[js.Any])
-    if (expungedNotebooks != null) __obj.updateDynamic("expungedNotebooks")(expungedNotebooks.asInstanceOf[js.Any])
-    if (expungedNotes != null) __obj.updateDynamic("expungedNotes")(expungedNotes.asInstanceOf[js.Any])
-    if (expungedSearches != null) __obj.updateDynamic("expungedSearches")(expungedSearches.asInstanceOf[js.Any])
-    if (expungedTags != null) __obj.updateDynamic("expungedTags")(expungedTags.asInstanceOf[js.Any])
-    if (linkedNotebooks != null) __obj.updateDynamic("linkedNotebooks")(linkedNotebooks.asInstanceOf[js.Any])
-    if (notebooks != null) __obj.updateDynamic("notebooks")(notebooks.asInstanceOf[js.Any])
-    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
-    if (resources != null) __obj.updateDynamic("resources")(resources.asInstanceOf[js.Any])
-    if (searches != null) __obj.updateDynamic("searches")(searches.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (updateCount != null) __obj.updateDynamic("updateCount")(updateCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonChunkHighUSN]
   }
+  @scala.inline
+  implicit class AnonChunkHighUSNOps[Self <: AnonChunkHighUSN] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChunkHighUSN(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkHighUSN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChunkHighUSN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkHighUSN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentTime(value: Timestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpungedLinkedNotebooks(value: js.Array[Guid]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expungedLinkedNotebooks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpungedLinkedNotebooks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expungedLinkedNotebooks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpungedNotebooks(value: js.Array[Guid]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expungedNotebooks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpungedNotebooks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expungedNotebooks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpungedNotes(value: js.Array[Guid]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expungedNotes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpungedNotes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expungedNotes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpungedSearches(value: js.Array[Guid]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expungedSearches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpungedSearches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expungedSearches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpungedTags(value: js.Array[Guid]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expungedTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpungedTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expungedTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkedNotebooks(value: js.Array[LinkedNotebook]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedNotebooks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkedNotebooks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedNotebooks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotebooks(value: js.Array[Notebook]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notebooks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotebooks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notebooks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotes(value: js.Array[Note]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResources(value: js.Array[Resource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearches(value: js.Array[SavedSearch]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: js.Array[Tag]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

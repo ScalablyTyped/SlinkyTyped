@@ -13,12 +13,10 @@ trait ChannelCountMode extends js.Object
 
 object ChannelCountMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `clamped-max`: typingsSlinky.std.stdStrings.`clamped-max` = "clamped-max".asInstanceOf[typingsSlinky.std.stdStrings.`clamped-max`]
   @scala.inline
-  def `clamped-max`: typingsSlinky.std.stdStrings.`clamped-max` = this.cast("clamped-max")
+  def explicit: typingsSlinky.std.stdStrings.explicit = "explicit".asInstanceOf[typingsSlinky.std.stdStrings.explicit]
   @scala.inline
-  def explicit: typingsSlinky.std.stdStrings.explicit = this.cast("explicit")
-  @scala.inline
-  def max: typingsSlinky.std.stdStrings.max = this.cast("max")
+  def max: typingsSlinky.std.stdStrings.max = "max".asInstanceOf[typingsSlinky.std.stdStrings.max]
 }
 

@@ -34,22 +34,89 @@ trait NetworkInfo extends js.Object {
 
 object NetworkInfo {
   @scala.inline
-  def apply(
-    EnaSupport: EnaSupport = null,
-    Ipv4AddressesPerInterface: Int | scala.Double = null,
-    Ipv6AddressesPerInterface: Int | scala.Double = null,
-    Ipv6Supported: js.UndefOr[scala.Boolean] = js.undefined,
-    MaximumNetworkInterfaces: Int | scala.Double = null,
-    NetworkPerformance: NetworkPerformance = null
-  ): NetworkInfo = {
+  def apply(): NetworkInfo = {
     val __obj = js.Dynamic.literal()
-    if (EnaSupport != null) __obj.updateDynamic("EnaSupport")(EnaSupport.asInstanceOf[js.Any])
-    if (Ipv4AddressesPerInterface != null) __obj.updateDynamic("Ipv4AddressesPerInterface")(Ipv4AddressesPerInterface.asInstanceOf[js.Any])
-    if (Ipv6AddressesPerInterface != null) __obj.updateDynamic("Ipv6AddressesPerInterface")(Ipv6AddressesPerInterface.asInstanceOf[js.Any])
-    if (!js.isUndefined(Ipv6Supported)) __obj.updateDynamic("Ipv6Supported")(Ipv6Supported.asInstanceOf[js.Any])
-    if (MaximumNetworkInterfaces != null) __obj.updateDynamic("MaximumNetworkInterfaces")(MaximumNetworkInterfaces.asInstanceOf[js.Any])
-    if (NetworkPerformance != null) __obj.updateDynamic("NetworkPerformance")(NetworkPerformance.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkInfo]
   }
+  @scala.inline
+  implicit class NetworkInfoOps[Self <: NetworkInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnaSupport(value: EnaSupport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnaSupport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnaSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnaSupport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv4AddressesPerInterface(value: MaxIpv4AddrPerInterface): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv4AddressesPerInterface")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv4AddressesPerInterface: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv4AddressesPerInterface")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv6AddressesPerInterface(value: MaxIpv6AddrPerInterface): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6AddressesPerInterface")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6AddressesPerInterface: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6AddressesPerInterface")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv6Supported(value: Ipv6Flag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Supported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6Supported: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Supported")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumNetworkInterfaces(value: MaxNetworkInterfaces): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumNetworkInterfaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumNetworkInterfaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumNetworkInterfaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkPerformance(value: NetworkPerformance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkPerformance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkPerformance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkPerformance")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

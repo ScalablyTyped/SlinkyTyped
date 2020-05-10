@@ -18,7 +18,7 @@ package object mod {
   type DeepPartialGraphModel[T] = (typingsSlinky.objection.mod.GraphModel[
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in objection.objection.NonFunctionPropertyNames<T> ]:? objection.objection.DeepPartialGraph<T[P]>}
-    */ typingsSlinky.objection.objectionStrings.DeepPartialGraphModel with T
+    */ typingsSlinky.objection.objectionStrings.DeepPartialGraphModel with org.scalablytyped.runtime.TopLevel[T]
   ]) | typingsSlinky.std.Partial[T]
   type Distinct[QM /* <: typingsSlinky.objection.mod.Model */, RM, RV] = typingsSlinky.objection.mod.ColumnNamesMethod[QM, RM, RV]
   type ErrorHash = org.scalablytyped.runtime.StringDictionary[js.Array[typingsSlinky.objection.mod.ValidationErrorItem]]
@@ -55,7 +55,7 @@ package object mod {
       scala.Unit
     ]
   ]
-  type GraphModel[T] = (typingsSlinky.objection.AnonId with T) | (typingsSlinky.objection.AnonRef with typingsSlinky.objection.objectionStrings.GraphModel with js.Any) | (typingsSlinky.objection.AnonDbRef with typingsSlinky.objection.objectionStrings.GraphModel with js.Any)
+  type GraphModel[T] = (typingsSlinky.objection.AnonId with T) | (typingsSlinky.objection.AnonRef with typingsSlinky.objection.objectionStrings.GraphModel with org.scalablytyped.runtime.TopLevel[js.Any]) | (typingsSlinky.objection.AnonDbRef with typingsSlinky.objection.objectionStrings.GraphModel with org.scalablytyped.runtime.TopLevel[js.Any])
   type Id = java.lang.String | scala.Double
   type IdOrIds = typingsSlinky.objection.mod.Id | typingsSlinky.objection.mod.Ids
   type Ids = js.Array[typingsSlinky.objection.mod.Id]
@@ -94,7 +94,7 @@ package object mod {
   type NonFunctionPropertyNames[T] = /* import warning: importer.ImportType#apply Failed type conversion: {[ K in keyof T ]: T[K] extends std.Function? never : K}[keyof T] */ js.Any
   type PartialUpdate[QM /* <: typingsSlinky.objection.mod.Model */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof QM ]:? QM[P] | objection.objection.Raw | objection.objection.Reference | objection.objection.QueryBuilder<any, std.Array<any>, / * import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV * / any>}
-    */ typingsSlinky.objection.objectionStrings.PartialUpdate with QM
+    */ typingsSlinky.objection.objectionStrings.PartialUpdate with org.scalablytyped.runtime.TopLevel[QM]
   type Plugin = js.Function1[
     /* modelClass */ typingsSlinky.objection.TypeofModel, 
     typingsSlinky.objection.TypeofModel

@@ -1,11 +1,10 @@
 package typingsSlinky.reactOutsideClickHandler.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactOutsideClickHandler.mod.Props
 import typingsSlinky.reactOutsideClickHandler.mod.default
 import typingsSlinky.reactOutsideClickHandler.reactOutsideClickHandlerStrings.`inline-block`
 import typingsSlinky.reactOutsideClickHandler.reactOutsideClickHandlerStrings.`inline`
@@ -16,26 +15,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactOutsideClickHandler
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactOutsideClickHandler {
   @JSImport("react-outside-click-handler", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    onOutsideClick: SyntheticMouseEvent[HTMLElement] => Unit,
-    display: block | flex | `inline` | `inline-block` | contents = null,
-    useCapture: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(onOutsideClick = js.Any.fromFunction1(onOutsideClick))
-    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
-    if (!js.isUndefined(useCapture)) __obj.updateDynamic("useCapture")(useCapture.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def display(value: block | flex | `inline` | `inline-block` | contents): this.type = set("display", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useCapture(value: Boolean): this.type = set("useCapture", value.asInstanceOf[js.Any])
   }
-  type Props = typingsSlinky.reactOutsideClickHandler.mod.Props
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(onOutsideClick: SyntheticMouseEvent[HTMLElement] => Unit): Builder = {
+    val __props = js.Dynamic.literal(onOutsideClick = js.Any.fromFunction1(onOutsideClick))
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
 }
 

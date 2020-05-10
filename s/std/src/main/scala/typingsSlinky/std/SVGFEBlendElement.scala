@@ -64,13 +64,14 @@ trait SVGFEBlendElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGFEBlendElement")
 @js.native
-object SVGFEBlendElement extends Instantiable0[SVGFEBlendElement] {
+object SVGFEBlendElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFEBlendElement] {
   val SVG_FEBLEND_MODE_COLOR: Double = js.native
   val SVG_FEBLEND_MODE_COLOR_BURN: Double = js.native
   val SVG_FEBLEND_MODE_COLOR_DODGE: Double = js.native

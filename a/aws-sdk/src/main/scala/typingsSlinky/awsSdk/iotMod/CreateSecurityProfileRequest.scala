@@ -34,21 +34,83 @@ trait CreateSecurityProfileRequest extends js.Object {
 
 object CreateSecurityProfileRequest {
   @scala.inline
-  def apply(
-    securityProfileName: SecurityProfileName,
-    additionalMetricsToRetain: AdditionalMetricsToRetainList = null,
-    alertTargets: AlertTargets = null,
-    behaviors: Behaviors = null,
-    securityProfileDescription: SecurityProfileDescription = null,
-    tags: TagList = null
-  ): CreateSecurityProfileRequest = {
+  def apply(securityProfileName: SecurityProfileName): CreateSecurityProfileRequest = {
     val __obj = js.Dynamic.literal(securityProfileName = securityProfileName.asInstanceOf[js.Any])
-    if (additionalMetricsToRetain != null) __obj.updateDynamic("additionalMetricsToRetain")(additionalMetricsToRetain.asInstanceOf[js.Any])
-    if (alertTargets != null) __obj.updateDynamic("alertTargets")(alertTargets.asInstanceOf[js.Any])
-    if (behaviors != null) __obj.updateDynamic("behaviors")(behaviors.asInstanceOf[js.Any])
-    if (securityProfileDescription != null) __obj.updateDynamic("securityProfileDescription")(securityProfileDescription.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSecurityProfileRequest]
   }
+  @scala.inline
+  implicit class CreateSecurityProfileRequestOps[Self <: CreateSecurityProfileRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSecurityProfileName(value: SecurityProfileName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityProfileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdditionalMetricsToRetain(value: AdditionalMetricsToRetainList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalMetricsToRetain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalMetricsToRetain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalMetricsToRetain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlertTargets(value: AlertTargets): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alertTargets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlertTargets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alertTargets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBehaviors(value: Behaviors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("behaviors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBehaviors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("behaviors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityProfileDescription(value: SecurityProfileDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityProfileDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityProfileDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityProfileDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

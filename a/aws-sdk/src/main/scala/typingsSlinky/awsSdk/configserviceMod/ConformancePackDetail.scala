@@ -46,18 +46,90 @@ object ConformancePackDetail {
     ConformancePackArn: ConformancePackArn,
     ConformancePackId: ConformancePackId,
     ConformancePackName: ConformancePackName,
-    DeliveryS3Bucket: DeliveryS3Bucket,
-    ConformancePackInputParameters: ConformancePackInputParameters = null,
-    CreatedBy: StringWithCharLimit256 = null,
-    DeliveryS3KeyPrefix: DeliveryS3KeyPrefix = null,
-    LastUpdateRequestedTime: js.Date = null
+    DeliveryS3Bucket: DeliveryS3Bucket
   ): ConformancePackDetail = {
     val __obj = js.Dynamic.literal(ConformancePackArn = ConformancePackArn.asInstanceOf[js.Any], ConformancePackId = ConformancePackId.asInstanceOf[js.Any], ConformancePackName = ConformancePackName.asInstanceOf[js.Any], DeliveryS3Bucket = DeliveryS3Bucket.asInstanceOf[js.Any])
-    if (ConformancePackInputParameters != null) __obj.updateDynamic("ConformancePackInputParameters")(ConformancePackInputParameters.asInstanceOf[js.Any])
-    if (CreatedBy != null) __obj.updateDynamic("CreatedBy")(CreatedBy.asInstanceOf[js.Any])
-    if (DeliveryS3KeyPrefix != null) __obj.updateDynamic("DeliveryS3KeyPrefix")(DeliveryS3KeyPrefix.asInstanceOf[js.Any])
-    if (LastUpdateRequestedTime != null) __obj.updateDynamic("LastUpdateRequestedTime")(LastUpdateRequestedTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConformancePackDetail]
   }
+  @scala.inline
+  implicit class ConformancePackDetailOps[Self <: ConformancePackDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConformancePackArn(value: ConformancePackArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConformancePackArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConformancePackId(value: ConformancePackId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConformancePackId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConformancePackName(value: ConformancePackName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConformancePackName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeliveryS3Bucket(value: DeliveryS3Bucket): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryS3Bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConformancePackInputParameters(value: ConformancePackInputParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConformancePackInputParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConformancePackInputParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConformancePackInputParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatedBy(value: StringWithCharLimit256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeliveryS3KeyPrefix(value: DeliveryS3KeyPrefix): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryS3KeyPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeliveryS3KeyPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryS3KeyPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdateRequestedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdateRequestedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdateRequestedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdateRequestedTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

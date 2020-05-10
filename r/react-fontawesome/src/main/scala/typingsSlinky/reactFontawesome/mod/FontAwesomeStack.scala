@@ -12,10 +12,8 @@ trait FontAwesomeStack extends js.Object
 
 object FontAwesomeStack {
   @scala.inline
-  def `1x`: typingsSlinky.reactFontawesome.reactFontawesomeStrings.`1x` = this.cast("1x")
+  def `1x`: typingsSlinky.reactFontawesome.reactFontawesomeStrings.`1x` = "1x".asInstanceOf[typingsSlinky.reactFontawesome.reactFontawesomeStrings.`1x`]
   @scala.inline
-  def `2x`: typingsSlinky.reactFontawesome.reactFontawesomeStrings.`2x` = this.cast("2x")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `2x`: typingsSlinky.reactFontawesome.reactFontawesomeStrings.`2x` = "2x".asInstanceOf[typingsSlinky.reactFontawesome.reactFontawesomeStrings.`2x`]
 }
 

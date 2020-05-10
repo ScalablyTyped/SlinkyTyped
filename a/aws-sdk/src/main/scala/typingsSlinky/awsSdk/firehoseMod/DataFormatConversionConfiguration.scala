@@ -26,18 +26,65 @@ trait DataFormatConversionConfiguration extends js.Object {
 
 object DataFormatConversionConfiguration {
   @scala.inline
-  def apply(
-    Enabled: js.UndefOr[Boolean] = js.undefined,
-    InputFormatConfiguration: InputFormatConfiguration = null,
-    OutputFormatConfiguration: OutputFormatConfiguration = null,
-    SchemaConfiguration: SchemaConfiguration = null
-  ): DataFormatConversionConfiguration = {
+  def apply(): DataFormatConversionConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.asInstanceOf[js.Any])
-    if (InputFormatConfiguration != null) __obj.updateDynamic("InputFormatConfiguration")(InputFormatConfiguration.asInstanceOf[js.Any])
-    if (OutputFormatConfiguration != null) __obj.updateDynamic("OutputFormatConfiguration")(OutputFormatConfiguration.asInstanceOf[js.Any])
-    if (SchemaConfiguration != null) __obj.updateDynamic("SchemaConfiguration")(SchemaConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataFormatConversionConfiguration]
   }
+  @scala.inline
+  implicit class DataFormatConversionConfigurationOps[Self <: DataFormatConversionConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnabled(value: BooleanObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputFormatConfiguration(value: InputFormatConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputFormatConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputFormatConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputFormatConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputFormatConfiguration(value: OutputFormatConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputFormatConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputFormatConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputFormatConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemaConfiguration(value: SchemaConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchemaConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

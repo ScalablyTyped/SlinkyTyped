@@ -28,12 +28,53 @@ trait SchemaGoogleCloudVisionV1p4beta1BatchOperationMetadata extends js.Object {
 
 object SchemaGoogleCloudVisionV1p4beta1BatchOperationMetadata {
   @scala.inline
-  def apply(endTime: String = null, state: String = null, submitTime: String = null): SchemaGoogleCloudVisionV1p4beta1BatchOperationMetadata = {
+  def apply(): SchemaGoogleCloudVisionV1p4beta1BatchOperationMetadata = {
     val __obj = js.Dynamic.literal()
-    if (endTime != null) __obj.updateDynamic("endTime")(endTime.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
-    if (submitTime != null) __obj.updateDynamic("submitTime")(submitTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p4beta1BatchOperationMetadata]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVisionV1p4beta1BatchOperationMetadataOps[Self <: SchemaGoogleCloudVisionV1p4beta1BatchOperationMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubmitTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submitTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubmitTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submitTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

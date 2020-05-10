@@ -4,39 +4,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBio extends js.Object {
-  var bio: js.UndefOr[String] = js.undefined
-  var email: js.UndefOr[String] = js.undefined
-  var firstName: js.UndefOr[String] = js.undefined
-  var instagramUsername: js.UndefOr[String] = js.undefined
-  var lastName: js.UndefOr[String] = js.undefined
-  var location: js.UndefOr[String] = js.undefined
-  var url: js.UndefOr[String] = js.undefined
-  var username: js.UndefOr[String] = js.undefined
+  var bio: js.UndefOr[String] = js.native
+  var email: js.UndefOr[String] = js.native
+  var firstName: js.UndefOr[String] = js.native
+  var instagramUsername: js.UndefOr[String] = js.native
+  var lastName: js.UndefOr[String] = js.native
+  var location: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.native
+  var username: js.UndefOr[String] = js.native
 }
 
 object AnonBio {
   @scala.inline
-  def apply(
-    bio: String = null,
-    email: String = null,
-    firstName: String = null,
-    instagramUsername: String = null,
-    lastName: String = null,
-    location: String = null,
-    url: String = null,
-    username: String = null
-  ): AnonBio = {
+  def apply(): AnonBio = {
     val __obj = js.Dynamic.literal()
-    if (bio != null) __obj.updateDynamic("bio")(bio.asInstanceOf[js.Any])
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (firstName != null) __obj.updateDynamic("firstName")(firstName.asInstanceOf[js.Any])
-    if (instagramUsername != null) __obj.updateDynamic("instagramUsername")(instagramUsername.asInstanceOf[js.Any])
-    if (lastName != null) __obj.updateDynamic("lastName")(lastName.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBio]
   }
+  @scala.inline
+  implicit class AnonBioOps[Self <: AnonBio] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBio(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstagramUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instagramUsername")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstagramUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instagramUsername")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -16,18 +16,16 @@ trait Method extends js.Object
 
 object Method {
   @scala.inline
-  def DELETE: typingsSlinky.twilsock.twilsockStrings.DELETE = this.cast("DELETE")
+  def DELETE: typingsSlinky.twilsock.twilsockStrings.DELETE = "DELETE".asInstanceOf[typingsSlinky.twilsock.twilsockStrings.DELETE]
   @scala.inline
-  def GET: typingsSlinky.twilsock.twilsockStrings.GET = this.cast("GET")
+  def GET: typingsSlinky.twilsock.twilsockStrings.GET = "GET".asInstanceOf[typingsSlinky.twilsock.twilsockStrings.GET]
   @scala.inline
-  def POST: typingsSlinky.twilsock.twilsockStrings.POST = this.cast("POST")
+  def POST: typingsSlinky.twilsock.twilsockStrings.POST = "POST".asInstanceOf[typingsSlinky.twilsock.twilsockStrings.POST]
   @scala.inline
-  def PUT: typingsSlinky.twilsock.twilsockStrings.PUT = this.cast("PUT")
+  def PUT: typingsSlinky.twilsock.twilsockStrings.PUT = "PUT".asInstanceOf[typingsSlinky.twilsock.twilsockStrings.PUT]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def delete_notification_ctx: typingsSlinky.twilsock.twilsockStrings.delete_notification_ctx = "delete_notification_ctx".asInstanceOf[typingsSlinky.twilsock.twilsockStrings.delete_notification_ctx]
   @scala.inline
-  def delete_notification_ctx: typingsSlinky.twilsock.twilsockStrings.delete_notification_ctx = this.cast("delete_notification_ctx")
-  @scala.inline
-  def put_notification_ctx: typingsSlinky.twilsock.twilsockStrings.put_notification_ctx = this.cast("put_notification_ctx")
+  def put_notification_ctx: typingsSlinky.twilsock.twilsockStrings.put_notification_ctx = "put_notification_ctx".asInstanceOf[typingsSlinky.twilsock.twilsockStrings.put_notification_ctx]
 }
 

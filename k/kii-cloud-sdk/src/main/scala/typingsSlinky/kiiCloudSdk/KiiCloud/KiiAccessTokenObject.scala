@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait KiiAccessTokenObject extends js.Object {
-  var access_token: String
-  var expires_at: js.Date
+  var access_token: String = js.native
+  var expires_at: js.Date = js.native
 }
 
 object KiiAccessTokenObject {
   @scala.inline
   def apply(access_token: String, expires_at: js.Date): KiiAccessTokenObject = {
     val __obj = js.Dynamic.literal(access_token = access_token.asInstanceOf[js.Any], expires_at = expires_at.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[KiiAccessTokenObject]
   }
+  @scala.inline
+  implicit class KiiAccessTokenObjectOps[Self <: KiiAccessTokenObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccess_token(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("access_token")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExpires_at(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expires_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

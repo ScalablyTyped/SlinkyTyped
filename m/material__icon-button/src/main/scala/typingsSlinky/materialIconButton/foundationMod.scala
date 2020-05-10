@@ -12,13 +12,7 @@ object foundationMod extends js.Object {
   @js.native
   class MDCIconButtonToggleFoundation () extends MDCFoundation[MDCIconButtonToggleAdapter] {
     def this(adapter: PartialMDCIconButtonToggl) = this()
-    // Subclasses should override this method to perform de-initialization routines (de-registering events, etc.)
-    /* CompleteClass */
-    override def destroy(): Unit = js.native
     def handleClick(): Unit = js.native
-    // Subclasses should override this method to perform initialization routines (registering events, etc.)
-    /* CompleteClass */
-    override def init(): Unit = js.native
     def isOn(): Boolean = js.native
     def toggle(): Unit = js.native
     def toggle(isOn: Boolean): Unit = js.native

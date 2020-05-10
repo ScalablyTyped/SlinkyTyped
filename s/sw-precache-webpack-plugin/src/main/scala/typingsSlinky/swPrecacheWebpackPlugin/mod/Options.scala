@@ -1,81 +1,107 @@
 package typingsSlinky.swPrecacheWebpackPlugin.mod
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.node.Buffer
-import typingsSlinky.swPrecache.AnonHandler
-import typingsSlinky.swPrecache.FnCall
 import typingsSlinky.swPrecacheWebpackPlugin.AnonChunkName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends _Options {
-  var filename: js.UndefOr[String] = js.undefined
-  var filepath: js.UndefOr[String] = js.undefined
+  var filename: js.UndefOr[String] = js.native
+  var filepath: js.UndefOr[String] = js.native
   // override sw-precache options
   @JSName("importScripts")
-  var importScripts_Options: js.UndefOr[js.Array[String | AnonChunkName]] = js.undefined
-  var mergeStaticsConfig: js.UndefOr[Boolean] = js.undefined
-  var minify: js.UndefOr[Boolean] = js.undefined
-  var staticFileGlobsIgnorePatterns: js.UndefOr[js.Array[js.RegExp]] = js.undefined
+  var importScripts_Options: js.UndefOr[js.Array[String | AnonChunkName]] = js.native
+  var mergeStaticsConfig: js.UndefOr[Boolean] = js.native
+  var minify: js.UndefOr[Boolean] = js.native
+  var staticFileGlobsIgnorePatterns: js.UndefOr[js.Array[js.RegExp]] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    cacheId: String = null,
-    clientsClaim: js.UndefOr[Boolean] = js.undefined,
-    directoryIndex: String = null,
-    dontCacheBustUrlsMatching: js.RegExp = null,
-    dynamicUrlToDependencies: StringDictionary[String | Buffer | js.Array[String]] = null,
-    filename: String = null,
-    filepath: String = null,
-    handleFetch: js.UndefOr[Boolean] = js.undefined,
-    ignoreUrlParametersMatching: js.Array[js.RegExp] = null,
-    importScripts: js.Array[String | AnonChunkName] = null,
-    logger: FnCall = null,
-    maximumFileSizeToCacheInBytes: Int | Double = null,
-    mergeStaticsConfig: js.UndefOr[Boolean] = js.undefined,
-    minify: js.UndefOr[Boolean] = js.undefined,
-    navigateFallback: String = null,
-    navigateFallbackWhitelist: js.Array[js.RegExp] = null,
-    replacePrefix: String = null,
-    runtimeCaching: js.Array[AnonHandler] = null,
-    skipWaiting: js.UndefOr[Boolean] = js.undefined,
-    staticFileGlobs: js.Array[String] = null,
-    staticFileGlobsIgnorePatterns: js.Array[js.RegExp] = null,
-    stripPrefix: String = null,
-    stripPrefixMulti: StringDictionary[String] = null,
-    templateFilePath: String = null,
-    verbose: js.UndefOr[Boolean] = js.undefined
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (cacheId != null) __obj.updateDynamic("cacheId")(cacheId.asInstanceOf[js.Any])
-    if (!js.isUndefined(clientsClaim)) __obj.updateDynamic("clientsClaim")(clientsClaim.asInstanceOf[js.Any])
-    if (directoryIndex != null) __obj.updateDynamic("directoryIndex")(directoryIndex.asInstanceOf[js.Any])
-    if (dontCacheBustUrlsMatching != null) __obj.updateDynamic("dontCacheBustUrlsMatching")(dontCacheBustUrlsMatching.asInstanceOf[js.Any])
-    if (dynamicUrlToDependencies != null) __obj.updateDynamic("dynamicUrlToDependencies")(dynamicUrlToDependencies.asInstanceOf[js.Any])
-    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
-    if (filepath != null) __obj.updateDynamic("filepath")(filepath.asInstanceOf[js.Any])
-    if (!js.isUndefined(handleFetch)) __obj.updateDynamic("handleFetch")(handleFetch.asInstanceOf[js.Any])
-    if (ignoreUrlParametersMatching != null) __obj.updateDynamic("ignoreUrlParametersMatching")(ignoreUrlParametersMatching.asInstanceOf[js.Any])
-    if (importScripts != null) __obj.updateDynamic("importScripts")(importScripts.asInstanceOf[js.Any])
-    if (logger != null) __obj.updateDynamic("logger")(logger.asInstanceOf[js.Any])
-    if (maximumFileSizeToCacheInBytes != null) __obj.updateDynamic("maximumFileSizeToCacheInBytes")(maximumFileSizeToCacheInBytes.asInstanceOf[js.Any])
-    if (!js.isUndefined(mergeStaticsConfig)) __obj.updateDynamic("mergeStaticsConfig")(mergeStaticsConfig.asInstanceOf[js.Any])
-    if (!js.isUndefined(minify)) __obj.updateDynamic("minify")(minify.asInstanceOf[js.Any])
-    if (navigateFallback != null) __obj.updateDynamic("navigateFallback")(navigateFallback.asInstanceOf[js.Any])
-    if (navigateFallbackWhitelist != null) __obj.updateDynamic("navigateFallbackWhitelist")(navigateFallbackWhitelist.asInstanceOf[js.Any])
-    if (replacePrefix != null) __obj.updateDynamic("replacePrefix")(replacePrefix.asInstanceOf[js.Any])
-    if (runtimeCaching != null) __obj.updateDynamic("runtimeCaching")(runtimeCaching.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipWaiting)) __obj.updateDynamic("skipWaiting")(skipWaiting.asInstanceOf[js.Any])
-    if (staticFileGlobs != null) __obj.updateDynamic("staticFileGlobs")(staticFileGlobs.asInstanceOf[js.Any])
-    if (staticFileGlobsIgnorePatterns != null) __obj.updateDynamic("staticFileGlobsIgnorePatterns")(staticFileGlobsIgnorePatterns.asInstanceOf[js.Any])
-    if (stripPrefix != null) __obj.updateDynamic("stripPrefix")(stripPrefix.asInstanceOf[js.Any])
-    if (stripPrefixMulti != null) __obj.updateDynamic("stripPrefixMulti")(stripPrefixMulti.asInstanceOf[js.Any])
-    if (templateFilePath != null) __obj.updateDynamic("templateFilePath")(templateFilePath.asInstanceOf[js.Any])
-    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilename(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilename: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilepath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filepath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilepath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filepath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImportScripts(value: js.Array[String | AnonChunkName]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("importScripts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImportScripts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("importScripts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMergeStaticsConfig(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeStaticsConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMergeStaticsConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeStaticsConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinify(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minify")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinify: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minify")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStaticFileGlobsIgnorePatterns(value: js.Array[js.RegExp]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("staticFileGlobsIgnorePatterns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStaticFileGlobsIgnorePatterns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("staticFileGlobsIgnorePatterns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

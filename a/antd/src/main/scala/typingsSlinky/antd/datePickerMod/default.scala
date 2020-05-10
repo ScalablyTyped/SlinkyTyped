@@ -29,11 +29,11 @@ class default protected ()
 @JSImport("antd/lib/date-picker", JSImport.Default)
 @js.native
 object default
-  extends Instantiable1[/* props */ PickerProps[Moment], Component[PickerProps[Moment], js.Any, js.Any]]
+  extends Instantiable1[/* props */ PickerProps[Moment], ReactComponentClass[PickerProps[Moment]]]
      with Instantiable2[
       /* props */ PickerProps[Moment], 
       /* context */ js.Any, 
-      Component[PickerProps[Moment], js.Any, js.Any]
+      ReactComponentClass[PickerProps[Moment]]
     ] {
   var MonthPicker: ReactComponentClass[PickPickPickerDatePropsMo] = js.native
   var RangePicker: ReactComponentClass[typingsSlinky.antd.generatePickerMod.RangePickerProps[Moment]] = js.native

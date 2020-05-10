@@ -2,7 +2,6 @@ package typingsSlinky.plottable
 
 import typingsSlinky.plottable.axisMod.Axis
 import typingsSlinky.plottable.formattersMod.Formatter
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,8 +9,15 @@ import scala.scalajs.js.annotation._
 @JSImport("plottable/build/src/axes/timeAxis", JSImport.Namespace)
 @js.native
 object timeAxisMod extends js.Object {
+  /* keyof plottable.AnonBetween */ /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.plottable.plottableStrings.center
+    - typingsSlinky.plottable.plottableStrings.between
+  */
+  trait TierLabelPosition extends js.Object
+  
   @js.native
-  class Time protected () extends Axis[Date] {
+  class Time protected ()
+    extends Axis[js.Date] {
     /**
       * Constructs a Time Axis.
       *
@@ -93,6 +99,7 @@ object timeAxisMod extends js.Object {
       * @returns {Axes.Time} The calling Time Axis.
       */
     def maxTimeIntervalPrecision(newPrecision: TimeInterval): this.type = js.native
+    def orientation(orientation: TimeAxisOrientation): this.type = js.native
     /**
       * Gets the label positions for each tier.
       */
@@ -105,6 +112,12 @@ object timeAxisMod extends js.Object {
       */
     def tierLabelPositions(newPositions: js.Array[TierLabelPosition]): this.type = js.native
   }
+  
+  /* keyof plottable.AnonTop */ /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.plottable.plottableStrings.top
+    - typingsSlinky.plottable.plottableStrings.bottom
+  */
+  trait TimeAxisOrientation extends js.Object
   
   @js.native
   trait TimeAxisTierConfiguration extends js.Object {
@@ -128,6 +141,17 @@ object timeAxisMod extends js.Object {
       */
     def formatter(value: js.Any): String = js.native
   }
+  
+  /* keyof plottable.AnonDay */ /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.plottable.plottableStrings.second
+    - typingsSlinky.plottable.plottableStrings.minute
+    - typingsSlinky.plottable.plottableStrings.hour
+    - typingsSlinky.plottable.plottableStrings.day
+    - typingsSlinky.plottable.plottableStrings.week
+    - typingsSlinky.plottable.plottableStrings.month
+    - typingsSlinky.plottable.plottableStrings.year
+  */
+  trait TimeInterval extends js.Object
   
   @js.native
   object TierLabelPosition extends js.Object {
@@ -164,9 +188,6 @@ object timeAxisMod extends js.Object {
     var year: typingsSlinky.plottable.plottableStrings.year = js.native
   }
   
-  type TierLabelPosition = String
   type TimeAxisConfiguration = js.Array[TimeAxisTierConfiguration]
-  type TimeAxisOrientation = String
-  type TimeInterval = String
 }
 

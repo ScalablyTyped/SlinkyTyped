@@ -46,28 +46,125 @@ trait FargateProfile extends js.Object {
 
 object FargateProfile {
   @scala.inline
-  def apply(
-    clusterName: String = null,
-    createdAt: js.Date = null,
-    fargateProfileArn: String = null,
-    fargateProfileName: String = null,
-    podExecutionRoleArn: String = null,
-    selectors: FargateProfileSelectors = null,
-    status: FargateProfileStatus = null,
-    subnets: StringList = null,
-    tags: TagMap = null
-  ): FargateProfile = {
+  def apply(): FargateProfile = {
     val __obj = js.Dynamic.literal()
-    if (clusterName != null) __obj.updateDynamic("clusterName")(clusterName.asInstanceOf[js.Any])
-    if (createdAt != null) __obj.updateDynamic("createdAt")(createdAt.asInstanceOf[js.Any])
-    if (fargateProfileArn != null) __obj.updateDynamic("fargateProfileArn")(fargateProfileArn.asInstanceOf[js.Any])
-    if (fargateProfileName != null) __obj.updateDynamic("fargateProfileName")(fargateProfileName.asInstanceOf[js.Any])
-    if (podExecutionRoleArn != null) __obj.updateDynamic("podExecutionRoleArn")(podExecutionRoleArn.asInstanceOf[js.Any])
-    if (selectors != null) __obj.updateDynamic("selectors")(selectors.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (subnets != null) __obj.updateDynamic("subnets")(subnets.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[FargateProfile]
   }
+  @scala.inline
+  implicit class FargateProfileOps[Self <: FargateProfile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFargateProfileArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fargateProfileArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFargateProfileArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fargateProfileArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFargateProfileName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fargateProfileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFargateProfileName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fargateProfileName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPodExecutionRoleArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("podExecutionRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPodExecutionRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("podExecutionRoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectors(value: FargateProfileSelectors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: FargateProfileStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnets(value: StringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

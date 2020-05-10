@@ -12,10 +12,8 @@ trait PushEncryptionKeyName extends js.Object
 
 object PushEncryptionKeyName {
   @scala.inline
-  def auth: typingsSlinky.std.stdStrings.auth = this.cast("auth")
+  def auth: typingsSlinky.std.stdStrings.auth = "auth".asInstanceOf[typingsSlinky.std.stdStrings.auth]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def p256dh: typingsSlinky.std.stdStrings.p256dh = this.cast("p256dh")
+  def p256dh: typingsSlinky.std.stdStrings.p256dh = "p256dh".asInstanceOf[typingsSlinky.std.stdStrings.p256dh]
 }
 

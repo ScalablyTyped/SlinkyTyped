@@ -5,33 +5,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var filter: js.UndefOr[js.Function2[/* path */ String, /* stat */ Stats, Boolean]] = js.undefined
-  var ignoreDirectoryPattern: js.UndefOr[js.RegExp] = js.undefined
-  var ignoreDotFiles: js.UndefOr[Boolean] = js.undefined
-  var ignoreNotPermitted: js.UndefOr[Boolean] = js.undefined
-  var ignoreUnreadableDir: js.UndefOr[Boolean] = js.undefined
-  var interval: js.UndefOr[Double] = js.undefined
+  var filter: js.UndefOr[js.Function2[/* path */ String, /* stat */ Stats, Boolean]] = js.native
+  var ignoreDirectoryPattern: js.UndefOr[js.RegExp] = js.native
+  var ignoreDotFiles: js.UndefOr[Boolean] = js.native
+  var ignoreNotPermitted: js.UndefOr[Boolean] = js.native
+  var ignoreUnreadableDir: js.UndefOr[Boolean] = js.native
+  var interval: js.UndefOr[Double] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    filter: (/* path */ String, /* stat */ Stats) => Boolean = null,
-    ignoreDirectoryPattern: js.RegExp = null,
-    ignoreDotFiles: js.UndefOr[Boolean] = js.undefined,
-    ignoreNotPermitted: js.UndefOr[Boolean] = js.undefined,
-    ignoreUnreadableDir: js.UndefOr[Boolean] = js.undefined,
-    interval: Int | Double = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction2(filter))
-    if (ignoreDirectoryPattern != null) __obj.updateDynamic("ignoreDirectoryPattern")(ignoreDirectoryPattern.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreDotFiles)) __obj.updateDynamic("ignoreDotFiles")(ignoreDotFiles.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreNotPermitted)) __obj.updateDynamic("ignoreNotPermitted")(ignoreNotPermitted.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreUnreadableDir)) __obj.updateDynamic("ignoreUnreadableDir")(ignoreUnreadableDir.asInstanceOf[js.Any])
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilter(value: (/* path */ String, /* stat */ Stats) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreDirectoryPattern(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreDirectoryPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreDirectoryPattern: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreDirectoryPattern")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreDotFiles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreDotFiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreDotFiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreDotFiles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreNotPermitted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreNotPermitted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreNotPermitted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreNotPermitted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreUnreadableDir(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreUnreadableDir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreUnreadableDir: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreUnreadableDir")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -15,7 +15,7 @@ class OverlayView () extends MVCObject {
   def onAdd(): Unit = js.native
   def onRemove(): Unit = js.native
   def setMap(): Unit = js.native
-  def setMap(map: Map[typingsSlinky.std.Element]): Unit = js.native
+  def setMap(map: Map[Element]): Unit = js.native
   def setMap(map: StreetViewPanorama): Unit = js.native
 }
 

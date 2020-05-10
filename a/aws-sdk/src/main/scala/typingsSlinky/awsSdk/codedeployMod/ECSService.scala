@@ -18,11 +18,41 @@ trait ECSService extends js.Object {
 
 object ECSService {
   @scala.inline
-  def apply(clusterName: ECSClusterName = null, serviceName: ECSServiceName = null): ECSService = {
+  def apply(): ECSService = {
     val __obj = js.Dynamic.literal()
-    if (clusterName != null) __obj.updateDynamic("clusterName")(clusterName.asInstanceOf[js.Any])
-    if (serviceName != null) __obj.updateDynamic("serviceName")(serviceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ECSService]
   }
+  @scala.inline
+  implicit class ECSServiceOps[Self <: ECSService] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterName(value: ECSClusterName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceName(value: ECSServiceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

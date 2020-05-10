@@ -18,10 +18,35 @@ trait DescribeRulesPackagesRequest extends js.Object {
 
 object DescribeRulesPackagesRequest {
   @scala.inline
-  def apply(rulesPackageArns: BatchDescribeArnList, locale: Locale = null): DescribeRulesPackagesRequest = {
+  def apply(rulesPackageArns: BatchDescribeArnList): DescribeRulesPackagesRequest = {
     val __obj = js.Dynamic.literal(rulesPackageArns = rulesPackageArns.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeRulesPackagesRequest]
   }
+  @scala.inline
+  implicit class DescribeRulesPackagesRequestOps[Self <: DescribeRulesPackagesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRulesPackageArns(value: BatchDescribeArnList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rulesPackageArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocale(value: Locale): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

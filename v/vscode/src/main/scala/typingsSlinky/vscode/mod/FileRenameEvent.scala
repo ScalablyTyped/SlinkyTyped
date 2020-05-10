@@ -5,19 +5,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FileRenameEvent extends js.Object {
   /**
   		 * The files that got renamed.
   		 */
-  val files: js.Array[AnonNewUri]
+  val files: js.Array[AnonNewUri] = js.native
 }
 
 object FileRenameEvent {
   @scala.inline
   def apply(files: js.Array[AnonNewUri]): FileRenameEvent = {
     val __obj = js.Dynamic.literal(files = files.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[FileRenameEvent]
   }
+  @scala.inline
+  implicit class FileRenameEventOps[Self <: FileRenameEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFiles(value: js.Array[AnonNewUri]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

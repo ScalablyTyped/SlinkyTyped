@@ -16,8 +16,21 @@ object GetDevicesInPlacementResponse {
   @scala.inline
   def apply(devices: DeviceMap): GetDevicesInPlacementResponse = {
     val __obj = js.Dynamic.literal(devices = devices.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetDevicesInPlacementResponse]
   }
+  @scala.inline
+  implicit class GetDevicesInPlacementResponseOps[Self <: GetDevicesInPlacementResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDevices(value: DeviceMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devices")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

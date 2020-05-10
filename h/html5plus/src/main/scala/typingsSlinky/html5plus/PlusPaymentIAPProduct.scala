@@ -10,42 +10,95 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/payment.html](http://www.html5plus.org/doc/zh_cn/payment.html)
   */
+@js.native
 trait PlusPaymentIAPProduct extends js.Object {
   /**
     * 商品的描述信息
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/payment.html](http://www.html5plus.org/doc/zh_cn/payment.html)
     */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /**
     * 商品的价格
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/payment.html](http://www.html5plus.org/doc/zh_cn/payment.html)
     */
-  var price: js.UndefOr[String] = js.undefined
+  var price: js.UndefOr[String] = js.native
   /**
     * 商品的标识
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/payment.html](http://www.html5plus.org/doc/zh_cn/payment.html)
     */
-  var productid: js.UndefOr[String] = js.undefined
+  var productid: js.UndefOr[String] = js.native
   /**
     * 商品标题
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/payment.html](http://www.html5plus.org/doc/zh_cn/payment.html)
     */
-  var title: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.native
 }
 
 object PlusPaymentIAPProduct {
   @scala.inline
-  def apply(description: String = null, price: String = null, productid: String = null, title: String = null): PlusPaymentIAPProduct = {
+  def apply(): PlusPaymentIAPProduct = {
     val __obj = js.Dynamic.literal()
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (price != null) __obj.updateDynamic("price")(price.asInstanceOf[js.Any])
-    if (productid != null) __obj.updateDynamic("productid")(productid.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusPaymentIAPProduct]
   }
+  @scala.inline
+  implicit class PlusPaymentIAPProductOps[Self <: PlusPaymentIAPProduct] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrice(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -27,16 +27,53 @@ trait SchemaVideoAgeGating extends js.Object {
 
 object SchemaVideoAgeGating {
   @scala.inline
-  def apply(
-    alcoholContent: js.UndefOr[Boolean] = js.undefined,
-    restricted: js.UndefOr[Boolean] = js.undefined,
-    videoGameRating: String = null
-  ): SchemaVideoAgeGating = {
+  def apply(): SchemaVideoAgeGating = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alcoholContent)) __obj.updateDynamic("alcoholContent")(alcoholContent.asInstanceOf[js.Any])
-    if (!js.isUndefined(restricted)) __obj.updateDynamic("restricted")(restricted.asInstanceOf[js.Any])
-    if (videoGameRating != null) __obj.updateDynamic("videoGameRating")(videoGameRating.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVideoAgeGating]
   }
+  @scala.inline
+  implicit class SchemaVideoAgeGatingOps[Self <: SchemaVideoAgeGating] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlcoholContent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alcoholContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlcoholContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alcoholContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestricted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restricted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestricted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restricted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoGameRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoGameRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoGameRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoGameRating")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

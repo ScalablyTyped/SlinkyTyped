@@ -2,7 +2,6 @@ package typingsSlinky.pCatchIf
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +11,8 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   @js.native
   trait ErrorConstructor
-    extends Instantiable0[Error]
-       with Instantiable1[/* message */ String, Error]
+    extends Instantiable0[js.Error]
+       with Instantiable1[/* message */ String, js.Error]
   
   // TODO: Remove this for the next major release, refactor the whole definition to:
   // declare function pCatchIf<T>(

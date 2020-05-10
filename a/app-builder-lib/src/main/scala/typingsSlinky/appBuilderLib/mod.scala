@@ -1,7 +1,5 @@
 package typingsSlinky.appBuilderLib
 
-import typingsSlinky.appBuilderLib.appBuilderLibStrings.default_
-import typingsSlinky.appBuilderLib.appBuilderLibStrings.dir
 import typingsSlinky.appBuilderLib.forgeMakerMod.ForgeOptions
 import typingsSlinky.appBuilderLib.packagerApiMod.PackagerOptions
 import typingsSlinky.appBuilderLib.platformSpecificBuildOptionsMod.PlatformSpecificBuildOptions
@@ -82,8 +80,8 @@ object mod extends js.Object {
     protected def this(name: String, isAsyncSupported: Boolean) = this()
   }
   
-  val DEFAULT_TARGET: default_ = js.native
-  val DIR_TARGET: dir = js.native
+  val DEFAULT_TARGET: /* "default" */ String = js.native
+  val DIR_TARGET: /* "dir" */ String = js.native
   def archFromString(name: String): Arch = js.native
   def build(options: PackagerOptions with PublishOptions): js.Promise[js.Array[String]] = js.native
   def build(

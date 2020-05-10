@@ -5,6 +5,7 @@ import typingsSlinky.express.mod.Request_
 import typingsSlinky.express.mod.Response_
 import typingsSlinky.expressServeStaticCore.mod.Express
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,8 +17,8 @@ object ^ extends js.Object {
     * These are the exposed prototypes.
     */
   var application: Application_ = js.native
-  var request: Request_[ParamsDictionary] = js.native
-  var response: Response_ = js.native
+  var request: Request_[ParamsDictionary, js.Any, js.Any, Query] = js.native
+  var response: Response_[js.Any] = js.native
   /**
     * Creates an Express application. The express() function is a top-level function exported by the express module.
     */

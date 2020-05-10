@@ -34,22 +34,89 @@ trait IpRouteInfo extends js.Object {
 
 object IpRouteInfo {
   @scala.inline
-  def apply(
-    AddedDateTime: js.Date = null,
-    CidrIp: CidrIp = null,
-    Description: Description = null,
-    DirectoryId: DirectoryId = null,
-    IpRouteStatusMsg: IpRouteStatusMsg = null,
-    IpRouteStatusReason: IpRouteStatusReason = null
-  ): IpRouteInfo = {
+  def apply(): IpRouteInfo = {
     val __obj = js.Dynamic.literal()
-    if (AddedDateTime != null) __obj.updateDynamic("AddedDateTime")(AddedDateTime.asInstanceOf[js.Any])
-    if (CidrIp != null) __obj.updateDynamic("CidrIp")(CidrIp.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (DirectoryId != null) __obj.updateDynamic("DirectoryId")(DirectoryId.asInstanceOf[js.Any])
-    if (IpRouteStatusMsg != null) __obj.updateDynamic("IpRouteStatusMsg")(IpRouteStatusMsg.asInstanceOf[js.Any])
-    if (IpRouteStatusReason != null) __obj.updateDynamic("IpRouteStatusReason")(IpRouteStatusReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[IpRouteInfo]
   }
+  @scala.inline
+  implicit class IpRouteInfoOps[Self <: IpRouteInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddedDateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddedDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddedDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddedDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCidrIp(value: CidrIp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCidrIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrIp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectoryId(value: DirectoryId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectoryId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpRouteStatusMsg(value: IpRouteStatusMsg): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpRouteStatusMsg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpRouteStatusMsg: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpRouteStatusMsg")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpRouteStatusReason(value: IpRouteStatusReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpRouteStatusReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpRouteStatusReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpRouteStatusReason")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

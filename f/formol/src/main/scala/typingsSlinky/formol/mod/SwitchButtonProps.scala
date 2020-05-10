@@ -1,35 +1,106 @@
 package typingsSlinky.formol.mod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.formol.AnonDictk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SwitchButtonProps extends js.Object {
-  var className: js.UndefOr[String] = js.undefined
-  var i18n: js.UndefOr[AnonDictk] = js.undefined
-  var leftLabel: js.UndefOr[TagMod[Any]] = js.undefined
-  var rightLabel: js.UndefOr[TagMod[Any]] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var i18n: js.UndefOr[AnonDictk] = js.native
+  var leftLabel: js.UndefOr[TagMod[Any]] = js.native
+  var rightLabel: js.UndefOr[TagMod[Any]] = js.native
+  var `type`: js.UndefOr[String] = js.native
 }
 
 object SwitchButtonProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    i18n: AnonDictk = null,
-    leftLabel: TagMod[Any] = null,
-    rightLabel: TagMod[Any] = null,
-    `type`: String = null
-  ): SwitchButtonProps = {
+  def apply(): SwitchButtonProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (i18n != null) __obj.updateDynamic("i18n")(i18n.asInstanceOf[js.Any])
-    if (leftLabel != null) __obj.updateDynamic("leftLabel")(leftLabel.asInstanceOf[js.Any])
-    if (rightLabel != null) __obj.updateDynamic("rightLabel")(rightLabel.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SwitchButtonProps]
   }
+  @scala.inline
+  implicit class SwitchButtonPropsOps[Self <: SwitchButtonProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withI18n(value: AnonDictk): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutI18n: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeftLabelReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLeftLabel(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeftLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRightLabelReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRightLabel(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRightLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

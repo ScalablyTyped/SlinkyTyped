@@ -34,18 +34,65 @@ trait SchemaAuthenticationRule extends js.Object {
 
 object SchemaAuthenticationRule {
   @scala.inline
-  def apply(
-    allowWithoutCredential: js.UndefOr[Boolean] = js.undefined,
-    oauth: SchemaOAuthRequirements = null,
-    requirements: js.Array[SchemaAuthRequirement] = null,
-    selector: String = null
-  ): SchemaAuthenticationRule = {
+  def apply(): SchemaAuthenticationRule = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowWithoutCredential)) __obj.updateDynamic("allowWithoutCredential")(allowWithoutCredential.asInstanceOf[js.Any])
-    if (oauth != null) __obj.updateDynamic("oauth")(oauth.asInstanceOf[js.Any])
-    if (requirements != null) __obj.updateDynamic("requirements")(requirements.asInstanceOf[js.Any])
-    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAuthenticationRule]
   }
+  @scala.inline
+  implicit class SchemaAuthenticationRuleOps[Self <: SchemaAuthenticationRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowWithoutCredential(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowWithoutCredential")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowWithoutCredential: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowWithoutCredential")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOauth(value: SchemaOAuthRequirements): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOauth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequirements(value: js.Array[SchemaAuthRequirement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequirements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelector(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

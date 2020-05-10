@@ -46,26 +46,113 @@ trait CreateApplicationVersionMessage extends js.Object {
 
 object CreateApplicationVersionMessage {
   @scala.inline
-  def apply(
-    ApplicationName: ApplicationName,
-    VersionLabel: VersionLabel,
-    AutoCreateApplication: js.UndefOr[Boolean] = js.undefined,
-    BuildConfiguration: BuildConfiguration = null,
-    Description: Description = null,
-    Process: js.UndefOr[Boolean] = js.undefined,
-    SourceBuildInformation: SourceBuildInformation = null,
-    SourceBundle: S3Location = null,
-    Tags: Tags = null
-  ): CreateApplicationVersionMessage = {
+  def apply(ApplicationName: ApplicationName, VersionLabel: VersionLabel): CreateApplicationVersionMessage = {
     val __obj = js.Dynamic.literal(ApplicationName = ApplicationName.asInstanceOf[js.Any], VersionLabel = VersionLabel.asInstanceOf[js.Any])
-    if (!js.isUndefined(AutoCreateApplication)) __obj.updateDynamic("AutoCreateApplication")(AutoCreateApplication.asInstanceOf[js.Any])
-    if (BuildConfiguration != null) __obj.updateDynamic("BuildConfiguration")(BuildConfiguration.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (!js.isUndefined(Process)) __obj.updateDynamic("Process")(Process.asInstanceOf[js.Any])
-    if (SourceBuildInformation != null) __obj.updateDynamic("SourceBuildInformation")(SourceBuildInformation.asInstanceOf[js.Any])
-    if (SourceBundle != null) __obj.updateDynamic("SourceBundle")(SourceBundle.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateApplicationVersionMessage]
   }
+  @scala.inline
+  implicit class CreateApplicationVersionMessageOps[Self <: CreateApplicationVersionMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationName(value: ApplicationName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVersionLabel(value: VersionLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoCreateApplication(value: AutoCreateApplication): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoCreateApplication")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoCreateApplication: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoCreateApplication")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuildConfiguration(value: BuildConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BuildConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuildConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BuildConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProcess(value: ApplicationVersionProccess): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Process")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProcess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Process")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceBuildInformation(value: SourceBuildInformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceBuildInformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceBuildInformation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceBuildInformation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceBundle(value: S3Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceBundle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceBundle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceBundle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

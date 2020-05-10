@@ -13,12 +13,10 @@ trait LinkType extends js.Object
 
 object LinkType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def plain: typingsSlinky.reactElemental.reactElementalStrings.plain = "plain".asInstanceOf[typingsSlinky.reactElemental.reactElementalStrings.plain]
   @scala.inline
-  def plain: typingsSlinky.reactElemental.reactElementalStrings.plain = this.cast("plain")
+  def regular: typingsSlinky.reactElemental.reactElementalStrings.regular = "regular".asInstanceOf[typingsSlinky.reactElemental.reactElementalStrings.regular]
   @scala.inline
-  def regular: typingsSlinky.reactElemental.reactElementalStrings.regular = this.cast("regular")
-  @scala.inline
-  def underline: typingsSlinky.reactElemental.reactElementalStrings.underline = this.cast("underline")
+  def underline: typingsSlinky.reactElemental.reactElementalStrings.underline = "underline".asInstanceOf[typingsSlinky.reactElemental.reactElementalStrings.underline]
 }
 

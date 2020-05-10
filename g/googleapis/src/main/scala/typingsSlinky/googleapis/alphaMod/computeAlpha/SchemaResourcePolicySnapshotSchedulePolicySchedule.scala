@@ -16,16 +16,53 @@ trait SchemaResourcePolicySnapshotSchedulePolicySchedule extends js.Object {
 
 object SchemaResourcePolicySnapshotSchedulePolicySchedule {
   @scala.inline
-  def apply(
-    dailySchedule: SchemaResourcePolicyDailyCycle = null,
-    hourlySchedule: SchemaResourcePolicyHourlyCycle = null,
-    weeklySchedule: SchemaResourcePolicyWeeklyCycle = null
-  ): SchemaResourcePolicySnapshotSchedulePolicySchedule = {
+  def apply(): SchemaResourcePolicySnapshotSchedulePolicySchedule = {
     val __obj = js.Dynamic.literal()
-    if (dailySchedule != null) __obj.updateDynamic("dailySchedule")(dailySchedule.asInstanceOf[js.Any])
-    if (hourlySchedule != null) __obj.updateDynamic("hourlySchedule")(hourlySchedule.asInstanceOf[js.Any])
-    if (weeklySchedule != null) __obj.updateDynamic("weeklySchedule")(weeklySchedule.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResourcePolicySnapshotSchedulePolicySchedule]
   }
+  @scala.inline
+  implicit class SchemaResourcePolicySnapshotSchedulePolicyScheduleOps[Self <: SchemaResourcePolicySnapshotSchedulePolicySchedule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDailySchedule(value: SchemaResourcePolicyDailyCycle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dailySchedule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDailySchedule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dailySchedule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHourlySchedule(value: SchemaResourcePolicyHourlyCycle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hourlySchedule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHourlySchedule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hourlySchedule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeeklySchedule(value: SchemaResourcePolicyWeeklyCycle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weeklySchedule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeeklySchedule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weeklySchedule")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

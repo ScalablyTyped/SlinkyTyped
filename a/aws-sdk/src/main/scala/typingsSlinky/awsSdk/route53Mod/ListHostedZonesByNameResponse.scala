@@ -38,21 +38,83 @@ trait ListHostedZonesByNameResponse extends js.Object {
 
 object ListHostedZonesByNameResponse {
   @scala.inline
-  def apply(
-    HostedZones: HostedZones,
-    IsTruncated: PageTruncated,
-    MaxItems: PageMaxItems,
-    DNSName: DNSName = null,
-    HostedZoneId: ResourceId = null,
-    NextDNSName: DNSName = null,
-    NextHostedZoneId: ResourceId = null
-  ): ListHostedZonesByNameResponse = {
+  def apply(HostedZones: HostedZones, IsTruncated: PageTruncated, MaxItems: PageMaxItems): ListHostedZonesByNameResponse = {
     val __obj = js.Dynamic.literal(HostedZones = HostedZones.asInstanceOf[js.Any], IsTruncated = IsTruncated.asInstanceOf[js.Any], MaxItems = MaxItems.asInstanceOf[js.Any])
-    if (DNSName != null) __obj.updateDynamic("DNSName")(DNSName.asInstanceOf[js.Any])
-    if (HostedZoneId != null) __obj.updateDynamic("HostedZoneId")(HostedZoneId.asInstanceOf[js.Any])
-    if (NextDNSName != null) __obj.updateDynamic("NextDNSName")(NextDNSName.asInstanceOf[js.Any])
-    if (NextHostedZoneId != null) __obj.updateDynamic("NextHostedZoneId")(NextHostedZoneId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListHostedZonesByNameResponse]
   }
+  @scala.inline
+  implicit class ListHostedZonesByNameResponseOps[Self <: ListHostedZonesByNameResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHostedZones(value: HostedZones): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostedZones")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsTruncated(value: PageTruncated): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxItems(value: PageMaxItems): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDNSName(value: DNSName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DNSName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDNSName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DNSName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostedZoneId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostedZoneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostedZoneId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostedZoneId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextDNSName(value: DNSName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextDNSName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextDNSName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextDNSName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextHostedZoneId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextHostedZoneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextHostedZoneId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextHostedZoneId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

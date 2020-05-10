@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ColumnChartMediaInfo
   extends JSONSupport
      with MediaInfo
@@ -16,7 +17,7 @@ trait ColumnChartMediaInfo
     *
     * @default column-chart
     */
-  val `type`: String
+  val `type`: String = js.native
 }
 
 @JSGlobal("__esri.ColumnChartMediaInfo")

@@ -1,7 +1,6 @@
 package typingsSlinky.tensorflowTfjsCore.localStorageMod
 
 import org.scalajs.dom.raw.Storage
-import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.localstorageColonSlashSlash
 import typingsSlinky.tensorflowTfjsCore.typesMod.IOHandler
 import typingsSlinky.tensorflowTfjsCore.typesMod.ModelArtifacts
 import typingsSlinky.tensorflowTfjsCore.typesMod.SaveResult
@@ -43,6 +42,6 @@ class BrowserLocalStorage_ protected () extends IOHandler {
 @JSImport("@tensorflow/tfjs-core/dist/io/local_storage", "BrowserLocalStorage")
 @js.native
 object BrowserLocalStorage_ extends js.Object {
-  val URL_SCHEME: localstorageColonSlashSlash = js.native
+  val URL_SCHEME: /* "localstorage://" */ String = js.native
 }
 

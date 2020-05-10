@@ -1,8 +1,8 @@
 package typingsSlinky.yaml.mod
 
-import typingsSlinky.yaml.mod.ast.MapBase
-import typingsSlinky.yaml.mod.ast.Scalar
-import typingsSlinky.yaml.mod.ast.SeqBase
+import typingsSlinky.yaml.typesMod.Scalar
+import typingsSlinky.yaml.typesMod.YAMLMap
+import typingsSlinky.yaml.typesMod.YAMLSeq
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 @JSImport("yaml", "createNode")
 @js.native
 object createNode extends js.Object {
-  def apply(value: js.Any): MapBase | SeqBase | Scalar = js.native
+  def apply(value: js.Any): YAMLMap | YAMLSeq | Scalar = js.native
 }
 

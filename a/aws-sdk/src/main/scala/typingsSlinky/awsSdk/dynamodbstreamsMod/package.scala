@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object dynamodbstreamsMod {
   type AttributeMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.dynamodbstreamsMod.AttributeValue]
   type AttributeName = java.lang.String
-  type BinaryAttributeValue = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.dynamodbstreamsMod.Blob | java.lang.String
+  type BinaryAttributeValue = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.dynamodbstreamsMod.Blob | java.lang.String
   type BinarySetAttributeValue = js.Array[typingsSlinky.awsSdk.dynamodbstreamsMod.BinaryAttributeValue]
   type BooleanAttributeValue = scala.Boolean
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.dynamodbstreamsMod.ClientApiVersions

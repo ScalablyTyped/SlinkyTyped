@@ -20,26 +20,24 @@ trait TriggerEvent extends js.Object
 
 object TriggerEvent {
   @scala.inline
-  def addDotowlDotcarousel: typingsSlinky.owlCarousel.owlCarouselStrings.addDotowlDotcarousel = this.cast("add.owl.carousel")
+  def addDotowlDotcarousel: typingsSlinky.owlCarousel.owlCarouselStrings.addDotowlDotcarousel = "add.owl.carousel".asInstanceOf[typingsSlinky.owlCarousel.owlCarouselStrings.addDotowlDotcarousel]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def destroyDotowlDotcarousel: typingsSlinky.owlCarousel.owlCarouselStrings.destroyDotowlDotcarousel = "destroy.owl.carousel".asInstanceOf[typingsSlinky.owlCarousel.owlCarouselStrings.destroyDotowlDotcarousel]
   @scala.inline
-  def destroyDotowlDotcarousel: typingsSlinky.owlCarousel.owlCarouselStrings.destroyDotowlDotcarousel = this.cast("destroy.owl.carousel")
+  def nextDotowlDotcarousel: typingsSlinky.owlCarousel.owlCarouselStrings.nextDotowlDotcarousel = "next.owl.carousel".asInstanceOf[typingsSlinky.owlCarousel.owlCarouselStrings.nextDotowlDotcarousel]
   @scala.inline
-  def nextDotowlDotcarousel: typingsSlinky.owlCarousel.owlCarouselStrings.nextDotowlDotcarousel = this.cast("next.owl.carousel")
+  def playDotowlDotautoplay: typingsSlinky.owlCarousel.owlCarouselStrings.playDotowlDotautoplay = "play.owl.autoplay".asInstanceOf[typingsSlinky.owlCarousel.owlCarouselStrings.playDotowlDotautoplay]
   @scala.inline
-  def playDotowlDotautoplay: typingsSlinky.owlCarousel.owlCarouselStrings.playDotowlDotautoplay = this.cast("play.owl.autoplay")
+  def prevDotowlDotcarousel: typingsSlinky.owlCarousel.owlCarouselStrings.prevDotowlDotcarousel = "prev.owl.carousel".asInstanceOf[typingsSlinky.owlCarousel.owlCarouselStrings.prevDotowlDotcarousel]
   @scala.inline
-  def prevDotowlDotcarousel: typingsSlinky.owlCarousel.owlCarouselStrings.prevDotowlDotcarousel = this.cast("prev.owl.carousel")
+  def refreshDotowlDotcarousel: typingsSlinky.owlCarousel.owlCarouselStrings.refreshDotowlDotcarousel = "refresh.owl.carousel".asInstanceOf[typingsSlinky.owlCarousel.owlCarouselStrings.refreshDotowlDotcarousel]
   @scala.inline
-  def refreshDotowlDotcarousel: typingsSlinky.owlCarousel.owlCarouselStrings.refreshDotowlDotcarousel = this.cast("refresh.owl.carousel")
+  def removeDotowlDotcarousel: typingsSlinky.owlCarousel.owlCarouselStrings.removeDotowlDotcarousel = "remove.owl.carousel".asInstanceOf[typingsSlinky.owlCarousel.owlCarouselStrings.removeDotowlDotcarousel]
   @scala.inline
-  def removeDotowlDotcarousel: typingsSlinky.owlCarousel.owlCarouselStrings.removeDotowlDotcarousel = this.cast("remove.owl.carousel")
+  def replaceDotowlDotcarousel: typingsSlinky.owlCarousel.owlCarouselStrings.replaceDotowlDotcarousel = "replace.owl.carousel".asInstanceOf[typingsSlinky.owlCarousel.owlCarouselStrings.replaceDotowlDotcarousel]
   @scala.inline
-  def replaceDotowlDotcarousel: typingsSlinky.owlCarousel.owlCarouselStrings.replaceDotowlDotcarousel = this.cast("replace.owl.carousel")
+  def stopDotowlDotautoplay: typingsSlinky.owlCarousel.owlCarouselStrings.stopDotowlDotautoplay = "stop.owl.autoplay".asInstanceOf[typingsSlinky.owlCarousel.owlCarouselStrings.stopDotowlDotautoplay]
   @scala.inline
-  def stopDotowlDotautoplay: typingsSlinky.owlCarousel.owlCarouselStrings.stopDotowlDotautoplay = this.cast("stop.owl.autoplay")
-  @scala.inline
-  def toDotowlDotcarousel: typingsSlinky.owlCarousel.owlCarouselStrings.toDotowlDotcarousel = this.cast("to.owl.carousel")
+  def toDotowlDotcarousel: typingsSlinky.owlCarousel.owlCarouselStrings.toDotowlDotcarousel = "to.owl.carousel".asInstanceOf[typingsSlinky.owlCarousel.owlCarouselStrings.toDotowlDotcarousel]
 }
 

@@ -28,11 +28,41 @@ trait SchemaPrivateClusterConfig extends js.Object {
 
 object SchemaPrivateClusterConfig {
   @scala.inline
-  def apply(enablePrivateEndpoint: js.UndefOr[Boolean] = js.undefined, masterIpv4CidrBlock: String = null): SchemaPrivateClusterConfig = {
+  def apply(): SchemaPrivateClusterConfig = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enablePrivateEndpoint)) __obj.updateDynamic("enablePrivateEndpoint")(enablePrivateEndpoint.asInstanceOf[js.Any])
-    if (masterIpv4CidrBlock != null) __obj.updateDynamic("masterIpv4CidrBlock")(masterIpv4CidrBlock.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPrivateClusterConfig]
   }
+  @scala.inline
+  implicit class SchemaPrivateClusterConfigOps[Self <: SchemaPrivateClusterConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnablePrivateEndpoint(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePrivateEndpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnablePrivateEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePrivateEndpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterIpv4CidrBlock(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterIpv4CidrBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterIpv4CidrBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterIpv4CidrBlock")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

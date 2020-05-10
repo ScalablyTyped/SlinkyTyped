@@ -26,18 +26,65 @@ trait FunctionConfigurationEnvironment extends js.Object {
 
 object FunctionConfigurationEnvironment {
   @scala.inline
-  def apply(
-    AccessSysfs: js.UndefOr[Boolean] = js.undefined,
-    Execution: FunctionExecutionConfig = null,
-    ResourceAccessPolicies: listOfResourceAccessPolicy = null,
-    Variables: mapOfString = null
-  ): FunctionConfigurationEnvironment = {
+  def apply(): FunctionConfigurationEnvironment = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(AccessSysfs)) __obj.updateDynamic("AccessSysfs")(AccessSysfs.asInstanceOf[js.Any])
-    if (Execution != null) __obj.updateDynamic("Execution")(Execution.asInstanceOf[js.Any])
-    if (ResourceAccessPolicies != null) __obj.updateDynamic("ResourceAccessPolicies")(ResourceAccessPolicies.asInstanceOf[js.Any])
-    if (Variables != null) __obj.updateDynamic("Variables")(Variables.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionConfigurationEnvironment]
   }
+  @scala.inline
+  implicit class FunctionConfigurationEnvironmentOps[Self <: FunctionConfigurationEnvironment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessSysfs(value: boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessSysfs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessSysfs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessSysfs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecution(value: FunctionExecutionConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Execution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Execution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceAccessPolicies(value: listOfResourceAccessPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAccessPolicies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceAccessPolicies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAccessPolicies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVariables(value: mapOfString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Variables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Variables")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

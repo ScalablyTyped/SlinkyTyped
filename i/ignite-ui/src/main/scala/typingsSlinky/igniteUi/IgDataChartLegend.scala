@@ -5,15 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgDataChartLegend
   extends /**
-	 * Option for IgDataChartLegend
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
   	 * The name of the element to turn into a legend.
   	 */
-  var element: js.UndefOr[String] = js.undefined
+  var element: js.UndefOr[String] = js.native
   /**
   	 * The height of the legend.null will stretch vertically to fit data, no other height are defined.
   	 *
@@ -21,7 +22,7 @@ trait IgDataChartLegend
   	 * Valid values:
   	 * "null"
   	 */
-  var height: js.UndefOr[String | Double] = js.undefined
+  var height: js.UndefOr[String | Double] = js.native
   /**
   	 * Type of the legend.
   	 *
@@ -29,35 +30,77 @@ trait IgDataChartLegend
   	 * "item" Specify the legend as item legend. It displays a legend item for each pie in the igPieChart control.
   	 * "legend" Specify the legend as legend. It is supported by all types of series in the igDataChart control.
   	 */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /**
   	 * The width of the legend.
   	 *
   	 * Valid values:
   	 * "null" will stretch to fit data, if no other widths are defined.
   	 */
-  var width: js.UndefOr[String | Double] = js.undefined
+  var width: js.UndefOr[String | Double] = js.native
 }
 
 object IgDataChartLegend {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for IgDataChartLegend
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    element: String = null,
-    height: String | Double = null,
-    `type`: String = null,
-    width: String | Double = null
-  ): IgDataChartLegend = {
+  def apply(): IgDataChartLegend = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgDataChartLegend]
   }
+  @scala.inline
+  implicit class IgDataChartLegendOps[Self <: IgDataChartLegend] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withElement(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

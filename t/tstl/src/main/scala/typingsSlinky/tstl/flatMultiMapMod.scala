@@ -9,7 +9,6 @@ import typingsSlinky.tstl.ipairMod.IPair
 import typingsSlinky.tstl.itreemapMod.ITreeMap
 import typingsSlinky.tstl.multiTreeMapMod.MultiTreeMap
 import typingsSlinky.tstl.tstlBooleans.`false`
-import typingsSlinky.tstl.tstlStrings.experimental
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -117,7 +116,7 @@ object flatMultiMapMod extends js.Object {
           ]
         ]
       ] = js.native
-    val __MODULE: experimental = js.native
+    val __MODULE: /* "experimental" */ String = js.native
     type Iterator[Key, T] = typingsSlinky.tstl.mapElementVectorMod.MapElementVector.Iterator[Key, T, `false`, FlatMultiMap[Key, T]]
     type ReverseIterator[Key, T] = typingsSlinky.tstl.mapElementVectorMod.MapElementVector.ReverseIterator[Key, T, `false`, FlatMultiMap[Key, T]]
   }

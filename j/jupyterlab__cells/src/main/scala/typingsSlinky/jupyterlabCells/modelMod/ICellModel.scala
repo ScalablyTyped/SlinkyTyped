@@ -14,35 +14,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ICellModel extends IModel {
   /**
     * A signal emitted when the content of the model changes.
     */
-  val contentChanged: ISignal[ICellModel, Unit]
+  val contentChanged: ISignal[ICellModel, Unit] = js.native
   /**
     * A unique identifier for the cell.
     */
-  val id: String
+  val id: String = js.native
   /**
     * The metadata associated with the cell.
     */
-  val metadata: IObservableJSON
+  val metadata: IObservableJSON = js.native
   /**
     * A signal emitted when a model state changes.
     */
-  val stateChanged: ISignal[ICellModel, IChangedArgs[_, String]]
+  val stateChanged: ISignal[ICellModel, IChangedArgs[_, String]] = js.native
   /**
     * Whether the cell is trusted.
     */
-  var trusted: Boolean
+  var trusted: Boolean = js.native
   /**
     * The type of the cell.
     */
-  val `type`: CellType
+  val `type`: CellType = js.native
   /**
     * Serialize the model to JSON.
     */
-  def toJSON(): ICell
+  def toJSON(): ICell = js.native
 }
 
 object ICellModel {
@@ -67,5 +68,55 @@ object ICellModel {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICellModel]
   }
+  @scala.inline
+  implicit class ICellModelOps[Self <: ICellModel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentChanged(value: ISignal[ICellModel, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: IObservableJSON): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStateChanged(value: ISignal[ICellModel, IChangedArgs[_, String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToJSON(value: () => ICell): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTrusted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trusted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: CellType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

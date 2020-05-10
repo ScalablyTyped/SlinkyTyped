@@ -1,47 +1,48 @@
 package typingsSlinky.rcMenu.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
-import slinky.web.html.`*`.tag
+import slinky.core.facade.ReactElement
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcMenu.domwrapMod.DOMWrapProps
 import typingsSlinky.rcMenu.domwrapMod.default
 import typingsSlinky.rcMenu.interfaceMod.MenuMode
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DOMWrap
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object DOMWrap {
   @JSImport("rc-menu/lib/DOMWrap", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    level: Int | Double = null,
-    mode: MenuMode = null,
-    overflowedIndicator: TagMod[Any] = null,
-    prefixCls: String = null,
-    tag: String = null,
-    theme: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[slinky.web.html.`*`.tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (overflowedIndicator != null) __obj.updateDynamic("overflowedIndicator")(overflowedIndicator.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[slinky.web.html.`*`.tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def level(value: Double): this.type = set("level", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mode(value: MenuMode): this.type = set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overflowedIndicatorReactElement(value: ReactElement): this.type = set("overflowedIndicator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overflowedIndicator(value: TagMod[Any]): this.type = set("overflowedIndicator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tag(value: String): this.type = set("tag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: String): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.rcMenu.domwrapMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DOMWrapProps
+  
+  def withProps(p: DOMWrapProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DOMWrap.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

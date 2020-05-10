@@ -16,9 +16,6 @@ object angularCommonStrings {
   sealed trait HEAD extends js.Object
   
   @js.native
-  sealed trait HttpErrorResponse extends js.Object
-  
-  @js.native
   sealed trait JSONP extends js.Object
   
   @js.native
@@ -49,15 +46,6 @@ object angularCommonStrings {
   sealed trait body extends HttpObserve
   
   @js.native
-  sealed trait browser extends js.Object
-  
-  @js.native
-  sealed trait browserWorkerApp extends js.Object
-  
-  @js.native
-  sealed trait browserWorkerUi extends js.Object
-  
-  @js.native
   sealed trait code extends js.Object
   
   @js.native
@@ -74,9 +62,6 @@ object angularCommonStrings {
   
   @js.native
   sealed trait response extends HttpObserve
-  
-  @js.native
-  sealed trait server extends js.Object
   
   @js.native
   sealed trait symbol extends js.Object
@@ -96,8 +81,6 @@ object angularCommonStrings {
   def GET: GET = "GET".asInstanceOf[GET]
   @scala.inline
   def HEAD: HEAD = "HEAD".asInstanceOf[HEAD]
-  @scala.inline
-  def HttpErrorResponse: HttpErrorResponse = "HttpErrorResponse".asInstanceOf[HttpErrorResponse]
   @scala.inline
   def JSONP: JSONP = "JSONP".asInstanceOf[JSONP]
   @scala.inline
@@ -119,12 +102,6 @@ object angularCommonStrings {
   @scala.inline
   def body: body = "body".asInstanceOf[body]
   @scala.inline
-  def browser: browser = "browser".asInstanceOf[browser]
-  @scala.inline
-  def browserWorkerApp: browserWorkerApp = "browserWorkerApp".asInstanceOf[browserWorkerApp]
-  @scala.inline
-  def browserWorkerUi: browserWorkerUi = "browserWorkerUi".asInstanceOf[browserWorkerUi]
-  @scala.inline
   def code: code = "code".asInstanceOf[code]
   @scala.inline
   def events: events = "events".asInstanceOf[events]
@@ -136,8 +113,6 @@ object angularCommonStrings {
   def narrow: narrow = "narrow".asInstanceOf[narrow]
   @scala.inline
   def response: response = "response".asInstanceOf[response]
-  @scala.inline
-  def server: server = "server".asInstanceOf[server]
   @scala.inline
   def symbol: symbol = "symbol".asInstanceOf[symbol]
   @scala.inline

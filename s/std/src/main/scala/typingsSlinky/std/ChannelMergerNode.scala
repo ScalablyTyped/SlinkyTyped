@@ -9,10 +9,10 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ChannelMergerNode")
 @js.native
 object ChannelMergerNode
-  extends Instantiable1[/* context */ BaseAudioContext, ChannelMergerNode]
+  extends Instantiable1[/* context */ BaseAudioContext, org.scalajs.dom.raw.ChannelMergerNode]
      with Instantiable2[
       /* context */ BaseAudioContext, 
       /* options */ ChannelMergerOptions, 
-      ChannelMergerNode
+      org.scalajs.dom.raw.ChannelMergerNode
     ]
 

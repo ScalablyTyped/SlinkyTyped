@@ -15,16 +15,14 @@ trait Status extends js.Object
 
 object Status {
   @scala.inline
-  def active: typingsSlinky.microsoftGraph.microsoftGraphStrings.active = this.cast("active")
+  def active: typingsSlinky.microsoftGraph.microsoftGraphStrings.active = "active".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.active]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def deleted: typingsSlinky.microsoftGraph.microsoftGraphStrings.deleted = "deleted".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.deleted]
   @scala.inline
-  def deleted: typingsSlinky.microsoftGraph.microsoftGraphStrings.deleted = this.cast("deleted")
+  def ignored: typingsSlinky.microsoftGraph.microsoftGraphStrings.ignored = "ignored".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.ignored]
   @scala.inline
-  def ignored: typingsSlinky.microsoftGraph.microsoftGraphStrings.ignored = this.cast("ignored")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
   @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
-  @scala.inline
-  def updated: typingsSlinky.microsoftGraph.microsoftGraphStrings.updated = this.cast("updated")
+  def updated: typingsSlinky.microsoftGraph.microsoftGraphStrings.updated = "updated".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.updated]
 }
 

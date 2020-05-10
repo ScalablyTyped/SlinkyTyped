@@ -5,14 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDomain extends js.Object {
-  var domain: ReturnType[js.Function1[/* host */ String, String | Null]]
-  var hostname: ReturnType[js.Function1[/* host */ String, String | Null]]
-  var isIp: Boolean
-  var isValid: ReturnType[js.Function1[/* host */ String, Boolean]]
-  var publicSuffix: ReturnType[js.Function1[/* host */ String, String | Null]]
-  var subdomain: ReturnType[js.Function1[/* host */ String, String | Null]]
-  var tldExists: ReturnType[js.Function1[/* host */ String, Boolean]]
+  var domain: ReturnType[js.Function1[/* host */ String, String | Null]] = js.native
+  var hostname: ReturnType[js.Function1[/* host */ String, String | Null]] = js.native
+  var isIp: Boolean = js.native
+  var isValid: ReturnType[js.Function1[/* host */ String, Boolean]] = js.native
+  var publicSuffix: ReturnType[js.Function1[/* host */ String, String | Null]] = js.native
+  var subdomain: ReturnType[js.Function1[/* host */ String, String | Null]] = js.native
+  var tldExists: ReturnType[js.Function1[/* host */ String, Boolean]] = js.native
 }
 
 object AnonDomain {
@@ -27,8 +28,57 @@ object AnonDomain {
     tldExists: ReturnType[js.Function1[/* host */ String, Boolean]]
   ): AnonDomain = {
     val __obj = js.Dynamic.literal(domain = domain.asInstanceOf[js.Any], hostname = hostname.asInstanceOf[js.Any], isIp = isIp.asInstanceOf[js.Any], isValid = isValid.asInstanceOf[js.Any], publicSuffix = publicSuffix.asInstanceOf[js.Any], subdomain = subdomain.asInstanceOf[js.Any], tldExists = tldExists.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonDomain]
   }
+  @scala.inline
+  implicit class AnonDomainOps[Self <: AnonDomain] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomain(value: ReturnType[js.Function1[/* host */ String, String | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHostname(value: ReturnType[js.Function1[/* host */ String, String | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsIp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsValid(value: ReturnType[js.Function1[/* host */ String, Boolean]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isValid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPublicSuffix(value: ReturnType[js.Function1[/* host */ String, String | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publicSuffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubdomain(value: ReturnType[js.Function1[/* host */ String, String | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subdomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTldExists(value: ReturnType[js.Function1[/* host */ String, Boolean]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tldExists")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -18,14 +18,41 @@ trait DescribeAutomationExecutionsResult extends js.Object {
 
 object DescribeAutomationExecutionsResult {
   @scala.inline
-  def apply(
-    AutomationExecutionMetadataList: AutomationExecutionMetadataList = null,
-    NextToken: NextToken = null
-  ): DescribeAutomationExecutionsResult = {
+  def apply(): DescribeAutomationExecutionsResult = {
     val __obj = js.Dynamic.literal()
-    if (AutomationExecutionMetadataList != null) __obj.updateDynamic("AutomationExecutionMetadataList")(AutomationExecutionMetadataList.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAutomationExecutionsResult]
   }
+  @scala.inline
+  implicit class DescribeAutomationExecutionsResultOps[Self <: DescribeAutomationExecutionsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutomationExecutionMetadataList(value: AutomationExecutionMetadataList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomationExecutionMetadataList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutomationExecutionMetadataList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomationExecutionMetadataList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

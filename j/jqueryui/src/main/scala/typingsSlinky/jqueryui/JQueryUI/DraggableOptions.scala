@@ -1,116 +1,411 @@
 package typingsSlinky.jqueryui.JQueryUI
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.jquery.JQueryEventObject
 import typingsSlinky.jqueryui.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DraggableOptions extends DraggableEvents {
-  var addClasses: js.UndefOr[Boolean] = js.undefined
-  var appendTo: js.UndefOr[js.Any] = js.undefined
-  var axis: js.UndefOr[String] = js.undefined
-  var cancel: js.UndefOr[String] = js.undefined
-  var classes: js.UndefOr[DraggableClasses] = js.undefined
-  var connectToSortable: js.UndefOr[Element | js.Array[Element] | JQuery | String] = js.undefined
-  var containment: js.UndefOr[js.Any] = js.undefined
-  var cursor: js.UndefOr[String] = js.undefined
-  var cursorAt: js.UndefOr[js.Any] = js.undefined
-  var delay: js.UndefOr[Double] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var distance: js.UndefOr[Double] = js.undefined
-  var grid: js.UndefOr[js.Array[Double]] = js.undefined
-  var handle: js.UndefOr[js.Any] = js.undefined
-  var helper: js.UndefOr[js.Any] = js.undefined
-  var iframeFix: js.UndefOr[js.Any] = js.undefined
-  var opacity: js.UndefOr[Double] = js.undefined
-  var refreshPositions: js.UndefOr[Boolean] = js.undefined
-  var revert: js.UndefOr[js.Any] = js.undefined
-  var revertDuration: js.UndefOr[Double] = js.undefined
-  var scope: js.UndefOr[String] = js.undefined
-  var scroll: js.UndefOr[Boolean] = js.undefined
-  var scrollSensitivity: js.UndefOr[Double] = js.undefined
-  var scrollSpeed: js.UndefOr[Double] = js.undefined
-  var snap: js.UndefOr[js.Any] = js.undefined
-  var snapMode: js.UndefOr[String] = js.undefined
-  var snapTolerance: js.UndefOr[Double] = js.undefined
-  var stack: js.UndefOr[String] = js.undefined
-  var zIndex: js.UndefOr[Double] = js.undefined
+  var addClasses: js.UndefOr[Boolean] = js.native
+  var appendTo: js.UndefOr[js.Any] = js.native
+  var axis: js.UndefOr[String] = js.native
+  var cancel: js.UndefOr[String] = js.native
+  var classes: js.UndefOr[DraggableClasses] = js.native
+  var connectToSortable: js.UndefOr[Element | js.Array[Element] | JQuery | String] = js.native
+  var containment: js.UndefOr[js.Any] = js.native
+  var cursor: js.UndefOr[String] = js.native
+  var cursorAt: js.UndefOr[js.Any] = js.native
+  var delay: js.UndefOr[Double] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var distance: js.UndefOr[Double] = js.native
+  var grid: js.UndefOr[js.Array[Double]] = js.native
+  var handle: js.UndefOr[js.Any] = js.native
+  var helper: js.UndefOr[js.Any] = js.native
+  var iframeFix: js.UndefOr[js.Any] = js.native
+  var opacity: js.UndefOr[Double] = js.native
+  var refreshPositions: js.UndefOr[Boolean] = js.native
+  var revert: js.UndefOr[js.Any] = js.native
+  var revertDuration: js.UndefOr[Double] = js.native
+  var scope: js.UndefOr[String] = js.native
+  var scroll: js.UndefOr[Boolean] = js.native
+  var scrollSensitivity: js.UndefOr[Double] = js.native
+  var scrollSpeed: js.UndefOr[Double] = js.native
+  var snap: js.UndefOr[js.Any] = js.native
+  var snapMode: js.UndefOr[String] = js.native
+  var snapTolerance: js.UndefOr[Double] = js.native
+  var stack: js.UndefOr[String] = js.native
+  var zIndex: js.UndefOr[Double] = js.native
 }
 
 object DraggableOptions {
   @scala.inline
-  def apply(
-    addClasses: js.UndefOr[Boolean] = js.undefined,
-    appendTo: js.Any = null,
-    axis: String = null,
-    cancel: String = null,
-    classes: DraggableClasses = null,
-    connectToSortable: Element | js.Array[Element] | JQuery | String = null,
-    containment: js.Any = null,
-    create: (/* event */ JQueryEventObject, /* ui */ DraggableEventUIParams) => Unit = null,
-    cursor: String = null,
-    cursorAt: js.Any = null,
-    delay: Int | Double = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    distance: Int | Double = null,
-    drag: (/* event */ JQueryEventObject, /* ui */ DraggableEventUIParams) => Unit = null,
-    grid: js.Array[Double] = null,
-    handle: js.Any = null,
-    helper: js.Any = null,
-    iframeFix: js.Any = null,
-    opacity: Int | Double = null,
-    refreshPositions: js.UndefOr[Boolean] = js.undefined,
-    revert: js.Any = null,
-    revertDuration: Int | Double = null,
-    scope: String = null,
-    scroll: js.UndefOr[Boolean] = js.undefined,
-    scrollSensitivity: Int | Double = null,
-    scrollSpeed: Int | Double = null,
-    snap: js.Any = null,
-    snapMode: String = null,
-    snapTolerance: Int | Double = null,
-    stack: String = null,
-    start: (/* event */ JQueryEventObject, /* ui */ DraggableEventUIParams) => Unit = null,
-    stop: (/* event */ JQueryEventObject, /* ui */ DraggableEventUIParams) => Unit = null,
-    zIndex: Int | Double = null
-  ): DraggableOptions = {
+  def apply(): DraggableOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(addClasses)) __obj.updateDynamic("addClasses")(addClasses.asInstanceOf[js.Any])
-    if (appendTo != null) __obj.updateDynamic("appendTo")(appendTo.asInstanceOf[js.Any])
-    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
-    if (cancel != null) __obj.updateDynamic("cancel")(cancel.asInstanceOf[js.Any])
-    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
-    if (connectToSortable != null) __obj.updateDynamic("connectToSortable")(connectToSortable.asInstanceOf[js.Any])
-    if (containment != null) __obj.updateDynamic("containment")(containment.asInstanceOf[js.Any])
-    if (create != null) __obj.updateDynamic("create")(js.Any.fromFunction2(create))
-    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
-    if (cursorAt != null) __obj.updateDynamic("cursorAt")(cursorAt.asInstanceOf[js.Any])
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (distance != null) __obj.updateDynamic("distance")(distance.asInstanceOf[js.Any])
-    if (drag != null) __obj.updateDynamic("drag")(js.Any.fromFunction2(drag))
-    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
-    if (handle != null) __obj.updateDynamic("handle")(handle.asInstanceOf[js.Any])
-    if (helper != null) __obj.updateDynamic("helper")(helper.asInstanceOf[js.Any])
-    if (iframeFix != null) __obj.updateDynamic("iframeFix")(iframeFix.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (!js.isUndefined(refreshPositions)) __obj.updateDynamic("refreshPositions")(refreshPositions.asInstanceOf[js.Any])
-    if (revert != null) __obj.updateDynamic("revert")(revert.asInstanceOf[js.Any])
-    if (revertDuration != null) __obj.updateDynamic("revertDuration")(revertDuration.asInstanceOf[js.Any])
-    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
-    if (!js.isUndefined(scroll)) __obj.updateDynamic("scroll")(scroll.asInstanceOf[js.Any])
-    if (scrollSensitivity != null) __obj.updateDynamic("scrollSensitivity")(scrollSensitivity.asInstanceOf[js.Any])
-    if (scrollSpeed != null) __obj.updateDynamic("scrollSpeed")(scrollSpeed.asInstanceOf[js.Any])
-    if (snap != null) __obj.updateDynamic("snap")(snap.asInstanceOf[js.Any])
-    if (snapMode != null) __obj.updateDynamic("snapMode")(snapMode.asInstanceOf[js.Any])
-    if (snapTolerance != null) __obj.updateDynamic("snapTolerance")(snapTolerance.asInstanceOf[js.Any])
-    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(js.Any.fromFunction2(start))
-    if (stop != null) __obj.updateDynamic("stop")(js.Any.fromFunction2(stop))
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[DraggableOptions]
   }
+  @scala.inline
+  implicit class DraggableOptionsOps[Self <: DraggableOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddClasses(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addClasses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddClasses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addClasses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppendTo(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppendTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClasses(value: DraggableClasses): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClasses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectToSortableElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectToSortable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConnectToSortable(value: Element | js.Array[Element] | JQuery | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectToSortable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectToSortable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectToSortable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainment(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCursor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCursor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCursorAt(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCursorAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrid(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandle(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHandle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHelper(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("helper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHelper: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("helper")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIframeFix(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iframeFix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIframeFix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iframeFix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRefreshPositions(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshPositions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRefreshPositions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshPositions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevert(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revert")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevert: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revert")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevertDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revertDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevertDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revertDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScope(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScroll(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scroll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScroll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scroll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollSensitivity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSensitivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollSensitivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSensitivity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollSpeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSpeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollSpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSpeed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnap(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnapMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnapMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnapTolerance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapTolerance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnapTolerance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapTolerance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStack(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

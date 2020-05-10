@@ -22,14 +22,41 @@ trait SchemaResourceUsageExportConfig extends js.Object {
 
 object SchemaResourceUsageExportConfig {
   @scala.inline
-  def apply(
-    bigqueryDestination: SchemaBigQueryDestination = null,
-    enableNetworkEgressMetering: js.UndefOr[Boolean] = js.undefined
-  ): SchemaResourceUsageExportConfig = {
+  def apply(): SchemaResourceUsageExportConfig = {
     val __obj = js.Dynamic.literal()
-    if (bigqueryDestination != null) __obj.updateDynamic("bigqueryDestination")(bigqueryDestination.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableNetworkEgressMetering)) __obj.updateDynamic("enableNetworkEgressMetering")(enableNetworkEgressMetering.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResourceUsageExportConfig]
   }
+  @scala.inline
+  implicit class SchemaResourceUsageExportConfigOps[Self <: SchemaResourceUsageExportConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBigqueryDestination(value: SchemaBigQueryDestination): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bigqueryDestination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBigqueryDestination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bigqueryDestination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableNetworkEgressMetering(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableNetworkEgressMetering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableNetworkEgressMetering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableNetworkEgressMetering")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

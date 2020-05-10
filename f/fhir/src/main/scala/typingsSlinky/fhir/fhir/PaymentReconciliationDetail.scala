@@ -7,75 +7,146 @@ import scala.scalajs.js.annotation._
 /**
   * List of settlements
   */
+@js.native
 trait PaymentReconciliationDetail extends BackboneElement {
   /**
     * Contains extended information for property 'date'.
     */
-  var _date: js.UndefOr[Element] = js.undefined
+  var _date: js.UndefOr[Element] = js.native
   /**
     * Amount being paid
     */
-  var amount: js.UndefOr[Money] = js.undefined
+  var amount: js.UndefOr[Money] = js.native
   /**
     * Invoice date
     */
-  var date: js.UndefOr[typingsSlinky.fhir.fhir.date] = js.undefined
+  var date: js.UndefOr[typingsSlinky.fhir.fhir.date] = js.native
   /**
     * Organization which is receiving the payment
     */
-  var payee: js.UndefOr[Reference] = js.undefined
+  var payee: js.UndefOr[Reference] = js.native
   /**
     * Claim
     */
-  var request: js.UndefOr[Reference] = js.undefined
+  var request: js.UndefOr[Reference] = js.native
   /**
     * Claim Response
     */
-  var response: js.UndefOr[Reference] = js.undefined
+  var response: js.UndefOr[Reference] = js.native
   /**
     * Organization which submitted the claim
     */
-  var submitter: js.UndefOr[Reference] = js.undefined
+  var submitter: js.UndefOr[Reference] = js.native
   /**
     * Type code
     */
-  var `type`: CodeableConcept
+  var `type`: CodeableConcept = js.native
 }
 
 object PaymentReconciliationDetail {
   @scala.inline
-  def apply(
-    `type`: CodeableConcept,
-    _date: Element = null,
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    amount: Money = null,
-    date: date = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    id: String = null,
-    modifierExtension: js.Array[Extension] = null,
-    payee: Reference = null,
-    request: Reference = null,
-    response: Reference = null,
-    submitter: Reference = null
-  ): PaymentReconciliationDetail = {
+  def apply(`type`: CodeableConcept): PaymentReconciliationDetail = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (_date != null) __obj.updateDynamic("_date")(_date.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (amount != null) __obj.updateDynamic("amount")(amount.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (payee != null) __obj.updateDynamic("payee")(payee.asInstanceOf[js.Any])
-    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
-    if (response != null) __obj.updateDynamic("response")(response.asInstanceOf[js.Any])
-    if (submitter != null) __obj.updateDynamic("submitter")(submitter.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaymentReconciliationDetail]
   }
+  @scala.inline
+  implicit class PaymentReconciliationDetailOps[Self <: PaymentReconciliationDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_date(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_date: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmount(value: Money): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDate(value: date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPayee(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payee")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPayee: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payee")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequest(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponse(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubmitter(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submitter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubmitter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submitter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

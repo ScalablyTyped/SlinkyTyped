@@ -12,10 +12,8 @@ trait DecoderMode extends js.Object
 
 object DecoderMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fatal: typingsSlinky.windows1251.windows1251Strings.fatal = "fatal".asInstanceOf[typingsSlinky.windows1251.windows1251Strings.fatal]
   @scala.inline
-  def fatal: typingsSlinky.windows1251.windows1251Strings.fatal = this.cast("fatal")
-  @scala.inline
-  def replacement: typingsSlinky.windows1251.windows1251Strings.replacement = this.cast("replacement")
+  def replacement: typingsSlinky.windows1251.windows1251Strings.replacement = "replacement".asInstanceOf[typingsSlinky.windows1251.windows1251Strings.replacement]
 }
 

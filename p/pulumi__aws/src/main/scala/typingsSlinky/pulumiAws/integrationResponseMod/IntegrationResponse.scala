@@ -1,7 +1,6 @@
 package typingsSlinky.pulumiAws.integrationResponseMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.pulumiAws.restApiMod.RestApi
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -47,7 +46,7 @@ class IntegrationResponse protected () extends CustomResource {
   /**
     * The ID of the associated REST API
     */
-  val restApi: Output_[RestApi] = js.native
+  val restApi: Output_[String] = js.native
   /**
     * Specifies the regular expression pattern used to choose
     * an integration response based on the response from the backend. Setting this to `-` makes the integration the default one.

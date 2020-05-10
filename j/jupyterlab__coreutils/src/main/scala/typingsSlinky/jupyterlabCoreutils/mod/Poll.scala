@@ -1,7 +1,5 @@
 package typingsSlinky.jupyterlabCoreutils.mod
 
-import typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsNumbers.`0`
-import typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsNumbers.`2147483647`
 import typingsSlinky.jupyterlabCoreutils.pollMod.Poll.IOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,14 +23,14 @@ object Poll extends js.Object {
   /**
     * An interval value that indicates the poll should tick immediately.
     */
-  val IMMEDIATE: `0` = js.native
+  val IMMEDIATE: /* 0 */ Double = js.native
   /**
     * Delays are 32-bit integers in many browsers so intervals need to be capped.
     *
     * #### Notes
     * https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Maximum_delay_value
     */
-  val MAX_INTERVAL: `2147483647` = js.native
+  val MAX_INTERVAL: /* 2147483647 */ Double = js.native
   /**
     * An interval value that indicates the poll should never tick.
     */

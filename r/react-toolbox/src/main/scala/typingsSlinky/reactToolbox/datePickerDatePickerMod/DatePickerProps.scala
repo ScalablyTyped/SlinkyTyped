@@ -1,8 +1,7 @@
 package typingsSlinky.reactToolbox.datePickerDatePickerMod
 
 import slinky.core.TagMod
-import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.Key
+import slinky.core.facade.ReactElement
 import typingsSlinky.reactToolbox.componentsMod.ReactToolbox.Props
 import typingsSlinky.reactToolbox.reactToolboxStrings.`zh-cn`
 import typingsSlinky.reactToolbox.reactToolboxStrings.`zh-hk`
@@ -31,223 +30,445 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DatePickerProps extends Props {
   /**
     * Allows to control if the picker should be shown from outside. Beware you should update the prop when the Dialog is closed.
     * @default false
     */
-  var active: js.UndefOr[Boolean] = js.undefined
+  var active: js.UndefOr[Boolean] = js.native
   /**
     * Automatically selects a date upon clicking on a day
     * @default false
     */
-  var autoOk: js.UndefOr[Boolean] = js.undefined
+  var autoOk: js.UndefOr[Boolean] = js.native
   /**
     * Label used for cancel button on Dialog.
     * @default "Cancel"
     */
-  var cancelLabel: js.UndefOr[String] = js.undefined
+  var cancelLabel: js.UndefOr[String] = js.native
   /**
     * An array of date objects which will be disabled in the calendar. All other dates will be enabled.
     */
-  var disabledDates: js.UndefOr[js.Array[js.Date]] = js.undefined
+  var disabledDates: js.UndefOr[js.Array[js.Date]] = js.native
   /**
     * An array of date objects which will be enabled in the calendar. All other dates will be disabled.
     */
-  var enabledDates: js.UndefOr[js.Array[js.Date]] = js.undefined
+  var enabledDates: js.UndefOr[js.Array[js.Date]] = js.native
   /**
     * Give an error node to display under the field.
     */
-  var error: js.UndefOr[String] = js.undefined
+  var error: js.UndefOr[String] = js.native
   /**
     * A key to identify an Icon from Material Design Icons or a custom Icon Element.
     */
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
+  var icon: js.UndefOr[TagMod[Any]] = js.native
   /**
     * This class will be applied to Input component of DatePicker.
     */
-  var inputClassName: js.UndefOr[String] = js.undefined
+  var inputClassName: js.UndefOr[String] = js.native
   /**
     * Function to format the date displayed on the input.
     */
-  var inputFormat: js.UndefOr[js.Function] = js.undefined
+  var inputFormat: js.UndefOr[js.Function] = js.native
   /**
     * The text string to use for the floating label element in the input component.
     */
-  var label: js.UndefOr[String] = js.undefined
+  var label: js.UndefOr[String] = js.native
   /**
     * Sets locale for the Dialog.
     * @default "en"
     */
   var locale: js.UndefOr[
     de | no | en | es | af | ar | be | bg | bn | bo | br | bs | ca | gl | eu | pt | it | fr | ru | ua | `zh-cn` | `zh-hk` | `zh-tw` | DatePickerLocale
-  ] = js.undefined
+  ] = js.native
   /**
     * Date object with the maximum selectable date.
     */
-  var maxDate: js.UndefOr[js.Date] = js.undefined
+  var maxDate: js.UndefOr[js.Date] = js.native
   /**
     * Date object with the minimum selectable date.
     */
-  var minDate: js.UndefOr[js.Date] = js.undefined
+  var minDate: js.UndefOr[js.Date] = js.native
   /**
     * Name for the input field.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Label used for 'OK' button on Dialog.
     * @default "Ok"
     */
-  var okLabel: js.UndefOr[String] = js.undefined
+  var okLabel: js.UndefOr[String] = js.native
   /**
     * Callback called when the picker value is changed.
     */
-  var onChange: js.UndefOr[js.Function] = js.undefined
+  var onChange: js.UndefOr[js.Function] = js.native
   /**
     * Callback fired after dismissing the Dialog.
     */
-  var onDismiss: js.UndefOr[js.Function] = js.undefined
+  var onDismiss: js.UndefOr[js.Function] = js.native
   /**
     * Callback called when the ESC key is pressed with the overlay active.
     */
-  var onEscKeyDown: js.UndefOr[js.Function] = js.undefined
+  var onEscKeyDown: js.UndefOr[js.Function] = js.native
   /**
     * Callback invoked on Input key press.
     */
-  var onKeyPress: js.UndefOr[js.Function] = js.undefined
+  var onKeyPress: js.UndefOr[js.Function] = js.native
   /**
     * Callback to be invoked when the dialog overlay is clicked.
     */
-  var onOverlayClick: js.UndefOr[js.Function] = js.undefined
+  var onOverlayClick: js.UndefOr[js.Function] = js.native
   /**
     * The input element will be readonly and look like disabled.
     */
-  var readonly: js.UndefOr[Boolean] = js.undefined
+  var readonly: js.UndefOr[Boolean] = js.native
   /**
     * Used in case the input is required.
     */
-  var required: js.UndefOr[Boolean] = js.undefined
+  var required: js.UndefOr[Boolean] = js.native
   /**
     * Set week's first day to Sunday. Default week's first day is Monday.
     * @default false
     */
-  var sundayFirstDayOfWeek: js.UndefOr[Boolean] = js.undefined
+  var sundayFirstDayOfWeek: js.UndefOr[Boolean] = js.native
   /**
     * Classnames object defining the component style.
     */
-  var theme: js.UndefOr[DatePickerTheme] = js.undefined
+  var theme: js.UndefOr[DatePickerTheme] = js.native
   /**
     * Date object with the currently selected date.
     */
-  var value: js.UndefOr[js.Date | String] = js.undefined
+  var value: js.UndefOr[js.Date | String] = js.native
 }
 
 object DatePickerProps {
   @scala.inline
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    autoOk: js.UndefOr[Boolean] = js.undefined,
-    cancelLabel: String = null,
-    className: String = null,
-    disabledDates: js.Array[js.Date] = null,
-    enabledDates: js.Array[js.Date] = null,
-    error: String = null,
-    icon: TagMod[Any] = null,
-    inputClassName: String = null,
-    inputFormat: js.Function = null,
-    key: Key = null,
-    label: String = null,
-    locale: de | no | en | es | af | ar | be | bg | bn | bo | br | bs | ca | gl | eu | pt | it | fr | ru | ua | `zh-cn` | `zh-hk` | `zh-tw` | DatePickerLocale = null,
-    maxDate: js.Date = null,
-    minDate: js.Date = null,
-    name: String = null,
-    okLabel: String = null,
-    onChange: js.Function = null,
-    onClick: js.Function = null,
-    onContextMenu: js.Function = null,
-    onDismiss: js.Function = null,
-    onDoubleClick: js.Function = null,
-    onDrag: js.Function = null,
-    onDragEnd: js.Function = null,
-    onDragEnter: js.Function = null,
-    onDragExit: js.Function = null,
-    onDragLeave: js.Function = null,
-    onDragOver: js.Function = null,
-    onDragStart: js.Function = null,
-    onDrop: js.Function = null,
-    onEscKeyDown: js.Function = null,
-    onKeyPress: js.Function = null,
-    onMouseDown: js.Function = null,
-    onMouseEnter: js.Function = null,
-    onMouseLeave: js.Function = null,
-    onMouseMove: js.Function = null,
-    onMouseOut: js.Function = null,
-    onMouseOver: js.Function = null,
-    onMouseUp: js.Function = null,
-    onOverlayClick: js.Function = null,
-    onTouchCancel: js.Function = null,
-    onTouchEnd: js.Function = null,
-    onTouchMove: js.Function = null,
-    onTouchStart: js.Function = null,
-    readonly: js.UndefOr[Boolean] = js.undefined,
-    required: js.UndefOr[Boolean] = js.undefined,
-    style: CSSProperties = null,
-    sundayFirstDayOfWeek: js.UndefOr[Boolean] = js.undefined,
-    theme: DatePickerTheme = null,
-    value: js.Date | String = null
-  ): DatePickerProps = {
+  def apply(): DatePickerProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoOk)) __obj.updateDynamic("autoOk")(autoOk.asInstanceOf[js.Any])
-    if (cancelLabel != null) __obj.updateDynamic("cancelLabel")(cancelLabel.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (disabledDates != null) __obj.updateDynamic("disabledDates")(disabledDates.asInstanceOf[js.Any])
-    if (enabledDates != null) __obj.updateDynamic("enabledDates")(enabledDates.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (inputClassName != null) __obj.updateDynamic("inputClassName")(inputClassName.asInstanceOf[js.Any])
-    if (inputFormat != null) __obj.updateDynamic("inputFormat")(inputFormat.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (okLabel != null) __obj.updateDynamic("okLabel")(okLabel.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(onChange.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
-    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(onContextMenu.asInstanceOf[js.Any])
-    if (onDismiss != null) __obj.updateDynamic("onDismiss")(onDismiss.asInstanceOf[js.Any])
-    if (onDoubleClick != null) __obj.updateDynamic("onDoubleClick")(onDoubleClick.asInstanceOf[js.Any])
-    if (onDrag != null) __obj.updateDynamic("onDrag")(onDrag.asInstanceOf[js.Any])
-    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(onDragEnd.asInstanceOf[js.Any])
-    if (onDragEnter != null) __obj.updateDynamic("onDragEnter")(onDragEnter.asInstanceOf[js.Any])
-    if (onDragExit != null) __obj.updateDynamic("onDragExit")(onDragExit.asInstanceOf[js.Any])
-    if (onDragLeave != null) __obj.updateDynamic("onDragLeave")(onDragLeave.asInstanceOf[js.Any])
-    if (onDragOver != null) __obj.updateDynamic("onDragOver")(onDragOver.asInstanceOf[js.Any])
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(onDragStart.asInstanceOf[js.Any])
-    if (onDrop != null) __obj.updateDynamic("onDrop")(onDrop.asInstanceOf[js.Any])
-    if (onEscKeyDown != null) __obj.updateDynamic("onEscKeyDown")(onEscKeyDown.asInstanceOf[js.Any])
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(onKeyPress.asInstanceOf[js.Any])
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(onMouseDown.asInstanceOf[js.Any])
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(onMouseEnter.asInstanceOf[js.Any])
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(onMouseLeave.asInstanceOf[js.Any])
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(onMouseMove.asInstanceOf[js.Any])
-    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(onMouseOut.asInstanceOf[js.Any])
-    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(onMouseOver.asInstanceOf[js.Any])
-    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(onMouseUp.asInstanceOf[js.Any])
-    if (onOverlayClick != null) __obj.updateDynamic("onOverlayClick")(onOverlayClick.asInstanceOf[js.Any])
-    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(onTouchCancel.asInstanceOf[js.Any])
-    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(onTouchEnd.asInstanceOf[js.Any])
-    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(onTouchMove.asInstanceOf[js.Any])
-    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(onTouchStart.asInstanceOf[js.Any])
-    if (!js.isUndefined(readonly)) __obj.updateDynamic("readonly")(readonly.asInstanceOf[js.Any])
-    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(sundayFirstDayOfWeek)) __obj.updateDynamic("sundayFirstDayOfWeek")(sundayFirstDayOfWeek.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatePickerProps]
   }
+  @scala.inline
+  implicit class DatePickerPropsOps[Self <: DatePickerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoOk(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoOk")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoOk: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoOk")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancelLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabledDates(value: js.Array[js.Date]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabledDates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabledDates(value: js.Array[js.Date]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledDates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabledDates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledDates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIcon(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputFormat(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(
+      value: de | no | en | es | af | ar | be | bg | bn | bo | br | bs | ca | gl | eu | pt | it | fr | ru | ua | `zh-cn` | `zh-hk` | `zh-tw` | DatePickerLocale
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOkLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("okLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOkLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("okLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDismiss(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDismiss")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDismiss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDismiss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnEscKeyDown(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEscKeyDown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnEscKeyDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEscKeyDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnKeyPress(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnKeyPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOverlayClick(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOverlayClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnOverlayClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOverlayClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadonly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadonly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequired(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequired: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSundayFirstDayOfWeek(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sundayFirstDayOfWeek")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSundayFirstDayOfWeek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sundayFirstDayOfWeek")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTheme(value: DatePickerTheme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.Date | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -57,7 +57,7 @@ class InfoWindow_[ExtraData] () extends Overlay[ExtraData] {
     * @param content 窗体内容
     */
   def setContent(content: String): Unit = js.native
-  def setContent(content: typingsSlinky.std.HTMLElement): Unit = js.native
+  def setContent(content: HTMLElement): Unit = js.native
   // internal
   def setOffset(offset: Pixel): Unit = js.native
   /**

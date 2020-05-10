@@ -17,7 +17,7 @@ object mod extends js.Object {
   def filterString(str: String): String = js.native
   def filterString(str: String, throwOnError: Boolean): String = js.native
   def getTeXSource(el: String): String | Null = js.native
-  def getTeXSource(el: typingsSlinky.std.Element): String | Null = js.native
+  def getTeXSource(el: Element): String | Null = js.native
   def setDOMParser(parser: DOMParser): Unit = js.native
   def setItexIdentifierMode(enabled: Boolean): Unit = js.native
   def setSafeMode(enabled: Boolean): Unit = js.native

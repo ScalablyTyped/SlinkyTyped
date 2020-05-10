@@ -12,10 +12,8 @@ trait cutType extends js.Object
 
 object cutType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def full: typingsSlinky.escPosEncoder.escPosEncoderStrings.full = "full".asInstanceOf[typingsSlinky.escPosEncoder.escPosEncoderStrings.full]
   @scala.inline
-  def full: typingsSlinky.escPosEncoder.escPosEncoderStrings.full = this.cast("full")
-  @scala.inline
-  def partial: typingsSlinky.escPosEncoder.escPosEncoderStrings.partial = this.cast("partial")
+  def partial: typingsSlinky.escPosEncoder.escPosEncoderStrings.partial = "partial".asInstanceOf[typingsSlinky.escPosEncoder.escPosEncoderStrings.partial]
 }
 

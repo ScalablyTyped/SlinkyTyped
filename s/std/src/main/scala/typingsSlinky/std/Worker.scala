@@ -67,7 +67,7 @@ trait Worker
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_message(
@@ -84,7 +84,7 @@ trait Worker
   def removeEventListener_message(
     `type`: message,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def terminate(): Unit = js.native
 }
@@ -92,10 +92,13 @@ trait Worker
 @JSGlobal("Worker")
 @js.native
 object Worker
-  extends Instantiable1[(/* stringUrl */ java.lang.String) | (/* stringUrl */ URL), Worker]
+  extends Instantiable1[
+      (/* stringUrl */ java.lang.String) | (/* stringUrl */ org.scalajs.dom.experimental.URL), 
+      org.scalajs.dom.raw.Worker
+    ]
      with Instantiable2[
-      (/* stringUrl */ java.lang.String) | (/* stringUrl */ URL), 
+      (/* stringUrl */ java.lang.String) | (/* stringUrl */ org.scalajs.dom.experimental.URL), 
       /* options */ WorkerOptions, 
-      Worker
+      org.scalajs.dom.raw.Worker
     ]
 

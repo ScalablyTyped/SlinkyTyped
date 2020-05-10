@@ -25,10 +25,10 @@ package object scaleMod {
   /* Rewritten from type alias, can be one of: 
     - js.Array[scala.Double | typingsSlinky.vegaTypings.signalMod.SignalRef]
     - typingsSlinky.vegaTypings.signalMod.SignalRef
-    - typingsSlinky.vegaTypings.AnonStart
+    - typingsSlinky.vegaTypings.scaleMod.ScaleBinParams
   */
   type ScaleBins = typingsSlinky.vegaTypings.scaleMod._ScaleBins | (js.Array[scala.Double | typingsSlinky.vegaTypings.signalMod.SignalRef])
-  type ScaleData = typingsSlinky.vegaTypings.DataRefsortSortField | (typingsSlinky.vegaTypings.scaleMod.MultiDataRef with typingsSlinky.vegaTypings.AnonSort)
+  type ScaleData = (typingsSlinky.vegaTypings.scaleMod.ScaleDataRef | typingsSlinky.vegaTypings.scaleMod.ScaleMultiDataRef | typingsSlinky.vegaTypings.scaleMod.ScaleMultiFieldsRef) with typingsSlinky.vegaTypings.AnonSort
   type ScaleField = java.lang.String | typingsSlinky.vegaTypings.signalMod.SignalRef
   /* Rewritten from type alias, can be one of: 
     - scala.Boolean

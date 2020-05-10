@@ -4,53 +4,111 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GoogleActionsV2UiElementsCarouselBrowseItem extends js.Object {
   /**
     * Description of the carousel item.
     * Optional.
     */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /**
     * Footer text for the carousel item, displayed below the description.
     * Single line of text, truncated with an ellipsis.
     * Optional.
     */
-  var footer: js.UndefOr[String] = js.undefined
+  var footer: js.UndefOr[String] = js.native
   /**
     * Hero image for the carousel item.
     * Optional.
     */
-  var image: js.UndefOr[GoogleActionsV2UiElementsImage] = js.undefined
+  var image: js.UndefOr[GoogleActionsV2UiElementsImage] = js.native
   /**
     * URL of the document associated with the carousel item.
     * The document can contain HTML content or, if \"url_type_hint\" is set to
     * AMP_CONTENT, AMP content.
     * Required.
     */
-  var openUrlAction: js.UndefOr[GoogleActionsV2UiElementsOpenUrlAction] = js.undefined
+  var openUrlAction: js.UndefOr[GoogleActionsV2UiElementsOpenUrlAction] = js.native
   /**
     * Title of the carousel item.
     * Required.
     */
-  var title: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.native
 }
 
 object GoogleActionsV2UiElementsCarouselBrowseItem {
   @scala.inline
-  def apply(
-    description: String = null,
-    footer: String = null,
-    image: GoogleActionsV2UiElementsImage = null,
-    openUrlAction: GoogleActionsV2UiElementsOpenUrlAction = null,
-    title: String = null
-  ): GoogleActionsV2UiElementsCarouselBrowseItem = {
+  def apply(): GoogleActionsV2UiElementsCarouselBrowseItem = {
     val __obj = js.Dynamic.literal()
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (openUrlAction != null) __obj.updateDynamic("openUrlAction")(openUrlAction.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleActionsV2UiElementsCarouselBrowseItem]
   }
+  @scala.inline
+  implicit class GoogleActionsV2UiElementsCarouselBrowseItemOps[Self <: GoogleActionsV2UiElementsCarouselBrowseItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFooter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFooter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage(value: GoogleActionsV2UiElementsImage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenUrlAction(value: GoogleActionsV2UiElementsOpenUrlAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openUrlAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenUrlAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openUrlAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

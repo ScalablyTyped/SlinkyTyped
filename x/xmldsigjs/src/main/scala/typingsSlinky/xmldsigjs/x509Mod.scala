@@ -1,10 +1,10 @@
 package typingsSlinky.xmldsigjs
 
+import org.scalajs.dom.crypto.Algorithm
 import org.scalajs.dom.crypto.CryptoKey
-import typingsSlinky.std.Algorithm
+import org.scalajs.dom.crypto.EcKeyImportParams
+import org.scalajs.dom.crypto.RsaHashedImportParams
 import typingsSlinky.std.BufferSource
-import typingsSlinky.std.EcKeyImportParams
-import typingsSlinky.std.RsaHashedImportParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,16 +17,16 @@ object x509Mod extends js.Object {
     def this(rawData: BufferSource) = this()
     var isHashedAlgorithm: js.Any = js.native
     var publicKey: CryptoKey | Null = js.native
-    var raw: scala.scalajs.js.typedarray.Uint8Array = js.native
+    var raw: js.typedarray.Uint8Array = js.native
     var simpl: js.Any = js.native
     /**
       * Returns DER raw of X509Certificate
       */
-    def GetRaw(): scala.scalajs.js.typedarray.Uint8Array = js.native
+    def GetRaw(): js.typedarray.Uint8Array = js.native
     /**
       * Gets a issuer name of the certificate
       */
-    def Issuer(): String = js.native
+    def Issuer: String = js.native
     /**
       * Loads X509Certificate from DER data
       * @param  {Uint8Array} rawData
@@ -45,22 +45,22 @@ object x509Mod extends js.Object {
     /**
       * Gets the public key from the X509Certificate
       */
-    def PublicKey(): CryptoKey | Null = js.native
+    def PublicKey: CryptoKey | Null = js.native
     /**
       * Gets a serial number of the certificate in BIG INTEGER string format
       */
-    def SerialNumber(): String = js.native
+    def SerialNumber: String = js.native
     /**
       * Gets a subject name of the certificate
       */
-    def Subject(): String = js.native
+    def Subject: String = js.native
     /**
       * Returns a thumbprint of the certificate
       * @param  {DigestAlgorithm="SHA-1"} algName Digest algorithm name
       * @returns Promise<ArrayBuffer>
       */
-    def Thumbprint(): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def Thumbprint(algName: DigestAlgorithm): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+    def Thumbprint(): js.Promise[js.typedarray.ArrayBuffer] = js.native
+    def Thumbprint(algName: DigestAlgorithm): js.Promise[js.typedarray.ArrayBuffer] = js.native
     /**
       * Returns public key from X509Certificate
       * @param  {Algorithm} algorithm

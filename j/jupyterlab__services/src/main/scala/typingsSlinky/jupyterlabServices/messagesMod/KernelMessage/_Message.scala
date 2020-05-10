@@ -5,10 +5,11 @@ import typingsSlinky.jupyterlabServices.AnonArguments
 import typingsSlinky.jupyterlabServices.AnonBody
 import typingsSlinky.jupyterlabServices.AnonCode
 import typingsSlinky.jupyterlabServices.AnonCodeString
-import typingsSlinky.jupyterlabServices.AnonCommand
+import typingsSlinky.jupyterlabServices.AnonCommid
 import typingsSlinky.jupyterlabServices.AnonCursorpos
 import typingsSlinky.jupyterlabServices.AnonData
 import typingsSlinky.jupyterlabServices.AnonEname
+import typingsSlinky.jupyterlabServices.AnonEvent
 import typingsSlinky.jupyterlabServices.AnonExecutioncount
 import typingsSlinky.jupyterlabServices.AnonExecutionstate
 import typingsSlinky.jupyterlabServices.AnonMetadata
@@ -16,6 +17,7 @@ import typingsSlinky.jupyterlabServices.AnonName
 import typingsSlinky.jupyterlabServices.AnonPassword
 import typingsSlinky.jupyterlabServices.AnonTarget
 import typingsSlinky.jupyterlabServices.AnonTransient
+import typingsSlinky.jupyterlabServices.AnonTransientAnonDisplayidString
 import typingsSlinky.jupyterlabServices.AnonWait
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.clear_output
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.comm_info_reply
@@ -59,16 +61,12 @@ object _Message {
   @scala.inline
   def IDisplayDataMsg(
     channel: iopub,
-    content: AnonData,
+    content: AnonMetadata,
     header: IHeader[display_data],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -77,13 +75,9 @@ object _Message {
     content: AnonCode,
     header: IHeader[complete_request],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -92,13 +86,9 @@ object _Message {
     content: AnonExecutionstate,
     header: IHeader[status],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -107,28 +97,20 @@ object _Message {
     content: ReplyContent[ICompleteReply],
     header: IHeader[complete_reply],
     metadata: JSONObject,
-    parent_header: IHeader[complete_request],
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[complete_request]
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
   def IDebugEventMsg(
     channel: iopub,
-    content: AnonBody,
+    content: AnonEvent,
     header: IHeader[debug_event],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -137,13 +119,9 @@ object _Message {
     content: ReplyContent[ICommInfoReply],
     header: IHeader[comm_info_reply],
     metadata: JSONObject,
-    parent_header: IHeader[comm_info_request],
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[comm_info_request]
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -152,13 +130,9 @@ object _Message {
     content: AnonName,
     header: IHeader[stream],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -167,28 +141,22 @@ object _Message {
     content: ReplyContent[IInfoReply],
     header: IHeader[kernel_info_reply],
     metadata: JSONObject,
-    parent_header: IHeader[kernel_info_request],
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[kernel_info_request]
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
   def IInfoRequestMsg(
     channel: shell,
-    content: /* import warning: importer.ImportType#apply Failed type conversion: @jupyterlab/services.@jupyterlab/services/lib/kernel/messages.KernelMessage.Message['content'] */ js.Any,
+    content: AnonWait | AnonCommid | (ReplyContent[
+      ICommInfoReply | ICompleteReply | IHistoryReply | IInfoReply | IInputReply | IInspectReply | IIsCompleteReplyIncomplete | IIsCompleteReplyOther
+    ]) | AnonTarget | AnonData | AnonCode | AnonMetadata | AnonEname | AnonExecutioncount | (ReplyContent[IExecuteReply] with IExecuteCount) | AnonAllowstdin | AnonTransient | IHistoryRequestRange | IHistoryRequestSearch | IHistoryRequestTail | js.Object | AnonPassword | AnonCursorpos | AnonCodeString | AnonExecutionstate | AnonName | ((/* import warning: importer.ImportType#apply Failed type conversion: @jupyterlab/services.@jupyterlab/services/lib/kernel/messages.KernelMessage.IDisplayDataMsg['content'] */ js.Any) with AnonTransientAnonDisplayidString) | AnonArguments | AnonBody | AnonEvent,
     header: IHeader[kernel_info_request],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -197,13 +165,9 @@ object _Message {
     content: AnonCodeString,
     header: IHeader[is_complete_request],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -212,13 +176,9 @@ object _Message {
     content: AnonAllowstdin,
     header: IHeader[execute_request],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -227,13 +187,9 @@ object _Message {
     content: IHistoryRequestRange | IHistoryRequestSearch | IHistoryRequestTail,
     header: IHeader[history_request],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -242,13 +198,9 @@ object _Message {
     content: ReplyContent[IHistoryReply],
     header: IHeader[history_reply],
     metadata: JSONObject,
-    parent_header: IHeader[history_request],
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[history_request]
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -257,13 +209,9 @@ object _Message {
     content: AnonTarget,
     header: IHeader[comm_info_request],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -272,13 +220,9 @@ object _Message {
     content: AnonArguments,
     header: IHeader[debug_request],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -287,13 +231,9 @@ object _Message {
     content: AnonWait,
     header: IHeader[clear_output],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -302,28 +242,20 @@ object _Message {
     content: AnonEname,
     header: IHeader[error],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
   def IUpdateDisplayDataMsg(
     channel: iopub,
-    content: AnonData with AnonTransient,
+    content: AnonMetadata with AnonTransientAnonDisplayidString,
     header: IHeader[update_display_data],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -332,13 +264,9 @@ object _Message {
     content: AnonCursorpos,
     header: IHeader[inspect_request],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -347,28 +275,20 @@ object _Message {
     content: ReplyContent[IIsCompleteReplyIncomplete | IIsCompleteReplyOther],
     header: IHeader[is_complete_reply],
     metadata: JSONObject,
-    parent_header: IHeader[is_complete_request],
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[is_complete_request]
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
   def IExecuteResultMsg(
     channel: iopub,
-    content: AnonMetadata,
+    content: AnonTransient,
     header: IHeader[execute_result],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -377,13 +297,9 @@ object _Message {
     content: AnonPassword,
     header: IHeader[input_request],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -392,13 +308,9 @@ object _Message {
     content: ReplyContent[IInputReply],
     header: IHeader[input_reply],
     metadata: JSONObject,
-    parent_header: IHeader[input_request],
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[input_request]
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -407,28 +319,20 @@ object _Message {
     content: ReplyContent[IInspectReply],
     header: IHeader[inspect_reply],
     metadata: JSONObject,
-    parent_header: IHeader[inspect_request],
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[inspect_request]
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
   def IDebugReplyMsg(
     channel: control,
-    content: AnonCommand,
+    content: AnonBody,
     header: IHeader[debug_reply],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -437,13 +341,9 @@ object _Message {
     content: ReplyContent[IExecuteReply] with IExecuteCount,
     header: IHeader[execute_reply],
     metadata: JSONObject,
-    parent_header: IHeader[execute_request],
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[execute_request]
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
   @scala.inline
@@ -452,13 +352,9 @@ object _Message {
     content: AnonExecutioncount,
     header: IHeader[execute_input],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ] = null
+    parent_header: IHeader[MessageType] | js.Object
   ): _Message = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
-    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Message]
   }
 }

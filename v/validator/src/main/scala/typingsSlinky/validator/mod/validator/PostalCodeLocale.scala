@@ -62,110 +62,108 @@ trait PostalCodeLocale extends js.Object
 
 object PostalCodeLocale {
   @scala.inline
-  def AD: typingsSlinky.validator.validatorStrings.AD = this.cast("AD")
+  def AD: typingsSlinky.validator.validatorStrings.AD = "AD".asInstanceOf[typingsSlinky.validator.validatorStrings.AD]
   @scala.inline
-  def AT: typingsSlinky.validator.validatorStrings.AT = this.cast("AT")
+  def AT: typingsSlinky.validator.validatorStrings.AT = "AT".asInstanceOf[typingsSlinky.validator.validatorStrings.AT]
   @scala.inline
-  def AU: typingsSlinky.validator.validatorStrings.AU = this.cast("AU")
+  def AU: typingsSlinky.validator.validatorStrings.AU = "AU".asInstanceOf[typingsSlinky.validator.validatorStrings.AU]
   @scala.inline
-  def BE: typingsSlinky.validator.validatorStrings.BE = this.cast("BE")
+  def BE: typingsSlinky.validator.validatorStrings.BE = "BE".asInstanceOf[typingsSlinky.validator.validatorStrings.BE]
   @scala.inline
-  def BG: typingsSlinky.validator.validatorStrings.BG = this.cast("BG")
+  def BG: typingsSlinky.validator.validatorStrings.BG = "BG".asInstanceOf[typingsSlinky.validator.validatorStrings.BG]
   @scala.inline
-  def BR: typingsSlinky.validator.validatorStrings.BR = this.cast("BR")
+  def BR: typingsSlinky.validator.validatorStrings.BR = "BR".asInstanceOf[typingsSlinky.validator.validatorStrings.BR]
   @scala.inline
-  def CA: typingsSlinky.validator.validatorStrings.CA = this.cast("CA")
+  def CA: typingsSlinky.validator.validatorStrings.CA = "CA".asInstanceOf[typingsSlinky.validator.validatorStrings.CA]
   @scala.inline
-  def CH: typingsSlinky.validator.validatorStrings.CH = this.cast("CH")
+  def CH: typingsSlinky.validator.validatorStrings.CH = "CH".asInstanceOf[typingsSlinky.validator.validatorStrings.CH]
   @scala.inline
-  def CZ: typingsSlinky.validator.validatorStrings.CZ = this.cast("CZ")
+  def CZ: typingsSlinky.validator.validatorStrings.CZ = "CZ".asInstanceOf[typingsSlinky.validator.validatorStrings.CZ]
   @scala.inline
-  def DE: typingsSlinky.validator.validatorStrings.DE = this.cast("DE")
+  def DE: typingsSlinky.validator.validatorStrings.DE = "DE".asInstanceOf[typingsSlinky.validator.validatorStrings.DE]
   @scala.inline
-  def DK: typingsSlinky.validator.validatorStrings.DK = this.cast("DK")
+  def DK: typingsSlinky.validator.validatorStrings.DK = "DK".asInstanceOf[typingsSlinky.validator.validatorStrings.DK]
   @scala.inline
-  def DZ: typingsSlinky.validator.validatorStrings.DZ = this.cast("DZ")
+  def DZ: typingsSlinky.validator.validatorStrings.DZ = "DZ".asInstanceOf[typingsSlinky.validator.validatorStrings.DZ]
   @scala.inline
-  def EE: typingsSlinky.validator.validatorStrings.EE = this.cast("EE")
+  def EE: typingsSlinky.validator.validatorStrings.EE = "EE".asInstanceOf[typingsSlinky.validator.validatorStrings.EE]
   @scala.inline
-  def ES: typingsSlinky.validator.validatorStrings.ES = this.cast("ES")
+  def ES: typingsSlinky.validator.validatorStrings.ES = "ES".asInstanceOf[typingsSlinky.validator.validatorStrings.ES]
   @scala.inline
-  def FI: typingsSlinky.validator.validatorStrings.FI = this.cast("FI")
+  def FI: typingsSlinky.validator.validatorStrings.FI = "FI".asInstanceOf[typingsSlinky.validator.validatorStrings.FI]
   @scala.inline
-  def FR: typingsSlinky.validator.validatorStrings.FR = this.cast("FR")
+  def FR: typingsSlinky.validator.validatorStrings.FR = "FR".asInstanceOf[typingsSlinky.validator.validatorStrings.FR]
   @scala.inline
-  def GB: typingsSlinky.validator.validatorStrings.GB = this.cast("GB")
+  def GB: typingsSlinky.validator.validatorStrings.GB = "GB".asInstanceOf[typingsSlinky.validator.validatorStrings.GB]
   @scala.inline
-  def GR: typingsSlinky.validator.validatorStrings.GR = this.cast("GR")
+  def GR: typingsSlinky.validator.validatorStrings.GR = "GR".asInstanceOf[typingsSlinky.validator.validatorStrings.GR]
   @scala.inline
-  def HR: typingsSlinky.validator.validatorStrings.HR = this.cast("HR")
+  def HR: typingsSlinky.validator.validatorStrings.HR = "HR".asInstanceOf[typingsSlinky.validator.validatorStrings.HR]
   @scala.inline
-  def HU: typingsSlinky.validator.validatorStrings.HU = this.cast("HU")
+  def HU: typingsSlinky.validator.validatorStrings.HU = "HU".asInstanceOf[typingsSlinky.validator.validatorStrings.HU]
   @scala.inline
-  def ID: typingsSlinky.validator.validatorStrings.ID = this.cast("ID")
+  def ID: typingsSlinky.validator.validatorStrings.ID = "ID".asInstanceOf[typingsSlinky.validator.validatorStrings.ID]
   @scala.inline
-  def IE: typingsSlinky.validator.validatorStrings.IE = this.cast("IE")
+  def IE: typingsSlinky.validator.validatorStrings.IE = "IE".asInstanceOf[typingsSlinky.validator.validatorStrings.IE]
   @scala.inline
-  def IL: typingsSlinky.validator.validatorStrings.IL = this.cast("IL")
+  def IL: typingsSlinky.validator.validatorStrings.IL = "IL".asInstanceOf[typingsSlinky.validator.validatorStrings.IL]
   @scala.inline
-  def IN: typingsSlinky.validator.validatorStrings.IN = this.cast("IN")
+  def IN: typingsSlinky.validator.validatorStrings.IN = "IN".asInstanceOf[typingsSlinky.validator.validatorStrings.IN]
   @scala.inline
-  def IS: typingsSlinky.validator.validatorStrings.IS = this.cast("IS")
+  def IS: typingsSlinky.validator.validatorStrings.IS = "IS".asInstanceOf[typingsSlinky.validator.validatorStrings.IS]
   @scala.inline
-  def IT: typingsSlinky.validator.validatorStrings.IT = this.cast("IT")
+  def IT: typingsSlinky.validator.validatorStrings.IT = "IT".asInstanceOf[typingsSlinky.validator.validatorStrings.IT]
   @scala.inline
-  def JP: typingsSlinky.validator.validatorStrings.JP = this.cast("JP")
+  def JP: typingsSlinky.validator.validatorStrings.JP = "JP".asInstanceOf[typingsSlinky.validator.validatorStrings.JP]
   @scala.inline
-  def KE: typingsSlinky.validator.validatorStrings.KE = this.cast("KE")
+  def KE: typingsSlinky.validator.validatorStrings.KE = "KE".asInstanceOf[typingsSlinky.validator.validatorStrings.KE]
   @scala.inline
-  def LI: typingsSlinky.validator.validatorStrings.LI = this.cast("LI")
+  def LI: typingsSlinky.validator.validatorStrings.LI = "LI".asInstanceOf[typingsSlinky.validator.validatorStrings.LI]
   @scala.inline
-  def LT: typingsSlinky.validator.validatorStrings.LT = this.cast("LT")
+  def LT: typingsSlinky.validator.validatorStrings.LT = "LT".asInstanceOf[typingsSlinky.validator.validatorStrings.LT]
   @scala.inline
-  def LU: typingsSlinky.validator.validatorStrings.LU = this.cast("LU")
+  def LU: typingsSlinky.validator.validatorStrings.LU = "LU".asInstanceOf[typingsSlinky.validator.validatorStrings.LU]
   @scala.inline
-  def LV: typingsSlinky.validator.validatorStrings.LV = this.cast("LV")
+  def LV: typingsSlinky.validator.validatorStrings.LV = "LV".asInstanceOf[typingsSlinky.validator.validatorStrings.LV]
   @scala.inline
-  def MT: typingsSlinky.validator.validatorStrings.MT = this.cast("MT")
+  def MT: typingsSlinky.validator.validatorStrings.MT = "MT".asInstanceOf[typingsSlinky.validator.validatorStrings.MT]
   @scala.inline
-  def MX: typingsSlinky.validator.validatorStrings.MX = this.cast("MX")
+  def MX: typingsSlinky.validator.validatorStrings.MX = "MX".asInstanceOf[typingsSlinky.validator.validatorStrings.MX]
   @scala.inline
-  def NL: typingsSlinky.validator.validatorStrings.NL = this.cast("NL")
+  def NL: typingsSlinky.validator.validatorStrings.NL = "NL".asInstanceOf[typingsSlinky.validator.validatorStrings.NL]
   @scala.inline
-  def NO: typingsSlinky.validator.validatorStrings.NO = this.cast("NO")
+  def NO: typingsSlinky.validator.validatorStrings.NO = "NO".asInstanceOf[typingsSlinky.validator.validatorStrings.NO]
   @scala.inline
-  def NZ: typingsSlinky.validator.validatorStrings.NZ = this.cast("NZ")
+  def NZ: typingsSlinky.validator.validatorStrings.NZ = "NZ".asInstanceOf[typingsSlinky.validator.validatorStrings.NZ]
   @scala.inline
-  def PL: typingsSlinky.validator.validatorStrings.PL = this.cast("PL")
+  def PL: typingsSlinky.validator.validatorStrings.PL = "PL".asInstanceOf[typingsSlinky.validator.validatorStrings.PL]
   @scala.inline
-  def PR: typingsSlinky.validator.validatorStrings.PR = this.cast("PR")
+  def PR: typingsSlinky.validator.validatorStrings.PR = "PR".asInstanceOf[typingsSlinky.validator.validatorStrings.PR]
   @scala.inline
-  def PT: typingsSlinky.validator.validatorStrings.PT = this.cast("PT")
+  def PT: typingsSlinky.validator.validatorStrings.PT = "PT".asInstanceOf[typingsSlinky.validator.validatorStrings.PT]
   @scala.inline
-  def RO: typingsSlinky.validator.validatorStrings.RO = this.cast("RO")
+  def RO: typingsSlinky.validator.validatorStrings.RO = "RO".asInstanceOf[typingsSlinky.validator.validatorStrings.RO]
   @scala.inline
-  def RU: typingsSlinky.validator.validatorStrings.RU = this.cast("RU")
+  def RU: typingsSlinky.validator.validatorStrings.RU = "RU".asInstanceOf[typingsSlinky.validator.validatorStrings.RU]
   @scala.inline
-  def SA: typingsSlinky.validator.validatorStrings.SA = this.cast("SA")
+  def SA: typingsSlinky.validator.validatorStrings.SA = "SA".asInstanceOf[typingsSlinky.validator.validatorStrings.SA]
   @scala.inline
-  def SE: typingsSlinky.validator.validatorStrings.SE = this.cast("SE")
+  def SE: typingsSlinky.validator.validatorStrings.SE = "SE".asInstanceOf[typingsSlinky.validator.validatorStrings.SE]
   @scala.inline
-  def SI: typingsSlinky.validator.validatorStrings.SI = this.cast("SI")
+  def SI: typingsSlinky.validator.validatorStrings.SI = "SI".asInstanceOf[typingsSlinky.validator.validatorStrings.SI]
   @scala.inline
-  def SK: typingsSlinky.validator.validatorStrings.SK = this.cast("SK")
+  def SK: typingsSlinky.validator.validatorStrings.SK = "SK".asInstanceOf[typingsSlinky.validator.validatorStrings.SK]
   @scala.inline
-  def TN: typingsSlinky.validator.validatorStrings.TN = this.cast("TN")
+  def TN: typingsSlinky.validator.validatorStrings.TN = "TN".asInstanceOf[typingsSlinky.validator.validatorStrings.TN]
   @scala.inline
-  def TW: typingsSlinky.validator.validatorStrings.TW = this.cast("TW")
+  def TW: typingsSlinky.validator.validatorStrings.TW = "TW".asInstanceOf[typingsSlinky.validator.validatorStrings.TW]
   @scala.inline
-  def UA: typingsSlinky.validator.validatorStrings.UA = this.cast("UA")
+  def UA: typingsSlinky.validator.validatorStrings.UA = "UA".asInstanceOf[typingsSlinky.validator.validatorStrings.UA]
   @scala.inline
-  def US: typingsSlinky.validator.validatorStrings.US = this.cast("US")
+  def US: typingsSlinky.validator.validatorStrings.US = "US".asInstanceOf[typingsSlinky.validator.validatorStrings.US]
   @scala.inline
-  def ZA: typingsSlinky.validator.validatorStrings.ZA = this.cast("ZA")
+  def ZA: typingsSlinky.validator.validatorStrings.ZA = "ZA".asInstanceOf[typingsSlinky.validator.validatorStrings.ZA]
   @scala.inline
-  def ZM: typingsSlinky.validator.validatorStrings.ZM = this.cast("ZM")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ZM: typingsSlinky.validator.validatorStrings.ZM = "ZM".asInstanceOf[typingsSlinky.validator.validatorStrings.ZM]
 }
 

@@ -9,15 +9,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ILogOutputModel extends IOutputModel {
   /**
     * Log level
     */
-  val level: FullLogLevel
+  val level: FullLogLevel = js.native
   /**
     * Date & time when output is logged.
     */
-  val timestamp: js.Date
+  val timestamp: js.Date = js.native
 }
 
 object ILogOutputModel {
@@ -32,13 +33,31 @@ object ILogOutputModel {
     timestamp: js.Date,
     toJSON: () => IOutput,
     trusted: Boolean,
-    `type`: String,
-    executionCount: Int | Double = null
+    `type`: String
   ): ILogOutputModel = {
     val __obj = js.Dynamic.literal(changed = changed.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), level = level.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], setData = js.Any.fromFunction1(setData), timestamp = timestamp.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), trusted = trusted.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (executionCount != null) __obj.updateDynamic("executionCount")(executionCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[ILogOutputModel]
   }
+  @scala.inline
+  implicit class ILogOutputModelOps[Self <: ILogOutputModel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLevel(value: FullLogLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

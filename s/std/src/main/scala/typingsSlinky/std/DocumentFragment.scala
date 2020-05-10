@@ -14,5 +14,6 @@ trait DocumentFragment
 
 @JSGlobal("DocumentFragment")
 @js.native
-object DocumentFragment extends Instantiable0[DocumentFragment]
+object DocumentFragment
+  extends Instantiable0[org.scalajs.dom.raw.DocumentFragment]
 

@@ -1,7 +1,6 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -168,7 +167,7 @@ trait IgniteUIStatic extends js.Object {
     reg: js.UndefOr[js.Any]
   ): String = js.native
   def formatter(
-    `val`: Date,
+    `val`: js.Date,
     `type`: String,
     format: String,
     notTemplate: js.UndefOr[Boolean],

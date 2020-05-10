@@ -14,14 +14,12 @@ trait NotificationPlacement extends js.Object
 
 object NotificationPlacement {
   @scala.inline
-  def bottomLeft: typingsSlinky.antd.antdStrings.bottomLeft = this.cast("bottomLeft")
+  def bottomLeft: typingsSlinky.antd.antdStrings.bottomLeft = "bottomLeft".asInstanceOf[typingsSlinky.antd.antdStrings.bottomLeft]
   @scala.inline
-  def bottomRight: typingsSlinky.antd.antdStrings.bottomRight = this.cast("bottomRight")
+  def bottomRight: typingsSlinky.antd.antdStrings.bottomRight = "bottomRight".asInstanceOf[typingsSlinky.antd.antdStrings.bottomRight]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def topLeft: typingsSlinky.antd.antdStrings.topLeft = "topLeft".asInstanceOf[typingsSlinky.antd.antdStrings.topLeft]
   @scala.inline
-  def topLeft: typingsSlinky.antd.antdStrings.topLeft = this.cast("topLeft")
-  @scala.inline
-  def topRight: typingsSlinky.antd.antdStrings.topRight = this.cast("topRight")
+  def topRight: typingsSlinky.antd.antdStrings.topRight = "topRight".asInstanceOf[typingsSlinky.antd.antdStrings.topRight]
 }
 

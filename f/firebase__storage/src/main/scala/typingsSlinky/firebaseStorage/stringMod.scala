@@ -9,24 +9,24 @@ import scala.scalajs.js.annotation._
 object stringMod extends js.Object {
   @js.native
   class StringData protected () extends js.Object {
-    def this(data: scala.scalajs.js.typedarray.Uint8Array) = this()
-    def this(data: scala.scalajs.js.typedarray.Uint8Array, contentType: String) = this()
+    def this(data: js.typedarray.Uint8Array) = this()
+    def this(data: js.typedarray.Uint8Array, contentType: String) = this()
     var contentType: String | Null = js.native
-    var data: scala.scalajs.js.typedarray.Uint8Array = js.native
+    var data: js.typedarray.Uint8Array = js.native
   }
   
   @JSName("base64Bytes_")
-  def base64Bytes(format: StringFormat, value: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def base64Bytes(format: StringFormat, value: String): js.typedarray.Uint8Array = js.native
   def dataFromString(format: StringFormat, stringData: String): StringData = js.native
   @JSName("dataURLBytes_")
-  def dataURLBytes(dataUrl: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def dataURLBytes(dataUrl: String): js.typedarray.Uint8Array = js.native
   @JSName("dataURLContentType_")
   def dataURLContentType(dataUrl: String): String | Null = js.native
   def formatValidator(stringFormat: js.Any): Unit = js.native
   @JSName("percentEncodedBytes_")
-  def percentEncodedBytes(value: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def percentEncodedBytes(value: String): js.typedarray.Uint8Array = js.native
   @JSName("utf8Bytes_")
-  def utf8Bytes(value: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def utf8Bytes(value: String): js.typedarray.Uint8Array = js.native
   @js.native
   object StringFormat extends js.Object {
     var BASE64: String = js.native

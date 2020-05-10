@@ -20,26 +20,24 @@ trait ImeModeProperty extends js.Object
 
 object ImeModeProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  def active: typingsSlinky.csstype.csstypeStrings.active = this.cast("active")
+  def active: typingsSlinky.csstype.csstypeStrings.active = "active".asInstanceOf[typingsSlinky.csstype.csstypeStrings.active]
   @scala.inline
-  def auto: typingsSlinky.csstype.csstypeStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.csstype.csstypeStrings.auto = "auto".asInstanceOf[typingsSlinky.csstype.csstypeStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disabled: typingsSlinky.csstype.csstypeStrings.disabled = "disabled".asInstanceOf[typingsSlinky.csstype.csstypeStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.csstype.csstypeStrings.disabled = this.cast("disabled")
+  def inactive: typingsSlinky.csstype.csstypeStrings.inactive = "inactive".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inactive]
   @scala.inline
-  def inactive: typingsSlinky.csstype.csstypeStrings.inactive = this.cast("inactive")
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def normal: typingsSlinky.csstype.csstypeStrings.normal = "normal".asInstanceOf[typingsSlinky.csstype.csstypeStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.csstype.csstypeStrings.normal = this.cast("normal")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
-  @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
 }
 

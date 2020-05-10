@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RTCDataChannel extends js.Object {
   @JSName("sendBuffer")
-  var sendBuffer_Original: Method1[scala.scalajs.js.typedarray.ArrayBuffer, Unit] = js.native
+  var sendBuffer_Original: Method1[js.typedarray.ArrayBuffer, Unit] = js.native
   @JSName("send")
   var send_Original: Method1[String, Unit] = js.native
   def close(): js.Promise[Unit] = js.native
@@ -38,7 +38,7 @@ trait RTCDataChannel extends js.Object {
   @JSName("on")
   def on_onopen(t: onopen, f: js.Function0[Unit]): Unit = js.native
   def send(a: String): js.Promise[Unit] = js.native
-  def sendBuffer(a: scala.scalajs.js.typedarray.ArrayBuffer): js.Promise[Unit] = js.native
+  def sendBuffer(a: js.typedarray.ArrayBuffer): js.Promise[Unit] = js.native
   def setBinaryType(`type`: String): js.Promise[Unit] = js.native
 }
 

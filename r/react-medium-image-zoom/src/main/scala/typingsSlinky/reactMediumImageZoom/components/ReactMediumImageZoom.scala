@@ -1,9 +1,7 @@
 package typingsSlinky.reactMediumImageZoom.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMediumImageZoom.mod.ImageZoomDefaultStyles
 import typingsSlinky.reactMediumImageZoom.mod.ImageZoomImage
 import typingsSlinky.reactMediumImageZoom.mod.ImageZoomProps
@@ -13,39 +11,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactMediumImageZoom
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactMediumImageZoom {
   @JSImport("react-medium-image-zoom", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    image: ImageZoomImage,
-    defaultStyles: ImageZoomDefaultStyles = null,
-    isZoomed: js.UndefOr[Boolean] = js.undefined,
-    onUnzoom: () => js.Object = null,
-    onZoom: () => js.Object = null,
-    shouldHandleZoom: () => Boolean = null,
-    shouldReplaceImage: js.UndefOr[Boolean] = js.undefined,
-    shouldRespectMaxDimension: js.UndefOr[Boolean] = js.undefined,
-    zoomImage: ImageZoomZoomImage = null,
-    zoomMargin: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(image = image.asInstanceOf[js.Any])
-    if (defaultStyles != null) __obj.updateDynamic("defaultStyles")(defaultStyles.asInstanceOf[js.Any])
-    if (!js.isUndefined(isZoomed)) __obj.updateDynamic("isZoomed")(isZoomed.asInstanceOf[js.Any])
-    if (onUnzoom != null) __obj.updateDynamic("onUnzoom")(js.Any.fromFunction0(onUnzoom))
-    if (onZoom != null) __obj.updateDynamic("onZoom")(js.Any.fromFunction0(onZoom))
-    if (shouldHandleZoom != null) __obj.updateDynamic("shouldHandleZoom")(js.Any.fromFunction0(shouldHandleZoom))
-    if (!js.isUndefined(shouldReplaceImage)) __obj.updateDynamic("shouldReplaceImage")(shouldReplaceImage.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldRespectMaxDimension)) __obj.updateDynamic("shouldRespectMaxDimension")(shouldRespectMaxDimension.asInstanceOf[js.Any])
-    if (zoomImage != null) __obj.updateDynamic("zoomImage")(zoomImage.asInstanceOf[js.Any])
-    if (zoomMargin != null) __obj.updateDynamic("zoomMargin")(zoomMargin.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def defaultStyles(value: ImageZoomDefaultStyles): this.type = set("defaultStyles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isZoomed(value: Boolean): this.type = set("isZoomed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onUnzoom(value: () => js.Object): this.type = set("onUnzoom", js.Any.fromFunction0(value))
+    @scala.inline
+    def onZoom(value: () => js.Object): this.type = set("onZoom", js.Any.fromFunction0(value))
+    @scala.inline
+    def shouldHandleZoom(value: () => Boolean): this.type = set("shouldHandleZoom", js.Any.fromFunction0(value))
+    @scala.inline
+    def shouldReplaceImage(value: Boolean): this.type = set("shouldReplaceImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shouldRespectMaxDimension(value: Boolean): this.type = set("shouldRespectMaxDimension", value.asInstanceOf[js.Any])
+    @scala.inline
+    def zoomImage(value: ImageZoomZoomImage): this.type = set("zoomImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def zoomMargin(value: Double): this.type = set("zoomMargin", value.asInstanceOf[js.Any])
   }
-  type Props = ImageZoomProps
+  
+  def withProps(p: ImageZoomProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(image: ImageZoomImage): Builder = {
+    val __props = js.Dynamic.literal(image = image.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ImageZoomProps]))
+  }
 }
 

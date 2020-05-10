@@ -7,46 +7,47 @@ import scala.scalajs.js.annotation._
 /**
   * DeploymentStatus is the most recently observed status of the Deployment.
   */
+@js.native
 trait DeploymentStatus extends js.Object {
   /**
     * Total number of available pods (ready for at least minReadySeconds) targeted by this
     * deployment.
     */
-  val availableReplicas: Double
+  val availableReplicas: Double = js.native
   /**
     * Count of hash collisions for the Deployment. The Deployment controller uses this field as a
     * collision avoidance mechanism when it needs to create the name for the newest ReplicaSet.
     */
-  val collisionCount: Double
+  val collisionCount: Double = js.native
   /**
     * Represents the latest available observations of a deployment's current state.
     */
-  val conditions: js.Array[DeploymentCondition]
+  val conditions: js.Array[DeploymentCondition] = js.native
   /**
     * The generation observed by the deployment controller.
     */
-  val observedGeneration: Double
+  val observedGeneration: Double = js.native
   /**
     * Total number of ready pods targeted by this deployment.
     */
-  val readyReplicas: Double
+  val readyReplicas: Double = js.native
   /**
     * Total number of non-terminated pods targeted by this deployment (their labels match the
     * selector).
     */
-  val replicas: Double
+  val replicas: Double = js.native
   /**
     * Total number of unavailable pods targeted by this deployment. This is the total number of
     * pods that are still required for the deployment to have 100% available capacity. They may
     * either be pods that are running but not yet available or pods that still have not been
     * created.
     */
-  val unavailableReplicas: Double
+  val unavailableReplicas: Double = js.native
   /**
     * Total number of non-terminated pods targeted by this deployment that have the desired
     * template spec.
     */
-  val updatedReplicas: Double
+  val updatedReplicas: Double = js.native
 }
 
 object DeploymentStatus {
@@ -62,8 +63,63 @@ object DeploymentStatus {
     updatedReplicas: Double
   ): DeploymentStatus = {
     val __obj = js.Dynamic.literal(availableReplicas = availableReplicas.asInstanceOf[js.Any], collisionCount = collisionCount.asInstanceOf[js.Any], conditions = conditions.asInstanceOf[js.Any], observedGeneration = observedGeneration.asInstanceOf[js.Any], readyReplicas = readyReplicas.asInstanceOf[js.Any], replicas = replicas.asInstanceOf[js.Any], unavailableReplicas = unavailableReplicas.asInstanceOf[js.Any], updatedReplicas = updatedReplicas.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DeploymentStatus]
   }
+  @scala.inline
+  implicit class DeploymentStatusOps[Self <: DeploymentStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailableReplicas(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availableReplicas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCollisionCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collisionCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConditions(value: js.Array[DeploymentCondition]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObservedGeneration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("observedGeneration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReadyReplicas(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readyReplicas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReplicas(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnavailableReplicas(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unavailableReplicas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdatedReplicas(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedReplicas")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

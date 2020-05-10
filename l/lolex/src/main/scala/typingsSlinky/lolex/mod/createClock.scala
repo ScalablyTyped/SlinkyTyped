@@ -1,6 +1,5 @@
 package typingsSlinky.lolex.mod
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ object createClock extends js.Object {
   def apply[TClock /* <: Clock */](): TClock = js.native
   def apply[TClock /* <: Clock */](now: Double): TClock = js.native
   def apply[TClock /* <: Clock */](now: Double, loopLimit: Double): TClock = js.native
-  def apply[TClock /* <: Clock */](now: Date): TClock = js.native
-  def apply[TClock /* <: Clock */](now: Date, loopLimit: Double): TClock = js.native
+  def apply[TClock /* <: Clock */](now: js.Date): TClock = js.native
+  def apply[TClock /* <: Clock */](now: js.Date, loopLimit: Double): TClock = js.native
 }
 

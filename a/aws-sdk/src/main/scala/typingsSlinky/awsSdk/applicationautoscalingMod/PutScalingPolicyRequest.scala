@@ -44,16 +44,78 @@ object PutScalingPolicyRequest {
     PolicyName: PolicyName,
     ResourceId: ResourceIdMaxLen1600,
     ScalableDimension: ScalableDimension,
-    ServiceNamespace: ServiceNamespace,
-    PolicyType: PolicyType = null,
-    StepScalingPolicyConfiguration: StepScalingPolicyConfiguration = null,
-    TargetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfiguration = null
+    ServiceNamespace: ServiceNamespace
   ): PutScalingPolicyRequest = {
     val __obj = js.Dynamic.literal(PolicyName = PolicyName.asInstanceOf[js.Any], ResourceId = ResourceId.asInstanceOf[js.Any], ScalableDimension = ScalableDimension.asInstanceOf[js.Any], ServiceNamespace = ServiceNamespace.asInstanceOf[js.Any])
-    if (PolicyType != null) __obj.updateDynamic("PolicyType")(PolicyType.asInstanceOf[js.Any])
-    if (StepScalingPolicyConfiguration != null) __obj.updateDynamic("StepScalingPolicyConfiguration")(StepScalingPolicyConfiguration.asInstanceOf[js.Any])
-    if (TargetTrackingScalingPolicyConfiguration != null) __obj.updateDynamic("TargetTrackingScalingPolicyConfiguration")(TargetTrackingScalingPolicyConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutScalingPolicyRequest]
   }
+  @scala.inline
+  implicit class PutScalingPolicyRequestOps[Self <: PutScalingPolicyRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPolicyName(value: PolicyName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceId(value: ResourceIdMaxLen1600): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScalableDimension(value: ScalableDimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalableDimension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServiceNamespace(value: ServiceNamespace): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceNamespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPolicyType(value: PolicyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStepScalingPolicyConfiguration(value: StepScalingPolicyConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StepScalingPolicyConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepScalingPolicyConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StepScalingPolicyConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetTrackingScalingPolicyConfiguration(value: TargetTrackingScalingPolicyConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetTrackingScalingPolicyConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetTrackingScalingPolicyConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetTrackingScalingPolicyConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

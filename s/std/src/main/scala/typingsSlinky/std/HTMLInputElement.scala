@@ -215,5 +215,6 @@ trait HTMLInputElement extends HTMLElement {
 
 @JSGlobal("HTMLInputElement")
 @js.native
-object HTMLInputElement extends Instantiable0[HTMLInputElement]
+object HTMLInputElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLInputElement]
 

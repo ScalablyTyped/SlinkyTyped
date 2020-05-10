@@ -12,10 +12,8 @@ trait TargetingSetting extends js.Object
 
 object TargetingSetting {
   @scala.inline
-  def TARGET_ALL_FALSE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.TARGET_ALL_FALSE = this.cast("TARGET_ALL_FALSE")
+  def TARGET_ALL_FALSE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.TARGET_ALL_FALSE = "TARGET_ALL_FALSE".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.TARGET_ALL_FALSE]
   @scala.inline
-  def TARGET_ALL_TRUE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.TARGET_ALL_TRUE = this.cast("TARGET_ALL_TRUE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TARGET_ALL_TRUE: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.TARGET_ALL_TRUE = "TARGET_ALL_TRUE".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.TARGET_ALL_TRUE]
 }
 

@@ -4,22 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MediaEntityOembedResponse extends js.Object {
-  var author_id: Double
-  var author_name: String
-  var author_url: String
-  var height: Null
-  var html: String
-  var media_id: String
-  var provider_name: String
-  var provider_url: String
-  var thumbnail_height: Double
-  var thumbnail_url: String
-  var thumbnail_width: Double
-  var title: String
-  var `type`: String
-  var version: String
-  var width: Double
+  var author_id: Double = js.native
+  var author_name: String = js.native
+  var author_url: String = js.native
+  var height: Null = js.native
+  var html: String = js.native
+  var media_id: String = js.native
+  var provider_name: String = js.native
+  var provider_url: String = js.native
+  var thumbnail_height: Double = js.native
+  var thumbnail_url: String = js.native
+  var thumbnail_width: Double = js.native
+  var title: String = js.native
+  var `type`: String = js.native
+  var version: String = js.native
+  var width: Double = js.native
 }
 
 object MediaEntityOembedResponse {
@@ -45,5 +46,103 @@ object MediaEntityOembedResponse {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaEntityOembedResponse]
   }
+  @scala.inline
+  implicit class MediaEntityOembedResponseOps[Self <: MediaEntityOembedResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthor_id(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("author_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthor_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("author_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthor_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("author_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtml(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMedia_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("media_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProvider_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("provider_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProvider_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("provider_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThumbnail_height(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail_height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThumbnail_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThumbnail_width(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail_width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

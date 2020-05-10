@@ -15,16 +15,14 @@ trait CrossStorageMethod extends js.Object
 
 object CrossStorageMethod {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def clear: typingsSlinky.crossStorage.crossStorageStrings.clear = "clear".asInstanceOf[typingsSlinky.crossStorage.crossStorageStrings.clear]
   @scala.inline
-  def clear: typingsSlinky.crossStorage.crossStorageStrings.clear = this.cast("clear")
+  def del: typingsSlinky.crossStorage.crossStorageStrings.del = "del".asInstanceOf[typingsSlinky.crossStorage.crossStorageStrings.del]
   @scala.inline
-  def del: typingsSlinky.crossStorage.crossStorageStrings.del = this.cast("del")
+  def get: typingsSlinky.crossStorage.crossStorageStrings.get = "get".asInstanceOf[typingsSlinky.crossStorage.crossStorageStrings.get]
   @scala.inline
-  def get: typingsSlinky.crossStorage.crossStorageStrings.get = this.cast("get")
+  def getKeys: typingsSlinky.crossStorage.crossStorageStrings.getKeys = "getKeys".asInstanceOf[typingsSlinky.crossStorage.crossStorageStrings.getKeys]
   @scala.inline
-  def getKeys: typingsSlinky.crossStorage.crossStorageStrings.getKeys = this.cast("getKeys")
-  @scala.inline
-  def set: typingsSlinky.crossStorage.crossStorageStrings.set = this.cast("set")
+  def set: typingsSlinky.crossStorage.crossStorageStrings.set = "set".asInstanceOf[typingsSlinky.crossStorage.crossStorageStrings.set]
 }
 

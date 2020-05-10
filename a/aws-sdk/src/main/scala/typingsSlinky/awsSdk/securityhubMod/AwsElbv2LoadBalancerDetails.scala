@@ -50,30 +50,137 @@ trait AwsElbv2LoadBalancerDetails extends js.Object {
 
 object AwsElbv2LoadBalancerDetails {
   @scala.inline
-  def apply(
-    AvailabilityZones: AvailabilityZones = null,
-    CanonicalHostedZoneId: NonEmptyString = null,
-    CreatedTime: NonEmptyString = null,
-    DNSName: NonEmptyString = null,
-    IpAddressType: NonEmptyString = null,
-    Scheme: NonEmptyString = null,
-    SecurityGroups: SecurityGroups = null,
-    State: LoadBalancerState = null,
-    Type: NonEmptyString = null,
-    VpcId: NonEmptyString = null
-  ): AwsElbv2LoadBalancerDetails = {
+  def apply(): AwsElbv2LoadBalancerDetails = {
     val __obj = js.Dynamic.literal()
-    if (AvailabilityZones != null) __obj.updateDynamic("AvailabilityZones")(AvailabilityZones.asInstanceOf[js.Any])
-    if (CanonicalHostedZoneId != null) __obj.updateDynamic("CanonicalHostedZoneId")(CanonicalHostedZoneId.asInstanceOf[js.Any])
-    if (CreatedTime != null) __obj.updateDynamic("CreatedTime")(CreatedTime.asInstanceOf[js.Any])
-    if (DNSName != null) __obj.updateDynamic("DNSName")(DNSName.asInstanceOf[js.Any])
-    if (IpAddressType != null) __obj.updateDynamic("IpAddressType")(IpAddressType.asInstanceOf[js.Any])
-    if (Scheme != null) __obj.updateDynamic("Scheme")(Scheme.asInstanceOf[js.Any])
-    if (SecurityGroups != null) __obj.updateDynamic("SecurityGroups")(SecurityGroups.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
-    if (VpcId != null) __obj.updateDynamic("VpcId")(VpcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsElbv2LoadBalancerDetails]
   }
+  @scala.inline
+  implicit class AwsElbv2LoadBalancerDetailsOps[Self <: AwsElbv2LoadBalancerDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailabilityZones(value: AvailabilityZones): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZones")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZones: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZones")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanonicalHostedZoneId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CanonicalHostedZoneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanonicalHostedZoneId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CanonicalHostedZoneId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatedTime(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDNSName(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DNSName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDNSName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DNSName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpAddressType(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddressType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpAddressType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddressType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheme(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scheme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scheme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityGroups(value: SecurityGroups): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: LoadBalancerState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

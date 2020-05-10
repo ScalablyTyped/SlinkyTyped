@@ -5,204 +5,239 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.highcharts.mod.SeriesOptions because var conflicts: zIndex. Inlined id, index, legendIndex, mapData, name, stack, treemap, `type`, xAxis, yAxis */ trait SeriesSunburstOptions
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.highcharts.mod.SeriesOptions because var conflicts: zIndex. Inlined id, index, legendIndex, mapData, name, stack, treemap, `type`, xAxis, yAxis */ @js.native
+trait SeriesSunburstOptions
   extends PlotSunburstOptions
      with SeriesOptionsType {
-  var data: js.UndefOr[js.Array[Double | Null | SeriesSunburstDataOptions]] = js.undefined
+  var data: js.UndefOr[js.Array[Double | Null | SeriesSunburstDataOptions]] = js.native
   /**
     * Not available
     */
-  var dataParser: js.UndefOr[scala.Nothing] = js.undefined
+  var dataParser: js.UndefOr[scala.Nothing] = js.native
   /**
     * Not available
     */
-  var dataURL: js.UndefOr[scala.Nothing] = js.undefined
+  var dataURL: js.UndefOr[scala.Nothing] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) An id for the series. This can
     * be used after render time to get a pointer to the series object through
     * `chart.get()`.
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The index of the series in the
     * chart, affecting the internal index in the `chart.series` array, the
     * visible Z index as well as the order in the legend.
     */
-  var index: js.UndefOr[Double] = js.undefined
+  var index: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The sequential index of the
     * series in the legend.
     */
-  var legendIndex: js.UndefOr[Double] = js.undefined
+  var legendIndex: js.UndefOr[Double] = js.native
   /**
     * (Highmaps) A map data object containing a `path` definition and
     * optionally additional properties to join in the data as per the `joinBy`
     * option.
     */
-  var mapData: js.UndefOr[js.Array[SeriesMapDataOptions] | js.Any] = js.undefined
+  var mapData: js.UndefOr[js.Array[SeriesMapDataOptions] | js.Any] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The name of the series as shown
     * in the legend, tooltip etc.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Not available
     */
-  var stack: js.UndefOr[Double | String] = js.undefined
-  var treemap: js.UndefOr[SeriesTreemapOptions] = js.undefined
+  var stack: js.UndefOr[Double | String] = js.native
+  var treemap: js.UndefOr[SeriesTreemapOptions] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) This property is only in
     * TypeScript non-optional and might be `undefined` in series objects from
     * unknown sources.
     */
-  var `type`: String | sunburst
+  var `type`: String | sunburst = js.native
   /**
     * (Highcharts, Highstock) When using dual or multiple x axes, this number
     * defines which xAxis the particular series is connected to. It refers to
     * either the axis id or the index of the axis in the xAxis array, with 0
     * being the first.
     */
-  var xAxis: js.UndefOr[Double | String] = js.undefined
+  var xAxis: js.UndefOr[Double | String] = js.native
   /**
     * (Highcharts, Highstock) When using dual or multiple y axes, this number
     * defines which yAxis the particular series is connected to. It refers to
     * either the axis id or the index of the axis in the yAxis array, with 0
     * being the first.
     */
-  var yAxis: js.UndefOr[Double | String] = js.undefined
+  var yAxis: js.UndefOr[Double | String] = js.native
 }
 
 object SeriesSunburstOptions {
   @scala.inline
-  def apply(
-    `type`: String | sunburst,
-    accessibility: js.Object | PlotSunburstAccessibilityOptions = null,
-    allowPointSelect: js.UndefOr[Boolean] = js.undefined,
-    allowTraversingTree: js.UndefOr[Boolean] = js.undefined,
-    animation: Boolean | AnimationOptionsObject | PlotSunburstAnimationOptions = null,
-    boostBlending: OptionsBoostBlendingValue = null,
-    borderColor: ColorString | GradientColorObject | PatternObject = null,
-    borderWidth: Int | Double = null,
-    center: js.Array[Double | String] = null,
-    className: String = null,
-    color: ColorString | GradientColorObject | PatternObject = null,
-    colorByPoint: js.UndefOr[Boolean] = js.undefined,
-    colorIndex: Int | Double = null,
-    colors: js.Array[ColorString | GradientColorObject | PatternObject] = null,
-    compareStart: js.UndefOr[Boolean] = js.undefined,
-    connectors: PlotSunburstConnectorsOptions = null,
-    cursor: String | CursorValue = null,
-    data: js.Array[Double | Null | SeriesSunburstDataOptions] = null,
-    dataLabels: SeriesSunburstDataLabelsOptionsObject | js.Array[SeriesSunburstDataLabelsOptionsObject] = null,
-    dataParser: js.UndefOr[scala.Nothing] = js.undefined,
-    dataURL: js.UndefOr[scala.Nothing] = js.undefined,
-    description: String = null,
-    enableMouseTracking: js.UndefOr[Boolean] = js.undefined,
-    events: PlotSunburstEventsOptions = null,
-    fillColor: ColorString | GradientColorObject | PatternObject = null,
-    id: String = null,
-    includeInDataExport: js.UndefOr[Boolean] = js.undefined,
-    index: Int | Double = null,
-    keys: js.Array[String] = null,
-    lastPrice: PlotSunburstLastPriceOptions = null,
-    lastVisiblePrice: PlotSunburstLastVisiblePriceOptions = null,
-    legendIndex: Int | Double = null,
-    levelIsConstant: js.UndefOr[Boolean] = js.undefined,
-    levelSize: PlotSunburstLevelSizeOptions = null,
-    levels: js.Array[PlotSunburstLevelsOptions] = null,
-    linkedTo: String = null,
-    mapData: js.Array[SeriesMapDataOptions] | js.Any = null,
-    name: String = null,
-    opacity: Int | Double = null,
-    point: PlotSunburstPointOptions = null,
-    pointDescriptionFormatter: js.Function = null,
-    rootId: String = null,
-    selected: js.UndefOr[Boolean] = js.undefined,
-    shadow: Boolean | ShadowOptionsObject = null,
-    showCheckbox: js.UndefOr[Boolean] = js.undefined,
-    showInLegend: js.UndefOr[Boolean] = js.undefined,
-    showInNavigator: js.UndefOr[Boolean] = js.undefined,
-    size: Double | String = null,
-    skipKeyboardNavigation: js.UndefOr[Boolean] = js.undefined,
-    slicedOffset: Int | Double = null,
-    stack: Double | scala.Nothing | String = null,
-    startAngle: Int | Double = null,
-    states: PlotSunburstStatesOptions = null,
-    stickyTracking: js.UndefOr[Boolean] = js.undefined,
-    tooltip: PlotSunburstTooltipOptions = null,
-    traverseUpButton: PlotSunburstTraverseUpButtonOptions = null,
-    treemap: SeriesTreemapOptions = null,
-    useOhlcData: js.UndefOr[Boolean] = js.undefined,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    xAxis: Double | String = null,
-    yAxis: Double | String = null,
-    zIndex: Int | Double = null
-  ): SeriesSunburstOptions = {
+  def apply(`type`: String | sunburst): SeriesSunburstOptions = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (accessibility != null) __obj.updateDynamic("accessibility")(accessibility.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowPointSelect)) __obj.updateDynamic("allowPointSelect")(allowPointSelect.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowTraversingTree)) __obj.updateDynamic("allowTraversingTree")(allowTraversingTree.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (boostBlending != null) __obj.updateDynamic("boostBlending")(boostBlending.asInstanceOf[js.Any])
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(colorByPoint)) __obj.updateDynamic("colorByPoint")(colorByPoint.asInstanceOf[js.Any])
-    if (colorIndex != null) __obj.updateDynamic("colorIndex")(colorIndex.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (!js.isUndefined(compareStart)) __obj.updateDynamic("compareStart")(compareStart.asInstanceOf[js.Any])
-    if (connectors != null) __obj.updateDynamic("connectors")(connectors.asInstanceOf[js.Any])
-    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dataLabels != null) __obj.updateDynamic("dataLabels")(dataLabels.asInstanceOf[js.Any])
-    if (!js.isUndefined(dataParser)) __obj.updateDynamic("dataParser")(dataParser.asInstanceOf[js.Any])
-    if (!js.isUndefined(dataURL)) __obj.updateDynamic("dataURL")(dataURL.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableMouseTracking)) __obj.updateDynamic("enableMouseTracking")(enableMouseTracking.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeInDataExport)) __obj.updateDynamic("includeInDataExport")(includeInDataExport.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (keys != null) __obj.updateDynamic("keys")(keys.asInstanceOf[js.Any])
-    if (lastPrice != null) __obj.updateDynamic("lastPrice")(lastPrice.asInstanceOf[js.Any])
-    if (lastVisiblePrice != null) __obj.updateDynamic("lastVisiblePrice")(lastVisiblePrice.asInstanceOf[js.Any])
-    if (legendIndex != null) __obj.updateDynamic("legendIndex")(legendIndex.asInstanceOf[js.Any])
-    if (!js.isUndefined(levelIsConstant)) __obj.updateDynamic("levelIsConstant")(levelIsConstant.asInstanceOf[js.Any])
-    if (levelSize != null) __obj.updateDynamic("levelSize")(levelSize.asInstanceOf[js.Any])
-    if (levels != null) __obj.updateDynamic("levels")(levels.asInstanceOf[js.Any])
-    if (linkedTo != null) __obj.updateDynamic("linkedTo")(linkedTo.asInstanceOf[js.Any])
-    if (mapData != null) __obj.updateDynamic("mapData")(mapData.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (point != null) __obj.updateDynamic("point")(point.asInstanceOf[js.Any])
-    if (pointDescriptionFormatter != null) __obj.updateDynamic("pointDescriptionFormatter")(pointDescriptionFormatter.asInstanceOf[js.Any])
-    if (rootId != null) __obj.updateDynamic("rootId")(rootId.asInstanceOf[js.Any])
-    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
-    if (shadow != null) __obj.updateDynamic("shadow")(shadow.asInstanceOf[js.Any])
-    if (!js.isUndefined(showCheckbox)) __obj.updateDynamic("showCheckbox")(showCheckbox.asInstanceOf[js.Any])
-    if (!js.isUndefined(showInLegend)) __obj.updateDynamic("showInLegend")(showInLegend.asInstanceOf[js.Any])
-    if (!js.isUndefined(showInNavigator)) __obj.updateDynamic("showInNavigator")(showInNavigator.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipKeyboardNavigation)) __obj.updateDynamic("skipKeyboardNavigation")(skipKeyboardNavigation.asInstanceOf[js.Any])
-    if (slicedOffset != null) __obj.updateDynamic("slicedOffset")(slicedOffset.asInstanceOf[js.Any])
-    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
-    if (startAngle != null) __obj.updateDynamic("startAngle")(startAngle.asInstanceOf[js.Any])
-    if (states != null) __obj.updateDynamic("states")(states.asInstanceOf[js.Any])
-    if (!js.isUndefined(stickyTracking)) __obj.updateDynamic("stickyTracking")(stickyTracking.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (traverseUpButton != null) __obj.updateDynamic("traverseUpButton")(traverseUpButton.asInstanceOf[js.Any])
-    if (treemap != null) __obj.updateDynamic("treemap")(treemap.asInstanceOf[js.Any])
-    if (!js.isUndefined(useOhlcData)) __obj.updateDynamic("useOhlcData")(useOhlcData.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (xAxis != null) __obj.updateDynamic("xAxis")(xAxis.asInstanceOf[js.Any])
-    if (yAxis != null) __obj.updateDynamic("yAxis")(yAxis.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesSunburstOptions]
   }
+  @scala.inline
+  implicit class SeriesSunburstOptionsOps[Self <: SeriesSunburstOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: String | sunburst): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Array[Double | Null | SeriesSunburstDataOptions]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataParser(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataParser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataParser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataParser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataURL(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataURL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLegendIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegendIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapData(value: js.Array[SeriesMapDataOptions] | js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStack(value: Double | scala.Nothing | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTreemap(value: SeriesTreemapOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("treemap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTreemap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("treemap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXAxis(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYAxis(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxis")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

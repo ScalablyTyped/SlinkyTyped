@@ -22,16 +22,53 @@ trait EvaluationResult extends js.Object {
 
 object EvaluationResult {
   @scala.inline
-  def apply(
-    ComplianceStatus: PolicyComplianceStatusType = null,
-    EvaluationLimitExceeded: js.UndefOr[scala.Boolean] = js.undefined,
-    ViolatorCount: Int | Double = null
-  ): EvaluationResult = {
+  def apply(): EvaluationResult = {
     val __obj = js.Dynamic.literal()
-    if (ComplianceStatus != null) __obj.updateDynamic("ComplianceStatus")(ComplianceStatus.asInstanceOf[js.Any])
-    if (!js.isUndefined(EvaluationLimitExceeded)) __obj.updateDynamic("EvaluationLimitExceeded")(EvaluationLimitExceeded.asInstanceOf[js.Any])
-    if (ViolatorCount != null) __obj.updateDynamic("ViolatorCount")(ViolatorCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[EvaluationResult]
   }
+  @scala.inline
+  implicit class EvaluationResultOps[Self <: EvaluationResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComplianceStatus(value: PolicyComplianceStatusType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComplianceStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvaluationLimitExceeded(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationLimitExceeded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvaluationLimitExceeded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationLimitExceeded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViolatorCount(value: ResourceCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ViolatorCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViolatorCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ViolatorCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

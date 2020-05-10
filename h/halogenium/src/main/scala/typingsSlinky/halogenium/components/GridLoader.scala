@@ -1,15 +1,16 @@
 package typingsSlinky.halogenium.components
 
+import typingsSlinky.halogenium.mod.MarginLoaderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GridLoader
-  extends SharedApply_MarginLoaderProps_1324934918[typingsSlinky.halogenium.mod.GridLoader] {
+object GridLoader {
   @JSImport("halogenium", "GridLoader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: MarginLoaderProps): SharedBuilder_MarginLoaderProps_859607337[typingsSlinky.halogenium.mod.GridLoader] = new SharedBuilder_MarginLoaderProps_859607337[typingsSlinky.halogenium.mod.GridLoader](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: GridLoader.type): SharedBuilder_MarginLoaderProps_859607337[typingsSlinky.halogenium.mod.GridLoader] = new SharedBuilder_MarginLoaderProps_859607337[typingsSlinky.halogenium.mod.GridLoader](js.Array(this.component, js.Dictionary.empty))()
 }
 

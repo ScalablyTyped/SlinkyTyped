@@ -1,6 +1,6 @@
 package typingsSlinky.overlayscrollbars.mod
 
-import typingsSlinky.std.UIEvent
+import org.scalajs.dom.raw.UIEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

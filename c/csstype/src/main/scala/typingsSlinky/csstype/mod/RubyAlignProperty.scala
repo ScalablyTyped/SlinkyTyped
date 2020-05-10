@@ -19,24 +19,22 @@ trait RubyAlignProperty extends js.Object
 
 object RubyAlignProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.csstype.csstypeStrings.center = "center".asInstanceOf[typingsSlinky.csstype.csstypeStrings.center]
   @scala.inline
-  def center: typingsSlinky.csstype.csstypeStrings.center = this.cast("center")
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
+  def `space-around`: typingsSlinky.csstype.csstypeStrings.`space-around` = "space-around".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`space-around`]
   @scala.inline
-  def `space-around`: typingsSlinky.csstype.csstypeStrings.`space-around` = this.cast("space-around")
+  def `space-between`: typingsSlinky.csstype.csstypeStrings.`space-between` = "space-between".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`space-between`]
   @scala.inline
-  def `space-between`: typingsSlinky.csstype.csstypeStrings.`space-between` = this.cast("space-between")
+  def start: typingsSlinky.csstype.csstypeStrings.start = "start".asInstanceOf[typingsSlinky.csstype.csstypeStrings.start]
   @scala.inline
-  def start: typingsSlinky.csstype.csstypeStrings.start = this.cast("start")
-  @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
 }
 

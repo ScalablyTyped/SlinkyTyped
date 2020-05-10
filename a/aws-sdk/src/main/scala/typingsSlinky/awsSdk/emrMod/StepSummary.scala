@@ -30,20 +30,77 @@ trait StepSummary extends js.Object {
 
 object StepSummary {
   @scala.inline
-  def apply(
-    ActionOnFailure: ActionOnFailure = null,
-    Config: HadoopStepConfig = null,
-    Id: StepId = null,
-    Name: String = null,
-    Status: StepStatus = null
-  ): StepSummary = {
+  def apply(): StepSummary = {
     val __obj = js.Dynamic.literal()
-    if (ActionOnFailure != null) __obj.updateDynamic("ActionOnFailure")(ActionOnFailure.asInstanceOf[js.Any])
-    if (Config != null) __obj.updateDynamic("Config")(Config.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[StepSummary]
   }
+  @scala.inline
+  implicit class StepSummaryOps[Self <: StepSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionOnFailure(value: ActionOnFailure): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionOnFailure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionOnFailure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionOnFailure")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfig(value: HadoopStepConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Config")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Config")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: StepId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: StepStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

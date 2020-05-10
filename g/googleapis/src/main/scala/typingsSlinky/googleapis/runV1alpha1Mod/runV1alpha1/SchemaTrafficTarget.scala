@@ -41,18 +41,65 @@ trait SchemaTrafficTarget extends js.Object {
 
 object SchemaTrafficTarget {
   @scala.inline
-  def apply(
-    configurationName: String = null,
-    name: String = null,
-    percent: Int | Double = null,
-    revisionName: String = null
-  ): SchemaTrafficTarget = {
+  def apply(): SchemaTrafficTarget = {
     val __obj = js.Dynamic.literal()
-    if (configurationName != null) __obj.updateDynamic("configurationName")(configurationName.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (percent != null) __obj.updateDynamic("percent")(percent.asInstanceOf[js.Any])
-    if (revisionName != null) __obj.updateDynamic("revisionName")(revisionName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTrafficTarget]
   }
+  @scala.inline
+  implicit class SchemaTrafficTargetOps[Self <: SchemaTrafficTarget] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigurationName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigurationName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPercent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPercent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -15,16 +15,14 @@ trait HttpMethod extends js.Object
 
 object HttpMethod {
   @scala.inline
-  def DELETE: typingsSlinky.fxn.fxnStrings.DELETE = this.cast("DELETE")
+  def DELETE: typingsSlinky.fxn.fxnStrings.DELETE = "DELETE".asInstanceOf[typingsSlinky.fxn.fxnStrings.DELETE]
   @scala.inline
-  def GET: typingsSlinky.fxn.fxnStrings.GET = this.cast("GET")
+  def GET: typingsSlinky.fxn.fxnStrings.GET = "GET".asInstanceOf[typingsSlinky.fxn.fxnStrings.GET]
   @scala.inline
-  def OPTIONS: typingsSlinky.fxn.fxnStrings.OPTIONS = this.cast("OPTIONS")
+  def OPTIONS: typingsSlinky.fxn.fxnStrings.OPTIONS = "OPTIONS".asInstanceOf[typingsSlinky.fxn.fxnStrings.OPTIONS]
   @scala.inline
-  def POST: typingsSlinky.fxn.fxnStrings.POST = this.cast("POST")
+  def POST: typingsSlinky.fxn.fxnStrings.POST = "POST".asInstanceOf[typingsSlinky.fxn.fxnStrings.POST]
   @scala.inline
-  def PUT: typingsSlinky.fxn.fxnStrings.PUT = this.cast("PUT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def PUT: typingsSlinky.fxn.fxnStrings.PUT = "PUT".asInstanceOf[typingsSlinky.fxn.fxnStrings.PUT]
 }
 

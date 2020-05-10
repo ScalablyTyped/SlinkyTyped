@@ -1,7 +1,6 @@
 package typingsSlinky.d3Interpolate
 
 import typingsSlinky.d3Color.mod.ColorCommonInstance
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,7 +46,7 @@ object mod extends js.Object {
   def interpolate(a: AnonToString, b: String): js.Function1[/* t */ Double, String] = js.native
   def interpolate(a: AnonValueOf, b: Double): js.Function1[/* t */ Double, Double] = js.native
   def interpolate(a: AnonValueOf, b: AnonValueOf): js.Function1[/* t */ Double, Double] = js.native
-  def interpolate(a: Date, b: Date): js.Function1[/* t */ Double, js.Date] = js.native
+  def interpolate(a: js.Date, b: js.Date): js.Function1[/* t */ Double, js.Date] = js.native
   def interpolate[U /* <: js.Object */](a: js.Any, b: U): js.Function1[/* t */ Double, U] = js.native
   def interpolate[U /* <: js.Array[_] */](a: js.Array[_], b: U): js.Function1[/* t */ Double, U] = js.native
   def interpolateArray[A /* <: js.Array[_] */](a: js.Array[_], b: A): ArrayInterpolator[A] = js.native

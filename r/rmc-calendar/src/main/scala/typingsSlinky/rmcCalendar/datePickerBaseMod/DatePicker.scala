@@ -7,7 +7,6 @@ import typingsSlinky.rmcCalendar.AnonFirstDate
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.CellData
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.MonthData
 import typingsSlinky.rmcCalendar.datePickerPropsMod.PropsType
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,8 +37,8 @@ trait DatePicker
   def onCellClick(day: CellData): Unit = js.native
   def selectDateRange(startDate: js.Date): Unit = js.native
   def selectDateRange(startDate: js.Date, endDate: js.UndefOr[scala.Nothing], clear: Boolean): Unit = js.native
-  def selectDateRange(startDate: js.Date, endDate: Date): Unit = js.native
-  def selectDateRange(startDate: js.Date, endDate: Date, clear: Boolean): Unit = js.native
+  def selectDateRange(startDate: js.Date, endDate: js.Date): Unit = js.native
+  def selectDateRange(startDate: js.Date, endDate: js.Date, clear: Boolean): Unit = js.native
   @JSName("shouldComponentUpdate")
   def shouldComponentUpdate_MDatePicker(nextProps: PropsType, nextState: StateType, nextContext: js.Any): Boolean = js.native
 }

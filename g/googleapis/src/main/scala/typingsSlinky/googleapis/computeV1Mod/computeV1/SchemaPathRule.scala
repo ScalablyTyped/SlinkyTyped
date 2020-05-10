@@ -32,11 +32,41 @@ trait SchemaPathRule extends js.Object {
 
 object SchemaPathRule {
   @scala.inline
-  def apply(paths: js.Array[String] = null, service: String = null): SchemaPathRule = {
+  def apply(): SchemaPathRule = {
     val __obj = js.Dynamic.literal()
-    if (paths != null) __obj.updateDynamic("paths")(paths.asInstanceOf[js.Any])
-    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPathRule]
   }
+  @scala.inline
+  implicit class SchemaPathRuleOps[Self <: SchemaPathRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPaths(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withService(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

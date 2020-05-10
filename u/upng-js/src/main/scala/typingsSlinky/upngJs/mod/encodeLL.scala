@@ -8,21 +8,21 @@ import scala.scalajs.js.annotation._
 @js.native
 object encodeLL extends js.Object {
   def apply(
-    imgs: js.Array[scala.scalajs.js.typedarray.ArrayBuffer],
+    imgs: js.Array[js.typedarray.ArrayBuffer],
     w: Double,
     h: Double,
     cc: Double,
     ac: Double,
     depth: Double
-  ): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  ): js.typedarray.ArrayBuffer = js.native
   def apply(
-    imgs: js.Array[scala.scalajs.js.typedarray.ArrayBuffer],
+    imgs: js.Array[js.typedarray.ArrayBuffer],
     w: Double,
     h: Double,
     cc: Double,
     ac: Double,
     depth: Double,
     dels: js.Array[Double]
-  ): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  ): js.typedarray.ArrayBuffer = js.native
 }
 

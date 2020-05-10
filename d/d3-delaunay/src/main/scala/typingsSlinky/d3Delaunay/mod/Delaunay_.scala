@@ -25,7 +25,7 @@ class Delaunay_[P] protected () extends js.Object {
     * The halfedge indices as an Int32Array [j0, j1, ...].
     * For each index 0 <= i < halfedges.length, there is a halfedge from triangle vertex j = halfedges[i] to triangle vertex i.
     */
-  var halfedges: scala.scalajs.js.typedarray.Int32Array = js.native
+  var halfedges: js.typedarray.Int32Array = js.native
   /**
     * An arbitrary node on the convex hull.
     * The convex hull is represented as a circular doubly-linked list of nodes.
@@ -36,12 +36,12 @@ class Delaunay_[P] protected () extends js.Object {
     * For each point i, inedges[i] is the halfedge index e of an incoming halfedge.
     * For coincident points, the halfedge index is -1; for points on the convex hull, the incoming halfedge is on the convex hull; for other points, the choice of incoming halfedge is arbitrary.
     */
-  var inedges: scala.scalajs.js.typedarray.Int32Array = js.native
+  var inedges: js.typedarray.Int32Array = js.native
   /**
     * The outgoing halfedge indexes as a Int32Array [e0, e1, e2, ...].
     * For each point i on the convex hull, outedges[i] is the halfedge index e of the corresponding outgoing halfedge; for other points, the halfedge index is -1.
     */
-  var outedges: scala.scalajs.js.typedarray.Int32Array = js.native
+  var outedges: js.typedarray.Int32Array = js.native
   /**
     * The coordinates of the points as an array [x0, y0, x1, y1, ...].
     * Typically, this is a Float64Array, however you can use any array-like type in the constructor.
@@ -52,7 +52,7 @@ class Delaunay_[P] protected () extends js.Object {
     * Each contiguous triplet of indices i, j, k forms a counterclockwise triangle.
     * The coordinates of the triangle's points can be found by going through 'points'.
     */
-  var triangles: scala.scalajs.js.typedarray.Uint32Array = js.native
+  var triangles: js.typedarray.Uint32Array = js.native
   /**
     * Returns the index of the input point that is closest to the specified point ⟨x, y⟩.
     * The search is started at the specified point i. If i is not specified, it defaults to zero.

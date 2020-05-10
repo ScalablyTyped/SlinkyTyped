@@ -6,8 +6,8 @@ import scala.scalajs.js.annotation._
 
 package object topologyMod {
   type CallHook = js.Function2[
-    /* inputs */ typingsSlinky.tensorflowTfjsCore.mod.Tensor_[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] | (js.Array[
-      typingsSlinky.tensorflowTfjsCore.mod.Tensor_[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
+    /* inputs */ typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] | (js.Array[
+      typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
     ]), 
     /* kwargs */ typingsSlinky.tensorflowTfjsLayers.distTypesMod.Kwargs, 
     scala.Unit

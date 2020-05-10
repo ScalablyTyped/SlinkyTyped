@@ -18,11 +18,41 @@ trait ManagedResourceSummary extends js.Object {
 
 object ManagedResourceSummary {
   @scala.inline
-  def apply(AssociationCount: Int | Double = null, ResourceType: ResourceType = null): ManagedResourceSummary = {
+  def apply(): ManagedResourceSummary = {
     val __obj = js.Dynamic.literal()
-    if (AssociationCount != null) __obj.updateDynamic("AssociationCount")(AssociationCount.asInstanceOf[js.Any])
-    if (ResourceType != null) __obj.updateDynamic("ResourceType")(ResourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ManagedResourceSummary]
   }
+  @scala.inline
+  implicit class ManagedResourceSummaryOps[Self <: ManagedResourceSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssociationCount(value: BoxLong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociationCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceType(value: ResourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

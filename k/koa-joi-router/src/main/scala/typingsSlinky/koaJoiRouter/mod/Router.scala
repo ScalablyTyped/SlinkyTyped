@@ -6,7 +6,6 @@ import typingsSlinky.koa.mod.Middleware
 import typingsSlinky.koaJoiRouter.FnCall
 import typingsSlinky.koaRouter.mod.IMiddleware
 import typingsSlinky.koaRouter.mod.IParamMiddleware
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,40 +39,40 @@ trait Router extends js.Object {
   var use_Original: FnCall = js.native
   def delete(path: String, handlerOrConfig: Config, handlers: Handler*): Router = js.native
   def delete(path: String, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
-  def delete(path: RegExp, handlerOrConfig: Config, handlers: Handler*): Router = js.native
-  def delete(path: RegExp, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
+  def delete(path: js.RegExp, handlerOrConfig: Config, handlers: Handler*): Router = js.native
+  def delete(path: js.RegExp, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
   def get(path: String, handlerOrConfig: Config, handlers: Handler*): Router = js.native
   def get(path: String, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
-  def get(path: RegExp, handlerOrConfig: Config, handlers: Handler*): Router = js.native
-  def get(path: RegExp, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
+  def get(path: js.RegExp, handlerOrConfig: Config, handlers: Handler*): Router = js.native
+  def get(path: js.RegExp, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
   def head(path: String, handlerOrConfig: Config, handlers: Handler*): Router = js.native
   def head(path: String, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
-  def head(path: RegExp, handlerOrConfig: Config, handlers: Handler*): Router = js.native
-  def head(path: RegExp, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
+  def head(path: js.RegExp, handlerOrConfig: Config, handlers: Handler*): Router = js.native
+  def head(path: js.RegExp, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
   def middleware(): Middleware[DefaultState, DefaultContext] = js.native
   def options(path: String, handlerOrConfig: Config, handlers: Handler*): Router = js.native
   def options(path: String, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
-  def options(path: RegExp, handlerOrConfig: Config, handlers: Handler*): Router = js.native
-  def options(path: RegExp, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
+  def options(path: js.RegExp, handlerOrConfig: Config, handlers: Handler*): Router = js.native
+  def options(path: js.RegExp, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
   def param(param: String, middleware: IParamMiddleware): typingsSlinky.koaRouter.mod.Router[_, js.Object] = js.native
   def patch(path: String, handlerOrConfig: Config, handlers: Handler*): Router = js.native
   def patch(path: String, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
-  def patch(path: RegExp, handlerOrConfig: Config, handlers: Handler*): Router = js.native
-  def patch(path: RegExp, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
+  def patch(path: js.RegExp, handlerOrConfig: Config, handlers: Handler*): Router = js.native
+  def patch(path: js.RegExp, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
   def post(path: String, handlerOrConfig: Config, handlers: Handler*): Router = js.native
   def post(path: String, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
-  def post(path: RegExp, handlerOrConfig: Config, handlers: Handler*): Router = js.native
-  def post(path: RegExp, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
+  def post(path: js.RegExp, handlerOrConfig: Config, handlers: Handler*): Router = js.native
+  def post(path: js.RegExp, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
   def prefix(prefix: String): typingsSlinky.koaRouter.mod.Router[_, js.Object] = js.native
   def put(path: String, handlerOrConfig: Config, handlers: Handler*): Router = js.native
   def put(path: String, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
-  def put(path: RegExp, handlerOrConfig: Config, handlers: Handler*): Router = js.native
-  def put(path: RegExp, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
+  def put(path: js.RegExp, handlerOrConfig: Config, handlers: Handler*): Router = js.native
+  def put(path: js.RegExp, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
   def route(spec: js.Array[Spec]): Router = js.native
   def route(spec: Spec): Router = js.native
   def use(middleware: (IMiddleware[_, js.Object])*): typingsSlinky.koaRouter.mod.Router[_, js.Object] = js.native
   def use(path: String, middleware: (IMiddleware[_, js.Object])*): typingsSlinky.koaRouter.mod.Router[_, js.Object] = js.native
   def use(path: js.Array[String], middleware: (IMiddleware[_, js.Object])*): typingsSlinky.koaRouter.mod.Router[_, js.Object] = js.native
-  def use(path: RegExp, middleware: (IMiddleware[_, js.Object])*): typingsSlinky.koaRouter.mod.Router[_, js.Object] = js.native
+  def use(path: js.RegExp, middleware: (IMiddleware[_, js.Object])*): typingsSlinky.koaRouter.mod.Router[_, js.Object] = js.native
 }
 

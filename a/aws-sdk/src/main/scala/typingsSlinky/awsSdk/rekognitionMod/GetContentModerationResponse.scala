@@ -34,22 +34,89 @@ trait GetContentModerationResponse extends js.Object {
 
 object GetContentModerationResponse {
   @scala.inline
-  def apply(
-    JobStatus: VideoJobStatus = null,
-    ModerationLabels: ContentModerationDetections = null,
-    ModerationModelVersion: String = null,
-    NextToken: PaginationToken = null,
-    StatusMessage: StatusMessage = null,
-    VideoMetadata: VideoMetadata = null
-  ): GetContentModerationResponse = {
+  def apply(): GetContentModerationResponse = {
     val __obj = js.Dynamic.literal()
-    if (JobStatus != null) __obj.updateDynamic("JobStatus")(JobStatus.asInstanceOf[js.Any])
-    if (ModerationLabels != null) __obj.updateDynamic("ModerationLabels")(ModerationLabels.asInstanceOf[js.Any])
-    if (ModerationModelVersion != null) __obj.updateDynamic("ModerationModelVersion")(ModerationModelVersion.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (StatusMessage != null) __obj.updateDynamic("StatusMessage")(StatusMessage.asInstanceOf[js.Any])
-    if (VideoMetadata != null) __obj.updateDynamic("VideoMetadata")(VideoMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetContentModerationResponse]
   }
+  @scala.inline
+  implicit class GetContentModerationResponseOps[Self <: GetContentModerationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobStatus(value: VideoJobStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModerationLabels(value: ContentModerationDetections): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModerationLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModerationLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModerationLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModerationModelVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModerationModelVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModerationModelVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModerationModelVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusMessage(value: StatusMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoMetadata(value: VideoMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoMetadata")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -15,16 +15,14 @@ trait ReadPreferenceMode extends ReadPreferenceOrMode
 
 object ReadPreferenceMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def nearest: typingsSlinky.mongodb.mongodbStrings.nearest = "nearest".asInstanceOf[typingsSlinky.mongodb.mongodbStrings.nearest]
   @scala.inline
-  def nearest: typingsSlinky.mongodb.mongodbStrings.nearest = this.cast("nearest")
+  def primary: typingsSlinky.mongodb.mongodbStrings.primary = "primary".asInstanceOf[typingsSlinky.mongodb.mongodbStrings.primary]
   @scala.inline
-  def primary: typingsSlinky.mongodb.mongodbStrings.primary = this.cast("primary")
+  def primaryPreferred: typingsSlinky.mongodb.mongodbStrings.primaryPreferred = "primaryPreferred".asInstanceOf[typingsSlinky.mongodb.mongodbStrings.primaryPreferred]
   @scala.inline
-  def primaryPreferred: typingsSlinky.mongodb.mongodbStrings.primaryPreferred = this.cast("primaryPreferred")
+  def secondary: typingsSlinky.mongodb.mongodbStrings.secondary = "secondary".asInstanceOf[typingsSlinky.mongodb.mongodbStrings.secondary]
   @scala.inline
-  def secondary: typingsSlinky.mongodb.mongodbStrings.secondary = this.cast("secondary")
-  @scala.inline
-  def secondaryPreferred: typingsSlinky.mongodb.mongodbStrings.secondaryPreferred = this.cast("secondaryPreferred")
+  def secondaryPreferred: typingsSlinky.mongodb.mongodbStrings.secondaryPreferred = "secondaryPreferred".asInstanceOf[typingsSlinky.mongodb.mongodbStrings.secondaryPreferred]
 }
 

@@ -5,17 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAoMap extends js.Object {
-  var aoMap: IUniform
-  var aoMapIntensity: IUniform
+  var aoMap: IUniform = js.native
+  var aoMapIntensity: IUniform = js.native
 }
 
 object AnonAoMap {
   @scala.inline
   def apply(aoMap: IUniform, aoMapIntensity: IUniform): AnonAoMap = {
     val __obj = js.Dynamic.literal(aoMap = aoMap.asInstanceOf[js.Any], aoMapIntensity = aoMapIntensity.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonAoMap]
   }
+  @scala.inline
+  implicit class AnonAoMapOps[Self <: AnonAoMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAoMap(value: IUniform): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aoMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAoMapIntensity(value: IUniform): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aoMapIntensity")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

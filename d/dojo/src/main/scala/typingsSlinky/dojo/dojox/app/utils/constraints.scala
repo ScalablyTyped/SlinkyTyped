@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait constraints extends js.Object {
   /**
     * get current all selected children for this view and it's selected subviews
@@ -17,19 +18,19 @@ trait constraints extends js.Object {
     * @param view the View to get the child from
     * @param selChildren the Array of the subChildren found
     */
-  def getAllSelectedChildren(view: View, selChildren: js.Array[_]): js.Any
+  def getAllSelectedChildren(view: View, selChildren: js.Array[_]): js.Any = js.native
   /**
     * get current selected child according to the constraint
     *
     * @param view the View to get the child from
     * @param constraint tbe constraint object
     */
-  def getSelectedChild(view: View, constraint: js.Object): js.Any
+  def getSelectedChild(view: View, constraint: js.Object): js.Any = js.native
   /**
     *
     * @param constraint
     */
-  def register(constraint: js.Any): Unit
+  def register(constraint: js.Any): Unit = js.native
   /**
     * set current selected child according to the constraint
     *
@@ -37,7 +38,7 @@ trait constraints extends js.Object {
     * @param constraint tbe constraint object
     * @param child the child to select
     */
-  def setSelectedChild(view: View, constraint: js.Object, child: View): Unit
+  def setSelectedChild(view: View, constraint: js.Object, child: View): Unit = js.native
 }
 
 object constraints {
@@ -49,8 +50,39 @@ object constraints {
     setSelectedChild: (View, js.Object, View) => Unit
   ): constraints = {
     val __obj = js.Dynamic.literal(getAllSelectedChildren = js.Any.fromFunction2(getAllSelectedChildren), getSelectedChild = js.Any.fromFunction2(getSelectedChild), register = js.Any.fromFunction1(register), setSelectedChild = js.Any.fromFunction3(setSelectedChild))
-  
     __obj.asInstanceOf[constraints]
   }
+  @scala.inline
+  implicit class constraintsOps[Self <: constraints] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAllSelectedChildren(value: (View, js.Array[_]) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllSelectedChildren")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetSelectedChild(value: (View, js.Object) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSelectedChild")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRegister(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("register")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetSelectedChild(value: (View, js.Object, View) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSelectedChild")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

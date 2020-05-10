@@ -1,14 +1,16 @@
 package typingsSlinky.officeUiFabricReact.components
 
+import typingsSlinky.officeUiFabricReact.verticalDividerTypesMod.IVerticalDividerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object VerticalDividerBase extends SharedApply_IVerticalDividerProps1318616224 {
+object VerticalDividerBase {
   @JSImport("office-ui-fabric-react/lib/components/Divider/VerticalDivider.base", "VerticalDividerBase")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IVerticalDividerProps): SharedBuilder_IVerticalDividerProps_601226333 = new SharedBuilder_IVerticalDividerProps_601226333(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: VerticalDividerBase.type): SharedBuilder_IVerticalDividerProps_601226333 = new SharedBuilder_IVerticalDividerProps_601226333(js.Array(this.component, js.Dictionary.empty))()
 }
 

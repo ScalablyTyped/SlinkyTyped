@@ -13,12 +13,10 @@ trait VerticalAlign extends js.Object
 
 object VerticalAlign {
   @scala.inline
-  def bottom: typingsSlinky.amapJsApi.amapJsApiStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.amapJsApi.amapJsApiStrings.bottom = "bottom".asInstanceOf[typingsSlinky.amapJsApi.amapJsApiStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def middle: typingsSlinky.amapJsApi.amapJsApiStrings.middle = "middle".asInstanceOf[typingsSlinky.amapJsApi.amapJsApiStrings.middle]
   @scala.inline
-  def middle: typingsSlinky.amapJsApi.amapJsApiStrings.middle = this.cast("middle")
-  @scala.inline
-  def top: typingsSlinky.amapJsApi.amapJsApiStrings.top = this.cast("top")
+  def top: typingsSlinky.amapJsApi.amapJsApiStrings.top = "top".asInstanceOf[typingsSlinky.amapJsApi.amapJsApiStrings.top]
 }
 

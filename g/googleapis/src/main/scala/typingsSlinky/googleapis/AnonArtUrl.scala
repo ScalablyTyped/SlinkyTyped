@@ -14,18 +14,65 @@ trait AnonArtUrl extends js.Object {
 
 object AnonArtUrl {
   @scala.inline
-  def apply(
-    artUrl: String = null,
-    gservicesKey: String = null,
-    id: String = null,
-    items: js.Array[AnonAuthor] = null
-  ): AnonArtUrl = {
+  def apply(): AnonArtUrl = {
     val __obj = js.Dynamic.literal()
-    if (artUrl != null) __obj.updateDynamic("artUrl")(artUrl.asInstanceOf[js.Any])
-    if (gservicesKey != null) __obj.updateDynamic("gservicesKey")(gservicesKey.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonArtUrl]
   }
+  @scala.inline
+  implicit class AnonArtUrlOps[Self <: AnonArtUrl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArtUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArtUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGservicesKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gservicesKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGservicesKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gservicesKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItems(value: js.Array[AnonAuthor]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

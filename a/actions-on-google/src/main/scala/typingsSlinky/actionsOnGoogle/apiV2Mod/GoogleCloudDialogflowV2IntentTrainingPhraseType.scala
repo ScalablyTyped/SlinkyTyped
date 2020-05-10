@@ -13,12 +13,10 @@ trait GoogleCloudDialogflowV2IntentTrainingPhraseType extends js.Object
 
 object GoogleCloudDialogflowV2IntentTrainingPhraseType {
   @scala.inline
-  def EXAMPLE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.EXAMPLE = this.cast("EXAMPLE")
+  def EXAMPLE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.EXAMPLE = "EXAMPLE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.EXAMPLE]
   @scala.inline
-  def TEMPLATE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TEMPLATE = this.cast("TEMPLATE")
+  def TEMPLATE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TEMPLATE = "TEMPLATE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TEMPLATE]
   @scala.inline
-  def TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNSPECIFIED = this.cast("TYPE_UNSPECIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNSPECIFIED = "TYPE_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNSPECIFIED]
 }
 

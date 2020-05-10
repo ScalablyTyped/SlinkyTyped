@@ -22,12 +22,53 @@ trait FailureDetails extends js.Object {
 
 object FailureDetails {
   @scala.inline
-  def apply(Details: AutomationParameterMap = null, FailureStage: String = null, FailureType: String = null): FailureDetails = {
+  def apply(): FailureDetails = {
     val __obj = js.Dynamic.literal()
-    if (Details != null) __obj.updateDynamic("Details")(Details.asInstanceOf[js.Any])
-    if (FailureStage != null) __obj.updateDynamic("FailureStage")(FailureStage.asInstanceOf[js.Any])
-    if (FailureType != null) __obj.updateDynamic("FailureType")(FailureType.asInstanceOf[js.Any])
     __obj.asInstanceOf[FailureDetails]
   }
+  @scala.inline
+  implicit class FailureDetailsOps[Self <: FailureDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDetails(value: AutomationParameterMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Details")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureStage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureStage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureStage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureStage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

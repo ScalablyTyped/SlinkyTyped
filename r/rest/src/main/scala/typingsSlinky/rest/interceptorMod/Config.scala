@@ -8,6 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Config[T, U] extends js.Object {
   var error: js.UndefOr[
     js.Function3[
@@ -16,11 +17,11 @@ trait Config[T, U] extends js.Object {
       /* meta */ Meta, 
       Response | Promise_[Response]
     ]
-  ] = js.undefined
-  var init: js.UndefOr[js.Function1[/* config */ T, U]] = js.undefined
+  ] = js.native
+  var init: js.UndefOr[js.Function1[/* config */ T, U]] = js.native
   var request: js.UndefOr[
     js.Function3[/* request */ Request, /* config */ U, /* meta */ Meta, Request | Promise_[Request]]
-  ] = js.undefined
+  ] = js.native
   var response: js.UndefOr[
     js.Function3[
       /* response */ Response, 
@@ -28,7 +29,7 @@ trait Config[T, U] extends js.Object {
       /* meta */ Meta, 
       Response | Promise_[Response]
     ]
-  ] = js.undefined
+  ] = js.native
   var success: js.UndefOr[
     js.Function3[
       /* response */ Response, 
@@ -36,25 +37,82 @@ trait Config[T, U] extends js.Object {
       /* meta */ Meta, 
       Response | Promise_[Response]
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object Config {
   @scala.inline
-  def apply[T, U](
-    error: (/* response */ Response, /* config */ U, /* meta */ Meta) => Response | Promise_[Response] = null,
-    init: /* config */ T => U = null,
-    request: (/* request */ Request, /* config */ U, /* meta */ Meta) => Request | Promise_[Request] = null,
-    response: (/* response */ Response, /* config */ U, /* meta */ Meta) => Response | Promise_[Response] = null,
-    success: (/* response */ Response, /* config */ U, /* meta */ Meta) => Response | Promise_[Response] = null
-  ): Config[T, U] = {
+  def apply[T, U](): Config[T, U] = {
     val __obj = js.Dynamic.literal()
-    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction3(error))
-    if (init != null) __obj.updateDynamic("init")(js.Any.fromFunction1(init))
-    if (request != null) __obj.updateDynamic("request")(js.Any.fromFunction3(request))
-    if (response != null) __obj.updateDynamic("response")(js.Any.fromFunction3(response))
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction3(success))
     __obj.asInstanceOf[Config[T, U]]
   }
+  @scala.inline
+  implicit class ConfigOps[Self[t, u] <: Config[t, u], T, U] (val x: Self[T, U]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T, U] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T, U]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[T, U]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[T, U]) with Other]
+    @scala.inline
+    def withError(value: (/* response */ Response, /* config */ U, /* meta */ Meta) => Response | Promise_[Response]): Self[T, U] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutError: Self[T, U] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInit(value: /* config */ T => U): Self[T, U] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutInit: Self[T, U] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequest(value: (/* request */ Request, /* config */ U, /* meta */ Meta) => Request | Promise_[Request]): Self[T, U] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutRequest: Self[T, U] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponse(value: (/* response */ Response, /* config */ U, /* meta */ Meta) => Response | Promise_[Response]): Self[T, U] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutResponse: Self[T, U] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccess(value: (/* response */ Response, /* config */ U, /* meta */ Meta) => Response | Promise_[Response]): Self[T, U] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutSuccess: Self[T, U] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

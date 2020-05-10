@@ -22,12 +22,53 @@ trait NetworkInterface extends js.Object {
 
 object NetworkInterface {
   @scala.inline
-  def apply(Ipv4Address: String = null, Ipv6Address: String = null, MacAddress: String = null): NetworkInterface = {
+  def apply(): NetworkInterface = {
     val __obj = js.Dynamic.literal()
-    if (Ipv4Address != null) __obj.updateDynamic("Ipv4Address")(Ipv4Address.asInstanceOf[js.Any])
-    if (Ipv6Address != null) __obj.updateDynamic("Ipv6Address")(Ipv6Address.asInstanceOf[js.Any])
-    if (MacAddress != null) __obj.updateDynamic("MacAddress")(MacAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkInterface]
   }
+  @scala.inline
+  implicit class NetworkInterfaceOps[Self <: NetworkInterface] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIpv4Address(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv4Address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv4Address: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv4Address")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv6Address(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6Address: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Address")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMacAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MacAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMacAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MacAddress")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

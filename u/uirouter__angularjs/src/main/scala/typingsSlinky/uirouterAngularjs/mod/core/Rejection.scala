@@ -1,6 +1,5 @@
 package typingsSlinky.uirouterAngularjs.mod.core
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +42,7 @@ object Rejection extends js.Object {
     */
   def normalize(): typingsSlinky.uirouterCore.rejectFactoryMod.Rejection = js.native
   def normalize(detail: js.Any): typingsSlinky.uirouterCore.rejectFactoryMod.Rejection = js.native
-  def normalize(detail: Error): typingsSlinky.uirouterCore.rejectFactoryMod.Rejection = js.native
+  def normalize(detail: js.Error): typingsSlinky.uirouterCore.rejectFactoryMod.Rejection = js.native
   def normalize(detail: typingsSlinky.uirouterCore.rejectFactoryMod.Rejection): typingsSlinky.uirouterCore.rejectFactoryMod.Rejection = js.native
   /** Returns a Rejection due to redirected transition */
   def redirected(): typingsSlinky.uirouterCore.rejectFactoryMod.Rejection = js.native

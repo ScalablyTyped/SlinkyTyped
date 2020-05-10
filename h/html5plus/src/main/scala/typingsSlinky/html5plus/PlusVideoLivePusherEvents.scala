@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/video.html](http://www.html5plus.org/doc/zh_cn/video.html)
   */
+@js.native
 trait PlusVideoLivePusherEvents extends js.Object {
   /**
     * 渲染错误事件
@@ -20,7 +21,7 @@ trait PlusVideoLivePusherEvents extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/video.html](http://www.html5plus.org/doc/zh_cn/video.html)
     */
-  var error: js.UndefOr[String] = js.undefined
+  var error: js.UndefOr[String] = js.native
   /**
     * 网络状态通知事件
     * 当推流的网络状态发生变化时触发。
@@ -28,7 +29,7 @@ trait PlusVideoLivePusherEvents extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/video.html](http://www.html5plus.org/doc/zh_cn/video.html)
     */
-  var netstatus: js.UndefOr[String] = js.undefined
+  var netstatus: js.UndefOr[String] = js.native
   /**
     * 状态变化事件
     * 当推流连接服务器状态变化时触发。
@@ -68,17 +69,58 @@ trait PlusVideoLivePusherEvents extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/video.html](http://www.html5plus.org/doc/zh_cn/video.html)
     */
-  var statechange: js.UndefOr[String] = js.undefined
+  var statechange: js.UndefOr[String] = js.native
 }
 
 object PlusVideoLivePusherEvents {
   @scala.inline
-  def apply(error: String = null, netstatus: String = null, statechange: String = null): PlusVideoLivePusherEvents = {
+  def apply(): PlusVideoLivePusherEvents = {
     val __obj = js.Dynamic.literal()
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (netstatus != null) __obj.updateDynamic("netstatus")(netstatus.asInstanceOf[js.Any])
-    if (statechange != null) __obj.updateDynamic("statechange")(statechange.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusVideoLivePusherEvents]
   }
+  @scala.inline
+  implicit class PlusVideoLivePusherEventsOps[Self <: PlusVideoLivePusherEvents] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withError(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetstatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("netstatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetstatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("netstatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatechange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statechange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatechange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statechange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

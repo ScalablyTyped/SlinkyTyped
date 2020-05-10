@@ -1,10 +1,8 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.baseui.AnonCell
 import typingsSlinky.baseui.layoutGridMod.ALIGNMENT
 import typingsSlinky.baseui.layoutGridMod.CellProps
 import typingsSlinky.baseui.layoutGridMod.Responsive
@@ -12,29 +10,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Cell
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Cell {
   @JSImport("baseui/layout-grid", "Cell")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    align: Responsive[ALIGNMENT] = null,
-    order: Responsive[Double] = null,
-    skip: Responsive[Double] = null,
-    span: Responsive[Double] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
-    if (skip != null) __obj.updateDynamic("skip")(skip.asInstanceOf[js.Any])
-    if (span != null) __obj.updateDynamic("span")(span.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def align(value: Responsive[ALIGNMENT]): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def order(value: Responsive[Double]): this.type = set("order", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overrides(value: AnonCell): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def skip(value: Responsive[Double]): this.type = set("skip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def span(value: Responsive[Double]): this.type = set("span", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = CellProps
+  
+  def withProps(p: CellProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Cell.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

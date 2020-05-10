@@ -1,38 +1,40 @@
 package typingsSlinky.tensorflowTfjsLayers.mergeSerializationMod
 
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
-import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import typingsSlinky.tensorflowTfjsLayers.topologyConfigMod.LayerConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ConcatenateLayerConfig extends LayerConfig {
-  var axis: js.UndefOr[Double] = js.undefined
+  var axis: js.UndefOr[Double] = js.native
 }
 
 object ConcatenateLayerConfig {
   @scala.inline
-  def apply(
-    axis: Int | Double = null,
-    batch_input_shape: Shape = null,
-    batch_size: Int | Double = null,
-    dtype: DataType = null,
-    input_dtype: DataType = null,
-    input_shape: Shape = null,
-    name: String = null,
-    trainable: js.UndefOr[Boolean] = js.undefined
-  ): ConcatenateLayerConfig = {
+  def apply(): ConcatenateLayerConfig = {
     val __obj = js.Dynamic.literal()
-    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
-    if (batch_input_shape != null) __obj.updateDynamic("batch_input_shape")(batch_input_shape.asInstanceOf[js.Any])
-    if (batch_size != null) __obj.updateDynamic("batch_size")(batch_size.asInstanceOf[js.Any])
-    if (dtype != null) __obj.updateDynamic("dtype")(dtype.asInstanceOf[js.Any])
-    if (input_dtype != null) __obj.updateDynamic("input_dtype")(input_dtype.asInstanceOf[js.Any])
-    if (input_shape != null) __obj.updateDynamic("input_shape")(input_shape.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(trainable)) __obj.updateDynamic("trainable")(trainable.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConcatenateLayerConfig]
   }
+  @scala.inline
+  implicit class ConcatenateLayerConfigOps[Self <: ConcatenateLayerConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAxis(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

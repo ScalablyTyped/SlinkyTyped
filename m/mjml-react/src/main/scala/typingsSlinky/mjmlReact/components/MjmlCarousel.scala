@@ -1,10 +1,7 @@
 package typingsSlinky.mjmlReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.csstype.mod.BackgroundColorProperty
 import typingsSlinky.csstype.mod.BorderProperty
 import typingsSlinky.csstype.mod.BorderRadiusProperty
@@ -17,47 +14,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MjmlCarousel
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mjmlReact.mod.MjmlCarousel] {
+object MjmlCarousel {
   @JSImport("mjml-react", "MjmlCarousel")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    align: String = null,
-    backgroundColor: BackgroundColorProperty = null,
-    borderRadius: String | Double = null,
-    cssClass: String = null,
-    iconWidth: String = null,
-    leftIcon: String = null,
-    rightIcon: String = null,
-    tbBorder: BorderProperty[String | Double] = null,
-    tbBorderRadius: BorderRadiusProperty[String | Double] = null,
-    tbHoverBorderColor: String = null,
-    tbSelectedBorderColor: String = null,
-    tbWidth: String = null,
-    thumbnails: hidden | visible = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlCarousel] = {
-    val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (borderRadius != null) __obj.updateDynamic("borderRadius")(borderRadius.asInstanceOf[js.Any])
-    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
-    if (iconWidth != null) __obj.updateDynamic("iconWidth")(iconWidth.asInstanceOf[js.Any])
-    if (leftIcon != null) __obj.updateDynamic("leftIcon")(leftIcon.asInstanceOf[js.Any])
-    if (rightIcon != null) __obj.updateDynamic("rightIcon")(rightIcon.asInstanceOf[js.Any])
-    if (tbBorder != null) __obj.updateDynamic("tbBorder")(tbBorder.asInstanceOf[js.Any])
-    if (tbBorderRadius != null) __obj.updateDynamic("tbBorderRadius")(tbBorderRadius.asInstanceOf[js.Any])
-    if (tbHoverBorderColor != null) __obj.updateDynamic("tbHoverBorderColor")(tbHoverBorderColor.asInstanceOf[js.Any])
-    if (tbSelectedBorderColor != null) __obj.updateDynamic("tbSelectedBorderColor")(tbSelectedBorderColor.asInstanceOf[js.Any])
-    if (tbWidth != null) __obj.updateDynamic("tbWidth")(tbWidth.asInstanceOf[js.Any])
-    if (thumbnails != null) __obj.updateDynamic("thumbnails")(thumbnails.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlCarousel] {
+    @scala.inline
+    def align(value: String): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundColor(value: BackgroundColorProperty): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderRadius(value: String | Double): this.type = set("borderRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cssClass(value: String): this.type = set("cssClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconWidth(value: String): this.type = set("iconWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def leftIcon(value: String): this.type = set("leftIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rightIcon(value: String): this.type = set("rightIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tbBorder(value: BorderProperty[String | Double]): this.type = set("tbBorder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tbBorderRadius(value: BorderRadiusProperty[String | Double]): this.type = set("tbBorderRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tbHoverBorderColor(value: String): this.type = set("tbHoverBorderColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tbSelectedBorderColor(value: String): this.type = set("tbSelectedBorderColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tbWidth(value: String): this.type = set("tbWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def thumbnails(value: hidden | visible): this.type = set("thumbnails", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlCarousel] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.mjmlReact.mod.MjmlCarousel](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = RequiredChildrenProps with MjmlCarouselProps with ClassNameProps
+  
+  def withProps(p: RequiredChildrenProps with MjmlCarouselProps with ClassNameProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MjmlCarousel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

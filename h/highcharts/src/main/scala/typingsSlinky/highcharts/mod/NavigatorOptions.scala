@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NavigatorOptions extends js.Object {
   /**
     * (Highstock, Gantt) Whether the navigator and scrollbar should adapt to
@@ -13,50 +14,50 @@ trait NavigatorOptions extends js.Object {
     * the navigator is set only once. On navigating, only the main chart
     * content is updated.
     */
-  var adaptToUpdatedData: js.UndefOr[Boolean] = js.undefined
+  var adaptToUpdatedData: js.UndefOr[Boolean] = js.native
   /**
     * (Highstock, Gantt) Enable or disable the navigator.
     */
-  var enabled: js.UndefOr[Boolean] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.native
   /**
     * (Highstock, Gantt) Options for the handles for dragging the zoomed area.
     */
-  var handles: js.UndefOr[NavigatorHandlesOptions] = js.undefined
+  var handles: js.UndefOr[NavigatorHandlesOptions] = js.native
   /**
     * (Highstock, Gantt) The height of the navigator.
     */
-  var height: js.UndefOr[Double] = js.undefined
+  var height: js.UndefOr[Double] = js.native
   /**
     * (Highstock, Gantt) The distance from the nearest element, the X axis or X
     * axis labels.
     */
-  var margin: js.UndefOr[Double] = js.undefined
+  var margin: js.UndefOr[Double] = js.native
   /**
     * (Highstock, Gantt) The color of the mask covering the areas of the
     * navigator series that are currently not visible in the main series. The
     * default color is bluish with an opacity of 0.3 to see the series below.
     */
-  var maskFill: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var maskFill: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highstock, Gantt) Whether the mask should be inside the range marking
     * the zoomed range, or outside. In Highstock 1.x it was always `false`.
     */
-  var maskInside: js.UndefOr[Boolean] = js.undefined
+  var maskInside: js.UndefOr[Boolean] = js.native
   /**
     * (Highstock, Gantt) When the chart is inverted, whether to draw the
     * navigator on the opposite side.
     */
-  var opposite: js.UndefOr[Boolean] = js.undefined
+  var opposite: js.UndefOr[Boolean] = js.native
   /**
     * (Highstock, Gantt) The color of the line marking the currently zoomed
     * area in the navigator.
     */
-  var outlineColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var outlineColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highstock, Gantt) The width of the line marking the currently zoomed
     * area in the navigator.
     */
-  var outlineWidth: js.UndefOr[Double] = js.undefined
+  var outlineWidth: js.UndefOr[Double] = js.native
   /**
     * (Highstock, Gantt) Options for the navigator series. Available options
     * are the same as any series, documented at plotOptions and series.
@@ -70,55 +71,194 @@ trait NavigatorOptions extends js.Object {
     */
   var series: js.UndefOr[
     NavigatorSeriesOptions | SeriesOptionsType | (js.Array[NavigatorSeriesOptions | SeriesOptionsType])
-  ] = js.undefined
+  ] = js.native
   /**
     * (Highstock, Gantt) Options for the navigator X axis. Default series
     * options for the navigator xAxis are:
     *
     *  (see online documentation for example)
     */
-  var xAxis: js.UndefOr[NavigatorXAxisOptions | js.Array[NavigatorXAxisOptions]] = js.undefined
+  var xAxis: js.UndefOr[NavigatorXAxisOptions | js.Array[NavigatorXAxisOptions]] = js.native
   /**
     * (Highstock, Gantt) Options for the navigator Y axis. Default series
     * options for the navigator yAxis are:
     *
     *  (see online documentation for example)
     */
-  var yAxis: js.UndefOr[NavigatorYAxisOptions | js.Array[NavigatorYAxisOptions]] = js.undefined
+  var yAxis: js.UndefOr[NavigatorYAxisOptions | js.Array[NavigatorYAxisOptions]] = js.native
 }
 
 object NavigatorOptions {
   @scala.inline
-  def apply(
-    adaptToUpdatedData: js.UndefOr[Boolean] = js.undefined,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    handles: NavigatorHandlesOptions = null,
-    height: Int | Double = null,
-    margin: Int | Double = null,
-    maskFill: ColorString | GradientColorObject | PatternObject = null,
-    maskInside: js.UndefOr[Boolean] = js.undefined,
-    opposite: js.UndefOr[Boolean] = js.undefined,
-    outlineColor: ColorString | GradientColorObject | PatternObject = null,
-    outlineWidth: Int | Double = null,
-    series: NavigatorSeriesOptions | SeriesOptionsType | (js.Array[NavigatorSeriesOptions | SeriesOptionsType]) = null,
-    xAxis: NavigatorXAxisOptions | js.Array[NavigatorXAxisOptions] = null,
-    yAxis: NavigatorYAxisOptions | js.Array[NavigatorYAxisOptions] = null
-  ): NavigatorOptions = {
+  def apply(): NavigatorOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(adaptToUpdatedData)) __obj.updateDynamic("adaptToUpdatedData")(adaptToUpdatedData.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (handles != null) __obj.updateDynamic("handles")(handles.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (maskFill != null) __obj.updateDynamic("maskFill")(maskFill.asInstanceOf[js.Any])
-    if (!js.isUndefined(maskInside)) __obj.updateDynamic("maskInside")(maskInside.asInstanceOf[js.Any])
-    if (!js.isUndefined(opposite)) __obj.updateDynamic("opposite")(opposite.asInstanceOf[js.Any])
-    if (outlineColor != null) __obj.updateDynamic("outlineColor")(outlineColor.asInstanceOf[js.Any])
-    if (outlineWidth != null) __obj.updateDynamic("outlineWidth")(outlineWidth.asInstanceOf[js.Any])
-    if (series != null) __obj.updateDynamic("series")(series.asInstanceOf[js.Any])
-    if (xAxis != null) __obj.updateDynamic("xAxis")(xAxis.asInstanceOf[js.Any])
-    if (yAxis != null) __obj.updateDynamic("yAxis")(yAxis.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigatorOptions]
   }
+  @scala.inline
+  implicit class NavigatorOptionsOps[Self <: NavigatorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdaptToUpdatedData(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adaptToUpdatedData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdaptToUpdatedData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adaptToUpdatedData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandles(value: NavigatorHandlesOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHandles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskFill(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskFill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskFill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskInside(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskInside")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskInside: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskInside")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpposite(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opposite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpposite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opposite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutlineColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutlineColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutlineWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutlineWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeries(
+      value: NavigatorSeriesOptions | SeriesOptionsType | (js.Array[NavigatorSeriesOptions | SeriesOptionsType])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXAxis(value: NavigatorXAxisOptions | js.Array[NavigatorXAxisOptions]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYAxis(value: NavigatorYAxisOptions | js.Array[NavigatorYAxisOptions]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxis")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

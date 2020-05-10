@@ -1,11 +1,7 @@
 package typingsSlinky.samchon
 
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Type
 import typingsSlinky.ecol.hashMapCollectionMod.HashMapCollection
 import typingsSlinky.samchon.clientMod.Client
-import typingsSlinky.samchon.invokeMod.Invoke
 import typingsSlinky.samchon.iprotocolMod.IProtocol
 import typingsSlinky.samchon.serviceServerMod.Server
 import typingsSlinky.samchon.webClientDriverMod.WebClientDriver
@@ -77,16 +73,6 @@ object userMod extends js.Object {
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     /* protected */ override def _Insert_by_range[InputIterator /* <: IForwardIterator[IPair[Double, Client], InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
-    /* InferMemberOverrides */
-    override def addEventListener(
-      `type`: Type,
-      listener: Listener[
-          Entry[Double, Client], 
-          HashMap[Double, Client], 
-          Iterator[Double, Client], 
-          ReverseIterator[Double, Client]
-        ]
-    ): Unit = js.native
     /**
       * Range Assigner.
       *
@@ -95,19 +81,6 @@ object userMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[IPair[Double, Client], InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
-    /**
-      * Iterator to the first element.
-      *
-      * @return Iterator to the first element.
-      */
-    /* InferMemberOverrides */
-    override def begin(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[
-        Entry[Double, Client], 
-        HashMap[Double, Client], 
-        Iterator[Double, Client], 
-        ReverseIterator[Double, Client], 
-        IPair[Double, Client]
-      ] = js.native
     /**
       * @inheritDoc
       */
@@ -161,15 +134,6 @@ object userMod extends js.Object {
       */
     /* protected */ def destructor(): Unit = js.native
     /* InferMemberOverrides */
-    override def dispatchEvent(
-      event: CollectionEvent[
-          Entry[Double, Client], 
-          HashMap[Double, Client], 
-          Iterator[Double, Client], 
-          ReverseIterator[Double, Client]
-        ]
-    ): Unit = js.native
-    /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def emplace(key: Double, `val`: Client): InsertRet[
         Double, 
@@ -182,25 +146,6 @@ object userMod extends js.Object {
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def emplace_hint(hint: Iterator[Double, Client], key: Double, `val`: Client): Iterator[Double, Client] = js.native
-    /**
-      * Test whether container is empty.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def empty(): Boolean = js.native
-    /**
-      * Iterator to the end.
-      *
-      * @return Iterator to the end.
-      */
-    /* InferMemberOverrides */
-    override def end(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[
-        Entry[Double, Client], 
-        HashMap[Double, Client], 
-        Iterator[Double, Client], 
-        ReverseIterator[Double, Client], 
-        IPair[Double, Client]
-      ] = js.native
     /**
       * Erase elements in range.
       *
@@ -293,8 +238,6 @@ object userMod extends js.Object {
     /* InferMemberOverrides */
     override def has(key: Double): Boolean = js.native
     /* InferMemberOverrides */
-    override def hasEventListener(`type`: Type): Boolean = js.native
-    /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def insert(hint: Iterator[Double, Client], pair: IPair[Double, Client]): Iterator[Double, Client] = js.native
     /* InferMemberOverrides */
@@ -349,56 +292,6 @@ object userMod extends js.Object {
     /* InferMemberOverrides */
     override def merge(source: HashMap[Double, Client]): Unit = js.native
     /**
-      * Insert items at the end.
-      *
-      * @param items Items to insert.
-      * @return Number of elements in the container after insertion.
-      */
-    /* InferMemberOverrides */
-    override def push(items: (IPair[Double, Client])*): Double = js.native
-    /**
-      * Reverse iterator to the first element in reverse.
-      *
-      * @return Reverse iterator to the first.
-      */
-    /* InferMemberOverrides */
-    override def rbegin(): ReverseIterator[Double, Client] = js.native
-    /* InferMemberOverrides */
-    override def removeEventListener(
-      `type`: Type,
-      listener: Listener[
-          Entry[Double, Client], 
-          HashMap[Double, Client], 
-          Iterator[Double, Client], 
-          ReverseIterator[Double, Client]
-        ]
-    ): Unit = js.native
-    /**
-      * Reverse iterator to the reverse end.
-      *
-      * @return Reverse iterator to the end.
-      */
-    /* InferMemberOverrides */
-    override def rend(): ReverseIterator[Double, Client] = js.native
-    /**
-      * Sending message.
-      *
-      * Sends message to related system or shifts the responsibility to chain.
-      *
-      * @param invoke Invoke message to send
-      */
-    /* CompleteClass */
-    override def replyData(invoke: Invoke): Unit = js.native
-    /**
-      * Handling replied message.
-      *
-      * Handles replied message or shifts the responsibility to chain.
-      *
-      * @param invoke An {@link Invoke} message has received.
-      */
-    /* CompleteClass */
-    override def sendData(invoke: Invoke): Unit = js.native
-    /**
       * Set a value with key.
       *
       * @param key Key to be mapped or search for.
@@ -425,11 +318,6 @@ object userMod extends js.Object {
       * @param authority To be authority.
       */
     def setAccount(id: String, authority: Double): Unit = js.native
-    /**
-      * Number of elements in the container.
-      */
-    /* InferMemberOverrides */
-    override def size(): Double = js.native
     /**
       * Swap elements.
       *

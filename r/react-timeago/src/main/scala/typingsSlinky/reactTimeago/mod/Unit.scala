@@ -17,20 +17,18 @@ trait Unit extends js.Object
 
 object Unit {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def day: typingsSlinky.reactTimeago.reactTimeagoStrings.day = "day".asInstanceOf[typingsSlinky.reactTimeago.reactTimeagoStrings.day]
   @scala.inline
-  def day: typingsSlinky.reactTimeago.reactTimeagoStrings.day = this.cast("day")
+  def hour: typingsSlinky.reactTimeago.reactTimeagoStrings.hour = "hour".asInstanceOf[typingsSlinky.reactTimeago.reactTimeagoStrings.hour]
   @scala.inline
-  def hour: typingsSlinky.reactTimeago.reactTimeagoStrings.hour = this.cast("hour")
+  def minute: typingsSlinky.reactTimeago.reactTimeagoStrings.minute = "minute".asInstanceOf[typingsSlinky.reactTimeago.reactTimeagoStrings.minute]
   @scala.inline
-  def minute: typingsSlinky.reactTimeago.reactTimeagoStrings.minute = this.cast("minute")
+  def month: typingsSlinky.reactTimeago.reactTimeagoStrings.month = "month".asInstanceOf[typingsSlinky.reactTimeago.reactTimeagoStrings.month]
   @scala.inline
-  def month: typingsSlinky.reactTimeago.reactTimeagoStrings.month = this.cast("month")
+  def second: typingsSlinky.reactTimeago.reactTimeagoStrings.second = "second".asInstanceOf[typingsSlinky.reactTimeago.reactTimeagoStrings.second]
   @scala.inline
-  def second: typingsSlinky.reactTimeago.reactTimeagoStrings.second = this.cast("second")
+  def week: typingsSlinky.reactTimeago.reactTimeagoStrings.week = "week".asInstanceOf[typingsSlinky.reactTimeago.reactTimeagoStrings.week]
   @scala.inline
-  def week: typingsSlinky.reactTimeago.reactTimeagoStrings.week = this.cast("week")
-  @scala.inline
-  def year: typingsSlinky.reactTimeago.reactTimeagoStrings.year = this.cast("year")
+  def year: typingsSlinky.reactTimeago.reactTimeagoStrings.year = "year".asInstanceOf[typingsSlinky.reactTimeago.reactTimeagoStrings.year]
 }
 

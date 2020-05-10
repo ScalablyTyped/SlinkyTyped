@@ -5,18 +5,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDropTargetSession extends js.Object {
-  var dropTarget: js.UndefOr[Boolean] = js.undefined
-  var session: js.UndefOr[ClientSession] = js.undefined
+  var dropTarget: js.UndefOr[Boolean] = js.native
+  var session: js.UndefOr[ClientSession] = js.native
 }
 
 object AnonDropTargetSession {
   @scala.inline
-  def apply(dropTarget: js.UndefOr[Boolean] = js.undefined, session: ClientSession = null): AnonDropTargetSession = {
+  def apply(): AnonDropTargetSession = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(dropTarget)) __obj.updateDynamic("dropTarget")(dropTarget.asInstanceOf[js.Any])
-    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDropTargetSession]
   }
+  @scala.inline
+  implicit class AnonDropTargetSessionOps[Self <: AnonDropTargetSession] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDropTarget(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDropTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropTarget")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSession(value: ClientSession): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSession: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

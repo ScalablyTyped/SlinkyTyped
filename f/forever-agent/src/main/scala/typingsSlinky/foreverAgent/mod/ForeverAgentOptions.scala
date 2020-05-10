@@ -5,28 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ForeverAgentOptions extends AgentOptions {
-  var minSockets: js.UndefOr[Double] = js.undefined
+  var minSockets: js.UndefOr[Double] = js.native
 }
 
 object ForeverAgentOptions {
   @scala.inline
-  def apply(
-    keepAlive: js.UndefOr[Boolean] = js.undefined,
-    keepAliveMsecs: Int | Double = null,
-    maxFreeSockets: Int | Double = null,
-    maxSockets: Int | Double = null,
-    minSockets: Int | Double = null,
-    timeout: Int | Double = null
-  ): ForeverAgentOptions = {
+  def apply(): ForeverAgentOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(keepAlive)) __obj.updateDynamic("keepAlive")(keepAlive.asInstanceOf[js.Any])
-    if (keepAliveMsecs != null) __obj.updateDynamic("keepAliveMsecs")(keepAliveMsecs.asInstanceOf[js.Any])
-    if (maxFreeSockets != null) __obj.updateDynamic("maxFreeSockets")(maxFreeSockets.asInstanceOf[js.Any])
-    if (maxSockets != null) __obj.updateDynamic("maxSockets")(maxSockets.asInstanceOf[js.Any])
-    if (minSockets != null) __obj.updateDynamic("minSockets")(minSockets.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[ForeverAgentOptions]
   }
+  @scala.inline
+  implicit class ForeverAgentOptionsOps[Self <: ForeverAgentOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMinSockets(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSockets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinSockets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSockets")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

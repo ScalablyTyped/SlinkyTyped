@@ -9,7 +9,7 @@ package object esMasonryMod {
     /* props */ typingsSlinky.reactVirtualized.esMasonryMod.MasonryCellProps, 
     slinky.core.TagMod[scala.Any]
   ]
-  type OnCellsRenderedCallback = js.Function1[/* params */ typingsSlinky.reactVirtualized.AnonStartIndex, scala.Unit]
+  type OnCellsRenderedCallback = js.Function1[/* params */ typingsSlinky.reactVirtualized.mod.IndexRange, scala.Unit]
   type OnScrollCallback = js.Function1[/* params */ typingsSlinky.reactVirtualized.AnonClientHeight, scala.Unit]
   type Positioner = (js.Function1[/* index */ scala.Double, typingsSlinky.reactVirtualized.esMasonryMod.Position]) with typingsSlinky.reactVirtualized.AnonReset
   type emptyObject = js.Object

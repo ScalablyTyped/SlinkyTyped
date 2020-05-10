@@ -17,20 +17,18 @@ trait ProjectType extends js.Object
 
 object ProjectType {
   @scala.inline
-  def angular: typingsSlinky.ionic.ionicStrings.angular = this.cast("angular")
+  def angular: typingsSlinky.ionic.ionicStrings.angular = "angular".asInstanceOf[typingsSlinky.ionic.ionicStrings.angular]
   @scala.inline
-  def bare: typingsSlinky.ionic.ionicStrings.bare = this.cast("bare")
+  def bare: typingsSlinky.ionic.ionicStrings.bare = "bare".asInstanceOf[typingsSlinky.ionic.ionicStrings.bare]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def custom: typingsSlinky.ionic.ionicStrings.custom = "custom".asInstanceOf[typingsSlinky.ionic.ionicStrings.custom]
   @scala.inline
-  def custom: typingsSlinky.ionic.ionicStrings.custom = this.cast("custom")
+  def `ionic-angular`: typingsSlinky.ionic.ionicStrings.`ionic-angular` = "ionic-angular".asInstanceOf[typingsSlinky.ionic.ionicStrings.`ionic-angular`]
   @scala.inline
-  def `ionic-angular`: typingsSlinky.ionic.ionicStrings.`ionic-angular` = this.cast("ionic-angular")
+  def ionic1: typingsSlinky.ionic.ionicStrings.ionic1 = "ionic1".asInstanceOf[typingsSlinky.ionic.ionicStrings.ionic1]
   @scala.inline
-  def ionic1: typingsSlinky.ionic.ionicStrings.ionic1 = this.cast("ionic1")
+  def react: typingsSlinky.ionic.ionicStrings.react = "react".asInstanceOf[typingsSlinky.ionic.ionicStrings.react]
   @scala.inline
-  def react: typingsSlinky.ionic.ionicStrings.react = this.cast("react")
-  @scala.inline
-  def vue: typingsSlinky.ionic.ionicStrings.vue = this.cast("vue")
+  def vue: typingsSlinky.ionic.ionicStrings.vue = "vue".asInstanceOf[typingsSlinky.ionic.ionicStrings.vue]
 }
 

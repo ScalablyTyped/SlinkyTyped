@@ -16,8 +16,21 @@ object GetHealthCheckStatusResponse {
   @scala.inline
   def apply(HealthCheckObservations: HealthCheckObservations): GetHealthCheckStatusResponse = {
     val __obj = js.Dynamic.literal(HealthCheckObservations = HealthCheckObservations.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetHealthCheckStatusResponse]
   }
+  @scala.inline
+  implicit class GetHealthCheckStatusResponseOps[Self <: GetHealthCheckStatusResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHealthCheckObservations(value: HealthCheckObservations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckObservations")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

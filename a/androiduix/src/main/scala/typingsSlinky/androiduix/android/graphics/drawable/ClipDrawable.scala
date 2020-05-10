@@ -7,7 +7,6 @@ import typingsSlinky.androiduix.android.graphics.Rect
 import typingsSlinky.androiduix.android.graphics.drawable.ClipDrawable.ClipState
 import typingsSlinky.androiduix.android.graphics.drawable.Drawable.Callback
 import typingsSlinky.androiduix.android.graphics.drawable.Drawable.ConstantState
-import typingsSlinky.androiduix.java.lang.Runnable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -57,8 +56,6 @@ class ClipDrawable ()
   override def getState(): js.Array[Double] = js.native
   /* InferMemberOverrides */
   override def inflate(r: Resources, parser: HTMLElement): Unit = js.native
-  /* CompleteClass */
-  override def invalidateDrawable(who: Drawable): Unit = js.native
   /* InferMemberOverrides */
   override def invalidateSelf(): Unit = js.native
   /* InferMemberOverrides */
@@ -79,8 +76,6 @@ class ClipDrawable ()
   /* protected */ override def onLevelChange(level: Double): Boolean = js.native
   /* InferMemberOverrides */
   /* protected */ override def onStateChange(state: js.Array[Double]): Boolean = js.native
-  /* CompleteClass */
-  override def scheduleDrawable(who: Drawable, what: Runnable, when: Double): Unit = js.native
   /* InferMemberOverrides */
   override def scheduleSelf(what: js.Any, when: js.Any): Unit = js.native
   /* InferMemberOverrides */
@@ -103,8 +98,6 @@ class ClipDrawable ()
   override def setState(stateSet: js.Array[Double]): Boolean = js.native
   /* InferMemberOverrides */
   override def setVisible(visible: Boolean, restart: Boolean): Boolean = js.native
-  /* CompleteClass */
-  override def unscheduleDrawable(who: Drawable, what: Runnable): Unit = js.native
   /* InferMemberOverrides */
   override def unscheduleSelf(what: js.Any): Unit = js.native
 }
@@ -122,8 +115,6 @@ object ClipDrawable extends js.Object {
     var mGravity: Double = js.native
     var mOrientation: Double = js.native
     def canConstantState(): Boolean = js.native
-    /* CompleteClass */
-    override def newDrawable(): Drawable = js.native
   }
   
   var HORIZONTAL: Double = js.native

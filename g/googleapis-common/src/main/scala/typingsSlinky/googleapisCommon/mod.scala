@@ -8,7 +8,6 @@ import typingsSlinky.googleapisCommon.apiMod.BodyResponseCallback
 import typingsSlinky.googleapisCommon.apiMod.GoogleConfigurable
 import typingsSlinky.googleapisCommon.apiMod.ServiceOptions
 import typingsSlinky.googleapisCommon.discoveryMod.DiscoveryOptions
-import typingsSlinky.googleapisCommon.googleapisCommonStrings.httpsColonSlashSlashoauth2DotgoogleapisDotcomSlashtokeninfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -94,7 +93,7 @@ object mod extends js.Object {
       * The base endpoint for token retrieval.
       */
     val GOOGLE_OAUTH2_TOKEN_URL_ : js.Any = js.native
-    val GOOGLE_TOKEN_INFO_URL: httpsColonSlashSlashoauth2DotgoogleapisDotcomSlashtokeninfo = js.native
+    val GOOGLE_TOKEN_INFO_URL: /* "https://oauth2.googleapis.com/tokeninfo" */ String = js.native
     /**
       * The allowed oauth token issuers.
       */

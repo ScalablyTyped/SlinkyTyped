@@ -6,47 +6,111 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.tabulatorTables.Tabulator.DownloadPDF because var conflicts: documentProcessing. Inlined orientation, title, rowGroupStyles, rowCalcStyles, jsPDF, autoTable */ trait DownloadOptions
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.tabulatorTables.Tabulator.DownloadPDF because var conflicts: documentProcessing. Inlined orientation, title, rowGroupStyles, rowCalcStyles, jsPDF, autoTable */ @js.native
+trait DownloadOptions
   extends DownloadCSV
      with DownloadXLXS
      with DownloadHTML {
-  var autoTable: js.UndefOr[js.Object | (js.Function1[/* doc */ js.Any, _])] = js.undefined
-  var jsPDF: js.UndefOr[js.Any] = js.undefined
-  var orientation: js.UndefOr[portrait | landscape] = js.undefined
-  var rowCalcStyles: js.UndefOr[js.Any] = js.undefined
-  var rowGroupStyles: js.UndefOr[js.Any] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
+  var autoTable: js.UndefOr[js.Object | (js.Function1[/* doc */ js.Any, _])] = js.native
+  var jsPDF: js.UndefOr[js.Any] = js.native
+  var orientation: js.UndefOr[portrait | landscape] = js.native
+  var rowCalcStyles: js.UndefOr[js.Any] = js.native
+  var rowGroupStyles: js.UndefOr[js.Any] = js.native
+  var title: js.UndefOr[String] = js.native
 }
 
 object DownloadOptions {
   @scala.inline
-  def apply(
-    autoTable: js.Object | (js.Function1[/* doc */ js.Any, _]) = null,
-    bom: js.UndefOr[Boolean] = js.undefined,
-    delimiter: String = null,
-    documentProcessing: /* input */ js.Any => _ = null,
-    jsPDF: js.Any = null,
-    orientation: portrait | landscape = null,
-    rowCalcStyles: js.Any = null,
-    rowGroupStyles: js.Any = null,
-    sheetName: String = null,
-    style: js.UndefOr[Boolean] = js.undefined,
-    title: String = null
-  ): DownloadOptions = {
+  def apply(): DownloadOptions = {
     val __obj = js.Dynamic.literal()
-    if (autoTable != null) __obj.updateDynamic("autoTable")(autoTable.asInstanceOf[js.Any])
-    if (!js.isUndefined(bom)) __obj.updateDynamic("bom")(bom.asInstanceOf[js.Any])
-    if (delimiter != null) __obj.updateDynamic("delimiter")(delimiter.asInstanceOf[js.Any])
-    if (documentProcessing != null) __obj.updateDynamic("documentProcessing")(js.Any.fromFunction1(documentProcessing))
-    if (jsPDF != null) __obj.updateDynamic("jsPDF")(jsPDF.asInstanceOf[js.Any])
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (rowCalcStyles != null) __obj.updateDynamic("rowCalcStyles")(rowCalcStyles.asInstanceOf[js.Any])
-    if (rowGroupStyles != null) __obj.updateDynamic("rowGroupStyles")(rowGroupStyles.asInstanceOf[js.Any])
-    if (sheetName != null) __obj.updateDynamic("sheetName")(sheetName.asInstanceOf[js.Any])
-    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[DownloadOptions]
   }
+  @scala.inline
+  implicit class DownloadOptionsOps[Self <: DownloadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoTableFunction1(value: /* doc */ js.Any => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoTable")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAutoTable(value: js.Object | (js.Function1[/* doc */ js.Any, _])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoTable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJsPDF(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsPDF")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJsPDF: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsPDF")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrientation(value: portrait | landscape): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrientation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowCalcStyles(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCalcStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowCalcStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCalcStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowGroupStyles(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowGroupStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowGroupStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowGroupStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

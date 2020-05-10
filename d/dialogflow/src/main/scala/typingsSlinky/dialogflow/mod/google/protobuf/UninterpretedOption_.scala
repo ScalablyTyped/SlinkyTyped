@@ -35,7 +35,7 @@ class UninterpretedOption_ () extends IUninterpretedOption {
   var positiveIntValue_UninterpretedOption_ : Double | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Long */ js.Any) = js.native
   /** UninterpretedOption stringValue. */
   @JSName("stringValue")
-  var stringValue_UninterpretedOption_ : scala.scalajs.js.typedarray.Uint8Array = js.native
+  var stringValue_UninterpretedOption_ : js.typedarray.Uint8Array = js.native
   /**
     * Converts this UninterpretedOption to JSON.
     * @returns JSON object

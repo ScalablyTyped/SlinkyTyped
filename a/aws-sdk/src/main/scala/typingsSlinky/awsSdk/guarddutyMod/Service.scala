@@ -50,30 +50,137 @@ trait Service extends js.Object {
 
 object Service {
   @scala.inline
-  def apply(
-    Action: Action = null,
-    Archived: js.UndefOr[scala.Boolean] = js.undefined,
-    Count: Int | scala.Double = null,
-    DetectorId: DetectorId = null,
-    EventFirstSeen: String = null,
-    EventLastSeen: String = null,
-    Evidence: Evidence = null,
-    ResourceRole: String = null,
-    ServiceName: String = null,
-    UserFeedback: String = null
-  ): Service = {
+  def apply(): Service = {
     val __obj = js.Dynamic.literal()
-    if (Action != null) __obj.updateDynamic("Action")(Action.asInstanceOf[js.Any])
-    if (!js.isUndefined(Archived)) __obj.updateDynamic("Archived")(Archived.asInstanceOf[js.Any])
-    if (Count != null) __obj.updateDynamic("Count")(Count.asInstanceOf[js.Any])
-    if (DetectorId != null) __obj.updateDynamic("DetectorId")(DetectorId.asInstanceOf[js.Any])
-    if (EventFirstSeen != null) __obj.updateDynamic("EventFirstSeen")(EventFirstSeen.asInstanceOf[js.Any])
-    if (EventLastSeen != null) __obj.updateDynamic("EventLastSeen")(EventLastSeen.asInstanceOf[js.Any])
-    if (Evidence != null) __obj.updateDynamic("Evidence")(Evidence.asInstanceOf[js.Any])
-    if (ResourceRole != null) __obj.updateDynamic("ResourceRole")(ResourceRole.asInstanceOf[js.Any])
-    if (ServiceName != null) __obj.updateDynamic("ServiceName")(ServiceName.asInstanceOf[js.Any])
-    if (UserFeedback != null) __obj.updateDynamic("UserFeedback")(UserFeedback.asInstanceOf[js.Any])
     __obj.asInstanceOf[Service]
   }
+  @scala.inline
+  implicit class ServiceOps[Self <: Service] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: Action): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArchived(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Archived")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArchived: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Archived")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDetectorId(value: DetectorId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectorId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetectorId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectorId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventFirstSeen(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventFirstSeen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventFirstSeen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventFirstSeen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventLastSeen(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventLastSeen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventLastSeen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventLastSeen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvidence(value: Evidence): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Evidence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvidence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Evidence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceRole(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceRole")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserFeedback(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserFeedback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserFeedback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserFeedback")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

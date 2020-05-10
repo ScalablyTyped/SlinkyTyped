@@ -14,10 +14,29 @@ trait CreateCapacityProviderResponse extends js.Object {
 
 object CreateCapacityProviderResponse {
   @scala.inline
-  def apply(capacityProvider: CapacityProvider = null): CreateCapacityProviderResponse = {
+  def apply(): CreateCapacityProviderResponse = {
     val __obj = js.Dynamic.literal()
-    if (capacityProvider != null) __obj.updateDynamic("capacityProvider")(capacityProvider.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateCapacityProviderResponse]
   }
+  @scala.inline
+  implicit class CreateCapacityProviderResponseOps[Self <: CreateCapacityProviderResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCapacityProvider(value: CapacityProvider): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capacityProvider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapacityProvider: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capacityProvider")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

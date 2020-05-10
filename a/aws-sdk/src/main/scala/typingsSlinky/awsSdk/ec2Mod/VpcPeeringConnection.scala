@@ -34,22 +34,89 @@ trait VpcPeeringConnection extends js.Object {
 
 object VpcPeeringConnection {
   @scala.inline
-  def apply(
-    AccepterVpcInfo: VpcPeeringConnectionVpcInfo = null,
-    ExpirationTime: js.Date = null,
-    RequesterVpcInfo: VpcPeeringConnectionVpcInfo = null,
-    Status: VpcPeeringConnectionStateReason = null,
-    Tags: TagList = null,
-    VpcPeeringConnectionId: String = null
-  ): VpcPeeringConnection = {
+  def apply(): VpcPeeringConnection = {
     val __obj = js.Dynamic.literal()
-    if (AccepterVpcInfo != null) __obj.updateDynamic("AccepterVpcInfo")(AccepterVpcInfo.asInstanceOf[js.Any])
-    if (ExpirationTime != null) __obj.updateDynamic("ExpirationTime")(ExpirationTime.asInstanceOf[js.Any])
-    if (RequesterVpcInfo != null) __obj.updateDynamic("RequesterVpcInfo")(RequesterVpcInfo.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (VpcPeeringConnectionId != null) __obj.updateDynamic("VpcPeeringConnectionId")(VpcPeeringConnectionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpcPeeringConnection]
   }
+  @scala.inline
+  implicit class VpcPeeringConnectionOps[Self <: VpcPeeringConnection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccepterVpcInfo(value: VpcPeeringConnectionVpcInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccepterVpcInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccepterVpcInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccepterVpcInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpirationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpirationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequesterVpcInfo(value: VpcPeeringConnectionVpcInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterVpcInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequesterVpcInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterVpcInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: VpcPeeringConnectionStateReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcPeeringConnectionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcPeeringConnectionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcPeeringConnectionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcPeeringConnectionId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

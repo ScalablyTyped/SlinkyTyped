@@ -5,39 +5,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GroupOptions extends js.Object {
-  var clip: js.UndefOr[Path] = js.undefined
-  var cursor: js.UndefOr[String] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var opacity: js.UndefOr[Double] = js.undefined
-  var pdf: js.UndefOr[PDFOptions] = js.undefined
-  var tooltip: js.UndefOr[TooltipOptions] = js.undefined
-  var transform: js.UndefOr[Transformation] = js.undefined
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var clip: js.UndefOr[Path] = js.native
+  var cursor: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.native
+  var opacity: js.UndefOr[Double] = js.native
+  var pdf: js.UndefOr[PDFOptions] = js.native
+  var tooltip: js.UndefOr[TooltipOptions] = js.native
+  var transform: js.UndefOr[Transformation] = js.native
+  var visible: js.UndefOr[Boolean] = js.native
 }
 
 object GroupOptions {
   @scala.inline
-  def apply(
-    clip: Path = null,
-    cursor: String = null,
-    name: String = null,
-    opacity: Int | Double = null,
-    pdf: PDFOptions = null,
-    tooltip: TooltipOptions = null,
-    transform: Transformation = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): GroupOptions = {
+  def apply(): GroupOptions = {
     val __obj = js.Dynamic.literal()
-    if (clip != null) __obj.updateDynamic("clip")(clip.asInstanceOf[js.Any])
-    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (pdf != null) __obj.updateDynamic("pdf")(pdf.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroupOptions]
   }
+  @scala.inline
+  implicit class GroupOptionsOps[Self <: GroupOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClip(value: Path): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCursor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCursor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPdf(value: PDFOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pdf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPdf: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pdf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: TooltipOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransform(value: Transformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

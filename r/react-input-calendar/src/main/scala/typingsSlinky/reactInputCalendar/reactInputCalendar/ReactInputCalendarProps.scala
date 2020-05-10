@@ -6,50 +6,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReactInputCalendarProps extends js.Object {
   /**
     * Define state when date picker would close once the user has clicked on a date.
     */
-  var closeOnSelect: js.UndefOr[Boolean] = js.undefined
+  var closeOnSelect: js.UndefOr[Boolean] = js.native
   /**
     * Format of date for the onChange event. Default on the date format (ISO 8601) to ease the save of data.
     * Allowed Keys: All formats supported by moment.js
     * @default 'MM-DD-YYYY'
     */
-  var computableFormat: js.UndefOr[String] = js.undefined
+  var computableFormat: js.UndefOr[String] = js.native
   /**
     * Set initial date value
     * @default current date
     */
-  var date: js.UndefOr[String | js.Date] = js.undefined
+  var date: js.UndefOr[String | js.Date] = js.native
   /**
     * If true, the input field gets disabled and the icon next to it disappears.
     */
-  var disabled: js.UndefOr[Boolean] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.native
   /**
     * Format of date, which display in input and set in date property.
     * Allowed Keys: All formats supported by moment.js
     * @default 'MM-DD-YYYY'
     */
-  var format: js.UndefOr[String] = js.undefined
+  var format: js.UndefOr[String] = js.native
   /**
     * Define the class name of the input field where the date picker represents its value.
     */
-  var inputFieldClass: js.UndefOr[String] = js.undefined
+  var inputFieldClass: js.UndefOr[String] = js.native
   /**
     * Id that should be applied to the input field. Useful when using it with a label element.
     */
-  var inputFieldId: js.UndefOr[String] = js.undefined
+  var inputFieldId: js.UndefOr[String] = js.native
   /**
     * Set the selectable maximum date
     * @default null
     */
-  var maxDate: js.UndefOr[String | js.Date] = js.undefined
+  var maxDate: js.UndefOr[String | js.Date] = js.native
   /**
     * Set the selectable minimum date
     * @default null
     */
-  var minDate: js.UndefOr[String | js.Date] = js.undefined
+  var minDate: js.UndefOr[String | js.Date] = js.native
   /**
     * Set minimal view. Values:
     * 0 - days
@@ -57,7 +58,7 @@ trait ReactInputCalendarProps extends js.Object {
     * 2 - years.
     * @default 0 (DaysView)
     */
-  var minView: js.UndefOr[Double] = js.undefined
+  var minView: js.UndefOr[Double] = js.native
   /**
     * Set a function that will be triggered the when input field is blurred. It will return the event and the date in the props.computableFormat format.
     */
@@ -67,61 +68,238 @@ trait ReactInputCalendarProps extends js.Object {
       /* computableDate */ String, 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * Set a function that will be triggered whenever there is a change in the selected date. It will return the date in the props.computableFormat format.
     */
-  var onChange: js.UndefOr[js.Function1[/* computableDate */ String, Unit]] = js.undefined
+  var onChange: js.UndefOr[js.Function1[/* computableDate */ String, Unit]] = js.native
   /**
     * Set a function that will be triggered when the input field is focused.
     */
-  var onFocus: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, ReactInputCalendar], Unit]] = js.undefined
+  var onFocus: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, ReactInputCalendar], Unit]] = js.native
   /**
     * Setting this value to true makes the calendar widget open when the iput field is focused.
     */
-  var openOnInputFocus: js.UndefOr[Boolean] = js.undefined
+  var openOnInputFocus: js.UndefOr[Boolean] = js.native
   /**
     * Value to show in the input text box if no date is set.
     */
-  var placeholder: js.UndefOr[String] = js.undefined
+  var placeholder: js.UndefOr[String] = js.native
 }
 
 object ReactInputCalendarProps {
   @scala.inline
-  def apply(
-    closeOnSelect: js.UndefOr[Boolean] = js.undefined,
-    computableFormat: String = null,
-    date: String | js.Date = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    format: String = null,
-    inputFieldClass: String = null,
-    inputFieldId: String = null,
-    maxDate: String | js.Date = null,
-    minDate: String | js.Date = null,
-    minView: Int | Double = null,
-    onBlur: (/* event */ SyntheticEvent[Event_, ReactInputCalendar], /* computableDate */ String) => Unit = null,
-    onChange: /* computableDate */ String => Unit = null,
-    onFocus: /* event */ SyntheticEvent[Event_, ReactInputCalendar] => Unit = null,
-    openOnInputFocus: js.UndefOr[Boolean] = js.undefined,
-    placeholder: String = null
-  ): ReactInputCalendarProps = {
+  def apply(): ReactInputCalendarProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(closeOnSelect)) __obj.updateDynamic("closeOnSelect")(closeOnSelect.asInstanceOf[js.Any])
-    if (computableFormat != null) __obj.updateDynamic("computableFormat")(computableFormat.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (inputFieldClass != null) __obj.updateDynamic("inputFieldClass")(inputFieldClass.asInstanceOf[js.Any])
-    if (inputFieldId != null) __obj.updateDynamic("inputFieldId")(inputFieldId.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (minView != null) __obj.updateDynamic("minView")(minView.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction2(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (!js.isUndefined(openOnInputFocus)) __obj.updateDynamic("openOnInputFocus")(openOnInputFocus.asInstanceOf[js.Any])
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactInputCalendarProps]
   }
+  @scala.inline
+  implicit class ReactInputCalendarPropsOps[Self <: ReactInputCalendarProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloseOnSelect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseOnSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComputableFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computableFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputableFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computableFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDate(value: String | js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputFieldClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputFieldClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputFieldClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputFieldClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputFieldId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputFieldId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputFieldId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputFieldId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDateDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxDate(value: String | js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinDateDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinDate(value: String | js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinView(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBlur(
+      value: (/* event */ SyntheticEvent[Event_, ReactInputCalendar], /* computableDate */ String) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnBlur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: /* computableDate */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFocus(value: /* event */ SyntheticEvent[Event_, ReactInputCalendar] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenOnInputFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openOnInputFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenOnInputFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openOnInputFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

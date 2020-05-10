@@ -12,10 +12,8 @@ trait HeaderLayoutPreset extends js.Object
 
 object HeaderLayoutPreset {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.center = "center".asInstanceOf[typingsSlinky.reactNavigationStack.reactNavigationStackStrings.center]
   @scala.inline
-  def center: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.center = this.cast("center")
-  @scala.inline
-  def left: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.left = this.cast("left")
+  def left: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.left = "left".asInstanceOf[typingsSlinky.reactNavigationStack.reactNavigationStackStrings.left]
 }
 

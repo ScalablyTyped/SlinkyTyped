@@ -22,12 +22,53 @@ trait DescribeIndexResponse extends js.Object {
 
 object DescribeIndexResponse {
   @scala.inline
-  def apply(indexName: IndexName = null, indexStatus: IndexStatus = null, schema: IndexSchema = null): DescribeIndexResponse = {
+  def apply(): DescribeIndexResponse = {
     val __obj = js.Dynamic.literal()
-    if (indexName != null) __obj.updateDynamic("indexName")(indexName.asInstanceOf[js.Any])
-    if (indexStatus != null) __obj.updateDynamic("indexStatus")(indexStatus.asInstanceOf[js.Any])
-    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeIndexResponse]
   }
+  @scala.inline
+  implicit class DescribeIndexResponseOps[Self <: DescribeIndexResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIndexName(value: IndexName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndexStatus(value: IndexStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchema(value: IndexSchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,27 +1,24 @@
 package typingsSlinky.gatsby.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.gatsby.mod.PageRendererProps
+import typingsSlinky.history.mod.LocationState
 import typingsSlinky.reachRouter.mod.WindowLocation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PageRenderer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gatsby.mod.PageRenderer] {
+object PageRenderer {
   @JSImport("gatsby", "PageRenderer")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(location: WindowLocation, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.gatsby.mod.PageRenderer] = {
-    val __obj = js.Dynamic.literal(location = location.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: PageRendererProps): Default[tag.type, typingsSlinky.gatsby.mod.PageRenderer] = new Default[tag.type, typingsSlinky.gatsby.mod.PageRenderer](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(location: WindowLocation[LocationState]): Default[tag.type, typingsSlinky.gatsby.mod.PageRenderer] = {
+    val __props = js.Dynamic.literal(location = location.asInstanceOf[js.Any])
+    new Default[tag.type, typingsSlinky.gatsby.mod.PageRenderer](js.Array(this.component, __props.asInstanceOf[PageRendererProps]))
   }
-  type Props = PageRendererProps
 }
 

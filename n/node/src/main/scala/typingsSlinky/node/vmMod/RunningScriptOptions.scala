@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RunningScriptOptions extends BaseOptions {
   /**
     * If `true`, the execution will be terminated when `SIGINT` (Ctrl+C) is received.
@@ -11,37 +12,68 @@ trait RunningScriptOptions extends BaseOptions {
     * If execution is terminated, an `Error` will be thrown.
     * Default: `false`.
     */
-  var breakOnSigint: js.UndefOr[Boolean] = js.undefined
+  var breakOnSigint: js.UndefOr[Boolean] = js.native
   /**
     * When `true`, if an `Error` occurs while compiling the `code`, the line of code causing the error is attached to the stack trace.
     * Default: `true`.
     */
-  var displayErrors: js.UndefOr[Boolean] = js.undefined
+  var displayErrors: js.UndefOr[Boolean] = js.native
   /**
     * Specifies the number of milliseconds to execute code before terminating execution.
     * If execution is terminated, an `Error` will be thrown. This value must be a strictly positive integer.
     */
-  var timeout: js.UndefOr[Double] = js.undefined
+  var timeout: js.UndefOr[Double] = js.native
 }
 
 object RunningScriptOptions {
   @scala.inline
-  def apply(
-    breakOnSigint: js.UndefOr[Boolean] = js.undefined,
-    columnOffset: Int | Double = null,
-    displayErrors: js.UndefOr[Boolean] = js.undefined,
-    filename: String = null,
-    lineOffset: Int | Double = null,
-    timeout: Int | Double = null
-  ): RunningScriptOptions = {
+  def apply(): RunningScriptOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(breakOnSigint)) __obj.updateDynamic("breakOnSigint")(breakOnSigint.asInstanceOf[js.Any])
-    if (columnOffset != null) __obj.updateDynamic("columnOffset")(columnOffset.asInstanceOf[js.Any])
-    if (!js.isUndefined(displayErrors)) __obj.updateDynamic("displayErrors")(displayErrors.asInstanceOf[js.Any])
-    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
-    if (lineOffset != null) __obj.updateDynamic("lineOffset")(lineOffset.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[RunningScriptOptions]
   }
+  @scala.inline
+  implicit class RunningScriptOptionsOps[Self <: RunningScriptOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBreakOnSigint(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakOnSigint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBreakOnSigint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakOnSigint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayErrors(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

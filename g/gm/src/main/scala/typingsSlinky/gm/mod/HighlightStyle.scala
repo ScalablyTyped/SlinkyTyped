@@ -14,14 +14,12 @@ trait HighlightStyle extends js.Object
 
 object HighlightStyle {
   @scala.inline
-  def Assign: typingsSlinky.gm.gmStrings.Assign = this.cast("Assign")
+  def Assign: typingsSlinky.gm.gmStrings.Assign = "Assign".asInstanceOf[typingsSlinky.gm.gmStrings.Assign]
   @scala.inline
-  def Threshold: typingsSlinky.gm.gmStrings.Threshold = this.cast("Threshold")
+  def Threshold: typingsSlinky.gm.gmStrings.Threshold = "Threshold".asInstanceOf[typingsSlinky.gm.gmStrings.Threshold]
   @scala.inline
-  def Tint: typingsSlinky.gm.gmStrings.Tint = this.cast("Tint")
+  def Tint: typingsSlinky.gm.gmStrings.Tint = "Tint".asInstanceOf[typingsSlinky.gm.gmStrings.Tint]
   @scala.inline
-  def XOR: typingsSlinky.gm.gmStrings.XOR = this.cast("XOR")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def XOR: typingsSlinky.gm.gmStrings.XOR = "XOR".asInstanceOf[typingsSlinky.gm.gmStrings.XOR]
 }
 

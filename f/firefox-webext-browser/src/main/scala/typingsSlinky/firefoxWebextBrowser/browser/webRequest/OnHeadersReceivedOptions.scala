@@ -12,10 +12,8 @@ trait OnHeadersReceivedOptions extends js.Object
 
 object OnHeadersReceivedOptions {
   @scala.inline
-  def blocking: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.blocking = this.cast("blocking")
+  def blocking: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.blocking = "blocking".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.blocking]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def responseHeaders: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.responseHeaders = this.cast("responseHeaders")
+  def responseHeaders: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.responseHeaders = "responseHeaders".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.responseHeaders]
 }
 

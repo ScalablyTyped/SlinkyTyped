@@ -12,10 +12,8 @@ trait MediaReadMode extends js.Object
 
 object MediaReadMode {
   @scala.inline
-  def Buffered: typingsSlinky.documentdb.documentdbStrings.Buffered = this.cast("Buffered")
+  def Buffered: typingsSlinky.documentdb.documentdbStrings.Buffered = "Buffered".asInstanceOf[typingsSlinky.documentdb.documentdbStrings.Buffered]
   @scala.inline
-  def Streamed: typingsSlinky.documentdb.documentdbStrings.Streamed = this.cast("Streamed")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Streamed: typingsSlinky.documentdb.documentdbStrings.Streamed = "Streamed".asInstanceOf[typingsSlinky.documentdb.documentdbStrings.Streamed]
 }
 

@@ -42,24 +42,101 @@ trait ListOpenWorkflowExecutionsInput extends js.Object {
 
 object ListOpenWorkflowExecutionsInput {
   @scala.inline
-  def apply(
-    domain: DomainName,
-    startTimeFilter: ExecutionTimeFilter,
-    executionFilter: WorkflowExecutionFilter = null,
-    maximumPageSize: Int | Double = null,
-    nextPageToken: PageToken = null,
-    reverseOrder: js.UndefOr[Boolean] = js.undefined,
-    tagFilter: TagFilter = null,
-    typeFilter: WorkflowTypeFilter = null
-  ): ListOpenWorkflowExecutionsInput = {
+  def apply(domain: DomainName, startTimeFilter: ExecutionTimeFilter): ListOpenWorkflowExecutionsInput = {
     val __obj = js.Dynamic.literal(domain = domain.asInstanceOf[js.Any], startTimeFilter = startTimeFilter.asInstanceOf[js.Any])
-    if (executionFilter != null) __obj.updateDynamic("executionFilter")(executionFilter.asInstanceOf[js.Any])
-    if (maximumPageSize != null) __obj.updateDynamic("maximumPageSize")(maximumPageSize.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverseOrder)) __obj.updateDynamic("reverseOrder")(reverseOrder.asInstanceOf[js.Any])
-    if (tagFilter != null) __obj.updateDynamic("tagFilter")(tagFilter.asInstanceOf[js.Any])
-    if (typeFilter != null) __obj.updateDynamic("typeFilter")(typeFilter.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListOpenWorkflowExecutionsInput]
   }
+  @scala.inline
+  implicit class ListOpenWorkflowExecutionsInputOps[Self <: ListOpenWorkflowExecutionsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomain(value: DomainName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartTimeFilter(value: ExecutionTimeFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExecutionFilter(value: WorkflowExecutionFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumPageSize(value: PageSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumPageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumPageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumPageSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: PageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReverseOrder(value: ReverseOrder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReverseOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagFilter(value: TagFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypeFilter(value: WorkflowTypeFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypeFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeFilter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

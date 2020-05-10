@@ -25,22 +25,89 @@ trait BudgetPerformanceHistory extends js.Object {
 
 object BudgetPerformanceHistory {
   @scala.inline
-  def apply(
-    BudgetName: BudgetName = null,
-    BudgetType: BudgetType = null,
-    BudgetedAndActualAmountsList: BudgetedAndActualAmountsList = null,
-    CostFilters: CostFilters = null,
-    CostTypes: CostTypes = null,
-    TimeUnit: TimeUnit = null
-  ): BudgetPerformanceHistory = {
+  def apply(): BudgetPerformanceHistory = {
     val __obj = js.Dynamic.literal()
-    if (BudgetName != null) __obj.updateDynamic("BudgetName")(BudgetName.asInstanceOf[js.Any])
-    if (BudgetType != null) __obj.updateDynamic("BudgetType")(BudgetType.asInstanceOf[js.Any])
-    if (BudgetedAndActualAmountsList != null) __obj.updateDynamic("BudgetedAndActualAmountsList")(BudgetedAndActualAmountsList.asInstanceOf[js.Any])
-    if (CostFilters != null) __obj.updateDynamic("CostFilters")(CostFilters.asInstanceOf[js.Any])
-    if (CostTypes != null) __obj.updateDynamic("CostTypes")(CostTypes.asInstanceOf[js.Any])
-    if (TimeUnit != null) __obj.updateDynamic("TimeUnit")(TimeUnit.asInstanceOf[js.Any])
     __obj.asInstanceOf[BudgetPerformanceHistory]
   }
+  @scala.inline
+  implicit class BudgetPerformanceHistoryOps[Self <: BudgetPerformanceHistory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBudgetName(value: BudgetName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BudgetName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBudgetName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BudgetName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBudgetType(value: BudgetType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BudgetType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBudgetType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BudgetType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBudgetedAndActualAmountsList(value: BudgetedAndActualAmountsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BudgetedAndActualAmountsList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBudgetedAndActualAmountsList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BudgetedAndActualAmountsList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCostFilters(value: CostFilters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CostFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCostFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CostFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCostTypes(value: CostTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CostTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCostTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CostTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeUnit(value: TimeUnit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeUnit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

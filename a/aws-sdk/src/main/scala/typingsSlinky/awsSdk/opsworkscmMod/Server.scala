@@ -106,58 +106,305 @@ trait Server extends js.Object {
 
 object Server {
   @scala.inline
-  def apply(
-    AssociatePublicIpAddress: js.UndefOr[scala.Boolean] = js.undefined,
-    BackupRetentionCount: Int | Double = null,
-    CloudFormationStackArn: String = null,
-    CreatedAt: js.Date = null,
-    CustomDomain: CustomDomain = null,
-    DisableAutomatedBackup: js.UndefOr[scala.Boolean] = js.undefined,
-    Endpoint: String = null,
-    Engine: String = null,
-    EngineAttributes: EngineAttributes = null,
-    EngineModel: String = null,
-    EngineVersion: String = null,
-    InstanceProfileArn: String = null,
-    InstanceType: String = null,
-    KeyPair: String = null,
-    MaintenanceStatus: MaintenanceStatus = null,
-    PreferredBackupWindow: TimeWindowDefinition = null,
-    PreferredMaintenanceWindow: TimeWindowDefinition = null,
-    SecurityGroupIds: Strings = null,
-    ServerArn: String = null,
-    ServerName: String = null,
-    ServiceRoleArn: String = null,
-    Status: ServerStatus = null,
-    StatusReason: String = null,
-    SubnetIds: Strings = null
-  ): Server = {
+  def apply(): Server = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(AssociatePublicIpAddress)) __obj.updateDynamic("AssociatePublicIpAddress")(AssociatePublicIpAddress.asInstanceOf[js.Any])
-    if (BackupRetentionCount != null) __obj.updateDynamic("BackupRetentionCount")(BackupRetentionCount.asInstanceOf[js.Any])
-    if (CloudFormationStackArn != null) __obj.updateDynamic("CloudFormationStackArn")(CloudFormationStackArn.asInstanceOf[js.Any])
-    if (CreatedAt != null) __obj.updateDynamic("CreatedAt")(CreatedAt.asInstanceOf[js.Any])
-    if (CustomDomain != null) __obj.updateDynamic("CustomDomain")(CustomDomain.asInstanceOf[js.Any])
-    if (!js.isUndefined(DisableAutomatedBackup)) __obj.updateDynamic("DisableAutomatedBackup")(DisableAutomatedBackup.asInstanceOf[js.Any])
-    if (Endpoint != null) __obj.updateDynamic("Endpoint")(Endpoint.asInstanceOf[js.Any])
-    if (Engine != null) __obj.updateDynamic("Engine")(Engine.asInstanceOf[js.Any])
-    if (EngineAttributes != null) __obj.updateDynamic("EngineAttributes")(EngineAttributes.asInstanceOf[js.Any])
-    if (EngineModel != null) __obj.updateDynamic("EngineModel")(EngineModel.asInstanceOf[js.Any])
-    if (EngineVersion != null) __obj.updateDynamic("EngineVersion")(EngineVersion.asInstanceOf[js.Any])
-    if (InstanceProfileArn != null) __obj.updateDynamic("InstanceProfileArn")(InstanceProfileArn.asInstanceOf[js.Any])
-    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
-    if (KeyPair != null) __obj.updateDynamic("KeyPair")(KeyPair.asInstanceOf[js.Any])
-    if (MaintenanceStatus != null) __obj.updateDynamic("MaintenanceStatus")(MaintenanceStatus.asInstanceOf[js.Any])
-    if (PreferredBackupWindow != null) __obj.updateDynamic("PreferredBackupWindow")(PreferredBackupWindow.asInstanceOf[js.Any])
-    if (PreferredMaintenanceWindow != null) __obj.updateDynamic("PreferredMaintenanceWindow")(PreferredMaintenanceWindow.asInstanceOf[js.Any])
-    if (SecurityGroupIds != null) __obj.updateDynamic("SecurityGroupIds")(SecurityGroupIds.asInstanceOf[js.Any])
-    if (ServerArn != null) __obj.updateDynamic("ServerArn")(ServerArn.asInstanceOf[js.Any])
-    if (ServerName != null) __obj.updateDynamic("ServerName")(ServerName.asInstanceOf[js.Any])
-    if (ServiceRoleArn != null) __obj.updateDynamic("ServiceRoleArn")(ServiceRoleArn.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (StatusReason != null) __obj.updateDynamic("StatusReason")(StatusReason.asInstanceOf[js.Any])
-    if (SubnetIds != null) __obj.updateDynamic("SubnetIds")(SubnetIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[Server]
   }
+  @scala.inline
+  implicit class ServerOps[Self <: Server] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssociatePublicIpAddress(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociatePublicIpAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociatePublicIpAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociatePublicIpAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackupRetentionCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupRetentionCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackupRetentionCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupRetentionCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudFormationStackArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFormationStackArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudFormationStackArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFormationStackArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomDomain(value: CustomDomain): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableAutomatedBackup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableAutomatedBackup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableAutomatedBackup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableAutomatedBackup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEngine(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEngineAttributes(value: EngineAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngineAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEngineModel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngineModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineModel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEngineVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngineVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceProfileArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceProfileArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceProfileArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceProfileArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyPair(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyPair")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyPair: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyPair")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaintenanceStatus(value: MaintenanceStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaintenanceStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaintenanceStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaintenanceStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreferredBackupWindow(value: TimeWindowDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredBackupWindow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreferredBackupWindow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredBackupWindow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreferredMaintenanceWindow(value: TimeWindowDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredMaintenanceWindow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreferredMaintenanceWindow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredMaintenanceWindow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityGroupIds(value: Strings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityGroupIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceRoleArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceRoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: ServerStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetIds(value: Strings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait WarnHtmlInMessageLevel extends js.Object
 
 object WarnHtmlInMessageLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.vueI18n.vueI18nStrings.error = "error".asInstanceOf[typingsSlinky.vueI18n.vueI18nStrings.error]
   @scala.inline
-  def error: typingsSlinky.vueI18n.vueI18nStrings.error = this.cast("error")
+  def off: typingsSlinky.vueI18n.vueI18nStrings.off = "off".asInstanceOf[typingsSlinky.vueI18n.vueI18nStrings.off]
   @scala.inline
-  def off: typingsSlinky.vueI18n.vueI18nStrings.off = this.cast("off")
-  @scala.inline
-  def warn: typingsSlinky.vueI18n.vueI18nStrings.warn = this.cast("warn")
+  def warn: typingsSlinky.vueI18n.vueI18nStrings.warn = "warn".asInstanceOf[typingsSlinky.vueI18n.vueI18nStrings.warn]
 }
 

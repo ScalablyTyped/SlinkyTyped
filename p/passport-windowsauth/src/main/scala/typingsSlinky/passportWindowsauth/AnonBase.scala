@@ -6,51 +6,179 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBase extends js.Object {
-  var base: js.UndefOr[String] = js.undefined
-  var bindCredentials: js.UndefOr[String] = js.undefined
-  var bindDN: js.UndefOr[String] = js.undefined
-  var binder: js.UndefOr[Client] = js.undefined
-  var client: js.UndefOr[Client] = js.undefined
-  var connectTimeout: js.UndefOr[Double] = js.undefined
-  var idleTimeout: js.UndefOr[Double] = js.undefined
-  var maxConnections: js.UndefOr[Double] = js.undefined
-  var reconnect: js.UndefOr[Boolean | AnonFailAfter] = js.undefined
-  var timeout: js.UndefOr[Double] = js.undefined
-  var tlsOptions: js.UndefOr[TlsOptions] = js.undefined
-  var url: js.UndefOr[String] = js.undefined
+  var base: js.UndefOr[String] = js.native
+  var bindCredentials: js.UndefOr[String] = js.native
+  var bindDN: js.UndefOr[String] = js.native
+  var binder: js.UndefOr[Client] = js.native
+  var client: js.UndefOr[Client] = js.native
+  var connectTimeout: js.UndefOr[Double] = js.native
+  var idleTimeout: js.UndefOr[Double] = js.native
+  var maxConnections: js.UndefOr[Double] = js.native
+  var reconnect: js.UndefOr[Boolean | AnonFailAfter] = js.native
+  var timeout: js.UndefOr[Double] = js.native
+  var tlsOptions: js.UndefOr[TlsOptions] = js.native
+  var url: js.UndefOr[String] = js.native
 }
 
 object AnonBase {
   @scala.inline
-  def apply(
-    base: String = null,
-    bindCredentials: String = null,
-    bindDN: String = null,
-    binder: Client = null,
-    client: Client = null,
-    connectTimeout: Int | Double = null,
-    idleTimeout: Int | Double = null,
-    maxConnections: Int | Double = null,
-    reconnect: Boolean | AnonFailAfter = null,
-    timeout: Int | Double = null,
-    tlsOptions: TlsOptions = null,
-    url: String = null
-  ): AnonBase = {
+  def apply(): AnonBase = {
     val __obj = js.Dynamic.literal()
-    if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
-    if (bindCredentials != null) __obj.updateDynamic("bindCredentials")(bindCredentials.asInstanceOf[js.Any])
-    if (bindDN != null) __obj.updateDynamic("bindDN")(bindDN.asInstanceOf[js.Any])
-    if (binder != null) __obj.updateDynamic("binder")(binder.asInstanceOf[js.Any])
-    if (client != null) __obj.updateDynamic("client")(client.asInstanceOf[js.Any])
-    if (connectTimeout != null) __obj.updateDynamic("connectTimeout")(connectTimeout.asInstanceOf[js.Any])
-    if (idleTimeout != null) __obj.updateDynamic("idleTimeout")(idleTimeout.asInstanceOf[js.Any])
-    if (maxConnections != null) __obj.updateDynamic("maxConnections")(maxConnections.asInstanceOf[js.Any])
-    if (reconnect != null) __obj.updateDynamic("reconnect")(reconnect.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (tlsOptions != null) __obj.updateDynamic("tlsOptions")(tlsOptions.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBase]
   }
+  @scala.inline
+  implicit class AnonBaseOps[Self <: AnonBase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBase(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBindCredentials(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindCredentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBindCredentials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindCredentials")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBindDN(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindDN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBindDN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindDN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBinder(value: Client): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBinder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClient(value: Client): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdleTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idleTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdleTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idleTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxConnections(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConnections")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxConnections: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConnections")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReconnect(value: Boolean | AnonFailAfter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reconnect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReconnect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reconnect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTlsOptions(value: TlsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTlsOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

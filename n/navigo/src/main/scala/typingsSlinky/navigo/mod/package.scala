@@ -14,5 +14,5 @@ package object mod {
   ]) | typingsSlinky.navigo.AnonAs
   type State = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ k in navigo.navigo.Keys ]: any}
-    */ typingsSlinky.navigo.navigoStrings.State with js.Any
+    */ typingsSlinky.navigo.navigoStrings.State with org.scalablytyped.runtime.TopLevel[js.Any]
 }

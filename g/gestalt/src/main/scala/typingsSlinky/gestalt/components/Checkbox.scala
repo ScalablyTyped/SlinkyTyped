@@ -1,10 +1,9 @@
 package typingsSlinky.gestalt.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.gestalt.AnonChecked
+import typingsSlinky.gestalt.AnonCheckedEvent
 import typingsSlinky.gestalt.gestaltStrings.md
 import typingsSlinky.gestalt.gestaltStrings.sm
 import typingsSlinky.gestalt.mod.CheckboxProps
@@ -12,27 +11,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Checkbox
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Checkbox] {
+object Checkbox {
   @JSImport("gestalt", "Checkbox")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: checked, disabled, name */
-  def apply(
-    id: String,
-    onChange: AnonChecked => Unit,
-    indeterminate: js.UndefOr[Boolean] = js.undefined,
-    size: sm | md = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Checkbox] = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
-    if (!js.isUndefined(indeterminate)) __obj.updateDynamic("indeterminate")(indeterminate.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.gestalt.mod.Checkbox] {
+    @scala.inline
+    def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hasError(value: Boolean): this.type = set("hasError", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indeterminate(value: Boolean): this.type = set("indeterminate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* args */ AnonCheckedEvent => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def size(value: sm | md): this.type = set("size", value.asInstanceOf[js.Any])
   }
-  type Props = CheckboxProps
+  
+  def withProps(p: CheckboxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(id: String, onChange: AnonChecked => Unit): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[CheckboxProps]))
+  }
 }
 

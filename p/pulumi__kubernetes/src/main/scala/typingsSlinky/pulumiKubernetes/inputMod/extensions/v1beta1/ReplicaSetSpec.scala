@@ -10,48 +10,96 @@ import scala.scalajs.js.annotation._
 /**
   * ReplicaSetSpec is the specification of a ReplicaSet.
   */
+@js.native
 trait ReplicaSetSpec extends js.Object {
   /**
     * Minimum number of seconds for which a newly created pod should be ready without any of its
     * container crashing, for it to be considered available. Defaults to 0 (pod will be
     * considered available as soon as it is ready)
     */
-  var minReadySeconds: js.UndefOr[Input[Double]] = js.undefined
+  var minReadySeconds: js.UndefOr[Input[Double]] = js.native
   /**
     * Replicas is the number of desired replicas. This is a pointer to distinguish between
     * explicit zero and unspecified. Defaults to 1. More info:
     * https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller
     */
-  var replicas: js.UndefOr[Input[Double]] = js.undefined
+  var replicas: js.UndefOr[Input[Double]] = js.native
   /**
     * Selector is a label query over pods that should match the replica count. If the selector is
     * empty, it is defaulted to the labels present on the pod template. Label keys and values
     * that must match in order to be controlled by this replica set. More info:
     * https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors
     */
-  var selector: js.UndefOr[Input[LabelSelector]] = js.undefined
+  var selector: js.UndefOr[Input[LabelSelector]] = js.native
   /**
     * Template is the object that describes the pod that will be created if insufficient replicas
     * are detected. More info:
     * https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template
     */
-  var template: js.UndefOr[Input[PodTemplateSpec]] = js.undefined
+  var template: js.UndefOr[Input[PodTemplateSpec]] = js.native
 }
 
 object ReplicaSetSpec {
   @scala.inline
-  def apply(
-    minReadySeconds: Input[Double] = null,
-    replicas: Input[Double] = null,
-    selector: Input[LabelSelector] = null,
-    template: Input[PodTemplateSpec] = null
-  ): ReplicaSetSpec = {
+  def apply(): ReplicaSetSpec = {
     val __obj = js.Dynamic.literal()
-    if (minReadySeconds != null) __obj.updateDynamic("minReadySeconds")(minReadySeconds.asInstanceOf[js.Any])
-    if (replicas != null) __obj.updateDynamic("replicas")(replicas.asInstanceOf[js.Any])
-    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
-    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplicaSetSpec]
   }
+  @scala.inline
+  implicit class ReplicaSetSpecOps[Self <: ReplicaSetSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMinReadySeconds(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minReadySeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinReadySeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minReadySeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicas(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicas: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicas")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelector(value: Input[LabelSelector]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplate(value: Input[PodTemplateSpec]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

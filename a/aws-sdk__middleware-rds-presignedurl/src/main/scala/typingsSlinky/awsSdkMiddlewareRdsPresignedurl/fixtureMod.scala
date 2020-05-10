@@ -12,9 +12,9 @@ object fixtureMod extends js.Object {
   @js.native
   class MockSha256 () extends js.Object {
     def this(secret: String) = this()
-    def this(secret: scala.scalajs.js.typedarray.ArrayBuffer) = this()
-    def this(secret: scala.scalajs.js.typedarray.ArrayBufferView) = this()
-    def digest(): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+    def this(secret: js.typedarray.ArrayBuffer) = this()
+    def this(secret: js.typedarray.ArrayBufferView) = this()
+    def digest(): js.Promise[js.typedarray.Uint8Array] = js.native
     def update(): Unit = js.native
     def update(data: SourceData): Unit = js.native
   }

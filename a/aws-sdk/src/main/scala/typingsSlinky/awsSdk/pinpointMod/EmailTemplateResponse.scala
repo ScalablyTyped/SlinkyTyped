@@ -27,6 +27,10 @@ trait EmailTemplateResponse extends js.Object {
     */
   var LastModifiedDate: string = js.native
   /**
+    * The unique identifier for the recommender model that's used by the message template.
+    */
+  var RecommenderId: js.UndefOr[string] = js.native
+  /**
     * The subject line, or title, that's used in email messages that are based on the message template.
     */
   var Subject: js.UndefOr[string] = js.native
@@ -58,30 +62,149 @@ trait EmailTemplateResponse extends js.Object {
 
 object EmailTemplateResponse {
   @scala.inline
-  def apply(
-    CreationDate: string,
-    LastModifiedDate: string,
-    TemplateName: string,
-    TemplateType: TemplateType,
-    Arn: string = null,
-    DefaultSubstitutions: string = null,
-    HtmlPart: string = null,
-    Subject: string = null,
-    TemplateDescription: string = null,
-    TextPart: string = null,
-    Version: string = null,
-    tags: MapOfString = null
-  ): EmailTemplateResponse = {
+  def apply(CreationDate: string, LastModifiedDate: string, TemplateName: string, TemplateType: TemplateType): EmailTemplateResponse = {
     val __obj = js.Dynamic.literal(CreationDate = CreationDate.asInstanceOf[js.Any], LastModifiedDate = LastModifiedDate.asInstanceOf[js.Any], TemplateName = TemplateName.asInstanceOf[js.Any], TemplateType = TemplateType.asInstanceOf[js.Any])
-    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
-    if (DefaultSubstitutions != null) __obj.updateDynamic("DefaultSubstitutions")(DefaultSubstitutions.asInstanceOf[js.Any])
-    if (HtmlPart != null) __obj.updateDynamic("HtmlPart")(HtmlPart.asInstanceOf[js.Any])
-    if (Subject != null) __obj.updateDynamic("Subject")(Subject.asInstanceOf[js.Any])
-    if (TemplateDescription != null) __obj.updateDynamic("TemplateDescription")(TemplateDescription.asInstanceOf[js.Any])
-    if (TextPart != null) __obj.updateDynamic("TextPart")(TextPart.asInstanceOf[js.Any])
-    if (Version != null) __obj.updateDynamic("Version")(Version.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmailTemplateResponse]
   }
+  @scala.inline
+  implicit class EmailTemplateResponseOps[Self <: EmailTemplateResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationDate(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLastModifiedDate(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemplateName(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemplateType(value: TemplateType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultSubstitutions(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultSubstitutions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultSubstitutions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultSubstitutions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtmlPart(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HtmlPart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtmlPart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HtmlPart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecommenderId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecommenderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecommenderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecommenderId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubject(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateDescription(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextPart(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TextPart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextPart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TextPart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: MapOfString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -9,20 +9,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDescribeBlock extends Event {
-  var describeBlock: js.UndefOr[DescribeBlock] = js.undefined
-  var hook: Hook
-  var name: hook_success
-  var test: js.UndefOr[TestEntry] = js.undefined
+  var describeBlock: js.UndefOr[DescribeBlock] = js.native
+  var hook: Hook = js.native
+  var name: hook_success = js.native
+  var test: js.UndefOr[TestEntry] = js.native
 }
 
 object AnonDescribeBlock {
   @scala.inline
-  def apply(hook: Hook, name: hook_success, describeBlock: DescribeBlock = null, test: TestEntry = null): AnonDescribeBlock = {
+  def apply(hook: Hook, name: hook_success): AnonDescribeBlock = {
     val __obj = js.Dynamic.literal(hook = hook.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (describeBlock != null) __obj.updateDynamic("describeBlock")(describeBlock.asInstanceOf[js.Any])
-    if (test != null) __obj.updateDynamic("test")(test.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDescribeBlock]
   }
+  @scala.inline
+  implicit class AnonDescribeBlockOps[Self <: AnonDescribeBlock] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHook(value: Hook): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hook")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: hook_success): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescribeBlock(value: DescribeBlock): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("describeBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescribeBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("describeBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTest(value: TestEntry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

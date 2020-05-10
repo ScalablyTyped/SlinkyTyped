@@ -1,17 +1,6 @@
 package typingsSlinky.antDesignReactNative.listItemMod
 
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings._empty
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.android
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.bottom
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.down
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.empty
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.horizontal
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.ios
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.middle
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.top
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.up
 import typingsSlinky.antDesignReactNative.libStyleMod.WithThemeStyles
 import typingsSlinky.antDesignReactNative.listPropsTypeMod.ListItemPropsType
 import typingsSlinky.antDesignReactNative.listStyleMod.ListStyle
@@ -19,64 +8,113 @@ import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ListItemProps
   extends ListItemPropsType
      with WithThemeStyles[ListStyle] {
-  var delayLongPress: js.UndefOr[Double] = js.undefined
-  var onLongPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
-  var onPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
-  var onPressIn: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
-  var onPressOut: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var delayLongPress: js.UndefOr[Double] = js.native
+  var onLongPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
+  var onPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
+  var onPressIn: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
+  var onPressOut: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
 }
 
 object ListItemProps {
   @scala.inline
-  def apply(
-    activeStyle: StyleProp[ViewStyle] = null,
-    align: top | middle | bottom = null,
-    arrow: horizontal | down | up | empty | _empty = null,
-    children: TagMod[Any] = null,
-    delayLongPress: Int | Double = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    error: js.UndefOr[Boolean] = js.undefined,
-    extra: TagMod[Any] = null,
-    multipleLine: js.UndefOr[Boolean] = js.undefined,
-    onLongPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onPressIn: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onPressOut: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    platform: android | ios = null,
-    style: StyleProp[ViewStyle] = null,
-    styles: Partial[ListStyle] = null,
-    thumb: TagMod[Any] = null,
-    wrap: js.UndefOr[Boolean] = js.undefined
-  ): ListItemProps = {
+  def apply(): ListItemProps = {
     val __obj = js.Dynamic.literal()
-    if (activeStyle != null) __obj.updateDynamic("activeStyle")(activeStyle.asInstanceOf[js.Any])
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (arrow != null) __obj.updateDynamic("arrow")(arrow.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (delayLongPress != null) __obj.updateDynamic("delayLongPress")(delayLongPress.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (!js.isUndefined(multipleLine)) __obj.updateDynamic("multipleLine")(multipleLine.asInstanceOf[js.Any])
-    if (onLongPress != null) __obj.updateDynamic("onLongPress")(js.Any.fromFunction1(onLongPress))
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction1(onPress))
-    if (onPressIn != null) __obj.updateDynamic("onPressIn")(js.Any.fromFunction1(onPressIn))
-    if (onPressOut != null) __obj.updateDynamic("onPressOut")(js.Any.fromFunction1(onPressOut))
-    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (thumb != null) __obj.updateDynamic("thumb")(thumb.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrap)) __obj.updateDynamic("wrap")(wrap.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListItemProps]
   }
+  @scala.inline
+  implicit class ListItemPropsOps[Self <: ListItemProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDelayLongPress(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delayLongPress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelayLongPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delayLongPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLongPress(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongPress")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLongPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPress(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPressIn(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressIn")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPressIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPressOut(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressOut")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPressOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
+        ret
+    }
+  }
+  
 }
 

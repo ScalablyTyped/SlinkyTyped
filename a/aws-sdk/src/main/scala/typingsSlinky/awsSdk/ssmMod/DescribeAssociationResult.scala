@@ -14,10 +14,29 @@ trait DescribeAssociationResult extends js.Object {
 
 object DescribeAssociationResult {
   @scala.inline
-  def apply(AssociationDescription: AssociationDescription = null): DescribeAssociationResult = {
+  def apply(): DescribeAssociationResult = {
     val __obj = js.Dynamic.literal()
-    if (AssociationDescription != null) __obj.updateDynamic("AssociationDescription")(AssociationDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAssociationResult]
   }
+  @scala.inline
+  implicit class DescribeAssociationResultOps[Self <: DescribeAssociationResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssociationDescription(value: AssociationDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociationDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationDescription")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

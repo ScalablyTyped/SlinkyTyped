@@ -15,16 +15,14 @@ trait StatusFill extends js.Object
 
 object StatusFill {
   @scala.inline
-  def blue: typingsSlinky.nodeRed.nodeRedStrings.blue = this.cast("blue")
+  def blue: typingsSlinky.nodeRed.nodeRedStrings.blue = "blue".asInstanceOf[typingsSlinky.nodeRed.nodeRedStrings.blue]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def green: typingsSlinky.nodeRed.nodeRedStrings.green = "green".asInstanceOf[typingsSlinky.nodeRed.nodeRedStrings.green]
   @scala.inline
-  def green: typingsSlinky.nodeRed.nodeRedStrings.green = this.cast("green")
+  def grey: typingsSlinky.nodeRed.nodeRedStrings.grey = "grey".asInstanceOf[typingsSlinky.nodeRed.nodeRedStrings.grey]
   @scala.inline
-  def grey: typingsSlinky.nodeRed.nodeRedStrings.grey = this.cast("grey")
+  def red: typingsSlinky.nodeRed.nodeRedStrings.red = "red".asInstanceOf[typingsSlinky.nodeRed.nodeRedStrings.red]
   @scala.inline
-  def red: typingsSlinky.nodeRed.nodeRedStrings.red = this.cast("red")
-  @scala.inline
-  def yellow: typingsSlinky.nodeRed.nodeRedStrings.yellow = this.cast("yellow")
+  def yellow: typingsSlinky.nodeRed.nodeRedStrings.yellow = "yellow".asInstanceOf[typingsSlinky.nodeRed.nodeRedStrings.yellow]
 }
 

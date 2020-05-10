@@ -56,8 +56,6 @@ class BoringLayout protected ()
   var mEllipsizedWidth: js.Any = js.native
   var mMax: js.Any = js.native
   var mTopPadding: js.Any = js.native
-  /* CompleteClass */
-  override def ellipsized(start: Double, end: Double): Unit = js.native
   def init(
     source: String,
     paint: TextPaint,

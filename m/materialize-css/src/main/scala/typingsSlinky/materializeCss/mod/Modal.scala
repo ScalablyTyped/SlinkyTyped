@@ -28,7 +28,7 @@ object Modal extends js.Object {
   /**
     * Init Modal
     */
-  def init(els: typingsSlinky.std.Element): typingsSlinky.materializeCss.M.Modal = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialModalOptions): typingsSlinky.materializeCss.M.Modal = js.native
+  def init(els: Element): typingsSlinky.materializeCss.M.Modal = js.native
+  def init(els: Element, options: PartialModalOptions): typingsSlinky.materializeCss.M.Modal = js.native
 }
 

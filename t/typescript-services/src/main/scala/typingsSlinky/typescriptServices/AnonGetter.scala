@@ -6,17 +6,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonGetter extends js.Object {
-  var getter: GetAccessor
-  var setter: SetAccessor
+  var getter: GetAccessor = js.native
+  var setter: SetAccessor = js.native
 }
 
 object AnonGetter {
   @scala.inline
   def apply(getter: GetAccessor, setter: SetAccessor): AnonGetter = {
     val __obj = js.Dynamic.literal(getter = getter.asInstanceOf[js.Any], setter = setter.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonGetter]
   }
+  @scala.inline
+  implicit class AnonGetterOps[Self <: AnonGetter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetter(value: GetAccessor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetter(value: SetAccessor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setter")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @JSImport("ethers/dist/types/utils/hmac", JSImport.Namespace)
 @js.native
 object hmacMod extends js.Object {
-  def computeHmac(algorithm: SupportedAlgorithms, key: Arrayish, data: Arrayish): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def computeHmac(algorithm: SupportedAlgorithms, key: Arrayish, data: Arrayish): js.typedarray.Uint8Array = js.native
 }
 

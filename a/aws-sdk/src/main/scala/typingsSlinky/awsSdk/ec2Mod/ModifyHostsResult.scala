@@ -18,11 +18,41 @@ trait ModifyHostsResult extends js.Object {
 
 object ModifyHostsResult {
   @scala.inline
-  def apply(Successful: ResponseHostIdList = null, Unsuccessful: UnsuccessfulItemList = null): ModifyHostsResult = {
+  def apply(): ModifyHostsResult = {
     val __obj = js.Dynamic.literal()
-    if (Successful != null) __obj.updateDynamic("Successful")(Successful.asInstanceOf[js.Any])
-    if (Unsuccessful != null) __obj.updateDynamic("Unsuccessful")(Unsuccessful.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyHostsResult]
   }
+  @scala.inline
+  implicit class ModifyHostsResultOps[Self <: ModifyHostsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSuccessful(value: ResponseHostIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Successful")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessful: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Successful")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnsuccessful(value: UnsuccessfulItemList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unsuccessful")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnsuccessful: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unsuccessful")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

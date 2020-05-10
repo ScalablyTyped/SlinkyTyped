@@ -1,6 +1,5 @@
 package typingsSlinky.sqlanywhere.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ trait SybaseConnection extends js.Object {
   def connect(params: ConnectionParameters, cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
   def connected(): Boolean = js.native
   def disconnect(cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
-  def exec(query: String, cb: js.Function2[/* err */ js.UndefOr[Error], /* result */ js.Any, Unit]): Unit = js.native
+  def exec(query: String, cb: js.Function2[/* err */ js.UndefOr[js.Error], /* result */ js.Any, Unit]): Unit = js.native
   def exec(
     query: String,
     placeholders: js.Array[_],

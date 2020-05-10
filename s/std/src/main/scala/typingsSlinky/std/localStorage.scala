@@ -7,5 +7,6 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("localStorage")
 @js.native
-object localStorage extends TopLevel[Storage]
+object localStorage
+  extends TopLevel[org.scalajs.dom.raw.Storage]
 

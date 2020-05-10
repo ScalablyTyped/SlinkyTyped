@@ -34,22 +34,89 @@ trait AnomalyDetector extends js.Object {
 
 object AnomalyDetector {
   @scala.inline
-  def apply(
-    Configuration: AnomalyDetectorConfiguration = null,
-    Dimensions: Dimensions = null,
-    MetricName: MetricName = null,
-    Namespace: Namespace = null,
-    Stat: Stat = null,
-    StateValue: AnomalyDetectorStateValue = null
-  ): AnomalyDetector = {
+  def apply(): AnomalyDetector = {
     val __obj = js.Dynamic.literal()
-    if (Configuration != null) __obj.updateDynamic("Configuration")(Configuration.asInstanceOf[js.Any])
-    if (Dimensions != null) __obj.updateDynamic("Dimensions")(Dimensions.asInstanceOf[js.Any])
-    if (MetricName != null) __obj.updateDynamic("MetricName")(MetricName.asInstanceOf[js.Any])
-    if (Namespace != null) __obj.updateDynamic("Namespace")(Namespace.asInstanceOf[js.Any])
-    if (Stat != null) __obj.updateDynamic("Stat")(Stat.asInstanceOf[js.Any])
-    if (StateValue != null) __obj.updateDynamic("StateValue")(StateValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnomalyDetector]
   }
+  @scala.inline
+  implicit class AnomalyDetectorOps[Self <: AnomalyDetector] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfiguration(value: AnomalyDetectorConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Configuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Configuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDimensions(value: Dimensions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricName(value: MetricName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamespace(value: Namespace): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Namespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamespace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Namespace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStat(value: Stat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Stat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Stat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStateValue(value: AnomalyDetectorStateValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StateValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStateValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StateValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

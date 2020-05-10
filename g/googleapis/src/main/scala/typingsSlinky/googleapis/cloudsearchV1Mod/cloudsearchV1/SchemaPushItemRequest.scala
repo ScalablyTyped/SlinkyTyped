@@ -23,12 +23,53 @@ trait SchemaPushItemRequest extends js.Object {
 
 object SchemaPushItemRequest {
   @scala.inline
-  def apply(connectorName: String = null, debugOptions: SchemaDebugOptions = null, item: SchemaPushItem = null): SchemaPushItemRequest = {
+  def apply(): SchemaPushItemRequest = {
     val __obj = js.Dynamic.literal()
-    if (connectorName != null) __obj.updateDynamic("connectorName")(connectorName.asInstanceOf[js.Any])
-    if (debugOptions != null) __obj.updateDynamic("debugOptions")(debugOptions.asInstanceOf[js.Any])
-    if (item != null) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPushItemRequest]
   }
+  @scala.inline
+  implicit class SchemaPushItemRequestOps[Self <: SchemaPushItemRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnectorName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectorName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugOptions(value: SchemaDebugOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItem(value: SchemaPushItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

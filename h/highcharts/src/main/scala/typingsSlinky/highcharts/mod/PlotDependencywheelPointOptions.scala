@@ -4,19 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotDependencywheelPointOptions extends js.Object {
   /**
     * (Highcharts) Events for each single point.
     */
-  var events: js.UndefOr[PlotDependencywheelPointEventsOptions] = js.undefined
+  var events: js.UndefOr[PlotDependencywheelPointEventsOptions] = js.native
 }
 
 object PlotDependencywheelPointOptions {
   @scala.inline
-  def apply(events: PlotDependencywheelPointEventsOptions = null): PlotDependencywheelPointOptions = {
+  def apply(): PlotDependencywheelPointOptions = {
     val __obj = js.Dynamic.literal()
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotDependencywheelPointOptions]
   }
+  @scala.inline
+  implicit class PlotDependencywheelPointOptionsOps[Self <: PlotDependencywheelPointOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEvents(value: PlotDependencywheelPointEventsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

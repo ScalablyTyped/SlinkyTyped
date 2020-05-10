@@ -15,16 +15,14 @@ trait SQLDialects extends js.Object
 
 object SQLDialects {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def mssql: typingsSlinky.nodeSql2.nodeSql2Strings.mssql = "mssql".asInstanceOf[typingsSlinky.nodeSql2.nodeSql2Strings.mssql]
   @scala.inline
-  def mssql: typingsSlinky.nodeSql2.nodeSql2Strings.mssql = this.cast("mssql")
+  def mysql: typingsSlinky.nodeSql2.nodeSql2Strings.mysql = "mysql".asInstanceOf[typingsSlinky.nodeSql2.nodeSql2Strings.mysql]
   @scala.inline
-  def mysql: typingsSlinky.nodeSql2.nodeSql2Strings.mysql = this.cast("mysql")
+  def oracle: typingsSlinky.nodeSql2.nodeSql2Strings.oracle = "oracle".asInstanceOf[typingsSlinky.nodeSql2.nodeSql2Strings.oracle]
   @scala.inline
-  def oracle: typingsSlinky.nodeSql2.nodeSql2Strings.oracle = this.cast("oracle")
+  def postgres: typingsSlinky.nodeSql2.nodeSql2Strings.postgres = "postgres".asInstanceOf[typingsSlinky.nodeSql2.nodeSql2Strings.postgres]
   @scala.inline
-  def postgres: typingsSlinky.nodeSql2.nodeSql2Strings.postgres = this.cast("postgres")
-  @scala.inline
-  def sqlite: typingsSlinky.nodeSql2.nodeSql2Strings.sqlite = this.cast("sqlite")
+  def sqlite: typingsSlinky.nodeSql2.nodeSql2Strings.sqlite = "sqlite".asInstanceOf[typingsSlinky.nodeSql2.nodeSql2Strings.sqlite]
 }
 

@@ -1,10 +1,7 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.AnonValueBoolean
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import typingsSlinky.primereact.triStateCheckboxMod.TriStateCheckboxProps
@@ -12,38 +9,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TriStateCheckbox
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactTristatecheckboxMod.TriStateCheckbox] {
+object TriStateCheckbox {
   @JSImport("primereact/tristatecheckbox", "TriStateCheckbox")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, name */
-  def apply(
-    ariaLabelledBy: String = null,
-    inputId: String = null,
-    onChange: /* e */ AnonValueBoolean => Unit = null,
-    style: js.Object = null,
-    tooltip: js.Any = null,
-    tooltipOptions: TooltipOptions = null,
-    value: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactTristatecheckboxMod.TriStateCheckbox] = {
-    val __obj = js.Dynamic.literal()
-    if (ariaLabelledBy != null) __obj.updateDynamic("ariaLabelledBy")(ariaLabelledBy.asInstanceOf[js.Any])
-    if (inputId != null) __obj.updateDynamic("inputId")(inputId.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (tooltipOptions != null) __obj.updateDynamic("tooltipOptions")(tooltipOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.primereactTristatecheckboxMod.TriStateCheckbox] {
+    @scala.inline
+    def ariaLabelledBy(value: String): this.type = set("ariaLabelledBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputId(value: String): this.type = set("inputId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* e */ AnonValueBoolean => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltip(value: js.Any): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipOptions(value: TooltipOptions): this.type = set("tooltipOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: Boolean): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueNull: this.type = set("value", null)
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactTristatecheckboxMod.TriStateCheckbox] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.primereactTristatecheckboxMod.TriStateCheckbox](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TriStateCheckboxProps
+  
+  def withProps(p: TriStateCheckboxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TriStateCheckbox.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

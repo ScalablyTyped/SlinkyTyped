@@ -24,34 +24,32 @@ trait EditorChangeType extends js.Object
 
 object EditorChangeType {
   @scala.inline
-  def `adjust-depth`: typingsSlinky.draftJs.draftJsStrings.`adjust-depth` = this.cast("adjust-depth")
+  def `adjust-depth`: typingsSlinky.draftJs.draftJsStrings.`adjust-depth` = "adjust-depth".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.`adjust-depth`]
   @scala.inline
-  def `apply-entity`: typingsSlinky.draftJs.draftJsStrings.`apply-entity` = this.cast("apply-entity")
+  def `apply-entity`: typingsSlinky.draftJs.draftJsStrings.`apply-entity` = "apply-entity".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.`apply-entity`]
   @scala.inline
-  def `backspace-character`: typingsSlinky.draftJs.draftJsStrings.`backspace-character` = this.cast("backspace-character")
+  def `backspace-character`: typingsSlinky.draftJs.draftJsStrings.`backspace-character` = "backspace-character".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.`backspace-character`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `change-block-data`: typingsSlinky.draftJs.draftJsStrings.`change-block-data` = "change-block-data".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.`change-block-data`]
   @scala.inline
-  def `change-block-data`: typingsSlinky.draftJs.draftJsStrings.`change-block-data` = this.cast("change-block-data")
+  def `change-block-type`: typingsSlinky.draftJs.draftJsStrings.`change-block-type` = "change-block-type".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.`change-block-type`]
   @scala.inline
-  def `change-block-type`: typingsSlinky.draftJs.draftJsStrings.`change-block-type` = this.cast("change-block-type")
+  def `change-inline-style`: typingsSlinky.draftJs.draftJsStrings.`change-inline-style` = "change-inline-style".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.`change-inline-style`]
   @scala.inline
-  def `change-inline-style`: typingsSlinky.draftJs.draftJsStrings.`change-inline-style` = this.cast("change-inline-style")
+  def `delete-character`: typingsSlinky.draftJs.draftJsStrings.`delete-character` = "delete-character".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.`delete-character`]
   @scala.inline
-  def `delete-character`: typingsSlinky.draftJs.draftJsStrings.`delete-character` = this.cast("delete-character")
+  def `insert-characters`: typingsSlinky.draftJs.draftJsStrings.`insert-characters` = "insert-characters".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.`insert-characters`]
   @scala.inline
-  def `insert-characters`: typingsSlinky.draftJs.draftJsStrings.`insert-characters` = this.cast("insert-characters")
+  def `insert-fragment`: typingsSlinky.draftJs.draftJsStrings.`insert-fragment` = "insert-fragment".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.`insert-fragment`]
   @scala.inline
-  def `insert-fragment`: typingsSlinky.draftJs.draftJsStrings.`insert-fragment` = this.cast("insert-fragment")
+  def redo: typingsSlinky.draftJs.draftJsStrings.redo = "redo".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.redo]
   @scala.inline
-  def redo: typingsSlinky.draftJs.draftJsStrings.redo = this.cast("redo")
+  def `remove-range`: typingsSlinky.draftJs.draftJsStrings.`remove-range` = "remove-range".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.`remove-range`]
   @scala.inline
-  def `remove-range`: typingsSlinky.draftJs.draftJsStrings.`remove-range` = this.cast("remove-range")
+  def `spellcheck-change`: typingsSlinky.draftJs.draftJsStrings.`spellcheck-change` = "spellcheck-change".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.`spellcheck-change`]
   @scala.inline
-  def `spellcheck-change`: typingsSlinky.draftJs.draftJsStrings.`spellcheck-change` = this.cast("spellcheck-change")
+  def `split-block`: typingsSlinky.draftJs.draftJsStrings.`split-block` = "split-block".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.`split-block`]
   @scala.inline
-  def `split-block`: typingsSlinky.draftJs.draftJsStrings.`split-block` = this.cast("split-block")
-  @scala.inline
-  def undo: typingsSlinky.draftJs.draftJsStrings.undo = this.cast("undo")
+  def undo: typingsSlinky.draftJs.draftJsStrings.undo = "undo".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.undo]
 }
 

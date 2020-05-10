@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCharacter extends js.Object {
-  var character: js.UndefOr[Double] = js.undefined
-  var line: js.UndefOr[Double] = js.undefined
+  var character: js.UndefOr[Double] = js.native
+  var line: js.UndefOr[Double] = js.native
 }
 
 object AnonCharacter {
   @scala.inline
-  def apply(character: Int | Double = null, line: Int | Double = null): AnonCharacter = {
+  def apply(): AnonCharacter = {
     val __obj = js.Dynamic.literal()
-    if (character != null) __obj.updateDynamic("character")(character.asInstanceOf[js.Any])
-    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCharacter]
   }
+  @scala.inline
+  implicit class AnonCharacterOps[Self <: AnonCharacter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCharacter(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("character")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCharacter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("character")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLine(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,10 +14,29 @@ trait DeleteRemediationExceptionsResponse extends js.Object {
 
 object DeleteRemediationExceptionsResponse {
   @scala.inline
-  def apply(FailedBatches: FailedDeleteRemediationExceptionsBatches = null): DeleteRemediationExceptionsResponse = {
+  def apply(): DeleteRemediationExceptionsResponse = {
     val __obj = js.Dynamic.literal()
-    if (FailedBatches != null) __obj.updateDynamic("FailedBatches")(FailedBatches.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteRemediationExceptionsResponse]
   }
+  @scala.inline
+  implicit class DeleteRemediationExceptionsResponseOps[Self <: DeleteRemediationExceptionsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailedBatches(value: FailedDeleteRemediationExceptionsBatches): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedBatches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailedBatches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedBatches")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

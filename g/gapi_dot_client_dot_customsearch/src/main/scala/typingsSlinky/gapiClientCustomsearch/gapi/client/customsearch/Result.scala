@@ -7,60 +7,218 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Result extends js.Object {
-  var cacheId: js.UndefOr[String] = js.undefined
-  var displayLink: js.UndefOr[String] = js.undefined
-  var fileFormat: js.UndefOr[String] = js.undefined
-  var formattedUrl: js.UndefOr[String] = js.undefined
-  var htmlFormattedUrl: js.UndefOr[String] = js.undefined
-  var htmlSnippet: js.UndefOr[String] = js.undefined
-  var htmlTitle: js.UndefOr[String] = js.undefined
-  var image: js.UndefOr[AnonByteSize] = js.undefined
-  var kind: js.UndefOr[String] = js.undefined
-  var labels: js.UndefOr[js.Array[AnonDisplayName]] = js.undefined
-  var link: js.UndefOr[String] = js.undefined
-  var mime: js.UndefOr[String] = js.undefined
-  var pagemap: js.UndefOr[Record[String, js.Array[Record[String, _]]]] = js.undefined
-  var snippet: js.UndefOr[String] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
+  var cacheId: js.UndefOr[String] = js.native
+  var displayLink: js.UndefOr[String] = js.native
+  var fileFormat: js.UndefOr[String] = js.native
+  var formattedUrl: js.UndefOr[String] = js.native
+  var htmlFormattedUrl: js.UndefOr[String] = js.native
+  var htmlSnippet: js.UndefOr[String] = js.native
+  var htmlTitle: js.UndefOr[String] = js.native
+  var image: js.UndefOr[AnonByteSize] = js.native
+  var kind: js.UndefOr[String] = js.native
+  var labels: js.UndefOr[js.Array[AnonDisplayName]] = js.native
+  var link: js.UndefOr[String] = js.native
+  var mime: js.UndefOr[String] = js.native
+  var pagemap: js.UndefOr[Record[String, js.Array[Record[String, _]]]] = js.native
+  var snippet: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.native
 }
 
 object Result {
   @scala.inline
-  def apply(
-    cacheId: String = null,
-    displayLink: String = null,
-    fileFormat: String = null,
-    formattedUrl: String = null,
-    htmlFormattedUrl: String = null,
-    htmlSnippet: String = null,
-    htmlTitle: String = null,
-    image: AnonByteSize = null,
-    kind: String = null,
-    labels: js.Array[AnonDisplayName] = null,
-    link: String = null,
-    mime: String = null,
-    pagemap: Record[String, js.Array[Record[String, _]]] = null,
-    snippet: String = null,
-    title: String = null
-  ): Result = {
+  def apply(): Result = {
     val __obj = js.Dynamic.literal()
-    if (cacheId != null) __obj.updateDynamic("cacheId")(cacheId.asInstanceOf[js.Any])
-    if (displayLink != null) __obj.updateDynamic("displayLink")(displayLink.asInstanceOf[js.Any])
-    if (fileFormat != null) __obj.updateDynamic("fileFormat")(fileFormat.asInstanceOf[js.Any])
-    if (formattedUrl != null) __obj.updateDynamic("formattedUrl")(formattedUrl.asInstanceOf[js.Any])
-    if (htmlFormattedUrl != null) __obj.updateDynamic("htmlFormattedUrl")(htmlFormattedUrl.asInstanceOf[js.Any])
-    if (htmlSnippet != null) __obj.updateDynamic("htmlSnippet")(htmlSnippet.asInstanceOf[js.Any])
-    if (htmlTitle != null) __obj.updateDynamic("htmlTitle")(htmlTitle.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
-    if (mime != null) __obj.updateDynamic("mime")(mime.asInstanceOf[js.Any])
-    if (pagemap != null) __obj.updateDynamic("pagemap")(pagemap.asInstanceOf[js.Any])
-    if (snippet != null) __obj.updateDynamic("snippet")(snippet.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[Result]
   }
+  @scala.inline
+  implicit class ResultOps[Self <: Result] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCacheId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormattedUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormattedUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtmlFormattedUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlFormattedUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtmlFormattedUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlFormattedUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtmlSnippet(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlSnippet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtmlSnippet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlSnippet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtmlTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtmlTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage(value: AnonByteSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: js.Array[AnonDisplayName]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPagemap(value: Record[String, js.Array[Record[String, _]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pagemap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPagemap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pagemap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnippet(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snippet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnippet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snippet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

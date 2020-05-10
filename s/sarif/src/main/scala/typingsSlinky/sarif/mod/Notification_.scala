@@ -5,68 +5,161 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Notification_ extends js.Object {
   /**
     * A reference used to locate the rule descriptor associated with this notification.
     */
-  var associatedRule: js.UndefOr[ReportingDescriptorReference] = js.undefined
+  var associatedRule: js.UndefOr[ReportingDescriptorReference] = js.native
   /**
     * A reference used to locate the descriptor relevant to this notification.
     */
-  var descriptor: js.UndefOr[ReportingDescriptorReference] = js.undefined
+  var descriptor: js.UndefOr[ReportingDescriptorReference] = js.native
   /**
     * The runtime exception, if any, relevant to this notification.
     */
-  var exception: js.UndefOr[Exception] = js.undefined
+  var exception: js.UndefOr[Exception] = js.native
   /**
     * A value specifying the severity level of the notification.
     */
-  var level: js.UndefOr[level] = js.undefined
+  var level: js.UndefOr[level] = js.native
   /**
     * The locations relevant to this notification.
     */
-  var locations: js.UndefOr[js.Array[Location]] = js.undefined
+  var locations: js.UndefOr[js.Array[Location]] = js.native
   /**
     * A message that describes the condition that was encountered.
     */
-  var message: Message
+  var message: Message = js.native
   /**
     * Key/value pairs that provide additional information about the notification.
     */
-  var properties: js.UndefOr[PropertyBag] = js.undefined
+  var properties: js.UndefOr[PropertyBag] = js.native
   /**
     * The thread identifier of the code that generated the notification.
     */
-  var threadId: js.UndefOr[Double] = js.undefined
+  var threadId: js.UndefOr[Double] = js.native
   /**
     * The Coordinated Universal Time (UTC) date and time at which the analysis tool generated the notification.
     */
-  var timeUtc: js.UndefOr[String] = js.undefined
+  var timeUtc: js.UndefOr[String] = js.native
 }
 
 object Notification_ {
   @scala.inline
-  def apply(
-    message: Message,
-    associatedRule: ReportingDescriptorReference = null,
-    descriptor: ReportingDescriptorReference = null,
-    exception: Exception = null,
-    level: level = null,
-    locations: js.Array[Location] = null,
-    properties: PropertyBag = null,
-    threadId: Int | Double = null,
-    timeUtc: String = null
-  ): Notification_ = {
+  def apply(message: Message): Notification_ = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
-    if (associatedRule != null) __obj.updateDynamic("associatedRule")(associatedRule.asInstanceOf[js.Any])
-    if (descriptor != null) __obj.updateDynamic("descriptor")(descriptor.asInstanceOf[js.Any])
-    if (exception != null) __obj.updateDynamic("exception")(exception.asInstanceOf[js.Any])
-    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
-    if (locations != null) __obj.updateDynamic("locations")(locations.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
-    if (threadId != null) __obj.updateDynamic("threadId")(threadId.asInstanceOf[js.Any])
-    if (timeUtc != null) __obj.updateDynamic("timeUtc")(timeUtc.asInstanceOf[js.Any])
     __obj.asInstanceOf[Notification_]
   }
+  @scala.inline
+  implicit class Notification_Ops[Self <: Notification_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMessage(value: Message): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAssociatedRule(value: ReportingDescriptorReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedRule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociatedRule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedRule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescriptor(value: ReportingDescriptorReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("descriptor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescriptor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("descriptor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withException(value: Exception): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exception")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutException: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exception")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevel(value: level): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocations(value: js.Array[Location]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProperties(value: PropertyBag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreadId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threadId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreadId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threadId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeUtc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeUtc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeUtc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeUtc")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

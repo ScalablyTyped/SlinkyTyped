@@ -13,7 +13,7 @@ object vector3Mod extends js.Object {
   @js.native
   class Vector3 () extends js.Object {
     def this(x: Double, y: Double, z: Double) = this()
-    var values: scala.scalajs.js.typedarray.Float32Array = js.native
+    var values: js.typedarray.Float32Array = js.native
     var x: Double = js.native
     var y: Double = js.native
     var z: Double = js.native

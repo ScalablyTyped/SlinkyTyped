@@ -17,20 +17,18 @@ trait NodeScreenEventType extends js.Object
 
 object NodeScreenEventType {
   @scala.inline
-  def blur: typingsSlinky.blessed.blessedStrings.blur = this.cast("blur")
+  def blur: typingsSlinky.blessed.blessedStrings.blur = "blur".asInstanceOf[typingsSlinky.blessed.blessedStrings.blur]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def click: typingsSlinky.blessed.blessedStrings.click = "click".asInstanceOf[typingsSlinky.blessed.blessedStrings.click]
   @scala.inline
-  def click: typingsSlinky.blessed.blessedStrings.click = this.cast("click")
+  def `element click`: typingsSlinky.blessed.blessedStrings.`element click` = ("element click").asInstanceOf[typingsSlinky.blessed.blessedStrings.`element click`]
   @scala.inline
-  def `element click`: typingsSlinky.blessed.blessedStrings.`element click` = this.cast("element click")
+  def `element mouseout`: typingsSlinky.blessed.blessedStrings.`element mouseout` = ("element mouseout").asInstanceOf[typingsSlinky.blessed.blessedStrings.`element mouseout`]
   @scala.inline
-  def `element mouseout`: typingsSlinky.blessed.blessedStrings.`element mouseout` = this.cast("element mouseout")
+  def `element mouseover`: typingsSlinky.blessed.blessedStrings.`element mouseover` = ("element mouseover").asInstanceOf[typingsSlinky.blessed.blessedStrings.`element mouseover`]
   @scala.inline
-  def `element mouseover`: typingsSlinky.blessed.blessedStrings.`element mouseover` = this.cast("element mouseover")
+  def `element mouseup`: typingsSlinky.blessed.blessedStrings.`element mouseup` = ("element mouseup").asInstanceOf[typingsSlinky.blessed.blessedStrings.`element mouseup`]
   @scala.inline
-  def `element mouseup`: typingsSlinky.blessed.blessedStrings.`element mouseup` = this.cast("element mouseup")
-  @scala.inline
-  def focus: typingsSlinky.blessed.blessedStrings.focus = this.cast("focus")
+  def focus: typingsSlinky.blessed.blessedStrings.focus = "focus".asInstanceOf[typingsSlinky.blessed.blessedStrings.focus]
 }
 

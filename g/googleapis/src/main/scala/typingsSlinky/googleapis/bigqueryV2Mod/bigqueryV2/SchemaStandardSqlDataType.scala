@@ -33,16 +33,53 @@ trait SchemaStandardSqlDataType extends js.Object {
 
 object SchemaStandardSqlDataType {
   @scala.inline
-  def apply(
-    arrayElementType: SchemaStandardSqlDataType = null,
-    structType: SchemaStandardSqlStructType = null,
-    typeKind: String = null
-  ): SchemaStandardSqlDataType = {
+  def apply(): SchemaStandardSqlDataType = {
     val __obj = js.Dynamic.literal()
-    if (arrayElementType != null) __obj.updateDynamic("arrayElementType")(arrayElementType.asInstanceOf[js.Any])
-    if (structType != null) __obj.updateDynamic("structType")(structType.asInstanceOf[js.Any])
-    if (typeKind != null) __obj.updateDynamic("typeKind")(typeKind.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStandardSqlDataType]
   }
+  @scala.inline
+  implicit class SchemaStandardSqlDataTypeOps[Self <: SchemaStandardSqlDataType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrayElementType(value: SchemaStandardSqlDataType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayElementType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrayElementType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayElementType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStructType(value: SchemaStandardSqlStructType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("structType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStructType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("structType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypeKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeKind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypeKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeKind")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

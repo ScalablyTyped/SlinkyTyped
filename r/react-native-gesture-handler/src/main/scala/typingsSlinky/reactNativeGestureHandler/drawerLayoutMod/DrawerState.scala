@@ -13,12 +13,10 @@ trait DrawerState extends js.Object
 
 object DrawerState {
   @scala.inline
-  def Dragging: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.Dragging = this.cast("Dragging")
+  def Dragging: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.Dragging = "Dragging".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.Dragging]
   @scala.inline
-  def Idle: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.Idle = this.cast("Idle")
+  def Idle: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.Idle = "Idle".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.Idle]
   @scala.inline
-  def Settling: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.Settling = this.cast("Settling")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Settling: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.Settling = "Settling".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.Settling]
 }
 

@@ -16,16 +16,14 @@ trait WindowsDeviceType extends js.Object
 
 object WindowsDeviceType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def desktop: typingsSlinky.microsoftGraph.microsoftGraphStrings.desktop = "desktop".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.desktop]
   @scala.inline
-  def desktop: typingsSlinky.microsoftGraph.microsoftGraphStrings.desktop = this.cast("desktop")
+  def holographic: typingsSlinky.microsoftGraph.microsoftGraphStrings.holographic = "holographic".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.holographic]
   @scala.inline
-  def holographic: typingsSlinky.microsoftGraph.microsoftGraphStrings.holographic = this.cast("holographic")
+  def mobile: typingsSlinky.microsoftGraph.microsoftGraphStrings.mobile = "mobile".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.mobile]
   @scala.inline
-  def mobile: typingsSlinky.microsoftGraph.microsoftGraphStrings.mobile = this.cast("mobile")
+  def none: none_ = "none".asInstanceOf[none_]
   @scala.inline
-  def none: none_ = this.cast("none")
-  @scala.inline
-  def team: typingsSlinky.microsoftGraph.microsoftGraphStrings.team = this.cast("team")
+  def team: typingsSlinky.microsoftGraph.microsoftGraphStrings.team = "team".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.team]
 }
 

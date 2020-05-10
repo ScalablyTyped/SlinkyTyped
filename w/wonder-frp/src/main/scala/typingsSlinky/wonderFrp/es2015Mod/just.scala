@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 object just
   extends TopLevel[
       js.Function1[
-        /* returnValue */ js.Any, 
+        /* stream */ js.Any, 
         typingsSlinky.wonderFrp.streamAnonymousStreamMod.AnonymousStream
       ]
     ]

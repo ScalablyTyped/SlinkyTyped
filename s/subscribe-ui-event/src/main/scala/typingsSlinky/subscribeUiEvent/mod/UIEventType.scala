@@ -17,20 +17,18 @@ trait UIEventType extends js.Object
 
 object UIEventType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def resize: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resize = "resize".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resize]
   @scala.inline
-  def resize: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resize = this.cast("resize")
+  def resizeEnd: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resizeEnd = "resizeEnd".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resizeEnd]
   @scala.inline
-  def resizeEnd: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resizeEnd = this.cast("resizeEnd")
+  def resizeStart: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resizeStart = "resizeStart".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resizeStart]
   @scala.inline
-  def resizeStart: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resizeStart = this.cast("resizeStart")
+  def scroll: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scroll = "scroll".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scroll]
   @scala.inline
-  def scroll: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scroll = this.cast("scroll")
+  def scrollEnd: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scrollEnd = "scrollEnd".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scrollEnd]
   @scala.inline
-  def scrollEnd: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scrollEnd = this.cast("scrollEnd")
+  def scrollStart: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scrollStart = "scrollStart".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scrollStart]
   @scala.inline
-  def scrollStart: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scrollStart = this.cast("scrollStart")
-  @scala.inline
-  def visibilitychange: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.visibilitychange = this.cast("visibilitychange")
+  def visibilitychange: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.visibilitychange = "visibilitychange".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.visibilitychange]
 }
 

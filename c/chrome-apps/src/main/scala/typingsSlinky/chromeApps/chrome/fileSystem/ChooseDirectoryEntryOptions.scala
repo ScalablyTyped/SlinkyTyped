@@ -5,25 +5,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.chromeApps.chrome.fileSystem.ChooseEntryOptions because Already inherited */ trait ChooseDirectoryEntryOptions extends ChooseEntryOptionsBase {
-  var `type`: openDirectory
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.chromeApps.chrome.fileSystem.ChooseEntryOptions because Already inherited */ @js.native
+trait ChooseDirectoryEntryOptions extends ChooseEntryOptionsBase {
+  var `type`: openDirectory = js.native
 }
 
 object ChooseDirectoryEntryOptions {
   @scala.inline
-  def apply(
-    `type`: openDirectory,
-    accepts: js.Array[AcceptOptions] = null,
-    acceptsAllTypes: js.UndefOr[Boolean] = js.undefined,
-    suggestedName: String = null
-  ): ChooseDirectoryEntryOptions = {
+  def apply(`type`: openDirectory): ChooseDirectoryEntryOptions = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (accepts != null) __obj.updateDynamic("accepts")(accepts.asInstanceOf[js.Any])
-    if (!js.isUndefined(acceptsAllTypes)) __obj.updateDynamic("acceptsAllTypes")(acceptsAllTypes.asInstanceOf[js.Any])
-    if (suggestedName != null) __obj.updateDynamic("suggestedName")(suggestedName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChooseDirectoryEntryOptions]
   }
+  @scala.inline
+  implicit class ChooseDirectoryEntryOptionsOps[Self <: ChooseDirectoryEntryOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: openDirectory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

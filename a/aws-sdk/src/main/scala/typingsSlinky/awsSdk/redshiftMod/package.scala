@@ -9,6 +9,7 @@ package object redshiftMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`restore-cluster`
     - typingsSlinky.awsSdk.awsSdkStrings.`recommend-node-config`
+    - typingsSlinky.awsSdk.awsSdkStrings.`resize-cluster`
     - java.lang.String
   */
   type ActionType = typingsSlinky.awsSdk.redshiftMod._ActionType | java.lang.String
@@ -127,7 +128,13 @@ package object redshiftMod {
   */
   type ScheduledActionState = typingsSlinky.awsSdk.redshiftMod._ScheduledActionState | java.lang.String
   type ScheduledActionTimeList = js.Array[js.Date]
-  type ScheduledActionTypeValues = typingsSlinky.awsSdk.awsSdkStrings.ResizeCluster | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ResizeCluster
+    - typingsSlinky.awsSdk.awsSdkStrings.PauseCluster
+    - typingsSlinky.awsSdk.awsSdkStrings.ResumeCluster
+    - java.lang.String
+  */
+  type ScheduledActionTypeValues = typingsSlinky.awsSdk.redshiftMod._ScheduledActionTypeValues | java.lang.String
   type ScheduledSnapshotTimeList = js.Array[js.Date]
   type SensitiveString = java.lang.String
   /* Rewritten from type alias, can be one of: 

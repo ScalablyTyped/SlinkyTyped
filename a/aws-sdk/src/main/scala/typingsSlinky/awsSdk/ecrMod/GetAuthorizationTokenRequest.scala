@@ -14,10 +14,29 @@ trait GetAuthorizationTokenRequest extends js.Object {
 
 object GetAuthorizationTokenRequest {
   @scala.inline
-  def apply(registryIds: GetAuthorizationTokenRegistryIdList = null): GetAuthorizationTokenRequest = {
+  def apply(): GetAuthorizationTokenRequest = {
     val __obj = js.Dynamic.literal()
-    if (registryIds != null) __obj.updateDynamic("registryIds")(registryIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAuthorizationTokenRequest]
   }
+  @scala.inline
+  implicit class GetAuthorizationTokenRequestOps[Self <: GetAuthorizationTokenRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRegistryIds(value: GetAuthorizationTokenRegistryIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registryIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegistryIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registryIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

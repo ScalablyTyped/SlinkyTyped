@@ -22,58 +22,59 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Configuration extends js.Object {
   /** Set the value of require.amd and define.amd. */
-  var amd: js.UndefOr[StringDictionary[Boolean]] = js.undefined
+  var amd: js.UndefOr[StringDictionary[Boolean]] = js.native
   /** Report the first error as a hard error instead of tolerating it. */
-  var bail: js.UndefOr[Boolean] = js.undefined
+  var bail: js.UndefOr[Boolean] = js.native
   /** Cache generated modules and chunks to improve performance for multiple incremental builds. */
-  var cache: js.UndefOr[Boolean | js.Object] = js.undefined
+  var cache: js.UndefOr[Boolean | js.Object] = js.native
   /**
     * The base directory (absolute path!) for resolving the `entry` option.
     * If `output.pathinfo` is set, the included pathinfo is shortened to this directory.
     */
-  var context: js.UndefOr[String] = js.undefined
+  var context: js.UndefOr[String] = js.native
   /** Choose a style of source mapping to enhance the debugging process. These values can affect build and rebuild speed dramatically. */
-  var devtool: js.UndefOr[Devtool] = js.undefined
-  var entry: js.UndefOr[String | js.Array[String] | Entry | EntryFunc] = js.undefined
+  var devtool: js.UndefOr[Devtool] = js.native
+  var entry: js.UndefOr[String | js.Array[String] | Entry | EntryFunc] = js.native
   /**
     * Specify dependencies that shouldn’t be resolved by webpack, but should become dependencies of the resulting bundle.
     * The kind of the dependency depends on output.libraryTarget.
     */
-  var externals: js.UndefOr[ExternalsElement | js.Array[ExternalsElement]] = js.undefined
+  var externals: js.UndefOr[ExternalsElement | js.Array[ExternalsElement]] = js.native
   /** Enable production optimizations or development hints. */
-  var mode: js.UndefOr[development | production | none] = js.undefined
+  var mode: js.UndefOr[development | production | none] = js.native
   /** Options affecting the normal modules (NormalModuleFactory) */
-  var module: js.UndefOr[Module] = js.undefined
+  var module: js.UndefOr[Module] = js.native
   /** Name of the configuration. Used when loading multiple configurations. */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /** Include polyfills or mocks for various node stuff */
-  var node: js.UndefOr[Node | `false`] = js.undefined
+  var node: js.UndefOr[Node | `false`] = js.native
   /** Optimization options */
-  var optimization: js.UndefOr[Optimization] = js.undefined
+  var optimization: js.UndefOr[Optimization] = js.native
   /** Options affecting the output. */
-  var output: js.UndefOr[Output] = js.undefined
+  var output: js.UndefOr[Output] = js.native
   /** Limit the number of parallel processed modules. Can be used to fine tune performance or to get more reliable profiling results */
-  var parallelism: js.UndefOr[Double] = js.undefined
+  var parallelism: js.UndefOr[Double] = js.native
   /** Performance options */
-  var performance: js.UndefOr[Performance | `false`] = js.undefined
+  var performance: js.UndefOr[Performance | `false`] = js.native
   /** Add additional plugins to the compiler. */
-  var plugins: js.UndefOr[js.Array[Plugin]] = js.undefined
+  var plugins: js.UndefOr[js.Array[Plugin]] = js.native
   /** Capture timing information for each module. */
-  var profile: js.UndefOr[Boolean] = js.undefined
+  var profile: js.UndefOr[Boolean] = js.native
   /** Load compiler state from a json file. */
-  var recordsInputPath: js.UndefOr[String] = js.undefined
+  var recordsInputPath: js.UndefOr[String] = js.native
   /** Store compiler state to a json file. */
-  var recordsOutputPath: js.UndefOr[String] = js.undefined
+  var recordsOutputPath: js.UndefOr[String] = js.native
   /** Used for recordsInputPath and recordsOutputPath */
-  var recordsPath: js.UndefOr[String] = js.undefined
+  var recordsPath: js.UndefOr[String] = js.native
   /** Options affecting the resolving of modules. */
-  var resolve: js.UndefOr[Resolve] = js.undefined
+  var resolve: js.UndefOr[Resolve] = js.native
   /** Like resolve but for loaders. */
-  var resolveLoader: js.UndefOr[ResolveLoader] = js.undefined
+  var resolveLoader: js.UndefOr[ResolveLoader] = js.native
   /** Stats options for logging  */
-  var stats: js.UndefOr[typingsSlinky.webpack.mod.Options.Stats] = js.undefined
+  var stats: js.UndefOr[typingsSlinky.webpack.mod.Options.Stats] = js.native
   /**
     * - "web" Compile for usage in a browser-like environment (default).
     * - "webworker" Compile as WebWorker.
@@ -91,70 +92,365 @@ trait Configuration extends js.Object {
     */
   var target: js.UndefOr[
     web | webworker | node | `async-node` | `node-webkit` | atom | electron | `electron-renderer` | `electron-preload` | `electron-main` | (js.Function1[/* compiler */ js.UndefOr[js.Any], Unit])
-  ] = js.undefined
+  ] = js.native
   /** Enter watch mode, which rebuilds on file change. */
-  var watch: js.UndefOr[Boolean] = js.undefined
-  var watchOptions: js.UndefOr[typingsSlinky.webpack.mod.Options.WatchOptions] = js.undefined
+  var watch: js.UndefOr[Boolean] = js.native
+  var watchOptions: js.UndefOr[typingsSlinky.webpack.mod.Options.WatchOptions] = js.native
 }
 
 object Configuration {
   @scala.inline
-  def apply(
-    amd: StringDictionary[Boolean] = null,
-    bail: js.UndefOr[Boolean] = js.undefined,
-    cache: Boolean | js.Object = null,
-    context: String = null,
-    devtool: Devtool = null,
-    entry: String | js.Array[String] | Entry | EntryFunc = null,
-    externals: ExternalsElement | js.Array[ExternalsElement] = null,
-    mode: development | production | none = null,
-    module: Module = null,
-    name: String = null,
-    node: Node | `false` = null,
-    optimization: Optimization = null,
-    output: Output = null,
-    parallelism: Int | Double = null,
-    performance: Performance | `false` = null,
-    plugins: js.Array[Plugin] = null,
-    profile: js.UndefOr[Boolean] = js.undefined,
-    recordsInputPath: String = null,
-    recordsOutputPath: String = null,
-    recordsPath: String = null,
-    resolve: Resolve = null,
-    resolveLoader: ResolveLoader = null,
-    stats: typingsSlinky.webpack.mod.Options.Stats = null,
-    target: web | webworker | node | `async-node` | `node-webkit` | atom | electron | `electron-renderer` | `electron-preload` | `electron-main` | (js.Function1[/* compiler */ js.UndefOr[js.Any], Unit]) = null,
-    watch: js.UndefOr[Boolean] = js.undefined,
-    watchOptions: typingsSlinky.webpack.mod.Options.WatchOptions = null
-  ): Configuration = {
+  def apply(): Configuration = {
     val __obj = js.Dynamic.literal()
-    if (amd != null) __obj.updateDynamic("amd")(amd.asInstanceOf[js.Any])
-    if (!js.isUndefined(bail)) __obj.updateDynamic("bail")(bail.asInstanceOf[js.Any])
-    if (cache != null) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (devtool != null) __obj.updateDynamic("devtool")(devtool.asInstanceOf[js.Any])
-    if (entry != null) __obj.updateDynamic("entry")(entry.asInstanceOf[js.Any])
-    if (externals != null) __obj.updateDynamic("externals")(externals.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (module != null) __obj.updateDynamic("module")(module.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (node != null) __obj.updateDynamic("node")(node.asInstanceOf[js.Any])
-    if (optimization != null) __obj.updateDynamic("optimization")(optimization.asInstanceOf[js.Any])
-    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
-    if (parallelism != null) __obj.updateDynamic("parallelism")(parallelism.asInstanceOf[js.Any])
-    if (performance != null) __obj.updateDynamic("performance")(performance.asInstanceOf[js.Any])
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
-    if (!js.isUndefined(profile)) __obj.updateDynamic("profile")(profile.asInstanceOf[js.Any])
-    if (recordsInputPath != null) __obj.updateDynamic("recordsInputPath")(recordsInputPath.asInstanceOf[js.Any])
-    if (recordsOutputPath != null) __obj.updateDynamic("recordsOutputPath")(recordsOutputPath.asInstanceOf[js.Any])
-    if (recordsPath != null) __obj.updateDynamic("recordsPath")(recordsPath.asInstanceOf[js.Any])
-    if (resolve != null) __obj.updateDynamic("resolve")(resolve.asInstanceOf[js.Any])
-    if (resolveLoader != null) __obj.updateDynamic("resolveLoader")(resolveLoader.asInstanceOf[js.Any])
-    if (stats != null) __obj.updateDynamic("stats")(stats.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (!js.isUndefined(watch)) __obj.updateDynamic("watch")(watch.asInstanceOf[js.Any])
-    if (watchOptions != null) __obj.updateDynamic("watchOptions")(watchOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[Configuration]
   }
+  @scala.inline
+  implicit class ConfigurationOps[Self <: Configuration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAmd(value: StringDictionary[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBail(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCache(value: Boolean | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContext(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDevtool(value: Devtool): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devtool")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevtool: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devtool")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntryFunction0(value: () => String | js.Array[String] | Entry | (js.Promise[String | js.Array[String] | Entry])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entry")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withEntry(value: String | js.Array[String] | Entry | EntryFunc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalsRegExp(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExternalsFunction3(
+      value: (/* context */ js.Any, /* request */ js.Any, /* callback */ js.Function2[/* error */ js.Any, /* result */ js.Any, Unit]) => js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externals")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withExternals(value: ExternalsElement | js.Array[ExternalsElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: development | production | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModule(value: Module): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("module")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("module")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNode(value: Node | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptimization(value: Optimization): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optimization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptimization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optimization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutput(value: Output): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParallelism(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parallelism")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParallelism: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parallelism")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPerformance(value: Performance | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("performance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPerformance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("performance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlugins(value: js.Array[Plugin]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfile(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecordsInputPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordsInputPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecordsInputPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordsInputPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecordsOutputPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordsOutputPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecordsOutputPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordsOutputPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecordsPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordsPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecordsPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordsPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolve(value: Resolve): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolve")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolve: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolve")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolveLoader(value: ResolveLoader): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveLoader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolveLoader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveLoader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStats(value: typingsSlinky.webpack.mod.Options.Stats): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetFunction1(value: /* compiler */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTarget(
+      value: web | webworker | node | `async-node` | `node-webkit` | atom | electron | `electron-renderer` | `electron-preload` | `electron-main` | (js.Function1[/* compiler */ js.UndefOr[js.Any], Unit])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWatch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWatchOptions(value: typingsSlinky.webpack.mod.Options.WatchOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watchOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWatchOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watchOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAsObject extends js.Object {
   /**
     * The `asObject` option will create a pino-like log object instead of passing all arguments to a console
@@ -13,7 +14,7 @@ trait AnonAsObject extends js.Object {
     * @example
     * pino.info('hi') // creates and logs {msg: 'hi', level: 30, time: <ts>}
     */
-  var asObject: js.UndefOr[Boolean] = js.undefined
+  var asObject: js.UndefOr[Boolean] = js.native
   /**
     * The serializers provided to `pino` are ignored by default in the browser, including the standard
     * serializers provided with Pino. Since the default destination for log messages is the console, values
@@ -69,7 +70,7 @@ trait AnonAsObject extends js.Object {
     *   }
     * })
     */
-  var serialize: js.UndefOr[Boolean | js.Array[String]] = js.undefined
+  var serialize: js.UndefOr[Boolean | js.Array[String]] = js.native
   /**
     * Options for transmission of logs.
     *
@@ -94,7 +95,7 @@ trait AnonAsObject extends js.Object {
     *   }
     * })
     */
-  var transmit: js.UndefOr[AnonLevel] = js.undefined
+  var transmit: js.UndefOr[AnonLevel] = js.native
   /**
     * Instead of passing log messages to `console.log` they can be passed to a supplied function. If `write` is
     * set to a single function, all logging objects are passed to this function. If `write` is an object, it
@@ -124,23 +125,76 @@ trait AnonAsObject extends js.Object {
     *   }
     * })
     */
-  var write: js.UndefOr[WriteFn | AnonDictlogLevel] = js.undefined
+  var write: js.UndefOr[WriteFn | AnonDictlogLevel] = js.native
 }
 
 object AnonAsObject {
   @scala.inline
-  def apply(
-    asObject: js.UndefOr[Boolean] = js.undefined,
-    serialize: Boolean | js.Array[String] = null,
-    transmit: AnonLevel = null,
-    write: WriteFn | AnonDictlogLevel = null
-  ): AnonAsObject = {
+  def apply(): AnonAsObject = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(asObject)) __obj.updateDynamic("asObject")(asObject.asInstanceOf[js.Any])
-    if (serialize != null) __obj.updateDynamic("serialize")(serialize.asInstanceOf[js.Any])
-    if (transmit != null) __obj.updateDynamic("transmit")(transmit.asInstanceOf[js.Any])
-    if (write != null) __obj.updateDynamic("write")(write.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAsObject]
   }
+  @scala.inline
+  implicit class AnonAsObjectOps[Self <: AnonAsObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAsObject(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAsObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSerialize(value: Boolean | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serialize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSerialize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serialize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransmit(value: AnonLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transmit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransmit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transmit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWriteFunction1(value: /* o */ js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWrite(value: WriteFn | AnonDictlogLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

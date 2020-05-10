@@ -21,28 +21,26 @@ trait TYPE extends js.Object
 
 object TYPE {
   @scala.inline
-  def Array: typingsSlinky.parse.parseStrings.Array = this.cast("Array")
+  def Array: typingsSlinky.parse.parseStrings.Array = "Array".asInstanceOf[typingsSlinky.parse.parseStrings.Array]
   @scala.inline
-  def Boolean: typingsSlinky.parse.parseStrings.Boolean = this.cast("Boolean")
+  def Boolean: typingsSlinky.parse.parseStrings.Boolean = "Boolean".asInstanceOf[typingsSlinky.parse.parseStrings.Boolean]
   @scala.inline
-  def Date: typingsSlinky.parse.parseStrings.Date = this.cast("Date")
+  def Date: typingsSlinky.parse.parseStrings.Date = "Date".asInstanceOf[typingsSlinky.parse.parseStrings.Date]
   @scala.inline
-  def File: typingsSlinky.parse.parseStrings.File = this.cast("File")
+  def File: typingsSlinky.parse.parseStrings.File = "File".asInstanceOf[typingsSlinky.parse.parseStrings.File]
   @scala.inline
-  def GeoPoint: typingsSlinky.parse.parseStrings.GeoPoint = this.cast("GeoPoint")
+  def GeoPoint: typingsSlinky.parse.parseStrings.GeoPoint = "GeoPoint".asInstanceOf[typingsSlinky.parse.parseStrings.GeoPoint]
   @scala.inline
-  def Number: typingsSlinky.parse.parseStrings.Number = this.cast("Number")
+  def Number: typingsSlinky.parse.parseStrings.Number = "Number".asInstanceOf[typingsSlinky.parse.parseStrings.Number]
   @scala.inline
-  def Object: typingsSlinky.parse.parseStrings.Object = this.cast("Object")
+  def Object: typingsSlinky.parse.parseStrings.Object = "Object".asInstanceOf[typingsSlinky.parse.parseStrings.Object]
   @scala.inline
-  def Pointer: typingsSlinky.parse.parseStrings.Pointer = this.cast("Pointer")
+  def Pointer: typingsSlinky.parse.parseStrings.Pointer = "Pointer".asInstanceOf[typingsSlinky.parse.parseStrings.Pointer]
   @scala.inline
-  def Polygon: typingsSlinky.parse.parseStrings.Polygon = this.cast("Polygon")
+  def Polygon: typingsSlinky.parse.parseStrings.Polygon = "Polygon".asInstanceOf[typingsSlinky.parse.parseStrings.Polygon]
   @scala.inline
-  def Relation: typingsSlinky.parse.parseStrings.Relation = this.cast("Relation")
+  def Relation: typingsSlinky.parse.parseStrings.Relation = "Relation".asInstanceOf[typingsSlinky.parse.parseStrings.Relation]
   @scala.inline
-  def String: typingsSlinky.parse.parseStrings.String = this.cast("String")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def String: typingsSlinky.parse.parseStrings.String = "String".asInstanceOf[typingsSlinky.parse.parseStrings.String]
 }
 

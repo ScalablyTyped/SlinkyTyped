@@ -6,13 +6,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A single video track from a <video> element. */
+@js.native
 trait VideoTrack extends js.Object {
-  val id: java.lang.String
-  var kind: java.lang.String
-  val label: java.lang.String
-  var language: java.lang.String
-  var selected: scala.Boolean
-  val sourceBuffer: SourceBuffer | Null
+  val id: java.lang.String = js.native
+  var kind: java.lang.String = js.native
+  val label: java.lang.String = js.native
+  var language: java.lang.String = js.native
+  var selected: scala.Boolean = js.native
+  val sourceBuffer: SourceBuffer | Null = js.native
 }
 
 @JSGlobal("VideoTrack")

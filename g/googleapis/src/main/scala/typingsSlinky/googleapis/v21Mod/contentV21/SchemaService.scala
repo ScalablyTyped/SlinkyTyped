@@ -50,26 +50,113 @@ trait SchemaService extends js.Object {
 
 object SchemaService {
   @scala.inline
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    currency: String = null,
-    deliveryCountry: String = null,
-    deliveryTime: SchemaDeliveryTime = null,
-    eligibility: String = null,
-    minimumOrderValue: SchemaPrice = null,
-    name: String = null,
-    rateGroups: js.Array[SchemaRateGroup] = null
-  ): SchemaService = {
+  def apply(): SchemaService = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (currency != null) __obj.updateDynamic("currency")(currency.asInstanceOf[js.Any])
-    if (deliveryCountry != null) __obj.updateDynamic("deliveryCountry")(deliveryCountry.asInstanceOf[js.Any])
-    if (deliveryTime != null) __obj.updateDynamic("deliveryTime")(deliveryTime.asInstanceOf[js.Any])
-    if (eligibility != null) __obj.updateDynamic("eligibility")(eligibility.asInstanceOf[js.Any])
-    if (minimumOrderValue != null) __obj.updateDynamic("minimumOrderValue")(minimumOrderValue.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (rateGroups != null) __obj.updateDynamic("rateGroups")(rateGroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaService]
   }
+  @scala.inline
+  implicit class SchemaServiceOps[Self <: SchemaService] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrency(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeliveryCountry(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryCountry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeliveryCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryCountry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeliveryTime(value: SchemaDeliveryTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeliveryTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEligibility(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eligibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEligibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eligibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumOrderValue(value: SchemaPrice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumOrderValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumOrderValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumOrderValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRateGroups(value: js.Array[SchemaRateGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rateGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRateGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rateGroups")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

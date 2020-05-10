@@ -13,8 +13,6 @@ class HingeConstraint protected () extends Constraint {
   def this(objecta: Object3D, objectb: Object3D, position: Vector3, axis: Vector3) = this()
   def disableMotor(): Unit = js.native
   def enableAngularMotor(velocity: Double, acceleration: Double): Unit = js.native
-  /* CompleteClass */
-  override def getDefinition(): js.Any = js.native
   def setLimits(low: Double, high: Double, bias_factor: Double, relaxation_factor: Double): Unit = js.native
 }
 

@@ -5,48 +5,91 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OlapResultViewOptions
   extends /**
-	 * Option for OlapResultViewOptions
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
   	 * Optional="false" a value indicating whether the result has one or more hierarchies in the columns.
   	 */
-  var hasColumns: js.UndefOr[Boolean] = js.undefined
+  var hasColumns: js.UndefOr[Boolean] = js.native
   /**
   	 * Optional="false" a value indicating whether the result has one or more hierarchies in the rows.
   	 */
-  var hasRows: js.UndefOr[Boolean] = js.undefined
+  var hasRows: js.UndefOr[Boolean] = js.native
   /**
   	 * Optional="false" an object of type $.ig.OlapResult which represents the full cached result.
   	 */
-  var result: js.UndefOr[js.Any] = js.undefined
+  var result: js.UndefOr[js.Any] = js.native
   /**
   	 * Optional="false" an object of type $.ig.OlapResult which represents the visible part of the result.
   	 */
-  var visibleResult: js.UndefOr[js.Any] = js.undefined
+  var visibleResult: js.UndefOr[js.Any] = js.native
 }
 
 object OlapResultViewOptions {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for OlapResultViewOptions
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    hasColumns: js.UndefOr[Boolean] = js.undefined,
-    hasRows: js.UndefOr[Boolean] = js.undefined,
-    result: js.Any = null,
-    visibleResult: js.Any = null
-  ): OlapResultViewOptions = {
+  def apply(): OlapResultViewOptions = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(hasColumns)) __obj.updateDynamic("hasColumns")(hasColumns.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasRows)) __obj.updateDynamic("hasRows")(hasRows.asInstanceOf[js.Any])
-    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
-    if (visibleResult != null) __obj.updateDynamic("visibleResult")(visibleResult.asInstanceOf[js.Any])
     __obj.asInstanceOf[OlapResultViewOptions]
   }
+  @scala.inline
+  implicit class OlapResultViewOptionsOps[Self <: OlapResultViewOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHasColumns(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasRows(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResult(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibleResult(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleResult")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibleResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleResult")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

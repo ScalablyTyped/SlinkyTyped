@@ -37,6 +37,6 @@ class TypingIndicator protected () extends js.Object {
     * @param {String} channelSid
     */
   def send(channelSid: String): js.Any = js.native
-  def typingTimeout(): Double = js.native
+  def typingTimeout: Double = js.native
 }
 

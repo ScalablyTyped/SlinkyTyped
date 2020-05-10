@@ -7,13 +7,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WebPreferences extends js.Object {
   /**
     * A list of strings that will be appended to process.argv in the renderer process
     * of this app. Useful for passing small bits of data down to renderer process
     * preload scripts.
     */
-  var additionalArguments: js.UndefOr[js.Array[String]] = js.undefined
+  var additionalArguments: js.UndefOr[js.Array[String]] = js.native
   /**
     * When specified, web pages with the same affinity will run in the same renderer
     * process. Note that due to reusing the renderer process, certain webPreferences
@@ -22,12 +23,12 @@ trait WebPreferences extends js.Object {
     * nodeIntegration. So it is suggested to use exact same webPreferences for web
     * pages with the same affinity.
     */
-  var affinity: js.UndefOr[String] = js.undefined
+  var affinity: js.UndefOr[String] = js.native
   /**
     * Allow an https page to run JavaScript, CSS or plugins from http URLs. Default is
     * false.
     */
-  var allowRunningInsecureContent: js.UndefOr[Boolean] = js.undefined
+  var allowRunningInsecureContent: js.UndefOr[Boolean] = js.native
   /**
     * Autoplay policy to apply to content in the window, can be
     * no-user-gesture-required, user-gesture-required,
@@ -35,12 +36,12 @@ trait WebPreferences extends js.Object {
     */
   var autoplayPolicy: js.UndefOr[
     `no-user-gesture-required` | `user-gesture-required` | `document-user-activation-required`
-  ] = js.undefined
+  ] = js.native
   /**
     * Whether to throttle animations and timers when the page becomes background. This
     * also affects the . Defaults to true.
     */
-  var backgroundThrottling: js.UndefOr[Boolean] = js.undefined
+  var backgroundThrottling: js.UndefOr[Boolean] = js.native
   /**
     * Whether to run Electron APIs and the specified preload script in a separate
     * JavaScript context. Defaults to false. The context that the preload script runs
@@ -54,94 +55,94 @@ trait WebPreferences extends js.Object {
     * can access this context in the dev tools by selecting the 'Electron Isolated
     * Context' entry in the combo box at the top of the Console tab.
     */
-  var contextIsolation: js.UndefOr[Boolean] = js.undefined
+  var contextIsolation: js.UndefOr[Boolean] = js.native
   /**
     * Defaults to ISO-8859-1.
     */
-  var defaultEncoding: js.UndefOr[String] = js.undefined
+  var defaultEncoding: js.UndefOr[String] = js.native
   /**
     * Sets the default font for the font-family.
     */
-  var defaultFontFamily: js.UndefOr[DefaultFontFamily] = js.undefined
+  var defaultFontFamily: js.UndefOr[DefaultFontFamily] = js.native
   /**
     * Defaults to 16.
     */
-  var defaultFontSize: js.UndefOr[Double] = js.undefined
+  var defaultFontSize: js.UndefOr[Double] = js.native
   /**
     * Defaults to 13.
     */
-  var defaultMonospaceFontSize: js.UndefOr[Double] = js.undefined
+  var defaultMonospaceFontSize: js.UndefOr[Double] = js.native
   /**
     * Whether to enable DevTools. If it is set to false, can not use
     * BrowserWindow.webContents.openDevTools() to open DevTools. Default is true.
     */
-  var devTools: js.UndefOr[Boolean] = js.undefined
+  var devTools: js.UndefOr[Boolean] = js.native
   /**
     * A list of feature strings separated by ,, like CSSVariables,KeyboardEventKey to
     * disable. The full list of supported feature strings can be found in the file.
     */
-  var disableBlinkFeatures: js.UndefOr[String] = js.undefined
+  var disableBlinkFeatures: js.UndefOr[String] = js.native
   /**
     * Whether to prevent the window from resizing when entering HTML Fullscreen.
     * Default is false.
     */
-  var disableHtmlFullscreenWindowResize: js.UndefOr[Boolean] = js.undefined
+  var disableHtmlFullscreenWindowResize: js.UndefOr[Boolean] = js.native
   /**
     * A list of feature strings separated by ,, like CSSVariables,KeyboardEventKey to
     * enable. The full list of supported feature strings can be found in the file.
     */
-  var enableBlinkFeatures: js.UndefOr[String] = js.undefined
+  var enableBlinkFeatures: js.UndefOr[String] = js.native
   /**
     * Whether to enable the module. Default is true.
     */
-  var enableRemoteModule: js.UndefOr[Boolean] = js.undefined
+  var enableRemoteModule: js.UndefOr[Boolean] = js.native
   /**
     * Enables Chromium's experimental features. Default is false.
     */
-  var experimentalFeatures: js.UndefOr[Boolean] = js.undefined
+  var experimentalFeatures: js.UndefOr[Boolean] = js.native
   /**
     * Enables image support. Default is true.
     */
-  var images: js.UndefOr[Boolean] = js.undefined
+  var images: js.UndefOr[Boolean] = js.native
   /**
     * Enables JavaScript support. Default is true.
     */
-  var javascript: js.UndefOr[Boolean] = js.undefined
+  var javascript: js.UndefOr[Boolean] = js.native
   /**
     * Defaults to 0.
     */
-  var minimumFontSize: js.UndefOr[Double] = js.undefined
+  var minimumFontSize: js.UndefOr[Double] = js.native
   /**
     * Whether to use native window.open(). Defaults to false. Child windows will
     * always have node integration disabled unless nodeIntegrationInSubFrames is true.
     * This option is currently experimental.
     */
-  var nativeWindowOpen: js.UndefOr[Boolean] = js.undefined
+  var nativeWindowOpen: js.UndefOr[Boolean] = js.native
   /**
     * Whether dragging and dropping a file or link onto the page causes a navigation.
     * Default is false.
     */
-  var navigateOnDragDrop: js.UndefOr[Boolean] = js.undefined
+  var navigateOnDragDrop: js.UndefOr[Boolean] = js.native
   /**
     * Whether node integration is enabled. Default is false.
     */
-  var nodeIntegration: js.UndefOr[Boolean] = js.undefined
+  var nodeIntegration: js.UndefOr[Boolean] = js.native
   /**
     * Experimental option for enabling Node.js support in sub-frames such as iframes
     * and child windows. All your preloads will load for every iframe, you can use
     * process.isMainFrame to determine if you are in the main frame or not.
     */
-  var nodeIntegrationInSubFrames: js.UndefOr[Boolean] = js.undefined
+  var nodeIntegrationInSubFrames: js.UndefOr[Boolean] = js.native
   /**
     * Whether node integration is enabled in web workers. Default is false. More about
     * this can be found in .
     */
-  var nodeIntegrationInWorker: js.UndefOr[Boolean] = js.undefined
+  var nodeIntegrationInWorker: js.UndefOr[Boolean] = js.native
   /**
     * Whether to enable offscreen rendering for the browser window. Defaults to false.
     * See the for more details.
     */
-  var offscreen: js.UndefOr[Boolean] = js.undefined
+  var offscreen: js.UndefOr[Boolean] = js.native
   /**
     * Sets the session used by the page according to the session's partition string.
     * If partition starts with persist:, the page will use a persistent session
@@ -150,11 +151,11 @@ trait WebPreferences extends js.Object {
     * partition, multiple pages can share the same session. Default is the default
     * session.
     */
-  var partition: js.UndefOr[String] = js.undefined
+  var partition: js.UndefOr[String] = js.native
   /**
     * Whether plugins should be enabled. Default is false.
     */
-  var plugins: js.UndefOr[Boolean] = js.undefined
+  var plugins: js.UndefOr[Boolean] = js.native
   /**
     * Specifies a script that will be loaded before other scripts run in the page.
     * This script will always have access to node APIs no matter whether node
@@ -162,17 +163,17 @@ trait WebPreferences extends js.Object {
     * the script. When node integration is turned off, the preload script can
     * reintroduce Node global symbols back to the global scope. See example .
     */
-  var preload: js.UndefOr[String] = js.undefined
+  var preload: js.UndefOr[String] = js.native
   /**
     * Whether to enable browser style consecutive dialog protection. Default is false.
     */
-  var safeDialogs: js.UndefOr[Boolean] = js.undefined
+  var safeDialogs: js.UndefOr[Boolean] = js.native
   /**
     * The message to display when consecutive dialog protection is triggered. If not
     * defined the default message would be used, note that currently the default
     * message is in English and not localized.
     */
-  var safeDialogsMessage: js.UndefOr[String] = js.undefined
+  var safeDialogsMessage: js.UndefOr[String] = js.native
   /**
     * If set, this will sandbox the renderer associated with the window, making it
     * compatible with the Chromium OS-level sandbox and disabling the Node.js engine.
@@ -180,32 +181,32 @@ trait WebPreferences extends js.Object {
     * preload script are more limited. Read more about the option . This option is
     * currently experimental and may change or be removed in future Electron releases.
     */
-  var sandbox: js.UndefOr[Boolean] = js.undefined
+  var sandbox: js.UndefOr[Boolean] = js.native
   /**
     * Enables scroll bounce (rubber banding) effect on macOS. Default is false.
     */
-  var scrollBounce: js.UndefOr[Boolean] = js.undefined
+  var scrollBounce: js.UndefOr[Boolean] = js.native
   /**
     * Sets the session used by the page. Instead of passing the Session object
     * directly, you can also choose to use the partition option instead, which accepts
     * a partition string. When both session and partition are provided, session will
     * be preferred. Default is the default session.
     */
-  var session: js.UndefOr[Session_] = js.undefined
+  var session: js.UndefOr[Session_] = js.native
   /**
     * Make TextArea elements resizable. Default is true.
     */
-  var textAreasAreResizable: js.UndefOr[Boolean] = js.undefined
+  var textAreasAreResizable: js.UndefOr[Boolean] = js.native
   /**
     * When false, it will disable the same-origin policy (usually using testing
     * websites by people), and set allowRunningInsecureContent to true if this options
     * has not been set by user. Default is true.
     */
-  var webSecurity: js.UndefOr[Boolean] = js.undefined
+  var webSecurity: js.UndefOr[Boolean] = js.native
   /**
     * Enables WebGL support. Default is true.
     */
-  var webgl: js.UndefOr[Boolean] = js.undefined
+  var webgl: js.UndefOr[Boolean] = js.native
   /**
     * Whether to enable the . Defaults to false. The preload script configured for the
     * will have node integration enabled when it is executed so you should ensure
@@ -213,95 +214,482 @@ trait WebPreferences extends js.Object {
     * preload script. You can use the will-attach-webview event on to strip away the
     * preload script and to validate or alter the 's initial settings.
     */
-  var webviewTag: js.UndefOr[Boolean] = js.undefined
+  var webviewTag: js.UndefOr[Boolean] = js.native
   /**
     * The default zoom factor of the page, 3.0 represents 300%. Default is 1.0.
     */
-  var zoomFactor: js.UndefOr[Double] = js.undefined
+  var zoomFactor: js.UndefOr[Double] = js.native
 }
 
 object WebPreferences {
   @scala.inline
-  def apply(
-    additionalArguments: js.Array[String] = null,
-    affinity: String = null,
-    allowRunningInsecureContent: js.UndefOr[Boolean] = js.undefined,
-    autoplayPolicy: `no-user-gesture-required` | `user-gesture-required` | `document-user-activation-required` = null,
-    backgroundThrottling: js.UndefOr[Boolean] = js.undefined,
-    contextIsolation: js.UndefOr[Boolean] = js.undefined,
-    defaultEncoding: String = null,
-    defaultFontFamily: DefaultFontFamily = null,
-    defaultFontSize: Int | Double = null,
-    defaultMonospaceFontSize: Int | Double = null,
-    devTools: js.UndefOr[Boolean] = js.undefined,
-    disableBlinkFeatures: String = null,
-    disableHtmlFullscreenWindowResize: js.UndefOr[Boolean] = js.undefined,
-    enableBlinkFeatures: String = null,
-    enableRemoteModule: js.UndefOr[Boolean] = js.undefined,
-    experimentalFeatures: js.UndefOr[Boolean] = js.undefined,
-    images: js.UndefOr[Boolean] = js.undefined,
-    javascript: js.UndefOr[Boolean] = js.undefined,
-    minimumFontSize: Int | Double = null,
-    nativeWindowOpen: js.UndefOr[Boolean] = js.undefined,
-    navigateOnDragDrop: js.UndefOr[Boolean] = js.undefined,
-    nodeIntegration: js.UndefOr[Boolean] = js.undefined,
-    nodeIntegrationInSubFrames: js.UndefOr[Boolean] = js.undefined,
-    nodeIntegrationInWorker: js.UndefOr[Boolean] = js.undefined,
-    offscreen: js.UndefOr[Boolean] = js.undefined,
-    partition: String = null,
-    plugins: js.UndefOr[Boolean] = js.undefined,
-    preload: String = null,
-    safeDialogs: js.UndefOr[Boolean] = js.undefined,
-    safeDialogsMessage: String = null,
-    sandbox: js.UndefOr[Boolean] = js.undefined,
-    scrollBounce: js.UndefOr[Boolean] = js.undefined,
-    session: Session_ = null,
-    textAreasAreResizable: js.UndefOr[Boolean] = js.undefined,
-    webSecurity: js.UndefOr[Boolean] = js.undefined,
-    webgl: js.UndefOr[Boolean] = js.undefined,
-    webviewTag: js.UndefOr[Boolean] = js.undefined,
-    zoomFactor: Int | Double = null
-  ): WebPreferences = {
+  def apply(): WebPreferences = {
     val __obj = js.Dynamic.literal()
-    if (additionalArguments != null) __obj.updateDynamic("additionalArguments")(additionalArguments.asInstanceOf[js.Any])
-    if (affinity != null) __obj.updateDynamic("affinity")(affinity.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowRunningInsecureContent)) __obj.updateDynamic("allowRunningInsecureContent")(allowRunningInsecureContent.asInstanceOf[js.Any])
-    if (autoplayPolicy != null) __obj.updateDynamic("autoplayPolicy")(autoplayPolicy.asInstanceOf[js.Any])
-    if (!js.isUndefined(backgroundThrottling)) __obj.updateDynamic("backgroundThrottling")(backgroundThrottling.asInstanceOf[js.Any])
-    if (!js.isUndefined(contextIsolation)) __obj.updateDynamic("contextIsolation")(contextIsolation.asInstanceOf[js.Any])
-    if (defaultEncoding != null) __obj.updateDynamic("defaultEncoding")(defaultEncoding.asInstanceOf[js.Any])
-    if (defaultFontFamily != null) __obj.updateDynamic("defaultFontFamily")(defaultFontFamily.asInstanceOf[js.Any])
-    if (defaultFontSize != null) __obj.updateDynamic("defaultFontSize")(defaultFontSize.asInstanceOf[js.Any])
-    if (defaultMonospaceFontSize != null) __obj.updateDynamic("defaultMonospaceFontSize")(defaultMonospaceFontSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(devTools)) __obj.updateDynamic("devTools")(devTools.asInstanceOf[js.Any])
-    if (disableBlinkFeatures != null) __obj.updateDynamic("disableBlinkFeatures")(disableBlinkFeatures.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableHtmlFullscreenWindowResize)) __obj.updateDynamic("disableHtmlFullscreenWindowResize")(disableHtmlFullscreenWindowResize.asInstanceOf[js.Any])
-    if (enableBlinkFeatures != null) __obj.updateDynamic("enableBlinkFeatures")(enableBlinkFeatures.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableRemoteModule)) __obj.updateDynamic("enableRemoteModule")(enableRemoteModule.asInstanceOf[js.Any])
-    if (!js.isUndefined(experimentalFeatures)) __obj.updateDynamic("experimentalFeatures")(experimentalFeatures.asInstanceOf[js.Any])
-    if (!js.isUndefined(images)) __obj.updateDynamic("images")(images.asInstanceOf[js.Any])
-    if (!js.isUndefined(javascript)) __obj.updateDynamic("javascript")(javascript.asInstanceOf[js.Any])
-    if (minimumFontSize != null) __obj.updateDynamic("minimumFontSize")(minimumFontSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(nativeWindowOpen)) __obj.updateDynamic("nativeWindowOpen")(nativeWindowOpen.asInstanceOf[js.Any])
-    if (!js.isUndefined(navigateOnDragDrop)) __obj.updateDynamic("navigateOnDragDrop")(navigateOnDragDrop.asInstanceOf[js.Any])
-    if (!js.isUndefined(nodeIntegration)) __obj.updateDynamic("nodeIntegration")(nodeIntegration.asInstanceOf[js.Any])
-    if (!js.isUndefined(nodeIntegrationInSubFrames)) __obj.updateDynamic("nodeIntegrationInSubFrames")(nodeIntegrationInSubFrames.asInstanceOf[js.Any])
-    if (!js.isUndefined(nodeIntegrationInWorker)) __obj.updateDynamic("nodeIntegrationInWorker")(nodeIntegrationInWorker.asInstanceOf[js.Any])
-    if (!js.isUndefined(offscreen)) __obj.updateDynamic("offscreen")(offscreen.asInstanceOf[js.Any])
-    if (partition != null) __obj.updateDynamic("partition")(partition.asInstanceOf[js.Any])
-    if (!js.isUndefined(plugins)) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
-    if (preload != null) __obj.updateDynamic("preload")(preload.asInstanceOf[js.Any])
-    if (!js.isUndefined(safeDialogs)) __obj.updateDynamic("safeDialogs")(safeDialogs.asInstanceOf[js.Any])
-    if (safeDialogsMessage != null) __obj.updateDynamic("safeDialogsMessage")(safeDialogsMessage.asInstanceOf[js.Any])
-    if (!js.isUndefined(sandbox)) __obj.updateDynamic("sandbox")(sandbox.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollBounce)) __obj.updateDynamic("scrollBounce")(scrollBounce.asInstanceOf[js.Any])
-    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
-    if (!js.isUndefined(textAreasAreResizable)) __obj.updateDynamic("textAreasAreResizable")(textAreasAreResizable.asInstanceOf[js.Any])
-    if (!js.isUndefined(webSecurity)) __obj.updateDynamic("webSecurity")(webSecurity.asInstanceOf[js.Any])
-    if (!js.isUndefined(webgl)) __obj.updateDynamic("webgl")(webgl.asInstanceOf[js.Any])
-    if (!js.isUndefined(webviewTag)) __obj.updateDynamic("webviewTag")(webviewTag.asInstanceOf[js.Any])
-    if (zoomFactor != null) __obj.updateDynamic("zoomFactor")(zoomFactor.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebPreferences]
   }
+  @scala.inline
+  implicit class WebPreferencesOps[Self <: WebPreferences] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdditionalArguments(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalArguments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalArguments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalArguments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAffinity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("affinity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAffinity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("affinity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowRunningInsecureContent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowRunningInsecureContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowRunningInsecureContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowRunningInsecureContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoplayPolicy(value: `no-user-gesture-required` | `user-gesture-required` | `document-user-activation-required`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoplayPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundThrottling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundThrottling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundThrottling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundThrottling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContextIsolation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextIsolation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextIsolation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextIsolation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultEncoding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultEncoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultEncoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultFontFamily(value: DefaultFontFamily): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultFontFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultFontFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultFontFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultFontSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultFontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultFontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultMonospaceFontSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultMonospaceFontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultMonospaceFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultMonospaceFontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDevTools(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devTools")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevTools: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devTools")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableBlinkFeatures(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableBlinkFeatures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableBlinkFeatures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableBlinkFeatures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableHtmlFullscreenWindowResize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableHtmlFullscreenWindowResize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableHtmlFullscreenWindowResize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableHtmlFullscreenWindowResize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableBlinkFeatures(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableBlinkFeatures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableBlinkFeatures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableBlinkFeatures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableRemoteModule(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRemoteModule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableRemoteModule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRemoteModule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExperimentalFeatures(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("experimentalFeatures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExperimentalFeatures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("experimentalFeatures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImages(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJavascript(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("javascript")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJavascript: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("javascript")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumFontSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumFontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumFontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNativeWindowOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeWindowOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNativeWindowOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeWindowOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavigateOnDragDrop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigateOnDragDrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavigateOnDragDrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigateOnDragDrop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeIntegration(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeIntegration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeIntegration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeIntegration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeIntegrationInSubFrames(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeIntegrationInSubFrames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeIntegrationInSubFrames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeIntegrationInSubFrames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeIntegrationInWorker(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeIntegrationInWorker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeIntegrationInWorker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeIntegrationInWorker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffscreen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offscreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffscreen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offscreen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlugins(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreload(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSafeDialogs(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("safeDialogs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSafeDialogs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("safeDialogs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSafeDialogsMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("safeDialogsMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSafeDialogsMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("safeDialogsMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSandbox(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sandbox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSandbox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sandbox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollBounce(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollBounce")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollBounce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollBounce")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSession(value: Session_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSession: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextAreasAreResizable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textAreasAreResizable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextAreasAreResizable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textAreasAreResizable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebSecurity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webSecurity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebSecurity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webSecurity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebgl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webgl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebgl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webgl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebviewTag(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webviewTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebviewTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webviewTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomFactor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomFactor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomFactor")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

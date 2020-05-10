@@ -7,5 +7,5 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait DOMImplementationStatic
-  extends Instantiable0[typingsSlinky.std.DOMImplementation]
+  extends Instantiable0[org.scalajs.dom.raw.DOMImplementation]
 

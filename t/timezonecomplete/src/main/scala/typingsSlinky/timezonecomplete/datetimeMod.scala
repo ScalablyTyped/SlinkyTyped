@@ -453,7 +453,7 @@ object datetimeMod extends js.Object {
       * UTC timestamp (lazily calculated)
       * @throws nothing
       */
-    /* private */ def utcDate(): js.Any = js.native
+    /* private */ def utcDate: js.Any = js.native
     /* private */ def utcDate(value: js.Any): js.Any = js.native
     /**
       * @return The UTC day of the month 1-31
@@ -588,7 +588,7 @@ object datetimeMod extends js.Object {
       * Local timestamp (lazily calculated)
       * @throws nothing
       */
-    /* private */ def zoneDate(): js.Any = js.native
+    /* private */ def zoneDate: js.Any = js.native
     /* private */ def zoneDate(value: js.Any): js.Any = js.native
   }
   

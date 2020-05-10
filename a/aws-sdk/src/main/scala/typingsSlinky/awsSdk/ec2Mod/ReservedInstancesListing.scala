@@ -50,30 +50,137 @@ trait ReservedInstancesListing extends js.Object {
 
 object ReservedInstancesListing {
   @scala.inline
-  def apply(
-    ClientToken: String = null,
-    CreateDate: js.Date = null,
-    InstanceCounts: InstanceCountList = null,
-    PriceSchedules: PriceScheduleList = null,
-    ReservedInstancesId: String = null,
-    ReservedInstancesListingId: String = null,
-    Status: ListingStatus = null,
-    StatusMessage: String = null,
-    Tags: TagList = null,
-    UpdateDate: js.Date = null
-  ): ReservedInstancesListing = {
+  def apply(): ReservedInstancesListing = {
     val __obj = js.Dynamic.literal()
-    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
-    if (CreateDate != null) __obj.updateDynamic("CreateDate")(CreateDate.asInstanceOf[js.Any])
-    if (InstanceCounts != null) __obj.updateDynamic("InstanceCounts")(InstanceCounts.asInstanceOf[js.Any])
-    if (PriceSchedules != null) __obj.updateDynamic("PriceSchedules")(PriceSchedules.asInstanceOf[js.Any])
-    if (ReservedInstancesId != null) __obj.updateDynamic("ReservedInstancesId")(ReservedInstancesId.asInstanceOf[js.Any])
-    if (ReservedInstancesListingId != null) __obj.updateDynamic("ReservedInstancesListingId")(ReservedInstancesListingId.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (StatusMessage != null) __obj.updateDynamic("StatusMessage")(StatusMessage.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (UpdateDate != null) __obj.updateDynamic("UpdateDate")(UpdateDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReservedInstancesListing]
   }
+  @scala.inline
+  implicit class ReservedInstancesListingOps[Self <: ReservedInstancesListing] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceCounts(value: InstanceCountList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceCounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceCounts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceCounts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriceSchedules(value: PriceScheduleList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PriceSchedules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriceSchedules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PriceSchedules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReservedInstancesId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstancesId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReservedInstancesId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstancesId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReservedInstancesListingId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstancesListingId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReservedInstancesListingId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstancesListingId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: ListingStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateDate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

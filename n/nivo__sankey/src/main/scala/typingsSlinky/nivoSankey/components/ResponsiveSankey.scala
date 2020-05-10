@@ -1,11 +1,10 @@
 package typingsSlinky.nivoSankey.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.raw.Element
 import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoColors.mod.InheritedColorProp
 import typingsSlinky.nivoColors.mod.OrdinalColorsInstruction
 import typingsSlinky.nivoCore.mod.Box
@@ -16,6 +15,7 @@ import typingsSlinky.nivoSankey.AnonLinks
 import typingsSlinky.nivoSankey.mod.AccessorFunc
 import typingsSlinky.nivoSankey.mod.Data
 import typingsSlinky.nivoSankey.mod.LabelFormatter
+import typingsSlinky.nivoSankey.mod.SankeyDataNode
 import typingsSlinky.nivoSankey.mod.SankeyLinkDatum
 import typingsSlinky.nivoSankey.mod.SankeyLinkProps
 import typingsSlinky.nivoSankey.mod.SankeyNodeDatum
@@ -38,85 +38,100 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ResponsiveSankey
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.nivoSankey.mod.ResponsiveSankey] {
+object ResponsiveSankey {
   @JSImport("@nivo/sankey", "ResponsiveSankey")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    data: AnonLinks,
-    align: center | justify | start | end = null,
-    colors: OrdinalColorsInstruction[_] = null,
-    enableLabels: js.UndefOr[Boolean] = js.undefined,
-    enableLinkGradient: js.UndefOr[Boolean] = js.undefined,
-    isInteractive: js.UndefOr[Boolean] = js.undefined,
-    label: String | AccessorFunc = null,
-    labelFormat: String | LabelFormatter = null,
-    labelOrientation: horizontal | vertical = null,
-    labelPadding: Int | Double = null,
-    labelPosition: inside | outside = null,
-    labelTextColor: InheritedColorProp[SankeyNodeDatum] = null,
-    legends: js.Array[LegendProps] = null,
-    linkBlendMode: CssMixBlendMode = null,
-    linkContract: Int | Double = null,
-    linkHoverOpacity: Int | Double = null,
-    linkHoverOthersOpacity: Int | Double = null,
-    linkOpacity: Int | Double = null,
-    linkTooltip: SankeyLinkProps => TagMod[Any] = null,
-    margin: Box = null,
-    nodeBorderColor: InheritedColorProp[SankeyNodeDatum] = null,
-    nodeBorderWidth: Int | Double = null,
-    nodeHoverOpacity: Int | Double = null,
-    nodeHoverOthersOpacity: Int | Double = null,
-    nodeInnerPadding: Int | Double = null,
-    nodeOpacity: Int | Double = null,
-    nodeSpacing: Int | Double = null,
-    nodeThickness: Int | Double = null,
-    nodeTooltip: SankeyNodeProps => TagMod[Any] = null,
-    onClick: (/* data */ SankeyNodeDatum | SankeyLinkDatum, /* event */ SyntheticMouseEvent[org.scalajs.dom.raw.Element]) => Unit = null,
-    sort: auto | input | ascending | descending | SankeySortFunction = null,
-    theme: Theme = null,
-    tooltipFormat: /* value */ Double => TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.nivoSankey.mod.ResponsiveSankey] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableLabels)) __obj.updateDynamic("enableLabels")(enableLabels.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableLinkGradient)) __obj.updateDynamic("enableLinkGradient")(enableLinkGradient.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInteractive)) __obj.updateDynamic("isInteractive")(isInteractive.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (labelFormat != null) __obj.updateDynamic("labelFormat")(labelFormat.asInstanceOf[js.Any])
-    if (labelOrientation != null) __obj.updateDynamic("labelOrientation")(labelOrientation.asInstanceOf[js.Any])
-    if (labelPadding != null) __obj.updateDynamic("labelPadding")(labelPadding.asInstanceOf[js.Any])
-    if (labelPosition != null) __obj.updateDynamic("labelPosition")(labelPosition.asInstanceOf[js.Any])
-    if (labelTextColor != null) __obj.updateDynamic("labelTextColor")(labelTextColor.asInstanceOf[js.Any])
-    if (legends != null) __obj.updateDynamic("legends")(legends.asInstanceOf[js.Any])
-    if (linkBlendMode != null) __obj.updateDynamic("linkBlendMode")(linkBlendMode.asInstanceOf[js.Any])
-    if (linkContract != null) __obj.updateDynamic("linkContract")(linkContract.asInstanceOf[js.Any])
-    if (linkHoverOpacity != null) __obj.updateDynamic("linkHoverOpacity")(linkHoverOpacity.asInstanceOf[js.Any])
-    if (linkHoverOthersOpacity != null) __obj.updateDynamic("linkHoverOthersOpacity")(linkHoverOthersOpacity.asInstanceOf[js.Any])
-    if (linkOpacity != null) __obj.updateDynamic("linkOpacity")(linkOpacity.asInstanceOf[js.Any])
-    if (linkTooltip != null) __obj.updateDynamic("linkTooltip")(js.Any.fromFunction1(linkTooltip))
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (nodeBorderColor != null) __obj.updateDynamic("nodeBorderColor")(nodeBorderColor.asInstanceOf[js.Any])
-    if (nodeBorderWidth != null) __obj.updateDynamic("nodeBorderWidth")(nodeBorderWidth.asInstanceOf[js.Any])
-    if (nodeHoverOpacity != null) __obj.updateDynamic("nodeHoverOpacity")(nodeHoverOpacity.asInstanceOf[js.Any])
-    if (nodeHoverOthersOpacity != null) __obj.updateDynamic("nodeHoverOthersOpacity")(nodeHoverOthersOpacity.asInstanceOf[js.Any])
-    if (nodeInnerPadding != null) __obj.updateDynamic("nodeInnerPadding")(nodeInnerPadding.asInstanceOf[js.Any])
-    if (nodeOpacity != null) __obj.updateDynamic("nodeOpacity")(nodeOpacity.asInstanceOf[js.Any])
-    if (nodeSpacing != null) __obj.updateDynamic("nodeSpacing")(nodeSpacing.asInstanceOf[js.Any])
-    if (nodeThickness != null) __obj.updateDynamic("nodeThickness")(nodeThickness.asInstanceOf[js.Any])
-    if (nodeTooltip != null) __obj.updateDynamic("nodeTooltip")(js.Any.fromFunction1(nodeTooltip))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (tooltipFormat != null) __obj.updateDynamic("tooltipFormat")(js.Any.fromFunction1(tooltipFormat))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.nivoSankey.mod.ResponsiveSankey] {
+    @scala.inline
+    def align(value: center | justify | start | end): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorsFunction1(value: _ => String): this.type = set("colors", js.Any.fromFunction1(value))
+    @scala.inline
+    def colors(value: OrdinalColorsInstruction[_]): this.type = set("colors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableLabels(value: Boolean): this.type = set("enableLabels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableLinkGradient(value: Boolean): this.type = set("enableLinkGradient", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isInteractive(value: Boolean): this.type = set("isInteractive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFunction1(value: /* datum */ SankeyNodeDatum => String): this.type = set("label", js.Any.fromFunction1(value))
+    @scala.inline
+    def label(value: String | AccessorFunc): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFormatFunction1(value: /* label */ String | Double => String | Double): this.type = set("labelFormat", js.Any.fromFunction1(value))
+    @scala.inline
+    def labelFormat(value: String | LabelFormatter): this.type = set("labelFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelOrientation(value: horizontal | vertical): this.type = set("labelOrientation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelPadding(value: Double): this.type = set("labelPadding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelPosition(value: inside | outside): this.type = set("labelPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelTextColorFunction1(value: SankeyNodeDatum => String): this.type = set("labelTextColor", js.Any.fromFunction1(value))
+    @scala.inline
+    def labelTextColor(value: InheritedColorProp[SankeyNodeDatum]): this.type = set("labelTextColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def legends(value: js.Array[LegendProps]): this.type = set("legends", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkBlendMode(value: CssMixBlendMode): this.type = set("linkBlendMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkContract(value: Double): this.type = set("linkContract", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkHoverOpacity(value: Double): this.type = set("linkHoverOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkHoverOthersOpacity(value: Double): this.type = set("linkHoverOthersOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkOpacity(value: Double): this.type = set("linkOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkTooltip(value: SankeyLinkProps => TagMod[Any]): this.type = set("linkTooltip", js.Any.fromFunction1(value))
+    @scala.inline
+    def margin(value: Box): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nodeBorderColorFunction1(value: SankeyNodeDatum => String): this.type = set("nodeBorderColor", js.Any.fromFunction1(value))
+    @scala.inline
+    def nodeBorderColor(value: InheritedColorProp[SankeyNodeDatum]): this.type = set("nodeBorderColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nodeBorderWidth(value: Double): this.type = set("nodeBorderWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nodeHoverOpacity(value: Double): this.type = set("nodeHoverOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nodeHoverOthersOpacity(value: Double): this.type = set("nodeHoverOthersOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nodeInnerPadding(value: Double): this.type = set("nodeInnerPadding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nodeOpacity(value: Double): this.type = set("nodeOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nodeSpacing(value: Double): this.type = set("nodeSpacing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nodeThickness(value: Double): this.type = set("nodeThickness", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nodeTooltip(value: SankeyNodeProps => TagMod[Any]): this.type = set("nodeTooltip", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClick(
+      value: (/* data */ SankeyNodeDatum | SankeyLinkDatum, /* event */ SyntheticMouseEvent[Element]) => Unit
+    ): this.type = set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def sortFunction2(value: (/* nodeA */ SankeyDataNode, /* nodeB */ SankeyDataNode) => Double): this.type = set("sort", js.Any.fromFunction2(value))
+    @scala.inline
+    def sort(value: auto | input | ascending | descending | SankeySortFunction): this.type = set("sort", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: Theme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipFormat(value: /* value */ Double => TagMod[Any]): this.type = set("tooltipFormat", js.Any.fromFunction1(value))
   }
-  type Props = Data with SankeyProps
+  
+  def withProps(p: Data with SankeyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(data: AnonLinks): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Data with SankeyProps]))
+  }
 }
 

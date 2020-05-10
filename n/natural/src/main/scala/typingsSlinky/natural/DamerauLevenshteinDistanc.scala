@@ -6,39 +6,107 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined natural.natural.DamerauLevenshteinDistanceOptions & {  search  :true} */
+@js.native
 trait DamerauLevenshteinDistanc extends js.Object {
   /** @default 1 */
-  var deletion_cost: js.UndefOr[Double] = js.undefined
+  var deletion_cost: js.UndefOr[Double] = js.native
   /** @default 1 */
-  var insertion_cost: js.UndefOr[Double] = js.undefined
+  var insertion_cost: js.UndefOr[Double] = js.native
   /** @default false */
-  var restricted: js.UndefOr[Boolean] = js.undefined
+  var restricted: js.UndefOr[Boolean] = js.native
   /** @default false */
-  var search: js.UndefOr[Boolean with `true`] = js.undefined
+  var search: js.UndefOr[Boolean with `true`] = js.native
   /** @default 1 */
-  var substitution_cost: js.UndefOr[Double] = js.undefined
+  var substitution_cost: js.UndefOr[Double] = js.native
   /** @default 1 */
-  var transposition_cost: js.UndefOr[Double] = js.undefined
+  var transposition_cost: js.UndefOr[Double] = js.native
 }
 
 object DamerauLevenshteinDistanc {
   @scala.inline
-  def apply(
-    deletion_cost: Int | Double = null,
-    insertion_cost: Int | Double = null,
-    restricted: js.UndefOr[Boolean] = js.undefined,
-    search: js.UndefOr[Boolean with `true`] = js.undefined,
-    substitution_cost: Int | Double = null,
-    transposition_cost: Int | Double = null
-  ): DamerauLevenshteinDistanc = {
+  def apply(): DamerauLevenshteinDistanc = {
     val __obj = js.Dynamic.literal()
-    if (deletion_cost != null) __obj.updateDynamic("deletion_cost")(deletion_cost.asInstanceOf[js.Any])
-    if (insertion_cost != null) __obj.updateDynamic("insertion_cost")(insertion_cost.asInstanceOf[js.Any])
-    if (!js.isUndefined(restricted)) __obj.updateDynamic("restricted")(restricted.asInstanceOf[js.Any])
-    if (!js.isUndefined(search)) __obj.updateDynamic("search")(search.asInstanceOf[js.Any])
-    if (substitution_cost != null) __obj.updateDynamic("substitution_cost")(substitution_cost.asInstanceOf[js.Any])
-    if (transposition_cost != null) __obj.updateDynamic("transposition_cost")(transposition_cost.asInstanceOf[js.Any])
     __obj.asInstanceOf[DamerauLevenshteinDistanc]
   }
+  @scala.inline
+  implicit class DamerauLevenshteinDistancOps[Self <: DamerauLevenshteinDistanc] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeletion_cost(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deletion_cost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeletion_cost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deletion_cost")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertion_cost(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertion_cost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsertion_cost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertion_cost")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestricted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restricted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestricted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restricted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearch(value: Boolean with `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubstitution_cost(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("substitution_cost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubstitution_cost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("substitution_cost")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransposition_cost(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transposition_cost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransposition_cost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transposition_cost")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

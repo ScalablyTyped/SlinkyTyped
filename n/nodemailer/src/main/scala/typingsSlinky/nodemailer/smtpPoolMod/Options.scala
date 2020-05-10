@@ -1,218 +1,413 @@
 package typingsSlinky.nodemailer.smtpPoolMod
 
-import typingsSlinky.node.Buffer
 import typingsSlinky.node.netMod.Socket
-import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.tlsMod.ConnectionOptions
-import typingsSlinky.nodemailer.mailerMod.Address
-import typingsSlinky.nodemailer.mailerMod.AmpAttachment
-import typingsSlinky.nodemailer.mailerMod.Attachment
-import typingsSlinky.nodemailer.mailerMod.AttachmentLike
-import typingsSlinky.nodemailer.mailerMod.Envelope
-import typingsSlinky.nodemailer.mailerMod.Headers
-import typingsSlinky.nodemailer.mailerMod.IcalAttachment
-import typingsSlinky.nodemailer.mailerMod.ListHeaders
-import typingsSlinky.nodemailer.mailerMod.TextEncoding
 import typingsSlinky.nodemailer.mod.TransportOptions
 import typingsSlinky.nodemailer.nodemailerBooleans.`true`
-import typingsSlinky.nodemailer.nodemailerStrings.high
-import typingsSlinky.nodemailer.nodemailerStrings.low
-import typingsSlinky.nodemailer.nodemailerStrings.normal
 import typingsSlinky.nodemailer.sharedMod.Logger
-import typingsSlinky.nodemailer.smtpConnectionMod.AuthenticationType
 import typingsSlinky.nodemailer.smtpConnectionMod.CustomAuthenticationHandlers
-import typingsSlinky.nodemailer.smtpConnectionMod.DSNOptions
 import typingsSlinky.nodemailer.smtpConnectionMod.ms
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.nodemailer.smtpConnectionMod.Options because var conflicts: auth. Inlined host, port, secure, ignoreTLS, requireTLS, opportunisticTLS, name, localAddress, connectionTimeout, greetingTimeout, socketTimeout, logger, transactionLog, debug, authMethod, tls, socket, connection, customAuth */ trait Options
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.nodemailer.smtpConnectionMod.Options because var conflicts: auth. Inlined host, port, secure, ignoreTLS, requireTLS, opportunisticTLS, name, localAddress, connectionTimeout, greetingTimeout, socketTimeout, logger, transactionLog, debug, authMethod, tls, socket, connection, customAuth */ @js.native
+trait Options
   extends MailOptions
      with TransportOptions {
   /** defines preferred authentication method, e.g. ‘PLAIN’ */
-  var authMethod: js.UndefOr[String] = js.undefined
+  var authMethod: js.UndefOr[String] = js.native
   /** connected socket to use instead of creating and connecting a new one. If secure option is true, then socket is upgraded from plaintext to ciphertext */
-  var connection: js.UndefOr[Socket] = js.undefined
+  var connection: js.UndefOr[Socket] = js.native
   /** how many milliseconds to wait for the connection to establish */
-  var connectionTimeout: js.UndefOr[ms] = js.undefined
-  var customAuth: js.UndefOr[CustomAuthenticationHandlers] = js.undefined
+  var connectionTimeout: js.UndefOr[ms] = js.native
+  var customAuth: js.UndefOr[CustomAuthenticationHandlers] = js.native
   /** if set to true, then logs SMTP traffic and message content, otherwise logs only transaction events */
-  var debug: js.UndefOr[Boolean] = js.undefined
+  var debug: js.UndefOr[Boolean] = js.native
   var getSocket: js.UndefOr[
     js.Function2[
       /* options */ this.type, 
       /* callback */ js.Function2[/* err */ js.Error | Null, /* socketOptions */ js.Any, Unit], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** how many milliseconds to wait for the greeting after connection is established */
-  var greetingTimeout: js.UndefOr[ms] = js.undefined
+  var greetingTimeout: js.UndefOr[ms] = js.native
   /** the hostname or IP address to connect to (defaults to ‘localhost’) */
-  var host: js.UndefOr[String] = js.undefined
+  var host: js.UndefOr[String] = js.native
   /** turns off STARTTLS support if true */
-  var ignoreTLS: js.UndefOr[Boolean] = js.undefined
+  var ignoreTLS: js.UndefOr[Boolean] = js.native
   /** the local interface to bind to for network connections */
-  var localAddress: js.UndefOr[String] = js.undefined
+  var localAddress: js.UndefOr[String] = js.native
   /** optional bunyan compatible logger instance. If set to true then logs to console. If value is not set or is false then nothing is logged */
-  var logger: js.UndefOr[Logger | Boolean] = js.undefined
+  var logger: js.UndefOr[Logger | Boolean] = js.native
   /** the count of maximum simultaneous connections to make against the SMTP server (defaults to 5) */
-  var maxConnections: js.UndefOr[Double] = js.undefined
+  var maxConnections: js.UndefOr[Double] = js.native
   /** limits the message count to be sent using a single connection (defaults to 100). After maxMessages is reached the connection is dropped and a new one is created for the following messages */
-  var maxMessages: js.UndefOr[Double] = js.undefined
+  var maxMessages: js.UndefOr[Double] = js.native
   /** optional hostname of the client, used for identifying to the server */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /** tries to use STARTTLS and continues normally if it fails */
-  var opportunisticTLS: js.UndefOr[Boolean] = js.undefined
+  var opportunisticTLS: js.UndefOr[Boolean] = js.native
   /** set to true to use pooled connections (defaults to false) instead of creating a new connection for every email */
-  var pool: `true`
+  var pool: `true` = js.native
   /** the port to connect to (defaults to 25 or 465) */
-  var port: js.UndefOr[Double] = js.undefined
+  var port: js.UndefOr[Double] = js.native
   /** defines the time measuring period in milliseconds (defaults to 1000, ie. to 1 second) for rate limiting */
-  var rateDelta: js.UndefOr[Double] = js.undefined
+  var rateDelta: js.UndefOr[Double] = js.native
   /** limits the message count to be sent in rateDelta time. Once rateLimit is reached, sending is paused until the end of the measuring period. This limit is shared between connections, so if one connection uses up the limit, then other connections are paused as well. If rateLimit is not set then sending rate is not limited */
-  var rateLimit: js.UndefOr[Double] = js.undefined
+  var rateLimit: js.UndefOr[Double] = js.native
   /** forces the client to use STARTTLS. Returns an error if upgrading the connection is not possible or fails. */
-  var requireTLS: js.UndefOr[Boolean] = js.undefined
+  var requireTLS: js.UndefOr[Boolean] = js.native
   /** defines if the connection should use SSL (if true) or not (if false) */
-  var secure: js.UndefOr[Boolean] = js.undefined
-  var service: js.UndefOr[String] = js.undefined
+  var secure: js.UndefOr[Boolean] = js.native
+  var service: js.UndefOr[String] = js.native
   /** initialized socket to use instead of creating a new one */
-  var socket: js.UndefOr[Socket] = js.undefined
+  var socket: js.UndefOr[Socket] = js.native
   /** how many milliseconds of inactivity to allow */
-  var socketTimeout: js.UndefOr[ms] = js.undefined
+  var socketTimeout: js.UndefOr[ms] = js.native
   /** defines additional options to be passed to the socket constructor, e.g. {rejectUnauthorized: true} */
-  var tls: js.UndefOr[ConnectionOptions] = js.undefined
+  var tls: js.UndefOr[ConnectionOptions] = js.native
   /** if set to true, then logs SMTP traffic without message content */
-  var transactionLog: js.UndefOr[Boolean] = js.undefined
+  var transactionLog: js.UndefOr[Boolean] = js.native
    // TODO http.ClientRequest?
-  var url: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    pool: `true`,
-    alternatives: js.Array[Attachment] = null,
-    amp: String | Buffer | Readable | AmpAttachment = null,
-    attachments: js.Array[Attachment] = null,
-    auth: AuthenticationType = null,
-    authMethod: String = null,
-    bcc: String | Address | (js.Array[String | Address]) = null,
-    cc: String | Address | (js.Array[String | Address]) = null,
-    component: String = null,
-    connection: Socket = null,
-    connectionTimeout: Int | Double = null,
-    customAuth: CustomAuthenticationHandlers = null,
-    date: js.Date | String = null,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    disableFileAccess: js.UndefOr[Boolean] = js.undefined,
-    disableUrlAccess: js.UndefOr[Boolean] = js.undefined,
-    dkim: typingsSlinky.nodemailer.dkimMod.Options = null,
-    dsn: DSNOptions = null,
-    encoding: String = null,
-    envelope: Envelope | typingsSlinky.nodemailer.mimeNodeMod.Envelope = null,
-    from: String | Address = null,
-    getSocket: (Options, /* callback */ js.Function2[/* err */ js.Error | Null, /* socketOptions */ js.Any, Unit]) => Unit = null,
-    greetingTimeout: Int | Double = null,
-    headers: Headers = null,
-    host: String = null,
-    html: String | Buffer | Readable | AttachmentLike = null,
-    icalEvent: String | Buffer | Readable | IcalAttachment = null,
-    ignoreTLS: js.UndefOr[Boolean] = js.undefined,
-    inReplyTo: String | Address = null,
-    list: ListHeaders = null,
-    localAddress: String = null,
-    logger: Logger | Boolean = null,
-    maxConnections: Int | Double = null,
-    maxMessages: Int | Double = null,
-    messageId: String = null,
-    name: String = null,
-    normalizeHeaderKey: /* key */ String => String = null,
-    opportunisticTLS: js.UndefOr[Boolean] = js.undefined,
-    port: Int | Double = null,
-    priority: high | normal | low = null,
-    rateDelta: Int | Double = null,
-    rateLimit: Int | Double = null,
-    raw: String | Buffer | Readable | AttachmentLike = null,
-    references: String | js.Array[String] = null,
-    replyTo: String | Address = null,
-    requireTLS: js.UndefOr[Boolean] = js.undefined,
-    secure: js.UndefOr[Boolean] = js.undefined,
-    sender: String | Address = null,
-    service: String = null,
-    socket: Socket = null,
-    socketTimeout: Int | Double = null,
-    subject: String = null,
-    text: String | Buffer | Readable | AttachmentLike = null,
-    textEncoding: TextEncoding = null,
-    tls: ConnectionOptions = null,
-    to: String | Address | (js.Array[String | Address]) = null,
-    transactionLog: js.UndefOr[Boolean] = js.undefined,
-    url: String = null,
-    watchHtml: String | Buffer | Readable | AttachmentLike = null
-  ): Options = {
+  def apply(pool: `true`): Options = {
     val __obj = js.Dynamic.literal(pool = pool.asInstanceOf[js.Any])
-    if (alternatives != null) __obj.updateDynamic("alternatives")(alternatives.asInstanceOf[js.Any])
-    if (amp != null) __obj.updateDynamic("amp")(amp.asInstanceOf[js.Any])
-    if (attachments != null) __obj.updateDynamic("attachments")(attachments.asInstanceOf[js.Any])
-    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
-    if (authMethod != null) __obj.updateDynamic("authMethod")(authMethod.asInstanceOf[js.Any])
-    if (bcc != null) __obj.updateDynamic("bcc")(bcc.asInstanceOf[js.Any])
-    if (cc != null) __obj.updateDynamic("cc")(cc.asInstanceOf[js.Any])
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (connection != null) __obj.updateDynamic("connection")(connection.asInstanceOf[js.Any])
-    if (connectionTimeout != null) __obj.updateDynamic("connectionTimeout")(connectionTimeout.asInstanceOf[js.Any])
-    if (customAuth != null) __obj.updateDynamic("customAuth")(customAuth.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableFileAccess)) __obj.updateDynamic("disableFileAccess")(disableFileAccess.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableUrlAccess)) __obj.updateDynamic("disableUrlAccess")(disableUrlAccess.asInstanceOf[js.Any])
-    if (dkim != null) __obj.updateDynamic("dkim")(dkim.asInstanceOf[js.Any])
-    if (dsn != null) __obj.updateDynamic("dsn")(dsn.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (envelope != null) __obj.updateDynamic("envelope")(envelope.asInstanceOf[js.Any])
-    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
-    if (getSocket != null) __obj.updateDynamic("getSocket")(js.Any.fromFunction2(getSocket))
-    if (greetingTimeout != null) __obj.updateDynamic("greetingTimeout")(greetingTimeout.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (html != null) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
-    if (icalEvent != null) __obj.updateDynamic("icalEvent")(icalEvent.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreTLS)) __obj.updateDynamic("ignoreTLS")(ignoreTLS.asInstanceOf[js.Any])
-    if (inReplyTo != null) __obj.updateDynamic("inReplyTo")(inReplyTo.asInstanceOf[js.Any])
-    if (list != null) __obj.updateDynamic("list")(list.asInstanceOf[js.Any])
-    if (localAddress != null) __obj.updateDynamic("localAddress")(localAddress.asInstanceOf[js.Any])
-    if (logger != null) __obj.updateDynamic("logger")(logger.asInstanceOf[js.Any])
-    if (maxConnections != null) __obj.updateDynamic("maxConnections")(maxConnections.asInstanceOf[js.Any])
-    if (maxMessages != null) __obj.updateDynamic("maxMessages")(maxMessages.asInstanceOf[js.Any])
-    if (messageId != null) __obj.updateDynamic("messageId")(messageId.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (normalizeHeaderKey != null) __obj.updateDynamic("normalizeHeaderKey")(js.Any.fromFunction1(normalizeHeaderKey))
-    if (!js.isUndefined(opportunisticTLS)) __obj.updateDynamic("opportunisticTLS")(opportunisticTLS.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
-    if (rateDelta != null) __obj.updateDynamic("rateDelta")(rateDelta.asInstanceOf[js.Any])
-    if (rateLimit != null) __obj.updateDynamic("rateLimit")(rateLimit.asInstanceOf[js.Any])
-    if (raw != null) __obj.updateDynamic("raw")(raw.asInstanceOf[js.Any])
-    if (references != null) __obj.updateDynamic("references")(references.asInstanceOf[js.Any])
-    if (replyTo != null) __obj.updateDynamic("replyTo")(replyTo.asInstanceOf[js.Any])
-    if (!js.isUndefined(requireTLS)) __obj.updateDynamic("requireTLS")(requireTLS.asInstanceOf[js.Any])
-    if (!js.isUndefined(secure)) __obj.updateDynamic("secure")(secure.asInstanceOf[js.Any])
-    if (sender != null) __obj.updateDynamic("sender")(sender.asInstanceOf[js.Any])
-    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
-    if (socket != null) __obj.updateDynamic("socket")(socket.asInstanceOf[js.Any])
-    if (socketTimeout != null) __obj.updateDynamic("socketTimeout")(socketTimeout.asInstanceOf[js.Any])
-    if (subject != null) __obj.updateDynamic("subject")(subject.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (textEncoding != null) __obj.updateDynamic("textEncoding")(textEncoding.asInstanceOf[js.Any])
-    if (tls != null) __obj.updateDynamic("tls")(tls.asInstanceOf[js.Any])
-    if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
-    if (!js.isUndefined(transactionLog)) __obj.updateDynamic("transactionLog")(transactionLog.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (watchHtml != null) __obj.updateDynamic("watchHtml")(watchHtml.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPool(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pool")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnection(value: Socket): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionTimeout(value: ms): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomAuth(value: CustomAuthenticationHandlers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customAuth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customAuth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebug: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetSocket(
+      value: (Options, /* callback */ js.Function2[/* err */ js.Error | Null, /* socketOptions */ js.Any, Unit]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSocket")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetSocket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSocket")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGreetingTimeout(value: ms): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("greetingTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGreetingTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("greetingTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreTLS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreTLS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreTLS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreTLS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogger(value: Logger | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxConnections(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConnections")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxConnections: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConnections")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxMessages(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMessages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMessages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpportunisticTLS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opportunisticTLS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpportunisticTLS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opportunisticTLS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRateDelta(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rateDelta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRateDelta: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rateDelta")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRateLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rateLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRateLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rateLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequireTLS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireTLS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequireTLS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireTLS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecure(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withService(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSocket(value: Socket): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSocket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socket")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSocketTimeout(value: ms): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socketTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSocketTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socketTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTls(value: ConnectionOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransactionLog(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionLog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransactionLog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionLog")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

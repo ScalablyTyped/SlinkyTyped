@@ -4,39 +4,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDate extends js.Object {
-  var date: js.UndefOr[Boolean] = js.undefined
-  var error: js.UndefOr[Boolean] = js.undefined
-  var function: js.UndefOr[Boolean | js.Function] = js.undefined
-  var map: js.UndefOr[Boolean] = js.undefined
-  var regex: js.UndefOr[Boolean] = js.undefined
-  var set: js.UndefOr[Boolean] = js.undefined
-  var symbol: js.UndefOr[Boolean] = js.undefined
-  var undefined: js.UndefOr[Boolean] = js.undefined
+  var date: js.UndefOr[Boolean] = js.native
+  var error: js.UndefOr[Boolean] = js.native
+  var function: js.UndefOr[Boolean | js.Function] = js.native
+  var map: js.UndefOr[Boolean] = js.native
+  var regex: js.UndefOr[Boolean] = js.native
+  var set: js.UndefOr[Boolean] = js.native
+  var symbol: js.UndefOr[Boolean] = js.native
+  var undefined: js.UndefOr[Boolean] = js.native
 }
 
 object AnonDate {
   @scala.inline
-  def apply(
-    date: js.UndefOr[Boolean] = js.undefined,
-    error: js.UndefOr[Boolean] = js.undefined,
-    function: Boolean | js.Function = null,
-    map: js.UndefOr[Boolean] = js.undefined,
-    regex: js.UndefOr[Boolean] = js.undefined,
-    set: js.UndefOr[Boolean] = js.undefined,
-    symbol: js.UndefOr[Boolean] = js.undefined,
-    undefined: js.UndefOr[Boolean] = js.undefined
-  ): AnonDate = {
+  def apply(): AnonDate = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(date)) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (function != null) __obj.updateDynamic("function")(function.asInstanceOf[js.Any])
-    if (!js.isUndefined(map)) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
-    if (!js.isUndefined(regex)) __obj.updateDynamic("regex")(regex.asInstanceOf[js.Any])
-    if (!js.isUndefined(set)) __obj.updateDynamic("set")(set.asInstanceOf[js.Any])
-    if (!js.isUndefined(symbol)) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
-    if (!js.isUndefined(undefined)) __obj.updateDynamic("undefined")(undefined.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDate]
   }
+  @scala.inline
+  implicit class AnonDateOps[Self <: AnonDate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFunction(value: Boolean | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("function")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFunction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("function")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegex(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSet(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbol(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUndefined(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("undefined")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUndefined: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("undefined")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

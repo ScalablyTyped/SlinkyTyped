@@ -1,36 +1,30 @@
 package typingsSlinky.storybookComponents.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.storybookComponents.spacedMod.SpacedProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Spaced
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Spaced {
   @JSImport("@storybook/components", "Spaced")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    col: Int | Double = null,
-    outer: Double | Boolean = null,
-    row: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (col != null) __obj.updateDynamic("col")(col.asInstanceOf[js.Any])
-    if (outer != null) __obj.updateDynamic("outer")(outer.asInstanceOf[js.Any])
-    if (row != null) __obj.updateDynamic("row")(row.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def col(value: Double): this.type = set("col", value.asInstanceOf[js.Any])
+    @scala.inline
+    def outer(value: Double | Boolean): this.type = set("outer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def row(value: Double): this.type = set("row", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SpacedProps
+  
+  def withProps(p: SpacedProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Spaced.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

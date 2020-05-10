@@ -12,10 +12,8 @@ trait Topic extends js.Object
 
 object Topic {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def 는: typingsSlinky.josa.josaStrings.는 = "\uB294".asInstanceOf[typingsSlinky.josa.josaStrings.는]
   @scala.inline
-  def 는: typingsSlinky.josa.josaStrings.는 = this.cast("\uB294")
-  @scala.inline
-  def 은: typingsSlinky.josa.josaStrings.은 = this.cast("\uC740")
+  def 은: typingsSlinky.josa.josaStrings.은 = "\uC740".asInstanceOf[typingsSlinky.josa.josaStrings.은]
 }
 

@@ -20,26 +20,24 @@ trait Platform extends js.Object
 
 object Platform {
   @scala.inline
-  def aix: typingsSlinky.node.nodeStrings.aix = this.cast("aix")
+  def aix: typingsSlinky.node.nodeStrings.aix = "aix".asInstanceOf[typingsSlinky.node.nodeStrings.aix]
   @scala.inline
-  def android: typingsSlinky.node.nodeStrings.android = this.cast("android")
+  def android: typingsSlinky.node.nodeStrings.android = "android".asInstanceOf[typingsSlinky.node.nodeStrings.android]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cygwin: typingsSlinky.node.nodeStrings.cygwin = "cygwin".asInstanceOf[typingsSlinky.node.nodeStrings.cygwin]
   @scala.inline
-  def cygwin: typingsSlinky.node.nodeStrings.cygwin = this.cast("cygwin")
+  def darwin: typingsSlinky.node.nodeStrings.darwin = "darwin".asInstanceOf[typingsSlinky.node.nodeStrings.darwin]
   @scala.inline
-  def darwin: typingsSlinky.node.nodeStrings.darwin = this.cast("darwin")
+  def freebsd: typingsSlinky.node.nodeStrings.freebsd = "freebsd".asInstanceOf[typingsSlinky.node.nodeStrings.freebsd]
   @scala.inline
-  def freebsd: typingsSlinky.node.nodeStrings.freebsd = this.cast("freebsd")
+  def linux: typingsSlinky.node.nodeStrings.linux = "linux".asInstanceOf[typingsSlinky.node.nodeStrings.linux]
   @scala.inline
-  def linux: typingsSlinky.node.nodeStrings.linux = this.cast("linux")
+  def netbsd: typingsSlinky.node.nodeStrings.netbsd = "netbsd".asInstanceOf[typingsSlinky.node.nodeStrings.netbsd]
   @scala.inline
-  def netbsd: typingsSlinky.node.nodeStrings.netbsd = this.cast("netbsd")
+  def openbsd: typingsSlinky.node.nodeStrings.openbsd = "openbsd".asInstanceOf[typingsSlinky.node.nodeStrings.openbsd]
   @scala.inline
-  def openbsd: typingsSlinky.node.nodeStrings.openbsd = this.cast("openbsd")
+  def sunos: typingsSlinky.node.nodeStrings.sunos = "sunos".asInstanceOf[typingsSlinky.node.nodeStrings.sunos]
   @scala.inline
-  def sunos: typingsSlinky.node.nodeStrings.sunos = this.cast("sunos")
-  @scala.inline
-  def win32: typingsSlinky.node.nodeStrings.win32 = this.cast("win32")
+  def win32: typingsSlinky.node.nodeStrings.win32 = "win32".asInstanceOf[typingsSlinky.node.nodeStrings.win32]
 }
 

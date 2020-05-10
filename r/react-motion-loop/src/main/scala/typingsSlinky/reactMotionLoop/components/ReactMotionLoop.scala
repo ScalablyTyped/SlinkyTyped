@@ -1,9 +1,7 @@
 package typingsSlinky.reactMotionLoop.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMotion.mod.PlainStyle
 import typingsSlinky.reactMotion.mod.Style
 import typingsSlinky.reactMotionLoop.mod.ReactMotionLoopProps
@@ -11,28 +9,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactMotionLoop
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactMotionLoop.mod.ReactMotionLoop] {
+object ReactMotionLoop {
   @JSImport("react-motion-loop", "ReactMotionLoop")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    styleFrom: Style,
-    styleTo: Style,
-    defaultStyle: PlainStyle = null,
-    onRest: () => Unit = null,
-    style: Style = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactMotionLoop.mod.ReactMotionLoop] = {
-    val __obj = js.Dynamic.literal(styleFrom = styleFrom.asInstanceOf[js.Any], styleTo = styleTo.asInstanceOf[js.Any])
-    if (defaultStyle != null) __obj.updateDynamic("defaultStyle")(defaultStyle.asInstanceOf[js.Any])
-    if (onRest != null) __obj.updateDynamic("onRest")(js.Any.fromFunction0(onRest))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactMotionLoop.mod.ReactMotionLoop] {
+    @scala.inline
+    def defaultStyle(value: PlainStyle): this.type = set("defaultStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onRest(value: () => Unit): this.type = set("onRest", js.Any.fromFunction0(value))
+    @scala.inline
+    def style(value: Style): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = ReactMotionLoopProps
+  
+  def withProps(p: ReactMotionLoopProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(styleFrom: Style, styleTo: Style): Builder = {
+    val __props = js.Dynamic.literal(styleFrom = styleFrom.asInstanceOf[js.Any], styleTo = styleTo.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactMotionLoopProps]))
+  }
 }
 

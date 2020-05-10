@@ -22,16 +22,53 @@ trait UserPoolClientDescription extends js.Object {
 
 object UserPoolClientDescription {
   @scala.inline
-  def apply(
-    ClientId: ClientIdType = null,
-    ClientName: ClientNameType = null,
-    UserPoolId: UserPoolIdType = null
-  ): UserPoolClientDescription = {
+  def apply(): UserPoolClientDescription = {
     val __obj = js.Dynamic.literal()
-    if (ClientId != null) __obj.updateDynamic("ClientId")(ClientId.asInstanceOf[js.Any])
-    if (ClientName != null) __obj.updateDynamic("ClientName")(ClientName.asInstanceOf[js.Any])
-    if (UserPoolId != null) __obj.updateDynamic("UserPoolId")(UserPoolId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPoolClientDescription]
   }
+  @scala.inline
+  implicit class UserPoolClientDescriptionOps[Self <: UserPoolClientDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientId(value: ClientIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientName(value: ClientNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserPoolId(value: UserPoolIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserPoolId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

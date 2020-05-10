@@ -53,19 +53,6 @@ class Zone protected ()
     */
   var blendMode: integer = js.native
   /**
-    * The depth of this Game Object within the Scene.
-    * 
-    * The depth is also known as the 'z-index' in some environments, and allows you to change the rendering order
-    * of Game Objects, without actually moving their position in the display list.
-    * 
-    * The depth starts from zero (the default value) and increases from that point. A Game Object with a higher depth
-    * value will always render in front of one with a lower value.
-    * 
-    * Setting the depth will queue a depth sort event within the Scene.
-    */
-  /* CompleteClass */
-  override var depth: Double = js.native
-  /**
     * The displayed height of this Game Object.
     * This value takes into account the scale factor.
     */
@@ -80,13 +67,6 @@ class Zone protected ()
     */
   var height: Double = js.native
   /**
-    * The visible state of the Game Object.
-    * 
-    * An invisible Game Object will skip rendering, but will still process update logic.
-    */
-  /* CompleteClass */
-  override var visible: Boolean = js.native
-  /**
     * The native (un-scaled) width of this Game Object.
     */
   var width: Double = js.native
@@ -96,20 +76,6 @@ class Zone protected ()
     * @param radius The radius of the Circle that will form the Drop Zone.
     */
   def setCircleDropZone(radius: Double): Zone = js.native
-  /**
-    * The depth of this Game Object within the Scene.
-    * 
-    * The depth is also known as the 'z-index' in some environments, and allows you to change the rendering order
-    * of Game Objects, without actually moving their position in the display list.
-    * 
-    * The depth starts from zero (the default value) and increases from that point. A Game Object with a higher depth
-    * value will always render in front of one with a lower value.
-    * 
-    * Setting the depth will queue a depth sort event within the Scene.
-    * @param value The depth of this Game Object.
-    */
-  /* CompleteClass */
-  override def setDepth(value: integer): this.type = js.native
   /**
     * Sets the display size of this Game Object.
     * Calling this will adjust the scale.
@@ -138,13 +104,5 @@ class Zone protected ()
     */
   def setSize(width: Double, height: Double): Zone = js.native
   def setSize(width: Double, height: Double, resizeInput: Boolean): Zone = js.native
-  /**
-    * Sets the visibility of this Game Object.
-    * 
-    * An invisible Game Object will skip rendering, but will still process update logic.
-    * @param value The visible state of the Game Object.
-    */
-  /* CompleteClass */
-  override def setVisible(value: Boolean): this.type = js.native
 }
 

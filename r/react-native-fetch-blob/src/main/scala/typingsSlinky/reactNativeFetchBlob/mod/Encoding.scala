@@ -13,12 +13,10 @@ trait Encoding extends js.Object
 
 object Encoding {
   @scala.inline
-  def ascii: typingsSlinky.reactNativeFetchBlob.reactNativeFetchBlobStrings.ascii = this.cast("ascii")
+  def ascii: typingsSlinky.reactNativeFetchBlob.reactNativeFetchBlobStrings.ascii = "ascii".asInstanceOf[typingsSlinky.reactNativeFetchBlob.reactNativeFetchBlobStrings.ascii]
   @scala.inline
-  def base64: typingsSlinky.reactNativeFetchBlob.reactNativeFetchBlobStrings.base64 = this.cast("base64")
+  def base64: typingsSlinky.reactNativeFetchBlob.reactNativeFetchBlobStrings.base64 = "base64".asInstanceOf[typingsSlinky.reactNativeFetchBlob.reactNativeFetchBlobStrings.base64]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def utf8: typingsSlinky.reactNativeFetchBlob.reactNativeFetchBlobStrings.utf8 = this.cast("utf8")
+  def utf8: typingsSlinky.reactNativeFetchBlob.reactNativeFetchBlobStrings.utf8 = "utf8".asInstanceOf[typingsSlinky.reactNativeFetchBlob.reactNativeFetchBlobStrings.utf8]
 }
 

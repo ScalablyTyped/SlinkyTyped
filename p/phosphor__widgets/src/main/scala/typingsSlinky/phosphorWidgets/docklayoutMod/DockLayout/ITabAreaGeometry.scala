@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 /**
   * An object which represents the geometry of a tab area.
   */
+@js.native
 trait ITabAreaGeometry extends js.Object {
   /**
     * The local coordinate of the bottom edge of the tab area.
@@ -17,14 +18,14 @@ trait ITabAreaGeometry extends js.Object {
     * This is the distance from the bottom edge of the layout parent
     * widget, to the bottom edge of the tab area.
     */
-  var bottom: Double
+  var bottom: Double = js.native
   /**
     * The height of the tab area.
     *
     * #### Notes
     * This is total height allocated for the tab area.
     */
-  var height: Double
+  var height: Double = js.native
   /**
     * The local coordinate of the left edge of the tab area.
     *
@@ -32,7 +33,7 @@ trait ITabAreaGeometry extends js.Object {
     * This is the distance from the left edge of the layout parent
     * widget, to the left edge of the tab area.
     */
-  var left: Double
+  var left: Double = js.native
   /**
     * The local coordinate of the right edge of the tab area.
     *
@@ -40,11 +41,11 @@ trait ITabAreaGeometry extends js.Object {
     * This is the distance from the right edge of the layout parent
     * widget, to the right edge of the tab area.
     */
-  var right: Double
+  var right: Double = js.native
   /**
     * The tab bar for the tab area.
     */
-  var tabBar: TabBar[Widget]
+  var tabBar: TabBar[Widget] = js.native
   /**
     * The local coordinate of the top edge of the tab area.
     *
@@ -52,14 +53,14 @@ trait ITabAreaGeometry extends js.Object {
     * This is the distance from the top edge of the layout parent
     * widget, to the top edge of the tab area.
     */
-  var top: Double
+  var top: Double = js.native
   /**
     * The width of the tab area.
     *
     * #### Notes
     * This is total width allocated for the tab area.
     */
-  var width: Double
+  var width: Double = js.native
   /**
     * The local X position of the hit test in the dock area.
     *
@@ -67,7 +68,7 @@ trait ITabAreaGeometry extends js.Object {
     * This is the distance from the left edge of the layout parent
     * widget, to the local X coordinate of the hit test query.
     */
-  var x: Double
+  var x: Double = js.native
   /**
     * The local Y position of the hit test in the dock area.
     *
@@ -75,7 +76,7 @@ trait ITabAreaGeometry extends js.Object {
     * This is the distance from the top edge of the layout parent
     * widget, to the local Y coordinate of the hit test query.
     */
-  var y: Double
+  var y: Double = js.native
 }
 
 object ITabAreaGeometry {
@@ -92,8 +93,69 @@ object ITabAreaGeometry {
     y: Double
   ): ITabAreaGeometry = {
     val __obj = js.Dynamic.literal(bottom = bottom.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], left = left.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any], tabBar = tabBar.asInstanceOf[js.Any], top = top.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ITabAreaGeometry]
   }
+  @scala.inline
+  implicit class ITabAreaGeometryOps[Self <: ITabAreaGeometry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBottom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLeft(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTabBar(value: TabBar[Widget]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabBar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

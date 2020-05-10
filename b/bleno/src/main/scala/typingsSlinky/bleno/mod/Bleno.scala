@@ -14,7 +14,6 @@ import typingsSlinky.bleno.blenoStrings.servicesSetError
 import typingsSlinky.bleno.blenoStrings.stateChange
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.EventEmitter
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -71,7 +70,7 @@ trait Bleno extends EventEmitter {
     callback: js.Function1[/* arg */ js.UndefOr[js.Error | Null], Unit]
   ): Unit = js.native
   def startAdvertisingWithEIRData(advertisementData: Buffer): Unit = js.native
-  def startAdvertisingWithEIRData(advertisementData: Buffer, callback: js.Function1[/* arg */ js.UndefOr[Error | Null], Unit]): Unit = js.native
+  def startAdvertisingWithEIRData(advertisementData: Buffer, callback: js.Function1[/* arg */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
   def startAdvertisingWithEIRData(advertisementData: Buffer, scanData: Buffer): Unit = js.native
   def startAdvertisingWithEIRData(
     advertisementData: Buffer,

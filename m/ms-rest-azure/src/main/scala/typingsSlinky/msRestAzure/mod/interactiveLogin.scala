@@ -1,6 +1,5 @@
 package typingsSlinky.msRestAzure.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ object interactiveLogin extends js.Object {
   def apply(): js.Promise[DeviceTokenCredentials] = js.native
   def apply(
     optionalCallback: js.Function3[
-      /* err */ Error, 
+      /* err */ js.Error, 
       /* credentials */ DeviceTokenCredentials, 
       /* subscriptions */ js.Array[LinkedSubscription], 
       Unit

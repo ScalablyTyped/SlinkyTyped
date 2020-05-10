@@ -1,20 +1,26 @@
 package typingsSlinky.antd.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.transferListItemMod.default
+import typingsSlinky.antd.transferListItemMod.ListItemProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Could't extract props from TypeRef(QualifiedName(IArray(Name(scala), Name(scalajs), Name(js), Name(Any))),IArray(),NoComments) because couldn't resolve ClassTree. */
-object ListItem
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ListItem {
   @JSImport("antd/lib/transfer/ListItem", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = js.Any
+  def withProps(p: js.Function1[/* props */ ListItemProps, ReactElement]): typingsSlinky.StBuildingComponent.Default[tag.type, js.Object] = new typingsSlinky.StBuildingComponent.Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(
+    bind: (js.Any, /* repeated */ js.Dynamic) => js.Any,
+    call: (js.Any, /* repeated */ js.Dynamic) => js.Any,
+    length: Int
+  ): typingsSlinky.StBuildingComponent.Default[tag.type, js.Object] = {
+    val __props = js.Dynamic.literal(bind = js.Any.fromFunction2(bind), call = js.Any.fromFunction2(call), length = length.asInstanceOf[js.Any])
+    new typingsSlinky.StBuildingComponent.Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[js.Function1[/* props */ ListItemProps, ReactElement]]))
+  }
 }
 

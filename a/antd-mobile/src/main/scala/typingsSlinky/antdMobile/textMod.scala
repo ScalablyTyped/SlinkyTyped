@@ -1,8 +1,8 @@
 package typingsSlinky.antdMobile
 
+import org.scalajs.dom.raw.HTMLSpanElement
 import typingsSlinky.antdMobile.viewMod.ViewProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.std.HTMLSpanElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

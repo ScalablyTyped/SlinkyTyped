@@ -30,20 +30,77 @@ trait Communication extends js.Object {
 
 object Communication {
   @scala.inline
-  def apply(
-    attachmentSet: AttachmentSet = null,
-    body: CommunicationBody = null,
-    caseId: CaseId = null,
-    submittedBy: SubmittedBy = null,
-    timeCreated: TimeCreated = null
-  ): Communication = {
+  def apply(): Communication = {
     val __obj = js.Dynamic.literal()
-    if (attachmentSet != null) __obj.updateDynamic("attachmentSet")(attachmentSet.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (caseId != null) __obj.updateDynamic("caseId")(caseId.asInstanceOf[js.Any])
-    if (submittedBy != null) __obj.updateDynamic("submittedBy")(submittedBy.asInstanceOf[js.Any])
-    if (timeCreated != null) __obj.updateDynamic("timeCreated")(timeCreated.asInstanceOf[js.Any])
     __obj.asInstanceOf[Communication]
   }
+  @scala.inline
+  implicit class CommunicationOps[Self <: Communication] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttachmentSet(value: AttachmentSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttachmentSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBody(value: CommunicationBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaseId(value: CaseId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caseId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaseId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caseId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubmittedBy(value: SubmittedBy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submittedBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubmittedBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submittedBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeCreated(value: TimeCreated): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeCreated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeCreated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeCreated")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

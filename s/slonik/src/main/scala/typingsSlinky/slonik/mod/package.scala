@@ -62,7 +62,7 @@ package object mod {
   type QueryResultRowColumnType = java.lang.String | scala.Double
   type QueryResultRowType[ColumnName /* <: java.lang.String */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ name in ColumnName ]: slonik.slonik.QueryResultRowColumnType}
-    */ typingsSlinky.slonik.slonikStrings.QueryResultRowType with js.Any
+    */ typingsSlinky.slonik.slonikStrings.QueryResultRowType with org.scalablytyped.runtime.TopLevel[js.Any]
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
     - scala.Double

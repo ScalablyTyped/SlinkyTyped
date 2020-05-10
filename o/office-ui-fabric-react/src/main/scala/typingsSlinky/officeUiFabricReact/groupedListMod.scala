@@ -5,6 +5,7 @@ import typingsSlinky.officeUiFabricReact.groupFooterTypesMod.IGroupFooterProps
 import typingsSlinky.officeUiFabricReact.groupHeaderTypesMod.IGroupHeaderProps
 import typingsSlinky.officeUiFabricReact.groupShowAllTypesMod.IGroupShowAllProps
 import typingsSlinky.officeUiFabricReact.groupSpacerTypesMod.IGroupSpacerProps
+import typingsSlinky.officeUiFabricReact.groupedListSectionMod.IGroupedListSectionProps
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroupedListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,6 +18,12 @@ object groupedListMod extends js.Object {
   class GroupedListBase protected ()
     extends typingsSlinky.officeUiFabricReact.groupedListBaseMod.GroupedListBase {
     def this(props: IGroupedListProps) = this()
+  }
+  
+  @js.native
+  class GroupedListSection protected ()
+    extends typingsSlinky.officeUiFabricReact.groupedListSectionMod.GroupedListSection {
+    def this(props: IGroupedListSectionProps) = this()
   }
   
   val GroupFooter: ReactComponentClass[IGroupFooterProps] = js.native

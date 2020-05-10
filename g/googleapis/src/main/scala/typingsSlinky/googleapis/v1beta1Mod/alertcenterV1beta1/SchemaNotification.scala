@@ -18,10 +18,29 @@ trait SchemaNotification extends js.Object {
 
 object SchemaNotification {
   @scala.inline
-  def apply(cloudPubsubTopic: SchemaCloudPubsubTopic = null): SchemaNotification = {
+  def apply(): SchemaNotification = {
     val __obj = js.Dynamic.literal()
-    if (cloudPubsubTopic != null) __obj.updateDynamic("cloudPubsubTopic")(cloudPubsubTopic.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNotification]
   }
+  @scala.inline
+  implicit class SchemaNotificationOps[Self <: SchemaNotification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloudPubsubTopic(value: SchemaCloudPubsubTopic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudPubsubTopic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudPubsubTopic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudPubsubTopic")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,15 +26,47 @@ trait ShareDirectoryRequest extends js.Object {
 
 object ShareDirectoryRequest {
   @scala.inline
-  def apply(
-    DirectoryId: DirectoryId,
-    ShareMethod: ShareMethod,
-    ShareTarget: ShareTarget,
-    ShareNotes: Notes = null
-  ): ShareDirectoryRequest = {
+  def apply(DirectoryId: DirectoryId, ShareMethod: ShareMethod, ShareTarget: ShareTarget): ShareDirectoryRequest = {
     val __obj = js.Dynamic.literal(DirectoryId = DirectoryId.asInstanceOf[js.Any], ShareMethod = ShareMethod.asInstanceOf[js.Any], ShareTarget = ShareTarget.asInstanceOf[js.Any])
-    if (ShareNotes != null) __obj.updateDynamic("ShareNotes")(ShareNotes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShareDirectoryRequest]
   }
+  @scala.inline
+  implicit class ShareDirectoryRequestOps[Self <: ShareDirectoryRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectoryId(value: DirectoryId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShareMethod(value: ShareMethod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShareTarget(value: ShareTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShareNotes(value: Notes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareNotes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShareNotes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareNotes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

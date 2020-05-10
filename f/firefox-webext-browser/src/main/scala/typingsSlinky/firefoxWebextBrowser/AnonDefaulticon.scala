@@ -7,36 +7,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDefaulticon extends js.Object {
-  var browser_style: js.UndefOr[Boolean] = js.undefined
-  var default_icon: js.UndefOr[IconPath] = js.undefined
-  var default_popup: js.UndefOr[String] = js.undefined
-  var default_title: js.UndefOr[String] = js.undefined
-  var hide_matches: js.UndefOr[js.Array[MatchPatternRestricted]] = js.undefined
-  var pinned: js.UndefOr[Boolean] = js.undefined
-  var show_matches: js.UndefOr[js.Array[MatchPattern]] = js.undefined
+  var browser_style: js.UndefOr[Boolean] = js.native
+  var default_icon: js.UndefOr[IconPath] = js.native
+  var default_popup: js.UndefOr[String] = js.native
+  var default_title: js.UndefOr[String] = js.native
+  var hide_matches: js.UndefOr[js.Array[MatchPatternRestricted]] = js.native
+  var pinned: js.UndefOr[Boolean] = js.native
+  var show_matches: js.UndefOr[js.Array[MatchPattern]] = js.native
 }
 
 object AnonDefaulticon {
   @scala.inline
-  def apply(
-    browser_style: js.UndefOr[Boolean] = js.undefined,
-    default_icon: IconPath = null,
-    default_popup: String = null,
-    default_title: String = null,
-    hide_matches: js.Array[MatchPatternRestricted] = null,
-    pinned: js.UndefOr[Boolean] = js.undefined,
-    show_matches: js.Array[MatchPattern] = null
-  ): AnonDefaulticon = {
+  def apply(): AnonDefaulticon = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(browser_style)) __obj.updateDynamic("browser_style")(browser_style.asInstanceOf[js.Any])
-    if (default_icon != null) __obj.updateDynamic("default_icon")(default_icon.asInstanceOf[js.Any])
-    if (default_popup != null) __obj.updateDynamic("default_popup")(default_popup.asInstanceOf[js.Any])
-    if (default_title != null) __obj.updateDynamic("default_title")(default_title.asInstanceOf[js.Any])
-    if (hide_matches != null) __obj.updateDynamic("hide_matches")(hide_matches.asInstanceOf[js.Any])
-    if (!js.isUndefined(pinned)) __obj.updateDynamic("pinned")(pinned.asInstanceOf[js.Any])
-    if (show_matches != null) __obj.updateDynamic("show_matches")(show_matches.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDefaulticon]
   }
+  @scala.inline
+  implicit class AnonDefaulticonOps[Self <: AnonDefaulticon] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBrowser_style(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browser_style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrowser_style: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browser_style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefault_icon(value: IconPath): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default_icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefault_icon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default_icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefault_popup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default_popup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefault_popup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default_popup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefault_title(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default_title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefault_title: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default_title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHide_matches(value: js.Array[MatchPatternRestricted]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide_matches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHide_matches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide_matches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPinned(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pinned")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPinned: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pinned")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow_matches(value: js.Array[MatchPattern]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show_matches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow_matches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show_matches")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

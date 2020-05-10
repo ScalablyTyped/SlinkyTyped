@@ -16,18 +16,16 @@ trait CodePipelineActionCategory extends js.Object
 
 object CodePipelineActionCategory {
   @scala.inline
-  def Approval: typingsSlinky.awsLambda.awsLambdaStrings.Approval = this.cast("Approval")
+  def Approval: typingsSlinky.awsLambda.awsLambdaStrings.Approval = "Approval".asInstanceOf[typingsSlinky.awsLambda.awsLambdaStrings.Approval]
   @scala.inline
-  def Build: typingsSlinky.awsLambda.awsLambdaStrings.Build = this.cast("Build")
+  def Build: typingsSlinky.awsLambda.awsLambdaStrings.Build = "Build".asInstanceOf[typingsSlinky.awsLambda.awsLambdaStrings.Build]
   @scala.inline
-  def Deploy: typingsSlinky.awsLambda.awsLambdaStrings.Deploy = this.cast("Deploy")
+  def Deploy: typingsSlinky.awsLambda.awsLambdaStrings.Deploy = "Deploy".asInstanceOf[typingsSlinky.awsLambda.awsLambdaStrings.Deploy]
   @scala.inline
-  def Invoke: typingsSlinky.awsLambda.awsLambdaStrings.Invoke = this.cast("Invoke")
+  def Invoke: typingsSlinky.awsLambda.awsLambdaStrings.Invoke = "Invoke".asInstanceOf[typingsSlinky.awsLambda.awsLambdaStrings.Invoke]
   @scala.inline
-  def Source: typingsSlinky.awsLambda.awsLambdaStrings.Source = this.cast("Source")
+  def Source: typingsSlinky.awsLambda.awsLambdaStrings.Source = "Source".asInstanceOf[typingsSlinky.awsLambda.awsLambdaStrings.Source]
   @scala.inline
-  def Test: typingsSlinky.awsLambda.awsLambdaStrings.Test = this.cast("Test")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Test: typingsSlinky.awsLambda.awsLambdaStrings.Test = "Test".asInstanceOf[typingsSlinky.awsLambda.awsLambdaStrings.Test]
 }
 

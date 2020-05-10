@@ -16,8 +16,8 @@ class Body () extends js.Object {
   var bodyUsed: Boolean = js.native
   var size: Double = js.native
   var timeout: Double = js.native
-  def arrayBuffer(): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-  def blob(): js.Promise[Buffer] = js.native
+  def arrayBuffer(): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def blob(): js.Promise[Blob] = js.native
   def buffer(): js.Promise[Buffer] = js.native
   def json(): js.Promise[_] = js.native
   def text(): js.Promise[String] = js.native

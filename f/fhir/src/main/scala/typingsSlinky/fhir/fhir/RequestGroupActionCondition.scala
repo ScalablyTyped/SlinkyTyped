@@ -7,74 +7,145 @@ import scala.scalajs.js.annotation._
 /**
   * Whether or not the action is applicable
   */
+@js.native
 trait RequestGroupActionCondition extends BackboneElement {
   /**
     * Contains extended information for property 'description'.
     */
-  var _description: js.UndefOr[Element] = js.undefined
+  var _description: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'expression'.
     */
-  var _expression: js.UndefOr[Element] = js.undefined
+  var _expression: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'kind'.
     */
-  var _kind: js.UndefOr[Element] = js.undefined
+  var _kind: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'language'.
     */
-  var _language: js.UndefOr[Element] = js.undefined
+  var _language: js.UndefOr[Element] = js.native
   /**
     * Natural language description of the condition
     */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /**
     * Boolean-valued expression
     */
-  var expression: js.UndefOr[String] = js.undefined
+  var expression: js.UndefOr[String] = js.native
   /**
     * applicability | start | stop
     */
-  var kind: code
+  var kind: code = js.native
   /**
     * Language of the expression
     */
-  var language: js.UndefOr[String] = js.undefined
+  var language: js.UndefOr[String] = js.native
 }
 
 object RequestGroupActionCondition {
   @scala.inline
-  def apply(
-    kind: code,
-    _description: Element = null,
-    _expression: Element = null,
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    _kind: Element = null,
-    _language: Element = null,
-    description: String = null,
-    expression: String = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    id: String = null,
-    language: String = null,
-    modifierExtension: js.Array[Extension] = null
-  ): RequestGroupActionCondition = {
+  def apply(kind: code): RequestGroupActionCondition = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
-    if (_description != null) __obj.updateDynamic("_description")(_description.asInstanceOf[js.Any])
-    if (_expression != null) __obj.updateDynamic("_expression")(_expression.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_kind != null) __obj.updateDynamic("_kind")(_kind.asInstanceOf[js.Any])
-    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (expression != null) __obj.updateDynamic("expression")(expression.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestGroupActionCondition]
   }
+  @scala.inline
+  implicit class RequestGroupActionConditionOps[Self <: RequestGroupActionCondition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_description(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_description: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_expression(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_expression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_expression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_expression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_kind(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_kind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_language(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_language: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_language")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpression(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

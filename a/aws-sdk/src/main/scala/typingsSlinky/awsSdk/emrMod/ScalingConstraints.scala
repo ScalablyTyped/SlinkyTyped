@@ -20,8 +20,27 @@ object ScalingConstraints {
   @scala.inline
   def apply(MaxCapacity: Integer, MinCapacity: Integer): ScalingConstraints = {
     val __obj = js.Dynamic.literal(MaxCapacity = MaxCapacity.asInstanceOf[js.Any], MinCapacity = MinCapacity.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ScalingConstraints]
   }
+  @scala.inline
+  implicit class ScalingConstraintsOps[Self <: ScalingConstraints] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxCapacity(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinCapacity(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

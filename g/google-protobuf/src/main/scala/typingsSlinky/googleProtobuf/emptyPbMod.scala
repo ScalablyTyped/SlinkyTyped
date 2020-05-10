@@ -21,7 +21,7 @@ object emptyPbMod extends js.Object {
   object Empty extends js.Object {
     var extensions: NumberDictionary[ExtensionFieldInfo[Message]] = js.native
     var extensionsBinary: NumberDictionary[ExtensionFieldBinaryInfo[Message]] = js.native
-    def deserializeBinary(bytes: scala.scalajs.js.typedarray.Uint8Array): Empty = js.native
+    def deserializeBinary(bytes: js.typedarray.Uint8Array): Empty = js.native
     def deserializeBinaryFromReader(message: Empty, reader: BinaryReader): Empty = js.native
     def serializeBinaryToWriter(message: Empty, writer: BinaryWriter): Unit = js.native
     def toObject(includeInstance: Boolean, msg: Empty): AsObject = js.native

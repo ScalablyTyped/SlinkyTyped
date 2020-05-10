@@ -4,35 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.jsfl.FlashBitmapItem because var conflicts: compressionType, fileLastModifiedDate, originalCompressionType, sourceFileExists, sourceFileIsCurrent, sourceFilePath. Inlined allowSmoothing, useDeblocking, useImportedJPEGQuality
-- typingsSlinky.jsfl.FlashVideoItem because var conflicts: fileLastModifiedDate, sourceFileExists, sourceFilePath. Inlined exportToFLV, sourceFileIsCurrent, videoType */ trait FlashItem
+- typingsSlinky.jsfl.FlashVideoItem because var conflicts: fileLastModifiedDate, sourceFileExists, sourceFilePath. Inlined exportToFLV, sourceFileIsCurrent, videoType */ @js.native
+trait FlashItem
   extends FlashSymbolItem
      with FlashFolderItem
      with FlashFontItem
      with FlashSoundItem {
-  var allowSmoothing: Boolean
+  var allowSmoothing: Boolean = js.native
   /** Read-only; a string that specifies the type of element.  "undefined", "component", "movie clip", "graphic", "button", "folder", "font", "sound", "bitmap", "compiled clip", "screen", or "video" */
-  var itemType: String
-  var linkageBaseClass: String
-  var linkageClassName: String
-  var linkageExportForAS: Boolean
-  var linkageExportForRS: Boolean
-  var linkageExportInFirstFrame: Boolean
-  var linkageIdentifier: String
-  var linkageImportForRS: Boolean
-  var linkageURL: String
+  var itemType: String = js.native
+  var linkageBaseClass: String = js.native
+  var linkageClassName: String = js.native
+  var linkageExportForAS: Boolean = js.native
+  var linkageExportForRS: Boolean = js.native
+  var linkageExportInFirstFrame: Boolean = js.native
+  var linkageIdentifier: String = js.native
+  var linkageImportForRS: Boolean = js.native
+  var linkageURL: String = js.native
   /** A string that specifies the name of the library item, which includes the folder structure. */
-  var name: String
-  var sourceFileIsCurrent: Boolean
-  var useDeblocking: Boolean
-  var useImportedJPEGQuality: Boolean
-  var videoType: String
-  def addData(name: String, `type`: String, data: js.Any): Unit
-  def exportToFLV(fileURI: String): Boolean
-  def getData(name: String): js.Any
-  def hasData(name: String): Boolean
-  def removeData(name: String): Unit
+  var name: String = js.native
+  var sourceFileIsCurrent: Boolean = js.native
+  var useDeblocking: Boolean = js.native
+  var useImportedJPEGQuality: Boolean = js.native
+  var videoType: String = js.native
+  def addData(name: String, `type`: String, data: js.Any): Unit = js.native
+  def exportToFLV(fileURI: String): Boolean = js.native
+  def getData(name: String): js.Any = js.native
+  def hasData(name: String): Boolean = js.native
+  def removeData(name: String): Unit = js.native
 }
 
 object FlashItem {
@@ -89,8 +90,135 @@ object FlashItem {
     videoType: String
   ): FlashItem = {
     val __obj = js.Dynamic.literal(addData = js.Any.fromFunction3(addData), allowSmoothing = allowSmoothing.asInstanceOf[js.Any], bitRate = bitRate.asInstanceOf[js.Any], bitmap = bitmap.asInstanceOf[js.Any], bits = bits.asInstanceOf[js.Any], bold = bold.asInstanceOf[js.Any], compressionType = compressionType.asInstanceOf[js.Any], convertStereoToMono = convertStereoToMono.asInstanceOf[js.Any], convertToCompiledClip = js.Any.fromFunction0(convertToCompiledClip), embedRanges = embedRanges.asInstanceOf[js.Any], embedVariantGlyphs = embedVariantGlyphs.asInstanceOf[js.Any], embeddedCharacters = embeddedCharacters.asInstanceOf[js.Any], exportSWC = js.Any.fromFunction1(exportSWC), exportSWF = js.Any.fromFunction1(exportSWF), exportToFLV = js.Any.fromFunction1(exportToFLV), exportToFile = js.Any.fromFunction1(exportToFile), fileLastModifiedDate = fileLastModifiedDate.asInstanceOf[js.Any], font = font.asInstanceOf[js.Any], getData = js.Any.fromFunction1(getData), hasData = js.Any.fromFunction1(hasData), isDefineFont4Symbol = isDefineFont4Symbol.asInstanceOf[js.Any], italic = italic.asInstanceOf[js.Any], itemType = itemType.asInstanceOf[js.Any], linkageBaseClass = linkageBaseClass.asInstanceOf[js.Any], linkageClassName = linkageClassName.asInstanceOf[js.Any], linkageExportForAS = linkageExportForAS.asInstanceOf[js.Any], linkageExportForRS = linkageExportForRS.asInstanceOf[js.Any], linkageExportInFirstFrame = linkageExportInFirstFrame.asInstanceOf[js.Any], linkageIdentifier = linkageIdentifier.asInstanceOf[js.Any], linkageImportForRS = linkageImportForRS.asInstanceOf[js.Any], linkageURL = linkageURL.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], originalCompressionType = originalCompressionType.asInstanceOf[js.Any], quality = quality.asInstanceOf[js.Any], removeData = js.Any.fromFunction1(removeData), sampleRate = sampleRate.asInstanceOf[js.Any], scalingGrid = scalingGrid.asInstanceOf[js.Any], scalingGridRect = scalingGridRect.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], sourceAutoUpdate = sourceAutoUpdate.asInstanceOf[js.Any], sourceFileExists = sourceFileExists.asInstanceOf[js.Any], sourceFileIsCurrent = sourceFileIsCurrent.asInstanceOf[js.Any], sourceFilePath = sourceFilePath.asInstanceOf[js.Any], sourceLibraryName = sourceLibraryName.asInstanceOf[js.Any], symbolType = symbolType.asInstanceOf[js.Any], timeline = timeline.asInstanceOf[js.Any], useDeblocking = useDeblocking.asInstanceOf[js.Any], useImportedJPEGQuality = useImportedJPEGQuality.asInstanceOf[js.Any], videoType = videoType.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[FlashItem]
   }
+  @scala.inline
+  implicit class FlashItemOps[Self <: FlashItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddData(value: (String, String, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addData")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withAllowSmoothing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSmoothing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExportToFLV(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exportToFLV")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetData(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getData")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHasData(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasData")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withItemType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinkageBaseClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkageBaseClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinkageClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkageClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinkageExportForAS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkageExportForAS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinkageExportForRS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkageExportForRS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinkageExportInFirstFrame(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkageExportInFirstFrame")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinkageIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkageIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinkageImportForRS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkageImportForRS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinkageURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkageURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoveData(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeData")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSourceFileIsCurrent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFileIsCurrent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUseDeblocking(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useDeblocking")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUseImportedJPEGQuality(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useImportedJPEGQuality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVideoType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

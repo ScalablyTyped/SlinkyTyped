@@ -4,33 +4,81 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonHandle extends js.Object {
-  var bar: js.UndefOr[AnonWidth] = js.undefined
-  var handle: js.UndefOr[AnonBordertop] = js.undefined
+  var bar: js.UndefOr[AnonWidth] = js.native
+  var handle: js.UndefOr[AnonBordertop] = js.native
   /**
     * Sets an x offset that will be applied to the scroll-x object. 4 | '6px' | ...
     */
-  var `offset-x`: js.UndefOr[js.Any] = js.undefined
+  var `offset-x`: js.UndefOr[js.Any] = js.native
   /**
     * Sets a y offset that will be applied to the scroll-x object. 4 | '6px' | ...
     */
-  var `offset-y`: js.UndefOr[js.Any] = js.undefined
+  var `offset-y`: js.UndefOr[js.Any] = js.native
 }
 
 object AnonHandle {
   @scala.inline
-  def apply(
-    bar: AnonWidth = null,
-    handle: AnonBordertop = null,
-    `offset-x`: js.Any = null,
-    `offset-y`: js.Any = null
-  ): AnonHandle = {
+  def apply(): AnonHandle = {
     val __obj = js.Dynamic.literal()
-    if (bar != null) __obj.updateDynamic("bar")(bar.asInstanceOf[js.Any])
-    if (handle != null) __obj.updateDynamic("handle")(handle.asInstanceOf[js.Any])
-    if (`offset-x` != null) __obj.updateDynamic("offset-x")(`offset-x`.asInstanceOf[js.Any])
-    if (`offset-y` != null) __obj.updateDynamic("offset-y")(`offset-y`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonHandle]
   }
+  @scala.inline
+  implicit class AnonHandleOps[Self <: AnonHandle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBar(value: AnonWidth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandle(value: AnonBordertop): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHandle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withOffset-x`(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset-x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutOffset-x`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset-x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withOffset-y`(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset-y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutOffset-y`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset-y")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

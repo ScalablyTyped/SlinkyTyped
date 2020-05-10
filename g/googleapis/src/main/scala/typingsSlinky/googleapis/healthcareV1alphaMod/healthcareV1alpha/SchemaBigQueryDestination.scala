@@ -32,12 +32,53 @@ trait SchemaBigQueryDestination extends js.Object {
 
 object SchemaBigQueryDestination {
   @scala.inline
-  def apply(dataset: String = null, overwriteTable: js.UndefOr[Boolean] = js.undefined, table: String = null): SchemaBigQueryDestination = {
+  def apply(): SchemaBigQueryDestination = {
     val __obj = js.Dynamic.literal()
-    if (dataset != null) __obj.updateDynamic("dataset")(dataset.asInstanceOf[js.Any])
-    if (!js.isUndefined(overwriteTable)) __obj.updateDynamic("overwriteTable")(overwriteTable.asInstanceOf[js.Any])
-    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBigQueryDestination]
   }
+  @scala.inline
+  implicit class SchemaBigQueryDestinationOps[Self <: SchemaBigQueryDestination] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataset(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverwriteTable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overwriteTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverwriteTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overwriteTable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTable(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

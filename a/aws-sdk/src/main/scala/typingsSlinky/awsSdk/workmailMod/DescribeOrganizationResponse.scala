@@ -46,28 +46,125 @@ trait DescribeOrganizationResponse extends js.Object {
 
 object DescribeOrganizationResponse {
   @scala.inline
-  def apply(
-    ARN: AmazonResourceName = null,
-    Alias: OrganizationName = null,
-    CompletedDate: js.Date = null,
-    DefaultMailDomain: String = null,
-    DirectoryId: String = null,
-    DirectoryType: String = null,
-    ErrorMessage: String = null,
-    OrganizationId: OrganizationId = null,
-    State: String = null
-  ): DescribeOrganizationResponse = {
+  def apply(): DescribeOrganizationResponse = {
     val __obj = js.Dynamic.literal()
-    if (ARN != null) __obj.updateDynamic("ARN")(ARN.asInstanceOf[js.Any])
-    if (Alias != null) __obj.updateDynamic("Alias")(Alias.asInstanceOf[js.Any])
-    if (CompletedDate != null) __obj.updateDynamic("CompletedDate")(CompletedDate.asInstanceOf[js.Any])
-    if (DefaultMailDomain != null) __obj.updateDynamic("DefaultMailDomain")(DefaultMailDomain.asInstanceOf[js.Any])
-    if (DirectoryId != null) __obj.updateDynamic("DirectoryId")(DirectoryId.asInstanceOf[js.Any])
-    if (DirectoryType != null) __obj.updateDynamic("DirectoryType")(DirectoryType.asInstanceOf[js.Any])
-    if (ErrorMessage != null) __obj.updateDynamic("ErrorMessage")(ErrorMessage.asInstanceOf[js.Any])
-    if (OrganizationId != null) __obj.updateDynamic("OrganizationId")(OrganizationId.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeOrganizationResponse]
   }
+  @scala.inline
+  implicit class DescribeOrganizationResponseOps[Self <: DescribeOrganizationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withARN(value: AmazonResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlias(value: OrganizationName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Alias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Alias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompletedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompletedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultMailDomain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultMailDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultMailDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultMailDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectoryId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectoryId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectoryType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectoryType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizationId(value: OrganizationId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

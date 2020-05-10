@@ -4,17 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OpenAPIResponseValidatorValidationError extends js.Object {
-  var errors: js.UndefOr[js.Array[_]] = js.undefined
-  var message: String
+  var errors: js.UndefOr[js.Array[_]] = js.native
+  var message: String = js.native
 }
 
 object OpenAPIResponseValidatorValidationError {
   @scala.inline
-  def apply(message: String, errors: js.Array[_] = null): OpenAPIResponseValidatorValidationError = {
+  def apply(message: String): OpenAPIResponseValidatorValidationError = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
-    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenAPIResponseValidatorValidationError]
   }
+  @scala.inline
+  implicit class OpenAPIResponseValidatorValidationErrorOps[Self <: OpenAPIResponseValidatorValidationError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withErrors(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

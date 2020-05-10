@@ -13,12 +13,10 @@ trait SearchStatus extends js.Object
 
 object SearchStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def complete: typingsSlinky.amapJsApiArrivalRange.amapJsApiArrivalRangeStrings.complete = "complete".asInstanceOf[typingsSlinky.amapJsApiArrivalRange.amapJsApiArrivalRangeStrings.complete]
   @scala.inline
-  def complete: typingsSlinky.amapJsApiArrivalRange.amapJsApiArrivalRangeStrings.complete = this.cast("complete")
+  def error: typingsSlinky.amapJsApiArrivalRange.amapJsApiArrivalRangeStrings.error = "error".asInstanceOf[typingsSlinky.amapJsApiArrivalRange.amapJsApiArrivalRangeStrings.error]
   @scala.inline
-  def error: typingsSlinky.amapJsApiArrivalRange.amapJsApiArrivalRangeStrings.error = this.cast("error")
-  @scala.inline
-  def no_data: typingsSlinky.amapJsApiArrivalRange.amapJsApiArrivalRangeStrings.no_data = this.cast("no_data")
+  def no_data: typingsSlinky.amapJsApiArrivalRange.amapJsApiArrivalRangeStrings.no_data = "no_data".asInstanceOf[typingsSlinky.amapJsApiArrivalRange.amapJsApiArrivalRangeStrings.no_data]
 }
 

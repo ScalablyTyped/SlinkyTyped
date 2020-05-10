@@ -1,7 +1,5 @@
 package typingsSlinky.fibjs
 
-import typingsSlinky.fibjs.fibjsNumbers.`0`
-import typingsSlinky.fibjs.fibjsNumbers.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +12,8 @@ import scala.scalajs.js.annotation._
 @JSImport("zip", JSImport.Namespace)
 @js.native
 object zipMod extends js.Object {
-  val ZIP_DEFLATED: `1` = js.native
-  val ZIP_STORED: `0` = js.native
+  val ZIP_DEFLATED: /* 1 */ Double = js.native
+  val ZIP_STORED: /* 0 */ Double = js.native
   def isZipFile(filename: String): Boolean = js.native
   def open(data: ClassBuffer): ClassZipFile = js.native
   def open(data: ClassBuffer, mod: String): ClassZipFile = js.native

@@ -4,36 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BiquadFilterOptions extends AudioNodeOptions {
-  var Q: js.UndefOr[Double] = js.undefined
-  var detune: js.UndefOr[Double] = js.undefined
-  var frequency: js.UndefOr[Double] = js.undefined
-  var gain: js.UndefOr[Double] = js.undefined
-  var `type`: js.UndefOr[BiquadFilterType] = js.undefined
+  var Q: js.UndefOr[Double] = js.native
+  var detune: js.UndefOr[Double] = js.native
+  var frequency: js.UndefOr[Double] = js.native
+  var gain: js.UndefOr[Double] = js.native
+  var `type`: js.UndefOr[BiquadFilterType] = js.native
 }
 
 object BiquadFilterOptions {
   @scala.inline
-  def apply(
-    Q: Int | Double = null,
-    channelCount: Int | Double = null,
-    channelCountMode: ChannelCountMode = null,
-    channelInterpretation: ChannelInterpretation = null,
-    detune: Int | Double = null,
-    frequency: Int | Double = null,
-    gain: Int | Double = null,
-    `type`: BiquadFilterType = null
-  ): BiquadFilterOptions = {
+  def apply(): BiquadFilterOptions = {
     val __obj = js.Dynamic.literal()
-    if (Q != null) __obj.updateDynamic("Q")(Q.asInstanceOf[js.Any])
-    if (channelCount != null) __obj.updateDynamic("channelCount")(channelCount.asInstanceOf[js.Any])
-    if (channelCountMode != null) __obj.updateDynamic("channelCountMode")(channelCountMode.asInstanceOf[js.Any])
-    if (channelInterpretation != null) __obj.updateDynamic("channelInterpretation")(channelInterpretation.asInstanceOf[js.Any])
-    if (detune != null) __obj.updateDynamic("detune")(detune.asInstanceOf[js.Any])
-    if (frequency != null) __obj.updateDynamic("frequency")(frequency.asInstanceOf[js.Any])
-    if (gain != null) __obj.updateDynamic("gain")(gain.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BiquadFilterOptions]
   }
+  @scala.inline
+  implicit class BiquadFilterOptionsOps[Self <: BiquadFilterOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQ(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Q")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQ: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Q")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDetune(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detune")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetune: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detune")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrequency(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrequency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGain(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: BiquadFilterType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

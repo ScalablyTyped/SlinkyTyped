@@ -18,14 +18,41 @@ trait TransactWriteItemsOutput extends js.Object {
 
 object TransactWriteItemsOutput {
   @scala.inline
-  def apply(
-    ConsumedCapacity: ConsumedCapacityMultiple = null,
-    ItemCollectionMetrics: ItemCollectionMetricsPerTable = null
-  ): TransactWriteItemsOutput = {
+  def apply(): TransactWriteItemsOutput = {
     val __obj = js.Dynamic.literal()
-    if (ConsumedCapacity != null) __obj.updateDynamic("ConsumedCapacity")(ConsumedCapacity.asInstanceOf[js.Any])
-    if (ItemCollectionMetrics != null) __obj.updateDynamic("ItemCollectionMetrics")(ItemCollectionMetrics.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransactWriteItemsOutput]
   }
+  @scala.inline
+  implicit class TransactWriteItemsOutputOps[Self <: TransactWriteItemsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConsumedCapacity(value: ConsumedCapacityMultiple): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsumedCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConsumedCapacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsumedCapacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemCollectionMetrics(value: ItemCollectionMetricsPerTable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemCollectionMetrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemCollectionMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemCollectionMetrics")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

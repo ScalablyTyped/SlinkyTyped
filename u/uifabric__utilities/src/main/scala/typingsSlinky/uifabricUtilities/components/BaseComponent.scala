@@ -1,19 +1,24 @@
 package typingsSlinky.uifabricUtilities.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.uifabricUtilities.baseComponentTypesMod.IBaseProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Could't extract props from TypeRef(QualifiedName(IArray(Name(TProps))),IArray(),NoComments) because couldn't resolve ClassTree. */
-object BaseComponent
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.uifabricUtilities.mod.BaseComponent[js.Any, js.Any]] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Could't extract props from TProps because couldn't resolve ClassTree. */
+object BaseComponent {
   @JSImport("@uifabric/utilities", "BaseComponent")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = js.Any
+  @scala.inline
+  class Builder[TProps <: IBaseProps[js.Any], TState] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.uifabricUtilities.mod.BaseComponent[js.Any, js.Any]]
+  
+  def apply[TProps <: IBaseProps[js.Any], TState](p: TProps): Builder[TProps, TState] = new Builder[TProps, TState](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[TProps <: IBaseProps[js.Any], TState](companion: BaseComponent.type): Builder[TProps, TState] = new Builder[TProps, TState](js.Array(this.component, js.Dictionary.empty))()
 }
 

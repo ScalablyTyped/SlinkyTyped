@@ -1,7 +1,6 @@
 package typingsSlinky.parchment.attributorMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.parchment.registryMod.Scope
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,20 +10,6 @@ import scala.scalajs.js.annotation._
 class default protected () extends Attributor {
   def this(attrName: String, keyName: String) = this()
   def this(attrName: String, keyName: String, options: AttributorOptions) = this()
-  /* CompleteClass */
-  override var attrName: String = js.native
-  /* CompleteClass */
-  override var keyName: String = js.native
-  /* CompleteClass */
-  override var scope: Scope = js.native
-  /* CompleteClass */
-  override def add(node: HTMLElement, value: String): Boolean = js.native
-  /* CompleteClass */
-  override def canAdd(node: HTMLElement, value: js.Any): Boolean = js.native
-  /* CompleteClass */
-  override def remove(node: HTMLElement): Unit = js.native
-  /* CompleteClass */
-  override def value(node: HTMLElement): String = js.native
 }
 
 /* static members */

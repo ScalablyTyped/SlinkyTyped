@@ -1,18 +1,12 @@
 package typingsSlinky.winrt.Windows.Security.Cryptography.Core
 
-import typingsSlinky.winrt.Windows.Storage.Streams.IBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider")
 @js.native
-class KeyDerivationAlgorithmProvider () extends IKeyDerivationAlgorithmProvider {
-  /* CompleteClass */
-  override var algorithmName: String = js.native
-  /* CompleteClass */
-  override def createKey(keyMaterial: IBuffer): CryptographicKey = js.native
-}
+class KeyDerivationAlgorithmProvider () extends IKeyDerivationAlgorithmProvider
 
 /* static members */
 @JSGlobal("Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider")

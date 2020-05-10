@@ -12,10 +12,8 @@ trait MatrixUpperLower extends js.Object
 
 object MatrixUpperLower {
   @scala.inline
-  def `121`: typingsSlinky.nblas.nblasNumbers.`121` = this.cast(121)
+  def `121`: typingsSlinky.nblas.nblasNumbers.`121` = 121.asInstanceOf[typingsSlinky.nblas.nblasNumbers.`121`]
   @scala.inline
-  def `122`: typingsSlinky.nblas.nblasNumbers.`122` = this.cast(122)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `122`: typingsSlinky.nblas.nblasNumbers.`122` = 122.asInstanceOf[typingsSlinky.nblas.nblasNumbers.`122`]
 }
 

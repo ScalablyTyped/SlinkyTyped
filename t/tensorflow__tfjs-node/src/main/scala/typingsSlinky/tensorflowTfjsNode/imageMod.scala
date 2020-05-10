@@ -18,20 +18,15 @@ object imageMod extends js.Object {
   @js.native
   sealed trait ImageType extends js.Object
   
-  def decodeBmp(contents: scala.scalajs.js.typedarray.Uint8Array): Tensor3D = js.native
-  def decodeBmp(contents: scala.scalajs.js.typedarray.Uint8Array, channels: Double): Tensor3D = js.native
-  def decodeGif(contents: scala.scalajs.js.typedarray.Uint8Array): Tensor4D = js.native
-  def decodeImage(content: scala.scalajs.js.typedarray.Uint8Array): Tensor3D | Tensor4D = js.native
-  def decodeImage(content: scala.scalajs.js.typedarray.Uint8Array, channels: Double): Tensor3D | Tensor4D = js.native
-  def decodeImage(content: scala.scalajs.js.typedarray.Uint8Array, channels: Double, dtype: String): Tensor3D | Tensor4D = js.native
-  def decodeImage(
-    content: scala.scalajs.js.typedarray.Uint8Array,
-    channels: Double,
-    dtype: String,
-    expandAnimations: Boolean
-  ): Tensor3D | Tensor4D = js.native
+  def decodeBmp(contents: js.typedarray.Uint8Array): Tensor3D = js.native
+  def decodeBmp(contents: js.typedarray.Uint8Array, channels: Double): Tensor3D = js.native
+  def decodeGif(contents: js.typedarray.Uint8Array): Tensor4D = js.native
+  def decodeImage(content: js.typedarray.Uint8Array): Tensor3D | Tensor4D = js.native
+  def decodeImage(content: js.typedarray.Uint8Array, channels: Double): Tensor3D | Tensor4D = js.native
+  def decodeImage(content: js.typedarray.Uint8Array, channels: Double, dtype: String): Tensor3D | Tensor4D = js.native
+  def decodeImage(content: js.typedarray.Uint8Array, channels: Double, dtype: String, expandAnimations: Boolean): Tensor3D | Tensor4D = js.native
   def decodeJpeg(
-    contents: scala.scalajs.js.typedarray.Uint8Array,
+    contents: js.typedarray.Uint8Array,
     channels: js.UndefOr[Double],
     ratio: js.UndefOr[Double],
     fancyUpscaling: js.UndefOr[Boolean],
@@ -39,9 +34,9 @@ object imageMod extends js.Object {
     acceptableFraction: js.UndefOr[Double],
     dctMethod: js.UndefOr[String]
   ): Tensor3D = js.native
-  def decodePng(contents: scala.scalajs.js.typedarray.Uint8Array): Tensor3D = js.native
-  def decodePng(contents: scala.scalajs.js.typedarray.Uint8Array, channels: Double): Tensor3D = js.native
-  def decodePng(contents: scala.scalajs.js.typedarray.Uint8Array, channels: Double, dtype: String): Tensor3D = js.native
+  def decodePng(contents: js.typedarray.Uint8Array): Tensor3D = js.native
+  def decodePng(contents: js.typedarray.Uint8Array, channels: Double): Tensor3D = js.native
+  def decodePng(contents: js.typedarray.Uint8Array, channels: Double, dtype: String): Tensor3D = js.native
   def encodeJpeg(
     image: Tensor3D,
     format: js.UndefOr[grayscale | rgb],
@@ -53,7 +48,7 @@ object imageMod extends js.Object {
     xDensity: js.UndefOr[Double],
     yDensity: js.UndefOr[Double],
     xmpMetadata: js.UndefOr[String]
-  ): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  ): js.Promise[js.typedarray.Uint8Array] = js.native
   @JSName("encodeJpeg")
   def encodeJpeg_cm(
     image: Tensor3D,
@@ -66,7 +61,7 @@ object imageMod extends js.Object {
     xDensity: js.UndefOr[Double],
     yDensity: js.UndefOr[Double],
     xmpMetadata: js.UndefOr[String]
-  ): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  ): js.Promise[js.typedarray.Uint8Array] = js.native
   @JSName("encodeJpeg")
   def encodeJpeg_in(
     image: Tensor3D,
@@ -79,10 +74,10 @@ object imageMod extends js.Object {
     xDensity: js.UndefOr[Double],
     yDensity: js.UndefOr[Double],
     xmpMetadata: js.UndefOr[String]
-  ): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
-  def encodePng(image: Tensor3D): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
-  def encodePng(image: Tensor3D, compression: Double): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
-  def getImageType(content: scala.scalajs.js.typedarray.Uint8Array): String = js.native
+  ): js.Promise[js.typedarray.Uint8Array] = js.native
+  def encodePng(image: Tensor3D): js.Promise[js.typedarray.Uint8Array] = js.native
+  def encodePng(image: Tensor3D, compression: Double): js.Promise[js.typedarray.Uint8Array] = js.native
+  def getImageType(content: js.typedarray.Uint8Array): String = js.native
   @js.native
   object ImageType extends js.Object {
     @js.native

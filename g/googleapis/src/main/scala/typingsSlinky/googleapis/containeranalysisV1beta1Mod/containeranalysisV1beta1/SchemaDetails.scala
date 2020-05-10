@@ -17,10 +17,29 @@ trait SchemaDetails extends js.Object {
 
 object SchemaDetails {
   @scala.inline
-  def apply(attestation: SchemaAttestation = null): SchemaDetails = {
+  def apply(): SchemaDetails = {
     val __obj = js.Dynamic.literal()
-    if (attestation != null) __obj.updateDynamic("attestation")(attestation.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDetails]
   }
+  @scala.inline
+  implicit class SchemaDetailsOps[Self <: SchemaDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttestation(value: SchemaAttestation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attestation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttestation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attestation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

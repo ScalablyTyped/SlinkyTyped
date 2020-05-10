@@ -20,8 +20,27 @@ object Endpoint {
   @scala.inline
   def apply(Address: String, CachePeriodInMinutes: Long): Endpoint = {
     val __obj = js.Dynamic.literal(Address = Address.asInstanceOf[js.Any], CachePeriodInMinutes = CachePeriodInMinutes.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Endpoint]
   }
+  @scala.inline
+  implicit class EndpointOps[Self <: Endpoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCachePeriodInMinutes(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CachePeriodInMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

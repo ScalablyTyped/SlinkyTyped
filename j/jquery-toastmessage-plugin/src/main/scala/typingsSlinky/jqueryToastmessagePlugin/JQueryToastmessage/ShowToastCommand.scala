@@ -14,14 +14,12 @@ trait ShowToastCommand extends js.Object
 
 object ShowToastCommand {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def showErrorToast: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.showErrorToast = "showErrorToast".asInstanceOf[typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.showErrorToast]
   @scala.inline
-  def showErrorToast: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.showErrorToast = this.cast("showErrorToast")
+  def showNoticeToast: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.showNoticeToast = "showNoticeToast".asInstanceOf[typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.showNoticeToast]
   @scala.inline
-  def showNoticeToast: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.showNoticeToast = this.cast("showNoticeToast")
+  def showSuccessToast: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.showSuccessToast = "showSuccessToast".asInstanceOf[typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.showSuccessToast]
   @scala.inline
-  def showSuccessToast: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.showSuccessToast = this.cast("showSuccessToast")
-  @scala.inline
-  def showWarningToast: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.showWarningToast = this.cast("showWarningToast")
+  def showWarningToast: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.showWarningToast = "showWarningToast".asInstanceOf[typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.showWarningToast]
 }
 

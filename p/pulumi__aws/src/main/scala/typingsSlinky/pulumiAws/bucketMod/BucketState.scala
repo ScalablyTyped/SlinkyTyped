@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.cannedAclMod.CannedAcl
 import typingsSlinky.pulumiAws.documentsMod.PolicyDocument
 import typingsSlinky.pulumiAws.inputMod.s3.BucketCorsRule
+import typingsSlinky.pulumiAws.inputMod.s3.BucketGrant
 import typingsSlinky.pulumiAws.inputMod.s3.BucketLifecycleRule
 import typingsSlinky.pulumiAws.inputMod.s3.BucketLogging
 import typingsSlinky.pulumiAws.inputMod.s3.BucketObjectLockConfiguration
@@ -23,7 +24,7 @@ trait BucketState extends js.Object {
     */
   val accelerationStatus: js.UndefOr[Input[String]] = js.native
   /**
-    * The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".
+    * The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".  Conflicts with `grant`.
     */
   val acl: js.UndefOr[Input[String | CannedAcl]] = js.native
   /**
@@ -55,6 +56,10 @@ trait BucketState extends js.Object {
     */
   val forceDestroy: js.UndefOr[Input[Boolean]] = js.native
   /**
+    * An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
+    */
+  val grants: js.UndefOr[Input[js.Array[Input[BucketGrant]]]] = js.native
+  /**
     * The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
     */
   val hostedZoneId: js.UndefOr[Input[String]] = js.native
@@ -71,7 +76,7 @@ trait BucketState extends js.Object {
     */
   val objectLockConfiguration: js.UndefOr[Input[BucketObjectLockConfiguration]] = js.native
   /**
-    * A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), this provider may view the policy as constantly changing in a deployment. In this case, please make sure you use the verbose/specific version of the policy.
+    * A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document.
     */
   val policy: js.UndefOr[Input[String | PolicyDocument]] = js.native
   /**
@@ -118,56 +123,305 @@ trait BucketState extends js.Object {
 
 object BucketState {
   @scala.inline
-  def apply(
-    accelerationStatus: Input[String] = null,
-    acl: Input[String | CannedAcl] = null,
-    arn: Input[String] = null,
-    bucket: Input[String] = null,
-    bucketDomainName: Input[String] = null,
-    bucketPrefix: Input[String] = null,
-    bucketRegionalDomainName: Input[String] = null,
-    corsRules: Input[js.Array[Input[BucketCorsRule]]] = null,
-    forceDestroy: Input[Boolean] = null,
-    hostedZoneId: Input[String] = null,
-    lifecycleRules: Input[js.Array[Input[BucketLifecycleRule]]] = null,
-    loggings: Input[js.Array[Input[BucketLogging]]] = null,
-    objectLockConfiguration: Input[BucketObjectLockConfiguration] = null,
-    policy: Input[String | PolicyDocument] = null,
-    region: Input[String] = null,
-    replicationConfiguration: Input[BucketReplicationConfiguration] = null,
-    requestPayer: Input[String] = null,
-    serverSideEncryptionConfiguration: Input[BucketServerSideEncryptionConfiguration] = null,
-    tags: Input[StringDictionary[_]] = null,
-    versioning: Input[BucketVersioning] = null,
-    website: Input[BucketWebsite] = null,
-    websiteDomain: Input[String] = null,
-    websiteEndpoint: Input[String] = null
-  ): BucketState = {
+  def apply(): BucketState = {
     val __obj = js.Dynamic.literal()
-    if (accelerationStatus != null) __obj.updateDynamic("accelerationStatus")(accelerationStatus.asInstanceOf[js.Any])
-    if (acl != null) __obj.updateDynamic("acl")(acl.asInstanceOf[js.Any])
-    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
-    if (bucket != null) __obj.updateDynamic("bucket")(bucket.asInstanceOf[js.Any])
-    if (bucketDomainName != null) __obj.updateDynamic("bucketDomainName")(bucketDomainName.asInstanceOf[js.Any])
-    if (bucketPrefix != null) __obj.updateDynamic("bucketPrefix")(bucketPrefix.asInstanceOf[js.Any])
-    if (bucketRegionalDomainName != null) __obj.updateDynamic("bucketRegionalDomainName")(bucketRegionalDomainName.asInstanceOf[js.Any])
-    if (corsRules != null) __obj.updateDynamic("corsRules")(corsRules.asInstanceOf[js.Any])
-    if (forceDestroy != null) __obj.updateDynamic("forceDestroy")(forceDestroy.asInstanceOf[js.Any])
-    if (hostedZoneId != null) __obj.updateDynamic("hostedZoneId")(hostedZoneId.asInstanceOf[js.Any])
-    if (lifecycleRules != null) __obj.updateDynamic("lifecycleRules")(lifecycleRules.asInstanceOf[js.Any])
-    if (loggings != null) __obj.updateDynamic("loggings")(loggings.asInstanceOf[js.Any])
-    if (objectLockConfiguration != null) __obj.updateDynamic("objectLockConfiguration")(objectLockConfiguration.asInstanceOf[js.Any])
-    if (policy != null) __obj.updateDynamic("policy")(policy.asInstanceOf[js.Any])
-    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
-    if (replicationConfiguration != null) __obj.updateDynamic("replicationConfiguration")(replicationConfiguration.asInstanceOf[js.Any])
-    if (requestPayer != null) __obj.updateDynamic("requestPayer")(requestPayer.asInstanceOf[js.Any])
-    if (serverSideEncryptionConfiguration != null) __obj.updateDynamic("serverSideEncryptionConfiguration")(serverSideEncryptionConfiguration.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (versioning != null) __obj.updateDynamic("versioning")(versioning.asInstanceOf[js.Any])
-    if (website != null) __obj.updateDynamic("website")(website.asInstanceOf[js.Any])
-    if (websiteDomain != null) __obj.updateDynamic("websiteDomain")(websiteDomain.asInstanceOf[js.Any])
-    if (websiteEndpoint != null) __obj.updateDynamic("websiteEndpoint")(websiteEndpoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[BucketState]
   }
+  @scala.inline
+  implicit class BucketStateOps[Self <: BucketState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccelerationStatus(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerationStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccelerationStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerationStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAcl(value: Input[String | CannedAcl]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucket(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucketDomainName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketDomainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketDomainName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketDomainName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucketPrefix(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucketRegionalDomainName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketRegionalDomainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketRegionalDomainName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketRegionalDomainName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCorsRules(value: Input[js.Array[Input[BucketCorsRule]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("corsRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCorsRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("corsRules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceDestroy(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceDestroy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceDestroy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceDestroy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrants(value: Input[js.Array[Input[BucketGrant]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grants")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrants: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grants")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostedZoneId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostedZoneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostedZoneId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostedZoneId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLifecycleRules(value: Input[js.Array[Input[BucketLifecycleRule]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycleRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLifecycleRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycleRules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoggings(value: Input[js.Array[Input[BucketLogging]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loggings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoggings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loggings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectLockConfiguration(value: Input[BucketObjectLockConfiguration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectLockConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectLockConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectLockConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicy(value: Input[String | PolicyDocument]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationConfiguration(value: Input[BucketReplicationConfiguration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestPayer(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestPayer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestPayer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestPayer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerSideEncryptionConfiguration(value: Input[BucketServerSideEncryptionConfiguration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverSideEncryptionConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerSideEncryptionConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverSideEncryptionConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersioning(value: Input[BucketVersioning]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versioning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersioning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versioning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebsite(value: Input[BucketWebsite]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("website")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebsite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("website")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebsiteDomain(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("websiteDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebsiteDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("websiteDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebsiteEndpoint(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("websiteEndpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebsiteEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("websiteEndpoint")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

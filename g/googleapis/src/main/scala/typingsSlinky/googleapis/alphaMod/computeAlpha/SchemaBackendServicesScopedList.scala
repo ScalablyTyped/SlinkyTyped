@@ -20,11 +20,41 @@ trait SchemaBackendServicesScopedList extends js.Object {
 
 object SchemaBackendServicesScopedList {
   @scala.inline
-  def apply(backendServices: js.Array[SchemaBackendService] = null, warning: AnonCode = null): SchemaBackendServicesScopedList = {
+  def apply(): SchemaBackendServicesScopedList = {
     val __obj = js.Dynamic.literal()
-    if (backendServices != null) __obj.updateDynamic("backendServices")(backendServices.asInstanceOf[js.Any])
-    if (warning != null) __obj.updateDynamic("warning")(warning.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBackendServicesScopedList]
   }
+  @scala.inline
+  implicit class SchemaBackendServicesScopedListOps[Self <: SchemaBackendServicesScopedList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackendServices(value: js.Array[SchemaBackendService]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backendServices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackendServices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backendServices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarning(value: AnonCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

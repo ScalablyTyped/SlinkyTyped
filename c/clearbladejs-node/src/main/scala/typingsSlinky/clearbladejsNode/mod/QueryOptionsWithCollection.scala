@@ -4,17 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait QueryOptionsWithCollection extends QueryOptions {
-  var collection: String
+  var collection: String = js.native
 }
 
 object QueryOptionsWithCollection {
   @scala.inline
-  def apply(collection: String, limit: Int | Double = null, offset: Int | Double = null): QueryOptionsWithCollection = {
+  def apply(collection: String): QueryOptionsWithCollection = {
     val __obj = js.Dynamic.literal(collection = collection.asInstanceOf[js.Any])
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryOptionsWithCollection]
   }
+  @scala.inline
+  implicit class QueryOptionsWithCollectionOps[Self <: QueryOptionsWithCollection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCollection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collection")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

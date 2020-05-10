@@ -22,16 +22,53 @@ trait MitigationActionIdentifier extends js.Object {
 
 object MitigationActionIdentifier {
   @scala.inline
-  def apply(
-    actionArn: MitigationActionArn = null,
-    actionName: MitigationActionName = null,
-    creationDate: js.Date = null
-  ): MitigationActionIdentifier = {
+  def apply(): MitigationActionIdentifier = {
     val __obj = js.Dynamic.literal()
-    if (actionArn != null) __obj.updateDynamic("actionArn")(actionArn.asInstanceOf[js.Any])
-    if (actionName != null) __obj.updateDynamic("actionName")(actionName.asInstanceOf[js.Any])
-    if (creationDate != null) __obj.updateDynamic("creationDate")(creationDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[MitigationActionIdentifier]
   }
+  @scala.inline
+  implicit class MitigationActionIdentifierOps[Self <: MitigationActionIdentifier] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionArn(value: MitigationActionArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActionName(value: MitigationActionName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

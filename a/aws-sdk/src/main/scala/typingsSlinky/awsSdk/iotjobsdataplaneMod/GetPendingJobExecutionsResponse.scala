@@ -18,11 +18,41 @@ trait GetPendingJobExecutionsResponse extends js.Object {
 
 object GetPendingJobExecutionsResponse {
   @scala.inline
-  def apply(inProgressJobs: JobExecutionSummaryList = null, queuedJobs: JobExecutionSummaryList = null): GetPendingJobExecutionsResponse = {
+  def apply(): GetPendingJobExecutionsResponse = {
     val __obj = js.Dynamic.literal()
-    if (inProgressJobs != null) __obj.updateDynamic("inProgressJobs")(inProgressJobs.asInstanceOf[js.Any])
-    if (queuedJobs != null) __obj.updateDynamic("queuedJobs")(queuedJobs.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPendingJobExecutionsResponse]
   }
+  @scala.inline
+  implicit class GetPendingJobExecutionsResponseOps[Self <: GetPendingJobExecutionsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInProgressJobs(value: JobExecutionSummaryList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inProgressJobs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInProgressJobs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inProgressJobs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueuedJobs(value: JobExecutionSummaryList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queuedJobs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueuedJobs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queuedJobs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

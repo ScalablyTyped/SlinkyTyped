@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 /**
   * In version 7.21.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -36,8 +36,8 @@ class BasicParameterType protected () extends ParameterType {
   @JSName("type")
   val type_FBasicParameterType: IType = js.native
   @JSName("containerAsCodeActionParameter")
-  def containerAsCodeActionParameter_MBasicParameterType(): CodeActionParameter = js.native
-  def `type`(): Type = js.native
+  def containerAsCodeActionParameter_MBasicParameterType: CodeActionParameter = js.native
+  def `type`: Type = js.native
   def `type`(newValue: Type): js.Any = js.native
 }
 

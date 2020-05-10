@@ -5,53 +5,104 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait DeclareClass_
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ @js.native
+trait DeclareClass_
   extends Declaration
      with BaseNode
      with Flow
      with FlowDeclaration
      with Statement {
-  var body: ObjectTypeAnnotation_
-  var `extends`: js.Array[InterfaceExtends_] | Null
-  var id: Identifier_
-  var implements: js.Array[ClassImplements_] | Null
-  var mixins: js.Array[InterfaceExtends_] | Null
-  var typeParameters: TypeParameterDeclaration_ | Null
+  var body: ObjectTypeAnnotation_ = js.native
+  var `extends`: js.Array[InterfaceExtends_] | Null = js.native
+  var id: Identifier_ = js.native
+  var implements: js.Array[ClassImplements_] | Null = js.native
+  var mixins: js.Array[InterfaceExtends_] | Null = js.native
+  var typeParameters: TypeParameterDeclaration_ | Null = js.native
   @JSName("type")
-  var type_DeclareClass_ : DeclareClass
+  var type_DeclareClass_ : DeclareClass = js.native
 }
 
 object DeclareClass_ {
   @scala.inline
-  def apply(
-    body: ObjectTypeAnnotation_,
-    id: Identifier_,
-    `type`: DeclareClass,
-    end: Int | Double = null,
-    `extends`: js.Array[InterfaceExtends_] = null,
-    implements: js.Array[ClassImplements_] = null,
-    innerComments: js.Array[Comment] = null,
-    leadingComments: js.Array[Comment] = null,
-    loc: SourceLocation = null,
-    mixins: js.Array[InterfaceExtends_] = null,
-    start: Int | Double = null,
-    trailingComments: js.Array[Comment] = null,
-    typeParameters: TypeParameterDeclaration_ = null
-  ): DeclareClass_ = {
+  def apply(body: ObjectTypeAnnotation_, id: Identifier_, `type`: DeclareClass): DeclareClass_ = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (`extends` != null) __obj.updateDynamic("extends")(`extends`.asInstanceOf[js.Any])
-    if (implements != null) __obj.updateDynamic("implements")(implements.asInstanceOf[js.Any])
-    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
-    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
-    if (typeParameters != null) __obj.updateDynamic("typeParameters")(typeParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeclareClass_]
   }
+  @scala.inline
+  implicit class DeclareClass_Ops[Self <: DeclareClass_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBody(value: ObjectTypeAnnotation_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: Identifier_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: DeclareClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtends(value: js.Array[InterfaceExtends_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extends")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtendsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extends")(null)
+        ret
+    }
+    @scala.inline
+    def withImplements(value: js.Array[ClassImplements_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("implements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImplementsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("implements")(null)
+        ret
+    }
+    @scala.inline
+    def withMixins(value: js.Array[InterfaceExtends_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mixins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMixinsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mixins")(null)
+        ret
+    }
+    @scala.inline
+    def withTypeParameters(value: TypeParameterDeclaration_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypeParametersNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(null)
+        ret
+    }
+  }
+  
 }
 

@@ -7,16 +7,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TemperatureOptions extends js.Object {
-  var parser: decimal | default | hex
+  var parser: decimal | default | hex = js.native
 }
 
 object TemperatureOptions {
   @scala.inline
   def apply(parser: decimal | default | hex): TemperatureOptions = {
     val __obj = js.Dynamic.literal(parser = parser.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TemperatureOptions]
   }
+  @scala.inline
+  implicit class TemperatureOptionsOps[Self <: TemperatureOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParser(value: decimal | default | hex): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

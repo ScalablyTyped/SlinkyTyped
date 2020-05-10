@@ -18,11 +18,41 @@ trait GetConsoleScreenshotResult extends js.Object {
 
 object GetConsoleScreenshotResult {
   @scala.inline
-  def apply(ImageData: String = null, InstanceId: String = null): GetConsoleScreenshotResult = {
+  def apply(): GetConsoleScreenshotResult = {
     val __obj = js.Dynamic.literal()
-    if (ImageData != null) __obj.updateDynamic("ImageData")(ImageData.asInstanceOf[js.Any])
-    if (InstanceId != null) __obj.updateDynamic("InstanceId")(InstanceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetConsoleScreenshotResult]
   }
+  @scala.inline
+  implicit class GetConsoleScreenshotResultOps[Self <: GetConsoleScreenshotResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImageData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait SceneTextAlign extends js.Object
 
 object SceneTextAlign {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.vegaTypings.vegaTypingsStrings.center = "center".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.center]
   @scala.inline
-  def center: typingsSlinky.vegaTypings.vegaTypingsStrings.center = this.cast("center")
+  def left: typingsSlinky.vegaTypings.vegaTypingsStrings.left = "left".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.left]
   @scala.inline
-  def left: typingsSlinky.vegaTypings.vegaTypingsStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.vegaTypings.vegaTypingsStrings.right = this.cast("right")
+  def right: typingsSlinky.vegaTypings.vegaTypingsStrings.right = "right".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.right]
 }
 

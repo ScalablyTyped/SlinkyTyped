@@ -28,12 +28,53 @@ trait SchemaDeviceClaim extends js.Object {
 
 object SchemaDeviceClaim {
   @scala.inline
-  def apply(ownerCompanyId: String = null, resellerId: String = null, sectionType: String = null): SchemaDeviceClaim = {
+  def apply(): SchemaDeviceClaim = {
     val __obj = js.Dynamic.literal()
-    if (ownerCompanyId != null) __obj.updateDynamic("ownerCompanyId")(ownerCompanyId.asInstanceOf[js.Any])
-    if (resellerId != null) __obj.updateDynamic("resellerId")(resellerId.asInstanceOf[js.Any])
-    if (sectionType != null) __obj.updateDynamic("sectionType")(sectionType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeviceClaim]
   }
+  @scala.inline
+  implicit class SchemaDeviceClaimOps[Self <: SchemaDeviceClaim] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOwnerCompanyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerCompanyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwnerCompanyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerCompanyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResellerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resellerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResellerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resellerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSectionType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSectionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

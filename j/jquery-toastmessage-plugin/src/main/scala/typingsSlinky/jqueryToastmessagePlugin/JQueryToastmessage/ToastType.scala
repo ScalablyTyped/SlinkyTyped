@@ -14,14 +14,12 @@ trait ToastType extends js.Object
 
 object ToastType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.error = "error".asInstanceOf[typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.error]
   @scala.inline
-  def error: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.error = this.cast("error")
+  def notice: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.notice = "notice".asInstanceOf[typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.notice]
   @scala.inline
-  def notice: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.notice = this.cast("notice")
+  def success: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.success = "success".asInstanceOf[typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.success]
   @scala.inline
-  def success: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.success = this.cast("success")
-  @scala.inline
-  def warning: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.warning = this.cast("warning")
+  def warning: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.warning = "warning".asInstanceOf[typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.warning]
 }
 

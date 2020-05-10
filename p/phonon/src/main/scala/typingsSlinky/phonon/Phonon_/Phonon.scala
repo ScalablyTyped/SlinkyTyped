@@ -1,8 +1,8 @@
 package typingsSlinky.phonon.Phonon_
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.awesomplete.mod.Options
 import typingsSlinky.phonon.Element
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

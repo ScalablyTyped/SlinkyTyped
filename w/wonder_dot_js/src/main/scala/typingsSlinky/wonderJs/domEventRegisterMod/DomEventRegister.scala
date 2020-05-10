@@ -24,8 +24,8 @@ class DomEventRegister () extends EventRegister {
     domHandler: js.Function,
     priority: Double
   ): Unit = js.native
-  def remove(dom: typingsSlinky.std.HTMLElement, eventName: EEventName): js.Any = js.native
-  def remove(dom: typingsSlinky.std.HTMLElement, eventName: EEventName, handler: js.Function): js.Any = js.native
+  def remove(dom: HTMLElement, eventName: EEventName): js.Any = js.native
+  def remove(dom: HTMLElement, eventName: EEventName, handler: js.Function): js.Any = js.native
   def remove(eventName: EEventName): js.Any = js.native
   def remove(eventName: EEventName, handler: js.Function): js.Any = js.native
 }

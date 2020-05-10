@@ -4,15 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDebug extends js.Object {
-  var debug: Boolean
-  var inspector: Boolean
-  var ipv6: Boolean
-  var tls: Boolean
-  var tls_alpn: Boolean
-  var tls_ocsp: Boolean
-  var tls_sni: Boolean
-  var uv: Boolean
+  var debug: Boolean = js.native
+  var inspector: Boolean = js.native
+  var ipv6: Boolean = js.native
+  var tls: Boolean = js.native
+  var tls_alpn: Boolean = js.native
+  var tls_ocsp: Boolean = js.native
+  var tls_sni: Boolean = js.native
+  var uv: Boolean = js.native
 }
 
 object AnonDebug {
@@ -28,8 +29,63 @@ object AnonDebug {
     uv: Boolean
   ): AnonDebug = {
     val __obj = js.Dynamic.literal(debug = debug.asInstanceOf[js.Any], inspector = inspector.asInstanceOf[js.Any], ipv6 = ipv6.asInstanceOf[js.Any], tls = tls.asInstanceOf[js.Any], tls_alpn = tls_alpn.asInstanceOf[js.Any], tls_ocsp = tls_ocsp.asInstanceOf[js.Any], tls_sni = tls_sni.asInstanceOf[js.Any], uv = uv.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonDebug]
   }
+  @scala.inline
+  implicit class AnonDebugOps[Self <: AnonDebug] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDebug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInspector(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inspector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIpv6(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTls(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTls_alpn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tls_alpn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTls_ocsp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tls_ocsp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTls_sni(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tls_sni")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUv(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uv")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

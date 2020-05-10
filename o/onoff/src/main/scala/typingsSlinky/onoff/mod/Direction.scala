@@ -14,14 +14,12 @@ trait Direction extends js.Object
 
 object Direction {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def high: typingsSlinky.onoff.onoffStrings.high = "high".asInstanceOf[typingsSlinky.onoff.onoffStrings.high]
   @scala.inline
-  def high: typingsSlinky.onoff.onoffStrings.high = this.cast("high")
+  def in: typingsSlinky.onoff.onoffStrings.in = "in".asInstanceOf[typingsSlinky.onoff.onoffStrings.in]
   @scala.inline
-  def in: typingsSlinky.onoff.onoffStrings.in = this.cast("in")
+  def low: typingsSlinky.onoff.onoffStrings.low = "low".asInstanceOf[typingsSlinky.onoff.onoffStrings.low]
   @scala.inline
-  def low: typingsSlinky.onoff.onoffStrings.low = this.cast("low")
-  @scala.inline
-  def out: typingsSlinky.onoff.onoffStrings.out = this.cast("out")
+  def out: typingsSlinky.onoff.onoffStrings.out = "out".asInstanceOf[typingsSlinky.onoff.onoffStrings.out]
 }
 

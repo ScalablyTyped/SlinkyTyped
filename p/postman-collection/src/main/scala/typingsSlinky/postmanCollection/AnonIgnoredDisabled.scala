@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonIgnoredDisabled extends js.Object {
-  var encode: js.UndefOr[Boolean] = js.undefined
-  var ignoredDisabled: js.UndefOr[Boolean] = js.undefined
+  var encode: js.UndefOr[Boolean] = js.native
+  var ignoredDisabled: js.UndefOr[Boolean] = js.native
 }
 
 object AnonIgnoredDisabled {
   @scala.inline
-  def apply(encode: js.UndefOr[Boolean] = js.undefined, ignoredDisabled: js.UndefOr[Boolean] = js.undefined): AnonIgnoredDisabled = {
+  def apply(): AnonIgnoredDisabled = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(encode)) __obj.updateDynamic("encode")(encode.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoredDisabled)) __obj.updateDynamic("ignoredDisabled")(ignoredDisabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonIgnoredDisabled]
   }
+  @scala.inline
+  implicit class AnonIgnoredDisabledOps[Self <: AnonIgnoredDisabled] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoredDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoredDisabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoredDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoredDisabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

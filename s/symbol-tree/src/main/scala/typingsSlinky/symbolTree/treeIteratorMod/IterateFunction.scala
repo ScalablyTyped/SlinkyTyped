@@ -24,16 +24,14 @@ trait IterateFunction extends js.Object
 
 object IterateFunction {
   @scala.inline
-  def `1`: typingsSlinky.symbolTree.symbolTreeNumbers.`1` = this.cast(1)
+  def `1`: typingsSlinky.symbolTree.symbolTreeNumbers.`1` = 1.asInstanceOf[typingsSlinky.symbolTree.symbolTreeNumbers.`1`]
   @scala.inline
-  def `2`: typingsSlinky.symbolTree.symbolTreeNumbers.`2` = this.cast(2)
+  def `2`: typingsSlinky.symbolTree.symbolTreeNumbers.`2` = 2.asInstanceOf[typingsSlinky.symbolTree.symbolTreeNumbers.`2`]
   @scala.inline
-  def `3`: typingsSlinky.symbolTree.symbolTreeNumbers.`3` = this.cast(3)
+  def `3`: typingsSlinky.symbolTree.symbolTreeNumbers.`3` = 3.asInstanceOf[typingsSlinky.symbolTree.symbolTreeNumbers.`3`]
   @scala.inline
-  def `4`: typingsSlinky.symbolTree.symbolTreeNumbers.`4` = this.cast(4)
+  def `4`: typingsSlinky.symbolTree.symbolTreeNumbers.`4` = 4.asInstanceOf[typingsSlinky.symbolTree.symbolTreeNumbers.`4`]
   @scala.inline
-  def `5`: typingsSlinky.symbolTree.symbolTreeNumbers.`5` = this.cast(5)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `5`: typingsSlinky.symbolTree.symbolTreeNumbers.`5` = 5.asInstanceOf[typingsSlinky.symbolTree.symbolTreeNumbers.`5`]
 }
 

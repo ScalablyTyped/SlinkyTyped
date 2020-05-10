@@ -1,35 +1,36 @@
 package typingsSlinky.materialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.slideInChildMod.SlideInChildProps
 import typingsSlinky.materialUi.slideInChildMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SlideInChild
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object SlideInChild {
   @JSImport("material-ui/internal/SlideInChild", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: style */
-  def apply(
-    getLeaveDirection: js.Function,
-    direction: String = null,
-    enterDelay: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(getLeaveDirection = getLeaveDirection.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (enterDelay != null) __obj.updateDynamic("enterDelay")(enterDelay.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def direction(value: String): this.type = set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enterDelay(value: Double): this.type = set("enterDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = SlideInChildProps
+  
+  def withProps(p: SlideInChildProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(getLeaveDirection: js.Function): Builder = {
+    val __props = js.Dynamic.literal(getLeaveDirection = getLeaveDirection.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SlideInChildProps]))
+  }
 }
 

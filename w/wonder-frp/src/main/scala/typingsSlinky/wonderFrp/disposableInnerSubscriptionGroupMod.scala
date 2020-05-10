@@ -12,8 +12,6 @@ object disposableInnerSubscriptionGroupMod extends js.Object {
   class InnerSubscriptionGroup () extends IDisposable {
     var _container: js.Any = js.native
     def addChild(child: IDisposable): Unit = js.native
-    /* CompleteClass */
-    override def dispose(): Unit = js.native
   }
   
   /* static members */

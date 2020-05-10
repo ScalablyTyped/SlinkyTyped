@@ -23,10 +23,29 @@ trait SchemaChangeReport extends js.Object {
 
 object SchemaChangeReport {
   @scala.inline
-  def apply(configChanges: js.Array[SchemaConfigChange] = null): SchemaChangeReport = {
+  def apply(): SchemaChangeReport = {
     val __obj = js.Dynamic.literal()
-    if (configChanges != null) __obj.updateDynamic("configChanges")(configChanges.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaChangeReport]
   }
+  @scala.inline
+  implicit class SchemaChangeReportOps[Self <: SchemaChangeReport] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigChanges(value: js.Array[SchemaConfigChange]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configChanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigChanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configChanges")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

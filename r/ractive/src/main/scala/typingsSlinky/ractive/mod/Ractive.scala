@@ -149,7 +149,7 @@ class Ractive[T /* <: Ractive[T] */] () extends js.Object {
   	 */
   def getContext(): ContextHelper = js.native
   def getContext(nodeOrQuery: String): ContextHelper = js.native
-  def getContext(nodeOrQuery: typingsSlinky.std.HTMLElement): ContextHelper = js.native
+  def getContext(nodeOrQuery: HTMLElement): ContextHelper = js.native
   /**
   	 * Render this instance into the given target, optionally using the given anchor. If the instance is already attached to the DOM, it will first be detached.
   	 * @param target
@@ -354,20 +354,12 @@ class Ractive[T /* <: Ractive[T] */] () extends js.Object {
   	 * @param node the element to transition
   	 * @param opts
   	 */
-  def transition(transition: String, node: typingsSlinky.std.HTMLElement): js.Promise[Unit] = js.native
-  def transition(
-    transition: String,
-    node: typingsSlinky.std.HTMLElement,
-    opts: typingsSlinky.ractive.TransitionOpts
-  ): js.Promise[Unit] = js.native
+  def transition(transition: String, node: HTMLElement): js.Promise[Unit] = js.native
+  def transition(transition: String, node: HTMLElement, opts: typingsSlinky.ractive.TransitionOpts): js.Promise[Unit] = js.native
   def transition(transition: String, opts: typingsSlinky.ractive.TransitionOpts): js.Promise[Unit] = js.native
   def transition(transition: Transition): js.Promise[Unit] = js.native
-  def transition(transition: Transition, node: typingsSlinky.std.HTMLElement): js.Promise[Unit] = js.native
-  def transition(
-    transition: Transition,
-    node: typingsSlinky.std.HTMLElement,
-    opts: typingsSlinky.ractive.TransitionOpts
-  ): js.Promise[Unit] = js.native
+  def transition(transition: Transition, node: HTMLElement): js.Promise[Unit] = js.native
+  def transition(transition: Transition, node: HTMLElement, opts: typingsSlinky.ractive.TransitionOpts): js.Promise[Unit] = js.native
   def transition(transition: Transition, opts: typingsSlinky.ractive.TransitionOpts): js.Promise[Unit] = js.native
   /**
   	 * Remove the link at the given keypath.
@@ -458,7 +450,7 @@ object Ractive extends js.Object {
   def getCSS(): String = js.native
   def getContext(nodeOrQuery: String): ContextHelper = js.native
   /** Get a Context for the given node or selector. */
-  def getContext(nodeOrQuery: typingsSlinky.std.HTMLElement): ContextHelper = js.native
+  def getContext(nodeOrQuery: HTMLElement): ContextHelper = js.native
   /** Check to see if CSS with the given id has already been added */
   def hasCSS(id: String): Boolean = js.native
   /** @returns true if the given object is an instance of this constructor */

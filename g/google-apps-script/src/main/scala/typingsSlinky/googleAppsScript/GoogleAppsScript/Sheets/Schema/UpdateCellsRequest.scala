@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UpdateCellsRequest extends js.Object {
-  var fields: js.UndefOr[String] = js.undefined
-  var range: js.UndefOr[GridRange] = js.undefined
-  var rows: js.UndefOr[js.Array[RowData]] = js.undefined
-  var start: js.UndefOr[GridCoordinate] = js.undefined
+  var fields: js.UndefOr[String] = js.native
+  var range: js.UndefOr[GridRange] = js.native
+  var rows: js.UndefOr[js.Array[RowData]] = js.native
+  var start: js.UndefOr[GridCoordinate] = js.native
 }
 
 object UpdateCellsRequest {
   @scala.inline
-  def apply(
-    fields: String = null,
-    range: GridRange = null,
-    rows: js.Array[RowData] = null,
-    start: GridCoordinate = null
-  ): UpdateCellsRequest = {
+  def apply(): UpdateCellsRequest = {
     val __obj = js.Dynamic.literal()
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateCellsRequest]
   }
+  @scala.inline
+  implicit class UpdateCellsRequestOps[Self <: UpdateCellsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFields(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: GridRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: js.Array[RowData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: GridCoordinate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

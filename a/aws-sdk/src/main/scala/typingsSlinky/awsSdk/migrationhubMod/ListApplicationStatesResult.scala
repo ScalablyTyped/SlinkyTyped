@@ -18,11 +18,41 @@ trait ListApplicationStatesResult extends js.Object {
 
 object ListApplicationStatesResult {
   @scala.inline
-  def apply(ApplicationStateList: ApplicationStateList = null, NextToken: Token = null): ListApplicationStatesResult = {
+  def apply(): ListApplicationStatesResult = {
     val __obj = js.Dynamic.literal()
-    if (ApplicationStateList != null) __obj.updateDynamic("ApplicationStateList")(ApplicationStateList.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListApplicationStatesResult]
   }
+  @scala.inline
+  implicit class ListApplicationStatesResultOps[Self <: ListApplicationStatesResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationStateList(value: ApplicationStateList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationStateList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationStateList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationStateList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: Token): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

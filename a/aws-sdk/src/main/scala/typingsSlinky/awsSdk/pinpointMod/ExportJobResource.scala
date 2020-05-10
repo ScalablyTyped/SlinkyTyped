@@ -26,16 +26,53 @@ trait ExportJobResource extends js.Object {
 
 object ExportJobResource {
   @scala.inline
-  def apply(
-    RoleArn: string,
-    S3UrlPrefix: string,
-    SegmentId: string = null,
-    SegmentVersion: Int | Double = null
-  ): ExportJobResource = {
+  def apply(RoleArn: string, S3UrlPrefix: string): ExportJobResource = {
     val __obj = js.Dynamic.literal(RoleArn = RoleArn.asInstanceOf[js.Any], S3UrlPrefix = S3UrlPrefix.asInstanceOf[js.Any])
-    if (SegmentId != null) __obj.updateDynamic("SegmentId")(SegmentId.asInstanceOf[js.Any])
-    if (SegmentVersion != null) __obj.updateDynamic("SegmentVersion")(SegmentVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportJobResource]
   }
+  @scala.inline
+  implicit class ExportJobResourceOps[Self <: ExportJobResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRoleArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3UrlPrefix(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3UrlPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSegmentId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentVersion(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

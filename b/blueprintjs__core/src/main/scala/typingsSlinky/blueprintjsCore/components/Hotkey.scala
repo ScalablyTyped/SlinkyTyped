@@ -1,46 +1,47 @@
 package typingsSlinky.blueprintjsCore.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.KeyboardEvent
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.hotkeyMod.IHotkeyProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Hotkey
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsCore.mod.Hotkey] {
+object Hotkey {
   @JSImport("@blueprintjs/core", "Hotkey")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled */
-  def apply(
-    combo: String,
-    label: String,
-    allowInInput: js.UndefOr[Boolean] = js.undefined,
-    global: js.UndefOr[Boolean] = js.undefined,
-    group: String = null,
-    onKeyDown: /* e */ KeyboardEvent => _ = null,
-    onKeyUp: /* e */ KeyboardEvent => _ = null,
-    preventDefault: js.UndefOr[Boolean] = js.undefined,
-    stopPropagation: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Hotkey] = {
-    val __obj = js.Dynamic.literal(combo = combo.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowInInput)) __obj.updateDynamic("allowInInput")(allowInInput.asInstanceOf[js.Any])
-    if (!js.isUndefined(global)) __obj.updateDynamic("global")(global.asInstanceOf[js.Any])
-    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
-    if (!js.isUndefined(preventDefault)) __obj.updateDynamic("preventDefault")(preventDefault.asInstanceOf[js.Any])
-    if (!js.isUndefined(stopPropagation)) __obj.updateDynamic("stopPropagation")(stopPropagation.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Hotkey] {
+    @scala.inline
+    def allowInInput(value: Boolean): this.type = set("allowInInput", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def global(value: Boolean): this.type = set("global", value.asInstanceOf[js.Any])
+    @scala.inline
+    def group(value: String): this.type = set("group", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onKeyDown(value: /* e */ KeyboardEvent => _): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyUp(value: /* e */ KeyboardEvent => _): this.type = set("onKeyUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def preventDefault(value: Boolean): this.type = set("preventDefault", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stopPropagation(value: Boolean): this.type = set("stopPropagation", value.asInstanceOf[js.Any])
   }
-  type Props = IHotkeyProps
+  
+  def withProps(p: IHotkeyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(combo: String, label: String): Builder = {
+    val __props = js.Dynamic.literal(combo = combo.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IHotkeyProps]))
+  }
 }
 

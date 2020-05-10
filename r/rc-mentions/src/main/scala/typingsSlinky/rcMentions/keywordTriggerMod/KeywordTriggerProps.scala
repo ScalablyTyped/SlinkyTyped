@@ -8,38 +8,121 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait KeywordTriggerProps extends js.Object {
-  var children: js.UndefOr[ReactElement] = js.undefined
-  var getPopupContainer: js.UndefOr[js.Function0[HTMLElement]] = js.undefined
-  var loading: js.UndefOr[Boolean] = js.undefined
-  var options: js.Array[OptionProps]
-  var placement: js.UndefOr[Placement] = js.undefined
-  var prefixCls: js.UndefOr[String] = js.undefined
-  var transitionName: js.UndefOr[String] = js.undefined
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.native
+  var getPopupContainer: js.UndefOr[js.Function0[HTMLElement]] = js.native
+  var loading: js.UndefOr[Boolean] = js.native
+  var options: js.Array[OptionProps] = js.native
+  var placement: js.UndefOr[Placement] = js.native
+  var prefixCls: js.UndefOr[String] = js.native
+  var transitionName: js.UndefOr[String] = js.native
+  var visible: js.UndefOr[Boolean] = js.native
 }
 
 object KeywordTriggerProps {
   @scala.inline
-  def apply(
-    options: js.Array[OptionProps],
-    children: ReactElement = null,
-    getPopupContainer: () => HTMLElement = null,
-    loading: js.UndefOr[Boolean] = js.undefined,
-    placement: Placement = null,
-    prefixCls: String = null,
-    transitionName: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): KeywordTriggerProps = {
+  def apply(options: js.Array[OptionProps]): KeywordTriggerProps = {
     val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction0(getPopupContainer))
-    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[KeywordTriggerProps]
   }
+  @scala.inline
+  implicit class KeywordTriggerPropsOps[Self <: KeywordTriggerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOptions(value: js.Array[OptionProps]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildren(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetPopupContainer(value: () => HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupContainer")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetPopupContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoading(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacement(value: Placement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait AuthorizationStatus extends js.Object
 
 object AuthorizationStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def closed: typingsSlinky.stripe.stripeStrings.closed = "closed".asInstanceOf[typingsSlinky.stripe.stripeStrings.closed]
   @scala.inline
-  def closed: typingsSlinky.stripe.stripeStrings.closed = this.cast("closed")
+  def pending: typingsSlinky.stripe.stripeStrings.pending = "pending".asInstanceOf[typingsSlinky.stripe.stripeStrings.pending]
   @scala.inline
-  def pending: typingsSlinky.stripe.stripeStrings.pending = this.cast("pending")
-  @scala.inline
-  def reversed: typingsSlinky.stripe.stripeStrings.reversed = this.cast("reversed")
+  def reversed: typingsSlinky.stripe.stripeStrings.reversed = "reversed".asInstanceOf[typingsSlinky.stripe.stripeStrings.reversed]
 }
 

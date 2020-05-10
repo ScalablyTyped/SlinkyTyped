@@ -11,10 +11,29 @@ trait AnalyticsApplicationOutputSchema extends js.Object {
 
 object AnalyticsApplicationOutputSchema {
   @scala.inline
-  def apply(recordFormatType: String = null): AnalyticsApplicationOutputSchema = {
+  def apply(): AnalyticsApplicationOutputSchema = {
     val __obj = js.Dynamic.literal()
-    if (recordFormatType != null) __obj.updateDynamic("recordFormatType")(recordFormatType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalyticsApplicationOutputSchema]
   }
+  @scala.inline
+  implicit class AnalyticsApplicationOutputSchemaOps[Self <: AnalyticsApplicationOutputSchema] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRecordFormatType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordFormatType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecordFormatType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordFormatType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

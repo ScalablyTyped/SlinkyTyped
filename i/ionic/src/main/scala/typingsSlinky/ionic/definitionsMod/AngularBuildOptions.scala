@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AngularBuildOptions extends BuildOptions[angular] {
   /**
     * The Angular architect configuration to use for builds.
@@ -12,37 +13,75 @@ trait AngularBuildOptions extends BuildOptions[angular] {
     * The `--prod` command line flag is a shortcut which translates to the
     * 'production' configuration.
     */
-  var configuration: js.UndefOr[String] = js.undefined
-  var cordovaAssets: js.UndefOr[Boolean] = js.undefined
-  var sourcemaps: js.UndefOr[Boolean] = js.undefined
-  var watch: js.UndefOr[Boolean] = js.undefined
+  var configuration: js.UndefOr[String] = js.native
+  var cordovaAssets: js.UndefOr[Boolean] = js.native
+  var sourcemaps: js.UndefOr[Boolean] = js.native
+  var watch: js.UndefOr[Boolean] = js.native
 }
 
 object AngularBuildOptions {
   @scala.inline
-  def apply(
-    `--`: js.Array[String],
-    engine: String,
-    `type`: angular,
-    configuration: String = null,
-    cordovaAssets: js.UndefOr[Boolean] = js.undefined,
-    platform: String = null,
-    project: String = null,
-    sourcemaps: js.UndefOr[Boolean] = js.undefined,
-    verbose: js.UndefOr[Boolean] = js.undefined,
-    watch: js.UndefOr[Boolean] = js.undefined
-  ): AngularBuildOptions = {
+  def apply(`--`: js.Array[String], engine: String, `type`: angular): AngularBuildOptions = {
     val __obj = js.Dynamic.literal(engine = engine.asInstanceOf[js.Any])
     __obj.updateDynamic("--")(`--`.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (configuration != null) __obj.updateDynamic("configuration")(configuration.asInstanceOf[js.Any])
-    if (!js.isUndefined(cordovaAssets)) __obj.updateDynamic("cordovaAssets")(cordovaAssets.asInstanceOf[js.Any])
-    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
-    if (project != null) __obj.updateDynamic("project")(project.asInstanceOf[js.Any])
-    if (!js.isUndefined(sourcemaps)) __obj.updateDynamic("sourcemaps")(sourcemaps.asInstanceOf[js.Any])
-    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.asInstanceOf[js.Any])
-    if (!js.isUndefined(watch)) __obj.updateDynamic("watch")(watch.asInstanceOf[js.Any])
     __obj.asInstanceOf[AngularBuildOptions]
   }
+  @scala.inline
+  implicit class AngularBuildOptionsOps[Self <: AngularBuildOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfiguration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCordovaAssets(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cordovaAssets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCordovaAssets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cordovaAssets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourcemaps(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourcemaps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourcemaps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourcemaps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWatch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watch")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

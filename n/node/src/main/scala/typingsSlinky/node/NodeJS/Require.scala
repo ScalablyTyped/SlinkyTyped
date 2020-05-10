@@ -1,13 +1,14 @@
 package typingsSlinky.node.NodeJS
 
 import typingsSlinky.node.AnonPaths
+import typingsSlinky.node.NodeModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Require extends js.Object {
-  var cache: NodeRequireCache = js.native
+  var cache: Dict[NodeModule] = js.native
   /**
     * @deprecated
     */

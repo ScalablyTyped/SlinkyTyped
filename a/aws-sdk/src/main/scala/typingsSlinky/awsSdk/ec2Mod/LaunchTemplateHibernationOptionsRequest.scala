@@ -14,10 +14,29 @@ trait LaunchTemplateHibernationOptionsRequest extends js.Object {
 
 object LaunchTemplateHibernationOptionsRequest {
   @scala.inline
-  def apply(Configured: js.UndefOr[scala.Boolean] = js.undefined): LaunchTemplateHibernationOptionsRequest = {
+  def apply(): LaunchTemplateHibernationOptionsRequest = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(Configured)) __obj.updateDynamic("Configured")(Configured.asInstanceOf[js.Any])
     __obj.asInstanceOf[LaunchTemplateHibernationOptionsRequest]
   }
+  @scala.inline
+  implicit class LaunchTemplateHibernationOptionsRequestOps[Self <: LaunchTemplateHibernationOptionsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigured(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Configured")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigured: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Configured")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

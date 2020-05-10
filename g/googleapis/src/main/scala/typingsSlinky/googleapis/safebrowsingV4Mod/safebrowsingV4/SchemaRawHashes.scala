@@ -29,11 +29,41 @@ trait SchemaRawHashes extends js.Object {
 
 object SchemaRawHashes {
   @scala.inline
-  def apply(prefixSize: Int | Double = null, rawHashes: String = null): SchemaRawHashes = {
+  def apply(): SchemaRawHashes = {
     val __obj = js.Dynamic.literal()
-    if (prefixSize != null) __obj.updateDynamic("prefixSize")(prefixSize.asInstanceOf[js.Any])
-    if (rawHashes != null) __obj.updateDynamic("rawHashes")(rawHashes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRawHashes]
   }
+  @scala.inline
+  implicit class SchemaRawHashesOps[Self <: SchemaRawHashes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPrefixSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRawHashes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawHashes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRawHashes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawHashes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

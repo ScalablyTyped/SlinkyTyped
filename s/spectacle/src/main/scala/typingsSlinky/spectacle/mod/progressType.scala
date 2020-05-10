@@ -17,14 +17,12 @@ trait progressType extends js.Object
 
 object progressType {
   @scala.inline
-  def bar: typingsSlinky.spectacle.spectacleStrings.bar = this.cast("bar")
+  def bar: typingsSlinky.spectacle.spectacleStrings.bar = "bar".asInstanceOf[typingsSlinky.spectacle.spectacleStrings.bar]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def none: typingsSlinky.spectacle.spectacleStrings.none = "none".asInstanceOf[typingsSlinky.spectacle.spectacleStrings.none]
   @scala.inline
-  def none: typingsSlinky.spectacle.spectacleStrings.none = this.cast("none")
+  def number: typingsSlinky.spectacle.spectacleStrings.number = "number".asInstanceOf[typingsSlinky.spectacle.spectacleStrings.number]
   @scala.inline
-  def number: typingsSlinky.spectacle.spectacleStrings.number = this.cast("number")
-  @scala.inline
-  def pacman: typingsSlinky.spectacle.spectacleStrings.pacman = this.cast("pacman")
+  def pacman: typingsSlinky.spectacle.spectacleStrings.pacman = "pacman".asInstanceOf[typingsSlinky.spectacle.spectacleStrings.pacman]
 }
 

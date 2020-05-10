@@ -1,12 +1,9 @@
 package typingsSlinky.alt.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.alt.AltJS.Alt
 import typingsSlinky.alt.AltJS.AltStore
 import typingsSlinky.alt.altContainerMod.ContainerProps
@@ -14,35 +11,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AltContainer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object AltContainer {
   @JSImport("alt/AltContainer", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    component: ReactComponentClass[_] = null,
-    flux: Alt = null,
-    render: /* repeated */ js.Any => ReactElement = null,
-    shouldComponentUpdate: /* props */ js.Any => Boolean = null,
-    store: AltStore[_] = null,
-    stores: js.Array[AltStore[_]] = null,
-    transform: (/* store */ AltStore[_], /* actions */ js.Any) => _ = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (flux != null) __obj.updateDynamic("flux")(flux.asInstanceOf[js.Any])
-    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction1(render))
-    if (shouldComponentUpdate != null) __obj.updateDynamic("shouldComponentUpdate")(js.Any.fromFunction1(shouldComponentUpdate))
-    if (store != null) __obj.updateDynamic("store")(store.asInstanceOf[js.Any])
-    if (stores != null) __obj.updateDynamic("stores")(stores.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(js.Any.fromFunction2(transform))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def component(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flux(value: Alt): this.type = set("flux", value.asInstanceOf[js.Any])
+    @scala.inline
+    def render(value: /* repeated */ js.Any => ReactElement): this.type = set("render", js.Any.fromFunction1(value))
+    @scala.inline
+    def shouldComponentUpdate(value: /* props */ js.Any => Boolean): this.type = set("shouldComponentUpdate", js.Any.fromFunction1(value))
+    @scala.inline
+    def store(value: AltStore[_]): this.type = set("store", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stores(value: js.Array[AltStore[_]]): this.type = set("stores", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transform(value: (/* store */ AltStore[_], /* actions */ js.Any) => _): this.type = set("transform", js.Any.fromFunction2(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ContainerProps
+  
+  def withProps(p: ContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: AltContainer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

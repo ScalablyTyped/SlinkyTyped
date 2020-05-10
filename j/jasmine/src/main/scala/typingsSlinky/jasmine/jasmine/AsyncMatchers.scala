@@ -1,8 +1,6 @@
 package typingsSlinky.jasmine.jasmine
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.std.Error
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,11 +28,11 @@ trait AsyncMatchers[T, U] extends js.Object {
     * @param message - The message that should be set on the thrown Error.
     */
   def toBeRejectedWithError(): js.Thenable[Unit] = js.native
-  def toBeRejectedWithError(expected: Instantiable1[/* args (repeated) */ js.Any, Error]): js.Thenable[Unit] = js.native
-  def toBeRejectedWithError(expected: Instantiable1[/* args (repeated) */ js.Any, Error], message: String): js.Thenable[Unit] = js.native
-  def toBeRejectedWithError(expected: Instantiable1[/* args (repeated) */ js.Any, Error], message: RegExp): js.Thenable[Unit] = js.native
+  def toBeRejectedWithError(expected: Instantiable1[/* args (repeated) */ js.Any, js.Error]): js.Thenable[Unit] = js.native
+  def toBeRejectedWithError(expected: Instantiable1[/* args (repeated) */ js.Any, js.Error], message: String): js.Thenable[Unit] = js.native
+  def toBeRejectedWithError(expected: Instantiable1[/* args (repeated) */ js.Any, js.Error], message: js.RegExp): js.Thenable[Unit] = js.native
   def toBeRejectedWithError(message: String): js.Thenable[Unit] = js.native
-  def toBeRejectedWithError(message: RegExp): js.Thenable[Unit] = js.native
+  def toBeRejectedWithError(message: js.RegExp): js.Thenable[Unit] = js.native
   /**
     * Expect a promise to be resolved.
     * @param expectationFailOutput

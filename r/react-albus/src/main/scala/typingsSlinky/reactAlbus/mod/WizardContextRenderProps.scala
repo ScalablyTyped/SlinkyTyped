@@ -13,15 +13,13 @@ trait WizardContextRenderProps extends js.Object
 
 object WizardContextRenderProps {
   @scala.inline
-  def AnonRender(render: /* wizard */ WizardContext => TagMod[Any] = null): WizardContextRenderProps = {
+  def AnonRender(): WizardContextRenderProps = {
     val __obj = js.Dynamic.literal()
-    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction1(render))
     __obj.asInstanceOf[WizardContextRenderProps]
   }
   @scala.inline
   def AnonChildren(children: WizardContext => TagMod[Any]): WizardContextRenderProps = {
     val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children))
-  
     __obj.asInstanceOf[WizardContextRenderProps]
   }
 }

@@ -18,11 +18,41 @@ trait HttpDataSourceConfig extends js.Object {
 
 object HttpDataSourceConfig {
   @scala.inline
-  def apply(authorizationConfig: AuthorizationConfig = null, endpoint: String = null): HttpDataSourceConfig = {
+  def apply(): HttpDataSourceConfig = {
     val __obj = js.Dynamic.literal()
-    if (authorizationConfig != null) __obj.updateDynamic("authorizationConfig")(authorizationConfig.asInstanceOf[js.Any])
-    if (endpoint != null) __obj.updateDynamic("endpoint")(endpoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpDataSourceConfig]
   }
+  @scala.inline
+  implicit class HttpDataSourceConfigOps[Self <: HttpDataSourceConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthorizationConfig(value: AuthorizationConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizationConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

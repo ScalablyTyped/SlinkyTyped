@@ -46,46 +46,233 @@ trait NFSFileShareInfo extends js.Object {
 
 object NFSFileShareInfo {
   @scala.inline
-  def apply(
-    ClientList: FileShareClientList = null,
-    DefaultStorageClass: StorageClass = null,
-    FileShareARN: FileShareARN = null,
-    FileShareId: FileShareId = null,
-    FileShareStatus: FileShareStatus = null,
-    GatewayARN: GatewayARN = null,
-    GuessMIMETypeEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    KMSEncrypted: js.UndefOr[scala.Boolean] = js.undefined,
-    KMSKey: KMSKey = null,
-    LocationARN: LocationARN = null,
-    NFSFileShareDefaults: NFSFileShareDefaults = null,
-    ObjectACL: ObjectACL = null,
-    Path: Path = null,
-    ReadOnly: js.UndefOr[scala.Boolean] = js.undefined,
-    RequesterPays: js.UndefOr[scala.Boolean] = js.undefined,
-    Role: Role = null,
-    Squash: Squash = null,
-    Tags: Tags = null
-  ): NFSFileShareInfo = {
+  def apply(): NFSFileShareInfo = {
     val __obj = js.Dynamic.literal()
-    if (ClientList != null) __obj.updateDynamic("ClientList")(ClientList.asInstanceOf[js.Any])
-    if (DefaultStorageClass != null) __obj.updateDynamic("DefaultStorageClass")(DefaultStorageClass.asInstanceOf[js.Any])
-    if (FileShareARN != null) __obj.updateDynamic("FileShareARN")(FileShareARN.asInstanceOf[js.Any])
-    if (FileShareId != null) __obj.updateDynamic("FileShareId")(FileShareId.asInstanceOf[js.Any])
-    if (FileShareStatus != null) __obj.updateDynamic("FileShareStatus")(FileShareStatus.asInstanceOf[js.Any])
-    if (GatewayARN != null) __obj.updateDynamic("GatewayARN")(GatewayARN.asInstanceOf[js.Any])
-    if (!js.isUndefined(GuessMIMETypeEnabled)) __obj.updateDynamic("GuessMIMETypeEnabled")(GuessMIMETypeEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(KMSEncrypted)) __obj.updateDynamic("KMSEncrypted")(KMSEncrypted.asInstanceOf[js.Any])
-    if (KMSKey != null) __obj.updateDynamic("KMSKey")(KMSKey.asInstanceOf[js.Any])
-    if (LocationARN != null) __obj.updateDynamic("LocationARN")(LocationARN.asInstanceOf[js.Any])
-    if (NFSFileShareDefaults != null) __obj.updateDynamic("NFSFileShareDefaults")(NFSFileShareDefaults.asInstanceOf[js.Any])
-    if (ObjectACL != null) __obj.updateDynamic("ObjectACL")(ObjectACL.asInstanceOf[js.Any])
-    if (Path != null) __obj.updateDynamic("Path")(Path.asInstanceOf[js.Any])
-    if (!js.isUndefined(ReadOnly)) __obj.updateDynamic("ReadOnly")(ReadOnly.asInstanceOf[js.Any])
-    if (!js.isUndefined(RequesterPays)) __obj.updateDynamic("RequesterPays")(RequesterPays.asInstanceOf[js.Any])
-    if (Role != null) __obj.updateDynamic("Role")(Role.asInstanceOf[js.Any])
-    if (Squash != null) __obj.updateDynamic("Squash")(Squash.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[NFSFileShareInfo]
   }
+  @scala.inline
+  implicit class NFSFileShareInfoOps[Self <: NFSFileShareInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientList(value: FileShareClientList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultStorageClass(value: StorageClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultStorageClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultStorageClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultStorageClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileShareARN(value: FileShareARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileShareARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileShareId(value: FileShareId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileShareId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileShareStatus(value: FileShareStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileShareStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayARN(value: GatewayARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGuessMIMETypeEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GuessMIMETypeEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGuessMIMETypeEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GuessMIMETypeEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKMSEncrypted(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSEncrypted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKMSEncrypted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSEncrypted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKMSKey(value: KMSKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKMSKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocationARN(value: LocationARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocationARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNFSFileShareDefaults(value: NFSFileShareDefaults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NFSFileShareDefaults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNFSFileShareDefaults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NFSFileShareDefaults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectACL(value: ObjectACL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectACL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectACL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectACL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: Path): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequesterPays(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterPays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequesterPays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterPays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRole(value: Role): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSquash(value: Squash): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Squash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSquash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Squash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

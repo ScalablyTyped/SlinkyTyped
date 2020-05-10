@@ -1,14 +1,13 @@
 package typingsSlinky.reactMaterialUiFormValidator.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.EventTarget
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.TextFieldProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactMaterialUiFormValidator.mod.ValidatorComponentProps
@@ -17,90 +16,118 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TextValidator
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactMaterialUiFormValidator.mod.TextValidator] {
+object TextValidator {
   @JSImport("react-material-ui-form-validator", "TextValidator")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    name: String,
-    value: js.Any,
-    defaultValue: String | Double = null,
-    errorMessages: js.Array[_] | String = null,
-    errorStyle: CSSProperties = null,
-    errorText: TagMod[Any] = null,
-    floatingLabelFixed: js.UndefOr[Boolean] = js.undefined,
-    floatingLabelFocusStyle: CSSProperties = null,
-    floatingLabelShrinkStyle: CSSProperties = null,
-    floatingLabelStyle: CSSProperties = null,
-    floatingLabelText: TagMod[Any] = null,
-    fullWidth: js.UndefOr[Boolean] = js.undefined,
-    hintStyle: CSSProperties = null,
-    hintText: TagMod[Any] = null,
-    inputStyle: CSSProperties = null,
-    max: Int | Double = null,
-    maxlength: String = null,
-    min: Int | Double = null,
-    minlength: String = null,
-    multiLine: js.UndefOr[Boolean] = js.undefined,
-    onBlur: SyntheticFocusEvent[js.Object] => Unit = null,
-    onChange: (SyntheticEvent[EventTarget with js.Object, Event_], /* newValue */ String) => Unit = null,
-    onFocus: SyntheticFocusEvent[js.Object] => Unit = null,
-    onKeyDown: SyntheticKeyboardEvent[js.Object] => Unit = null,
-    onKeyPress: SyntheticKeyboardEvent[js.Object] => Unit = null,
-    onKeyUp: SyntheticKeyboardEvent[js.Object] => Unit = null,
-    rowsMax: Int | Double = null,
-    step: Int | Double = null,
-    textareaStyle: CSSProperties = null,
-    underlineDisabledStyle: CSSProperties = null,
-    underlineFocusStyle: CSSProperties = null,
-    underlineShow: js.UndefOr[Boolean] = js.undefined,
-    underlineStyle: CSSProperties = null,
-    validatorListener: /* isValid */ Boolean => Unit = null,
-    validators: js.Array[_] = null,
-    withRequiredValidator: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactMaterialUiFormValidator.mod.TextValidator] = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (errorMessages != null) __obj.updateDynamic("errorMessages")(errorMessages.asInstanceOf[js.Any])
-    if (errorStyle != null) __obj.updateDynamic("errorStyle")(errorStyle.asInstanceOf[js.Any])
-    if (errorText != null) __obj.updateDynamic("errorText")(errorText.asInstanceOf[js.Any])
-    if (!js.isUndefined(floatingLabelFixed)) __obj.updateDynamic("floatingLabelFixed")(floatingLabelFixed.asInstanceOf[js.Any])
-    if (floatingLabelFocusStyle != null) __obj.updateDynamic("floatingLabelFocusStyle")(floatingLabelFocusStyle.asInstanceOf[js.Any])
-    if (floatingLabelShrinkStyle != null) __obj.updateDynamic("floatingLabelShrinkStyle")(floatingLabelShrinkStyle.asInstanceOf[js.Any])
-    if (floatingLabelStyle != null) __obj.updateDynamic("floatingLabelStyle")(floatingLabelStyle.asInstanceOf[js.Any])
-    if (floatingLabelText != null) __obj.updateDynamic("floatingLabelText")(floatingLabelText.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullWidth)) __obj.updateDynamic("fullWidth")(fullWidth.asInstanceOf[js.Any])
-    if (hintStyle != null) __obj.updateDynamic("hintStyle")(hintStyle.asInstanceOf[js.Any])
-    if (hintText != null) __obj.updateDynamic("hintText")(hintText.asInstanceOf[js.Any])
-    if (inputStyle != null) __obj.updateDynamic("inputStyle")(inputStyle.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maxlength != null) __obj.updateDynamic("maxlength")(maxlength.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minlength != null) __obj.updateDynamic("minlength")(minlength.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiLine)) __obj.updateDynamic("multiLine")(multiLine.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
-    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
-    if (rowsMax != null) __obj.updateDynamic("rowsMax")(rowsMax.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
-    if (textareaStyle != null) __obj.updateDynamic("textareaStyle")(textareaStyle.asInstanceOf[js.Any])
-    if (underlineDisabledStyle != null) __obj.updateDynamic("underlineDisabledStyle")(underlineDisabledStyle.asInstanceOf[js.Any])
-    if (underlineFocusStyle != null) __obj.updateDynamic("underlineFocusStyle")(underlineFocusStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(underlineShow)) __obj.updateDynamic("underlineShow")(underlineShow.asInstanceOf[js.Any])
-    if (underlineStyle != null) __obj.updateDynamic("underlineStyle")(underlineStyle.asInstanceOf[js.Any])
-    if (validatorListener != null) __obj.updateDynamic("validatorListener")(js.Any.fromFunction1(validatorListener))
-    if (validators != null) __obj.updateDynamic("validators")(validators.asInstanceOf[js.Any])
-    if (!js.isUndefined(withRequiredValidator)) __obj.updateDynamic("withRequiredValidator")(withRequiredValidator.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactMaterialUiFormValidator.mod.TextValidator] {
+    @scala.inline
+    def autoComplete(value: String): this.type = set("autoComplete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: String | Double): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorMessages(value: js.Array[_] | String): this.type = set("errorMessages", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorStyle(value: CSSProperties): this.type = set("errorStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorTextReactElement(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorText(value: TagMod[Any]): this.type = set("errorText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floatingLabelFixed(value: Boolean): this.type = set("floatingLabelFixed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floatingLabelFocusStyle(value: CSSProperties): this.type = set("floatingLabelFocusStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floatingLabelShrinkStyle(value: CSSProperties): this.type = set("floatingLabelShrinkStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floatingLabelStyle(value: CSSProperties): this.type = set("floatingLabelStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floatingLabelTextReactElement(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floatingLabelText(value: TagMod[Any]): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hintStyle(value: CSSProperties): this.type = set("hintStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hintTextReactElement(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hintText(value: TagMod[Any]): this.type = set("hintText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputStyle(value: CSSProperties): this.type = set("inputStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxlength(value: String): this.type = set("maxlength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def min(value: Double): this.type = set("min", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minlength(value: String): this.type = set("minlength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiLine(value: Boolean): this.type = set("multiLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBlur(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: (SyntheticEvent[EventTarget with js.Object, Event_], /* newValue */ String) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onFocus(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyDown(value: SyntheticKeyboardEvent[js.Object] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyPress(value: SyntheticKeyboardEvent[js.Object] => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyUp(value: SyntheticKeyboardEvent[js.Object] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowsMax(value: Double): this.type = set("rowsMax", value.asInstanceOf[js.Any])
+    @scala.inline
+    def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textareaStyle(value: CSSProperties): this.type = set("textareaStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def underlineDisabledStyle(value: CSSProperties): this.type = set("underlineDisabledStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def underlineFocusStyle(value: CSSProperties): this.type = set("underlineFocusStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def underlineShow(value: Boolean): this.type = set("underlineShow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def underlineStyle(value: CSSProperties): this.type = set("underlineStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def validatorListener(value: /* isValid */ Boolean => Unit): this.type = set("validatorListener", js.Any.fromFunction1(value))
+    @scala.inline
+    def validators(value: js.Array[_]): this.type = set("validators", value.asInstanceOf[js.Any])
+    @scala.inline
+    def withRequiredValidator(value: Boolean): this.type = set("withRequiredValidator", value.asInstanceOf[js.Any])
   }
-  type Props = ValidatorComponentProps with TextFieldProps
+  
+  def withProps(p: ValidatorComponentProps with TextFieldProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(name: String, value: js.Any): Builder = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ValidatorComponentProps with TextFieldProps]))
+  }
 }
 

@@ -4,20 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonGapDegree extends js.Object {
-  var gapDegree: Double
-  var percent: Double
-  var showInfo: Boolean
-  var size: String
-  var strokeLinecap: String
-  var trailColor: Null
-  var `type`: String
+  var gapDegree: js.UndefOr[scala.Nothing] = js.native
+  var percent: Double = js.native
+  var showInfo: Boolean = js.native
+  var size: String = js.native
+  var strokeLinecap: String = js.native
+  var trailColor: Null = js.native
+  var `type`: String = js.native
 }
 
 object AnonGapDegree {
   @scala.inline
   def apply(
-    gapDegree: Double,
     percent: Double,
     showInfo: Boolean,
     size: String,
@@ -25,9 +25,65 @@ object AnonGapDegree {
     trailColor: Null,
     `type`: String
   ): AnonGapDegree = {
-    val __obj = js.Dynamic.literal(gapDegree = gapDegree.asInstanceOf[js.Any], percent = percent.asInstanceOf[js.Any], showInfo = showInfo.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], strokeLinecap = strokeLinecap.asInstanceOf[js.Any], trailColor = trailColor.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(percent = percent.asInstanceOf[js.Any], showInfo = showInfo.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], strokeLinecap = strokeLinecap.asInstanceOf[js.Any], trailColor = trailColor.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonGapDegree]
   }
+  @scala.inline
+  implicit class AnonGapDegreeOps[Self <: AnonGapDegree] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPercent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShowInfo(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStrokeLinecap(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeLinecap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrailColor(value: Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trailColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGapDegree(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gapDegree")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGapDegree: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gapDegree")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

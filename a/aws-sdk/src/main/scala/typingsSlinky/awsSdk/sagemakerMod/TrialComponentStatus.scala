@@ -18,11 +18,41 @@ trait TrialComponentStatus extends js.Object {
 
 object TrialComponentStatus {
   @scala.inline
-  def apply(Message: TrialComponentStatusMessage = null, PrimaryStatus: TrialComponentPrimaryStatus = null): TrialComponentStatus = {
+  def apply(): TrialComponentStatus = {
     val __obj = js.Dynamic.literal()
-    if (Message != null) __obj.updateDynamic("Message")(Message.asInstanceOf[js.Any])
-    if (PrimaryStatus != null) __obj.updateDynamic("PrimaryStatus")(PrimaryStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrialComponentStatus]
   }
+  @scala.inline
+  implicit class TrialComponentStatusOps[Self <: TrialComponentStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMessage(value: TrialComponentStatusMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimaryStatus(value: TrialComponentPrimaryStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrimaryStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimaryStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrimaryStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

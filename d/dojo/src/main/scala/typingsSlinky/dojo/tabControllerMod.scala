@@ -2,8 +2,8 @@ package typingsSlinky.dojo
 
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.dijit.layout.TabController
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ object tabControllerMod
   class TabButton ()
     extends typingsSlinky.dojo.dijit.layout.TabController.TabButton {
     def this(params: js.Object) = this()
-    def this(params: js.Object, srcNodeRef: org.scalajs.dom.raw.HTMLElement) = this()
+    def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   }
   
 }

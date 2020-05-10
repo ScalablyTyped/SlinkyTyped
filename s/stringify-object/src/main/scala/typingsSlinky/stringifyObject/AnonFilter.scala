@@ -4,11 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFilter extends js.Object {
-  var filter: js.UndefOr[js.Function2[/* o */ js.Any, /* prop */ String | js.Symbol, Boolean]] = js.undefined
-  var indent: js.UndefOr[String] = js.undefined
-  var inlineCharacterLimit: js.UndefOr[Double] = js.undefined
-  var singleQuotes: js.UndefOr[Boolean] = js.undefined
+  var filter: js.UndefOr[js.Function2[/* o */ js.Any, /* prop */ String | js.Symbol, Boolean]] = js.native
+  var indent: js.UndefOr[String] = js.native
+  var inlineCharacterLimit: js.UndefOr[Double] = js.native
+  var singleQuotes: js.UndefOr[Boolean] = js.native
   var transform: js.UndefOr[
     js.Function3[
       /* val */ js.Array[_] | js.Object, 
@@ -16,25 +17,84 @@ trait AnonFilter extends js.Object {
       /* value */ String, 
       String
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object AnonFilter {
   @scala.inline
-  def apply(
-    filter: (/* o */ js.Any, /* prop */ String | js.Symbol) => Boolean = null,
-    indent: String = null,
-    inlineCharacterLimit: Int | Double = null,
-    singleQuotes: js.UndefOr[Boolean] = js.undefined,
-    transform: (/* val */ js.Array[_] | js.Object, /* i */ Double | String | js.Symbol, /* value */ String) => String = null
-  ): AnonFilter = {
+  def apply(): AnonFilter = {
     val __obj = js.Dynamic.literal()
-    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction2(filter))
-    if (indent != null) __obj.updateDynamic("indent")(indent.asInstanceOf[js.Any])
-    if (inlineCharacterLimit != null) __obj.updateDynamic("inlineCharacterLimit")(inlineCharacterLimit.asInstanceOf[js.Any])
-    if (!js.isUndefined(singleQuotes)) __obj.updateDynamic("singleQuotes")(singleQuotes.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(js.Any.fromFunction3(transform))
     __obj.asInstanceOf[AnonFilter]
   }
+  @scala.inline
+  implicit class AnonFilterOps[Self <: AnonFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilter(value: (/* o */ js.Any, /* prop */ String | js.Symbol) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlineCharacterLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineCharacterLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlineCharacterLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineCharacterLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleQuotes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleQuotes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleQuotes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleQuotes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransform(
+      value: (/* val */ js.Array[_] | js.Object, /* i */ Double | String | js.Symbol, /* value */ String) => String
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutTransform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

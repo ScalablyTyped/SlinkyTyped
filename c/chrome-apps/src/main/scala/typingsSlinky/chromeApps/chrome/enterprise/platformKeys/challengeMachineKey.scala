@@ -1,6 +1,5 @@
 package typingsSlinky.chromeApps.chrome.enterprise.platformKeys
 
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,8 +27,8 @@ object challengeMachineKey extends js.Object {
     * @param callback Called back with the challenge response.
     */
   def apply(
-    challenge: scala.scalajs.js.typedarray.ArrayBuffer,
-    callback: js.Function1[/* response */ ArrayBuffer, Unit]
+    challenge: js.typedarray.ArrayBuffer,
+    callback: js.Function1[/* response */ js.typedarray.ArrayBuffer, Unit]
   ): Unit = js.native
   /**
     * @since **Since Chrome 59.** - Note: the parameter 'registerKey' requires at least Chrome 59
@@ -54,9 +53,9 @@ object challengeMachineKey extends js.Object {
     * @param callback Called back with the challenge response.
     */
   def apply(
-    challenge: scala.scalajs.js.typedarray.ArrayBuffer,
+    challenge: js.typedarray.ArrayBuffer,
     registerKey: Boolean,
-    callback: js.Function1[/* response */ scala.scalajs.js.typedarray.ArrayBuffer, Unit]
+    callback: js.Function1[/* response */ js.typedarray.ArrayBuffer, Unit]
   ): Unit = js.native
 }
 

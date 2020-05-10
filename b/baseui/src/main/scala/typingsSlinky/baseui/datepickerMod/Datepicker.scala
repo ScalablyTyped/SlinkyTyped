@@ -3,7 +3,6 @@ package typingsSlinky.baseui.datepickerMod
 import org.scalajs.dom.raw.KeyboardEvent
 import typingsSlinky.baseui.AnonDate
 import typingsSlinky.react.mod.Component
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,10 +13,10 @@ class Datepicker ()
   extends Component[DatepickerProps, DatepickerState, js.Any] {
   def close(): Unit = js.native
   def focusCalendar(): Unit = js.native
-  def formatDate(date: js.Array[Date], formatString: String): String | js.Array[String] = js.native
-  def formatDate(date: Date, formatString: String): String | js.Array[String] = js.native
-  def formatDisplayValue(date: js.Array[Date]): String = js.native
-  def formatDisplayValue(date: Date): String = js.native
+  def formatDate(date: js.Array[js.Date], formatString: String): String | js.Array[String] = js.native
+  def formatDate(date: js.Date, formatString: String): String | js.Array[String] = js.native
+  def formatDisplayValue(date: js.Array[js.Date]): String = js.native
+  def formatDisplayValue(date: js.Date): String = js.native
   def handleEsc(): Unit = js.native
   def handleInputBlur(): Unit = js.native
   def handleKeyDown(event: KeyboardEvent): Unit = js.native

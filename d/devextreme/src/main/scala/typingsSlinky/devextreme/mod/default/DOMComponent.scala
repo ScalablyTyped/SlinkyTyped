@@ -32,6 +32,6 @@ object DOMComponent extends js.Object {
   def defaultOptions(rule: AnonDevice): Unit = js.native
   def getInstance(element: JQuery): typingsSlinky.devextreme.mod.DevExpress.DOMComponent = js.native
   /** Gets the instance of a widget found using its DOM node. */
-  def getInstance(element: typingsSlinky.std.Element): typingsSlinky.devextreme.mod.DevExpress.DOMComponent = js.native
+  def getInstance(element: Element): typingsSlinky.devextreme.mod.DevExpress.DOMComponent = js.native
 }
 

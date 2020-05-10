@@ -1,5 +1,6 @@
 package typingsSlinky.yaml.mod
 
+import typingsSlinky.yaml.parseCstMod.ParsedCST
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

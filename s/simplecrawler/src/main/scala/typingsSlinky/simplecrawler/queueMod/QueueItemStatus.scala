@@ -17,20 +17,18 @@ trait QueueItemStatus extends js.Object
 
 object QueueItemStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def downloaded: typingsSlinky.simplecrawler.simplecrawlerStrings.downloaded = "downloaded".asInstanceOf[typingsSlinky.simplecrawler.simplecrawlerStrings.downloaded]
   @scala.inline
-  def downloaded: typingsSlinky.simplecrawler.simplecrawlerStrings.downloaded = this.cast("downloaded")
+  def failed: typingsSlinky.simplecrawler.simplecrawlerStrings.failed = "failed".asInstanceOf[typingsSlinky.simplecrawler.simplecrawlerStrings.failed]
   @scala.inline
-  def failed: typingsSlinky.simplecrawler.simplecrawlerStrings.failed = this.cast("failed")
+  def headers: typingsSlinky.simplecrawler.simplecrawlerStrings.headers = "headers".asInstanceOf[typingsSlinky.simplecrawler.simplecrawlerStrings.headers]
   @scala.inline
-  def headers: typingsSlinky.simplecrawler.simplecrawlerStrings.headers = this.cast("headers")
+  def notfound: typingsSlinky.simplecrawler.simplecrawlerStrings.notfound = "notfound".asInstanceOf[typingsSlinky.simplecrawler.simplecrawlerStrings.notfound]
   @scala.inline
-  def notfound: typingsSlinky.simplecrawler.simplecrawlerStrings.notfound = this.cast("notfound")
+  def queued: typingsSlinky.simplecrawler.simplecrawlerStrings.queued = "queued".asInstanceOf[typingsSlinky.simplecrawler.simplecrawlerStrings.queued]
   @scala.inline
-  def queued: typingsSlinky.simplecrawler.simplecrawlerStrings.queued = this.cast("queued")
+  def redirected: typingsSlinky.simplecrawler.simplecrawlerStrings.redirected = "redirected".asInstanceOf[typingsSlinky.simplecrawler.simplecrawlerStrings.redirected]
   @scala.inline
-  def redirected: typingsSlinky.simplecrawler.simplecrawlerStrings.redirected = this.cast("redirected")
-  @scala.inline
-  def spooled: typingsSlinky.simplecrawler.simplecrawlerStrings.spooled = this.cast("spooled")
+  def spooled: typingsSlinky.simplecrawler.simplecrawlerStrings.spooled = "spooled".asInstanceOf[typingsSlinky.simplecrawler.simplecrawlerStrings.spooled]
 }
 

@@ -34,22 +34,89 @@ trait TestGridSession extends js.Object {
 
 object TestGridSession {
   @scala.inline
-  def apply(
-    arn: DeviceFarmArn = null,
-    billingMinutes: Int | scala.Double = null,
-    created: js.Date = null,
-    ended: js.Date = null,
-    seleniumProperties: String = null,
-    status: TestGridSessionStatus = null
-  ): TestGridSession = {
+  def apply(): TestGridSession = {
     val __obj = js.Dynamic.literal()
-    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
-    if (billingMinutes != null) __obj.updateDynamic("billingMinutes")(billingMinutes.asInstanceOf[js.Any])
-    if (created != null) __obj.updateDynamic("created")(created.asInstanceOf[js.Any])
-    if (ended != null) __obj.updateDynamic("ended")(ended.asInstanceOf[js.Any])
-    if (seleniumProperties != null) __obj.updateDynamic("seleniumProperties")(seleniumProperties.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestGridSession]
   }
+  @scala.inline
+  implicit class TestGridSessionOps[Self <: TestGridSession] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: DeviceFarmArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBillingMinutes(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billingMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBillingMinutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billingMinutes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreated(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnded(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ended")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ended")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeleniumProperties(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seleniumProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeleniumProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seleniumProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: TestGridSessionStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

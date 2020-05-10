@@ -16,16 +16,53 @@ trait SchemaLocalizedProperty extends js.Object {
 
 object SchemaLocalizedProperty {
   @scala.inline
-  def apply(
-    default: String = null,
-    defaultLanguage: SchemaLanguageTag = null,
-    localized: js.Array[SchemaLocalizedString] = null
-  ): SchemaLocalizedProperty = {
+  def apply(): SchemaLocalizedProperty = {
     val __obj = js.Dynamic.literal()
-    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
-    if (defaultLanguage != null) __obj.updateDynamic("defaultLanguage")(defaultLanguage.asInstanceOf[js.Any])
-    if (localized != null) __obj.updateDynamic("localized")(localized.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLocalizedProperty]
   }
+  @scala.inline
+  implicit class SchemaLocalizedPropertyOps[Self <: SchemaLocalizedProperty] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefault(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultLanguage(value: SchemaLanguageTag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLanguage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalized(value: js.Array[SchemaLocalizedString]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalized: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localized")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

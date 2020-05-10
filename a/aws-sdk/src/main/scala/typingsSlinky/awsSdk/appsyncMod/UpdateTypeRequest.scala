@@ -26,10 +26,47 @@ trait UpdateTypeRequest extends js.Object {
 
 object UpdateTypeRequest {
   @scala.inline
-  def apply(apiId: String, format: TypeDefinitionFormat, typeName: ResourceName, definition: String = null): UpdateTypeRequest = {
+  def apply(apiId: String, format: TypeDefinitionFormat, typeName: ResourceName): UpdateTypeRequest = {
     val __obj = js.Dynamic.literal(apiId = apiId.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any], typeName = typeName.asInstanceOf[js.Any])
-    if (definition != null) __obj.updateDynamic("definition")(definition.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateTypeRequest]
   }
+  @scala.inline
+  implicit class UpdateTypeRequestOps[Self <: UpdateTypeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFormat(value: TypeDefinitionFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypeName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefinition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -11,7 +11,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.notifications.onButtonClicked")
 @js.native
 object onButtonClicked
-  extends TopLevel[
-      Event[js.Function2[/* notificationId */ String, /* buttonIndex */ integer, Unit]]
-    ]
+  extends TopLevel[Event[js.Function2[/* deviceId */ String, /* level */ integer, Unit]]]
 

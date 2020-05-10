@@ -17,45 +17,141 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@oracle/oraclejet.@oracle/oraclejet/ojdialog.ojDialogSettableProperties> */
+@js.native
 trait ojDialogSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
-  var cancelBehavior: js.UndefOr[icon | escape | none] = js.undefined
-  var dialogTitle: js.UndefOr[String] = js.undefined
-  var dragAffordance: js.UndefOr[`title-bar` | none] = js.undefined
-  var initialVisibility: js.UndefOr[hide | show] = js.undefined
-  var modality: js.UndefOr[modal | modeless] = js.undefined
-  var position: js.UndefOr[Position] = js.undefined
-  var resizeBehavior: js.UndefOr[resizable | none] = js.undefined
-  var role: js.UndefOr[String] = js.undefined
-  var translations: js.UndefOr[AnonLabelCloseIcon] = js.undefined
+  var cancelBehavior: js.UndefOr[icon | escape | none] = js.native
+  var dialogTitle: js.UndefOr[String] = js.native
+  var dragAffordance: js.UndefOr[`title-bar` | none] = js.native
+  var initialVisibility: js.UndefOr[hide | show] = js.native
+  var modality: js.UndefOr[modal | modeless] = js.native
+  var position: js.UndefOr[Position] = js.native
+  var resizeBehavior: js.UndefOr[resizable | none] = js.native
+  var role: js.UndefOr[String] = js.native
+  var translations: js.UndefOr[AnonLabelCloseIcon] = js.native
 }
 
 object ojDialogSettablePropertiesLenient {
   @scala.inline
-  def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    cancelBehavior: icon | escape | none = null,
-    dialogTitle: String = null,
-    dragAffordance: `title-bar` | none = null,
-    initialVisibility: hide | show = null,
-    modality: modal | modeless = null,
-    position: Position = null,
-    resizeBehavior: resizable | none = null,
-    role: String = null,
-    translations: AnonLabelCloseIcon = null
-  ): ojDialogSettablePropertiesLenient = {
+  def apply(): ojDialogSettablePropertiesLenient = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (cancelBehavior != null) __obj.updateDynamic("cancelBehavior")(cancelBehavior.asInstanceOf[js.Any])
-    if (dialogTitle != null) __obj.updateDynamic("dialogTitle")(dialogTitle.asInstanceOf[js.Any])
-    if (dragAffordance != null) __obj.updateDynamic("dragAffordance")(dragAffordance.asInstanceOf[js.Any])
-    if (initialVisibility != null) __obj.updateDynamic("initialVisibility")(initialVisibility.asInstanceOf[js.Any])
-    if (modality != null) __obj.updateDynamic("modality")(modality.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (resizeBehavior != null) __obj.updateDynamic("resizeBehavior")(resizeBehavior.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (translations != null) __obj.updateDynamic("translations")(translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojDialogSettablePropertiesLenient]
   }
+  @scala.inline
+  implicit class ojDialogSettablePropertiesLenientOps[Self <: ojDialogSettablePropertiesLenient] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCancelBehavior(value: icon | escape | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDialogTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialogTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDragAffordance(value: `title-bar` | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragAffordance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDragAffordance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragAffordance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialVisibility(value: hide | show): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialVisibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialVisibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialVisibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModality(value: modal | modeless): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModality: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modality")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: Position): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResizeBehavior(value: resizable | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResizeBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRole(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranslations(value: AnonLabelCloseIcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranslations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

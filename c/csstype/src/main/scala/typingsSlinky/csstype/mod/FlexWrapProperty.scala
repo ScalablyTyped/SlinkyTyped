@@ -18,22 +18,20 @@ trait FlexWrapProperty extends js.Object
 
 object FlexWrapProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def nowrap: typingsSlinky.csstype.csstypeStrings.nowrap = "nowrap".asInstanceOf[typingsSlinky.csstype.csstypeStrings.nowrap]
   @scala.inline
-  def nowrap: typingsSlinky.csstype.csstypeStrings.nowrap = this.cast("nowrap")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
   @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
+  def wrap: typingsSlinky.csstype.csstypeStrings.wrap = "wrap".asInstanceOf[typingsSlinky.csstype.csstypeStrings.wrap]
   @scala.inline
-  def wrap: typingsSlinky.csstype.csstypeStrings.wrap = this.cast("wrap")
-  @scala.inline
-  def `wrap-reverse`: typingsSlinky.csstype.csstypeStrings.`wrap-reverse` = this.cast("wrap-reverse")
+  def `wrap-reverse`: typingsSlinky.csstype.csstypeStrings.`wrap-reverse` = "wrap-reverse".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`wrap-reverse`]
 }
 

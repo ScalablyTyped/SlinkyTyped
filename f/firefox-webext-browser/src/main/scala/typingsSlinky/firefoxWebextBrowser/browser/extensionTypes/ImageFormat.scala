@@ -14,10 +14,8 @@ trait ImageFormat extends js.Object
 
 object ImageFormat {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def jpeg: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.jpeg = "jpeg".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.jpeg]
   @scala.inline
-  def jpeg: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.jpeg = this.cast("jpeg")
-  @scala.inline
-  def png: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.png = this.cast("png")
+  def png: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.png = "png".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.png]
 }
 

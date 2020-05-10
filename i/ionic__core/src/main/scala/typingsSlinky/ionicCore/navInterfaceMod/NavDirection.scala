@@ -12,10 +12,8 @@ trait NavDirection extends js.Object
 
 object NavDirection {
   @scala.inline
-  def back: typingsSlinky.ionicCore.ionicCoreStrings.back = this.cast("back")
+  def back: typingsSlinky.ionicCore.ionicCoreStrings.back = "back".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.back]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def forward: typingsSlinky.ionicCore.ionicCoreStrings.forward = this.cast("forward")
+  def forward: typingsSlinky.ionicCore.ionicCoreStrings.forward = "forward".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.forward]
 }
 

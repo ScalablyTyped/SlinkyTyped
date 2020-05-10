@@ -25,30 +25,28 @@ trait RelativeTimeKey extends js.Object
 
 object RelativeTimeKey {
   @scala.inline
-  def M: typingsSlinky.momentMini.momentMiniStrings.M = this.cast("M")
+  def M: typingsSlinky.momentMini.momentMiniStrings.M = "M".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.M]
   @scala.inline
-  def MM: typingsSlinky.momentMini.momentMiniStrings.MM = this.cast("MM")
+  def MM: typingsSlinky.momentMini.momentMiniStrings.MM = "MM".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.MM]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def d: d_ = "d".asInstanceOf[d_]
   @scala.inline
-  def d: d_ = this.cast("d")
+  def dd: typingsSlinky.momentMini.momentMiniStrings.dd = "dd".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.dd]
   @scala.inline
-  def dd: typingsSlinky.momentMini.momentMiniStrings.dd = this.cast("dd")
+  def h: typingsSlinky.momentMini.momentMiniStrings.h = "h".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.h]
   @scala.inline
-  def h: typingsSlinky.momentMini.momentMiniStrings.h = this.cast("h")
+  def hh: typingsSlinky.momentMini.momentMiniStrings.hh = "hh".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.hh]
   @scala.inline
-  def hh: typingsSlinky.momentMini.momentMiniStrings.hh = this.cast("hh")
+  def m: m_ = "m".asInstanceOf[m_]
   @scala.inline
-  def m: m_ = this.cast("m")
+  def mm: mm_ = "mm".asInstanceOf[mm_]
   @scala.inline
-  def mm: mm_ = this.cast("mm")
+  def s: typingsSlinky.momentMini.momentMiniStrings.s = "s".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.s]
   @scala.inline
-  def s: typingsSlinky.momentMini.momentMiniStrings.s = this.cast("s")
+  def ss: typingsSlinky.momentMini.momentMiniStrings.ss = "ss".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.ss]
   @scala.inline
-  def ss: typingsSlinky.momentMini.momentMiniStrings.ss = this.cast("ss")
+  def y: typingsSlinky.momentMini.momentMiniStrings.y = "y".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.y]
   @scala.inline
-  def y: typingsSlinky.momentMini.momentMiniStrings.y = this.cast("y")
-  @scala.inline
-  def yy: typingsSlinky.momentMini.momentMiniStrings.yy = this.cast("yy")
+  def yy: typingsSlinky.momentMini.momentMiniStrings.yy = "yy".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.yy]
 }
 

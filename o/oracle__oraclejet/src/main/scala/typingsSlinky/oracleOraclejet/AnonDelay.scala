@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDelay extends js.Object {
-  var delay: js.UndefOr[String] = js.undefined
-  var direction: js.UndefOr[String] = js.undefined
-  var duration: js.UndefOr[String] = js.undefined
-  var endMaxHeight: js.UndefOr[String] = js.undefined
-  var endMaxWidth: js.UndefOr[String] = js.undefined
-  var persist: js.UndefOr[String] = js.undefined
-  var startMaxHeight: js.UndefOr[String] = js.undefined
-  var startMaxWidth: js.UndefOr[String] = js.undefined
-  var timingFunction: js.UndefOr[String] = js.undefined
+  var delay: js.UndefOr[String] = js.native
+  var direction: js.UndefOr[String] = js.native
+  var duration: js.UndefOr[String] = js.native
+  var endMaxHeight: js.UndefOr[String] = js.native
+  var endMaxWidth: js.UndefOr[String] = js.native
+  var persist: js.UndefOr[String] = js.native
+  var startMaxHeight: js.UndefOr[String] = js.native
+  var startMaxWidth: js.UndefOr[String] = js.native
+  var timingFunction: js.UndefOr[String] = js.native
 }
 
 object AnonDelay {
   @scala.inline
-  def apply(
-    delay: String = null,
-    direction: String = null,
-    duration: String = null,
-    endMaxHeight: String = null,
-    endMaxWidth: String = null,
-    persist: String = null,
-    startMaxHeight: String = null,
-    startMaxWidth: String = null,
-    timingFunction: String = null
-  ): AnonDelay = {
+  def apply(): AnonDelay = {
     val __obj = js.Dynamic.literal()
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (endMaxHeight != null) __obj.updateDynamic("endMaxHeight")(endMaxHeight.asInstanceOf[js.Any])
-    if (endMaxWidth != null) __obj.updateDynamic("endMaxWidth")(endMaxWidth.asInstanceOf[js.Any])
-    if (persist != null) __obj.updateDynamic("persist")(persist.asInstanceOf[js.Any])
-    if (startMaxHeight != null) __obj.updateDynamic("startMaxHeight")(startMaxHeight.asInstanceOf[js.Any])
-    if (startMaxWidth != null) __obj.updateDynamic("startMaxWidth")(startMaxWidth.asInstanceOf[js.Any])
-    if (timingFunction != null) __obj.updateDynamic("timingFunction")(timingFunction.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDelay]
   }
+  @scala.inline
+  implicit class AnonDelayOps[Self <: AnonDelay] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDelay(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndMaxHeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endMaxHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndMaxHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endMaxHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndMaxWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endMaxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndMaxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endMaxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPersist(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPersist: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persist")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartMaxHeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startMaxHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartMaxHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startMaxHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartMaxWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startMaxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartMaxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startMaxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimingFunction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timingFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimingFunction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timingFunction")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

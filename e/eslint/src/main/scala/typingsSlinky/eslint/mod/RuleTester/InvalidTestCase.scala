@@ -1,38 +1,52 @@
 package typingsSlinky.eslint.mod.RuleTester
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.eslint.mod.Linter.ParserOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InvalidTestCase extends ValidTestCase {
-  var errors: Double | (js.Array[TestCaseError | String])
-  var output: js.UndefOr[String | Null] = js.undefined
+  var errors: Double | (js.Array[TestCaseError | String]) = js.native
+  var output: js.UndefOr[String | Null] = js.native
 }
 
 object InvalidTestCase {
   @scala.inline
-  def apply(
-    code: String,
-    errors: Double | (js.Array[TestCaseError | String]),
-    filename: String = null,
-    globals: StringDictionary[Boolean] = null,
-    options: js.Any = null,
-    output: String = null,
-    parser: String = null,
-    parserOptions: ParserOptions = null,
-    settings: StringDictionary[js.Any] = null
-  ): InvalidTestCase = {
+  def apply(code: String, errors: Double | (js.Array[TestCaseError | String])): InvalidTestCase = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], errors = errors.asInstanceOf[js.Any])
-    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
-    if (globals != null) __obj.updateDynamic("globals")(globals.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
-    if (parser != null) __obj.updateDynamic("parser")(parser.asInstanceOf[js.Any])
-    if (parserOptions != null) __obj.updateDynamic("parserOptions")(parserOptions.asInstanceOf[js.Any])
-    if (settings != null) __obj.updateDynamic("settings")(settings.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidTestCase]
   }
+  @scala.inline
+  implicit class InvalidTestCaseOps[Self <: InvalidTestCase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrors(value: Double | (js.Array[TestCaseError | String])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutput(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(null)
+        ret
+    }
+  }
+  
 }
 

@@ -16,8 +16,21 @@ object VerifyDomainIdentityResponse {
   @scala.inline
   def apply(VerificationToken: VerificationToken): VerifyDomainIdentityResponse = {
     val __obj = js.Dynamic.literal(VerificationToken = VerificationToken.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[VerifyDomainIdentityResponse]
   }
+  @scala.inline
+  implicit class VerifyDomainIdentityResponseOps[Self <: VerifyDomainIdentityResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVerificationToken(value: VerificationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VerificationToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

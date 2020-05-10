@@ -5,7 +5,6 @@ import typingsSlinky.sequelize.AnonSchema
 import typingsSlinky.sequelize.AnonSchemaTableName
 import typingsSlinky.sequelize.AnonTableName
 import typingsSlinky.sequelize.DefineIndexOptionsfieldsA
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -305,7 +304,7 @@ trait QueryInterface extends js.Object {
   def escape(): String = js.native
   def escape(value: String): String = js.native
   def escape(value: Double): String = js.native
-  def escape(value: Date): String = js.native
+  def escape(value: js.Date): String = js.native
   /**
     * Returns all foreign key constraints of each table in list
     */

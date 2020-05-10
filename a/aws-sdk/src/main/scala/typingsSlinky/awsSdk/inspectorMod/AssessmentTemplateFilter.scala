@@ -22,16 +22,53 @@ trait AssessmentTemplateFilter extends js.Object {
 
 object AssessmentTemplateFilter {
   @scala.inline
-  def apply(
-    durationRange: DurationRange = null,
-    namePattern: NamePattern = null,
-    rulesPackageArns: FilterRulesPackageArnList = null
-  ): AssessmentTemplateFilter = {
+  def apply(): AssessmentTemplateFilter = {
     val __obj = js.Dynamic.literal()
-    if (durationRange != null) __obj.updateDynamic("durationRange")(durationRange.asInstanceOf[js.Any])
-    if (namePattern != null) __obj.updateDynamic("namePattern")(namePattern.asInstanceOf[js.Any])
-    if (rulesPackageArns != null) __obj.updateDynamic("rulesPackageArns")(rulesPackageArns.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssessmentTemplateFilter]
   }
+  @scala.inline
+  implicit class AssessmentTemplateFilterOps[Self <: AssessmentTemplateFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDurationRange(value: DurationRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("durationRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDurationRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("durationRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamePattern(value: NamePattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamePattern: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePattern")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRulesPackageArns(value: FilterRulesPackageArnList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rulesPackageArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRulesPackageArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rulesPackageArns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

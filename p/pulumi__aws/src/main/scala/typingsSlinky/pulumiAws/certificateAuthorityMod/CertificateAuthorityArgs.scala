@@ -38,21 +38,83 @@ trait CertificateAuthorityArgs extends js.Object {
 
 object CertificateAuthorityArgs {
   @scala.inline
-  def apply(
-    certificateAuthorityConfiguration: Input[CertificateAuthorityCertificateAuthorityConfiguration],
-    enabled: Input[Boolean] = null,
-    permanentDeletionTimeInDays: Input[Double] = null,
-    revocationConfiguration: Input[CertificateAuthorityRevocationConfiguration] = null,
-    tags: Input[StringDictionary[_]] = null,
-    `type`: Input[String] = null
-  ): CertificateAuthorityArgs = {
+  def apply(certificateAuthorityConfiguration: Input[CertificateAuthorityCertificateAuthorityConfiguration]): CertificateAuthorityArgs = {
     val __obj = js.Dynamic.literal(certificateAuthorityConfiguration = certificateAuthorityConfiguration.asInstanceOf[js.Any])
-    if (enabled != null) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (permanentDeletionTimeInDays != null) __obj.updateDynamic("permanentDeletionTimeInDays")(permanentDeletionTimeInDays.asInstanceOf[js.Any])
-    if (revocationConfiguration != null) __obj.updateDynamic("revocationConfiguration")(revocationConfiguration.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CertificateAuthorityArgs]
   }
+  @scala.inline
+  implicit class CertificateAuthorityArgsOps[Self <: CertificateAuthorityArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateAuthorityConfiguration(value: Input[CertificateAuthorityCertificateAuthorityConfiguration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateAuthorityConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermanentDeletionTimeInDays(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permanentDeletionTimeInDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermanentDeletionTimeInDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permanentDeletionTimeInDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevocationConfiguration(value: Input[CertificateAuthorityRevocationConfiguration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revocationConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevocationConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revocationConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

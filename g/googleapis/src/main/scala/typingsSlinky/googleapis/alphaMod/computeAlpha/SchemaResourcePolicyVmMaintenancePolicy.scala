@@ -14,10 +14,29 @@ trait SchemaResourcePolicyVmMaintenancePolicy extends js.Object {
 
 object SchemaResourcePolicyVmMaintenancePolicy {
   @scala.inline
-  def apply(maintenanceWindow: SchemaResourcePolicyVmMaintenancePolicyMaintenanceWindow = null): SchemaResourcePolicyVmMaintenancePolicy = {
+  def apply(): SchemaResourcePolicyVmMaintenancePolicy = {
     val __obj = js.Dynamic.literal()
-    if (maintenanceWindow != null) __obj.updateDynamic("maintenanceWindow")(maintenanceWindow.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResourcePolicyVmMaintenancePolicy]
   }
+  @scala.inline
+  implicit class SchemaResourcePolicyVmMaintenancePolicyOps[Self <: SchemaResourcePolicyVmMaintenancePolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaintenanceWindow(value: SchemaResourcePolicyVmMaintenancePolicyMaintenanceWindow): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maintenanceWindow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaintenanceWindow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maintenanceWindow")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -8,5 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("onmessage")
 @js.native
 object onmessage
-  extends TopLevel[(js.ThisFunction1[/* this */ Window_, /* ev */ MessageEvent, js.Any]) | Null]
+  extends TopLevel[
+      (js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.MessageEvent, js.Any]) | Null
+    ]
 

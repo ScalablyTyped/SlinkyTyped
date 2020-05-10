@@ -19,24 +19,22 @@ trait IconClassKey extends js.Object
 
 object IconClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def colorAction: typingsSlinky.materialUiCore.materialUiCoreStrings.colorAction = "colorAction".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.colorAction]
   @scala.inline
-  def colorAction: typingsSlinky.materialUiCore.materialUiCoreStrings.colorAction = this.cast("colorAction")
+  def colorDisabled: typingsSlinky.materialUiCore.materialUiCoreStrings.colorDisabled = "colorDisabled".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.colorDisabled]
   @scala.inline
-  def colorDisabled: typingsSlinky.materialUiCore.materialUiCoreStrings.colorDisabled = this.cast("colorDisabled")
+  def colorError: typingsSlinky.materialUiCore.materialUiCoreStrings.colorError = "colorError".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.colorError]
   @scala.inline
-  def colorError: typingsSlinky.materialUiCore.materialUiCoreStrings.colorError = this.cast("colorError")
+  def colorPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary = "colorPrimary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary]
   @scala.inline
-  def colorPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary = this.cast("colorPrimary")
+  def colorSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary = "colorSecondary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary]
   @scala.inline
-  def colorSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary = this.cast("colorSecondary")
+  def fontSizeInherit: typingsSlinky.materialUiCore.materialUiCoreStrings.fontSizeInherit = "fontSizeInherit".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.fontSizeInherit]
   @scala.inline
-  def fontSizeInherit: typingsSlinky.materialUiCore.materialUiCoreStrings.fontSizeInherit = this.cast("fontSizeInherit")
+  def fontSizeLarge: typingsSlinky.materialUiCore.materialUiCoreStrings.fontSizeLarge = "fontSizeLarge".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.fontSizeLarge]
   @scala.inline
-  def fontSizeLarge: typingsSlinky.materialUiCore.materialUiCoreStrings.fontSizeLarge = this.cast("fontSizeLarge")
+  def fontSizeSmall: typingsSlinky.materialUiCore.materialUiCoreStrings.fontSizeSmall = "fontSizeSmall".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.fontSizeSmall]
   @scala.inline
-  def fontSizeSmall: typingsSlinky.materialUiCore.materialUiCoreStrings.fontSizeSmall = this.cast("fontSizeSmall")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

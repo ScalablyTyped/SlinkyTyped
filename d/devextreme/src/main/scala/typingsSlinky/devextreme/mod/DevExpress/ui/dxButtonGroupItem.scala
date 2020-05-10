@@ -1,47 +1,73 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.devextreme.devextremeStrings.back
 import typingsSlinky.devextreme.devextremeStrings.danger
 import typingsSlinky.devextreme.devextremeStrings.default_
 import typingsSlinky.devextreme.devextremeStrings.normal
 import typingsSlinky.devextreme.devextremeStrings.success
-import typingsSlinky.devextreme.mod._Global_.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxButtonGroupItem extends CollectionWidgetItem {
   /** Specifies a text for the hint that appears when the button is hovered over or long-pressed. */
-  var hint: js.UndefOr[String] = js.undefined
+  var hint: js.UndefOr[String] = js.native
   /** Specifies the icon to be displayed on the button. */
-  var icon: js.UndefOr[String] = js.undefined
+  var icon: js.UndefOr[String] = js.native
   /** Specifies the button type. */
-  var `type`: js.UndefOr[back | danger | default_ | normal | success] = js.undefined
+  var `type`: js.UndefOr[back | danger | default_ | normal | success] = js.native
 }
 
 object dxButtonGroupItem {
   @scala.inline
-  def apply(
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    hint: String = null,
-    html: String = null,
-    icon: String = null,
-    template: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function0[String | Element | JQuery]) = null,
-    text: String = null,
-    `type`: back | danger | default_ | normal | success = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): dxButtonGroupItem = {
+  def apply(): dxButtonGroupItem = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
-    if (html != null) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxButtonGroupItem]
   }
+  @scala.inline
+  implicit class dxButtonGroupItemOps[Self <: dxButtonGroupItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: back | danger | default_ | normal | success): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

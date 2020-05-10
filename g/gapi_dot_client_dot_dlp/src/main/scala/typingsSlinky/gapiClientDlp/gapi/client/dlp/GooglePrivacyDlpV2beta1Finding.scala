@@ -4,35 +4,93 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GooglePrivacyDlpV2beta1Finding extends js.Object {
   /** Timestamp when finding was detected. */
-  var createTime: js.UndefOr[String] = js.undefined
+  var createTime: js.UndefOr[String] = js.native
   /** The specific type of info the string might be. */
-  var infoType: js.UndefOr[GooglePrivacyDlpV2beta1InfoType] = js.undefined
+  var infoType: js.UndefOr[GooglePrivacyDlpV2beta1InfoType] = js.native
   /** Estimate of how likely it is that the info_type is correct. */
-  var likelihood: js.UndefOr[String] = js.undefined
+  var likelihood: js.UndefOr[String] = js.native
   /** Location of the info found. */
-  var location: js.UndefOr[GooglePrivacyDlpV2beta1Location] = js.undefined
+  var location: js.UndefOr[GooglePrivacyDlpV2beta1Location] = js.native
   /** The specific string that may be potentially sensitive info. */
-  var quote: js.UndefOr[String] = js.undefined
+  var quote: js.UndefOr[String] = js.native
 }
 
 object GooglePrivacyDlpV2beta1Finding {
   @scala.inline
-  def apply(
-    createTime: String = null,
-    infoType: GooglePrivacyDlpV2beta1InfoType = null,
-    likelihood: String = null,
-    location: GooglePrivacyDlpV2beta1Location = null,
-    quote: String = null
-  ): GooglePrivacyDlpV2beta1Finding = {
+  def apply(): GooglePrivacyDlpV2beta1Finding = {
     val __obj = js.Dynamic.literal()
-    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
-    if (infoType != null) __obj.updateDynamic("infoType")(infoType.asInstanceOf[js.Any])
-    if (likelihood != null) __obj.updateDynamic("likelihood")(likelihood.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (quote != null) __obj.updateDynamic("quote")(quote.asInstanceOf[js.Any])
     __obj.asInstanceOf[GooglePrivacyDlpV2beta1Finding]
   }
+  @scala.inline
+  implicit class GooglePrivacyDlpV2beta1FindingOps[Self <: GooglePrivacyDlpV2beta1Finding] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInfoType(value: GooglePrivacyDlpV2beta1InfoType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infoType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInfoType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infoType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLikelihood(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("likelihood")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLikelihood: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("likelihood")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: GooglePrivacyDlpV2beta1Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuote(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuote: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quote")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

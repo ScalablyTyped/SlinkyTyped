@@ -15,16 +15,14 @@ trait DefenderPromptForSampleSubmission extends js.Object
 
 object DefenderPromptForSampleSubmission {
   @scala.inline
-  def alwaysPrompt: typingsSlinky.microsoftGraph.microsoftGraphStrings.alwaysPrompt = this.cast("alwaysPrompt")
+  def alwaysPrompt: typingsSlinky.microsoftGraph.microsoftGraphStrings.alwaysPrompt = "alwaysPrompt".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.alwaysPrompt]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def neverSendData: typingsSlinky.microsoftGraph.microsoftGraphStrings.neverSendData = "neverSendData".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.neverSendData]
   @scala.inline
-  def neverSendData: typingsSlinky.microsoftGraph.microsoftGraphStrings.neverSendData = this.cast("neverSendData")
+  def promptBeforeSendingPersonalData: typingsSlinky.microsoftGraph.microsoftGraphStrings.promptBeforeSendingPersonalData = "promptBeforeSendingPersonalData".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.promptBeforeSendingPersonalData]
   @scala.inline
-  def promptBeforeSendingPersonalData: typingsSlinky.microsoftGraph.microsoftGraphStrings.promptBeforeSendingPersonalData = this.cast("promptBeforeSendingPersonalData")
+  def sendAllDataWithoutPrompting: typingsSlinky.microsoftGraph.microsoftGraphStrings.sendAllDataWithoutPrompting = "sendAllDataWithoutPrompting".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.sendAllDataWithoutPrompting]
   @scala.inline
-  def sendAllDataWithoutPrompting: typingsSlinky.microsoftGraph.microsoftGraphStrings.sendAllDataWithoutPrompting = this.cast("sendAllDataWithoutPrompting")
-  @scala.inline
-  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = this.cast("userDefined")
+  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = "userDefined".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined]
 }
 

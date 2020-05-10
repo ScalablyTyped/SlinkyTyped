@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsCore.mod
 
+import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
@@ -11,8 +12,6 @@ import typingsSlinky.blueprintjsCore.compareUtilsMod.IKeyBlacklist
 import typingsSlinky.blueprintjsCore.compareUtilsMod.IKeyWhitelist
 import typingsSlinky.blueprintjsCore.utilsMod.INamed
 import typingsSlinky.blueprintjsCore.utilsMod.IThrottledReactEventOptions
-import typingsSlinky.react.mod.ComponentType
-import typingsSlinky.react.mod.ReactNode
 import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -39,16 +38,16 @@ object Utils extends js.Object {
   def elementIsOrContains(element: HTMLElement, testElement: HTMLElement): Boolean = js.native
   def ensureElement(): ReactElement = js.native
   def ensureElement(
-    child: js.UndefOr[ReactNode],
-    tagName: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 174 */ js.Any
+    child: js.UndefOr[TagMod[Any]],
+    tagName: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any
   ): ReactElement = js.native
-  def ensureElement(child: ReactNode): ReactElement = js.native
+  def ensureElement(child: TagMod[Any]): ReactElement = js.native
   def getDeepUnequalKeyValues[T /* <: js.Object */](): js.Array[AnonKey[T]] = js.native
   def getDeepUnequalKeyValues[T /* <: js.Object */](objA: T): js.Array[AnonKey[T]] = js.native
   def getDeepUnequalKeyValues[T /* <: js.Object */](objA: T, objB: T): js.Array[AnonKey[T]] = js.native
-  def getDeepUnequalKeyValues[T /* <: js.Object */](objA: T, objB: T, keys: js.Array[String]): js.Array[AnonKey[T]] = js.native
+  def getDeepUnequalKeyValues[T /* <: js.Object */](objA: T, objB: T, keys: js.Array[/* keyof T */ String]): js.Array[AnonKey[T]] = js.native
   def getDisplayName(ComponentClass: INamed): String = js.native
-  def getDisplayName(ComponentClass: ComponentType[js.Object]): String = js.native
+  def getDisplayName(ComponentClass: ReactComponentClass[js.Object]): String = js.native
   def isElementOfType[P](element: js.Any, ComponentType: ReactComponentClass[P]): /* is react.react.ReactElement */ Boolean = js.native
   def isFunction(value: js.Any): /* is std.Function */ Boolean = js.native
   def isNodeEnv(env: String): Boolean = js.native
@@ -74,28 +73,28 @@ object Utils extends js.Object {
   ): js.UndefOr[R] = js.native
   def safeInvokeMember[T /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ k in K ]:? (): R}
-    */ typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.safeInvokeMember with js.Any */, K /* <: String */, R](obj: T, key: K): js.UndefOr[R] = js.native
+    */ typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.safeInvokeMember with TopLevel[js.Any] */, K /* <: /* keyof T */ String */, R](obj: T, key: K): js.UndefOr[R] = js.native
   def safeInvokeMember[T /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ k in K ]:? (): R}
-    */ typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.safeInvokeMember with js.Any */, K /* <: String */, R](obj: js.UndefOr[scala.Nothing], key: K): js.UndefOr[R] = js.native
+    */ typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.safeInvokeMember with TopLevel[js.Any] */, K /* <: /* keyof T */ String */, R](obj: js.UndefOr[scala.Nothing], key: K): js.UndefOr[R] = js.native
   def safeInvokeMember[T /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ k in K ]:? (a : A): R}
-    */ typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.safeInvokeMember with js.Any */, K /* <: String */, A, R](obj: T, key: K, arg1: A): js.UndefOr[R] = js.native
+    */ typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.safeInvokeMember with TopLevel[js.Any] */, K /* <: /* keyof T */ String */, A, R](obj: T, key: K, arg1: A): js.UndefOr[R] = js.native
   def safeInvokeMember[T /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ k in K ]:? (a : A): R}
-    */ typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.safeInvokeMember with js.Any */, K /* <: String */, A, R](obj: js.UndefOr[scala.Nothing], key: K, arg1: A): js.UndefOr[R] = js.native
+    */ typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.safeInvokeMember with TopLevel[js.Any] */, K /* <: /* keyof T */ String */, A, R](obj: js.UndefOr[scala.Nothing], key: K, arg1: A): js.UndefOr[R] = js.native
   def safeInvokeMember[T /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ k in K ]:? (a : A, b : B): R}
-    */ typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.safeInvokeMember with js.Any */, K /* <: String */, A, B, R](obj: T, key: K, arg1: A, arg2: B): js.UndefOr[R] = js.native
+    */ typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.safeInvokeMember with TopLevel[js.Any] */, K /* <: /* keyof T */ String */, A, B, R](obj: T, key: K, arg1: A, arg2: B): js.UndefOr[R] = js.native
   def safeInvokeMember[T /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ k in K ]:? (a : A, b : B): R}
-    */ typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.safeInvokeMember with js.Any */, K /* <: String */, A, B, R](obj: js.UndefOr[scala.Nothing], key: K, arg1: A, arg2: B): js.UndefOr[R] = js.native
+    */ typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.safeInvokeMember with TopLevel[js.Any] */, K /* <: /* keyof T */ String */, A, B, R](obj: js.UndefOr[scala.Nothing], key: K, arg1: A, arg2: B): js.UndefOr[R] = js.native
   def safeInvokeMember[T /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ k in K ]:? (a : A, b : B, c : C): R}
-    */ typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.safeInvokeMember with js.Any */, K /* <: String */, A, B, C, R](obj: T, key: K, arg1: A, arg2: B, arg3: C): js.UndefOr[R] = js.native
+    */ typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.safeInvokeMember with TopLevel[js.Any] */, K /* <: /* keyof T */ String */, A, B, C, R](obj: T, key: K, arg1: A, arg2: B, arg3: C): js.UndefOr[R] = js.native
   def safeInvokeMember[T /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ k in K ]:? (a : A, b : B, c : C): R}
-    */ typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.safeInvokeMember with js.Any */, K /* <: String */, A, B, C, R](obj: js.UndefOr[scala.Nothing], key: K, arg1: A, arg2: B, arg3: C): js.UndefOr[R] = js.native
+    */ typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.safeInvokeMember with TopLevel[js.Any] */, K /* <: /* keyof T */ String */, A, B, C, R](obj: js.UndefOr[scala.Nothing], key: K, arg1: A, arg2: B, arg3: C): js.UndefOr[R] = js.native
   def safeInvokeOrValue[R](): R = js.native
   def safeInvokeOrValue[R](funcOrValue: R): R = js.native
   def safeInvokeOrValue[R](funcOrValue: js.Function0[R]): R = js.native

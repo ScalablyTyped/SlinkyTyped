@@ -26,18 +26,65 @@ trait RealtimeEndpointInfo extends js.Object {
 
 object RealtimeEndpointInfo {
   @scala.inline
-  def apply(
-    CreatedAt: js.Date = null,
-    EndpointStatus: RealtimeEndpointStatus = null,
-    EndpointUrl: VipURL = null,
-    PeakRequestsPerSecond: Int | Double = null
-  ): RealtimeEndpointInfo = {
+  def apply(): RealtimeEndpointInfo = {
     val __obj = js.Dynamic.literal()
-    if (CreatedAt != null) __obj.updateDynamic("CreatedAt")(CreatedAt.asInstanceOf[js.Any])
-    if (EndpointStatus != null) __obj.updateDynamic("EndpointStatus")(EndpointStatus.asInstanceOf[js.Any])
-    if (EndpointUrl != null) __obj.updateDynamic("EndpointUrl")(EndpointUrl.asInstanceOf[js.Any])
-    if (PeakRequestsPerSecond != null) __obj.updateDynamic("PeakRequestsPerSecond")(PeakRequestsPerSecond.asInstanceOf[js.Any])
     __obj.asInstanceOf[RealtimeEndpointInfo]
   }
+  @scala.inline
+  implicit class RealtimeEndpointInfoOps[Self <: RealtimeEndpointInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreatedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpointStatus(value: RealtimeEndpointStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpointStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpointUrl(value: VipURL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpointUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeakRequestsPerSecond(value: IntegerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PeakRequestsPerSecond")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeakRequestsPerSecond: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PeakRequestsPerSecond")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

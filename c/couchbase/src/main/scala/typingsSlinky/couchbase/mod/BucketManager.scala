@@ -1,6 +1,5 @@
 package typingsSlinky.couchbase.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -135,7 +134,7 @@ trait BucketManager extends js.Object {
     * @param watchList List of indexes to watch.
     * @param callback The callback function.
     */
-  def watchIndexes(watchList: js.Array[String], callback: js.Function1[/* err */ Error | Null, Unit]): Unit = js.native
+  def watchIndexes(watchList: js.Array[String], callback: js.Function1[/* err */ js.Error | Null, Unit]): Unit = js.native
   /**
     * Watches a list of indexes, waiting for them to become available for use.
     * @param watchList List of indexes to watch.

@@ -2,6 +2,7 @@ package typingsSlinky.bandagedbdBdapi.mod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
@@ -23,12 +24,8 @@ import typingsSlinky.react.mod.CElement
 import typingsSlinky.react.mod.CFactory
 import typingsSlinky.react.mod.ClassAttributes
 import typingsSlinky.react.mod.ClassType
-import typingsSlinky.react.mod.ClassicComponent
-import typingsSlinky.react.mod.ClassicComponentClass
-import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.ComponentClass
 import typingsSlinky.react.mod.ComponentProps
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.DOMAttributes
 import typingsSlinky.react.mod.DOMElement
@@ -55,7 +52,6 @@ import typingsSlinky.react.mod.ReactChildren
 import typingsSlinky.react.mod.ReactElement
 import typingsSlinky.react.mod.ReactHTMLElement
 import typingsSlinky.react.mod.ReactInstance
-import typingsSlinky.react.mod.ReactNode
 import typingsSlinky.react.mod.ReactPortal
 import typingsSlinky.react.mod.ReactSVGElement
 import typingsSlinky.react.mod.Reducer
@@ -65,7 +61,6 @@ import typingsSlinky.react.mod.ReducerStateWithoutAction
 import typingsSlinky.react.mod.ReducerWithoutAction
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.RefAttributes
-import typingsSlinky.react.mod.SFC
 import typingsSlinky.react.mod.SVGAttributes
 import typingsSlinky.react.mod.SVGFactory
 import typingsSlinky.react.mod.SetStateAction
@@ -204,18 +199,18 @@ object BdApiModule extends js.Object {
     // DOM Element (has to be the last, because type checking stops at first overload that fits)
     def cloneElement[P /* <: DOMAttributes[T] */, T /* <: Element */](element: DOMElement[P, T]): slinky.core.facade.ReactElement = js.native
     def cloneElement[P /* <: DOMAttributes[T] */, T /* <: Element */](element: DOMElement[P, T], props: DOMAttributes[T] with P, children: TagMod[Any]*): slinky.core.facade.ReactElement = js.native
-    // ReactHTMLElement, less specific
-    def cloneElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: ReactHTMLElement[T]): ReactHTMLElement[T] = js.native
-    def cloneElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: ReactHTMLElement[T], props: P, children: TagMod[Any]*): ReactHTMLElement[T] = js.native
+    // DOM Elements
+    // ReactHTMLElement
+    def cloneElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: DetailedReactHTMLElement[P, T]): DetailedReactHTMLElement[P, T] = js.native
+    def cloneElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: DetailedReactHTMLElement[P, T], props: P, children: TagMod[Any]*): DetailedReactHTMLElement[P, T] = js.native
     // SVGElement
     def cloneElement[P /* <: SVGAttributes[T] */, T /* <: SVGElement */](element: ReactSVGElement): ReactSVGElement = js.native
     def cloneElement[P /* <: SVGAttributes[T] */, T /* <: SVGElement */](element: ReactSVGElement, props: P, children: TagMod[Any]*): ReactSVGElement = js.native
-    // DOM Elements
-    // ReactHTMLElement
+    // ReactHTMLElement, less specific
     @JSName("cloneElement")
-    def cloneElement_P_HTMLAttributesTT_HTMLElement_DetailedReactHTMLElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: DetailedReactHTMLElement[P, T]): DetailedReactHTMLElement[P, T] = js.native
+    def cloneElement_P_HTMLAttributesTT_HTMLElement_ReactHTMLElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: ReactHTMLElement[T]): ReactHTMLElement[T] = js.native
     @JSName("cloneElement")
-    def cloneElement_P_HTMLAttributesTT_HTMLElement_DetailedReactHTMLElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: DetailedReactHTMLElement[P, T], props: P, children: TagMod[Any]*): DetailedReactHTMLElement[P, T] = js.native
+    def cloneElement_P_HTMLAttributesTT_HTMLElement_ReactHTMLElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: ReactHTMLElement[T], props: P, children: TagMod[Any]*): ReactHTMLElement[T] = js.native
     def createContext[T](
       // If you thought this should be optional, see
     // https://github.com/DefinitelyTyped/DefinitelyTyped/pull/24509#issuecomment-382213106
@@ -228,30 +223,27 @@ object BdApiModule extends js.Object {
       calculateChangedBits: js.Function2[/* prev */ T, /* next */ T, Double]
     ): Context[T] = js.native
     def createElement[P /* <: js.Object */](`type`: String): slinky.core.facade.ReactElement = js.native
-    def createElement[P /* <: js.Object */](`type`: String, children: ReactNode*): slinky.core.facade.ReactElement = js.native
+    def createElement[P /* <: js.Object */](`type`: String, children: TagMod[Any]*): slinky.core.facade.ReactElement = js.native
     def createElement[P /* <: js.Object */](`type`: String, props: Attributes with P, children: TagMod[Any]*): slinky.core.facade.ReactElement = js.native
-    def createElement[P /* <: js.Object */](`type`: ClassType[P, ClassicComponent[P, ComponentState], ClassicComponentClass[P]]): CElement[P, ReactComponentClass[P]] = js.native
+    def createElement[P /* <: js.Object */](`type`: ClassType[P, ReactComponentClass[P], ReactComponentClass[P]]): CElement[P, ReactComponentClass[P]] = js.native
+    def createElement[P /* <: js.Object */](`type`: ClassType[P, ReactComponentClass[P], ReactComponentClass[P]], children: TagMod[Any]*): CElement[P, ReactComponentClass[P]] = js.native
     def createElement[P /* <: js.Object */](
-      `type`: ClassType[P, ClassicComponent[P, ComponentState], ClassicComponentClass[P]],
-      children: ReactNode*
-    ): CElement[P, ReactComponentClass[P]] = js.native
-    def createElement[P /* <: js.Object */](
-      `type`: ClassType[P, ClassicComponent[P, ComponentState], ClassicComponentClass[P]],
-      props: (ClassAttributes[ClassicComponent[P, ComponentState]]) with P,
+      `type`: ClassType[P, ReactComponentClass[P], ReactComponentClass[P]],
+      props: ClassAttributes[ReactComponentClass[P]] with P,
       children: TagMod[Any]*
     ): CElement[P, ReactComponentClass[P]] = js.native
-    def createElement[P /* <: js.Object */](`type`: ComponentClass[P, ComponentState]): slinky.core.facade.ReactElement = js.native
-    def createElement[P /* <: js.Object */](`type`: ComponentClass[P, ComponentState], children: ReactNode*): slinky.core.facade.ReactElement = js.native
-    def createElement[P /* <: js.Object */](`type`: ComponentClass[P, ComponentState], props: Attributes with P, children: TagMod[Any]*): slinky.core.facade.ReactElement = js.native
+    def createElement[P /* <: js.Object */](`type`: ComponentClass[P, js.Object]): slinky.core.facade.ReactElement = js.native
+    def createElement[P /* <: js.Object */](`type`: ComponentClass[P, js.Object], children: TagMod[Any]*): slinky.core.facade.ReactElement = js.native
+    def createElement[P /* <: js.Object */](`type`: ComponentClass[P, js.Object], props: Attributes with P, children: TagMod[Any]*): slinky.core.facade.ReactElement = js.native
     // Custom components
     def createElement[P /* <: js.Object */](`type`: FunctionComponent[P]): FunctionComponentElement[P] = js.native
-    def createElement[P /* <: js.Object */](`type`: FunctionComponent[P], children: ReactNode*): FunctionComponentElement[P] = js.native
+    def createElement[P /* <: js.Object */](`type`: FunctionComponent[P], children: TagMod[Any]*): FunctionComponentElement[P] = js.native
     def createElement[P /* <: js.Object */](`type`: FunctionComponent[P], props: Attributes with P, children: TagMod[Any]*): FunctionComponentElement[P] = js.native
     def createElement[P /* <: DOMAttributes[T] */, T /* <: Element */](`type`: String, props: ClassAttributes[T] with P, children: TagMod[Any]*): slinky.core.facade.ReactElement = js.native
     def createElement[P /* <: SVGAttributes[T] */, T /* <: SVGElement */](`type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 55 */ js.Any): ReactSVGElement = js.native
     def createElement[P /* <: SVGAttributes[T] */, T /* <: SVGElement */](
       `type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 55 */ js.Any,
-      children: ReactNode*
+      children: TagMod[Any]*
     ): ReactSVGElement = js.native
     def createElement[P /* <: SVGAttributes[T] */, T /* <: SVGElement */](
       `type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 55 */ js.Any,
@@ -259,29 +251,29 @@ object BdApiModule extends js.Object {
       children: TagMod[Any]*
     ): ReactSVGElement = js.native
     def createElement[P /* <: js.Object */, T /* <: ReactComponentClass[P] */, C /* <: ReactComponentClass[P] */](`type`: ClassType[P, T, C]): CElement[P, T] = js.native
-    def createElement[P /* <: js.Object */, T /* <: ReactComponentClass[P] */, C /* <: ReactComponentClass[P] */](`type`: ClassType[P, T, C], children: ReactNode*): CElement[P, T] = js.native
+    def createElement[P /* <: js.Object */, T /* <: ReactComponentClass[P] */, C /* <: ReactComponentClass[P] */](`type`: ClassType[P, T, C], children: TagMod[Any]*): CElement[P, T] = js.native
     def createElement[P /* <: js.Object */, T /* <: ReactComponentClass[P] */, C /* <: ReactComponentClass[P] */](`type`: ClassType[P, T, C], props: ClassAttributes[T] with P, children: TagMod[Any]*): CElement[P, T] = js.native
     @JSName("createElement")
     def createElement_P_DOMAttributesTT_Element_DOMElement[P /* <: DOMAttributes[T] */, T /* <: Element */](`type`: String): slinky.core.facade.ReactElement = js.native
     @JSName("createElement")
     def createElement_P_DOMAttributesTT_Element_DOMElement[P /* <: DOMAttributes[T] */, T /* <: Element */](`type`: String, children: TagMod[Any]*): slinky.core.facade.ReactElement = js.native
     @JSName("createElement")
-    def createElement_P_HTMLAttributesTT_HTMLElement_DetailedReactHTMLElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](`type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 115 */ js.Any): DetailedReactHTMLElement[P, T] = js.native
+    def createElement_P_HTMLAttributesTT_HTMLElement_DetailedReactHTMLElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](`type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 116 */ js.Any): DetailedReactHTMLElement[P, T] = js.native
     @JSName("createElement")
     def createElement_P_HTMLAttributesTT_HTMLElement_DetailedReactHTMLElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](
-      `type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 115 */ js.Any,
-      children: ReactNode*
+      `type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 116 */ js.Any,
+      children: TagMod[Any]*
     ): DetailedReactHTMLElement[P, T] = js.native
     @JSName("createElement")
     def createElement_P_HTMLAttributesTT_HTMLElement_DetailedReactHTMLElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](
-      `type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 115 */ js.Any,
+      `type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 116 */ js.Any,
       props: ClassAttributes[T] with P,
       children: TagMod[Any]*
     ): DetailedReactHTMLElement[P, T] = js.native
     @JSName("createElement")
     def createElement_P_Object_ReactElement[P /* <: js.Object */](`type`: ReactComponentClass[P]): slinky.core.facade.ReactElement = js.native
     @JSName("createElement")
-    def createElement_P_Object_ReactElement[P /* <: js.Object */](`type`: ReactComponentClass[P], children: ReactNode*): slinky.core.facade.ReactElement = js.native
+    def createElement_P_Object_ReactElement[P /* <: js.Object */](`type`: ReactComponentClass[P], children: TagMod[Any]*): slinky.core.facade.ReactElement = js.native
     @JSName("createElement")
     def createElement_P_Object_ReactElement[P /* <: js.Object */](`type`: ReactComponentClass[P], props: Attributes with P, children: TagMod[Any]*): slinky.core.facade.ReactElement = js.native
     // DOM Elements
@@ -289,16 +281,16 @@ object BdApiModule extends js.Object {
     @JSName("createElement")
     def createElement_input(`type`: input): DetailedReactHTMLElement[InputHTMLAttributes[HTMLInputElement], HTMLInputElement] = js.native
     @JSName("createElement")
-    def createElement_input(`type`: input, children: ReactNode*): DetailedReactHTMLElement[InputHTMLAttributes[HTMLInputElement], HTMLInputElement] = js.native
+    def createElement_input(`type`: input, children: TagMod[Any]*): DetailedReactHTMLElement[InputHTMLAttributes[HTMLInputElement], HTMLInputElement] = js.native
     @JSName("createElement")
     def createElement_input(
       `type`: input,
-      props: InputHTMLAttributes[typingsSlinky.std.HTMLInputElement] with ClassAttributes[typingsSlinky.std.HTMLInputElement],
+      props: InputHTMLAttributes[HTMLInputElement] with ClassAttributes[HTMLInputElement],
       children: TagMod[Any]*
     ): DetailedReactHTMLElement[InputHTMLAttributes[HTMLInputElement], HTMLInputElement] = js.native
     def createFactory(`type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 55 */ js.Any): SVGFactory = js.native
-    def createFactory[P](`type`: ClassType[P, ClassicComponent[P, ComponentState], ClassicComponentClass[P]]): CFactory[P, ReactComponentClass[P]] = js.native
-    def createFactory[P](`type`: ComponentClass[P, ComponentState]): Factory[P] = js.native
+    def createFactory[P](`type`: ClassType[P, ReactComponentClass[P], ReactComponentClass[P]]): CFactory[P, ReactComponentClass[P]] = js.native
+    def createFactory[P](`type`: ComponentClass[P, js.Object]): Factory[P] = js.native
     // Custom components
     def createFactory[P](`type`: FunctionComponent[P]): FunctionComponentFactory[P] = js.native
     def createFactory[P /* <: DOMAttributes[T] */, T /* <: Element */](`type`: String): DOMFactory[P, T] = js.native
@@ -308,7 +300,7 @@ object BdApiModule extends js.Object {
     // ----------------------------------------------------------------------
     // DOM Elements
     @JSName("createFactory")
-    def createFactory_T_HTMLElement_HTMLFactory[T /* <: HTMLElement */](`type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 115 */ js.Any): HTMLFactory[T] = js.native
+    def createFactory_T_HTMLElement_HTMLFactory[T /* <: HTMLElement */](`type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 116 */ js.Any): HTMLFactory[T] = js.native
     def createRef[T](): ReactRef[T] = js.native
     def forwardRef[T, P](render: ForwardRefRenderFunction[T, P]): ForwardRefExoticComponent[PropsWithoutRef[P] with RefAttributes[T]] = js.native
     def isValidElement[P](): /* is react.react.ReactElement */ Boolean = js.native
@@ -319,9 +311,9 @@ object BdApiModule extends js.Object {
       Component: T,
       propsAreEqual: js.Function2[/* prevProps */ ComponentProps[T], /* nextProps */ ComponentProps[T], Boolean]
     ): ReactComponentClass[T] = js.native
-    def memo[P /* <: js.Object */](Component: SFC[P]): ReactComponentClass[P] = js.native
+    def memo[P /* <: js.Object */](Component: ReactComponentClass[P]): ReactComponentClass[P] = js.native
     def memo[P /* <: js.Object */](
-      Component: SFC[P],
+      Component: ReactComponentClass[P],
       propsAreEqual: js.Function2[/* prevProps */ PropsWithChildren[P], /* nextProps */ PropsWithChildren[P], Boolean]
     ): ReactComponentClass[P] = js.native
     def unstable_withSuspenseConfig(scope: js.Function0[js.UndefOr[Unit]]): Unit = js.native
@@ -430,14 +422,8 @@ object BdApiModule extends js.Object {
       * @version 16.8.0
       * @see https://reactjs.org/docs/hooks-reference.html#usereducer
       */
-    // I'm not sure if I keep this 2-ary or if I make it (2,3)-ary; it's currently (2,3)-ary.
-    // The Flow types do have an overload for 3-ary invocation with undefined initializer.
-    // NOTE: without the ReducerState indirection, TypeScript would reduce S to be the most common
-    // supertype between the reducer's return type and the initialState (or the initializer's return type),
-    // which would prevent autocompletion from ever working.
-    // TODO: double-check if this weird overload logic is necessary. It is possible it's either a bug
-    // in older versions, or a regression in newer versions of the typescript completion service.
-    def useReducer[R /* <: Reducer[_, _] */](reducer: R, initialState: ReducerState[R]): js.Tuple2[ReducerState[R], Dispatch[ReducerAction[R]]] = js.native
+    // overload where dispatch could accept 0 arguments.
+    def useReducer[R /* <: ReducerWithoutAction[_] */](reducer: R, initializerArg: ReducerStateWithoutAction[R]): js.Tuple2[ReducerStateWithoutAction[R], DispatchWithoutAction] = js.native
     /**
       * An alternative to `useState`.
       *
@@ -464,16 +450,15 @@ object BdApiModule extends js.Object {
       * @version 16.8.0
       * @see https://reactjs.org/docs/hooks-reference.html#usereducer
       */
-    // overload where "I" may be a subset of ReducerState<R>; used to provide autocompletion.
-    // If "I" matches ReducerState<R> exactly then the last overload will allow initializer to be ommitted.
-    // the last overload effectively behaves as if the identity function (x => x) is the initializer.
-    // overload for free "I"; all goes as long as initializer converts it into "ReducerState<R>".
+    // I'm not sure if I keep this 2-ary or if I make it (2,3)-ary; it's currently (2,3)-ary.
+    // The Flow types do have an overload for 3-ary invocation with undefined initializer.
+    // NOTE: without the ReducerState indirection, TypeScript would reduce S to be the most common
+    // supertype between the reducer's return type and the initialState (or the initializer's return type),
+    // which would prevent autocompletion from ever working.
+    // TODO: double-check if this weird overload logic is necessary. It is possible it's either a bug
+    // in older versions, or a regression in newer versions of the typescript completion service.
     @JSName("useReducer")
-    def useReducer_R_ReducerWildcardWildcardI[R /* <: Reducer[_, _] */, I](
-      reducer: R,
-      initializerArg: (I with ReducerState[R]) | I,
-      initializer: js.Function1[(/* arg */ I with ReducerState[R]) | (/* arg */ I), ReducerState[R]]
-    ): js.Tuple2[ReducerState[R], Dispatch[ReducerAction[R]]] = js.native
+    def useReducer_R_ReducerWildcardWildcard[R /* <: Reducer[_, _] */](reducer: R, initialState: ReducerState[R]): js.Tuple2[ReducerState[R], Dispatch[ReducerAction[R]]] = js.native
     /**
       * An alternative to `useState`.
       *
@@ -484,10 +469,44 @@ object BdApiModule extends js.Object {
       * @version 16.8.0
       * @see https://reactjs.org/docs/hooks-reference.html#usereducer
       */
-    // overload where dispatch could accept 0 arguments.
+    // overload where "I" may be a subset of ReducerState<R>; used to provide autocompletion.
+    // If "I" matches ReducerState<R> exactly then the last overload will allow initializer to be ommitted.
+    // the last overload effectively behaves as if the identity function (x => x) is the initializer.
+    // overload for free "I"; all goes as long as initializer converts it into "ReducerState<R>".
     @JSName("useReducer")
-    def useReducer_R_ReducerWithoutActionWildcard[R /* <: ReducerWithoutAction[_] */](reducer: R, initializerArg: ReducerStateWithoutAction[R]): js.Tuple2[ReducerStateWithoutAction[R], DispatchWithoutAction] = js.native
-    def useRef[T](): ReactRef[T] = js.native
+    def useReducer_R_ReducerWildcardWildcardI[R /* <: Reducer[_, _] */, I](
+      reducer: R,
+      initializerArg: (I with ReducerState[R]) | I,
+      initializer: js.Function1[(/* arg */ I with ReducerState[R]) | (/* arg */ I), ReducerState[R]]
+    ): js.Tuple2[ReducerState[R], Dispatch[ReducerAction[R]]] = js.native
+    // convenience overload for potentially undefined initialValue / call with 0 arguments
+    // has a default to stop it from defaulting to {} instead
+    /**
+      * `useRef` returns a mutable ref object whose `.current` property is initialized to the passed argument
+      * (`initialValue`). The returned object will persist for the full lifetime of the component.
+      *
+      * Note that `useRef()` is useful for more than the `ref` attribute. It’s handy for keeping any mutable
+      * value around similar to how you’d use instance fields in classes.
+      *
+      * @version 16.8.0
+      * @see https://reactjs.org/docs/hooks-reference.html#useref
+      */
+    // TODO (TypeScript 3.0): <T extends unknown>
+    def useRef[T](): MutableRefObject[js.UndefOr[T]] = js.native
+    /**
+      * `useRef` returns a mutable ref object whose `.current` property is initialized to the passed argument
+      * (`initialValue`). The returned object will persist for the full lifetime of the component.
+      *
+      * Note that `useRef()` is useful for more than the `ref` attribute. It’s handy for keeping any mutable
+      * value around similar to how you’d use instance fields in classes.
+      *
+      * @version 16.8.0
+      * @see https://reactjs.org/docs/hooks-reference.html#useref
+      */
+    // TODO (TypeScript 3.0): <T extends unknown>
+    def useRef[T](initialValue: T): MutableRefObject[T] = js.native
+    @JSName("useRef")
+    def useRef_T_RefObject[T](): ReactRef[T] = js.native
     // convenience overload for refs given as a ref prop as they typically start with a null value
     /**
       * `useRef` returns a mutable ref object whose `.current` property is initialized to the passed argument
@@ -503,35 +522,8 @@ object BdApiModule extends js.Object {
       * @see https://reactjs.org/docs/hooks-reference.html#useref
       */
     // TODO (TypeScript 3.0): <T extends unknown>
-    def useRef[T](initialValue: T): ReactRef[T] = js.native
-    // convenience overload for potentially undefined initialValue / call with 0 arguments
-    // has a default to stop it from defaulting to {} instead
-    /**
-      * `useRef` returns a mutable ref object whose `.current` property is initialized to the passed argument
-      * (`initialValue`). The returned object will persist for the full lifetime of the component.
-      *
-      * Note that `useRef()` is useful for more than the `ref` attribute. It’s handy for keeping any mutable
-      * value around similar to how you’d use instance fields in classes.
-      *
-      * @version 16.8.0
-      * @see https://reactjs.org/docs/hooks-reference.html#useref
-      */
-    // TODO (TypeScript 3.0): <T extends unknown>
     @JSName("useRef")
-    def useRef_T_MutableRefObject[T](): MutableRefObject[js.UndefOr[T]] = js.native
-    /**
-      * `useRef` returns a mutable ref object whose `.current` property is initialized to the passed argument
-      * (`initialValue`). The returned object will persist for the full lifetime of the component.
-      *
-      * Note that `useRef()` is useful for more than the `ref` attribute. It’s handy for keeping any mutable
-      * value around similar to how you’d use instance fields in classes.
-      *
-      * @version 16.8.0
-      * @see https://reactjs.org/docs/hooks-reference.html#useref
-      */
-    // TODO (TypeScript 3.0): <T extends unknown>
-    @JSName("useRef")
-    def useRef_T_MutableRefObject[T](initialValue: T): MutableRefObject[T] = js.native
+    def useRef_T_RefObject[T](initialValue: T): ReactRef[T] = js.native
     // convenience overload when first argument is ommitted
     /**
       * Returns a stateful value, and a function to update it.
@@ -552,9 +544,7 @@ object BdApiModule extends js.Object {
     def useTransition(config: SuspenseConfig): js.Tuple2[TransitionStartFunction, Boolean] = js.native
     @js.native
     object PureComponent
-      extends TopLevel[
-              Instantiable0[typingsSlinky.react.mod.PureComponent[js.Object, js.Object, js.Object]]
-            ]
+      extends TopLevel[Instantiable0[ReactComponentClass[js.Object]]]
     
   }
   
@@ -570,6 +560,7 @@ object BdApiModule extends js.Object {
     def createPortal(children: TagMod[Any], container: Element, key: String): ReactPortal = js.native
     def findDOMNode(): Element | Null | Text = js.native
     def findDOMNode(instance: ReactInstance): Element | Null | Text = js.native
+    def unmountComponentAtNode(container: DocumentFragment): Boolean = js.native
     def unmountComponentAtNode(container: Element): Boolean = js.native
     def unstable_batchedUpdates(callback: js.Function0[_]): Unit = js.native
     def unstable_batchedUpdates[A](callback: js.Function1[/* a */ A, _], a: A): Unit = js.native
@@ -590,10 +581,7 @@ object BdApiModule extends js.Object {
       parentComponent: ReactComponentClass[_],
       element: ReactElement,
       container: Element,
-      callback: js.Function1[
-          /* component */ js.UndefOr[(Component[P, ComponentState, _]) | typingsSlinky.std.Element], 
-          _
-        ]
+      callback: js.Function1[/* component */ js.UndefOr[ReactComponentClass[P] | Element], _]
     ): ReactComponentClass[P] | Element | Unit = js.native
     def unstable_renderSubtreeIntoContainer[P, T /* <: ReactComponentClass[P] */](parentComponent: ReactComponentClass[_], element: CElement[P, T], container: Element): T = js.native
     def unstable_renderSubtreeIntoContainer[P, T /* <: ReactComponentClass[P] */](

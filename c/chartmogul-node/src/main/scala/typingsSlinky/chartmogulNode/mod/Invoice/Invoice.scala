@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Invoice extends js.Object {
-  var currency: js.UndefOr[String] = js.undefined
-  var customer_uuid: js.UndefOr[String] = js.undefined
-  var data_source_uuid: js.UndefOr[String] = js.undefined
-  var date: js.UndefOr[String] = js.undefined
-  var due_date: js.UndefOr[String] = js.undefined
-  var external_id: js.UndefOr[String] = js.undefined
-  var line_items: js.UndefOr[js.Array[LineItem]] = js.undefined
-  var transactions: js.UndefOr[js.Array[Transaction]] = js.undefined
-  var uuid: js.UndefOr[String] = js.undefined
+  var currency: js.UndefOr[String] = js.native
+  var customer_uuid: js.UndefOr[String] = js.native
+  var data_source_uuid: js.UndefOr[String] = js.native
+  var date: js.UndefOr[String] = js.native
+  var due_date: js.UndefOr[String] = js.native
+  var external_id: js.UndefOr[String] = js.native
+  var line_items: js.UndefOr[js.Array[LineItem]] = js.native
+  var transactions: js.UndefOr[js.Array[Transaction]] = js.native
+  var uuid: js.UndefOr[String] = js.native
 }
 
 object Invoice {
   @scala.inline
-  def apply(
-    currency: String = null,
-    customer_uuid: String = null,
-    data_source_uuid: String = null,
-    date: String = null,
-    due_date: String = null,
-    external_id: String = null,
-    line_items: js.Array[LineItem] = null,
-    transactions: js.Array[Transaction] = null,
-    uuid: String = null
-  ): Invoice = {
+  def apply(): Invoice = {
     val __obj = js.Dynamic.literal()
-    if (currency != null) __obj.updateDynamic("currency")(currency.asInstanceOf[js.Any])
-    if (customer_uuid != null) __obj.updateDynamic("customer_uuid")(customer_uuid.asInstanceOf[js.Any])
-    if (data_source_uuid != null) __obj.updateDynamic("data_source_uuid")(data_source_uuid.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (due_date != null) __obj.updateDynamic("due_date")(due_date.asInstanceOf[js.Any])
-    if (external_id != null) __obj.updateDynamic("external_id")(external_id.asInstanceOf[js.Any])
-    if (line_items != null) __obj.updateDynamic("line_items")(line_items.asInstanceOf[js.Any])
-    if (transactions != null) __obj.updateDynamic("transactions")(transactions.asInstanceOf[js.Any])
-    if (uuid != null) __obj.updateDynamic("uuid")(uuid.asInstanceOf[js.Any])
     __obj.asInstanceOf[Invoice]
   }
+  @scala.inline
+  implicit class InvoiceOps[Self <: typingsSlinky.chartmogulNode.mod.Invoice.Invoice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrency(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomer_uuid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customer_uuid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomer_uuid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customer_uuid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData_source_uuid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data_source_uuid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData_source_uuid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data_source_uuid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDue_date(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("due_date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDue_date: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("due_date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternal_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("external_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternal_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("external_id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLine_items(value: js.Array[LineItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line_items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLine_items: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line_items")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransactions(value: js.Array[Transaction]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransactions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUuid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uuid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUuid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uuid")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

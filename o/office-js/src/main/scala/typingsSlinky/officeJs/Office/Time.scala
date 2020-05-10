@@ -1,6 +1,5 @@
 package typingsSlinky.officeJs.Office
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +34,7 @@ trait Time extends js.Object {
     * @param callback - When the method completes, the function passed in the callback parameter is called with a single parameter
     *                  of type `Office.AsyncResult`. The `value` property of the result is a `Date` object.
     */
-  def getAsync(callback: js.Function1[/* asyncResult */ AsyncResult[Date], Unit]): Unit = js.native
+  def getAsync(callback: js.Function1[/* asyncResult */ AsyncResult[js.Date], Unit]): Unit = js.native
   /**
     * Gets the start or end time of an appointment.
     *

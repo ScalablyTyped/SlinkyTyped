@@ -14,10 +14,29 @@ trait BatchReadResponse extends js.Object {
 
 object BatchReadResponse {
   @scala.inline
-  def apply(Responses: BatchReadOperationResponseList = null): BatchReadResponse = {
+  def apply(): BatchReadResponse = {
     val __obj = js.Dynamic.literal()
-    if (Responses != null) __obj.updateDynamic("Responses")(Responses.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchReadResponse]
   }
+  @scala.inline
+  implicit class BatchReadResponseOps[Self <: BatchReadResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResponses(value: BatchReadOperationResponseList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Responses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Responses")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

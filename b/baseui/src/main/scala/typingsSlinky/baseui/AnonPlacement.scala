@@ -16,3 +16,25 @@ trait AnonPlacement extends js.Object {
   var $placement: topLeft | topRight | bottomLeft | bottomRight | bottom | top = js.native
 }
 
+object AnonPlacement {
+  @scala.inline
+  def apply($placement: topLeft | topRight | bottomLeft | bottomRight | bottom | top): AnonPlacement = {
+    val __obj = js.Dynamic.literal($placement = $placement.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AnonPlacement]
+  }
+  @scala.inline
+  implicit class AnonPlacementOps[Self <: AnonPlacement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$placement(value: topLeft | topRight | bottomLeft | bottomRight | bottom | top): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$placement")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

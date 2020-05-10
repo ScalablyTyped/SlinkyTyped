@@ -1,5 +1,6 @@
 package typingsSlinky.prettier.mod
 
+import typingsSlinky.prettier.RecordBuiltInParserNameBu
 import typingsSlinky.prettier.prettierStrings.`as-needed`
 import typingsSlinky.prettier.prettierStrings.all
 import typingsSlinky.prettier.prettierStrings.always
@@ -21,81 +22,315 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<prettier.prettier.RequiredOptions> */
+@js.native
 trait Options extends js.Object {
-  var arrowParens: js.UndefOr[avoid | always] = js.undefined
-  var bracketSpacing: js.UndefOr[Boolean] = js.undefined
-  var endOfLine: js.UndefOr[auto | lf | crlf | cr] = js.undefined
-  var filepath: js.UndefOr[String] = js.undefined
-  var htmlWhitespaceSensitivity: js.UndefOr[css | strict | ignore] = js.undefined
-  var insertPragma: js.UndefOr[Boolean] = js.undefined
-  var jsxBracketSameLine: js.UndefOr[Boolean] = js.undefined
-  var jsxSingleQuote: js.UndefOr[Boolean] = js.undefined
-  var parser: js.UndefOr[BuiltInParserName | CustomParser] = js.undefined
-  var plugins: js.UndefOr[js.Array[String | Plugin]] = js.undefined
-  var printWidth: js.UndefOr[Double] = js.undefined
-  var proseWrap: js.UndefOr[Boolean | always | never | preserve] = js.undefined
-  var quoteProps: js.UndefOr[`as-needed` | consistent | preserve] = js.undefined
-  var rangeEnd: js.UndefOr[Double] = js.undefined
-  var rangeStart: js.UndefOr[Double] = js.undefined
-  var requirePragma: js.UndefOr[Boolean] = js.undefined
-  var semi: js.UndefOr[Boolean] = js.undefined
-  var singleQuote: js.UndefOr[Boolean] = js.undefined
-  var tabWidth: js.UndefOr[Double] = js.undefined
-  var trailingComma: js.UndefOr[none | es5 | all] = js.undefined
-  var useTabs: js.UndefOr[Boolean] = js.undefined
-  var vueIndentScriptAndStyle: js.UndefOr[Boolean] = js.undefined
+  var arrowParens: js.UndefOr[avoid | always] = js.native
+  var bracketSpacing: js.UndefOr[Boolean] = js.native
+  var endOfLine: js.UndefOr[auto | lf | crlf | cr] = js.native
+  var filepath: js.UndefOr[String] = js.native
+  var htmlWhitespaceSensitivity: js.UndefOr[css | strict | ignore] = js.native
+  var insertPragma: js.UndefOr[Boolean] = js.native
+  var jsxBracketSameLine: js.UndefOr[Boolean] = js.native
+  var jsxSingleQuote: js.UndefOr[Boolean] = js.native
+  var parser: js.UndefOr[BuiltInParserName | CustomParser] = js.native
+  var plugins: js.UndefOr[js.Array[String | Plugin]] = js.native
+  var printWidth: js.UndefOr[Double] = js.native
+  var proseWrap: js.UndefOr[always | never | preserve] = js.native
+  var quoteProps: js.UndefOr[`as-needed` | consistent | preserve] = js.native
+  var rangeEnd: js.UndefOr[Double] = js.native
+  var rangeStart: js.UndefOr[Double] = js.native
+  var requirePragma: js.UndefOr[Boolean] = js.native
+  var semi: js.UndefOr[Boolean] = js.native
+  var singleQuote: js.UndefOr[Boolean] = js.native
+  var tabWidth: js.UndefOr[Double] = js.native
+  var trailingComma: js.UndefOr[none | es5 | all] = js.native
+  var useTabs: js.UndefOr[Boolean] = js.native
+  var vueIndentScriptAndStyle: js.UndefOr[Boolean] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    arrowParens: avoid | always = null,
-    bracketSpacing: js.UndefOr[Boolean] = js.undefined,
-    endOfLine: auto | lf | crlf | cr = null,
-    filepath: String = null,
-    htmlWhitespaceSensitivity: css | strict | ignore = null,
-    insertPragma: js.UndefOr[Boolean] = js.undefined,
-    jsxBracketSameLine: js.UndefOr[Boolean] = js.undefined,
-    jsxSingleQuote: js.UndefOr[Boolean] = js.undefined,
-    parser: BuiltInParserName | CustomParser = null,
-    plugins: js.Array[String | Plugin] = null,
-    printWidth: Int | Double = null,
-    proseWrap: Boolean | always | never | preserve = null,
-    quoteProps: `as-needed` | consistent | preserve = null,
-    rangeEnd: Int | Double = null,
-    rangeStart: Int | Double = null,
-    requirePragma: js.UndefOr[Boolean] = js.undefined,
-    semi: js.UndefOr[Boolean] = js.undefined,
-    singleQuote: js.UndefOr[Boolean] = js.undefined,
-    tabWidth: Int | Double = null,
-    trailingComma: none | es5 | all = null,
-    useTabs: js.UndefOr[Boolean] = js.undefined,
-    vueIndentScriptAndStyle: js.UndefOr[Boolean] = js.undefined
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (arrowParens != null) __obj.updateDynamic("arrowParens")(arrowParens.asInstanceOf[js.Any])
-    if (!js.isUndefined(bracketSpacing)) __obj.updateDynamic("bracketSpacing")(bracketSpacing.asInstanceOf[js.Any])
-    if (endOfLine != null) __obj.updateDynamic("endOfLine")(endOfLine.asInstanceOf[js.Any])
-    if (filepath != null) __obj.updateDynamic("filepath")(filepath.asInstanceOf[js.Any])
-    if (htmlWhitespaceSensitivity != null) __obj.updateDynamic("htmlWhitespaceSensitivity")(htmlWhitespaceSensitivity.asInstanceOf[js.Any])
-    if (!js.isUndefined(insertPragma)) __obj.updateDynamic("insertPragma")(insertPragma.asInstanceOf[js.Any])
-    if (!js.isUndefined(jsxBracketSameLine)) __obj.updateDynamic("jsxBracketSameLine")(jsxBracketSameLine.asInstanceOf[js.Any])
-    if (!js.isUndefined(jsxSingleQuote)) __obj.updateDynamic("jsxSingleQuote")(jsxSingleQuote.asInstanceOf[js.Any])
-    if (parser != null) __obj.updateDynamic("parser")(parser.asInstanceOf[js.Any])
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
-    if (printWidth != null) __obj.updateDynamic("printWidth")(printWidth.asInstanceOf[js.Any])
-    if (proseWrap != null) __obj.updateDynamic("proseWrap")(proseWrap.asInstanceOf[js.Any])
-    if (quoteProps != null) __obj.updateDynamic("quoteProps")(quoteProps.asInstanceOf[js.Any])
-    if (rangeEnd != null) __obj.updateDynamic("rangeEnd")(rangeEnd.asInstanceOf[js.Any])
-    if (rangeStart != null) __obj.updateDynamic("rangeStart")(rangeStart.asInstanceOf[js.Any])
-    if (!js.isUndefined(requirePragma)) __obj.updateDynamic("requirePragma")(requirePragma.asInstanceOf[js.Any])
-    if (!js.isUndefined(semi)) __obj.updateDynamic("semi")(semi.asInstanceOf[js.Any])
-    if (!js.isUndefined(singleQuote)) __obj.updateDynamic("singleQuote")(singleQuote.asInstanceOf[js.Any])
-    if (tabWidth != null) __obj.updateDynamic("tabWidth")(tabWidth.asInstanceOf[js.Any])
-    if (trailingComma != null) __obj.updateDynamic("trailingComma")(trailingComma.asInstanceOf[js.Any])
-    if (!js.isUndefined(useTabs)) __obj.updateDynamic("useTabs")(useTabs.asInstanceOf[js.Any])
-    if (!js.isUndefined(vueIndentScriptAndStyle)) __obj.updateDynamic("vueIndentScriptAndStyle")(vueIndentScriptAndStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrowParens(value: avoid | always): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowParens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrowParens: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowParens")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBracketSpacing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bracketSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBracketSpacing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bracketSpacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndOfLine(value: auto | lf | crlf | cr): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endOfLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndOfLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endOfLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilepath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filepath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilepath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filepath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtmlWhitespaceSensitivity(value: css | strict | ignore): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlWhitespaceSensitivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtmlWhitespaceSensitivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlWhitespaceSensitivity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertPragma(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertPragma")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsertPragma: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertPragma")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJsxBracketSameLine(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsxBracketSameLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJsxBracketSameLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsxBracketSameLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJsxSingleQuote(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsxSingleQuote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJsxSingleQuote: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsxSingleQuote")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParserFunction3(value: (/* text */ String, /* parsers */ RecordBuiltInParserNameBu, /* options */ Options) => AST): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withParser(value: BuiltInParserName | CustomParser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlugins(value: js.Array[String | Plugin]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrintWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("printWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrintWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("printWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProseWrap(value: always | never | preserve): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proseWrap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProseWrap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proseWrap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuoteProps(value: `as-needed` | consistent | preserve): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quoteProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuoteProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quoteProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeEnd(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequirePragma(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requirePragma")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequirePragma: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requirePragma")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSemi(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("semi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSemi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("semi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleQuote(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleQuote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleQuote: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleQuote")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTabWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrailingComma(value: none | es5 | all): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trailingComma")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrailingComma: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trailingComma")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseTabs(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useTabs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseTabs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useTabs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVueIndentScriptAndStyle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vueIndentScriptAndStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVueIndentScriptAndStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vueIndentScriptAndStyle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

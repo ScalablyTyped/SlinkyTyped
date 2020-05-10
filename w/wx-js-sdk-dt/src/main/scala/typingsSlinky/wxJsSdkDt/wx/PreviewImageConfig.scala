@@ -7,33 +7,43 @@ import scala.scalajs.js.annotation._
 /**
   * 显示照片预览用的配置对象
   */
+@js.native
 trait PreviewImageConfig extends WxBaseRequestConfig {
   /**
     * 当前显示图片的 http 链接
     */
-  var current: String
+  var current: String = js.native
   /**
     * 需要预览的图片 http 链接列表
     */
-  var urls: js.Array[String]
+  var urls: js.Array[String] = js.native
 }
 
 object PreviewImageConfig {
   @scala.inline
-  def apply(
-    current: String,
-    urls: js.Array[String],
-    cancel: () => Unit = null,
-    complete: /* res */ js.UndefOr[js.Any] => Unit = null,
-    fail: /* error */ js.UndefOr[js.Any] => Unit = null,
-    success: /* res */ js.UndefOr[js.Any] => Unit = null
-  ): PreviewImageConfig = {
+  def apply(current: String, urls: js.Array[String]): PreviewImageConfig = {
     val __obj = js.Dynamic.literal(current = current.asInstanceOf[js.Any], urls = urls.asInstanceOf[js.Any])
-    if (cancel != null) __obj.updateDynamic("cancel")(js.Any.fromFunction0(cancel))
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
-    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[PreviewImageConfig]
   }
+  @scala.inline
+  implicit class PreviewImageConfigOps[Self <: PreviewImageConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("current")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrls(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

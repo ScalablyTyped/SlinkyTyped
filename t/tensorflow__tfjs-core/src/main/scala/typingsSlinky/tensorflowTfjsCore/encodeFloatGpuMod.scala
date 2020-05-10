@@ -14,12 +14,6 @@ object encodeFloatGpuMod extends js.Object {
     def this(outputShape: js.Array[Double]) = this()
     @JSName("outTexUsage")
     var outTexUsage_EncodeFloatProgram: TextureUsage = js.native
-    /* CompleteClass */
-    override var outputShape: js.Array[Double] = js.native
-    /* CompleteClass */
-    override var userCode: String = js.native
-    /* CompleteClass */
-    override var variableNames: js.Array[String] = js.native
   }
   
 }

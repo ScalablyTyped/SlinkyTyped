@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TimelineRecordsUpdatedEvent extends RealtimeBuildEvent {
-  var timelineRecords: js.Array[TimelineRecord]
+  var timelineRecords: js.Array[TimelineRecord] = js.native
 }
 
 object TimelineRecordsUpdatedEvent {
   @scala.inline
   def apply(buildId: Double, timelineRecords: js.Array[TimelineRecord]): TimelineRecordsUpdatedEvent = {
     val __obj = js.Dynamic.literal(buildId = buildId.asInstanceOf[js.Any], timelineRecords = timelineRecords.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TimelineRecordsUpdatedEvent]
   }
+  @scala.inline
+  implicit class TimelineRecordsUpdatedEventOps[Self <: TimelineRecordsUpdatedEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTimelineRecords(value: js.Array[TimelineRecord]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timelineRecords")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

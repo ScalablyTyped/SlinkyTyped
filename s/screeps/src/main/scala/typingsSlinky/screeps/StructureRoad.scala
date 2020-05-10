@@ -9,13 +9,15 @@ import scala.scalajs.js.annotation._
   * Decreases movement cost to 1. Using roads allows creating creeps with less
   * `MOVE` body parts.
   */
+@js.native
 trait StructureRoad
   extends Structure[STRUCTURE_ROAD]
-     with AnyStructure {
+     with AnyStructure
+     with ConcreteStructure[js.Any] {
   /**
     * The amount of game ticks when this road will lose some hit points.
     */
-  var ticksToDecay: Double
+  var ticksToDecay: Double = js.native
 }
 
 @JSGlobal("StructureRoad")

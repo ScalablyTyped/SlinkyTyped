@@ -12,10 +12,8 @@ trait RenderPolicy extends js.Object
 
 object RenderPolicy {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def full: typingsSlinky.reactRelay.reactRelayStrings.full = "full".asInstanceOf[typingsSlinky.reactRelay.reactRelayStrings.full]
   @scala.inline
-  def full: typingsSlinky.reactRelay.reactRelayStrings.full = this.cast("full")
-  @scala.inline
-  def partial: typingsSlinky.reactRelay.reactRelayStrings.partial = this.cast("partial")
+  def partial: typingsSlinky.reactRelay.reactRelayStrings.partial = "partial".asInstanceOf[typingsSlinky.reactRelay.reactRelayStrings.partial]
 }
 

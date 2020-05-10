@@ -18,10 +18,29 @@ trait SchemaAutoResizeDimensionsRequest extends js.Object {
 
 object SchemaAutoResizeDimensionsRequest {
   @scala.inline
-  def apply(dimensions: SchemaDimensionRange = null): SchemaAutoResizeDimensionsRequest = {
+  def apply(): SchemaAutoResizeDimensionsRequest = {
     val __obj = js.Dynamic.literal()
-    if (dimensions != null) __obj.updateDynamic("dimensions")(dimensions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAutoResizeDimensionsRequest]
   }
+  @scala.inline
+  implicit class SchemaAutoResizeDimensionsRequestOps[Self <: SchemaAutoResizeDimensionsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDimensions(value: SchemaDimensionRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

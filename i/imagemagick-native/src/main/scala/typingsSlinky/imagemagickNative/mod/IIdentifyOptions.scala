@@ -5,23 +5,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IIdentifyOptions extends js.Object {
-  var debug: js.UndefOr[Boolean] = js.undefined
-  var ignoreWarnings: js.UndefOr[Boolean] = js.undefined
-  var srcData: Buffer
+  var debug: js.UndefOr[Boolean] = js.native
+  var ignoreWarnings: js.UndefOr[Boolean] = js.native
+  var srcData: Buffer = js.native
 }
 
 object IIdentifyOptions {
   @scala.inline
-  def apply(
-    srcData: Buffer,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    ignoreWarnings: js.UndefOr[Boolean] = js.undefined
-  ): IIdentifyOptions = {
+  def apply(srcData: Buffer): IIdentifyOptions = {
     val __obj = js.Dynamic.literal(srcData = srcData.asInstanceOf[js.Any])
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreWarnings)) __obj.updateDynamic("ignoreWarnings")(ignoreWarnings.asInstanceOf[js.Any])
     __obj.asInstanceOf[IIdentifyOptions]
   }
+  @scala.inline
+  implicit class IIdentifyOptionsOps[Self <: IIdentifyOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSrcData(value: Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("srcData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDebug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebug: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreWarnings(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreWarnings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreWarnings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreWarnings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

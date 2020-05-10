@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CustomTemplate extends js.Object {
-  var accountId: js.UndefOr[String] = js.undefined
-  var containerId: js.UndefOr[String] = js.undefined
-  var fingerprint: js.UndefOr[String] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var path: js.UndefOr[String] = js.undefined
-  var tagManagerUrl: js.UndefOr[String] = js.undefined
-  var templateData: js.UndefOr[String] = js.undefined
-  var templateId: js.UndefOr[String] = js.undefined
-  var workspaceId: js.UndefOr[String] = js.undefined
+  var accountId: js.UndefOr[String] = js.native
+  var containerId: js.UndefOr[String] = js.native
+  var fingerprint: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.native
+  var path: js.UndefOr[String] = js.native
+  var tagManagerUrl: js.UndefOr[String] = js.native
+  var templateData: js.UndefOr[String] = js.native
+  var templateId: js.UndefOr[String] = js.native
+  var workspaceId: js.UndefOr[String] = js.native
 }
 
 object CustomTemplate {
   @scala.inline
-  def apply(
-    accountId: String = null,
-    containerId: String = null,
-    fingerprint: String = null,
-    name: String = null,
-    path: String = null,
-    tagManagerUrl: String = null,
-    templateData: String = null,
-    templateId: String = null,
-    workspaceId: String = null
-  ): CustomTemplate = {
+  def apply(): CustomTemplate = {
     val __obj = js.Dynamic.literal()
-    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
-    if (containerId != null) __obj.updateDynamic("containerId")(containerId.asInstanceOf[js.Any])
-    if (fingerprint != null) __obj.updateDynamic("fingerprint")(fingerprint.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (tagManagerUrl != null) __obj.updateDynamic("tagManagerUrl")(tagManagerUrl.asInstanceOf[js.Any])
-    if (templateData != null) __obj.updateDynamic("templateData")(templateData.asInstanceOf[js.Any])
-    if (templateId != null) __obj.updateDynamic("templateId")(templateId.asInstanceOf[js.Any])
-    if (workspaceId != null) __obj.updateDynamic("workspaceId")(workspaceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomTemplate]
   }
+  @scala.inline
+  implicit class CustomTemplateOps[Self <: CustomTemplate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFingerprint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFingerprint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagManagerUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagManagerUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagManagerUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagManagerUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkspaceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workspaceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkspaceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workspaceId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

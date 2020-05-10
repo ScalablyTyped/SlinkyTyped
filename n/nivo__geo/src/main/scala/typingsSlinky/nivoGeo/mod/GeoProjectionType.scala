@@ -20,26 +20,24 @@ trait GeoProjectionType extends js.Object
 
 object GeoProjectionType {
   @scala.inline
-  def azimuthalEqualArea: typingsSlinky.nivoGeo.nivoGeoStrings.azimuthalEqualArea = this.cast("azimuthalEqualArea")
+  def azimuthalEqualArea: typingsSlinky.nivoGeo.nivoGeoStrings.azimuthalEqualArea = "azimuthalEqualArea".asInstanceOf[typingsSlinky.nivoGeo.nivoGeoStrings.azimuthalEqualArea]
   @scala.inline
-  def azimuthalEquidistant: typingsSlinky.nivoGeo.nivoGeoStrings.azimuthalEquidistant = this.cast("azimuthalEquidistant")
+  def azimuthalEquidistant: typingsSlinky.nivoGeo.nivoGeoStrings.azimuthalEquidistant = "azimuthalEquidistant".asInstanceOf[typingsSlinky.nivoGeo.nivoGeoStrings.azimuthalEquidistant]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def equalEarth: typingsSlinky.nivoGeo.nivoGeoStrings.equalEarth = "equalEarth".asInstanceOf[typingsSlinky.nivoGeo.nivoGeoStrings.equalEarth]
   @scala.inline
-  def equalEarth: typingsSlinky.nivoGeo.nivoGeoStrings.equalEarth = this.cast("equalEarth")
+  def equirectangular: typingsSlinky.nivoGeo.nivoGeoStrings.equirectangular = "equirectangular".asInstanceOf[typingsSlinky.nivoGeo.nivoGeoStrings.equirectangular]
   @scala.inline
-  def equirectangular: typingsSlinky.nivoGeo.nivoGeoStrings.equirectangular = this.cast("equirectangular")
+  def gnomonic: typingsSlinky.nivoGeo.nivoGeoStrings.gnomonic = "gnomonic".asInstanceOf[typingsSlinky.nivoGeo.nivoGeoStrings.gnomonic]
   @scala.inline
-  def gnomonic: typingsSlinky.nivoGeo.nivoGeoStrings.gnomonic = this.cast("gnomonic")
+  def mercator: typingsSlinky.nivoGeo.nivoGeoStrings.mercator = "mercator".asInstanceOf[typingsSlinky.nivoGeo.nivoGeoStrings.mercator]
   @scala.inline
-  def mercator: typingsSlinky.nivoGeo.nivoGeoStrings.mercator = this.cast("mercator")
+  def naturalEarth1: typingsSlinky.nivoGeo.nivoGeoStrings.naturalEarth1 = "naturalEarth1".asInstanceOf[typingsSlinky.nivoGeo.nivoGeoStrings.naturalEarth1]
   @scala.inline
-  def naturalEarth1: typingsSlinky.nivoGeo.nivoGeoStrings.naturalEarth1 = this.cast("naturalEarth1")
+  def orthographic: typingsSlinky.nivoGeo.nivoGeoStrings.orthographic = "orthographic".asInstanceOf[typingsSlinky.nivoGeo.nivoGeoStrings.orthographic]
   @scala.inline
-  def orthographic: typingsSlinky.nivoGeo.nivoGeoStrings.orthographic = this.cast("orthographic")
+  def stereographic: typingsSlinky.nivoGeo.nivoGeoStrings.stereographic = "stereographic".asInstanceOf[typingsSlinky.nivoGeo.nivoGeoStrings.stereographic]
   @scala.inline
-  def stereographic: typingsSlinky.nivoGeo.nivoGeoStrings.stereographic = this.cast("stereographic")
-  @scala.inline
-  def transverseMercator: typingsSlinky.nivoGeo.nivoGeoStrings.transverseMercator = this.cast("transverseMercator")
+  def transverseMercator: typingsSlinky.nivoGeo.nivoGeoStrings.transverseMercator = "transverseMercator".asInstanceOf[typingsSlinky.nivoGeo.nivoGeoStrings.transverseMercator]
 }
 

@@ -8,5 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("onanimationiteration")
 @js.native
 object onanimationiteration
-  extends TopLevel[(js.ThisFunction1[/* this */ Window_, /* ev */ AnimationEvent, js.Any]) | Null]
+  extends TopLevel[
+      (js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.AnimationEvent, js.Any]) | Null
+    ]
 

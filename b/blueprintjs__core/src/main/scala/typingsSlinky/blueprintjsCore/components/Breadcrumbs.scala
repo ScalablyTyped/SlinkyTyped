@@ -1,10 +1,8 @@
 package typingsSlinky.blueprintjsCore.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.PartialIOverflowListProps
 import typingsSlinky.blueprintjsCore.boundaryMod.Boundary
 import typingsSlinky.blueprintjsCore.breadcrumbMod.IBreadcrumbProps
@@ -14,34 +12,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Breadcrumbs
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsCore.mod.Breadcrumbs] {
+object Breadcrumbs {
   @JSImport("@blueprintjs/core", "Breadcrumbs")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    items: js.Array[IBreadcrumbProps],
-    breadcrumbRenderer: /* props */ IBreadcrumbProps => ReactElement = null,
-    collapseFrom: Boundary = null,
-    currentBreadcrumbRenderer: /* props */ IBreadcrumbProps => ReactElement = null,
-    minVisibleItems: Int | Double = null,
-    overflowListProps: PartialIOverflowListProps = null,
-    popoverProps: IPopoverProps = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Breadcrumbs] = {
-    val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
-    if (breadcrumbRenderer != null) __obj.updateDynamic("breadcrumbRenderer")(js.Any.fromFunction1(breadcrumbRenderer))
-    if (collapseFrom != null) __obj.updateDynamic("collapseFrom")(collapseFrom.asInstanceOf[js.Any])
-    if (currentBreadcrumbRenderer != null) __obj.updateDynamic("currentBreadcrumbRenderer")(js.Any.fromFunction1(currentBreadcrumbRenderer))
-    if (minVisibleItems != null) __obj.updateDynamic("minVisibleItems")(minVisibleItems.asInstanceOf[js.Any])
-    if (overflowListProps != null) __obj.updateDynamic("overflowListProps")(overflowListProps.asInstanceOf[js.Any])
-    if (popoverProps != null) __obj.updateDynamic("popoverProps")(popoverProps.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Breadcrumbs] {
+    @scala.inline
+    def breadcrumbRenderer(value: /* props */ IBreadcrumbProps => ReactElement): this.type = set("breadcrumbRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def collapseFrom(value: Boundary): this.type = set("collapseFrom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def currentBreadcrumbRenderer(value: /* props */ IBreadcrumbProps => ReactElement): this.type = set("currentBreadcrumbRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def minVisibleItems(value: Double): this.type = set("minVisibleItems", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overflowListProps(value: PartialIOverflowListProps): this.type = set("overflowListProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popoverProps(value: IPopoverProps): this.type = set("popoverProps", value.asInstanceOf[js.Any])
   }
-  type Props = IBreadcrumbsProps
+  
+  def withProps(p: IBreadcrumbsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(items: js.Array[IBreadcrumbProps]): Builder = {
+    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IBreadcrumbsProps]))
+  }
 }
 

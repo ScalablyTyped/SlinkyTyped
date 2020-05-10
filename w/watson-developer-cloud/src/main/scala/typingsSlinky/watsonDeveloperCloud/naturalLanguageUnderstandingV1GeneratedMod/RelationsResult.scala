@@ -5,31 +5,79 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The relations between entities found in the content. */
+@js.native
 trait RelationsResult extends js.Object {
   /** Entity mentions that are involved in the relation. */
-  var arguments: js.UndefOr[js.Array[RelationArgument]] = js.undefined
+  var arguments: js.UndefOr[js.Array[RelationArgument]] = js.native
   /** Confidence score for the relation. Higher values indicate greater confidence. */
-  var score: js.UndefOr[Double] = js.undefined
+  var score: js.UndefOr[Double] = js.native
   /** The sentence that contains the relation. */
-  var sentence: js.UndefOr[String] = js.undefined
+  var sentence: js.UndefOr[String] = js.native
   /** The type of the relation. */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
 }
 
 object RelationsResult {
   @scala.inline
-  def apply(
-    arguments: js.Array[RelationArgument] = null,
-    score: Int | Double = null,
-    sentence: String = null,
-    `type`: String = null
-  ): RelationsResult = {
+  def apply(): RelationsResult = {
     val __obj = js.Dynamic.literal()
-    if (arguments != null) __obj.updateDynamic("arguments")(arguments.asInstanceOf[js.Any])
-    if (score != null) __obj.updateDynamic("score")(score.asInstanceOf[js.Any])
-    if (sentence != null) __obj.updateDynamic("sentence")(sentence.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RelationsResult]
   }
+  @scala.inline
+  implicit class RelationsResultOps[Self <: RelationsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArguments(value: js.Array[RelationArgument]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArguments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScore(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSentence(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sentence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSentence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sentence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,73 +1,70 @@
 package typingsSlinky.brainhubeuReactCarousel.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.brainhubeuReactCarousel.mod.CarouselProps
 import typingsSlinky.brainhubeuReactCarousel.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactCarousel
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactCarousel {
   @JSImport("@brainhubeu/react-carousel", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: draggable */
-  def apply(
-    addArrowClickHandler: js.UndefOr[Boolean] = js.undefined,
-    animationSpeed: Int | Double = null,
-    arrowLeft: ReactElement = null,
-    arrowRight: ReactElement = null,
-    arrows: js.UndefOr[Boolean] = js.undefined,
-    autoPlay: Int | Double = null,
-    breakpoints: js.Any = null,
-    centered: js.UndefOr[Boolean] = js.undefined,
-    clickToChange: js.UndefOr[Boolean] = js.undefined,
-    dots: js.UndefOr[Boolean] = js.undefined,
-    infinite: js.UndefOr[Boolean] = js.undefined,
-    itemWidth: Int | Double = null,
-    keepDirectionWhenDragging: js.UndefOr[Boolean] = js.undefined,
-    offset: Int | Double = null,
-    onChange: /* value */ Double => Unit = null,
-    slides: js.Array[ReactElement] = null,
-    slidesPerPage: Int | Double = null,
-    slidesPerScroll: Int | Double = null,
-    stopAutoPlayOnHover: js.UndefOr[Boolean] = js.undefined,
-    value: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(addArrowClickHandler)) __obj.updateDynamic("addArrowClickHandler")(addArrowClickHandler.asInstanceOf[js.Any])
-    if (animationSpeed != null) __obj.updateDynamic("animationSpeed")(animationSpeed.asInstanceOf[js.Any])
-    if (arrowLeft != null) __obj.updateDynamic("arrowLeft")(arrowLeft.asInstanceOf[js.Any])
-    if (arrowRight != null) __obj.updateDynamic("arrowRight")(arrowRight.asInstanceOf[js.Any])
-    if (!js.isUndefined(arrows)) __obj.updateDynamic("arrows")(arrows.asInstanceOf[js.Any])
-    if (autoPlay != null) __obj.updateDynamic("autoPlay")(autoPlay.asInstanceOf[js.Any])
-    if (breakpoints != null) __obj.updateDynamic("breakpoints")(breakpoints.asInstanceOf[js.Any])
-    if (!js.isUndefined(centered)) __obj.updateDynamic("centered")(centered.asInstanceOf[js.Any])
-    if (!js.isUndefined(clickToChange)) __obj.updateDynamic("clickToChange")(clickToChange.asInstanceOf[js.Any])
-    if (!js.isUndefined(dots)) __obj.updateDynamic("dots")(dots.asInstanceOf[js.Any])
-    if (!js.isUndefined(infinite)) __obj.updateDynamic("infinite")(infinite.asInstanceOf[js.Any])
-    if (itemWidth != null) __obj.updateDynamic("itemWidth")(itemWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepDirectionWhenDragging)) __obj.updateDynamic("keepDirectionWhenDragging")(keepDirectionWhenDragging.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (slides != null) __obj.updateDynamic("slides")(slides.asInstanceOf[js.Any])
-    if (slidesPerPage != null) __obj.updateDynamic("slidesPerPage")(slidesPerPage.asInstanceOf[js.Any])
-    if (slidesPerScroll != null) __obj.updateDynamic("slidesPerScroll")(slidesPerScroll.asInstanceOf[js.Any])
-    if (!js.isUndefined(stopAutoPlayOnHover)) __obj.updateDynamic("stopAutoPlayOnHover")(stopAutoPlayOnHover.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def addArrowClickHandler(value: Boolean): this.type = set("addArrowClickHandler", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animationSpeed(value: Double): this.type = set("animationSpeed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arrowLeft(value: ReactElement): this.type = set("arrowLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arrowRight(value: ReactElement): this.type = set("arrowRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arrows(value: Boolean): this.type = set("arrows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoPlay(value: Double): this.type = set("autoPlay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def breakpoints(value: js.Any): this.type = set("breakpoints", value.asInstanceOf[js.Any])
+    @scala.inline
+    def centered(value: Boolean): this.type = set("centered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clickToChange(value: Boolean): this.type = set("clickToChange", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dots(value: Boolean): this.type = set("dots", value.asInstanceOf[js.Any])
+    @scala.inline
+    def draggable(value: Boolean): this.type = set("draggable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def infinite(value: Boolean): this.type = set("infinite", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemWidth(value: Double): this.type = set("itemWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keepDirectionWhenDragging(value: Boolean): this.type = set("keepDirectionWhenDragging", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offset(value: Double): this.type = set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* value */ Double => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def rtl(value: Boolean): this.type = set("rtl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def slides(value: js.Array[ReactElement]): this.type = set("slides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def slidesPerPage(value: Double): this.type = set("slidesPerPage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def slidesPerScroll(value: Double): this.type = set("slidesPerScroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stopAutoPlayOnHover(value: Boolean): this.type = set("stopAutoPlayOnHover", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.brainhubeuReactCarousel.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = CarouselProps
+  
+  def withProps(p: CarouselProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactCarousel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /***** Map *****/
+@js.native
 trait MapHandlerMap extends js.Object {
   /**
     * This event is fired when the viewport bounds have changed.
@@ -13,7 +14,7 @@ trait MapHandlerMap extends js.Object {
     * @see {@link Map#fitBounds}
     * @see {@link Map#panToBounds}
     */
-  var bounds_changed: js.Array[js.Any]
+  var bounds_changed: js.Array[js.Any] = js.native
   /**
     * This event is fired when the map center property changes.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.center_changed Maps JavaScript API}
@@ -21,7 +22,7 @@ trait MapHandlerMap extends js.Object {
     * @see {@link Map#getCenter}
     * @see {@link Map#setCenter}
     */
-  var center_changed: js.Array[js.Any]
+  var center_changed: js.Array[js.Any] = js.native
   /**
     * This event is fired when the user clicks on the map.
     * An ApiMouseEvent with properties for the clicked location is returned unless a place icon was clicked, in which case an IconMouseEvent with a placeid is returned.
@@ -30,27 +31,27 @@ trait MapHandlerMap extends js.Object {
     * The click event is not fired if a marker or infowindow was clicked.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.click Maps JavaScript API}
     */
-  var click: js.Array[MouseEvent | IconMouseEvent]
+  var click: js.Array[MouseEvent | IconMouseEvent] = js.native
   /**
     * This event is fired when the user double-clicks on the map. Note that the click event will also fire, right before this one.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.dblclick Maps JavaScript API}
     */
-  var dblclick: js.Array[MouseEvent]
+  var dblclick: js.Array[MouseEvent] = js.native
   /**
     * This event is repeatedly fired while the user drags the map.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.drag Maps JavaScript API}
     */
-  var drag: js.Array[js.Any]
+  var drag: js.Array[js.Any] = js.native
   /**
     * This event is fired when the user stops dragging the map.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.dragend Maps JavaScript API}
     */
-  var dragend: js.Array[js.Any]
+  var dragend: js.Array[js.Any] = js.native
   /**
     * This event is fired when the user starts dragging the map.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.dragstart Maps JavaScript API}
     */
-  var dragstart: js.Array[js.Any]
+  var dragstart: js.Array[js.Any] = js.native
   /**
     * This event is fired when the map heading property changes.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.heading_changed Maps JavaScript API}
@@ -58,12 +59,12 @@ trait MapHandlerMap extends js.Object {
     * @see {@link Map#getHeading}
     * @see {@link Map#setHeading}
     */
-  var heading_changed: js.Array[js.Any]
+  var heading_changed: js.Array[js.Any] = js.native
   /**
     * This event is fired when the map becomes idle after panning or zooming.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.idle Maps JavaScript API}
     */
-  var idle: js.Array[js.Any]
+  var idle: js.Array[js.Any] = js.native
   /**
     * This event is fired when the mapTypeId property changes.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.maptypeid_changed Maps JavaScript API}
@@ -71,38 +72,38 @@ trait MapHandlerMap extends js.Object {
     * @see {@link Map#getMapTypeId}
     * @see {@link Map#setMapTypeId}
     */
-  var maptypeid_changed: js.Array[js.Any]
+  var maptypeid_changed: js.Array[js.Any] = js.native
   /**
     * This event is fired whenever the user's mouse moves over the map container.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.mousemove Maps JavaScript API}
     */
-  var mousemove: js.Array[MouseEvent]
+  var mousemove: js.Array[MouseEvent] = js.native
   /**
     * This event is fired when the user's mouse exits the map container.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.mouseout Maps JavaScript API}
     */
-  var mouseout: js.Array[MouseEvent]
+  var mouseout: js.Array[MouseEvent] = js.native
   /**
     * This event is fired when the user's mouse enters the map container.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.mouseover Maps JavaScript API}
     */
-  var mouseover: js.Array[MouseEvent]
+  var mouseover: js.Array[MouseEvent] = js.native
   /**
     * This event is fired when the projection has changed.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.projection_changed Maps JavaScript API}
     * @see {@link Map#getProjection}
     */
-  var projection_changed: js.Array[js.Any]
+  var projection_changed: js.Array[js.Any] = js.native
   /**
     * This event is fired when the DOM contextmenu event is fired on the map container.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.rightclick Maps JavaScript API}
     */
-  var rightclick: js.Array[MouseEvent]
+  var rightclick: js.Array[MouseEvent] = js.native
   /**
     * This event is fired when the visible tiles have finished loading.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.tilesloaded Maps JavaScript API}
     */
-  var tilesloaded: js.Array[js.Any]
+  var tilesloaded: js.Array[js.Any] = js.native
   /**
     * This event is fired when the map tilt property changes.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.tilt_changed Maps JavaScript API}
@@ -110,7 +111,7 @@ trait MapHandlerMap extends js.Object {
     * @see {@link Map#getTilt}
     * @see {@link Map#setTilt}
     */
-  var tilt_changed: js.Array[js.Any]
+  var tilt_changed: js.Array[js.Any] = js.native
   /**
     * This event is fired when the map zoom property changes.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#Map.zoom_changed Maps JavaScript API}
@@ -118,7 +119,7 @@ trait MapHandlerMap extends js.Object {
     * @see {@link Map#getZoom}
     * @see {@link Map#setZoom}
     */
-  var zoom_changed: js.Array[js.Any]
+  var zoom_changed: js.Array[js.Any] = js.native
 }
 
 object MapHandlerMap {
@@ -144,8 +145,123 @@ object MapHandlerMap {
     zoom_changed: js.Array[js.Any]
   ): MapHandlerMap = {
     val __obj = js.Dynamic.literal(bounds_changed = bounds_changed.asInstanceOf[js.Any], center_changed = center_changed.asInstanceOf[js.Any], click = click.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], drag = drag.asInstanceOf[js.Any], dragend = dragend.asInstanceOf[js.Any], dragstart = dragstart.asInstanceOf[js.Any], heading_changed = heading_changed.asInstanceOf[js.Any], idle = idle.asInstanceOf[js.Any], maptypeid_changed = maptypeid_changed.asInstanceOf[js.Any], mousemove = mousemove.asInstanceOf[js.Any], mouseout = mouseout.asInstanceOf[js.Any], mouseover = mouseover.asInstanceOf[js.Any], projection_changed = projection_changed.asInstanceOf[js.Any], rightclick = rightclick.asInstanceOf[js.Any], tilesloaded = tilesloaded.asInstanceOf[js.Any], tilt_changed = tilt_changed.asInstanceOf[js.Any], zoom_changed = zoom_changed.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[MapHandlerMap]
   }
+  @scala.inline
+  implicit class MapHandlerMapOps[Self <: MapHandlerMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBounds_changed(value: js.Array[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds_changed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCenter_changed(value: js.Array[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center_changed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClick(value: js.Array[MouseEvent | IconMouseEvent]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDblclick(value: js.Array[MouseEvent]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dblclick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDrag(value: js.Array[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDragend(value: js.Array[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDragstart(value: js.Array[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragstart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeading_changed(value: js.Array[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heading_changed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdle(value: js.Array[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaptypeid_changed(value: js.Array[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maptypeid_changed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMousemove(value: js.Array[MouseEvent]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mousemove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMouseout(value: js.Array[MouseEvent]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMouseover(value: js.Array[MouseEvent]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProjection_changed(value: js.Array[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projection_changed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRightclick(value: js.Array[MouseEvent]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightclick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTilesloaded(value: js.Array[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tilesloaded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTilt_changed(value: js.Array[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tilt_changed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withZoom_changed(value: js.Array[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom_changed")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

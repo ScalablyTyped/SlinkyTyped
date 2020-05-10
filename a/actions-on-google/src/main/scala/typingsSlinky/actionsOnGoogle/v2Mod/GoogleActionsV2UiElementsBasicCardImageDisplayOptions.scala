@@ -13,12 +13,10 @@ trait GoogleActionsV2UiElementsBasicCardImageDisplayOptions extends js.Object
 
 object GoogleActionsV2UiElementsBasicCardImageDisplayOptions {
   @scala.inline
-  def CROPPED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CROPPED = this.cast("CROPPED")
+  def CROPPED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CROPPED = "CROPPED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CROPPED]
   @scala.inline
-  def DEFAULT: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DEFAULT = this.cast("DEFAULT")
+  def DEFAULT: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DEFAULT = "DEFAULT".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DEFAULT]
   @scala.inline
-  def WHITE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.WHITE = this.cast("WHITE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def WHITE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.WHITE = "WHITE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.WHITE]
 }
 

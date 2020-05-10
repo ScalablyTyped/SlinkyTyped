@@ -13,12 +13,10 @@ trait TabsType extends js.Object
 
 object TabsType {
   @scala.inline
-  def card: typingsSlinky.antd.antdStrings.card = this.cast("card")
+  def card: typingsSlinky.antd.antdStrings.card = "card".asInstanceOf[typingsSlinky.antd.antdStrings.card]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `editable-card`: typingsSlinky.antd.antdStrings.`editable-card` = "editable-card".asInstanceOf[typingsSlinky.antd.antdStrings.`editable-card`]
   @scala.inline
-  def `editable-card`: typingsSlinky.antd.antdStrings.`editable-card` = this.cast("editable-card")
-  @scala.inline
-  def line: typingsSlinky.antd.antdStrings.line = this.cast("line")
+  def line: typingsSlinky.antd.antdStrings.line = "line".asInstanceOf[typingsSlinky.antd.antdStrings.line]
 }
 

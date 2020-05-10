@@ -1,44 +1,46 @@
 package typingsSlinky.antDesignPro.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.headerSearchMod.HeaderSearchProps
 import typingsSlinky.antDesignPro.headerSearchMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object HeaderSearch
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object HeaderSearch {
   @JSImport("ant-design-pro/lib/HeaderSearch", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, open, placeholder, style */
-  def apply(
-    dataSource: js.Array[String] = null,
-    defaultOpen: js.UndefOr[Boolean] = js.undefined,
-    onChange: /* value */ String => Unit = null,
-    onPressEnter: /* value */ String => Unit = null,
-    onSearch: /* value */ String => Unit = null,
-    onVisibleChange: /* visible */ Boolean => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultOpen)) __obj.updateDynamic("defaultOpen")(defaultOpen.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onPressEnter != null) __obj.updateDynamic("onPressEnter")(js.Any.fromFunction1(onPressEnter))
-    if (onSearch != null) __obj.updateDynamic("onSearch")(js.Any.fromFunction1(onSearch))
-    if (onVisibleChange != null) __obj.updateDynamic("onVisibleChange")(js.Any.fromFunction1(onVisibleChange))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataSource(value: js.Array[String]): this.type = set("dataSource", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* value */ String => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPressEnter(value: /* value */ String => Unit): this.type = set("onPressEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSearch(value: /* value */ String => Unit): this.type = set("onSearch", js.Any.fromFunction1(value))
+    @scala.inline
+    def onVisibleChange(value: /* visible */ Boolean => Unit): this.type = set("onVisibleChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antDesignPro.headerSearchMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = HeaderSearchProps
+  
+  def withProps(p: HeaderSearchProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: HeaderSearch.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

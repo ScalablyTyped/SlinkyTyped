@@ -1,7 +1,7 @@
 package typingsSlinky.forceGraph.mod.ForceGraph
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.forceGraph.ForceGraphInstancexnumberBackgroundColor
+import typingsSlinky.forceGraph.ForceGraphInstancexnumber
 import typingsSlinky.forceGraph.forceGraphStrings.center
 import typingsSlinky.forceGraph.forceGraphStrings.charge
 import typingsSlinky.forceGraph.forceGraphStrings.link
@@ -27,10 +27,10 @@ trait ForceGraphInstance extends js.Object {
   def _destructor(): Unit = js.native
   def backgroundColor(): ForceGraphInstance with String = js.native
   def backgroundColor(color: String): ForceGraphInstance with String = js.native
-  def centerAt(): ForceGraphInstancexnumberBackgroundColor = js.native
-  def centerAt(x: Double): ForceGraphInstancexnumberBackgroundColor = js.native
-  def centerAt(x: Double, y: Double): ForceGraphInstancexnumberBackgroundColor = js.native
-  def centerAt(x: Double, y: Double, milliseconds: Double): ForceGraphInstancexnumberBackgroundColor = js.native
+  def centerAt(): ForceGraphInstancexnumber = js.native
+  def centerAt(x: Double): ForceGraphInstancexnumber = js.native
+  def centerAt(x: Double, y: Double): ForceGraphInstancexnumber = js.native
+  def centerAt(x: Double, y: Double, milliseconds: Double): ForceGraphInstancexnumber = js.native
   def cooldownTicks(): ForceGraphInstance with Double = js.native
   def cooldownTicks(ticks: Double): ForceGraphInstance with Double = js.native
   def cooldownTime(): ForceGraphInstance with Double = js.native

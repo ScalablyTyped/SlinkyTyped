@@ -14,6 +14,8 @@ package object rekognitionMod {
   type Attribute = typingsSlinky.awsSdk.rekognitionMod._Attribute | java.lang.String
   type Attributes = js.Array[typingsSlinky.awsSdk.rekognitionMod.Attribute]
   type Boolean = scala.Boolean
+  type BoundingBoxHeight = scala.Double
+  type BoundingBoxWidth = scala.Double
   type CelebrityList = js.Array[typingsSlinky.awsSdk.rekognitionMod.Celebrity]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ID
@@ -95,7 +97,7 @@ package object rekognitionMod {
   type HumanLoopActivationReasons = js.Array[typingsSlinky.awsSdk.rekognitionMod.HumanLoopActivationReason]
   type HumanLoopArn = java.lang.String
   type HumanLoopName = java.lang.String
-  type ImageBlob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.rekognitionMod.Blob | java.lang.String
+  type ImageBlob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.rekognitionMod.Blob | java.lang.String
   type ImageId = java.lang.String
   type InferenceUnits = scala.Double
   type Instances = js.Array[typingsSlinky.awsSdk.rekognitionMod.Instance]
@@ -220,6 +222,7 @@ package object rekognitionMod {
   */
   type Reason = typingsSlinky.awsSdk.rekognitionMod._Reason | java.lang.String
   type Reasons = js.Array[typingsSlinky.awsSdk.rekognitionMod.Reason]
+  type RegionsOfInterest = js.Array[typingsSlinky.awsSdk.rekognitionMod.RegionOfInterest]
   type RekognitionUniqueId = java.lang.String
   type RoleArn = java.lang.String
   type S3Bucket = java.lang.String
@@ -242,6 +245,7 @@ package object rekognitionMod {
   type StreamProcessorStatus = typingsSlinky.awsSdk.rekognitionMod._StreamProcessorStatus | java.lang.String
   type String = java.lang.String
   type TextDetectionList = js.Array[typingsSlinky.awsSdk.rekognitionMod.TextDetection]
+  type TextDetectionResults = js.Array[typingsSlinky.awsSdk.rekognitionMod.TextDetectionResult]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.LINE
     - typingsSlinky.awsSdk.awsSdkStrings.WORD

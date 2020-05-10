@@ -11,20 +11,63 @@ import scala.scalajs.js.annotation._
   * @property alt {H.geo.Altitude=} - The altitude coordinate.
   * @property ctx {H.geo.AltitudeContext=} - The altitude context.
   */
+@js.native
 trait IPoint extends js.Object {
-  var alt: js.UndefOr[Altitude] = js.undefined
-  var ctx: js.UndefOr[AltitudeContext] = js.undefined
-  var lat: Latitude
-  var lng: Longitude
+  var alt: js.UndefOr[Altitude] = js.native
+  var ctx: js.UndefOr[AltitudeContext] = js.native
+  var lat: Latitude = js.native
+  var lng: Longitude = js.native
 }
 
 object IPoint {
   @scala.inline
-  def apply(lat: Latitude, lng: Longitude, alt: Int | Double = null, ctx: AltitudeContext = null): IPoint = {
+  def apply(lat: Latitude, lng: Longitude): IPoint = {
     val __obj = js.Dynamic.literal(lat = lat.asInstanceOf[js.Any], lng = lng.asInstanceOf[js.Any])
-    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
-    if (ctx != null) __obj.updateDynamic("ctx")(ctx.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPoint]
   }
+  @scala.inline
+  implicit class IPointOps[Self <: IPoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLat(value: Latitude): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLng(value: Longitude): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lng")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAlt(value: Altitude): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCtx(value: AltitudeContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ctx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCtx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ctx")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

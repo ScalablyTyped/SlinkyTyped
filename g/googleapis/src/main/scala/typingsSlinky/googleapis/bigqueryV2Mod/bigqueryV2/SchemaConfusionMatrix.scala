@@ -22,11 +22,41 @@ trait SchemaConfusionMatrix extends js.Object {
 
 object SchemaConfusionMatrix {
   @scala.inline
-  def apply(confidenceThreshold: Int | Double = null, rows: js.Array[SchemaRow] = null): SchemaConfusionMatrix = {
+  def apply(): SchemaConfusionMatrix = {
     val __obj = js.Dynamic.literal()
-    if (confidenceThreshold != null) __obj.updateDynamic("confidenceThreshold")(confidenceThreshold.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaConfusionMatrix]
   }
+  @scala.inline
+  implicit class SchemaConfusionMatrixOps[Self <: SchemaConfusionMatrix] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfidenceThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confidenceThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfidenceThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confidenceThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: js.Array[SchemaRow]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

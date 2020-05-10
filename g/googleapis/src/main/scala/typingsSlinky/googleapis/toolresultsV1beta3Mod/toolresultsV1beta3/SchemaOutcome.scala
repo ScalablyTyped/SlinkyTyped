@@ -37,20 +37,77 @@ trait SchemaOutcome extends js.Object {
 
 object SchemaOutcome {
   @scala.inline
-  def apply(
-    failureDetail: SchemaFailureDetail = null,
-    inconclusiveDetail: SchemaInconclusiveDetail = null,
-    skippedDetail: SchemaSkippedDetail = null,
-    successDetail: SchemaSuccessDetail = null,
-    summary: String = null
-  ): SchemaOutcome = {
+  def apply(): SchemaOutcome = {
     val __obj = js.Dynamic.literal()
-    if (failureDetail != null) __obj.updateDynamic("failureDetail")(failureDetail.asInstanceOf[js.Any])
-    if (inconclusiveDetail != null) __obj.updateDynamic("inconclusiveDetail")(inconclusiveDetail.asInstanceOf[js.Any])
-    if (skippedDetail != null) __obj.updateDynamic("skippedDetail")(skippedDetail.asInstanceOf[js.Any])
-    if (successDetail != null) __obj.updateDynamic("successDetail")(successDetail.asInstanceOf[js.Any])
-    if (summary != null) __obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOutcome]
   }
+  @scala.inline
+  implicit class SchemaOutcomeOps[Self <: SchemaOutcome] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailureDetail(value: SchemaFailureDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureDetail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInconclusiveDetail(value: SchemaInconclusiveDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inconclusiveDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInconclusiveDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inconclusiveDetail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkippedDetail(value: SchemaSkippedDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skippedDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkippedDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skippedDetail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessDetail(value: SchemaSuccessDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successDetail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSummary(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

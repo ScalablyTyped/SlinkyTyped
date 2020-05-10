@@ -16,12 +16,10 @@ trait LineJoin extends js.Object
 
 object LineJoin {
   @scala.inline
-  def bevel: typingsSlinky.heremaps.heremapsStrings.bevel = this.cast("bevel")
+  def bevel: typingsSlinky.heremaps.heremapsStrings.bevel = "bevel".asInstanceOf[typingsSlinky.heremaps.heremapsStrings.bevel]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def miter: typingsSlinky.heremaps.heremapsStrings.miter = "miter".asInstanceOf[typingsSlinky.heremaps.heremapsStrings.miter]
   @scala.inline
-  def miter: typingsSlinky.heremaps.heremapsStrings.miter = this.cast("miter")
-  @scala.inline
-  def round: typingsSlinky.heremaps.heremapsStrings.round = this.cast("round")
+  def round: typingsSlinky.heremaps.heremapsStrings.round = "round".asInstanceOf[typingsSlinky.heremaps.heremapsStrings.round]
 }
 

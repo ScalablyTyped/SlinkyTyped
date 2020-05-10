@@ -1,15 +1,16 @@
 package typingsSlinky.reactHotkeys.components
 
+import typingsSlinky.reactHotkeys.mod.HotKeysOverrideProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ObserveKeys
-  extends SharedApply_HotKeysOverrideProps1574304557[typingsSlinky.reactHotkeys.mod.ObserveKeys] {
+object ObserveKeys {
   @JSImport("react-hotkeys", "ObserveKeys")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: HotKeysOverrideProps): SharedBuilder_HotKeysOverrideProps229638314[typingsSlinky.reactHotkeys.mod.ObserveKeys] = new SharedBuilder_HotKeysOverrideProps229638314[typingsSlinky.reactHotkeys.mod.ObserveKeys](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ObserveKeys.type): SharedBuilder_HotKeysOverrideProps229638314[typingsSlinky.reactHotkeys.mod.ObserveKeys] = new SharedBuilder_HotKeysOverrideProps229638314[typingsSlinky.reactHotkeys.mod.ObserveKeys](js.Array(this.component, js.Dictionary.empty))()
 }
 

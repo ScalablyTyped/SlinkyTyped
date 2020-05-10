@@ -12,10 +12,8 @@ trait ButtonPriority extends js.Object
 
 object ButtonPriority {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def primary: typingsSlinky.wixStyleReact.wixStyleReactStrings.primary = "primary".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.primary]
   @scala.inline
-  def primary: typingsSlinky.wixStyleReact.wixStyleReactStrings.primary = this.cast("primary")
-  @scala.inline
-  def secondary: typingsSlinky.wixStyleReact.wixStyleReactStrings.secondary = this.cast("secondary")
+  def secondary: typingsSlinky.wixStyleReact.wixStyleReactStrings.secondary = "secondary".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.secondary]
 }
 

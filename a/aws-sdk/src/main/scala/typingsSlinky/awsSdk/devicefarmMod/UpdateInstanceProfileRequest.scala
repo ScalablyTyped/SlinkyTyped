@@ -34,21 +34,83 @@ trait UpdateInstanceProfileRequest extends js.Object {
 
 object UpdateInstanceProfileRequest {
   @scala.inline
-  def apply(
-    arn: AmazonResourceName,
-    description: Message = null,
-    excludeAppPackagesFromCleanup: PackageIds = null,
-    name: Name = null,
-    packageCleanup: js.UndefOr[scala.Boolean] = js.undefined,
-    rebootAfterUse: js.UndefOr[scala.Boolean] = js.undefined
-  ): UpdateInstanceProfileRequest = {
+  def apply(arn: AmazonResourceName): UpdateInstanceProfileRequest = {
     val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (excludeAppPackagesFromCleanup != null) __obj.updateDynamic("excludeAppPackagesFromCleanup")(excludeAppPackagesFromCleanup.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(packageCleanup)) __obj.updateDynamic("packageCleanup")(packageCleanup.asInstanceOf[js.Any])
-    if (!js.isUndefined(rebootAfterUse)) __obj.updateDynamic("rebootAfterUse")(rebootAfterUse.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateInstanceProfileRequest]
   }
+  @scala.inline
+  implicit class UpdateInstanceProfileRequestOps[Self <: UpdateInstanceProfileRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: AmazonResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Message): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcludeAppPackagesFromCleanup(value: PackageIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeAppPackagesFromCleanup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludeAppPackagesFromCleanup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeAppPackagesFromCleanup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPackageCleanup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageCleanup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackageCleanup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageCleanup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRebootAfterUse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rebootAfterUse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRebootAfterUse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rebootAfterUse")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

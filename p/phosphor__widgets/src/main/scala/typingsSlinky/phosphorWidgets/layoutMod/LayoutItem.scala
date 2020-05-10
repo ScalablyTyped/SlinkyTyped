@@ -32,14 +32,6 @@ class LayoutItem protected () extends IDisposable {
     */
   val isAttached: Boolean = js.native
   /**
-    * Test whether the object has been disposed.
-    *
-    * #### Notes
-    * This property is always safe to access.
-    */
-  /* CompleteClass */
-  override val isDisposed: Boolean = js.native
-  /**
     * Whether the managed widget is hidden.
     */
   val isHidden: Boolean = js.native
@@ -79,19 +71,6 @@ class LayoutItem protected () extends IDisposable {
     * The widget managed by the layout item.
     */
   val widget: Widget = js.native
-  /**
-    * Dispose of the resources held by the object.
-    *
-    * #### Notes
-    * If the object's `dispose` method is called more than once, all
-    * calls made after the first will be a no-op.
-    *
-    * #### Undefined Behavior
-    * It is undefined behavior to use any functionality of the object
-    * after it has been disposed unless otherwise explicitly noted.
-    */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
   /**
     * Update the computed size limits of the managed widget.
     */

@@ -18,22 +18,20 @@ trait Indication extends js.Object
 
 object Indication {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.osrm.osrmStrings.left = "left".asInstanceOf[typingsSlinky.osrm.osrmStrings.left]
   @scala.inline
-  def left: typingsSlinky.osrm.osrmStrings.left = this.cast("left")
+  def right: typingsSlinky.osrm.osrmStrings.right = "right".asInstanceOf[typingsSlinky.osrm.osrmStrings.right]
   @scala.inline
-  def right: typingsSlinky.osrm.osrmStrings.right = this.cast("right")
+  def `sharp left`: typingsSlinky.osrm.osrmStrings.`sharp left` = ("sharp left").asInstanceOf[typingsSlinky.osrm.osrmStrings.`sharp left`]
   @scala.inline
-  def `sharp left`: typingsSlinky.osrm.osrmStrings.`sharp left` = this.cast("sharp left")
+  def `sharp right`: typingsSlinky.osrm.osrmStrings.`sharp right` = ("sharp right").asInstanceOf[typingsSlinky.osrm.osrmStrings.`sharp right`]
   @scala.inline
-  def `sharp right`: typingsSlinky.osrm.osrmStrings.`sharp right` = this.cast("sharp right")
+  def `slight left`: typingsSlinky.osrm.osrmStrings.`slight left` = ("slight left").asInstanceOf[typingsSlinky.osrm.osrmStrings.`slight left`]
   @scala.inline
-  def `slight left`: typingsSlinky.osrm.osrmStrings.`slight left` = this.cast("slight left")
+  def `slight rigth`: typingsSlinky.osrm.osrmStrings.`slight rigth` = ("slight rigth").asInstanceOf[typingsSlinky.osrm.osrmStrings.`slight rigth`]
   @scala.inline
-  def `slight rigth`: typingsSlinky.osrm.osrmStrings.`slight rigth` = this.cast("slight rigth")
+  def straight: typingsSlinky.osrm.osrmStrings.straight = "straight".asInstanceOf[typingsSlinky.osrm.osrmStrings.straight]
   @scala.inline
-  def straight: typingsSlinky.osrm.osrmStrings.straight = this.cast("straight")
-  @scala.inline
-  def uturn: typingsSlinky.osrm.osrmStrings.uturn = this.cast("uturn")
+  def uturn: typingsSlinky.osrm.osrmStrings.uturn = "uturn".asInstanceOf[typingsSlinky.osrm.osrmStrings.uturn]
 }
 

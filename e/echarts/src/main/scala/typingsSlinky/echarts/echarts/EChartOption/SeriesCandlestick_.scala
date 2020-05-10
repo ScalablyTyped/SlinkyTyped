@@ -53,6 +53,7 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-candlestick
   */
+@js.native
 trait SeriesCandlestick_ extends js.Object {
   /**
     * Delay before updating the first animation, which supports callback
@@ -69,7 +70,7 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.animationDelay
     */
-  var animationDelay: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDelay: js.UndefOr[js.Function | Double] = js.native
   /**
     * Duration of the first animation, which supports callback function
     * for different data to have different animation effect:
@@ -81,7 +82,7 @@ trait SeriesCandlestick_ extends js.Object {
     * 300
     * @see https://echarts.apache.org/en/option.html#series-candlestick.animationDuration
     */
-  var animationDuration: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDuration: js.UndefOr[js.Function | Double] = js.native
   /**
     * Easing method used for the first animation.
     * Varied easing effects can be found at
@@ -93,7 +94,7 @@ trait SeriesCandlestick_ extends js.Object {
     * "linear"
     * @see https://echarts.apache.org/en/option.html#series-candlestick.animationEasing
     */
-  var animationEasing: js.UndefOr[String] = js.undefined
+  var animationEasing: js.UndefOr[String] = js.native
   /**
     * Specify bar max width.
     * Absolute value (like `10`) or percentage (like `'20%'`, according
@@ -102,7 +103,7 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.barMaxWidth
     */
-  var barMaxWidth: js.UndefOr[Double] = js.undefined
+  var barMaxWidth: js.UndefOr[Double] = js.native
   /**
     * Specify bar min width.
     * Absolute value (like `10`) or percentage (like `'20%'`, according
@@ -111,7 +112,7 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.barMinWidth
     */
-  var barMinWidth: js.UndefOr[Double] = js.undefined
+  var barMinWidth: js.UndefOr[Double] = js.native
   /**
     * Specify bar width.
     * Absolute value (like `10`) or percentage (like `'20%'`, according
@@ -120,7 +121,7 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.barWidth
     */
-  var barWidth: js.UndefOr[Double] = js.undefined
+  var barWidth: js.UndefOr[Double] = js.native
   /**
     * The coordinate used in the series, whose options are:
     *
@@ -138,7 +139,7 @@ trait SeriesCandlestick_ extends js.Object {
     * "cartesian2d"
     * @see https://echarts.apache.org/en/option.html#series-candlestick.coordinateSystem
     */
-  var coordinateSystem: js.UndefOr[String] = js.undefined
+  var coordinateSystem: js.UndefOr[String] = js.native
   /**
     * Data should be the two-dimensional array shown as follow.
     *
@@ -152,7 +153,7 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.data
     */
-  var data: js.UndefOr[js.Array[js.Array[Double | DataObject]]] = js.undefined
+  var data: js.UndefOr[js.Array[js.Array[Double | DataObject]]] = js.native
   /**
     * `dimensions` can be used to define dimension info for `series.data`
     * or `dataset.source`.
@@ -200,14 +201,14 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.dimensions
     */
-  var dimensions: js.UndefOr[js.Array[_]] = js.undefined
+  var dimensions: js.UndefOr[js.Array[_]] = js.native
   /**
     * Emphasis style of candlestick.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.emphasis
     */
-  var emphasis: js.UndefOr[AnonItemStyleAnonBorderColor0] = js.undefined
+  var emphasis: js.UndefOr[AnonItemStyleAnonBorderColor0] = js.native
   /**
     * Define what is encoded to for each dimension of `data`.
     * For example:
@@ -244,7 +245,7 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.encode
     */
-  var encode: js.UndefOr[js.Object] = js.undefined
+  var encode: js.UndefOr[js.Object] = js.native
   /**
     * Whether to enable animitation when hovering on box.
     *
@@ -253,7 +254,7 @@ trait SeriesCandlestick_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-candlestick.hoverAnimation
     */
-  var hoverAnimation: js.UndefOr[Boolean] = js.undefined
+  var hoverAnimation: js.UndefOr[Boolean] = js.native
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component in option
@@ -262,14 +263,14 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.id
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * Item style of candlestick.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderColor0] = js.undefined
+  var itemStyle: js.UndefOr[AnonBorderColor0] = js.native
   /**
     * Whether to enable the optimization of large-scale data.
     * It could be set when large data causes performance problem.
@@ -285,7 +286,7 @@ trait SeriesCandlestick_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-candlestick.large
     */
-  var large: js.UndefOr[Boolean] = js.undefined
+  var large: js.UndefOr[Boolean] = js.native
   /**
     * The threshold enabling the drawing optimization.
     *
@@ -294,7 +295,7 @@ trait SeriesCandlestick_ extends js.Object {
     * 600
     * @see https://echarts.apache.org/en/option.html#series-candlestick.largeThreshold
     */
-  var largeThreshold: js.UndefOr[Double] = js.undefined
+  var largeThreshold: js.UndefOr[Double] = js.native
   /**
     * Layout method, whose values may be:
     *
@@ -312,7 +313,7 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.layout
     */
-  var layout: js.UndefOr[String] = js.undefined
+  var layout: js.UndefOr[String] = js.native
   /**
     * Whether to enable highlighting chart when
     * [legend](https://echarts.apache.org/en/option.html#legend)
@@ -323,7 +324,7 @@ trait SeriesCandlestick_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-candlestick.legendHoverLink
     */
-  var legendHoverLink: js.UndefOr[Boolean] = js.undefined
+  var legendHoverLink: js.UndefOr[Boolean] = js.native
   /**
     * Used to mark an area in chart.
     * For example, mark a time interval.
@@ -331,21 +332,21 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.markArea
     */
-  var markArea: js.UndefOr[AnonAnimationDelayUpdate] = js.undefined
+  var markArea: js.UndefOr[AnonAnimationDelayUpdate] = js.native
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.markLine
     */
-  var markLine: js.UndefOr[AnonAnimationDelay] = js.undefined
+  var markLine: js.UndefOr[AnonAnimationDelay] = js.native
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.markPoint
     */
-  var markPoint: js.UndefOr[AnonAnimationDuration] = js.undefined
+  var markPoint: js.UndefOr[AnonAnimationDuration] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -356,7 +357,7 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.name
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * `progressive` specifies the amount of graphic elements that can
     * be rendered within a frame (about 16ms) if "progressive rendering"
@@ -373,7 +374,7 @@ trait SeriesCandlestick_ extends js.Object {
     * 5000
     * @see https://echarts.apache.org/en/option.html#series-candlestick.progressive
     */
-  var progressive: js.UndefOr[Double] = js.undefined
+  var progressive: js.UndefOr[Double] = js.native
   /**
     * Chunk approach, optional values:
     *
@@ -387,7 +388,7 @@ trait SeriesCandlestick_ extends js.Object {
     * "mod"
     * @see https://echarts.apache.org/en/option.html#series-candlestick.progressiveChunkMode
     */
-  var progressiveChunkMode: js.UndefOr[String] = js.undefined
+  var progressiveChunkMode: js.UndefOr[String] = js.native
   /**
     * If current data amount is over the threshold, "progressive rendering"
     * is enabled.
@@ -397,7 +398,7 @@ trait SeriesCandlestick_ extends js.Object {
     * 10000
     * @see https://echarts.apache.org/en/option.html#series-candlestick.progressiveThreshold
     */
-  var progressiveThreshold: js.UndefOr[Double] = js.undefined
+  var progressiveThreshold: js.UndefOr[Double] = js.native
   /**
     * Whether to ignore mouse events.
     * Default value is false, for triggering and responding to mouse
@@ -406,20 +407,20 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.silent
     */
-  var silent: js.UndefOr[Boolean] = js.undefined
+  var silent: js.UndefOr[Boolean] = js.native
   /**
     * tooltip settings in this series.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
   /**
     * @default
     * "candlestick"
     * @see https://echarts.apache.org/en/option.html#series-candlestick.type
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /**
     * Index of
     * [x axis](https://echarts.apache.org/en/option.html#xAxis)
@@ -428,7 +429,7 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.xAxisIndex
     */
-  var xAxisIndex: js.UndefOr[Double] = js.undefined
+  var xAxisIndex: js.UndefOr[Double] = js.native
   /**
     * Index of
     * [y axis](https://echarts.apache.org/en/option.html#yAxis)
@@ -437,7 +438,7 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.yAxisIndex
     */
-  var yAxisIndex: js.UndefOr[Double] = js.undefined
+  var yAxisIndex: js.UndefOr[Double] = js.native
   /**
     * `z` value of all graghical elements in candlestick, which controls
     * order of drawing graphical components.
@@ -452,7 +453,7 @@ trait SeriesCandlestick_ extends js.Object {
     * 2
     * @see https://echarts.apache.org/en/option.html#series-candlestick.z
     */
-  var z: js.UndefOr[Double] = js.undefined
+  var z: js.UndefOr[Double] = js.native
   /**
     * `zlevel` value of all graghical elements in candlestick.
     *
@@ -470,79 +471,406 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.zlevel
     */
-  var zlevel: js.UndefOr[Double] = js.undefined
+  var zlevel: js.UndefOr[Double] = js.native
 }
 
 object SeriesCandlestick_ {
   @scala.inline
-  def apply(
-    animationDelay: js.Function | Double = null,
-    animationDuration: js.Function | Double = null,
-    animationEasing: String = null,
-    barMaxWidth: Int | Double = null,
-    barMinWidth: Int | Double = null,
-    barWidth: Int | Double = null,
-    coordinateSystem: String = null,
-    data: js.Array[js.Array[Double | DataObject]] = null,
-    dimensions: js.Array[_] = null,
-    emphasis: AnonItemStyleAnonBorderColor0 = null,
-    encode: js.Object = null,
-    hoverAnimation: js.UndefOr[Boolean] = js.undefined,
-    id: String = null,
-    itemStyle: AnonBorderColor0 = null,
-    large: js.UndefOr[Boolean] = js.undefined,
-    largeThreshold: Int | Double = null,
-    layout: String = null,
-    legendHoverLink: js.UndefOr[Boolean] = js.undefined,
-    markArea: AnonAnimationDelayUpdate = null,
-    markLine: AnonAnimationDelay = null,
-    markPoint: AnonAnimationDuration = null,
-    name: String = null,
-    progressive: Int | Double = null,
-    progressiveChunkMode: String = null,
-    progressiveThreshold: Int | Double = null,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    tooltip: AnonExtraCssText = null,
-    `type`: String = null,
-    xAxisIndex: Int | Double = null,
-    yAxisIndex: Int | Double = null,
-    z: Int | Double = null,
-    zlevel: Int | Double = null
-  ): SeriesCandlestick_ = {
+  def apply(): SeriesCandlestick_ = {
     val __obj = js.Dynamic.literal()
-    if (animationDelay != null) __obj.updateDynamic("animationDelay")(animationDelay.asInstanceOf[js.Any])
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
-    if (barMaxWidth != null) __obj.updateDynamic("barMaxWidth")(barMaxWidth.asInstanceOf[js.Any])
-    if (barMinWidth != null) __obj.updateDynamic("barMinWidth")(barMinWidth.asInstanceOf[js.Any])
-    if (barWidth != null) __obj.updateDynamic("barWidth")(barWidth.asInstanceOf[js.Any])
-    if (coordinateSystem != null) __obj.updateDynamic("coordinateSystem")(coordinateSystem.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dimensions != null) __obj.updateDynamic("dimensions")(dimensions.asInstanceOf[js.Any])
-    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
-    if (encode != null) __obj.updateDynamic("encode")(encode.asInstanceOf[js.Any])
-    if (!js.isUndefined(hoverAnimation)) __obj.updateDynamic("hoverAnimation")(hoverAnimation.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(large)) __obj.updateDynamic("large")(large.asInstanceOf[js.Any])
-    if (largeThreshold != null) __obj.updateDynamic("largeThreshold")(largeThreshold.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (!js.isUndefined(legendHoverLink)) __obj.updateDynamic("legendHoverLink")(legendHoverLink.asInstanceOf[js.Any])
-    if (markArea != null) __obj.updateDynamic("markArea")(markArea.asInstanceOf[js.Any])
-    if (markLine != null) __obj.updateDynamic("markLine")(markLine.asInstanceOf[js.Any])
-    if (markPoint != null) __obj.updateDynamic("markPoint")(markPoint.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (progressive != null) __obj.updateDynamic("progressive")(progressive.asInstanceOf[js.Any])
-    if (progressiveChunkMode != null) __obj.updateDynamic("progressiveChunkMode")(progressiveChunkMode.asInstanceOf[js.Any])
-    if (progressiveThreshold != null) __obj.updateDynamic("progressiveThreshold")(progressiveThreshold.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (xAxisIndex != null) __obj.updateDynamic("xAxisIndex")(xAxisIndex.asInstanceOf[js.Any])
-    if (yAxisIndex != null) __obj.updateDynamic("yAxisIndex")(yAxisIndex.asInstanceOf[js.Any])
-    if (z != null) __obj.updateDynamic("z")(z.asInstanceOf[js.Any])
-    if (zlevel != null) __obj.updateDynamic("zlevel")(zlevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesCandlestick_]
   }
+  @scala.inline
+  implicit class SeriesCandlestick_Ops[Self <: SeriesCandlestick_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimationDelay(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDuration(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationEasing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarMaxWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barMaxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarMaxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barMaxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarMinWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barMinWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarMinWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barMinWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoordinateSystem(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coordinateSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoordinateSystem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coordinateSystem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Array[js.Array[Double | DataObject]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDimensions(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmphasis(value: AnonItemStyleAnonBorderColor0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmphasis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncode(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverAnimation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoverAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemStyle(value: AnonBorderColor0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLarge(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLarge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLargeThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("largeThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLargeThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("largeThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLegendHoverLink(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendHoverLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegendHoverLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendHoverLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkArea(value: AnonAnimationDelayUpdate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkLine(value: AnonAnimationDelay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkPoint(value: AnonAnimationDuration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressive(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressiveChunkMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressiveChunkMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressiveChunkMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressiveChunkMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressiveThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressiveThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressiveThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressiveThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSilent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSilent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: AnonExtraCssText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXAxisIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxisIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXAxisIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxisIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYAxisIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxisIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYAxisIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxisIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZ(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZ: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZlevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZlevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

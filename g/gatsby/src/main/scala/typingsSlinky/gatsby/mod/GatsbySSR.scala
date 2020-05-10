@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GatsbySSR extends js.Object {
   /**
     * Called after every page Gatsby server renders while building HTML so you can
@@ -31,7 +32,7 @@ trait GatsbySSR extends js.Object {
       /* callback */ PluginCallback, 
       Unit
     ])
-  ] = js.undefined
+  ] = js.native
   /**
     * Called after every page Gatsby server renders while building HTML so you can
     * set head and body components to be rendered in your `html.js`.
@@ -76,7 +77,7 @@ trait GatsbySSR extends js.Object {
       /* callback */ PluginCallback, 
       Unit
     ])
-  ] = js.undefined
+  ] = js.native
   /**
     * Replace the default server renderer. This is useful for integration with
     * Redux, css-in-js libraries, etc. that need custom setups for server
@@ -100,7 +101,7 @@ trait GatsbySSR extends js.Object {
       /* callback */ PluginCallback, 
       Unit
     ])
-  ] = js.undefined
+  ] = js.native
   /**
     * Allow a plugin to wrap the page element.
     *
@@ -119,13 +120,21 @@ trait GatsbySSR extends js.Object {
     * }
     */
   var wrapPageElement: js.UndefOr[
-    (js.Function2[/* args */ WrapPageElementNodeArgs, /* options */ PluginOptions, _]) with (js.Function2[/* args */ WrapPageElementNodeArgs, /* options */ PluginOptions, js.Promise[_]]) with (js.Function3[
-      /* args */ WrapPageElementNodeArgs, 
+    (js.Function2[
+      /* args */ WrapPageElementNodeArgs[js.Object, js.Object], 
+      /* options */ PluginOptions, 
+      _
+    ]) with (js.Function2[
+      /* args */ WrapPageElementNodeArgs[js.Object, js.Object], 
+      /* options */ PluginOptions, 
+      js.Promise[_]
+    ]) with (js.Function3[
+      /* args */ WrapPageElementNodeArgs[js.Object, js.Object], 
       /* options */ PluginOptions, 
       /* callback */ PluginCallback, 
       Unit
     ])
-  ] = js.undefined
+  ] = js.native
   /**
     * Allow a plugin to wrap the root element.
     *
@@ -155,50 +164,125 @@ trait GatsbySSR extends js.Object {
       /* callback */ PluginCallback, 
       Unit
     ])
-  ] = js.undefined
+  ] = js.native
 }
 
 object GatsbySSR {
   @scala.inline
-  def apply(
-    onPreRenderHTML: (js.Function2[/* args */ PreRenderHTMLArgs, /* options */ PluginOptions, _]) with (js.Function2[/* args */ PreRenderHTMLArgs, /* options */ PluginOptions, js.Promise[_]]) with (js.Function3[
-      /* args */ PreRenderHTMLArgs, 
-      /* options */ PluginOptions, 
-      /* callback */ PluginCallback, 
-      Unit
-    ]) = null,
-    onRenderBody: (js.Function2[/* args */ RenderBodyArgs, /* options */ PluginOptions, _]) with (js.Function2[/* args */ RenderBodyArgs, /* options */ PluginOptions, js.Promise[_]]) with (js.Function3[
-      /* args */ RenderBodyArgs, 
-      /* options */ PluginOptions, 
-      /* callback */ PluginCallback, 
-      Unit
-    ]) = null,
-    replaceRenderer: (js.Function2[/* args */ ReplaceRendererArgs, /* options */ PluginOptions, _]) with (js.Function2[/* args */ ReplaceRendererArgs, /* options */ PluginOptions, js.Promise[_]]) with (js.Function3[
-      /* args */ ReplaceRendererArgs, 
-      /* options */ PluginOptions, 
-      /* callback */ PluginCallback, 
-      Unit
-    ]) = null,
-    wrapPageElement: (js.Function2[/* args */ WrapPageElementNodeArgs, /* options */ PluginOptions, _]) with (js.Function2[/* args */ WrapPageElementNodeArgs, /* options */ PluginOptions, js.Promise[_]]) with (js.Function3[
-      /* args */ WrapPageElementNodeArgs, 
-      /* options */ PluginOptions, 
-      /* callback */ PluginCallback, 
-      Unit
-    ]) = null,
-    wrapRootElement: (js.Function2[/* args */ WrapRootElementNodeArgs, /* options */ PluginOptions, _]) with (js.Function2[/* args */ WrapRootElementNodeArgs, /* options */ PluginOptions, js.Promise[_]]) with (js.Function3[
-      /* args */ WrapRootElementNodeArgs, 
-      /* options */ PluginOptions, 
-      /* callback */ PluginCallback, 
-      Unit
-    ]) = null
-  ): GatsbySSR = {
+  def apply(): GatsbySSR = {
     val __obj = js.Dynamic.literal()
-    if (onPreRenderHTML != null) __obj.updateDynamic("onPreRenderHTML")(onPreRenderHTML.asInstanceOf[js.Any])
-    if (onRenderBody != null) __obj.updateDynamic("onRenderBody")(onRenderBody.asInstanceOf[js.Any])
-    if (replaceRenderer != null) __obj.updateDynamic("replaceRenderer")(replaceRenderer.asInstanceOf[js.Any])
-    if (wrapPageElement != null) __obj.updateDynamic("wrapPageElement")(wrapPageElement.asInstanceOf[js.Any])
-    if (wrapRootElement != null) __obj.updateDynamic("wrapRootElement")(wrapRootElement.asInstanceOf[js.Any])
     __obj.asInstanceOf[GatsbySSR]
   }
+  @scala.inline
+  implicit class GatsbySSROps[Self <: GatsbySSR] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnPreRenderHTML(
+      value: (js.Function2[/* args */ PreRenderHTMLArgs, /* options */ PluginOptions, _]) with (js.Function2[/* args */ PreRenderHTMLArgs, /* options */ PluginOptions, js.Promise[_]]) with (js.Function3[
+          /* args */ PreRenderHTMLArgs, 
+          /* options */ PluginOptions, 
+          /* callback */ PluginCallback, 
+          Unit
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPreRenderHTML")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnPreRenderHTML: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPreRenderHTML")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRenderBody(
+      value: (js.Function2[/* args */ RenderBodyArgs, /* options */ PluginOptions, _]) with (js.Function2[/* args */ RenderBodyArgs, /* options */ PluginOptions, js.Promise[_]]) with (js.Function3[
+          /* args */ RenderBodyArgs, 
+          /* options */ PluginOptions, 
+          /* callback */ PluginCallback, 
+          Unit
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRenderBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnRenderBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRenderBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplaceRenderer(
+      value: (js.Function2[/* args */ ReplaceRendererArgs, /* options */ PluginOptions, _]) with (js.Function2[/* args */ ReplaceRendererArgs, /* options */ PluginOptions, js.Promise[_]]) with (js.Function3[
+          /* args */ ReplaceRendererArgs, 
+          /* options */ PluginOptions, 
+          /* callback */ PluginCallback, 
+          Unit
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceRenderer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplaceRenderer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceRenderer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrapPageElement(
+      value: (js.Function2[
+          /* args */ WrapPageElementNodeArgs[js.Object, js.Object], 
+          /* options */ PluginOptions, 
+          _
+        ]) with (js.Function2[
+          /* args */ WrapPageElementNodeArgs[js.Object, js.Object], 
+          /* options */ PluginOptions, 
+          js.Promise[_]
+        ]) with (js.Function3[
+          /* args */ WrapPageElementNodeArgs[js.Object, js.Object], 
+          /* options */ PluginOptions, 
+          /* callback */ PluginCallback, 
+          Unit
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapPageElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrapPageElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapPageElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrapRootElement(
+      value: (js.Function2[/* args */ WrapRootElementNodeArgs, /* options */ PluginOptions, _]) with (js.Function2[/* args */ WrapRootElementNodeArgs, /* options */ PluginOptions, js.Promise[_]]) with (js.Function3[
+          /* args */ WrapRootElementNodeArgs, 
+          /* options */ PluginOptions, 
+          /* callback */ PluginCallback, 
+          Unit
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapRootElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrapRootElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapRootElement")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

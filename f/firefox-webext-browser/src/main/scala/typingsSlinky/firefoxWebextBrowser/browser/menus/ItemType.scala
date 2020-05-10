@@ -15,14 +15,12 @@ trait ItemType extends js.Object
 
 object ItemType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def checkbox: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.checkbox = "checkbox".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.checkbox]
   @scala.inline
-  def checkbox: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.checkbox = this.cast("checkbox")
+  def normal: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.normal = "normal".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.normal = this.cast("normal")
+  def radio: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.radio = "radio".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.radio]
   @scala.inline
-  def radio: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.radio = this.cast("radio")
-  @scala.inline
-  def separator: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.separator = this.cast("separator")
+  def separator: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.separator = "separator".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.separator]
 }
 

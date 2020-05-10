@@ -31,16 +31,53 @@ trait SchemaSectionBreak extends js.Object {
 
 object SchemaSectionBreak {
   @scala.inline
-  def apply(
-    sectionStyle: SchemaSectionStyle = null,
-    suggestedDeletionIds: js.Array[String] = null,
-    suggestedInsertionIds: js.Array[String] = null
-  ): SchemaSectionBreak = {
+  def apply(): SchemaSectionBreak = {
     val __obj = js.Dynamic.literal()
-    if (sectionStyle != null) __obj.updateDynamic("sectionStyle")(sectionStyle.asInstanceOf[js.Any])
-    if (suggestedDeletionIds != null) __obj.updateDynamic("suggestedDeletionIds")(suggestedDeletionIds.asInstanceOf[js.Any])
-    if (suggestedInsertionIds != null) __obj.updateDynamic("suggestedInsertionIds")(suggestedInsertionIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSectionBreak]
   }
+  @scala.inline
+  implicit class SchemaSectionBreakOps[Self <: SchemaSectionBreak] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSectionStyle(value: SchemaSectionStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSectionStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedDeletionIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedDeletionIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedDeletionIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedDeletionIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedInsertionIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedInsertionIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedInsertionIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedInsertionIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

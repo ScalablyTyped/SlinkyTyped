@@ -30,20 +30,77 @@ trait ConnectionPoolConfiguration extends js.Object {
 
 object ConnectionPoolConfiguration {
   @scala.inline
-  def apply(
-    ConnectionBorrowTimeout: Int | scala.Double = null,
-    InitQuery: String = null,
-    MaxConnectionsPercent: Int | scala.Double = null,
-    MaxIdleConnectionsPercent: Int | scala.Double = null,
-    SessionPinningFilters: StringList = null
-  ): ConnectionPoolConfiguration = {
+  def apply(): ConnectionPoolConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (ConnectionBorrowTimeout != null) __obj.updateDynamic("ConnectionBorrowTimeout")(ConnectionBorrowTimeout.asInstanceOf[js.Any])
-    if (InitQuery != null) __obj.updateDynamic("InitQuery")(InitQuery.asInstanceOf[js.Any])
-    if (MaxConnectionsPercent != null) __obj.updateDynamic("MaxConnectionsPercent")(MaxConnectionsPercent.asInstanceOf[js.Any])
-    if (MaxIdleConnectionsPercent != null) __obj.updateDynamic("MaxIdleConnectionsPercent")(MaxIdleConnectionsPercent.asInstanceOf[js.Any])
-    if (SessionPinningFilters != null) __obj.updateDynamic("SessionPinningFilters")(SessionPinningFilters.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectionPoolConfiguration]
   }
+  @scala.inline
+  implicit class ConnectionPoolConfigurationOps[Self <: ConnectionPoolConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnectionBorrowTimeout(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionBorrowTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionBorrowTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionBorrowTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitQuery(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitQuery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitQuery")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxConnectionsPercent(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConnectionsPercent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxConnectionsPercent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConnectionsPercent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxIdleConnectionsPercent(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxIdleConnectionsPercent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxIdleConnectionsPercent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxIdleConnectionsPercent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionPinningFilters(value: StringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionPinningFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionPinningFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionPinningFilters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

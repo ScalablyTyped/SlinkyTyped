@@ -1,7 +1,9 @@
 package typingsSlinky.domHelpers
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.EventListenerOptions
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.SVGElement
 import typingsSlinky.domHelpers.addEventListenerMod.EventHandler
 import typingsSlinky.domHelpers.addEventListenerMod.TaggedEventHandler
 import typingsSlinky.domHelpers.domHelpersStrings.abort
@@ -100,9 +102,7 @@ import typingsSlinky.domHelpers.typesMod.CamelProperty
 import typingsSlinky.domHelpers.typesMod.HyphenProperty
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.Document_
-import typingsSlinky.std.EventListenerOptions
 import typingsSlinky.std.FrameRequestCallback
-import typingsSlinky.std.SVGElement
 import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -114,7 +114,7 @@ object mod extends js.Object {
   val requestAnimationFrame: js.Function1[/* callback */ FrameRequestCallback, Double] = js.native
   def activeElement(): Element | Null = js.native
   def activeElement(doc: Document_): Element | Null = js.native
-  def addClass(element: typingsSlinky.std.Element, className: String): Unit = js.native
+  def addClass(element: Element, className: String): Unit = js.native
   def addClass(element: SVGElement, className: String): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_abort(node: HTMLElement, eventName: abort, handler: TaggedEventHandler[abort]): Unit = js.native
@@ -1493,7 +1493,7 @@ object mod extends js.Object {
   def filter_waiting(selector: String, handler: EventHandler[waiting]): EventHandler[waiting] = js.native
   @JSName("filter")
   def filter_wheel(selector: String, handler: EventHandler[wheel]): EventHandler[wheel] = js.native
-  def hasClass(element: typingsSlinky.std.Element, className: String): Boolean = js.native
+  def hasClass(element: Element, className: String): Boolean = js.native
   def hasClass(element: SVGElement, className: String): Boolean = js.native
   def height(node: HTMLElement): Double = js.native
   def height(node: HTMLElement, client: Boolean): Double = js.native
@@ -2573,8 +2573,8 @@ object mod extends js.Object {
   def position(node: HTMLElement): AnonHeight = js.native
   def position(node: HTMLElement, offsetParent: HTMLElement): AnonHeight = js.native
   def querySelectorAll(element: Document_, selector: String): js.Array[HTMLElement] = js.native
-  def querySelectorAll(element: typingsSlinky.std.HTMLElement, selector: String): js.Array[HTMLElement] = js.native
-  def removeClass(element: typingsSlinky.std.Element, className: String): Unit = js.native
+  def querySelectorAll(element: HTMLElement, selector: String): js.Array[HTMLElement] = js.native
+  def removeClass(element: Element, className: String): Unit = js.native
   def removeClass(element: SVGElement, className: String): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_abort(node: HTMLElement, eventName: abort, handler: TaggedEventHandler[abort]): Unit = js.native
@@ -3762,10 +3762,10 @@ object mod extends js.Object {
   def scrollTop(node: Element): Double = js.native
   def scrollTop(node: Element, `val`: Double): js.UndefOr[scala.Nothing] = js.native
   def style(node: HTMLElement, property: PartialRecordPropertystri): Unit = js.native
-  def style[T /* <: CamelProperty */](node: HTMLElement, property: T): /* import warning: importer.ImportType#apply Failed type conversion: csstype.csstype.Properties<string | 0>[T] */ js.Any = js.native
+  def style[T /* <: HyphenProperty */](node: HTMLElement, property: T): /* import warning: importer.ImportType#apply Failed type conversion: csstype.csstype.PropertiesHyphen<string | 0>[T] */ js.Any = js.native
   @JSName("style")
-  def style_T_HyphenProperty[T /* <: HyphenProperty */](node: HTMLElement, property: T): /* import warning: importer.ImportType#apply Failed type conversion: csstype.csstype.PropertiesHyphen<string | 0>[T] */ js.Any = js.native
-  def toggleClass(element: typingsSlinky.std.Element, className: String): Unit = js.native
+  def style_T_CamelProperty[T /* <: CamelProperty */](node: HTMLElement, property: T): /* import warning: importer.ImportType#apply Failed type conversion: csstype.csstype.Properties<string | 0>[T] */ js.Any = js.native
+  def toggleClass(element: Element, className: String): Unit = js.native
   def toggleClass(element: SVGElement, className: String): Unit = js.native
   def width(node: HTMLElement): Double = js.native
   def width(node: HTMLElement, client: Boolean): Double = js.native
@@ -3774,7 +3774,7 @@ object mod extends js.Object {
     @JSName("activeElement")
     var activeElement_Original: js.Function1[/* doc */ js.UndefOr[Document_], Element | Null] = js.native
     @JSName("addClass")
-    var addClass_Original: js.Function2[/* element */ Element | org.scalajs.dom.raw.SVGElement, /* className */ String, Unit] = js.native
+    var addClass_Original: js.Function2[/* element */ Element | SVGElement, /* className */ String, Unit] = js.native
     @JSName("addEventListener")
     var addEventListener_Original: FnCallNodeEventNameHandlerOptions = js.native
     @JSName("closest")
@@ -3789,11 +3789,7 @@ object mod extends js.Object {
     @JSName("filter")
     var filter_Original: FnCallSelectorHandler = js.native
     @JSName("hasClass")
-    var hasClass_Original: js.Function2[
-        /* element */ Element | org.scalajs.dom.raw.SVGElement, 
-        /* className */ String, 
-        Boolean
-      ] = js.native
+    var hasClass_Original: js.Function2[/* element */ Element | SVGElement, /* className */ String, Boolean] = js.native
     @JSName("height")
     var height_Original: js.Function2[/* node */ HTMLElement, /* client */ js.UndefOr[Boolean], Double] = js.native
     @JSName("listen")
@@ -3813,7 +3809,7 @@ object mod extends js.Object {
     @JSName("querySelectorAll")
     var querySelectorAll_Original: js.Function2[/* element */ HTMLElement | Document_, /* selector */ String, js.Array[HTMLElement]] = js.native
     @JSName("removeClass")
-    var removeClass_Original: js.Function2[/* element */ Element | org.scalajs.dom.raw.SVGElement, /* className */ String, Unit] = js.native
+    var removeClass_Original: js.Function2[/* element */ Element | SVGElement, /* className */ String, Unit] = js.native
     @JSName("removeEventListener")
     var removeEventListener_Original: Fn0 = js.native
     @JSName("scrollParent")
@@ -3825,12 +3821,12 @@ object mod extends js.Object {
     @JSName("style")
     var style_Original: FnCallNodeProperty = js.native
     @JSName("toggleClass")
-    var toggleClass_Original: js.Function2[/* element */ Element | org.scalajs.dom.raw.SVGElement, /* className */ String, Unit] = js.native
+    var toggleClass_Original: js.Function2[/* element */ Element | SVGElement, /* className */ String, Unit] = js.native
     @JSName("width")
     var width_Original: js.Function2[/* node */ HTMLElement, /* client */ js.UndefOr[Boolean], Double] = js.native
     def activeElement(): Element | Null = js.native
     def activeElement(doc: Document_): Element | Null = js.native
-    def addClass(element: typingsSlinky.std.Element, className: String): Unit = js.native
+    def addClass(element: Element, className: String): Unit = js.native
     def addClass(element: SVGElement, className: String): Unit = js.native
     @JSName("addEventListener")
     def addEventListener_abort(node: HTMLElement, eventName: abort, handler: TaggedEventHandler[abort]): Unit = js.native
@@ -5206,7 +5202,7 @@ object mod extends js.Object {
     def filter_waiting(selector: String, handler: EventHandler[waiting]): EventHandler[waiting] = js.native
     @JSName("filter")
     def filter_wheel(selector: String, handler: EventHandler[wheel]): EventHandler[wheel] = js.native
-    def hasClass(element: typingsSlinky.std.Element, className: String): Boolean = js.native
+    def hasClass(element: Element, className: String): Boolean = js.native
     def hasClass(element: SVGElement, className: String): Boolean = js.native
     def height(node: HTMLElement): Double = js.native
     def height(node: HTMLElement, client: Boolean): Double = js.native
@@ -6286,8 +6282,8 @@ object mod extends js.Object {
     def position(node: HTMLElement): AnonHeight = js.native
     def position(node: HTMLElement, offsetParent: HTMLElement): AnonHeight = js.native
     def querySelectorAll(element: Document_, selector: String): js.Array[HTMLElement] = js.native
-    def querySelectorAll(element: typingsSlinky.std.HTMLElement, selector: String): js.Array[HTMLElement] = js.native
-    def removeClass(element: typingsSlinky.std.Element, className: String): Unit = js.native
+    def querySelectorAll(element: HTMLElement, selector: String): js.Array[HTMLElement] = js.native
+    def removeClass(element: Element, className: String): Unit = js.native
     def removeClass(element: SVGElement, className: String): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_abort(node: HTMLElement, eventName: abort, handler: TaggedEventHandler[abort]): Unit = js.native
@@ -7476,10 +7472,10 @@ object mod extends js.Object {
     def scrollTop(node: Element): Double = js.native
     def scrollTop(node: Element, `val`: Double): js.UndefOr[scala.Nothing] = js.native
     def style(node: HTMLElement, property: PartialRecordPropertystri): Unit = js.native
-    def style[T /* <: CamelProperty */](node: HTMLElement, property: T): /* import warning: importer.ImportType#apply Failed type conversion: csstype.csstype.Properties<string | 0>[T] */ js.Any = js.native
+    def style[T /* <: HyphenProperty */](node: HTMLElement, property: T): /* import warning: importer.ImportType#apply Failed type conversion: csstype.csstype.PropertiesHyphen<string | 0>[T] */ js.Any = js.native
     @JSName("style")
-    def style_T_HyphenProperty[T /* <: HyphenProperty */](node: HTMLElement, property: T): /* import warning: importer.ImportType#apply Failed type conversion: csstype.csstype.PropertiesHyphen<string | 0>[T] */ js.Any = js.native
-    def toggleClass(element: typingsSlinky.std.Element, className: String): Unit = js.native
+    def style_T_CamelProperty[T /* <: CamelProperty */](node: HTMLElement, property: T): /* import warning: importer.ImportType#apply Failed type conversion: csstype.csstype.Properties<string | 0>[T] */ js.Any = js.native
+    def toggleClass(element: Element, className: String): Unit = js.native
     def toggleClass(element: SVGElement, className: String): Unit = js.native
     def width(node: HTMLElement): Double = js.native
     def width(node: HTMLElement, client: Boolean): Double = js.native

@@ -35,16 +35,53 @@ trait SchemaSourceProvenance extends js.Object {
 
 object SchemaSourceProvenance {
   @scala.inline
-  def apply(
-    fileHashes: StringDictionary[SchemaFileHashes] = null,
-    resolvedRepoSource: SchemaRepoSource = null,
-    resolvedStorageSource: SchemaStorageSource = null
-  ): SchemaSourceProvenance = {
+  def apply(): SchemaSourceProvenance = {
     val __obj = js.Dynamic.literal()
-    if (fileHashes != null) __obj.updateDynamic("fileHashes")(fileHashes.asInstanceOf[js.Any])
-    if (resolvedRepoSource != null) __obj.updateDynamic("resolvedRepoSource")(resolvedRepoSource.asInstanceOf[js.Any])
-    if (resolvedStorageSource != null) __obj.updateDynamic("resolvedStorageSource")(resolvedStorageSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSourceProvenance]
   }
+  @scala.inline
+  implicit class SchemaSourceProvenanceOps[Self <: SchemaSourceProvenance] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileHashes(value: StringDictionary[SchemaFileHashes]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileHashes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileHashes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileHashes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolvedRepoSource(value: SchemaRepoSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvedRepoSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolvedRepoSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvedRepoSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolvedStorageSource(value: SchemaStorageSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvedStorageSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolvedStorageSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvedStorageSource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

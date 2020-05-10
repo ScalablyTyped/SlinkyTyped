@@ -35,24 +35,101 @@ trait GroupDetail extends js.Object {
 
 object GroupDetail {
   @scala.inline
-  def apply(
-    Arn: arnType = null,
-    AttachedManagedPolicies: attachedPoliciesListType = null,
-    CreateDate: js.Date = null,
-    GroupId: idType = null,
-    GroupName: groupNameType = null,
-    GroupPolicyList: policyDetailListType = null,
-    Path: pathType = null
-  ): GroupDetail = {
+  def apply(): GroupDetail = {
     val __obj = js.Dynamic.literal()
-    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
-    if (AttachedManagedPolicies != null) __obj.updateDynamic("AttachedManagedPolicies")(AttachedManagedPolicies.asInstanceOf[js.Any])
-    if (CreateDate != null) __obj.updateDynamic("CreateDate")(CreateDate.asInstanceOf[js.Any])
-    if (GroupId != null) __obj.updateDynamic("GroupId")(GroupId.asInstanceOf[js.Any])
-    if (GroupName != null) __obj.updateDynamic("GroupName")(GroupName.asInstanceOf[js.Any])
-    if (GroupPolicyList != null) __obj.updateDynamic("GroupPolicyList")(GroupPolicyList.asInstanceOf[js.Any])
-    if (Path != null) __obj.updateDynamic("Path")(Path.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroupDetail]
   }
+  @scala.inline
+  implicit class GroupDetailOps[Self <: GroupDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: arnType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttachedManagedPolicies(value: attachedPoliciesListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachedManagedPolicies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttachedManagedPolicies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachedManagedPolicies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupId(value: idType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupName(value: groupNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupPolicyList(value: policyDetailListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupPolicyList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupPolicyList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupPolicyList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: pathType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

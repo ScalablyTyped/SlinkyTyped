@@ -14,14 +14,12 @@ trait Placements extends js.Object
 
 object Placements {
   @scala.inline
-  def bottom: typingsSlinky.reactOverlays.reactOverlaysStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.reactOverlays.reactOverlaysStrings.bottom = "bottom".asInstanceOf[typingsSlinky.reactOverlays.reactOverlaysStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.reactOverlays.reactOverlaysStrings.left = "left".asInstanceOf[typingsSlinky.reactOverlays.reactOverlaysStrings.left]
   @scala.inline
-  def left: typingsSlinky.reactOverlays.reactOverlaysStrings.left = this.cast("left")
+  def right: typingsSlinky.reactOverlays.reactOverlaysStrings.right = "right".asInstanceOf[typingsSlinky.reactOverlays.reactOverlaysStrings.right]
   @scala.inline
-  def right: typingsSlinky.reactOverlays.reactOverlaysStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.reactOverlays.reactOverlaysStrings.top = this.cast("top")
+  def top: typingsSlinky.reactOverlays.reactOverlaysStrings.top = "top".asInstanceOf[typingsSlinky.reactOverlays.reactOverlaysStrings.top]
 }
 

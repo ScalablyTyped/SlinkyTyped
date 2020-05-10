@@ -46,11 +46,41 @@ trait SchemaBuildBazelRemoteExecutionV2Digest extends js.Object {
 
 object SchemaBuildBazelRemoteExecutionV2Digest {
   @scala.inline
-  def apply(hash: String = null, sizeBytes: String = null): SchemaBuildBazelRemoteExecutionV2Digest = {
+  def apply(): SchemaBuildBazelRemoteExecutionV2Digest = {
     val __obj = js.Dynamic.literal()
-    if (hash != null) __obj.updateDynamic("hash")(hash.asInstanceOf[js.Any])
-    if (sizeBytes != null) __obj.updateDynamic("sizeBytes")(sizeBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2Digest]
   }
+  @scala.inline
+  implicit class SchemaBuildBazelRemoteExecutionV2DigestOps[Self <: SchemaBuildBazelRemoteExecutionV2Digest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHash(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizeBytes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizeBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeBytes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

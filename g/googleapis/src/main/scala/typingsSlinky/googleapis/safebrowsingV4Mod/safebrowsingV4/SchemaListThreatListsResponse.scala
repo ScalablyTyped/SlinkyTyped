@@ -14,10 +14,29 @@ trait SchemaListThreatListsResponse extends js.Object {
 
 object SchemaListThreatListsResponse {
   @scala.inline
-  def apply(threatLists: js.Array[SchemaThreatListDescriptor] = null): SchemaListThreatListsResponse = {
+  def apply(): SchemaListThreatListsResponse = {
     val __obj = js.Dynamic.literal()
-    if (threatLists != null) __obj.updateDynamic("threatLists")(threatLists.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListThreatListsResponse]
   }
+  @scala.inline
+  implicit class SchemaListThreatListsResponseOps[Self <: SchemaListThreatListsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withThreatLists(value: js.Array[SchemaThreatListDescriptor]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatLists")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreatLists: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatLists")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

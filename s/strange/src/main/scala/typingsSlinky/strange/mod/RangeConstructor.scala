@@ -19,18 +19,18 @@ trait RangeConstructor
   * @param end Range's end, or right endpoint.
   * @param bounds Range's bounds.
   */
-Instantiable0[typingsSlinky.std.Range]
-     with Instantiable1[/* begin */ Endpoint, typingsSlinky.std.Range]
+Instantiable0[org.scalajs.dom.raw.Range]
+     with Instantiable1[/* begin */ Endpoint, org.scalajs.dom.raw.Range]
      with Instantiable2[
       (/* begin */ Endpoint) | (/* begin */ Null), 
       /* end */ Endpoint, 
-      typingsSlinky.std.Range
+      org.scalajs.dom.raw.Range
     ]
      with Instantiable3[
       (/* begin */ Endpoint) | (/* begin */ Null), 
       (/* end */ Endpoint) | (/* end */ Null), 
       /* bounds */ Bounds, 
-      typingsSlinky.std.Range
+      org.scalajs.dom.raw.Range
     ] {
   /**
     *

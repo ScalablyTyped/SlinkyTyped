@@ -106,6 +106,7 @@ package object imagebuilderMod {
   */
   type Platform = typingsSlinky.awsSdk.imagebuilderMod._Platform | java.lang.String
   type ResourceName = java.lang.String
+  type ResourcePolicyDocument = java.lang.String
   type RestrictedInteger = scala.Double
   type SecurityGroupIds = js.Array[typingsSlinky.awsSdk.imagebuilderMod.NonEmptyString]
   type SnsTopicArn = java.lang.String

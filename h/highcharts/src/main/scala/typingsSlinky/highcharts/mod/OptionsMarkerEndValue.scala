@@ -12,10 +12,8 @@ trait OptionsMarkerEndValue extends js.Object
 
 object OptionsMarkerEndValue {
   @scala.inline
-  def arrow: typingsSlinky.highcharts.highchartsStrings.arrow = this.cast("arrow")
+  def arrow: typingsSlinky.highcharts.highchartsStrings.arrow = "arrow".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.arrow]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def none: typingsSlinky.highcharts.highchartsStrings.none = this.cast("none")
+  def none: typingsSlinky.highcharts.highchartsStrings.none = "none".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.none]
 }
 

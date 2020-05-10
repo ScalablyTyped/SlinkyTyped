@@ -1,15 +1,17 @@
 package typingsSlinky.materialUiIcons.components
 
+import typingsSlinky.materialUiCore.svgIconSvgIconMod.SvgIconProps
 import typingsSlinky.materialUiIcons.filterListRoundedMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FilterListRounded extends SharedApply_SvgIconProps1442979138[default] {
-  @JSImport("@material-ui/icons/FilterListRounded", "default")
+object FilterListRounded {
+  @JSImport("@material-ui/icons/FilterListRounded", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1164301990[default] = new SharedBuilder_SvgIconProps_1164301990[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FilterListRounded.type): SharedBuilder_SvgIconProps_1164301990[default] = new SharedBuilder_SvgIconProps_1164301990[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

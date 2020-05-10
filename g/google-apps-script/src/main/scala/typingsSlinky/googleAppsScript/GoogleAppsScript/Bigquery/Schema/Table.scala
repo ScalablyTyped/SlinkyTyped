@@ -4,99 +4,387 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Table extends js.Object {
-  var clustering: js.UndefOr[Clustering] = js.undefined
-  var creationTime: js.UndefOr[String] = js.undefined
-  var description: js.UndefOr[String] = js.undefined
-  var encryptionConfiguration: js.UndefOr[EncryptionConfiguration] = js.undefined
-  var etag: js.UndefOr[String] = js.undefined
-  var expirationTime: js.UndefOr[String] = js.undefined
-  var externalDataConfiguration: js.UndefOr[ExternalDataConfiguration] = js.undefined
-  var friendlyName: js.UndefOr[String] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var kind: js.UndefOr[String] = js.undefined
-  var labels: js.UndefOr[js.Object] = js.undefined
-  var lastModifiedTime: js.UndefOr[String] = js.undefined
-  var location: js.UndefOr[String] = js.undefined
-  var materializedView: js.UndefOr[MaterializedViewDefinition] = js.undefined
-  var model: js.UndefOr[ModelDefinition] = js.undefined
-  var numBytes: js.UndefOr[String] = js.undefined
-  var numLongTermBytes: js.UndefOr[String] = js.undefined
-  var numPhysicalBytes: js.UndefOr[String] = js.undefined
-  var numRows: js.UndefOr[String] = js.undefined
-  var rangePartitioning: js.UndefOr[RangePartitioning] = js.undefined
-  var requirePartitionFilter: js.UndefOr[Boolean] = js.undefined
-  var schema: js.UndefOr[TableSchema] = js.undefined
-  var selfLink: js.UndefOr[String] = js.undefined
-  var streamingBuffer: js.UndefOr[Streamingbuffer] = js.undefined
-  var tableReference: js.UndefOr[TableReference] = js.undefined
-  var timePartitioning: js.UndefOr[TimePartitioning] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
-  var view: js.UndefOr[ViewDefinition] = js.undefined
+  var clustering: js.UndefOr[Clustering] = js.native
+  var creationTime: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.native
+  var encryptionConfiguration: js.UndefOr[EncryptionConfiguration] = js.native
+  var etag: js.UndefOr[String] = js.native
+  var expirationTime: js.UndefOr[String] = js.native
+  var externalDataConfiguration: js.UndefOr[ExternalDataConfiguration] = js.native
+  var friendlyName: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.native
+  var labels: js.UndefOr[js.Object] = js.native
+  var lastModifiedTime: js.UndefOr[String] = js.native
+  var location: js.UndefOr[String] = js.native
+  var materializedView: js.UndefOr[MaterializedViewDefinition] = js.native
+  var model: js.UndefOr[ModelDefinition] = js.native
+  var numBytes: js.UndefOr[String] = js.native
+  var numLongTermBytes: js.UndefOr[String] = js.native
+  var numPhysicalBytes: js.UndefOr[String] = js.native
+  var numRows: js.UndefOr[String] = js.native
+  var rangePartitioning: js.UndefOr[RangePartitioning] = js.native
+  var requirePartitionFilter: js.UndefOr[Boolean] = js.native
+  var schema: js.UndefOr[TableSchema] = js.native
+  var selfLink: js.UndefOr[String] = js.native
+  var streamingBuffer: js.UndefOr[Streamingbuffer] = js.native
+  var tableReference: js.UndefOr[TableReference] = js.native
+  var timePartitioning: js.UndefOr[TimePartitioning] = js.native
+  var `type`: js.UndefOr[String] = js.native
+  var view: js.UndefOr[ViewDefinition] = js.native
 }
 
 object Table {
   @scala.inline
-  def apply(
-    clustering: Clustering = null,
-    creationTime: String = null,
-    description: String = null,
-    encryptionConfiguration: EncryptionConfiguration = null,
-    etag: String = null,
-    expirationTime: String = null,
-    externalDataConfiguration: ExternalDataConfiguration = null,
-    friendlyName: String = null,
-    id: String = null,
-    kind: String = null,
-    labels: js.Object = null,
-    lastModifiedTime: String = null,
-    location: String = null,
-    materializedView: MaterializedViewDefinition = null,
-    model: ModelDefinition = null,
-    numBytes: String = null,
-    numLongTermBytes: String = null,
-    numPhysicalBytes: String = null,
-    numRows: String = null,
-    rangePartitioning: RangePartitioning = null,
-    requirePartitionFilter: js.UndefOr[Boolean] = js.undefined,
-    schema: TableSchema = null,
-    selfLink: String = null,
-    streamingBuffer: Streamingbuffer = null,
-    tableReference: TableReference = null,
-    timePartitioning: TimePartitioning = null,
-    `type`: String = null,
-    view: ViewDefinition = null
-  ): Table = {
+  def apply(): Table = {
     val __obj = js.Dynamic.literal()
-    if (clustering != null) __obj.updateDynamic("clustering")(clustering.asInstanceOf[js.Any])
-    if (creationTime != null) __obj.updateDynamic("creationTime")(creationTime.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (encryptionConfiguration != null) __obj.updateDynamic("encryptionConfiguration")(encryptionConfiguration.asInstanceOf[js.Any])
-    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
-    if (expirationTime != null) __obj.updateDynamic("expirationTime")(expirationTime.asInstanceOf[js.Any])
-    if (externalDataConfiguration != null) __obj.updateDynamic("externalDataConfiguration")(externalDataConfiguration.asInstanceOf[js.Any])
-    if (friendlyName != null) __obj.updateDynamic("friendlyName")(friendlyName.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (lastModifiedTime != null) __obj.updateDynamic("lastModifiedTime")(lastModifiedTime.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (materializedView != null) __obj.updateDynamic("materializedView")(materializedView.asInstanceOf[js.Any])
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
-    if (numBytes != null) __obj.updateDynamic("numBytes")(numBytes.asInstanceOf[js.Any])
-    if (numLongTermBytes != null) __obj.updateDynamic("numLongTermBytes")(numLongTermBytes.asInstanceOf[js.Any])
-    if (numPhysicalBytes != null) __obj.updateDynamic("numPhysicalBytes")(numPhysicalBytes.asInstanceOf[js.Any])
-    if (numRows != null) __obj.updateDynamic("numRows")(numRows.asInstanceOf[js.Any])
-    if (rangePartitioning != null) __obj.updateDynamic("rangePartitioning")(rangePartitioning.asInstanceOf[js.Any])
-    if (!js.isUndefined(requirePartitionFilter)) __obj.updateDynamic("requirePartitionFilter")(requirePartitionFilter.asInstanceOf[js.Any])
-    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
-    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
-    if (streamingBuffer != null) __obj.updateDynamic("streamingBuffer")(streamingBuffer.asInstanceOf[js.Any])
-    if (tableReference != null) __obj.updateDynamic("tableReference")(tableReference.asInstanceOf[js.Any])
-    if (timePartitioning != null) __obj.updateDynamic("timePartitioning")(timePartitioning.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[Table]
   }
+  @scala.inline
+  implicit class TableOps[Self <: Table] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClustering(value: Clustering): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clustering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClustering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clustering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptionConfiguration(value: EncryptionConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEtag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEtag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpirationTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpirationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalDataConfiguration(value: ExternalDataConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalDataConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalDataConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalDataConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFriendlyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("friendlyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFriendlyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("friendlyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaterializedView(value: MaterializedViewDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("materializedView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaterializedView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("materializedView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModel(value: ModelDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumBytes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumLongTermBytes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numLongTermBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumLongTermBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numLongTermBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumPhysicalBytes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numPhysicalBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumPhysicalBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numPhysicalBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumRows(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangePartitioning(value: RangePartitioning): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangePartitioning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangePartitioning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangePartitioning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequirePartitionFilter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requirePartitionFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequirePartitionFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requirePartitionFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchema(value: TableSchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelfLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelfLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamingBuffer(value: Streamingbuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingBuffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamingBuffer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingBuffer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableReference(value: TableReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimePartitioning(value: TimePartitioning): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timePartitioning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimePartitioning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timePartitioning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withView(value: ViewDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

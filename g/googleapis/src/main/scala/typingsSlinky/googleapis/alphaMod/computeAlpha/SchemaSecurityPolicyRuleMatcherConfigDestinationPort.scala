@@ -26,11 +26,41 @@ trait SchemaSecurityPolicyRuleMatcherConfigDestinationPort extends js.Object {
 
 object SchemaSecurityPolicyRuleMatcherConfigDestinationPort {
   @scala.inline
-  def apply(ipProtocol: String = null, ports: js.Array[String] = null): SchemaSecurityPolicyRuleMatcherConfigDestinationPort = {
+  def apply(): SchemaSecurityPolicyRuleMatcherConfigDestinationPort = {
     val __obj = js.Dynamic.literal()
-    if (ipProtocol != null) __obj.updateDynamic("ipProtocol")(ipProtocol.asInstanceOf[js.Any])
-    if (ports != null) __obj.updateDynamic("ports")(ports.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSecurityPolicyRuleMatcherConfigDestinationPort]
   }
+  @scala.inline
+  implicit class SchemaSecurityPolicyRuleMatcherConfigDestinationPortOps[Self <: SchemaSecurityPolicyRuleMatcherConfigDestinationPort] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIpProtocol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipProtocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipProtocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPorts(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPorts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

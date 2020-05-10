@@ -3,112 +3,112 @@ package typingsSlinky.mdxJsReact.mod
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
-import typingsSlinky.react.mod.ReactNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MDXProviderComponents extends /**
   * Any other components we wish to define
   */
-/* key */ StringDictionary[ReactNode] {
+/* key */ StringDictionary[TagMod[Any]] {
   /**
     * Link	<https://mdxjs.com> or [MDX](https://mdxjs.com)
     */
-  var a: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var a: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Blockquote	>
     */
-  var blockquote: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var blockquote: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Code	`\code```
     */
-  var code: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var code: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Delete	~~strikethrough~~
     */
-  var delete: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var delete: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Emphasis	_emphasis_
     */
-  var em: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var em: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Heading 1	#
     */
-  var h1: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var h1: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Heading 2	##
     */
-  var h2: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var h2: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Heading 3	###
     */
-  var h3: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var h3: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Heading 4	####
     */
-  var h4: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var h4: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Heading 5	#####
     */
-  var h5: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var h5: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Heading 6	######
     */
-  var h6: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var h6: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Break	---
     */
-  var hr: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var hr: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Image	![alt](https://mdx-logo.now.sh)
     */
-  var img: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var img: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * InlineCode	`inlineCode`
     */
-  var inlineCode: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var inlineCode: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * List item
     */
-  var li: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var li: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Ordered list	1.
     */
-  var ol: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var ol: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Paragraph
     */
-  var p: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var p: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Pre
     */
-  var pre: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var pre: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Strong	**strong**
     */
-  var strong: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var strong: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Table
     */
-  var table: js.UndefOr[ReactComponentClass[_]] = js.undefined
-  var td: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var table: js.UndefOr[ReactComponentClass[_]] = js.native
+  var td: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Table Cell
     */
-  var th: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var th: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Thematic break	***
     */
-  var thematicBreak: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var thematicBreak: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * Table row
     */
-  var tr: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var tr: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * List	-
     */
-  var ul: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var ul: js.UndefOr[ReactComponentClass[_]] = js.native
   /**
     * The wrapper component can be used to set the layout for the MDX document.
     * It’s often used to set container width, borders, background colors, etc.
@@ -118,72 +118,646 @@ trait MDXProviderComponents extends /**
     * This means that you can do powerful things with the MDX document
     * elements.
     */
-  var wrapper: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var wrapper: js.UndefOr[ReactComponentClass[_]] = js.native
 }
 
 object MDXProviderComponents {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-    * Any other components we wish to define
-    */
-  /* key */ StringDictionary[TagMod[Any]] = null,
-    a: ReactComponentClass[_] = null,
-    blockquote: ReactComponentClass[_] = null,
-    code: ReactComponentClass[_] = null,
-    delete: ReactComponentClass[_] = null,
-    em: ReactComponentClass[_] = null,
-    h1: ReactComponentClass[_] = null,
-    h2: ReactComponentClass[_] = null,
-    h3: ReactComponentClass[_] = null,
-    h4: ReactComponentClass[_] = null,
-    h5: ReactComponentClass[_] = null,
-    h6: ReactComponentClass[_] = null,
-    hr: ReactComponentClass[_] = null,
-    img: ReactComponentClass[_] = null,
-    inlineCode: ReactComponentClass[_] = null,
-    li: ReactComponentClass[_] = null,
-    ol: ReactComponentClass[_] = null,
-    p: ReactComponentClass[_] = null,
-    pre: ReactComponentClass[_] = null,
-    strong: ReactComponentClass[_] = null,
-    table: ReactComponentClass[_] = null,
-    td: ReactComponentClass[_] = null,
-    th: ReactComponentClass[_] = null,
-    thematicBreak: ReactComponentClass[_] = null,
-    tr: ReactComponentClass[_] = null,
-    ul: ReactComponentClass[_] = null,
-    wrapper: ReactComponentClass[_] = null
-  ): MDXProviderComponents = {
+  def apply(): MDXProviderComponents = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (a != null) __obj.updateDynamic("a")(a.asInstanceOf[js.Any])
-    if (blockquote != null) __obj.updateDynamic("blockquote")(blockquote.asInstanceOf[js.Any])
-    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
-    if (delete != null) __obj.updateDynamic("delete")(delete.asInstanceOf[js.Any])
-    if (em != null) __obj.updateDynamic("em")(em.asInstanceOf[js.Any])
-    if (h1 != null) __obj.updateDynamic("h1")(h1.asInstanceOf[js.Any])
-    if (h2 != null) __obj.updateDynamic("h2")(h2.asInstanceOf[js.Any])
-    if (h3 != null) __obj.updateDynamic("h3")(h3.asInstanceOf[js.Any])
-    if (h4 != null) __obj.updateDynamic("h4")(h4.asInstanceOf[js.Any])
-    if (h5 != null) __obj.updateDynamic("h5")(h5.asInstanceOf[js.Any])
-    if (h6 != null) __obj.updateDynamic("h6")(h6.asInstanceOf[js.Any])
-    if (hr != null) __obj.updateDynamic("hr")(hr.asInstanceOf[js.Any])
-    if (img != null) __obj.updateDynamic("img")(img.asInstanceOf[js.Any])
-    if (inlineCode != null) __obj.updateDynamic("inlineCode")(inlineCode.asInstanceOf[js.Any])
-    if (li != null) __obj.updateDynamic("li")(li.asInstanceOf[js.Any])
-    if (ol != null) __obj.updateDynamic("ol")(ol.asInstanceOf[js.Any])
-    if (p != null) __obj.updateDynamic("p")(p.asInstanceOf[js.Any])
-    if (pre != null) __obj.updateDynamic("pre")(pre.asInstanceOf[js.Any])
-    if (strong != null) __obj.updateDynamic("strong")(strong.asInstanceOf[js.Any])
-    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
-    if (td != null) __obj.updateDynamic("td")(td.asInstanceOf[js.Any])
-    if (th != null) __obj.updateDynamic("th")(th.asInstanceOf[js.Any])
-    if (thematicBreak != null) __obj.updateDynamic("thematicBreak")(thematicBreak.asInstanceOf[js.Any])
-    if (tr != null) __obj.updateDynamic("tr")(tr.asInstanceOf[js.Any])
-    if (ul != null) __obj.updateDynamic("ul")(ul.asInstanceOf[js.Any])
-    if (wrapper != null) __obj.updateDynamic("wrapper")(wrapper.asInstanceOf[js.Any])
     __obj.asInstanceOf[MDXProviderComponents]
   }
+  @scala.inline
+  implicit class MDXProviderComponentsOps[Self <: MDXProviderComponents] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withA(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutA: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlockquoteFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockquote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlockquoteComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockquote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlockquote(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockquote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockquote: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockquote")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodeFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCodeComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCode(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeleteComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDelete(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("em")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("em")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEm(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("em")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("em")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH1FunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH1ComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH1(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH2FunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH2ComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH2(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH3FunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH3ComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH3(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH3: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h3")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH4FunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH4ComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH4(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH4: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h4")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH5FunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH5ComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH5(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h5")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH6FunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH6ComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH6(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH6: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h6")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHrFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHrComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHr(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImgFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("img")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImgComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("img")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImg(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("img")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImg: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("img")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlineCodeFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInlineCodeComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInlineCode(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlineCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLiFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("li")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLiComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("li")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLi(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("li")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("li")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOlFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOlComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOl(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withP(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutP: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pre")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pre")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPre(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pre")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPre: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pre")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrongFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strong")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStrongComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strong")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStrong(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strong")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrong: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strong")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTableComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTable(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTdFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("td")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTdComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("td")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTd(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("td")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("td")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("th")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("th")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTh(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("th")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTh: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("th")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThematicBreakFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thematicBreak")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThematicBreakComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thematicBreak")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThematicBreak(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thematicBreak")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThematicBreak: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thematicBreak")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTr(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUlFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ul")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUlComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ul")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUl(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ul")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ul")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrapperFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWrapperComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWrapper(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrapper: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

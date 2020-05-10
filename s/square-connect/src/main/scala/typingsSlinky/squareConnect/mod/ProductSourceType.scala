@@ -20,26 +20,24 @@ trait ProductSourceType extends js.Object
 
 object ProductSourceType {
   @scala.inline
-  def APPOINTMENTS: typingsSlinky.squareConnect.squareConnectStrings.APPOINTMENTS = this.cast("APPOINTMENTS")
+  def APPOINTMENTS: typingsSlinky.squareConnect.squareConnectStrings.APPOINTMENTS = "APPOINTMENTS".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.APPOINTMENTS]
   @scala.inline
-  def BILLING: typingsSlinky.squareConnect.squareConnectStrings.BILLING = this.cast("BILLING")
+  def BILLING: typingsSlinky.squareConnect.squareConnectStrings.BILLING = "BILLING".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BILLING]
   @scala.inline
-  def DASHBOARD: typingsSlinky.squareConnect.squareConnectStrings.DASHBOARD = this.cast("DASHBOARD")
+  def DASHBOARD: typingsSlinky.squareConnect.squareConnectStrings.DASHBOARD = "DASHBOARD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.DASHBOARD]
   @scala.inline
-  def EXTERNAL_API: typingsSlinky.squareConnect.squareConnectStrings.EXTERNAL_API = this.cast("EXTERNAL_API")
+  def EXTERNAL_API: typingsSlinky.squareConnect.squareConnectStrings.EXTERNAL_API = "EXTERNAL_API".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.EXTERNAL_API]
   @scala.inline
-  def INVOICES: typingsSlinky.squareConnect.squareConnectStrings.INVOICES = this.cast("INVOICES")
+  def INVOICES: typingsSlinky.squareConnect.squareConnectStrings.INVOICES = "INVOICES".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.INVOICES]
   @scala.inline
-  def ITEM_LIBRARY_IMPORT: typingsSlinky.squareConnect.squareConnectStrings.ITEM_LIBRARY_IMPORT = this.cast("ITEM_LIBRARY_IMPORT")
+  def ITEM_LIBRARY_IMPORT: typingsSlinky.squareConnect.squareConnectStrings.ITEM_LIBRARY_IMPORT = "ITEM_LIBRARY_IMPORT".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.ITEM_LIBRARY_IMPORT]
   @scala.inline
-  def ONLINE_STORE: typingsSlinky.squareConnect.squareConnectStrings.ONLINE_STORE = this.cast("ONLINE_STORE")
+  def ONLINE_STORE: typingsSlinky.squareConnect.squareConnectStrings.ONLINE_STORE = "ONLINE_STORE".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.ONLINE_STORE]
   @scala.inline
-  def OTHER: typingsSlinky.squareConnect.squareConnectStrings.OTHER = this.cast("OTHER")
+  def OTHER: typingsSlinky.squareConnect.squareConnectStrings.OTHER = "OTHER".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.OTHER]
   @scala.inline
-  def PAYROLL: typingsSlinky.squareConnect.squareConnectStrings.PAYROLL = this.cast("PAYROLL")
+  def PAYROLL: typingsSlinky.squareConnect.squareConnectStrings.PAYROLL = "PAYROLL".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.PAYROLL]
   @scala.inline
-  def SQUARE_POS: typingsSlinky.squareConnect.squareConnectStrings.SQUARE_POS = this.cast("SQUARE_POS")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SQUARE_POS: typingsSlinky.squareConnect.squareConnectStrings.SQUARE_POS = "SQUARE_POS".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SQUARE_POS]
 }
 

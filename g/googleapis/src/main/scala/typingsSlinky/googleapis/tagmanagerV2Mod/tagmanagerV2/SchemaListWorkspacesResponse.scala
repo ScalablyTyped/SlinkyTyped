@@ -21,11 +21,41 @@ trait SchemaListWorkspacesResponse extends js.Object {
 
 object SchemaListWorkspacesResponse {
   @scala.inline
-  def apply(nextPageToken: String = null, workspace: js.Array[SchemaWorkspace] = null): SchemaListWorkspacesResponse = {
+  def apply(): SchemaListWorkspacesResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (workspace != null) __obj.updateDynamic("workspace")(workspace.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListWorkspacesResponse]
   }
+  @scala.inline
+  implicit class SchemaListWorkspacesResponseOps[Self <: SchemaListWorkspacesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkspace(value: js.Array[SchemaWorkspace]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workspace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkspace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workspace")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

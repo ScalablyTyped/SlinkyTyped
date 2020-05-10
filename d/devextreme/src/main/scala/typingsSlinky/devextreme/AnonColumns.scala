@@ -9,54 +9,192 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonColumns extends js.Object {
-  var cancel: js.UndefOr[Boolean] = js.undefined
-  var cellElement: js.UndefOr[dxElement] = js.undefined
-  var columns: js.UndefOr[js.Array[dxDataGridColumn]] = js.undefined
-  var component: js.UndefOr[dxDataGrid] = js.undefined
-  var element: js.UndefOr[dxElement] = js.undefined
-  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.undefined
-  var isHighlighted: js.UndefOr[Boolean] = js.undefined
-  var model: js.UndefOr[js.Any] = js.undefined
-  var newColumnIndex: js.UndefOr[Double] = js.undefined
-  var newRowIndex: js.UndefOr[Double] = js.undefined
-  var prevColumnIndex: js.UndefOr[Double] = js.undefined
-  var prevRowIndex: js.UndefOr[Double] = js.undefined
-  var rows: js.UndefOr[js.Array[dxDataGridRowObject]] = js.undefined
+  var cancel: js.UndefOr[Boolean] = js.native
+  var cellElement: js.UndefOr[dxElement] = js.native
+  var columns: js.UndefOr[js.Array[dxDataGridColumn]] = js.native
+  var component: js.UndefOr[dxDataGrid] = js.native
+  var element: js.UndefOr[dxElement] = js.native
+  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.native
+  var isHighlighted: js.UndefOr[Boolean] = js.native
+  var model: js.UndefOr[js.Any] = js.native
+  var newColumnIndex: js.UndefOr[Double] = js.native
+  var newRowIndex: js.UndefOr[Double] = js.native
+  var prevColumnIndex: js.UndefOr[Double] = js.native
+  var prevRowIndex: js.UndefOr[Double] = js.native
+  var rows: js.UndefOr[js.Array[dxDataGridRowObject]] = js.native
 }
 
 object AnonColumns {
   @scala.inline
-  def apply(
-    cancel: js.UndefOr[Boolean] = js.undefined,
-    cellElement: dxElement = null,
-    columns: js.Array[dxDataGridColumn] = null,
-    component: dxDataGrid = null,
-    element: dxElement = null,
-    event: event = null,
-    isHighlighted: js.UndefOr[Boolean] = js.undefined,
-    model: js.Any = null,
-    newColumnIndex: Int | Double = null,
-    newRowIndex: Int | Double = null,
-    prevColumnIndex: Int | Double = null,
-    prevRowIndex: Int | Double = null,
-    rows: js.Array[dxDataGridRowObject] = null
-  ): AnonColumns = {
+  def apply(): AnonColumns = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.asInstanceOf[js.Any])
-    if (cellElement != null) __obj.updateDynamic("cellElement")(cellElement.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
-    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
-    if (!js.isUndefined(isHighlighted)) __obj.updateDynamic("isHighlighted")(isHighlighted.asInstanceOf[js.Any])
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
-    if (newColumnIndex != null) __obj.updateDynamic("newColumnIndex")(newColumnIndex.asInstanceOf[js.Any])
-    if (newRowIndex != null) __obj.updateDynamic("newRowIndex")(newRowIndex.asInstanceOf[js.Any])
-    if (prevColumnIndex != null) __obj.updateDynamic("prevColumnIndex")(prevColumnIndex.asInstanceOf[js.Any])
-    if (prevRowIndex != null) __obj.updateDynamic("prevRowIndex")(prevRowIndex.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonColumns]
   }
+  @scala.inline
+  implicit class AnonColumnsOps[Self <: AnonColumns] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCancel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellElement(value: dxElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumns(value: js.Array[dxDataGridColumn]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponent(value: dxDataGrid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElement(value: dxElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvent(value: event): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsHighlighted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHighlighted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsHighlighted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHighlighted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModel(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewColumnIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newColumnIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewColumnIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newColumnIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewRowIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newRowIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewRowIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newRowIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrevColumnIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevColumnIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrevColumnIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevColumnIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrevRowIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevRowIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrevRowIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevRowIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: js.Array[dxDataGridRowObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

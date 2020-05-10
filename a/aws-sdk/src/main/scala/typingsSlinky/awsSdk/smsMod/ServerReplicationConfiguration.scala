@@ -18,11 +18,41 @@ trait ServerReplicationConfiguration extends js.Object {
 
 object ServerReplicationConfiguration {
   @scala.inline
-  def apply(server: Server = null, serverReplicationParameters: ServerReplicationParameters = null): ServerReplicationConfiguration = {
+  def apply(): ServerReplicationConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (server != null) __obj.updateDynamic("server")(server.asInstanceOf[js.Any])
-    if (serverReplicationParameters != null) __obj.updateDynamic("serverReplicationParameters")(serverReplicationParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServerReplicationConfiguration]
   }
+  @scala.inline
+  implicit class ServerReplicationConfigurationOps[Self <: ServerReplicationConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServer(value: Server): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerReplicationParameters(value: ServerReplicationParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverReplicationParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerReplicationParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverReplicationParameters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

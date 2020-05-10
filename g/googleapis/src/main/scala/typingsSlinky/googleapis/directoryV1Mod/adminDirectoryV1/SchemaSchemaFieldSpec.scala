@@ -58,30 +58,137 @@ trait SchemaSchemaFieldSpec extends js.Object {
 
 object SchemaSchemaFieldSpec {
   @scala.inline
-  def apply(
-    displayName: String = null,
-    etag: String = null,
-    fieldId: String = null,
-    fieldName: String = null,
-    fieldType: String = null,
-    indexed: js.UndefOr[Boolean] = js.undefined,
-    kind: String = null,
-    multiValued: js.UndefOr[Boolean] = js.undefined,
-    numericIndexingSpec: AnonMaxValue = null,
-    readAccessType: String = null
-  ): SchemaSchemaFieldSpec = {
+  def apply(): SchemaSchemaFieldSpec = {
     val __obj = js.Dynamic.literal()
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
-    if (fieldId != null) __obj.updateDynamic("fieldId")(fieldId.asInstanceOf[js.Any])
-    if (fieldName != null) __obj.updateDynamic("fieldName")(fieldName.asInstanceOf[js.Any])
-    if (fieldType != null) __obj.updateDynamic("fieldType")(fieldType.asInstanceOf[js.Any])
-    if (!js.isUndefined(indexed)) __obj.updateDynamic("indexed")(indexed.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiValued)) __obj.updateDynamic("multiValued")(multiValued.asInstanceOf[js.Any])
-    if (numericIndexingSpec != null) __obj.updateDynamic("numericIndexingSpec")(numericIndexingSpec.asInstanceOf[js.Any])
-    if (readAccessType != null) __obj.updateDynamic("readAccessType")(readAccessType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSchemaFieldSpec]
   }
+  @scala.inline
+  implicit class SchemaSchemaFieldSpecOps[Self <: SchemaSchemaFieldSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEtag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEtag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFieldId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFieldName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFieldType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndexed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiValued(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiValued")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiValued: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiValued")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumericIndexingSpec(value: AnonMaxValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numericIndexingSpec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumericIndexingSpec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numericIndexingSpec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadAccessType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readAccessType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadAccessType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readAccessType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

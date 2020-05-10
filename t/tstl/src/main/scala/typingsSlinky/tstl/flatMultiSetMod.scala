@@ -8,7 +8,6 @@ import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import typingsSlinky.tstl.itreesetMod.ITreeSet
 import typingsSlinky.tstl.multiTreeSetMod.MultiTreeSet
 import typingsSlinky.tstl.tstlBooleans.`false`
-import typingsSlinky.tstl.tstlStrings.experimental
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -107,7 +106,7 @@ object flatMultiSetMod extends js.Object {
           ]
         ]
       ] = js.native
-    val __MODULE: experimental = js.native
+    val __MODULE: /* "experimental" */ String = js.native
     type Iterator[Key] = typingsSlinky.tstl.setElementVectorMod.SetElementVector.Iterator[Key, `false`, FlatMultiSet[Key]]
     type ReverseIterator[Key] = typingsSlinky.tstl.setElementVectorMod.SetElementVector.ReverseIterator[Key, `false`, FlatMultiSet[Key]]
   }

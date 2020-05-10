@@ -21,26 +21,24 @@ trait ManagedDevicePartnerReportedHealthState extends js.Object
 
 object ManagedDevicePartnerReportedHealthState {
   @scala.inline
-  def activated: typingsSlinky.microsoftGraph.microsoftGraphStrings.activated = this.cast("activated")
+  def activated: typingsSlinky.microsoftGraph.microsoftGraphStrings.activated = "activated".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.activated]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def compromised: typingsSlinky.microsoftGraph.microsoftGraphStrings.compromised = "compromised".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.compromised]
   @scala.inline
-  def compromised: typingsSlinky.microsoftGraph.microsoftGraphStrings.compromised = this.cast("compromised")
+  def deactivated: typingsSlinky.microsoftGraph.microsoftGraphStrings.deactivated = "deactivated".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.deactivated]
   @scala.inline
-  def deactivated: typingsSlinky.microsoftGraph.microsoftGraphStrings.deactivated = this.cast("deactivated")
+  def highSeverity: typingsSlinky.microsoftGraph.microsoftGraphStrings.highSeverity = "highSeverity".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.highSeverity]
   @scala.inline
-  def highSeverity: typingsSlinky.microsoftGraph.microsoftGraphStrings.highSeverity = this.cast("highSeverity")
+  def lowSeverity: typingsSlinky.microsoftGraph.microsoftGraphStrings.lowSeverity = "lowSeverity".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.lowSeverity]
   @scala.inline
-  def lowSeverity: typingsSlinky.microsoftGraph.microsoftGraphStrings.lowSeverity = this.cast("lowSeverity")
+  def mediumSeverity: typingsSlinky.microsoftGraph.microsoftGraphStrings.mediumSeverity = "mediumSeverity".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.mediumSeverity]
   @scala.inline
-  def mediumSeverity: typingsSlinky.microsoftGraph.microsoftGraphStrings.mediumSeverity = this.cast("mediumSeverity")
+  def misconfigured: typingsSlinky.microsoftGraph.microsoftGraphStrings.misconfigured = "misconfigured".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.misconfigured]
   @scala.inline
-  def misconfigured: typingsSlinky.microsoftGraph.microsoftGraphStrings.misconfigured = this.cast("misconfigured")
+  def secured: typingsSlinky.microsoftGraph.microsoftGraphStrings.secured = "secured".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.secured]
   @scala.inline
-  def secured: typingsSlinky.microsoftGraph.microsoftGraphStrings.secured = this.cast("secured")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
   @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
-  @scala.inline
-  def unresponsive: typingsSlinky.microsoftGraph.microsoftGraphStrings.unresponsive = this.cast("unresponsive")
+  def unresponsive: typingsSlinky.microsoftGraph.microsoftGraphStrings.unresponsive = "unresponsive".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unresponsive]
 }
 

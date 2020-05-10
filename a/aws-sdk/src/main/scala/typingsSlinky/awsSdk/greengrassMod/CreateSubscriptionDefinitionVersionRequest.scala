@@ -22,15 +22,47 @@ trait CreateSubscriptionDefinitionVersionRequest extends js.Object {
 
 object CreateSubscriptionDefinitionVersionRequest {
   @scala.inline
-  def apply(
-    SubscriptionDefinitionId: string,
-    AmznClientToken: string = null,
-    Subscriptions: listOfSubscription = null
-  ): CreateSubscriptionDefinitionVersionRequest = {
+  def apply(SubscriptionDefinitionId: string): CreateSubscriptionDefinitionVersionRequest = {
     val __obj = js.Dynamic.literal(SubscriptionDefinitionId = SubscriptionDefinitionId.asInstanceOf[js.Any])
-    if (AmznClientToken != null) __obj.updateDynamic("AmznClientToken")(AmznClientToken.asInstanceOf[js.Any])
-    if (Subscriptions != null) __obj.updateDynamic("Subscriptions")(Subscriptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSubscriptionDefinitionVersionRequest]
   }
+  @scala.inline
+  implicit class CreateSubscriptionDefinitionVersionRequestOps[Self <: CreateSubscriptionDefinitionVersionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSubscriptionDefinitionId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionDefinitionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAmznClientToken(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AmznClientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmznClientToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AmznClientToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubscriptions(value: listOfSubscription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subscriptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubscriptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subscriptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -38,16 +38,53 @@ trait SchemaReportsConfiguration extends js.Object {
 
 object SchemaReportsConfiguration {
   @scala.inline
-  def apply(
-    exposureToConversionEnabled: js.UndefOr[Boolean] = js.undefined,
-    lookbackConfiguration: SchemaLookbackConfiguration = null,
-    reportGenerationTimeZoneId: String = null
-  ): SchemaReportsConfiguration = {
+  def apply(): SchemaReportsConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(exposureToConversionEnabled)) __obj.updateDynamic("exposureToConversionEnabled")(exposureToConversionEnabled.asInstanceOf[js.Any])
-    if (lookbackConfiguration != null) __obj.updateDynamic("lookbackConfiguration")(lookbackConfiguration.asInstanceOf[js.Any])
-    if (reportGenerationTimeZoneId != null) __obj.updateDynamic("reportGenerationTimeZoneId")(reportGenerationTimeZoneId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReportsConfiguration]
   }
+  @scala.inline
+  implicit class SchemaReportsConfigurationOps[Self <: SchemaReportsConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExposureToConversionEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exposureToConversionEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExposureToConversionEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exposureToConversionEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLookbackConfiguration(value: SchemaLookbackConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lookbackConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLookbackConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lookbackConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportGenerationTimeZoneId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportGenerationTimeZoneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportGenerationTimeZoneId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportGenerationTimeZoneId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

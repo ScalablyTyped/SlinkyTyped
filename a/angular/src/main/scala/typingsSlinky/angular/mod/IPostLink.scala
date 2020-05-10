@@ -22,3 +22,25 @@ trait IPostLink extends js.Object {
   def $postLink(): Unit = js.native
 }
 
+object IPostLink {
+  @scala.inline
+  def apply($postLink: () => Unit): IPostLink = {
+    val __obj = js.Dynamic.literal($postLink = js.Any.fromFunction0($postLink))
+    __obj.asInstanceOf[IPostLink]
+  }
+  @scala.inline
+  implicit class IPostLinkOps[Self <: IPostLink] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$postLink(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$postLink")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
+}
+

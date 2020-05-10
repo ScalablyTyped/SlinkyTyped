@@ -24,16 +24,53 @@ trait SchemaQueryParameterType extends js.Object {
 
 object SchemaQueryParameterType {
   @scala.inline
-  def apply(
-    arrayType: SchemaQueryParameterType = null,
-    structTypes: js.Array[AnonDescription] = null,
-    `type`: String = null
-  ): SchemaQueryParameterType = {
+  def apply(): SchemaQueryParameterType = {
     val __obj = js.Dynamic.literal()
-    if (arrayType != null) __obj.updateDynamic("arrayType")(arrayType.asInstanceOf[js.Any])
-    if (structTypes != null) __obj.updateDynamic("structTypes")(structTypes.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaQueryParameterType]
   }
+  @scala.inline
+  implicit class SchemaQueryParameterTypeOps[Self <: SchemaQueryParameterType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrayType(value: SchemaQueryParameterType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrayType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStructTypes(value: js.Array[AnonDescription]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("structTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStructTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("structTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1937,12 +1937,12 @@ object mod extends js.Object {
       * @returns a
       */
     def forEach(
-      a: scala.scalajs.js.typedarray.Float32Array,
+      a: js.typedarray.Float32Array,
       stride: Double,
       offset: Double,
       count: Double,
       fn: js.Function2[/* a */ this.type | js.Array[Double], /* b */ this.type | js.Array[Double], Unit]
-    ): scala.scalajs.js.typedarray.Float32Array = js.native
+    ): js.typedarray.Float32Array = js.native
     /**
       * Perform some operation over an array of vec2s.
       *
@@ -1955,7 +1955,7 @@ object mod extends js.Object {
       * @returns a
       */
     def forEach(
-      a: scala.scalajs.js.typedarray.Float32Array,
+      a: js.typedarray.Float32Array,
       stride: Double,
       offset: Double,
       count: Double,
@@ -1966,7 +1966,7 @@ object mod extends js.Object {
           Unit
         ],
       arg: js.Any
-    ): scala.scalajs.js.typedarray.Float32Array = js.native
+    ): js.typedarray.Float32Array = js.native
     /**
       * Creates a new vec2 initialized with the given values
       *
@@ -2463,12 +2463,12 @@ object mod extends js.Object {
       * @function
       */
     def forEach(
-      a: scala.scalajs.js.typedarray.Float32Array,
+      a: js.typedarray.Float32Array,
       stride: Double,
       offset: Double,
       count: Double,
       fn: js.Function2[/* a */ this.type | js.Array[Double], /* b */ this.type | js.Array[Double], Unit]
-    ): scala.scalajs.js.typedarray.Float32Array = js.native
+    ): js.typedarray.Float32Array = js.native
     /**
       * Perform some operation over an array of vec3s.
       *
@@ -2482,7 +2482,7 @@ object mod extends js.Object {
       * @function
       */
     def forEach(
-      a: scala.scalajs.js.typedarray.Float32Array,
+      a: js.typedarray.Float32Array,
       stride: Double,
       offset: Double,
       count: Double,
@@ -2493,7 +2493,7 @@ object mod extends js.Object {
           Unit
         ],
       arg: js.Any
-    ): scala.scalajs.js.typedarray.Float32Array = js.native
+    ): js.typedarray.Float32Array = js.native
     /**
       * Creates a new vec3 initialized with the given values
       *
@@ -2984,12 +2984,12 @@ object mod extends js.Object {
       * @function
       */
     def forEach(
-      a: scala.scalajs.js.typedarray.Float32Array,
+      a: js.typedarray.Float32Array,
       stride: Double,
       offset: Double,
       count: Double,
       fn: js.Function2[/* a */ this.type | js.Array[Double], /* b */ this.type | js.Array[Double], Unit]
-    ): scala.scalajs.js.typedarray.Float32Array = js.native
+    ): js.typedarray.Float32Array = js.native
     /**
       * Perform some operation over an array of vec4s.
       *
@@ -3003,7 +3003,7 @@ object mod extends js.Object {
       * @function
       */
     def forEach(
-      a: scala.scalajs.js.typedarray.Float32Array,
+      a: js.typedarray.Float32Array,
       stride: Double,
       offset: Double,
       count: Double,
@@ -3014,7 +3014,7 @@ object mod extends js.Object {
           Unit
         ],
       arg: js.Any
-    ): scala.scalajs.js.typedarray.Float32Array = js.native
+    ): js.typedarray.Float32Array = js.native
     /**
       * Creates a new vec4 initialized with the given values
       *

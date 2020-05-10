@@ -14,14 +14,12 @@ trait ErrorCorrectionLevel extends js.Object
 
 object ErrorCorrectionLevel {
   @scala.inline
-  def H: typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.H = this.cast("H")
+  def H: typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.H = "H".asInstanceOf[typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.H]
   @scala.inline
-  def L: typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.L = this.cast("L")
+  def L: typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.L = "L".asInstanceOf[typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.L]
   @scala.inline
-  def M: typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.M = this.cast("M")
+  def M: typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.M = "M".asInstanceOf[typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.M]
   @scala.inline
-  def Q: typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.Q = this.cast("Q")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Q: typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.Q = "Q".asInstanceOf[typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.Q]
 }
 

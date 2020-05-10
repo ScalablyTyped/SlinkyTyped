@@ -1,6 +1,7 @@
 package typingsSlinky.resumablejs.Resumable
 
 import org.scalajs.dom.raw.DragEvent
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.File
 import typingsSlinky.resumablejs.resumablejsStrings.beforeCancel
 import typingsSlinky.resumablejs.resumablejsStrings.cancel
@@ -19,7 +20,6 @@ import typingsSlinky.resumablejs.resumablejsStrings.filesAdded
 import typingsSlinky.resumablejs.resumablejsStrings.pause
 import typingsSlinky.resumablejs.resumablejsStrings.progress
 import typingsSlinky.resumablejs.resumablejsStrings.uploadStart
-import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

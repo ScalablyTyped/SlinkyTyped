@@ -26,16 +26,53 @@ trait CompareFacesRequest extends js.Object {
 
 object CompareFacesRequest {
   @scala.inline
-  def apply(
-    SourceImage: Image,
-    TargetImage: Image,
-    QualityFilter: QualityFilter = null,
-    SimilarityThreshold: Int | Double = null
-  ): CompareFacesRequest = {
+  def apply(SourceImage: Image, TargetImage: Image): CompareFacesRequest = {
     val __obj = js.Dynamic.literal(SourceImage = SourceImage.asInstanceOf[js.Any], TargetImage = TargetImage.asInstanceOf[js.Any])
-    if (QualityFilter != null) __obj.updateDynamic("QualityFilter")(QualityFilter.asInstanceOf[js.Any])
-    if (SimilarityThreshold != null) __obj.updateDynamic("SimilarityThreshold")(SimilarityThreshold.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompareFacesRequest]
   }
+  @scala.inline
+  implicit class CompareFacesRequestOps[Self <: CompareFacesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSourceImage(value: Image): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetImage(value: Image): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQualityFilter(value: QualityFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QualityFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQualityFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QualityFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSimilarityThreshold(value: Percent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SimilarityThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSimilarityThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SimilarityThreshold")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

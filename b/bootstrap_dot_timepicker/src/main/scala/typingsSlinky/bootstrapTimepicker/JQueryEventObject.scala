@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait JQueryEventObject extends js.Object {
-  var time: js.UndefOr[TimepickerTime] = js.undefined
+  var time: js.UndefOr[TimepickerTime] = js.native
 }
 
 object JQueryEventObject {
   @scala.inline
-  def apply(time: TimepickerTime = null): JQueryEventObject = {
+  def apply(): JQueryEventObject = {
     val __obj = js.Dynamic.literal()
-    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
     __obj.asInstanceOf[JQueryEventObject]
   }
+  @scala.inline
+  implicit class JQueryEventObjectOps[Self <: JQueryEventObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTime(value: TimepickerTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

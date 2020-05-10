@@ -199,7 +199,7 @@ class PaperScope () extends js.Object {
     * the element, or the size of the canvas to be created for usage in a web
     * worker.
     */
-  def setup(element: typingsSlinky.std.HTMLCanvasElement): Unit = js.native
+  def setup(element: HTMLCanvasElement): Unit = js.native
 }
 
 /* static members */

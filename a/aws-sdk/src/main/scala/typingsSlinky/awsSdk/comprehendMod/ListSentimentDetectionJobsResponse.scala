@@ -18,14 +18,41 @@ trait ListSentimentDetectionJobsResponse extends js.Object {
 
 object ListSentimentDetectionJobsResponse {
   @scala.inline
-  def apply(
-    NextToken: String = null,
-    SentimentDetectionJobPropertiesList: SentimentDetectionJobPropertiesList = null
-  ): ListSentimentDetectionJobsResponse = {
+  def apply(): ListSentimentDetectionJobsResponse = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (SentimentDetectionJobPropertiesList != null) __obj.updateDynamic("SentimentDetectionJobPropertiesList")(SentimentDetectionJobPropertiesList.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListSentimentDetectionJobsResponse]
   }
+  @scala.inline
+  implicit class ListSentimentDetectionJobsResponseOps[Self <: ListSentimentDetectionJobsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSentimentDetectionJobPropertiesList(value: SentimentDetectionJobPropertiesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SentimentDetectionJobPropertiesList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSentimentDetectionJobPropertiesList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SentimentDetectionJobPropertiesList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

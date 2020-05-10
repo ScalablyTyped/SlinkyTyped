@@ -26,18 +26,65 @@ trait Credentials extends js.Object {
 
 object Credentials {
   @scala.inline
-  def apply(
-    AccessToken: SecurityToken = null,
-    AccessTokenExpiration: js.Date = null,
-    RefreshToken: SecurityToken = null,
-    RefreshTokenExpiration: js.Date = null
-  ): Credentials = {
+  def apply(): Credentials = {
     val __obj = js.Dynamic.literal()
-    if (AccessToken != null) __obj.updateDynamic("AccessToken")(AccessToken.asInstanceOf[js.Any])
-    if (AccessTokenExpiration != null) __obj.updateDynamic("AccessTokenExpiration")(AccessTokenExpiration.asInstanceOf[js.Any])
-    if (RefreshToken != null) __obj.updateDynamic("RefreshToken")(RefreshToken.asInstanceOf[js.Any])
-    if (RefreshTokenExpiration != null) __obj.updateDynamic("RefreshTokenExpiration")(RefreshTokenExpiration.asInstanceOf[js.Any])
     __obj.asInstanceOf[Credentials]
   }
+  @scala.inline
+  implicit class CredentialsOps[Self <: Credentials] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessToken(value: SecurityToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessTokenExpiration(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessTokenExpiration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessTokenExpiration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessTokenExpiration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRefreshToken(value: SecurityToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RefreshToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRefreshToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RefreshToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRefreshTokenExpiration(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RefreshTokenExpiration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRefreshTokenExpiration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RefreshTokenExpiration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -24,8 +24,33 @@ object GetDomainSuggestionsRequest {
   @scala.inline
   def apply(DomainName: DomainName, OnlyAvailable: Boolean, SuggestionCount: Integer): GetDomainSuggestionsRequest = {
     val __obj = js.Dynamic.literal(DomainName = DomainName.asInstanceOf[js.Any], OnlyAvailable = OnlyAvailable.asInstanceOf[js.Any], SuggestionCount = SuggestionCount.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetDomainSuggestionsRequest]
   }
+  @scala.inline
+  implicit class GetDomainSuggestionsRequestOps[Self <: GetDomainSuggestionsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomainName(value: DomainName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnlyAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnlyAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuggestionCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SuggestionCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

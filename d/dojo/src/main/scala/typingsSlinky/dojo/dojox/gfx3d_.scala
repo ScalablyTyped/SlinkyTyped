@@ -11,5 +11,6 @@ import scala.scalajs.js.annotation._
   * this module.
   *
   */
+@js.native
 trait gfx3d_ extends js.Object
 

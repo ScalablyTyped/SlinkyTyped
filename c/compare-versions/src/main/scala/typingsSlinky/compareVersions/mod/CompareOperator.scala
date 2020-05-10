@@ -18,16 +18,14 @@ trait CompareOperator extends js.Object
 
 object CompareOperator {
   @scala.inline
-  def Equalssign: typingsSlinky.compareVersions.compareVersionsStrings.Equalssign = this.cast("=")
+  def Equalssign: typingsSlinky.compareVersions.compareVersionsStrings.Equalssign = "=".asInstanceOf[typingsSlinky.compareVersions.compareVersionsStrings.Equalssign]
   @scala.inline
-  def Greaterthansign: typingsSlinky.compareVersions.compareVersionsStrings.Greaterthansign = this.cast(">")
+  def Greaterthansign: typingsSlinky.compareVersions.compareVersionsStrings.Greaterthansign = ">".asInstanceOf[typingsSlinky.compareVersions.compareVersionsStrings.Greaterthansign]
   @scala.inline
-  def GreaterthansignEqualssign: typingsSlinky.compareVersions.compareVersionsStrings.GreaterthansignEqualssign = this.cast(">=")
+  def GreaterthansignEqualssign: typingsSlinky.compareVersions.compareVersionsStrings.GreaterthansignEqualssign = ">=".asInstanceOf[typingsSlinky.compareVersions.compareVersionsStrings.GreaterthansignEqualssign]
   @scala.inline
-  def Lessthansign: typingsSlinky.compareVersions.compareVersionsStrings.Lessthansign = this.cast("<")
+  def Lessthansign: typingsSlinky.compareVersions.compareVersionsStrings.Lessthansign = "<".asInstanceOf[typingsSlinky.compareVersions.compareVersionsStrings.Lessthansign]
   @scala.inline
-  def LessthansignEqualssign: typingsSlinky.compareVersions.compareVersionsStrings.LessthansignEqualssign = this.cast("<=")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def LessthansignEqualssign: typingsSlinky.compareVersions.compareVersionsStrings.LessthansignEqualssign = "<=".asInstanceOf[typingsSlinky.compareVersions.compareVersionsStrings.LessthansignEqualssign]
 }
 

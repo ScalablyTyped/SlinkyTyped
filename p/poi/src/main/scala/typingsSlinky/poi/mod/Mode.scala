@@ -13,12 +13,10 @@ trait Mode extends js.Object
 
 object Mode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def development: typingsSlinky.poi.poiStrings.development = "development".asInstanceOf[typingsSlinky.poi.poiStrings.development]
   @scala.inline
-  def development: typingsSlinky.poi.poiStrings.development = this.cast("development")
+  def production: typingsSlinky.poi.poiStrings.production = "production".asInstanceOf[typingsSlinky.poi.poiStrings.production]
   @scala.inline
-  def production: typingsSlinky.poi.poiStrings.production = this.cast("production")
-  @scala.inline
-  def test: typingsSlinky.poi.poiStrings.test = this.cast("test")
+  def test: typingsSlinky.poi.poiStrings.test = "test".asInstanceOf[typingsSlinky.poi.poiStrings.test]
 }
 

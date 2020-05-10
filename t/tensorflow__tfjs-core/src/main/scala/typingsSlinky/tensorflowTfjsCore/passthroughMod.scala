@@ -17,12 +17,12 @@ object passthroughMod extends js.Object {
   def fromMemory(
     modelArtifacts: js.Object,
     weightSpecs: js.Array[WeightsManifestEntry],
-    weightData: scala.scalajs.js.typedarray.ArrayBuffer
+    weightData: js.typedarray.ArrayBuffer
   ): IOHandler = js.native
   def fromMemory(
     modelArtifacts: js.Object,
     weightSpecs: js.Array[WeightsManifestEntry],
-    weightData: scala.scalajs.js.typedarray.ArrayBuffer,
+    weightData: js.typedarray.ArrayBuffer,
     trainingConfig: TrainingConfig
   ): IOHandler = js.native
   def fromMemory(modelArtifacts: ModelArtifacts): IOHandler = js.native
@@ -30,12 +30,12 @@ object passthroughMod extends js.Object {
   def fromMemory(
     modelArtifacts: ModelArtifacts,
     weightSpecs: js.Array[WeightsManifestEntry],
-    weightData: scala.scalajs.js.typedarray.ArrayBuffer
+    weightData: js.typedarray.ArrayBuffer
   ): IOHandler = js.native
   def fromMemory(
     modelArtifacts: ModelArtifacts,
     weightSpecs: js.Array[WeightsManifestEntry],
-    weightData: scala.scalajs.js.typedarray.ArrayBuffer,
+    weightData: js.typedarray.ArrayBuffer,
     trainingConfig: TrainingConfig
   ): IOHandler = js.native
   def withSaveHandler(saveHandler: js.Function1[/* artifacts */ ModelArtifacts, js.Promise[SaveResult]]): IOHandler = js.native

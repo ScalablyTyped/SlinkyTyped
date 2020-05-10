@@ -12,10 +12,8 @@ trait OptionsModeValue extends js.Object
 
 object OptionsModeValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def normal: typingsSlinky.highcharts.highchartsStrings.normal = "normal".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.highcharts.highchartsStrings.normal = this.cast("normal")
-  @scala.inline
-  def serialize: typingsSlinky.highcharts.highchartsStrings.serialize = this.cast("serialize")
+  def serialize: typingsSlinky.highcharts.highchartsStrings.serialize = "serialize".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.serialize]
 }
 

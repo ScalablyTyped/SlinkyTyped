@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MinMaxTime extends js.Object {
-  var maxTime: js.UndefOr[String] = js.undefined
-  var minTime: js.UndefOr[String] = js.undefined
+  var maxTime: js.UndefOr[String] = js.native
+  var minTime: js.UndefOr[String] = js.native
 }
 
 object MinMaxTime {
   @scala.inline
-  def apply(maxTime: String = null, minTime: String = null): MinMaxTime = {
+  def apply(): MinMaxTime = {
     val __obj = js.Dynamic.literal()
-    if (maxTime != null) __obj.updateDynamic("maxTime")(maxTime.asInstanceOf[js.Any])
-    if (minTime != null) __obj.updateDynamic("minTime")(minTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[MinMaxTime]
   }
+  @scala.inline
+  implicit class MinMaxTimeOps[Self <: MinMaxTime] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

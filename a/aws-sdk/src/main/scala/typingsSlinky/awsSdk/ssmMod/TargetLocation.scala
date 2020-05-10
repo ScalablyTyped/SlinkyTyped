@@ -30,20 +30,77 @@ trait TargetLocation extends js.Object {
 
 object TargetLocation {
   @scala.inline
-  def apply(
-    Accounts: Accounts = null,
-    ExecutionRoleName: ExecutionRoleName = null,
-    Regions: Regions = null,
-    TargetLocationMaxConcurrency: MaxConcurrency = null,
-    TargetLocationMaxErrors: MaxErrors = null
-  ): TargetLocation = {
+  def apply(): TargetLocation = {
     val __obj = js.Dynamic.literal()
-    if (Accounts != null) __obj.updateDynamic("Accounts")(Accounts.asInstanceOf[js.Any])
-    if (ExecutionRoleName != null) __obj.updateDynamic("ExecutionRoleName")(ExecutionRoleName.asInstanceOf[js.Any])
-    if (Regions != null) __obj.updateDynamic("Regions")(Regions.asInstanceOf[js.Any])
-    if (TargetLocationMaxConcurrency != null) __obj.updateDynamic("TargetLocationMaxConcurrency")(TargetLocationMaxConcurrency.asInstanceOf[js.Any])
-    if (TargetLocationMaxErrors != null) __obj.updateDynamic("TargetLocationMaxErrors")(TargetLocationMaxErrors.asInstanceOf[js.Any])
     __obj.asInstanceOf[TargetLocation]
   }
+  @scala.inline
+  implicit class TargetLocationOps[Self <: TargetLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccounts(value: Accounts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Accounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccounts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Accounts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionRoleName(value: ExecutionRoleName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionRoleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionRoleName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionRoleName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegions(value: Regions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Regions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Regions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetLocationMaxConcurrency(value: MaxConcurrency): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetLocationMaxConcurrency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetLocationMaxConcurrency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetLocationMaxConcurrency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetLocationMaxErrors(value: MaxErrors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetLocationMaxErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetLocationMaxErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetLocationMaxErrors")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

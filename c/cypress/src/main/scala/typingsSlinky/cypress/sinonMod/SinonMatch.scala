@@ -1,6 +1,5 @@
 package typingsSlinky.cypress.sinonMod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -75,7 +74,7 @@ trait SinonMatch extends js.Object {
   /**
     * Requires the value to be a string and match the given regular expression.
     */
-  def apply(expr: RegExp): SinonMatcher = js.native
+  def apply(expr: js.RegExp): SinonMatcher = js.native
   /**
     * Requires the value to be not null or undefined and have at least the same properties as expectation.
     * This supports nested matchers.

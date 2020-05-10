@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation._
 @js.native
 object ecdsaVerify extends js.Object {
   def apply(
-    signature: scala.scalajs.js.typedarray.Uint8Array,
-    message: scala.scalajs.js.typedarray.Uint8Array,
-    publicKey: scala.scalajs.js.typedarray.Uint8Array
+    signature: js.typedarray.Uint8Array,
+    message: js.typedarray.Uint8Array,
+    publicKey: js.typedarray.Uint8Array
   ): Boolean = js.native
 }
 

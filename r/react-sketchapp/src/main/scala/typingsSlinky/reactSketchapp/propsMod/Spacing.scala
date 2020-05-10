@@ -12,10 +12,8 @@ trait Spacing extends js.Object
 
 object Spacing {
   @scala.inline
-  def auto: typingsSlinky.reactSketchapp.reactSketchappStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.reactSketchapp.reactSketchappStrings.auto = "auto".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def exact: typingsSlinky.reactSketchapp.reactSketchappStrings.exact = this.cast("exact")
+  def exact: typingsSlinky.reactSketchapp.reactSketchappStrings.exact = "exact".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.exact]
 }
 

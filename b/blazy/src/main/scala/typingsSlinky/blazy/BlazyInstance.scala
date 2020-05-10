@@ -1,9 +1,9 @@
 package typingsSlinky.blazy
 
-import typingsSlinky.std.Element
-import typingsSlinky.std.HTMLCollection
-import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.NodeList
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLCollection
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.NodeList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

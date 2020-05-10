@@ -45,7 +45,7 @@ trait ImportInstanceLaunchSpecification extends js.Object {
   /**
     * [EC2-VPC] The ID of the subnet in which to launch the instance.
     */
-  var SubnetId: js.UndefOr[String] = js.native
+  var SubnetId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.SubnetId] = js.native
   /**
     * The Base64-encoded user data to make available to the instance.
     */
@@ -54,32 +54,149 @@ trait ImportInstanceLaunchSpecification extends js.Object {
 
 object ImportInstanceLaunchSpecification {
   @scala.inline
-  def apply(
-    AdditionalInfo: String = null,
-    Architecture: ArchitectureValues = null,
-    GroupIds: SecurityGroupIdStringList = null,
-    GroupNames: SecurityGroupStringList = null,
-    InstanceInitiatedShutdownBehavior: ShutdownBehavior = null,
-    InstanceType: InstanceType = null,
-    Monitoring: js.UndefOr[scala.Boolean] = js.undefined,
-    Placement: Placement = null,
-    PrivateIpAddress: String = null,
-    SubnetId: String = null,
-    UserData: UserData = null
-  ): ImportInstanceLaunchSpecification = {
+  def apply(): ImportInstanceLaunchSpecification = {
     val __obj = js.Dynamic.literal()
-    if (AdditionalInfo != null) __obj.updateDynamic("AdditionalInfo")(AdditionalInfo.asInstanceOf[js.Any])
-    if (Architecture != null) __obj.updateDynamic("Architecture")(Architecture.asInstanceOf[js.Any])
-    if (GroupIds != null) __obj.updateDynamic("GroupIds")(GroupIds.asInstanceOf[js.Any])
-    if (GroupNames != null) __obj.updateDynamic("GroupNames")(GroupNames.asInstanceOf[js.Any])
-    if (InstanceInitiatedShutdownBehavior != null) __obj.updateDynamic("InstanceInitiatedShutdownBehavior")(InstanceInitiatedShutdownBehavior.asInstanceOf[js.Any])
-    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
-    if (!js.isUndefined(Monitoring)) __obj.updateDynamic("Monitoring")(Monitoring.asInstanceOf[js.Any])
-    if (Placement != null) __obj.updateDynamic("Placement")(Placement.asInstanceOf[js.Any])
-    if (PrivateIpAddress != null) __obj.updateDynamic("PrivateIpAddress")(PrivateIpAddress.asInstanceOf[js.Any])
-    if (SubnetId != null) __obj.updateDynamic("SubnetId")(SubnetId.asInstanceOf[js.Any])
-    if (UserData != null) __obj.updateDynamic("UserData")(UserData.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportInstanceLaunchSpecification]
   }
+  @scala.inline
+  implicit class ImportInstanceLaunchSpecificationOps[Self <: ImportInstanceLaunchSpecification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdditionalInfo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArchitecture(value: ArchitectureValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Architecture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArchitecture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Architecture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupIds(value: SecurityGroupIdStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupNames(value: SecurityGroupStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceInitiatedShutdownBehavior(value: ShutdownBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceInitiatedShutdownBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceInitiatedShutdownBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceInitiatedShutdownBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: InstanceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonitoring(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Monitoring")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonitoring: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Monitoring")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacement(value: Placement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Placement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Placement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateIpAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateIpAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetId(value: SubnetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserData(value: UserData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserData")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

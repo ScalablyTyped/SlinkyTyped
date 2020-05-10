@@ -12,10 +12,8 @@ trait DocumentMimeType extends js.Object
 
 object DocumentMimeType {
   @scala.inline
-  def applicationSlashpdf: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.applicationSlashpdf = this.cast("application/pdf")
+  def applicationSlashpdf: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.applicationSlashpdf = "application/pdf".asInstanceOf[typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.applicationSlashpdf]
   @scala.inline
-  def applicationSlashzip: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.applicationSlashzip = this.cast("application/zip")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def applicationSlashzip: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.applicationSlashzip = "application/zip".asInstanceOf[typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.applicationSlashzip]
 }
 

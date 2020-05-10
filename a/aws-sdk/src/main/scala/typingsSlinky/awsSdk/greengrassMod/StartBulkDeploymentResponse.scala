@@ -18,11 +18,41 @@ trait StartBulkDeploymentResponse extends js.Object {
 
 object StartBulkDeploymentResponse {
   @scala.inline
-  def apply(BulkDeploymentArn: string = null, BulkDeploymentId: string = null): StartBulkDeploymentResponse = {
+  def apply(): StartBulkDeploymentResponse = {
     val __obj = js.Dynamic.literal()
-    if (BulkDeploymentArn != null) __obj.updateDynamic("BulkDeploymentArn")(BulkDeploymentArn.asInstanceOf[js.Any])
-    if (BulkDeploymentId != null) __obj.updateDynamic("BulkDeploymentId")(BulkDeploymentId.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartBulkDeploymentResponse]
   }
+  @scala.inline
+  implicit class StartBulkDeploymentResponseOps[Self <: StartBulkDeploymentResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBulkDeploymentArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BulkDeploymentArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBulkDeploymentArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BulkDeploymentArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBulkDeploymentId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BulkDeploymentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBulkDeploymentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BulkDeploymentId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

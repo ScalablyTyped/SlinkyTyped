@@ -25,11 +25,41 @@ trait SchemaGoogleCloudHealthcareV1alpha2FhirRestExportResourcesResponse extends
 
 object SchemaGoogleCloudHealthcareV1alpha2FhirRestExportResourcesResponse {
   @scala.inline
-  def apply(fhirStore: String = null, resourceCount: String = null): SchemaGoogleCloudHealthcareV1alpha2FhirRestExportResourcesResponse = {
+  def apply(): SchemaGoogleCloudHealthcareV1alpha2FhirRestExportResourcesResponse = {
     val __obj = js.Dynamic.literal()
-    if (fhirStore != null) __obj.updateDynamic("fhirStore")(fhirStore.asInstanceOf[js.Any])
-    if (resourceCount != null) __obj.updateDynamic("resourceCount")(resourceCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudHealthcareV1alpha2FhirRestExportResourcesResponse]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudHealthcareV1alpha2FhirRestExportResourcesResponseOps[Self <: SchemaGoogleCloudHealthcareV1alpha2FhirRestExportResourcesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFhirStore(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fhirStore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFhirStore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fhirStore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

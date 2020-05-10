@@ -45,11 +45,12 @@ trait SVGFETileElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGFETileElement")
 @js.native
-object SVGFETileElement extends Instantiable0[SVGFETileElement]
+object SVGFETileElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFETileElement]
 

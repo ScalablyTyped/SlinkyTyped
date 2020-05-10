@@ -7,13 +7,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonRowCollapsed[TEntity] extends js.Object {
   /**
     * Raised when a row is collapsed.  Doesn't really have a purpose at the moment.  Included for symmetry
     * @param {ng.IScope} scope Grid scope
     * @param {rowCollapsedHandler} handler Callback
     */
-  def rowCollapsed(scope: IScope, handler: rowCollapsedHandler[TEntity]): Unit
+  def rowCollapsed(scope: IScope, handler: rowCollapsedHandler[TEntity]): Unit = js.native
   /**
     * Raised whenever a row is expanded.
     *
@@ -24,7 +25,7 @@ trait AnonRowCollapsed[TEntity] extends js.Object {
     * @param {ng.IScope} scope Grid Scope
     * @param {rowExpandedHandler} handler Callback
     */
-  def rowExpanded(scope: IScope, handler: rowExpandedHandler[TEntity]): Unit
+  def rowExpanded(scope: IScope, handler: rowExpandedHandler[TEntity]): Unit = js.native
 }
 
 object AnonRowCollapsed {
@@ -34,8 +35,27 @@ object AnonRowCollapsed {
     rowExpanded: (IScope, rowExpandedHandler[TEntity]) => Unit
   ): AnonRowCollapsed[TEntity] = {
     val __obj = js.Dynamic.literal(rowCollapsed = js.Any.fromFunction2(rowCollapsed), rowExpanded = js.Any.fromFunction2(rowExpanded))
-  
     __obj.asInstanceOf[AnonRowCollapsed[TEntity]]
   }
+  @scala.inline
+  implicit class AnonRowCollapsedOps[Self[tentity] <: AnonRowCollapsed[tentity], TEntity] (val x: Self[TEntity]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TEntity] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TEntity]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[TEntity] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TEntity] with Other]
+    @scala.inline
+    def withRowCollapsed(value: (IScope, rowCollapsedHandler[TEntity]) => Unit): Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCollapsed")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRowExpanded(value: (IScope, rowExpandedHandler[TEntity]) => Unit): Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowExpanded")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

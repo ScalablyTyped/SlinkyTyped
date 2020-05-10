@@ -26,38 +26,36 @@ trait GeneratorType extends js.Object
 
 object GeneratorType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def chevrons: typingsSlinky.geopattern.geopatternStrings.chevrons = "chevrons".asInstanceOf[typingsSlinky.geopattern.geopatternStrings.chevrons]
   @scala.inline
-  def chevrons: typingsSlinky.geopattern.geopatternStrings.chevrons = this.cast("chevrons")
+  def concentricCircles: typingsSlinky.geopattern.geopatternStrings.concentricCircles = "concentricCircles".asInstanceOf[typingsSlinky.geopattern.geopatternStrings.concentricCircles]
   @scala.inline
-  def concentricCircles: typingsSlinky.geopattern.geopatternStrings.concentricCircles = this.cast("concentricCircles")
+  def diamonds: typingsSlinky.geopattern.geopatternStrings.diamonds = "diamonds".asInstanceOf[typingsSlinky.geopattern.geopatternStrings.diamonds]
   @scala.inline
-  def diamonds: typingsSlinky.geopattern.geopatternStrings.diamonds = this.cast("diamonds")
+  def hexagons: typingsSlinky.geopattern.geopatternStrings.hexagons = "hexagons".asInstanceOf[typingsSlinky.geopattern.geopatternStrings.hexagons]
   @scala.inline
-  def hexagons: typingsSlinky.geopattern.geopatternStrings.hexagons = this.cast("hexagons")
+  def mosaicSquares: typingsSlinky.geopattern.geopatternStrings.mosaicSquares = "mosaicSquares".asInstanceOf[typingsSlinky.geopattern.geopatternStrings.mosaicSquares]
   @scala.inline
-  def mosaicSquares: typingsSlinky.geopattern.geopatternStrings.mosaicSquares = this.cast("mosaicSquares")
+  def nestedSquares: typingsSlinky.geopattern.geopatternStrings.nestedSquares = "nestedSquares".asInstanceOf[typingsSlinky.geopattern.geopatternStrings.nestedSquares]
   @scala.inline
-  def nestedSquares: typingsSlinky.geopattern.geopatternStrings.nestedSquares = this.cast("nestedSquares")
+  def octagons: typingsSlinky.geopattern.geopatternStrings.octagons = "octagons".asInstanceOf[typingsSlinky.geopattern.geopatternStrings.octagons]
   @scala.inline
-  def octagons: typingsSlinky.geopattern.geopatternStrings.octagons = this.cast("octagons")
+  def overlappingCircles: typingsSlinky.geopattern.geopatternStrings.overlappingCircles = "overlappingCircles".asInstanceOf[typingsSlinky.geopattern.geopatternStrings.overlappingCircles]
   @scala.inline
-  def overlappingCircles: typingsSlinky.geopattern.geopatternStrings.overlappingCircles = this.cast("overlappingCircles")
+  def overlappingRings: typingsSlinky.geopattern.geopatternStrings.overlappingRings = "overlappingRings".asInstanceOf[typingsSlinky.geopattern.geopatternStrings.overlappingRings]
   @scala.inline
-  def overlappingRings: typingsSlinky.geopattern.geopatternStrings.overlappingRings = this.cast("overlappingRings")
+  def plaid: typingsSlinky.geopattern.geopatternStrings.plaid = "plaid".asInstanceOf[typingsSlinky.geopattern.geopatternStrings.plaid]
   @scala.inline
-  def plaid: typingsSlinky.geopattern.geopatternStrings.plaid = this.cast("plaid")
+  def plusSigns: typingsSlinky.geopattern.geopatternStrings.plusSigns = "plusSigns".asInstanceOf[typingsSlinky.geopattern.geopatternStrings.plusSigns]
   @scala.inline
-  def plusSigns: typingsSlinky.geopattern.geopatternStrings.plusSigns = this.cast("plusSigns")
+  def sineWaves: typingsSlinky.geopattern.geopatternStrings.sineWaves = "sineWaves".asInstanceOf[typingsSlinky.geopattern.geopatternStrings.sineWaves]
   @scala.inline
-  def sineWaves: typingsSlinky.geopattern.geopatternStrings.sineWaves = this.cast("sineWaves")
+  def squares: typingsSlinky.geopattern.geopatternStrings.squares = "squares".asInstanceOf[typingsSlinky.geopattern.geopatternStrings.squares]
   @scala.inline
-  def squares: typingsSlinky.geopattern.geopatternStrings.squares = this.cast("squares")
+  def tessellation: typingsSlinky.geopattern.geopatternStrings.tessellation = "tessellation".asInstanceOf[typingsSlinky.geopattern.geopatternStrings.tessellation]
   @scala.inline
-  def tessellation: typingsSlinky.geopattern.geopatternStrings.tessellation = this.cast("tessellation")
+  def triangles: typingsSlinky.geopattern.geopatternStrings.triangles = "triangles".asInstanceOf[typingsSlinky.geopattern.geopatternStrings.triangles]
   @scala.inline
-  def triangles: typingsSlinky.geopattern.geopatternStrings.triangles = this.cast("triangles")
-  @scala.inline
-  def xes: typingsSlinky.geopattern.geopatternStrings.xes = this.cast("xes")
+  def xes: typingsSlinky.geopattern.geopatternStrings.xes = "xes".asInstanceOf[typingsSlinky.geopattern.geopatternStrings.xes]
 }
 

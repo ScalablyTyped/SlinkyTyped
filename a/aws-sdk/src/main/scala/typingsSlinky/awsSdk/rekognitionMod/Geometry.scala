@@ -18,11 +18,41 @@ trait Geometry extends js.Object {
 
 object Geometry {
   @scala.inline
-  def apply(BoundingBox: BoundingBox = null, Polygon: Polygon = null): Geometry = {
+  def apply(): Geometry = {
     val __obj = js.Dynamic.literal()
-    if (BoundingBox != null) __obj.updateDynamic("BoundingBox")(BoundingBox.asInstanceOf[js.Any])
-    if (Polygon != null) __obj.updateDynamic("Polygon")(Polygon.asInstanceOf[js.Any])
     __obj.asInstanceOf[Geometry]
   }
+  @scala.inline
+  implicit class GeometryOps[Self <: Geometry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBoundingBox(value: BoundingBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BoundingBox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoundingBox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BoundingBox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolygon(value: Polygon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Polygon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolygon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Polygon")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

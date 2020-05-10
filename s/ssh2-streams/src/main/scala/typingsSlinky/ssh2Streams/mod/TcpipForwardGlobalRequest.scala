@@ -4,23 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TcpipForwardGlobalRequest extends _GlobalRequest {
   /**
     * The IP address to start/stop binding to.
     */
-  var bindAddr: String
+  var bindAddr: String = js.native
   /**
     * The port to start/stop binding to.
     */
-  var bindPort: Double
+  var bindPort: Double = js.native
 }
 
 object TcpipForwardGlobalRequest {
   @scala.inline
   def apply(bindAddr: String, bindPort: Double): TcpipForwardGlobalRequest = {
     val __obj = js.Dynamic.literal(bindAddr = bindAddr.asInstanceOf[js.Any], bindPort = bindPort.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TcpipForwardGlobalRequest]
   }
+  @scala.inline
+  implicit class TcpipForwardGlobalRequestOps[Self <: TcpipForwardGlobalRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBindAddr(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindAddr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBindPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

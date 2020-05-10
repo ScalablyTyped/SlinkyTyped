@@ -19,6 +19,7 @@ import scala.scalajs.js.annotation._
   * 404 - Not Found                    The requested item doesn't exist.
   * 500, 502, 503, 504 - Server Errors Something went wrong on Stripe's end.
   */
+@js.native
 trait IStripeError extends js.Object {
   /**
     * For card errors, a short string from amongst those listed on the right describing the kind of card
@@ -39,17 +40,17 @@ trait IStripeError extends js.Object {
     *                             quickly. Please let us know if you're consistently running
     *                             into this error.
     */
-  var code: js.UndefOr[String] = js.undefined
+  var code: js.UndefOr[String] = js.native
   /**
     * A human-readable message giving more details about the error. For card errors, these messages can
     * be shown to your users.
     */
-  var message: js.UndefOr[String] = js.undefined
+  var message: js.UndefOr[String] = js.native
   /**
     * The parameter the error relates to if the error is parameter-specific. You can use this to display a
     * message near the correct form field, for example.
     */
-  var param: js.UndefOr[String] = js.undefined
+  var param: js.UndefOr[String] = js.native
   /**
     * The type of error returned. Can be invalid_request_error, api_error, or card_error.
     *
@@ -62,18 +63,65 @@ trait IStripeError extends js.Object {
     * card_error            Card errors are the most common type of error you should expect to handle. They result
     *                       when the user enters a card that can't be charged for some reason.
     */
-  var `type`: String
+  var `type`: String = js.native
 }
 
 object IStripeError {
   @scala.inline
-  def apply(`type`: String, code: String = null, message: String = null, param: String = null): IStripeError = {
+  def apply(`type`: String): IStripeError = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (param != null) __obj.updateDynamic("param")(param.asInstanceOf[js.Any])
     __obj.asInstanceOf[IStripeError]
   }
+  @scala.inline
+  implicit class IStripeErrorOps[Self <: IStripeError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParam(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("param")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParam: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("param")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

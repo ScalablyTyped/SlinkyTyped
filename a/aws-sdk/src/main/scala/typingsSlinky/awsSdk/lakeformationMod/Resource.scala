@@ -30,20 +30,77 @@ trait Resource extends js.Object {
 
 object Resource {
   @scala.inline
-  def apply(
-    Catalog: CatalogResource = null,
-    DataLocation: DataLocationResource = null,
-    Database: DatabaseResource = null,
-    Table: TableResource = null,
-    TableWithColumns: TableWithColumnsResource = null
-  ): Resource = {
+  def apply(): Resource = {
     val __obj = js.Dynamic.literal()
-    if (Catalog != null) __obj.updateDynamic("Catalog")(Catalog.asInstanceOf[js.Any])
-    if (DataLocation != null) __obj.updateDynamic("DataLocation")(DataLocation.asInstanceOf[js.Any])
-    if (Database != null) __obj.updateDynamic("Database")(Database.asInstanceOf[js.Any])
-    if (Table != null) __obj.updateDynamic("Table")(Table.asInstanceOf[js.Any])
-    if (TableWithColumns != null) __obj.updateDynamic("TableWithColumns")(TableWithColumns.asInstanceOf[js.Any])
     __obj.asInstanceOf[Resource]
   }
+  @scala.inline
+  implicit class ResourceOps[Self <: Resource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCatalog(value: CatalogResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Catalog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCatalog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Catalog")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataLocation(value: DataLocationResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatabase(value: DatabaseResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Database")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Database")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTable(value: TableResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Table")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Table")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableWithColumns(value: TableWithColumnsResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableWithColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableWithColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableWithColumns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

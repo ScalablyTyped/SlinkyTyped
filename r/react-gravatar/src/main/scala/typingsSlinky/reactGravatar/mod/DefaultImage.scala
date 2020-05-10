@@ -17,20 +17,18 @@ trait DefaultImage extends js.Object
 
 object DefaultImage {
   @scala.inline
-  def `404`: typingsSlinky.reactGravatar.reactGravatarStrings.`404` = this.cast("404")
+  def `404`: typingsSlinky.reactGravatar.reactGravatarStrings.`404` = "404".asInstanceOf[typingsSlinky.reactGravatar.reactGravatarStrings.`404`]
   @scala.inline
-  def blank: typingsSlinky.reactGravatar.reactGravatarStrings.blank = this.cast("blank")
+  def blank: typingsSlinky.reactGravatar.reactGravatarStrings.blank = "blank".asInstanceOf[typingsSlinky.reactGravatar.reactGravatarStrings.blank]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def identicon: typingsSlinky.reactGravatar.reactGravatarStrings.identicon = "identicon".asInstanceOf[typingsSlinky.reactGravatar.reactGravatarStrings.identicon]
   @scala.inline
-  def identicon: typingsSlinky.reactGravatar.reactGravatarStrings.identicon = this.cast("identicon")
+  def mm: typingsSlinky.reactGravatar.reactGravatarStrings.mm = "mm".asInstanceOf[typingsSlinky.reactGravatar.reactGravatarStrings.mm]
   @scala.inline
-  def mm: typingsSlinky.reactGravatar.reactGravatarStrings.mm = this.cast("mm")
+  def monsterid: typingsSlinky.reactGravatar.reactGravatarStrings.monsterid = "monsterid".asInstanceOf[typingsSlinky.reactGravatar.reactGravatarStrings.monsterid]
   @scala.inline
-  def monsterid: typingsSlinky.reactGravatar.reactGravatarStrings.monsterid = this.cast("monsterid")
+  def retro: typingsSlinky.reactGravatar.reactGravatarStrings.retro = "retro".asInstanceOf[typingsSlinky.reactGravatar.reactGravatarStrings.retro]
   @scala.inline
-  def retro: typingsSlinky.reactGravatar.reactGravatarStrings.retro = this.cast("retro")
-  @scala.inline
-  def wavatar: typingsSlinky.reactGravatar.reactGravatarStrings.wavatar = this.cast("wavatar")
+  def wavatar: typingsSlinky.reactGravatar.reactGravatarStrings.wavatar = "wavatar".asInstanceOf[typingsSlinky.reactGravatar.reactGravatarStrings.wavatar]
 }
 

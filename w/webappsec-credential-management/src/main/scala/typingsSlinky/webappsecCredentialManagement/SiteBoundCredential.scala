@@ -21,20 +21,9 @@ abstract class SiteBoundCredential () extends Credential {
     */
   val iconURL: String | Null = js.native
   /**
-    * The credential’s identifier. This might be a GUID, username, or email
-    * address, for instance.
-    */
-  /* CompleteClass */
-  override val id: String = js.native
-  /**
     * A name associated with the credential, intended as a human-understandable
     * public name.
     */
   val name: String | Null = js.native
-  /**
-    * The credential’s type.
-    */
-  /* CompleteClass */
-  override val `type`: String = js.native
 }
 

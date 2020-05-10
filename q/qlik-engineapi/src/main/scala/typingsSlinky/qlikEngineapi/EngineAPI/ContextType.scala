@@ -26,12 +26,10 @@ trait ContextType extends js.Object
 
 object ContextType {
   @scala.inline
-  def Cleared: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.Cleared = this.cast("Cleared")
+  def Cleared: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.Cleared = "Cleared".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.Cleared]
   @scala.inline
-  def CurrentSelections: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CurrentSelections = this.cast("CurrentSelections")
+  def CurrentSelections: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CurrentSelections = "CurrentSelections".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CurrentSelections]
   @scala.inline
-  def LockedFieldsOnly: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.LockedFieldsOnly = this.cast("LockedFieldsOnly")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def LockedFieldsOnly: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.LockedFieldsOnly = "LockedFieldsOnly".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.LockedFieldsOnly]
 }
 

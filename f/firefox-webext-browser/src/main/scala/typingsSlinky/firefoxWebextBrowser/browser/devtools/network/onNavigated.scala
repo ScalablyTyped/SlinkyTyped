@@ -13,5 +13,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("browser.devtools.network.onNavigated")
 @js.native
 object onNavigated
-  extends TopLevel[WebExtEvent[js.Function1[/* url */ String, Unit]]]
+  extends TopLevel[WebExtEvent[js.Function1[/* command */ String, Unit]]]
 

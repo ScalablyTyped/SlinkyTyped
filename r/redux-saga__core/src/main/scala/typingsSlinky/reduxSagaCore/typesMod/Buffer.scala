@@ -5,8 +5,6 @@ import typingsSlinky.node.AnonValueOf
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.SharedArrayBuffer
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +27,7 @@ class Buffer protected ()
     * @param arrayBuffer The ArrayBuffer with which to share memory.
     * @deprecated since v10.0.0 - Use `Buffer.from(arrayBuffer[, byteOffset[, length]])` instead.
     */
-  def this(arrayBuffer: scala.scalajs.js.typedarray.ArrayBuffer) = this()
+  def this(arrayBuffer: js.typedarray.ArrayBuffer) = this()
   /**
     * Allocates a new buffer containing the given {array} of octets.
     *
@@ -43,7 +41,7 @@ class Buffer protected ()
     * @param array The octets to store.
     * @deprecated since v10.0.0 - Use `Buffer.from(array)` instead.
     */
-  def this(array: scala.scalajs.js.typedarray.Uint8Array) = this()
+  def this(array: js.typedarray.Uint8Array) = this()
   /**
     * Copies the passed {buffer} data onto a new {Buffer} instance.
     *
@@ -119,12 +117,12 @@ object Buffer extends js.Object {
   def byteLength(string: ArrayBufferView, encoding: BufferEncoding): Double = js.native
   def byteLength(string: SharedArrayBuffer): Double = js.native
   def byteLength(string: SharedArrayBuffer, encoding: BufferEncoding): Double = js.native
-  def byteLength(string: ArrayBuffer): Double = js.native
-  def byteLength(string: ArrayBuffer, encoding: BufferEncoding): Double = js.native
+  def byteLength(string: js.typedarray.ArrayBuffer): Double = js.native
+  def byteLength(string: js.typedarray.ArrayBuffer, encoding: BufferEncoding): Double = js.native
   /**
     * The same as buf1.compare(buf2).
     */
-  def compare(buf1: scala.scalajs.js.typedarray.Uint8Array, buf2: scala.scalajs.js.typedarray.Uint8Array): Double = js.native
+  def compare(buf1: js.typedarray.Uint8Array, buf2: js.typedarray.Uint8Array): Double = js.native
   /**
     * Returns a buffer which is the result of concatenating all the buffers in the list together.
     *
@@ -136,8 +134,8 @@ object Buffer extends js.Object {
     * @param totalLength Total length of the buffers when concatenated.
     *   If totalLength is not provided, it is read from the buffers in the list. However, this adds an additional loop to the function, so it is faster to provide the length explicitly.
     */
-  def concat(list: js.Array[scala.scalajs.js.typedarray.Uint8Array]): typingsSlinky.node.Buffer = js.native
-  def concat(list: js.Array[scala.scalajs.js.typedarray.Uint8Array], totalLength: Double): typingsSlinky.node.Buffer = js.native
+  def concat(list: js.Array[js.typedarray.Uint8Array]): typingsSlinky.node.Buffer = js.native
+  def concat(list: js.Array[js.typedarray.Uint8Array], totalLength: Double): typingsSlinky.node.Buffer = js.native
   def from(arrayBuffer: SharedArrayBuffer): typingsSlinky.node.Buffer = js.native
   def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double): typingsSlinky.node.Buffer = js.native
   def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
@@ -149,15 +147,15 @@ object Buffer extends js.Object {
     *
     * @param arrayBuffer The .buffer property of any TypedArray or a new ArrayBuffer()
     */
-  def from(arrayBuffer: ArrayBuffer): typingsSlinky.node.Buffer = js.native
-  def from(arrayBuffer: ArrayBuffer, byteOffset: Double): typingsSlinky.node.Buffer = js.native
-  def from(arrayBuffer: ArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
+  def from(arrayBuffer: js.typedarray.ArrayBuffer): typingsSlinky.node.Buffer = js.native
+  def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double): typingsSlinky.node.Buffer = js.native
+  def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
   /**
     * Creates a new Buffer using the passed {data}
     * @param data data to create a new Buffer
     */
   def from(data: js.Array[Double]): typingsSlinky.node.Buffer = js.native
-  def from(data: Uint8Array): typingsSlinky.node.Buffer = js.native
+  def from(data: js.typedarray.Uint8Array): typingsSlinky.node.Buffer = js.native
   def from(obj: AnonToPrimitive): typingsSlinky.node.Buffer = js.native
   def from(obj: AnonToPrimitive, byteOffset: Double): typingsSlinky.node.Buffer = js.native
   def from(obj: AnonToPrimitive, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native

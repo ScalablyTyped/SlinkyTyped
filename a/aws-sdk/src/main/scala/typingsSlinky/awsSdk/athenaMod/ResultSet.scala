@@ -18,11 +18,41 @@ trait ResultSet extends js.Object {
 
 object ResultSet {
   @scala.inline
-  def apply(ResultSetMetadata: ResultSetMetadata = null, Rows: RowList = null): ResultSet = {
+  def apply(): ResultSet = {
     val __obj = js.Dynamic.literal()
-    if (ResultSetMetadata != null) __obj.updateDynamic("ResultSetMetadata")(ResultSetMetadata.asInstanceOf[js.Any])
-    if (Rows != null) __obj.updateDynamic("Rows")(Rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResultSet]
   }
+  @scala.inline
+  implicit class ResultSetOps[Self <: ResultSet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResultSetMetadata(value: ResultSetMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultSetMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResultSetMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultSetMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: RowList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rows")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

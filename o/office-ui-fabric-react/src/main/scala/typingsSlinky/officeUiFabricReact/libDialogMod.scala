@@ -24,8 +24,10 @@ object libDialogMod extends js.Object {
   }
   
   @js.native
-  class DialogFooterBase ()
-    extends typingsSlinky.officeUiFabricReact.dialogFooterBaseMod.DialogFooterBase
+  class DialogFooterBase protected ()
+    extends typingsSlinky.officeUiFabricReact.dialogMod.DialogFooterBase {
+    def this(props: IDialogFooterProps) = this()
+  }
   
   val Dialog: ReactComponentClass[IDialogProps] = js.native
   val DialogContent: ReactComponentClass[IDialogContentProps] = js.native

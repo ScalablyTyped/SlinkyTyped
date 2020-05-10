@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonChannel extends js.Object {
-  var channel: js.UndefOr[String] = js.undefined
-  var context: js.UndefOr[js.Any] = js.undefined
-  var topic: js.UndefOr[String] = js.undefined
+  var channel: js.UndefOr[String] = js.native
+  var context: js.UndefOr[js.Any] = js.native
+  var topic: js.UndefOr[String] = js.native
 }
 
 object AnonChannel {
   @scala.inline
-  def apply(channel: String = null, context: js.Any = null, topic: String = null): AnonChannel = {
+  def apply(): AnonChannel = {
     val __obj = js.Dynamic.literal()
-    if (channel != null) __obj.updateDynamic("channel")(channel.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (topic != null) __obj.updateDynamic("topic")(topic.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonChannel]
   }
+  @scala.inline
+  implicit class AnonChannelOps[Self <: AnonChannel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChannel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContext(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopic(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

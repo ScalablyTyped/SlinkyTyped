@@ -1,11 +1,9 @@
 package typingsSlinky.recharts.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.recharts.mod.AxisDomain
 import typingsSlinky.recharts.mod.AxisInterval
 import typingsSlinky.recharts.mod.ContentRenderer
@@ -23,106 +21,112 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object YAxis
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.YAxis] {
+object YAxis {
   @JSImport("recharts", "YAxis")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: reversed */
-  def apply(
-    allowDataOverflow: js.UndefOr[Boolean] = js.undefined,
-    allowDecimals: js.UndefOr[Boolean] = js.undefined,
-    angle: Int | Double = null,
-    axisLine: Boolean | js.Object = null,
-    dataKey: DataKey = null,
-    domain: js.Tuple2[AxisDomain, AxisDomain] = null,
-    dx: Int | Double = null,
-    dy: Int | Double = null,
-    height: Int | Double = null,
-    hide: js.UndefOr[Boolean] = js.undefined,
-    interval: AxisInterval = null,
-    label: String | Double | typingsSlinky.recharts.mod.Label | LabelProps = null,
-    minTickGap: Int | Double = null,
-    mirror: js.UndefOr[Boolean] = js.undefined,
-    name: String | Double = null,
-    onClick: /* repeated */ js.Any => Unit = null,
-    onMouseDown: /* repeated */ js.Any => Unit = null,
-    onMouseEnter: /* repeated */ js.Any => Unit = null,
-    onMouseLeave: /* repeated */ js.Any => Unit = null,
-    onMouseMove: /* repeated */ js.Any => Unit = null,
-    onMouseOut: /* repeated */ js.Any => Unit = null,
-    onMouseOver: /* repeated */ js.Any => Unit = null,
-    onMouseUp: /* repeated */ js.Any => Unit = null,
-    onTouchCancel: /* repeated */ js.Any => Unit = null,
-    onTouchEnd: /* repeated */ js.Any => Unit = null,
-    onTouchMove: /* repeated */ js.Any => Unit = null,
-    onTouchStart: /* repeated */ js.Any => Unit = null,
-    orientation: left | right = null,
-    padding: YPadding = null,
-    scale: ScaleType | RechartsFunction = null,
-    stroke: String = null,
-    tick: Boolean | ContentRenderer[_] | js.Object | ReactElement = null,
-    tickCount: Int | Double = null,
-    tickFormatter: /* value */ js.Any => js.Any = null,
-    tickLine: Boolean | js.Object = null,
-    tickMargin: Int | Double = null,
-    tickSize: Int | Double = null,
-    ticks: js.Array[_] = null,
-    `type`: number | category = null,
-    unit: String | Double = null,
-    width: Int | Double = null,
-    yAxisId: String | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.YAxis] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowDataOverflow)) __obj.updateDynamic("allowDataOverflow")(allowDataOverflow.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowDecimals)) __obj.updateDynamic("allowDecimals")(allowDecimals.asInstanceOf[js.Any])
-    if (angle != null) __obj.updateDynamic("angle")(angle.asInstanceOf[js.Any])
-    if (axisLine != null) __obj.updateDynamic("axisLine")(axisLine.asInstanceOf[js.Any])
-    if (dataKey != null) __obj.updateDynamic("dataKey")(dataKey.asInstanceOf[js.Any])
-    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
-    if (dx != null) __obj.updateDynamic("dx")(dx.asInstanceOf[js.Any])
-    if (dy != null) __obj.updateDynamic("dy")(dy.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(hide)) __obj.updateDynamic("hide")(hide.asInstanceOf[js.Any])
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (minTickGap != null) __obj.updateDynamic("minTickGap")(minTickGap.asInstanceOf[js.Any])
-    if (!js.isUndefined(mirror)) __obj.updateDynamic("mirror")(mirror.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
-    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(js.Any.fromFunction1(onMouseOut))
-    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(js.Any.fromFunction1(onMouseOver))
-    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
-    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
-    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
-    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
-    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (tick != null) __obj.updateDynamic("tick")(tick.asInstanceOf[js.Any])
-    if (tickCount != null) __obj.updateDynamic("tickCount")(tickCount.asInstanceOf[js.Any])
-    if (tickFormatter != null) __obj.updateDynamic("tickFormatter")(js.Any.fromFunction1(tickFormatter))
-    if (tickLine != null) __obj.updateDynamic("tickLine")(tickLine.asInstanceOf[js.Any])
-    if (tickMargin != null) __obj.updateDynamic("tickMargin")(tickMargin.asInstanceOf[js.Any])
-    if (tickSize != null) __obj.updateDynamic("tickSize")(tickSize.asInstanceOf[js.Any])
-    if (ticks != null) __obj.updateDynamic("ticks")(ticks.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (yAxisId != null) __obj.updateDynamic("yAxisId")(yAxisId.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.recharts.mod.YAxis] {
+    @scala.inline
+    def allowDataOverflow(value: Boolean): this.type = set("allowDataOverflow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def allowDecimals(value: Boolean): this.type = set("allowDecimals", value.asInstanceOf[js.Any])
+    @scala.inline
+    def angle(value: Double): this.type = set("angle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisLine(value: Boolean | js.Object): this.type = set("axisLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataKeyFunction1(value: /* dataObject */ js.Any => String | Double | (js.Tuple2[Double, Double]) | Null): this.type = set("dataKey", js.Any.fromFunction1(value))
+    @scala.inline
+    def dataKey(value: DataKey): this.type = set("dataKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def domain(value: js.Tuple2[AxisDomain, AxisDomain]): this.type = set("domain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dx(value: Double): this.type = set("dx", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dy(value: Double): this.type = set("dy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hide(value: Boolean): this.type = set("hide", value.asInstanceOf[js.Any])
+    @scala.inline
+    def interval(value: AxisInterval): this.type = set("interval", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String | Double | typingsSlinky.recharts.mod.Label | LabelProps): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minTickGap(value: Double): this.type = set("minTickGap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mirror(value: Boolean): this.type = set("mirror", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String | Double): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* repeated */ js.Any => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseDown(value: /* repeated */ js.Any => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseEnter(value: /* repeated */ js.Any => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseLeave(value: /* repeated */ js.Any => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseMove(value: /* repeated */ js.Any => Unit): this.type = set("onMouseMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseOut(value: /* repeated */ js.Any => Unit): this.type = set("onMouseOut", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseOver(value: /* repeated */ js.Any => Unit): this.type = set("onMouseOver", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseUp(value: /* repeated */ js.Any => Unit): this.type = set("onMouseUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchCancel(value: /* repeated */ js.Any => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchEnd(value: /* repeated */ js.Any => Unit): this.type = set("onTouchEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchMove(value: /* repeated */ js.Any => Unit): this.type = set("onTouchMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchStart(value: /* repeated */ js.Any => Unit): this.type = set("onTouchStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def orientation(value: left | right): this.type = set("orientation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def padding(value: YPadding): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def reversed(value: Boolean): this.type = set("reversed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scaleFunction1(value: /* repeated */ js.Any => Unit): this.type = set("scale", js.Any.fromFunction1(value))
+    @scala.inline
+    def scale(value: ScaleType | RechartsFunction): this.type = set("scale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stroke(value: String): this.type = set("stroke", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tickReactElement(value: ReactElement): this.type = set("tick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tickFunction1(value: _ => TagMod[Any]): this.type = set("tick", js.Any.fromFunction1(value))
+    @scala.inline
+    def tick(value: Boolean | ContentRenderer[_] | js.Object | ReactElement): this.type = set("tick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tickCount(value: Double): this.type = set("tickCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tickFormatter(value: /* value */ js.Any => js.Any): this.type = set("tickFormatter", js.Any.fromFunction1(value))
+    @scala.inline
+    def tickLine(value: Boolean | js.Object): this.type = set("tickLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tickMargin(value: Double): this.type = set("tickMargin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tickSize(value: Double): this.type = set("tickSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ticks(value: js.Array[_]): this.type = set("ticks", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: number | category): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unit(value: String | Double): this.type = set("unit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yAxisId(value: String | Double): this.type = set("yAxisId", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.mod.YAxis] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.mod.YAxis](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = YAxisProps
+  
+  def withProps(p: YAxisProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: YAxis.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

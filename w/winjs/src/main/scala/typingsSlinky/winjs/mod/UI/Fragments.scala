@@ -1,6 +1,6 @@
 package typingsSlinky.winjs.mod.UI
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.winjs.WinJS.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -31,17 +31,17 @@ object Fragments extends js.Object {
     * @param element Optional. The element to which the fragment is appended.
     * @returns A promise that is fulfilled when the fragment has been loaded. If a target element is not specified, the copied fragment is the completed value. The element is not added to the cache. See also rendercopy, where the element is added to the cache.
     **/
-  def render(href: String): Promise[org.scalajs.dom.raw.HTMLElement] = js.native
-  def render(href: String, element: org.scalajs.dom.raw.HTMLElement): Promise[org.scalajs.dom.raw.HTMLElement] = js.native
+  def render(href: String): Promise[HTMLElement] = js.native
+  def render(href: String, element: HTMLElement): Promise[HTMLElement] = js.native
   /**
     * Loads and copies the contents of the specified URI into the specified element.
     * @param href The URI that contains the fragment to copy.
     * @param target The element to which the fragment is appended.
     * @returns A promise that is fulfilled when the fragment has been loaded. If a target element is not specified, the copied fragment is the completed value. The fragment is added to the cache. See also render, where the element is not added to the cache.
     **/
-  def renderCopy(href: String): Promise[org.scalajs.dom.raw.HTMLElement] = js.native
-  def renderCopy(href: String, target: org.scalajs.dom.raw.HTMLElement): Promise[org.scalajs.dom.raw.HTMLElement] = js.native
-  def renderCopy(href: HTMLElement): Promise[org.scalajs.dom.raw.HTMLElement] = js.native
-  def renderCopy(href: HTMLElement, target: org.scalajs.dom.raw.HTMLElement): Promise[org.scalajs.dom.raw.HTMLElement] = js.native
+  def renderCopy(href: String): Promise[HTMLElement] = js.native
+  def renderCopy(href: String, target: HTMLElement): Promise[HTMLElement] = js.native
+  def renderCopy(href: HTMLElement): Promise[HTMLElement] = js.native
+  def renderCopy(href: HTMLElement, target: HTMLElement): Promise[HTMLElement] = js.native
 }
 

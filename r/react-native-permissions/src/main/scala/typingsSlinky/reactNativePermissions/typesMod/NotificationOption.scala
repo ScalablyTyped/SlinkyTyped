@@ -16,18 +16,16 @@ trait NotificationOption extends js.Object
 
 object NotificationOption {
   @scala.inline
-  def alert: typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.alert = this.cast("alert")
+  def alert: typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.alert = "alert".asInstanceOf[typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.alert]
   @scala.inline
-  def badge: typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.badge = this.cast("badge")
+  def badge: typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.badge = "badge".asInstanceOf[typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.badge]
   @scala.inline
-  def carPlay: typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.carPlay = this.cast("carPlay")
+  def carPlay: typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.carPlay = "carPlay".asInstanceOf[typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.carPlay]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def criticalAlert: typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.criticalAlert = "criticalAlert".asInstanceOf[typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.criticalAlert]
   @scala.inline
-  def criticalAlert: typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.criticalAlert = this.cast("criticalAlert")
+  def provisional: typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.provisional = "provisional".asInstanceOf[typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.provisional]
   @scala.inline
-  def provisional: typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.provisional = this.cast("provisional")
-  @scala.inline
-  def sound: typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.sound = this.cast("sound")
+  def sound: typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.sound = "sound".asInstanceOf[typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.sound]
 }
 

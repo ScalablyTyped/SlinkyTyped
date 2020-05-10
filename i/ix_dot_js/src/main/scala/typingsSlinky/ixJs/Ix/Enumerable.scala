@@ -1,7 +1,6 @@
 package typingsSlinky.ixJs.Ix
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,9 +43,9 @@ trait Enumerable[T] extends js.Object {
   def average(selector: EnumerableFunc[T, Double]): Double = js.native
   def bufferWithCount(count: Double): Enumerable[T] = js.native
   def bufferWithCount(count: Double, skip: Double): Enumerable[T] = js.native
-  def `catch`(handler: js.Function1[/* error */ Error, Enumerable[T]]): Enumerable[T] = js.native
+  def `catch`(handler: js.Function1[/* error */ js.Error, Enumerable[T]]): Enumerable[T] = js.native
   def `catch`(second: Enumerable[T], other: Enumerable[T]*): Enumerable[T] = js.native
-  def catchException(handler: js.Function1[/* error */ Error, Enumerable[T]]): Enumerable[T] = js.native
+  def catchException(handler: js.Function1[/* error */ js.Error, Enumerable[T]]): Enumerable[T] = js.native
   def catchException(second: Enumerable[T], other: Enumerable[T]*): Enumerable[T] = js.native
   def concat[T](sources: Enumerable[T]*): Enumerable[T] = js.native
   def contains(value: T): Boolean = js.native

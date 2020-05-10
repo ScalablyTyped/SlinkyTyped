@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CreateTableRequest extends js.Object {
   /** Number of columns in the table. */
-  var columns: js.UndefOr[Double] = js.undefined
+  var columns: js.UndefOr[Double] = js.native
   /**
     * The element properties for the table.
     *
@@ -16,7 +17,7 @@ trait CreateTableRequest extends js.Object {
     * Table transforms must have a scale of 1 and no shear components. If no
     * transform is provided, the table will be centered on the page.
     */
-  var elementProperties: js.UndefOr[PageElementProperties] = js.undefined
+  var elementProperties: js.UndefOr[PageElementProperties] = js.native
   /**
     * A user-supplied object ID.
     *
@@ -29,25 +30,72 @@ trait CreateTableRequest extends js.Object {
     *
     * If you don't specify an ID, a unique one is generated.
     */
-  var objectId: js.UndefOr[String] = js.undefined
+  var objectId: js.UndefOr[String] = js.native
   /** Number of rows in the table. */
-  var rows: js.UndefOr[Double] = js.undefined
+  var rows: js.UndefOr[Double] = js.native
 }
 
 object CreateTableRequest {
   @scala.inline
-  def apply(
-    columns: Int | Double = null,
-    elementProperties: PageElementProperties = null,
-    objectId: String = null,
-    rows: Int | Double = null
-  ): CreateTableRequest = {
+  def apply(): CreateTableRequest = {
     val __obj = js.Dynamic.literal()
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (elementProperties != null) __obj.updateDynamic("elementProperties")(elementProperties.asInstanceOf[js.Any])
-    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateTableRequest]
   }
+  @scala.inline
+  implicit class CreateTableRequestOps[Self <: CreateTableRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumns(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElementProperties(value: PageElementProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElementProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

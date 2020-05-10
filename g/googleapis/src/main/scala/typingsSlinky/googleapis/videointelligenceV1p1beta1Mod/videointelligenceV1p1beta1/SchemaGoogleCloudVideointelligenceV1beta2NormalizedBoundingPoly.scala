@@ -24,10 +24,29 @@ trait SchemaGoogleCloudVideointelligenceV1beta2NormalizedBoundingPoly extends js
 
 object SchemaGoogleCloudVideointelligenceV1beta2NormalizedBoundingPoly {
   @scala.inline
-  def apply(vertices: js.Array[SchemaGoogleCloudVideointelligenceV1beta2NormalizedVertex] = null): SchemaGoogleCloudVideointelligenceV1beta2NormalizedBoundingPoly = {
+  def apply(): SchemaGoogleCloudVideointelligenceV1beta2NormalizedBoundingPoly = {
     val __obj = js.Dynamic.literal()
-    if (vertices != null) __obj.updateDynamic("vertices")(vertices.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1beta2NormalizedBoundingPoly]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVideointelligenceV1beta2NormalizedBoundingPolyOps[Self <: SchemaGoogleCloudVideointelligenceV1beta2NormalizedBoundingPoly] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVertices(value: js.Array[SchemaGoogleCloudVideointelligenceV1beta2NormalizedVertex]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVertices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertices")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

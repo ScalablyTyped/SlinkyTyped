@@ -38,24 +38,101 @@ trait GatewayInfo extends js.Object {
 
 object GatewayInfo {
   @scala.inline
-  def apply(
-    Ec2InstanceId: Ec2InstanceId = null,
-    Ec2InstanceRegion: Ec2InstanceRegion = null,
-    GatewayARN: GatewayARN = null,
-    GatewayId: GatewayId = null,
-    GatewayName: String = null,
-    GatewayOperationalState: GatewayOperationalState = null,
-    GatewayType: GatewayType = null
-  ): GatewayInfo = {
+  def apply(): GatewayInfo = {
     val __obj = js.Dynamic.literal()
-    if (Ec2InstanceId != null) __obj.updateDynamic("Ec2InstanceId")(Ec2InstanceId.asInstanceOf[js.Any])
-    if (Ec2InstanceRegion != null) __obj.updateDynamic("Ec2InstanceRegion")(Ec2InstanceRegion.asInstanceOf[js.Any])
-    if (GatewayARN != null) __obj.updateDynamic("GatewayARN")(GatewayARN.asInstanceOf[js.Any])
-    if (GatewayId != null) __obj.updateDynamic("GatewayId")(GatewayId.asInstanceOf[js.Any])
-    if (GatewayName != null) __obj.updateDynamic("GatewayName")(GatewayName.asInstanceOf[js.Any])
-    if (GatewayOperationalState != null) __obj.updateDynamic("GatewayOperationalState")(GatewayOperationalState.asInstanceOf[js.Any])
-    if (GatewayType != null) __obj.updateDynamic("GatewayType")(GatewayType.asInstanceOf[js.Any])
     __obj.asInstanceOf[GatewayInfo]
   }
+  @scala.inline
+  implicit class GatewayInfoOps[Self <: GatewayInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEc2InstanceId(value: Ec2InstanceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ec2InstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEc2InstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ec2InstanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEc2InstanceRegion(value: Ec2InstanceRegion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ec2InstanceRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEc2InstanceRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ec2InstanceRegion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayARN(value: GatewayARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayId(value: GatewayId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayOperationalState(value: GatewayOperationalState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayOperationalState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayOperationalState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayOperationalState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayType(value: GatewayType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

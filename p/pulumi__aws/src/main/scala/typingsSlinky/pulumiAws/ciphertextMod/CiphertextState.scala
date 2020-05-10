@@ -28,18 +28,65 @@ trait CiphertextState extends js.Object {
 
 object CiphertextState {
   @scala.inline
-  def apply(
-    ciphertextBlob: Input[String] = null,
-    context: Input[StringDictionary[Input[String]]] = null,
-    keyId: Input[String] = null,
-    plaintext: Input[String] = null
-  ): CiphertextState = {
+  def apply(): CiphertextState = {
     val __obj = js.Dynamic.literal()
-    if (ciphertextBlob != null) __obj.updateDynamic("ciphertextBlob")(ciphertextBlob.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (keyId != null) __obj.updateDynamic("keyId")(keyId.asInstanceOf[js.Any])
-    if (plaintext != null) __obj.updateDynamic("plaintext")(plaintext.asInstanceOf[js.Any])
     __obj.asInstanceOf[CiphertextState]
   }
+  @scala.inline
+  implicit class CiphertextStateOps[Self <: CiphertextState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCiphertextBlob(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ciphertextBlob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCiphertextBlob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ciphertextBlob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContext(value: Input[StringDictionary[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaintext(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plaintext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaintext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plaintext")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

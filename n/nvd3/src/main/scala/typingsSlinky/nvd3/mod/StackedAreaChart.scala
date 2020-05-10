@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.nvd3.mod.Nvd3Element because Already inherited
 - typingsSlinky.nvd3.mod.Chart because var conflicts: dispatch. Inlined state, interactiveLayer */ @js.native
 trait StackedAreaChart extends StackedArea {

@@ -33,62 +33,205 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ISourceCreationOptions extends IDataOptionsWithMetadata {
-  var amount: js.UndefOr[Double] = js.undefined
-  var currency: js.UndefOr[String] = js.undefined
-  var flow: js.UndefOr[redirect | receiver | code_verification | none] = js.undefined
-  var ideal: js.UndefOr[AnonBank] = js.undefined
-  var mandate: js.UndefOr[AnonAcceptance] = js.undefined
+  var amount: js.UndefOr[Double] = js.native
+  var currency: js.UndefOr[String] = js.native
+  var flow: js.UndefOr[redirect | receiver | code_verification | none] = js.native
+  var ideal: js.UndefOr[AnonBank] = js.native
+  var mandate: js.UndefOr[AnonAcceptance] = js.native
   @JSName("metadata")
-  var metadata_ISourceCreationOptions: js.UndefOr[IMetadata] = js.undefined
-  var owner: js.UndefOr[AnonAddressEmail] = js.undefined
-  var receiver: js.UndefOr[AnonRefundattributesmethod] = js.undefined
-  var redirect: js.UndefOr[AnonReturnurlString] = js.undefined
-  var sepa_debit: js.UndefOr[AnonIban] = js.undefined
-  var statement_descriptor: js.UndefOr[String] = js.undefined
-  var token: js.UndefOr[String] = js.undefined
-  var `type`: ach_credit_transfer | ach_debit | alipay | bancontact | card | card_present | eps | giropay | ideal | multibanco | p24 | sepa_debit | sofort | three_d_secure | wechat
-  var usage: js.UndefOr[reusable | single_use] = js.undefined
+  var metadata_ISourceCreationOptions: js.UndefOr[IMetadata] = js.native
+  var owner: js.UndefOr[AnonAddressEmail] = js.native
+  var receiver: js.UndefOr[AnonRefundattributesmethod] = js.native
+  var redirect: js.UndefOr[AnonReturnurlString] = js.native
+  var sepa_debit: js.UndefOr[AnonIban] = js.native
+  var statement_descriptor: js.UndefOr[String] = js.native
+  var token: js.UndefOr[String] = js.native
+  var `type`: ach_credit_transfer | ach_debit | alipay | bancontact | card | card_present | eps | giropay | ideal | multibanco | p24 | sepa_debit | sofort | three_d_secure | wechat = js.native
+  var usage: js.UndefOr[reusable | single_use] = js.native
 }
 
 object ISourceCreationOptions {
   @scala.inline
   def apply(
-    `type`: ach_credit_transfer | ach_debit | alipay | bancontact | card | card_present | eps | giropay | ideal | multibanco | p24 | sepa_debit | sofort | three_d_secure | wechat,
-    amount: Int | Double = null,
-    currency: String = null,
-    expand: js.Array[String] = null,
-    flow: redirect | receiver | code_verification | none = null,
-    ideal: AnonBank = null,
-    include: js.Array[String] = null,
-    mandate: AnonAcceptance = null,
-    metadata: IMetadata = null,
-    owner: AnonAddressEmail = null,
-    receiver: AnonRefundattributesmethod = null,
-    redirect: AnonReturnurlString = null,
-    sepa_debit: AnonIban = null,
-    statement_descriptor: String = null,
-    token: String = null,
-    usage: reusable | single_use = null
+    `type`: ach_credit_transfer | ach_debit | alipay | bancontact | card | card_present | eps | giropay | ideal | multibanco | p24 | sepa_debit | sofort | three_d_secure | wechat
   ): ISourceCreationOptions = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (amount != null) __obj.updateDynamic("amount")(amount.asInstanceOf[js.Any])
-    if (currency != null) __obj.updateDynamic("currency")(currency.asInstanceOf[js.Any])
-    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
-    if (flow != null) __obj.updateDynamic("flow")(flow.asInstanceOf[js.Any])
-    if (ideal != null) __obj.updateDynamic("ideal")(ideal.asInstanceOf[js.Any])
-    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
-    if (mandate != null) __obj.updateDynamic("mandate")(mandate.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
-    if (receiver != null) __obj.updateDynamic("receiver")(receiver.asInstanceOf[js.Any])
-    if (redirect != null) __obj.updateDynamic("redirect")(redirect.asInstanceOf[js.Any])
-    if (sepa_debit != null) __obj.updateDynamic("sepa_debit")(sepa_debit.asInstanceOf[js.Any])
-    if (statement_descriptor != null) __obj.updateDynamic("statement_descriptor")(statement_descriptor.asInstanceOf[js.Any])
-    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
-    if (usage != null) __obj.updateDynamic("usage")(usage.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISourceCreationOptions]
   }
+  @scala.inline
+  implicit class ISourceCreationOptionsOps[Self <: ISourceCreationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(
+      value: ach_credit_transfer | ach_debit | alipay | bancontact | card | card_present | eps | giropay | ideal | multibanco | p24 | sepa_debit | sofort | three_d_secure | wechat
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAmount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrency(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlow(value: redirect | receiver | code_verification | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdeal(value: AnonBank): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ideal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdeal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ideal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMandate(value: AnonAcceptance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mandate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMandate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mandate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: IMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwner(value: AnonAddressEmail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReceiver(value: AnonRefundattributesmethod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("receiver")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReceiver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("receiver")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRedirect(value: AnonReturnurlString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRedirect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSepa_debit(value: AnonIban): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sepa_debit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSepa_debit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sepa_debit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatement_descriptor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statement_descriptor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatement_descriptor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statement_descriptor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsage(value: reusable | single_use): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

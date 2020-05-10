@@ -8,93 +8,367 @@ import scala.scalajs.js.annotation._
 // See:
 // 1) https://github.com/brianc/node-postgres/blob/master/lib/defaults.js
 // 2) https://github.com/brianc/node-pg-pool
+@js.native
 trait IConnectionParameters[C /* <: IClient */] extends js.Object {
-  var Client: js.UndefOr[Instantiable1[/* config */ String | IConnectionParameters[IClient], C]] = js.undefined
-  var application_name: js.UndefOr[String] = js.undefined
-  var binary: js.UndefOr[Boolean] = js.undefined
-  var client_encoding: js.UndefOr[String] = js.undefined
-  var connect_timeout: js.UndefOr[Double] = js.undefined
-  var connectionString: js.UndefOr[String] = js.undefined
-  var database: js.UndefOr[String] = js.undefined
-  var encoding: js.UndefOr[String] = js.undefined
-  var fallback_application_name: js.UndefOr[String] = js.undefined
-  var host: js.UndefOr[String] = js.undefined
-  var idleTimeoutMillis: js.UndefOr[Double] = js.undefined
-  var isDomainSocket: js.UndefOr[Boolean] = js.undefined
-  var keepAlive: js.UndefOr[Boolean] = js.undefined
-  var keepAliveInitialDelayMillis: js.UndefOr[Double] = js.undefined
-  var keepalives: js.UndefOr[Double] = js.undefined
-  var keepalives_idle: js.UndefOr[Double] = js.undefined
-  var max: js.UndefOr[Double] = js.undefined
-  var min: js.UndefOr[Double] = js.undefined
-  var parseInputDatesAsUTC: js.UndefOr[Boolean] = js.undefined
-  var password: js.UndefOr[DynamicPassword] = js.undefined
-  var port: js.UndefOr[Double] = js.undefined
-  var query_timeout: js.UndefOr[Boolean | Double] = js.undefined
-  var rows: js.UndefOr[Double] = js.undefined
-  var ssl: js.UndefOr[Boolean | ISSLConfig] = js.undefined
-  var statement_timeout: js.UndefOr[Boolean | Double] = js.undefined
-  var user: js.UndefOr[String] = js.undefined
+  var Client: js.UndefOr[Instantiable1[/* config */ String | IConnectionParameters[IClient], C]] = js.native
+  var application_name: js.UndefOr[String] = js.native
+  var binary: js.UndefOr[Boolean] = js.native
+  var client_encoding: js.UndefOr[String] = js.native
+  var connect_timeout: js.UndefOr[Double] = js.native
+  var connectionString: js.UndefOr[String] = js.native
+  var database: js.UndefOr[String] = js.native
+  var encoding: js.UndefOr[String] = js.native
+  var fallback_application_name: js.UndefOr[String] = js.native
+  var host: js.UndefOr[String] = js.native
+  var idleTimeoutMillis: js.UndefOr[Double] = js.native
+  var isDomainSocket: js.UndefOr[Boolean] = js.native
+  var keepAlive: js.UndefOr[Boolean] = js.native
+  var keepAliveInitialDelayMillis: js.UndefOr[Double] = js.native
+  var keepalives: js.UndefOr[Double] = js.native
+  var keepalives_idle: js.UndefOr[Double] = js.native
+  var max: js.UndefOr[Double] = js.native
+  var min: js.UndefOr[Double] = js.native
+  var parseInputDatesAsUTC: js.UndefOr[Boolean] = js.native
+  var password: js.UndefOr[DynamicPassword] = js.native
+  var port: js.UndefOr[Double] = js.native
+  var query_timeout: js.UndefOr[Boolean | Double] = js.native
+  var rows: js.UndefOr[Double] = js.native
+  var ssl: js.UndefOr[Boolean | ISSLConfig] = js.native
+  var statement_timeout: js.UndefOr[Boolean | Double] = js.native
+  var user: js.UndefOr[String] = js.native
 }
 
 object IConnectionParameters {
   @scala.inline
-  def apply[C /* <: IClient */](
-    Client: Instantiable1[/* config */ String | IConnectionParameters[IClient], C] = null,
-    application_name: String = null,
-    binary: js.UndefOr[Boolean] = js.undefined,
-    client_encoding: String = null,
-    connect_timeout: Int | Double = null,
-    connectionString: String = null,
-    database: String = null,
-    encoding: String = null,
-    fallback_application_name: String = null,
-    host: String = null,
-    idleTimeoutMillis: Int | Double = null,
-    isDomainSocket: js.UndefOr[Boolean] = js.undefined,
-    keepAlive: js.UndefOr[Boolean] = js.undefined,
-    keepAliveInitialDelayMillis: Int | Double = null,
-    keepalives: Int | Double = null,
-    keepalives_idle: Int | Double = null,
-    max: Int | Double = null,
-    min: Int | Double = null,
-    parseInputDatesAsUTC: js.UndefOr[Boolean] = js.undefined,
-    password: DynamicPassword = null,
-    port: Int | Double = null,
-    query_timeout: Boolean | Double = null,
-    rows: Int | Double = null,
-    ssl: Boolean | ISSLConfig = null,
-    statement_timeout: Boolean | Double = null,
-    user: String = null
-  ): IConnectionParameters[C] = {
+  def apply[C](): IConnectionParameters[C] = {
     val __obj = js.Dynamic.literal()
-    if (Client != null) __obj.updateDynamic("Client")(Client.asInstanceOf[js.Any])
-    if (application_name != null) __obj.updateDynamic("application_name")(application_name.asInstanceOf[js.Any])
-    if (!js.isUndefined(binary)) __obj.updateDynamic("binary")(binary.asInstanceOf[js.Any])
-    if (client_encoding != null) __obj.updateDynamic("client_encoding")(client_encoding.asInstanceOf[js.Any])
-    if (connect_timeout != null) __obj.updateDynamic("connect_timeout")(connect_timeout.asInstanceOf[js.Any])
-    if (connectionString != null) __obj.updateDynamic("connectionString")(connectionString.asInstanceOf[js.Any])
-    if (database != null) __obj.updateDynamic("database")(database.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (fallback_application_name != null) __obj.updateDynamic("fallback_application_name")(fallback_application_name.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (idleTimeoutMillis != null) __obj.updateDynamic("idleTimeoutMillis")(idleTimeoutMillis.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDomainSocket)) __obj.updateDynamic("isDomainSocket")(isDomainSocket.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepAlive)) __obj.updateDynamic("keepAlive")(keepAlive.asInstanceOf[js.Any])
-    if (keepAliveInitialDelayMillis != null) __obj.updateDynamic("keepAliveInitialDelayMillis")(keepAliveInitialDelayMillis.asInstanceOf[js.Any])
-    if (keepalives != null) __obj.updateDynamic("keepalives")(keepalives.asInstanceOf[js.Any])
-    if (keepalives_idle != null) __obj.updateDynamic("keepalives_idle")(keepalives_idle.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (!js.isUndefined(parseInputDatesAsUTC)) __obj.updateDynamic("parseInputDatesAsUTC")(parseInputDatesAsUTC.asInstanceOf[js.Any])
-    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (query_timeout != null) __obj.updateDynamic("query_timeout")(query_timeout.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
-    if (ssl != null) __obj.updateDynamic("ssl")(ssl.asInstanceOf[js.Any])
-    if (statement_timeout != null) __obj.updateDynamic("statement_timeout")(statement_timeout.asInstanceOf[js.Any])
-    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[IConnectionParameters[C]]
   }
+  @scala.inline
+  implicit class IConnectionParametersOps[Self[c] <: IConnectionParameters[c], C] (val x: Self[C]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[C] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[C]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[C] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[C] with Other]
+    @scala.inline
+    def withClient(value: Instantiable1[/* config */ String | IConnectionParameters[IClient], C]): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Client")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClient: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Client")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApplication_name(value: String): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("application_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplication_name: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("application_name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBinary(value: Boolean): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBinary: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClient_encoding(value: String): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client_encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClient_encoding: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client_encoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnect_timeout(value: Double): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connect_timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnect_timeout: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connect_timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionString(value: String): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionString: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatabase(value: String): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabase: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncoding(value: String): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncoding: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFallback_application_name(value: String): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback_application_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFallback_application_name: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback_application_name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHost(value: String): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHost: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdleTimeoutMillis(value: Double): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idleTimeoutMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdleTimeoutMillis: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idleTimeoutMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDomainSocket(value: Boolean): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDomainSocket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDomainSocket: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDomainSocket")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepAlive(value: Boolean): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAlive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepAlive: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAlive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepAliveInitialDelayMillis(value: Double): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAliveInitialDelayMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepAliveInitialDelayMillis: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAliveInitialDelayMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepalives(value: Double): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepalives")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepalives: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepalives")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepalives_idle(value: Double): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepalives_idle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepalives_idle: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepalives_idle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParseInputDatesAsUTC(value: Boolean): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parseInputDatesAsUTC")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParseInputDatesAsUTC: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parseInputDatesAsUTC")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPasswordFunction0(value: () => js.Promise[String] | String): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPassword(value: DynamicPassword): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassword: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuery_timeout(value: Boolean | Double): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query_timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuery_timeout: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query_timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: Double): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSsl(value: Boolean | ISSLConfig): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSsl: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatement_timeout(value: Boolean | Double): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statement_timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatement_timeout: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statement_timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser(value: String): Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser: Self[C] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

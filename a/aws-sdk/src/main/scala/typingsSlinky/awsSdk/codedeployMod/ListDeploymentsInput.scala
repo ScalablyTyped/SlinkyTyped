@@ -30,20 +30,77 @@ trait ListDeploymentsInput extends js.Object {
 
 object ListDeploymentsInput {
   @scala.inline
-  def apply(
-    applicationName: ApplicationName = null,
-    createTimeRange: TimeRange = null,
-    deploymentGroupName: DeploymentGroupName = null,
-    includeOnlyStatuses: DeploymentStatusList = null,
-    nextToken: NextToken = null
-  ): ListDeploymentsInput = {
+  def apply(): ListDeploymentsInput = {
     val __obj = js.Dynamic.literal()
-    if (applicationName != null) __obj.updateDynamic("applicationName")(applicationName.asInstanceOf[js.Any])
-    if (createTimeRange != null) __obj.updateDynamic("createTimeRange")(createTimeRange.asInstanceOf[js.Any])
-    if (deploymentGroupName != null) __obj.updateDynamic("deploymentGroupName")(deploymentGroupName.asInstanceOf[js.Any])
-    if (includeOnlyStatuses != null) __obj.updateDynamic("includeOnlyStatuses")(includeOnlyStatuses.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDeploymentsInput]
   }
+  @scala.inline
+  implicit class ListDeploymentsInputOps[Self <: ListDeploymentsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationName(value: ApplicationName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateTimeRange(value: TimeRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTimeRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateTimeRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTimeRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeploymentGroupName(value: DeploymentGroupName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeploymentGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentGroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeOnlyStatuses(value: DeploymentStatusList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeOnlyStatuses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeOnlyStatuses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeOnlyStatuses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

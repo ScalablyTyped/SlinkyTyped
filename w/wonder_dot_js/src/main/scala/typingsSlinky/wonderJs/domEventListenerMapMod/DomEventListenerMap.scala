@@ -14,8 +14,8 @@ class DomEventListenerMap () extends EventListenerMap {
   def getChild(dom: HTMLElement): js.Any = js.native
   def getChild(dom: HTMLElement, eventName: EEventName): js.Any = js.native
   def hasChild(dom: HTMLElement, eventName: EEventName): Boolean = js.native
-  def removeChild(dom: typingsSlinky.std.HTMLElement, eventName: EEventName): js.Any = js.native
-  def removeChild(dom: typingsSlinky.std.HTMLElement, eventName: EEventName, handler: js.Function): js.Any = js.native
+  def removeChild(dom: HTMLElement, eventName: EEventName): js.Any = js.native
+  def removeChild(dom: HTMLElement, eventName: EEventName, handler: js.Function): js.Any = js.native
   def removeChild(eventName: EEventName): js.Any = js.native
   def removeChild(eventName: EEventName, handler: js.Function): js.Any = js.native
 }

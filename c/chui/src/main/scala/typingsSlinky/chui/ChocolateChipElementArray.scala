@@ -1,7 +1,7 @@
 package typingsSlinky.chui
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.std.Event_
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

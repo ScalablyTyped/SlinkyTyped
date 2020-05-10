@@ -26,18 +26,65 @@ trait AdminRespondToAuthChallengeResponse extends js.Object {
 
 object AdminRespondToAuthChallengeResponse {
   @scala.inline
-  def apply(
-    AuthenticationResult: AuthenticationResultType = null,
-    ChallengeName: ChallengeNameType = null,
-    ChallengeParameters: ChallengeParametersType = null,
-    Session: SessionType = null
-  ): AdminRespondToAuthChallengeResponse = {
+  def apply(): AdminRespondToAuthChallengeResponse = {
     val __obj = js.Dynamic.literal()
-    if (AuthenticationResult != null) __obj.updateDynamic("AuthenticationResult")(AuthenticationResult.asInstanceOf[js.Any])
-    if (ChallengeName != null) __obj.updateDynamic("ChallengeName")(ChallengeName.asInstanceOf[js.Any])
-    if (ChallengeParameters != null) __obj.updateDynamic("ChallengeParameters")(ChallengeParameters.asInstanceOf[js.Any])
-    if (Session != null) __obj.updateDynamic("Session")(Session.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdminRespondToAuthChallengeResponse]
   }
+  @scala.inline
+  implicit class AdminRespondToAuthChallengeResponseOps[Self <: AdminRespondToAuthChallengeResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthenticationResult(value: AuthenticationResultType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationResult")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthenticationResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationResult")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChallengeName(value: ChallengeNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChallengeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChallengeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChallengeName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChallengeParameters(value: ChallengeParametersType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChallengeParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChallengeParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChallengeParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSession(value: SessionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Session")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSession: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Session")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -50,30 +50,137 @@ trait ICD10CMEntity extends js.Object {
 
 object ICD10CMEntity {
   @scala.inline
-  def apply(
-    Attributes: ICD10CMAttributeList = null,
-    BeginOffset: Int | Double = null,
-    Category: ICD10CMEntityCategory = null,
-    EndOffset: Int | Double = null,
-    ICD10CMConcepts: ICD10CMConceptList = null,
-    Id: Int | Double = null,
-    Score: Int | Double = null,
-    Text: OntologyLinkingBoundedLengthString = null,
-    Traits: ICD10CMTraitList = null,
-    Type: ICD10CMEntityType = null
-  ): ICD10CMEntity = {
+  def apply(): ICD10CMEntity = {
     val __obj = js.Dynamic.literal()
-    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
-    if (BeginOffset != null) __obj.updateDynamic("BeginOffset")(BeginOffset.asInstanceOf[js.Any])
-    if (Category != null) __obj.updateDynamic("Category")(Category.asInstanceOf[js.Any])
-    if (EndOffset != null) __obj.updateDynamic("EndOffset")(EndOffset.asInstanceOf[js.Any])
-    if (ICD10CMConcepts != null) __obj.updateDynamic("ICD10CMConcepts")(ICD10CMConcepts.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (Score != null) __obj.updateDynamic("Score")(Score.asInstanceOf[js.Any])
-    if (Text != null) __obj.updateDynamic("Text")(Text.asInstanceOf[js.Any])
-    if (Traits != null) __obj.updateDynamic("Traits")(Traits.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICD10CMEntity]
   }
+  @scala.inline
+  implicit class ICD10CMEntityOps[Self <: ICD10CMEntity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributes(value: ICD10CMAttributeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeginOffset(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeginOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategory(value: ICD10CMEntityCategory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Category")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Category")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndOffset(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withICD10CMConcepts(value: ICD10CMConceptList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ICD10CMConcepts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutICD10CMConcepts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ICD10CMConcepts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScore(value: Float): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Score")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Score")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: OntologyLinkingBoundedLengthString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTraits(value: ICD10CMTraitList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Traits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTraits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Traits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: ICD10CMEntityType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

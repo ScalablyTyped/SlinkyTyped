@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IInputPaneStatics extends js.Object {
-  def getForCurrentView(): InputPane
+  def getForCurrentView(): InputPane = js.native
 }
 
 object IInputPaneStatics {
   @scala.inline
   def apply(getForCurrentView: () => InputPane): IInputPaneStatics = {
     val __obj = js.Dynamic.literal(getForCurrentView = js.Any.fromFunction0(getForCurrentView))
-  
     __obj.asInstanceOf[IInputPaneStatics]
   }
+  @scala.inline
+  implicit class IInputPaneStaticsOps[Self <: IInputPaneStatics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetForCurrentView(value: () => InputPane): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getForCurrentView")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

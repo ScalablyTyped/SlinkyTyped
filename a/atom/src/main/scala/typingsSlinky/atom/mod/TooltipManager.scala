@@ -1,8 +1,8 @@
 package typingsSlinky.atom.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.atom.AnonClass
 import typingsSlinky.atom.AnonItem
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ trait TooltipManager extends js.Object {
   /** Add a tooltip to the given element. */
   def add(target: HTMLElement, options: AnonItem): Disposable = js.native
   /** Find the tooltips that have been applied to the given element. */
-  def findTooltips(target: org.scalajs.dom.raw.HTMLElement): js.Array[Tooltip] = js.native
+  def findTooltips(target: HTMLElement): js.Array[Tooltip] = js.native
 }
 

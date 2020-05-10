@@ -4,26 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBillion extends js.Object {
-  var billion: String
-  var million: String
-  var spaced: js.UndefOr[Boolean] = js.undefined
-  var thousand: String
-  var trillion: String
+  var billion: js.UndefOr[String] = js.native
+  var million: js.UndefOr[String] = js.native
+  var thousand: js.UndefOr[String] = js.native
+  var trillion: js.UndefOr[String] = js.native
 }
 
 object AnonBillion {
   @scala.inline
-  def apply(
-    billion: String,
-    million: String,
-    thousand: String,
-    trillion: String,
-    spaced: js.UndefOr[Boolean] = js.undefined
-  ): AnonBillion = {
-    val __obj = js.Dynamic.literal(billion = billion.asInstanceOf[js.Any], million = million.asInstanceOf[js.Any], thousand = thousand.asInstanceOf[js.Any], trillion = trillion.asInstanceOf[js.Any])
-    if (!js.isUndefined(spaced)) __obj.updateDynamic("spaced")(spaced.asInstanceOf[js.Any])
+  def apply(): AnonBillion = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[AnonBillion]
   }
+  @scala.inline
+  implicit class AnonBillionOps[Self <: AnonBillion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBillion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBillion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMillion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("million")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMillion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("million")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThousand(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thousand")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThousand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thousand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrillion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trillion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrillion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trillion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

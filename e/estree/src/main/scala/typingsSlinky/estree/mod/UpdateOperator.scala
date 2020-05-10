@@ -12,10 +12,8 @@ trait UpdateOperator extends js.Object
 
 object UpdateOperator {
   @scala.inline
-  def `--`: typingsSlinky.estree.estreeStrings.`--` = this.cast("--")
+  def `--`: typingsSlinky.estree.estreeStrings.`--` = "--".asInstanceOf[typingsSlinky.estree.estreeStrings.`--`]
   @scala.inline
-  def PlussignPlussign: typingsSlinky.estree.estreeStrings.PlussignPlussign = this.cast("++")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def PlussignPlussign: typingsSlinky.estree.estreeStrings.PlussignPlussign = "++".asInstanceOf[typingsSlinky.estree.estreeStrings.PlussignPlussign]
 }
 

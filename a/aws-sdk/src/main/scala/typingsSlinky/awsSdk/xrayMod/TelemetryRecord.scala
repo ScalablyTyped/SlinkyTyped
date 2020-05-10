@@ -34,21 +34,83 @@ trait TelemetryRecord extends js.Object {
 
 object TelemetryRecord {
   @scala.inline
-  def apply(
-    Timestamp: js.Date,
-    BackendConnectionErrors: BackendConnectionErrors = null,
-    SegmentsReceivedCount: Int | scala.Double = null,
-    SegmentsRejectedCount: Int | scala.Double = null,
-    SegmentsSentCount: Int | scala.Double = null,
-    SegmentsSpilloverCount: Int | scala.Double = null
-  ): TelemetryRecord = {
+  def apply(Timestamp: js.Date): TelemetryRecord = {
     val __obj = js.Dynamic.literal(Timestamp = Timestamp.asInstanceOf[js.Any])
-    if (BackendConnectionErrors != null) __obj.updateDynamic("BackendConnectionErrors")(BackendConnectionErrors.asInstanceOf[js.Any])
-    if (SegmentsReceivedCount != null) __obj.updateDynamic("SegmentsReceivedCount")(SegmentsReceivedCount.asInstanceOf[js.Any])
-    if (SegmentsRejectedCount != null) __obj.updateDynamic("SegmentsRejectedCount")(SegmentsRejectedCount.asInstanceOf[js.Any])
-    if (SegmentsSentCount != null) __obj.updateDynamic("SegmentsSentCount")(SegmentsSentCount.asInstanceOf[js.Any])
-    if (SegmentsSpilloverCount != null) __obj.updateDynamic("SegmentsSpilloverCount")(SegmentsSpilloverCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[TelemetryRecord]
   }
+  @scala.inline
+  implicit class TelemetryRecordOps[Self <: TelemetryRecord] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBackendConnectionErrors(value: BackendConnectionErrors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackendConnectionErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackendConnectionErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackendConnectionErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentsReceivedCount(value: NullableInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentsReceivedCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentsReceivedCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentsReceivedCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentsRejectedCount(value: NullableInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentsRejectedCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentsRejectedCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentsRejectedCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentsSentCount(value: NullableInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentsSentCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentsSentCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentsSentCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentsSpilloverCount(value: NullableInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentsSpilloverCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentsSpilloverCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentsSpilloverCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

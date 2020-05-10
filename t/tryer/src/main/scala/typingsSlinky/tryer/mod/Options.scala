@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
   /**
     * The function that you want to invoke.
@@ -12,65 +13,154 @@ trait Options extends js.Object {
     *
     * If action is not set, it defaults to an empty function.
     */
-  var action: js.UndefOr[js.Function0[js.Promise[_]] | (js.Function1[/* done */ js.Function0[Unit], _])] = js.undefined
+  var action: js.UndefOr[js.Function0[js.Promise[_]] | (js.Function1[/* done */ js.Function0[Unit], _])] = js.native
   /**
     * fail: The error handler.
     * A function that will be called if limit falsey values are returned by when or until.
     * Defaults to an empty function.
     */
-  var fail: js.UndefOr[js.Function1[/* err */ js.Error, Unit]] = js.undefined
+  var fail: js.UndefOr[js.Function1[/* err */ js.Error, Unit]] = js.native
   /**
     * interval: The retry interval, in milliseconds.
     * A negative number indicates that each subsequent retry should wait for twice the interval from the preceding iteration (i.e. exponential backoff).
     * The default value is -1000, signifying that the initial retry interval should be one second and that each subsequent attempt should wait for double the length of the previous interval.
     */
-  var interval: js.UndefOr[Double] = js.undefined
+  var interval: js.UndefOr[Double] = js.native
   /**
     * limit: Failure limit, representing the maximum number of falsey returns from when or until that will be permitted before invocation is deemed to have failed.
     * A negative number indicates that the attempt should never fail, instead continuing for as long as when and until have returned truthy values.
     * Defaults to -1.
     */
-  var limit: js.UndefOr[Double] = js.undefined
+  var limit: js.UndefOr[Double] = js.native
   /**
     * pass: Success handler.
     * A function that will be called after until has returned truthily.
     * Defaults to an empty function.
     */
-  var pass: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var pass: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * until: A predicate that tests the post-condition for invoking action.
     * After until returns true (or a truthy value), action will no longer be called.
     * Defaults to a function that immediately returns true.
     */
-  var until: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var until: js.UndefOr[js.Function0[Boolean]] = js.native
   /**
     * when: A predicate that tests the pre-condition for invoking action.
     * Until when returns true (or a truthy value), action will not be called.
     * Defaults to a function that immediately returns true.
     */
-  var when: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var when: js.UndefOr[js.Function0[Boolean]] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    action: js.Function0[js.Promise[_]] | (js.Function1[/* done */ js.Function0[Unit], _]) = null,
-    fail: /* err */ js.Error => Unit = null,
-    interval: Int | Double = null,
-    limit: Int | Double = null,
-    pass: () => Unit = null,
-    until: () => Boolean = null,
-    when: () => Boolean = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (pass != null) __obj.updateDynamic("pass")(js.Any.fromFunction0(pass))
-    if (until != null) __obj.updateDynamic("until")(js.Any.fromFunction0(until))
-    if (when != null) __obj.updateDynamic("when")(js.Any.fromFunction0(when))
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionFunction1(value: /* done */ js.Function0[Unit] => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withActionFunction0(value: () => js.Promise[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withAction(value: js.Function0[js.Promise[_]] | (js.Function1[/* done */ js.Function0[Unit], _])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFail(value: /* err */ js.Error => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutFail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPass(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pass")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutPass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUntil(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("until")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutUntil: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("until")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhen(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("when")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutWhen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("when")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

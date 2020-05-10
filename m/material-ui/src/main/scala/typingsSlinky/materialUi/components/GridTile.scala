@@ -1,13 +1,11 @@
 package typingsSlinky.materialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.GridList.GridTileProps
 import typingsSlinky.materialUi.gridTileMod.default
 import typingsSlinky.materialUi.materialUiStrings.bottom
@@ -19,42 +17,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GridTile
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object GridTile {
   @JSImport("material-ui/GridList/GridTile", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: cols, rows, style */
-  def apply(
-    actionIcon: ReactElement = null,
-    actionPosition: left | right = null,
-    containerElement: String | ReactElement | ReactComponentClass[_] = null,
-    onClick: SyntheticMouseEvent[js.Object] => Unit = null,
-    subtitle: TagMod[Any] = null,
-    subtitleStyle: CSSProperties = null,
-    title: TagMod[Any] = null,
-    titleBackground: String = null,
-    titlePosition: top | bottom = null,
-    titleStyle: CSSProperties = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (actionIcon != null) __obj.updateDynamic("actionIcon")(actionIcon.asInstanceOf[js.Any])
-    if (actionPosition != null) __obj.updateDynamic("actionPosition")(actionPosition.asInstanceOf[js.Any])
-    if (containerElement != null) __obj.updateDynamic("containerElement")(containerElement.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (subtitle != null) __obj.updateDynamic("subtitle")(subtitle.asInstanceOf[js.Any])
-    if (subtitleStyle != null) __obj.updateDynamic("subtitleStyle")(subtitleStyle.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titleBackground != null) __obj.updateDynamic("titleBackground")(titleBackground.asInstanceOf[js.Any])
-    if (titlePosition != null) __obj.updateDynamic("titlePosition")(titlePosition.asInstanceOf[js.Any])
-    if (titleStyle != null) __obj.updateDynamic("titleStyle")(titleStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def actionIcon(value: ReactElement): this.type = set("actionIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def actionPosition(value: left | right): this.type = set("actionPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerElementComponentClass(value: ReactComponentClass[_]): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerElement(value: String | ReactElement | ReactComponentClass[_]): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: SyntheticMouseEvent[js.Object] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subtitleReactElement(value: ReactElement): this.type = set("subtitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subtitle(value: TagMod[Any]): this.type = set("subtitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subtitleStyle(value: CSSProperties): this.type = set("subtitleStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleBackground(value: String): this.type = set("titleBackground", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titlePosition(value: top | bottom): this.type = set("titlePosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleStyle(value: CSSProperties): this.type = set("titleStyle", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.materialUi.gridTileMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = GridTileProps
+  
+  def withProps(p: GridTileProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: GridTile.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

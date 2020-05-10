@@ -14,14 +14,12 @@ trait DialogType extends js.Object
 
 object DialogType {
   @scala.inline
-  def alert: typingsSlinky.puppeteer.puppeteerStrings.alert = this.cast("alert")
+  def alert: typingsSlinky.puppeteer.puppeteerStrings.alert = "alert".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.alert]
   @scala.inline
-  def beforeunload: typingsSlinky.puppeteer.puppeteerStrings.beforeunload = this.cast("beforeunload")
+  def beforeunload: typingsSlinky.puppeteer.puppeteerStrings.beforeunload = "beforeunload".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.beforeunload]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def confirm: typingsSlinky.puppeteer.puppeteerStrings.confirm = "confirm".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.confirm]
   @scala.inline
-  def confirm: typingsSlinky.puppeteer.puppeteerStrings.confirm = this.cast("confirm")
-  @scala.inline
-  def prompt: typingsSlinky.puppeteer.puppeteerStrings.prompt = this.cast("prompt")
+  def prompt: typingsSlinky.puppeteer.puppeteerStrings.prompt = "prompt".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.prompt]
 }
 

@@ -15,10 +15,6 @@ object importCertificate extends js.Object {
     * @param certificate The DER encoding of a X.509 certificate.
     * @param [callback] Called back when this operation is finished.
     */
-  def apply(
-    tokenId: String,
-    certificate: scala.scalajs.js.typedarray.ArrayBuffer,
-    callback: js.Function0[Unit]
-  ): Unit = js.native
+  def apply(tokenId: String, certificate: js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
 }
 

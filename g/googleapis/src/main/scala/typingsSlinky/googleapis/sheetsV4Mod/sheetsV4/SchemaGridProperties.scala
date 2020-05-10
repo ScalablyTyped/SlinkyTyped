@@ -41,24 +41,101 @@ trait SchemaGridProperties extends js.Object {
 
 object SchemaGridProperties {
   @scala.inline
-  def apply(
-    columnCount: Int | Double = null,
-    columnGroupControlAfter: js.UndefOr[Boolean] = js.undefined,
-    frozenColumnCount: Int | Double = null,
-    frozenRowCount: Int | Double = null,
-    hideGridlines: js.UndefOr[Boolean] = js.undefined,
-    rowCount: Int | Double = null,
-    rowGroupControlAfter: js.UndefOr[Boolean] = js.undefined
-  ): SchemaGridProperties = {
+  def apply(): SchemaGridProperties = {
     val __obj = js.Dynamic.literal()
-    if (columnCount != null) __obj.updateDynamic("columnCount")(columnCount.asInstanceOf[js.Any])
-    if (!js.isUndefined(columnGroupControlAfter)) __obj.updateDynamic("columnGroupControlAfter")(columnGroupControlAfter.asInstanceOf[js.Any])
-    if (frozenColumnCount != null) __obj.updateDynamic("frozenColumnCount")(frozenColumnCount.asInstanceOf[js.Any])
-    if (frozenRowCount != null) __obj.updateDynamic("frozenRowCount")(frozenRowCount.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideGridlines)) __obj.updateDynamic("hideGridlines")(hideGridlines.asInstanceOf[js.Any])
-    if (rowCount != null) __obj.updateDynamic("rowCount")(rowCount.asInstanceOf[js.Any])
-    if (!js.isUndefined(rowGroupControlAfter)) __obj.updateDynamic("rowGroupControlAfter")(rowGroupControlAfter.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGridProperties]
   }
+  @scala.inline
+  implicit class SchemaGridPropertiesOps[Self <: SchemaGridProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumnCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnGroupControlAfter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnGroupControlAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnGroupControlAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnGroupControlAfter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrozenColumnCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenColumnCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrozenColumnCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenColumnCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrozenRowCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenRowCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrozenRowCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenRowCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideGridlines(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideGridlines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideGridlines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideGridlines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowGroupControlAfter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowGroupControlAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowGroupControlAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowGroupControlAfter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

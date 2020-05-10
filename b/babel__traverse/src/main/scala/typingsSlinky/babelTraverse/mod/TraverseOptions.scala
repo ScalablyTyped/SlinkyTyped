@@ -4,27 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped {[ Type in @babel/traverse.@babel/traverse.Node['type'] ]:? @babel/traverse.@babel/traverse.VisitNode<S, std.Extract<@babel/traverse.@babel/traverse.Node, {  type  :Type}>>}
-- Dropped {[ K in 'Expression' | 'Binary' | 'Scopable' | 'BlockParent' | 'Block' | 'Statement' | 'Terminatorless' | 'CompletionStatement' | 'Conditional' | 'Loop' | 'While' | 'ExpressionWrapper' | 'For' | 'ForXStatement' | 'Function' | 'FunctionParent' | 'Pureish' | 'Declaration' | 'PatternLike' | 'LVal' | 'TSEntityName' | 'Literal' | 'Immutable' | 'UserWhitespacable' | 'Method' | 'ObjectMember' | 'Property' | 'UnaryLike' | 'Pattern' | 'Class' | 'ModuleDeclaration' | 'ExportDeclaration' | 'ModuleSpecifier' | 'Flow' | 'FlowType' | 'FlowBaseAnnotation' | 'FlowDeclaration' | 'FlowPredicate' | 'EnumBody' | 'EnumMember' | 'JSX' | 'Private' | 'TSTypeElement' | 'TSType' ]:? @babel/traverse.@babel/traverse.VisitNode<S, @babel/types.@babel/types.Aliases[K]>} */ trait TraverseOptions[S] extends VisitNodeObject[S, Node] {
-  var noScope: js.UndefOr[Boolean] = js.undefined
-  var scope: js.UndefOr[Scope] = js.undefined
+@js.native
+trait TraverseOptions[S] extends Visitor[S] {
+  var noScope: js.UndefOr[Boolean] = js.native
+  var scope: js.UndefOr[Scope] = js.native
 }
 
 object TraverseOptions {
   @scala.inline
-  def apply[S](
-    enter: VisitNodeFunction[S, Node] = null,
-    exit: VisitNodeFunction[S, Node] = null,
-    noScope: js.UndefOr[Boolean] = js.undefined,
-    scope: Scope = null
-  ): TraverseOptions[S] = {
+  def apply[S](): TraverseOptions[S] = {
     val __obj = js.Dynamic.literal()
-    if (enter != null) __obj.updateDynamic("enter")(enter.asInstanceOf[js.Any])
-    if (exit != null) __obj.updateDynamic("exit")(exit.asInstanceOf[js.Any])
-    if (!js.isUndefined(noScope)) __obj.updateDynamic("noScope")(noScope.asInstanceOf[js.Any])
-    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
     __obj.asInstanceOf[TraverseOptions[S]]
   }
+  @scala.inline
+  implicit class TraverseOptionsOps[Self[s] <: TraverseOptions[s], S] (val x: Self[S]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[S] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[S]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[S] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[S] with Other]
+    @scala.inline
+    def withNoScope(value: Boolean): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noScope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoScope: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noScope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScope(value: Scope): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScope: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

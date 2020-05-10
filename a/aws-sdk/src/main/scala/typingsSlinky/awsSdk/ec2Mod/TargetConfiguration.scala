@@ -18,11 +18,41 @@ trait TargetConfiguration extends js.Object {
 
 object TargetConfiguration {
   @scala.inline
-  def apply(InstanceCount: Int | scala.Double = null, OfferingId: String = null): TargetConfiguration = {
+  def apply(): TargetConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (InstanceCount != null) __obj.updateDynamic("InstanceCount")(InstanceCount.asInstanceOf[js.Any])
-    if (OfferingId != null) __obj.updateDynamic("OfferingId")(OfferingId.asInstanceOf[js.Any])
     __obj.asInstanceOf[TargetConfiguration]
   }
+  @scala.inline
+  implicit class TargetConfigurationOps[Self <: TargetConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOfferingId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OfferingId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOfferingId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OfferingId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

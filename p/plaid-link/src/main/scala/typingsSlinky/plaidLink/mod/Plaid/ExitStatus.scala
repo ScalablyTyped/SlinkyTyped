@@ -16,18 +16,16 @@ trait ExitStatus extends js.Object
 
 object ExitStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def choose_device: typingsSlinky.plaidLink.plaidLinkStrings.choose_device = "choose_device".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.choose_device]
   @scala.inline
-  def choose_device: typingsSlinky.plaidLink.plaidLinkStrings.choose_device = this.cast("choose_device")
+  def institution_not_found: typingsSlinky.plaidLink.plaidLinkStrings.institution_not_found = "institution_not_found".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.institution_not_found]
   @scala.inline
-  def institution_not_found: typingsSlinky.plaidLink.plaidLinkStrings.institution_not_found = this.cast("institution_not_found")
+  def requires_code: typingsSlinky.plaidLink.plaidLinkStrings.requires_code = "requires_code".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.requires_code]
   @scala.inline
-  def requires_code: typingsSlinky.plaidLink.plaidLinkStrings.requires_code = this.cast("requires_code")
+  def requires_credentials: typingsSlinky.plaidLink.plaidLinkStrings.requires_credentials = "requires_credentials".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.requires_credentials]
   @scala.inline
-  def requires_credentials: typingsSlinky.plaidLink.plaidLinkStrings.requires_credentials = this.cast("requires_credentials")
+  def requires_questions: typingsSlinky.plaidLink.plaidLinkStrings.requires_questions = "requires_questions".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.requires_questions]
   @scala.inline
-  def requires_questions: typingsSlinky.plaidLink.plaidLinkStrings.requires_questions = this.cast("requires_questions")
-  @scala.inline
-  def requires_selections: typingsSlinky.plaidLink.plaidLinkStrings.requires_selections = this.cast("requires_selections")
+  def requires_selections: typingsSlinky.plaidLink.plaidLinkStrings.requires_selections = "requires_selections".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.requires_selections]
 }
 

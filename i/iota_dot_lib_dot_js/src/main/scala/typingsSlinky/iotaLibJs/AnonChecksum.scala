@@ -5,30 +5,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonChecksum extends js.Object {
-  var checksum: js.UndefOr[Boolean] = js.undefined
-  var index: js.UndefOr[Double] = js.undefined
-  var returnAll: js.UndefOr[Boolean] = js.undefined
-  var security: js.UndefOr[Security] = js.undefined
-  var total: js.UndefOr[Double] = js.undefined
+  var checksum: js.UndefOr[Boolean] = js.native
+  var index: js.UndefOr[Double] = js.native
+  var returnAll: js.UndefOr[Boolean] = js.native
+  var security: js.UndefOr[Security] = js.native
+  var total: js.UndefOr[Double] = js.native
 }
 
 object AnonChecksum {
   @scala.inline
-  def apply(
-    checksum: js.UndefOr[Boolean] = js.undefined,
-    index: Int | Double = null,
-    returnAll: js.UndefOr[Boolean] = js.undefined,
-    security: Security = null,
-    total: Int | Double = null
-  ): AnonChecksum = {
+  def apply(): AnonChecksum = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(checksum)) __obj.updateDynamic("checksum")(checksum.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnAll)) __obj.updateDynamic("returnAll")(returnAll.asInstanceOf[js.Any])
-    if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
-    if (total != null) __obj.updateDynamic("total")(total.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonChecksum]
   }
+  @scala.inline
+  implicit class AnonChecksumOps[Self <: AnonChecksum] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChecksum(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChecksum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnAll(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnAll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnAll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnAll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurity(value: Security): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotal(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

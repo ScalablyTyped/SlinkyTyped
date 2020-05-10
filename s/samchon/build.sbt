@@ -1,18 +1,18 @@
 organization := "org.scalablytyped.slinky"
 name := "samchon"
-version := "2.1.4-f27272"
+version := "2.1.4-1cd6ed"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.4",
-  "org.scalablytyped.slinky" %%% "ecol" % "1.1.0-359722",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f",
-  "org.scalablytyped.slinky" %%% "sxml" % "1.0.3-a44779",
-  "org.scalablytyped.slinky" %%% "tstl" % "2.4.0-07bdce",
-  "org.scalablytyped.slinky" %%% "url-variables" % "1.0.2-01332a")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "ecol" % "1.1.0-920f4f",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e",
+  "org.scalablytyped.slinky" %%% "sxml" % "1.0.3-376462",
+  "org.scalablytyped.slinky" %%% "tstl" % "2.4.2-78e4ae",
+  "org.scalablytyped.slinky" %%% "url-variables" % "1.0.2-66979f")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

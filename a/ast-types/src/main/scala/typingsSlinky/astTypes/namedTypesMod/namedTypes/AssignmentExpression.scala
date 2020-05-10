@@ -26,17 +26,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Expression, 'type'> */
+@js.native
 trait AssignmentExpression
   extends ASTNode
      with ExpressionKind
      with NodeKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var left: PatternKind | MemberExpressionKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var operator: Equalssign | PlussignEqualssign | `-Equalssign` | AsteriskEqualssign | SlashEqualssign | PercentsignEqualssign | LessthansignLessthansignEqualssign | GreaterthansignGreaterthansignEqualssign | GreaterthansignGreaterthansignGreaterthansignEqualssign | VerticallineEqualssign | `^Equalssign` | AmpersandEqualssign
-  var right: ExpressionKind
-  var `type`: typingsSlinky.astTypes.astTypesStrings.AssignmentExpression
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var left: PatternKind | MemberExpressionKind = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var operator: Equalssign | PlussignEqualssign | `-Equalssign` | AsteriskEqualssign | SlashEqualssign | PercentsignEqualssign | LessthansignLessthansignEqualssign | GreaterthansignGreaterthansignEqualssign | GreaterthansignGreaterthansignGreaterthansignEqualssign | VerticallineEqualssign | `^Equalssign` | AmpersandEqualssign = js.native
+  var right: ExpressionKind = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.AssignmentExpression = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.AssignmentExpression")

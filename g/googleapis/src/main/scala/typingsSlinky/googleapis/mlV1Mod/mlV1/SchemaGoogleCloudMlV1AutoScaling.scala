@@ -36,10 +36,29 @@ trait SchemaGoogleCloudMlV1AutoScaling extends js.Object {
 
 object SchemaGoogleCloudMlV1AutoScaling {
   @scala.inline
-  def apply(minNodes: Int | Double = null): SchemaGoogleCloudMlV1AutoScaling = {
+  def apply(): SchemaGoogleCloudMlV1AutoScaling = {
     val __obj = js.Dynamic.literal()
-    if (minNodes != null) __obj.updateDynamic("minNodes")(minNodes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudMlV1AutoScaling]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudMlV1AutoScalingOps[Self <: SchemaGoogleCloudMlV1AutoScaling] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMinNodes(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinNodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minNodes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -23,13 +23,13 @@ trait BLECentralPluginCommon extends js.Object {
     device_id: String,
     service_uuid: String,
     characteristic_uuid: String,
-    success: js.Function1[/* rawData */ scala.scalajs.js.typedarray.ArrayBuffer, _]
+    success: js.Function1[/* rawData */ js.typedarray.ArrayBuffer, _]
   ): Unit = js.native
   def startNotification(
     device_id: String,
     service_uuid: String,
     characteristic_uuid: String,
-    success: js.Function1[/* rawData */ scala.scalajs.js.typedarray.ArrayBuffer, _],
+    success: js.Function1[/* rawData */ js.typedarray.ArrayBuffer, _],
     failure: js.Function1[/* error */ String | BLEError, _]
   ): Unit = js.native
   def startScan(services: js.Array[String], success: js.Function1[/* data */ PeripheralData, _]): Unit = js.native

@@ -10,7 +10,6 @@ import typingsSlinky.dialogflow.dialogflowStrings.put
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -81,8 +80,8 @@ object HttpRule extends js.Object {
     */
   def decode(reader: Reader): HttpRule = js.native
   def decode(reader: Reader, length: Double): HttpRule = js.native
-  def decode(reader: Uint8Array): HttpRule = js.native
-  def decode(reader: Uint8Array, length: Double): HttpRule = js.native
+  def decode(reader: js.typedarray.Uint8Array): HttpRule = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): HttpRule = js.native
   /**
     * Decodes a HttpRule message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -91,7 +90,7 @@ object HttpRule extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): HttpRule = js.native
-  def decodeDelimited(reader: Uint8Array): HttpRule = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): HttpRule = js.native
   /**
     * Encodes the specified HttpRule message. Does not implicitly {@link google.api.HttpRule.verify|verify} messages.
     * @param message HttpRule message or plain object to encode

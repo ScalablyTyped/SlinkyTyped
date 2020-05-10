@@ -1,6 +1,6 @@
 package typingsSlinky.twemoji
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.twemoji.twemojiBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`

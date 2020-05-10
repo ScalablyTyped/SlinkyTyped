@@ -1,10 +1,7 @@
 package typingsSlinky.antdMobile.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.carouselMod.CarouselProps
 import typingsSlinky.antdMobile.carouselMod.IFrameOverFlow
 import typingsSlinky.antdMobile.carouselMod.default
@@ -13,56 +10,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Carousel
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Carousel {
   @JSImport("antd-mobile/lib/carousel", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    afterChange: /* current */ Double => Unit = null,
-    autoplay: js.UndefOr[Boolean] = js.undefined,
-    autoplayInterval: Int | Double = null,
-    beforeChange: (/* from */ Double, /* to */ Double) => Unit = null,
-    cellSpacing: Int | Double = null,
-    dotActiveStyle: CSSProperties = null,
-    dotStyle: CSSProperties = null,
-    dots: js.UndefOr[Boolean] = js.undefined,
-    easing: () => Unit = null,
-    frameOverflow: IFrameOverFlow = null,
-    infinite: js.UndefOr[Boolean] = js.undefined,
-    initialSlideWidth: Int | Double = null,
-    prefixCls: String = null,
-    selectedIndex: Int | Double = null,
-    slideWidth: String | Double = null,
-    swipeSpeed: Int | Double = null,
-    vertical: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (afterChange != null) __obj.updateDynamic("afterChange")(js.Any.fromFunction1(afterChange))
-    if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.asInstanceOf[js.Any])
-    if (autoplayInterval != null) __obj.updateDynamic("autoplayInterval")(autoplayInterval.asInstanceOf[js.Any])
-    if (beforeChange != null) __obj.updateDynamic("beforeChange")(js.Any.fromFunction2(beforeChange))
-    if (cellSpacing != null) __obj.updateDynamic("cellSpacing")(cellSpacing.asInstanceOf[js.Any])
-    if (dotActiveStyle != null) __obj.updateDynamic("dotActiveStyle")(dotActiveStyle.asInstanceOf[js.Any])
-    if (dotStyle != null) __obj.updateDynamic("dotStyle")(dotStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(dots)) __obj.updateDynamic("dots")(dots.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(js.Any.fromFunction0(easing))
-    if (frameOverflow != null) __obj.updateDynamic("frameOverflow")(frameOverflow.asInstanceOf[js.Any])
-    if (!js.isUndefined(infinite)) __obj.updateDynamic("infinite")(infinite.asInstanceOf[js.Any])
-    if (initialSlideWidth != null) __obj.updateDynamic("initialSlideWidth")(initialSlideWidth.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (selectedIndex != null) __obj.updateDynamic("selectedIndex")(selectedIndex.asInstanceOf[js.Any])
-    if (slideWidth != null) __obj.updateDynamic("slideWidth")(slideWidth.asInstanceOf[js.Any])
-    if (swipeSpeed != null) __obj.updateDynamic("swipeSpeed")(swipeSpeed.asInstanceOf[js.Any])
-    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def afterChange(value: /* current */ Double => Unit): this.type = set("afterChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def autoplay(value: Boolean): this.type = set("autoplay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoplayInterval(value: Double): this.type = set("autoplayInterval", value.asInstanceOf[js.Any])
+    @scala.inline
+    def beforeChange(value: (/* from */ Double, /* to */ Double) => Unit): this.type = set("beforeChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def cellSpacing(value: Double): this.type = set("cellSpacing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dotActiveStyle(value: CSSProperties): this.type = set("dotActiveStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dotStyle(value: CSSProperties): this.type = set("dotStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dots(value: Boolean): this.type = set("dots", value.asInstanceOf[js.Any])
+    @scala.inline
+    def easing(value: () => Unit): this.type = set("easing", js.Any.fromFunction0(value))
+    @scala.inline
+    def frameOverflow(value: IFrameOverFlow): this.type = set("frameOverflow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def infinite(value: Boolean): this.type = set("infinite", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialSlideWidth(value: Double): this.type = set("initialSlideWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedIndex(value: Double): this.type = set("selectedIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def slideWidth(value: String | Double): this.type = set("slideWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def swipeSpeed(value: Double): this.type = set("swipeSpeed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def vertical(value: Boolean): this.type = set("vertical", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antdMobile.carouselMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = CarouselProps
+  
+  def withProps(p: CarouselProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Carousel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -25,9 +25,6 @@ class Invoke ()
     * @param listener
     * @param parameters
     */
-  def this(
-    listener: String,
-    parameters: (Boolean | Double | String | XML | scala.scalajs.js.typedarray.Uint8Array)*
-  ) = this()
+  def this(listener: String, parameters: (Boolean | Double | String | XML | js.typedarray.Uint8Array)*) = this()
 }
 

@@ -20,11 +20,41 @@ trait S3BucketAssociationClassificationType extends js.Object {
 
 object S3BucketAssociationClassificationType {
   @scala.inline
-  def apply(continuous: String = null, oneTime: String = null): S3BucketAssociationClassificationType = {
+  def apply(): S3BucketAssociationClassificationType = {
     val __obj = js.Dynamic.literal()
-    if (continuous != null) __obj.updateDynamic("continuous")(continuous.asInstanceOf[js.Any])
-    if (oneTime != null) __obj.updateDynamic("oneTime")(oneTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3BucketAssociationClassificationType]
   }
+  @scala.inline
+  implicit class S3BucketAssociationClassificationTypeOps[Self <: S3BucketAssociationClassificationType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContinuous(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continuous")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinuous: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continuous")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOneTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oneTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOneTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oneTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

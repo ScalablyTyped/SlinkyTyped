@@ -21,11 +21,41 @@ trait SchemaListDomainMappingsResponse extends js.Object {
 
 object SchemaListDomainMappingsResponse {
   @scala.inline
-  def apply(domainMappings: js.Array[SchemaDomainMapping] = null, nextPageToken: String = null): SchemaListDomainMappingsResponse = {
+  def apply(): SchemaListDomainMappingsResponse = {
     val __obj = js.Dynamic.literal()
-    if (domainMappings != null) __obj.updateDynamic("domainMappings")(domainMappings.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListDomainMappingsResponse]
   }
+  @scala.inline
+  implicit class SchemaListDomainMappingsResponseOps[Self <: SchemaListDomainMappingsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomainMappings(value: js.Array[SchemaDomainMapping]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainMappings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainMappings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainMappings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

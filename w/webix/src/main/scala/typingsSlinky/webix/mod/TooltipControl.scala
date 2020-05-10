@@ -18,11 +18,11 @@ trait TooltipControl extends js.Object {
   @JSName("$tooltipOut")
   def $tooltipOut(previousTarget: HTMLElement, target: HTMLElement, event: Event_): Unit = js.native
   def addTooltip(target: String, config: js.Any): Unit = js.native
-  def addTooltip(target: typingsSlinky.std.HTMLElement, config: js.Any): Unit = js.native
+  def addTooltip(target: HTMLElement, config: js.Any): Unit = js.native
   def getMaster(target: HTMLElement): js.Any = js.native
   def getTooltip(): baseview = js.native
   def removeTooltip(target: String): Unit = js.native
-  def removeTooltip(target: typingsSlinky.std.HTMLElement): Unit = js.native
+  def removeTooltip(target: HTMLElement): Unit = js.native
 }
 
 @JSImport("webix", "TooltipControl")

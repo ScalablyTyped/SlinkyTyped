@@ -14,10 +14,29 @@ trait SchemaLiveChatPollClosedDetails extends js.Object {
 
 object SchemaLiveChatPollClosedDetails {
   @scala.inline
-  def apply(pollId: String = null): SchemaLiveChatPollClosedDetails = {
+  def apply(): SchemaLiveChatPollClosedDetails = {
     val __obj = js.Dynamic.literal()
-    if (pollId != null) __obj.updateDynamic("pollId")(pollId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLiveChatPollClosedDetails]
   }
+  @scala.inline
+  implicit class SchemaLiveChatPollClosedDetailsOps[Self <: SchemaLiveChatPollClosedDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPollId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pollId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPollId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pollId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

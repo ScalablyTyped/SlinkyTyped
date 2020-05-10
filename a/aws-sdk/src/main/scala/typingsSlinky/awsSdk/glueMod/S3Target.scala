@@ -18,11 +18,41 @@ trait S3Target extends js.Object {
 
 object S3Target {
   @scala.inline
-  def apply(Exclusions: PathList = null, Path: Path = null): S3Target = {
+  def apply(): S3Target = {
     val __obj = js.Dynamic.literal()
-    if (Exclusions != null) __obj.updateDynamic("Exclusions")(Exclusions.asInstanceOf[js.Any])
-    if (Path != null) __obj.updateDynamic("Path")(Path.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3Target]
   }
+  @scala.inline
+  implicit class S3TargetOps[Self <: S3Target] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExclusions(value: PathList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Exclusions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclusions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Exclusions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: Path): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

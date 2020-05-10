@@ -13,12 +13,10 @@ trait SuccessTextStatus extends js.Object
 
 object SuccessTextStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def nocontent: typingsSlinky.jquery.jqueryStrings.nocontent = "nocontent".asInstanceOf[typingsSlinky.jquery.jqueryStrings.nocontent]
   @scala.inline
-  def nocontent: typingsSlinky.jquery.jqueryStrings.nocontent = this.cast("nocontent")
+  def notmodified: typingsSlinky.jquery.jqueryStrings.notmodified = "notmodified".asInstanceOf[typingsSlinky.jquery.jqueryStrings.notmodified]
   @scala.inline
-  def notmodified: typingsSlinky.jquery.jqueryStrings.notmodified = this.cast("notmodified")
-  @scala.inline
-  def success: typingsSlinky.jquery.jqueryStrings.success = this.cast("success")
+  def success: typingsSlinky.jquery.jqueryStrings.success = "success".asInstanceOf[typingsSlinky.jquery.jqueryStrings.success]
 }
 

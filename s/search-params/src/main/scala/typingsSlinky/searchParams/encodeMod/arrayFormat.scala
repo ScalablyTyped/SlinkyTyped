@@ -13,12 +13,10 @@ trait arrayFormat extends js.Object
 
 object arrayFormat {
   @scala.inline
-  def brackets: typingsSlinky.searchParams.searchParamsStrings.brackets = this.cast("brackets")
+  def brackets: typingsSlinky.searchParams.searchParamsStrings.brackets = "brackets".asInstanceOf[typingsSlinky.searchParams.searchParamsStrings.brackets]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def index: typingsSlinky.searchParams.searchParamsStrings.index = "index".asInstanceOf[typingsSlinky.searchParams.searchParamsStrings.index]
   @scala.inline
-  def index: typingsSlinky.searchParams.searchParamsStrings.index = this.cast("index")
-  @scala.inline
-  def none: typingsSlinky.searchParams.searchParamsStrings.none = this.cast("none")
+  def none: typingsSlinky.searchParams.searchParamsStrings.none = "none".asInstanceOf[typingsSlinky.searchParams.searchParamsStrings.none]
 }
 

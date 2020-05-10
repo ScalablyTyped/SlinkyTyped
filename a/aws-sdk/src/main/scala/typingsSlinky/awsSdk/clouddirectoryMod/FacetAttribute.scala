@@ -26,17 +26,59 @@ trait FacetAttribute extends js.Object {
 
 object FacetAttribute {
   @scala.inline
-  def apply(
-    Name: AttributeName,
-    AttributeDefinition: FacetAttributeDefinition = null,
-    AttributeReference: FacetAttributeReference = null,
-    RequiredBehavior: RequiredAttributeBehavior = null
-  ): FacetAttribute = {
+  def apply(Name: AttributeName): FacetAttribute = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
-    if (AttributeDefinition != null) __obj.updateDynamic("AttributeDefinition")(AttributeDefinition.asInstanceOf[js.Any])
-    if (AttributeReference != null) __obj.updateDynamic("AttributeReference")(AttributeReference.asInstanceOf[js.Any])
-    if (RequiredBehavior != null) __obj.updateDynamic("RequiredBehavior")(RequiredBehavior.asInstanceOf[js.Any])
     __obj.asInstanceOf[FacetAttribute]
   }
+  @scala.inline
+  implicit class FacetAttributeOps[Self <: FacetAttribute] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: AttributeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributeDefinition(value: FacetAttributeDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeDefinition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeDefinition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttributeReference(value: FacetAttributeReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequiredBehavior(value: RequiredAttributeBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequiredBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequiredBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequiredBehavior")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

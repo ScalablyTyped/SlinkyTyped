@@ -7,16 +7,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-shape.SemanticUI.ShapeSettings._Impl, 'width'> */
+@js.native
 trait PickImplwidth extends js.Object {
-  var width: next | initial | Double
+  var width: next | initial | Double = js.native
 }
 
 object PickImplwidth {
   @scala.inline
   def apply(width: next | initial | Double): PickImplwidth = {
     val __obj = js.Dynamic.literal(width = width.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PickImplwidth]
   }
+  @scala.inline
+  implicit class PickImplwidthOps[Self <: PickImplwidth] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWidth(value: next | initial | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

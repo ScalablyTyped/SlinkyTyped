@@ -9,35 +9,67 @@ import scala.scalajs.js.annotation._
   * This can either hold a direct API object reference, or a value for non-objects such as user
   * and group names.
   */
+@js.native
 trait Subject extends js.Object {
   /**
     * APIGroup holds the API group of the referenced subject. Defaults to "" for ServiceAccount
     * subjects. Defaults to "rbac.authorization.k8s.io" for User and Group subjects.
     */
-  val apiGroup: String
+  val apiGroup: String = js.native
   /**
     * Kind of object being referenced. Values defined by this API group are "User", "Group", and
     * "ServiceAccount". If the Authorizer does not recognized the kind value, the Authorizer
     * should report an error.
     */
-  val kind: String
+  val kind: String = js.native
   /**
     * Name of the object being referenced.
     */
-  val name: String
+  val name: String = js.native
   /**
     * Namespace of the referenced object.  If the object kind is non-namespace, such as "User" or
     * "Group", and this value is not empty the Authorizer should report an error.
     */
-  val namespace: String
+  val namespace: String = js.native
 }
 
 object Subject {
   @scala.inline
   def apply(apiGroup: String, kind: String, name: String, namespace: String): Subject = {
     val __obj = js.Dynamic.literal(apiGroup = apiGroup.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], namespace = namespace.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Subject]
   }
+  @scala.inline
+  implicit class SubjectOps[Self <: Subject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNamespace(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

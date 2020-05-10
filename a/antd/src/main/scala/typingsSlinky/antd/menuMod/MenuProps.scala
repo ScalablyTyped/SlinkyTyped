@@ -3,105 +3,400 @@ package typingsSlinky.antd.menuMod
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.menuContextMod.MenuTheme
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MenuProps extends js.Object {
-  var className: js.UndefOr[String] = js.undefined
-  var defaultOpenKeys: js.UndefOr[js.Array[String]] = js.undefined
-  var defaultSelectedKeys: js.UndefOr[js.Array[String]] = js.undefined
-  var focusable: js.UndefOr[Boolean] = js.undefined
-  var forceSubMenuRender: js.UndefOr[Boolean] = js.undefined
-  var getPopupContainer: js.UndefOr[js.Function1[/* triggerNode */ HTMLElement, HTMLElement]] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var inlineCollapsed: js.UndefOr[Boolean] = js.undefined
-  var inlineIndent: js.UndefOr[Double] = js.undefined
-  var mode: js.UndefOr[MenuMode] = js.undefined
-  var motion: js.UndefOr[js.Object] = js.undefined
-  var multiple: js.UndefOr[Boolean] = js.undefined
-  var onClick: js.UndefOr[js.Function1[/* param */ ClickParam, Unit]] = js.undefined
-  var onDeselect: js.UndefOr[js.Function1[/* param */ SelectParam, Unit]] = js.undefined
-  var onMouseEnter: js.UndefOr[js.Function1[/* e */ MouseEvent, Unit]] = js.undefined
-  var onOpenChange: js.UndefOr[js.Function1[/* openKeys */ js.Array[String], Unit]] = js.undefined
-  var onSelect: js.UndefOr[js.Function1[/* param */ SelectParam, Unit]] = js.undefined
-  var openAnimation: js.UndefOr[String] = js.undefined
-  var openKeys: js.UndefOr[js.Array[String]] = js.undefined
-  var openTransitionName: js.UndefOr[String] = js.undefined
-  var overflowedIndicator: js.UndefOr[TagMod[Any]] = js.undefined
-  var prefixCls: js.UndefOr[String] = js.undefined
-  var selectable: js.UndefOr[Boolean] = js.undefined
-  var selectedKeys: js.UndefOr[js.Array[String]] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
-  var subMenuCloseDelay: js.UndefOr[Double] = js.undefined
-  var subMenuOpenDelay: js.UndefOr[Double] = js.undefined
-  var theme: js.UndefOr[MenuTheme] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var defaultOpenKeys: js.UndefOr[js.Array[String]] = js.native
+  var defaultSelectedKeys: js.UndefOr[js.Array[String]] = js.native
+  var focusable: js.UndefOr[Boolean] = js.native
+  var forceSubMenuRender: js.UndefOr[Boolean] = js.native
+  var getPopupContainer: js.UndefOr[js.Function1[/* triggerNode */ HTMLElement, HTMLElement]] = js.native
+  var id: js.UndefOr[String] = js.native
+  var inlineCollapsed: js.UndefOr[Boolean] = js.native
+  var inlineIndent: js.UndefOr[Double] = js.native
+  var mode: js.UndefOr[MenuMode] = js.native
+  var motion: js.UndefOr[js.Object] = js.native
+  var multiple: js.UndefOr[Boolean] = js.native
+  var onClick: js.UndefOr[js.Function1[/* param */ ClickParam, Unit]] = js.native
+  var onDeselect: js.UndefOr[js.Function1[/* param */ SelectParam, Unit]] = js.native
+  var onMouseEnter: js.UndefOr[js.Function1[/* e */ MouseEvent, Unit]] = js.native
+  var onOpenChange: js.UndefOr[js.Function1[/* openKeys */ js.Array[String], Unit]] = js.native
+  var onSelect: js.UndefOr[js.Function1[/* param */ SelectParam, Unit]] = js.native
+  var openAnimation: js.UndefOr[String] = js.native
+  var openKeys: js.UndefOr[js.Array[String]] = js.native
+  var openTransitionName: js.UndefOr[String] = js.native
+  var overflowedIndicator: js.UndefOr[TagMod[Any]] = js.native
+  var prefixCls: js.UndefOr[String] = js.native
+  var selectable: js.UndefOr[Boolean] = js.native
+  var selectedKeys: js.UndefOr[js.Array[String]] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
+  var subMenuCloseDelay: js.UndefOr[Double] = js.native
+  var subMenuOpenDelay: js.UndefOr[Double] = js.native
+  var theme: js.UndefOr[MenuTheme] = js.native
 }
 
 object MenuProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    defaultOpenKeys: js.Array[String] = null,
-    defaultSelectedKeys: js.Array[String] = null,
-    focusable: js.UndefOr[Boolean] = js.undefined,
-    forceSubMenuRender: js.UndefOr[Boolean] = js.undefined,
-    getPopupContainer: /* triggerNode */ HTMLElement => HTMLElement = null,
-    id: String = null,
-    inlineCollapsed: js.UndefOr[Boolean] = js.undefined,
-    inlineIndent: Int | Double = null,
-    mode: MenuMode = null,
-    motion: js.Object = null,
-    multiple: js.UndefOr[Boolean] = js.undefined,
-    onClick: /* param */ ClickParam => Unit = null,
-    onDeselect: /* param */ SelectParam => Unit = null,
-    onMouseEnter: /* e */ MouseEvent => Unit = null,
-    onOpenChange: /* openKeys */ js.Array[String] => Unit = null,
-    onSelect: /* param */ SelectParam => Unit = null,
-    openAnimation: String = null,
-    openKeys: js.Array[String] = null,
-    openTransitionName: String = null,
-    overflowedIndicator: TagMod[Any] = null,
-    prefixCls: String = null,
-    selectable: js.UndefOr[Boolean] = js.undefined,
-    selectedKeys: js.Array[String] = null,
-    style: CSSProperties = null,
-    subMenuCloseDelay: Int | Double = null,
-    subMenuOpenDelay: Int | Double = null,
-    theme: MenuTheme = null
-  ): MenuProps = {
+  def apply(): MenuProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (defaultOpenKeys != null) __obj.updateDynamic("defaultOpenKeys")(defaultOpenKeys.asInstanceOf[js.Any])
-    if (defaultSelectedKeys != null) __obj.updateDynamic("defaultSelectedKeys")(defaultSelectedKeys.asInstanceOf[js.Any])
-    if (!js.isUndefined(focusable)) __obj.updateDynamic("focusable")(focusable.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceSubMenuRender)) __obj.updateDynamic("forceSubMenuRender")(forceSubMenuRender.asInstanceOf[js.Any])
-    if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(inlineCollapsed)) __obj.updateDynamic("inlineCollapsed")(inlineCollapsed.asInstanceOf[js.Any])
-    if (inlineIndent != null) __obj.updateDynamic("inlineIndent")(inlineIndent.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (motion != null) __obj.updateDynamic("motion")(motion.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onDeselect != null) __obj.updateDynamic("onDeselect")(js.Any.fromFunction1(onDeselect))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (onOpenChange != null) __obj.updateDynamic("onOpenChange")(js.Any.fromFunction1(onOpenChange))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
-    if (openAnimation != null) __obj.updateDynamic("openAnimation")(openAnimation.asInstanceOf[js.Any])
-    if (openKeys != null) __obj.updateDynamic("openKeys")(openKeys.asInstanceOf[js.Any])
-    if (openTransitionName != null) __obj.updateDynamic("openTransitionName")(openTransitionName.asInstanceOf[js.Any])
-    if (overflowedIndicator != null) __obj.updateDynamic("overflowedIndicator")(overflowedIndicator.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.asInstanceOf[js.Any])
-    if (selectedKeys != null) __obj.updateDynamic("selectedKeys")(selectedKeys.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (subMenuCloseDelay != null) __obj.updateDynamic("subMenuCloseDelay")(subMenuCloseDelay.asInstanceOf[js.Any])
-    if (subMenuOpenDelay != null) __obj.updateDynamic("subMenuOpenDelay")(subMenuOpenDelay.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[MenuProps]
   }
+  @scala.inline
+  implicit class MenuPropsOps[Self <: MenuProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultOpenKeys(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOpenKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultOpenKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOpenKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultSelectedKeys(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSelectedKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultSelectedKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSelectedKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocusable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocusable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceSubMenuRender(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceSubMenuRender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceSubMenuRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceSubMenuRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupContainer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetPopupContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlineCollapsed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineCollapsed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlineCollapsed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineCollapsed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlineIndent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineIndent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlineIndent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineIndent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: MenuMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMotion(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("motion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMotion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("motion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiple(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiple: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClick(value: /* param */ ClickParam => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDeselect(value: /* param */ SelectParam => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDeselect")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDeselect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDeselect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseEnter(value: /* e */ MouseEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseEnter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOpenChange(value: /* openKeys */ js.Array[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnOpenChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSelect(value: /* param */ SelectParam => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenAnimation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenKeys(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenTransitionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openTransitionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenTransitionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openTransitionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflowedIndicatorReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowedIndicator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOverflowedIndicator(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowedIndicator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflowedIndicator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowedIndicator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedKeys(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubMenuCloseDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subMenuCloseDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubMenuCloseDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subMenuCloseDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubMenuOpenDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subMenuOpenDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubMenuOpenDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subMenuOpenDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTheme(value: MenuTheme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

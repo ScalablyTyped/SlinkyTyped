@@ -3,6 +3,7 @@ package typingsSlinky.phaser.Phaser
 import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
 import org.scalajs.dom.raw.ImageData
 import org.scalajs.dom.raw.WebGLTexture
@@ -17,7 +18,6 @@ import typingsSlinky.phaser.Phaser.Types.Textures.PixelConfig
 import typingsSlinky.phaser.Phaser.Types.Textures.SpriteSheetConfig
 import typingsSlinky.phaser.Phaser.Types.Textures.SpriteSheetFromAtlasConfig
 import typingsSlinky.phaser.integer
-import typingsSlinky.std.HTMLImageElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -58,7 +58,7 @@ object Textures extends js.Object {
     /**
       * An ArrayBuffer the same size as the context ImageData.
       */
-    var buffer: scala.scalajs.js.typedarray.ArrayBuffer = js.native
+    var buffer: js.typedarray.ArrayBuffer = js.native
     /**
       * The source Canvas Element.
       */
@@ -72,7 +72,7 @@ object Textures extends js.Object {
       * Use the `update` method to populate this when the canvas changes.
       * Note that this is unavailable in some browsers, such as Epic Browser, due to their security restrictions.
       */
-    var data: scala.scalajs.js.typedarray.Uint8ClampedArray = js.native
+    var data: js.typedarray.Uint8ClampedArray = js.native
     /**
       * The height of the Canvas.
       * This property is read-only, if you wish to change it use the `setSize` method.
@@ -86,7 +86,7 @@ object Textures extends js.Object {
     /**
       * An Uint32Array view into the `buffer`.
       */
-    var pixels: scala.scalajs.js.typedarray.Uint32Array = js.native
+    var pixels: js.typedarray.Uint32Array = js.native
     /**
       * The width of the Canvas.
       * This property is read-only, if you wish to change it use the `setSize` method.
@@ -105,7 +105,7 @@ object Textures extends js.Object {
     def clear(x: integer, y: integer): CanvasTexture = js.native
     def clear(x: integer, y: integer, width: integer): CanvasTexture = js.native
     def clear(x: integer, y: integer, width: integer, height: integer): CanvasTexture = js.native
-    def draw(x: integer, y: integer, source: typingsSlinky.std.HTMLCanvasElement): CanvasTexture = js.native
+    def draw(x: integer, y: integer, source: HTMLCanvasElement): CanvasTexture = js.native
     /**
       * Draws the given Image or Canvas element to this CanvasTexture, then updates the internal
       * ImageData buffer and arrays.
@@ -518,11 +518,7 @@ object Textures extends js.Object {
     */
   @js.native
   class Texture protected () extends js.Object {
-    def this(
-      manager: TextureManager,
-      key: String,
-      source: js.Array[HTMLCanvasElement | org.scalajs.dom.raw.HTMLImageElement]
-    ) = this()
+    def this(manager: TextureManager, key: String, source: js.Array[HTMLCanvasElement | HTMLImageElement]) = this()
     def this(manager: TextureManager, key: String, source: HTMLCanvasElement) = this()
     /**
       * 
@@ -532,30 +528,24 @@ object Textures extends js.Object {
       * @param width The width of the Texture. This is optional and automatically derived from the source images.
       * @param height The height of the Texture. This is optional and automatically derived from the source images.
       */
-    def this(manager: TextureManager, key: String, source: org.scalajs.dom.raw.HTMLImageElement) = this()
+    def this(manager: TextureManager, key: String, source: HTMLImageElement) = this()
     def this(
       manager: TextureManager,
       key: String,
-      source: js.Array[HTMLCanvasElement | org.scalajs.dom.raw.HTMLImageElement],
+      source: js.Array[HTMLCanvasElement | HTMLImageElement],
       width: Double
     ) = this()
     def this(manager: TextureManager, key: String, source: HTMLCanvasElement, width: Double) = this()
-    def this(manager: TextureManager, key: String, source: org.scalajs.dom.raw.HTMLImageElement, width: Double) = this()
+    def this(manager: TextureManager, key: String, source: HTMLImageElement, width: Double) = this()
     def this(
       manager: TextureManager,
       key: String,
-      source: js.Array[HTMLCanvasElement | org.scalajs.dom.raw.HTMLImageElement],
+      source: js.Array[HTMLCanvasElement | HTMLImageElement],
       width: Double,
       height: Double
     ) = this()
     def this(manager: TextureManager, key: String, source: HTMLCanvasElement, width: Double, height: Double) = this()
-    def this(
-      manager: TextureManager,
-      key: String,
-      source: org.scalajs.dom.raw.HTMLImageElement,
-      width: Double,
-      height: Double
-    ) = this()
+    def this(manager: TextureManager, key: String, source: HTMLImageElement, width: Double, height: Double) = this()
     /**
       * Any additional data that was set in the source JSON (if any),
       * or any extra data you'd like to store relating to this texture
@@ -631,9 +621,9 @@ object Textures extends js.Object {
       * This will return the actual DOM Image.
       * @param name The string-based name, or integer based index, of the Frame to get from this Texture.
       */
-    def getDataSourceImage(): org.scalajs.dom.raw.HTMLImageElement | HTMLCanvasElement = js.native
-    def getDataSourceImage(name: String): org.scalajs.dom.raw.HTMLImageElement | HTMLCanvasElement = js.native
-    def getDataSourceImage(name: integer): org.scalajs.dom.raw.HTMLImageElement | HTMLCanvasElement = js.native
+    def getDataSourceImage(): HTMLImageElement | HTMLCanvasElement = js.native
+    def getDataSourceImage(name: String): HTMLImageElement | HTMLCanvasElement = js.native
+    def getDataSourceImage(name: integer): HTMLImageElement | HTMLCanvasElement = js.native
     /**
       * Returns an array with all of the names of the Frames in this Texture.
       * 
@@ -656,9 +646,9 @@ object Textures extends js.Object {
       * This will return the actual DOM Image or Canvas element.
       * @param name The string-based name, or integer based index, of the Frame to get from this Texture.
       */
-    def getSourceImage(): org.scalajs.dom.raw.HTMLImageElement | HTMLCanvasElement | RenderTexture = js.native
-    def getSourceImage(name: String): org.scalajs.dom.raw.HTMLImageElement | HTMLCanvasElement | RenderTexture = js.native
-    def getSourceImage(name: integer): org.scalajs.dom.raw.HTMLImageElement | HTMLCanvasElement | RenderTexture = js.native
+    def getSourceImage(): HTMLImageElement | HTMLCanvasElement | RenderTexture = js.native
+    def getSourceImage(name: String): HTMLImageElement | HTMLCanvasElement | RenderTexture = js.native
+    def getSourceImage(name: integer): HTMLImageElement | HTMLCanvasElement | RenderTexture = js.native
     /**
       * Takes the given TextureSource and returns the index of it within this Texture.
       * If it's not in this Texture, it returns -1.
@@ -680,8 +670,8 @@ object Textures extends js.Object {
       * @param name The key of the Frame to remove.
       */
     def remove(name: String): Boolean = js.native
-    def setDataSource(data: js.Array[typingsSlinky.std.HTMLCanvasElement | HTMLImageElement]): Unit = js.native
-    def setDataSource(data: typingsSlinky.std.HTMLCanvasElement): Unit = js.native
+    def setDataSource(data: js.Array[HTMLCanvasElement | HTMLImageElement]): Unit = js.native
+    def setDataSource(data: HTMLCanvasElement): Unit = js.native
     /**
       * Adds a data source image to this Texture.
       * 
@@ -739,37 +729,27 @@ object Textures extends js.Object {
       * @param data The Texture Atlas data.
       * @param dataSource An optional data Image element.
       */
-    def addAtlas(key: String, source: org.scalajs.dom.raw.HTMLImageElement, data: js.Object): Texture = js.native
+    def addAtlas(key: String, source: HTMLImageElement, data: js.Object): Texture = js.native
     def addAtlas(
       key: String,
-      source: org.scalajs.dom.raw.HTMLImageElement,
+      source: HTMLImageElement,
       data: js.Object,
-      dataSource: js.Array[typingsSlinky.std.HTMLCanvasElement | HTMLImageElement]
+      dataSource: js.Array[HTMLCanvasElement | HTMLImageElement]
     ): Texture = js.native
-    def addAtlas(
-      key: String,
-      source: org.scalajs.dom.raw.HTMLImageElement,
-      data: js.Object,
-      dataSource: typingsSlinky.std.HTMLCanvasElement
-    ): Texture = js.native
-    def addAtlas(
-      key: String,
-      source: org.scalajs.dom.raw.HTMLImageElement,
-      data: js.Object,
-      dataSource: HTMLImageElement
-    ): Texture = js.native
+    def addAtlas(key: String, source: HTMLImageElement, data: js.Object, dataSource: HTMLCanvasElement): Texture = js.native
+    def addAtlas(key: String, source: HTMLImageElement, data: js.Object, dataSource: HTMLImageElement): Texture = js.native
     def addAtlasJSONArray(key: String, source: js.Array[HTMLImageElement], data: js.Array[js.Object]): Texture = js.native
     def addAtlasJSONArray(
       key: String,
       source: js.Array[HTMLImageElement],
       data: js.Array[js.Object],
-      dataSource: js.Array[typingsSlinky.std.HTMLCanvasElement | HTMLImageElement]
+      dataSource: js.Array[HTMLCanvasElement | HTMLImageElement]
     ): Texture = js.native
     def addAtlasJSONArray(
       key: String,
       source: js.Array[HTMLImageElement],
       data: js.Array[js.Object],
-      dataSource: typingsSlinky.std.HTMLCanvasElement
+      dataSource: HTMLCanvasElement
     ): Texture = js.native
     def addAtlasJSONArray(
       key: String,
@@ -782,28 +762,18 @@ object Textures extends js.Object {
       key: String,
       source: js.Array[HTMLImageElement],
       data: js.Object,
-      dataSource: js.Array[typingsSlinky.std.HTMLCanvasElement | HTMLImageElement]
+      dataSource: js.Array[HTMLCanvasElement | HTMLImageElement]
     ): Texture = js.native
-    def addAtlasJSONArray(
-      key: String,
-      source: js.Array[HTMLImageElement],
-      data: js.Object,
-      dataSource: typingsSlinky.std.HTMLCanvasElement
-    ): Texture = js.native
+    def addAtlasJSONArray(key: String, source: js.Array[HTMLImageElement], data: js.Object, dataSource: HTMLCanvasElement): Texture = js.native
     def addAtlasJSONArray(key: String, source: js.Array[HTMLImageElement], data: js.Object, dataSource: HTMLImageElement): Texture = js.native
     def addAtlasJSONArray(key: String, source: HTMLImageElement, data: js.Array[js.Object]): Texture = js.native
     def addAtlasJSONArray(
       key: String,
       source: HTMLImageElement,
       data: js.Array[js.Object],
-      dataSource: js.Array[typingsSlinky.std.HTMLCanvasElement | HTMLImageElement]
+      dataSource: js.Array[HTMLCanvasElement | HTMLImageElement]
     ): Texture = js.native
-    def addAtlasJSONArray(
-      key: String,
-      source: HTMLImageElement,
-      data: js.Array[js.Object],
-      dataSource: typingsSlinky.std.HTMLCanvasElement
-    ): Texture = js.native
+    def addAtlasJSONArray(key: String, source: HTMLImageElement, data: js.Array[js.Object], dataSource: HTMLCanvasElement): Texture = js.native
     def addAtlasJSONArray(key: String, source: HTMLImageElement, data: js.Array[js.Object], dataSource: HTMLImageElement): Texture = js.native
     /**
       * Adds a Texture Atlas to this Texture Manager.
@@ -819,14 +789,9 @@ object Textures extends js.Object {
       key: String,
       source: HTMLImageElement,
       data: js.Object,
-      dataSource: js.Array[typingsSlinky.std.HTMLCanvasElement | HTMLImageElement]
+      dataSource: js.Array[HTMLCanvasElement | HTMLImageElement]
     ): Texture = js.native
-    def addAtlasJSONArray(
-      key: String,
-      source: HTMLImageElement,
-      data: js.Object,
-      dataSource: typingsSlinky.std.HTMLCanvasElement
-    ): Texture = js.native
+    def addAtlasJSONArray(key: String, source: HTMLImageElement, data: js.Object, dataSource: HTMLCanvasElement): Texture = js.native
     def addAtlasJSONArray(key: String, source: HTMLImageElement, data: js.Object, dataSource: HTMLImageElement): Texture = js.native
     /**
       * Adds a Texture Atlas to this Texture Manager.
@@ -837,25 +802,15 @@ object Textures extends js.Object {
       * @param data The Texture Atlas data.
       * @param dataSource An optional data Image element.
       */
-    def addAtlasJSONHash(key: String, source: org.scalajs.dom.raw.HTMLImageElement, data: js.Object): Texture = js.native
+    def addAtlasJSONHash(key: String, source: HTMLImageElement, data: js.Object): Texture = js.native
     def addAtlasJSONHash(
       key: String,
-      source: org.scalajs.dom.raw.HTMLImageElement,
+      source: HTMLImageElement,
       data: js.Object,
-      dataSource: js.Array[typingsSlinky.std.HTMLCanvasElement | HTMLImageElement]
+      dataSource: js.Array[HTMLCanvasElement | HTMLImageElement]
     ): Texture = js.native
-    def addAtlasJSONHash(
-      key: String,
-      source: org.scalajs.dom.raw.HTMLImageElement,
-      data: js.Object,
-      dataSource: typingsSlinky.std.HTMLCanvasElement
-    ): Texture = js.native
-    def addAtlasJSONHash(
-      key: String,
-      source: org.scalajs.dom.raw.HTMLImageElement,
-      data: js.Object,
-      dataSource: HTMLImageElement
-    ): Texture = js.native
+    def addAtlasJSONHash(key: String, source: HTMLImageElement, data: js.Object, dataSource: HTMLCanvasElement): Texture = js.native
+    def addAtlasJSONHash(key: String, source: HTMLImageElement, data: js.Object, dataSource: HTMLImageElement): Texture = js.native
     /**
       * Adds a Texture Atlas to this Texture Manager, where the atlas data is given
       * in the XML format.
@@ -864,25 +819,15 @@ object Textures extends js.Object {
       * @param data The Texture Atlas XML data.
       * @param dataSource An optional data Image element.
       */
-    def addAtlasXML(key: String, source: org.scalajs.dom.raw.HTMLImageElement, data: js.Object): Texture = js.native
+    def addAtlasXML(key: String, source: HTMLImageElement, data: js.Object): Texture = js.native
     def addAtlasXML(
       key: String,
-      source: org.scalajs.dom.raw.HTMLImageElement,
+      source: HTMLImageElement,
       data: js.Object,
-      dataSource: js.Array[typingsSlinky.std.HTMLCanvasElement | HTMLImageElement]
+      dataSource: js.Array[HTMLCanvasElement | HTMLImageElement]
     ): Texture = js.native
-    def addAtlasXML(
-      key: String,
-      source: org.scalajs.dom.raw.HTMLImageElement,
-      data: js.Object,
-      dataSource: typingsSlinky.std.HTMLCanvasElement
-    ): Texture = js.native
-    def addAtlasXML(
-      key: String,
-      source: org.scalajs.dom.raw.HTMLImageElement,
-      data: js.Object,
-      dataSource: HTMLImageElement
-    ): Texture = js.native
+    def addAtlasXML(key: String, source: HTMLImageElement, data: js.Object, dataSource: HTMLCanvasElement): Texture = js.native
+    def addAtlasXML(key: String, source: HTMLImageElement, data: js.Object, dataSource: HTMLImageElement): Texture = js.native
     /**
       * Adds a new Texture to the Texture Manager created from the given Base64 encoded data.
       * @param key The unique string-based key of the Texture.
@@ -916,13 +861,9 @@ object Textures extends js.Object {
       * @param source The source Image element.
       * @param dataSource An optional data Image element.
       */
-    def addImage(key: String, source: org.scalajs.dom.raw.HTMLImageElement): Texture = js.native
-    def addImage(
-      key: String,
-      source: org.scalajs.dom.raw.HTMLImageElement,
-      dataSource: typingsSlinky.std.HTMLCanvasElement
-    ): Texture = js.native
-    def addImage(key: String, source: org.scalajs.dom.raw.HTMLImageElement, dataSource: HTMLImageElement): Texture = js.native
+    def addImage(key: String, source: HTMLImageElement): Texture = js.native
+    def addImage(key: String, source: HTMLImageElement, dataSource: HTMLCanvasElement): Texture = js.native
+    def addImage(key: String, source: HTMLImageElement, dataSource: HTMLImageElement): Texture = js.native
     /**
       * Adds a Render Texture to the Texture Manager using the given key.
       * This allows you to then use the Render Texture as a normal texture for texture based Game Objects like Sprites.
@@ -939,7 +880,7 @@ object Textures extends js.Object {
       * @param source The source Image element.
       * @param config The configuration object for this Sprite Sheet.
       */
-    def addSpriteSheet(key: String, source: org.scalajs.dom.raw.HTMLImageElement, config: SpriteSheetConfig): Texture = js.native
+    def addSpriteSheet(key: String, source: HTMLImageElement, config: SpriteSheetConfig): Texture = js.native
     /**
       * Adds a Sprite Sheet to this Texture Manager, where the Sprite Sheet exists as a Frame within a Texture Atlas.
       * 
@@ -957,25 +898,15 @@ object Textures extends js.Object {
       * @param data The Texture Atlas data.
       * @param dataSource An optional data Image element.
       */
-    def addUnityAtlas(key: String, source: org.scalajs.dom.raw.HTMLImageElement, data: js.Object): Texture = js.native
+    def addUnityAtlas(key: String, source: HTMLImageElement, data: js.Object): Texture = js.native
     def addUnityAtlas(
       key: String,
-      source: org.scalajs.dom.raw.HTMLImageElement,
+      source: HTMLImageElement,
       data: js.Object,
-      dataSource: js.Array[typingsSlinky.std.HTMLCanvasElement | HTMLImageElement]
+      dataSource: js.Array[HTMLCanvasElement | HTMLImageElement]
     ): Texture = js.native
-    def addUnityAtlas(
-      key: String,
-      source: org.scalajs.dom.raw.HTMLImageElement,
-      data: js.Object,
-      dataSource: typingsSlinky.std.HTMLCanvasElement
-    ): Texture = js.native
-    def addUnityAtlas(
-      key: String,
-      source: org.scalajs.dom.raw.HTMLImageElement,
-      data: js.Object,
-      dataSource: HTMLImageElement
-    ): Texture = js.native
+    def addUnityAtlas(key: String, source: HTMLImageElement, data: js.Object, dataSource: HTMLCanvasElement): Texture = js.native
+    def addUnityAtlas(key: String, source: HTMLImageElement, data: js.Object, dataSource: HTMLImageElement): Texture = js.native
     /**
       * Checks the given texture key and throws a console.warn if the key is already in use, then returns false.
       * If you wish to avoid the console.warn then use `TextureManager.exists` instead.
@@ -996,7 +927,7 @@ object Textures extends js.Object {
       * @param width The width of the Texture.
       * @param height The height of the Texture.
       */
-    def create(key: String, source: org.scalajs.dom.raw.HTMLImageElement, width: integer, height: integer): Texture = js.native
+    def create(key: String, source: HTMLImageElement, width: integer, height: integer): Texture = js.native
     /**
       * Creates a new Texture using a blank Canvas element of the size given.
       * 
@@ -1157,28 +1088,22 @@ object Textures extends js.Object {
       * @param height Optional height of the source image. If not given it's derived from the source itself.
       * @param flipY Sets the `UNPACK_FLIP_Y_WEBGL` flag the WebGL Texture uses during upload. Default false.
       */
-    def this(texture: Texture, source: org.scalajs.dom.raw.HTMLImageElement) = this()
+    def this(texture: Texture, source: HTMLImageElement) = this()
     def this(texture: Texture, source: HTMLVideoElement) = this()
     def this(texture: Texture, source: WebGLTexture) = this()
     def this(texture: Texture, source: RenderTexture, width: integer) = this()
     def this(texture: Texture, source: HTMLCanvasElement, width: integer) = this()
-    def this(texture: Texture, source: org.scalajs.dom.raw.HTMLImageElement, width: integer) = this()
+    def this(texture: Texture, source: HTMLImageElement, width: integer) = this()
     def this(texture: Texture, source: HTMLVideoElement, width: integer) = this()
     def this(texture: Texture, source: WebGLTexture, width: integer) = this()
     def this(texture: Texture, source: RenderTexture, width: integer, height: integer) = this()
     def this(texture: Texture, source: HTMLCanvasElement, width: integer, height: integer) = this()
-    def this(texture: Texture, source: org.scalajs.dom.raw.HTMLImageElement, width: integer, height: integer) = this()
+    def this(texture: Texture, source: HTMLImageElement, width: integer, height: integer) = this()
     def this(texture: Texture, source: HTMLVideoElement, width: integer, height: integer) = this()
     def this(texture: Texture, source: WebGLTexture, width: integer, height: integer) = this()
     def this(texture: Texture, source: RenderTexture, width: integer, height: integer, flipY: Boolean) = this()
     def this(texture: Texture, source: HTMLCanvasElement, width: integer, height: integer, flipY: Boolean) = this()
-    def this(
-      texture: Texture,
-      source: org.scalajs.dom.raw.HTMLImageElement,
-      width: integer,
-      height: integer,
-      flipY: Boolean
-    ) = this()
+    def this(texture: Texture, source: HTMLImageElement, width: integer, height: integer, flipY: Boolean) = this()
     def this(texture: Texture, source: HTMLVideoElement, width: integer, height: integer, flipY: Boolean) = this()
     def this(texture: Texture, source: WebGLTexture, width: integer, height: integer, flipY: Boolean) = this()
     /**
@@ -1204,7 +1129,7 @@ object Textures extends js.Object {
       * 
       * This is either an Image element, Canvas element or a Video Element.
       */
-    var image: org.scalajs.dom.raw.HTMLImageElement | HTMLCanvasElement | HTMLVideoElement = js.native
+    var image: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement = js.native
     /**
       * Is the source image a Canvas Element?
       */
@@ -1243,7 +1168,7 @@ object Textures extends js.Object {
       * 
       * This is either an Image Element, a Canvas Element, a Video Element, a RenderTexture or a WebGLTexture.
       */
-    var source: org.scalajs.dom.raw.HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | RenderTexture | WebGLTexture = js.native
+    var source: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | RenderTexture | WebGLTexture = js.native
     /**
       * The Texture this TextureSource belongs to.
       */

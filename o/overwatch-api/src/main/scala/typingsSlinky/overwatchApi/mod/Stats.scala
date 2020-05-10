@@ -6,13 +6,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Stats extends js.Object {
-  var endorsement: AnonFrame
-  var level: Double
-  var portrait: String
-  var `private`: Boolean
-  var stats: AnonAssists
-  var username: String
+  var endorsement: AnonFrame = js.native
+  var level: Double = js.native
+  var portrait: String = js.native
+  var `private`: Boolean = js.native
+  var stats: AnonAssists = js.native
+  var username: String = js.native
 }
 
 object Stats {
@@ -29,5 +30,49 @@ object Stats {
     __obj.updateDynamic("private")(`private`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Stats]
   }
+  @scala.inline
+  implicit class StatsOps[Self <: Stats] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndorsement(value: AnonFrame): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endorsement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPortrait(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portrait")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrivate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("private")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStats(value: AnonAssists): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

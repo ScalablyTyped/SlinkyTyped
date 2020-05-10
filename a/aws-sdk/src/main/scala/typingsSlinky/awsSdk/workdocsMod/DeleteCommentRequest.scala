@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DeleteCommentRequest extends js.Object {
   /**
-    * Amazon WorkDocs authentication token. Do not set this field when using administrative API actions, as in accessing the API using AWS credentials.
+    * Amazon WorkDocs authentication token. Not required when using AWS administrator credentials to access the API.
     */
   var AuthenticationToken: js.UndefOr[AuthenticationHeaderType] = js.native
   /**
@@ -26,15 +26,47 @@ trait DeleteCommentRequest extends js.Object {
 
 object DeleteCommentRequest {
   @scala.inline
-  def apply(
-    CommentId: CommentIdType,
-    DocumentId: ResourceIdType,
-    VersionId: DocumentVersionIdType,
-    AuthenticationToken: AuthenticationHeaderType = null
-  ): DeleteCommentRequest = {
+  def apply(CommentId: CommentIdType, DocumentId: ResourceIdType, VersionId: DocumentVersionIdType): DeleteCommentRequest = {
     val __obj = js.Dynamic.literal(CommentId = CommentId.asInstanceOf[js.Any], DocumentId = DocumentId.asInstanceOf[js.Any], VersionId = VersionId.asInstanceOf[js.Any])
-    if (AuthenticationToken != null) __obj.updateDynamic("AuthenticationToken")(AuthenticationToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteCommentRequest]
   }
+  @scala.inline
+  implicit class DeleteCommentRequestOps[Self <: DeleteCommentRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommentId(value: CommentIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDocumentId(value: ResourceIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVersionId(value: DocumentVersionIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthenticationToken(value: AuthenticationHeaderType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthenticationToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

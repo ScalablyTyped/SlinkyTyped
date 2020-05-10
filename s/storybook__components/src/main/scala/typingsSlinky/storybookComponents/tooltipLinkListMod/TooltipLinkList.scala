@@ -1,12 +1,12 @@
 package typingsSlinky.storybookComponents.tooltipLinkListMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.FunctionComponent
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("@storybook/components/dist/tooltip/TooltipLinkList", "TooltipLinkList")
 @js.native
-object TooltipLinkList extends TopLevel[FunctionComponent[TooltipLinkListProps]]
+object TooltipLinkList extends TopLevel[ReactComponentClass[TooltipLinkListProps]]
 

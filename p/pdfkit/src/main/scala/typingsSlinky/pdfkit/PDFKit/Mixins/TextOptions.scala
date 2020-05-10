@@ -17,102 +17,322 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TextOptions extends js.Object {
   /** the alignment of the text (center, justify, left, right) */
   //TODO check this
-  var align: js.UndefOr[center | justify | left | right | String] = js.undefined
+  var align: js.UndefOr[center | justify | left | right | String] = js.native
   /** the vertical alignment of the text with respect to its insertion point */
   var baseline: js.UndefOr[
     Double | `svg-middle` | middle | `svg-central` | bottom | ideographic | alphabetic | mathematical | hanging | top
-  ] = js.undefined
+  ] = js.native
   /** the amount of space between each character in the text */
-  var characterSpacing: js.UndefOr[Double] = js.undefined
+  var characterSpacing: js.UndefOr[Double] = js.native
   /** the amount of space between each column (1/4 inch by default) */
-  var columnGap: js.UndefOr[Double] = js.undefined
+  var columnGap: js.UndefOr[Double] = js.native
   /**  the number of columns to flow the text into */
-  var columns: js.UndefOr[Double] = js.undefined
+  var columns: js.UndefOr[Double] = js.native
   /** whether the text segment will be followed immediately by another segment. Useful for changing styling in the middle of a paragraph. */
-  var continued: js.UndefOr[Boolean] = js.undefined
+  var continued: js.UndefOr[Boolean] = js.native
   /** The character to display at the end of the text when it is too long. Set to true to use the default character. */
-  var ellipsis: js.UndefOr[Boolean | String] = js.undefined
+  var ellipsis: js.UndefOr[Boolean | String] = js.native
   /** an array of OpenType feature tags to apply. If not provided, a set of defaults is used. */
-  var features: js.UndefOr[js.Array[OpenTypeFeatures]] = js.undefined
+  var features: js.UndefOr[js.Array[OpenTypeFeatures]] = js.native
   /** whether to fill the text (true by default) */
-  var fill: js.UndefOr[Boolean] = js.undefined
+  var fill: js.UndefOr[Boolean] = js.native
   /**  The maximum height that text should be clipped to */
-  var height: js.UndefOr[Double] = js.undefined
+  var height: js.UndefOr[Double] = js.native
   /** The amount in PDF points (72 per inch) to indent each paragraph of text */
-  var indent: js.UndefOr[Double] = js.undefined
+  var indent: js.UndefOr[Double] = js.native
   /**  Set to false to disable line wrapping all together */
-  var lineBreak: js.UndefOr[Boolean] = js.undefined
+  var lineBreak: js.UndefOr[Boolean] = js.native
   /** the amount of space between each line of text */
-  var lineGap: js.UndefOr[Double] = js.undefined
+  var lineGap: js.UndefOr[Double] = js.native
   /** A URL to link this text to (shortcut to create an annotation) */
-  var link: js.UndefOr[String] = js.undefined
+  var link: js.UndefOr[String] = js.native
   /** whether to slant the text (angle in degrees or true) */
-  var oblique: js.UndefOr[Boolean | Double] = js.undefined
+  var oblique: js.UndefOr[Boolean | Double] = js.native
   /** the amount of space between each paragraph of text */
-  var paragraphGap: js.UndefOr[Double] = js.undefined
+  var paragraphGap: js.UndefOr[Double] = js.native
   /** whether to strike out the text */
-  var strike: js.UndefOr[Boolean] = js.undefined
+  var strike: js.UndefOr[Boolean] = js.native
   /**  whether to stroke the text */
-  var stroke: js.UndefOr[Boolean] = js.undefined
+  var stroke: js.UndefOr[Boolean] = js.native
   /** whether to underline the text */
-  var underline: js.UndefOr[Boolean] = js.undefined
+  var underline: js.UndefOr[Boolean] = js.native
   /** The width that text should be wrapped to (by default, the page width minus the left and right margin) */
-  var width: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.native
   /** the amount of space between each word in the text */
-  var wordSpacing: js.UndefOr[Double] = js.undefined
+  var wordSpacing: js.UndefOr[Double] = js.native
 }
 
 object TextOptions {
   @scala.inline
-  def apply(
-    align: center | justify | left | right | String = null,
-    baseline: Double | `svg-middle` | middle | `svg-central` | bottom | ideographic | alphabetic | mathematical | hanging | top = null,
-    characterSpacing: Int | Double = null,
-    columnGap: Int | Double = null,
-    columns: Int | Double = null,
-    continued: js.UndefOr[Boolean] = js.undefined,
-    ellipsis: Boolean | String = null,
-    features: js.Array[OpenTypeFeatures] = null,
-    fill: js.UndefOr[Boolean] = js.undefined,
-    height: Int | Double = null,
-    indent: Int | Double = null,
-    lineBreak: js.UndefOr[Boolean] = js.undefined,
-    lineGap: Int | Double = null,
-    link: String = null,
-    oblique: Boolean | Double = null,
-    paragraphGap: Int | Double = null,
-    strike: js.UndefOr[Boolean] = js.undefined,
-    stroke: js.UndefOr[Boolean] = js.undefined,
-    underline: js.UndefOr[Boolean] = js.undefined,
-    width: Int | Double = null,
-    wordSpacing: Int | Double = null
-  ): TextOptions = {
+  def apply(): TextOptions = {
     val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (baseline != null) __obj.updateDynamic("baseline")(baseline.asInstanceOf[js.Any])
-    if (characterSpacing != null) __obj.updateDynamic("characterSpacing")(characterSpacing.asInstanceOf[js.Any])
-    if (columnGap != null) __obj.updateDynamic("columnGap")(columnGap.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (!js.isUndefined(continued)) __obj.updateDynamic("continued")(continued.asInstanceOf[js.Any])
-    if (ellipsis != null) __obj.updateDynamic("ellipsis")(ellipsis.asInstanceOf[js.Any])
-    if (features != null) __obj.updateDynamic("features")(features.asInstanceOf[js.Any])
-    if (!js.isUndefined(fill)) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (indent != null) __obj.updateDynamic("indent")(indent.asInstanceOf[js.Any])
-    if (!js.isUndefined(lineBreak)) __obj.updateDynamic("lineBreak")(lineBreak.asInstanceOf[js.Any])
-    if (lineGap != null) __obj.updateDynamic("lineGap")(lineGap.asInstanceOf[js.Any])
-    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
-    if (oblique != null) __obj.updateDynamic("oblique")(oblique.asInstanceOf[js.Any])
-    if (paragraphGap != null) __obj.updateDynamic("paragraphGap")(paragraphGap.asInstanceOf[js.Any])
-    if (!js.isUndefined(strike)) __obj.updateDynamic("strike")(strike.asInstanceOf[js.Any])
-    if (!js.isUndefined(stroke)) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (!js.isUndefined(underline)) __obj.updateDynamic("underline")(underline.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (wordSpacing != null) __obj.updateDynamic("wordSpacing")(wordSpacing.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextOptions]
   }
+  @scala.inline
+  implicit class TextOptionsOps[Self <: TextOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlign(value: center | justify | left | right | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseline(
+      value: Double | `svg-middle` | middle | `svg-central` | bottom | ideographic | alphabetic | mathematical | hanging | top
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCharacterSpacing(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("characterSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCharacterSpacing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("characterSpacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnGap(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnGap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnGap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnGap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumns(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContinued(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continued")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinued: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continued")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEllipsis(value: Boolean | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEllipsis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFeatures(value: js.Array[OpenTypeFeatures]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFeatures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFill(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineBreak(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineBreak")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineBreak: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineBreak")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineGap(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineGap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineGap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineGap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOblique(value: Boolean | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oblique")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOblique: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oblique")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParagraphGap(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraphGap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParagraphGap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraphGap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrike(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strike")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrike: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strike")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStroke(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStroke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnderline(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnderline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWordSpacing(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWordSpacing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordSpacing")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

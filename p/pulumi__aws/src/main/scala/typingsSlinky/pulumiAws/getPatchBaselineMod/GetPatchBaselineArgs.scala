@@ -26,17 +26,59 @@ trait GetPatchBaselineArgs extends js.Object {
 
 object GetPatchBaselineArgs {
   @scala.inline
-  def apply(
-    owner: String,
-    defaultBaseline: js.UndefOr[Boolean] = js.undefined,
-    namePrefix: String = null,
-    operatingSystem: String = null
-  ): GetPatchBaselineArgs = {
+  def apply(owner: String): GetPatchBaselineArgs = {
     val __obj = js.Dynamic.literal(owner = owner.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultBaseline)) __obj.updateDynamic("defaultBaseline")(defaultBaseline.asInstanceOf[js.Any])
-    if (namePrefix != null) __obj.updateDynamic("namePrefix")(namePrefix.asInstanceOf[js.Any])
-    if (operatingSystem != null) __obj.updateDynamic("operatingSystem")(operatingSystem.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPatchBaselineArgs]
   }
+  @scala.inline
+  implicit class GetPatchBaselineArgsOps[Self <: GetPatchBaselineArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOwner(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultBaseline(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultBaseline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultBaseline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultBaseline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamePrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamePrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperatingSystem(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatingSystem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystem")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

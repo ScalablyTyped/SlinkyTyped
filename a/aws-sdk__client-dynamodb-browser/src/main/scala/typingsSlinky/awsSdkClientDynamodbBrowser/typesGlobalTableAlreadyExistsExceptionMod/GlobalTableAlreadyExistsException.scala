@@ -2,6 +2,7 @@ package typingsSlinky.awsSdkClientDynamodbBrowser.typesGlobalTableAlreadyExistsE
 
 import typingsSlinky.awsSdkClientDynamodbBrowser.createGlobalTableExceptionsUnionMod.CreateGlobalTableExceptionsUnion
 import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,5 +13,34 @@ trait GlobalTableAlreadyExistsException
      with CreateGlobalTableExceptionsUnion {
   @JSName("name")
   var name_GlobalTableAlreadyExistsException: typingsSlinky.awsSdkClientDynamodbBrowser.awsSdkClientDynamodbBrowserStrings.GlobalTableAlreadyExistsException = js.native
+}
+
+object GlobalTableAlreadyExistsException {
+  @scala.inline
+  def apply(
+    $metadata: ResponseMetadata,
+    details: GlobalTableAlreadyExistsExceptionDetails,
+    message: String,
+    name: typingsSlinky.awsSdkClientDynamodbBrowser.awsSdkClientDynamodbBrowserStrings.GlobalTableAlreadyExistsException
+  ): GlobalTableAlreadyExistsException = {
+    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GlobalTableAlreadyExistsException]
+  }
+  @scala.inline
+  implicit class GlobalTableAlreadyExistsExceptionOps[Self <: GlobalTableAlreadyExistsException] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(
+      value: typingsSlinky.awsSdkClientDynamodbBrowser.awsSdkClientDynamodbBrowserStrings.GlobalTableAlreadyExistsException
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -50,26 +50,113 @@ trait SchemaSearchApplication extends js.Object {
 
 object SchemaSearchApplication {
   @scala.inline
-  def apply(
-    dataSourceRestrictions: js.Array[SchemaDataSourceRestriction] = null,
-    defaultFacetOptions: js.Array[SchemaFacetOptions] = null,
-    defaultSortOptions: SchemaSortOptions = null,
-    displayName: String = null,
-    name: String = null,
-    operationIds: js.Array[String] = null,
-    scoringConfig: SchemaScoringConfig = null,
-    sourceConfig: js.Array[SchemaSourceConfig] = null
-  ): SchemaSearchApplication = {
+  def apply(): SchemaSearchApplication = {
     val __obj = js.Dynamic.literal()
-    if (dataSourceRestrictions != null) __obj.updateDynamic("dataSourceRestrictions")(dataSourceRestrictions.asInstanceOf[js.Any])
-    if (defaultFacetOptions != null) __obj.updateDynamic("defaultFacetOptions")(defaultFacetOptions.asInstanceOf[js.Any])
-    if (defaultSortOptions != null) __obj.updateDynamic("defaultSortOptions")(defaultSortOptions.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (operationIds != null) __obj.updateDynamic("operationIds")(operationIds.asInstanceOf[js.Any])
-    if (scoringConfig != null) __obj.updateDynamic("scoringConfig")(scoringConfig.asInstanceOf[js.Any])
-    if (sourceConfig != null) __obj.updateDynamic("sourceConfig")(sourceConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSearchApplication]
   }
+  @scala.inline
+  implicit class SchemaSearchApplicationOps[Self <: SchemaSearchApplication] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataSourceRestrictions(value: js.Array[SchemaDataSourceRestriction]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceRestrictions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSourceRestrictions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceRestrictions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultFacetOptions(value: js.Array[SchemaFacetOptions]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultFacetOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultFacetOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultFacetOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultSortOptions(value: SchemaSortOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSortOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultSortOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSortOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperationIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperationIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScoringConfig(value: SchemaScoringConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scoringConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScoringConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scoringConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceConfig(value: js.Array[SchemaSourceConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,11 +22,41 @@ trait SchemaLayoutReference extends js.Object {
 
 object SchemaLayoutReference {
   @scala.inline
-  def apply(layoutId: String = null, predefinedLayout: String = null): SchemaLayoutReference = {
+  def apply(): SchemaLayoutReference = {
     val __obj = js.Dynamic.literal()
-    if (layoutId != null) __obj.updateDynamic("layoutId")(layoutId.asInstanceOf[js.Any])
-    if (predefinedLayout != null) __obj.updateDynamic("predefinedLayout")(predefinedLayout.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLayoutReference]
   }
+  @scala.inline
+  implicit class SchemaLayoutReferenceOps[Self <: SchemaLayoutReference] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLayoutId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPredefinedLayout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("predefinedLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPredefinedLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("predefinedLayout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

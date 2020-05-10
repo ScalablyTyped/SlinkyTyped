@@ -6,30 +6,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChannelObject
   extends BaseObject
-     with Object {
+     with AnyObject {
   @JSName("common")
-  var common_ChannelObject: ChannelCommon
+  var common_ChannelObject: ChannelCommon = js.native
   @JSName("type")
-  var type_ChannelObject: channel
+  var type_ChannelObject: channel = js.native
 }
 
 object ChannelObject {
   @scala.inline
-  def apply(
-    _id: String,
-    common: ChannelCommon,
-    native: Record[String, _],
-    `type`: channel,
-    acl: ObjectACL = null,
-    enums: Record[String, String] = null
-  ): ChannelObject = {
+  def apply(_id: String, common: ChannelCommon, native: Record[String, ObjectField], `type`: channel): ChannelObject = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (acl != null) __obj.updateDynamic("acl")(acl.asInstanceOf[js.Any])
-    if (enums != null) __obj.updateDynamic("enums")(enums.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChannelObject]
   }
+  @scala.inline
+  implicit class ChannelObjectOps[Self <: ChannelObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommon(value: ChannelCommon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("common")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: channel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -14,14 +14,12 @@ trait LoadEvent extends js.Object
 
 object LoadEvent {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def domcontentloaded: typingsSlinky.puppeteer.puppeteerStrings.domcontentloaded = "domcontentloaded".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.domcontentloaded]
   @scala.inline
-  def domcontentloaded: typingsSlinky.puppeteer.puppeteerStrings.domcontentloaded = this.cast("domcontentloaded")
+  def load: typingsSlinky.puppeteer.puppeteerStrings.load = "load".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.load]
   @scala.inline
-  def load: typingsSlinky.puppeteer.puppeteerStrings.load = this.cast("load")
+  def networkidle0: typingsSlinky.puppeteer.puppeteerStrings.networkidle0 = "networkidle0".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.networkidle0]
   @scala.inline
-  def networkidle0: typingsSlinky.puppeteer.puppeteerStrings.networkidle0 = this.cast("networkidle0")
-  @scala.inline
-  def networkidle2: typingsSlinky.puppeteer.puppeteerStrings.networkidle2 = this.cast("networkidle2")
+  def networkidle2: typingsSlinky.puppeteer.puppeteerStrings.networkidle2 = "networkidle2".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.networkidle2]
 }
 

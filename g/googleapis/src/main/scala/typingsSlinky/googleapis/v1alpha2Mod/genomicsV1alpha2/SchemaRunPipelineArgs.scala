@@ -74,28 +74,125 @@ trait SchemaRunPipelineArgs extends js.Object {
 
 object SchemaRunPipelineArgs {
   @scala.inline
-  def apply(
-    clientId: String = null,
-    inputs: StringDictionary[String] = null,
-    keepVmAliveOnFailureDuration: String = null,
-    labels: StringDictionary[String] = null,
-    logging: SchemaLoggingOptions = null,
-    outputs: StringDictionary[String] = null,
-    projectId: String = null,
-    resources: SchemaPipelineResources = null,
-    serviceAccount: SchemaServiceAccount = null
-  ): SchemaRunPipelineArgs = {
+  def apply(): SchemaRunPipelineArgs = {
     val __obj = js.Dynamic.literal()
-    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
-    if (inputs != null) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
-    if (keepVmAliveOnFailureDuration != null) __obj.updateDynamic("keepVmAliveOnFailureDuration")(keepVmAliveOnFailureDuration.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (logging != null) __obj.updateDynamic("logging")(logging.asInstanceOf[js.Any])
-    if (outputs != null) __obj.updateDynamic("outputs")(outputs.asInstanceOf[js.Any])
-    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
-    if (resources != null) __obj.updateDynamic("resources")(resources.asInstanceOf[js.Any])
-    if (serviceAccount != null) __obj.updateDynamic("serviceAccount")(serviceAccount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRunPipelineArgs]
   }
+  @scala.inline
+  implicit class SchemaRunPipelineArgsOps[Self <: SchemaRunPipelineArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputs(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepVmAliveOnFailureDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepVmAliveOnFailureDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepVmAliveOnFailureDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepVmAliveOnFailureDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogging(value: SchemaLoggingOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogging: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputs(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResources(value: SchemaPipelineResources): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceAccount(value: SchemaServiceAccount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceAccount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

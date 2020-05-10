@@ -12,10 +12,8 @@ trait HookType extends js.Object
 
 object HookType {
   @scala.inline
-  def beforeDelete: typingsSlinky.parseMockdb.parseMockdbStrings.beforeDelete = this.cast("beforeDelete")
+  def beforeDelete: typingsSlinky.parseMockdb.parseMockdbStrings.beforeDelete = "beforeDelete".asInstanceOf[typingsSlinky.parseMockdb.parseMockdbStrings.beforeDelete]
   @scala.inline
-  def beforeSave: typingsSlinky.parseMockdb.parseMockdbStrings.beforeSave = this.cast("beforeSave")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def beforeSave: typingsSlinky.parseMockdb.parseMockdbStrings.beforeSave = "beforeSave".asInstanceOf[typingsSlinky.parseMockdb.parseMockdbStrings.beforeSave]
 }
 

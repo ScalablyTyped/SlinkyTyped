@@ -19,15 +19,47 @@ trait DeleteFileSystemRequest extends js.Object {
 
 object DeleteFileSystemRequest {
   @scala.inline
-  def apply(
-    FileSystemId: FileSystemId,
-    ClientRequestToken: ClientRequestToken = null,
-    WindowsConfiguration: DeleteFileSystemWindowsConfiguration = null
-  ): DeleteFileSystemRequest = {
+  def apply(FileSystemId: FileSystemId): DeleteFileSystemRequest = {
     val __obj = js.Dynamic.literal(FileSystemId = FileSystemId.asInstanceOf[js.Any])
-    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
-    if (WindowsConfiguration != null) __obj.updateDynamic("WindowsConfiguration")(WindowsConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteFileSystemRequest]
   }
+  @scala.inline
+  implicit class DeleteFileSystemRequestOps[Self <: DeleteFileSystemRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileSystemId(value: FileSystemId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSystemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientRequestToken(value: ClientRequestToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientRequestToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWindowsConfiguration(value: DeleteFileSystemWindowsConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowsConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWindowsConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowsConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

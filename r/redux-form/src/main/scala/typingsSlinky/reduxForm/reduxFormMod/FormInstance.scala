@@ -2,7 +2,7 @@ package typingsSlinky.reduxForm.reduxFormMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reduxForm.reducerMod.RegisteredFieldState
+import typingsSlinky.reduxForm.mod.RegisteredFieldState
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`

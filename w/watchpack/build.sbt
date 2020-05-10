@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "watchpack"
-version := "1.1-dt-20191126Z-d189d2"
+version := "1.1-dt-20191126Z-a2e131"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.4",
-  "org.scalablytyped.slinky" %%% "graceful-fs" % "4.1-dt-20190212Z-c854a2",
-  "org.scalablytyped.slinky" %%% "node" % "13.7-dt-20200228Z-eb4e34",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "graceful-fs" % "4.1-dt-20190212Z-2b8e54",
+  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-6c3110",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

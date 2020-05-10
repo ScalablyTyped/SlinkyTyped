@@ -1,34 +1,34 @@
 package typingsSlinky.reactMdl.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMdl.mod.BadgeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Badge
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactMdl.mod.Badge] {
+object Badge {
   @JSImport("react-mdl", "Badge")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    text: String | Double,
-    noBackground: js.UndefOr[Boolean] = js.undefined,
-    overlap: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactMdl.mod.Badge] = {
-    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    if (!js.isUndefined(noBackground)) __obj.updateDynamic("noBackground")(noBackground.asInstanceOf[js.Any])
-    if (!js.isUndefined(overlap)) __obj.updateDynamic("overlap")(overlap.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactMdl.mod.Badge] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noBackground(value: Boolean): this.type = set("noBackground", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overlap(value: Boolean): this.type = set("overlap", value.asInstanceOf[js.Any])
   }
-  type Props = BadgeProps
+  
+  def withProps(p: BadgeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(text: String | Double): Builder = {
+    val __props = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[BadgeProps]))
+  }
 }
 

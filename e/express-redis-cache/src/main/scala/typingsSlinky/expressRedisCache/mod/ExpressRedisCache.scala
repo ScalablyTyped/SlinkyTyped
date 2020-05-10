@@ -2,6 +2,7 @@ package typingsSlinky.expressRedisCache.mod
 
 import typingsSlinky.express.mod.RequestHandler
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.redis.mod.RedisClient
 import scala.scalajs.js
@@ -31,12 +32,12 @@ class ExpressRedisCache () extends EventEmitter {
   def del(name: String, callback: js.Function2[/* error */ js.Any, /* deleted */ Double, Unit]): Unit = js.native
   def get(callback: js.Function2[/* error */ js.Any, /* entries */ js.Array[Entry], Unit]): Unit = js.native
   def get(name: String, callback: js.Function2[/* error */ js.Any, /* entries */ js.Array[Entry], Unit]): Unit = js.native
-  def route(): RequestHandler[ParamsDictionary] = js.native
-  def route(expire: Double): RequestHandler[ParamsDictionary] = js.native
-  def route(nameOrOptions: String): RequestHandler[ParamsDictionary] = js.native
-  def route(nameOrOptions: String, expire: ExpireOption): RequestHandler[ParamsDictionary] = js.native
-  def route(nameOrOptions: RouteOptions): RequestHandler[ParamsDictionary] = js.native
-  def route(nameOrOptions: RouteOptions, expire: ExpireOption): RequestHandler[ParamsDictionary] = js.native
+  def route(): RequestHandler[ParamsDictionary, _, _, Query] = js.native
+  def route(expire: Double): RequestHandler[ParamsDictionary, _, _, Query] = js.native
+  def route(nameOrOptions: String): RequestHandler[ParamsDictionary, _, _, Query] = js.native
+  def route(nameOrOptions: String, expire: ExpireOption): RequestHandler[ParamsDictionary, _, _, Query] = js.native
+  def route(nameOrOptions: RouteOptions): RequestHandler[ParamsDictionary, _, _, Query] = js.native
+  def route(nameOrOptions: RouteOptions, expire: ExpireOption): RequestHandler[ParamsDictionary, _, _, Query] = js.native
   def size(callback: js.Function2[/* error */ js.Any, /* bytes */ Double, Unit]): Unit = js.native
 }
 

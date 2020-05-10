@@ -47,22 +47,89 @@ trait SchemaCommutePreference extends js.Object {
 
 object SchemaCommutePreference {
   @scala.inline
-  def apply(
-    allowNonStreetLevelAddress: js.UndefOr[Boolean] = js.undefined,
-    departureHourLocal: Int | Double = null,
-    method: String = null,
-    roadTraffic: String = null,
-    startLocation: SchemaLatLng = null,
-    travelTime: String = null
-  ): SchemaCommutePreference = {
+  def apply(): SchemaCommutePreference = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowNonStreetLevelAddress)) __obj.updateDynamic("allowNonStreetLevelAddress")(allowNonStreetLevelAddress.asInstanceOf[js.Any])
-    if (departureHourLocal != null) __obj.updateDynamic("departureHourLocal")(departureHourLocal.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (roadTraffic != null) __obj.updateDynamic("roadTraffic")(roadTraffic.asInstanceOf[js.Any])
-    if (startLocation != null) __obj.updateDynamic("startLocation")(startLocation.asInstanceOf[js.Any])
-    if (travelTime != null) __obj.updateDynamic("travelTime")(travelTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCommutePreference]
   }
+  @scala.inline
+  implicit class SchemaCommutePreferenceOps[Self <: SchemaCommutePreference] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowNonStreetLevelAddress(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowNonStreetLevelAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowNonStreetLevelAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowNonStreetLevelAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDepartureHourLocal(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("departureHourLocal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDepartureHourLocal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("departureHourLocal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoadTraffic(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roadTraffic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoadTraffic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roadTraffic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartLocation(value: SchemaLatLng): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTravelTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("travelTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTravelTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("travelTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

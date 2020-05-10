@@ -21,28 +21,26 @@ trait CalendarColor extends js.Object
 
 object CalendarColor {
   @scala.inline
-  def auto: typingsSlinky.microsoftGraph.microsoftGraphStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.microsoftGraph.microsoftGraphStrings.auto = "auto".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def lightBlue: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightBlue = "lightBlue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.lightBlue]
   @scala.inline
-  def lightBlue: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightBlue = this.cast("lightBlue")
+  def lightBrown: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightBrown = "lightBrown".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.lightBrown]
   @scala.inline
-  def lightBrown: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightBrown = this.cast("lightBrown")
+  def lightGray: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightGray = "lightGray".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.lightGray]
   @scala.inline
-  def lightGray: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightGray = this.cast("lightGray")
+  def lightGreen: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightGreen = "lightGreen".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.lightGreen]
   @scala.inline
-  def lightGreen: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightGreen = this.cast("lightGreen")
+  def lightOrange: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightOrange = "lightOrange".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.lightOrange]
   @scala.inline
-  def lightOrange: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightOrange = this.cast("lightOrange")
+  def lightPink: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightPink = "lightPink".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.lightPink]
   @scala.inline
-  def lightPink: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightPink = this.cast("lightPink")
+  def lightRed: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightRed = "lightRed".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.lightRed]
   @scala.inline
-  def lightRed: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightRed = this.cast("lightRed")
+  def lightTeal: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightTeal = "lightTeal".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.lightTeal]
   @scala.inline
-  def lightTeal: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightTeal = this.cast("lightTeal")
+  def lightYellow: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightYellow = "lightYellow".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.lightYellow]
   @scala.inline
-  def lightYellow: typingsSlinky.microsoftGraph.microsoftGraphStrings.lightYellow = this.cast("lightYellow")
-  @scala.inline
-  def maxColor: typingsSlinky.microsoftGraph.microsoftGraphStrings.maxColor = this.cast("maxColor")
+  def maxColor: typingsSlinky.microsoftGraph.microsoftGraphStrings.maxColor = "maxColor".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.maxColor]
 }
 

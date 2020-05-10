@@ -1,11 +1,8 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.AnonNodeOriginalEvent
 import typingsSlinky.primereact.AnonValue
 import typingsSlinky.primereact.treeMod.TreeProps
@@ -14,78 +11,80 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tree
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactTreeMod.Tree] {
+object Tree {
   @JSImport("primereact/tree", "Tree")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, id */
-  def apply(
-    contentClassName: String = null,
-    contentStyle: js.Object = null,
-    contextMenuSelectionKey: js.Any = null,
-    dragdropScope: String = null,
-    expandedKeys: js.Any = null,
-    filter: js.UndefOr[Boolean] = js.undefined,
-    filterBy: js.Any = null,
-    filterMode: String = null,
-    filterPlaceholder: String = null,
-    loading: js.UndefOr[Boolean] = js.undefined,
-    loadingIcon: String = null,
-    metaKeySelection: js.UndefOr[Boolean] = js.undefined,
-    nodeTemplate: /* node */ js.Any => ReactElement = null,
-    onCollapse: /* e */ AnonNodeOriginalEvent => Unit = null,
-    onContextMenu: /* e */ AnonNodeOriginalEvent => Unit = null,
-    onContextMenuSelectionChange: /* e */ AnonValue => Unit = null,
-    onDragDrop: /* e */ AnonValue => Unit = null,
-    onExpand: /* e */ AnonNodeOriginalEvent => Unit = null,
-    onSelect: /* e */ AnonNodeOriginalEvent => Unit = null,
-    onSelectionChange: /* e */ AnonValue => Unit = null,
-    onToggle: /* e */ AnonValue => Unit = null,
-    onUnselect: /* e */ AnonNodeOriginalEvent => Unit = null,
-    propagateSelectionDown: js.UndefOr[Boolean] = js.undefined,
-    propagateSelectionUp: js.UndefOr[Boolean] = js.undefined,
-    selectionKeys: js.Any = null,
-    selectionMode: String = null,
-    style: js.Object = null,
-    value: js.Array[TreeNode] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactTreeMod.Tree] = {
-    val __obj = js.Dynamic.literal()
-    if (contentClassName != null) __obj.updateDynamic("contentClassName")(contentClassName.asInstanceOf[js.Any])
-    if (contentStyle != null) __obj.updateDynamic("contentStyle")(contentStyle.asInstanceOf[js.Any])
-    if (contextMenuSelectionKey != null) __obj.updateDynamic("contextMenuSelectionKey")(contextMenuSelectionKey.asInstanceOf[js.Any])
-    if (dragdropScope != null) __obj.updateDynamic("dragdropScope")(dragdropScope.asInstanceOf[js.Any])
-    if (expandedKeys != null) __obj.updateDynamic("expandedKeys")(expandedKeys.asInstanceOf[js.Any])
-    if (!js.isUndefined(filter)) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (filterBy != null) __obj.updateDynamic("filterBy")(filterBy.asInstanceOf[js.Any])
-    if (filterMode != null) __obj.updateDynamic("filterMode")(filterMode.asInstanceOf[js.Any])
-    if (filterPlaceholder != null) __obj.updateDynamic("filterPlaceholder")(filterPlaceholder.asInstanceOf[js.Any])
-    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (loadingIcon != null) __obj.updateDynamic("loadingIcon")(loadingIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(metaKeySelection)) __obj.updateDynamic("metaKeySelection")(metaKeySelection.asInstanceOf[js.Any])
-    if (nodeTemplate != null) __obj.updateDynamic("nodeTemplate")(js.Any.fromFunction1(nodeTemplate))
-    if (onCollapse != null) __obj.updateDynamic("onCollapse")(js.Any.fromFunction1(onCollapse))
-    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(js.Any.fromFunction1(onContextMenu))
-    if (onContextMenuSelectionChange != null) __obj.updateDynamic("onContextMenuSelectionChange")(js.Any.fromFunction1(onContextMenuSelectionChange))
-    if (onDragDrop != null) __obj.updateDynamic("onDragDrop")(js.Any.fromFunction1(onDragDrop))
-    if (onExpand != null) __obj.updateDynamic("onExpand")(js.Any.fromFunction1(onExpand))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
-    if (onSelectionChange != null) __obj.updateDynamic("onSelectionChange")(js.Any.fromFunction1(onSelectionChange))
-    if (onToggle != null) __obj.updateDynamic("onToggle")(js.Any.fromFunction1(onToggle))
-    if (onUnselect != null) __obj.updateDynamic("onUnselect")(js.Any.fromFunction1(onUnselect))
-    if (!js.isUndefined(propagateSelectionDown)) __obj.updateDynamic("propagateSelectionDown")(propagateSelectionDown.asInstanceOf[js.Any])
-    if (!js.isUndefined(propagateSelectionUp)) __obj.updateDynamic("propagateSelectionUp")(propagateSelectionUp.asInstanceOf[js.Any])
-    if (selectionKeys != null) __obj.updateDynamic("selectionKeys")(selectionKeys.asInstanceOf[js.Any])
-    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.primereactTreeMod.Tree] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentClassName(value: String): this.type = set("contentClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentStyle(value: js.Object): this.type = set("contentStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contextMenuSelectionKey(value: js.Any): this.type = set("contextMenuSelectionKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dragdropScope(value: String): this.type = set("dragdropScope", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandedKeys(value: js.Any): this.type = set("expandedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filter(value: Boolean): this.type = set("filter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterBy(value: js.Any): this.type = set("filterBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterMode(value: String): this.type = set("filterMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterPlaceholder(value: String): this.type = set("filterPlaceholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loadingIcon(value: String): this.type = set("loadingIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def metaKeySelection(value: Boolean): this.type = set("metaKeySelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nodeTemplate(value: /* node */ js.Any => ReactElement): this.type = set("nodeTemplate", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCollapse(value: /* e */ AnonNodeOriginalEvent => Unit): this.type = set("onCollapse", js.Any.fromFunction1(value))
+    @scala.inline
+    def onContextMenu(value: /* e */ AnonNodeOriginalEvent => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
+    @scala.inline
+    def onContextMenuSelectionChange(value: /* e */ AnonValue => Unit): this.type = set("onContextMenuSelectionChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragDrop(value: /* e */ AnonValue => Unit): this.type = set("onDragDrop", js.Any.fromFunction1(value))
+    @scala.inline
+    def onExpand(value: /* e */ AnonNodeOriginalEvent => Unit): this.type = set("onExpand", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSelect(value: /* e */ AnonNodeOriginalEvent => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSelectionChange(value: /* e */ AnonValue => Unit): this.type = set("onSelectionChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onToggle(value: /* e */ AnonValue => Unit): this.type = set("onToggle", js.Any.fromFunction1(value))
+    @scala.inline
+    def onUnselect(value: /* e */ AnonNodeOriginalEvent => Unit): this.type = set("onUnselect", js.Any.fromFunction1(value))
+    @scala.inline
+    def propagateSelectionDown(value: Boolean): this.type = set("propagateSelectionDown", value.asInstanceOf[js.Any])
+    @scala.inline
+    def propagateSelectionUp(value: Boolean): this.type = set("propagateSelectionUp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectionKeys(value: js.Any): this.type = set("selectionKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectionMode(value: String): this.type = set("selectionMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Array[TreeNode]): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactTreeMod.Tree] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.primereactTreeMod.Tree](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TreeProps
+  
+  def withProps(p: TreeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Tree.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

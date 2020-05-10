@@ -24,7 +24,7 @@ object namespaceMod extends js.Object {
           CommandMapGetter[ICommand, INamespace, CommandMetadata, CommandMetadataInput, CommandMetadataOption]
         ]
   
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.ionicCliFramework.definitionsMod.INamespace because Already inherited
   - typingsSlinky.ionic.definitionsMod.INamespace because var conflicts: parent, root. Inlined env, project */ @js.native
   abstract class Namespace () extends BaseNamespace[ICommand, INamespace, CommandMetadata, CommandMetadataInput, CommandMetadataOption] {
@@ -33,8 +33,8 @@ object namespaceMod extends js.Object {
     var env_FNamespace: IonicEnvironment = js.native
     @JSName("project")
     var project_FNamespace: js.UndefOr[IProject] = js.native
-    def env(): IonicEnvironment = js.native
-    def project(): js.UndefOr[IProject] = js.native
+    def env: IonicEnvironment = js.native
+    def project: js.UndefOr[IProject] = js.native
   }
   
   @js.native

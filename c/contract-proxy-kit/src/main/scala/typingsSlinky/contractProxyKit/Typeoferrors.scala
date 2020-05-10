@@ -6,15 +6,15 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Typeoferrors extends js.Object {
-  val CALL_EXCEPTION: typingsSlinky.contractProxyKit.contractProxyKitStrings.CALL_EXCEPTION = js.native
-  val INVALID_ARGUMENT: typingsSlinky.contractProxyKit.contractProxyKitStrings.INVALID_ARGUMENT = js.native
-  val MISSING_ARGUMENT: typingsSlinky.contractProxyKit.contractProxyKitStrings.MISSING_ARGUMENT = js.native
-  val MISSING_NEW: typingsSlinky.contractProxyKit.contractProxyKitStrings.MISSING_NEW = js.native
-  val NOT_IMPLEMENTED: typingsSlinky.contractProxyKit.contractProxyKitStrings.NOT_IMPLEMENTED = js.native
-  val NUMERIC_FAULT: typingsSlinky.contractProxyKit.contractProxyKitStrings.NUMERIC_FAULT = js.native
-  val UNEXPECTED_ARGUMENT: typingsSlinky.contractProxyKit.contractProxyKitStrings.UNEXPECTED_ARGUMENT = js.native
-  val UNKNOWN_ERROR: typingsSlinky.contractProxyKit.contractProxyKitStrings.UNKNOWN_ERROR = js.native
-  val UNSUPPORTED_OPERATION: typingsSlinky.contractProxyKit.contractProxyKitStrings.UNSUPPORTED_OPERATION = js.native
+  val CALL_EXCEPTION: /* "CALL_EXCEPTION" */ String = js.native
+  val INVALID_ARGUMENT: /* "INVALID_ARGUMENT" */ String = js.native
+  val MISSING_ARGUMENT: /* "MISSING_ARGUMENT" */ String = js.native
+  val MISSING_NEW: /* "MISSING_NEW" */ String = js.native
+  val NOT_IMPLEMENTED: /* "NOT_IMPLEMENTED" */ String = js.native
+  val NUMERIC_FAULT: /* "NUMERIC_FAULT" */ String = js.native
+  val UNEXPECTED_ARGUMENT: /* "UNEXPECTED_ARGUMENT" */ String = js.native
+  val UNKNOWN_ERROR: /* "UNKNOWN_ERROR" */ String = js.native
+  val UNSUPPORTED_OPERATION: /* "UNSUPPORTED_OPERATION" */ String = js.native
   def checkArgumentCount(count: Double, expectedCount: Double): Unit = js.native
   def checkArgumentCount(count: Double, expectedCount: Double, suffix: String): Unit = js.native
   def checkNew(self: js.Any, kind: js.Any): Unit = js.native

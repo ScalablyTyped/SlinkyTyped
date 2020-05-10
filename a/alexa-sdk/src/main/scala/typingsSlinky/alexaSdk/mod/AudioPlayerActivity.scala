@@ -16,18 +16,16 @@ trait AudioPlayerActivity extends js.Object
 
 object AudioPlayerActivity {
   @scala.inline
-  def BUFFER_UNDERRUN: typingsSlinky.alexaSdk.alexaSdkStrings.BUFFER_UNDERRUN = this.cast("BUFFER_UNDERRUN")
+  def BUFFER_UNDERRUN: typingsSlinky.alexaSdk.alexaSdkStrings.BUFFER_UNDERRUN = "BUFFER_UNDERRUN".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.BUFFER_UNDERRUN]
   @scala.inline
-  def FINISHED: typingsSlinky.alexaSdk.alexaSdkStrings.FINISHED = this.cast("FINISHED")
+  def FINISHED: typingsSlinky.alexaSdk.alexaSdkStrings.FINISHED = "FINISHED".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.FINISHED]
   @scala.inline
-  def IDLE: typingsSlinky.alexaSdk.alexaSdkStrings.IDLE = this.cast("IDLE")
+  def IDLE: typingsSlinky.alexaSdk.alexaSdkStrings.IDLE = "IDLE".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.IDLE]
   @scala.inline
-  def PAUSED: typingsSlinky.alexaSdk.alexaSdkStrings.PAUSED = this.cast("PAUSED")
+  def PAUSED: typingsSlinky.alexaSdk.alexaSdkStrings.PAUSED = "PAUSED".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.PAUSED]
   @scala.inline
-  def PLAYING: typingsSlinky.alexaSdk.alexaSdkStrings.PLAYING = this.cast("PLAYING")
+  def PLAYING: typingsSlinky.alexaSdk.alexaSdkStrings.PLAYING = "PLAYING".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.PLAYING]
   @scala.inline
-  def STOPPED: typingsSlinky.alexaSdk.alexaSdkStrings.STOPPED = this.cast("STOPPED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def STOPPED: typingsSlinky.alexaSdk.alexaSdkStrings.STOPPED = "STOPPED".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.STOPPED]
 }
 

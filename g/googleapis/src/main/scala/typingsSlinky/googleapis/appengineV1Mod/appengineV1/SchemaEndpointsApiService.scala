@@ -47,18 +47,65 @@ trait SchemaEndpointsApiService extends js.Object {
 
 object SchemaEndpointsApiService {
   @scala.inline
-  def apply(
-    configId: String = null,
-    disableTraceSampling: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    rolloutStrategy: String = null
-  ): SchemaEndpointsApiService = {
+  def apply(): SchemaEndpointsApiService = {
     val __obj = js.Dynamic.literal()
-    if (configId != null) __obj.updateDynamic("configId")(configId.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableTraceSampling)) __obj.updateDynamic("disableTraceSampling")(disableTraceSampling.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (rolloutStrategy != null) __obj.updateDynamic("rolloutStrategy")(rolloutStrategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEndpointsApiService]
   }
+  @scala.inline
+  implicit class SchemaEndpointsApiServiceOps[Self <: SchemaEndpointsApiService] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableTraceSampling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableTraceSampling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableTraceSampling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableTraceSampling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRolloutStrategy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rolloutStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRolloutStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rolloutStrategy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

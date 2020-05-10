@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBackgroundReload extends js.Object {
-  var adapterOptions: js.UndefOr[js.Any] = js.undefined
-  var backgroundReload: js.UndefOr[Boolean] = js.undefined
-  var include: js.UndefOr[String] = js.undefined
-  var reload: js.UndefOr[Boolean] = js.undefined
+  var adapterOptions: js.UndefOr[js.Any] = js.native
+  var backgroundReload: js.UndefOr[Boolean] = js.native
+  var include: js.UndefOr[String] = js.native
+  var reload: js.UndefOr[Boolean] = js.native
 }
 
 object AnonBackgroundReload {
   @scala.inline
-  def apply(
-    adapterOptions: js.Any = null,
-    backgroundReload: js.UndefOr[Boolean] = js.undefined,
-    include: String = null,
-    reload: js.UndefOr[Boolean] = js.undefined
-  ): AnonBackgroundReload = {
+  def apply(): AnonBackgroundReload = {
     val __obj = js.Dynamic.literal()
-    if (adapterOptions != null) __obj.updateDynamic("adapterOptions")(adapterOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(backgroundReload)) __obj.updateDynamic("backgroundReload")(backgroundReload.asInstanceOf[js.Any])
-    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
-    if (!js.isUndefined(reload)) __obj.updateDynamic("reload")(reload.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBackgroundReload]
   }
+  @scala.inline
+  implicit class AnonBackgroundReloadOps[Self <: AnonBackgroundReload] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdapterOptions(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adapterOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdapterOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adapterOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundReload(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundReload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundReload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundReload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInclude(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReload(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reload")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

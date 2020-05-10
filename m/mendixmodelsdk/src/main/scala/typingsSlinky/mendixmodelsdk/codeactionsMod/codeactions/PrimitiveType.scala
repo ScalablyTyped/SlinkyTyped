@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 /**
   * In version 7.21.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -31,9 +31,9 @@ abstract class PrimitiveType protected () extends Type {
   @JSName("model")
   var model_FPrimitiveType: IModel = js.native
   @JSName("containerAsBasicParameterType")
-  def containerAsBasicParameterType_MPrimitiveType(): BasicParameterType = js.native
+  def containerAsBasicParameterType_MPrimitiveType: BasicParameterType = js.native
   @JSName("containerAsCodeAction")
-  def containerAsCodeAction_MPrimitiveType(): CodeAction = js.native
+  def containerAsCodeAction_MPrimitiveType: CodeAction = js.native
 }
 
 /* static members */

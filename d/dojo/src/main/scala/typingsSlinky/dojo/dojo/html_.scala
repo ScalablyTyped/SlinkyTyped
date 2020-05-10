@@ -65,7 +65,7 @@ trait html_ extends js.Object {
     * @param cont the content to be set on the parent element.This can be an html string, a node reference or a NodeList, dojo/NodeList, Array or other enumerable list of nodes
     * @param params               OptionalOptional flags/properties to configure the content-setting. See dojo/html/_ContentSetter
     */
-  def set(node: HTMLElement, cont: typingsSlinky.std.HTMLElement): js.Any = js.native
-  def set(node: HTMLElement, cont: typingsSlinky.std.HTMLElement, params: js.Object): js.Any = js.native
+  def set(node: HTMLElement, cont: HTMLElement): js.Any = js.native
+  def set(node: HTMLElement, cont: HTMLElement, params: js.Object): js.Any = js.native
 }
 

@@ -16,18 +16,16 @@ trait PublishProvider extends js.Object
 
 object PublishProvider {
   @scala.inline
-  def bintray: typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.bintray = this.cast("bintray")
+  def bintray: typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.bintray = "bintray".asInstanceOf[typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.bintray]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def custom: typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.custom = "custom".asInstanceOf[typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.custom]
   @scala.inline
-  def custom: typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.custom = this.cast("custom")
+  def generic: typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.generic = "generic".asInstanceOf[typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.generic]
   @scala.inline
-  def generic: typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.generic = this.cast("generic")
+  def github: typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.github = "github".asInstanceOf[typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.github]
   @scala.inline
-  def github: typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.github = this.cast("github")
+  def s3: typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.s3 = "s3".asInstanceOf[typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.s3]
   @scala.inline
-  def s3: typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.s3 = this.cast("s3")
-  @scala.inline
-  def spaces: typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.spaces = this.cast("spaces")
+  def spaces: typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.spaces = "spaces".asInstanceOf[typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.spaces]
 }
 

@@ -62,7 +62,7 @@ object remoteDocumentChangeBufferMod extends js.Object {
       */
     def getEntry(transaction: PersistenceTransaction, documentKey: DocumentKey): PersistencePromise[MaybeDocument | Null] = js.native
     /* protected */ def getFromCache(transaction: PersistenceTransaction, documentKey: DocumentKey): PersistencePromise[MaybeDocument | Null] = js.native
-    /* protected */ def readTime(): SnapshotVersion = js.native
+    /* protected */ def readTime: SnapshotVersion = js.native
     /* protected */ def readTime(value: SnapshotVersion): js.Any = js.native
     /**
       * Buffers a `RemoteDocumentCache.removeEntry()` call.

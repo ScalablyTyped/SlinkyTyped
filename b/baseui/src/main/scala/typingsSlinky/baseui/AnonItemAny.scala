@@ -6,17 +6,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonItemAny extends js.Object {
-  var event: Event_ | KeyboardEvent
-  var item: js.Any
+  var event: Event_ | KeyboardEvent = js.native
+  var item: js.Any = js.native
 }
 
 object AnonItemAny {
   @scala.inline
   def apply(event: Event_ | KeyboardEvent, item: js.Any): AnonItemAny = {
     val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonItemAny]
   }
+  @scala.inline
+  implicit class AnonItemAnyOps[Self <: AnonItemAny] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventKeyboardEvent(value: KeyboardEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvent(value: Event_ | KeyboardEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItem(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

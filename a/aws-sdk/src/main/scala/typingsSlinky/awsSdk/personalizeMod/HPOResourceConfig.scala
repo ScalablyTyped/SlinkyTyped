@@ -18,11 +18,41 @@ trait HPOResourceConfig extends js.Object {
 
 object HPOResourceConfig {
   @scala.inline
-  def apply(maxNumberOfTrainingJobs: HPOResource = null, maxParallelTrainingJobs: HPOResource = null): HPOResourceConfig = {
+  def apply(): HPOResourceConfig = {
     val __obj = js.Dynamic.literal()
-    if (maxNumberOfTrainingJobs != null) __obj.updateDynamic("maxNumberOfTrainingJobs")(maxNumberOfTrainingJobs.asInstanceOf[js.Any])
-    if (maxParallelTrainingJobs != null) __obj.updateDynamic("maxParallelTrainingJobs")(maxParallelTrainingJobs.asInstanceOf[js.Any])
     __obj.asInstanceOf[HPOResourceConfig]
   }
+  @scala.inline
+  implicit class HPOResourceConfigOps[Self <: HPOResourceConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxNumberOfTrainingJobs(value: HPOResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNumberOfTrainingJobs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxNumberOfTrainingJobs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNumberOfTrainingJobs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxParallelTrainingJobs(value: HPOResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxParallelTrainingJobs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxParallelTrainingJobs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxParallelTrainingJobs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -10,11 +10,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HeaderProps[RecordType] extends js.Object {
-  var columns: ColumnsType[RecordType]
-  var flattenColumns: js.Array[ColumnType[RecordType]]
-  var onHeaderRow: GetComponentProps[js.Array[ColumnType[RecordType]]]
-  var stickyOffsets: StickyOffsets
+  var columns: ColumnsType[RecordType] = js.native
+  var flattenColumns: js.Array[ColumnType[RecordType]] = js.native
+  var onHeaderRow: GetComponentProps[js.Array[ColumnType[RecordType]]] = js.native
+  var stickyOffsets: StickyOffsets = js.native
 }
 
 object HeaderProps {
@@ -26,8 +27,41 @@ object HeaderProps {
     stickyOffsets: StickyOffsets
   ): HeaderProps[RecordType] = {
     val __obj = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], flattenColumns = flattenColumns.asInstanceOf[js.Any], onHeaderRow = js.Any.fromFunction2(onHeaderRow), stickyOffsets = stickyOffsets.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[HeaderProps[RecordType]]
   }
+  @scala.inline
+  implicit class HeaderPropsOps[Self[recordtype] <: HeaderProps[recordtype], RecordType] (val x: Self[RecordType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[RecordType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[RecordType]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[RecordType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[RecordType] with Other]
+    @scala.inline
+    def withColumns(value: ColumnsType[RecordType]): Self[RecordType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlattenColumns(value: js.Array[ColumnType[RecordType]]): Self[RecordType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flattenColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnHeaderRow(
+      value: (js.Array[ColumnType[RecordType]], /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement]
+    ): Self[RecordType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHeaderRow")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withStickyOffsets(value: StickyOffsets): Self[RecordType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stickyOffsets")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.transducersJs.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ object transduce extends js.Object {
     init: TResult
   ): TResult = js.native
   def apply[TResult, TInput, TOutput](
-    coll: Iterable[TInput],
+    coll: js.Iterable[TInput],
     xf: Transducer[TInput, TOutput],
     f: Reducer[TResult, TOutput],
     init: TResult
@@ -33,12 +32,12 @@ object transduce extends js.Object {
     init: TResult
   ): TCompleteResult = js.native
   def apply[TResult, TCompleteResult, TInput, TOutput](
-    coll: Iterable[TInput],
+    coll: js.Iterable[TInput],
     xf: Transducer[TInput, TOutput],
     f: CompletingTransformer[TResult, TCompleteResult, TOutput]
   ): TCompleteResult = js.native
   def apply[TResult, TCompleteResult, TInput, TOutput](
-    coll: Iterable[TInput],
+    coll: js.Iterable[TInput],
     xf: Transducer[TInput, TOutput],
     f: CompletingTransformer[TResult, TCompleteResult, TOutput],
     init: TResult

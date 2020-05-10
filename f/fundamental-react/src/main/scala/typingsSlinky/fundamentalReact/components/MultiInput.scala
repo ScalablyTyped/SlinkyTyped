@@ -1,41 +1,54 @@
 package typingsSlinky.fundamentalReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.fundamentalReact.AnonImageLabel
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.fundamentalReact.AnonText
 import typingsSlinky.fundamentalReact.multiInputMod.MultiInputProps
 import typingsSlinky.fundamentalReact.multiInputMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MultiInput
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object MultiInput {
   @JSImport("fundamental-react/lib/MultiInput/MultiInput", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    data: js.Array[String | Double | js.Array[String]],
-    onTagsUpdate: js.Array[String] => Unit,
-    compact: js.UndefOr[Boolean] = js.undefined,
-    disableStyles: js.UndefOr[Boolean] = js.undefined,
-    localizedText: AnonImageLabel = null,
-    placeHolder: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], onTagsUpdate = js.Any.fromFunction1(onTagsUpdate))
-    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableStyles)) __obj.updateDynamic("disableStyles")(disableStyles.asInstanceOf[js.Any])
-    if (localizedText != null) __obj.updateDynamic("localizedText")(localizedText.asInstanceOf[js.Any])
-    if (placeHolder != null) __obj.updateDynamic("placeHolder")(placeHolder.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def buttonProps(value: js.Any): this.type = set("buttonProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableStyles(value: Boolean): this.type = set("disableStyles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputProps(value: js.Any): this.type = set("inputProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listProps(value: js.Any): this.type = set("listProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onTagsUpdate(value: /* repeated */ js.Any => _): this.type = set("onTagsUpdate", js.Any.fromFunction1(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popoverProps(value: js.Any): this.type = set("popoverProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagProps(value: js.Any): this.type = set("tagProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def validationState(value: AnonText): this.type = set("validationState", value.asInstanceOf[js.Any])
   }
-  type Props = MultiInputProps
+  
+  def withProps(p: MultiInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(data: js.Array[_]): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MultiInputProps]))
+  }
 }
 

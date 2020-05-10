@@ -18,11 +18,41 @@ trait Warning extends js.Object {
 
 object Warning {
   @scala.inline
-  def apply(ErrorCode: ErrorCode = null, Pages: Pages = null): Warning = {
+  def apply(): Warning = {
     val __obj = js.Dynamic.literal()
-    if (ErrorCode != null) __obj.updateDynamic("ErrorCode")(ErrorCode.asInstanceOf[js.Any])
-    if (Pages != null) __obj.updateDynamic("Pages")(Pages.asInstanceOf[js.Any])
     __obj.asInstanceOf[Warning]
   }
+  @scala.inline
+  implicit class WarningOps[Self <: Warning] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorCode(value: ErrorCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPages(value: Pages): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pages")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

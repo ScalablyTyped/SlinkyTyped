@@ -30,18 +30,65 @@ trait UpdateConfigurationTemplateMessage extends js.Object {
 
 object UpdateConfigurationTemplateMessage {
   @scala.inline
-  def apply(
-    ApplicationName: ApplicationName,
-    TemplateName: ConfigurationTemplateName,
-    Description: Description = null,
-    OptionSettings: ConfigurationOptionSettingsList = null,
-    OptionsToRemove: OptionsSpecifierList = null
-  ): UpdateConfigurationTemplateMessage = {
+  def apply(ApplicationName: ApplicationName, TemplateName: ConfigurationTemplateName): UpdateConfigurationTemplateMessage = {
     val __obj = js.Dynamic.literal(ApplicationName = ApplicationName.asInstanceOf[js.Any], TemplateName = TemplateName.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (OptionSettings != null) __obj.updateDynamic("OptionSettings")(OptionSettings.asInstanceOf[js.Any])
-    if (OptionsToRemove != null) __obj.updateDynamic("OptionsToRemove")(OptionsToRemove.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateConfigurationTemplateMessage]
   }
+  @scala.inline
+  implicit class UpdateConfigurationTemplateMessageOps[Self <: UpdateConfigurationTemplateMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationName(value: ApplicationName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemplateName(value: ConfigurationTemplateName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionSettings(value: ConfigurationOptionSettingsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionsToRemove(value: OptionsSpecifierList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionsToRemove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionsToRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionsToRemove")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

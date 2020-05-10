@@ -15,19 +15,16 @@ object BaseValueRef {
   @scala.inline
   def SignalRef[T](signal: String): BaseValueRef[T] = {
     val __obj = js.Dynamic.literal(signal = signal.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[BaseValueRef[T]]
   }
   @scala.inline
-  def AnonValue[T](value: T = null): BaseValueRef[T] = {
+  def AnonValue[T](): BaseValueRef[T] = {
     val __obj = js.Dynamic.literal()
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseValueRef[T]]
   }
   @scala.inline
   def AnonField[T](field: Field): BaseValueRef[T] = {
     val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[BaseValueRef[T]]
   }
 }

@@ -13,16 +13,53 @@ trait HlsSettings extends js.Object {
 
 object HlsSettings {
   @scala.inline
-  def apply(
-    AudioOnlyHlsSettings: AudioOnlyHlsSettings = null,
-    Fmp4HlsSettings: Fmp4HlsSettings = null,
-    StandardHlsSettings: StandardHlsSettings = null
-  ): HlsSettings = {
+  def apply(): HlsSettings = {
     val __obj = js.Dynamic.literal()
-    if (AudioOnlyHlsSettings != null) __obj.updateDynamic("AudioOnlyHlsSettings")(AudioOnlyHlsSettings.asInstanceOf[js.Any])
-    if (Fmp4HlsSettings != null) __obj.updateDynamic("Fmp4HlsSettings")(Fmp4HlsSettings.asInstanceOf[js.Any])
-    if (StandardHlsSettings != null) __obj.updateDynamic("StandardHlsSettings")(StandardHlsSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[HlsSettings]
   }
+  @scala.inline
+  implicit class HlsSettingsOps[Self <: HlsSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAudioOnlyHlsSettings(value: AudioOnlyHlsSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioOnlyHlsSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudioOnlyHlsSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioOnlyHlsSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFmp4HlsSettings(value: Fmp4HlsSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fmp4HlsSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFmp4HlsSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fmp4HlsSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStandardHlsSettings(value: StandardHlsSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StandardHlsSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStandardHlsSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StandardHlsSettings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

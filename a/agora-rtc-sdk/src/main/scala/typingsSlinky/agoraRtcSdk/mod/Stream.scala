@@ -139,7 +139,7 @@ trait Stream extends js.Object {
     *
     * @returns The audio level. The value range is [0,1].
     */
-  def getAudioLevel(): Double | Unit = js.native
+  def getAudioLevel(): js.UndefOr[Double] = js.native
   /**
     * Retrieves the Current Position of the Audio Mixing
     *
@@ -160,7 +160,7 @@ trait Stream extends js.Object {
     * This method retrieves the audio track in the stream and can be used together with [[replaceTrack]].
     * @returns If the stream contains an audio track, it will be returned in a `MediaStreamTrack` object.
     */
-  def getAudioTrack(): MediaStreamTrack | Unit = js.native
+  def getAudioTrack(): js.UndefOr[MediaStreamTrack] = js.native
   /**
     * Gets the volume of the audio effects.
     *
@@ -184,7 +184,7 @@ trait Stream extends js.Object {
     * This method retrieves the stream ID.
     * @example `stream.getId()`
     */
-  def getId(): Double = js.native
+  def getId(): Double | String = js.native
   /**
     * Gets Connection Statistics
     *
@@ -243,7 +243,7 @@ trait Stream extends js.Object {
     * This method retrieves the video track in the stream and can be used together with [[replaceTrack]].
     * @returns If the stream contains a video track, it will be returned in a `MediaStreamTrack` object.
     */
-  def getVideoTrack(): MediaStreamTrack | Unit = js.native
+  def getVideoTrack(): js.UndefOr[MediaStreamTrack] = js.native
   /**
     * Retrieves the Audio Flag
     *

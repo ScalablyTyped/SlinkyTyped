@@ -18,11 +18,41 @@ trait InstanceMonitoring extends js.Object {
 
 object InstanceMonitoring {
   @scala.inline
-  def apply(InstanceId: String = null, Monitoring: Monitoring = null): InstanceMonitoring = {
+  def apply(): InstanceMonitoring = {
     val __obj = js.Dynamic.literal()
-    if (InstanceId != null) __obj.updateDynamic("InstanceId")(InstanceId.asInstanceOf[js.Any])
-    if (Monitoring != null) __obj.updateDynamic("Monitoring")(Monitoring.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceMonitoring]
   }
+  @scala.inline
+  implicit class InstanceMonitoringOps[Self <: InstanceMonitoring] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonitoring(value: Monitoring): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Monitoring")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonitoring: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Monitoring")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

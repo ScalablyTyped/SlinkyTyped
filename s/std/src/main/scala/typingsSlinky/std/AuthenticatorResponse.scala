@@ -5,8 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AuthenticatorResponse extends js.Object {
-  val clientDataJSON: scala.scalajs.js.typedarray.ArrayBuffer
+  val clientDataJSON: js.typedarray.ArrayBuffer = js.native
 }
 
 @JSGlobal("AuthenticatorResponse")

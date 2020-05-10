@@ -22,10 +22,41 @@ trait ModifyClusterSubnetGroupMessage extends js.Object {
 
 object ModifyClusterSubnetGroupMessage {
   @scala.inline
-  def apply(ClusterSubnetGroupName: String, SubnetIds: SubnetIdentifierList, Description: String = null): ModifyClusterSubnetGroupMessage = {
+  def apply(ClusterSubnetGroupName: String, SubnetIds: SubnetIdentifierList): ModifyClusterSubnetGroupMessage = {
     val __obj = js.Dynamic.literal(ClusterSubnetGroupName = ClusterSubnetGroupName.asInstanceOf[js.Any], SubnetIds = SubnetIds.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyClusterSubnetGroupMessage]
   }
+  @scala.inline
+  implicit class ModifyClusterSubnetGroupMessageOps[Self <: ModifyClusterSubnetGroupMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterSubnetGroupName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterSubnetGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubnetIds(value: SubnetIdentifierList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

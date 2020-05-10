@@ -4,20 +4,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDisp extends js.Object {
-  var base: js.UndefOr[ArmRegister] = js.undefined
-  var disp: Double
-  var index: js.UndefOr[ArmRegister] = js.undefined
-  var scale: Double
+  var base: js.UndefOr[ArmRegister] = js.native
+  var disp: Double = js.native
+  var index: js.UndefOr[ArmRegister] = js.native
+  var scale: Double = js.native
 }
 
 object AnonDisp {
   @scala.inline
-  def apply(disp: Double, scale: Double, base: ArmRegister = null, index: ArmRegister = null): AnonDisp = {
+  def apply(disp: Double, scale: Double): AnonDisp = {
     val __obj = js.Dynamic.literal(disp = disp.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any])
-    if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDisp]
   }
+  @scala.inline
+  implicit class AnonDispOps[Self <: AnonDisp] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisp(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBase(value: ArmRegister): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndex(value: ArmRegister): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,15 +1,17 @@
 package typingsSlinky.halogen.components
 
 import typingsSlinky.halogen.mod.RingLoaderCls
+import typingsSlinky.halogen.mod.SizeLoaderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RingLoader extends SharedApply_SizeLoaderProps_590998324[RingLoaderCls] {
+object RingLoader {
   @JSImport("halogen", "RingLoader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SizeLoaderProps): SharedBuilder_SizeLoaderProps305627816[RingLoaderCls] = new SharedBuilder_SizeLoaderProps305627816[RingLoaderCls](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: RingLoader.type): SharedBuilder_SizeLoaderProps305627816[RingLoaderCls] = new SharedBuilder_SizeLoaderProps305627816[RingLoaderCls](js.Array(this.component, js.Dictionary.empty))()
 }
 

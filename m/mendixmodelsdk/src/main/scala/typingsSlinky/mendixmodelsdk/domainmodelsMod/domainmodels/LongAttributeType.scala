@@ -9,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -30,7 +30,7 @@ class LongAttributeType protected () extends IntegerAttributeTypeBase {
   @JSName("model")
   var model_FLongAttributeType: IModel = js.native
   @JSName("containerAsAttribute")
-  def containerAsAttribute_MLongAttributeType(): Attribute = js.native
+  def containerAsAttribute_MLongAttributeType: Attribute = js.native
 }
 
 /* static members */

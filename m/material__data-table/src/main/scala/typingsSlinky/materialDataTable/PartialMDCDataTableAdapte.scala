@@ -7,72 +7,270 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@material/data-table.@material/data-table/adapter.MDCDataTableAdapter> */
+@js.native
 trait PartialMDCDataTableAdapte extends js.Object {
-  var addClassAtRowIndex: js.UndefOr[js.Function2[/* rowIndex */ Double, /* cssClasses */ String, Unit]] = js.undefined
-  var getRowCount: js.UndefOr[js.Function0[Double]] = js.undefined
-  var getRowElements: js.UndefOr[js.Function0[js.Array[Element]]] = js.undefined
-  var getRowIdAtIndex: js.UndefOr[js.Function1[/* rowIndex */ Double, String | Null]] = js.undefined
-  var getRowIndexByChildElement: js.UndefOr[js.Function1[/* el */ Element, Double]] = js.undefined
-  var getSelectedRowCount: js.UndefOr[js.Function0[Double]] = js.undefined
-  var isCheckboxAtRowIndexChecked: js.UndefOr[js.Function1[/* rowIndex */ Double, Boolean]] = js.undefined
-  var isHeaderRowCheckboxChecked: js.UndefOr[js.Function0[Boolean]] = js.undefined
-  var isRowsSelectable: js.UndefOr[js.Function0[Boolean]] = js.undefined
-  var notifyRowSelectionChanged: js.UndefOr[js.Function1[/* data */ MDCDataTableRowSelectionChangedEventDetail, Unit]] = js.undefined
-  var notifySelectedAll: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var notifyUnselectedAll: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var registerHeaderRowCheckbox: js.UndefOr[js.Function0[js.Promise[Unit] | Unit]] = js.undefined
-  var registerRowCheckboxes: js.UndefOr[js.Function0[js.Promise[Unit] | Unit]] = js.undefined
-  var removeClassAtRowIndex: js.UndefOr[js.Function2[/* rowIndex */ Double, /* cssClasses */ String, Unit]] = js.undefined
-  var setAttributeAtRowIndex: js.UndefOr[js.Function3[/* rowIndex */ Double, /* attr */ String, /* value */ String, Unit]] = js.undefined
-  var setHeaderRowCheckboxChecked: js.UndefOr[js.Function1[/* checked */ Boolean, Unit]] = js.undefined
-  var setHeaderRowCheckboxIndeterminate: js.UndefOr[js.Function1[/* indeterminate */ Boolean, Unit]] = js.undefined
-  var setRowCheckboxCheckedAtIndex: js.UndefOr[js.Function2[/* rowIndex */ Double, /* checked */ Boolean, Unit]] = js.undefined
+  var addClassAtRowIndex: js.UndefOr[js.Function2[/* rowIndex */ Double, /* cssClasses */ String, Unit]] = js.native
+  var getRowCount: js.UndefOr[js.Function0[Double]] = js.native
+  var getRowElements: js.UndefOr[js.Function0[js.Array[Element]]] = js.native
+  var getRowIdAtIndex: js.UndefOr[js.Function1[/* rowIndex */ Double, String | Null]] = js.native
+  var getRowIndexByChildElement: js.UndefOr[js.Function1[/* el */ Element, Double]] = js.native
+  var getSelectedRowCount: js.UndefOr[js.Function0[Double]] = js.native
+  var isCheckboxAtRowIndexChecked: js.UndefOr[js.Function1[/* rowIndex */ Double, Boolean]] = js.native
+  var isHeaderRowCheckboxChecked: js.UndefOr[js.Function0[Boolean]] = js.native
+  var isRowsSelectable: js.UndefOr[js.Function0[Boolean]] = js.native
+  var notifyRowSelectionChanged: js.UndefOr[js.Function1[/* data */ MDCDataTableRowSelectionChangedEventDetail, Unit]] = js.native
+  var notifySelectedAll: js.UndefOr[js.Function0[Unit]] = js.native
+  var notifyUnselectedAll: js.UndefOr[js.Function0[Unit]] = js.native
+  var registerHeaderRowCheckbox: js.UndefOr[js.Function0[js.Promise[Unit] | Unit]] = js.native
+  var registerRowCheckboxes: js.UndefOr[js.Function0[js.Promise[Unit] | Unit]] = js.native
+  var removeClassAtRowIndex: js.UndefOr[js.Function2[/* rowIndex */ Double, /* cssClasses */ String, Unit]] = js.native
+  var setAttributeAtRowIndex: js.UndefOr[js.Function3[/* rowIndex */ Double, /* attr */ String, /* value */ String, Unit]] = js.native
+  var setHeaderRowCheckboxChecked: js.UndefOr[js.Function1[/* checked */ Boolean, Unit]] = js.native
+  var setHeaderRowCheckboxIndeterminate: js.UndefOr[js.Function1[/* indeterminate */ Boolean, Unit]] = js.native
+  var setRowCheckboxCheckedAtIndex: js.UndefOr[js.Function2[/* rowIndex */ Double, /* checked */ Boolean, Unit]] = js.native
 }
 
 object PartialMDCDataTableAdapte {
   @scala.inline
-  def apply(
-    addClassAtRowIndex: (/* rowIndex */ Double, /* cssClasses */ String) => Unit = null,
-    getRowCount: () => Double = null,
-    getRowElements: () => js.Array[Element] = null,
-    getRowIdAtIndex: /* rowIndex */ Double => String | Null = null,
-    getRowIndexByChildElement: /* el */ Element => Double = null,
-    getSelectedRowCount: () => Double = null,
-    isCheckboxAtRowIndexChecked: /* rowIndex */ Double => Boolean = null,
-    isHeaderRowCheckboxChecked: () => Boolean = null,
-    isRowsSelectable: () => Boolean = null,
-    notifyRowSelectionChanged: /* data */ MDCDataTableRowSelectionChangedEventDetail => Unit = null,
-    notifySelectedAll: () => Unit = null,
-    notifyUnselectedAll: () => Unit = null,
-    registerHeaderRowCheckbox: () => js.Promise[Unit] | Unit = null,
-    registerRowCheckboxes: () => js.Promise[Unit] | Unit = null,
-    removeClassAtRowIndex: (/* rowIndex */ Double, /* cssClasses */ String) => Unit = null,
-    setAttributeAtRowIndex: (/* rowIndex */ Double, /* attr */ String, /* value */ String) => Unit = null,
-    setHeaderRowCheckboxChecked: /* checked */ Boolean => Unit = null,
-    setHeaderRowCheckboxIndeterminate: /* indeterminate */ Boolean => Unit = null,
-    setRowCheckboxCheckedAtIndex: (/* rowIndex */ Double, /* checked */ Boolean) => Unit = null
-  ): PartialMDCDataTableAdapte = {
+  def apply(): PartialMDCDataTableAdapte = {
     val __obj = js.Dynamic.literal()
-    if (addClassAtRowIndex != null) __obj.updateDynamic("addClassAtRowIndex")(js.Any.fromFunction2(addClassAtRowIndex))
-    if (getRowCount != null) __obj.updateDynamic("getRowCount")(js.Any.fromFunction0(getRowCount))
-    if (getRowElements != null) __obj.updateDynamic("getRowElements")(js.Any.fromFunction0(getRowElements))
-    if (getRowIdAtIndex != null) __obj.updateDynamic("getRowIdAtIndex")(js.Any.fromFunction1(getRowIdAtIndex))
-    if (getRowIndexByChildElement != null) __obj.updateDynamic("getRowIndexByChildElement")(js.Any.fromFunction1(getRowIndexByChildElement))
-    if (getSelectedRowCount != null) __obj.updateDynamic("getSelectedRowCount")(js.Any.fromFunction0(getSelectedRowCount))
-    if (isCheckboxAtRowIndexChecked != null) __obj.updateDynamic("isCheckboxAtRowIndexChecked")(js.Any.fromFunction1(isCheckboxAtRowIndexChecked))
-    if (isHeaderRowCheckboxChecked != null) __obj.updateDynamic("isHeaderRowCheckboxChecked")(js.Any.fromFunction0(isHeaderRowCheckboxChecked))
-    if (isRowsSelectable != null) __obj.updateDynamic("isRowsSelectable")(js.Any.fromFunction0(isRowsSelectable))
-    if (notifyRowSelectionChanged != null) __obj.updateDynamic("notifyRowSelectionChanged")(js.Any.fromFunction1(notifyRowSelectionChanged))
-    if (notifySelectedAll != null) __obj.updateDynamic("notifySelectedAll")(js.Any.fromFunction0(notifySelectedAll))
-    if (notifyUnselectedAll != null) __obj.updateDynamic("notifyUnselectedAll")(js.Any.fromFunction0(notifyUnselectedAll))
-    if (registerHeaderRowCheckbox != null) __obj.updateDynamic("registerHeaderRowCheckbox")(js.Any.fromFunction0(registerHeaderRowCheckbox))
-    if (registerRowCheckboxes != null) __obj.updateDynamic("registerRowCheckboxes")(js.Any.fromFunction0(registerRowCheckboxes))
-    if (removeClassAtRowIndex != null) __obj.updateDynamic("removeClassAtRowIndex")(js.Any.fromFunction2(removeClassAtRowIndex))
-    if (setAttributeAtRowIndex != null) __obj.updateDynamic("setAttributeAtRowIndex")(js.Any.fromFunction3(setAttributeAtRowIndex))
-    if (setHeaderRowCheckboxChecked != null) __obj.updateDynamic("setHeaderRowCheckboxChecked")(js.Any.fromFunction1(setHeaderRowCheckboxChecked))
-    if (setHeaderRowCheckboxIndeterminate != null) __obj.updateDynamic("setHeaderRowCheckboxIndeterminate")(js.Any.fromFunction1(setHeaderRowCheckboxIndeterminate))
-    if (setRowCheckboxCheckedAtIndex != null) __obj.updateDynamic("setRowCheckboxCheckedAtIndex")(js.Any.fromFunction2(setRowCheckboxCheckedAtIndex))
     __obj.asInstanceOf[PartialMDCDataTableAdapte]
   }
+  @scala.inline
+  implicit class PartialMDCDataTableAdapteOps[Self <: PartialMDCDataTableAdapte] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddClassAtRowIndex(value: (/* rowIndex */ Double, /* cssClasses */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addClassAtRowIndex")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAddClassAtRowIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addClassAtRowIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetRowCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRowCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetRowCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRowCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetRowElements(value: () => js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRowElements")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetRowElements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRowElements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetRowIdAtIndex(value: /* rowIndex */ Double => String | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRowIdAtIndex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetRowIdAtIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRowIdAtIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetRowIndexByChildElement(value: /* el */ Element => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRowIndexByChildElement")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetRowIndexByChildElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRowIndexByChildElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetSelectedRowCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSelectedRowCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetSelectedRowCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSelectedRowCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsCheckboxAtRowIndexChecked(value: /* rowIndex */ Double => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCheckboxAtRowIndexChecked")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsCheckboxAtRowIndexChecked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCheckboxAtRowIndexChecked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsHeaderRowCheckboxChecked(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHeaderRowCheckboxChecked")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsHeaderRowCheckboxChecked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHeaderRowCheckboxChecked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsRowsSelectable(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRowsSelectable")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsRowsSelectable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRowsSelectable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotifyRowSelectionChanged(value: /* data */ MDCDataTableRowSelectionChangedEventDetail => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyRowSelectionChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNotifyRowSelectionChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyRowSelectionChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotifySelectedAll(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifySelectedAll")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutNotifySelectedAll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifySelectedAll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotifyUnselectedAll(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyUnselectedAll")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutNotifyUnselectedAll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyUnselectedAll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegisterHeaderRowCheckbox(value: () => js.Promise[Unit] | Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registerHeaderRowCheckbox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutRegisterHeaderRowCheckbox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registerHeaderRowCheckbox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegisterRowCheckboxes(value: () => js.Promise[Unit] | Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registerRowCheckboxes")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutRegisterRowCheckboxes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registerRowCheckboxes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveClassAtRowIndex(value: (/* rowIndex */ Double, /* cssClasses */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeClassAtRowIndex")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRemoveClassAtRowIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeClassAtRowIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetAttributeAtRowIndex(value: (/* rowIndex */ Double, /* attr */ String, /* value */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributeAtRowIndex")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetAttributeAtRowIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributeAtRowIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetHeaderRowCheckboxChecked(value: /* checked */ Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHeaderRowCheckboxChecked")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetHeaderRowCheckboxChecked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHeaderRowCheckboxChecked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetHeaderRowCheckboxIndeterminate(value: /* indeterminate */ Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHeaderRowCheckboxIndeterminate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetHeaderRowCheckboxIndeterminate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHeaderRowCheckboxIndeterminate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetRowCheckboxCheckedAtIndex(value: (/* rowIndex */ Double, /* checked */ Boolean) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setRowCheckboxCheckedAtIndex")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetRowCheckboxCheckedAtIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setRowCheckboxCheckedAtIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

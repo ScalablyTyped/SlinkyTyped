@@ -27,18 +27,65 @@ trait PolicyGrantingServiceAccess extends js.Object {
 
 object PolicyGrantingServiceAccess {
   @scala.inline
-  def apply(
-    PolicyName: policyNameType,
-    PolicyType: policyType,
-    EntityName: entityNameType = null,
-    EntityType: policyOwnerEntityType = null,
-    PolicyArn: arnType = null
-  ): PolicyGrantingServiceAccess = {
+  def apply(PolicyName: policyNameType, PolicyType: policyType): PolicyGrantingServiceAccess = {
     val __obj = js.Dynamic.literal(PolicyName = PolicyName.asInstanceOf[js.Any], PolicyType = PolicyType.asInstanceOf[js.Any])
-    if (EntityName != null) __obj.updateDynamic("EntityName")(EntityName.asInstanceOf[js.Any])
-    if (EntityType != null) __obj.updateDynamic("EntityType")(EntityType.asInstanceOf[js.Any])
-    if (PolicyArn != null) __obj.updateDynamic("PolicyArn")(PolicyArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolicyGrantingServiceAccess]
   }
+  @scala.inline
+  implicit class PolicyGrantingServiceAccessOps[Self <: PolicyGrantingServiceAccess] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPolicyName(value: policyNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPolicyType(value: policyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEntityName(value: entityNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntityType(value: policyOwnerEntityType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyArn(value: arnType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

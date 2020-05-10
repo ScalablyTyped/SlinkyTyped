@@ -42,26 +42,113 @@ trait GetPolicyVersionResponse extends js.Object {
 
 object GetPolicyVersionResponse {
   @scala.inline
-  def apply(
-    creationDate: js.Date = null,
-    generationId: GenerationId = null,
-    isDefaultVersion: js.UndefOr[scala.Boolean] = js.undefined,
-    lastModifiedDate: js.Date = null,
-    policyArn: PolicyArn = null,
-    policyDocument: PolicyDocument = null,
-    policyName: PolicyName = null,
-    policyVersionId: PolicyVersionId = null
-  ): GetPolicyVersionResponse = {
+  def apply(): GetPolicyVersionResponse = {
     val __obj = js.Dynamic.literal()
-    if (creationDate != null) __obj.updateDynamic("creationDate")(creationDate.asInstanceOf[js.Any])
-    if (generationId != null) __obj.updateDynamic("generationId")(generationId.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDefaultVersion)) __obj.updateDynamic("isDefaultVersion")(isDefaultVersion.asInstanceOf[js.Any])
-    if (lastModifiedDate != null) __obj.updateDynamic("lastModifiedDate")(lastModifiedDate.asInstanceOf[js.Any])
-    if (policyArn != null) __obj.updateDynamic("policyArn")(policyArn.asInstanceOf[js.Any])
-    if (policyDocument != null) __obj.updateDynamic("policyDocument")(policyDocument.asInstanceOf[js.Any])
-    if (policyName != null) __obj.updateDynamic("policyName")(policyName.asInstanceOf[js.Any])
-    if (policyVersionId != null) __obj.updateDynamic("policyVersionId")(policyVersionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPolicyVersionResponse]
   }
+  @scala.inline
+  implicit class GetPolicyVersionResponseOps[Self <: GetPolicyVersionResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGenerationId(value: GenerationId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGenerationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDefaultVersion(value: IsDefaultVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDefaultVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyArn(value: PolicyArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyDocument(value: PolicyDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyDocument")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyDocument: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyDocument")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyName(value: PolicyName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyVersionId(value: PolicyVersionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyVersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyVersionId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

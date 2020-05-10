@@ -17,10 +17,29 @@ trait SchemaCreateCompanyRequest extends js.Object {
 
 object SchemaCreateCompanyRequest {
   @scala.inline
-  def apply(company: SchemaCompany = null): SchemaCreateCompanyRequest = {
+  def apply(): SchemaCreateCompanyRequest = {
     val __obj = js.Dynamic.literal()
-    if (company != null) __obj.updateDynamic("company")(company.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateCompanyRequest]
   }
+  @scala.inline
+  implicit class SchemaCreateCompanyRequestOps[Self <: SchemaCreateCompanyRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompany(value: SchemaCompany): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("company")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompany: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("company")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

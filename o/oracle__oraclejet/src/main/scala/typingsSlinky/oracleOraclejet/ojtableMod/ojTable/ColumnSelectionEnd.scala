@@ -15,15 +15,13 @@ trait ColumnSelectionEnd[K] extends js.Object
 
 object ColumnSelectionEnd {
   @scala.inline
-  def AnonEndIndex[K](endIndex: Anon20, endKey: Anon21[K] = null): ColumnSelectionEnd[K] = {
+  def AnonEndIndex[K](endIndex: Anon20): ColumnSelectionEnd[K] = {
     val __obj = js.Dynamic.literal(endIndex = endIndex.asInstanceOf[js.Any])
-    if (endKey != null) __obj.updateDynamic("endKey")(endKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnSelectionEnd[K]]
   }
   @scala.inline
-  def AnonEndKey[K](endKey: Anon21[K], endIndex: Anon20 = null): ColumnSelectionEnd[K] = {
+  def AnonEndKey[K](endKey: Anon21[K]): ColumnSelectionEnd[K] = {
     val __obj = js.Dynamic.literal(endKey = endKey.asInstanceOf[js.Any])
-    if (endIndex != null) __obj.updateDynamic("endIndex")(endIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnSelectionEnd[K]]
   }
 }

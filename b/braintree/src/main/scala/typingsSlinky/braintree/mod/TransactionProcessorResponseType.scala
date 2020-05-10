@@ -13,12 +13,10 @@ trait TransactionProcessorResponseType extends js.Object
 
 object TransactionProcessorResponseType {
   @scala.inline
-  def approved: typingsSlinky.braintree.braintreeStrings.approved = this.cast("approved")
+  def approved: typingsSlinky.braintree.braintreeStrings.approved = "approved".asInstanceOf[typingsSlinky.braintree.braintreeStrings.approved]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hard_declined: typingsSlinky.braintree.braintreeStrings.hard_declined = "hard_declined".asInstanceOf[typingsSlinky.braintree.braintreeStrings.hard_declined]
   @scala.inline
-  def hard_declined: typingsSlinky.braintree.braintreeStrings.hard_declined = this.cast("hard_declined")
-  @scala.inline
-  def soft_declined: typingsSlinky.braintree.braintreeStrings.soft_declined = this.cast("soft_declined")
+  def soft_declined: typingsSlinky.braintree.braintreeStrings.soft_declined = "soft_declined".asInstanceOf[typingsSlinky.braintree.braintreeStrings.soft_declined]
 }
 

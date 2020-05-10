@@ -1,10 +1,7 @@
 package typingsSlinky.reactSketchapp.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSketchapp.mod.Style
 import typingsSlinky.reactSketchapp.mod.StyleReference
 import typingsSlinky.reactSketchapp.mod.ViewProps
@@ -14,28 +11,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object View
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactSketchapp.mod.View] {
+object View {
   @JSImport("react-sketchapp", "View")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name */
-  def apply(
-    resizingConstraint: ResizeConstraints = null,
-    shadows: js.Array[SketchShadow] = null,
-    style: Style | StyleReference = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactSketchapp.mod.View] = {
-    val __obj = js.Dynamic.literal()
-    if (resizingConstraint != null) __obj.updateDynamic("resizingConstraint")(resizingConstraint.asInstanceOf[js.Any])
-    if (shadows != null) __obj.updateDynamic("shadows")(shadows.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactSketchapp.mod.View] {
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resizingConstraint(value: ResizeConstraints): this.type = set("resizingConstraint", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shadows(value: js.Array[SketchShadow]): this.type = set("shadows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: Style | StyleReference): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactSketchapp.mod.View] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactSketchapp.mod.View](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ViewProps
+  
+  def withProps(p: ViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: View.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -11,7 +11,7 @@ trait GenerateDataSetRequest extends js.Object {
     */
   var customerDefinedValues: js.UndefOr[CustomerDefinedValues] = js.native
   /**
-    * The date a data set was published. For daily data sets, provide a date with day-level granularity for the desired day. For weekly data sets, provide a date with day-level granularity within the desired week (the day value will be ignored). For monthly data sets, provide a date with month-level granularity for the desired month (the day value will be ignored).
+    * The date a data set was published. For daily data sets, provide a date with day-level granularity for the desired day. For monthly data sets except those with prefix disbursed_amount, provide a date with month-level granularity for the desired month (the day value will be ignored). For data sets with prefix disbursed_amount, provide a date with day-level granularity for the desired day. For these data sets we will look backwards in time over the range of 31 days until the first data set is found (the latest one).
     */
   var dataSetPublicationDate: js.Date = js.native
   /**
@@ -43,14 +43,72 @@ object GenerateDataSetRequest {
     dataSetType: DataSetType,
     destinationS3BucketName: DestinationS3BucketName,
     roleNameArn: RoleNameArn,
-    snsTopicArn: SnsTopicArn,
-    customerDefinedValues: CustomerDefinedValues = null,
-    destinationS3Prefix: DestinationS3Prefix = null
+    snsTopicArn: SnsTopicArn
   ): GenerateDataSetRequest = {
     val __obj = js.Dynamic.literal(dataSetPublicationDate = dataSetPublicationDate.asInstanceOf[js.Any], dataSetType = dataSetType.asInstanceOf[js.Any], destinationS3BucketName = destinationS3BucketName.asInstanceOf[js.Any], roleNameArn = roleNameArn.asInstanceOf[js.Any], snsTopicArn = snsTopicArn.asInstanceOf[js.Any])
-    if (customerDefinedValues != null) __obj.updateDynamic("customerDefinedValues")(customerDefinedValues.asInstanceOf[js.Any])
-    if (destinationS3Prefix != null) __obj.updateDynamic("destinationS3Prefix")(destinationS3Prefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenerateDataSetRequest]
   }
+  @scala.inline
+  implicit class GenerateDataSetRequestOps[Self <: GenerateDataSetRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataSetPublicationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSetPublicationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDataSetType(value: DataSetType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSetType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestinationS3BucketName(value: DestinationS3BucketName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationS3BucketName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleNameArn(value: RoleNameArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleNameArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSnsTopicArn(value: SnsTopicArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snsTopicArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCustomerDefinedValues(value: CustomerDefinedValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerDefinedValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomerDefinedValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerDefinedValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationS3Prefix(value: DestinationS3Prefix): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationS3Prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationS3Prefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationS3Prefix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

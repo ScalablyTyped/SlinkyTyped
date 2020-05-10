@@ -64,7 +64,7 @@ class WebGLPipeline protected () extends js.Object {
     * Uint8 view to the vertex raw buffer. Used for uploading vertex buffer resources
     * to the GPU.
     */
-  var bytes: scala.scalajs.js.typedarray.Uint8Array = js.native
+  var bytes: js.typedarray.Uint8Array = js.native
   /**
     * Indicates if the current pipeline is flushing the contents to the GPU.
     * When the variable is set the flush function will be locked.
@@ -121,7 +121,7 @@ class WebGLPipeline protected () extends js.Object {
   /**
     * Raw byte buffer of vertices.
     */
-  var vertexData: scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  var vertexData: js.typedarray.ArrayBuffer = js.native
   /**
     * The size in bytes of the vertex
     */
@@ -201,7 +201,7 @@ class WebGLPipeline protected () extends js.Object {
     * @param name The name of the uniform to look-up and modify.
     * @param arr The new value to be used for the uniform variable.
     */
-  def setFloat1v(name: String, arr: scala.scalajs.js.typedarray.Float32Array): this.type = js.native
+  def setFloat1v(name: String, arr: js.typedarray.Float32Array): this.type = js.native
   /**
     * Set a uniform value of the current pipeline program.
     * @param name The name of the uniform to look-up and modify.
@@ -214,7 +214,7 @@ class WebGLPipeline protected () extends js.Object {
     * @param name The name of the uniform to look-up and modify.
     * @param arr The new value to be used for the uniform variable.
     */
-  def setFloat2v(name: String, arr: scala.scalajs.js.typedarray.Float32Array): this.type = js.native
+  def setFloat2v(name: String, arr: js.typedarray.Float32Array): this.type = js.native
   /**
     * Set a uniform value of the current pipeline program.
     * @param name The name of the uniform to look-up and modify.
@@ -228,7 +228,7 @@ class WebGLPipeline protected () extends js.Object {
     * @param name The name of the uniform to look-up and modify.
     * @param arr The new value to be used for the uniform variable.
     */
-  def setFloat3v(name: String, arr: scala.scalajs.js.typedarray.Float32Array): this.type = js.native
+  def setFloat3v(name: String, arr: js.typedarray.Float32Array): this.type = js.native
   /**
     * Set a uniform value of the current pipeline program.
     * @param name The name of the uniform to look-up and modify.
@@ -243,7 +243,7 @@ class WebGLPipeline protected () extends js.Object {
     * @param name The name of the uniform to look-up and modify.
     * @param arr The new value to be used for the uniform variable.
     */
-  def setFloat4v(name: String, arr: scala.scalajs.js.typedarray.Float32Array): this.type = js.native
+  def setFloat4v(name: String, arr: js.typedarray.Float32Array): this.type = js.native
   /**
     * Set a uniform value of the current pipeline program.
     * @param name The name of the uniform to look-up and modify.
@@ -280,21 +280,21 @@ class WebGLPipeline protected () extends js.Object {
     * @param transpose Whether to transpose the matrix. Should be `false`.
     * @param matrix The new values for the `mat2` uniform.
     */
-  def setMatrix2(name: String, transpose: Boolean, matrix: scala.scalajs.js.typedarray.Float32Array): this.type = js.native
+  def setMatrix2(name: String, transpose: Boolean, matrix: js.typedarray.Float32Array): this.type = js.native
   /**
     * Set a uniform value of the current pipeline program.
     * @param name The name of the uniform to look-up and modify.
     * @param transpose Whether to transpose the matrix. Should be `false`.
     * @param matrix The new values for the `mat3` uniform.
     */
-  def setMatrix3(name: String, transpose: Boolean, matrix: scala.scalajs.js.typedarray.Float32Array): this.type = js.native
+  def setMatrix3(name: String, transpose: Boolean, matrix: js.typedarray.Float32Array): this.type = js.native
   /**
     * Set a uniform value of the current pipeline program.
     * @param name The name of the uniform to look-up and modify.
     * @param transpose Should the matrix be transpose
     * @param matrix Matrix data
     */
-  def setMatrix4(name: String, transpose: Boolean, matrix: scala.scalajs.js.typedarray.Float32Array): this.type = js.native
+  def setMatrix4(name: String, transpose: Boolean, matrix: js.typedarray.Float32Array): this.type = js.native
   /**
     * Check if the current batch of vertices is full.
     */

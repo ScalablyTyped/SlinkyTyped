@@ -98,12 +98,10 @@ object BranchNode {
     raw: String,
     references: js.Array[Backreference],
     start: Double,
-    `type`: typingsSlinky.regexpp.regexppStrings.CapturingGroup,
-    name: String = null
+    `type`: typingsSlinky.regexpp.regexppStrings.CapturingGroup
   ): BranchNode = {
     val __obj = js.Dynamic.literal(alternatives = alternatives.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], references = references.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[BranchNode]
   }
   @scala.inline
@@ -126,12 +124,10 @@ object BranchNode {
     end: Double,
     raw: String,
     start: Double,
-    `type`: typingsSlinky.regexpp.regexppStrings.Pattern,
-    parent: RegExpLiteral = null
+    `type`: typingsSlinky.regexpp.regexppStrings.Pattern
   ): BranchNode = {
     val __obj = js.Dynamic.literal(alternatives = alternatives.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
     __obj.asInstanceOf[BranchNode]
   }
   @scala.inline

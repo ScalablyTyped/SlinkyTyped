@@ -15,16 +15,14 @@ trait StepIconClasskey extends js.Object
 
 object StepIconClasskey {
   @scala.inline
-  def active: typingsSlinky.materialUiCore.materialUiCoreStrings.active = this.cast("active")
+  def active: typingsSlinky.materialUiCore.materialUiCoreStrings.active = "active".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.active]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def completed: typingsSlinky.materialUiCore.materialUiCoreStrings.completed = "completed".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.completed]
   @scala.inline
-  def completed: typingsSlinky.materialUiCore.materialUiCoreStrings.completed = this.cast("completed")
+  def error: typingsSlinky.materialUiCore.materialUiCoreStrings.error = "error".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.error]
   @scala.inline
-  def error: typingsSlinky.materialUiCore.materialUiCoreStrings.error = this.cast("error")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
-  @scala.inline
-  def text: typingsSlinky.materialUiCore.materialUiCoreStrings.text = this.cast("text")
+  def text: typingsSlinky.materialUiCore.materialUiCoreStrings.text = "text".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.text]
 }
 

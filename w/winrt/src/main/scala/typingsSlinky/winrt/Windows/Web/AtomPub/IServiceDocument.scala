@@ -11,8 +11,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IServiceDocument extends ISyndicationNode {
-  var workspaces: IVectorView[Workspace]
+  var workspaces: IVectorView[Workspace] = js.native
 }
 
 object IServiceDocument {
@@ -29,8 +30,21 @@ object IServiceDocument {
     workspaces: IVectorView[Workspace]
   ): IServiceDocument = {
     val __obj = js.Dynamic.literal(attributeExtensions = attributeExtensions.asInstanceOf[js.Any], baseUri = baseUri.asInstanceOf[js.Any], elementExtensions = elementExtensions.asInstanceOf[js.Any], getXmlDocument = js.Any.fromFunction1(getXmlDocument), language = language.asInstanceOf[js.Any], nodeName = nodeName.asInstanceOf[js.Any], nodeNamespace = nodeNamespace.asInstanceOf[js.Any], nodeValue = nodeValue.asInstanceOf[js.Any], workspaces = workspaces.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IServiceDocument]
   }
+  @scala.inline
+  implicit class IServiceDocumentOps[Self <: IServiceDocument] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWorkspaces(value: IVectorView[Workspace]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workspaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

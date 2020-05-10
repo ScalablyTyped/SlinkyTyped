@@ -14,14 +14,12 @@ trait RawType extends js.Object
 
 object RawType {
   @scala.inline
-  def api_error: typingsSlinky.stripe.stripeStrings.api_error = this.cast("api_error")
+  def api_error: typingsSlinky.stripe.stripeStrings.api_error = "api_error".asInstanceOf[typingsSlinky.stripe.stripeStrings.api_error]
   @scala.inline
-  def card_error: typingsSlinky.stripe.stripeStrings.card_error = this.cast("card_error")
+  def card_error: typingsSlinky.stripe.stripeStrings.card_error = "card_error".asInstanceOf[typingsSlinky.stripe.stripeStrings.card_error]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def idempotency_error: typingsSlinky.stripe.stripeStrings.idempotency_error = "idempotency_error".asInstanceOf[typingsSlinky.stripe.stripeStrings.idempotency_error]
   @scala.inline
-  def idempotency_error: typingsSlinky.stripe.stripeStrings.idempotency_error = this.cast("idempotency_error")
-  @scala.inline
-  def invalid_request_error: typingsSlinky.stripe.stripeStrings.invalid_request_error = this.cast("invalid_request_error")
+  def invalid_request_error: typingsSlinky.stripe.stripeStrings.invalid_request_error = "invalid_request_error".asInstanceOf[typingsSlinky.stripe.stripeStrings.invalid_request_error]
 }
 

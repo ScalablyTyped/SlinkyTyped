@@ -11,5 +11,6 @@ trait RTCStatsReport
 
 @JSGlobal("RTCStatsReport")
 @js.native
-object RTCStatsReport extends Instantiable0[RTCStatsReport]
+object RTCStatsReport
+  extends Instantiable0[org.scalajs.dom.experimental.webrtc.RTCStatsReport]
 

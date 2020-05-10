@@ -1,9 +1,7 @@
 package typingsSlinky.calidation.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.calidation.mod.Dictionary
 import typingsSlinky.calidation.mod.FieldsConfig
 import typingsSlinky.calidation.mod.Transforms
@@ -12,25 +10,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Validation
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.calidation.mod.Validation] {
+object Validation {
   @JSImport("calidation", "Validation")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    config: FieldsConfig,
-    initialValues: Dictionary[_] = null,
-    transforms: Transforms = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.calidation.mod.Validation] = {
-    val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any])
-    if (initialValues != null) __obj.updateDynamic("initialValues")(initialValues.asInstanceOf[js.Any])
-    if (transforms != null) __obj.updateDynamic("transforms")(transforms.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.calidation.mod.Validation] {
+    @scala.inline
+    def initialValues(value: Dictionary[_]): this.type = set("initialValues", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transforms(value: Transforms): this.type = set("transforms", value.asInstanceOf[js.Any])
   }
-  type Props = ValidationProps
+  
+  def withProps(p: ValidationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(config: FieldsConfig): Builder = {
+    val __props = js.Dynamic.literal(config = config.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ValidationProps]))
+  }
 }
 

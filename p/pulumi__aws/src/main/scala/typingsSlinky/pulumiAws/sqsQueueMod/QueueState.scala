@@ -69,40 +69,197 @@ trait QueueState extends js.Object {
 
 object QueueState {
   @scala.inline
-  def apply(
-    arn: Input[String] = null,
-    contentBasedDeduplication: Input[Boolean] = null,
-    delaySeconds: Input[Double] = null,
-    fifoQueue: Input[Boolean] = null,
-    kmsDataKeyReusePeriodSeconds: Input[Double] = null,
-    kmsMasterKeyId: Input[String] = null,
-    maxMessageSize: Input[Double] = null,
-    messageRetentionSeconds: Input[Double] = null,
-    name: Input[String] = null,
-    namePrefix: Input[String] = null,
-    policy: Input[String] = null,
-    receiveWaitTimeSeconds: Input[Double] = null,
-    redrivePolicy: Input[String] = null,
-    tags: Input[StringDictionary[_]] = null,
-    visibilityTimeoutSeconds: Input[Double] = null
-  ): QueueState = {
+  def apply(): QueueState = {
     val __obj = js.Dynamic.literal()
-    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
-    if (contentBasedDeduplication != null) __obj.updateDynamic("contentBasedDeduplication")(contentBasedDeduplication.asInstanceOf[js.Any])
-    if (delaySeconds != null) __obj.updateDynamic("delaySeconds")(delaySeconds.asInstanceOf[js.Any])
-    if (fifoQueue != null) __obj.updateDynamic("fifoQueue")(fifoQueue.asInstanceOf[js.Any])
-    if (kmsDataKeyReusePeriodSeconds != null) __obj.updateDynamic("kmsDataKeyReusePeriodSeconds")(kmsDataKeyReusePeriodSeconds.asInstanceOf[js.Any])
-    if (kmsMasterKeyId != null) __obj.updateDynamic("kmsMasterKeyId")(kmsMasterKeyId.asInstanceOf[js.Any])
-    if (maxMessageSize != null) __obj.updateDynamic("maxMessageSize")(maxMessageSize.asInstanceOf[js.Any])
-    if (messageRetentionSeconds != null) __obj.updateDynamic("messageRetentionSeconds")(messageRetentionSeconds.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (namePrefix != null) __obj.updateDynamic("namePrefix")(namePrefix.asInstanceOf[js.Any])
-    if (policy != null) __obj.updateDynamic("policy")(policy.asInstanceOf[js.Any])
-    if (receiveWaitTimeSeconds != null) __obj.updateDynamic("receiveWaitTimeSeconds")(receiveWaitTimeSeconds.asInstanceOf[js.Any])
-    if (redrivePolicy != null) __obj.updateDynamic("redrivePolicy")(redrivePolicy.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (visibilityTimeoutSeconds != null) __obj.updateDynamic("visibilityTimeoutSeconds")(visibilityTimeoutSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueueState]
   }
+  @scala.inline
+  implicit class QueueStateOps[Self <: QueueState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentBasedDeduplication(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentBasedDeduplication")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentBasedDeduplication: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentBasedDeduplication")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelaySeconds(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delaySeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelaySeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delaySeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFifoQueue(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fifoQueue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFifoQueue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fifoQueue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsDataKeyReusePeriodSeconds(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsDataKeyReusePeriodSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsDataKeyReusePeriodSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsDataKeyReusePeriodSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsMasterKeyId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsMasterKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsMasterKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsMasterKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxMessageSize(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMessageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxMessageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMessageSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessageRetentionSeconds(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageRetentionSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageRetentionSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageRetentionSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamePrefix(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamePrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicy(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReceiveWaitTimeSeconds(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("receiveWaitTimeSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReceiveWaitTimeSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("receiveWaitTimeSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRedrivePolicy(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redrivePolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRedrivePolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redrivePolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibilityTimeoutSeconds(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibilityTimeoutSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibilityTimeoutSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibilityTimeoutSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

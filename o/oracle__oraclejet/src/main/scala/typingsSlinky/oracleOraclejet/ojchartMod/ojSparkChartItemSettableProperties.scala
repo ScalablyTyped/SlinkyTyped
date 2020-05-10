@@ -16,20 +16,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ojSparkChartItemSettableProperties extends JetSettableProperties {
-  var borderColor: String
-  var color: String
-  var date: String
-  var high: Double | Null
-  var low: Double | Null
-  var markerDisplayed: off | on
+  var borderColor: String = js.native
+  var color: String = js.native
+  var date: String = js.native
+  var high: Double | Null = js.native
+  var low: Double | Null = js.native
+  var markerDisplayed: off | on = js.native
   var markerShape: js.UndefOr[
     auto | circle | diamond | human | plus | square | star | triangleDown | triangleUp | String
-  ] = js.undefined
-  var markerSize: Double
-  var svgClassName: String
-  var svgStyle: js.Object
-  var value: Double | Null
+  ] = js.native
+  var markerSize: Double = js.native
+  var svgClassName: String = js.native
+  var svgStyle: js.Object = js.native
+  var value: Double | Null = js.native
 }
 
 object ojSparkChartItemSettableProperties {
@@ -41,18 +42,108 @@ object ojSparkChartItemSettableProperties {
     markerDisplayed: off | on,
     markerSize: Double,
     svgClassName: String,
-    svgStyle: js.Object,
-    high: Int | Double = null,
-    low: Int | Double = null,
-    markerShape: auto | circle | diamond | human | plus | square | star | triangleDown | triangleUp | String = null,
-    value: Int | Double = null
+    svgStyle: js.Object
   ): ojSparkChartItemSettableProperties = {
     val __obj = js.Dynamic.literal(borderColor = borderColor.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], date = date.asInstanceOf[js.Any], markerDisplayed = markerDisplayed.asInstanceOf[js.Any], markerSize = markerSize.asInstanceOf[js.Any], svgClassName = svgClassName.asInstanceOf[js.Any], svgStyle = svgStyle.asInstanceOf[js.Any])
-    if (high != null) __obj.updateDynamic("high")(high.asInstanceOf[js.Any])
-    if (low != null) __obj.updateDynamic("low")(low.asInstanceOf[js.Any])
-    if (markerShape != null) __obj.updateDynamic("markerShape")(markerShape.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojSparkChartItemSettableProperties]
   }
+  @scala.inline
+  implicit class ojSparkChartItemSettablePropertiesOps[Self <: ojSparkChartItemSettableProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBorderColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMarkerDisplayed(value: off | on): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerDisplayed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMarkerSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSvgClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svgClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSvgStyle(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svgStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHigh(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("high")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHighNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("high")(null)
+        ret
+    }
+    @scala.inline
+    def withLow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("low")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLowNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("low")(null)
+        ret
+    }
+    @scala.inline
+    def withMarkerShape(value: auto | circle | diamond | human | plus | square | star | triangleDown | triangleUp | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerShape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkerShape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerShape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValueNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(null)
+        ret
+    }
+  }
+  
 }
 

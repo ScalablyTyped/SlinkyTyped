@@ -1,6 +1,5 @@
 package typingsSlinky.customFunctionsRuntime.CustomFunctions
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,6 +17,6 @@ trait StreamingInvocation[ResultType] extends CancelableInvocation {
     * Set the result for the custom function. May be called more than once.
     */
   def setResult(value: ResultType): Unit = js.native
-  def setResult(value: Error): Unit = js.native
+  def setResult(value: js.Error): Unit = js.native
 }
 

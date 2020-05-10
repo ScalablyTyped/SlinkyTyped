@@ -11,84 +11,200 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined mocha-sugar-free.mocha-sugar-free.Options & {  async ? :false,   fn ? :mocha-sugar-free.mocha-sugar-free.TestCase} */
+@js.native
 trait OptionsasyncfalsefnTestCa
   extends /* option */ StringDictionary[js.Any] {
   /**
   		 * Whether the context should contain a `done` callback.
   		 */
-  var async: js.UndefOr[Boolean with `false`] = js.undefined
+  var async: js.UndefOr[Boolean with `false`] = js.native
   /**
   		 * Set whether timeouts are enabled.
   		 */
-  var enableTimeouts: js.UndefOr[Boolean] = js.undefined
+  var enableTimeouts: js.UndefOr[Boolean] = js.native
   /**
   		 * Whether failing to return a PromiseLike should fail the test.
   		 */
-  var expectPromise: js.UndefOr[Boolean] = js.undefined
+  var expectPromise: js.UndefOr[Boolean] = js.native
   /**
   		 * The test function.
   		 */
-  var fn: js.UndefOr[(TestCase | TestCaseWithDone | SuiteFunc | HookFunc) with TestCase] = js.undefined
+  var fn: js.UndefOr[(TestCase | TestCaseWithDone | SuiteFunc | HookFunc) with TestCase] = js.native
   /**
   		 * Whether the test should be skipped unconditionally.
   		 */
-  var skip: js.UndefOr[Boolean] = js.undefined
+  var skip: js.UndefOr[Boolean] = js.native
   /**
   		 * Whether the test should be skipped in a browser environment.
   		 */
-  var skipIfBrowser: js.UndefOr[Boolean] = js.undefined
+  var skipIfBrowser: js.UndefOr[Boolean] = js.native
   /**
   		 * Whether the test should be skipped in a WebWorker.
   		 */
-  var skipIfWebWorker: js.UndefOr[Boolean] = js.undefined
+  var skipIfWebWorker: js.UndefOr[Boolean] = js.native
   /**
   		 * Whether the test should be skipped outside a browser environment.
   		 */
-  var skipUnlessBrowser: js.UndefOr[Boolean] = js.undefined
+  var skipUnlessBrowser: js.UndefOr[Boolean] = js.native
   /**
   		 * Set test slowness threshold.
   		 */
-  var slow: js.UndefOr[String | Double] = js.undefined
+  var slow: js.UndefOr[String | Double] = js.native
   /**
   		 * Set test timeout.
   		 */
-  var timeout: js.UndefOr[String | Double] = js.undefined
+  var timeout: js.UndefOr[String | Double] = js.native
   /**
   		 * The test title. Replaced by the title parameter if present.
   		 */
-  var title: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.native
 }
 
 object OptionsasyncfalsefnTestCa {
   @scala.inline
-  def apply(
-    StringDictionary: /* option */ StringDictionary[js.Any] = null,
-    async: js.UndefOr[Boolean with `false`] = js.undefined,
-    enableTimeouts: js.UndefOr[Boolean] = js.undefined,
-    expectPromise: js.UndefOr[Boolean] = js.undefined,
-    fn: (TestCase | TestCaseWithDone | SuiteFunc | HookFunc) with TestCase = null,
-    skip: js.UndefOr[Boolean] = js.undefined,
-    skipIfBrowser: js.UndefOr[Boolean] = js.undefined,
-    skipIfWebWorker: js.UndefOr[Boolean] = js.undefined,
-    skipUnlessBrowser: js.UndefOr[Boolean] = js.undefined,
-    slow: String | Double = null,
-    timeout: String | Double = null,
-    title: String = null
-  ): OptionsasyncfalsefnTestCa = {
+  def apply(): OptionsasyncfalsefnTestCa = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(async)) __obj.updateDynamic("async")(async.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableTimeouts)) __obj.updateDynamic("enableTimeouts")(enableTimeouts.asInstanceOf[js.Any])
-    if (!js.isUndefined(expectPromise)) __obj.updateDynamic("expectPromise")(expectPromise.asInstanceOf[js.Any])
-    if (fn != null) __obj.updateDynamic("fn")(fn.asInstanceOf[js.Any])
-    if (!js.isUndefined(skip)) __obj.updateDynamic("skip")(skip.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipIfBrowser)) __obj.updateDynamic("skipIfBrowser")(skipIfBrowser.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipIfWebWorker)) __obj.updateDynamic("skipIfWebWorker")(skipIfWebWorker.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipUnlessBrowser)) __obj.updateDynamic("skipUnlessBrowser")(skipUnlessBrowser.asInstanceOf[js.Any])
-    if (slow != null) __obj.updateDynamic("slow")(slow.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionsasyncfalsefnTestCa]
   }
+  @scala.inline
+  implicit class OptionsasyncfalsefnTestCaOps[Self <: OptionsasyncfalsefnTestCa] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAsync(value: Boolean with `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableTimeouts(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTimeouts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableTimeouts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTimeouts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpectPromise(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expectPromise")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpectPromise: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expectPromise")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFn(value: (TestCase | TestCaseWithDone | SuiteFunc | HookFunc) with TestCase): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkip(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipIfBrowser(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipIfBrowser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipIfBrowser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipIfBrowser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipIfWebWorker(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipIfWebWorker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipIfWebWorker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipIfWebWorker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipUnlessBrowser(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipUnlessBrowser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipUnlessBrowser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipUnlessBrowser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlow(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

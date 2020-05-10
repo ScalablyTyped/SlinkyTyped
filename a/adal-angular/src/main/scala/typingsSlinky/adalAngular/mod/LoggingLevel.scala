@@ -14,14 +14,12 @@ trait LoggingLevel extends js.Object
 
 object LoggingLevel {
   @scala.inline
-  def `0`: typingsSlinky.adalAngular.adalAngularNumbers.`0` = this.cast(0)
+  def `0`: typingsSlinky.adalAngular.adalAngularNumbers.`0` = 0.asInstanceOf[typingsSlinky.adalAngular.adalAngularNumbers.`0`]
   @scala.inline
-  def `1`: typingsSlinky.adalAngular.adalAngularNumbers.`1` = this.cast(1)
+  def `1`: typingsSlinky.adalAngular.adalAngularNumbers.`1` = 1.asInstanceOf[typingsSlinky.adalAngular.adalAngularNumbers.`1`]
   @scala.inline
-  def `2`: typingsSlinky.adalAngular.adalAngularNumbers.`2` = this.cast(2)
+  def `2`: typingsSlinky.adalAngular.adalAngularNumbers.`2` = 2.asInstanceOf[typingsSlinky.adalAngular.adalAngularNumbers.`2`]
   @scala.inline
-  def `3`: typingsSlinky.adalAngular.adalAngularNumbers.`3` = this.cast(3)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `3`: typingsSlinky.adalAngular.adalAngularNumbers.`3` = 3.asInstanceOf[typingsSlinky.adalAngular.adalAngularNumbers.`3`]
 }
 

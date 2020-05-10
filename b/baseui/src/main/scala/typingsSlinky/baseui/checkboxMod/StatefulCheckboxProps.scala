@@ -4,6 +4,8 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.baseui.baseuiStrings.bottom
@@ -22,60 +24,242 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StatefulCheckboxProps extends js.Object {
-  var autoFocus: js.UndefOr[Boolean] = js.undefined
-  var checkmarkType: js.UndefOr[default_ | toggle | toggle_round] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var initialState: js.UndefOr[typingsSlinky.baseui.checkboxMod.initialState] = js.undefined
-  var inputRef: js.UndefOr[Ref[HTMLInputElement]] = js.undefined
-  var isError: js.UndefOr[Boolean] = js.undefined
-  var isIndeterminate: js.UndefOr[Boolean] = js.undefined
-  var labelPlacement: js.UndefOr[top | right | bottom | left] = js.undefined
-  var onBlur: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.undefined
-  var onChange: js.UndefOr[FormEventHandler[HTMLInputElement]] = js.undefined
-  var onFocus: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.undefined
-  var onMouseEnter: js.UndefOr[MouseEventHandler[HTMLInputElement]] = js.undefined
-  var onMouseLeave: js.UndefOr[MouseEventHandler[HTMLInputElement]] = js.undefined
-  var overrides: js.UndefOr[CheckboxOverrides] = js.undefined
+  var autoFocus: js.UndefOr[Boolean] = js.native
+  var checkmarkType: js.UndefOr[default_ | toggle | toggle_round] = js.native
+  var children: js.UndefOr[TagMod[Any]] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var initialState: js.UndefOr[typingsSlinky.baseui.checkboxMod.initialState] = js.native
+  var inputRef: js.UndefOr[Ref[HTMLInputElement]] = js.native
+  var isError: js.UndefOr[Boolean] = js.native
+  var isIndeterminate: js.UndefOr[Boolean] = js.native
+  var labelPlacement: js.UndefOr[top | right | bottom | left] = js.native
+  var onBlur: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.native
+  var onChange: js.UndefOr[FormEventHandler[HTMLInputElement]] = js.native
+  var onFocus: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.native
+  var onMouseEnter: js.UndefOr[MouseEventHandler[HTMLInputElement]] = js.native
+  var onMouseLeave: js.UndefOr[MouseEventHandler[HTMLInputElement]] = js.native
+  var overrides: js.UndefOr[CheckboxOverrides] = js.native
 }
 
 object StatefulCheckboxProps {
   @scala.inline
-  def apply(
-    autoFocus: js.UndefOr[Boolean] = js.undefined,
-    checkmarkType: default_ | toggle | toggle_round = null,
-    children: TagMod[Any] = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    initialState: initialState = null,
-    inputRef: Ref[HTMLInputElement] = null,
-    isError: js.UndefOr[Boolean] = js.undefined,
-    isIndeterminate: js.UndefOr[Boolean] = js.undefined,
-    labelPlacement: top | right | bottom | left = null,
-    onBlur: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
-    onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit = null,
-    onFocus: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
-    onMouseEnter: SyntheticMouseEvent[HTMLInputElement] => Unit = null,
-    onMouseLeave: SyntheticMouseEvent[HTMLInputElement] => Unit = null,
-    overrides: CheckboxOverrides = null
-  ): StatefulCheckboxProps = {
+  def apply(): StatefulCheckboxProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])
-    if (checkmarkType != null) __obj.updateDynamic("checkmarkType")(checkmarkType.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
-    if (inputRef != null) __obj.updateDynamic("inputRef")(inputRef.asInstanceOf[js.Any])
-    if (!js.isUndefined(isError)) __obj.updateDynamic("isError")(isError.asInstanceOf[js.Any])
-    if (!js.isUndefined(isIndeterminate)) __obj.updateDynamic("isIndeterminate")(isIndeterminate.asInstanceOf[js.Any])
-    if (labelPlacement != null) __obj.updateDynamic("labelPlacement")(labelPlacement.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
     __obj.asInstanceOf[StatefulCheckboxProps]
   }
+  @scala.inline
+  implicit class StatefulCheckboxPropsOps[Self <: StatefulCheckboxProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckmarkType(value: default_ | toggle | toggle_round): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkmarkType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckmarkType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkmarkType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildrenReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildren(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialState(value: initialState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputRefRefObject(value: ReactRef[HTMLInputElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputRefFunction1(value: /* instance */ HTMLInputElement | Null => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInputRef(value: Ref[HTMLInputElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputRefNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(null)
+        ret
+    }
+    @scala.inline
+    def withIsError(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsIndeterminate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIndeterminate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsIndeterminate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIndeterminate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelPlacement(value: top | right | bottom | left): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelPlacement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelPlacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelPlacement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBlur(value: SyntheticFocusEvent[HTMLInputElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnBlur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFocus(value: SyntheticFocusEvent[HTMLInputElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseEnter(value: SyntheticMouseEvent[HTMLInputElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseEnter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseLeave(value: SyntheticMouseEvent[HTMLInputElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseLeave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverrides(value: CheckboxOverrides): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

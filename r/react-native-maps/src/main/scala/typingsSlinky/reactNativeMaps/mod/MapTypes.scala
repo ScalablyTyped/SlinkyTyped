@@ -16,18 +16,16 @@ trait MapTypes extends js.Object
 
 object MapTypes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hybrid: typingsSlinky.reactNativeMaps.reactNativeMapsStrings.hybrid = "hybrid".asInstanceOf[typingsSlinky.reactNativeMaps.reactNativeMapsStrings.hybrid]
   @scala.inline
-  def hybrid: typingsSlinky.reactNativeMaps.reactNativeMapsStrings.hybrid = this.cast("hybrid")
+  def mutedStandard: typingsSlinky.reactNativeMaps.reactNativeMapsStrings.mutedStandard = "mutedStandard".asInstanceOf[typingsSlinky.reactNativeMaps.reactNativeMapsStrings.mutedStandard]
   @scala.inline
-  def mutedStandard: typingsSlinky.reactNativeMaps.reactNativeMapsStrings.mutedStandard = this.cast("mutedStandard")
+  def none: typingsSlinky.reactNativeMaps.reactNativeMapsStrings.none = "none".asInstanceOf[typingsSlinky.reactNativeMaps.reactNativeMapsStrings.none]
   @scala.inline
-  def none: typingsSlinky.reactNativeMaps.reactNativeMapsStrings.none = this.cast("none")
+  def satellite: typingsSlinky.reactNativeMaps.reactNativeMapsStrings.satellite = "satellite".asInstanceOf[typingsSlinky.reactNativeMaps.reactNativeMapsStrings.satellite]
   @scala.inline
-  def satellite: typingsSlinky.reactNativeMaps.reactNativeMapsStrings.satellite = this.cast("satellite")
+  def standard: typingsSlinky.reactNativeMaps.reactNativeMapsStrings.standard = "standard".asInstanceOf[typingsSlinky.reactNativeMaps.reactNativeMapsStrings.standard]
   @scala.inline
-  def standard: typingsSlinky.reactNativeMaps.reactNativeMapsStrings.standard = this.cast("standard")
-  @scala.inline
-  def terrain: typingsSlinky.reactNativeMaps.reactNativeMapsStrings.terrain = this.cast("terrain")
+  def terrain: typingsSlinky.reactNativeMaps.reactNativeMapsStrings.terrain = "terrain".asInstanceOf[typingsSlinky.reactNativeMaps.reactNativeMapsStrings.terrain]
 }
 

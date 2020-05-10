@@ -1,9 +1,7 @@
 package typingsSlinky.reactNavigationStack.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.Animated.AnimatedInterpolation
 import typingsSlinky.reactNative.mod.Animated.Value
 import typingsSlinky.reactNative.mod.StyleProp
@@ -18,29 +16,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object StackViewCard
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object StackViewCard {
   @JSImport("react-navigation-stack/lib/typescript/views/StackView/StackViewCard", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def transparent(value: Boolean): this.type = set("transparent", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: PickPropsstylechildrensce): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     animatedStyle: js.Any,
     navigation: NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams],
     position: AnimatedInterpolation,
     realPosition: Value,
-    scene: Scene,
-    style: StyleProp[ViewStyle] = null,
-    transparent: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(animatedStyle = animatedStyle.asInstanceOf[js.Any], navigation = navigation.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], realPosition = realPosition.asInstanceOf[js.Any], scene = scene.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(transparent)) __obj.updateDynamic("transparent")(transparent.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    scene: Scene
+  ): Builder = {
+    val __props = js.Dynamic.literal(animatedStyle = animatedStyle.asInstanceOf[js.Any], navigation = navigation.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], realPosition = realPosition.asInstanceOf[js.Any], scene = scene.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PickPropsstylechildrensce]))
   }
-  type Props = PickPropsstylechildrensce
 }
 

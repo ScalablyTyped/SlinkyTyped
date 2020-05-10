@@ -42,16 +42,78 @@ object RedshiftDataSpec {
     DatabaseCredentials: RedshiftDatabaseCredentials,
     DatabaseInformation: RedshiftDatabase,
     S3StagingLocation: S3Url,
-    SelectSqlQuery: RedshiftSelectSqlQuery,
-    DataRearrangement: DataRearrangement = null,
-    DataSchema: DataSchema = null,
-    DataSchemaUri: S3Url = null
+    SelectSqlQuery: RedshiftSelectSqlQuery
   ): RedshiftDataSpec = {
     val __obj = js.Dynamic.literal(DatabaseCredentials = DatabaseCredentials.asInstanceOf[js.Any], DatabaseInformation = DatabaseInformation.asInstanceOf[js.Any], S3StagingLocation = S3StagingLocation.asInstanceOf[js.Any], SelectSqlQuery = SelectSqlQuery.asInstanceOf[js.Any])
-    if (DataRearrangement != null) __obj.updateDynamic("DataRearrangement")(DataRearrangement.asInstanceOf[js.Any])
-    if (DataSchema != null) __obj.updateDynamic("DataSchema")(DataSchema.asInstanceOf[js.Any])
-    if (DataSchemaUri != null) __obj.updateDynamic("DataSchemaUri")(DataSchemaUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[RedshiftDataSpec]
   }
+  @scala.inline
+  implicit class RedshiftDataSpecOps[Self <: RedshiftDataSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDatabaseCredentials(value: RedshiftDatabaseCredentials): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseCredentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDatabaseInformation(value: RedshiftDatabase): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseInformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3StagingLocation(value: S3Url): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3StagingLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelectSqlQuery(value: RedshiftSelectSqlQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectSqlQuery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDataRearrangement(value: DataRearrangement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataRearrangement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataRearrangement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataRearrangement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSchema(value: DataSchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSchema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSchema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSchemaUri(value: S3Url): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSchemaUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSchemaUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSchemaUri")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

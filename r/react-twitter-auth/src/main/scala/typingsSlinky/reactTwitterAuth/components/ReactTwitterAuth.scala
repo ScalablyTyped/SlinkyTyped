@@ -1,10 +1,9 @@
 package typingsSlinky.reactTwitterAuth.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.experimental.Headers
 import slinky.core.ReactComponentClass
-import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactTwitterAuth.mod.TwitterLoginProps
 import typingsSlinky.reactTwitterAuth.reactTwitterAuthStrings.`same-origin`
 import typingsSlinky.reactTwitterAuth.reactTwitterAuthStrings.include
@@ -14,41 +13,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactTwitterAuth
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object ReactTwitterAuth {
   @JSImport("react-twitter-auth", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, style */
-  def apply(
-    loginUrl: String,
-    onFailure: String => Unit,
-    onSuccess: String => Unit,
-    requestTokenUrl: String,
-    credentials: omit | `same-origin` | include = null,
-    customHeaders: HeadersInit = null,
-    dialogHeight: Int | Double = null,
-    dialogWidth: Int | Double = null,
-    forceLogin: js.UndefOr[Boolean] = js.undefined,
-    showIcon: js.UndefOr[Boolean] = js.undefined,
-    tag: ReactComponentClass[_] = null,
-    text: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[slinky.web.html.`*`.tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(loginUrl = loginUrl.asInstanceOf[js.Any], onFailure = js.Any.fromFunction1(onFailure), onSuccess = js.Any.fromFunction1(onSuccess), requestTokenUrl = requestTokenUrl.asInstanceOf[js.Any])
-    if (credentials != null) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
-    if (customHeaders != null) __obj.updateDynamic("customHeaders")(customHeaders.asInstanceOf[js.Any])
-    if (dialogHeight != null) __obj.updateDynamic("dialogHeight")(dialogHeight.asInstanceOf[js.Any])
-    if (dialogWidth != null) __obj.updateDynamic("dialogWidth")(dialogWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceLogin)) __obj.updateDynamic("forceLogin")(forceLogin.asInstanceOf[js.Any])
-    if (!js.isUndefined(showIcon)) __obj.updateDynamic("showIcon")(showIcon.asInstanceOf[js.Any])
-    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[slinky.web.html.`*`.tag.type, js.Object] {
+    @scala.inline
+    def credentials(value: omit | `same-origin` | include): this.type = set("credentials", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customHeadersHeaders(value: Headers): this.type = set("customHeaders", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customHeaders(value: HeadersInit): this.type = set("customHeaders", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dialogHeight(value: Double): this.type = set("dialogHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dialogWidth(value: Double): this.type = set("dialogWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def forceLogin(value: Boolean): this.type = set("forceLogin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showIcon(value: Boolean): this.type = set("showIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagFunctionComponent(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagComponentClass(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tag(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
   }
-  type Props = TwitterLoginProps
+  
+  def withProps(p: TwitterLoginProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(loginUrl: String, onFailure: String => Unit, onSuccess: String => Unit, requestTokenUrl: String): Builder = {
+    val __props = js.Dynamic.literal(loginUrl = loginUrl.asInstanceOf[js.Any], onFailure = js.Any.fromFunction1(onFailure), onSuccess = js.Any.fromFunction1(onSuccess), requestTokenUrl = requestTokenUrl.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TwitterLoginProps]))
+  }
 }
 

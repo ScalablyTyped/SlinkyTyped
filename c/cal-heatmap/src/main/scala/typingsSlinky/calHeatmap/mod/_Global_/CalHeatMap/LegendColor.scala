@@ -4,27 +4,81 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LegendColor extends js.Object {
   /** Base color of the date cells */
-  var base: js.UndefOr[String] = js.undefined
+  var base: js.UndefOr[String] = js.native
   /** Color for the dates with value == 0 */
-  var empty: js.UndefOr[String] = js.undefined
+  var empty: js.UndefOr[String] = js.native
   /** Color of the highest value on the legend */
-  var max: String
+  var max: String = js.native
   /** Color of the smallest value on the legend */
-  var min: String
+  var min: String = js.native
   /** Color for the special value */
-  var overflow: js.UndefOr[String] = js.undefined
+  var overflow: js.UndefOr[String] = js.native
 }
 
 object LegendColor {
   @scala.inline
-  def apply(max: String, min: String, base: String = null, empty: String = null, overflow: String = null): LegendColor = {
+  def apply(max: String, min: String): LegendColor = {
     val __obj = js.Dynamic.literal(max = max.asInstanceOf[js.Any], min = min.asInstanceOf[js.Any])
-    if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
-    if (empty != null) __obj.updateDynamic("empty")(empty.asInstanceOf[js.Any])
-    if (overflow != null) __obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
     __obj.asInstanceOf[LegendColor]
   }
+  @scala.inline
+  implicit class LegendColorOps[Self <: LegendColor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMax(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBase(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmpty(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmpty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

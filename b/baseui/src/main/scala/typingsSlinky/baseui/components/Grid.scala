@@ -1,10 +1,8 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.baseui.AnonGrid
 import typingsSlinky.baseui.layoutGridMod.ALIGNMENT
 import typingsSlinky.baseui.layoutGridMod.BEHAVIOR
 import typingsSlinky.baseui.layoutGridMod.GridProps
@@ -13,37 +11,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Grid
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Grid {
   @JSImport("baseui/layout-grid", "Grid")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    align: Responsive[ALIGNMENT] = null,
-    behavior: BEHAVIOR = null,
-    gridColumns: Responsive[Double] = null,
-    gridGaps: Responsive[Double] = null,
-    gridGutters: Responsive[Double] = null,
-    gridMargins: Responsive[Double] = null,
-    gridMaxWidth: Int | Double = null,
-    gridUnit: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSSLengthUnitT */ js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (behavior != null) __obj.updateDynamic("behavior")(behavior.asInstanceOf[js.Any])
-    if (gridColumns != null) __obj.updateDynamic("gridColumns")(gridColumns.asInstanceOf[js.Any])
-    if (gridGaps != null) __obj.updateDynamic("gridGaps")(gridGaps.asInstanceOf[js.Any])
-    if (gridGutters != null) __obj.updateDynamic("gridGutters")(gridGutters.asInstanceOf[js.Any])
-    if (gridMargins != null) __obj.updateDynamic("gridMargins")(gridMargins.asInstanceOf[js.Any])
-    if (gridMaxWidth != null) __obj.updateDynamic("gridMaxWidth")(gridMaxWidth.asInstanceOf[js.Any])
-    if (gridUnit != null) __obj.updateDynamic("gridUnit")(gridUnit.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def align(value: Responsive[ALIGNMENT]): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def behavior(value: BEHAVIOR): this.type = set("behavior", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridColumns(value: Responsive[Double]): this.type = set("gridColumns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridGaps(value: Responsive[Double]): this.type = set("gridGaps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridGutters(value: Responsive[Double]): this.type = set("gridGutters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridMargins(value: Responsive[Double]): this.type = set("gridMargins", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridMaxWidth(value: Double): this.type = set("gridMaxWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridUnit(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSSLengthUnitT */ js.Any
+    ): this.type = set("gridUnit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overrides(value: AnonGrid): this.type = set("overrides", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = GridProps
+  
+  def withProps(p: GridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Grid.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

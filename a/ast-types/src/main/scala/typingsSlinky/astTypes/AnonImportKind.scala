@@ -12,31 +12,96 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonImportKind extends js.Object {
-  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
-  var importKind: js.UndefOr[value | `type`] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
-  var source: LiteralKind
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  var importKind: js.UndefOr[value | `type`] = js.native
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  var source: LiteralKind = js.native
   var specifiers: js.UndefOr[
     js.Array[ImportSpecifierKind | ImportNamespaceSpecifierKind | ImportDefaultSpecifierKind]
-  ] = js.undefined
+  ] = js.native
 }
 
 object AnonImportKind {
   @scala.inline
-  def apply(
-    source: LiteralKind,
-    comments: js.Array[CommentKind] = null,
-    importKind: value | `type` = null,
-    loc: SourceLocationKind = null,
-    specifiers: js.Array[ImportSpecifierKind | ImportNamespaceSpecifierKind | ImportDefaultSpecifierKind] = null
-  ): AnonImportKind = {
+  def apply(source: LiteralKind): AnonImportKind = {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
-    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
-    if (importKind != null) __obj.updateDynamic("importKind")(importKind.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (specifiers != null) __obj.updateDynamic("specifiers")(specifiers.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonImportKind]
   }
+  @scala.inline
+  implicit class AnonImportKindOps[Self <: AnonImportKind] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSource(value: LiteralKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComments(value: js.Array[CommentKind]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommentsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(null)
+        ret
+    }
+    @scala.inline
+    def withImportKind(value: value | `type`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("importKind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImportKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("importKind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoc(value: SourceLocationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(null)
+        ret
+    }
+    @scala.inline
+    def withSpecifiers(value: js.Array[ImportSpecifierKind | ImportNamespaceSpecifierKind | ImportDefaultSpecifierKind]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("specifiers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpecifiers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("specifiers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -257,7 +257,7 @@ object widget extends js.Object {
       * @param params               Optional
       * @param srcNodeRef               Optional
       */
-    def create(params: js.Object, srcNodeRef: typingsSlinky.std.HTMLElement): Unit = js.native
+    def create(params: js.Object, srcNodeRef: HTMLElement): Unit = js.native
     /**
       *
       */

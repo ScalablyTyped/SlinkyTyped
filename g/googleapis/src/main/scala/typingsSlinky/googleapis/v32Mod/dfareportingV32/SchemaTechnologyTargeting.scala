@@ -55,22 +55,89 @@ trait SchemaTechnologyTargeting extends js.Object {
 
 object SchemaTechnologyTargeting {
   @scala.inline
-  def apply(
-    browsers: js.Array[SchemaBrowser] = null,
-    connectionTypes: js.Array[SchemaConnectionType] = null,
-    mobileCarriers: js.Array[SchemaMobileCarrier] = null,
-    operatingSystemVersions: js.Array[SchemaOperatingSystemVersion] = null,
-    operatingSystems: js.Array[SchemaOperatingSystem] = null,
-    platformTypes: js.Array[SchemaPlatformType] = null
-  ): SchemaTechnologyTargeting = {
+  def apply(): SchemaTechnologyTargeting = {
     val __obj = js.Dynamic.literal()
-    if (browsers != null) __obj.updateDynamic("browsers")(browsers.asInstanceOf[js.Any])
-    if (connectionTypes != null) __obj.updateDynamic("connectionTypes")(connectionTypes.asInstanceOf[js.Any])
-    if (mobileCarriers != null) __obj.updateDynamic("mobileCarriers")(mobileCarriers.asInstanceOf[js.Any])
-    if (operatingSystemVersions != null) __obj.updateDynamic("operatingSystemVersions")(operatingSystemVersions.asInstanceOf[js.Any])
-    if (operatingSystems != null) __obj.updateDynamic("operatingSystems")(operatingSystems.asInstanceOf[js.Any])
-    if (platformTypes != null) __obj.updateDynamic("platformTypes")(platformTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTechnologyTargeting]
   }
+  @scala.inline
+  implicit class SchemaTechnologyTargetingOps[Self <: SchemaTechnologyTargeting] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBrowsers(value: js.Array[SchemaBrowser]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrowsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browsers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionTypes(value: js.Array[SchemaConnectionType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMobileCarriers(value: js.Array[SchemaMobileCarrier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileCarriers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMobileCarriers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileCarriers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperatingSystemVersions(value: js.Array[SchemaOperatingSystemVersion]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystemVersions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatingSystemVersions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystemVersions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperatingSystems(value: js.Array[SchemaOperatingSystem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatingSystems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformTypes(value: js.Array[SchemaPlatformType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformTypes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,23 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DefaultClickThroughEventTagProperties extends js.Object {
   /** ID of the click-through event tag to apply to all ads in this entity's scope. */
-  var defaultClickThroughEventTagId: js.UndefOr[String] = js.undefined
+  var defaultClickThroughEventTagId: js.UndefOr[String] = js.native
   /** Whether this entity should override the inherited default click-through event tag with its own defined value. */
-  var overrideInheritedEventTag: js.UndefOr[Boolean] = js.undefined
+  var overrideInheritedEventTag: js.UndefOr[Boolean] = js.native
 }
 
 object DefaultClickThroughEventTagProperties {
   @scala.inline
-  def apply(
-    defaultClickThroughEventTagId: String = null,
-    overrideInheritedEventTag: js.UndefOr[Boolean] = js.undefined
-  ): DefaultClickThroughEventTagProperties = {
+  def apply(): DefaultClickThroughEventTagProperties = {
     val __obj = js.Dynamic.literal()
-    if (defaultClickThroughEventTagId != null) __obj.updateDynamic("defaultClickThroughEventTagId")(defaultClickThroughEventTagId.asInstanceOf[js.Any])
-    if (!js.isUndefined(overrideInheritedEventTag)) __obj.updateDynamic("overrideInheritedEventTag")(overrideInheritedEventTag.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultClickThroughEventTagProperties]
   }
+  @scala.inline
+  implicit class DefaultClickThroughEventTagPropertiesOps[Self <: DefaultClickThroughEventTagProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultClickThroughEventTagId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultClickThroughEventTagId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultClickThroughEventTagId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultClickThroughEventTagId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverrideInheritedEventTag(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideInheritedEventTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverrideInheritedEventTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideInheritedEventTag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

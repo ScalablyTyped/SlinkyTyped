@@ -27,40 +27,38 @@ trait ColorSpace extends js.Object
 
 object ColorSpace {
   @scala.inline
-  def CMYK: typingsSlinky.gm.gmStrings.CMYK = this.cast("CMYK")
+  def CMYK: typingsSlinky.gm.gmStrings.CMYK = "CMYK".asInstanceOf[typingsSlinky.gm.gmStrings.CMYK]
   @scala.inline
-  def CineonLog: typingsSlinky.gm.gmStrings.CineonLog = this.cast("CineonLog")
+  def CineonLog: typingsSlinky.gm.gmStrings.CineonLog = "CineonLog".asInstanceOf[typingsSlinky.gm.gmStrings.CineonLog]
   @scala.inline
-  def GRAY: typingsSlinky.gm.gmStrings.GRAY = this.cast("GRAY")
+  def GRAY: typingsSlinky.gm.gmStrings.GRAY = "GRAY".asInstanceOf[typingsSlinky.gm.gmStrings.GRAY]
   @scala.inline
-  def HSB: typingsSlinky.gm.gmStrings.HSB = this.cast("HSB")
+  def HSB: typingsSlinky.gm.gmStrings.HSB = "HSB".asInstanceOf[typingsSlinky.gm.gmStrings.HSB]
   @scala.inline
-  def HSL: typingsSlinky.gm.gmStrings.HSL = this.cast("HSL")
+  def HSL: typingsSlinky.gm.gmStrings.HSL = "HSL".asInstanceOf[typingsSlinky.gm.gmStrings.HSL]
   @scala.inline
-  def OHTA: typingsSlinky.gm.gmStrings.OHTA = this.cast("OHTA")
+  def OHTA: typingsSlinky.gm.gmStrings.OHTA = "OHTA".asInstanceOf[typingsSlinky.gm.gmStrings.OHTA]
   @scala.inline
-  def RGB: typingsSlinky.gm.gmStrings.RGB = this.cast("RGB")
+  def RGB: typingsSlinky.gm.gmStrings.RGB = "RGB".asInstanceOf[typingsSlinky.gm.gmStrings.RGB]
   @scala.inline
-  def Rec601Luma: typingsSlinky.gm.gmStrings.Rec601Luma = this.cast("Rec601Luma")
+  def Rec601Luma: typingsSlinky.gm.gmStrings.Rec601Luma = "Rec601Luma".asInstanceOf[typingsSlinky.gm.gmStrings.Rec601Luma]
   @scala.inline
-  def Rec601YCbCr: typingsSlinky.gm.gmStrings.Rec601YCbCr = this.cast("Rec601YCbCr")
+  def Rec601YCbCr: typingsSlinky.gm.gmStrings.Rec601YCbCr = "Rec601YCbCr".asInstanceOf[typingsSlinky.gm.gmStrings.Rec601YCbCr]
   @scala.inline
-  def Rec709Luma: typingsSlinky.gm.gmStrings.Rec709Luma = this.cast("Rec709Luma")
+  def Rec709Luma: typingsSlinky.gm.gmStrings.Rec709Luma = "Rec709Luma".asInstanceOf[typingsSlinky.gm.gmStrings.Rec709Luma]
   @scala.inline
-  def Rec709YCbCr: typingsSlinky.gm.gmStrings.Rec709YCbCr = this.cast("Rec709YCbCr")
+  def Rec709YCbCr: typingsSlinky.gm.gmStrings.Rec709YCbCr = "Rec709YCbCr".asInstanceOf[typingsSlinky.gm.gmStrings.Rec709YCbCr]
   @scala.inline
-  def Transparent: typingsSlinky.gm.gmStrings.Transparent = this.cast("Transparent")
+  def Transparent: typingsSlinky.gm.gmStrings.Transparent = "Transparent".asInstanceOf[typingsSlinky.gm.gmStrings.Transparent]
   @scala.inline
-  def XYZ: typingsSlinky.gm.gmStrings.XYZ = this.cast("XYZ")
+  def XYZ: typingsSlinky.gm.gmStrings.XYZ = "XYZ".asInstanceOf[typingsSlinky.gm.gmStrings.XYZ]
   @scala.inline
-  def YCbCr: typingsSlinky.gm.gmStrings.YCbCr = this.cast("YCbCr")
+  def YCbCr: typingsSlinky.gm.gmStrings.YCbCr = "YCbCr".asInstanceOf[typingsSlinky.gm.gmStrings.YCbCr]
   @scala.inline
-  def YIQ: typingsSlinky.gm.gmStrings.YIQ = this.cast("YIQ")
+  def YIQ: typingsSlinky.gm.gmStrings.YIQ = "YIQ".asInstanceOf[typingsSlinky.gm.gmStrings.YIQ]
   @scala.inline
-  def YPbPr: typingsSlinky.gm.gmStrings.YPbPr = this.cast("YPbPr")
+  def YPbPr: typingsSlinky.gm.gmStrings.YPbPr = "YPbPr".asInstanceOf[typingsSlinky.gm.gmStrings.YPbPr]
   @scala.inline
-  def YUV: typingsSlinky.gm.gmStrings.YUV = this.cast("YUV")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def YUV: typingsSlinky.gm.gmStrings.YUV = "YUV".asInstanceOf[typingsSlinky.gm.gmStrings.YUV]
 }
 

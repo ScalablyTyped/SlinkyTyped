@@ -4,48 +4,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PolygonOptions extends js.Object {
-  var extData: js.UndefOr[js.Any] = js.undefined
-  var fillColor: js.UndefOr[String] = js.undefined
-  var fillOpacity: js.UndefOr[Double] = js.undefined
-  var map: js.UndefOr[Map] = js.undefined
-  var path: js.UndefOr[js.Array[js.Array[LngLat] | LngLat]] = js.undefined
-  var strokeColor: js.UndefOr[String] = js.undefined
-  var strokeDasharray: js.UndefOr[js.Array[Double]] = js.undefined
-  var strokeOpacity: js.UndefOr[Double] = js.undefined
-  var strokeStyle: js.UndefOr[String] = js.undefined
-  var strokeWeight: js.UndefOr[Double] = js.undefined
-  var zIndex: js.UndefOr[Double] = js.undefined
+  var extData: js.UndefOr[js.Any] = js.native
+  var fillColor: js.UndefOr[String] = js.native
+  var fillOpacity: js.UndefOr[Double] = js.native
+  var map: js.UndefOr[Map] = js.native
+  var path: js.UndefOr[js.Array[js.Array[LngLat] | LngLat]] = js.native
+  var strokeColor: js.UndefOr[String] = js.native
+  var strokeDasharray: js.UndefOr[js.Array[Double]] = js.native
+  var strokeOpacity: js.UndefOr[Double] = js.native
+  var strokeStyle: js.UndefOr[String] = js.native
+  var strokeWeight: js.UndefOr[Double] = js.native
+  var zIndex: js.UndefOr[Double] = js.native
 }
 
 object PolygonOptions {
   @scala.inline
-  def apply(
-    extData: js.Any = null,
-    fillColor: String = null,
-    fillOpacity: Int | Double = null,
-    map: Map = null,
-    path: js.Array[js.Array[LngLat] | LngLat] = null,
-    strokeColor: String = null,
-    strokeDasharray: js.Array[Double] = null,
-    strokeOpacity: Int | Double = null,
-    strokeStyle: String = null,
-    strokeWeight: Int | Double = null,
-    zIndex: Int | Double = null
-  ): PolygonOptions = {
+  def apply(): PolygonOptions = {
     val __obj = js.Dynamic.literal()
-    if (extData != null) __obj.updateDynamic("extData")(extData.asInstanceOf[js.Any])
-    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
-    if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
-    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
-    if (strokeDasharray != null) __obj.updateDynamic("strokeDasharray")(strokeDasharray.asInstanceOf[js.Any])
-    if (strokeOpacity != null) __obj.updateDynamic("strokeOpacity")(strokeOpacity.asInstanceOf[js.Any])
-    if (strokeStyle != null) __obj.updateDynamic("strokeStyle")(strokeStyle.asInstanceOf[js.Any])
-    if (strokeWeight != null) __obj.updateDynamic("strokeWeight")(strokeWeight.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolygonOptions]
   }
+  @scala.inline
+  implicit class PolygonOptionsOps[Self <: PolygonOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExtData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMap(value: Map): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: js.Array[js.Array[LngLat] | LngLat]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeDasharray(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeDasharray")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeDasharray: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeDasharray")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeWeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

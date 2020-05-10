@@ -1,32 +1,31 @@
 package typingsSlinky.reactAsync.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactAsync.AnonChildrenPersistState
 import typingsSlinky.reactAsync.mod.AsyncState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IfRejected
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object IfRejected {
   @JSImport("react-async", "IfRejected")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[T](
-    state: AsyncState[T],
-    persist: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(state = state.asInstanceOf[js.Any])
-    if (!js.isUndefined(persist)) __obj.updateDynamic("persist")(persist.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object]]
+  @scala.inline
+  class Builder[T] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def persist(value: Boolean): this.type = set("persist", value.asInstanceOf[js.Any])
   }
-  type Props = AnonChildrenPersistState[js.Any]
+  
+  def withProps[T](p: AnonChildrenPersistState[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](state: AsyncState[T]): Builder[T] = {
+    val __props = js.Dynamic.literal(state = state.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[AnonChildrenPersistState[T]]))
+  }
 }
 

@@ -12,10 +12,8 @@ trait Layout extends js.Object
 
 object Layout {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def horizontal: typingsSlinky.reactWindow.reactWindowStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.reactWindow.reactWindowStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.reactWindow.reactWindowStrings.horizontal = this.cast("horizontal")
-  @scala.inline
-  def vertical: typingsSlinky.reactWindow.reactWindowStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.reactWindow.reactWindowStrings.vertical = "vertical".asInstanceOf[typingsSlinky.reactWindow.reactWindowStrings.vertical]
 }
 

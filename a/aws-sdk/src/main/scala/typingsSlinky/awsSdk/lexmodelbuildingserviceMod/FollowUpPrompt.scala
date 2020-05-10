@@ -20,8 +20,27 @@ object FollowUpPrompt {
   @scala.inline
   def apply(prompt: Prompt, rejectionStatement: Statement): FollowUpPrompt = {
     val __obj = js.Dynamic.literal(prompt = prompt.asInstanceOf[js.Any], rejectionStatement = rejectionStatement.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[FollowUpPrompt]
   }
+  @scala.inline
+  implicit class FollowUpPromptOps[Self <: FollowUpPrompt] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPrompt(value: Prompt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prompt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRejectionStatement(value: Statement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectionStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

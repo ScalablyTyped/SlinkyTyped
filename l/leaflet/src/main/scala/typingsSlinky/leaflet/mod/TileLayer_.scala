@@ -1,5 +1,6 @@
 package typingsSlinky.leaflet.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,6 +13,9 @@ class TileLayer_ protected () extends GridLayer_ {
   var options: TileLayerOptions = js.native
   /* protected */ def _abortLoading(): Unit = js.native
   /* protected */ def _getZoomForUrl(): Double = js.native
+  /* protected */ def _tileOnError(done: DoneCallback, tile: HTMLElement, e: js.Error): Unit = js.native
+  /* protected */ def _tileOnLoad(done: DoneCallback, tile: HTMLElement): Unit = js.native
+  def getTileUrl(coords: Coords): String = js.native
   def setUrl(url: String): this.type = js.native
   def setUrl(url: String, noRedraw: Boolean): this.type = js.native
 }

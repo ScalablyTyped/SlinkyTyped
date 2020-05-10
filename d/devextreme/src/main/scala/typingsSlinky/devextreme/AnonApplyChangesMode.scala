@@ -9,42 +9,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonApplyChangesMode extends js.Object {
-  var allowSearch: js.UndefOr[Boolean] = js.undefined
-  var applyChangesMode: js.UndefOr[instantly | onDemand] = js.undefined
-  var enabled: js.UndefOr[Boolean] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var layout: js.UndefOr[`0` | `1` | `2`] = js.undefined
-  var searchTimeout: js.UndefOr[Double] = js.undefined
-  var texts: js.UndefOr[AnonAllFields] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
+  var allowSearch: js.UndefOr[Boolean] = js.native
+  var applyChangesMode: js.UndefOr[instantly | onDemand] = js.native
+  var enabled: js.UndefOr[Boolean] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var layout: js.UndefOr[`0` | `1` | `2`] = js.native
+  var searchTimeout: js.UndefOr[Double] = js.native
+  var texts: js.UndefOr[AnonAllFields] = js.native
+  var title: js.UndefOr[String] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object AnonApplyChangesMode {
   @scala.inline
-  def apply(
-    allowSearch: js.UndefOr[Boolean] = js.undefined,
-    applyChangesMode: instantly | onDemand = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    height: Int | Double = null,
-    layout: `0` | `1` | `2` = null,
-    searchTimeout: Int | Double = null,
-    texts: AnonAllFields = null,
-    title: String = null,
-    width: Int | Double = null
-  ): AnonApplyChangesMode = {
+  def apply(): AnonApplyChangesMode = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowSearch)) __obj.updateDynamic("allowSearch")(allowSearch.asInstanceOf[js.Any])
-    if (applyChangesMode != null) __obj.updateDynamic("applyChangesMode")(applyChangesMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (searchTimeout != null) __obj.updateDynamic("searchTimeout")(searchTimeout.asInstanceOf[js.Any])
-    if (texts != null) __obj.updateDynamic("texts")(texts.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonApplyChangesMode]
   }
+  @scala.inline
+  implicit class AnonApplyChangesModeOps[Self <: AnonApplyChangesMode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowSearch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSearch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowSearch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSearch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApplyChangesMode(value: instantly | onDemand): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applyChangesMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplyChangesMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applyChangesMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayout(value: `0` | `1` | `2`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTexts(value: AnonAllFields): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("texts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTexts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("texts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

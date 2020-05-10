@@ -15,5 +15,5 @@ trait OauthErrorStatic
   * @option {String} [error_description] A description of the error.
   * @constructor
   */
-Instantiable1[/* options */ OauthErrorOptions, OauthError]
+Instantiable1[/* options */ OauthErrorOptions, js.Error]
 

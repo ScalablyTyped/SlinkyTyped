@@ -3,6 +3,7 @@ package typingsSlinky.baseui.radioMod
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.ChangeEventHandler
 import typingsSlinky.std.Event_
@@ -10,32 +11,105 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StatefulContainerProps extends js.Object {
-  var autoFocus: js.UndefOr[Boolean] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
-  var initialState: js.UndefOr[State] = js.undefined
-  var onChange: js.UndefOr[ChangeEventHandler[HTMLInputElement]] = js.undefined
-  var overrides: js.UndefOr[RadioOverrides with RadioGroupOverrides] = js.undefined
-  var stateReducer: StateReducer
+  var autoFocus: js.UndefOr[Boolean] = js.native
+  var children: js.UndefOr[TagMod[Any]] = js.native
+  var initialState: js.UndefOr[State] = js.native
+  var onChange: js.UndefOr[ChangeEventHandler[HTMLInputElement]] = js.native
+  var overrides: js.UndefOr[RadioOverrides with RadioGroupOverrides] = js.native
+  var stateReducer: StateReducer = js.native
 }
 
 object StatefulContainerProps {
   @scala.inline
   def apply(
-    stateReducer: (/* stateType */ String, /* nextState */ State, /* currentState */ State, /* event */ SyntheticEvent[Event_, HTMLInputElement]) => State,
-    autoFocus: js.UndefOr[Boolean] = js.undefined,
-    children: TagMod[Any] = null,
-    initialState: State = null,
-    onChange: ChangeEvent[HTMLInputElement] => Unit = null,
-    overrides: RadioOverrides with RadioGroupOverrides = null
+    stateReducer: (/* stateType */ String, /* nextState */ State, /* currentState */ State, /* event */ SyntheticEvent[Event_, HTMLInputElement]) => State
   ): StatefulContainerProps = {
     val __obj = js.Dynamic.literal(stateReducer = js.Any.fromFunction4(stateReducer))
-    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
     __obj.asInstanceOf[StatefulContainerProps]
   }
+  @scala.inline
+  implicit class StatefulContainerPropsOps[Self <: StatefulContainerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStateReducer(
+      value: (/* stateType */ String, /* nextState */ State, /* currentState */ State, /* event */ SyntheticEvent[Event_, HTMLInputElement]) => State
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateReducer")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withAutoFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildrenReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildren(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialState(value: State): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: ChangeEvent[HTMLInputElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverrides(value: RadioOverrides with RadioGroupOverrides): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

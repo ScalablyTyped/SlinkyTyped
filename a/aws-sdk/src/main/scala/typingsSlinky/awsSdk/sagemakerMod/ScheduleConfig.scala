@@ -16,8 +16,21 @@ object ScheduleConfig {
   @scala.inline
   def apply(ScheduleExpression: ScheduleExpression): ScheduleConfig = {
     val __obj = js.Dynamic.literal(ScheduleExpression = ScheduleExpression.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ScheduleConfig]
   }
+  @scala.inline
+  implicit class ScheduleConfigOps[Self <: ScheduleConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withScheduleExpression(value: ScheduleExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -4,66 +4,244 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AuthenticateOptions extends js.Object {
-  var assignProperty: js.UndefOr[String] = js.undefined
-  var authInfo: js.UndefOr[Boolean] = js.undefined
-  var failWithError: js.UndefOr[Boolean] = js.undefined
-  var failureFlash: js.UndefOr[String | Boolean] = js.undefined
-  var failureMessage: js.UndefOr[Boolean | String] = js.undefined
-  var failureRedirect: js.UndefOr[String] = js.undefined
-  var passReqToCallback: js.UndefOr[Boolean] = js.undefined
-  var pauseStream: js.UndefOr[Boolean] = js.undefined
-  var prompt: js.UndefOr[String] = js.undefined
-  var scope: js.UndefOr[String | js.Array[String]] = js.undefined
-  var session: js.UndefOr[Boolean] = js.undefined
-  var state: js.UndefOr[String] = js.undefined
-  var successFlash: js.UndefOr[String | Boolean] = js.undefined
-  var successMessage: js.UndefOr[Boolean | String] = js.undefined
-  var successRedirect: js.UndefOr[String] = js.undefined
-  var successReturnToOrRedirect: js.UndefOr[String] = js.undefined
-  var userProperty: js.UndefOr[String] = js.undefined
+  var assignProperty: js.UndefOr[String] = js.native
+  var authInfo: js.UndefOr[Boolean] = js.native
+  var failWithError: js.UndefOr[Boolean] = js.native
+  var failureFlash: js.UndefOr[String | Boolean] = js.native
+  var failureMessage: js.UndefOr[Boolean | String] = js.native
+  var failureRedirect: js.UndefOr[String] = js.native
+  var passReqToCallback: js.UndefOr[Boolean] = js.native
+  var pauseStream: js.UndefOr[Boolean] = js.native
+  var prompt: js.UndefOr[String] = js.native
+  var scope: js.UndefOr[String | js.Array[String]] = js.native
+  var session: js.UndefOr[Boolean] = js.native
+  var state: js.UndefOr[String] = js.native
+  var successFlash: js.UndefOr[String | Boolean] = js.native
+  var successMessage: js.UndefOr[Boolean | String] = js.native
+  var successRedirect: js.UndefOr[String] = js.native
+  var successReturnToOrRedirect: js.UndefOr[String] = js.native
+  var userProperty: js.UndefOr[String] = js.native
 }
 
 object AuthenticateOptions {
   @scala.inline
-  def apply(
-    assignProperty: String = null,
-    authInfo: js.UndefOr[Boolean] = js.undefined,
-    failWithError: js.UndefOr[Boolean] = js.undefined,
-    failureFlash: String | Boolean = null,
-    failureMessage: Boolean | String = null,
-    failureRedirect: String = null,
-    passReqToCallback: js.UndefOr[Boolean] = js.undefined,
-    pauseStream: js.UndefOr[Boolean] = js.undefined,
-    prompt: String = null,
-    scope: String | js.Array[String] = null,
-    session: js.UndefOr[Boolean] = js.undefined,
-    state: String = null,
-    successFlash: String | Boolean = null,
-    successMessage: Boolean | String = null,
-    successRedirect: String = null,
-    successReturnToOrRedirect: String = null,
-    userProperty: String = null
-  ): AuthenticateOptions = {
+  def apply(): AuthenticateOptions = {
     val __obj = js.Dynamic.literal()
-    if (assignProperty != null) __obj.updateDynamic("assignProperty")(assignProperty.asInstanceOf[js.Any])
-    if (!js.isUndefined(authInfo)) __obj.updateDynamic("authInfo")(authInfo.asInstanceOf[js.Any])
-    if (!js.isUndefined(failWithError)) __obj.updateDynamic("failWithError")(failWithError.asInstanceOf[js.Any])
-    if (failureFlash != null) __obj.updateDynamic("failureFlash")(failureFlash.asInstanceOf[js.Any])
-    if (failureMessage != null) __obj.updateDynamic("failureMessage")(failureMessage.asInstanceOf[js.Any])
-    if (failureRedirect != null) __obj.updateDynamic("failureRedirect")(failureRedirect.asInstanceOf[js.Any])
-    if (!js.isUndefined(passReqToCallback)) __obj.updateDynamic("passReqToCallback")(passReqToCallback.asInstanceOf[js.Any])
-    if (!js.isUndefined(pauseStream)) __obj.updateDynamic("pauseStream")(pauseStream.asInstanceOf[js.Any])
-    if (prompt != null) __obj.updateDynamic("prompt")(prompt.asInstanceOf[js.Any])
-    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
-    if (!js.isUndefined(session)) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
-    if (successFlash != null) __obj.updateDynamic("successFlash")(successFlash.asInstanceOf[js.Any])
-    if (successMessage != null) __obj.updateDynamic("successMessage")(successMessage.asInstanceOf[js.Any])
-    if (successRedirect != null) __obj.updateDynamic("successRedirect")(successRedirect.asInstanceOf[js.Any])
-    if (successReturnToOrRedirect != null) __obj.updateDynamic("successReturnToOrRedirect")(successReturnToOrRedirect.asInstanceOf[js.Any])
-    if (userProperty != null) __obj.updateDynamic("userProperty")(userProperty.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthenticateOptions]
   }
+  @scala.inline
+  implicit class AuthenticateOptionsOps[Self <: AuthenticateOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssignProperty(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assignProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssignProperty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assignProperty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthInfo(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailWithError(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failWithError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailWithError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failWithError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureFlash(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureFlash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureFlash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureFlash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureMessage(value: Boolean | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureRedirect(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureRedirect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureRedirect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureRedirect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassReqToCallback(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passReqToCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassReqToCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passReqToCallback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPauseStream(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pauseStream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPauseStream: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pauseStream")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrompt(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prompt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrompt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prompt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScope(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSession(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSession: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessFlash(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successFlash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessFlash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successFlash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessMessage(value: Boolean | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessRedirect(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successRedirect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessRedirect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successRedirect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessReturnToOrRedirect(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successReturnToOrRedirect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessReturnToOrRedirect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successReturnToOrRedirect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserProperty(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserProperty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userProperty")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

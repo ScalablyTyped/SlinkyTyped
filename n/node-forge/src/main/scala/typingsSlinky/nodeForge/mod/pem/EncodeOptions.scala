@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EncodeOptions extends js.Object {
-  var maxline: js.UndefOr[Double] = js.undefined
+  var maxline: js.UndefOr[Double] = js.native
 }
 
 object EncodeOptions {
   @scala.inline
-  def apply(maxline: Int | Double = null): EncodeOptions = {
+  def apply(): EncodeOptions = {
     val __obj = js.Dynamic.literal()
-    if (maxline != null) __obj.updateDynamic("maxline")(maxline.asInstanceOf[js.Any])
     __obj.asInstanceOf[EncodeOptions]
   }
+  @scala.inline
+  implicit class EncodeOptionsOps[Self <: EncodeOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxline(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxline")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

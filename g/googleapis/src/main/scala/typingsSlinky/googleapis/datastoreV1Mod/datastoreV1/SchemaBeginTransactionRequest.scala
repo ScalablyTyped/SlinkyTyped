@@ -17,10 +17,29 @@ trait SchemaBeginTransactionRequest extends js.Object {
 
 object SchemaBeginTransactionRequest {
   @scala.inline
-  def apply(transactionOptions: SchemaTransactionOptions = null): SchemaBeginTransactionRequest = {
+  def apply(): SchemaBeginTransactionRequest = {
     val __obj = js.Dynamic.literal()
-    if (transactionOptions != null) __obj.updateDynamic("transactionOptions")(transactionOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBeginTransactionRequest]
   }
+  @scala.inline
+  implicit class SchemaBeginTransactionRequestOps[Self <: SchemaBeginTransactionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTransactionOptions(value: SchemaTransactionOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransactionOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

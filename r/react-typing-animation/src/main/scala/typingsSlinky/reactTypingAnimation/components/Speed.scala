@@ -1,26 +1,22 @@
 package typingsSlinky.reactTypingAnimation.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactTypingAnimation.mod.Typing.SpeedProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Speed
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactTypingAnimation.mod.default.Speed] {
+object Speed {
   @JSImport("react-typing-animation", "default.Speed")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(ms: Double, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactTypingAnimation.mod.default.Speed] = {
-    val __obj = js.Dynamic.literal(ms = ms.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: SpeedProperties): Default[tag.type, typingsSlinky.reactTypingAnimation.mod.default.Speed] = new Default[tag.type, typingsSlinky.reactTypingAnimation.mod.default.Speed](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(ms: Double): Default[tag.type, typingsSlinky.reactTypingAnimation.mod.default.Speed] = {
+    val __props = js.Dynamic.literal(ms = ms.asInstanceOf[js.Any])
+    new Default[tag.type, typingsSlinky.reactTypingAnimation.mod.default.Speed](js.Array(this.component, __props.asInstanceOf[SpeedProperties]))
   }
-  type Props = SpeedProperties
 }
 

@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Memory extends _ExportValue {
-  val buffer: scala.scalajs.js.typedarray.ArrayBuffer
-  def grow(delta: Double): Double
+  val buffer: js.typedarray.ArrayBuffer = js.native
+  def grow(delta: Double): Double = js.native
 }
 
 @JSGlobal("WebAssembly.Memory")

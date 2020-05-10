@@ -24,11 +24,41 @@ trait SchemaDirectorySiteContactAssignment extends js.Object {
 
 object SchemaDirectorySiteContactAssignment {
   @scala.inline
-  def apply(contactId: String = null, visibility: String = null): SchemaDirectorySiteContactAssignment = {
+  def apply(): SchemaDirectorySiteContactAssignment = {
     val __obj = js.Dynamic.literal()
-    if (contactId != null) __obj.updateDynamic("contactId")(contactId.asInstanceOf[js.Any])
-    if (visibility != null) __obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDirectorySiteContactAssignment]
   }
+  @scala.inline
+  implicit class SchemaDirectorySiteContactAssignmentOps[Self <: SchemaDirectorySiteContactAssignment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContactId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContactId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibility(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait ErrorPolicy extends js.Object
 
 object ErrorPolicy {
   @scala.inline
-  def all: typingsSlinky.apolloClient.apolloClientStrings.all = this.cast("all")
+  def all: typingsSlinky.apolloClient.apolloClientStrings.all = "all".asInstanceOf[typingsSlinky.apolloClient.apolloClientStrings.all]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ignore: typingsSlinky.apolloClient.apolloClientStrings.ignore = "ignore".asInstanceOf[typingsSlinky.apolloClient.apolloClientStrings.ignore]
   @scala.inline
-  def ignore: typingsSlinky.apolloClient.apolloClientStrings.ignore = this.cast("ignore")
-  @scala.inline
-  def none: typingsSlinky.apolloClient.apolloClientStrings.none = this.cast("none")
+  def none: typingsSlinky.apolloClient.apolloClientStrings.none = "none".asInstanceOf[typingsSlinky.apolloClient.apolloClientStrings.none]
 }
 

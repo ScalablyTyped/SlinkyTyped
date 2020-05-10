@@ -4,36 +4,70 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AtRuleNewProps extends ContainerNewProps {
   /**
     * The identifier that immediately follows the @.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * These are the values that follow the at-rule's name, but precede any {}
     * block. The spec refers to this area as the at-rule's "prelude".
     */
-  var params: js.UndefOr[String | Double] = js.undefined
+  var params: js.UndefOr[String | Double] = js.native
   @JSName("raws")
-  var raws_AtRuleNewProps: js.UndefOr[AtRuleRaws] = js.undefined
+  var raws_AtRuleNewProps: js.UndefOr[AtRuleRaws] = js.native
 }
 
 object AtRuleNewProps {
   @scala.inline
-  def apply(
-    name: String = null,
-    nodes: js.Array[ChildNode] = null,
-    params: String | Double = null,
-    raws: AtRuleRaws = null,
-    source: NodeSource = null
-  ): AtRuleNewProps = {
+  def apply(): AtRuleNewProps = {
     val __obj = js.Dynamic.literal()
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (nodes != null) __obj.updateDynamic("nodes")(nodes.asInstanceOf[js.Any])
-    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
-    if (raws != null) __obj.updateDynamic("raws")(raws.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[AtRuleNewProps]
   }
+  @scala.inline
+  implicit class AtRuleNewPropsOps[Self <: AtRuleNewProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParams(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRaws(value: AtRuleRaws): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("raws")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRaws: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("raws")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

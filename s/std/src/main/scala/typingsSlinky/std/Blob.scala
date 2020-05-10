@@ -15,7 +15,7 @@ trait Blob
      with _BodyInit {
   val size: Double = js.native
   val `type`: java.lang.String = js.native
-  def arrayBuffer(): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def arrayBuffer(): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def slice(): org.scalajs.dom.raw.Blob = js.native
   def slice(start: Double): org.scalajs.dom.raw.Blob = js.native
   def slice(start: Double, end: Double): org.scalajs.dom.raw.Blob = js.native
@@ -27,7 +27,11 @@ trait Blob
 @JSGlobal("Blob")
 @js.native
 object Blob
-  extends Instantiable0[Blob]
-     with Instantiable1[/* blobParts */ js.Array[BlobPart], Blob]
-     with Instantiable2[/* blobParts */ js.Array[BlobPart], /* options */ BlobPropertyBag, Blob]
+  extends Instantiable0[org.scalajs.dom.raw.Blob]
+     with Instantiable1[/* blobParts */ js.Array[BlobPart], org.scalajs.dom.raw.Blob]
+     with Instantiable2[
+      /* blobParts */ js.Array[BlobPart], 
+      /* options */ org.scalajs.dom.raw.BlobPropertyBag, 
+      org.scalajs.dom.raw.Blob
+    ]
 

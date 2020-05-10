@@ -14,14 +14,12 @@ trait Alignment extends js.Object
 
 object Alignment {
   @scala.inline
-  def auto: typingsSlinky.reactVirtualized.reactVirtualizedStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.reactVirtualized.reactVirtualizedStrings.auto = "auto".asInstanceOf[typingsSlinky.reactVirtualized.reactVirtualizedStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.reactVirtualized.reactVirtualizedStrings.center = "center".asInstanceOf[typingsSlinky.reactVirtualized.reactVirtualizedStrings.center]
   @scala.inline
-  def center: typingsSlinky.reactVirtualized.reactVirtualizedStrings.center = this.cast("center")
+  def end: typingsSlinky.reactVirtualized.reactVirtualizedStrings.end = "end".asInstanceOf[typingsSlinky.reactVirtualized.reactVirtualizedStrings.end]
   @scala.inline
-  def end: typingsSlinky.reactVirtualized.reactVirtualizedStrings.end = this.cast("end")
-  @scala.inline
-  def start: typingsSlinky.reactVirtualized.reactVirtualizedStrings.start = this.cast("start")
+  def start: typingsSlinky.reactVirtualized.reactVirtualizedStrings.start = "start".asInstanceOf[typingsSlinky.reactVirtualized.reactVirtualizedStrings.start]
 }
 

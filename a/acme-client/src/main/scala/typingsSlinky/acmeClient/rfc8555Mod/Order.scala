@@ -9,17 +9,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Order extends js.Object {
-  var authorizations: js.Array[String]
-  var certificate: js.UndefOr[String] = js.undefined
-  var error: js.UndefOr[js.Object] = js.undefined
-  var expires: js.UndefOr[String] = js.undefined
+  var authorizations: js.Array[String] = js.native
+  var certificate: js.UndefOr[String] = js.native
+  var error: js.UndefOr[js.Object] = js.native
+  var expires: js.UndefOr[String] = js.native
   @JSName("finalize")
-  var finalize_FOrder: String
-  var identifiers: js.Array[Identifier]
-  var notAfter: js.UndefOr[String] = js.undefined
-  var notBefore: js.UndefOr[String] = js.undefined
-  var status: pending | ready | processing | valid | invalid
+  var finalize_FOrder: String = js.native
+  var identifiers: js.Array[Identifier] = js.native
+  var notAfter: js.UndefOr[String] = js.native
+  var notBefore: js.UndefOr[String] = js.native
+  var status: pending | ready | processing | valid | invalid = js.native
 }
 
 object Order {
@@ -28,20 +29,102 @@ object Order {
     authorizations: js.Array[String],
     finalize: String,
     identifiers: js.Array[Identifier],
-    status: pending | ready | processing | valid | invalid,
-    certificate: String = null,
-    error: js.Object = null,
-    expires: String = null,
-    notAfter: String = null,
-    notBefore: String = null
+    status: pending | ready | processing | valid | invalid
   ): Order = {
     val __obj = js.Dynamic.literal(authorizations = authorizations.asInstanceOf[js.Any], finalize = finalize.asInstanceOf[js.Any], identifiers = identifiers.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    if (certificate != null) __obj.updateDynamic("certificate")(certificate.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (expires != null) __obj.updateDynamic("expires")(expires.asInstanceOf[js.Any])
-    if (notAfter != null) __obj.updateDynamic("notAfter")(notAfter.asInstanceOf[js.Any])
-    if (notBefore != null) __obj.updateDynamic("notBefore")(notBefore.asInstanceOf[js.Any])
     __obj.asInstanceOf[Order]
   }
+  @scala.inline
+  implicit class OrderOps[Self <: Order] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthorizations(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFinalize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdentifiers(value: js.Array[Identifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifiers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: pending | ready | processing | valid | invalid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCertificate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpires(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expires")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpires: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expires")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotAfter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notAfter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotBefore(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notBefore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notBefore")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

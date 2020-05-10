@@ -1,12 +1,12 @@
 package typingsSlinky.officeUiFabricReact.calloutContentBaseMod
 
+import org.scalajs.dom.raw.HTMLElement
+import slinky.web.SyntheticKeyboardEvent
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.officeUiFabricReact.AnonDirectionalHint
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.KeyboardEvent
 import typingsSlinky.std.Event_
-import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.MouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -63,8 +63,8 @@ class CalloutContentBase protected ()
   @JSName("componentWillUnmount")
   def componentWillUnmount_MCalloutContentBase(): Unit = js.native
   def dismiss(): Unit = js.native
-  def dismiss(ev: KeyboardEvent[HTMLElement]): Unit = js.native
-  def dismiss(ev: typingsSlinky.react.mod.MouseEvent[HTMLElement, MouseEvent]): Unit = js.native
+  def dismiss(ev: SyntheticKeyboardEvent[HTMLElement]): Unit = js.native
+  def dismiss(ev: SyntheticMouseEvent[HTMLElement]): Unit = js.native
   def dismiss(ev: Event_): Unit = js.native
   @JSName("shouldComponentUpdate")
   def shouldComponentUpdate_MCalloutContentBase(newProps: ICalloutProps, newState: ICalloutState): Boolean = js.native

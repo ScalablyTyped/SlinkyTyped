@@ -23,8 +23,33 @@ object GetSecretsResult {
   @scala.inline
   def apply(id: String, plaintext: StringDictionary[String], secrets: js.Array[GetSecretsSecret]): GetSecretsResult = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], plaintext = plaintext.asInstanceOf[js.Any], secrets = secrets.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetSecretsResult]
   }
+  @scala.inline
+  implicit class GetSecretsResultOps[Self <: GetSecretsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlaintext(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plaintext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSecrets(value: js.Array[GetSecretsSecret]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secrets")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

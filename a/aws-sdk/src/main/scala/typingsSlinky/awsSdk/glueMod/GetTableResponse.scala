@@ -14,10 +14,29 @@ trait GetTableResponse extends js.Object {
 
 object GetTableResponse {
   @scala.inline
-  def apply(Table: Table = null): GetTableResponse = {
+  def apply(): GetTableResponse = {
     val __obj = js.Dynamic.literal()
-    if (Table != null) __obj.updateDynamic("Table")(Table.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTableResponse]
   }
+  @scala.inline
+  implicit class GetTableResponseOps[Self <: GetTableResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTable(value: Table): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Table")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Table")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

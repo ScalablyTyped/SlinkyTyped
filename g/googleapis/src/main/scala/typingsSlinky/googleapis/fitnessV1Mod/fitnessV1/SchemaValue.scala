@@ -36,18 +36,65 @@ trait SchemaValue extends js.Object {
 
 object SchemaValue {
   @scala.inline
-  def apply(
-    fpVal: Int | Double = null,
-    intVal: Int | Double = null,
-    mapVal: js.Array[SchemaValueMapValEntry] = null,
-    stringVal: String = null
-  ): SchemaValue = {
+  def apply(): SchemaValue = {
     val __obj = js.Dynamic.literal()
-    if (fpVal != null) __obj.updateDynamic("fpVal")(fpVal.asInstanceOf[js.Any])
-    if (intVal != null) __obj.updateDynamic("intVal")(intVal.asInstanceOf[js.Any])
-    if (mapVal != null) __obj.updateDynamic("mapVal")(mapVal.asInstanceOf[js.Any])
-    if (stringVal != null) __obj.updateDynamic("stringVal")(stringVal.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaValue]
   }
+  @scala.inline
+  implicit class SchemaValueOps[Self <: SchemaValue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFpVal(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fpVal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFpVal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fpVal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntVal(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intVal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntVal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intVal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapVal(value: js.Array[SchemaValueMapValEntry]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapVal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapVal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapVal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStringVal(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringVal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStringVal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringVal")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -17,10 +17,29 @@ trait SchemaUpdateDeploymentRequest extends js.Object {
 
 object SchemaUpdateDeploymentRequest {
   @scala.inline
-  def apply(deploymentConfig: SchemaDeploymentConfig = null): SchemaUpdateDeploymentRequest = {
+  def apply(): SchemaUpdateDeploymentRequest = {
     val __obj = js.Dynamic.literal()
-    if (deploymentConfig != null) __obj.updateDynamic("deploymentConfig")(deploymentConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateDeploymentRequest]
   }
+  @scala.inline
+  implicit class SchemaUpdateDeploymentRequestOps[Self <: SchemaUpdateDeploymentRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeploymentConfig(value: SchemaDeploymentConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeploymentConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

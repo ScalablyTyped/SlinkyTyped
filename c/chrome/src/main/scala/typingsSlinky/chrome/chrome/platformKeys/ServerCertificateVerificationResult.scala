@@ -4,22 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ServerCertificateVerificationResult extends js.Object {
   /**
     * If the trust verification failed, this array contains the errors reported by the underlying network layer. Otherwise, this array is empty.
     * Note: This list is meant for debugging only and may not contain all relevant errors. The errors returned may change in future revisions of this API, and are not guaranteed to be forwards or backwards compatible.
     */
-  var debug_errors: js.Array[String]
+  var debug_errors: js.Array[String] = js.native
   /** The result of the trust verification: true if trust for the given verification details could be established and false if trust is rejected for any reason. */
-  var trusted: Boolean
+  var trusted: Boolean = js.native
 }
 
 object ServerCertificateVerificationResult {
   @scala.inline
   def apply(debug_errors: js.Array[String], trusted: Boolean): ServerCertificateVerificationResult = {
     val __obj = js.Dynamic.literal(debug_errors = debug_errors.asInstanceOf[js.Any], trusted = trusted.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ServerCertificateVerificationResult]
   }
+  @scala.inline
+  implicit class ServerCertificateVerificationResultOps[Self <: ServerCertificateVerificationResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDebug_errors(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug_errors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrusted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trusted")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

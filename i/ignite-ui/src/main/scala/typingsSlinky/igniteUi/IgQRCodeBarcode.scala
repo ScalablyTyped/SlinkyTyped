@@ -6,32 +6,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgQRCodeBarcode
   extends /**
-	 * Option for igQRCodeBarcode
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
   	 * Gets or sets the Application Indicator assigned to identify the specification concerned by AIM International.
   	 * The value is respected only when the Fnc1Mode is set to Industry. Its value may take the form of any single Latin alphabetic character from the set {a - z, A - Z} or a two-digit number.
   	 */
-  var applicationIndicator: js.UndefOr[String] = js.undefined
+  var applicationIndicator: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the brush to use to fill the backing of the barcode.
   	 */
-  var backingBrush: js.UndefOr[String] = js.undefined
+  var backingBrush: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the brush to use for the outline of the backing.
   	 */
-  var backingOutline: js.UndefOr[String] = js.undefined
+  var backingOutline: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the stroke thickness of the backing outline.
   	 */
-  var backingStrokeThickness: js.UndefOr[Double] = js.undefined
+  var backingStrokeThickness: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the brush to use to fill the background of the bars.
   	 */
-  var barBrush: js.UndefOr[String] = js.undefined
+  var barBrush: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets a value which specifies how the grid fills within the barcode control dimensions.
   	 *
@@ -39,18 +40,18 @@ trait IgQRCodeBarcode
   	 * "fillSpace" FillSpace mode ensures that the barcode grid fills the control dimensions.
   	 * "ensureEqualSize" EnsureEqualSize mode ensures that every grid column/row has the same pixels number width/height. The sum of all columns/rows pixels may be less than the width/height of the control.
   	 */
-  var barsFillMode: js.UndefOr[String] = js.undefined
+  var barsFillMode: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the data value.
   	 */
-  var data: js.UndefOr[String] = js.undefined
+  var data: js.UndefOr[String] = js.native
   /**
   	 * Occurs when the data has changed.
   	 * Function takes first argument evt and second argument ui.
   	 * Use ui.owner to obtain reference to the barcode widget.
   	 * Use ui.newData to obtain the new data.
   	 */
-  var dataChanged: js.UndefOr[DataChangedEvent] = js.undefined
+  var dataChanged: js.UndefOr[DataChangedEvent] = js.native
   /**
   	 * Gets or sets a value indicating whether to show the ECI header.
   	 *
@@ -58,12 +59,12 @@ trait IgQRCodeBarcode
   	 * "hide" Hide the header.
   	 * "show" Show the header.
   	 */
-  var eciHeaderDisplayMode: js.UndefOr[String] = js.undefined
+  var eciHeaderDisplayMode: js.UndefOr[String] = js.native
   /**
   	 * Each Extended Channel Interpretation (ECI) is designated by a six-digit assignment number: 000000 - 999999.
   	 * The default value depends on the loaded encodings. The default is ECI 000003 (representing ISO/IEC 8859-1) if the ISO/IEC 8859-1 character set is loaded. Otherwise the default value is 000026 (representing UTF-8).
   	 */
-  var eciNumber: js.UndefOr[Double] = js.undefined
+  var eciNumber: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the encoding mode for compaction of the QR Code symbol data. The default value is undefined if the Shift_JIS encoding is loaded. Otherwise the default value is byte.
   	 *
@@ -74,7 +75,7 @@ trait IgQRCodeBarcode
   	 * "byte" In Byte mode the data is encoded at 8 bits per character. The character set of the Byte encoding mode is byte data (by default it is ISO/IEC 8859-1 character set).
   	 * "kanji" The Kanji mode efficiently encodes Kanji characters in accordance with the Shift JIS system based on JIS X 0208. Each two-byte character value is compacted to a 13-bit binary codeword.
   	 */
-  var encodingMode: js.UndefOr[String] = js.undefined
+  var encodingMode: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the error correction level of the QR Code symbol.
   	 *
@@ -84,18 +85,18 @@ trait IgQRCodeBarcode
   	 * "quartil" Quartil error correction level allows recovery of 25% of the symbol codewords.
   	 * "high" High error correction level allows recovery of 30% of the symbol codewords.
   	 */
-  var errorCorrectionLevel: js.UndefOr[String] = js.undefined
+  var errorCorrectionLevel: js.UndefOr[String] = js.native
   /**
   	 * Occurs when an error has happened.
   	 * Function takes first argument evt and second argument ui.
   	 * Use ui.owner to obtain reference to the barcode widget.
   	 * Use ui.errorMessage to get or set the error message that is to be shown.
   	 */
-  var errorMessageDisplaying: js.UndefOr[ErrorMessageDisplayingEvent] = js.undefined
+  var errorMessageDisplaying: js.UndefOr[ErrorMessageDisplayingEvent] = js.native
   /**
   	 * Gets or sets the message text displayed when some error occurs.
   	 */
-  var errorMessageText: js.UndefOr[String] = js.undefined
+  var errorMessageText: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the FNC1 mode indicator which identifies symbols encoding messages formatted according to specific predefined industry or application specifications.
   	 *
@@ -104,40 +105,40 @@ trait IgQRCodeBarcode
   	 * "gs1" Uses Fnc1 symbol in the first position of the character in Code 128 symbols and designates data formatted in accordance with the GS1 General Specification.
   	 * "industry" Uses Fnc1 symbol in the second position of the character in Code 128 symbols and designates data formatted in accordance with a specific industry application previously agreed with AIM Inc.
   	 */
-  var fnc1Mode: js.UndefOr[String] = js.undefined
+  var fnc1Mode: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the font of the text displayed by the control.
   	 */
-  var font: js.UndefOr[String] = js.undefined
+  var font: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the brush to use for the label font.
   	 */
-  var fontBrush: js.UndefOr[String] = js.undefined
+  var fontBrush: js.UndefOr[String] = js.native
   /**
   	 * The height of the barcode. It can be set as a number in pixels, string (px) or percentage (%).
   	 */
-  var height: js.UndefOr[String | Double] = js.undefined
+  var height: js.UndefOr[String | Double] = js.native
   /**
   	 * Set/Get the locale language setting for the widget.
   	 *
   	 */
-  var language: js.UndefOr[String] = js.undefined
+  var language: js.UndefOr[String] = js.native
   /**
   	 * Set/Get the locale setting for the widget.
   	 *
   	 */
-  var locale: js.UndefOr[js.Any] = js.undefined
+  var locale: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets or sets the scaling value used to affect the pixel density of the control.
   	 * A higher scaling ratio will produce crisper visuals at the expense of memory.  Lower values will cause the control
   	 * to appear blurry.
   	 */
-  var pixelScalingRatio: js.UndefOr[Double] = js.undefined
+  var pixelScalingRatio: js.UndefOr[Double] = js.native
   /**
   	 * Set/Get the regional setting for the widget.
   	 *
   	 */
-  var regional: js.UndefOr[String | js.Object] = js.undefined
+  var regional: js.UndefOr[String | js.Object] = js.native
   /**
   	 * Gets or sets the size version of the QR Code symbol.
   	 *
@@ -184,7 +185,7 @@ trait IgQRCodeBarcode
   	 * "version39" Version39 defines size of 173x173 modules for the symbol.
   	 * "version40" Version40 defines size of 177x177 modules for the symbol.
   	 */
-  var sizeVersion: js.UndefOr[String] = js.undefined
+  var sizeVersion: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the stretch.
   	 *
@@ -194,86 +195,358 @@ trait IgQRCodeBarcode
   	 * "uniform"
   	 * "uniformToFill"
   	 */
-  var stretch: js.UndefOr[String] = js.undefined
+  var stretch: js.UndefOr[String] = js.native
   /**
   	 * The width of the barcode. It can be set as a number in pixels, string (px) or percentage (%).
   	 */
-  var width: js.UndefOr[String | Double] = js.undefined
+  var width: js.UndefOr[String | Double] = js.native
   /**
   	 * Gets or sets the width (XDimension) to height (YDimension) ratio. It accepts only positive values. This property does not apply for the QR barcode.
   	 */
-  var widthToHeightRatio: js.UndefOr[Double] = js.undefined
+  var widthToHeightRatio: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the X-dimension (narrow element width) for a symbol in mm. It accepts values from 0.01 to 100.
   	 */
-  var xDimension: js.UndefOr[Double] = js.undefined
+  var xDimension: js.UndefOr[Double] = js.native
 }
 
 object IgQRCodeBarcode {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for igQRCodeBarcode
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    applicationIndicator: String = null,
-    backingBrush: String = null,
-    backingOutline: String = null,
-    backingStrokeThickness: Int | Double = null,
-    barBrush: String = null,
-    barsFillMode: String = null,
-    data: String = null,
-    dataChanged: (/* event */ Event_, /* ui */ DataChangedEventUIParam) => Unit = null,
-    eciHeaderDisplayMode: String = null,
-    eciNumber: Int | Double = null,
-    encodingMode: String = null,
-    errorCorrectionLevel: String = null,
-    errorMessageDisplaying: (/* event */ Event_, /* ui */ ErrorMessageDisplayingEventUIParam) => Unit = null,
-    errorMessageText: String = null,
-    fnc1Mode: String = null,
-    font: String = null,
-    fontBrush: String = null,
-    height: String | Double = null,
-    language: String = null,
-    locale: js.Any = null,
-    pixelScalingRatio: Int | Double = null,
-    regional: String | js.Object = null,
-    sizeVersion: String = null,
-    stretch: String = null,
-    width: String | Double = null,
-    widthToHeightRatio: Int | Double = null,
-    xDimension: Int | Double = null
-  ): IgQRCodeBarcode = {
+  def apply(): IgQRCodeBarcode = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (applicationIndicator != null) __obj.updateDynamic("applicationIndicator")(applicationIndicator.asInstanceOf[js.Any])
-    if (backingBrush != null) __obj.updateDynamic("backingBrush")(backingBrush.asInstanceOf[js.Any])
-    if (backingOutline != null) __obj.updateDynamic("backingOutline")(backingOutline.asInstanceOf[js.Any])
-    if (backingStrokeThickness != null) __obj.updateDynamic("backingStrokeThickness")(backingStrokeThickness.asInstanceOf[js.Any])
-    if (barBrush != null) __obj.updateDynamic("barBrush")(barBrush.asInstanceOf[js.Any])
-    if (barsFillMode != null) __obj.updateDynamic("barsFillMode")(barsFillMode.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dataChanged != null) __obj.updateDynamic("dataChanged")(js.Any.fromFunction2(dataChanged))
-    if (eciHeaderDisplayMode != null) __obj.updateDynamic("eciHeaderDisplayMode")(eciHeaderDisplayMode.asInstanceOf[js.Any])
-    if (eciNumber != null) __obj.updateDynamic("eciNumber")(eciNumber.asInstanceOf[js.Any])
-    if (encodingMode != null) __obj.updateDynamic("encodingMode")(encodingMode.asInstanceOf[js.Any])
-    if (errorCorrectionLevel != null) __obj.updateDynamic("errorCorrectionLevel")(errorCorrectionLevel.asInstanceOf[js.Any])
-    if (errorMessageDisplaying != null) __obj.updateDynamic("errorMessageDisplaying")(js.Any.fromFunction2(errorMessageDisplaying))
-    if (errorMessageText != null) __obj.updateDynamic("errorMessageText")(errorMessageText.asInstanceOf[js.Any])
-    if (fnc1Mode != null) __obj.updateDynamic("fnc1Mode")(fnc1Mode.asInstanceOf[js.Any])
-    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
-    if (fontBrush != null) __obj.updateDynamic("fontBrush")(fontBrush.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (pixelScalingRatio != null) __obj.updateDynamic("pixelScalingRatio")(pixelScalingRatio.asInstanceOf[js.Any])
-    if (regional != null) __obj.updateDynamic("regional")(regional.asInstanceOf[js.Any])
-    if (sizeVersion != null) __obj.updateDynamic("sizeVersion")(sizeVersion.asInstanceOf[js.Any])
-    if (stretch != null) __obj.updateDynamic("stretch")(stretch.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (widthToHeightRatio != null) __obj.updateDynamic("widthToHeightRatio")(widthToHeightRatio.asInstanceOf[js.Any])
-    if (xDimension != null) __obj.updateDynamic("xDimension")(xDimension.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgQRCodeBarcode]
   }
+  @scala.inline
+  implicit class IgQRCodeBarcodeOps[Self <: IgQRCodeBarcode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationIndicator(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationIndicator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationIndicator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationIndicator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackingBrush(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingBrush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackingBrush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingBrush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackingOutline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingOutline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackingOutline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingOutline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackingStrokeThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingStrokeThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackingStrokeThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingStrokeThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarBrush(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barBrush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarBrush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barBrush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarsFillMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barsFillMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarsFillMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barsFillMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataChanged(value: (/* event */ Event_, /* ui */ DataChangedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataChanged")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutDataChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEciHeaderDisplayMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eciHeaderDisplayMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEciHeaderDisplayMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eciHeaderDisplayMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEciNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eciNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEciNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eciNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncodingMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encodingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncodingMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encodingMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorCorrectionLevel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCorrectionLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorCorrectionLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCorrectionLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorMessageDisplaying(value: (/* event */ Event_, /* ui */ ErrorMessageDisplayingEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessageDisplaying")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutErrorMessageDisplaying: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessageDisplaying")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorMessageText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessageText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorMessageText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessageText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFnc1Mode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fnc1Mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFnc1Mode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fnc1Mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFont(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFont: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontBrush(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontBrush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontBrush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontBrush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPixelScalingRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelScalingRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPixelScalingRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelScalingRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegional(value: String | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegional: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regional")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizeVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizeVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStretch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stretch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStretch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stretch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidthToHeightRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("widthToHeightRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidthToHeightRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("widthToHeightRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXDimension(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xDimension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXDimension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xDimension")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

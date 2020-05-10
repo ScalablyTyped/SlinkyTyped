@@ -14,14 +14,12 @@ trait ListClassKey extends js.Object
 
 object ListClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dense: typingsSlinky.materialUiCore.materialUiCoreStrings.dense = "dense".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.dense]
   @scala.inline
-  def dense: typingsSlinky.materialUiCore.materialUiCoreStrings.dense = this.cast("dense")
+  def padding: typingsSlinky.materialUiCore.materialUiCoreStrings.padding = "padding".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.padding]
   @scala.inline
-  def padding: typingsSlinky.materialUiCore.materialUiCoreStrings.padding = this.cast("padding")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
-  @scala.inline
-  def subheader: typingsSlinky.materialUiCore.materialUiCoreStrings.subheader = this.cast("subheader")
+  def subheader: typingsSlinky.materialUiCore.materialUiCoreStrings.subheader = "subheader".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.subheader]
 }
 

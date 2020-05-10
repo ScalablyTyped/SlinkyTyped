@@ -1,15 +1,16 @@
 package typingsSlinky.reactDateRange.components
 
+import typingsSlinky.reactDateRange.mod.DateRangeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DateRange
-  extends SharedApply_DateRangeProps_867097682[typingsSlinky.reactDateRange.mod.DateRange] {
+object DateRange {
   @JSImport("react-date-range", "DateRange")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: DateRangeProps): SharedBuilder_DateRangeProps_475329904[typingsSlinky.reactDateRange.mod.DateRange] = new SharedBuilder_DateRangeProps_475329904[typingsSlinky.reactDateRange.mod.DateRange](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DateRange.type): SharedBuilder_DateRangeProps_475329904[typingsSlinky.reactDateRange.mod.DateRange] = new SharedBuilder_DateRangeProps_475329904[typingsSlinky.reactDateRange.mod.DateRange](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,9 +1,6 @@
 package typingsSlinky.ionicCore
 
 import typingsSlinky.ionicCore.elementInterfaceMod.ButtonInterface
-import typingsSlinky.ionicCore.ionicCoreStrings.button
-import typingsSlinky.ionicCore.ionicCoreStrings.reset
-import typingsSlinky.ionicCore.ionicCoreStrings.submit
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
 import scala.scalajs.js
@@ -27,15 +24,11 @@ object menuButtonMod extends js.Object {
       * For more information on colors, see [theming](/docs/theming/basics).
       */
     var color: js.UndefOr[Color] = js.native
-    /* CompleteClass */
-    override var disabled: Boolean = js.native
     /**
       * Optional property that maps to a Menu's `menuId` prop. Can also be `start` or `end` for the menu side. This is used to find the correct menu to toggle
       */
     var menu: js.UndefOr[String] = js.native
     var onClick: js.Any = js.native
-    /* CompleteClass */
-    override var `type`: submit | reset | button = js.native
     var visible: Boolean = js.native
     @JSName("componentDidLoad")
     def componentDidLoad_MMenuButton(): Unit = js.native

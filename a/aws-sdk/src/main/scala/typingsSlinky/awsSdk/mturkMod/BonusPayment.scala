@@ -27,20 +27,77 @@ trait BonusPayment extends js.Object {
 
 object BonusPayment {
   @scala.inline
-  def apply(
-    AssignmentId: EntityId = null,
-    BonusAmount: CurrencyAmount = null,
-    GrantTime: js.Date = null,
-    Reason: String = null,
-    WorkerId: CustomerId = null
-  ): BonusPayment = {
+  def apply(): BonusPayment = {
     val __obj = js.Dynamic.literal()
-    if (AssignmentId != null) __obj.updateDynamic("AssignmentId")(AssignmentId.asInstanceOf[js.Any])
-    if (BonusAmount != null) __obj.updateDynamic("BonusAmount")(BonusAmount.asInstanceOf[js.Any])
-    if (GrantTime != null) __obj.updateDynamic("GrantTime")(GrantTime.asInstanceOf[js.Any])
-    if (Reason != null) __obj.updateDynamic("Reason")(Reason.asInstanceOf[js.Any])
-    if (WorkerId != null) __obj.updateDynamic("WorkerId")(WorkerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[BonusPayment]
   }
+  @scala.inline
+  implicit class BonusPaymentOps[Self <: BonusPayment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssignmentId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssignmentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBonusAmount(value: CurrencyAmount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BonusAmount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBonusAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BonusAmount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrantTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrantTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerId(value: CustomerId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

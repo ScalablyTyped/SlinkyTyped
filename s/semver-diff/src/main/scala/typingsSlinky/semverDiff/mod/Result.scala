@@ -18,22 +18,20 @@ trait Result extends js.Object
 
 object Result {
   @scala.inline
-  def build: typingsSlinky.semverDiff.semverDiffStrings.build = this.cast("build")
+  def build: typingsSlinky.semverDiff.semverDiffStrings.build = "build".asInstanceOf[typingsSlinky.semverDiff.semverDiffStrings.build]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def major: typingsSlinky.semverDiff.semverDiffStrings.major = "major".asInstanceOf[typingsSlinky.semverDiff.semverDiffStrings.major]
   @scala.inline
-  def major: typingsSlinky.semverDiff.semverDiffStrings.major = this.cast("major")
+  def minor: typingsSlinky.semverDiff.semverDiffStrings.minor = "minor".asInstanceOf[typingsSlinky.semverDiff.semverDiffStrings.minor]
   @scala.inline
-  def minor: typingsSlinky.semverDiff.semverDiffStrings.minor = this.cast("minor")
+  def patch: typingsSlinky.semverDiff.semverDiffStrings.patch = "patch".asInstanceOf[typingsSlinky.semverDiff.semverDiffStrings.patch]
   @scala.inline
-  def patch: typingsSlinky.semverDiff.semverDiffStrings.patch = this.cast("patch")
+  def premajor: typingsSlinky.semverDiff.semverDiffStrings.premajor = "premajor".asInstanceOf[typingsSlinky.semverDiff.semverDiffStrings.premajor]
   @scala.inline
-  def premajor: typingsSlinky.semverDiff.semverDiffStrings.premajor = this.cast("premajor")
+  def preminor: typingsSlinky.semverDiff.semverDiffStrings.preminor = "preminor".asInstanceOf[typingsSlinky.semverDiff.semverDiffStrings.preminor]
   @scala.inline
-  def preminor: typingsSlinky.semverDiff.semverDiffStrings.preminor = this.cast("preminor")
+  def prepatch: typingsSlinky.semverDiff.semverDiffStrings.prepatch = "prepatch".asInstanceOf[typingsSlinky.semverDiff.semverDiffStrings.prepatch]
   @scala.inline
-  def prepatch: typingsSlinky.semverDiff.semverDiffStrings.prepatch = this.cast("prepatch")
-  @scala.inline
-  def prerelease: typingsSlinky.semverDiff.semverDiffStrings.prerelease = this.cast("prerelease")
+  def prerelease: typingsSlinky.semverDiff.semverDiffStrings.prerelease = "prerelease".asInstanceOf[typingsSlinky.semverDiff.semverDiffStrings.prerelease]
 }
 

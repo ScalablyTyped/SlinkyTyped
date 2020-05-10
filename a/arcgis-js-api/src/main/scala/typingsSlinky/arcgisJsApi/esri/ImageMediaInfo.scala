@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ImageMediaInfo
   extends JSONSupport
      with MediaInfo {
@@ -13,7 +14,7 @@ trait ImageMediaInfo
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-popup-content-ImageMediaInfo.html#refreshInterval)
     */
-  var refreshInterval: Double
+  var refreshInterval: Double = js.native
   /**
     * The type of popup element.
     *
@@ -21,13 +22,13 @@ trait ImageMediaInfo
     *
     * @default image
     */
-  val `type`: String
+  val `type`: String = js.native
   /**
     * Defines the value format of the image media element and how the images should be retrieved.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-popup-content-ImageMediaInfo.html#value)
     */
-  var value: ImageMediaInfoValue
+  var value: ImageMediaInfoValue = js.native
 }
 
 @JSGlobal("__esri.ImageMediaInfo")

@@ -25,11 +25,41 @@ trait SchemaQueryTarget extends js.Object {
 
 object SchemaQueryTarget {
   @scala.inline
-  def apply(parent: String = null, structuredQuery: SchemaStructuredQuery = null): SchemaQueryTarget = {
+  def apply(): SchemaQueryTarget = {
     val __obj = js.Dynamic.literal()
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
-    if (structuredQuery != null) __obj.updateDynamic("structuredQuery")(structuredQuery.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaQueryTarget]
   }
+  @scala.inline
+  implicit class SchemaQueryTargetOps[Self <: SchemaQueryTarget] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStructuredQuery(value: SchemaStructuredQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("structuredQuery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStructuredQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("structuredQuery")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

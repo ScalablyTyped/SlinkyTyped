@@ -4,17 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ParseResult extends js.Object {
-  var data: js.UndefOr[String] = js.undefined
-  var rest: String
+  var data: js.UndefOr[String] = js.native
+  var rest: String = js.native
 }
 
 object ParseResult {
   @scala.inline
-  def apply(rest: String, data: String = null): ParseResult = {
+  def apply(rest: String): ParseResult = {
     val __obj = js.Dynamic.literal(rest = rest.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParseResult]
   }
+  @scala.inline
+  implicit class ParseResultOps[Self <: ParseResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRest(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,7 +12,7 @@ object eax extends js.Object {
     * @param cipher The symmetric cipher algorithm to use e.g. 'aes128'
     * @param key The encryption key
     */
-  def EAX(cipher: String, key: scala.scalajs.js.typedarray.Uint8Array): Unit = js.native
+  def EAX(cipher: String, key: js.typedarray.Uint8Array): Unit = js.native
   /**
     * Decrypt ciphertext input.
     * @param ciphertext The ciphertext input to be decrypted
@@ -21,10 +21,10 @@ object eax extends js.Object {
     * @returns The plaintext output
     */
   def decrypt(
-    ciphertext: scala.scalajs.js.typedarray.Uint8Array,
-    nonce: scala.scalajs.js.typedarray.Uint8Array,
-    adata: scala.scalajs.js.typedarray.Uint8Array
-  ): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+    ciphertext: js.typedarray.Uint8Array,
+    nonce: js.typedarray.Uint8Array,
+    adata: js.typedarray.Uint8Array
+  ): js.Promise[js.typedarray.Uint8Array] = js.native
   /**
     * Encrypt plaintext input.
     * @param plaintext The cleartext input to be encrypted
@@ -33,9 +33,9 @@ object eax extends js.Object {
     * @returns The ciphertext output
     */
   def encrypt(
-    plaintext: scala.scalajs.js.typedarray.Uint8Array,
-    nonce: scala.scalajs.js.typedarray.Uint8Array,
-    adata: scala.scalajs.js.typedarray.Uint8Array
-  ): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+    plaintext: js.typedarray.Uint8Array,
+    nonce: js.typedarray.Uint8Array,
+    adata: js.typedarray.Uint8Array
+  ): js.Promise[js.typedarray.Uint8Array] = js.native
 }
 

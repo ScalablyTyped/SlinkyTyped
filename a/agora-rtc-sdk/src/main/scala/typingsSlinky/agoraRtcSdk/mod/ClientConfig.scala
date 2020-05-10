@@ -36,6 +36,7 @@ import scala.scalajs.js.annotation._
   * }
   * var client = AgoraRTC.createClient(config);```
   */
+@js.native
 trait ClientConfig extends js.Object {
   /**
     * The codec the Web browser uses for encoding.
@@ -47,7 +48,7 @@ trait ClientConfig extends js.Object {
     * - Safari 12.1 or earlier does not support the VP8 codec.
     * - Codec support on mobile devices is a bit complex, see [Use Agora Web SDK on Mobile Devices](https://docs.agora.io/en/faq/web_on_mobile) for details.
     */
-  var codec: vp8_ | h264_
+  var codec: vp8_ | h264_ = js.native
   /**
     * The channel profile.
     *
@@ -70,7 +71,7 @@ trait ClientConfig extends js.Object {
     *
     * The `"rtc"` mode supports the Agora Recording SDK 2.3.3 or later.
     */
-  var mode: live | rtc
+  var mode: live | rtc = js.native
   /**
     * Your Nginx server domain name.
     *
@@ -78,27 +79,64 @@ trait ClientConfig extends js.Object {
     *
     * Enterprise users with a company firewall can use this property to pass signaling messages to the Agora SD-RTN through the Nginx Server.
     */
-  var proxyServer: js.UndefOr[String] = js.undefined
+  var proxyServer: js.UndefOr[String] = js.native
   /**
     * TURN server settings.
     *
     * Enterprise users with a company firewall can use this property to pass audio and video data to the Agora SD-RTN through the TURN Server.
     */
-  var turnServer: js.UndefOr[AnonForceturn] = js.undefined
+  var turnServer: js.UndefOr[AnonForceturn] = js.native
 }
 
 object ClientConfig {
   @scala.inline
-  def apply(
-    codec: vp8_ | h264_,
-    mode: live | rtc,
-    proxyServer: String = null,
-    turnServer: AnonForceturn = null
-  ): ClientConfig = {
+  def apply(codec: vp8_ | h264_, mode: live | rtc): ClientConfig = {
     val __obj = js.Dynamic.literal(codec = codec.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any])
-    if (proxyServer != null) __obj.updateDynamic("proxyServer")(proxyServer.asInstanceOf[js.Any])
-    if (turnServer != null) __obj.updateDynamic("turnServer")(turnServer.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientConfig]
   }
+  @scala.inline
+  implicit class ClientConfigOps[Self <: ClientConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCodec(value: vp8_ | h264_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMode(value: live | rtc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProxyServer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyServer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProxyServer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyServer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTurnServer(value: AnonForceturn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("turnServer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTurnServer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("turnServer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

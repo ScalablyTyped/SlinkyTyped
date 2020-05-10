@@ -18,11 +18,41 @@ trait BuiltinSlotTypeMetadata extends js.Object {
 
 object BuiltinSlotTypeMetadata {
   @scala.inline
-  def apply(signature: BuiltinSlotTypeSignature = null, supportedLocales: LocaleList = null): BuiltinSlotTypeMetadata = {
+  def apply(): BuiltinSlotTypeMetadata = {
     val __obj = js.Dynamic.literal()
-    if (signature != null) __obj.updateDynamic("signature")(signature.asInstanceOf[js.Any])
-    if (supportedLocales != null) __obj.updateDynamic("supportedLocales")(supportedLocales.asInstanceOf[js.Any])
     __obj.asInstanceOf[BuiltinSlotTypeMetadata]
   }
+  @scala.inline
+  implicit class BuiltinSlotTypeMetadataOps[Self <: BuiltinSlotTypeMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSignature(value: BuiltinSlotTypeSignature): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportedLocales(value: LocaleList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedLocales")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportedLocales: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedLocales")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

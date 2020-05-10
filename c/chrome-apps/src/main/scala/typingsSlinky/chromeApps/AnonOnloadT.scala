@@ -5,19 +5,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonOnloadT extends js.Object {
-  var onloadT: integer
-  var pageT: integer
-  var startE: integer
-  var tran: integer
+  var onloadT: integer = js.native
+  var pageT: integer = js.native
+  var startE: integer = js.native
+  var tran: integer = js.native
 }
 
 object AnonOnloadT {
   @scala.inline
   def apply(onloadT: integer, pageT: integer, startE: integer, tran: integer): AnonOnloadT = {
     val __obj = js.Dynamic.literal(onloadT = onloadT.asInstanceOf[js.Any], pageT = pageT.asInstanceOf[js.Any], startE = startE.asInstanceOf[js.Any], tran = tran.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonOnloadT]
   }
+  @scala.inline
+  implicit class AnonOnloadTOps[Self <: AnonOnloadT] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnloadT(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageT(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartE(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTran(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tran")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

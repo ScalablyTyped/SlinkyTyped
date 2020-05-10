@@ -24,14 +24,41 @@ trait SchemaInventorySizeTargeting extends js.Object {
 
 object SchemaInventorySizeTargeting {
   @scala.inline
-  def apply(
-    excludedInventorySizes: js.Array[SchemaAdSize] = null,
-    targetedInventorySizes: js.Array[SchemaAdSize] = null
-  ): SchemaInventorySizeTargeting = {
+  def apply(): SchemaInventorySizeTargeting = {
     val __obj = js.Dynamic.literal()
-    if (excludedInventorySizes != null) __obj.updateDynamic("excludedInventorySizes")(excludedInventorySizes.asInstanceOf[js.Any])
-    if (targetedInventorySizes != null) __obj.updateDynamic("targetedInventorySizes")(targetedInventorySizes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInventorySizeTargeting]
   }
+  @scala.inline
+  implicit class SchemaInventorySizeTargetingOps[Self <: SchemaInventorySizeTargeting] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExcludedInventorySizes(value: js.Array[SchemaAdSize]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedInventorySizes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludedInventorySizes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedInventorySizes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetedInventorySizes(value: js.Array[SchemaAdSize]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetedInventorySizes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetedInventorySizes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetedInventorySizes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

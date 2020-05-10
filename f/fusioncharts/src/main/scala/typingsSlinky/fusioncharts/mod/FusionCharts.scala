@@ -1,6 +1,6 @@
 package typingsSlinky.fusioncharts.mod
 
-import typingsSlinky.std.Element
+import org.scalajs.dom.raw.Element
 import typingsSlinky.std.JSON
 import scala.scalajs.js
 import scala.scalajs.js.`|`

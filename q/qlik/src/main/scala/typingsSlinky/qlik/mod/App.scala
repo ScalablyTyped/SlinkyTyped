@@ -1,12 +1,12 @@
 package typingsSlinky.qlik.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.qlik.AnonGetContent
 import typingsSlinky.qlik.AnonNoInteraction
 import typingsSlinky.qlik.qlikStrings.CurrentSelections
 import typingsSlinky.qlik.qlikStrings.`0`
 import typingsSlinky.qlik.qlikStrings.`1`
 import typingsSlinky.qlik.qlikStrings.`2`
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

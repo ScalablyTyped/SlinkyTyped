@@ -23,7 +23,7 @@ trait Hash extends js.Object {
     *
     * @param message The message you want to hash.
     */
-  def arrayBuffer(message: Message): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def arrayBuffer(message: Message): js.typedarray.ArrayBuffer = js.native
   /**
     * Create a hash object.
     */

@@ -14,10 +14,29 @@ trait ResourceUtilization extends js.Object {
 
 object ResourceUtilization {
   @scala.inline
-  def apply(EC2ResourceUtilization: EC2ResourceUtilization = null): ResourceUtilization = {
+  def apply(): ResourceUtilization = {
     val __obj = js.Dynamic.literal()
-    if (EC2ResourceUtilization != null) __obj.updateDynamic("EC2ResourceUtilization")(EC2ResourceUtilization.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceUtilization]
   }
+  @scala.inline
+  implicit class ResourceUtilizationOps[Self <: ResourceUtilization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEC2ResourceUtilization(value: EC2ResourceUtilization): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EC2ResourceUtilization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEC2ResourceUtilization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EC2ResourceUtilization")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,9 +13,10 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait IController
-  extends // IController implementations frequently do not implement any of its methods.
-// A string indexer indicates to TypeScript not to issue a weak type error in this case.
-/* s */ StringDictionary[js.Any] {
+  extends /**
+  * Indexer which should return ng.INgModelController for most properties but cannot because of "All named properties must be assignable to string indexer type" constraint - see https://github.com/Microsoft/TypeScript/issues/272
+  */
+/* name */ StringDictionary[js.Any] {
   /**
     * Called on each turn of the digest cycle. Provides an opportunity to detect and act on changes.
     * Any actions that you wish to take in response to the changes that you detect must be invoked from this hook;
@@ -57,5 +58,81 @@ trait IController
     */
   @JSName("$postLink")
   var $postLink: js.UndefOr[js.Function0[Unit]] = js.native
+}
+
+object IController {
+  @scala.inline
+  def apply(): IController = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[IController]
+  }
+  @scala.inline
+  implicit class IControllerOps[Self <: IController] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$doCheck(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$doCheck")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def without$doCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$doCheck")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$onChanges(value: /* onChangesObj */ IOnChangesObject => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$onChanges")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def without$onChanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$onChanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$onDestroy(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$onDestroy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def without$onDestroy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$onDestroy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$onInit(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$onInit")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def without$onInit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$onInit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$postLink(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$postLink")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def without$postLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$postLink")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

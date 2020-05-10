@@ -1,10 +1,9 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.PartialRecordBreakpointnu
 import typingsSlinky.antd.antdStrings.default
 import typingsSlinky.antd.antdStrings.horizontal
@@ -12,40 +11,43 @@ import typingsSlinky.antd.antdStrings.middle
 import typingsSlinky.antd.antdStrings.small
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.descriptionsMod.DescriptionsProps
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Descriptions
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Descriptions {
   @JSImport("antd/lib/descriptions", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    bordered: js.UndefOr[Boolean] = js.undefined,
-    colon: js.UndefOr[Boolean] = js.undefined,
-    column: Double | PartialRecordBreakpointnu = null,
-    layout: horizontal | vertical = null,
-    prefixCls: String = null,
-    size: middle | small | default = null,
-    title: TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.asInstanceOf[js.Any])
-    if (!js.isUndefined(colon)) __obj.updateDynamic("colon")(colon.asInstanceOf[js.Any])
-    if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def bordered(value: Boolean): this.type = set("bordered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colon(value: Boolean): this.type = set("colon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def column(value: Double | PartialRecordBreakpointnu): this.type = set("column", value.asInstanceOf[js.Any])
+    @scala.inline
+    def layout(value: horizontal | vertical): this.type = set("layout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: middle | small | default): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DescriptionsProps
+  
+  def withProps(p: DescriptionsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Descriptions.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

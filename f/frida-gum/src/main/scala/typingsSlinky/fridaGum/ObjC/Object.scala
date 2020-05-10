@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 /**
   * Dynamically generated wrapper for any Objective-C instance, class, or meta-class.
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - org.scalablytyped.runtime.StringDictionary because Already inherited */ @JSGlobal("ObjC.Object")
 @js.native
 class Object protected ()
@@ -68,8 +68,6 @@ class Object protected ()
     */
   @JSName("$superClass")
   var $superClass: Object = js.native
-  /* CompleteClass */
-  override var handle: NativePointer = js.native
   def equals(other: NativePointer): Boolean = js.native
   /**
     * Determines whether two instances refer to the same underlying object.

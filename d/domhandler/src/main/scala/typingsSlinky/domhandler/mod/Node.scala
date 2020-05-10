@@ -1,41 +1,47 @@
 package typingsSlinky.domhandler.mod
 
-import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Node extends DomElement {
-  val firstChild: DomElement
-  val lastChild: DomElement
-  val nodeType: Double
+  val firstChild: DomElement = js.native
+  val lastChild: DomElement = js.native
+  val nodeType: Double = js.native
 }
 
 object Node {
   @scala.inline
-  def apply(
-    firstChild: DomElement,
-    lastChild: DomElement,
-    nodeType: Double,
-    attribs: StringDictionary[String] = null,
-    children: js.Array[DomElement] = null,
-    data: js.Any = null,
-    name: String = null,
-    next: DomElement = null,
-    parent: DomElement = null,
-    prev: DomElement = null,
-    `type`: String = null
-  ): Node = {
+  def apply(firstChild: DomElement, lastChild: DomElement, nodeType: Double): Node = {
     val __obj = js.Dynamic.literal(firstChild = firstChild.asInstanceOf[js.Any], lastChild = lastChild.asInstanceOf[js.Any], nodeType = nodeType.asInstanceOf[js.Any])
-    if (attribs != null) __obj.updateDynamic("attribs")(attribs.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (next != null) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
-    if (prev != null) __obj.updateDynamic("prev")(prev.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  @scala.inline
+  implicit class NodeOps[Self <: Node] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFirstChild(value: DomElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstChild")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLastChild(value: DomElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChild")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNodeType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

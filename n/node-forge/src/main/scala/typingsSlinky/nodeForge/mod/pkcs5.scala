@@ -1,7 +1,6 @@
 package typingsSlinky.nodeForge.mod
 
 import typingsSlinky.nodeForge.mod.md.MessageDigest
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +14,7 @@ object pkcs5 extends js.Object {
     salt: String,
     iterations: Double,
     keySize: Double,
-    callback: js.Function2[/* err */ Error | Null, /* dk */ String | Null, _]
+    callback: js.Function2[/* err */ js.Error | Null, /* dk */ String | Null, _]
   ): Unit = js.native
   def pbkdf2(password: String, salt: String, iterations: Double, keySize: Double, messageDigest: MessageDigest): String = js.native
   def pbkdf2(

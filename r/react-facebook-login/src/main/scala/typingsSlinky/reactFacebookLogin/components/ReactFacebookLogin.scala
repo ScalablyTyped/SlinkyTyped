@@ -1,12 +1,12 @@
 package typingsSlinky.reactFacebookLogin.components
 
-import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.Node
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
-import slinky.web.html.div.tag
+import slinky.core.facade.ReactElement
+import slinky.web.SyntheticMouseEvent
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactFacebookLogin.mod.ReactFacebookFailureResponse
 import typingsSlinky.reactFacebookLogin.mod.ReactFacebookLoginInfo
@@ -19,73 +19,80 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactFacebookLogin
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactFacebookLogin {
   @JSImport("react-facebook-login", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: onClick */
-  def apply(
-    appId: String,
-    callback: ReactFacebookLoginInfo => Unit,
-    authType: String = null,
-    autoLoad: js.UndefOr[Boolean] = js.undefined,
-    buttonStyle: CSSProperties = null,
-    containerStyle: CSSProperties = null,
-    cookie: js.UndefOr[Boolean] = js.undefined,
-    cssClass: String = null,
-    disableMobileRedirect: js.UndefOr[Boolean] = js.undefined,
-    fields: String = null,
-    icon: TagMod[Any] = null,
-    isDisabled: js.UndefOr[Boolean] = js.undefined,
-    isMobile: js.UndefOr[Boolean] = js.undefined,
-    language: String = null,
-    onFailure: /* response */ ReactFacebookFailureResponse => Unit = null,
-    reAuthenticate: js.UndefOr[Boolean] = js.undefined,
-    redirectUri: String = null,
-    responseType: String = null,
-    returnScopes: js.UndefOr[Boolean] = js.undefined,
-    scope: String = null,
-    size: small | medium | metro = null,
-    state: String = null,
-    tag: Node | ReactComponentClass[_] = null,
-    textButton: String = null,
-    typeButton: String = null,
-    version: String = null,
-    xfbml: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[slinky.web.html.div.tag.type, default] = {
-    val __obj = js.Dynamic.literal(appId = appId.asInstanceOf[js.Any], callback = js.Any.fromFunction1(callback))
-    if (authType != null) __obj.updateDynamic("authType")(authType.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoLoad)) __obj.updateDynamic("autoLoad")(autoLoad.asInstanceOf[js.Any])
-    if (buttonStyle != null) __obj.updateDynamic("buttonStyle")(buttonStyle.asInstanceOf[js.Any])
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(cookie)) __obj.updateDynamic("cookie")(cookie.asInstanceOf[js.Any])
-    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableMobileRedirect)) __obj.updateDynamic("disableMobileRedirect")(disableMobileRedirect.asInstanceOf[js.Any])
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDisabled)) __obj.updateDynamic("isDisabled")(isDisabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(isMobile)) __obj.updateDynamic("isMobile")(isMobile.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (onFailure != null) __obj.updateDynamic("onFailure")(js.Any.fromFunction1(onFailure))
-    if (!js.isUndefined(reAuthenticate)) __obj.updateDynamic("reAuthenticate")(reAuthenticate.asInstanceOf[js.Any])
-    if (redirectUri != null) __obj.updateDynamic("redirectUri")(redirectUri.asInstanceOf[js.Any])
-    if (responseType != null) __obj.updateDynamic("responseType")(responseType.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnScopes)) __obj.updateDynamic("returnScopes")(returnScopes.asInstanceOf[js.Any])
-    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
-    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
-    if (textButton != null) __obj.updateDynamic("textButton")(textButton.asInstanceOf[js.Any])
-    if (typeButton != null) __obj.updateDynamic("typeButton")(typeButton.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
-    if (!js.isUndefined(xfbml)) __obj.updateDynamic("xfbml")(xfbml.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[slinky.web.html.div.tag.type, default] {
+    @scala.inline
+    def authType(value: String): this.type = set("authType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoLoad(value: Boolean): this.type = set("autoLoad", value.asInstanceOf[js.Any])
+    @scala.inline
+    def buttonStyle(value: CSSProperties): this.type = set("buttonStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyle(value: CSSProperties): this.type = set("containerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cookie(value: Boolean): this.type = set("cookie", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cssClass(value: String): this.type = set("cssClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableMobileRedirect(value: Boolean): this.type = set("disableMobileRedirect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fields(value: String): this.type = set("fields", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isDisabled(value: Boolean): this.type = set("isDisabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isMobile(value: Boolean): this.type = set("isMobile", value.asInstanceOf[js.Any])
+    @scala.inline
+    def language(value: String): this.type = set("language", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* event */ SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFailure(value: /* response */ ReactFacebookFailureResponse => Unit): this.type = set("onFailure", js.Any.fromFunction1(value))
+    @scala.inline
+    def reAuthenticate(value: Boolean): this.type = set("reAuthenticate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def redirectUri(value: String): this.type = set("redirectUri", value.asInstanceOf[js.Any])
+    @scala.inline
+    def responseType(value: String): this.type = set("responseType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def returnScopes(value: Boolean): this.type = set("returnScopes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scope(value: String): this.type = set("scope", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: small | medium | metro): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def state(value: String): this.type = set("state", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagNode(value: Node): this.type = set("tag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagComponent(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tag(value: Node | ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textButton(value: String): this.type = set("textButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def typeButton(value: String): this.type = set("typeButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def version(value: String): this.type = set("version", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xfbml(value: Boolean): this.type = set("xfbml", value.asInstanceOf[js.Any])
   }
-  type Props = ReactFacebookLoginProps
+  
+  def withProps(p: ReactFacebookLoginProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(appId: String, callback: ReactFacebookLoginInfo => Unit): Builder = {
+    val __props = js.Dynamic.literal(appId = appId.asInstanceOf[js.Any], callback = js.Any.fromFunction1(callback))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactFacebookLoginProps]))
+  }
 }
 

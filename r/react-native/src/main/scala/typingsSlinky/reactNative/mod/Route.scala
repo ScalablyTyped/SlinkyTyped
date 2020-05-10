@@ -6,54 +6,181 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Route
   extends //anything else
 /* key */ StringDictionary[js.Any] {
   //Commonly found properties
-  var backButtonTitle: js.UndefOr[String] = js.undefined
-  var component: js.UndefOr[ReactComponentClass[_]] = js.undefined
-  var content: js.UndefOr[String] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var index: js.UndefOr[Double] = js.undefined
-  var message: js.UndefOr[String] = js.undefined
-  var onRightButtonPress: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var passProps: js.UndefOr[js.Object] = js.undefined
-  var rightButtonTitle: js.UndefOr[String] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
-  var wrapperStyle: js.UndefOr[js.Any] = js.undefined
+  var backButtonTitle: js.UndefOr[String] = js.native
+  var component: js.UndefOr[ReactComponentClass[_]] = js.native
+  var content: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.native
+  var index: js.UndefOr[Double] = js.native
+  var message: js.UndefOr[String] = js.native
+  var onRightButtonPress: js.UndefOr[js.Function0[Unit]] = js.native
+  var passProps: js.UndefOr[js.Object] = js.native
+  var rightButtonTitle: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.native
+  var wrapperStyle: js.UndefOr[js.Any] = js.native
 }
 
 object Route {
   @scala.inline
-  def apply(
-    StringDictionary: //anything else
-  /* key */ StringDictionary[js.Any] = null,
-    backButtonTitle: String = null,
-    component: ReactComponentClass[_] = null,
-    content: String = null,
-    id: String = null,
-    index: Int | Double = null,
-    message: String = null,
-    onRightButtonPress: () => Unit = null,
-    passProps: js.Object = null,
-    rightButtonTitle: String = null,
-    title: String = null,
-    wrapperStyle: js.Any = null
-  ): Route = {
+  def apply(): Route = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (backButtonTitle != null) __obj.updateDynamic("backButtonTitle")(backButtonTitle.asInstanceOf[js.Any])
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (onRightButtonPress != null) __obj.updateDynamic("onRightButtonPress")(js.Any.fromFunction0(onRightButtonPress))
-    if (passProps != null) __obj.updateDynamic("passProps")(passProps.asInstanceOf[js.Any])
-    if (rightButtonTitle != null) __obj.updateDynamic("rightButtonTitle")(rightButtonTitle.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (wrapperStyle != null) __obj.updateDynamic("wrapperStyle")(wrapperStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[Route]
   }
+  @scala.inline
+  implicit class RouteOps[Self <: Route] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackButtonTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backButtonTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackButtonTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backButtonTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponentFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComponentComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRightButtonPress(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRightButtonPress")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRightButtonPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRightButtonPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassProps(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRightButtonTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightButtonTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRightButtonTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightButtonTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrapperStyle(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrapperStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperStyle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

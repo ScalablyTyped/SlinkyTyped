@@ -15,10 +15,35 @@ trait UpdateRegistryRequest extends js.Object {
 
 object UpdateRegistryRequest {
   @scala.inline
-  def apply(RegistryName: string, Description: stringMin0Max256 = null): UpdateRegistryRequest = {
+  def apply(RegistryName: string): UpdateRegistryRequest = {
     val __obj = js.Dynamic.literal(RegistryName = RegistryName.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateRegistryRequest]
   }
+  @scala.inline
+  implicit class UpdateRegistryRequestOps[Self <: UpdateRegistryRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRegistryName(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegistryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: stringMin0Max256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

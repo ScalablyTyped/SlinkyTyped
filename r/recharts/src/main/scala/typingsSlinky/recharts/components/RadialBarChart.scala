@@ -1,10 +1,7 @@
 package typingsSlinky.recharts.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.recharts.PartialMargin
 import typingsSlinky.recharts.mod.BaseValueType
 import typingsSlinky.recharts.mod.RadialBarChartProps
@@ -14,78 +11,76 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RadialBarChart
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.RadialBarChart] {
+object RadialBarChart {
   @JSImport("recharts", "RadialBarChart")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    barCategoryGap: Double | String = null,
-    barGap: Double | String = null,
-    barSize: Double | String = null,
-    baseValue: BaseValueType = null,
-    compact: js.UndefOr[Boolean] = js.undefined,
-    cx: String | Double = null,
-    cy: String | Double = null,
-    data: js.Array[js.Object] = null,
-    endAngle: Int | Double = null,
-    height: Int | Double = null,
-    innerRadius: String | Double = null,
-    layout: radial = null,
-    margin: PartialMargin = null,
-    maxBarSize: Int | Double = null,
-    onClick: /* repeated */ js.Any => Unit = null,
-    onMouseDown: /* repeated */ js.Any => Unit = null,
-    onMouseEnter: /* repeated */ js.Any => Unit = null,
-    onMouseLeave: /* repeated */ js.Any => Unit = null,
-    onMouseMove: /* repeated */ js.Any => Unit = null,
-    onMouseUp: /* repeated */ js.Any => Unit = null,
-    outerRadius: String | Double = null,
-    reverseStackOrder: js.UndefOr[Boolean] = js.undefined,
-    stackOffset: StackOffsetType = null,
-    startAngle: Int | Double = null,
-    style: js.Object = null,
-    syncId: String | Double = null,
-    throttleDelay: Int | Double = null,
-    width: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.RadialBarChart] = {
-    val __obj = js.Dynamic.literal()
-    if (barCategoryGap != null) __obj.updateDynamic("barCategoryGap")(barCategoryGap.asInstanceOf[js.Any])
-    if (barGap != null) __obj.updateDynamic("barGap")(barGap.asInstanceOf[js.Any])
-    if (barSize != null) __obj.updateDynamic("barSize")(barSize.asInstanceOf[js.Any])
-    if (baseValue != null) __obj.updateDynamic("baseValue")(baseValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
-    if (cx != null) __obj.updateDynamic("cx")(cx.asInstanceOf[js.Any])
-    if (cy != null) __obj.updateDynamic("cy")(cy.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (endAngle != null) __obj.updateDynamic("endAngle")(endAngle.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (innerRadius != null) __obj.updateDynamic("innerRadius")(innerRadius.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (maxBarSize != null) __obj.updateDynamic("maxBarSize")(maxBarSize.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
-    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
-    if (outerRadius != null) __obj.updateDynamic("outerRadius")(outerRadius.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverseStackOrder)) __obj.updateDynamic("reverseStackOrder")(reverseStackOrder.asInstanceOf[js.Any])
-    if (stackOffset != null) __obj.updateDynamic("stackOffset")(stackOffset.asInstanceOf[js.Any])
-    if (startAngle != null) __obj.updateDynamic("startAngle")(startAngle.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (syncId != null) __obj.updateDynamic("syncId")(syncId.asInstanceOf[js.Any])
-    if (throttleDelay != null) __obj.updateDynamic("throttleDelay")(throttleDelay.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.recharts.mod.RadialBarChart] {
+    @scala.inline
+    def barCategoryGap(value: Double | String): this.type = set("barCategoryGap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def barGap(value: Double | String): this.type = set("barGap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def barSize(value: Double | String): this.type = set("barSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def baseValue(value: BaseValueType): this.type = set("baseValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cx(value: String | Double): this.type = set("cx", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cy(value: String | Double): this.type = set("cy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(value: js.Array[js.Object]): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endAngle(value: Double): this.type = set("endAngle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRadius(value: String | Double): this.type = set("innerRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def layout(value: radial): this.type = set("layout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: PartialMargin): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxBarSize(value: Double): this.type = set("maxBarSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* repeated */ js.Any => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseDown(value: /* repeated */ js.Any => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseEnter(value: /* repeated */ js.Any => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseLeave(value: /* repeated */ js.Any => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseMove(value: /* repeated */ js.Any => Unit): this.type = set("onMouseMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseUp(value: /* repeated */ js.Any => Unit): this.type = set("onMouseUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def outerRadius(value: String | Double): this.type = set("outerRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def reverseStackOrder(value: Boolean): this.type = set("reverseStackOrder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stackOffset(value: StackOffsetType): this.type = set("stackOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startAngle(value: Double): this.type = set("startAngle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def syncId(value: String | Double): this.type = set("syncId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def throttleDelay(value: Double): this.type = set("throttleDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.mod.RadialBarChart] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.mod.RadialBarChart](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = RadialBarChartProps
+  
+  def withProps(p: RadialBarChartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: RadialBarChart.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

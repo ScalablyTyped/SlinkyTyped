@@ -9,9 +9,5 @@ import scala.scalajs.js.annotation._
 class OnlineIdServiceTicketRequest protected () extends IOnlineIdServiceTicketRequest {
   def this(service: String) = this()
   def this(service: String, policy: String) = this()
-  /* CompleteClass */
-  override var policy: String = js.native
-  /* CompleteClass */
-  override var service: String = js.native
 }
 

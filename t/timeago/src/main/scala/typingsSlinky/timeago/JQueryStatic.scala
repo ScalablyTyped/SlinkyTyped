@@ -1,7 +1,6 @@
 package typingsSlinky.timeago
 
-import typingsSlinky.std.Date
-import typingsSlinky.std.Element
+import org.scalajs.dom.raw.Element
 import typingsSlinky.timeago.Timeago.TimeagoStatic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +12,7 @@ trait JQueryStatic extends js.Object {
   var timeago_Original: TimeagoStatic = js.native
   def timeago(timestamp: String): String = js.native
   def timeago(timestamp: Double): String = js.native
-  def timeago(timestamp: Date): String = js.native
+  def timeago(timestamp: js.Date): String = js.native
   def timeago(timestamp: Element): String = js.native
 }
 

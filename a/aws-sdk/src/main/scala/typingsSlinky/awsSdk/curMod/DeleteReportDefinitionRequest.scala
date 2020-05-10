@@ -11,10 +11,29 @@ trait DeleteReportDefinitionRequest extends js.Object {
 
 object DeleteReportDefinitionRequest {
   @scala.inline
-  def apply(ReportName: ReportName = null): DeleteReportDefinitionRequest = {
+  def apply(): DeleteReportDefinitionRequest = {
     val __obj = js.Dynamic.literal()
-    if (ReportName != null) __obj.updateDynamic("ReportName")(ReportName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteReportDefinitionRequest]
   }
+  @scala.inline
+  implicit class DeleteReportDefinitionRequestOps[Self <: DeleteReportDefinitionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReportName(value: ReportName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CreateAgentNotebookResult extends ResultStatus {
-  var notebook: AgentNotebookInfo
+  var notebook: AgentNotebookInfo = js.native
 }
 
 object CreateAgentNotebookResult {
   @scala.inline
   def apply(errorMessage: String, notebook: AgentNotebookInfo, success: Boolean): CreateAgentNotebookResult = {
     val __obj = js.Dynamic.literal(errorMessage = errorMessage.asInstanceOf[js.Any], notebook = notebook.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateAgentNotebookResult]
   }
+  @scala.inline
+  implicit class CreateAgentNotebookResultOps[Self <: CreateAgentNotebookResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNotebook(value: AgentNotebookInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notebook")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -22,16 +22,59 @@ trait GetCredentialReportResponse extends js.Object {
 
 object GetCredentialReportResponse {
   @scala.inline
-  def apply(
-    Content: ReportContentType = null,
-    GeneratedTime: js.Date = null,
-    ReportFormat: ReportFormatType = null
-  ): GetCredentialReportResponse = {
+  def apply(): GetCredentialReportResponse = {
     val __obj = js.Dynamic.literal()
-    if (Content != null) __obj.updateDynamic("Content")(Content.asInstanceOf[js.Any])
-    if (GeneratedTime != null) __obj.updateDynamic("GeneratedTime")(GeneratedTime.asInstanceOf[js.Any])
-    if (ReportFormat != null) __obj.updateDynamic("ReportFormat")(ReportFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCredentialReportResponse]
   }
+  @scala.inline
+  implicit class GetCredentialReportResponseOps[Self <: GetCredentialReportResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContent(value: ReportContentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeneratedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GeneratedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeneratedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GeneratedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportFormat(value: ReportFormatType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportFormat")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

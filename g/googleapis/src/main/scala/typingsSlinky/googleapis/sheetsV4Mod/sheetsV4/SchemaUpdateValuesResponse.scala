@@ -38,22 +38,89 @@ trait SchemaUpdateValuesResponse extends js.Object {
 
 object SchemaUpdateValuesResponse {
   @scala.inline
-  def apply(
-    spreadsheetId: String = null,
-    updatedCells: Int | Double = null,
-    updatedColumns: Int | Double = null,
-    updatedData: SchemaValueRange = null,
-    updatedRange: String = null,
-    updatedRows: Int | Double = null
-  ): SchemaUpdateValuesResponse = {
+  def apply(): SchemaUpdateValuesResponse = {
     val __obj = js.Dynamic.literal()
-    if (spreadsheetId != null) __obj.updateDynamic("spreadsheetId")(spreadsheetId.asInstanceOf[js.Any])
-    if (updatedCells != null) __obj.updateDynamic("updatedCells")(updatedCells.asInstanceOf[js.Any])
-    if (updatedColumns != null) __obj.updateDynamic("updatedColumns")(updatedColumns.asInstanceOf[js.Any])
-    if (updatedData != null) __obj.updateDynamic("updatedData")(updatedData.asInstanceOf[js.Any])
-    if (updatedRange != null) __obj.updateDynamic("updatedRange")(updatedRange.asInstanceOf[js.Any])
-    if (updatedRows != null) __obj.updateDynamic("updatedRows")(updatedRows.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateValuesResponse]
   }
+  @scala.inline
+  implicit class SchemaUpdateValuesResponseOps[Self <: SchemaUpdateValuesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSpreadsheetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpreadsheetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdatedCells(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedCells")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdatedCells: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedCells")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdatedColumns(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdatedColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdatedData(value: SchemaValueRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdatedData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdatedRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdatedRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdatedRows(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdatedRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedRows")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

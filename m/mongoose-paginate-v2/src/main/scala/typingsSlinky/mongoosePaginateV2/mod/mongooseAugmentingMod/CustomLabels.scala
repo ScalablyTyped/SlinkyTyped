@@ -4,36 +4,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CustomLabels extends js.Object {
-  var docs: js.UndefOr[String] = js.undefined
-  var limit: js.UndefOr[String] = js.undefined
-  var nextPage: js.UndefOr[String] = js.undefined
-  var page: js.UndefOr[String] = js.undefined
-  var prevPage: js.UndefOr[String] = js.undefined
-  var totalDocs: js.UndefOr[String] = js.undefined
-  var totalPages: js.UndefOr[String] = js.undefined
+  var docs: js.UndefOr[String] = js.native
+  var limit: js.UndefOr[String] = js.native
+  var nextPage: js.UndefOr[String] = js.native
+  var page: js.UndefOr[String] = js.native
+  var prevPage: js.UndefOr[String] = js.native
+  var totalDocs: js.UndefOr[String] = js.native
+  var totalPages: js.UndefOr[String] = js.native
 }
 
 object CustomLabels {
   @scala.inline
-  def apply(
-    docs: String = null,
-    limit: String = null,
-    nextPage: String = null,
-    page: String = null,
-    prevPage: String = null,
-    totalDocs: String = null,
-    totalPages: String = null
-  ): CustomLabels = {
+  def apply(): CustomLabels = {
     val __obj = js.Dynamic.literal()
-    if (docs != null) __obj.updateDynamic("docs")(docs.asInstanceOf[js.Any])
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (nextPage != null) __obj.updateDynamic("nextPage")(nextPage.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (prevPage != null) __obj.updateDynamic("prevPage")(prevPage.asInstanceOf[js.Any])
-    if (totalDocs != null) __obj.updateDynamic("totalDocs")(totalDocs.asInstanceOf[js.Any])
-    if (totalPages != null) __obj.updateDynamic("totalPages")(totalPages.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomLabels]
   }
+  @scala.inline
+  implicit class CustomLabelsOps[Self <: CustomLabels] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("docs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("docs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrevPage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrevPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevPage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalDocs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalDocs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalDocs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalDocs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalPages(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalPages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPages")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

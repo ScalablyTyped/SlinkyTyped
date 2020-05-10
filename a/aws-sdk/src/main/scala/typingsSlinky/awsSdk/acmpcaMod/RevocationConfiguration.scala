@@ -14,10 +14,29 @@ trait RevocationConfiguration extends js.Object {
 
 object RevocationConfiguration {
   @scala.inline
-  def apply(CrlConfiguration: CrlConfiguration = null): RevocationConfiguration = {
+  def apply(): RevocationConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (CrlConfiguration != null) __obj.updateDynamic("CrlConfiguration")(CrlConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[RevocationConfiguration]
   }
+  @scala.inline
+  implicit class RevocationConfigurationOps[Self <: RevocationConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCrlConfiguration(value: CrlConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CrlConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrlConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CrlConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

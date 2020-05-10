@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object testing
   extends TopLevel[
-      /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof _testing */ js.Any
+      /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof _operators */ js.Any
     ]
 

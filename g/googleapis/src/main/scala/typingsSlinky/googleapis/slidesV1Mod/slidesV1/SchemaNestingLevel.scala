@@ -18,10 +18,29 @@ trait SchemaNestingLevel extends js.Object {
 
 object SchemaNestingLevel {
   @scala.inline
-  def apply(bulletStyle: SchemaTextStyle = null): SchemaNestingLevel = {
+  def apply(): SchemaNestingLevel = {
     val __obj = js.Dynamic.literal()
-    if (bulletStyle != null) __obj.updateDynamic("bulletStyle")(bulletStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNestingLevel]
   }
+  @scala.inline
+  implicit class SchemaNestingLevelOps[Self <: SchemaNestingLevel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBulletStyle(value: SchemaTextStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBulletStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletStyle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -15,20 +15,77 @@ trait AnonCustomerId extends js.Object {
 
 object AnonCustomerId {
   @scala.inline
-  def apply(
-    customerId: String = null,
-    entityId: String = null,
-    profileId: String = null,
-    `type`: String = null,
-    userEmail: String = null
-  ): AnonCustomerId = {
+  def apply(): AnonCustomerId = {
     val __obj = js.Dynamic.literal()
-    if (customerId != null) __obj.updateDynamic("customerId")(customerId.asInstanceOf[js.Any])
-    if (entityId != null) __obj.updateDynamic("entityId")(entityId.asInstanceOf[js.Any])
-    if (profileId != null) __obj.updateDynamic("profileId")(profileId.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (userEmail != null) __obj.updateDynamic("userEmail")(userEmail.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCustomerId]
   }
+  @scala.inline
+  implicit class AnonCustomerIdOps[Self <: AnonCustomerId] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntityId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfileId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profileId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfileId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profileId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userEmail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userEmail")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

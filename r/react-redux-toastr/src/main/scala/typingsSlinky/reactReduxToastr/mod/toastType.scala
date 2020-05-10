@@ -17,20 +17,18 @@ trait toastType extends js.Object
 
 object toastType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def confirm: typingsSlinky.reactReduxToastr.reactReduxToastrStrings.confirm = "confirm".asInstanceOf[typingsSlinky.reactReduxToastr.reactReduxToastrStrings.confirm]
   @scala.inline
-  def confirm: typingsSlinky.reactReduxToastr.reactReduxToastrStrings.confirm = this.cast("confirm")
+  def error: typingsSlinky.reactReduxToastr.reactReduxToastrStrings.error = "error".asInstanceOf[typingsSlinky.reactReduxToastr.reactReduxToastrStrings.error]
   @scala.inline
-  def error: typingsSlinky.reactReduxToastr.reactReduxToastrStrings.error = this.cast("error")
+  def info: typingsSlinky.reactReduxToastr.reactReduxToastrStrings.info = "info".asInstanceOf[typingsSlinky.reactReduxToastr.reactReduxToastrStrings.info]
   @scala.inline
-  def info: typingsSlinky.reactReduxToastr.reactReduxToastrStrings.info = this.cast("info")
+  def light: typingsSlinky.reactReduxToastr.reactReduxToastrStrings.light = "light".asInstanceOf[typingsSlinky.reactReduxToastr.reactReduxToastrStrings.light]
   @scala.inline
-  def light: typingsSlinky.reactReduxToastr.reactReduxToastrStrings.light = this.cast("light")
+  def message: typingsSlinky.reactReduxToastr.reactReduxToastrStrings.message = "message".asInstanceOf[typingsSlinky.reactReduxToastr.reactReduxToastrStrings.message]
   @scala.inline
-  def message: typingsSlinky.reactReduxToastr.reactReduxToastrStrings.message = this.cast("message")
+  def success: typingsSlinky.reactReduxToastr.reactReduxToastrStrings.success = "success".asInstanceOf[typingsSlinky.reactReduxToastr.reactReduxToastrStrings.success]
   @scala.inline
-  def success: typingsSlinky.reactReduxToastr.reactReduxToastrStrings.success = this.cast("success")
-  @scala.inline
-  def warning: typingsSlinky.reactReduxToastr.reactReduxToastrStrings.warning = this.cast("warning")
+  def warning: typingsSlinky.reactReduxToastr.reactReduxToastrStrings.warning = "warning".asInstanceOf[typingsSlinky.reactReduxToastr.reactReduxToastrStrings.warning]
 }
 

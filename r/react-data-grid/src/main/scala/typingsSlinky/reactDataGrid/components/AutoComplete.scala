@@ -1,10 +1,7 @@
 package typingsSlinky.reactDataGrid.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactDataGrid.AdazzleReactDataGrid.ExcelColumn
 import typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.AutoCompleteEditorProps
 import typingsSlinky.reactDataGrid.AnonId
@@ -12,56 +9,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AutoComplete
-  extends ExternalComponentWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.AutoComplete
-    ] {
+object AutoComplete {
   @JSGlobal("AdazzleReactDataGridPlugins.Editors.AutoComplete")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    column: ExcelColumn = null,
-    editorDisplayValue: (/* column */ ExcelColumn, /* value */ js.Any) => String = null,
-    height: Int | Double = null,
-    label: js.Any = null,
-    onCommit: () => Unit = null,
-    onFocus: () => Unit = null,
-    onKeyDown: () => Unit = null,
-    options: js.Array[AnonId] = null,
-    resultIdentifier: String = null,
-    search: String = null,
-    value: js.Any = null,
-    valueParams: js.Array[String] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[
-    tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.AutoComplete
-  ] = {
-    val __obj = js.Dynamic.literal()
-    if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
-    if (editorDisplayValue != null) __obj.updateDynamic("editorDisplayValue")(js.Any.fromFunction2(editorDisplayValue))
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (onCommit != null) __obj.updateDynamic("onCommit")(js.Any.fromFunction0(onCommit))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction0(onFocus))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction0(onKeyDown))
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (resultIdentifier != null) __obj.updateDynamic("resultIdentifier")(resultIdentifier.asInstanceOf[js.Any])
-    if (search != null) __obj.updateDynamic("search")(search.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (valueParams != null) __obj.updateDynamic("valueParams")(valueParams.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[
+          tag.type, 
+          typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.AutoComplete
+        ] {
+    @scala.inline
+    def column(value: ExcelColumn): this.type = set("column", value.asInstanceOf[js.Any])
+    @scala.inline
+    def editorDisplayValue(value: (/* column */ ExcelColumn, /* value */ js.Any) => String): this.type = set("editorDisplayValue", js.Any.fromFunction2(value))
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: js.Any): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCommit(value: () => Unit): this.type = set("onCommit", js.Any.fromFunction0(value))
+    @scala.inline
+    def onFocus(value: () => Unit): this.type = set("onFocus", js.Any.fromFunction0(value))
+    @scala.inline
+    def onKeyDown(value: () => Unit): this.type = set("onKeyDown", js.Any.fromFunction0(value))
+    @scala.inline
+    def options(value: js.Array[AnonId]): this.type = set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resultIdentifier(value: String): this.type = set("resultIdentifier", value.asInstanceOf[js.Any])
+    @scala.inline
+    def search(value: String): this.type = set("search", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueParams(value: js.Array[String]): this.type = set("valueParams", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[
-    tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.AutoComplete
-  ] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.AutoComplete](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = AutoCompleteEditorProps
+  
+  def withProps(p: AutoCompleteEditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: AutoComplete.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

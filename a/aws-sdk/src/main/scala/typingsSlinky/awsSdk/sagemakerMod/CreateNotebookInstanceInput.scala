@@ -66,35 +66,167 @@ trait CreateNotebookInstanceInput extends js.Object {
 
 object CreateNotebookInstanceInput {
   @scala.inline
-  def apply(
-    InstanceType: InstanceType,
-    NotebookInstanceName: NotebookInstanceName,
-    RoleArn: RoleArn,
-    AcceleratorTypes: NotebookInstanceAcceleratorTypes = null,
-    AdditionalCodeRepositories: AdditionalCodeRepositoryNamesOrUrls = null,
-    DefaultCodeRepository: CodeRepositoryNameOrUrl = null,
-    DirectInternetAccess: DirectInternetAccess = null,
-    KmsKeyId: KmsKeyId = null,
-    LifecycleConfigName: NotebookInstanceLifecycleConfigName = null,
-    RootAccess: RootAccess = null,
-    SecurityGroupIds: SecurityGroupIds = null,
-    SubnetId: SubnetId = null,
-    Tags: TagList = null,
-    VolumeSizeInGB: Int | Double = null
-  ): CreateNotebookInstanceInput = {
+  def apply(InstanceType: InstanceType, NotebookInstanceName: NotebookInstanceName, RoleArn: RoleArn): CreateNotebookInstanceInput = {
     val __obj = js.Dynamic.literal(InstanceType = InstanceType.asInstanceOf[js.Any], NotebookInstanceName = NotebookInstanceName.asInstanceOf[js.Any], RoleArn = RoleArn.asInstanceOf[js.Any])
-    if (AcceleratorTypes != null) __obj.updateDynamic("AcceleratorTypes")(AcceleratorTypes.asInstanceOf[js.Any])
-    if (AdditionalCodeRepositories != null) __obj.updateDynamic("AdditionalCodeRepositories")(AdditionalCodeRepositories.asInstanceOf[js.Any])
-    if (DefaultCodeRepository != null) __obj.updateDynamic("DefaultCodeRepository")(DefaultCodeRepository.asInstanceOf[js.Any])
-    if (DirectInternetAccess != null) __obj.updateDynamic("DirectInternetAccess")(DirectInternetAccess.asInstanceOf[js.Any])
-    if (KmsKeyId != null) __obj.updateDynamic("KmsKeyId")(KmsKeyId.asInstanceOf[js.Any])
-    if (LifecycleConfigName != null) __obj.updateDynamic("LifecycleConfigName")(LifecycleConfigName.asInstanceOf[js.Any])
-    if (RootAccess != null) __obj.updateDynamic("RootAccess")(RootAccess.asInstanceOf[js.Any])
-    if (SecurityGroupIds != null) __obj.updateDynamic("SecurityGroupIds")(SecurityGroupIds.asInstanceOf[js.Any])
-    if (SubnetId != null) __obj.updateDynamic("SubnetId")(SubnetId.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (VolumeSizeInGB != null) __obj.updateDynamic("VolumeSizeInGB")(VolumeSizeInGB.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateNotebookInstanceInput]
   }
+  @scala.inline
+  implicit class CreateNotebookInstanceInputOps[Self <: CreateNotebookInstanceInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceType(value: InstanceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNotebookInstanceName(value: NotebookInstanceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotebookInstanceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: RoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAcceleratorTypes(value: NotebookInstanceAcceleratorTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceleratorTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceleratorTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceleratorTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdditionalCodeRepositories(value: AdditionalCodeRepositoryNamesOrUrls): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalCodeRepositories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalCodeRepositories: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalCodeRepositories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultCodeRepository(value: CodeRepositoryNameOrUrl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultCodeRepository")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultCodeRepository: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultCodeRepository")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectInternetAccess(value: DirectInternetAccess): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectInternetAccess")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectInternetAccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectInternetAccess")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsKeyId(value: KmsKeyId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLifecycleConfigName(value: NotebookInstanceLifecycleConfigName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleConfigName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLifecycleConfigName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleConfigName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRootAccess(value: RootAccess): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RootAccess")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRootAccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RootAccess")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityGroupIds(value: SecurityGroupIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityGroupIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetId(value: SubnetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeSizeInGB(value: NotebookInstanceVolumeSizeInGB): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeSizeInGB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeSizeInGB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeSizeInGB")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

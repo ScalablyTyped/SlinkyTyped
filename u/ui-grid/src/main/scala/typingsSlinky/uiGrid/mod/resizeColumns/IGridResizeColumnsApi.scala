@@ -5,17 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IGridResizeColumnsApi extends js.Object {
   // Events
-  var on: AnonColumnSizeChanged
+  var on: AnonColumnSizeChanged = js.native
 }
 
 object IGridResizeColumnsApi {
   @scala.inline
   def apply(on: AnonColumnSizeChanged): IGridResizeColumnsApi = {
     val __obj = js.Dynamic.literal(on = on.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IGridResizeColumnsApi]
   }
+  @scala.inline
+  implicit class IGridResizeColumnsApiOps[Self <: IGridResizeColumnsApi] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOn(value: AnonColumnSizeChanged): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

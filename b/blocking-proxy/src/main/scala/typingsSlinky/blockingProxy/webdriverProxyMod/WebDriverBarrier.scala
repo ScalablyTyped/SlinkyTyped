@@ -5,16 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WebDriverBarrier extends js.Object {
-  def onCommand(command: WebDriverCommand): js.Promise[Unit]
+  def onCommand(command: WebDriverCommand): js.Promise[Unit] = js.native
 }
 
 object WebDriverBarrier {
   @scala.inline
   def apply(onCommand: WebDriverCommand => js.Promise[Unit]): WebDriverBarrier = {
     val __obj = js.Dynamic.literal(onCommand = js.Any.fromFunction1(onCommand))
-  
     __obj.asInstanceOf[WebDriverBarrier]
   }
+  @scala.inline
+  implicit class WebDriverBarrierOps[Self <: WebDriverBarrier] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnCommand(value: WebDriverCommand => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCommand")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

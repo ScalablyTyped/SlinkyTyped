@@ -26,18 +26,65 @@ trait ApplyEnvironmentManagedActionResult extends js.Object {
 
 object ApplyEnvironmentManagedActionResult {
   @scala.inline
-  def apply(
-    ActionDescription: String = null,
-    ActionId: String = null,
-    ActionType: ActionType = null,
-    Status: String = null
-  ): ApplyEnvironmentManagedActionResult = {
+  def apply(): ApplyEnvironmentManagedActionResult = {
     val __obj = js.Dynamic.literal()
-    if (ActionDescription != null) __obj.updateDynamic("ActionDescription")(ActionDescription.asInstanceOf[js.Any])
-    if (ActionId != null) __obj.updateDynamic("ActionId")(ActionId.asInstanceOf[js.Any])
-    if (ActionType != null) __obj.updateDynamic("ActionType")(ActionType.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplyEnvironmentManagedActionResult]
   }
+  @scala.inline
+  implicit class ApplyEnvironmentManagedActionResultOps[Self <: ApplyEnvironmentManagedActionResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActionType(value: ActionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

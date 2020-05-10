@@ -14,10 +14,29 @@ trait LifecycleConfigurationDescription extends js.Object {
 
 object LifecycleConfigurationDescription {
   @scala.inline
-  def apply(LifecyclePolicies: LifecyclePolicies = null): LifecycleConfigurationDescription = {
+  def apply(): LifecycleConfigurationDescription = {
     val __obj = js.Dynamic.literal()
-    if (LifecyclePolicies != null) __obj.updateDynamic("LifecyclePolicies")(LifecyclePolicies.asInstanceOf[js.Any])
     __obj.asInstanceOf[LifecycleConfigurationDescription]
   }
+  @scala.inline
+  implicit class LifecycleConfigurationDescriptionOps[Self <: LifecycleConfigurationDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLifecyclePolicies(value: LifecyclePolicies): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecyclePolicies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLifecyclePolicies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecyclePolicies")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

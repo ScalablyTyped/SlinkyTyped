@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDebitnegativebalances extends js.Object {
   /**
     * A Boolean indicating if Stripe should try to reclaim negative balances from
@@ -11,32 +12,69 @@ trait AnonDebitnegativebalances extends js.Object {
     * documentation for details. Default value is true for Express accounts and
     * false for Custom accounts.
     */
-  var debit_negative_balances: js.UndefOr[Boolean] = js.undefined
+  var debit_negative_balances: js.UndefOr[Boolean] = js.native
   /**
     * Details on when funds from charges are available, and when they are paid out
     * to an external account. See our Setting Bank and Debit Card Payouts
     * documentation for details.
     */
-  var schedule: js.UndefOr[AnonDelaydays] = js.undefined
+  var schedule: js.UndefOr[AnonDelaydays] = js.native
   /**
     * The text that appears on the bank account statement for payouts. If not set,
     * this defaults to the platform’s bank descriptor as set in the Dashboard.
     */
-  var statement_descriptor: js.UndefOr[String] = js.undefined
+  var statement_descriptor: js.UndefOr[String] = js.native
 }
 
 object AnonDebitnegativebalances {
   @scala.inline
-  def apply(
-    debit_negative_balances: js.UndefOr[Boolean] = js.undefined,
-    schedule: AnonDelaydays = null,
-    statement_descriptor: String = null
-  ): AnonDebitnegativebalances = {
+  def apply(): AnonDebitnegativebalances = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(debit_negative_balances)) __obj.updateDynamic("debit_negative_balances")(debit_negative_balances.asInstanceOf[js.Any])
-    if (schedule != null) __obj.updateDynamic("schedule")(schedule.asInstanceOf[js.Any])
-    if (statement_descriptor != null) __obj.updateDynamic("statement_descriptor")(statement_descriptor.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDebitnegativebalances]
   }
+  @scala.inline
+  implicit class AnonDebitnegativebalancesOps[Self <: AnonDebitnegativebalances] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDebit_negative_balances(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debit_negative_balances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebit_negative_balances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debit_negative_balances")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchedule(value: AnonDelaydays): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchedule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatement_descriptor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statement_descriptor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatement_descriptor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statement_descriptor")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

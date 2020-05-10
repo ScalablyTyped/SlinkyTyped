@@ -22,16 +22,53 @@ trait RecognizeCelebritiesResponse extends js.Object {
 
 object RecognizeCelebritiesResponse {
   @scala.inline
-  def apply(
-    CelebrityFaces: CelebrityList = null,
-    OrientationCorrection: OrientationCorrection = null,
-    UnrecognizedFaces: ComparedFaceList = null
-  ): RecognizeCelebritiesResponse = {
+  def apply(): RecognizeCelebritiesResponse = {
     val __obj = js.Dynamic.literal()
-    if (CelebrityFaces != null) __obj.updateDynamic("CelebrityFaces")(CelebrityFaces.asInstanceOf[js.Any])
-    if (OrientationCorrection != null) __obj.updateDynamic("OrientationCorrection")(OrientationCorrection.asInstanceOf[js.Any])
-    if (UnrecognizedFaces != null) __obj.updateDynamic("UnrecognizedFaces")(UnrecognizedFaces.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecognizeCelebritiesResponse]
   }
+  @scala.inline
+  implicit class RecognizeCelebritiesResponseOps[Self <: RecognizeCelebritiesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCelebrityFaces(value: CelebrityList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CelebrityFaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCelebrityFaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CelebrityFaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrientationCorrection(value: OrientationCorrection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrientationCorrection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrientationCorrection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrientationCorrection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnrecognizedFaces(value: ComparedFaceList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnrecognizedFaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnrecognizedFaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnrecognizedFaces")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

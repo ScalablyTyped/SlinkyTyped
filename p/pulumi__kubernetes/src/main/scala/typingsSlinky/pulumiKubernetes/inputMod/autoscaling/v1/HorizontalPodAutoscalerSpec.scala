@@ -8,43 +8,81 @@ import scala.scalajs.js.annotation._
 /**
   * specification of a horizontal pod autoscaler.
   */
+@js.native
 trait HorizontalPodAutoscalerSpec extends js.Object {
   /**
     * upper limit for the number of pods that can be set by the autoscaler; cannot be smaller
     * than MinReplicas.
     */
-  var maxReplicas: Input[Double]
+  var maxReplicas: Input[Double] = js.native
   /**
     * minReplicas is the lower limit for the number of replicas to which the autoscaler can scale
     * down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate
     * HPAScaleToZero is enabled and at least one Object or External metric is configured.
     * Scaling is active as long as at least one metric value is available.
     */
-  var minReplicas: js.UndefOr[Input[Double]] = js.undefined
+  var minReplicas: js.UndefOr[Input[Double]] = js.native
   /**
     * reference to scaled resource; horizontal pod autoscaler will learn the current resource
     * consumption and will set the desired number of pods by using its Scale subresource.
     */
-  var scaleTargetRef: Input[CrossVersionObjectReference]
+  var scaleTargetRef: Input[CrossVersionObjectReference] = js.native
   /**
     * target average CPU utilization (represented as a percentage of requested CPU) over all the
     * pods; if not specified the default autoscaling policy will be used.
     */
-  var targetCPUUtilizationPercentage: js.UndefOr[Input[Double]] = js.undefined
+  var targetCPUUtilizationPercentage: js.UndefOr[Input[Double]] = js.native
 }
 
 object HorizontalPodAutoscalerSpec {
   @scala.inline
-  def apply(
-    maxReplicas: Input[Double],
-    scaleTargetRef: Input[CrossVersionObjectReference],
-    minReplicas: Input[Double] = null,
-    targetCPUUtilizationPercentage: Input[Double] = null
-  ): HorizontalPodAutoscalerSpec = {
+  def apply(maxReplicas: Input[Double], scaleTargetRef: Input[CrossVersionObjectReference]): HorizontalPodAutoscalerSpec = {
     val __obj = js.Dynamic.literal(maxReplicas = maxReplicas.asInstanceOf[js.Any], scaleTargetRef = scaleTargetRef.asInstanceOf[js.Any])
-    if (minReplicas != null) __obj.updateDynamic("minReplicas")(minReplicas.asInstanceOf[js.Any])
-    if (targetCPUUtilizationPercentage != null) __obj.updateDynamic("targetCPUUtilizationPercentage")(targetCPUUtilizationPercentage.asInstanceOf[js.Any])
     __obj.asInstanceOf[HorizontalPodAutoscalerSpec]
   }
+  @scala.inline
+  implicit class HorizontalPodAutoscalerSpecOps[Self <: HorizontalPodAutoscalerSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxReplicas(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxReplicas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScaleTargetRef(value: Input[CrossVersionObjectReference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleTargetRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinReplicas(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minReplicas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinReplicas: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minReplicas")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetCPUUtilizationPercentage(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetCPUUtilizationPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetCPUUtilizationPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetCPUUtilizationPercentage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

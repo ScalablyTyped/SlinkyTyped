@@ -4,41 +4,129 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DirectInboxFeedResponseLastPermanentItem extends js.Object {
-  var client_context: js.UndefOr[String] = js.undefined
-  var item_id: String
-  var item_type: String
-  var link: js.UndefOr[DirectInboxFeedResponseLink] = js.undefined
-  var placeholder: js.UndefOr[DirectInboxFeedResponsePlaceholder] = js.undefined
-  var profile: js.UndefOr[DirectInboxFeedResponseProfile] = js.undefined
-  var reel_share: js.UndefOr[DirectInboxFeedResponseReelShare] = js.undefined
-  var text: js.UndefOr[String] = js.undefined
-  var timestamp: String
-  var user_id: Double
+  var client_context: js.UndefOr[String] = js.native
+  var item_id: String = js.native
+  var item_type: String = js.native
+  var link: js.UndefOr[DirectInboxFeedResponseLink] = js.native
+  var placeholder: js.UndefOr[DirectInboxFeedResponsePlaceholder] = js.native
+  var profile: js.UndefOr[DirectInboxFeedResponseProfile] = js.native
+  var reel_share: js.UndefOr[DirectInboxFeedResponseReelShare] = js.native
+  var text: js.UndefOr[String] = js.native
+  var timestamp: String = js.native
+  var user_id: Double = js.native
 }
 
 object DirectInboxFeedResponseLastPermanentItem {
   @scala.inline
-  def apply(
-    item_id: String,
-    item_type: String,
-    timestamp: String,
-    user_id: Double,
-    client_context: String = null,
-    link: DirectInboxFeedResponseLink = null,
-    placeholder: DirectInboxFeedResponsePlaceholder = null,
-    profile: DirectInboxFeedResponseProfile = null,
-    reel_share: DirectInboxFeedResponseReelShare = null,
-    text: String = null
-  ): DirectInboxFeedResponseLastPermanentItem = {
+  def apply(item_id: String, item_type: String, timestamp: String, user_id: Double): DirectInboxFeedResponseLastPermanentItem = {
     val __obj = js.Dynamic.literal(item_id = item_id.asInstanceOf[js.Any], item_type = item_type.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any], user_id = user_id.asInstanceOf[js.Any])
-    if (client_context != null) __obj.updateDynamic("client_context")(client_context.asInstanceOf[js.Any])
-    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (profile != null) __obj.updateDynamic("profile")(profile.asInstanceOf[js.Any])
-    if (reel_share != null) __obj.updateDynamic("reel_share")(reel_share.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectInboxFeedResponseLastPermanentItem]
   }
+  @scala.inline
+  implicit class DirectInboxFeedResponseLastPermanentItemOps[Self <: DirectInboxFeedResponseLastPermanentItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItem_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItem_type(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item_type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUser_id(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClient_context(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client_context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClient_context: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client_context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLink(value: DirectInboxFeedResponseLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholder(value: DirectInboxFeedResponsePlaceholder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfile(value: DirectInboxFeedResponseProfile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReel_share(value: DirectInboxFeedResponseReelShare): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reel_share")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReel_share: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reel_share")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

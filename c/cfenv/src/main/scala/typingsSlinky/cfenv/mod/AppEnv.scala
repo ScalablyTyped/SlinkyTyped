@@ -1,7 +1,6 @@
 package typingsSlinky.cfenv.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,13 +16,13 @@ trait AppEnv extends js.Object {
   var url: String = js.native
   var urls: js.Array[String] = js.native
   def getService(spec: String): Service | Null = js.native
-  def getService(spec: RegExp): Service | Null = js.native
+  def getService(spec: js.RegExp): Service | Null = js.native
   def getServiceCreds(spec: String): js.Object | Null = js.native
-  def getServiceCreds(spec: RegExp): js.Object | Null = js.native
+  def getServiceCreds(spec: js.RegExp): js.Object | Null = js.native
   def getServiceURL(spec: String): String | Null = js.native
   def getServiceURL(spec: String, replacements: js.Object): String | Null = js.native
-  def getServiceURL(spec: RegExp): String | Null = js.native
-  def getServiceURL(spec: RegExp, replacements: js.Object): String | Null = js.native
+  def getServiceURL(spec: js.RegExp): String | Null = js.native
+  def getServiceURL(spec: js.RegExp, replacements: js.Object): String | Null = js.native
   def getServices(): StringDictionary[Service] = js.native
   def toJSON(): String = js.native
 }

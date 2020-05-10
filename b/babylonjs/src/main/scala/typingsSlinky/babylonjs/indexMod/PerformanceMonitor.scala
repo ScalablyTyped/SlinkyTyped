@@ -1,0 +1,17 @@
+package typingsSlinky.babylonjs.indexMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("babylonjs/index", "PerformanceMonitor")
+@js.native
+/**
+  * constructor
+  * @param frameSampleSize The number of samples required to saturate the sliding window
+  */
+class PerformanceMonitor ()
+  extends typingsSlinky.babylonjs.miscIndexMod.PerformanceMonitor {
+  def this(frameSampleSize: Double) = this()
+}
+

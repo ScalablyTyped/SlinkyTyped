@@ -1,9 +1,6 @@
 package typingsSlinky.mfiles.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.mfiles.IAccessControlEntryContainer
-import typingsSlinky.mfiles.IAccessControlEntryData
-import typingsSlinky.mfiles.IAccessControlEntryKey
 import typingsSlinky.mfiles.IAccessControlListComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,36 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.AccessControlListComponent")
 @js.native
-class AccessControlListComponent () extends IAccessControlListComponent {
-  /* CompleteClass */
-  override var AccessControlEntries: IAccessControlEntryContainer = js.native
-  /* CompleteClass */
-  override var CanDeactivate: Boolean = js.native
-  /* CompleteClass */
-  override val CurrentUserBinding: Double = js.native
-  /* CompleteClass */
-  override val HasCurrentUser: Boolean = js.native
-  /* CompleteClass */
-  override val HasCurrentUserBinding: Boolean = js.native
-  /* CompleteClass */
-  override val HasNamedACLLink: Boolean = js.native
-  /* CompleteClass */
-  override val HasPseudoUsers: Boolean = js.native
-  /* CompleteClass */
-  override var IsActive: Boolean = js.native
-  /* CompleteClass */
-  override val NamedACLLink: Double = js.native
-  /* CompleteClass */
-  override def Clone(): IAccessControlListComponent = js.native
-  /* CompleteClass */
-  override def GetACEByUserOrGroupID(UserOrGroupID: Double, IsGroup: Boolean): IAccessControlEntryData = js.native
-  /* CompleteClass */
-  override def GetACEKeyByUserOrGroupID(UserOrGroupID: Double, IsGroup: Boolean): IAccessControlEntryKey = js.native
-  /* CompleteClass */
-  override def ResetCurrentUserBinding(): Unit = js.native
-  /* CompleteClass */
-  override def ResetNamedACLLink(): Unit = js.native
-}
+class AccessControlListComponent () extends IAccessControlListComponent
 
 @JSGlobal("MFiles.AccessControlListComponent")
 @js.native

@@ -1,8 +1,8 @@
 package typingsSlinky.zapierPlatformCore.mod
 
+import org.scalajs.dom.experimental.ReadableStream
 import typingsSlinky.node.Buffer
 import typingsSlinky.std.Console_
-import typingsSlinky.std.ReadableStream
 import typingsSlinky.zapierPlatformCore.AnonExpiredAuthError
 import typingsSlinky.zapierPlatformCore.AnonGet
 import typingsSlinky.zapierPlatformCore.AnonParse

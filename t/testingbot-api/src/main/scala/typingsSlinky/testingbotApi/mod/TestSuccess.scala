@@ -14,14 +14,12 @@ trait TestSuccess extends js.Object
 
 object TestSuccess {
   @scala.inline
-  def `0`: typingsSlinky.testingbotApi.testingbotApiNumbers.`0` = this.cast(0)
+  def `0`: typingsSlinky.testingbotApi.testingbotApiNumbers.`0` = 0.asInstanceOf[typingsSlinky.testingbotApi.testingbotApiNumbers.`0`]
   @scala.inline
-  def `1`: typingsSlinky.testingbotApi.testingbotApiNumbers.`1` = this.cast(1)
+  def `1`: typingsSlinky.testingbotApi.testingbotApiNumbers.`1` = 1.asInstanceOf[typingsSlinky.testingbotApi.testingbotApiNumbers.`1`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `false`: typingsSlinky.testingbotApi.testingbotApiBooleans.`false` = false.asInstanceOf[typingsSlinky.testingbotApi.testingbotApiBooleans.`false`]
   @scala.inline
-  def `false`: typingsSlinky.testingbotApi.testingbotApiBooleans.`false` = this.cast(false)
-  @scala.inline
-  def `true`: typingsSlinky.testingbotApi.testingbotApiBooleans.`true` = this.cast(true)
+  def `true`: typingsSlinky.testingbotApi.testingbotApiBooleans.`true` = true.asInstanceOf[typingsSlinky.testingbotApi.testingbotApiBooleans.`true`]
 }
 

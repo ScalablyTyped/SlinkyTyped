@@ -5,16 +5,36 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<materialize-css.M.ParallaxOptions> */
+@js.native
 trait PartialParallaxOptions extends js.Object {
-  var responsiveThreshold: js.UndefOr[Double] = js.undefined
+  var responsiveThreshold: js.UndefOr[Double] = js.native
 }
 
 object PartialParallaxOptions {
   @scala.inline
-  def apply(responsiveThreshold: Int | Double = null): PartialParallaxOptions = {
+  def apply(): PartialParallaxOptions = {
     val __obj = js.Dynamic.literal()
-    if (responsiveThreshold != null) __obj.updateDynamic("responsiveThreshold")(responsiveThreshold.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialParallaxOptions]
   }
+  @scala.inline
+  implicit class PartialParallaxOptionsOps[Self <: PartialParallaxOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResponsiveThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responsiveThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponsiveThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responsiveThreshold")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

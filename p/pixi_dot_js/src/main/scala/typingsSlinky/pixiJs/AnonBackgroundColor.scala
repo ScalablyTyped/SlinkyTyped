@@ -5,54 +5,192 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBackgroundColor extends js.Object {
-  var antialias: js.UndefOr[Boolean] = js.undefined
-  var autoDensity: js.UndefOr[Boolean] = js.undefined
-  var backgroundColor: js.UndefOr[Double] = js.undefined
-  var clearBeforeRender: js.UndefOr[Boolean] = js.undefined
-  var context: js.UndefOr[js.Any] = js.undefined
-  var forceFXAA: js.UndefOr[Boolean] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var powerPreference: js.UndefOr[String] = js.undefined
-  var preserveDrawingBuffer: js.UndefOr[Boolean] = js.undefined
-  var resolution: js.UndefOr[Double] = js.undefined
-  var transparent: js.UndefOr[Boolean] = js.undefined
-  var view: js.UndefOr[HTMLCanvasElement] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
+  var antialias: js.UndefOr[Boolean] = js.native
+  var autoDensity: js.UndefOr[Boolean] = js.native
+  var backgroundColor: js.UndefOr[Double] = js.native
+  var clearBeforeRender: js.UndefOr[Boolean] = js.native
+  var context: js.UndefOr[js.Any] = js.native
+  var forceFXAA: js.UndefOr[Boolean] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var powerPreference: js.UndefOr[String] = js.native
+  var preserveDrawingBuffer: js.UndefOr[Boolean] = js.native
+  var resolution: js.UndefOr[Double] = js.native
+  var transparent: js.UndefOr[Boolean] = js.native
+  var view: js.UndefOr[HTMLCanvasElement] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object AnonBackgroundColor {
   @scala.inline
-  def apply(
-    antialias: js.UndefOr[Boolean] = js.undefined,
-    autoDensity: js.UndefOr[Boolean] = js.undefined,
-    backgroundColor: Int | Double = null,
-    clearBeforeRender: js.UndefOr[Boolean] = js.undefined,
-    context: js.Any = null,
-    forceFXAA: js.UndefOr[Boolean] = js.undefined,
-    height: Int | Double = null,
-    powerPreference: String = null,
-    preserveDrawingBuffer: js.UndefOr[Boolean] = js.undefined,
-    resolution: Int | Double = null,
-    transparent: js.UndefOr[Boolean] = js.undefined,
-    view: HTMLCanvasElement = null,
-    width: Int | Double = null
-  ): AnonBackgroundColor = {
+  def apply(): AnonBackgroundColor = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(antialias)) __obj.updateDynamic("antialias")(antialias.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoDensity)) __obj.updateDynamic("autoDensity")(autoDensity.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(clearBeforeRender)) __obj.updateDynamic("clearBeforeRender")(clearBeforeRender.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceFXAA)) __obj.updateDynamic("forceFXAA")(forceFXAA.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (powerPreference != null) __obj.updateDynamic("powerPreference")(powerPreference.asInstanceOf[js.Any])
-    if (!js.isUndefined(preserveDrawingBuffer)) __obj.updateDynamic("preserveDrawingBuffer")(preserveDrawingBuffer.asInstanceOf[js.Any])
-    if (resolution != null) __obj.updateDynamic("resolution")(resolution.asInstanceOf[js.Any])
-    if (!js.isUndefined(transparent)) __obj.updateDynamic("transparent")(transparent.asInstanceOf[js.Any])
-    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBackgroundColor]
   }
+  @scala.inline
+  implicit class AnonBackgroundColorOps[Self <: AnonBackgroundColor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAntialias(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("antialias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAntialias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("antialias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoDensity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDensity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoDensity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDensity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundColor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClearBeforeRender(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearBeforeRender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClearBeforeRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearBeforeRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContext(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceFXAA(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceFXAA")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceFXAA: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceFXAA")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPowerPreference(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("powerPreference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPowerPreference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("powerPreference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreserveDrawingBuffer(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveDrawingBuffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreserveDrawingBuffer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveDrawingBuffer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolution(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransparent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transparent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransparent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transparent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withView(value: HTMLCanvasElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

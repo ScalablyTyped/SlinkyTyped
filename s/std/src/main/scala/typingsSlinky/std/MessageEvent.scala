@@ -34,6 +34,10 @@ trait MessageEvent extends Event_ {
 @JSGlobal("MessageEvent")
 @js.native
 object MessageEvent
-  extends Instantiable1[/* type */ java.lang.String, MessageEvent]
-     with Instantiable2[/* type */ java.lang.String, /* eventInitDict */ MessageEventInit, MessageEvent]
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.MessageEvent]
+     with Instantiable2[
+      /* type */ java.lang.String, 
+      /* eventInitDict */ MessageEventInit, 
+      org.scalajs.dom.raw.MessageEvent
+    ]
 

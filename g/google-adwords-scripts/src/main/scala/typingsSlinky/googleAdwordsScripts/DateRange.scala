@@ -22,30 +22,28 @@ trait DateRange extends js.Object
 
 object DateRange {
   @scala.inline
-  def ALL_TIME: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.ALL_TIME = this.cast("ALL_TIME")
+  def ALL_TIME: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.ALL_TIME = "ALL_TIME".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.ALL_TIME]
   @scala.inline
-  def LAST_14_DAYS: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_14_DAYS = this.cast("LAST_14_DAYS")
+  def LAST_14_DAYS: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_14_DAYS = "LAST_14_DAYS".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_14_DAYS]
   @scala.inline
-  def LAST_30_DAYS: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_30_DAYS = this.cast("LAST_30_DAYS")
+  def LAST_30_DAYS: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_30_DAYS = "LAST_30_DAYS".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_30_DAYS]
   @scala.inline
-  def LAST_7_DAYS: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_7_DAYS = this.cast("LAST_7_DAYS")
+  def LAST_7_DAYS: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_7_DAYS = "LAST_7_DAYS".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_7_DAYS]
   @scala.inline
-  def LAST_BUSINESS_WEEK: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_BUSINESS_WEEK = this.cast("LAST_BUSINESS_WEEK")
+  def LAST_BUSINESS_WEEK: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_BUSINESS_WEEK = "LAST_BUSINESS_WEEK".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_BUSINESS_WEEK]
   @scala.inline
-  def LAST_MONTH: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_MONTH = this.cast("LAST_MONTH")
+  def LAST_MONTH: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_MONTH = "LAST_MONTH".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_MONTH]
   @scala.inline
-  def LAST_WEEK: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_WEEK = this.cast("LAST_WEEK")
+  def LAST_WEEK: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_WEEK = "LAST_WEEK".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_WEEK]
   @scala.inline
-  def LAST_WEEK_SUN_SAT: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_WEEK_SUN_SAT = this.cast("LAST_WEEK_SUN_SAT")
+  def LAST_WEEK_SUN_SAT: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_WEEK_SUN_SAT = "LAST_WEEK_SUN_SAT".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LAST_WEEK_SUN_SAT]
   @scala.inline
-  def THIS_MONTH: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.THIS_MONTH = this.cast("THIS_MONTH")
+  def THIS_MONTH: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.THIS_MONTH = "THIS_MONTH".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.THIS_MONTH]
   @scala.inline
-  def THIS_WEEK_SUN_TODAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.THIS_WEEK_SUN_TODAY = this.cast("THIS_WEEK_SUN_TODAY")
+  def THIS_WEEK_SUN_TODAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.THIS_WEEK_SUN_TODAY = "THIS_WEEK_SUN_TODAY".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.THIS_WEEK_SUN_TODAY]
   @scala.inline
-  def TODAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.TODAY = this.cast("TODAY")
+  def TODAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.TODAY = "TODAY".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.TODAY]
   @scala.inline
-  def YESTERDAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.YESTERDAY = this.cast("YESTERDAY")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def YESTERDAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.YESTERDAY = "YESTERDAY".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.YESTERDAY]
 }
 

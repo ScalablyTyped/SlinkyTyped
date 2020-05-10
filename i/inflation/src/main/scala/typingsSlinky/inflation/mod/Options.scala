@@ -3,43 +3,44 @@ package typingsSlinky.inflation.mod
 import typingsSlinky.inflation.inflationStrings.deflate
 import typingsSlinky.inflation.inflationStrings.gzip
 import typingsSlinky.inflation.inflationStrings.identity
-import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.zlibMod.ZlibOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends ZlibOptions {
   /**
     * The encoding of the stream. If not given, will look in `stream.headers['content-encoding']`.
     */
-  var gzip: js.UndefOr[deflate | typingsSlinky.inflation.inflationStrings.gzip | identity] = js.undefined
+  var gzip: js.UndefOr[deflate | typingsSlinky.inflation.inflationStrings.gzip | identity] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    chunkSize: Int | Double = null,
-    dictionary: ArrayBufferView | scala.scalajs.js.typedarray.ArrayBuffer = null,
-    finishFlush: Int | Double = null,
-    flush: Int | Double = null,
-    gzip: deflate | gzip | identity = null,
-    level: Int | Double = null,
-    memLevel: Int | Double = null,
-    strategy: Int | Double = null,
-    windowBits: Int | Double = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (chunkSize != null) __obj.updateDynamic("chunkSize")(chunkSize.asInstanceOf[js.Any])
-    if (dictionary != null) __obj.updateDynamic("dictionary")(dictionary.asInstanceOf[js.Any])
-    if (finishFlush != null) __obj.updateDynamic("finishFlush")(finishFlush.asInstanceOf[js.Any])
-    if (flush != null) __obj.updateDynamic("flush")(flush.asInstanceOf[js.Any])
-    if (gzip != null) __obj.updateDynamic("gzip")(gzip.asInstanceOf[js.Any])
-    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
-    if (memLevel != null) __obj.updateDynamic("memLevel")(memLevel.asInstanceOf[js.Any])
-    if (strategy != null) __obj.updateDynamic("strategy")(strategy.asInstanceOf[js.Any])
-    if (windowBits != null) __obj.updateDynamic("windowBits")(windowBits.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGzip(value: deflate | gzip | identity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gzip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGzip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gzip")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

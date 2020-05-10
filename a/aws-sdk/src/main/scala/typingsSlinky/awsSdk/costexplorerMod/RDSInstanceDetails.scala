@@ -46,28 +46,125 @@ trait RDSInstanceDetails extends js.Object {
 
 object RDSInstanceDetails {
   @scala.inline
-  def apply(
-    CurrentGeneration: js.UndefOr[Boolean] = js.undefined,
-    DatabaseEdition: GenericString = null,
-    DatabaseEngine: GenericString = null,
-    DeploymentOption: GenericString = null,
-    Family: GenericString = null,
-    InstanceType: GenericString = null,
-    LicenseModel: GenericString = null,
-    Region: GenericString = null,
-    SizeFlexEligible: js.UndefOr[Boolean] = js.undefined
-  ): RDSInstanceDetails = {
+  def apply(): RDSInstanceDetails = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(CurrentGeneration)) __obj.updateDynamic("CurrentGeneration")(CurrentGeneration.asInstanceOf[js.Any])
-    if (DatabaseEdition != null) __obj.updateDynamic("DatabaseEdition")(DatabaseEdition.asInstanceOf[js.Any])
-    if (DatabaseEngine != null) __obj.updateDynamic("DatabaseEngine")(DatabaseEngine.asInstanceOf[js.Any])
-    if (DeploymentOption != null) __obj.updateDynamic("DeploymentOption")(DeploymentOption.asInstanceOf[js.Any])
-    if (Family != null) __obj.updateDynamic("Family")(Family.asInstanceOf[js.Any])
-    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
-    if (LicenseModel != null) __obj.updateDynamic("LicenseModel")(LicenseModel.asInstanceOf[js.Any])
-    if (Region != null) __obj.updateDynamic("Region")(Region.asInstanceOf[js.Any])
-    if (!js.isUndefined(SizeFlexEligible)) __obj.updateDynamic("SizeFlexEligible")(SizeFlexEligible.asInstanceOf[js.Any])
     __obj.asInstanceOf[RDSInstanceDetails]
   }
+  @scala.inline
+  implicit class RDSInstanceDetailsOps[Self <: RDSInstanceDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentGeneration(value: GenericBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentGeneration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentGeneration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentGeneration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatabaseEdition(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseEdition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabaseEdition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseEdition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatabaseEngine(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseEngine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabaseEngine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseEngine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeploymentOption(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeploymentOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFamily(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Family")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Family")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLicenseModel(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenseModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseModel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizeFlexEligible(value: GenericBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeFlexEligible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizeFlexEligible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeFlexEligible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

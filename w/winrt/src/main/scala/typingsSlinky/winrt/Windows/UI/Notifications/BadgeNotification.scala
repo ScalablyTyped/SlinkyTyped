@@ -9,9 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class BadgeNotification protected () extends IBadgeNotification {
   def this(content: XmlDocument) = this()
-  /* CompleteClass */
-  override var content: XmlDocument = js.native
-  /* CompleteClass */
-  override var expirationTime: js.Date = js.native
 }
 

@@ -10,39 +10,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonRequest extends js.Object {
-  var component: js.UndefOr[dxFileUploader] = js.undefined
-  var element: js.UndefOr[dxElement] = js.undefined
-  var error: js.UndefOr[js.Any] = js.undefined
-  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.undefined
-  var file: js.UndefOr[File] = js.undefined
-  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.undefined
-  var model: js.UndefOr[js.Any] = js.undefined
-  var request: js.UndefOr[XMLHttpRequest] = js.undefined
+  var component: js.UndefOr[dxFileUploader] = js.native
+  var element: js.UndefOr[dxElement] = js.native
+  var error: js.UndefOr[js.Any] = js.native
+  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.native
+  var file: js.UndefOr[File] = js.native
+  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.native
+  var model: js.UndefOr[js.Any] = js.native
+  var request: js.UndefOr[XMLHttpRequest] = js.native
 }
 
 object AnonRequest {
   @scala.inline
-  def apply(
-    component: dxFileUploader = null,
-    element: dxElement = null,
-    error: js.Any = null,
-    event: event = null,
-    file: File = null,
-    jQueryEvent: JQueryEventObject = null,
-    model: js.Any = null,
-    request: XMLHttpRequest = null
-  ): AnonRequest = {
+  def apply(): AnonRequest = {
     val __obj = js.Dynamic.literal()
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
-    if (file != null) __obj.updateDynamic("file")(file.asInstanceOf[js.Any])
-    if (jQueryEvent != null) __obj.updateDynamic("jQueryEvent")(jQueryEvent.asInstanceOf[js.Any])
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
-    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonRequest]
   }
+  @scala.inline
+  implicit class AnonRequestOps[Self <: AnonRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComponent(value: dxFileUploader): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElement(value: dxElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvent(value: event): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFile(value: File): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJQueryEvent(value: JQueryEventObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jQueryEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJQueryEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jQueryEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModel(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequest(value: XMLHttpRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

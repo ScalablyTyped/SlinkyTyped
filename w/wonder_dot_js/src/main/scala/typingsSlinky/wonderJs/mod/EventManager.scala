@@ -1,6 +1,6 @@
 package typingsSlinky.wonderJs.mod
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.wonderFrp.streamFromEventPatternStreamMod.FromEventPatternStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`

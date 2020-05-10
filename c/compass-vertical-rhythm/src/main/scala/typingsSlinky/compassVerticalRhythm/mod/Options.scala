@@ -23,38 +23,116 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var baseFontSize: js.UndefOr[String] = js.undefined
-  var baseLineHeight: js.UndefOr[Double | String] = js.undefined
+  var baseFontSize: js.UndefOr[String] = js.native
+  var baseLineHeight: js.UndefOr[Double | String] = js.native
   var defaultRhythmBorderStyle: js.UndefOr[
     solid | none | hidden | dashed | dotted | double | groove | ridge | inset | outset
-  ] = js.undefined
-  var defaultRhythmBorderWidth: js.UndefOr[String] = js.undefined
-  var minLinePadding: js.UndefOr[String] = js.undefined
-  var rhythmUnit: js.UndefOr[Percentsign | em | ex | ch | px | rem | vw | vh | vmin] = js.undefined
-  var roundToNearestHalfLine: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var defaultRhythmBorderWidth: js.UndefOr[String] = js.native
+  var minLinePadding: js.UndefOr[String] = js.native
+  var rhythmUnit: js.UndefOr[Percentsign | em | ex | ch | px | rem | vw | vh | vmin] = js.native
+  var roundToNearestHalfLine: js.UndefOr[Boolean] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    baseFontSize: String = null,
-    baseLineHeight: Double | String = null,
-    defaultRhythmBorderStyle: solid | none | hidden | dashed | dotted | double | groove | ridge | inset | outset = null,
-    defaultRhythmBorderWidth: String = null,
-    minLinePadding: String = null,
-    rhythmUnit: Percentsign | em | ex | ch | px | rem | vw | vh | vmin = null,
-    roundToNearestHalfLine: js.UndefOr[Boolean] = js.undefined
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (baseFontSize != null) __obj.updateDynamic("baseFontSize")(baseFontSize.asInstanceOf[js.Any])
-    if (baseLineHeight != null) __obj.updateDynamic("baseLineHeight")(baseLineHeight.asInstanceOf[js.Any])
-    if (defaultRhythmBorderStyle != null) __obj.updateDynamic("defaultRhythmBorderStyle")(defaultRhythmBorderStyle.asInstanceOf[js.Any])
-    if (defaultRhythmBorderWidth != null) __obj.updateDynamic("defaultRhythmBorderWidth")(defaultRhythmBorderWidth.asInstanceOf[js.Any])
-    if (minLinePadding != null) __obj.updateDynamic("minLinePadding")(minLinePadding.asInstanceOf[js.Any])
-    if (rhythmUnit != null) __obj.updateDynamic("rhythmUnit")(rhythmUnit.asInstanceOf[js.Any])
-    if (!js.isUndefined(roundToNearestHalfLine)) __obj.updateDynamic("roundToNearestHalfLine")(roundToNearestHalfLine.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBaseFontSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseFontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseFontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseLineHeight(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseLineHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseLineHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseLineHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultRhythmBorderStyle(value: solid | none | hidden | dashed | dotted | double | groove | ridge | inset | outset): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRhythmBorderStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultRhythmBorderStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRhythmBorderStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultRhythmBorderWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRhythmBorderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultRhythmBorderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRhythmBorderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinLinePadding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minLinePadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinLinePadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minLinePadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRhythmUnit(value: Percentsign | em | ex | ch | px | rem | vw | vh | vmin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rhythmUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRhythmUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rhythmUnit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoundToNearestHalfLine(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roundToNearestHalfLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoundToNearestHalfLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roundToNearestHalfLine")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

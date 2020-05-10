@@ -98,6 +98,7 @@ package object interfaceMod {
     - typingsSlinky.rcTable.rcTableStrings.ruby
     - typingsSlinky.rcTable.rcTableStrings.s
     - typingsSlinky.rcTable.rcTableStrings.samp
+    - typingsSlinky.rcTable.rcTableStrings.slot
     - typingsSlinky.rcTable.rcTableStrings.script
     - typingsSlinky.rcTable.rcTableStrings.section
     - typingsSlinky.rcTable.rcTableStrings.select
@@ -128,8 +129,8 @@ package object interfaceMod {
     - typingsSlinky.rcTable.rcTableStrings.wbr
     - typingsSlinky.rcTable.rcTableStrings.webview
   */
-  type Component[P] = typingsSlinky.rcTable.interfaceMod._Component[P] | slinky.core.ReactComponentClass[P] | typingsSlinky.react.mod.ForwardRefExoticComponent[P] | slinky.core.ReactComponentClass[P]
-  type CustomizeComponent[P /* <: typingsSlinky.react.mod.HTMLAttributes[org.scalajs.dom.raw.HTMLElement] */] = typingsSlinky.rcTable.interfaceMod.Component[P]
+  type Component[P] = typingsSlinky.rcTable.interfaceMod._Component[P] | slinky.core.ReactComponentClass[P] | typingsSlinky.react.mod.ForwardRefExoticComponent[P]
+  type CustomizeComponent = typingsSlinky.rcTable.interfaceMod.Component[js.Any]
   type CustomizeScrollBody[RecordType] = js.Function2[
     /* data */ js.Array[RecordType], 
     /* info */ typingsSlinky.rcTable.AnonOnScroll, 
@@ -152,10 +153,8 @@ package object interfaceMod {
   type FixedType = typingsSlinky.rcTable.interfaceMod._FixedType | scala.Boolean
   type GetComponent = js.Function2[
     /* path */ js.Array[java.lang.String], 
-    /* defaultComponent */ js.UndefOr[
-      typingsSlinky.rcTable.interfaceMod.CustomizeComponent[typingsSlinky.react.mod.HTMLAttributes[org.scalajs.dom.raw.HTMLElement]]
-    ], 
-    typingsSlinky.rcTable.interfaceMod.CustomizeComponent[typingsSlinky.react.mod.HTMLAttributes[org.scalajs.dom.raw.HTMLElement]]
+    /* defaultComponent */ js.UndefOr[typingsSlinky.rcTable.interfaceMod.CustomizeComponent], 
+    typingsSlinky.rcTable.interfaceMod.CustomizeComponent
   ]
   type GetComponentProps[DataType] = js.Function2[
     /* data */ DataType, 

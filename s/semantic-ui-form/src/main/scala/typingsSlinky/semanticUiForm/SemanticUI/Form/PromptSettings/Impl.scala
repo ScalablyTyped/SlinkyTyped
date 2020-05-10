@@ -4,111 +4,112 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Impl extends js.Object {
   /**
     * @default '{name} must be checked'
     */
-  var checked: String
+  var checked: String = js.native
   /**
     * @default '{name} cannot contain \'{ruleValue}\''
     */
-  var contain: String
+  var contain: String = js.native
   /**
     * @default '{name} cannot contain exactly \'{ruleValue}\''
     */
-  var containExactly: String
+  var containExactly: String = js.native
   /**
     * @default '{name} must be a valid credit card number'
     */
-  var creditCard: String
+  var creditCard: String = js.native
   /**
     * @default '{name} must be a decimal number'
     */
-  var decimal: String
+  var decimal: String = js.native
   /**
     * @default '{name} must have a different value than {ruleValue} field'
     */
-  var different: String
+  var different: String = js.native
   /**
     * @default '{name} must contain  \'{ruleValue}\''
     */
-  var doesntContain: String
+  var doesntContain: String = js.native
   /**
     * @default '{name} must contain exactly \'{ruleValue}\''
     */
-  var doesntContainExactly: String
+  var doesntContainExactly: String = js.native
   /**
     * @default '{name} must be a valid e-mail'
     */
-  var email: String
+  var email: String = js.native
   /**
     * @default '{name} must have a value'
     */
-  var empty: String
+  var empty: String = js.native
   /**
     * @default '{name} must have exactly {ruleValue} choices'
     */
-  var exactCount: String
+  var exactCount: String = js.native
   /**
     * @default '{name} must be exactly {ruleValue} characters'
     */
-  var exactLength: String
+  var exactLength: String = js.native
   /**
     * @default '{name} must be an integer'
     */
-  var integer: String
+  var integer: String = js.native
   /**
     * @default '{name} must be \'{ruleValue}\''
     */
-  var is: String
+  var is: String = js.native
   /**
     * @default '{name} must be exactly \'{ruleValue}\''
     */
-  var isExactly: String
+  var isExactly: String = js.native
   /**
     * @default '{name} must be at least {ruleValue} characters'
     */
-  var length: String
+  var length: String = js.native
   /**
     * @default '{name} must match {ruleValue} field'
     */
-  var `match`: String
+  var `match`: String = js.native
   /**
     * @default '{name} must have {ruleValue} or less choices'
     */
-  var maxCount: String
+  var maxCount: String = js.native
   /**
     * @default '{name} cannot be longer than {ruleValue} characters'
     */
-  var maxLength: String
+  var maxLength: String = js.native
   /**
     * @default '{name} must have at least {ruleValue} choices'
     */
-  var minCount: String
+  var minCount: String = js.native
   /**
     * @default '{name} must be at least {ruleValue} characters'
     */
-  var minLength: String
+  var minLength: String = js.native
   /**
     * @default '{name} cannot be set to \'{ruleValue}\''
     */
-  var not: String
+  var not: String = js.native
   /**
     * @default '{name} cannot be set to exactly \'{ruleValue}\''
     */
-  var notExactly: String
+  var notExactly: String = js.native
   /**
     * @default '{name} must be set to a number'
     */
-  var number: String
+  var number: String = js.native
   /**
     * @default '{name} is not formatted correctly'
     */
-  var regExp: String
+  var regExp: String = js.native
   /**
     * @default '{name} must be a valid url'
     */
-  var url: String
+  var url: String = js.native
 }
 
 object Impl {
@@ -145,5 +146,169 @@ object Impl {
     __obj.updateDynamic("match")(`match`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Impl]
   }
+  @scala.inline
+  implicit class ImplOps[Self <: Impl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChecked(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContainExactly(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containExactly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreditCard(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creditCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDecimal(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decimal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDifferent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("different")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDoesntContain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doesntContain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDoesntContainExactly(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doesntContainExactly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmpty(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExactCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exactCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExactLength(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exactLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInteger(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsExactly(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isExactly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLength(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMatch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("match")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxLength(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinLength(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("not")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNotExactly(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notExactly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegExp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regExp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

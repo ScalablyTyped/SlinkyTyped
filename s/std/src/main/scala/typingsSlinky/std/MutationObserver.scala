@@ -27,5 +27,6 @@ trait MutationObserver extends js.Object {
 
 @JSGlobal("MutationObserver")
 @js.native
-object MutationObserver extends Instantiable1[/* callback */ MutationCallback, MutationObserver]
+object MutationObserver
+  extends Instantiable1[/* callback */ MutationCallback, org.scalajs.dom.raw.MutationObserver]
 

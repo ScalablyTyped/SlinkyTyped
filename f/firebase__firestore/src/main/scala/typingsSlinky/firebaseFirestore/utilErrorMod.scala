@@ -9,15 +9,11 @@ import scala.scalajs.js.annotation._
 @JSImport("@firebase/firestore/dist/src/util/error", JSImport.Namespace)
 @js.native
 object utilErrorMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.firebaseFirestoreTypes.mod.FirestoreError because var conflicts: message, name, stack. Inlined code */ @js.native
   class FirestoreError protected () extends Error {
     def this(code: Code, message: String) = this()
     val code: Code | FirestoreErrorCode = js.native
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
   }
   
   @js.native

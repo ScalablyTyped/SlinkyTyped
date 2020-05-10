@@ -21,28 +21,26 @@ trait StepLabelClasskey extends js.Object
 
 object StepLabelClasskey {
   @scala.inline
-  def active: typingsSlinky.materialUiCore.materialUiCoreStrings.active = this.cast("active")
+  def active: typingsSlinky.materialUiCore.materialUiCoreStrings.active = "active".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.active]
   @scala.inline
-  def alternativeLabel: typingsSlinky.materialUiCore.materialUiCoreStrings.alternativeLabel = this.cast("alternativeLabel")
+  def alternativeLabel: typingsSlinky.materialUiCore.materialUiCoreStrings.alternativeLabel = "alternativeLabel".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.alternativeLabel]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def completed: typingsSlinky.materialUiCore.materialUiCoreStrings.completed = "completed".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.completed]
   @scala.inline
-  def completed: typingsSlinky.materialUiCore.materialUiCoreStrings.completed = this.cast("completed")
+  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = "disabled".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = this.cast("disabled")
+  def error: typingsSlinky.materialUiCore.materialUiCoreStrings.error = "error".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.error]
   @scala.inline
-  def error: typingsSlinky.materialUiCore.materialUiCoreStrings.error = this.cast("error")
+  def horizontal: typingsSlinky.materialUiCore.materialUiCoreStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.materialUiCore.materialUiCoreStrings.horizontal = this.cast("horizontal")
+  def iconContainer: typingsSlinky.materialUiCore.materialUiCoreStrings.iconContainer = "iconContainer".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.iconContainer]
   @scala.inline
-  def iconContainer: typingsSlinky.materialUiCore.materialUiCoreStrings.iconContainer = this.cast("iconContainer")
+  def label: typingsSlinky.materialUiCore.materialUiCoreStrings.label = "label".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.label]
   @scala.inline
-  def label: typingsSlinky.materialUiCore.materialUiCoreStrings.label = this.cast("label")
+  def labelContainer: typingsSlinky.materialUiCore.materialUiCoreStrings.labelContainer = "labelContainer".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.labelContainer]
   @scala.inline
-  def labelContainer: typingsSlinky.materialUiCore.materialUiCoreStrings.labelContainer = this.cast("labelContainer")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
-  @scala.inline
-  def vertical: typingsSlinky.materialUiCore.materialUiCoreStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.materialUiCore.materialUiCoreStrings.vertical = "vertical".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.vertical]
 }
 

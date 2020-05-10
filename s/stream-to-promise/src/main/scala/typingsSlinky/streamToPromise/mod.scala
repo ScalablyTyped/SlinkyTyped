@@ -3,6 +3,8 @@ package typingsSlinky.streamToPromise
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
+import typingsSlinky.node.streamMod.Readable
+import typingsSlinky.node.streamMod.Writable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,5 +23,7 @@ object mod extends js.Object {
     * @param stream The input stream
     */
   def apply(stream: WritableStream): js.Promise[Unit] = js.native
+  def apply(stream: Readable): js.Promise[Buffer] = js.native
+  def apply(stream: Writable): js.Promise[Unit] = js.native
 }
 

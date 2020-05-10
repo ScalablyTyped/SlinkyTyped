@@ -6,9 +6,6 @@ import scala.scalajs.js.annotation._
 
 object soapStrings {
   @js.native
-  sealed trait __tns__ extends js.Object
-  
-  @js.native
   sealed trait close extends js.Object
   
   @js.native
@@ -27,6 +24,9 @@ object soapStrings {
   sealed trait message extends js.Object
   
   @js.native
+  sealed trait pause extends js.Object
+  
+  @js.native
   sealed trait readable extends js.Object
   
   @js.native
@@ -36,10 +36,11 @@ object soapStrings {
   sealed trait response extends js.Object
   
   @js.native
+  sealed trait resume extends js.Object
+  
+  @js.native
   sealed trait soapError extends js.Object
   
-  @scala.inline
-  def __tns__ : __tns__ = "__tns__".asInstanceOf[__tns__]
   @scala.inline
   def close: close = "close".asInstanceOf[close]
   @scala.inline
@@ -53,11 +54,15 @@ object soapStrings {
   @scala.inline
   def message: message = "message".asInstanceOf[message]
   @scala.inline
+  def pause: pause = "pause".asInstanceOf[pause]
+  @scala.inline
   def readable: readable = "readable".asInstanceOf[readable]
   @scala.inline
   def request: request = "request".asInstanceOf[request]
   @scala.inline
   def response: response = "response".asInstanceOf[response]
+  @scala.inline
+  def resume: resume = "resume".asInstanceOf[resume]
   @scala.inline
   def soapError: soapError = "soapError".asInstanceOf[soapError]
 }

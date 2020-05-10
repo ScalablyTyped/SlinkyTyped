@@ -29,18 +29,65 @@ trait SchemaIdentitytoolkitRelyingpartyResetPasswordRequest extends js.Object {
 
 object SchemaIdentitytoolkitRelyingpartyResetPasswordRequest {
   @scala.inline
-  def apply(
-    email: String = null,
-    newPassword: String = null,
-    oldPassword: String = null,
-    oobCode: String = null
-  ): SchemaIdentitytoolkitRelyingpartyResetPasswordRequest = {
+  def apply(): SchemaIdentitytoolkitRelyingpartyResetPasswordRequest = {
     val __obj = js.Dynamic.literal()
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (newPassword != null) __obj.updateDynamic("newPassword")(newPassword.asInstanceOf[js.Any])
-    if (oldPassword != null) __obj.updateDynamic("oldPassword")(oldPassword.asInstanceOf[js.Any])
-    if (oobCode != null) __obj.updateDynamic("oobCode")(oobCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIdentitytoolkitRelyingpartyResetPasswordRequest]
   }
+  @scala.inline
+  implicit class SchemaIdentitytoolkitRelyingpartyResetPasswordRequestOps[Self <: SchemaIdentitytoolkitRelyingpartyResetPasswordRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newPassword")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOldPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOldPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldPassword")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOobCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oobCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOobCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oobCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,29 +5,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OptionsWithThunk extends Options {
   /**
     * If `true`, this modifies the return type to be a function that is a thunk for `path.join(theFoundCacheDirectory)`.
     * @default false
     */
   @JSName("thunk")
-  var thunk_OptionsWithThunk: `true`
+  var thunk_OptionsWithThunk: `true` = js.native
 }
 
 object OptionsWithThunk {
   @scala.inline
-  def apply(
-    name: String,
-    thunk: `true`,
-    create: js.UndefOr[Boolean] = js.undefined,
-    cwd: String = null,
-    files: String | js.Array[String] = null
-  ): OptionsWithThunk = {
+  def apply(name: String, thunk: `true`): OptionsWithThunk = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], thunk = thunk.asInstanceOf[js.Any])
-    if (!js.isUndefined(create)) __obj.updateDynamic("create")(create.asInstanceOf[js.Any])
-    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
-    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionsWithThunk]
   }
+  @scala.inline
+  implicit class OptionsWithThunkOps[Self <: OptionsWithThunk] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withThunk(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thunk")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

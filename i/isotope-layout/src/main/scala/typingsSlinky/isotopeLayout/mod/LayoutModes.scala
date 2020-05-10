@@ -19,24 +19,22 @@ trait LayoutModes extends js.Object
 
 object LayoutModes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cellsByColumn: typingsSlinky.isotopeLayout.isotopeLayoutStrings.cellsByColumn = "cellsByColumn".asInstanceOf[typingsSlinky.isotopeLayout.isotopeLayoutStrings.cellsByColumn]
   @scala.inline
-  def cellsByColumn: typingsSlinky.isotopeLayout.isotopeLayoutStrings.cellsByColumn = this.cast("cellsByColumn")
+  def cellsByRow: typingsSlinky.isotopeLayout.isotopeLayoutStrings.cellsByRow = "cellsByRow".asInstanceOf[typingsSlinky.isotopeLayout.isotopeLayoutStrings.cellsByRow]
   @scala.inline
-  def cellsByRow: typingsSlinky.isotopeLayout.isotopeLayoutStrings.cellsByRow = this.cast("cellsByRow")
+  def fitColumns: typingsSlinky.isotopeLayout.isotopeLayoutStrings.fitColumns = "fitColumns".asInstanceOf[typingsSlinky.isotopeLayout.isotopeLayoutStrings.fitColumns]
   @scala.inline
-  def fitColumns: typingsSlinky.isotopeLayout.isotopeLayoutStrings.fitColumns = this.cast("fitColumns")
+  def fitRows: typingsSlinky.isotopeLayout.isotopeLayoutStrings.fitRows = "fitRows".asInstanceOf[typingsSlinky.isotopeLayout.isotopeLayoutStrings.fitRows]
   @scala.inline
-  def fitRows: typingsSlinky.isotopeLayout.isotopeLayoutStrings.fitRows = this.cast("fitRows")
+  def horiz: typingsSlinky.isotopeLayout.isotopeLayoutStrings.horiz = "horiz".asInstanceOf[typingsSlinky.isotopeLayout.isotopeLayoutStrings.horiz]
   @scala.inline
-  def horiz: typingsSlinky.isotopeLayout.isotopeLayoutStrings.horiz = this.cast("horiz")
+  def masonry: typingsSlinky.isotopeLayout.isotopeLayoutStrings.masonry = "masonry".asInstanceOf[typingsSlinky.isotopeLayout.isotopeLayoutStrings.masonry]
   @scala.inline
-  def masonry: typingsSlinky.isotopeLayout.isotopeLayoutStrings.masonry = this.cast("masonry")
+  def masonryHorizontal: typingsSlinky.isotopeLayout.isotopeLayoutStrings.masonryHorizontal = "masonryHorizontal".asInstanceOf[typingsSlinky.isotopeLayout.isotopeLayoutStrings.masonryHorizontal]
   @scala.inline
-  def masonryHorizontal: typingsSlinky.isotopeLayout.isotopeLayoutStrings.masonryHorizontal = this.cast("masonryHorizontal")
+  def packery: typingsSlinky.isotopeLayout.isotopeLayoutStrings.packery = "packery".asInstanceOf[typingsSlinky.isotopeLayout.isotopeLayoutStrings.packery]
   @scala.inline
-  def packery: typingsSlinky.isotopeLayout.isotopeLayoutStrings.packery = this.cast("packery")
-  @scala.inline
-  def vertical: typingsSlinky.isotopeLayout.isotopeLayoutStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.isotopeLayout.isotopeLayoutStrings.vertical = "vertical".asInstanceOf[typingsSlinky.isotopeLayout.isotopeLayoutStrings.vertical]
 }
 

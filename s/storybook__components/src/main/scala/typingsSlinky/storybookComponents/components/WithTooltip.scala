@@ -1,14 +1,16 @@
 package typingsSlinky.storybookComponents.components
 
+import typingsSlinky.storybookComponents.WithTooltipPurePropsstart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object WithTooltip extends SharedApply_WithTooltipPurePropsstart_473704661 {
+object WithTooltip {
   @JSImport("@storybook/components/dist/tooltip/WithTooltip", "WithTooltip")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: WithTooltipPurePropsstart): SharedBuilder_WithTooltipPurePropsstart1769123314 = new SharedBuilder_WithTooltipPurePropsstart1769123314(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: WithTooltip.type): SharedBuilder_WithTooltipPurePropsstart1769123314 = new SharedBuilder_WithTooltipPurePropsstart1769123314(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,11 +1,9 @@
 package typingsSlinky.reactDataGrid.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactDataGrid.AdazzleReactDataGrid.ActionButton
 import typingsSlinky.reactDataGrid.AdazzleReactDataGrid.ActionMenu
 import typingsSlinky.reactDataGrid.AdazzleReactDataGrid.CellCopyPasteEvent
@@ -35,106 +33,128 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactDataGrid
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^[js.Any]] {
+object ReactDataGrid {
   @JSImport("react-data-grid", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[T](
-    rowGetter: js.Array[T] | (js.Function1[/* rowIdx */ Double, T]),
-    rowsCount: Double,
-    cellNavigationMode: none_ | loopOverRow | changeRow = null,
-    columns: js.Array[Column[T]] = null,
-    contextMenu: ReactElement = null,
-    emptyRowsView: ReactComponentClass[_] = null,
-    enableCellSelect: js.UndefOr[Boolean] = js.undefined,
-    enableDragAndDrop: js.UndefOr[Boolean] = js.undefined,
-    enableRowSelect: Boolean | single | multi = null,
-    getCellActions: (/* column */ Column[T], T) => js.Array[ActionButton | ActionMenu] = null,
-    getSubRowDetails: T => SubRowDetails[_] = null,
-    getValidFilterValues: /* columnKey */ String => js.Array[_] = null,
-    headerFiltersHeight: Int | Double = null,
-    headerRowHeight: Int | Double = null,
-    minColumnWidth: Int | Double = null,
-    minHeight: Int | Double = null,
-    minWidth: Int | Double = null,
-    onAddFilter: /* filter */ Filter => Unit = null,
-    onCellCopyPaste: /* e */ CellCopyPasteEvent => Unit = null,
-    onCellDeSelected: /* coordinates */ AnonIdx => Unit = null,
-    onCellExpand: /* e */ CellExpandEvent[T] => Unit = null,
-    onCellSelected: /* coordinates */ AnonIdx => Unit = null,
-    onCellsDragged: /* e */ CellDragEvent => Unit = null,
-    onClearFilters: () => Unit = null,
-    onColumnResize: (/* index */ Double, /* width */ Double) => Unit = null,
-    onDragHandleDoubleClick: /* e */ DragHandleDoubleClickEvent[T] => Unit = null,
-    onGridRowsUpdated: /* e */ GridRowsUpdatedEvent[T] => Unit = null,
-    onGridSort: (/* sortColumn */ String, /* sortDirection */ ASC | DESC | NONE) => Unit = null,
-    onRowClick: (/* rowIdx */ Double, T) => Unit = null,
-    onRowExpandToggle: /* props */ OnRowExpandToggle => Unit = null,
-    onRowSelect: /* rows */ js.Array[T] => Unit = null,
-    onRowUpdated: /* e */ RowUpdateEvent[T] => Unit = null,
-    onScroll: /* scrollState */ ScrollState => Unit = null,
-    rowActionsCell: ReactComponentClass[_] = null,
-    rowGroupRenderer: ReactComponentClass[js.Object] = null,
-    rowHeight: Int | Double = null,
-    rowKey: String = null,
-    rowRenderer: ReactElement | ReactComponentClass[_] = null,
-    rowScrollTimeout: Int | Double = null,
-    rowSelection: AnonEnableShiftSelect[T] = null,
-    selectAllRenderer: ReactComponentClass[_] = null,
-    sortColumn: String = null,
-    sortDirection: ASC | DESC | NONE = null,
-    toolbar: ReactElement = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^[js.Any]] = {
-    val __obj = js.Dynamic.literal(rowGetter = rowGetter.asInstanceOf[js.Any], rowsCount = rowsCount.asInstanceOf[js.Any])
-    if (cellNavigationMode != null) __obj.updateDynamic("cellNavigationMode")(cellNavigationMode.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
-    if (emptyRowsView != null) __obj.updateDynamic("emptyRowsView")(emptyRowsView.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableCellSelect)) __obj.updateDynamic("enableCellSelect")(enableCellSelect.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableDragAndDrop)) __obj.updateDynamic("enableDragAndDrop")(enableDragAndDrop.asInstanceOf[js.Any])
-    if (enableRowSelect != null) __obj.updateDynamic("enableRowSelect")(enableRowSelect.asInstanceOf[js.Any])
-    if (getCellActions != null) __obj.updateDynamic("getCellActions")(js.Any.fromFunction2(getCellActions))
-    if (getSubRowDetails != null) __obj.updateDynamic("getSubRowDetails")(js.Any.fromFunction1(getSubRowDetails))
-    if (getValidFilterValues != null) __obj.updateDynamic("getValidFilterValues")(js.Any.fromFunction1(getValidFilterValues))
-    if (headerFiltersHeight != null) __obj.updateDynamic("headerFiltersHeight")(headerFiltersHeight.asInstanceOf[js.Any])
-    if (headerRowHeight != null) __obj.updateDynamic("headerRowHeight")(headerRowHeight.asInstanceOf[js.Any])
-    if (minColumnWidth != null) __obj.updateDynamic("minColumnWidth")(minColumnWidth.asInstanceOf[js.Any])
-    if (minHeight != null) __obj.updateDynamic("minHeight")(minHeight.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
-    if (onAddFilter != null) __obj.updateDynamic("onAddFilter")(js.Any.fromFunction1(onAddFilter))
-    if (onCellCopyPaste != null) __obj.updateDynamic("onCellCopyPaste")(js.Any.fromFunction1(onCellCopyPaste))
-    if (onCellDeSelected != null) __obj.updateDynamic("onCellDeSelected")(js.Any.fromFunction1(onCellDeSelected))
-    if (onCellExpand != null) __obj.updateDynamic("onCellExpand")(js.Any.fromFunction1(onCellExpand))
-    if (onCellSelected != null) __obj.updateDynamic("onCellSelected")(js.Any.fromFunction1(onCellSelected))
-    if (onCellsDragged != null) __obj.updateDynamic("onCellsDragged")(js.Any.fromFunction1(onCellsDragged))
-    if (onClearFilters != null) __obj.updateDynamic("onClearFilters")(js.Any.fromFunction0(onClearFilters))
-    if (onColumnResize != null) __obj.updateDynamic("onColumnResize")(js.Any.fromFunction2(onColumnResize))
-    if (onDragHandleDoubleClick != null) __obj.updateDynamic("onDragHandleDoubleClick")(js.Any.fromFunction1(onDragHandleDoubleClick))
-    if (onGridRowsUpdated != null) __obj.updateDynamic("onGridRowsUpdated")(js.Any.fromFunction1(onGridRowsUpdated))
-    if (onGridSort != null) __obj.updateDynamic("onGridSort")(js.Any.fromFunction2(onGridSort))
-    if (onRowClick != null) __obj.updateDynamic("onRowClick")(js.Any.fromFunction2(onRowClick))
-    if (onRowExpandToggle != null) __obj.updateDynamic("onRowExpandToggle")(js.Any.fromFunction1(onRowExpandToggle))
-    if (onRowSelect != null) __obj.updateDynamic("onRowSelect")(js.Any.fromFunction1(onRowSelect))
-    if (onRowUpdated != null) __obj.updateDynamic("onRowUpdated")(js.Any.fromFunction1(onRowUpdated))
-    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
-    if (rowActionsCell != null) __obj.updateDynamic("rowActionsCell")(rowActionsCell.asInstanceOf[js.Any])
-    if (rowGroupRenderer != null) __obj.updateDynamic("rowGroupRenderer")(rowGroupRenderer.asInstanceOf[js.Any])
-    if (rowHeight != null) __obj.updateDynamic("rowHeight")(rowHeight.asInstanceOf[js.Any])
-    if (rowKey != null) __obj.updateDynamic("rowKey")(rowKey.asInstanceOf[js.Any])
-    if (rowRenderer != null) __obj.updateDynamic("rowRenderer")(rowRenderer.asInstanceOf[js.Any])
-    if (rowScrollTimeout != null) __obj.updateDynamic("rowScrollTimeout")(rowScrollTimeout.asInstanceOf[js.Any])
-    if (rowSelection != null) __obj.updateDynamic("rowSelection")(rowSelection.asInstanceOf[js.Any])
-    if (selectAllRenderer != null) __obj.updateDynamic("selectAllRenderer")(selectAllRenderer.asInstanceOf[js.Any])
-    if (sortColumn != null) __obj.updateDynamic("sortColumn")(sortColumn.asInstanceOf[js.Any])
-    if (sortDirection != null) __obj.updateDynamic("sortDirection")(sortDirection.asInstanceOf[js.Any])
-    if (toolbar != null) __obj.updateDynamic("toolbar")(toolbar.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactDataGrid.mod.^[js.Any]]]
+  @scala.inline
+  class Builder[T] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^[js.Any]] {
+    @scala.inline
+    def cellNavigationMode(value: none_ | loopOverRow | changeRow): this.type = set("cellNavigationMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columns(value: js.Array[Column[T]]): this.type = set("columns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contextMenu(value: ReactElement): this.type = set("contextMenu", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emptyRowsViewFunctionComponent(value: ReactComponentClass[_]): this.type = set("emptyRowsView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emptyRowsViewComponentClass(value: ReactComponentClass[_]): this.type = set("emptyRowsView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emptyRowsView(value: ReactComponentClass[_]): this.type = set("emptyRowsView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableCellSelect(value: Boolean): this.type = set("enableCellSelect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableDragAndDrop(value: Boolean): this.type = set("enableDragAndDrop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableRowSelect(value: Boolean | single | multi): this.type = set("enableRowSelect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getCellActions(value: (/* column */ Column[T], T) => js.Array[ActionButton | ActionMenu]): this.type = set("getCellActions", js.Any.fromFunction2(value))
+    @scala.inline
+    def getSubRowDetails(value: T => SubRowDetails[_]): this.type = set("getSubRowDetails", js.Any.fromFunction1(value))
+    @scala.inline
+    def getValidFilterValues(value: /* columnKey */ String => js.Array[_]): this.type = set("getValidFilterValues", js.Any.fromFunction1(value))
+    @scala.inline
+    def headerFiltersHeight(value: Double): this.type = set("headerFiltersHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerRowHeight(value: Double): this.type = set("headerRowHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minColumnWidth(value: Double): this.type = set("minColumnWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minHeight(value: Double): this.type = set("minHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minWidth(value: Double): this.type = set("minWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAddFilter(value: /* filter */ Filter => Unit): this.type = set("onAddFilter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCellCopyPaste(value: /* e */ CellCopyPasteEvent => Unit): this.type = set("onCellCopyPaste", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCellDeSelected(value: /* coordinates */ AnonIdx => Unit): this.type = set("onCellDeSelected", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCellExpand(value: /* e */ CellExpandEvent[T] => Unit): this.type = set("onCellExpand", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCellSelected(value: /* coordinates */ AnonIdx => Unit): this.type = set("onCellSelected", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCellsDragged(value: /* e */ CellDragEvent => Unit): this.type = set("onCellsDragged", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClearFilters(value: () => Unit): this.type = set("onClearFilters", js.Any.fromFunction0(value))
+    @scala.inline
+    def onColumnResize(value: (/* index */ Double, /* width */ Double) => Unit): this.type = set("onColumnResize", js.Any.fromFunction2(value))
+    @scala.inline
+    def onDragHandleDoubleClick(value: /* e */ DragHandleDoubleClickEvent[T] => Unit): this.type = set("onDragHandleDoubleClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onGridRowsUpdated(value: /* e */ GridRowsUpdatedEvent[T] => Unit): this.type = set("onGridRowsUpdated", js.Any.fromFunction1(value))
+    @scala.inline
+    def onGridSort(value: (/* sortColumn */ String, /* sortDirection */ ASC | DESC | NONE) => Unit): this.type = set("onGridSort", js.Any.fromFunction2(value))
+    @scala.inline
+    def onRowClick(value: (/* rowIdx */ Double, T) => Unit): this.type = set("onRowClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onRowExpandToggle(value: /* props */ OnRowExpandToggle => Unit): this.type = set("onRowExpandToggle", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRowSelect(value: /* rows */ js.Array[T] => Unit): this.type = set("onRowSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRowUpdated(value: /* e */ RowUpdateEvent[T] => Unit): this.type = set("onRowUpdated", js.Any.fromFunction1(value))
+    @scala.inline
+    def onScroll(value: /* scrollState */ ScrollState => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
+    @scala.inline
+    def rowActionsCellFunctionComponent(value: ReactComponentClass[_]): this.type = set("rowActionsCell", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowActionsCellComponentClass(value: ReactComponentClass[_]): this.type = set("rowActionsCell", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowActionsCell(value: ReactComponentClass[_]): this.type = set("rowActionsCell", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowGroupRendererFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("rowGroupRenderer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowGroupRendererComponentClass(value: ReactComponentClass[js.Object]): this.type = set("rowGroupRenderer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowGroupRenderer(value: ReactComponentClass[js.Object]): this.type = set("rowGroupRenderer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowHeight(value: Double): this.type = set("rowHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowKey(value: String): this.type = set("rowKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowRendererReactElement(value: ReactElement): this.type = set("rowRenderer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowRendererFunctionComponent(value: ReactComponentClass[_]): this.type = set("rowRenderer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowRendererComponentClass(value: ReactComponentClass[_]): this.type = set("rowRenderer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowRenderer(value: ReactElement | ReactComponentClass[_]): this.type = set("rowRenderer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowScrollTimeout(value: Double): this.type = set("rowScrollTimeout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowSelection(value: AnonEnableShiftSelect[T]): this.type = set("rowSelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectAllRendererFunctionComponent(value: ReactComponentClass[_]): this.type = set("selectAllRenderer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectAllRendererComponentClass(value: ReactComponentClass[_]): this.type = set("selectAllRenderer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectAllRenderer(value: ReactComponentClass[_]): this.type = set("selectAllRenderer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sortColumn(value: String): this.type = set("sortColumn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sortDirection(value: ASC | DESC | NONE): this.type = set("sortDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def toolbar(value: ReactElement): this.type = set("toolbar", value.asInstanceOf[js.Any])
   }
-  type Props = GridProps[js.Any]
+  
+  def withProps[T](p: GridProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](rowGetter: js.Array[T] | (js.Function1[/* rowIdx */ Double, T]), rowsCount: Double): Builder[T] = {
+    val __props = js.Dynamic.literal(rowGetter = rowGetter.asInstanceOf[js.Any], rowsCount = rowsCount.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[GridProps[T]]))
+  }
 }
 

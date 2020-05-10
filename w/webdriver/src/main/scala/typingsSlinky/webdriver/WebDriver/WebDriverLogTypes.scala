@@ -17,18 +17,16 @@ trait WebDriverLogTypes extends js.Object
 
 object WebDriverLogTypes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def debug: typingsSlinky.webdriver.webdriverStrings.debug = "debug".asInstanceOf[typingsSlinky.webdriver.webdriverStrings.debug]
   @scala.inline
-  def debug: typingsSlinky.webdriver.webdriverStrings.debug = this.cast("debug")
+  def error: typingsSlinky.webdriver.webdriverStrings.error = "error".asInstanceOf[typingsSlinky.webdriver.webdriverStrings.error]
   @scala.inline
-  def error: typingsSlinky.webdriver.webdriverStrings.error = this.cast("error")
+  def info: info_ = "info".asInstanceOf[info_]
   @scala.inline
-  def info: info_ = this.cast("info")
+  def silent: typingsSlinky.webdriver.webdriverStrings.silent = "silent".asInstanceOf[typingsSlinky.webdriver.webdriverStrings.silent]
   @scala.inline
-  def silent: typingsSlinky.webdriver.webdriverStrings.silent = this.cast("silent")
+  def trace: typingsSlinky.webdriver.webdriverStrings.trace = "trace".asInstanceOf[typingsSlinky.webdriver.webdriverStrings.trace]
   @scala.inline
-  def trace: typingsSlinky.webdriver.webdriverStrings.trace = this.cast("trace")
-  @scala.inline
-  def warn: typingsSlinky.webdriver.webdriverStrings.warn = this.cast("warn")
+  def warn: typingsSlinky.webdriver.webdriverStrings.warn = "warn".asInstanceOf[typingsSlinky.webdriver.webdriverStrings.warn]
 }
 

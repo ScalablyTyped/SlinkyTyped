@@ -17,20 +17,18 @@ trait DataGroupingApproximationValue extends js.Object
 
 object DataGroupingApproximationValue {
   @scala.inline
-  def average: typingsSlinky.highcharts.highchartsStrings.average = this.cast("average")
+  def average: typingsSlinky.highcharts.highchartsStrings.average = "average".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.average]
   @scala.inline
-  def averages: typingsSlinky.highcharts.highchartsStrings.averages = this.cast("averages")
+  def averages: typingsSlinky.highcharts.highchartsStrings.averages = "averages".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.averages]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def close: typingsSlinky.highcharts.highchartsStrings.close = "close".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.close]
   @scala.inline
-  def close: typingsSlinky.highcharts.highchartsStrings.close = this.cast("close")
+  def high: typingsSlinky.highcharts.highchartsStrings.high = "high".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.high]
   @scala.inline
-  def high: typingsSlinky.highcharts.highchartsStrings.high = this.cast("high")
+  def low: typingsSlinky.highcharts.highchartsStrings.low = "low".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.low]
   @scala.inline
-  def low: typingsSlinky.highcharts.highchartsStrings.low = this.cast("low")
+  def open: typingsSlinky.highcharts.highchartsStrings.open = "open".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.open]
   @scala.inline
-  def open: typingsSlinky.highcharts.highchartsStrings.open = this.cast("open")
-  @scala.inline
-  def sum: typingsSlinky.highcharts.highchartsStrings.sum = this.cast("sum")
+  def sum: typingsSlinky.highcharts.highchartsStrings.sum = "sum".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.sum]
 }
 

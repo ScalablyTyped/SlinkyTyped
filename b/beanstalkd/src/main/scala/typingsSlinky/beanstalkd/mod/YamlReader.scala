@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait YamlReader extends BasicReader
 
 object YamlReader {
@@ -14,7 +15,6 @@ object YamlReader {
     parseData: String => js.Any
   ): YamlReader = {
     val __obj = js.Dynamic.literal(handle = js.Any.fromFunction4(handle), parseData = js.Any.fromFunction1(parseData))
-  
     __obj.asInstanceOf[YamlReader]
   }
 }

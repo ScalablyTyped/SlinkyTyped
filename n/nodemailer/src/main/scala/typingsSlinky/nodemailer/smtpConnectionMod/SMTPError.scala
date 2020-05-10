@@ -5,39 +5,65 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SMTPError extends ErrnoException {
   /** command which provoked an error */
-  var command: js.UndefOr[String] = js.undefined
+  var command: js.UndefOr[String] = js.native
   /** the last response received from the server (if the error is caused by an error response from the server) */
-  var response: js.UndefOr[String] = js.undefined
+  var response: js.UndefOr[String] = js.native
   /** the numeric response code of the response string (if available) */
-  var responseCode: js.UndefOr[Double] = js.undefined
+  var responseCode: js.UndefOr[Double] = js.native
 }
 
 object SMTPError {
   @scala.inline
-  def apply(
-    message: String,
-    name: String,
-    code: String = null,
-    command: String = null,
-    errno: Int | Double = null,
-    path: String = null,
-    response: String = null,
-    responseCode: Int | Double = null,
-    stack: String = null,
-    syscall: String = null
-  ): SMTPError = {
+  def apply(message: String, name: String): SMTPError = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
-    if (command != null) __obj.updateDynamic("command")(command.asInstanceOf[js.Any])
-    if (errno != null) __obj.updateDynamic("errno")(errno.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (response != null) __obj.updateDynamic("response")(response.asInstanceOf[js.Any])
-    if (responseCode != null) __obj.updateDynamic("responseCode")(responseCode.asInstanceOf[js.Any])
-    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
-    if (syscall != null) __obj.updateDynamic("syscall")(syscall.asInstanceOf[js.Any])
     __obj.asInstanceOf[SMTPError]
   }
+  @scala.inline
+  implicit class SMTPErrorOps[Self <: SMTPError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommand(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponse(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 /**
   * A dialog renderer.
   */
+@js.native
 trait IRenderer extends js.Object {
   /**
     * Create the body of the dialog.
@@ -17,7 +18,7 @@ trait IRenderer extends js.Object {
     *
     * @returns A widget for the body.
     */
-  def createBody(body: Body[_]): Widget
+  def createBody(body: Body[_]): Widget = js.native
   /**
     * Create a button node for the dialog.
     *
@@ -25,7 +26,7 @@ trait IRenderer extends js.Object {
     *
     * @returns A node for the button.
     */
-  def createButtonNode(button: IButton): HTMLElement
+  def createButtonNode(button: IButton): HTMLElement = js.native
   /**
     * Create the footer of the dialog.
     *
@@ -33,7 +34,7 @@ trait IRenderer extends js.Object {
     *
     * @returns A widget for the footer.
     */
-  def createFooter(buttons: js.Array[HTMLElement]): Widget
+  def createFooter(buttons: js.Array[HTMLElement]): Widget = js.native
   /**
     * Create the header of the dialog.
     *
@@ -41,7 +42,7 @@ trait IRenderer extends js.Object {
     *
     * @returns A widget for the dialog header.
     */
-  def createHeader(title: Header): Widget
+  def createHeader(title: Header): Widget = js.native
 }
 
 object IRenderer {
@@ -53,8 +54,39 @@ object IRenderer {
     createHeader: Header => Widget
   ): IRenderer = {
     val __obj = js.Dynamic.literal(createBody = js.Any.fromFunction1(createBody), createButtonNode = js.Any.fromFunction1(createButtonNode), createFooter = js.Any.fromFunction1(createFooter), createHeader = js.Any.fromFunction1(createHeader))
-  
     __obj.asInstanceOf[IRenderer]
   }
+  @scala.inline
+  implicit class IRendererOps[Self <: IRenderer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateBody(value: Body[_] => Widget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createBody")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateButtonNode(value: IButton => HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createButtonNode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateFooter(value: js.Array[HTMLElement] => Widget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createFooter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateHeader(value: Header => Widget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createHeader")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

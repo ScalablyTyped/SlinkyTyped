@@ -30,20 +30,77 @@ trait FailedServiceActionAssociation extends js.Object {
 
 object FailedServiceActionAssociation {
   @scala.inline
-  def apply(
-    ErrorCode: ServiceActionAssociationErrorCode = null,
-    ErrorMessage: ServiceActionAssociationErrorMessage = null,
-    ProductId: Id = null,
-    ProvisioningArtifactId: Id = null,
-    ServiceActionId: Id = null
-  ): FailedServiceActionAssociation = {
+  def apply(): FailedServiceActionAssociation = {
     val __obj = js.Dynamic.literal()
-    if (ErrorCode != null) __obj.updateDynamic("ErrorCode")(ErrorCode.asInstanceOf[js.Any])
-    if (ErrorMessage != null) __obj.updateDynamic("ErrorMessage")(ErrorMessage.asInstanceOf[js.Any])
-    if (ProductId != null) __obj.updateDynamic("ProductId")(ProductId.asInstanceOf[js.Any])
-    if (ProvisioningArtifactId != null) __obj.updateDynamic("ProvisioningArtifactId")(ProvisioningArtifactId.asInstanceOf[js.Any])
-    if (ServiceActionId != null) __obj.updateDynamic("ServiceActionId")(ServiceActionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[FailedServiceActionAssociation]
   }
+  @scala.inline
+  implicit class FailedServiceActionAssociationOps[Self <: FailedServiceActionAssociation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorCode(value: ServiceActionAssociationErrorCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorMessage(value: ServiceActionAssociationErrorMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisioningArtifactId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningArtifactId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisioningArtifactId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningArtifactId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceActionId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceActionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceActionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceActionId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

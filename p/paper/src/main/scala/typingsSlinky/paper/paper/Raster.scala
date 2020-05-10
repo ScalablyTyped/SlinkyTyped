@@ -120,14 +120,14 @@ class Raster () extends Item {
     */
   def clear(): Unit = js.native
   def createImageData(size: Size): ImageData = js.native
-  def drawImage(image: typingsSlinky.std.HTMLCanvasElement, point: Point): Unit = js.native
+  def drawImage(image: HTMLCanvasElement, point: Point): Unit = js.native
   /** 
     * Draws an image on the raster.
     * 
     * @param point - the offset of the image as a point in pixel
     * coordinates
     */
-  def drawImage(image: typingsSlinky.std.HTMLImageElement, point: Point): Unit = js.native
+  def drawImage(image: HTMLImageElement, point: Point): Unit = js.native
   /** 
     * Calculates the average color of the image within the given path,
     * rectangle or point. This can be used for creating raster image

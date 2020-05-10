@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PullMessage extends js.Object {
   /** A data payload consumed by the task worker to execute the task. */
-  var payload: js.UndefOr[String] = js.undefined
+  var payload: js.UndefOr[String] = js.native
   /**
     * A meta-data tag for this task.
     *
@@ -15,16 +16,46 @@ trait PullMessage extends js.Object {
     *
     * The tag must be less than 500 bytes.
     */
-  var tag: js.UndefOr[String] = js.undefined
+  var tag: js.UndefOr[String] = js.native
 }
 
 object PullMessage {
   @scala.inline
-  def apply(payload: String = null, tag: String = null): PullMessage = {
+  def apply(): PullMessage = {
     val __obj = js.Dynamic.literal()
-    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
-    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[PullMessage]
   }
+  @scala.inline
+  implicit class PullMessageOps[Self <: PullMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPayload(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPayload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

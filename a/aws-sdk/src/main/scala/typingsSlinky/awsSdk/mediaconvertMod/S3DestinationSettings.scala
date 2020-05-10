@@ -18,11 +18,41 @@ trait S3DestinationSettings extends js.Object {
 
 object S3DestinationSettings {
   @scala.inline
-  def apply(AccessControl: S3DestinationAccessControl = null, Encryption: S3EncryptionSettings = null): S3DestinationSettings = {
+  def apply(): S3DestinationSettings = {
     val __obj = js.Dynamic.literal()
-    if (AccessControl != null) __obj.updateDynamic("AccessControl")(AccessControl.asInstanceOf[js.Any])
-    if (Encryption != null) __obj.updateDynamic("Encryption")(Encryption.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3DestinationSettings]
   }
+  @scala.inline
+  implicit class S3DestinationSettingsOps[Self <: S3DestinationSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessControl(value: S3DestinationAccessControl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryption(value: S3EncryptionSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

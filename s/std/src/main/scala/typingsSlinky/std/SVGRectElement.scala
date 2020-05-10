@@ -18,5 +18,6 @@ trait SVGRectElement extends SVGGeometryElement {
 
 @JSGlobal("SVGRectElement")
 @js.native
-object SVGRectElement extends Instantiable0[SVGRectElement]
+object SVGRectElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGRectElement]
 

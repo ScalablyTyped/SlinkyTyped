@@ -25,5 +25,6 @@ trait HTMLProgressElement extends HTMLElement {
 
 @JSGlobal("HTMLProgressElement")
 @js.native
-object HTMLProgressElement extends Instantiable0[HTMLProgressElement]
+object HTMLProgressElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLProgressElement]
 

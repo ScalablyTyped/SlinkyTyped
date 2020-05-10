@@ -18,22 +18,20 @@ trait ButtonAppearances extends js.Object
 
 object ButtonAppearances {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def danger: typingsSlinky.atlaskitButton.atlaskitButtonStrings.danger = "danger".asInstanceOf[typingsSlinky.atlaskitButton.atlaskitButtonStrings.danger]
   @scala.inline
-  def danger: typingsSlinky.atlaskitButton.atlaskitButtonStrings.danger = this.cast("danger")
+  def default: typingsSlinky.atlaskitButton.atlaskitButtonStrings.default = "default".asInstanceOf[typingsSlinky.atlaskitButton.atlaskitButtonStrings.default]
   @scala.inline
-  def default: typingsSlinky.atlaskitButton.atlaskitButtonStrings.default = this.cast("default")
+  def help: typingsSlinky.atlaskitButton.atlaskitButtonStrings.help = "help".asInstanceOf[typingsSlinky.atlaskitButton.atlaskitButtonStrings.help]
   @scala.inline
-  def help: typingsSlinky.atlaskitButton.atlaskitButtonStrings.help = this.cast("help")
+  def link: typingsSlinky.atlaskitButton.atlaskitButtonStrings.link = "link".asInstanceOf[typingsSlinky.atlaskitButton.atlaskitButtonStrings.link]
   @scala.inline
-  def link: typingsSlinky.atlaskitButton.atlaskitButtonStrings.link = this.cast("link")
+  def primary: typingsSlinky.atlaskitButton.atlaskitButtonStrings.primary = "primary".asInstanceOf[typingsSlinky.atlaskitButton.atlaskitButtonStrings.primary]
   @scala.inline
-  def primary: typingsSlinky.atlaskitButton.atlaskitButtonStrings.primary = this.cast("primary")
+  def subtle: typingsSlinky.atlaskitButton.atlaskitButtonStrings.subtle = "subtle".asInstanceOf[typingsSlinky.atlaskitButton.atlaskitButtonStrings.subtle]
   @scala.inline
-  def subtle: typingsSlinky.atlaskitButton.atlaskitButtonStrings.subtle = this.cast("subtle")
+  def `subtle-link`: typingsSlinky.atlaskitButton.atlaskitButtonStrings.`subtle-link` = "subtle-link".asInstanceOf[typingsSlinky.atlaskitButton.atlaskitButtonStrings.`subtle-link`]
   @scala.inline
-  def `subtle-link`: typingsSlinky.atlaskitButton.atlaskitButtonStrings.`subtle-link` = this.cast("subtle-link")
-  @scala.inline
-  def warning: typingsSlinky.atlaskitButton.atlaskitButtonStrings.warning = this.cast("warning")
+  def warning: typingsSlinky.atlaskitButton.atlaskitButtonStrings.warning = "warning".asInstanceOf[typingsSlinky.atlaskitButton.atlaskitButtonStrings.warning]
 }
 

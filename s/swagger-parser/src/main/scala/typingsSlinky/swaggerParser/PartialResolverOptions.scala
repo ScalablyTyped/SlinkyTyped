@@ -7,32 +7,86 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<swagger-parser.swagger-parser.ResolverOptions> */
+@js.native
 trait PartialResolverOptions extends js.Object {
   var canRead: js.UndefOr[
     Boolean | js.RegExp | String | js.Array[String] | (js.Function1[/* file */ FileInfo, Boolean])
-  ] = js.undefined
-  var order: js.UndefOr[Double] = js.undefined
+  ] = js.native
+  var order: js.UndefOr[Double] = js.native
   var read: js.UndefOr[
     js.Function2[
       /* file */ FileInfo, 
       /* callback */ js.UndefOr[js.Function2[/* error */ js.Error | Null, /* data */ String | Null, _]], 
       String | Buffer | (js.Promise[String | Buffer])
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object PartialResolverOptions {
   @scala.inline
-  def apply(
-    canRead: Boolean | js.RegExp | String | js.Array[String] | (js.Function1[/* file */ FileInfo, Boolean]) = null,
-    order: Int | Double = null,
-    read: (/* file */ FileInfo, /* callback */ js.UndefOr[js.Function2[/* error */ js.Error | Null, /* data */ String | Null, _]]) => String | Buffer | (js.Promise[String | Buffer]) = null
-  ): PartialResolverOptions = {
+  def apply(): PartialResolverOptions = {
     val __obj = js.Dynamic.literal()
-    if (canRead != null) __obj.updateDynamic("canRead")(canRead.asInstanceOf[js.Any])
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
-    if (read != null) __obj.updateDynamic("read")(js.Any.fromFunction2(read))
     __obj.asInstanceOf[PartialResolverOptions]
   }
+  @scala.inline
+  implicit class PartialResolverOptionsOps[Self <: PartialResolverOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCanReadFunction1(value: /* file */ FileInfo => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canRead")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCanReadRegExp(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canRead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCanRead(
+      value: Boolean | js.RegExp | String | js.Array[String] | (js.Function1[/* file */ FileInfo, Boolean])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canRead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanRead: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canRead")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrder(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRead(
+      value: (/* file */ FileInfo, /* callback */ js.UndefOr[js.Function2[/* error */ js.Error | Null, /* data */ String | Null, _]]) => String | Buffer | (js.Promise[String | Buffer])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRead: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

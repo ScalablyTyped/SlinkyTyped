@@ -17,10 +17,29 @@ trait SchemaGoogleCloudVisionV1p1beta1LocationInfo extends js.Object {
 
 object SchemaGoogleCloudVisionV1p1beta1LocationInfo {
   @scala.inline
-  def apply(latLng: SchemaLatLng = null): SchemaGoogleCloudVisionV1p1beta1LocationInfo = {
+  def apply(): SchemaGoogleCloudVisionV1p1beta1LocationInfo = {
     val __obj = js.Dynamic.literal()
-    if (latLng != null) __obj.updateDynamic("latLng")(latLng.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p1beta1LocationInfo]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVisionV1p1beta1LocationInfoOps[Self <: SchemaGoogleCloudVisionV1p1beta1LocationInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLatLng(value: SchemaLatLng): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latLng")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatLng: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latLng")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

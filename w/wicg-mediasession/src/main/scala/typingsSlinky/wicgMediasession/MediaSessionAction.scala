@@ -16,18 +16,16 @@ trait MediaSessionAction extends js.Object
 
 object MediaSessionAction {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def nexttrack: typingsSlinky.wicgMediasession.wicgMediasessionStrings.nexttrack = "nexttrack".asInstanceOf[typingsSlinky.wicgMediasession.wicgMediasessionStrings.nexttrack]
   @scala.inline
-  def nexttrack: typingsSlinky.wicgMediasession.wicgMediasessionStrings.nexttrack = this.cast("nexttrack")
+  def pause: typingsSlinky.wicgMediasession.wicgMediasessionStrings.pause = "pause".asInstanceOf[typingsSlinky.wicgMediasession.wicgMediasessionStrings.pause]
   @scala.inline
-  def pause: typingsSlinky.wicgMediasession.wicgMediasessionStrings.pause = this.cast("pause")
+  def play: typingsSlinky.wicgMediasession.wicgMediasessionStrings.play = "play".asInstanceOf[typingsSlinky.wicgMediasession.wicgMediasessionStrings.play]
   @scala.inline
-  def play: typingsSlinky.wicgMediasession.wicgMediasessionStrings.play = this.cast("play")
+  def previoustrack: typingsSlinky.wicgMediasession.wicgMediasessionStrings.previoustrack = "previoustrack".asInstanceOf[typingsSlinky.wicgMediasession.wicgMediasessionStrings.previoustrack]
   @scala.inline
-  def previoustrack: typingsSlinky.wicgMediasession.wicgMediasessionStrings.previoustrack = this.cast("previoustrack")
+  def seekbackward: typingsSlinky.wicgMediasession.wicgMediasessionStrings.seekbackward = "seekbackward".asInstanceOf[typingsSlinky.wicgMediasession.wicgMediasessionStrings.seekbackward]
   @scala.inline
-  def seekbackward: typingsSlinky.wicgMediasession.wicgMediasessionStrings.seekbackward = this.cast("seekbackward")
-  @scala.inline
-  def seekforward: typingsSlinky.wicgMediasession.wicgMediasessionStrings.seekforward = this.cast("seekforward")
+  def seekforward: typingsSlinky.wicgMediasession.wicgMediasessionStrings.seekforward = "seekforward".asInstanceOf[typingsSlinky.wicgMediasession.wicgMediasessionStrings.seekforward]
 }
 

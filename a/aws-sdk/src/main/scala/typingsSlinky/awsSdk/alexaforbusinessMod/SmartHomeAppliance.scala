@@ -22,16 +22,53 @@ trait SmartHomeAppliance extends js.Object {
 
 object SmartHomeAppliance {
   @scala.inline
-  def apply(
-    Description: ApplianceDescription = null,
-    FriendlyName: ApplianceFriendlyName = null,
-    ManufacturerName: ApplianceManufacturerName = null
-  ): SmartHomeAppliance = {
+  def apply(): SmartHomeAppliance = {
     val __obj = js.Dynamic.literal()
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (FriendlyName != null) __obj.updateDynamic("FriendlyName")(FriendlyName.asInstanceOf[js.Any])
-    if (ManufacturerName != null) __obj.updateDynamic("ManufacturerName")(ManufacturerName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SmartHomeAppliance]
   }
+  @scala.inline
+  implicit class SmartHomeApplianceOps[Self <: SmartHomeAppliance] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: ApplianceDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFriendlyName(value: ApplianceFriendlyName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FriendlyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFriendlyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FriendlyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManufacturerName(value: ApplianceManufacturerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManufacturerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManufacturerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManufacturerName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

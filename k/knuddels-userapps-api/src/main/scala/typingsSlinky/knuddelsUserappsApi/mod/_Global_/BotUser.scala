@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 /**
 	 * @see https://developer.knuddels.de/docs/classes/BotUser.html
 	 */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.knuddelsUserappsApi.mod._KnuddelsJsonData because Already inherited
 - typingsSlinky.knuddelsUserappsApi.mod._KnuddelsSerializable because Already inherited */ @JSGlobal("BotUser")
 @js.native

@@ -4,75 +4,283 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAddressU extends js.Object {
-  var addressU: js.UndefOr[Double] = js.undefined
-  var addressV: js.UndefOr[Double] = js.undefined
-  var addressW: js.UndefOr[Double] = js.undefined
-  var anisotropy: js.UndefOr[Double] = js.undefined
-  var compareFunc: js.UndefOr[Double] = js.undefined
-  var compareOnRead: js.UndefOr[Boolean] = js.undefined
-  var cubemap: js.UndefOr[Boolean] = js.undefined
-  var depth: js.UndefOr[Double] = js.undefined
-  var fixCubemapSeams: js.UndefOr[Boolean] = js.undefined
-  var flipY: js.UndefOr[Boolean] = js.undefined
-  var format: js.UndefOr[Double] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var magFilter: js.UndefOr[Double] = js.undefined
-  var minFilter: js.UndefOr[Double] = js.undefined
-  var mipmaps: js.UndefOr[Boolean] = js.undefined
-  var premultiplyAlpha: js.UndefOr[Boolean] = js.undefined
-  var rgbm: js.UndefOr[Boolean] = js.undefined
-  var swizzleGGGR: js.UndefOr[Boolean] = js.undefined
-  var volume: js.UndefOr[Boolean] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
+  var addressU: js.UndefOr[Double] = js.native
+  var addressV: js.UndefOr[Double] = js.native
+  var addressW: js.UndefOr[Double] = js.native
+  var anisotropy: js.UndefOr[Double] = js.native
+  var compareFunc: js.UndefOr[Double] = js.native
+  var compareOnRead: js.UndefOr[Boolean] = js.native
+  var cubemap: js.UndefOr[Boolean] = js.native
+  var depth: js.UndefOr[Double] = js.native
+  var fixCubemapSeams: js.UndefOr[Boolean] = js.native
+  var flipY: js.UndefOr[Boolean] = js.native
+  var format: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var magFilter: js.UndefOr[Double] = js.native
+  var minFilter: js.UndefOr[Double] = js.native
+  var mipmaps: js.UndefOr[Boolean] = js.native
+  var premultiplyAlpha: js.UndefOr[Boolean] = js.native
+  var rgbm: js.UndefOr[Boolean] = js.native
+  var swizzleGGGR: js.UndefOr[Boolean] = js.native
+  var volume: js.UndefOr[Boolean] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object AnonAddressU {
   @scala.inline
-  def apply(
-    addressU: Int | Double = null,
-    addressV: Int | Double = null,
-    addressW: Int | Double = null,
-    anisotropy: Int | Double = null,
-    compareFunc: Int | Double = null,
-    compareOnRead: js.UndefOr[Boolean] = js.undefined,
-    cubemap: js.UndefOr[Boolean] = js.undefined,
-    depth: Int | Double = null,
-    fixCubemapSeams: js.UndefOr[Boolean] = js.undefined,
-    flipY: js.UndefOr[Boolean] = js.undefined,
-    format: Int | Double = null,
-    height: Int | Double = null,
-    magFilter: Int | Double = null,
-    minFilter: Int | Double = null,
-    mipmaps: js.UndefOr[Boolean] = js.undefined,
-    premultiplyAlpha: js.UndefOr[Boolean] = js.undefined,
-    rgbm: js.UndefOr[Boolean] = js.undefined,
-    swizzleGGGR: js.UndefOr[Boolean] = js.undefined,
-    volume: js.UndefOr[Boolean] = js.undefined,
-    width: Int | Double = null
-  ): AnonAddressU = {
+  def apply(): AnonAddressU = {
     val __obj = js.Dynamic.literal()
-    if (addressU != null) __obj.updateDynamic("addressU")(addressU.asInstanceOf[js.Any])
-    if (addressV != null) __obj.updateDynamic("addressV")(addressV.asInstanceOf[js.Any])
-    if (addressW != null) __obj.updateDynamic("addressW")(addressW.asInstanceOf[js.Any])
-    if (anisotropy != null) __obj.updateDynamic("anisotropy")(anisotropy.asInstanceOf[js.Any])
-    if (compareFunc != null) __obj.updateDynamic("compareFunc")(compareFunc.asInstanceOf[js.Any])
-    if (!js.isUndefined(compareOnRead)) __obj.updateDynamic("compareOnRead")(compareOnRead.asInstanceOf[js.Any])
-    if (!js.isUndefined(cubemap)) __obj.updateDynamic("cubemap")(cubemap.asInstanceOf[js.Any])
-    if (depth != null) __obj.updateDynamic("depth")(depth.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixCubemapSeams)) __obj.updateDynamic("fixCubemapSeams")(fixCubemapSeams.asInstanceOf[js.Any])
-    if (!js.isUndefined(flipY)) __obj.updateDynamic("flipY")(flipY.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (magFilter != null) __obj.updateDynamic("magFilter")(magFilter.asInstanceOf[js.Any])
-    if (minFilter != null) __obj.updateDynamic("minFilter")(minFilter.asInstanceOf[js.Any])
-    if (!js.isUndefined(mipmaps)) __obj.updateDynamic("mipmaps")(mipmaps.asInstanceOf[js.Any])
-    if (!js.isUndefined(premultiplyAlpha)) __obj.updateDynamic("premultiplyAlpha")(premultiplyAlpha.asInstanceOf[js.Any])
-    if (!js.isUndefined(rgbm)) __obj.updateDynamic("rgbm")(rgbm.asInstanceOf[js.Any])
-    if (!js.isUndefined(swizzleGGGR)) __obj.updateDynamic("swizzleGGGR")(swizzleGGGR.asInstanceOf[js.Any])
-    if (!js.isUndefined(volume)) __obj.updateDynamic("volume")(volume.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAddressU]
   }
+  @scala.inline
+  implicit class AnonAddressUOps[Self <: AnonAddressU] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddressU(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressU")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddressU: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressU")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddressV(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressV")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddressV: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressV")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddressW(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressW")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddressW: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressW")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnisotropy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anisotropy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnisotropy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anisotropy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompareFunc(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareFunc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompareFunc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareFunc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompareOnRead(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareOnRead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompareOnRead: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareOnRead")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCubemap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cubemap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCubemap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cubemap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDepth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixCubemapSeams(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixCubemapSeams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixCubemapSeams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixCubemapSeams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlipY(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flipY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlipY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flipY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMagFilter(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMagFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinFilter(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMipmaps(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mipmaps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMipmaps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mipmaps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPremultiplyAlpha(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("premultiplyAlpha")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPremultiplyAlpha: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("premultiplyAlpha")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRgbm(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rgbm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRgbm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rgbm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSwizzleGGGR(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swizzleGGGR")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSwizzleGGGR: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swizzleGGGR")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolume(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolume: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

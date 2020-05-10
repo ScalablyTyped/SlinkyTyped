@@ -42,23 +42,95 @@ trait StartBackupJobInput extends js.Object {
 
 object StartBackupJobInput {
   @scala.inline
-  def apply(
-    BackupVaultName: BackupVaultName,
-    IamRoleArn: IAMRoleArn,
-    ResourceArn: ARN,
-    CompleteWindowMinutes: Int | Double = null,
-    IdempotencyToken: String = null,
-    Lifecycle: Lifecycle = null,
-    RecoveryPointTags: Tags = null,
-    StartWindowMinutes: Int | Double = null
-  ): StartBackupJobInput = {
+  def apply(BackupVaultName: BackupVaultName, IamRoleArn: IAMRoleArn, ResourceArn: ARN): StartBackupJobInput = {
     val __obj = js.Dynamic.literal(BackupVaultName = BackupVaultName.asInstanceOf[js.Any], IamRoleArn = IamRoleArn.asInstanceOf[js.Any], ResourceArn = ResourceArn.asInstanceOf[js.Any])
-    if (CompleteWindowMinutes != null) __obj.updateDynamic("CompleteWindowMinutes")(CompleteWindowMinutes.asInstanceOf[js.Any])
-    if (IdempotencyToken != null) __obj.updateDynamic("IdempotencyToken")(IdempotencyToken.asInstanceOf[js.Any])
-    if (Lifecycle != null) __obj.updateDynamic("Lifecycle")(Lifecycle.asInstanceOf[js.Any])
-    if (RecoveryPointTags != null) __obj.updateDynamic("RecoveryPointTags")(RecoveryPointTags.asInstanceOf[js.Any])
-    if (StartWindowMinutes != null) __obj.updateDynamic("StartWindowMinutes")(StartWindowMinutes.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartBackupJobInput]
   }
+  @scala.inline
+  implicit class StartBackupJobInputOps[Self <: StartBackupJobInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackupVaultName(value: BackupVaultName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupVaultName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIamRoleArn(value: IAMRoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceArn(value: ARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCompleteWindowMinutes(value: WindowMinutes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompleteWindowMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompleteWindowMinutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompleteWindowMinutes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdempotencyToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdempotencyToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdempotencyToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdempotencyToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLifecycle(value: Lifecycle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Lifecycle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLifecycle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Lifecycle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecoveryPointTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecoveryPointTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecoveryPointTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecoveryPointTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartWindowMinutes(value: WindowMinutes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartWindowMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartWindowMinutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartWindowMinutes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

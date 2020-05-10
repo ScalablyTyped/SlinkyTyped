@@ -1,9 +1,7 @@
 package typingsSlinky.protonNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.protonNative.AnonH
 import typingsSlinky.protonNative.AnonX
 import typingsSlinky.protonNative.mod.AreaBezierProps
@@ -15,14 +13,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AreaBezier
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.protonNative.mod.AreaBezier] {
+object AreaBezier {
   @JSImport("proton-native", "AreaBezier")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: label */
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.protonNative.mod.AreaBezier] {
+    @scala.inline
+    def align(value: AnonH): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def column(value: Double): this.type = set("column", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expand(value: AnonH): this.type = set("expand", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fill(value: String): this.type = set("fill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fillOpacity(value: Double): this.type = set("fillOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def row(value: Double): this.type = set("row", value.asInstanceOf[js.Any])
+    @scala.inline
+    def span(value: AnonX): this.type = set("span", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stretchy(value: Boolean): this.type = set("stretchy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stroke(value: String): this.type = set("stroke", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeLinecap(value: flat | round | bevel): this.type = set("strokeLinecap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeLinejoin(value: miter | round | bevel): this.type = set("strokeLinejoin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeMiterlimit(value: Double): this.type = set("strokeMiterlimit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeOpacity(value: Double): this.type = set("strokeOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeWidth(value: Double): this.type = set("strokeWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transform(value: String): this.type = set("transform", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: AreaBezierProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     cx1: Double | String,
     cx2: Double | String,
@@ -31,43 +66,10 @@ object AreaBezier
     x1: Double | String,
     x2: Double | String,
     y1: Double | String,
-    y2: Double | String,
-    align: AnonH = null,
-    column: Int | Double = null,
-    expand: AnonH = null,
-    fill: String = null,
-    fillOpacity: Int | Double = null,
-    row: Int | Double = null,
-    span: AnonX = null,
-    stretchy: js.UndefOr[Boolean] = js.undefined,
-    stroke: String = null,
-    strokeLinecap: flat | round | bevel = null,
-    strokeLinejoin: miter | round | bevel = null,
-    strokeMiterlimit: Int | Double = null,
-    strokeOpacity: Int | Double = null,
-    strokeWidth: Int | Double = null,
-    transform: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.protonNative.mod.AreaBezier] = {
-    val __obj = js.Dynamic.literal(cx1 = cx1.asInstanceOf[js.Any], cx2 = cx2.asInstanceOf[js.Any], cy1 = cy1.asInstanceOf[js.Any], cy2 = cy2.asInstanceOf[js.Any], x1 = x1.asInstanceOf[js.Any], x2 = x2.asInstanceOf[js.Any], y1 = y1.asInstanceOf[js.Any], y2 = y2.asInstanceOf[js.Any])
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
-    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
-    if (row != null) __obj.updateDynamic("row")(row.asInstanceOf[js.Any])
-    if (span != null) __obj.updateDynamic("span")(span.asInstanceOf[js.Any])
-    if (!js.isUndefined(stretchy)) __obj.updateDynamic("stretchy")(stretchy.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (strokeLinecap != null) __obj.updateDynamic("strokeLinecap")(strokeLinecap.asInstanceOf[js.Any])
-    if (strokeLinejoin != null) __obj.updateDynamic("strokeLinejoin")(strokeLinejoin.asInstanceOf[js.Any])
-    if (strokeMiterlimit != null) __obj.updateDynamic("strokeMiterlimit")(strokeMiterlimit.asInstanceOf[js.Any])
-    if (strokeOpacity != null) __obj.updateDynamic("strokeOpacity")(strokeOpacity.asInstanceOf[js.Any])
-    if (strokeWidth != null) __obj.updateDynamic("strokeWidth")(strokeWidth.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    y2: Double | String
+  ): Builder = {
+    val __props = js.Dynamic.literal(cx1 = cx1.asInstanceOf[js.Any], cx2 = cx2.asInstanceOf[js.Any], cy1 = cy1.asInstanceOf[js.Any], cy2 = cy2.asInstanceOf[js.Any], x1 = x1.asInstanceOf[js.Any], x2 = x2.asInstanceOf[js.Any], y1 = y1.asInstanceOf[js.Any], y2 = y2.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AreaBezierProps]))
   }
-  type Props = AreaBezierProps
 }
 

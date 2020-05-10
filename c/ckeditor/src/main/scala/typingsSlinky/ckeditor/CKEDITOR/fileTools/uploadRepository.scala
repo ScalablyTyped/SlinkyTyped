@@ -1,8 +1,8 @@
 package typingsSlinky.ckeditor.CKEDITOR.fileTools
 
+import org.scalajs.dom.raw.Blob
 import typingsSlinky.ckeditor.CKEDITOR.editor
 import typingsSlinky.ckeditor.CKEDITOR.event
-import typingsSlinky.std.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

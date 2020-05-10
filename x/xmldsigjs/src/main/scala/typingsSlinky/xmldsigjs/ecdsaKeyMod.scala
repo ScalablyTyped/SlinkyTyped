@@ -27,13 +27,13 @@ object ecdsaKeyMod extends js.Object {
     /**
       * Gets the NamedCurve value of then public key
       */
-    def NamedCurve(): String = js.native
+    def NamedCurve: String = js.native
   }
   
   @js.native
   class EcdsaPublicKey () extends XmlObject {
-    var X: scala.scalajs.js.typedarray.Uint8Array = js.native
-    var Y: scala.scalajs.js.typedarray.Uint8Array = js.native
+    var X: js.typedarray.Uint8Array = js.native
+    var Y: js.typedarray.Uint8Array = js.native
   }
   
   @js.native

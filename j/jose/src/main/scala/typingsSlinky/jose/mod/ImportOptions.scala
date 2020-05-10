@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ImportOptions extends js.Object {
-  var calculateMissingRSAPrimes: js.UndefOr[Boolean] = js.undefined
+  var calculateMissingRSAPrimes: js.UndefOr[Boolean] = js.native
 }
 
 object ImportOptions {
   @scala.inline
-  def apply(calculateMissingRSAPrimes: js.UndefOr[Boolean] = js.undefined): ImportOptions = {
+  def apply(): ImportOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(calculateMissingRSAPrimes)) __obj.updateDynamic("calculateMissingRSAPrimes")(calculateMissingRSAPrimes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportOptions]
   }
+  @scala.inline
+  implicit class ImportOptionsOps[Self <: ImportOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCalculateMissingRSAPrimes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculateMissingRSAPrimes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCalculateMissingRSAPrimes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculateMissingRSAPrimes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

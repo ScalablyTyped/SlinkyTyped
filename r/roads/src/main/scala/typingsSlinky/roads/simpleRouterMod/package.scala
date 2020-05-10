@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object simpleRouterMod {
   type Route = js.ThisFunction4[
     /* this */ typingsSlinky.roads.roadMod.Context, 
-    /* path */ java.lang.String, 
+    /* path */ typingsSlinky.roads.simpleRouterMod.SimpleRouterURL, 
     /* body */ java.lang.String, 
     /* headers */ org.scalablytyped.runtime.StringDictionary[js.Any], 
     /* next */ typingsSlinky.roads.roadMod.ResponseMiddleware, 

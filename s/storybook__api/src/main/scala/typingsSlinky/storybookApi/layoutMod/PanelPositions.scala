@@ -12,10 +12,8 @@ trait PanelPositions extends js.Object
 
 object PanelPositions {
   @scala.inline
-  def bottom: typingsSlinky.storybookApi.storybookApiStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.storybookApi.storybookApiStrings.bottom = "bottom".asInstanceOf[typingsSlinky.storybookApi.storybookApiStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def right: typingsSlinky.storybookApi.storybookApiStrings.right = this.cast("right")
+  def right: typingsSlinky.storybookApi.storybookApiStrings.right = "right".asInstanceOf[typingsSlinky.storybookApi.storybookApiStrings.right]
 }
 

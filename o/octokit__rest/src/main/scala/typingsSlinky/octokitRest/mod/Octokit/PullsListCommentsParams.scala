@@ -8,51 +8,124 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PullsListCommentsParams extends js.Object {
   /**
     * Can be either `asc` or `desc`. Ignored without `sort` parameter.
     */
-  var direction: js.UndefOr[asc | desc] = js.undefined
-  var owner: String
+  var direction: js.UndefOr[asc | desc] = js.native
+  var owner: String = js.native
   /**
     * Page number of the results to fetch.
     */
-  var page: js.UndefOr[Double] = js.undefined
+  var page: js.UndefOr[Double] = js.native
   /**
     * Results per page (max 100)
     */
-  var per_page: js.UndefOr[Double] = js.undefined
-  var pull_number: Double
-  var repo: String
+  var per_page: js.UndefOr[Double] = js.native
+  var pull_number: Double = js.native
+  var repo: String = js.native
   /**
     * This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. Only returns comments `updated` at or after this time.
     */
-  var since: js.UndefOr[String] = js.undefined
+  var since: js.UndefOr[String] = js.native
   /**
     * Can be either `created` or `updated` comments.
     */
-  var sort: js.UndefOr[created | updated] = js.undefined
+  var sort: js.UndefOr[created | updated] = js.native
 }
 
 object PullsListCommentsParams {
   @scala.inline
-  def apply(
-    owner: String,
-    pull_number: Double,
-    repo: String,
-    direction: asc | desc = null,
-    page: Int | Double = null,
-    per_page: Int | Double = null,
-    since: String = null,
-    sort: created | updated = null
-  ): PullsListCommentsParams = {
+  def apply(owner: String, pull_number: Double, repo: String): PullsListCommentsParams = {
     val __obj = js.Dynamic.literal(owner = owner.asInstanceOf[js.Any], pull_number = pull_number.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (per_page != null) __obj.updateDynamic("per_page")(per_page.asInstanceOf[js.Any])
-    if (since != null) __obj.updateDynamic("since")(since.asInstanceOf[js.Any])
-    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
     __obj.asInstanceOf[PullsListCommentsParams]
   }
+  @scala.inline
+  implicit class PullsListCommentsParamsOps[Self <: PullsListCommentsParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOwner(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPull_number(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pull_number")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRepo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDirection(value: asc | desc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPer_page(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("per_page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPer_page: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("per_page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSince(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("since")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSince: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("since")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSort(value: created | updated): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

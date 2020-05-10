@@ -1,39 +1,31 @@
 package typingsSlinky.glReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.WebGLRenderingContext
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.glReactNative.glviewnativeMod.GLViewNativeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GLViewNative
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.glReactNative.glviewnativeMod.GLViewNative] {
+object GLViewNative {
   @JSImport("gl-react-native/GLViewNative", "GLViewNative")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    onContextCreate: /* gl */ WebGLRenderingContext => Unit = null,
-    onContextFailure: /* e */ js.Error => Unit = null,
-    style: js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.glReactNative.glviewnativeMod.GLViewNative] = {
-    val __obj = js.Dynamic.literal()
-    if (onContextCreate != null) __obj.updateDynamic("onContextCreate")(js.Any.fromFunction1(onContextCreate))
-    if (onContextFailure != null) __obj.updateDynamic("onContextFailure")(js.Any.fromFunction1(onContextFailure))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.glReactNative.glviewnativeMod.GLViewNative] {
+    @scala.inline
+    def onContextCreate(value: /* gl */ WebGLRenderingContext => Unit): this.type = set("onContextCreate", js.Any.fromFunction1(value))
+    @scala.inline
+    def onContextFailure(value: /* e */ js.Error => Unit): this.type = set("onContextFailure", js.Any.fromFunction1(value))
+    @scala.inline
+    def style(value: js.Any): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.glReactNative.glviewnativeMod.GLViewNative] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.glReactNative.glviewnativeMod.GLViewNative](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = GLViewNativeProps
+  
+  def withProps(p: GLViewNativeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: GLViewNative.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

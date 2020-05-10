@@ -27,16 +27,53 @@ trait SchemaTlsCertificateContext extends js.Object {
 
 object SchemaTlsCertificateContext {
   @scala.inline
-  def apply(
-    certificatePaths: SchemaTlsCertificatePaths = null,
-    certificateSource: String = null,
-    sdsConfig: SchemaSdsConfig = null
-  ): SchemaTlsCertificateContext = {
+  def apply(): SchemaTlsCertificateContext = {
     val __obj = js.Dynamic.literal()
-    if (certificatePaths != null) __obj.updateDynamic("certificatePaths")(certificatePaths.asInstanceOf[js.Any])
-    if (certificateSource != null) __obj.updateDynamic("certificateSource")(certificateSource.asInstanceOf[js.Any])
-    if (sdsConfig != null) __obj.updateDynamic("sdsConfig")(sdsConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTlsCertificateContext]
   }
+  @scala.inline
+  implicit class SchemaTlsCertificateContextOps[Self <: SchemaTlsCertificateContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificatePaths(value: SchemaTlsCertificatePaths): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificatePaths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificatePaths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificatePaths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCertificateSource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSdsConfig(value: SchemaSdsConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sdsConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSdsConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sdsConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

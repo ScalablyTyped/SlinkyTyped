@@ -16,10 +16,29 @@ trait DescribeClusterResponse extends js.Object {
 
 object DescribeClusterResponse {
   @scala.inline
-  def apply(ClusterInfo: ClusterInfo = null): DescribeClusterResponse = {
+  def apply(): DescribeClusterResponse = {
     val __obj = js.Dynamic.literal()
-    if (ClusterInfo != null) __obj.updateDynamic("ClusterInfo")(ClusterInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeClusterResponse]
   }
+  @scala.inline
+  implicit class DescribeClusterResponseOps[Self <: DescribeClusterResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterInfo(value: ClusterInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

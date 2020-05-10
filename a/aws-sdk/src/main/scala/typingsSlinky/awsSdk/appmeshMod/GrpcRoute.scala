@@ -22,11 +22,42 @@ trait GrpcRoute extends js.Object {
 
 object GrpcRoute {
   @scala.inline
-  def apply(action: GrpcRouteAction, `match`: GrpcRouteMatch, retryPolicy: GrpcRetryPolicy = null): GrpcRoute = {
+  def apply(action: GrpcRouteAction, `match`: GrpcRouteMatch): GrpcRoute = {
     val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any])
     __obj.updateDynamic("match")(`match`.asInstanceOf[js.Any])
-    if (retryPolicy != null) __obj.updateDynamic("retryPolicy")(retryPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[GrpcRoute]
   }
+  @scala.inline
+  implicit class GrpcRouteOps[Self <: GrpcRoute] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: GrpcRouteAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMatch(value: GrpcRouteMatch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("match")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRetryPolicy(value: GrpcRetryPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetryPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryPolicy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

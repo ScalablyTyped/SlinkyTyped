@@ -22,16 +22,53 @@ trait StreamSelection extends js.Object {
 
 object StreamSelection {
   @scala.inline
-  def apply(
-    MaxVideoBitsPerSecond: Int | Double = null,
-    MinVideoBitsPerSecond: Int | Double = null,
-    StreamOrder: StreamOrder = null
-  ): StreamSelection = {
+  def apply(): StreamSelection = {
     val __obj = js.Dynamic.literal()
-    if (MaxVideoBitsPerSecond != null) __obj.updateDynamic("MaxVideoBitsPerSecond")(MaxVideoBitsPerSecond.asInstanceOf[js.Any])
-    if (MinVideoBitsPerSecond != null) __obj.updateDynamic("MinVideoBitsPerSecond")(MinVideoBitsPerSecond.asInstanceOf[js.Any])
-    if (StreamOrder != null) __obj.updateDynamic("StreamOrder")(StreamOrder.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreamSelection]
   }
+  @scala.inline
+  implicit class StreamSelectionOps[Self <: StreamSelection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxVideoBitsPerSecond(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxVideoBitsPerSecond")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxVideoBitsPerSecond: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxVideoBitsPerSecond")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinVideoBitsPerSecond(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinVideoBitsPerSecond")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinVideoBitsPerSecond: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinVideoBitsPerSecond")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamOrder(value: StreamOrder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamOrder")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

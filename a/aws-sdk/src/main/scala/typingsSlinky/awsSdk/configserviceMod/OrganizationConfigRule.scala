@@ -36,18 +36,78 @@ object OrganizationConfigRule {
   @scala.inline
   def apply(
     OrganizationConfigRuleArn: StringWithCharLimit256,
-    OrganizationConfigRuleName: OrganizationConfigRuleName,
-    ExcludedAccounts: ExcludedAccounts = null,
-    LastUpdateTime: js.Date = null,
-    OrganizationCustomRuleMetadata: OrganizationCustomRuleMetadata = null,
-    OrganizationManagedRuleMetadata: OrganizationManagedRuleMetadata = null
+    OrganizationConfigRuleName: OrganizationConfigRuleName
   ): OrganizationConfigRule = {
     val __obj = js.Dynamic.literal(OrganizationConfigRuleArn = OrganizationConfigRuleArn.asInstanceOf[js.Any], OrganizationConfigRuleName = OrganizationConfigRuleName.asInstanceOf[js.Any])
-    if (ExcludedAccounts != null) __obj.updateDynamic("ExcludedAccounts")(ExcludedAccounts.asInstanceOf[js.Any])
-    if (LastUpdateTime != null) __obj.updateDynamic("LastUpdateTime")(LastUpdateTime.asInstanceOf[js.Any])
-    if (OrganizationCustomRuleMetadata != null) __obj.updateDynamic("OrganizationCustomRuleMetadata")(OrganizationCustomRuleMetadata.asInstanceOf[js.Any])
-    if (OrganizationManagedRuleMetadata != null) __obj.updateDynamic("OrganizationManagedRuleMetadata")(OrganizationManagedRuleMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrganizationConfigRule]
   }
+  @scala.inline
+  implicit class OrganizationConfigRuleOps[Self <: OrganizationConfigRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOrganizationConfigRuleArn(value: StringWithCharLimit256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationConfigRuleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrganizationConfigRuleName(value: OrganizationConfigRuleName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationConfigRuleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExcludedAccounts(value: ExcludedAccounts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludedAccounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludedAccounts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludedAccounts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizationCustomRuleMetadata(value: OrganizationCustomRuleMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationCustomRuleMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationCustomRuleMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationCustomRuleMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizationManagedRuleMetadata(value: OrganizationManagedRuleMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationManagedRuleMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationManagedRuleMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationManagedRuleMetadata")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

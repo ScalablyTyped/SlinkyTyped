@@ -1,5 +1,6 @@
 package typingsSlinky.officeJsPreview.Office
 
+import typingsSlinky.officeJsPreview.Office.MailboxEnums.AppointmentSensitivityType
 import typingsSlinky.officeJsPreview.Office.MailboxEnums.EntityType
 import typingsSlinky.officeJsPreview.Office.MailboxEnums.ItemType
 import scala.scalajs.js
@@ -112,6 +113,20 @@ trait AppointmentRead extends Item {
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Appointment Attendee
     */
   var enhancedLocation: EnhancedLocation = js.native
+  /**
+    * Returns a boolean value indicating whether the event is all day.
+    *
+    * [Api set: Mailbox Preview]
+    *
+    * @remarks
+    *
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**:  `ReadItem`
+    *
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**:  Appointment Attendee
+    * 
+    * @beta
+    */
+  var isAllDayEvent: Boolean = js.native
   /**
     * Gets the Exchange Web Services item class of the selected item.
     *
@@ -273,6 +288,20 @@ trait AppointmentRead extends Item {
     */
   var requiredAttendees: js.Array[EmailAddressDetails] = js.native
   /**
+    * Provides the sensitivity value of the appointment.
+    *
+    * [Api set: Mailbox Preview]
+    *
+    * @remarks
+    *
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**:  `ReadItem`
+    *
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**:  Appointment Attendee
+    * 
+    * @beta
+    */
+  var sensitivity: AppointmentSensitivityType = js.native
+  /**
     * Gets the ID of the series that an instance belongs to.
     * 
     * In Outlook on the web and desktop clients, the `seriesId` returns the Exchange Web Services (EWS) ID of the parent (series) item
@@ -391,13 +420,9 @@ trait AppointmentRead extends Item {
     *
     * @param formData - A string that contains text and HTML and that represents the body of the reply form. The string is limited to 32 KB
     *                   OR a {@link Office.ReplyFormData | ReplyFormData} object that contains body or attachment data and a callback function.
-    * @param callback - Optional. When the method completes, the function passed in the `callback` parameter is called with a single parameter, 
-    *                `asyncResult`, which is an `Office.AsyncResult` object.
     */
   def displayReplyAllForm(formData: String): Unit = js.native
-  def displayReplyAllForm(formData: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def displayReplyAllForm(formData: ReplyFormData): Unit = js.native
-  def displayReplyAllForm(formData: ReplyFormData, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   /**
     * Displays a reply form that includes only the sender of the selected message or the organizer of the selected appointment.
     *
@@ -419,13 +444,9 @@ trait AppointmentRead extends Item {
     *
     * @param formData - A string that contains text and HTML and that represents the body of the reply form. The string is limited to 32 KB
     *                   OR a {@link Office.ReplyFormData | ReplyFormData} object that contains body or attachment data and a callback function.
-    * @param callback - Optional. When the method completes, the function passed in the `callback` parameter is called with a single parameter, 
-    *                `asyncResult`, which is an `Office.AsyncResult` object.
     */
   def displayReplyForm(formData: String): Unit = js.native
-  def displayReplyForm(formData: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def displayReplyForm(formData: ReplyFormData): Unit = js.native
-  def displayReplyForm(formData: ReplyFormData, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   /**
     * Gets an attachment from a message or appointment and returns it as an `AttachmentContent` object.
     * 

@@ -1,12 +1,12 @@
 package typingsSlinky.gcpMetadata.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.gcpMetadata.gcpMetadataStrings.SlashcomputeMetadataSlashv1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("gcp-metadata", "BASE_PATH")
 @js.native
-object BASE_PATH extends TopLevel[SlashcomputeMetadataSlashv1]
+object BASE_PATH
+  extends TopLevel[/* "http://metadata.google.internal." */ String]
 

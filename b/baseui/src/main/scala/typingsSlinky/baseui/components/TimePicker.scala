@@ -1,57 +1,57 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.AnonSelect
 import typingsSlinky.baseui.baseuiStrings.`12`
 import typingsSlinky.baseui.baseuiStrings.`24`
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
+import typingsSlinky.baseui.baseuiStrings.mini
 import typingsSlinky.baseui.timepickerMod.TimePickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TimePicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.timepickerMod.TimePicker] {
+object TimePicker {
   @JSImport("baseui/timepicker", "TimePicker")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, placeholder */
-  def apply(
-    creatable: js.UndefOr[Boolean] = js.undefined,
-    error: js.UndefOr[Boolean] = js.undefined,
-    format: `12` | `24` = null,
-    nullable: js.UndefOr[Boolean] = js.undefined,
-    onChange: /* args */ js.Date => _ = null,
-    overrides: AnonSelect = null,
-    positive: js.UndefOr[Boolean] = js.undefined,
-    size: default_ | compact | large_ = null,
-    step: Int | Double = null,
-    value: js.Date = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.baseui.timepickerMod.TimePicker] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(creatable)) __obj.updateDynamic("creatable")(creatable.asInstanceOf[js.Any])
-    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (!js.isUndefined(nullable)) __obj.updateDynamic("nullable")(nullable.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (!js.isUndefined(positive)) __obj.updateDynamic("positive")(positive.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.timepickerMod.TimePicker] {
+    @scala.inline
+    def creatable(value: Boolean): this.type = set("creatable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def format(value: `12` | `24`): this.type = set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nullable(value: Boolean): this.type = set("nullable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* args */ js.Date => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def overrides(value: AnonSelect): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def positive(value: Boolean): this.type = set("positive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: mini | default_ | compact | large_): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueNull: this.type = set("value", null)
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.timepickerMod.TimePicker] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.baseui.timepickerMod.TimePicker](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TimePickerProps
+  
+  def withProps(p: TimePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TimePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,15 +1,17 @@
 package typingsSlinky.halogen.components
 
+import typingsSlinky.halogen.mod.MarginLoaderProps
 import typingsSlinky.halogen.mod.RotateLoaderCls
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RotateLoader extends SharedApply_MarginLoaderProps1428208436[RotateLoaderCls] {
+object RotateLoader {
   @JSImport("halogen", "RotateLoader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: MarginLoaderProps[String]): SharedBuilder_MarginLoaderProps_531447020[RotateLoaderCls] = new SharedBuilder_MarginLoaderProps_531447020[RotateLoaderCls](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: RotateLoader.type): SharedBuilder_MarginLoaderProps_531447020[RotateLoaderCls] = new SharedBuilder_MarginLoaderProps_531447020[RotateLoaderCls](js.Array(this.component, js.Dictionary.empty))()
 }
 

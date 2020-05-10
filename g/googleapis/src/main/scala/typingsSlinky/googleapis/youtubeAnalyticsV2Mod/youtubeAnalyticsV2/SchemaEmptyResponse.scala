@@ -17,10 +17,29 @@ trait SchemaEmptyResponse extends js.Object {
 
 object SchemaEmptyResponse {
   @scala.inline
-  def apply(errors: SchemaErrors = null): SchemaEmptyResponse = {
+  def apply(): SchemaEmptyResponse = {
     val __obj = js.Dynamic.literal()
-    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEmptyResponse]
   }
+  @scala.inline
+  implicit class SchemaEmptyResponseOps[Self <: SchemaEmptyResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrors(value: SchemaErrors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

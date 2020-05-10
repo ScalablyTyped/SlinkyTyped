@@ -30,18 +30,65 @@ trait PublishLayerVersionRequest extends js.Object {
 
 object PublishLayerVersionRequest {
   @scala.inline
-  def apply(
-    Content: LayerVersionContentInput,
-    LayerName: LayerName,
-    CompatibleRuntimes: CompatibleRuntimes = null,
-    Description: Description = null,
-    LicenseInfo: LicenseInfo = null
-  ): PublishLayerVersionRequest = {
+  def apply(Content: LayerVersionContentInput, LayerName: LayerName): PublishLayerVersionRequest = {
     val __obj = js.Dynamic.literal(Content = Content.asInstanceOf[js.Any], LayerName = LayerName.asInstanceOf[js.Any])
-    if (CompatibleRuntimes != null) __obj.updateDynamic("CompatibleRuntimes")(CompatibleRuntimes.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (LicenseInfo != null) __obj.updateDynamic("LicenseInfo")(LicenseInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[PublishLayerVersionRequest]
   }
+  @scala.inline
+  implicit class PublishLayerVersionRequestOps[Self <: PublishLayerVersionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: LayerVersionContentInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLayerName(value: LayerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LayerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCompatibleRuntimes(value: CompatibleRuntimes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompatibleRuntimes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompatibleRuntimes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompatibleRuntimes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLicenseInfo(value: LicenseInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenseInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

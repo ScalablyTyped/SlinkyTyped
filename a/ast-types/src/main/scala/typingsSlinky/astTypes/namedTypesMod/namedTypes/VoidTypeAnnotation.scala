@@ -13,15 +13,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.FlowType, 'type'> */
+@js.native
 trait VoidTypeAnnotation
   extends ASTNode
      with FlowKind
      with FlowTypeKind
      with NodeKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.VoidTypeAnnotation
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.VoidTypeAnnotation = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.VoidTypeAnnotation")

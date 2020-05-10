@@ -4,20 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Rename extends js.Object {
   /** The new title. */
-  var newTitle: js.UndefOr[String] = js.undefined
+  var newTitle: js.UndefOr[String] = js.native
   /** The old title. */
-  var oldTitle: js.UndefOr[String] = js.undefined
+  var oldTitle: js.UndefOr[String] = js.native
 }
 
 object Rename {
   @scala.inline
-  def apply(newTitle: String = null, oldTitle: String = null): Rename = {
+  def apply(): Rename = {
     val __obj = js.Dynamic.literal()
-    if (newTitle != null) __obj.updateDynamic("newTitle")(newTitle.asInstanceOf[js.Any])
-    if (oldTitle != null) __obj.updateDynamic("oldTitle")(oldTitle.asInstanceOf[js.Any])
     __obj.asInstanceOf[Rename]
   }
+  @scala.inline
+  implicit class RenameOps[Self <: Rename] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNewTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOldTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOldTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldTitle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

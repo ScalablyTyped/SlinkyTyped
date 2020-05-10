@@ -4,39 +4,87 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonEdgeLabel extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-graph.emphasis.edgeLabel
     */
-  var edgeLabel: js.UndefOr[AnonFontStyle] = js.undefined
+  var edgeLabel: js.UndefOr[AnonFontStyle] = js.native
   /**
     * @see https://echarts.apache.org/en/option.html#series-graph.emphasis.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderType] = js.undefined
+  var itemStyle: js.UndefOr[AnonBorderType] = js.native
   /**
     * @see https://echarts.apache.org/en/option.html#series-graph.emphasis.label
     */
-  var label: js.UndefOr[AnonDistance] = js.undefined
+  var label: js.UndefOr[AnonDistance] = js.native
   /**
     * @see https://echarts.apache.org/en/option.html#series-graph.emphasis.lineStyle
     */
-  var lineStyle: js.UndefOr[AnonShadowBlur] = js.undefined
+  var lineStyle: js.UndefOr[AnonShadowBlur] = js.native
 }
 
 object AnonEdgeLabel {
   @scala.inline
-  def apply(
-    edgeLabel: AnonFontStyle = null,
-    itemStyle: AnonBorderType = null,
-    label: AnonDistance = null,
-    lineStyle: AnonShadowBlur = null
-  ): AnonEdgeLabel = {
+  def apply(): AnonEdgeLabel = {
     val __obj = js.Dynamic.literal()
-    if (edgeLabel != null) __obj.updateDynamic("edgeLabel")(edgeLabel.asInstanceOf[js.Any])
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (lineStyle != null) __obj.updateDynamic("lineStyle")(lineStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonEdgeLabel]
   }
+  @scala.inline
+  implicit class AnonEdgeLabelOps[Self <: AnonEdgeLabel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEdgeLabel(value: AnonFontStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEdgeLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemStyle(value: AnonBorderType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: AnonDistance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineStyle(value: AnonShadowBlur): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,39 +4,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GridMessagesCommands extends js.Object {
-  var cancel: js.UndefOr[String] = js.undefined
-  var canceledit: js.UndefOr[String] = js.undefined
-  var create: js.UndefOr[String] = js.undefined
-  var destroy: js.UndefOr[String] = js.undefined
-  var edit: js.UndefOr[String] = js.undefined
-  var excel: js.UndefOr[String] = js.undefined
-  var save: js.UndefOr[String] = js.undefined
-  var update: js.UndefOr[String] = js.undefined
+  var cancel: js.UndefOr[String] = js.native
+  var canceledit: js.UndefOr[String] = js.native
+  var create: js.UndefOr[String] = js.native
+  var destroy: js.UndefOr[String] = js.native
+  var edit: js.UndefOr[String] = js.native
+  var excel: js.UndefOr[String] = js.native
+  var save: js.UndefOr[String] = js.native
+  var update: js.UndefOr[String] = js.native
 }
 
 object GridMessagesCommands {
   @scala.inline
-  def apply(
-    cancel: String = null,
-    canceledit: String = null,
-    create: String = null,
-    destroy: String = null,
-    edit: String = null,
-    excel: String = null,
-    save: String = null,
-    update: String = null
-  ): GridMessagesCommands = {
+  def apply(): GridMessagesCommands = {
     val __obj = js.Dynamic.literal()
-    if (cancel != null) __obj.updateDynamic("cancel")(cancel.asInstanceOf[js.Any])
-    if (canceledit != null) __obj.updateDynamic("canceledit")(canceledit.asInstanceOf[js.Any])
-    if (create != null) __obj.updateDynamic("create")(create.asInstanceOf[js.Any])
-    if (destroy != null) __obj.updateDynamic("destroy")(destroy.asInstanceOf[js.Any])
-    if (edit != null) __obj.updateDynamic("edit")(edit.asInstanceOf[js.Any])
-    if (excel != null) __obj.updateDynamic("excel")(excel.asInstanceOf[js.Any])
-    if (save != null) __obj.updateDynamic("save")(save.asInstanceOf[js.Any])
-    if (update != null) __obj.updateDynamic("update")(update.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridMessagesCommands]
   }
+  @scala.inline
+  implicit class GridMessagesCommandsOps[Self <: GridMessagesCommands] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCancel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanceledit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canceledit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanceledit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canceledit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestroy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestroy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEdit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEdit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSave(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,81 +1,109 @@
 package typingsSlinky.rcPagination.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcPagination.mod.PaginationProps
 import typingsSlinky.rcPagination.mod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RcPagination
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object RcPagination {
   @JSImport("rc-pagination", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    current: Int | Double = null,
-    defaultCurrent: Int | Double = null,
-    defaultPageSize: Int | Double = null,
-    hideOnSinglePage: js.UndefOr[Boolean] = js.undefined,
-    itemRender: (/* page */ Double, /* type */ String, /* element */ TagMod[Any]) => TagMod[Any] = null,
-    jumpNextIcon: ReactComponentClass[js.Object] | TagMod[Any] = null,
-    jumpPrevIcon: ReactComponentClass[js.Object] | TagMod[Any] = null,
-    locale: js.Object = null,
-    nextIcon: ReactComponentClass[js.Object] | TagMod[Any] = null,
-    onChange: (/* page */ Double, /* pageSize */ Double) => Unit = null,
-    onShowSizeChange: (/* current */ Double, /* size */ Double) => Unit = null,
-    pageSize: Int | Double = null,
-    pageSizeOptions: js.Array[String] = null,
-    prefixCls: String = null,
-    prevIcon: ReactComponentClass[js.Object] | TagMod[Any] = null,
-    selectComponentClass: ReactComponentClass[js.Object] = null,
-    selectPrefixCls: String = null,
-    showLessItems: js.UndefOr[Boolean] = js.undefined,
-    showPrevNextJumpers: js.UndefOr[Boolean] = js.undefined,
-    showQuickJumper: Boolean | js.Object = null,
-    showSizeChanger: js.UndefOr[Boolean] = js.undefined,
-    showTitle: js.UndefOr[Boolean] = js.undefined,
-    showTotal: (/* total */ Double, /* range */ js.Tuple2[Double, Double]) => TagMod[Any] = null,
-    total: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (current != null) __obj.updateDynamic("current")(current.asInstanceOf[js.Any])
-    if (defaultCurrent != null) __obj.updateDynamic("defaultCurrent")(defaultCurrent.asInstanceOf[js.Any])
-    if (defaultPageSize != null) __obj.updateDynamic("defaultPageSize")(defaultPageSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideOnSinglePage)) __obj.updateDynamic("hideOnSinglePage")(hideOnSinglePage.asInstanceOf[js.Any])
-    if (itemRender != null) __obj.updateDynamic("itemRender")(js.Any.fromFunction3(itemRender))
-    if (jumpNextIcon != null) __obj.updateDynamic("jumpNextIcon")(jumpNextIcon.asInstanceOf[js.Any])
-    if (jumpPrevIcon != null) __obj.updateDynamic("jumpPrevIcon")(jumpPrevIcon.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (nextIcon != null) __obj.updateDynamic("nextIcon")(nextIcon.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onShowSizeChange != null) __obj.updateDynamic("onShowSizeChange")(js.Any.fromFunction2(onShowSizeChange))
-    if (pageSize != null) __obj.updateDynamic("pageSize")(pageSize.asInstanceOf[js.Any])
-    if (pageSizeOptions != null) __obj.updateDynamic("pageSizeOptions")(pageSizeOptions.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (prevIcon != null) __obj.updateDynamic("prevIcon")(prevIcon.asInstanceOf[js.Any])
-    if (selectComponentClass != null) __obj.updateDynamic("selectComponentClass")(selectComponentClass.asInstanceOf[js.Any])
-    if (selectPrefixCls != null) __obj.updateDynamic("selectPrefixCls")(selectPrefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(showLessItems)) __obj.updateDynamic("showLessItems")(showLessItems.asInstanceOf[js.Any])
-    if (!js.isUndefined(showPrevNextJumpers)) __obj.updateDynamic("showPrevNextJumpers")(showPrevNextJumpers.asInstanceOf[js.Any])
-    if (showQuickJumper != null) __obj.updateDynamic("showQuickJumper")(showQuickJumper.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSizeChanger)) __obj.updateDynamic("showSizeChanger")(showSizeChanger.asInstanceOf[js.Any])
-    if (!js.isUndefined(showTitle)) __obj.updateDynamic("showTitle")(showTitle.asInstanceOf[js.Any])
-    if (showTotal != null) __obj.updateDynamic("showTotal")(js.Any.fromFunction2(showTotal))
-    if (total != null) __obj.updateDynamic("total")(total.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def current(value: Double): this.type = set("current", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultCurrent(value: Double): this.type = set("defaultCurrent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultPageSize(value: Double): this.type = set("defaultPageSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hideOnSinglePage(value: Boolean): this.type = set("hideOnSinglePage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemRender(value: (/* page */ Double, /* type */ String, /* element */ TagMod[Any]) => TagMod[Any]): this.type = set("itemRender", js.Any.fromFunction3(value))
+    @scala.inline
+    def jumpNextIconReactElement(value: ReactElement): this.type = set("jumpNextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def jumpNextIconFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("jumpNextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def jumpNextIconComponentClass(value: ReactComponentClass[js.Object]): this.type = set("jumpNextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def jumpNextIcon(value: ReactComponentClass[js.Object] | TagMod[Any]): this.type = set("jumpNextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def jumpPrevIconReactElement(value: ReactElement): this.type = set("jumpPrevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def jumpPrevIconFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("jumpPrevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def jumpPrevIconComponentClass(value: ReactComponentClass[js.Object]): this.type = set("jumpPrevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def jumpPrevIcon(value: ReactComponentClass[js.Object] | TagMod[Any]): this.type = set("jumpPrevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def locale(value: js.Object): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextIconReactElement(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextIconFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextIconComponentClass(value: ReactComponentClass[js.Object]): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextIcon(value: ReactComponentClass[js.Object] | TagMod[Any]): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: (/* page */ Double, /* pageSize */ Double) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onShowSizeChange(value: (/* current */ Double, /* size */ Double) => Unit): this.type = set("onShowSizeChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def pageSize(value: Double): this.type = set("pageSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pageSizeOptions(value: js.Array[String]): this.type = set("pageSizeOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prevIconReactElement(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prevIconFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prevIconComponentClass(value: ReactComponentClass[js.Object]): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prevIcon(value: ReactComponentClass[js.Object] | TagMod[Any]): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectComponentClassFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("selectComponentClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectComponentClassComponentClass(value: ReactComponentClass[js.Object]): this.type = set("selectComponentClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectComponentClass(value: ReactComponentClass[js.Object]): this.type = set("selectComponentClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectPrefixCls(value: String): this.type = set("selectPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showLessItems(value: Boolean): this.type = set("showLessItems", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showPrevNextJumpers(value: Boolean): this.type = set("showPrevNextJumpers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showQuickJumper(value: Boolean | js.Object): this.type = set("showQuickJumper", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showSizeChanger(value: Boolean): this.type = set("showSizeChanger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showTitle(value: Boolean): this.type = set("showTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showTotal(value: (/* total */ Double, /* range */ js.Tuple2[Double, Double]) => TagMod[Any]): this.type = set("showTotal", js.Any.fromFunction2(value))
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def total(value: Double): this.type = set("total", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.rcPagination.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PaginationProps
+  
+  def withProps(p: PaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: RcPagination.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

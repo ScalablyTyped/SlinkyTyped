@@ -12,10 +12,8 @@ trait WeightGroup extends js.Object
 
 object WeightGroup {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def model: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.model = "model".asInstanceOf[typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.model]
   @scala.inline
-  def model: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.model = this.cast("model")
-  @scala.inline
-  def optimizer: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.optimizer = this.cast("optimizer")
+  def optimizer: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.optimizer = "optimizer".asInstanceOf[typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.optimizer]
 }
 

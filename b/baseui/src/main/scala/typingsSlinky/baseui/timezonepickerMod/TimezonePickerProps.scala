@@ -5,47 +5,146 @@ import typingsSlinky.baseui.AnonSelect
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
+import typingsSlinky.baseui.baseuiStrings.mini
 import typingsSlinky.baseui.selectMod.Option
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TimezonePickerProps extends js.Object {
-  var date: js.UndefOr[js.Date] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var error: js.UndefOr[Boolean] = js.undefined
-  var mapLabels: js.UndefOr[js.Function1[/* args */ Option, TagMod[Any]]] = js.undefined
-  var onChange: js.UndefOr[js.Function1[/* value */ Timezone, _]] = js.undefined
-  var overrides: js.UndefOr[AnonSelect] = js.undefined
-  var positive: js.UndefOr[Boolean] = js.undefined
-  var size: js.UndefOr[default_ | compact | large_] = js.undefined
-  var value: js.UndefOr[String] = js.undefined
+  var date: js.UndefOr[js.Date] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var error: js.UndefOr[Boolean] = js.native
+  var mapLabels: js.UndefOr[js.Function1[/* args */ Option, TagMod[Any]]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* value */ Timezone, _]] = js.native
+  var overrides: js.UndefOr[AnonSelect] = js.native
+  var positive: js.UndefOr[Boolean] = js.native
+  var size: js.UndefOr[mini | default_ | compact | large_] = js.native
+  var value: js.UndefOr[String] = js.native
 }
 
 object TimezonePickerProps {
   @scala.inline
-  def apply(
-    date: js.Date = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    error: js.UndefOr[Boolean] = js.undefined,
-    mapLabels: /* args */ Option => TagMod[Any] = null,
-    onChange: /* value */ Timezone => _ = null,
-    overrides: AnonSelect = null,
-    positive: js.UndefOr[Boolean] = js.undefined,
-    size: default_ | compact | large_ = null,
-    value: String = null
-  ): TimezonePickerProps = {
+  def apply(): TimezonePickerProps = {
     val __obj = js.Dynamic.literal()
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (mapLabels != null) __obj.updateDynamic("mapLabels")(js.Any.fromFunction1(mapLabels))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (!js.isUndefined(positive)) __obj.updateDynamic("positive")(positive.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimezonePickerProps]
   }
+  @scala.inline
+  implicit class TimezonePickerPropsOps[Self <: TimezonePickerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapLabels(value: /* args */ Option => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapLabels")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutMapLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: /* value */ Timezone => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverrides(value: AnonSelect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPositive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: mini | default_ | compact | large_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

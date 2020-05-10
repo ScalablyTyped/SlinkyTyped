@@ -20,8 +20,27 @@ object SendTaskSuccessInput {
   @scala.inline
   def apply(output: SensitiveData, taskToken: TaskToken): SendTaskSuccessInput = {
     val __obj = js.Dynamic.literal(output = output.asInstanceOf[js.Any], taskToken = taskToken.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SendTaskSuccessInput]
   }
+  @scala.inline
+  implicit class SendTaskSuccessInputOps[Self <: SendTaskSuccessInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOutput(value: SensitiveData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTaskToken(value: TaskToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

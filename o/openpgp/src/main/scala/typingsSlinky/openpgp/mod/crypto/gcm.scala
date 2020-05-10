@@ -12,6 +12,6 @@ object gcm extends js.Object {
     * @param cipher The symmetric cipher algorithm to use e.g. 'aes128'
     * @param key The encryption key
     */
-  def GCM(cipher: String, key: scala.scalajs.js.typedarray.Uint8Array): Unit = js.native
+  def GCM(cipher: String, key: js.typedarray.Uint8Array): Unit = js.native
 }
 

@@ -1,10 +1,7 @@
 package typingsSlinky.blueprintjsDatetime.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.boundaryMod.Boundary
 import typingsSlinky.blueprintjsDatetime.datePickerCoreMod.IDatePickerModifiers
 import typingsSlinky.blueprintjsDatetime.dateRangePickerMod.IDateRangePickerProps
@@ -17,66 +14,64 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DateRangePicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsDatetime.mod.DateRangePicker] {
+object DateRangePicker {
   @JSImport("@blueprintjs/datetime", "DateRangePicker")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    allowSingleDayRange: js.UndefOr[Boolean] = js.undefined,
-    boundaryToModify: Boundary = null,
-    contiguousCalendarMonths: js.UndefOr[Boolean] = js.undefined,
-    dayPickerProps: DayPickerProps = null,
-    defaultValue: DateRange = null,
-    initialMonth: js.Date = null,
-    locale: String = null,
-    localeUtils: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any = null,
-    maxDate: js.Date = null,
-    minDate: js.Date = null,
-    modifiers: IDatePickerModifiers = null,
-    onChange: /* selectedDates */ DateRange => Unit = null,
-    onHoverChange: (/* hoveredDates */ DateRange, /* hoveredDay */ js.Date, /* hoveredBoundary */ Boundary) => Unit = null,
-    onShortcutChange: (/* shortcut */ IDateRangeShortcut, /* index */ Double) => Unit = null,
-    reverseMonthAndYearMenus: js.UndefOr[Boolean] = js.undefined,
-    selectedShortcutIndex: Int | Double = null,
-    shortcuts: Boolean | js.Array[IDateRangeShortcut] = null,
-    singleMonthOnly: js.UndefOr[Boolean] = js.undefined,
-    timePickerProps: ITimePickerProps = null,
-    timePrecision: TimePrecision = null,
-    value: DateRange = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsDatetime.mod.DateRangePicker] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowSingleDayRange)) __obj.updateDynamic("allowSingleDayRange")(allowSingleDayRange.asInstanceOf[js.Any])
-    if (boundaryToModify != null) __obj.updateDynamic("boundaryToModify")(boundaryToModify.asInstanceOf[js.Any])
-    if (!js.isUndefined(contiguousCalendarMonths)) __obj.updateDynamic("contiguousCalendarMonths")(contiguousCalendarMonths.asInstanceOf[js.Any])
-    if (dayPickerProps != null) __obj.updateDynamic("dayPickerProps")(dayPickerProps.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (initialMonth != null) __obj.updateDynamic("initialMonth")(initialMonth.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (localeUtils != null) __obj.updateDynamic("localeUtils")(localeUtils.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (modifiers != null) __obj.updateDynamic("modifiers")(modifiers.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onHoverChange != null) __obj.updateDynamic("onHoverChange")(js.Any.fromFunction3(onHoverChange))
-    if (onShortcutChange != null) __obj.updateDynamic("onShortcutChange")(js.Any.fromFunction2(onShortcutChange))
-    if (!js.isUndefined(reverseMonthAndYearMenus)) __obj.updateDynamic("reverseMonthAndYearMenus")(reverseMonthAndYearMenus.asInstanceOf[js.Any])
-    if (selectedShortcutIndex != null) __obj.updateDynamic("selectedShortcutIndex")(selectedShortcutIndex.asInstanceOf[js.Any])
-    if (shortcuts != null) __obj.updateDynamic("shortcuts")(shortcuts.asInstanceOf[js.Any])
-    if (!js.isUndefined(singleMonthOnly)) __obj.updateDynamic("singleMonthOnly")(singleMonthOnly.asInstanceOf[js.Any])
-    if (timePickerProps != null) __obj.updateDynamic("timePickerProps")(timePickerProps.asInstanceOf[js.Any])
-    if (timePrecision != null) __obj.updateDynamic("timePrecision")(timePrecision.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsDatetime.mod.DateRangePicker] {
+    @scala.inline
+    def allowSingleDayRange(value: Boolean): this.type = set("allowSingleDayRange", value.asInstanceOf[js.Any])
+    @scala.inline
+    def boundaryToModify(value: Boundary): this.type = set("boundaryToModify", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contiguousCalendarMonths(value: Boolean): this.type = set("contiguousCalendarMonths", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dayPickerProps(value: DayPickerProps): this.type = set("dayPickerProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: DateRange): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialMonth(value: js.Date): this.type = set("initialMonth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def locale(value: String): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def localeUtils(value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any): this.type = set("localeUtils", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def modifiers(value: IDatePickerModifiers): this.type = set("modifiers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* selectedDates */ DateRange => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onHoverChange(
+      value: (/* hoveredDates */ DateRange, /* hoveredDay */ js.Date, /* hoveredBoundary */ Boundary) => Unit
+    ): this.type = set("onHoverChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def onShortcutChange(value: (/* shortcut */ IDateRangeShortcut, /* index */ Double) => Unit): this.type = set("onShortcutChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def reverseMonthAndYearMenus(value: Boolean): this.type = set("reverseMonthAndYearMenus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedShortcutIndex(value: Double): this.type = set("selectedShortcutIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shortcuts(value: Boolean | js.Array[IDateRangeShortcut]): this.type = set("shortcuts", value.asInstanceOf[js.Any])
+    @scala.inline
+    def singleMonthOnly(value: Boolean): this.type = set("singleMonthOnly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def timePickerProps(value: ITimePickerProps): this.type = set("timePickerProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def timePrecision(value: TimePrecision): this.type = set("timePrecision", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: DateRange): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.blueprintjsDatetime.mod.DateRangePicker] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.blueprintjsDatetime.mod.DateRangePicker](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IDateRangePickerProps
+  
+  def withProps(p: IDateRangePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DateRangePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

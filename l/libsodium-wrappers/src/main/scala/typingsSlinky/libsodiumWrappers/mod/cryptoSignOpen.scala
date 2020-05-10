@@ -1,6 +1,5 @@
 package typingsSlinky.libsodiumWrappers.mod
 
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,27 +7,19 @@ import scala.scalajs.js.annotation._
 @JSImport("libsodium-wrappers", "crypto_sign_open")
 @js.native
 object cryptoSignOpen extends js.Object {
-  def apply(signedMessage: String, publicKey: scala.scalajs.js.typedarray.Uint8Array): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def apply(signedMessage: String, publicKey: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
+  def apply(signedMessage: String, publicKey: js.typedarray.Uint8Array, outputFormat: StringOutputFormat): String = js.native
+  def apply(signedMessage: String, publicKey: js.typedarray.Uint8Array, outputFormat: Uint8ArrayOutputFormat): js.typedarray.Uint8Array = js.native
+  def apply(signedMessage: js.typedarray.Uint8Array, publicKey: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
   def apply(
-    signedMessage: String,
-    publicKey: scala.scalajs.js.typedarray.Uint8Array,
+    signedMessage: js.typedarray.Uint8Array,
+    publicKey: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
-    signedMessage: String,
-    publicKey: scala.scalajs.js.typedarray.Uint8Array,
+    signedMessage: js.typedarray.Uint8Array,
+    publicKey: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def apply(signedMessage: Uint8Array, publicKey: scala.scalajs.js.typedarray.Uint8Array): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def apply(
-    signedMessage: Uint8Array,
-    publicKey: scala.scalajs.js.typedarray.Uint8Array,
-    outputFormat: StringOutputFormat
-  ): String = js.native
-  def apply(
-    signedMessage: Uint8Array,
-    publicKey: scala.scalajs.js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
 }
 

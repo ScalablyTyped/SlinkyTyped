@@ -27,12 +27,53 @@ trait SchemaResult extends js.Object {
 
 object SchemaResult {
   @scala.inline
-  def apply(image: String = null, product: SchemaProduct = null, score: Int | Double = null): SchemaResult = {
+  def apply(): SchemaResult = {
     val __obj = js.Dynamic.literal()
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (product != null) __obj.updateDynamic("product")(product.asInstanceOf[js.Any])
-    if (score != null) __obj.updateDynamic("score")(score.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResult]
   }
+  @scala.inline
+  implicit class SchemaResultOps[Self <: SchemaResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProduct(value: SchemaProduct): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProduct: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScore(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

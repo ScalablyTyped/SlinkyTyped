@@ -1,26 +1,22 @@
 package typingsSlinky.reactFinalFormListeners.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactFinalFormListeners.mod.OnBlurProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object OnBlur
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object OnBlur {
   @JSImport("react-final-form-listeners", "OnBlur")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(name: String, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: OnBlurProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(name: String): Default[tag.type, js.Object] = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[OnBlurProps]))
   }
-  type Props = OnBlurProps
 }
 

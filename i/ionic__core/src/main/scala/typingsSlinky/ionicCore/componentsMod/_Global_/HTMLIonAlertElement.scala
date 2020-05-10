@@ -1,11 +1,11 @@
 package typingsSlinky.ionicCore.componentsMod._Global_
 
 import org.scalablytyped.runtime.Instantiable0
+import org.scalajs.dom.raw.EventListenerOptions
 import typingsSlinky.ionicCore.componentsMod.Components.IonAlert
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlaySelect
 import typingsSlinky.ionicCore.stencilCoreMod.HTMLStencilElement
 import typingsSlinky.std.AddEventListenerOptions
-import typingsSlinky.std.EventListenerOptions
 import typingsSlinky.std.EventListenerOrEventListenerObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

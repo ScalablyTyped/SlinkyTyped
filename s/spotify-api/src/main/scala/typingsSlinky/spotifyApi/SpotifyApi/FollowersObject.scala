@@ -8,17 +8,44 @@ import scala.scalajs.js.annotation._
   * Followers Object
   * [](https://developer.spotify.com/web-api/object-model/)
   */
+@js.native
 trait FollowersObject extends js.Object {
-  var href: String
-  var total: Double
+  /**
+    * A link to the Web API endpoint providing full details of the followers; `null` if not available.
+    * Please note that this will always be set to `null`, as the Web API does not support it at the moment.
+    */
+  var href: Null = js.native
+  /**
+    * The total number of followers.
+    */
+  var total: Double = js.native
 }
 
 object FollowersObject {
   @scala.inline
-  def apply(href: String, total: Double): FollowersObject = {
+  def apply(href: Null, total: Double): FollowersObject = {
     val __obj = js.Dynamic.literal(href = href.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[FollowersObject]
   }
+  @scala.inline
+  implicit class FollowersObjectOps[Self <: FollowersObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHref(value: Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTotal(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

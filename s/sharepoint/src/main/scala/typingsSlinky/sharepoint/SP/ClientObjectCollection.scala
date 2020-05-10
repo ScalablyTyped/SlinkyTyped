@@ -1,7 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
 import typingsSlinky.sharepoint.IEnumerable
-import typingsSlinky.sharepoint.IEnumerator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +12,6 @@ class ClientObjectCollection[T] ()
   extends ClientObject
      with IEnumerable[T] {
   def addChild(obj: T): Unit = js.native
-  /* CompleteClass */
-  override def getEnumerator(): IEnumerator[T] = js.native
   def getItemAtIndex(index: Double): T = js.native
   def get_areItemsAvailable(): Boolean = js.native
   /** Returns number of items in the collection. */

@@ -33,7 +33,7 @@ object mod extends js.Object {
   	@returns A [readable object stream](https://nodejs.org/api/stream.html#stream_object_mode).
   	*/
   def `object`(input: InputObject): Readable = js.native
-  type Input = Buffer | TypedArray | scala.scalajs.js.typedarray.ArrayBuffer | String | (js.Iterable[Buffer | String])
+  type Input = Buffer | TypedArray | js.typedarray.ArrayBuffer | String | (js.Iterable[Buffer | String])
   type InputObject = StringDictionary[js.Any] | js.Iterable[StringDictionary[js.Any]]
 }
 

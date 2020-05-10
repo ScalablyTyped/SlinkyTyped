@@ -8,7 +8,6 @@ import typingsSlinky.dialogflow.mod.google.cloud.dialogflow.v2beta1.Agent.Tier
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -95,8 +94,8 @@ object Agent extends js.Object {
     */
   def decode(reader: Reader): Agent = js.native
   def decode(reader: Reader, length: Double): Agent = js.native
-  def decode(reader: Uint8Array): Agent = js.native
-  def decode(reader: Uint8Array, length: Double): Agent = js.native
+  def decode(reader: js.typedarray.Uint8Array): Agent = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): Agent = js.native
   /**
     * Decodes an Agent message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -105,7 +104,7 @@ object Agent extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): Agent = js.native
-  def decodeDelimited(reader: Uint8Array): Agent = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): Agent = js.native
   /**
     * Encodes the specified Agent message. Does not implicitly {@link google.cloud.dialogflow.v2beta1.Agent.verify|verify} messages.
     * @param message Agent message or plain object to encode

@@ -8,7 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class NetworkOperatorNotificationTrigger protected () extends INetworkOperatorNotificationTrigger {
   def this(networkAccountId: String) = this()
-  /* CompleteClass */
-  override var networkAccountId: String = js.native
 }
 

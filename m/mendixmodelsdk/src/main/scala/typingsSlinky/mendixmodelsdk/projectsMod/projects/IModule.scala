@@ -14,31 +14,32 @@ import scala.scalajs.js.annotation._
 /**
   * See: {@link https://docs.mendix.com/refguide7/modules relevant section in reference guide}
   */
+@js.native
 trait IModule extends IFolderBase {
-  var appStoreGuid: String
-  var appStoreVersion: String
-  var appStoreVersionGuid: String
+  var appStoreGuid: String = js.native
+  var appStoreVersion: String = js.native
+  var appStoreVersionGuid: String = js.native
   /**
     * This property is required and cannot be set to null.
     */
-  var domainModel: IDomainModel
-  var fromAppStore: Boolean
+  var domainModel: IDomainModel = js.native
+  var fromAppStore: Boolean = js.native
   /**
     * In version 8.5.0: introduced
     */
-  var isReusableComponent: Boolean
+  var isReusableComponent: Boolean = js.native
   /**
     * This property is required and cannot be set to null.
     */
-  var moduleSecurity: IModuleSecurity
-  var name: String
+  var moduleSecurity: IModuleSecurity = js.native
+  var name: String = js.native
   /**
     * The index of where this Module appears in the project.
     * This property is <em>required</em>, and of type double.
     * Also, its value needs to be unique among its siblings (meaning, in code: <tt>containerAsProject.modules</tt>) in the project.
     * In other words: <tt>containerAsProject.modules.map(m => m.sortedIndex)</tt> (TS syntax) needs to be a list with unique values.
     */
-  var sortIndex: Double
+  var sortIndex: Double = js.native
 }
 
 object IModule {
@@ -72,8 +73,69 @@ object IModule {
     unit: IAbstractUnit
   ): IModule = {
     val __obj = js.Dynamic.literal(allProperties = js.Any.fromFunction0(allProperties), appStoreGuid = appStoreGuid.asInstanceOf[js.Any], appStoreVersion = appStoreVersion.asInstanceOf[js.Any], appStoreVersionGuid = appStoreVersionGuid.asInstanceOf[js.Any], container = container.asInstanceOf[js.Any], containerAsFolderBase = containerAsFolderBase.asInstanceOf[js.Any], containerAsProject = containerAsProject.asInstanceOf[js.Any], documents = documents.asInstanceOf[js.Any], domainModel = domainModel.asInstanceOf[js.Any], folders = folders.asInstanceOf[js.Any], fromAppStore = fromAppStore.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isLoaded = isLoaded.asInstanceOf[js.Any], isReusableComponent = isReusableComponent.asInstanceOf[js.Any], loadedProperties = js.Any.fromFunction0(loadedProperties), model = model.asInstanceOf[js.Any], moduleSecurity = moduleSecurity.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], publicProperties = js.Any.fromFunction0(publicProperties), sortIndex = sortIndex.asInstanceOf[js.Any], structureTypeName = structureTypeName.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), traverse = js.Any.fromFunction1(traverse), traverseFind = js.Any.fromFunction1(traverseFind), traversePublicParts = js.Any.fromFunction1(traversePublicParts), unit = unit.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IModule]
   }
+  @scala.inline
+  implicit class IModuleOps[Self <: IModule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppStoreGuid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appStoreGuid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppStoreVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appStoreVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppStoreVersionGuid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appStoreVersionGuid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDomainModel(value: IDomainModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFromAppStore(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromAppStore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsReusableComponent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isReusableComponent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModuleSecurity(value: IModuleSecurity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moduleSecurity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSortIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

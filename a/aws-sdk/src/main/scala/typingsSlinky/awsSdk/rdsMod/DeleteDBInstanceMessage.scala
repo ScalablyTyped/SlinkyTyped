@@ -26,17 +26,59 @@ trait DeleteDBInstanceMessage extends js.Object {
 
 object DeleteDBInstanceMessage {
   @scala.inline
-  def apply(
-    DBInstanceIdentifier: String,
-    DeleteAutomatedBackups: js.UndefOr[scala.Boolean] = js.undefined,
-    FinalDBSnapshotIdentifier: String = null,
-    SkipFinalSnapshot: js.UndefOr[scala.Boolean] = js.undefined
-  ): DeleteDBInstanceMessage = {
+  def apply(DBInstanceIdentifier: String): DeleteDBInstanceMessage = {
     val __obj = js.Dynamic.literal(DBInstanceIdentifier = DBInstanceIdentifier.asInstanceOf[js.Any])
-    if (!js.isUndefined(DeleteAutomatedBackups)) __obj.updateDynamic("DeleteAutomatedBackups")(DeleteAutomatedBackups.asInstanceOf[js.Any])
-    if (FinalDBSnapshotIdentifier != null) __obj.updateDynamic("FinalDBSnapshotIdentifier")(FinalDBSnapshotIdentifier.asInstanceOf[js.Any])
-    if (!js.isUndefined(SkipFinalSnapshot)) __obj.updateDynamic("SkipFinalSnapshot")(SkipFinalSnapshot.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteDBInstanceMessage]
   }
+  @scala.inline
+  implicit class DeleteDBInstanceMessageOps[Self <: DeleteDBInstanceMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDBInstanceIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstanceIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeleteAutomatedBackups(value: BooleanOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteAutomatedBackups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteAutomatedBackups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteAutomatedBackups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFinalDBSnapshotIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalDBSnapshotIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFinalDBSnapshotIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalDBSnapshotIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipFinalSnapshot(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SkipFinalSnapshot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipFinalSnapshot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SkipFinalSnapshot")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -29,12 +29,53 @@ trait SchemaDate extends js.Object {
 
 object SchemaDate {
   @scala.inline
-  def apply(day: Int | Double = null, month: Int | Double = null, year: Int | Double = null): SchemaDate = {
+  def apply(): SchemaDate = {
     val __obj = js.Dynamic.literal()
-    if (day != null) __obj.updateDynamic("day")(day.asInstanceOf[js.Any])
-    if (month != null) __obj.updateDynamic("month")(month.asInstanceOf[js.Any])
-    if (year != null) __obj.updateDynamic("year")(year.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDate]
   }
+  @scala.inline
+  implicit class SchemaDateOps[Self <: SchemaDate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("month")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("month")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYear(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("year")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYear: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("year")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

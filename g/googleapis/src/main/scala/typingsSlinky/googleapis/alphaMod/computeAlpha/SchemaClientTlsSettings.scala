@@ -41,18 +41,65 @@ trait SchemaClientTlsSettings extends js.Object {
 
 object SchemaClientTlsSettings {
   @scala.inline
-  def apply(
-    clientTlsContext: SchemaTlsContext = null,
-    mode: String = null,
-    sni: String = null,
-    subjectAltNames: js.Array[String] = null
-  ): SchemaClientTlsSettings = {
+  def apply(): SchemaClientTlsSettings = {
     val __obj = js.Dynamic.literal()
-    if (clientTlsContext != null) __obj.updateDynamic("clientTlsContext")(clientTlsContext.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (sni != null) __obj.updateDynamic("sni")(sni.asInstanceOf[js.Any])
-    if (subjectAltNames != null) __obj.updateDynamic("subjectAltNames")(subjectAltNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaClientTlsSettings]
   }
+  @scala.inline
+  implicit class SchemaClientTlsSettingsOps[Self <: SchemaClientTlsSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientTlsContext(value: SchemaTlsContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientTlsContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientTlsContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientTlsContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSni(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sni")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSni: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sni")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubjectAltNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subjectAltNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubjectAltNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subjectAltNames")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,26 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FilterSpecification extends js.Object {
-  var filter: String
-  var inputs: js.UndefOr[String | js.Array[String]] = js.undefined
-  var options: js.UndefOr[js.Any | String | js.Array[_]] = js.undefined
-  var outputs: js.UndefOr[String | js.Array[String]] = js.undefined
+  var filter: String = js.native
+  var inputs: js.UndefOr[String | js.Array[String]] = js.native
+  var options: js.UndefOr[js.Any | String | js.Array[_]] = js.native
+  var outputs: js.UndefOr[String | js.Array[String]] = js.native
 }
 
 object FilterSpecification {
   @scala.inline
-  def apply(
-    filter: String,
-    inputs: String | js.Array[String] = null,
-    options: js.Any | String | js.Array[_] = null,
-    outputs: String | js.Array[String] = null
-  ): FilterSpecification = {
+  def apply(filter: String): FilterSpecification = {
     val __obj = js.Dynamic.literal(filter = filter.asInstanceOf[js.Any])
-    if (inputs != null) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (outputs != null) __obj.updateDynamic("outputs")(outputs.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilterSpecification]
   }
+  @scala.inline
+  implicit class FilterSpecificationOps[Self <: FilterSpecification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputs(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: js.Any | String | js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputs(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

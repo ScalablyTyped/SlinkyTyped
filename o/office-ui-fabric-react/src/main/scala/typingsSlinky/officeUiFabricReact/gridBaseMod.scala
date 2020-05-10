@@ -2,7 +2,7 @@ package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.officeUiFabricReact.gridTypesMod.IGrid
 import typingsSlinky.officeUiFabricReact.gridTypesMod.IGridProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 object gridBaseMod extends js.Object {
   @js.native
   class GridBase protected ()
-    extends BaseComponent[IGridProps, js.Object]
+    extends Component[IGridProps, js.Object, js.Any]
        with IGrid {
     def this(props: IGridProps) = this()
     var _id: js.Any = js.native

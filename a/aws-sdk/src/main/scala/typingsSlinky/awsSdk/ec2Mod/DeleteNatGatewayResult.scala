@@ -14,10 +14,29 @@ trait DeleteNatGatewayResult extends js.Object {
 
 object DeleteNatGatewayResult {
   @scala.inline
-  def apply(NatGatewayId: String = null): DeleteNatGatewayResult = {
+  def apply(): DeleteNatGatewayResult = {
     val __obj = js.Dynamic.literal()
-    if (NatGatewayId != null) __obj.updateDynamic("NatGatewayId")(NatGatewayId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteNatGatewayResult]
   }
+  @scala.inline
+  implicit class DeleteNatGatewayResultOps[Self <: DeleteNatGatewayResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNatGatewayId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NatGatewayId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNatGatewayId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NatGatewayId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

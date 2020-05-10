@@ -1,16 +1,13 @@
 package typingsSlinky.reResizable.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reResizable.AnonX
 import typingsSlinky.reResizable.mod.Enable
 import typingsSlinky.reResizable.mod.HandleClassName
@@ -27,70 +24,78 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Resizable
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reResizable.mod.Resizable] {
+object Resizable {
   @JSImport("re-resizable", "Resizable")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    bounds: parent | window | HTMLElement = null,
-    defaultSize: Size = null,
-    enable: Enable = null,
-    grid: js.Tuple2[Double, Double] = null,
-    handleClasses: HandleClassName = null,
-    handleComponent: HandleComponent = null,
-    handleStyles: HandleStyles = null,
-    handleWrapperClass: String = null,
-    handleWrapperStyle: CSSProperties = null,
-    lockAspectRatio: Boolean | Double = null,
-    lockAspectRatioExtraHeight: Int | Double = null,
-    lockAspectRatioExtraWidth: Int | Double = null,
-    maxHeight: String | Double = null,
-    maxWidth: String | Double = null,
-    minHeight: String | Double = null,
-    minWidth: String | Double = null,
-    onResize: (/* event */ MouseEvent | TouchEvent, /* direction */ Direction, /* elementRef */ HTMLDivElement, /* delta */ NumberSize) => Unit = null,
-    onResizeStart: (/* e */ SyntheticMouseEvent[HTMLDivElement] | SyntheticTouchEvent[HTMLDivElement], /* dir */ Direction, /* elementRef */ HTMLDivElement) => Unit | Boolean = null,
-    onResizeStop: (/* event */ MouseEvent | TouchEvent, /* direction */ Direction, /* elementRef */ HTMLDivElement, /* delta */ NumberSize) => Unit = null,
-    resizeRatio: Int | Double = null,
-    scale: Int | Double = null,
-    size: Size = null,
-    snap: AnonX = null,
-    snapGap: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reResizable.mod.Resizable] = {
-    val __obj = js.Dynamic.literal()
-    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
-    if (defaultSize != null) __obj.updateDynamic("defaultSize")(defaultSize.asInstanceOf[js.Any])
-    if (enable != null) __obj.updateDynamic("enable")(enable.asInstanceOf[js.Any])
-    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
-    if (handleClasses != null) __obj.updateDynamic("handleClasses")(handleClasses.asInstanceOf[js.Any])
-    if (handleComponent != null) __obj.updateDynamic("handleComponent")(handleComponent.asInstanceOf[js.Any])
-    if (handleStyles != null) __obj.updateDynamic("handleStyles")(handleStyles.asInstanceOf[js.Any])
-    if (handleWrapperClass != null) __obj.updateDynamic("handleWrapperClass")(handleWrapperClass.asInstanceOf[js.Any])
-    if (handleWrapperStyle != null) __obj.updateDynamic("handleWrapperStyle")(handleWrapperStyle.asInstanceOf[js.Any])
-    if (lockAspectRatio != null) __obj.updateDynamic("lockAspectRatio")(lockAspectRatio.asInstanceOf[js.Any])
-    if (lockAspectRatioExtraHeight != null) __obj.updateDynamic("lockAspectRatioExtraHeight")(lockAspectRatioExtraHeight.asInstanceOf[js.Any])
-    if (lockAspectRatioExtraWidth != null) __obj.updateDynamic("lockAspectRatioExtraWidth")(lockAspectRatioExtraWidth.asInstanceOf[js.Any])
-    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (minHeight != null) __obj.updateDynamic("minHeight")(minHeight.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
-    if (onResize != null) __obj.updateDynamic("onResize")(js.Any.fromFunction4(onResize))
-    if (onResizeStart != null) __obj.updateDynamic("onResizeStart")(js.Any.fromFunction3(onResizeStart))
-    if (onResizeStop != null) __obj.updateDynamic("onResizeStop")(js.Any.fromFunction4(onResizeStop))
-    if (resizeRatio != null) __obj.updateDynamic("resizeRatio")(resizeRatio.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (snap != null) __obj.updateDynamic("snap")(snap.asInstanceOf[js.Any])
-    if (snapGap != null) __obj.updateDynamic("snapGap")(snapGap.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reResizable.mod.Resizable] {
+    @scala.inline
+    def boundsHTMLElement(value: HTMLElement): this.type = set("bounds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bounds(value: parent | window | HTMLElement): this.type = set("bounds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultSize(value: Size): this.type = set("defaultSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enable(value: Enable): this.type = set("enable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def grid(value: js.Tuple2[Double, Double]): this.type = set("grid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handleClasses(value: HandleClassName): this.type = set("handleClasses", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handleComponent(value: HandleComponent): this.type = set("handleComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handleStyles(value: HandleStyles): this.type = set("handleStyles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handleWrapperClass(value: String): this.type = set("handleWrapperClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handleWrapperStyle(value: CSSProperties): this.type = set("handleWrapperStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lockAspectRatio(value: Boolean | Double): this.type = set("lockAspectRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lockAspectRatioExtraHeight(value: Double): this.type = set("lockAspectRatioExtraHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lockAspectRatioExtraWidth(value: Double): this.type = set("lockAspectRatioExtraWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxHeight(value: String | Double): this.type = set("maxHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxWidth(value: String | Double): this.type = set("maxWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minHeight(value: String | Double): this.type = set("minHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minWidth(value: String | Double): this.type = set("minWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onResize(
+      value: (/* event */ MouseEvent | TouchEvent, /* direction */ Direction, /* elementRef */ HTMLDivElement, /* delta */ NumberSize) => Unit
+    ): this.type = set("onResize", js.Any.fromFunction4(value))
+    @scala.inline
+    def onResizeStart(
+      value: (/* e */ SyntheticMouseEvent[HTMLDivElement] | SyntheticTouchEvent[HTMLDivElement], /* dir */ Direction, /* elementRef */ HTMLDivElement) => Unit | Boolean
+    ): this.type = set("onResizeStart", js.Any.fromFunction3(value))
+    @scala.inline
+    def onResizeStop(
+      value: (/* event */ MouseEvent | TouchEvent, /* direction */ Direction, /* elementRef */ HTMLDivElement, /* delta */ NumberSize) => Unit
+    ): this.type = set("onResizeStop", js.Any.fromFunction4(value))
+    @scala.inline
+    def resizeRatio(value: Double): this.type = set("resizeRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scale(value: Double): this.type = set("scale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: Size): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def snap(value: AnonX): this.type = set("snap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def snapGap(value: Double): this.type = set("snapGap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reResizable.mod.Resizable] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reResizable.mod.Resizable](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ResizableProps
+  
+  def withProps(p: ResizableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Resizable.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

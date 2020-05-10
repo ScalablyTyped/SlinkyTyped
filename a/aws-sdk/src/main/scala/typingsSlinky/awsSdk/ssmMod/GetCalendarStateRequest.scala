@@ -18,10 +18,35 @@ trait GetCalendarStateRequest extends js.Object {
 
 object GetCalendarStateRequest {
   @scala.inline
-  def apply(CalendarNames: CalendarNameOrARNList, AtTime: ISO8601String = null): GetCalendarStateRequest = {
+  def apply(CalendarNames: CalendarNameOrARNList): GetCalendarStateRequest = {
     val __obj = js.Dynamic.literal(CalendarNames = CalendarNames.asInstanceOf[js.Any])
-    if (AtTime != null) __obj.updateDynamic("AtTime")(AtTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCalendarStateRequest]
   }
+  @scala.inline
+  implicit class GetCalendarStateRequestOps[Self <: GetCalendarStateRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCalendarNames(value: CalendarNameOrARNList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CalendarNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAtTime(value: ISO8601String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AtTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAtTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AtTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

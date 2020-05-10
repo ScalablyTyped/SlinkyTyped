@@ -10,28 +10,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SwitchProps
   extends AllHTMLAttributes[js.Any]
      with ClassAttributes[js.Any]
      with RippleComponent {
   @JSName("onChange")
-  var onChange_SwitchProps: js.UndefOr[FormEventHandler[Switch]] = js.undefined
+  var onChange_SwitchProps: js.UndefOr[FormEventHandler[Switch]] = js.native
 }
 
 object SwitchProps {
   @scala.inline
-  def apply(
-    AllHTMLAttributes: AllHTMLAttributes[js.Any] = null,
-    ClassAttributes: ClassAttributes[js.Any] = null,
-    RippleComponent: RippleComponent = null,
-    onChange: SyntheticEvent[EventTarget with Switch, Event_] => Unit = null
-  ): SwitchProps = {
+  def apply(): SwitchProps = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
-    if (RippleComponent != null) js.Dynamic.global.Object.assign(__obj, RippleComponent)
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     __obj.asInstanceOf[SwitchProps]
   }
+  @scala.inline
+  implicit class SwitchPropsOps[Self <: SwitchProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnChange(value: SyntheticEvent[EventTarget with Switch, Event_] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

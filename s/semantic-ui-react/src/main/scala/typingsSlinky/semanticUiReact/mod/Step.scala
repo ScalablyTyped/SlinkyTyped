@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.mod
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.semanticUiReact.stepStepMod.StepComponent
 import typingsSlinky.semanticUiReact.stepStepMod.StepProps
 import scala.scalajs.js
@@ -12,7 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("semantic-ui-react", "Step")
 @js.native
 class Step protected ()
-  extends Component[StepProps, ComponentState, js.Any] {
+  extends Component[StepProps, js.Object, js.Any] {
   def this(props: StepProps) = this()
   def this(props: StepProps, context: js.Any) = this()
 }

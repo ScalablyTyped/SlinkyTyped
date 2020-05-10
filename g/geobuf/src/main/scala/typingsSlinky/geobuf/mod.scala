@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   def decode(pbf: ^): GeoJSON = js.native
-  def encode(obj: GeoJSON, pbf: ^): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def encode(obj: GeoJSON, pbf: ^): js.typedarray.Uint8Array = js.native
 }
 

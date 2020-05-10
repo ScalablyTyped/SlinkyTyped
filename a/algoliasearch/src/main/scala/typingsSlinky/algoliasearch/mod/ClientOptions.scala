@@ -8,48 +8,106 @@ import scala.scalajs.js.annotation._
 /**
   * Interface describing available options when initializing a client
   */
+@js.native
 trait ClientOptions extends js.Object {
   /**
     * enable the experimental feature: caching requests instead of responses
     */
-  var _useRequestCache: js.UndefOr[Boolean] = js.undefined
+  var _useRequestCache: js.UndefOr[Boolean] = js.native
   /**
     * read: array of read hosts to use to call  servers, computed automatically
     * write: array of read hosts to use to call  servers, computed automatically
     */
-  var hosts: js.UndefOr[AnonRead] = js.undefined
+  var hosts: js.UndefOr[AnonRead] = js.native
   /**
     * (node only) httpAgent instance to use when communicating with  servers.
     */
-  var httpAgent: js.UndefOr[js.Any] = js.undefined
+  var httpAgent: js.UndefOr[js.Any] = js.native
   /**
     * Protocol to use when communicating with algolia
     * default: current protocol(browser), https(node)
     */
-  var protocol: js.UndefOr[String] = js.undefined
+  var protocol: js.UndefOr[String] = js.native
   /**
     * Timeout for requests to our servers, in milliseconds
     * default: 15s (node), 2s (browser)
     */
-  var timeout: js.UndefOr[Double] = js.undefined
+  var timeout: js.UndefOr[Double] = js.native
 }
 
 object ClientOptions {
   @scala.inline
-  def apply(
-    _useRequestCache: js.UndefOr[Boolean] = js.undefined,
-    hosts: AnonRead = null,
-    httpAgent: js.Any = null,
-    protocol: String = null,
-    timeout: Int | Double = null
-  ): ClientOptions = {
+  def apply(): ClientOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(_useRequestCache)) __obj.updateDynamic("_useRequestCache")(_useRequestCache.asInstanceOf[js.Any])
-    if (hosts != null) __obj.updateDynamic("hosts")(hosts.asInstanceOf[js.Any])
-    if (httpAgent != null) __obj.updateDynamic("httpAgent")(httpAgent.asInstanceOf[js.Any])
-    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientOptions]
   }
+  @scala.inline
+  implicit class ClientOptionsOps[Self <: ClientOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_useRequestCache(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_useRequestCache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_useRequestCache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_useRequestCache")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHosts(value: AnonRead): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hosts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHosts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hosts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttpAgent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpAgent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpAgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpAgent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtocol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

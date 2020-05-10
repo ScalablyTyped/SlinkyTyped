@@ -26,14 +26,6 @@ object entryMod extends js.Object {
       * The second, mapped element.
       */
     var second: T = js.native
-    /**
-      * Test whether less than some object.
-      *
-      * @param obj The object to compare.
-      * @return Whether less or not.
-      */
-    /* CompleteClass */
-    override def less(obj: Entry[Key, T]): Boolean = js.native
   }
   
 }

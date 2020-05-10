@@ -1,49 +1,88 @@
 package typingsSlinky.passportAuth0.mod
 
-import typingsSlinky.passport.AnonFamilyName
-import typingsSlinky.passport.AnonType
-import typingsSlinky.passport.AnonValue
 import typingsSlinky.passportAuth0.AnonMax
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Profile
   extends typingsSlinky.passport.mod.Profile {
-  var _json: js.Any
-  var _raw: String
-  var ageRange: js.UndefOr[AnonMax] = js.undefined
-  var birthday: String
-  var gender: js.UndefOr[String] = js.undefined
-  var profileUrl: js.UndefOr[String] = js.undefined
+  var _json: js.Any = js.native
+  var _raw: String = js.native
+  var ageRange: js.UndefOr[AnonMax] = js.native
+  var birthday: String = js.native
+  var gender: js.UndefOr[String] = js.native
+  var profileUrl: js.UndefOr[String] = js.native
 }
 
 object Profile {
   @scala.inline
-  def apply(
-    _json: js.Any,
-    _raw: String,
-    birthday: String,
-    displayName: String,
-    id: String,
-    provider: String,
-    ageRange: AnonMax = null,
-    emails: js.Array[AnonType] = null,
-    gender: String = null,
-    name: AnonFamilyName = null,
-    photos: js.Array[AnonValue] = null,
-    profileUrl: String = null,
-    username: String = null
-  ): Profile = {
+  def apply(_json: js.Any, _raw: String, birthday: String, displayName: String, id: String, provider: String): Profile = {
     val __obj = js.Dynamic.literal(_json = _json.asInstanceOf[js.Any], _raw = _raw.asInstanceOf[js.Any], birthday = birthday.asInstanceOf[js.Any], displayName = displayName.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], provider = provider.asInstanceOf[js.Any])
-    if (ageRange != null) __obj.updateDynamic("ageRange")(ageRange.asInstanceOf[js.Any])
-    if (emails != null) __obj.updateDynamic("emails")(emails.asInstanceOf[js.Any])
-    if (gender != null) __obj.updateDynamic("gender")(gender.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (photos != null) __obj.updateDynamic("photos")(photos.asInstanceOf[js.Any])
-    if (profileUrl != null) __obj.updateDynamic("profileUrl")(profileUrl.asInstanceOf[js.Any])
-    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
     __obj.asInstanceOf[Profile]
   }
+  @scala.inline
+  implicit class ProfileOps[Self <: Profile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_json(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_json")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_raw(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_raw")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBirthday(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("birthday")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAgeRange(value: AnonMax): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ageRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgeRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ageRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGender(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfileUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profileUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfileUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profileUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,69 +4,187 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonActor extends js.Object {
   /**
     * If this activity's object is itself another activity, such as when a person reshares an activity, this property specifies the original activity's
     * actor.
     */
-  var actor: js.UndefOr[AnonDisplayName] = js.undefined
+  var actor: js.UndefOr[AnonDisplayName] = js.native
   /** The media objects attached to this activity. */
-  var attachments: js.UndefOr[js.Array[AnonContent]] = js.undefined
+  var attachments: js.UndefOr[js.Array[AnonContent]] = js.native
   /** The HTML-formatted content, which is suitable for display. */
-  var content: js.UndefOr[String] = js.undefined
+  var content: js.UndefOr[String] = js.native
   /** The ID of the object. When resharing an activity, this is the ID of the activity that is being reshared. */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * The type of the object. Possible values include, but are not limited to, the following values:
     * - "note" - Textual content.
     * - "activity" - A Google+ activity.
     */
-  var objectType: js.UndefOr[String] = js.undefined
+  var objectType: js.UndefOr[String] = js.native
   /**
     * The content (text) as provided by the author, which is stored without any HTML formatting. When creating or updating an activity, this value must be
     * supplied as plain text in the request.
     */
-  var originalContent: js.UndefOr[String] = js.undefined
+  var originalContent: js.UndefOr[String] = js.native
   /** People who +1'd this activity. */
-  var plusoners: js.UndefOr[AnonSelfLink] = js.undefined
+  var plusoners: js.UndefOr[AnonSelfLink] = js.native
   /** Comments in reply to this activity. */
-  var replies: js.UndefOr[AnonSelfLink] = js.undefined
+  var replies: js.UndefOr[AnonSelfLink] = js.native
   /** People who reshared this activity. */
-  var resharers: js.UndefOr[AnonSelfLink] = js.undefined
+  var resharers: js.UndefOr[AnonSelfLink] = js.native
   /** Status of the activity as seen by the viewer. */
-  var statusForViewer: js.UndefOr[AnonCanComment] = js.undefined
+  var statusForViewer: js.UndefOr[AnonCanComment] = js.native
   /** The URL that points to the linked resource. */
-  var url: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.native
 }
 
 object AnonActor {
   @scala.inline
-  def apply(
-    actor: AnonDisplayName = null,
-    attachments: js.Array[AnonContent] = null,
-    content: String = null,
-    id: String = null,
-    objectType: String = null,
-    originalContent: String = null,
-    plusoners: AnonSelfLink = null,
-    replies: AnonSelfLink = null,
-    resharers: AnonSelfLink = null,
-    statusForViewer: AnonCanComment = null,
-    url: String = null
-  ): AnonActor = {
+  def apply(): AnonActor = {
     val __obj = js.Dynamic.literal()
-    if (actor != null) __obj.updateDynamic("actor")(actor.asInstanceOf[js.Any])
-    if (attachments != null) __obj.updateDynamic("attachments")(attachments.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (objectType != null) __obj.updateDynamic("objectType")(objectType.asInstanceOf[js.Any])
-    if (originalContent != null) __obj.updateDynamic("originalContent")(originalContent.asInstanceOf[js.Any])
-    if (plusoners != null) __obj.updateDynamic("plusoners")(plusoners.asInstanceOf[js.Any])
-    if (replies != null) __obj.updateDynamic("replies")(replies.asInstanceOf[js.Any])
-    if (resharers != null) __obj.updateDynamic("resharers")(resharers.asInstanceOf[js.Any])
-    if (statusForViewer != null) __obj.updateDynamic("statusForViewer")(statusForViewer.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonActor]
   }
+  @scala.inline
+  implicit class AnonActorOps[Self <: AnonActor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActor(value: AnonDisplayName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttachments(value: js.Array[AnonContent]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttachments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlusoners(value: AnonSelfLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plusoners")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlusoners: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plusoners")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplies(value: AnonSelfLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResharers(value: AnonSelfLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resharers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResharers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resharers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusForViewer(value: AnonCanComment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusForViewer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusForViewer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusForViewer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

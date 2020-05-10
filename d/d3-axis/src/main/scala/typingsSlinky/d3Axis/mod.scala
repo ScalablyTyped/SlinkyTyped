@@ -1,9 +1,9 @@
 package typingsSlinky.d3Axis
 
+import org.scalajs.dom.raw.SVGGElement
+import org.scalajs.dom.raw.SVGSVGElement
 import typingsSlinky.d3Selection.mod.Selection_
 import typingsSlinky.d3Selection.mod.TransitionLike
-import typingsSlinky.std.SVGGElement
-import typingsSlinky.std.SVGSVGElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -247,7 +247,7 @@ object mod extends js.Object {
   def axisLeft[Domain /* <: AxisDomain */](scale: AxisScale[Domain]): Axis[Domain] = js.native
   def axisRight[Domain /* <: AxisDomain */](scale: AxisScale[Domain]): Axis[Domain] = js.native
   def axisTop[Domain /* <: AxisDomain */](scale: AxisScale[Domain]): Axis[Domain] = js.native
-  type AxisContainerElement = org.scalajs.dom.raw.SVGSVGElement | org.scalajs.dom.raw.SVGGElement
+  type AxisContainerElement = SVGSVGElement | SVGGElement
   type AxisDomain = Double | String | js.Date | AnonValueOf
 }
 

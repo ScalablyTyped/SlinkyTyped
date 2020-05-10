@@ -20,26 +20,24 @@ trait FieldAttributesType extends js.Object
 
 object FieldAttributesType {
   @scala.inline
-  def A: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.A = this.cast("A")
+  def A: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.A = "A".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.A]
   @scala.inline
-  def D: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.D = this.cast("D")
+  def D: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.D = "D".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.D]
   @scala.inline
-  def F: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.F = this.cast("F")
+  def F: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.F = "F".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.F]
   @scala.inline
-  def I: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.I = this.cast("I")
+  def I: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.I = "I".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.I]
   @scala.inline
-  def IV: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.IV = this.cast("IV")
+  def IV: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.IV = "IV".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.IV]
   @scala.inline
-  def M: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.M = this.cast("M")
+  def M: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.M = "M".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.M]
   @scala.inline
-  def R: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.R = this.cast("R")
+  def R: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.R = "R".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.R]
   @scala.inline
-  def T: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.T = this.cast("T")
+  def T: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.T = "T".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.T]
   @scala.inline
-  def TS: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.TS = this.cast("TS")
+  def TS: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.TS = "TS".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.TS]
   @scala.inline
-  def U: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.U = this.cast("U")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def U: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.U = "U".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.U]
 }
 

@@ -168,7 +168,7 @@ trait ApplicationCache_ extends EventTarget {
   def removeEventListener_cached(
     `type`: cached,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_checking(`type`: checking, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -182,7 +182,7 @@ trait ApplicationCache_ extends EventTarget {
   def removeEventListener_checking(
     `type`: checking,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_downloading(`type`: downloading, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -196,7 +196,7 @@ trait ApplicationCache_ extends EventTarget {
   def removeEventListener_downloading(
     `type`: downloading,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -210,7 +210,7 @@ trait ApplicationCache_ extends EventTarget {
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_noupdate(`type`: noupdate, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -224,7 +224,7 @@ trait ApplicationCache_ extends EventTarget {
   def removeEventListener_noupdate(
     `type`: noupdate,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_obsolete(`type`: obsolete, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -238,7 +238,7 @@ trait ApplicationCache_ extends EventTarget {
   def removeEventListener_obsolete(
     `type`: obsolete,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_progress(
@@ -255,7 +255,7 @@ trait ApplicationCache_ extends EventTarget {
   def removeEventListener_progress(
     `type`: progress,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_updateready(`type`: updateready, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -269,7 +269,7 @@ trait ApplicationCache_ extends EventTarget {
   def removeEventListener_updateready(
     `type`: updateready,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   /** @deprecated */
   def swapCache(): Unit = js.native

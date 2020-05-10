@@ -5,10 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PanelTemplate extends js.Object {
-  var buttons: js.Array[Button]
-  var panel: Panel
-  var `type`: PANEL_TEMPLATE
+  var buttons: js.Array[Button] = js.native
+  var panel: Panel = js.native
+  var `type`: PANEL_TEMPLATE = js.native
 }
 
 object PanelTemplate {
@@ -18,5 +19,31 @@ object PanelTemplate {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PanelTemplate]
   }
+  @scala.inline
+  implicit class PanelTemplateOps[Self <: PanelTemplate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withButtons(value: js.Array[Button]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPanel(value: Panel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: PANEL_TEMPLATE): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

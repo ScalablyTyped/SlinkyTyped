@@ -26,17 +26,59 @@ trait DescribeRemediationExceptionsRequest extends js.Object {
 
 object DescribeRemediationExceptionsRequest {
   @scala.inline
-  def apply(
-    ConfigRuleName: ConfigRuleName,
-    Limit: Int | Double = null,
-    NextToken: String = null,
-    ResourceKeys: RemediationExceptionResourceKeys = null
-  ): DescribeRemediationExceptionsRequest = {
+  def apply(ConfigRuleName: ConfigRuleName): DescribeRemediationExceptionsRequest = {
     val __obj = js.Dynamic.literal(ConfigRuleName = ConfigRuleName.asInstanceOf[js.Any])
-    if (Limit != null) __obj.updateDynamic("Limit")(Limit.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (ResourceKeys != null) __obj.updateDynamic("ResourceKeys")(ResourceKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeRemediationExceptionsRequest]
   }
+  @scala.inline
+  implicit class DescribeRemediationExceptionsRequestOps[Self <: DescribeRemediationExceptionsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigRuleName(value: ConfigRuleName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLimit(value: Limit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceKeys(value: RemediationExceptionResourceKeys): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceKeys")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

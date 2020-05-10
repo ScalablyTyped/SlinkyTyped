@@ -18,10 +18,35 @@ trait PutConfigurationSetTrackingOptionsRequest extends js.Object {
 
 object PutConfigurationSetTrackingOptionsRequest {
   @scala.inline
-  def apply(ConfigurationSetName: ConfigurationSetName, CustomRedirectDomain: CustomRedirectDomain = null): PutConfigurationSetTrackingOptionsRequest = {
+  def apply(ConfigurationSetName: ConfigurationSetName): PutConfigurationSetTrackingOptionsRequest = {
     val __obj = js.Dynamic.literal(ConfigurationSetName = ConfigurationSetName.asInstanceOf[js.Any])
-    if (CustomRedirectDomain != null) __obj.updateDynamic("CustomRedirectDomain")(CustomRedirectDomain.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutConfigurationSetTrackingOptionsRequest]
   }
+  @scala.inline
+  implicit class PutConfigurationSetTrackingOptionsRequestOps[Self <: PutConfigurationSetTrackingOptionsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigurationSetName(value: ConfigurationSetName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationSetName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCustomRedirectDomain(value: CustomRedirectDomain): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomRedirectDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomRedirectDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomRedirectDomain")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

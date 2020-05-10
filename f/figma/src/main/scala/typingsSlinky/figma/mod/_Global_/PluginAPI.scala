@@ -30,7 +30,7 @@ trait PluginAPI extends js.Object {
   def createEllipse(): EllipseNode = js.native
   def createFrame(): FrameNode = js.native
   def createGridStyle(): GridStyle = js.native
-  def createImage(data: scala.scalajs.js.typedarray.Uint8Array): Image = js.native
+  def createImage(data: js.typedarray.Uint8Array): Image = js.native
   def createLine(): LineNode = js.native
   def createNodeFromSvg(svg: String): FrameNode = js.native
   def createPage(): PageNode = js.native

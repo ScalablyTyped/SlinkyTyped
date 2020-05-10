@@ -13,12 +13,10 @@ trait PermissionStatus extends js.Object
 
 object PermissionStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def denied: typingsSlinky.reactNative.reactNativeStrings.denied = "denied".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.denied]
   @scala.inline
-  def denied: typingsSlinky.reactNative.reactNativeStrings.denied = this.cast("denied")
+  def granted: typingsSlinky.reactNative.reactNativeStrings.granted = "granted".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.granted]
   @scala.inline
-  def granted: typingsSlinky.reactNative.reactNativeStrings.granted = this.cast("granted")
-  @scala.inline
-  def never_ask_again: typingsSlinky.reactNative.reactNativeStrings.never_ask_again = this.cast("never_ask_again")
+  def never_ask_again: typingsSlinky.reactNative.reactNativeStrings.never_ask_again = "never_ask_again".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.never_ask_again]
 }
 

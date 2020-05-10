@@ -7,132 +7,264 @@ import scala.scalajs.js.annotation._
 /**
   * Delivery of bulk Supplies
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait SupplyDelivery extends DomainResource {
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ @js.native
+trait SupplyDelivery extends DomainResource {
   /**
     * Contains extended information for property 'occurrenceDateTime'.
     */
-  var _occurrenceDateTime: js.UndefOr[Element] = js.undefined
+  var _occurrenceDateTime: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'status'.
     */
-  var _status: js.UndefOr[Element] = js.undefined
+  var _status: js.UndefOr[Element] = js.native
   /**
     * Fulfills plan, proposal or order
     */
-  var basedOn: js.UndefOr[js.Array[Reference]] = js.undefined
+  var basedOn: js.UndefOr[js.Array[Reference]] = js.native
   /**
     * Where the Supply was sent
     */
-  var destination: js.UndefOr[Reference] = js.undefined
+  var destination: js.UndefOr[Reference] = js.native
   /**
     * External identifier
     */
-  var identifier: js.UndefOr[Identifier] = js.undefined
+  var identifier: js.UndefOr[Identifier] = js.native
   /**
     * When event occurred
     */
-  var occurrenceDateTime: js.UndefOr[dateTime] = js.undefined
+  var occurrenceDateTime: js.UndefOr[dateTime] = js.native
   /**
     * When event occurred
     */
-  var occurrencePeriod: js.UndefOr[Period] = js.undefined
+  var occurrencePeriod: js.UndefOr[Period] = js.native
   /**
     * When event occurred
     */
-  var occurrenceTiming: js.UndefOr[Timing] = js.undefined
+  var occurrenceTiming: js.UndefOr[Timing] = js.native
   /**
     * Part of referenced event
     */
-  var partOf: js.UndefOr[js.Array[Reference]] = js.undefined
+  var partOf: js.UndefOr[js.Array[Reference]] = js.native
   /**
     * Patient for whom the item is supplied
     */
-  var patient: js.UndefOr[Reference] = js.undefined
+  var patient: js.UndefOr[Reference] = js.native
   /**
     * Who collected the Supply
     */
-  var receiver: js.UndefOr[js.Array[Reference]] = js.undefined
+  var receiver: js.UndefOr[js.Array[Reference]] = js.native
   /**
     * in-progress | completed | abandoned | entered-in-error
     */
-  var status: js.UndefOr[code] = js.undefined
+  var status: js.UndefOr[code] = js.native
   /**
     * The item that is delivered or supplied
     */
-  var suppliedItem: js.UndefOr[SupplyDeliverySuppliedItem] = js.undefined
+  var suppliedItem: js.UndefOr[SupplyDeliverySuppliedItem] = js.native
   /**
     * Dispenser
     */
-  var supplier: js.UndefOr[Reference] = js.undefined
+  var supplier: js.UndefOr[Reference] = js.native
   /**
     * Category of dispense event
     */
-  var `type`: js.UndefOr[CodeableConcept] = js.undefined
+  var `type`: js.UndefOr[CodeableConcept] = js.native
 }
 
 object SupplyDelivery {
   @scala.inline
-  def apply(
-    _id: Element = null,
-    _implicitRules: Element = null,
-    _language: Element = null,
-    _occurrenceDateTime: Element = null,
-    _resourceType: Element = null,
-    _status: Element = null,
-    basedOn: js.Array[Reference] = null,
-    contained: js.Array[Resource] = null,
-    destination: Reference = null,
-    extension: js.Array[Extension] = null,
-    id: id = null,
-    identifier: Identifier = null,
-    implicitRules: uri = null,
-    language: code = null,
-    meta: Meta = null,
-    modifierExtension: js.Array[Extension] = null,
-    occurrenceDateTime: dateTime = null,
-    occurrencePeriod: Period = null,
-    occurrenceTiming: Timing = null,
-    partOf: js.Array[Reference] = null,
-    patient: Reference = null,
-    receiver: js.Array[Reference] = null,
-    resourceType: code = null,
-    status: code = null,
-    suppliedItem: SupplyDeliverySuppliedItem = null,
-    supplier: Reference = null,
-    text: Narrative = null,
-    `type`: CodeableConcept = null
-  ): SupplyDelivery = {
+  def apply(): SupplyDelivery = {
     val __obj = js.Dynamic.literal()
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_implicitRules != null) __obj.updateDynamic("_implicitRules")(_implicitRules.asInstanceOf[js.Any])
-    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
-    if (_occurrenceDateTime != null) __obj.updateDynamic("_occurrenceDateTime")(_occurrenceDateTime.asInstanceOf[js.Any])
-    if (_resourceType != null) __obj.updateDynamic("_resourceType")(_resourceType.asInstanceOf[js.Any])
-    if (_status != null) __obj.updateDynamic("_status")(_status.asInstanceOf[js.Any])
-    if (basedOn != null) __obj.updateDynamic("basedOn")(basedOn.asInstanceOf[js.Any])
-    if (contained != null) __obj.updateDynamic("contained")(contained.asInstanceOf[js.Any])
-    if (destination != null) __obj.updateDynamic("destination")(destination.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
-    if (implicitRules != null) __obj.updateDynamic("implicitRules")(implicitRules.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (occurrenceDateTime != null) __obj.updateDynamic("occurrenceDateTime")(occurrenceDateTime.asInstanceOf[js.Any])
-    if (occurrencePeriod != null) __obj.updateDynamic("occurrencePeriod")(occurrencePeriod.asInstanceOf[js.Any])
-    if (occurrenceTiming != null) __obj.updateDynamic("occurrenceTiming")(occurrenceTiming.asInstanceOf[js.Any])
-    if (partOf != null) __obj.updateDynamic("partOf")(partOf.asInstanceOf[js.Any])
-    if (patient != null) __obj.updateDynamic("patient")(patient.asInstanceOf[js.Any])
-    if (receiver != null) __obj.updateDynamic("receiver")(receiver.asInstanceOf[js.Any])
-    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (suppliedItem != null) __obj.updateDynamic("suppliedItem")(suppliedItem.asInstanceOf[js.Any])
-    if (supplier != null) __obj.updateDynamic("supplier")(supplier.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SupplyDelivery]
   }
+  @scala.inline
+  implicit class SupplyDeliveryOps[Self <: SupplyDelivery] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_occurrenceDateTime(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_occurrenceDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_occurrenceDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_occurrenceDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_status(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_status: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBasedOn(value: js.Array[Reference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basedOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBasedOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basedOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestination(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentifier(value: Identifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOccurrenceDateTime(value: dateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("occurrenceDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOccurrenceDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("occurrenceDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOccurrencePeriod(value: Period): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("occurrencePeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOccurrencePeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("occurrencePeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOccurrenceTiming(value: Timing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("occurrenceTiming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOccurrenceTiming: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("occurrenceTiming")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartOf(value: js.Array[Reference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partOf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartOf: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partOf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatient(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReceiver(value: js.Array[Reference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("receiver")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReceiver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("receiver")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuppliedItem(value: SupplyDeliverySuppliedItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppliedItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuppliedItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppliedItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupplier(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supplier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupplier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supplier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

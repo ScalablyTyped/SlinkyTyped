@@ -4,24 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PeekQueueMessagesOptions extends TimeoutIntervalOptions {
-  var numofmessages: js.UndefOr[Double] = js.undefined
+  var numofmessages: js.UndefOr[Double] = js.native
 }
 
 object PeekQueueMessagesOptions {
   @scala.inline
-  def apply(
-    locationMode: String = null,
-    maximumExecutionTimeInMs: Int | Double = null,
-    numofmessages: Int | Double = null,
-    timeoutIntervalInMs: Int | Double = null
-  ): PeekQueueMessagesOptions = {
+  def apply(): PeekQueueMessagesOptions = {
     val __obj = js.Dynamic.literal()
-    if (locationMode != null) __obj.updateDynamic("locationMode")(locationMode.asInstanceOf[js.Any])
-    if (maximumExecutionTimeInMs != null) __obj.updateDynamic("maximumExecutionTimeInMs")(maximumExecutionTimeInMs.asInstanceOf[js.Any])
-    if (numofmessages != null) __obj.updateDynamic("numofmessages")(numofmessages.asInstanceOf[js.Any])
-    if (timeoutIntervalInMs != null) __obj.updateDynamic("timeoutIntervalInMs")(timeoutIntervalInMs.asInstanceOf[js.Any])
     __obj.asInstanceOf[PeekQueueMessagesOptions]
   }
+  @scala.inline
+  implicit class PeekQueueMessagesOptionsOps[Self <: PeekQueueMessagesOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNumofmessages(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numofmessages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumofmessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numofmessages")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

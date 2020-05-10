@@ -12,10 +12,8 @@ trait GeneratorType extends js.Object
 
 object GeneratorType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def javascript: typingsSlinky.graphqlBinding.graphqlBindingStrings.javascript = "javascript".asInstanceOf[typingsSlinky.graphqlBinding.graphqlBindingStrings.javascript]
   @scala.inline
-  def javascript: typingsSlinky.graphqlBinding.graphqlBindingStrings.javascript = this.cast("javascript")
-  @scala.inline
-  def typescript: typingsSlinky.graphqlBinding.graphqlBindingStrings.typescript = this.cast("typescript")
+  def typescript: typingsSlinky.graphqlBinding.graphqlBindingStrings.typescript = "typescript".asInstanceOf[typingsSlinky.graphqlBinding.graphqlBindingStrings.typescript]
 }
 

@@ -12,10 +12,8 @@ trait IterationCompositeOperation extends js.Object
 
 object IterationCompositeOperation {
   @scala.inline
-  def accumulate: typingsSlinky.std.stdStrings.accumulate = this.cast("accumulate")
+  def accumulate: typingsSlinky.std.stdStrings.accumulate = "accumulate".asInstanceOf[typingsSlinky.std.stdStrings.accumulate]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def replace: typingsSlinky.std.stdStrings.replace = this.cast("replace")
+  def replace: typingsSlinky.std.stdStrings.replace = "replace".asInstanceOf[typingsSlinky.std.stdStrings.replace]
 }
 

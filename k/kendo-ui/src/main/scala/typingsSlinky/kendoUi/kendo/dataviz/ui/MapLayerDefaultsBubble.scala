@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MapLayerDefaultsBubble extends js.Object {
-  var attribution: js.UndefOr[String] = js.undefined
-  var maxSize: js.UndefOr[Double] = js.undefined
-  var minSize: js.UndefOr[Double] = js.undefined
-  var opacity: js.UndefOr[Double] = js.undefined
-  var style: js.UndefOr[MapLayerDefaultsBubbleStyle] = js.undefined
-  var symbol: js.UndefOr[String | js.Function] = js.undefined
+  var attribution: js.UndefOr[String] = js.native
+  var maxSize: js.UndefOr[Double] = js.native
+  var minSize: js.UndefOr[Double] = js.native
+  var opacity: js.UndefOr[Double] = js.native
+  var style: js.UndefOr[MapLayerDefaultsBubbleStyle] = js.native
+  var symbol: js.UndefOr[String | js.Function] = js.native
 }
 
 object MapLayerDefaultsBubble {
   @scala.inline
-  def apply(
-    attribution: String = null,
-    maxSize: Int | Double = null,
-    minSize: Int | Double = null,
-    opacity: Int | Double = null,
-    style: MapLayerDefaultsBubbleStyle = null,
-    symbol: String | js.Function = null
-  ): MapLayerDefaultsBubble = {
+  def apply(): MapLayerDefaultsBubble = {
     val __obj = js.Dynamic.literal()
-    if (attribution != null) __obj.updateDynamic("attribution")(attribution.asInstanceOf[js.Any])
-    if (maxSize != null) __obj.updateDynamic("maxSize")(maxSize.asInstanceOf[js.Any])
-    if (minSize != null) __obj.updateDynamic("minSize")(minSize.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapLayerDefaultsBubble]
   }
+  @scala.inline
+  implicit class MapLayerDefaultsBubbleOps[Self <: MapLayerDefaultsBubble] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttribution(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attribution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttribution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attribution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: MapLayerDefaultsBubbleStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbol(value: String | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

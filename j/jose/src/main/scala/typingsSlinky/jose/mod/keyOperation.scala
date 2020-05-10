@@ -17,20 +17,18 @@ trait keyOperation extends js.Object
 
 object keyOperation {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def decrypt: typingsSlinky.jose.joseStrings.decrypt = "decrypt".asInstanceOf[typingsSlinky.jose.joseStrings.decrypt]
   @scala.inline
-  def decrypt: typingsSlinky.jose.joseStrings.decrypt = this.cast("decrypt")
+  def deriveKey: typingsSlinky.jose.joseStrings.deriveKey = "deriveKey".asInstanceOf[typingsSlinky.jose.joseStrings.deriveKey]
   @scala.inline
-  def deriveKey: typingsSlinky.jose.joseStrings.deriveKey = this.cast("deriveKey")
+  def encrypt: typingsSlinky.jose.joseStrings.encrypt = "encrypt".asInstanceOf[typingsSlinky.jose.joseStrings.encrypt]
   @scala.inline
-  def encrypt: typingsSlinky.jose.joseStrings.encrypt = this.cast("encrypt")
+  def sign: typingsSlinky.jose.joseStrings.sign = "sign".asInstanceOf[typingsSlinky.jose.joseStrings.sign]
   @scala.inline
-  def sign: typingsSlinky.jose.joseStrings.sign = this.cast("sign")
+  def unwrapKey: typingsSlinky.jose.joseStrings.unwrapKey = "unwrapKey".asInstanceOf[typingsSlinky.jose.joseStrings.unwrapKey]
   @scala.inline
-  def unwrapKey: typingsSlinky.jose.joseStrings.unwrapKey = this.cast("unwrapKey")
+  def verify: typingsSlinky.jose.joseStrings.verify = "verify".asInstanceOf[typingsSlinky.jose.joseStrings.verify]
   @scala.inline
-  def verify: typingsSlinky.jose.joseStrings.verify = this.cast("verify")
-  @scala.inline
-  def wrapKey: typingsSlinky.jose.joseStrings.wrapKey = this.cast("wrapKey")
+  def wrapKey: typingsSlinky.jose.joseStrings.wrapKey = "wrapKey".asInstanceOf[typingsSlinky.jose.joseStrings.wrapKey]
 }
 

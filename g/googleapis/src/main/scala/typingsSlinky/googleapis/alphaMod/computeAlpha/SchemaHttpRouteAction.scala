@@ -61,24 +61,101 @@ trait SchemaHttpRouteAction extends js.Object {
 
 object SchemaHttpRouteAction {
   @scala.inline
-  def apply(
-    corsPolicy: SchemaCorsPolicy = null,
-    faultInjectionPolicy: SchemaHttpFaultInjection = null,
-    requestMirrorPolicy: SchemaRequestMirrorPolicy = null,
-    retryPolicy: SchemaHttpRetryPolicy = null,
-    timeout: SchemaDuration = null,
-    urlRewrite: SchemaUrlRewrite = null,
-    weightedBackendServices: js.Array[SchemaWeightedBackendService] = null
-  ): SchemaHttpRouteAction = {
+  def apply(): SchemaHttpRouteAction = {
     val __obj = js.Dynamic.literal()
-    if (corsPolicy != null) __obj.updateDynamic("corsPolicy")(corsPolicy.asInstanceOf[js.Any])
-    if (faultInjectionPolicy != null) __obj.updateDynamic("faultInjectionPolicy")(faultInjectionPolicy.asInstanceOf[js.Any])
-    if (requestMirrorPolicy != null) __obj.updateDynamic("requestMirrorPolicy")(requestMirrorPolicy.asInstanceOf[js.Any])
-    if (retryPolicy != null) __obj.updateDynamic("retryPolicy")(retryPolicy.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (urlRewrite != null) __obj.updateDynamic("urlRewrite")(urlRewrite.asInstanceOf[js.Any])
-    if (weightedBackendServices != null) __obj.updateDynamic("weightedBackendServices")(weightedBackendServices.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHttpRouteAction]
   }
+  @scala.inline
+  implicit class SchemaHttpRouteActionOps[Self <: SchemaHttpRouteAction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCorsPolicy(value: SchemaCorsPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("corsPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCorsPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("corsPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFaultInjectionPolicy(value: SchemaHttpFaultInjection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("faultInjectionPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFaultInjectionPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("faultInjectionPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestMirrorPolicy(value: SchemaRequestMirrorPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMirrorPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestMirrorPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMirrorPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetryPolicy(value: SchemaHttpRetryPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetryPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: SchemaDuration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrlRewrite(value: SchemaUrlRewrite): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlRewrite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrlRewrite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlRewrite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeightedBackendServices(value: js.Array[SchemaWeightedBackendService]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weightedBackendServices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeightedBackendServices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weightedBackendServices")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -48,8 +48,57 @@ object GetClusterVpcConfig {
     vpcId: String
   ): GetClusterVpcConfig = {
     val __obj = js.Dynamic.literal(clusterSecurityGroupId = clusterSecurityGroupId.asInstanceOf[js.Any], endpointPrivateAccess = endpointPrivateAccess.asInstanceOf[js.Any], endpointPublicAccess = endpointPublicAccess.asInstanceOf[js.Any], publicAccessCidrs = publicAccessCidrs.asInstanceOf[js.Any], securityGroupIds = securityGroupIds.asInstanceOf[js.Any], subnetIds = subnetIds.asInstanceOf[js.Any], vpcId = vpcId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetClusterVpcConfig]
   }
+  @scala.inline
+  implicit class GetClusterVpcConfigOps[Self <: GetClusterVpcConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterSecurityGroupId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterSecurityGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndpointPrivateAccess(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointPrivateAccess")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndpointPublicAccess(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointPublicAccess")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPublicAccessCidrs(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publicAccessCidrs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSecurityGroupIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroupIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubnetIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVpcId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

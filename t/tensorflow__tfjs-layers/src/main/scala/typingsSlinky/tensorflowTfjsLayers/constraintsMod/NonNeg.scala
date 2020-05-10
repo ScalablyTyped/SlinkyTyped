@@ -13,6 +13,6 @@ class NonNeg () extends Constraint
 @js.native
 object NonNeg extends js.Object {
   /** @nocollapse */
-  val className: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.NonNeg = js.native
+  val className: /* "NonNeg" */ String = js.native
 }
 

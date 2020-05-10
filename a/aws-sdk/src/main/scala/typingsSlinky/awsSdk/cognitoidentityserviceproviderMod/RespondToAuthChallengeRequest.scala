@@ -38,22 +38,89 @@ trait RespondToAuthChallengeRequest extends js.Object {
 
 object RespondToAuthChallengeRequest {
   @scala.inline
-  def apply(
-    ChallengeName: ChallengeNameType,
-    ClientId: ClientIdType,
-    AnalyticsMetadata: AnalyticsMetadataType = null,
-    ChallengeResponses: ChallengeResponsesType = null,
-    ClientMetadata: ClientMetadataType = null,
-    Session: SessionType = null,
-    UserContextData: UserContextDataType = null
-  ): RespondToAuthChallengeRequest = {
+  def apply(ChallengeName: ChallengeNameType, ClientId: ClientIdType): RespondToAuthChallengeRequest = {
     val __obj = js.Dynamic.literal(ChallengeName = ChallengeName.asInstanceOf[js.Any], ClientId = ClientId.asInstanceOf[js.Any])
-    if (AnalyticsMetadata != null) __obj.updateDynamic("AnalyticsMetadata")(AnalyticsMetadata.asInstanceOf[js.Any])
-    if (ChallengeResponses != null) __obj.updateDynamic("ChallengeResponses")(ChallengeResponses.asInstanceOf[js.Any])
-    if (ClientMetadata != null) __obj.updateDynamic("ClientMetadata")(ClientMetadata.asInstanceOf[js.Any])
-    if (Session != null) __obj.updateDynamic("Session")(Session.asInstanceOf[js.Any])
-    if (UserContextData != null) __obj.updateDynamic("UserContextData")(UserContextData.asInstanceOf[js.Any])
     __obj.asInstanceOf[RespondToAuthChallengeRequest]
   }
+  @scala.inline
+  implicit class RespondToAuthChallengeRequestOps[Self <: RespondToAuthChallengeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChallengeName(value: ChallengeNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChallengeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientId(value: ClientIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAnalyticsMetadata(value: AnalyticsMetadataType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AnalyticsMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnalyticsMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AnalyticsMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChallengeResponses(value: ChallengeResponsesType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChallengeResponses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChallengeResponses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChallengeResponses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientMetadata(value: ClientMetadataType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSession(value: SessionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Session")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSession: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Session")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserContextData(value: UserContextDataType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserContextData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserContextData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserContextData")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

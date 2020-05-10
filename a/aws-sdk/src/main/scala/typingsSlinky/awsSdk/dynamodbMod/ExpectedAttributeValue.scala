@@ -26,18 +26,65 @@ trait ExpectedAttributeValue extends js.Object {
 
 object ExpectedAttributeValue {
   @scala.inline
-  def apply(
-    AttributeValueList: AttributeValueList = null,
-    ComparisonOperator: ComparisonOperator = null,
-    Exists: js.UndefOr[Boolean] = js.undefined,
-    Value: AttributeValue = null
-  ): ExpectedAttributeValue = {
+  def apply(): ExpectedAttributeValue = {
     val __obj = js.Dynamic.literal()
-    if (AttributeValueList != null) __obj.updateDynamic("AttributeValueList")(AttributeValueList.asInstanceOf[js.Any])
-    if (ComparisonOperator != null) __obj.updateDynamic("ComparisonOperator")(ComparisonOperator.asInstanceOf[js.Any])
-    if (!js.isUndefined(Exists)) __obj.updateDynamic("Exists")(Exists.asInstanceOf[js.Any])
-    if (Value != null) __obj.updateDynamic("Value")(Value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExpectedAttributeValue]
   }
+  @scala.inline
+  implicit class ExpectedAttributeValueOps[Self <: ExpectedAttributeValue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributeValueList(value: AttributeValueList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeValueList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeValueList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeValueList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComparisonOperator(value: ComparisonOperator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComparisonOperator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComparisonOperator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComparisonOperator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExists(value: BooleanObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Exists")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExists: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Exists")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: AttributeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

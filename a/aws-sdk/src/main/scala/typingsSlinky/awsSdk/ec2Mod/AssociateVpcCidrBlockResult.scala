@@ -22,16 +22,53 @@ trait AssociateVpcCidrBlockResult extends js.Object {
 
 object AssociateVpcCidrBlockResult {
   @scala.inline
-  def apply(
-    CidrBlockAssociation: VpcCidrBlockAssociation = null,
-    Ipv6CidrBlockAssociation: VpcIpv6CidrBlockAssociation = null,
-    VpcId: String = null
-  ): AssociateVpcCidrBlockResult = {
+  def apply(): AssociateVpcCidrBlockResult = {
     val __obj = js.Dynamic.literal()
-    if (CidrBlockAssociation != null) __obj.updateDynamic("CidrBlockAssociation")(CidrBlockAssociation.asInstanceOf[js.Any])
-    if (Ipv6CidrBlockAssociation != null) __obj.updateDynamic("Ipv6CidrBlockAssociation")(Ipv6CidrBlockAssociation.asInstanceOf[js.Any])
-    if (VpcId != null) __obj.updateDynamic("VpcId")(VpcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociateVpcCidrBlockResult]
   }
+  @scala.inline
+  implicit class AssociateVpcCidrBlockResultOps[Self <: AssociateVpcCidrBlockResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCidrBlockAssociation(value: VpcCidrBlockAssociation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrBlockAssociation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCidrBlockAssociation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrBlockAssociation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv6CidrBlockAssociation(value: VpcIpv6CidrBlockAssociation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6CidrBlockAssociation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6CidrBlockAssociation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6CidrBlockAssociation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

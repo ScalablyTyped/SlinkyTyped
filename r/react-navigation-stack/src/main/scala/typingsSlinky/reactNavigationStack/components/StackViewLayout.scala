@@ -1,9 +1,7 @@
 package typingsSlinky.reactNavigationStack.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNavigationStack.PickPropsmodeheaderModehe
@@ -21,59 +19,64 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object StackViewLayout
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object StackViewLayout {
   @JSImport("react-navigation-stack/lib/typescript/views/StackView/StackViewLayout", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    transitionProps: TransitionProps,
-    cardOverlayEnabled: js.UndefOr[Boolean] = js.undefined,
-    cardShadowEnabled: js.UndefOr[Boolean] = js.undefined,
-    cardStyle: StyleProp[ViewStyle] = null,
-    disableKeyboardHandling: js.UndefOr[Boolean] = js.undefined,
-    headerBackTitleVisible: js.UndefOr[Boolean] = js.undefined,
-    headerBackgroundTransitionPreset: HeaderBackgroundTransitionPreset = null,
-    headerLayoutPreset: HeaderLayoutPreset = null,
-    headerMode: HeaderMode = null,
-    headerTransitionPreset: HeaderTransitionPreset = null,
-    lastTransitionProps: TransitionProps = null,
-    mode: card | modal = null,
-    onGestureBegin: () => Unit = null,
-    onGestureCanceled: () => Unit = null,
-    onGestureEnd: () => Unit = null,
-    onTransitionEnd: () => Unit = null,
-    onTransitionStart: () => Unit = null,
-    screenProps: js.Any = null,
-    transitionConfig: (/* transitionProps */ TransitionProps, /* prevTransitionProps */ js.UndefOr[TransitionProps], /* isModal */ js.UndefOr[Boolean]) => TransitionConfig with HeaderTransitionConfig = null,
-    transparentCard: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(transitionProps = transitionProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(cardOverlayEnabled)) __obj.updateDynamic("cardOverlayEnabled")(cardOverlayEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(cardShadowEnabled)) __obj.updateDynamic("cardShadowEnabled")(cardShadowEnabled.asInstanceOf[js.Any])
-    if (cardStyle != null) __obj.updateDynamic("cardStyle")(cardStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableKeyboardHandling)) __obj.updateDynamic("disableKeyboardHandling")(disableKeyboardHandling.asInstanceOf[js.Any])
-    if (!js.isUndefined(headerBackTitleVisible)) __obj.updateDynamic("headerBackTitleVisible")(headerBackTitleVisible.asInstanceOf[js.Any])
-    if (headerBackgroundTransitionPreset != null) __obj.updateDynamic("headerBackgroundTransitionPreset")(headerBackgroundTransitionPreset.asInstanceOf[js.Any])
-    if (headerLayoutPreset != null) __obj.updateDynamic("headerLayoutPreset")(headerLayoutPreset.asInstanceOf[js.Any])
-    if (headerMode != null) __obj.updateDynamic("headerMode")(headerMode.asInstanceOf[js.Any])
-    if (headerTransitionPreset != null) __obj.updateDynamic("headerTransitionPreset")(headerTransitionPreset.asInstanceOf[js.Any])
-    if (lastTransitionProps != null) __obj.updateDynamic("lastTransitionProps")(lastTransitionProps.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (onGestureBegin != null) __obj.updateDynamic("onGestureBegin")(js.Any.fromFunction0(onGestureBegin))
-    if (onGestureCanceled != null) __obj.updateDynamic("onGestureCanceled")(js.Any.fromFunction0(onGestureCanceled))
-    if (onGestureEnd != null) __obj.updateDynamic("onGestureEnd")(js.Any.fromFunction0(onGestureEnd))
-    if (onTransitionEnd != null) __obj.updateDynamic("onTransitionEnd")(js.Any.fromFunction0(onTransitionEnd))
-    if (onTransitionStart != null) __obj.updateDynamic("onTransitionStart")(js.Any.fromFunction0(onTransitionStart))
-    if (screenProps != null) __obj.updateDynamic("screenProps")(screenProps.asInstanceOf[js.Any])
-    if (transitionConfig != null) __obj.updateDynamic("transitionConfig")(js.Any.fromFunction3(transitionConfig))
-    if (!js.isUndefined(transparentCard)) __obj.updateDynamic("transparentCard")(transparentCard.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def cardOverlayEnabled(value: Boolean): this.type = set("cardOverlayEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cardShadowEnabled(value: Boolean): this.type = set("cardShadowEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cardStyle(value: StyleProp[ViewStyle]): this.type = set("cardStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cardStyleNull: this.type = set("cardStyle", null)
+    @scala.inline
+    def disableKeyboardHandling(value: Boolean): this.type = set("disableKeyboardHandling", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerBackTitleVisible(value: Boolean): this.type = set("headerBackTitleVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerBackgroundTransitionPreset(value: HeaderBackgroundTransitionPreset): this.type = set("headerBackgroundTransitionPreset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerLayoutPreset(value: HeaderLayoutPreset): this.type = set("headerLayoutPreset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerMode(value: HeaderMode): this.type = set("headerMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerTransitionPreset(value: HeaderTransitionPreset): this.type = set("headerTransitionPreset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lastTransitionProps(value: TransitionProps): this.type = set("lastTransitionProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mode(value: card | modal): this.type = set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onGestureBegin(value: () => Unit): this.type = set("onGestureBegin", js.Any.fromFunction0(value))
+    @scala.inline
+    def onGestureCanceled(value: () => Unit): this.type = set("onGestureCanceled", js.Any.fromFunction0(value))
+    @scala.inline
+    def onGestureEnd(value: () => Unit): this.type = set("onGestureEnd", js.Any.fromFunction0(value))
+    @scala.inline
+    def onTransitionEnd(value: () => Unit): this.type = set("onTransitionEnd", js.Any.fromFunction0(value))
+    @scala.inline
+    def onTransitionStart(value: () => Unit): this.type = set("onTransitionStart", js.Any.fromFunction0(value))
+    @scala.inline
+    def screenProps(value: js.Any): this.type = set("screenProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionConfig(
+      value: (/* transitionProps */ TransitionProps, /* prevTransitionProps */ js.UndefOr[TransitionProps], /* isModal */ js.UndefOr[Boolean]) => TransitionConfig with HeaderTransitionConfig
+    ): this.type = set("transitionConfig", js.Any.fromFunction3(value))
+    @scala.inline
+    def transparentCard(value: Boolean): this.type = set("transparentCard", value.asInstanceOf[js.Any])
   }
-  type Props = PickPropsmodeheaderModehe
+  
+  def withProps(p: PickPropsmodeheaderModehe): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(transitionProps: TransitionProps): Builder = {
+    val __props = js.Dynamic.literal(transitionProps = transitionProps.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PickPropsmodeheaderModehe]))
+  }
 }
 

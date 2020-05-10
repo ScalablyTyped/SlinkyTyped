@@ -32,8 +32,6 @@ class Shader protected ()
   var vs: js.Any = js.native
   var vsSource: js.Any = js.native
   def bind(): Unit = js.native
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
   def getAttributeLocation(attribute: String): Double = js.native
   def getFragmentShader(): String = js.native
   def getFragmentSource(): String = js.native
@@ -41,8 +39,6 @@ class Shader protected ()
   def getUniformLocation(uniform: String): WebGLUniformLocation = js.native
   def getVertexShader(): String = js.native
   def getVertexShaderSource(): String = js.native
-  /* CompleteClass */
-  override def restore(): Unit = js.native
   def setUniform2f(uniform: String, value: Double, value2: Double): Unit = js.native
   def setUniform2x2f(uniform: String, value: ArrayLike[Double]): Unit = js.native
   def setUniform3f(uniform: String, value: Double, value2: Double, value3: Double): Unit = js.native
@@ -65,10 +61,10 @@ object Shader extends js.Object {
   var SAMPLER: String = js.native
   var TEXCOORDS: String = js.native
   def newColored(context: ManagedWebGLRenderingContext): Shader = js.native
-  def newColored(context: typingsSlinky.std.WebGLRenderingContext): Shader = js.native
+  def newColored(context: WebGLRenderingContext): Shader = js.native
   def newColoredTextured(context: ManagedWebGLRenderingContext): Shader = js.native
-  def newColoredTextured(context: typingsSlinky.std.WebGLRenderingContext): Shader = js.native
+  def newColoredTextured(context: WebGLRenderingContext): Shader = js.native
   def newTwoColoredTextured(context: ManagedWebGLRenderingContext): Shader = js.native
-  def newTwoColoredTextured(context: typingsSlinky.std.WebGLRenderingContext): Shader = js.native
+  def newTwoColoredTextured(context: WebGLRenderingContext): Shader = js.native
 }
 

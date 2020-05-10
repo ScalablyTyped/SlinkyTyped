@@ -26,18 +26,65 @@ trait CreateFleetError extends js.Object {
 
 object CreateFleetError {
   @scala.inline
-  def apply(
-    ErrorCode: String = null,
-    ErrorMessage: String = null,
-    LaunchTemplateAndOverrides: LaunchTemplateAndOverridesResponse = null,
-    Lifecycle: InstanceLifecycle = null
-  ): CreateFleetError = {
+  def apply(): CreateFleetError = {
     val __obj = js.Dynamic.literal()
-    if (ErrorCode != null) __obj.updateDynamic("ErrorCode")(ErrorCode.asInstanceOf[js.Any])
-    if (ErrorMessage != null) __obj.updateDynamic("ErrorMessage")(ErrorMessage.asInstanceOf[js.Any])
-    if (LaunchTemplateAndOverrides != null) __obj.updateDynamic("LaunchTemplateAndOverrides")(LaunchTemplateAndOverrides.asInstanceOf[js.Any])
-    if (Lifecycle != null) __obj.updateDynamic("Lifecycle")(Lifecycle.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateFleetError]
   }
+  @scala.inline
+  implicit class CreateFleetErrorOps[Self <: CreateFleetError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchTemplateAndOverrides(value: LaunchTemplateAndOverridesResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateAndOverrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchTemplateAndOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateAndOverrides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLifecycle(value: InstanceLifecycle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Lifecycle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLifecycle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Lifecycle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

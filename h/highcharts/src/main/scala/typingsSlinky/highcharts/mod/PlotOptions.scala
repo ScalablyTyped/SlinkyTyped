@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotOptions extends js.Object {
   /**
     * (Highstock) Acceleration bands (ABANDS). This series requires the
@@ -22,7 +23,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var abands: js.UndefOr[PlotAbandsOptions] = js.undefined
+  var abands: js.UndefOr[PlotAbandsOptions] = js.native
   /**
     * (Highstock) Accumulation Distribution (AD). This series requires
     * `linkedTo` option to be set.
@@ -39,7 +40,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var ad: js.UndefOr[PlotAdOptions] = js.undefined
+  var ad: js.UndefOr[PlotAdOptions] = js.native
   /**
     * (Highstock) Awesome Oscillator. This series requires the `linkedTo`
     * option to be set and should be loaded after the
@@ -57,7 +58,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var ao: js.UndefOr[PlotAoOptions] = js.undefined
+  var ao: js.UndefOr[PlotAoOptions] = js.native
   /**
     * (Highstock) Absolute Price Oscillator. This series requires the
     * `linkedTo` option to be set and should be loaded after the
@@ -75,7 +76,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var apo: js.UndefOr[PlotApoOptions] = js.undefined
+  var apo: js.UndefOr[PlotApoOptions] = js.native
   /**
     * (Highcharts, Highstock) The area series type.
     *
@@ -91,7 +92,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var area: js.UndefOr[PlotAreaOptions] = js.undefined
+  var area: js.UndefOr[PlotAreaOptions] = js.native
   /**
     * (Highcharts, Highstock) The area range series is a carteseian series with
     * higher and lower values for each point along an X axis, where the area
@@ -110,7 +111,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var arearange: js.UndefOr[PlotArearangeOptions] = js.undefined
+  var arearange: js.UndefOr[PlotArearangeOptions] = js.native
   /**
     * (Highcharts, Highstock) The area spline series is an area series where
     * the graph between the points is smoothed into a spline.
@@ -128,7 +129,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var areaspline: js.UndefOr[PlotAreasplineOptions] = js.undefined
+  var areaspline: js.UndefOr[PlotAreasplineOptions] = js.native
   /**
     * (Highcharts, Highstock) The area spline range is a cartesian series type
     * with higher and lower Y values along an X axis. The area inside the range
@@ -147,7 +148,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var areasplinerange: js.UndefOr[PlotAreasplinerangeOptions] = js.undefined
+  var areasplinerange: js.UndefOr[PlotAreasplinerangeOptions] = js.native
   /**
     * (Highstock) Aroon. This series requires the `linkedTo` option to be set
     * and should be loaded after the `stock/indicators/indicators.js`.
@@ -164,7 +165,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var aroon: js.UndefOr[PlotAroonOptions] = js.undefined
+  var aroon: js.UndefOr[PlotAroonOptions] = js.native
   /**
     * (Highstock) Aroon Oscillator. This series requires the `linkedTo` option
     * to be set and should be loaded after the `stock/indicators/indicators.js`
@@ -183,7 +184,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var aroonoscillator: js.UndefOr[PlotAroonoscillatorOptions] = js.undefined
+  var aroonoscillator: js.UndefOr[PlotAroonoscillatorOptions] = js.native
   /**
     * (Highstock) Average true range indicator (ATR). This series requires
     * `linkedTo` option to be set.
@@ -200,7 +201,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var atr: js.UndefOr[PlotAtrOptions] = js.undefined
+  var atr: js.UndefOr[PlotAtrOptions] = js.native
   /**
     * (Highcharts) A bar series is a special type of column series where the
     * columns are horizontal.
@@ -217,7 +218,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var bar: js.UndefOr[PlotBarOptions] = js.undefined
+  var bar: js.UndefOr[PlotBarOptions] = js.native
   /**
     * (Highstock) Bollinger bands (BB). This series requires the `linkedTo`
     * option to be set and should be loaded after the
@@ -235,7 +236,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var bb: js.UndefOr[PlotBbOptions] = js.undefined
+  var bb: js.UndefOr[PlotBbOptions] = js.native
   /**
     * (Highcharts) A bell curve is an areaspline series which represents the
     * probability density function of the normal distribution. It calculates
@@ -255,7 +256,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var bellcurve: js.UndefOr[PlotBellcurveOptions] = js.undefined
+  var bellcurve: js.UndefOr[PlotBellcurveOptions] = js.native
   /**
     * (Highcharts) A box plot is a convenient way of depicting groups of data
     * through their five-number summaries: the smallest observation (sample
@@ -274,7 +275,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var boxplot: js.UndefOr[PlotBoxplotOptions] = js.undefined
+  var boxplot: js.UndefOr[PlotBoxplotOptions] = js.native
   /**
     * (Highcharts, Highstock) A bubble series is a three dimensional series
     * type where each point renders an X, Y and Z value. Each points is drawn
@@ -293,7 +294,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var bubble: js.UndefOr[PlotBubbleOptions] = js.undefined
+  var bubble: js.UndefOr[PlotBubbleOptions] = js.native
   /**
     * (Highcharts) A bullet graph is a variation of a bar graph. The bullet
     * graph features a single measure, compares it to a target, and displays it
@@ -312,7 +313,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var bullet: js.UndefOr[PlotBulletOptions] = js.undefined
+  var bullet: js.UndefOr[PlotBulletOptions] = js.native
   /**
     * (Highstock) A candlestick chart is a style of financial chart used to
     * describe price movements over time.
@@ -330,7 +331,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var candlestick: js.UndefOr[PlotCandlestickOptions] = js.undefined
+  var candlestick: js.UndefOr[PlotCandlestickOptions] = js.native
   /**
     * (Highstock) Commodity Channel Index (CCI). This series requires
     * `linkedTo` option to be set.
@@ -347,7 +348,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var cci: js.UndefOr[PlotCciOptions] = js.undefined
+  var cci: js.UndefOr[PlotCciOptions] = js.native
   /**
     * (Highstock) Chaikin Oscillator. This series requires the `linkedTo`
     * option to be set and should be loaded after the
@@ -365,7 +366,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var chaikin: js.UndefOr[PlotChaikinOptions] = js.undefined
+  var chaikin: js.UndefOr[PlotChaikinOptions] = js.native
   /**
     * (Highstock) Chaikin Money Flow indicator (cmf).
     *
@@ -381,7 +382,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var cmf: js.UndefOr[PlotCmfOptions] = js.undefined
+  var cmf: js.UndefOr[PlotCmfOptions] = js.native
   /**
     * (Highcharts, Highstock) Column series display one column per value along
     * an X axis.
@@ -398,7 +399,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var column: js.UndefOr[PlotColumnOptions] = js.undefined
+  var column: js.UndefOr[PlotColumnOptions] = js.native
   /**
     * (Highcharts, Highstock) Column pyramid series display one pyramid per
     * value along an X axis. To display horizontal pyramids, set chart.inverted
@@ -417,7 +418,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var columnpyramid: js.UndefOr[PlotColumnpyramidOptions] = js.undefined
+  var columnpyramid: js.UndefOr[PlotColumnpyramidOptions] = js.native
   /**
     * (Highcharts, Highstock) The column range is a cartesian series type with
     * higher and lower Y values along an X axis. To display horizontal bars,
@@ -436,7 +437,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var columnrange: js.UndefOr[PlotColumnrangeOptions] = js.undefined
+  var columnrange: js.UndefOr[PlotColumnrangeOptions] = js.native
   /**
     * (Highcharts) A cylinder graph is a variation of a 3d column graph. The
     * cylinder graph features cylindrical points.
@@ -453,7 +454,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var cylinder: js.UndefOr[PlotCylinderOptions] = js.undefined
+  var cylinder: js.UndefOr[PlotCylinderOptions] = js.native
   /**
     * (Highstock) Double exponential moving average (DEMA) indicator. This
     * series requires `linkedTo` option to be set and should be loaded after
@@ -471,7 +472,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var dema: js.UndefOr[PlotDemaOptions] = js.undefined
+  var dema: js.UndefOr[PlotDemaOptions] = js.native
   /**
     * (Highcharts) A dependency wheel chart is a type of flow diagram, where
     * all nodes are laid out in a circle, and the flow between the are drawn as
@@ -490,7 +491,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var dependencywheel: js.UndefOr[PlotDependencywheelOptions] = js.undefined
+  var dependencywheel: js.UndefOr[PlotDependencywheelOptions] = js.native
   /**
     * (Highstock) Detrended Price Oscillator. This series requires the
     * `linkedTo` option to be set and should be loaded after the
@@ -508,7 +509,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var dpo: js.UndefOr[PlotDpoOptions] = js.undefined
+  var dpo: js.UndefOr[PlotDpoOptions] = js.native
   /**
     * (Highstock) Exponential moving average indicator (EMA). This series
     * requires the `linkedTo` option to be set.
@@ -525,7 +526,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var ema: js.UndefOr[PlotEmaOptions] = js.undefined
+  var ema: js.UndefOr[PlotEmaOptions] = js.native
   /**
     * (Highcharts, Highstock) Error bars are a graphical representation of the
     * variability of data and are used on graphs to indicate the error, or
@@ -543,7 +544,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var errorbar: js.UndefOr[PlotErrorbarOptions] = js.undefined
+  var errorbar: js.UndefOr[PlotErrorbarOptions] = js.native
   /**
     * (Highstock) Flags are used to mark events in stock charts. They can be
     * added on the timeline, or attached to a specific series.
@@ -560,7 +561,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var flags: js.UndefOr[PlotFlagsOptions] = js.undefined
+  var flags: js.UndefOr[PlotFlagsOptions] = js.native
   /**
     * (Highcharts) Funnel charts are a type of chart often used to visualize
     * stages in a sales project, where the top are the initial stages with the
@@ -578,7 +579,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var funnel: js.UndefOr[PlotFunnelOptions] = js.undefined
+  var funnel: js.UndefOr[PlotFunnelOptions] = js.native
   /**
     * (Highcharts) A funnel3d is a 3d version of funnel series type. Funnel
     * charts are a type of chart often used to visualize stages in a sales
@@ -599,7 +600,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var funnel3d: js.UndefOr[PlotFunnel3dOptions] = js.undefined
+  var funnel3d: js.UndefOr[PlotFunnel3dOptions] = js.native
   /**
     * (Gantt) A `gantt` series. If the type option is not specified, it is
     * inherited from chart.type.
@@ -616,7 +617,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var gantt: js.UndefOr[PlotGanttOptions] = js.undefined
+  var gantt: js.UndefOr[PlotGanttOptions] = js.native
   /**
     * (Highcharts) Gauges are circular plots displaying one or more values with
     * a dial pointing to values along the perimeter.
@@ -633,7 +634,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var gauge: js.UndefOr[PlotGaugeOptions] = js.undefined
+  var gauge: js.UndefOr[PlotGaugeOptions] = js.native
   /**
     * (Highcharts, Highmaps) A heatmap is a graphical representation of data
     * where the individual values contained in a matrix are represented as
@@ -651,7 +652,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var heatmap: js.UndefOr[PlotHeatmapOptions] = js.undefined
+  var heatmap: js.UndefOr[PlotHeatmapOptions] = js.native
   /**
     * (Highcharts) A histogram is a column series which represents the
     * distribution of the data set in the base series. Histogram splits data
@@ -670,7 +671,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var histogram: js.UndefOr[PlotHistogramOptions] = js.undefined
+  var histogram: js.UndefOr[PlotHistogramOptions] = js.native
   /**
     * (Highstock) Ichimoku Kinko Hyo (IKH). This series requires `linkedTo`
     * option to be set.
@@ -687,7 +688,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var ikh: js.UndefOr[PlotIkhOptions] = js.undefined
+  var ikh: js.UndefOr[PlotIkhOptions] = js.native
   /**
     * (Highcharts) An item chart is an infographic chart where a number of
     * items are laid out in either a rectangular or circular pattern. It can be
@@ -710,7 +711,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var item: js.UndefOr[PlotItemOptions] = js.undefined
+  var item: js.UndefOr[PlotItemOptions] = js.native
   /**
     * (Highstock) Keltner Channels. This series requires the `linkedTo` option
     * to be set and should be loaded after the
@@ -730,7 +731,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var keltnerchannels: js.UndefOr[PlotKeltnerchannelsOptions] = js.undefined
+  var keltnerchannels: js.UndefOr[PlotKeltnerchannelsOptions] = js.native
   /**
     * (Highcharts, Highstock) A line series displays information as a series of
     * data points connected by straight line segments.
@@ -747,7 +748,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var line: js.UndefOr[PlotLineOptions] = js.undefined
+  var line: js.UndefOr[PlotLineOptions] = js.native
   /**
     * (Highstock) Linear regression indicator. This series requires `linkedTo`
     * option to be set.
@@ -765,7 +766,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var linearregression: js.UndefOr[PlotLinearregressionOptions] = js.undefined
+  var linearregression: js.UndefOr[PlotLinearregressionOptions] = js.native
   /**
     * (Highstock) Linear regression angle indicator. This series requires
     * `linkedTo` option to be set.
@@ -783,7 +784,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var linearregressionangle: js.UndefOr[PlotLinearregressionangleOptions] = js.undefined
+  var linearregressionangle: js.UndefOr[PlotLinearregressionangleOptions] = js.native
   /**
     * (Highstock) Linear regression intercept indicator. This series requires
     * `linkedTo` option to be set.
@@ -801,7 +802,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var linearregressionintercept: js.UndefOr[PlotLinearregressioninterceptOptions] = js.undefined
+  var linearregressionintercept: js.UndefOr[PlotLinearregressioninterceptOptions] = js.native
   /**
     * (Highstock) Linear regression slope indicator. This series requires
     * `linkedTo` option to be set.
@@ -819,7 +820,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var linearregressionslope: js.UndefOr[PlotLinearregressionslopeOptions] = js.undefined
+  var linearregressionslope: js.UndefOr[PlotLinearregressionslopeOptions] = js.native
   /**
     * (Highstock) Moving Average Convergence Divergence (MACD). This series
     * requires `linkedTo` option to be set and should be loaded after the
@@ -837,7 +838,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var macd: js.UndefOr[PlotMacdOptions] = js.undefined
+  var macd: js.UndefOr[PlotMacdOptions] = js.native
   /**
     * (Highmaps) The map series is used for basic choropleth maps, where each
     * map area has a color based on its value.
@@ -854,7 +855,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var map: js.UndefOr[PlotMapOptions] = js.undefined
+  var map: js.UndefOr[PlotMapOptions] = js.native
   /**
     * (Highmaps) A map bubble series is a bubble series laid out on top of a
     * map series, where each bubble is tied to a specific map area.
@@ -872,7 +873,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var mapbubble: js.UndefOr[PlotMapbubbleOptions] = js.undefined
+  var mapbubble: js.UndefOr[PlotMapbubbleOptions] = js.native
   /**
     * (Highmaps) A mapline series is a special case of the map series where the
     * value colors are applied to the strokes rather than the fills. It can
@@ -890,7 +891,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var mapline: js.UndefOr[PlotMaplineOptions] = js.undefined
+  var mapline: js.UndefOr[PlotMaplineOptions] = js.native
   /**
     * (Highmaps) A mappoint series is a special form of scatter series where
     * the points can be laid out in map coordinates on top of a map.
@@ -907,7 +908,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var mappoint: js.UndefOr[PlotMappointOptions] = js.undefined
+  var mappoint: js.UndefOr[PlotMappointOptions] = js.native
   /**
     * (Highstock) Money Flow Index. This series requires `linkedTo` option to
     * be set and should be loaded after the `stock/indicators/indicators.js`
@@ -925,7 +926,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var mfi: js.UndefOr[PlotMfiOptions] = js.undefined
+  var mfi: js.UndefOr[PlotMfiOptions] = js.native
   /**
     * (Highstock) Momentum. This series requires `linkedTo` option to be set.
     *
@@ -941,7 +942,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var momentum: js.UndefOr[PlotMomentumOptions] = js.undefined
+  var momentum: js.UndefOr[PlotMomentumOptions] = js.native
   /**
     * (Highstock) Normalized average true range indicator (NATR). This series
     * requires `linkedTo` option to be set and should be loaded after the
@@ -959,7 +960,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var natr: js.UndefOr[PlotNatrOptions] = js.undefined
+  var natr: js.UndefOr[PlotNatrOptions] = js.native
   /**
     * (Highcharts) A networkgraph is a type of relationship chart, where
     * connnections (links) attracts nodes (points) and other nodes repulse each
@@ -978,7 +979,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var networkgraph: js.UndefOr[PlotNetworkgraphOptions] = js.undefined
+  var networkgraph: js.UndefOr[PlotNetworkgraphOptions] = js.native
   /**
     * (Highstock) An OHLC chart is a style of financial chart used to describe
     * price movements over time. It displays open, high, low and close values
@@ -996,7 +997,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var ohlc: js.UndefOr[PlotOhlcOptions] = js.undefined
+  var ohlc: js.UndefOr[PlotOhlcOptions] = js.native
   /**
     * (Highcharts) An organization chart is a diagram that shows the structure
     * of an organization and the relationships and relative ranks of its parts
@@ -1015,7 +1016,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var organization: js.UndefOr[PlotOrganizationOptions] = js.undefined
+  var organization: js.UndefOr[PlotOrganizationOptions] = js.native
   /**
     * (Highcharts) A packed bubble series is a two dimensional series type,
     * where each point renders a value in X, Y position. Each point is drawn as
@@ -1035,7 +1036,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var packedbubble: js.UndefOr[PlotPackedbubbleOptions] = js.undefined
+  var packedbubble: js.UndefOr[PlotPackedbubbleOptions] = js.native
   /**
     * (Highcharts) A pareto diagram is a type of chart that contains both bars
     * and a line graph, where individual values are represented in descending
@@ -1053,7 +1054,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var pareto: js.UndefOr[PlotParetoOptions] = js.undefined
+  var pareto: js.UndefOr[PlotParetoOptions] = js.native
   /**
     * (Highstock) Price channel (PC). This series requires the `linkedTo`
     * option to be set and should be loaded after the
@@ -1071,7 +1072,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var pc: js.UndefOr[PlotPcOptions] = js.undefined
+  var pc: js.UndefOr[PlotPcOptions] = js.native
   /**
     * (Highcharts) A pie chart is a circular graphic which is divided into
     * slices to illustrate numerical proportion.
@@ -1088,7 +1089,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var pie: js.UndefOr[PlotPieOptions] = js.undefined
+  var pie: js.UndefOr[PlotPieOptions] = js.native
   /**
     * (Highstock) Pivot points indicator. This series requires the `linkedTo`
     * option to be set and should be loaded after
@@ -1107,7 +1108,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var pivotpoints: js.UndefOr[PlotPivotpointsOptions] = js.undefined
+  var pivotpoints: js.UndefOr[PlotPivotpointsOptions] = js.native
   /**
     * (Highcharts, Highstock) A polygon series can be used to draw any freeform
     * shape in the cartesian coordinate system. A fill is applied with the
@@ -1126,7 +1127,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var polygon: js.UndefOr[PlotPolygonOptions] = js.undefined
+  var polygon: js.UndefOr[PlotPolygonOptions] = js.native
   /**
     * (Highstock) Percentage Price Oscillator. This series requires the
     * `linkedTo` option to be set and should be loaded after the
@@ -1144,7 +1145,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var ppo: js.UndefOr[PlotPpoOptions] = js.undefined
+  var ppo: js.UndefOr[PlotPpoOptions] = js.native
   /**
     * (Highstock) Price envelopes indicator based on SMA calculations. This
     * series requires the `linkedTo` option to be set and should be loaded
@@ -1163,7 +1164,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var priceenvelopes: js.UndefOr[PlotPriceenvelopesOptions] = js.undefined
+  var priceenvelopes: js.UndefOr[PlotPriceenvelopesOptions] = js.native
   /**
     * (Highstock) Parabolic SAR. This series requires `linkedTo` option to be
     * set and should be loaded after `stock/indicators/indicators.js` file.
@@ -1180,7 +1181,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var psar: js.UndefOr[PlotPsarOptions] = js.undefined
+  var psar: js.UndefOr[PlotPsarOptions] = js.native
   /**
     * (Highcharts) A pyramid series is a special type of funnel, without neck
     * and reversed by default.
@@ -1197,7 +1198,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var pyramid: js.UndefOr[PlotPyramidOptions] = js.undefined
+  var pyramid: js.UndefOr[PlotPyramidOptions] = js.native
   /**
     * (Highcharts) A pyramid3d is a 3d version of pyramid series type. Pyramid
     * charts are a type of chart often used to visualize stages in a sales
@@ -1216,7 +1217,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var pyramid3d: js.UndefOr[PlotPyramid3dOptions] = js.undefined
+  var pyramid3d: js.UndefOr[PlotPyramid3dOptions] = js.native
   /**
     * (Highstock) Rate of change indicator (ROC). The indicator value for each
     * point is defined as:
@@ -1241,7 +1242,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var roc: js.UndefOr[PlotRocOptions] = js.undefined
+  var roc: js.UndefOr[PlotRocOptions] = js.native
   /**
     * (Highstock) Relative strength index (RSI) technical indicator. This
     * series requires the `linkedTo` option to be set and should be loaded
@@ -1259,7 +1260,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var rsi: js.UndefOr[PlotRsiOptions] = js.undefined
+  var rsi: js.UndefOr[PlotRsiOptions] = js.native
   /**
     * (Highcharts) A sankey diagram is a type of flow diagram, in which the
     * width of the link between two nodes is shown proportionally to the flow
@@ -1277,7 +1278,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var sankey: js.UndefOr[PlotSankeyOptions] = js.undefined
+  var sankey: js.UndefOr[PlotSankeyOptions] = js.native
   /**
     * (Highcharts, Highstock) A scatter plot uses cartesian coordinates to
     * display values for two variables for a set of data.
@@ -1294,7 +1295,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var scatter: js.UndefOr[PlotScatterOptions] = js.undefined
+  var scatter: js.UndefOr[PlotScatterOptions] = js.native
   /**
     * (Highcharts) A 3D scatter plot uses x, y and z coordinates to display
     * values for three variables for a set of data.
@@ -1312,7 +1313,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var scatter3d: js.UndefOr[PlotScatter3dOptions] = js.undefined
+  var scatter3d: js.UndefOr[PlotScatter3dOptions] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) General options for all series
     * types.
@@ -1329,7 +1330,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var series: js.UndefOr[PlotSeriesOptions] = js.undefined
+  var series: js.UndefOr[PlotSeriesOptions] = js.native
   /**
     * (Highstock) Simple moving average indicator (SMA). This series requires
     * `linkedTo` option to be set.
@@ -1346,7 +1347,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var sma: js.UndefOr[PlotSmaOptions] = js.undefined
+  var sma: js.UndefOr[PlotSmaOptions] = js.native
   /**
     * (Highcharts) A solid gauge is a circular gauge where the value is
     * indicated by a filled arc, and the color of the arc may variate with the
@@ -1365,7 +1366,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var solidgauge: js.UndefOr[PlotSolidgaugeOptions] = js.undefined
+  var solidgauge: js.UndefOr[PlotSolidgaugeOptions] = js.native
   /**
     * (Highcharts, Highstock) A spline series is a special type of line series,
     * where the segments between the data points are smoothed.
@@ -1382,7 +1383,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var spline: js.UndefOr[PlotSplineOptions] = js.undefined
+  var spline: js.UndefOr[PlotSplineOptions] = js.native
   /**
     * (Highstock) Stochastic oscillator. This series requires the `linkedTo`
     * option to be set and should be loaded after the
@@ -1401,7 +1402,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var stochastic: js.UndefOr[PlotStochasticOptions] = js.undefined
+  var stochastic: js.UndefOr[PlotStochasticOptions] = js.native
   /**
     * (Highcharts, Highstock) A streamgraph is a type of stacked area graph
     * which is displaced around a central axis, resulting in a flowing, organic
@@ -1420,7 +1421,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var streamgraph: js.UndefOr[PlotStreamgraphOptions] = js.undefined
+  var streamgraph: js.UndefOr[PlotStreamgraphOptions] = js.native
   /**
     * (Highcharts) A Sunburst displays hierarchical data, where a level in the
     * hierarchy is represented by a circle. The center represents the root node
@@ -1439,7 +1440,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var sunburst: js.UndefOr[PlotSunburstOptions] = js.undefined
+  var sunburst: js.UndefOr[PlotSunburstOptions] = js.native
   /**
     * (Highstock) Supertrend indicator. This series requires the `linkedTo`
     * option to be set and should be loaded after the
@@ -1458,7 +1459,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var supertrend: js.UndefOr[PlotSupertrendOptions] = js.undefined
+  var supertrend: js.UndefOr[PlotSupertrendOptions] = js.native
   /**
     * (Highstock) Triple exponential moving average (TEMA) indicator. This
     * series requires `linkedTo` option to be set and should be loaded after
@@ -1476,7 +1477,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var tema: js.UndefOr[PlotTemaOptions] = js.undefined
+  var tema: js.UndefOr[PlotTemaOptions] = js.native
   /**
     * (Highcharts, Highmaps) A tilemap series is a type of heatmap where the
     * tile shapes are configurable.
@@ -1493,7 +1494,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var tilemap: js.UndefOr[PlotTilemapOptions] = js.undefined
+  var tilemap: js.UndefOr[PlotTilemapOptions] = js.native
   /**
     * (Highcharts) The timeline series presents given events along a drawn
     * line.
@@ -1510,7 +1511,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var timeline: js.UndefOr[PlotTimelineOptions] = js.undefined
+  var timeline: js.UndefOr[PlotTimelineOptions] = js.native
   /**
     * (Highcharts) A treemap displays hierarchical data using nested
     * rectangles. The data can be laid out in varying ways depending on
@@ -1528,7 +1529,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var treemap: js.UndefOr[PlotTreemapOptions] = js.undefined
+  var treemap: js.UndefOr[PlotTreemapOptions] = js.native
   /**
     * (Highstock) Trendline (linear regression) fits a straight line to the
     * selected data using a method called the Sum Of Least Squares. This series
@@ -1547,7 +1548,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var trendline: js.UndefOr[PlotTrendlineOptions] = js.undefined
+  var trendline: js.UndefOr[PlotTrendlineOptions] = js.native
   /**
     * (Highstock) Triple exponential average (TRIX) oscillator. This series
     * requires `linkedTo` option to be set.
@@ -1567,7 +1568,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var trix: js.UndefOr[PlotTrixOptions] = js.undefined
+  var trix: js.UndefOr[PlotTrixOptions] = js.native
   /**
     * (Highcharts) A variable pie series is a two dimensional series type,
     * where each point renders an Y and Z value. Each point is drawn as a pie
@@ -1587,7 +1588,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var variablepie: js.UndefOr[PlotVariablepieOptions] = js.undefined
+  var variablepie: js.UndefOr[PlotVariablepieOptions] = js.native
   /**
     * (Highcharts) A variwide chart (related to marimekko chart) is a column
     * chart with a variable width expressing a third dimension.
@@ -1604,7 +1605,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var variwide: js.UndefOr[PlotVariwideOptions] = js.undefined
+  var variwide: js.UndefOr[PlotVariwideOptions] = js.native
   /**
     * (Highstock) Volume By Price indicator.
     *
@@ -1622,7 +1623,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var vbp: js.UndefOr[PlotVbpOptions] = js.undefined
+  var vbp: js.UndefOr[PlotVbpOptions] = js.native
   /**
     * (Highcharts, Highstock) A vector plot is a type of cartesian chart where
     * each point has an X and Y position, a length and a direction. Vectors are
@@ -1640,7 +1641,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var vector: js.UndefOr[PlotVectorOptions] = js.undefined
+  var vector: js.UndefOr[PlotVectorOptions] = js.native
   /**
     * (Highcharts) A Venn diagram displays all possible logical relations
     * between a collection of different sets. The sets are represented by
@@ -1660,7 +1661,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var venn: js.UndefOr[PlotVennOptions] = js.undefined
+  var venn: js.UndefOr[PlotVennOptions] = js.native
   /**
     * (Highstock) Volume Weighted Average Price indicator.
     *
@@ -1678,7 +1679,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var vwap: js.UndefOr[PlotVwapOptions] = js.undefined
+  var vwap: js.UndefOr[PlotVwapOptions] = js.native
   /**
     * (Highcharts) A waterfall chart displays sequentially introduced positive
     * or negative values in cumulative columns.
@@ -1696,7 +1697,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var waterfall: js.UndefOr[PlotWaterfallOptions] = js.undefined
+  var waterfall: js.UndefOr[PlotWaterfallOptions] = js.native
   /**
     * (Highstock) Williams %R. This series requires the `linkedTo` option to be
     * set and should be loaded after the `stock/indicators/indicators.js`.
@@ -1714,7 +1715,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var williamsr: js.UndefOr[PlotWilliamsrOptions] = js.undefined
+  var williamsr: js.UndefOr[PlotWilliamsrOptions] = js.native
   /**
     * (Highcharts, Highstock) Wind barbs are a convenient way to represent wind
     * speed and direction in one graphical form. Wind direction is given by the
@@ -1732,7 +1733,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var windbarb: js.UndefOr[PlotWindbarbOptions] = js.undefined
+  var windbarb: js.UndefOr[PlotWindbarbOptions] = js.native
   /**
     * (Highstock) Weighted moving average indicator (WMA). This series requires
     * `linkedTo` option to be set.
@@ -1749,7 +1750,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var wma: js.UndefOr[PlotWmaOptions] = js.undefined
+  var wma: js.UndefOr[PlotWmaOptions] = js.native
   /**
     * (Highcharts) A word cloud is a visualization of a set of words, where the
     * size and placement of a word is determined by how it is weighted.
@@ -1767,7 +1768,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var wordcloud: js.UndefOr[PlotWordcloudOptions] = js.undefined
+  var wordcloud: js.UndefOr[PlotWordcloudOptions] = js.native
   /**
     * (Highcharts, Highstock, Gantt) The X-range series displays ranges on the
     * X axis, typically time intervals with a start and end date.
@@ -1784,7 +1785,7 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var xrange: js.UndefOr[PlotXrangeOptions] = js.undefined
+  var xrange: js.UndefOr[PlotXrangeOptions] = js.native
   /**
     * (Highstock) Zig Zag indicator.
     *
@@ -1802,213 +1803,1210 @@ trait PlotOptions extends js.Object {
     * 3. Options for one single series are given in the series instance array.
     * (see online documentation for example)
     */
-  var zigzag: js.UndefOr[PlotZigzagOptions] = js.undefined
+  var zigzag: js.UndefOr[PlotZigzagOptions] = js.native
 }
 
 object PlotOptions {
   @scala.inline
-  def apply(
-    abands: PlotAbandsOptions = null,
-    ad: PlotAdOptions = null,
-    ao: PlotAoOptions = null,
-    apo: PlotApoOptions = null,
-    area: PlotAreaOptions = null,
-    arearange: PlotArearangeOptions = null,
-    areaspline: PlotAreasplineOptions = null,
-    areasplinerange: PlotAreasplinerangeOptions = null,
-    aroon: PlotAroonOptions = null,
-    aroonoscillator: PlotAroonoscillatorOptions = null,
-    atr: PlotAtrOptions = null,
-    bar: PlotBarOptions = null,
-    bb: PlotBbOptions = null,
-    bellcurve: PlotBellcurveOptions = null,
-    boxplot: PlotBoxplotOptions = null,
-    bubble: PlotBubbleOptions = null,
-    bullet: PlotBulletOptions = null,
-    candlestick: PlotCandlestickOptions = null,
-    cci: PlotCciOptions = null,
-    chaikin: PlotChaikinOptions = null,
-    cmf: PlotCmfOptions = null,
-    column: PlotColumnOptions = null,
-    columnpyramid: PlotColumnpyramidOptions = null,
-    columnrange: PlotColumnrangeOptions = null,
-    cylinder: PlotCylinderOptions = null,
-    dema: PlotDemaOptions = null,
-    dependencywheel: PlotDependencywheelOptions = null,
-    dpo: PlotDpoOptions = null,
-    ema: PlotEmaOptions = null,
-    errorbar: PlotErrorbarOptions = null,
-    flags: PlotFlagsOptions = null,
-    funnel: PlotFunnelOptions = null,
-    funnel3d: PlotFunnel3dOptions = null,
-    gantt: PlotGanttOptions = null,
-    gauge: PlotGaugeOptions = null,
-    heatmap: PlotHeatmapOptions = null,
-    histogram: PlotHistogramOptions = null,
-    ikh: PlotIkhOptions = null,
-    item: PlotItemOptions = null,
-    keltnerchannels: PlotKeltnerchannelsOptions = null,
-    line: PlotLineOptions = null,
-    linearregression: PlotLinearregressionOptions = null,
-    linearregressionangle: PlotLinearregressionangleOptions = null,
-    linearregressionintercept: PlotLinearregressioninterceptOptions = null,
-    linearregressionslope: PlotLinearregressionslopeOptions = null,
-    macd: PlotMacdOptions = null,
-    map: PlotMapOptions = null,
-    mapbubble: PlotMapbubbleOptions = null,
-    mapline: PlotMaplineOptions = null,
-    mappoint: PlotMappointOptions = null,
-    mfi: PlotMfiOptions = null,
-    momentum: PlotMomentumOptions = null,
-    natr: PlotNatrOptions = null,
-    networkgraph: PlotNetworkgraphOptions = null,
-    ohlc: PlotOhlcOptions = null,
-    organization: PlotOrganizationOptions = null,
-    packedbubble: PlotPackedbubbleOptions = null,
-    pareto: PlotParetoOptions = null,
-    pc: PlotPcOptions = null,
-    pie: PlotPieOptions = null,
-    pivotpoints: PlotPivotpointsOptions = null,
-    polygon: PlotPolygonOptions = null,
-    ppo: PlotPpoOptions = null,
-    priceenvelopes: PlotPriceenvelopesOptions = null,
-    psar: PlotPsarOptions = null,
-    pyramid: PlotPyramidOptions = null,
-    pyramid3d: PlotPyramid3dOptions = null,
-    roc: PlotRocOptions = null,
-    rsi: PlotRsiOptions = null,
-    sankey: PlotSankeyOptions = null,
-    scatter: PlotScatterOptions = null,
-    scatter3d: PlotScatter3dOptions = null,
-    series: PlotSeriesOptions = null,
-    sma: PlotSmaOptions = null,
-    solidgauge: PlotSolidgaugeOptions = null,
-    spline: PlotSplineOptions = null,
-    stochastic: PlotStochasticOptions = null,
-    streamgraph: PlotStreamgraphOptions = null,
-    sunburst: PlotSunburstOptions = null,
-    supertrend: PlotSupertrendOptions = null,
-    tema: PlotTemaOptions = null,
-    tilemap: PlotTilemapOptions = null,
-    timeline: PlotTimelineOptions = null,
-    treemap: PlotTreemapOptions = null,
-    trendline: PlotTrendlineOptions = null,
-    trix: PlotTrixOptions = null,
-    variablepie: PlotVariablepieOptions = null,
-    variwide: PlotVariwideOptions = null,
-    vbp: PlotVbpOptions = null,
-    vector: PlotVectorOptions = null,
-    venn: PlotVennOptions = null,
-    vwap: PlotVwapOptions = null,
-    waterfall: PlotWaterfallOptions = null,
-    williamsr: PlotWilliamsrOptions = null,
-    windbarb: PlotWindbarbOptions = null,
-    wma: PlotWmaOptions = null,
-    wordcloud: PlotWordcloudOptions = null,
-    xrange: PlotXrangeOptions = null,
-    zigzag: PlotZigzagOptions = null
-  ): PlotOptions = {
+  def apply(): PlotOptions = {
     val __obj = js.Dynamic.literal()
-    if (abands != null) __obj.updateDynamic("abands")(abands.asInstanceOf[js.Any])
-    if (ad != null) __obj.updateDynamic("ad")(ad.asInstanceOf[js.Any])
-    if (ao != null) __obj.updateDynamic("ao")(ao.asInstanceOf[js.Any])
-    if (apo != null) __obj.updateDynamic("apo")(apo.asInstanceOf[js.Any])
-    if (area != null) __obj.updateDynamic("area")(area.asInstanceOf[js.Any])
-    if (arearange != null) __obj.updateDynamic("arearange")(arearange.asInstanceOf[js.Any])
-    if (areaspline != null) __obj.updateDynamic("areaspline")(areaspline.asInstanceOf[js.Any])
-    if (areasplinerange != null) __obj.updateDynamic("areasplinerange")(areasplinerange.asInstanceOf[js.Any])
-    if (aroon != null) __obj.updateDynamic("aroon")(aroon.asInstanceOf[js.Any])
-    if (aroonoscillator != null) __obj.updateDynamic("aroonoscillator")(aroonoscillator.asInstanceOf[js.Any])
-    if (atr != null) __obj.updateDynamic("atr")(atr.asInstanceOf[js.Any])
-    if (bar != null) __obj.updateDynamic("bar")(bar.asInstanceOf[js.Any])
-    if (bb != null) __obj.updateDynamic("bb")(bb.asInstanceOf[js.Any])
-    if (bellcurve != null) __obj.updateDynamic("bellcurve")(bellcurve.asInstanceOf[js.Any])
-    if (boxplot != null) __obj.updateDynamic("boxplot")(boxplot.asInstanceOf[js.Any])
-    if (bubble != null) __obj.updateDynamic("bubble")(bubble.asInstanceOf[js.Any])
-    if (bullet != null) __obj.updateDynamic("bullet")(bullet.asInstanceOf[js.Any])
-    if (candlestick != null) __obj.updateDynamic("candlestick")(candlestick.asInstanceOf[js.Any])
-    if (cci != null) __obj.updateDynamic("cci")(cci.asInstanceOf[js.Any])
-    if (chaikin != null) __obj.updateDynamic("chaikin")(chaikin.asInstanceOf[js.Any])
-    if (cmf != null) __obj.updateDynamic("cmf")(cmf.asInstanceOf[js.Any])
-    if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
-    if (columnpyramid != null) __obj.updateDynamic("columnpyramid")(columnpyramid.asInstanceOf[js.Any])
-    if (columnrange != null) __obj.updateDynamic("columnrange")(columnrange.asInstanceOf[js.Any])
-    if (cylinder != null) __obj.updateDynamic("cylinder")(cylinder.asInstanceOf[js.Any])
-    if (dema != null) __obj.updateDynamic("dema")(dema.asInstanceOf[js.Any])
-    if (dependencywheel != null) __obj.updateDynamic("dependencywheel")(dependencywheel.asInstanceOf[js.Any])
-    if (dpo != null) __obj.updateDynamic("dpo")(dpo.asInstanceOf[js.Any])
-    if (ema != null) __obj.updateDynamic("ema")(ema.asInstanceOf[js.Any])
-    if (errorbar != null) __obj.updateDynamic("errorbar")(errorbar.asInstanceOf[js.Any])
-    if (flags != null) __obj.updateDynamic("flags")(flags.asInstanceOf[js.Any])
-    if (funnel != null) __obj.updateDynamic("funnel")(funnel.asInstanceOf[js.Any])
-    if (funnel3d != null) __obj.updateDynamic("funnel3d")(funnel3d.asInstanceOf[js.Any])
-    if (gantt != null) __obj.updateDynamic("gantt")(gantt.asInstanceOf[js.Any])
-    if (gauge != null) __obj.updateDynamic("gauge")(gauge.asInstanceOf[js.Any])
-    if (heatmap != null) __obj.updateDynamic("heatmap")(heatmap.asInstanceOf[js.Any])
-    if (histogram != null) __obj.updateDynamic("histogram")(histogram.asInstanceOf[js.Any])
-    if (ikh != null) __obj.updateDynamic("ikh")(ikh.asInstanceOf[js.Any])
-    if (item != null) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
-    if (keltnerchannels != null) __obj.updateDynamic("keltnerchannels")(keltnerchannels.asInstanceOf[js.Any])
-    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
-    if (linearregression != null) __obj.updateDynamic("linearregression")(linearregression.asInstanceOf[js.Any])
-    if (linearregressionangle != null) __obj.updateDynamic("linearregressionangle")(linearregressionangle.asInstanceOf[js.Any])
-    if (linearregressionintercept != null) __obj.updateDynamic("linearregressionintercept")(linearregressionintercept.asInstanceOf[js.Any])
-    if (linearregressionslope != null) __obj.updateDynamic("linearregressionslope")(linearregressionslope.asInstanceOf[js.Any])
-    if (macd != null) __obj.updateDynamic("macd")(macd.asInstanceOf[js.Any])
-    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
-    if (mapbubble != null) __obj.updateDynamic("mapbubble")(mapbubble.asInstanceOf[js.Any])
-    if (mapline != null) __obj.updateDynamic("mapline")(mapline.asInstanceOf[js.Any])
-    if (mappoint != null) __obj.updateDynamic("mappoint")(mappoint.asInstanceOf[js.Any])
-    if (mfi != null) __obj.updateDynamic("mfi")(mfi.asInstanceOf[js.Any])
-    if (momentum != null) __obj.updateDynamic("momentum")(momentum.asInstanceOf[js.Any])
-    if (natr != null) __obj.updateDynamic("natr")(natr.asInstanceOf[js.Any])
-    if (networkgraph != null) __obj.updateDynamic("networkgraph")(networkgraph.asInstanceOf[js.Any])
-    if (ohlc != null) __obj.updateDynamic("ohlc")(ohlc.asInstanceOf[js.Any])
-    if (organization != null) __obj.updateDynamic("organization")(organization.asInstanceOf[js.Any])
-    if (packedbubble != null) __obj.updateDynamic("packedbubble")(packedbubble.asInstanceOf[js.Any])
-    if (pareto != null) __obj.updateDynamic("pareto")(pareto.asInstanceOf[js.Any])
-    if (pc != null) __obj.updateDynamic("pc")(pc.asInstanceOf[js.Any])
-    if (pie != null) __obj.updateDynamic("pie")(pie.asInstanceOf[js.Any])
-    if (pivotpoints != null) __obj.updateDynamic("pivotpoints")(pivotpoints.asInstanceOf[js.Any])
-    if (polygon != null) __obj.updateDynamic("polygon")(polygon.asInstanceOf[js.Any])
-    if (ppo != null) __obj.updateDynamic("ppo")(ppo.asInstanceOf[js.Any])
-    if (priceenvelopes != null) __obj.updateDynamic("priceenvelopes")(priceenvelopes.asInstanceOf[js.Any])
-    if (psar != null) __obj.updateDynamic("psar")(psar.asInstanceOf[js.Any])
-    if (pyramid != null) __obj.updateDynamic("pyramid")(pyramid.asInstanceOf[js.Any])
-    if (pyramid3d != null) __obj.updateDynamic("pyramid3d")(pyramid3d.asInstanceOf[js.Any])
-    if (roc != null) __obj.updateDynamic("roc")(roc.asInstanceOf[js.Any])
-    if (rsi != null) __obj.updateDynamic("rsi")(rsi.asInstanceOf[js.Any])
-    if (sankey != null) __obj.updateDynamic("sankey")(sankey.asInstanceOf[js.Any])
-    if (scatter != null) __obj.updateDynamic("scatter")(scatter.asInstanceOf[js.Any])
-    if (scatter3d != null) __obj.updateDynamic("scatter3d")(scatter3d.asInstanceOf[js.Any])
-    if (series != null) __obj.updateDynamic("series")(series.asInstanceOf[js.Any])
-    if (sma != null) __obj.updateDynamic("sma")(sma.asInstanceOf[js.Any])
-    if (solidgauge != null) __obj.updateDynamic("solidgauge")(solidgauge.asInstanceOf[js.Any])
-    if (spline != null) __obj.updateDynamic("spline")(spline.asInstanceOf[js.Any])
-    if (stochastic != null) __obj.updateDynamic("stochastic")(stochastic.asInstanceOf[js.Any])
-    if (streamgraph != null) __obj.updateDynamic("streamgraph")(streamgraph.asInstanceOf[js.Any])
-    if (sunburst != null) __obj.updateDynamic("sunburst")(sunburst.asInstanceOf[js.Any])
-    if (supertrend != null) __obj.updateDynamic("supertrend")(supertrend.asInstanceOf[js.Any])
-    if (tema != null) __obj.updateDynamic("tema")(tema.asInstanceOf[js.Any])
-    if (tilemap != null) __obj.updateDynamic("tilemap")(tilemap.asInstanceOf[js.Any])
-    if (timeline != null) __obj.updateDynamic("timeline")(timeline.asInstanceOf[js.Any])
-    if (treemap != null) __obj.updateDynamic("treemap")(treemap.asInstanceOf[js.Any])
-    if (trendline != null) __obj.updateDynamic("trendline")(trendline.asInstanceOf[js.Any])
-    if (trix != null) __obj.updateDynamic("trix")(trix.asInstanceOf[js.Any])
-    if (variablepie != null) __obj.updateDynamic("variablepie")(variablepie.asInstanceOf[js.Any])
-    if (variwide != null) __obj.updateDynamic("variwide")(variwide.asInstanceOf[js.Any])
-    if (vbp != null) __obj.updateDynamic("vbp")(vbp.asInstanceOf[js.Any])
-    if (vector != null) __obj.updateDynamic("vector")(vector.asInstanceOf[js.Any])
-    if (venn != null) __obj.updateDynamic("venn")(venn.asInstanceOf[js.Any])
-    if (vwap != null) __obj.updateDynamic("vwap")(vwap.asInstanceOf[js.Any])
-    if (waterfall != null) __obj.updateDynamic("waterfall")(waterfall.asInstanceOf[js.Any])
-    if (williamsr != null) __obj.updateDynamic("williamsr")(williamsr.asInstanceOf[js.Any])
-    if (windbarb != null) __obj.updateDynamic("windbarb")(windbarb.asInstanceOf[js.Any])
-    if (wma != null) __obj.updateDynamic("wma")(wma.asInstanceOf[js.Any])
-    if (wordcloud != null) __obj.updateDynamic("wordcloud")(wordcloud.asInstanceOf[js.Any])
-    if (xrange != null) __obj.updateDynamic("xrange")(xrange.asInstanceOf[js.Any])
-    if (zigzag != null) __obj.updateDynamic("zigzag")(zigzag.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotOptions]
   }
+  @scala.inline
+  implicit class PlotOptionsOps[Self <: PlotOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAbands(value: PlotAbandsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abands")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbands: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abands")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAd(value: PlotAdOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ad")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ad")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAo(value: PlotAoOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ao")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ao")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApo(value: PlotApoOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArea(value: PlotAreaOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArearange(value: PlotArearangeOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arearange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArearange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arearange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAreaspline(value: PlotAreasplineOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("areaspline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAreaspline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("areaspline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAreasplinerange(value: PlotAreasplinerangeOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("areasplinerange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAreasplinerange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("areasplinerange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAroon(value: PlotAroonOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aroon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAroon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aroon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAroonoscillator(value: PlotAroonoscillatorOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aroonoscillator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAroonoscillator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aroonoscillator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAtr(value: PlotAtrOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("atr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAtr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("atr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBar(value: PlotBarOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBb(value: PlotBbOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBellcurve(value: PlotBellcurveOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bellcurve")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBellcurve: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bellcurve")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoxplot(value: PlotBoxplotOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boxplot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoxplot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boxplot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBubble(value: PlotBubbleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubble")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBubble: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubble")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBullet(value: PlotBulletOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bullet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBullet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bullet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCandlestick(value: PlotCandlestickOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("candlestick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCandlestick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("candlestick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCci(value: PlotCciOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cci")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCci: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cci")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChaikin(value: PlotChaikinOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chaikin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChaikin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chaikin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCmf(value: PlotCmfOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cmf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCmf: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cmf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumn(value: PlotColumnOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnpyramid(value: PlotColumnpyramidOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnpyramid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnpyramid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnpyramid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnrange(value: PlotColumnrangeOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnrange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnrange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnrange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCylinder(value: PlotCylinderOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cylinder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCylinder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cylinder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDema(value: PlotDemaOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDependencywheel(value: PlotDependencywheelOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencywheel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDependencywheel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencywheel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDpo(value: PlotDpoOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dpo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDpo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dpo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEma(value: PlotEmaOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEma: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorbar(value: PlotErrorbarOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorbar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorbar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlags(value: PlotFlagsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFunnel(value: PlotFunnelOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("funnel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFunnel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("funnel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFunnel3d(value: PlotFunnel3dOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("funnel3d")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFunnel3d: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("funnel3d")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGantt(value: PlotGanttOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gantt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGantt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gantt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGauge(value: PlotGaugeOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gauge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGauge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gauge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeatmap(value: PlotHeatmapOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heatmap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeatmap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heatmap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHistogram(value: PlotHistogramOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("histogram")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHistogram: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("histogram")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIkh(value: PlotIkhOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ikh")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIkh: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ikh")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItem(value: PlotItemOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeltnerchannels(value: PlotKeltnerchannelsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keltnerchannels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeltnerchannels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keltnerchannels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLine(value: PlotLineOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinearregression(value: PlotLinearregressionOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearregression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinearregression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearregression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinearregressionangle(value: PlotLinearregressionangleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearregressionangle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinearregressionangle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearregressionangle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinearregressionintercept(value: PlotLinearregressioninterceptOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearregressionintercept")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinearregressionintercept: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearregressionintercept")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinearregressionslope(value: PlotLinearregressionslopeOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearregressionslope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinearregressionslope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearregressionslope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMacd(value: PlotMacdOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("macd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMacd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("macd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMap(value: PlotMapOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapbubble(value: PlotMapbubbleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapbubble")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapbubble: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapbubble")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapline(value: PlotMaplineOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMappoint(value: PlotMappointOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mappoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMappoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mappoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMfi(value: PlotMfiOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mfi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMfi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mfi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMomentum(value: PlotMomentumOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("momentum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMomentum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("momentum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNatr(value: PlotNatrOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("natr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNatr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("natr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkgraph(value: PlotNetworkgraphOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkgraph")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkgraph: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkgraph")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOhlc(value: PlotOhlcOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ohlc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOhlc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ohlc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganization(value: PlotOrganizationOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("organization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("organization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPackedbubble(value: PlotPackedbubbleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packedbubble")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackedbubble: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packedbubble")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPareto(value: PlotParetoOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pareto")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPareto: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pareto")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPc(value: PlotPcOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPie(value: PlotPieOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pie")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPie: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pie")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPivotpoints(value: PlotPivotpointsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotpoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPivotpoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotpoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolygon(value: PlotPolygonOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polygon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolygon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polygon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPpo(value: PlotPpoOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ppo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPpo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ppo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriceenvelopes(value: PlotPriceenvelopesOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priceenvelopes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriceenvelopes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priceenvelopes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPsar(value: PlotPsarOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("psar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPsar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("psar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPyramid(value: PlotPyramidOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pyramid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPyramid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pyramid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPyramid3d(value: PlotPyramid3dOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pyramid3d")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPyramid3d: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pyramid3d")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoc(value: PlotRocOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRsi(value: PlotRsiOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rsi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRsi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rsi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSankey(value: PlotSankeyOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sankey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSankey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sankey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScatter(value: PlotScatterOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scatter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScatter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scatter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScatter3d(value: PlotScatter3dOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scatter3d")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScatter3d: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scatter3d")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeries(value: PlotSeriesOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSma(value: PlotSmaOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sma")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSma: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sma")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSolidgauge(value: PlotSolidgaugeOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("solidgauge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSolidgauge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("solidgauge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpline(value: PlotSplineOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStochastic(value: PlotStochasticOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stochastic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStochastic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stochastic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamgraph(value: PlotStreamgraphOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamgraph")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamgraph: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamgraph")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSunburst(value: PlotSunburstOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sunburst")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSunburst: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sunburst")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupertrend(value: PlotSupertrendOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supertrend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupertrend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supertrend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTema(value: PlotTemaOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTilemap(value: PlotTilemapOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tilemap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTilemap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tilemap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeline(value: PlotTimelineOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTreemap(value: PlotTreemapOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("treemap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTreemap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("treemap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrendline(value: PlotTrendlineOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trendline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrendline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trendline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrix(value: PlotTrixOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVariablepie(value: PlotVariablepieOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variablepie")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVariablepie: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variablepie")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVariwide(value: PlotVariwideOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variwide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVariwide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variwide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVbp(value: PlotVbpOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vbp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVbp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vbp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVector(value: PlotVectorOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVenn(value: PlotVennOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("venn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVenn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("venn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVwap(value: PlotVwapOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vwap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVwap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vwap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWaterfall(value: PlotWaterfallOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waterfall")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWaterfall: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waterfall")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWilliamsr(value: PlotWilliamsrOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("williamsr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWilliamsr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("williamsr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWindbarb(value: PlotWindbarbOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("windbarb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWindbarb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("windbarb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWma(value: PlotWmaOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wma")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWma: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wma")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWordcloud(value: PlotWordcloudOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordcloud")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWordcloud: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordcloud")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXrange(value: PlotXrangeOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xrange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXrange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xrange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZigzag(value: PlotZigzagOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zigzag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZigzag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zigzag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

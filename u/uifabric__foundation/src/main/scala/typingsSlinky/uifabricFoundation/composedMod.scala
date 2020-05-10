@@ -1,6 +1,6 @@
 package typingsSlinky.uifabricFoundation
 
-import typingsSlinky.react.mod.FunctionComponent
+import slinky.core.ReactComponentClass
 import typingsSlinky.std.Required
 import typingsSlinky.uifabricFoundation.icomponentMod.IComponentOptions
 import typingsSlinky.uifabricFoundation.icomponentMod.IPartialSlotComponent
@@ -19,7 +19,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object composedMod extends js.Object {
   def composed[TComponentProps /* <: ValidProps with ISlottableProps[TComponentSlots] */, TTokens, TStyleSet /* <: IStyleSet[TStyleSet] */, TViewProps /* <: TComponentProps */, TComponentSlots, TStatics](
-    baseComponent: FunctionComponent[js.Object],
+    baseComponent: ReactComponentClass[js.Object],
     options: IRecompositionComponentOptions[TComponentProps, TTokens, TStyleSet, TViewProps, TComponentSlots, TStatics]
   ): (IFoundationComponent[TComponentProps, TTokens, TStyleSet, TViewProps, TComponentSlots, TStatics]) with TStatics = js.native
   def composed[TComponentProps /* <: ValidProps with ISlottableProps[TComponentSlots] */, TTokens, TStyleSet /* <: IStyleSet[TStyleSet] */, TViewProps /* <: TComponentProps */, TComponentSlots, TStatics](

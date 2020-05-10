@@ -4,36 +4,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAccentColor extends js.Object {
-  var accentColor: js.UndefOr[String] = js.undefined
-  var floatingNav: js.UndefOr[AnonBackground] = js.undefined
-  var headerColor: js.UndefOr[String] = js.undefined
-  var selectionColor: js.UndefOr[String] = js.undefined
-  var textColor: js.UndefOr[AnonActive] = js.undefined
-  var todayColor: js.UndefOr[String] = js.undefined
-  var weekdayColor: js.UndefOr[String] = js.undefined
+  var accentColor: js.UndefOr[String] = js.native
+  var floatingNav: js.UndefOr[AnonBackground] = js.native
+  var headerColor: js.UndefOr[String] = js.native
+  var selectionColor: js.UndefOr[String] = js.native
+  var textColor: js.UndefOr[AnonActive] = js.native
+  var todayColor: js.UndefOr[String] = js.native
+  var weekdayColor: js.UndefOr[String] = js.native
 }
 
 object AnonAccentColor {
   @scala.inline
-  def apply(
-    accentColor: String = null,
-    floatingNav: AnonBackground = null,
-    headerColor: String = null,
-    selectionColor: String = null,
-    textColor: AnonActive = null,
-    todayColor: String = null,
-    weekdayColor: String = null
-  ): AnonAccentColor = {
+  def apply(): AnonAccentColor = {
     val __obj = js.Dynamic.literal()
-    if (accentColor != null) __obj.updateDynamic("accentColor")(accentColor.asInstanceOf[js.Any])
-    if (floatingNav != null) __obj.updateDynamic("floatingNav")(floatingNav.asInstanceOf[js.Any])
-    if (headerColor != null) __obj.updateDynamic("headerColor")(headerColor.asInstanceOf[js.Any])
-    if (selectionColor != null) __obj.updateDynamic("selectionColor")(selectionColor.asInstanceOf[js.Any])
-    if (textColor != null) __obj.updateDynamic("textColor")(textColor.asInstanceOf[js.Any])
-    if (todayColor != null) __obj.updateDynamic("todayColor")(todayColor.asInstanceOf[js.Any])
-    if (weekdayColor != null) __obj.updateDynamic("weekdayColor")(weekdayColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAccentColor]
   }
+  @scala.inline
+  implicit class AnonAccentColorOps[Self <: AnonAccentColor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccentColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accentColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccentColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accentColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloatingNav(value: AnonBackground): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingNav")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloatingNav: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingNav")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectionColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextColor(value: AnonActive): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTodayColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("todayColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTodayColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("todayColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeekdayColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weekdayColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeekdayColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weekdayColor")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

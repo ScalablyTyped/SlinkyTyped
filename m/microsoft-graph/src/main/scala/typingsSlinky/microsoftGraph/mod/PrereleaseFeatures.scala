@@ -14,14 +14,12 @@ trait PrereleaseFeatures extends js.Object
 
 object PrereleaseFeatures {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def notAllowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.notAllowed = "notAllowed".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.notAllowed]
   @scala.inline
-  def notAllowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.notAllowed = this.cast("notAllowed")
+  def settingsAndExperimentations: typingsSlinky.microsoftGraph.microsoftGraphStrings.settingsAndExperimentations = "settingsAndExperimentations".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.settingsAndExperimentations]
   @scala.inline
-  def settingsAndExperimentations: typingsSlinky.microsoftGraph.microsoftGraphStrings.settingsAndExperimentations = this.cast("settingsAndExperimentations")
+  def settingsOnly: typingsSlinky.microsoftGraph.microsoftGraphStrings.settingsOnly = "settingsOnly".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.settingsOnly]
   @scala.inline
-  def settingsOnly: typingsSlinky.microsoftGraph.microsoftGraphStrings.settingsOnly = this.cast("settingsOnly")
-  @scala.inline
-  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = this.cast("userDefined")
+  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = "userDefined".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined]
 }
 

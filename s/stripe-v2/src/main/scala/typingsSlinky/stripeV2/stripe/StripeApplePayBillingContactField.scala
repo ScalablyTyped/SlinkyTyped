@@ -12,10 +12,8 @@ trait StripeApplePayBillingContactField extends js.Object
 
 object StripeApplePayBillingContactField {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def name: typingsSlinky.stripeV2.stripeV2Strings.name = "name".asInstanceOf[typingsSlinky.stripeV2.stripeV2Strings.name]
   @scala.inline
-  def name: typingsSlinky.stripeV2.stripeV2Strings.name = this.cast("name")
-  @scala.inline
-  def postalAddress: typingsSlinky.stripeV2.stripeV2Strings.postalAddress = this.cast("postalAddress")
+  def postalAddress: typingsSlinky.stripeV2.stripeV2Strings.postalAddress = "postalAddress".asInstanceOf[typingsSlinky.stripeV2.stripeV2Strings.postalAddress]
 }
 

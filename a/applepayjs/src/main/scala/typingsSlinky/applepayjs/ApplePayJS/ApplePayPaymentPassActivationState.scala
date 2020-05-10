@@ -18,16 +18,14 @@ trait ApplePayPaymentPassActivationState extends js.Object
 
 object ApplePayPaymentPassActivationState {
   @scala.inline
-  def activated: typingsSlinky.applepayjs.applepayjsStrings.activated = this.cast("activated")
+  def activated: typingsSlinky.applepayjs.applepayjsStrings.activated = "activated".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.activated]
   @scala.inline
-  def activating: typingsSlinky.applepayjs.applepayjsStrings.activating = this.cast("activating")
+  def activating: typingsSlinky.applepayjs.applepayjsStrings.activating = "activating".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.activating]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def deactivated: typingsSlinky.applepayjs.applepayjsStrings.deactivated = "deactivated".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.deactivated]
   @scala.inline
-  def deactivated: typingsSlinky.applepayjs.applepayjsStrings.deactivated = this.cast("deactivated")
+  def requiresActivation: typingsSlinky.applepayjs.applepayjsStrings.requiresActivation = "requiresActivation".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.requiresActivation]
   @scala.inline
-  def requiresActivation: typingsSlinky.applepayjs.applepayjsStrings.requiresActivation = this.cast("requiresActivation")
-  @scala.inline
-  def suspended: typingsSlinky.applepayjs.applepayjsStrings.suspended = this.cast("suspended")
+  def suspended: typingsSlinky.applepayjs.applepayjsStrings.suspended = "suspended".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.suspended]
 }
 

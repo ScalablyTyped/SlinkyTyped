@@ -1,10 +1,7 @@
 package typingsSlinky.recharts.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.recharts.mod.PolarGridProps
 import typingsSlinky.recharts.rechartsNumbers.`100`
 import typingsSlinky.recharts.rechartsNumbers.`200`
@@ -32,175 +29,170 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PolarGrid
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.PolarGrid] {
+object PolarGrid {
   @JSImport("recharts", "PolarGrid")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    alignmentBaseline: String = null,
-    angle: Int | Double = null,
-    baselineShift: String = null,
-    clip: String = null,
-    clipPath: String = null,
-    clipRule: String = null,
-    color: String = null,
-    colorInterpolation: String = null,
-    colorInterpolationFilters: String = null,
-    colorProfile: String = null,
-    colorRendering: String = null,
-    cursor: String = null,
-    cx: Int | Double = null,
-    cy: Int | Double = null,
-    direction: String = null,
-    display: String = null,
-    dominantBaseline: String = null,
-    dx: Int | Double = null,
-    dy: Int | Double = null,
-    enableBackground: String = null,
-    fill: String = null,
-    fillOpacity: Double | String = null,
-    fillRule: String = null,
-    filter: String = null,
-    floodColor: String = null,
-    floodOpacity: String = null,
-    font: String = null,
-    fontFamily: String = null,
-    fontSize: Double | String = null,
-    fontSizeAdjust: Double | String = null,
-    fontStretch: String = null,
-    fontStyle: String = null,
-    fontVariant: String = null,
-    fontWeight: normal | bold | bolder | lighter | `100` | `200` | `300` | `400` | `500` | `600` | `700` | `800` | `900` | inherit = null,
-    glyphOrientationHorizontal: String = null,
-    glyphOrientationVertical: String = null,
-    gridType: polygon | circle = null,
-    height: Int | Double = null,
-    imageRendering: auto | optimizeSpeed | optimizeQuality | inherit = null,
-    innerRadius: Int | Double = null,
-    kerning: Double | String = null,
-    letterSpacing: String = null,
-    lightingColor: String = null,
-    markerEnd: String = null,
-    markerMid: String = null,
-    markerStart: String = null,
-    mask: String = null,
-    opacity: Double | String = null,
-    outerRadius: Int | Double = null,
-    overflow: String = null,
-    pointerEvents: String = null,
-    polarAngles: js.Array[Double] = null,
-    polarRadius: js.Array[Double] = null,
-    r: Int | Double = null,
-    shapeRendering: auto | optimizeSpeed | crispEdges | geometricPrecision | inherit = null,
-    stopColor: String = null,
-    stopOpacity: Double | String = null,
-    stroke: Double | String = null,
-    strokeDasharray: String = null,
-    strokeDashoffset: Double | String = null,
-    strokeLinecap: String = null,
-    strokeLinejoin: String = null,
-    strokeMiterlimit: Double | String = null,
-    strokeOpacity: Double | String = null,
-    strokeWidth: Double | String = null,
-    style: js.Object = null,
-    textAnchor: String = null,
-    textDecoration: String = null,
-    textRendering: auto | optimizeSpeed | optimizeLegibility | geometricPrecision | inherit = null,
-    transform: String = null,
-    unicodeBidi: String = null,
-    visibility: String = null,
-    width: Int | Double = null,
-    wordSpacing: Double | String = null,
-    writingMode: String = null,
-    x: Int | Double = null,
-    y: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.PolarGrid] = {
-    val __obj = js.Dynamic.literal()
-    if (alignmentBaseline != null) __obj.updateDynamic("alignmentBaseline")(alignmentBaseline.asInstanceOf[js.Any])
-    if (angle != null) __obj.updateDynamic("angle")(angle.asInstanceOf[js.Any])
-    if (baselineShift != null) __obj.updateDynamic("baselineShift")(baselineShift.asInstanceOf[js.Any])
-    if (clip != null) __obj.updateDynamic("clip")(clip.asInstanceOf[js.Any])
-    if (clipPath != null) __obj.updateDynamic("clipPath")(clipPath.asInstanceOf[js.Any])
-    if (clipRule != null) __obj.updateDynamic("clipRule")(clipRule.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (colorInterpolation != null) __obj.updateDynamic("colorInterpolation")(colorInterpolation.asInstanceOf[js.Any])
-    if (colorInterpolationFilters != null) __obj.updateDynamic("colorInterpolationFilters")(colorInterpolationFilters.asInstanceOf[js.Any])
-    if (colorProfile != null) __obj.updateDynamic("colorProfile")(colorProfile.asInstanceOf[js.Any])
-    if (colorRendering != null) __obj.updateDynamic("colorRendering")(colorRendering.asInstanceOf[js.Any])
-    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
-    if (cx != null) __obj.updateDynamic("cx")(cx.asInstanceOf[js.Any])
-    if (cy != null) __obj.updateDynamic("cy")(cy.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
-    if (dominantBaseline != null) __obj.updateDynamic("dominantBaseline")(dominantBaseline.asInstanceOf[js.Any])
-    if (dx != null) __obj.updateDynamic("dx")(dx.asInstanceOf[js.Any])
-    if (dy != null) __obj.updateDynamic("dy")(dy.asInstanceOf[js.Any])
-    if (enableBackground != null) __obj.updateDynamic("enableBackground")(enableBackground.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
-    if (fillRule != null) __obj.updateDynamic("fillRule")(fillRule.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (floodColor != null) __obj.updateDynamic("floodColor")(floodColor.asInstanceOf[js.Any])
-    if (floodOpacity != null) __obj.updateDynamic("floodOpacity")(floodOpacity.asInstanceOf[js.Any])
-    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
-    if (fontSizeAdjust != null) __obj.updateDynamic("fontSizeAdjust")(fontSizeAdjust.asInstanceOf[js.Any])
-    if (fontStretch != null) __obj.updateDynamic("fontStretch")(fontStretch.asInstanceOf[js.Any])
-    if (fontStyle != null) __obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
-    if (fontVariant != null) __obj.updateDynamic("fontVariant")(fontVariant.asInstanceOf[js.Any])
-    if (fontWeight != null) __obj.updateDynamic("fontWeight")(fontWeight.asInstanceOf[js.Any])
-    if (glyphOrientationHorizontal != null) __obj.updateDynamic("glyphOrientationHorizontal")(glyphOrientationHorizontal.asInstanceOf[js.Any])
-    if (glyphOrientationVertical != null) __obj.updateDynamic("glyphOrientationVertical")(glyphOrientationVertical.asInstanceOf[js.Any])
-    if (gridType != null) __obj.updateDynamic("gridType")(gridType.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (imageRendering != null) __obj.updateDynamic("imageRendering")(imageRendering.asInstanceOf[js.Any])
-    if (innerRadius != null) __obj.updateDynamic("innerRadius")(innerRadius.asInstanceOf[js.Any])
-    if (kerning != null) __obj.updateDynamic("kerning")(kerning.asInstanceOf[js.Any])
-    if (letterSpacing != null) __obj.updateDynamic("letterSpacing")(letterSpacing.asInstanceOf[js.Any])
-    if (lightingColor != null) __obj.updateDynamic("lightingColor")(lightingColor.asInstanceOf[js.Any])
-    if (markerEnd != null) __obj.updateDynamic("markerEnd")(markerEnd.asInstanceOf[js.Any])
-    if (markerMid != null) __obj.updateDynamic("markerMid")(markerMid.asInstanceOf[js.Any])
-    if (markerStart != null) __obj.updateDynamic("markerStart")(markerStart.asInstanceOf[js.Any])
-    if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (outerRadius != null) __obj.updateDynamic("outerRadius")(outerRadius.asInstanceOf[js.Any])
-    if (overflow != null) __obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
-    if (pointerEvents != null) __obj.updateDynamic("pointerEvents")(pointerEvents.asInstanceOf[js.Any])
-    if (polarAngles != null) __obj.updateDynamic("polarAngles")(polarAngles.asInstanceOf[js.Any])
-    if (polarRadius != null) __obj.updateDynamic("polarRadius")(polarRadius.asInstanceOf[js.Any])
-    if (r != null) __obj.updateDynamic("r")(r.asInstanceOf[js.Any])
-    if (shapeRendering != null) __obj.updateDynamic("shapeRendering")(shapeRendering.asInstanceOf[js.Any])
-    if (stopColor != null) __obj.updateDynamic("stopColor")(stopColor.asInstanceOf[js.Any])
-    if (stopOpacity != null) __obj.updateDynamic("stopOpacity")(stopOpacity.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (strokeDasharray != null) __obj.updateDynamic("strokeDasharray")(strokeDasharray.asInstanceOf[js.Any])
-    if (strokeDashoffset != null) __obj.updateDynamic("strokeDashoffset")(strokeDashoffset.asInstanceOf[js.Any])
-    if (strokeLinecap != null) __obj.updateDynamic("strokeLinecap")(strokeLinecap.asInstanceOf[js.Any])
-    if (strokeLinejoin != null) __obj.updateDynamic("strokeLinejoin")(strokeLinejoin.asInstanceOf[js.Any])
-    if (strokeMiterlimit != null) __obj.updateDynamic("strokeMiterlimit")(strokeMiterlimit.asInstanceOf[js.Any])
-    if (strokeOpacity != null) __obj.updateDynamic("strokeOpacity")(strokeOpacity.asInstanceOf[js.Any])
-    if (strokeWidth != null) __obj.updateDynamic("strokeWidth")(strokeWidth.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (textAnchor != null) __obj.updateDynamic("textAnchor")(textAnchor.asInstanceOf[js.Any])
-    if (textDecoration != null) __obj.updateDynamic("textDecoration")(textDecoration.asInstanceOf[js.Any])
-    if (textRendering != null) __obj.updateDynamic("textRendering")(textRendering.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
-    if (unicodeBidi != null) __obj.updateDynamic("unicodeBidi")(unicodeBidi.asInstanceOf[js.Any])
-    if (visibility != null) __obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (wordSpacing != null) __obj.updateDynamic("wordSpacing")(wordSpacing.asInstanceOf[js.Any])
-    if (writingMode != null) __obj.updateDynamic("writingMode")(writingMode.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.recharts.mod.PolarGrid] {
+    @scala.inline
+    def alignmentBaseline(value: String): this.type = set("alignmentBaseline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def angle(value: Double): this.type = set("angle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def baselineShift(value: String): this.type = set("baselineShift", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clip(value: String): this.type = set("clip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clipPath(value: String): this.type = set("clipPath", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clipRule(value: String): this.type = set("clipRule", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorInterpolation(value: String): this.type = set("colorInterpolation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorInterpolationFilters(value: String): this.type = set("colorInterpolationFilters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorProfile(value: String): this.type = set("colorProfile", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorRendering(value: String): this.type = set("colorRendering", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cursor(value: String): this.type = set("cursor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cx(value: Double): this.type = set("cx", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cy(value: Double): this.type = set("cy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def direction(value: String): this.type = set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def display(value: String): this.type = set("display", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dominantBaseline(value: String): this.type = set("dominantBaseline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dx(value: Double): this.type = set("dx", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dy(value: Double): this.type = set("dy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fill(value: String): this.type = set("fill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fillOpacity(value: Double | String): this.type = set("fillOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fillRule(value: String): this.type = set("fillRule", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filter(value: String): this.type = set("filter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floodColor(value: String): this.type = set("floodColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floodOpacity(value: String): this.type = set("floodOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def font(value: String): this.type = set("font", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fontFamily(value: String): this.type = set("fontFamily", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fontSize(value: Double | String): this.type = set("fontSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fontSizeAdjust(value: Double | String): this.type = set("fontSizeAdjust", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fontStretch(value: String): this.type = set("fontStretch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fontStyle(value: String): this.type = set("fontStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fontVariant(value: String): this.type = set("fontVariant", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fontWeight(
+      value: normal | bold | bolder | lighter | `100` | `200` | `300` | `400` | `500` | `600` | `700` | `800` | `900` | inherit
+    ): this.type = set("fontWeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def glyphOrientationVertical(value: String): this.type = set("glyphOrientationVertical", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridType(value: polygon | circle): this.type = set("gridType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def imageRendering(value: auto | optimizeSpeed | optimizeQuality | inherit): this.type = set("imageRendering", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRadius(value: Double): this.type = set("innerRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def kerning(value: Double | String): this.type = set("kerning", value.asInstanceOf[js.Any])
+    @scala.inline
+    def letterSpacing(value: String): this.type = set("letterSpacing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lightingColor(value: String): this.type = set("lightingColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def markerEnd(value: String): this.type = set("markerEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def markerMid(value: String): this.type = set("markerMid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def markerStart(value: String): this.type = set("markerStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mask(value: String): this.type = set("mask", value.asInstanceOf[js.Any])
+    @scala.inline
+    def opacity(value: Double | String): this.type = set("opacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def outerRadius(value: Double): this.type = set("outerRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overflow(value: String): this.type = set("overflow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pointerEvents(value: String): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
+    @scala.inline
+    def polarAngles(value: js.Array[Double]): this.type = set("polarAngles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def polarRadius(value: js.Array[Double]): this.type = set("polarRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def r(value: Double): this.type = set("r", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shapeRendering(value: auto | optimizeSpeed | crispEdges | geometricPrecision | inherit): this.type = set("shapeRendering", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stopColor(value: String): this.type = set("stopColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stopOpacity(value: Double | String): this.type = set("stopOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stroke(value: Double | String): this.type = set("stroke", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeDasharray(value: String): this.type = set("strokeDasharray", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeDashoffset(value: Double | String): this.type = set("strokeDashoffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeLinecap(value: String): this.type = set("strokeLinecap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeLinejoin(value: String): this.type = set("strokeLinejoin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeMiterlimit(value: Double | String): this.type = set("strokeMiterlimit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeOpacity(value: Double | String): this.type = set("strokeOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeWidth(value: Double | String): this.type = set("strokeWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textAnchor(value: String): this.type = set("textAnchor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textDecoration(value: String): this.type = set("textDecoration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textRendering(value: auto | optimizeSpeed | optimizeLegibility | geometricPrecision | inherit): this.type = set("textRendering", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transform(value: String): this.type = set("transform", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unicodeBidi(value: String): this.type = set("unicodeBidi", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visibility(value: String): this.type = set("visibility", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wordSpacing(value: Double | String): this.type = set("wordSpacing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def writingMode(value: String): this.type = set("writingMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def x(value: Double): this.type = set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.mod.PolarGrid] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.mod.PolarGrid](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PolarGridProps
+  
+  def withProps(p: PolarGridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PolarGrid.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

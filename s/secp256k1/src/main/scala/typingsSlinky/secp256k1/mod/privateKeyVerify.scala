@@ -7,6 +7,6 @@ import scala.scalajs.js.annotation._
 @JSImport("secp256k1", "privateKeyVerify")
 @js.native
 object privateKeyVerify extends js.Object {
-  def apply(privateKey: scala.scalajs.js.typedarray.Uint8Array): Boolean = js.native
+  def apply(privateKey: js.typedarray.Uint8Array): Boolean = js.native
 }
 

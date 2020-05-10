@@ -26,10 +26,47 @@ trait IntegerParameterRange extends js.Object {
 
 object IntegerParameterRange {
   @scala.inline
-  def apply(MaxValue: Integer, MinValue: Integer, Name: Name, ScalingType: ScalingType = null): IntegerParameterRange = {
+  def apply(MaxValue: Integer, MinValue: Integer, Name: Name): IntegerParameterRange = {
     val __obj = js.Dynamic.literal(MaxValue = MaxValue.asInstanceOf[js.Any], MinValue = MinValue.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
-    if (ScalingType != null) __obj.updateDynamic("ScalingType")(ScalingType.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntegerParameterRange]
   }
+  @scala.inline
+  implicit class IntegerParameterRangeOps[Self <: IntegerParameterRange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxValue(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinValue(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScalingType(value: ScalingType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScalingType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

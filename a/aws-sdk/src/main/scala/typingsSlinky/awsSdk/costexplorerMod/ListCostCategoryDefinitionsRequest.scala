@@ -18,11 +18,41 @@ trait ListCostCategoryDefinitionsRequest extends js.Object {
 
 object ListCostCategoryDefinitionsRequest {
   @scala.inline
-  def apply(EffectiveOn: ZonedDateTime = null, NextToken: NextPageToken = null): ListCostCategoryDefinitionsRequest = {
+  def apply(): ListCostCategoryDefinitionsRequest = {
     val __obj = js.Dynamic.literal()
-    if (EffectiveOn != null) __obj.updateDynamic("EffectiveOn")(EffectiveOn.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListCostCategoryDefinitionsRequest]
   }
+  @scala.inline
+  implicit class ListCostCategoryDefinitionsRequestOps[Self <: ListCostCategoryDefinitionsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEffectiveOn(value: ZonedDateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EffectiveOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEffectiveOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EffectiveOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextPageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

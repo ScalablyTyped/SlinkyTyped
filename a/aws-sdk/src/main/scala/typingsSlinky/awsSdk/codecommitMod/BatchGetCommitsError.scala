@@ -22,12 +22,53 @@ trait BatchGetCommitsError extends js.Object {
 
 object BatchGetCommitsError {
   @scala.inline
-  def apply(commitId: ObjectId = null, errorCode: ErrorCode = null, errorMessage: ErrorMessage = null): BatchGetCommitsError = {
+  def apply(): BatchGetCommitsError = {
     val __obj = js.Dynamic.literal()
-    if (commitId != null) __obj.updateDynamic("commitId")(commitId.asInstanceOf[js.Any])
-    if (errorCode != null) __obj.updateDynamic("errorCode")(errorCode.asInstanceOf[js.Any])
-    if (errorMessage != null) __obj.updateDynamic("errorMessage")(errorMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchGetCommitsError]
   }
+  @scala.inline
+  implicit class BatchGetCommitsErrorOps[Self <: BatchGetCommitsError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommitId(value: ObjectId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommitId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorCode(value: ErrorCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorMessage(value: ErrorMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

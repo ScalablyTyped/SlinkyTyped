@@ -14,10 +14,29 @@ trait PollForJobsOutput extends js.Object {
 
 object PollForJobsOutput {
   @scala.inline
-  def apply(jobs: JobList = null): PollForJobsOutput = {
+  def apply(): PollForJobsOutput = {
     val __obj = js.Dynamic.literal()
-    if (jobs != null) __obj.updateDynamic("jobs")(jobs.asInstanceOf[js.Any])
     __obj.asInstanceOf[PollForJobsOutput]
   }
+  @scala.inline
+  implicit class PollForJobsOutputOps[Self <: PollForJobsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobs(value: JobList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

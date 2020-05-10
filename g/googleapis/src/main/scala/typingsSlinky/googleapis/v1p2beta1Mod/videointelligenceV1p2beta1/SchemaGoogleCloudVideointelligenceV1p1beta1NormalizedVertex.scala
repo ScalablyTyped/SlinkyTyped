@@ -22,11 +22,41 @@ trait SchemaGoogleCloudVideointelligenceV1p1beta1NormalizedVertex extends js.Obj
 
 object SchemaGoogleCloudVideointelligenceV1p1beta1NormalizedVertex {
   @scala.inline
-  def apply(x: Int | Double = null, y: Int | Double = null): SchemaGoogleCloudVideointelligenceV1p1beta1NormalizedVertex = {
+  def apply(): SchemaGoogleCloudVideointelligenceV1p1beta1NormalizedVertex = {
     val __obj = js.Dynamic.literal()
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1p1beta1NormalizedVertex]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVideointelligenceV1p1beta1NormalizedVertexOps[Self <: SchemaGoogleCloudVideointelligenceV1p1beta1NormalizedVertex] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -9,6 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait JoinTableDataSource extends Object {
   /**
     * The type of join that will be performed.
@@ -21,37 +22,37 @@ trait JoinTableDataSource extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-Sublayer.html#JoinTableDataSource)
     */
-  var joinType: `left-outer-join` | `left-inner-join`
+  var joinType: `left-outer-join` | `left-inner-join` = js.native
   /**
     * The field name used for joining or matching records in the left table to records in the right table.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-Sublayer.html#JoinTableDataSource)
     */
-  var leftTableKey: String
+  var leftTableKey: String = js.native
   /**
     * The left table for joining to the right table source. This can either be a dynamic map layer or a dynamic data layer. The dynamic data layer may contain another join data source used for nested joining.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-Sublayer.html#JoinTableDataSource)
     */
-  var leftTableSource: DynamicMapLayer | DynamicDataLayer
+  var leftTableSource: DynamicMapLayer | DynamicDataLayer = js.native
   /**
     * The field name used for joining or matching records in the right table to records in the left table.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-Sublayer.html#JoinTableDataSource)
     */
-  var rightTableKey: String
+  var rightTableKey: String = js.native
   /**
     * The right table for joining to the left table source. This can either be a dynamic map layer or a dynamic data layer. The dynamic data layer may contain another join data source used for nested joining.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-Sublayer.html#JoinTableDataSource)
     */
-  var rightTableSource: DynamicMapLayer | DynamicDataLayer
+  var rightTableSource: DynamicMapLayer | DynamicDataLayer = js.native
   /**
     * This value is always `join-table` and is inferred when other join table properties of this object are set.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-Sublayer.html#JoinTableDataSource)
     */
-  var `type`: `join-table`
+  var `type`: `join-table` = js.native
 }
 
 object JoinTableDataSource {
@@ -71,5 +72,49 @@ object JoinTableDataSource {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[JoinTableDataSource]
   }
+  @scala.inline
+  implicit class JoinTableDataSourceOps[Self <: JoinTableDataSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJoinType(value: `left-outer-join` | `left-inner-join`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("joinType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLeftTableKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftTableKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLeftTableSource(value: DynamicMapLayer | DynamicDataLayer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftTableSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRightTableKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightTableKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRightTableSource(value: DynamicMapLayer | DynamicDataLayer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightTableSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: `join-table`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

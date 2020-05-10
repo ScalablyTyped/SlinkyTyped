@@ -26,18 +26,65 @@ trait GetServersResponse extends js.Object {
 
 object GetServersResponse {
   @scala.inline
-  def apply(
-    lastModifiedOn: js.Date = null,
-    nextToken: NextToken = null,
-    serverCatalogStatus: ServerCatalogStatus = null,
-    serverList: ServerList = null
-  ): GetServersResponse = {
+  def apply(): GetServersResponse = {
     val __obj = js.Dynamic.literal()
-    if (lastModifiedOn != null) __obj.updateDynamic("lastModifiedOn")(lastModifiedOn.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (serverCatalogStatus != null) __obj.updateDynamic("serverCatalogStatus")(serverCatalogStatus.asInstanceOf[js.Any])
-    if (serverList != null) __obj.updateDynamic("serverList")(serverList.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetServersResponse]
   }
+  @scala.inline
+  implicit class GetServersResponseOps[Self <: GetServersResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLastModifiedOn(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerCatalogStatus(value: ServerCatalogStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverCatalogStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerCatalogStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverCatalogStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerList(value: ServerList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

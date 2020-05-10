@@ -91,7 +91,7 @@ package object iotanalyticsMod {
   type MaxResults = scala.Double
   type MaxVersions = scala.Double
   type MessageId = java.lang.String
-  type MessagePayload = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.iotanalyticsMod.Blob | java.lang.String
+  type MessagePayload = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.iotanalyticsMod.Blob | java.lang.String
   type MessagePayloads = js.Array[typingsSlinky.awsSdk.iotanalyticsMod.MessagePayload]
   type Messages = js.Array[typingsSlinky.awsSdk.iotanalyticsMod.Message]
   type NextToken = java.lang.String

@@ -30,86 +30,294 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@oracle/oraclejet.@oracle/oraclejet/ojtable.ojTableSettableProperties<K, D>> */
+@js.native
 trait ojTableSettablePropertiesLenient[K, D]
   extends /* key */ StringDictionary[js.Any] {
-  var accessibility: js.UndefOr[AnonRowHeader] = js.undefined
-  var as: js.UndefOr[String] = js.undefined
-  var columns: js.UndefOr[js.Array[AnonField[K, D]]] = js.undefined
-  var columnsDefault: js.UndefOr[AnonFooterClassName[K, D]] = js.undefined
-  var currentRow: js.UndefOr[CurrentRow[K]] = js.undefined
-  var data: js.UndefOr[DataProvider[K, D]] = js.undefined
-  var display: js.UndefOr[list | grid] = js.undefined
-  var dnd: js.UndefOr[AnonDropReorder[K, D]] = js.undefined
-  var editMode: js.UndefOr[none | rowEdit] = js.undefined
-  var firstSelectedRow: js.UndefOr[js.Object] = js.undefined
-  var horizontalGridVisible: js.UndefOr[auto | enabled | disabled] = js.undefined
+  var accessibility: js.UndefOr[AnonRowHeader] = js.native
+  var as: js.UndefOr[String] = js.native
+  var columns: js.UndefOr[js.Array[AnonField[K, D]]] = js.native
+  var columnsDefault: js.UndefOr[AnonFooterClassName[K, D]] = js.native
+  var currentRow: js.UndefOr[CurrentRow[K]] = js.native
+  var data: js.UndefOr[DataProvider[K, D]] = js.native
+  var display: js.UndefOr[list | grid] = js.native
+  var dnd: js.UndefOr[AnonDropReorder[K, D]] = js.native
+  var editMode: js.UndefOr[none | rowEdit] = js.native
+  var firstSelectedRow: js.UndefOr[js.Object] = js.native
+  var horizontalGridVisible: js.UndefOr[auto | enabled | disabled] = js.native
   var rowRenderer: js.UndefOr[
     js.Function1[/* context */ RowRendererContext[K, D], String | HTMLElement | Unit]
-  ] = js.undefined
-  var scrollPolicy: js.UndefOr[auto | loadMoreOnScroll] = js.undefined
-  var scrollPolicyOptions: js.UndefOr[AnonMaxCount] = js.undefined
-  var scrollPosition: js.UndefOr[AnonColumnKey] = js.undefined
+  ] = js.native
+  var scrollPolicy: js.UndefOr[auto | loadMoreOnScroll] = js.native
+  var scrollPolicyOptions: js.UndefOr[AnonMaxCount] = js.native
+  var scrollPosition: js.UndefOr[AnonColumnKey] = js.native
   var selection: js.UndefOr[
     js.Array[
       (RowSelectionStart[K] with RowSelectionEnd[K]) | (ColumnSelectionStart[K] with ColumnSelectionEnd[K])
     ]
-  ] = js.undefined
-  var selectionMode: js.UndefOr[Anon19] = js.undefined
-  var selectionRequired: js.UndefOr[Boolean] = js.undefined
-  var translations: js.UndefOr[AnonLabelAccSelectionAffordanceBottom] = js.undefined
-  var verticalGridVisible: js.UndefOr[auto | enabled | disabled] = js.undefined
+  ] = js.native
+  var selectionMode: js.UndefOr[Anon19] = js.native
+  var selectionRequired: js.UndefOr[Boolean] = js.native
+  var translations: js.UndefOr[AnonLabelAccSelectionAffordanceBottom] = js.native
+  var verticalGridVisible: js.UndefOr[auto | enabled | disabled] = js.native
 }
 
 object ojTableSettablePropertiesLenient {
   @scala.inline
-  def apply[K, D](
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    accessibility: AnonRowHeader = null,
-    as: String = null,
-    columns: js.Array[AnonField[K, D]] = null,
-    columnsDefault: AnonFooterClassName[K, D] = null,
-    currentRow: CurrentRow[K] = null,
-    data: DataProvider[K, D] = null,
-    display: list | grid = null,
-    dnd: AnonDropReorder[K, D] = null,
-    editMode: none | rowEdit = null,
-    firstSelectedRow: js.Object = null,
-    horizontalGridVisible: auto | enabled | disabled = null,
-    rowRenderer: /* context */ RowRendererContext[K, D] => String | HTMLElement | Unit = null,
-    scrollPolicy: auto | loadMoreOnScroll = null,
-    scrollPolicyOptions: AnonMaxCount = null,
-    scrollPosition: AnonColumnKey = null,
-    selection: js.Array[
-      (RowSelectionStart[K] with RowSelectionEnd[K]) | (ColumnSelectionStart[K] with ColumnSelectionEnd[K])
-    ] = null,
-    selectionMode: Anon19 = null,
-    selectionRequired: js.UndefOr[Boolean] = js.undefined,
-    translations: AnonLabelAccSelectionAffordanceBottom = null,
-    verticalGridVisible: auto | enabled | disabled = null
-  ): ojTableSettablePropertiesLenient[K, D] = {
+  def apply[K, D](): ojTableSettablePropertiesLenient[K, D] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (accessibility != null) __obj.updateDynamic("accessibility")(accessibility.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (columnsDefault != null) __obj.updateDynamic("columnsDefault")(columnsDefault.asInstanceOf[js.Any])
-    if (currentRow != null) __obj.updateDynamic("currentRow")(currentRow.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
-    if (dnd != null) __obj.updateDynamic("dnd")(dnd.asInstanceOf[js.Any])
-    if (editMode != null) __obj.updateDynamic("editMode")(editMode.asInstanceOf[js.Any])
-    if (firstSelectedRow != null) __obj.updateDynamic("firstSelectedRow")(firstSelectedRow.asInstanceOf[js.Any])
-    if (horizontalGridVisible != null) __obj.updateDynamic("horizontalGridVisible")(horizontalGridVisible.asInstanceOf[js.Any])
-    if (rowRenderer != null) __obj.updateDynamic("rowRenderer")(js.Any.fromFunction1(rowRenderer))
-    if (scrollPolicy != null) __obj.updateDynamic("scrollPolicy")(scrollPolicy.asInstanceOf[js.Any])
-    if (scrollPolicyOptions != null) __obj.updateDynamic("scrollPolicyOptions")(scrollPolicyOptions.asInstanceOf[js.Any])
-    if (scrollPosition != null) __obj.updateDynamic("scrollPosition")(scrollPosition.asInstanceOf[js.Any])
-    if (selection != null) __obj.updateDynamic("selection")(selection.asInstanceOf[js.Any])
-    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectionRequired)) __obj.updateDynamic("selectionRequired")(selectionRequired.asInstanceOf[js.Any])
-    if (translations != null) __obj.updateDynamic("translations")(translations.asInstanceOf[js.Any])
-    if (verticalGridVisible != null) __obj.updateDynamic("verticalGridVisible")(verticalGridVisible.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojTableSettablePropertiesLenient[K, D]]
   }
+  @scala.inline
+  implicit class ojTableSettablePropertiesLenientOps[Self[k, d] <: ojTableSettablePropertiesLenient[k, d], K, D] (val x: Self[K, D]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[K, D] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[K, D]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[K, D]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[K, D]) with Other]
+    @scala.inline
+    def withAccessibility(value: AnonRowHeader): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibility: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAs(value: String): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAs: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumns(value: js.Array[AnonField[K, D]]): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnsDefault(value: AnonFooterClassName[K, D]): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnsDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnsDefault: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnsDefault")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentRow(value: CurrentRow[K]): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentRow: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: DataProvider[K, D]): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplay(value: list | grid): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplay: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDnd(value: AnonDropReorder[K, D]): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDnd: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditMode(value: none | rowEdit): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEditMode: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstSelectedRow(value: js.Object): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstSelectedRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstSelectedRow: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstSelectedRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHorizontalGridVisible(value: auto | enabled | disabled): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalGridVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizontalGridVisible: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalGridVisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowRenderer(value: /* context */ RowRendererContext[K, D] => String | HTMLElement | Unit): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRowRenderer: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowRenderer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollPolicy(value: auto | loadMoreOnScroll): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollPolicy: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollPolicyOptions(value: AnonMaxCount): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPolicyOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollPolicyOptions: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPolicyOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollPosition(value: AnonColumnKey): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollPosition: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelection(
+      value: js.Array[
+          (RowSelectionStart[K] with RowSelectionEnd[K]) | (ColumnSelectionStart[K] with ColumnSelectionEnd[K])
+        ]
+    ): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelection: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionMode(value: Anon19): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectionMode: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionRequired(value: Boolean): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectionRequired: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionRequired")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranslations(value: AnonLabelAccSelectionAffordanceBottom): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranslations: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalGridVisible(value: auto | enabled | disabled): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalGridVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalGridVisible: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalGridVisible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

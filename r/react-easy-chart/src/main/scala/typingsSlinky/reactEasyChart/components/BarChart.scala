@@ -1,10 +1,8 @@
 package typingsSlinky.reactEasyChart.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactEasyChart.AnonBottom
 import typingsSlinky.reactEasyChart.AnonX
 import typingsSlinky.reactEasyChart.mod.BarChartProps
@@ -17,67 +15,68 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BarChart
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactEasyChart.mod.BarChart] {
+object BarChart {
   @JSImport("react-easy-chart", "BarChart")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    data: js.Array[BarData],
-    axes: js.UndefOr[Boolean] = js.undefined,
-    axisLabels: AnonX = null,
-    barWidth: Int | Double = null,
-    clickHandler: (/* data */ BarData, /* mouseEvent */ MouseEvent) => _ = null,
-    colorBars: js.UndefOr[Boolean] = js.undefined,
-    datePattern: String = null,
-    grid: js.UndefOr[Boolean] = js.undefined,
-    height: Int | Double = null,
-    interpolate: String = null,
-    lineData: js.Array[LineData] = null,
-    margin: AnonBottom = null,
-    mouseMoveHandler: (/* data */ BarData, /* mouseEvent */ MouseEvent) => _ = null,
-    mouseOutHandler: (/* data */ BarData, /* mouseEvent */ MouseEvent) => _ = null,
-    mouseOverHandler: (/* data */ BarData, /* mouseEvent */ MouseEvent) => _ = null,
-    tickTimeDisplayFormat: String = null,
-    width: Int | Double = null,
-    xDomainRange: js.Array[js.Date | Double | String] = null,
-    xTickNumber: Int | Double = null,
-    xType: time | text | linear = null,
-    y2Type: time | text | linear = null,
-    yAxisOrientRight: js.UndefOr[Boolean] = js.undefined,
-    yDomainRange: js.Array[Double] = null,
-    yTickNumber: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactEasyChart.mod.BarChart] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    if (!js.isUndefined(axes)) __obj.updateDynamic("axes")(axes.asInstanceOf[js.Any])
-    if (axisLabels != null) __obj.updateDynamic("axisLabels")(axisLabels.asInstanceOf[js.Any])
-    if (barWidth != null) __obj.updateDynamic("barWidth")(barWidth.asInstanceOf[js.Any])
-    if (clickHandler != null) __obj.updateDynamic("clickHandler")(js.Any.fromFunction2(clickHandler))
-    if (!js.isUndefined(colorBars)) __obj.updateDynamic("colorBars")(colorBars.asInstanceOf[js.Any])
-    if (datePattern != null) __obj.updateDynamic("datePattern")(datePattern.asInstanceOf[js.Any])
-    if (!js.isUndefined(grid)) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (interpolate != null) __obj.updateDynamic("interpolate")(interpolate.asInstanceOf[js.Any])
-    if (lineData != null) __obj.updateDynamic("lineData")(lineData.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (mouseMoveHandler != null) __obj.updateDynamic("mouseMoveHandler")(js.Any.fromFunction2(mouseMoveHandler))
-    if (mouseOutHandler != null) __obj.updateDynamic("mouseOutHandler")(js.Any.fromFunction2(mouseOutHandler))
-    if (mouseOverHandler != null) __obj.updateDynamic("mouseOverHandler")(js.Any.fromFunction2(mouseOverHandler))
-    if (tickTimeDisplayFormat != null) __obj.updateDynamic("tickTimeDisplayFormat")(tickTimeDisplayFormat.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (xDomainRange != null) __obj.updateDynamic("xDomainRange")(xDomainRange.asInstanceOf[js.Any])
-    if (xTickNumber != null) __obj.updateDynamic("xTickNumber")(xTickNumber.asInstanceOf[js.Any])
-    if (xType != null) __obj.updateDynamic("xType")(xType.asInstanceOf[js.Any])
-    if (y2Type != null) __obj.updateDynamic("y2Type")(y2Type.asInstanceOf[js.Any])
-    if (!js.isUndefined(yAxisOrientRight)) __obj.updateDynamic("yAxisOrientRight")(yAxisOrientRight.asInstanceOf[js.Any])
-    if (yDomainRange != null) __obj.updateDynamic("yDomainRange")(yDomainRange.asInstanceOf[js.Any])
-    if (yTickNumber != null) __obj.updateDynamic("yTickNumber")(yTickNumber.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactEasyChart.mod.BarChart] {
+    @scala.inline
+    def axes(value: Boolean): this.type = set("axes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisLabels(value: AnonX): this.type = set("axisLabels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def barWidth(value: Double): this.type = set("barWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clickHandler(value: (/* data */ BarData, /* mouseEvent */ MouseEvent) => _): this.type = set("clickHandler", js.Any.fromFunction2(value))
+    @scala.inline
+    def colorBars(value: Boolean): this.type = set("colorBars", value.asInstanceOf[js.Any])
+    @scala.inline
+    def datePattern(value: String): this.type = set("datePattern", value.asInstanceOf[js.Any])
+    @scala.inline
+    def grid(value: Boolean): this.type = set("grid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def interpolate(value: String): this.type = set("interpolate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lineData(value: js.Array[LineData]): this.type = set("lineData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: AnonBottom): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mouseMoveHandler(value: (/* data */ BarData, /* mouseEvent */ MouseEvent) => _): this.type = set("mouseMoveHandler", js.Any.fromFunction2(value))
+    @scala.inline
+    def mouseOutHandler(value: (/* data */ BarData, /* mouseEvent */ MouseEvent) => _): this.type = set("mouseOutHandler", js.Any.fromFunction2(value))
+    @scala.inline
+    def mouseOverHandler(value: (/* data */ BarData, /* mouseEvent */ MouseEvent) => _): this.type = set("mouseOverHandler", js.Any.fromFunction2(value))
+    @scala.inline
+    def tickTimeDisplayFormat(value: String): this.type = set("tickTimeDisplayFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xDomainRange(value: js.Array[js.Date | Double | String]): this.type = set("xDomainRange", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xTickNumber(value: Double): this.type = set("xTickNumber", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xType(value: time | text | linear): this.type = set("xType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def y2Type(value: time | text | linear): this.type = set("y2Type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yAxisOrientRight(value: Boolean): this.type = set("yAxisOrientRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yDomainRange(value: js.Array[Double]): this.type = set("yDomainRange", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yTickNumber(value: Double): this.type = set("yTickNumber", value.asInstanceOf[js.Any])
   }
-  type Props = BarChartProps
+  
+  def withProps(p: BarChartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(data: js.Array[BarData]): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[BarChartProps]))
+  }
 }
 

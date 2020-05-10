@@ -15,16 +15,14 @@ trait EnvVars extends js.Object
 
 object EnvVars {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dev: typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.dev = "dev".asInstanceOf[typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.dev]
   @scala.inline
-  def dev: typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.dev = this.cast("dev")
+  def development: typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.development = "development".asInstanceOf[typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.development]
   @scala.inline
-  def development: typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.development = this.cast("development")
+  def prod: typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.prod = "prod".asInstanceOf[typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.prod]
   @scala.inline
-  def prod: typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.prod = this.cast("prod")
+  def production: typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.production = "production".asInstanceOf[typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.production]
   @scala.inline
-  def production: typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.production = this.cast("production")
-  @scala.inline
-  def test: typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.test = this.cast("test")
+  def test: typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.test = "test".asInstanceOf[typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.test]
 }
 

@@ -16,18 +16,16 @@ trait KeyboardEventName extends js.Object
 
 object KeyboardEventName {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def keyboardDidChangeFrame: typingsSlinky.reactNative.reactNativeStrings.keyboardDidChangeFrame = "keyboardDidChangeFrame".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.keyboardDidChangeFrame]
   @scala.inline
-  def keyboardDidChangeFrame: typingsSlinky.reactNative.reactNativeStrings.keyboardDidChangeFrame = this.cast("keyboardDidChangeFrame")
+  def keyboardDidHide: typingsSlinky.reactNative.reactNativeStrings.keyboardDidHide = "keyboardDidHide".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.keyboardDidHide]
   @scala.inline
-  def keyboardDidHide: typingsSlinky.reactNative.reactNativeStrings.keyboardDidHide = this.cast("keyboardDidHide")
+  def keyboardDidShow: typingsSlinky.reactNative.reactNativeStrings.keyboardDidShow = "keyboardDidShow".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.keyboardDidShow]
   @scala.inline
-  def keyboardDidShow: typingsSlinky.reactNative.reactNativeStrings.keyboardDidShow = this.cast("keyboardDidShow")
+  def keyboardWillChangeFrame: typingsSlinky.reactNative.reactNativeStrings.keyboardWillChangeFrame = "keyboardWillChangeFrame".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.keyboardWillChangeFrame]
   @scala.inline
-  def keyboardWillChangeFrame: typingsSlinky.reactNative.reactNativeStrings.keyboardWillChangeFrame = this.cast("keyboardWillChangeFrame")
+  def keyboardWillHide: typingsSlinky.reactNative.reactNativeStrings.keyboardWillHide = "keyboardWillHide".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.keyboardWillHide]
   @scala.inline
-  def keyboardWillHide: typingsSlinky.reactNative.reactNativeStrings.keyboardWillHide = this.cast("keyboardWillHide")
-  @scala.inline
-  def keyboardWillShow: typingsSlinky.reactNative.reactNativeStrings.keyboardWillShow = this.cast("keyboardWillShow")
+  def keyboardWillShow: typingsSlinky.reactNative.reactNativeStrings.keyboardWillShow = "keyboardWillShow".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.keyboardWillShow]
 }
 

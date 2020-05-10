@@ -8,39 +8,127 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<plotly.js.plotly.js.Gauge> */
+@js.native
 trait PartialGaugeAxis extends js.Object {
-  var axis: js.UndefOr[PartialAxisAutorange] = js.undefined
-  var bar: js.UndefOr[PartialGaugeBarColor] = js.undefined
-  var bgcolor: js.UndefOr[Color] = js.undefined
-  var bordercolor: js.UndefOr[Color] = js.undefined
-  var borderwidth: js.UndefOr[Double] = js.undefined
-  var shape: js.UndefOr[angular | bullet] = js.undefined
-  var steps: js.UndefOr[js.Array[AnonColor]] = js.undefined
-  var threshold: js.UndefOr[PartialThresholdLine] = js.undefined
+  var axis: js.UndefOr[PartialAxisCalendar] = js.native
+  var bar: js.UndefOr[PartialGaugeBarColor] = js.native
+  var bgcolor: js.UndefOr[Color] = js.native
+  var bordercolor: js.UndefOr[Color] = js.native
+  var borderwidth: js.UndefOr[Double] = js.native
+  var shape: js.UndefOr[angular | bullet] = js.native
+  var steps: js.UndefOr[js.Array[AnonColor]] = js.native
+  var threshold: js.UndefOr[PartialThresholdLine] = js.native
 }
 
 object PartialGaugeAxis {
   @scala.inline
-  def apply(
-    axis: PartialAxisAutorange = null,
-    bar: PartialGaugeBarColor = null,
-    bgcolor: Color = null,
-    bordercolor: Color = null,
-    borderwidth: Int | Double = null,
-    shape: angular | bullet = null,
-    steps: js.Array[AnonColor] = null,
-    threshold: PartialThresholdLine = null
-  ): PartialGaugeAxis = {
+  def apply(): PartialGaugeAxis = {
     val __obj = js.Dynamic.literal()
-    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
-    if (bar != null) __obj.updateDynamic("bar")(bar.asInstanceOf[js.Any])
-    if (bgcolor != null) __obj.updateDynamic("bgcolor")(bgcolor.asInstanceOf[js.Any])
-    if (bordercolor != null) __obj.updateDynamic("bordercolor")(bordercolor.asInstanceOf[js.Any])
-    if (borderwidth != null) __obj.updateDynamic("borderwidth")(borderwidth.asInstanceOf[js.Any])
-    if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
-    if (steps != null) __obj.updateDynamic("steps")(steps.asInstanceOf[js.Any])
-    if (threshold != null) __obj.updateDynamic("threshold")(threshold.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialGaugeAxis]
   }
+  @scala.inline
+  implicit class PartialGaugeAxisOps[Self <: PartialGaugeAxis] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAxis(value: PartialAxisCalendar): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBar(value: PartialGaugeBarColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBgcolor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bgcolor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBgcolor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bgcolor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBordercolor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bordercolor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBordercolor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bordercolor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderwidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderwidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderwidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderwidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShape(value: angular | bullet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSteps(value: js.Array[AnonColor]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSteps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreshold(value: PartialThresholdLine): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,12 +26,59 @@ trait DeleteHsmRequest extends js.Object {
 
 object DeleteHsmRequest {
   @scala.inline
-  def apply(ClusterId: ClusterId, EniId: EniId = null, EniIp: IpAddress = null, HsmId: HsmId = null): DeleteHsmRequest = {
+  def apply(ClusterId: ClusterId): DeleteHsmRequest = {
     val __obj = js.Dynamic.literal(ClusterId = ClusterId.asInstanceOf[js.Any])
-    if (EniId != null) __obj.updateDynamic("EniId")(EniId.asInstanceOf[js.Any])
-    if (EniIp != null) __obj.updateDynamic("EniIp")(EniIp.asInstanceOf[js.Any])
-    if (HsmId != null) __obj.updateDynamic("HsmId")(HsmId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteHsmRequest]
   }
+  @scala.inline
+  implicit class DeleteHsmRequestOps[Self <: DeleteHsmRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterId(value: ClusterId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEniId(value: EniId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EniId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEniId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EniId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEniIp(value: IpAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EniIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEniIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EniIp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHsmId(value: HsmId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHsmId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

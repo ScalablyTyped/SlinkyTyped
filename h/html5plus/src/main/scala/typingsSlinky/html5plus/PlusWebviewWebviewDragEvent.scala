@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
   */
+@js.native
 trait PlusWebviewWebviewDragEvent extends js.Object {
   /**
     * 手势类型
@@ -20,7 +21,7 @@ trait PlusWebviewWebviewDragEvent extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var direction: js.UndefOr[String] = js.undefined
+  var direction: js.UndefOr[String] = js.native
   /**
     * 当前操作窗口标识
     * 当type值为"start"/"move"时，保存当前操作窗口（或View控件）的标识；
@@ -28,14 +29,14 @@ trait PlusWebviewWebviewDragEvent extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * 关联窗口标识
     * 滑动操作关联窗口（或View控件）的标识。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var otherId: js.UndefOr[String] = js.undefined
+  var otherId: js.UndefOr[String] = js.native
   /**
     * 滑动进度
     * 滑动进度位置信息，取值范围为0-100，如20表示滑动了总距离的20%：
@@ -45,7 +46,7 @@ trait PlusWebviewWebviewDragEvent extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var progress: js.UndefOr[Double] = js.undefined
+  var progress: js.UndefOr[Double] = js.native
   /**
     * 窗口滑动结果
     * 可取值：
@@ -55,14 +56,14 @@ trait PlusWebviewWebviewDragEvent extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var result: js.UndefOr[String] = js.undefined
+  var result: js.UndefOr[String] = js.native
   /**
     * 主窗口标识
     * 滑动操作主窗口（或View控件）的标识。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var targetId: js.UndefOr[String] = js.undefined
+  var targetId: js.UndefOr[String] = js.native
   /**
     * 窗口滑动类型
     * 可取值：
@@ -72,29 +73,106 @@ trait PlusWebviewWebviewDragEvent extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
 }
 
 object PlusWebviewWebviewDragEvent {
   @scala.inline
-  def apply(
-    direction: String = null,
-    id: String = null,
-    otherId: String = null,
-    progress: Int | Double = null,
-    result: String = null,
-    targetId: String = null,
-    `type`: String = null
-  ): PlusWebviewWebviewDragEvent = {
+  def apply(): PlusWebviewWebviewDragEvent = {
     val __obj = js.Dynamic.literal()
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (otherId != null) __obj.updateDynamic("otherId")(otherId.asInstanceOf[js.Any])
-    if (progress != null) __obj.updateDynamic("progress")(progress.asInstanceOf[js.Any])
-    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
-    if (targetId != null) __obj.updateDynamic("targetId")(targetId.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusWebviewWebviewDragEvent]
   }
+  @scala.inline
+  implicit class PlusWebviewWebviewDragEventOps[Self <: PlusWebviewWebviewDragEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOtherId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("otherId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOtherId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("otherId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgress(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResult(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

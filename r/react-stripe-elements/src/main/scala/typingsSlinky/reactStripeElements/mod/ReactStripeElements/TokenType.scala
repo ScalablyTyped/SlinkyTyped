@@ -18,20 +18,18 @@ trait TokenType extends js.Object
 
 object TokenType {
   @scala.inline
-  def card: typingsSlinky.reactStripeElements.reactStripeElementsStrings.card = this.cast("card")
+  def card: typingsSlinky.reactStripeElements.reactStripeElementsStrings.card = "card".asInstanceOf[typingsSlinky.reactStripeElements.reactStripeElementsStrings.card]
   @scala.inline
-  def cardCvc: typingsSlinky.reactStripeElements.reactStripeElementsStrings.cardCvc = this.cast("cardCvc")
+  def cardCvc: typingsSlinky.reactStripeElements.reactStripeElementsStrings.cardCvc = "cardCvc".asInstanceOf[typingsSlinky.reactStripeElements.reactStripeElementsStrings.cardCvc]
   @scala.inline
-  def cardExpiry: typingsSlinky.reactStripeElements.reactStripeElementsStrings.cardExpiry = this.cast("cardExpiry")
+  def cardExpiry: typingsSlinky.reactStripeElements.reactStripeElementsStrings.cardExpiry = "cardExpiry".asInstanceOf[typingsSlinky.reactStripeElements.reactStripeElementsStrings.cardExpiry]
   @scala.inline
-  def cardNumber: typingsSlinky.reactStripeElements.reactStripeElementsStrings.cardNumber = this.cast("cardNumber")
+  def cardNumber: typingsSlinky.reactStripeElements.reactStripeElementsStrings.cardNumber = "cardNumber".asInstanceOf[typingsSlinky.reactStripeElements.reactStripeElementsStrings.cardNumber]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def iban: typingsSlinky.reactStripeElements.reactStripeElementsStrings.iban = "iban".asInstanceOf[typingsSlinky.reactStripeElements.reactStripeElementsStrings.iban]
   @scala.inline
-  def iban: typingsSlinky.reactStripeElements.reactStripeElementsStrings.iban = this.cast("iban")
+  def idealBank: typingsSlinky.reactStripeElements.reactStripeElementsStrings.idealBank = "idealBank".asInstanceOf[typingsSlinky.reactStripeElements.reactStripeElementsStrings.idealBank]
   @scala.inline
-  def idealBank: typingsSlinky.reactStripeElements.reactStripeElementsStrings.idealBank = this.cast("idealBank")
-  @scala.inline
-  def paymentRequestButton: typingsSlinky.reactStripeElements.reactStripeElementsStrings.paymentRequestButton = this.cast("paymentRequestButton")
+  def paymentRequestButton: typingsSlinky.reactStripeElements.reactStripeElementsStrings.paymentRequestButton = "paymentRequestButton".asInstanceOf[typingsSlinky.reactStripeElements.reactStripeElementsStrings.paymentRequestButton]
 }
 

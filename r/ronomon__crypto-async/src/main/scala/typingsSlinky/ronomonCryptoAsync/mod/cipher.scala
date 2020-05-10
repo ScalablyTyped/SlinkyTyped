@@ -1,7 +1,6 @@
 package typingsSlinky.ronomonCryptoAsync.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +14,7 @@ object cipher extends js.Object {
     key: Buffer,
     iv: Buffer,
     plaintext: Buffer,
-    cb: js.Function2[/* error */ js.UndefOr[Error], /* ciphertext */ Buffer, Unit]
+    cb: js.Function2[/* error */ js.UndefOr[js.Error], /* ciphertext */ Buffer, Unit]
   ): Unit = js.native
   def apply(
     algorithm: String,

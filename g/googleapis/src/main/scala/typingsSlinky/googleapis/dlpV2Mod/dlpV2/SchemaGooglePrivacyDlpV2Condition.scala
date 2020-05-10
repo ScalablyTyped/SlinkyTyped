@@ -36,16 +36,53 @@ trait SchemaGooglePrivacyDlpV2Condition extends js.Object {
 
 object SchemaGooglePrivacyDlpV2Condition {
   @scala.inline
-  def apply(
-    field: SchemaGooglePrivacyDlpV2FieldId = null,
-    operator: String = null,
-    value: SchemaGooglePrivacyDlpV2Value = null
-  ): SchemaGooglePrivacyDlpV2Condition = {
+  def apply(): SchemaGooglePrivacyDlpV2Condition = {
     val __obj = js.Dynamic.literal()
-    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
-    if (operator != null) __obj.updateDynamic("operator")(operator.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2Condition]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2ConditionOps[Self <: SchemaGooglePrivacyDlpV2Condition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withField(value: SchemaGooglePrivacyDlpV2FieldId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperator(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: SchemaGooglePrivacyDlpV2Value): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,9 +1,9 @@
 package typingsSlinky.chocolatechipjs
 
 import org.scalajs.dom.experimental.Response
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.HTMLFormElement
 import typingsSlinky.std.Document_
-import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.HTMLFormElement
 import typingsSlinky.std.JSON
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -371,7 +371,7 @@ trait ChocolateChipStatic extends js.Object {
     * @param result The result of a method to test if it can be returned in an array.
     * @return An array holding the results of a method, otherwise an empty array.
     */
-  def returnResult(result: js.Array[org.scalajs.dom.raw.HTMLElement]): js.Array[_] = js.native
+  def returnResult(result: js.Array[HTMLElement]): js.Array[_] = js.native
   /**
     * This method takes a referenced form and serializes its element names and values, which it returns as a string. This is required if you want to send form data.
     *

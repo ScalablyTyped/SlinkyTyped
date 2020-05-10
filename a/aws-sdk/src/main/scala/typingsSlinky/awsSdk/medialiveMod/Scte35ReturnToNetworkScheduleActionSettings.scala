@@ -16,8 +16,21 @@ object Scte35ReturnToNetworkScheduleActionSettings {
   @scala.inline
   def apply(SpliceEventId: longMin0Max4294967295): Scte35ReturnToNetworkScheduleActionSettings = {
     val __obj = js.Dynamic.literal(SpliceEventId = SpliceEventId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Scte35ReturnToNetworkScheduleActionSettings]
   }
+  @scala.inline
+  implicit class Scte35ReturnToNetworkScheduleActionSettingsOps[Self <: Scte35ReturnToNetworkScheduleActionSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSpliceEventId(value: longMin0Max4294967295): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpliceEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

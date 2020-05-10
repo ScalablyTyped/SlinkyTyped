@@ -34,22 +34,89 @@ trait OutgoingCertificate extends js.Object {
 
 object OutgoingCertificate {
   @scala.inline
-  def apply(
-    certificateArn: CertificateArn = null,
-    certificateId: CertificateId = null,
-    creationDate: js.Date = null,
-    transferDate: js.Date = null,
-    transferMessage: Message = null,
-    transferredTo: AwsAccountId = null
-  ): OutgoingCertificate = {
+  def apply(): OutgoingCertificate = {
     val __obj = js.Dynamic.literal()
-    if (certificateArn != null) __obj.updateDynamic("certificateArn")(certificateArn.asInstanceOf[js.Any])
-    if (certificateId != null) __obj.updateDynamic("certificateId")(certificateId.asInstanceOf[js.Any])
-    if (creationDate != null) __obj.updateDynamic("creationDate")(creationDate.asInstanceOf[js.Any])
-    if (transferDate != null) __obj.updateDynamic("transferDate")(transferDate.asInstanceOf[js.Any])
-    if (transferMessage != null) __obj.updateDynamic("transferMessage")(transferMessage.asInstanceOf[js.Any])
-    if (transferredTo != null) __obj.updateDynamic("transferredTo")(transferredTo.asInstanceOf[js.Any])
     __obj.asInstanceOf[OutgoingCertificate]
   }
+  @scala.inline
+  implicit class OutgoingCertificateOps[Self <: OutgoingCertificate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateArn(value: CertificateArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCertificateId(value: CertificateId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransferDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransferDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransferMessage(value: Message): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransferMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransferredTo(value: AwsAccountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferredTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransferredTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferredTo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

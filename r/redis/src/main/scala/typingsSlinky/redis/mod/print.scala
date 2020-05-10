@@ -1,6 +1,5 @@
 package typingsSlinky.redis.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object print extends js.Object {
   def apply(err: Null, reply: js.Any): Unit = js.native
-  def apply(err: Error, reply: js.Any): Unit = js.native
+  def apply(err: js.Error, reply: js.Any): Unit = js.native
 }
 

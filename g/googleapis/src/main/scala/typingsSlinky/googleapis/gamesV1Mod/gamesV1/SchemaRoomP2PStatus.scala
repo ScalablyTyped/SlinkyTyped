@@ -52,24 +52,101 @@ trait SchemaRoomP2PStatus extends js.Object {
 
 object SchemaRoomP2PStatus {
   @scala.inline
-  def apply(
-    connectionSetupLatencyMillis: Int | Double = null,
-    error: String = null,
-    error_reason: String = null,
-    kind: String = null,
-    participantId: String = null,
-    status: String = null,
-    unreliableRoundtripLatencyMillis: Int | Double = null
-  ): SchemaRoomP2PStatus = {
+  def apply(): SchemaRoomP2PStatus = {
     val __obj = js.Dynamic.literal()
-    if (connectionSetupLatencyMillis != null) __obj.updateDynamic("connectionSetupLatencyMillis")(connectionSetupLatencyMillis.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (error_reason != null) __obj.updateDynamic("error_reason")(error_reason.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (participantId != null) __obj.updateDynamic("participantId")(participantId.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (unreliableRoundtripLatencyMillis != null) __obj.updateDynamic("unreliableRoundtripLatencyMillis")(unreliableRoundtripLatencyMillis.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRoomP2PStatus]
   }
+  @scala.inline
+  implicit class SchemaRoomP2PStatusOps[Self <: SchemaRoomP2PStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnectionSetupLatencyMillis(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionSetupLatencyMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionSetupLatencyMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionSetupLatencyMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError_reason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error_reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError_reason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error_reason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParticipantId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("participantId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParticipantId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("participantId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnreliableRoundtripLatencyMillis(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unreliableRoundtripLatencyMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnreliableRoundtripLatencyMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unreliableRoundtripLatencyMillis")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

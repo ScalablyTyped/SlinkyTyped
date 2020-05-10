@@ -13,12 +13,10 @@ trait CountType extends js.Object
 
 object CountType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def characters_excluding_spaces: typingsSlinky.wordpressWordcount.wordpressWordcountStrings.characters_excluding_spaces = "characters_excluding_spaces".asInstanceOf[typingsSlinky.wordpressWordcount.wordpressWordcountStrings.characters_excluding_spaces]
   @scala.inline
-  def characters_excluding_spaces: typingsSlinky.wordpressWordcount.wordpressWordcountStrings.characters_excluding_spaces = this.cast("characters_excluding_spaces")
+  def characters_including_spaces: typingsSlinky.wordpressWordcount.wordpressWordcountStrings.characters_including_spaces = "characters_including_spaces".asInstanceOf[typingsSlinky.wordpressWordcount.wordpressWordcountStrings.characters_including_spaces]
   @scala.inline
-  def characters_including_spaces: typingsSlinky.wordpressWordcount.wordpressWordcountStrings.characters_including_spaces = this.cast("characters_including_spaces")
-  @scala.inline
-  def words: typingsSlinky.wordpressWordcount.wordpressWordcountStrings.words = this.cast("words")
+  def words: typingsSlinky.wordpressWordcount.wordpressWordcountStrings.words = "words".asInstanceOf[typingsSlinky.wordpressWordcount.wordpressWordcountStrings.words]
 }
 

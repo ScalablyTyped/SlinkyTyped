@@ -1,36 +1,54 @@
 package typingsSlinky.antdMobileRn.activityIndicatorIndexNativeMod
 
 import typingsSlinky.antdMobileRn.activityIndicatorPropsTypeMod.ActivityIndicatorPropTypes
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.large
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.small
 import typingsSlinky.antdMobileRn.styleIndexDotnativeMod.IActivityIndicatorStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ActivityIndicatorNativeProps extends ActivityIndicatorPropTypes {
-  var color: js.UndefOr[String] = js.undefined
-  var styles: js.UndefOr[IActivityIndicatorStyle] = js.undefined
+  var color: js.UndefOr[String] = js.native
+  var styles: js.UndefOr[IActivityIndicatorStyle] = js.native
 }
 
 object ActivityIndicatorNativeProps {
   @scala.inline
-  def apply(
-    animating: js.UndefOr[Boolean] = js.undefined,
-    color: String = null,
-    size: large | small = null,
-    styles: IActivityIndicatorStyle = null,
-    text: String = null,
-    toast: js.UndefOr[Boolean] = js.undefined
-  ): ActivityIndicatorNativeProps = {
+  def apply(): ActivityIndicatorNativeProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animating)) __obj.updateDynamic("animating")(animating.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (!js.isUndefined(toast)) __obj.updateDynamic("toast")(toast.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActivityIndicatorNativeProps]
   }
+  @scala.inline
+  implicit class ActivityIndicatorNativePropsOps[Self <: ActivityIndicatorNativeProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyles(value: IActivityIndicatorStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,8 +1,13 @@
 package typingsSlinky.cypress.cypressMod.Cypress
 
+import org.scalajs.dom.raw.AnimationEvent
 import org.scalajs.dom.raw.BeforeUnloadEvent
+import org.scalajs.dom.raw.ClipboardEvent
 import org.scalajs.dom.raw.DOMStringList
+import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.ErrorEvent
+import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.HTMLAnchorElement
 import org.scalajs.dom.raw.HTMLAreaElement
 import org.scalajs.dom.raw.HTMLAudioElement
@@ -43,6 +48,7 @@ import org.scalajs.dom.raw.HTMLPreElement
 import org.scalajs.dom.raw.HTMLProgressElement
 import org.scalajs.dom.raw.HTMLQuoteElement
 import org.scalajs.dom.raw.HTMLScriptElement
+import org.scalajs.dom.raw.HTMLSelectElement
 import org.scalajs.dom.raw.HTMLSourceElement
 import org.scalajs.dom.raw.HTMLSpanElement
 import org.scalajs.dom.raw.HTMLStyleElement
@@ -56,8 +62,16 @@ import org.scalajs.dom.raw.HTMLTitleElement
 import org.scalajs.dom.raw.HTMLTrackElement
 import org.scalajs.dom.raw.HTMLUListElement
 import org.scalajs.dom.raw.HTMLVideoElement
+import org.scalajs.dom.raw.KeyboardEvent
+import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.Node
+import org.scalajs.dom.raw.PointerEvent
+import org.scalajs.dom.raw.ProgressEvent
 import org.scalajs.dom.raw.Storage
+import org.scalajs.dom.raw.TouchEvent
+import org.scalajs.dom.raw.TransitionEvent
+import org.scalajs.dom.raw.UIEvent
+import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.cypress.JQueryStatic
 import typingsSlinky.cypress.JQuery_
 import typingsSlinky.cypress.JQuery_.PlainObject
@@ -89,6 +103,7 @@ import typingsSlinky.cypress.PartialVisitOptions
 import typingsSlinky.cypress.PartialVisitOptionsurlstr
 import typingsSlinky.cypress.PartialWriteFileOptions
 import typingsSlinky.cypress.cypressBooleans.`false`
+import typingsSlinky.cypress.cypressStrings.Date
 import typingsSlinky.cypress.cypressStrings.`match`
 import typingsSlinky.cypress.cypressStrings.`throw`
 import typingsSlinky.cypress.cypressStrings.`var`
@@ -517,18 +532,10 @@ import typingsSlinky.cypress.cypressStrings.windowColonload
 import typingsSlinky.cypress.cypressStrings.windowColonunload
 import typingsSlinky.cypress.sinonMod.SinonSpy
 import typingsSlinky.cypress.sinonMod.SinonStub
-import typingsSlinky.std.AnimationEvent
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.ClipboardEvent
-import typingsSlinky.std.Date
 import typingsSlinky.std.Document_
-import typingsSlinky.std.DragEvent
-import typingsSlinky.std.Error
 import typingsSlinky.std.ErrorConstructor
-import typingsSlinky.std.ErrorEvent
-import typingsSlinky.std.EventTarget
 import typingsSlinky.std.Event_
-import typingsSlinky.std.FocusEvent
 import typingsSlinky.std.HTMLAppletElement
 import typingsSlinky.std.HTMLBaseFontElement
 import typingsSlinky.std.HTMLDataElement
@@ -542,25 +549,15 @@ import typingsSlinky.std.HTMLMarqueeElement
 import typingsSlinky.std.HTMLMeterElement
 import typingsSlinky.std.HTMLOutputElement
 import typingsSlinky.std.HTMLPictureElement
-import typingsSlinky.std.HTMLSelectElement
 import typingsSlinky.std.HTMLSlotElement
 import typingsSlinky.std.HTMLTableDataCellElement
 import typingsSlinky.std.HTMLTableHeaderCellElement
 import typingsSlinky.std.HTMLTemplateElement
 import typingsSlinky.std.HTMLTimeElement
-import typingsSlinky.std.KeyboardEvent
 import typingsSlinky.std.Location_
-import typingsSlinky.std.MouseEvent
 import typingsSlinky.std.Partial
-import typingsSlinky.std.PointerEvent
-import typingsSlinky.std.ProgressEvent
-import typingsSlinky.std.RegExp
 import typingsSlinky.std.ReturnType
 import typingsSlinky.std.SecurityPolicyViolationEvent
-import typingsSlinky.std.TouchEvent
-import typingsSlinky.std.TransitionEvent
-import typingsSlinky.std.UIEvent
-import typingsSlinky.std.WheelEvent
 import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -635,7 +632,7 @@ trait Chainable[Subject] extends js.Object {
     *    cy.$$('p')
     */
   @JSName("$$")
-  def DollarDollar(element: HTMLSelectElement): JQuery_[org.scalajs.dom.raw.HTMLSelectElement] = js.native
+  def DollarDollar(element: HTMLSelectElement): JQuery_[HTMLSelectElement] = js.native
   // HACK: This is the factory function returned when importing jQuery without a DOM. Declaring it separately breaks using the type parameter on JQueryStatic.
   // HACK: The discriminator parameter handles the edge case of passing a Window object to JQueryStatic. It doesn't actually exist on the factory function.
   /**
@@ -690,22 +687,56 @@ trait Chainable[Subject] extends js.Object {
     */
   @JSName("$$")
   def DollarDollar[TElement](callback: js.ThisFunction1[/* this */ Document_, /* $ */ this.type, Unit]): JQuery_[TElement] = js.native
+  @JSName("$$")
+  def DollarDollar[T /* <: Element */](element_elementArray: ArrayLike[T]): JQuery_[T] = js.native
   /**
-    * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
-    * @param element_elementArray _&#x40;param_ `element_elementArray`
+    * Creates DOM elements on the fly from the provided string of raw HTML.
+    * @param html _&#x40;param_ `html`
     * <br>
-    * * `element` — A DOM element to wrap in a jQuery object. <br>
-    * * `elementArray` — An array containing a set of DOM elements to wrap in a jQuery object.
+    * * `html (ownerDocument)` — A string of HTML to create on the fly. Note that this parses HTML, not XML. <br>
+    * * `html (attributes)` — A string defining a single, standalone, HTML element (e.g. &lt;div/&gt; or &lt;div&gt;&lt;/div&gt;).
+    * @param ownerDocument_attributes _&#x40;param_ `ownerDocument_attributes`
+    * <br>
+    * * `ownerDocument` — A document in which the new elements will be created. <br>
+    * * `attributes` — An object of attributes, events, and methods to call on the newly-created element.
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
     * @since 1.0
-    * @example ​ ````Set the background color of the page to black.
+    * @since 1.4
+    * @example ​ ````Create a div element (and all of its contents) dynamically and append it to the body element. Internally, an element is created and its innerHTML property set to the given markup.
   ```javascript
-  $( document.body ).css( "background", "black" );
+  $( "<div><p>Hello</p></div>" ).appendTo( "body" )
   ```
-    * @example ​ ````Hide all the input elements within a form.
+    * @example ​ ````Create some DOM elements.
   ```javascript
-  $( myForm.elements ).hide();
+  $( "<div/>", {
+    "class": "test",
+    text: "Click me!",
+    click: function() {
+    $( this ).toggleClass( "test" );
+    }
+  })
+    .appendTo( "body" );
   ```
+    */
+  // tslint:disable-next-line:no-unnecessary-generics
+  /**
+    * jQuery library bound to the AUT
+    *
+    * @see https://on.cypress.io/$
+    * @example
+    *    cy.$$('p')
+    */
+  @JSName("$$")
+  def DollarDollar[TElement /* <: HTMLElement */](html: htmlString): JQuery_[TElement] = js.native
+  @JSName("$$")
+  def DollarDollar[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery_[TElement] = js.native
+  @JSName("$$")
+  def DollarDollar[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: Document_): JQuery_[TElement] = js.native
+  /**
+    * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
+    * @param object A plain object to wrap in a jQuery object.
+    * @see \`{@link https://api.jquery.com/jQuery/ }\`
+    * @since 1.0
     */
   /**
     * jQuery library bound to the AUT
@@ -715,11 +746,7 @@ trait Chainable[Subject] extends js.Object {
     *    cy.$$('p')
     */
   @JSName("$$")
-  def DollarDollar[T /* <: Element */](element_elementArray: T): JQuery_[T] = js.native
-  @JSName("$$")
-  def DollarDollar[T /* <: Element */](element_elementArray: ArrayLike[T]): JQuery_[T] = js.native
-  @JSName("$$")
-  def DollarDollar[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery_[TElement] = js.native
+  def DollarDollar[T /* <: PlainObject[_] */](`object`: T): JQuery_[T] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
     * @param selection An existing jQuery object to clone.
@@ -735,6 +762,10 @@ trait Chainable[Subject] extends js.Object {
     */
   @JSName("$$")
   def DollarDollar[T](selection: JQuery_[T]): JQuery_[T] = js.native
+  @JSName("$$")
+  def DollarDollar[TElement /* <: Element */](selector: Selector, context: JQuery_[HTMLElement]): JQuery_[TElement] = js.native
+  @JSName("$$")
+  def DollarDollar[TElement /* <: Element */](selector: Selector, context: Element): JQuery_[TElement] = js.native
   /**
     * Accepts a string containing a CSS selector which is then used to match a set of elements.
     * @param selector A string containing a selector expression
@@ -781,59 +812,25 @@ trait Chainable[Subject] extends js.Object {
     *    cy.$$('p')
     */
   @JSName("$$")
-  def DollarDollar[TElement /* <: Element */](selector: Selector): JQuery_[TElement] = js.native
+  def DollarDollar_TElement_Element[TElement /* <: Element */](selector: Selector): JQuery_[TElement] = js.native
   @JSName("$$")
-  def DollarDollar[TElement /* <: Element */](selector: Selector, context: JQuery_[typingsSlinky.std.HTMLElement]): JQuery_[TElement] = js.native
-  @JSName("$$")
-  def DollarDollar[TElement /* <: Element */](selector: Selector, context: Document_): JQuery_[TElement] = js.native
-  @JSName("$$")
-  def DollarDollar[TElement /* <: Element */](selector: Selector, context: typingsSlinky.std.Element): JQuery_[TElement] = js.native
-  /**
-    * Creates DOM elements on the fly from the provided string of raw HTML.
-    * @param html _&#x40;param_ `html`
-    * <br>
-    * * `html (ownerDocument)` — A string of HTML to create on the fly. Note that this parses HTML, not XML. <br>
-    * * `html (attributes)` — A string defining a single, standalone, HTML element (e.g. &lt;div/&gt; or &lt;div&gt;&lt;/div&gt;).
-    * @param ownerDocument_attributes _&#x40;param_ `ownerDocument_attributes`
-    * <br>
-    * * `ownerDocument` — A document in which the new elements will be created. <br>
-    * * `attributes` — An object of attributes, events, and methods to call on the newly-created element.
-    * @see \`{@link https://api.jquery.com/jQuery/ }\`
-    * @since 1.0
-    * @since 1.4
-    * @example ​ ````Create a div element (and all of its contents) dynamically and append it to the body element. Internally, an element is created and its innerHTML property set to the given markup.
-  ```javascript
-  $( "<div><p>Hello</p></div>" ).appendTo( "body" )
-  ```
-    * @example ​ ````Create some DOM elements.
-  ```javascript
-  $( "<div/>", {
-    "class": "test",
-    text: "Click me!",
-    click: function() {
-    $( this ).toggleClass( "test" );
-    }
-  })
-    .appendTo( "body" );
-  ```
-    */
-  // tslint:disable-next-line:no-unnecessary-generics
-  /**
-    * jQuery library bound to the AUT
-    *
-    * @see https://on.cypress.io/$
-    * @example
-    *    cy.$$('p')
-    */
-  @JSName("$$")
-  def DollarDollar_TElement_HTMLElement[TElement /* <: HTMLElement */](html: htmlString): JQuery_[TElement] = js.native
-  @JSName("$$")
-  def DollarDollar_TElement_HTMLElement[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: Document_): JQuery_[TElement] = js.native
+  def DollarDollar_TElement_Element[TElement /* <: Element */](selector: Selector, context: Document_): JQuery_[TElement] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
-    * @param object A plain object to wrap in a jQuery object.
+    * @param element_elementArray _&#x40;param_ `element_elementArray`
+    * <br>
+    * * `element` — A DOM element to wrap in a jQuery object. <br>
+    * * `elementArray` — An array containing a set of DOM elements to wrap in a jQuery object.
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
     * @since 1.0
+    * @example ​ ````Set the background color of the page to black.
+  ```javascript
+  $( document.body ).css( "background", "black" );
+  ```
+    * @example ​ ````Hide all the input elements within a form.
+  ```javascript
+  $( myForm.elements ).hide();
+  ```
     */
   /**
     * jQuery library bound to the AUT
@@ -843,7 +840,7 @@ trait Chainable[Subject] extends js.Object {
     *    cy.$$('p')
     */
   @JSName("$$")
-  def DollarDollar_T_PlainObjectWildcard[T /* <: PlainObject[_] */](`object`: T): JQuery_[T] = js.native
+  def DollarDollar_T_Element[T /* <: Element */](element_elementArray: T): JQuery_[T] = js.native
   // fallback
   /**
     * Create an assertion. Assertions are automatically retried until they pass or time out.
@@ -949,7 +946,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("and")
   def and_beabove(chainer: beDotabove, value: Double): Chainable[Subject] = js.native
   @JSName("and")
-  def and_beabove(chainer: beDotabove, value: Date): Chainable[Subject] = js.native
+  def and_beabove(chainer: beDotabove, value: js.Date): Chainable[Subject] = js.native
   /**
     * Assert if spy was always called with matching arguments (and possibly others).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyalwayscalledwithmatcharg1-arg2-
@@ -1044,7 +1041,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("and")
   def and_beatleast(chainer: beDotatDotleast, value: Double): Chainable[Subject] = js.native
   @JSName("and")
-  def and_beatleast(chainer: beDotatDotleast, value: Date): Chainable[Subject] = js.native
+  def and_beatleast(chainer: beDotatDotleast, value: js.Date): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a `n` date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -1529,7 +1526,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_bewithin(chainer: beDotwithin, start: Date, end: Date): Chainable[Subject] = js.native
+  def and_bewithin(chainer: beDotwithin, start: js.Date, end: js.Date): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.change` asserts that the given function `subject` returns a different value when it’s invoked before the target function compared to when it’s invoked afterward.
     * However, it’s often best to assert that `subject` is equal to its expected value.
@@ -1786,7 +1783,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("and")
   def and_havealwaysthrown(chainer: haveDotalwaysDotthrown, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_havealwaysthrown(chainer: haveDotalwaysDotthrown, value: Error): Chainable[Subject] = js.native
+  def and_havealwaysthrown(chainer: haveDotalwaysDotthrown, value: js.Error): Chainable[Subject] = js.native
   @JSName("and")
   def and_havealwaysthrown(chainer: haveDotalwaysDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
@@ -2172,7 +2169,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("and")
   def and_havestring(chainer: haveDotstring, `match`: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_havestring(chainer: haveDotstring, `match`: RegExp): Chainable[Subject] = js.native
+  def and_havestring(chainer: haveDotstring, `match`: js.RegExp): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection is equal to the given text, using `.text()`.
     * @example
@@ -2204,7 +2201,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("and")
   def and_havethrown(chainer: haveDotthrown, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_havethrown(chainer: haveDotthrown, value: Error): Chainable[Subject] = js.native
+  def and_havethrown(chainer: haveDotthrown, value: js.Error): Chainable[Subject] = js.native
   @JSName("and")
   def and_havethrown(chainer: haveDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
@@ -2347,7 +2344,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_match(chainer: `match`, value: RegExp): Chainable[Subject] = js.native
+  def and_match(chainer: `match`, value: js.RegExp): Chainable[Subject] = js.native
   /**
     * Assert spy not always returned the provided value.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyalwaysreturnedobj
@@ -2396,7 +2393,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("and")
   def and_notbeabove(chainer: notDotbeDotabove, value: Double): Chainable[Subject] = js.native
   @JSName("and")
-  def and_notbeabove(chainer: notDotbeDotabove, value: Date): Chainable[Subject] = js.native
+  def and_notbeabove(chainer: notDotbeDotabove, value: js.Date): Chainable[Subject] = js.native
   /**
     * Assert if spy was not always called with matching arguments (and possibly others).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyalwayscalledwithmatcharg1-arg2-
@@ -2491,7 +2488,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("and")
   def and_notbeatleast(chainer: notDotbeDotatDotleast, value: Double): Chainable[Subject] = js.native
   @JSName("and")
-  def and_notbeatleast(chainer: notDotbeDotatDotleast, value: Date): Chainable[Subject] = js.native
+  def and_notbeatleast(chainer: notDotbeDotatDotleast, value: js.Date): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not a number or not a `n` date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -2976,7 +2973,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notbewithin(chainer: notDotbeDotwithin, start: Date, end: Date): Chainable[Subject] = js.native
+  def and_notbewithin(chainer: notDotbeDotwithin, start: js.Date, end: js.Date): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.change` asserts that the given function `subject` returns a different value when it’s invoked before the target function compared to when it’s invoked afterward.
     * However, it’s often best to assert that `subject` is equal to its expected value.
@@ -3232,7 +3229,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("and")
   def and_nothavealwaysthrown(chainer: notDothaveDotalwaysDotthrown, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_nothavealwaysthrown(chainer: notDothaveDotalwaysDotthrown, value: Error): Chainable[Subject] = js.native
+  def and_nothavealwaysthrown(chainer: notDothaveDotalwaysDotthrown, value: js.Error): Chainable[Subject] = js.native
   @JSName("and")
   def and_nothavealwaysthrown(chainer: notDothaveDotalwaysDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
@@ -3602,7 +3599,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("and")
   def and_nothavestring(chainer: notDothaveDotstring, `match`: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_nothavestring(chainer: notDothaveDotstring, `match`: RegExp): Chainable[Subject] = js.native
+  def and_nothavestring(chainer: notDothaveDotstring, `match`: js.RegExp): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection is not equal to the given text, using `.text()`.
     * @example
@@ -3634,7 +3631,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("and")
   def and_nothavethrown(chainer: notDothaveDotthrown, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_nothavethrown(chainer: notDothaveDotthrown, value: Error): Chainable[Subject] = js.native
+  def and_nothavethrown(chainer: notDothaveDotthrown, value: js.Error): Chainable[Subject] = js.native
   @JSName("and")
   def and_nothavethrown(chainer: notDothaveDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
@@ -3777,7 +3774,7 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_notmatch(chainer: notDotmatch, value: RegExp): Chainable[Subject] = js.native
+  def and_notmatch(chainer: notDotmatch, value: js.RegExp): Chainable[Subject] = js.native
   /**
     * When the target is a non-function object, `.respondTo` asserts that the target does not have a `method` with the given name method. The method can be own or inherited, and it can be enumerable or non-enumerable.
     * @example
@@ -3894,7 +3891,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("and")
   def and_throw(chainer: `throw`, error: js.Function, expected: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_throw(chainer: `throw`, error: js.Function, expected: RegExp): Chainable[Subject] = js.native
+  def and_throw(chainer: `throw`, error: js.Function, expected: js.RegExp): Chainable[Subject] = js.native
   /**
     * When no arguments are provided, `.throw` invokes the target function and asserts that an error is thrown.
     * When one argument is provided, and it’s a string, `.throw` invokes the target function and asserts that an error is thrown with a message that contains that string.
@@ -3914,15 +3911,15 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/and
     */
   @JSName("and")
-  def and_throw(chainer: `throw`, error: Error): Chainable[Subject] = js.native
+  def and_throw(chainer: `throw`, error: js.Error): Chainable[Subject] = js.native
   @JSName("and")
-  def and_throw(chainer: `throw`, error: Error, expected: String): Chainable[Subject] = js.native
+  def and_throw(chainer: `throw`, error: js.Error, expected: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_throw(chainer: `throw`, error: Error, expected: RegExp): Chainable[Subject] = js.native
+  def and_throw(chainer: `throw`, error: js.Error, expected: js.RegExp): Chainable[Subject] = js.native
   @JSName("and")
   def and_throw(chainer: `throw`, value: String): Chainable[Subject] = js.native
   @JSName("and")
-  def and_throw(chainer: `throw`, value: RegExp): Chainable[Subject] = js.native
+  def and_throw(chainer: `throw`, value: js.RegExp): Chainable[Subject] = js.native
   /**
     * Assign an alias for later use. Reference the alias later within a
     * [cy.get()](https://on.cypress.io/get) or
@@ -4355,9 +4352,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("children")
   def children_section(selector: section, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("children")
-  def children_select(selector: select): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def children_select(selector: select): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("children")
-  def children_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def children_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("children")
   def children_slot(selector: slot): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("children")
@@ -4518,7 +4515,7 @@ trait Chainable[Subject] extends js.Object {
     cy.clearLocalStorage(/app-/)
     ```
     */
-  def clearLocalStorage(re: RegExp): Chainable[Storage] = js.native
+  def clearLocalStorage(re: js.RegExp): Chainable[Storage] = js.native
   /**
     * Click a DOM element.
     *
@@ -4588,17 +4585,10 @@ trait Chainable[Subject] extends js.Object {
     *    cy.get('#date').contains('2017-03-14')
     */
   def clock(now: Double): Chainable[Clock] = js.native
+  def clock(now: Double, functions: js.Array[setTimeout | clearTimeout | setInterval | clearInterval | Date]): Chainable[Clock] = js.native
   def clock(
     now: Double,
-    functions: js.Array[
-      setTimeout | clearTimeout | setInterval | clearInterval | typingsSlinky.cypress.cypressStrings.Date
-    ]
-  ): Chainable[Clock] = js.native
-  def clock(
-    now: Double,
-    functions: js.Array[
-      setTimeout | clearTimeout | setInterval | clearInterval | typingsSlinky.cypress.cypressStrings.Date
-    ],
+    functions: js.Array[setTimeout | clearTimeout | setInterval | clearInterval | Date],
     options: Loggable
   ): Chainable[Clock] = js.native
   def clock(now: Double, options: Loggable): Chainable[Clock] = js.native
@@ -4987,9 +4977,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("closest")
   def closest_section(selector: section, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("closest")
-  def closest_select(selector: select): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def closest_select(selector: select): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("closest")
-  def closest_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def closest_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("closest")
   def closest_slot(selector: slot): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("closest")
@@ -5116,8 +5106,8 @@ trait Chainable[Subject] extends js.Object {
   def contains(content: String, options: PartialLoggableTimeoutabl): Chainable[Subject] = js.native
   def contains(content: Double): Chainable[Subject] = js.native
   def contains(content: Double, options: PartialLoggableTimeoutabl): Chainable[Subject] = js.native
-  def contains(content: RegExp): Chainable[Subject] = js.native
-  def contains(content: RegExp, options: PartialLoggableTimeoutabl): Chainable[Subject] = js.native
+  def contains(content: js.RegExp): Chainable[Subject] = js.native
+  def contains(content: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[Subject] = js.native
   /**
     * Get the DOM element using CSS "selector" containing the text or regular expression.
     *
@@ -5130,8 +5120,8 @@ trait Chainable[Subject] extends js.Object {
   def contains[E /* <: Node */](selector: String, text: String, options: PartialLoggableTimeoutabl): Chainable[JQuery_[E]] = js.native
   def contains[E /* <: Node */](selector: String, text: Double): Chainable[JQuery_[E]] = js.native
   def contains[E /* <: Node */](selector: String, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[E]] = js.native
-  def contains[E /* <: Node */](selector: String, text: RegExp): Chainable[JQuery_[E]] = js.native
-  def contains[E /* <: Node */](selector: String, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[E]] = js.native
+  def contains[E /* <: Node */](selector: String, text: js.RegExp): Chainable[JQuery_[E]] = js.native
+  def contains[E /* <: Node */](selector: String, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[E]] = js.native
   /**
     * Get the child DOM element that contains given text.
     *
@@ -5145,7 +5135,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_E_Node[E /* <: Node */](content: Double): Chainable[JQuery_[E]] = js.native
   @JSName("contains")
-  def contains_E_Node[E /* <: Node */](content: RegExp): Chainable[JQuery_[E]] = js.native
+  def contains_E_Node[E /* <: Node */](content: js.RegExp): Chainable[JQuery_[E]] = js.native
   /**
     * Get the DOM element with name "selector" containing the text or regular expression.
     *
@@ -5163,9 +5153,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_a(selector: a, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLAnchorElement]] = js.native
   @JSName("contains")
-  def contains_a(selector: a, text: RegExp): Chainable[JQuery_[HTMLAnchorElement]] = js.native
+  def contains_a(selector: a, text: js.RegExp): Chainable[JQuery_[HTMLAnchorElement]] = js.native
   @JSName("contains")
-  def contains_a(selector: a, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLAnchorElement]] = js.native
+  def contains_a(selector: a, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLAnchorElement]] = js.native
   @JSName("contains")
   def contains_abbr(selector: abbr, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5175,9 +5165,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_abbr(selector: abbr, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_abbr(selector: abbr, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_abbr(selector: abbr, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_abbr(selector: abbr, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_abbr(selector: abbr, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_address(selector: address, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5187,9 +5177,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_address(selector: address, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_address(selector: address, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_address(selector: address, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_address(selector: address, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_address(selector: address, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_applet(selector: applet, text: String): Chainable[JQuery_[HTMLAppletElement]] = js.native
   @JSName("contains")
@@ -5199,9 +5189,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_applet(selector: applet, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLAppletElement]] = js.native
   @JSName("contains")
-  def contains_applet(selector: applet, text: RegExp): Chainable[JQuery_[HTMLAppletElement]] = js.native
+  def contains_applet(selector: applet, text: js.RegExp): Chainable[JQuery_[HTMLAppletElement]] = js.native
   @JSName("contains")
-  def contains_applet(selector: applet, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLAppletElement]] = js.native
+  def contains_applet(selector: applet, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLAppletElement]] = js.native
   @JSName("contains")
   def contains_area(selector: area, text: String): Chainable[JQuery_[HTMLAreaElement]] = js.native
   @JSName("contains")
@@ -5211,9 +5201,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_area(selector: area, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLAreaElement]] = js.native
   @JSName("contains")
-  def contains_area(selector: area, text: RegExp): Chainable[JQuery_[HTMLAreaElement]] = js.native
+  def contains_area(selector: area, text: js.RegExp): Chainable[JQuery_[HTMLAreaElement]] = js.native
   @JSName("contains")
-  def contains_area(selector: area, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLAreaElement]] = js.native
+  def contains_area(selector: area, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLAreaElement]] = js.native
   @JSName("contains")
   def contains_article(selector: article, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5223,9 +5213,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_article(selector: article, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_article(selector: article, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_article(selector: article, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_article(selector: article, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_article(selector: article, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_aside(selector: aside, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5235,9 +5225,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_aside(selector: aside, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_aside(selector: aside, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_aside(selector: aside, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_aside(selector: aside, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_aside(selector: aside, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_audio(selector: audio, text: String): Chainable[JQuery_[HTMLAudioElement]] = js.native
   @JSName("contains")
@@ -5247,9 +5237,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_audio(selector: audio, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLAudioElement]] = js.native
   @JSName("contains")
-  def contains_audio(selector: audio, text: RegExp): Chainable[JQuery_[HTMLAudioElement]] = js.native
+  def contains_audio(selector: audio, text: js.RegExp): Chainable[JQuery_[HTMLAudioElement]] = js.native
   @JSName("contains")
-  def contains_audio(selector: audio, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLAudioElement]] = js.native
+  def contains_audio(selector: audio, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLAudioElement]] = js.native
   @JSName("contains")
   def contains_b(selector: b, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5259,9 +5249,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_b(selector: b, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_b(selector: b, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_b(selector: b, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_b(selector: b, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_b(selector: b, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_base(selector: base_, text: String): Chainable[JQuery_[HTMLBaseElement]] = js.native
   @JSName("contains")
@@ -5271,9 +5261,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_base(selector: base_, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLBaseElement]] = js.native
   @JSName("contains")
-  def contains_base(selector: base_, text: RegExp): Chainable[JQuery_[HTMLBaseElement]] = js.native
+  def contains_base(selector: base_, text: js.RegExp): Chainable[JQuery_[HTMLBaseElement]] = js.native
   @JSName("contains")
-  def contains_base(selector: base_, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLBaseElement]] = js.native
+  def contains_base(selector: base_, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLBaseElement]] = js.native
   @JSName("contains")
   def contains_basefont(selector: basefont, text: String): Chainable[JQuery_[HTMLBaseFontElement]] = js.native
   @JSName("contains")
@@ -5283,9 +5273,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_basefont(selector: basefont, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLBaseFontElement]] = js.native
   @JSName("contains")
-  def contains_basefont(selector: basefont, text: RegExp): Chainable[JQuery_[HTMLBaseFontElement]] = js.native
+  def contains_basefont(selector: basefont, text: js.RegExp): Chainable[JQuery_[HTMLBaseFontElement]] = js.native
   @JSName("contains")
-  def contains_basefont(selector: basefont, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLBaseFontElement]] = js.native
+  def contains_basefont(selector: basefont, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLBaseFontElement]] = js.native
   @JSName("contains")
   def contains_bdi(selector: bdi, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5295,9 +5285,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_bdi(selector: bdi, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_bdi(selector: bdi, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_bdi(selector: bdi, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_bdi(selector: bdi, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_bdi(selector: bdi, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_bdo(selector: bdo, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5307,9 +5297,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_bdo(selector: bdo, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_bdo(selector: bdo, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_bdo(selector: bdo, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_bdo(selector: bdo, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_bdo(selector: bdo, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_blockquote(selector: blockquote, text: String): Chainable[JQuery_[HTMLQuoteElement]] = js.native
   @JSName("contains")
@@ -5319,9 +5309,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_blockquote(selector: blockquote, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLQuoteElement]] = js.native
   @JSName("contains")
-  def contains_blockquote(selector: blockquote, text: RegExp): Chainable[JQuery_[HTMLQuoteElement]] = js.native
+  def contains_blockquote(selector: blockquote, text: js.RegExp): Chainable[JQuery_[HTMLQuoteElement]] = js.native
   @JSName("contains")
-  def contains_blockquote(selector: blockquote, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLQuoteElement]] = js.native
+  def contains_blockquote(selector: blockquote, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLQuoteElement]] = js.native
   @JSName("contains")
   def contains_body(selector: body, text: String): Chainable[JQuery_[HTMLBodyElement]] = js.native
   @JSName("contains")
@@ -5331,9 +5321,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_body(selector: body, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLBodyElement]] = js.native
   @JSName("contains")
-  def contains_body(selector: body, text: RegExp): Chainable[JQuery_[HTMLBodyElement]] = js.native
+  def contains_body(selector: body, text: js.RegExp): Chainable[JQuery_[HTMLBodyElement]] = js.native
   @JSName("contains")
-  def contains_body(selector: body, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLBodyElement]] = js.native
+  def contains_body(selector: body, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLBodyElement]] = js.native
   @JSName("contains")
   def contains_br(selector: br, text: String): Chainable[JQuery_[HTMLBRElement]] = js.native
   @JSName("contains")
@@ -5343,9 +5333,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_br(selector: br, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLBRElement]] = js.native
   @JSName("contains")
-  def contains_br(selector: br, text: RegExp): Chainable[JQuery_[HTMLBRElement]] = js.native
+  def contains_br(selector: br, text: js.RegExp): Chainable[JQuery_[HTMLBRElement]] = js.native
   @JSName("contains")
-  def contains_br(selector: br, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLBRElement]] = js.native
+  def contains_br(selector: br, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLBRElement]] = js.native
   @JSName("contains")
   def contains_button(selector: button, text: String): Chainable[JQuery_[HTMLButtonElement]] = js.native
   @JSName("contains")
@@ -5355,9 +5345,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_button(selector: button, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLButtonElement]] = js.native
   @JSName("contains")
-  def contains_button(selector: button, text: RegExp): Chainable[JQuery_[HTMLButtonElement]] = js.native
+  def contains_button(selector: button, text: js.RegExp): Chainable[JQuery_[HTMLButtonElement]] = js.native
   @JSName("contains")
-  def contains_button(selector: button, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLButtonElement]] = js.native
+  def contains_button(selector: button, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLButtonElement]] = js.native
   @JSName("contains")
   def contains_canvas(selector: canvas, text: String): Chainable[JQuery_[HTMLCanvasElement]] = js.native
   @JSName("contains")
@@ -5367,9 +5357,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_canvas(selector: canvas, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLCanvasElement]] = js.native
   @JSName("contains")
-  def contains_canvas(selector: canvas, text: RegExp): Chainable[JQuery_[HTMLCanvasElement]] = js.native
+  def contains_canvas(selector: canvas, text: js.RegExp): Chainable[JQuery_[HTMLCanvasElement]] = js.native
   @JSName("contains")
-  def contains_canvas(selector: canvas, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLCanvasElement]] = js.native
+  def contains_canvas(selector: canvas, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLCanvasElement]] = js.native
   @JSName("contains")
   def contains_caption(selector: caption, text: String): Chainable[JQuery_[HTMLTableCaptionElement]] = js.native
   @JSName("contains")
@@ -5379,9 +5369,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_caption(selector: caption, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableCaptionElement]] = js.native
   @JSName("contains")
-  def contains_caption(selector: caption, text: RegExp): Chainable[JQuery_[HTMLTableCaptionElement]] = js.native
+  def contains_caption(selector: caption, text: js.RegExp): Chainable[JQuery_[HTMLTableCaptionElement]] = js.native
   @JSName("contains")
-  def contains_caption(selector: caption, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableCaptionElement]] = js.native
+  def contains_caption(selector: caption, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableCaptionElement]] = js.native
   @JSName("contains")
   def contains_cite(selector: cite, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5391,9 +5381,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_cite(selector: cite, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_cite(selector: cite, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_cite(selector: cite, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_cite(selector: cite, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_cite(selector: cite, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_code(selector: code, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5403,9 +5393,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_code(selector: code, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_code(selector: code, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_code(selector: code, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_code(selector: code, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_code(selector: code, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_col(selector: col, text: String): Chainable[JQuery_[HTMLTableColElement]] = js.native
   @JSName("contains")
@@ -5415,9 +5405,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_col(selector: col, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableColElement]] = js.native
   @JSName("contains")
-  def contains_col(selector: col, text: RegExp): Chainable[JQuery_[HTMLTableColElement]] = js.native
+  def contains_col(selector: col, text: js.RegExp): Chainable[JQuery_[HTMLTableColElement]] = js.native
   @JSName("contains")
-  def contains_col(selector: col, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableColElement]] = js.native
+  def contains_col(selector: col, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableColElement]] = js.native
   @JSName("contains")
   def contains_colgroup(selector: colgroup, text: String): Chainable[JQuery_[HTMLTableColElement]] = js.native
   @JSName("contains")
@@ -5427,9 +5417,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_colgroup(selector: colgroup, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableColElement]] = js.native
   @JSName("contains")
-  def contains_colgroup(selector: colgroup, text: RegExp): Chainable[JQuery_[HTMLTableColElement]] = js.native
+  def contains_colgroup(selector: colgroup, text: js.RegExp): Chainable[JQuery_[HTMLTableColElement]] = js.native
   @JSName("contains")
-  def contains_colgroup(selector: colgroup, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableColElement]] = js.native
+  def contains_colgroup(selector: colgroup, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableColElement]] = js.native
   @JSName("contains")
   def contains_data(selector: data, text: String): Chainable[JQuery_[HTMLDataElement]] = js.native
   @JSName("contains")
@@ -5439,9 +5429,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_data(selector: data, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDataElement]] = js.native
   @JSName("contains")
-  def contains_data(selector: data, text: RegExp): Chainable[JQuery_[HTMLDataElement]] = js.native
+  def contains_data(selector: data, text: js.RegExp): Chainable[JQuery_[HTMLDataElement]] = js.native
   @JSName("contains")
-  def contains_data(selector: data, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDataElement]] = js.native
+  def contains_data(selector: data, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDataElement]] = js.native
   @JSName("contains")
   def contains_datalist(selector: datalist, text: String): Chainable[JQuery_[HTMLDataListElement]] = js.native
   @JSName("contains")
@@ -5451,9 +5441,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_datalist(selector: datalist, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDataListElement]] = js.native
   @JSName("contains")
-  def contains_datalist(selector: datalist, text: RegExp): Chainable[JQuery_[HTMLDataListElement]] = js.native
+  def contains_datalist(selector: datalist, text: js.RegExp): Chainable[JQuery_[HTMLDataListElement]] = js.native
   @JSName("contains")
-  def contains_datalist(selector: datalist, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDataListElement]] = js.native
+  def contains_datalist(selector: datalist, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDataListElement]] = js.native
   @JSName("contains")
   def contains_dd(selector: dd, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5463,9 +5453,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_dd(selector: dd, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_dd(selector: dd, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_dd(selector: dd, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_dd(selector: dd, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_dd(selector: dd, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_del(selector: del, text: String): Chainable[JQuery_[HTMLModElement]] = js.native
   @JSName("contains")
@@ -5475,9 +5465,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_del(selector: del, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLModElement]] = js.native
   @JSName("contains")
-  def contains_del(selector: del, text: RegExp): Chainable[JQuery_[HTMLModElement]] = js.native
+  def contains_del(selector: del, text: js.RegExp): Chainable[JQuery_[HTMLModElement]] = js.native
   @JSName("contains")
-  def contains_del(selector: del, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLModElement]] = js.native
+  def contains_del(selector: del, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLModElement]] = js.native
   @JSName("contains")
   def contains_details(selector: details, text: String): Chainable[JQuery_[HTMLDetailsElement]] = js.native
   @JSName("contains")
@@ -5487,9 +5477,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_details(selector: details, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDetailsElement]] = js.native
   @JSName("contains")
-  def contains_details(selector: details, text: RegExp): Chainable[JQuery_[HTMLDetailsElement]] = js.native
+  def contains_details(selector: details, text: js.RegExp): Chainable[JQuery_[HTMLDetailsElement]] = js.native
   @JSName("contains")
-  def contains_details(selector: details, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDetailsElement]] = js.native
+  def contains_details(selector: details, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDetailsElement]] = js.native
   @JSName("contains")
   def contains_dfn(selector: dfn, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5499,9 +5489,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_dfn(selector: dfn, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_dfn(selector: dfn, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_dfn(selector: dfn, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_dfn(selector: dfn, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_dfn(selector: dfn, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_dialog(selector: dialog, text: String): Chainable[JQuery_[HTMLDialogElement]] = js.native
   @JSName("contains")
@@ -5511,9 +5501,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_dialog(selector: dialog, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDialogElement]] = js.native
   @JSName("contains")
-  def contains_dialog(selector: dialog, text: RegExp): Chainable[JQuery_[HTMLDialogElement]] = js.native
+  def contains_dialog(selector: dialog, text: js.RegExp): Chainable[JQuery_[HTMLDialogElement]] = js.native
   @JSName("contains")
-  def contains_dialog(selector: dialog, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDialogElement]] = js.native
+  def contains_dialog(selector: dialog, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDialogElement]] = js.native
   @JSName("contains")
   def contains_dir(selector: dir, text: String): Chainable[JQuery_[HTMLDirectoryElement]] = js.native
   @JSName("contains")
@@ -5523,9 +5513,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_dir(selector: dir, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDirectoryElement]] = js.native
   @JSName("contains")
-  def contains_dir(selector: dir, text: RegExp): Chainable[JQuery_[HTMLDirectoryElement]] = js.native
+  def contains_dir(selector: dir, text: js.RegExp): Chainable[JQuery_[HTMLDirectoryElement]] = js.native
   @JSName("contains")
-  def contains_dir(selector: dir, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDirectoryElement]] = js.native
+  def contains_dir(selector: dir, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDirectoryElement]] = js.native
   @JSName("contains")
   def contains_div(selector: div, text: String): Chainable[JQuery_[HTMLDivElement]] = js.native
   @JSName("contains")
@@ -5535,9 +5525,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_div(selector: div, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDivElement]] = js.native
   @JSName("contains")
-  def contains_div(selector: div, text: RegExp): Chainable[JQuery_[HTMLDivElement]] = js.native
+  def contains_div(selector: div, text: js.RegExp): Chainable[JQuery_[HTMLDivElement]] = js.native
   @JSName("contains")
-  def contains_div(selector: div, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDivElement]] = js.native
+  def contains_div(selector: div, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDivElement]] = js.native
   @JSName("contains")
   def contains_dl(selector: dl, text: String): Chainable[JQuery_[HTMLDListElement]] = js.native
   @JSName("contains")
@@ -5547,9 +5537,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_dl(selector: dl, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDListElement]] = js.native
   @JSName("contains")
-  def contains_dl(selector: dl, text: RegExp): Chainable[JQuery_[HTMLDListElement]] = js.native
+  def contains_dl(selector: dl, text: js.RegExp): Chainable[JQuery_[HTMLDListElement]] = js.native
   @JSName("contains")
-  def contains_dl(selector: dl, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDListElement]] = js.native
+  def contains_dl(selector: dl, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLDListElement]] = js.native
   @JSName("contains")
   def contains_dt(selector: dt, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5559,9 +5549,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_dt(selector: dt, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_dt(selector: dt, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_dt(selector: dt, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_dt(selector: dt, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_dt(selector: dt, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_em(selector: em, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5571,9 +5561,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_em(selector: em, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_em(selector: em, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_em(selector: em, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_em(selector: em, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_em(selector: em, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_embed(selector: embed, text: String): Chainable[JQuery_[HTMLEmbedElement]] = js.native
   @JSName("contains")
@@ -5583,9 +5573,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_embed(selector: embed, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLEmbedElement]] = js.native
   @JSName("contains")
-  def contains_embed(selector: embed, text: RegExp): Chainable[JQuery_[HTMLEmbedElement]] = js.native
+  def contains_embed(selector: embed, text: js.RegExp): Chainable[JQuery_[HTMLEmbedElement]] = js.native
   @JSName("contains")
-  def contains_embed(selector: embed, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLEmbedElement]] = js.native
+  def contains_embed(selector: embed, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLEmbedElement]] = js.native
   @JSName("contains")
   def contains_fieldset(selector: fieldset, text: String): Chainable[JQuery_[HTMLFieldSetElement]] = js.native
   @JSName("contains")
@@ -5595,9 +5585,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_fieldset(selector: fieldset, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLFieldSetElement]] = js.native
   @JSName("contains")
-  def contains_fieldset(selector: fieldset, text: RegExp): Chainable[JQuery_[HTMLFieldSetElement]] = js.native
+  def contains_fieldset(selector: fieldset, text: js.RegExp): Chainable[JQuery_[HTMLFieldSetElement]] = js.native
   @JSName("contains")
-  def contains_fieldset(selector: fieldset, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLFieldSetElement]] = js.native
+  def contains_fieldset(selector: fieldset, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLFieldSetElement]] = js.native
   @JSName("contains")
   def contains_figcaption(selector: figcaption, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5607,9 +5597,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_figcaption(selector: figcaption, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_figcaption(selector: figcaption, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_figcaption(selector: figcaption, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_figcaption(selector: figcaption, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_figcaption(selector: figcaption, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_figure(selector: figure, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5619,9 +5609,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_figure(selector: figure, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_figure(selector: figure, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_figure(selector: figure, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_figure(selector: figure, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_figure(selector: figure, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_font(selector: font, text: String): Chainable[JQuery_[HTMLFontElement]] = js.native
   @JSName("contains")
@@ -5631,9 +5621,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_font(selector: font, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLFontElement]] = js.native
   @JSName("contains")
-  def contains_font(selector: font, text: RegExp): Chainable[JQuery_[HTMLFontElement]] = js.native
+  def contains_font(selector: font, text: js.RegExp): Chainable[JQuery_[HTMLFontElement]] = js.native
   @JSName("contains")
-  def contains_font(selector: font, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLFontElement]] = js.native
+  def contains_font(selector: font, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLFontElement]] = js.native
   @JSName("contains")
   def contains_footer(selector: footer, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5643,9 +5633,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_footer(selector: footer, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_footer(selector: footer, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_footer(selector: footer, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_footer(selector: footer, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_footer(selector: footer, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_form(selector: form, text: String): Chainable[JQuery_[HTMLFormElement]] = js.native
   @JSName("contains")
@@ -5655,9 +5645,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_form(selector: form, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLFormElement]] = js.native
   @JSName("contains")
-  def contains_form(selector: form, text: RegExp): Chainable[JQuery_[HTMLFormElement]] = js.native
+  def contains_form(selector: form, text: js.RegExp): Chainable[JQuery_[HTMLFormElement]] = js.native
   @JSName("contains")
-  def contains_form(selector: form, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLFormElement]] = js.native
+  def contains_form(selector: form, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLFormElement]] = js.native
   @JSName("contains")
   def contains_frame(selector: frame, text: String): Chainable[JQuery_[HTMLFrameElement]] = js.native
   @JSName("contains")
@@ -5667,9 +5657,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_frame(selector: frame, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLFrameElement]] = js.native
   @JSName("contains")
-  def contains_frame(selector: frame, text: RegExp): Chainable[JQuery_[HTMLFrameElement]] = js.native
+  def contains_frame(selector: frame, text: js.RegExp): Chainable[JQuery_[HTMLFrameElement]] = js.native
   @JSName("contains")
-  def contains_frame(selector: frame, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLFrameElement]] = js.native
+  def contains_frame(selector: frame, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLFrameElement]] = js.native
   @JSName("contains")
   def contains_frameset(selector: frameset, text: String): Chainable[JQuery_[HTMLFrameSetElement]] = js.native
   @JSName("contains")
@@ -5679,9 +5669,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_frameset(selector: frameset, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLFrameSetElement]] = js.native
   @JSName("contains")
-  def contains_frameset(selector: frameset, text: RegExp): Chainable[JQuery_[HTMLFrameSetElement]] = js.native
+  def contains_frameset(selector: frameset, text: js.RegExp): Chainable[JQuery_[HTMLFrameSetElement]] = js.native
   @JSName("contains")
-  def contains_frameset(selector: frameset, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLFrameSetElement]] = js.native
+  def contains_frameset(selector: frameset, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLFrameSetElement]] = js.native
   @JSName("contains")
   def contains_h1(selector: h1, text: String): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
@@ -5691,9 +5681,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_h1(selector: h1, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
-  def contains_h1(selector: h1, text: RegExp): Chainable[JQuery_[HTMLHeadingElement]] = js.native
+  def contains_h1(selector: h1, text: js.RegExp): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
-  def contains_h1(selector: h1, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
+  def contains_h1(selector: h1, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
   def contains_h2(selector: h2, text: String): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
@@ -5703,9 +5693,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_h2(selector: h2, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
-  def contains_h2(selector: h2, text: RegExp): Chainable[JQuery_[HTMLHeadingElement]] = js.native
+  def contains_h2(selector: h2, text: js.RegExp): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
-  def contains_h2(selector: h2, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
+  def contains_h2(selector: h2, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
   def contains_h3(selector: h3, text: String): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
@@ -5715,9 +5705,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_h3(selector: h3, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
-  def contains_h3(selector: h3, text: RegExp): Chainable[JQuery_[HTMLHeadingElement]] = js.native
+  def contains_h3(selector: h3, text: js.RegExp): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
-  def contains_h3(selector: h3, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
+  def contains_h3(selector: h3, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
   def contains_h4(selector: h4, text: String): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
@@ -5727,9 +5717,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_h4(selector: h4, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
-  def contains_h4(selector: h4, text: RegExp): Chainable[JQuery_[HTMLHeadingElement]] = js.native
+  def contains_h4(selector: h4, text: js.RegExp): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
-  def contains_h4(selector: h4, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
+  def contains_h4(selector: h4, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
   def contains_h5(selector: h5, text: String): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
@@ -5739,9 +5729,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_h5(selector: h5, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
-  def contains_h5(selector: h5, text: RegExp): Chainable[JQuery_[HTMLHeadingElement]] = js.native
+  def contains_h5(selector: h5, text: js.RegExp): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
-  def contains_h5(selector: h5, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
+  def contains_h5(selector: h5, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
   def contains_h6(selector: h6, text: String): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
@@ -5751,9 +5741,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_h6(selector: h6, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
-  def contains_h6(selector: h6, text: RegExp): Chainable[JQuery_[HTMLHeadingElement]] = js.native
+  def contains_h6(selector: h6, text: js.RegExp): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
-  def contains_h6(selector: h6, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
+  def contains_h6(selector: h6, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadingElement]] = js.native
   @JSName("contains")
   def contains_head(selector: head, text: String): Chainable[JQuery_[HTMLHeadElement]] = js.native
   @JSName("contains")
@@ -5763,9 +5753,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_head(selector: head, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadElement]] = js.native
   @JSName("contains")
-  def contains_head(selector: head, text: RegExp): Chainable[JQuery_[HTMLHeadElement]] = js.native
+  def contains_head(selector: head, text: js.RegExp): Chainable[JQuery_[HTMLHeadElement]] = js.native
   @JSName("contains")
-  def contains_head(selector: head, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadElement]] = js.native
+  def contains_head(selector: head, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHeadElement]] = js.native
   @JSName("contains")
   def contains_header(selector: header, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5775,9 +5765,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_header(selector: header, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_header(selector: header, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_header(selector: header, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_header(selector: header, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_header(selector: header, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_hgroup(selector: hgroup, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5787,9 +5777,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_hgroup(selector: hgroup, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_hgroup(selector: hgroup, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_hgroup(selector: hgroup, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_hgroup(selector: hgroup, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_hgroup(selector: hgroup, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_hr(selector: hr, text: String): Chainable[JQuery_[HTMLHRElement]] = js.native
   @JSName("contains")
@@ -5799,9 +5789,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_hr(selector: hr, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHRElement]] = js.native
   @JSName("contains")
-  def contains_hr(selector: hr, text: RegExp): Chainable[JQuery_[HTMLHRElement]] = js.native
+  def contains_hr(selector: hr, text: js.RegExp): Chainable[JQuery_[HTMLHRElement]] = js.native
   @JSName("contains")
-  def contains_hr(selector: hr, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHRElement]] = js.native
+  def contains_hr(selector: hr, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHRElement]] = js.native
   @JSName("contains")
   def contains_html(selector: html_, text: String): Chainable[JQuery_[HTMLHtmlElement]] = js.native
   @JSName("contains")
@@ -5811,9 +5801,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_html(selector: html_, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHtmlElement]] = js.native
   @JSName("contains")
-  def contains_html(selector: html_, text: RegExp): Chainable[JQuery_[HTMLHtmlElement]] = js.native
+  def contains_html(selector: html_, text: js.RegExp): Chainable[JQuery_[HTMLHtmlElement]] = js.native
   @JSName("contains")
-  def contains_html(selector: html_, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHtmlElement]] = js.native
+  def contains_html(selector: html_, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLHtmlElement]] = js.native
   @JSName("contains")
   def contains_i(selector: i, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5823,9 +5813,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_i(selector: i, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_i(selector: i, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_i(selector: i, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_i(selector: i, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_i(selector: i, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_iframe(selector: iframe, text: String): Chainable[JQuery_[HTMLIFrameElement]] = js.native
   @JSName("contains")
@@ -5835,9 +5825,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_iframe(selector: iframe, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLIFrameElement]] = js.native
   @JSName("contains")
-  def contains_iframe(selector: iframe, text: RegExp): Chainable[JQuery_[HTMLIFrameElement]] = js.native
+  def contains_iframe(selector: iframe, text: js.RegExp): Chainable[JQuery_[HTMLIFrameElement]] = js.native
   @JSName("contains")
-  def contains_iframe(selector: iframe, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLIFrameElement]] = js.native
+  def contains_iframe(selector: iframe, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLIFrameElement]] = js.native
   @JSName("contains")
   def contains_img(selector: img, text: String): Chainable[JQuery_[HTMLImageElement]] = js.native
   @JSName("contains")
@@ -5847,9 +5837,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_img(selector: img, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLImageElement]] = js.native
   @JSName("contains")
-  def contains_img(selector: img, text: RegExp): Chainable[JQuery_[HTMLImageElement]] = js.native
+  def contains_img(selector: img, text: js.RegExp): Chainable[JQuery_[HTMLImageElement]] = js.native
   @JSName("contains")
-  def contains_img(selector: img, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLImageElement]] = js.native
+  def contains_img(selector: img, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLImageElement]] = js.native
   @JSName("contains")
   def contains_input(selector: input, text: String): Chainable[JQuery_[HTMLInputElement]] = js.native
   @JSName("contains")
@@ -5859,9 +5849,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_input(selector: input, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLInputElement]] = js.native
   @JSName("contains")
-  def contains_input(selector: input, text: RegExp): Chainable[JQuery_[HTMLInputElement]] = js.native
+  def contains_input(selector: input, text: js.RegExp): Chainable[JQuery_[HTMLInputElement]] = js.native
   @JSName("contains")
-  def contains_input(selector: input, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLInputElement]] = js.native
+  def contains_input(selector: input, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLInputElement]] = js.native
   @JSName("contains")
   def contains_ins(selector: ins, text: String): Chainable[JQuery_[HTMLModElement]] = js.native
   @JSName("contains")
@@ -5871,9 +5861,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_ins(selector: ins, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLModElement]] = js.native
   @JSName("contains")
-  def contains_ins(selector: ins, text: RegExp): Chainable[JQuery_[HTMLModElement]] = js.native
+  def contains_ins(selector: ins, text: js.RegExp): Chainable[JQuery_[HTMLModElement]] = js.native
   @JSName("contains")
-  def contains_ins(selector: ins, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLModElement]] = js.native
+  def contains_ins(selector: ins, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLModElement]] = js.native
   @JSName("contains")
   def contains_kbd(selector: kbd, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5883,9 +5873,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_kbd(selector: kbd, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_kbd(selector: kbd, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_kbd(selector: kbd, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_kbd(selector: kbd, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_kbd(selector: kbd, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_label(selector: label, text: String): Chainable[JQuery_[HTMLLabelElement]] = js.native
   @JSName("contains")
@@ -5895,9 +5885,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_label(selector: label, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLLabelElement]] = js.native
   @JSName("contains")
-  def contains_label(selector: label, text: RegExp): Chainable[JQuery_[HTMLLabelElement]] = js.native
+  def contains_label(selector: label, text: js.RegExp): Chainable[JQuery_[HTMLLabelElement]] = js.native
   @JSName("contains")
-  def contains_label(selector: label, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLLabelElement]] = js.native
+  def contains_label(selector: label, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLLabelElement]] = js.native
   @JSName("contains")
   def contains_legend(selector: legend, text: String): Chainable[JQuery_[HTMLLegendElement]] = js.native
   @JSName("contains")
@@ -5907,9 +5897,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_legend(selector: legend, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLLegendElement]] = js.native
   @JSName("contains")
-  def contains_legend(selector: legend, text: RegExp): Chainable[JQuery_[HTMLLegendElement]] = js.native
+  def contains_legend(selector: legend, text: js.RegExp): Chainable[JQuery_[HTMLLegendElement]] = js.native
   @JSName("contains")
-  def contains_legend(selector: legend, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLLegendElement]] = js.native
+  def contains_legend(selector: legend, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLLegendElement]] = js.native
   @JSName("contains")
   def contains_li(selector: li, text: String): Chainable[JQuery_[HTMLLIElement]] = js.native
   @JSName("contains")
@@ -5919,9 +5909,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_li(selector: li, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLLIElement]] = js.native
   @JSName("contains")
-  def contains_li(selector: li, text: RegExp): Chainable[JQuery_[HTMLLIElement]] = js.native
+  def contains_li(selector: li, text: js.RegExp): Chainable[JQuery_[HTMLLIElement]] = js.native
   @JSName("contains")
-  def contains_li(selector: li, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLLIElement]] = js.native
+  def contains_li(selector: li, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLLIElement]] = js.native
   @JSName("contains")
   def contains_link(selector: link, text: String): Chainable[JQuery_[HTMLLinkElement]] = js.native
   @JSName("contains")
@@ -5931,9 +5921,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_link(selector: link, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLLinkElement]] = js.native
   @JSName("contains")
-  def contains_link(selector: link, text: RegExp): Chainable[JQuery_[HTMLLinkElement]] = js.native
+  def contains_link(selector: link, text: js.RegExp): Chainable[JQuery_[HTMLLinkElement]] = js.native
   @JSName("contains")
-  def contains_link(selector: link, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLLinkElement]] = js.native
+  def contains_link(selector: link, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLLinkElement]] = js.native
   @JSName("contains")
   def contains_main(selector: main, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5943,9 +5933,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_main(selector: main, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_main(selector: main, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_main(selector: main, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_main(selector: main, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_main(selector: main, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_map(selector: map, text: String): Chainable[JQuery_[HTMLMapElement]] = js.native
   @JSName("contains")
@@ -5955,9 +5945,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_map(selector: map, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLMapElement]] = js.native
   @JSName("contains")
-  def contains_map(selector: map, text: RegExp): Chainable[JQuery_[HTMLMapElement]] = js.native
+  def contains_map(selector: map, text: js.RegExp): Chainable[JQuery_[HTMLMapElement]] = js.native
   @JSName("contains")
-  def contains_map(selector: map, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLMapElement]] = js.native
+  def contains_map(selector: map, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLMapElement]] = js.native
   @JSName("contains")
   def contains_mark(selector: mark, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -5967,9 +5957,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_mark(selector: mark, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_mark(selector: mark, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_mark(selector: mark, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_mark(selector: mark, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_mark(selector: mark, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_marquee(selector: marquee, text: String): Chainable[JQuery_[HTMLMarqueeElement]] = js.native
   @JSName("contains")
@@ -5979,9 +5969,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_marquee(selector: marquee, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLMarqueeElement]] = js.native
   @JSName("contains")
-  def contains_marquee(selector: marquee, text: RegExp): Chainable[JQuery_[HTMLMarqueeElement]] = js.native
+  def contains_marquee(selector: marquee, text: js.RegExp): Chainable[JQuery_[HTMLMarqueeElement]] = js.native
   @JSName("contains")
-  def contains_marquee(selector: marquee, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLMarqueeElement]] = js.native
+  def contains_marquee(selector: marquee, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLMarqueeElement]] = js.native
   @JSName("contains")
   def contains_menu(selector: menu, text: String): Chainable[JQuery_[HTMLMenuElement]] = js.native
   @JSName("contains")
@@ -5991,9 +5981,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_menu(selector: menu, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLMenuElement]] = js.native
   @JSName("contains")
-  def contains_menu(selector: menu, text: RegExp): Chainable[JQuery_[HTMLMenuElement]] = js.native
+  def contains_menu(selector: menu, text: js.RegExp): Chainable[JQuery_[HTMLMenuElement]] = js.native
   @JSName("contains")
-  def contains_menu(selector: menu, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLMenuElement]] = js.native
+  def contains_menu(selector: menu, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLMenuElement]] = js.native
   @JSName("contains")
   def contains_meta(selector: meta, text: String): Chainable[JQuery_[HTMLMetaElement]] = js.native
   @JSName("contains")
@@ -6003,9 +5993,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_meta(selector: meta, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLMetaElement]] = js.native
   @JSName("contains")
-  def contains_meta(selector: meta, text: RegExp): Chainable[JQuery_[HTMLMetaElement]] = js.native
+  def contains_meta(selector: meta, text: js.RegExp): Chainable[JQuery_[HTMLMetaElement]] = js.native
   @JSName("contains")
-  def contains_meta(selector: meta, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLMetaElement]] = js.native
+  def contains_meta(selector: meta, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLMetaElement]] = js.native
   @JSName("contains")
   def contains_meter(selector: meter, text: String): Chainable[JQuery_[HTMLMeterElement]] = js.native
   @JSName("contains")
@@ -6015,9 +6005,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_meter(selector: meter, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLMeterElement]] = js.native
   @JSName("contains")
-  def contains_meter(selector: meter, text: RegExp): Chainable[JQuery_[HTMLMeterElement]] = js.native
+  def contains_meter(selector: meter, text: js.RegExp): Chainable[JQuery_[HTMLMeterElement]] = js.native
   @JSName("contains")
-  def contains_meter(selector: meter, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLMeterElement]] = js.native
+  def contains_meter(selector: meter, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLMeterElement]] = js.native
   @JSName("contains")
   def contains_nav(selector: nav, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -6027,9 +6017,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_nav(selector: nav, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_nav(selector: nav, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_nav(selector: nav, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_nav(selector: nav, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_nav(selector: nav, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_noscript(selector: noscript, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -6039,9 +6029,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_noscript(selector: noscript, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_noscript(selector: noscript, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_noscript(selector: noscript, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_noscript(selector: noscript, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_noscript(selector: noscript, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_object(selector: object_, text: String): Chainable[JQuery_[HTMLObjectElement]] = js.native
   @JSName("contains")
@@ -6051,9 +6041,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_object(selector: object_, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLObjectElement]] = js.native
   @JSName("contains")
-  def contains_object(selector: object_, text: RegExp): Chainable[JQuery_[HTMLObjectElement]] = js.native
+  def contains_object(selector: object_, text: js.RegExp): Chainable[JQuery_[HTMLObjectElement]] = js.native
   @JSName("contains")
-  def contains_object(selector: object_, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLObjectElement]] = js.native
+  def contains_object(selector: object_, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLObjectElement]] = js.native
   @JSName("contains")
   def contains_ol(selector: ol, text: String): Chainable[JQuery_[HTMLOListElement]] = js.native
   @JSName("contains")
@@ -6063,9 +6053,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_ol(selector: ol, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLOListElement]] = js.native
   @JSName("contains")
-  def contains_ol(selector: ol, text: RegExp): Chainable[JQuery_[HTMLOListElement]] = js.native
+  def contains_ol(selector: ol, text: js.RegExp): Chainable[JQuery_[HTMLOListElement]] = js.native
   @JSName("contains")
-  def contains_ol(selector: ol, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLOListElement]] = js.native
+  def contains_ol(selector: ol, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLOListElement]] = js.native
   @JSName("contains")
   def contains_optgroup(selector: optgroup, text: String): Chainable[JQuery_[HTMLOptGroupElement]] = js.native
   @JSName("contains")
@@ -6075,9 +6065,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_optgroup(selector: optgroup, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLOptGroupElement]] = js.native
   @JSName("contains")
-  def contains_optgroup(selector: optgroup, text: RegExp): Chainable[JQuery_[HTMLOptGroupElement]] = js.native
+  def contains_optgroup(selector: optgroup, text: js.RegExp): Chainable[JQuery_[HTMLOptGroupElement]] = js.native
   @JSName("contains")
-  def contains_optgroup(selector: optgroup, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLOptGroupElement]] = js.native
+  def contains_optgroup(selector: optgroup, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLOptGroupElement]] = js.native
   @JSName("contains")
   def contains_option(selector: option, text: String): Chainable[JQuery_[HTMLOptionElement]] = js.native
   @JSName("contains")
@@ -6087,9 +6077,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_option(selector: option, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLOptionElement]] = js.native
   @JSName("contains")
-  def contains_option(selector: option, text: RegExp): Chainable[JQuery_[HTMLOptionElement]] = js.native
+  def contains_option(selector: option, text: js.RegExp): Chainable[JQuery_[HTMLOptionElement]] = js.native
   @JSName("contains")
-  def contains_option(selector: option, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLOptionElement]] = js.native
+  def contains_option(selector: option, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLOptionElement]] = js.native
   @JSName("contains")
   def contains_output(selector: output, text: String): Chainable[JQuery_[HTMLOutputElement]] = js.native
   @JSName("contains")
@@ -6099,9 +6089,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_output(selector: output, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLOutputElement]] = js.native
   @JSName("contains")
-  def contains_output(selector: output, text: RegExp): Chainable[JQuery_[HTMLOutputElement]] = js.native
+  def contains_output(selector: output, text: js.RegExp): Chainable[JQuery_[HTMLOutputElement]] = js.native
   @JSName("contains")
-  def contains_output(selector: output, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLOutputElement]] = js.native
+  def contains_output(selector: output, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLOutputElement]] = js.native
   @JSName("contains")
   def contains_p(selector: p, text: String): Chainable[JQuery_[HTMLParagraphElement]] = js.native
   @JSName("contains")
@@ -6111,9 +6101,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_p(selector: p, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLParagraphElement]] = js.native
   @JSName("contains")
-  def contains_p(selector: p, text: RegExp): Chainable[JQuery_[HTMLParagraphElement]] = js.native
+  def contains_p(selector: p, text: js.RegExp): Chainable[JQuery_[HTMLParagraphElement]] = js.native
   @JSName("contains")
-  def contains_p(selector: p, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLParagraphElement]] = js.native
+  def contains_p(selector: p, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLParagraphElement]] = js.native
   @JSName("contains")
   def contains_param(selector: param, text: String): Chainable[JQuery_[HTMLParamElement]] = js.native
   @JSName("contains")
@@ -6123,9 +6113,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_param(selector: param, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLParamElement]] = js.native
   @JSName("contains")
-  def contains_param(selector: param, text: RegExp): Chainable[JQuery_[HTMLParamElement]] = js.native
+  def contains_param(selector: param, text: js.RegExp): Chainable[JQuery_[HTMLParamElement]] = js.native
   @JSName("contains")
-  def contains_param(selector: param, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLParamElement]] = js.native
+  def contains_param(selector: param, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLParamElement]] = js.native
   @JSName("contains")
   def contains_picture(selector: picture, text: String): Chainable[JQuery_[HTMLPictureElement]] = js.native
   @JSName("contains")
@@ -6135,9 +6125,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_picture(selector: picture, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLPictureElement]] = js.native
   @JSName("contains")
-  def contains_picture(selector: picture, text: RegExp): Chainable[JQuery_[HTMLPictureElement]] = js.native
+  def contains_picture(selector: picture, text: js.RegExp): Chainable[JQuery_[HTMLPictureElement]] = js.native
   @JSName("contains")
-  def contains_picture(selector: picture, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLPictureElement]] = js.native
+  def contains_picture(selector: picture, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLPictureElement]] = js.native
   @JSName("contains")
   def contains_pre(selector: pre, text: String): Chainable[JQuery_[HTMLPreElement]] = js.native
   @JSName("contains")
@@ -6147,9 +6137,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_pre(selector: pre, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLPreElement]] = js.native
   @JSName("contains")
-  def contains_pre(selector: pre, text: RegExp): Chainable[JQuery_[HTMLPreElement]] = js.native
+  def contains_pre(selector: pre, text: js.RegExp): Chainable[JQuery_[HTMLPreElement]] = js.native
   @JSName("contains")
-  def contains_pre(selector: pre, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLPreElement]] = js.native
+  def contains_pre(selector: pre, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLPreElement]] = js.native
   @JSName("contains")
   def contains_progress(selector: progress_, text: String): Chainable[JQuery_[HTMLProgressElement]] = js.native
   @JSName("contains")
@@ -6159,9 +6149,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_progress(selector: progress_, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLProgressElement]] = js.native
   @JSName("contains")
-  def contains_progress(selector: progress_, text: RegExp): Chainable[JQuery_[HTMLProgressElement]] = js.native
+  def contains_progress(selector: progress_, text: js.RegExp): Chainable[JQuery_[HTMLProgressElement]] = js.native
   @JSName("contains")
-  def contains_progress(selector: progress_, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLProgressElement]] = js.native
+  def contains_progress(selector: progress_, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLProgressElement]] = js.native
   @JSName("contains")
   def contains_q(selector: q, text: String): Chainable[JQuery_[HTMLQuoteElement]] = js.native
   @JSName("contains")
@@ -6171,9 +6161,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_q(selector: q, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLQuoteElement]] = js.native
   @JSName("contains")
-  def contains_q(selector: q, text: RegExp): Chainable[JQuery_[HTMLQuoteElement]] = js.native
+  def contains_q(selector: q, text: js.RegExp): Chainable[JQuery_[HTMLQuoteElement]] = js.native
   @JSName("contains")
-  def contains_q(selector: q, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLQuoteElement]] = js.native
+  def contains_q(selector: q, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLQuoteElement]] = js.native
   @JSName("contains")
   def contains_rp(selector: rp, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -6183,9 +6173,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_rp(selector: rp, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_rp(selector: rp, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_rp(selector: rp, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_rp(selector: rp, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_rp(selector: rp, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_rt(selector: rt, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -6195,9 +6185,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_rt(selector: rt, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_rt(selector: rt, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_rt(selector: rt, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_rt(selector: rt, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_rt(selector: rt, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_ruby(selector: ruby, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -6207,9 +6197,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_ruby(selector: ruby, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_ruby(selector: ruby, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_ruby(selector: ruby, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_ruby(selector: ruby, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_ruby(selector: ruby, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_s(selector: s, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -6219,9 +6209,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_s(selector: s, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_s(selector: s, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_s(selector: s, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_s(selector: s, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_s(selector: s, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_samp(selector: samp, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -6231,9 +6221,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_samp(selector: samp, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_samp(selector: samp, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_samp(selector: samp, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_samp(selector: samp, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_samp(selector: samp, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_script(selector: script, text: String): Chainable[JQuery_[HTMLScriptElement]] = js.native
   @JSName("contains")
@@ -6243,9 +6233,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_script(selector: script, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLScriptElement]] = js.native
   @JSName("contains")
-  def contains_script(selector: script, text: RegExp): Chainable[JQuery_[HTMLScriptElement]] = js.native
+  def contains_script(selector: script, text: js.RegExp): Chainable[JQuery_[HTMLScriptElement]] = js.native
   @JSName("contains")
-  def contains_script(selector: script, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLScriptElement]] = js.native
+  def contains_script(selector: script, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLScriptElement]] = js.native
   @JSName("contains")
   def contains_section(selector: section, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -6255,21 +6245,21 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_section(selector: section, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_section(selector: section, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_section(selector: section, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_section(selector: section, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_section(selector: section, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_select(selector: select, text: String): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def contains_select(selector: select, text: String): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("contains")
-  def contains_select(selector: select, text: String, options: PartialLoggableTimeoutabl): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def contains_select(selector: select, text: String, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("contains")
-  def contains_select(selector: select, text: Double): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def contains_select(selector: select, text: Double): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("contains")
-  def contains_select(selector: select, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def contains_select(selector: select, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("contains")
-  def contains_select(selector: select, text: RegExp): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def contains_select(selector: select, text: js.RegExp): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("contains")
-  def contains_select(selector: select, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def contains_select(selector: select, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("contains")
   def contains_slot(selector: slot, text: String): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("contains")
@@ -6279,9 +6269,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_slot(selector: slot, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("contains")
-  def contains_slot(selector: slot, text: RegExp): Chainable[JQuery_[HTMLSlotElement]] = js.native
+  def contains_slot(selector: slot, text: js.RegExp): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("contains")
-  def contains_slot(selector: slot, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSlotElement]] = js.native
+  def contains_slot(selector: slot, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("contains")
   def contains_small(selector: small, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -6291,9 +6281,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_small(selector: small, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_small(selector: small, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_small(selector: small, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_small(selector: small, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_small(selector: small, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_source(selector: source, text: String): Chainable[JQuery_[HTMLSourceElement]] = js.native
   @JSName("contains")
@@ -6303,9 +6293,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_source(selector: source, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSourceElement]] = js.native
   @JSName("contains")
-  def contains_source(selector: source, text: RegExp): Chainable[JQuery_[HTMLSourceElement]] = js.native
+  def contains_source(selector: source, text: js.RegExp): Chainable[JQuery_[HTMLSourceElement]] = js.native
   @JSName("contains")
-  def contains_source(selector: source, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSourceElement]] = js.native
+  def contains_source(selector: source, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSourceElement]] = js.native
   @JSName("contains")
   def contains_span(selector: span, text: String): Chainable[JQuery_[HTMLSpanElement]] = js.native
   @JSName("contains")
@@ -6315,9 +6305,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_span(selector: span, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSpanElement]] = js.native
   @JSName("contains")
-  def contains_span(selector: span, text: RegExp): Chainable[JQuery_[HTMLSpanElement]] = js.native
+  def contains_span(selector: span, text: js.RegExp): Chainable[JQuery_[HTMLSpanElement]] = js.native
   @JSName("contains")
-  def contains_span(selector: span, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSpanElement]] = js.native
+  def contains_span(selector: span, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSpanElement]] = js.native
   @JSName("contains")
   def contains_strong(selector: strong, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -6327,9 +6317,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_strong(selector: strong, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_strong(selector: strong, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_strong(selector: strong, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_strong(selector: strong, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_strong(selector: strong, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_style(selector: style, text: String): Chainable[JQuery_[HTMLStyleElement]] = js.native
   @JSName("contains")
@@ -6339,9 +6329,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_style(selector: style, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLStyleElement]] = js.native
   @JSName("contains")
-  def contains_style(selector: style, text: RegExp): Chainable[JQuery_[HTMLStyleElement]] = js.native
+  def contains_style(selector: style, text: js.RegExp): Chainable[JQuery_[HTMLStyleElement]] = js.native
   @JSName("contains")
-  def contains_style(selector: style, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLStyleElement]] = js.native
+  def contains_style(selector: style, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLStyleElement]] = js.native
   @JSName("contains")
   def contains_sub(selector: sub, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -6351,9 +6341,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_sub(selector: sub, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_sub(selector: sub, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_sub(selector: sub, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_sub(selector: sub, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_sub(selector: sub, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_summary(selector: summary, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -6363,9 +6353,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_summary(selector: summary, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_summary(selector: summary, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_summary(selector: summary, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_summary(selector: summary, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_summary(selector: summary, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_sup(selector: sup, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -6375,9 +6365,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_sup(selector: sup, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_sup(selector: sup, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_sup(selector: sup, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_sup(selector: sup, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_sup(selector: sup, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_table(selector: table, text: String): Chainable[JQuery_[HTMLTableElement]] = js.native
   @JSName("contains")
@@ -6387,9 +6377,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_table(selector: table, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableElement]] = js.native
   @JSName("contains")
-  def contains_table(selector: table, text: RegExp): Chainable[JQuery_[HTMLTableElement]] = js.native
+  def contains_table(selector: table, text: js.RegExp): Chainable[JQuery_[HTMLTableElement]] = js.native
   @JSName("contains")
-  def contains_table(selector: table, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableElement]] = js.native
+  def contains_table(selector: table, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableElement]] = js.native
   @JSName("contains")
   def contains_tbody(selector: tbody, text: String): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
   @JSName("contains")
@@ -6399,9 +6389,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_tbody(selector: tbody, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
   @JSName("contains")
-  def contains_tbody(selector: tbody, text: RegExp): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
+  def contains_tbody(selector: tbody, text: js.RegExp): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
   @JSName("contains")
-  def contains_tbody(selector: tbody, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
+  def contains_tbody(selector: tbody, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
   @JSName("contains")
   def contains_td(selector: td, text: String): Chainable[JQuery_[HTMLTableDataCellElement]] = js.native
   @JSName("contains")
@@ -6411,9 +6401,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_td(selector: td, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableDataCellElement]] = js.native
   @JSName("contains")
-  def contains_td(selector: td, text: RegExp): Chainable[JQuery_[HTMLTableDataCellElement]] = js.native
+  def contains_td(selector: td, text: js.RegExp): Chainable[JQuery_[HTMLTableDataCellElement]] = js.native
   @JSName("contains")
-  def contains_td(selector: td, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableDataCellElement]] = js.native
+  def contains_td(selector: td, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableDataCellElement]] = js.native
   @JSName("contains")
   def contains_template(selector: template, text: String): Chainable[JQuery_[HTMLTemplateElement]] = js.native
   @JSName("contains")
@@ -6423,9 +6413,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_template(selector: template, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTemplateElement]] = js.native
   @JSName("contains")
-  def contains_template(selector: template, text: RegExp): Chainable[JQuery_[HTMLTemplateElement]] = js.native
+  def contains_template(selector: template, text: js.RegExp): Chainable[JQuery_[HTMLTemplateElement]] = js.native
   @JSName("contains")
-  def contains_template(selector: template, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTemplateElement]] = js.native
+  def contains_template(selector: template, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTemplateElement]] = js.native
   @JSName("contains")
   def contains_textarea(selector: textarea, text: String): Chainable[JQuery_[HTMLTextAreaElement]] = js.native
   @JSName("contains")
@@ -6435,9 +6425,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_textarea(selector: textarea, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTextAreaElement]] = js.native
   @JSName("contains")
-  def contains_textarea(selector: textarea, text: RegExp): Chainable[JQuery_[HTMLTextAreaElement]] = js.native
+  def contains_textarea(selector: textarea, text: js.RegExp): Chainable[JQuery_[HTMLTextAreaElement]] = js.native
   @JSName("contains")
-  def contains_textarea(selector: textarea, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTextAreaElement]] = js.native
+  def contains_textarea(selector: textarea, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTextAreaElement]] = js.native
   @JSName("contains")
   def contains_tfoot(selector: tfoot, text: String): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
   @JSName("contains")
@@ -6447,9 +6437,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_tfoot(selector: tfoot, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
   @JSName("contains")
-  def contains_tfoot(selector: tfoot, text: RegExp): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
+  def contains_tfoot(selector: tfoot, text: js.RegExp): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
   @JSName("contains")
-  def contains_tfoot(selector: tfoot, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
+  def contains_tfoot(selector: tfoot, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
   @JSName("contains")
   def contains_th(selector: th, text: String): Chainable[JQuery_[HTMLTableHeaderCellElement]] = js.native
   @JSName("contains")
@@ -6459,9 +6449,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_th(selector: th, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableHeaderCellElement]] = js.native
   @JSName("contains")
-  def contains_th(selector: th, text: RegExp): Chainable[JQuery_[HTMLTableHeaderCellElement]] = js.native
+  def contains_th(selector: th, text: js.RegExp): Chainable[JQuery_[HTMLTableHeaderCellElement]] = js.native
   @JSName("contains")
-  def contains_th(selector: th, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableHeaderCellElement]] = js.native
+  def contains_th(selector: th, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableHeaderCellElement]] = js.native
   @JSName("contains")
   def contains_thead(selector: thead, text: String): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
   @JSName("contains")
@@ -6471,9 +6461,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_thead(selector: thead, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
   @JSName("contains")
-  def contains_thead(selector: thead, text: RegExp): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
+  def contains_thead(selector: thead, text: js.RegExp): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
   @JSName("contains")
-  def contains_thead(selector: thead, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
+  def contains_thead(selector: thead, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableSectionElement]] = js.native
   @JSName("contains")
   def contains_time(selector: time, text: String): Chainable[JQuery_[HTMLTimeElement]] = js.native
   @JSName("contains")
@@ -6483,9 +6473,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_time(selector: time, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTimeElement]] = js.native
   @JSName("contains")
-  def contains_time(selector: time, text: RegExp): Chainable[JQuery_[HTMLTimeElement]] = js.native
+  def contains_time(selector: time, text: js.RegExp): Chainable[JQuery_[HTMLTimeElement]] = js.native
   @JSName("contains")
-  def contains_time(selector: time, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTimeElement]] = js.native
+  def contains_time(selector: time, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTimeElement]] = js.native
   @JSName("contains")
   def contains_title(selector: title, text: String): Chainable[JQuery_[HTMLTitleElement]] = js.native
   @JSName("contains")
@@ -6495,9 +6485,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_title(selector: title, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTitleElement]] = js.native
   @JSName("contains")
-  def contains_title(selector: title, text: RegExp): Chainable[JQuery_[HTMLTitleElement]] = js.native
+  def contains_title(selector: title, text: js.RegExp): Chainable[JQuery_[HTMLTitleElement]] = js.native
   @JSName("contains")
-  def contains_title(selector: title, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTitleElement]] = js.native
+  def contains_title(selector: title, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTitleElement]] = js.native
   @JSName("contains")
   def contains_tr(selector: tr, text: String): Chainable[JQuery_[HTMLTableRowElement]] = js.native
   @JSName("contains")
@@ -6507,9 +6497,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_tr(selector: tr, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableRowElement]] = js.native
   @JSName("contains")
-  def contains_tr(selector: tr, text: RegExp): Chainable[JQuery_[HTMLTableRowElement]] = js.native
+  def contains_tr(selector: tr, text: js.RegExp): Chainable[JQuery_[HTMLTableRowElement]] = js.native
   @JSName("contains")
-  def contains_tr(selector: tr, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableRowElement]] = js.native
+  def contains_tr(selector: tr, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTableRowElement]] = js.native
   @JSName("contains")
   def contains_track(selector: track, text: String): Chainable[JQuery_[HTMLTrackElement]] = js.native
   @JSName("contains")
@@ -6519,9 +6509,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_track(selector: track, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTrackElement]] = js.native
   @JSName("contains")
-  def contains_track(selector: track, text: RegExp): Chainable[JQuery_[HTMLTrackElement]] = js.native
+  def contains_track(selector: track, text: js.RegExp): Chainable[JQuery_[HTMLTrackElement]] = js.native
   @JSName("contains")
-  def contains_track(selector: track, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTrackElement]] = js.native
+  def contains_track(selector: track, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLTrackElement]] = js.native
   @JSName("contains")
   def contains_u(selector: u, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -6531,9 +6521,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_u(selector: u, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_u(selector: u, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_u(selector: u, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_u(selector: u, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_u(selector: u, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_ul(selector: ul, text: String): Chainable[JQuery_[HTMLUListElement]] = js.native
   @JSName("contains")
@@ -6543,9 +6533,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_ul(selector: ul, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLUListElement]] = js.native
   @JSName("contains")
-  def contains_ul(selector: ul, text: RegExp): Chainable[JQuery_[HTMLUListElement]] = js.native
+  def contains_ul(selector: ul, text: js.RegExp): Chainable[JQuery_[HTMLUListElement]] = js.native
   @JSName("contains")
-  def contains_ul(selector: ul, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLUListElement]] = js.native
+  def contains_ul(selector: ul, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLUListElement]] = js.native
   @JSName("contains")
   def contains_var(selector: `var`, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -6555,9 +6545,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_var(selector: `var`, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_var(selector: `var`, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_var(selector: `var`, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_var(selector: `var`, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_var(selector: `var`, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
   def contains_video(selector: video, text: String): Chainable[JQuery_[HTMLVideoElement]] = js.native
   @JSName("contains")
@@ -6567,9 +6557,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_video(selector: video, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLVideoElement]] = js.native
   @JSName("contains")
-  def contains_video(selector: video, text: RegExp): Chainable[JQuery_[HTMLVideoElement]] = js.native
+  def contains_video(selector: video, text: js.RegExp): Chainable[JQuery_[HTMLVideoElement]] = js.native
   @JSName("contains")
-  def contains_video(selector: video, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLVideoElement]] = js.native
+  def contains_video(selector: video, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLVideoElement]] = js.native
   @JSName("contains")
   def contains_wbr(selector: wbr, text: String): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
@@ -6579,9 +6569,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("contains")
   def contains_wbr(selector: wbr, text: Double, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_wbr(selector: wbr, text: RegExp): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_wbr(selector: wbr, text: js.RegExp): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("contains")
-  def contains_wbr(selector: wbr, text: RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
+  def contains_wbr(selector: wbr, text: js.RegExp, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   /**
     * Double-click a DOM element.
     *
@@ -7055,9 +7045,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("filter")
   def filter_section(selector: section, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("filter")
-  def filter_select(selector: select): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def filter_select(selector: select): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("filter")
-  def filter_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def filter_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("filter")
   def filter_slot(selector: slot): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("filter")
@@ -7548,9 +7538,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("find")
   def find_section(selector: section, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("find")
-  def find_select(selector: select): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def find_select(selector: select): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("find")
-  def find_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def find_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("find")
   def find_slot(selector: slot): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("find")
@@ -7704,16 +7694,17 @@ trait Chainable[Subject] extends js.Object {
   def focused(): Chainable[JQuery_[HTMLElement]] = js.native
   def focused(options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   /**
-    * Get one or more DOM elements by selector.
-    * The querying behavior of this command matches exactly how $(…) works in jQuery.
-    * @see https://on.cypress.io/get
+    * Get one or more DOM elements by alias.
+    * @see https://on.cypress.io/get#Alias
     * @example
-    *    cy.get('.list>li')    // Yield the <li>'s in <.list>
-    *    cy.get('ul li:first').should('have.class', 'active')
-    *    cy.get('.dropdown-menu').click()
+    *    // Get the aliased ‘todos’ elements
+    *    cy.get('ul#todos').as('todos')
+    *    //...hack hack hack...
+    *    //later retrieve the todos
+    *    cy.get('@todos')
     */
-  def get[E /* <: Node */](selector: String): Chainable[JQuery_[E]] = js.native
-  def get[E /* <: Node */](selector: String, options: PartialLoggableTimeoutablLog): Chainable[JQuery_[E]] = js.native
+  def get[S](alias: String): Chainable[S] = js.native
+  def get[S](alias: String, options: PartialLoggableTimeoutablLog): Chainable[S] = js.native
   /**
     * Get a browser cookie by its name.
     *
@@ -7729,19 +7720,18 @@ trait Chainable[Subject] extends js.Object {
   def getCookies(): Chainable[js.Array[Cookie]] = js.native
   def getCookies(options: PartialLoggableTimeoutabl): Chainable[js.Array[Cookie]] = js.native
   /**
-    * Get one or more DOM elements by alias.
-    * @see https://on.cypress.io/get#Alias
+    * Get one or more DOM elements by selector.
+    * The querying behavior of this command matches exactly how $(…) works in jQuery.
+    * @see https://on.cypress.io/get
     * @example
-    *    // Get the aliased ‘todos’ elements
-    *    cy.get('ul#todos').as('todos')
-    *    //...hack hack hack...
-    *    //later retrieve the todos
-    *    cy.get('@todos')
+    *    cy.get('.list>li')    // Yield the <li>'s in <.list>
+    *    cy.get('ul li:first').should('have.class', 'active')
+    *    cy.get('.dropdown-menu').click()
     */
   @JSName("get")
-  def get_S[S](alias: String): Chainable[S] = js.native
+  def get_E_Node[E /* <: Node */](selector: String): Chainable[JQuery_[E]] = js.native
   @JSName("get")
-  def get_S[S](alias: String, options: PartialLoggableTimeoutablLog): Chainable[S] = js.native
+  def get_E_Node[E /* <: Node */](selector: String, options: PartialLoggableTimeoutablLog): Chainable[JQuery_[E]] = js.native
   /**
     * Get one or more DOM elements by node name: input, button, etc.
     * @see https://on.cypress.io/get
@@ -8118,9 +8108,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("get")
   def get_section(selector: section, options: PartialLoggableTimeoutablLog): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("get")
-  def get_select(selector: select): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def get_select(selector: select): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("get")
-  def get_select(selector: select, options: PartialLoggableTimeoutablLog): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def get_select(selector: select, options: PartialLoggableTimeoutablLog): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("get")
   def get_slot(selector: slot): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("get")
@@ -8250,9 +8240,9 @@ trait Chainable[Subject] extends js.Object {
     *
     * @see https://on.cypress.io/invoke
     */
-  def invoke(functionName: String, args: js.Any*): Chainable[Subject] = js.native
+  def invoke(functionName: /* keyof Subject */ String, args: js.Any*): Chainable[Subject] = js.native
   // don't have a way to express return types yet
-  def invoke(options: Loggable, functionName: String, args: js.Any*): Chainable[Subject] = js.native
+  def invoke(options: Loggable, functionName: /* keyof Subject */ String, args: js.Any*): Chainable[Subject] = js.native
   /**
     * Invoke a function in an array of functions.
     * @see https://on.cypress.io/invoke
@@ -8269,10 +8259,10 @@ trait Chainable[Subject] extends js.Object {
     *    // Drill into nested properties by using dot notation
     *    cy.wrap({foo: {bar: {baz: 1}}}).its('foo.bar.baz')
     */
-  def its[K /* <: String */](propertyName: K): Chainable[
+  def its[K /* <: /* keyof Subject */ String */](propertyName: K): Chainable[
     /* import warning: importer.ImportType#apply Failed type conversion: Subject[K] */ js.Any
   ] = js.native
-  def its[K /* <: String */](propertyName: K, options: Loggable): Chainable[
+  def its[K /* <: /* keyof Subject */ String */](propertyName: K, options: Loggable): Chainable[
     /* import warning: importer.ImportType#apply Failed type conversion: Subject[K] */ js.Any
   ] = js.native
   /**
@@ -8761,9 +8751,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("nextAll")
   def nextAll_section(selector: section, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("nextAll")
-  def nextAll_select(selector: select): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def nextAll_select(selector: select): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("nextAll")
-  def nextAll_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def nextAll_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("nextAll")
   def nextAll_slot(selector: slot): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("nextAll")
@@ -9256,9 +9246,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("nextUntil")
   def nextUntil_section(selector: section, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("nextUntil")
-  def nextUntil_select(selector: select): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def nextUntil_select(selector: select): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("nextUntil")
-  def nextUntil_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def nextUntil_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("nextUntil")
   def nextUntil_slot(selector: slot): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("nextUntil")
@@ -9737,9 +9727,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("next")
   def next_section(selector: section, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("next")
-  def next_select(selector: select): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def next_select(selector: select): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("next")
-  def next_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def next_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("next")
   def next_slot(selector: slot): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("next")
@@ -9883,7 +9873,7 @@ trait Chainable[Subject] extends js.Object {
     */
   def off(
     action: uncaughtColonexception,
-    fn: js.Function2[/* error */ Error, /* runnable */ IRunnable, `false` | Unit]
+    fn: js.Function2[/* error */ js.Error, /* runnable */ IRunnable, `false` | Unit]
   ): Unit = js.native
   /**
     * Fires when your app calls the global `window.confirm()` method.
@@ -10126,7 +10116,7 @@ trait Chainable[Subject] extends js.Object {
     */
   def on(
     action: uncaughtColonexception,
-    fn: js.Function2[/* error */ Error, /* runnable */ IRunnable, `false` | Unit]
+    fn: js.Function2[/* error */ js.Error, /* runnable */ IRunnable, `false` | Unit]
   ): Unit = js.native
   /**
     * Fires when your app calls the global `window.confirm()` method.
@@ -10369,7 +10359,7 @@ trait Chainable[Subject] extends js.Object {
     */
   def once(
     action: uncaughtColonexception,
-    fn: js.Function2[/* error */ Error, /* runnable */ IRunnable, `false` | Unit]
+    fn: js.Function2[/* error */ js.Error, /* runnable */ IRunnable, `false` | Unit]
   ): Unit = js.native
   /**
     * Fires when your app calls the global `window.confirm()` method.
@@ -10968,9 +10958,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("parent")
   def parent_section(selector: section, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("parent")
-  def parent_select(selector: select): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def parent_select(selector: select): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("parent")
-  def parent_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def parent_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("parent")
   def parent_slot(selector: slot): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("parent")
@@ -11666,11 +11656,11 @@ trait Chainable[Subject] extends js.Object {
   @JSName("parentsUntil")
   def parentsUntil_section(selector: section, filter: String, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("parentsUntil")
-  def parentsUntil_select(selector: select): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def parentsUntil_select(selector: select): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("parentsUntil")
-  def parentsUntil_select(selector: select, filter: String): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def parentsUntil_select(selector: select, filter: String): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("parentsUntil")
-  def parentsUntil_select(selector: select, filter: String, options: PartialLoggableTimeoutabl): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def parentsUntil_select(selector: select, filter: String, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("parentsUntil")
   def parentsUntil_slot(selector: slot): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("parentsUntil")
@@ -12201,9 +12191,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("parents")
   def parents_section(selector: section, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("parents")
-  def parents_select(selector: select): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def parents_select(selector: select): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("parents")
-  def parents_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def parents_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("parents")
   def parents_slot(selector: slot): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("parents")
@@ -12725,9 +12715,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("prevAll")
   def prevAll_section(selector: section, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("prevAll")
-  def prevAll_select(selector: select): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def prevAll_select(selector: select): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("prevAll")
-  def prevAll_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def prevAll_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("prevAll")
   def prevAll_slot(selector: slot): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("prevAll")
@@ -13412,11 +13402,11 @@ trait Chainable[Subject] extends js.Object {
   @JSName("prevUntil")
   def prevUntil_section(selector: section, filter: String, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("prevUntil")
-  def prevUntil_select(selector: select): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def prevUntil_select(selector: select): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("prevUntil")
-  def prevUntil_select(selector: select, filter: String): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def prevUntil_select(selector: select, filter: String): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("prevUntil")
-  def prevUntil_select(selector: select, filter: String, options: PartialLoggableTimeoutabl): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def prevUntil_select(selector: select, filter: String, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("prevUntil")
   def prevUntil_slot(selector: slot): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("prevUntil")
@@ -13949,9 +13939,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("prev")
   def prev_section(selector: section, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("prev")
-  def prev_select(selector: select): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def prev_select(selector: select): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("prev")
-  def prev_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def prev_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("prev")
   def prev_slot(selector: slot): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("prev")
@@ -14184,9 +14174,9 @@ trait Chainable[Subject] extends js.Object {
   def route(fn: js.Function0[RouteOptions]): Chainable[Null] = js.native
   def route(method: String, url: String, response: String): Chainable[Null] = js.native
   def route(method: String, url: String, response: js.Object): Chainable[Null] = js.native
-  def route(method: String, url: RegExp): Chainable[Null] = js.native
-  def route(method: String, url: RegExp, response: String): Chainable[Null] = js.native
-  def route(method: String, url: RegExp, response: js.Object): Chainable[Null] = js.native
+  def route(method: String, url: js.RegExp): Chainable[Null] = js.native
+  def route(method: String, url: js.RegExp, response: String): Chainable[Null] = js.native
+  def route(method: String, url: js.RegExp, response: js.Object): Chainable[Null] = js.native
   /**
     * Spy or stub a given route.
     *
@@ -14223,9 +14213,9 @@ trait Chainable[Subject] extends js.Object {
     */
   def route(url: String, response: String): Chainable[Null] = js.native
   def route(url: String, response: js.Object): Chainable[Null] = js.native
-  def route(url: RegExp): Chainable[Null] = js.native
-  def route(url: RegExp, response: String): Chainable[Null] = js.native
-  def route(url: RegExp, response: js.Object): Chainable[Null] = js.native
+  def route(url: js.RegExp): Chainable[Null] = js.native
+  def route(url: js.RegExp, response: String): Chainable[Null] = js.native
+  def route(url: js.RegExp, response: js.Object): Chainable[Null] = js.native
   /**
     * Take a screenshot of the application under test and the Cypress Command Log.
     *
@@ -14423,7 +14413,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("should")
   def should_beabove(chainer: beDotabove, value: Double): Chainable[Subject] = js.native
   @JSName("should")
-  def should_beabove(chainer: beDotabove, value: Date): Chainable[Subject] = js.native
+  def should_beabove(chainer: beDotabove, value: js.Date): Chainable[Subject] = js.native
   /**
     * Assert if spy was always called with matching arguments (and possibly others).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyalwayscalledwithmatcharg1-arg2-
@@ -14530,7 +14520,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("should")
   def should_beatleast(chainer: beDotatDotleast, value: Double): Chainable[Subject] = js.native
   @JSName("should")
-  def should_beatleast(chainer: beDotatDotleast, value: Date): Chainable[Subject] = js.native
+  def should_beatleast(chainer: beDotatDotleast, value: js.Date): Chainable[Subject] = js.native
   /**
     * Asserts that the target is a number or a `n` date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -15081,7 +15071,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_bewithin(chainer: beDotwithin, start: Date, end: Date): Chainable[Subject] = js.native
+  def should_bewithin(chainer: beDotwithin, start: js.Date, end: js.Date): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.change` asserts that the given function `subject` returns a different value when it’s invoked before the target function compared to when it’s invoked afterward.
     * However, it’s often best to assert that `subject` is equal to its expected value.
@@ -15370,7 +15360,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("should")
   def should_havealwaysthrown(chainer: haveDotalwaysDotthrown, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_havealwaysthrown(chainer: haveDotalwaysDotthrown, value: Error): Chainable[Subject] = js.native
+  def should_havealwaysthrown(chainer: haveDotalwaysDotthrown, value: js.Error): Chainable[Subject] = js.native
   @JSName("should")
   def should_havealwaysthrown(chainer: haveDotalwaysDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
@@ -15804,7 +15794,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("should")
   def should_havestring(chainer: haveDotstring, `match`: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_havestring(chainer: haveDotstring, `match`: RegExp): Chainable[Subject] = js.native
+  def should_havestring(chainer: haveDotstring, `match`: js.RegExp): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection is equal to the given text, using `.text()`.
     * @example
@@ -15840,7 +15830,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("should")
   def should_havethrown(chainer: haveDotthrown, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_havethrown(chainer: haveDotthrown, value: Error): Chainable[Subject] = js.native
+  def should_havethrown(chainer: haveDotthrown, value: js.Error): Chainable[Subject] = js.native
   @JSName("should")
   def should_havethrown(chainer: haveDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
@@ -16001,7 +15991,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_match(chainer: `match`, value: RegExp): Chainable[Subject] = js.native
+  def should_match(chainer: `match`, value: js.RegExp): Chainable[Subject] = js.native
   /**
     * Assert spy not always returned the provided value.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyalwaysreturnedobj
@@ -16056,7 +16046,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("should")
   def should_notbeabove(chainer: notDotbeDotabove, value: Double): Chainable[Subject] = js.native
   @JSName("should")
-  def should_notbeabove(chainer: notDotbeDotabove, value: Date): Chainable[Subject] = js.native
+  def should_notbeabove(chainer: notDotbeDotabove, value: js.Date): Chainable[Subject] = js.native
   /**
     * Assert if spy was not always called with matching arguments (and possibly others).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyalwayscalledwithmatcharg1-arg2-
@@ -16163,7 +16153,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("should")
   def should_notbeatleast(chainer: notDotbeDotatDotleast, value: Double): Chainable[Subject] = js.native
   @JSName("should")
-  def should_notbeatleast(chainer: notDotbeDotatDotleast, value: Date): Chainable[Subject] = js.native
+  def should_notbeatleast(chainer: notDotbeDotatDotleast, value: js.Date): Chainable[Subject] = js.native
   /**
     * Asserts that the target is not a number or not a `n` date less than or equal to the given number or date n respectively.
     * However, it’s often best to assert that the target is equal to its expected value.
@@ -16714,7 +16704,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notbewithin(chainer: notDotbeDotwithin, start: Date, end: Date): Chainable[Subject] = js.native
+  def should_notbewithin(chainer: notDotbeDotwithin, start: js.Date, end: js.Date): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.change` asserts that the given function `subject` returns a different value when it’s invoked before the target function compared to when it’s invoked afterward.
     * However, it’s often best to assert that `subject` is equal to its expected value.
@@ -17002,7 +16992,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("should")
   def should_nothavealwaysthrown(chainer: notDothaveDotalwaysDotthrown, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_nothavealwaysthrown(chainer: notDothaveDotalwaysDotthrown, value: Error): Chainable[Subject] = js.native
+  def should_nothavealwaysthrown(chainer: notDothaveDotalwaysDotthrown, value: js.Error): Chainable[Subject] = js.native
   @JSName("should")
   def should_nothavealwaysthrown(chainer: notDothaveDotalwaysDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
@@ -17418,7 +17408,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("should")
   def should_nothavestring(chainer: notDothaveDotstring, `match`: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_nothavestring(chainer: notDothaveDotstring, `match`: RegExp): Chainable[Subject] = js.native
+  def should_nothavestring(chainer: notDothaveDotstring, `match`: js.RegExp): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection is not equal to the given text, using `.text()`.
     * @example
@@ -17454,7 +17444,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("should")
   def should_nothavethrown(chainer: notDothaveDotthrown, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_nothavethrown(chainer: notDothaveDotthrown, value: Error): Chainable[Subject] = js.native
+  def should_nothavethrown(chainer: notDothaveDotthrown, value: js.Error): Chainable[Subject] = js.native
   @JSName("should")
   def should_nothavethrown(chainer: notDothaveDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
@@ -17615,7 +17605,7 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_notmatch(chainer: notDotmatch, value: RegExp): Chainable[Subject] = js.native
+  def should_notmatch(chainer: notDotmatch, value: js.RegExp): Chainable[Subject] = js.native
   /**
     * When the target is a non-function object, `.respondTo` asserts that the target does not have a `method` with the given name method. The method can be own or inherited, and it can be enumerable or non-enumerable.
     * @example
@@ -17746,7 +17736,7 @@ trait Chainable[Subject] extends js.Object {
   @JSName("should")
   def should_throw(chainer: `throw`, error: js.Function, expected: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_throw(chainer: `throw`, error: js.Function, expected: RegExp): Chainable[Subject] = js.native
+  def should_throw(chainer: `throw`, error: js.Function, expected: js.RegExp): Chainable[Subject] = js.native
   /**
     * When no arguments are provided, `.throw` invokes the target function and asserts that an error is thrown.
     * When one argument is provided, and it’s a string, `.throw` invokes the target function and asserts that an error is thrown with a message that contains that string.
@@ -17768,15 +17758,15 @@ trait Chainable[Subject] extends js.Object {
     *   cy.location('href').should('contain', '/tag/tutorials/')
     */
   @JSName("should")
-  def should_throw(chainer: `throw`, error: Error): Chainable[Subject] = js.native
+  def should_throw(chainer: `throw`, error: js.Error): Chainable[Subject] = js.native
   @JSName("should")
-  def should_throw(chainer: `throw`, error: Error, expected: String): Chainable[Subject] = js.native
+  def should_throw(chainer: `throw`, error: js.Error, expected: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_throw(chainer: `throw`, error: Error, expected: RegExp): Chainable[Subject] = js.native
+  def should_throw(chainer: `throw`, error: js.Error, expected: js.RegExp): Chainable[Subject] = js.native
   @JSName("should")
   def should_throw(chainer: `throw`, value: String): Chainable[Subject] = js.native
   @JSName("should")
-  def should_throw(chainer: `throw`, value: RegExp): Chainable[Subject] = js.native
+  def should_throw(chainer: `throw`, value: js.RegExp): Chainable[Subject] = js.native
   /**
     * Get all sibling DOM elements.
     *
@@ -18172,9 +18162,9 @@ trait Chainable[Subject] extends js.Object {
   @JSName("siblings")
   def siblings_section(selector: section, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLElement]] = js.native
   @JSName("siblings")
-  def siblings_select(selector: select): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def siblings_select(selector: select): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("siblings")
-  def siblings_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[org.scalajs.dom.raw.HTMLSelectElement]] = js.native
+  def siblings_select(selector: select, options: PartialLoggableTimeoutabl): Chainable[JQuery_[HTMLSelectElement]] = js.native
   @JSName("siblings")
   def siblings_slot(selector: slot): Chainable[JQuery_[HTMLSlotElement]] = js.native
   @JSName("siblings")
@@ -18329,7 +18319,7 @@ trait Chainable[Subject] extends js.Object {
     *    App.start()
     *    expect(util.addListeners).to.be.called
     */
-  def spy[T](obj: T, method: String): Agent[SinonSpy] = js.native
+  def spy[T](obj: T, method: /* keyof T */ String): Agent[SinonSpy] = js.native
   /**
     * Replace a function, record its usage and control its behavior.
     * > Note: `.stub()` assumes you are already familiar with our guide:
@@ -18371,13 +18361,13 @@ trait Chainable[Subject] extends js.Object {
     *    expect(o.toString()).to.equal('foo')
     *    expect(o.toString).to.have.been.calledOnce
     */
-  def stub[T](obj: T, method: String): Agent[SinonStub] = js.native
+  def stub[T](obj: T, method: /* keyof T */ String): Agent[SinonStub] = js.native
   /**
     * Stubs a method on an object
     *
     * @deprecated Use `cy.stub(object, name).callsFake(fn)` instead
     */
-  def stub[T](obj: T, method: String, func: js.Function1[/* repeated */ js.Any, _]): Agent[SinonStub] = js.native
+  def stub[T](obj: T, method: /* keyof T */ String, func: js.Function1[/* repeated */ js.Any, _]): Agent[SinonStub] = js.native
   /**
     * Submit a form.
     *
@@ -18517,7 +18507,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: abort,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.UIEvent]
+    options: Partial[TriggerOptions with ObjectLike with UIEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_animationcancel(eventName: animationcancel): Chainable[Subject] = js.native
@@ -18538,7 +18528,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: animationcancel,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.AnimationEvent]
+    options: Partial[TriggerOptions with ObjectLike with AnimationEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_animationend(eventName: animationend): Chainable[Subject] = js.native
@@ -18559,7 +18549,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: animationend,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.AnimationEvent]
+    options: Partial[TriggerOptions with ObjectLike with AnimationEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_animationiteration(eventName: animationiteration): Chainable[Subject] = js.native
@@ -18583,7 +18573,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: animationiteration,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.AnimationEvent]
+    options: Partial[TriggerOptions with ObjectLike with AnimationEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_animationstart(eventName: animationstart): Chainable[Subject] = js.native
@@ -18604,7 +18594,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: animationstart,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.AnimationEvent]
+    options: Partial[TriggerOptions with ObjectLike with AnimationEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_auxclick(eventName: auxclick): Chainable[Subject] = js.native
@@ -18625,7 +18615,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: auxclick,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.MouseEvent]
+    options: Partial[TriggerOptions with ObjectLike with MouseEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_blur(eventName: blur): Chainable[Subject] = js.native
@@ -18646,7 +18636,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: blur,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.FocusEvent]
+    options: Partial[TriggerOptions with ObjectLike with FocusEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_cancel(eventName: cancel): Chainable[Subject] = js.native
@@ -18751,7 +18741,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: click,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.MouseEvent]
+    options: Partial[TriggerOptions with ObjectLike with MouseEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_close(eventName: close): Chainable[Subject] = js.native
@@ -18793,7 +18783,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: contextmenu,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.MouseEvent]
+    options: Partial[TriggerOptions with ObjectLike with MouseEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_copy(eventName: copy): Chainable[Subject] = js.native
@@ -18814,7 +18804,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: copy,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.ClipboardEvent]
+    options: Partial[TriggerOptions with ObjectLike with ClipboardEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_cuechange(eventName: cuechange): Chainable[Subject] = js.native
@@ -18856,7 +18846,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: cut,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.ClipboardEvent]
+    options: Partial[TriggerOptions with ObjectLike with ClipboardEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_dblclick(eventName: dblclick): Chainable[Subject] = js.native
@@ -18877,7 +18867,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: dblclick,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.MouseEvent]
+    options: Partial[TriggerOptions with ObjectLike with MouseEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_drag(eventName: drag): Chainable[Subject] = js.native
@@ -18898,7 +18888,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: drag,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.DragEvent]
+    options: Partial[TriggerOptions with ObjectLike with DragEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_dragend(eventName: dragend): Chainable[Subject] = js.native
@@ -18919,7 +18909,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: dragend,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.DragEvent]
+    options: Partial[TriggerOptions with ObjectLike with DragEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_dragenter(eventName: dragenter): Chainable[Subject] = js.native
@@ -18940,7 +18930,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: dragenter,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.DragEvent]
+    options: Partial[TriggerOptions with ObjectLike with DragEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_dragexit(eventName: dragexit): Chainable[Subject] = js.native
@@ -18982,7 +18972,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: dragleave,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.DragEvent]
+    options: Partial[TriggerOptions with ObjectLike with DragEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_dragover(eventName: dragover): Chainable[Subject] = js.native
@@ -19003,7 +18993,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: dragover,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.DragEvent]
+    options: Partial[TriggerOptions with ObjectLike with DragEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_dragstart(eventName: dragstart): Chainable[Subject] = js.native
@@ -19024,7 +19014,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: dragstart,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.DragEvent]
+    options: Partial[TriggerOptions with ObjectLike with DragEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_drop(eventName: drop): Chainable[Subject] = js.native
@@ -19045,7 +19035,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: drop,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.DragEvent]
+    options: Partial[TriggerOptions with ObjectLike with DragEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_durationchange(eventName: durationchange): Chainable[Subject] = js.native
@@ -19129,7 +19119,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: error,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.ErrorEvent]
+    options: Partial[TriggerOptions with ObjectLike with ErrorEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_focus(eventName: focus): Chainable[Subject] = js.native
@@ -19150,7 +19140,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: focus,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.FocusEvent]
+    options: Partial[TriggerOptions with ObjectLike with FocusEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_focusin(eventName: focusin): Chainable[Subject] = js.native
@@ -19171,7 +19161,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: focusin,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.FocusEvent]
+    options: Partial[TriggerOptions with ObjectLike with FocusEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_focusout(eventName: focusout): Chainable[Subject] = js.native
@@ -19192,7 +19182,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: focusout,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.FocusEvent]
+    options: Partial[TriggerOptions with ObjectLike with FocusEvent]
   ): Chainable[Subject] = js.native
   /**
     * Trigger an event on a DOM element.
@@ -19265,7 +19255,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: gotpointercapture,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.PointerEvent]
+    options: Partial[TriggerOptions with ObjectLike with PointerEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_input(eventName: input): Chainable[Subject] = js.native
@@ -19328,7 +19318,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: keydown,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.KeyboardEvent]
+    options: Partial[TriggerOptions with ObjectLike with KeyboardEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_keypress(eventName: keypress): Chainable[Subject] = js.native
@@ -19349,7 +19339,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: keypress,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.KeyboardEvent]
+    options: Partial[TriggerOptions with ObjectLike with KeyboardEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_keyup(eventName: keyup): Chainable[Subject] = js.native
@@ -19370,7 +19360,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: keyup,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.KeyboardEvent]
+    options: Partial[TriggerOptions with ObjectLike with KeyboardEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_load(eventName: load): Chainable[Subject] = js.native
@@ -19475,7 +19465,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: lostpointercapture,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.PointerEvent]
+    options: Partial[TriggerOptions with ObjectLike with PointerEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_mousedown(eventName: mousedown): Chainable[Subject] = js.native
@@ -19496,7 +19486,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: mousedown,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.MouseEvent]
+    options: Partial[TriggerOptions with ObjectLike with MouseEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_mouseenter(eventName: mouseenter): Chainable[Subject] = js.native
@@ -19517,7 +19507,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: mouseenter,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.MouseEvent]
+    options: Partial[TriggerOptions with ObjectLike with MouseEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_mouseleave(eventName: mouseleave): Chainable[Subject] = js.native
@@ -19538,7 +19528,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: mouseleave,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.MouseEvent]
+    options: Partial[TriggerOptions with ObjectLike with MouseEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_mousemove(eventName: mousemove): Chainable[Subject] = js.native
@@ -19559,7 +19549,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: mousemove,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.MouseEvent]
+    options: Partial[TriggerOptions with ObjectLike with MouseEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_mouseout(eventName: mouseout): Chainable[Subject] = js.native
@@ -19580,7 +19570,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: mouseout,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.MouseEvent]
+    options: Partial[TriggerOptions with ObjectLike with MouseEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_mouseover(eventName: mouseover): Chainable[Subject] = js.native
@@ -19601,7 +19591,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: mouseover,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.MouseEvent]
+    options: Partial[TriggerOptions with ObjectLike with MouseEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_mouseup(eventName: mouseup): Chainable[Subject] = js.native
@@ -19622,7 +19612,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: mouseup,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.MouseEvent]
+    options: Partial[TriggerOptions with ObjectLike with MouseEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_paste(eventName: paste): Chainable[Subject] = js.native
@@ -19643,7 +19633,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: paste,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.ClipboardEvent]
+    options: Partial[TriggerOptions with ObjectLike with ClipboardEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_pause(eventName: pause): Chainable[Subject] = js.native
@@ -19727,7 +19717,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: pointercancel,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.PointerEvent]
+    options: Partial[TriggerOptions with ObjectLike with PointerEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_pointerdown(eventName: pointerdown): Chainable[Subject] = js.native
@@ -19748,7 +19738,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: pointerdown,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.PointerEvent]
+    options: Partial[TriggerOptions with ObjectLike with PointerEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_pointerenter(eventName: pointerenter): Chainable[Subject] = js.native
@@ -19769,7 +19759,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: pointerenter,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.PointerEvent]
+    options: Partial[TriggerOptions with ObjectLike with PointerEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_pointerleave(eventName: pointerleave): Chainable[Subject] = js.native
@@ -19790,7 +19780,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: pointerleave,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.PointerEvent]
+    options: Partial[TriggerOptions with ObjectLike with PointerEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_pointerlockchange(eventName: pointerlockchange): Chainable[Subject] = js.native
@@ -19853,7 +19843,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: pointermove,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.PointerEvent]
+    options: Partial[TriggerOptions with ObjectLike with PointerEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_pointerout(eventName: pointerout): Chainable[Subject] = js.native
@@ -19874,7 +19864,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: pointerout,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.PointerEvent]
+    options: Partial[TriggerOptions with ObjectLike with PointerEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_pointerover(eventName: pointerover): Chainable[Subject] = js.native
@@ -19895,7 +19885,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: pointerover,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.PointerEvent]
+    options: Partial[TriggerOptions with ObjectLike with PointerEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_pointerup(eventName: pointerup): Chainable[Subject] = js.native
@@ -19916,22 +19906,19 @@ trait Chainable[Subject] extends js.Object {
     eventName: pointerup,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.PointerEvent]
+    options: Partial[TriggerOptions with ObjectLike with PointerEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_progress(eventName: progress_): Chainable[Subject] = js.native
   @JSName("trigger")
-  def trigger_progress(
-    eventName: progress_,
-    options: Partial[TriggerOptions with ObjectLike with ProgressEvent[EventTarget]]
-  ): Chainable[Subject] = js.native
+  def trigger_progress(eventName: progress_, options: Partial[TriggerOptions with ObjectLike with ProgressEvent]): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_progress(eventName: progress_, position: PositionType): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_progress(
     eventName: progress_,
     position: PositionType,
-    options: Partial[TriggerOptions with ObjectLike with ProgressEvent[EventTarget]]
+    options: Partial[TriggerOptions with ObjectLike with ProgressEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_progress(eventName: progress_, x: Double, y: Double): Chainable[Subject] = js.native
@@ -19940,7 +19927,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: progress_,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.ProgressEvent]
+    options: Partial[TriggerOptions with ObjectLike with ProgressEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_ratechange(eventName: ratechange): Chainable[Subject] = js.native
@@ -20024,7 +20011,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: resize,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.UIEvent]
+    options: Partial[TriggerOptions with ObjectLike with UIEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_scroll(eventName: scroll): Chainable[Subject] = js.native
@@ -20300,7 +20287,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: touchcancel,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.TouchEvent]
+    options: Partial[TriggerOptions with ObjectLike with TouchEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_touchend(eventName: touchend): Chainable[Subject] = js.native
@@ -20321,7 +20308,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: touchend,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.TouchEvent]
+    options: Partial[TriggerOptions with ObjectLike with TouchEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_touchmove(eventName: touchmove): Chainable[Subject] = js.native
@@ -20342,7 +20329,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: touchmove,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.TouchEvent]
+    options: Partial[TriggerOptions with ObjectLike with TouchEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_touchstart(eventName: touchstart): Chainable[Subject] = js.native
@@ -20363,7 +20350,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: touchstart,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.TouchEvent]
+    options: Partial[TriggerOptions with ObjectLike with TouchEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_transitioncancel(eventName: transitioncancel): Chainable[Subject] = js.native
@@ -20384,7 +20371,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: transitioncancel,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.TransitionEvent]
+    options: Partial[TriggerOptions with ObjectLike with TransitionEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_transitionend(eventName: transitionend): Chainable[Subject] = js.native
@@ -20405,7 +20392,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: transitionend,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.TransitionEvent]
+    options: Partial[TriggerOptions with ObjectLike with TransitionEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_transitionrun(eventName: transitionrun): Chainable[Subject] = js.native
@@ -20426,7 +20413,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: transitionrun,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.TransitionEvent]
+    options: Partial[TriggerOptions with ObjectLike with TransitionEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_transitionstart(eventName: transitionstart): Chainable[Subject] = js.native
@@ -20447,7 +20434,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: transitionstart,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.TransitionEvent]
+    options: Partial[TriggerOptions with ObjectLike with TransitionEvent]
   ): Chainable[Subject] = js.native
   @JSName("trigger")
   def trigger_visibilitychange(eventName: visibilitychange): Chainable[Subject] = js.native
@@ -20531,7 +20518,7 @@ trait Chainable[Subject] extends js.Object {
     eventName: wheel,
     x: Double,
     y: Double,
-    options: Partial[TriggerOptions with ObjectLike with org.scalajs.dom.raw.WheelEvent]
+    options: Partial[TriggerOptions with ObjectLike with WheelEvent]
   ): Chainable[Subject] = js.native
   /**
     * Type into a DOM element.
@@ -20723,6 +20710,22 @@ trait Chainable[Subject] extends js.Object {
     * @see https://on.cypress.io/within
     */
   def within(options: PartialLoggable, fn: js.Function1[/* currentSubject */ Subject, Unit]): Chainable[Subject] = js.native
+  def wrap[E /* <: Node */](element: JQuery_[E]): Chainable[JQuery_[E]] = js.native
+  def wrap[E /* <: Node */](element: JQuery_[E], options: PartialLoggableTimeoutabl): Chainable[JQuery_[E]] = js.native
+  /**
+    * Yields whatever is passed into `.wrap()` to the next command in the Cypress chain.
+    *
+    * @see https://on.cypress.io/wrap
+    * @example
+    ```
+    // Make assertions about object
+    cy.wrap({ amount: 10 })
+    .should('have.property', 'amount')
+    .and('eq', 10)
+    ```
+    */
+  def wrap[S](`object`: S): Chainable[S] = js.native
+  def wrap[S](`object`: S, options: PartialLoggableTimeoutabl): Chainable[S] = js.native
   // inconsistent argument order
   /**
     * Yield the element passed into `.wrap()`.
@@ -20737,10 +20740,10 @@ trait Chainable[Subject] extends js.Object {
     })
     ```
     */
-  def wrap[E /* <: Node */](element: E): Chainable[JQuery_[E]] = js.native
-  def wrap[E /* <: Node */](element: E, options: PartialLoggableTimeoutabl): Chainable[JQuery_[E]] = js.native
-  def wrap[E /* <: Node */](element: JQuery_[E]): Chainable[JQuery_[E]] = js.native
-  def wrap[E /* <: Node */](element: JQuery_[E], options: PartialLoggableTimeoutabl): Chainable[JQuery_[E]] = js.native
+  @JSName("wrap")
+  def wrap_E_Node[E /* <: Node */](element: E): Chainable[JQuery_[E]] = js.native
+  @JSName("wrap")
+  def wrap_E_Node[E /* <: Node */](element: E, options: PartialLoggableTimeoutabl): Chainable[JQuery_[E]] = js.native
   /**
     * Yield the element passed into `.wrap()` to the next command in the Cypress chain.
     *
@@ -20756,22 +20759,6 @@ trait Chainable[Subject] extends js.Object {
   def wrap_F_PromiseSS[F /* <: js.Promise[S] */, S](promise: F): Chainable[S] = js.native
   @JSName("wrap")
   def wrap_F_PromiseSS[F /* <: js.Promise[S] */, S](promise: F, options: PartialLoggableTimeoutabl): Chainable[S] = js.native
-  /**
-    * Yields whatever is passed into `.wrap()` to the next command in the Cypress chain.
-    *
-    * @see https://on.cypress.io/wrap
-    * @example
-    ```
-    // Make assertions about object
-    cy.wrap({ amount: 10 })
-    .should('have.property', 'amount')
-    .and('eq', 10)
-    ```
-    */
-  @JSName("wrap")
-  def wrap_S[S](`object`: S): Chainable[S] = js.native
-  @JSName("wrap")
-  def wrap_S[S](`object`: S, options: PartialLoggableTimeoutabl): Chainable[S] = js.native
   /**
     * Write to a file with the specified encoding and contents.
     *

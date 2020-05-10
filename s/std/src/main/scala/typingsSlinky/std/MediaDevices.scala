@@ -40,11 +40,12 @@ trait MediaDevices extends EventTarget {
   def removeEventListener_devicechange(
     `type`: devicechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("MediaDevices")
 @js.native
-object MediaDevices extends Instantiable0[MediaDevices]
+object MediaDevices
+  extends Instantiable0[org.scalajs.dom.experimental.mediastream.MediaDevices]
 

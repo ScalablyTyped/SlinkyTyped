@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("rfc4648/lib/src/codec", "parse")
 @js.native
 object parse extends js.Object {
-  def apply(string: String, encoding: Encoding): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def apply(string: String, encoding: Encoding, opts: ParseOptions): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def apply(string: String, encoding: Encoding): js.typedarray.Uint8Array = js.native
+  def apply(string: String, encoding: Encoding, opts: ParseOptions): js.typedarray.Uint8Array = js.native
 }
 

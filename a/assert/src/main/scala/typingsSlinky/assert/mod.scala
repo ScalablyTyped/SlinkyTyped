@@ -1,7 +1,6 @@
 package typingsSlinky.assert
 
 import typingsSlinky.std.Error
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,10 +14,6 @@ object mod extends js.Object {
     var actual: js.Any = js.native
     var expected: js.Any = js.native
     var generatedMessage: Boolean = js.native
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
     var operator: String = js.native
   }
   
@@ -33,8 +28,8 @@ object mod extends js.Object {
   def doesNotThrow(block: js.Function0[Unit], error: js.Function0[Unit], message: String): Unit = js.native
   def doesNotThrow(block: js.Function0[Unit], error: js.Function1[/* err */ js.Any, Boolean]): Unit = js.native
   def doesNotThrow(block: js.Function0[Unit], error: js.Function1[/* err */ js.Any, Boolean], message: String): Unit = js.native
-  def doesNotThrow(block: js.Function0[Unit], error: RegExp): Unit = js.native
-  def doesNotThrow(block: js.Function0[Unit], error: RegExp, message: String): Unit = js.native
+  def doesNotThrow(block: js.Function0[Unit], error: js.RegExp): Unit = js.native
+  def doesNotThrow(block: js.Function0[Unit], error: js.RegExp, message: String): Unit = js.native
   def doesNotThrow(block: js.Function0[Unit], message: String): Unit = js.native
   def equal(actual: js.Any, expected: js.Any): Unit = js.native
   def equal(actual: js.Any, expected: js.Any, message: String): Unit = js.native
@@ -59,8 +54,8 @@ object mod extends js.Object {
   def throws(block: js.Function0[Unit], error: js.Function0[Unit], message: String): Unit = js.native
   def throws(block: js.Function0[Unit], error: js.Function1[/* err */ js.Any, Boolean]): Unit = js.native
   def throws(block: js.Function0[Unit], error: js.Function1[/* err */ js.Any, Boolean], message: String): Unit = js.native
-  def throws(block: js.Function0[Unit], error: RegExp): Unit = js.native
-  def throws(block: js.Function0[Unit], error: RegExp, message: String): Unit = js.native
+  def throws(block: js.Function0[Unit], error: js.RegExp): Unit = js.native
+  def throws(block: js.Function0[Unit], error: js.RegExp, message: String): Unit = js.native
   def throws(block: js.Function0[Unit], message: String): Unit = js.native
 }
 

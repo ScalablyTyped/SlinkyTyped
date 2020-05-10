@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IRaycastVehicleOptions extends js.Object {
-  var chassisBody: js.UndefOr[Body] = js.undefined
-  var indexLeftAxis: js.UndefOr[Double] = js.undefined
-  var indexRightAxis: js.UndefOr[Double] = js.undefined
-  var indexUpAxis: js.UndefOr[Double] = js.undefined
+  var chassisBody: js.UndefOr[Body] = js.native
+  var indexLeftAxis: js.UndefOr[Double] = js.native
+  var indexRightAxis: js.UndefOr[Double] = js.native
+  var indexUpAxis: js.UndefOr[Double] = js.native
 }
 
 object IRaycastVehicleOptions {
   @scala.inline
-  def apply(
-    chassisBody: Body = null,
-    indexLeftAxis: Int | Double = null,
-    indexRightAxis: Int | Double = null,
-    indexUpAxis: Int | Double = null
-  ): IRaycastVehicleOptions = {
+  def apply(): IRaycastVehicleOptions = {
     val __obj = js.Dynamic.literal()
-    if (chassisBody != null) __obj.updateDynamic("chassisBody")(chassisBody.asInstanceOf[js.Any])
-    if (indexLeftAxis != null) __obj.updateDynamic("indexLeftAxis")(indexLeftAxis.asInstanceOf[js.Any])
-    if (indexRightAxis != null) __obj.updateDynamic("indexRightAxis")(indexRightAxis.asInstanceOf[js.Any])
-    if (indexUpAxis != null) __obj.updateDynamic("indexUpAxis")(indexUpAxis.asInstanceOf[js.Any])
     __obj.asInstanceOf[IRaycastVehicleOptions]
   }
+  @scala.inline
+  implicit class IRaycastVehicleOptionsOps[Self <: IRaycastVehicleOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChassisBody(value: Body): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chassisBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChassisBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chassisBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndexLeftAxis(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexLeftAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexLeftAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexLeftAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndexRightAxis(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexRightAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexRightAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexRightAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndexUpAxis(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexUpAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexUpAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexUpAxis")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,10 +12,8 @@ trait NavigationModeType extends js.Object
 
 object NavigationModeType {
   @scala.inline
-  def ANALYSIS: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.ANALYSIS = this.cast("ANALYSIS")
+  def ANALYSIS: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.ANALYSIS = "ANALYSIS".asInstanceOf[typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.ANALYSIS]
   @scala.inline
-  def EDIT: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.EDIT = this.cast("EDIT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def EDIT: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.EDIT = "EDIT".asInstanceOf[typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.EDIT]
 }
 

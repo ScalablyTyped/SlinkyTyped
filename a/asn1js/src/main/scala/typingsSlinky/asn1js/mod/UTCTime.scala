@@ -29,7 +29,7 @@ class UTCTime () extends LocalSimpleStringBlock {
     * 
     * @memberOf UTCTime
     */
-  def toBuffer(): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def toBuffer(): js.typedarray.ArrayBuffer = js.native
   /**
     * Function converting ASN.1 internal string into "Date" object
     * 

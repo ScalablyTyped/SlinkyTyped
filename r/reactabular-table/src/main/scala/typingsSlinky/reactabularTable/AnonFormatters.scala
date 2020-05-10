@@ -6,18 +6,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFormatters extends js.Object {
-  var formatters: js.UndefOr[js.Array[CellFormatter]] = js.undefined
-  var transforms: js.UndefOr[js.Array[CellTransform]] = js.undefined
+  var formatters: js.UndefOr[js.Array[CellFormatter]] = js.native
+  var transforms: js.UndefOr[js.Array[CellTransform]] = js.native
 }
 
 object AnonFormatters {
   @scala.inline
-  def apply(formatters: js.Array[CellFormatter] = null, transforms: js.Array[CellTransform] = null): AnonFormatters = {
+  def apply(): AnonFormatters = {
     val __obj = js.Dynamic.literal()
-    if (formatters != null) __obj.updateDynamic("formatters")(formatters.asInstanceOf[js.Any])
-    if (transforms != null) __obj.updateDynamic("transforms")(transforms.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonFormatters]
   }
+  @scala.inline
+  implicit class AnonFormattersOps[Self <: AnonFormatters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormatters(value: js.Array[CellFormatter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransforms(value: js.Array[CellTransform]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transforms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransforms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transforms")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

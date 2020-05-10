@@ -1,8 +1,8 @@
 package typingsSlinky.cesium.mod
 
+import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.cesium.mod.Billboard.CreateImageCallback
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLImageElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,7 +47,7 @@ class Billboard () extends js.Object {
 object Billboard extends js.Object {
   type CreateImageCallback = js.Function1[
     /* id */ String, 
-    org.scalajs.dom.raw.HTMLImageElement | org.scalajs.dom.raw.HTMLCanvasElement | (js.Promise[org.scalajs.dom.raw.HTMLImageElement | org.scalajs.dom.raw.HTMLCanvasElement])
+    HTMLImageElement | HTMLCanvasElement | (js.Promise[HTMLImageElement | HTMLCanvasElement])
   ]
 }
 

@@ -23,14 +23,41 @@ trait SchemaSecretEnvSource extends js.Object {
 
 object SchemaSecretEnvSource {
   @scala.inline
-  def apply(
-    localObjectReference: SchemaLocalObjectReference = null,
-    optional: js.UndefOr[Boolean] = js.undefined
-  ): SchemaSecretEnvSource = {
+  def apply(): SchemaSecretEnvSource = {
     val __obj = js.Dynamic.literal()
-    if (localObjectReference != null) __obj.updateDynamic("localObjectReference")(localObjectReference.asInstanceOf[js.Any])
-    if (!js.isUndefined(optional)) __obj.updateDynamic("optional")(optional.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSecretEnvSource]
   }
+  @scala.inline
+  implicit class SchemaSecretEnvSourceOps[Self <: SchemaSecretEnvSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocalObjectReference(value: SchemaLocalObjectReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localObjectReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalObjectReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localObjectReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptional(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptional: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

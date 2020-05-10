@@ -1,46 +1,91 @@
 package typingsSlinky.chartist.mod
 
-import typingsSlinky.chartist.AnonY
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IChartistFixedScaleAxis extends ILineChartAxis {
-  var divisor: js.UndefOr[Double] = js.undefined
-  var high: js.UndefOr[Double] = js.undefined
-  var low: js.UndefOr[Double] = js.undefined
-  var ticks: js.UndefOr[js.Array[Double | String]] = js.undefined
-  var `type`: js.UndefOr[IFixedScaleAxisStatic] = js.undefined
+  var divisor: js.UndefOr[Double] = js.native
+  var high: js.UndefOr[Double] = js.native
+  var low: js.UndefOr[Double] = js.native
+  var ticks: js.UndefOr[js.Array[Double | String]] = js.native
+  var `type`: js.UndefOr[IFixedScaleAxisStatic] = js.native
 }
 
 object IChartistFixedScaleAxis {
   @scala.inline
-  def apply(
-    divisor: Int | Double = null,
-    high: Int | Double = null,
-    labelInterpolationFnc: js.Function = null,
-    labelOffset: AnonY = null,
-    low: Int | Double = null,
-    offset: Int | Double = null,
-    position: String = null,
-    showGrid: js.UndefOr[Boolean] = js.undefined,
-    showLabel: js.UndefOr[Boolean] = js.undefined,
-    ticks: js.Array[Double | String] = null,
-    `type`: IFixedScaleAxisStatic = null
-  ): IChartistFixedScaleAxis = {
+  def apply(): IChartistFixedScaleAxis = {
     val __obj = js.Dynamic.literal()
-    if (divisor != null) __obj.updateDynamic("divisor")(divisor.asInstanceOf[js.Any])
-    if (high != null) __obj.updateDynamic("high")(high.asInstanceOf[js.Any])
-    if (labelInterpolationFnc != null) __obj.updateDynamic("labelInterpolationFnc")(labelInterpolationFnc.asInstanceOf[js.Any])
-    if (labelOffset != null) __obj.updateDynamic("labelOffset")(labelOffset.asInstanceOf[js.Any])
-    if (low != null) __obj.updateDynamic("low")(low.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(showGrid)) __obj.updateDynamic("showGrid")(showGrid.asInstanceOf[js.Any])
-    if (!js.isUndefined(showLabel)) __obj.updateDynamic("showLabel")(showLabel.asInstanceOf[js.Any])
-    if (ticks != null) __obj.updateDynamic("ticks")(ticks.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IChartistFixedScaleAxis]
   }
+  @scala.inline
+  implicit class IChartistFixedScaleAxisOps[Self <: IChartistFixedScaleAxis] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDivisor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("divisor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDivisor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("divisor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHigh(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("high")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHigh: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("high")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("low")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("low")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTicks(value: js.Array[Double | String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTicks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: IFixedScaleAxisStatic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

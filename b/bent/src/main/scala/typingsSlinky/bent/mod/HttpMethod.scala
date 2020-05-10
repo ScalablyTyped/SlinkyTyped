@@ -19,24 +19,22 @@ trait HttpMethod extends js.Object
 
 object HttpMethod {
   @scala.inline
-  def CONNECT: typingsSlinky.bent.bentStrings.CONNECT = this.cast("CONNECT")
+  def CONNECT: typingsSlinky.bent.bentStrings.CONNECT = "CONNECT".asInstanceOf[typingsSlinky.bent.bentStrings.CONNECT]
   @scala.inline
-  def DELETE: typingsSlinky.bent.bentStrings.DELETE = this.cast("DELETE")
+  def DELETE: typingsSlinky.bent.bentStrings.DELETE = "DELETE".asInstanceOf[typingsSlinky.bent.bentStrings.DELETE]
   @scala.inline
-  def GET: typingsSlinky.bent.bentStrings.GET = this.cast("GET")
+  def GET: typingsSlinky.bent.bentStrings.GET = "GET".asInstanceOf[typingsSlinky.bent.bentStrings.GET]
   @scala.inline
-  def HEAD: typingsSlinky.bent.bentStrings.HEAD = this.cast("HEAD")
+  def HEAD: typingsSlinky.bent.bentStrings.HEAD = "HEAD".asInstanceOf[typingsSlinky.bent.bentStrings.HEAD]
   @scala.inline
-  def OPTIONS: typingsSlinky.bent.bentStrings.OPTIONS = this.cast("OPTIONS")
+  def OPTIONS: typingsSlinky.bent.bentStrings.OPTIONS = "OPTIONS".asInstanceOf[typingsSlinky.bent.bentStrings.OPTIONS]
   @scala.inline
-  def PATCH: typingsSlinky.bent.bentStrings.PATCH = this.cast("PATCH")
+  def PATCH: typingsSlinky.bent.bentStrings.PATCH = "PATCH".asInstanceOf[typingsSlinky.bent.bentStrings.PATCH]
   @scala.inline
-  def POST: typingsSlinky.bent.bentStrings.POST = this.cast("POST")
+  def POST: typingsSlinky.bent.bentStrings.POST = "POST".asInstanceOf[typingsSlinky.bent.bentStrings.POST]
   @scala.inline
-  def PUT: typingsSlinky.bent.bentStrings.PUT = this.cast("PUT")
+  def PUT: typingsSlinky.bent.bentStrings.PUT = "PUT".asInstanceOf[typingsSlinky.bent.bentStrings.PUT]
   @scala.inline
-  def TRACE: typingsSlinky.bent.bentStrings.TRACE = this.cast("TRACE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TRACE: typingsSlinky.bent.bentStrings.TRACE = "TRACE".asInstanceOf[typingsSlinky.bent.bentStrings.TRACE]
 }
 

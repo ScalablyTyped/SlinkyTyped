@@ -12,10 +12,8 @@ trait TokenType extends js.Object
 
 object TokenType {
   @scala.inline
-  def FirstParty: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.FirstParty = this.cast("FirstParty")
+  def FirstParty: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.FirstParty = "FirstParty".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.FirstParty]
   @scala.inline
-  def OAuth: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.OAuth = this.cast("OAuth")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def OAuth: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.OAuth = "OAuth".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.OAuth]
 }
 

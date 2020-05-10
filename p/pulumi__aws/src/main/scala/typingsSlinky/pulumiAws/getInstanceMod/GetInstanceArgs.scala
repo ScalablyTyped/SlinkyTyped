@@ -36,22 +36,89 @@ trait GetInstanceArgs extends js.Object {
 
 object GetInstanceArgs {
   @scala.inline
-  def apply(
-    filters: js.Array[GetInstanceFilter] = null,
-    getPasswordData: js.UndefOr[Boolean] = js.undefined,
-    getUserData: js.UndefOr[Boolean] = js.undefined,
-    instanceId: String = null,
-    instanceTags: StringDictionary[js.Any] = null,
-    tags: StringDictionary[js.Any] = null
-  ): GetInstanceArgs = {
+  def apply(): GetInstanceArgs = {
     val __obj = js.Dynamic.literal()
-    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
-    if (!js.isUndefined(getPasswordData)) __obj.updateDynamic("getPasswordData")(getPasswordData.asInstanceOf[js.Any])
-    if (!js.isUndefined(getUserData)) __obj.updateDynamic("getUserData")(getUserData.asInstanceOf[js.Any])
-    if (instanceId != null) __obj.updateDynamic("instanceId")(instanceId.asInstanceOf[js.Any])
-    if (instanceTags != null) __obj.updateDynamic("instanceTags")(instanceTags.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetInstanceArgs]
   }
+  @scala.inline
+  implicit class GetInstanceArgsOps[Self <: GetInstanceArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilters(value: js.Array[GetInstanceFilter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetPasswordData(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPasswordData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGetPasswordData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPasswordData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetUserData(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUserData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGetUserData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUserData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceTags(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

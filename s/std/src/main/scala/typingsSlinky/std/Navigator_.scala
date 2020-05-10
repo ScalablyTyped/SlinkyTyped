@@ -48,7 +48,7 @@ trait Navigator_
     noHandlerCallback: MSLaunchUriCallback
   ): Unit = js.native
   def requestMediaKeySystemAccess(keySystem: java.lang.String, supportedConfigurations: js.Array[MediaKeySystemConfiguration]): js.Promise[MediaKeySystemAccess] = js.native
-  def requestMediaKeySystemAccess(keySystem: java.lang.String, supportedConfigurations: Iterable[MediaKeySystemConfiguration]): js.Promise[MediaKeySystemAccess] = js.native
+  def requestMediaKeySystemAccess(keySystem: java.lang.String, supportedConfigurations: js.Iterable[MediaKeySystemConfiguration]): js.Promise[MediaKeySystemAccess] = js.native
   def vibrate(pattern: js.Array[Double]): scala.Boolean = js.native
   def vibrate(pattern: Double): scala.Boolean = js.native
 }

@@ -1,6 +1,5 @@
 package typingsSlinky.socketclusterServer.serverMod
 
-import typingsSlinky.socketclusterServer.serversocketMod.AuthToken
 import typingsSlinky.socketclusterServer.serversocketMod.StateChangeData
 import typingsSlinky.socketclusterServer.socketclusterServerStrings.authenticated
 import typingsSlinky.socketclusterServer.socketclusterServerStrings.unauthenticated
@@ -8,8 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AuthStateChangeData extends StateChangeData {
-  var socket: typingsSlinky.socketclusterServer.serversocketMod.^
+  var socket: typingsSlinky.socketclusterServer.serversocketMod.^ = js.native
 }
 
 object AuthStateChangeData {
@@ -17,12 +17,24 @@ object AuthStateChangeData {
   def apply(
     newState: authenticated | unauthenticated,
     oldState: authenticated | unauthenticated,
-    socket: typingsSlinky.socketclusterServer.serversocketMod.^,
-    authToken: AuthToken = null
+    socket: typingsSlinky.socketclusterServer.serversocketMod.^
   ): AuthStateChangeData = {
     val __obj = js.Dynamic.literal(newState = newState.asInstanceOf[js.Any], oldState = oldState.asInstanceOf[js.Any], socket = socket.asInstanceOf[js.Any])
-    if (authToken != null) __obj.updateDynamic("authToken")(authToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthStateChangeData]
   }
+  @scala.inline
+  implicit class AuthStateChangeDataOps[Self <: AuthStateChangeData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSocket(value: typingsSlinky.socketclusterServer.serversocketMod.^): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socket")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -53,18 +53,65 @@ trait SchemaEventTrigger extends js.Object {
 
 object SchemaEventTrigger {
   @scala.inline
-  def apply(
-    eventType: String = null,
-    failurePolicy: SchemaFailurePolicy = null,
-    resource: String = null,
-    service: String = null
-  ): SchemaEventTrigger = {
+  def apply(): SchemaEventTrigger = {
     val __obj = js.Dynamic.literal()
-    if (eventType != null) __obj.updateDynamic("eventType")(eventType.asInstanceOf[js.Any])
-    if (failurePolicy != null) __obj.updateDynamic("failurePolicy")(failurePolicy.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
-    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEventTrigger]
   }
+  @scala.inline
+  implicit class SchemaEventTriggerOps[Self <: SchemaEventTrigger] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailurePolicy(value: SchemaFailurePolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failurePolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailurePolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failurePolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withService(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

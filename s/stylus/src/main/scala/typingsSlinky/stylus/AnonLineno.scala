@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonLineno extends js.Object {
-  var column: Double
-  var filename: String
-  var lineno: Double
-  var quote: String
-  var `val`: String
+  var column: Double = js.native
+  var filename: String = js.native
+  var lineno: Double = js.native
+  var quote: String = js.native
+  var `val`: String = js.native
 }
 
 object AnonLineno {
@@ -19,5 +20,43 @@ object AnonLineno {
     __obj.updateDynamic("val")(`val`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonLineno]
   }
+  @scala.inline
+  implicit class AnonLinenoOps[Self <: AnonLineno] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumn(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFilename(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLineno(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineno")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQuote(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVal(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("val")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

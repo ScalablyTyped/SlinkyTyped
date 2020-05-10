@@ -80,7 +80,7 @@ trait RTCIceTransport extends EventTarget {
   def removeEventListener_gatheringstatechange(
     `type`: gatheringstatechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_selectedcandidatepairchange(
@@ -97,7 +97,7 @@ trait RTCIceTransport extends EventTarget {
   def removeEventListener_selectedcandidatepairchange(
     `type`: selectedcandidatepairchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_statechange(`type`: statechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -111,7 +111,7 @@ trait RTCIceTransport extends EventTarget {
   def removeEventListener_statechange(
     `type`: statechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

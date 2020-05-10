@@ -41,20 +41,77 @@ trait SchemaDeployment extends js.Object {
 
 object SchemaDeployment {
   @scala.inline
-  def apply(
-    build: SchemaBuildInfo = null,
-    cloudBuildOptions: SchemaCloudBuildOptions = null,
-    container: SchemaContainerInfo = null,
-    files: StringDictionary[SchemaFileInfo] = null,
-    zip: SchemaZipInfo = null
-  ): SchemaDeployment = {
+  def apply(): SchemaDeployment = {
     val __obj = js.Dynamic.literal()
-    if (build != null) __obj.updateDynamic("build")(build.asInstanceOf[js.Any])
-    if (cloudBuildOptions != null) __obj.updateDynamic("cloudBuildOptions")(cloudBuildOptions.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
-    if (zip != null) __obj.updateDynamic("zip")(zip.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeployment]
   }
+  @scala.inline
+  implicit class SchemaDeploymentOps[Self <: SchemaDeployment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBuild(value: SchemaBuildInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudBuildOptions(value: SchemaCloudBuildOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudBuildOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudBuildOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudBuildOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainer(value: SchemaContainerInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFiles(value: StringDictionary[SchemaFileInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZip(value: SchemaZipInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zip")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

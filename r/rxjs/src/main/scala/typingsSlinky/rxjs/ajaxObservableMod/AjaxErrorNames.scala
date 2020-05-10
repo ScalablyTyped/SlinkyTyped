@@ -12,10 +12,8 @@ trait AjaxErrorNames extends js.Object
 
 object AjaxErrorNames {
   @scala.inline
-  def AjaxError: typingsSlinky.rxjs.rxjsStrings.AjaxError = this.cast("AjaxError")
+  def AjaxError: typingsSlinky.rxjs.rxjsStrings.AjaxError = "AjaxError".asInstanceOf[typingsSlinky.rxjs.rxjsStrings.AjaxError]
   @scala.inline
-  def AjaxTimeoutError: typingsSlinky.rxjs.rxjsStrings.AjaxTimeoutError = this.cast("AjaxTimeoutError")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def AjaxTimeoutError: typingsSlinky.rxjs.rxjsStrings.AjaxTimeoutError = "AjaxTimeoutError".asInstanceOf[typingsSlinky.rxjs.rxjsStrings.AjaxTimeoutError]
 }
 

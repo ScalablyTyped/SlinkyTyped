@@ -8,11 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class ISO8601Localizer protected () extends localizer {
   def this(userISO8601: String) = this()
-  /* CompleteClass */
-  override def localize(): String = js.native
-  /* CompleteClass */
-  override def returnAs(as: String): localizer = js.native
-  /* CompleteClass */
-  override def to(offset: Double): localizer = js.native
 }
 

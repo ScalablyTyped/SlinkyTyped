@@ -13,10 +13,6 @@ package object typesMod {
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DisplayNamesOptions */ js.Any, 
     typingsSlinky.reactIntl.reactIntlStrings.localeMatcher
   ]
-  type FormatListOptions = typingsSlinky.std.Exclude[
-    typingsSlinky.formatjsIntlListformat.mod.IntlListFormatOptions, 
-    typingsSlinky.reactIntl.reactIntlStrings.localeMatcher
-  ]
   type FormatNumberOptions = (typingsSlinky.std.Exclude[
     typingsSlinky.formatjsIntlUnifiedNumberformat.mod.UnifiedNumberFormatOptions, 
     typingsSlinky.reactIntl.reactIntlStrings.localeMatcher
@@ -29,5 +25,5 @@ package object typesMod {
     typingsSlinky.formatjsIntlRelativetimeformat.mod.IntlRelativeTimeFormatOptions, 
     typingsSlinky.reactIntl.reactIntlStrings.localeMatcher
   ]) with typingsSlinky.reactIntl.typesMod.CustomFormatConfig
-  type Omit[T, K /* <: java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[java.lang.String, K]]
+  type Omit[T, K /* <: /* keyof any */ java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
 }

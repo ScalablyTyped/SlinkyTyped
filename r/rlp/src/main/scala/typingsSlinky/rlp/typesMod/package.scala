@@ -15,5 +15,5 @@ package object typesMod {
     - typingsSlinky.rlp.typesMod.List
     - scala.Null
   */
-  type Input = typingsSlinky.rlp.typesMod._Input | typingsSlinky.node.Buffer | java.lang.String | scala.Double | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.bnJs.mod.^  | scala.Null
+  type Input = typingsSlinky.rlp.typesMod._Input | typingsSlinky.node.Buffer | java.lang.String | scala.Double | js.typedarray.Uint8Array | typingsSlinky.bnJs.mod.^  | scala.Null
 }

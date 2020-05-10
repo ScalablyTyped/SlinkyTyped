@@ -18,22 +18,20 @@ trait WhereFilterOp extends js.Object
 
 object WhereFilterOp {
   @scala.inline
-  def EqualssignEqualssign: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.EqualssignEqualssign = this.cast("==")
+  def EqualssignEqualssign: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.EqualssignEqualssign = "==".asInstanceOf[typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.EqualssignEqualssign]
   @scala.inline
-  def Greaterthansign: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.Greaterthansign = this.cast(">")
+  def Greaterthansign: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.Greaterthansign = ">".asInstanceOf[typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.Greaterthansign]
   @scala.inline
-  def GreaterthansignEqualssign: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.GreaterthansignEqualssign = this.cast(">=")
+  def GreaterthansignEqualssign: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.GreaterthansignEqualssign = ">=".asInstanceOf[typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.GreaterthansignEqualssign]
   @scala.inline
-  def Lessthansign: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.Lessthansign = this.cast("<")
+  def Lessthansign: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.Lessthansign = "<".asInstanceOf[typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.Lessthansign]
   @scala.inline
-  def LessthansignEqualssign: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.LessthansignEqualssign = this.cast("<=")
+  def LessthansignEqualssign: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.LessthansignEqualssign = "<=".asInstanceOf[typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.LessthansignEqualssign]
   @scala.inline
-  def `array-contains`: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.`array-contains` = this.cast("array-contains")
+  def `array-contains`: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.`array-contains` = "array-contains".asInstanceOf[typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.`array-contains`]
   @scala.inline
-  def `array-contains-any`: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.`array-contains-any` = this.cast("array-contains-any")
+  def `array-contains-any`: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.`array-contains-any` = "array-contains-any".asInstanceOf[typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.`array-contains-any`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def in: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.in = this.cast("in")
+  def in: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.in = "in".asInstanceOf[typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.in]
 }
 

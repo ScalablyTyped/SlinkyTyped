@@ -1,6 +1,5 @@
 package typingsSlinky.tstl
 
-import typingsSlinky.tstl.entryMod.Entry
 import typingsSlinky.tstl.mapElementListMod.MapElementList.Iterator
 import typingsSlinky.tstl.mapElementListMod.MapElementList.ReverseIterator
 import scala.scalajs.js
@@ -23,15 +22,9 @@ trait Iteratoranyanyanyany extends js.Object {
     */
   @JSName("second")
   var second_FIteratoranyanyanyany: /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any = js.native
-  var value_ : Entry[
-    /* import warning: RewrittenClass.unapply cls was tparam Key */ _, 
-    /* import warning: RewrittenClass.unapply cls was tparam T */ _
-  ] = js.native
+  var value_ : Entryanyany = js.native
   @JSName("value")
-  val value_FIteratoranyanyanyany: Entry[
-    /* import warning: RewrittenClass.unapply cls was tparam Key */ _, 
-    /* import warning: RewrittenClass.unapply cls was tparam T */ _
-  ] = js.native
+  val value_FIteratoranyanyanyany: Entryanyany = js.native
   /* protected */ def _Try_value(): Unit = js.native
   def equals(
     obj: Iterator[
@@ -44,7 +37,7 @@ trait Iteratoranyanyanyany extends js.Object {
   /**
     * @inheritDoc
     */
-  def first(): js.Any = js.native
+  def first: js.Any = js.native
   def next(): Iterator[
     /* import warning: RewrittenClass.unapply cls was tparam Key */ _, 
     /* import warning: RewrittenClass.unapply cls was tparam T */ _, 
@@ -69,7 +62,7 @@ trait Iteratoranyanyanyany extends js.Object {
   /**
     * @inheritDoc
     */
-  def second(): js.Any = js.native
+  def second: js.Any = js.native
   /**
     * @inheritDoc
     */
@@ -81,9 +74,6 @@ trait Iteratoranyanyanyany extends js.Object {
   /**
     * @inheritDoc
     */
-  def value(): Entry[
-    /* import warning: RewrittenClass.unapply cls was tparam Key */ _, 
-    /* import warning: RewrittenClass.unapply cls was tparam T */ _
-  ] = js.native
+  def value: Entryanyany = js.native
 }
 

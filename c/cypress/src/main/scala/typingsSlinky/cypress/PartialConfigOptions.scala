@@ -8,108 +8,426 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<cypress.cypress.Cypress.ConfigOptions> */
+@js.native
 trait PartialConfigOptions extends js.Object {
-  var animationDistanceThreshold: js.UndefOr[Double] = js.undefined
-  var baseUrl: js.UndefOr[String] = js.undefined
-  var chromeWebSecurity: js.UndefOr[Boolean] = js.undefined
-  var defaultCommandTimeout: js.UndefOr[Double] = js.undefined
-  var env: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var execTimeout: js.UndefOr[Double] = js.undefined
-  var fileServerFolder: js.UndefOr[String] = js.undefined
-  var fixturesFolder: js.UndefOr[String] = js.undefined
-  var ignoreTestFiles: js.UndefOr[String | js.Array[String]] = js.undefined
-  var integrationFolder: js.UndefOr[String] = js.undefined
-  var nodeVersion: js.UndefOr[system | bundled] = js.undefined
-  var numTestsKeptInMemory: js.UndefOr[Double] = js.undefined
-  var pageLoadTimeout: js.UndefOr[Double] = js.undefined
-  var pluginsFile: js.UndefOr[String] = js.undefined
-  var port: js.UndefOr[Double] = js.undefined
-  var reporter: js.UndefOr[String] = js.undefined
-  var requestTimeout: js.UndefOr[Double] = js.undefined
-  var resolvedNodePath: js.UndefOr[String] = js.undefined
-  var resolvedNodeVersion: js.UndefOr[String] = js.undefined
-  var responseTimeout: js.UndefOr[Double] = js.undefined
-  var screenshotsFolder: js.UndefOr[String] = js.undefined
-  var supportFile: js.UndefOr[String] = js.undefined
-  var trashAssetsBeforeRuns: js.UndefOr[Boolean] = js.undefined
-  var video: js.UndefOr[Boolean] = js.undefined
-  var videoCompression: js.UndefOr[Double] = js.undefined
-  var videoUploadOnPasses: js.UndefOr[Boolean] = js.undefined
-  var videosFolder: js.UndefOr[String] = js.undefined
-  var viewportHeight: js.UndefOr[Double] = js.undefined
-  var viewportWidth: js.UndefOr[Double] = js.undefined
-  var waitForAnimations: js.UndefOr[Boolean] = js.undefined
-  var watchForFileChanges: js.UndefOr[Boolean] = js.undefined
+  var animationDistanceThreshold: js.UndefOr[Double] = js.native
+  var baseUrl: js.UndefOr[String] = js.native
+  var chromeWebSecurity: js.UndefOr[Boolean] = js.native
+  var defaultCommandTimeout: js.UndefOr[Double] = js.native
+  var env: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var execTimeout: js.UndefOr[Double] = js.native
+  var fileServerFolder: js.UndefOr[String] = js.native
+  var fixturesFolder: js.UndefOr[String] = js.native
+  var ignoreTestFiles: js.UndefOr[String | js.Array[String]] = js.native
+  var integrationFolder: js.UndefOr[String] = js.native
+  var nodeVersion: js.UndefOr[system | bundled] = js.native
+  var numTestsKeptInMemory: js.UndefOr[Double] = js.native
+  var pageLoadTimeout: js.UndefOr[Double] = js.native
+  var pluginsFile: js.UndefOr[String] = js.native
+  var port: js.UndefOr[Double] = js.native
+  var reporter: js.UndefOr[String] = js.native
+  var requestTimeout: js.UndefOr[Double] = js.native
+  var resolvedNodePath: js.UndefOr[String] = js.native
+  var resolvedNodeVersion: js.UndefOr[String] = js.native
+  var responseTimeout: js.UndefOr[Double] = js.native
+  var screenshotsFolder: js.UndefOr[String] = js.native
+  var supportFile: js.UndefOr[String] = js.native
+  var trashAssetsBeforeRuns: js.UndefOr[Boolean] = js.native
+  var video: js.UndefOr[Boolean] = js.native
+  var videoCompression: js.UndefOr[Double] = js.native
+  var videoUploadOnPasses: js.UndefOr[Boolean] = js.native
+  var videosFolder: js.UndefOr[String] = js.native
+  var viewportHeight: js.UndefOr[Double] = js.native
+  var viewportWidth: js.UndefOr[Double] = js.native
+  var waitForAnimations: js.UndefOr[Boolean] = js.native
+  var watchForFileChanges: js.UndefOr[Boolean] = js.native
 }
 
 object PartialConfigOptions {
   @scala.inline
-  def apply(
-    animationDistanceThreshold: Int | Double = null,
-    baseUrl: String = null,
-    chromeWebSecurity: js.UndefOr[Boolean] = js.undefined,
-    defaultCommandTimeout: Int | Double = null,
-    env: StringDictionary[js.Any] = null,
-    execTimeout: Int | Double = null,
-    fileServerFolder: String = null,
-    fixturesFolder: String = null,
-    ignoreTestFiles: String | js.Array[String] = null,
-    integrationFolder: String = null,
-    nodeVersion: system | bundled = null,
-    numTestsKeptInMemory: Int | Double = null,
-    pageLoadTimeout: Int | Double = null,
-    pluginsFile: String = null,
-    port: Int | Double = null,
-    reporter: String = null,
-    requestTimeout: Int | Double = null,
-    resolvedNodePath: String = null,
-    resolvedNodeVersion: String = null,
-    responseTimeout: Int | Double = null,
-    screenshotsFolder: String = null,
-    supportFile: String = null,
-    trashAssetsBeforeRuns: js.UndefOr[Boolean] = js.undefined,
-    video: js.UndefOr[Boolean] = js.undefined,
-    videoCompression: Int | Double = null,
-    videoUploadOnPasses: js.UndefOr[Boolean] = js.undefined,
-    videosFolder: String = null,
-    viewportHeight: Int | Double = null,
-    viewportWidth: Int | Double = null,
-    waitForAnimations: js.UndefOr[Boolean] = js.undefined,
-    watchForFileChanges: js.UndefOr[Boolean] = js.undefined
-  ): PartialConfigOptions = {
+  def apply(): PartialConfigOptions = {
     val __obj = js.Dynamic.literal()
-    if (animationDistanceThreshold != null) __obj.updateDynamic("animationDistanceThreshold")(animationDistanceThreshold.asInstanceOf[js.Any])
-    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
-    if (!js.isUndefined(chromeWebSecurity)) __obj.updateDynamic("chromeWebSecurity")(chromeWebSecurity.asInstanceOf[js.Any])
-    if (defaultCommandTimeout != null) __obj.updateDynamic("defaultCommandTimeout")(defaultCommandTimeout.asInstanceOf[js.Any])
-    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
-    if (execTimeout != null) __obj.updateDynamic("execTimeout")(execTimeout.asInstanceOf[js.Any])
-    if (fileServerFolder != null) __obj.updateDynamic("fileServerFolder")(fileServerFolder.asInstanceOf[js.Any])
-    if (fixturesFolder != null) __obj.updateDynamic("fixturesFolder")(fixturesFolder.asInstanceOf[js.Any])
-    if (ignoreTestFiles != null) __obj.updateDynamic("ignoreTestFiles")(ignoreTestFiles.asInstanceOf[js.Any])
-    if (integrationFolder != null) __obj.updateDynamic("integrationFolder")(integrationFolder.asInstanceOf[js.Any])
-    if (nodeVersion != null) __obj.updateDynamic("nodeVersion")(nodeVersion.asInstanceOf[js.Any])
-    if (numTestsKeptInMemory != null) __obj.updateDynamic("numTestsKeptInMemory")(numTestsKeptInMemory.asInstanceOf[js.Any])
-    if (pageLoadTimeout != null) __obj.updateDynamic("pageLoadTimeout")(pageLoadTimeout.asInstanceOf[js.Any])
-    if (pluginsFile != null) __obj.updateDynamic("pluginsFile")(pluginsFile.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (reporter != null) __obj.updateDynamic("reporter")(reporter.asInstanceOf[js.Any])
-    if (requestTimeout != null) __obj.updateDynamic("requestTimeout")(requestTimeout.asInstanceOf[js.Any])
-    if (resolvedNodePath != null) __obj.updateDynamic("resolvedNodePath")(resolvedNodePath.asInstanceOf[js.Any])
-    if (resolvedNodeVersion != null) __obj.updateDynamic("resolvedNodeVersion")(resolvedNodeVersion.asInstanceOf[js.Any])
-    if (responseTimeout != null) __obj.updateDynamic("responseTimeout")(responseTimeout.asInstanceOf[js.Any])
-    if (screenshotsFolder != null) __obj.updateDynamic("screenshotsFolder")(screenshotsFolder.asInstanceOf[js.Any])
-    if (supportFile != null) __obj.updateDynamic("supportFile")(supportFile.asInstanceOf[js.Any])
-    if (!js.isUndefined(trashAssetsBeforeRuns)) __obj.updateDynamic("trashAssetsBeforeRuns")(trashAssetsBeforeRuns.asInstanceOf[js.Any])
-    if (!js.isUndefined(video)) __obj.updateDynamic("video")(video.asInstanceOf[js.Any])
-    if (videoCompression != null) __obj.updateDynamic("videoCompression")(videoCompression.asInstanceOf[js.Any])
-    if (!js.isUndefined(videoUploadOnPasses)) __obj.updateDynamic("videoUploadOnPasses")(videoUploadOnPasses.asInstanceOf[js.Any])
-    if (videosFolder != null) __obj.updateDynamic("videosFolder")(videosFolder.asInstanceOf[js.Any])
-    if (viewportHeight != null) __obj.updateDynamic("viewportHeight")(viewportHeight.asInstanceOf[js.Any])
-    if (viewportWidth != null) __obj.updateDynamic("viewportWidth")(viewportWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(waitForAnimations)) __obj.updateDynamic("waitForAnimations")(waitForAnimations.asInstanceOf[js.Any])
-    if (!js.isUndefined(watchForFileChanges)) __obj.updateDynamic("watchForFileChanges")(watchForFileChanges.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialConfigOptions]
   }
+  @scala.inline
+  implicit class PartialConfigOptionsOps[Self <: PartialConfigOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimationDistanceThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDistanceThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDistanceThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDistanceThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChromeWebSecurity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chromeWebSecurity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChromeWebSecurity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chromeWebSecurity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultCommandTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCommandTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultCommandTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCommandTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnv(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnv: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileServerFolder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileServerFolder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileServerFolder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileServerFolder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixturesFolder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixturesFolder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixturesFolder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixturesFolder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreTestFiles(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreTestFiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreTestFiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreTestFiles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntegrationFolder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integrationFolder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntegrationFolder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integrationFolder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeVersion(value: system | bundled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumTestsKeptInMemory(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numTestsKeptInMemory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumTestsKeptInMemory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numTestsKeptInMemory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageLoadTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageLoadTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageLoadTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageLoadTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPluginsFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pluginsFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPluginsFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pluginsFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReporter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reporter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReporter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reporter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolvedNodePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvedNodePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolvedNodePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvedNodePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolvedNodeVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvedNodeVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolvedNodeVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvedNodeVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreenshotsFolder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshotsFolder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreenshotsFolder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshotsFolder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrashAssetsBeforeRuns(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trashAssetsBeforeRuns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrashAssetsBeforeRuns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trashAssetsBeforeRuns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideo(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoCompression(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoCompression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoCompression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoCompression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoUploadOnPasses(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoUploadOnPasses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoUploadOnPasses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoUploadOnPasses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideosFolder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videosFolder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideosFolder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videosFolder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewportHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewportHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViewportHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewportHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewportWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewportWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViewportWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewportWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWaitForAnimations(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForAnimations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWaitForAnimations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForAnimations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWatchForFileChanges(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watchForFileChanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWatchForFileChanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watchForFileChanges")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

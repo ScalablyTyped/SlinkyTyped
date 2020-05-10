@@ -1,7 +1,7 @@
 package typingsSlinky.themeUi.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.HTMLDivElement
+import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.themeUiComponents.mod.ForwardRef
 import typingsSlinky.themeUiComponents.mod.MessageProps
 import scala.scalajs.js

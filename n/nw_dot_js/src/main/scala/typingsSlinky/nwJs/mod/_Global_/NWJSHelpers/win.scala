@@ -471,11 +471,8 @@ trait win extends EventEmitter {
   def showDevTools(): Unit = js.native
   def showDevTools(iframe: String): Unit = js.native
   def showDevTools(iframe: String, callback: js.Function1[/* dev_win */ js.UndefOr[Window_], Unit]): Unit = js.native
-  def showDevTools(iframe: typingsSlinky.std.HTMLIFrameElement): Unit = js.native
-  def showDevTools(
-    iframe: typingsSlinky.std.HTMLIFrameElement,
-    callback: js.Function1[/* dev_win */ js.UndefOr[Window_], Unit]
-  ): Unit = js.native
+  def showDevTools(iframe: HTMLIFrameElement): Unit = js.native
+  def showDevTools(iframe: HTMLIFrameElement, callback: js.Function1[/* dev_win */ js.UndefOr[Window_], Unit]): Unit = js.native
   /**
     * Toggle the fullscreen mode.
     */

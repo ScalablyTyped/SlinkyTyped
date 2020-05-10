@@ -1,11 +1,11 @@
 package typingsSlinky.firebaseFirestore
 
 import org.scalablytyped.runtime.NumberDictionary
+import typingsSlinky.firebaseFirestore.byteStringMod.ByteString
 import typingsSlinky.firebaseFirestore.collectionsMod.DocumentKeySet_
 import typingsSlinky.firebaseFirestore.collectionsMod.MaybeDocumentMap_
 import typingsSlinky.firebaseFirestore.snapshotVersionMod.SnapshotVersion
 import typingsSlinky.firebaseFirestore.sortedSetMod.SortedSet
-import typingsSlinky.firebaseFirestore.typesMod.ProtoByteString
 import typingsSlinky.firebaseFirestore.typesMod.TargetId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -73,7 +73,7 @@ object remoteEventMod extends js.Object {
       * query. The resume token essentially identifies a point in time from which
       * the server should resume sending results.
       */
-    resumeToken: ProtoByteString,
+    resumeToken: ByteString,
       /**
       * The "current" (synced) status of this target. Note that "current"
       * has special meaning in the RPC protocol that implies that a target is
@@ -123,7 +123,7 @@ object remoteEventMod extends js.Object {
       * query. The resume token essentially identifies a point in time from which
       * the server should resume sending results.
       */
-    val resumeToken: ProtoByteString = js.native
+    val resumeToken: ByteString = js.native
   }
   
   /* static members */

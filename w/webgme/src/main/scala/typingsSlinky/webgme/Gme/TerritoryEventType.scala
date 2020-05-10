@@ -15,16 +15,14 @@ trait TerritoryEventType extends js.Object
 
 object TerritoryEventType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def complete: typingsSlinky.webgme.webgmeStrings.complete = "complete".asInstanceOf[typingsSlinky.webgme.webgmeStrings.complete]
   @scala.inline
-  def complete: typingsSlinky.webgme.webgmeStrings.complete = this.cast("complete")
+  def incomplete: typingsSlinky.webgme.webgmeStrings.incomplete = "incomplete".asInstanceOf[typingsSlinky.webgme.webgmeStrings.incomplete]
   @scala.inline
-  def incomplete: typingsSlinky.webgme.webgmeStrings.incomplete = this.cast("incomplete")
+  def load: typingsSlinky.webgme.webgmeStrings.load = "load".asInstanceOf[typingsSlinky.webgme.webgmeStrings.load]
   @scala.inline
-  def load: typingsSlinky.webgme.webgmeStrings.load = this.cast("load")
+  def unload: typingsSlinky.webgme.webgmeStrings.unload = "unload".asInstanceOf[typingsSlinky.webgme.webgmeStrings.unload]
   @scala.inline
-  def unload: typingsSlinky.webgme.webgmeStrings.unload = this.cast("unload")
-  @scala.inline
-  def update: typingsSlinky.webgme.webgmeStrings.update = this.cast("update")
+  def update: typingsSlinky.webgme.webgmeStrings.update = "update".asInstanceOf[typingsSlinky.webgme.webgmeStrings.update]
 }
 

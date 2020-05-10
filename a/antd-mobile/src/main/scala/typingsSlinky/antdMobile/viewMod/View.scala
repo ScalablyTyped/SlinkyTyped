@@ -1,7 +1,7 @@
 package typingsSlinky.antdMobile.viewMod
 
+import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.react.mod.Component
-import typingsSlinky.std.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -14,11 +14,41 @@ trait PartialStyleRulesBackdrop extends js.Object {
 
 object PartialStyleRulesBackdrop {
   @scala.inline
-  def apply(invisible: CSSProperties = null, root: CSSProperties = null): PartialStyleRulesBackdrop = {
+  def apply(): PartialStyleRulesBackdrop = {
     val __obj = js.Dynamic.literal()
-    if (invisible != null) __obj.updateDynamic("invisible")(invisible.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialStyleRulesBackdrop]
   }
+  @scala.inline
+  implicit class PartialStyleRulesBackdropOps[Self <: PartialStyleRulesBackdrop] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInvisible(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

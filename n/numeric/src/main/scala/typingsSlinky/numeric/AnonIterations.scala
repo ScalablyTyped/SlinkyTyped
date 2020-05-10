@@ -6,18 +6,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonIterations extends js.Object {
-  var iterations: Double
-  var message: String
-  var solution: Scalar | Vector
+  var iterations: Double = js.native
+  var message: String = js.native
+  var solution: Scalar | Vector = js.native
 }
 
 object AnonIterations {
   @scala.inline
   def apply(iterations: Double, message: String, solution: Scalar | Vector): AnonIterations = {
     val __obj = js.Dynamic.literal(iterations = iterations.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], solution = solution.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonIterations]
   }
+  @scala.inline
+  implicit class AnonIterationsOps[Self <: AnonIterations] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIterations(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iterations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSolution(value: Scalar | Vector): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("solution")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

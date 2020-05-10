@@ -1,15 +1,22 @@
 package typingsSlinky.reactNativeDialog.components
 
+import typingsSlinky.reactNative.mod.TextProps
+import typingsSlinky.reactNative.mod.ViewProps
+import typingsSlinky.reactNativeDialog.mod.ButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Button
-  extends `SharedApply_<intersection>_1668206555`[typingsSlinky.reactNativeDialog.mod.default.Button] {
+object Button {
   @JSImport("react-native-dialog", "default.Button")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ButtonProps with ViewProps with TextProps): `SharedBuilder_<intersection>_620818419`[typingsSlinky.reactNativeDialog.mod.default.Button] = new `SharedBuilder_<intersection>_620818419`[typingsSlinky.reactNativeDialog.mod.default.Button](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(label: String, onPress: () => Unit): `SharedBuilder_<intersection>_620818419`[typingsSlinky.reactNativeDialog.mod.default.Button] = {
+    val __props = js.Dynamic.literal(label = label.asInstanceOf[js.Any], onPress = js.Any.fromFunction0(onPress))
+    new `SharedBuilder_<intersection>_620818419`[typingsSlinky.reactNativeDialog.mod.default.Button](js.Array(this.component, __props.asInstanceOf[ButtonProps with ViewProps with TextProps]))
+  }
 }
 

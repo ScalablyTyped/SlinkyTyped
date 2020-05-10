@@ -1,8 +1,5 @@
 package typingsSlinky.simpleStatistics
 
-import typingsSlinky.simpleStatistics.bayesianClassifierMod.Data
-import typingsSlinky.simpleStatistics.bayesianClassifierMod.Item
-import typingsSlinky.simpleStatistics.bayesianClassifierMod.OddsSums
 import typingsSlinky.simpleStatistics.chiSquaredDistributionTableMod.DistributionTable
 import typingsSlinky.simpleStatistics.kernelDensityEstimationMod.BandwidthMethods
 import typingsSlinky.simpleStatistics.kernelDensityEstimationMod.Kernels
@@ -18,58 +15,22 @@ object mod extends js.Object {
     */
   @js.native
   class BayesianClassifier ()
-    extends typingsSlinky.simpleStatistics.bayesianClassifierMod.BayesianClassifier {
-    /* CompleteClass */
-    override var data: Data = js.native
-    /* CompleteClass */
-    override var totalCount: Double = js.native
-    /* CompleteClass */
-    override def score(item: Item): OddsSums = js.native
-    /* CompleteClass */
-    override def train(item: Item, category: String): Unit = js.native
-  }
+    extends typingsSlinky.simpleStatistics.bayesianClassifierMod.BayesianClassifier
   
   @js.native
   class PerceptronModel ()
-    extends typingsSlinky.simpleStatistics.perceptronMod.PerceptronModel {
-    /* CompleteClass */
-    override var bias: Double = js.native
-    /* CompleteClass */
-    override var weights: js.Array[Double] = js.native
-    /* CompleteClass */
-    override def predict(features: js.Array[Double]): Double = js.native
-    /* CompleteClass */
-    override def train(features: js.Array[Double], label: Double): typingsSlinky.simpleStatistics.perceptronMod.PerceptronModel = js.native
-  }
+    extends typingsSlinky.simpleStatistics.perceptronMod.PerceptronModel
   
   /**
     * https://simplestatistics.org/docs/#bayesianclassifier
     */
   @js.native
   class bayesian ()
-    extends typingsSlinky.simpleStatistics.bayesianClassifierMod.BayesianClassifier {
-    /* CompleteClass */
-    override var data: Data = js.native
-    /* CompleteClass */
-    override var totalCount: Double = js.native
-    /* CompleteClass */
-    override def score(item: Item): OddsSums = js.native
-    /* CompleteClass */
-    override def train(item: Item, category: String): Unit = js.native
-  }
+    extends typingsSlinky.simpleStatistics.bayesianClassifierMod.BayesianClassifier
   
   @js.native
   class perceptron ()
-    extends typingsSlinky.simpleStatistics.perceptronMod.PerceptronModel {
-    /* CompleteClass */
-    override var bias: Double = js.native
-    /* CompleteClass */
-    override var weights: js.Array[Double] = js.native
-    /* CompleteClass */
-    override def predict(features: js.Array[Double]): Double = js.native
-    /* CompleteClass */
-    override def train(features: js.Array[Double], label: Double): typingsSlinky.simpleStatistics.perceptronMod.PerceptronModel = js.native
-  }
+    extends typingsSlinky.simpleStatistics.perceptronMod.PerceptronModel
   
   val epsilon: Double = js.native
   val standardNormalTable: js.Array[Double] = js.native

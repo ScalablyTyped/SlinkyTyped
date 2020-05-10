@@ -13,12 +13,10 @@ trait BuiltInReducers extends js.Object
 
 object BuiltInReducers {
   @scala.inline
-  def _count: typingsSlinky.pouchdbMapreduce.pouchdbMapreduceStrings._count = this.cast("_count")
+  def _count: typingsSlinky.pouchdbMapreduce.pouchdbMapreduceStrings._count = "_count".asInstanceOf[typingsSlinky.pouchdbMapreduce.pouchdbMapreduceStrings._count]
   @scala.inline
-  def _stats: typingsSlinky.pouchdbMapreduce.pouchdbMapreduceStrings._stats = this.cast("_stats")
+  def _stats: typingsSlinky.pouchdbMapreduce.pouchdbMapreduceStrings._stats = "_stats".asInstanceOf[typingsSlinky.pouchdbMapreduce.pouchdbMapreduceStrings._stats]
   @scala.inline
-  def _sum: typingsSlinky.pouchdbMapreduce.pouchdbMapreduceStrings._sum = this.cast("_sum")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def _sum: typingsSlinky.pouchdbMapreduce.pouchdbMapreduceStrings._sum = "_sum".asInstanceOf[typingsSlinky.pouchdbMapreduce.pouchdbMapreduceStrings._sum]
 }
 

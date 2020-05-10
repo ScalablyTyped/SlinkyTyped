@@ -2,9 +2,12 @@ package typingsSlinky.chromeApps.chrome.runtime
 
 import typingsSlinky.chromeApps.AnonNOUPDATE
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
-import typingsSlinky.chromeApps.chromeAppsStrings.no_update
-import typingsSlinky.chromeApps.chromeAppsStrings.throttled
-import typingsSlinky.chromeApps.chromeAppsStrings.update_available
+import typingsSlinky.chromeApps.chromeAppsStrings.NO_UPDATE
+import typingsSlinky.chromeApps.chromeAppsStrings.THROTTLED
+import typingsSlinky.chromeApps.chromeAppsStrings.UPDATE_AVAILABLE
+import typingsSlinky.chromeApps.chromeAppsStrings.no_update_
+import typingsSlinky.chromeApps.chromeAppsStrings.throttled_
+import typingsSlinky.chromeApps.chromeAppsStrings.update_available_
 import typingsSlinky.std.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +25,14 @@ object requestUpdateCheck extends js.Object {
     */
   def apply(
     callback: js.Function2[
-      /* status */ ToStringLiteral[AnonNOUPDATE, String, Exclude[String, throttled | no_update | update_available]], 
+      /* status */ ToStringLiteral[
+        AnonNOUPDATE, 
+        /* keyof chrome-apps.AnonNOUPDATE */ THROTTLED | NO_UPDATE | UPDATE_AVAILABLE, 
+        Exclude[
+          /* keyof chrome-apps.AnonNOUPDATE */ THROTTLED | NO_UPDATE | UPDATE_AVAILABLE, 
+          throttled_ | no_update_ | update_available_
+        ]
+      ], 
       /* details */ js.UndefOr[UpdateCheckDetails], 
       Unit
     ]

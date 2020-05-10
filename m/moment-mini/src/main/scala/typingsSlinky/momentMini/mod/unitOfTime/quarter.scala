@@ -13,12 +13,10 @@ trait quarter extends js.Object
 
 object quarter {
   @scala.inline
-  def Q: typingsSlinky.momentMini.momentMiniStrings.Q = this.cast("Q")
+  def Q: typingsSlinky.momentMini.momentMiniStrings.Q = "Q".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.Q]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def quarter: typingsSlinky.momentMini.momentMiniStrings.quarter = "quarter".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.quarter]
   @scala.inline
-  def quarter: typingsSlinky.momentMini.momentMiniStrings.quarter = this.cast("quarter")
-  @scala.inline
-  def quarters: typingsSlinky.momentMini.momentMiniStrings.quarters = this.cast("quarters")
+  def quarters: typingsSlinky.momentMini.momentMiniStrings.quarters = "quarters".asInstanceOf[typingsSlinky.momentMini.momentMiniStrings.quarters]
 }
 

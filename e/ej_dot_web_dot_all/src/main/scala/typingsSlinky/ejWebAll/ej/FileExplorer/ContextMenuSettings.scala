@@ -4,25 +4,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ContextMenuSettings extends js.Object {
   /** The customMenuFields property is used to define custom functionality for custom ContextMenu item's which are defined in items property.
     * @Default {[]}
     */
-  var customMenuFields: js.UndefOr[js.Array[_]] = js.undefined
+  var customMenuFields: js.UndefOr[js.Array[_]] = js.native
   /** The items property is used to configure and group the required ContextMenu items in FileExplorer control.
     * @Default {{% highlight javascript %}{navbar: [NewFolder, Upload, |, Delete, Rename, |, Cut, Copy, Paste, |, Getinfo],cwd: [Refresh, Paste,|, SortBy, |, NewFolder, Upload, |,
     * Getinfo],files: [Open, Download, |, Upload, |, Delete, Rename, |, Cut, Copy, Paste, |, OpenFolderLocation, Getinfo]}{% endhighlight %}}
     */
-  var items: js.UndefOr[js.Any] = js.undefined
+  var items: js.UndefOr[js.Any] = js.native
 }
 
 object ContextMenuSettings {
   @scala.inline
-  def apply(customMenuFields: js.Array[_] = null, items: js.Any = null): ContextMenuSettings = {
+  def apply(): ContextMenuSettings = {
     val __obj = js.Dynamic.literal()
-    if (customMenuFields != null) __obj.updateDynamic("customMenuFields")(customMenuFields.asInstanceOf[js.Any])
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContextMenuSettings]
   }
+  @scala.inline
+  implicit class ContextMenuSettingsOps[Self <: ContextMenuSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomMenuFields(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customMenuFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomMenuFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customMenuFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItems(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

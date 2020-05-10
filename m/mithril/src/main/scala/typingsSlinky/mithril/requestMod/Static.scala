@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Static extends js.Object {
-  var jsonp: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof jsonp */ js.Any
-  var request: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof request */ js.Any
+  var jsonp: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof jsonp */ js.Any = js.native
+  var request: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof request */ js.Any = js.native
 }
 
 object Static {
@@ -16,8 +17,27 @@ object Static {
     request: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof request */ js.Any
   ): Static = {
     val __obj = js.Dynamic.literal(jsonp = jsonp.asInstanceOf[js.Any], request = request.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Static]
   }
+  @scala.inline
+  implicit class StaticOps[Self <: Static] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJsonp(value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof jsonp */ js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRequest(value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof request */ js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

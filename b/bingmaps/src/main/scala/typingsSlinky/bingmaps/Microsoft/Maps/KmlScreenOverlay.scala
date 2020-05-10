@@ -48,7 +48,7 @@ class KmlScreenOverlay () extends js.Object {
     * @param htmlElement The new htmlElement to set for the overlay.
     */
   def setHtmlElement(htmlElement: String): Unit = js.native
-  def setHtmlElement(htmlElement: typingsSlinky.std.HTMLElement): Unit = js.native
+  def setHtmlElement(htmlElement: HTMLElement): Unit = js.native
   /**
     * Sets the options to customize the screen overlay.
     * @param options The options to customize the screen overlay.

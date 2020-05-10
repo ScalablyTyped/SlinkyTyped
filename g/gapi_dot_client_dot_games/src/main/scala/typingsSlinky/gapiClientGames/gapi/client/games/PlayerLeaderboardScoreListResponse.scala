@@ -4,31 +4,79 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlayerLeaderboardScoreListResponse extends js.Object {
   /** The leaderboard scores. */
-  var items: js.UndefOr[js.Array[PlayerLeaderboardScore]] = js.undefined
+  var items: js.UndefOr[js.Array[PlayerLeaderboardScore]] = js.native
   /** Uniquely identifies the type of this resource. Value is always the fixed string games#playerLeaderboardScoreListResponse. */
-  var kind: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.native
   /** The pagination token for the next page of results. */
-  var nextPageToken: js.UndefOr[String] = js.undefined
+  var nextPageToken: js.UndefOr[String] = js.native
   /** The Player resources for the owner of this score. */
-  var player: js.UndefOr[Player] = js.undefined
+  var player: js.UndefOr[Player] = js.native
 }
 
 object PlayerLeaderboardScoreListResponse {
   @scala.inline
-  def apply(
-    items: js.Array[PlayerLeaderboardScore] = null,
-    kind: String = null,
-    nextPageToken: String = null,
-    player: Player = null
-  ): PlayerLeaderboardScoreListResponse = {
+  def apply(): PlayerLeaderboardScoreListResponse = {
     val __obj = js.Dynamic.literal()
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (player != null) __obj.updateDynamic("player")(player.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlayerLeaderboardScoreListResponse]
   }
+  @scala.inline
+  implicit class PlayerLeaderboardScoreListResponseOps[Self <: PlayerLeaderboardScoreListResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItems(value: js.Array[PlayerLeaderboardScore]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlayer(value: Player): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("player")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlayer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("player")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

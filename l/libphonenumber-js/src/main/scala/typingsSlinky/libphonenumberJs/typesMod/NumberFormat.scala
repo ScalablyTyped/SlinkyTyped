@@ -19,20 +19,18 @@ trait NumberFormat extends js.Object
 
 object NumberFormat {
   @scala.inline
-  def EDot164: typingsSlinky.libphonenumberJs.libphonenumberJsStrings.EDot164 = this.cast("E.164")
+  def EDot164: typingsSlinky.libphonenumberJs.libphonenumberJsStrings.EDot164 = "E.164".asInstanceOf[typingsSlinky.libphonenumberJs.libphonenumberJsStrings.EDot164]
   @scala.inline
-  def IDD: typingsSlinky.libphonenumberJs.libphonenumberJsStrings.IDD = this.cast("IDD")
+  def IDD: typingsSlinky.libphonenumberJs.libphonenumberJsStrings.IDD = "IDD".asInstanceOf[typingsSlinky.libphonenumberJs.libphonenumberJsStrings.IDD]
   @scala.inline
-  def INTERNATIONAL: typingsSlinky.libphonenumberJs.libphonenumberJsStrings.INTERNATIONAL = this.cast("INTERNATIONAL")
+  def INTERNATIONAL: typingsSlinky.libphonenumberJs.libphonenumberJsStrings.INTERNATIONAL = "INTERNATIONAL".asInstanceOf[typingsSlinky.libphonenumberJs.libphonenumberJsStrings.INTERNATIONAL]
   @scala.inline
-  def International: International_ = this.cast("International")
+  def International: International_ = "International".asInstanceOf[International_]
   @scala.inline
-  def NATIONAL: typingsSlinky.libphonenumberJs.libphonenumberJsStrings.NATIONAL = this.cast("NATIONAL")
+  def NATIONAL: typingsSlinky.libphonenumberJs.libphonenumberJsStrings.NATIONAL = "NATIONAL".asInstanceOf[typingsSlinky.libphonenumberJs.libphonenumberJsStrings.NATIONAL]
   @scala.inline
-  def National: National_ = this.cast("National")
+  def National: National_ = "National".asInstanceOf[National_]
   @scala.inline
-  def RFC3966: typingsSlinky.libphonenumberJs.libphonenumberJsStrings.RFC3966 = this.cast("RFC3966")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def RFC3966: typingsSlinky.libphonenumberJs.libphonenumberJsStrings.RFC3966 = "RFC3966".asInstanceOf[typingsSlinky.libphonenumberJs.libphonenumberJsStrings.RFC3966]
 }
 

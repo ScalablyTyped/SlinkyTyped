@@ -22,16 +22,53 @@ trait ReplicationInstanceTaskLog extends js.Object {
 
 object ReplicationInstanceTaskLog {
   @scala.inline
-  def apply(
-    ReplicationInstanceTaskLogSize: Int | Double = null,
-    ReplicationTaskArn: String = null,
-    ReplicationTaskName: String = null
-  ): ReplicationInstanceTaskLog = {
+  def apply(): ReplicationInstanceTaskLog = {
     val __obj = js.Dynamic.literal()
-    if (ReplicationInstanceTaskLogSize != null) __obj.updateDynamic("ReplicationInstanceTaskLogSize")(ReplicationInstanceTaskLogSize.asInstanceOf[js.Any])
-    if (ReplicationTaskArn != null) __obj.updateDynamic("ReplicationTaskArn")(ReplicationTaskArn.asInstanceOf[js.Any])
-    if (ReplicationTaskName != null) __obj.updateDynamic("ReplicationTaskName")(ReplicationTaskName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplicationInstanceTaskLog]
   }
+  @scala.inline
+  implicit class ReplicationInstanceTaskLogOps[Self <: ReplicationInstanceTaskLog] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReplicationInstanceTaskLogSize(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationInstanceTaskLogSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationInstanceTaskLogSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationInstanceTaskLogSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationTaskArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationTaskArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationTaskName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationTaskName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

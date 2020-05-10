@@ -11,6 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RegionInstanceGroupManagersResource extends js.Object {
   /**
     * Schedules a group action to remove the specified instances from the managed instance group. Abandoning an instance does not delete the instance, but it
@@ -23,9 +24,9 @@ trait RegionInstanceGroupManagersResource extends js.Object {
     *
     * You can specify a maximum of 1000 instances with this method per request.
     */
-  def abandonInstances(request: AnonInstanceGroupManagerKey): Request_[Operation]
+  def abandonInstances(request: AnonInstanceGroupManagerKey): Request_[Operation] = js.native
   /** Deletes the specified managed instance group and all of the instances in that group. */
-  def delete(request: AnonInstanceGroupManagerKey): Request_[Operation]
+  def delete(request: AnonInstanceGroupManagerKey): Request_[Operation] = js.native
   /**
     * Schedules a group action to delete the specified instances in the managed instance group. The instances are also removed from any target pools of which
     * they were a member. This method reduces the targetSize of the managed instance group by the number of instances that you delete. This operation is
@@ -37,9 +38,9 @@ trait RegionInstanceGroupManagersResource extends js.Object {
     *
     * You can specify a maximum of 1000 instances with this method per request.
     */
-  def deleteInstances(request: AnonInstanceGroupManagerKey): Request_[Operation]
+  def deleteInstances(request: AnonInstanceGroupManagerKey): Request_[Operation] = js.native
   /** Returns all of the details about the specified managed instance group. */
-  def get(request: AnonQuotaUserRegion): Request_[InstanceGroupManager]
+  def get(request: AnonQuotaUserRegion): Request_[InstanceGroupManager] = js.native
   /**
     * Creates a managed instance group using the information that you specify in the request. After the group is created, it schedules an action to create
     * instances in the group using the specified instance template. This operation is marked as DONE when the group is created even if the instances in the
@@ -47,14 +48,14 @@ trait RegionInstanceGroupManagersResource extends js.Object {
     *
     * A regional managed instance group can contain up to 2000 instances.
     */
-  def insert(request: AnonPrettyPrint): Request_[Operation]
+  def insert(request: AnonPrettyPrint): Request_[Operation] = js.native
   /** Retrieves the list of managed instance groups that are contained within the specified region. */
-  def list(request: AnonFilter): Request_[RegionInstanceGroupManagerList]
+  def list(request: AnonFilter): Request_[RegionInstanceGroupManagerList] = js.native
   /**
     * Lists the instances in the managed instance group and instances that are scheduled to be created. The list includes any current actions that the group
     * has scheduled for its instances.
     */
-  def listManagedInstances(request: AnonPageToken): Request_[RegionInstanceGroupManagersListInstancesResponse]
+  def listManagedInstances(request: AnonPageToken): Request_[RegionInstanceGroupManagersListInstancesResponse] = js.native
   /**
     * Schedules a group action to recreate the specified instances in the managed instance group. The instances are deleted and recreated using the current
     * instance template for the managed instance group. This operation is marked as DONE when the action is scheduled even if the instances have not yet been
@@ -65,7 +66,7 @@ trait RegionInstanceGroupManagersResource extends js.Object {
     *
     * You can specify a maximum of 1000 instances with this method per request.
     */
-  def recreateInstances(request: AnonInstanceGroupManagerKey): Request_[Operation]
+  def recreateInstances(request: AnonInstanceGroupManagerKey): Request_[Operation] = js.native
   /**
     * Changes the intended size for the managed instance group. If you increase the size, the group schedules actions to create new instances using the
     * current instance template. If you decrease the size, the group schedules delete actions on one or more instances. The resize operation is marked DONE
@@ -75,11 +76,11 @@ trait RegionInstanceGroupManagersResource extends js.Object {
     * If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has
     * elapsed before the VM instance is removed or deleted.
     */
-  def resize(request: AnonRegionRequestId): Request_[Operation]
+  def resize(request: AnonRegionRequestId): Request_[Operation] = js.native
   /** Sets the instance template to use when creating new instances or recreating instances in this group. Existing instances are not affected. */
-  def setInstanceTemplate(request: AnonInstanceGroupManagerKey): Request_[Operation]
+  def setInstanceTemplate(request: AnonInstanceGroupManagerKey): Request_[Operation] = js.native
   /** Modifies the target pools to which all new instances in this group are assigned. Existing instances in the group are not affected. */
-  def setTargetPools(request: AnonInstanceGroupManagerKey): Request_[Operation]
+  def setTargetPools(request: AnonInstanceGroupManagerKey): Request_[Operation] = js.native
 }
 
 object RegionInstanceGroupManagersResource {
@@ -98,8 +99,81 @@ object RegionInstanceGroupManagersResource {
     setTargetPools: AnonInstanceGroupManagerKey => Request_[Operation]
   ): RegionInstanceGroupManagersResource = {
     val __obj = js.Dynamic.literal(abandonInstances = js.Any.fromFunction1(abandonInstances), delete = js.Any.fromFunction1(delete), deleteInstances = js.Any.fromFunction1(deleteInstances), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), listManagedInstances = js.Any.fromFunction1(listManagedInstances), recreateInstances = js.Any.fromFunction1(recreateInstances), resize = js.Any.fromFunction1(resize), setInstanceTemplate = js.Any.fromFunction1(setInstanceTemplate), setTargetPools = js.Any.fromFunction1(setTargetPools))
-  
     __obj.asInstanceOf[RegionInstanceGroupManagersResource]
   }
+  @scala.inline
+  implicit class RegionInstanceGroupManagersResourceOps[Self <: RegionInstanceGroupManagersResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAbandonInstances(value: AnonInstanceGroupManagerKey => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abandonInstances")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDelete(value: AnonInstanceGroupManagerKey => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDeleteInstances(value: AnonInstanceGroupManagerKey => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteInstances")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: AnonQuotaUserRegion => Request_[InstanceGroupManager]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInsert(value: AnonPrettyPrint => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withList(value: AnonFilter => Request_[RegionInstanceGroupManagerList]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withListManagedInstances(value: AnonPageToken => Request_[RegionInstanceGroupManagersListInstancesResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listManagedInstances")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRecreateInstances(value: AnonInstanceGroupManagerKey => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recreateInstances")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withResize(value: AnonRegionRequestId => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetInstanceTemplate(value: AnonInstanceGroupManagerKey => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setInstanceTemplate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetTargetPools(value: AnonInstanceGroupManagerKey => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTargetPools")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

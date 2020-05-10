@@ -27,12 +27,53 @@ trait SchemaHttpHeaderOption extends js.Object {
 
 object SchemaHttpHeaderOption {
   @scala.inline
-  def apply(headerName: String = null, headerValue: String = null, replace: js.UndefOr[Boolean] = js.undefined): SchemaHttpHeaderOption = {
+  def apply(): SchemaHttpHeaderOption = {
     val __obj = js.Dynamic.literal()
-    if (headerName != null) __obj.updateDynamic("headerName")(headerName.asInstanceOf[js.Any])
-    if (headerValue != null) __obj.updateDynamic("headerValue")(headerValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(replace)) __obj.updateDynamic("replace")(replace.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHttpHeaderOption]
   }
+  @scala.inline
+  implicit class SchemaHttpHeaderOptionOps[Self <: SchemaHttpHeaderOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeaderName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplace(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

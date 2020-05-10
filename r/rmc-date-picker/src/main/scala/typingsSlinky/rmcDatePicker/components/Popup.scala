@@ -1,10 +1,8 @@
 package typingsSlinky.rmcDatePicker.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.rmcDatePicker.popupMod.IPopupDatePickerProps
 import typingsSlinky.rmcDatePicker.popupMod.default
@@ -12,72 +10,84 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Popup
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Popup {
   @JSImport("rmc-date-picker/lib/Popup", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled */
-  def apply(
-    datePicker: ReactElement,
-    WrapComponent: js.Any = null,
-    actionTextActiveOpacity: Int | Double = null,
-    actionTextUnderlayColor: String = null,
-    content: ReactElement | String = null,
-    date: js.Any = null,
-    dismissText: String | ReactElement = null,
-    maskTransitionName: String = null,
-    okText: String | ReactElement = null,
-    onChange: /* date */ js.UndefOr[js.Any] => Unit = null,
-    onDismiss: () => Unit = null,
-    onOk: /* value */ js.UndefOr[js.Any] => Unit = null,
-    onVisibleChange: /* visible */ Boolean => Unit = null,
-    picker: js.Any = null,
-    pickerValueChangeProp: String = null,
-    pickerValueProp: String = null,
-    popupTransitionName: String = null,
-    prefixCls: String = null,
-    style: js.Any = null,
-    styles: js.Any = null,
-    title: String | ReactElement = null,
-    transitionName: String = null,
-    triggerType: String = null,
-    value: js.Any = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    wrapStyle: CSSProperties = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(datePicker = datePicker.asInstanceOf[js.Any])
-    if (WrapComponent != null) __obj.updateDynamic("WrapComponent")(WrapComponent.asInstanceOf[js.Any])
-    if (actionTextActiveOpacity != null) __obj.updateDynamic("actionTextActiveOpacity")(actionTextActiveOpacity.asInstanceOf[js.Any])
-    if (actionTextUnderlayColor != null) __obj.updateDynamic("actionTextUnderlayColor")(actionTextUnderlayColor.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (dismissText != null) __obj.updateDynamic("dismissText")(dismissText.asInstanceOf[js.Any])
-    if (maskTransitionName != null) __obj.updateDynamic("maskTransitionName")(maskTransitionName.asInstanceOf[js.Any])
-    if (okText != null) __obj.updateDynamic("okText")(okText.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction0(onDismiss))
-    if (onOk != null) __obj.updateDynamic("onOk")(js.Any.fromFunction1(onOk))
-    if (onVisibleChange != null) __obj.updateDynamic("onVisibleChange")(js.Any.fromFunction1(onVisibleChange))
-    if (picker != null) __obj.updateDynamic("picker")(picker.asInstanceOf[js.Any])
-    if (pickerValueChangeProp != null) __obj.updateDynamic("pickerValueChangeProp")(pickerValueChangeProp.asInstanceOf[js.Any])
-    if (pickerValueProp != null) __obj.updateDynamic("pickerValueProp")(pickerValueProp.asInstanceOf[js.Any])
-    if (popupTransitionName != null) __obj.updateDynamic("popupTransitionName")(popupTransitionName.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
-    if (triggerType != null) __obj.updateDynamic("triggerType")(triggerType.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (wrapStyle != null) __obj.updateDynamic("wrapStyle")(wrapStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def WrapComponent(value: js.Any): this.type = set("WrapComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def actionTextActiveOpacity(value: Double): this.type = set("actionTextActiveOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def actionTextUnderlayColor(value: String): this.type = set("actionTextUnderlayColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(value: ReactElement | String): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def date(value: js.Any): this.type = set("date", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dismissTextReactElement(value: ReactElement): this.type = set("dismissText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dismissText(value: String | ReactElement): this.type = set("dismissText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maskTransitionName(value: String): this.type = set("maskTransitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def okTextReactElement(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def okText(value: String | ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* date */ js.UndefOr[js.Any] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDismiss(value: () => Unit): this.type = set("onDismiss", js.Any.fromFunction0(value))
+    @scala.inline
+    def onOk(value: /* value */ js.UndefOr[js.Any] => Unit): this.type = set("onOk", js.Any.fromFunction1(value))
+    @scala.inline
+    def onVisibleChange(value: /* visible */ Boolean => Unit): this.type = set("onVisibleChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def picker(value: js.Any): this.type = set("picker", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pickerValueChangeProp(value: String): this.type = set("pickerValueChangeProp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pickerValueProp(value: String): this.type = set("pickerValueProp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popupTransitionName(value: String): this.type = set("popupTransitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Any): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styles(value: js.Any): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String | ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def triggerType(value: String): this.type = set("triggerType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapStyle(value: CSSProperties): this.type = set("wrapStyle", value.asInstanceOf[js.Any])
   }
-  type Props = IPopupDatePickerProps
+  
+  def withProps(p: IPopupDatePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(datePicker: ReactElement): Builder = {
+    val __props = js.Dynamic.literal(datePicker = datePicker.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IPopupDatePickerProps]))
+  }
 }
 

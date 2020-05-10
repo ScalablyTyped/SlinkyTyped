@@ -59,18 +59,65 @@ trait SchemaBuildBazelRemoteExecutionV2Action extends js.Object {
 
 object SchemaBuildBazelRemoteExecutionV2Action {
   @scala.inline
-  def apply(
-    commandDigest: SchemaBuildBazelRemoteExecutionV2Digest = null,
-    doNotCache: js.UndefOr[Boolean] = js.undefined,
-    inputRootDigest: SchemaBuildBazelRemoteExecutionV2Digest = null,
-    timeout: String = null
-  ): SchemaBuildBazelRemoteExecutionV2Action = {
+  def apply(): SchemaBuildBazelRemoteExecutionV2Action = {
     val __obj = js.Dynamic.literal()
-    if (commandDigest != null) __obj.updateDynamic("commandDigest")(commandDigest.asInstanceOf[js.Any])
-    if (!js.isUndefined(doNotCache)) __obj.updateDynamic("doNotCache")(doNotCache.asInstanceOf[js.Any])
-    if (inputRootDigest != null) __obj.updateDynamic("inputRootDigest")(inputRootDigest.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2Action]
   }
+  @scala.inline
+  implicit class SchemaBuildBazelRemoteExecutionV2ActionOps[Self <: SchemaBuildBazelRemoteExecutionV2Action] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommandDigest(value: SchemaBuildBazelRemoteExecutionV2Digest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commandDigest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommandDigest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commandDigest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoNotCache(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doNotCache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDoNotCache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doNotCache")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputRootDigest(value: SchemaBuildBazelRemoteExecutionV2Digest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRootDigest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputRootDigest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRootDigest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

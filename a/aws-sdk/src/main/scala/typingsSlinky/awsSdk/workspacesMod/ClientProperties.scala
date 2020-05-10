@@ -14,10 +14,29 @@ trait ClientProperties extends js.Object {
 
 object ClientProperties {
   @scala.inline
-  def apply(ReconnectEnabled: ReconnectEnum = null): ClientProperties = {
+  def apply(): ClientProperties = {
     val __obj = js.Dynamic.literal()
-    if (ReconnectEnabled != null) __obj.updateDynamic("ReconnectEnabled")(ReconnectEnabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientProperties]
   }
+  @scala.inline
+  implicit class ClientPropertiesOps[Self <: ClientProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReconnectEnabled(value: ReconnectEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReconnectEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReconnectEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReconnectEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

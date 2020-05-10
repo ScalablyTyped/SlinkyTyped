@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MaxNormArgs extends js.Object {
   /**
     * Axis along which to calculate norms.
@@ -19,20 +20,50 @@ trait MaxNormArgs extends js.Object {
     *  to constrain the weights of each filter tensor of size
     *  `[rows, cols, inputDepth]`.
     */
-  var axis: js.UndefOr[Double] = js.undefined
+  var axis: js.UndefOr[Double] = js.native
   /**
     * Maximum norm for incoming weights
     */
-  var maxValue: js.UndefOr[Double] = js.undefined
+  var maxValue: js.UndefOr[Double] = js.native
 }
 
 object MaxNormArgs {
   @scala.inline
-  def apply(axis: Int | Double = null, maxValue: Int | Double = null): MaxNormArgs = {
+  def apply(): MaxNormArgs = {
     val __obj = js.Dynamic.literal()
-    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
-    if (maxValue != null) __obj.updateDynamic("maxValue")(maxValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[MaxNormArgs]
   }
+  @scala.inline
+  implicit class MaxNormArgsOps[Self <: MaxNormArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAxis(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,12 +1,9 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.AnonMenuItem
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.left
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.right
@@ -16,39 +13,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tab
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Tab {
   @JSImport("semantic-ui-react/dist/commonjs/modules/Tab", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    activeIndex: Double | String = null,
-    as: js.Any = null,
-    defaultActiveIndex: Double | String = null,
-    grid: js.Any = null,
-    menu: js.Any = null,
-    menuPosition: left | right = null,
-    onTabChange: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ TabProps) => Unit = null,
-    panes: js.Array[AnonMenuItem] = null,
-    renderActiveOnly: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (activeIndex != null) __obj.updateDynamic("activeIndex")(activeIndex.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (defaultActiveIndex != null) __obj.updateDynamic("defaultActiveIndex")(defaultActiveIndex.asInstanceOf[js.Any])
-    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
-    if (menu != null) __obj.updateDynamic("menu")(menu.asInstanceOf[js.Any])
-    if (menuPosition != null) __obj.updateDynamic("menuPosition")(menuPosition.asInstanceOf[js.Any])
-    if (onTabChange != null) __obj.updateDynamic("onTabChange")(js.Any.fromFunction2(onTabChange))
-    if (panes != null) __obj.updateDynamic("panes")(panes.asInstanceOf[js.Any])
-    if (!js.isUndefined(renderActiveOnly)) __obj.updateDynamic("renderActiveOnly")(renderActiveOnly.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def activeIndex(value: Double | String): this.type = set("activeIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultActiveIndex(value: Double | String): this.type = set("defaultActiveIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def grid(value: js.Any): this.type = set("grid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menu(value: js.Any): this.type = set("menu", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuPosition(value: left | right): this.type = set("menuPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onTabChange(value: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ TabProps) => Unit): this.type = set("onTabChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def panes(value: js.Array[AnonMenuItem]): this.type = set("panes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderActiveOnly(value: Boolean): this.type = set("renderActiveOnly", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.div.tag.type, typingsSlinky.semanticUiReact.tabMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TabProps
+  
+  def withProps(p: TabProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Tab.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

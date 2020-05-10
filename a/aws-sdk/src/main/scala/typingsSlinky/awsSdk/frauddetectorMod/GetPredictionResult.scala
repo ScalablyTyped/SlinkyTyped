@@ -18,11 +18,41 @@ trait GetPredictionResult extends js.Object {
 
 object GetPredictionResult {
   @scala.inline
-  def apply(modelScores: ListOfModelScores = null, outcomes: ListOfStrings = null): GetPredictionResult = {
+  def apply(): GetPredictionResult = {
     val __obj = js.Dynamic.literal()
-    if (modelScores != null) __obj.updateDynamic("modelScores")(modelScores.asInstanceOf[js.Any])
-    if (outcomes != null) __obj.updateDynamic("outcomes")(outcomes.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPredictionResult]
   }
+  @scala.inline
+  implicit class GetPredictionResultOps[Self <: GetPredictionResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withModelScores(value: ListOfModelScores): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelScores")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModelScores: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelScores")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutcomes(value: ListOfStrings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outcomes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutcomes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outcomes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

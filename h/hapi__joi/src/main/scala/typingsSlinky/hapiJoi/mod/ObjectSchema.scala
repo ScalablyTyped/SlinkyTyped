@@ -1,6 +1,5 @@
 package typingsSlinky.hapiJoi.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -79,8 +78,8 @@ trait ObjectSchema[TSchema] extends AnySchema {
     * @param pattern - a pattern that can be either a regular expression or a joi schema that will be tested against the unknown key names
     * @param schema - the schema object matching keys must validate against
     */
-  def pattern(pattern: RegExp, schema: SchemaLike): this.type = js.native
-  def pattern(pattern: RegExp, schema: SchemaLike, options: ObjectPatternOptions): this.type = js.native
+  def pattern(pattern: js.RegExp, schema: SchemaLike): this.type = js.native
+  def pattern(pattern: js.RegExp, schema: SchemaLike, options: ObjectPatternOptions): this.type = js.native
   /**
     * Requires the object to be a Joi reference.
     */

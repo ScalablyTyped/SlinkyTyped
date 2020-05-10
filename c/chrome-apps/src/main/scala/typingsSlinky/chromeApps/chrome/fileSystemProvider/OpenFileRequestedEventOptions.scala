@@ -11,12 +11,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OpenFileRequestedEventOptions extends FilePathRequestedEventOptions {
   /**
     * Whether the file will be used for reading or writing.
     * @see ChangeType
     */
-  var mode: ToStringLiteral[AnonREAD, String, Exclude[String, READ | WRITE]]
+  var mode: ToStringLiteral[
+    AnonREAD, 
+    /* keyof chrome-apps.AnonREAD */ READ | WRITE, 
+    Exclude[/* keyof chrome-apps.AnonREAD */ READ | WRITE, READ | WRITE]
+  ] = js.native
 }
 
 object OpenFileRequestedEventOptions {
@@ -24,12 +29,35 @@ object OpenFileRequestedEventOptions {
   def apply(
     filePath: String,
     fileSystemId: String,
-    mode: ToStringLiteral[AnonREAD, String, Exclude[String, READ | WRITE]],
+    mode: ToStringLiteral[
+      AnonREAD, 
+      /* keyof chrome-apps.AnonREAD */ READ | WRITE, 
+      Exclude[/* keyof chrome-apps.AnonREAD */ READ | WRITE, READ | WRITE]
+    ],
     requestId: integer
   ): OpenFileRequestedEventOptions = {
     val __obj = js.Dynamic.literal(filePath = filePath.asInstanceOf[js.Any], fileSystemId = fileSystemId.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], requestId = requestId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[OpenFileRequestedEventOptions]
   }
+  @scala.inline
+  implicit class OpenFileRequestedEventOptionsOps[Self <: OpenFileRequestedEventOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMode(
+      value: ToStringLiteral[
+          AnonREAD, 
+          /* keyof chrome-apps.AnonREAD */ READ | WRITE, 
+          Exclude[/* keyof chrome-apps.AnonREAD */ READ | WRITE, READ | WRITE]
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

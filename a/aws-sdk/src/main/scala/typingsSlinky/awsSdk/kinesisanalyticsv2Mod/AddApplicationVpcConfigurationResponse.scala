@@ -22,16 +22,53 @@ trait AddApplicationVpcConfigurationResponse extends js.Object {
 
 object AddApplicationVpcConfigurationResponse {
   @scala.inline
-  def apply(
-    ApplicationARN: ResourceARN = null,
-    ApplicationVersionId: Int | Double = null,
-    VpcConfigurationDescription: VpcConfigurationDescription = null
-  ): AddApplicationVpcConfigurationResponse = {
+  def apply(): AddApplicationVpcConfigurationResponse = {
     val __obj = js.Dynamic.literal()
-    if (ApplicationARN != null) __obj.updateDynamic("ApplicationARN")(ApplicationARN.asInstanceOf[js.Any])
-    if (ApplicationVersionId != null) __obj.updateDynamic("ApplicationVersionId")(ApplicationVersionId.asInstanceOf[js.Any])
-    if (VpcConfigurationDescription != null) __obj.updateDynamic("VpcConfigurationDescription")(VpcConfigurationDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddApplicationVpcConfigurationResponse]
   }
+  @scala.inline
+  implicit class AddApplicationVpcConfigurationResponseOps[Self <: AddApplicationVpcConfigurationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationARN(value: ResourceARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApplicationVersionId(value: ApplicationVersionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationVersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationVersionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcConfigurationDescription(value: VpcConfigurationDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfigurationDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcConfigurationDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfigurationDescription")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

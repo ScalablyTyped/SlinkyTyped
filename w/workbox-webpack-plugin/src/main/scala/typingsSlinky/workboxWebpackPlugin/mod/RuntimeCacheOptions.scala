@@ -8,69 +8,167 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RuntimeCacheOptions extends js.Object {
   /**
   	 * Configure background sync.
   	 */
-  var backgroundSync: js.UndefOr[AnonName] = js.undefined
+  var backgroundSync: js.UndefOr[AnonName] = js.native
   /**
   	 * Configure the broadcast cache update plugin.
   	 */
-  var broadcastUpdate: js.UndefOr[AnonChannelName] = js.undefined
+  var broadcastUpdate: js.UndefOr[AnonChannelName] = js.native
   /**
   	 * A custom cache name for this route.
   	 */
-  var cacheName: js.UndefOr[String] = js.undefined
+  var cacheName: js.UndefOr[String] = js.native
   /**
   	 * Configure which responses are considered cacheable.
   	 */
-  var cacheableResponse: js.UndefOr[AnonHeaders] = js.undefined
+  var cacheableResponse: js.UndefOr[AnonHeaders] = js.native
   /**
   	 * Custom cache expiration.
   	 */
-  var expiration: js.UndefOr[AnonMaxAgeSeconds] = js.undefined
+  var expiration: js.UndefOr[AnonMaxAgeSeconds] = js.native
   /**
   	 * Used to configure the handler.
   	 */
-  var fetchOptions: js.UndefOr[js.Any] = js.undefined
+  var fetchOptions: js.UndefOr[js.Any] = js.native
   /**
   	 * Used to configure the handler.
   	 */
-  var matchOptions: js.UndefOr[js.Any] = js.undefined
+  var matchOptions: js.UndefOr[js.Any] = js.native
   /**
   	 * Fall back to the cache after X seconds.
   	 */
-  var networkTimeoutSeconds: js.UndefOr[Double] = js.undefined
+  var networkTimeoutSeconds: js.UndefOr[Double] = js.native
   /**
   	 * Add in any additional plugin logic you need.
   	 */
-  var plugins: js.UndefOr[js.Array[_]] = js.undefined
+  var plugins: js.UndefOr[js.Array[_]] = js.native
 }
 
 object RuntimeCacheOptions {
   @scala.inline
-  def apply(
-    backgroundSync: AnonName = null,
-    broadcastUpdate: AnonChannelName = null,
-    cacheName: String = null,
-    cacheableResponse: AnonHeaders = null,
-    expiration: AnonMaxAgeSeconds = null,
-    fetchOptions: js.Any = null,
-    matchOptions: js.Any = null,
-    networkTimeoutSeconds: Int | Double = null,
-    plugins: js.Array[_] = null
-  ): RuntimeCacheOptions = {
+  def apply(): RuntimeCacheOptions = {
     val __obj = js.Dynamic.literal()
-    if (backgroundSync != null) __obj.updateDynamic("backgroundSync")(backgroundSync.asInstanceOf[js.Any])
-    if (broadcastUpdate != null) __obj.updateDynamic("broadcastUpdate")(broadcastUpdate.asInstanceOf[js.Any])
-    if (cacheName != null) __obj.updateDynamic("cacheName")(cacheName.asInstanceOf[js.Any])
-    if (cacheableResponse != null) __obj.updateDynamic("cacheableResponse")(cacheableResponse.asInstanceOf[js.Any])
-    if (expiration != null) __obj.updateDynamic("expiration")(expiration.asInstanceOf[js.Any])
-    if (fetchOptions != null) __obj.updateDynamic("fetchOptions")(fetchOptions.asInstanceOf[js.Any])
-    if (matchOptions != null) __obj.updateDynamic("matchOptions")(matchOptions.asInstanceOf[js.Any])
-    if (networkTimeoutSeconds != null) __obj.updateDynamic("networkTimeoutSeconds")(networkTimeoutSeconds.asInstanceOf[js.Any])
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
     __obj.asInstanceOf[RuntimeCacheOptions]
   }
+  @scala.inline
+  implicit class RuntimeCacheOptionsOps[Self <: RuntimeCacheOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundSync(value: AnonName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundSync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundSync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundSync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBroadcastUpdate(value: AnonChannelName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("broadcastUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBroadcastUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("broadcastUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheableResponse(value: AnonHeaders): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheableResponse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheableResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheableResponse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpiration(value: AnonMaxAgeSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpiration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expiration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFetchOptions(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFetchOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatchOptions(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatchOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkTimeoutSeconds(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkTimeoutSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkTimeoutSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkTimeoutSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlugins(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

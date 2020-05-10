@@ -22,12 +22,53 @@ trait GetTestGridSessionRequest extends js.Object {
 
 object GetTestGridSessionRequest {
   @scala.inline
-  def apply(projectArn: DeviceFarmArn = null, sessionArn: DeviceFarmArn = null, sessionId: ResourceId = null): GetTestGridSessionRequest = {
+  def apply(): GetTestGridSessionRequest = {
     val __obj = js.Dynamic.literal()
-    if (projectArn != null) __obj.updateDynamic("projectArn")(projectArn.asInstanceOf[js.Any])
-    if (sessionArn != null) __obj.updateDynamic("sessionArn")(sessionArn.asInstanceOf[js.Any])
-    if (sessionId != null) __obj.updateDynamic("sessionId")(sessionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTestGridSessionRequest]
   }
+  @scala.inline
+  implicit class GetTestGridSessionRequestOps[Self <: GetTestGridSessionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProjectArn(value: DeviceFarmArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionArn(value: DeviceFarmArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

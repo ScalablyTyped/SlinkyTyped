@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object pollyMod {
   type Alphabet = java.lang.String
-  type AudioStream = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.pollyMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
+  type AudioStream = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.pollyMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.pollyMod.ClientApiVersions
   type ContentType = java.lang.String
   type DateTime = js.Date

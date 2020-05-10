@@ -14,14 +14,12 @@ trait ValidationErrorType extends js.Object
 
 object ValidationErrorType {
   @scala.inline
-  def InvalidGraph: typingsSlinky.objection.objectionStrings.InvalidGraph = this.cast("InvalidGraph")
+  def InvalidGraph: typingsSlinky.objection.objectionStrings.InvalidGraph = "InvalidGraph".asInstanceOf[typingsSlinky.objection.objectionStrings.InvalidGraph]
   @scala.inline
-  def ModelValidation: typingsSlinky.objection.objectionStrings.ModelValidation = this.cast("ModelValidation")
+  def ModelValidation: typingsSlinky.objection.objectionStrings.ModelValidation = "ModelValidation".asInstanceOf[typingsSlinky.objection.objectionStrings.ModelValidation]
   @scala.inline
-  def RelationExpression: typingsSlinky.objection.objectionStrings.RelationExpression = this.cast("RelationExpression")
+  def RelationExpression: typingsSlinky.objection.objectionStrings.RelationExpression = "RelationExpression".asInstanceOf[typingsSlinky.objection.objectionStrings.RelationExpression]
   @scala.inline
-  def UnallowedRelation: typingsSlinky.objection.objectionStrings.UnallowedRelation = this.cast("UnallowedRelation")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UnallowedRelation: typingsSlinky.objection.objectionStrings.UnallowedRelation = "UnallowedRelation".asInstanceOf[typingsSlinky.objection.objectionStrings.UnallowedRelation]
 }
 

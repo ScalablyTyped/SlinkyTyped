@@ -34,22 +34,89 @@ trait ListPoliciesRequest extends js.Object {
 
 object ListPoliciesRequest {
   @scala.inline
-  def apply(
-    Marker: markerType = null,
-    MaxItems: Int | Double = null,
-    OnlyAttached: js.UndefOr[Boolean] = js.undefined,
-    PathPrefix: policyPathType = null,
-    PolicyUsageFilter: PolicyUsageType = null,
-    Scope: policyScopeType = null
-  ): ListPoliciesRequest = {
+  def apply(): ListPoliciesRequest = {
     val __obj = js.Dynamic.literal()
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (MaxItems != null) __obj.updateDynamic("MaxItems")(MaxItems.asInstanceOf[js.Any])
-    if (!js.isUndefined(OnlyAttached)) __obj.updateDynamic("OnlyAttached")(OnlyAttached.asInstanceOf[js.Any])
-    if (PathPrefix != null) __obj.updateDynamic("PathPrefix")(PathPrefix.asInstanceOf[js.Any])
-    if (PolicyUsageFilter != null) __obj.updateDynamic("PolicyUsageFilter")(PolicyUsageFilter.asInstanceOf[js.Any])
-    if (Scope != null) __obj.updateDynamic("Scope")(Scope.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListPoliciesRequest]
   }
+  @scala.inline
+  implicit class ListPoliciesRequestOps[Self <: ListPoliciesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMarker(value: markerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxItems(value: maxItemsType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnlyAttached(value: booleanType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnlyAttached")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnlyAttached: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnlyAttached")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPathPrefix(value: policyPathType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PathPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPathPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PathPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyUsageFilter(value: PolicyUsageType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyUsageFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyUsageFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyUsageFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScope(value: policyScopeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scope")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

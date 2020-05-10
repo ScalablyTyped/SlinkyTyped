@@ -12,10 +12,8 @@ trait SourceType extends js.Object
 
 object SourceType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def module: typingsSlinky.javascriptObfuscator.javascriptObfuscatorStrings.module = "module".asInstanceOf[typingsSlinky.javascriptObfuscator.javascriptObfuscatorStrings.module]
   @scala.inline
-  def module: typingsSlinky.javascriptObfuscator.javascriptObfuscatorStrings.module = this.cast("module")
-  @scala.inline
-  def script: typingsSlinky.javascriptObfuscator.javascriptObfuscatorStrings.script = this.cast("script")
+  def script: typingsSlinky.javascriptObfuscator.javascriptObfuscatorStrings.script = "script".asInstanceOf[typingsSlinky.javascriptObfuscator.javascriptObfuscatorStrings.script]
 }
 

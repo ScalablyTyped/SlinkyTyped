@@ -92,7 +92,7 @@ trait EventSource extends EventTarget {
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_message(
@@ -109,7 +109,7 @@ trait EventSource extends EventTarget {
   def removeEventListener_message(
     `type`: message,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_open(
@@ -126,15 +126,19 @@ trait EventSource extends EventTarget {
   def removeEventListener_open(
     `type`: typingsSlinky.std.stdStrings.open,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("EventSource")
 @js.native
 object EventSource
-  extends Instantiable1[/* url */ java.lang.String, EventSource]
-     with Instantiable2[/* url */ java.lang.String, /* eventSourceInitDict */ EventSourceInit, EventSource] {
+  extends Instantiable1[/* url */ java.lang.String, org.scalajs.dom.raw.EventSource]
+     with Instantiable2[
+      /* url */ java.lang.String, 
+      /* eventSourceInitDict */ EventSourceInit, 
+      org.scalajs.dom.raw.EventSource
+    ] {
   val CLOSED: Double = js.native
   val CONNECTING: Double = js.native
   val OPEN: Double = js.native

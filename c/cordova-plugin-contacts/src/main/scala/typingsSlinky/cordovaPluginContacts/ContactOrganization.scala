@@ -14,17 +14,18 @@ import scala.scalajs.js.annotation._
   * The ContactOrganization object stores a contact's organization properties. A Contact object stores
   * one or more ContactOrganization objects in an array.
   */
+@js.native
 trait ContactOrganization extends js.Object {
   /** The department the contract works for. */
-  var department: js.UndefOr[String] = js.undefined
+  var department: js.UndefOr[String] = js.native
   /** The name of the organization. */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /** Set to true if this ContactOrganization contains the user's preferred value. */
-  var pref: js.UndefOr[Boolean] = js.undefined
+  var pref: js.UndefOr[Boolean] = js.native
   /** The contact's title at the organization. */
-  var title: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.native
   /** A string that indicates what type of field this is, home for example. */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
 }
 
 @JSGlobal("ContactOrganization")

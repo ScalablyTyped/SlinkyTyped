@@ -19,24 +19,22 @@ trait HttpMethod extends js.Object
 
 object HttpMethod {
   @scala.inline
-  def CONNECT: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.CONNECT = this.cast("CONNECT")
+  def CONNECT: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.CONNECT = "CONNECT".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.CONNECT]
   @scala.inline
-  def DELETE: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.DELETE = this.cast("DELETE")
+  def DELETE: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.DELETE = "DELETE".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.DELETE]
   @scala.inline
-  def GET: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.GET = this.cast("GET")
+  def GET: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.GET = "GET".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.GET]
   @scala.inline
-  def HEAD: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.HEAD = this.cast("HEAD")
+  def HEAD: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.HEAD = "HEAD".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.HEAD]
   @scala.inline
-  def OPTIONS: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.OPTIONS = this.cast("OPTIONS")
+  def OPTIONS: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.OPTIONS = "OPTIONS".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.OPTIONS]
   @scala.inline
-  def PATCH: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.PATCH = this.cast("PATCH")
+  def PATCH: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.PATCH = "PATCH".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.PATCH]
   @scala.inline
-  def POST: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.POST = this.cast("POST")
+  def POST: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.POST = "POST".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.POST]
   @scala.inline
-  def PUT: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.PUT = this.cast("PUT")
+  def PUT: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.PUT = "PUT".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.PUT]
   @scala.inline
-  def TRACE: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.TRACE = this.cast("TRACE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TRACE: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.TRACE = "TRACE".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.TRACE]
 }
 

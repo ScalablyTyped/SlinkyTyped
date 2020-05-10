@@ -1,45 +1,50 @@
 package typingsSlinky.griddleReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.griddleReact.mod.GriddleComponent
 import typingsSlinky.griddleReact.mod.components.SettingsProps
 import typingsSlinky.griddleReact.mod.components.SettingsToggleProps
 import typingsSlinky.griddleReact.mod.components.SettingsWrapper
 import typingsSlinky.griddleReact.mod.components.SettingsWrapperProps
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ComponentsSettingsWrapper
-  extends ExternalComponentWithAttributesWithRefType[tag.type, SettingsWrapper] {
+object ComponentsSettingsWrapper {
   @JSImport("griddle-react", "components.SettingsWrapper")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    Settings: GriddleComponent[SettingsProps] = null,
-    SettingsToggle: GriddleComponent[SettingsToggleProps] = null,
-    isEnabled: js.UndefOr[Boolean] = js.undefined,
-    isVisible: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, SettingsWrapper] = {
-    val __obj = js.Dynamic.literal()
-    if (Settings != null) __obj.updateDynamic("Settings")(Settings.asInstanceOf[js.Any])
-    if (SettingsToggle != null) __obj.updateDynamic("SettingsToggle")(SettingsToggle.asInstanceOf[js.Any])
-    if (!js.isUndefined(isEnabled)) __obj.updateDynamic("isEnabled")(isEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(isVisible)) __obj.updateDynamic("isVisible")(isVisible.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, SettingsWrapper] {
+    @scala.inline
+    def SettingsFunctionComponent(value: ReactComponentClass[SettingsProps]): this.type = set("Settings", value.asInstanceOf[js.Any])
+    @scala.inline
+    def SettingsComponentClass(value: ReactComponentClass[SettingsProps]): this.type = set("Settings", value.asInstanceOf[js.Any])
+    @scala.inline
+    def Settings(value: GriddleComponent[SettingsProps]): this.type = set("Settings", value.asInstanceOf[js.Any])
+    @scala.inline
+    def SettingsToggleFunctionComponent(value: ReactComponentClass[SettingsToggleProps]): this.type = set("SettingsToggle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def SettingsToggleComponentClass(value: ReactComponentClass[SettingsToggleProps]): this.type = set("SettingsToggle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def SettingsToggle(value: GriddleComponent[SettingsToggleProps]): this.type = set("SettingsToggle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isEnabled(value: Boolean): this.type = set("isEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isVisible(value: Boolean): this.type = set("isVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, SettingsWrapper] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.griddleReact.mod.components.SettingsWrapper](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SettingsWrapperProps
+  
+  def withProps(p: SettingsWrapperProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ComponentsSettingsWrapper.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

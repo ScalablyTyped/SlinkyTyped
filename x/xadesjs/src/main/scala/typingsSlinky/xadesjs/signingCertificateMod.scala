@@ -23,7 +23,7 @@ object signingCertificateMod extends js.Object {
   @js.native
   class DigestAlgAndValueType () extends XmlObject {
     var DigestMethod: typingsSlinky.xmldsigjs.mod.DigestMethod = js.native
-    var DigestValue: scala.scalajs.js.typedarray.Uint8Array = js.native
+    var DigestValue: js.typedarray.Uint8Array = js.native
   }
   
   @js.native

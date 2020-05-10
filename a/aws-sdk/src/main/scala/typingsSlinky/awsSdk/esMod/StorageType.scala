@@ -16,16 +16,53 @@ trait StorageType extends js.Object {
 
 object StorageType {
   @scala.inline
-  def apply(
-    StorageSubTypeName: StorageSubTypeName = null,
-    StorageTypeLimits: StorageTypeLimitList = null,
-    StorageTypeName: StorageTypeName = null
-  ): StorageType = {
+  def apply(): StorageType = {
     val __obj = js.Dynamic.literal()
-    if (StorageSubTypeName != null) __obj.updateDynamic("StorageSubTypeName")(StorageSubTypeName.asInstanceOf[js.Any])
-    if (StorageTypeLimits != null) __obj.updateDynamic("StorageTypeLimits")(StorageTypeLimits.asInstanceOf[js.Any])
-    if (StorageTypeName != null) __obj.updateDynamic("StorageTypeName")(StorageTypeName.asInstanceOf[js.Any])
     __obj.asInstanceOf[StorageType]
   }
+  @scala.inline
+  implicit class StorageTypeOps[Self <: StorageType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStorageSubTypeName(value: StorageSubTypeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageSubTypeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorageSubTypeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageSubTypeName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStorageTypeLimits(value: StorageTypeLimitList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageTypeLimits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorageTypeLimits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageTypeLimits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStorageTypeName(value: StorageTypeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageTypeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorageTypeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageTypeName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

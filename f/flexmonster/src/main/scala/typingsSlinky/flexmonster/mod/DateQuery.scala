@@ -4,48 +4,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DateQuery extends js.Object {
-  var after: js.UndefOr[String] = js.undefined
-  var after_equal: js.UndefOr[String] = js.undefined
-  var before: js.UndefOr[String] = js.undefined
-  var before_equal: js.UndefOr[String] = js.undefined
-  var between: js.UndefOr[js.Array[String]] = js.undefined
-  var current: js.UndefOr[String] = js.undefined
-  var equal: js.UndefOr[String] = js.undefined
-  var last: js.UndefOr[String] = js.undefined
-  var next: js.UndefOr[String] = js.undefined
-  var not_between: js.UndefOr[js.Array[String]] = js.undefined
-  var not_equal: js.UndefOr[String] = js.undefined
+  var after: js.UndefOr[String] = js.native
+  var after_equal: js.UndefOr[String] = js.native
+  var before: js.UndefOr[String] = js.native
+  var before_equal: js.UndefOr[String] = js.native
+  var between: js.UndefOr[js.Array[String]] = js.native
+  var current: js.UndefOr[String] = js.native
+  var equal: js.UndefOr[String] = js.native
+  var last: js.UndefOr[String] = js.native
+  var next: js.UndefOr[String] = js.native
+  var not_between: js.UndefOr[js.Array[String]] = js.native
+  var not_equal: js.UndefOr[String] = js.native
 }
 
 object DateQuery {
   @scala.inline
-  def apply(
-    after: String = null,
-    after_equal: String = null,
-    before: String = null,
-    before_equal: String = null,
-    between: js.Array[String] = null,
-    current: String = null,
-    equal: String = null,
-    last: String = null,
-    next: String = null,
-    not_between: js.Array[String] = null,
-    not_equal: String = null
-  ): DateQuery = {
+  def apply(): DateQuery = {
     val __obj = js.Dynamic.literal()
-    if (after != null) __obj.updateDynamic("after")(after.asInstanceOf[js.Any])
-    if (after_equal != null) __obj.updateDynamic("after_equal")(after_equal.asInstanceOf[js.Any])
-    if (before != null) __obj.updateDynamic("before")(before.asInstanceOf[js.Any])
-    if (before_equal != null) __obj.updateDynamic("before_equal")(before_equal.asInstanceOf[js.Any])
-    if (between != null) __obj.updateDynamic("between")(between.asInstanceOf[js.Any])
-    if (current != null) __obj.updateDynamic("current")(current.asInstanceOf[js.Any])
-    if (equal != null) __obj.updateDynamic("equal")(equal.asInstanceOf[js.Any])
-    if (last != null) __obj.updateDynamic("last")(last.asInstanceOf[js.Any])
-    if (next != null) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
-    if (not_between != null) __obj.updateDynamic("not_between")(not_between.asInstanceOf[js.Any])
-    if (not_equal != null) __obj.updateDynamic("not_equal")(not_equal.asInstanceOf[js.Any])
     __obj.asInstanceOf[DateQuery]
   }
+  @scala.inline
+  implicit class DateQueryOps[Self <: DateQuery] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfter_equal(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("after_equal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAfter_equal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("after_equal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBefore(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBefore_equal(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before_equal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBefore_equal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before_equal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBetween(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("between")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBetween: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("between")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("current")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("current")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEqual(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEqual: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLast(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("last")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLast: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("last")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNext(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNot_between(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("not_between")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNot_between: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("not_between")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNot_equal(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("not_equal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNot_equal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("not_equal")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

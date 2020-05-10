@@ -18,22 +18,20 @@ trait DisplayLegacy extends _DisplayProperty
 
 object DisplayLegacy {
   @scala.inline
-  def `-ms-inline-flexbox`: typingsSlinky.csstype.csstypeStrings.`-ms-inline-flexbox` = this.cast("-ms-inline-flexbox")
+  def `-ms-inline-flexbox`: typingsSlinky.csstype.csstypeStrings.`-ms-inline-flexbox` = "-ms-inline-flexbox".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-ms-inline-flexbox`]
   @scala.inline
-  def `-ms-inline-grid`: typingsSlinky.csstype.csstypeStrings.`-ms-inline-grid` = this.cast("-ms-inline-grid")
+  def `-ms-inline-grid`: typingsSlinky.csstype.csstypeStrings.`-ms-inline-grid` = "-ms-inline-grid".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-ms-inline-grid`]
   @scala.inline
-  def `-webkit-inline-flex`: typingsSlinky.csstype.csstypeStrings.`-webkit-inline-flex` = this.cast("-webkit-inline-flex")
+  def `-webkit-inline-flex`: typingsSlinky.csstype.csstypeStrings.`-webkit-inline-flex` = "-webkit-inline-flex".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-webkit-inline-flex`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `inline-block`: typingsSlinky.csstype.csstypeStrings.`inline-block` = "inline-block".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`inline-block`]
   @scala.inline
-  def `inline-block`: typingsSlinky.csstype.csstypeStrings.`inline-block` = this.cast("inline-block")
+  def `inline-flex`: typingsSlinky.csstype.csstypeStrings.`inline-flex` = "inline-flex".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`inline-flex`]
   @scala.inline
-  def `inline-flex`: typingsSlinky.csstype.csstypeStrings.`inline-flex` = this.cast("inline-flex")
+  def `inline-grid`: typingsSlinky.csstype.csstypeStrings.`inline-grid` = "inline-grid".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`inline-grid`]
   @scala.inline
-  def `inline-grid`: typingsSlinky.csstype.csstypeStrings.`inline-grid` = this.cast("inline-grid")
+  def `inline-list-item`: typingsSlinky.csstype.csstypeStrings.`inline-list-item` = "inline-list-item".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`inline-list-item`]
   @scala.inline
-  def `inline-list-item`: typingsSlinky.csstype.csstypeStrings.`inline-list-item` = this.cast("inline-list-item")
-  @scala.inline
-  def `inline-table`: typingsSlinky.csstype.csstypeStrings.`inline-table` = this.cast("inline-table")
+  def `inline-table`: typingsSlinky.csstype.csstypeStrings.`inline-table` = "inline-table".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`inline-table`]
 }
 

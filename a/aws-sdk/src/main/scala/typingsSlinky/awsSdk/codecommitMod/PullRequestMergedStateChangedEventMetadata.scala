@@ -22,16 +22,53 @@ trait PullRequestMergedStateChangedEventMetadata extends js.Object {
 
 object PullRequestMergedStateChangedEventMetadata {
   @scala.inline
-  def apply(
-    destinationReference: ReferenceName = null,
-    mergeMetadata: MergeMetadata = null,
-    repositoryName: RepositoryName = null
-  ): PullRequestMergedStateChangedEventMetadata = {
+  def apply(): PullRequestMergedStateChangedEventMetadata = {
     val __obj = js.Dynamic.literal()
-    if (destinationReference != null) __obj.updateDynamic("destinationReference")(destinationReference.asInstanceOf[js.Any])
-    if (mergeMetadata != null) __obj.updateDynamic("mergeMetadata")(mergeMetadata.asInstanceOf[js.Any])
-    if (repositoryName != null) __obj.updateDynamic("repositoryName")(repositoryName.asInstanceOf[js.Any])
     __obj.asInstanceOf[PullRequestMergedStateChangedEventMetadata]
   }
+  @scala.inline
+  implicit class PullRequestMergedStateChangedEventMetadataOps[Self <: PullRequestMergedStateChangedEventMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestinationReference(value: ReferenceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMergeMetadata(value: MergeMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMergeMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepositoryName(value: RepositoryName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepositoryName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

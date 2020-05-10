@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Config extends js.Object {
-  var debug: js.UndefOr[Boolean] = js.undefined
-  var deserializeState: js.UndefOr[js.Function1[/* any */ js.Any, _]] = js.undefined
-  var overrideIsServer: js.UndefOr[Boolean] = js.undefined
-  var serializeState: js.UndefOr[js.Function1[/* any */ js.Any, _]] = js.undefined
-  var storeKey: js.UndefOr[String] = js.undefined
+  var debug: js.UndefOr[Boolean] = js.native
+  var deserializeState: js.UndefOr[js.Function1[/* any */ js.Any, _]] = js.native
+  var overrideIsServer: js.UndefOr[Boolean] = js.native
+  var serializeState: js.UndefOr[js.Function1[/* any */ js.Any, _]] = js.native
+  var storeKey: js.UndefOr[String] = js.native
 }
 
 object Config {
   @scala.inline
-  def apply(
-    debug: js.UndefOr[Boolean] = js.undefined,
-    deserializeState: /* any */ js.Any => _ = null,
-    overrideIsServer: js.UndefOr[Boolean] = js.undefined,
-    serializeState: /* any */ js.Any => _ = null,
-    storeKey: String = null
-  ): Config = {
+  def apply(): Config = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (deserializeState != null) __obj.updateDynamic("deserializeState")(js.Any.fromFunction1(deserializeState))
-    if (!js.isUndefined(overrideIsServer)) __obj.updateDynamic("overrideIsServer")(overrideIsServer.asInstanceOf[js.Any])
-    if (serializeState != null) __obj.updateDynamic("serializeState")(js.Any.fromFunction1(serializeState))
-    if (storeKey != null) __obj.updateDynamic("storeKey")(storeKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
+  @scala.inline
+  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDebug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebug: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeserializeState(value: /* any */ js.Any => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deserializeState")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDeserializeState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deserializeState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverrideIsServer(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideIsServer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverrideIsServer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideIsServer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSerializeState(value: /* any */ js.Any => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serializeState")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSerializeState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serializeState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoreKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoreKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeKey")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

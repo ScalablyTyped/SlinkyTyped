@@ -1,9 +1,7 @@
 package typingsSlinky.blueprintjsDatetime.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.inputGroupMod.IInputGroupProps
 import typingsSlinky.blueprintjsCore.propsMod.HTMLInputProps
 import typingsSlinky.blueprintjsDatetime.PartialIPopoverProps
@@ -19,75 +17,83 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DateRangeInput
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsDatetime.mod.DateRangeInput] {
+object DateRangeInput {
   @JSImport("@blueprintjs/datetime", "DateRangeInput")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, placeholder */
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsDatetime.mod.DateRangeInput] {
+    @scala.inline
+    def allowSingleDayRange(value: Boolean): this.type = set("allowSingleDayRange", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeOnSelection(value: Boolean): this.type = set("closeOnSelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contiguousCalendarMonths(value: Boolean): this.type = set("contiguousCalendarMonths", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dayPickerProps(value: DayPickerProps): this.type = set("dayPickerProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: DateRange): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endInputProps(value: HTMLInputProps with IInputGroupProps): this.type = set("endInputProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialMonth(value: js.Date): this.type = set("initialMonth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def invalidDateMessage(value: String): this.type = set("invalidDateMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def locale(value: String): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def localeUtils(value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any): this.type = set("localeUtils", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def modifiers(value: IDatePickerModifiers): this.type = set("modifiers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* selectedRange */ DateRange => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onError(value: /* errorRange */ DateRange => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    @scala.inline
+    def outOfRangeMessage(value: String): this.type = set("outOfRangeMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overlappingDatesMessage(value: String): this.type = set("overlappingDatesMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popoverProps(value: PartialIPopoverProps): this.type = set("popoverProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def reverseMonthAndYearMenus(value: Boolean): this.type = set("reverseMonthAndYearMenus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectAllOnFocus(value: Boolean): this.type = set("selectAllOnFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shortcuts(value: Boolean | js.Array[IDateRangeShortcut]): this.type = set("shortcuts", value.asInstanceOf[js.Any])
+    @scala.inline
+    def singleMonthOnly(value: Boolean): this.type = set("singleMonthOnly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startInputProps(value: HTMLInputProps with IInputGroupProps): this.type = set("startInputProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def timePickerProps(value: ITimePickerProps): this.type = set("timePickerProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def timePrecision(value: TimePrecision): this.type = set("timePrecision", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: DateRange): this.type = set("value", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: IDateRangeInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     formatDate: (js.Date, js.UndefOr[String]) => String,
-    parseDate: (String, js.UndefOr[String]) => js.Date | Null | `false`,
-    allowSingleDayRange: js.UndefOr[Boolean] = js.undefined,
-    closeOnSelection: js.UndefOr[Boolean] = js.undefined,
-    contiguousCalendarMonths: js.UndefOr[Boolean] = js.undefined,
-    dayPickerProps: DayPickerProps = null,
-    defaultValue: DateRange = null,
-    endInputProps: HTMLInputProps with IInputGroupProps = null,
-    initialMonth: js.Date = null,
-    invalidDateMessage: String = null,
-    locale: String = null,
-    localeUtils: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any = null,
-    maxDate: js.Date = null,
-    minDate: js.Date = null,
-    modifiers: IDatePickerModifiers = null,
-    onChange: /* selectedRange */ DateRange => Unit = null,
-    onError: /* errorRange */ DateRange => Unit = null,
-    outOfRangeMessage: String = null,
-    overlappingDatesMessage: String = null,
-    popoverProps: PartialIPopoverProps = null,
-    reverseMonthAndYearMenus: js.UndefOr[Boolean] = js.undefined,
-    selectAllOnFocus: js.UndefOr[Boolean] = js.undefined,
-    shortcuts: Boolean | js.Array[IDateRangeShortcut] = null,
-    singleMonthOnly: js.UndefOr[Boolean] = js.undefined,
-    startInputProps: HTMLInputProps with IInputGroupProps = null,
-    timePickerProps: ITimePickerProps = null,
-    timePrecision: TimePrecision = null,
-    value: DateRange = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsDatetime.mod.DateRangeInput] = {
-    val __obj = js.Dynamic.literal(formatDate = js.Any.fromFunction2(formatDate), parseDate = js.Any.fromFunction2(parseDate))
-    if (!js.isUndefined(allowSingleDayRange)) __obj.updateDynamic("allowSingleDayRange")(allowSingleDayRange.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnSelection)) __obj.updateDynamic("closeOnSelection")(closeOnSelection.asInstanceOf[js.Any])
-    if (!js.isUndefined(contiguousCalendarMonths)) __obj.updateDynamic("contiguousCalendarMonths")(contiguousCalendarMonths.asInstanceOf[js.Any])
-    if (dayPickerProps != null) __obj.updateDynamic("dayPickerProps")(dayPickerProps.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (endInputProps != null) __obj.updateDynamic("endInputProps")(endInputProps.asInstanceOf[js.Any])
-    if (initialMonth != null) __obj.updateDynamic("initialMonth")(initialMonth.asInstanceOf[js.Any])
-    if (invalidDateMessage != null) __obj.updateDynamic("invalidDateMessage")(invalidDateMessage.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (localeUtils != null) __obj.updateDynamic("localeUtils")(localeUtils.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (modifiers != null) __obj.updateDynamic("modifiers")(modifiers.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (outOfRangeMessage != null) __obj.updateDynamic("outOfRangeMessage")(outOfRangeMessage.asInstanceOf[js.Any])
-    if (overlappingDatesMessage != null) __obj.updateDynamic("overlappingDatesMessage")(overlappingDatesMessage.asInstanceOf[js.Any])
-    if (popoverProps != null) __obj.updateDynamic("popoverProps")(popoverProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverseMonthAndYearMenus)) __obj.updateDynamic("reverseMonthAndYearMenus")(reverseMonthAndYearMenus.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectAllOnFocus)) __obj.updateDynamic("selectAllOnFocus")(selectAllOnFocus.asInstanceOf[js.Any])
-    if (shortcuts != null) __obj.updateDynamic("shortcuts")(shortcuts.asInstanceOf[js.Any])
-    if (!js.isUndefined(singleMonthOnly)) __obj.updateDynamic("singleMonthOnly")(singleMonthOnly.asInstanceOf[js.Any])
-    if (startInputProps != null) __obj.updateDynamic("startInputProps")(startInputProps.asInstanceOf[js.Any])
-    if (timePickerProps != null) __obj.updateDynamic("timePickerProps")(timePickerProps.asInstanceOf[js.Any])
-    if (timePrecision != null) __obj.updateDynamic("timePrecision")(timePrecision.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    parseDate: (String, js.UndefOr[String]) => js.Date | Null | `false`
+  ): Builder = {
+    val __props = js.Dynamic.literal(formatDate = js.Any.fromFunction2(formatDate), parseDate = js.Any.fromFunction2(parseDate))
+    new Builder(js.Array(this.component, __props.asInstanceOf[IDateRangeInputProps]))
   }
-  type Props = IDateRangeInputProps
 }
 

@@ -18,11 +18,41 @@ trait ListUserImportJobsResponse extends js.Object {
 
 object ListUserImportJobsResponse {
   @scala.inline
-  def apply(PaginationToken: PaginationKeyType = null, UserImportJobs: UserImportJobsListType = null): ListUserImportJobsResponse = {
+  def apply(): ListUserImportJobsResponse = {
     val __obj = js.Dynamic.literal()
-    if (PaginationToken != null) __obj.updateDynamic("PaginationToken")(PaginationToken.asInstanceOf[js.Any])
-    if (UserImportJobs != null) __obj.updateDynamic("UserImportJobs")(UserImportJobs.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListUserImportJobsResponse]
   }
+  @scala.inline
+  implicit class ListUserImportJobsResponseOps[Self <: ListUserImportJobsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPaginationToken(value: PaginationKeyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaginationToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaginationToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaginationToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserImportJobs(value: UserImportJobsListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserImportJobs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserImportJobs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserImportJobs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

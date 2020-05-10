@@ -18,26 +18,113 @@ trait AnonBuyLink extends js.Object {
 
 object AnonBuyLink {
   @scala.inline
-  def apply(
-    buyLink: String = null,
-    country: String = null,
-    isEbook: js.UndefOr[Boolean] = js.undefined,
-    listPrice: AnonAmount = null,
-    offers: js.Array[AnonFinskyOfferType] = null,
-    onSaleDate: String = null,
-    retailPrice: AnonAmount = null,
-    saleability: String = null
-  ): AnonBuyLink = {
+  def apply(): AnonBuyLink = {
     val __obj = js.Dynamic.literal()
-    if (buyLink != null) __obj.updateDynamic("buyLink")(buyLink.asInstanceOf[js.Any])
-    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
-    if (!js.isUndefined(isEbook)) __obj.updateDynamic("isEbook")(isEbook.asInstanceOf[js.Any])
-    if (listPrice != null) __obj.updateDynamic("listPrice")(listPrice.asInstanceOf[js.Any])
-    if (offers != null) __obj.updateDynamic("offers")(offers.asInstanceOf[js.Any])
-    if (onSaleDate != null) __obj.updateDynamic("onSaleDate")(onSaleDate.asInstanceOf[js.Any])
-    if (retailPrice != null) __obj.updateDynamic("retailPrice")(retailPrice.asInstanceOf[js.Any])
-    if (saleability != null) __obj.updateDynamic("saleability")(saleability.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBuyLink]
   }
+  @scala.inline
+  implicit class AnonBuyLinkOps[Self <: AnonBuyLink] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBuyLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buyLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuyLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buyLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountry(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsEbook(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEbook")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsEbook: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEbook")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListPrice(value: AnonAmount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listPrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listPrice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffers(value: js.Array[AnonFinskyOfferType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSaleDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSaleDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnSaleDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSaleDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetailPrice(value: AnonAmount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retailPrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetailPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retailPrice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSaleability(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saleability")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSaleability: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saleability")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

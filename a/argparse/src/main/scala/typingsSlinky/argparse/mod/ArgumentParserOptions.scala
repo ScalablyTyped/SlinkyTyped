@@ -5,48 +5,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ArgumentParserOptions extends js.Object {
-  var addHelp: js.UndefOr[Boolean] = js.undefined
-  var argumentDefault: js.UndefOr[js.Any] = js.undefined
-  var debug: js.UndefOr[Boolean] = js.undefined
-  var description: js.UndefOr[String] = js.undefined
-  var epilog: js.UndefOr[String] = js.undefined
-  var formatterClass: js.UndefOr[Anon0] = js.undefined
-  var parents: js.UndefOr[js.Array[ArgumentParser]] = js.undefined
-  var prefixChars: js.UndefOr[String] = js.undefined
-  var prog: js.UndefOr[String] = js.undefined
-  var usage: js.UndefOr[String] = js.undefined
-  var version: js.UndefOr[String] = js.undefined
+  var addHelp: js.UndefOr[Boolean] = js.native
+  var argumentDefault: js.UndefOr[js.Any] = js.native
+  var debug: js.UndefOr[Boolean] = js.native
+  var description: js.UndefOr[String] = js.native
+  var epilog: js.UndefOr[String] = js.native
+  var formatterClass: js.UndefOr[Anon0] = js.native
+  var parents: js.UndefOr[js.Array[ArgumentParser]] = js.native
+  var prefixChars: js.UndefOr[String] = js.native
+  var prog: js.UndefOr[String] = js.native
+  var usage: js.UndefOr[String] = js.native
+  var version: js.UndefOr[String] = js.native
 }
 
 object ArgumentParserOptions {
   @scala.inline
-  def apply(
-    addHelp: js.UndefOr[Boolean] = js.undefined,
-    argumentDefault: js.Any = null,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    description: String = null,
-    epilog: String = null,
-    formatterClass: Anon0 = null,
-    parents: js.Array[ArgumentParser] = null,
-    prefixChars: String = null,
-    prog: String = null,
-    usage: String = null,
-    version: String = null
-  ): ArgumentParserOptions = {
+  def apply(): ArgumentParserOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(addHelp)) __obj.updateDynamic("addHelp")(addHelp.asInstanceOf[js.Any])
-    if (argumentDefault != null) __obj.updateDynamic("argumentDefault")(argumentDefault.asInstanceOf[js.Any])
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (epilog != null) __obj.updateDynamic("epilog")(epilog.asInstanceOf[js.Any])
-    if (formatterClass != null) __obj.updateDynamic("formatterClass")(formatterClass.asInstanceOf[js.Any])
-    if (parents != null) __obj.updateDynamic("parents")(parents.asInstanceOf[js.Any])
-    if (prefixChars != null) __obj.updateDynamic("prefixChars")(prefixChars.asInstanceOf[js.Any])
-    if (prog != null) __obj.updateDynamic("prog")(prog.asInstanceOf[js.Any])
-    if (usage != null) __obj.updateDynamic("usage")(usage.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArgumentParserOptions]
   }
+  @scala.inline
+  implicit class ArgumentParserOptionsOps[Self <: ArgumentParserOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddHelp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addHelp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddHelp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addHelp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArgumentDefault(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArgumentDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentDefault")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebug: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEpilog(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("epilog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEpilog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("epilog")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatterClass(value: Anon0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatterClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatterClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatterClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParents(value: js.Array[ArgumentParser]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixChars(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixChars")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixChars: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixChars")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProg(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProg: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prog")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

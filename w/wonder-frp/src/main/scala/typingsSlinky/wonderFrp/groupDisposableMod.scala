@@ -17,8 +17,6 @@ object groupDisposableMod extends js.Object {
     var _group: js.Any = js.native
     var _isDisposed: js.Any = js.native
     def add(disposable: IDisposable): this.type = js.native
-    /* CompleteClass */
-    override def dispose(): Unit = js.native
     def getCount(): Double = js.native
     def remove(disposable: IDisposable): this.type = js.native
   }

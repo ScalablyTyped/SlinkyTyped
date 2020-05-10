@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait MediaEncryptedEvent extends Event_ {
-  val initData: scala.scalajs.js.typedarray.ArrayBuffer | Null = js.native
+  val initData: js.typedarray.ArrayBuffer | Null = js.native
   val initDataType: java.lang.String = js.native
 }
 

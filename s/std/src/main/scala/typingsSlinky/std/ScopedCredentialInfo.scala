@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ScopedCredentialInfo extends js.Object {
-  val credential: ScopedCredential
-  val publicKey: org.scalajs.dom.crypto.CryptoKey
+  val credential: ScopedCredential = js.native
+  val publicKey: org.scalajs.dom.crypto.CryptoKey = js.native
 }
 
 @JSGlobal("ScopedCredentialInfo")

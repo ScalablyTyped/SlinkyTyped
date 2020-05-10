@@ -13,10 +13,8 @@ trait TabStatus extends js.Object
 
 object TabStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def complete: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.complete = "complete".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.complete]
   @scala.inline
-  def complete: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.complete = this.cast("complete")
-  @scala.inline
-  def loading: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.loading = this.cast("loading")
+  def loading: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.loading = "loading".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.loading]
 }
 

@@ -17,10 +17,29 @@ trait SchemaInlineObjectProperties extends js.Object {
 
 object SchemaInlineObjectProperties {
   @scala.inline
-  def apply(embeddedObject: SchemaEmbeddedObject = null): SchemaInlineObjectProperties = {
+  def apply(): SchemaInlineObjectProperties = {
     val __obj = js.Dynamic.literal()
-    if (embeddedObject != null) __obj.updateDynamic("embeddedObject")(embeddedObject.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInlineObjectProperties]
   }
+  @scala.inline
+  implicit class SchemaInlineObjectPropertiesOps[Self <: SchemaInlineObjectProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmbeddedObject(value: SchemaEmbeddedObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embeddedObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmbeddedObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embeddedObject")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

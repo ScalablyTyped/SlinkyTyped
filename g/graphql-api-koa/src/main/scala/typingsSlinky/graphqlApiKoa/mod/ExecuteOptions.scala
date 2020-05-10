@@ -5,27 +5,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ExecuteOptions extends js.Object {
-  var contextValue: js.UndefOr[js.Any] = js.undefined
-  var fieldResolver: js.UndefOr[js.Any] = js.undefined
-  var rootValue: js.UndefOr[js.Any] = js.undefined
-  var schema: js.UndefOr[GraphQLSchema] = js.undefined
+  var contextValue: js.UndefOr[js.Any] = js.native
+  var fieldResolver: js.UndefOr[js.Any] = js.native
+  var rootValue: js.UndefOr[js.Any] = js.native
+  var schema: js.UndefOr[GraphQLSchema] = js.native
 }
 
 object ExecuteOptions {
   @scala.inline
-  def apply(
-    contextValue: js.Any = null,
-    fieldResolver: js.Any = null,
-    rootValue: js.Any = null,
-    schema: GraphQLSchema = null
-  ): ExecuteOptions = {
+  def apply(): ExecuteOptions = {
     val __obj = js.Dynamic.literal()
-    if (contextValue != null) __obj.updateDynamic("contextValue")(contextValue.asInstanceOf[js.Any])
-    if (fieldResolver != null) __obj.updateDynamic("fieldResolver")(fieldResolver.asInstanceOf[js.Any])
-    if (rootValue != null) __obj.updateDynamic("rootValue")(rootValue.asInstanceOf[js.Any])
-    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecuteOptions]
   }
+  @scala.inline
+  implicit class ExecuteOptionsOps[Self <: ExecuteOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContextValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFieldResolver(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldResolver")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldResolver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldResolver")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRootValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRootValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchema(value: GraphQLSchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

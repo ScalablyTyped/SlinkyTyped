@@ -28,42 +28,40 @@ trait RoomType extends js.Object
 
 object RoomType {
   @scala.inline
-  def Bathroom: typingsSlinky.nodeHueApi.nodeHueApiStrings.Bathroom = this.cast("Bathroom")
+  def Bathroom: typingsSlinky.nodeHueApi.nodeHueApiStrings.Bathroom = "Bathroom".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.Bathroom]
   @scala.inline
-  def Bedroom: typingsSlinky.nodeHueApi.nodeHueApiStrings.Bedroom = this.cast("Bedroom")
+  def Bedroom: typingsSlinky.nodeHueApi.nodeHueApiStrings.Bedroom = "Bedroom".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.Bedroom]
   @scala.inline
-  def Carport: typingsSlinky.nodeHueApi.nodeHueApiStrings.Carport = this.cast("Carport")
+  def Carport: typingsSlinky.nodeHueApi.nodeHueApiStrings.Carport = "Carport".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.Carport]
   @scala.inline
-  def Dining: typingsSlinky.nodeHueApi.nodeHueApiStrings.Dining = this.cast("Dining")
+  def Dining: typingsSlinky.nodeHueApi.nodeHueApiStrings.Dining = "Dining".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.Dining]
   @scala.inline
-  def Driveway: typingsSlinky.nodeHueApi.nodeHueApiStrings.Driveway = this.cast("Driveway")
+  def Driveway: typingsSlinky.nodeHueApi.nodeHueApiStrings.Driveway = "Driveway".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.Driveway]
   @scala.inline
-  def `Front door`: typingsSlinky.nodeHueApi.nodeHueApiStrings.`Front door` = this.cast("Front door")
+  def `Front door`: typingsSlinky.nodeHueApi.nodeHueApiStrings.`Front door` = ("Front door").asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.`Front door`]
   @scala.inline
-  def `Garage Terrace`: typingsSlinky.nodeHueApi.nodeHueApiStrings.`Garage Terrace` = this.cast("Garage Terrace")
+  def `Garage Terrace`: typingsSlinky.nodeHueApi.nodeHueApiStrings.`Garage Terrace` = ("Garage Terrace").asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.`Garage Terrace`]
   @scala.inline
-  def Garden: typingsSlinky.nodeHueApi.nodeHueApiStrings.Garden = this.cast("Garden")
+  def Garden: typingsSlinky.nodeHueApi.nodeHueApiStrings.Garden = "Garden".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.Garden]
   @scala.inline
-  def Gym: typingsSlinky.nodeHueApi.nodeHueApiStrings.Gym = this.cast("Gym")
+  def Gym: typingsSlinky.nodeHueApi.nodeHueApiStrings.Gym = "Gym".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.Gym]
   @scala.inline
-  def Hallway: typingsSlinky.nodeHueApi.nodeHueApiStrings.Hallway = this.cast("Hallway")
+  def Hallway: typingsSlinky.nodeHueApi.nodeHueApiStrings.Hallway = "Hallway".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.Hallway]
   @scala.inline
-  def `Kids bedroom`: typingsSlinky.nodeHueApi.nodeHueApiStrings.`Kids bedroom` = this.cast("Kids bedroom")
+  def `Kids bedroom`: typingsSlinky.nodeHueApi.nodeHueApiStrings.`Kids bedroom` = ("Kids bedroom").asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.`Kids bedroom`]
   @scala.inline
-  def Kitchen: typingsSlinky.nodeHueApi.nodeHueApiStrings.Kitchen = this.cast("Kitchen")
+  def Kitchen: typingsSlinky.nodeHueApi.nodeHueApiStrings.Kitchen = "Kitchen".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.Kitchen]
   @scala.inline
-  def `Living room`: typingsSlinky.nodeHueApi.nodeHueApiStrings.`Living room` = this.cast("Living room")
+  def `Living room`: typingsSlinky.nodeHueApi.nodeHueApiStrings.`Living room` = ("Living room").asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.`Living room`]
   @scala.inline
-  def Nursery: typingsSlinky.nodeHueApi.nodeHueApiStrings.Nursery = this.cast("Nursery")
+  def Nursery: typingsSlinky.nodeHueApi.nodeHueApiStrings.Nursery = "Nursery".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.Nursery]
   @scala.inline
-  def Office: typingsSlinky.nodeHueApi.nodeHueApiStrings.Office = this.cast("Office")
+  def Office: typingsSlinky.nodeHueApi.nodeHueApiStrings.Office = "Office".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.Office]
   @scala.inline
-  def Other: typingsSlinky.nodeHueApi.nodeHueApiStrings.Other = this.cast("Other")
+  def Other: typingsSlinky.nodeHueApi.nodeHueApiStrings.Other = "Other".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.Other]
   @scala.inline
-  def Recreation: typingsSlinky.nodeHueApi.nodeHueApiStrings.Recreation = this.cast("Recreation")
+  def Recreation: typingsSlinky.nodeHueApi.nodeHueApiStrings.Recreation = "Recreation".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.Recreation]
   @scala.inline
-  def Toilet: typingsSlinky.nodeHueApi.nodeHueApiStrings.Toilet = this.cast("Toilet")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Toilet: typingsSlinky.nodeHueApi.nodeHueApiStrings.Toilet = "Toilet".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.Toilet]
 }
 

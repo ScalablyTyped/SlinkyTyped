@@ -1,7 +1,6 @@
 package typingsSlinky.nodemailer.smtpConnectionMod
 
 import typingsSlinky.nodemailer.nodemailerBooleans.`false`
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +13,7 @@ trait CustomAuthenticationContext extends js.Object {
   var extensions: js.Array[String] = js.native
   var maxAllowedSize: Double | `false` = js.native
   def reject(err: String): js.Any = js.native
-  def reject(err: Error): js.Any = js.native
+  def reject(err: js.Error): js.Any = js.native
   def resolve(): js.Any = js.native
   def sendCommand(cmd: String): js.Promise[CustomAuthenticationResponse] = js.native
   def sendCommand(

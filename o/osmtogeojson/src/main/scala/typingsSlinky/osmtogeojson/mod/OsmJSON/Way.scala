@@ -1,36 +1,34 @@
 package typingsSlinky.osmtogeojson.mod.OsmJSON
 
-import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Way extends Element {
-  var nodes: js.Array[Double]
+  var nodes: js.Array[Double] = js.native
 }
 
 object Way {
   @scala.inline
-  def apply(
-    id: Double,
-    nodes: js.Array[Double],
-    `type`: String,
-    changeset: Int | Double = null,
-    tags: StringDictionary[String] = null,
-    timestamp: String = null,
-    uid: Int | Double = null,
-    user: String = null,
-    version: Int | Double = null
-  ): Way = {
+  def apply(id: Double, nodes: js.Array[Double], `type`: String): Way = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], nodes = nodes.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (changeset != null) __obj.updateDynamic("changeset")(changeset.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (timestamp != null) __obj.updateDynamic("timestamp")(timestamp.asInstanceOf[js.Any])
-    if (uid != null) __obj.updateDynamic("uid")(uid.asInstanceOf[js.Any])
-    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[Way]
   }
+  @scala.inline
+  implicit class WayOps[Self <: Way] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNodes(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

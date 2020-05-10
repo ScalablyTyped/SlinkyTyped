@@ -14,6 +14,14 @@ package object lightsailMod {
   type AddOnList = js.Array[typingsSlinky.awsSdk.lightsailMod.AddOn]
   type AddOnRequestList = js.Array[typingsSlinky.awsSdk.lightsailMod.AddOnRequest]
   type AddOnType = typingsSlinky.awsSdk.awsSdkStrings.AutoSnapshot | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.OK
+    - typingsSlinky.awsSdk.awsSdkStrings.ALARM
+    - typingsSlinky.awsSdk.awsSdkStrings.INSUFFICIENT_DATA
+    - java.lang.String
+  */
+  type AlarmState = typingsSlinky.awsSdk.lightsailMod._AlarmState | java.lang.String
+  type AlarmsList = js.Array[typingsSlinky.awsSdk.lightsailMod.Alarm]
   type AttachedDiskList = js.Array[typingsSlinky.awsSdk.lightsailMod.AttachedDisk]
   type AttachedDiskMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.lightsailMod.DiskMapList]
   type AutoSnapshotDate = java.lang.String
@@ -40,6 +48,30 @@ package object lightsailMod {
   type CloudFormationStackRecordList = js.Array[typingsSlinky.awsSdk.lightsailMod.CloudFormationStackRecord]
   type CloudFormationStackRecordSourceInfoList = js.Array[typingsSlinky.awsSdk.lightsailMod.CloudFormationStackRecordSourceInfo]
   type CloudFormationStackRecordSourceType = typingsSlinky.awsSdk.awsSdkStrings.ExportSnapshotRecord | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.GreaterThanOrEqualToThreshold
+    - typingsSlinky.awsSdk.awsSdkStrings.GreaterThanThreshold
+    - typingsSlinky.awsSdk.awsSdkStrings.LessThanThreshold
+    - typingsSlinky.awsSdk.awsSdkStrings.LessThanOrEqualToThreshold
+    - java.lang.String
+  */
+  type ComparisonOperator = typingsSlinky.awsSdk.lightsailMod._ComparisonOperator | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PendingVerification
+    - typingsSlinky.awsSdk.awsSdkStrings.Valid_
+    - typingsSlinky.awsSdk.awsSdkStrings.Invalid_
+    - java.lang.String
+  */
+  type ContactMethodStatus = typingsSlinky.awsSdk.lightsailMod._ContactMethodStatus | java.lang.String
+  type ContactMethodVerificationProtocol = typingsSlinky.awsSdk.awsSdkStrings.Email_ | java.lang.String
+  type ContactMethodsList = js.Array[typingsSlinky.awsSdk.lightsailMod.ContactMethod]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Email_
+    - typingsSlinky.awsSdk.awsSdkStrings.SMS
+    - java.lang.String
+  */
+  type ContactProtocol = typingsSlinky.awsSdk.lightsailMod._ContactProtocol | java.lang.String
+  type ContactProtocolsList = js.Array[typingsSlinky.awsSdk.lightsailMod.ContactProtocol]
   type DiskInfoList = js.Array[typingsSlinky.awsSdk.lightsailMod.DiskInfo]
   type DiskList = js.Array[typingsSlinky.awsSdk.lightsailMod.Disk]
   type DiskMapList = js.Array[typingsSlinky.awsSdk.lightsailMod.DiskMap]
@@ -241,6 +273,33 @@ package object lightsailMod {
   type LoadBalancerTlsCertificateSummaryList = js.Array[typingsSlinky.awsSdk.lightsailMod.LoadBalancerTlsCertificateSummary]
   type LogEventList = js.Array[typingsSlinky.awsSdk.lightsailMod.LogEvent]
   type MetricDatapointList = js.Array[typingsSlinky.awsSdk.lightsailMod.MetricDatapoint]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CPUUtilization
+    - typingsSlinky.awsSdk.awsSdkStrings.NetworkIn
+    - typingsSlinky.awsSdk.awsSdkStrings.NetworkOut
+    - typingsSlinky.awsSdk.awsSdkStrings.StatusCheckFailed
+    - typingsSlinky.awsSdk.awsSdkStrings.StatusCheckFailed_Instance
+    - typingsSlinky.awsSdk.awsSdkStrings.StatusCheckFailed_System
+    - typingsSlinky.awsSdk.awsSdkStrings.ClientTLSNegotiationErrorCount
+    - typingsSlinky.awsSdk.awsSdkStrings.HealthyHostCount
+    - typingsSlinky.awsSdk.awsSdkStrings.UnhealthyHostCount
+    - typingsSlinky.awsSdk.awsSdkStrings.HTTPCode_LB_4XX_Count
+    - typingsSlinky.awsSdk.awsSdkStrings.HTTPCode_LB_5XX_Count
+    - typingsSlinky.awsSdk.awsSdkStrings.HTTPCode_Instance_2XX_Count
+    - typingsSlinky.awsSdk.awsSdkStrings.HTTPCode_Instance_3XX_Count
+    - typingsSlinky.awsSdk.awsSdkStrings.HTTPCode_Instance_4XX_Count
+    - typingsSlinky.awsSdk.awsSdkStrings.HTTPCode_Instance_5XX_Count
+    - typingsSlinky.awsSdk.awsSdkStrings.InstanceResponseTime
+    - typingsSlinky.awsSdk.awsSdkStrings.RejectedConnectionCount
+    - typingsSlinky.awsSdk.awsSdkStrings.RequestCount
+    - typingsSlinky.awsSdk.awsSdkStrings.DatabaseConnections
+    - typingsSlinky.awsSdk.awsSdkStrings.DiskQueueDepth
+    - typingsSlinky.awsSdk.awsSdkStrings.FreeStorageSpace
+    - typingsSlinky.awsSdk.awsSdkStrings.NetworkReceiveThroughput
+    - typingsSlinky.awsSdk.awsSdkStrings.NetworkTransmitThroughput
+    - java.lang.String
+  */
+  type MetricName = typingsSlinky.awsSdk.lightsailMod._MetricName | java.lang.String
   type MetricPeriod = scala.Double
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Minimum_
@@ -291,6 +350,7 @@ package object lightsailMod {
   */
   type NetworkProtocol = typingsSlinky.awsSdk.lightsailMod._NetworkProtocol | java.lang.String
   type NonEmptyString = java.lang.String
+  type NotificationTriggerList = js.Array[typingsSlinky.awsSdk.lightsailMod.AlarmState]
   type OperationList = js.Array[typingsSlinky.awsSdk.lightsailMod.Operation]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.NotStarted
@@ -349,6 +409,14 @@ package object lightsailMod {
     - typingsSlinky.awsSdk.awsSdkStrings.StopRelationalDatabase
     - typingsSlinky.awsSdk.awsSdkStrings.EnableAddOn
     - typingsSlinky.awsSdk.awsSdkStrings.DisableAddOn
+    - typingsSlinky.awsSdk.awsSdkStrings.PutAlarm
+    - typingsSlinky.awsSdk.awsSdkStrings.GetAlarms
+    - typingsSlinky.awsSdk.awsSdkStrings.DeleteAlarm
+    - typingsSlinky.awsSdk.awsSdkStrings.TestAlarm
+    - typingsSlinky.awsSdk.awsSdkStrings.CreateContactMethod
+    - typingsSlinky.awsSdk.awsSdkStrings.GetContactMethods
+    - typingsSlinky.awsSdk.awsSdkStrings.SendContactMethodVerification
+    - typingsSlinky.awsSdk.awsSdkStrings.DeleteContactMethod
     - java.lang.String
   */
   type OperationType = typingsSlinky.awsSdk.lightsailMod._OperationType | java.lang.String
@@ -444,6 +512,8 @@ package object lightsailMod {
     - typingsSlinky.awsSdk.awsSdkStrings.RelationalDatabaseSnapshot
     - typingsSlinky.awsSdk.awsSdkStrings.ExportSnapshotRecord
     - typingsSlinky.awsSdk.awsSdkStrings.CloudFormationStackRecord
+    - typingsSlinky.awsSdk.awsSdkStrings.Alarm_
+    - typingsSlinky.awsSdk.awsSdkStrings.ContactMethod
     - java.lang.String
   */
   type ResourceType = typingsSlinky.awsSdk.lightsailMod._ResourceType | java.lang.String
@@ -456,6 +526,14 @@ package object lightsailMod {
   type TagList = js.Array[typingsSlinky.awsSdk.lightsailMod.Tag]
   type TagValue = java.lang.String
   type TimeOfDay = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.breaching
+    - typingsSlinky.awsSdk.awsSdkStrings.notBreaching
+    - typingsSlinky.awsSdk.awsSdkStrings.ignore__
+    - typingsSlinky.awsSdk.awsSdkStrings.missing_
+    - java.lang.String
+  */
+  type TreatMissingData = typingsSlinky.awsSdk.lightsailMod._TreatMissingData | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2016-11-28`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

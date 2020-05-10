@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReferrerInfo extends js.Object {
   /**
     * 来源小程序或公众号或App的 appId
@@ -16,19 +17,44 @@ trait ReferrerInfo extends js.Object {
     * - 1038（从另一个小程序返回）：来源小程序 appId
     * - 1043（公众号模板消息）：来源公众号 appId
     */
-  var appId: String
+  var appId: String = js.native
   /**
     * 来源小程序传过来的数据，scene=1037或1038时支持
     */
-  var extraData: js.UndefOr[js.Any] = js.undefined
+  var extraData: js.UndefOr[js.Any] = js.native
 }
 
 object ReferrerInfo {
   @scala.inline
-  def apply(appId: String, extraData: js.Any = null): ReferrerInfo = {
+  def apply(appId: String): ReferrerInfo = {
     val __obj = js.Dynamic.literal(appId = appId.asInstanceOf[js.Any])
-    if (extraData != null) __obj.updateDynamic("extraData")(extraData.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReferrerInfo]
   }
+  @scala.inline
+  implicit class ReferrerInfoOps[Self <: ReferrerInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtraData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtraData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraData")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

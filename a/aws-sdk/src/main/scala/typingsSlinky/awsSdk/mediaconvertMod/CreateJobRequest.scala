@@ -58,32 +58,149 @@ trait CreateJobRequest extends js.Object {
 
 object CreateJobRequest {
   @scala.inline
-  def apply(
-    Role: string,
-    Settings: JobSettings,
-    AccelerationSettings: AccelerationSettings = null,
-    BillingTagsSource: BillingTagsSource = null,
-    ClientRequestToken: string = null,
-    JobTemplate: string = null,
-    Priority: Int | Double = null,
-    Queue: string = null,
-    SimulateReservedQueue: SimulateReservedQueue = null,
-    StatusUpdateInterval: StatusUpdateInterval = null,
-    Tags: mapOfString = null,
-    UserMetadata: mapOfString = null
-  ): CreateJobRequest = {
+  def apply(Role: string, Settings: JobSettings): CreateJobRequest = {
     val __obj = js.Dynamic.literal(Role = Role.asInstanceOf[js.Any], Settings = Settings.asInstanceOf[js.Any])
-    if (AccelerationSettings != null) __obj.updateDynamic("AccelerationSettings")(AccelerationSettings.asInstanceOf[js.Any])
-    if (BillingTagsSource != null) __obj.updateDynamic("BillingTagsSource")(BillingTagsSource.asInstanceOf[js.Any])
-    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
-    if (JobTemplate != null) __obj.updateDynamic("JobTemplate")(JobTemplate.asInstanceOf[js.Any])
-    if (Priority != null) __obj.updateDynamic("Priority")(Priority.asInstanceOf[js.Any])
-    if (Queue != null) __obj.updateDynamic("Queue")(Queue.asInstanceOf[js.Any])
-    if (SimulateReservedQueue != null) __obj.updateDynamic("SimulateReservedQueue")(SimulateReservedQueue.asInstanceOf[js.Any])
-    if (StatusUpdateInterval != null) __obj.updateDynamic("StatusUpdateInterval")(StatusUpdateInterval.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (UserMetadata != null) __obj.updateDynamic("UserMetadata")(UserMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateJobRequest]
   }
+  @scala.inline
+  implicit class CreateJobRequestOps[Self <: CreateJobRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRole(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSettings(value: JobSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Settings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccelerationSettings(value: AccelerationSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccelerationSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccelerationSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccelerationSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBillingTagsSource(value: BillingTagsSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillingTagsSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBillingTagsSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillingTagsSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientRequestToken(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientRequestToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobTemplate(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriority(value: integerMinNegative50Max50): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueue(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Queue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Queue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSimulateReservedQueue(value: SimulateReservedQueue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SimulateReservedQueue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSimulateReservedQueue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SimulateReservedQueue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusUpdateInterval(value: StatusUpdateInterval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusUpdateInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusUpdateInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusUpdateInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: mapOfString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserMetadata(value: mapOfString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserMetadata")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

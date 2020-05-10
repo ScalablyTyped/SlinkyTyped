@@ -16,18 +16,16 @@ trait HTTPMethod extends js.Object
 
 object HTTPMethod {
   @scala.inline
-  def DELETE: typingsSlinky.workboxRouting.workboxRoutingStrings.DELETE = this.cast("DELETE")
+  def DELETE: typingsSlinky.workboxRouting.workboxRoutingStrings.DELETE = "DELETE".asInstanceOf[typingsSlinky.workboxRouting.workboxRoutingStrings.DELETE]
   @scala.inline
-  def GET: typingsSlinky.workboxRouting.workboxRoutingStrings.GET = this.cast("GET")
+  def GET: typingsSlinky.workboxRouting.workboxRoutingStrings.GET = "GET".asInstanceOf[typingsSlinky.workboxRouting.workboxRoutingStrings.GET]
   @scala.inline
-  def HEAD: typingsSlinky.workboxRouting.workboxRoutingStrings.HEAD = this.cast("HEAD")
+  def HEAD: typingsSlinky.workboxRouting.workboxRoutingStrings.HEAD = "HEAD".asInstanceOf[typingsSlinky.workboxRouting.workboxRoutingStrings.HEAD]
   @scala.inline
-  def PATCH: typingsSlinky.workboxRouting.workboxRoutingStrings.PATCH = this.cast("PATCH")
+  def PATCH: typingsSlinky.workboxRouting.workboxRoutingStrings.PATCH = "PATCH".asInstanceOf[typingsSlinky.workboxRouting.workboxRoutingStrings.PATCH]
   @scala.inline
-  def POST: typingsSlinky.workboxRouting.workboxRoutingStrings.POST = this.cast("POST")
+  def POST: typingsSlinky.workboxRouting.workboxRoutingStrings.POST = "POST".asInstanceOf[typingsSlinky.workboxRouting.workboxRoutingStrings.POST]
   @scala.inline
-  def PUT: typingsSlinky.workboxRouting.workboxRoutingStrings.PUT = this.cast("PUT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def PUT: typingsSlinky.workboxRouting.workboxRoutingStrings.PUT = "PUT".asInstanceOf[typingsSlinky.workboxRouting.workboxRoutingStrings.PUT]
 }
 

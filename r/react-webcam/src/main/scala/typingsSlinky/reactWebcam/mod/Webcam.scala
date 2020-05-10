@@ -3,9 +3,9 @@ package typingsSlinky.reactWebcam.mod
 import org.scalajs.dom.experimental.mediastream.MediaStream
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLVideoElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.std.HTMLVideoElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait Webcam
   var canvas: HTMLCanvasElement = js.native
   var ctx: CanvasRenderingContext2D | Null = js.native
   var stream: MediaStream = js.native
-  var video: org.scalajs.dom.raw.HTMLVideoElement | Null = js.native
+  var video: HTMLVideoElement | Null = js.native
   @JSName("componentDidMount")
   def componentDidMount_MWebcam(): Unit = js.native
   @JSName("componentDidUpdate")

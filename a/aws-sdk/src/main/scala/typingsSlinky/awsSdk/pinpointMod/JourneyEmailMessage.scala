@@ -14,10 +14,29 @@ trait JourneyEmailMessage extends js.Object {
 
 object JourneyEmailMessage {
   @scala.inline
-  def apply(FromAddress: string = null): JourneyEmailMessage = {
+  def apply(): JourneyEmailMessage = {
     val __obj = js.Dynamic.literal()
-    if (FromAddress != null) __obj.updateDynamic("FromAddress")(FromAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[JourneyEmailMessage]
   }
+  @scala.inline
+  implicit class JourneyEmailMessageOps[Self <: JourneyEmailMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFromAddress(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FromAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FromAddress")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,0 +1,17 @@
+package typingsSlinky.babylonjs.legacyMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("babylonjs/Legacy/legacy", "MinBlock")
+@js.native
+class MinBlock protected ()
+  extends typingsSlinky.babylonjs.indexMod.MinBlock {
+  /**
+    * Creates a new MinBlock
+    * @param name defines the block name
+    */
+  def this(name: String) = this()
+}
+

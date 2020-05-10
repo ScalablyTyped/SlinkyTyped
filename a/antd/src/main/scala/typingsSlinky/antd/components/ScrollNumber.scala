@@ -1,45 +1,47 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.scrollNumberMod.ScrollNumberProps
 import typingsSlinky.antd.scrollNumberMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ScrollNumber
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ScrollNumber {
   @JSImport("antd/lib/badge/ScrollNumber", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    component: String = null,
-    count: String | Double = null,
-    displayComponent: ReactElement = null,
-    onAnimated: js.Function = null,
-    prefixCls: String = null,
-    title: String | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (displayComponent != null) __obj.updateDynamic("displayComponent")(displayComponent.asInstanceOf[js.Any])
-    if (onAnimated != null) __obj.updateDynamic("onAnimated")(onAnimated.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def component(value: String): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def count(value: String | Double): this.type = set("count", value.asInstanceOf[js.Any])
+    @scala.inline
+    def countNull: this.type = set("count", null)
+    @scala.inline
+    def displayComponent(value: ReactElement): this.type = set("displayComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAnimated(value: js.Function): this.type = set("onAnimated", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String | Double): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleNull: this.type = set("title", null)
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.scrollNumberMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ScrollNumberProps
+  
+  def withProps(p: ScrollNumberProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ScrollNumber.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

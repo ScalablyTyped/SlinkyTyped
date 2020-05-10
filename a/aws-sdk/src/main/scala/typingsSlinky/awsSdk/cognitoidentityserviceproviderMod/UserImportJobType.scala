@@ -62,36 +62,173 @@ trait UserImportJobType extends js.Object {
 
 object UserImportJobType {
   @scala.inline
-  def apply(
-    CloudWatchLogsRoleArn: ArnType = null,
-    CompletionDate: js.Date = null,
-    CompletionMessage: CompletionMessageType = null,
-    CreationDate: js.Date = null,
-    FailedUsers: Int | Double = null,
-    ImportedUsers: Int | Double = null,
-    JobId: UserImportJobIdType = null,
-    JobName: UserImportJobNameType = null,
-    PreSignedUrl: PreSignedUrlType = null,
-    SkippedUsers: Int | Double = null,
-    StartDate: js.Date = null,
-    Status: UserImportJobStatusType = null,
-    UserPoolId: UserPoolIdType = null
-  ): UserImportJobType = {
+  def apply(): UserImportJobType = {
     val __obj = js.Dynamic.literal()
-    if (CloudWatchLogsRoleArn != null) __obj.updateDynamic("CloudWatchLogsRoleArn")(CloudWatchLogsRoleArn.asInstanceOf[js.Any])
-    if (CompletionDate != null) __obj.updateDynamic("CompletionDate")(CompletionDate.asInstanceOf[js.Any])
-    if (CompletionMessage != null) __obj.updateDynamic("CompletionMessage")(CompletionMessage.asInstanceOf[js.Any])
-    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
-    if (FailedUsers != null) __obj.updateDynamic("FailedUsers")(FailedUsers.asInstanceOf[js.Any])
-    if (ImportedUsers != null) __obj.updateDynamic("ImportedUsers")(ImportedUsers.asInstanceOf[js.Any])
-    if (JobId != null) __obj.updateDynamic("JobId")(JobId.asInstanceOf[js.Any])
-    if (JobName != null) __obj.updateDynamic("JobName")(JobName.asInstanceOf[js.Any])
-    if (PreSignedUrl != null) __obj.updateDynamic("PreSignedUrl")(PreSignedUrl.asInstanceOf[js.Any])
-    if (SkippedUsers != null) __obj.updateDynamic("SkippedUsers")(SkippedUsers.asInstanceOf[js.Any])
-    if (StartDate != null) __obj.updateDynamic("StartDate")(StartDate.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (UserPoolId != null) __obj.updateDynamic("UserPoolId")(UserPoolId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserImportJobType]
   }
+  @scala.inline
+  implicit class UserImportJobTypeOps[Self <: UserImportJobType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloudWatchLogsRoleArn(value: ArnType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLogsRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudWatchLogsRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLogsRoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompletionDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletionDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompletionDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletionDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompletionMessage(value: CompletionMessageType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletionMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompletionMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletionMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailedUsers(value: LongType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedUsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailedUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedUsers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImportedUsers(value: LongType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportedUsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImportedUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportedUsers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobId(value: UserImportJobIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobName(value: UserImportJobNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreSignedUrl(value: PreSignedUrlType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreSignedUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreSignedUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreSignedUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkippedUsers(value: LongType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SkippedUsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkippedUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SkippedUsers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: UserImportJobStatusType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserPoolId(value: UserPoolIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserPoolId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

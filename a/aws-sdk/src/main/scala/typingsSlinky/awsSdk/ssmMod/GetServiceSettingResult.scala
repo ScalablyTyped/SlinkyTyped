@@ -14,10 +14,29 @@ trait GetServiceSettingResult extends js.Object {
 
 object GetServiceSettingResult {
   @scala.inline
-  def apply(ServiceSetting: ServiceSetting = null): GetServiceSettingResult = {
+  def apply(): GetServiceSettingResult = {
     val __obj = js.Dynamic.literal()
-    if (ServiceSetting != null) __obj.updateDynamic("ServiceSetting")(ServiceSetting.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetServiceSettingResult]
   }
+  @scala.inline
+  implicit class GetServiceSettingResultOps[Self <: GetServiceSettingResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServiceSetting(value: ServiceSetting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceSetting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceSetting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceSetting")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

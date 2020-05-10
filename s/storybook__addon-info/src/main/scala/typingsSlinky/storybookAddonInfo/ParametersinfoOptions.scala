@@ -8,26 +8,57 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined @storybook/addons.@storybook/addons.Parameters & {  info  :@storybook/addon-info.@storybook/addon-info.Options} */
+@js.native
 trait ParametersinfoOptions
   extends /* key */ StringDictionary[js.Any] {
-  var fileName: js.UndefOr[String] = js.undefined
-  var info: Options
-  var options: js.UndefOr[OptionsParameter] = js.undefined
+  var fileName: js.UndefOr[String] = js.native
+  var info: Options = js.native
+  var options: js.UndefOr[OptionsParameter] = js.native
 }
 
 object ParametersinfoOptions {
   @scala.inline
-  def apply(
-    info: Options,
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    fileName: String = null,
-    options: OptionsParameter = null
-  ): ParametersinfoOptions = {
+  def apply(info: Options): ParametersinfoOptions = {
     val __obj = js.Dynamic.literal(info = info.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (fileName != null) __obj.updateDynamic("fileName")(fileName.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParametersinfoOptions]
   }
+  @scala.inline
+  implicit class ParametersinfoOptionsOps[Self <: ParametersinfoOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInfo(value: Options): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: OptionsParameter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

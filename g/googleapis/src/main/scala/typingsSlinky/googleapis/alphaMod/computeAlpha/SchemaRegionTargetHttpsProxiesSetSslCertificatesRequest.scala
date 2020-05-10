@@ -16,10 +16,29 @@ trait SchemaRegionTargetHttpsProxiesSetSslCertificatesRequest extends js.Object 
 
 object SchemaRegionTargetHttpsProxiesSetSslCertificatesRequest {
   @scala.inline
-  def apply(sslCertificates: js.Array[String] = null): SchemaRegionTargetHttpsProxiesSetSslCertificatesRequest = {
+  def apply(): SchemaRegionTargetHttpsProxiesSetSslCertificatesRequest = {
     val __obj = js.Dynamic.literal()
-    if (sslCertificates != null) __obj.updateDynamic("sslCertificates")(sslCertificates.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRegionTargetHttpsProxiesSetSslCertificatesRequest]
   }
+  @scala.inline
+  implicit class SchemaRegionTargetHttpsProxiesSetSslCertificatesRequestOps[Self <: SchemaRegionTargetHttpsProxiesSetSslCertificatesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSslCertificates(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sslCertificates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSslCertificates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sslCertificates")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

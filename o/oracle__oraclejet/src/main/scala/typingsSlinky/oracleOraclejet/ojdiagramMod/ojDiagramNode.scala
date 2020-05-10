@@ -6,6 +6,7 @@ import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.ErrorEvent
 import org.scalajs.dom.raw.FocusEvent
+import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.PointerEvent
@@ -17,7 +18,6 @@ import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.oracleOraclejet.AnonIconAnonShape
 import typingsSlinky.oracleOraclejet.AnonOpacity
 import typingsSlinky.oracleOraclejet.mod.JetElement
-import typingsSlinky.oracleOraclejet.mod.JetElementCustomEvent
 import typingsSlinky.oracleOraclejet.mod.JetSetPropertyType
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.abort
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.animationcancel
@@ -136,7 +136,6 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.volumechange
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.waiting
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.wheel
 import typingsSlinky.std.Event_
-import typingsSlinky.std.HTMLElement
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -164,1115 +163,843 @@ trait ojDiagramNode extends JetElement[ojDiagramNodeSettableProperties] {
   var showDisclosure: js.UndefOr[on | off] = js.native
   def addEventListener(
     `type`: descendantsConnectivityChanged,
-    listener: js.ThisFunction1[
-      /* this */ HTMLElement, 
-      /* ev */ JetElementCustomEvent[js.UndefOr[connected | disjoint | unknown]], 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]
   ): Unit = js.native
   def addEventListener(
     `type`: descendantsConnectivityChanged,
-    listener: js.ThisFunction1[
-      /* this */ HTMLElement, 
-      /* ev */ JetElementCustomEvent[js.UndefOr[connected | disjoint | unknown]], 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  def addEventListener(`type`: selectableChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: selectableChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[js.UndefOr[auto | off]], _]
-  ): Unit = js.native
-  def addEventListener(
-    `type`: selectableChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[js.UndefOr[auto | off]], _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  def addEventListener(`type`: showDisclosureChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: showDisclosureChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[js.UndefOr[on | off]], _]
-  ): Unit = js.native
-  def addEventListener(
-    `type`: showDisclosureChanged,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ JetElementCustomEvent[js.UndefOr[on | off]], _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_abort(
-    `type`: abort,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ UIEvent, _]
-  ): Unit = js.native
+  def addEventListener_abort(`type`: abort, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ UIEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_abort(
     `type`: abort,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ UIEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ UIEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_animationcancel(
     `type`: animationcancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ AnimationEvent, _]
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ AnimationEvent, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_animationcancel(
     `type`: animationcancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ AnimationEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ AnimationEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_animationend(
     `type`: animationend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ AnimationEvent, _]
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ AnimationEvent, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_animationend(
     `type`: animationend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ AnimationEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ AnimationEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_animationiteration(
     `type`: animationiteration,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ AnimationEvent, _]
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ AnimationEvent, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_animationiteration(
     `type`: animationiteration,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ AnimationEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ AnimationEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_animationstart(
     `type`: animationstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ AnimationEvent, _]
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ AnimationEvent, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_animationstart(
     `type`: animationstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ AnimationEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ AnimationEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_auxclick(`type`: auxclick, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_auxclick(
     `type`: auxclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_auxclick(
-    `type`: auxclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_blur(`type`: blur, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ FocusEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_blur(
     `type`: blur,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ FocusEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_blur(
-    `type`: blur,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ FocusEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ FocusEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_cancel(`type`: cancel, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_cancel(
     `type`: cancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_cancel(
-    `type`: cancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_canplay(`type`: canplay, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_canplay(
     `type`: canplay,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_canplay(
-    `type`: canplay,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_canplaythrough(`type`: canplaythrough, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_canplaythrough(
     `type`: canplaythrough,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_canplaythrough(
-    `type`: canplaythrough,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_categoriesChanged(`type`: categoriesChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_categoriesChanged(
     `type`: categoriesChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_categoriesChanged(
-    `type`: categoriesChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_change(`type`: change, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_change(
-    `type`: change,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_click(`type`: click, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_click(
     `type`: click,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_click(
-    `type`: click,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_close(`type`: close, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_close(
     `type`: close,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_close(
-    `type`: close,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_contextmenu(`type`: contextmenu, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_contextmenu(
     `type`: contextmenu,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_contextmenu(
-    `type`: contextmenu,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_copy(`type`: copy, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ClipboardEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_copy(
     `type`: copy,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ ClipboardEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_copy(
-    `type`: copy,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ ClipboardEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ClipboardEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_cuechange(`type`: cuechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_cuechange(
     `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_cuechange(
-    `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_cut(`type`: cut, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ClipboardEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_cut(
     `type`: cut,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ ClipboardEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_cut(
-    `type`: cut,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ ClipboardEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ClipboardEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_dblclick(`type`: dblclick, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dblclick(
     `type`: dblclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_dblclick(
-    `type`: dblclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_drag(`type`: drag, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ DragEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_drag(
     `type`: drag,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ DragEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_drag(
-    `type`: drag,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ DragEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ DragEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_dragend(`type`: dragend, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ DragEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragend(
     `type`: dragend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ DragEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_dragend(
-    `type`: dragend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ DragEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ DragEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_dragenter(`type`: dragenter, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ DragEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragenter(
     `type`: dragenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ DragEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_dragenter(
-    `type`: dragenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ DragEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ DragEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_dragexit(`type`: dragexit, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragexit(
     `type`: dragexit,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_dragexit(
-    `type`: dragexit,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_dragleave(`type`: dragleave, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ DragEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragleave(
     `type`: dragleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ DragEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_dragleave(
-    `type`: dragleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ DragEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ DragEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_dragover(`type`: dragover, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ DragEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragover(
     `type`: dragover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ DragEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_dragover(
-    `type`: dragover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ DragEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ DragEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_dragstart(`type`: dragstart, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ DragEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragstart(
     `type`: dragstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ DragEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_dragstart(
-    `type`: dragstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ DragEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ DragEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_drop(`type`: drop, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ DragEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_drop(
     `type`: drop,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ DragEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_drop(
-    `type`: drop,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ DragEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ DragEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_durationchange(`type`: durationchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_durationchange(
     `type`: durationchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_durationchange(
-    `type`: durationchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_emptied(`type`: emptied, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_emptied(
     `type`: emptied,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_emptied(
-    `type`: emptied,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_ended(`type`: ended, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ended(
     `type`: ended,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_ended(
-    `type`: ended,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ErrorEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: error,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ ErrorEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_error(
-    `type`: error,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ ErrorEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ErrorEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_focus(`type`: focus, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ FocusEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_focus(
     `type`: focus,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ FocusEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_focus(
-    `type`: focus,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ FocusEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ FocusEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_focusin(`type`: focusin, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ FocusEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_focusin(
     `type`: focusin,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ FocusEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_focusin(
-    `type`: focusin,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ FocusEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ FocusEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_focusout(`type`: focusout, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ FocusEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_focusout(
     `type`: focusout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ FocusEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_focusout(
-    `type`: focusout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ FocusEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ FocusEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_fullscreenchange(
-    `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
+  def addEventListener_fullscreenchange(`type`: fullscreenchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_fullscreenerror(
-    `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
+  def addEventListener_fullscreenerror(`type`: fullscreenerror, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_gotpointercapture(
     `type`: gotpointercapture,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _]
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_gotpointercapture(
     `type`: gotpointercapture,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_iconChanged(`type`: iconChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_iconChanged(
     `type`: iconChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_iconChanged(
-    `type`: iconChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_input(`type`: input, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_input(
     `type`: input,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_input(
-    `type`: input,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_invalid(`type`: invalid, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_invalid(
     `type`: invalid,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_invalid(
-    `type`: invalid,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_keydown(`type`: keydown, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ KeyboardEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_keydown(
     `type`: keydown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ KeyboardEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_keydown(
-    `type`: keydown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ KeyboardEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ KeyboardEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_keypress(`type`: keypress, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ KeyboardEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_keypress(
     `type`: keypress,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ KeyboardEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_keypress(
-    `type`: keypress,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ KeyboardEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ KeyboardEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_keyup(`type`: keyup, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ KeyboardEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_keyup(
     `type`: keyup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ KeyboardEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_keyup(
-    `type`: keyup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ KeyboardEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ KeyboardEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_labelChanged(`type`: labelChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_labelChanged(
     `type`: labelChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_labelChanged(
-    `type`: labelChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_labelStyleChanged(`type`: labelStyleChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_labelStyleChanged(
     `type`: labelStyleChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_labelStyleChanged(
-    `type`: labelStyleChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_load(`type`: load, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_load(
     `type`: load,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_load(
-    `type`: load,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_loadeddata(`type`: loadeddata, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadeddata(
     `type`: loadeddata,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_loadeddata(
-    `type`: loadeddata,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_loadedmetadata(
-    `type`: loadedmetadata,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
+  def addEventListener_loadedmetadata(`type`: loadedmetadata, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadedmetadata(
     `type`: loadedmetadata,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_loadstart(
-    `type`: loadstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
+  def addEventListener_loadstart(`type`: loadstart, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadstart(
     `type`: loadstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_lostpointercapture(
     `type`: lostpointercapture,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _]
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_lostpointercapture(
     `type`: lostpointercapture,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_mousedown(`type`: mousedown, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_mousedown(
     `type`: mousedown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_mousedown(
-    `type`: mousedown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_mouseenter(`type`: mouseenter, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_mouseenter(
     `type`: mouseenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_mouseenter(
-    `type`: mouseenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_mouseleave(`type`: mouseleave, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_mouseleave(
     `type`: mouseleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_mouseleave(
-    `type`: mouseleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_mousemove(`type`: mousemove, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_mousemove(
     `type`: mousemove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_mousemove(
-    `type`: mousemove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_mouseout(`type`: mouseout, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_mouseout(
     `type`: mouseout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_mouseout(
-    `type`: mouseout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_mouseover(`type`: mouseover, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_mouseover(
     `type`: mouseover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_mouseover(
-    `type`: mouseover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_mouseup(`type`: mouseup, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_mouseup(
     `type`: mouseup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_mouseup(
-    `type`: mouseup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ MouseEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_overviewChanged(`type`: overviewChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_overviewChanged(
     `type`: overviewChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_overviewChanged(
-    `type`: overviewChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_paste(`type`: paste, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ClipboardEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_paste(
     `type`: paste,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ ClipboardEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_paste(
-    `type`: paste,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ ClipboardEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ClipboardEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_pause(`type`: pause, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pause(
     `type`: pause,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_pause(
-    `type`: pause,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_play(
-    `type`: play,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
+  def addEventListener_play(`type`: play, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_play(
     `type`: play,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_playing(
-    `type`: playing,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
+  def addEventListener_playing(`type`: playing, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_playing(
     `type`: playing,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pointercancel(
     `type`: pointercancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _]
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pointercancel(
     `type`: pointercancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_pointerdown(`type`: pointerdown, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pointerdown(
     `type`: pointerdown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_pointerdown(
-    `type`: pointerdown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_pointerenter(`type`: pointerenter, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pointerenter(
     `type`: pointerenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_pointerenter(
-    `type`: pointerenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_pointerleave(`type`: pointerleave, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pointerleave(
     `type`: pointerleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_pointerleave(
-    `type`: pointerleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_pointermove(`type`: pointermove, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pointermove(
     `type`: pointermove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_pointermove(
-    `type`: pointermove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_pointerout(`type`: pointerout, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pointerout(
     `type`: pointerout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_pointerout(
-    `type`: pointerout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_pointerover(`type`: pointerover, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pointerover(
     `type`: pointerover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_pointerover(
-    `type`: pointerover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_pointerup(`type`: pointerup, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pointerup(
     `type`: pointerup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_pointerup(
-    `type`: pointerup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ PointerEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_progress(`type`: progress, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ProgressEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_progress(
     `type`: progress,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ ProgressEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_progress(
-    `type`: progress,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ ProgressEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ProgressEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_ratechange(`type`: ratechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ratechange(
     `type`: ratechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_ratechange(
-    `type`: ratechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_reset(`type`: reset, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_reset(
     `type`: reset,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_reset(
-    `type`: reset,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_resize(
-    `type`: resize,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ UIEvent, _]
-  ): Unit = js.native
+  def addEventListener_resize(`type`: resize, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ UIEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_resize(
     `type`: resize,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ UIEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ UIEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_scroll(
-    `type`: scroll,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
+  def addEventListener_scroll(`type`: scroll, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_scroll(
     `type`: scroll,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_securitypolicyviolation(
     `type`: securitypolicyviolation,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ SecurityPolicyViolationEvent, _]
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ SecurityPolicyViolationEvent, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_securitypolicyviolation(
     `type`: securitypolicyviolation,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ SecurityPolicyViolationEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ SecurityPolicyViolationEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_seeked(`type`: seeked, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_seeked(
     `type`: seeked,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_seeked(
-    `type`: seeked,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_seeking(`type`: seeking, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_seeking(
     `type`: seeking,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_seeking(
-    `type`: seeking,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_select(`type`: select, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_select(
     `type`: select,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_select(
-    `type`: select,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_selectionchange(`type`: selectionchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_selectionchange(
     `type`: selectionchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_selectionchange(
-    `type`: selectionchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_selectstart(`type`: selectstart, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_selectstart(
     `type`: selectstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_selectstart(
-    `type`: selectstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_shortDescChanged(`type`: shortDescChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_shortDescChanged(
     `type`: shortDescChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_shortDescChanged(
-    `type`: shortDescChanged,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, CustomEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_stalled(`type`: stalled, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_stalled(
     `type`: stalled,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_stalled(
-    `type`: stalled,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_submit(`type`: submit, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_submit(
     `type`: submit,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_submit(
-    `type`: submit,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_suspend(`type`: suspend, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_suspend(
     `type`: suspend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_suspend(
-    `type`: suspend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_timeupdate(`type`: timeupdate, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_timeupdate(
     `type`: timeupdate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_timeupdate(
-    `type`: timeupdate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_toggle(`type`: toggle, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_toggle(
     `type`: toggle,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_toggle(
-    `type`: toggle,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_touchcancel(`type`: touchcancel, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ TouchEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_touchcancel(
     `type`: touchcancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ TouchEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_touchcancel(
-    `type`: touchcancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ TouchEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ TouchEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_touchend(`type`: touchend, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ TouchEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_touchend(
     `type`: touchend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ TouchEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_touchend(
-    `type`: touchend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ TouchEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ TouchEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_touchmove(
-    `type`: touchmove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ TouchEvent, _]
-  ): Unit = js.native
+  def addEventListener_touchmove(`type`: touchmove, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ TouchEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_touchmove(
     `type`: touchmove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ TouchEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ TouchEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_touchstart(
-    `type`: touchstart_,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ TouchEvent, _]
-  ): Unit = js.native
+  def addEventListener_touchstart(`type`: touchstart_, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ TouchEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_touchstart(
     `type`: touchstart_,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ TouchEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ TouchEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_transitioncancel(
     `type`: transitioncancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ TransitionEvent, _]
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ TransitionEvent, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_transitioncancel(
     `type`: transitioncancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ TransitionEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ TransitionEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_transitionend(
     `type`: transitionend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ TransitionEvent, _]
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ TransitionEvent, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_transitionend(
     `type`: transitionend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ TransitionEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ TransitionEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_transitionrun(
     `type`: transitionrun,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ TransitionEvent, _]
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ TransitionEvent, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_transitionrun(
     `type`: transitionrun,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ TransitionEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ TransitionEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_transitionstart(
     `type`: transitionstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ TransitionEvent, _]
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ TransitionEvent, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_transitionstart(
     `type`: transitionstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ TransitionEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ TransitionEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_volumechange(`type`: volumechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_volumechange(
     `type`: volumechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_volumechange(
-    `type`: volumechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_waiting(
-    `type`: waiting,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _]
-  ): Unit = js.native
+  def addEventListener_waiting(`type`: waiting, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_waiting(
     `type`: waiting,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_wheel(
-    `type`: wheel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ WheelEvent, _]
-  ): Unit = js.native
+  def addEventListener_wheel(`type`: wheel, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ WheelEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_wheel(
     `type`: wheel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ WheelEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ WheelEvent, _],
     useCapture: Boolean
   ): Unit = js.native
   def getProperty(property: String): js.Any = js.native

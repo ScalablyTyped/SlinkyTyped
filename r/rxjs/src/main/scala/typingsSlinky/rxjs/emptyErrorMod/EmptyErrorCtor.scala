@@ -6,5 +6,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait EmptyErrorCtor extends Instantiable0[EmptyError]
+trait EmptyErrorCtor
+  extends Instantiable0[js.Error]
 

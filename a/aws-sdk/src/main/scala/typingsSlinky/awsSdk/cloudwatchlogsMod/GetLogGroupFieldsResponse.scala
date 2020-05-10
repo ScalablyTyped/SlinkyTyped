@@ -14,10 +14,29 @@ trait GetLogGroupFieldsResponse extends js.Object {
 
 object GetLogGroupFieldsResponse {
   @scala.inline
-  def apply(logGroupFields: LogGroupFieldList = null): GetLogGroupFieldsResponse = {
+  def apply(): GetLogGroupFieldsResponse = {
     val __obj = js.Dynamic.literal()
-    if (logGroupFields != null) __obj.updateDynamic("logGroupFields")(logGroupFields.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLogGroupFieldsResponse]
   }
+  @scala.inline
+  implicit class GetLogGroupFieldsResponseOps[Self <: GetLogGroupFieldsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLogGroupFields(value: LogGroupFieldList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logGroupFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogGroupFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logGroupFields")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

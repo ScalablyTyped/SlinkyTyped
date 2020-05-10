@@ -6,6 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IServerConnector extends ICommunicator {
   /**
     * Callback function for connection completed.
@@ -14,7 +15,7 @@ trait IServerConnector extends ICommunicator {
     * {@link onConnect} will be called. Note that, if the listener of this {@link onConnect} is a member method of
     * some class, then you've use the ```bind```.
     */
-  var onConnect: js.Function
+  var onConnect: js.Function = js.native
   /**
     * Connect to a server.
     *
@@ -34,7 +35,7 @@ trait IServerConnector extends ICommunicator {
     *			 successful.
     * @param port The port number to connect to.
     */
-  def connect(ip: String, port: Double): Unit
+  def connect(ip: String, port: Double): Unit = js.native
 }
 
 object IServerConnector {
@@ -49,8 +50,27 @@ object IServerConnector {
     sendData: Invoke => Unit
   ): IServerConnector = {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), connect = js.Any.fromFunction2(connect), isConnected = js.Any.fromFunction0(isConnected), onClose = onClose.asInstanceOf[js.Any], onConnect = onConnect.asInstanceOf[js.Any], replyData = js.Any.fromFunction1(replyData), sendData = js.Any.fromFunction1(sendData))
-  
     __obj.asInstanceOf[IServerConnector]
   }
+  @scala.inline
+  implicit class IServerConnectorOps[Self <: IServerConnector] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnect(value: (String, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connect")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withOnConnect(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onConnect")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

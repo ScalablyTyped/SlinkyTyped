@@ -4,17 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAuthenticated extends js.Object {
-  var authenticated: Boolean
-  var claimedIdentifier: js.UndefOr[String] = js.undefined
+  var authenticated: Boolean = js.native
+  var claimedIdentifier: js.UndefOr[String] = js.native
 }
 
 object AnonAuthenticated {
   @scala.inline
-  def apply(authenticated: Boolean, claimedIdentifier: String = null): AnonAuthenticated = {
+  def apply(authenticated: Boolean): AnonAuthenticated = {
     val __obj = js.Dynamic.literal(authenticated = authenticated.asInstanceOf[js.Any])
-    if (claimedIdentifier != null) __obj.updateDynamic("claimedIdentifier")(claimedIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAuthenticated]
   }
+  @scala.inline
+  implicit class AnonAuthenticatedOps[Self <: AnonAuthenticated] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthenticated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClaimedIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claimedIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClaimedIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claimedIdentifier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

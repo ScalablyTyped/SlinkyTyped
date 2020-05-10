@@ -22,16 +22,53 @@ trait DescribeOrganizationConformancePacksRequest extends js.Object {
 
 object DescribeOrganizationConformancePacksRequest {
   @scala.inline
-  def apply(
-    Limit: Int | Double = null,
-    NextToken: String = null,
-    OrganizationConformancePackNames: OrganizationConformancePackNames = null
-  ): DescribeOrganizationConformancePacksRequest = {
+  def apply(): DescribeOrganizationConformancePacksRequest = {
     val __obj = js.Dynamic.literal()
-    if (Limit != null) __obj.updateDynamic("Limit")(Limit.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (OrganizationConformancePackNames != null) __obj.updateDynamic("OrganizationConformancePackNames")(OrganizationConformancePackNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeOrganizationConformancePacksRequest]
   }
+  @scala.inline
+  implicit class DescribeOrganizationConformancePacksRequestOps[Self <: DescribeOrganizationConformancePacksRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLimit(value: CosmosPageLimit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizationConformancePackNames(value: OrganizationConformancePackNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationConformancePackNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationConformancePackNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationConformancePackNames")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

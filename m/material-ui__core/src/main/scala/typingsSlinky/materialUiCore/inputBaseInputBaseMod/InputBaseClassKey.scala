@@ -23,32 +23,30 @@ trait InputBaseClassKey extends js.Object
 
 object InputBaseClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = "disabled".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = this.cast("disabled")
+  def error: typingsSlinky.materialUiCore.materialUiCoreStrings.error = "error".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.error]
   @scala.inline
-  def error: typingsSlinky.materialUiCore.materialUiCoreStrings.error = this.cast("error")
+  def focused: typingsSlinky.materialUiCore.materialUiCoreStrings.focused = "focused".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.focused]
   @scala.inline
-  def focused: typingsSlinky.materialUiCore.materialUiCoreStrings.focused = this.cast("focused")
+  def formControl: typingsSlinky.materialUiCore.materialUiCoreStrings.formControl = "formControl".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.formControl]
   @scala.inline
-  def formControl: typingsSlinky.materialUiCore.materialUiCoreStrings.formControl = this.cast("formControl")
+  def fullWidth: typingsSlinky.materialUiCore.materialUiCoreStrings.fullWidth = "fullWidth".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.fullWidth]
   @scala.inline
-  def fullWidth: typingsSlinky.materialUiCore.materialUiCoreStrings.fullWidth = this.cast("fullWidth")
+  def input: typingsSlinky.materialUiCore.materialUiCoreStrings.input = "input".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.input]
   @scala.inline
-  def input: typingsSlinky.materialUiCore.materialUiCoreStrings.input = this.cast("input")
+  def inputDisabled: typingsSlinky.materialUiCore.materialUiCoreStrings.inputDisabled = "inputDisabled".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.inputDisabled]
   @scala.inline
-  def inputDisabled: typingsSlinky.materialUiCore.materialUiCoreStrings.inputDisabled = this.cast("inputDisabled")
+  def inputMarginDense: typingsSlinky.materialUiCore.materialUiCoreStrings.inputMarginDense = "inputMarginDense".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.inputMarginDense]
   @scala.inline
-  def inputMarginDense: typingsSlinky.materialUiCore.materialUiCoreStrings.inputMarginDense = this.cast("inputMarginDense")
+  def inputMultiline: typingsSlinky.materialUiCore.materialUiCoreStrings.inputMultiline = "inputMultiline".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.inputMultiline]
   @scala.inline
-  def inputMultiline: typingsSlinky.materialUiCore.materialUiCoreStrings.inputMultiline = this.cast("inputMultiline")
+  def inputType: typingsSlinky.materialUiCore.materialUiCoreStrings.inputType = "inputType".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.inputType]
   @scala.inline
-  def inputType: typingsSlinky.materialUiCore.materialUiCoreStrings.inputType = this.cast("inputType")
+  def inputTypeSearch: typingsSlinky.materialUiCore.materialUiCoreStrings.inputTypeSearch = "inputTypeSearch".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.inputTypeSearch]
   @scala.inline
-  def inputTypeSearch: typingsSlinky.materialUiCore.materialUiCoreStrings.inputTypeSearch = this.cast("inputTypeSearch")
+  def multiline: typingsSlinky.materialUiCore.materialUiCoreStrings.multiline = "multiline".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.multiline]
   @scala.inline
-  def multiline: typingsSlinky.materialUiCore.materialUiCoreStrings.multiline = this.cast("multiline")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

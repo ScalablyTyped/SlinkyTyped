@@ -22,11 +22,41 @@ trait SchemaProjectRepoId extends js.Object {
 
 object SchemaProjectRepoId {
   @scala.inline
-  def apply(projectId: String = null, repoName: String = null): SchemaProjectRepoId = {
+  def apply(): SchemaProjectRepoId = {
     val __obj = js.Dynamic.literal()
-    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
-    if (repoName != null) __obj.updateDynamic("repoName")(repoName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProjectRepoId]
   }
+  @scala.inline
+  implicit class SchemaProjectRepoIdOps[Self <: SchemaProjectRepoId] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepoName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repoName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepoName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repoName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

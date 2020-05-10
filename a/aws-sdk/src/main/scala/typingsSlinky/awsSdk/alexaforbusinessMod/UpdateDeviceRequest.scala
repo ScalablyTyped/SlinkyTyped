@@ -18,11 +18,41 @@ trait UpdateDeviceRequest extends js.Object {
 
 object UpdateDeviceRequest {
   @scala.inline
-  def apply(DeviceArn: Arn = null, DeviceName: DeviceName = null): UpdateDeviceRequest = {
+  def apply(): UpdateDeviceRequest = {
     val __obj = js.Dynamic.literal()
-    if (DeviceArn != null) __obj.updateDynamic("DeviceArn")(DeviceArn.asInstanceOf[js.Any])
-    if (DeviceName != null) __obj.updateDynamic("DeviceName")(DeviceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateDeviceRequest]
   }
+  @scala.inline
+  implicit class UpdateDeviceRequestOps[Self <: UpdateDeviceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceName(value: DeviceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

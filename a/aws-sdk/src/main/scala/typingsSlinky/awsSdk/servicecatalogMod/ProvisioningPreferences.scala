@@ -34,22 +34,89 @@ trait ProvisioningPreferences extends js.Object {
 
 object ProvisioningPreferences {
   @scala.inline
-  def apply(
-    StackSetAccounts: StackSetAccounts = null,
-    StackSetFailureToleranceCount: Int | Double = null,
-    StackSetFailureTolerancePercentage: Int | Double = null,
-    StackSetMaxConcurrencyCount: Int | Double = null,
-    StackSetMaxConcurrencyPercentage: Int | Double = null,
-    StackSetRegions: StackSetRegions = null
-  ): ProvisioningPreferences = {
+  def apply(): ProvisioningPreferences = {
     val __obj = js.Dynamic.literal()
-    if (StackSetAccounts != null) __obj.updateDynamic("StackSetAccounts")(StackSetAccounts.asInstanceOf[js.Any])
-    if (StackSetFailureToleranceCount != null) __obj.updateDynamic("StackSetFailureToleranceCount")(StackSetFailureToleranceCount.asInstanceOf[js.Any])
-    if (StackSetFailureTolerancePercentage != null) __obj.updateDynamic("StackSetFailureTolerancePercentage")(StackSetFailureTolerancePercentage.asInstanceOf[js.Any])
-    if (StackSetMaxConcurrencyCount != null) __obj.updateDynamic("StackSetMaxConcurrencyCount")(StackSetMaxConcurrencyCount.asInstanceOf[js.Any])
-    if (StackSetMaxConcurrencyPercentage != null) __obj.updateDynamic("StackSetMaxConcurrencyPercentage")(StackSetMaxConcurrencyPercentage.asInstanceOf[js.Any])
-    if (StackSetRegions != null) __obj.updateDynamic("StackSetRegions")(StackSetRegions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProvisioningPreferences]
   }
+  @scala.inline
+  implicit class ProvisioningPreferencesOps[Self <: ProvisioningPreferences] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStackSetAccounts(value: StackSetAccounts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetAccounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackSetAccounts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetAccounts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackSetFailureToleranceCount(value: StackSetFailureToleranceCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetFailureToleranceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackSetFailureToleranceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetFailureToleranceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackSetFailureTolerancePercentage(value: StackSetFailureTolerancePercentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetFailureTolerancePercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackSetFailureTolerancePercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetFailureTolerancePercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackSetMaxConcurrencyCount(value: StackSetMaxConcurrencyCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetMaxConcurrencyCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackSetMaxConcurrencyCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetMaxConcurrencyCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackSetMaxConcurrencyPercentage(value: StackSetMaxConcurrencyPercentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetMaxConcurrencyPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackSetMaxConcurrencyPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetMaxConcurrencyPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackSetRegions(value: StackSetRegions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetRegions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackSetRegions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetRegions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,17 +26,59 @@ trait RedshiftParameters extends js.Object {
 
 object RedshiftParameters {
   @scala.inline
-  def apply(
-    Database: Database,
-    ClusterId: ClusterId = null,
-    Host: Host = null,
-    Port: Int | scala.Double = null
-  ): RedshiftParameters = {
+  def apply(Database: Database): RedshiftParameters = {
     val __obj = js.Dynamic.literal(Database = Database.asInstanceOf[js.Any])
-    if (ClusterId != null) __obj.updateDynamic("ClusterId")(ClusterId.asInstanceOf[js.Any])
-    if (Host != null) __obj.updateDynamic("Host")(Host.asInstanceOf[js.Any])
-    if (Port != null) __obj.updateDynamic("Port")(Port.asInstanceOf[js.Any])
     __obj.asInstanceOf[RedshiftParameters]
   }
+  @scala.inline
+  implicit class RedshiftParametersOps[Self <: RedshiftParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDatabase(value: Database): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Database")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClusterId(value: ClusterId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHost(value: Host): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Host")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: OptionalPort): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

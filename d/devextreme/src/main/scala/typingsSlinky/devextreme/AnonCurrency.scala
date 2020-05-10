@@ -33,32 +33,92 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCurrency extends _format {
-  var currency: js.UndefOr[String] = js.undefined
-  var formatter: js.UndefOr[js.Function1[/* value */ Double | js.Date, String]] = js.undefined
-  var parser: js.UndefOr[js.Function1[/* value */ String, Double | js.Date]] = js.undefined
-  var precision: js.UndefOr[Double] = js.undefined
+  var currency: js.UndefOr[String] = js.native
+  var formatter: js.UndefOr[js.Function1[/* value */ Double | js.Date, String]] = js.native
+  var parser: js.UndefOr[js.Function1[/* value */ String, Double | js.Date]] = js.native
+  var precision: js.UndefOr[Double] = js.native
   var `type`: js.UndefOr[
     billions | currency | day | decimal_ | exponential | fixedPoint | largeNumber | longDate | longTime | millions | millisecond | month | monthAndDay | monthAndYear | percent | quarter | quarterAndYear | shortDate | shortTime | thousands | trillions | year | dayOfWeek | hour | longDateLongTime | minute | second | shortDateShortTime
-  ] = js.undefined
+  ] = js.native
 }
 
 object AnonCurrency {
   @scala.inline
-  def apply(
-    currency: String = null,
-    formatter: /* value */ Double | js.Date => String = null,
-    parser: /* value */ String => Double | js.Date = null,
-    precision: Int | Double = null,
-    `type`: billions | currency | day | decimal_ | exponential | fixedPoint | largeNumber | longDate | longTime | millions | millisecond | month | monthAndDay | monthAndYear | percent | quarter | quarterAndYear | shortDate | shortTime | thousands | trillions | year | dayOfWeek | hour | longDateLongTime | minute | second | shortDateShortTime = null
-  ): AnonCurrency = {
+  def apply(): AnonCurrency = {
     val __obj = js.Dynamic.literal()
-    if (currency != null) __obj.updateDynamic("currency")(currency.asInstanceOf[js.Any])
-    if (formatter != null) __obj.updateDynamic("formatter")(js.Any.fromFunction1(formatter))
-    if (parser != null) __obj.updateDynamic("parser")(js.Any.fromFunction1(parser))
-    if (precision != null) __obj.updateDynamic("precision")(precision.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCurrency]
   }
+  @scala.inline
+  implicit class AnonCurrencyOps[Self <: AnonCurrency] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrency(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatter(value: /* value */ Double | js.Date => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutFormatter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParser(value: /* value */ String => Double | js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutParser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrecision(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrecision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(
+      value: billions | currency | day | decimal_ | exponential | fixedPoint | largeNumber | longDate | longTime | millions | millisecond | month | monthAndDay | monthAndYear | percent | quarter | quarterAndYear | shortDate | shortTime | thousands | trillions | year | dayOfWeek | hour | longDateLongTime | minute | second | shortDateShortTime
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

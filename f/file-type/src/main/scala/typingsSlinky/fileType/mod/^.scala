@@ -2,8 +2,6 @@ package typingsSlinky.fileType.mod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Readable
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -48,8 +46,8 @@ object ^ extends js.Object {
   	```
   	*/
   def apply(buffer: Buffer): js.UndefOr[FileTypeResult] = js.native
-  def apply(buffer: ArrayBuffer): js.UndefOr[FileTypeResult] = js.native
-  def apply(buffer: Uint8Array): js.UndefOr[FileTypeResult] = js.native
+  def apply(buffer: js.typedarray.ArrayBuffer): js.UndefOr[FileTypeResult] = js.native
+  def apply(buffer: js.typedarray.Uint8Array): js.UndefOr[FileTypeResult] = js.native
   /**
   	Detect the file type of a readable stream.
   	@param readableStream - A readable stream containing a file to examine, see: [`stream.Readable`](https://nodejs.org/api/stream.html#stream_class_stream_readable).

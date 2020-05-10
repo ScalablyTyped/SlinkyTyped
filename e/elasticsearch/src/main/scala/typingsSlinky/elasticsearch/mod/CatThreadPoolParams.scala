@@ -10,44 +10,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CatThreadPoolParams extends CatCommonParams {
-  var size: js.UndefOr[_empty | k | m | g | t | p] = js.undefined
-  var threadPoolPatterns: js.UndefOr[NameList] = js.undefined
+  var size: js.UndefOr[_empty | k | m | g | t | p] = js.native
+  var threadPoolPatterns: js.UndefOr[NameList] = js.native
 }
 
 object CatThreadPoolParams {
   @scala.inline
-  def apply(
-    format: String,
-    body: js.Any = null,
-    filterPath: String | js.Array[String] = null,
-    h: NameList = null,
-    help: js.UndefOr[Boolean] = js.undefined,
-    ignore: Double | js.Array[Double] = null,
-    local: js.UndefOr[Boolean] = js.undefined,
-    masterTimeout: TimeSpan = null,
-    maxRetries: Int | Double = null,
-    method: String = null,
-    requestTimeout: Int | Double = null,
-    size: _empty | k | m | g | t | p = null,
-    threadPoolPatterns: NameList = null,
-    v: js.UndefOr[Boolean] = js.undefined
-  ): CatThreadPoolParams = {
+  def apply(format: String): CatThreadPoolParams = {
     val __obj = js.Dynamic.literal(format = format.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (filterPath != null) __obj.updateDynamic("filterPath")(filterPath.asInstanceOf[js.Any])
-    if (h != null) __obj.updateDynamic("h")(h.asInstanceOf[js.Any])
-    if (!js.isUndefined(help)) __obj.updateDynamic("help")(help.asInstanceOf[js.Any])
-    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
-    if (!js.isUndefined(local)) __obj.updateDynamic("local")(local.asInstanceOf[js.Any])
-    if (masterTimeout != null) __obj.updateDynamic("masterTimeout")(masterTimeout.asInstanceOf[js.Any])
-    if (maxRetries != null) __obj.updateDynamic("maxRetries")(maxRetries.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (requestTimeout != null) __obj.updateDynamic("requestTimeout")(requestTimeout.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (threadPoolPatterns != null) __obj.updateDynamic("threadPoolPatterns")(threadPoolPatterns.asInstanceOf[js.Any])
-    if (!js.isUndefined(v)) __obj.updateDynamic("v")(v.asInstanceOf[js.Any])
     __obj.asInstanceOf[CatThreadPoolParams]
   }
+  @scala.inline
+  implicit class CatThreadPoolParamsOps[Self <: CatThreadPoolParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSize(value: _empty | k | m | g | t | p): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreadPoolPatterns(value: NameList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threadPoolPatterns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreadPoolPatterns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threadPoolPatterns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

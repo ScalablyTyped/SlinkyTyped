@@ -34,22 +34,89 @@ trait SearchGameSessionsInput extends js.Object {
 
 object SearchGameSessionsInput {
   @scala.inline
-  def apply(
-    AliasId: AliasId = null,
-    FilterExpression: NonZeroAndMaxString = null,
-    FleetId: FleetId = null,
-    Limit: Int | scala.Double = null,
-    NextToken: NonZeroAndMaxString = null,
-    SortExpression: NonZeroAndMaxString = null
-  ): SearchGameSessionsInput = {
+  def apply(): SearchGameSessionsInput = {
     val __obj = js.Dynamic.literal()
-    if (AliasId != null) __obj.updateDynamic("AliasId")(AliasId.asInstanceOf[js.Any])
-    if (FilterExpression != null) __obj.updateDynamic("FilterExpression")(FilterExpression.asInstanceOf[js.Any])
-    if (FleetId != null) __obj.updateDynamic("FleetId")(FleetId.asInstanceOf[js.Any])
-    if (Limit != null) __obj.updateDynamic("Limit")(Limit.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (SortExpression != null) __obj.updateDynamic("SortExpression")(SortExpression.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchGameSessionsInput]
   }
+  @scala.inline
+  implicit class SearchGameSessionsInputOps[Self <: SearchGameSessionsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAliasId(value: AliasId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AliasId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAliasId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AliasId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterExpression(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterExpression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFleetId(value: FleetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFleetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: PositiveInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortExpression(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SortExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SortExpression")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

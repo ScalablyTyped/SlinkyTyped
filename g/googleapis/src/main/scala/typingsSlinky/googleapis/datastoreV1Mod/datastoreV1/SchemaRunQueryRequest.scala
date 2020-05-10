@@ -31,18 +31,65 @@ trait SchemaRunQueryRequest extends js.Object {
 
 object SchemaRunQueryRequest {
   @scala.inline
-  def apply(
-    gqlQuery: SchemaGqlQuery = null,
-    partitionId: SchemaPartitionId = null,
-    query: SchemaQuery = null,
-    readOptions: SchemaReadOptions = null
-  ): SchemaRunQueryRequest = {
+  def apply(): SchemaRunQueryRequest = {
     val __obj = js.Dynamic.literal()
-    if (gqlQuery != null) __obj.updateDynamic("gqlQuery")(gqlQuery.asInstanceOf[js.Any])
-    if (partitionId != null) __obj.updateDynamic("partitionId")(partitionId.asInstanceOf[js.Any])
-    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
-    if (readOptions != null) __obj.updateDynamic("readOptions")(readOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRunQueryRequest]
   }
+  @scala.inline
+  implicit class SchemaRunQueryRequestOps[Self <: SchemaRunQueryRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGqlQuery(value: SchemaGqlQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gqlQuery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGqlQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gqlQuery")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartitionId(value: SchemaPartitionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartitionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuery(value: SchemaQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadOptions(value: SchemaReadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

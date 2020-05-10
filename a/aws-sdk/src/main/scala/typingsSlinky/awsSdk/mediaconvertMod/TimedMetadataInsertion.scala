@@ -14,10 +14,29 @@ trait TimedMetadataInsertion extends js.Object {
 
 object TimedMetadataInsertion {
   @scala.inline
-  def apply(Id3Insertions: listOfId3Insertion = null): TimedMetadataInsertion = {
+  def apply(): TimedMetadataInsertion = {
     val __obj = js.Dynamic.literal()
-    if (Id3Insertions != null) __obj.updateDynamic("Id3Insertions")(Id3Insertions.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimedMetadataInsertion]
   }
+  @scala.inline
+  implicit class TimedMetadataInsertionOps[Self <: TimedMetadataInsertion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId3Insertions(value: listOfId3Insertion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id3Insertions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId3Insertions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id3Insertions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

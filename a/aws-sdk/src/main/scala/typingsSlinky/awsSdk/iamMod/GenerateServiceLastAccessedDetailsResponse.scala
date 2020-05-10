@@ -14,10 +14,29 @@ trait GenerateServiceLastAccessedDetailsResponse extends js.Object {
 
 object GenerateServiceLastAccessedDetailsResponse {
   @scala.inline
-  def apply(JobId: jobIDType = null): GenerateServiceLastAccessedDetailsResponse = {
+  def apply(): GenerateServiceLastAccessedDetailsResponse = {
     val __obj = js.Dynamic.literal()
-    if (JobId != null) __obj.updateDynamic("JobId")(JobId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenerateServiceLastAccessedDetailsResponse]
   }
+  @scala.inline
+  implicit class GenerateServiceLastAccessedDetailsResponseOps[Self <: GenerateServiceLastAccessedDetailsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobId(value: jobIDType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

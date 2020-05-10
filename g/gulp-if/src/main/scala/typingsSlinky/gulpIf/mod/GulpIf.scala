@@ -1,7 +1,6 @@
 package typingsSlinky.gulpIf.mod
 
 import typingsSlinky.node.NodeJS.ReadWriteStream
-import typingsSlinky.std.RegExp
 import typingsSlinky.vinyl.mod.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -55,7 +54,7 @@ trait GulpIf extends js.Object {
     * @param stream the stream to pipe to if condition is true
     * @param elseStream (optional) the stream to pipe to if condition is false 
     */
-  def apply(condition: RegExp, stream: ReadWriteStream): ReadWriteStream = js.native
-  def apply(condition: RegExp, stream: ReadWriteStream, elseStream: ReadWriteStream): ReadWriteStream = js.native
+  def apply(condition: js.RegExp, stream: ReadWriteStream): ReadWriteStream = js.native
+  def apply(condition: js.RegExp, stream: ReadWriteStream, elseStream: ReadWriteStream): ReadWriteStream = js.native
 }
 

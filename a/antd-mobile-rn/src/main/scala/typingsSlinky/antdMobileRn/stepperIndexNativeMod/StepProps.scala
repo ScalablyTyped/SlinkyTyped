@@ -8,47 +8,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StepProps extends StepPropsType {
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  var styles: js.UndefOr[AnonDisabledStepTextColor] = js.undefined
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var styles: js.UndefOr[AnonDisabledStepTextColor] = js.native
 }
 
 object StepProps {
   @scala.inline
-  def apply(
-    autoFocus: js.UndefOr[Boolean] = js.undefined,
-    defaultValue: Int | Double = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    downStyle: js.Object = null,
-    inputStyle: js.Object = null,
-    max: Int | Double = null,
-    min: Int | Double = null,
-    name: String = null,
-    onChange: /* value */ js.Any => Unit = null,
-    readOnly: js.UndefOr[Boolean] = js.undefined,
-    step: Double | String = null,
-    style: StyleProp[ViewStyle] = null,
-    styles: AnonDisabledStepTextColor = null,
-    upStyle: js.Object = null,
-    value: Int | Double = null
-  ): StepProps = {
+  def apply(): StepProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (downStyle != null) __obj.updateDynamic("downStyle")(downStyle.asInstanceOf[js.Any])
-    if (inputStyle != null) __obj.updateDynamic("inputStyle")(inputStyle.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (upStyle != null) __obj.updateDynamic("upStyle")(upStyle.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[StepProps]
   }
+  @scala.inline
+  implicit class StepPropsOps[Self <: StepProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
+        ret
+    }
+    @scala.inline
+    def withStyles(value: AnonDisabledStepTextColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

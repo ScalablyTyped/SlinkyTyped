@@ -15,16 +15,14 @@ trait MenuMode extends js.Object
 
 object MenuMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def horizontal: typingsSlinky.antd.antdStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.antd.antdStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.antd.antdStrings.horizontal = this.cast("horizontal")
+  def `inline`: typingsSlinky.antd.antdStrings.`inline` = "inline".asInstanceOf[typingsSlinky.antd.antdStrings.`inline`]
   @scala.inline
-  def `inline`: typingsSlinky.antd.antdStrings.`inline` = this.cast("inline")
+  def vertical: typingsSlinky.antd.antdStrings.vertical = "vertical".asInstanceOf[typingsSlinky.antd.antdStrings.vertical]
   @scala.inline
-  def vertical: typingsSlinky.antd.antdStrings.vertical = this.cast("vertical")
+  def `vertical-left`: typingsSlinky.antd.antdStrings.`vertical-left` = "vertical-left".asInstanceOf[typingsSlinky.antd.antdStrings.`vertical-left`]
   @scala.inline
-  def `vertical-left`: typingsSlinky.antd.antdStrings.`vertical-left` = this.cast("vertical-left")
-  @scala.inline
-  def `vertical-right`: typingsSlinky.antd.antdStrings.`vertical-right` = this.cast("vertical-right")
+  def `vertical-right`: typingsSlinky.antd.antdStrings.`vertical-right` = "vertical-right".asInstanceOf[typingsSlinky.antd.antdStrings.`vertical-right`]
 }
 

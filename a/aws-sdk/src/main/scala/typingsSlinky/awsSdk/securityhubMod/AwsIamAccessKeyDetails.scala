@@ -34,22 +34,89 @@ trait AwsIamAccessKeyDetails extends js.Object {
 
 object AwsIamAccessKeyDetails {
   @scala.inline
-  def apply(
-    CreatedAt: NonEmptyString = null,
-    PrincipalId: NonEmptyString = null,
-    PrincipalName: NonEmptyString = null,
-    PrincipalType: NonEmptyString = null,
-    Status: AwsIamAccessKeyStatus = null,
-    UserName: NonEmptyString = null
-  ): AwsIamAccessKeyDetails = {
+  def apply(): AwsIamAccessKeyDetails = {
     val __obj = js.Dynamic.literal()
-    if (CreatedAt != null) __obj.updateDynamic("CreatedAt")(CreatedAt.asInstanceOf[js.Any])
-    if (PrincipalId != null) __obj.updateDynamic("PrincipalId")(PrincipalId.asInstanceOf[js.Any])
-    if (PrincipalName != null) __obj.updateDynamic("PrincipalName")(PrincipalName.asInstanceOf[js.Any])
-    if (PrincipalType != null) __obj.updateDynamic("PrincipalType")(PrincipalType.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (UserName != null) __obj.updateDynamic("UserName")(UserName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsIamAccessKeyDetails]
   }
+  @scala.inline
+  implicit class AwsIamAccessKeyDetailsOps[Self <: AwsIamAccessKeyDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreatedAt(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrincipalId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrincipalId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrincipalId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrincipalId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrincipalName(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrincipalName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrincipalName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrincipalName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrincipalType(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrincipalType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrincipalType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrincipalType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: AwsIamAccessKeyStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserName(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

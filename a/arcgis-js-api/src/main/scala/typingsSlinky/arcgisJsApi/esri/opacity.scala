@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-opacity.html)
   */
+@js.native
 trait opacity extends js.Object {
   /**
     * This method generates an opacity visual variable with default alpha values optimally mapped to data values based on the statistics queried for the indicated field or expression.  There are several ways this method may be called. The most common case is by providing a `layer` and a `field`. This is the scenario where the statistics of the data aren't well known and the user doesn't know the which alpha values to map to data values. You can optionally use a `valueExpression` instead of a field to visualize features based on a numeric value returned from a script executed at runtime.  The other options are provided for convenience for more involved custom visualization authoring applications. For example, if you already generated statistics in another operation, you can pass the stats in the `statistics` parameter to avoid making an extra call to the server.
@@ -29,9 +30,10 @@ trait opacity extends js.Object {
     * @param params.minValue A custom minimum value set by the user. Use this in conjunction with `maxValue` to generate statistics between lower and upper bounds. This will be the lowest stop in the returned visual variable.
     * @param params.maxValue A custom maximum value set by the user. Use this in conjunction with `minValue` to generate statistics between lower and upper bounds. This will be the uppermost stop in the returned visual variable.
     * @param params.view A [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html) or [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) instance is required when a `valueExpression` is specified.
+    * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     */
-  def createVisualVariable(params: opacityCreateVisualVariableParams): js.Promise[opacityVisualVariableResult]
+  def createVisualVariable(params: opacityCreateVisualVariableParams): js.Promise[opacityVisualVariableResult] = js.native
 }
 
 @JSGlobal("__esri.opacity")

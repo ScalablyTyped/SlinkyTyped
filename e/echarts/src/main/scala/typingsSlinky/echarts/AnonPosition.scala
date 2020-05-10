@@ -4,11 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonPosition extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.data.1.label.emphasis
     */
-  var emphasis: js.UndefOr[AnonFormatter] = js.undefined
+  var emphasis: js.UndefOr[AnonFormatter] = js.native
   /**
     * Data label formatter, which supports string template
     * and callback function.
@@ -54,7 +55,7 @@ trait AnonPosition extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.data.1.label.formatter
     */
-  var formatter: js.UndefOr[js.Function | String] = js.undefined
+  var formatter: js.UndefOr[js.Function | String] = js.native
   /**
     * Positions of labels can be:
     *
@@ -67,7 +68,7 @@ trait AnonPosition extends js.Object {
     * "end"
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.data.1.label.position
     */
-  var position: js.UndefOr[String] = js.undefined
+  var position: js.UndefOr[String] = js.native
   /**
     * Whether show label or not.
     *
@@ -76,23 +77,70 @@ trait AnonPosition extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.data.1.label.show
     */
-  var show: js.UndefOr[Boolean] = js.undefined
+  var show: js.UndefOr[Boolean] = js.native
 }
 
 object AnonPosition {
   @scala.inline
-  def apply(
-    emphasis: AnonFormatter = null,
-    formatter: js.Function | String = null,
-    position: String = null,
-    show: js.UndefOr[Boolean] = js.undefined
-  ): AnonPosition = {
+  def apply(): AnonPosition = {
     val __obj = js.Dynamic.literal()
-    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
-    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonPosition]
   }
+  @scala.inline
+  implicit class AnonPositionOps[Self <: AnonPosition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmphasis(value: AnonFormatter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmphasis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatter(value: js.Function | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

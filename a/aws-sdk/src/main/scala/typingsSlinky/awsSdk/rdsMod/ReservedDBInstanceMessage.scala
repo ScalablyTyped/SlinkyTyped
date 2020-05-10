@@ -18,11 +18,41 @@ trait ReservedDBInstanceMessage extends js.Object {
 
 object ReservedDBInstanceMessage {
   @scala.inline
-  def apply(Marker: String = null, ReservedDBInstances: ReservedDBInstanceList = null): ReservedDBInstanceMessage = {
+  def apply(): ReservedDBInstanceMessage = {
     val __obj = js.Dynamic.literal()
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (ReservedDBInstances != null) __obj.updateDynamic("ReservedDBInstances")(ReservedDBInstances.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReservedDBInstanceMessage]
   }
+  @scala.inline
+  implicit class ReservedDBInstanceMessageOps[Self <: ReservedDBInstanceMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMarker(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReservedDBInstances(value: ReservedDBInstanceList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedDBInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReservedDBInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedDBInstances")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

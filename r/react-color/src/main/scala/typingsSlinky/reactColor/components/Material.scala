@@ -1,15 +1,17 @@
 package typingsSlinky.reactColor.components
 
 import typingsSlinky.reactColor.materialMod.default
+import typingsSlinky.reactColor.mod.ColorPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Material extends SharedApply_MaterialPickerProps1495358088[default] {
+object Material {
   @JSImport("react-color/lib/components/material/Material", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ColorPickerProps[typingsSlinky.reactColor.materialMod.MaterialPicker]): SharedBuilder_MaterialPickerProps_1955371684[default] = new SharedBuilder_MaterialPickerProps_1955371684[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Material.type): SharedBuilder_MaterialPickerProps_1955371684[default] = new SharedBuilder_MaterialPickerProps_1955371684[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

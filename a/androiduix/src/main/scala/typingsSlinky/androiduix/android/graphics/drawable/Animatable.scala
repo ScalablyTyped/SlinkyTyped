@@ -4,10 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Animatable extends js.Object {
-  def isRunning(): Boolean
-  def start(): Unit
-  def stop(): Unit
+  def isRunning(): Boolean = js.native
+  def start(): Unit = js.native
+  def stop(): Unit = js.native
 }
 
 @JSGlobal("android.graphics.drawable.Animatable")

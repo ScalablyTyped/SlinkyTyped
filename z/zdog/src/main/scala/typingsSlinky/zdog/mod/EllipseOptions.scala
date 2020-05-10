@@ -1,57 +1,80 @@
 package typingsSlinky.zdog.mod
 
-import typingsSlinky.zdog.zdogBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EllipseOptions extends ShapeOptions {
   /** @default 1 */
-  val diameter: js.UndefOr[Double] = js.undefined
-  val height: js.UndefOr[Double] = js.undefined
+  val diameter: js.UndefOr[Double] = js.native
+  val height: js.UndefOr[Double] = js.native
   /** @default 4 */
-  val quarters: js.UndefOr[QuartersValue] = js.undefined
-  val width: js.UndefOr[Double] = js.undefined
+  val quarters: js.UndefOr[QuartersValue] = js.native
+  val width: js.UndefOr[Double] = js.native
 }
 
 object EllipseOptions {
   @scala.inline
-  def apply(
-    addTo: Anchor = null,
-    backface: Boolean | String = null,
-    closed: js.UndefOr[Boolean] = js.undefined,
-    color: String = null,
-    diameter: Int | Double = null,
-    fill: js.UndefOr[Boolean] = js.undefined,
-    front: VectorOptions = null,
-    height: Int | Double = null,
-    path: js.Array[PathCommand] = null,
-    quarters: QuartersValue = null,
-    rotate: VectorOptions = null,
-    scale: VectorOptions | Double = null,
-    stroke: Double | `false` = null,
-    translate: VectorOptions = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    width: Int | Double = null
-  ): EllipseOptions = {
+  def apply(): EllipseOptions = {
     val __obj = js.Dynamic.literal()
-    if (addTo != null) __obj.updateDynamic("addTo")(addTo.asInstanceOf[js.Any])
-    if (backface != null) __obj.updateDynamic("backface")(backface.asInstanceOf[js.Any])
-    if (!js.isUndefined(closed)) __obj.updateDynamic("closed")(closed.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (diameter != null) __obj.updateDynamic("diameter")(diameter.asInstanceOf[js.Any])
-    if (!js.isUndefined(fill)) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (front != null) __obj.updateDynamic("front")(front.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (quarters != null) __obj.updateDynamic("quarters")(quarters.asInstanceOf[js.Any])
-    if (rotate != null) __obj.updateDynamic("rotate")(rotate.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[EllipseOptions]
   }
+  @scala.inline
+  implicit class EllipseOptionsOps[Self <: EllipseOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDiameter(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diameter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiameter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diameter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuarters(value: QuartersValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quarters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuarters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quarters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

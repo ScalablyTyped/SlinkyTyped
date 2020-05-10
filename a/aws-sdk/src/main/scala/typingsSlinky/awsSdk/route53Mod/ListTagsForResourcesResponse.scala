@@ -16,8 +16,21 @@ object ListTagsForResourcesResponse {
   @scala.inline
   def apply(ResourceTagSets: ResourceTagSetList): ListTagsForResourcesResponse = {
     val __obj = js.Dynamic.literal(ResourceTagSets = ResourceTagSets.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ListTagsForResourcesResponse]
   }
+  @scala.inline
+  implicit class ListTagsForResourcesResponseOps[Self <: ListTagsForResourcesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResourceTagSets(value: ResourceTagSetList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTagSets")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

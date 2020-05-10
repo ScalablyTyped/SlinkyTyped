@@ -31,12 +31,53 @@ trait SchemaRoboDirective extends js.Object {
 
 object SchemaRoboDirective {
   @scala.inline
-  def apply(actionType: String = null, inputText: String = null, resourceName: String = null): SchemaRoboDirective = {
+  def apply(): SchemaRoboDirective = {
     val __obj = js.Dynamic.literal()
-    if (actionType != null) __obj.updateDynamic("actionType")(actionType.asInstanceOf[js.Any])
-    if (inputText != null) __obj.updateDynamic("inputText")(inputText.asInstanceOf[js.Any])
-    if (resourceName != null) __obj.updateDynamic("resourceName")(resourceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRoboDirective]
   }
+  @scala.inline
+  implicit class SchemaRoboDirectiveOps[Self <: SchemaRoboDirective] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

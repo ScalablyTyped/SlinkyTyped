@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object ^ extends js.Object {
   var MailComposer: MailComposerStatic = js.native
+  var ReactiveDict: ReactiveDictStatic = js.native
   var ReactiveVar: ReactiveVarStatic = js.native
   var Template: TemplateStatic = js.native
   var console: Console_ = js.native

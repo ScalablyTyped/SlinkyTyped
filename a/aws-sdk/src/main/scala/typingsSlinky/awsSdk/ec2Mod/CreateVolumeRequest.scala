@@ -54,31 +54,143 @@ trait CreateVolumeRequest extends js.Object {
 
 object CreateVolumeRequest {
   @scala.inline
-  def apply(
-    AvailabilityZone: String,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    Encrypted: js.UndefOr[scala.Boolean] = js.undefined,
-    Iops: Int | scala.Double = null,
-    KmsKeyId: KmsKeyId = null,
-    MultiAttachEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    OutpostArn: String = null,
-    Size: Int | scala.Double = null,
-    SnapshotId: SnapshotId = null,
-    TagSpecifications: TagSpecificationList = null,
-    VolumeType: VolumeType = null
-  ): CreateVolumeRequest = {
+  def apply(AvailabilityZone: String): CreateVolumeRequest = {
     val __obj = js.Dynamic.literal(AvailabilityZone = AvailabilityZone.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (!js.isUndefined(Encrypted)) __obj.updateDynamic("Encrypted")(Encrypted.asInstanceOf[js.Any])
-    if (Iops != null) __obj.updateDynamic("Iops")(Iops.asInstanceOf[js.Any])
-    if (KmsKeyId != null) __obj.updateDynamic("KmsKeyId")(KmsKeyId.asInstanceOf[js.Any])
-    if (!js.isUndefined(MultiAttachEnabled)) __obj.updateDynamic("MultiAttachEnabled")(MultiAttachEnabled.asInstanceOf[js.Any])
-    if (OutpostArn != null) __obj.updateDynamic("OutpostArn")(OutpostArn.asInstanceOf[js.Any])
-    if (Size != null) __obj.updateDynamic("Size")(Size.asInstanceOf[js.Any])
-    if (SnapshotId != null) __obj.updateDynamic("SnapshotId")(SnapshotId.asInstanceOf[js.Any])
-    if (TagSpecifications != null) __obj.updateDynamic("TagSpecifications")(TagSpecifications.asInstanceOf[js.Any])
-    if (VolumeType != null) __obj.updateDynamic("VolumeType")(VolumeType.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateVolumeRequest]
   }
+  @scala.inline
+  implicit class CreateVolumeRequestOps[Self <: CreateVolumeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailabilityZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncrypted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encrypted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncrypted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encrypted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIops(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Iops")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIops: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Iops")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsKeyId(value: KmsKeyId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiAttachEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiAttachEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiAttachEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiAttachEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutpostArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutpostArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutpostArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutpostArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnapshotId(value: SnapshotId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnapshotId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagSpecifications(value: TagSpecificationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagSpecifications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagSpecifications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagSpecifications")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeType(value: VolumeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

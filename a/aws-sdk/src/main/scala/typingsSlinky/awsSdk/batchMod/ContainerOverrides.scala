@@ -34,22 +34,89 @@ trait ContainerOverrides extends js.Object {
 
 object ContainerOverrides {
   @scala.inline
-  def apply(
-    command: StringList = null,
-    environment: EnvironmentVariables = null,
-    instanceType: String = null,
-    memory: Int | Double = null,
-    resourceRequirements: ResourceRequirements = null,
-    vcpus: Int | Double = null
-  ): ContainerOverrides = {
+  def apply(): ContainerOverrides = {
     val __obj = js.Dynamic.literal()
-    if (command != null) __obj.updateDynamic("command")(command.asInstanceOf[js.Any])
-    if (environment != null) __obj.updateDynamic("environment")(environment.asInstanceOf[js.Any])
-    if (instanceType != null) __obj.updateDynamic("instanceType")(instanceType.asInstanceOf[js.Any])
-    if (memory != null) __obj.updateDynamic("memory")(memory.asInstanceOf[js.Any])
-    if (resourceRequirements != null) __obj.updateDynamic("resourceRequirements")(resourceRequirements.asInstanceOf[js.Any])
-    if (vcpus != null) __obj.updateDynamic("vcpus")(vcpus.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContainerOverrides]
   }
+  @scala.inline
+  implicit class ContainerOverridesOps[Self <: ContainerOverrides] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommand(value: StringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironment(value: EnvironmentVariables): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMemory(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMemory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceRequirements(value: ResourceRequirements): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceRequirements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceRequirements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceRequirements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVcpus(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vcpus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVcpus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vcpus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

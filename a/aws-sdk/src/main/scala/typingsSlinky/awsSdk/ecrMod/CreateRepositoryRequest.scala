@@ -26,17 +26,59 @@ trait CreateRepositoryRequest extends js.Object {
 
 object CreateRepositoryRequest {
   @scala.inline
-  def apply(
-    repositoryName: RepositoryName,
-    imageScanningConfiguration: ImageScanningConfiguration = null,
-    imageTagMutability: ImageTagMutability = null,
-    tags: TagList = null
-  ): CreateRepositoryRequest = {
+  def apply(repositoryName: RepositoryName): CreateRepositoryRequest = {
     val __obj = js.Dynamic.literal(repositoryName = repositoryName.asInstanceOf[js.Any])
-    if (imageScanningConfiguration != null) __obj.updateDynamic("imageScanningConfiguration")(imageScanningConfiguration.asInstanceOf[js.Any])
-    if (imageTagMutability != null) __obj.updateDynamic("imageTagMutability")(imageTagMutability.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateRepositoryRequest]
   }
+  @scala.inline
+  implicit class CreateRepositoryRequestOps[Self <: CreateRepositoryRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRepositoryName(value: RepositoryName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImageScanningConfiguration(value: ImageScanningConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageScanningConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageScanningConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageScanningConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageTagMutability(value: ImageTagMutability): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageTagMutability")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageTagMutability: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageTagMutability")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

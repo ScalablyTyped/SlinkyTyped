@@ -9,16 +9,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DOMRectReadOnly extends js.Object {
-  val bottom: Double
-  val height: Double
-  val left: Double
-  val right: Double
-  val top: Double
-  val width: Double
-  val x: Double
-  val y: Double
-  def toJSON(): js.Any
+  val bottom: Double = js.native
+  val height: Double = js.native
+  val left: Double = js.native
+  val right: Double = js.native
+  val top: Double = js.native
+  val width: Double = js.native
+  val x: Double = js.native
+  val y: Double = js.native
+  def toJSON(): js.Any = js.native
 }
 
 @JSGlobal("DOMRectReadOnly")

@@ -29,18 +29,65 @@ trait SchemaCounterMetadata extends js.Object {
 
 object SchemaCounterMetadata {
   @scala.inline
-  def apply(
-    description: String = null,
-    kind: String = null,
-    otherUnits: String = null,
-    standardUnits: String = null
-  ): SchemaCounterMetadata = {
+  def apply(): SchemaCounterMetadata = {
     val __obj = js.Dynamic.literal()
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (otherUnits != null) __obj.updateDynamic("otherUnits")(otherUnits.asInstanceOf[js.Any])
-    if (standardUnits != null) __obj.updateDynamic("standardUnits")(standardUnits.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCounterMetadata]
   }
+  @scala.inline
+  implicit class SchemaCounterMetadataOps[Self <: SchemaCounterMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOtherUnits(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("otherUnits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOtherUnits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("otherUnits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStandardUnits(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("standardUnits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStandardUnits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("standardUnits")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -29,42 +29,40 @@ trait Maneuver extends js.Object
 
 object Maneuver {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ferry: ferry_ = "ferry".asInstanceOf[ferry_]
   @scala.inline
-  def ferry: ferry_ = this.cast("ferry")
+  def `ferry-train`: typingsSlinky.googleMaps.googleMapsStrings.`ferry-train` = "ferry-train".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.`ferry-train`]
   @scala.inline
-  def `ferry-train`: typingsSlinky.googleMaps.googleMapsStrings.`ferry-train` = this.cast("ferry-train")
+  def `fork-left`: typingsSlinky.googleMaps.googleMapsStrings.`fork-left` = "fork-left".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.`fork-left`]
   @scala.inline
-  def `fork-left`: typingsSlinky.googleMaps.googleMapsStrings.`fork-left` = this.cast("fork-left")
+  def `fork-right`: typingsSlinky.googleMaps.googleMapsStrings.`fork-right` = "fork-right".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.`fork-right`]
   @scala.inline
-  def `fork-right`: typingsSlinky.googleMaps.googleMapsStrings.`fork-right` = this.cast("fork-right")
+  def merge: typingsSlinky.googleMaps.googleMapsStrings.merge = "merge".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.merge]
   @scala.inline
-  def merge: typingsSlinky.googleMaps.googleMapsStrings.merge = this.cast("merge")
+  def `ramp-left`: typingsSlinky.googleMaps.googleMapsStrings.`ramp-left` = "ramp-left".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.`ramp-left`]
   @scala.inline
-  def `ramp-left`: typingsSlinky.googleMaps.googleMapsStrings.`ramp-left` = this.cast("ramp-left")
+  def `ramp-right`: typingsSlinky.googleMaps.googleMapsStrings.`ramp-right` = "ramp-right".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.`ramp-right`]
   @scala.inline
-  def `ramp-right`: typingsSlinky.googleMaps.googleMapsStrings.`ramp-right` = this.cast("ramp-right")
+  def `roundabout-left`: typingsSlinky.googleMaps.googleMapsStrings.`roundabout-left` = "roundabout-left".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.`roundabout-left`]
   @scala.inline
-  def `roundabout-left`: typingsSlinky.googleMaps.googleMapsStrings.`roundabout-left` = this.cast("roundabout-left")
+  def `roundabout-right`: typingsSlinky.googleMaps.googleMapsStrings.`roundabout-right` = "roundabout-right".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.`roundabout-right`]
   @scala.inline
-  def `roundabout-right`: typingsSlinky.googleMaps.googleMapsStrings.`roundabout-right` = this.cast("roundabout-right")
+  def straight: typingsSlinky.googleMaps.googleMapsStrings.straight = "straight".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.straight]
   @scala.inline
-  def straight: typingsSlinky.googleMaps.googleMapsStrings.straight = this.cast("straight")
+  def `turn-left`: typingsSlinky.googleMaps.googleMapsStrings.`turn-left` = "turn-left".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.`turn-left`]
   @scala.inline
-  def `turn-left`: typingsSlinky.googleMaps.googleMapsStrings.`turn-left` = this.cast("turn-left")
+  def `turn-right`: typingsSlinky.googleMaps.googleMapsStrings.`turn-right` = "turn-right".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.`turn-right`]
   @scala.inline
-  def `turn-right`: typingsSlinky.googleMaps.googleMapsStrings.`turn-right` = this.cast("turn-right")
+  def `turn-sharp-left`: typingsSlinky.googleMaps.googleMapsStrings.`turn-sharp-left` = "turn-sharp-left".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.`turn-sharp-left`]
   @scala.inline
-  def `turn-sharp-left`: typingsSlinky.googleMaps.googleMapsStrings.`turn-sharp-left` = this.cast("turn-sharp-left")
+  def `turn-sharp-right`: typingsSlinky.googleMaps.googleMapsStrings.`turn-sharp-right` = "turn-sharp-right".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.`turn-sharp-right`]
   @scala.inline
-  def `turn-sharp-right`: typingsSlinky.googleMaps.googleMapsStrings.`turn-sharp-right` = this.cast("turn-sharp-right")
+  def `turn-slight-left`: typingsSlinky.googleMaps.googleMapsStrings.`turn-slight-left` = "turn-slight-left".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.`turn-slight-left`]
   @scala.inline
-  def `turn-slight-left`: typingsSlinky.googleMaps.googleMapsStrings.`turn-slight-left` = this.cast("turn-slight-left")
+  def `turn-slight-right`: typingsSlinky.googleMaps.googleMapsStrings.`turn-slight-right` = "turn-slight-right".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.`turn-slight-right`]
   @scala.inline
-  def `turn-slight-right`: typingsSlinky.googleMaps.googleMapsStrings.`turn-slight-right` = this.cast("turn-slight-right")
+  def `uturn-left`: typingsSlinky.googleMaps.googleMapsStrings.`uturn-left` = "uturn-left".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.`uturn-left`]
   @scala.inline
-  def `uturn-left`: typingsSlinky.googleMaps.googleMapsStrings.`uturn-left` = this.cast("uturn-left")
-  @scala.inline
-  def `uturn-right`: typingsSlinky.googleMaps.googleMapsStrings.`uturn-right` = this.cast("uturn-right")
+  def `uturn-right`: typingsSlinky.googleMaps.googleMapsStrings.`uturn-right` = "uturn-right".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.`uturn-right`]
 }
 

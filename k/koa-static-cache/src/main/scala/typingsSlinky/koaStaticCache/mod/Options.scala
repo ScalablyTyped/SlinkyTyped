@@ -4,51 +4,185 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var alias: js.UndefOr[js.Object] = js.undefined
-  var buffer: js.UndefOr[Boolean] = js.undefined
-  var cacheControl: js.UndefOr[String] = js.undefined
-  var dir: js.UndefOr[String] = js.undefined
-  var dynamic: js.UndefOr[Boolean] = js.undefined
-  var files: js.UndefOr[Files] = js.undefined
-  var filter: js.UndefOr[(js.Function1[/* path */ String, Boolean]) | js.Array[String]] = js.undefined
-  var gzip: js.UndefOr[Boolean] = js.undefined
-  var maxAge: js.UndefOr[Double] = js.undefined
-  var prefix: js.UndefOr[String] = js.undefined
-  var preload: js.UndefOr[Boolean] = js.undefined
-  var usePrecompiledGzip: js.UndefOr[Boolean] = js.undefined
+  var alias: js.UndefOr[js.Object] = js.native
+  var buffer: js.UndefOr[Boolean] = js.native
+  var cacheControl: js.UndefOr[String] = js.native
+  var dir: js.UndefOr[String] = js.native
+  var dynamic: js.UndefOr[Boolean] = js.native
+  var files: js.UndefOr[Files] = js.native
+  var filter: js.UndefOr[(js.Function1[/* path */ String, Boolean]) | js.Array[String]] = js.native
+  var gzip: js.UndefOr[Boolean] = js.native
+  var maxAge: js.UndefOr[Double] = js.native
+  var prefix: js.UndefOr[String] = js.native
+  var preload: js.UndefOr[Boolean] = js.native
+  var usePrecompiledGzip: js.UndefOr[Boolean] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    alias: js.Object = null,
-    buffer: js.UndefOr[Boolean] = js.undefined,
-    cacheControl: String = null,
-    dir: String = null,
-    dynamic: js.UndefOr[Boolean] = js.undefined,
-    files: Files = null,
-    filter: (js.Function1[/* path */ String, Boolean]) | js.Array[String] = null,
-    gzip: js.UndefOr[Boolean] = js.undefined,
-    maxAge: Int | Double = null,
-    prefix: String = null,
-    preload: js.UndefOr[Boolean] = js.undefined,
-    usePrecompiledGzip: js.UndefOr[Boolean] = js.undefined
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
-    if (!js.isUndefined(buffer)) __obj.updateDynamic("buffer")(buffer.asInstanceOf[js.Any])
-    if (cacheControl != null) __obj.updateDynamic("cacheControl")(cacheControl.asInstanceOf[js.Any])
-    if (dir != null) __obj.updateDynamic("dir")(dir.asInstanceOf[js.Any])
-    if (!js.isUndefined(dynamic)) __obj.updateDynamic("dynamic")(dynamic.asInstanceOf[js.Any])
-    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (!js.isUndefined(gzip)) __obj.updateDynamic("gzip")(gzip.asInstanceOf[js.Any])
-    if (maxAge != null) __obj.updateDynamic("maxAge")(maxAge.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (!js.isUndefined(preload)) __obj.updateDynamic("preload")(preload.asInstanceOf[js.Any])
-    if (!js.isUndefined(usePrecompiledGzip)) __obj.updateDynamic("usePrecompiledGzip")(usePrecompiledGzip.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlias(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuffer(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuffer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheControl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDir(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDir: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFiles(value: Files): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterFunction1(value: /* path */ String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFilter(value: (js.Function1[/* path */ String, Boolean]) | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGzip(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gzip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGzip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gzip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAge(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreload(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsePrecompiledGzip(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usePrecompiledGzip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsePrecompiledGzip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usePrecompiledGzip")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

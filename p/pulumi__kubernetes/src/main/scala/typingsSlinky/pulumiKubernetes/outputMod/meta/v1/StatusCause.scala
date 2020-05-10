@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation._
   * StatusCause provides more information about an api.Status failure, including cases when
   * multiple errors are encountered.
   */
+@js.native
 trait StatusCause extends js.Object {
   /**
     * The field of the resource that has caused this error, as named by its JSON serialization.
@@ -19,25 +20,50 @@ trait StatusCause extends js.Object {
     *   "name" - the field "name" on the current resource
     *   "items[0].name" - the field "name" on the first array entry in "items"
     */
-  val field: String
+  val field: String = js.native
   /**
     * A human-readable description of the cause of the error.  This field may be presented as-is
     * to a reader.
     */
-  val message: String
+  val message: String = js.native
   /**
     * A machine-readable description of the cause of the error. If this value is empty there is
     * no information available.
     */
-  val reason: String
+  val reason: String = js.native
 }
 
 object StatusCause {
   @scala.inline
   def apply(field: String, message: String, reason: String): StatusCause = {
     val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], reason = reason.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[StatusCause]
   }
+  @scala.inline
+  implicit class StatusCauseOps[Self <: StatusCause] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

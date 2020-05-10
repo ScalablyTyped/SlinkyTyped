@@ -20,8 +20,27 @@ object ConversationLogsRequest {
   @scala.inline
   def apply(iamRoleArn: IamRoleArn, logSettings: LogSettingsRequestList): ConversationLogsRequest = {
     val __obj = js.Dynamic.literal(iamRoleArn = iamRoleArn.asInstanceOf[js.Any], logSettings = logSettings.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ConversationLogsRequest]
   }
+  @scala.inline
+  implicit class ConversationLogsRequestOps[Self <: ConversationLogsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIamRoleArn(value: IamRoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iamRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLogSettings(value: LogSettingsRequestList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

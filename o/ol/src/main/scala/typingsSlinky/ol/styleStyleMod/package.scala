@@ -19,7 +19,7 @@ package object styleStyleMod {
   type StyleFunction = js.Function2[
     /* p0 */ typingsSlinky.ol.olFeatureMod.FeatureLike, 
     /* p1 */ scala.Double, 
-    typingsSlinky.ol.styleStyleMod.Style | js.Array[typingsSlinky.ol.styleStyleMod.Style]
+    typingsSlinky.ol.styleStyleMod.Style | js.Array[typingsSlinky.ol.styleStyleMod.Style] | scala.Unit
   ]
   type StyleLike = typingsSlinky.ol.styleStyleMod.Style | js.Array[typingsSlinky.ol.styleStyleMod.Style] | typingsSlinky.ol.styleStyleMod.StyleFunction
 }

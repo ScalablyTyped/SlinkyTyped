@@ -12,13 +12,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GPMessageProperties extends js.Object {
   /**
     * The geoprocessing message.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-GPMessage.html#description)
     */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /**
     * The geoprocessing message type.
     *
@@ -26,19 +27,48 @@ trait GPMessageProperties extends js.Object {
     */
   var `type`: js.UndefOr[
     informative | `process-definition` | `process-start` | `process-stop` | warning | error | empty | abort
-  ] = js.undefined
+  ] = js.native
 }
 
 object GPMessageProperties {
   @scala.inline
-  def apply(
-    description: String = null,
-    `type`: informative | `process-definition` | `process-start` | `process-stop` | warning | error | empty | abort = null
-  ): GPMessageProperties = {
+  def apply(): GPMessageProperties = {
     val __obj = js.Dynamic.literal()
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GPMessageProperties]
   }
+  @scala.inline
+  implicit class GPMessagePropertiesOps[Self <: GPMessageProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(
+      value: informative | `process-definition` | `process-start` | `process-stop` | warning | error | empty | abort
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,10 +18,35 @@ trait DescribeEndPointStateInput extends js.Object {
 
 object DescribeEndPointStateInput {
   @scala.inline
-  def apply(LoadBalancerName: AccessPointName, Instances: Instances = null): DescribeEndPointStateInput = {
+  def apply(LoadBalancerName: AccessPointName): DescribeEndPointStateInput = {
     val __obj = js.Dynamic.literal(LoadBalancerName = LoadBalancerName.asInstanceOf[js.Any])
-    if (Instances != null) __obj.updateDynamic("Instances")(Instances.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEndPointStateInput]
   }
+  @scala.inline
+  implicit class DescribeEndPointStateInputOps[Self <: DescribeEndPointStateInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLoadBalancerName(value: AccessPointName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstances(value: Instances): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Instances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Instances")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -17,20 +17,18 @@ trait QueryOperator extends js.Object
 
 object QueryOperator {
   @scala.inline
-  def Equalssign: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.Equalssign = this.cast("=")
+  def Equalssign: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.Equalssign = "=".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.Equalssign]
   @scala.inline
-  def EqualssignEqualssign: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.EqualssignEqualssign = this.cast("==")
+  def EqualssignEqualssign: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.EqualssignEqualssign = "==".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.EqualssignEqualssign]
   @scala.inline
-  def Greaterthansign: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.Greaterthansign = this.cast(">")
+  def Greaterthansign: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.Greaterthansign = ">".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.Greaterthansign]
   @scala.inline
-  def GreaterthansignEqualssign: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.GreaterthansignEqualssign = this.cast(">=")
+  def GreaterthansignEqualssign: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.GreaterthansignEqualssign = ">=".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.GreaterthansignEqualssign]
   @scala.inline
-  def Lessthansign: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.Lessthansign = this.cast("<")
+  def Lessthansign: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.Lessthansign = "<".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.Lessthansign]
   @scala.inline
-  def LessthansignEqualssign: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.LessthansignEqualssign = this.cast("<=")
+  def LessthansignEqualssign: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.LessthansignEqualssign = "<=".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.LessthansignEqualssign]
   @scala.inline
-  def `array-contains`: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.`array-contains` = this.cast("array-contains")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `array-contains`: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.`array-contains` = "array-contains".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.`array-contains`]
 }
 

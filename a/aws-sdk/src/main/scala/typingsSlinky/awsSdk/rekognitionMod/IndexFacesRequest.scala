@@ -34,20 +34,77 @@ trait IndexFacesRequest extends js.Object {
 
 object IndexFacesRequest {
   @scala.inline
-  def apply(
-    CollectionId: CollectionId,
-    Image: Image,
-    DetectionAttributes: Attributes = null,
-    ExternalImageId: ExternalImageId = null,
-    MaxFaces: Int | Double = null,
-    QualityFilter: QualityFilter = null
-  ): IndexFacesRequest = {
+  def apply(CollectionId: CollectionId, Image: Image): IndexFacesRequest = {
     val __obj = js.Dynamic.literal(CollectionId = CollectionId.asInstanceOf[js.Any], Image = Image.asInstanceOf[js.Any])
-    if (DetectionAttributes != null) __obj.updateDynamic("DetectionAttributes")(DetectionAttributes.asInstanceOf[js.Any])
-    if (ExternalImageId != null) __obj.updateDynamic("ExternalImageId")(ExternalImageId.asInstanceOf[js.Any])
-    if (MaxFaces != null) __obj.updateDynamic("MaxFaces")(MaxFaces.asInstanceOf[js.Any])
-    if (QualityFilter != null) __obj.updateDynamic("QualityFilter")(QualityFilter.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndexFacesRequest]
   }
+  @scala.inline
+  implicit class IndexFacesRequestOps[Self <: IndexFacesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCollectionId(value: CollectionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CollectionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImage(value: Image): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDetectionAttributes(value: Attributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectionAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetectionAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectionAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalImageId(value: ExternalImageId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalImageId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalImageId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalImageId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxFaces(value: MaxFacesToIndex): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxFaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxFaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxFaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQualityFilter(value: QualityFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QualityFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQualityFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QualityFilter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

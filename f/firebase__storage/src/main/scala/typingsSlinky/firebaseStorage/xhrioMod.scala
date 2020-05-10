@@ -2,9 +2,8 @@ package typingsSlinky.firebaseStorage
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.ProgressEvent
-import typingsSlinky.std.ArrayBufferView
-import typingsSlinky.std.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,8 +30,8 @@ object xhrioMod extends js.Object {
     def send(url: String, method: String, body: String): js.Promise[XhrIo] = js.native
     def send(url: String, method: String, body: String, headers: Headers): js.Promise[XhrIo] = js.native
     def send(url: String, method: String, body: Null, headers: Headers): js.Promise[XhrIo] = js.native
-    def send(url: String, method: String, body: ArrayBufferView): js.Promise[XhrIo] = js.native
-    def send(url: String, method: String, body: ArrayBufferView, headers: Headers): js.Promise[XhrIo] = js.native
+    def send(url: String, method: String, body: js.typedarray.ArrayBufferView): js.Promise[XhrIo] = js.native
+    def send(url: String, method: String, body: js.typedarray.ArrayBufferView, headers: Headers): js.Promise[XhrIo] = js.native
     def send(url: String, method: String, body: Blob): js.Promise[XhrIo] = js.native
     def send(url: String, method: String, body: Blob, headers: Headers): js.Promise[XhrIo] = js.native
   }

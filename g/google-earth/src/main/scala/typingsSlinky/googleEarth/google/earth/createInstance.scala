@@ -1,6 +1,6 @@
 package typingsSlinky.googleEarth.google.earth
 
-import typingsSlinky.std.Element
+import org.scalajs.dom.raw.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -130,52 +130,269 @@ trait SchemaWorkerPool extends js.Object {
 
 object SchemaWorkerPool {
   @scala.inline
-  def apply(
-    autoscalingSettings: SchemaAutoscalingSettings = null,
-    dataDisks: js.Array[SchemaDisk] = null,
-    defaultPackageSet: String = null,
-    diskSizeGb: Int | Double = null,
-    diskSourceImage: String = null,
-    diskType: String = null,
-    ipConfiguration: String = null,
-    kind: String = null,
-    machineType: String = null,
-    metadata: StringDictionary[String] = null,
-    network: String = null,
-    numThreadsPerWorker: Int | Double = null,
-    numWorkers: Int | Double = null,
-    onHostMaintenance: String = null,
-    packages: js.Array[SchemaPackage] = null,
-    poolArgs: StringDictionary[js.Any] = null,
-    subnetwork: String = null,
-    taskrunnerSettings: SchemaTaskRunnerSettings = null,
-    teardownPolicy: String = null,
-    workerHarnessContainerImage: String = null,
-    zone: String = null
-  ): SchemaWorkerPool = {
+  def apply(): SchemaWorkerPool = {
     val __obj = js.Dynamic.literal()
-    if (autoscalingSettings != null) __obj.updateDynamic("autoscalingSettings")(autoscalingSettings.asInstanceOf[js.Any])
-    if (dataDisks != null) __obj.updateDynamic("dataDisks")(dataDisks.asInstanceOf[js.Any])
-    if (defaultPackageSet != null) __obj.updateDynamic("defaultPackageSet")(defaultPackageSet.asInstanceOf[js.Any])
-    if (diskSizeGb != null) __obj.updateDynamic("diskSizeGb")(diskSizeGb.asInstanceOf[js.Any])
-    if (diskSourceImage != null) __obj.updateDynamic("diskSourceImage")(diskSourceImage.asInstanceOf[js.Any])
-    if (diskType != null) __obj.updateDynamic("diskType")(diskType.asInstanceOf[js.Any])
-    if (ipConfiguration != null) __obj.updateDynamic("ipConfiguration")(ipConfiguration.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (machineType != null) __obj.updateDynamic("machineType")(machineType.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (network != null) __obj.updateDynamic("network")(network.asInstanceOf[js.Any])
-    if (numThreadsPerWorker != null) __obj.updateDynamic("numThreadsPerWorker")(numThreadsPerWorker.asInstanceOf[js.Any])
-    if (numWorkers != null) __obj.updateDynamic("numWorkers")(numWorkers.asInstanceOf[js.Any])
-    if (onHostMaintenance != null) __obj.updateDynamic("onHostMaintenance")(onHostMaintenance.asInstanceOf[js.Any])
-    if (packages != null) __obj.updateDynamic("packages")(packages.asInstanceOf[js.Any])
-    if (poolArgs != null) __obj.updateDynamic("poolArgs")(poolArgs.asInstanceOf[js.Any])
-    if (subnetwork != null) __obj.updateDynamic("subnetwork")(subnetwork.asInstanceOf[js.Any])
-    if (taskrunnerSettings != null) __obj.updateDynamic("taskrunnerSettings")(taskrunnerSettings.asInstanceOf[js.Any])
-    if (teardownPolicy != null) __obj.updateDynamic("teardownPolicy")(teardownPolicy.asInstanceOf[js.Any])
-    if (workerHarnessContainerImage != null) __obj.updateDynamic("workerHarnessContainerImage")(workerHarnessContainerImage.asInstanceOf[js.Any])
-    if (zone != null) __obj.updateDynamic("zone")(zone.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWorkerPool]
   }
+  @scala.inline
+  implicit class SchemaWorkerPoolOps[Self <: SchemaWorkerPool] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoscalingSettings(value: SchemaAutoscalingSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscalingSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoscalingSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscalingSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataDisks(value: js.Array[SchemaDisk]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataDisks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataDisks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataDisks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultPackageSet(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPackageSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultPackageSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPackageSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskSizeGb(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeGb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskSizeGb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeGb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskSourceImage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSourceImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskSourceImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSourceImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpConfiguration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMachineType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMachineType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetwork(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetwork: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumThreadsPerWorker(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numThreadsPerWorker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumThreadsPerWorker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numThreadsPerWorker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumWorkers(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numWorkers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumWorkers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numWorkers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnHostMaintenance(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHostMaintenance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnHostMaintenance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHostMaintenance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPackages(value: js.Array[SchemaPackage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoolArgs(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolArgs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoolArgs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolArgs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetwork(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetwork")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetwork: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetwork")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskrunnerSettings(value: SchemaTaskRunnerSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskrunnerSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskrunnerSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskrunnerSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTeardownPolicy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teardownPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTeardownPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teardownPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerHarnessContainerImage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerHarnessContainerImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerHarnessContainerImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerHarnessContainerImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zone")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,7 @@
 package typingsSlinky.victory.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.victory.mod.AnimationData
 import typingsSlinky.victory.mod.AnimationEasing
 import typingsSlinky.victory.mod.VictoryAnimationProps
@@ -12,31 +9,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object VictoryAnimation
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.VictoryAnimation] {
+object VictoryAnimation {
   @JSImport("victory", "VictoryAnimation")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    data: AnimationData = null,
-    delay: Int | Double = null,
-    duration: Int | Double = null,
-    easing: AnimationEasing = null,
-    onEnd: () => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryAnimation] = {
-    val __obj = js.Dynamic.literal()
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
-    if (onEnd != null) __obj.updateDynamic("onEnd")(js.Any.fromFunction0(onEnd))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryAnimation] {
+    @scala.inline
+    def data(value: AnimationData): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delay(value: Double): this.type = set("delay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def duration(value: Double): this.type = set("duration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def easing(value: AnimationEasing): this.type = set("easing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onEnd(value: () => Unit): this.type = set("onEnd", js.Any.fromFunction0(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryAnimation] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.VictoryAnimation](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = VictoryAnimationProps
+  
+  def withProps(p: VictoryAnimationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: VictoryAnimation.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

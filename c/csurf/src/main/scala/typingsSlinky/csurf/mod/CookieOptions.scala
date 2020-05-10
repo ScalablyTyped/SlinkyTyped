@@ -1,43 +1,40 @@
 package typingsSlinky.csurf.mod
 
-import typingsSlinky.expressServeStaticCore.expressServeStaticCoreStrings.lax
-import typingsSlinky.expressServeStaticCore.expressServeStaticCoreStrings.none
-import typingsSlinky.expressServeStaticCore.expressServeStaticCoreStrings.strict
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CookieOptions
   extends typingsSlinky.expressServeStaticCore.mod.CookieOptions {
-  var key: js.UndefOr[String] = js.undefined
+  var key: js.UndefOr[String] = js.native
 }
 
 object CookieOptions {
   @scala.inline
-  def apply(
-    domain: String = null,
-    encode: /* val */ String => String = null,
-    expires: js.Date = null,
-    httpOnly: js.UndefOr[Boolean] = js.undefined,
-    key: String = null,
-    maxAge: Int | Double = null,
-    path: String = null,
-    sameSite: Boolean | lax | strict | none = null,
-    secure: js.UndefOr[Boolean] = js.undefined,
-    signed: js.UndefOr[Boolean] = js.undefined
-  ): CookieOptions = {
+  def apply(): CookieOptions = {
     val __obj = js.Dynamic.literal()
-    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
-    if (encode != null) __obj.updateDynamic("encode")(js.Any.fromFunction1(encode))
-    if (expires != null) __obj.updateDynamic("expires")(expires.asInstanceOf[js.Any])
-    if (!js.isUndefined(httpOnly)) __obj.updateDynamic("httpOnly")(httpOnly.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (maxAge != null) __obj.updateDynamic("maxAge")(maxAge.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (sameSite != null) __obj.updateDynamic("sameSite")(sameSite.asInstanceOf[js.Any])
-    if (!js.isUndefined(secure)) __obj.updateDynamic("secure")(secure.asInstanceOf[js.Any])
-    if (!js.isUndefined(signed)) __obj.updateDynamic("signed")(signed.asInstanceOf[js.Any])
     __obj.asInstanceOf[CookieOptions]
   }
+  @scala.inline
+  implicit class CookieOptionsOps[Self <: CookieOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

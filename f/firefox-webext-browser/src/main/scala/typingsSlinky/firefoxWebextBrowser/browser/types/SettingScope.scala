@@ -28,14 +28,12 @@ trait SettingScope extends js.Object
 
 object SettingScope {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def incognito_persistent: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.incognito_persistent = "incognito_persistent".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.incognito_persistent]
   @scala.inline
-  def incognito_persistent: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.incognito_persistent = this.cast("incognito_persistent")
+  def incognito_session_only: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.incognito_session_only = "incognito_session_only".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.incognito_session_only]
   @scala.inline
-  def incognito_session_only: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.incognito_session_only = this.cast("incognito_session_only")
+  def regular: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.regular = "regular".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.regular]
   @scala.inline
-  def regular: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.regular = this.cast("regular")
-  @scala.inline
-  def regular_only: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.regular_only = this.cast("regular_only")
+  def regular_only: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.regular_only = "regular_only".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.regular_only]
 }
 

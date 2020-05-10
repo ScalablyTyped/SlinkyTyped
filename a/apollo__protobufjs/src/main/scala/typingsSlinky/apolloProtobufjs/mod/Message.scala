@@ -1,7 +1,6 @@
 package typingsSlinky.apolloProtobufjs.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,14 +43,14 @@ object Message extends js.Object {
     * @returns Decoded message
     */
   def decode[T /* <: Message[T] */](reader: Reader): T = js.native
-  def decode[T /* <: Message[T] */](reader: Uint8Array): T = js.native
+  def decode[T /* <: Message[T] */](reader: js.typedarray.Uint8Array): T = js.native
   /**
     * Decodes a message of this type preceeded by its length as a varint.
     * @param reader Reader or buffer to decode
     * @returns Decoded message
     */
   def decodeDelimited[T /* <: Message[T] */](reader: Reader): T = js.native
-  def decodeDelimited[T /* <: Message[T] */](reader: Uint8Array): T = js.native
+  def decodeDelimited[T /* <: Message[T] */](reader: js.typedarray.Uint8Array): T = js.native
   /**
     * Encodes a message of this type.
     * @param message Message to encode

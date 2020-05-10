@@ -13,12 +13,10 @@ trait PositionRelation extends js.Object
 
 object PositionRelation {
   @scala.inline
-  def after: typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.after = this.cast("after")
+  def after: typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.after = "after".asInstanceOf[typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.after]
   @scala.inline
-  def before: typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.before = this.cast("before")
+  def before: typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.before = "before".asInstanceOf[typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.before]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def same: typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.same = this.cast("same")
+  def same: typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.same = "same".asInstanceOf[typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.same]
 }
 

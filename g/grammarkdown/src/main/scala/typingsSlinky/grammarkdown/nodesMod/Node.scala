@@ -11,14 +11,10 @@ import scala.scalajs.js.annotation._
 @js.native
 abstract class Node[TKind /* <: SyntaxKind */] protected () extends TextRange {
   def this(kind: TKind) = this()
-  /* CompleteClass */
-  override var end: Double = js.native
   val firstChild: js.UndefOr[Node[SyntaxKind]] = js.native
   val kind: TKind = js.native
   val lastChild: js.UndefOr[Node[SyntaxKind]] = js.native
   var leadingHtmlTrivia: js.UndefOr[js.Array[HtmlTrivia]] = js.native
-  /* CompleteClass */
-  override var pos: Double = js.native
   var trailingHtmlTrivia: js.UndefOr[js.Array[HtmlTrivia]] = js.native
   def children(): IterableIterator[Node[SyntaxKind]] = js.native
   def forEachChild[T](_cbNode: js.Function1[/* node */ Node[SyntaxKind], js.UndefOr[T]]): js.UndefOr[T] = js.native

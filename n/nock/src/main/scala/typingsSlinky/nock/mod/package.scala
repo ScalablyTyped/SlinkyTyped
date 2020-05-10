@@ -14,7 +14,7 @@ package object mod {
     - scala.Double
     - java.lang.String
     - scala.Null
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
     - typingsSlinky.std.RegExp
     - typingsSlinky.nock.mod.DataMatcherArray
     - typingsSlinky.nock.mod.DataMatcherMap

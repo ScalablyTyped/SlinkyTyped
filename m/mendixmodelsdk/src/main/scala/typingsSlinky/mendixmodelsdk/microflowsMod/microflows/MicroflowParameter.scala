@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 /**
   * See: {@link https://docs.mendix.com/refguide7/parameter relevant section in reference guide}
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IByNameReferrable because Already inherited
@@ -32,7 +32,7 @@ class MicroflowParameter protected () extends MicroflowParameterBase {
   @JSName("model")
   var model_FMicroflowParameter: IModel = js.native
   @JSName("containerAsMicroflow")
-  def containerAsMicroflow_MMicroflowParameter(): Microflow = js.native
+  def containerAsMicroflow_MMicroflowParameter: Microflow = js.native
 }
 
 /* static members */

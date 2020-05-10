@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SinglePropertySchema[T] extends js.Object {
-  var default: js.UndefOr[T] = js.undefined
-  var parse: js.UndefOr[js.Function1[/* value */ String, T]] = js.undefined
-  var stringify: js.UndefOr[js.Function1[/* value */ T, String]] = js.undefined
-  var `type`: js.UndefOr[PropertyTypes] = js.undefined
+  var default: js.UndefOr[T] = js.native
+  var parse: js.UndefOr[js.Function1[/* value */ String, T]] = js.native
+  var stringify: js.UndefOr[js.Function1[/* value */ T, String]] = js.native
+  var `type`: js.UndefOr[PropertyTypes] = js.native
 }
 
 object SinglePropertySchema {
   @scala.inline
-  def apply[T](
-    default: T = null,
-    parse: /* value */ String => T = null,
-    stringify: /* value */ T => String = null,
-    `type`: PropertyTypes = null
-  ): SinglePropertySchema[T] = {
+  def apply[T](): SinglePropertySchema[T] = {
     val __obj = js.Dynamic.literal()
-    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
-    if (parse != null) __obj.updateDynamic("parse")(js.Any.fromFunction1(parse))
-    if (stringify != null) __obj.updateDynamic("stringify")(js.Any.fromFunction1(stringify))
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SinglePropertySchema[T]]
   }
+  @scala.inline
+  implicit class SinglePropertySchemaOps[Self[t] <: SinglePropertySchema[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withDefault(value: T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefault: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParse(value: /* value */ String => T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutParse: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStringify(value: /* value */ T => String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutStringify: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: PropertyTypes): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

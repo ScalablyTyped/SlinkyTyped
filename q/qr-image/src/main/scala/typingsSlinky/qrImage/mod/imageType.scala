@@ -14,14 +14,12 @@ trait imageType extends js.Object
 
 object imageType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def eps: typingsSlinky.qrImage.qrImageStrings.eps = "eps".asInstanceOf[typingsSlinky.qrImage.qrImageStrings.eps]
   @scala.inline
-  def eps: typingsSlinky.qrImage.qrImageStrings.eps = this.cast("eps")
+  def pdf: typingsSlinky.qrImage.qrImageStrings.pdf = "pdf".asInstanceOf[typingsSlinky.qrImage.qrImageStrings.pdf]
   @scala.inline
-  def pdf: typingsSlinky.qrImage.qrImageStrings.pdf = this.cast("pdf")
+  def png: typingsSlinky.qrImage.qrImageStrings.png = "png".asInstanceOf[typingsSlinky.qrImage.qrImageStrings.png]
   @scala.inline
-  def png: typingsSlinky.qrImage.qrImageStrings.png = this.cast("png")
-  @scala.inline
-  def svg: typingsSlinky.qrImage.qrImageStrings.svg = this.cast("svg")
+  def svg: typingsSlinky.qrImage.qrImageStrings.svg = "svg".asInstanceOf[typingsSlinky.qrImage.qrImageStrings.svg]
 }
 

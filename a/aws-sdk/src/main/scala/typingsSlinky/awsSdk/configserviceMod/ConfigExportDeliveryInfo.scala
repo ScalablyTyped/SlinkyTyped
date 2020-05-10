@@ -34,22 +34,89 @@ trait ConfigExportDeliveryInfo extends js.Object {
 
 object ConfigExportDeliveryInfo {
   @scala.inline
-  def apply(
-    lastAttemptTime: js.Date = null,
-    lastErrorCode: String = null,
-    lastErrorMessage: String = null,
-    lastStatus: DeliveryStatus = null,
-    lastSuccessfulTime: js.Date = null,
-    nextDeliveryTime: js.Date = null
-  ): ConfigExportDeliveryInfo = {
+  def apply(): ConfigExportDeliveryInfo = {
     val __obj = js.Dynamic.literal()
-    if (lastAttemptTime != null) __obj.updateDynamic("lastAttemptTime")(lastAttemptTime.asInstanceOf[js.Any])
-    if (lastErrorCode != null) __obj.updateDynamic("lastErrorCode")(lastErrorCode.asInstanceOf[js.Any])
-    if (lastErrorMessage != null) __obj.updateDynamic("lastErrorMessage")(lastErrorMessage.asInstanceOf[js.Any])
-    if (lastStatus != null) __obj.updateDynamic("lastStatus")(lastStatus.asInstanceOf[js.Any])
-    if (lastSuccessfulTime != null) __obj.updateDynamic("lastSuccessfulTime")(lastSuccessfulTime.asInstanceOf[js.Any])
-    if (nextDeliveryTime != null) __obj.updateDynamic("nextDeliveryTime")(nextDeliveryTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigExportDeliveryInfo]
   }
+  @scala.inline
+  implicit class ConfigExportDeliveryInfoOps[Self <: ConfigExportDeliveryInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLastAttemptTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastAttemptTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastAttemptTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastAttemptTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastErrorCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastErrorCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastErrorCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastErrorCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastErrorMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastErrorMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastErrorMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastErrorMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastStatus(value: DeliveryStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastSuccessfulTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastSuccessfulTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastSuccessfulTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastSuccessfulTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextDeliveryTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextDeliveryTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextDeliveryTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextDeliveryTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

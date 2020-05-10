@@ -1,6 +1,5 @@
 package typingsSlinky.validator
 
-import typingsSlinky.validator.mod.validator.IsISSNOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +13,7 @@ object isISSNMod extends js.Object {
     * @param [options] - Options
     */
   def default(str: String): Boolean = js.native
-  def default(str: String, options: IsISSNOptions): Boolean = js.native
+  def default(str: String, options: typingsSlinky.validator.mod.validator.IsISSNOptions): Boolean = js.native
+  type IsISSNOptions = typingsSlinky.validator.mod.validator.IsISSNOptions
 }
 

@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation._
 /**
   * 'Properties' object passed into the WL.login method.
   */
+@js.native
 trait ILoginProperties extends js.Object {
   /**
     * This parameter only applies to web apps.
@@ -14,7 +15,7 @@ trait ILoginProperties extends js.Object {
     * value overrides the default redirect URI that is provided in the call
     * to WL.init.
     */
-  var redirect_uri: js.UndefOr[String] = js.undefined
+  var redirect_uri: js.UndefOr[String] = js.native
   /**
     * Specifies the scopes to which the user who is signing in consents.
     *
@@ -30,7 +31,7 @@ trait ILoginProperties extends js.Object {
     * Server-side scenarios.
     * http://msdn.microsoft.com/en-us/library/live/hh243649.aspx
     */
-  var scope: js.Any
+  var scope: js.Any = js.native
   /**
     * Windows Store apps using JavaScript: not applicable.
     * Web apps: Optional. If the WL.init function's response_type object is
@@ -41,16 +42,52 @@ trait ILoginProperties extends js.Object {
     * authorization code" section.
     * http://msdn.microsoft.com/en-us/library/live/hh243649.aspx
     */
-  var state: js.UndefOr[String] = js.undefined
+  var state: js.UndefOr[String] = js.native
 }
 
 object ILoginProperties {
   @scala.inline
-  def apply(scope: js.Any, redirect_uri: String = null, state: String = null): ILoginProperties = {
+  def apply(scope: js.Any): ILoginProperties = {
     val __obj = js.Dynamic.literal(scope = scope.asInstanceOf[js.Any])
-    if (redirect_uri != null) __obj.updateDynamic("redirect_uri")(redirect_uri.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[ILoginProperties]
   }
+  @scala.inline
+  implicit class ILoginPropertiesOps[Self <: ILoginProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withScope(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRedirect_uri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirect_uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRedirect_uri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirect_uri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

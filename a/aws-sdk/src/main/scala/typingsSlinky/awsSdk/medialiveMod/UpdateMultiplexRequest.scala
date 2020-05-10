@@ -22,11 +22,47 @@ trait UpdateMultiplexRequest extends js.Object {
 
 object UpdateMultiplexRequest {
   @scala.inline
-  def apply(MultiplexId: string, MultiplexSettings: MultiplexSettings = null, Name: string = null): UpdateMultiplexRequest = {
+  def apply(MultiplexId: string): UpdateMultiplexRequest = {
     val __obj = js.Dynamic.literal(MultiplexId = MultiplexId.asInstanceOf[js.Any])
-    if (MultiplexSettings != null) __obj.updateDynamic("MultiplexSettings")(MultiplexSettings.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateMultiplexRequest]
   }
+  @scala.inline
+  implicit class UpdateMultiplexRequestOps[Self <: UpdateMultiplexRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMultiplexId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiplexId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMultiplexSettings(value: MultiplexSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiplexSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiplexSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiplexSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

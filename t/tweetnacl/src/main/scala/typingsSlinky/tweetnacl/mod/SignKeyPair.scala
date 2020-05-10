@@ -4,20 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SignKeyPair extends js.Object {
-  var publicKey: scala.scalajs.js.typedarray.Uint8Array
-  var secretKey: scala.scalajs.js.typedarray.Uint8Array
+  var publicKey: js.typedarray.Uint8Array = js.native
+  var secretKey: js.typedarray.Uint8Array = js.native
 }
 
 object SignKeyPair {
   @scala.inline
-  def apply(
-    publicKey: scala.scalajs.js.typedarray.Uint8Array,
-    secretKey: scala.scalajs.js.typedarray.Uint8Array
-  ): SignKeyPair = {
+  def apply(publicKey: js.typedarray.Uint8Array, secretKey: js.typedarray.Uint8Array): SignKeyPair = {
     val __obj = js.Dynamic.literal(publicKey = publicKey.asInstanceOf[js.Any], secretKey = secretKey.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SignKeyPair]
   }
+  @scala.inline
+  implicit class SignKeyPairOps[Self <: SignKeyPair] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPublicKey(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSecretKey(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secretKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -19,7 +19,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // tslint:disable-line no-empty-interface
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.cropperjs.Cropper because Inheritance from two classes. Inlined clear, crop, destroy, disable, enable, getCanvasData, getContainerData, getCropBoxData, getCroppedCanvas, getCroppedCanvas, getData, getData, getImageData, move, move, moveTo, moveTo, replace, replace, reset, rotate, rotateTo, scale, scale, scaleX, scaleY, setAspectRatio, setCanvasData, setCropBoxData, setData, setDragMode, zoom, zoomTo, zoomTo
 - typingsSlinky.cropperjs.mod.default because Inheritance from two classes. Inlined  */ @js.native
 trait ReactCropper

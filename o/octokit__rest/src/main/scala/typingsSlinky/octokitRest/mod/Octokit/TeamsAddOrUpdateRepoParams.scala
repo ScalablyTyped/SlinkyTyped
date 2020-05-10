@@ -7,8 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TeamsAddOrUpdateRepoParams extends js.Object {
-  var owner: String
+  var owner: String = js.native
   /**
     * The permission to grant the team on this repository. Can be one of:
     * \* `pull` - team members can pull, but not push to or administer this repository.
@@ -17,17 +18,54 @@ trait TeamsAddOrUpdateRepoParams extends js.Object {
     *
     * If no permission is specified, the team's `permission` attribute will be used to determine what permission to grant the team on this repository.
     */
-  var permission: js.UndefOr[pull | push | admin] = js.undefined
-  var repo: String
-  var team_id: Double
+  var permission: js.UndefOr[pull | push | admin] = js.native
+  var repo: String = js.native
+  var team_id: Double = js.native
 }
 
 object TeamsAddOrUpdateRepoParams {
   @scala.inline
-  def apply(owner: String, repo: String, team_id: Double, permission: pull | push | admin = null): TeamsAddOrUpdateRepoParams = {
+  def apply(owner: String, repo: String, team_id: Double): TeamsAddOrUpdateRepoParams = {
     val __obj = js.Dynamic.literal(owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any], team_id = team_id.asInstanceOf[js.Any])
-    if (permission != null) __obj.updateDynamic("permission")(permission.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamsAddOrUpdateRepoParams]
   }
+  @scala.inline
+  implicit class TeamsAddOrUpdateRepoParamsOps[Self <: TeamsAddOrUpdateRepoParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOwner(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRepo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTeam_id(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("team_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPermission(value: pull | push | admin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permission")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermission: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permission")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

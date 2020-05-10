@@ -24,14 +24,41 @@ trait SchemaSuggestedTableCellStyle extends js.Object {
 
 object SchemaSuggestedTableCellStyle {
   @scala.inline
-  def apply(
-    tableCellStyle: SchemaTableCellStyle = null,
-    tableCellStyleSuggestionState: SchemaTableCellStyleSuggestionState = null
-  ): SchemaSuggestedTableCellStyle = {
+  def apply(): SchemaSuggestedTableCellStyle = {
     val __obj = js.Dynamic.literal()
-    if (tableCellStyle != null) __obj.updateDynamic("tableCellStyle")(tableCellStyle.asInstanceOf[js.Any])
-    if (tableCellStyleSuggestionState != null) __obj.updateDynamic("tableCellStyleSuggestionState")(tableCellStyleSuggestionState.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSuggestedTableCellStyle]
   }
+  @scala.inline
+  implicit class SchemaSuggestedTableCellStyleOps[Self <: SchemaSuggestedTableCellStyle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTableCellStyle(value: SchemaTableCellStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableCellStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableCellStyleSuggestionState(value: SchemaTableCellStyleSuggestionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellStyleSuggestionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableCellStyleSuggestionState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellStyleSuggestionState")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

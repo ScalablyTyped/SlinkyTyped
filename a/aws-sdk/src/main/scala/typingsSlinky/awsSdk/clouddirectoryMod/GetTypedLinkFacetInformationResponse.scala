@@ -14,10 +14,29 @@ trait GetTypedLinkFacetInformationResponse extends js.Object {
 
 object GetTypedLinkFacetInformationResponse {
   @scala.inline
-  def apply(IdentityAttributeOrder: AttributeNameList = null): GetTypedLinkFacetInformationResponse = {
+  def apply(): GetTypedLinkFacetInformationResponse = {
     val __obj = js.Dynamic.literal()
-    if (IdentityAttributeOrder != null) __obj.updateDynamic("IdentityAttributeOrder")(IdentityAttributeOrder.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTypedLinkFacetInformationResponse]
   }
+  @scala.inline
+  implicit class GetTypedLinkFacetInformationResponseOps[Self <: GetTypedLinkFacetInformationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIdentityAttributeOrder(value: AttributeNameList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityAttributeOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentityAttributeOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityAttributeOrder")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

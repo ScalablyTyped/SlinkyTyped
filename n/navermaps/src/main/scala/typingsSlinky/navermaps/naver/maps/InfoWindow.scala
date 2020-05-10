@@ -19,7 +19,7 @@ class InfoWindow protected () extends OverlayView {
   def open(map: Map, anchor: CoordLiteral): Unit = js.native
   def open(map: Map, anchor: Marker): Unit = js.native
   def setContent(content: String): Unit = js.native
-  def setContent(content: typingsSlinky.std.HTMLElement): Unit = js.native
+  def setContent(content: HTMLElement): Unit = js.native
   def setOptions(options: InfoWindowOptions): Unit = js.native
   def setPosition(position: Coord): Unit = js.native
   def setPosition(position: CoordLiteral): Unit = js.native

@@ -14,14 +14,12 @@ trait Placement extends js.Object
 
 object Placement {
   @scala.inline
-  def bottom: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.bottom = "bottom".asInstanceOf[typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.left = "left".asInstanceOf[typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.left]
   @scala.inline
-  def left: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.left = this.cast("left")
+  def right: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.right = "right".asInstanceOf[typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.right]
   @scala.inline
-  def right: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.top = this.cast("top")
+  def top: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.top = "top".asInstanceOf[typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.top]
 }
 

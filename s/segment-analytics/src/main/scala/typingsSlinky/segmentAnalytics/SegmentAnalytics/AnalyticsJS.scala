@@ -1,9 +1,9 @@
 package typingsSlinky.segmentAnalytics.SegmentAnalytics
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.segmentAnalytics.AnonAnonymousId
 import typingsSlinky.segmentAnalytics.AnonId
 import typingsSlinky.segmentAnalytics.JQuery
-import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

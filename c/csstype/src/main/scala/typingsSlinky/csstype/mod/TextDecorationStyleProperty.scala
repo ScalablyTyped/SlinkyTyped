@@ -20,26 +20,24 @@ trait TextDecorationStyleProperty extends js.Object
 
 object TextDecorationStyleProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dashed: typingsSlinky.csstype.csstypeStrings.dashed = "dashed".asInstanceOf[typingsSlinky.csstype.csstypeStrings.dashed]
   @scala.inline
-  def dashed: typingsSlinky.csstype.csstypeStrings.dashed = this.cast("dashed")
+  def dotted: typingsSlinky.csstype.csstypeStrings.dotted = "dotted".asInstanceOf[typingsSlinky.csstype.csstypeStrings.dotted]
   @scala.inline
-  def dotted: typingsSlinky.csstype.csstypeStrings.dotted = this.cast("dotted")
+  def double: typingsSlinky.csstype.csstypeStrings.double = "double".asInstanceOf[typingsSlinky.csstype.csstypeStrings.double]
   @scala.inline
-  def double: typingsSlinky.csstype.csstypeStrings.double = this.cast("double")
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
+  def solid: typingsSlinky.csstype.csstypeStrings.solid = "solid".asInstanceOf[typingsSlinky.csstype.csstypeStrings.solid]
   @scala.inline
-  def solid: typingsSlinky.csstype.csstypeStrings.solid = this.cast("solid")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
   @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
-  @scala.inline
-  def wavy: typingsSlinky.csstype.csstypeStrings.wavy = this.cast("wavy")
+  def wavy: typingsSlinky.csstype.csstypeStrings.wavy = "wavy".asInstanceOf[typingsSlinky.csstype.csstypeStrings.wavy]
 }
 

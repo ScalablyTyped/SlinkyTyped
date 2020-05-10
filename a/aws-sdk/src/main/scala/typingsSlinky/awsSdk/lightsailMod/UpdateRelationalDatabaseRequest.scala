@@ -50,29 +50,131 @@ trait UpdateRelationalDatabaseRequest extends js.Object {
 
 object UpdateRelationalDatabaseRequest {
   @scala.inline
-  def apply(
-    relationalDatabaseName: ResourceName,
-    applyImmediately: js.UndefOr[Boolean] = js.undefined,
-    caCertificateIdentifier: String = null,
-    disableBackupRetention: js.UndefOr[Boolean] = js.undefined,
-    enableBackupRetention: js.UndefOr[Boolean] = js.undefined,
-    masterUserPassword: SensitiveString = null,
-    preferredBackupWindow: String = null,
-    preferredMaintenanceWindow: String = null,
-    publiclyAccessible: js.UndefOr[Boolean] = js.undefined,
-    rotateMasterUserPassword: js.UndefOr[Boolean] = js.undefined
-  ): UpdateRelationalDatabaseRequest = {
+  def apply(relationalDatabaseName: ResourceName): UpdateRelationalDatabaseRequest = {
     val __obj = js.Dynamic.literal(relationalDatabaseName = relationalDatabaseName.asInstanceOf[js.Any])
-    if (!js.isUndefined(applyImmediately)) __obj.updateDynamic("applyImmediately")(applyImmediately.asInstanceOf[js.Any])
-    if (caCertificateIdentifier != null) __obj.updateDynamic("caCertificateIdentifier")(caCertificateIdentifier.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableBackupRetention)) __obj.updateDynamic("disableBackupRetention")(disableBackupRetention.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableBackupRetention)) __obj.updateDynamic("enableBackupRetention")(enableBackupRetention.asInstanceOf[js.Any])
-    if (masterUserPassword != null) __obj.updateDynamic("masterUserPassword")(masterUserPassword.asInstanceOf[js.Any])
-    if (preferredBackupWindow != null) __obj.updateDynamic("preferredBackupWindow")(preferredBackupWindow.asInstanceOf[js.Any])
-    if (preferredMaintenanceWindow != null) __obj.updateDynamic("preferredMaintenanceWindow")(preferredMaintenanceWindow.asInstanceOf[js.Any])
-    if (!js.isUndefined(publiclyAccessible)) __obj.updateDynamic("publiclyAccessible")(publiclyAccessible.asInstanceOf[js.Any])
-    if (!js.isUndefined(rotateMasterUserPassword)) __obj.updateDynamic("rotateMasterUserPassword")(rotateMasterUserPassword.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateRelationalDatabaseRequest]
   }
+  @scala.inline
+  implicit class UpdateRelationalDatabaseRequestOps[Self <: UpdateRelationalDatabaseRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRelationalDatabaseName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relationalDatabaseName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withApplyImmediately(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applyImmediately")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplyImmediately: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applyImmediately")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaCertificateIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caCertificateIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaCertificateIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caCertificateIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableBackupRetention(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableBackupRetention")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableBackupRetention: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableBackupRetention")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableBackupRetention(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableBackupRetention")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableBackupRetention: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableBackupRetention")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterUserPassword(value: SensitiveString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterUserPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterUserPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterUserPassword")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreferredBackupWindow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preferredBackupWindow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreferredBackupWindow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preferredBackupWindow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreferredMaintenanceWindow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preferredMaintenanceWindow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreferredMaintenanceWindow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preferredMaintenanceWindow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPubliclyAccessible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publiclyAccessible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPubliclyAccessible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publiclyAccessible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotateMasterUserPassword(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateMasterUserPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotateMasterUserPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateMasterUserPassword")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

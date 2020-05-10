@@ -22,16 +22,53 @@ trait GetCurrentMetricDataResponse extends js.Object {
 
 object GetCurrentMetricDataResponse {
   @scala.inline
-  def apply(
-    DataSnapshotTime: js.Date = null,
-    MetricResults: CurrentMetricResults = null,
-    NextToken: NextToken = null
-  ): GetCurrentMetricDataResponse = {
+  def apply(): GetCurrentMetricDataResponse = {
     val __obj = js.Dynamic.literal()
-    if (DataSnapshotTime != null) __obj.updateDynamic("DataSnapshotTime")(DataSnapshotTime.asInstanceOf[js.Any])
-    if (MetricResults != null) __obj.updateDynamic("MetricResults")(MetricResults.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCurrentMetricDataResponse]
   }
+  @scala.inline
+  implicit class GetCurrentMetricDataResponseOps[Self <: GetCurrentMetricDataResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataSnapshotTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSnapshotTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSnapshotTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSnapshotTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricResults(value: CurrentMetricResults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,12 +1,11 @@
 package typingsSlinky.singleSpaReact
 
+import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Text
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import typingsSlinky.react.mod.CElement
-import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.DOMAttributes
 import typingsSlinky.react.mod.DOMElement
 import typingsSlinky.react.mod.ReactElement
@@ -26,6 +25,7 @@ trait TypeofReactDOM extends js.Object {
   def createPortal(children: TagMod[Any], container: Element, key: String): ReactPortal = js.native
   def findDOMNode(): Element | Null | Text = js.native
   def findDOMNode(instance: ReactInstance): Element | Null | Text = js.native
+  def unmountComponentAtNode(container: DocumentFragment): Boolean = js.native
   def unmountComponentAtNode(container: Element): Boolean = js.native
   def unstable_batchedUpdates(callback: js.Function0[_]): Unit = js.native
   def unstable_batchedUpdates[A](callback: js.Function1[/* a */ A, _], a: A): Unit = js.native
@@ -46,10 +46,7 @@ trait TypeofReactDOM extends js.Object {
     parentComponent: ReactComponentClass[_],
     element: ReactElement,
     container: Element,
-    callback: js.Function1[
-      /* component */ js.UndefOr[(Component[P, ComponentState, _]) | typingsSlinky.std.Element], 
-      _
-    ]
+    callback: js.Function1[/* component */ js.UndefOr[ReactComponentClass[P] | Element], _]
   ): ReactComponentClass[P] | Element | Unit = js.native
   def unstable_renderSubtreeIntoContainer[P, T /* <: ReactComponentClass[P] */](parentComponent: ReactComponentClass[_], element: CElement[P, T], container: Element): T = js.native
   def unstable_renderSubtreeIntoContainer[P, T /* <: ReactComponentClass[P] */](

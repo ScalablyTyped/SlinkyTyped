@@ -4,20 +4,74 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonConnection extends js.Object {
-  var connection: js.UndefOr[js.Object | Null] = js.undefined
-  var idGeneration: js.UndefOr[String] = js.undefined
-  var transform: js.UndefOr[js.Function | Null] = js.undefined
+  var connection: js.UndefOr[js.Object | Null] = js.native
+  var idGeneration: js.UndefOr[String] = js.native
+  var transform: js.UndefOr[js.Function | Null] = js.native
 }
 
 object AnonConnection {
   @scala.inline
-  def apply(connection: js.Object = null, idGeneration: String = null, transform: js.Function = null): AnonConnection = {
+  def apply(): AnonConnection = {
     val __obj = js.Dynamic.literal()
-    if (connection != null) __obj.updateDynamic("connection")(connection.asInstanceOf[js.Any])
-    if (idGeneration != null) __obj.updateDynamic("idGeneration")(idGeneration.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonConnection]
   }
+  @scala.inline
+  implicit class AnonConnectionOps[Self <: AnonConnection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnection(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connection")(null)
+        ret
+    }
+    @scala.inline
+    def withIdGeneration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idGeneration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdGeneration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idGeneration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransform(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransformNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(null)
+        ret
+    }
+  }
+  
 }
 

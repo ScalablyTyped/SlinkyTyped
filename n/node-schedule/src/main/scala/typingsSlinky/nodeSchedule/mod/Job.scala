@@ -1,7 +1,6 @@
 package typingsSlinky.nodeSchedule.mod
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,7 +60,7 @@ class Job protected () extends EventEmitter {
   def schedule(date: String): Boolean = js.native
   def schedule(date: Double): Boolean = js.native
   /** set scheduling information */
-  def schedule(date: Date): Boolean = js.native
+  def schedule(date: js.Date): Boolean = js.native
   /**
     * set the number of currently running Jobs.
     * @internal

@@ -17,13 +17,13 @@ object aesKw extends js.Object {
     * @returns
     * @throws
     */
-  def unwrap(key: String, data: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def unwrap(key: String, data: String): js.typedarray.Uint8Array = js.native
   /**
     * AES key wrap
     * @param key
     * @param data
     * @returns
     */
-  def wrap(key: String, data: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def wrap(key: String, data: String): js.typedarray.Uint8Array = js.native
 }
 

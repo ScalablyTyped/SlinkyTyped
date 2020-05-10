@@ -2,11 +2,9 @@ package typingsSlinky.ionicCore
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.ionicCore.ionicCoreNumbers.`32`
-import typingsSlinky.ionicCore.ionicCoreNumbers.`400`
+import org.scalajs.dom.raw.Node
+import org.scalajs.dom.raw.NodeList
 import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.PlayOptions
-import typingsSlinky.std.Node
-import typingsSlinky.std.NodeList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -309,8 +307,8 @@ object animatorMod extends js.Object {
   }
   
   val CSS_VALUE_REGEX: js.RegExp = js.native
-  val DURATION_MIN: `32` = js.native
-  val TRANSITION_END_FALLBACK_PADDING_MS: `400` = js.native
+  val DURATION_MIN: /* 32 */ Double = js.native
+  val TRANSITION_END_FALLBACK_PADDING_MS: /* 400 */ Double = js.native
   @js.native
   object TRANSFORM_PROPS extends /* key */ StringDictionary[Double]
   

@@ -6,51 +6,179 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Config extends js.Object {
-  var autoCommands: js.UndefOr[String] = js.undefined
-  var autoOperatorNames: js.UndefOr[String] = js.undefined
-  var autoSubscriptNumerals: js.UndefOr[Boolean] = js.undefined
-  var charsThatBreakOutOfSupSub: js.UndefOr[String] = js.undefined
-  var handlers: js.UndefOr[AnonEdit] = js.undefined
-  var leftRightIntoCmdGoes: js.UndefOr[String] = js.undefined
-  var maxDepth: js.UndefOr[Double] = js.undefined
-  var restrictMismatchedBrackets: js.UndefOr[Boolean] = js.undefined
-  var spaceBehavesLikeTab: js.UndefOr[Boolean] = js.undefined
-  var substituteTextarea: js.UndefOr[js.Function0[HTMLTextAreaElement]] = js.undefined
-  var sumStartsWithNEquals: js.UndefOr[Boolean] = js.undefined
-  var supSubsRequireOperand: js.UndefOr[Boolean] = js.undefined
+  var autoCommands: js.UndefOr[String] = js.native
+  var autoOperatorNames: js.UndefOr[String] = js.native
+  var autoSubscriptNumerals: js.UndefOr[Boolean] = js.native
+  var charsThatBreakOutOfSupSub: js.UndefOr[String] = js.native
+  var handlers: js.UndefOr[AnonEdit] = js.native
+  var leftRightIntoCmdGoes: js.UndefOr[String] = js.native
+  var maxDepth: js.UndefOr[Double] = js.native
+  var restrictMismatchedBrackets: js.UndefOr[Boolean] = js.native
+  var spaceBehavesLikeTab: js.UndefOr[Boolean] = js.native
+  var substituteTextarea: js.UndefOr[js.Function0[HTMLTextAreaElement]] = js.native
+  var sumStartsWithNEquals: js.UndefOr[Boolean] = js.native
+  var supSubsRequireOperand: js.UndefOr[Boolean] = js.native
 }
 
 object Config {
   @scala.inline
-  def apply(
-    autoCommands: String = null,
-    autoOperatorNames: String = null,
-    autoSubscriptNumerals: js.UndefOr[Boolean] = js.undefined,
-    charsThatBreakOutOfSupSub: String = null,
-    handlers: AnonEdit = null,
-    leftRightIntoCmdGoes: String = null,
-    maxDepth: Int | Double = null,
-    restrictMismatchedBrackets: js.UndefOr[Boolean] = js.undefined,
-    spaceBehavesLikeTab: js.UndefOr[Boolean] = js.undefined,
-    substituteTextarea: () => HTMLTextAreaElement = null,
-    sumStartsWithNEquals: js.UndefOr[Boolean] = js.undefined,
-    supSubsRequireOperand: js.UndefOr[Boolean] = js.undefined
-  ): Config = {
+  def apply(): Config = {
     val __obj = js.Dynamic.literal()
-    if (autoCommands != null) __obj.updateDynamic("autoCommands")(autoCommands.asInstanceOf[js.Any])
-    if (autoOperatorNames != null) __obj.updateDynamic("autoOperatorNames")(autoOperatorNames.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoSubscriptNumerals)) __obj.updateDynamic("autoSubscriptNumerals")(autoSubscriptNumerals.asInstanceOf[js.Any])
-    if (charsThatBreakOutOfSupSub != null) __obj.updateDynamic("charsThatBreakOutOfSupSub")(charsThatBreakOutOfSupSub.asInstanceOf[js.Any])
-    if (handlers != null) __obj.updateDynamic("handlers")(handlers.asInstanceOf[js.Any])
-    if (leftRightIntoCmdGoes != null) __obj.updateDynamic("leftRightIntoCmdGoes")(leftRightIntoCmdGoes.asInstanceOf[js.Any])
-    if (maxDepth != null) __obj.updateDynamic("maxDepth")(maxDepth.asInstanceOf[js.Any])
-    if (!js.isUndefined(restrictMismatchedBrackets)) __obj.updateDynamic("restrictMismatchedBrackets")(restrictMismatchedBrackets.asInstanceOf[js.Any])
-    if (!js.isUndefined(spaceBehavesLikeTab)) __obj.updateDynamic("spaceBehavesLikeTab")(spaceBehavesLikeTab.asInstanceOf[js.Any])
-    if (substituteTextarea != null) __obj.updateDynamic("substituteTextarea")(js.Any.fromFunction0(substituteTextarea))
-    if (!js.isUndefined(sumStartsWithNEquals)) __obj.updateDynamic("sumStartsWithNEquals")(sumStartsWithNEquals.asInstanceOf[js.Any])
-    if (!js.isUndefined(supSubsRequireOperand)) __obj.updateDynamic("supSubsRequireOperand")(supSubsRequireOperand.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
+  @scala.inline
+  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoCommands(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCommands")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoCommands: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCommands")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoOperatorNames(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoOperatorNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoOperatorNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoOperatorNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoSubscriptNumerals(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSubscriptNumerals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoSubscriptNumerals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSubscriptNumerals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCharsThatBreakOutOfSupSub(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charsThatBreakOutOfSupSub")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCharsThatBreakOutOfSupSub: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charsThatBreakOutOfSupSub")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandlers(value: AnonEdit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handlers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHandlers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handlers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeftRightIntoCmdGoes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftRightIntoCmdGoes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeftRightIntoCmdGoes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftRightIntoCmdGoes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDepth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDepth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestrictMismatchedBrackets(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictMismatchedBrackets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestrictMismatchedBrackets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictMismatchedBrackets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpaceBehavesLikeTab(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceBehavesLikeTab")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpaceBehavesLikeTab: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceBehavesLikeTab")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubstituteTextarea(value: () => HTMLTextAreaElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("substituteTextarea")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutSubstituteTextarea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("substituteTextarea")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSumStartsWithNEquals(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sumStartsWithNEquals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSumStartsWithNEquals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sumStartsWithNEquals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupSubsRequireOperand(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supSubsRequireOperand")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupSubsRequireOperand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supSubsRequireOperand")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

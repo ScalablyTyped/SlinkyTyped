@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
+@js.native
 trait ReplaceCriteria extends js.Object {
   /**
     *
@@ -19,23 +20,53 @@ trait ReplaceCriteria extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var completeMatch: js.UndefOr[Boolean] = js.undefined
+  var completeMatch: js.UndefOr[Boolean] = js.native
   /**
     *
     * Specifies whether the match is case sensitive. Default is false (insensitive).
     *
     * [Api set: ExcelApi 1.9]
     */
-  var matchCase: js.UndefOr[Boolean] = js.undefined
+  var matchCase: js.UndefOr[Boolean] = js.native
 }
 
 object ReplaceCriteria {
   @scala.inline
-  def apply(completeMatch: js.UndefOr[Boolean] = js.undefined, matchCase: js.UndefOr[Boolean] = js.undefined): ReplaceCriteria = {
+  def apply(): ReplaceCriteria = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(completeMatch)) __obj.updateDynamic("completeMatch")(completeMatch.asInstanceOf[js.Any])
-    if (!js.isUndefined(matchCase)) __obj.updateDynamic("matchCase")(matchCase.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplaceCriteria]
   }
+  @scala.inline
+  implicit class ReplaceCriteriaOps[Self <: ReplaceCriteria] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompleteMatch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completeMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompleteMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completeMatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatchCase(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchCase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatchCase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchCase")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

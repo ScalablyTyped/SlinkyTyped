@@ -1,10 +1,9 @@
 package typingsSlinky.reactVirtualized.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactVirtualized.esTableMod.ColumnProps
 import typingsSlinky.reactVirtualized.esTableMod.SortDirectionType
@@ -15,51 +14,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Column
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactVirtualized.mod.Column] {
+object Column {
   @JSImport("react-virtualized", "Column")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, style */
-  def apply(
-    dataKey: js.Any,
-    width: Double,
-    `aria-label`: String = null,
-    cellDataGetter: /* params */ TableCellDataGetterParams => js.Any = null,
-    cellRenderer: /* props */ TableCellProps => TagMod[Any] = null,
-    columnData: js.Any = null,
-    defaultSortDirection: SortDirectionType = null,
-    disableSort: js.UndefOr[Boolean] = js.undefined,
-    flexGrow: Int | Double = null,
-    flexShrink: Int | Double = null,
-    headerClassName: String = null,
-    headerRenderer: /* props */ TableHeaderProps => TagMod[Any] = null,
-    headerStyle: CSSProperties = null,
-    label: TagMod[Any] = null,
-    maxWidth: Int | Double = null,
-    minWidth: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactVirtualized.mod.Column] = {
-    val __obj = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
-    if (cellDataGetter != null) __obj.updateDynamic("cellDataGetter")(js.Any.fromFunction1(cellDataGetter))
-    if (cellRenderer != null) __obj.updateDynamic("cellRenderer")(js.Any.fromFunction1(cellRenderer))
-    if (columnData != null) __obj.updateDynamic("columnData")(columnData.asInstanceOf[js.Any])
-    if (defaultSortDirection != null) __obj.updateDynamic("defaultSortDirection")(defaultSortDirection.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableSort)) __obj.updateDynamic("disableSort")(disableSort.asInstanceOf[js.Any])
-    if (flexGrow != null) __obj.updateDynamic("flexGrow")(flexGrow.asInstanceOf[js.Any])
-    if (flexShrink != null) __obj.updateDynamic("flexShrink")(flexShrink.asInstanceOf[js.Any])
-    if (headerClassName != null) __obj.updateDynamic("headerClassName")(headerClassName.asInstanceOf[js.Any])
-    if (headerRenderer != null) __obj.updateDynamic("headerRenderer")(js.Any.fromFunction1(headerRenderer))
-    if (headerStyle != null) __obj.updateDynamic("headerStyle")(headerStyle.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactVirtualized.mod.Column] {
+    @scala.inline
+    def `aria-label`(value: String): this.type = set("aria-label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cellDataGetter(value: /* params */ TableCellDataGetterParams => js.Any): this.type = set("cellDataGetter", js.Any.fromFunction1(value))
+    @scala.inline
+    def cellRenderer(value: /* props */ TableCellProps => TagMod[Any]): this.type = set("cellRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columnData(value: js.Any): this.type = set("columnData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultSortDirection(value: SortDirectionType): this.type = set("defaultSortDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableSort(value: Boolean): this.type = set("disableSort", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flexGrow(value: Double): this.type = set("flexGrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flexShrink(value: Double): this.type = set("flexShrink", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerClassName(value: String): this.type = set("headerClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerRenderer(value: /* props */ TableHeaderProps => TagMod[Any]): this.type = set("headerRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def headerStyle(value: CSSProperties): this.type = set("headerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxWidth(value: Double): this.type = set("maxWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minWidth(value: Double): this.type = set("minWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = ColumnProps
+  
+  def withProps(p: ColumnProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(dataKey: js.Any, width: Double): Builder = {
+    val __props = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ColumnProps]))
+  }
 }
 

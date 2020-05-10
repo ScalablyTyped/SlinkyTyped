@@ -9,8 +9,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.surveyKnockout.mod.ISurvey because var conflicts: isLoadingFromJson. Inlined currentPage, pages, getCss, isPageStarted, pageVisibilityChanged, panelVisibilityChanged, questionVisibilityChanged, questionsOrder, questionAdded, panelAdded, questionRemoved, panelRemoved, questionRenamed, validateQuestion, validatePanel, hasVisibleQuestionByValueName, questionCountByValueName, processHtml, getSurveyMarkdownHtml, isDisplayMode, isDesignMode, areInvisibleElementsShowing, isUpdateValueTextOnTyping, requiredText, beforeSettingQuestionErrors, getQuestionTitleTemplate, getUpdatedQuestionTitle, questionStartIndex, questionTitleLocation, questionDescriptionLocation, questionErrorLocation, storeOthersAsComment, maxTextLength, maxOthersLength, clearValueOnDisableItems, uploadFiles, downloadFile, clearFiles, updateChoicesFromServer, updateQuestionCssClasses, updatePanelCssClasses, updatePageCssClasses, afterRenderQuestion, afterRenderPanel, afterRenderPage, getQuestionByValueNameFromArray, matrixRowAdded, matrixBeforeRowAdded, matrixRowRemoved, matrixAllowRemoveRow, matrixCellCreated, matrixAfterCellRender, matrixCellValueChanged, matrixCellValueChanging, matrixCellValidate, dynamicPanelAdded, dynamicPanelRemoved, dynamicPanelItemValueChanged, dragAndDropAllow */ @JSImport("survey-knockout", "SurveyModel")
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.surveyKnockout.mod.ISurvey because var conflicts: isLoadingFromJson. Inlined currentPage, pages, getCss, isPageStarted, pageVisibilityChanged, panelVisibilityChanged, questionVisibilityChanged, questionsOrder, questionAdded, panelAdded, questionRemoved, panelRemoved, questionRenamed, validateQuestion, validatePanel, hasVisibleQuestionByValueName, questionCountByValueName, processHtml, getSurveyMarkdownHtml, isDisplayMode, isDesignMode, areInvisibleElementsShowing, isUpdateValueTextOnTyping, requiredText, beforeSettingQuestionErrors, getQuestionTitleTemplate, getUpdatedQuestionTitle, questionStartIndex, questionTitleLocation, questionDescriptionLocation, questionErrorLocation, storeOthersAsComment, maxTextLength, maxOthersLength, clearValueOnDisableItems, uploadFiles, downloadFile, clearFiles, updateChoicesFromServer, updateQuestionCssClasses, updatePanelCssClasses, updatePageCssClasses, afterRenderQuestion, afterRenderQuestionInput, afterRenderPanel, afterRenderPage, getQuestionByValueNameFromArray, matrixRowAdded, matrixBeforeRowAdded, matrixRowRemoved, matrixAllowRemoveRow, matrixCellCreated, matrixAfterCellRender, matrixCellValueChanged, matrixCellValueChanging, matrixCellValidate, dynamicPanelAdded, dynamicPanelRemoved, dynamicPanelItemValueChanged, dragAndDropAllow */ @JSImport("survey-knockout", "SurveyModel")
 @js.native
 class SurveyModel ()
   extends Base
@@ -334,6 +334,14 @@ class SurveyModel ()
     */
   var onAfterRenderQuestion: Event[js.Function2[/* sender */ this.type, /* options */ _, _], _] = js.native
   /**
+    * The event is fired right after a non-composite question (text, comment, dropdown, radiogroup, checkbox) is rendered in DOM. Use it to modify HTML elements.
+    * This event is not fired for matrices, panels, multiple text and image picker.
+    * <br/> `sender` - the survey object that fires the event.
+    * <br/> `options.question` - a question object for which the event is fired.
+    * <br/> `options.htmlElement` - an HTML element bound to the question object.
+    */
+  var onAfterRenderQuestionInput: Event[js.Function2[/* sender */ this.type, /* options */ _, _], _] = js.native
+  /**
     * The event is fired right after survey is rendered in DOM.
     * <br/> `sender` - the survey object that fires the event.
     * <br/> `options.htmlElement` - a root HTML element bound to the survey object.
@@ -500,6 +508,14 @@ class SurveyModel ()
     * <br/> `serverResult` - a result that comes from the server as it is.
     */
   var onLoadChoicesFromServer: Event[js.Function2[/* sender */ this.type, /* options */ _, _], _] = js.native
+  /**
+    * The event is fired after survey is loaded from api.surveyjs.io service.
+    * You can use this event to perform manipulation with the survey model after it was loaded from the web service.
+    * <br/> `sender` - the survey object that fires the event.
+    * @see surveyId
+    * @see loadSurveyFromService
+    */
+  var onLoadedSurveyFromService: Event[js.Function2[/* sender */ this.type, /* options */ _, _], _] = js.native
   /**
     * The event is fired for every cell after is has been rendered in DOM.
     * <br/> `sender` - the survey object that fires the event.
@@ -1097,6 +1113,7 @@ class SurveyModel ()
   /**
     * Gets or sets an identifier of a survey model loaded from the [dxsurvey.com](http://www.dxsurvey.com) service. When specified, the survey JSON is automatically loaded from [dxsurvey.com](http://www.dxsurvey.com) service.
     * @see loadSurveyFromService
+    * @see onLoadedSurveyFromService
     */
   var surveyId: String = js.native
   /**
@@ -1171,6 +1188,9 @@ class SurveyModel ()
   @JSName("afterRenderPanel")
   def afterRenderPanel_Unit(panel: IElement, htmlElement: js.Any): Unit = js.native
   def afterRenderQuestion(question: IQuestion, htmlElement: js.Any): js.Any = js.native
+  def afterRenderQuestionInput(question: IQuestion, htmlElement: js.Any): js.Any = js.native
+  @JSName("afterRenderQuestionInput")
+  def afterRenderQuestionInput_Unit(question: IQuestion, htmlElement: js.Any): Unit = js.native
   @JSName("afterRenderQuestion")
   def afterRenderQuestion_Unit(question: IQuestion, htmlElement: js.Any): Unit = js.native
   /* protected */ def afterRenderSurvey(htmlElement: js.Any): Unit = js.native
@@ -1228,8 +1248,6 @@ class SurveyModel ()
     * @see doComplete
     */
   def completeLastPage(): Boolean = js.native
-  /* CompleteClass */
-  override def copyTriggerValue(name: String, fromName: String): js.Any = js.native
   /* protected */ def createNewPage(name: String): PageModel = js.native
   /* protected */ def createSurveyService(): dxSurveyService = js.native
   /* protected */ def currentPageChanged(newValue: PageModel, oldValue: PageModel): Unit = js.native
@@ -1303,10 +1321,6 @@ class SurveyModel ()
     * Sets the input focus to the first question with the input field.
     */
   def focusFirstQuestion(): Unit = js.native
-  /* CompleteClass */
-  override def focusQuestion(name: String): Boolean = js.native
-  /* CompleteClass */
-  override def geSurveyData(): ISurveyData = js.native
   /**
     * Returns a list of all survey's panels.
     */
@@ -1327,21 +1341,13 @@ class SurveyModel ()
   def getCorrectedAnswers(): Double = js.native
   def getCss(): js.Any = js.native
   def getDataValueCore(valuesHash: js.Any, key: String): js.Any = js.native
-  /* CompleteClass */
-  override def getErrorCustomText(text: String, error: SurveyError): String = js.native
   /**
     * Returns an amount of incorrect quiz answers.
     */
   def getInCorrectedAnswerCount(): Double = js.native
   def getInCorrectedAnswers(): Double = js.native
   def getLocString(str: String): js.Any = js.native
-  /* CompleteClass */
-  override def getLocale(): String = js.native
-  /* CompleteClass */
-  override def getMarkdownHtml(text: String): String = js.native
   def getNavigateToUrl(): String = js.native
-  /* CompleteClass */
-  override def getObjects(pages: js.Array[String], questions: js.Array[String]): js.Array[_] = js.native
   def getPage(index: Double): PageModel = js.native
   /**
     * Returns a page on which an element (question or panel) is placed.
@@ -1380,8 +1386,6 @@ class SurveyModel ()
     */
   def getPlainData(): js.Array[_] = js.native
   def getPlainData(options: AnonCalculations): js.Array[_] = js.native
-  /* CompleteClass */
-  override def getProcessedText(text: String): String = js.native
   /**
     * Returns the progress that a user made while going through the survey.
     */
@@ -1434,11 +1438,7 @@ class SurveyModel ()
     * @see onGetResult
     */
   def getResult(resultId: String, name: String): Unit = js.native
-  /* CompleteClass */
-  override def getSurvey(): ISurvey = js.native
   def getSurveyMarkdownHtml(element: Base, text: String): String = js.native
-  /* CompleteClass */
-  override def getTextProcessor(): ITextProcessor = js.native
   /* protected */ def getUnbindValue(value: js.Any): js.Any = js.native
   def getUpdatedQuestionTitle(question: IQuestion, title: String): String = js.native
   /**
@@ -1461,6 +1461,7 @@ class SurveyModel ()
     * @param surveyId [dxsurvey.com](http://www.dxsurvey.com) service surveyId
     * @param clientId users' indentifier, for example an e-mail or a unique customer id in your web application.
     * @see state
+    * @see onLoadedSurveyFromService
     */
   def loadSurveyFromService(): Unit = js.native
   def loadSurveyFromService(surveyId: String): Unit = js.native
@@ -1527,10 +1528,6 @@ class SurveyModel ()
     */
   def prevPage(): Boolean = js.native
   def processHtml(html: String): String = js.native
-  /* CompleteClass */
-  override def processText(text: String, returnDisplayValue: Boolean): String = js.native
-  /* CompleteClass */
-  override def processTextEx(text: String, returnDisplayValue: Boolean, doEncoding: Boolean): js.Any = js.native
   def questionAdded(question: IQuestion, index: Double, parentPanel: js.Any, rootPanel: js.Any): js.Any = js.native
   @JSName("questionAdded")
   def questionAdded_Unit(question: IQuestion, index: Double, parentPanel: js.Any, rootPanel: js.Any): Unit = js.native
@@ -1578,8 +1575,6 @@ class SurveyModel ()
     * @see getComment
     */
   def setComment(name: String, newValue: String): Unit = js.native
-  /* CompleteClass */
-  override def setCompleted(): js.Any = js.native
   /* protected */ def setCompletedState(value: String, text: String): Unit = js.native
   /**
     * Set the cookie with `cookieName` in user's browser. It is done automatically on survey complete if the `cookieName` property value is not empty.
@@ -1595,8 +1590,6 @@ class SurveyModel ()
     */
   def setDesignMode(value: Boolean): Unit = js.native
   def setJsonObject(jsonObj: js.Any): Unit = js.native
-  /* CompleteClass */
-  override def setTriggerValue(name: String, value: js.Any, isVariable: Boolean): js.Any = js.native
   /**
     * Sets a question value (answer). It runs all triggers and conditions (`visibleIf` properties).
     *

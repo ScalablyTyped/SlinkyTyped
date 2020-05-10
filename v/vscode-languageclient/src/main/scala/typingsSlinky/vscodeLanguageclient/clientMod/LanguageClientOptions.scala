@@ -8,58 +8,204 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LanguageClientOptions extends js.Object {
-  var diagnosticCollectionName: js.UndefOr[String] = js.undefined
-  var documentSelector: js.UndefOr[DocumentSelector | js.Array[String]] = js.undefined
-  var errorHandler: js.UndefOr[ErrorHandler] = js.undefined
-  var initializationFailedHandler: js.UndefOr[InitializationFailedHandler] = js.undefined
-  var initializationOptions: js.UndefOr[js.Any | js.Function0[_]] = js.undefined
-  var middleware: js.UndefOr[Middleware] = js.undefined
-  var outputChannel: js.UndefOr[OutputChannel] = js.undefined
-  var outputChannelName: js.UndefOr[String] = js.undefined
-  var revealOutputChannelOn: js.UndefOr[RevealOutputChannelOn] = js.undefined
+  var diagnosticCollectionName: js.UndefOr[String] = js.native
+  var documentSelector: js.UndefOr[DocumentSelector | js.Array[String]] = js.native
+  var errorHandler: js.UndefOr[ErrorHandler] = js.native
+  var initializationFailedHandler: js.UndefOr[InitializationFailedHandler] = js.native
+  var initializationOptions: js.UndefOr[js.Any | js.Function0[_]] = js.native
+  var middleware: js.UndefOr[Middleware] = js.native
+  var outputChannel: js.UndefOr[OutputChannel] = js.native
+  var outputChannelName: js.UndefOr[String] = js.native
+  var revealOutputChannelOn: js.UndefOr[RevealOutputChannelOn] = js.native
   /**
     * The encoding use to read stdout and stderr. Defaults
     * to 'utf8' if ommitted.
     */
-  var stdioEncoding: js.UndefOr[String] = js.undefined
-  var synchronize: js.UndefOr[SynchronizeOptions] = js.undefined
-  var uriConverters: js.UndefOr[AnonCode2Protocol] = js.undefined
-  var workspaceFolder: js.UndefOr[WorkspaceFolder] = js.undefined
+  var stdioEncoding: js.UndefOr[String] = js.native
+  var synchronize: js.UndefOr[SynchronizeOptions] = js.native
+  var uriConverters: js.UndefOr[AnonCode2Protocol] = js.native
+  var workspaceFolder: js.UndefOr[WorkspaceFolder] = js.native
 }
 
 object LanguageClientOptions {
   @scala.inline
-  def apply(
-    diagnosticCollectionName: String = null,
-    documentSelector: DocumentSelector | js.Array[String] = null,
-    errorHandler: ErrorHandler = null,
-    initializationFailedHandler: /* error */ typingsSlinky.vscodeLanguageserverProtocol.mod.ResponseError[typingsSlinky.vscodeLanguageserverProtocol.protocolMod.InitializeError] | js.Error | js.Any => Boolean = null,
-    initializationOptions: js.Any | js.Function0[_] = null,
-    middleware: Middleware = null,
-    outputChannel: OutputChannel = null,
-    outputChannelName: String = null,
-    revealOutputChannelOn: RevealOutputChannelOn = null,
-    stdioEncoding: String = null,
-    synchronize: SynchronizeOptions = null,
-    uriConverters: AnonCode2Protocol = null,
-    workspaceFolder: WorkspaceFolder = null
-  ): LanguageClientOptions = {
+  def apply(): LanguageClientOptions = {
     val __obj = js.Dynamic.literal()
-    if (diagnosticCollectionName != null) __obj.updateDynamic("diagnosticCollectionName")(diagnosticCollectionName.asInstanceOf[js.Any])
-    if (documentSelector != null) __obj.updateDynamic("documentSelector")(documentSelector.asInstanceOf[js.Any])
-    if (errorHandler != null) __obj.updateDynamic("errorHandler")(errorHandler.asInstanceOf[js.Any])
-    if (initializationFailedHandler != null) __obj.updateDynamic("initializationFailedHandler")(js.Any.fromFunction1(initializationFailedHandler))
-    if (initializationOptions != null) __obj.updateDynamic("initializationOptions")(initializationOptions.asInstanceOf[js.Any])
-    if (middleware != null) __obj.updateDynamic("middleware")(middleware.asInstanceOf[js.Any])
-    if (outputChannel != null) __obj.updateDynamic("outputChannel")(outputChannel.asInstanceOf[js.Any])
-    if (outputChannelName != null) __obj.updateDynamic("outputChannelName")(outputChannelName.asInstanceOf[js.Any])
-    if (revealOutputChannelOn != null) __obj.updateDynamic("revealOutputChannelOn")(revealOutputChannelOn.asInstanceOf[js.Any])
-    if (stdioEncoding != null) __obj.updateDynamic("stdioEncoding")(stdioEncoding.asInstanceOf[js.Any])
-    if (synchronize != null) __obj.updateDynamic("synchronize")(synchronize.asInstanceOf[js.Any])
-    if (uriConverters != null) __obj.updateDynamic("uriConverters")(uriConverters.asInstanceOf[js.Any])
-    if (workspaceFolder != null) __obj.updateDynamic("workspaceFolder")(workspaceFolder.asInstanceOf[js.Any])
     __obj.asInstanceOf[LanguageClientOptions]
   }
+  @scala.inline
+  implicit class LanguageClientOptionsOps[Self <: LanguageClientOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDiagnosticCollectionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diagnosticCollectionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiagnosticCollectionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diagnosticCollectionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentSelector(value: DocumentSelector | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentSelector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentSelector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorHandler(value: ErrorHandler): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorHandler")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorHandler: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorHandler")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitializationFailedHandler(
+      value: /* error */ typingsSlinky.vscodeLanguageserverProtocol.mod.ResponseError[typingsSlinky.vscodeLanguageserverProtocol.protocolMod.InitializeError] | js.Error | js.Any => Boolean
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initializationFailedHandler")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutInitializationFailedHandler: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initializationFailedHandler")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitializationOptionsFunction0(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initializationOptions")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withInitializationOptions(value: js.Any | js.Function0[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initializationOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitializationOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initializationOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMiddleware(value: Middleware): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("middleware")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMiddleware: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("middleware")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputChannel(value: OutputChannel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputChannel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputChannel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputChannel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputChannelName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputChannelName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputChannelName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputChannelName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevealOutputChannelOn(value: RevealOutputChannelOn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revealOutputChannelOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevealOutputChannelOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revealOutputChannelOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStdioEncoding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stdioEncoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStdioEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stdioEncoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSynchronize(value: SynchronizeOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSynchronize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUriConverters(value: AnonCode2Protocol): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uriConverters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUriConverters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uriConverters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkspaceFolder(value: WorkspaceFolder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workspaceFolder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkspaceFolder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workspaceFolder")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

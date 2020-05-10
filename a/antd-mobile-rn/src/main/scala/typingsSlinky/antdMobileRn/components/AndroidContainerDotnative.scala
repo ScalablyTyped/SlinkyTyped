@@ -1,9 +1,7 @@
 package typingsSlinky.antdMobileRn.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobileRn.androidContainerNativeMod.ActionSheetNativeProps
 import typingsSlinky.antdMobileRn.androidContainerNativeMod.default
 import typingsSlinky.antdMobileRn.styleIndexNativeMod.ActionSheetStyle
@@ -12,29 +10,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AndroidContainerDotnative
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object AndroidContainerDotnative {
   @JSImport("antd-mobile-rn/lib/action-sheet/AndroidContainer.native", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    config: ActionSheetIOSOptions,
-    callback: /* index */ Double => Unit = null,
-    onAnimationEnd: /* visible */ Boolean => Unit = null,
-    styles: ActionSheetStyle = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any])
-    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction1(callback))
-    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def callback(value: /* index */ Double => Unit): this.type = set("callback", js.Any.fromFunction1(value))
+    @scala.inline
+    def onAnimationEnd(value: /* visible */ Boolean => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: ActionSheetStyle): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
-  type Props = ActionSheetNativeProps
+  
+  def withProps(p: ActionSheetNativeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(config: ActionSheetIOSOptions): Builder = {
+    val __props = js.Dynamic.literal(config = config.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ActionSheetNativeProps]))
+  }
 }
 

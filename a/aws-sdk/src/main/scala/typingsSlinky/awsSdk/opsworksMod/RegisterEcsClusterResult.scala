@@ -14,10 +14,29 @@ trait RegisterEcsClusterResult extends js.Object {
 
 object RegisterEcsClusterResult {
   @scala.inline
-  def apply(EcsClusterArn: String = null): RegisterEcsClusterResult = {
+  def apply(): RegisterEcsClusterResult = {
     val __obj = js.Dynamic.literal()
-    if (EcsClusterArn != null) __obj.updateDynamic("EcsClusterArn")(EcsClusterArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterEcsClusterResult]
   }
+  @scala.inline
+  implicit class RegisterEcsClusterResultOps[Self <: RegisterEcsClusterResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEcsClusterArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EcsClusterArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEcsClusterArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EcsClusterArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -10,84 +10,184 @@ import scala.scalajs.js.annotation._
 /**
   * Define filter-extension options
   */
+@js.native
 trait Filter
-  extends /**
-  * Support misc options
-  */
-/* key */ StringDictionary[js.Any] {
+  extends /* extension */ StringDictionary[js.Any] {
   /**
     * Re-apply last filter if lazy data is loaded
     */
-  var autoApply: js.UndefOr[Boolean] = js.undefined
+  var autoApply: js.UndefOr[Boolean] = js.native
   /**
     * Expand all branches that contain matches while filtered
     */
-  var autoExpand: js.UndefOr[Boolean] = js.undefined
+  var autoExpand: js.UndefOr[Boolean] = js.native
   /**
     * Show a badge with number of matching child nodes near parent icons
     */
-  var counter: js.UndefOr[Boolean] = js.undefined
+  var counter: js.UndefOr[Boolean] = js.native
   /**
     * Match single characters in order, e.g. 'fb' will match 'FooBar'
     */
-  var fuzzy: js.UndefOr[Boolean] = js.undefined
+  var fuzzy: js.UndefOr[Boolean] = js.native
   /**
     * Hide counter badge if parent is expanded
     */
-  var hideExpandedCounter: js.UndefOr[Boolean] = js.undefined
+  var hideExpandedCounter: js.UndefOr[Boolean] = js.native
   /**
     * Hide expanders if all child nodes are hidden by filter
     */
-  var hideExpanders: js.UndefOr[Boolean] = js.undefined
+  var hideExpanders: js.UndefOr[Boolean] = js.native
   /**
     * Highlight matches by wrapping inside <mark> tags
     */
-  var highlight: js.UndefOr[Boolean] = js.undefined
+  var highlight: js.UndefOr[Boolean] = js.native
   /**
     * Match end nodes only
     */
-  var leavesOnly: js.UndefOr[Boolean] = js.undefined
+  var leavesOnly: js.UndefOr[Boolean] = js.native
   /**
     * Grayout unmatched nodes (pass "hide" to remove unmatched node instead); default 'dimm'
     */
-  var mode: js.UndefOr[dimm | hide] = js.undefined
+  var mode: js.UndefOr[dimm | hide] = js.native
   /**
     * Display a 'no data' status node if result is empty
     */
-  var nodata: js.UndefOr[Boolean] = js.undefined
+  var nodata: js.UndefOr[Boolean] = js.native
 }
 
 object Filter {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-    * Support misc options
-    */
-  /* key */ StringDictionary[js.Any] = null,
-    autoApply: js.UndefOr[Boolean] = js.undefined,
-    autoExpand: js.UndefOr[Boolean] = js.undefined,
-    counter: js.UndefOr[Boolean] = js.undefined,
-    fuzzy: js.UndefOr[Boolean] = js.undefined,
-    hideExpandedCounter: js.UndefOr[Boolean] = js.undefined,
-    hideExpanders: js.UndefOr[Boolean] = js.undefined,
-    highlight: js.UndefOr[Boolean] = js.undefined,
-    leavesOnly: js.UndefOr[Boolean] = js.undefined,
-    mode: dimm | hide = null,
-    nodata: js.UndefOr[Boolean] = js.undefined
-  ): Filter = {
+  def apply(): Filter = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(autoApply)) __obj.updateDynamic("autoApply")(autoApply.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoExpand)) __obj.updateDynamic("autoExpand")(autoExpand.asInstanceOf[js.Any])
-    if (!js.isUndefined(counter)) __obj.updateDynamic("counter")(counter.asInstanceOf[js.Any])
-    if (!js.isUndefined(fuzzy)) __obj.updateDynamic("fuzzy")(fuzzy.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideExpandedCounter)) __obj.updateDynamic("hideExpandedCounter")(hideExpandedCounter.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideExpanders)) __obj.updateDynamic("hideExpanders")(hideExpanders.asInstanceOf[js.Any])
-    if (!js.isUndefined(highlight)) __obj.updateDynamic("highlight")(highlight.asInstanceOf[js.Any])
-    if (!js.isUndefined(leavesOnly)) __obj.updateDynamic("leavesOnly")(leavesOnly.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (!js.isUndefined(nodata)) __obj.updateDynamic("nodata")(nodata.asInstanceOf[js.Any])
     __obj.asInstanceOf[Filter]
   }
+  @scala.inline
+  implicit class FilterOps[Self <: Filter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoApply(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoApply")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoApply: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoApply")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoExpand(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoExpand")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoExpand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoExpand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCounter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("counter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCounter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("counter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFuzzy(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fuzzy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFuzzy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fuzzy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideExpandedCounter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideExpandedCounter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideExpandedCounter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideExpandedCounter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideExpanders(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideExpanders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideExpanders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideExpanders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighlight(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeavesOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leavesOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeavesOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leavesOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: dimm | hide): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodata(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodata")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

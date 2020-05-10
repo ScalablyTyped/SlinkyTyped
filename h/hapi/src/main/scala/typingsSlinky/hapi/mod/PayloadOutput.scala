@@ -13,12 +13,10 @@ trait PayloadOutput extends js.Object
 
 object PayloadOutput {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def data: typingsSlinky.hapi.hapiStrings.data = "data".asInstanceOf[typingsSlinky.hapi.hapiStrings.data]
   @scala.inline
-  def data: typingsSlinky.hapi.hapiStrings.data = this.cast("data")
+  def file: typingsSlinky.hapi.hapiStrings.file = "file".asInstanceOf[typingsSlinky.hapi.hapiStrings.file]
   @scala.inline
-  def file: typingsSlinky.hapi.hapiStrings.file = this.cast("file")
-  @scala.inline
-  def stream: typingsSlinky.hapi.hapiStrings.stream = this.cast("stream")
+  def stream: typingsSlinky.hapi.hapiStrings.stream = "stream".asInstanceOf[typingsSlinky.hapi.hapiStrings.stream]
 }
 

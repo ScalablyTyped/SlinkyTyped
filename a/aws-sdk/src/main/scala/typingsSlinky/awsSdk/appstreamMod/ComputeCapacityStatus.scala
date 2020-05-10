@@ -26,17 +26,59 @@ trait ComputeCapacityStatus extends js.Object {
 
 object ComputeCapacityStatus {
   @scala.inline
-  def apply(
-    Desired: Integer,
-    Available: Int | Double = null,
-    InUse: Int | Double = null,
-    Running: Int | Double = null
-  ): ComputeCapacityStatus = {
+  def apply(Desired: Integer): ComputeCapacityStatus = {
     val __obj = js.Dynamic.literal(Desired = Desired.asInstanceOf[js.Any])
-    if (Available != null) __obj.updateDynamic("Available")(Available.asInstanceOf[js.Any])
-    if (InUse != null) __obj.updateDynamic("InUse")(InUse.asInstanceOf[js.Any])
-    if (Running != null) __obj.updateDynamic("Running")(Running.asInstanceOf[js.Any])
     __obj.asInstanceOf[ComputeCapacityStatus]
   }
+  @scala.inline
+  implicit class ComputeCapacityStatusOps[Self <: ComputeCapacityStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDesired(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Desired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAvailable(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Available")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Available")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInUse(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InUse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInUse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InUse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRunning(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Running")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRunning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Running")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

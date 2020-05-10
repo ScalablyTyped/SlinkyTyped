@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ZoomTransform_ extends js.Object {
   /**
     * The scale factor k.
@@ -11,21 +12,21 @@ trait ZoomTransform_ extends js.Object {
     * use transform.scale and transform.translate to derive a new transform.
     * Also see zoom.scaleBy, zoom.scaleTo and zoom.translateBy for convenience methods on the zoom behavior.
     */
-  val k: Double
+  val k: Double = js.native
   /**
     * The translation amount tx along the x-axis.
     * This property should be considered read-only; instead of mutating a transform,
     * use transform.scale and transform.translate to derive a new transform.
     * Also see zoom.scaleBy, zoom.scaleTo and zoom.translateBy for convenience methods on the zoom behavior.
     */
-  val x: Double
+  val x: Double = js.native
   /**
     * The translation amount ty along the y-axis
     * This property should be considered read-only; instead of mutating a transform,
     * use transform.scale and transform.translate to derive a new transform.
     * Also see zoom.scaleBy, zoom.scaleTo and zoom.translateBy for convenience methods on the zoom behavior.
     */
-  val y: Double
+  val y: Double = js.native
   /**
     * Return the transformation of the specified point which is a two-element array of numbers [x, y].
     * The returned point is equal to [xk + tx, yk + ty].
@@ -33,38 +34,38 @@ trait ZoomTransform_ extends js.Object {
     * @param point Point coordinates [x, y]
     */
   @JSName("apply")
-  def apply(point: js.Tuple2[Double, Double]): js.Tuple2[Double, Double]
+  def apply(point: js.Tuple2[Double, Double]): js.Tuple2[Double, Double] = js.native
   /**
     * Return the transformation of the specified x-coordinate, xk + tx.
     *
     * @param x Value of x-coordinate.
     */
-  def applyX(x: Double): Double
+  def applyX(x: Double): Double = js.native
   /**
     * Return the transformation of the specified y-coordinate, yk + ty.
     *
     * @param y Value of y-coordinate.
     */
-  def applyY(y: Double): Double
+  def applyY(y: Double): Double = js.native
   /**
     * Return the inverse transformation of the specified point which is a two-element array of numbers [x, y].
     * The returned point is equal to [(x - tx) / k, (y - ty) / k].
     *
     * @param point Point coordinates [x, y]
     */
-  def invert(point: js.Tuple2[Double, Double]): js.Tuple2[Double, Double]
+  def invert(point: js.Tuple2[Double, Double]): js.Tuple2[Double, Double] = js.native
   /**
     * Return the inverse transformation of the specified x-coordinate, (x - tx) / k.
     *
     * @param x Value of x-coordinate.
     */
-  def invertX(x: Double): Double
+  def invertX(x: Double): Double = js.native
   /**
     * Return the inverse transformation of the specified y-coordinate, (y - ty) / k.
     *
     * @param y Value of y-coordinate.
     */
-  def invertY(y: Double): Double
+  def invertY(y: Double): Double = js.native
   /**
     * Returns a copy of the continuous scale x whose domain is transformed.
     * This is implemented by first applying the inverse x-transform on the scale’s range,
@@ -77,7 +78,7 @@ trait ZoomTransform_ extends js.Object {
     *
     * @param xScale A continuous scale for x-dimension.
     */
-  def rescaleX[S /* <: ZoomScale */](xScale: S): S
+  def rescaleX[S /* <: ZoomScale */](xScale: S): S = js.native
   /**
     * Returns a copy of the continuous scale y whose domain is transformed.
     * This is implemented by first applying the inverse y-transform on the scale’s range,
@@ -90,13 +91,13 @@ trait ZoomTransform_ extends js.Object {
     *
     * @param yScale A continuous scale for y-dimension.
     */
-  def rescaleY[S /* <: ZoomScale */](yScale: S): S
+  def rescaleY[S /* <: ZoomScale */](yScale: S): S = js.native
   /**
     * Return a transform whose scale k1 is equal to k0 × k, where k0 is this transform’s scale.
     *
     * @param k A scale factor.
     */
-  def scale(k: Double): ZoomTransform_
+  def scale(k: Double): ZoomTransform_ = js.native
   /**
     * Return a transform whose translation tx1 and ty1 is equal to tx0 + x and ty0 + y,
     * where tx0 and ty0 is this transform’s translation.
@@ -104,7 +105,7 @@ trait ZoomTransform_ extends js.Object {
     * @param x Amount of translation in x-direction.
     * @param y Amount of translation in y-direction.
     */
-  def translate(x: Double, y: Double): ZoomTransform_
+  def translate(x: Double, y: Double): ZoomTransform_ = js.native
 }
 
 object ZoomTransform_ {
@@ -125,8 +126,93 @@ object ZoomTransform_ {
     y: Double
   ): ZoomTransform_ = {
     val __obj = js.Dynamic.literal(apply = js.Any.fromFunction1(apply), applyX = js.Any.fromFunction1(applyX), applyY = js.Any.fromFunction1(applyY), invert = js.Any.fromFunction1(invert), invertX = js.Any.fromFunction1(invertX), invertY = js.Any.fromFunction1(invertY), k = k.asInstanceOf[js.Any], rescaleX = js.Any.fromFunction1(rescaleX), rescaleY = js.Any.fromFunction1(rescaleY), scale = js.Any.fromFunction1(scale), translate = js.Any.fromFunction2(translate), x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ZoomTransform_]
   }
+  @scala.inline
+  implicit class ZoomTransform_Ops[Self <: ZoomTransform_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApply(value: js.Tuple2[Double, Double] => js.Tuple2[Double, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withApplyX(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applyX")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withApplyY(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applyY")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInvert(value: js.Tuple2[Double, Double] => js.Tuple2[Double, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invert")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInvertX(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invertX")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInvertY(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invertY")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withK(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("k")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRescaleX(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rescaleX")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRescaleY(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rescaleY")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withScale(value: Double => ZoomTransform_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTranslate(value: (Double, Double) => ZoomTransform_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

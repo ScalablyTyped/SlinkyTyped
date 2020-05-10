@@ -1,0 +1,157 @@
+package typingsSlinky.babylonjs.abstractMeshMod
+
+import typingsSlinky.babylonjs.skeletonMod.Skeleton
+import typingsSlinky.babylonjs.typesMod.Nullable
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * @hidden
+  **/
+@js.native
+trait InternalAbstractMeshDataInfo extends js.Object {
+  var _actAsRegularMesh: Boolean = js.native
+  var _applyFog: Boolean = js.native
+  var _computeBonesUsingShaders: Boolean = js.native
+  var _facetData: FacetDataStorage = js.native
+  var _hasVertexAlpha: Boolean = js.native
+  var _isActive: Boolean = js.native
+  var _isActiveIntermediate: Boolean = js.native
+  var _layerMask: Double = js.native
+  var _numBoneInfluencers: Double = js.native
+  var _onlyForInstances: Boolean = js.native
+  var _onlyForInstancesIntermediate: Boolean = js.native
+  var _receiveShadows: Boolean = js.native
+  var _skeleton: Nullable[Skeleton] = js.native
+  var _useVertexColors: Boolean = js.native
+  var _visibility: Double = js.native
+}
+
+object InternalAbstractMeshDataInfo {
+  @scala.inline
+  def apply(
+    _actAsRegularMesh: Boolean,
+    _applyFog: Boolean,
+    _computeBonesUsingShaders: Boolean,
+    _facetData: FacetDataStorage,
+    _hasVertexAlpha: Boolean,
+    _isActive: Boolean,
+    _isActiveIntermediate: Boolean,
+    _layerMask: Double,
+    _numBoneInfluencers: Double,
+    _onlyForInstances: Boolean,
+    _onlyForInstancesIntermediate: Boolean,
+    _receiveShadows: Boolean,
+    _useVertexColors: Boolean,
+    _visibility: Double
+  ): InternalAbstractMeshDataInfo = {
+    val __obj = js.Dynamic.literal(_actAsRegularMesh = _actAsRegularMesh.asInstanceOf[js.Any], _applyFog = _applyFog.asInstanceOf[js.Any], _computeBonesUsingShaders = _computeBonesUsingShaders.asInstanceOf[js.Any], _facetData = _facetData.asInstanceOf[js.Any], _hasVertexAlpha = _hasVertexAlpha.asInstanceOf[js.Any], _isActive = _isActive.asInstanceOf[js.Any], _isActiveIntermediate = _isActiveIntermediate.asInstanceOf[js.Any], _layerMask = _layerMask.asInstanceOf[js.Any], _numBoneInfluencers = _numBoneInfluencers.asInstanceOf[js.Any], _onlyForInstances = _onlyForInstances.asInstanceOf[js.Any], _onlyForInstancesIntermediate = _onlyForInstancesIntermediate.asInstanceOf[js.Any], _receiveShadows = _receiveShadows.asInstanceOf[js.Any], _useVertexColors = _useVertexColors.asInstanceOf[js.Any], _visibility = _visibility.asInstanceOf[js.Any])
+    __obj.asInstanceOf[InternalAbstractMeshDataInfo]
+  }
+  @scala.inline
+  implicit class InternalAbstractMeshDataInfoOps[Self <: InternalAbstractMeshDataInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_actAsRegularMesh(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_actAsRegularMesh")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_applyFog(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_applyFog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_computeBonesUsingShaders(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_computeBonesUsingShaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_facetData(value: FacetDataStorage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_facetData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_hasVertexAlpha(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_hasVertexAlpha")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_isActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_isActive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_isActiveIntermediate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_isActiveIntermediate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_layerMask(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_layerMask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_numBoneInfluencers(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_numBoneInfluencers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_onlyForInstances(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_onlyForInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_onlyForInstancesIntermediate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_onlyForInstancesIntermediate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_receiveShadows(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_receiveShadows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_useVertexColors(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_useVertexColors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_visibility(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_visibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_skeleton(value: Nullable[Skeleton]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_skeleton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_skeletonNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_skeleton")(null)
+        ret
+    }
+  }
+  
+}
+

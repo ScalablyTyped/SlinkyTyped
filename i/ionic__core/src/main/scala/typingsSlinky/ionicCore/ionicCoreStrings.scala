@@ -9,9 +9,11 @@ import typingsSlinky.ionicCore.mod.PredefinedColors
 import typingsSlinky.ionicCore.mod.Side
 import typingsSlinky.ionicCore.mod.TextFieldTypes
 import typingsSlinky.ionicCore.navInterfaceMod.NavDirection
+import typingsSlinky.ionicCore.platformMod.Platforms
 import typingsSlinky.ionicCore.rangeInterfaceMod._KnobName
 import typingsSlinky.ionicCore.segmentSegmentInterfaceMod.SegmentButtonLayout
 import typingsSlinky.ionicCore.selectInterfaceMod.SelectInterface
+import typingsSlinky.ionicCore.spinnerConfigsMod.SpinnerTypes
 import typingsSlinky.ionicCore.tabBarInterfaceMod.TabButtonLayout
 import typingsSlinky.ionicCore.virtualScrollInterfaceMod.CellType
 import scala.scalajs.js
@@ -65,7 +67,7 @@ object ionicCoreStrings {
   sealed trait `alternate-reverse` extends AnimationDirection
   
   @js.native
-  sealed trait android extends js.Object
+  sealed trait android extends Platforms
   
   @js.native
   sealed trait animated extends js.Object
@@ -86,9 +88,6 @@ object ionicCoreStrings {
   
   @js.native
   sealed trait backButtonText extends js.Object
-  
-  @js.native
-  sealed trait backdrop extends js.Object
   
   @js.native
   sealed trait backwards extends AnimationFill
@@ -115,6 +114,9 @@ object ionicCoreStrings {
   sealed trait bounded extends js.Object
   
   @js.native
+  sealed trait bubbles extends SpinnerTypes
+  
+  @js.native
   sealed trait butt extends js.Object
   
   @js.native
@@ -124,7 +126,7 @@ object ionicCoreStrings {
   sealed trait cancel extends js.Object
   
   @js.native
-  sealed trait capacitor extends js.Object
+  sealed trait capacitor extends Platforms
   
   @js.native
   sealed trait center extends js.Object
@@ -136,13 +138,22 @@ object ionicCoreStrings {
   sealed trait checkbox extends js.Object
   
   @js.native
+  sealed trait circles extends SpinnerTypes
+  
+  @js.native
+  sealed trait circular extends SpinnerTypes
+  
+  @js.native
   sealed trait clear extends js.Object
   
   @js.native
   sealed trait condense extends js.Object
   
   @js.native
-  sealed trait cordova extends js.Object
+  sealed trait cordova extends Platforms
+  
+  @js.native
+  sealed trait crescent extends SpinnerTypes
   
   @js.native
   sealed trait danger extends PredefinedColors
@@ -160,7 +171,7 @@ object ionicCoreStrings {
   sealed trait default extends js.Object
   
   @js.native
-  sealed trait desktop extends js.Object
+  sealed trait desktop extends Platforms
   
   @js.native
   sealed trait destructive extends js.Object
@@ -169,10 +180,13 @@ object ionicCoreStrings {
   sealed trait determinate extends js.Object
   
   @js.native
+  sealed trait dots extends SpinnerTypes
+  
+  @js.native
   sealed trait eager extends js.Object
   
   @js.native
-  sealed trait electron extends js.Object
+  sealed trait electron extends Platforms
   
   @js.native
   sealed trait email extends TextFieldTypes
@@ -233,7 +247,7 @@ object ionicCoreStrings {
   sealed trait high extends js.Object
   
   @js.native
-  sealed trait hybrid extends js.Object
+  sealed trait hybrid extends Platforms
   
   @js.native
   sealed trait `icon-bottom`
@@ -290,28 +304,15 @@ object ionicCoreStrings {
   sealed trait inset extends js.Object
   
   @js.native
-  sealed trait ionViewDidEnter extends js.Object
+  sealed trait ios
+    extends Mode
+       with Platforms
   
   @js.native
-  sealed trait ionViewDidLeave extends js.Object
+  sealed trait ipad extends Platforms
   
   @js.native
-  sealed trait ionViewWillEnter extends js.Object
-  
-  @js.native
-  sealed trait ionViewWillLeave extends js.Object
-  
-  @js.native
-  sealed trait ionViewWillUnload extends js.Object
-  
-  @js.native
-  sealed trait ios extends Mode
-  
-  @js.native
-  sealed trait ipad extends js.Object
-  
-  @js.native
-  sealed trait iphone extends js.Object
+  sealed trait iphone extends Platforms
   
   @js.native
   sealed trait isolated extends js.Object
@@ -339,6 +340,12 @@ object ionicCoreStrings {
   
   @js.native
   sealed trait linearRGB extends js.Object
+  
+  @js.native
+  sealed trait lines extends SpinnerTypes
+  
+  @js.native
+  sealed trait `lines-small` extends SpinnerTypes
   
   @js.native
   sealed trait loadingEnter extends js.Object
@@ -377,10 +384,10 @@ object ionicCoreStrings {
   sealed trait miter extends js.Object
   
   @js.native
-  sealed trait mobile extends js.Object
+  sealed trait mobile extends Platforms
   
   @js.native
-  sealed trait mobileweb extends js.Object
+  sealed trait mobileweb extends Platforms
   
   @js.native
   sealed trait modalEnter extends js.Object
@@ -428,7 +435,7 @@ object ionicCoreStrings {
   sealed trait persistConfig extends js.Object
   
   @js.native
-  sealed trait phablet extends js.Object
+  sealed trait phablet extends Platforms
   
   @js.native
   sealed trait pickerEnter extends js.Object
@@ -449,7 +456,7 @@ object ionicCoreStrings {
   sealed trait primary extends PredefinedColors
   
   @js.native
-  sealed trait pwa extends js.Object
+  sealed trait pwa extends Platforms
   
   @js.native
   sealed trait radio extends js.Object
@@ -541,7 +548,7 @@ object ionicCoreStrings {
   sealed trait tabButtonLayout extends js.Object
   
   @js.native
-  sealed trait tablet extends js.Object
+  sealed trait tablet extends Platforms
   
   @js.native
   sealed trait tel extends TextFieldTypes
@@ -636,8 +643,6 @@ object ionicCoreStrings {
   @scala.inline
   def backButtonText: backButtonText = "backButtonText".asInstanceOf[backButtonText]
   @scala.inline
-  def backdrop: backdrop = "backdrop".asInstanceOf[backdrop]
-  @scala.inline
   def backwards: backwards = "backwards".asInstanceOf[backwards]
   @scala.inline
   def baseline: baseline = "baseline".asInstanceOf[baseline]
@@ -654,6 +659,8 @@ object ionicCoreStrings {
   @scala.inline
   def bounded: bounded = "bounded".asInstanceOf[bounded]
   @scala.inline
+  def bubbles: bubbles = "bubbles".asInstanceOf[bubbles]
+  @scala.inline
   def butt: butt = "butt".asInstanceOf[butt]
   @scala.inline
   def button: button = "button".asInstanceOf[button]
@@ -668,11 +675,17 @@ object ionicCoreStrings {
   @scala.inline
   def checkbox: checkbox = "checkbox".asInstanceOf[checkbox]
   @scala.inline
+  def circles: circles = "circles".asInstanceOf[circles]
+  @scala.inline
+  def circular: circular = "circular".asInstanceOf[circular]
+  @scala.inline
   def clear: clear = "clear".asInstanceOf[clear]
   @scala.inline
   def condense: condense = "condense".asInstanceOf[condense]
   @scala.inline
   def cordova: cordova = "cordova".asInstanceOf[cordova]
+  @scala.inline
+  def crescent: crescent = "crescent".asInstanceOf[crescent]
   @scala.inline
   def danger: danger = "danger".asInstanceOf[danger]
   @scala.inline
@@ -689,6 +702,8 @@ object ionicCoreStrings {
   def destructive: destructive = "destructive".asInstanceOf[destructive]
   @scala.inline
   def determinate: determinate = "determinate".asInstanceOf[determinate]
+  @scala.inline
+  def dots: dots = "dots".asInstanceOf[dots]
   @scala.inline
   def eager: eager = "eager".asInstanceOf[eager]
   @scala.inline
@@ -758,16 +773,6 @@ object ionicCoreStrings {
   @scala.inline
   def inset: inset = "inset".asInstanceOf[inset]
   @scala.inline
-  def ionViewDidEnter: ionViewDidEnter = "ionViewDidEnter".asInstanceOf[ionViewDidEnter]
-  @scala.inline
-  def ionViewDidLeave: ionViewDidLeave = "ionViewDidLeave".asInstanceOf[ionViewDidLeave]
-  @scala.inline
-  def ionViewWillEnter: ionViewWillEnter = "ionViewWillEnter".asInstanceOf[ionViewWillEnter]
-  @scala.inline
-  def ionViewWillLeave: ionViewWillLeave = "ionViewWillLeave".asInstanceOf[ionViewWillLeave]
-  @scala.inline
-  def ionViewWillUnload: ionViewWillUnload = "ionViewWillUnload".asInstanceOf[ionViewWillUnload]
-  @scala.inline
   def ios: ios = "ios".asInstanceOf[ios]
   @scala.inline
   def ipad: ipad = "ipad".asInstanceOf[ipad]
@@ -789,6 +794,10 @@ object ionicCoreStrings {
   def light: light = "light".asInstanceOf[light]
   @scala.inline
   def linearRGB: linearRGB = "linearRGB".asInstanceOf[linearRGB]
+  @scala.inline
+  def lines: lines = "lines".asInstanceOf[lines]
+  @scala.inline
+  def `lines-small`: `lines-small` = "lines-small".asInstanceOf[`lines-small`]
   @scala.inline
   def loadingEnter: loadingEnter = "loadingEnter".asInstanceOf[loadingEnter]
   @scala.inline

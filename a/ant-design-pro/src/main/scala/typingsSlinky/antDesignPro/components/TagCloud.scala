@@ -1,29 +1,33 @@
 package typingsSlinky.antDesignPro.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.AnonName
 import typingsSlinky.antDesignPro.tagCloudMod.ITagCloudProps
 import typingsSlinky.antDesignPro.tagCloudMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TagCloud
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object TagCloud {
   @JSImport("ant-design-pro/lib/Charts/TagCloud", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: style */
-  def apply(data: js.Array[AnonName], height: Double, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = ITagCloudProps
+  
+  def withProps(p: ITagCloudProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(data: js.Array[AnonName], height: Double): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ITagCloudProps]))
+  }
 }
 

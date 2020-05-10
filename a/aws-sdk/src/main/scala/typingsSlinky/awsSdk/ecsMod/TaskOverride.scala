@@ -34,22 +34,89 @@ trait TaskOverride extends js.Object {
 
 object TaskOverride {
   @scala.inline
-  def apply(
-    containerOverrides: ContainerOverrides = null,
-    cpu: String = null,
-    executionRoleArn: String = null,
-    inferenceAcceleratorOverrides: InferenceAcceleratorOverrides = null,
-    memory: String = null,
-    taskRoleArn: String = null
-  ): TaskOverride = {
+  def apply(): TaskOverride = {
     val __obj = js.Dynamic.literal()
-    if (containerOverrides != null) __obj.updateDynamic("containerOverrides")(containerOverrides.asInstanceOf[js.Any])
-    if (cpu != null) __obj.updateDynamic("cpu")(cpu.asInstanceOf[js.Any])
-    if (executionRoleArn != null) __obj.updateDynamic("executionRoleArn")(executionRoleArn.asInstanceOf[js.Any])
-    if (inferenceAcceleratorOverrides != null) __obj.updateDynamic("inferenceAcceleratorOverrides")(inferenceAcceleratorOverrides.asInstanceOf[js.Any])
-    if (memory != null) __obj.updateDynamic("memory")(memory.asInstanceOf[js.Any])
-    if (taskRoleArn != null) __obj.updateDynamic("taskRoleArn")(taskRoleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[TaskOverride]
   }
+  @scala.inline
+  implicit class TaskOverrideOps[Self <: TaskOverride] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainerOverrides(value: ContainerOverrides): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerOverrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerOverrides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCpu(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCpu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionRoleArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionRoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInferenceAcceleratorOverrides(value: InferenceAcceleratorOverrides): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inferenceAcceleratorOverrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInferenceAcceleratorOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inferenceAcceleratorOverrides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMemory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMemory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskRoleArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskRoleArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

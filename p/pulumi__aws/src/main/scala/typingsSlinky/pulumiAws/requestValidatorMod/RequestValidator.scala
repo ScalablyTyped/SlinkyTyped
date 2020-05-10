@@ -1,6 +1,5 @@
 package typingsSlinky.pulumiAws.requestValidatorMod
 
-import typingsSlinky.pulumiAws.restApiMod.RestApi
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -29,7 +28,7 @@ class RequestValidator protected () extends CustomResource {
   /**
     * The ID of the associated Rest API
     */
-  val restApi: Output_[RestApi] = js.native
+  val restApi: Output_[String] = js.native
   /**
     * Boolean whether to validate request body. Defaults to `false`.
     */

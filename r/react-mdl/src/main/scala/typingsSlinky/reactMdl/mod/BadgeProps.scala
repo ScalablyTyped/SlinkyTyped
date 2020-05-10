@@ -1,37 +1,74 @@
 package typingsSlinky.reactMdl.mod
 
 import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BadgeProps
   extends ClassAttributes[js.Any] {
-  var className: js.UndefOr[String] = js.undefined
-  var noBackground: js.UndefOr[Boolean] = js.undefined
-  var overlap: js.UndefOr[Boolean] = js.undefined
-  var text: String | Double
+  var className: js.UndefOr[String] = js.native
+  var noBackground: js.UndefOr[Boolean] = js.native
+  var overlap: js.UndefOr[Boolean] = js.native
+  var text: String | Double = js.native
 }
 
 object BadgeProps {
   @scala.inline
-  def apply(
-    text: String | Double,
-    className: String = null,
-    key: Key = null,
-    noBackground: js.UndefOr[Boolean] = js.undefined,
-    overlap: js.UndefOr[Boolean] = js.undefined,
-    ref: LegacyRef[js.Any] = null
-  ): BadgeProps = {
+  def apply(text: String | Double): BadgeProps = {
     val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (!js.isUndefined(noBackground)) __obj.updateDynamic("noBackground")(noBackground.asInstanceOf[js.Any])
-    if (!js.isUndefined(overlap)) __obj.updateDynamic("overlap")(overlap.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
     __obj.asInstanceOf[BadgeProps]
   }
+  @scala.inline
+  implicit class BadgePropsOps[Self <: BadgeProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withText(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoBackground(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noBackground")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoBackground: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noBackground")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlap")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

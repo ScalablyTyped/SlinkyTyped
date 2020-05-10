@@ -54,22 +54,89 @@ trait SchemaGeoTargeting extends js.Object {
 
 object SchemaGeoTargeting {
   @scala.inline
-  def apply(
-    cities: js.Array[SchemaCity] = null,
-    countries: js.Array[SchemaCountry] = null,
-    excludeCountries: js.UndefOr[Boolean] = js.undefined,
-    metros: js.Array[SchemaMetro] = null,
-    postalCodes: js.Array[SchemaPostalCode] = null,
-    regions: js.Array[SchemaRegion] = null
-  ): SchemaGeoTargeting = {
+  def apply(): SchemaGeoTargeting = {
     val __obj = js.Dynamic.literal()
-    if (cities != null) __obj.updateDynamic("cities")(cities.asInstanceOf[js.Any])
-    if (countries != null) __obj.updateDynamic("countries")(countries.asInstanceOf[js.Any])
-    if (!js.isUndefined(excludeCountries)) __obj.updateDynamic("excludeCountries")(excludeCountries.asInstanceOf[js.Any])
-    if (metros != null) __obj.updateDynamic("metros")(metros.asInstanceOf[js.Any])
-    if (postalCodes != null) __obj.updateDynamic("postalCodes")(postalCodes.asInstanceOf[js.Any])
-    if (regions != null) __obj.updateDynamic("regions")(regions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGeoTargeting]
   }
+  @scala.inline
+  implicit class SchemaGeoTargetingOps[Self <: SchemaGeoTargeting] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCities(value: js.Array[SchemaCity]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountries(value: js.Array[SchemaCountry]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcludeCountries(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeCountries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludeCountries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeCountries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetros(value: js.Array[SchemaMetro]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metros")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetros: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metros")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostalCodes(value: js.Array[SchemaPostalCode]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostalCodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCodes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegions(value: js.Array[SchemaRegion]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

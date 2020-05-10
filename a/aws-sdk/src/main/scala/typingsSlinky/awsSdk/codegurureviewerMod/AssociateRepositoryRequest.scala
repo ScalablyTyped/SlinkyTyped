@@ -18,10 +18,35 @@ trait AssociateRepositoryRequest extends js.Object {
 
 object AssociateRepositoryRequest {
   @scala.inline
-  def apply(Repository: Repository, ClientRequestToken: ClientRequestToken = null): AssociateRepositoryRequest = {
+  def apply(Repository: Repository): AssociateRepositoryRequest = {
     val __obj = js.Dynamic.literal(Repository = Repository.asInstanceOf[js.Any])
-    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociateRepositoryRequest]
   }
+  @scala.inline
+  implicit class AssociateRepositoryRequestOps[Self <: AssociateRepositoryRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRepository(value: Repository): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Repository")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientRequestToken(value: ClientRequestToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientRequestToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -23,32 +23,30 @@ trait FakeMethod extends js.Object
 
 object FakeMethod {
   @scala.inline
-  def Date: typingsSlinky.lolex.lolexStrings.Date = this.cast("Date")
+  def Date: typingsSlinky.lolex.lolexStrings.Date = "Date".asInstanceOf[typingsSlinky.lolex.lolexStrings.Date]
   @scala.inline
-  def cancelAnimationFrame: typingsSlinky.lolex.lolexStrings.cancelAnimationFrame = this.cast("cancelAnimationFrame")
+  def cancelAnimationFrame: typingsSlinky.lolex.lolexStrings.cancelAnimationFrame = "cancelAnimationFrame".asInstanceOf[typingsSlinky.lolex.lolexStrings.cancelAnimationFrame]
   @scala.inline
-  def cancelIdleCallback: typingsSlinky.lolex.lolexStrings.cancelIdleCallback = this.cast("cancelIdleCallback")
+  def cancelIdleCallback: typingsSlinky.lolex.lolexStrings.cancelIdleCallback = "cancelIdleCallback".asInstanceOf[typingsSlinky.lolex.lolexStrings.cancelIdleCallback]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def clearImmediate: typingsSlinky.lolex.lolexStrings.clearImmediate = "clearImmediate".asInstanceOf[typingsSlinky.lolex.lolexStrings.clearImmediate]
   @scala.inline
-  def clearImmediate: typingsSlinky.lolex.lolexStrings.clearImmediate = this.cast("clearImmediate")
+  def clearInterval: typingsSlinky.lolex.lolexStrings.clearInterval = "clearInterval".asInstanceOf[typingsSlinky.lolex.lolexStrings.clearInterval]
   @scala.inline
-  def clearInterval: typingsSlinky.lolex.lolexStrings.clearInterval = this.cast("clearInterval")
+  def clearTimeout: typingsSlinky.lolex.lolexStrings.clearTimeout = "clearTimeout".asInstanceOf[typingsSlinky.lolex.lolexStrings.clearTimeout]
   @scala.inline
-  def clearTimeout: typingsSlinky.lolex.lolexStrings.clearTimeout = this.cast("clearTimeout")
+  def hrtime: typingsSlinky.lolex.lolexStrings.hrtime = "hrtime".asInstanceOf[typingsSlinky.lolex.lolexStrings.hrtime]
   @scala.inline
-  def hrtime: typingsSlinky.lolex.lolexStrings.hrtime = this.cast("hrtime")
+  def nextTick: typingsSlinky.lolex.lolexStrings.nextTick = "nextTick".asInstanceOf[typingsSlinky.lolex.lolexStrings.nextTick]
   @scala.inline
-  def nextTick: typingsSlinky.lolex.lolexStrings.nextTick = this.cast("nextTick")
+  def requestAnimationFrame: typingsSlinky.lolex.lolexStrings.requestAnimationFrame = "requestAnimationFrame".asInstanceOf[typingsSlinky.lolex.lolexStrings.requestAnimationFrame]
   @scala.inline
-  def requestAnimationFrame: typingsSlinky.lolex.lolexStrings.requestAnimationFrame = this.cast("requestAnimationFrame")
+  def requestIdleCallback: typingsSlinky.lolex.lolexStrings.requestIdleCallback = "requestIdleCallback".asInstanceOf[typingsSlinky.lolex.lolexStrings.requestIdleCallback]
   @scala.inline
-  def requestIdleCallback: typingsSlinky.lolex.lolexStrings.requestIdleCallback = this.cast("requestIdleCallback")
+  def setImmediate: typingsSlinky.lolex.lolexStrings.setImmediate = "setImmediate".asInstanceOf[typingsSlinky.lolex.lolexStrings.setImmediate]
   @scala.inline
-  def setImmediate: typingsSlinky.lolex.lolexStrings.setImmediate = this.cast("setImmediate")
+  def setInterval: typingsSlinky.lolex.lolexStrings.setInterval = "setInterval".asInstanceOf[typingsSlinky.lolex.lolexStrings.setInterval]
   @scala.inline
-  def setInterval: typingsSlinky.lolex.lolexStrings.setInterval = this.cast("setInterval")
-  @scala.inline
-  def setTimeout: typingsSlinky.lolex.lolexStrings.setTimeout = this.cast("setTimeout")
+  def setTimeout: typingsSlinky.lolex.lolexStrings.setTimeout = "setTimeout".asInstanceOf[typingsSlinky.lolex.lolexStrings.setTimeout]
 }
 

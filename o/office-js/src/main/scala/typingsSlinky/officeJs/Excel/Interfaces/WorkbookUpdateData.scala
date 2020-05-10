@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface for updating data on the Workbook object, for use in `workbook.set({ ... })`. */
+@js.native
 trait WorkbookUpdateData extends js.Object {
   /**
     *
@@ -13,7 +14,7 @@ trait WorkbookUpdateData extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var chartDataPointTrack: js.UndefOr[Boolean] = js.undefined
+  var chartDataPointTrack: js.UndefOr[Boolean] = js.native
   /**
     *
     * Specifies whether or not changes have been made since the workbook was last saved.
@@ -21,14 +22,14 @@ trait WorkbookUpdateData extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var isDirty: js.UndefOr[Boolean] = js.undefined
+  var isDirty: js.UndefOr[Boolean] = js.native
   /**
     *
     * Gets the workbook properties.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var properties: js.UndefOr[DocumentPropertiesUpdateData] = js.undefined
+  var properties: js.UndefOr[DocumentPropertiesUpdateData] = js.native
   /**
     *
     * True if calculations in this workbook will be done using only the precision of the numbers as they're displayed.
@@ -36,23 +37,70 @@ trait WorkbookUpdateData extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var usePrecisionAsDisplayed: js.UndefOr[Boolean] = js.undefined
+  var usePrecisionAsDisplayed: js.UndefOr[Boolean] = js.native
 }
 
 object WorkbookUpdateData {
   @scala.inline
-  def apply(
-    chartDataPointTrack: js.UndefOr[Boolean] = js.undefined,
-    isDirty: js.UndefOr[Boolean] = js.undefined,
-    properties: DocumentPropertiesUpdateData = null,
-    usePrecisionAsDisplayed: js.UndefOr[Boolean] = js.undefined
-  ): WorkbookUpdateData = {
+  def apply(): WorkbookUpdateData = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(chartDataPointTrack)) __obj.updateDynamic("chartDataPointTrack")(chartDataPointTrack.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDirty)) __obj.updateDynamic("isDirty")(isDirty.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
-    if (!js.isUndefined(usePrecisionAsDisplayed)) __obj.updateDynamic("usePrecisionAsDisplayed")(usePrecisionAsDisplayed.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkbookUpdateData]
   }
+  @scala.inline
+  implicit class WorkbookUpdateDataOps[Self <: WorkbookUpdateData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChartDataPointTrack(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chartDataPointTrack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChartDataPointTrack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chartDataPointTrack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDirty(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDirty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDirty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDirty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProperties(value: DocumentPropertiesUpdateData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsePrecisionAsDisplayed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usePrecisionAsDisplayed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsePrecisionAsDisplayed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usePrecisionAsDisplayed")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

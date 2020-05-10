@@ -5,7 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type Animations = org.scalablytyped.runtime.StringDictionary[
-    slinky.core.ReactComponentClass[js.Any] | slinky.core.ReactComponentClass[js.Any]
-  ]
+  type Animations = org.scalablytyped.runtime.StringDictionary[slinky.core.ReactComponentClass[js.Any]]
 }

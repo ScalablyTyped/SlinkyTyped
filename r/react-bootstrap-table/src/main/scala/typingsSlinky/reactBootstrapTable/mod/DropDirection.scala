@@ -12,10 +12,8 @@ trait DropDirection extends js.Object
 
 object DropDirection {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dropdown: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.dropdown = "dropdown".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.dropdown]
   @scala.inline
-  def dropdown: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.dropdown = this.cast("dropdown")
-  @scala.inline
-  def dropup: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.dropup = this.cast("dropup")
+  def dropup: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.dropup = "dropup".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.dropup]
 }
 

@@ -40,54 +40,52 @@ trait DurationToken extends js.Object
 
 object DurationToken {
   @scala.inline
-  def M: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.M = this.cast("M")
+  def M: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.M = "M".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.M]
   @scala.inline
-  def MM: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.MM = this.cast("MM")
+  def MM: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.MM = "MM".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.MM]
   @scala.inline
-  def MMM: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.MMM = this.cast("MMM")
+  def MMM: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.MMM = "MMM".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.MMM]
   @scala.inline
-  def S: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.S = this.cast("S")
+  def S: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.S = "S".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.S]
   @scala.inline
-  def SS: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.SS = this.cast("SS")
+  def SS: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.SS = "SS".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.SS]
   @scala.inline
-  def SSS: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.SSS = this.cast("SSS")
+  def SSS: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.SSS = "SSS".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.SSS]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def d: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.d = "d".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.d]
   @scala.inline
-  def d: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.d = this.cast("d")
+  def dd: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.dd = "dd".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.dd]
   @scala.inline
-  def dd: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.dd = this.cast("dd")
+  def ddd: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.ddd = "ddd".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.ddd]
   @scala.inline
-  def ddd: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.ddd = this.cast("ddd")
+  def h: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.h = "h".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.h]
   @scala.inline
-  def h: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.h = this.cast("h")
+  def hh: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.hh = "hh".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.hh]
   @scala.inline
-  def hh: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.hh = this.cast("hh")
+  def hhh: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.hhh = "hhh".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.hhh]
   @scala.inline
-  def hhh: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.hhh = this.cast("hhh")
+  def m: m_ = "m".asInstanceOf[m_]
   @scala.inline
-  def m: m_ = this.cast("m")
+  def mm: mm_ = "mm".asInstanceOf[mm_]
   @scala.inline
-  def mm: mm_ = this.cast("mm")
+  def mmm: mmm_ = "mmm".asInstanceOf[mmm_]
   @scala.inline
-  def mmm: mmm_ = this.cast("mmm")
+  def s: s_ = "s".asInstanceOf[s_]
   @scala.inline
-  def s: s_ = this.cast("s")
+  def ss: ss_ = "ss".asInstanceOf[ss_]
   @scala.inline
-  def ss: ss_ = this.cast("ss")
+  def sss: sss_ = "sss".asInstanceOf[sss_]
   @scala.inline
-  def sss: sss_ = this.cast("sss")
+  def w: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.w = "w".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.w]
   @scala.inline
-  def w: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.w = this.cast("w")
+  def ww: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.ww = "ww".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.ww]
   @scala.inline
-  def ww: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.ww = this.cast("ww")
+  def www: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.www = "www".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.www]
   @scala.inline
-  def www: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.www = this.cast("www")
+  def y: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.y = "y".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.y]
   @scala.inline
-  def y: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.y = this.cast("y")
+  def yy: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.yy = "yy".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.yy]
   @scala.inline
-  def yy: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.yy = this.cast("yy")
-  @scala.inline
-  def yyy: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.yyy = this.cast("yyy")
+  def yyy: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.yyy = "yyy".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.yyy]
 }
 

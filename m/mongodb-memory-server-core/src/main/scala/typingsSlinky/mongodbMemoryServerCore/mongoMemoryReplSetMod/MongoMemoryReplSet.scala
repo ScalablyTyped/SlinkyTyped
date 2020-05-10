@@ -1,11 +1,9 @@
 package typingsSlinky.mongodbMemoryServerCore.mongoMemoryReplSetMod
 
-import typingsSlinky.mongodb.mod.Admin
 import typingsSlinky.mongodbMemoryServerCore.AnonAutoStart
 import typingsSlinky.mongodbMemoryServerCore.mongodbMemoryServerCoreStrings.init
 import typingsSlinky.mongodbMemoryServerCore.mongodbMemoryServerCoreStrings.running
 import typingsSlinky.mongodbMemoryServerCore.mongodbMemoryServerCoreStrings.stopped
-import typingsSlinky.mongodbMemoryServerCore.typesMod.DebugFn
 import typingsSlinky.mongodbMemoryServerCore.typesMod.MongoMemoryInstancePropBaseT
 import typingsSlinky.mongodbMemoryServerCore.typesMod.MongoMemoryInstancePropT
 import typingsSlinky.node.eventsMod.EventEmitter
@@ -16,9 +14,6 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MongoMemoryReplSet extends EventEmitter {
   var _state: init | running | stopped = js.native
-  var admin: js.UndefOr[Admin] = js.native
-  @JSName("debug")
-  var debug_Original: DebugFn = js.native
   var opts: AnonAutoStart = js.native
   var servers: js.Array[typingsSlinky.mongodbMemoryServerCore.mongoMemoryServerMod.default] = js.native
   /**
@@ -29,7 +24,6 @@ trait MongoMemoryReplSet extends EventEmitter {
   def _initServer(instanceOpts: MongoMemoryInstancePropT): typingsSlinky.mongodbMemoryServerCore.mongoMemoryServerMod.default = js.native
   def _waitForPrimary(): js.Promise[Unit] = js.native
   def _waitForPrimary(timeout: Double): js.Promise[Unit] = js.native
-  def debug(args: js.Any*): js.Any = js.native
   def getConnectionString(): js.Promise[String] = js.native
   def getConnectionString(otherDb: String): js.Promise[String] = js.native
   def getConnectionString(otherDb: Boolean): js.Promise[String] = js.native

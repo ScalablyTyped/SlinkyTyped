@@ -18,7 +18,7 @@ object mod extends js.Object {
   /* Inlined parent std.Partial<react-motion.react-motion.MotionProps> */
   @js.native
   trait ReactMotionLoopProps extends js.Object {
-    var children: js.UndefOr[js.Function1[/* interpolatedStyle */ PlainStyle, ReactElement | ReactElement]] = js.native
+    var children: js.UndefOr[js.Function1[/* interpolatedStyle */ PlainStyle, ReactElement]] = js.native
     var defaultStyle: js.UndefOr[PlainStyle] = js.native
     var onRest: js.UndefOr[js.Function0[Unit]] = js.native
     var style: js.UndefOr[Style] = js.native

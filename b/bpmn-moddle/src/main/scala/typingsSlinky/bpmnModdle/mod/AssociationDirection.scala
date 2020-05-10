@@ -13,12 +13,10 @@ trait AssociationDirection extends js.Object
 
 object AssociationDirection {
   @scala.inline
-  def Both: typingsSlinky.bpmnModdle.bpmnModdleStrings.Both = this.cast("Both")
+  def Both: typingsSlinky.bpmnModdle.bpmnModdleStrings.Both = "Both".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.Both]
   @scala.inline
-  def None: typingsSlinky.bpmnModdle.bpmnModdleStrings.None = this.cast("None")
+  def None: typingsSlinky.bpmnModdle.bpmnModdleStrings.None = "None".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.None]
   @scala.inline
-  def One: typingsSlinky.bpmnModdle.bpmnModdleStrings.One = this.cast("One")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def One: typingsSlinky.bpmnModdle.bpmnModdleStrings.One = "One".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.One]
 }
 

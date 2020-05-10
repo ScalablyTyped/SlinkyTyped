@@ -20,8 +20,33 @@ object ExportCertificateRequest {
   @scala.inline
   def apply(CertificateArn: Arn, Passphrase: PassphraseBlob): ExportCertificateRequest = {
     val __obj = js.Dynamic.literal(CertificateArn = CertificateArn.asInstanceOf[js.Any], Passphrase = Passphrase.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ExportCertificateRequest]
   }
+  @scala.inline
+  implicit class ExportCertificateRequestOps[Self <: ExportCertificateRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPassphraseUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Passphrase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPassphrase(value: PassphraseBlob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Passphrase")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

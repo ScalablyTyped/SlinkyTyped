@@ -17,32 +17,6 @@ class DOMPoint ()
   def this(x: Double, y: Double) = this()
   def this(x: Double, y: Double, z: Double) = this()
   def this(x: Double, y: Double, z: Double, w: Double) = this()
-  /**
-    * w coordinate / readonly
-    */
-  /* CompleteClass */
-  override var w: Double = js.native
-  /**
-    * x coordinate / readonly
-    */
-  /* CompleteClass */
-  override var x: Double = js.native
-  /**
-    * y coordinate / readonly
-    */
-  /* CompleteClass */
-  override var y: Double = js.native
-  /**
-    * z coordinate / readonly
-    */
-  /* CompleteClass */
-  override var z: Double = js.native
-  /**
-    * Post-multiply point with matrix.
-    * @param matrix
-    */
-  /* CompleteClass */
-  override def matrixTransform(matrix: typingsSlinky.geometryDom.GeometryDom.DOMMatrixReadOnly): typingsSlinky.geometryDom.GeometryDom.DOMPoint = js.native
 }
 
 @JSGlobal("DOMPoint")

@@ -5,24 +5,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonStartIndex
-  extends /* propName */ StringDictionary[js.Any] {
-  var silent: js.UndefOr[Boolean] = js.undefined
-  var startIndex: js.UndefOr[Double] = js.undefined
+  extends /* key */ StringDictionary[js.Any] {
+  var silent: js.UndefOr[Boolean] = js.native
+  var startIndex: js.UndefOr[Double] = js.native
 }
 
 object AnonStartIndex {
   @scala.inline
-  def apply(
-    StringDictionary: /* propName */ StringDictionary[js.Any] = null,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    startIndex: Int | Double = null
-  ): AnonStartIndex = {
+  def apply(): AnonStartIndex = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.asInstanceOf[js.Any])
-    if (startIndex != null) __obj.updateDynamic("startIndex")(startIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonStartIndex]
   }
+  @scala.inline
+  implicit class AnonStartIndexOps[Self <: AnonStartIndex] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSilent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSilent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

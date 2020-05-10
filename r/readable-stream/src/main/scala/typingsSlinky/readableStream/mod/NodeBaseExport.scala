@@ -9,9 +9,9 @@ import typingsSlinky.readableStream.readableStreamStrings.close
 import typingsSlinky.readableStream.readableStreamStrings.data
 import typingsSlinky.readableStream.readableStreamStrings.end
 import typingsSlinky.readableStream.readableStreamStrings.error
+import typingsSlinky.readableStream.readableStreamStrings.pause
 import typingsSlinky.readableStream.readableStreamStrings.readable
-import typingsSlinky.std.Error
-import typingsSlinky.std.Uint8Array
+import typingsSlinky.readableStream.readableStreamStrings.resume
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +32,7 @@ object NodeBaseExport extends js.Object {
   val readableLength: Double = js.native
   val readableObjectMode: Boolean = js.native
   def _destroy(error: Null, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
-  def _destroy(error: Error, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
+  def _destroy(error: js.Error, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
   def _read(size: Double): Unit = js.native
   def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
@@ -42,8 +42,10 @@ object NodeBaseExport extends js.Object {
     * 1. close
     * 2. data
     * 3. end
-    * 4. readable
-    * 5. error
+    * 4. error
+    * 5. pause
+    * 6. readable
+    * 7. resume
     */
   @JSName("addListener")
   def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
@@ -54,7 +56,11 @@ object NodeBaseExport extends js.Object {
   @JSName("addListener")
   def addListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("addListener")
+  def addListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("addListener")
   def addListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("addListener")
+  def addListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   def destroy(): Unit = js.native
   def destroy(error: js.Error): Unit = js.native
   def emit(event: String, args: js.Any*): Boolean = js.native
@@ -68,7 +74,11 @@ object NodeBaseExport extends js.Object {
   @JSName("emit")
   def emit_error(event: error, err: js.Error): Boolean = js.native
   @JSName("emit")
+  def emit_pause(event: pause): Boolean = js.native
+  @JSName("emit")
   def emit_readable(event: readable): Boolean = js.native
+  @JSName("emit")
+  def emit_resume(event: resume): Boolean = js.native
   def eventNames(): js.Array[String | js.Symbol] = js.native
   def getMaxListeners(): Double = js.native
   def isPaused(): Boolean = js.native
@@ -89,7 +99,11 @@ object NodeBaseExport extends js.Object {
   @JSName("on")
   def on_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("on")
+  def on_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("on")
   def on_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("on")
+  def on_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   def once(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("once")
@@ -101,7 +115,11 @@ object NodeBaseExport extends js.Object {
   @JSName("once")
   def once_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("once")
+  def once_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("once")
   def once_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("once")
+  def once_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   def pause(): this.type = js.native
   def pipe[T /* <: WritableStream */](destination: T): T = js.native
   def pipe[T /* <: WritableStream */](destination: T, options: AnonEnd): T = js.native
@@ -117,7 +135,11 @@ object NodeBaseExport extends js.Object {
   @JSName("prependListener")
   def prependListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependListener")
+  def prependListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("prependListener")
   def prependListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("prependListener")
+  def prependListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
@@ -129,7 +151,11 @@ object NodeBaseExport extends js.Object {
   @JSName("prependOnceListener")
   def prependOnceListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependOnceListener")
+  def prependOnceListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("prependOnceListener")
   def prependOnceListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("prependOnceListener")
+  def prependOnceListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   def push(chunk: js.Any): Boolean = js.native
   def push(chunk: js.Any, encoding: String): Boolean = js.native
   def rawListeners(event: String): js.Array[js.Function] = js.native
@@ -154,7 +180,11 @@ object NodeBaseExport extends js.Object {
   @JSName("removeListener")
   def removeListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("removeListener")
+  def removeListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("removeListener")
   def removeListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("removeListener")
+  def removeListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   def resume(): this.type = js.native
   def setEncoding(encoding: String): this.type = js.native
   def setMaxListeners(n: Double): this.type = js.native
@@ -164,8 +194,8 @@ object NodeBaseExport extends js.Object {
   def unshift(chunk: String, encoding: BufferEncoding): Unit = js.native
   def unshift(chunk: js.Any): Unit = js.native
   def unshift(chunk: js.Any, encoding: BufferEncoding): Unit = js.native
-  def unshift(chunk: Uint8Array): Unit = js.native
-  def unshift(chunk: Uint8Array, encoding: BufferEncoding): Unit = js.native
+  def unshift(chunk: js.typedarray.Uint8Array): Unit = js.native
+  def unshift(chunk: js.typedarray.Uint8Array, encoding: BufferEncoding): Unit = js.native
   def wrap(oldStream: ReadableStream): this.type = js.native
 }
 

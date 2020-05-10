@@ -1,14 +1,9 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonColorOpacity
-import typingsSlinky.devextreme.AnonLength
-import typingsSlinky.devextreme.AnonLine
 import typingsSlinky.devextreme.devextremeStrings.allArgumentPoints
 import typingsSlinky.devextreme.devextremeStrings.auto
-import typingsSlinky.devextreme.devextremeStrings.betweenLabels
 import typingsSlinky.devextreme.devextremeStrings.bottom
 import typingsSlinky.devextreme.devextremeStrings.continuous
-import typingsSlinky.devextreme.devextremeStrings.crossLabels
 import typingsSlinky.devextreme.devextremeStrings.datetime
 import typingsSlinky.devextreme.devextremeStrings.day
 import typingsSlinky.devextreme.devextremeStrings.discrete
@@ -34,184 +29,476 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxChartArgumentAxis extends dxChartCommonAxisSettings {
   /** Aggregates series points that fall into the same category. */
-  var aggregateByCategory: js.UndefOr[Boolean] = js.undefined
+  var aggregateByCategory: js.UndefOr[Boolean] = js.native
   /** Specifies the length of aggregation intervals in pixels. Does not apply if aggregateByCategory is true. May be ignored in favor of the aggregationInterval option. */
-  var aggregationGroupWidth: js.UndefOr[Double] = js.undefined
+  var aggregationGroupWidth: js.UndefOr[Double] = js.native
   /** Specifies the length of aggregation intervals in axis units. Applies only to axes of continuous and logarithmic types. */
   var aggregationInterval: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-  ] = js.undefined
+  ] = js.native
   /** Casts arguments to a specified data type. */
-  var argumentType: js.UndefOr[datetime | numeric | string_] = js.undefined
+  var argumentType: js.UndefOr[datetime | numeric | string_] = js.native
   /** Specifies the minimum distance between two neighboring major ticks in pixels. Applies only to the axes of the "continuous" and "logarithmic" types. */
-  var axisDivisionFactor: js.UndefOr[Double] = js.undefined
+  var axisDivisionFactor: js.UndefOr[Double] = js.native
   /** Declares a scale break collection. Applies only if the axis' type is "continuous" or "logarithmic". */
-  var breaks: js.UndefOr[js.Array[ScaleBreak]] = js.undefined
+  var breaks: js.UndefOr[js.Array[ScaleBreak]] = js.native
   /** Specifies the order of categories on an axis of the "discrete" type. */
-  var categories: js.UndefOr[js.Array[Double | String | js.Date]] = js.undefined
+  var categories: js.UndefOr[js.Array[Double | String | js.Date]] = js.native
   /** Specifies the appearance of those constant lines that belong to the argument axis. */
   @JSName("constantLineStyle")
-  var constantLineStyle_dxChartArgumentAxis: js.UndefOr[dxChartArgumentAxisConstantLineStyle] = js.undefined
+  var constantLineStyle_dxChartArgumentAxis: js.UndefOr[dxChartArgumentAxisConstantLineStyle] = js.native
   /** Declares a collection of constant lines belonging to the argument axis. */
-  var constantLines: js.UndefOr[js.Array[dxChartArgumentAxisConstantLines]] = js.undefined
+  var constantLines: js.UndefOr[js.Array[dxChartArgumentAxisConstantLines]] = js.native
   /** Dates to be excluded from the axis when workdaysOnly is true. */
-  var holidays: js.UndefOr[js.Array[js.Date | Double | String]] = js.undefined
+  var holidays: js.UndefOr[js.Array[js.Date | Double | String]] = js.native
   /** Specifies chart elements to be highlighted when a user points to an axis label. */
-  var hoverMode: js.UndefOr[allArgumentPoints | none] = js.undefined
+  var hoverMode: js.UndefOr[allArgumentPoints | none] = js.native
   /** Configures the labels of the argument axis. */
   @JSName("label")
-  var label_dxChartArgumentAxis: js.UndefOr[dxChartArgumentAxisLabel] = js.undefined
+  var label_dxChartArgumentAxis: js.UndefOr[dxChartArgumentAxisLabel] = js.native
   /** Specifies a value used to calculate the range on a logarithmic axis within which the axis should be linear. Applies only if the data source contains negative values or zeroes. */
-  var linearThreshold: js.UndefOr[Double] = js.undefined
+  var linearThreshold: js.UndefOr[Double] = js.native
   /** Specifies the value to be raised to a power when generating ticks for an axis of the "logarithmic" type. */
-  var logarithmBase: js.UndefOr[Double] = js.undefined
+  var logarithmBase: js.UndefOr[Double] = js.native
   /** @deprecated Use the argumentAxis.visualRange option instead. */
   /** Coupled with the min option, focuses the widget on a specific chart segment. Applies only to the axes of the "continuous" and "logarithmic" type. */
-  var max: js.UndefOr[Double | js.Date | String] = js.undefined
+  var max: js.UndefOr[Double | js.Date | String] = js.native
   /** @deprecated Use the argumentAxis.visualRange option instead. */
   /** Coupled with the max option, focuses the widget on a specific chart segment. Applies only to the axes of the "continuous" and "logarithmic" type. */
-  var min: js.UndefOr[Double | js.Date | String] = js.undefined
+  var min: js.UndefOr[Double | js.Date | String] = js.native
   /** Specifies the minimum length of the visual range. */
   var minVisualRangeLength: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-  ] = js.undefined
+  ] = js.native
   /** Specifies how many minor ticks to place between two neighboring major ticks. */
-  var minorTickCount: js.UndefOr[Double] = js.undefined
+  var minorTickCount: js.UndefOr[Double] = js.native
   /** Specifies the interval between minor ticks. Applies only to the axes of the "continuous" type. */
   var minorTickInterval: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-  ] = js.undefined
+  ] = js.native
   /** Relocates the argument axis. */
-  var position: js.UndefOr[bottom | left | right | top] = js.undefined
+  var position: js.UndefOr[bottom | left | right | top] = js.native
   /** Dates to be included on the axis when workdaysOnly is true. */
-  var singleWorkdays: js.UndefOr[js.Array[js.Date | Double | String]] = js.undefined
+  var singleWorkdays: js.UndefOr[js.Array[js.Date | Double | String]] = js.native
   /** Declares a collection of strips belonging to the argument axis. */
-  var strips: js.UndefOr[js.Array[dxChartArgumentAxisStrips]] = js.undefined
+  var strips: js.UndefOr[js.Array[dxChartArgumentAxisStrips]] = js.native
   /** Specifies the interval between major ticks. */
   var tickInterval: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-  ] = js.undefined
+  ] = js.native
   /** Configures the axis title. */
   @JSName("title")
-  var title_dxChartArgumentAxis: js.UndefOr[dxChartArgumentAxisTitle] = js.undefined
+  var title_dxChartArgumentAxis: js.UndefOr[dxChartArgumentAxisTitle] = js.native
   /** Specifies the type of the argument axis. */
-  var `type`: js.UndefOr[continuous | discrete | logarithmic] = js.undefined
+  var `type`: js.UndefOr[continuous | discrete | logarithmic] = js.native
   /** Defines the axis' displayed range. Cannot be wider than the wholeRange. */
-  var visualRange: js.UndefOr[VizRange | (js.Array[Double | String | js.Date])] = js.undefined
+  var visualRange: js.UndefOr[VizRange | (js.Array[Double | String | js.Date])] = js.native
   /** Specifies how the axis's visual range should behave when chart data is updated. */
-  var visualRangeUpdateMode: js.UndefOr[auto | keep | reset | shift] = js.undefined
+  var visualRangeUpdateMode: js.UndefOr[auto | keep | reset | shift] = js.native
   /** Defines the range where the axis can be zoomed and panned. */
-  var wholeRange: js.UndefOr[VizRange | (js.Array[Double | String | js.Date])] = js.undefined
+  var wholeRange: js.UndefOr[VizRange | (js.Array[Double | String | js.Date])] = js.native
   /** Specifies which days are workdays. The array can contain values from 0 (Sunday) to 6 (Saturday). Applies only if workdaysOnly is true. */
-  var workWeek: js.UndefOr[js.Array[Double]] = js.undefined
+  var workWeek: js.UndefOr[js.Array[Double]] = js.native
   /** Leaves only workdays on the axis: the work week days plus single workdays minus holidays. Applies only if the axis' argumentType is "datetime". */
-  var workdaysOnly: js.UndefOr[Boolean] = js.undefined
+  var workdaysOnly: js.UndefOr[Boolean] = js.native
 }
 
 object dxChartArgumentAxis {
   @scala.inline
-  def apply(
-    aggregateByCategory: js.UndefOr[Boolean] = js.undefined,
-    aggregationGroupWidth: Int | Double = null,
-    aggregationInterval: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year = null,
-    allowDecimals: js.UndefOr[Boolean] = js.undefined,
-    argumentType: datetime | numeric | string_ = null,
-    axisDivisionFactor: Int | Double = null,
-    breakStyle: AnonLine = null,
-    breaks: js.Array[ScaleBreak] = null,
-    categories: js.Array[Double | String | js.Date] = null,
-    color: String = null,
-    constantLineStyle: dxChartArgumentAxisConstantLineStyle = null,
-    constantLines: js.Array[dxChartArgumentAxisConstantLines] = null,
-    discreteAxisDivisionMode: betweenLabels | crossLabels = null,
-    endOnTick: js.UndefOr[Boolean] = js.undefined,
-    grid: AnonColorOpacity = null,
-    holidays: js.Array[js.Date | Double | String] = null,
-    hoverMode: allArgumentPoints | none = null,
-    inverted: js.UndefOr[Boolean] = js.undefined,
-    label: dxChartArgumentAxisLabel = null,
-    linearThreshold: Int | Double = null,
-    logarithmBase: Int | Double = null,
-    max: Double | js.Date | String = null,
-    maxValueMargin: Int | Double = null,
-    min: Double | js.Date | String = null,
-    minValueMargin: Int | Double = null,
-    minVisualRangeLength: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year = null,
-    minorGrid: AnonColorOpacity = null,
-    minorTick: AnonLength = null,
-    minorTickCount: Int | Double = null,
-    minorTickInterval: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year = null,
-    opacity: Int | Double = null,
-    placeholderSize: Int | Double = null,
-    position: bottom | left | right | top = null,
-    singleWorkdays: js.Array[js.Date | Double | String] = null,
-    stripStyle: dxChartCommonAxisSettingsStripStyle = null,
-    strips: js.Array[dxChartArgumentAxisStrips] = null,
-    tick: AnonLength = null,
-    tickInterval: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year = null,
-    title: dxChartArgumentAxisTitle = null,
-    `type`: continuous | discrete | logarithmic = null,
-    valueMarginsEnabled: js.UndefOr[Boolean] = js.undefined,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    visualRange: VizRange | (js.Array[Double | String | js.Date]) = null,
-    visualRangeUpdateMode: auto | keep | reset | shift = null,
-    wholeRange: VizRange | (js.Array[Double | String | js.Date]) = null,
-    width: Int | Double = null,
-    workWeek: js.Array[Double] = null,
-    workdaysOnly: js.UndefOr[Boolean] = js.undefined
-  ): dxChartArgumentAxis = {
+  def apply(): dxChartArgumentAxis = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(aggregateByCategory)) __obj.updateDynamic("aggregateByCategory")(aggregateByCategory.asInstanceOf[js.Any])
-    if (aggregationGroupWidth != null) __obj.updateDynamic("aggregationGroupWidth")(aggregationGroupWidth.asInstanceOf[js.Any])
-    if (aggregationInterval != null) __obj.updateDynamic("aggregationInterval")(aggregationInterval.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowDecimals)) __obj.updateDynamic("allowDecimals")(allowDecimals.asInstanceOf[js.Any])
-    if (argumentType != null) __obj.updateDynamic("argumentType")(argumentType.asInstanceOf[js.Any])
-    if (axisDivisionFactor != null) __obj.updateDynamic("axisDivisionFactor")(axisDivisionFactor.asInstanceOf[js.Any])
-    if (breakStyle != null) __obj.updateDynamic("breakStyle")(breakStyle.asInstanceOf[js.Any])
-    if (breaks != null) __obj.updateDynamic("breaks")(breaks.asInstanceOf[js.Any])
-    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (constantLineStyle != null) __obj.updateDynamic("constantLineStyle")(constantLineStyle.asInstanceOf[js.Any])
-    if (constantLines != null) __obj.updateDynamic("constantLines")(constantLines.asInstanceOf[js.Any])
-    if (discreteAxisDivisionMode != null) __obj.updateDynamic("discreteAxisDivisionMode")(discreteAxisDivisionMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(endOnTick)) __obj.updateDynamic("endOnTick")(endOnTick.asInstanceOf[js.Any])
-    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
-    if (holidays != null) __obj.updateDynamic("holidays")(holidays.asInstanceOf[js.Any])
-    if (hoverMode != null) __obj.updateDynamic("hoverMode")(hoverMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (linearThreshold != null) __obj.updateDynamic("linearThreshold")(linearThreshold.asInstanceOf[js.Any])
-    if (logarithmBase != null) __obj.updateDynamic("logarithmBase")(logarithmBase.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maxValueMargin != null) __obj.updateDynamic("maxValueMargin")(maxValueMargin.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minValueMargin != null) __obj.updateDynamic("minValueMargin")(minValueMargin.asInstanceOf[js.Any])
-    if (minVisualRangeLength != null) __obj.updateDynamic("minVisualRangeLength")(minVisualRangeLength.asInstanceOf[js.Any])
-    if (minorGrid != null) __obj.updateDynamic("minorGrid")(minorGrid.asInstanceOf[js.Any])
-    if (minorTick != null) __obj.updateDynamic("minorTick")(minorTick.asInstanceOf[js.Any])
-    if (minorTickCount != null) __obj.updateDynamic("minorTickCount")(minorTickCount.asInstanceOf[js.Any])
-    if (minorTickInterval != null) __obj.updateDynamic("minorTickInterval")(minorTickInterval.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (placeholderSize != null) __obj.updateDynamic("placeholderSize")(placeholderSize.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (singleWorkdays != null) __obj.updateDynamic("singleWorkdays")(singleWorkdays.asInstanceOf[js.Any])
-    if (stripStyle != null) __obj.updateDynamic("stripStyle")(stripStyle.asInstanceOf[js.Any])
-    if (strips != null) __obj.updateDynamic("strips")(strips.asInstanceOf[js.Any])
-    if (tick != null) __obj.updateDynamic("tick")(tick.asInstanceOf[js.Any])
-    if (tickInterval != null) __obj.updateDynamic("tickInterval")(tickInterval.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(valueMarginsEnabled)) __obj.updateDynamic("valueMarginsEnabled")(valueMarginsEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (visualRange != null) __obj.updateDynamic("visualRange")(visualRange.asInstanceOf[js.Any])
-    if (visualRangeUpdateMode != null) __obj.updateDynamic("visualRangeUpdateMode")(visualRangeUpdateMode.asInstanceOf[js.Any])
-    if (wholeRange != null) __obj.updateDynamic("wholeRange")(wholeRange.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (workWeek != null) __obj.updateDynamic("workWeek")(workWeek.asInstanceOf[js.Any])
-    if (!js.isUndefined(workdaysOnly)) __obj.updateDynamic("workdaysOnly")(workdaysOnly.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxChartArgumentAxis]
   }
+  @scala.inline
+  implicit class dxChartArgumentAxisOps[Self <: dxChartArgumentAxis] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggregateByCategory(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregateByCategory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregateByCategory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregateByCategory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAggregationGroupWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationGroupWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregationGroupWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationGroupWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAggregationInterval(
+      value: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregationInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArgumentType(value: datetime | numeric | string_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArgumentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxisDivisionFactor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisDivisionFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisDivisionFactor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisDivisionFactor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBreaks(value: js.Array[ScaleBreak]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breaks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBreaks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breaks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategories(value: js.Array[Double | String | js.Date]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategories: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConstantLineStyle(value: dxChartArgumentAxisConstantLineStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constantLineStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstantLineStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constantLineStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConstantLines(value: js.Array[dxChartArgumentAxisConstantLines]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constantLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstantLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constantLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHolidays(value: js.Array[js.Date | Double | String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("holidays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHolidays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("holidays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverMode(value: allArgumentPoints | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoverMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: dxChartArgumentAxisLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinearThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinearThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogarithmBase(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logarithmBase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogarithmBase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logarithmBase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double | js.Date | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double | js.Date | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinVisualRangeLength(
+      value: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minVisualRangeLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinVisualRangeLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minVisualRangeLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickInterval(
+      value: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: bottom | left | right | top): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleWorkdays(value: js.Array[js.Date | Double | String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleWorkdays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleWorkdays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleWorkdays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrips(value: js.Array[dxChartArgumentAxisStrips]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strips")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrips: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strips")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickInterval(
+      value: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: dxChartArgumentAxisTitle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: continuous | discrete | logarithmic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisualRange(value: VizRange | (js.Array[Double | String | js.Date])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visualRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisualRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visualRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisualRangeUpdateMode(value: auto | keep | reset | shift): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visualRangeUpdateMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisualRangeUpdateMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visualRangeUpdateMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWholeRange(value: VizRange | (js.Array[Double | String | js.Date])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wholeRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWholeRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wholeRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkWeek(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workWeek")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkWeek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workWeek")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkdaysOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workdaysOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkdaysOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workdaysOnly")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

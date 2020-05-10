@@ -35,24 +35,101 @@ trait TestInvokeAuthorizerResponse extends js.Object {
 
 object TestInvokeAuthorizerResponse {
   @scala.inline
-  def apply(
-    authorization: MapOfStringToList = null,
-    claims: MapOfStringToString = null,
-    clientStatus: Int | scala.Double = null,
-    latency: Int | scala.Double = null,
-    log: String = null,
-    policy: String = null,
-    principalId: String = null
-  ): TestInvokeAuthorizerResponse = {
+  def apply(): TestInvokeAuthorizerResponse = {
     val __obj = js.Dynamic.literal()
-    if (authorization != null) __obj.updateDynamic("authorization")(authorization.asInstanceOf[js.Any])
-    if (claims != null) __obj.updateDynamic("claims")(claims.asInstanceOf[js.Any])
-    if (clientStatus != null) __obj.updateDynamic("clientStatus")(clientStatus.asInstanceOf[js.Any])
-    if (latency != null) __obj.updateDynamic("latency")(latency.asInstanceOf[js.Any])
-    if (log != null) __obj.updateDynamic("log")(log.asInstanceOf[js.Any])
-    if (policy != null) __obj.updateDynamic("policy")(policy.asInstanceOf[js.Any])
-    if (principalId != null) __obj.updateDynamic("principalId")(principalId.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestInvokeAuthorizerResponse]
   }
+  @scala.inline
+  implicit class TestInvokeAuthorizerResponseOps[Self <: TestInvokeAuthorizerResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthorization(value: MapOfStringToList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClaims(value: MapOfStringToString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claims")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClaims: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claims")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientStatus(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatency(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLog(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrincipalId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("principalId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrincipalId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("principalId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

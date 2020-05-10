@@ -31,7 +31,7 @@ import scala.scalajs.js.annotation._
   * @param params Hash of initialization parameters for widget, including scalar values (like title, duration etc.)and functions, typically callbacks like onClick.The hash can contain any of the widget's properties, excluding read-only properties.
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dojo.Stateful because Already inherited
 - typingsSlinky.dojo.dijit.AttachMixin because Inheritance from two classes. Inlined 
 - typingsSlinky.dojo.dojox.calendar.RendererMixin because Inheritance from two classes. Inlined edited, set_edited, get_edited, watch_edited, set_focused, get_focused, watch_focused, hovered, set_hovered, get_hovered, watch_hovered, item, set_item, get_item, watch_item, moveEnabled, set_moveEnabled, get_moveEnabled, watch_moveEnabled, owner, set_owner, get_owner, watch_owner, resizeEnabled, set_resizeEnabled, get_resizeEnabled, watch_resizeEnabled, selected, set_selected, get_selected, watch_selected, storeState, set_storeState, get_storeState, watch_storeState, visibilityLimits, set_visibilityLimits, get_visibilityLimits, watch_visibilityLimits, get, getDisplayValue, postscript, set, updateRendering, watch

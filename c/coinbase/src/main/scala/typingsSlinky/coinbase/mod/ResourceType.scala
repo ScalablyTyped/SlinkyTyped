@@ -19,24 +19,22 @@ trait ResourceType extends js.Object
 
 object ResourceType {
   @scala.inline
-  def account: typingsSlinky.coinbase.coinbaseStrings.account = this.cast("account")
+  def account: typingsSlinky.coinbase.coinbaseStrings.account = "account".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.account]
   @scala.inline
-  def address: typingsSlinky.coinbase.coinbaseStrings.address = this.cast("address")
+  def address: typingsSlinky.coinbase.coinbaseStrings.address = "address".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.address]
   @scala.inline
-  def buy: typingsSlinky.coinbase.coinbaseStrings.buy = this.cast("buy")
+  def buy: typingsSlinky.coinbase.coinbaseStrings.buy = "buy".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.buy]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def deposit: typingsSlinky.coinbase.coinbaseStrings.deposit = "deposit".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.deposit]
   @scala.inline
-  def deposit: typingsSlinky.coinbase.coinbaseStrings.deposit = this.cast("deposit")
+  def payment_method: typingsSlinky.coinbase.coinbaseStrings.payment_method = "payment_method".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.payment_method]
   @scala.inline
-  def payment_method: typingsSlinky.coinbase.coinbaseStrings.payment_method = this.cast("payment_method")
+  def sell: typingsSlinky.coinbase.coinbaseStrings.sell = "sell".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.sell]
   @scala.inline
-  def sell: typingsSlinky.coinbase.coinbaseStrings.sell = this.cast("sell")
+  def transaction: typingsSlinky.coinbase.coinbaseStrings.transaction = "transaction".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.transaction]
   @scala.inline
-  def transaction: typingsSlinky.coinbase.coinbaseStrings.transaction = this.cast("transaction")
+  def user: typingsSlinky.coinbase.coinbaseStrings.user = "user".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.user]
   @scala.inline
-  def user: typingsSlinky.coinbase.coinbaseStrings.user = this.cast("user")
-  @scala.inline
-  def withdrawal: typingsSlinky.coinbase.coinbaseStrings.withdrawal = this.cast("withdrawal")
+  def withdrawal: typingsSlinky.coinbase.coinbaseStrings.withdrawal = "withdrawal".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.withdrawal]
 }
 

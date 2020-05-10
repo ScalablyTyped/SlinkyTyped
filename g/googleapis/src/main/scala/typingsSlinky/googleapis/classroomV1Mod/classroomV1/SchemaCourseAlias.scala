@@ -31,10 +31,29 @@ trait SchemaCourseAlias extends js.Object {
 
 object SchemaCourseAlias {
   @scala.inline
-  def apply(alias: String = null): SchemaCourseAlias = {
+  def apply(): SchemaCourseAlias = {
     val __obj = js.Dynamic.literal()
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCourseAlias]
   }
+  @scala.inline
+  implicit class SchemaCourseAliasOps[Self <: SchemaCourseAlias] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlias(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,11 @@
 package typingsSlinky.rcMenu.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.raw.Element
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcMenu.AnonHover
 import typingsSlinky.rcMenu.AnonKey
 import typingsSlinky.rcMenu.interfaceMod.MenuInfo
@@ -14,6 +15,7 @@ import typingsSlinky.rcMenu.interfaceMod.SelectInfo
 import typingsSlinky.rcMenu.menuItemMod.MenuItemProps
 import typingsSlinky.rcMenu.rcMenuStrings.ltr
 import typingsSlinky.rcMenu.rcMenuStrings.rtl
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.ReactInstance
 import typingsSlinky.std.Record
@@ -21,64 +23,78 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MenuItem
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.rcMenu.menuItemMod.MenuItem] {
+object MenuItem {
   @JSImport("rc-menu/lib/MenuItem", "MenuItem")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, multiple, style, title */
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    attribute: Record[String, String] = null,
-    direction: ltr | rtl = null,
-    eventKey: Key = null,
-    inlineIndent: Int | Double = null,
-    isSelected: js.UndefOr[Boolean] = js.undefined,
-    itemIcon: RenderIconType = null,
-    level: Int | Double = null,
-    manualRef: /* node */ ReactInstance => Unit = null,
-    mode: MenuMode = null,
-    onClick: /* info */ MenuInfo => Unit = null,
-    onDeselect: /* info */ SelectInfo => Unit = null,
-    onDestroy: /* key */ Key => Unit = null,
-    onItemHover: /* info */ AnonHover => Unit = null,
-    onMouseEnter: /* info */ AnonKey => Unit = null,
-    onMouseLeave: /* info */ AnonKey => Unit = null,
-    onSelect: /* info */ SelectInfo => Unit = null,
-    parentMenu: ReactInstance = null,
-    role: String = null,
-    rootPrefixCls: String = null,
-    selectedKeys: js.Array[String] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.rcMenu.menuItemMod.MenuItem] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (attribute != null) __obj.updateDynamic("attribute")(attribute.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (eventKey != null) __obj.updateDynamic("eventKey")(eventKey.asInstanceOf[js.Any])
-    if (inlineIndent != null) __obj.updateDynamic("inlineIndent")(inlineIndent.asInstanceOf[js.Any])
-    if (!js.isUndefined(isSelected)) __obj.updateDynamic("isSelected")(isSelected.asInstanceOf[js.Any])
-    if (itemIcon != null) __obj.updateDynamic("itemIcon")(itemIcon.asInstanceOf[js.Any])
-    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
-    if (manualRef != null) __obj.updateDynamic("manualRef")(js.Any.fromFunction1(manualRef))
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onDeselect != null) __obj.updateDynamic("onDeselect")(js.Any.fromFunction1(onDeselect))
-    if (onDestroy != null) __obj.updateDynamic("onDestroy")(js.Any.fromFunction1(onDestroy))
-    if (onItemHover != null) __obj.updateDynamic("onItemHover")(js.Any.fromFunction1(onItemHover))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
-    if (parentMenu != null) __obj.updateDynamic("parentMenu")(parentMenu.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (rootPrefixCls != null) __obj.updateDynamic("rootPrefixCls")(rootPrefixCls.asInstanceOf[js.Any])
-    if (selectedKeys != null) __obj.updateDynamic("selectedKeys")(selectedKeys.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.rcMenu.menuItemMod.MenuItem] {
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def attribute(value: Record[String, String]): this.type = set("attribute", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def direction(value: ltr | rtl): this.type = set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def eventKey(value: Key): this.type = set("eventKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inlineIndent(value: Double): this.type = set("inlineIndent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isSelected(value: Boolean): this.type = set("isSelected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemIconReactElement(value: ReactElement): this.type = set("itemIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemIconFunction1(value: /* props */ js.Any => TagMod[Any]): this.type = set("itemIcon", js.Any.fromFunction1(value))
+    @scala.inline
+    def itemIcon(value: RenderIconType): this.type = set("itemIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def level(value: Double): this.type = set("level", value.asInstanceOf[js.Any])
+    @scala.inline
+    def manualRef(value: /* node */ ReactInstance => Unit): this.type = set("manualRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def mode(value: MenuMode): this.type = set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* info */ MenuInfo => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDeselect(value: /* info */ SelectInfo => Unit): this.type = set("onDeselect", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDestroy(value: /* key */ Key => Unit): this.type = set("onDestroy", js.Any.fromFunction1(value))
+    @scala.inline
+    def onItemHover(value: /* info */ AnonHover => Unit): this.type = set("onItemHover", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseEnter(value: /* info */ AnonKey => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseLeave(value: /* info */ AnonKey => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSelect(value: /* info */ SelectInfo => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def parentMenuElement(value: Element): this.type = set("parentMenu", value.asInstanceOf[js.Any])
+    @scala.inline
+    def parentMenuComponent(value: ReactComponentClass[js.Any]): this.type = set("parentMenu", value.asInstanceOf[js.Any])
+    @scala.inline
+    def parentMenu(value: ReactInstance): this.type = set("parentMenu", value.asInstanceOf[js.Any])
+    @scala.inline
+    def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rootPrefixCls(value: String): this.type = set("rootPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.rcMenu.menuItemMod.MenuItem] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.rcMenu.menuItemMod.MenuItem](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MenuItemProps
+  
+  def withProps(p: MenuItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MenuItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -13,12 +13,10 @@ trait DrawerLockMode extends js.Object
 
 object DrawerLockMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `locked-closed`: typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.`locked-closed` = "locked-closed".asInstanceOf[typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.`locked-closed`]
   @scala.inline
-  def `locked-closed`: typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.`locked-closed` = this.cast("locked-closed")
+  def `locked-open`: typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.`locked-open` = "locked-open".asInstanceOf[typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.`locked-open`]
   @scala.inline
-  def `locked-open`: typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.`locked-open` = this.cast("locked-open")
-  @scala.inline
-  def unlocked: typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.unlocked = this.cast("unlocked")
+  def unlocked: typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.unlocked = "unlocked".asInstanceOf[typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.unlocked]
 }
 

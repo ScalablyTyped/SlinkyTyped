@@ -27,16 +27,53 @@ trait SchemaImageVersion extends js.Object {
 
 object SchemaImageVersion {
   @scala.inline
-  def apply(
-    imageVersionId: String = null,
-    isDefault: js.UndefOr[Boolean] = js.undefined,
-    supportedPythonVersions: js.Array[String] = null
-  ): SchemaImageVersion = {
+  def apply(): SchemaImageVersion = {
     val __obj = js.Dynamic.literal()
-    if (imageVersionId != null) __obj.updateDynamic("imageVersionId")(imageVersionId.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDefault)) __obj.updateDynamic("isDefault")(isDefault.asInstanceOf[js.Any])
-    if (supportedPythonVersions != null) __obj.updateDynamic("supportedPythonVersions")(supportedPythonVersions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaImageVersion]
   }
+  @scala.inline
+  implicit class SchemaImageVersionOps[Self <: SchemaImageVersion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImageVersionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageVersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageVersionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDefault(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefault")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportedPythonVersions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedPythonVersions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportedPythonVersions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedPythonVersions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

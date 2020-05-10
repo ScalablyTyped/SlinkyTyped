@@ -6,18 +6,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SpecificationWindow extends js.Object {
-  var position: js.UndefOr[AnonX] = js.undefined
-  var size: js.UndefOr[AnonHeight] = js.undefined
+  var position: js.UndefOr[AnonX] = js.native
+  var size: js.UndefOr[AnonHeight] = js.native
 }
 
 object SpecificationWindow {
   @scala.inline
-  def apply(position: AnonX = null, size: AnonHeight = null): SpecificationWindow = {
+  def apply(): SpecificationWindow = {
     val __obj = js.Dynamic.literal()
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpecificationWindow]
   }
+  @scala.inline
+  implicit class SpecificationWindowOps[Self <: SpecificationWindow] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPosition(value: AnonX): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: AnonHeight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

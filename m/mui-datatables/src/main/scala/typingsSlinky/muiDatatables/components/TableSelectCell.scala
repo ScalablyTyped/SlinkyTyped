@@ -1,48 +1,46 @@
 package typingsSlinky.muiDatatables.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.muiDatatables.mod.MUIDataTableSelectCell
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TableSelectCell
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object TableSelectCell {
   @JSImport("mui-datatables", "TableSelectCell")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    checked: Boolean,
-    fixedHeader: Boolean,
-    classes: js.Object = null,
-    expandableOn: js.UndefOr[Boolean] = js.undefined,
-    isHeaderCell: js.UndefOr[Boolean] = js.undefined,
-    isRowExpanded: js.UndefOr[Boolean] = js.undefined,
-    isRowSelectable: js.UndefOr[Boolean] = js.undefined,
-    onChange: /* args */ js.Any => _ = null,
-    onExpand: /* args */ js.Any => _ = null,
-    otherProps: js.Any = null,
-    selectableOn: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(checked = checked.asInstanceOf[js.Any], fixedHeader = fixedHeader.asInstanceOf[js.Any])
-    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
-    if (!js.isUndefined(expandableOn)) __obj.updateDynamic("expandableOn")(expandableOn.asInstanceOf[js.Any])
-    if (!js.isUndefined(isHeaderCell)) __obj.updateDynamic("isHeaderCell")(isHeaderCell.asInstanceOf[js.Any])
-    if (!js.isUndefined(isRowExpanded)) __obj.updateDynamic("isRowExpanded")(isRowExpanded.asInstanceOf[js.Any])
-    if (!js.isUndefined(isRowSelectable)) __obj.updateDynamic("isRowSelectable")(isRowSelectable.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onExpand != null) __obj.updateDynamic("onExpand")(js.Any.fromFunction1(onExpand))
-    if (otherProps != null) __obj.updateDynamic("otherProps")(otherProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectableOn)) __obj.updateDynamic("selectableOn")(selectableOn.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def classes(value: js.Object): this.type = set("classes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandableOn(value: Boolean): this.type = set("expandableOn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isHeaderCell(value: Boolean): this.type = set("isHeaderCell", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isRowExpanded(value: Boolean): this.type = set("isRowExpanded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isRowSelectable(value: Boolean): this.type = set("isRowSelectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* args */ js.Any => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onExpand(value: /* args */ js.Any => _): this.type = set("onExpand", js.Any.fromFunction1(value))
+    @scala.inline
+    def otherProps(value: js.Any): this.type = set("otherProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectableOn(value: Boolean): this.type = set("selectableOn", value.asInstanceOf[js.Any])
   }
-  type Props = MUIDataTableSelectCell
+  
+  def withProps(p: MUIDataTableSelectCell): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(checked: Boolean, fixedHeader: Boolean): Builder = {
+    val __props = js.Dynamic.literal(checked = checked.asInstanceOf[js.Any], fixedHeader = fixedHeader.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MUIDataTableSelectCell]))
+  }
 }
 

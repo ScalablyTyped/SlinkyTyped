@@ -1,6 +1,6 @@
 package typingsSlinky.node.clusterMod
 
-import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.node.NodeJS.Dict
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.netMod.Server
 import typingsSlinky.node.netMod.Socket
@@ -23,7 +23,7 @@ trait Cluster extends EventEmitter {
   var schedulingPolicy: Double = js.native
   var settings: ClusterSettings = js.native
   var worker: js.UndefOr[Worker_] = js.native
-  var workers: js.UndefOr[StringDictionary[js.UndefOr[Worker_]]] = js.native
+  var workers: js.UndefOr[Dict[Worker_]] = js.native
   @JSName("addListener")
   def addListener_disconnect(
     event: typingsSlinky.node.nodeStrings.disconnect,

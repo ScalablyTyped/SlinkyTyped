@@ -42,26 +42,113 @@ trait AttackDetail extends js.Object {
 
 object AttackDetail {
   @scala.inline
-  def apply(
-    AttackCounters: SummarizedCounterList = null,
-    AttackId: AttackId = null,
-    AttackProperties: AttackProperties = null,
-    EndTime: js.Date = null,
-    Mitigations: MitigationList = null,
-    ResourceArn: ResourceArn = null,
-    StartTime: js.Date = null,
-    SubResources: SubResourceSummaryList = null
-  ): AttackDetail = {
+  def apply(): AttackDetail = {
     val __obj = js.Dynamic.literal()
-    if (AttackCounters != null) __obj.updateDynamic("AttackCounters")(AttackCounters.asInstanceOf[js.Any])
-    if (AttackId != null) __obj.updateDynamic("AttackId")(AttackId.asInstanceOf[js.Any])
-    if (AttackProperties != null) __obj.updateDynamic("AttackProperties")(AttackProperties.asInstanceOf[js.Any])
-    if (EndTime != null) __obj.updateDynamic("EndTime")(EndTime.asInstanceOf[js.Any])
-    if (Mitigations != null) __obj.updateDynamic("Mitigations")(Mitigations.asInstanceOf[js.Any])
-    if (ResourceArn != null) __obj.updateDynamic("ResourceArn")(ResourceArn.asInstanceOf[js.Any])
-    if (StartTime != null) __obj.updateDynamic("StartTime")(StartTime.asInstanceOf[js.Any])
-    if (SubResources != null) __obj.updateDynamic("SubResources")(SubResources.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttackDetail]
   }
+  @scala.inline
+  implicit class AttackDetailOps[Self <: AttackDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttackCounters(value: SummarizedCounterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttackCounters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttackCounters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttackCounters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttackId(value: AttackId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttackId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttackId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttackId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttackProperties(value: AttackProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttackProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttackProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttackProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMitigations(value: MitigationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Mitigations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMitigations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Mitigations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceArn(value: ResourceArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubResources(value: SubResourceSummaryList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubResources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubResources")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

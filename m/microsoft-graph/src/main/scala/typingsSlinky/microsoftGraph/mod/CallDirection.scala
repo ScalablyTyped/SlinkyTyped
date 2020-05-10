@@ -12,10 +12,8 @@ trait CallDirection extends js.Object
 
 object CallDirection {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def incoming: typingsSlinky.microsoftGraph.microsoftGraphStrings.incoming = "incoming".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.incoming]
   @scala.inline
-  def incoming: typingsSlinky.microsoftGraph.microsoftGraphStrings.incoming = this.cast("incoming")
-  @scala.inline
-  def outgoing: typingsSlinky.microsoftGraph.microsoftGraphStrings.outgoing = this.cast("outgoing")
+  def outgoing: typingsSlinky.microsoftGraph.microsoftGraphStrings.outgoing = "outgoing".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.outgoing]
 }
 

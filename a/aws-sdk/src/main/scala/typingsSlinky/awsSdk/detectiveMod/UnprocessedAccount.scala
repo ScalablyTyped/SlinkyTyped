@@ -18,11 +18,41 @@ trait UnprocessedAccount extends js.Object {
 
 object UnprocessedAccount {
   @scala.inline
-  def apply(AccountId: AccountId = null, Reason: UnprocessedReason = null): UnprocessedAccount = {
+  def apply(): UnprocessedAccount = {
     val __obj = js.Dynamic.literal()
-    if (AccountId != null) __obj.updateDynamic("AccountId")(AccountId.asInstanceOf[js.Any])
-    if (Reason != null) __obj.updateDynamic("Reason")(Reason.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnprocessedAccount]
   }
+  @scala.inline
+  implicit class UnprocessedAccountOps[Self <: UnprocessedAccount] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: AccountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReason(value: UnprocessedReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

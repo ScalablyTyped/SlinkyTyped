@@ -6,16 +6,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgTreeGrid
   extends /**
-	 * Option for igTreeGrid
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
   	 * If this option is set to true, the height of the grid row will be calculated automatically based on the [avgRowHeight](ui.iggrid#options:avgRowHeight) and the visible virtual records. If no [avgRowHeight](ui.iggrid#options:avgRowHeight) is specified, it will be calculated automatically at runtime.
   	 *
   	 */
-  var adjustVirtualHeights: js.UndefOr[Boolean] = js.undefined
+  var adjustVirtualHeights: js.UndefOr[Boolean] = js.native
   /**
   	 * If set to true, the following behavior will take place:
   	 * If a new row is added, and then deleted, there will be no transaction added to the log.
@@ -24,22 +25,22 @@ trait IgTreeGrid
   	 * Note: This option takes effect only when [autoCommit](ui.iggrid#options:autoCommit) is set to false.
   	 *
   	 */
-  var aggregateTransactions: js.UndefOr[Boolean] = js.undefined
+  var aggregateTransactions: js.UndefOr[Boolean] = js.native
   /**
   	 * Enables/disables rendering of alternating row styles (odd and even rows receive different styling).
   	 *
   	 */
-  var alternateRowStyles: js.UndefOr[Boolean] = js.undefined
+  var alternateRowStyles: js.UndefOr[Boolean] = js.native
   /**
   	 * If autoAdjustHeight is set to false, the [height](ui.iggrid#options:height) will be set only on the scrolling container, and all other UI elements such as paging footer / filter row / headers will add on top of that, so the total height of the grid will be more than this value - the height of the scroll container (content area) will not be dynamically calculated. Setting this option to false will usually result in a lot better initial rendering performance for large data sets ( > 1000 rows rendered at once, no [virtualization](ui.iggrid#options:virtualization) enabled), since no reflows will be made by browsers when accessing DOM properties such as offsetHeight.
   	 *
   	 */
-  var autoAdjustHeight: js.UndefOr[Boolean] = js.undefined
+  var autoAdjustHeight: js.UndefOr[Boolean] = js.native
   /**
   	 * Automatically commits the transactions as rows/cells are being edited to the client data source. A [saveChanges](ui.iggrid#methods:saveChanges) call still needs to be performed in order to commit the transactions to a server-side data source.
   	 *
   	 */
-  var autoCommit: js.UndefOr[Boolean] = js.undefined
+  var autoCommit: js.UndefOr[Boolean] = js.native
   /**
   	 * Sets gets ability to automatically format text in cells for numeric, date and time columns. The format patterns and rules for numbers and dates are defined in $.ig.regional.defaults object. [Here column formatting is explained in details](http://www.igniteui.com/help/iggrid-columns-and-layout#column-formatting)
   	 *
@@ -52,96 +53,96 @@ trait IgTreeGrid
   	 * "true" formats Date and number columns
   	 * "false" auto formatting is disabled
   	 */
-  var autoFormat: js.UndefOr[String | Boolean] = js.undefined
+  var autoFormat: js.UndefOr[String | Boolean] = js.native
   /**
   	 * If no [columns](ui.iggrid#options:columns) collection is defined, and autoGenerateColumns is set to true, [columns](ui.iggrid#options:columns) will be inferred from the data source before the [dataRendering](ui.iggrid#events:dataRendering) event is fired. The inferred [columns](ui.iggrid#options:columns) collection will be available to the developer for modification at [dataRendering](ui.iggrid#events:dataRendering). If autoGenerateColumns is not explicitly set and [columns](ui.iggrid#options:columns) has at least one column defined then autoGenerateColumns is automatically set to false.
   	 * If autoGenerateColumns is true and there are columns defined auto-generated columns will render after the explicitly defined ones.
   	 * Since auto-generated columns don't have width defined consider setting [defaultColumnWidth](ui.iggrid#options:defaultColumnWidth) as well.
   	 *
   	 */
-  var autoGenerateColumns: js.UndefOr[Boolean] = js.undefined
+  var autoGenerateColumns: js.UndefOr[Boolean] = js.native
   /**
   	 * If set to true and all columns' widths are specified and their combined width is less than the grid width then the last column width will be automatically adjusted to fill the remaining empty space of the grid.
   	 *
   	 */
-  var autofitLastColumn: js.UndefOr[Boolean] = js.undefined
+  var autofitLastColumn: js.UndefOr[Boolean] = js.native
   /**
   	 * This option is inherited from a parent widget and it's not applicable for the igTreeGrid.
   	 */
-  var avgColumnWidth: js.UndefOr[js.Any] = js.undefined
+  var avgColumnWidth: js.UndefOr[js.Any] = js.native
   /**
   	 * This option is inherited from a parent widget and it's not applicable for the igTreeGrid.
   	 */
-  var avgRowHeight: js.UndefOr[Double] = js.undefined
+  var avgRowHeight: js.UndefOr[Double] = js.native
   /**
   	 * Caption text that will be shown above the grid header.
   	 *
   	 */
-  var caption: js.UndefOr[String] = js.undefined
+  var caption: js.UndefOr[String] = js.native
   /**
   	 * Event fired after the caption has been rendered.
   	 */
-  var captionRendered: js.UndefOr[CaptionRenderedEvent] = js.undefined
+  var captionRendered: js.UndefOr[CaptionRenderedEvent] = js.native
   /**
   	 * Event fired before the caption starts its rendering.
   	 * Return false in order to cancel caption rendering.
   	 */
-  var captionRendering: js.UndefOr[CaptionRenderingEvent] = js.undefined
+  var captionRendering: js.UndefOr[CaptionRenderingEvent] = js.native
   /**
   	 * Event fired when a cell is clicked.
   	 */
-  var cellClick: js.UndefOr[CellClickEvent] = js.undefined
+  var cellClick: js.UndefOr[CellClickEvent] = js.native
   /**
   	 * Event fired when a cell is right clicked.
   	 */
-  var cellRightClick: js.UndefOr[CellRightClickEvent] = js.undefined
+  var cellRightClick: js.UndefOr[CellRightClickEvent] = js.native
   /**
   	 * Property name of the array of child data in a hierarchical data source.
   	 *
   	 */
-  var childDataKey: js.UndefOr[String] = js.undefined
+  var childDataKey: js.UndefOr[String] = js.native
   /**
   	 * This option has been removed as of 2017.2 Volume release.
   	 * Specifies the collapse indicator tooltip text.
   	 * Use option [locale.collapseTooltipText](ui.igtreegrid#options:locale.collapseTooltipText).
   	 */
-  var collapseTooltipText: js.UndefOr[String] = js.undefined
+  var collapseTooltipText: js.UndefOr[String] = js.native
   /**
   	 * This option is inherited from a parent widget and it's not applicable for the igTreeGrid.
   	 */
-  var columnVirtualization: js.UndefOr[js.Any] = js.undefined
+  var columnVirtualization: js.UndefOr[js.Any] = js.native
   /**
   	 * An array of column objects. Checkout the [Columns and Layout](http://www.igniteui.com/help/iggrid-columns-and-layout#defining-columns) topic for details on configuring the columns array.
   	 *
   	 */
-  var columns: js.UndefOr[js.Array[IgGridColumn]] = js.undefined
+  var columns: js.UndefOr[js.Array[IgGridColumn]] = js.native
   /**
   	 * Event fired after the columns colection has been modified(e.g. a column is hidden)
   	 */
-  var columnsCollectionModified: js.UndefOr[ColumnsCollectionModifiedEvent] = js.undefined
+  var columnsCollectionModified: js.UndefOr[ColumnsCollectionModifiedEvent] = js.native
   /**
   	 * Fired when the grid is created and the initial structure is rendered (this doesn't necessarily imply the data will be there if the data source is remote)
   	 */
-  var created: js.UndefOr[CreatedEvent] = js.undefined
+  var created: js.UndefOr[CreatedEvent] = js.native
   /**
   	 * Event fired before data binding takes place.
   	 *
   	 * Return false in order to cancel data binding.
   	 */
-  var dataBinding: js.UndefOr[DataBindingEvent] = js.undefined
+  var dataBinding: js.UndefOr[DataBindingEvent] = js.native
   /**
   	 * Event fired after data binding is complete.
   	 */
-  var dataBound: js.UndefOr[DataBoundEvent] = js.undefined
+  var dataBound: js.UndefOr[DataBoundEvent] = js.native
   /**
   	 * Event fired after all of the data records in the grid table body have been rendered.
   	 */
-  var dataRendered: js.UndefOr[DataRenderedEvent] = js.undefined
+  var dataRendered: js.UndefOr[DataRenderedEvent] = js.native
   /**
   	 * Event fired before the TBODY holding the data records starts its rendering.
   	 * Return false in order to cancel data records rendering.
   	 */
-  var dataRendering: js.UndefOr[DataRenderingEvent] = js.undefined
+  var dataRendering: js.UndefOr[DataRenderingEvent] = js.native
   /**
   	 * Can be any valid data source accepted by [$.ig.DataSource](ig.datasource), or an instance of an $.ig.DataSource itself
   	 *
@@ -151,22 +152,22 @@ trait IgTreeGrid
   	 * "object" ddataSource as an object
   	 * "string" dataSource as a string
   	 */
-  var dataSource: js.UndefOr[js.Array[_] | js.Object | String] = js.undefined
+  var dataSource: js.UndefOr[js.Array[_] | js.Object | String] = js.native
   /**
   	 * Options object to configure data source-specific settings
   	 *
   	 */
-  var dataSourceSettings: js.UndefOr[IgTreeGridDataSourceSettings] = js.undefined
+  var dataSourceSettings: js.UndefOr[IgTreeGridDataSourceSettings] = js.native
   /**
   	 * Explicitly set data source type (such as "json"). Please refer to the documentation of [$.ig.DataSource type](ig.datasource#options:settings.type).
   	 *
   	 */
-  var dataSourceType: js.UndefOr[String] = js.undefined
+  var dataSourceType: js.UndefOr[String] = js.native
   /**
   	 * Specifies a remote URL as a data source, from which data will be retrieved using the [$.ig.DataSource](ig.datasource).
   	 *
   	 */
-  var dataSourceUrl: js.UndefOr[String] = js.undefined
+  var dataSourceUrl: js.UndefOr[String] = js.native
   /**
   	 * Default column width that will be set for all columns, that don't have [column width](ui.iggrid#options:columns.width) defined. Can also be set as '*', in which case the width auto-size based on the content of the column cells (including the header text).
   	 *
@@ -175,37 +176,37 @@ trait IgTreeGrid
   	 * "string" The default column width can be set in pixels ("100px") or as '*' in order to auto-size based on the cells and header content.
   	 * "number" The default column width can be set in pixels as a number (100).
   	 */
-  var defaultColumnWidth: js.UndefOr[String | Double] = js.undefined
+  var defaultColumnWidth: js.UndefOr[String | Double] = js.native
   /**
   	 * Fired when the grid is destroyed
   	 */
-  var destroyed: js.UndefOr[DestroyedEvent] = js.undefined
+  var destroyed: js.UndefOr[DestroyedEvent] = js.native
   /**
   	 * Enables/disables rendering of hover styles when the mouse is over a record. This can be useful in templating scenarios, for example, where we don't want to apply hover styling to templated content.
   	 *
   	 */
-  var enableHoverStyles: js.UndefOr[Boolean] = js.undefined
+  var enableHoverStyles: js.UndefOr[Boolean] = js.native
   /**
   	 * Specifies to the tree grid if data is loaded on demand from a remote server. Default is false.
   	 *
   	 */
-  var enableRemoteLoadOnDemand: js.UndefOr[Boolean] = js.undefined
+  var enableRemoteLoadOnDemand: js.UndefOr[Boolean] = js.native
   /**
   	 * Enables/disables grid adjusting its dimensions when its [width](ui.iggrid#options:width) and/or [height](ui.iggrid#options:height) is set in percent (%) and grid parent DOM container is resized.
   	 *
   	 */
-  var enableResizeContainerCheck: js.UndefOr[Boolean] = js.undefined
+  var enableResizeContainerCheck: js.UndefOr[Boolean] = js.native
   /**
   	 * Enables/Disables serializing client date as UTC ISO 8061 string instead of using the local time and zone values.
   	 *
   	 */
-  var enableUTCDates: js.UndefOr[Boolean] = js.undefined
+  var enableUTCDates: js.UndefOr[Boolean] = js.native
   /**
   	 * This option has been removed as of 2017.2 Volume release.
   	 * Specifies the expansion indicator tooltip text.
   	 * Use option [locale.expandTooltipText](ui.igtreegrid#options:locale.expandTooltipText).
   	 */
-  var expandTooltipText: js.UndefOr[String] = js.undefined
+  var expandTooltipText: js.UndefOr[String] = js.native
   /**
   	 * Configures how the feature chooser icon should display on header cells - e.g. to display as gear icon or not.
   	 *
@@ -215,55 +216,55 @@ trait IgTreeGrid
   	 * "desktopOnly" Always show the icon on desktop but hide when touch device detected.
   	 * "always" Always show it in any environment. Chooser is shown when tapping the gear icon or column header.
   	 */
-  var featureChooserIconDisplay: js.UndefOr[String] = js.undefined
+  var featureChooserIconDisplay: js.UndefOr[String] = js.native
   /**
   	 * List of grid feature definitions: sorting, paging, etc. Each feature goes with its separate options that are documented for the feature accordingly. [Here you can find detailed documentation for all igGrid features](http://www.igniteui.com/help/iggrid-features-landing-page)
   	 *
   	 */
-  var features: js.UndefOr[js.Array[IgGridFeature]] = js.undefined
+  var features: js.UndefOr[js.Array[IgGridFeature]] = js.native
   /**
   	 * Footers will be fixed if this option is set to true, and only the grid data will be scrollable. If [virtualization](ui.iggrid#options:virtualization) is enabled, fixedFooters will always act as if it's true, no matter which value is set.
   	 *
   	 */
-  var fixedFooters: js.UndefOr[Boolean] = js.undefined
+  var fixedFooters: js.UndefOr[Boolean] = js.native
   /**
   	 * Headers will be fixed if this option is set to true, and only the grid data will be scrollable. If [virtualization](ui.iggrid#options:virtualization) is enabled, fixedHeaders will always act as if it's true, no matter which value is set.
   	 *
   	 */
-  var fixedHeaders: js.UndefOr[Boolean] = js.undefined
+  var fixedHeaders: js.UndefOr[Boolean] = js.native
   /**
   	 * Event fired after the footer has been rendered.
   	 */
-  var footerRendered: js.UndefOr[FooterRenderedEvent] = js.undefined
+  var footerRendered: js.UndefOr[FooterRenderedEvent] = js.native
   /**
   	 * Event fired before the footer starts its rendering.
   	 *
   	 * Return false in order to cancel footer rendering.
   	 */
-  var footerRendering: js.UndefOr[FooterRenderingEvent] = js.undefined
+  var footerRendering: js.UndefOr[FooterRenderingEvent] = js.native
   /**
   	 * Unique identifier used in a self-referencing flat data source. Used with primaryKey to create a relationship among flat data sources.
   	 *
   	 */
-  var foreignKey: js.UndefOr[String] = js.undefined
+  var foreignKey: js.UndefOr[String] = js.native
   /**
   	 * Specifies the foreign key value in the data source to treat as the root level once the grid is data bound. Defaults to -1 (which includes the entire data source)
   	 *
   	 */
-  var foreignKeyRootValue: js.UndefOr[Double | String] = js.undefined
+  var foreignKeyRootValue: js.UndefOr[Double | String] = js.native
   /**
   	 * Event fired after every TH in the grid header has been rendered.
   	 */
-  var headerCellRendered: js.UndefOr[HeaderCellRenderedEvent] = js.undefined
+  var headerCellRendered: js.UndefOr[HeaderCellRenderedEvent] = js.native
   /**
   	 * Event fired after the header has been rendered.
   	 */
-  var headerRendered: js.UndefOr[HeaderRenderedEvent] = js.undefined
+  var headerRendered: js.UndefOr[HeaderRenderedEvent] = js.native
   /**
   	 * Event fired before the header starts its rendering.
   	 * Return false in order to cancel header rendering.
   	 */
-  var headerRendering: js.UndefOr[HeaderRenderingEvent] = js.undefined
+  var headerRendering: js.UndefOr[HeaderRenderingEvent] = js.native
   /**
   	 * This is the total height of the grid, including all UI elements - scroll container with data rows, header, footer, filter row - (if any), etc. [Here you can find more info about setting igGrid height](http://www.igniteui.com/help/iggrid-columns-and-layout#width-height).
   	 *
@@ -273,64 +274,64 @@ trait IgTreeGrid
   	 * "number" The widget height can be set as a number
   	 * "null" will stretch vertically to fit data.
   	 */
-  var height: js.UndefOr[String | Double] = js.undefined
+  var height: js.UndefOr[String | Double] = js.native
   /**
   	 * Specifies the indentation (in pixels or percent) for a tree grid row. Nested indentation is achieved by calculating the level times the indentation value. Ex: '10px' or '5%'. Default is 30.
   	 *
   	 */
-  var indentation: js.UndefOr[String] = js.undefined
+  var indentation: js.UndefOr[String] = js.native
   /**
   	 * Specifies the depth down to which the tree grid would be expanded upon initial render. To expand all rows set value to -1. Default is -1.
   	 *
   	 */
-  var initialExpandDepth: js.UndefOr[Double] = js.undefined
+  var initialExpandDepth: js.UndefOr[Double] = js.native
   /**
   	 * If initial indentation level is set then it is used to be calculated width of the data skip column(usually used when remote load on demand is enabled)
   	 *
   	 */
-  var initialIndentationLevel: js.UndefOr[Double] = js.undefined
+  var initialIndentationLevel: js.UndefOr[Double] = js.native
   /**
   	 * When dataSource is a remote URL, defines whether to set the type of the remote data source to JSONP.
   	 *
   	 */
-  var jsonpRequest: js.UndefOr[Boolean] = js.undefined
+  var jsonpRequest: js.UndefOr[Boolean] = js.native
   /**
   	 * If this option is set to false, the data to which the grid is bound will be used "as is" with no additional transformations based on [columns](ui.iggrid#options:columns) defined. Otherwise only the subset of data properties used in the [columns](ui.iggrid#options:columns) defined will be extracted in a new object and used.
   	 *
   	 */
-  var localSchemaTransform: js.UndefOr[Boolean] = js.undefined
-  var locale: js.UndefOr[IgTreeGridLocale] = js.undefined
+  var localSchemaTransform: js.UndefOr[Boolean] = js.native
+  var locale: js.UndefOr[IgTreeGridLocale] = js.native
   /**
   	 * Merge unbound columns values inside data source when data source is remote. If true then the unbound columns are merged to the data source at runtime on the server. Note that data source is expanded with the new data and this could cause performance issues when the data is huge. If mergeUnboundColumns is false then the unbound data is sent and merged on the client. This option is used by the [igGrid MVC Helper](http://www.igniteui.com/help/iggrid-developing-asp-net-mvc-applications-with-iggrid).
   	 * Checkout [Populating Unbound Columns Remotely (igGrid)](http://www.igniteui.com/help/iggrid-unboundcolumns-populating-with-data-remotely) topic for more information.
   	 *
   	 */
-  var mergeUnboundColumns: js.UndefOr[Boolean] = js.undefined
+  var mergeUnboundColumns: js.UndefOr[Boolean] = js.native
   /**
   	 * Key of the column containing unique identifiers for the data records.
   	 *
   	 */
-  var primaryKey: js.UndefOr[String] = js.undefined
+  var primaryKey: js.UndefOr[String] = js.native
   /**
   	 * Gets sets ability to render checkboxes and use checkbox editor when dataType of a column is "bool". Checkboxes are not rendered for boolean values in columns with a [column template](ui.iggrid#options:columns.template).
   	 *
   	 */
-  var renderCheckboxes: js.UndefOr[Boolean] = js.undefined
+  var renderCheckboxes: js.UndefOr[Boolean] = js.native
   /**
   	 * a reference or name of a javascript function which renders expand indicators(called ONLY IF option renderExpansionIndicatorColumn is true)
   	 *
   	 */
-  var renderExpansionCellFunction: js.UndefOr[String | js.Object] = js.undefined
+  var renderExpansionCellFunction: js.UndefOr[String | js.Object] = js.native
   /**
   	 * Specify whether to render non-data column which contains expander indicators
   	 *
   	 */
-  var renderExpansionIndicatorColumn: js.UndefOr[Boolean] = js.undefined
+  var renderExpansionIndicatorColumn: js.UndefOr[Boolean] = js.native
   /**
   	 * a reference or name of a javascript function which changes first data cell - renders indentation according to databound level
   	 *
   	 */
-  var renderFirstDataCellFunction: js.UndefOr[String | js.Object] = js.undefined
+  var renderFirstDataCellFunction: js.UndefOr[String | js.Object] = js.native
   /**
   	 * Event fired after the whole grid widget has been rendered (including headers, footers, etc.).
   	 * This event is fired only when the grid is being initialized.
@@ -338,7 +339,7 @@ trait IgTreeGrid
   	 * (for example, when calling the dataBind() API method
   	 * or when changing the page size (when paging is enabled)).
   	 */
-  var rendered: js.UndefOr[RenderedEvent] = js.undefined
+  var rendered: js.UndefOr[RenderedEvent] = js.native
   /**
   	 * Event fired before the grid starts rendering (all contents).
   	 * This event is fired only when the grid is being initialized.
@@ -347,99 +348,99 @@ trait IgTreeGrid
   	 * or when changing the page size (when paging is enabled)).
   	 * Return false in order to cancel grid rendering.
   	 */
-  var rendering: js.UndefOr[RenderingEvent] = js.undefined
+  var rendering: js.UndefOr[RenderingEvent] = js.native
   /**
   	 * Event fired if there is an error in the request, when the grid is doing a remote operation,
   	 * such as data binding, paging, sorting, etc.
   	 */
-  var requestError: js.UndefOr[RequestErrorEvent] = js.undefined
+  var requestError: js.UndefOr[RequestErrorEvent] = js.native
   /**
   	 * Specifies the HTTP verb to be used to issue the requests to a remote data source.
   	 *
   	 */
-  var requestType: js.UndefOr[String] = js.undefined
+  var requestType: js.UndefOr[String] = js.native
   /**
   	 * Content type of the response. See http://api.jquery.com/jQuery.ajax/ => contentType
   	 *
   	 */
-  var responseContentType: js.UndefOr[String] = js.undefined
+  var responseContentType: js.UndefOr[String] = js.native
   /**
   	 * See [$.ig.DataSource responseDataKey](ig.datasource#options:settings.responseDataKey). This is the property in the responses where data records are held, if the response is wrapped.
   	 *
   	 */
-  var responseDataKey: js.UndefOr[String] = js.undefined
+  var responseDataKey: js.UndefOr[String] = js.native
   /**
   	 * This option has been deprecated. See [$.ig.DataSource responseTotalRecCountKey](ig.datasource#options:settings.responseTotalRecCountKey). Property in the response specifying the total number of records on the server.
   	 */
-  var responseTotalRecCountKey: js.UndefOr[String] = js.undefined
+  var responseTotalRecCountKey: js.UndefOr[String] = js.native
   /**
   	 * This option is inherited from a parent widget and it's not applicable for the igTreeGrid.
   	 */
-  var restSettings: js.UndefOr[IgTreeGridRestSettings] = js.undefined
+  var restSettings: js.UndefOr[IgTreeGridRestSettings] = js.native
   /**
   	 * Fired after a row is collapsed
   	 */
-  var rowCollapsed: js.UndefOr[RowCollapsedEvent] = js.undefined
+  var rowCollapsed: js.UndefOr[RowCollapsedEvent] = js.native
   /**
   	 * Fired when a row is about to be collapsed.
   	 */
-  var rowCollapsing: js.UndefOr[RowCollapsingEvent] = js.undefined
+  var rowCollapsing: js.UndefOr[RowCollapsingEvent] = js.native
   /**
   	 * Fired when a row is expanded.
   	 */
-  var rowExpanded: js.UndefOr[RowExpandedEvent] = js.undefined
+  var rowExpanded: js.UndefOr[RowExpandedEvent] = js.native
   /**
   	 * Fired when a row is about to be expanded.
   	 */
-  var rowExpanding: js.UndefOr[RowExpandingEvent] = js.undefined
+  var rowExpanding: js.UndefOr[RowExpandingEvent] = js.native
   /**
   	 * Enables virtualization for rows only. [Here you can find more info about igGrid row virtualization](http://www.igniteui.com/help/iggrid-virtualization-overview)
   	 *
   	 */
-  var rowVirtualization: js.UndefOr[Boolean] = js.undefined
+  var rowVirtualization: js.UndefOr[Boolean] = js.native
   /**
   	 * Event fired after data rows are rendered.
   	 */
-  var rowsRendered: js.UndefOr[RowsRenderedEvent] = js.undefined
+  var rowsRendered: js.UndefOr[RowsRenderedEvent] = js.native
   /**
   	 * Event fired before actual data rows (TRs) are rendered.
   	 * Return false in order to cancel rows rendering.
   	 */
-  var rowsRendering: js.UndefOr[RowsRenderingEvent] = js.undefined
+  var rowsRendering: js.UndefOr[RowsRenderingEvent] = js.native
   /**
   	 * Event fired after $.ig.DataSource schema has been generated, in case it needs to be modified.
   	 */
-  var schemaGenerated: js.UndefOr[SchemaGeneratedEvent] = js.undefined
+  var schemaGenerated: js.UndefOr[SchemaGeneratedEvent] = js.native
   /**
   	 * Settings related to content scrolling.
   	 *
   	 */
-  var scrollSettings: js.UndefOr[IgGridScrollSettings] = js.undefined
+  var scrollSettings: js.UndefOr[IgGridScrollSettings] = js.native
   /**
   	 * If true, the transaction log will always be sent in the request for remote data, by the data source. Also this means that if there are values in the log, a POST will be performed instead of GET.
   	 *
   	 */
-  var serializeTransactionLog: js.UndefOr[Boolean] = js.undefined
+  var serializeTransactionLog: js.UndefOr[Boolean] = js.native
   /**
   	 * Specifies if rows(that have child rows) will have an expander image that will allow end users to expand and collapse them. This option can be set only at initialization.
   	 *
   	 */
-  var showExpansionIndicator: js.UndefOr[Boolean] = js.undefined
+  var showExpansionIndicator: js.UndefOr[Boolean] = js.native
   /**
   	 * Controls the visibility of the grid footer.
   	 *
   	 */
-  var showFooter: js.UndefOr[Boolean] = js.undefined
+  var showFooter: js.UndefOr[Boolean] = js.native
   /**
   	 * Controls the visibility of the grid header.
   	 *
   	 */
-  var showHeader: js.UndefOr[Boolean] = js.undefined
+  var showHeader: js.UndefOr[Boolean] = js.native
   /**
   	 * Initial tabIndex attribute that will be set on all focusable elements.
   	 *
   	 */
-  var tabIndex: js.UndefOr[Double] = js.undefined
+  var tabIndex: js.UndefOr[Double] = js.native
   /**
   	 * The templating engine that will be used to render the grid [column templates](ui.iggrid#options:columns.template). [Here you can find](http://www.infragistics.com/community/blogs/marina_stoyanova/archive/2014/05/30/using-different-template-engines-with-ignite-ui-controls.aspx) how to use templating engines other than igTemplating and jsRender.
   	 *
@@ -448,28 +449,28 @@ trait IgTreeGrid
   	 * "infragistics" The grid will use the Infragistics Templating engine to render its [column templates](ui.iggrid#options:columns.template) and specific parts of the UI.
   	 * "jsRender" The grid will use jsRender to render its [column templates](ui.iggrid#options:columns.template) and specific parts of the UI.
   	 */
-  var templatingEngine: js.UndefOr[String] = js.undefined
+  var templatingEngine: js.UndefOr[String] = js.native
   /**
   	 * URL to which updating requests will be made.
   	 *
   	 */
-  var updateUrl: js.UndefOr[String] = js.undefined
+  var updateUrl: js.UndefOr[String] = js.native
   /**
   	 * Enables/disables column and row virtualization at the same time. Virtualization can greatly enhance rendering performance. If enabled, the number of actual rendered rows (DOM elements) will be constant and related to the visible viewport of the grid. As the end user scrolls, those DOM elements will be dynamically reused to render the new data. [Here you can find more info about the performance guidelines when using the igGrid](http://www.igniteui.com/help/iggrid-performance-guide)
   	 *
   	 */
-  var virtualization: js.UndefOr[Boolean] = js.undefined
+  var virtualization: js.UndefOr[Boolean] = js.native
   /**
   	 * Determines row virtualization mode. For igTreeGrid only continuous virtualization can be used.
   	 *
   	 * continuous  renders a pre-defined number of rows in the grid. On scrolling the continuous virtualization loads another portion of rows and disposes the current one.
   	 */
-  var virtualizationMode: js.UndefOr[String] = js.undefined
+  var virtualizationMode: js.UndefOr[String] = js.native
   /**
   	 * Number of pixels to scroll the grid by, when virtualization is enabled, and mouse wheel scrolling is performed over the virtual grid area. If "null" the step will be equal to the [avgRowHeight](ui.iggrid#options:avgRowHeight).
   	 *
   	 */
-  var virtualizationMouseWheelStep: js.UndefOr[Double] = js.undefined
+  var virtualizationMouseWheelStep: js.UndefOr[Double] = js.native
   /**
   	 * Defines the grid width in pixels or percents. [Here you can find more info about setting igGrid width](http://www.igniteui.com/help/iggrid-columns-and-layout#width-height).
   	 *
@@ -479,196 +480,1078 @@ trait IgTreeGrid
   	 * "number" The widget width can be set in pixels as a number. Example values: 800, 700.
   	 * "null" will stretch to fit the sum of the columns widths.
   	 */
-  var width: js.UndefOr[String | Double] = js.undefined
+  var width: js.UndefOr[String | Double] = js.native
 }
 
 object IgTreeGrid {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for igTreeGrid
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    adjustVirtualHeights: js.UndefOr[Boolean] = js.undefined,
-    aggregateTransactions: js.UndefOr[Boolean] = js.undefined,
-    alternateRowStyles: js.UndefOr[Boolean] = js.undefined,
-    autoAdjustHeight: js.UndefOr[Boolean] = js.undefined,
-    autoCommit: js.UndefOr[Boolean] = js.undefined,
-    autoFormat: String | Boolean = null,
-    autoGenerateColumns: js.UndefOr[Boolean] = js.undefined,
-    autofitLastColumn: js.UndefOr[Boolean] = js.undefined,
-    avgColumnWidth: js.Any = null,
-    avgRowHeight: Int | Double = null,
-    caption: String = null,
-    captionRendered: (/* event */ Event_, /* ui */ CaptionRenderedEventUIParam) => Unit = null,
-    captionRendering: (/* event */ Event_, /* ui */ CaptionRenderingEventUIParam) => Unit = null,
-    cellClick: (/* event */ Event_, /* ui */ CellClickEventUIParam) => Unit = null,
-    cellRightClick: (/* event */ Event_, /* ui */ CellRightClickEventUIParam) => Unit = null,
-    childDataKey: String = null,
-    collapseTooltipText: String = null,
-    columnVirtualization: js.Any = null,
-    columns: js.Array[IgGridColumn] = null,
-    columnsCollectionModified: (/* event */ Event_, /* ui */ ColumnsCollectionModifiedEventUIParam) => Unit = null,
-    created: (/* event */ Event_, /* ui */ CreatedEventUIParam) => Unit = null,
-    dataBinding: (/* event */ Event_, /* ui */ DataBindingEventUIParam) => Unit = null,
-    dataBound: (/* event */ Event_, /* ui */ DataBoundEventUIParam) => Unit = null,
-    dataRendered: (/* event */ Event_, /* ui */ DataRenderedEventUIParam) => Unit = null,
-    dataRendering: (/* event */ Event_, /* ui */ DataRenderingEventUIParam) => Unit = null,
-    dataSource: js.Array[_] | js.Object | String = null,
-    dataSourceSettings: IgTreeGridDataSourceSettings = null,
-    dataSourceType: String = null,
-    dataSourceUrl: String = null,
-    defaultColumnWidth: String | Double = null,
-    destroyed: (/* event */ Event_, /* ui */ DestroyedEventUIParam) => Unit = null,
-    enableHoverStyles: js.UndefOr[Boolean] = js.undefined,
-    enableRemoteLoadOnDemand: js.UndefOr[Boolean] = js.undefined,
-    enableResizeContainerCheck: js.UndefOr[Boolean] = js.undefined,
-    enableUTCDates: js.UndefOr[Boolean] = js.undefined,
-    expandTooltipText: String = null,
-    featureChooserIconDisplay: String = null,
-    features: js.Array[IgGridFeature] = null,
-    fixedFooters: js.UndefOr[Boolean] = js.undefined,
-    fixedHeaders: js.UndefOr[Boolean] = js.undefined,
-    footerRendered: (/* event */ Event_, /* ui */ FooterRenderedEventUIParam) => Unit = null,
-    footerRendering: (/* event */ Event_, /* ui */ FooterRenderingEventUIParam) => Unit = null,
-    foreignKey: String = null,
-    foreignKeyRootValue: Double | String = null,
-    headerCellRendered: (/* event */ Event_, /* ui */ HeaderCellRenderedEventUIParam) => Unit = null,
-    headerRendered: (/* event */ Event_, /* ui */ HeaderRenderedEventUIParam) => Unit = null,
-    headerRendering: (/* event */ Event_, /* ui */ HeaderRenderingEventUIParam) => Unit = null,
-    height: String | Double = null,
-    indentation: String = null,
-    initialExpandDepth: Int | Double = null,
-    initialIndentationLevel: Int | Double = null,
-    jsonpRequest: js.UndefOr[Boolean] = js.undefined,
-    localSchemaTransform: js.UndefOr[Boolean] = js.undefined,
-    locale: IgTreeGridLocale = null,
-    mergeUnboundColumns: js.UndefOr[Boolean] = js.undefined,
-    primaryKey: String = null,
-    renderCheckboxes: js.UndefOr[Boolean] = js.undefined,
-    renderExpansionCellFunction: String | js.Object = null,
-    renderExpansionIndicatorColumn: js.UndefOr[Boolean] = js.undefined,
-    renderFirstDataCellFunction: String | js.Object = null,
-    rendered: (/* event */ Event_, /* ui */ RenderedEventUIParam) => Unit = null,
-    rendering: (/* event */ Event_, /* ui */ RenderingEventUIParam) => Unit = null,
-    requestError: (/* event */ Event_, /* ui */ RequestErrorEventUIParam) => Unit = null,
-    requestType: String = null,
-    responseContentType: String = null,
-    responseDataKey: String = null,
-    responseTotalRecCountKey: String = null,
-    restSettings: IgTreeGridRestSettings = null,
-    rowCollapsed: (/* event */ Event_, /* ui */ RowCollapsedEventUIParam) => Unit = null,
-    rowCollapsing: (/* event */ Event_, /* ui */ RowCollapsingEventUIParam) => Unit = null,
-    rowExpanded: (/* event */ Event_, /* ui */ RowExpandedEventUIParam) => Unit = null,
-    rowExpanding: (/* event */ Event_, /* ui */ RowExpandingEventUIParam) => Unit = null,
-    rowVirtualization: js.UndefOr[Boolean] = js.undefined,
-    rowsRendered: (/* event */ Event_, /* ui */ RowsRenderedEventUIParam) => Unit = null,
-    rowsRendering: (/* event */ Event_, /* ui */ RowsRenderingEventUIParam) => Unit = null,
-    schemaGenerated: (/* event */ Event_, /* ui */ SchemaGeneratedEventUIParam) => Unit = null,
-    scrollSettings: IgGridScrollSettings = null,
-    serializeTransactionLog: js.UndefOr[Boolean] = js.undefined,
-    showExpansionIndicator: js.UndefOr[Boolean] = js.undefined,
-    showFooter: js.UndefOr[Boolean] = js.undefined,
-    showHeader: js.UndefOr[Boolean] = js.undefined,
-    tabIndex: Int | Double = null,
-    templatingEngine: String = null,
-    updateUrl: String = null,
-    virtualization: js.UndefOr[Boolean] = js.undefined,
-    virtualizationMode: String = null,
-    virtualizationMouseWheelStep: Int | Double = null,
-    width: String | Double = null
-  ): IgTreeGrid = {
+  def apply(): IgTreeGrid = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(adjustVirtualHeights)) __obj.updateDynamic("adjustVirtualHeights")(adjustVirtualHeights.asInstanceOf[js.Any])
-    if (!js.isUndefined(aggregateTransactions)) __obj.updateDynamic("aggregateTransactions")(aggregateTransactions.asInstanceOf[js.Any])
-    if (!js.isUndefined(alternateRowStyles)) __obj.updateDynamic("alternateRowStyles")(alternateRowStyles.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoAdjustHeight)) __obj.updateDynamic("autoAdjustHeight")(autoAdjustHeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoCommit)) __obj.updateDynamic("autoCommit")(autoCommit.asInstanceOf[js.Any])
-    if (autoFormat != null) __obj.updateDynamic("autoFormat")(autoFormat.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoGenerateColumns)) __obj.updateDynamic("autoGenerateColumns")(autoGenerateColumns.asInstanceOf[js.Any])
-    if (!js.isUndefined(autofitLastColumn)) __obj.updateDynamic("autofitLastColumn")(autofitLastColumn.asInstanceOf[js.Any])
-    if (avgColumnWidth != null) __obj.updateDynamic("avgColumnWidth")(avgColumnWidth.asInstanceOf[js.Any])
-    if (avgRowHeight != null) __obj.updateDynamic("avgRowHeight")(avgRowHeight.asInstanceOf[js.Any])
-    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
-    if (captionRendered != null) __obj.updateDynamic("captionRendered")(js.Any.fromFunction2(captionRendered))
-    if (captionRendering != null) __obj.updateDynamic("captionRendering")(js.Any.fromFunction2(captionRendering))
-    if (cellClick != null) __obj.updateDynamic("cellClick")(js.Any.fromFunction2(cellClick))
-    if (cellRightClick != null) __obj.updateDynamic("cellRightClick")(js.Any.fromFunction2(cellRightClick))
-    if (childDataKey != null) __obj.updateDynamic("childDataKey")(childDataKey.asInstanceOf[js.Any])
-    if (collapseTooltipText != null) __obj.updateDynamic("collapseTooltipText")(collapseTooltipText.asInstanceOf[js.Any])
-    if (columnVirtualization != null) __obj.updateDynamic("columnVirtualization")(columnVirtualization.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (columnsCollectionModified != null) __obj.updateDynamic("columnsCollectionModified")(js.Any.fromFunction2(columnsCollectionModified))
-    if (created != null) __obj.updateDynamic("created")(js.Any.fromFunction2(created))
-    if (dataBinding != null) __obj.updateDynamic("dataBinding")(js.Any.fromFunction2(dataBinding))
-    if (dataBound != null) __obj.updateDynamic("dataBound")(js.Any.fromFunction2(dataBound))
-    if (dataRendered != null) __obj.updateDynamic("dataRendered")(js.Any.fromFunction2(dataRendered))
-    if (dataRendering != null) __obj.updateDynamic("dataRendering")(js.Any.fromFunction2(dataRendering))
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (dataSourceSettings != null) __obj.updateDynamic("dataSourceSettings")(dataSourceSettings.asInstanceOf[js.Any])
-    if (dataSourceType != null) __obj.updateDynamic("dataSourceType")(dataSourceType.asInstanceOf[js.Any])
-    if (dataSourceUrl != null) __obj.updateDynamic("dataSourceUrl")(dataSourceUrl.asInstanceOf[js.Any])
-    if (defaultColumnWidth != null) __obj.updateDynamic("defaultColumnWidth")(defaultColumnWidth.asInstanceOf[js.Any])
-    if (destroyed != null) __obj.updateDynamic("destroyed")(js.Any.fromFunction2(destroyed))
-    if (!js.isUndefined(enableHoverStyles)) __obj.updateDynamic("enableHoverStyles")(enableHoverStyles.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableRemoteLoadOnDemand)) __obj.updateDynamic("enableRemoteLoadOnDemand")(enableRemoteLoadOnDemand.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableResizeContainerCheck)) __obj.updateDynamic("enableResizeContainerCheck")(enableResizeContainerCheck.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableUTCDates)) __obj.updateDynamic("enableUTCDates")(enableUTCDates.asInstanceOf[js.Any])
-    if (expandTooltipText != null) __obj.updateDynamic("expandTooltipText")(expandTooltipText.asInstanceOf[js.Any])
-    if (featureChooserIconDisplay != null) __obj.updateDynamic("featureChooserIconDisplay")(featureChooserIconDisplay.asInstanceOf[js.Any])
-    if (features != null) __obj.updateDynamic("features")(features.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixedFooters)) __obj.updateDynamic("fixedFooters")(fixedFooters.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixedHeaders)) __obj.updateDynamic("fixedHeaders")(fixedHeaders.asInstanceOf[js.Any])
-    if (footerRendered != null) __obj.updateDynamic("footerRendered")(js.Any.fromFunction2(footerRendered))
-    if (footerRendering != null) __obj.updateDynamic("footerRendering")(js.Any.fromFunction2(footerRendering))
-    if (foreignKey != null) __obj.updateDynamic("foreignKey")(foreignKey.asInstanceOf[js.Any])
-    if (foreignKeyRootValue != null) __obj.updateDynamic("foreignKeyRootValue")(foreignKeyRootValue.asInstanceOf[js.Any])
-    if (headerCellRendered != null) __obj.updateDynamic("headerCellRendered")(js.Any.fromFunction2(headerCellRendered))
-    if (headerRendered != null) __obj.updateDynamic("headerRendered")(js.Any.fromFunction2(headerRendered))
-    if (headerRendering != null) __obj.updateDynamic("headerRendering")(js.Any.fromFunction2(headerRendering))
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (indentation != null) __obj.updateDynamic("indentation")(indentation.asInstanceOf[js.Any])
-    if (initialExpandDepth != null) __obj.updateDynamic("initialExpandDepth")(initialExpandDepth.asInstanceOf[js.Any])
-    if (initialIndentationLevel != null) __obj.updateDynamic("initialIndentationLevel")(initialIndentationLevel.asInstanceOf[js.Any])
-    if (!js.isUndefined(jsonpRequest)) __obj.updateDynamic("jsonpRequest")(jsonpRequest.asInstanceOf[js.Any])
-    if (!js.isUndefined(localSchemaTransform)) __obj.updateDynamic("localSchemaTransform")(localSchemaTransform.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (!js.isUndefined(mergeUnboundColumns)) __obj.updateDynamic("mergeUnboundColumns")(mergeUnboundColumns.asInstanceOf[js.Any])
-    if (primaryKey != null) __obj.updateDynamic("primaryKey")(primaryKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(renderCheckboxes)) __obj.updateDynamic("renderCheckboxes")(renderCheckboxes.asInstanceOf[js.Any])
-    if (renderExpansionCellFunction != null) __obj.updateDynamic("renderExpansionCellFunction")(renderExpansionCellFunction.asInstanceOf[js.Any])
-    if (!js.isUndefined(renderExpansionIndicatorColumn)) __obj.updateDynamic("renderExpansionIndicatorColumn")(renderExpansionIndicatorColumn.asInstanceOf[js.Any])
-    if (renderFirstDataCellFunction != null) __obj.updateDynamic("renderFirstDataCellFunction")(renderFirstDataCellFunction.asInstanceOf[js.Any])
-    if (rendered != null) __obj.updateDynamic("rendered")(js.Any.fromFunction2(rendered))
-    if (rendering != null) __obj.updateDynamic("rendering")(js.Any.fromFunction2(rendering))
-    if (requestError != null) __obj.updateDynamic("requestError")(js.Any.fromFunction2(requestError))
-    if (requestType != null) __obj.updateDynamic("requestType")(requestType.asInstanceOf[js.Any])
-    if (responseContentType != null) __obj.updateDynamic("responseContentType")(responseContentType.asInstanceOf[js.Any])
-    if (responseDataKey != null) __obj.updateDynamic("responseDataKey")(responseDataKey.asInstanceOf[js.Any])
-    if (responseTotalRecCountKey != null) __obj.updateDynamic("responseTotalRecCountKey")(responseTotalRecCountKey.asInstanceOf[js.Any])
-    if (restSettings != null) __obj.updateDynamic("restSettings")(restSettings.asInstanceOf[js.Any])
-    if (rowCollapsed != null) __obj.updateDynamic("rowCollapsed")(js.Any.fromFunction2(rowCollapsed))
-    if (rowCollapsing != null) __obj.updateDynamic("rowCollapsing")(js.Any.fromFunction2(rowCollapsing))
-    if (rowExpanded != null) __obj.updateDynamic("rowExpanded")(js.Any.fromFunction2(rowExpanded))
-    if (rowExpanding != null) __obj.updateDynamic("rowExpanding")(js.Any.fromFunction2(rowExpanding))
-    if (!js.isUndefined(rowVirtualization)) __obj.updateDynamic("rowVirtualization")(rowVirtualization.asInstanceOf[js.Any])
-    if (rowsRendered != null) __obj.updateDynamic("rowsRendered")(js.Any.fromFunction2(rowsRendered))
-    if (rowsRendering != null) __obj.updateDynamic("rowsRendering")(js.Any.fromFunction2(rowsRendering))
-    if (schemaGenerated != null) __obj.updateDynamic("schemaGenerated")(js.Any.fromFunction2(schemaGenerated))
-    if (scrollSettings != null) __obj.updateDynamic("scrollSettings")(scrollSettings.asInstanceOf[js.Any])
-    if (!js.isUndefined(serializeTransactionLog)) __obj.updateDynamic("serializeTransactionLog")(serializeTransactionLog.asInstanceOf[js.Any])
-    if (!js.isUndefined(showExpansionIndicator)) __obj.updateDynamic("showExpansionIndicator")(showExpansionIndicator.asInstanceOf[js.Any])
-    if (!js.isUndefined(showFooter)) __obj.updateDynamic("showFooter")(showFooter.asInstanceOf[js.Any])
-    if (!js.isUndefined(showHeader)) __obj.updateDynamic("showHeader")(showHeader.asInstanceOf[js.Any])
-    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
-    if (templatingEngine != null) __obj.updateDynamic("templatingEngine")(templatingEngine.asInstanceOf[js.Any])
-    if (updateUrl != null) __obj.updateDynamic("updateUrl")(updateUrl.asInstanceOf[js.Any])
-    if (!js.isUndefined(virtualization)) __obj.updateDynamic("virtualization")(virtualization.asInstanceOf[js.Any])
-    if (virtualizationMode != null) __obj.updateDynamic("virtualizationMode")(virtualizationMode.asInstanceOf[js.Any])
-    if (virtualizationMouseWheelStep != null) __obj.updateDynamic("virtualizationMouseWheelStep")(virtualizationMouseWheelStep.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgTreeGrid]
   }
+  @scala.inline
+  implicit class IgTreeGridOps[Self <: IgTreeGrid] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdjustVirtualHeights(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustVirtualHeights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdjustVirtualHeights: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustVirtualHeights")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAggregateTransactions(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregateTransactions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregateTransactions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregateTransactions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlternateRowStyles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alternateRowStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlternateRowStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alternateRowStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoAdjustHeight(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAdjustHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoAdjustHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAdjustHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoCommit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCommit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoCommit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCommit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoFormat(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoGenerateColumns(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGenerateColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoGenerateColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGenerateColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutofitLastColumn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autofitLastColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutofitLastColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autofitLastColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvgColumnWidth(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avgColumnWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvgColumnWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avgColumnWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvgRowHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avgRowHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvgRowHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avgRowHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaptionRendered(value: (/* event */ Event_, /* ui */ CaptionRenderedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionRendered")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCaptionRendered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionRendered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaptionRendering(value: (/* event */ Event_, /* ui */ CaptionRenderingEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionRendering")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCaptionRendering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionRendering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellClick(value: (/* event */ Event_, /* ui */ CellClickEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellClick")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCellClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellRightClick(value: (/* event */ Event_, /* ui */ CellRightClickEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellRightClick")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCellRightClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellRightClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildDataKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childDataKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildDataKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childDataKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollapseTooltipText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseTooltipText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollapseTooltipText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseTooltipText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnVirtualization(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnVirtualization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnVirtualization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnVirtualization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumns(value: js.Array[IgGridColumn]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnsCollectionModified(value: (/* event */ Event_, /* ui */ ColumnsCollectionModifiedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnsCollectionModified")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutColumnsCollectionModified: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnsCollectionModified")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreated(value: (/* event */ Event_, /* ui */ CreatedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCreated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataBinding(value: (/* event */ Event_, /* ui */ DataBindingEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBinding")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutDataBinding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBinding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataBound(value: (/* event */ Event_, /* ui */ DataBoundEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBound")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutDataBound: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBound")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataRendered(value: (/* event */ Event_, /* ui */ DataRenderedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataRendered")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutDataRendered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataRendered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataRendering(value: (/* event */ Event_, /* ui */ DataRenderingEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataRendering")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutDataRendering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataRendering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSource(value: js.Array[_] | js.Object | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSourceSettings(value: IgTreeGridDataSourceSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSourceSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSourceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSourceUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSourceUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultColumnWidth(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColumnWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultColumnWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColumnWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestroyed(value: (/* event */ Event_, /* ui */ DestroyedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroyed")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutDestroyed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroyed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableHoverStyles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableHoverStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableHoverStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableHoverStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableRemoteLoadOnDemand(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRemoteLoadOnDemand")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableRemoteLoadOnDemand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRemoteLoadOnDemand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableResizeContainerCheck(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableResizeContainerCheck")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableResizeContainerCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableResizeContainerCheck")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableUTCDates(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableUTCDates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableUTCDates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableUTCDates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpandTooltipText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandTooltipText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpandTooltipText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandTooltipText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFeatureChooserIconDisplay(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("featureChooserIconDisplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFeatureChooserIconDisplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("featureChooserIconDisplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFeatures(value: js.Array[IgGridFeature]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFeatures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedFooters(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedFooters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedFooters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedFooters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedHeaders(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFooterRendered(value: (/* event */ Event_, /* ui */ FooterRenderedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footerRendered")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutFooterRendered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footerRendered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFooterRendering(value: (/* event */ Event_, /* ui */ FooterRenderingEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footerRendering")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutFooterRendering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footerRendering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForeignKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForeignKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForeignKeyRootValue(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignKeyRootValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForeignKeyRootValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignKeyRootValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderCellRendered(value: (/* event */ Event_, /* ui */ HeaderCellRenderedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerCellRendered")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutHeaderCellRendered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerCellRendered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderRendered(value: (/* event */ Event_, /* ui */ HeaderRenderedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerRendered")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutHeaderRendered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerRendered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderRendering(value: (/* event */ Event_, /* ui */ HeaderRenderingEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerRendering")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutHeaderRendering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerRendering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndentation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndentation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialExpandDepth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialExpandDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialExpandDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialExpandDepth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialIndentationLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialIndentationLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialIndentationLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialIndentationLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJsonpRequest(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonpRequest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJsonpRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonpRequest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalSchemaTransform(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localSchemaTransform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalSchemaTransform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localSchemaTransform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: IgTreeGridLocale): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMergeUnboundColumns(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeUnboundColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMergeUnboundColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeUnboundColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimaryKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimaryKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderCheckboxes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderCheckboxes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenderCheckboxes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderCheckboxes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderExpansionCellFunction(value: String | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderExpansionCellFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenderExpansionCellFunction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderExpansionCellFunction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderExpansionIndicatorColumn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderExpansionIndicatorColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenderExpansionIndicatorColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderExpansionIndicatorColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderFirstDataCellFunction(value: String | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderFirstDataCellFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenderFirstDataCellFunction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderFirstDataCellFunction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRendered(value: (/* event */ Event_, /* ui */ RenderedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rendered")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRendered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rendered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRendering(value: (/* event */ Event_, /* ui */ RenderingEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rendering")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRendering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rendering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestError(value: (/* event */ Event_, /* ui */ RequestErrorEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestError")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRequestError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseContentType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseContentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseContentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseDataKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseDataKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseDataKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseDataKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseTotalRecCountKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseTotalRecCountKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseTotalRecCountKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseTotalRecCountKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestSettings(value: IgTreeGridRestSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowCollapsed(value: (/* event */ Event_, /* ui */ RowCollapsedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCollapsed")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRowCollapsed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCollapsed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowCollapsing(value: (/* event */ Event_, /* ui */ RowCollapsingEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCollapsing")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRowCollapsing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCollapsing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowExpanded(value: (/* event */ Event_, /* ui */ RowExpandedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowExpanded")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRowExpanded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowExpanded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowExpanding(value: (/* event */ Event_, /* ui */ RowExpandingEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowExpanding")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRowExpanding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowExpanding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowVirtualization(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowVirtualization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowVirtualization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowVirtualization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowsRendered(value: (/* event */ Event_, /* ui */ RowsRenderedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsRendered")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRowsRendered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsRendered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowsRendering(value: (/* event */ Event_, /* ui */ RowsRenderingEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsRendering")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRowsRendering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsRendering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemaGenerated(value: (/* event */ Event_, /* ui */ SchemaGeneratedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaGenerated")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutSchemaGenerated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaGenerated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollSettings(value: IgGridScrollSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSerializeTransactionLog(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serializeTransactionLog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSerializeTransactionLog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serializeTransactionLog")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowExpansionIndicator(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showExpansionIndicator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowExpansionIndicator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showExpansionIndicator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowFooter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showFooter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowFooter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showFooter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowHeader(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTabIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplatingEngine(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templatingEngine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplatingEngine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templatingEngine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVirtualization(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVirtualization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVirtualizationMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualizationMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVirtualizationMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualizationMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVirtualizationMouseWheelStep(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualizationMouseWheelStep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVirtualizationMouseWheelStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualizationMouseWheelStep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

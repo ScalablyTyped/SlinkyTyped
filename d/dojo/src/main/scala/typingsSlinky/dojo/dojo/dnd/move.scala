@@ -11,19 +11,20 @@ import scala.scalajs.js.annotation._
   * TODOC
   *
   */
+@js.native
 trait move extends js.Object {
   /**
     *
     */
-  def boxConstrainedMoveable(): Unit
+  def boxConstrainedMoveable(): Unit = js.native
   /**
     *
     */
-  def constrainedMoveable(): Unit
+  def constrainedMoveable(): Unit = js.native
   /**
     *
     */
-  def parentConstrainedMoveable(): Unit
+  def parentConstrainedMoveable(): Unit = js.native
 }
 
 @JSGlobal("dojo.dnd.move")

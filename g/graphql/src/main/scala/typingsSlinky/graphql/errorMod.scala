@@ -5,7 +5,6 @@ import typingsSlinky.graphql.astMod.ASTNode
 import typingsSlinky.graphql.formatErrorMod.GraphQLFormattedError
 import typingsSlinky.graphql.maybeMod.Maybe
 import typingsSlinky.graphql.sourceMod.Source
-import typingsSlinky.std.Error
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -34,7 +33,7 @@ object errorMod extends js.Object {
     nodes: js.Array[ASTNode],
     path: js.Array[String | Double]
   ): typingsSlinky.graphql.graphQLErrorMod.GraphQLError = js.native
-  def locatedError(originalError: Error, nodes: js.Array[ASTNode], path: js.Array[String | Double]): typingsSlinky.graphql.graphQLErrorMod.GraphQLError = js.native
+  def locatedError(originalError: js.Error, nodes: js.Array[ASTNode], path: js.Array[String | Double]): typingsSlinky.graphql.graphQLErrorMod.GraphQLError = js.native
   def printError(error: typingsSlinky.graphql.graphQLErrorMod.GraphQLError): String = js.native
   def syntaxError(source: Source, position: Double, description: String): typingsSlinky.graphql.graphQLErrorMod.GraphQLError = js.native
 }

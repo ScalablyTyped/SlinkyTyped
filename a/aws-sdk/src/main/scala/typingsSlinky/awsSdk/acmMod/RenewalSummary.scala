@@ -26,15 +26,47 @@ trait RenewalSummary extends js.Object {
 
 object RenewalSummary {
   @scala.inline
-  def apply(
-    DomainValidationOptions: DomainValidationList,
-    RenewalStatus: RenewalStatus,
-    UpdatedAt: js.Date,
-    RenewalStatusReason: FailureReason = null
-  ): RenewalSummary = {
+  def apply(DomainValidationOptions: DomainValidationList, RenewalStatus: RenewalStatus, UpdatedAt: js.Date): RenewalSummary = {
     val __obj = js.Dynamic.literal(DomainValidationOptions = DomainValidationOptions.asInstanceOf[js.Any], RenewalStatus = RenewalStatus.asInstanceOf[js.Any], UpdatedAt = UpdatedAt.asInstanceOf[js.Any])
-    if (RenewalStatusReason != null) __obj.updateDynamic("RenewalStatusReason")(RenewalStatusReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[RenewalSummary]
   }
+  @scala.inline
+  implicit class RenewalSummaryOps[Self <: RenewalSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomainValidationOptions(value: DomainValidationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainValidationOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRenewalStatus(value: RenewalStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RenewalStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdatedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRenewalStatusReason(value: FailureReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RenewalStatusReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenewalStatusReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RenewalStatusReason")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

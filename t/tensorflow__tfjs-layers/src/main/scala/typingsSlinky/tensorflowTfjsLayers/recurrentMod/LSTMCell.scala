@@ -4,11 +4,6 @@ import typingsSlinky.tensorflowTfjsLayers.activationsMod.Activation
 import typingsSlinky.tensorflowTfjsLayers.constraintsMod.Constraint
 import typingsSlinky.tensorflowTfjsLayers.initializersMod.Initializer
 import typingsSlinky.tensorflowTfjsLayers.regularizersMod.Regularizer
-import typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.glorotNormal
-import typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.hardSigmoid
-import typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.orthogonal_
-import typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.tanh
-import typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.zeros_
 import typingsSlinky.tensorflowTfjsLayers.variablesMod.LayerVariable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,11 +13,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class LSTMCell protected () extends RNNCell {
   def this(args: LSTMCellLayerArgs) = this()
-  val DEFAULT_ACTIVATION: tanh = js.native
-  val DEFAULT_BIAS_INITIALIZER: zeros_ = js.native
-  val DEFAULT_KERNEL_INITIALIZER: glorotNormal = js.native
-  val DEFAULT_RECURRENT_ACTIVATION: hardSigmoid = js.native
-  val DEFAULT_RECURRENT_INITIALIZER: orthogonal_ = js.native
+  val DEFAULT_ACTIVATION: /* "tanh" */ String = js.native
+  val DEFAULT_BIAS_INITIALIZER: /* "zeros" */ String = js.native
+  val DEFAULT_KERNEL_INITIALIZER: /* "glorotNormal" */ String = js.native
+  val DEFAULT_RECURRENT_ACTIVATION: /* "hardSigmoid" */ String = js.native
+  val DEFAULT_RECURRENT_INITIALIZER: /* "orthogonal" */ String = js.native
   val activation: Activation = js.native
   var bias: LayerVariable = js.native
   val biasConstraint: Constraint = js.native

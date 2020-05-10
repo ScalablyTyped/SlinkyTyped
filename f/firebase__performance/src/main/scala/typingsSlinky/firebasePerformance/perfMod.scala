@@ -2,7 +2,6 @@ package typingsSlinky.firebasePerformance
 
 import typingsSlinky.firebaseAppTypes.mod.FirebaseApp
 import typingsSlinky.firebasePerformanceTypes.mod.FirebasePerformance
-import typingsSlinky.firebasePerformanceTypes.mod.PerformanceTrace
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,32 +13,14 @@ object perfMod extends js.Object {
   class PerformanceController protected () extends FirebasePerformance {
     def this(app: FirebaseApp) = this()
     val app: FirebaseApp = js.native
-    /**
-      * Controls the logging of custom traces.
-      */
-    /* CompleteClass */
-    override var dataCollectionEnabled: Boolean = js.native
-    /**
-      * Controls the logging of automatic traces and HTTP/S network monitoring.
-      */
-    /* CompleteClass */
-    override var instrumentationEnabled: Boolean = js.native
     @JSName("dataCollectionEnabled")
-    def dataCollectionEnabled_MPerformanceController(): Boolean = js.native
+    def dataCollectionEnabled_MPerformanceController: Boolean = js.native
     @JSName("dataCollectionEnabled")
     def dataCollectionEnabled_MPerformanceController(`val`: Boolean): js.Any = js.native
     @JSName("instrumentationEnabled")
-    def instrumentationEnabled_MPerformanceController(): Boolean = js.native
+    def instrumentationEnabled_MPerformanceController: Boolean = js.native
     @JSName("instrumentationEnabled")
     def instrumentationEnabled_MPerformanceController(`val`: Boolean): js.Any = js.native
-    /**
-      * Creates an uninitialized instance of trace and returns it.
-      *
-      * @param traceName The name of trace instance.
-      * @return The trace instance.
-      */
-    /* CompleteClass */
-    override def trace(traceName: String): PerformanceTrace = js.native
   }
   
 }

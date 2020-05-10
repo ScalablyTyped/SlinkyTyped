@@ -55,20 +55,108 @@ object StackResourceDrift {
     ResourceType: ResourceType,
     StackId: StackId,
     StackResourceDriftStatus: StackResourceDriftStatus,
-    Timestamp: js.Date,
-    ActualProperties: Properties = null,
-    ExpectedProperties: Properties = null,
-    PhysicalResourceId: PhysicalResourceId = null,
-    PhysicalResourceIdContext: PhysicalResourceIdContext = null,
-    PropertyDifferences: PropertyDifferences = null
+    Timestamp: js.Date
   ): StackResourceDrift = {
     val __obj = js.Dynamic.literal(LogicalResourceId = LogicalResourceId.asInstanceOf[js.Any], ResourceType = ResourceType.asInstanceOf[js.Any], StackId = StackId.asInstanceOf[js.Any], StackResourceDriftStatus = StackResourceDriftStatus.asInstanceOf[js.Any], Timestamp = Timestamp.asInstanceOf[js.Any])
-    if (ActualProperties != null) __obj.updateDynamic("ActualProperties")(ActualProperties.asInstanceOf[js.Any])
-    if (ExpectedProperties != null) __obj.updateDynamic("ExpectedProperties")(ExpectedProperties.asInstanceOf[js.Any])
-    if (PhysicalResourceId != null) __obj.updateDynamic("PhysicalResourceId")(PhysicalResourceId.asInstanceOf[js.Any])
-    if (PhysicalResourceIdContext != null) __obj.updateDynamic("PhysicalResourceIdContext")(PhysicalResourceIdContext.asInstanceOf[js.Any])
-    if (PropertyDifferences != null) __obj.updateDynamic("PropertyDifferences")(PropertyDifferences.asInstanceOf[js.Any])
     __obj.asInstanceOf[StackResourceDrift]
   }
+  @scala.inline
+  implicit class StackResourceDriftOps[Self <: StackResourceDrift] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLogicalResourceId(value: LogicalResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogicalResourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceType(value: ResourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStackId(value: StackId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStackResourceDriftStatus(value: StackResourceDriftStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackResourceDriftStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActualProperties(value: Properties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActualProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActualProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActualProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpectedProperties(value: Properties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpectedProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpectedProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpectedProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPhysicalResourceId(value: PhysicalResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PhysicalResourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhysicalResourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PhysicalResourceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPhysicalResourceIdContext(value: PhysicalResourceIdContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PhysicalResourceIdContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhysicalResourceIdContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PhysicalResourceIdContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPropertyDifferences(value: PropertyDifferences): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PropertyDifferences")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPropertyDifferences: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PropertyDifferences")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

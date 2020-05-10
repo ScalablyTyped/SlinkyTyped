@@ -5,38 +5,61 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgNotifierHeaderTemplate
   extends /**
-	 * Option for IgNotifierHeaderTemplate
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
   	 * Controls whether the popover renders a functional close button
   	 *
   	 */
-  var closeButton: js.UndefOr[Boolean] = js.undefined
+  var closeButton: js.UndefOr[Boolean] = js.native
   /**
   	 * Sets the content for the popover header.
   	 *
   	 */
-  var title: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.native
 }
 
 object IgNotifierHeaderTemplate {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for IgNotifierHeaderTemplate
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    closeButton: js.UndefOr[Boolean] = js.undefined,
-    title: String = null
-  ): IgNotifierHeaderTemplate = {
+  def apply(): IgNotifierHeaderTemplate = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(closeButton)) __obj.updateDynamic("closeButton")(closeButton.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgNotifierHeaderTemplate]
   }
+  @scala.inline
+  implicit class IgNotifierHeaderTemplateOps[Self <: IgNotifierHeaderTemplate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloseButton(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeButton")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,47 +1,40 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.tabViewMod.TabPanelProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TabPanel
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactTabviewMod.TabPanel] {
+object TabPanel {
   @JSImport("primereact/tabview", "TabPanel")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    contentClassName: String = null,
-    contentStyle: js.Any = null,
-    header: String = null,
-    headerClassName: String = null,
-    headerStyle: js.Any = null,
-    leftIcon: String = null,
-    rightIcon: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactTabviewMod.TabPanel] = {
-    val __obj = js.Dynamic.literal()
-    if (contentClassName != null) __obj.updateDynamic("contentClassName")(contentClassName.asInstanceOf[js.Any])
-    if (contentStyle != null) __obj.updateDynamic("contentStyle")(contentStyle.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (headerClassName != null) __obj.updateDynamic("headerClassName")(headerClassName.asInstanceOf[js.Any])
-    if (headerStyle != null) __obj.updateDynamic("headerStyle")(headerStyle.asInstanceOf[js.Any])
-    if (leftIcon != null) __obj.updateDynamic("leftIcon")(leftIcon.asInstanceOf[js.Any])
-    if (rightIcon != null) __obj.updateDynamic("rightIcon")(rightIcon.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.primereactTabviewMod.TabPanel] {
+    @scala.inline
+    def contentClassName(value: String): this.type = set("contentClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentStyle(value: js.Any): this.type = set("contentStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def header(value: String): this.type = set("header", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerClassName(value: String): this.type = set("headerClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerStyle(value: js.Any): this.type = set("headerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def leftIcon(value: String): this.type = set("leftIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rightIcon(value: String): this.type = set("rightIcon", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactTabviewMod.TabPanel] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.primereactTabviewMod.TabPanel](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TabPanelProps
+  
+  def withProps(p: TabPanelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TabPanel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

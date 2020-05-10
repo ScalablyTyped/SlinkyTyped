@@ -1,10 +1,9 @@
 package typingsSlinky.antDesignPro.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.AnonX
 import typingsSlinky.antDesignPro.pieMod.IPieProps
 import typingsSlinky.antDesignPro.pieMod.default
@@ -12,45 +11,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Pie
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Pie {
   @JSImport("ant-design-pro/lib/Charts/Pie", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    height: Double,
-    animate: js.UndefOr[Boolean] = js.undefined,
-    color: String = null,
-    colors: js.Array[String] = null,
-    data: js.Array[AnonX] = null,
-    hasLegend: js.UndefOr[Boolean] = js.undefined,
-    padding: js.Tuple4[Double, Double, Double, Double] = null,
-    percent: Int | Double = null,
-    subTitle: TagMod[Any] = null,
-    title: TagMod[Any] = null,
-    tooltip: js.UndefOr[Boolean] = js.undefined,
-    total: TagMod[Any] | Double | (js.Function0[TagMod[Any] | Double]) = null,
-    valueFormat: /* value */ String => String | TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any])
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasLegend)) __obj.updateDynamic("hasLegend")(hasLegend.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (percent != null) __obj.updateDynamic("percent")(percent.asInstanceOf[js.Any])
-    if (subTitle != null) __obj.updateDynamic("subTitle")(subTitle.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (!js.isUndefined(tooltip)) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (total != null) __obj.updateDynamic("total")(total.asInstanceOf[js.Any])
-    if (valueFormat != null) __obj.updateDynamic("valueFormat")(js.Any.fromFunction1(valueFormat))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def animate(value: Boolean): this.type = set("animate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colors(value: js.Array[String]): this.type = set("colors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(value: js.Array[AnonX]): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hasLegend(value: Boolean): this.type = set("hasLegend", value.asInstanceOf[js.Any])
+    @scala.inline
+    def padding(value: js.Tuple4[Double, Double, Double, Double]): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def percent(value: Double): this.type = set("percent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subTitleReactElement(value: ReactElement): this.type = set("subTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subTitle(value: TagMod[Any]): this.type = set("subTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltip(value: Boolean): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def totalReactElement(value: ReactElement): this.type = set("total", value.asInstanceOf[js.Any])
+    @scala.inline
+    def totalFunction0(value: () => TagMod[Any] | Double): this.type = set("total", js.Any.fromFunction0(value))
+    @scala.inline
+    def total(value: TagMod[Any] | Double | (js.Function0[TagMod[Any] | Double])): this.type = set("total", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueFormat(value: /* value */ String => String | TagMod[Any]): this.type = set("valueFormat", js.Any.fromFunction1(value))
   }
-  type Props = IPieProps
+  
+  def withProps(p: IPieProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(height: Double): Builder = {
+    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IPieProps]))
+  }
 }
 

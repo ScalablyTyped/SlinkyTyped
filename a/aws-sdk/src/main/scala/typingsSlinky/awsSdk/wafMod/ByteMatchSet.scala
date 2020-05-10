@@ -22,10 +22,41 @@ trait ByteMatchSet extends js.Object {
 
 object ByteMatchSet {
   @scala.inline
-  def apply(ByteMatchSetId: ResourceId, ByteMatchTuples: ByteMatchTuples, Name: ResourceName = null): ByteMatchSet = {
+  def apply(ByteMatchSetId: ResourceId, ByteMatchTuples: ByteMatchTuples): ByteMatchSet = {
     val __obj = js.Dynamic.literal(ByteMatchSetId = ByteMatchSetId.asInstanceOf[js.Any], ByteMatchTuples = ByteMatchTuples.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ByteMatchSet]
   }
+  @scala.inline
+  implicit class ByteMatchSetOps[Self <: ByteMatchSet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withByteMatchSetId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByteMatchSetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withByteMatchTuples(value: ByteMatchTuples): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByteMatchTuples")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

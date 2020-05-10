@@ -80,28 +80,125 @@ trait SchemaClusterUpdate extends js.Object {
 
 object SchemaClusterUpdate {
   @scala.inline
-  def apply(
-    desiredAddonsConfig: SchemaAddonsConfig = null,
-    desiredImageType: String = null,
-    desiredLocations: js.Array[String] = null,
-    desiredMasterAuthorizedNetworksConfig: SchemaMasterAuthorizedNetworksConfig = null,
-    desiredMasterVersion: String = null,
-    desiredMonitoringService: String = null,
-    desiredNodePoolAutoscaling: SchemaNodePoolAutoscaling = null,
-    desiredNodePoolId: String = null,
-    desiredNodeVersion: String = null
-  ): SchemaClusterUpdate = {
+  def apply(): SchemaClusterUpdate = {
     val __obj = js.Dynamic.literal()
-    if (desiredAddonsConfig != null) __obj.updateDynamic("desiredAddonsConfig")(desiredAddonsConfig.asInstanceOf[js.Any])
-    if (desiredImageType != null) __obj.updateDynamic("desiredImageType")(desiredImageType.asInstanceOf[js.Any])
-    if (desiredLocations != null) __obj.updateDynamic("desiredLocations")(desiredLocations.asInstanceOf[js.Any])
-    if (desiredMasterAuthorizedNetworksConfig != null) __obj.updateDynamic("desiredMasterAuthorizedNetworksConfig")(desiredMasterAuthorizedNetworksConfig.asInstanceOf[js.Any])
-    if (desiredMasterVersion != null) __obj.updateDynamic("desiredMasterVersion")(desiredMasterVersion.asInstanceOf[js.Any])
-    if (desiredMonitoringService != null) __obj.updateDynamic("desiredMonitoringService")(desiredMonitoringService.asInstanceOf[js.Any])
-    if (desiredNodePoolAutoscaling != null) __obj.updateDynamic("desiredNodePoolAutoscaling")(desiredNodePoolAutoscaling.asInstanceOf[js.Any])
-    if (desiredNodePoolId != null) __obj.updateDynamic("desiredNodePoolId")(desiredNodePoolId.asInstanceOf[js.Any])
-    if (desiredNodeVersion != null) __obj.updateDynamic("desiredNodeVersion")(desiredNodeVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaClusterUpdate]
   }
+  @scala.inline
+  implicit class SchemaClusterUpdateOps[Self <: SchemaClusterUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDesiredAddonsConfig(value: SchemaAddonsConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredAddonsConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredAddonsConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredAddonsConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredImageType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredImageType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredImageType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredImageType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredLocations(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredLocations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredLocations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredLocations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredMasterAuthorizedNetworksConfig(value: SchemaMasterAuthorizedNetworksConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredMasterAuthorizedNetworksConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredMasterAuthorizedNetworksConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredMasterAuthorizedNetworksConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredMasterVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredMasterVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredMasterVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredMasterVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredMonitoringService(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredMonitoringService")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredMonitoringService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredMonitoringService")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredNodePoolAutoscaling(value: SchemaNodePoolAutoscaling): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredNodePoolAutoscaling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredNodePoolAutoscaling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredNodePoolAutoscaling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredNodePoolId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredNodePoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredNodePoolId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredNodePoolId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredNodeVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredNodeVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredNodeVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredNodeVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

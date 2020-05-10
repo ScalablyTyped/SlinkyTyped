@@ -14,10 +14,29 @@ trait InvokeAsyncResponse extends js.Object {
 
 object InvokeAsyncResponse {
   @scala.inline
-  def apply(Status: Int | Double = null): InvokeAsyncResponse = {
+  def apply(): InvokeAsyncResponse = {
     val __obj = js.Dynamic.literal()
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvokeAsyncResponse]
   }
+  @scala.inline
+  implicit class InvokeAsyncResponseOps[Self <: InvokeAsyncResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStatus(value: HttpStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

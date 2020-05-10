@@ -7,7 +7,6 @@ import typingsSlinky.firebaseDatabase.pathMod.Path
 import typingsSlinky.firebaseDatabase.queryParamsMod.QueryParams
 import typingsSlinky.firebaseDatabase.referenceMod.Reference
 import typingsSlinky.firebaseDatabase.repoMod.Repo
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -102,12 +101,12 @@ object queryMod extends js.Object {
     def on(
       eventType: String,
       callback: SnapshotCallback,
-      cancelCallbackOrContext: js.Function1[/* a */ Error, _]
+      cancelCallbackOrContext: js.Function1[/* a */ js.Error, _]
     ): SnapshotCallback = js.native
     def on(
       eventType: String,
       callback: SnapshotCallback,
-      cancelCallbackOrContext: js.Function1[/* a */ Error, _],
+      cancelCallbackOrContext: js.Function1[/* a */ js.Error, _],
       context: js.Object
     ): SnapshotCallback = js.native
     def on(eventType: String, callback: SnapshotCallback, cancelCallbackOrContext: js.Object): SnapshotCallback = js.native
@@ -119,7 +118,7 @@ object queryMod extends js.Object {
     ): SnapshotCallback = js.native
     def on(eventType: String, callback: SnapshotCallback, cancelCallbackOrContext: Null, context: js.Object): SnapshotCallback = js.native
     def onChildEvent(callbacks: StringDictionary[SnapshotCallback]): Unit = js.native
-    def onChildEvent(callbacks: StringDictionary[SnapshotCallback], cancelCallback: js.Function1[/* a */ Error, _]): Unit = js.native
+    def onChildEvent(callbacks: StringDictionary[SnapshotCallback], cancelCallback: js.Function1[/* a */ js.Error, _]): Unit = js.native
     /**
       * @param {!Object.<string, !function(!DataSnapshot, ?string)>} callbacks
       * @param {?function(Error)} cancelCallback
@@ -128,14 +127,14 @@ object queryMod extends js.Object {
       */
     def onChildEvent(
       callbacks: StringDictionary[SnapshotCallback],
-      cancelCallback: js.Function1[/* a */ Error, _],
+      cancelCallback: js.Function1[/* a */ js.Error, _],
       context: js.Object
     ): Unit = js.native
     def onChildEvent(callbacks: StringDictionary[SnapshotCallback], cancelCallback: Null, context: js.Object): Unit = js.native
     /* protected */ def onValueEvent(callback: js.Function1[/* a */ DataSnapshot, Unit]): Unit = js.native
     /* protected */ def onValueEvent(
       callback: js.Function1[/* a */ DataSnapshot, Unit],
-      cancelCallback: js.Function1[/* a */ Error, Unit]
+      cancelCallback: js.Function1[/* a */ js.Error, Unit]
     ): Unit = js.native
     /**
       * @param {!function(!DataSnapshot)} callback
@@ -145,7 +144,7 @@ object queryMod extends js.Object {
       */
     /* protected */ def onValueEvent(
       callback: js.Function1[/* a */ DataSnapshot, Unit],
-      cancelCallback: js.Function1[/* a */ Error, Unit],
+      cancelCallback: js.Function1[/* a */ js.Error, Unit],
       context: js.Object
     ): Unit = js.native
     /* protected */ def onValueEvent(callback: js.Function1[/* a */ DataSnapshot, Unit], cancelCallback: Null, context: js.Object): Unit = js.native
@@ -162,12 +161,12 @@ object queryMod extends js.Object {
     def once(
       eventType: String,
       userCallback: SnapshotCallback,
-      failureCallbackOrContext: js.Function1[/* a */ Error, Unit]
+      failureCallbackOrContext: js.Function1[/* a */ js.Error, Unit]
     ): js.Promise[DataSnapshot] = js.native
     def once(
       eventType: String,
       userCallback: SnapshotCallback,
-      failureCallbackOrContext: js.Function1[/* a */ Error, Unit],
+      failureCallbackOrContext: js.Function1[/* a */ js.Error, Unit],
       context: js.Object
     ): js.Promise[DataSnapshot] = js.native
     def once(eventType: String, userCallback: SnapshotCallback, failureCallbackOrContext: js.Object): js.Promise[DataSnapshot] = js.native
@@ -213,7 +212,7 @@ object queryMod extends js.Object {
       * @return {!Object}
       */
     def queryObject(): js.Object = js.native
-    def ref(): Reference = js.native
+    def ref: Reference = js.native
     /**
       * @param {number|string|boolean|null} value
       * @param {?string=} name
@@ -254,7 +253,7 @@ object queryMod extends js.Object {
       * @private
       */
     var validateQueryEndpoints_ : js.Any = js.native
-    def __referenceConstructor(): Instantiable2[/* repo */ Repo, /* path */ Path, Query] = js.native
+    def __referenceConstructor: Instantiable2[/* repo */ Repo, /* path */ Path, Query] = js.native
     def __referenceConstructor(`val`: Instantiable2[/* repo */ Repo, /* path */ Path, Query]): js.Any = js.native
   }
   

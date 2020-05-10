@@ -1,5 +1,6 @@
 package typingsSlinky.lambdaWrapper
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.awsLambda.handlerMod.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,12 +30,12 @@ object mod extends js.Object {
   def wrap[TEvent, TResult, THandlerName /* <: String */](
     mod: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ name in THandlerName ]: aws-lambda.aws-lambda/handler.Handler<TEvent, TResult>}
-    */ typingsSlinky.lambdaWrapper.lambdaWrapperStrings.wrap with js.Any
+    */ typingsSlinky.lambdaWrapper.lambdaWrapperStrings.wrap with TopLevel[js.Any]
   ): Wrapped[TEvent, TResult] = js.native
   def wrap[TEvent, TResult, THandlerName /* <: String */](
     mod: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ name in THandlerName ]: aws-lambda.aws-lambda/handler.Handler<TEvent, TResult>}
-    */ typingsSlinky.lambdaWrapper.lambdaWrapperStrings.wrap with js.Any,
+    */ typingsSlinky.lambdaWrapper.lambdaWrapperStrings.wrap with TopLevel[js.Any],
     options: AnonHandler[THandlerName]
   ): Wrapped[TEvent, TResult] = js.native
 }

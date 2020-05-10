@@ -5,17 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OpaqueFileSizes extends js.Object {
-  var root: String
-  var sizes: Record[String, Double]
+  var root: String = js.native
+  var sizes: Record[String, Double] = js.native
 }
 
 object OpaqueFileSizes {
   @scala.inline
   def apply(root: String, sizes: Record[String, Double]): OpaqueFileSizes = {
     val __obj = js.Dynamic.literal(root = root.asInstanceOf[js.Any], sizes = sizes.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[OpaqueFileSizes]
   }
+  @scala.inline
+  implicit class OpaqueFileSizesOps[Self <: OpaqueFileSizes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRoot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSizes(value: Record[String, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

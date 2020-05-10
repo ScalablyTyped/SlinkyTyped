@@ -17,20 +17,18 @@ trait PositionType extends js.Object
 
 object PositionType {
   @scala.inline
-  def absolute: typingsSlinky.azdata.azdataStrings.absolute = this.cast("absolute")
+  def absolute: typingsSlinky.azdata.azdataStrings.absolute = "absolute".asInstanceOf[typingsSlinky.azdata.azdataStrings.absolute]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fixed: typingsSlinky.azdata.azdataStrings.fixed = "fixed".asInstanceOf[typingsSlinky.azdata.azdataStrings.fixed]
   @scala.inline
-  def fixed: typingsSlinky.azdata.azdataStrings.fixed = this.cast("fixed")
+  def inherit: typingsSlinky.azdata.azdataStrings.inherit = "inherit".asInstanceOf[typingsSlinky.azdata.azdataStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.azdata.azdataStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.azdata.azdataStrings.initial = "initial".asInstanceOf[typingsSlinky.azdata.azdataStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.azdata.azdataStrings.initial = this.cast("initial")
+  def relative: typingsSlinky.azdata.azdataStrings.relative = "relative".asInstanceOf[typingsSlinky.azdata.azdataStrings.relative]
   @scala.inline
-  def relative: typingsSlinky.azdata.azdataStrings.relative = this.cast("relative")
+  def static: typingsSlinky.azdata.azdataStrings.static = "static".asInstanceOf[typingsSlinky.azdata.azdataStrings.static]
   @scala.inline
-  def static: typingsSlinky.azdata.azdataStrings.static = this.cast("static")
-  @scala.inline
-  def sticky: typingsSlinky.azdata.azdataStrings.sticky = this.cast("sticky")
+  def sticky: typingsSlinky.azdata.azdataStrings.sticky = "sticky".asInstanceOf[typingsSlinky.azdata.azdataStrings.sticky]
 }
 

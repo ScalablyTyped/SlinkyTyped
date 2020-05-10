@@ -6,45 +6,73 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OrdinalScale
   extends BaseScale
      with Scale {
-  var domainImplicit: js.UndefOr[Boolean | SignalRef] = js.undefined
-  var interpolate: js.UndefOr[ScaleInterpolate] = js.undefined
-  var range: js.UndefOr[RangeScheme | ScaleData] = js.undefined
+  var domainImplicit: js.UndefOr[Boolean | SignalRef] = js.native
+  var interpolate: js.UndefOr[ScaleInterpolate] = js.native
+  var range: js.UndefOr[RangeScheme | ScaleData] = js.native
   @JSName("type")
-  var type_OrdinalScale: ordinal
+  var type_OrdinalScale: ordinal = js.native
 }
 
 object OrdinalScale {
   @scala.inline
-  def apply(
-    name: String,
-    `type`: ordinal,
-    domain: (js.Array[Null | String | Double | Boolean | SignalRef]) | ScaleData | SignalRef = null,
-    domainImplicit: Boolean | SignalRef = null,
-    domainMax: Double | SignalRef = null,
-    domainMid: Double | SignalRef = null,
-    domainMin: Double | SignalRef = null,
-    domainRaw: js.Array[_] | SignalRef = null,
-    interpolate: ScaleInterpolate = null,
-    range: RangeScheme | ScaleData = null,
-    reverse: Boolean | SignalRef = null,
-    round: Boolean | SignalRef = null
-  ): OrdinalScale = {
+  def apply(name: String, `type`: ordinal): OrdinalScale = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
-    if (domainImplicit != null) __obj.updateDynamic("domainImplicit")(domainImplicit.asInstanceOf[js.Any])
-    if (domainMax != null) __obj.updateDynamic("domainMax")(domainMax.asInstanceOf[js.Any])
-    if (domainMid != null) __obj.updateDynamic("domainMid")(domainMid.asInstanceOf[js.Any])
-    if (domainMin != null) __obj.updateDynamic("domainMin")(domainMin.asInstanceOf[js.Any])
-    if (domainRaw != null) __obj.updateDynamic("domainRaw")(domainRaw.asInstanceOf[js.Any])
-    if (interpolate != null) __obj.updateDynamic("interpolate")(interpolate.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (reverse != null) __obj.updateDynamic("reverse")(reverse.asInstanceOf[js.Any])
-    if (round != null) __obj.updateDynamic("round")(round.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrdinalScale]
   }
+  @scala.inline
+  implicit class OrdinalScaleOps[Self <: OrdinalScale] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: ordinal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDomainImplicit(value: Boolean | SignalRef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainImplicit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainImplicit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainImplicit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterpolate(value: ScaleInterpolate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterpolate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: RangeScheme | ScaleData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

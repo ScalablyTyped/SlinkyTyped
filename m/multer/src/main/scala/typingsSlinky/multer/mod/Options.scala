@@ -2,6 +2,7 @@ package typingsSlinky.multer.mod
 
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.multer.AnonFieldNameSize
 import typingsSlinky.multer.mod._Global_.Express.Multer.File
 import scala.scalajs.js
@@ -9,6 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Options for initializing a Multer instance. */
+@js.native
 trait Options extends js.Object {
   /**
     * The destination directory for uploaded files. If `storage` is not set
@@ -17,7 +19,7 @@ trait Options extends js.Object {
     *
     * Ignored if `storage` is set.
     */
-  var dest: js.UndefOr[String] = js.undefined
+  var dest: js.UndefOr[String] = js.native
   /**
     * Optional function to control which files are uploaded. This is called
     * for every file that is processed.
@@ -28,43 +30,102 @@ trait Options extends js.Object {
     */
   var fileFilter: js.UndefOr[
     js.Function3[
-      /* req */ Request_[ParamsDictionary], 
+      /* req */ Request_[ParamsDictionary, _, _, Query], 
       /* file */ File, 
       /* callback */ FileFilterCallback, 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * An object specifying various limits on incoming data. This object is
     * passed to Busboy directly, and the details of properties can be found
     * at https://github.com/mscdex/busboy#busboy-methods.
     */
-  var limits: js.UndefOr[AnonFieldNameSize] = js.undefined
+  var limits: js.UndefOr[AnonFieldNameSize] = js.native
   /** Preserve the full path of the original filename rather than the basename. (Default: false) */
-  var preservePath: js.UndefOr[Boolean] = js.undefined
+  var preservePath: js.UndefOr[Boolean] = js.native
   /**
     * A `StorageEngine` responsible for processing files uploaded via Multer.
     * Takes precedence over `dest`.
     */
-  var storage: js.UndefOr[StorageEngine] = js.undefined
+  var storage: js.UndefOr[StorageEngine] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    dest: String = null,
-    fileFilter: (/* req */ Request_[ParamsDictionary], /* file */ File, /* callback */ FileFilterCallback) => Unit = null,
-    limits: AnonFieldNameSize = null,
-    preservePath: js.UndefOr[Boolean] = js.undefined,
-    storage: StorageEngine = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (dest != null) __obj.updateDynamic("dest")(dest.asInstanceOf[js.Any])
-    if (fileFilter != null) __obj.updateDynamic("fileFilter")(js.Any.fromFunction3(fileFilter))
-    if (limits != null) __obj.updateDynamic("limits")(limits.asInstanceOf[js.Any])
-    if (!js.isUndefined(preservePath)) __obj.updateDynamic("preservePath")(preservePath.asInstanceOf[js.Any])
-    if (storage != null) __obj.updateDynamic("storage")(storage.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDest(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileFilter(
+      value: (/* req */ Request_[ParamsDictionary, _, _, Query], /* file */ File, /* callback */ FileFilterCallback) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileFilter")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutFileFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimits(value: AnonFieldNameSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreservePath(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preservePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreservePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preservePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStorage(value: StorageEngine): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

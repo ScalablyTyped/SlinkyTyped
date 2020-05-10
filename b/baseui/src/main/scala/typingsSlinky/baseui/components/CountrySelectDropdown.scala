@@ -1,10 +1,7 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.AnonCountrySelectDropdown
 import typingsSlinky.baseui.phoneInputMod.Country
 import typingsSlinky.baseui.phoneInputMod.CountrySelectDropdownProps
@@ -12,29 +9,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CountrySelectDropdown
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object CountrySelectDropdown {
   @JSImport("baseui/phone-input", "CountrySelectDropdown")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    country: Country = null,
-    mapIsoToLabel: /* iso */ String => String = null,
-    maxDropdownHeight: String = null,
-    overrides: AnonCountrySelectDropdown = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
-    if (mapIsoToLabel != null) __obj.updateDynamic("mapIsoToLabel")(js.Any.fromFunction1(mapIsoToLabel))
-    if (maxDropdownHeight != null) __obj.updateDynamic("maxDropdownHeight")(maxDropdownHeight.asInstanceOf[js.Any])
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def country(value: Country): this.type = set("country", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mapIsoToLabel(value: /* iso */ String => String): this.type = set("mapIsoToLabel", js.Any.fromFunction1(value))
+    @scala.inline
+    def maxDropdownHeight(value: String): this.type = set("maxDropdownHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overrides(value: AnonCountrySelectDropdown): this.type = set("overrides", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = CountrySelectDropdownProps
+  
+  def withProps(p: CountrySelectDropdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CountrySelectDropdown.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

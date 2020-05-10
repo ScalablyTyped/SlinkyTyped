@@ -27,11 +27,41 @@ trait SchemaAggregateBy extends js.Object {
 
 object SchemaAggregateBy {
   @scala.inline
-  def apply(dataSourceId: String = null, dataTypeName: String = null): SchemaAggregateBy = {
+  def apply(): SchemaAggregateBy = {
     val __obj = js.Dynamic.literal()
-    if (dataSourceId != null) __obj.updateDynamic("dataSourceId")(dataSourceId.asInstanceOf[js.Any])
-    if (dataTypeName != null) __obj.updateDynamic("dataTypeName")(dataTypeName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAggregateBy]
   }
+  @scala.inline
+  implicit class SchemaAggregateByOps[Self <: SchemaAggregateBy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataSourceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataTypeName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataTypeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataTypeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataTypeName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

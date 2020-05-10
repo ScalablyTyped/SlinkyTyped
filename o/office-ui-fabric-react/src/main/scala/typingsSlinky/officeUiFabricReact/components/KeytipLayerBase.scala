@@ -1,52 +1,61 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.ikeytiptransitionkeyMod.IKeytipTransitionKey
 import typingsSlinky.officeUiFabricReact.keytipLayerTypesMod.IKeytipLayer
 import typingsSlinky.officeUiFabricReact.keytipLayerTypesMod.IKeytipLayerProps
 import typingsSlinky.officeUiFabricReact.keytipLayerTypesMod.IKeytipLayerStyleProps
 import typingsSlinky.officeUiFabricReact.keytipLayerTypesMod.IKeytipLayerStyles
+import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object KeytipLayerBase
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.officeUiFabricReact.mod.KeytipLayerBase] {
+object KeytipLayerBase {
   @JSImport("office-ui-fabric-react", "KeytipLayerBase")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    content: String,
-    componentRef: IRefObject[IKeytipLayer] = null,
-    keytipExitSequences: js.Array[IKeytipTransitionKey] = null,
-    keytipReturnSequences: js.Array[IKeytipTransitionKey] = null,
-    keytipStartSequences: js.Array[IKeytipTransitionKey] = null,
-    onEnterKeytipMode: () => Unit = null,
-    onExitKeytipMode: /* ev */ js.UndefOr[SyntheticKeyboardEvent[HTMLElement] | SyntheticMouseEvent[HTMLElement]] => Unit = null,
-    styles: IStyleFunctionOrObject[IKeytipLayerStyleProps, IKeytipLayerStyles] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.KeytipLayerBase] = {
-    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (keytipExitSequences != null) __obj.updateDynamic("keytipExitSequences")(keytipExitSequences.asInstanceOf[js.Any])
-    if (keytipReturnSequences != null) __obj.updateDynamic("keytipReturnSequences")(keytipReturnSequences.asInstanceOf[js.Any])
-    if (keytipStartSequences != null) __obj.updateDynamic("keytipStartSequences")(keytipStartSequences.asInstanceOf[js.Any])
-    if (onEnterKeytipMode != null) __obj.updateDynamic("onEnterKeytipMode")(js.Any.fromFunction0(onEnterKeytipMode))
-    if (onExitKeytipMode != null) __obj.updateDynamic("onExitKeytipMode")(js.Any.fromFunction1(onExitKeytipMode))
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.KeytipLayerBase] {
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ IKeytipLayer | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[IKeytipLayer]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[IKeytipLayer]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keytipExitSequences(value: js.Array[IKeytipTransitionKey]): this.type = set("keytipExitSequences", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keytipReturnSequences(value: js.Array[IKeytipTransitionKey]): this.type = set("keytipReturnSequences", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keytipStartSequences(value: js.Array[IKeytipTransitionKey]): this.type = set("keytipStartSequences", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onEnterKeytipMode(value: () => Unit): this.type = set("onEnterKeytipMode", js.Any.fromFunction0(value))
+    @scala.inline
+    def onExitKeytipMode(
+      value: /* ev */ js.UndefOr[SyntheticKeyboardEvent[HTMLElement] | SyntheticMouseEvent[HTMLElement]] => Unit
+    ): this.type = set("onExitKeytipMode", js.Any.fromFunction1(value))
+    @scala.inline
+    def stylesFunction1(value: IKeytipLayerStyleProps => Partial[IKeytipLayerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: IStyleFunctionOrObject[IKeytipLayerStyleProps, IKeytipLayerStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   }
-  type Props = IKeytipLayerProps
+  
+  def withProps(p: IKeytipLayerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(content: String): Builder = {
+    val __props = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IKeytipLayerProps]))
+  }
 }
 

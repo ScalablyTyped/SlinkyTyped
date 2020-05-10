@@ -18,11 +18,41 @@ trait GetObjectInformationResponse extends js.Object {
 
 object GetObjectInformationResponse {
   @scala.inline
-  def apply(ObjectIdentifier: ObjectIdentifier = null, SchemaFacets: SchemaFacetList = null): GetObjectInformationResponse = {
+  def apply(): GetObjectInformationResponse = {
     val __obj = js.Dynamic.literal()
-    if (ObjectIdentifier != null) __obj.updateDynamic("ObjectIdentifier")(ObjectIdentifier.asInstanceOf[js.Any])
-    if (SchemaFacets != null) __obj.updateDynamic("SchemaFacets")(SchemaFacets.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetObjectInformationResponse]
   }
+  @scala.inline
+  implicit class GetObjectInformationResponseOps[Self <: GetObjectInformationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withObjectIdentifier(value: ObjectIdentifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemaFacets(value: SchemaFacetList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaFacets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchemaFacets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaFacets")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,43 +1,44 @@
 package typingsSlinky.reactGravatar.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactGravatar.mod.DefaultImage
+import typingsSlinky.reactGravatar.mod.Props
 import typingsSlinky.reactGravatar.mod.Rating
 import typingsSlinky.reactGravatar.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactGravatar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactGravatar {
   @JSImport("react-gravatar", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, size, style */
-  def apply(
-    default: DefaultImage = null,
-    email: String = null,
-    md5: String = null,
-    protocol: String = null,
-    rating: Rating = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal()
-    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (md5 != null) __obj.updateDynamic("md5")(md5.asInstanceOf[js.Any])
-    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
-    if (rating != null) __obj.updateDynamic("rating")(rating.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def default(value: DefaultImage): this.type = set("default", value.asInstanceOf[js.Any])
+    @scala.inline
+    def email(value: String): this.type = set("email", value.asInstanceOf[js.Any])
+    @scala.inline
+    def md5(value: String): this.type = set("md5", value.asInstanceOf[js.Any])
+    @scala.inline
+    def protocol(value: String): this.type = set("protocol", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rating(value: Rating): this.type = set("rating", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, ^] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactGravatar.mod.^](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = typingsSlinky.reactGravatar.mod.Props
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactGravatar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

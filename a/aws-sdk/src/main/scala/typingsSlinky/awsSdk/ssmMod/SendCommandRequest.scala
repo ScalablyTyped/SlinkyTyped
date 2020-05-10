@@ -78,43 +78,215 @@ trait SendCommandRequest extends js.Object {
 
 object SendCommandRequest {
   @scala.inline
-  def apply(
-    DocumentName: DocumentARN,
-    CloudWatchOutputConfig: CloudWatchOutputConfig = null,
-    Comment: Comment = null,
-    DocumentHash: DocumentHash = null,
-    DocumentHashType: DocumentHashType = null,
-    DocumentVersion: DocumentVersion = null,
-    InstanceIds: InstanceIdList = null,
-    MaxConcurrency: MaxConcurrency = null,
-    MaxErrors: MaxErrors = null,
-    NotificationConfig: NotificationConfig = null,
-    OutputS3BucketName: S3BucketName = null,
-    OutputS3KeyPrefix: S3KeyPrefix = null,
-    OutputS3Region: S3Region = null,
-    Parameters: Parameters = null,
-    ServiceRoleArn: ServiceRole = null,
-    Targets: Targets = null,
-    TimeoutSeconds: Int | Double = null
-  ): SendCommandRequest = {
+  def apply(DocumentName: DocumentARN): SendCommandRequest = {
     val __obj = js.Dynamic.literal(DocumentName = DocumentName.asInstanceOf[js.Any])
-    if (CloudWatchOutputConfig != null) __obj.updateDynamic("CloudWatchOutputConfig")(CloudWatchOutputConfig.asInstanceOf[js.Any])
-    if (Comment != null) __obj.updateDynamic("Comment")(Comment.asInstanceOf[js.Any])
-    if (DocumentHash != null) __obj.updateDynamic("DocumentHash")(DocumentHash.asInstanceOf[js.Any])
-    if (DocumentHashType != null) __obj.updateDynamic("DocumentHashType")(DocumentHashType.asInstanceOf[js.Any])
-    if (DocumentVersion != null) __obj.updateDynamic("DocumentVersion")(DocumentVersion.asInstanceOf[js.Any])
-    if (InstanceIds != null) __obj.updateDynamic("InstanceIds")(InstanceIds.asInstanceOf[js.Any])
-    if (MaxConcurrency != null) __obj.updateDynamic("MaxConcurrency")(MaxConcurrency.asInstanceOf[js.Any])
-    if (MaxErrors != null) __obj.updateDynamic("MaxErrors")(MaxErrors.asInstanceOf[js.Any])
-    if (NotificationConfig != null) __obj.updateDynamic("NotificationConfig")(NotificationConfig.asInstanceOf[js.Any])
-    if (OutputS3BucketName != null) __obj.updateDynamic("OutputS3BucketName")(OutputS3BucketName.asInstanceOf[js.Any])
-    if (OutputS3KeyPrefix != null) __obj.updateDynamic("OutputS3KeyPrefix")(OutputS3KeyPrefix.asInstanceOf[js.Any])
-    if (OutputS3Region != null) __obj.updateDynamic("OutputS3Region")(OutputS3Region.asInstanceOf[js.Any])
-    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
-    if (ServiceRoleArn != null) __obj.updateDynamic("ServiceRoleArn")(ServiceRoleArn.asInstanceOf[js.Any])
-    if (Targets != null) __obj.updateDynamic("Targets")(Targets.asInstanceOf[js.Any])
-    if (TimeoutSeconds != null) __obj.updateDynamic("TimeoutSeconds")(TimeoutSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendCommandRequest]
   }
+  @scala.inline
+  implicit class SendCommandRequestOps[Self <: SendCommandRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocumentName(value: DocumentARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCloudWatchOutputConfig(value: CloudWatchOutputConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchOutputConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudWatchOutputConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchOutputConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComment(value: Comment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentHash(value: DocumentHash): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentHash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentHash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentHash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentHashType(value: DocumentHashType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentHashType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentHashType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentHashType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentVersion(value: DocumentVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceIds(value: InstanceIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxConcurrency(value: MaxConcurrency): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxConcurrency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxErrors(value: MaxErrors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotificationConfig(value: NotificationConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputS3BucketName(value: S3BucketName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputS3BucketName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputS3BucketName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputS3BucketName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputS3KeyPrefix(value: S3KeyPrefix): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputS3KeyPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputS3KeyPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputS3KeyPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputS3Region(value: S3Region): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputS3Region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputS3Region: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputS3Region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: Parameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceRoleArn(value: ServiceRole): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceRoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargets(value: Targets): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Targets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Targets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeoutSeconds(value: TimeoutSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeoutSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -6,33 +6,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Promotion extends js.Object {
-  var bodyLines: js.UndefOr[js.Array[AnonHtmlTitle]] = js.undefined
-  var displayLink: js.UndefOr[String] = js.undefined
-  var htmlTitle: js.UndefOr[String] = js.undefined
-  var image: js.UndefOr[AnonHeight] = js.undefined
-  var link: js.UndefOr[String] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
+  var bodyLines: js.UndefOr[js.Array[AnonHtmlTitle]] = js.native
+  var displayLink: js.UndefOr[String] = js.native
+  var htmlTitle: js.UndefOr[String] = js.native
+  var image: js.UndefOr[AnonHeight] = js.native
+  var link: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.native
 }
 
 object Promotion {
   @scala.inline
-  def apply(
-    bodyLines: js.Array[AnonHtmlTitle] = null,
-    displayLink: String = null,
-    htmlTitle: String = null,
-    image: AnonHeight = null,
-    link: String = null,
-    title: String = null
-  ): Promotion = {
+  def apply(): Promotion = {
     val __obj = js.Dynamic.literal()
-    if (bodyLines != null) __obj.updateDynamic("bodyLines")(bodyLines.asInstanceOf[js.Any])
-    if (displayLink != null) __obj.updateDynamic("displayLink")(displayLink.asInstanceOf[js.Any])
-    if (htmlTitle != null) __obj.updateDynamic("htmlTitle")(htmlTitle.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[Promotion]
   }
+  @scala.inline
+  implicit class PromotionOps[Self <: Promotion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBodyLines(value: js.Array[AnonHtmlTitle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBodyLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtmlTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtmlTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage(value: AnonHeight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

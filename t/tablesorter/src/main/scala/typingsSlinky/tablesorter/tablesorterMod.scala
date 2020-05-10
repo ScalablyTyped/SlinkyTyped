@@ -1,11 +1,11 @@
 package typingsSlinky.tablesorter
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Element
 import typingsSlinky.jquery.JQueryAjaxSettings
 import typingsSlinky.jquery.JQuery_.Selector
 import typingsSlinky.jquery.JQuery_.TypeOrArray
 import typingsSlinky.jquery.JQuery_.jqXHR
-import typingsSlinky.std.Element
 import typingsSlinky.tablesorter.columnFilterMod.ColumnFilter
 import typingsSlinky.tablesorter.emptySortingMod.EmptySorting
 import typingsSlinky.tablesorter.filterFormatterMod.FilterFormatter

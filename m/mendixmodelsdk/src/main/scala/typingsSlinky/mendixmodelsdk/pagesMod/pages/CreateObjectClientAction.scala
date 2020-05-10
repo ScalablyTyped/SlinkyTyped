@@ -32,8 +32,8 @@ class CreateObjectClientAction protected () extends ClientAction {
   def entityRef(): js.Any = js.native
   def entityRef(newValue: EntityRef): js.Any = js.native
   @JSName("entityRef")
-  def entityRef_Union(): EntityRef | Null = js.native
-  def pageSettings(): PageSettings = js.native
+  def entityRef_Union: EntityRef | Null = js.native
+  def pageSettings: PageSettings = js.native
   def pageSettings(newValue: PageSettings): js.Any = js.native
 }
 
@@ -184,6 +184,15 @@ object CreateObjectClientAction extends js.Object {
     *  7.17.0 and higher
     */
   def createInStaticImageViewerUnderClickAction(container: StaticImageViewer): CreateObjectClientAction = js.native
+  /**
+    * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
+    * The new CreateObjectClientAction will be automatically stored in the 'onEnterKeyPressAction' property
+    * of the parent TextBox element passed as argument.
+    *
+    * Warning! Can only be used on models with the following Mendix meta model versions:
+    *  8.7.0 and higher
+    */
+  def createInTextBoxUnderOnEnterKeyPressAction(container: TextBox): CreateObjectClientAction = js.native
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'action' property

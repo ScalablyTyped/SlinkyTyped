@@ -1,9 +1,9 @@
 package typingsSlinky.ibmCloudSdkCore
 
+import org.scalajs.dom.experimental.ReadableStream
+import org.scalajs.dom.raw.File
 import typingsSlinky.ibmCloudSdkCore.helperMod.FileObject
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.File
-import typingsSlinky.std.ReadableStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

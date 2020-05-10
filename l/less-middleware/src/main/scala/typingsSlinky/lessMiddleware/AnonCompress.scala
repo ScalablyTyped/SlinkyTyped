@@ -4,24 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCompress extends js.Object {
-  var compress: js.UndefOr[String] = js.undefined
-  var paths: js.UndefOr[js.Array[String]] = js.undefined
-  var yuicompress: js.UndefOr[Boolean] = js.undefined
+  var compress: js.UndefOr[String] = js.native
+  var paths: js.UndefOr[js.Array[String]] = js.native
+  var yuicompress: js.UndefOr[Boolean] = js.native
 }
 
 object AnonCompress {
   @scala.inline
-  def apply(
-    compress: String = null,
-    paths: js.Array[String] = null,
-    yuicompress: js.UndefOr[Boolean] = js.undefined
-  ): AnonCompress = {
+  def apply(): AnonCompress = {
     val __obj = js.Dynamic.literal()
-    if (compress != null) __obj.updateDynamic("compress")(compress.asInstanceOf[js.Any])
-    if (paths != null) __obj.updateDynamic("paths")(paths.asInstanceOf[js.Any])
-    if (!js.isUndefined(yuicompress)) __obj.updateDynamic("yuicompress")(yuicompress.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCompress]
   }
+  @scala.inline
+  implicit class AnonCompressOps[Self <: AnonCompress] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaths(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYuicompress(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yuicompress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYuicompress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yuicompress")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

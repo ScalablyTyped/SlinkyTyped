@@ -10,8 +10,9 @@ import scala.scalajs.js.annotation._
   * Playlist Object Simplified
   * [](https://developer.spotify.com/web-api/object-model/)
   */
+@js.native
 trait PlaylistObjectSimplified extends PlaylistBaseObject {
-  var tracks: AnonHref
+  var tracks: AnonHref = js.native
 }
 
 object PlaylistObjectSimplified {
@@ -34,5 +35,19 @@ object PlaylistObjectSimplified {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlaylistObjectSimplified]
   }
+  @scala.inline
+  implicit class PlaylistObjectSimplifiedOps[Self <: PlaylistObjectSimplified] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTracks(value: AnonHref): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tracks")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -42,3 +42,55 @@ trait global extends js.Object {
   def undefined_onload(): Unit = js.native
 }
 
+object global {
+  @scala.inline
+  def apply(
+    $: () => js.Any,
+    GoogleSearchStoreCallback_undefined_NaN: (js.Any, js.Any, js.Any, js.Any) => Unit,
+    jQuery: () => js.Any,
+    swfIsInHTML: () => Unit,
+    undefined_onload: () => Unit
+  ): global = {
+    val __obj = js.Dynamic.literal($ = js.Any.fromFunction0($), GoogleSearchStoreCallback_undefined_NaN = js.Any.fromFunction4(GoogleSearchStoreCallback_undefined_NaN), jQuery = js.Any.fromFunction0(jQuery), swfIsInHTML = js.Any.fromFunction0(swfIsInHTML), undefined_onload = js.Any.fromFunction0(undefined_onload))
+    __obj.asInstanceOf[global]
+  }
+  @scala.inline
+  implicit class globalOps[Self <: global] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGoogleSearchStoreCallback_undefined_NaN(value: (js.Any, js.Any, js.Any, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GoogleSearchStoreCallback_undefined_NaN")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withJQuery(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jQuery")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSwfIsInHTML(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swfIsInHTML")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUndefined_onload(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("undefined_onload")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
+}
+

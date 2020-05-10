@@ -30,19 +30,71 @@ trait ModifyHostsRequest extends js.Object {
 
 object ModifyHostsRequest {
   @scala.inline
-  def apply(
-    HostIds: RequestHostIdList,
-    AutoPlacement: AutoPlacement = null,
-    HostRecovery: HostRecovery = null,
-    InstanceFamily: String = null,
-    InstanceType: String = null
-  ): ModifyHostsRequest = {
+  def apply(HostIds: RequestHostIdList): ModifyHostsRequest = {
     val __obj = js.Dynamic.literal(HostIds = HostIds.asInstanceOf[js.Any])
-    if (AutoPlacement != null) __obj.updateDynamic("AutoPlacement")(AutoPlacement.asInstanceOf[js.Any])
-    if (HostRecovery != null) __obj.updateDynamic("HostRecovery")(HostRecovery.asInstanceOf[js.Any])
-    if (InstanceFamily != null) __obj.updateDynamic("InstanceFamily")(InstanceFamily.asInstanceOf[js.Any])
-    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyHostsRequest]
   }
+  @scala.inline
+  implicit class ModifyHostsRequestOps[Self <: ModifyHostsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHostIds(value: RequestHostIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoPlacement(value: AutoPlacement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoPlacement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoPlacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoPlacement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostRecovery(value: HostRecovery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostRecovery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostRecovery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostRecovery")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -21,28 +21,125 @@ trait PartialStyleRulesSvgIconC extends js.Object {
 
 object PartialStyleRulesSvgIconC {
   @scala.inline
-  def apply(
-    colorAction: CSSProperties = null,
-    colorDisabled: CSSProperties = null,
-    colorError: CSSProperties = null,
-    colorPrimary: CSSProperties = null,
-    colorSecondary: CSSProperties = null,
-    fontSizeInherit: CSSProperties = null,
-    fontSizeLarge: CSSProperties = null,
-    fontSizeSmall: CSSProperties = null,
-    root: CSSProperties = null
-  ): PartialStyleRulesSvgIconC = {
+  def apply(): PartialStyleRulesSvgIconC = {
     val __obj = js.Dynamic.literal()
-    if (colorAction != null) __obj.updateDynamic("colorAction")(colorAction.asInstanceOf[js.Any])
-    if (colorDisabled != null) __obj.updateDynamic("colorDisabled")(colorDisabled.asInstanceOf[js.Any])
-    if (colorError != null) __obj.updateDynamic("colorError")(colorError.asInstanceOf[js.Any])
-    if (colorPrimary != null) __obj.updateDynamic("colorPrimary")(colorPrimary.asInstanceOf[js.Any])
-    if (colorSecondary != null) __obj.updateDynamic("colorSecondary")(colorSecondary.asInstanceOf[js.Any])
-    if (fontSizeInherit != null) __obj.updateDynamic("fontSizeInherit")(fontSizeInherit.asInstanceOf[js.Any])
-    if (fontSizeLarge != null) __obj.updateDynamic("fontSizeLarge")(fontSizeLarge.asInstanceOf[js.Any])
-    if (fontSizeSmall != null) __obj.updateDynamic("fontSizeSmall")(fontSizeSmall.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialStyleRulesSvgIconC]
   }
+  @scala.inline
+  implicit class PartialStyleRulesSvgIconCOps[Self <: PartialStyleRulesSvgIconC] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColorAction(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorDisabled(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorDisabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorDisabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorError(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorPrimary(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorPrimary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorPrimary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorPrimary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorSecondary(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSecondary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorSecondary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSecondary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSizeInherit(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSizeInherit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSizeInherit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSizeInherit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSizeLarge(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSizeLarge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSizeLarge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSizeLarge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSizeSmall(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSizeSmall")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSizeSmall: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSizeSmall")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

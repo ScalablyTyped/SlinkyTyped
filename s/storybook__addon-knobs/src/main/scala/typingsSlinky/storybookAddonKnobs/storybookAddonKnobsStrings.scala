@@ -1,6 +1,7 @@
 package typingsSlinky.storybookAddonKnobs
 
 import typingsSlinky.storybookAddonKnobs.optionsMod.OptionsKnobOptionsDisplay
+import typingsSlinky.storybookAddonKnobs.typesMod.KnobType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,28 +11,25 @@ object storybookAddonKnobsStrings {
   sealed trait Mutable extends js.Object
   
   @js.native
-  sealed trait Other extends js.Object
+  sealed trait array extends KnobType
   
   @js.native
-  sealed trait array extends js.Object
+  sealed trait boolean extends KnobType
   
   @js.native
-  sealed trait boolean extends js.Object
-  
-  @js.native
-  sealed trait button extends js.Object
+  sealed trait button extends KnobType
   
   @js.native
   sealed trait check extends OptionsKnobOptionsDisplay
   
   @js.native
-  sealed trait color extends js.Object
+  sealed trait color extends KnobType
   
   @js.native
-  sealed trait date extends js.Object
+  sealed trait date extends KnobType
   
   @js.native
-  sealed trait files extends js.Object
+  sealed trait files extends KnobType
   
   @js.native
   sealed trait `inline-check` extends OptionsKnobOptionsDisplay
@@ -40,39 +38,33 @@ object storybookAddonKnobsStrings {
   sealed trait `inline-radio` extends OptionsKnobOptionsDisplay
   
   @js.native
-  sealed trait knobs extends js.Object
-  
-  @js.native
   sealed trait `multi-select` extends OptionsKnobOptionsDisplay
   
   @js.native
-  sealed trait number extends js.Object
+  sealed trait number extends KnobType
   
   @js.native
-  sealed trait `object` extends js.Object
+  sealed trait `object` extends KnobType
   
   @js.native
-  sealed trait options extends js.Object
+  sealed trait options extends KnobType
   
   @js.native
   sealed trait radio extends OptionsKnobOptionsDisplay
   
   @js.native
-  sealed trait radios extends js.Object
+  sealed trait radios extends KnobType
   
   @js.native
-  sealed trait select extends OptionsKnobOptionsDisplay
+  sealed trait select
+    extends KnobType
+       with OptionsKnobOptionsDisplay
   
   @js.native
-  sealed trait storybookjsSlashknobs extends js.Object
-  
-  @js.native
-  sealed trait text extends js.Object
+  sealed trait text extends KnobType
   
   @scala.inline
   def Mutable: Mutable = "Mutable".asInstanceOf[Mutable]
-  @scala.inline
-  def Other: Other = "Other".asInstanceOf[Other]
   @scala.inline
   def array: array = "array".asInstanceOf[array]
   @scala.inline
@@ -92,8 +84,6 @@ object storybookAddonKnobsStrings {
   @scala.inline
   def `inline-radio`: `inline-radio` = "inline-radio".asInstanceOf[`inline-radio`]
   @scala.inline
-  def knobs: knobs = "knobs".asInstanceOf[knobs]
-  @scala.inline
   def `multi-select`: `multi-select` = "multi-select".asInstanceOf[`multi-select`]
   @scala.inline
   def number: number = "number".asInstanceOf[number]
@@ -107,8 +97,6 @@ object storybookAddonKnobsStrings {
   def radios: radios = "radios".asInstanceOf[radios]
   @scala.inline
   def select: select = "select".asInstanceOf[select]
-  @scala.inline
-  def storybookjsSlashknobs: storybookjsSlashknobs = "storybookjs/knobs".asInstanceOf[storybookjsSlashknobs]
   @scala.inline
   def text: text = "text".asInstanceOf[text]
 }

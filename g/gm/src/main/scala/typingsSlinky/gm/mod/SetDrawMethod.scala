@@ -16,16 +16,14 @@ trait SetDrawMethod extends js.Object
 
 object SetDrawMethod {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def filltoborder: typingsSlinky.gm.gmStrings.filltoborder = "filltoborder".asInstanceOf[typingsSlinky.gm.gmStrings.filltoborder]
   @scala.inline
-  def filltoborder: typingsSlinky.gm.gmStrings.filltoborder = this.cast("filltoborder")
+  def floodfill: typingsSlinky.gm.gmStrings.floodfill = "floodfill".asInstanceOf[typingsSlinky.gm.gmStrings.floodfill]
   @scala.inline
-  def floodfill: typingsSlinky.gm.gmStrings.floodfill = this.cast("floodfill")
+  def point: point_ = "point".asInstanceOf[point_]
   @scala.inline
-  def point: point_ = this.cast("point")
+  def replace: typingsSlinky.gm.gmStrings.replace = "replace".asInstanceOf[typingsSlinky.gm.gmStrings.replace]
   @scala.inline
-  def replace: typingsSlinky.gm.gmStrings.replace = this.cast("replace")
-  @scala.inline
-  def reset: typingsSlinky.gm.gmStrings.reset = this.cast("reset")
+  def reset: typingsSlinky.gm.gmStrings.reset = "reset".asInstanceOf[typingsSlinky.gm.gmStrings.reset]
 }
 

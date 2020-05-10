@@ -51,30 +51,137 @@ trait GrantState extends js.Object {
 
 object GrantState {
   @scala.inline
-  def apply(
-    constraints: Input[js.Array[Input[GrantConstraint]]] = null,
-    grantCreationTokens: Input[js.Array[Input[String]]] = null,
-    grantId: Input[String] = null,
-    grantToken: Input[String] = null,
-    granteePrincipal: Input[String] = null,
-    keyId: Input[String] = null,
-    name: Input[String] = null,
-    operations: Input[js.Array[Input[String]]] = null,
-    retireOnDelete: Input[Boolean] = null,
-    retiringPrincipal: Input[String] = null
-  ): GrantState = {
+  def apply(): GrantState = {
     val __obj = js.Dynamic.literal()
-    if (constraints != null) __obj.updateDynamic("constraints")(constraints.asInstanceOf[js.Any])
-    if (grantCreationTokens != null) __obj.updateDynamic("grantCreationTokens")(grantCreationTokens.asInstanceOf[js.Any])
-    if (grantId != null) __obj.updateDynamic("grantId")(grantId.asInstanceOf[js.Any])
-    if (grantToken != null) __obj.updateDynamic("grantToken")(grantToken.asInstanceOf[js.Any])
-    if (granteePrincipal != null) __obj.updateDynamic("granteePrincipal")(granteePrincipal.asInstanceOf[js.Any])
-    if (keyId != null) __obj.updateDynamic("keyId")(keyId.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (operations != null) __obj.updateDynamic("operations")(operations.asInstanceOf[js.Any])
-    if (retireOnDelete != null) __obj.updateDynamic("retireOnDelete")(retireOnDelete.asInstanceOf[js.Any])
-    if (retiringPrincipal != null) __obj.updateDynamic("retiringPrincipal")(retiringPrincipal.asInstanceOf[js.Any])
     __obj.asInstanceOf[GrantState]
   }
+  @scala.inline
+  implicit class GrantStateOps[Self <: GrantState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConstraints(value: Input[js.Array[Input[GrantConstraint]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstraints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrantCreationTokens(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grantCreationTokens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrantCreationTokens: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grantCreationTokens")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrantId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grantId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrantId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grantId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrantToken(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grantToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrantToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grantToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGranteePrincipal(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("granteePrincipal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGranteePrincipal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("granteePrincipal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperations(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetireOnDelete(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retireOnDelete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetireOnDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retireOnDelete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetiringPrincipal(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retiringPrincipal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetiringPrincipal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retiringPrincipal")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -10,8 +10,10 @@ import scala.scalajs.js.annotation._
 @js.native
 object libLinkMod extends js.Object {
   @js.native
-  class LinkBase ()
-    extends typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
+  class LinkBase protected ()
+    extends typingsSlinky.officeUiFabricReact.linkMod.LinkBase {
+    def this(props: ILinkProps) = this()
+  }
   
   val Link: ReactComponentClass[ILinkProps] = js.native
 }

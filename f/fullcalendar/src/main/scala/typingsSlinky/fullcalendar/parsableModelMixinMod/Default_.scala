@@ -10,14 +10,6 @@ class Default_ ()
   extends typingsSlinky.fullcalendar.mixinMod.default
      with ParsableModelInterface {
   var standardPropMap: js.Any = js.native
-  /* CompleteClass */
-  override def applyManualStandardProps(rawProps: js.Any): js.Any = js.native
-  /* CompleteClass */
-  override def applyMiscProps(rawProps: js.Any): js.Any = js.native
-  /* CompleteClass */
-  override def applyProps(rawProps: js.Any): js.Any = js.native
-  /* CompleteClass */
-  override def isStandardProp(propName: js.Any): js.Any = js.native
 }
 
 /* static members */

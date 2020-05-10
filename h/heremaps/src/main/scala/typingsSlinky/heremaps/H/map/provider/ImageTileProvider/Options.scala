@@ -18,35 +18,108 @@ import scala.scalajs.js.annotation._
   * @property crossOrigin {(string | boolean=)} - The CORS settings to use for the crossOrigin attribute for the image, if omitted or if the value evaluates to false no CORS settings
   * are used.
   */
+@js.native
 trait Options extends js.Object {
-  var crossOrigin: js.UndefOr[String | Boolean] = js.undefined
-  var getCopyrights: js.UndefOr[js.Function2[/* rect */ Rect, /* n */ Double, js.Array[ICopyright]]] = js.undefined
-  var max: js.UndefOr[Double] = js.undefined
-  var min: js.UndefOr[Double] = js.undefined
-  var tileSize: js.UndefOr[Double] = js.undefined
-  var uri: js.UndefOr[String] = js.undefined
-  def getURL(n1: Double, n2: Double, n3: Double): String
+  var crossOrigin: js.UndefOr[String | Boolean] = js.native
+  var getCopyrights: js.UndefOr[js.Function2[/* rect */ Rect, /* n */ Double, js.Array[ICopyright]]] = js.native
+  var max: js.UndefOr[Double] = js.native
+  var min: js.UndefOr[Double] = js.native
+  var tileSize: js.UndefOr[Double] = js.native
+  var uri: js.UndefOr[String] = js.native
+  def getURL(n1: Double, n2: Double, n3: Double): String = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    getURL: (Double, Double, Double) => String,
-    crossOrigin: String | Boolean = null,
-    getCopyrights: (/* rect */ Rect, /* n */ Double) => js.Array[ICopyright] = null,
-    max: Int | Double = null,
-    min: Int | Double = null,
-    tileSize: Int | Double = null,
-    uri: String = null
-  ): Options = {
+  def apply(getURL: (Double, Double, Double) => String): Options = {
     val __obj = js.Dynamic.literal(getURL = js.Any.fromFunction3(getURL))
-    if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
-    if (getCopyrights != null) __obj.updateDynamic("getCopyrights")(js.Any.fromFunction2(getCopyrights))
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (tileSize != null) __obj.updateDynamic("tileSize")(tileSize.asInstanceOf[js.Any])
-    if (uri != null) __obj.updateDynamic("uri")(uri.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetURL(value: (Double, Double, Double) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getURL")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withCrossOrigin(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrossOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetCopyrights(value: (/* rect */ Rect, /* n */ Double) => js.Array[ICopyright]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCopyrights")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetCopyrights: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCopyrights")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTileSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTileSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

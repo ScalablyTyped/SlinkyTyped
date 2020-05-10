@@ -14,6 +14,7 @@ import scala.scalajs.js.annotation._
   * reference before running the pod.  For more details, see
   * https://git.k8s.io/enhancements/keps/sig-node/runtime-class.md
   */
+@js.native
 trait RuntimeClass extends js.Object {
   /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should
@@ -21,7 +22,7 @@ trait RuntimeClass extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  val apiVersion: nodeDotk8sDotioSlashv1beta1
+  val apiVersion: nodeDotk8sDotioSlashv1beta1 = js.native
   /**
     * Handler specifies the underlying runtime and configuration that the CRI implementation will
     * use to handle pods of this class. The possible values are specific to the node & CRI
@@ -31,19 +32,19 @@ trait RuntimeClass extends js.Object {
     * containers in a pod. The Handler must conform to the DNS Label (RFC 1123) requirements, and
     * is immutable.
     */
-  val handler: String
+  val handler: String = js.native
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
     * CamelCase. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-  val kind: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.RuntimeClass
+  val kind: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.RuntimeClass = js.native
   /**
     * More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     */
-  val metadata: ObjectMeta
+  val metadata: ObjectMeta = js.native
   /**
     * Overhead represents the resource overhead associated with running a pod for a given
     * RuntimeClass. For more details, see
@@ -51,13 +52,13 @@ trait RuntimeClass extends js.Object {
     * alpha-level as of Kubernetes v1.15, and is only honored by servers that enable the
     * PodOverhead feature.
     */
-  val overhead: Overhead
+  val overhead: Overhead = js.native
   /**
     * Scheduling holds the scheduling constraints to ensure that pods running with this
     * RuntimeClass are scheduled to nodes that support it. If scheduling is nil, this
     * RuntimeClass is assumed to be supported by all nodes.
     */
-  val scheduling: Scheduling
+  val scheduling: Scheduling = js.native
 }
 
 object RuntimeClass {
@@ -71,8 +72,51 @@ object RuntimeClass {
     scheduling: Scheduling
   ): RuntimeClass = {
     val __obj = js.Dynamic.literal(apiVersion = apiVersion.asInstanceOf[js.Any], handler = handler.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], overhead = overhead.asInstanceOf[js.Any], scheduling = scheduling.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[RuntimeClass]
   }
+  @scala.inline
+  implicit class RuntimeClassOps[Self <: RuntimeClass] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiVersion(value: nodeDotk8sDotioSlashv1beta1): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHandler(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handler")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.RuntimeClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: ObjectMeta): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOverhead(value: Overhead): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overhead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScheduling(value: Scheduling): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduling")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

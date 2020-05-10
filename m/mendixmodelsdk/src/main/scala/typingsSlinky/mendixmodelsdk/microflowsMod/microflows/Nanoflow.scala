@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
   * In version 7.12.0: removed experimental
   * In version 7.10.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -48,10 +48,10 @@ class Nanoflow protected () extends MicroflowBase {
   /**
     * In version 7.23.0: added public
     */
-  def allowedModuleRoles(): IList[IModuleRole] = js.native
-  def allowedModuleRolesQualifiedNames(): js.Array[String] = js.native
+  def allowedModuleRoles: IList[IModuleRole] = js.native
+  def allowedModuleRolesQualifiedNames: js.Array[String] = js.native
   @JSName("containerAsFolderBase")
-  def containerAsFolderBase_MNanoflow(): FolderBase = js.native
+  def containerAsFolderBase_MNanoflow: FolderBase = js.native
 }
 
 /* static members */

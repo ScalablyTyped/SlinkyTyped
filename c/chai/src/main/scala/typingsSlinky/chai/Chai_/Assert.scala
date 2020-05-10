@@ -6,7 +6,6 @@ import typingsSlinky.chai.Object
 import typingsSlinky.std.Partial
 import typingsSlinky.std.ReadonlyMap
 import typingsSlinky.std.ReadonlySet
-import typingsSlinky.std.RegExp
 import typingsSlinky.std.WeakSet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -44,7 +43,7 @@ trait Assert extends js.Object {
     * @param constructor   Potential expected error constructor.
     * @param message   Message to display on error.
     */
-  def Throw(fn: js.Function0[Unit], constructor: ErrorConstructor, regExp: RegExp): Unit = js.native
+  def Throw(fn: js.Function0[Unit], constructor: ErrorConstructor, regExp: js.RegExp): Unit = js.native
   def Throw(fn: js.Function0[Unit], message: String): Unit = js.native
   /**
     * Asserts that function will throw an error with message matching regexp.
@@ -53,7 +52,7 @@ trait Assert extends js.Object {
     * @param regExp   Potential expected message match.
     * @param message   Message to display on error.
     */
-  def Throw(fn: js.Function0[Unit], regExp: RegExp): Unit = js.native
+  def Throw(fn: js.Function0[Unit], regExp: js.RegExp): Unit = js.native
   /**
     * Asserts that the target is equal to expected, to within a +/- delta range.
     *
@@ -358,7 +357,7 @@ trait Assert extends js.Object {
     * @param constructor   Potential expected error constructor.
     * @param message   Message to display on error.
     */
-  def doesNotThrow(fn: js.Function0[Unit], constructor: ErrorConstructor, regExp: RegExp): Unit = js.native
+  def doesNotThrow(fn: js.Function0[Unit], constructor: ErrorConstructor, regExp: js.RegExp): Unit = js.native
   def doesNotThrow(fn: js.Function0[Unit], message: String): Unit = js.native
   /**
     * Asserts that function will throw an error with message matching regexp.
@@ -367,7 +366,7 @@ trait Assert extends js.Object {
     * @param regExp   Potential expected message match.
     * @param message   Message to display on error.
     */
-  def doesNotThrow(fn: js.Function0[Unit], regExp: RegExp): Unit = js.native
+  def doesNotThrow(fn: js.Function0[Unit], regExp: js.RegExp): Unit = js.native
   /**
     * Asserts non-strict equality (==) of actual and expected.
     *
@@ -399,6 +398,14 @@ trait Assert extends js.Object {
   /**
     * Throws a failure.
     *
+    * @param message    Message to display on error.
+    * @remarks Node.js assert module-compatible.
+    */
+  def fail(): scala.Nothing = js.native
+  def fail(message: String): scala.Nothing = js.native
+  /**
+    * Throws a failure.
+    *
     * @type T   Type of the objects.
     * @param actual   Actual value.
     * @param expected   Potential expected value.
@@ -406,11 +413,9 @@ trait Assert extends js.Object {
     * @param operator   Comparison operator, if not strict equality.
     * @remarks Node.js assert module-compatible.
     */
-  def fail[T](): Unit = js.native
-  def fail[T](actual: T): Unit = js.native
-  def fail[T](actual: T, expected: T): Unit = js.native
-  def fail[T](actual: T, expected: T, message: String): Unit = js.native
-  def fail[T](actual: T, expected: T, message: String, operator: Operator): Unit = js.native
+  def fail[T](actual: T, expected: T): scala.Nothing = js.native
+  def fail[T](actual: T, expected: T, message: String): scala.Nothing = js.native
+  def fail[T](actual: T, expected: T, message: String, operator: Operator): scala.Nothing = js.native
   /**
     * Asserts that object is frozen (cannot have new properties added to it
     * and its existing properties cannot be removed).
@@ -1495,7 +1500,7 @@ trait Assert extends js.Object {
     * @param constructor   Potential expected error constructor.
     * @param message   Message to display on error.
     */
-  def `throw`(fn: js.Function0[Unit], constructor: ErrorConstructor, regExp: RegExp): Unit = js.native
+  def `throw`(fn: js.Function0[Unit], constructor: ErrorConstructor, regExp: js.RegExp): Unit = js.native
   def `throw`(fn: js.Function0[Unit], message: String): Unit = js.native
   /**
     * Asserts that function will throw an error with message matching regexp.
@@ -1504,7 +1509,7 @@ trait Assert extends js.Object {
     * @param regExp   Potential expected message match.
     * @param message   Message to display on error.
     */
-  def `throw`(fn: js.Function0[Unit], regExp: RegExp): Unit = js.native
+  def `throw`(fn: js.Function0[Unit], regExp: js.RegExp): Unit = js.native
   /**
     * Asserts that fn will throw an error.
     *
@@ -1520,7 +1525,7 @@ trait Assert extends js.Object {
     * @param constructor   Potential expected error constructor.
     * @param message   Message to display on error.
     */
-  def throws(fn: js.Function0[Unit], constructor: ErrorConstructor, regExp: RegExp): Unit = js.native
+  def throws(fn: js.Function0[Unit], constructor: ErrorConstructor, regExp: js.RegExp): Unit = js.native
   def throws(fn: js.Function0[Unit], errType: ErrorConstructor): Unit = js.native
   def throws(fn: js.Function0[Unit], errType: ErrorConstructor, message: String): Unit = js.native
   /**
@@ -1530,8 +1535,8 @@ trait Assert extends js.Object {
     * @param errType  Potential expected message match or error constructor.
     * @param message   Message to display on error.
     */
-  def throws(fn: js.Function0[Unit], errType: RegExp): Unit = js.native
-  def throws(fn: js.Function0[Unit], errType: RegExp, message: String): Unit = js.native
+  def throws(fn: js.Function0[Unit], errType: js.RegExp): Unit = js.native
+  def throws(fn: js.Function0[Unit], errType: js.RegExp, message: String): Unit = js.native
   def throws(fn: js.Function0[Unit], message: String): Unit = js.native
   /**
     * Asserts that value's type is name, as determined by Object.prototype.toString.

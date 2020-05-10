@@ -1,17 +1,23 @@
 package typingsSlinky.reactNativeElements.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNativeElements.mod.ThemeConsumerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ThemeConsumer
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeElements.mod.ThemeConsumer[js.Any]] {
+object ThemeConsumer {
   @JSImport("react-native-elements", "ThemeConsumer")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder[T] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.ThemeConsumer[js.Any]]
+  
+  def withProps[T](p: ThemeConsumerProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[T](companion: ThemeConsumer.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

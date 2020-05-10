@@ -22,32 +22,149 @@ trait PartialClassNameMapDrawer extends js.Object {
 
 object PartialClassNameMapDrawer {
   @scala.inline
-  def apply(
-    docked: String = null,
-    modal: String = null,
-    paper: String = null,
-    paperAnchorBottom: String = null,
-    paperAnchorDockedBottom: String = null,
-    paperAnchorDockedLeft: String = null,
-    paperAnchorDockedRight: String = null,
-    paperAnchorDockedTop: String = null,
-    paperAnchorLeft: String = null,
-    paperAnchorRight: String = null,
-    paperAnchorTop: String = null
-  ): PartialClassNameMapDrawer = {
+  def apply(): PartialClassNameMapDrawer = {
     val __obj = js.Dynamic.literal()
-    if (docked != null) __obj.updateDynamic("docked")(docked.asInstanceOf[js.Any])
-    if (modal != null) __obj.updateDynamic("modal")(modal.asInstanceOf[js.Any])
-    if (paper != null) __obj.updateDynamic("paper")(paper.asInstanceOf[js.Any])
-    if (paperAnchorBottom != null) __obj.updateDynamic("paperAnchorBottom")(paperAnchorBottom.asInstanceOf[js.Any])
-    if (paperAnchorDockedBottom != null) __obj.updateDynamic("paperAnchorDockedBottom")(paperAnchorDockedBottom.asInstanceOf[js.Any])
-    if (paperAnchorDockedLeft != null) __obj.updateDynamic("paperAnchorDockedLeft")(paperAnchorDockedLeft.asInstanceOf[js.Any])
-    if (paperAnchorDockedRight != null) __obj.updateDynamic("paperAnchorDockedRight")(paperAnchorDockedRight.asInstanceOf[js.Any])
-    if (paperAnchorDockedTop != null) __obj.updateDynamic("paperAnchorDockedTop")(paperAnchorDockedTop.asInstanceOf[js.Any])
-    if (paperAnchorLeft != null) __obj.updateDynamic("paperAnchorLeft")(paperAnchorLeft.asInstanceOf[js.Any])
-    if (paperAnchorRight != null) __obj.updateDynamic("paperAnchorRight")(paperAnchorRight.asInstanceOf[js.Any])
-    if (paperAnchorTop != null) __obj.updateDynamic("paperAnchorTop")(paperAnchorTop.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapDrawer]
   }
+  @scala.inline
+  implicit class PartialClassNameMapDrawerOps[Self <: PartialClassNameMapDrawer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocked(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("docked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("docked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModal(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaper(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaper: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paper")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaperAnchorBottom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paperAnchorBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaperAnchorBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paperAnchorBottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaperAnchorDockedBottom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paperAnchorDockedBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaperAnchorDockedBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paperAnchorDockedBottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaperAnchorDockedLeft(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paperAnchorDockedLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaperAnchorDockedLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paperAnchorDockedLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaperAnchorDockedRight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paperAnchorDockedRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaperAnchorDockedRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paperAnchorDockedRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaperAnchorDockedTop(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paperAnchorDockedTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaperAnchorDockedTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paperAnchorDockedTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaperAnchorLeft(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paperAnchorLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaperAnchorLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paperAnchorLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaperAnchorRight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paperAnchorRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaperAnchorRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paperAnchorRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaperAnchorTop(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paperAnchorTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaperAnchorTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paperAnchorTop")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

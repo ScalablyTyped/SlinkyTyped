@@ -18,11 +18,41 @@ trait AwsElasticsearchDomainDomainEndpointOptions extends js.Object {
 
 object AwsElasticsearchDomainDomainEndpointOptions {
   @scala.inline
-  def apply(EnforceHTTPS: js.UndefOr[scala.Boolean] = js.undefined, TLSSecurityPolicy: NonEmptyString = null): AwsElasticsearchDomainDomainEndpointOptions = {
+  def apply(): AwsElasticsearchDomainDomainEndpointOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(EnforceHTTPS)) __obj.updateDynamic("EnforceHTTPS")(EnforceHTTPS.asInstanceOf[js.Any])
-    if (TLSSecurityPolicy != null) __obj.updateDynamic("TLSSecurityPolicy")(TLSSecurityPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsElasticsearchDomainDomainEndpointOptions]
   }
+  @scala.inline
+  implicit class AwsElasticsearchDomainDomainEndpointOptionsOps[Self <: AwsElasticsearchDomainDomainEndpointOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnforceHTTPS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnforceHTTPS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnforceHTTPS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnforceHTTPS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTLSSecurityPolicy(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TLSSecurityPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTLSSecurityPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TLSSecurityPolicy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

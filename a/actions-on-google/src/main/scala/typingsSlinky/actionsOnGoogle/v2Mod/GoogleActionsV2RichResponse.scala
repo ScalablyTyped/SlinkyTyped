@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GoogleActionsV2RichResponse extends js.Object {
   /**
     * A list of UI elements which compose the response
@@ -21,32 +22,69 @@ trait GoogleActionsV2RichResponse extends js.Object {
     *  ie ListSelect or
     *     CarouselSelect
     */
-  var items: js.UndefOr[js.Array[GoogleActionsV2RichResponseItem]] = js.undefined
+  var items: js.UndefOr[js.Array[GoogleActionsV2RichResponseItem]] = js.native
   /**
     * An additional suggestion chip that can link out to the associated app
     * or site.
     */
-  var linkOutSuggestion: js.UndefOr[GoogleActionsV2UiElementsLinkOutSuggestion] = js.undefined
+  var linkOutSuggestion: js.UndefOr[GoogleActionsV2UiElementsLinkOutSuggestion] = js.native
   /**
     * A list of suggested replies. These will always appear at the end of the
     * response. If used in a FinalResponse,
     * they will be ignored.
     */
-  var suggestions: js.UndefOr[js.Array[GoogleActionsV2UiElementsSuggestion]] = js.undefined
+  var suggestions: js.UndefOr[js.Array[GoogleActionsV2UiElementsSuggestion]] = js.native
 }
 
 object GoogleActionsV2RichResponse {
   @scala.inline
-  def apply(
-    items: js.Array[GoogleActionsV2RichResponseItem] = null,
-    linkOutSuggestion: GoogleActionsV2UiElementsLinkOutSuggestion = null,
-    suggestions: js.Array[GoogleActionsV2UiElementsSuggestion] = null
-  ): GoogleActionsV2RichResponse = {
+  def apply(): GoogleActionsV2RichResponse = {
     val __obj = js.Dynamic.literal()
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (linkOutSuggestion != null) __obj.updateDynamic("linkOutSuggestion")(linkOutSuggestion.asInstanceOf[js.Any])
-    if (suggestions != null) __obj.updateDynamic("suggestions")(suggestions.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleActionsV2RichResponse]
   }
+  @scala.inline
+  implicit class GoogleActionsV2RichResponseOps[Self <: GoogleActionsV2RichResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItems(value: js.Array[GoogleActionsV2RichResponseItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkOutSuggestion(value: GoogleActionsV2UiElementsLinkOutSuggestion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkOutSuggestion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkOutSuggestion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkOutSuggestion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestions(value: js.Array[GoogleActionsV2UiElementsSuggestion]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

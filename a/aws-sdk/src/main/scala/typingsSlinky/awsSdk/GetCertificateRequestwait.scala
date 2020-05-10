@@ -21,3 +21,43 @@ trait GetCertificateRequestwait extends js.Object {
   var CertificateAuthorityArn: Arn = js.native
 }
 
+object GetCertificateRequestwait {
+  @scala.inline
+  def apply(CertificateArn: Arn, CertificateAuthorityArn: Arn): GetCertificateRequestwait = {
+    val __obj = js.Dynamic.literal(CertificateArn = CertificateArn.asInstanceOf[js.Any], CertificateAuthorityArn = CertificateAuthorityArn.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GetCertificateRequestwait]
+  }
+  @scala.inline
+  implicit class GetCertificateRequestwaitOps[Self <: GetCertificateRequestwait] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCertificateAuthorityArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$waiter(value: WaiterConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$waiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

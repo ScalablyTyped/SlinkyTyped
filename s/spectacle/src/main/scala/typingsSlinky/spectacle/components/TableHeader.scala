@@ -1,15 +1,16 @@
 package typingsSlinky.spectacle.components
 
+import typingsSlinky.spectacle.mod.BaseProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TableHeader
-  extends SharedApply_BaseProps40439418[typingsSlinky.spectacle.mod.TableHeader] {
+object TableHeader {
   @JSImport("spectacle", "TableHeader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: BaseProps): SharedBuilder_BaseProps_65666440[typingsSlinky.spectacle.mod.TableHeader] = new SharedBuilder_BaseProps_65666440[typingsSlinky.spectacle.mod.TableHeader](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TableHeader.type): SharedBuilder_BaseProps_65666440[typingsSlinky.spectacle.mod.TableHeader] = new SharedBuilder_BaseProps_65666440[typingsSlinky.spectacle.mod.TableHeader](js.Array(this.component, js.Dictionary.empty))()
 }
 

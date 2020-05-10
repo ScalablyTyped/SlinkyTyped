@@ -1,7 +1,6 @@
 package typingsSlinky.easyXHeaders.fsMod
 
 import typingsSlinky.easyXHeaders.NodeJS.ErrnoException
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,11 +15,11 @@ object utimes extends js.Object {
     mtime: Double,
     callback: js.Function1[/* err */ js.UndefOr[ErrnoException], Unit]
   ): Unit = js.native
-  def apply(path: String, atime: Date, mtime: Date): Unit = js.native
+  def apply(path: String, atime: js.Date, mtime: js.Date): Unit = js.native
   def apply(
     path: String,
-    atime: Date,
-    mtime: Date,
+    atime: js.Date,
+    mtime: js.Date,
     callback: js.Function1[/* err */ js.UndefOr[ErrnoException], Unit]
   ): Unit = js.native
 }

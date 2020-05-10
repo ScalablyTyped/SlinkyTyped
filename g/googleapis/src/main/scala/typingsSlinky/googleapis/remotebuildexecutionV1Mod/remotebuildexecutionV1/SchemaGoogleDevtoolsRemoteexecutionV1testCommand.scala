@@ -34,14 +34,41 @@ trait SchemaGoogleDevtoolsRemoteexecutionV1testCommand extends js.Object {
 
 object SchemaGoogleDevtoolsRemoteexecutionV1testCommand {
   @scala.inline
-  def apply(
-    arguments: js.Array[String] = null,
-    environmentVariables: js.Array[SchemaGoogleDevtoolsRemoteexecutionV1testCommandEnvironmentVariable] = null
-  ): SchemaGoogleDevtoolsRemoteexecutionV1testCommand = {
+  def apply(): SchemaGoogleDevtoolsRemoteexecutionV1testCommand = {
     val __obj = js.Dynamic.literal()
-    if (arguments != null) __obj.updateDynamic("arguments")(arguments.asInstanceOf[js.Any])
-    if (environmentVariables != null) __obj.updateDynamic("environmentVariables")(environmentVariables.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemoteexecutionV1testCommand]
   }
+  @scala.inline
+  implicit class SchemaGoogleDevtoolsRemoteexecutionV1testCommandOps[Self <: SchemaGoogleDevtoolsRemoteexecutionV1testCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArguments(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArguments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironmentVariables(value: js.Array[SchemaGoogleDevtoolsRemoteexecutionV1testCommandEnvironmentVariable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironmentVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariables")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

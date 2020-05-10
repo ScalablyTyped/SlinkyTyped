@@ -15,16 +15,14 @@ trait AnimationEffectTimingFillMode extends js.Object
 
 object AnimationEffectTimingFillMode {
   @scala.inline
-  def auto: typingsSlinky.webAnimationsJs.webAnimationsJsStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.webAnimationsJs.webAnimationsJsStrings.auto = "auto".asInstanceOf[typingsSlinky.webAnimationsJs.webAnimationsJsStrings.auto]
   @scala.inline
-  def backwards: typingsSlinky.webAnimationsJs.webAnimationsJsStrings.backwards = this.cast("backwards")
+  def backwards: typingsSlinky.webAnimationsJs.webAnimationsJsStrings.backwards = "backwards".asInstanceOf[typingsSlinky.webAnimationsJs.webAnimationsJsStrings.backwards]
   @scala.inline
-  def both: typingsSlinky.webAnimationsJs.webAnimationsJsStrings.both = this.cast("both")
+  def both: typingsSlinky.webAnimationsJs.webAnimationsJsStrings.both = "both".asInstanceOf[typingsSlinky.webAnimationsJs.webAnimationsJsStrings.both]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def forwards: typingsSlinky.webAnimationsJs.webAnimationsJsStrings.forwards = "forwards".asInstanceOf[typingsSlinky.webAnimationsJs.webAnimationsJsStrings.forwards]
   @scala.inline
-  def forwards: typingsSlinky.webAnimationsJs.webAnimationsJsStrings.forwards = this.cast("forwards")
-  @scala.inline
-  def none: typingsSlinky.webAnimationsJs.webAnimationsJsStrings.none = this.cast("none")
+  def none: typingsSlinky.webAnimationsJs.webAnimationsJsStrings.none = "none".asInstanceOf[typingsSlinky.webAnimationsJs.webAnimationsJsStrings.none]
 }
 

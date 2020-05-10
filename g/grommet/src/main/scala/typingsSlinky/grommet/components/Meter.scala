@@ -1,10 +1,7 @@
 package typingsSlinky.grommet.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.grommet.AnonColorOpacity
 import typingsSlinky.grommet.AnonHighlight
 import typingsSlinky.grommet.grommetStrings.bar
@@ -24,43 +21,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Meter
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.grommet.mod.Meter] {
+object Meter {
   @JSImport("grommet", "Meter")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    a11yTitle: A11yTitleType = null,
-    alignSelf: AlignSelfType = null,
-    background: String | AnonColorOpacity = null,
-    gridArea: GridAreaType = null,
-    margin: MarginType = null,
-    max: Int | Double = null,
-    round: js.UndefOr[Boolean] = js.undefined,
-    size: xsmall | small | medium | large | xlarge | full | String = null,
-    thickness: xsmall | small | medium | large | xlarge | String = null,
-    `type`: bar | circle = null,
-    values: js.Array[AnonHighlight] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.grommet.mod.Meter] = {
-    val __obj = js.Dynamic.literal()
-    if (a11yTitle != null) __obj.updateDynamic("a11yTitle")(a11yTitle.asInstanceOf[js.Any])
-    if (alignSelf != null) __obj.updateDynamic("alignSelf")(alignSelf.asInstanceOf[js.Any])
-    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
-    if (gridArea != null) __obj.updateDynamic("gridArea")(gridArea.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (!js.isUndefined(round)) __obj.updateDynamic("round")(round.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (thickness != null) __obj.updateDynamic("thickness")(thickness.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.grommet.mod.Meter] {
+    @scala.inline
+    def a11yTitle(value: A11yTitleType): this.type = set("a11yTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def alignSelf(value: AlignSelfType): this.type = set("alignSelf", value.asInstanceOf[js.Any])
+    @scala.inline
+    def background(value: String | AnonColorOpacity): this.type = set("background", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridArea(value: GridAreaType): this.type = set("gridArea", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: MarginType): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
+    @scala.inline
+    def round(value: Boolean): this.type = set("round", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: xsmall | small | medium | large | xlarge | full | String): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def thickness(value: xsmall | small | medium | large | xlarge | String): this.type = set("thickness", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: bar | circle): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def values(value: js.Array[AnonHighlight]): this.type = set("values", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.grommet.mod.Meter] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.grommet.mod.Meter](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MeterProps
+  
+  def withProps(p: MeterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Meter.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,58 +1,70 @@
 package typingsSlinky.antDesignProLayout.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignProLayout.globalHeaderMod.GlobalHeaderProps
 import typingsSlinky.antDesignProLayout.globalHeaderMod.default
 import typingsSlinky.antDesignProLayout.typingsMod.WithFalse
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GlobalHeader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object GlobalHeader {
   @JSImport("@ant-design/pro-layout/lib/GlobalHeader", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    collapsed: js.UndefOr[Boolean] = js.undefined,
-    collapsedButtonRender: WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], TagMod[Any]]] = null,
-    isMobile: js.UndefOr[Boolean] = js.undefined,
-    logo: TagMod[Any] = null,
-    menuHeaderRender: WithFalse[
-      js.Function3[
-        /* logo */ TagMod[Any], 
-        /* title */ TagMod[Any], 
-        /* props */ js.UndefOr[GlobalHeaderProps], 
-        TagMod[Any]
-      ]
-    ] = null,
-    menuRender: /* import warning: importer.ImportType#apply Failed type conversion: @ant-design/pro-layout.@ant-design/pro-layout/lib/BasicLayout.BasicLayoutProps['menuRender'] */ js.Any = null,
-    onCollapse: /* collapsed */ Boolean => Unit = null,
-    rightContentRender: WithFalse[js.Function1[GlobalHeaderProps, TagMod[Any]]] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(collapsed)) __obj.updateDynamic("collapsed")(collapsed.asInstanceOf[js.Any])
-    if (collapsedButtonRender != null) __obj.updateDynamic("collapsedButtonRender")(collapsedButtonRender.asInstanceOf[js.Any])
-    if (!js.isUndefined(isMobile)) __obj.updateDynamic("isMobile")(isMobile.asInstanceOf[js.Any])
-    if (logo != null) __obj.updateDynamic("logo")(logo.asInstanceOf[js.Any])
-    if (menuHeaderRender != null) __obj.updateDynamic("menuHeaderRender")(menuHeaderRender.asInstanceOf[js.Any])
-    if (menuRender != null) __obj.updateDynamic("menuRender")(menuRender.asInstanceOf[js.Any])
-    if (onCollapse != null) __obj.updateDynamic("onCollapse")(js.Any.fromFunction1(onCollapse))
-    if (rightContentRender != null) __obj.updateDynamic("rightContentRender")(rightContentRender.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def collapsed(value: Boolean): this.type = set("collapsed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def collapsedButtonRenderFunction1(value: /* collapsed */ js.UndefOr[Boolean] => TagMod[Any]): this.type = set("collapsedButtonRender", js.Any.fromFunction1(value))
+    @scala.inline
+    def collapsedButtonRender(value: WithFalse[js.Function1[/* collapsed */ js.UndefOr[Boolean], TagMod[Any]]]): this.type = set("collapsedButtonRender", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isMobile(value: Boolean): this.type = set("isMobile", value.asInstanceOf[js.Any])
+    @scala.inline
+    def logoReactElement(value: ReactElement): this.type = set("logo", value.asInstanceOf[js.Any])
+    @scala.inline
+    def logo(value: TagMod[Any]): this.type = set("logo", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuHeaderRenderFunction3(
+      value: (/* logo */ TagMod[Any], /* title */ TagMod[Any], /* props */ js.UndefOr[GlobalHeaderProps]) => TagMod[Any]
+    ): this.type = set("menuHeaderRender", js.Any.fromFunction3(value))
+    @scala.inline
+    def menuHeaderRender(
+      value: WithFalse[
+          js.Function3[
+            /* logo */ TagMod[Any], 
+            /* title */ TagMod[Any], 
+            /* props */ js.UndefOr[GlobalHeaderProps], 
+            TagMod[Any]
+          ]
+        ]
+    ): this.type = set("menuHeaderRender", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuRender(
+      value: /* import warning: importer.ImportType#apply Failed type conversion: @ant-design/pro-layout.@ant-design/pro-layout/lib/BasicLayout.BasicLayoutProps['menuRender'] */ js.Any
+    ): this.type = set("menuRender", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCollapse(value: /* collapsed */ Boolean => Unit): this.type = set("onCollapse", js.Any.fromFunction1(value))
+    @scala.inline
+    def rightContentRenderFunction1(value: GlobalHeaderProps => TagMod[Any]): this.type = set("rightContentRender", js.Any.fromFunction1(value))
+    @scala.inline
+    def rightContentRender(value: WithFalse[js.Function1[GlobalHeaderProps, TagMod[Any]]]): this.type = set("rightContentRender", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.antDesignProLayout.globalHeaderMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = GlobalHeaderProps
+  
+  def withProps(p: GlobalHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: GlobalHeader.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

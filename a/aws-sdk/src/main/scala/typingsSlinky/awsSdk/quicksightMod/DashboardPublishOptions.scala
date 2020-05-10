@@ -22,16 +22,53 @@ trait DashboardPublishOptions extends js.Object {
 
 object DashboardPublishOptions {
   @scala.inline
-  def apply(
-    AdHocFilteringOption: AdHocFilteringOption = null,
-    ExportToCSVOption: ExportToCSVOption = null,
-    SheetControlsOption: SheetControlsOption = null
-  ): DashboardPublishOptions = {
+  def apply(): DashboardPublishOptions = {
     val __obj = js.Dynamic.literal()
-    if (AdHocFilteringOption != null) __obj.updateDynamic("AdHocFilteringOption")(AdHocFilteringOption.asInstanceOf[js.Any])
-    if (ExportToCSVOption != null) __obj.updateDynamic("ExportToCSVOption")(ExportToCSVOption.asInstanceOf[js.Any])
-    if (SheetControlsOption != null) __obj.updateDynamic("SheetControlsOption")(SheetControlsOption.asInstanceOf[js.Any])
     __obj.asInstanceOf[DashboardPublishOptions]
   }
+  @scala.inline
+  implicit class DashboardPublishOptionsOps[Self <: DashboardPublishOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdHocFilteringOption(value: AdHocFilteringOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdHocFilteringOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdHocFilteringOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdHocFilteringOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExportToCSVOption(value: ExportToCSVOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportToCSVOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExportToCSVOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportToCSVOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSheetControlsOption(value: SheetControlsOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SheetControlsOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSheetControlsOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SheetControlsOption")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,17 +1,15 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
-import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LayerBasicExample
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.officeUiFabricReact.layerBasicExampleMod.LayerBasicExample] {
+object LayerBasicExample {
   @JSImport("office-ui-fabric-react/lib/components/Layer/examples/Layer.Basic.Example", "LayerBasicExample")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: js.Object): SharedBuilder_Object_159303587[typingsSlinky.officeUiFabricReact.layerBasicExampleMod.LayerBasicExample] = new SharedBuilder_Object_159303587[typingsSlinky.officeUiFabricReact.layerBasicExampleMod.LayerBasicExample](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: LayerBasicExample.type): SharedBuilder_Object_159303587[typingsSlinky.officeUiFabricReact.layerBasicExampleMod.LayerBasicExample] = new SharedBuilder_Object_159303587[typingsSlinky.officeUiFabricReact.layerBasicExampleMod.LayerBasicExample](js.Array(this.component, js.Dictionary.empty))()
 }
 

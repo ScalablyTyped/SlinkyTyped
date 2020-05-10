@@ -24,14 +24,41 @@ trait SchemaListMonitoredResourceDescriptorsResponse extends js.Object {
 
 object SchemaListMonitoredResourceDescriptorsResponse {
   @scala.inline
-  def apply(
-    nextPageToken: String = null,
-    resourceDescriptors: js.Array[SchemaMonitoredResourceDescriptor] = null
-  ): SchemaListMonitoredResourceDescriptorsResponse = {
+  def apply(): SchemaListMonitoredResourceDescriptorsResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (resourceDescriptors != null) __obj.updateDynamic("resourceDescriptors")(resourceDescriptors.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListMonitoredResourceDescriptorsResponse]
   }
+  @scala.inline
+  implicit class SchemaListMonitoredResourceDescriptorsResponseOps[Self <: SchemaListMonitoredResourceDescriptorsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceDescriptors(value: js.Array[SchemaMonitoredResourceDescriptor]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceDescriptors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceDescriptors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceDescriptors")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

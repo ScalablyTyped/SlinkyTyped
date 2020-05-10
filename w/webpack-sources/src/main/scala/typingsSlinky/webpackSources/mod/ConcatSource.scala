@@ -1,8 +1,5 @@
 package typingsSlinky.webpackSources.mod
 
-import typingsSlinky.sourceMap.mod.RawSourceMap
-import typingsSlinky.webpackSources.AnonColumns
-import typingsSlinky.webpackSources.AnonMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +13,5 @@ class ConcatSource protected ()
   var children: js.Array[String | Source] = js.native
   def add(item: String): Unit = js.native
   def add(item: Source): Unit = js.native
-  /* CompleteClass */
-  override def map(options: AnonColumns): RawSourceMap = js.native
-  /* CompleteClass */
-  override def sourceAndMap(options: AnonColumns): AnonMap = js.native
 }
 

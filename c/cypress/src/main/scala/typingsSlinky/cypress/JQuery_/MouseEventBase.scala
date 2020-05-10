@@ -10,36 +10,37 @@ import scala.scalajs.js.annotation._
 
 // region MouseEvent
 // #region MouseEvent
+@js.native
 trait MouseEventBase[TDelegateTarget, TData, TCurrentTarget, TTarget] extends UIEventBase[TDelegateTarget, TData, TCurrentTarget, TTarget] {
   // MouseEvent, KeyboardEvent, TouchEvent
   @JSName("altKey")
-  var altKey_MouseEventBase: Boolean
+  var altKey_MouseEventBase: Boolean = js.native
   // MouseEvent
   @JSName("button")
-  var button_MouseEventBase: Double
+  var button_MouseEventBase: Double = js.native
   @JSName("buttons")
-  var buttons_MouseEventBase: Double
+  var buttons_MouseEventBase: Double = js.native
   // TouchEvent
   @JSName("changedTouches")
-  var changedTouches_MouseEventBase: js.UndefOr[scala.Nothing] = js.undefined
+  var changedTouches_MouseEventBase: js.UndefOr[scala.Nothing] = js.native
   /** @deprecated */
   @JSName("charCode")
-  var charCode_MouseEventBase: js.UndefOr[scala.Nothing] = js.undefined
+  var charCode_MouseEventBase: js.UndefOr[scala.Nothing] = js.native
   // KeyboardEvent
   /** @deprecated */
   @JSName("char")
-  var char_MouseEventBase: js.UndefOr[scala.Nothing] = js.undefined
+  var char_MouseEventBase: js.UndefOr[scala.Nothing] = js.native
   @JSName("clientX")
-  var clientX_MouseEventBase: Double
+  var clientX_MouseEventBase: Double = js.native
   @JSName("clientY")
-  var clientY_MouseEventBase: Double
+  var clientY_MouseEventBase: Double = js.native
   @JSName("ctrlKey")
-  var ctrlKey_MouseEventBase: Boolean
+  var ctrlKey_MouseEventBase: Boolean = js.native
   /** @deprecated */
   @JSName("keyCode")
-  var keyCode_MouseEventBase: js.UndefOr[scala.Nothing] = js.undefined
+  var keyCode_MouseEventBase: js.UndefOr[scala.Nothing] = js.native
   @JSName("key")
-  var key_MouseEventBase: js.UndefOr[scala.Nothing] = js.undefined
+  var key_MouseEventBase: js.UndefOr[scala.Nothing] = js.native
   /**
     * Indicates whether the META key was pressed when the event fired.
     * @see \`{@link https://api.jquery.com/event.metaKey/ }\`
@@ -77,13 +78,13 @@ trait MouseEventBase[TDelegateTarget, TData, TCurrentTarget, TTarget] extends UI
   ```
     */
   @JSName("metaKey")
-  var metaKey_MouseEventBase: Boolean
+  var metaKey_MouseEventBase: Boolean = js.native
   @JSName("offsetX")
-  var offsetX_MouseEventBase: Double
+  var offsetX_MouseEventBase: Double = js.native
   @JSName("offsetY")
-  var offsetY_MouseEventBase: Double
+  var offsetY_MouseEventBase: Double = js.native
   @JSName("originalEvent")
-  var originalEvent_MouseEventBase: js.UndefOr[MouseEvent] = js.undefined
+  var originalEvent_MouseEventBase: js.UndefOr[MouseEvent] = js.native
   /**
     * The mouse position relative to the left edge of the document.
     * @see \`{@link https://api.jquery.com/event.pageX/ }\`
@@ -120,7 +121,7 @@ trait MouseEventBase[TDelegateTarget, TData, TCurrentTarget, TTarget] extends UI
   ```
     */
   @JSName("pageX")
-  var pageX_MouseEventBase: Double
+  var pageX_MouseEventBase: Double = js.native
   /**
     * The mouse position relative to the top edge of the document.
     * @see \`{@link https://api.jquery.com/event.pageY/ }\`
@@ -157,12 +158,12 @@ trait MouseEventBase[TDelegateTarget, TData, TCurrentTarget, TTarget] extends UI
   ```
     */
   @JSName("pageY")
-  var pageY_MouseEventBase: Double
+  var pageY_MouseEventBase: Double = js.native
   // PointerEvent
   @JSName("pointerId")
-  var pointerId_MouseEventBase: js.UndefOr[scala.Nothing] = js.undefined
+  var pointerId_MouseEventBase: js.UndefOr[scala.Nothing] = js.native
   @JSName("pointerType")
-  var pointerType_MouseEventBase: js.UndefOr[scala.Nothing] = js.undefined
+  var pointerType_MouseEventBase: js.UndefOr[scala.Nothing] = js.native
   /**
     * The other DOM element involved in the event, if any.
     * @see \`{@link https://api.jquery.com/event.relatedTarget/ }\`
@@ -174,20 +175,20 @@ trait MouseEventBase[TDelegateTarget, TData, TCurrentTarget, TTarget] extends UI
   });
   ```
     */
-  var relatedTarget: js.UndefOr[EventTarget | Null] = js.undefined
+  var relatedTarget: js.UndefOr[EventTarget | Null] = js.native
   @JSName("screenX")
-  var screenX_MouseEventBase: Double
+  var screenX_MouseEventBase: Double = js.native
   @JSName("screenY")
-  var screenY_MouseEventBase: Double
+  var screenY_MouseEventBase: Double = js.native
   @JSName("shiftKey")
-  var shiftKey_MouseEventBase: Boolean
+  var shiftKey_MouseEventBase: Boolean = js.native
   @JSName("targetTouches")
-  var targetTouches_MouseEventBase: js.UndefOr[scala.Nothing] = js.undefined
+  var targetTouches_MouseEventBase: js.UndefOr[scala.Nothing] = js.native
   /** @deprecated */
   @JSName("toElement")
-  var toElement_MouseEventBase: Element
+  var toElement_MouseEventBase: Element = js.native
   @JSName("touches")
-  var touches_MouseEventBase: js.UndefOr[scala.Nothing] = js.undefined
+  var touches_MouseEventBase: js.UndefOr[scala.Nothing] = js.native
   // MouseEvent, KeyboardEvent
   /**
     * For key or mouse events, this property indicates the specific key or button that was pressed.
@@ -242,7 +243,7 @@ trait MouseEventBase[TDelegateTarget, TData, TCurrentTarget, TTarget] extends UI
   ```
     */
   @JSName("which")
-  var which_MouseEventBase: Double
+  var which_MouseEventBase: Double = js.native
 }
 
 object MouseEventBase {
@@ -280,37 +281,253 @@ object MouseEventBase {
     toElement: Element,
     `type`: String,
     view: Window_,
-    which: Double,
-    changedTouches: js.UndefOr[scala.Nothing] = js.undefined,
-    char: js.UndefOr[scala.Nothing] = js.undefined,
-    charCode: js.UndefOr[scala.Nothing] = js.undefined,
-    key: js.UndefOr[scala.Nothing] = js.undefined,
-    keyCode: js.UndefOr[scala.Nothing] = js.undefined,
-    namespace: String = null,
-    originalEvent: MouseEvent = null,
-    pointerId: js.UndefOr[scala.Nothing] = js.undefined,
-    pointerType: js.UndefOr[scala.Nothing] = js.undefined,
-    relatedTarget: EventTarget = null,
-    result: js.Any = null,
-    targetTouches: js.UndefOr[scala.Nothing] = js.undefined,
-    touches: js.UndefOr[scala.Nothing] = js.undefined
+    which: Double
   ): MouseEventBase[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
     val __obj = js.Dynamic.literal(altKey = altKey.asInstanceOf[js.Any], bubbles = bubbles.asInstanceOf[js.Any], button = button.asInstanceOf[js.Any], buttons = buttons.asInstanceOf[js.Any], cancelable = cancelable.asInstanceOf[js.Any], clientX = clientX.asInstanceOf[js.Any], clientY = clientY.asInstanceOf[js.Any], ctrlKey = ctrlKey.asInstanceOf[js.Any], currentTarget = currentTarget.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], delegateTarget = delegateTarget.asInstanceOf[js.Any], detail = detail.asInstanceOf[js.Any], eventPhase = eventPhase.asInstanceOf[js.Any], isDefaultPrevented = js.Any.fromFunction0(isDefaultPrevented), isImmediatePropagationStopped = js.Any.fromFunction0(isImmediatePropagationStopped), isPropagationStopped = js.Any.fromFunction0(isPropagationStopped), metaKey = metaKey.asInstanceOf[js.Any], offsetX = offsetX.asInstanceOf[js.Any], offsetY = offsetY.asInstanceOf[js.Any], pageX = pageX.asInstanceOf[js.Any], pageY = pageY.asInstanceOf[js.Any], preventDefault = js.Any.fromFunction0(preventDefault), screenX = screenX.asInstanceOf[js.Any], screenY = screenY.asInstanceOf[js.Any], shiftKey = shiftKey.asInstanceOf[js.Any], stopImmediatePropagation = js.Any.fromFunction0(stopImmediatePropagation), stopPropagation = js.Any.fromFunction0(stopPropagation), target = target.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any], toElement = toElement.asInstanceOf[js.Any], view = view.asInstanceOf[js.Any], which = which.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(changedTouches)) __obj.updateDynamic("changedTouches")(changedTouches.asInstanceOf[js.Any])
-    if (!js.isUndefined(char)) __obj.updateDynamic("char")(char.asInstanceOf[js.Any])
-    if (!js.isUndefined(charCode)) __obj.updateDynamic("charCode")(charCode.asInstanceOf[js.Any])
-    if (!js.isUndefined(key)) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (!js.isUndefined(keyCode)) __obj.updateDynamic("keyCode")(keyCode.asInstanceOf[js.Any])
-    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
-    if (originalEvent != null) __obj.updateDynamic("originalEvent")(originalEvent.asInstanceOf[js.Any])
-    if (!js.isUndefined(pointerId)) __obj.updateDynamic("pointerId")(pointerId.asInstanceOf[js.Any])
-    if (!js.isUndefined(pointerType)) __obj.updateDynamic("pointerType")(pointerType.asInstanceOf[js.Any])
-    if (relatedTarget != null) __obj.updateDynamic("relatedTarget")(relatedTarget.asInstanceOf[js.Any])
-    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
-    if (!js.isUndefined(targetTouches)) __obj.updateDynamic("targetTouches")(targetTouches.asInstanceOf[js.Any])
-    if (!js.isUndefined(touches)) __obj.updateDynamic("touches")(touches.asInstanceOf[js.Any])
     __obj.asInstanceOf[MouseEventBase[TDelegateTarget, TData, TCurrentTarget, TTarget]]
   }
+  @scala.inline
+  implicit class MouseEventBaseOps[Self[tdelegatetarget, tdata, tcurrenttarget, ttarget] <: MouseEventBase[tdelegatetarget, tdata, tcurrenttarget, ttarget], TDelegateTarget, TData, TCurrentTarget, TTarget] (val x: Self[TDelegateTarget, TData, TCurrentTarget, TTarget]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TDelegateTarget, TData, TCurrentTarget, TTarget]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[TDelegateTarget, TData, TCurrentTarget, TTarget]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TDelegateTarget, TData, TCurrentTarget, TTarget]) with Other]
+    @scala.inline
+    def withAltKey(value: Boolean): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withButton(value: Double): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withButtons(value: Double): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientX(value: Double): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientY(value: Double): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCtrlKey(value: Boolean): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ctrlKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetaKey(value: Boolean): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metaKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOffsetX(value: Double): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOffsetY(value: Double): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageX(value: Double): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageY(value: Double): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScreenX(value: Double): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScreenY(value: Double): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShiftKey(value: Boolean): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToElement(value: Element): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWhich(value: Double): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("which")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChangedTouches(value: scala.Nothing): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changedTouches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChangedTouches: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changedTouches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChar(value: scala.Nothing): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("char")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChar: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("char")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCharCode(value: scala.Nothing): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCharCode: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: scala.Nothing): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyCode(value: scala.Nothing): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyCode: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalEvent(value: MouseEvent): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalEvent: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointerId(value: scala.Nothing): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointerId: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointerType(value: scala.Nothing): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointerType: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelatedTarget(value: EventTarget): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelatedTarget: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedTarget")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelatedTargetNull: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedTarget")(null)
+        ret
+    }
+    @scala.inline
+    def withTargetTouches(value: scala.Nothing): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetTouches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetTouches: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetTouches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTouches(value: scala.Nothing): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTouches: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touches")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,40 +1,35 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.megaMenuMod.MegaMenuProps
 import typingsSlinky.primereact.menuItemMod.MenuItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MegaMenu
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactMegamenuMod.MegaMenu] {
+object MegaMenu {
   @JSImport("primereact/megamenu", "MegaMenu")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id */
-  def apply(
-    model: js.Array[MenuItem] = null,
-    orientation: String = null,
-    style: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactMegamenuMod.MegaMenu] = {
-    val __obj = js.Dynamic.literal()
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.primereactMegamenuMod.MegaMenu] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def model(value: js.Array[MenuItem]): this.type = set("model", value.asInstanceOf[js.Any])
+    @scala.inline
+    def orientation(value: String): this.type = set("orientation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactMegamenuMod.MegaMenu] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.primereactMegamenuMod.MegaMenu](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MegaMenuProps
+  
+  def withProps(p: MegaMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MegaMenu.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

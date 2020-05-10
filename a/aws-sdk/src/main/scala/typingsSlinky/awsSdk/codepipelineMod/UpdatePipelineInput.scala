@@ -16,8 +16,21 @@ object UpdatePipelineInput {
   @scala.inline
   def apply(pipeline: PipelineDeclaration): UpdatePipelineInput = {
     val __obj = js.Dynamic.literal(pipeline = pipeline.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[UpdatePipelineInput]
   }
+  @scala.inline
+  implicit class UpdatePipelineInputOps[Self <: UpdatePipelineInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPipeline(value: PipelineDeclaration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipeline")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

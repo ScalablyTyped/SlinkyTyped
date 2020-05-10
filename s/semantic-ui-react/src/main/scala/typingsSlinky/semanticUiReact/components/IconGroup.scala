@@ -1,14 +1,16 @@
 package typingsSlinky.semanticUiReact.components
 
+import typingsSlinky.semanticUiReact.iconGroupMod.IconGroupProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IconGroup extends SharedApply_IconGroupProps323131842 {
+object IconGroup {
   @JSImport("semantic-ui-react/dist/commonjs/elements/Icon/IconGroup", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IconGroupProps): SharedBuilder_IconGroupProps_1560966205 = new SharedBuilder_IconGroupProps_1560966205(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: IconGroup.type): SharedBuilder_IconGroupProps_1560966205 = new SharedBuilder_IconGroupProps_1560966205(js.Array(this.component, js.Dictionary.empty))()
 }
 

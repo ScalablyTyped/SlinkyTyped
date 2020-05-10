@@ -4,55 +4,163 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LinkedForeignAccount extends js.Object {
   /** Account ID to which this linked foreign account belongs. */
-  var accountId: js.UndefOr[String] = js.undefined
+  var accountId: js.UndefOr[String] = js.native
   /** Boolean indicating whether this is eligible for search. */
-  var eligibleForSearch: js.UndefOr[Boolean] = js.undefined
+  var eligibleForSearch: js.UndefOr[Boolean] = js.native
   /** Entity ad account link ID. */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /** Internal ID for the web property to which this linked foreign account belongs. */
-  var internalWebPropertyId: js.UndefOr[String] = js.undefined
+  var internalWebPropertyId: js.UndefOr[String] = js.native
   /** Resource type for linked foreign account. */
-  var kind: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.native
   /** The foreign account ID. For example the an AdWords `linkedAccountId` has the following format XXX-XXX-XXXX. */
-  var linkedAccountId: js.UndefOr[String] = js.undefined
+  var linkedAccountId: js.UndefOr[String] = js.native
   /** Remarketing audience ID to which this linked foreign account belongs. */
-  var remarketingAudienceId: js.UndefOr[String] = js.undefined
+  var remarketingAudienceId: js.UndefOr[String] = js.native
   /** The status of this foreign account link. */
-  var status: js.UndefOr[String] = js.undefined
+  var status: js.UndefOr[String] = js.native
   /** The type of the foreign account. For example, `ADWORDS_LINKS`, `DBM_LINKS`, `MCC_LINKS` or `OPTIMIZE`. */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /** Web property ID of the form UA-XXXXX-YY to which this linked foreign account belongs. */
-  var webPropertyId: js.UndefOr[String] = js.undefined
+  var webPropertyId: js.UndefOr[String] = js.native
 }
 
 object LinkedForeignAccount {
   @scala.inline
-  def apply(
-    accountId: String = null,
-    eligibleForSearch: js.UndefOr[Boolean] = js.undefined,
-    id: String = null,
-    internalWebPropertyId: String = null,
-    kind: String = null,
-    linkedAccountId: String = null,
-    remarketingAudienceId: String = null,
-    status: String = null,
-    `type`: String = null,
-    webPropertyId: String = null
-  ): LinkedForeignAccount = {
+  def apply(): LinkedForeignAccount = {
     val __obj = js.Dynamic.literal()
-    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
-    if (!js.isUndefined(eligibleForSearch)) __obj.updateDynamic("eligibleForSearch")(eligibleForSearch.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (internalWebPropertyId != null) __obj.updateDynamic("internalWebPropertyId")(internalWebPropertyId.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (linkedAccountId != null) __obj.updateDynamic("linkedAccountId")(linkedAccountId.asInstanceOf[js.Any])
-    if (remarketingAudienceId != null) __obj.updateDynamic("remarketingAudienceId")(remarketingAudienceId.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (webPropertyId != null) __obj.updateDynamic("webPropertyId")(webPropertyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[LinkedForeignAccount]
   }
+  @scala.inline
+  implicit class LinkedForeignAccountOps[Self <: LinkedForeignAccount] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEligibleForSearch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eligibleForSearch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEligibleForSearch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eligibleForSearch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInternalWebPropertyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("internalWebPropertyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInternalWebPropertyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("internalWebPropertyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkedAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkedAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedAccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemarketingAudienceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remarketingAudienceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemarketingAudienceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remarketingAudienceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebPropertyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebPropertyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

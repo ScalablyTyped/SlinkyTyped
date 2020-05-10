@@ -26,18 +26,65 @@ trait DeveloperInfo extends js.Object {
 
 object DeveloperInfo {
   @scala.inline
-  def apply(
-    DeveloperName: DeveloperName = null,
-    Email: Email = null,
-    PrivacyPolicy: PrivacyPolicy = null,
-    Url: Url = null
-  ): DeveloperInfo = {
+  def apply(): DeveloperInfo = {
     val __obj = js.Dynamic.literal()
-    if (DeveloperName != null) __obj.updateDynamic("DeveloperName")(DeveloperName.asInstanceOf[js.Any])
-    if (Email != null) __obj.updateDynamic("Email")(Email.asInstanceOf[js.Any])
-    if (PrivacyPolicy != null) __obj.updateDynamic("PrivacyPolicy")(PrivacyPolicy.asInstanceOf[js.Any])
-    if (Url != null) __obj.updateDynamic("Url")(Url.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeveloperInfo]
   }
+  @scala.inline
+  implicit class DeveloperInfoOps[Self <: DeveloperInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeveloperName(value: DeveloperName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeveloperName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeveloperName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeveloperName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmail(value: Email): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivacyPolicy(value: PrivacyPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivacyPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivacyPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivacyPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: Url): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

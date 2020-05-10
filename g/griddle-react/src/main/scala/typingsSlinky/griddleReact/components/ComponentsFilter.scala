@@ -1,32 +1,35 @@
 package typingsSlinky.griddleReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.griddleReact.mod.GriddleFilter
 import typingsSlinky.griddleReact.mod.components.Filter
 import typingsSlinky.griddleReact.mod.components.FilterProps
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ComponentsFilter
-  extends ExternalComponentWithAttributesWithRefType[tag.type, Filter] {
+object ComponentsFilter {
   @JSImport("griddle-react", "components.Filter")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, placeholder, style */
-  def apply(setFilter: /* filter */ GriddleFilter => Unit = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, Filter] = {
-    val __obj = js.Dynamic.literal()
-    if (setFilter != null) __obj.updateDynamic("setFilter")(js.Any.fromFunction1(setFilter))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, Filter] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFilter(value: /* filter */ GriddleFilter => Unit): this.type = set("setFilter", js.Any.fromFunction1(value))
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, Filter] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.griddleReact.mod.components.Filter](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FilterProps
+  
+  def withProps(p: FilterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ComponentsFilter.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

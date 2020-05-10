@@ -1,7 +1,6 @@
 package typingsSlinky.vegaTypings.markMod
 
 import typingsSlinky.vegaTypings.exprMod.ExprRef
-import typingsSlinky.vegaTypings.scaleMod.SortOrder
 import typingsSlinky.vegaTypings.signalMod.SignalRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,15 +14,13 @@ trait Compare extends js.Object
 
 object Compare {
   @scala.inline
-  def AnonOrder(field: String | ExprRef | SignalRef, order: SortOrder = null): Compare = {
+  def AnonOrder(field: String | ExprRef | SignalRef): Compare = {
     val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any])
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
     __obj.asInstanceOf[Compare]
   }
   @scala.inline
-  def AnonFieldOrder(field: js.Array[String | ExprRef | SignalRef], order: js.Array[SortOrder] = null): Compare = {
+  def AnonFieldOrder(field: js.Array[String | ExprRef | SignalRef]): Compare = {
     val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any])
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
     __obj.asInstanceOf[Compare]
   }
 }

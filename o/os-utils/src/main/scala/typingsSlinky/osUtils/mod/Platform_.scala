@@ -19,24 +19,22 @@ trait Platform_ extends js.Object
 
 object Platform_ {
   @scala.inline
-  def aix: typingsSlinky.osUtils.osUtilsStrings.aix = this.cast("aix")
+  def aix: typingsSlinky.osUtils.osUtilsStrings.aix = "aix".asInstanceOf[typingsSlinky.osUtils.osUtilsStrings.aix]
   @scala.inline
-  def android: typingsSlinky.osUtils.osUtilsStrings.android = this.cast("android")
+  def android: typingsSlinky.osUtils.osUtilsStrings.android = "android".asInstanceOf[typingsSlinky.osUtils.osUtilsStrings.android]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cygwin: typingsSlinky.osUtils.osUtilsStrings.cygwin = "cygwin".asInstanceOf[typingsSlinky.osUtils.osUtilsStrings.cygwin]
   @scala.inline
-  def cygwin: typingsSlinky.osUtils.osUtilsStrings.cygwin = this.cast("cygwin")
+  def darwin: typingsSlinky.osUtils.osUtilsStrings.darwin = "darwin".asInstanceOf[typingsSlinky.osUtils.osUtilsStrings.darwin]
   @scala.inline
-  def darwin: typingsSlinky.osUtils.osUtilsStrings.darwin = this.cast("darwin")
+  def freebsd: typingsSlinky.osUtils.osUtilsStrings.freebsd = "freebsd".asInstanceOf[typingsSlinky.osUtils.osUtilsStrings.freebsd]
   @scala.inline
-  def freebsd: typingsSlinky.osUtils.osUtilsStrings.freebsd = this.cast("freebsd")
+  def linux: typingsSlinky.osUtils.osUtilsStrings.linux = "linux".asInstanceOf[typingsSlinky.osUtils.osUtilsStrings.linux]
   @scala.inline
-  def linux: typingsSlinky.osUtils.osUtilsStrings.linux = this.cast("linux")
+  def openbsd: typingsSlinky.osUtils.osUtilsStrings.openbsd = "openbsd".asInstanceOf[typingsSlinky.osUtils.osUtilsStrings.openbsd]
   @scala.inline
-  def openbsd: typingsSlinky.osUtils.osUtilsStrings.openbsd = this.cast("openbsd")
+  def sunos: typingsSlinky.osUtils.osUtilsStrings.sunos = "sunos".asInstanceOf[typingsSlinky.osUtils.osUtilsStrings.sunos]
   @scala.inline
-  def sunos: typingsSlinky.osUtils.osUtilsStrings.sunos = this.cast("sunos")
-  @scala.inline
-  def win32: typingsSlinky.osUtils.osUtilsStrings.win32 = this.cast("win32")
+  def win32: typingsSlinky.osUtils.osUtilsStrings.win32 = "win32".asInstanceOf[typingsSlinky.osUtils.osUtilsStrings.win32]
 }
 

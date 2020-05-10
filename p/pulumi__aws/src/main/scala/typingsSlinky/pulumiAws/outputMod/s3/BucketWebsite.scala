@@ -27,18 +27,65 @@ trait BucketWebsite extends js.Object {
 
 object BucketWebsite {
   @scala.inline
-  def apply(
-    errorDocument: String = null,
-    indexDocument: String = null,
-    redirectAllRequestsTo: String = null,
-    routingRules: String = null
-  ): BucketWebsite = {
+  def apply(): BucketWebsite = {
     val __obj = js.Dynamic.literal()
-    if (errorDocument != null) __obj.updateDynamic("errorDocument")(errorDocument.asInstanceOf[js.Any])
-    if (indexDocument != null) __obj.updateDynamic("indexDocument")(indexDocument.asInstanceOf[js.Any])
-    if (redirectAllRequestsTo != null) __obj.updateDynamic("redirectAllRequestsTo")(redirectAllRequestsTo.asInstanceOf[js.Any])
-    if (routingRules != null) __obj.updateDynamic("routingRules")(routingRules.asInstanceOf[js.Any])
     __obj.asInstanceOf[BucketWebsite]
   }
+  @scala.inline
+  implicit class BucketWebsiteOps[Self <: BucketWebsite] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorDocument(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorDocument")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorDocument: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorDocument")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndexDocument(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexDocument")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexDocument: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexDocument")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRedirectAllRequestsTo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectAllRequestsTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRedirectAllRequestsTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectAllRequestsTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoutingRules(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routingRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoutingRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routingRules")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

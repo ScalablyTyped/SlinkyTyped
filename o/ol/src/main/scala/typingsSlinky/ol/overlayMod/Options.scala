@@ -7,48 +7,179 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var autoPan: js.UndefOr[Boolean] = js.undefined
-  var autoPanAnimation: js.UndefOr[PanOptions] = js.undefined
-  var autoPanMargin: js.UndefOr[Double] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var element: js.UndefOr[HTMLElement] = js.undefined
-  var id: js.UndefOr[Double | String] = js.undefined
-  var insertFirst: js.UndefOr[Boolean] = js.undefined
-  var offset: js.UndefOr[js.Array[Double]] = js.undefined
-  var position: js.UndefOr[Coordinate] = js.undefined
-  var positioning: js.UndefOr[OverlayPositioning] = js.undefined
-  var stopEvent: js.UndefOr[Boolean] = js.undefined
+  var autoPan: js.UndefOr[PanIntoViewOptions | Boolean] = js.native
+  var autoPanAnimation: js.UndefOr[PanOptions] = js.native
+  var autoPanMargin: js.UndefOr[Double] = js.native
+  var autoPanOptions: js.UndefOr[PanIntoViewOptions] = js.native
+  var className: js.UndefOr[String] = js.native
+  var element: js.UndefOr[HTMLElement] = js.native
+  var id: js.UndefOr[Double | String] = js.native
+  var insertFirst: js.UndefOr[Boolean] = js.native
+  var offset: js.UndefOr[js.Array[Double]] = js.native
+  var position: js.UndefOr[Coordinate] = js.native
+  var positioning: js.UndefOr[OverlayPositioning] = js.native
+  var stopEvent: js.UndefOr[Boolean] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    autoPan: js.UndefOr[Boolean] = js.undefined,
-    autoPanAnimation: PanOptions = null,
-    autoPanMargin: Int | Double = null,
-    className: String = null,
-    element: HTMLElement = null,
-    id: Double | String = null,
-    insertFirst: js.UndefOr[Boolean] = js.undefined,
-    offset: js.Array[Double] = null,
-    position: Coordinate = null,
-    positioning: OverlayPositioning = null,
-    stopEvent: js.UndefOr[Boolean] = js.undefined
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoPan)) __obj.updateDynamic("autoPan")(autoPan.asInstanceOf[js.Any])
-    if (autoPanAnimation != null) __obj.updateDynamic("autoPanAnimation")(autoPanAnimation.asInstanceOf[js.Any])
-    if (autoPanMargin != null) __obj.updateDynamic("autoPanMargin")(autoPanMargin.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(insertFirst)) __obj.updateDynamic("insertFirst")(insertFirst.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (positioning != null) __obj.updateDynamic("positioning")(positioning.asInstanceOf[js.Any])
-    if (!js.isUndefined(stopEvent)) __obj.updateDynamic("stopEvent")(stopEvent.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoPan(value: PanIntoViewOptions | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoPan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoPanAnimation(value: PanOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPanAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoPanAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPanAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoPanMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPanMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoPanMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPanMargin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoPanOptions(value: PanIntoViewOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPanOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoPanOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPanOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertFirst(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertFirst")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsertFirst: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertFirst")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffset(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: Coordinate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositioning(value: OverlayPositioning): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positioning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPositioning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positioning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopEvent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopEvent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

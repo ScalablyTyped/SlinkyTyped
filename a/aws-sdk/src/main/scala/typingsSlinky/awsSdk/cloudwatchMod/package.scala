@@ -13,6 +13,14 @@ package object cloudwatchMod {
   type AlarmName = java.lang.String
   type AlarmNamePrefix = java.lang.String
   type AlarmNames = js.Array[typingsSlinky.awsSdk.cloudwatchMod.AlarmName]
+  type AlarmRule = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CompositeAlarm
+    - typingsSlinky.awsSdk.awsSdkStrings.MetricAlarm
+    - java.lang.String
+  */
+  type AlarmType = typingsSlinky.awsSdk.cloudwatchMod._AlarmType | java.lang.String
+  type AlarmTypes = js.Array[typingsSlinky.awsSdk.cloudwatchMod.AlarmType]
   type AmazonResourceName = java.lang.String
   type AnomalyDetectorExcludedTimeRanges = js.Array[typingsSlinky.awsSdk.cloudwatchMod.Range]
   type AnomalyDetectorMetricTimezone = java.lang.String
@@ -37,6 +45,7 @@ package object cloudwatchMod {
     - java.lang.String
   */
   type ComparisonOperator = typingsSlinky.awsSdk.cloudwatchMod._ComparisonOperator | java.lang.String
+  type CompositeAlarms = js.Array[typingsSlinky.awsSdk.cloudwatchMod.CompositeAlarm]
   type Counts = js.Array[typingsSlinky.awsSdk.cloudwatchMod.DatapointValue]
   type DashboardArn = java.lang.String
   type DashboardBody = java.lang.String
@@ -110,7 +119,7 @@ package object cloudwatchMod {
   type MetricLabel = java.lang.String
   type MetricName = java.lang.String
   type MetricWidget = java.lang.String
-  type MetricWidgetImage = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.cloudwatchMod.Blob | java.lang.String
+  type MetricWidgetImage = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.cloudwatchMod.Blob | java.lang.String
   type Metrics = js.Array[typingsSlinky.awsSdk.cloudwatchMod.Metric]
   type Namespace = java.lang.String
   type NextToken = java.lang.String

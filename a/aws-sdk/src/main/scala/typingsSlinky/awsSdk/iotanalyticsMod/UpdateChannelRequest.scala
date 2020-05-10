@@ -22,15 +22,47 @@ trait UpdateChannelRequest extends js.Object {
 
 object UpdateChannelRequest {
   @scala.inline
-  def apply(
-    channelName: ChannelName,
-    channelStorage: ChannelStorage = null,
-    retentionPeriod: RetentionPeriod = null
-  ): UpdateChannelRequest = {
+  def apply(channelName: ChannelName): UpdateChannelRequest = {
     val __obj = js.Dynamic.literal(channelName = channelName.asInstanceOf[js.Any])
-    if (channelStorage != null) __obj.updateDynamic("channelStorage")(channelStorage.asInstanceOf[js.Any])
-    if (retentionPeriod != null) __obj.updateDynamic("retentionPeriod")(retentionPeriod.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateChannelRequest]
   }
+  @scala.inline
+  implicit class UpdateChannelRequestOps[Self <: UpdateChannelRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChannelName(value: ChannelName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChannelStorage(value: ChannelStorage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelStorage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannelStorage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelStorage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetentionPeriod(value: RetentionPeriod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retentionPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetentionPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retentionPeriod")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

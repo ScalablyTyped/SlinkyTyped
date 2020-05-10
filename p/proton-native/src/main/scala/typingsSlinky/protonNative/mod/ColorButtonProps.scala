@@ -1,12 +1,11 @@
 package typingsSlinky.protonNative.mod
 
 import typingsSlinky.protonNative.AnonA
-import typingsSlinky.protonNative.AnonH
-import typingsSlinky.protonNative.AnonX
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ColorButtonProps
   extends GridChildrenProps
      with Label
@@ -14,37 +13,50 @@ trait ColorButtonProps
   /**
     * The initial color for the ColorButton. Can be passed as standard color seen in CSS (a color name, hex, rgb, rgba, hsl, hsla).
     */
-  var color: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[String] = js.native
   /**
     * Called when the color is changed for the ColorButton. The current color is passed as an object of RGBA.
     */
-  var onChange: js.UndefOr[js.Function1[/* color */ AnonA, Unit]] = js.undefined
+  var onChange: js.UndefOr[js.Function1[/* color */ AnonA, Unit]] = js.native
 }
 
 object ColorButtonProps {
   @scala.inline
-  def apply(
-    align: AnonH = null,
-    color: String = null,
-    column: Int | Double = null,
-    expand: AnonH = null,
-    label: String = null,
-    onChange: /* color */ AnonA => Unit = null,
-    row: Int | Double = null,
-    span: AnonX = null,
-    stretchy: js.UndefOr[Boolean] = js.undefined
-  ): ColorButtonProps = {
+  def apply(): ColorButtonProps = {
     val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
-    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (row != null) __obj.updateDynamic("row")(row.asInstanceOf[js.Any])
-    if (span != null) __obj.updateDynamic("span")(span.asInstanceOf[js.Any])
-    if (!js.isUndefined(stretchy)) __obj.updateDynamic("stretchy")(stretchy.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColorButtonProps]
   }
+  @scala.inline
+  implicit class ColorButtonPropsOps[Self <: ColorButtonProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: /* color */ AnonA => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,18 +26,65 @@ trait ResultConfigurationUpdates extends js.Object {
 
 object ResultConfigurationUpdates {
   @scala.inline
-  def apply(
-    EncryptionConfiguration: EncryptionConfiguration = null,
-    OutputLocation: String = null,
-    RemoveEncryptionConfiguration: js.UndefOr[scala.Boolean] = js.undefined,
-    RemoveOutputLocation: js.UndefOr[scala.Boolean] = js.undefined
-  ): ResultConfigurationUpdates = {
+  def apply(): ResultConfigurationUpdates = {
     val __obj = js.Dynamic.literal()
-    if (EncryptionConfiguration != null) __obj.updateDynamic("EncryptionConfiguration")(EncryptionConfiguration.asInstanceOf[js.Any])
-    if (OutputLocation != null) __obj.updateDynamic("OutputLocation")(OutputLocation.asInstanceOf[js.Any])
-    if (!js.isUndefined(RemoveEncryptionConfiguration)) __obj.updateDynamic("RemoveEncryptionConfiguration")(RemoveEncryptionConfiguration.asInstanceOf[js.Any])
-    if (!js.isUndefined(RemoveOutputLocation)) __obj.updateDynamic("RemoveOutputLocation")(RemoveOutputLocation.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResultConfigurationUpdates]
   }
+  @scala.inline
+  implicit class ResultConfigurationUpdatesOps[Self <: ResultConfigurationUpdates] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncryptionConfiguration(value: EncryptionConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveEncryptionConfiguration(value: BoxedBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveEncryptionConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveEncryptionConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveEncryptionConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveOutputLocation(value: BoxedBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveOutputLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveOutputLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveOutputLocation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -16,18 +16,16 @@ trait Placement extends js.Object
 
 object Placement {
   @scala.inline
-  def `bottom-center`: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`bottom-center` = this.cast("bottom-center")
+  def `bottom-center`: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`bottom-center` = "bottom-center".asInstanceOf[typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`bottom-center`]
   @scala.inline
-  def `bottom-left`: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`bottom-left` = this.cast("bottom-left")
+  def `bottom-left`: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`bottom-left` = "bottom-left".asInstanceOf[typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`bottom-left`]
   @scala.inline
-  def `bottom-right`: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`bottom-right` = this.cast("bottom-right")
+  def `bottom-right`: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`bottom-right` = "bottom-right".asInstanceOf[typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`bottom-right`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `top-center`: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`top-center` = "top-center".asInstanceOf[typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`top-center`]
   @scala.inline
-  def `top-center`: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`top-center` = this.cast("top-center")
+  def `top-left`: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`top-left` = "top-left".asInstanceOf[typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`top-left`]
   @scala.inline
-  def `top-left`: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`top-left` = this.cast("top-left")
-  @scala.inline
-  def `top-right`: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`top-right` = this.cast("top-right")
+  def `top-right`: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`top-right` = "top-right".asInstanceOf[typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.`top-right`]
 }
 

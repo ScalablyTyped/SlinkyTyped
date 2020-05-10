@@ -14,14 +14,12 @@ trait UnifiedNumberFormatOptionsSignDisplay extends js.Object
 
 object UnifiedNumberFormatOptionsSignDisplay {
   @scala.inline
-  def always: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.always = this.cast("always")
+  def always: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.always = "always".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.always]
   @scala.inline
-  def auto: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.auto = "auto".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def exceptZero: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.exceptZero = "exceptZero".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.exceptZero]
   @scala.inline
-  def exceptZero: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.exceptZero = this.cast("exceptZero")
-  @scala.inline
-  def never: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.never = this.cast("never")
+  def never: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.never = "never".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.never]
 }
 

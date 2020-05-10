@@ -19,6 +19,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DistanceMeasurement2DViewModel extends js.Object {
   /**
     * When the coordinate sustem is projected (other than web mercator) then distances less than this threshold will be computed planimetrically. Otherwise distances will be computed geodetically.
@@ -27,19 +28,19 @@ trait DistanceMeasurement2DViewModel extends js.Object {
     *
     * @default 100000
     */
-  var geodesicDistanceThreshold: Double
+  var geodesicDistanceThreshold: Double = js.native
   /**
     * The length and geometry of the measurement polyline in meters.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-DistanceMeasurement2D-DistanceMeasurement2DViewModel.html#measurement)
     */
-  val measurement: DistanceMeasurement2DViewModelMeasurement
+  val measurement: DistanceMeasurement2DViewModelMeasurement = js.native
   /**
     * This property returns the locale specific representation of the length. Lengths are rounded to two decimal places. Lengths are sourced from the [measurement](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-DistanceMeasurement2D-DistanceMeasurement2DViewModel.html#measurement) property (in meters) and converted to the user defined units or system.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-DistanceMeasurement2D-DistanceMeasurement2DViewModel.html#measurementLabel)
     */
-  val measurementLabel: String
+  val measurementLabel: String = js.native
   /**
     * The view model's state.
     *
@@ -55,13 +56,13 @@ trait DistanceMeasurement2DViewModel extends js.Object {
     *
     * @default disabled
     */
-  val state: disabled | ready | measuring | measured
+  val state: disabled | ready | measuring | measured = js.native
   /**
     * Unit system (imperial, metric) or specific unit used for displaying the distance values.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-DistanceMeasurement2D-DistanceMeasurement2DViewModel.html#unit)
     */
-  var unit: metric | imperial | inches | feet_ | `us-feet` | yards | miles_ | `nautical-miles` | meters_ | kilometers_
+  var unit: metric | imperial | inches | feet_ | `us-feet` | yards | miles_ | `nautical-miles` | meters_ | kilometers_ = js.native
   /**
     * List of available units and unit systems (imperial, metric) for displaying the distance values.
     *
@@ -69,13 +70,13 @@ trait DistanceMeasurement2DViewModel extends js.Object {
     */
   var unitOptions: js.Array[
     metric | imperial | inches | feet_ | `us-feet` | yards | miles_ | `nautical-miles` | meters_ | kilometers_
-  ]
+  ] = js.native
   /**
     * The view from which the widget will operate.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-DistanceMeasurement2D-DistanceMeasurement2DViewModel.html#view)
     */
-  var view: MapView
+  var view: MapView = js.native
   /**
     * Clears the current measurement.
     *
@@ -83,7 +84,7 @@ trait DistanceMeasurement2DViewModel extends js.Object {
     *
     *
     */
-  def clearMeasurement(): Unit
+  def clearMeasurement(): Unit = js.native
   /**
     * Starts a new measurement.
     *
@@ -91,7 +92,7 @@ trait DistanceMeasurement2DViewModel extends js.Object {
     *
     *
     */
-  def newMeasurement(): Unit
+  def newMeasurement(): Unit = js.native
 }
 
 @JSGlobal("__esri.DistanceMeasurement2DViewModel")

@@ -4,24 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.fluxStandardAction.mod._FluxStandardActionAuto because Already inherited */ trait FluxStandardActionWithMeta[Type /* <: String */, Payload, Meta] extends FluxStandardAction[Type, Payload, Meta] {
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.fluxStandardAction.mod._FluxStandardActionAuto because Already inherited */ @js.native
+trait FluxStandardActionWithMeta[Type /* <: String */, Payload, Meta] extends FluxStandardAction[Type, Payload, Meta] {
   /**
     * The required `meta` property MAY be any type of value.
     * It is intended for any extra information that is not part of the payload.
     */
   @JSName("meta")
-  var meta_FluxStandardActionWithMeta: Meta
+  var meta_FluxStandardActionWithMeta: Meta = js.native
 }
 
 object FluxStandardActionWithMeta {
   @scala.inline
-  def apply[Type /* <: String */, Payload, Meta](meta: Meta, `type`: Type, error: js.UndefOr[Boolean] = js.undefined, payload: Payload = null): FluxStandardActionWithMeta[Type, Payload, Meta] = {
+  def apply[Type, Payload, Meta](meta: Meta, `type`: Type): FluxStandardActionWithMeta[Type, Payload, Meta] = {
     val __obj = js.Dynamic.literal(meta = meta.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
     __obj.asInstanceOf[FluxStandardActionWithMeta[Type, Payload, Meta]]
   }
+  @scala.inline
+  implicit class FluxStandardActionWithMetaOps[Self[`type`, payload, meta] <: FluxStandardActionWithMeta[`type`, payload, meta], Type, Payload, Meta] (val x: Self[Type, Payload, Meta]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[Type, Payload, Meta] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Type, Payload, Meta]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[Type, Payload, Meta]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[Type, Payload, Meta]) with Other]
+    @scala.inline
+    def withMeta(value: Meta): Self[Type, Payload, Meta] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -18,3 +18,25 @@ trait ITitleProvider extends IServiceProvider {
   def enabled(enabled: Boolean): Unit = js.native
 }
 
+object ITitleProvider {
+  @scala.inline
+  def apply($get: js.Any, enabled: Boolean => Unit): ITitleProvider = {
+    val __obj = js.Dynamic.literal($get = $get.asInstanceOf[js.Any], enabled = js.Any.fromFunction1(enabled))
+    __obj.asInstanceOf[ITitleProvider]
+  }
+  @scala.inline
+  implicit class ITitleProviderOps[Self <: ITitleProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnabled(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
+

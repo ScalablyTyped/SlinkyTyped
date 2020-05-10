@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   def length(string: String): Double = js.native
-  def read(buffer: scala.scalajs.js.typedarray.Uint8Array, start: Double, end: Double): String = js.native
-  def write(string: String, buffer: scala.scalajs.js.typedarray.Uint8Array, offset: Double): Double = js.native
+  def read(buffer: js.typedarray.Uint8Array, start: Double, end: Double): String = js.native
+  def write(string: String, buffer: js.typedarray.Uint8Array, offset: Double): Double = js.native
 }
 

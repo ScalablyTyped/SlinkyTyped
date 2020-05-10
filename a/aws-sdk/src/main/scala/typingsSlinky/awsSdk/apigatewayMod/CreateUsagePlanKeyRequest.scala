@@ -24,8 +24,33 @@ object CreateUsagePlanKeyRequest {
   @scala.inline
   def apply(keyId: String, keyType: String, usagePlanId: String): CreateUsagePlanKeyRequest = {
     val __obj = js.Dynamic.literal(keyId = keyId.asInstanceOf[js.Any], keyType = keyType.asInstanceOf[js.Any], usagePlanId = usagePlanId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateUsagePlanKeyRequest]
   }
+  @scala.inline
+  implicit class CreateUsagePlanKeyRequestOps[Self <: CreateUsagePlanKeyRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKeyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeyType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsagePlanId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usagePlanId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

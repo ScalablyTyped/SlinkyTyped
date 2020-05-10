@@ -1,5 +1,6 @@
 package typingsSlinky.uifabricStyling
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +10,6 @@ import scala.scalajs.js.annotation._
 object buildClassMapMod extends js.Object {
   def buildClassMap[T /* <: js.Object */](styles: T): /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in keyof T ]:? string}
-    */ typingsSlinky.uifabricStyling.uifabricStylingStrings.buildClassMap with js.Any = js.native
+    */ typingsSlinky.uifabricStyling.uifabricStylingStrings.buildClassMap with TopLevel[js.Any] = js.native
 }
 

@@ -8,48 +8,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFromComponent extends js.Object {
-  var cancel: js.UndefOr[Boolean] = js.undefined
-  var dropInsideItem: js.UndefOr[Boolean] = js.undefined
-  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.undefined
-  var fromComponent: js.UndefOr[dxSortable | dxDraggable] = js.undefined
-  var fromData: js.UndefOr[js.Any] = js.undefined
-  var fromIndex: js.UndefOr[Double] = js.undefined
-  var itemData: js.UndefOr[js.Any] = js.undefined
-  var itemElement: js.UndefOr[dxElement] = js.undefined
-  var toComponent: js.UndefOr[dxSortable | dxDraggable] = js.undefined
-  var toData: js.UndefOr[js.Any] = js.undefined
-  var toIndex: js.UndefOr[Double] = js.undefined
+  var cancel: js.UndefOr[Boolean] = js.native
+  var dropInsideItem: js.UndefOr[Boolean] = js.native
+  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.native
+  var fromComponent: js.UndefOr[dxSortable | dxDraggable] = js.native
+  var fromData: js.UndefOr[js.Any] = js.native
+  var fromIndex: js.UndefOr[Double] = js.native
+  var itemData: js.UndefOr[js.Any] = js.native
+  var itemElement: js.UndefOr[dxElement] = js.native
+  var toComponent: js.UndefOr[dxSortable | dxDraggable] = js.native
+  var toData: js.UndefOr[js.Any] = js.native
+  var toIndex: js.UndefOr[Double] = js.native
 }
 
 object AnonFromComponent {
   @scala.inline
-  def apply(
-    cancel: js.UndefOr[Boolean] = js.undefined,
-    dropInsideItem: js.UndefOr[Boolean] = js.undefined,
-    event: event = null,
-    fromComponent: dxSortable | dxDraggable = null,
-    fromData: js.Any = null,
-    fromIndex: Int | Double = null,
-    itemData: js.Any = null,
-    itemElement: dxElement = null,
-    toComponent: dxSortable | dxDraggable = null,
-    toData: js.Any = null,
-    toIndex: Int | Double = null
-  ): AnonFromComponent = {
+  def apply(): AnonFromComponent = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.asInstanceOf[js.Any])
-    if (!js.isUndefined(dropInsideItem)) __obj.updateDynamic("dropInsideItem")(dropInsideItem.asInstanceOf[js.Any])
-    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
-    if (fromComponent != null) __obj.updateDynamic("fromComponent")(fromComponent.asInstanceOf[js.Any])
-    if (fromData != null) __obj.updateDynamic("fromData")(fromData.asInstanceOf[js.Any])
-    if (fromIndex != null) __obj.updateDynamic("fromIndex")(fromIndex.asInstanceOf[js.Any])
-    if (itemData != null) __obj.updateDynamic("itemData")(itemData.asInstanceOf[js.Any])
-    if (itemElement != null) __obj.updateDynamic("itemElement")(itemElement.asInstanceOf[js.Any])
-    if (toComponent != null) __obj.updateDynamic("toComponent")(toComponent.asInstanceOf[js.Any])
-    if (toData != null) __obj.updateDynamic("toData")(toData.asInstanceOf[js.Any])
-    if (toIndex != null) __obj.updateDynamic("toIndex")(toIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonFromComponent]
   }
+  @scala.inline
+  implicit class AnonFromComponentOps[Self <: AnonFromComponent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCancel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDropInsideItem(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropInsideItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDropInsideItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropInsideItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvent(value: event): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFromComponent(value: dxSortable | dxDraggable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromComponent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromComponent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFromData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFromIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemElement(value: dxElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToComponent(value: dxSortable | dxDraggable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toComponent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toComponent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

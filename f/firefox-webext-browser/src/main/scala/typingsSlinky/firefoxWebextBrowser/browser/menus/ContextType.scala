@@ -31,38 +31,36 @@ trait ContextType extends js.Object
 
 object ContextType {
   @scala.inline
-  def all: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.all = this.cast("all")
+  def all: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.all = "all".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.all]
   @scala.inline
-  def audio: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.audio = this.cast("audio")
+  def audio: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.audio = "audio".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.audio]
   @scala.inline
-  def bookmark: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.bookmark = this.cast("bookmark")
+  def bookmark: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.bookmark = "bookmark".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.bookmark]
   @scala.inline
-  def browser_action: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.browser_action = this.cast("browser_action")
+  def browser_action: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.browser_action = "browser_action".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.browser_action]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def editable: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.editable = "editable".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.editable]
   @scala.inline
-  def editable: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.editable = this.cast("editable")
+  def frame: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.frame = "frame".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.frame]
   @scala.inline
-  def frame: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.frame = this.cast("frame")
+  def image: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.image = "image".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.image]
   @scala.inline
-  def image: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.image = this.cast("image")
+  def launcher: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.launcher = "launcher".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.launcher]
   @scala.inline
-  def launcher: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.launcher = this.cast("launcher")
+  def link: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.link = "link".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.link]
   @scala.inline
-  def link: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.link = this.cast("link")
+  def page: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.page = "page".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.page]
   @scala.inline
-  def page: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.page = this.cast("page")
+  def page_action: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.page_action = "page_action".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.page_action]
   @scala.inline
-  def page_action: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.page_action = this.cast("page_action")
+  def password: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.password = "password".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.password]
   @scala.inline
-  def password: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.password = this.cast("password")
+  def selection: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.selection = "selection".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.selection]
   @scala.inline
-  def selection: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.selection = this.cast("selection")
+  def tab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tab = "tab".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tab]
   @scala.inline
-  def tab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tab = this.cast("tab")
+  def tools_menu: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tools_menu = "tools_menu".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tools_menu]
   @scala.inline
-  def tools_menu: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tools_menu = this.cast("tools_menu")
-  @scala.inline
-  def video: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.video = this.cast("video")
+  def video: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.video = "video".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.video]
 }
 

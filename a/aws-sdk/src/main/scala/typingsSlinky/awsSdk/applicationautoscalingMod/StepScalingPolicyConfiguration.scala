@@ -30,20 +30,77 @@ trait StepScalingPolicyConfiguration extends js.Object {
 
 object StepScalingPolicyConfiguration {
   @scala.inline
-  def apply(
-    AdjustmentType: AdjustmentType = null,
-    Cooldown: Int | Double = null,
-    MetricAggregationType: MetricAggregationType = null,
-    MinAdjustmentMagnitude: Int | Double = null,
-    StepAdjustments: StepAdjustments = null
-  ): StepScalingPolicyConfiguration = {
+  def apply(): StepScalingPolicyConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (AdjustmentType != null) __obj.updateDynamic("AdjustmentType")(AdjustmentType.asInstanceOf[js.Any])
-    if (Cooldown != null) __obj.updateDynamic("Cooldown")(Cooldown.asInstanceOf[js.Any])
-    if (MetricAggregationType != null) __obj.updateDynamic("MetricAggregationType")(MetricAggregationType.asInstanceOf[js.Any])
-    if (MinAdjustmentMagnitude != null) __obj.updateDynamic("MinAdjustmentMagnitude")(MinAdjustmentMagnitude.asInstanceOf[js.Any])
-    if (StepAdjustments != null) __obj.updateDynamic("StepAdjustments")(StepAdjustments.asInstanceOf[js.Any])
     __obj.asInstanceOf[StepScalingPolicyConfiguration]
   }
+  @scala.inline
+  implicit class StepScalingPolicyConfigurationOps[Self <: StepScalingPolicyConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdjustmentType(value: AdjustmentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdjustmentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdjustmentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdjustmentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCooldown(value: Cooldown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cooldown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCooldown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cooldown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricAggregationType(value: MetricAggregationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricAggregationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricAggregationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricAggregationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinAdjustmentMagnitude(value: MinAdjustmentMagnitude): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinAdjustmentMagnitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinAdjustmentMagnitude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinAdjustmentMagnitude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStepAdjustments(value: StepAdjustments): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StepAdjustments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepAdjustments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StepAdjustments")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

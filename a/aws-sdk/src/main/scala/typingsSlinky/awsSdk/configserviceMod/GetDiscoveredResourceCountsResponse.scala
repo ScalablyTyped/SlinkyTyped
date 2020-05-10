@@ -22,16 +22,53 @@ trait GetDiscoveredResourceCountsResponse extends js.Object {
 
 object GetDiscoveredResourceCountsResponse {
   @scala.inline
-  def apply(
-    nextToken: NextToken = null,
-    resourceCounts: ResourceCounts = null,
-    totalDiscoveredResources: Int | Double = null
-  ): GetDiscoveredResourceCountsResponse = {
+  def apply(): GetDiscoveredResourceCountsResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (resourceCounts != null) __obj.updateDynamic("resourceCounts")(resourceCounts.asInstanceOf[js.Any])
-    if (totalDiscoveredResources != null) __obj.updateDynamic("totalDiscoveredResources")(totalDiscoveredResources.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDiscoveredResourceCountsResponse]
   }
+  @scala.inline
+  implicit class GetDiscoveredResourceCountsResponseOps[Self <: GetDiscoveredResourceCountsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceCounts(value: ResourceCounts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceCounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceCounts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceCounts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalDiscoveredResources(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalDiscoveredResources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalDiscoveredResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalDiscoveredResources")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -41,5 +41,6 @@ import scala.scalajs.js.annotation._
   * data-dojo-config="mblLoadCompatPattern: /\/mycustomtheme\/.*\.css$/"
   *
   */
+@js.native
 trait compat extends js.Object
 

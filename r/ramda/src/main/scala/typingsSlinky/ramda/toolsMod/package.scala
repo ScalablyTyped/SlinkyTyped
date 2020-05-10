@@ -72,10 +72,10 @@ package object toolsMod {
   type Dictionary[A] = org.scalablytyped.runtime.StringDictionary[A]
   type Evolvable[E /* <: typingsSlinky.ramda.toolsMod.Evolver[_] */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof E ]:? ramda.ramda/tools.Evolved<E[P]>}
-    */ typingsSlinky.ramda.ramdaStrings.Evolvable with E
+    */ typingsSlinky.ramda.ramdaStrings.Evolvable with org.scalablytyped.runtime.TopLevel[E]
   type Evolve[O /* <: typingsSlinky.ramda.toolsMod.Evolvable[E] */, E /* <: typingsSlinky.ramda.toolsMod.Evolver[_] */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof O ]: P extends keyof E? ramda.ramda/tools.EvolveValue<O[P], E[P]> : O[P]}
-    */ typingsSlinky.ramda.ramdaStrings.Evolve with js.Any
+    */ typingsSlinky.ramda.ramdaStrings.Evolve with org.scalablytyped.runtime.TopLevel[js.Any]
   /**
     * <needs description>
     * @param O
@@ -95,7 +95,7 @@ package object toolsMod {
   type Evolved[A] = typingsSlinky.ramda.toolsMod.Evolvable[A]
   type Evolver[T /* <: typingsSlinky.ramda.toolsMod.Evolvable[_] */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in keyof std.Partial<T> ]: (value : T[key]): T[key] | T[key] extends ramda.ramda/tools.Evolvable<any>? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias ramda.ramda/tools.Evolver<T[key]> * / object : never}
-    */ typingsSlinky.ramda.ramdaStrings.Evolver with js.Any
+    */ typingsSlinky.ramda.ramdaStrings.Evolver with org.scalablytyped.runtime.TopLevel[js.Any]
   /**
     * <needs description>
     * @param A

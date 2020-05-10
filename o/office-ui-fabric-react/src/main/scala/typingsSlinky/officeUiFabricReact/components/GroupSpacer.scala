@@ -1,39 +1,41 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.groupSpacerTypesMod.IGroupSpacerProps
 import typingsSlinky.officeUiFabricReact.groupSpacerTypesMod.IGroupSpacerStyleProps
 import typingsSlinky.officeUiFabricReact.groupSpacerTypesMod.IGroupSpacerStyles
+import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GroupSpacer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object GroupSpacer {
   @JSImport("office-ui-fabric-react", "GroupSpacer")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    count: Double,
-    indentWidth: Int | Double = null,
-    styles: IStyleFunctionOrObject[IGroupSpacerStyleProps, IGroupSpacerStyles] = null,
-    theme: ITheme = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any])
-    if (indentWidth != null) __obj.updateDynamic("indentWidth")(indentWidth.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def indentWidth(value: Double): this.type = set("indentWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stylesFunction1(value: IGroupSpacerStyleProps => Partial[IGroupSpacerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: IStyleFunctionOrObject[IGroupSpacerStyleProps, IGroupSpacerStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
-  type Props = IGroupSpacerProps
+  
+  def withProps(p: IGroupSpacerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(count: Double): Builder = {
+    val __props = js.Dynamic.literal(count = count.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IGroupSpacerProps]))
+  }
 }
 

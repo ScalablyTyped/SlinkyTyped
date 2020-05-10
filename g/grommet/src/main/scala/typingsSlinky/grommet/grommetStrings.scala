@@ -1,6 +1,8 @@
 package typingsSlinky.grommet
 
 import typingsSlinky.grommet.announceContextMod.AnnounceMode
+import typingsSlinky.grommet.diagramMod.DiagramConnectionAnchor
+import typingsSlinky.grommet.diagramMod.DiagramConnectionType
 import typingsSlinky.grommet.listMod.SideType
 import typingsSlinky.grommet.listMod._PadSizeType
 import typingsSlinky.grommet.listMod._SizeType
@@ -8,17 +10,18 @@ import typingsSlinky.grommet.utilsMod.AlignContentType
 import typingsSlinky.grommet.utilsMod.AlignSelfType
 import typingsSlinky.grommet.utilsMod.BoxSideType
 import typingsSlinky.grommet.utilsMod.BoxStyleType
+import typingsSlinky.grommet.utilsMod.EdgeSizeType
 import typingsSlinky.grommet.utilsMod.JustifyContentType
 import typingsSlinky.grommet.utilsMod.TextAlignType
 import typingsSlinky.grommet.utilsMod._BasisType
 import typingsSlinky.grommet.utilsMod._BoxSizeType
+import typingsSlinky.grommet.utilsMod._EdgeType
 import typingsSlinky.grommet.utilsMod._ElevationType
 import typingsSlinky.grommet.utilsMod._FillType
 import typingsSlinky.grommet.utilsMod._GapType
-import typingsSlinky.grommet.utilsMod._MarginType
 import typingsSlinky.grommet.utilsMod._OpacityType
-import typingsSlinky.grommet.utilsMod._PadType
 import typingsSlinky.grommet.utilsMod._PolymorphicType
+import typingsSlinky.grommet.utilsMod._RoundType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -143,6 +146,9 @@ object grommetStrings {
   sealed trait article extends _PolymorphicType
   
   @js.native
+  sealed trait asc extends js.Object
+  
+  @js.native
   sealed trait aside extends _PolymorphicType
   
   @js.native
@@ -183,7 +189,8 @@ object grommetStrings {
   
   @js.native
   sealed trait between
-    extends AlignContentType
+    extends BoxSideType
+       with AlignContentType
        with JustifyContentType
   
   @js.native
@@ -191,6 +198,9 @@ object grommetStrings {
   
   @js.native
   sealed trait blockquote extends _PolymorphicType
+  
+  @js.native
+  sealed trait blur extends js.Object
   
   @js.native
   sealed trait body extends _PolymorphicType
@@ -231,6 +241,7 @@ object grommetStrings {
   sealed trait center
     extends AlignContentType
        with AlignSelfType
+       with DiagramConnectionAnchor
        with JustifyContentType
        with TextAlignType
   
@@ -274,7 +285,7 @@ object grommetStrings {
   sealed trait cover extends js.Object
   
   @js.native
-  sealed trait curved extends js.Object
+  sealed trait curved extends DiagramConnectionType
   
   @js.native
   sealed trait dark extends js.Object
@@ -313,7 +324,7 @@ object grommetStrings {
   sealed trait digital extends js.Object
   
   @js.native
-  sealed trait direct extends js.Object
+  sealed trait direct extends DiagramConnectionType
   
   @js.native
   sealed trait div extends _PolymorphicType
@@ -344,10 +355,14 @@ object grommetStrings {
   
   @js.native
   sealed trait end
-    extends AlignContentType
+    extends BoxSideType
+       with AlignContentType
        with AlignSelfType
        with JustifyContentType
        with TextAlignType
+  
+  @js.native
+  sealed trait error extends js.Object
   
   @js.native
   sealed trait evenly extends js.Object
@@ -473,7 +488,9 @@ object grommetStrings {
   sealed trait forward extends js.Object
   
   @js.native
-  sealed trait full extends _BasisType
+  sealed trait full
+    extends _BasisType
+       with _RoundType
   
   @js.native
   sealed trait g extends _PolymorphicType
@@ -520,6 +537,7 @@ object grommetStrings {
   @js.native
   sealed trait horizontal
     extends BoxSideType
+       with DiagramConnectionAnchor
        with SideType
        with _FillType
   
@@ -536,6 +554,9 @@ object grommetStrings {
   sealed trait i extends _PolymorphicType
   
   @js.native
+  sealed trait icon extends js.Object
+  
+  @js.native
   sealed trait id extends js.Object
   
   @js.native
@@ -546,6 +567,9 @@ object grommetStrings {
   
   @js.native
   sealed trait img extends _PolymorphicType
+  
+  @js.native
+  sealed trait info extends js.Object
   
   @js.native
   sealed trait input extends _PolymorphicType
@@ -566,6 +590,9 @@ object grommetStrings {
   sealed trait `keep-all` extends js.Object
   
   @js.native
+  sealed trait key extends js.Object
+  
+  @js.native
   sealed trait keygen extends _PolymorphicType
   
   @js.native
@@ -573,13 +600,12 @@ object grommetStrings {
   
   @js.native
   sealed trait large
-    extends _PadSizeType
+    extends EdgeSizeType
        with _BasisType
        with _BoxSizeType
        with _ElevationType
-       with _GapType
-       with _MarginType
-       with _PadType
+       with _PadSizeType
+       with _RoundType
        with _SizeType
   
   @js.native
@@ -628,14 +654,13 @@ object grommetStrings {
   
   @js.native
   sealed trait medium
-    extends _PadSizeType
+    extends EdgeSizeType
        with _BasisType
        with _BoxSizeType
        with _ElevationType
-       with _GapType
-       with _MarginType
        with _OpacityType
-       with _PadType
+       with _PadSizeType
+       with _RoundType
        with _SizeType
   
   @js.native
@@ -680,10 +705,9 @@ object grommetStrings {
   @js.native
   sealed trait none
     extends _PadSizeType
+       with _EdgeType
        with _ElevationType
        with _GapType
-       with _MarginType
-       with _PadType
   
   @js.native
   sealed trait normal extends js.Object
@@ -773,7 +797,10 @@ object grommetStrings {
   sealed trait rect extends _PolymorphicType
   
   @js.native
-  sealed trait rectilinear extends js.Object
+  sealed trait rectilinear extends DiagramConnectionType
+  
+  @js.native
+  sealed trait ref extends js.Object
   
   @js.native
   sealed trait repeat extends js.Object
@@ -809,6 +836,9 @@ object grommetStrings {
   
   @js.native
   sealed trait rt extends _PolymorphicType
+  
+  @js.native
+  sealed trait rtl extends js.Object
   
   @js.native
   sealed trait ruby extends _PolymorphicType
@@ -859,15 +889,17 @@ object grommetStrings {
   sealed trait slideUp extends js.Object
   
   @js.native
+  sealed trait slot extends _PolymorphicType
+  
+  @js.native
   sealed trait small
-    extends _PadSizeType
+    extends EdgeSizeType
        with _BasisType
        with _BoxSizeType
        with _ElevationType
-       with _GapType
-       with _MarginType
-       with _PadType
+       with _PadSizeType
        with _PolymorphicType
+       with _RoundType
        with _SizeType
   
   @js.native
@@ -881,7 +913,8 @@ object grommetStrings {
   
   @js.native
   sealed trait start
-    extends AlignContentType
+    extends BoxSideType
+       with AlignContentType
        with AlignSelfType
        with JustifyContentType
        with TextAlignType
@@ -1001,6 +1034,7 @@ object grommetStrings {
   @js.native
   sealed trait vertical
     extends BoxSideType
+       with DiagramConnectionAnchor
        with SideType
        with _FillType
   
@@ -1027,24 +1061,22 @@ object grommetStrings {
   
   @js.native
   sealed trait xlarge
-    extends _PadSizeType
+    extends EdgeSizeType
        with _BasisType
        with _BoxSizeType
        with _ElevationType
-       with _GapType
-       with _MarginType
-       with _PadType
+       with _PadSizeType
+       with _RoundType
        with _SizeType
   
   @js.native
   sealed trait xsmall
-    extends _PadSizeType
+    extends EdgeSizeType
        with _BasisType
        with _BoxSizeType
        with _ElevationType
-       with _GapType
-       with _MarginType
-       with _PadType
+       with _PadSizeType
+       with _RoundType
        with _SizeType
   
   @js.native
@@ -1052,11 +1084,9 @@ object grommetStrings {
   
   @js.native
   sealed trait xxsmall
-    extends _PadSizeType
+    extends EdgeSizeType
        with _BasisType
-       with _GapType
-       with _MarginType
-       with _PadType
+       with _PadSizeType
        with _SizeType
   
   @js.native
@@ -1106,9 +1136,9 @@ object grommetStrings {
   @scala.inline
   def NonUndefinedProps: NonUndefinedProps = "NonUndefinedProps".asInstanceOf[NonUndefinedProps]
   @scala.inline
-  def `North America`: `North America` = "North America".asInstanceOf[`North America`]
+  def `North America`: `North America` = ("North America").asInstanceOf[`North America`]
   @scala.inline
-  def `South America`: `South America` = "South America".asInstanceOf[`South America`]
+  def `South America`: `South America` = ("South America").asInstanceOf[`South America`]
   @scala.inline
   def _blank: _blank = "_blank".asInstanceOf[_blank]
   @scala.inline
@@ -1142,6 +1172,8 @@ object grommetStrings {
   @scala.inline
   def article: article = "article".asInstanceOf[article]
   @scala.inline
+  def asc: asc = "asc".asInstanceOf[asc]
+  @scala.inline
   def aside: aside = "aside".asInstanceOf[aside]
   @scala.inline
   def assertive: assertive = "assertive".asInstanceOf[assertive]
@@ -1173,6 +1205,8 @@ object grommetStrings {
   def big: big = "big".asInstanceOf[big]
   @scala.inline
   def blockquote: blockquote = "blockquote".asInstanceOf[blockquote]
+  @scala.inline
+  def blur: blur = "blur".asInstanceOf[blur]
   @scala.inline
   def body: body = "body".asInstanceOf[body]
   @scala.inline
@@ -1271,6 +1305,8 @@ object grommetStrings {
   def embed: embed = "embed".asInstanceOf[embed]
   @scala.inline
   def end: end = "end".asInstanceOf[end]
+  @scala.inline
+  def error: error = "error".asInstanceOf[error]
   @scala.inline
   def evenly: evenly = "evenly".asInstanceOf[evenly]
   @scala.inline
@@ -1394,6 +1430,8 @@ object grommetStrings {
   @scala.inline
   def i: i = "i".asInstanceOf[i]
   @scala.inline
+  def icon: icon = "icon".asInstanceOf[icon]
+  @scala.inline
   def id: id = "id".asInstanceOf[id]
   @scala.inline
   def iframe: iframe = "iframe".asInstanceOf[iframe]
@@ -1401,6 +1439,8 @@ object grommetStrings {
   def image: image = "image".asInstanceOf[image]
   @scala.inline
   def img: img = "img".asInstanceOf[img]
+  @scala.inline
+  def info: info = "info".asInstanceOf[info]
   @scala.inline
   def input: input = "input".asInstanceOf[input]
   @scala.inline
@@ -1413,6 +1453,8 @@ object grommetStrings {
   def kbd: kbd = "kbd".asInstanceOf[kbd]
   @scala.inline
   def `keep-all`: `keep-all` = "keep-all".asInstanceOf[`keep-all`]
+  @scala.inline
+  def key: key = "key".asInstanceOf[key]
   @scala.inline
   def keygen: keygen = "keygen".asInstanceOf[keygen]
   @scala.inline
@@ -1538,6 +1580,8 @@ object grommetStrings {
   @scala.inline
   def rectilinear: rectilinear = "rectilinear".asInstanceOf[rectilinear]
   @scala.inline
+  def ref: ref = "ref".asInstanceOf[ref]
+  @scala.inline
   def repeat: repeat = "repeat".asInstanceOf[repeat]
   @scala.inline
   def replace: replace = "replace".asInstanceOf[replace]
@@ -1559,6 +1603,8 @@ object grommetStrings {
   def rp: rp = "rp".asInstanceOf[rp]
   @scala.inline
   def rt: rt = "rt".asInstanceOf[rt]
+  @scala.inline
+  def rtl: rtl = "rtl".asInstanceOf[rtl]
   @scala.inline
   def ruby: ruby = "ruby".asInstanceOf[ruby]
   @scala.inline
@@ -1591,6 +1637,8 @@ object grommetStrings {
   def slideRight: slideRight = "slideRight".asInstanceOf[slideRight]
   @scala.inline
   def slideUp: slideUp = "slideUp".asInstanceOf[slideUp]
+  @scala.inline
+  def slot: slot = "slot".asInstanceOf[slot]
   @scala.inline
   def small: small = "small".asInstanceOf[small]
   @scala.inline

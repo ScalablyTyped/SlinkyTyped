@@ -5,7 +5,7 @@ import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.officeUiFabricReact.contextualMenuItemWrapperTypesMod.IContextualMenuItemWrapperProps
 import typingsSlinky.officeUiFabricReact.contextualMenuTypesMod.IContextualMenuItem
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +14,9 @@ import scala.scalajs.js.annotation._
 @js.native
 object contextualMenuItemWrapperContextualMenuItemWrapperMod extends js.Object {
   @js.native
-  class ContextualMenuItemWrapper ()
-    extends BaseComponent[IContextualMenuItemWrapperProps, js.Object] {
+  class ContextualMenuItemWrapper protected ()
+    extends Component[IContextualMenuItemWrapperProps, js.Object, js.Any] {
+    def this(props: IContextualMenuItemWrapperProps) = this()
     /* protected */ def _getSubMenuId(item: IContextualMenuItem): js.UndefOr[String] = js.native
     /* protected */ def _getSubmenuTarget(): js.UndefOr[HTMLElement] = js.native
     /* protected */ def _onItemClick(ev: SyntheticMouseEvent[HTMLElement]): Unit = js.native

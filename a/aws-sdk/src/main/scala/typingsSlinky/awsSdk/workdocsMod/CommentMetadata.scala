@@ -30,20 +30,77 @@ trait CommentMetadata extends js.Object {
 
 object CommentMetadata {
   @scala.inline
-  def apply(
-    CommentId: CommentIdType = null,
-    CommentStatus: CommentStatusType = null,
-    Contributor: User = null,
-    CreatedTimestamp: js.Date = null,
-    RecipientId: IdType = null
-  ): CommentMetadata = {
+  def apply(): CommentMetadata = {
     val __obj = js.Dynamic.literal()
-    if (CommentId != null) __obj.updateDynamic("CommentId")(CommentId.asInstanceOf[js.Any])
-    if (CommentStatus != null) __obj.updateDynamic("CommentStatus")(CommentStatus.asInstanceOf[js.Any])
-    if (Contributor != null) __obj.updateDynamic("Contributor")(Contributor.asInstanceOf[js.Any])
-    if (CreatedTimestamp != null) __obj.updateDynamic("CreatedTimestamp")(CreatedTimestamp.asInstanceOf[js.Any])
-    if (RecipientId != null) __obj.updateDynamic("RecipientId")(RecipientId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommentMetadata]
   }
+  @scala.inline
+  implicit class CommentMetadataOps[Self <: CommentMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommentId(value: CommentIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommentStatus(value: CommentStatusType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommentStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommentStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommentStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContributor(value: User): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Contributor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContributor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Contributor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatedTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipientId(value: IdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecipientId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipientId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecipientId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

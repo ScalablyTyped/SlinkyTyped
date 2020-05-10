@@ -23,16 +23,53 @@ trait ListenerPolicyState extends js.Object {
 
 object ListenerPolicyState {
   @scala.inline
-  def apply(
-    loadBalancerName: Input[String] = null,
-    loadBalancerPort: Input[Double] = null,
-    policyNames: Input[js.Array[Input[String]]] = null
-  ): ListenerPolicyState = {
+  def apply(): ListenerPolicyState = {
     val __obj = js.Dynamic.literal()
-    if (loadBalancerName != null) __obj.updateDynamic("loadBalancerName")(loadBalancerName.asInstanceOf[js.Any])
-    if (loadBalancerPort != null) __obj.updateDynamic("loadBalancerPort")(loadBalancerPort.asInstanceOf[js.Any])
-    if (policyNames != null) __obj.updateDynamic("policyNames")(policyNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListenerPolicyState]
   }
+  @scala.inline
+  implicit class ListenerPolicyStateOps[Self <: ListenerPolicyState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLoadBalancerName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadBalancerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadBalancerPort(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancerPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadBalancerPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancerPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyNames(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyNames")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -62,34 +62,161 @@ trait ResourceRecordSet extends js.Object {
 
 object ResourceRecordSet {
   @scala.inline
-  def apply(
-    Name: DNSName,
-    Type: RRType,
-    AliasTarget: AliasTarget = null,
-    Failover: ResourceRecordSetFailover = null,
-    GeoLocation: GeoLocation = null,
-    HealthCheckId: HealthCheckId = null,
-    MultiValueAnswer: js.UndefOr[Boolean] = js.undefined,
-    Region: ResourceRecordSetRegion = null,
-    ResourceRecords: ResourceRecords = null,
-    SetIdentifier: ResourceRecordSetIdentifier = null,
-    TTL: Int | Double = null,
-    TrafficPolicyInstanceId: TrafficPolicyInstanceId = null,
-    Weight: Int | Double = null
-  ): ResourceRecordSet = {
+  def apply(Name: DNSName, Type: RRType): ResourceRecordSet = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
-    if (AliasTarget != null) __obj.updateDynamic("AliasTarget")(AliasTarget.asInstanceOf[js.Any])
-    if (Failover != null) __obj.updateDynamic("Failover")(Failover.asInstanceOf[js.Any])
-    if (GeoLocation != null) __obj.updateDynamic("GeoLocation")(GeoLocation.asInstanceOf[js.Any])
-    if (HealthCheckId != null) __obj.updateDynamic("HealthCheckId")(HealthCheckId.asInstanceOf[js.Any])
-    if (!js.isUndefined(MultiValueAnswer)) __obj.updateDynamic("MultiValueAnswer")(MultiValueAnswer.asInstanceOf[js.Any])
-    if (Region != null) __obj.updateDynamic("Region")(Region.asInstanceOf[js.Any])
-    if (ResourceRecords != null) __obj.updateDynamic("ResourceRecords")(ResourceRecords.asInstanceOf[js.Any])
-    if (SetIdentifier != null) __obj.updateDynamic("SetIdentifier")(SetIdentifier.asInstanceOf[js.Any])
-    if (TTL != null) __obj.updateDynamic("TTL")(TTL.asInstanceOf[js.Any])
-    if (TrafficPolicyInstanceId != null) __obj.updateDynamic("TrafficPolicyInstanceId")(TrafficPolicyInstanceId.asInstanceOf[js.Any])
-    if (Weight != null) __obj.updateDynamic("Weight")(Weight.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceRecordSet]
   }
+  @scala.inline
+  implicit class ResourceRecordSetOps[Self <: ResourceRecordSet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: DNSName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: RRType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAliasTarget(value: AliasTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AliasTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAliasTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AliasTarget")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailover(value: ResourceRecordSetFailover): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Failover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Failover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeoLocation(value: GeoLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeoLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHealthCheckId(value: HealthCheckId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHealthCheckId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiValueAnswer(value: ResourceRecordSetMultiValueAnswer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiValueAnswer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiValueAnswer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiValueAnswer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: ResourceRecordSetRegion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceRecords(value: ResourceRecords): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceRecords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceRecords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceRecords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetIdentifier(value: ResourceRecordSetIdentifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTTL(value: TTL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TTL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTTL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TTL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrafficPolicyInstanceId(value: TrafficPolicyInstanceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficPolicyInstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrafficPolicyInstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficPolicyInstanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeight(value: ResourceRecordSetWeight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Weight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Weight")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

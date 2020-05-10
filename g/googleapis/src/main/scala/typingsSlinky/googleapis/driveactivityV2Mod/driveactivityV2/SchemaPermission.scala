@@ -41,22 +41,89 @@ trait SchemaPermission extends js.Object {
 
 object SchemaPermission {
   @scala.inline
-  def apply(
-    allowDiscovery: js.UndefOr[Boolean] = js.undefined,
-    anyone: SchemaAnyone = null,
-    domain: SchemaDomain = null,
-    group: SchemaGroup = null,
-    role: String = null,
-    user: SchemaUser = null
-  ): SchemaPermission = {
+  def apply(): SchemaPermission = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowDiscovery)) __obj.updateDynamic("allowDiscovery")(allowDiscovery.asInstanceOf[js.Any])
-    if (anyone != null) __obj.updateDynamic("anyone")(anyone.asInstanceOf[js.Any])
-    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
-    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPermission]
   }
+  @scala.inline
+  implicit class SchemaPermissionOps[Self <: SchemaPermission] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowDiscovery(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDiscovery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowDiscovery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDiscovery")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnyone(value: SchemaAnyone): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anyone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnyone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anyone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomain(value: SchemaDomain): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroup(value: SchemaGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRole(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser(value: SchemaUser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

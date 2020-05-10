@@ -22,16 +22,53 @@ trait ConnectionPhysicalConnectionRequirements extends js.Object {
 
 object ConnectionPhysicalConnectionRequirements {
   @scala.inline
-  def apply(
-    availabilityZone: String = null,
-    securityGroupIdLists: js.Array[String] = null,
-    subnetId: String = null
-  ): ConnectionPhysicalConnectionRequirements = {
+  def apply(): ConnectionPhysicalConnectionRequirements = {
     val __obj = js.Dynamic.literal()
-    if (availabilityZone != null) __obj.updateDynamic("availabilityZone")(availabilityZone.asInstanceOf[js.Any])
-    if (securityGroupIdLists != null) __obj.updateDynamic("securityGroupIdLists")(securityGroupIdLists.asInstanceOf[js.Any])
-    if (subnetId != null) __obj.updateDynamic("subnetId")(subnetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectionPhysicalConnectionRequirements]
   }
+  @scala.inline
+  implicit class ConnectionPhysicalConnectionRequirementsOps[Self <: ConnectionPhysicalConnectionRequirements] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailabilityZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityGroupIdLists(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroupIdLists")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityGroupIdLists: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroupIdLists")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,18 +26,65 @@ trait Evaluation extends js.Object {
 
 object Evaluation {
   @scala.inline
-  def apply(
-    approvalRulesNotSatisfied: ApprovalRulesNotSatisfiedList = null,
-    approvalRulesSatisfied: ApprovalRulesSatisfiedList = null,
-    approved: js.UndefOr[Boolean] = js.undefined,
-    overridden: js.UndefOr[Boolean] = js.undefined
-  ): Evaluation = {
+  def apply(): Evaluation = {
     val __obj = js.Dynamic.literal()
-    if (approvalRulesNotSatisfied != null) __obj.updateDynamic("approvalRulesNotSatisfied")(approvalRulesNotSatisfied.asInstanceOf[js.Any])
-    if (approvalRulesSatisfied != null) __obj.updateDynamic("approvalRulesSatisfied")(approvalRulesSatisfied.asInstanceOf[js.Any])
-    if (!js.isUndefined(approved)) __obj.updateDynamic("approved")(approved.asInstanceOf[js.Any])
-    if (!js.isUndefined(overridden)) __obj.updateDynamic("overridden")(overridden.asInstanceOf[js.Any])
     __obj.asInstanceOf[Evaluation]
   }
+  @scala.inline
+  implicit class EvaluationOps[Self <: Evaluation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApprovalRulesNotSatisfied(value: ApprovalRulesNotSatisfiedList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRulesNotSatisfied")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovalRulesNotSatisfied: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRulesNotSatisfied")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApprovalRulesSatisfied(value: ApprovalRulesSatisfiedList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRulesSatisfied")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovalRulesSatisfied: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRulesSatisfied")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApproved(value: Approved): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approved")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApproved: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approved")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverridden(value: Overridden): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overridden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverridden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overridden")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

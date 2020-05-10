@@ -5,14 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TouchEvent[T /* <: TouchEventType */] extends BaseEvent[T, AnonX] {
-  var changedTouches: js.Array[Touch]
-  var touches: js.Array[Touch]
+  var changedTouches: js.Array[Touch] = js.native
+  var touches: js.Array[Touch] = js.native
 }
 
 object TouchEvent {
   @scala.inline
-  def apply[T /* <: TouchEventType */](
+  def apply[T](
     changedTouches: js.Array[Touch],
     currentTarget: EventTarget,
     detail: AnonX,
@@ -25,5 +26,25 @@ object TouchEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TouchEvent[T]]
   }
+  @scala.inline
+  implicit class TouchEventOps[Self[t] <: TouchEvent[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withChangedTouches(value: js.Array[Touch]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changedTouches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTouches(value: js.Array[Touch]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touches")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

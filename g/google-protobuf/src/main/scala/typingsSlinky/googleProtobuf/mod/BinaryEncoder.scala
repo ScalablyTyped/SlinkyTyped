@@ -10,7 +10,7 @@ class BinaryEncoder () extends js.Object {
   def end(): js.Array[Double] = js.native
   def length(): Double = js.native
   def writeBool(value: Boolean): Unit = js.native
-  def writeBytes(bytes: scala.scalajs.js.typedarray.Uint8Array): Unit = js.native
+  def writeBytes(bytes: js.typedarray.Uint8Array): Unit = js.native
   def writeDouble(value: Double): Unit = js.native
   def writeEnum(value: Double): Unit = js.native
   def writeFixedHash64(hash: String): Unit = js.native

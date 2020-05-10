@@ -1,15 +1,16 @@
 package typingsSlinky.officeUiFabricReact.components
 
+import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CompoundButton
-  extends SharedApply_IButtonProps_92720159[typingsSlinky.officeUiFabricReact.mod.CompoundButton] {
+object CompoundButton {
   @JSImport("office-ui-fabric-react", "CompoundButton")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IButtonProps): SharedBuilder_IButtonProps1271470609[typingsSlinky.officeUiFabricReact.mod.CompoundButton] = new SharedBuilder_IButtonProps1271470609[typingsSlinky.officeUiFabricReact.mod.CompoundButton](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CompoundButton.type): SharedBuilder_IButtonProps1271470609[typingsSlinky.officeUiFabricReact.mod.CompoundButton] = new SharedBuilder_IButtonProps1271470609[typingsSlinky.officeUiFabricReact.mod.CompoundButton](js.Array(this.component, js.Dictionary.empty))()
 }
 

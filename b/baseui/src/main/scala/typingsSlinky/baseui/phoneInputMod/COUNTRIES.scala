@@ -246,248 +246,249 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait COUNTRIES extends js.Object {
-  var AD: AnonDialCodeIdLabel
-  var AE: Anon222
-  var AF: AnonDialCode
-  var AG: Anon2
-  var AI: Anon1
-  var AL: AnonLabel
-  var AM: Anon4
-  var AO: Anon0
-  var AR: Anon3
-  var AS: AnonIdLabel
-  var AT: Anon7
-  var AU: Anon6
-  var AW: Anon5
-  var AX: Anon235
-  var AZ: Anon8
-  var BA: Anon20
-  var BB: Anon12
-  var BD: Anon11
-  var BE: Anon14
-  var BF: Anon27
-  var BG: Anon26
-  var BH: Anon10
-  var BI: Anon28
-  var BJ: Anon16
-  var BL: Anon172
-  var BM: Anon17
-  var BN: Anon25
-  var BO: Anon19
-  var BR: Anon22
-  var BS: Anon9
-  var BT: Anon18
-  var BW: Anon21
-  var BY: Anon13
-  var BZ: Anon15
-  var CA: Anon31
-  var CC: Anon39
-  var CD: Anon42
-  var CF: Anon34
-  var CG: Anon43
-  var CH: Anon203
-  var CI: Anon46
-  var CK: Anon44
-  var CL: Anon36
-  var CM: Anon30
-  var CN: Anon37
-  var CO: Anon40
-  var CR: Anon45
-  var CU: Anon48
-  var CV: Anon32
-  var CW: Anon49
-  var CX: Anon38
-  var CY: Anon50
-  var CZ: Anon51
-  var DE: Anon73
-  var DJ: Anon53
-  var DK: Anon52
-  var DM: Anon54
-  var DO: Anon55
-  var DZ: AnonDialCodeId
-  var EC: Anon56
-  var EE: Anon61
-  var EG: Anon57
-  var ER: Anon60
-  var ES: Anon196
-  var ET: Anon62
-  var FI: Anon66
-  var FJ: Anon65
-  var FK: Anon63
-  var FM: Anon132
-  var FO: Anon64
-  var FR: Anon67
-  var GA: Anon70
-  var GB: Anon223
-  var GD: Anon78
-  var GE: Anon72
-  var GF: Anon68
-  var GG: Anon82
-  var GH: Anon74
-  var GI: Anon75
-  var GL: Anon77
-  var GM: Anon71
-  var GN: Anon83
-  var GP: Anon79
-  var GQ: Anon59
-  var GR: Anon76
-  var GT: Anon81
-  var GU: Anon80
-  var GW: Anon84
-  var GY: Anon85
-  var HK: Anon88
-  var HN: Anon87
-  var HR: Anon47
-  var HT: Anon86
-  var HU: Anon89
-  var ID: Anon92
-  var IE: Anon95
-  var IL: Anon97
-  var IM: Anon96
-  var IN: Anon91
-  var IO: Anon23
-  var IQ: Anon94
-  var IR: Anon93
-  var IS: Anon90
-  var IT: Anon98
-  var JE: Anon101
-  var JM: Anon99
-  var JO: Anon102
-  var JP: Anon100
-  var KE: Anon104
-  var KG: Anon108
-  var KH: Anon29
-  var KI: Anon105
-  var KM: Anon41
-  var KN: Anon174
-  var KP: Anon152
-  var KR: Anon194
-  var KW: Anon107
-  var KY: Anon33
-  var KZ: Anon103
-  var LA: Anon109
-  var LB: Anon111
-  var LC: Anon175
-  var LI: Anon115
-  var LK: Anon197
-  var LR: Anon113
-  var LS: Anon112
-  var LT: Anon116
-  var LU: Anon117
-  var LV: Anon110
-  var LY: Anon114
-  var MA: Anon138
-  var MC: Anon134
-  var MD: Anon133
-  var ME: Anon136
-  var MF: Anon176
-  var MG: Anon120
-  var MH: Anon126
-  var MK: Anon119
-  var ML: Anon124
-  var MM: Anon140
-  var MN: Anon135
-  var MO: Anon118
-  var MP: Anon153
-  var MQ: Anon127
-  var MR: Anon128
-  var MS: Anon137
-  var MT: Anon125
-  var MU: Anon129
-  var MV: Anon123
-  var MW: Anon121
-  var MX: Anon131
-  var MY: Anon122
-  var MZ: Anon139
-  var NA: Anon141
-  var NC: Anon145
-  var NE: Anon148
-  var NF: Anon151
-  var NG: Anon149
-  var NI: Anon147
-  var NL: Anon144
-  var NO: Anon154
-  var NP: Anon143
-  var NR: Anon142
-  var NU: Anon150
-  var NZ: Anon146
-  var OM: Anon155
-  var PA: Anon159
-  var PE: Anon162
-  var PF: Anon69
-  var PG: Anon160
-  var PH: Anon163
-  var PK: Anon156
-  var PL: Anon164
-  var PM: Anon177
-  var PR: Anon166
-  var PS: Anon158
-  var PT: Anon165
-  var PW: Anon157
-  var PY: Anon161
-  var QA: Anon167
-  var RE: Anon168
-  var RO: Anon169
-  var RS: Anon184
-  var RU: Anon170
-  var RW: Anon171
-  var SA: Anon182
-  var SB: Anon191
-  var SC: Anon185
-  var SD: Anon198
-  var SE: Anon202
-  var SG: Anon187
-  var SH: Anon173
-  var SI: Anon190
-  var SJ: Anon200
-  var SK: Anon189
-  var SL: Anon186
-  var SM: Anon180
-  var SN: Anon183
-  var SO: Anon192
-  var SR: Anon199
-  var SS: Anon195
-  var ST: Anon181
-  var SV: Anon58
-  var SX: Anon188
-  var SY: Anon204
-  var SZ: Anon201
-  var TC: Anon217
-  var TD: Anon35
-  var TG: Anon210
-  var TH: Anon208
-  var TJ: Anon206
-  var TK: Anon211
-  var TL: Anon209
-  var TM: Anon216
-  var TN: Anon214
-  var TO: Anon212
-  var TR: Anon215
-  var TT: Anon213
-  var TV: Anon218
-  var TW: Anon205
-  var TZ: Anon207
-  var UA: Anon221
-  var UG: Anon220
-  var US: Anon224
-  var UY: Anon225
-  var UZ: Anon226
-  var VA: Anon228
-  var VC: Anon178
-  var VE: Anon229
-  var VG: Anon24
-  var VI: Anon219
-  var VN: Anon230
-  var VU: Anon227
-  var WF: Anon231
-  var WS: Anon179
-  var XK: Anon106
-  var YE: Anon232
-  var YT: Anon130
-  var ZA: Anon193
-  var ZM: Anon233
-  var ZW: Anon234
+  var AD: AnonDialCodeIdLabel = js.native
+  var AE: Anon222 = js.native
+  var AF: AnonDialCode = js.native
+  var AG: Anon2 = js.native
+  var AI: Anon1 = js.native
+  var AL: AnonLabel = js.native
+  var AM: Anon4 = js.native
+  var AO: Anon0 = js.native
+  var AR: Anon3 = js.native
+  var AS: AnonIdLabel = js.native
+  var AT: Anon7 = js.native
+  var AU: Anon6 = js.native
+  var AW: Anon5 = js.native
+  var AX: Anon235 = js.native
+  var AZ: Anon8 = js.native
+  var BA: Anon20 = js.native
+  var BB: Anon12 = js.native
+  var BD: Anon11 = js.native
+  var BE: Anon14 = js.native
+  var BF: Anon27 = js.native
+  var BG: Anon26 = js.native
+  var BH: Anon10 = js.native
+  var BI: Anon28 = js.native
+  var BJ: Anon16 = js.native
+  var BL: Anon172 = js.native
+  var BM: Anon17 = js.native
+  var BN: Anon25 = js.native
+  var BO: Anon19 = js.native
+  var BR: Anon22 = js.native
+  var BS: Anon9 = js.native
+  var BT: Anon18 = js.native
+  var BW: Anon21 = js.native
+  var BY: Anon13 = js.native
+  var BZ: Anon15 = js.native
+  var CA: Anon31 = js.native
+  var CC: Anon39 = js.native
+  var CD: Anon42 = js.native
+  var CF: Anon34 = js.native
+  var CG: Anon43 = js.native
+  var CH: Anon203 = js.native
+  var CI: Anon46 = js.native
+  var CK: Anon44 = js.native
+  var CL: Anon36 = js.native
+  var CM: Anon30 = js.native
+  var CN: Anon37 = js.native
+  var CO: Anon40 = js.native
+  var CR: Anon45 = js.native
+  var CU: Anon48 = js.native
+  var CV: Anon32 = js.native
+  var CW: Anon49 = js.native
+  var CX: Anon38 = js.native
+  var CY: Anon50 = js.native
+  var CZ: Anon51 = js.native
+  var DE: Anon73 = js.native
+  var DJ: Anon53 = js.native
+  var DK: Anon52 = js.native
+  var DM: Anon54 = js.native
+  var DO: Anon55 = js.native
+  var DZ: AnonDialCodeId = js.native
+  var EC: Anon56 = js.native
+  var EE: Anon61 = js.native
+  var EG: Anon57 = js.native
+  var ER: Anon60 = js.native
+  var ES: Anon196 = js.native
+  var ET: Anon62 = js.native
+  var FI: Anon66 = js.native
+  var FJ: Anon65 = js.native
+  var FK: Anon63 = js.native
+  var FM: Anon132 = js.native
+  var FO: Anon64 = js.native
+  var FR: Anon67 = js.native
+  var GA: Anon70 = js.native
+  var GB: Anon223 = js.native
+  var GD: Anon78 = js.native
+  var GE: Anon72 = js.native
+  var GF: Anon68 = js.native
+  var GG: Anon82 = js.native
+  var GH: Anon74 = js.native
+  var GI: Anon75 = js.native
+  var GL: Anon77 = js.native
+  var GM: Anon71 = js.native
+  var GN: Anon83 = js.native
+  var GP: Anon79 = js.native
+  var GQ: Anon59 = js.native
+  var GR: Anon76 = js.native
+  var GT: Anon81 = js.native
+  var GU: Anon80 = js.native
+  var GW: Anon84 = js.native
+  var GY: Anon85 = js.native
+  var HK: Anon88 = js.native
+  var HN: Anon87 = js.native
+  var HR: Anon47 = js.native
+  var HT: Anon86 = js.native
+  var HU: Anon89 = js.native
+  var ID: Anon92 = js.native
+  var IE: Anon95 = js.native
+  var IL: Anon97 = js.native
+  var IM: Anon96 = js.native
+  var IN: Anon91 = js.native
+  var IO: Anon23 = js.native
+  var IQ: Anon94 = js.native
+  var IR: Anon93 = js.native
+  var IS: Anon90 = js.native
+  var IT: Anon98 = js.native
+  var JE: Anon101 = js.native
+  var JM: Anon99 = js.native
+  var JO: Anon102 = js.native
+  var JP: Anon100 = js.native
+  var KE: Anon104 = js.native
+  var KG: Anon108 = js.native
+  var KH: Anon29 = js.native
+  var KI: Anon105 = js.native
+  var KM: Anon41 = js.native
+  var KN: Anon174 = js.native
+  var KP: Anon152 = js.native
+  var KR: Anon194 = js.native
+  var KW: Anon107 = js.native
+  var KY: Anon33 = js.native
+  var KZ: Anon103 = js.native
+  var LA: Anon109 = js.native
+  var LB: Anon111 = js.native
+  var LC: Anon175 = js.native
+  var LI: Anon115 = js.native
+  var LK: Anon197 = js.native
+  var LR: Anon113 = js.native
+  var LS: Anon112 = js.native
+  var LT: Anon116 = js.native
+  var LU: Anon117 = js.native
+  var LV: Anon110 = js.native
+  var LY: Anon114 = js.native
+  var MA: Anon138 = js.native
+  var MC: Anon134 = js.native
+  var MD: Anon133 = js.native
+  var ME: Anon136 = js.native
+  var MF: Anon176 = js.native
+  var MG: Anon120 = js.native
+  var MH: Anon126 = js.native
+  var MK: Anon119 = js.native
+  var ML: Anon124 = js.native
+  var MM: Anon140 = js.native
+  var MN: Anon135 = js.native
+  var MO: Anon118 = js.native
+  var MP: Anon153 = js.native
+  var MQ: Anon127 = js.native
+  var MR: Anon128 = js.native
+  var MS: Anon137 = js.native
+  var MT: Anon125 = js.native
+  var MU: Anon129 = js.native
+  var MV: Anon123 = js.native
+  var MW: Anon121 = js.native
+  var MX: Anon131 = js.native
+  var MY: Anon122 = js.native
+  var MZ: Anon139 = js.native
+  var NA: Anon141 = js.native
+  var NC: Anon145 = js.native
+  var NE: Anon148 = js.native
+  var NF: Anon151 = js.native
+  var NG: Anon149 = js.native
+  var NI: Anon147 = js.native
+  var NL: Anon144 = js.native
+  var NO: Anon154 = js.native
+  var NP: Anon143 = js.native
+  var NR: Anon142 = js.native
+  var NU: Anon150 = js.native
+  var NZ: Anon146 = js.native
+  var OM: Anon155 = js.native
+  var PA: Anon159 = js.native
+  var PE: Anon162 = js.native
+  var PF: Anon69 = js.native
+  var PG: Anon160 = js.native
+  var PH: Anon163 = js.native
+  var PK: Anon156 = js.native
+  var PL: Anon164 = js.native
+  var PM: Anon177 = js.native
+  var PR: Anon166 = js.native
+  var PS: Anon158 = js.native
+  var PT: Anon165 = js.native
+  var PW: Anon157 = js.native
+  var PY: Anon161 = js.native
+  var QA: Anon167 = js.native
+  var RE: Anon168 = js.native
+  var RO: Anon169 = js.native
+  var RS: Anon184 = js.native
+  var RU: Anon170 = js.native
+  var RW: Anon171 = js.native
+  var SA: Anon182 = js.native
+  var SB: Anon191 = js.native
+  var SC: Anon185 = js.native
+  var SD: Anon198 = js.native
+  var SE: Anon202 = js.native
+  var SG: Anon187 = js.native
+  var SH: Anon173 = js.native
+  var SI: Anon190 = js.native
+  var SJ: Anon200 = js.native
+  var SK: Anon189 = js.native
+  var SL: Anon186 = js.native
+  var SM: Anon180 = js.native
+  var SN: Anon183 = js.native
+  var SO: Anon192 = js.native
+  var SR: Anon199 = js.native
+  var SS: Anon195 = js.native
+  var ST: Anon181 = js.native
+  var SV: Anon58 = js.native
+  var SX: Anon188 = js.native
+  var SY: Anon204 = js.native
+  var SZ: Anon201 = js.native
+  var TC: Anon217 = js.native
+  var TD: Anon35 = js.native
+  var TG: Anon210 = js.native
+  var TH: Anon208 = js.native
+  var TJ: Anon206 = js.native
+  var TK: Anon211 = js.native
+  var TL: Anon209 = js.native
+  var TM: Anon216 = js.native
+  var TN: Anon214 = js.native
+  var TO: Anon212 = js.native
+  var TR: Anon215 = js.native
+  var TT: Anon213 = js.native
+  var TV: Anon218 = js.native
+  var TW: Anon205 = js.native
+  var TZ: Anon207 = js.native
+  var UA: Anon221 = js.native
+  var UG: Anon220 = js.native
+  var US: Anon224 = js.native
+  var UY: Anon225 = js.native
+  var UZ: Anon226 = js.native
+  var VA: Anon228 = js.native
+  var VC: Anon178 = js.native
+  var VE: Anon229 = js.native
+  var VG: Anon24 = js.native
+  var VI: Anon219 = js.native
+  var VN: Anon230 = js.native
+  var VU: Anon227 = js.native
+  var WF: Anon231 = js.native
+  var WS: Anon179 = js.native
+  var XK: Anon106 = js.native
+  var YE: Anon232 = js.native
+  var YT: Anon130 = js.native
+  var ZA: Anon193 = js.native
+  var ZM: Anon233 = js.native
+  var ZW: Anon234 = js.native
 }
 
 @JSImport("baseui/phone-input", "COUNTRIES")

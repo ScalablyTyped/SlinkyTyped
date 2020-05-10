@@ -11,5 +11,6 @@ import scala.scalajs.js.annotation._
   * This module populates the dojo browser version sniffing properties like dojo.isIE.
   *
   */
+@js.native
 trait sniff extends js.Object
 

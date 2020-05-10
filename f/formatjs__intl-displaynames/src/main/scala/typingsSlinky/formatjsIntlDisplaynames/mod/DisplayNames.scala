@@ -1,7 +1,6 @@
 package typingsSlinky.formatjsIntlDisplaynames.mod
 
 import typingsSlinky.formatjsIntlDisplaynames.PickDisplayNamesOptionslo
-import typingsSlinky.formatjsIntlDisplaynames.formatjsIntlDisplaynamesBooleans.`true`
 import typingsSlinky.formatjsIntlUtils.displaynamesTypesMod.DisplayNamesData
 import typingsSlinky.formatjsIntlUtils.displaynamesTypesMod.DisplayNamesLocaleData
 import typingsSlinky.std.Record
@@ -30,7 +29,7 @@ object DisplayNames extends js.Object {
   var availableLocales: js.Any = js.native
   var getDefaultLocale: js.Any = js.native
   var localeData: Record[String, DisplayNamesData] = js.native
-  val polyfilled: `true` = js.native
+  val polyfilled: /* true */ Boolean = js.native
   def __addLocaleData(data: DisplayNamesLocaleData*): Unit = js.native
   def supportedLocalesOf(): js.Array[String] = js.native
   def supportedLocalesOf(locales: String): js.Array[String] = js.native

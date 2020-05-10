@@ -18,11 +18,41 @@ trait TerminationHealth extends js.Object {
 
 object TerminationHealth {
   @scala.inline
-  def apply(Source: String = null, Timestamp: js.Date = null): TerminationHealth = {
+  def apply(): TerminationHealth = {
     val __obj = js.Dynamic.literal()
-    if (Source != null) __obj.updateDynamic("Source")(Source.asInstanceOf[js.Any])
-    if (Timestamp != null) __obj.updateDynamic("Timestamp")(Timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[TerminationHealth]
   }
+  @scala.inline
+  implicit class TerminationHealthOps[Self <: TerminationHealth] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

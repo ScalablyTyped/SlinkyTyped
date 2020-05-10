@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 @JSImport("mobx-react-lite/dist/observer", "observer")
 @js.native
 object observer extends js.Object {
-  def apply[P /* <: js.Object */](baseComponent: FunctionComponent[P]): ReactComponentClass[P] = js.native
+  def apply[P /* <: js.Object */](baseComponent: ReactComponentClass[P]): ReactComponentClass[P] = js.native
   def apply[P /* <: js.Object */](baseComponent: FunctionComponent[P], options: IObserverOptions): ReactComponentClass[P] = js.native
   def apply[P /* <: js.Object */, TRef](baseComponent: RefForwardingComponent[TRef, P], options: IObserverOptionsforwardRe): ReactComponentClass[ForwardRefExoticComponent[PropsWithoutRef[P] with RefAttributes[TRef]]] = js.native
 }

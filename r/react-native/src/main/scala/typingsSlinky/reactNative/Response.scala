@@ -8,16 +8,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Response
   extends Object
      with Body {
-  val headers: Headers
-  val ok: Boolean
-  val redirected: Boolean
-  val status: Double
-  val statusText: String
-  val `type`: ResponseType
-  val url: String
+  val headers: Headers = js.native
+  val ok: Boolean = js.native
+  val redirected: Boolean = js.native
+  val status: Double = js.native
+  val statusText: String = js.native
+  val `type`: ResponseType = js.native
+  val url: String = js.native
 }
 
 @JSGlobal("Response")

@@ -18,22 +18,20 @@ trait OrientationLockType extends js.Object
 
 object OrientationLockType {
   @scala.inline
-  def any: typingsSlinky.std.stdStrings.any = this.cast("any")
+  def any: typingsSlinky.std.stdStrings.any = "any".asInstanceOf[typingsSlinky.std.stdStrings.any]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def landscape: typingsSlinky.std.stdStrings.landscape = "landscape".asInstanceOf[typingsSlinky.std.stdStrings.landscape]
   @scala.inline
-  def landscape: typingsSlinky.std.stdStrings.landscape = this.cast("landscape")
+  def `landscape-primary`: typingsSlinky.std.stdStrings.`landscape-primary` = "landscape-primary".asInstanceOf[typingsSlinky.std.stdStrings.`landscape-primary`]
   @scala.inline
-  def `landscape-primary`: typingsSlinky.std.stdStrings.`landscape-primary` = this.cast("landscape-primary")
+  def `landscape-secondary`: typingsSlinky.std.stdStrings.`landscape-secondary` = "landscape-secondary".asInstanceOf[typingsSlinky.std.stdStrings.`landscape-secondary`]
   @scala.inline
-  def `landscape-secondary`: typingsSlinky.std.stdStrings.`landscape-secondary` = this.cast("landscape-secondary")
+  def natural: typingsSlinky.std.stdStrings.natural = "natural".asInstanceOf[typingsSlinky.std.stdStrings.natural]
   @scala.inline
-  def natural: typingsSlinky.std.stdStrings.natural = this.cast("natural")
+  def portrait: typingsSlinky.std.stdStrings.portrait = "portrait".asInstanceOf[typingsSlinky.std.stdStrings.portrait]
   @scala.inline
-  def portrait: typingsSlinky.std.stdStrings.portrait = this.cast("portrait")
+  def `portrait-primary`: typingsSlinky.std.stdStrings.`portrait-primary` = "portrait-primary".asInstanceOf[typingsSlinky.std.stdStrings.`portrait-primary`]
   @scala.inline
-  def `portrait-primary`: typingsSlinky.std.stdStrings.`portrait-primary` = this.cast("portrait-primary")
-  @scala.inline
-  def `portrait-secondary`: typingsSlinky.std.stdStrings.`portrait-secondary` = this.cast("portrait-secondary")
+  def `portrait-secondary`: typingsSlinky.std.stdStrings.`portrait-secondary` = "portrait-secondary".asInstanceOf[typingsSlinky.std.stdStrings.`portrait-secondary`]
 }
 

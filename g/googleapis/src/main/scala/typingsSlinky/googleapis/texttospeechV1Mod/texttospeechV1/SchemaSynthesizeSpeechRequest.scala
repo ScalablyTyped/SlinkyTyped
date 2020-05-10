@@ -25,16 +25,53 @@ trait SchemaSynthesizeSpeechRequest extends js.Object {
 
 object SchemaSynthesizeSpeechRequest {
   @scala.inline
-  def apply(
-    audioConfig: SchemaAudioConfig = null,
-    input: SchemaSynthesisInput = null,
-    voice: SchemaVoiceSelectionParams = null
-  ): SchemaSynthesizeSpeechRequest = {
+  def apply(): SchemaSynthesizeSpeechRequest = {
     val __obj = js.Dynamic.literal()
-    if (audioConfig != null) __obj.updateDynamic("audioConfig")(audioConfig.asInstanceOf[js.Any])
-    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
-    if (voice != null) __obj.updateDynamic("voice")(voice.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSynthesizeSpeechRequest]
   }
+  @scala.inline
+  implicit class SchemaSynthesizeSpeechRequestOps[Self <: SchemaSynthesizeSpeechRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAudioConfig(value: SchemaAudioConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audioConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudioConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audioConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInput(value: SchemaSynthesisInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVoice(value: SchemaVoiceSelectionParams): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("voice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVoice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("voice")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

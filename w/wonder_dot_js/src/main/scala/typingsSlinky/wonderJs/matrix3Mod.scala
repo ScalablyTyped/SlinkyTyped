@@ -10,16 +10,16 @@ import scala.scalajs.js.annotation._
 object matrix3Mod extends js.Object {
   @js.native
   class Matrix3 () extends js.Object {
-    def this(mat: scala.scalajs.js.typedarray.Float32Array) = this()
+    def this(mat: js.typedarray.Float32Array) = this()
     var a: Double = js.native
     var b: Double = js.native
     var c: Double = js.native
     var d: Double = js.native
     var tx: Double = js.native
     var ty: Double = js.native
-    var values: scala.scalajs.js.typedarray.Float32Array = js.native
-    def cloneToArray(array: scala.scalajs.js.typedarray.Float32Array): Matrix3 = js.native
-    def cloneToArray(array: scala.scalajs.js.typedarray.Float32Array, offset: Double): Matrix3 = js.native
+    var values: js.typedarray.Float32Array = js.native
+    def cloneToArray(array: js.typedarray.Float32Array): Matrix3 = js.native
+    def cloneToArray(array: js.typedarray.Float32Array, offset: Double): Matrix3 = js.native
     def getRotation(): Double = js.native
     def getScale(): Vector2 = js.native
     def getSkew(): Vector2 = js.native
@@ -45,7 +45,7 @@ object matrix3Mod extends js.Object {
   @js.native
   object Matrix3 extends js.Object {
     def create(): Matrix3 = js.native
-    def create(mat: scala.scalajs.js.typedarray.Float32Array): Matrix3 = js.native
+    def create(mat: js.typedarray.Float32Array): Matrix3 = js.native
   }
   
 }

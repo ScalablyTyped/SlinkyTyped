@@ -22,14 +22,41 @@ trait SchemaGooglePrivacyDlpV2ListStoredInfoTypesResponse extends js.Object {
 
 object SchemaGooglePrivacyDlpV2ListStoredInfoTypesResponse {
   @scala.inline
-  def apply(
-    nextPageToken: String = null,
-    storedInfoTypes: js.Array[SchemaGooglePrivacyDlpV2StoredInfoType] = null
-  ): SchemaGooglePrivacyDlpV2ListStoredInfoTypesResponse = {
+  def apply(): SchemaGooglePrivacyDlpV2ListStoredInfoTypesResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (storedInfoTypes != null) __obj.updateDynamic("storedInfoTypes")(storedInfoTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2ListStoredInfoTypesResponse]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2ListStoredInfoTypesResponseOps[Self <: SchemaGooglePrivacyDlpV2ListStoredInfoTypesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoredInfoTypes(value: js.Array[SchemaGooglePrivacyDlpV2StoredInfoType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storedInfoTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoredInfoTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storedInfoTypes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

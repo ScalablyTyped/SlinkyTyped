@@ -31,48 +31,46 @@ trait MiracastChannel extends js.Object
 
 object MiracastChannel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def eight: typingsSlinky.microsoftGraph.microsoftGraphStrings.eight = "eight".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.eight]
   @scala.inline
-  def eight: typingsSlinky.microsoftGraph.microsoftGraphStrings.eight = this.cast("eight")
+  def eleven: typingsSlinky.microsoftGraph.microsoftGraphStrings.eleven = "eleven".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.eleven]
   @scala.inline
-  def eleven: typingsSlinky.microsoftGraph.microsoftGraphStrings.eleven = this.cast("eleven")
+  def five: typingsSlinky.microsoftGraph.microsoftGraphStrings.five = "five".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.five]
   @scala.inline
-  def five: typingsSlinky.microsoftGraph.microsoftGraphStrings.five = this.cast("five")
+  def forty: typingsSlinky.microsoftGraph.microsoftGraphStrings.forty = "forty".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.forty]
   @scala.inline
-  def forty: typingsSlinky.microsoftGraph.microsoftGraphStrings.forty = this.cast("forty")
+  def fortyEight: typingsSlinky.microsoftGraph.microsoftGraphStrings.fortyEight = "fortyEight".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.fortyEight]
   @scala.inline
-  def fortyEight: typingsSlinky.microsoftGraph.microsoftGraphStrings.fortyEight = this.cast("fortyEight")
+  def fortyFour: typingsSlinky.microsoftGraph.microsoftGraphStrings.fortyFour = "fortyFour".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.fortyFour]
   @scala.inline
-  def fortyFour: typingsSlinky.microsoftGraph.microsoftGraphStrings.fortyFour = this.cast("fortyFour")
+  def four: typingsSlinky.microsoftGraph.microsoftGraphStrings.four = "four".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.four]
   @scala.inline
-  def four: typingsSlinky.microsoftGraph.microsoftGraphStrings.four = this.cast("four")
+  def nine: typingsSlinky.microsoftGraph.microsoftGraphStrings.nine = "nine".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.nine]
   @scala.inline
-  def nine: typingsSlinky.microsoftGraph.microsoftGraphStrings.nine = this.cast("nine")
+  def one: typingsSlinky.microsoftGraph.microsoftGraphStrings.one = "one".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.one]
   @scala.inline
-  def one: typingsSlinky.microsoftGraph.microsoftGraphStrings.one = this.cast("one")
+  def oneHundredFiftySeven: typingsSlinky.microsoftGraph.microsoftGraphStrings.oneHundredFiftySeven = "oneHundredFiftySeven".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.oneHundredFiftySeven]
   @scala.inline
-  def oneHundredFiftySeven: typingsSlinky.microsoftGraph.microsoftGraphStrings.oneHundredFiftySeven = this.cast("oneHundredFiftySeven")
+  def oneHundredFiftyThree: typingsSlinky.microsoftGraph.microsoftGraphStrings.oneHundredFiftyThree = "oneHundredFiftyThree".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.oneHundredFiftyThree]
   @scala.inline
-  def oneHundredFiftyThree: typingsSlinky.microsoftGraph.microsoftGraphStrings.oneHundredFiftyThree = this.cast("oneHundredFiftyThree")
+  def oneHundredFortyNine: typingsSlinky.microsoftGraph.microsoftGraphStrings.oneHundredFortyNine = "oneHundredFortyNine".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.oneHundredFortyNine]
   @scala.inline
-  def oneHundredFortyNine: typingsSlinky.microsoftGraph.microsoftGraphStrings.oneHundredFortyNine = this.cast("oneHundredFortyNine")
+  def oneHundredSixtyFive: typingsSlinky.microsoftGraph.microsoftGraphStrings.oneHundredSixtyFive = "oneHundredSixtyFive".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.oneHundredSixtyFive]
   @scala.inline
-  def oneHundredSixtyFive: typingsSlinky.microsoftGraph.microsoftGraphStrings.oneHundredSixtyFive = this.cast("oneHundredSixtyFive")
+  def oneHundredSixtyOne: typingsSlinky.microsoftGraph.microsoftGraphStrings.oneHundredSixtyOne = "oneHundredSixtyOne".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.oneHundredSixtyOne]
   @scala.inline
-  def oneHundredSixtyOne: typingsSlinky.microsoftGraph.microsoftGraphStrings.oneHundredSixtyOne = this.cast("oneHundredSixtyOne")
+  def seven: typingsSlinky.microsoftGraph.microsoftGraphStrings.seven = "seven".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.seven]
   @scala.inline
-  def seven: typingsSlinky.microsoftGraph.microsoftGraphStrings.seven = this.cast("seven")
+  def six: typingsSlinky.microsoftGraph.microsoftGraphStrings.six = "six".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.six]
   @scala.inline
-  def six: typingsSlinky.microsoftGraph.microsoftGraphStrings.six = this.cast("six")
+  def ten: typingsSlinky.microsoftGraph.microsoftGraphStrings.ten = "ten".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.ten]
   @scala.inline
-  def ten: typingsSlinky.microsoftGraph.microsoftGraphStrings.ten = this.cast("ten")
+  def thirtySix: typingsSlinky.microsoftGraph.microsoftGraphStrings.thirtySix = "thirtySix".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.thirtySix]
   @scala.inline
-  def thirtySix: typingsSlinky.microsoftGraph.microsoftGraphStrings.thirtySix = this.cast("thirtySix")
+  def three: typingsSlinky.microsoftGraph.microsoftGraphStrings.three = "three".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.three]
   @scala.inline
-  def three: typingsSlinky.microsoftGraph.microsoftGraphStrings.three = this.cast("three")
+  def two: typingsSlinky.microsoftGraph.microsoftGraphStrings.two = "two".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.two]
   @scala.inline
-  def two: typingsSlinky.microsoftGraph.microsoftGraphStrings.two = this.cast("two")
-  @scala.inline
-  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = this.cast("userDefined")
+  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = "userDefined".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined]
 }
 

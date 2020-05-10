@@ -5,9 +5,9 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`avg-rating`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`num-comments`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`num-ratings`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`num-views`
-import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.asc
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.asc_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.created
-import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.desc
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.desc_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.modified
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.owner
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.title
@@ -85,7 +85,7 @@ trait PortalQueryParams extends Accessor {
     *
     * @default asc
     */
-  var sortOrder: asc | desc = js.native
+  var sortOrder: asc_ | desc_ = js.native
   /**
     * The index of the first entry in the result set response. The index is 1-based. The [start](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html#start) property, along with the [num](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html#num) property can be used to paginate the search results.
     *

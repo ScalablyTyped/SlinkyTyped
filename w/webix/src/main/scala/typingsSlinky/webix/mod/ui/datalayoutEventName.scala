@@ -24,34 +24,32 @@ trait datalayoutEventName extends js.Object
 
 object datalayoutEventName {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def onAfterAdd: typingsSlinky.webix.webixStrings.onAfterAdd = "onAfterAdd".asInstanceOf[typingsSlinky.webix.webixStrings.onAfterAdd]
   @scala.inline
-  def onAfterAdd: typingsSlinky.webix.webixStrings.onAfterAdd = this.cast("onAfterAdd")
+  def onAfterDelete: typingsSlinky.webix.webixStrings.onAfterDelete = "onAfterDelete".asInstanceOf[typingsSlinky.webix.webixStrings.onAfterDelete]
   @scala.inline
-  def onAfterDelete: typingsSlinky.webix.webixStrings.onAfterDelete = this.cast("onAfterDelete")
+  def onAfterLoad: typingsSlinky.webix.webixStrings.onAfterLoad = "onAfterLoad".asInstanceOf[typingsSlinky.webix.webixStrings.onAfterLoad]
   @scala.inline
-  def onAfterLoad: typingsSlinky.webix.webixStrings.onAfterLoad = this.cast("onAfterLoad")
+  def onAfterSort: typingsSlinky.webix.webixStrings.onAfterSort = "onAfterSort".asInstanceOf[typingsSlinky.webix.webixStrings.onAfterSort]
   @scala.inline
-  def onAfterSort: typingsSlinky.webix.webixStrings.onAfterSort = this.cast("onAfterSort")
+  def onBeforeAdd: typingsSlinky.webix.webixStrings.onBeforeAdd = "onBeforeAdd".asInstanceOf[typingsSlinky.webix.webixStrings.onBeforeAdd]
   @scala.inline
-  def onBeforeAdd: typingsSlinky.webix.webixStrings.onBeforeAdd = this.cast("onBeforeAdd")
+  def onBeforeDelete: typingsSlinky.webix.webixStrings.onBeforeDelete = "onBeforeDelete".asInstanceOf[typingsSlinky.webix.webixStrings.onBeforeDelete]
   @scala.inline
-  def onBeforeDelete: typingsSlinky.webix.webixStrings.onBeforeDelete = this.cast("onBeforeDelete")
+  def onBeforeLoad: typingsSlinky.webix.webixStrings.onBeforeLoad = "onBeforeLoad".asInstanceOf[typingsSlinky.webix.webixStrings.onBeforeLoad]
   @scala.inline
-  def onBeforeLoad: typingsSlinky.webix.webixStrings.onBeforeLoad = this.cast("onBeforeLoad")
+  def onBeforeSort: typingsSlinky.webix.webixStrings.onBeforeSort = "onBeforeSort".asInstanceOf[typingsSlinky.webix.webixStrings.onBeforeSort]
   @scala.inline
-  def onBeforeSort: typingsSlinky.webix.webixStrings.onBeforeSort = this.cast("onBeforeSort")
+  def onBindRequest: typingsSlinky.webix.webixStrings.onBindRequest = "onBindRequest".asInstanceOf[typingsSlinky.webix.webixStrings.onBindRequest]
   @scala.inline
-  def onBindRequest: typingsSlinky.webix.webixStrings.onBindRequest = this.cast("onBindRequest")
+  def onDataRequest: typingsSlinky.webix.webixStrings.onDataRequest = "onDataRequest".asInstanceOf[typingsSlinky.webix.webixStrings.onDataRequest]
   @scala.inline
-  def onDataRequest: typingsSlinky.webix.webixStrings.onDataRequest = this.cast("onDataRequest")
+  def onDataUpdate: typingsSlinky.webix.webixStrings.onDataUpdate = "onDataUpdate".asInstanceOf[typingsSlinky.webix.webixStrings.onDataUpdate]
   @scala.inline
-  def onDataUpdate: typingsSlinky.webix.webixStrings.onDataUpdate = this.cast("onDataUpdate")
+  def onDestruct: typingsSlinky.webix.webixStrings.onDestruct = "onDestruct".asInstanceOf[typingsSlinky.webix.webixStrings.onDestruct]
   @scala.inline
-  def onDestruct: typingsSlinky.webix.webixStrings.onDestruct = this.cast("onDestruct")
+  def onLoadError: typingsSlinky.webix.webixStrings.onLoadError = "onLoadError".asInstanceOf[typingsSlinky.webix.webixStrings.onLoadError]
   @scala.inline
-  def onLoadError: typingsSlinky.webix.webixStrings.onLoadError = this.cast("onLoadError")
-  @scala.inline
-  def onViewShow: typingsSlinky.webix.webixStrings.onViewShow = this.cast("onViewShow")
+  def onViewShow: typingsSlinky.webix.webixStrings.onViewShow = "onViewShow".asInstanceOf[typingsSlinky.webix.webixStrings.onViewShow]
 }
 

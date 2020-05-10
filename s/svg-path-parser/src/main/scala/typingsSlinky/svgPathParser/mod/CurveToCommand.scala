@@ -7,16 +7,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CurveToCommand extends js.Object {
-  var code: c_ | C
-  var command: curveto
-  var relative: js.UndefOr[Boolean] = js.undefined
-  var x: Double
-  var x1: Double
-  var x2: Double
-  var y: Double
-  var y1: Double
-  var y2: Double
+  var code: c_ | C = js.native
+  var command: curveto = js.native
+  var relative: js.UndefOr[Boolean] = js.native
+  var x: Double = js.native
+  var x1: Double = js.native
+  var x2: Double = js.native
+  var y: Double = js.native
+  var y1: Double = js.native
+  var y2: Double = js.native
 }
 
 object CurveToCommand {
@@ -29,12 +30,78 @@ object CurveToCommand {
     x2: Double,
     y: Double,
     y1: Double,
-    y2: Double,
-    relative: js.UndefOr[Boolean] = js.undefined
+    y2: Double
   ): CurveToCommand = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], command = command.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], x1 = x1.asInstanceOf[js.Any], x2 = x2.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any], y1 = y1.asInstanceOf[js.Any], y2 = y2.asInstanceOf[js.Any])
-    if (!js.isUndefined(relative)) __obj.updateDynamic("relative")(relative.asInstanceOf[js.Any])
     __obj.asInstanceOf[CurveToCommand]
   }
+  @scala.inline
+  implicit class CurveToCommandOps[Self <: CurveToCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCode(value: c_ | C): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCommand(value: curveto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX1(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX2(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY1(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY2(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRelative(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relative")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelative: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relative")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

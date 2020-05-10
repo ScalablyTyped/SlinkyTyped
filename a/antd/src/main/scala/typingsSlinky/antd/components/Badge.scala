@@ -1,56 +1,62 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdStrings.error
 import typingsSlinky.antd.antdStrings.processing
 import typingsSlinky.antd.antdStrings.success
 import typingsSlinky.antd.antdStrings.warning
 import typingsSlinky.antd.badgeMod.BadgeProps
 import typingsSlinky.antd.badgeMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Badge
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Badge {
   @JSImport("antd/lib/badge", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style, title */
-  def apply(
-    color: String = null,
-    count: TagMod[Any] = null,
-    dot: js.UndefOr[Boolean] = js.undefined,
-    offset: js.Tuple2[Double | String, Double | String] = null,
-    overflowCount: Int | Double = null,
-    prefixCls: String = null,
-    scrollNumberPrefixCls: String = null,
-    showZero: js.UndefOr[Boolean] = js.undefined,
-    status: success | processing | typingsSlinky.antd.antdStrings.default | error | warning = null,
-    text: TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (!js.isUndefined(dot)) __obj.updateDynamic("dot")(dot.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (overflowCount != null) __obj.updateDynamic("overflowCount")(overflowCount.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (scrollNumberPrefixCls != null) __obj.updateDynamic("scrollNumberPrefixCls")(scrollNumberPrefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(showZero)) __obj.updateDynamic("showZero")(showZero.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def countReactElement(value: ReactElement): this.type = set("count", value.asInstanceOf[js.Any])
+    @scala.inline
+    def count(value: TagMod[Any]): this.type = set("count", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dot(value: Boolean): this.type = set("dot", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offset(value: js.Tuple2[Double | String, Double | String]): this.type = set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overflowCount(value: Double): this.type = set("overflowCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollNumberPrefixCls(value: String): this.type = set("scrollNumberPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showZero(value: Boolean): this.type = set("showZero", value.asInstanceOf[js.Any])
+    @scala.inline
+    def status(value: success | processing | typingsSlinky.antd.antdStrings.default | error | warning): this.type = set("status", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textReactElement(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
+    @scala.inline
+    def text(value: TagMod[Any]): this.type = set("text", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.badgeMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = BadgeProps
+  
+  def withProps(p: BadgeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Badge.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

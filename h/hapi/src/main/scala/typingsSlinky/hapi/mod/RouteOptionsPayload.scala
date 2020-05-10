@@ -4,11 +4,13 @@ import typingsSlinky.hapi.AnonOutput
 import typingsSlinky.hapi.hapiBooleans.`false`
 import typingsSlinky.hapi.hapiStrings.gunzip
 import typingsSlinky.hapi.mod.Lifecycle.FailAction
+import typingsSlinky.hapi.mod.Lifecycle.ReturnValue
 import typingsSlinky.hapi.mod.Util.Dictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RouteOptionsPayload extends js.Object {
   /**
     * Default value: allows parsing of the following mime types:
@@ -22,31 +24,31 @@ trait RouteOptionsPayload extends js.Object {
     * above will not enable them to be parsed, and if parse is true, the request will result in an error response.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionspayloadallow)
     */
-  var allow: js.UndefOr[String | js.Array[String]] = js.undefined
+  var allow: js.UndefOr[String | js.Array[String]] = js.native
   /**
     * Default value: none.
     * An object where each key is a content-encoding name and each value is an object with the desired decoder settings. Note that encoder settings are set in compression.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionspayloadcompression)
     */
-  var compression: js.UndefOr[Dictionary[PayloadCompressionDecoderSettings]] = js.undefined
+  var compression: js.UndefOr[Dictionary[PayloadCompressionDecoderSettings]] = js.native
   /**
     * Default value: 'application/json'.
     * The default content type if the 'Content-Type' request header is missing.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionspayloaddefaultcontenttype)
     */
-  var defaultContentType: js.UndefOr[String] = js.undefined
+  var defaultContentType: js.UndefOr[String] = js.native
   /**
     * Default value: 'error' (return a Bad Request (400) error response).
     * A failAction value which determines how to handle payload parsing errors.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionspayloadfailaction)
     */
-  var failAction: js.UndefOr[FailAction] = js.undefined
+  var failAction: js.UndefOr[FailAction] = js.native
   /**
     * Default value: 1048576 (1MB).
     * Limits the size of incoming payloads to the specified byte count. Allowing very large payloads may cause the server to run out of memory.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionspayloadmaxbytes)
     */
-  var maxBytes: js.UndefOr[Double] = js.undefined
+  var maxBytes: js.UndefOr[Double] = js.native
   /**
     * Default value: none.
     * Overrides payload processing for multipart requests. Value can be one of:
@@ -59,7 +61,7 @@ trait RouteOptionsPayload extends js.Object {
     * * * * payload - the processed part payload.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionspayloadmultipart)
     */
-  var multipart: js.UndefOr[`false` | AnonOutput] = js.undefined
+  var multipart: js.UndefOr[`false` | AnonOutput] = js.native
   /**
     * Default value: 'data'.
     * The processed payload format. The value must be one of:
@@ -74,13 +76,13 @@ trait RouteOptionsPayload extends js.Object {
     * of which files are used (e.g. using the request.app object), and listening to the server 'response' event to perform cleanup.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionspayloadoutput)
     */
-  var output: js.UndefOr[PayloadOutput] = js.undefined
+  var output: js.UndefOr[PayloadOutput] = js.native
   /**
     * Default value: none.
     * A mime type string overriding the 'Content-Type' header value received.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionspayloadoverride)
     */
-  var `override`: js.UndefOr[String] = js.undefined
+  var `override`: js.UndefOr[String] = js.native
   /**
     * Default value: true.
     * Determines if the incoming payload is processed or presented raw. Available values:
@@ -90,50 +92,175 @@ trait RouteOptionsPayload extends js.Object {
     * * 'gunzip' - the raw payload is returned unmodified after any known content encoding is decoded.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionspayloadparse)
     */
-  var parse: js.UndefOr[Boolean | gunzip] = js.undefined
+  var parse: js.UndefOr[Boolean | gunzip] = js.native
   /**
     * Default value: to 10000 (10 seconds).
     * Payload reception timeout in milliseconds. Sets the maximum time allowed for the client to transmit the request payload (body) before giving up and responding with a Request Timeout (408)
     * error response. Set to false to disable.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionspayloadtimeout)
     */
-  var timeout: js.UndefOr[`false` | Double] = js.undefined
+  var timeout: js.UndefOr[`false` | Double] = js.native
   /**
     * Default value: os.tmpdir().
     * The directory used for writing file uploads.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionspayloaduploads)
     */
-  var uploads: js.UndefOr[String] = js.undefined
+  var uploads: js.UndefOr[String] = js.native
 }
 
 object RouteOptionsPayload {
   @scala.inline
-  def apply(
-    allow: String | js.Array[String] = null,
-    compression: Dictionary[PayloadCompressionDecoderSettings] = null,
-    defaultContentType: String = null,
-    failAction: FailAction = null,
-    maxBytes: Int | Double = null,
-    multipart: `false` | AnonOutput = null,
-    output: PayloadOutput = null,
-    `override`: String = null,
-    parse: Boolean | gunzip = null,
-    timeout: `false` | Double = null,
-    uploads: String = null
-  ): RouteOptionsPayload = {
+  def apply(): RouteOptionsPayload = {
     val __obj = js.Dynamic.literal()
-    if (allow != null) __obj.updateDynamic("allow")(allow.asInstanceOf[js.Any])
-    if (compression != null) __obj.updateDynamic("compression")(compression.asInstanceOf[js.Any])
-    if (defaultContentType != null) __obj.updateDynamic("defaultContentType")(defaultContentType.asInstanceOf[js.Any])
-    if (failAction != null) __obj.updateDynamic("failAction")(failAction.asInstanceOf[js.Any])
-    if (maxBytes != null) __obj.updateDynamic("maxBytes")(maxBytes.asInstanceOf[js.Any])
-    if (multipart != null) __obj.updateDynamic("multipart")(multipart.asInstanceOf[js.Any])
-    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
-    if (`override` != null) __obj.updateDynamic("override")(`override`.asInstanceOf[js.Any])
-    if (parse != null) __obj.updateDynamic("parse")(parse.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (uploads != null) __obj.updateDynamic("uploads")(uploads.asInstanceOf[js.Any])
     __obj.asInstanceOf[RouteOptionsPayload]
   }
+  @scala.inline
+  implicit class RouteOptionsPayloadOps[Self <: RouteOptionsPayload] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllow(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompression(value: Dictionary[PayloadCompressionDecoderSettings]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultContentType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultContentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultContentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailActionFunction3(
+      value: (/* request */ Request, /* h */ ResponseToolkit, /* err */ js.UndefOr[js.Error]) => ReturnValue
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failAction")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withFailAction(value: FailAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxBytes(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultipart(value: `false` | AnonOutput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multipart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultipart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multipart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutput(value: PayloadOutput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverride(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("override")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("override")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParse(value: Boolean | gunzip): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: `false` | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUploads(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploads")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUploads: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploads")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,17 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InsightsQueryResponse extends js.Object {
-  var items: js.UndefOr[js.Array[InsightsItem]] = js.undefined
-  var query_id: String
+  var items: js.UndefOr[js.Array[InsightsItem]] = js.native
+  var query_id: String = js.native
 }
 
 object InsightsQueryResponse {
   @scala.inline
-  def apply(query_id: String, items: js.Array[InsightsItem] = null): InsightsQueryResponse = {
+  def apply(query_id: String): InsightsQueryResponse = {
     val __obj = js.Dynamic.literal(query_id = query_id.asInstanceOf[js.Any])
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
     __obj.asInstanceOf[InsightsQueryResponse]
   }
+  @scala.inline
+  implicit class InsightsQueryResponseOps[Self <: InsightsQueryResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQuery_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItems(value: js.Array[InsightsItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

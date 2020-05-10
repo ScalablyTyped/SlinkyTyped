@@ -1,14 +1,16 @@
 package typingsSlinky.grommet.components
 
+import typingsSlinky.grommet.boxMod.BoxProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Nav extends SharedApply_BoxProps_1703373612 {
+object Nav {
   @JSImport("grommet", "Nav")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: BoxProps): SharedBuilder_BoxProps_991765222 = new SharedBuilder_BoxProps_991765222(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Nav.type): SharedBuilder_BoxProps_991765222 = new SharedBuilder_BoxProps_991765222(js.Array(this.component, js.Dictionary.empty))()
 }
 

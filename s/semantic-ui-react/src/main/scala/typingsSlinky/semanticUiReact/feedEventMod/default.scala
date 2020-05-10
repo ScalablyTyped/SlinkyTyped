@@ -1,12 +1,12 @@
 package typingsSlinky.semanticUiReact.feedEventMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.StatelessComponent
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("semantic-ui-react/dist/commonjs/views/Feed/FeedEvent", JSImport.Default)
 @js.native
-object default extends TopLevel[StatelessComponent[FeedEventProps]]
+object default extends TopLevel[ReactComponentClass[FeedEventProps]]
 

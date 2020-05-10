@@ -4,26 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RTCOfferOptions extends RTCOfferAnswerOptions {
-  var iceRestart: js.UndefOr[scala.Boolean] = js.undefined
-  var offerToReceiveAudio: js.UndefOr[scala.Boolean] = js.undefined
-  var offerToReceiveVideo: js.UndefOr[scala.Boolean] = js.undefined
+  var iceRestart: js.UndefOr[scala.Boolean] = js.native
+  var offerToReceiveAudio: js.UndefOr[scala.Boolean] = js.native
+  var offerToReceiveVideo: js.UndefOr[scala.Boolean] = js.native
 }
 
 object RTCOfferOptions {
   @scala.inline
-  def apply(
-    iceRestart: js.UndefOr[scala.Boolean] = js.undefined,
-    offerToReceiveAudio: js.UndefOr[scala.Boolean] = js.undefined,
-    offerToReceiveVideo: js.UndefOr[scala.Boolean] = js.undefined,
-    voiceActivityDetection: js.UndefOr[scala.Boolean] = js.undefined
-  ): RTCOfferOptions = {
+  def apply(): RTCOfferOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(iceRestart)) __obj.updateDynamic("iceRestart")(iceRestart.asInstanceOf[js.Any])
-    if (!js.isUndefined(offerToReceiveAudio)) __obj.updateDynamic("offerToReceiveAudio")(offerToReceiveAudio.asInstanceOf[js.Any])
-    if (!js.isUndefined(offerToReceiveVideo)) __obj.updateDynamic("offerToReceiveVideo")(offerToReceiveVideo.asInstanceOf[js.Any])
-    if (!js.isUndefined(voiceActivityDetection)) __obj.updateDynamic("voiceActivityDetection")(voiceActivityDetection.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCOfferOptions]
   }
+  @scala.inline
+  implicit class RTCOfferOptionsOps[Self <: org.scalajs.dom.experimental.webrtc.RTCOfferOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIceRestart(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iceRestart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIceRestart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iceRestart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOfferToReceiveAudio(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offerToReceiveAudio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOfferToReceiveAudio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offerToReceiveAudio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOfferToReceiveVideo(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offerToReceiveVideo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOfferToReceiveVideo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offerToReceiveVideo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

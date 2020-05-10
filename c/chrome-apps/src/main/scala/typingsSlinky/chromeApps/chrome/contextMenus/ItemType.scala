@@ -1,9 +1,9 @@
 package typingsSlinky.chromeApps.chrome.contextMenus
 
-import typingsSlinky.chromeApps.chromeAppsStrings.checkbox
-import typingsSlinky.chromeApps.chromeAppsStrings.normal
-import typingsSlinky.chromeApps.chromeAppsStrings.radio
-import typingsSlinky.chromeApps.chromeAppsStrings.separator
+import typingsSlinky.chromeApps.chromeAppsStrings.checkbox_
+import typingsSlinky.chromeApps.chromeAppsStrings.normal_
+import typingsSlinky.chromeApps.chromeAppsStrings.radio_
+import typingsSlinky.chromeApps.chromeAppsStrings.separator_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,9 +14,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.contextMenus.ItemType")
 @js.native
 object ItemType extends js.Object {
-  var CHECKBOX: checkbox = js.native
-  var NORMAL: normal = js.native
-  var RADIO: radio = js.native
-  var SEPARATOR: separator = js.native
+  var CHECKBOX: checkbox_ = js.native
+  var NORMAL: normal_ = js.native
+  var RADIO: radio_ = js.native
+  var SEPARATOR: separator_ = js.native
 }
 

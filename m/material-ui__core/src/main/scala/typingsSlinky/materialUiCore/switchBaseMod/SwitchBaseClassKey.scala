@@ -14,14 +14,12 @@ trait SwitchBaseClassKey extends js.Object
 
 object SwitchBaseClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def checked: typingsSlinky.materialUiCore.materialUiCoreStrings.checked = "checked".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.checked]
   @scala.inline
-  def checked: typingsSlinky.materialUiCore.materialUiCoreStrings.checked = this.cast("checked")
+  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = "disabled".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = this.cast("disabled")
+  def input: typingsSlinky.materialUiCore.materialUiCoreStrings.input = "input".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.input]
   @scala.inline
-  def input: typingsSlinky.materialUiCore.materialUiCoreStrings.input = this.cast("input")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

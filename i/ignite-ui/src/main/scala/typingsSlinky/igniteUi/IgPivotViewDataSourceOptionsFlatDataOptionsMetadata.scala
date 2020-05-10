@@ -5,30 +5,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgPivotViewDataSourceOptionsFlatDataOptionsMetadata
   extends /**
-	 * Option for IgPivotViewDataSourceOptionsFlatDataOptionsMetadata
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
   	 * Optional="false" Metadata used for the creation of the cube.
   	 */
-  var cube: js.UndefOr[IgPivotViewDataSourceOptionsFlatDataOptionsMetadataCube] = js.undefined
+  var cube: js.UndefOr[IgPivotViewDataSourceOptionsFlatDataOptionsMetadataCube] = js.native
 }
 
 object IgPivotViewDataSourceOptionsFlatDataOptionsMetadata {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for IgPivotViewDataSourceOptionsFlatDataOptionsMetadata
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    cube: IgPivotViewDataSourceOptionsFlatDataOptionsMetadataCube = null
-  ): IgPivotViewDataSourceOptionsFlatDataOptionsMetadata = {
+  def apply(): IgPivotViewDataSourceOptionsFlatDataOptionsMetadata = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (cube != null) __obj.updateDynamic("cube")(cube.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgPivotViewDataSourceOptionsFlatDataOptionsMetadata]
   }
+  @scala.inline
+  implicit class IgPivotViewDataSourceOptionsFlatDataOptionsMetadataOps[Self <: IgPivotViewDataSourceOptionsFlatDataOptionsMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCube(value: IgPivotViewDataSourceOptionsFlatDataOptionsMetadataCube): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cube")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCube: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cube")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

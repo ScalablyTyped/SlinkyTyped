@@ -26,17 +26,59 @@ trait GetAggregateDiscoveredResourceCountsResponse extends js.Object {
 
 object GetAggregateDiscoveredResourceCountsResponse {
   @scala.inline
-  def apply(
-    TotalDiscoveredResources: Long,
-    GroupByKey: StringWithCharLimit256 = null,
-    GroupedResourceCounts: GroupedResourceCountList = null,
-    NextToken: NextToken = null
-  ): GetAggregateDiscoveredResourceCountsResponse = {
+  def apply(TotalDiscoveredResources: Long): GetAggregateDiscoveredResourceCountsResponse = {
     val __obj = js.Dynamic.literal(TotalDiscoveredResources = TotalDiscoveredResources.asInstanceOf[js.Any])
-    if (GroupByKey != null) __obj.updateDynamic("GroupByKey")(GroupByKey.asInstanceOf[js.Any])
-    if (GroupedResourceCounts != null) __obj.updateDynamic("GroupedResourceCounts")(GroupedResourceCounts.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAggregateDiscoveredResourceCountsResponse]
   }
+  @scala.inline
+  implicit class GetAggregateDiscoveredResourceCountsResponseOps[Self <: GetAggregateDiscoveredResourceCountsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTotalDiscoveredResources(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalDiscoveredResources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGroupByKey(value: StringWithCharLimit256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupByKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupByKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupByKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupedResourceCounts(value: GroupedResourceCountList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupedResourceCounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupedResourceCounts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupedResourceCounts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

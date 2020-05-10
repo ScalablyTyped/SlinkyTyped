@@ -2,7 +2,6 @@ package typingsSlinky.multistream
 
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.streamMod.Stream
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +13,7 @@ object mod extends js.Object {
   trait FactoryStreamCallback extends js.Object {
     def apply(): js.Any = js.native
     def apply(err: Null, stream: ReadableStream): js.Any = js.native
-    def apply(err: Error): js.Any = js.native
+    def apply(err: js.Error): js.Any = js.native
   }
   
   def apply(streams: Streams): ReadableStream = js.native

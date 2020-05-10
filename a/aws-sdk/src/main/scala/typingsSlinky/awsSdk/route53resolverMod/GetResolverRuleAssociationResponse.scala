@@ -14,10 +14,29 @@ trait GetResolverRuleAssociationResponse extends js.Object {
 
 object GetResolverRuleAssociationResponse {
   @scala.inline
-  def apply(ResolverRuleAssociation: ResolverRuleAssociation = null): GetResolverRuleAssociationResponse = {
+  def apply(): GetResolverRuleAssociationResponse = {
     val __obj = js.Dynamic.literal()
-    if (ResolverRuleAssociation != null) __obj.updateDynamic("ResolverRuleAssociation")(ResolverRuleAssociation.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetResolverRuleAssociationResponse]
   }
+  @scala.inline
+  implicit class GetResolverRuleAssociationResponseOps[Self <: GetResolverRuleAssociationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResolverRuleAssociation(value: ResolverRuleAssociation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResolverRuleAssociation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolverRuleAssociation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResolverRuleAssociation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

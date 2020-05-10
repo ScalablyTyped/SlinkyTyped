@@ -15,16 +15,14 @@ trait OutputTypeName extends js.Object
 
 object OutputTypeName {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def display_data: typingsSlinky.azdata.azdataStrings.display_data = "display_data".asInstanceOf[typingsSlinky.azdata.azdataStrings.display_data]
   @scala.inline
-  def display_data: typingsSlinky.azdata.azdataStrings.display_data = this.cast("display_data")
+  def error: typingsSlinky.azdata.azdataStrings.error = "error".asInstanceOf[typingsSlinky.azdata.azdataStrings.error]
   @scala.inline
-  def error: typingsSlinky.azdata.azdataStrings.error = this.cast("error")
+  def execute_result: typingsSlinky.azdata.azdataStrings.execute_result = "execute_result".asInstanceOf[typingsSlinky.azdata.azdataStrings.execute_result]
   @scala.inline
-  def execute_result: typingsSlinky.azdata.azdataStrings.execute_result = this.cast("execute_result")
+  def stream: typingsSlinky.azdata.azdataStrings.stream = "stream".asInstanceOf[typingsSlinky.azdata.azdataStrings.stream]
   @scala.inline
-  def stream: typingsSlinky.azdata.azdataStrings.stream = this.cast("stream")
-  @scala.inline
-  def update_display_data: typingsSlinky.azdata.azdataStrings.update_display_data = this.cast("update_display_data")
+  def update_display_data: typingsSlinky.azdata.azdataStrings.update_display_data = "update_display_data".asInstanceOf[typingsSlinky.azdata.azdataStrings.update_display_data]
 }
 

@@ -7,6 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TypeofStackController extends js.Object {
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/layout/StackController.StackButton.html
@@ -21,7 +22,7 @@ trait TypeofStackController extends js.Object {
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
     typingsSlinky.dojo.dijit.layout.StackController.StackButton
-  ]
+  ] = js.native
 }
 
 object TypeofStackController {
@@ -34,8 +35,27 @@ object TypeofStackController {
     ]
   ): TypeofStackController = {
     val __obj = js.Dynamic.literal(StackButton = StackButton.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TypeofStackController]
   }
+  @scala.inline
+  implicit class TypeofStackControllerOps[Self <: TypeofStackController] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStackButton(
+      value: Instantiable2[
+          js.UndefOr[/* params */ js.Object], 
+          js.UndefOr[/* srcNodeRef */ HTMLElement], 
+          StackButton
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

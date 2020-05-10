@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonGraphEnabled extends js.Object {
-  var graphEnabled: js.UndefOr[Boolean] = js.undefined
-  var logEnabled: js.UndefOr[Boolean] = js.undefined
-  var logFilter: js.UndefOr[js.Function1[/* p */ js.Any, Boolean]] = js.undefined
-  var updatesEnabled: js.UndefOr[Boolean] = js.undefined
+  var graphEnabled: js.UndefOr[Boolean] = js.native
+  var logEnabled: js.UndefOr[Boolean] = js.native
+  var logFilter: js.UndefOr[js.Function1[/* p */ js.Any, Boolean]] = js.native
+  var updatesEnabled: js.UndefOr[Boolean] = js.native
 }
 
 object AnonGraphEnabled {
   @scala.inline
-  def apply(
-    graphEnabled: js.UndefOr[Boolean] = js.undefined,
-    logEnabled: js.UndefOr[Boolean] = js.undefined,
-    logFilter: /* p */ js.Any => Boolean = null,
-    updatesEnabled: js.UndefOr[Boolean] = js.undefined
-  ): AnonGraphEnabled = {
+  def apply(): AnonGraphEnabled = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(graphEnabled)) __obj.updateDynamic("graphEnabled")(graphEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(logEnabled)) __obj.updateDynamic("logEnabled")(logEnabled.asInstanceOf[js.Any])
-    if (logFilter != null) __obj.updateDynamic("logFilter")(js.Any.fromFunction1(logFilter))
-    if (!js.isUndefined(updatesEnabled)) __obj.updateDynamic("updatesEnabled")(updatesEnabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonGraphEnabled]
   }
+  @scala.inline
+  implicit class AnonGraphEnabledOps[Self <: AnonGraphEnabled] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGraphEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("graphEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGraphEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("graphEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogFilter(value: /* p */ js.Any => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logFilter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLogFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdatesEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updatesEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdatesEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updatesEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

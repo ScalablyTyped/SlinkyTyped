@@ -20,8 +20,27 @@ object FetchPageRequest {
   @scala.inline
   def apply(NextPageToken: PageToken, TransactionId: TransactionId): FetchPageRequest = {
     val __obj = js.Dynamic.literal(NextPageToken = NextPageToken.asInstanceOf[js.Any], TransactionId = TransactionId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[FetchPageRequest]
   }
+  @scala.inline
+  implicit class FetchPageRequestOps[Self <: FetchPageRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: PageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTransactionId(value: TransactionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransactionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

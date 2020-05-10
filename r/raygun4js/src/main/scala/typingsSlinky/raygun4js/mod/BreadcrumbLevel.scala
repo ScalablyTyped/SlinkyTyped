@@ -14,14 +14,12 @@ trait BreadcrumbLevel extends js.Object
 
 object BreadcrumbLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def debug: typingsSlinky.raygun4js.raygun4jsStrings.debug = "debug".asInstanceOf[typingsSlinky.raygun4js.raygun4jsStrings.debug]
   @scala.inline
-  def debug: typingsSlinky.raygun4js.raygun4jsStrings.debug = this.cast("debug")
+  def error: typingsSlinky.raygun4js.raygun4jsStrings.error = "error".asInstanceOf[typingsSlinky.raygun4js.raygun4jsStrings.error]
   @scala.inline
-  def error: typingsSlinky.raygun4js.raygun4jsStrings.error = this.cast("error")
+  def info: typingsSlinky.raygun4js.raygun4jsStrings.info = "info".asInstanceOf[typingsSlinky.raygun4js.raygun4jsStrings.info]
   @scala.inline
-  def info: typingsSlinky.raygun4js.raygun4jsStrings.info = this.cast("info")
-  @scala.inline
-  def warning: typingsSlinky.raygun4js.raygun4jsStrings.warning = this.cast("warning")
+  def warning: typingsSlinky.raygun4js.raygun4jsStrings.warning = "warning".asInstanceOf[typingsSlinky.raygun4js.raygun4jsStrings.warning]
 }
 

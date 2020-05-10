@@ -4,11 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IFilterOptions extends js.Object {
   /**
     * String that will be set to the <input>.ariaLabel attribute. This is what is read as a label to screen reader users.
     */
-  var ariaLabel: js.UndefOr[String] = js.undefined
+  var ariaLabel: js.UndefOr[String] = js.native
   /**
     * condition defines how rows are chosen as matching the filter term.
     * This can be set to one of the constants in uiGridConstants.filter,
@@ -23,70 +24,177 @@ trait IFilterOptions extends js.Object {
       /* column */ IGridColumn, 
       Boolean
     ])
-  ] = js.undefined
+  ] = js.native
   /**
     * If set to true then the 'x' button that cancels/clears the filter will not be shown.
     * @default false
     */
-  var disableCancelFilterButton: js.UndefOr[Boolean] = js.undefined
+  var disableCancelFilterButton: js.UndefOr[Boolean] = js.native
   /**
     * only flag currently available is caseSensitive, set to false if you don't want case sensitive matching
     */
-  var flags: js.UndefOr[IFilterFlags] = js.undefined
+  var flags: js.UndefOr[IFilterFlags] = js.native
   /**
     * set this to true if you have defined a custom function in condition,
     * and your custom function doesn't require a term
     * (so it can run even when the term is null)
     */
-  var noTerm: js.UndefOr[Boolean] = js.undefined
+  var noTerm: js.UndefOr[Boolean] = js.native
   /** String that will be set to the <input>.placeholder attribute */
-  var placeholder: js.UndefOr[String] = js.undefined
+  var placeholder: js.UndefOr[String] = js.native
   /**
     * options in the format [{ value: 1, label: 'male' }]. No i18n filter is provided, you need to perform the i18n
     * on the values before you provide them
     */
-  var selectOptions: js.UndefOr[js.Array[ISelectOption]] = js.undefined
+  var selectOptions: js.UndefOr[js.Array[ISelectOption]] = js.native
   /**
     * If set, the filter field will be pre-populated with this value
     */
-  var term: js.UndefOr[String] = js.undefined
+  var term: js.UndefOr[String] = js.native
   /**
     * defaults to uiGridConstants.filter.INPUT, which gives a text box. If set to uiGridConstants.filter.SELECT
     * then a select box will be shown with options selectOptions
     */
-  var `type`: js.UndefOr[Double | String] = js.undefined
+  var `type`: js.UndefOr[Double | String] = js.native
 }
 
 object IFilterOptions {
   @scala.inline
-  def apply(
-    ariaLabel: String = null,
-    condition: Double | (js.Function4[
-      /* searchTerm */ String, 
-      /* cellValue */ js.Any, 
-      /* row */ IGridRow, 
-      /* column */ IGridColumn, 
-      Boolean
-    ]) = null,
-    disableCancelFilterButton: js.UndefOr[Boolean] = js.undefined,
-    flags: IFilterFlags = null,
-    noTerm: js.UndefOr[Boolean] = js.undefined,
-    placeholder: String = null,
-    selectOptions: js.Array[ISelectOption] = null,
-    term: String = null,
-    `type`: Double | String = null
-  ): IFilterOptions = {
+  def apply(): IFilterOptions = {
     val __obj = js.Dynamic.literal()
-    if (ariaLabel != null) __obj.updateDynamic("ariaLabel")(ariaLabel.asInstanceOf[js.Any])
-    if (condition != null) __obj.updateDynamic("condition")(condition.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableCancelFilterButton)) __obj.updateDynamic("disableCancelFilterButton")(disableCancelFilterButton.asInstanceOf[js.Any])
-    if (flags != null) __obj.updateDynamic("flags")(flags.asInstanceOf[js.Any])
-    if (!js.isUndefined(noTerm)) __obj.updateDynamic("noTerm")(noTerm.asInstanceOf[js.Any])
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (selectOptions != null) __obj.updateDynamic("selectOptions")(selectOptions.asInstanceOf[js.Any])
-    if (term != null) __obj.updateDynamic("term")(term.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFilterOptions]
   }
+  @scala.inline
+  implicit class IFilterOptionsOps[Self <: IFilterOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAriaLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAriaLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConditionFunction4(
+      value: (/* searchTerm */ String, /* cellValue */ js.Any, /* row */ IGridRow, /* column */ IGridColumn) => Boolean
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withCondition(
+      value: Double | (js.Function4[
+          /* searchTerm */ String, 
+          /* cellValue */ js.Any, 
+          /* row */ IGridRow, 
+          /* column */ IGridColumn, 
+          Boolean
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableCancelFilterButton(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableCancelFilterButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableCancelFilterButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableCancelFilterButton")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlags(value: IFilterFlags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoTerm(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noTerm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoTerm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noTerm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectOptions(value: js.Array[ISelectOption]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerm(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("term")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("term")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -19,24 +19,22 @@ trait LoggingDriverType extends js.Object
 
 object LoggingDriverType {
   @scala.inline
-  def awslogs: typingsSlinky.dockerode.dockerodeStrings.awslogs = this.cast("awslogs")
+  def awslogs: typingsSlinky.dockerode.dockerodeStrings.awslogs = "awslogs".asInstanceOf[typingsSlinky.dockerode.dockerodeStrings.awslogs]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def etwlogs: typingsSlinky.dockerode.dockerodeStrings.etwlogs = "etwlogs".asInstanceOf[typingsSlinky.dockerode.dockerodeStrings.etwlogs]
   @scala.inline
-  def etwlogs: typingsSlinky.dockerode.dockerodeStrings.etwlogs = this.cast("etwlogs")
+  def fluentd: typingsSlinky.dockerode.dockerodeStrings.fluentd = "fluentd".asInstanceOf[typingsSlinky.dockerode.dockerodeStrings.fluentd]
   @scala.inline
-  def fluentd: typingsSlinky.dockerode.dockerodeStrings.fluentd = this.cast("fluentd")
+  def gelf: typingsSlinky.dockerode.dockerodeStrings.gelf = "gelf".asInstanceOf[typingsSlinky.dockerode.dockerodeStrings.gelf]
   @scala.inline
-  def gelf: typingsSlinky.dockerode.dockerodeStrings.gelf = this.cast("gelf")
+  def journald: typingsSlinky.dockerode.dockerodeStrings.journald = "journald".asInstanceOf[typingsSlinky.dockerode.dockerodeStrings.journald]
   @scala.inline
-  def journald: typingsSlinky.dockerode.dockerodeStrings.journald = this.cast("journald")
+  def `json-file`: typingsSlinky.dockerode.dockerodeStrings.`json-file` = "json-file".asInstanceOf[typingsSlinky.dockerode.dockerodeStrings.`json-file`]
   @scala.inline
-  def `json-file`: typingsSlinky.dockerode.dockerodeStrings.`json-file` = this.cast("json-file")
+  def none: typingsSlinky.dockerode.dockerodeStrings.none = "none".asInstanceOf[typingsSlinky.dockerode.dockerodeStrings.none]
   @scala.inline
-  def none: typingsSlinky.dockerode.dockerodeStrings.none = this.cast("none")
+  def splunk: typingsSlinky.dockerode.dockerodeStrings.splunk = "splunk".asInstanceOf[typingsSlinky.dockerode.dockerodeStrings.splunk]
   @scala.inline
-  def splunk: typingsSlinky.dockerode.dockerodeStrings.splunk = this.cast("splunk")
-  @scala.inline
-  def syslog: typingsSlinky.dockerode.dockerodeStrings.syslog = this.cast("syslog")
+  def syslog: typingsSlinky.dockerode.dockerodeStrings.syslog = "syslog".asInstanceOf[typingsSlinky.dockerode.dockerodeStrings.syslog]
 }
 

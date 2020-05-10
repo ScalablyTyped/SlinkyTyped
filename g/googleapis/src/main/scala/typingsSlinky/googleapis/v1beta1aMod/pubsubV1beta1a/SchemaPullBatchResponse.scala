@@ -20,10 +20,29 @@ trait SchemaPullBatchResponse extends js.Object {
 
 object SchemaPullBatchResponse {
   @scala.inline
-  def apply(pullResponses: js.Array[SchemaPullResponse] = null): SchemaPullBatchResponse = {
+  def apply(): SchemaPullBatchResponse = {
     val __obj = js.Dynamic.literal()
-    if (pullResponses != null) __obj.updateDynamic("pullResponses")(pullResponses.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPullBatchResponse]
   }
+  @scala.inline
+  implicit class SchemaPullBatchResponseOps[Self <: SchemaPullBatchResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPullResponses(value: js.Array[SchemaPullResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pullResponses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPullResponses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pullResponses")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

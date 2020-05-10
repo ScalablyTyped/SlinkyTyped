@@ -18,10 +18,29 @@ trait SchemaGoogleCloudDialogflowV2SentimentAnalysisResult extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2SentimentAnalysisResult {
   @scala.inline
-  def apply(queryTextSentiment: SchemaGoogleCloudDialogflowV2Sentiment = null): SchemaGoogleCloudDialogflowV2SentimentAnalysisResult = {
+  def apply(): SchemaGoogleCloudDialogflowV2SentimentAnalysisResult = {
     val __obj = js.Dynamic.literal()
-    if (queryTextSentiment != null) __obj.updateDynamic("queryTextSentiment")(queryTextSentiment.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2SentimentAnalysisResult]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudDialogflowV2SentimentAnalysisResultOps[Self <: SchemaGoogleCloudDialogflowV2SentimentAnalysisResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQueryTextSentiment(value: SchemaGoogleCloudDialogflowV2Sentiment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryTextSentiment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryTextSentiment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryTextSentiment")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

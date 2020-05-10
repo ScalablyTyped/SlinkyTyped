@@ -41,7 +41,7 @@ object Tabs extends js.Object {
   /**
     * Init Tabs
     */
-  def init(els: typingsSlinky.std.Element): Tabs = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialTabsOptions): Tabs = js.native
+  def init(els: Element): Tabs = js.native
+  def init(els: Element, options: PartialTabsOptions): Tabs = js.native
 }
 

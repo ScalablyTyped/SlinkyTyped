@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.navermaps.naver.maps.Bounds because Already inherited */ @JSGlobal("naver.maps.LatLngBounds")
 @js.native
 class LatLngBounds protected () extends PointBounds {

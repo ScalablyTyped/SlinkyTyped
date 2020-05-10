@@ -18,22 +18,20 @@ trait KernelStatus extends js.Object
 
 object KernelStatus {
   @scala.inline
-  def busy: typingsSlinky.azdata.azdataStrings.busy = this.cast("busy")
+  def busy: typingsSlinky.azdata.azdataStrings.busy = "busy".asInstanceOf[typingsSlinky.azdata.azdataStrings.busy]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def connected: typingsSlinky.azdata.azdataStrings.connected = "connected".asInstanceOf[typingsSlinky.azdata.azdataStrings.connected]
   @scala.inline
-  def connected: typingsSlinky.azdata.azdataStrings.connected = this.cast("connected")
+  def dead: typingsSlinky.azdata.azdataStrings.dead = "dead".asInstanceOf[typingsSlinky.azdata.azdataStrings.dead]
   @scala.inline
-  def dead: typingsSlinky.azdata.azdataStrings.dead = this.cast("dead")
+  def idle: typingsSlinky.azdata.azdataStrings.idle = "idle".asInstanceOf[typingsSlinky.azdata.azdataStrings.idle]
   @scala.inline
-  def idle: typingsSlinky.azdata.azdataStrings.idle = this.cast("idle")
+  def reconnecting: typingsSlinky.azdata.azdataStrings.reconnecting = "reconnecting".asInstanceOf[typingsSlinky.azdata.azdataStrings.reconnecting]
   @scala.inline
-  def reconnecting: typingsSlinky.azdata.azdataStrings.reconnecting = this.cast("reconnecting")
+  def restarting: typingsSlinky.azdata.azdataStrings.restarting = "restarting".asInstanceOf[typingsSlinky.azdata.azdataStrings.restarting]
   @scala.inline
-  def restarting: typingsSlinky.azdata.azdataStrings.restarting = this.cast("restarting")
+  def starting: typingsSlinky.azdata.azdataStrings.starting = "starting".asInstanceOf[typingsSlinky.azdata.azdataStrings.starting]
   @scala.inline
-  def starting: typingsSlinky.azdata.azdataStrings.starting = this.cast("starting")
-  @scala.inline
-  def unknown: typingsSlinky.azdata.azdataStrings.unknown = this.cast("unknown")
+  def unknown: typingsSlinky.azdata.azdataStrings.unknown = "unknown".asInstanceOf[typingsSlinky.azdata.azdataStrings.unknown]
 }
 

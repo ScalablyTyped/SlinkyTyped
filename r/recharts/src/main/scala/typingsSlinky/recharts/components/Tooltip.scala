@@ -1,12 +1,10 @@
 package typingsSlinky.recharts.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.recharts.mod.AllowEscapeViewBox
 import typingsSlinky.recharts.mod.AnimationEasingType
 import typingsSlinky.recharts.mod.ContentRenderer
@@ -18,77 +16,86 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tooltip
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.Tooltip] {
+object Tooltip {
   @JSImport("recharts", "Tooltip")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    allowEscapeViewBox: AllowEscapeViewBox = null,
-    animationBegin: Int | Double = null,
-    animationDuration: Int | Double = null,
-    animationEasing: AnimationEasingType = null,
-    animationId: Int | Double = null,
-    content: ReactElement | ReactComponentClass[_] | ContentRenderer[TooltipProps] = null,
-    contentStyle: js.Object = null,
-    coordinate: Coordinate = null,
-    cursor: Boolean | js.Object | ReactElement | ReactComponentClass[_] = null,
-    filterNull: js.UndefOr[Boolean] = js.undefined,
-    formatter: (/* value */ String | Double | (js.Array[String | Double]), /* name */ String, /* entry */ TooltipPayload, /* index */ Double) => TagMod[Any] = null,
-    isAnimationActive: js.UndefOr[Boolean] = js.undefined,
-    isUpdateAnimationActive: js.UndefOr[Boolean] = js.undefined,
-    itemSorter: (TooltipPayload, TooltipPayload) => Double = null,
-    itemStyle: js.Object = null,
-    label: String | Double = null,
-    labelFormatter: /* label */ String | Double => TagMod[Any] = null,
-    labelStyle: js.Object = null,
-    offset: Int | Double = null,
-    onAnimationEnd: /* repeated */ js.Any => Unit = null,
-    onAnimationStart: /* repeated */ js.Any => Unit = null,
-    payload: js.Array[TooltipPayload] = null,
-    position: Coordinate = null,
-    separator: String = null,
-    useTranslate3d: js.UndefOr[Boolean] = js.undefined,
-    viewBox: ViewBox = null,
-    wrapperStyle: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.Tooltip] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (allowEscapeViewBox != null) __obj.updateDynamic("allowEscapeViewBox")(allowEscapeViewBox.asInstanceOf[js.Any])
-    if (animationBegin != null) __obj.updateDynamic("animationBegin")(animationBegin.asInstanceOf[js.Any])
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
-    if (animationId != null) __obj.updateDynamic("animationId")(animationId.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (contentStyle != null) __obj.updateDynamic("contentStyle")(contentStyle.asInstanceOf[js.Any])
-    if (coordinate != null) __obj.updateDynamic("coordinate")(coordinate.asInstanceOf[js.Any])
-    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
-    if (!js.isUndefined(filterNull)) __obj.updateDynamic("filterNull")(filterNull.asInstanceOf[js.Any])
-    if (formatter != null) __obj.updateDynamic("formatter")(js.Any.fromFunction4(formatter))
-    if (!js.isUndefined(isAnimationActive)) __obj.updateDynamic("isAnimationActive")(isAnimationActive.asInstanceOf[js.Any])
-    if (!js.isUndefined(isUpdateAnimationActive)) __obj.updateDynamic("isUpdateAnimationActive")(isUpdateAnimationActive.asInstanceOf[js.Any])
-    if (itemSorter != null) __obj.updateDynamic("itemSorter")(js.Any.fromFunction2(itemSorter))
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (labelFormatter != null) __obj.updateDynamic("labelFormatter")(js.Any.fromFunction1(labelFormatter))
-    if (labelStyle != null) __obj.updateDynamic("labelStyle")(labelStyle.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
-    if (onAnimationStart != null) __obj.updateDynamic("onAnimationStart")(js.Any.fromFunction1(onAnimationStart))
-    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
-    if (!js.isUndefined(useTranslate3d)) __obj.updateDynamic("useTranslate3d")(useTranslate3d.asInstanceOf[js.Any])
-    if (viewBox != null) __obj.updateDynamic("viewBox")(viewBox.asInstanceOf[js.Any])
-    if (wrapperStyle != null) __obj.updateDynamic("wrapperStyle")(wrapperStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.recharts.mod.Tooltip] {
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def allowEscapeViewBox(value: AllowEscapeViewBox): this.type = set("allowEscapeViewBox", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animationBegin(value: Double): this.type = set("animationBegin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animationDuration(value: Double): this.type = set("animationDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animationEasing(value: AnimationEasingType): this.type = set("animationEasing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animationId(value: Double): this.type = set("animationId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentFunction1(value: TooltipProps => TagMod[Any]): this.type = set("content", js.Any.fromFunction1(value))
+    @scala.inline
+    def contentFunctionComponent(value: ReactComponentClass[_]): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(value: ReactElement | ReactComponentClass[_] | ContentRenderer[TooltipProps]): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentStyle(value: js.Object): this.type = set("contentStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def coordinate(value: Coordinate): this.type = set("coordinate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cursorReactElement(value: ReactElement): this.type = set("cursor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cursorFunctionComponent(value: ReactComponentClass[_]): this.type = set("cursor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cursor(value: Boolean | js.Object | ReactElement | ReactComponentClass[_]): this.type = set("cursor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterNull(value: Boolean): this.type = set("filterNull", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formatter(
+      value: (/* value */ String | Double | (js.Array[String | Double]), /* name */ String, /* entry */ TooltipPayload, /* index */ Double) => TagMod[Any]
+    ): this.type = set("formatter", js.Any.fromFunction4(value))
+    @scala.inline
+    def isAnimationActive(value: Boolean): this.type = set("isAnimationActive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isUpdateAnimationActive(value: Boolean): this.type = set("isUpdateAnimationActive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemSorter(value: (TooltipPayload, TooltipPayload) => Double): this.type = set("itemSorter", js.Any.fromFunction2(value))
+    @scala.inline
+    def itemStyle(value: js.Object): this.type = set("itemStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String | Double): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFormatter(value: /* label */ String | Double => TagMod[Any]): this.type = set("labelFormatter", js.Any.fromFunction1(value))
+    @scala.inline
+    def labelStyle(value: js.Object): this.type = set("labelStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offset(value: Double): this.type = set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAnimationEnd(value: /* repeated */ js.Any => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onAnimationStart(value: /* repeated */ js.Any => Unit): this.type = set("onAnimationStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def payload(value: js.Array[TooltipPayload]): this.type = set("payload", value.asInstanceOf[js.Any])
+    @scala.inline
+    def position(value: Coordinate): this.type = set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def separator(value: String): this.type = set("separator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useTranslate3d(value: Boolean): this.type = set("useTranslate3d", value.asInstanceOf[js.Any])
+    @scala.inline
+    def viewBox(value: ViewBox): this.type = set("viewBox", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapperStyle(value: js.Object): this.type = set("wrapperStyle", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.mod.Tooltip] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.mod.Tooltip](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TooltipProps
+  
+  def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Tooltip.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

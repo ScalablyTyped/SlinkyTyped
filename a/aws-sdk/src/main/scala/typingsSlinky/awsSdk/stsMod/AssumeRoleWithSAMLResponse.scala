@@ -42,26 +42,113 @@ trait AssumeRoleWithSAMLResponse extends js.Object {
 
 object AssumeRoleWithSAMLResponse {
   @scala.inline
-  def apply(
-    AssumedRoleUser: AssumedRoleUser = null,
-    Audience: Audience = null,
-    Credentials: Credentials = null,
-    Issuer: Issuer = null,
-    NameQualifier: NameQualifier = null,
-    PackedPolicySize: Int | Double = null,
-    Subject: Subject = null,
-    SubjectType: SubjectType = null
-  ): AssumeRoleWithSAMLResponse = {
+  def apply(): AssumeRoleWithSAMLResponse = {
     val __obj = js.Dynamic.literal()
-    if (AssumedRoleUser != null) __obj.updateDynamic("AssumedRoleUser")(AssumedRoleUser.asInstanceOf[js.Any])
-    if (Audience != null) __obj.updateDynamic("Audience")(Audience.asInstanceOf[js.Any])
-    if (Credentials != null) __obj.updateDynamic("Credentials")(Credentials.asInstanceOf[js.Any])
-    if (Issuer != null) __obj.updateDynamic("Issuer")(Issuer.asInstanceOf[js.Any])
-    if (NameQualifier != null) __obj.updateDynamic("NameQualifier")(NameQualifier.asInstanceOf[js.Any])
-    if (PackedPolicySize != null) __obj.updateDynamic("PackedPolicySize")(PackedPolicySize.asInstanceOf[js.Any])
-    if (Subject != null) __obj.updateDynamic("Subject")(Subject.asInstanceOf[js.Any])
-    if (SubjectType != null) __obj.updateDynamic("SubjectType")(SubjectType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssumeRoleWithSAMLResponse]
   }
+  @scala.inline
+  implicit class AssumeRoleWithSAMLResponseOps[Self <: AssumeRoleWithSAMLResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssumedRoleUser(value: AssumedRoleUser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssumedRoleUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssumedRoleUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssumedRoleUser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAudience(value: Audience): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Audience")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudience: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Audience")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCredentials(value: Credentials): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Credentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCredentials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Credentials")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIssuer(value: Issuer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Issuer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIssuer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Issuer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNameQualifier(value: NameQualifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NameQualifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNameQualifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NameQualifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPackedPolicySize(value: nonNegativeIntegerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PackedPolicySize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackedPolicySize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PackedPolicySize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubject(value: Subject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubjectType(value: SubjectType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubjectType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubjectType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubjectType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

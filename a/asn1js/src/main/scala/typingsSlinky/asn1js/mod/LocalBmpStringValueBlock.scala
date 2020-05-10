@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.asn1js.mod.ILocalHexBlock because var conflicts: isHexOnly, valueHex. Inlined 
 - typingsSlinky.asn1js.mod.LocalHexBlock because Inheritance from two classes. Inlined isHexOnly, valueHex, fromBER, toBER, toBER, toJSON */ @JSImport("asn1js", "LocalBmpStringValueBlock")
 @js.native
@@ -12,7 +12,7 @@ class LocalBmpStringValueBlock () extends LocalBaseBlock {
   def this(params: LocalBmpStringValueBlockParams) = this()
   var isHexOnly: scala.Boolean = js.native
   var value: String = js.native
-  var valueHex: scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  var valueHex: js.typedarray.ArrayBuffer = js.native
   /**
     * Base function for converting block from BER encoded array of bytes
     * 
@@ -23,7 +23,7 @@ class LocalBmpStringValueBlock () extends LocalBaseBlock {
     * 
     * @memberOf LocalHexBlockMixin
     */
-  def fromBER(inputBuffer: scala.scalajs.js.typedarray.ArrayBuffer, inputOffset: Double, inputLength: Double): Double = js.native
+  def fromBER(inputBuffer: js.typedarray.ArrayBuffer, inputOffset: Double, inputLength: Double): Double = js.native
   /**
     * Encoding of current ASN.1 block into ASN.1 encoded array (BER rules)
     * 
@@ -32,7 +32,7 @@ class LocalBmpStringValueBlock () extends LocalBaseBlock {
     * 
     * @memberOf LocalHexBlockMixin
     */
-  def toBER(): scala.scalajs.js.typedarray.ArrayBuffer = js.native
-  def toBER(sizeOnly: scala.Boolean): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def toBER(): js.typedarray.ArrayBuffer = js.native
+  def toBER(sizeOnly: scala.Boolean): js.typedarray.ArrayBuffer = js.native
 }
 

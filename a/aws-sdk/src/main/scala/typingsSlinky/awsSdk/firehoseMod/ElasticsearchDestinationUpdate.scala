@@ -54,32 +54,149 @@ trait ElasticsearchDestinationUpdate extends js.Object {
 
 object ElasticsearchDestinationUpdate {
   @scala.inline
-  def apply(
-    BufferingHints: ElasticsearchBufferingHints = null,
-    CloudWatchLoggingOptions: CloudWatchLoggingOptions = null,
-    ClusterEndpoint: ElasticsearchClusterEndpoint = null,
-    DomainARN: ElasticsearchDomainARN = null,
-    IndexName: ElasticsearchIndexName = null,
-    IndexRotationPeriod: ElasticsearchIndexRotationPeriod = null,
-    ProcessingConfiguration: ProcessingConfiguration = null,
-    RetryOptions: ElasticsearchRetryOptions = null,
-    RoleARN: RoleARN = null,
-    S3Update: S3DestinationUpdate = null,
-    TypeName: ElasticsearchTypeName = null
-  ): ElasticsearchDestinationUpdate = {
+  def apply(): ElasticsearchDestinationUpdate = {
     val __obj = js.Dynamic.literal()
-    if (BufferingHints != null) __obj.updateDynamic("BufferingHints")(BufferingHints.asInstanceOf[js.Any])
-    if (CloudWatchLoggingOptions != null) __obj.updateDynamic("CloudWatchLoggingOptions")(CloudWatchLoggingOptions.asInstanceOf[js.Any])
-    if (ClusterEndpoint != null) __obj.updateDynamic("ClusterEndpoint")(ClusterEndpoint.asInstanceOf[js.Any])
-    if (DomainARN != null) __obj.updateDynamic("DomainARN")(DomainARN.asInstanceOf[js.Any])
-    if (IndexName != null) __obj.updateDynamic("IndexName")(IndexName.asInstanceOf[js.Any])
-    if (IndexRotationPeriod != null) __obj.updateDynamic("IndexRotationPeriod")(IndexRotationPeriod.asInstanceOf[js.Any])
-    if (ProcessingConfiguration != null) __obj.updateDynamic("ProcessingConfiguration")(ProcessingConfiguration.asInstanceOf[js.Any])
-    if (RetryOptions != null) __obj.updateDynamic("RetryOptions")(RetryOptions.asInstanceOf[js.Any])
-    if (RoleARN != null) __obj.updateDynamic("RoleARN")(RoleARN.asInstanceOf[js.Any])
-    if (S3Update != null) __obj.updateDynamic("S3Update")(S3Update.asInstanceOf[js.Any])
-    if (TypeName != null) __obj.updateDynamic("TypeName")(TypeName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElasticsearchDestinationUpdate]
   }
+  @scala.inline
+  implicit class ElasticsearchDestinationUpdateOps[Self <: ElasticsearchDestinationUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBufferingHints(value: ElasticsearchBufferingHints): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BufferingHints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBufferingHints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BufferingHints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudWatchLoggingOptions(value: CloudWatchLoggingOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLoggingOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudWatchLoggingOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLoggingOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterEndpoint(value: ElasticsearchClusterEndpoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterEndpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterEndpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomainARN(value: ElasticsearchDomainARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndexName(value: ElasticsearchIndexName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndexRotationPeriod(value: ElasticsearchIndexRotationPeriod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexRotationPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexRotationPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexRotationPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProcessingConfiguration(value: ProcessingConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessingConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProcessingConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessingConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetryOptions(value: ElasticsearchRetryOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RetryOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetryOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RetryOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleARN(value: RoleARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3Update(value: S3DestinationUpdate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Update")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3Update: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Update")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypeName(value: ElasticsearchTypeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

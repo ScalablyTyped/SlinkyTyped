@@ -25,12 +25,13 @@ import scala.scalajs.js.annotation._
   *         .addItem("radio button two title", "radio_two_value", true)
   *         .addItem("radio button three title", "radio_three_value", false);
   */
+@js.native
 trait SelectionInput extends js.Object {
-  def addItem(text: js.Any, value: js.Any, selected: Boolean): SelectionInput
-  def setFieldName(fieldName: String): SelectionInput
-  def setOnChangeAction(action: Action): SelectionInput
-  def setTitle(title: String): SelectionInput
-  def setType(`type`: SelectionInputType): SelectionInput
+  def addItem(text: js.Any, value: js.Any, selected: Boolean): SelectionInput = js.native
+  def setFieldName(fieldName: String): SelectionInput = js.native
+  def setOnChangeAction(action: Action): SelectionInput = js.native
+  def setTitle(title: String): SelectionInput = js.native
+  def setType(`type`: SelectionInputType): SelectionInput = js.native
 }
 
 object SelectionInput {
@@ -43,8 +44,45 @@ object SelectionInput {
     setType: SelectionInputType => SelectionInput
   ): SelectionInput = {
     val __obj = js.Dynamic.literal(addItem = js.Any.fromFunction3(addItem), setFieldName = js.Any.fromFunction1(setFieldName), setOnChangeAction = js.Any.fromFunction1(setOnChangeAction), setTitle = js.Any.fromFunction1(setTitle), setType = js.Any.fromFunction1(setType))
-  
     __obj.asInstanceOf[SelectionInput]
   }
+  @scala.inline
+  implicit class SelectionInputOps[Self <: SelectionInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddItem(value: (js.Any, js.Any, Boolean) => SelectionInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addItem")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSetFieldName(value: String => SelectionInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFieldName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetOnChangeAction(value: Action => SelectionInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOnChangeAction")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetTitle(value: String => SelectionInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTitle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetType(value: SelectionInputType => SelectionInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setType")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

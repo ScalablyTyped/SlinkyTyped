@@ -90,50 +90,257 @@ trait TraceSummary extends js.Object {
 
 object TraceSummary {
   @scala.inline
-  def apply(
-    Annotations: Annotations = null,
-    AvailabilityZones: TraceAvailabilityZones = null,
-    Duration: Int | scala.Double = null,
-    EntryPoint: ServiceId = null,
-    ErrorRootCauses: ErrorRootCauses = null,
-    FaultRootCauses: FaultRootCauses = null,
-    HasError: js.UndefOr[scala.Boolean] = js.undefined,
-    HasFault: js.UndefOr[scala.Boolean] = js.undefined,
-    HasThrottle: js.UndefOr[scala.Boolean] = js.undefined,
-    Http: Http = null,
-    Id: TraceId = null,
-    InstanceIds: TraceInstanceIds = null,
-    IsPartial: js.UndefOr[scala.Boolean] = js.undefined,
-    MatchedEventTime: js.Date = null,
-    ResourceARNs: TraceResourceARNs = null,
-    ResponseTime: Int | scala.Double = null,
-    ResponseTimeRootCauses: ResponseTimeRootCauses = null,
-    Revision: Int | scala.Double = null,
-    ServiceIds: ServiceIds = null,
-    Users: TraceUsers = null
-  ): TraceSummary = {
+  def apply(): TraceSummary = {
     val __obj = js.Dynamic.literal()
-    if (Annotations != null) __obj.updateDynamic("Annotations")(Annotations.asInstanceOf[js.Any])
-    if (AvailabilityZones != null) __obj.updateDynamic("AvailabilityZones")(AvailabilityZones.asInstanceOf[js.Any])
-    if (Duration != null) __obj.updateDynamic("Duration")(Duration.asInstanceOf[js.Any])
-    if (EntryPoint != null) __obj.updateDynamic("EntryPoint")(EntryPoint.asInstanceOf[js.Any])
-    if (ErrorRootCauses != null) __obj.updateDynamic("ErrorRootCauses")(ErrorRootCauses.asInstanceOf[js.Any])
-    if (FaultRootCauses != null) __obj.updateDynamic("FaultRootCauses")(FaultRootCauses.asInstanceOf[js.Any])
-    if (!js.isUndefined(HasError)) __obj.updateDynamic("HasError")(HasError.asInstanceOf[js.Any])
-    if (!js.isUndefined(HasFault)) __obj.updateDynamic("HasFault")(HasFault.asInstanceOf[js.Any])
-    if (!js.isUndefined(HasThrottle)) __obj.updateDynamic("HasThrottle")(HasThrottle.asInstanceOf[js.Any])
-    if (Http != null) __obj.updateDynamic("Http")(Http.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (InstanceIds != null) __obj.updateDynamic("InstanceIds")(InstanceIds.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsPartial)) __obj.updateDynamic("IsPartial")(IsPartial.asInstanceOf[js.Any])
-    if (MatchedEventTime != null) __obj.updateDynamic("MatchedEventTime")(MatchedEventTime.asInstanceOf[js.Any])
-    if (ResourceARNs != null) __obj.updateDynamic("ResourceARNs")(ResourceARNs.asInstanceOf[js.Any])
-    if (ResponseTime != null) __obj.updateDynamic("ResponseTime")(ResponseTime.asInstanceOf[js.Any])
-    if (ResponseTimeRootCauses != null) __obj.updateDynamic("ResponseTimeRootCauses")(ResponseTimeRootCauses.asInstanceOf[js.Any])
-    if (Revision != null) __obj.updateDynamic("Revision")(Revision.asInstanceOf[js.Any])
-    if (ServiceIds != null) __obj.updateDynamic("ServiceIds")(ServiceIds.asInstanceOf[js.Any])
-    if (Users != null) __obj.updateDynamic("Users")(Users.asInstanceOf[js.Any])
     __obj.asInstanceOf[TraceSummary]
   }
+  @scala.inline
+  implicit class TraceSummaryOps[Self <: TraceSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnnotations(value: Annotations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Annotations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnnotations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Annotations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailabilityZones(value: TraceAvailabilityZones): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZones")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZones: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZones")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: NullableDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntryPoint(value: ServiceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntryPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntryPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntryPoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorRootCauses(value: ErrorRootCauses): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorRootCauses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorRootCauses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorRootCauses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFaultRootCauses(value: FaultRootCauses): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FaultRootCauses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFaultRootCauses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FaultRootCauses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasError(value: NullableBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HasError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HasError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasFault(value: NullableBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HasFault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasFault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HasFault")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasThrottle(value: NullableBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HasThrottle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasThrottle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HasThrottle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttp(value: Http): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Http")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Http")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: TraceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceIds(value: TraceInstanceIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsPartial(value: NullableBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsPartial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsPartial: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsPartial")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatchedEventTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchedEventTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatchedEventTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchedEventTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceARNs(value: TraceResourceARNs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceARNs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceARNs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceARNs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseTime(value: NullableDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseTimeRootCauses(value: ResponseTimeRootCauses): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseTimeRootCauses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseTimeRootCauses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseTimeRootCauses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevision(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Revision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Revision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceIds(value: ServiceIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsers(value: TraceUsers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Users")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Users")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

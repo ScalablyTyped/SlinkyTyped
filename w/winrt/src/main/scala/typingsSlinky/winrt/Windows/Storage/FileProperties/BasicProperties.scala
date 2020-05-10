@@ -8,12 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class BasicProperties ()
   extends IBasicProperties
-     with IStorageItemExtraProperties {
-  /* CompleteClass */
-  override var dateModified: js.Date = js.native
-  /* CompleteClass */
-  override var itemDate: js.Date = js.native
-  /* CompleteClass */
-  override var size: Double = js.native
-}
+     with IStorageItemExtraProperties
 

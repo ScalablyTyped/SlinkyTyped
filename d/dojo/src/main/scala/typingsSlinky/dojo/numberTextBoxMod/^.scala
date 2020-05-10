@@ -2,9 +2,9 @@ package typingsSlinky.dojo.numberTextBoxMod
 
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.TypeofNumberTextBox
 import typingsSlinky.dojo.dijit.form.NumberTextBox
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

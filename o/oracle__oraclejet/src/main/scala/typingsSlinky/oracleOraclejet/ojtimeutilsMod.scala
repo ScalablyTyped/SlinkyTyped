@@ -1,6 +1,5 @@
 package typingsSlinky.oracleOraclejet
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +9,13 @@ import scala.scalajs.js.annotation._
 object ojtimeutilsMod extends js.Object {
   def getDate(pos: Double, rangeStartTime: String, rangeEndTime: String, rangeWidth: Double): Double = js.native
   def getDate(pos: Double, rangeStartTime: String, rangeEndTime: Double, rangeWidth: Double): Double = js.native
-  def getDate(pos: Double, rangeStartTime: String, rangeEndTime: Date, rangeWidth: Double): Double = js.native
+  def getDate(pos: Double, rangeStartTime: String, rangeEndTime: js.Date, rangeWidth: Double): Double = js.native
   def getDate(pos: Double, rangeStartTime: Double, rangeEndTime: String, rangeWidth: Double): Double = js.native
   def getDate(pos: Double, rangeStartTime: Double, rangeEndTime: Double, rangeWidth: Double): Double = js.native
-  def getDate(pos: Double, rangeStartTime: Double, rangeEndTime: Date, rangeWidth: Double): Double = js.native
-  def getDate(pos: Double, rangeStartTime: Date, rangeEndTime: String, rangeWidth: Double): Double = js.native
-  def getDate(pos: Double, rangeStartTime: Date, rangeEndTime: Double, rangeWidth: Double): Double = js.native
-  def getDate(pos: Double, rangeStartTime: Date, rangeEndTime: Date, rangeWidth: Double): Double = js.native
+  def getDate(pos: Double, rangeStartTime: Double, rangeEndTime: js.Date, rangeWidth: Double): Double = js.native
+  def getDate(pos: Double, rangeStartTime: js.Date, rangeEndTime: String, rangeWidth: Double): Double = js.native
+  def getDate(pos: Double, rangeStartTime: js.Date, rangeEndTime: Double, rangeWidth: Double): Double = js.native
+  def getDate(pos: Double, rangeStartTime: js.Date, rangeEndTime: js.Date, rangeWidth: Double): Double = js.native
   def getLength(
     startTime: js.Date | String | Double,
     endTime: js.Date | String | Double,

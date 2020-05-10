@@ -7,51 +7,87 @@ import scala.scalajs.js.annotation._
 /**
   * Possible or likely findings and diagnoses
   */
+@js.native
 trait ClinicalImpressionFinding extends BackboneElement {
   /**
     * Contains extended information for property 'basis'.
     */
-  var _basis: js.UndefOr[Element] = js.undefined
+  var _basis: js.UndefOr[Element] = js.native
   /**
     * Which investigations support finding
     */
-  var basis: js.UndefOr[String] = js.undefined
+  var basis: js.UndefOr[String] = js.native
   /**
     * What was found
     */
-  var itemCodeableConcept: js.UndefOr[CodeableConcept] = js.undefined
+  var itemCodeableConcept: js.UndefOr[CodeableConcept] = js.native
   /**
     * What was found
     */
-  var itemReference: js.UndefOr[Reference] = js.undefined
+  var itemReference: js.UndefOr[Reference] = js.native
 }
 
 object ClinicalImpressionFinding {
   @scala.inline
-  def apply(
-    _basis: Element = null,
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    basis: String = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    id: String = null,
-    itemCodeableConcept: CodeableConcept = null,
-    itemReference: Reference = null,
-    modifierExtension: js.Array[Extension] = null
-  ): ClinicalImpressionFinding = {
+  def apply(): ClinicalImpressionFinding = {
     val __obj = js.Dynamic.literal()
-    if (_basis != null) __obj.updateDynamic("_basis")(_basis.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (basis != null) __obj.updateDynamic("basis")(basis.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (itemCodeableConcept != null) __obj.updateDynamic("itemCodeableConcept")(itemCodeableConcept.asInstanceOf[js.Any])
-    if (itemReference != null) __obj.updateDynamic("itemReference")(itemReference.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClinicalImpressionFinding]
   }
+  @scala.inline
+  implicit class ClinicalImpressionFindingOps[Self <: ClinicalImpressionFinding] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_basis(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_basis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_basis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_basis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBasis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBasis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemCodeableConcept(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemCodeableConcept")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemCodeableConcept: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemCodeableConcept")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemReference(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemReference")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

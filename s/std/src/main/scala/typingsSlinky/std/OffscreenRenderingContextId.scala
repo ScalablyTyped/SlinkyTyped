@@ -14,14 +14,12 @@ trait OffscreenRenderingContextId extends js.Object
 
 object OffscreenRenderingContextId {
   @scala.inline
-  def `2d`: typingsSlinky.std.stdStrings.`2d` = this.cast("2d")
+  def `2d`: typingsSlinky.std.stdStrings.`2d` = "2d".asInstanceOf[typingsSlinky.std.stdStrings.`2d`]
   @scala.inline
-  def bitmaprenderer: typingsSlinky.std.stdStrings.bitmaprenderer = this.cast("bitmaprenderer")
+  def bitmaprenderer: typingsSlinky.std.stdStrings.bitmaprenderer = "bitmaprenderer".asInstanceOf[typingsSlinky.std.stdStrings.bitmaprenderer]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def webgl: typingsSlinky.std.stdStrings.webgl = "webgl".asInstanceOf[typingsSlinky.std.stdStrings.webgl]
   @scala.inline
-  def webgl: typingsSlinky.std.stdStrings.webgl = this.cast("webgl")
-  @scala.inline
-  def webgl2: typingsSlinky.std.stdStrings.webgl2 = this.cast("webgl2")
+  def webgl2: typingsSlinky.std.stdStrings.webgl2 = "webgl2".asInstanceOf[typingsSlinky.std.stdStrings.webgl2]
 }
 

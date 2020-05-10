@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AccountAdwordsLink extends js.Object {
   /** Customer ID of the AdWords account. */
-  var adwordsId: js.UndefOr[String] = js.undefined
+  var adwordsId: js.UndefOr[String] = js.native
   /**
     * Status of the link between this Merchant Center account and the AdWords account. Upon retrieval, it represents the actual status of the link and can be
     * either active if it was approved in Google AdWords or pending if it's pending approval. Upon insertion, it represents the intended status of the link.
@@ -14,16 +15,46 @@ trait AccountAdwordsLink extends js.Object {
     * remain unchanged. Re-uploading a link with deprecated status inactive is equivalent to not submitting the link at all and will delete the link if it
     * was active or cancel the link request if it was pending.
     */
-  var status: js.UndefOr[String] = js.undefined
+  var status: js.UndefOr[String] = js.native
 }
 
 object AccountAdwordsLink {
   @scala.inline
-  def apply(adwordsId: String = null, status: String = null): AccountAdwordsLink = {
+  def apply(): AccountAdwordsLink = {
     val __obj = js.Dynamic.literal()
-    if (adwordsId != null) __obj.updateDynamic("adwordsId")(adwordsId.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountAdwordsLink]
   }
+  @scala.inline
+  implicit class AccountAdwordsLinkOps[Self <: AccountAdwordsLink] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdwordsId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adwordsId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdwordsId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adwordsId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,11 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The WEBGL_compressed_texture_s3tc extension is part of the WebGL API and exposes four S3TC compressed texture formats. */
+@js.native
 trait WEBGLCompressedTextureS3tc extends js.Object {
-  val COMPRESSED_RGBA_S3TC_DXT1_EXT: GLenum
-  val COMPRESSED_RGBA_S3TC_DXT3_EXT: GLenum
-  val COMPRESSED_RGBA_S3TC_DXT5_EXT: GLenum
-  val COMPRESSED_RGB_S3TC_DXT1_EXT: GLenum
+  val COMPRESSED_RGBA_S3TC_DXT1_EXT: GLenum = js.native
+  val COMPRESSED_RGBA_S3TC_DXT3_EXT: GLenum = js.native
+  val COMPRESSED_RGBA_S3TC_DXT5_EXT: GLenum = js.native
+  val COMPRESSED_RGB_S3TC_DXT1_EXT: GLenum = js.native
 }
 
 object WEBGLCompressedTextureS3tc {
@@ -21,8 +22,39 @@ object WEBGLCompressedTextureS3tc {
     COMPRESSED_RGB_S3TC_DXT1_EXT: GLenum
   ): WEBGLCompressedTextureS3tc = {
     val __obj = js.Dynamic.literal(COMPRESSED_RGBA_S3TC_DXT1_EXT = COMPRESSED_RGBA_S3TC_DXT1_EXT.asInstanceOf[js.Any], COMPRESSED_RGBA_S3TC_DXT3_EXT = COMPRESSED_RGBA_S3TC_DXT3_EXT.asInstanceOf[js.Any], COMPRESSED_RGBA_S3TC_DXT5_EXT = COMPRESSED_RGBA_S3TC_DXT5_EXT.asInstanceOf[js.Any], COMPRESSED_RGB_S3TC_DXT1_EXT = COMPRESSED_RGB_S3TC_DXT1_EXT.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[WEBGLCompressedTextureS3tc]
   }
+  @scala.inline
+  implicit class WEBGLCompressedTextureS3tcOps[Self <: WEBGLCompressedTextureS3tc] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCOMPRESSED_RGBA_S3TC_DXT1_EXT(value: GLenum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("COMPRESSED_RGBA_S3TC_DXT1_EXT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCOMPRESSED_RGBA_S3TC_DXT3_EXT(value: GLenum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("COMPRESSED_RGBA_S3TC_DXT3_EXT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCOMPRESSED_RGBA_S3TC_DXT5_EXT(value: GLenum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("COMPRESSED_RGBA_S3TC_DXT5_EXT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCOMPRESSED_RGB_S3TC_DXT1_EXT(value: GLenum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("COMPRESSED_RGB_S3TC_DXT1_EXT")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

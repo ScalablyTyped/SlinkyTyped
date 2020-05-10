@@ -38,9 +38,5 @@ class IkConstraint protected () extends Updatable {
     softness: Double,
     alpha: Double
   ): Unit = js.native
-  /* CompleteClass */
-  override def isActive(): Boolean = js.native
-  /* CompleteClass */
-  override def update(): Unit = js.native
 }
 

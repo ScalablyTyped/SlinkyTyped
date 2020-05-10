@@ -1,6 +1,5 @@
 package typingsSlinky.dateformat.mod
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +27,10 @@ object ^ extends js.Object {
   def apply(date: Double, mask: String): String = js.native
   def apply(date: Double, mask: String, utc: Boolean): String = js.native
   def apply(date: Double, mask: String, utc: Boolean, gmt: Boolean): String = js.native
-  def apply(date: Date): String = js.native
-  def apply(date: Date, mask: String): String = js.native
-  def apply(date: Date, mask: String, utc: Boolean): String = js.native
-  def apply(date: Date, mask: String, utc: Boolean, gmt: Boolean): String = js.native
+  def apply(date: js.Date): String = js.native
+  def apply(date: js.Date, mask: String): String = js.native
+  def apply(date: js.Date, mask: String, utc: Boolean): String = js.native
+  def apply(date: js.Date, mask: String, utc: Boolean, gmt: Boolean): String = js.native
   def apply(mask: String, utc: Boolean): String = js.native
   def apply(mask: String, utc: Boolean, gmt: Boolean): String = js.native
 }

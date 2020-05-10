@@ -13,7 +13,7 @@ object default extends js.Object {
     parentNode: Node,
     currentNodes: TCurrentItems,
     futureNodes: TFutureItems,
-    options: IDomDiffNodeMarkerOptions[typingsSlinky.std.Node]
+    options: IDomDiffNodeMarkerOptions[Node]
   ): Unit = js.native
   def apply[TCurrentItems /* <: js.Array[_] */, TFutureItems /* <: js.Array[_] */](
     parentNode: Node,

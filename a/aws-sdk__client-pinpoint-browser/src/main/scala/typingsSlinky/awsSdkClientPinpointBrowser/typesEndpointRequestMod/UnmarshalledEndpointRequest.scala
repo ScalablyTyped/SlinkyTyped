@@ -1,16 +1,6 @@
 package typingsSlinky.awsSdkClientPinpointBrowser.typesEndpointRequestMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.ADM
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.APNS
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.APNS_SANDBOX
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.APNS_VOIP
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.APNS_VOIP_SANDBOX
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.BAIDU
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.CUSTOM
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.EMAIL
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.GCM
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.SMS
 import typingsSlinky.awsSdkClientPinpointBrowser.typesEndpointDemographicMod.UnmarshalledEndpointDemographic
 import typingsSlinky.awsSdkClientPinpointBrowser.typesEndpointLocationMod.UnmarshalledEndpointLocation
 import typingsSlinky.awsSdkClientPinpointBrowser.typesEndpointUserMod.UnmarshalledEndpointUser
@@ -18,6 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UnmarshalledEndpointRequest extends EndpointRequest {
   /**
     * Custom attributes that describe the endpoint by associating a name with an array of values. For example, an attribute named "interests" might have the values ["science", "politics", "travel"]. You can use these attributes as selection criteria when you create a segment of users to engage with a messaging campaign.
@@ -25,57 +16,102 @@ trait UnmarshalledEndpointRequest extends EndpointRequest {
     * The following characters are not recommended in attribute names: # : ? \ /. The Amazon Pinpoint console does not display attributes that include these characters in the name. This limitation does not apply to attribute values.
     */
   @JSName("Attributes")
-  var Attributes_UnmarshalledEndpointRequest: js.UndefOr[StringDictionary[js.Array[String]]] = js.undefined
+  var Attributes_UnmarshalledEndpointRequest: js.UndefOr[StringDictionary[js.Array[String]]] = js.native
   /**
     * Demographic attributes for the endpoint.
     */
   @JSName("Demographic")
-  var Demographic_UnmarshalledEndpointRequest: js.UndefOr[UnmarshalledEndpointDemographic] = js.undefined
+  var Demographic_UnmarshalledEndpointRequest: js.UndefOr[UnmarshalledEndpointDemographic] = js.native
   /**
     * The endpoint location attributes.
     */
   @JSName("Location")
-  var Location_UnmarshalledEndpointRequest: js.UndefOr[UnmarshalledEndpointLocation] = js.undefined
+  var Location_UnmarshalledEndpointRequest: js.UndefOr[UnmarshalledEndpointLocation] = js.native
   /**
     * Custom metrics that your app reports to Amazon Pinpoint.
     */
   @JSName("Metrics")
-  var Metrics_UnmarshalledEndpointRequest: js.UndefOr[StringDictionary[Double]] = js.undefined
+  var Metrics_UnmarshalledEndpointRequest: js.UndefOr[StringDictionary[Double]] = js.native
   /**
     * Custom user-specific attributes that your app reports to Amazon Pinpoint.
     */
   @JSName("User")
-  var User_UnmarshalledEndpointRequest: js.UndefOr[UnmarshalledEndpointUser] = js.undefined
+  var User_UnmarshalledEndpointRequest: js.UndefOr[UnmarshalledEndpointUser] = js.native
 }
 
 object UnmarshalledEndpointRequest {
   @scala.inline
-  def apply(
-    Address: String = null,
-    Attributes: StringDictionary[js.Array[String]] = null,
-    ChannelType: GCM | APNS | APNS_SANDBOX | APNS_VOIP | APNS_VOIP_SANDBOX | ADM | SMS | EMAIL | BAIDU | CUSTOM | String = null,
-    Demographic: UnmarshalledEndpointDemographic = null,
-    EffectiveDate: String = null,
-    EndpointStatus: String = null,
-    Location: UnmarshalledEndpointLocation = null,
-    Metrics: StringDictionary[Double] = null,
-    OptOut: String = null,
-    RequestId: String = null,
-    User: UnmarshalledEndpointUser = null
-  ): UnmarshalledEndpointRequest = {
+  def apply(): UnmarshalledEndpointRequest = {
     val __obj = js.Dynamic.literal()
-    if (Address != null) __obj.updateDynamic("Address")(Address.asInstanceOf[js.Any])
-    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
-    if (ChannelType != null) __obj.updateDynamic("ChannelType")(ChannelType.asInstanceOf[js.Any])
-    if (Demographic != null) __obj.updateDynamic("Demographic")(Demographic.asInstanceOf[js.Any])
-    if (EffectiveDate != null) __obj.updateDynamic("EffectiveDate")(EffectiveDate.asInstanceOf[js.Any])
-    if (EndpointStatus != null) __obj.updateDynamic("EndpointStatus")(EndpointStatus.asInstanceOf[js.Any])
-    if (Location != null) __obj.updateDynamic("Location")(Location.asInstanceOf[js.Any])
-    if (Metrics != null) __obj.updateDynamic("Metrics")(Metrics.asInstanceOf[js.Any])
-    if (OptOut != null) __obj.updateDynamic("OptOut")(OptOut.asInstanceOf[js.Any])
-    if (RequestId != null) __obj.updateDynamic("RequestId")(RequestId.asInstanceOf[js.Any])
-    if (User != null) __obj.updateDynamic("User")(User.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledEndpointRequest]
   }
+  @scala.inline
+  implicit class UnmarshalledEndpointRequestOps[Self <: UnmarshalledEndpointRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributes(value: StringDictionary[js.Array[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDemographic(value: UnmarshalledEndpointDemographic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Demographic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDemographic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Demographic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: UnmarshalledEndpointLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetrics(value: StringDictionary[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser(value: UnmarshalledEndpointUser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("User")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("User")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

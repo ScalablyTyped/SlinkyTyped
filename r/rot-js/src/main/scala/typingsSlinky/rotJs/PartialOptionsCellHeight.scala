@@ -5,27 +5,75 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<rot-js.rot-js/lib/map/rogue.Options> */
+@js.native
 trait PartialOptionsCellHeight extends js.Object {
-  var cellHeight: js.UndefOr[Double] = js.undefined
-  var cellWidth: js.UndefOr[Double] = js.undefined
-  var roomHeight: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
-  var roomWidth: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
+  var cellHeight: js.UndefOr[Double] = js.native
+  var cellWidth: js.UndefOr[Double] = js.native
+  var roomHeight: js.UndefOr[js.Tuple2[Double, Double]] = js.native
+  var roomWidth: js.UndefOr[js.Tuple2[Double, Double]] = js.native
 }
 
 object PartialOptionsCellHeight {
   @scala.inline
-  def apply(
-    cellHeight: Int | Double = null,
-    cellWidth: Int | Double = null,
-    roomHeight: js.Tuple2[Double, Double] = null,
-    roomWidth: js.Tuple2[Double, Double] = null
-  ): PartialOptionsCellHeight = {
+  def apply(): PartialOptionsCellHeight = {
     val __obj = js.Dynamic.literal()
-    if (cellHeight != null) __obj.updateDynamic("cellHeight")(cellHeight.asInstanceOf[js.Any])
-    if (cellWidth != null) __obj.updateDynamic("cellWidth")(cellWidth.asInstanceOf[js.Any])
-    if (roomHeight != null) __obj.updateDynamic("roomHeight")(roomHeight.asInstanceOf[js.Any])
-    if (roomWidth != null) __obj.updateDynamic("roomWidth")(roomWidth.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialOptionsCellHeight]
   }
+  @scala.inline
+  implicit class PartialOptionsCellHeightOps[Self <: PartialOptionsCellHeight] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCellHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoomHeight(value: js.Tuple2[Double, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roomHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoomHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roomHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoomWidth(value: js.Tuple2[Double, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roomWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoomWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roomWidth")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

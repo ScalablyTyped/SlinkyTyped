@@ -18,11 +18,41 @@ trait DescribeLoadBalancersResponse extends js.Object {
 
 object DescribeLoadBalancersResponse {
   @scala.inline
-  def apply(LoadBalancers: LoadBalancerStates = null, NextToken: XmlString = null): DescribeLoadBalancersResponse = {
+  def apply(): DescribeLoadBalancersResponse = {
     val __obj = js.Dynamic.literal()
-    if (LoadBalancers != null) __obj.updateDynamic("LoadBalancers")(LoadBalancers.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLoadBalancersResponse]
   }
+  @scala.inline
+  implicit class DescribeLoadBalancersResponseOps[Self <: DescribeLoadBalancersResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLoadBalancers(value: LoadBalancerStates): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadBalancers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: XmlString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

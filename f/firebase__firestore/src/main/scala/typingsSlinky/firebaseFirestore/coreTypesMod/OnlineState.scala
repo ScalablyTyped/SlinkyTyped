@@ -1,51 +1,38 @@
 package typingsSlinky.firebaseFirestore.coreTypesMod
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-sealed trait OnlineState extends js.Object
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.Unknown
+  - typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.Online
+  - typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.Offline
+*/
+trait OnlineState extends js.Object
 
-@JSImport("@firebase/firestore/dist/src/core/types", "OnlineState")
-@js.native
-object OnlineState extends js.Object {
+object OnlineState {
   /**
     * The client is either trying to establish a connection but failing, or it
     * has been explicitly marked offline via a call to disableNetwork().
     * Higher-level components should operate in offline mode.
     */
-  @js.native
-  sealed trait Offline extends OnlineState
-  
+  @scala.inline
+  def Offline: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.Offline = "Offline".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.Offline]
   /**
     * The client is connected and the connections are healthy. This state is
     * reached after a successful connection and there has been at least one
     * successful message received from the backends.
     */
-  @js.native
-  sealed trait Online extends OnlineState
-  
+  @scala.inline
+  def Online: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.Online = "Online".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.Online]
   /**
     * The Firestore client is in an unknown online state. This means the client
     * is either not actively trying to establish a connection or it is currently
     * trying to establish a connection, but it has not succeeded or failed yet.
     * Higher-level components should not operate in offline mode.
     */
-  @js.native
-  sealed trait Unknown extends OnlineState
-  
-  @JSBracketAccess
-  def apply(value: Double): js.UndefOr[OnlineState with Double] = js.native
-  /* 2 */ @js.native
-  object Offline extends TopLevel[Offline with Double]
-  
-  /* 1 */ @js.native
-  object Online extends TopLevel[Online with Double]
-  
-  /* 0 */ @js.native
-  object Unknown extends TopLevel[Unknown with Double]
-  
+  @scala.inline
+  def Unknown: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.Unknown = "Unknown".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.Unknown]
 }
 

@@ -4,67 +4,257 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Option extends js.Object {
-  var autoplay: js.UndefOr[String | Null] = js.undefined
-  var bitrate: js.UndefOr[Double] = js.undefined
-  var channels: js.UndefOr[Channels] = js.undefined
-  var export: js.UndefOr[String] = js.undefined
-  var format: js.UndefOr[ExportType] = js.undefined
-  var gap: js.UndefOr[Double] = js.undefined
-  var log: js.UndefOr[LogLevel] = js.undefined
-  var logger: js.UndefOr[Logger] = js.undefined
-  var loop: js.UndefOr[js.Array[String]] = js.undefined
-  var minlength: js.UndefOr[Double] = js.undefined
-  var output: js.UndefOr[String] = js.undefined
-  var path: js.UndefOr[String] = js.undefined
-  var rawparts: js.UndefOr[String] = js.undefined
-  var samplerate: js.UndefOr[Double] = js.undefined
-  var silence: js.UndefOr[Double] = js.undefined
-  var vbr: js.UndefOr[VBR] = js.undefined
+  var autoplay: js.UndefOr[String | Null] = js.native
+  var bitrate: js.UndefOr[Double] = js.native
+  var channels: js.UndefOr[Channels] = js.native
+  var export: js.UndefOr[String] = js.native
+  var format: js.UndefOr[ExportType] = js.native
+  var gap: js.UndefOr[Double] = js.native
+  var log: js.UndefOr[LogLevel] = js.native
+  var logger: js.UndefOr[Logger] = js.native
+  var loop: js.UndefOr[js.Array[String]] = js.native
+  var minlength: js.UndefOr[Double] = js.native
+  var output: js.UndefOr[String] = js.native
+  var path: js.UndefOr[String] = js.native
+  var rawparts: js.UndefOr[String] = js.native
+  var samplerate: js.UndefOr[Double] = js.native
+  var silence: js.UndefOr[Double] = js.native
+  var vbr: js.UndefOr[VBR] = js.native
   @JSName("vbr:vorbis")
-  var vbrColonvorbis: js.UndefOr[VBRVorbis] = js.undefined
+  var vbrColonvorbis: js.UndefOr[VBRVorbis] = js.native
 }
 
 object Option {
   @scala.inline
-  def apply(
-    autoplay: String = null,
-    bitrate: Int | Double = null,
-    channels: Channels = null,
-    export: String = null,
-    format: ExportType = null,
-    gap: Int | Double = null,
-    log: LogLevel = null,
-    logger: Logger = null,
-    loop: js.Array[String] = null,
-    minlength: Int | Double = null,
-    output: String = null,
-    path: String = null,
-    rawparts: String = null,
-    samplerate: Int | Double = null,
-    silence: Int | Double = null,
-    vbr: VBR = null,
-    vbrColonvorbis: VBRVorbis = null
-  ): Option = {
+  def apply(): Option = {
     val __obj = js.Dynamic.literal()
-    if (autoplay != null) __obj.updateDynamic("autoplay")(autoplay.asInstanceOf[js.Any])
-    if (bitrate != null) __obj.updateDynamic("bitrate")(bitrate.asInstanceOf[js.Any])
-    if (channels != null) __obj.updateDynamic("channels")(channels.asInstanceOf[js.Any])
-    if (export != null) __obj.updateDynamic("export")(export.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (gap != null) __obj.updateDynamic("gap")(gap.asInstanceOf[js.Any])
-    if (log != null) __obj.updateDynamic("log")(log.asInstanceOf[js.Any])
-    if (logger != null) __obj.updateDynamic("logger")(logger.asInstanceOf[js.Any])
-    if (loop != null) __obj.updateDynamic("loop")(loop.asInstanceOf[js.Any])
-    if (minlength != null) __obj.updateDynamic("minlength")(minlength.asInstanceOf[js.Any])
-    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (rawparts != null) __obj.updateDynamic("rawparts")(rawparts.asInstanceOf[js.Any])
-    if (samplerate != null) __obj.updateDynamic("samplerate")(samplerate.asInstanceOf[js.Any])
-    if (silence != null) __obj.updateDynamic("silence")(silence.asInstanceOf[js.Any])
-    if (vbr != null) __obj.updateDynamic("vbr")(vbr.asInstanceOf[js.Any])
-    if (vbrColonvorbis != null) __obj.updateDynamic("vbr:vorbis")(vbrColonvorbis.asInstanceOf[js.Any])
     __obj.asInstanceOf[Option]
   }
+  @scala.inline
+  implicit class OptionOps[Self <: Option] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoplay(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoplayNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(null)
+        ret
+    }
+    @scala.inline
+    def withBitrate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitrate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBitrate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitrate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChannels(value: Channels): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExport(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("export")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("export")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: ExportType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(null)
+        ret
+    }
+    @scala.inline
+    def withGap(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLog(value: LogLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogger(value: Logger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoop(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinlength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minlength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinlength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minlength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutput(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRawparts(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawparts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRawparts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawparts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSamplerate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("samplerate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSamplerate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("samplerate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSilence(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSilence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVbr(value: VBR): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vbr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVbr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vbr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVbrColonvorbis(value: VBRVorbis): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vbr:vorbis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVbrColonvorbis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vbr:vorbis")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,9 +1,7 @@
 package typingsSlinky.materialUiCore.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.createMuiThemeMod.Theme
 import typingsSlinky.materialUiCore.muiThemeProviderMod.MuiThemeProviderProps
 import typingsSlinky.materialUiCore.muiThemeProviderMod.SheetManagerTheme
@@ -14,25 +12,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MuiThemeProvider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object MuiThemeProvider {
   @JSImport("@material-ui/core/styles/MuiThemeProvider", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    theme: Theme | (js.Function1[/* outer */ Theme | Null, Theme]),
-    disableStylesGeneration: js.UndefOr[Boolean] = js.undefined,
-    sheetsManager: Map[StylesCreator, Map[Theme, SheetManagerTheme]] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableStylesGeneration)) __obj.updateDynamic("disableStylesGeneration")(disableStylesGeneration.asInstanceOf[js.Any])
-    if (sheetsManager != null) __obj.updateDynamic("sheetsManager")(sheetsManager.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def disableStylesGeneration(value: Boolean): this.type = set("disableStylesGeneration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sheetsManager(value: Map[StylesCreator, Map[Theme, SheetManagerTheme]]): this.type = set("sheetsManager", value.asInstanceOf[js.Any])
   }
-  type Props = MuiThemeProviderProps
+  
+  def withProps(p: MuiThemeProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(theme: Theme | (js.Function1[/* outer */ Theme | Null, Theme])): Builder = {
+    val __props = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MuiThemeProviderProps]))
+  }
 }
 

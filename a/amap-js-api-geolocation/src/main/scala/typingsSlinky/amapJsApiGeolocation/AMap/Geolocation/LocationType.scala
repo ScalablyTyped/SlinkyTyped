@@ -13,12 +13,10 @@ trait LocationType extends js.Object
 
 object LocationType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def html5: typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.html5 = "html5".asInstanceOf[typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.html5]
   @scala.inline
-  def html5: typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.html5 = this.cast("html5")
+  def ip: typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.ip = "ip".asInstanceOf[typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.ip]
   @scala.inline
-  def ip: typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.ip = this.cast("ip")
-  @scala.inline
-  def sdk: typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.sdk = this.cast("sdk")
+  def sdk: typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.sdk = "sdk".asInstanceOf[typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.sdk]
 }
 

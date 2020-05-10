@@ -12,10 +12,8 @@ trait Bool extends js.Object
 
 object Bool {
   @scala.inline
-  def AND: typingsSlinky.elasticlunr.elasticlunrStrings.AND = this.cast("AND")
+  def AND: typingsSlinky.elasticlunr.elasticlunrStrings.AND = "AND".asInstanceOf[typingsSlinky.elasticlunr.elasticlunrStrings.AND]
   @scala.inline
-  def OR: typingsSlinky.elasticlunr.elasticlunrStrings.OR = this.cast("OR")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def OR: typingsSlinky.elasticlunr.elasticlunrStrings.OR = "OR".asInstanceOf[typingsSlinky.elasticlunr.elasticlunrStrings.OR]
 }
 

@@ -1,25 +1,21 @@
 package typingsSlinky.downshift.mod
 
+import org.scalajs.dom.raw.HTMLLabelElement
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.std.HTMLLabelElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GetLabelPropsOptions
   extends AllHTMLAttributes[HTMLLabelElement]
      with ClassAttributes[HTMLLabelElement]
 
 object GetLabelPropsOptions {
   @scala.inline
-  def apply(
-    AllHTMLAttributes: AllHTMLAttributes[org.scalajs.dom.raw.HTMLLabelElement] = null,
-    ClassAttributes: ClassAttributes[org.scalajs.dom.raw.HTMLLabelElement] = null
-  ): GetLabelPropsOptions = {
+  def apply(): GetLabelPropsOptions = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
     __obj.asInstanceOf[GetLabelPropsOptions]
   }
 }

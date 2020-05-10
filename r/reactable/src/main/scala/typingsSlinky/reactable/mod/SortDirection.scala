@@ -12,10 +12,8 @@ trait SortDirection extends js.Object
 
 object SortDirection {
   @scala.inline
-  def asc: typingsSlinky.reactable.reactableStrings.asc = this.cast("asc")
+  def asc: typingsSlinky.reactable.reactableStrings.asc = "asc".asInstanceOf[typingsSlinky.reactable.reactableStrings.asc]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def desc: typingsSlinky.reactable.reactableStrings.desc = this.cast("desc")
+  def desc: typingsSlinky.reactable.reactableStrings.desc = "desc".asInstanceOf[typingsSlinky.reactable.reactableStrings.desc]
 }
 

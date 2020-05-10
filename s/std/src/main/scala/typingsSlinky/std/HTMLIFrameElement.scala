@@ -76,5 +76,6 @@ trait HTMLIFrameElement extends HTMLElement {
 
 @JSGlobal("HTMLIFrameElement")
 @js.native
-object HTMLIFrameElement extends Instantiable0[HTMLIFrameElement]
+object HTMLIFrameElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLIFrameElement]
 

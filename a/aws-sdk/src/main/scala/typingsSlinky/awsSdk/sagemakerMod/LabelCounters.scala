@@ -30,20 +30,77 @@ trait LabelCounters extends js.Object {
 
 object LabelCounters {
   @scala.inline
-  def apply(
-    FailedNonRetryableError: Int | Double = null,
-    HumanLabeled: Int | Double = null,
-    MachineLabeled: Int | Double = null,
-    TotalLabeled: Int | Double = null,
-    Unlabeled: Int | Double = null
-  ): LabelCounters = {
+  def apply(): LabelCounters = {
     val __obj = js.Dynamic.literal()
-    if (FailedNonRetryableError != null) __obj.updateDynamic("FailedNonRetryableError")(FailedNonRetryableError.asInstanceOf[js.Any])
-    if (HumanLabeled != null) __obj.updateDynamic("HumanLabeled")(HumanLabeled.asInstanceOf[js.Any])
-    if (MachineLabeled != null) __obj.updateDynamic("MachineLabeled")(MachineLabeled.asInstanceOf[js.Any])
-    if (TotalLabeled != null) __obj.updateDynamic("TotalLabeled")(TotalLabeled.asInstanceOf[js.Any])
-    if (Unlabeled != null) __obj.updateDynamic("Unlabeled")(Unlabeled.asInstanceOf[js.Any])
     __obj.asInstanceOf[LabelCounters]
   }
+  @scala.inline
+  implicit class LabelCountersOps[Self <: LabelCounters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailedNonRetryableError(value: LabelCounter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedNonRetryableError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailedNonRetryableError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedNonRetryableError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHumanLabeled(value: LabelCounter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HumanLabeled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHumanLabeled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HumanLabeled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMachineLabeled(value: LabelCounter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MachineLabeled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMachineLabeled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MachineLabeled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalLabeled(value: LabelCounter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalLabeled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalLabeled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalLabeled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnlabeled(value: LabelCounter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unlabeled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnlabeled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unlabeled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,19 +14,33 @@ import scala.scalajs.js.annotation._
   *
   * **See also:** [[ICommInfoRequest]], [[IKernel.commInfo]]
   */
+@js.native
 trait ICommInfoReply extends IReplyOkContent {
   /**
     * Mapping of comm ids to target names.
     */
-  var comms: StringDictionary[AnonTargetname]
+  var comms: StringDictionary[AnonTargetname] = js.native
 }
 
 object ICommInfoReply {
   @scala.inline
   def apply(comms: StringDictionary[AnonTargetname], status: ok): ICommInfoReply = {
     val __obj = js.Dynamic.literal(comms = comms.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ICommInfoReply]
   }
+  @scala.inline
+  implicit class ICommInfoReplyOps[Self <: ICommInfoReply] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComms(value: StringDictionary[AnonTargetname]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comms")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

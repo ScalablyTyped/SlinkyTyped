@@ -2,7 +2,6 @@ package typingsSlinky.openpgp.mod.packet
 
 import typingsSlinky.openpgp.mod.Integer
 import typingsSlinky.openpgp.mod.ReadableStream
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +9,14 @@ import scala.scalajs.js.annotation._
 @JSImport("openpgp", "packet.packet")
 @js.native
 object packet extends js.Object {
-  def read(input: ReadableStream[Uint8Array], callback: js.Function): Boolean = js.native
+  def read(input: ReadableStream[js.typedarray.Uint8Array], callback: js.Function): Boolean = js.native
   /**
     * Generic static Packet Parser function
     * @param input Input stream as string
     * @param callback Function to call with the parsed packet
     * @returns Returns false if the stream was empty and parsing is done, and true otherwise.
     */
-  def read(input: Uint8Array, callback: js.Function): Boolean = js.native
+  def read(input: js.typedarray.Uint8Array, callback: js.Function): Boolean = js.native
   /**
     * Whether the packet type supports partial lengths per RFC4880
     * @param tag_type Tag type
@@ -46,6 +45,6 @@ object packet extends js.Object {
     * @param length The length to encode
     * @returns String with openpgp length representation
     */
-  def writeSimpleLength(length: Integer): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def writeSimpleLength(length: Integer): js.typedarray.Uint8Array = js.native
 }
 

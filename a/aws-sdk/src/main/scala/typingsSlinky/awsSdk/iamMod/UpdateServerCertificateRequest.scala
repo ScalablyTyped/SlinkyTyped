@@ -22,15 +22,47 @@ trait UpdateServerCertificateRequest extends js.Object {
 
 object UpdateServerCertificateRequest {
   @scala.inline
-  def apply(
-    ServerCertificateName: serverCertificateNameType,
-    NewPath: pathType = null,
-    NewServerCertificateName: serverCertificateNameType = null
-  ): UpdateServerCertificateRequest = {
+  def apply(ServerCertificateName: serverCertificateNameType): UpdateServerCertificateRequest = {
     val __obj = js.Dynamic.literal(ServerCertificateName = ServerCertificateName.asInstanceOf[js.Any])
-    if (NewPath != null) __obj.updateDynamic("NewPath")(NewPath.asInstanceOf[js.Any])
-    if (NewServerCertificateName != null) __obj.updateDynamic("NewServerCertificateName")(NewServerCertificateName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateServerCertificateRequest]
   }
+  @scala.inline
+  implicit class UpdateServerCertificateRequestOps[Self <: UpdateServerCertificateRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServerCertificateName(value: serverCertificateNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerCertificateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNewPath(value: pathType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewServerCertificateName(value: serverCertificateNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewServerCertificateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewServerCertificateName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewServerCertificateName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

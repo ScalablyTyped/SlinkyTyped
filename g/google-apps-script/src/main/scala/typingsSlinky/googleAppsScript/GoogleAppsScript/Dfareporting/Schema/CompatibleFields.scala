@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CompatibleFields extends js.Object {
-  var crossDimensionReachReportCompatibleFields: js.UndefOr[CrossDimensionReachReportCompatibleFields] = js.undefined
-  var floodlightReportCompatibleFields: js.UndefOr[FloodlightReportCompatibleFields] = js.undefined
-  var kind: js.UndefOr[String] = js.undefined
-  var pathToConversionReportCompatibleFields: js.UndefOr[PathToConversionReportCompatibleFields] = js.undefined
-  var reachReportCompatibleFields: js.UndefOr[ReachReportCompatibleFields] = js.undefined
-  var reportCompatibleFields: js.UndefOr[ReportCompatibleFields] = js.undefined
+  var crossDimensionReachReportCompatibleFields: js.UndefOr[CrossDimensionReachReportCompatibleFields] = js.native
+  var floodlightReportCompatibleFields: js.UndefOr[FloodlightReportCompatibleFields] = js.native
+  var kind: js.UndefOr[String] = js.native
+  var pathToConversionReportCompatibleFields: js.UndefOr[PathToConversionReportCompatibleFields] = js.native
+  var reachReportCompatibleFields: js.UndefOr[ReachReportCompatibleFields] = js.native
+  var reportCompatibleFields: js.UndefOr[ReportCompatibleFields] = js.native
 }
 
 object CompatibleFields {
   @scala.inline
-  def apply(
-    crossDimensionReachReportCompatibleFields: CrossDimensionReachReportCompatibleFields = null,
-    floodlightReportCompatibleFields: FloodlightReportCompatibleFields = null,
-    kind: String = null,
-    pathToConversionReportCompatibleFields: PathToConversionReportCompatibleFields = null,
-    reachReportCompatibleFields: ReachReportCompatibleFields = null,
-    reportCompatibleFields: ReportCompatibleFields = null
-  ): CompatibleFields = {
+  def apply(): CompatibleFields = {
     val __obj = js.Dynamic.literal()
-    if (crossDimensionReachReportCompatibleFields != null) __obj.updateDynamic("crossDimensionReachReportCompatibleFields")(crossDimensionReachReportCompatibleFields.asInstanceOf[js.Any])
-    if (floodlightReportCompatibleFields != null) __obj.updateDynamic("floodlightReportCompatibleFields")(floodlightReportCompatibleFields.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (pathToConversionReportCompatibleFields != null) __obj.updateDynamic("pathToConversionReportCompatibleFields")(pathToConversionReportCompatibleFields.asInstanceOf[js.Any])
-    if (reachReportCompatibleFields != null) __obj.updateDynamic("reachReportCompatibleFields")(reachReportCompatibleFields.asInstanceOf[js.Any])
-    if (reportCompatibleFields != null) __obj.updateDynamic("reportCompatibleFields")(reportCompatibleFields.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompatibleFields]
   }
+  @scala.inline
+  implicit class CompatibleFieldsOps[Self <: CompatibleFields] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCrossDimensionReachReportCompatibleFields(value: CrossDimensionReachReportCompatibleFields): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossDimensionReachReportCompatibleFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrossDimensionReachReportCompatibleFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossDimensionReachReportCompatibleFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloodlightReportCompatibleFields(value: FloodlightReportCompatibleFields): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightReportCompatibleFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodlightReportCompatibleFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightReportCompatibleFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPathToConversionReportCompatibleFields(value: PathToConversionReportCompatibleFields): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathToConversionReportCompatibleFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPathToConversionReportCompatibleFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathToConversionReportCompatibleFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReachReportCompatibleFields(value: ReachReportCompatibleFields): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reachReportCompatibleFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReachReportCompatibleFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reachReportCompatibleFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportCompatibleFields(value: ReportCompatibleFields): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportCompatibleFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportCompatibleFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportCompatibleFields")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

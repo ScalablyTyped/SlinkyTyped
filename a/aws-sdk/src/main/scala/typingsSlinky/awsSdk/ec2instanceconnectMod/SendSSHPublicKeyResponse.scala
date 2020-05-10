@@ -18,11 +18,41 @@ trait SendSSHPublicKeyResponse extends js.Object {
 
 object SendSSHPublicKeyResponse {
   @scala.inline
-  def apply(RequestId: RequestId = null, Success: js.UndefOr[Boolean] = js.undefined): SendSSHPublicKeyResponse = {
+  def apply(): SendSSHPublicKeyResponse = {
     val __obj = js.Dynamic.literal()
-    if (RequestId != null) __obj.updateDynamic("RequestId")(RequestId.asInstanceOf[js.Any])
-    if (!js.isUndefined(Success)) __obj.updateDynamic("Success")(Success.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendSSHPublicKeyResponse]
   }
+  @scala.inline
+  implicit class SendSSHPublicKeyResponseOps[Self <: SendSSHPublicKeyResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRequestId(value: RequestId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccess(value: Success): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Success")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Success")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

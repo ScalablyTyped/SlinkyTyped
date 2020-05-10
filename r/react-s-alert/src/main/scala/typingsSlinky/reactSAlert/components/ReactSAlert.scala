@@ -1,10 +1,7 @@
 package typingsSlinky.reactSAlert.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSAlert.mod.SAlert.SAlertBeepProps
 import typingsSlinky.reactSAlert.mod.SAlert.SAlertProps
 import typingsSlinky.reactSAlert.mod.SAlert.SAlertStackProps
@@ -13,45 +10,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactSAlert
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactSAlert {
   @JSImport("react-s-alert", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    beep: String | Boolean | SAlertBeepProps = null,
-    contentTemplate: /* repeated */ js.Any => _ = null,
-    customFields: js.Object = null,
-    effect: String = null,
-    html: js.UndefOr[Boolean] = js.undefined,
-    message: String = null,
-    offset: Int | Double = null,
-    onClose: () => Unit = null,
-    onShow: () => Unit = null,
-    position: String = null,
-    stack: Boolean | SAlertStackProps = null,
-    timeout: String | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (beep != null) __obj.updateDynamic("beep")(beep.asInstanceOf[js.Any])
-    if (contentTemplate != null) __obj.updateDynamic("contentTemplate")(js.Any.fromFunction1(contentTemplate))
-    if (customFields != null) __obj.updateDynamic("customFields")(customFields.asInstanceOf[js.Any])
-    if (effect != null) __obj.updateDynamic("effect")(effect.asInstanceOf[js.Any])
-    if (!js.isUndefined(html)) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction0(onShow))
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def beep(value: String | Boolean | SAlertBeepProps): this.type = set("beep", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentTemplate(value: /* repeated */ js.Any => _): this.type = set("contentTemplate", js.Any.fromFunction1(value))
+    @scala.inline
+    def customFields(value: js.Object): this.type = set("customFields", value.asInstanceOf[js.Any])
+    @scala.inline
+    def effect(value: String): this.type = set("effect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def html(value: Boolean): this.type = set("html", value.asInstanceOf[js.Any])
+    @scala.inline
+    def message(value: String): this.type = set("message", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offset(value: Double): this.type = set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClose(value: () => Unit): this.type = set("onClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def onShow(value: () => Unit): this.type = set("onShow", js.Any.fromFunction0(value))
+    @scala.inline
+    def position(value: String): this.type = set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stack(value: Boolean | SAlertStackProps): this.type = set("stack", value.asInstanceOf[js.Any])
+    @scala.inline
+    def timeout(value: String | Double): this.type = set("timeout", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactSAlert.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SAlertProps
+  
+  def withProps(p: SAlertProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactSAlert.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

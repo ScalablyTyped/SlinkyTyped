@@ -1,15 +1,21 @@
 package typingsSlinky.reactNativeVectorIcons.components
 
 import typingsSlinky.reactNativeVectorIcons.fontistoMod.default
+import typingsSlinky.reactNativeVectorIcons.iconMod.IconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Fontisto extends SharedApply_IconProps_2082878668[default] {
+object Fontisto {
   @JSImport("react-native-vector-icons/Fontisto", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IconProps): SharedBuilder_IconProps1765893822[default] = new SharedBuilder_IconProps1765893822[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(name: String): SharedBuilder_IconProps1765893822[default] = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    new SharedBuilder_IconProps1765893822[default](js.Array(this.component, __props.asInstanceOf[IconProps]))
+  }
 }
 

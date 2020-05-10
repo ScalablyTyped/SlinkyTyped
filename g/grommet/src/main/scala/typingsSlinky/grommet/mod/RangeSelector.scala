@@ -1,15 +1,14 @@
 package typingsSlinky.grommet.mod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLDivElement
+import slinky.core.ReactComponentClass
 import typingsSlinky.grommet.grommetStrings.color
 import typingsSlinky.grommet.rangeSelectorMod.RangeSelectorProps
 import typingsSlinky.grommet.utilsMod.Omit
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.std.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,24 +18,12 @@ import scala.scalajs.js.annotation._
 class RangeSelector protected ()
   extends Component[
       RangeSelectorProps with (Omit[DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement], color]), 
-      ComponentState, 
+      js.Object, 
       js.Any
     ] {
-  def this(props: RangeSelectorProps with (Omit[
-        DetailedHTMLProps[
-          HTMLAttributes[org.scalajs.dom.raw.HTMLDivElement], 
-          org.scalajs.dom.raw.HTMLDivElement
-        ], 
-        color
-      ])) = this()
+  def this(props: RangeSelectorProps with (Omit[DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement], color])) = this()
   def this(
-    props: RangeSelectorProps with (Omit[
-        DetailedHTMLProps[
-          HTMLAttributes[org.scalajs.dom.raw.HTMLDivElement], 
-          org.scalajs.dom.raw.HTMLDivElement
-        ], 
-        color
-      ]),
+    props: RangeSelectorProps with (Omit[DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement], color]),
     context: js.Any
   ) = this()
 }
@@ -44,9 +31,8 @@ class RangeSelector protected ()
 @JSImport("grommet", "RangeSelector")
 @js.native
 object RangeSelector extends TopLevel[
-      ComponentClass[
-        RangeSelectorProps with (Omit[DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement], color]), 
-        ComponentState
+      ReactComponentClass[
+        RangeSelectorProps with (Omit[DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement], color])
       ]
     ]
 

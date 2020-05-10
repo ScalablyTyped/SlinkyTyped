@@ -1,7 +1,7 @@
 package typingsSlinky.ckeditorCkeditor5Utils.mod
 
-import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.Range
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Range
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

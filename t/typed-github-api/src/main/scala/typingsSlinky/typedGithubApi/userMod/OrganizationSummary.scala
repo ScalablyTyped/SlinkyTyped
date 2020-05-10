@@ -4,14 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OrganizationSummary extends UserOrOrgSummary {
-  var description: String
-  var hooks_url: String
-  var issues_url: String
-  var members_url: String
-  var public_members_url: String
+  var description: String = js.native
+  var hooks_url: String = js.native
+  var issues_url: String = js.native
+  var members_url: String = js.native
+  var public_members_url: String = js.native
   @JSName("type")
-  var type_OrganizationSummary: typingsSlinky.typedGithubApi.typedGithubApiStrings.Organization
+  var type_OrganizationSummary: typingsSlinky.typedGithubApi.typedGithubApiStrings.Organization = js.native
 }
 
 object OrganizationSummary {
@@ -34,5 +35,49 @@ object OrganizationSummary {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrganizationSummary]
   }
+  @scala.inline
+  implicit class OrganizationSummaryOps[Self <: OrganizationSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHooks_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hooks_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIssues_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issues_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMembers_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("members_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPublic_members_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("public_members_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: typingsSlinky.typedGithubApi.typedGithubApiStrings.Organization): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

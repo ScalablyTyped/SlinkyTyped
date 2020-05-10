@@ -1,7 +1,7 @@
 package typingsSlinky.amcharts
 
+import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -326,7 +326,7 @@ object amChartMod extends js.Object {
       * @param legend - The legend.
       * @param legendDiv - Legend div (optional).
       */
-    def addLegend(legend: typingsSlinky.amcharts.amLegendMod.default, legendDiv: typingsSlinky.std.HTMLElement): Unit = js.native
+    def addLegend(legend: typingsSlinky.amcharts.amLegendMod.default, legendDiv: HTMLElement): Unit = js.native
     /**
       * Adds event listener of the type "dataUpdated" or "init" to the object.
       * @param type "dataUpdated" or "init".

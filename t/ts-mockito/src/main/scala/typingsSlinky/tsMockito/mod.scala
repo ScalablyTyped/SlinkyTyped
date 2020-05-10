@@ -1,7 +1,6 @@
 package typingsSlinky.tsMockito
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.std.RegExp
 import typingsSlinky.tsMockito.argCaptorMod.ArgCaptor1
 import typingsSlinky.tsMockito.argCaptorMod.ArgCaptor10
 import typingsSlinky.tsMockito.argCaptorMod.ArgCaptor2
@@ -81,7 +80,7 @@ object mod extends js.Object {
   def deepEqual[T](expectedValue: T): T = js.native
   def instance[T](mockedValue: T): T = js.native
   def `match`(expectedValue: String): js.Any = js.native
-  def `match`(expectedValue: RegExp): js.Any = js.native
+  def `match`(expectedValue: js.RegExp): js.Any = js.native
   def mock[T](): T = js.native
   def mock[T](clazz: js.Function with js.Object): T = js.native
   def mock[T](clazz: js.Any): T = js.native
@@ -195,7 +194,7 @@ object mod extends js.Object {
     def deepEqual[T](expectedValue: T): T = js.native
     def instance[T](expectedValue: T): T = js.native
     def `match`(expectedValue: String): js.Any = js.native
-    def `match`(expectedValue: RegExp): js.Any = js.native
+    def `match`(expectedValue: js.RegExp): js.Any = js.native
     def mock[T](): T = js.native
     def mock[T](clazz: js.Function with js.Object): T = js.native
     def mock[T](clazz: js.Any): T = js.native

@@ -18,11 +18,41 @@ trait CreateBGPPeerRequest extends js.Object {
 
 object CreateBGPPeerRequest {
   @scala.inline
-  def apply(newBGPPeer: NewBGPPeer = null, virtualInterfaceId: VirtualInterfaceId = null): CreateBGPPeerRequest = {
+  def apply(): CreateBGPPeerRequest = {
     val __obj = js.Dynamic.literal()
-    if (newBGPPeer != null) __obj.updateDynamic("newBGPPeer")(newBGPPeer.asInstanceOf[js.Any])
-    if (virtualInterfaceId != null) __obj.updateDynamic("virtualInterfaceId")(virtualInterfaceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateBGPPeerRequest]
   }
+  @scala.inline
+  implicit class CreateBGPPeerRequestOps[Self <: CreateBGPPeerRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNewBGPPeer(value: NewBGPPeer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newBGPPeer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewBGPPeer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newBGPPeer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVirtualInterfaceId(value: VirtualInterfaceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualInterfaceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVirtualInterfaceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualInterfaceId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

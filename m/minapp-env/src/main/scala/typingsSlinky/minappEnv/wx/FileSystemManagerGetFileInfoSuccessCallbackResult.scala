@@ -4,17 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FileSystemManagerGetFileInfoSuccessCallbackResult extends js.Object {
   /** 文件大小，以字节为单位 */
-  var size: Double
+  var size: Double = js.native
 }
 
 object FileSystemManagerGetFileInfoSuccessCallbackResult {
   @scala.inline
   def apply(size: Double): FileSystemManagerGetFileInfoSuccessCallbackResult = {
     val __obj = js.Dynamic.literal(size = size.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[FileSystemManagerGetFileInfoSuccessCallbackResult]
   }
+  @scala.inline
+  implicit class FileSystemManagerGetFileInfoSuccessCallbackResultOps[Self <: FileSystemManagerGetFileInfoSuccessCallbackResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

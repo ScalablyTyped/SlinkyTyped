@@ -1,14 +1,11 @@
 package typingsSlinky.blueprintjsCore.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.div.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.popoverMod.IPopoverProps
 import typingsSlinky.blueprintjsCore.popoverMod.PopoverInteractionKind
 import typingsSlinky.blueprintjsCore.popoverSharedPropsMod.PopoverPosition
@@ -21,98 +18,102 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Popover
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsCore.mod.Popover] {
+object Popover {
   @JSImport("@blueprintjs/core", "Popover")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    autoFocus: js.UndefOr[Boolean] = js.undefined,
-    backdropProps: HTMLProps[HTMLDivElement] = null,
-    boundary: Boundary = null,
-    canEscapeKeyClose: js.UndefOr[Boolean] = js.undefined,
-    captureDismiss: js.UndefOr[Boolean] = js.undefined,
-    content: String | ReactElement = null,
-    defaultIsOpen: js.UndefOr[Boolean] = js.undefined,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    enforceFocus: js.UndefOr[Boolean] = js.undefined,
-    fill: js.UndefOr[Boolean] = js.undefined,
-    hasBackdrop: js.UndefOr[Boolean] = js.undefined,
-    hoverCloseDelay: Int | Double = null,
-    hoverOpenDelay: Int | Double = null,
-    inheritDarkTheme: js.UndefOr[Boolean] = js.undefined,
-    interactionKind: PopoverInteractionKind = null,
-    isOpen: js.UndefOr[Boolean] = js.undefined,
-    `lazy`: js.UndefOr[Boolean] = js.undefined,
-    minimal: js.UndefOr[Boolean] = js.undefined,
-    modifiers: Modifiers = null,
-    onClose: /* event */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit = null,
-    onClosed: /* node */ HTMLElement => Unit = null,
-    onClosing: /* node */ HTMLElement => Unit = null,
-    onInteraction: (/* nextOpenState */ Boolean, /* e */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]]) => Unit = null,
-    onOpened: /* node */ HTMLElement => Unit = null,
-    onOpening: /* node */ HTMLElement => Unit = null,
-    openOnTargetFocus: js.UndefOr[Boolean] = js.undefined,
-    popoverClassName: String = null,
-    popoverRef: /* ref */ HTMLDivElement | Null => Unit = null,
-    portalClassName: String = null,
-    portalContainer: HTMLElement = null,
-    position: PopoverPosition = null,
-    target: String | ReactElement = null,
-    targetClassName: String = null,
-    targetProps: HTMLAttributes[HTMLElement] = null,
-    targetTagName: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any = null,
-    transitionDuration: Int | Double = null,
-    usePortal: js.UndefOr[Boolean] = js.undefined,
-    wrapperTagName: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Popover] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])
-    if (backdropProps != null) __obj.updateDynamic("backdropProps")(backdropProps.asInstanceOf[js.Any])
-    if (boundary != null) __obj.updateDynamic("boundary")(boundary.asInstanceOf[js.Any])
-    if (!js.isUndefined(canEscapeKeyClose)) __obj.updateDynamic("canEscapeKeyClose")(canEscapeKeyClose.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureDismiss)) __obj.updateDynamic("captureDismiss")(captureDismiss.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultIsOpen)) __obj.updateDynamic("defaultIsOpen")(defaultIsOpen.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(enforceFocus)) __obj.updateDynamic("enforceFocus")(enforceFocus.asInstanceOf[js.Any])
-    if (!js.isUndefined(fill)) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasBackdrop)) __obj.updateDynamic("hasBackdrop")(hasBackdrop.asInstanceOf[js.Any])
-    if (hoverCloseDelay != null) __obj.updateDynamic("hoverCloseDelay")(hoverCloseDelay.asInstanceOf[js.Any])
-    if (hoverOpenDelay != null) __obj.updateDynamic("hoverOpenDelay")(hoverOpenDelay.asInstanceOf[js.Any])
-    if (!js.isUndefined(inheritDarkTheme)) __obj.updateDynamic("inheritDarkTheme")(inheritDarkTheme.asInstanceOf[js.Any])
-    if (interactionKind != null) __obj.updateDynamic("interactionKind")(interactionKind.asInstanceOf[js.Any])
-    if (!js.isUndefined(isOpen)) __obj.updateDynamic("isOpen")(isOpen.asInstanceOf[js.Any])
-    if (!js.isUndefined(`lazy`)) __obj.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
-    if (!js.isUndefined(minimal)) __obj.updateDynamic("minimal")(minimal.asInstanceOf[js.Any])
-    if (modifiers != null) __obj.updateDynamic("modifiers")(modifiers.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
-    if (onClosed != null) __obj.updateDynamic("onClosed")(js.Any.fromFunction1(onClosed))
-    if (onClosing != null) __obj.updateDynamic("onClosing")(js.Any.fromFunction1(onClosing))
-    if (onInteraction != null) __obj.updateDynamic("onInteraction")(js.Any.fromFunction2(onInteraction))
-    if (onOpened != null) __obj.updateDynamic("onOpened")(js.Any.fromFunction1(onOpened))
-    if (onOpening != null) __obj.updateDynamic("onOpening")(js.Any.fromFunction1(onOpening))
-    if (!js.isUndefined(openOnTargetFocus)) __obj.updateDynamic("openOnTargetFocus")(openOnTargetFocus.asInstanceOf[js.Any])
-    if (popoverClassName != null) __obj.updateDynamic("popoverClassName")(popoverClassName.asInstanceOf[js.Any])
-    if (popoverRef != null) __obj.updateDynamic("popoverRef")(js.Any.fromFunction1(popoverRef))
-    if (portalClassName != null) __obj.updateDynamic("portalClassName")(portalClassName.asInstanceOf[js.Any])
-    if (portalContainer != null) __obj.updateDynamic("portalContainer")(portalContainer.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (targetClassName != null) __obj.updateDynamic("targetClassName")(targetClassName.asInstanceOf[js.Any])
-    if (targetProps != null) __obj.updateDynamic("targetProps")(targetProps.asInstanceOf[js.Any])
-    if (targetTagName != null) __obj.updateDynamic("targetTagName")(targetTagName.asInstanceOf[js.Any])
-    if (transitionDuration != null) __obj.updateDynamic("transitionDuration")(transitionDuration.asInstanceOf[js.Any])
-    if (!js.isUndefined(usePortal)) __obj.updateDynamic("usePortal")(usePortal.asInstanceOf[js.Any])
-    if (wrapperTagName != null) __obj.updateDynamic("wrapperTagName")(wrapperTagName.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Popover] {
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backdropProps(value: HTMLProps[HTMLDivElement]): this.type = set("backdropProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def boundary(value: Boundary): this.type = set("boundary", value.asInstanceOf[js.Any])
+    @scala.inline
+    def canEscapeKeyClose(value: Boolean): this.type = set("canEscapeKeyClose", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureDismiss(value: Boolean): this.type = set("captureDismiss", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(value: String | ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultIsOpen(value: Boolean): this.type = set("defaultIsOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enforceFocus(value: Boolean): this.type = set("enforceFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fill(value: Boolean): this.type = set("fill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hasBackdrop(value: Boolean): this.type = set("hasBackdrop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hoverCloseDelay(value: Double): this.type = set("hoverCloseDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hoverOpenDelay(value: Double): this.type = set("hoverOpenDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inheritDarkTheme(value: Boolean): this.type = set("inheritDarkTheme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def interactionKind(value: PopoverInteractionKind): this.type = set("interactionKind", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isOpen(value: Boolean): this.type = set("isOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `lazy`(value: Boolean): this.type = set("lazy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minimal(value: Boolean): this.type = set("minimal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def modifiers(value: Modifiers): this.type = set("modifiers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClose(value: /* event */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClosed(value: /* node */ HTMLElement => Unit): this.type = set("onClosed", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClosing(value: /* node */ HTMLElement => Unit): this.type = set("onClosing", js.Any.fromFunction1(value))
+    @scala.inline
+    def onInteraction(
+      value: (/* nextOpenState */ Boolean, /* e */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]]) => Unit
+    ): this.type = set("onInteraction", js.Any.fromFunction2(value))
+    @scala.inline
+    def onOpened(value: /* node */ HTMLElement => Unit): this.type = set("onOpened", js.Any.fromFunction1(value))
+    @scala.inline
+    def onOpening(value: /* node */ HTMLElement => Unit): this.type = set("onOpening", js.Any.fromFunction1(value))
+    @scala.inline
+    def openOnTargetFocus(value: Boolean): this.type = set("openOnTargetFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popoverClassName(value: String): this.type = set("popoverClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popoverRef(value: /* ref */ HTMLDivElement | Null => Unit): this.type = set("popoverRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def portalClassName(value: String): this.type = set("portalClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def portalContainer(value: HTMLElement): this.type = set("portalContainer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def position(value: PopoverPosition): this.type = set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetReactElement(value: ReactElement): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def target(value: String | ReactElement): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetClassName(value: String): this.type = set("targetClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetProps(value: HTMLAttributes[HTMLElement]): this.type = set("targetProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetTagName(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any): this.type = set("targetTagName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionDuration(value: Double): this.type = set("transitionDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def usePortal(value: Boolean): this.type = set("usePortal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapperTagName(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any): this.type = set("wrapperTagName", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Popover] = new slinky.core.BuildingComponent[slinky.web.html.div.tag.type, typingsSlinky.blueprintjsCore.mod.Popover](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IPopoverProps
+  
+  def withProps(p: IPopoverProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Popover.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

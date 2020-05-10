@@ -13,12 +13,10 @@ trait OrderStateType extends js.Object
 
 object OrderStateType {
   @scala.inline
-  def CANCELED: typingsSlinky.squareConnect.squareConnectStrings.CANCELED = this.cast("CANCELED")
+  def CANCELED: typingsSlinky.squareConnect.squareConnectStrings.CANCELED = "CANCELED".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.CANCELED]
   @scala.inline
-  def COMPLETED: typingsSlinky.squareConnect.squareConnectStrings.COMPLETED = this.cast("COMPLETED")
+  def COMPLETED: typingsSlinky.squareConnect.squareConnectStrings.COMPLETED = "COMPLETED".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.COMPLETED]
   @scala.inline
-  def OPEN: typingsSlinky.squareConnect.squareConnectStrings.OPEN = this.cast("OPEN")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def OPEN: typingsSlinky.squareConnect.squareConnectStrings.OPEN = "OPEN".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.OPEN]
 }
 

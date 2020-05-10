@@ -15,16 +15,14 @@ trait TouchOptionsLiteral extends js.Object
 
 object TouchOptionsLiteral {
   @scala.inline
-  def `-a`: typingsSlinky.shelljs.shelljsStrings.`-a` = this.cast("-a")
+  def `-a`: typingsSlinky.shelljs.shelljsStrings.`-a` = "-a".asInstanceOf[typingsSlinky.shelljs.shelljsStrings.`-a`]
   @scala.inline
-  def `-c`: typingsSlinky.shelljs.shelljsStrings.`-c` = this.cast("-c")
+  def `-c`: typingsSlinky.shelljs.shelljsStrings.`-c` = "-c".asInstanceOf[typingsSlinky.shelljs.shelljsStrings.`-c`]
   @scala.inline
-  def `-d`: typingsSlinky.shelljs.shelljsStrings.`-d` = this.cast("-d")
+  def `-d`: typingsSlinky.shelljs.shelljsStrings.`-d` = "-d".asInstanceOf[typingsSlinky.shelljs.shelljsStrings.`-d`]
   @scala.inline
-  def `-m`: typingsSlinky.shelljs.shelljsStrings.`-m` = this.cast("-m")
+  def `-m`: typingsSlinky.shelljs.shelljsStrings.`-m` = "-m".asInstanceOf[typingsSlinky.shelljs.shelljsStrings.`-m`]
   @scala.inline
-  def `-r`: typingsSlinky.shelljs.shelljsStrings.`-r` = this.cast("-r")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `-r`: typingsSlinky.shelljs.shelljsStrings.`-r` = "-r".asInstanceOf[typingsSlinky.shelljs.shelljsStrings.`-r`]
 }
 

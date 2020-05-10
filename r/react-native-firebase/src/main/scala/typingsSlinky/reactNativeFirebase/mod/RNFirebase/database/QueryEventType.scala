@@ -15,16 +15,14 @@ trait QueryEventType extends js.Object
 
 object QueryEventType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def child_added: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.child_added = "child_added".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.child_added]
   @scala.inline
-  def child_added: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.child_added = this.cast("child_added")
+  def child_changed: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.child_changed = "child_changed".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.child_changed]
   @scala.inline
-  def child_changed: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.child_changed = this.cast("child_changed")
+  def child_moved: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.child_moved = "child_moved".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.child_moved]
   @scala.inline
-  def child_moved: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.child_moved = this.cast("child_moved")
+  def child_removed: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.child_removed = "child_removed".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.child_removed]
   @scala.inline
-  def child_removed: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.child_removed = this.cast("child_removed")
-  @scala.inline
-  def value: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.value = this.cast("value")
+  def value: typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.value = "value".asInstanceOf[typingsSlinky.reactNativeFirebase.reactNativeFirebaseStrings.value]
 }
 

@@ -9,5 +9,6 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait storage extends js.Object
 

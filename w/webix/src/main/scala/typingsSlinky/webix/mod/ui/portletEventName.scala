@@ -15,16 +15,14 @@ trait portletEventName extends js.Object
 
 object portletEventName {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def onAfterPortletMove: typingsSlinky.webix.webixStrings.onAfterPortletMove = "onAfterPortletMove".asInstanceOf[typingsSlinky.webix.webixStrings.onAfterPortletMove]
   @scala.inline
-  def onAfterPortletMove: typingsSlinky.webix.webixStrings.onAfterPortletMove = this.cast("onAfterPortletMove")
+  def onBeforePortletMove: typingsSlinky.webix.webixStrings.onBeforePortletMove = "onBeforePortletMove".asInstanceOf[typingsSlinky.webix.webixStrings.onBeforePortletMove]
   @scala.inline
-  def onBeforePortletMove: typingsSlinky.webix.webixStrings.onBeforePortletMove = this.cast("onBeforePortletMove")
+  def onBindRequest: typingsSlinky.webix.webixStrings.onBindRequest = "onBindRequest".asInstanceOf[typingsSlinky.webix.webixStrings.onBindRequest]
   @scala.inline
-  def onBindRequest: typingsSlinky.webix.webixStrings.onBindRequest = this.cast("onBindRequest")
+  def onDestruct: typingsSlinky.webix.webixStrings.onDestruct = "onDestruct".asInstanceOf[typingsSlinky.webix.webixStrings.onDestruct]
   @scala.inline
-  def onDestruct: typingsSlinky.webix.webixStrings.onDestruct = this.cast("onDestruct")
-  @scala.inline
-  def onViewShow: typingsSlinky.webix.webixStrings.onViewShow = this.cast("onViewShow")
+  def onViewShow: typingsSlinky.webix.webixStrings.onViewShow = "onViewShow".asInstanceOf[typingsSlinky.webix.webixStrings.onViewShow]
 }
 

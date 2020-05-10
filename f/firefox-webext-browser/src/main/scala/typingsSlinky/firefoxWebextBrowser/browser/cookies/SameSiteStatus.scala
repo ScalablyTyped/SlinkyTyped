@@ -19,12 +19,10 @@ trait SameSiteStatus extends js.Object
 
 object SameSiteStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def lax: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.lax = "lax".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.lax]
   @scala.inline
-  def lax: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.lax = this.cast("lax")
+  def no_restriction: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.no_restriction = "no_restriction".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.no_restriction]
   @scala.inline
-  def no_restriction: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.no_restriction = this.cast("no_restriction")
-  @scala.inline
-  def strict: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.strict = this.cast("strict")
+  def strict: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.strict = "strict".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.strict]
 }
 

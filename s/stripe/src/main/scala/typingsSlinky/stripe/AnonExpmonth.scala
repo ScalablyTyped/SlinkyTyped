@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonExpmonth extends js.Object {
-  var exp_month: js.UndefOr[Double] = js.undefined
-  var exp_year: js.UndefOr[Double] = js.undefined
+  var exp_month: js.UndefOr[Double] = js.native
+  var exp_year: js.UndefOr[Double] = js.native
 }
 
 object AnonExpmonth {
   @scala.inline
-  def apply(exp_month: Int | Double = null, exp_year: Int | Double = null): AnonExpmonth = {
+  def apply(): AnonExpmonth = {
     val __obj = js.Dynamic.literal()
-    if (exp_month != null) __obj.updateDynamic("exp_month")(exp_month.asInstanceOf[js.Any])
-    if (exp_year != null) __obj.updateDynamic("exp_year")(exp_year.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonExpmonth]
   }
+  @scala.inline
+  implicit class AnonExpmonthOps[Self <: AnonExpmonth] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExp_month(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exp_month")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExp_month: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exp_month")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExp_year(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exp_year")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExp_year: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exp_year")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

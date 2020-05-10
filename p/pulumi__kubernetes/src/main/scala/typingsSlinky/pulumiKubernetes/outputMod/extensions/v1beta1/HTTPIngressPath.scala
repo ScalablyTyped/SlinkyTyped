@@ -8,11 +8,12 @@ import scala.scalajs.js.annotation._
   * HTTPIngressPath associates a path regex with a backend. Incoming urls matching the path are
   * forwarded to the backend.
   */
+@js.native
 trait HTTPIngressPath extends js.Object {
   /**
     * Backend defines the referenced service endpoint to which the traffic will be forwarded to.
     */
-  val backend: IngressBackend
+  val backend: IngressBackend = js.native
   /**
     * Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the
     * egrep/unix syntax, not the perl syntax) matched against the path of an incoming request.
@@ -20,15 +21,34 @@ trait HTTPIngressPath extends js.Object {
     * as defined by RFC 3986. Paths must begin with a '/'. If unspecified, the path defaults to a
     * catch all sending traffic to the backend.
     */
-  val path: String
+  val path: String = js.native
 }
 
 object HTTPIngressPath {
   @scala.inline
   def apply(backend: IngressBackend, path: String): HTTPIngressPath = {
     val __obj = js.Dynamic.literal(backend = backend.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[HTTPIngressPath]
   }
+  @scala.inline
+  implicit class HTTPIngressPathOps[Self <: HTTPIngressPath] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackend(value: IngressBackend): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -15,14 +15,12 @@ trait ActivityDomain extends js.Object
 
 object ActivityDomain {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def personal: typingsSlinky.microsoftGraph.microsoftGraphStrings.personal = "personal".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.personal]
   @scala.inline
-  def personal: typingsSlinky.microsoftGraph.microsoftGraphStrings.personal = this.cast("personal")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
   @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
+  def unrestricted: typingsSlinky.microsoftGraph.microsoftGraphStrings.unrestricted = "unrestricted".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unrestricted]
   @scala.inline
-  def unrestricted: typingsSlinky.microsoftGraph.microsoftGraphStrings.unrestricted = this.cast("unrestricted")
-  @scala.inline
-  def work: typingsSlinky.microsoftGraph.microsoftGraphStrings.work = this.cast("work")
+  def work: typingsSlinky.microsoftGraph.microsoftGraphStrings.work = "work".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.work]
 }
 

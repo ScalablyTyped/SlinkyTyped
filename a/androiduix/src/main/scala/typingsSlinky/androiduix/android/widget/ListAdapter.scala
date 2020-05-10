@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ListAdapter extends Adapter {
-  def areAllItemsEnabled(): Boolean
-  def isEnabled(position: Double): Boolean
+  def areAllItemsEnabled(): Boolean = js.native
+  def isEnabled(position: Double): Boolean = js.native
 }
 
 @JSGlobal("android.widget.ListAdapter")

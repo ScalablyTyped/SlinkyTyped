@@ -22,15 +22,47 @@ trait CreateThingTypeRequest extends js.Object {
 
 object CreateThingTypeRequest {
   @scala.inline
-  def apply(
-    thingTypeName: ThingTypeName,
-    tags: TagList = null,
-    thingTypeProperties: ThingTypeProperties = null
-  ): CreateThingTypeRequest = {
+  def apply(thingTypeName: ThingTypeName): CreateThingTypeRequest = {
     val __obj = js.Dynamic.literal(thingTypeName = thingTypeName.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (thingTypeProperties != null) __obj.updateDynamic("thingTypeProperties")(thingTypeProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateThingTypeRequest]
   }
+  @scala.inline
+  implicit class CreateThingTypeRequestOps[Self <: CreateThingTypeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withThingTypeName(value: ThingTypeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingTypeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThingTypeProperties(value: ThingTypeProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingTypeProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThingTypeProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingTypeProperties")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,11 +13,11 @@ class BinaryWriter () extends js.Object {
   def beginSubMessage(field: Double): Unit = js.native
   def endSubMessage(field: Double): Unit = js.native
   def getResultBase64String(): String = js.native
-  def getResultBuffer(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def getResultBuffer(): js.typedarray.Uint8Array = js.native
   def maybeWriteSerializedMessage(): Unit = js.native
-  def maybeWriteSerializedMessage(bytes: scala.scalajs.js.typedarray.Uint8Array): Unit = js.native
-  def maybeWriteSerializedMessage(bytes: scala.scalajs.js.typedarray.Uint8Array, start: Double): Unit = js.native
-  def maybeWriteSerializedMessage(bytes: scala.scalajs.js.typedarray.Uint8Array, start: Double, end: Double): Unit = js.native
+  def maybeWriteSerializedMessage(bytes: js.typedarray.Uint8Array): Unit = js.native
+  def maybeWriteSerializedMessage(bytes: js.typedarray.Uint8Array, start: Double): Unit = js.native
+  def maybeWriteSerializedMessage(bytes: js.typedarray.Uint8Array, start: Double, end: Double): Unit = js.native
   def reset(): Unit = js.native
   def writeAny(fieldType: FieldType, field: Double, value: AnyFieldType): Unit = js.native
   def writeBool(field: Double): Unit = js.native
@@ -146,7 +146,7 @@ class BinaryWriter () extends js.Object {
   def writeRepeatedUint64String(field: Double, value: js.Array[String]): Unit = js.native
   def writeRepeatedVarintHash64(field: Double): Unit = js.native
   def writeRepeatedVarintHash64(field: Double, value: js.Array[String]): Unit = js.native
-  def writeSerializedMessage(bytes: scala.scalajs.js.typedarray.Uint8Array, start: Double, end: Double): Unit = js.native
+  def writeSerializedMessage(bytes: js.typedarray.Uint8Array, start: Double, end: Double): Unit = js.native
   def writeSfixed32(field: Double): Unit = js.native
   def writeSfixed32(field: Double, value: Double): Unit = js.native
   def writeSfixed64(field: Double): Unit = js.native

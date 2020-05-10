@@ -1,12 +1,5 @@
 package typingsSlinky.fibjs
 
-import typingsSlinky.fibjs.fibjsNumbers.`0`
-import typingsSlinky.fibjs.fibjsNumbers.`10`
-import typingsSlinky.fibjs.fibjsNumbers.`1`
-import typingsSlinky.fibjs.fibjsNumbers.`2`
-import typingsSlinky.fibjs.fibjsNumbers.`3`
-import typingsSlinky.fibjs.fibjsNumbers.`8`
-import typingsSlinky.fibjs.fibjsNumbers.`9`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,16 +18,16 @@ object wsMod extends js.Object {
   @js.native
   class Socket () extends ClassWebSocket
   
-  val BINARY: `2` = js.native
-  val CLOSE: `8` = js.native
-  val CLOSED: `3` = js.native
-  val CLOSING: `2` = js.native
-  val CONNECTING: `0` = js.native
-  val CONTINUE: `0` = js.native
-  val OPEN: `1` = js.native
-  val PING: `9` = js.native
-  val PONG: `10` = js.native
-  val TEXT: `1` = js.native
+  val BINARY: /* 2 */ Double = js.native
+  val CLOSE: /* 8 */ Double = js.native
+  val CLOSED: /* 3 */ Double = js.native
+  val CLOSING: /* 2 */ Double = js.native
+  val CONNECTING: /* 0 */ Double = js.native
+  val CONTINUE: /* 0 */ Double = js.native
+  val OPEN: /* 1 */ Double = js.native
+  val PING: /* 9 */ Double = js.native
+  val PONG: /* 10 */ Double = js.native
+  val TEXT: /* 1 */ Double = js.native
   def upgrade(accept: js.Function): ClassHandler = js.native
 }
 

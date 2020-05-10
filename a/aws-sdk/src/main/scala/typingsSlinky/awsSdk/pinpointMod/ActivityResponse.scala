@@ -62,33 +62,155 @@ trait ActivityResponse extends js.Object {
 
 object ActivityResponse {
   @scala.inline
-  def apply(
-    ApplicationId: string,
-    CampaignId: string,
-    Id: string,
-    End: string = null,
-    Result: string = null,
-    ScheduledStart: string = null,
-    Start: string = null,
-    State: string = null,
-    SuccessfulEndpointCount: Int | Double = null,
-    TimezonesCompletedCount: Int | Double = null,
-    TimezonesTotalCount: Int | Double = null,
-    TotalEndpointCount: Int | Double = null,
-    TreatmentId: string = null
-  ): ActivityResponse = {
+  def apply(ApplicationId: string, CampaignId: string, Id: string): ActivityResponse = {
     val __obj = js.Dynamic.literal(ApplicationId = ApplicationId.asInstanceOf[js.Any], CampaignId = CampaignId.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any])
-    if (End != null) __obj.updateDynamic("End")(End.asInstanceOf[js.Any])
-    if (Result != null) __obj.updateDynamic("Result")(Result.asInstanceOf[js.Any])
-    if (ScheduledStart != null) __obj.updateDynamic("ScheduledStart")(ScheduledStart.asInstanceOf[js.Any])
-    if (Start != null) __obj.updateDynamic("Start")(Start.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
-    if (SuccessfulEndpointCount != null) __obj.updateDynamic("SuccessfulEndpointCount")(SuccessfulEndpointCount.asInstanceOf[js.Any])
-    if (TimezonesCompletedCount != null) __obj.updateDynamic("TimezonesCompletedCount")(TimezonesCompletedCount.asInstanceOf[js.Any])
-    if (TimezonesTotalCount != null) __obj.updateDynamic("TimezonesTotalCount")(TimezonesTotalCount.asInstanceOf[js.Any])
-    if (TotalEndpointCount != null) __obj.updateDynamic("TotalEndpointCount")(TotalEndpointCount.asInstanceOf[js.Any])
-    if (TreatmentId != null) __obj.updateDynamic("TreatmentId")(TreatmentId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActivityResponse]
   }
+  @scala.inline
+  implicit class ActivityResponseOps[Self <: ActivityResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCampaignId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CampaignId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnd(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("End")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("End")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResult(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Result")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Result")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduledStart(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduledStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Start")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessfulEndpointCount(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SuccessfulEndpointCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessfulEndpointCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SuccessfulEndpointCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimezonesCompletedCount(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimezonesCompletedCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimezonesCompletedCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimezonesCompletedCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimezonesTotalCount(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimezonesTotalCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimezonesTotalCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimezonesTotalCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalEndpointCount(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalEndpointCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalEndpointCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalEndpointCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTreatmentId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TreatmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTreatmentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TreatmentId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

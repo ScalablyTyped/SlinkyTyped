@@ -30,20 +30,77 @@ trait OTAUpdateFile extends js.Object {
 
 object OTAUpdateFile {
   @scala.inline
-  def apply(
-    attributes: AttributesMap = null,
-    codeSigning: CodeSigning = null,
-    fileLocation: FileLocation = null,
-    fileName: FileName = null,
-    fileVersion: OTAUpdateFileVersion = null
-  ): OTAUpdateFile = {
+  def apply(): OTAUpdateFile = {
     val __obj = js.Dynamic.literal()
-    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
-    if (codeSigning != null) __obj.updateDynamic("codeSigning")(codeSigning.asInstanceOf[js.Any])
-    if (fileLocation != null) __obj.updateDynamic("fileLocation")(fileLocation.asInstanceOf[js.Any])
-    if (fileName != null) __obj.updateDynamic("fileName")(fileName.asInstanceOf[js.Any])
-    if (fileVersion != null) __obj.updateDynamic("fileVersion")(fileVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[OTAUpdateFile]
   }
+  @scala.inline
+  implicit class OTAUpdateFileOps[Self <: OTAUpdateFile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributes(value: AttributesMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodeSigning(value: CodeSigning): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeSigning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodeSigning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeSigning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileLocation(value: FileLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileName(value: FileName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileVersion(value: OTAUpdateFileVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

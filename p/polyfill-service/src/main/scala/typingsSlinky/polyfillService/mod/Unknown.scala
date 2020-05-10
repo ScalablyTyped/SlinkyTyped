@@ -12,10 +12,8 @@ trait Unknown extends js.Object
 
 object Unknown {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ignore: typingsSlinky.polyfillService.polyfillServiceStrings.ignore = "ignore".asInstanceOf[typingsSlinky.polyfillService.polyfillServiceStrings.ignore]
   @scala.inline
-  def ignore: typingsSlinky.polyfillService.polyfillServiceStrings.ignore = this.cast("ignore")
-  @scala.inline
-  def polyfill: typingsSlinky.polyfillService.polyfillServiceStrings.polyfill = this.cast("polyfill")
+  def polyfill: typingsSlinky.polyfillService.polyfillServiceStrings.polyfill = "polyfill".asInstanceOf[typingsSlinky.polyfillService.polyfillServiceStrings.polyfill]
 }
 

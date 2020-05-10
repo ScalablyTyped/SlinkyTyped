@@ -20,7 +20,7 @@ object removeEventListener_securitypolicyviolation extends js.Object {
   def apply(
     `type`: securitypolicyviolation,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ SecurityPolicyViolationEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

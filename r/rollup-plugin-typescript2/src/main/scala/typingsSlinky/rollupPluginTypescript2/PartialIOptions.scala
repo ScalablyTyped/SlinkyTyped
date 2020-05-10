@@ -6,63 +6,231 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined rollup-plugin-typescript2.rollup-plugin-typescript2/dist/partial.Partial<rollup-plugin-typescript2.rollup-plugin-typescript2/dist/ioptions.IOptions> */
+@js.native
 trait PartialIOptions extends js.Object {
-  var abortOnError: js.UndefOr[Boolean] = js.undefined
-  var cacheRoot: js.UndefOr[String] = js.undefined
-  var check: js.UndefOr[Boolean] = js.undefined
-  var clean: js.UndefOr[Boolean] = js.undefined
-  var exclude: js.UndefOr[String | js.Array[String]] = js.undefined
-  var include: js.UndefOr[String | js.Array[String]] = js.undefined
-  var objectHashIgnoreUnknownHack: js.UndefOr[Boolean] = js.undefined
-  var rollupCommonJSResolveHack: js.UndefOr[Boolean] = js.undefined
-  var sourceMapCallback: js.UndefOr[js.Function2[/* id */ String, /* map */ String, Unit]] = js.undefined
-  var transformers: js.UndefOr[js.Array[TransformerFactoryCreator]] = js.undefined
-  var tsconfig: js.UndefOr[String] = js.undefined
-  var tsconfigDefaults: js.UndefOr[js.Any] = js.undefined
-  var tsconfigOverride: js.UndefOr[js.Any] = js.undefined
-  var typescript: js.UndefOr[TypeoftsTypes] = js.undefined
-  var useTsconfigDeclarationDir: js.UndefOr[Boolean] = js.undefined
-  var verbosity: js.UndefOr[Double] = js.undefined
+  var abortOnError: js.UndefOr[Boolean] = js.native
+  var cacheRoot: js.UndefOr[String] = js.native
+  var check: js.UndefOr[Boolean] = js.native
+  var clean: js.UndefOr[Boolean] = js.native
+  var exclude: js.UndefOr[String | js.Array[String]] = js.native
+  var include: js.UndefOr[String | js.Array[String]] = js.native
+  var objectHashIgnoreUnknownHack: js.UndefOr[Boolean] = js.native
+  var rollupCommonJSResolveHack: js.UndefOr[Boolean] = js.native
+  var sourceMapCallback: js.UndefOr[js.Function2[/* id */ String, /* map */ String, Unit]] = js.native
+  var transformers: js.UndefOr[js.Array[TransformerFactoryCreator]] = js.native
+  var tsconfig: js.UndefOr[String] = js.native
+  var tsconfigDefaults: js.UndefOr[js.Any] = js.native
+  var tsconfigOverride: js.UndefOr[js.Any] = js.native
+  var typescript: js.UndefOr[TypeoftsTypes] = js.native
+  var useTsconfigDeclarationDir: js.UndefOr[Boolean] = js.native
+  var verbosity: js.UndefOr[Double] = js.native
 }
 
 object PartialIOptions {
   @scala.inline
-  def apply(
-    abortOnError: js.UndefOr[Boolean] = js.undefined,
-    cacheRoot: String = null,
-    check: js.UndefOr[Boolean] = js.undefined,
-    clean: js.UndefOr[Boolean] = js.undefined,
-    exclude: String | js.Array[String] = null,
-    include: String | js.Array[String] = null,
-    objectHashIgnoreUnknownHack: js.UndefOr[Boolean] = js.undefined,
-    rollupCommonJSResolveHack: js.UndefOr[Boolean] = js.undefined,
-    sourceMapCallback: (/* id */ String, /* map */ String) => Unit = null,
-    transformers: js.Array[TransformerFactoryCreator] = null,
-    tsconfig: String = null,
-    tsconfigDefaults: js.Any = null,
-    tsconfigOverride: js.Any = null,
-    typescript: TypeoftsTypes = null,
-    useTsconfigDeclarationDir: js.UndefOr[Boolean] = js.undefined,
-    verbosity: Int | Double = null
-  ): PartialIOptions = {
+  def apply(): PartialIOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(abortOnError)) __obj.updateDynamic("abortOnError")(abortOnError.asInstanceOf[js.Any])
-    if (cacheRoot != null) __obj.updateDynamic("cacheRoot")(cacheRoot.asInstanceOf[js.Any])
-    if (!js.isUndefined(check)) __obj.updateDynamic("check")(check.asInstanceOf[js.Any])
-    if (!js.isUndefined(clean)) __obj.updateDynamic("clean")(clean.asInstanceOf[js.Any])
-    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
-    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
-    if (!js.isUndefined(objectHashIgnoreUnknownHack)) __obj.updateDynamic("objectHashIgnoreUnknownHack")(objectHashIgnoreUnknownHack.asInstanceOf[js.Any])
-    if (!js.isUndefined(rollupCommonJSResolveHack)) __obj.updateDynamic("rollupCommonJSResolveHack")(rollupCommonJSResolveHack.asInstanceOf[js.Any])
-    if (sourceMapCallback != null) __obj.updateDynamic("sourceMapCallback")(js.Any.fromFunction2(sourceMapCallback))
-    if (transformers != null) __obj.updateDynamic("transformers")(transformers.asInstanceOf[js.Any])
-    if (tsconfig != null) __obj.updateDynamic("tsconfig")(tsconfig.asInstanceOf[js.Any])
-    if (tsconfigDefaults != null) __obj.updateDynamic("tsconfigDefaults")(tsconfigDefaults.asInstanceOf[js.Any])
-    if (tsconfigOverride != null) __obj.updateDynamic("tsconfigOverride")(tsconfigOverride.asInstanceOf[js.Any])
-    if (typescript != null) __obj.updateDynamic("typescript")(typescript.asInstanceOf[js.Any])
-    if (!js.isUndefined(useTsconfigDeclarationDir)) __obj.updateDynamic("useTsconfigDeclarationDir")(useTsconfigDeclarationDir.asInstanceOf[js.Any])
-    if (verbosity != null) __obj.updateDynamic("verbosity")(verbosity.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialIOptions]
   }
+  @scala.inline
+  implicit class PartialIOptionsOps[Self <: PartialIOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAbortOnError(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abortOnError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbortOnError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abortOnError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheRoot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheRoot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheRoot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheck(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("check")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("check")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClean(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clean")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClean: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clean")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclude(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInclude(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectHashIgnoreUnknownHack(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectHashIgnoreUnknownHack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectHashIgnoreUnknownHack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectHashIgnoreUnknownHack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRollupCommonJSResolveHack(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rollupCommonJSResolveHack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRollupCommonJSResolveHack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rollupCommonJSResolveHack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceMapCallback(value: (/* id */ String, /* map */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMapCallback")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutSourceMapCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMapCallback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransformers(value: js.Array[TransformerFactoryCreator]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransformers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTsconfig(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tsconfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTsconfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tsconfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTsconfigDefaults(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tsconfigDefaults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTsconfigDefaults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tsconfigDefaults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTsconfigOverride(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tsconfigOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTsconfigOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tsconfigOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypescript(value: TypeoftsTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typescript")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypescript: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typescript")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseTsconfigDeclarationDir(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useTsconfigDeclarationDir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseTsconfigDeclarationDir: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useTsconfigDeclarationDir")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerbosity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verbosity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerbosity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verbosity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

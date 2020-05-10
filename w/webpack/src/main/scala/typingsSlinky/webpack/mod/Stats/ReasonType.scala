@@ -49,84 +49,82 @@ trait ReasonType extends js.Object
 
 object ReasonType {
   @scala.inline
-  def `accepted harmony modules`: typingsSlinky.webpack.webpackStrings.`accepted harmony modules` = this.cast("accepted harmony modules")
+  def `accepted harmony modules`: typingsSlinky.webpack.webpackStrings.`accepted harmony modules` = ("accepted harmony modules").asInstanceOf[typingsSlinky.webpack.webpackStrings.`accepted harmony modules`]
   @scala.inline
-  def `amd define`: typingsSlinky.webpack.webpackStrings.`amd define` = this.cast("amd define")
+  def `amd define`: typingsSlinky.webpack.webpackStrings.`amd define` = ("amd define").asInstanceOf[typingsSlinky.webpack.webpackStrings.`amd define`]
   @scala.inline
-  def `amd require`: typingsSlinky.webpack.webpackStrings.`amd require` = this.cast("amd require")
+  def `amd require`: typingsSlinky.webpack.webpackStrings.`amd require` = ("amd require").asInstanceOf[typingsSlinky.webpack.webpackStrings.`amd require`]
   @scala.inline
-  def `amd require array`: typingsSlinky.webpack.webpackStrings.`amd require array` = this.cast("amd require array")
+  def `amd require array`: typingsSlinky.webpack.webpackStrings.`amd require array` = ("amd require array").asInstanceOf[typingsSlinky.webpack.webpackStrings.`amd require array`]
   @scala.inline
-  def `amd require context`: typingsSlinky.webpack.webpackStrings.`amd require context` = this.cast("amd require context")
+  def `amd require context`: typingsSlinky.webpack.webpackStrings.`amd require context` = ("amd require context").asInstanceOf[typingsSlinky.webpack.webpackStrings.`amd require context`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `cjs require`: typingsSlinky.webpack.webpackStrings.`cjs require` = ("cjs require").asInstanceOf[typingsSlinky.webpack.webpackStrings.`cjs require`]
   @scala.inline
-  def `cjs require`: typingsSlinky.webpack.webpackStrings.`cjs require` = this.cast("cjs require")
+  def `cjs require context`: typingsSlinky.webpack.webpackStrings.`cjs require context` = ("cjs require context").asInstanceOf[typingsSlinky.webpack.webpackStrings.`cjs require context`]
   @scala.inline
-  def `cjs require context`: typingsSlinky.webpack.webpackStrings.`cjs require context` = this.cast("cjs require context")
+  def `context element`: typingsSlinky.webpack.webpackStrings.`context element` = ("context element").asInstanceOf[typingsSlinky.webpack.webpackStrings.`context element`]
   @scala.inline
-  def `context element`: typingsSlinky.webpack.webpackStrings.`context element` = this.cast("context element")
+  def `delegated exports`: typingsSlinky.webpack.webpackStrings.`delegated exports` = ("delegated exports").asInstanceOf[typingsSlinky.webpack.webpackStrings.`delegated exports`]
   @scala.inline
-  def `delegated exports`: typingsSlinky.webpack.webpackStrings.`delegated exports` = this.cast("delegated exports")
+  def `delegated source`: typingsSlinky.webpack.webpackStrings.`delegated source` = ("delegated source").asInstanceOf[typingsSlinky.webpack.webpackStrings.`delegated source`]
   @scala.inline
-  def `delegated source`: typingsSlinky.webpack.webpackStrings.`delegated source` = this.cast("delegated source")
+  def `dll entry`: typingsSlinky.webpack.webpackStrings.`dll entry` = ("dll entry").asInstanceOf[typingsSlinky.webpack.webpackStrings.`dll entry`]
   @scala.inline
-  def `dll entry`: typingsSlinky.webpack.webpackStrings.`dll entry` = this.cast("dll entry")
+  def `harmony accept`: typingsSlinky.webpack.webpackStrings.`harmony accept` = ("harmony accept").asInstanceOf[typingsSlinky.webpack.webpackStrings.`harmony accept`]
   @scala.inline
-  def `harmony accept`: typingsSlinky.webpack.webpackStrings.`harmony accept` = this.cast("harmony accept")
+  def `harmony export expression`: typingsSlinky.webpack.webpackStrings.`harmony export expression` = ("harmony export expression").asInstanceOf[typingsSlinky.webpack.webpackStrings.`harmony export expression`]
   @scala.inline
-  def `harmony export expression`: typingsSlinky.webpack.webpackStrings.`harmony export expression` = this.cast("harmony export expression")
+  def `harmony export header`: typingsSlinky.webpack.webpackStrings.`harmony export header` = ("harmony export header").asInstanceOf[typingsSlinky.webpack.webpackStrings.`harmony export header`]
   @scala.inline
-  def `harmony export header`: typingsSlinky.webpack.webpackStrings.`harmony export header` = this.cast("harmony export header")
+  def `harmony export imported specifier`: typingsSlinky.webpack.webpackStrings.`harmony export imported specifier` = ("harmony export imported specifier").asInstanceOf[typingsSlinky.webpack.webpackStrings.`harmony export imported specifier`]
   @scala.inline
-  def `harmony export imported specifier`: typingsSlinky.webpack.webpackStrings.`harmony export imported specifier` = this.cast("harmony export imported specifier")
+  def `harmony export specifier`: typingsSlinky.webpack.webpackStrings.`harmony export specifier` = ("harmony export specifier").asInstanceOf[typingsSlinky.webpack.webpackStrings.`harmony export specifier`]
   @scala.inline
-  def `harmony export specifier`: typingsSlinky.webpack.webpackStrings.`harmony export specifier` = this.cast("harmony export specifier")
+  def `harmony import specifier`: typingsSlinky.webpack.webpackStrings.`harmony import specifier` = ("harmony import specifier").asInstanceOf[typingsSlinky.webpack.webpackStrings.`harmony import specifier`]
   @scala.inline
-  def `harmony import specifier`: typingsSlinky.webpack.webpackStrings.`harmony import specifier` = this.cast("harmony import specifier")
+  def `harmony init`: typingsSlinky.webpack.webpackStrings.`harmony init` = ("harmony init").asInstanceOf[typingsSlinky.webpack.webpackStrings.`harmony init`]
   @scala.inline
-  def `harmony init`: typingsSlinky.webpack.webpackStrings.`harmony init` = this.cast("harmony init")
+  def `harmony side effect evaluation`: typingsSlinky.webpack.webpackStrings.`harmony side effect evaluation` = ("harmony side effect evaluation").asInstanceOf[typingsSlinky.webpack.webpackStrings.`harmony side effect evaluation`]
   @scala.inline
-  def `harmony side effect evaluation`: typingsSlinky.webpack.webpackStrings.`harmony side effect evaluation` = this.cast("harmony side effect evaluation")
+  def importLeftparenthesisRightparenthesis: typingsSlinky.webpack.webpackStrings.importLeftparenthesisRightparenthesis = "import()".asInstanceOf[typingsSlinky.webpack.webpackStrings.importLeftparenthesisRightparenthesis]
   @scala.inline
-  def importLeftparenthesisRightparenthesis: typingsSlinky.webpack.webpackStrings.importLeftparenthesisRightparenthesis = this.cast("import()")
+  def `importLeftparenthesisRightparenthesis context development`: typingsSlinky.webpack.webpackStrings.`importLeftparenthesisRightparenthesis context development` = ("import() context development").asInstanceOf[typingsSlinky.webpack.webpackStrings.`importLeftparenthesisRightparenthesis context development`]
   @scala.inline
-  def `importLeftparenthesisRightparenthesis context development`: typingsSlinky.webpack.webpackStrings.`importLeftparenthesisRightparenthesis context development` = this.cast("import() context development")
+  def `importLeftparenthesisRightparenthesis context production`: typingsSlinky.webpack.webpackStrings.`importLeftparenthesisRightparenthesis context production` = ("import() context production").asInstanceOf[typingsSlinky.webpack.webpackStrings.`importLeftparenthesisRightparenthesis context production`]
   @scala.inline
-  def `importLeftparenthesisRightparenthesis context production`: typingsSlinky.webpack.webpackStrings.`importLeftparenthesisRightparenthesis context production` = this.cast("import() context production")
+  def `importLeftparenthesisRightparenthesis eager`: typingsSlinky.webpack.webpackStrings.`importLeftparenthesisRightparenthesis eager` = ("import() eager").asInstanceOf[typingsSlinky.webpack.webpackStrings.`importLeftparenthesisRightparenthesis eager`]
   @scala.inline
-  def `importLeftparenthesisRightparenthesis eager`: typingsSlinky.webpack.webpackStrings.`importLeftparenthesisRightparenthesis eager` = this.cast("import() eager")
+  def `importLeftparenthesisRightparenthesis weak`: typingsSlinky.webpack.webpackStrings.`importLeftparenthesisRightparenthesis weak` = ("import() weak").asInstanceOf[typingsSlinky.webpack.webpackStrings.`importLeftparenthesisRightparenthesis weak`]
   @scala.inline
-  def `importLeftparenthesisRightparenthesis weak`: typingsSlinky.webpack.webpackStrings.`importLeftparenthesisRightparenthesis weak` = this.cast("import() weak")
+  def `json exports`: typingsSlinky.webpack.webpackStrings.`json exports` = ("json exports").asInstanceOf[typingsSlinky.webpack.webpackStrings.`json exports`]
   @scala.inline
-  def `json exports`: typingsSlinky.webpack.webpackStrings.`json exports` = this.cast("json exports")
+  def loader: typingsSlinky.webpack.webpackStrings.loader = "loader".asInstanceOf[typingsSlinky.webpack.webpackStrings.loader]
   @scala.inline
-  def loader: typingsSlinky.webpack.webpackStrings.loader = this.cast("loader")
+  def moduleDothotDotaccept: typingsSlinky.webpack.webpackStrings.moduleDothotDotaccept = "module.hot.accept".asInstanceOf[typingsSlinky.webpack.webpackStrings.moduleDothotDotaccept]
   @scala.inline
-  def moduleDothotDotaccept: typingsSlinky.webpack.webpackStrings.moduleDothotDotaccept = this.cast("module.hot.accept")
+  def moduleDothotDotdecline: typingsSlinky.webpack.webpackStrings.moduleDothotDotdecline = "module.hot.decline".asInstanceOf[typingsSlinky.webpack.webpackStrings.moduleDothotDotdecline]
   @scala.inline
-  def moduleDothotDotdecline: typingsSlinky.webpack.webpackStrings.moduleDothotDotdecline = this.cast("module.hot.decline")
+  def `multi entry`: typingsSlinky.webpack.webpackStrings.`multi entry` = ("multi entry").asInstanceOf[typingsSlinky.webpack.webpackStrings.`multi entry`]
   @scala.inline
-  def `multi entry`: typingsSlinky.webpack.webpackStrings.`multi entry` = this.cast("multi entry")
+  def `null`: typingsSlinky.webpack.webpackStrings.`null` = "null".asInstanceOf[typingsSlinky.webpack.webpackStrings.`null`]
   @scala.inline
-  def `null`: typingsSlinky.webpack.webpackStrings.`null` = this.cast("null")
+  def prefetch: typingsSlinky.webpack.webpackStrings.prefetch = "prefetch".asInstanceOf[typingsSlinky.webpack.webpackStrings.prefetch]
   @scala.inline
-  def prefetch: typingsSlinky.webpack.webpackStrings.prefetch = this.cast("prefetch")
+  def requireDotcontext: typingsSlinky.webpack.webpackStrings.requireDotcontext = "require.context".asInstanceOf[typingsSlinky.webpack.webpackStrings.requireDotcontext]
   @scala.inline
-  def requireDotcontext: typingsSlinky.webpack.webpackStrings.requireDotcontext = this.cast("require.context")
+  def requireDotensure: typingsSlinky.webpack.webpackStrings.requireDotensure = "require.ensure".asInstanceOf[typingsSlinky.webpack.webpackStrings.requireDotensure]
   @scala.inline
-  def requireDotensure: typingsSlinky.webpack.webpackStrings.requireDotensure = this.cast("require.ensure")
+  def `requireDotensure item`: typingsSlinky.webpack.webpackStrings.`requireDotensure item` = ("require.ensure item").asInstanceOf[typingsSlinky.webpack.webpackStrings.`requireDotensure item`]
   @scala.inline
-  def `requireDotensure item`: typingsSlinky.webpack.webpackStrings.`requireDotensure item` = this.cast("require.ensure item")
+  def requireDotinclude: typingsSlinky.webpack.webpackStrings.requireDotinclude = "require.include".asInstanceOf[typingsSlinky.webpack.webpackStrings.requireDotinclude]
   @scala.inline
-  def requireDotinclude: typingsSlinky.webpack.webpackStrings.requireDotinclude = this.cast("require.include")
+  def requireDotresolve: typingsSlinky.webpack.webpackStrings.requireDotresolve = "require.resolve".asInstanceOf[typingsSlinky.webpack.webpackStrings.requireDotresolve]
   @scala.inline
-  def requireDotresolve: typingsSlinky.webpack.webpackStrings.requireDotresolve = this.cast("require.resolve")
+  def `single entry`: typingsSlinky.webpack.webpackStrings.`single entry` = ("single entry").asInstanceOf[typingsSlinky.webpack.webpackStrings.`single entry`]
   @scala.inline
-  def `single entry`: typingsSlinky.webpack.webpackStrings.`single entry` = this.cast("single entry")
+  def `wasm export import`: typingsSlinky.webpack.webpackStrings.`wasm export import` = ("wasm export import").asInstanceOf[typingsSlinky.webpack.webpackStrings.`wasm export import`]
   @scala.inline
-  def `wasm export import`: typingsSlinky.webpack.webpackStrings.`wasm export import` = this.cast("wasm export import")
-  @scala.inline
-  def `wasm import`: typingsSlinky.webpack.webpackStrings.`wasm import` = this.cast("wasm import")
+  def `wasm import`: typingsSlinky.webpack.webpackStrings.`wasm import` = ("wasm import").asInstanceOf[typingsSlinky.webpack.webpackStrings.`wasm import`]
 }
 

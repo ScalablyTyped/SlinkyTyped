@@ -15,6 +15,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
   */
+@js.native
 trait PlusWebviewWebviewOverrideUrlOptions extends js.Object {
   /**
     * 拦截URL请求生效时机
@@ -31,7 +32,7 @@ trait PlusWebviewWebviewOverrideUrlOptions extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var effect: js.UndefOr[instant | _empty] = js.undefined
+  var effect: js.UndefOr[instant | _empty] = js.native
   /**
     * 排除拦截处理请求类型
     * 不拦截处理指定类型的URL请求，直接使用系统默认处理逻辑。
@@ -48,7 +49,7 @@ trait PlusWebviewWebviewOverrideUrlOptions extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var exclude: js.UndefOr[none | redirect] = js.undefined
+  var exclude: js.UndefOr[none | redirect] = js.native
   /**
     * 区配是否需要处理的URL请求
     * 支持正则表达式，默认值为对所有URL地址生效（相当于正则表达式“.*”）。
@@ -56,7 +57,7 @@ trait PlusWebviewWebviewOverrideUrlOptions extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var `match`: js.UndefOr[String] = js.undefined
+  var `match`: js.UndefOr[String] = js.native
   /**
     * 拦截模式
     * 可取值：
@@ -72,23 +73,70 @@ trait PlusWebviewWebviewOverrideUrlOptions extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var mode: js.UndefOr[allow | reject] = js.undefined
+  var mode: js.UndefOr[allow | reject] = js.native
 }
 
 object PlusWebviewWebviewOverrideUrlOptions {
   @scala.inline
-  def apply(
-    effect: instant | _empty = null,
-    exclude: none | redirect = null,
-    `match`: String = null,
-    mode: allow | reject = null
-  ): PlusWebviewWebviewOverrideUrlOptions = {
+  def apply(): PlusWebviewWebviewOverrideUrlOptions = {
     val __obj = js.Dynamic.literal()
-    if (effect != null) __obj.updateDynamic("effect")(effect.asInstanceOf[js.Any])
-    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
-    if (`match` != null) __obj.updateDynamic("match")(`match`.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusWebviewWebviewOverrideUrlOptions]
   }
+  @scala.inline
+  implicit class PlusWebviewWebviewOverrideUrlOptionsOps[Self <: PlusWebviewWebviewOverrideUrlOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEffect(value: instant | _empty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEffect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclude(value: none | redirect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("match")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("match")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: allow | reject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

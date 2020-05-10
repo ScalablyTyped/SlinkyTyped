@@ -1,124 +1,77 @@
 package typingsSlinky.reactNative.mod
 
-import slinky.core.SyntheticEvent
-import typingsSlinky.reactNative.ReadonlyactionNamestring
-import typingsSlinky.reactNative.reactNativeStrings.`no-hide-descendants`
-import typingsSlinky.reactNative.reactNativeStrings.assertive
-import typingsSlinky.reactNative.reactNativeStrings.auto
-import typingsSlinky.reactNative.reactNativeStrings.button
-import typingsSlinky.reactNative.reactNativeStrings.no
-import typingsSlinky.reactNative.reactNativeStrings.none
-import typingsSlinky.reactNative.reactNativeStrings.polite
-import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
-import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
-import typingsSlinky.reactNative.reactNativeStrings.resize
-import typingsSlinky.reactNative.reactNativeStrings.scale
-import typingsSlinky.reactNative.reactNativeStrings.yes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ImageBackgroundProps extends ImagePropsBase {
-  var imageRef: js.UndefOr[js.Function1[/* image */ Image, Unit]] = js.undefined
-  var imageStyle: js.UndefOr[StyleProp[ImageStyle]] = js.undefined
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var imageRef: js.UndefOr[js.Function1[/* image */ Image, Unit]] = js.native
+  var imageStyle: js.UndefOr[StyleProp[ImageStyle]] = js.native
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
 }
 
 object ImageBackgroundProps {
   @scala.inline
-  def apply(
-    source: ImageSourcePropType,
-    accessibilityActions: js.Array[AccessibilityActionInfo] = null,
-    accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
-    accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,
-    accessibilityHint: String = null,
-    accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.undefined,
-    accessibilityLabel: String = null,
-    accessibilityLiveRegion: none | polite | assertive = null,
-    accessibilityRole: AccessibilityRole = null,
-    accessibilityState: AccessibilityState = null,
-    accessibilityStates: js.Array[AccessibilityStates] = null,
-    accessibilityTraits: AccessibilityTrait | js.Array[AccessibilityTrait] = null,
-    accessibilityViewIsModal: js.UndefOr[Boolean] = js.undefined,
-    accessible: js.UndefOr[Boolean] = js.undefined,
-    blurRadius: Int | Double = null,
-    borderBottomLeftRadius: Int | Double = null,
-    borderBottomRightRadius: Int | Double = null,
-    borderRadius: Int | Double = null,
-    borderTopLeftRadius: Int | Double = null,
-    borderTopRightRadius: Int | Double = null,
-    capInsets: Insets = null,
-    defaultSource: ImageURISource | Double = null,
-    fadeDuration: Int | Double = null,
-    height: Int | Double = null,
-    imageRef: /* image */ Image => Unit = null,
-    imageStyle: StyleProp[ImageStyle] = null,
-    importantForAccessibility: auto | yes | no | `no-hide-descendants` = null,
-    loadingIndicatorSource: ImageURISource = null,
-    onAccessibilityAction: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit = null,
-    onAccessibilityEscape: () => Unit = null,
-    onAccessibilityTap: () => Unit = null,
-    onError: SyntheticEvent[NodeHandle, ImageErrorEventData] => Unit = null,
-    onLayout: /* event */ LayoutChangeEvent => Unit = null,
-    onLoad: SyntheticEvent[NodeHandle, ImageLoadEventData] => Unit = null,
-    onLoadEnd: () => Unit = null,
-    onLoadStart: () => Unit = null,
-    onMagicTap: () => Unit = null,
-    onPartialLoad: () => Unit = null,
-    onProgress: SyntheticEvent[NodeHandle, ImageProgressEventDataIOS] => Unit = null,
-    progressiveRenderingEnabled: js.UndefOr[Boolean] = js.undefined,
-    resizeMethod: auto | resize | scale = null,
-    resizeMode: ImageResizeMode = null,
-    style: StyleProp[ViewStyle] = null,
-    testID: String = null,
-    width: Int | Double = null
-  ): ImageBackgroundProps = {
+  def apply(source: ImageSourcePropType): ImageBackgroundProps = {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
-    if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
-    if (accessibilityComponentType != null) __obj.updateDynamic("accessibilityComponentType")(accessibilityComponentType.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityElementsHidden)) __obj.updateDynamic("accessibilityElementsHidden")(accessibilityElementsHidden.asInstanceOf[js.Any])
-    if (accessibilityHint != null) __obj.updateDynamic("accessibilityHint")(accessibilityHint.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityIgnoresInvertColors)) __obj.updateDynamic("accessibilityIgnoresInvertColors")(accessibilityIgnoresInvertColors.asInstanceOf[js.Any])
-    if (accessibilityLabel != null) __obj.updateDynamic("accessibilityLabel")(accessibilityLabel.asInstanceOf[js.Any])
-    if (accessibilityLiveRegion != null) __obj.updateDynamic("accessibilityLiveRegion")(accessibilityLiveRegion.asInstanceOf[js.Any])
-    if (accessibilityRole != null) __obj.updateDynamic("accessibilityRole")(accessibilityRole.asInstanceOf[js.Any])
-    if (accessibilityState != null) __obj.updateDynamic("accessibilityState")(accessibilityState.asInstanceOf[js.Any])
-    if (accessibilityStates != null) __obj.updateDynamic("accessibilityStates")(accessibilityStates.asInstanceOf[js.Any])
-    if (accessibilityTraits != null) __obj.updateDynamic("accessibilityTraits")(accessibilityTraits.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityViewIsModal)) __obj.updateDynamic("accessibilityViewIsModal")(accessibilityViewIsModal.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessible)) __obj.updateDynamic("accessible")(accessible.asInstanceOf[js.Any])
-    if (blurRadius != null) __obj.updateDynamic("blurRadius")(blurRadius.asInstanceOf[js.Any])
-    if (borderBottomLeftRadius != null) __obj.updateDynamic("borderBottomLeftRadius")(borderBottomLeftRadius.asInstanceOf[js.Any])
-    if (borderBottomRightRadius != null) __obj.updateDynamic("borderBottomRightRadius")(borderBottomRightRadius.asInstanceOf[js.Any])
-    if (borderRadius != null) __obj.updateDynamic("borderRadius")(borderRadius.asInstanceOf[js.Any])
-    if (borderTopLeftRadius != null) __obj.updateDynamic("borderTopLeftRadius")(borderTopLeftRadius.asInstanceOf[js.Any])
-    if (borderTopRightRadius != null) __obj.updateDynamic("borderTopRightRadius")(borderTopRightRadius.asInstanceOf[js.Any])
-    if (capInsets != null) __obj.updateDynamic("capInsets")(capInsets.asInstanceOf[js.Any])
-    if (defaultSource != null) __obj.updateDynamic("defaultSource")(defaultSource.asInstanceOf[js.Any])
-    if (fadeDuration != null) __obj.updateDynamic("fadeDuration")(fadeDuration.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (imageRef != null) __obj.updateDynamic("imageRef")(js.Any.fromFunction1(imageRef))
-    if (imageStyle != null) __obj.updateDynamic("imageStyle")(imageStyle.asInstanceOf[js.Any])
-    if (importantForAccessibility != null) __obj.updateDynamic("importantForAccessibility")(importantForAccessibility.asInstanceOf[js.Any])
-    if (loadingIndicatorSource != null) __obj.updateDynamic("loadingIndicatorSource")(loadingIndicatorSource.asInstanceOf[js.Any])
-    if (onAccessibilityAction != null) __obj.updateDynamic("onAccessibilityAction")(js.Any.fromFunction1(onAccessibilityAction))
-    if (onAccessibilityEscape != null) __obj.updateDynamic("onAccessibilityEscape")(js.Any.fromFunction0(onAccessibilityEscape))
-    if (onAccessibilityTap != null) __obj.updateDynamic("onAccessibilityTap")(js.Any.fromFunction0(onAccessibilityTap))
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (onLayout != null) __obj.updateDynamic("onLayout")(js.Any.fromFunction1(onLayout))
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
-    if (onLoadEnd != null) __obj.updateDynamic("onLoadEnd")(js.Any.fromFunction0(onLoadEnd))
-    if (onLoadStart != null) __obj.updateDynamic("onLoadStart")(js.Any.fromFunction0(onLoadStart))
-    if (onMagicTap != null) __obj.updateDynamic("onMagicTap")(js.Any.fromFunction0(onMagicTap))
-    if (onPartialLoad != null) __obj.updateDynamic("onPartialLoad")(js.Any.fromFunction0(onPartialLoad))
-    if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
-    if (!js.isUndefined(progressiveRenderingEnabled)) __obj.updateDynamic("progressiveRenderingEnabled")(progressiveRenderingEnabled.asInstanceOf[js.Any])
-    if (resizeMethod != null) __obj.updateDynamic("resizeMethod")(resizeMethod.asInstanceOf[js.Any])
-    if (resizeMode != null) __obj.updateDynamic("resizeMode")(resizeMode.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageBackgroundProps]
   }
+  @scala.inline
+  implicit class ImageBackgroundPropsOps[Self <: ImageBackgroundProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImageRef(value: /* image */ Image => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageRef")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutImageRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageStyle(value: StyleProp[ImageStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
+        ret
+    }
+  }
+  
 }
 

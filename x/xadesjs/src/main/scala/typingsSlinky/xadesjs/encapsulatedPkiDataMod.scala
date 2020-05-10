@@ -12,7 +12,7 @@ object encapsulatedPkiDataMod extends js.Object {
   class EncapsulatedPKIData () extends XmlObject {
     var Encoding: EncodingType = js.native
     var Id: String = js.native
-    var Value: scala.scalajs.js.typedarray.Uint8Array = js.native
+    var Value: js.typedarray.Uint8Array = js.native
   }
   
   trait _EncodingType extends js.Object

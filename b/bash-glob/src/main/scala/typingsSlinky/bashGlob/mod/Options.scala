@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var cwd: js.UndefOr[String] = js.undefined
-  var dot: js.UndefOr[Boolean] = js.undefined
-  var dotglob: js.UndefOr[Boolean] = js.undefined
-  var extglob: js.UndefOr[Boolean] = js.undefined
-  var failglob: js.UndefOr[Boolean] = js.undefined
-  var globstar: js.UndefOr[Boolean] = js.undefined
-  var nocase: js.UndefOr[Boolean] = js.undefined
-  var nocaseglob: js.UndefOr[Boolean] = js.undefined
-  var nullglob: js.UndefOr[Boolean] = js.undefined
+  var cwd: js.UndefOr[String] = js.native
+  var dot: js.UndefOr[Boolean] = js.native
+  var dotglob: js.UndefOr[Boolean] = js.native
+  var extglob: js.UndefOr[Boolean] = js.native
+  var failglob: js.UndefOr[Boolean] = js.native
+  var globstar: js.UndefOr[Boolean] = js.native
+  var nocase: js.UndefOr[Boolean] = js.native
+  var nocaseglob: js.UndefOr[Boolean] = js.native
+  var nullglob: js.UndefOr[Boolean] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    cwd: String = null,
-    dot: js.UndefOr[Boolean] = js.undefined,
-    dotglob: js.UndefOr[Boolean] = js.undefined,
-    extglob: js.UndefOr[Boolean] = js.undefined,
-    failglob: js.UndefOr[Boolean] = js.undefined,
-    globstar: js.UndefOr[Boolean] = js.undefined,
-    nocase: js.UndefOr[Boolean] = js.undefined,
-    nocaseglob: js.UndefOr[Boolean] = js.undefined,
-    nullglob: js.UndefOr[Boolean] = js.undefined
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
-    if (!js.isUndefined(dot)) __obj.updateDynamic("dot")(dot.asInstanceOf[js.Any])
-    if (!js.isUndefined(dotglob)) __obj.updateDynamic("dotglob")(dotglob.asInstanceOf[js.Any])
-    if (!js.isUndefined(extglob)) __obj.updateDynamic("extglob")(extglob.asInstanceOf[js.Any])
-    if (!js.isUndefined(failglob)) __obj.updateDynamic("failglob")(failglob.asInstanceOf[js.Any])
-    if (!js.isUndefined(globstar)) __obj.updateDynamic("globstar")(globstar.asInstanceOf[js.Any])
-    if (!js.isUndefined(nocase)) __obj.updateDynamic("nocase")(nocase.asInstanceOf[js.Any])
-    if (!js.isUndefined(nocaseglob)) __obj.updateDynamic("nocaseglob")(nocaseglob.asInstanceOf[js.Any])
-    if (!js.isUndefined(nullglob)) __obj.updateDynamic("nullglob")(nullglob.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCwd(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCwd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDot(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotglob(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotglob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotglob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotglob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtglob(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extglob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtglob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extglob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailglob(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failglob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailglob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failglob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlobstar(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("globstar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobstar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("globstar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNocase(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nocase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNocase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nocase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNocaseglob(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nocaseglob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNocaseglob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nocaseglob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNullglob(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nullglob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNullglob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nullglob")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

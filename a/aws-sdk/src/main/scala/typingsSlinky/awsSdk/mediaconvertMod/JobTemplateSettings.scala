@@ -46,28 +46,125 @@ trait JobTemplateSettings extends js.Object {
 
 object JobTemplateSettings {
   @scala.inline
-  def apply(
-    AdAvailOffset: Int | Double = null,
-    AvailBlanking: AvailBlanking = null,
-    Esam: EsamSettings = null,
-    Inputs: listOfInputTemplate = null,
-    MotionImageInserter: MotionImageInserter = null,
-    NielsenConfiguration: NielsenConfiguration = null,
-    OutputGroups: listOfOutputGroup = null,
-    TimecodeConfig: TimecodeConfig = null,
-    TimedMetadataInsertion: TimedMetadataInsertion = null
-  ): JobTemplateSettings = {
+  def apply(): JobTemplateSettings = {
     val __obj = js.Dynamic.literal()
-    if (AdAvailOffset != null) __obj.updateDynamic("AdAvailOffset")(AdAvailOffset.asInstanceOf[js.Any])
-    if (AvailBlanking != null) __obj.updateDynamic("AvailBlanking")(AvailBlanking.asInstanceOf[js.Any])
-    if (Esam != null) __obj.updateDynamic("Esam")(Esam.asInstanceOf[js.Any])
-    if (Inputs != null) __obj.updateDynamic("Inputs")(Inputs.asInstanceOf[js.Any])
-    if (MotionImageInserter != null) __obj.updateDynamic("MotionImageInserter")(MotionImageInserter.asInstanceOf[js.Any])
-    if (NielsenConfiguration != null) __obj.updateDynamic("NielsenConfiguration")(NielsenConfiguration.asInstanceOf[js.Any])
-    if (OutputGroups != null) __obj.updateDynamic("OutputGroups")(OutputGroups.asInstanceOf[js.Any])
-    if (TimecodeConfig != null) __obj.updateDynamic("TimecodeConfig")(TimecodeConfig.asInstanceOf[js.Any])
-    if (TimedMetadataInsertion != null) __obj.updateDynamic("TimedMetadataInsertion")(TimedMetadataInsertion.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobTemplateSettings]
   }
+  @scala.inline
+  implicit class JobTemplateSettingsOps[Self <: JobTemplateSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdAvailOffset(value: integerMinNegative1000Max1000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdAvailOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdAvailOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdAvailOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailBlanking(value: AvailBlanking): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailBlanking")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailBlanking: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailBlanking")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEsam(value: EsamSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Esam")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEsam: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Esam")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputs(value: listOfInputTemplate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Inputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Inputs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMotionImageInserter(value: MotionImageInserter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MotionImageInserter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMotionImageInserter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MotionImageInserter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNielsenConfiguration(value: NielsenConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NielsenConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNielsenConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NielsenConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputGroups(value: listOfOutputGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimecodeConfig(value: TimecodeConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimecodeConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimecodeConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimecodeConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimedMetadataInsertion(value: TimedMetadataInsertion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataInsertion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimedMetadataInsertion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataInsertion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

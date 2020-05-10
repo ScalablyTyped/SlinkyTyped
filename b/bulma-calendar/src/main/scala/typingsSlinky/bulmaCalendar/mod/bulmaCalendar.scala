@@ -15,7 +15,7 @@ trait bulmaCalendar extends js.Object {
   /**
     * Get selected date
     */
-  def date(): AnonEnd = js.native
+  def date: AnonEnd = js.native
   /**
     * Set date
     */
@@ -23,7 +23,7 @@ trait bulmaCalendar extends js.Object {
   /**
     * Get date format pattern
     */
-  def dateFormat(): String = js.native
+  def dateFormat: String = js.native
   /**
     * Set date format pattern
     */
@@ -33,7 +33,7 @@ trait bulmaCalendar extends js.Object {
   /**
     * Get selected end date
     */
-  def endDate(): js.Date = js.native
+  def endDate: js.Date = js.native
   /**
     * Set end date
     */
@@ -41,7 +41,7 @@ trait bulmaCalendar extends js.Object {
   /**
     * Get selected end time
     */
-  def endTime(): js.Date = js.native
+  def endTime: js.Date = js.native
   /**
     * Set end time
     */
@@ -54,7 +54,7 @@ trait bulmaCalendar extends js.Object {
   /**
     * Get component instance ID
     */
-  def id(): js.Any = js.native
+  def id: js.Any = js.native
   /**
     * Check if date picker is open or not
     *
@@ -70,7 +70,7 @@ trait bulmaCalendar extends js.Object {
   /**
     * Get active lang
     */
-  def lang(): String = js.native
+  def lang: String = js.native
   /**
     * Set component lang
     */
@@ -80,7 +80,7 @@ trait bulmaCalendar extends js.Object {
   /**
     * Get max possible date
     */
-  def maxDate(): js.Date = js.native
+  def maxDate: js.Date = js.native
   /**
     * Set max possible date
     */
@@ -89,7 +89,7 @@ trait bulmaCalendar extends js.Object {
   /**
     * Get min possible date
     */
-  def minDate(): js.Date = js.native
+  def minDate: js.Date = js.native
   /**
     * Set min possible date
     */
@@ -116,7 +116,7 @@ trait bulmaCalendar extends js.Object {
   /**
     * Get selected start date
     */
-  def startDate(): js.Date = js.native
+  def startDate: js.Date = js.native
   /**
     * Se start date
     */
@@ -124,7 +124,7 @@ trait bulmaCalendar extends js.Object {
   /**
     * Get selected start time
     */
-  def startTime(): js.Date = js.native
+  def startTime: js.Date = js.native
   /**
     * Set start time
     */
@@ -132,7 +132,7 @@ trait bulmaCalendar extends js.Object {
   /**
     * Get selected time
     */
-  def time(): js.Date = js.native
+  def time: js.Date = js.native
   /**
     * Set time
     */
@@ -140,7 +140,7 @@ trait bulmaCalendar extends js.Object {
   /**
     * Get time format pattern
     */
-  def timeFormat(): String = js.native
+  def timeFormat: String = js.native
   /**
     * Set time format pattern
     */

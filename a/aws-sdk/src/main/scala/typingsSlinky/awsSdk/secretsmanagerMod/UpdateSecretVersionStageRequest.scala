@@ -26,16 +26,53 @@ trait UpdateSecretVersionStageRequest extends js.Object {
 
 object UpdateSecretVersionStageRequest {
   @scala.inline
-  def apply(
-    SecretId: SecretIdType,
-    VersionStage: SecretVersionStageType,
-    MoveToVersionId: SecretVersionIdType = null,
-    RemoveFromVersionId: SecretVersionIdType = null
-  ): UpdateSecretVersionStageRequest = {
+  def apply(SecretId: SecretIdType, VersionStage: SecretVersionStageType): UpdateSecretVersionStageRequest = {
     val __obj = js.Dynamic.literal(SecretId = SecretId.asInstanceOf[js.Any], VersionStage = VersionStage.asInstanceOf[js.Any])
-    if (MoveToVersionId != null) __obj.updateDynamic("MoveToVersionId")(MoveToVersionId.asInstanceOf[js.Any])
-    if (RemoveFromVersionId != null) __obj.updateDynamic("RemoveFromVersionId")(RemoveFromVersionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateSecretVersionStageRequest]
   }
+  @scala.inline
+  implicit class UpdateSecretVersionStageRequestOps[Self <: UpdateSecretVersionStageRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSecretId(value: SecretIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVersionStage(value: SecretVersionStageType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionStage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMoveToVersionId(value: SecretVersionIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MoveToVersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMoveToVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MoveToVersionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveFromVersionId(value: SecretVersionIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveFromVersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveFromVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveFromVersionId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

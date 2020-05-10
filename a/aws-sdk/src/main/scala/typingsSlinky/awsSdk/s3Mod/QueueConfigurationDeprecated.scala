@@ -20,13 +20,65 @@ trait QueueConfigurationDeprecated extends js.Object {
 
 object QueueConfigurationDeprecated {
   @scala.inline
-  def apply(Event: Event = null, Events: EventList = null, Id: NotificationId = null, Queue: QueueArn = null): QueueConfigurationDeprecated = {
+  def apply(): QueueConfigurationDeprecated = {
     val __obj = js.Dynamic.literal()
-    if (Event != null) __obj.updateDynamic("Event")(Event.asInstanceOf[js.Any])
-    if (Events != null) __obj.updateDynamic("Events")(Events.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (Queue != null) __obj.updateDynamic("Queue")(Queue.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueueConfigurationDeprecated]
   }
+  @scala.inline
+  implicit class QueueConfigurationDeprecatedOps[Self <: QueueConfigurationDeprecated] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEvent(value: Event): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Event")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvents(value: EventList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: NotificationId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueue(value: QueueArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Queue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Queue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

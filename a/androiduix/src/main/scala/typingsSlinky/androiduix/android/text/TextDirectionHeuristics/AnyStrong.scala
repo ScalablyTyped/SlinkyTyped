@@ -9,8 +9,6 @@ import scala.scalajs.js.annotation._
 class AnyStrong protected () extends TextDirectionAlgorithm {
   def this(lookForRtl: Boolean) = this()
   var mLookForRtl: js.Any = js.native
-  /* CompleteClass */
-  override def checkRtl(cs: String, start: Double, count: Double): Double = js.native
 }
 
 /* static members */

@@ -1,6 +1,5 @@
 package typingsSlinky.nodeForge.mod.pki.rsa
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +14,7 @@ object generateKeyPair extends js.Object {
   def apply(options: GenerateKeyPairOptions): KeyPair = js.native
   def apply(
     options: GenerateKeyPairOptions,
-    callback: js.Function2[/* err */ Error, /* keypair */ KeyPair, Unit]
+    callback: js.Function2[/* err */ js.Error, /* keypair */ KeyPair, Unit]
   ): KeyPair = js.native
 }
 

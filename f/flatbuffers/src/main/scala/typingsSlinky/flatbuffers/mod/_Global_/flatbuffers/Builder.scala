@@ -1,6 +1,5 @@
 package typingsSlinky.flatbuffers.mod._Global_.flatbuffers
 
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,7 +37,7 @@ class Builder () extends js.Object {
     * called finish(). The actual data starts at the ByteBuffer's current position,
     * not necessarily at 0.
     */
-  def asUint8Array(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def asUint8Array(): js.typedarray.Uint8Array = js.native
   /**
     * Reset all the state in this FlatBufferBuilder
     * so it can be reused to construct another buffer.
@@ -56,7 +55,7 @@ class Builder () extends js.Object {
     * @return The offset in the buffer where the encoded string starts
     */
   def createString(s: String): Offset = js.native
-  def createString(s: Uint8Array): Offset = js.native
+  def createString(s: js.typedarray.Uint8Array): Offset = js.native
   /**
     * Get the ByteBuffer representing the FlatBuffer. Only call this after you've
     * called finish(). The actual data starts at the ByteBuffer's current position,

@@ -1,7 +1,7 @@
 package typingsSlinky.amapJsSdk.AMap
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.amapJsSdk.AnonAutoMove
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -13,15 +13,5 @@ class CriteriaParts protected () extends ICriteriaParts {
     noDatabaseProperties: js.Array[String],
     whereClause: String
   ) = this()
-  /* CompleteClass */
-  override var noDatabaseProperties: js.Array[String] = js.native
-  /* CompleteClass */
-  override var rawCriteriaObject: js.Any = js.native
-  /* CompleteClass */
-  override var tables: js.Array[TableToSearchPart] = js.native
-  /* CompleteClass */
-  override var whereClause: String = js.native
-  /* CompleteClass */
-  override def selectFromClause[T](_table: Table[T]): String = js.native
 }
 

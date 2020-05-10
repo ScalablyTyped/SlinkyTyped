@@ -6,30 +6,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GetUserActivitiesParams extends js.Object {
-  var activityTypeId: js.UndefOr[js.Array[ActivityType]] = js.undefined
-  var count: js.UndefOr[Double] = js.undefined
-  var maxId: js.UndefOr[Double] = js.undefined
-  var minId: js.UndefOr[Double] = js.undefined
-  var order: js.UndefOr[Order] = js.undefined
+  var activityTypeId: js.UndefOr[js.Array[ActivityType]] = js.native
+  var count: js.UndefOr[Double] = js.native
+  var maxId: js.UndefOr[Double] = js.native
+  var minId: js.UndefOr[Double] = js.native
+  var order: js.UndefOr[Order] = js.native
 }
 
 object GetUserActivitiesParams {
   @scala.inline
-  def apply(
-    activityTypeId: js.Array[ActivityType] = null,
-    count: Int | Double = null,
-    maxId: Int | Double = null,
-    minId: Int | Double = null,
-    order: Order = null
-  ): GetUserActivitiesParams = {
+  def apply(): GetUserActivitiesParams = {
     val __obj = js.Dynamic.literal()
-    if (activityTypeId != null) __obj.updateDynamic("activityTypeId")(activityTypeId.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (maxId != null) __obj.updateDynamic("maxId")(maxId.asInstanceOf[js.Any])
-    if (minId != null) __obj.updateDynamic("minId")(minId.asInstanceOf[js.Any])
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetUserActivitiesParams]
   }
+  @scala.inline
+  implicit class GetUserActivitiesParamsOps[Self <: GetUserActivitiesParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActivityTypeId(value: js.Array[ActivityType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTypeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivityTypeId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTypeId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrder(value: Order): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

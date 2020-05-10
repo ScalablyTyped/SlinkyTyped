@@ -67,20 +67,77 @@ trait SchemaAuth extends js.Object {
 
 object SchemaAuth {
   @scala.inline
-  def apply(
-    accessLevels: js.Array[String] = null,
-    audiences: js.Array[String] = null,
-    claims: StringDictionary[js.Any] = null,
-    presenter: String = null,
-    principal: String = null
-  ): SchemaAuth = {
+  def apply(): SchemaAuth = {
     val __obj = js.Dynamic.literal()
-    if (accessLevels != null) __obj.updateDynamic("accessLevels")(accessLevels.asInstanceOf[js.Any])
-    if (audiences != null) __obj.updateDynamic("audiences")(audiences.asInstanceOf[js.Any])
-    if (claims != null) __obj.updateDynamic("claims")(claims.asInstanceOf[js.Any])
-    if (presenter != null) __obj.updateDynamic("presenter")(presenter.asInstanceOf[js.Any])
-    if (principal != null) __obj.updateDynamic("principal")(principal.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAuth]
   }
+  @scala.inline
+  implicit class SchemaAuthOps[Self <: SchemaAuth] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessLevels(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessLevels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessLevels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessLevels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAudiences(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audiences")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudiences: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audiences")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClaims(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claims")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClaims: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claims")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPresenter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presenter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPresenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presenter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrincipal(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("principal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrincipal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("principal")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

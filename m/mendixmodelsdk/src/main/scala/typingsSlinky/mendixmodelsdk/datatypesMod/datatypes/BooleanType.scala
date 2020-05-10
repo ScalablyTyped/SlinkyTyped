@@ -28,7 +28,7 @@ import scala.scalajs.js.annotation._
 /**
   * In version 7.9.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -47,21 +47,21 @@ class BooleanType protected () extends DataType {
   @JSName("model")
   var model_FBooleanType: IModel = js.native
   @JSName("containerAsAppServiceActionParameter")
-  def containerAsAppServiceActionParameter_MBooleanType(): AppServiceActionParameter = js.native
+  def containerAsAppServiceActionParameter_MBooleanType: AppServiceActionParameter = js.native
   @JSName("containerAsAppServiceAction")
-  def containerAsAppServiceAction_MBooleanType(): AppServiceAction = js.native
+  def containerAsAppServiceAction_MBooleanType: AppServiceAction = js.native
   @JSName("containerAsConstant")
-  def containerAsConstant_MBooleanType(): Constant = js.native
+  def containerAsConstant_MBooleanType: Constant = js.native
   @JSName("containerAsDataSetParameter")
-  def containerAsDataSetParameter_MBooleanType(): DataSetParameter = js.native
+  def containerAsDataSetParameter_MBooleanType: DataSetParameter = js.native
   @JSName("containerAsDocumentTemplateParameter")
-  def containerAsDocumentTemplateParameter_MBooleanType(): DocumentTemplateParameter = js.native
+  def containerAsDocumentTemplateParameter_MBooleanType: DocumentTemplateParameter = js.native
   @JSName("containerAsImportMapping")
-  def containerAsImportMapping_MBooleanType(): ImportMapping = js.native
+  def containerAsImportMapping_MBooleanType: ImportMapping = js.native
   @JSName("containerAsMicroflowBase")
-  def containerAsMicroflowBase_MBooleanType(): MicroflowBase = js.native
+  def containerAsMicroflowBase_MBooleanType: MicroflowBase = js.native
   @JSName("containerAsMicroflowParameterBase")
-  def containerAsMicroflowParameterBase_MBooleanType(): MicroflowParameterBase = js.native
+  def containerAsMicroflowParameterBase_MBooleanType: MicroflowParameterBase = js.native
 }
 
 /* static members */

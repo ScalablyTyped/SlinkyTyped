@@ -61,7 +61,7 @@ object completeRevocationRefsMod extends js.Object {
   
   @js.native
   class ResponderID () extends XmlObject {
-    var ByKey: scala.scalajs.js.typedarray.Uint8Array = js.native
+    var ByKey: js.typedarray.Uint8Array = js.native
     var ByName: String = js.native
   }
   

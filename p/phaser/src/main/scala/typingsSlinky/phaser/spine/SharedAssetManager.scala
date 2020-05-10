@@ -16,8 +16,6 @@ class SharedAssetManager () extends Disposable {
   var queuedAssets: js.Any = js.native
   var rawAssets: js.Any = js.native
   var updateClientAssets: js.Any = js.native
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
   def get(clientId: String, path: String): js.Any = js.native
   def getErrors(): Map[String] = js.native
   def hasErrors(): Boolean = js.native

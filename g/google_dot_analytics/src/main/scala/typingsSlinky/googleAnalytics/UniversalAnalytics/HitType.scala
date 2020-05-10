@@ -20,22 +20,20 @@ trait HitType extends js.Object
 
 object HitType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def event: typingsSlinky.googleAnalytics.googleAnalyticsStrings.event = "event".asInstanceOf[typingsSlinky.googleAnalytics.googleAnalyticsStrings.event]
   @scala.inline
-  def event: typingsSlinky.googleAnalytics.googleAnalyticsStrings.event = this.cast("event")
+  def exception: typingsSlinky.googleAnalytics.googleAnalyticsStrings.exception = "exception".asInstanceOf[typingsSlinky.googleAnalytics.googleAnalyticsStrings.exception]
   @scala.inline
-  def exception: typingsSlinky.googleAnalytics.googleAnalyticsStrings.exception = this.cast("exception")
+  def item: typingsSlinky.googleAnalytics.googleAnalyticsStrings.item = "item".asInstanceOf[typingsSlinky.googleAnalytics.googleAnalyticsStrings.item]
   @scala.inline
-  def item: typingsSlinky.googleAnalytics.googleAnalyticsStrings.item = this.cast("item")
+  def pageview: typingsSlinky.googleAnalytics.googleAnalyticsStrings.pageview = "pageview".asInstanceOf[typingsSlinky.googleAnalytics.googleAnalyticsStrings.pageview]
   @scala.inline
-  def pageview: typingsSlinky.googleAnalytics.googleAnalyticsStrings.pageview = this.cast("pageview")
+  def screenview: typingsSlinky.googleAnalytics.googleAnalyticsStrings.screenview = "screenview".asInstanceOf[typingsSlinky.googleAnalytics.googleAnalyticsStrings.screenview]
   @scala.inline
-  def screenview: typingsSlinky.googleAnalytics.googleAnalyticsStrings.screenview = this.cast("screenview")
+  def social: typingsSlinky.googleAnalytics.googleAnalyticsStrings.social = "social".asInstanceOf[typingsSlinky.googleAnalytics.googleAnalyticsStrings.social]
   @scala.inline
-  def social: typingsSlinky.googleAnalytics.googleAnalyticsStrings.social = this.cast("social")
+  def timing: typingsSlinky.googleAnalytics.googleAnalyticsStrings.timing = "timing".asInstanceOf[typingsSlinky.googleAnalytics.googleAnalyticsStrings.timing]
   @scala.inline
-  def timing: typingsSlinky.googleAnalytics.googleAnalyticsStrings.timing = this.cast("timing")
-  @scala.inline
-  def transaction: typingsSlinky.googleAnalytics.googleAnalyticsStrings.transaction = this.cast("transaction")
+  def transaction: typingsSlinky.googleAnalytics.googleAnalyticsStrings.transaction = "transaction".asInstanceOf[typingsSlinky.googleAnalytics.googleAnalyticsStrings.transaction]
 }
 

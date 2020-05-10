@@ -18,14 +18,41 @@ trait DescribeDirectConnectGatewayAssociationsResult extends js.Object {
 
 object DescribeDirectConnectGatewayAssociationsResult {
   @scala.inline
-  def apply(
-    directConnectGatewayAssociations: DirectConnectGatewayAssociationList = null,
-    nextToken: PaginationToken = null
-  ): DescribeDirectConnectGatewayAssociationsResult = {
+  def apply(): DescribeDirectConnectGatewayAssociationsResult = {
     val __obj = js.Dynamic.literal()
-    if (directConnectGatewayAssociations != null) __obj.updateDynamic("directConnectGatewayAssociations")(directConnectGatewayAssociations.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDirectConnectGatewayAssociationsResult]
   }
+  @scala.inline
+  implicit class DescribeDirectConnectGatewayAssociationsResultOps[Self <: DescribeDirectConnectGatewayAssociationsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectConnectGatewayAssociations(value: DirectConnectGatewayAssociationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGatewayAssociations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectConnectGatewayAssociations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGatewayAssociations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

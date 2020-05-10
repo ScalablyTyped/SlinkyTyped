@@ -18,11 +18,41 @@ trait DominantLanguage extends js.Object {
 
 object DominantLanguage {
   @scala.inline
-  def apply(LanguageCode: String = null, Score: Int | scala.Double = null): DominantLanguage = {
+  def apply(): DominantLanguage = {
     val __obj = js.Dynamic.literal()
-    if (LanguageCode != null) __obj.updateDynamic("LanguageCode")(LanguageCode.asInstanceOf[js.Any])
-    if (Score != null) __obj.updateDynamic("Score")(Score.asInstanceOf[js.Any])
     __obj.asInstanceOf[DominantLanguage]
   }
+  @scala.inline
+  implicit class DominantLanguageOps[Self <: DominantLanguage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLanguageCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScore(value: Float): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Score")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Score")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,14 +1,13 @@
 package typingsSlinky.victory.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.DOMAttributes
 import typingsSlinky.victory.victoryStrings.x
 import typingsSlinky.victory.victoryStrings.y
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VictoryVoronoiContainerProps extends VictoryContainerProps {
   /**
     * When the activateData prop is set to true, the active prop will be set to true on all
@@ -16,7 +15,7 @@ trait VictoryVoronoiContainerProps extends VictoryContainerProps {
     * and onDeactivated callbacks will still fire, but no mutations to data components will
     * occur via Victory’s event system.
     */
-  var activateData: js.UndefOr[Boolean] = js.undefined
+  var activateData: js.UndefOr[Boolean] = js.native
   /**
     * When the activateLabels prop is set to true, the active prop will be set to true on all
     * labels corresponding to points within a voronoi area. When this prop is set to false,
@@ -24,16 +23,16 @@ trait VictoryVoronoiContainerProps extends VictoryContainerProps {
     * components will occur via Victory’s event system. Labels defined directly on
     * VictoryVoronoiContainer via the labels prop will still appear when this prop is set to false.
     */
-  var activateLabels: js.UndefOr[Boolean] = js.undefined
+  var activateLabels: js.UndefOr[Boolean] = js.native
   /**
     * When the disable prop is set to true, VictoryVoronoiContainer events will not fire.
     */
-  var disable: js.UndefOr[Boolean] = js.undefined
+  var disable: js.UndefOr[Boolean] = js.native
   /**
     * The labelComponent prop specified the component that will be rendered when labels are defined
     * on VictoryVoronoiContainer. If the labels prop is omitted, no label component will be rendered.
     */
-  var labelComponent: js.UndefOr[ReactElement] = js.undefined
+  var labelComponent: js.UndefOr[ReactElement] = js.native
   /**
     * When a labels prop is provided to VictoryVoronoiContainer it will render a label component
     * rather than activating labels on the child components it renders. This is useful for
@@ -44,7 +43,7 @@ trait VictoryVoronoiContainerProps extends VictoryContainerProps {
     */
   var labels: js.UndefOr[
     js.Function3[/* point */ js.Any, /* index */ Double, /* points */ js.Array[_], String]
-  ] = js.undefined
+  ] = js.native
   /**
     * The onActivated prop accepts a function to be called whenever new data points are activated.
     * The function is called with the parameters points (an array of active data objects) and props
@@ -52,7 +51,7 @@ trait VictoryVoronoiContainerProps extends VictoryContainerProps {
     */
   var onActivated: js.UndefOr[
     js.Function2[/* points */ js.Array[_], /* props */ VictoryVoronoiContainerProps, Unit]
-  ] = js.undefined
+  ] = js.native
   /**
     * The onDeactivated prop accepts a function to be called whenever points are deactivated. The
     * function is called with the parameters points (an array of the newly-deactivated data objects)
@@ -60,76 +59,179 @@ trait VictoryVoronoiContainerProps extends VictoryContainerProps {
     */
   var onDeactivated: js.UndefOr[
     js.Function2[/* points */ js.Array[_], /* props */ VictoryVoronoiContainerProps, Unit]
-  ] = js.undefined
+  ] = js.native
   /**
     * When the radius prop is set, the voronoi areas associated with each data point will be no larger
     * than the given radius. This prop should be given as a number.
     */
-  var radius: js.UndefOr[Double] = js.undefined
+  var radius: js.UndefOr[Double] = js.native
   /**
     * The voronoiBlacklist prop is used to specify a list of components to ignore when calculating a
     * shared voronoi diagram. Components with a name prop matching an element in the voronoiBlacklist
     * array will be ignored by VictoryVoronoiContainer. Ignored components will never be flagged as
     * active, and will not contribute date to shared tooltips or labels.
     */
-  var voronoiBlacklist: js.UndefOr[js.Array[String]] = js.undefined
+  var voronoiBlacklist: js.UndefOr[js.Array[String]] = js.native
   /**
     * When the voronoiDimension prop is set, voronoi selection will only take the given dimension into
     * account. For example, when dimension is set to “x”, all data points matching a particular x mouse
     * position will be activated regardless of y value. When this prop is not given, voronoi selection
     * is determined by both x any y values.
     */
-  var voronoiDimension: js.UndefOr[x | y] = js.undefined
+  var voronoiDimension: js.UndefOr[x | y] = js.native
   /**
     * When the voronoiPadding prop is given, the area of the chart that will trigger voronoi events is
     * reduced by the given padding on every side. By default, no padding is applied, and the entire range
     * of a given chart may trigger voronoi events. This prop should be given as a number.
     */
-  var voronoiPadding: js.UndefOr[Double] = js.undefined
+  var voronoiPadding: js.UndefOr[Double] = js.native
 }
 
 object VictoryVoronoiContainerProps {
   @scala.inline
-  def apply(
-    activateData: js.UndefOr[Boolean] = js.undefined,
-    activateLabels: js.UndefOr[Boolean] = js.undefined,
-    desc: String = null,
-    disable: js.UndefOr[Boolean] = js.undefined,
-    events: DOMAttributes[_] = null,
-    height: Int | Double = null,
-    labelComponent: ReactElement = null,
-    labels: (/* point */ js.Any, /* index */ Double, /* points */ js.Array[_]) => String = null,
-    onActivated: (/* points */ js.Array[_], /* props */ VictoryVoronoiContainerProps) => Unit = null,
-    onDeactivated: (/* points */ js.Array[_], /* props */ VictoryVoronoiContainerProps) => Unit = null,
-    radius: Int | Double = null,
-    responsive: js.UndefOr[Boolean] = js.undefined,
-    style: CSSProperties = null,
-    title: String = null,
-    voronoiBlacklist: js.Array[String] = null,
-    voronoiDimension: x | y = null,
-    voronoiPadding: Int | Double = null,
-    width: Int | Double = null
-  ): VictoryVoronoiContainerProps = {
+  def apply(): VictoryVoronoiContainerProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(activateData)) __obj.updateDynamic("activateData")(activateData.asInstanceOf[js.Any])
-    if (!js.isUndefined(activateLabels)) __obj.updateDynamic("activateLabels")(activateLabels.asInstanceOf[js.Any])
-    if (desc != null) __obj.updateDynamic("desc")(desc.asInstanceOf[js.Any])
-    if (!js.isUndefined(disable)) __obj.updateDynamic("disable")(disable.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (labelComponent != null) __obj.updateDynamic("labelComponent")(labelComponent.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(js.Any.fromFunction3(labels))
-    if (onActivated != null) __obj.updateDynamic("onActivated")(js.Any.fromFunction2(onActivated))
-    if (onDeactivated != null) __obj.updateDynamic("onDeactivated")(js.Any.fromFunction2(onDeactivated))
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
-    if (!js.isUndefined(responsive)) __obj.updateDynamic("responsive")(responsive.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (voronoiBlacklist != null) __obj.updateDynamic("voronoiBlacklist")(voronoiBlacklist.asInstanceOf[js.Any])
-    if (voronoiDimension != null) __obj.updateDynamic("voronoiDimension")(voronoiDimension.asInstanceOf[js.Any])
-    if (voronoiPadding != null) __obj.updateDynamic("voronoiPadding")(voronoiPadding.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[VictoryVoronoiContainerProps]
   }
+  @scala.inline
+  implicit class VictoryVoronoiContainerPropsOps[Self <: VictoryVoronoiContainerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActivateData(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activateData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivateData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activateData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActivateLabels(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activateLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivateLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activateLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelComponent(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelComponent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelComponent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: (/* point */ js.Any, /* index */ Double, /* points */ js.Array[_]) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnActivated(value: (/* points */ js.Array[_], /* props */ VictoryVoronoiContainerProps) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onActivated")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnActivated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onActivated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDeactivated(value: (/* points */ js.Array[_], /* props */ VictoryVoronoiContainerProps) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDeactivated")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDeactivated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDeactivated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVoronoiBlacklist(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("voronoiBlacklist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVoronoiBlacklist: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("voronoiBlacklist")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVoronoiDimension(value: x | y): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("voronoiDimension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVoronoiDimension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("voronoiDimension")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVoronoiPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("voronoiPadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVoronoiPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("voronoiPadding")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

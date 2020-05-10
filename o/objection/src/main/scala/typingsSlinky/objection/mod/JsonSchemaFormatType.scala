@@ -27,40 +27,38 @@ trait JsonSchemaFormatType extends js.Object
 
 object JsonSchemaFormatType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def date: typingsSlinky.objection.objectionStrings.date = "date".asInstanceOf[typingsSlinky.objection.objectionStrings.date]
   @scala.inline
-  def date: typingsSlinky.objection.objectionStrings.date = this.cast("date")
+  def `date-time`: typingsSlinky.objection.objectionStrings.`date-time` = "date-time".asInstanceOf[typingsSlinky.objection.objectionStrings.`date-time`]
   @scala.inline
-  def `date-time`: typingsSlinky.objection.objectionStrings.`date-time` = this.cast("date-time")
+  def email: typingsSlinky.objection.objectionStrings.email = "email".asInstanceOf[typingsSlinky.objection.objectionStrings.email]
   @scala.inline
-  def email: typingsSlinky.objection.objectionStrings.email = this.cast("email")
+  def hostname: typingsSlinky.objection.objectionStrings.hostname = "hostname".asInstanceOf[typingsSlinky.objection.objectionStrings.hostname]
   @scala.inline
-  def hostname: typingsSlinky.objection.objectionStrings.hostname = this.cast("hostname")
+  def `idn-email`: typingsSlinky.objection.objectionStrings.`idn-email` = "idn-email".asInstanceOf[typingsSlinky.objection.objectionStrings.`idn-email`]
   @scala.inline
-  def `idn-email`: typingsSlinky.objection.objectionStrings.`idn-email` = this.cast("idn-email")
+  def `idn-hostname`: typingsSlinky.objection.objectionStrings.`idn-hostname` = "idn-hostname".asInstanceOf[typingsSlinky.objection.objectionStrings.`idn-hostname`]
   @scala.inline
-  def `idn-hostname`: typingsSlinky.objection.objectionStrings.`idn-hostname` = this.cast("idn-hostname")
+  def ipv4: typingsSlinky.objection.objectionStrings.ipv4 = "ipv4".asInstanceOf[typingsSlinky.objection.objectionStrings.ipv4]
   @scala.inline
-  def ipv4: typingsSlinky.objection.objectionStrings.ipv4 = this.cast("ipv4")
+  def ipv6: typingsSlinky.objection.objectionStrings.ipv6 = "ipv6".asInstanceOf[typingsSlinky.objection.objectionStrings.ipv6]
   @scala.inline
-  def ipv6: typingsSlinky.objection.objectionStrings.ipv6 = this.cast("ipv6")
+  def iri: typingsSlinky.objection.objectionStrings.iri = "iri".asInstanceOf[typingsSlinky.objection.objectionStrings.iri]
   @scala.inline
-  def iri: typingsSlinky.objection.objectionStrings.iri = this.cast("iri")
+  def `iri-reference`: typingsSlinky.objection.objectionStrings.`iri-reference` = "iri-reference".asInstanceOf[typingsSlinky.objection.objectionStrings.`iri-reference`]
   @scala.inline
-  def `iri-reference`: typingsSlinky.objection.objectionStrings.`iri-reference` = this.cast("iri-reference")
+  def `json-pointer`: typingsSlinky.objection.objectionStrings.`json-pointer` = "json-pointer".asInstanceOf[typingsSlinky.objection.objectionStrings.`json-pointer`]
   @scala.inline
-  def `json-pointer`: typingsSlinky.objection.objectionStrings.`json-pointer` = this.cast("json-pointer")
+  def regex: typingsSlinky.objection.objectionStrings.regex = "regex".asInstanceOf[typingsSlinky.objection.objectionStrings.regex]
   @scala.inline
-  def regex: typingsSlinky.objection.objectionStrings.regex = this.cast("regex")
+  def `relative-json-pointer`: typingsSlinky.objection.objectionStrings.`relative-json-pointer` = "relative-json-pointer".asInstanceOf[typingsSlinky.objection.objectionStrings.`relative-json-pointer`]
   @scala.inline
-  def `relative-json-pointer`: typingsSlinky.objection.objectionStrings.`relative-json-pointer` = this.cast("relative-json-pointer")
+  def time: typingsSlinky.objection.objectionStrings.time = "time".asInstanceOf[typingsSlinky.objection.objectionStrings.time]
   @scala.inline
-  def time: typingsSlinky.objection.objectionStrings.time = this.cast("time")
+  def uri: typingsSlinky.objection.objectionStrings.uri = "uri".asInstanceOf[typingsSlinky.objection.objectionStrings.uri]
   @scala.inline
-  def uri: typingsSlinky.objection.objectionStrings.uri = this.cast("uri")
+  def `uri-reference`: typingsSlinky.objection.objectionStrings.`uri-reference` = "uri-reference".asInstanceOf[typingsSlinky.objection.objectionStrings.`uri-reference`]
   @scala.inline
-  def `uri-reference`: typingsSlinky.objection.objectionStrings.`uri-reference` = this.cast("uri-reference")
-  @scala.inline
-  def `uri-template`: typingsSlinky.objection.objectionStrings.`uri-template` = this.cast("uri-template")
+  def `uri-template`: typingsSlinky.objection.objectionStrings.`uri-template` = "uri-template".asInstanceOf[typingsSlinky.objection.objectionStrings.`uri-template`]
 }
 

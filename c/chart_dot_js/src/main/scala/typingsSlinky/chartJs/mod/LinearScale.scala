@@ -4,33 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LinearScale extends ChartScales {
   @JSName("ticks")
-  var ticks_LinearScale: js.UndefOr[LinearTickOptions] = js.undefined
+  var ticks_LinearScale: js.UndefOr[LinearTickOptions] = js.native
 }
 
 object LinearScale {
   @scala.inline
-  def apply(
-    display: js.UndefOr[Boolean] = js.undefined,
-    gridLines: GridLineOptions = null,
-    position: PositionType | String = null,
-    scaleLabel: ScaleTitleOptions = null,
-    ticks: LinearTickOptions = null,
-    `type`: ScaleType | String = null,
-    xAxes: js.Array[ChartXAxe] = null,
-    yAxes: js.Array[ChartYAxe] = null
-  ): LinearScale = {
+  def apply(): LinearScale = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(display)) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
-    if (gridLines != null) __obj.updateDynamic("gridLines")(gridLines.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (scaleLabel != null) __obj.updateDynamic("scaleLabel")(scaleLabel.asInstanceOf[js.Any])
-    if (ticks != null) __obj.updateDynamic("ticks")(ticks.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (xAxes != null) __obj.updateDynamic("xAxes")(xAxes.asInstanceOf[js.Any])
-    if (yAxes != null) __obj.updateDynamic("yAxes")(yAxes.asInstanceOf[js.Any])
     __obj.asInstanceOf[LinearScale]
   }
+  @scala.inline
+  implicit class LinearScaleOps[Self <: LinearScale] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTicks(value: LinearTickOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTicks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticks")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

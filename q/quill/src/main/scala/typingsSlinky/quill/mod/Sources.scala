@@ -13,12 +13,10 @@ trait Sources extends js.Object
 
 object Sources {
   @scala.inline
-  def api: typingsSlinky.quill.quillStrings.api = this.cast("api")
+  def api: typingsSlinky.quill.quillStrings.api = "api".asInstanceOf[typingsSlinky.quill.quillStrings.api]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def silent: typingsSlinky.quill.quillStrings.silent = "silent".asInstanceOf[typingsSlinky.quill.quillStrings.silent]
   @scala.inline
-  def silent: typingsSlinky.quill.quillStrings.silent = this.cast("silent")
-  @scala.inline
-  def user: typingsSlinky.quill.quillStrings.user = this.cast("user")
+  def user: typingsSlinky.quill.quillStrings.user = "user".asInstanceOf[typingsSlinky.quill.quillStrings.user]
 }
 

@@ -22,11 +22,41 @@ trait SchemaDriveOptions extends js.Object {
 
 object SchemaDriveOptions {
   @scala.inline
-  def apply(includeTeamDrives: js.UndefOr[Boolean] = js.undefined, versionDate: String = null): SchemaDriveOptions = {
+  def apply(): SchemaDriveOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(includeTeamDrives)) __obj.updateDynamic("includeTeamDrives")(includeTeamDrives.asInstanceOf[js.Any])
-    if (versionDate != null) __obj.updateDynamic("versionDate")(versionDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDriveOptions]
   }
+  @scala.inline
+  implicit class SchemaDriveOptionsOps[Self <: SchemaDriveOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIncludeTeamDrives(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeTeamDrives")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeTeamDrives: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeTeamDrives")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionDate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

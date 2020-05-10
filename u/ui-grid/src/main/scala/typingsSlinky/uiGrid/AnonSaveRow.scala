@@ -6,6 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonSaveRow[TEntity] extends js.Object {
   /**
     * Raised when a row is ready for saving.
@@ -18,15 +19,28 @@ trait AnonSaveRow[TEntity] extends js.Object {
     * @param {ng.IScope} scope The grid scope
     * @param {saveRowHandler} handler Callback
     */
-  def saveRow(scope: IScope, handler: saveRowHandler[TEntity]): Unit
+  def saveRow(scope: IScope, handler: saveRowHandler[TEntity]): Unit = js.native
 }
 
 object AnonSaveRow {
   @scala.inline
   def apply[TEntity](saveRow: (IScope, saveRowHandler[TEntity]) => Unit): AnonSaveRow[TEntity] = {
     val __obj = js.Dynamic.literal(saveRow = js.Any.fromFunction2(saveRow))
-  
     __obj.asInstanceOf[AnonSaveRow[TEntity]]
   }
+  @scala.inline
+  implicit class AnonSaveRowOps[Self[tentity] <: AnonSaveRow[tentity], TEntity] (val x: Self[TEntity]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TEntity] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TEntity]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[TEntity] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TEntity] with Other]
+    @scala.inline
+    def withSaveRow(value: (IScope, saveRowHandler[TEntity]) => Unit): Self[TEntity] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saveRow")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

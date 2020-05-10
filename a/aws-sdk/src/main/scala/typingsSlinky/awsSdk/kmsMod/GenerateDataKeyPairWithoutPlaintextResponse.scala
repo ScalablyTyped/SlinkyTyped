@@ -26,18 +26,77 @@ trait GenerateDataKeyPairWithoutPlaintextResponse extends js.Object {
 
 object GenerateDataKeyPairWithoutPlaintextResponse {
   @scala.inline
-  def apply(
-    KeyId: KeyIdType = null,
-    KeyPairSpec: DataKeyPairSpec = null,
-    PrivateKeyCiphertextBlob: CiphertextType = null,
-    PublicKey: PublicKeyType = null
-  ): GenerateDataKeyPairWithoutPlaintextResponse = {
+  def apply(): GenerateDataKeyPairWithoutPlaintextResponse = {
     val __obj = js.Dynamic.literal()
-    if (KeyId != null) __obj.updateDynamic("KeyId")(KeyId.asInstanceOf[js.Any])
-    if (KeyPairSpec != null) __obj.updateDynamic("KeyPairSpec")(KeyPairSpec.asInstanceOf[js.Any])
-    if (PrivateKeyCiphertextBlob != null) __obj.updateDynamic("PrivateKeyCiphertextBlob")(PrivateKeyCiphertextBlob.asInstanceOf[js.Any])
-    if (PublicKey != null) __obj.updateDynamic("PublicKey")(PublicKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenerateDataKeyPairWithoutPlaintextResponse]
   }
+  @scala.inline
+  implicit class GenerateDataKeyPairWithoutPlaintextResponseOps[Self <: GenerateDataKeyPairWithoutPlaintextResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKeyId(value: KeyIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyPairSpec(value: DataKeyPairSpec): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyPairSpec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyPairSpec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyPairSpec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateKeyCiphertextBlobUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateKeyCiphertextBlob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrivateKeyCiphertextBlob(value: CiphertextType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateKeyCiphertextBlob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateKeyCiphertextBlob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateKeyCiphertextBlob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublicKeyUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPublicKey(value: PublicKeyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublicKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicKey")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

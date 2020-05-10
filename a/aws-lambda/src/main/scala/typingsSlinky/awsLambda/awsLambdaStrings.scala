@@ -234,6 +234,9 @@ object awsLambdaStrings {
   sealed trait SMS_MFA extends js.Object
   
   @js.native
+  sealed trait SRP_A extends js.Object
+  
+  @js.native
   sealed trait SSML extends js.Object
   
   @js.native
@@ -256,6 +259,9 @@ object awsLambdaStrings {
   
   @js.native
   sealed trait SUPPRESS extends js.Object
+  
+  @js.native
+  sealed trait `Scheduled Event` extends js.Object
   
   @js.native
   sealed trait Source extends CodePipelineActionCategory
@@ -374,11 +380,11 @@ object awsLambdaStrings {
   @scala.inline
   def Close: Close = "Close".asInstanceOf[Close]
   @scala.inline
-  def `CodePipeline Action Execution State Change`: `CodePipeline Action Execution State Change` = "CodePipeline Action Execution State Change".asInstanceOf[`CodePipeline Action Execution State Change`]
+  def `CodePipeline Action Execution State Change`: `CodePipeline Action Execution State Change` = ("CodePipeline Action Execution State Change").asInstanceOf[`CodePipeline Action Execution State Change`]
   @scala.inline
-  def `CodePipeline Pipeline Execution State Change`: `CodePipeline Pipeline Execution State Change` = "CodePipeline Pipeline Execution State Change".asInstanceOf[`CodePipeline Pipeline Execution State Change`]
+  def `CodePipeline Pipeline Execution State Change`: `CodePipeline Pipeline Execution State Change` = ("CodePipeline Pipeline Execution State Change").asInstanceOf[`CodePipeline Pipeline Execution State Change`]
   @scala.inline
-  def `CodePipeline Stage Execution State Change`: `CodePipeline Stage Execution State Change` = "CodePipeline Stage Execution State Change".asInstanceOf[`CodePipeline Stage Execution State Change`]
+  def `CodePipeline Stage Execution State Change`: `CodePipeline Stage Execution State Change` = ("CodePipeline Stage Execution State Change").asInstanceOf[`CodePipeline Stage Execution State Change`]
   @scala.inline
   def ConfirmIntent: ConfirmIntent = "ConfirmIntent".asInstanceOf[ConfirmIntent]
   @scala.inline
@@ -496,6 +502,8 @@ object awsLambdaStrings {
   @scala.inline
   def SMS_MFA: SMS_MFA = "SMS_MFA".asInstanceOf[SMS_MFA]
   @scala.inline
+  def SRP_A: SRP_A = "SRP_A".asInstanceOf[SRP_A]
+  @scala.inline
   def SSML: SSML = "SSML".asInstanceOf[SSML]
   @scala.inline
   def STARTED: STARTED = "STARTED".asInstanceOf[STARTED]
@@ -507,6 +515,8 @@ object awsLambdaStrings {
   def SUPERSEDED: SUPERSEDED = "SUPERSEDED".asInstanceOf[SUPERSEDED]
   @scala.inline
   def SUPPRESS: SUPPRESS = "SUPPRESS".asInstanceOf[SUPPRESS]
+  @scala.inline
+  def `Scheduled Event`: `Scheduled Event` = ("Scheduled Event").asInstanceOf[`Scheduled Event`]
   @scala.inline
   def Source: Source = "Source".asInstanceOf[Source]
   @scala.inline

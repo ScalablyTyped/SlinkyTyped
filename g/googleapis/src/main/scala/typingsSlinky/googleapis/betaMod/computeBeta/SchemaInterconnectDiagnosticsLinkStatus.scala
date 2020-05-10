@@ -35,22 +35,89 @@ trait SchemaInterconnectDiagnosticsLinkStatus extends js.Object {
 
 object SchemaInterconnectDiagnosticsLinkStatus {
   @scala.inline
-  def apply(
-    arpCaches: js.Array[SchemaInterconnectDiagnosticsARPEntry] = null,
-    circuitId: String = null,
-    googleDemarc: String = null,
-    lacpStatus: SchemaInterconnectDiagnosticsLinkLACPStatus = null,
-    receivingOpticalPower: SchemaInterconnectDiagnosticsLinkOpticalPower = null,
-    transmittingOpticalPower: SchemaInterconnectDiagnosticsLinkOpticalPower = null
-  ): SchemaInterconnectDiagnosticsLinkStatus = {
+  def apply(): SchemaInterconnectDiagnosticsLinkStatus = {
     val __obj = js.Dynamic.literal()
-    if (arpCaches != null) __obj.updateDynamic("arpCaches")(arpCaches.asInstanceOf[js.Any])
-    if (circuitId != null) __obj.updateDynamic("circuitId")(circuitId.asInstanceOf[js.Any])
-    if (googleDemarc != null) __obj.updateDynamic("googleDemarc")(googleDemarc.asInstanceOf[js.Any])
-    if (lacpStatus != null) __obj.updateDynamic("lacpStatus")(lacpStatus.asInstanceOf[js.Any])
-    if (receivingOpticalPower != null) __obj.updateDynamic("receivingOpticalPower")(receivingOpticalPower.asInstanceOf[js.Any])
-    if (transmittingOpticalPower != null) __obj.updateDynamic("transmittingOpticalPower")(transmittingOpticalPower.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInterconnectDiagnosticsLinkStatus]
   }
+  @scala.inline
+  implicit class SchemaInterconnectDiagnosticsLinkStatusOps[Self <: SchemaInterconnectDiagnosticsLinkStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArpCaches(value: js.Array[SchemaInterconnectDiagnosticsARPEntry]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arpCaches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArpCaches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arpCaches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCircuitId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("circuitId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCircuitId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("circuitId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGoogleDemarc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("googleDemarc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoogleDemarc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("googleDemarc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLacpStatus(value: SchemaInterconnectDiagnosticsLinkLACPStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lacpStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLacpStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lacpStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReceivingOpticalPower(value: SchemaInterconnectDiagnosticsLinkOpticalPower): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("receivingOpticalPower")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReceivingOpticalPower: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("receivingOpticalPower")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransmittingOpticalPower(value: SchemaInterconnectDiagnosticsLinkOpticalPower): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transmittingOpticalPower")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransmittingOpticalPower: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transmittingOpticalPower")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

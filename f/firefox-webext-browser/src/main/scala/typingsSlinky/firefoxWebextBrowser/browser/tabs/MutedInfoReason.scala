@@ -15,12 +15,10 @@ trait MutedInfoReason extends js.Object
 
 object MutedInfoReason {
   @scala.inline
-  def capture: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.capture = this.cast("capture")
+  def capture: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.capture = "capture".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.capture]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def extension: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.extension = "extension".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.extension]
   @scala.inline
-  def extension: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.extension = this.cast("extension")
-  @scala.inline
-  def user: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.user = this.cast("user")
+  def user: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.user = "user".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.user]
 }
 

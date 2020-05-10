@@ -28,7 +28,7 @@ object TapTarget extends js.Object {
   /**
     * Init TapTarget
     */
-  def init(els: typingsSlinky.std.Element): typingsSlinky.materializeCss.M.TapTarget = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialTapTargetOptions): typingsSlinky.materializeCss.M.TapTarget = js.native
+  def init(els: Element): typingsSlinky.materializeCss.M.TapTarget = js.native
+  def init(els: Element, options: PartialTapTargetOptions): typingsSlinky.materializeCss.M.TapTarget = js.native
 }
 

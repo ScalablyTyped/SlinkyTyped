@@ -21,28 +21,26 @@ trait FontStretch extends js.Object
 
 object FontStretch {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def condensed: typingsSlinky.reactSketchapp.reactSketchappStrings.condensed = "condensed".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.condensed]
   @scala.inline
-  def condensed: typingsSlinky.reactSketchapp.reactSketchappStrings.condensed = this.cast("condensed")
+  def expanded: typingsSlinky.reactSketchapp.reactSketchappStrings.expanded = "expanded".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.expanded]
   @scala.inline
-  def expanded: typingsSlinky.reactSketchapp.reactSketchappStrings.expanded = this.cast("expanded")
+  def `extra-condensed`: typingsSlinky.reactSketchapp.reactSketchappStrings.`extra-condensed` = "extra-condensed".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.`extra-condensed`]
   @scala.inline
-  def `extra-condensed`: typingsSlinky.reactSketchapp.reactSketchappStrings.`extra-condensed` = this.cast("extra-condensed")
+  def `extra-expanded`: typingsSlinky.reactSketchapp.reactSketchappStrings.`extra-expanded` = "extra-expanded".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.`extra-expanded`]
   @scala.inline
-  def `extra-expanded`: typingsSlinky.reactSketchapp.reactSketchappStrings.`extra-expanded` = this.cast("extra-expanded")
+  def narrower: typingsSlinky.reactSketchapp.reactSketchappStrings.narrower = "narrower".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.narrower]
   @scala.inline
-  def narrower: typingsSlinky.reactSketchapp.reactSketchappStrings.narrower = this.cast("narrower")
+  def normal: typingsSlinky.reactSketchapp.reactSketchappStrings.normal = "normal".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.reactSketchapp.reactSketchappStrings.normal = this.cast("normal")
+  def `semi-condensed`: typingsSlinky.reactSketchapp.reactSketchappStrings.`semi-condensed` = "semi-condensed".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.`semi-condensed`]
   @scala.inline
-  def `semi-condensed`: typingsSlinky.reactSketchapp.reactSketchappStrings.`semi-condensed` = this.cast("semi-condensed")
+  def `semi-expanded`: typingsSlinky.reactSketchapp.reactSketchappStrings.`semi-expanded` = "semi-expanded".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.`semi-expanded`]
   @scala.inline
-  def `semi-expanded`: typingsSlinky.reactSketchapp.reactSketchappStrings.`semi-expanded` = this.cast("semi-expanded")
+  def `ultra-condensed`: typingsSlinky.reactSketchapp.reactSketchappStrings.`ultra-condensed` = "ultra-condensed".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.`ultra-condensed`]
   @scala.inline
-  def `ultra-condensed`: typingsSlinky.reactSketchapp.reactSketchappStrings.`ultra-condensed` = this.cast("ultra-condensed")
+  def `ultra-expanded`: typingsSlinky.reactSketchapp.reactSketchappStrings.`ultra-expanded` = "ultra-expanded".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.`ultra-expanded`]
   @scala.inline
-  def `ultra-expanded`: typingsSlinky.reactSketchapp.reactSketchappStrings.`ultra-expanded` = this.cast("ultra-expanded")
-  @scala.inline
-  def wider: typingsSlinky.reactSketchapp.reactSketchappStrings.wider = this.cast("wider")
+  def wider: typingsSlinky.reactSketchapp.reactSketchappStrings.wider = "wider".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.wider]
 }
 

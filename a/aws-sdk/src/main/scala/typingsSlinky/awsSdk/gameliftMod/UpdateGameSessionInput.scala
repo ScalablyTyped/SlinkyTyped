@@ -30,19 +30,71 @@ trait UpdateGameSessionInput extends js.Object {
 
 object UpdateGameSessionInput {
   @scala.inline
-  def apply(
-    GameSessionId: ArnStringModel,
-    MaximumPlayerSessionCount: Int | scala.Double = null,
-    Name: NonZeroAndMaxString = null,
-    PlayerSessionCreationPolicy: PlayerSessionCreationPolicy = null,
-    ProtectionPolicy: ProtectionPolicy = null
-  ): UpdateGameSessionInput = {
+  def apply(GameSessionId: ArnStringModel): UpdateGameSessionInput = {
     val __obj = js.Dynamic.literal(GameSessionId = GameSessionId.asInstanceOf[js.Any])
-    if (MaximumPlayerSessionCount != null) __obj.updateDynamic("MaximumPlayerSessionCount")(MaximumPlayerSessionCount.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (PlayerSessionCreationPolicy != null) __obj.updateDynamic("PlayerSessionCreationPolicy")(PlayerSessionCreationPolicy.asInstanceOf[js.Any])
-    if (ProtectionPolicy != null) __obj.updateDynamic("ProtectionPolicy")(ProtectionPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateGameSessionInput]
   }
+  @scala.inline
+  implicit class UpdateGameSessionInputOps[Self <: UpdateGameSessionInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGameSessionId(value: ArnStringModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaximumPlayerSessionCount(value: WholeNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumPlayerSessionCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumPlayerSessionCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumPlayerSessionCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlayerSessionCreationPolicy(value: PlayerSessionCreationPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerSessionCreationPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlayerSessionCreationPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerSessionCreationPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtectionPolicy(value: ProtectionPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProtectionPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtectionPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProtectionPolicy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

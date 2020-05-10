@@ -13,12 +13,10 @@ trait HelloJSDisplayType extends js.Object
 
 object HelloJSDisplayType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def none: typingsSlinky.hellojs.hellojsStrings.none = "none".asInstanceOf[typingsSlinky.hellojs.hellojsStrings.none]
   @scala.inline
-  def none: typingsSlinky.hellojs.hellojsStrings.none = this.cast("none")
+  def page: typingsSlinky.hellojs.hellojsStrings.page = "page".asInstanceOf[typingsSlinky.hellojs.hellojsStrings.page]
   @scala.inline
-  def page: typingsSlinky.hellojs.hellojsStrings.page = this.cast("page")
-  @scala.inline
-  def popup: typingsSlinky.hellojs.hellojsStrings.popup = this.cast("popup")
+  def popup: typingsSlinky.hellojs.hellojsStrings.popup = "popup".asInstanceOf[typingsSlinky.hellojs.hellojsStrings.popup]
 }
 

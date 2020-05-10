@@ -34,22 +34,89 @@ trait LexiconAttributes extends js.Object {
 
 object LexiconAttributes {
   @scala.inline
-  def apply(
-    Alphabet: Alphabet = null,
-    LanguageCode: LanguageCode = null,
-    LastModified: js.Date = null,
-    LexemesCount: Int | Double = null,
-    LexiconArn: LexiconArn = null,
-    Size: Int | Double = null
-  ): LexiconAttributes = {
+  def apply(): LexiconAttributes = {
     val __obj = js.Dynamic.literal()
-    if (Alphabet != null) __obj.updateDynamic("Alphabet")(Alphabet.asInstanceOf[js.Any])
-    if (LanguageCode != null) __obj.updateDynamic("LanguageCode")(LanguageCode.asInstanceOf[js.Any])
-    if (LastModified != null) __obj.updateDynamic("LastModified")(LastModified.asInstanceOf[js.Any])
-    if (LexemesCount != null) __obj.updateDynamic("LexemesCount")(LexemesCount.asInstanceOf[js.Any])
-    if (LexiconArn != null) __obj.updateDynamic("LexiconArn")(LexiconArn.asInstanceOf[js.Any])
-    if (Size != null) __obj.updateDynamic("Size")(Size.asInstanceOf[js.Any])
     __obj.asInstanceOf[LexiconAttributes]
   }
+  @scala.inline
+  implicit class LexiconAttributesOps[Self <: LexiconAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlphabet(value: Alphabet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Alphabet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlphabet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Alphabet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguageCode(value: LanguageCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModified(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModified")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModified: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModified")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLexemesCount(value: LexemesCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LexemesCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLexemesCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LexemesCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLexiconArn(value: LexiconArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LexiconArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLexiconArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LexiconArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

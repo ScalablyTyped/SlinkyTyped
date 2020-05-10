@@ -14,18 +14,65 @@ trait AnonChangedAttributesSinceTimestamp extends js.Object {
 
 object AnonChangedAttributesSinceTimestamp {
   @scala.inline
-  def apply(
-    changedAttributesSinceTimestamp: String = null,
-    changedMetricsSinceTimestamp: String = null,
-    endDate: String = null,
-    startDate: String = null
-  ): AnonChangedAttributesSinceTimestamp = {
+  def apply(): AnonChangedAttributesSinceTimestamp = {
     val __obj = js.Dynamic.literal()
-    if (changedAttributesSinceTimestamp != null) __obj.updateDynamic("changedAttributesSinceTimestamp")(changedAttributesSinceTimestamp.asInstanceOf[js.Any])
-    if (changedMetricsSinceTimestamp != null) __obj.updateDynamic("changedMetricsSinceTimestamp")(changedMetricsSinceTimestamp.asInstanceOf[js.Any])
-    if (endDate != null) __obj.updateDynamic("endDate")(endDate.asInstanceOf[js.Any])
-    if (startDate != null) __obj.updateDynamic("startDate")(startDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonChangedAttributesSinceTimestamp]
   }
+  @scala.inline
+  implicit class AnonChangedAttributesSinceTimestampOps[Self <: AnonChangedAttributesSinceTimestamp] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChangedAttributesSinceTimestamp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changedAttributesSinceTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChangedAttributesSinceTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changedAttributesSinceTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChangedMetricsSinceTimestamp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changedMetricsSinceTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChangedMetricsSinceTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changedMetricsSinceTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

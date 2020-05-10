@@ -13,12 +13,10 @@ trait RTCDtlsRole extends js.Object
 
 object RTCDtlsRole {
   @scala.inline
-  def auto: typingsSlinky.std.stdStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.std.stdStrings.auto = "auto".asInstanceOf[typingsSlinky.std.stdStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def client: typingsSlinky.std.stdStrings.client = "client".asInstanceOf[typingsSlinky.std.stdStrings.client]
   @scala.inline
-  def client: typingsSlinky.std.stdStrings.client = this.cast("client")
-  @scala.inline
-  def server: typingsSlinky.std.stdStrings.server = this.cast("server")
+  def server: typingsSlinky.std.stdStrings.server = "server".asInstanceOf[typingsSlinky.std.stdStrings.server]
 }
 

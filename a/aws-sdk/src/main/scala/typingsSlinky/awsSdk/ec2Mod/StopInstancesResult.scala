@@ -14,10 +14,29 @@ trait StopInstancesResult extends js.Object {
 
 object StopInstancesResult {
   @scala.inline
-  def apply(StoppingInstances: InstanceStateChangeList = null): StopInstancesResult = {
+  def apply(): StopInstancesResult = {
     val __obj = js.Dynamic.literal()
-    if (StoppingInstances != null) __obj.updateDynamic("StoppingInstances")(StoppingInstances.asInstanceOf[js.Any])
     __obj.asInstanceOf[StopInstancesResult]
   }
+  @scala.inline
+  implicit class StopInstancesResultOps[Self <: StopInstancesResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStoppingInstances(value: InstanceStateChangeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StoppingInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoppingInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StoppingInstances")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

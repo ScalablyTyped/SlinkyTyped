@@ -1,7 +1,5 @@
 package typingsSlinky.valerie.Valerie_
 
-import typingsSlinky.std.Date
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,22 +31,22 @@ trait PropertyValidationState[T] extends js.Object {
   def currencyMajorMinor(options: ValidationOptions): PropertyValidationState[T] = js.native
   def date(): PropertyValidationState[T] = js.native
    // date + dateFN
-  def during(earliest: js.Function0[Date], latest: js.Function0[Date]): PropertyValidationState[T] = js.native
-  def during(earliest: js.Function0[Date], latest: js.Function0[Date], options: ValidationOptions): PropertyValidationState[T] = js.native
+  def during(earliest: js.Function0[js.Date], latest: js.Function0[js.Date]): PropertyValidationState[T] = js.native
+  def during(earliest: js.Function0[js.Date], latest: js.Function0[js.Date], options: ValidationOptions): PropertyValidationState[T] = js.native
    // date + date
-  def during(earliest: js.Function0[Date], latest: Date): PropertyValidationState[T] = js.native
-  def during(earliest: js.Function0[Date], latest: Date, options: ValidationOptions): PropertyValidationState[T] = js.native
+  def during(earliest: js.Function0[js.Date], latest: js.Date): PropertyValidationState[T] = js.native
+  def during(earliest: js.Function0[js.Date], latest: js.Date, options: ValidationOptions): PropertyValidationState[T] = js.native
    // dateFN + date
-  def during(earliest: Date, latest: js.Function0[Date]): PropertyValidationState[T] = js.native
-  def during(earliest: Date, latest: js.Function0[Date], options: ValidationOptions): PropertyValidationState[T] = js.native
-  def during(earliest: Date, latest: Date): PropertyValidationState[T] = js.native
-  def during(earliest: Date, latest: Date, options: ValidationOptions): PropertyValidationState[T] = js.native
+  def during(earliest: js.Date, latest: js.Function0[js.Date]): PropertyValidationState[T] = js.native
+  def during(earliest: js.Date, latest: js.Function0[js.Date], options: ValidationOptions): PropertyValidationState[T] = js.native
+  def during(earliest: js.Date, latest: js.Date): PropertyValidationState[T] = js.native
+  def during(earliest: js.Date, latest: js.Date, options: ValidationOptions): PropertyValidationState[T] = js.native
    // date value
-  def earliest(earliest: js.Function0[Date]): PropertyValidationState[T] = js.native
-  def earliest(earliest: js.Function0[Date], options: ValidationOptions): PropertyValidationState[T] = js.native
+  def earliest(earliest: js.Function0[js.Date]): PropertyValidationState[T] = js.native
+  def earliest(earliest: js.Function0[js.Date], options: ValidationOptions): PropertyValidationState[T] = js.native
    // dateFN + dateFN
-  def earliest(earliest: Date): PropertyValidationState[T] = js.native
-  def earliest(earliest: Date, options: ValidationOptions): PropertyValidationState[T] = js.native
+  def earliest(earliest: js.Date): PropertyValidationState[T] = js.native
+  def earliest(earliest: js.Date, options: ValidationOptions): PropertyValidationState[T] = js.native
    // date function
   def email(): PropertyValidationState[T] = js.native
   // return original observable
@@ -58,8 +56,8 @@ trait PropertyValidationState[T] extends js.Object {
    // regex
   def expression(regularExpressionString: String): PropertyValidationState[T] = js.native
   def expression(regularExpressionString: String, options: ValidationOptions): PropertyValidationState[T] = js.native
-  def expression(regularExpression: RegExp): PropertyValidationState[T] = js.native
-  def expression(regularExpression: RegExp, options: ValidationOptions): PropertyValidationState[T] = js.native
+  def expression(regularExpression: js.RegExp): PropertyValidationState[T] = js.native
+  def expression(regularExpression: js.RegExp, options: ValidationOptions): PropertyValidationState[T] = js.native
   // other methods: not returning PropertyValidationState<T>
   def failed(): Boolean = js.native
    // regex string
@@ -70,10 +68,10 @@ trait PropertyValidationState[T] extends js.Object {
   def integer(options: ValidationOptions): PropertyValidationState[T] = js.native
   def isApplicable(): Boolean = js.native
   def isRequired(): Boolean = js.native
-  def latest(latestValueOrFunction: js.Function0[Date]): PropertyValidationState[T] = js.native
-  def latest(latestValueOrFunction: js.Function0[Date], options: ValidationOptions): PropertyValidationState[T] = js.native
-  def latest(latestValueOrFunction: Date): PropertyValidationState[T] = js.native
-  def latest(latestValueOrFunction: Date, options: ValidationOptions): PropertyValidationState[T] = js.native
+  def latest(latestValueOrFunction: js.Function0[js.Date]): PropertyValidationState[T] = js.native
+  def latest(latestValueOrFunction: js.Function0[js.Date], options: ValidationOptions): PropertyValidationState[T] = js.native
+  def latest(latestValueOrFunction: js.Date): PropertyValidationState[T] = js.native
+  def latest(latestValueOrFunction: js.Date, options: ValidationOptions): PropertyValidationState[T] = js.native
   def lengthBetween(shortest: js.Function0[Double], longest: js.Function0[Double]): PropertyValidationState[T] = js.native
   def lengthBetween(shortest: js.Function0[Double], longest: js.Function0[Double], options: ValidationOptions): PropertyValidationState[T] = js.native
   def lengthBetween(shortest: js.Function0[Double], longest: Double): PropertyValidationState[T] = js.native

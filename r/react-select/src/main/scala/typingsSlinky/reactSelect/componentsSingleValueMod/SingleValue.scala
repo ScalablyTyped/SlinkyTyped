@@ -1,9 +1,8 @@
 package typingsSlinky.reactSelect.componentsSingleValueMod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("react-select/src/components/SingleValue", "SingleValue")
 @js.native
 class SingleValue protected ()
-  extends Component[SingleValueProps[js.Any], ComponentState, js.Any] {
+  extends Component[SingleValueProps[js.Any], js.Object, js.Any] {
   def this(props: SingleValueProps[_]) = this()
   def this(props: SingleValueProps[_], context: js.Any) = this()
 }
@@ -19,5 +18,5 @@ class SingleValue protected ()
 @JSImport("react-select/src/components/SingleValue", "SingleValue")
 @js.native
 object SingleValue
-  extends TopLevel[ComponentType[SingleValueProps[js.Any]]]
+  extends TopLevel[ReactComponentClass[SingleValueProps[js.Any]]]
 

@@ -17,6 +17,6 @@ object OfflineAudioCompletionEvent
   extends Instantiable2[
       /* type */ java.lang.String, 
       /* eventInitDict */ OfflineAudioCompletionEventInit, 
-      OfflineAudioCompletionEvent
+      org.scalajs.dom.raw.OfflineAudioCompletionEvent
     ]
 

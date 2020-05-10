@@ -38,22 +38,89 @@ trait UpdateStackInstancesInput extends js.Object {
 
 object UpdateStackInstancesInput {
   @scala.inline
-  def apply(
-    Regions: RegionList,
-    StackSetName: StackSetNameOrId,
-    Accounts: AccountList = null,
-    DeploymentTargets: DeploymentTargets = null,
-    OperationId: ClientRequestToken = null,
-    OperationPreferences: StackSetOperationPreferences = null,
-    ParameterOverrides: Parameters = null
-  ): UpdateStackInstancesInput = {
+  def apply(Regions: RegionList, StackSetName: StackSetNameOrId): UpdateStackInstancesInput = {
     val __obj = js.Dynamic.literal(Regions = Regions.asInstanceOf[js.Any], StackSetName = StackSetName.asInstanceOf[js.Any])
-    if (Accounts != null) __obj.updateDynamic("Accounts")(Accounts.asInstanceOf[js.Any])
-    if (DeploymentTargets != null) __obj.updateDynamic("DeploymentTargets")(DeploymentTargets.asInstanceOf[js.Any])
-    if (OperationId != null) __obj.updateDynamic("OperationId")(OperationId.asInstanceOf[js.Any])
-    if (OperationPreferences != null) __obj.updateDynamic("OperationPreferences")(OperationPreferences.asInstanceOf[js.Any])
-    if (ParameterOverrides != null) __obj.updateDynamic("ParameterOverrides")(ParameterOverrides.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateStackInstancesInput]
   }
+  @scala.inline
+  implicit class UpdateStackInstancesInputOps[Self <: UpdateStackInstancesInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRegions(value: RegionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Regions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStackSetName(value: StackSetNameOrId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccounts(value: AccountList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Accounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccounts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Accounts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeploymentTargets(value: DeploymentTargets): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentTargets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeploymentTargets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentTargets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperationId(value: ClientRequestToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperationPreferences(value: StackSetOperationPreferences): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationPreferences")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperationPreferences: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationPreferences")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterOverrides(value: Parameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterOverrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterOverrides")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

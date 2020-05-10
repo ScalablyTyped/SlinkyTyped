@@ -18,22 +18,20 @@ trait StrokeLinejoinProperty extends js.Object
 
 object StrokeLinejoinProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  def bevel: typingsSlinky.csstype.csstypeStrings.bevel = this.cast("bevel")
+  def bevel: typingsSlinky.csstype.csstypeStrings.bevel = "bevel".asInstanceOf[typingsSlinky.csstype.csstypeStrings.bevel]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def miter: typingsSlinky.csstype.csstypeStrings.miter = "miter".asInstanceOf[typingsSlinky.csstype.csstypeStrings.miter]
   @scala.inline
-  def miter: typingsSlinky.csstype.csstypeStrings.miter = this.cast("miter")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
+  def round: typingsSlinky.csstype.csstypeStrings.round = "round".asInstanceOf[typingsSlinky.csstype.csstypeStrings.round]
   @scala.inline
-  def round: typingsSlinky.csstype.csstypeStrings.round = this.cast("round")
-  @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
 }
 

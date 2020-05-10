@@ -12,8 +12,8 @@ object mod extends js.Object {
   trait Int64 extends js.Object {
     def toArray(): js.Array[Double] = js.native
     def toArray(raw: Boolean): js.Array[Double] = js.native
-    def toArrayBuffer(): scala.scalajs.js.typedarray.ArrayBuffer = js.native
-    def toArrayBuffer(raw: Boolean): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+    def toArrayBuffer(): js.typedarray.ArrayBuffer = js.native
+    def toArrayBuffer(raw: Boolean): js.typedarray.ArrayBuffer = js.native
     def toBuffer(): Buffer = js.native
     def toBuffer(raw: Boolean): Buffer = js.native
     def toJSON(): Double = js.native
@@ -57,6 +57,6 @@ object mod extends js.Object {
     def isUint64LE(obj: js.Any): /* is int64-buffer.int64-buffer.Uint64LE */ Boolean = js.native
   }
   
-  type ArrayType = scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.ArrayBuffer | js.Array[Double]
+  type ArrayType = js.typedarray.Uint8Array | js.typedarray.ArrayBuffer | js.Array[Double]
 }
 

@@ -4,39 +4,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Classes extends js.Object {
-  var adjacentMonth: js.UndefOr[String] = js.undefined
-  var event: js.UndefOr[String] = js.undefined
-  var inactive: js.UndefOr[String] = js.undefined
-  var lastMonth: js.UndefOr[String] = js.undefined
-  var nextMonth: js.UndefOr[String] = js.undefined
-  var past: js.UndefOr[String] = js.undefined
-  var selected: js.UndefOr[String] = js.undefined
-  var today: js.UndefOr[String] = js.undefined
+  var adjacentMonth: js.UndefOr[String] = js.native
+  var event: js.UndefOr[String] = js.native
+  var inactive: js.UndefOr[String] = js.native
+  var lastMonth: js.UndefOr[String] = js.native
+  var nextMonth: js.UndefOr[String] = js.native
+  var past: js.UndefOr[String] = js.native
+  var selected: js.UndefOr[String] = js.native
+  var today: js.UndefOr[String] = js.native
 }
 
 object Classes {
   @scala.inline
-  def apply(
-    adjacentMonth: String = null,
-    event: String = null,
-    inactive: String = null,
-    lastMonth: String = null,
-    nextMonth: String = null,
-    past: String = null,
-    selected: String = null,
-    today: String = null
-  ): Classes = {
+  def apply(): Classes = {
     val __obj = js.Dynamic.literal()
-    if (adjacentMonth != null) __obj.updateDynamic("adjacentMonth")(adjacentMonth.asInstanceOf[js.Any])
-    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
-    if (inactive != null) __obj.updateDynamic("inactive")(inactive.asInstanceOf[js.Any])
-    if (lastMonth != null) __obj.updateDynamic("lastMonth")(lastMonth.asInstanceOf[js.Any])
-    if (nextMonth != null) __obj.updateDynamic("nextMonth")(nextMonth.asInstanceOf[js.Any])
-    if (past != null) __obj.updateDynamic("past")(past.asInstanceOf[js.Any])
-    if (selected != null) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
-    if (today != null) __obj.updateDynamic("today")(today.asInstanceOf[js.Any])
     __obj.asInstanceOf[Classes]
   }
+  @scala.inline
+  implicit class ClassesOps[Self <: Classes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdjacentMonth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjacentMonth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdjacentMonth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjacentMonth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInactive(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inactive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInactive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inactive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastMonth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastMonth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastMonth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastMonth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextMonth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextMonth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextMonth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextMonth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPast(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("past")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPast: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("past")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelected(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToday(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("today")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToday: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("today")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

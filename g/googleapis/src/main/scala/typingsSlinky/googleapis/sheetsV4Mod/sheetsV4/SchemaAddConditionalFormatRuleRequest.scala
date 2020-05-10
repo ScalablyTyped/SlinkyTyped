@@ -22,11 +22,41 @@ trait SchemaAddConditionalFormatRuleRequest extends js.Object {
 
 object SchemaAddConditionalFormatRuleRequest {
   @scala.inline
-  def apply(index: Int | Double = null, rule: SchemaConditionalFormatRule = null): SchemaAddConditionalFormatRuleRequest = {
+  def apply(): SchemaAddConditionalFormatRuleRequest = {
     val __obj = js.Dynamic.literal()
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (rule != null) __obj.updateDynamic("rule")(rule.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAddConditionalFormatRuleRequest]
   }
+  @scala.inline
+  implicit class SchemaAddConditionalFormatRuleRequestOps[Self <: SchemaAddConditionalFormatRuleRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRule(value: SchemaConditionalFormatRule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

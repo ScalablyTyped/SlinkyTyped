@@ -14,17 +14,11 @@ object OptimisticUpdate {
   @scala.inline
   def OptimisticUpdateFunction(storeUpdater: RecordSourceProxy => Unit): OptimisticUpdate = {
     val __obj = js.Dynamic.literal(storeUpdater = js.Any.fromFunction1(storeUpdater))
-  
     __obj.asInstanceOf[OptimisticUpdate]
   }
   @scala.inline
-  def OptimisticUpdateRelayPayload(
-    operation: OperationDescriptor,
-    payload: RelayResponsePayload,
-    updater: (/* store */ RecordSourceSelectorProxy[js.Object], js.Object) => Unit = null
-  ): OptimisticUpdate = {
+  def OptimisticUpdateRelayPayload(operation: OperationDescriptor, payload: RelayResponsePayload): OptimisticUpdate = {
     val __obj = js.Dynamic.literal(operation = operation.asInstanceOf[js.Any], payload = payload.asInstanceOf[js.Any])
-    if (updater != null) __obj.updateDynamic("updater")(js.Any.fromFunction2(updater))
     __obj.asInstanceOf[OptimisticUpdate]
   }
 }

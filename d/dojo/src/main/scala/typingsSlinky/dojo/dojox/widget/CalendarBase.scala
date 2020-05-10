@@ -24,7 +24,7 @@ import scala.scalajs.js.annotation._
   * The Root class for all _Calendar extensions
   *
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dijit.AttachMixin because Inheritance from two classes. Inlined 
 - typingsSlinky.dojo.dijit.WidgetsInTemplateMixin because Inheritance from two classes. Inlined contextRequire, widgetsInTemplate, startup
 - typingsSlinky.dojo.dijit.Container because Inheritance from two classes. Inlined addChild, addChild, getIndexOfChild, hasChildren, removeChild, removeChild

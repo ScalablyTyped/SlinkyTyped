@@ -18,11 +18,41 @@ trait DescribeEventAggregatesResponse extends js.Object {
 
 object DescribeEventAggregatesResponse {
   @scala.inline
-  def apply(eventAggregates: EventAggregateList = null, nextToken: nextToken = null): DescribeEventAggregatesResponse = {
+  def apply(): DescribeEventAggregatesResponse = {
     val __obj = js.Dynamic.literal()
-    if (eventAggregates != null) __obj.updateDynamic("eventAggregates")(eventAggregates.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEventAggregatesResponse]
   }
+  @scala.inline
+  implicit class DescribeEventAggregatesResponseOps[Self <: DescribeEventAggregatesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventAggregates(value: EventAggregateList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventAggregates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventAggregates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventAggregates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: nextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,10 +18,35 @@ trait GetSearchSuggestionsRequest extends js.Object {
 
 object GetSearchSuggestionsRequest {
   @scala.inline
-  def apply(Resource: ResourceType, SuggestionQuery: SuggestionQuery = null): GetSearchSuggestionsRequest = {
+  def apply(Resource: ResourceType): GetSearchSuggestionsRequest = {
     val __obj = js.Dynamic.literal(Resource = Resource.asInstanceOf[js.Any])
-    if (SuggestionQuery != null) __obj.updateDynamic("SuggestionQuery")(SuggestionQuery.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSearchSuggestionsRequest]
   }
+  @scala.inline
+  implicit class GetSearchSuggestionsRequestOps[Self <: GetSearchSuggestionsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResource(value: ResourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Resource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuggestionQuery(value: SuggestionQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SuggestionQuery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestionQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SuggestionQuery")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

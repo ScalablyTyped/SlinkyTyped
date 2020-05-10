@@ -27,11 +27,41 @@ trait SchemaCloudBuildOptions extends js.Object {
 
 object SchemaCloudBuildOptions {
   @scala.inline
-  def apply(appYamlPath: String = null, cloudBuildTimeout: String = null): SchemaCloudBuildOptions = {
+  def apply(): SchemaCloudBuildOptions = {
     val __obj = js.Dynamic.literal()
-    if (appYamlPath != null) __obj.updateDynamic("appYamlPath")(appYamlPath.asInstanceOf[js.Any])
-    if (cloudBuildTimeout != null) __obj.updateDynamic("cloudBuildTimeout")(cloudBuildTimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCloudBuildOptions]
   }
+  @scala.inline
+  implicit class SchemaCloudBuildOptionsOps[Self <: SchemaCloudBuildOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppYamlPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appYamlPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppYamlPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appYamlPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudBuildTimeout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudBuildTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudBuildTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudBuildTimeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

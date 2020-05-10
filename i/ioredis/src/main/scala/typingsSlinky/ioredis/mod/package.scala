@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
+  type Callback[T] = js.Function2[/* err */ js.Error | scala.Null, /* res */ T, scala.Unit]
   type CallbackFunction[T] = js.Function2[
     /* err */ js.UndefOr[typingsSlinky.node.NodeJS.ErrnoException | scala.Null], 
     /* result */ js.UndefOr[T], 

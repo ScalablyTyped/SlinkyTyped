@@ -21,28 +21,26 @@ trait EdiTextType extends js.Object
 
 object EdiTextType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def date: typingsSlinky.reactEditext.reactEditextStrings.date = "date".asInstanceOf[typingsSlinky.reactEditext.reactEditextStrings.date]
   @scala.inline
-  def date: typingsSlinky.reactEditext.reactEditextStrings.date = this.cast("date")
+  def `datetime-local`: typingsSlinky.reactEditext.reactEditextStrings.`datetime-local` = "datetime-local".asInstanceOf[typingsSlinky.reactEditext.reactEditextStrings.`datetime-local`]
   @scala.inline
-  def `datetime-local`: typingsSlinky.reactEditext.reactEditextStrings.`datetime-local` = this.cast("datetime-local")
+  def email: typingsSlinky.reactEditext.reactEditextStrings.email = "email".asInstanceOf[typingsSlinky.reactEditext.reactEditextStrings.email]
   @scala.inline
-  def email: typingsSlinky.reactEditext.reactEditextStrings.email = this.cast("email")
+  def month: typingsSlinky.reactEditext.reactEditextStrings.month = "month".asInstanceOf[typingsSlinky.reactEditext.reactEditextStrings.month]
   @scala.inline
-  def month: typingsSlinky.reactEditext.reactEditextStrings.month = this.cast("month")
+  def number: typingsSlinky.reactEditext.reactEditextStrings.number = "number".asInstanceOf[typingsSlinky.reactEditext.reactEditextStrings.number]
   @scala.inline
-  def number: typingsSlinky.reactEditext.reactEditextStrings.number = this.cast("number")
+  def tel: typingsSlinky.reactEditext.reactEditextStrings.tel = "tel".asInstanceOf[typingsSlinky.reactEditext.reactEditextStrings.tel]
   @scala.inline
-  def tel: typingsSlinky.reactEditext.reactEditextStrings.tel = this.cast("tel")
+  def text: typingsSlinky.reactEditext.reactEditextStrings.text = "text".asInstanceOf[typingsSlinky.reactEditext.reactEditextStrings.text]
   @scala.inline
-  def text: typingsSlinky.reactEditext.reactEditextStrings.text = this.cast("text")
+  def textarea: typingsSlinky.reactEditext.reactEditextStrings.textarea = "textarea".asInstanceOf[typingsSlinky.reactEditext.reactEditextStrings.textarea]
   @scala.inline
-  def textarea: typingsSlinky.reactEditext.reactEditextStrings.textarea = this.cast("textarea")
+  def time: typingsSlinky.reactEditext.reactEditextStrings.time = "time".asInstanceOf[typingsSlinky.reactEditext.reactEditextStrings.time]
   @scala.inline
-  def time: typingsSlinky.reactEditext.reactEditextStrings.time = this.cast("time")
+  def url: typingsSlinky.reactEditext.reactEditextStrings.url = "url".asInstanceOf[typingsSlinky.reactEditext.reactEditextStrings.url]
   @scala.inline
-  def url: typingsSlinky.reactEditext.reactEditextStrings.url = this.cast("url")
-  @scala.inline
-  def week: typingsSlinky.reactEditext.reactEditextStrings.week = this.cast("week")
+  def week: typingsSlinky.reactEditext.reactEditextStrings.week = "week".asInstanceOf[typingsSlinky.reactEditext.reactEditextStrings.week]
 }
 

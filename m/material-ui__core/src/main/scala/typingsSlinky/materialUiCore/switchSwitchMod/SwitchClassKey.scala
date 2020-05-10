@@ -20,26 +20,24 @@ trait SwitchClassKey extends js.Object
 
 object SwitchClassKey {
   @scala.inline
-  def bar: typingsSlinky.materialUiCore.materialUiCoreStrings.bar = this.cast("bar")
+  def bar: typingsSlinky.materialUiCore.materialUiCoreStrings.bar = "bar".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.bar]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def checked: typingsSlinky.materialUiCore.materialUiCoreStrings.checked = "checked".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.checked]
   @scala.inline
-  def checked: typingsSlinky.materialUiCore.materialUiCoreStrings.checked = this.cast("checked")
+  def colorPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary = "colorPrimary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary]
   @scala.inline
-  def colorPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary = this.cast("colorPrimary")
+  def colorSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary = "colorSecondary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary]
   @scala.inline
-  def colorSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary = this.cast("colorSecondary")
+  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = "disabled".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = this.cast("disabled")
+  def icon: typingsSlinky.materialUiCore.materialUiCoreStrings.icon = "icon".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.icon]
   @scala.inline
-  def icon: typingsSlinky.materialUiCore.materialUiCoreStrings.icon = this.cast("icon")
+  def iconChecked: typingsSlinky.materialUiCore.materialUiCoreStrings.iconChecked = "iconChecked".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.iconChecked]
   @scala.inline
-  def iconChecked: typingsSlinky.materialUiCore.materialUiCoreStrings.iconChecked = this.cast("iconChecked")
+  def input: typingsSlinky.materialUiCore.materialUiCoreStrings.input = "input".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.input]
   @scala.inline
-  def input: typingsSlinky.materialUiCore.materialUiCoreStrings.input = this.cast("input")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
-  @scala.inline
-  def switchBase: typingsSlinky.materialUiCore.materialUiCoreStrings.switchBase = this.cast("switchBase")
+  def switchBase: typingsSlinky.materialUiCore.materialUiCoreStrings.switchBase = "switchBase".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.switchBase]
 }
 

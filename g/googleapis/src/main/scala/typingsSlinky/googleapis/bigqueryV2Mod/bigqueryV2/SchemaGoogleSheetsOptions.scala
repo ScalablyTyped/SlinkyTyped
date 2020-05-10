@@ -31,11 +31,41 @@ trait SchemaGoogleSheetsOptions extends js.Object {
 
 object SchemaGoogleSheetsOptions {
   @scala.inline
-  def apply(range: String = null, skipLeadingRows: String = null): SchemaGoogleSheetsOptions = {
+  def apply(): SchemaGoogleSheetsOptions = {
     val __obj = js.Dynamic.literal()
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (skipLeadingRows != null) __obj.updateDynamic("skipLeadingRows")(skipLeadingRows.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleSheetsOptions]
   }
+  @scala.inline
+  implicit class SchemaGoogleSheetsOptionsOps[Self <: SchemaGoogleSheetsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipLeadingRows(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipLeadingRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipLeadingRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipLeadingRows")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

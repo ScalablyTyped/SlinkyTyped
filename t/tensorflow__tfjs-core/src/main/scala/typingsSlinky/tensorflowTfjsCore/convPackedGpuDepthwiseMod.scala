@@ -15,16 +15,10 @@ object convPackedGpuDepthwiseMod extends js.Object {
     def this(convInfo: Conv2DInfo, addBias: Boolean) = this()
     def this(convInfo: Conv2DInfo, addBias: Boolean, activation: String) = this()
     def this(convInfo: Conv2DInfo, addBias: Boolean, activation: String, hasPreluActivation: Boolean) = this()
-    /* CompleteClass */
-    override var outputShape: js.Array[Double] = js.native
     @JSName("packedInputs")
     var packedInputs_DepthwiseConvPacked2DProgram: Boolean = js.native
     @JSName("packedOutput")
     var packedOutput_DepthwiseConvPacked2DProgram: Boolean = js.native
-    /* CompleteClass */
-    override var userCode: String = js.native
-    /* CompleteClass */
-    override var variableNames: js.Array[String] = js.native
   }
   
 }

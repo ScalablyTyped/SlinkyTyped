@@ -25,14 +25,41 @@ trait IdentityPoolRoleAttachmentArgs extends js.Object {
 
 object IdentityPoolRoleAttachmentArgs {
   @scala.inline
-  def apply(
-    identityPoolId: Input[String],
-    roles: Input[IdentityPoolRoleAttachmentRoles],
-    roleMappings: Input[js.Array[Input[IdentityPoolRoleAttachmentRoleMapping]]] = null
-  ): IdentityPoolRoleAttachmentArgs = {
+  def apply(identityPoolId: Input[String], roles: Input[IdentityPoolRoleAttachmentRoles]): IdentityPoolRoleAttachmentArgs = {
     val __obj = js.Dynamic.literal(identityPoolId = identityPoolId.asInstanceOf[js.Any], roles = roles.asInstanceOf[js.Any])
-    if (roleMappings != null) __obj.updateDynamic("roleMappings")(roleMappings.asInstanceOf[js.Any])
     __obj.asInstanceOf[IdentityPoolRoleAttachmentArgs]
   }
+  @scala.inline
+  implicit class IdentityPoolRoleAttachmentArgsOps[Self <: IdentityPoolRoleAttachmentArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIdentityPoolId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identityPoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoles(value: Input[IdentityPoolRoleAttachmentRoles]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleMappings(value: Input[js.Array[Input[IdentityPoolRoleAttachmentRoleMapping]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleMappings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleMappings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleMappings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

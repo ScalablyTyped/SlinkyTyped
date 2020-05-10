@@ -23,76 +23,266 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<std.Pick<@jest/types.@jest/types.Config.GlobalConfig, 'bail' | 'changedSince' | 'collectCoverage' | 'collectCoverageFrom' | 'collectCoverageOnlyFrom' | 'coverageDirectory' | 'coverageReporters' | 'notify' | 'notifyMode' | 'onlyFailures' | 'reporters' | 'testNamePattern' | 'testPathPattern' | 'updateSnapshot' | 'verbose'> & {  mode  :'watch' | 'watchAll'}> & std.Partial<std.Pick<@jest/types.@jest/types.Config.GlobalConfig, 'noSCM' | 'passWithNoTests'>> */
+@js.native
 trait PartialPickGlobalConfigba extends js.Object {
-  var bail: js.UndefOr[Double] = js.undefined
-  var changedSince: js.UndefOr[String] = js.undefined
-  var collectCoverage: js.UndefOr[Boolean] = js.undefined
-  var collectCoverageFrom: js.UndefOr[js.Array[Glob]] = js.undefined
-  var collectCoverageOnlyFrom: js.UndefOr[StringDictionary[Boolean]] = js.undefined
-  var coverageDirectory: js.UndefOr[String] = js.undefined
+  var bail: js.UndefOr[Double] = js.native
+  var changedSince: js.UndefOr[String] = js.native
+  var collectCoverage: js.UndefOr[Boolean] = js.native
+  var collectCoverageFrom: js.UndefOr[js.Array[Glob]] = js.native
+  var collectCoverageOnlyFrom: js.UndefOr[StringDictionary[Boolean]] = js.native
+  var coverageDirectory: js.UndefOr[String] = js.native
   var coverageReporters: js.UndefOr[
     js.Array[
       clover | cobertura | html | json | `json-summary` | lcovonly | none | teamcity | text | `text-lcov` | `text-summary`
     ]
-  ] = js.undefined
-  var mode: js.UndefOr[watch | watchAll] = js.undefined
-  var noSCM: js.UndefOr[Boolean] = js.undefined
-  var notifyMode: js.UndefOr[NotifyMode] = js.undefined
+  ] = js.native
+  var mode: js.UndefOr[watch | watchAll] = js.native
+  var noSCM: js.UndefOr[Boolean] = js.native
+  var notifyMode: js.UndefOr[NotifyMode] = js.native
   @JSName("notify")
-  var notify_FPartialPickGlobalConfigba: js.UndefOr[Boolean] = js.undefined
-  var onlyFailures: js.UndefOr[Boolean] = js.undefined
-  var passWithNoTests: js.UndefOr[Boolean] = js.undefined
-  var reporters: js.UndefOr[js.Array[String | ReporterConfig]] = js.undefined
-  var testNamePattern: js.UndefOr[String] = js.undefined
-  var testPathPattern: js.UndefOr[String] = js.undefined
-  var updateSnapshot: js.UndefOr[SnapshotUpdateState] = js.undefined
-  var verbose: js.UndefOr[Boolean] = js.undefined
+  var notify_FPartialPickGlobalConfigba: js.UndefOr[Boolean] = js.native
+  var onlyFailures: js.UndefOr[Boolean] = js.native
+  var passWithNoTests: js.UndefOr[Boolean] = js.native
+  var reporters: js.UndefOr[js.Array[String | ReporterConfig]] = js.native
+  var testNamePattern: js.UndefOr[String] = js.native
+  var testPathPattern: js.UndefOr[String] = js.native
+  var updateSnapshot: js.UndefOr[SnapshotUpdateState] = js.native
+  var verbose: js.UndefOr[Boolean] = js.native
 }
 
 object PartialPickGlobalConfigba {
   @scala.inline
-  def apply(
-    bail: Int | Double = null,
-    changedSince: String = null,
-    collectCoverage: js.UndefOr[Boolean] = js.undefined,
-    collectCoverageFrom: js.Array[Glob] = null,
-    collectCoverageOnlyFrom: StringDictionary[Boolean] = null,
-    coverageDirectory: String = null,
-    coverageReporters: js.Array[
-      clover | cobertura | html | json | `json-summary` | lcovonly | none | teamcity | text | `text-lcov` | `text-summary`
-    ] = null,
-    mode: watch | watchAll = null,
-    noSCM: js.UndefOr[Boolean] = js.undefined,
-    notify: js.UndefOr[Boolean] = js.undefined,
-    notifyMode: NotifyMode = null,
-    onlyFailures: js.UndefOr[Boolean] = js.undefined,
-    passWithNoTests: js.UndefOr[Boolean] = js.undefined,
-    reporters: js.Array[String | ReporterConfig] = null,
-    testNamePattern: String = null,
-    testPathPattern: String = null,
-    updateSnapshot: SnapshotUpdateState = null,
-    verbose: js.UndefOr[Boolean] = js.undefined
-  ): PartialPickGlobalConfigba = {
+  def apply(): PartialPickGlobalConfigba = {
     val __obj = js.Dynamic.literal()
-    if (bail != null) __obj.updateDynamic("bail")(bail.asInstanceOf[js.Any])
-    if (changedSince != null) __obj.updateDynamic("changedSince")(changedSince.asInstanceOf[js.Any])
-    if (!js.isUndefined(collectCoverage)) __obj.updateDynamic("collectCoverage")(collectCoverage.asInstanceOf[js.Any])
-    if (collectCoverageFrom != null) __obj.updateDynamic("collectCoverageFrom")(collectCoverageFrom.asInstanceOf[js.Any])
-    if (collectCoverageOnlyFrom != null) __obj.updateDynamic("collectCoverageOnlyFrom")(collectCoverageOnlyFrom.asInstanceOf[js.Any])
-    if (coverageDirectory != null) __obj.updateDynamic("coverageDirectory")(coverageDirectory.asInstanceOf[js.Any])
-    if (coverageReporters != null) __obj.updateDynamic("coverageReporters")(coverageReporters.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (!js.isUndefined(noSCM)) __obj.updateDynamic("noSCM")(noSCM.asInstanceOf[js.Any])
-    if (!js.isUndefined(notify)) __obj.updateDynamic("notify")(notify.asInstanceOf[js.Any])
-    if (notifyMode != null) __obj.updateDynamic("notifyMode")(notifyMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(onlyFailures)) __obj.updateDynamic("onlyFailures")(onlyFailures.asInstanceOf[js.Any])
-    if (!js.isUndefined(passWithNoTests)) __obj.updateDynamic("passWithNoTests")(passWithNoTests.asInstanceOf[js.Any])
-    if (reporters != null) __obj.updateDynamic("reporters")(reporters.asInstanceOf[js.Any])
-    if (testNamePattern != null) __obj.updateDynamic("testNamePattern")(testNamePattern.asInstanceOf[js.Any])
-    if (testPathPattern != null) __obj.updateDynamic("testPathPattern")(testPathPattern.asInstanceOf[js.Any])
-    if (updateSnapshot != null) __obj.updateDynamic("updateSnapshot")(updateSnapshot.asInstanceOf[js.Any])
-    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialPickGlobalConfigba]
   }
+  @scala.inline
+  implicit class PartialPickGlobalConfigbaOps[Self <: PartialPickGlobalConfigba] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBail(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChangedSince(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changedSince")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChangedSince: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changedSince")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollectCoverage(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collectCoverage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollectCoverage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collectCoverage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollectCoverageFrom(value: js.Array[Glob]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collectCoverageFrom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollectCoverageFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collectCoverageFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollectCoverageOnlyFrom(value: StringDictionary[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collectCoverageOnlyFrom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollectCoverageOnlyFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collectCoverageOnlyFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoverageDirectory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coverageDirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoverageDirectory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coverageDirectory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoverageReporters(
+      value: js.Array[
+          clover | cobertura | html | json | `json-summary` | lcovonly | none | teamcity | text | `text-lcov` | `text-summary`
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coverageReporters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoverageReporters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coverageReporters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: watch | watchAll): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoSCM(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noSCM")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoSCM: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noSCM")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotify(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notify")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotify: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notify")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotifyMode(value: NotifyMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotifyMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnlyFailures(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyFailures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnlyFailures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyFailures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassWithNoTests(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passWithNoTests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassWithNoTests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passWithNoTests")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReporters(value: js.Array[String | ReporterConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reporters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReporters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reporters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestNamePattern(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testNamePattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestNamePattern: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testNamePattern")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestPathPattern(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testPathPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestPathPattern: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testPathPattern")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateSnapshot(value: SnapshotUpdateState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateSnapshot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateSnapshot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateSnapshot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerbose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerbose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -15,9 +15,5 @@ class TypeScriptServicesFactory () extends IShimFactory {
   def createCoreServicesShim(host: ICoreServicesHost): CoreServicesShim = js.native
   def createLanguageServiceShim(host: ILanguageServiceShimHost): ILanguageServiceShim = js.native
   def createPullLanguageService(host: ILanguageServiceHost): ILanguageService = js.native
-  /* CompleteClass */
-  override def registerShim(shim: IShim): Unit = js.native
-  /* CompleteClass */
-  override def unregisterShim(shim: IShim): Unit = js.native
 }
 

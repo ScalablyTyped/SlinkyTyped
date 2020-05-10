@@ -21,6 +21,10 @@ trait TouchEvent extends UIEvent {
 @JSGlobal("TouchEvent")
 @js.native
 object TouchEvent
-  extends Instantiable1[/* type */ java.lang.String, TouchEvent]
-     with Instantiable2[/* type */ java.lang.String, /* eventInitDict */ TouchEventInit, TouchEvent]
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.TouchEvent]
+     with Instantiable2[
+      /* type */ java.lang.String, 
+      /* eventInitDict */ TouchEventInit, 
+      org.scalajs.dom.raw.TouchEvent
+    ]
 

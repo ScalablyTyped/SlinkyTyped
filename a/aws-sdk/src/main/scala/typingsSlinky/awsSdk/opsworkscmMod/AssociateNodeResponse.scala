@@ -14,10 +14,29 @@ trait AssociateNodeResponse extends js.Object {
 
 object AssociateNodeResponse {
   @scala.inline
-  def apply(NodeAssociationStatusToken: NodeAssociationStatusToken = null): AssociateNodeResponse = {
+  def apply(): AssociateNodeResponse = {
     val __obj = js.Dynamic.literal()
-    if (NodeAssociationStatusToken != null) __obj.updateDynamic("NodeAssociationStatusToken")(NodeAssociationStatusToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociateNodeResponse]
   }
+  @scala.inline
+  implicit class AssociateNodeResponseOps[Self <: AssociateNodeResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNodeAssociationStatusToken(value: NodeAssociationStatusToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeAssociationStatusToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeAssociationStatusToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeAssociationStatusToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

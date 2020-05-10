@@ -29,7 +29,7 @@ object mod extends js.Object {
     /**
       * array buffer that holds the index
       */
-    val data: scala.scalajs.js.typedarray.ArrayBuffer = js.native
+    val data: js.typedarray.ArrayBuffer = js.native
     /**
       * bounding box of the data.
       */
@@ -107,7 +107,7 @@ object mod extends js.Object {
       * Recreates a Flatbush index from raw ArrayBuffer data (that's exposed as index.data on a previously indexed Flatbush instance).
       * Very useful for transferring indices between threads or storing them in a file.
       */
-    def from(data: scala.scalajs.js.typedarray.ArrayBuffer): Flatbush = js.native
+    def from(data: js.typedarray.ArrayBuffer): Flatbush = js.native
   }
   
   type Flatbush = FlatbushClass

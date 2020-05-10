@@ -1,10 +1,9 @@
 package typingsSlinky.antDesignReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.marqueeMod.MarqueeProps
 import typingsSlinky.antDesignReactNative.marqueeMod.default
 import typingsSlinky.reactNative.mod.StyleProp
@@ -13,36 +12,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Marquee
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Marquee {
   @JSImport("@ant-design/react-native/lib/notice-bar/Marquee", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, loop */
-  def apply(
-    fps: Int | Double = null,
-    leading: Int | Double = null,
-    maxWidth: Int | Double = null,
-    style: StyleProp[TextStyle] = null,
-    text: TagMod[Any] = null,
-    trailing: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (fps != null) __obj.updateDynamic("fps")(fps.asInstanceOf[js.Any])
-    if (leading != null) __obj.updateDynamic("leading")(leading.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (trailing != null) __obj.updateDynamic("trailing")(trailing.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fps(value: Double): this.type = set("fps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def leading(value: Double): this.type = set("leading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loop(value: Boolean): this.type = set("loop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxWidth(value: Double): this.type = set("maxWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[TextStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def textReactElement(value: ReactElement): this.type = set("text", value.asInstanceOf[js.Any])
+    @scala.inline
+    def text(value: TagMod[Any]): this.type = set("text", value.asInstanceOf[js.Any])
+    @scala.inline
+    def trailing(value: Double): this.type = set("trailing", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.antDesignReactNative.marqueeMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MarqueeProps
+  
+  def withProps(p: MarqueeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Marquee.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,9 +1,7 @@
 package typingsSlinky.blueprintjsTimezone.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.inputGroupMod.IInputGroupProps
 import typingsSlinky.blueprintjsCore.propsMod.HTMLInputProps
 import typingsSlinky.blueprintjsTimezone.PartialIButtonProps
@@ -14,36 +12,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TimezonePicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsTimezone.mod.TimezonePicker] {
+object TimezonePicker {
   @JSImport("@blueprintjs/timezone", "TimezonePicker")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, placeholder */
-  def apply(
-    onChange: String => Unit,
-    buttonProps: PartialIButtonProps = null,
-    date: js.Date = null,
-    inputProps: IInputGroupProps with HTMLInputProps = null,
-    popoverProps: PartialIPopoverProps = null,
-    showLocalTimezone: js.UndefOr[Boolean] = js.undefined,
-    value: String = null,
-    valueDisplayFormat: TimezoneDisplayFormat = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsTimezone.mod.TimezonePicker] = {
-    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
-    if (buttonProps != null) __obj.updateDynamic("buttonProps")(buttonProps.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (inputProps != null) __obj.updateDynamic("inputProps")(inputProps.asInstanceOf[js.Any])
-    if (popoverProps != null) __obj.updateDynamic("popoverProps")(popoverProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(showLocalTimezone)) __obj.updateDynamic("showLocalTimezone")(showLocalTimezone.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (valueDisplayFormat != null) __obj.updateDynamic("valueDisplayFormat")(valueDisplayFormat.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsTimezone.mod.TimezonePicker] {
+    @scala.inline
+    def buttonProps(value: PartialIButtonProps): this.type = set("buttonProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def date(value: js.Date): this.type = set("date", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputProps(value: IInputGroupProps with HTMLInputProps): this.type = set("inputProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popoverProps(value: PartialIPopoverProps): this.type = set("popoverProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showLocalTimezone(value: Boolean): this.type = set("showLocalTimezone", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueDisplayFormat(value: TimezoneDisplayFormat): this.type = set("valueDisplayFormat", value.asInstanceOf[js.Any])
   }
-  type Props = ITimezonePickerProps
+  
+  def withProps(p: ITimezonePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(onChange: String => Unit): Builder = {
+    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ITimezonePickerProps]))
+  }
 }
 

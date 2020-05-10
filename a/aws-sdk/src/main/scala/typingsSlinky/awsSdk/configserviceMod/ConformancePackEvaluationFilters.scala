@@ -26,18 +26,65 @@ trait ConformancePackEvaluationFilters extends js.Object {
 
 object ConformancePackEvaluationFilters {
   @scala.inline
-  def apply(
-    ComplianceType: ConformancePackComplianceType = null,
-    ConfigRuleNames: ConformancePackConfigRuleNames = null,
-    ResourceIds: ConformancePackComplianceResourceIds = null,
-    ResourceType: StringWithCharLimit256 = null
-  ): ConformancePackEvaluationFilters = {
+  def apply(): ConformancePackEvaluationFilters = {
     val __obj = js.Dynamic.literal()
-    if (ComplianceType != null) __obj.updateDynamic("ComplianceType")(ComplianceType.asInstanceOf[js.Any])
-    if (ConfigRuleNames != null) __obj.updateDynamic("ConfigRuleNames")(ConfigRuleNames.asInstanceOf[js.Any])
-    if (ResourceIds != null) __obj.updateDynamic("ResourceIds")(ResourceIds.asInstanceOf[js.Any])
-    if (ResourceType != null) __obj.updateDynamic("ResourceType")(ResourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConformancePackEvaluationFilters]
   }
+  @scala.inline
+  implicit class ConformancePackEvaluationFiltersOps[Self <: ConformancePackEvaluationFilters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComplianceType(value: ConformancePackComplianceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComplianceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigRuleNames(value: ConformancePackConfigRuleNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigRuleNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceIds(value: ConformancePackComplianceResourceIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceType(value: StringWithCharLimit256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

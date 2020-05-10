@@ -18,14 +18,12 @@ trait ResultType extends js.Object
 
 object ResultType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def remote_tab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.remote_tab = "remote_tab".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.remote_tab]
   @scala.inline
-  def remote_tab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.remote_tab = this.cast("remote_tab")
+  def search: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.search = "search".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.search]
   @scala.inline
-  def search: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.search = this.cast("search")
+  def tab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tab = "tab".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tab]
   @scala.inline
-  def tab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tab = this.cast("tab")
-  @scala.inline
-  def url: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.url = this.cast("url")
+  def url: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.url = "url".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.url]
 }
 

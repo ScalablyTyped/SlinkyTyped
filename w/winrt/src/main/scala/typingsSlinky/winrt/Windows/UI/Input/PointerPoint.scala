@@ -1,32 +1,13 @@
 package typingsSlinky.winrt.Windows.UI.Input
 
-import typingsSlinky.winrt.Windows.Devices.Input.PointerDevice
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVector
-import typingsSlinky.winrt.Windows.Foundation.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.UI.Input.PointerPoint")
 @js.native
-class PointerPoint () extends IPointerPoint {
-  /* CompleteClass */
-  override var frameId: Double = js.native
-  /* CompleteClass */
-  override var isInContact: Boolean = js.native
-  /* CompleteClass */
-  override var pointerDevice: PointerDevice = js.native
-  /* CompleteClass */
-  override var pointerId: Double = js.native
-  /* CompleteClass */
-  override var position: Point = js.native
-  /* CompleteClass */
-  override var properties: PointerPointProperties = js.native
-  /* CompleteClass */
-  override var rawPosition: Point = js.native
-  /* CompleteClass */
-  override var timestamp: Double = js.native
-}
+class PointerPoint () extends IPointerPoint
 
 /* static members */
 @JSGlobal("Windows.UI.Input.PointerPoint")

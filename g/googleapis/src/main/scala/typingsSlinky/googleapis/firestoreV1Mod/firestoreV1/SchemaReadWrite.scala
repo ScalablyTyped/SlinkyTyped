@@ -17,10 +17,29 @@ trait SchemaReadWrite extends js.Object {
 
 object SchemaReadWrite {
   @scala.inline
-  def apply(retryTransaction: String = null): SchemaReadWrite = {
+  def apply(): SchemaReadWrite = {
     val __obj = js.Dynamic.literal()
-    if (retryTransaction != null) __obj.updateDynamic("retryTransaction")(retryTransaction.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReadWrite]
   }
+  @scala.inline
+  implicit class SchemaReadWriteOps[Self <: SchemaReadWrite] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRetryTransaction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryTransaction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetryTransaction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryTransaction")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

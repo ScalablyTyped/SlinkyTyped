@@ -3,7 +3,7 @@ package typingsSlinky.phonegap
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.Instantiable4
-import typingsSlinky.std.MediaError
+import org.scalajs.dom.raw.MediaError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,10 +33,7 @@ trait Media
       Media
     ] {
   def getCurrentPosition(mediaSuccess: js.Function): Unit = js.native
-  def getCurrentPosition(
-    mediaSuccess: js.Function,
-    mediaError: js.Function1[/* mediaError */ org.scalajs.dom.raw.MediaError, _]
-  ): Unit = js.native
+  def getCurrentPosition(mediaSuccess: js.Function, mediaError: js.Function1[/* mediaError */ MediaError, _]): Unit = js.native
   def getDuration(): js.Any = js.native
   def pause(): Unit = js.native
   def play(): Unit = js.native

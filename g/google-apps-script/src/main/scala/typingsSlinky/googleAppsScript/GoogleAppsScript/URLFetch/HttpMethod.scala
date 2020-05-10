@@ -15,16 +15,14 @@ trait HttpMethod extends js.Object
 
 object HttpMethod {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def delete: typingsSlinky.googleAppsScript.googleAppsScriptStrings.delete = "delete".asInstanceOf[typingsSlinky.googleAppsScript.googleAppsScriptStrings.delete]
   @scala.inline
-  def delete: typingsSlinky.googleAppsScript.googleAppsScriptStrings.delete = this.cast("delete")
+  def get: typingsSlinky.googleAppsScript.googleAppsScriptStrings.get = "get".asInstanceOf[typingsSlinky.googleAppsScript.googleAppsScriptStrings.get]
   @scala.inline
-  def get: typingsSlinky.googleAppsScript.googleAppsScriptStrings.get = this.cast("get")
+  def patch: typingsSlinky.googleAppsScript.googleAppsScriptStrings.patch = "patch".asInstanceOf[typingsSlinky.googleAppsScript.googleAppsScriptStrings.patch]
   @scala.inline
-  def patch: typingsSlinky.googleAppsScript.googleAppsScriptStrings.patch = this.cast("patch")
+  def post: typingsSlinky.googleAppsScript.googleAppsScriptStrings.post = "post".asInstanceOf[typingsSlinky.googleAppsScript.googleAppsScriptStrings.post]
   @scala.inline
-  def post: typingsSlinky.googleAppsScript.googleAppsScriptStrings.post = this.cast("post")
-  @scala.inline
-  def put: typingsSlinky.googleAppsScript.googleAppsScriptStrings.put = this.cast("put")
+  def put: typingsSlinky.googleAppsScript.googleAppsScriptStrings.put = "put".asInstanceOf[typingsSlinky.googleAppsScript.googleAppsScriptStrings.put]
 }
 

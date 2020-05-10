@@ -151,7 +151,7 @@ object Chai extends js.Object {
     def text(str: String): Assertion = js.native
   }
   
-  type EnzymeSelector = String | ReactComponentClass[js.Any] | ReactComponentClass[js.Any] | StringDictionary[js.Any]
+  type EnzymeSelector = String | ReactComponentClass[js.Any] | StringDictionary[js.Any]
   type Match = js.Function1[/* selector */ EnzymeSelector, Assertion]
 }
 

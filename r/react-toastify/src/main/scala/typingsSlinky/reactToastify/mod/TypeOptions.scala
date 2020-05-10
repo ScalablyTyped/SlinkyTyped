@@ -15,16 +15,14 @@ trait TypeOptions extends js.Object
 
 object TypeOptions {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def default: typingsSlinky.reactToastify.reactToastifyStrings.default = "default".asInstanceOf[typingsSlinky.reactToastify.reactToastifyStrings.default]
   @scala.inline
-  def default: typingsSlinky.reactToastify.reactToastifyStrings.default = this.cast("default")
+  def error: typingsSlinky.reactToastify.reactToastifyStrings.error = "error".asInstanceOf[typingsSlinky.reactToastify.reactToastifyStrings.error]
   @scala.inline
-  def error: typingsSlinky.reactToastify.reactToastifyStrings.error = this.cast("error")
+  def info: typingsSlinky.reactToastify.reactToastifyStrings.info = "info".asInstanceOf[typingsSlinky.reactToastify.reactToastifyStrings.info]
   @scala.inline
-  def info: typingsSlinky.reactToastify.reactToastifyStrings.info = this.cast("info")
+  def success: typingsSlinky.reactToastify.reactToastifyStrings.success = "success".asInstanceOf[typingsSlinky.reactToastify.reactToastifyStrings.success]
   @scala.inline
-  def success: typingsSlinky.reactToastify.reactToastifyStrings.success = this.cast("success")
-  @scala.inline
-  def warning: typingsSlinky.reactToastify.reactToastifyStrings.warning = this.cast("warning")
+  def warning: typingsSlinky.reactToastify.reactToastifyStrings.warning = "warning".asInstanceOf[typingsSlinky.reactToastify.reactToastifyStrings.warning]
 }
 

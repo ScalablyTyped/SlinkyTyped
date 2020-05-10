@@ -1,7 +1,7 @@
 package typingsSlinky.themeUiComponents.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.HTMLTextAreaElement
+import org.scalajs.dom.raw.HTMLTextAreaElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

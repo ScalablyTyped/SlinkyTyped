@@ -6,7 +6,6 @@ import typingsSlinky.jsforce.recordResultMod.RecordResult
 import typingsSlinky.node.AnonEnd
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.streamMod.Readable
-import typingsSlinky.std.Error
 import typingsSlinky.std.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,17 +16,17 @@ import scala.scalajs.js.annotation._
 class Query[T] ()
   extends Readable
      with Promise[T] {
-  @JSName(scala.scalajs.js.Symbol.toStringTag)
+  @JSName(js.Symbol.toStringTag)
   var toStringTag_Query: typingsSlinky.jsforce.jsforceStrings.Promise = js.native
   def del(): js.Any = js.native
-  def del(callback: js.Function2[/* err */ Error, /* ret */ RecordResult, Unit]): js.Any = js.native
+  def del(callback: js.Function2[/* err */ js.Error, /* ret */ RecordResult, Unit]): js.Any = js.native
   def del(`type`: String): js.Any = js.native
   def del(`type`: String, callback: js.Function2[/* err */ js.Error, /* ret */ RecordResult, Unit]): js.Any = js.native
   def delete(): js.Any = js.native
-  def delete(callback: js.Function2[/* err */ Error, /* ret */ RecordResult, Unit]): js.Any = js.native
+  def delete(callback: js.Function2[/* err */ js.Error, /* ret */ RecordResult, Unit]): js.Any = js.native
   def delete(`type`: String): js.Any = js.native
   def delete(`type`: String, callback: js.Function2[/* err */ js.Error, /* ret */ RecordResult, Unit]): js.Any = js.native
-  def destroy(callback: js.Function2[/* err */ Error, /* ret */ RecordResult, Unit]): js.Promise[js.Array[RecordResult]] = js.native
+  def destroy(callback: js.Function2[/* err */ js.Error, /* ret */ RecordResult, Unit]): js.Promise[js.Array[RecordResult]] = js.native
   def destroy(`type`: String): js.Promise[js.Array[RecordResult]] = js.native
   def destroy(`type`: String, callback: js.Function2[/* err */ js.Error, /* ret */ RecordResult, Unit]): js.Promise[js.Array[RecordResult]] = js.native
   @JSName("destroy")
@@ -90,6 +89,10 @@ class Query[T] ()
   def thenCall(): Query[T] = js.native
   def thenCall(callback: js.Function2[/* err */ js.Error, /* records */ T, Unit]): Query[T] = js.native
   def toSOQL(callback: js.Function2[/* err */ js.Error, /* soql */ String, Unit]): js.Promise[String] = js.native
+  def update(
+    mapping: js.Any,
+    callback: js.Function2[/* err */ js.Error, /* records */ js.Array[RecordResult], Unit]
+  ): js.Promise[js.Array[RecordResult]] = js.native
   def update(
     mapping: js.Any,
     `type`: String,

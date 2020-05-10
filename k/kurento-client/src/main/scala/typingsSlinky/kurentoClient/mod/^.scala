@@ -1,7 +1,6 @@
 package typingsSlinky.kurentoClient.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.kurentoClient.mod.KurentoClient.Constructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

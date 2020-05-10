@@ -14,14 +14,12 @@ trait TimelineItemType extends js.Object
 
 object TimelineItemType {
   @scala.inline
-  def background: typingsSlinky.vis.visStrings.background = this.cast("background")
+  def background: typingsSlinky.vis.visStrings.background = "background".asInstanceOf[typingsSlinky.vis.visStrings.background]
   @scala.inline
-  def box: typingsSlinky.vis.visStrings.box = this.cast("box")
+  def box: typingsSlinky.vis.visStrings.box = "box".asInstanceOf[typingsSlinky.vis.visStrings.box]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def point: typingsSlinky.vis.visStrings.point = "point".asInstanceOf[typingsSlinky.vis.visStrings.point]
   @scala.inline
-  def point: typingsSlinky.vis.visStrings.point = this.cast("point")
-  @scala.inline
-  def range: typingsSlinky.vis.visStrings.range = this.cast("range")
+  def range: typingsSlinky.vis.visStrings.range = "range".asInstanceOf[typingsSlinky.vis.visStrings.range]
 }
 

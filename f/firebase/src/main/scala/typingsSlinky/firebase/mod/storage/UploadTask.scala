@@ -2,7 +2,6 @@ package typingsSlinky.firebase.mod.storage
 
 import typingsSlinky.firebase.mod.Observer
 import typingsSlinky.firebase.mod.Unsubscribe
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -140,12 +139,12 @@ trait UploadTask extends js.Object {
   def on(
     event: TaskEvent,
     nextOrObserver: js.Function1[/* a */ UploadTaskSnapshot, _],
-    error: js.Function1[/* a */ Error, _]
+    error: js.Function1[/* a */ js.Error, _]
   ): js.Function = js.native
   def on(
     event: TaskEvent,
     nextOrObserver: js.Function1[/* a */ UploadTaskSnapshot, _],
-    error: js.Function1[/* a */ Error, _],
+    error: js.Function1[/* a */ js.Error, _],
     complete: Unsubscribe
   ): js.Function = js.native
   def on(
@@ -154,29 +153,29 @@ trait UploadTask extends js.Object {
     error: Null,
     complete: Unsubscribe
   ): js.Function = js.native
-  def on(event: TaskEvent, nextOrObserver: Null, error: js.Function1[/* a */ Error, _]): js.Function = js.native
+  def on(event: TaskEvent, nextOrObserver: Null, error: js.Function1[/* a */ js.Error, _]): js.Function = js.native
   def on(
     event: TaskEvent,
     nextOrObserver: Null,
-    error: js.Function1[/* a */ Error, _],
+    error: js.Function1[/* a */ js.Error, _],
     complete: Unsubscribe
   ): js.Function = js.native
   def on(event: TaskEvent, nextOrObserver: Null, error: Null, complete: Unsubscribe): js.Function = js.native
-  def on(event: TaskEvent, nextOrObserver: Observer[UploadTaskSnapshot, Error]): js.Function = js.native
+  def on(event: TaskEvent, nextOrObserver: Observer[UploadTaskSnapshot, js.Error]): js.Function = js.native
   def on(
     event: TaskEvent,
-    nextOrObserver: Observer[UploadTaskSnapshot, Error],
-    error: js.Function1[/* a */ Error, _]
+    nextOrObserver: Observer[UploadTaskSnapshot, js.Error],
+    error: js.Function1[/* a */ js.Error, _]
   ): js.Function = js.native
   def on(
     event: TaskEvent,
-    nextOrObserver: Observer[UploadTaskSnapshot, Error],
-    error: js.Function1[/* a */ Error, _],
+    nextOrObserver: Observer[UploadTaskSnapshot, js.Error],
+    error: js.Function1[/* a */ js.Error, _],
     complete: Unsubscribe
   ): js.Function = js.native
   def on(
     event: TaskEvent,
-    nextOrObserver: Observer[UploadTaskSnapshot, Error],
+    nextOrObserver: Observer[UploadTaskSnapshot, js.Error],
     error: Null,
     complete: Unsubscribe
   ): js.Function = js.native

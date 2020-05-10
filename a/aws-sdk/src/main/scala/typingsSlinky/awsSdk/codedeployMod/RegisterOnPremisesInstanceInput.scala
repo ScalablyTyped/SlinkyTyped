@@ -22,11 +22,47 @@ trait RegisterOnPremisesInstanceInput extends js.Object {
 
 object RegisterOnPremisesInstanceInput {
   @scala.inline
-  def apply(instanceName: InstanceName, iamSessionArn: IamSessionArn = null, iamUserArn: IamUserArn = null): RegisterOnPremisesInstanceInput = {
+  def apply(instanceName: InstanceName): RegisterOnPremisesInstanceInput = {
     val __obj = js.Dynamic.literal(instanceName = instanceName.asInstanceOf[js.Any])
-    if (iamSessionArn != null) __obj.updateDynamic("iamSessionArn")(iamSessionArn.asInstanceOf[js.Any])
-    if (iamUserArn != null) __obj.updateDynamic("iamUserArn")(iamUserArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterOnPremisesInstanceInput]
   }
+  @scala.inline
+  implicit class RegisterOnPremisesInstanceInputOps[Self <: RegisterOnPremisesInstanceInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceName(value: InstanceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIamSessionArn(value: IamSessionArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iamSessionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIamSessionArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iamSessionArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIamUserArn(value: IamUserArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iamUserArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIamUserArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iamUserArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

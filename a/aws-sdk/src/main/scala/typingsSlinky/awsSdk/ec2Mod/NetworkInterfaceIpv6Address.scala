@@ -14,10 +14,29 @@ trait NetworkInterfaceIpv6Address extends js.Object {
 
 object NetworkInterfaceIpv6Address {
   @scala.inline
-  def apply(Ipv6Address: String = null): NetworkInterfaceIpv6Address = {
+  def apply(): NetworkInterfaceIpv6Address = {
     val __obj = js.Dynamic.literal()
-    if (Ipv6Address != null) __obj.updateDynamic("Ipv6Address")(Ipv6Address.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkInterfaceIpv6Address]
   }
+  @scala.inline
+  implicit class NetworkInterfaceIpv6AddressOps[Self <: NetworkInterfaceIpv6Address] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIpv6Address(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6Address: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Address")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

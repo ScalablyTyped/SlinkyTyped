@@ -110,10 +110,6 @@ class Element protected () extends Node {
   var endSourceSpan: ParseSourceSpan | Null = js.native
   var i18n: js.UndefOr[Message | typingsSlinky.angularCompiler.i18nAstMod.Node] = js.native
   var name: String = js.native
-  /* CompleteClass */
-  override var sourceSpan: ParseSourceSpan = js.native
   var startSourceSpan: ParseSourceSpan | Null = js.native
-  /* CompleteClass */
-  override def visit(visitor: Visitor, context: js.Any): js.Any = js.native
 }
 

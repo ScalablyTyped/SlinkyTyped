@@ -23,66 +23,6 @@ class default protected () extends Stats {
   def this(itemType: FileType, size: Double, mode: Double, atime: js.Date) = this()
   def this(itemType: FileType, size: Double, mode: Double, atime: js.Date, mtime: js.Date) = this()
   def this(itemType: FileType, size: Double, mode: Double, atime: js.Date, mtime: js.Date, ctime: js.Date) = this()
-  /* CompleteClass */
-  override var atime: js.Date = js.native
-  /* CompleteClass */
-  override var atimeMs: Double = js.native
-  /* CompleteClass */
-  override var birthtime: js.Date = js.native
-  /* CompleteClass */
-  override var birthtimeMs: Double = js.native
-  /* CompleteClass */
-  override var blksize: Double = js.native
-  /* CompleteClass */
-  override var blocks: Double = js.native
-  /* CompleteClass */
-  override var ctime: js.Date = js.native
-  /* CompleteClass */
-  override var ctimeMs: Double = js.native
-  /* CompleteClass */
-  override var dev: Double = js.native
-  /* CompleteClass */
-  override var fileData: Buffer | Null = js.native
-  /* CompleteClass */
-  override var gid: Double = js.native
-  /* CompleteClass */
-  override var ino: Double = js.native
-  /* CompleteClass */
-  override var mode: Double = js.native
-  /* CompleteClass */
-  override var mtime: js.Date = js.native
-  /* CompleteClass */
-  override var mtimeMs: Double = js.native
-  /* CompleteClass */
-  override var nlink: Double = js.native
-  /* CompleteClass */
-  override var rdev: Double = js.native
-  /* CompleteClass */
-  override var size: Double = js.native
-  /* CompleteClass */
-  override var uid: Double = js.native
-  /**
-    * Change the mode of the file. We use this helper function to prevent messing
-    * up the type of the file, which is encoded in mode.
-    */
-  /* CompleteClass */
-  override def chmod(mode: Double): Unit = js.native
-  /* CompleteClass */
-  override def isBlockDevice(): Boolean = js.native
-  /* CompleteClass */
-  override def isCharacterDevice(): Boolean = js.native
-  /* CompleteClass */
-  override def isDirectory(): Boolean = js.native
-  /* CompleteClass */
-  override def isFIFO(): Boolean = js.native
-  /* CompleteClass */
-  override def isFile(): Boolean = js.native
-  /* CompleteClass */
-  override def isSocket(): Boolean = js.native
-  /* CompleteClass */
-  override def isSymbolicLink(): Boolean = js.native
-  /* CompleteClass */
-  override def toBuffer(): Buffer = js.native
 }
 
 /* static members */

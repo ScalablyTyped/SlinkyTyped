@@ -34,16 +34,53 @@ trait SchemaKeySet extends js.Object {
 
 object SchemaKeySet {
   @scala.inline
-  def apply(
-    all: js.UndefOr[Boolean] = js.undefined,
-    keys: js.Array[js.Array[_]] = null,
-    ranges: js.Array[SchemaKeyRange] = null
-  ): SchemaKeySet = {
+  def apply(): SchemaKeySet = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(all)) __obj.updateDynamic("all")(all.asInstanceOf[js.Any])
-    if (keys != null) __obj.updateDynamic("keys")(keys.asInstanceOf[js.Any])
-    if (ranges != null) __obj.updateDynamic("ranges")(ranges.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaKeySet]
   }
+  @scala.inline
+  implicit class SchemaKeySetOps[Self <: SchemaKeySet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAll(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeys(value: js.Array[js.Array[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRanges(value: js.Array[SchemaKeyRange]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

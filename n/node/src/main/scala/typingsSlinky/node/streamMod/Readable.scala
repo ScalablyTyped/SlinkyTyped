@@ -8,10 +8,10 @@ import typingsSlinky.node.nodeStrings.close
 import typingsSlinky.node.nodeStrings.data
 import typingsSlinky.node.nodeStrings.end
 import typingsSlinky.node.nodeStrings.error
+import typingsSlinky.node.nodeStrings.pause
 import typingsSlinky.node.nodeStrings.readable
+import typingsSlinky.node.nodeStrings.resume
 import typingsSlinky.std.AsyncIterable
-import typingsSlinky.std.Error
-import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ class Readable ()
   val readableLength: Double = js.native
   val readableObjectMode: Boolean = js.native
   def _destroy(error: Null, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
-  def _destroy(error: Error, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
+  def _destroy(error: js.Error, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
   def _read(size: Double): Unit = js.native
   /**
     * Event emitter
@@ -35,8 +35,10 @@ class Readable ()
     * 1. close
     * 2. data
     * 3. end
-    * 4. readable
-    * 5. error
+    * 4. error
+    * 5. pause
+    * 6. readable
+    * 7. resume
     */
   @JSName("addListener")
   def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
@@ -47,7 +49,11 @@ class Readable ()
   @JSName("addListener")
   def addListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("addListener")
+  def addListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("addListener")
   def addListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("addListener")
+  def addListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   def destroy(): Unit = js.native
   def destroy(error: js.Error): Unit = js.native
   @JSName("emit")
@@ -59,7 +65,11 @@ class Readable ()
   @JSName("emit")
   def emit_error(event: error, err: js.Error): Boolean = js.native
   @JSName("emit")
+  def emit_pause(event: pause): Boolean = js.native
+  @JSName("emit")
   def emit_readable(event: readable): Boolean = js.native
+  @JSName("emit")
+  def emit_resume(event: resume): Boolean = js.native
   @JSName("on")
   def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -69,7 +79,11 @@ class Readable ()
   @JSName("on")
   def on_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("on")
+  def on_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("on")
   def on_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("on")
+  def on_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
   def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
@@ -79,7 +93,11 @@ class Readable ()
   @JSName("once")
   def once_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("once")
+  def once_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("once")
   def once_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("once")
+  def once_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   /* InferMemberOverrides */
   override def pipe[T /* <: WritableStream */](destination: T): T = js.native
   /* InferMemberOverrides */
@@ -93,7 +111,11 @@ class Readable ()
   @JSName("prependListener")
   def prependListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependListener")
+  def prependListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("prependListener")
   def prependListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("prependListener")
+  def prependListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
@@ -103,7 +125,11 @@ class Readable ()
   @JSName("prependOnceListener")
   def prependOnceListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependOnceListener")
+  def prependOnceListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("prependOnceListener")
   def prependOnceListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("prependOnceListener")
+  def prependOnceListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   def push(chunk: js.Any): Boolean = js.native
   def push(chunk: js.Any, encoding: String): Boolean = js.native
   @JSName("removeListener")
@@ -115,7 +141,11 @@ class Readable ()
   @JSName("removeListener")
   def removeListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("removeListener")
+  def removeListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("removeListener")
   def removeListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("removeListener")
+  def removeListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   def unshift(chunk: js.Any): Unit = js.native
   def unshift(chunk: js.Any, encoding: BufferEncoding): Unit = js.native
 }
@@ -129,7 +159,7 @@ object Readable extends js.Object {
   /**
     * A utility method for creating Readable Streams out of iterators.
     */
-  def from(iterable: Iterable[_]): Readable = js.native
-  def from(iterable: Iterable[_], options: ReadableOptions): Readable = js.native
+  def from(iterable: js.Iterable[_]): Readable = js.native
+  def from(iterable: js.Iterable[_], options: ReadableOptions): Readable = js.native
 }
 

@@ -30,20 +30,77 @@ trait DescribeDirectConnectGatewayAssociationProposalsRequest extends js.Object 
 
 object DescribeDirectConnectGatewayAssociationProposalsRequest {
   @scala.inline
-  def apply(
-    associatedGatewayId: AssociatedGatewayId = null,
-    directConnectGatewayId: DirectConnectGatewayId = null,
-    maxResults: Int | Double = null,
-    nextToken: PaginationToken = null,
-    proposalId: DirectConnectGatewayAssociationProposalId = null
-  ): DescribeDirectConnectGatewayAssociationProposalsRequest = {
+  def apply(): DescribeDirectConnectGatewayAssociationProposalsRequest = {
     val __obj = js.Dynamic.literal()
-    if (associatedGatewayId != null) __obj.updateDynamic("associatedGatewayId")(associatedGatewayId.asInstanceOf[js.Any])
-    if (directConnectGatewayId != null) __obj.updateDynamic("directConnectGatewayId")(directConnectGatewayId.asInstanceOf[js.Any])
-    if (maxResults != null) __obj.updateDynamic("maxResults")(maxResults.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (proposalId != null) __obj.updateDynamic("proposalId")(proposalId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDirectConnectGatewayAssociationProposalsRequest]
   }
+  @scala.inline
+  implicit class DescribeDirectConnectGatewayAssociationProposalsRequestOps[Self <: DescribeDirectConnectGatewayAssociationProposalsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssociatedGatewayId(value: AssociatedGatewayId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedGatewayId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociatedGatewayId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedGatewayId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectConnectGatewayId(value: DirectConnectGatewayId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGatewayId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectConnectGatewayId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGatewayId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: MaxResultSetSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProposalId(value: DirectConnectGatewayAssociationProposalId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proposalId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProposalId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proposalId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

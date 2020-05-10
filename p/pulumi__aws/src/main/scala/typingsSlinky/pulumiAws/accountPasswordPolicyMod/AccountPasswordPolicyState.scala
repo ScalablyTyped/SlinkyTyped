@@ -54,30 +54,137 @@ trait AccountPasswordPolicyState extends js.Object {
 
 object AccountPasswordPolicyState {
   @scala.inline
-  def apply(
-    allowUsersToChangePassword: Input[Boolean] = null,
-    expirePasswords: Input[Boolean] = null,
-    hardExpiry: Input[Boolean] = null,
-    maxPasswordAge: Input[Double] = null,
-    minimumPasswordLength: Input[Double] = null,
-    passwordReusePrevention: Input[Double] = null,
-    requireLowercaseCharacters: Input[Boolean] = null,
-    requireNumbers: Input[Boolean] = null,
-    requireSymbols: Input[Boolean] = null,
-    requireUppercaseCharacters: Input[Boolean] = null
-  ): AccountPasswordPolicyState = {
+  def apply(): AccountPasswordPolicyState = {
     val __obj = js.Dynamic.literal()
-    if (allowUsersToChangePassword != null) __obj.updateDynamic("allowUsersToChangePassword")(allowUsersToChangePassword.asInstanceOf[js.Any])
-    if (expirePasswords != null) __obj.updateDynamic("expirePasswords")(expirePasswords.asInstanceOf[js.Any])
-    if (hardExpiry != null) __obj.updateDynamic("hardExpiry")(hardExpiry.asInstanceOf[js.Any])
-    if (maxPasswordAge != null) __obj.updateDynamic("maxPasswordAge")(maxPasswordAge.asInstanceOf[js.Any])
-    if (minimumPasswordLength != null) __obj.updateDynamic("minimumPasswordLength")(minimumPasswordLength.asInstanceOf[js.Any])
-    if (passwordReusePrevention != null) __obj.updateDynamic("passwordReusePrevention")(passwordReusePrevention.asInstanceOf[js.Any])
-    if (requireLowercaseCharacters != null) __obj.updateDynamic("requireLowercaseCharacters")(requireLowercaseCharacters.asInstanceOf[js.Any])
-    if (requireNumbers != null) __obj.updateDynamic("requireNumbers")(requireNumbers.asInstanceOf[js.Any])
-    if (requireSymbols != null) __obj.updateDynamic("requireSymbols")(requireSymbols.asInstanceOf[js.Any])
-    if (requireUppercaseCharacters != null) __obj.updateDynamic("requireUppercaseCharacters")(requireUppercaseCharacters.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountPasswordPolicyState]
   }
+  @scala.inline
+  implicit class AccountPasswordPolicyStateOps[Self <: AccountPasswordPolicyState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowUsersToChangePassword(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUsersToChangePassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowUsersToChangePassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUsersToChangePassword")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpirePasswords(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expirePasswords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpirePasswords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expirePasswords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHardExpiry(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hardExpiry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHardExpiry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hardExpiry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxPasswordAge(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPasswordAge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxPasswordAge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPasswordAge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumPasswordLength(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumPasswordLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumPasswordLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumPasswordLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPasswordReusePrevention(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordReusePrevention")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPasswordReusePrevention: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordReusePrevention")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequireLowercaseCharacters(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireLowercaseCharacters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequireLowercaseCharacters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireLowercaseCharacters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequireNumbers(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireNumbers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequireNumbers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireNumbers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequireSymbols(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireSymbols")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequireSymbols: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireSymbols")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequireUppercaseCharacters(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireUppercaseCharacters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequireUppercaseCharacters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireUppercaseCharacters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

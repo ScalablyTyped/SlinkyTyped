@@ -13,12 +13,10 @@ trait BorderStyle extends js.Object
 
 object BorderStyle {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dashed: typingsSlinky.reactSketchapp.reactSketchappStrings.dashed = "dashed".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.dashed]
   @scala.inline
-  def dashed: typingsSlinky.reactSketchapp.reactSketchappStrings.dashed = this.cast("dashed")
+  def dotted: typingsSlinky.reactSketchapp.reactSketchappStrings.dotted = "dotted".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.dotted]
   @scala.inline
-  def dotted: typingsSlinky.reactSketchapp.reactSketchappStrings.dotted = this.cast("dotted")
-  @scala.inline
-  def solid: typingsSlinky.reactSketchapp.reactSketchappStrings.solid = this.cast("solid")
+  def solid: typingsSlinky.reactSketchapp.reactSketchappStrings.solid = "solid".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.solid]
 }
 

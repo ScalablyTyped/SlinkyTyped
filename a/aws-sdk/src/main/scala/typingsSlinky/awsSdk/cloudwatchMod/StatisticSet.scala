@@ -28,8 +28,39 @@ object StatisticSet {
   @scala.inline
   def apply(Maximum: DatapointValue, Minimum: DatapointValue, SampleCount: DatapointValue, Sum: DatapointValue): StatisticSet = {
     val __obj = js.Dynamic.literal(Maximum = Maximum.asInstanceOf[js.Any], Minimum = Minimum.asInstanceOf[js.Any], SampleCount = SampleCount.asInstanceOf[js.Any], Sum = Sum.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[StatisticSet]
   }
+  @scala.inline
+  implicit class StatisticSetOps[Self <: StatisticSet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaximum(value: DatapointValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Maximum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinimum(value: DatapointValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Minimum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSampleCount(value: DatapointValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSum(value: DatapointValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sum")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

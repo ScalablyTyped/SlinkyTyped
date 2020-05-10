@@ -4,31 +4,79 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DimensionRange extends js.Object {
   /** The dimension of the span. */
-  var dimension: js.UndefOr[String] = js.undefined
+  var dimension: js.UndefOr[String] = js.native
   /** The end (exclusive) of the span, or not set if unbounded. */
-  var endIndex: js.UndefOr[Double] = js.undefined
+  var endIndex: js.UndefOr[Double] = js.native
   /** The sheet this span is on. */
-  var sheetId: js.UndefOr[Double] = js.undefined
+  var sheetId: js.UndefOr[Double] = js.native
   /** The start (inclusive) of the span, or not set if unbounded. */
-  var startIndex: js.UndefOr[Double] = js.undefined
+  var startIndex: js.UndefOr[Double] = js.native
 }
 
 object DimensionRange {
   @scala.inline
-  def apply(
-    dimension: String = null,
-    endIndex: Int | Double = null,
-    sheetId: Int | Double = null,
-    startIndex: Int | Double = null
-  ): DimensionRange = {
+  def apply(): DimensionRange = {
     val __obj = js.Dynamic.literal()
-    if (dimension != null) __obj.updateDynamic("dimension")(dimension.asInstanceOf[js.Any])
-    if (endIndex != null) __obj.updateDynamic("endIndex")(endIndex.asInstanceOf[js.Any])
-    if (sheetId != null) __obj.updateDynamic("sheetId")(sheetId.asInstanceOf[js.Any])
-    if (startIndex != null) __obj.updateDynamic("startIndex")(startIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[DimensionRange]
   }
+  @scala.inline
+  implicit class DimensionRangeOps[Self <: DimensionRange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDimension(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimension")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSheetId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSheetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,14 +14,12 @@ trait NoticeTypeOptions extends js.Object
 
 object NoticeTypeOptions {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.jqueryPnotify.jqueryPnotifyStrings.error = "error".asInstanceOf[typingsSlinky.jqueryPnotify.jqueryPnotifyStrings.error]
   @scala.inline
-  def error: typingsSlinky.jqueryPnotify.jqueryPnotifyStrings.error = this.cast("error")
+  def info: typingsSlinky.jqueryPnotify.jqueryPnotifyStrings.info = "info".asInstanceOf[typingsSlinky.jqueryPnotify.jqueryPnotifyStrings.info]
   @scala.inline
-  def info: typingsSlinky.jqueryPnotify.jqueryPnotifyStrings.info = this.cast("info")
+  def notice: typingsSlinky.jqueryPnotify.jqueryPnotifyStrings.notice = "notice".asInstanceOf[typingsSlinky.jqueryPnotify.jqueryPnotifyStrings.notice]
   @scala.inline
-  def notice: typingsSlinky.jqueryPnotify.jqueryPnotifyStrings.notice = this.cast("notice")
-  @scala.inline
-  def success: typingsSlinky.jqueryPnotify.jqueryPnotifyStrings.success = this.cast("success")
+  def success: typingsSlinky.jqueryPnotify.jqueryPnotifyStrings.success = "success".asInstanceOf[typingsSlinky.jqueryPnotify.jqueryPnotifyStrings.success]
 }
 

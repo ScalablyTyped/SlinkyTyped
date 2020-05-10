@@ -26,17 +26,59 @@ trait CrlConfiguration extends js.Object {
 
 object CrlConfiguration {
   @scala.inline
-  def apply(
-    Enabled: Boolean,
-    CustomCname: String253 = null,
-    ExpirationInDays: Int | Double = null,
-    S3BucketName: String3To255 = null
-  ): CrlConfiguration = {
+  def apply(Enabled: Boolean): CrlConfiguration = {
     val __obj = js.Dynamic.literal(Enabled = Enabled.asInstanceOf[js.Any])
-    if (CustomCname != null) __obj.updateDynamic("CustomCname")(CustomCname.asInstanceOf[js.Any])
-    if (ExpirationInDays != null) __obj.updateDynamic("ExpirationInDays")(ExpirationInDays.asInstanceOf[js.Any])
-    if (S3BucketName != null) __obj.updateDynamic("S3BucketName")(S3BucketName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CrlConfiguration]
   }
+  @scala.inline
+  implicit class CrlConfigurationOps[Self <: CrlConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCustomCname(value: String253): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomCname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomCname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomCname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpirationInDays(value: Integer1To5000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationInDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpirationInDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationInDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3BucketName(value: String3To255): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BucketName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3BucketName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BucketName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

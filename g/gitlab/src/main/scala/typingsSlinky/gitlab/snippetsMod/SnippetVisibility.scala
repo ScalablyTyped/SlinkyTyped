@@ -13,12 +13,10 @@ trait SnippetVisibility extends js.Object
 
 object SnippetVisibility {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def internal: typingsSlinky.gitlab.gitlabStrings.internal = "internal".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.internal]
   @scala.inline
-  def internal: typingsSlinky.gitlab.gitlabStrings.internal = this.cast("internal")
+  def `private`: typingsSlinky.gitlab.gitlabStrings.`private` = "private".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.`private`]
   @scala.inline
-  def `private`: typingsSlinky.gitlab.gitlabStrings.`private` = this.cast("private")
-  @scala.inline
-  def public: typingsSlinky.gitlab.gitlabStrings.public = this.cast("public")
+  def public: typingsSlinky.gitlab.gitlabStrings.public = "public".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.public]
 }
 

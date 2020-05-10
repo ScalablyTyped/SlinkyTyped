@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IBackgroundTaskBuilder extends js.Object {
-  var name: String
-  var taskEntryPoint: String
-  def addCondition(condition: IBackgroundCondition): Unit
-  def register(): BackgroundTaskRegistration
-  def setTrigger(trigger: IBackgroundTrigger): Unit
+  var name: String = js.native
+  var taskEntryPoint: String = js.native
+  def addCondition(condition: IBackgroundCondition): Unit = js.native
+  def register(): BackgroundTaskRegistration = js.native
+  def setTrigger(trigger: IBackgroundTrigger): Unit = js.native
 }
 
 object IBackgroundTaskBuilder {
@@ -22,8 +23,45 @@ object IBackgroundTaskBuilder {
     taskEntryPoint: String
   ): IBackgroundTaskBuilder = {
     val __obj = js.Dynamic.literal(addCondition = js.Any.fromFunction1(addCondition), name = name.asInstanceOf[js.Any], register = js.Any.fromFunction0(register), setTrigger = js.Any.fromFunction1(setTrigger), taskEntryPoint = taskEntryPoint.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IBackgroundTaskBuilder]
   }
+  @scala.inline
+  implicit class IBackgroundTaskBuilderOps[Self <: IBackgroundTaskBuilder] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddCondition(value: IBackgroundCondition => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addCondition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegister(value: () => BackgroundTaskRegistration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("register")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetTrigger(value: IBackgroundTrigger => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTrigger")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTaskEntryPoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskEntryPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

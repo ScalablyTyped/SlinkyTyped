@@ -18,11 +18,41 @@ trait DashAdditionalManifest extends js.Object {
 
 object DashAdditionalManifest {
   @scala.inline
-  def apply(ManifestNameModifier: stringMin1 = null, SelectedOutputs: listOfStringMin1 = null): DashAdditionalManifest = {
+  def apply(): DashAdditionalManifest = {
     val __obj = js.Dynamic.literal()
-    if (ManifestNameModifier != null) __obj.updateDynamic("ManifestNameModifier")(ManifestNameModifier.asInstanceOf[js.Any])
-    if (SelectedOutputs != null) __obj.updateDynamic("SelectedOutputs")(SelectedOutputs.asInstanceOf[js.Any])
     __obj.asInstanceOf[DashAdditionalManifest]
   }
+  @scala.inline
+  implicit class DashAdditionalManifestOps[Self <: DashAdditionalManifest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withManifestNameModifier(value: stringMin1): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestNameModifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManifestNameModifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestNameModifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedOutputs(value: listOfStringMin1): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectedOutputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedOutputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectedOutputs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.pullStream
 
 import typingsSlinky.pullStream.mod.Sink
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +13,7 @@ object reduceMod extends js.Object {
     */
   def apply[T, U](
     reducer: js.Function2[/* acc */ U | Null, /* data */ T, U],
-    cb: js.Function2[/* err */ Error | Null, /* result */ U, _]
+    cb: js.Function2[/* err */ js.Error | Null, /* result */ U, _]
   ): Sink[T] = js.native
   def apply[T, U](
     reducer: js.Function2[/* acc */ U, /* data */ T, U],

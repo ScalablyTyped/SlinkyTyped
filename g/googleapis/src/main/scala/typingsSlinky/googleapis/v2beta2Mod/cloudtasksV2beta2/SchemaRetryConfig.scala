@@ -73,22 +73,89 @@ trait SchemaRetryConfig extends js.Object {
 
 object SchemaRetryConfig {
   @scala.inline
-  def apply(
-    maxAttempts: Int | Double = null,
-    maxBackoff: String = null,
-    maxDoublings: Int | Double = null,
-    maxRetryDuration: String = null,
-    minBackoff: String = null,
-    unlimitedAttempts: js.UndefOr[Boolean] = js.undefined
-  ): SchemaRetryConfig = {
+  def apply(): SchemaRetryConfig = {
     val __obj = js.Dynamic.literal()
-    if (maxAttempts != null) __obj.updateDynamic("maxAttempts")(maxAttempts.asInstanceOf[js.Any])
-    if (maxBackoff != null) __obj.updateDynamic("maxBackoff")(maxBackoff.asInstanceOf[js.Any])
-    if (maxDoublings != null) __obj.updateDynamic("maxDoublings")(maxDoublings.asInstanceOf[js.Any])
-    if (maxRetryDuration != null) __obj.updateDynamic("maxRetryDuration")(maxRetryDuration.asInstanceOf[js.Any])
-    if (minBackoff != null) __obj.updateDynamic("minBackoff")(minBackoff.asInstanceOf[js.Any])
-    if (!js.isUndefined(unlimitedAttempts)) __obj.updateDynamic("unlimitedAttempts")(unlimitedAttempts.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRetryConfig]
   }
+  @scala.inline
+  implicit class SchemaRetryConfigOps[Self <: SchemaRetryConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxAttempts(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAttempts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAttempts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAttempts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxBackoff(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBackoff")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxBackoff: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBackoff")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDoublings(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDoublings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDoublings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDoublings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRetryDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetryDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRetryDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetryDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinBackoff(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minBackoff")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinBackoff: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minBackoff")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnlimitedAttempts(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unlimitedAttempts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnlimitedAttempts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unlimitedAttempts")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

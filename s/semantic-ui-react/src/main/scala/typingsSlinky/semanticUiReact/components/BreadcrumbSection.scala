@@ -1,12 +1,10 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLAnchorElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.a.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.breadcrumbSectionMod.BreadcrumbSectionProps
 import typingsSlinky.semanticUiReact.breadcrumbSectionMod.default
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
@@ -14,34 +12,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BreadcrumbSection
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object BreadcrumbSection {
   @JSImport("semantic-ui-react/dist/commonjs/collections/Breadcrumb/BreadcrumbSection", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, href */
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    as: js.Any = null,
-    content: SemanticShorthandContent = null,
-    link: js.UndefOr[Boolean] = js.undefined,
-    onClick: (/* event */ SyntheticMouseEvent[HTMLAnchorElement], /* data */ BreadcrumbSectionProps) => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (!js.isUndefined(link)) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
+    @scala.inline
+    def link(value: Boolean): this.type = set("link", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(
+      value: (/* event */ SyntheticMouseEvent[HTMLAnchorElement], /* data */ BreadcrumbSectionProps) => Unit
+    ): this.type = set("onClick", js.Any.fromFunction2(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.a.tag.type, 
-  typingsSlinky.semanticUiReact.breadcrumbSectionMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = BreadcrumbSectionProps
+  
+  def withProps(p: BreadcrumbSectionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: BreadcrumbSection.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

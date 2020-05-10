@@ -4,35 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GetPutOptions extends ItemInfo {
-  var maxAge: js.UndefOr[Double] = js.undefined
-  var onExpire: js.UndefOr[OnExpireCallback] = js.undefined
-  var storeOnReject: js.UndefOr[Boolean] = js.undefined
-  var storeOnResolve: js.UndefOr[Boolean] = js.undefined
+  var maxAge: js.UndefOr[Double] = js.native
+  var onExpire: js.UndefOr[OnExpireCallback] = js.native
+  var storeOnReject: js.UndefOr[Boolean] = js.native
+  var storeOnResolve: js.UndefOr[Boolean] = js.native
 }
 
 object GetPutOptions {
   @scala.inline
-  def apply(
-    accessed: Int | Double = null,
-    created: Int | Double = null,
-    expires: Int | Double = null,
-    isExpired: js.UndefOr[Boolean] = js.undefined,
-    maxAge: Int | Double = null,
-    onExpire: (/* key */ String, /* value */ js.Any, /* done */ js.UndefOr[js.Function]) => Unit = null,
-    storeOnReject: js.UndefOr[Boolean] = js.undefined,
-    storeOnResolve: js.UndefOr[Boolean] = js.undefined
-  ): GetPutOptions = {
+  def apply(): GetPutOptions = {
     val __obj = js.Dynamic.literal()
-    if (accessed != null) __obj.updateDynamic("accessed")(accessed.asInstanceOf[js.Any])
-    if (created != null) __obj.updateDynamic("created")(created.asInstanceOf[js.Any])
-    if (expires != null) __obj.updateDynamic("expires")(expires.asInstanceOf[js.Any])
-    if (!js.isUndefined(isExpired)) __obj.updateDynamic("isExpired")(isExpired.asInstanceOf[js.Any])
-    if (maxAge != null) __obj.updateDynamic("maxAge")(maxAge.asInstanceOf[js.Any])
-    if (onExpire != null) __obj.updateDynamic("onExpire")(js.Any.fromFunction3(onExpire))
-    if (!js.isUndefined(storeOnReject)) __obj.updateDynamic("storeOnReject")(storeOnReject.asInstanceOf[js.Any])
-    if (!js.isUndefined(storeOnResolve)) __obj.updateDynamic("storeOnResolve")(storeOnResolve.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPutOptions]
   }
+  @scala.inline
+  implicit class GetPutOptionsOps[Self <: GetPutOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxAge(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnExpire(value: (/* key */ String, /* value */ js.Any, /* done */ js.UndefOr[js.Function]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExpire")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnExpire: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExpire")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoreOnReject(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeOnReject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoreOnReject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeOnReject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoreOnResolve(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeOnResolve")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoreOnResolve: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeOnResolve")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

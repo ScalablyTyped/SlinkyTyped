@@ -1,7 +1,6 @@
 package typingsSlinky.siesta.Siesta.Test
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,8 +17,8 @@ trait IExtJSGrid extends js.Object {
   def getRow(panel: js.Any, index: Double): js.Any = js.native
   def matchGridCellContent(panel: js.Any, row: Double, column: Double, string: String): Unit = js.native
   def matchGridCellContent(panel: js.Any, row: Double, column: Double, string: String, description: String): Unit = js.native
-  def matchGridCellContent(panel: js.Any, row: Double, column: Double, string: RegExp): Unit = js.native
-  def matchGridCellContent(panel: js.Any, row: Double, column: Double, string: RegExp, description: String): Unit = js.native
+  def matchGridCellContent(panel: js.Any, row: Double, column: Double, string: js.RegExp): Unit = js.native
+  def matchGridCellContent(panel: js.Any, row: Double, column: Double, string: js.RegExp, description: String): Unit = js.native
   def waitForRowsVisible(panel: js.Any, callback: js.Function): Unit = js.native
   def waitForRowsVisible(panel: js.Any, callback: js.Function, scope: js.Any): Unit = js.native
   def waitForRowsVisible(panel: js.Any, callback: js.Function, scope: js.Any, timeout: Double): Unit = js.native

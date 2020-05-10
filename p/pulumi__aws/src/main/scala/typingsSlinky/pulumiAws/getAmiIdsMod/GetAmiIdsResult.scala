@@ -21,21 +21,83 @@ trait GetAmiIdsResult extends js.Object {
 
 object GetAmiIdsResult {
   @scala.inline
-  def apply(
-    id: String,
-    ids: js.Array[String],
-    owners: js.Array[String],
-    executableUsers: js.Array[String] = null,
-    filters: js.Array[GetAmiIdsFilter] = null,
-    nameRegex: String = null,
-    sortAscending: js.UndefOr[Boolean] = js.undefined
-  ): GetAmiIdsResult = {
+  def apply(id: String, ids: js.Array[String], owners: js.Array[String]): GetAmiIdsResult = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], ids = ids.asInstanceOf[js.Any], owners = owners.asInstanceOf[js.Any])
-    if (executableUsers != null) __obj.updateDynamic("executableUsers")(executableUsers.asInstanceOf[js.Any])
-    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
-    if (nameRegex != null) __obj.updateDynamic("nameRegex")(nameRegex.asInstanceOf[js.Any])
-    if (!js.isUndefined(sortAscending)) __obj.updateDynamic("sortAscending")(sortAscending.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAmiIdsResult]
   }
+  @scala.inline
+  implicit class GetAmiIdsResultOps[Self <: GetAmiIdsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ids")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOwners(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owners")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExecutableUsers(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executableUsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutableUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executableUsers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilters(value: js.Array[GetAmiIdsFilter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNameRegex(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameRegex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNameRegex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameRegex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortAscending(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortAscending")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortAscending: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortAscending")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

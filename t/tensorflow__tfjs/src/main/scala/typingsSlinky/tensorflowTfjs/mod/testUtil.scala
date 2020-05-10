@@ -13,8 +13,8 @@ import scala.scalajs.js.annotation._
 @JSImport("@tensorflow/tfjs", "test_util")
 @js.native
 object testUtil extends js.Object {
-  val TEST_EPSILON_FLOAT16: `0.1` = js.native
-  def expectArrayBuffersEqual(actual: scala.scalajs.js.typedarray.ArrayBuffer, expected: scala.scalajs.js.typedarray.ArrayBuffer): Unit = js.native
+  val TEST_EPSILON_FLOAT16: /* 0.1 */ Double = js.native
+  def expectArrayBuffersEqual(actual: js.typedarray.ArrayBuffer, expected: js.typedarray.ArrayBuffer): Unit = js.native
   def expectArraysClose(actual: Double, expected: Double): Unit = js.native
   def expectArraysClose(actual: Double, expected: Double, epsilon: Double): Unit = js.native
   def expectArraysClose(actual: Double, expected: RecursiveArray[Double]): Unit = js.native

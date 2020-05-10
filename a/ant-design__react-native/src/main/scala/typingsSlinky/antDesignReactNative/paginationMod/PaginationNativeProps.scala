@@ -1,57 +1,85 @@
 package typingsSlinky.antDesignReactNative.paginationMod
 
 import typingsSlinky.antDesignReactNative.AnonNextText
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.button
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.number
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.pointer
 import typingsSlinky.antDesignReactNative.libStyleMod.WithThemeStyles
 import typingsSlinky.antDesignReactNative.paginationPropsTypeMod.PaginationPropsType
 import typingsSlinky.antDesignReactNative.paginationStyleMod.PaginationStyle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PaginationNativeProps
   extends PaginationPropsType
      with WithThemeStyles[PaginationStyle] {
-  var indicatorStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  var locale: js.UndefOr[AnonNextText] = js.undefined
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var indicatorStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var locale: js.UndefOr[AnonNextText] = js.native
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
 }
 
 object PaginationNativeProps {
   @scala.inline
-  def apply(
-    current: Double,
-    total: Double,
-    indicatorStyle: StyleProp[ViewStyle] = null,
-    locale: AnonNextText = null,
-    mode: button | number | pointer = null,
-    nextText: String = null,
-    onChange: /* current */ Double => Unit = null,
-    onNext: () => Unit = null,
-    onPrev: () => Unit = null,
-    prevText: String = null,
-    simple: js.UndefOr[Boolean] = js.undefined,
-    style: StyleProp[ViewStyle] = null,
-    styles: Partial[PaginationStyle] = null
-  ): PaginationNativeProps = {
+  def apply(current: Double, total: Double): PaginationNativeProps = {
     val __obj = js.Dynamic.literal(current = current.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
-    if (indicatorStyle != null) __obj.updateDynamic("indicatorStyle")(indicatorStyle.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (nextText != null) __obj.updateDynamic("nextText")(nextText.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onNext != null) __obj.updateDynamic("onNext")(js.Any.fromFunction0(onNext))
-    if (onPrev != null) __obj.updateDynamic("onPrev")(js.Any.fromFunction0(onPrev))
-    if (prevText != null) __obj.updateDynamic("prevText")(prevText.asInstanceOf[js.Any])
-    if (!js.isUndefined(simple)) __obj.updateDynamic("simple")(simple.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaginationNativeProps]
   }
+  @scala.inline
+  implicit class PaginationNativePropsOps[Self <: PaginationNativeProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIndicatorStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indicatorStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndicatorStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indicatorStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndicatorStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indicatorStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: AnonNextText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
+        ret
+    }
+  }
+  
 }
 

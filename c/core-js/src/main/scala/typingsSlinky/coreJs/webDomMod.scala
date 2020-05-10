@@ -3,7 +3,6 @@ package typingsSlinky.coreJs
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.coreJs.core.Locale_
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.Iterable
 import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.MapConstructor
 import typingsSlinky.std.PromiseConstructor
@@ -129,11 +128,11 @@ object webDomMod extends js.Object {
       thisArg: js.Any
     ): Unit = js.native
     def from[T](arrayLike: ArrayLike[T]): typingsSlinky.coreJs.Array[T] = js.native
-    def from[T](arrayLike: Iterable[T]): typingsSlinky.coreJs.Array[T] = js.native
+    def from[T](arrayLike: js.Iterable[T]): typingsSlinky.coreJs.Array[T] = js.native
     def from[T, U](arrayLike: ArrayLike[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U]): typingsSlinky.coreJs.Array[U] = js.native
     def from[T, U](arrayLike: ArrayLike[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U], thisArg: js.Any): typingsSlinky.coreJs.Array[U] = js.native
-    def from[T, U](arrayLike: Iterable[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U]): typingsSlinky.coreJs.Array[U] = js.native
-    def from[T, U](arrayLike: Iterable[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U], thisArg: js.Any): typingsSlinky.coreJs.Array[U] = js.native
+    def from[T, U](arrayLike: js.Iterable[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U]): typingsSlinky.coreJs.Array[U] = js.native
+    def from[T, U](arrayLike: js.Iterable[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U], thisArg: js.Any): typingsSlinky.coreJs.Array[U] = js.native
     def includes[T](array: ArrayLike[T], value: T): Boolean = js.native
     def includes[T](array: ArrayLike[T], value: T, fromIndex: Double): Boolean = js.native
     def indexOf[T](array: ArrayLike[T], searchElement: T): Double = js.native
@@ -653,18 +652,7 @@ object webDomMod extends js.Object {
   }
   
   @js.native
-  object Symbol extends SymbolConstructor {
-    /**
-      * Non-standard. Use simple mode for core-js symbols. See https://github.com/zloirock/core-js/#caveats-when-using-symbol-polyfill
-      */
-    /* CompleteClass */
-    override def useSimple(): Unit = js.native
-    /**
-      * Non-standard. Use setter mode for core-js symbols. See https://github.com/zloirock/core-js/#caveats-when-using-symbol-polyfill
-      */
-    /* CompleteClass */
-    override def userSetter(): Unit = js.native
-  }
+  object Symbol extends SymbolConstructor
   
   @js.native
   object WeakMap extends TopLevel[WeakMapConstructor]

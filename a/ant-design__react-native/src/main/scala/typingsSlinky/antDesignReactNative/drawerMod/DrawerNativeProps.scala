@@ -1,43 +1,68 @@
 package typingsSlinky.antDesignReactNative.drawerMod
 
-import slinky.core.TagMod
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.bottom
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.left
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.right
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.top
 import typingsSlinky.antDesignReactNative.drawerPropsTypeMod.DrawerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DrawerNativeProps extends DrawerProps {
-  var drawerBackgroundColor: js.UndefOr[String] = js.undefined
+  var drawerBackgroundColor: js.UndefOr[String] = js.native
   var drawerRef: js.UndefOr[
     js.Function1[/* el */ typingsSlinky.bang88ReactNativeDrawerLayout.mod.default | Null, Unit]
-  ] = js.undefined
-  var drawerWidth: js.UndefOr[Double] = js.undefined
+  ] = js.native
+  var drawerWidth: js.UndefOr[Double] = js.native
 }
 
 object DrawerNativeProps {
   @scala.inline
-  def apply(
-    drawerBackgroundColor: String = null,
-    drawerRef: /* el */ typingsSlinky.bang88ReactNativeDrawerLayout.mod.default | Null => Unit = null,
-    drawerWidth: Int | Double = null,
-    onOpenChange: /* isOpen */ Boolean => Unit = null,
-    open: js.UndefOr[Boolean] = js.undefined,
-    position: left | right | top | bottom = null,
-    sidebar: TagMod[Any] = null
-  ): DrawerNativeProps = {
+  def apply(): DrawerNativeProps = {
     val __obj = js.Dynamic.literal()
-    if (drawerBackgroundColor != null) __obj.updateDynamic("drawerBackgroundColor")(drawerBackgroundColor.asInstanceOf[js.Any])
-    if (drawerRef != null) __obj.updateDynamic("drawerRef")(js.Any.fromFunction1(drawerRef))
-    if (drawerWidth != null) __obj.updateDynamic("drawerWidth")(drawerWidth.asInstanceOf[js.Any])
-    if (onOpenChange != null) __obj.updateDynamic("onOpenChange")(js.Any.fromFunction1(onOpenChange))
-    if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (sidebar != null) __obj.updateDynamic("sidebar")(sidebar.asInstanceOf[js.Any])
     __obj.asInstanceOf[DrawerNativeProps]
   }
+  @scala.inline
+  implicit class DrawerNativePropsOps[Self <: DrawerNativeProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDrawerBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawerBackgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrawerBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawerBackgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrawerRef(value: /* el */ typingsSlinky.bang88ReactNativeDrawerLayout.mod.default | Null => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawerRef")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDrawerRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawerRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrawerWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawerWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrawerWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawerWidth")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

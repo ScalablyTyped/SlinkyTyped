@@ -27,20 +27,77 @@ trait DescribeSMBSettingsOutput extends js.Object {
 
 object DescribeSMBSettingsOutput {
   @scala.inline
-  def apply(
-    ActiveDirectoryStatus: ActiveDirectoryStatus = null,
-    DomainName: DomainName = null,
-    GatewayARN: GatewayARN = null,
-    SMBGuestPasswordSet: js.UndefOr[scala.Boolean] = js.undefined,
-    SMBSecurityStrategy: SMBSecurityStrategy = null
-  ): DescribeSMBSettingsOutput = {
+  def apply(): DescribeSMBSettingsOutput = {
     val __obj = js.Dynamic.literal()
-    if (ActiveDirectoryStatus != null) __obj.updateDynamic("ActiveDirectoryStatus")(ActiveDirectoryStatus.asInstanceOf[js.Any])
-    if (DomainName != null) __obj.updateDynamic("DomainName")(DomainName.asInstanceOf[js.Any])
-    if (GatewayARN != null) __obj.updateDynamic("GatewayARN")(GatewayARN.asInstanceOf[js.Any])
-    if (!js.isUndefined(SMBGuestPasswordSet)) __obj.updateDynamic("SMBGuestPasswordSet")(SMBGuestPasswordSet.asInstanceOf[js.Any])
-    if (SMBSecurityStrategy != null) __obj.updateDynamic("SMBSecurityStrategy")(SMBSecurityStrategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeSMBSettingsOutput]
   }
+  @scala.inline
+  implicit class DescribeSMBSettingsOutputOps[Self <: DescribeSMBSettingsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActiveDirectoryStatus(value: ActiveDirectoryStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveDirectoryStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveDirectoryStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveDirectoryStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomainName(value: DomainName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayARN(value: GatewayARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSMBGuestPasswordSet(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SMBGuestPasswordSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSMBGuestPasswordSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SMBGuestPasswordSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSMBSecurityStrategy(value: SMBSecurityStrategy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SMBSecurityStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSMBSecurityStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SMBSecurityStrategy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

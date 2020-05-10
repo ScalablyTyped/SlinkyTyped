@@ -29,12 +29,48 @@ object UpdatePullRequestApprovalRuleContentInput {
   def apply(
     approvalRuleName: ApprovalRuleName,
     newRuleContent: ApprovalRuleContent,
-    pullRequestId: PullRequestId,
-    existingRuleContentSha256: RuleContentSha256 = null
+    pullRequestId: PullRequestId
   ): UpdatePullRequestApprovalRuleContentInput = {
     val __obj = js.Dynamic.literal(approvalRuleName = approvalRuleName.asInstanceOf[js.Any], newRuleContent = newRuleContent.asInstanceOf[js.Any], pullRequestId = pullRequestId.asInstanceOf[js.Any])
-    if (existingRuleContentSha256 != null) __obj.updateDynamic("existingRuleContentSha256")(existingRuleContentSha256.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdatePullRequestApprovalRuleContentInput]
   }
+  @scala.inline
+  implicit class UpdatePullRequestApprovalRuleContentInputOps[Self <: UpdatePullRequestApprovalRuleContentInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApprovalRuleName(value: ApprovalRuleName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRuleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNewRuleContent(value: ApprovalRuleContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newRuleContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPullRequestId(value: PullRequestId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRequestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExistingRuleContentSha256(value: RuleContentSha256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("existingRuleContentSha256")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExistingRuleContentSha256: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("existingRuleContentSha256")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

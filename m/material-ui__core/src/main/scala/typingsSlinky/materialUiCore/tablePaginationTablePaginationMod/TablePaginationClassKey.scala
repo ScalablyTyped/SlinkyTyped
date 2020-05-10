@@ -20,26 +20,24 @@ trait TablePaginationClassKey extends js.Object
 
 object TablePaginationClassKey {
   @scala.inline
-  def actions: typingsSlinky.materialUiCore.materialUiCoreStrings.actions = this.cast("actions")
+  def actions: typingsSlinky.materialUiCore.materialUiCoreStrings.actions = "actions".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.actions]
   @scala.inline
-  def caption: typingsSlinky.materialUiCore.materialUiCoreStrings.caption = this.cast("caption")
+  def caption: typingsSlinky.materialUiCore.materialUiCoreStrings.caption = "caption".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.caption]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def input: typingsSlinky.materialUiCore.materialUiCoreStrings.input = "input".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.input]
   @scala.inline
-  def input: typingsSlinky.materialUiCore.materialUiCoreStrings.input = this.cast("input")
+  def menuItem: typingsSlinky.materialUiCore.materialUiCoreStrings.menuItem = "menuItem".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.menuItem]
   @scala.inline
-  def menuItem: typingsSlinky.materialUiCore.materialUiCoreStrings.menuItem = this.cast("menuItem")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def select: typingsSlinky.materialUiCore.materialUiCoreStrings.select = "select".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.select]
   @scala.inline
-  def select: typingsSlinky.materialUiCore.materialUiCoreStrings.select = this.cast("select")
+  def selectIcon: typingsSlinky.materialUiCore.materialUiCoreStrings.selectIcon = "selectIcon".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.selectIcon]
   @scala.inline
-  def selectIcon: typingsSlinky.materialUiCore.materialUiCoreStrings.selectIcon = this.cast("selectIcon")
+  def selectRoot: typingsSlinky.materialUiCore.materialUiCoreStrings.selectRoot = "selectRoot".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.selectRoot]
   @scala.inline
-  def selectRoot: typingsSlinky.materialUiCore.materialUiCoreStrings.selectRoot = this.cast("selectRoot")
+  def spacer: typingsSlinky.materialUiCore.materialUiCoreStrings.spacer = "spacer".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.spacer]
   @scala.inline
-  def spacer: typingsSlinky.materialUiCore.materialUiCoreStrings.spacer = this.cast("spacer")
-  @scala.inline
-  def toolbar: typingsSlinky.materialUiCore.materialUiCoreStrings.toolbar = this.cast("toolbar")
+  def toolbar: typingsSlinky.materialUiCore.materialUiCoreStrings.toolbar = "toolbar".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.toolbar]
 }
 

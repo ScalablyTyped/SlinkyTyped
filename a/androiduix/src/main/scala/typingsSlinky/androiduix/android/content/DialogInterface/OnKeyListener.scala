@@ -5,16 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OnKeyListener extends js.Object {
-  def onKey(dialog: typingsSlinky.androiduix.android.content.DialogInterface, keyCode: Double, event: KeyEvent): Boolean
+  def onKey(dialog: typingsSlinky.androiduix.android.content.DialogInterface, keyCode: Double, event: KeyEvent): Boolean = js.native
 }
 
 object OnKeyListener {
   @scala.inline
   def apply(onKey: (typingsSlinky.androiduix.android.content.DialogInterface, Double, KeyEvent) => Boolean): OnKeyListener = {
     val __obj = js.Dynamic.literal(onKey = js.Any.fromFunction3(onKey))
-  
     __obj.asInstanceOf[OnKeyListener]
   }
+  @scala.inline
+  implicit class OnKeyListenerOps[Self <: OnKeyListener] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnKey(value: (typingsSlinky.androiduix.android.content.DialogInterface, Double, KeyEvent) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKey")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

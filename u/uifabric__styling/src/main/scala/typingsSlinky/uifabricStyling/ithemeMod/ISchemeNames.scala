@@ -14,14 +14,12 @@ trait ISchemeNames extends js.Object
 
 object ISchemeNames {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def default: typingsSlinky.uifabricStyling.uifabricStylingStrings.default = "default".asInstanceOf[typingsSlinky.uifabricStyling.uifabricStylingStrings.default]
   @scala.inline
-  def default: typingsSlinky.uifabricStyling.uifabricStylingStrings.default = this.cast("default")
+  def neutral: typingsSlinky.uifabricStyling.uifabricStylingStrings.neutral = "neutral".asInstanceOf[typingsSlinky.uifabricStyling.uifabricStylingStrings.neutral]
   @scala.inline
-  def neutral: typingsSlinky.uifabricStyling.uifabricStylingStrings.neutral = this.cast("neutral")
+  def soft: typingsSlinky.uifabricStyling.uifabricStylingStrings.soft = "soft".asInstanceOf[typingsSlinky.uifabricStyling.uifabricStylingStrings.soft]
   @scala.inline
-  def soft: typingsSlinky.uifabricStyling.uifabricStylingStrings.soft = this.cast("soft")
-  @scala.inline
-  def strong: typingsSlinky.uifabricStyling.uifabricStylingStrings.strong = this.cast("strong")
+  def strong: typingsSlinky.uifabricStyling.uifabricStylingStrings.strong = "strong".asInstanceOf[typingsSlinky.uifabricStyling.uifabricStylingStrings.strong]
 }
 

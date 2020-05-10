@@ -14,14 +14,12 @@ trait DeviceMode extends js.Object
 
 object DeviceMode {
   @scala.inline
-  def bootloader: typingsSlinky.trezorConnect.trezorConnectStrings.bootloader = this.cast("bootloader")
+  def bootloader: typingsSlinky.trezorConnect.trezorConnectStrings.bootloader = "bootloader".asInstanceOf[typingsSlinky.trezorConnect.trezorConnectStrings.bootloader]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def initialize: typingsSlinky.trezorConnect.trezorConnectStrings.initialize = "initialize".asInstanceOf[typingsSlinky.trezorConnect.trezorConnectStrings.initialize]
   @scala.inline
-  def initialize: typingsSlinky.trezorConnect.trezorConnectStrings.initialize = this.cast("initialize")
+  def normal: typingsSlinky.trezorConnect.trezorConnectStrings.normal = "normal".asInstanceOf[typingsSlinky.trezorConnect.trezorConnectStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.trezorConnect.trezorConnectStrings.normal = this.cast("normal")
-  @scala.inline
-  def seedless: typingsSlinky.trezorConnect.trezorConnectStrings.seedless = this.cast("seedless")
+  def seedless: typingsSlinky.trezorConnect.trezorConnectStrings.seedless = "seedless".asInstanceOf[typingsSlinky.trezorConnect.trezorConnectStrings.seedless]
 }
 

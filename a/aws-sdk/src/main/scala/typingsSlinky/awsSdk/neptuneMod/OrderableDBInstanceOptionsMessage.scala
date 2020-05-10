@@ -18,11 +18,41 @@ trait OrderableDBInstanceOptionsMessage extends js.Object {
 
 object OrderableDBInstanceOptionsMessage {
   @scala.inline
-  def apply(Marker: String = null, OrderableDBInstanceOptions: OrderableDBInstanceOptionsList = null): OrderableDBInstanceOptionsMessage = {
+  def apply(): OrderableDBInstanceOptionsMessage = {
     val __obj = js.Dynamic.literal()
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (OrderableDBInstanceOptions != null) __obj.updateDynamic("OrderableDBInstanceOptions")(OrderableDBInstanceOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrderableDBInstanceOptionsMessage]
   }
+  @scala.inline
+  implicit class OrderableDBInstanceOptionsMessageOps[Self <: OrderableDBInstanceOptionsMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMarker(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrderableDBInstanceOptions(value: OrderableDBInstanceOptionsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrderableDBInstanceOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrderableDBInstanceOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrderableDBInstanceOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

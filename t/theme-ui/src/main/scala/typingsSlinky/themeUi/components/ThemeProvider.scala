@@ -1,27 +1,28 @@
 package typingsSlinky.themeUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.std.Partial
 import typingsSlinky.themeUi.mod.ThemeProviderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ThemeProvider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object ThemeProvider {
   @JSImport("theme-ui", "ThemeProvider")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[Theme](theme: Partial[Theme] | (js.Function1[Theme, Theme]), _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object]]
+  @scala.inline
+  class Builder[Theme] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object]
+  
+  def withProps[Theme](p: ThemeProviderProps[Theme]): Builder[Theme] = new Builder[Theme](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[Theme](theme: Partial[Theme] | (js.Function1[Theme, Theme])): Builder[Theme] = {
+    val __props = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
+    new Builder[Theme](js.Array(this.component, __props.asInstanceOf[ThemeProviderProps[Theme]]))
   }
-  type Props = ThemeProviderProps[js.Any]
 }
 

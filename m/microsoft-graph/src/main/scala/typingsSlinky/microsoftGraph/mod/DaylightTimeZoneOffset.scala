@@ -4,29 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DaylightTimeZoneOffset extends StandardTimeZoneOffset {
   // The time offset from Coordinated Universal Time (UTC) for daylight saving time. This value is in minutes.
-  var daylightBias: js.UndefOr[Double] = js.undefined
+  var daylightBias: js.UndefOr[Double] = js.native
 }
 
 object DaylightTimeZoneOffset {
   @scala.inline
-  def apply(
-    dayOccurrence: Int | Double = null,
-    dayOfWeek: DayOfWeek = null,
-    daylightBias: Int | Double = null,
-    month: Int | Double = null,
-    time: String = null,
-    year: Int | Double = null
-  ): DaylightTimeZoneOffset = {
+  def apply(): DaylightTimeZoneOffset = {
     val __obj = js.Dynamic.literal()
-    if (dayOccurrence != null) __obj.updateDynamic("dayOccurrence")(dayOccurrence.asInstanceOf[js.Any])
-    if (dayOfWeek != null) __obj.updateDynamic("dayOfWeek")(dayOfWeek.asInstanceOf[js.Any])
-    if (daylightBias != null) __obj.updateDynamic("daylightBias")(daylightBias.asInstanceOf[js.Any])
-    if (month != null) __obj.updateDynamic("month")(month.asInstanceOf[js.Any])
-    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
-    if (year != null) __obj.updateDynamic("year")(year.asInstanceOf[js.Any])
     __obj.asInstanceOf[DaylightTimeZoneOffset]
   }
+  @scala.inline
+  implicit class DaylightTimeZoneOffsetOps[Self <: DaylightTimeZoneOffset] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDaylightBias(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("daylightBias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDaylightBias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("daylightBias")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

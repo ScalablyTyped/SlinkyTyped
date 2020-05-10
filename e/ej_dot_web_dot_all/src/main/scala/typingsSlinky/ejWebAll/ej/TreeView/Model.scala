@@ -4,348 +4,966 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Model extends js.Object {
   /** Gets or sets a value that indicates whether to enable drag and drop a node within the same tree.
     * @Default {false}
     */
-  var allowDragAndDrop: js.UndefOr[Boolean] = js.undefined
+  var allowDragAndDrop: js.UndefOr[Boolean] = js.native
   /** Gets or sets a value that indicates whether to enable drag and drop a node in inter ej.TreeView.
     * @Default {true}
     */
-  var allowDragAndDropAcrossControl: js.UndefOr[Boolean] = js.undefined
+  var allowDragAndDropAcrossControl: js.UndefOr[Boolean] = js.native
   /** Gets or sets a value that indicates whether to drop a node to a child of particular node.
     * @Default {true}
     */
-  var allowDropChild: js.UndefOr[Boolean] = js.undefined
+  var allowDropChild: js.UndefOr[Boolean] = js.native
   /** Gets or sets a value that indicates whether to drop a node to a sibling of particular node.
     * @Default {true}
     */
-  var allowDropSibling: js.UndefOr[Boolean] = js.undefined
+  var allowDropSibling: js.UndefOr[Boolean] = js.native
   /** Gets or sets a value that indicates whether to enable node editing support for TreeView.
     * @Default {false}
     */
-  var allowEditing: js.UndefOr[Boolean] = js.undefined
+  var allowEditing: js.UndefOr[Boolean] = js.native
   /** Gets or sets a value that indicates whether to enable keyboard support for TreeView actions like nodeSelection, nodeEditing, nodeExpand, nodeCollapse, nodeCut and Paste.
     * @Default {true}
     */
-  var allowKeyboardNavigation: js.UndefOr[Boolean] = js.undefined
+  var allowKeyboardNavigation: js.UndefOr[Boolean] = js.native
   /** Gets or sets a value that indicates whether to enable multi selection support for TreeView.
     * @Default {false}
     */
-  var allowMultiSelection: js.UndefOr[Boolean] = js.undefined
+  var allowMultiSelection: js.UndefOr[Boolean] = js.native
   /** Allow us to specify the parent and child nodes to get auto check while we check or uncheck a node.
     * @Default {true}
     */
-  var autoCheck: js.UndefOr[Boolean] = js.undefined
+  var autoCheck: js.UndefOr[Boolean] = js.native
   /** Allow us to specify the parent node to be retain in checked or unchecked state instead of going for indeterminate state.
     * @Default {false}
     */
-  var autoCheckParentNode: js.UndefOr[Boolean] = js.undefined
+  var autoCheckParentNode: js.UndefOr[Boolean] = js.native
   /** Fires before adding node to TreeView.
     */
-  var beforeAdd: js.UndefOr[js.Function1[/* e */ BeforeAddEventArgs, Unit]] = js.undefined
+  var beforeAdd: js.UndefOr[js.Function1[/* e */ BeforeAddEventArgs, Unit]] = js.native
   /** Fires before collapse a node.
     */
-  var beforeCollapse: js.UndefOr[js.Function1[/* e */ BeforeCollapseEventArgs, Unit]] = js.undefined
+  var beforeCollapse: js.UndefOr[js.Function1[/* e */ BeforeCollapseEventArgs, Unit]] = js.native
   /** Fires before cut node in TreeView.
     */
-  var beforeCut: js.UndefOr[js.Function1[/* e */ BeforeCutEventArgs, Unit]] = js.undefined
+  var beforeCut: js.UndefOr[js.Function1[/* e */ BeforeCutEventArgs, Unit]] = js.native
   /** Fires before deleting node in TreeView.
     */
-  var beforeDelete: js.UndefOr[js.Function1[/* e */ BeforeDeleteEventArgs, Unit]] = js.undefined
+  var beforeDelete: js.UndefOr[js.Function1[/* e */ BeforeDeleteEventArgs, Unit]] = js.native
   /** Fires before editing the node in TreeView.
     */
-  var beforeEdit: js.UndefOr[js.Function1[/* e */ BeforeEditEventArgs, Unit]] = js.undefined
+  var beforeEdit: js.UndefOr[js.Function1[/* e */ BeforeEditEventArgs, Unit]] = js.native
   /** Fires before expanding the node.
     */
-  var beforeExpand: js.UndefOr[js.Function1[/* e */ BeforeExpandEventArgs, Unit]] = js.undefined
+  var beforeExpand: js.UndefOr[js.Function1[/* e */ BeforeExpandEventArgs, Unit]] = js.native
   /** Fires before loading nodes to TreeView.
     */
-  var beforeLoad: js.UndefOr[js.Function1[/* e */ BeforeLoadEventArgs, Unit]] = js.undefined
+  var beforeLoad: js.UndefOr[js.Function1[/* e */ BeforeLoadEventArgs, Unit]] = js.native
   /** Fires before paste node in TreeView.
     */
-  var beforePaste: js.UndefOr[js.Function1[/* e */ BeforePasteEventArgs, Unit]] = js.undefined
+  var beforePaste: js.UndefOr[js.Function1[/* e */ BeforePasteEventArgs, Unit]] = js.native
   /** Fires before selecting node in TreeView.
     */
-  var beforeSelect: js.UndefOr[js.Function1[/* e */ BeforeSelectEventArgs, Unit]] = js.undefined
+  var beforeSelect: js.UndefOr[js.Function1[/* e */ BeforeSelectEventArgs, Unit]] = js.native
   /** Gets or sets a value that indicates the checkedNodes index collection as an array. The given array index position denotes the nodes, that are checked while rendering TreeView.
     * @Default {[]}
     */
-  var checkedNodes: js.UndefOr[js.Array[_]] = js.undefined
+  var checkedNodes: js.UndefOr[js.Array[_]] = js.native
   /** Fires when TreeView created successfully.
     */
-  var create: js.UndefOr[js.Function1[/* e */ CreateEventArgs, Unit]] = js.undefined
+  var create: js.UndefOr[js.Function1[/* e */ CreateEventArgs, Unit]] = js.native
   /** Sets the root CSS class for TreeView which allow us to customize the appearance.
     */
-  var cssClass: js.UndefOr[String] = js.undefined
+  var cssClass: js.UndefOr[String] = js.native
   /** Fires when TreeView destroyed successfully.
     */
-  var destroy: js.UndefOr[js.Function1[/* e */ DestroyEventArgs, Unit]] = js.undefined
+  var destroy: js.UndefOr[js.Function1[/* e */ DestroyEventArgs, Unit]] = js.native
   /** Gets or sets a value that indicates whether to enable or disable the animation effect while expanding or collapsing a node.
     * @Default {true}
     */
-  var enableAnimation: js.UndefOr[Boolean] = js.undefined
+  var enableAnimation: js.UndefOr[Boolean] = js.native
   /** Allow us to prevent multiple nodes to be in expanded state. If it set to false, previously expanded node will be collapsed automatically, while we expand a node.
     * @Default {true}
     */
-  var enableMultipleExpand: js.UndefOr[Boolean] = js.undefined
+  var enableMultipleExpand: js.UndefOr[Boolean] = js.native
   /** Sets a value that indicates whether to persist the TreeView model state in page using applicable medium i.e., HTML5 localStorage or cookies
     * @Default {false}
     */
-  var enablePersistence: js.UndefOr[Boolean] = js.undefined
+  var enablePersistence: js.UndefOr[Boolean] = js.native
   /** Gets or sets a value that indicates to align content in the TreeView control from right to left by setting the property as true.
     * @Default {false}
     */
-  var enableRTL: js.UndefOr[Boolean] = js.undefined
+  var enableRTL: js.UndefOr[Boolean] = js.native
   /** Gets or sets a value that indicates whether a TreeView can be enabled or disabled. No actions can be performed while this property is set as false
     * @Default {true}
     */
-  var enabled: js.UndefOr[Boolean] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.native
   /** Gets or sets a value that indicates the TreeView node can be expand or collapse by using the specified action.
     * @Default {dblclick}
     */
-  var expandOn: js.UndefOr[String] = js.undefined
+  var expandOn: js.UndefOr[String] = js.native
   /** Gets or sets a array of value that indicates the expandedNodes index collection as an array. The given array index position denotes the nodes, that are expanded while rendering
     * TreeView.
     * @Default {[]}
     */
-  var expandedNodes: js.UndefOr[js.Array[_]] = js.undefined
+  var expandedNodes: js.UndefOr[js.Array[_]] = js.native
   /** Gets or sets a fields object that allow us to map the data members with field properties in order to make the data binding easier.
     * @Default {null}
     */
-  var fields: js.UndefOr[Fields] = js.undefined
+  var fields: js.UndefOr[Fields] = js.native
   /** Gets or sets a value that indicates whether to enable full row selection support for TreeView.
     * @Default {false}
     */
-  var fullRowSelect: js.UndefOr[Boolean] = js.undefined
+  var fullRowSelect: js.UndefOr[Boolean] = js.native
   /** Defines the height of the TreeView.
     * @Default {Null}
     */
-  var height: js.UndefOr[String | Double] = js.undefined
+  var height: js.UndefOr[String | Double] = js.native
   /** Specifies the HTML Attributes for the TreeView. Using this API we can add custom attributes in TreeView control.
     * @Default {{}}
     */
-  var htmlAttributes: js.UndefOr[js.Any] = js.undefined
+  var htmlAttributes: js.UndefOr[js.Any] = js.native
   /** Fires before nodeEdit Successful.
     */
-  var inlineEditValidation: js.UndefOr[js.Function1[/* e */ InlineEditValidationEventArgs, Unit]] = js.undefined
+  var inlineEditValidation: js.UndefOr[js.Function1[/* e */ InlineEditValidationEventArgs, Unit]] = js.native
   /** Fires when key pressed successfully.
     */
-  var keyPress: js.UndefOr[js.Function1[/* e */ KeyPressEventArgs, Unit]] = js.undefined
+  var keyPress: js.UndefOr[js.Function1[/* e */ KeyPressEventArgs, Unit]] = js.native
   /** Fires when data load fails.
     */
-  var loadError: js.UndefOr[js.Function1[/* e */ LoadErrorEventArgs, Unit]] = js.undefined
+  var loadError: js.UndefOr[js.Function1[/* e */ LoadErrorEventArgs, Unit]] = js.native
   /** Specifies the child nodes to be loaded on demand
     * @Default {false}
     */
-  var loadOnDemand: js.UndefOr[Boolean] = js.undefined
+  var loadOnDemand: js.UndefOr[Boolean] = js.native
   /** Fires when data loaded successfully.
     */
-  var loadSuccess: js.UndefOr[js.Function1[/* e */ LoadSuccessEventArgs, Unit]] = js.undefined
+  var loadSuccess: js.UndefOr[js.Function1[/* e */ LoadSuccessEventArgs, Unit]] = js.native
   /** Fires once node added successfully.
     */
-  var nodeAdd: js.UndefOr[js.Function1[/* e */ NodeAddEventArgs, Unit]] = js.undefined
+  var nodeAdd: js.UndefOr[js.Function1[/* e */ NodeAddEventArgs, Unit]] = js.native
   /** Fires once node checked successfully.
     */
-  var nodeCheck: js.UndefOr[js.Function1[/* e */ NodeCheckEventArgs, Unit]] = js.undefined
+  var nodeCheck: js.UndefOr[js.Function1[/* e */ NodeCheckEventArgs, Unit]] = js.native
   /** Fires when node clicked successfully.
     */
-  var nodeClick: js.UndefOr[js.Function1[/* e */ NodeClickEventArgs, Unit]] = js.undefined
+  var nodeClick: js.UndefOr[js.Function1[/* e */ NodeClickEventArgs, Unit]] = js.native
   /** Fires when node collapsed successfully.
     */
-  var nodeCollapse: js.UndefOr[js.Function1[/* e */ NodeCollapseEventArgs, Unit]] = js.undefined
+  var nodeCollapse: js.UndefOr[js.Function1[/* e */ NodeCollapseEventArgs, Unit]] = js.native
   /** Fires when node cut successfully.
     */
-  var nodeCut: js.UndefOr[js.Function1[/* e */ NodeCutEventArgs, Unit]] = js.undefined
+  var nodeCut: js.UndefOr[js.Function1[/* e */ NodeCutEventArgs, Unit]] = js.native
   /** Fires when node deleted successfully.
     */
-  var nodeDelete: js.UndefOr[js.Function1[/* e */ NodeDeleteEventArgs, Unit]] = js.undefined
+  var nodeDelete: js.UndefOr[js.Function1[/* e */ NodeDeleteEventArgs, Unit]] = js.native
   /** Fires when node dragging.
     */
-  var nodeDrag: js.UndefOr[js.Function1[/* e */ NodeDragEventArgs, Unit]] = js.undefined
+  var nodeDrag: js.UndefOr[js.Function1[/* e */ NodeDragEventArgs, Unit]] = js.native
   /** Fires once node drag start successfully.
     */
-  var nodeDragStart: js.UndefOr[js.Function1[/* e */ NodeDragStartEventArgs, Unit]] = js.undefined
+  var nodeDragStart: js.UndefOr[js.Function1[/* e */ NodeDragStartEventArgs, Unit]] = js.native
   /** Fires before the dragged node to be dropped.
     */
-  var nodeDragStop: js.UndefOr[js.Function1[/* e */ NodeDragStopEventArgs, Unit]] = js.undefined
+  var nodeDragStop: js.UndefOr[js.Function1[/* e */ NodeDragStopEventArgs, Unit]] = js.native
   /** Fires once node dropped successfully.
     */
-  var nodeDropped: js.UndefOr[js.Function1[/* e */ NodeDroppedEventArgs, Unit]] = js.undefined
+  var nodeDropped: js.UndefOr[js.Function1[/* e */ NodeDroppedEventArgs, Unit]] = js.native
   /** Fires once node edited successfully.
     */
-  var nodeEdit: js.UndefOr[js.Function1[/* e */ NodeEditEventArgs, Unit]] = js.undefined
+  var nodeEdit: js.UndefOr[js.Function1[/* e */ NodeEditEventArgs, Unit]] = js.native
   /** Fires once node expanded successfully.
     */
-  var nodeExpand: js.UndefOr[js.Function1[/* e */ NodeExpandEventArgs, Unit]] = js.undefined
+  var nodeExpand: js.UndefOr[js.Function1[/* e */ NodeExpandEventArgs, Unit]] = js.native
   /** Fires once node pasted successfully.
     */
-  var nodePaste: js.UndefOr[js.Function1[/* e */ NodePasteEventArgs, Unit]] = js.undefined
+  var nodePaste: js.UndefOr[js.Function1[/* e */ NodePasteEventArgs, Unit]] = js.native
   /** Fires when node selected successfully.
     */
-  var nodeSelect: js.UndefOr[js.Function1[/* e */ NodeSelectEventArgs, Unit]] = js.undefined
+  var nodeSelect: js.UndefOr[js.Function1[/* e */ NodeSelectEventArgs, Unit]] = js.native
   /** Fires once node unchecked successfully.
     */
-  var nodeUncheck: js.UndefOr[js.Function1[/* e */ NodeUncheckEventArgs, Unit]] = js.undefined
+  var nodeUncheck: js.UndefOr[js.Function1[/* e */ NodeUncheckEventArgs, Unit]] = js.native
   /** Fires once node unselected successfully.
     */
-  var nodeUnselect: js.UndefOr[js.Function1[/* e */ NodeUnselectEventArgs, Unit]] = js.undefined
+  var nodeUnselect: js.UndefOr[js.Function1[/* e */ NodeUnselectEventArgs, Unit]] = js.native
   /** Fires when TreeView nodes are loaded successfully
     */
-  var ready: js.UndefOr[js.Function1[/* e */ ReadyEventArgs, Unit]] = js.undefined
+  var ready: js.UndefOr[js.Function1[/* e */ ReadyEventArgs, Unit]] = js.native
   /** Gets or Sets a value that indicates the index position of a tree node. The particular index tree node will be selected while rendering the TreeView.
     * @Default {-1}
     */
-  var selectedNode: js.UndefOr[Double] = js.undefined
+  var selectedNode: js.UndefOr[Double] = js.native
   /** Gets or sets a value that indicates the selectedNodes index collection as an array. The given array index position denotes the nodes, that are selected while rendering TreeView.
     * @Default {[]}
     */
-  var selectedNodes: js.UndefOr[js.Array[_]] = js.undefined
+  var selectedNodes: js.UndefOr[js.Array[_]] = js.native
   /** Gets or sets a value that indicates whether to display or hide checkbox for all TreeView nodes.
     * @Default {false}
     */
-  var showCheckbox: js.UndefOr[Boolean] = js.undefined
+  var showCheckbox: js.UndefOr[Boolean] = js.native
   /** By using sortSettings property, you can customize the sorting option in TreeView control.
     */
-  var sortSettings: js.UndefOr[SortSettings] = js.undefined
+  var sortSettings: js.UndefOr[SortSettings] = js.native
   /** Allow us to use custom template in order to create TreeView.
     * @Default {null}
     */
-  var template: js.UndefOr[String] = js.undefined
+  var template: js.UndefOr[String] = js.native
   /** Defines the width of the TreeView.
     * @Default {Null}
     */
-  var width: js.UndefOr[String | Double] = js.undefined
+  var width: js.UndefOr[String | Double] = js.native
 }
 
 object Model {
   @scala.inline
-  def apply(
-    allowDragAndDrop: js.UndefOr[Boolean] = js.undefined,
-    allowDragAndDropAcrossControl: js.UndefOr[Boolean] = js.undefined,
-    allowDropChild: js.UndefOr[Boolean] = js.undefined,
-    allowDropSibling: js.UndefOr[Boolean] = js.undefined,
-    allowEditing: js.UndefOr[Boolean] = js.undefined,
-    allowKeyboardNavigation: js.UndefOr[Boolean] = js.undefined,
-    allowMultiSelection: js.UndefOr[Boolean] = js.undefined,
-    autoCheck: js.UndefOr[Boolean] = js.undefined,
-    autoCheckParentNode: js.UndefOr[Boolean] = js.undefined,
-    beforeAdd: /* e */ BeforeAddEventArgs => Unit = null,
-    beforeCollapse: /* e */ BeforeCollapseEventArgs => Unit = null,
-    beforeCut: /* e */ BeforeCutEventArgs => Unit = null,
-    beforeDelete: /* e */ BeforeDeleteEventArgs => Unit = null,
-    beforeEdit: /* e */ BeforeEditEventArgs => Unit = null,
-    beforeExpand: /* e */ BeforeExpandEventArgs => Unit = null,
-    beforeLoad: /* e */ BeforeLoadEventArgs => Unit = null,
-    beforePaste: /* e */ BeforePasteEventArgs => Unit = null,
-    beforeSelect: /* e */ BeforeSelectEventArgs => Unit = null,
-    checkedNodes: js.Array[_] = null,
-    create: /* e */ CreateEventArgs => Unit = null,
-    cssClass: String = null,
-    destroy: /* e */ DestroyEventArgs => Unit = null,
-    enableAnimation: js.UndefOr[Boolean] = js.undefined,
-    enableMultipleExpand: js.UndefOr[Boolean] = js.undefined,
-    enablePersistence: js.UndefOr[Boolean] = js.undefined,
-    enableRTL: js.UndefOr[Boolean] = js.undefined,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    expandOn: String = null,
-    expandedNodes: js.Array[_] = null,
-    fields: Fields = null,
-    fullRowSelect: js.UndefOr[Boolean] = js.undefined,
-    height: String | Double = null,
-    htmlAttributes: js.Any = null,
-    inlineEditValidation: /* e */ InlineEditValidationEventArgs => Unit = null,
-    keyPress: /* e */ KeyPressEventArgs => Unit = null,
-    loadError: /* e */ LoadErrorEventArgs => Unit = null,
-    loadOnDemand: js.UndefOr[Boolean] = js.undefined,
-    loadSuccess: /* e */ LoadSuccessEventArgs => Unit = null,
-    nodeAdd: /* e */ NodeAddEventArgs => Unit = null,
-    nodeCheck: /* e */ NodeCheckEventArgs => Unit = null,
-    nodeClick: /* e */ NodeClickEventArgs => Unit = null,
-    nodeCollapse: /* e */ NodeCollapseEventArgs => Unit = null,
-    nodeCut: /* e */ NodeCutEventArgs => Unit = null,
-    nodeDelete: /* e */ NodeDeleteEventArgs => Unit = null,
-    nodeDrag: /* e */ NodeDragEventArgs => Unit = null,
-    nodeDragStart: /* e */ NodeDragStartEventArgs => Unit = null,
-    nodeDragStop: /* e */ NodeDragStopEventArgs => Unit = null,
-    nodeDropped: /* e */ NodeDroppedEventArgs => Unit = null,
-    nodeEdit: /* e */ NodeEditEventArgs => Unit = null,
-    nodeExpand: /* e */ NodeExpandEventArgs => Unit = null,
-    nodePaste: /* e */ NodePasteEventArgs => Unit = null,
-    nodeSelect: /* e */ NodeSelectEventArgs => Unit = null,
-    nodeUncheck: /* e */ NodeUncheckEventArgs => Unit = null,
-    nodeUnselect: /* e */ NodeUnselectEventArgs => Unit = null,
-    ready: /* e */ ReadyEventArgs => Unit = null,
-    selectedNode: Int | Double = null,
-    selectedNodes: js.Array[_] = null,
-    showCheckbox: js.UndefOr[Boolean] = js.undefined,
-    sortSettings: SortSettings = null,
-    template: String = null,
-    width: String | Double = null
-  ): Model = {
+  def apply(): Model = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowDragAndDrop)) __obj.updateDynamic("allowDragAndDrop")(allowDragAndDrop.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowDragAndDropAcrossControl)) __obj.updateDynamic("allowDragAndDropAcrossControl")(allowDragAndDropAcrossControl.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowDropChild)) __obj.updateDynamic("allowDropChild")(allowDropChild.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowDropSibling)) __obj.updateDynamic("allowDropSibling")(allowDropSibling.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowEditing)) __obj.updateDynamic("allowEditing")(allowEditing.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowKeyboardNavigation)) __obj.updateDynamic("allowKeyboardNavigation")(allowKeyboardNavigation.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowMultiSelection)) __obj.updateDynamic("allowMultiSelection")(allowMultiSelection.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoCheck)) __obj.updateDynamic("autoCheck")(autoCheck.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoCheckParentNode)) __obj.updateDynamic("autoCheckParentNode")(autoCheckParentNode.asInstanceOf[js.Any])
-    if (beforeAdd != null) __obj.updateDynamic("beforeAdd")(js.Any.fromFunction1(beforeAdd))
-    if (beforeCollapse != null) __obj.updateDynamic("beforeCollapse")(js.Any.fromFunction1(beforeCollapse))
-    if (beforeCut != null) __obj.updateDynamic("beforeCut")(js.Any.fromFunction1(beforeCut))
-    if (beforeDelete != null) __obj.updateDynamic("beforeDelete")(js.Any.fromFunction1(beforeDelete))
-    if (beforeEdit != null) __obj.updateDynamic("beforeEdit")(js.Any.fromFunction1(beforeEdit))
-    if (beforeExpand != null) __obj.updateDynamic("beforeExpand")(js.Any.fromFunction1(beforeExpand))
-    if (beforeLoad != null) __obj.updateDynamic("beforeLoad")(js.Any.fromFunction1(beforeLoad))
-    if (beforePaste != null) __obj.updateDynamic("beforePaste")(js.Any.fromFunction1(beforePaste))
-    if (beforeSelect != null) __obj.updateDynamic("beforeSelect")(js.Any.fromFunction1(beforeSelect))
-    if (checkedNodes != null) __obj.updateDynamic("checkedNodes")(checkedNodes.asInstanceOf[js.Any])
-    if (create != null) __obj.updateDynamic("create")(js.Any.fromFunction1(create))
-    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
-    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction1(destroy))
-    if (!js.isUndefined(enableAnimation)) __obj.updateDynamic("enableAnimation")(enableAnimation.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableMultipleExpand)) __obj.updateDynamic("enableMultipleExpand")(enableMultipleExpand.asInstanceOf[js.Any])
-    if (!js.isUndefined(enablePersistence)) __obj.updateDynamic("enablePersistence")(enablePersistence.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableRTL)) __obj.updateDynamic("enableRTL")(enableRTL.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (expandOn != null) __obj.updateDynamic("expandOn")(expandOn.asInstanceOf[js.Any])
-    if (expandedNodes != null) __obj.updateDynamic("expandedNodes")(expandedNodes.asInstanceOf[js.Any])
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullRowSelect)) __obj.updateDynamic("fullRowSelect")(fullRowSelect.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (htmlAttributes != null) __obj.updateDynamic("htmlAttributes")(htmlAttributes.asInstanceOf[js.Any])
-    if (inlineEditValidation != null) __obj.updateDynamic("inlineEditValidation")(js.Any.fromFunction1(inlineEditValidation))
-    if (keyPress != null) __obj.updateDynamic("keyPress")(js.Any.fromFunction1(keyPress))
-    if (loadError != null) __obj.updateDynamic("loadError")(js.Any.fromFunction1(loadError))
-    if (!js.isUndefined(loadOnDemand)) __obj.updateDynamic("loadOnDemand")(loadOnDemand.asInstanceOf[js.Any])
-    if (loadSuccess != null) __obj.updateDynamic("loadSuccess")(js.Any.fromFunction1(loadSuccess))
-    if (nodeAdd != null) __obj.updateDynamic("nodeAdd")(js.Any.fromFunction1(nodeAdd))
-    if (nodeCheck != null) __obj.updateDynamic("nodeCheck")(js.Any.fromFunction1(nodeCheck))
-    if (nodeClick != null) __obj.updateDynamic("nodeClick")(js.Any.fromFunction1(nodeClick))
-    if (nodeCollapse != null) __obj.updateDynamic("nodeCollapse")(js.Any.fromFunction1(nodeCollapse))
-    if (nodeCut != null) __obj.updateDynamic("nodeCut")(js.Any.fromFunction1(nodeCut))
-    if (nodeDelete != null) __obj.updateDynamic("nodeDelete")(js.Any.fromFunction1(nodeDelete))
-    if (nodeDrag != null) __obj.updateDynamic("nodeDrag")(js.Any.fromFunction1(nodeDrag))
-    if (nodeDragStart != null) __obj.updateDynamic("nodeDragStart")(js.Any.fromFunction1(nodeDragStart))
-    if (nodeDragStop != null) __obj.updateDynamic("nodeDragStop")(js.Any.fromFunction1(nodeDragStop))
-    if (nodeDropped != null) __obj.updateDynamic("nodeDropped")(js.Any.fromFunction1(nodeDropped))
-    if (nodeEdit != null) __obj.updateDynamic("nodeEdit")(js.Any.fromFunction1(nodeEdit))
-    if (nodeExpand != null) __obj.updateDynamic("nodeExpand")(js.Any.fromFunction1(nodeExpand))
-    if (nodePaste != null) __obj.updateDynamic("nodePaste")(js.Any.fromFunction1(nodePaste))
-    if (nodeSelect != null) __obj.updateDynamic("nodeSelect")(js.Any.fromFunction1(nodeSelect))
-    if (nodeUncheck != null) __obj.updateDynamic("nodeUncheck")(js.Any.fromFunction1(nodeUncheck))
-    if (nodeUnselect != null) __obj.updateDynamic("nodeUnselect")(js.Any.fromFunction1(nodeUnselect))
-    if (ready != null) __obj.updateDynamic("ready")(js.Any.fromFunction1(ready))
-    if (selectedNode != null) __obj.updateDynamic("selectedNode")(selectedNode.asInstanceOf[js.Any])
-    if (selectedNodes != null) __obj.updateDynamic("selectedNodes")(selectedNodes.asInstanceOf[js.Any])
-    if (!js.isUndefined(showCheckbox)) __obj.updateDynamic("showCheckbox")(showCheckbox.asInstanceOf[js.Any])
-    if (sortSettings != null) __obj.updateDynamic("sortSettings")(sortSettings.asInstanceOf[js.Any])
-    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[Model]
   }
+  @scala.inline
+  implicit class ModelOps[Self <: Model] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowDragAndDrop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDragAndDrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowDragAndDrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDragAndDrop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowDragAndDropAcrossControl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDragAndDropAcrossControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowDragAndDropAcrossControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDragAndDropAcrossControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowDropChild(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDropChild")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowDropChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDropChild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowDropSibling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDropSibling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowDropSibling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDropSibling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowEditing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowEditing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowEditing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowEditing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowKeyboardNavigation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowKeyboardNavigation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowKeyboardNavigation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowKeyboardNavigation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowMultiSelection(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMultiSelection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowMultiSelection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMultiSelection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoCheck(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCheck")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCheck")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoCheckParentNode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCheckParentNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoCheckParentNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCheckParentNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeAdd(value: /* e */ BeforeAddEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeAdd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeAdd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeAdd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeCollapse(value: /* e */ BeforeCollapseEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeCollapse")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeCollapse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeCollapse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeCut(value: /* e */ BeforeCutEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeCut")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeCut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeCut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeDelete(value: /* e */ BeforeDeleteEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDelete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDelete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeEdit(value: /* e */ BeforeEditEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeEdit")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeEdit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeEdit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeExpand(value: /* e */ BeforeExpandEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeExpand")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeExpand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeExpand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeLoad(value: /* e */ BeforeLoadEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeLoad")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeLoad")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforePaste(value: /* e */ BeforePasteEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforePaste")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforePaste: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforePaste")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeSelect(value: /* e */ BeforeSelectEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSelect")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckedNodes(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckedNodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedNodes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreate(value: /* e */ CreateEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCssClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCssClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestroy(value: /* e */ DestroyEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDestroy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableAnimation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableMultipleExpand(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMultipleExpand")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableMultipleExpand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMultipleExpand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnablePersistence(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePersistence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnablePersistence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePersistence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableRTL(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRTL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableRTL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRTL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpandOn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpandOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpandedNodes(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandedNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpandedNodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandedNodes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFields(value: Fields): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFullRowSelect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullRowSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullRowSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullRowSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtmlAttributes(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtmlAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlineEditValidation(value: /* e */ InlineEditValidationEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineEditValidation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutInlineEditValidation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineEditValidation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyPress(value: /* e */ KeyPressEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyPress")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutKeyPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadError(value: /* e */ LoadErrorEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadError")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLoadError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadOnDemand(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadOnDemand")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadOnDemand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadOnDemand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadSuccess(value: /* e */ LoadSuccessEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadSuccess")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLoadSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadSuccess")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeAdd(value: /* e */ NodeAddEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeAdd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNodeAdd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeAdd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeCheck(value: /* e */ NodeCheckEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeCheck")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNodeCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeCheck")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeClick(value: /* e */ NodeClickEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNodeClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeCollapse(value: /* e */ NodeCollapseEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeCollapse")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNodeCollapse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeCollapse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeCut(value: /* e */ NodeCutEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeCut")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNodeCut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeCut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeDelete(value: /* e */ NodeDeleteEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDelete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNodeDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDelete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeDrag(value: /* e */ NodeDragEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDrag")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNodeDrag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDrag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeDragStart(value: /* e */ NodeDragStartEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDragStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNodeDragStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDragStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeDragStop(value: /* e */ NodeDragStopEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDragStop")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNodeDragStop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDragStop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeDropped(value: /* e */ NodeDroppedEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDropped")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNodeDropped: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDropped")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeEdit(value: /* e */ NodeEditEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeEdit")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNodeEdit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeEdit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeExpand(value: /* e */ NodeExpandEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeExpand")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNodeExpand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeExpand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodePaste(value: /* e */ NodePasteEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodePaste")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNodePaste: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodePaste")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeSelect(value: /* e */ NodeSelectEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeSelect")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNodeSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeUncheck(value: /* e */ NodeUncheckEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeUncheck")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNodeUncheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeUncheck")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeUnselect(value: /* e */ NodeUnselectEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeUnselect")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNodeUnselect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeUnselect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReady(value: /* e */ ReadyEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutReady: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedNode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedNodes(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedNodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedNodes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowCheckbox(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showCheckbox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowCheckbox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showCheckbox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortSettings(value: SortSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

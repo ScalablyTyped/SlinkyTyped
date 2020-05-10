@@ -1,34 +1,36 @@
 package typingsSlinky.reactTableFilter.components
 
 import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactTableFilter.mod.TabfilterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TableFilter
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactTableFilter.mod.TableFilter] {
+object TableFilter {
   @JSImport("react-table-filter", "TableFilter")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactTableFilter.mod.TableFilter] {
+    @scala.inline
+    def initialFilters(value: String | js.Array[String] | StringDictionary[Boolean]): this.type = set("initialFilters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowClass(value: String): this.type = set("rowClass", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: TabfilterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     onFilterUpdate: (js.Array[String], js.Array[_]) => js.Array[_] | Unit,
-    rows: String | js.Array[String] | StringDictionary[Boolean],
-    initialFilters: String | js.Array[String] | StringDictionary[Boolean] = null,
-    rowClass: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactTableFilter.mod.TableFilter] = {
-    val __obj = js.Dynamic.literal(onFilterUpdate = js.Any.fromFunction2(onFilterUpdate), rows = rows.asInstanceOf[js.Any])
-    if (initialFilters != null) __obj.updateDynamic("initialFilters")(initialFilters.asInstanceOf[js.Any])
-    if (rowClass != null) __obj.updateDynamic("rowClass")(rowClass.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    rows: String | js.Array[String] | StringDictionary[Boolean]
+  ): Builder = {
+    val __props = js.Dynamic.literal(onFilterUpdate = js.Any.fromFunction2(onFilterUpdate), rows = rows.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TabfilterProps]))
   }
-  type Props = TabfilterProps
 }
 

@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 /**
   * Endpoint represents a single logical "backend" implementing a service.
   */
+@js.native
 trait Endpoint extends js.Object {
   /**
     * addresses of this endpoint. The contents of this field are interpreted according to the
@@ -16,22 +17,22 @@ trait Endpoint extends js.Object {
     * addresses in the context of their own capabilities. This must contain at least one address
     * but no more than 100.
     */
-  val addresses: js.Array[String]
+  val addresses: js.Array[String] = js.native
   /**
     * conditions contains information about the current status of the endpoint.
     */
-  val conditions: EndpointConditions
+  val conditions: EndpointConditions = js.native
   /**
     * hostname of this endpoint. This field may be used by consumers of endpoints to distinguish
     * endpoints from each other (e.g. in DNS names). Multiple endpoints which use the same
     * hostname should be considered fungible (e.g. multiple A values in DNS). Must pass DNS Label
     * (RFC 1123) validation.
     */
-  val hostname: String
+  val hostname: String = js.native
   /**
     * targetRef is a reference to a Kubernetes object that represents this endpoint.
     */
-  val targetRef: ObjectReference
+  val targetRef: ObjectReference = js.native
   /**
     * topology contains arbitrary topology information associated with the endpoint. These
     * key/value pairs must conform with the label format.
@@ -45,7 +46,7 @@ trait Endpoint extends js.Object {
     * * topology.kubernetes.io/region: the value indicates the region where the
     *   endpoint is located. This should match the corresponding node label.
     */
-  val topology: StringDictionary[String]
+  val topology: StringDictionary[String] = js.native
 }
 
 object Endpoint {
@@ -58,8 +59,45 @@ object Endpoint {
     topology: StringDictionary[String]
   ): Endpoint = {
     val __obj = js.Dynamic.literal(addresses = addresses.asInstanceOf[js.Any], conditions = conditions.asInstanceOf[js.Any], hostname = hostname.asInstanceOf[js.Any], targetRef = targetRef.asInstanceOf[js.Any], topology = topology.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Endpoint]
   }
+  @scala.inline
+  implicit class EndpointOps[Self <: Endpoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddresses(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConditions(value: EndpointConditions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHostname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetRef(value: ObjectReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTopology(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topology")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

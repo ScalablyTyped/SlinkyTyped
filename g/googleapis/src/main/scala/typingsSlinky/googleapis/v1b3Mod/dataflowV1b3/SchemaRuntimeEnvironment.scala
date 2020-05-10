@@ -66,32 +66,149 @@ trait SchemaRuntimeEnvironment extends js.Object {
 
 object SchemaRuntimeEnvironment {
   @scala.inline
-  def apply(
-    additionalExperiments: js.Array[String] = null,
-    additionalUserLabels: StringDictionary[String] = null,
-    bypassTempDirValidation: js.UndefOr[Boolean] = js.undefined,
-    machineType: String = null,
-    maxWorkers: Int | Double = null,
-    network: String = null,
-    numWorkers: Int | Double = null,
-    serviceAccountEmail: String = null,
-    subnetwork: String = null,
-    tempLocation: String = null,
-    zone: String = null
-  ): SchemaRuntimeEnvironment = {
+  def apply(): SchemaRuntimeEnvironment = {
     val __obj = js.Dynamic.literal()
-    if (additionalExperiments != null) __obj.updateDynamic("additionalExperiments")(additionalExperiments.asInstanceOf[js.Any])
-    if (additionalUserLabels != null) __obj.updateDynamic("additionalUserLabels")(additionalUserLabels.asInstanceOf[js.Any])
-    if (!js.isUndefined(bypassTempDirValidation)) __obj.updateDynamic("bypassTempDirValidation")(bypassTempDirValidation.asInstanceOf[js.Any])
-    if (machineType != null) __obj.updateDynamic("machineType")(machineType.asInstanceOf[js.Any])
-    if (maxWorkers != null) __obj.updateDynamic("maxWorkers")(maxWorkers.asInstanceOf[js.Any])
-    if (network != null) __obj.updateDynamic("network")(network.asInstanceOf[js.Any])
-    if (numWorkers != null) __obj.updateDynamic("numWorkers")(numWorkers.asInstanceOf[js.Any])
-    if (serviceAccountEmail != null) __obj.updateDynamic("serviceAccountEmail")(serviceAccountEmail.asInstanceOf[js.Any])
-    if (subnetwork != null) __obj.updateDynamic("subnetwork")(subnetwork.asInstanceOf[js.Any])
-    if (tempLocation != null) __obj.updateDynamic("tempLocation")(tempLocation.asInstanceOf[js.Any])
-    if (zone != null) __obj.updateDynamic("zone")(zone.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRuntimeEnvironment]
   }
+  @scala.inline
+  implicit class SchemaRuntimeEnvironmentOps[Self <: SchemaRuntimeEnvironment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdditionalExperiments(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalExperiments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalExperiments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalExperiments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdditionalUserLabels(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalUserLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalUserLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalUserLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBypassTempDirValidation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bypassTempDirValidation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBypassTempDirValidation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bypassTempDirValidation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMachineType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMachineType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxWorkers(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWorkers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxWorkers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWorkers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetwork(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetwork: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumWorkers(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numWorkers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumWorkers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numWorkers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceAccountEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccountEmail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceAccountEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccountEmail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetwork(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetwork")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetwork: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetwork")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTempLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tempLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTempLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tempLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zone")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

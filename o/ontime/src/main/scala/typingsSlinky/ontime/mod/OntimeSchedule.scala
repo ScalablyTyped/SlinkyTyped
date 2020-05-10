@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OntimeSchedule extends js.Object {
   /**
     * ontime determines the cycle of a job based on the format of time expressions. The time expression basically has
@@ -21,7 +22,7 @@ trait OntimeSchedule extends js.Object {
     * The time expression is given to ontime through the cycle option. You can give a single expression of the string
     * type like '01-01T12:00:00' or multiple ones as an array of strings like [ '01-01T12:00:00', '7-1T0:0:0' ]
     */
-  var cycle: String | js.Array[String]
+  var cycle: String | js.Array[String] = js.native
   /**
     * It is sometimes necessary to run a job on the last day of each month, which have been replaced with doing it on
     * the first day of each month instead. By setting the keepLast option to true, ontime automatically adjusts the
@@ -29,14 +30,14 @@ trait OntimeSchedule extends js.Object {
     *
     * Default: false
     */
-  var keepLast: js.UndefOr[Boolean] = js.undefined
+  var keepLast: js.UndefOr[Boolean] = js.native
   /**
     * ontime has a very simple form of logging that is useful when checking if your configuration works as intended.
     * It can be turned on by setting the log option to true.
     *
     * Default: false
     */
-  var log: js.UndefOr[Boolean] = js.undefined
+  var log: js.UndefOr[Boolean] = js.native
   /**
     * ontime launches a job on its scheduled time. If the job takes longer than the time interval of the cycle, more
     * than one instance of the job may run at the same time. The single option keeps another instance of a job from
@@ -44,39 +45,101 @@ trait OntimeSchedule extends js.Object {
     *
     * Default: false
     */
-  var single: js.UndefOr[Boolean] = js.undefined
+  var single: js.UndefOr[Boolean] = js.native
   /**
     * The step option enables a job to be skipped periodically.Setting it to n forces ontime to skip a given job n-1
     * times after a run, which leads to launching the job eveny n cycles.
     *
     * Default: 1
     */
-  var step: js.UndefOr[Double] = js.undefined
+  var step: js.UndefOr[Double] = js.native
   /**
     * Setting the utc option to true changes ontime to interpret the time expressions as UTC.
     *
     * Default: false
     */
-  var utc: js.UndefOr[Boolean] = js.undefined
+  var utc: js.UndefOr[Boolean] = js.native
 }
 
 object OntimeSchedule {
   @scala.inline
-  def apply(
-    cycle: String | js.Array[String],
-    keepLast: js.UndefOr[Boolean] = js.undefined,
-    log: js.UndefOr[Boolean] = js.undefined,
-    single: js.UndefOr[Boolean] = js.undefined,
-    step: Int | Double = null,
-    utc: js.UndefOr[Boolean] = js.undefined
-  ): OntimeSchedule = {
+  def apply(cycle: String | js.Array[String]): OntimeSchedule = {
     val __obj = js.Dynamic.literal(cycle = cycle.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepLast)) __obj.updateDynamic("keepLast")(keepLast.asInstanceOf[js.Any])
-    if (!js.isUndefined(log)) __obj.updateDynamic("log")(log.asInstanceOf[js.Any])
-    if (!js.isUndefined(single)) __obj.updateDynamic("single")(single.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
-    if (!js.isUndefined(utc)) __obj.updateDynamic("utc")(utc.asInstanceOf[js.Any])
     __obj.asInstanceOf[OntimeSchedule]
   }
+  @scala.inline
+  implicit class OntimeScheduleOps[Self <: OntimeSchedule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCycle(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cycle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeepLast(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepLast")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepLast: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepLast")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLog(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("single")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("single")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStep(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUtc(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUtc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utc")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

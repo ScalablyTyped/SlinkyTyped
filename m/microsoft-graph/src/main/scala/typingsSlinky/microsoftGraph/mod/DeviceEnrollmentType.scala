@@ -21,26 +21,24 @@ trait DeviceEnrollmentType extends js.Object
 
 object DeviceEnrollmentType {
   @scala.inline
-  def appleBulkWithUser: typingsSlinky.microsoftGraph.microsoftGraphStrings.appleBulkWithUser = this.cast("appleBulkWithUser")
+  def appleBulkWithUser: typingsSlinky.microsoftGraph.microsoftGraphStrings.appleBulkWithUser = "appleBulkWithUser".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.appleBulkWithUser]
   @scala.inline
-  def appleBulkWithoutUser: typingsSlinky.microsoftGraph.microsoftGraphStrings.appleBulkWithoutUser = this.cast("appleBulkWithoutUser")
+  def appleBulkWithoutUser: typingsSlinky.microsoftGraph.microsoftGraphStrings.appleBulkWithoutUser = "appleBulkWithoutUser".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.appleBulkWithoutUser]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def deviceEnrollmentManager: typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceEnrollmentManager = "deviceEnrollmentManager".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceEnrollmentManager]
   @scala.inline
-  def deviceEnrollmentManager: typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceEnrollmentManager = this.cast("deviceEnrollmentManager")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
   @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
+  def userEnrollment: typingsSlinky.microsoftGraph.microsoftGraphStrings.userEnrollment = "userEnrollment".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.userEnrollment]
   @scala.inline
-  def userEnrollment: typingsSlinky.microsoftGraph.microsoftGraphStrings.userEnrollment = this.cast("userEnrollment")
+  def windowsAutoEnrollment: typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsAutoEnrollment = "windowsAutoEnrollment".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsAutoEnrollment]
   @scala.inline
-  def windowsAutoEnrollment: typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsAutoEnrollment = this.cast("windowsAutoEnrollment")
+  def windowsAzureADJoin: typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsAzureADJoin = "windowsAzureADJoin".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsAzureADJoin]
   @scala.inline
-  def windowsAzureADJoin: typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsAzureADJoin = this.cast("windowsAzureADJoin")
+  def windowsBulkAzureDomainJoin: typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsBulkAzureDomainJoin = "windowsBulkAzureDomainJoin".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsBulkAzureDomainJoin]
   @scala.inline
-  def windowsBulkAzureDomainJoin: typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsBulkAzureDomainJoin = this.cast("windowsBulkAzureDomainJoin")
+  def windowsBulkUserless: typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsBulkUserless = "windowsBulkUserless".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsBulkUserless]
   @scala.inline
-  def windowsBulkUserless: typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsBulkUserless = this.cast("windowsBulkUserless")
-  @scala.inline
-  def windowsCoManagement: typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsCoManagement = this.cast("windowsCoManagement")
+  def windowsCoManagement: typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsCoManagement = "windowsCoManagement".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsCoManagement]
 }
 

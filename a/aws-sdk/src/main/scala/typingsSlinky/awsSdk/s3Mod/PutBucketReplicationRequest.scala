@@ -23,16 +23,53 @@ trait PutBucketReplicationRequest extends js.Object {
 
 object PutBucketReplicationRequest {
   @scala.inline
-  def apply(
-    Bucket: BucketName,
-    ReplicationConfiguration: ReplicationConfiguration,
-    ContentMD5: ContentMD5 = null,
-    Token: ObjectLockToken = null
-  ): PutBucketReplicationRequest = {
+  def apply(Bucket: BucketName, ReplicationConfiguration: ReplicationConfiguration): PutBucketReplicationRequest = {
     val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any], ReplicationConfiguration = ReplicationConfiguration.asInstanceOf[js.Any])
-    if (ContentMD5 != null) __obj.updateDynamic("ContentMD5")(ContentMD5.asInstanceOf[js.Any])
-    if (Token != null) __obj.updateDynamic("Token")(Token.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutBucketReplicationRequest]
   }
+  @scala.inline
+  implicit class PutBucketReplicationRequestOps[Self <: PutBucketReplicationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucket(value: BucketName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReplicationConfiguration(value: ReplicationConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentMD5(value: ContentMD5): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentMD5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentMD5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentMD5")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToken(value: ObjectLockToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Token")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Token")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CameraOptions extends js.Object {
   /**
     * `null` allows camera access on the default button in iOS.
@@ -13,7 +14,7 @@ trait CameraOptions extends js.Object {
     *
     * @default `null`
     */
-  var button: js.UndefOr[HTMLElement] = js.undefined
+  var button: js.UndefOr[HTMLElement] = js.native
   /**
     * Enable or disable camera access on iOS (iPod, iPhone, and iPad) devices.
     *
@@ -22,16 +23,46 @@ trait CameraOptions extends js.Object {
     *
     * @default `false`
     */
-  var ios: js.UndefOr[Boolean] = js.undefined
+  var ios: js.UndefOr[Boolean] = js.native
 }
 
 object CameraOptions {
   @scala.inline
-  def apply(button: HTMLElement = null, ios: js.UndefOr[Boolean] = js.undefined): CameraOptions = {
+  def apply(): CameraOptions = {
     val __obj = js.Dynamic.literal()
-    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
-    if (!js.isUndefined(ios)) __obj.updateDynamic("ios")(ios.asInstanceOf[js.Any])
     __obj.asInstanceOf[CameraOptions]
   }
+  @scala.inline
+  implicit class CameraOptionsOps[Self <: CameraOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withButton(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIos(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ios")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ios")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

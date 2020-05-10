@@ -78,44 +78,221 @@ trait Host extends js.Object {
 
 object Host {
   @scala.inline
-  def apply(
-    AllocationTime: js.Date = null,
-    AllowsMultipleInstanceTypes: AllowsMultipleInstanceTypes = null,
-    AutoPlacement: AutoPlacement = null,
-    AvailabilityZone: String = null,
-    AvailabilityZoneId: String = null,
-    AvailableCapacity: AvailableCapacity = null,
-    ClientToken: String = null,
-    HostId: String = null,
-    HostProperties: HostProperties = null,
-    HostRecovery: HostRecovery = null,
-    HostReservationId: String = null,
-    Instances: HostInstanceList = null,
-    MemberOfServiceLinkedResourceGroup: js.UndefOr[scala.Boolean] = js.undefined,
-    OwnerId: String = null,
-    ReleaseTime: js.Date = null,
-    State: AllocationState = null,
-    Tags: TagList = null
-  ): Host = {
+  def apply(): Host = {
     val __obj = js.Dynamic.literal()
-    if (AllocationTime != null) __obj.updateDynamic("AllocationTime")(AllocationTime.asInstanceOf[js.Any])
-    if (AllowsMultipleInstanceTypes != null) __obj.updateDynamic("AllowsMultipleInstanceTypes")(AllowsMultipleInstanceTypes.asInstanceOf[js.Any])
-    if (AutoPlacement != null) __obj.updateDynamic("AutoPlacement")(AutoPlacement.asInstanceOf[js.Any])
-    if (AvailabilityZone != null) __obj.updateDynamic("AvailabilityZone")(AvailabilityZone.asInstanceOf[js.Any])
-    if (AvailabilityZoneId != null) __obj.updateDynamic("AvailabilityZoneId")(AvailabilityZoneId.asInstanceOf[js.Any])
-    if (AvailableCapacity != null) __obj.updateDynamic("AvailableCapacity")(AvailableCapacity.asInstanceOf[js.Any])
-    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
-    if (HostId != null) __obj.updateDynamic("HostId")(HostId.asInstanceOf[js.Any])
-    if (HostProperties != null) __obj.updateDynamic("HostProperties")(HostProperties.asInstanceOf[js.Any])
-    if (HostRecovery != null) __obj.updateDynamic("HostRecovery")(HostRecovery.asInstanceOf[js.Any])
-    if (HostReservationId != null) __obj.updateDynamic("HostReservationId")(HostReservationId.asInstanceOf[js.Any])
-    if (Instances != null) __obj.updateDynamic("Instances")(Instances.asInstanceOf[js.Any])
-    if (!js.isUndefined(MemberOfServiceLinkedResourceGroup)) __obj.updateDynamic("MemberOfServiceLinkedResourceGroup")(MemberOfServiceLinkedResourceGroup.asInstanceOf[js.Any])
-    if (OwnerId != null) __obj.updateDynamic("OwnerId")(OwnerId.asInstanceOf[js.Any])
-    if (ReleaseTime != null) __obj.updateDynamic("ReleaseTime")(ReleaseTime.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[Host]
   }
+  @scala.inline
+  implicit class HostOps[Self <: Host] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllocationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllocationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowsMultipleInstanceTypes(value: AllowsMultipleInstanceTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowsMultipleInstanceTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowsMultipleInstanceTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowsMultipleInstanceTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoPlacement(value: AutoPlacement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoPlacement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoPlacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoPlacement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailabilityZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailabilityZoneId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZoneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZoneId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZoneId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailableCapacity(value: AvailableCapacity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailableCapacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableCapacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostProperties(value: HostProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostRecovery(value: HostRecovery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostRecovery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostRecovery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostRecovery")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostReservationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostReservationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostReservationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostReservationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstances(value: HostInstanceList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Instances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Instances")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMemberOfServiceLinkedResourceGroup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MemberOfServiceLinkedResourceGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMemberOfServiceLinkedResourceGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MemberOfServiceLinkedResourceGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwnerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwnerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReleaseTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReleaseTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReleaseTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReleaseTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: AllocationState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

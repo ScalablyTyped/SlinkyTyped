@@ -22,16 +22,53 @@ trait AuditMitigationActionsTaskTarget extends js.Object {
 
 object AuditMitigationActionsTaskTarget {
   @scala.inline
-  def apply(
-    auditCheckToReasonCodeFilter: AuditCheckToReasonCodeFilter = null,
-    auditTaskId: AuditTaskId = null,
-    findingIds: FindingIds = null
-  ): AuditMitigationActionsTaskTarget = {
+  def apply(): AuditMitigationActionsTaskTarget = {
     val __obj = js.Dynamic.literal()
-    if (auditCheckToReasonCodeFilter != null) __obj.updateDynamic("auditCheckToReasonCodeFilter")(auditCheckToReasonCodeFilter.asInstanceOf[js.Any])
-    if (auditTaskId != null) __obj.updateDynamic("auditTaskId")(auditTaskId.asInstanceOf[js.Any])
-    if (findingIds != null) __obj.updateDynamic("findingIds")(findingIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuditMitigationActionsTaskTarget]
   }
+  @scala.inline
+  implicit class AuditMitigationActionsTaskTargetOps[Self <: AuditMitigationActionsTaskTarget] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuditCheckToReasonCodeFilter(value: AuditCheckToReasonCodeFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auditCheckToReasonCodeFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuditCheckToReasonCodeFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auditCheckToReasonCodeFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuditTaskId(value: AuditTaskId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auditTaskId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuditTaskId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auditTaskId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFindingIds(value: FindingIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findingIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFindingIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findingIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

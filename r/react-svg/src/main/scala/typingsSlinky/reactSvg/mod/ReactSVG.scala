@@ -1,11 +1,11 @@
 package typingsSlinky.reactSvg.mod
 
+import org.scalajs.dom.raw.HTMLDivElement
+import org.scalajs.dom.raw.HTMLSpanElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.reactSvg.AnonHasError
-import typingsSlinky.std.HTMLDivElement
-import typingsSlinky.std.HTMLSpanElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

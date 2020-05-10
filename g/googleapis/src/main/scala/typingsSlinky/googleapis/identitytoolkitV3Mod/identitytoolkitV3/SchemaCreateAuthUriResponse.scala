@@ -50,28 +50,125 @@ trait SchemaCreateAuthUriResponse extends js.Object {
 
 object SchemaCreateAuthUriResponse {
   @scala.inline
-  def apply(
-    allProviders: js.Array[String] = null,
-    authUri: String = null,
-    captchaRequired: js.UndefOr[Boolean] = js.undefined,
-    forExistingProvider: js.UndefOr[Boolean] = js.undefined,
-    kind: String = null,
-    providerId: String = null,
-    registered: js.UndefOr[Boolean] = js.undefined,
-    sessionId: String = null,
-    signinMethods: js.Array[String] = null
-  ): SchemaCreateAuthUriResponse = {
+  def apply(): SchemaCreateAuthUriResponse = {
     val __obj = js.Dynamic.literal()
-    if (allProviders != null) __obj.updateDynamic("allProviders")(allProviders.asInstanceOf[js.Any])
-    if (authUri != null) __obj.updateDynamic("authUri")(authUri.asInstanceOf[js.Any])
-    if (!js.isUndefined(captchaRequired)) __obj.updateDynamic("captchaRequired")(captchaRequired.asInstanceOf[js.Any])
-    if (!js.isUndefined(forExistingProvider)) __obj.updateDynamic("forExistingProvider")(forExistingProvider.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (providerId != null) __obj.updateDynamic("providerId")(providerId.asInstanceOf[js.Any])
-    if (!js.isUndefined(registered)) __obj.updateDynamic("registered")(registered.asInstanceOf[js.Any])
-    if (sessionId != null) __obj.updateDynamic("sessionId")(sessionId.asInstanceOf[js.Any])
-    if (signinMethods != null) __obj.updateDynamic("signinMethods")(signinMethods.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateAuthUriResponse]
   }
+  @scala.inline
+  implicit class SchemaCreateAuthUriResponseOps[Self <: SchemaCreateAuthUriResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllProviders(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allProviders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllProviders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allProviders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaptchaRequired(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captchaRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptchaRequired: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captchaRequired")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForExistingProvider(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forExistingProvider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForExistingProvider: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forExistingProvider")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProviderId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("providerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProviderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("providerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegistered(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegistered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSigninMethods(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signinMethods")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSigninMethods: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signinMethods")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

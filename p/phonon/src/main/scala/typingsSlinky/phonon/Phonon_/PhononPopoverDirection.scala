@@ -14,14 +14,12 @@ trait PhononPopoverDirection extends js.Object
 
 object PhononPopoverDirection {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.phonon.phononStrings.left = "left".asInstanceOf[typingsSlinky.phonon.phononStrings.left]
   @scala.inline
-  def left: typingsSlinky.phonon.phononStrings.left = this.cast("left")
+  def right: typingsSlinky.phonon.phononStrings.right = "right".asInstanceOf[typingsSlinky.phonon.phononStrings.right]
   @scala.inline
-  def right: typingsSlinky.phonon.phononStrings.right = this.cast("right")
+  def title: typingsSlinky.phonon.phononStrings.title = "title".asInstanceOf[typingsSlinky.phonon.phononStrings.title]
   @scala.inline
-  def title: typingsSlinky.phonon.phononStrings.title = this.cast("title")
-  @scala.inline
-  def `title-left`: typingsSlinky.phonon.phononStrings.`title-left` = this.cast("title-left")
+  def `title-left`: typingsSlinky.phonon.phononStrings.`title-left` = "title-left".asInstanceOf[typingsSlinky.phonon.phononStrings.`title-left`]
 }
 

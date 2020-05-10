@@ -5,31 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // template
+@js.native
 trait TemplateOptions extends TemplateSettings {
   /**
     * The sourceURL of the template's compiled source.
     */
-  var sourceURL: js.UndefOr[String] = js.undefined
+  var sourceURL: js.UndefOr[String] = js.native
 }
 
 object TemplateOptions {
   @scala.inline
-  def apply(
-    escape: js.RegExp = null,
-    evaluate: js.RegExp = null,
-    imports: Dictionary[_] = null,
-    interpolate: js.RegExp = null,
-    sourceURL: String = null,
-    variable: String = null
-  ): TemplateOptions = {
+  def apply(): TemplateOptions = {
     val __obj = js.Dynamic.literal()
-    if (escape != null) __obj.updateDynamic("escape")(escape.asInstanceOf[js.Any])
-    if (evaluate != null) __obj.updateDynamic("evaluate")(evaluate.asInstanceOf[js.Any])
-    if (imports != null) __obj.updateDynamic("imports")(imports.asInstanceOf[js.Any])
-    if (interpolate != null) __obj.updateDynamic("interpolate")(interpolate.asInstanceOf[js.Any])
-    if (sourceURL != null) __obj.updateDynamic("sourceURL")(sourceURL.asInstanceOf[js.Any])
-    if (variable != null) __obj.updateDynamic("variable")(variable.asInstanceOf[js.Any])
     __obj.asInstanceOf[TemplateOptions]
   }
+  @scala.inline
+  implicit class TemplateOptionsOps[Self <: TemplateOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSourceURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceURL")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

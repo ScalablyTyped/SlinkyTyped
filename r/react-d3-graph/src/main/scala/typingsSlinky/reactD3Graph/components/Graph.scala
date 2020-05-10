@@ -1,19 +1,18 @@
 package typingsSlinky.reactD3Graph.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Could't extract props from TypeRef(QualifiedName(IArray(Name(scala), Name(scalajs), Name(js), Name(Any))),IArray(),NoComments) because couldn't resolve ClassTree. */
-object Graph
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactD3Graph.mod.Graph] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Could't extract props from js.Any because couldn't resolve ClassTree. */
+object Graph {
   @JSImport("react-d3-graph", "Graph")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = js.Any
+  def apply(p: js.Any): Default[tag.type, typingsSlinky.reactD3Graph.mod.Graph] = new Default[tag.type, typingsSlinky.reactD3Graph.mod.Graph](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Graph.type): Default[tag.type, typingsSlinky.reactD3Graph.mod.Graph] = new Default[tag.type, typingsSlinky.reactD3Graph.mod.Graph](js.Array(this.component, js.Dictionary.empty))()
 }
 

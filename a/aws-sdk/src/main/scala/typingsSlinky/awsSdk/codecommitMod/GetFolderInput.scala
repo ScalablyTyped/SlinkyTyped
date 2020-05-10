@@ -22,10 +22,41 @@ trait GetFolderInput extends js.Object {
 
 object GetFolderInput {
   @scala.inline
-  def apply(folderPath: Path, repositoryName: RepositoryName, commitSpecifier: CommitName = null): GetFolderInput = {
+  def apply(folderPath: Path, repositoryName: RepositoryName): GetFolderInput = {
     val __obj = js.Dynamic.literal(folderPath = folderPath.asInstanceOf[js.Any], repositoryName = repositoryName.asInstanceOf[js.Any])
-    if (commitSpecifier != null) __obj.updateDynamic("commitSpecifier")(commitSpecifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetFolderInput]
   }
+  @scala.inline
+  implicit class GetFolderInputOps[Self <: GetFolderInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFolderPath(value: Path): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("folderPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRepositoryName(value: RepositoryName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCommitSpecifier(value: CommitName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitSpecifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommitSpecifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitSpecifier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

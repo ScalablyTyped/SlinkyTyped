@@ -18,10 +18,35 @@ trait BatchDeleteConnectionRequest extends js.Object {
 
 object BatchDeleteConnectionRequest {
   @scala.inline
-  def apply(ConnectionNameList: DeleteConnectionNameList, CatalogId: CatalogIdString = null): BatchDeleteConnectionRequest = {
+  def apply(ConnectionNameList: DeleteConnectionNameList): BatchDeleteConnectionRequest = {
     val __obj = js.Dynamic.literal(ConnectionNameList = ConnectionNameList.asInstanceOf[js.Any])
-    if (CatalogId != null) __obj.updateDynamic("CatalogId")(CatalogId.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchDeleteConnectionRequest]
   }
+  @scala.inline
+  implicit class BatchDeleteConnectionRequestOps[Self <: BatchDeleteConnectionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnectionNameList(value: DeleteConnectionNameList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionNameList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCatalogId(value: CatalogIdString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCatalogId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

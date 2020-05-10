@@ -15,14 +15,12 @@ trait EducationUserRole extends js.Object
 
 object EducationUserRole {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def none: none_ = "none".asInstanceOf[none_]
   @scala.inline
-  def none: none_ = this.cast("none")
+  def student: typingsSlinky.microsoftGraph.microsoftGraphStrings.student = "student".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.student]
   @scala.inline
-  def student: typingsSlinky.microsoftGraph.microsoftGraphStrings.student = this.cast("student")
+  def teacher: typingsSlinky.microsoftGraph.microsoftGraphStrings.teacher = "teacher".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.teacher]
   @scala.inline
-  def teacher: typingsSlinky.microsoftGraph.microsoftGraphStrings.teacher = this.cast("teacher")
-  @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
 }
 

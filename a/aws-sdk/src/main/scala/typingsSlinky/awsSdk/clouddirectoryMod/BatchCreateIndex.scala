@@ -30,18 +30,65 @@ trait BatchCreateIndex extends js.Object {
 
 object BatchCreateIndex {
   @scala.inline
-  def apply(
-    IsUnique: Bool,
-    OrderedIndexedAttributeList: AttributeKeyList,
-    BatchReferenceName: BatchReferenceName = null,
-    LinkName: LinkName = null,
-    ParentReference: ObjectReference = null
-  ): BatchCreateIndex = {
+  def apply(IsUnique: Bool, OrderedIndexedAttributeList: AttributeKeyList): BatchCreateIndex = {
     val __obj = js.Dynamic.literal(IsUnique = IsUnique.asInstanceOf[js.Any], OrderedIndexedAttributeList = OrderedIndexedAttributeList.asInstanceOf[js.Any])
-    if (BatchReferenceName != null) __obj.updateDynamic("BatchReferenceName")(BatchReferenceName.asInstanceOf[js.Any])
-    if (LinkName != null) __obj.updateDynamic("LinkName")(LinkName.asInstanceOf[js.Any])
-    if (ParentReference != null) __obj.updateDynamic("ParentReference")(ParentReference.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchCreateIndex]
   }
+  @scala.inline
+  implicit class BatchCreateIndexOps[Self <: BatchCreateIndex] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsUnique(value: Bool): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsUnique")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrderedIndexedAttributeList(value: AttributeKeyList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrderedIndexedAttributeList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBatchReferenceName(value: BatchReferenceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchReferenceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBatchReferenceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchReferenceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkName(value: LinkName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentReference(value: ObjectReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentReference")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

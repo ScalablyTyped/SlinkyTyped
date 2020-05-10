@@ -70,40 +70,197 @@ trait SynthesisTask extends js.Object {
 
 object SynthesisTask {
   @scala.inline
-  def apply(
-    CreationTime: js.Date = null,
-    Engine: Engine = null,
-    LanguageCode: LanguageCode = null,
-    LexiconNames: LexiconNameList = null,
-    OutputFormat: OutputFormat = null,
-    OutputUri: OutputUri = null,
-    RequestCharacters: Int | Double = null,
-    SampleRate: SampleRate = null,
-    SnsTopicArn: SnsTopicArn = null,
-    SpeechMarkTypes: SpeechMarkTypeList = null,
-    TaskId: TaskId = null,
-    TaskStatus: TaskStatus = null,
-    TaskStatusReason: TaskStatusReason = null,
-    TextType: TextType = null,
-    VoiceId: VoiceId = null
-  ): SynthesisTask = {
+  def apply(): SynthesisTask = {
     val __obj = js.Dynamic.literal()
-    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
-    if (Engine != null) __obj.updateDynamic("Engine")(Engine.asInstanceOf[js.Any])
-    if (LanguageCode != null) __obj.updateDynamic("LanguageCode")(LanguageCode.asInstanceOf[js.Any])
-    if (LexiconNames != null) __obj.updateDynamic("LexiconNames")(LexiconNames.asInstanceOf[js.Any])
-    if (OutputFormat != null) __obj.updateDynamic("OutputFormat")(OutputFormat.asInstanceOf[js.Any])
-    if (OutputUri != null) __obj.updateDynamic("OutputUri")(OutputUri.asInstanceOf[js.Any])
-    if (RequestCharacters != null) __obj.updateDynamic("RequestCharacters")(RequestCharacters.asInstanceOf[js.Any])
-    if (SampleRate != null) __obj.updateDynamic("SampleRate")(SampleRate.asInstanceOf[js.Any])
-    if (SnsTopicArn != null) __obj.updateDynamic("SnsTopicArn")(SnsTopicArn.asInstanceOf[js.Any])
-    if (SpeechMarkTypes != null) __obj.updateDynamic("SpeechMarkTypes")(SpeechMarkTypes.asInstanceOf[js.Any])
-    if (TaskId != null) __obj.updateDynamic("TaskId")(TaskId.asInstanceOf[js.Any])
-    if (TaskStatus != null) __obj.updateDynamic("TaskStatus")(TaskStatus.asInstanceOf[js.Any])
-    if (TaskStatusReason != null) __obj.updateDynamic("TaskStatusReason")(TaskStatusReason.asInstanceOf[js.Any])
-    if (TextType != null) __obj.updateDynamic("TextType")(TextType.asInstanceOf[js.Any])
-    if (VoiceId != null) __obj.updateDynamic("VoiceId")(VoiceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SynthesisTask]
   }
+  @scala.inline
+  implicit class SynthesisTaskOps[Self <: SynthesisTask] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEngine(value: Engine): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguageCode(value: LanguageCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLexiconNames(value: LexiconNameList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LexiconNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLexiconNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LexiconNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputFormat(value: OutputFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputUri(value: OutputUri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestCharacters(value: RequestCharacters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharacters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestCharacters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharacters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleRate(value: SampleRate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnsTopicArn(value: SnsTopicArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnsTopicArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnsTopicArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnsTopicArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpeechMarkTypes(value: SpeechMarkTypeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpeechMarkTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpeechMarkTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpeechMarkTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskId(value: TaskId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskStatus(value: TaskStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskStatusReason(value: TaskStatusReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskStatusReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskStatusReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskStatusReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextType(value: TextType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TextType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TextType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVoiceId(value: VoiceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VoiceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVoiceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VoiceId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

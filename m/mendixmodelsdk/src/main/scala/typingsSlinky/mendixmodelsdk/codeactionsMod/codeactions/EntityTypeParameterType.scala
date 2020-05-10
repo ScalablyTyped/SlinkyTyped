@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 /**
   * In version 7.21.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -33,11 +33,11 @@ class EntityTypeParameterType protected () extends ParameterType {
   @JSName("typeParameter")
   val typeParameter_FEntityTypeParameterType: ITypeParameter | Null = js.native
   @JSName("containerAsCodeActionParameter")
-  def containerAsCodeActionParameter_MEntityTypeParameterType(): CodeActionParameter = js.native
+  def containerAsCodeActionParameter_MEntityTypeParameterType: CodeActionParameter = js.native
   def typeParameter(): js.Any = js.native
   def typeParameter(newValue: TypeParameter): js.Any = js.native
   @JSName("typeParameter")
-  def typeParameter_Union(): TypeParameter | Null = js.native
+  def typeParameter_Union: TypeParameter | Null = js.native
 }
 
 /* static members */

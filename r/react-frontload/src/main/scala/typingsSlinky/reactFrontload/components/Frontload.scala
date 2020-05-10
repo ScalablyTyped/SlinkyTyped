@@ -1,29 +1,26 @@
 package typingsSlinky.reactFrontload.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFrontload.mod.FrontloadProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Frontload
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactFrontload.mod.Frontload] {
+object Frontload {
   @JSImport("react-frontload", "Frontload")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(noServerRender: js.UndefOr[Boolean] = js.undefined, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactFrontload.mod.Frontload] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(noServerRender)) __obj.updateDynamic("noServerRender")(noServerRender.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactFrontload.mod.Frontload] {
+    @scala.inline
+    def noServerRender(value: Boolean): this.type = set("noServerRender", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactFrontload.mod.Frontload] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactFrontload.mod.Frontload](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FrontloadProps
+  
+  def withProps(p: FrontloadProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Frontload.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

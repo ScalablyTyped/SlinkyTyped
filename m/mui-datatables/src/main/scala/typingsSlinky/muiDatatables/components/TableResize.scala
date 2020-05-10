@@ -1,40 +1,34 @@
 package typingsSlinky.muiDatatables.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.muiDatatables.mod.MUIDataTableResize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TableResize
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object TableResize {
   @JSImport("mui-datatables", "TableResize")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    classes: js.Object = null,
-    options: js.Object = null,
-    rowSelected: js.UndefOr[Boolean] = js.undefined,
-    setResizeable: /* args */ js.Any => _ = null,
-    updateDividers: /* args */ js.Any => _ = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (!js.isUndefined(rowSelected)) __obj.updateDynamic("rowSelected")(rowSelected.asInstanceOf[js.Any])
-    if (setResizeable != null) __obj.updateDynamic("setResizeable")(js.Any.fromFunction1(setResizeable))
-    if (updateDividers != null) __obj.updateDynamic("updateDividers")(js.Any.fromFunction1(updateDividers))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def classes(value: js.Object): this.type = set("classes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def options(value: js.Object): this.type = set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowSelected(value: Boolean): this.type = set("rowSelected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setResizeable(value: /* args */ js.Any => _): this.type = set("setResizeable", js.Any.fromFunction1(value))
+    @scala.inline
+    def updateDividers(value: /* args */ js.Any => _): this.type = set("updateDividers", js.Any.fromFunction1(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MUIDataTableResize
+  
+  def withProps(p: MUIDataTableResize): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TableResize.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

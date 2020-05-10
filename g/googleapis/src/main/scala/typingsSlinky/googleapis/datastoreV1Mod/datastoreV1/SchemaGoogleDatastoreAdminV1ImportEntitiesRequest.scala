@@ -39,16 +39,53 @@ trait SchemaGoogleDatastoreAdminV1ImportEntitiesRequest extends js.Object {
 
 object SchemaGoogleDatastoreAdminV1ImportEntitiesRequest {
   @scala.inline
-  def apply(
-    entityFilter: SchemaGoogleDatastoreAdminV1EntityFilter = null,
-    inputUrl: String = null,
-    labels: StringDictionary[String] = null
-  ): SchemaGoogleDatastoreAdminV1ImportEntitiesRequest = {
+  def apply(): SchemaGoogleDatastoreAdminV1ImportEntitiesRequest = {
     val __obj = js.Dynamic.literal()
-    if (entityFilter != null) __obj.updateDynamic("entityFilter")(entityFilter.asInstanceOf[js.Any])
-    if (inputUrl != null) __obj.updateDynamic("inputUrl")(inputUrl.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDatastoreAdminV1ImportEntitiesRequest]
   }
+  @scala.inline
+  implicit class SchemaGoogleDatastoreAdminV1ImportEntitiesRequestOps[Self <: SchemaGoogleDatastoreAdminV1ImportEntitiesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntityFilter(value: SchemaGoogleDatastoreAdminV1EntityFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

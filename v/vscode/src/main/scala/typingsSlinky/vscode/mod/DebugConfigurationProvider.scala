@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DebugConfigurationProvider extends js.Object {
   /**
   		 * Provides initial [debug configuration](#DebugConfiguration). If more than one debug configuration provider is
@@ -19,7 +20,7 @@ trait DebugConfigurationProvider extends js.Object {
       /* token */ js.UndefOr[CancellationToken], 
       ProviderResult[js.Array[DebugConfiguration]]
     ]
-  ] = js.undefined
+  ] = js.native
   /**
   		 * Resolves a [debug configuration](#DebugConfiguration) by filling in missing values or by adding/changing/removing attributes.
   		 * If more than one debug configuration provider is registered for the same type, the resolveDebugConfiguration calls are chained
@@ -39,7 +40,7 @@ trait DebugConfigurationProvider extends js.Object {
       /* token */ js.UndefOr[CancellationToken], 
       ProviderResult[DebugConfiguration]
     ]
-  ] = js.undefined
+  ] = js.native
   /**
   		 * This hook is directly called after 'resolveDebugConfiguration' but with all variables substituted.
   		 * It can be used to resolve or verify a [debug configuration](#DebugConfiguration) by filling in missing values or by adding/changing/removing attributes.
@@ -60,21 +61,64 @@ trait DebugConfigurationProvider extends js.Object {
       /* token */ js.UndefOr[CancellationToken], 
       ProviderResult[DebugConfiguration]
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object DebugConfigurationProvider {
   @scala.inline
-  def apply(
-    provideDebugConfigurations: (/* folder */ js.UndefOr[WorkspaceFolder], /* token */ js.UndefOr[CancellationToken]) => ProviderResult[js.Array[DebugConfiguration]] = null,
-    resolveDebugConfiguration: (/* folder */ js.UndefOr[WorkspaceFolder], /* debugConfiguration */ DebugConfiguration, /* token */ js.UndefOr[CancellationToken]) => ProviderResult[DebugConfiguration] = null,
-    resolveDebugConfigurationWithSubstitutedVariables: (/* folder */ js.UndefOr[WorkspaceFolder], /* debugConfiguration */ DebugConfiguration, /* token */ js.UndefOr[CancellationToken]) => ProviderResult[DebugConfiguration] = null
-  ): DebugConfigurationProvider = {
+  def apply(): DebugConfigurationProvider = {
     val __obj = js.Dynamic.literal()
-    if (provideDebugConfigurations != null) __obj.updateDynamic("provideDebugConfigurations")(js.Any.fromFunction2(provideDebugConfigurations))
-    if (resolveDebugConfiguration != null) __obj.updateDynamic("resolveDebugConfiguration")(js.Any.fromFunction3(resolveDebugConfiguration))
-    if (resolveDebugConfigurationWithSubstitutedVariables != null) __obj.updateDynamic("resolveDebugConfigurationWithSubstitutedVariables")(js.Any.fromFunction3(resolveDebugConfigurationWithSubstitutedVariables))
     __obj.asInstanceOf[DebugConfigurationProvider]
   }
+  @scala.inline
+  implicit class DebugConfigurationProviderOps[Self <: DebugConfigurationProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProvideDebugConfigurations(
+      value: (/* folder */ js.UndefOr[WorkspaceFolder], /* token */ js.UndefOr[CancellationToken]) => ProviderResult[js.Array[DebugConfiguration]]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("provideDebugConfigurations")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutProvideDebugConfigurations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("provideDebugConfigurations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolveDebugConfiguration(
+      value: (/* folder */ js.UndefOr[WorkspaceFolder], /* debugConfiguration */ DebugConfiguration, /* token */ js.UndefOr[CancellationToken]) => ProviderResult[DebugConfiguration]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveDebugConfiguration")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutResolveDebugConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveDebugConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolveDebugConfigurationWithSubstitutedVariables(
+      value: (/* folder */ js.UndefOr[WorkspaceFolder], /* debugConfiguration */ DebugConfiguration, /* token */ js.UndefOr[CancellationToken]) => ProviderResult[DebugConfiguration]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveDebugConfigurationWithSubstitutedVariables")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutResolveDebugConfigurationWithSubstitutedVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveDebugConfigurationWithSubstitutedVariables")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

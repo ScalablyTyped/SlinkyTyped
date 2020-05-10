@@ -26,18 +26,65 @@ trait NoiseReducer extends js.Object {
 
 object NoiseReducer {
   @scala.inline
-  def apply(
-    Filter: NoiseReducerFilter = null,
-    FilterSettings: NoiseReducerFilterSettings = null,
-    SpatialFilterSettings: NoiseReducerSpatialFilterSettings = null,
-    TemporalFilterSettings: NoiseReducerTemporalFilterSettings = null
-  ): NoiseReducer = {
+  def apply(): NoiseReducer = {
     val __obj = js.Dynamic.literal()
-    if (Filter != null) __obj.updateDynamic("Filter")(Filter.asInstanceOf[js.Any])
-    if (FilterSettings != null) __obj.updateDynamic("FilterSettings")(FilterSettings.asInstanceOf[js.Any])
-    if (SpatialFilterSettings != null) __obj.updateDynamic("SpatialFilterSettings")(SpatialFilterSettings.asInstanceOf[js.Any])
-    if (TemporalFilterSettings != null) __obj.updateDynamic("TemporalFilterSettings")(TemporalFilterSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[NoiseReducer]
   }
+  @scala.inline
+  implicit class NoiseReducerOps[Self <: NoiseReducer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilter(value: NoiseReducerFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterSettings(value: NoiseReducerFilterSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpatialFilterSettings(value: NoiseReducerSpatialFilterSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpatialFilterSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpatialFilterSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpatialFilterSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemporalFilterSettings(value: NoiseReducerTemporalFilterSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemporalFilterSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemporalFilterSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemporalFilterSettings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

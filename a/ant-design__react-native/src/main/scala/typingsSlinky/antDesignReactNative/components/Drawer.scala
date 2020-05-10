@@ -1,10 +1,9 @@
 package typingsSlinky.antDesignReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.bottom
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.left
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.right
@@ -15,34 +14,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Drawer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Drawer {
   @JSImport("@ant-design/react-native/lib/drawer", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: open */
-  def apply(
-    drawerBackgroundColor: String = null,
-    drawerRef: /* el */ typingsSlinky.bang88ReactNativeDrawerLayout.mod.default | Null => Unit = null,
-    drawerWidth: Int | Double = null,
-    onOpenChange: /* isOpen */ Boolean => Unit = null,
-    position: left | right | top | bottom = null,
-    sidebar: TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (drawerBackgroundColor != null) __obj.updateDynamic("drawerBackgroundColor")(drawerBackgroundColor.asInstanceOf[js.Any])
-    if (drawerRef != null) __obj.updateDynamic("drawerRef")(js.Any.fromFunction1(drawerRef))
-    if (drawerWidth != null) __obj.updateDynamic("drawerWidth")(drawerWidth.asInstanceOf[js.Any])
-    if (onOpenChange != null) __obj.updateDynamic("onOpenChange")(js.Any.fromFunction1(onOpenChange))
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (sidebar != null) __obj.updateDynamic("sidebar")(sidebar.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def drawerBackgroundColor(value: String): this.type = set("drawerBackgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def drawerRef(value: /* el */ typingsSlinky.bang88ReactNativeDrawerLayout.mod.default | Null => Unit): this.type = set("drawerRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def drawerWidth(value: Double): this.type = set("drawerWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onOpenChange(value: /* isOpen */ Boolean => Unit): this.type = set("onOpenChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def position(value: left | right | top | bottom): this.type = set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sidebarReactElement(value: ReactElement): this.type = set("sidebar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sidebar(value: TagMod[Any]): this.type = set("sidebar", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antDesignReactNative.drawerMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DrawerNativeProps
+  
+  def withProps(p: DrawerNativeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Drawer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

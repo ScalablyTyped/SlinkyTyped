@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AsObject extends js.Object {
-  var ledgerInfoWithSigs: js.UndefOr[typingsSlinky.libraCore.ledgerInfoPbMod.LedgerInfoWithSignatures.AsObject] = js.undefined
-  var responseItemsList: js.Array[typingsSlinky.libraCore.getWithProofPbMod.ResponseItem.AsObject]
+  var ledgerInfoWithSigs: js.UndefOr[typingsSlinky.libraCore.ledgerInfoPbMod.LedgerInfoWithSignatures.AsObject] = js.native
+  var responseItemsList: js.Array[typingsSlinky.libraCore.getWithProofPbMod.ResponseItem.AsObject] = js.native
   var validatorChangeEventsList: js.Array[
     typingsSlinky.libraCore.validatorChangePbMod.ValidatorChangeEventWithProof.AsObject
-  ]
+  ] = js.native
 }
 
 object AsObject {
@@ -18,12 +19,46 @@ object AsObject {
     responseItemsList: js.Array[typingsSlinky.libraCore.getWithProofPbMod.ResponseItem.AsObject],
     validatorChangeEventsList: js.Array[
       typingsSlinky.libraCore.validatorChangePbMod.ValidatorChangeEventWithProof.AsObject
-    ],
-    ledgerInfoWithSigs: typingsSlinky.libraCore.ledgerInfoPbMod.LedgerInfoWithSignatures.AsObject = null
+    ]
   ): AsObject = {
     val __obj = js.Dynamic.literal(responseItemsList = responseItemsList.asInstanceOf[js.Any], validatorChangeEventsList = validatorChangeEventsList.asInstanceOf[js.Any])
-    if (ledgerInfoWithSigs != null) __obj.updateDynamic("ledgerInfoWithSigs")(ledgerInfoWithSigs.asInstanceOf[js.Any])
     __obj.asInstanceOf[AsObject]
   }
+  @scala.inline
+  implicit class AsObjectOps[Self <: AsObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResponseItemsList(value: js.Array[typingsSlinky.libraCore.getWithProofPbMod.ResponseItem.AsObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseItemsList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValidatorChangeEventsList(
+      value: js.Array[
+          typingsSlinky.libraCore.validatorChangePbMod.ValidatorChangeEventWithProof.AsObject
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validatorChangeEventsList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLedgerInfoWithSigs(value: typingsSlinky.libraCore.ledgerInfoPbMod.LedgerInfoWithSignatures.AsObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ledgerInfoWithSigs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLedgerInfoWithSigs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ledgerInfoWithSigs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

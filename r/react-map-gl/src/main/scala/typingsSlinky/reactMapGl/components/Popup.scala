@@ -1,9 +1,7 @@
 package typingsSlinky.reactMapGl.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMapGl.mod.PopupProps
 import typingsSlinky.reactMapGl.reactMapGlStrings.`bottom-left`
 import typingsSlinky.reactMapGl.reactMapGlStrings.`bottom-right`
@@ -17,51 +15,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Popup
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactMapGl.mod.Popup] {
+object Popup {
   @JSImport("react-map-gl", "Popup")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    latitude: Double,
-    longitude: Double,
-    altitude: Int | Double = null,
-    anchor: top | `top-left` | `top-right` | bottom | `bottom-left` | `bottom-right` | left | right = null,
-    captureClick: js.UndefOr[Boolean] = js.undefined,
-    captureDoubleClick: js.UndefOr[Boolean] = js.undefined,
-    captureDrag: js.UndefOr[Boolean] = js.undefined,
-    captureScroll: js.UndefOr[Boolean] = js.undefined,
-    closeButton: js.UndefOr[Boolean] = js.undefined,
-    closeOnClick: js.UndefOr[Boolean] = js.undefined,
-    dynamicPosition: js.UndefOr[Boolean] = js.undefined,
-    offsetLeft: Int | Double = null,
-    offsetTop: Int | Double = null,
-    onClose: () => Unit = null,
-    sortByDepth: js.UndefOr[Boolean] = js.undefined,
-    tipSize: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.Popup] = {
-    val __obj = js.Dynamic.literal(latitude = latitude.asInstanceOf[js.Any], longitude = longitude.asInstanceOf[js.Any])
-    if (altitude != null) __obj.updateDynamic("altitude")(altitude.asInstanceOf[js.Any])
-    if (anchor != null) __obj.updateDynamic("anchor")(anchor.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureClick)) __obj.updateDynamic("captureClick")(captureClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureDoubleClick)) __obj.updateDynamic("captureDoubleClick")(captureDoubleClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureDrag)) __obj.updateDynamic("captureDrag")(captureDrag.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureScroll)) __obj.updateDynamic("captureScroll")(captureScroll.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeButton)) __obj.updateDynamic("closeButton")(closeButton.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnClick)) __obj.updateDynamic("closeOnClick")(closeOnClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(dynamicPosition)) __obj.updateDynamic("dynamicPosition")(dynamicPosition.asInstanceOf[js.Any])
-    if (offsetLeft != null) __obj.updateDynamic("offsetLeft")(offsetLeft.asInstanceOf[js.Any])
-    if (offsetTop != null) __obj.updateDynamic("offsetTop")(offsetTop.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
-    if (!js.isUndefined(sortByDepth)) __obj.updateDynamic("sortByDepth")(sortByDepth.asInstanceOf[js.Any])
-    if (tipSize != null) __obj.updateDynamic("tipSize")(tipSize.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.Popup] {
+    @scala.inline
+    def altitude(value: Double): this.type = set("altitude", value.asInstanceOf[js.Any])
+    @scala.inline
+    def anchor(value: top | `top-left` | `top-right` | bottom | `bottom-left` | `bottom-right` | left | right): this.type = set("anchor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureClick(value: Boolean): this.type = set("captureClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureDoubleClick(value: Boolean): this.type = set("captureDoubleClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureDrag(value: Boolean): this.type = set("captureDrag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureScroll(value: Boolean): this.type = set("captureScroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeButton(value: Boolean): this.type = set("closeButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeOnClick(value: Boolean): this.type = set("closeOnClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dynamicPosition(value: Boolean): this.type = set("dynamicPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offsetLeft(value: Double): this.type = set("offsetLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offsetTop(value: Double): this.type = set("offsetTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClose(value: () => Unit): this.type = set("onClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def sortByDepth(value: Boolean): this.type = set("sortByDepth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tipSize(value: Double): this.type = set("tipSize", value.asInstanceOf[js.Any])
   }
-  type Props = PopupProps
+  
+  def withProps(p: PopupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(latitude: Double, longitude: Double): Builder = {
+    val __props = js.Dynamic.literal(latitude = latitude.asInstanceOf[js.Any], longitude = longitude.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PopupProps]))
+  }
 }
 

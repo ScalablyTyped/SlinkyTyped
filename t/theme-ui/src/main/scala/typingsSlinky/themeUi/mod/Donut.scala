@@ -1,7 +1,7 @@
 package typingsSlinky.themeUi.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.SVGSVGElement
+import org.scalajs.dom.raw.SVGSVGElement
 import typingsSlinky.themeUiComponents.mod.DonutProps
 import typingsSlinky.themeUiComponents.mod.ForwardRef
 import scala.scalajs.js

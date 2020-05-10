@@ -1,6 +1,6 @@
 package typingsSlinky.resemblejs.mod
 
-import typingsSlinky.std.ImageData
+import org.scalajs.dom.raw.ImageData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

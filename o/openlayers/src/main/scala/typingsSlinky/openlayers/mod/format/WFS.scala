@@ -1,5 +1,6 @@
 package typingsSlinky.openlayers.mod.format
 
+import org.scalajs.dom.raw.Node
 import typingsSlinky.openlayers.mod.GlobalObject
 import typingsSlinky.openlayers.mod.WFSFeatureCollectionMetadata
 import typingsSlinky.openlayers.mod.WFSTransactionResponse
@@ -9,7 +10,6 @@ import typingsSlinky.openlayers.mod.olx.format.WFSWriteGetFeatureOptions
 import typingsSlinky.openlayers.mod.olx.format.WFSWriteTransactionOptions
 import typingsSlinky.openlayers.mod.proj.Projection
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -96,7 +96,7 @@ class WFS () extends XMLFeature {
     * @return Result.
     * @api stable
     */
-  def writeGetFeature(options: WFSWriteGetFeatureOptions): org.scalajs.dom.raw.Node = js.native
+  def writeGetFeature(options: WFSWriteGetFeatureOptions): Node = js.native
   /**
     * Encode format as WFS `Transaction` and return the Node.
     *
@@ -112,6 +112,6 @@ class WFS () extends XMLFeature {
     updates: js.Array[typingsSlinky.openlayers.mod.Feature],
     deletes: js.Array[typingsSlinky.openlayers.mod.Feature],
     options: WFSWriteTransactionOptions
-  ): org.scalajs.dom.raw.Node = js.native
+  ): Node = js.native
 }
 

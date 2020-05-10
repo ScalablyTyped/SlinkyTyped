@@ -1,9 +1,7 @@
 package typingsSlinky.reactIntlRedux.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.Context
 import typingsSlinky.reactRedux.mod.ProviderProps
 import typingsSlinky.reactRedux.mod.ReactReduxContextValue
@@ -14,23 +12,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Provider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactIntlRedux.mod.Provider[js.Any]] {
+object Provider {
   @JSImport("react-intl-redux", "Provider")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[A /* <: Action[js.Any] */](
-    store: Store[_, A],
-    context: Context[ReactReduxContextValue[_, AnyAction]] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactIntlRedux.mod.Provider[js.Any]] = {
-    val __obj = js.Dynamic.literal(store = store.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactIntlRedux.mod.Provider[js.Any]]]
+  @scala.inline
+  class Builder[A <: Action[js.Any]] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactIntlRedux.mod.Provider[js.Any]] {
+    @scala.inline
+    def context(value: Context[ReactReduxContextValue[_, AnyAction]]): this.type = set("context", value.asInstanceOf[js.Any])
   }
-  type Props = ProviderProps[js.Any]
+  
+  def withProps[A <: Action[js.Any]](p: ProviderProps[A]): Builder[A] = new Builder[A](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[A <: Action[js.Any]](store: Store[_, A]): Builder[A] = {
+    val __props = js.Dynamic.literal(store = store.asInstanceOf[js.Any])
+    new Builder[A](js.Array(this.component, __props.asInstanceOf[ProviderProps[A]]))
+  }
 }
 

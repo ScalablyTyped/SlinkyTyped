@@ -14,10 +14,29 @@ trait CampaignState extends js.Object {
 
 object CampaignState {
   @scala.inline
-  def apply(CampaignStatus: CampaignStatus = null): CampaignState = {
+  def apply(): CampaignState = {
     val __obj = js.Dynamic.literal()
-    if (CampaignStatus != null) __obj.updateDynamic("CampaignStatus")(CampaignStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[CampaignState]
   }
+  @scala.inline
+  implicit class CampaignStateOps[Self <: CampaignState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCampaignStatus(value: CampaignStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CampaignStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCampaignStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CampaignStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

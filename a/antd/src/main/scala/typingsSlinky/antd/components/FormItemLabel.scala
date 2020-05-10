@@ -1,10 +1,9 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.FormItemLabelPropsrequire
 import typingsSlinky.antd.gridColMod.ColProps
 import typingsSlinky.antd.interfaceMod.FormLabelAlign
@@ -12,30 +11,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FormItemLabel
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object FormItemLabel {
   @JSImport("antd/lib/form/FormItemLabel", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: htmlFor, required */
-  def apply(
-    prefixCls: String,
-    colon: js.UndefOr[Boolean] = js.undefined,
-    label: TagMod[Any] = null,
-    labelAlign: FormLabelAlign = null,
-    labelCol: ColProps = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(prefixCls = prefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(colon)) __obj.updateDynamic("colon")(colon.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (labelAlign != null) __obj.updateDynamic("labelAlign")(labelAlign.asInstanceOf[js.Any])
-    if (labelCol != null) __obj.updateDynamic("labelCol")(labelCol.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def colon(value: Boolean): this.type = set("colon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def htmlFor(value: String): this.type = set("htmlFor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelAlign(value: FormLabelAlign): this.type = set("labelAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelCol(value: ColProps): this.type = set("labelCol", value.asInstanceOf[js.Any])
+    @scala.inline
+    def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
   }
-  type Props = FormItemLabelPropsrequire
+  
+  def withProps(p: FormItemLabelPropsrequire): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(prefixCls: String): Builder = {
+    val __props = js.Dynamic.literal(prefixCls = prefixCls.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[FormItemLabelPropsrequire]))
+  }
 }
 

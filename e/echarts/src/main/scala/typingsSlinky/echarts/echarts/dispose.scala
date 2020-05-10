@@ -1,7 +1,7 @@
 package typingsSlinky.echarts.echarts
 
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLDivElement
+import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

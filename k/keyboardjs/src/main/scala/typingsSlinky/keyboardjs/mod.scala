@@ -1,7 +1,7 @@
 package typingsSlinky.keyboardjs
 
+import org.scalajs.dom.raw.HTMLFormElement
 import typingsSlinky.std.Document_
-import typingsSlinky.std.HTMLFormElement
 import typingsSlinky.std.KeyboardEvent
 import typingsSlinky.std.Window_
 import scala.scalajs.js

@@ -113,7 +113,7 @@ trait MediaStream extends EventTarget {
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
       _
     ],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_removetrack(
@@ -142,7 +142,7 @@ trait MediaStream extends EventTarget {
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
       _
     ],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def removeTrack(track: org.scalajs.dom.experimental.mediastream.MediaStreamTrack): Unit = js.native
 }
@@ -150,9 +150,9 @@ trait MediaStream extends EventTarget {
 @JSGlobal("MediaStream")
 @js.native
 object MediaStream
-  extends Instantiable0[MediaStream]
+  extends Instantiable0[org.scalajs.dom.experimental.mediastream.MediaStream]
      with Instantiable1[
-      (/* tracks */ js.Array[MediaStreamTrack]) | (/* stream */ MediaStream), 
-      MediaStream
+      (/* tracks */ js.Array[org.scalajs.dom.experimental.mediastream.MediaStreamTrack]) | (/* stream */ org.scalajs.dom.experimental.mediastream.MediaStream), 
+      org.scalajs.dom.experimental.mediastream.MediaStream
     ]
 

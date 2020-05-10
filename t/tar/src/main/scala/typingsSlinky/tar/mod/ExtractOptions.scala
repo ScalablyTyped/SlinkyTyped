@@ -7,87 +7,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ExtractOptions extends js.Object {
   /**
     * Alias for cwd.
     */
-  var C: js.UndefOr[String] = js.undefined
-  var Directory: js.UndefOr[Boolean] = js.undefined
+  var C: js.UndefOr[String] = js.native
+  var Directory: js.UndefOr[Boolean] = js.native
   /**
     * Extract files relative to the specified directory. Defaults to
     * process.cwd(). If provided, this must exist and must be a directory.
     */
-  var cwd: js.UndefOr[String] = js.undefined
+  var cwd: js.UndefOr[String] = js.native
   /**
     * A function that gets called with (path, stat) for each entry being
     * added. Return true to emit the entry from the archive, or false to skip it.
     */
-  var filter: js.UndefOr[js.Function2[/* path */ String, /* stat */ FileStat, Boolean]] = js.undefined
+  var filter: js.UndefOr[js.Function2[/* path */ String, /* stat */ FileStat, Boolean]] = js.native
   /**
     * Set to a number to force ownership of all extracted files and folders,
     * and all implicitly created directories, to be owned by the specified
     * group id, regardless of the gid field in the archive. Cannot be used
     * along with preserveOwner. Requires also setting a uid option
     */
-  var gid: js.UndefOr[Double] = js.undefined
+  var gid: js.UndefOr[Double] = js.native
   /**
     * Alias for keep.
     */
-  var k: js.UndefOr[Boolean] = js.undefined
+  var k: js.UndefOr[Boolean] = js.native
   /**
     * Do not overwrite existing files. In particular, if a file appears more
     * than once in an archive, later copies will not overwrite earlier copies
     */
-  var keep: js.UndefOr[Boolean] = js.undefined
+  var keep: js.UndefOr[Boolean] = js.native
   /**
     * Alias for keep.
     */
-  var `keep-existing`: js.UndefOr[Boolean] = js.undefined
+  var `keep-existing`: js.UndefOr[Boolean] = js.native
   /**
     * Alias for newer.
     */
-  var `keep-newer`: js.UndefOr[Boolean] = js.undefined
+  var `keep-newer`: js.UndefOr[Boolean] = js.native
   /**
     * Alias for newer.
     */
-  var `keep-newer-files`: js.UndefOr[Boolean] = js.undefined
-  var m: js.UndefOr[Boolean] = js.undefined
+  var `keep-newer-files`: js.UndefOr[Boolean] = js.native
+  var m: js.UndefOr[Boolean] = js.native
   /**
     * The maximum size of meta entries that is supported. Defaults to 1 MB.
     */
-  var maxMetaEntrySize: js.UndefOr[Double] = js.undefined
+  var maxMetaEntrySize: js.UndefOr[Double] = js.native
   // The following options are mostly internal, but can be modified in some
   // advanced use cases, such as re-using caches between runs.
   /**
     * The maximum buffer size for fs.read() operations (in bytes). Defaults to 16 MB.
     */
-  var maxReadSize: js.UndefOr[Double] = js.undefined
+  var maxReadSize: js.UndefOr[Double] = js.native
   /**
     * Set to true to keep the existing file on disk if it's newer than
     * the file in the archive.
     */
-  var newer: js.UndefOr[Boolean] = js.undefined
-  var `no-mtime`: js.UndefOr[Boolean] = js.undefined
+  var newer: js.UndefOr[Boolean] = js.native
+  var `no-mtime`: js.UndefOr[Boolean] = js.native
   /**
     * Set to true to omit writing mtime value for extracted entries.
     * [Alias: m, no-mtime]
     */
-  var noMtime: js.UndefOr[Boolean] = js.undefined
+  var noMtime: js.UndefOr[Boolean] = js.native
   /**
     * A function that gets called with (entry) for each entry that passes the
     * filter.
     */
-  var onentry: js.UndefOr[js.Function1[/* entry */ ReadEntry, Unit]] = js.undefined
+  var onentry: js.UndefOr[js.Function1[/* entry */ ReadEntry, Unit]] = js.native
   /**
     * A function that will get called with (message, data)
     * for any warnings encountered.
     */
-  var onwarn: js.UndefOr[js.Function2[/* message */ String, /* data */ Buffer, Unit]] = js.undefined
+  var onwarn: js.UndefOr[js.Function2[/* message */ String, /* data */ Buffer, Unit]] = js.native
   /**
     * Alias for preserveOwner.
     */
-  var p: js.UndefOr[Boolean] = js.undefined
-  var path: js.UndefOr[String] = js.undefined
+  var p: js.UndefOr[Boolean] = js.native
+  var path: js.UndefOr[String] = js.native
   /**
     * If true, tar will set the uid and gid of extracted entries to the uid
     * and gid fields in the archive. This defaults to true when run as root,
@@ -97,25 +98,25 @@ trait ExtractOptions extends js.Object {
     * never unpacked in this implementation, and modes
     * are set by default already.
     */
-  var preserveOwner: js.UndefOr[Boolean] = js.undefined
+  var preserveOwner: js.UndefOr[Boolean] = js.native
   /**
     * Treat warnings as crash-worthy errors. Default false.
     */
-  var strict: js.UndefOr[Boolean] = js.undefined
+  var strict: js.UndefOr[Boolean] = js.native
   /**
     * Remove the specified number of leading path elements. Pathnames with
     * fewer elements will be silently skipped. Note that the pathname
     * is edited after applying the filter, but before security checks.
     */
-  var strip: js.UndefOr[Double] = js.undefined
+  var strip: js.UndefOr[Double] = js.native
   /**
     * Alias for strip.
     */
-  var `strip-components`: js.UndefOr[Double] = js.undefined
+  var `strip-components`: js.UndefOr[Double] = js.native
   /**
     * Alias for strip.
     */
-  var stripComponents: js.UndefOr[Double] = js.undefined
+  var stripComponents: js.UndefOr[Double] = js.native
   /**
     * Provide a function that takes an entry object, and returns a stream,
     * or any falsey value. If a stream is provided, then that stream's data
@@ -123,88 +124,385 @@ trait ExtractOptions extends js.Object {
     * falsey value is provided, then the entry is written to disk as normal.
     * (To exclude items from extraction, use the filter option described above.)
     */
-  var transform: js.UndefOr[js.Function1[/* entry */ ReadEntry, js.UndefOr[WritableStream | `false` | Null]]] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
+  var transform: js.UndefOr[js.Function1[/* entry */ ReadEntry, js.UndefOr[WritableStream | `false` | Null]]] = js.native
+  var `type`: js.UndefOr[String] = js.native
   /**
     * Set to a number to force ownership of all extracted files and folders,
     * and all implicitly created directories, to be owned by the specified
     * user id, regardless of the uid field in the archive. Cannot be used
     * along with preserveOwner. Requires also setting a gid option.
     */
-  var uid: js.UndefOr[Double] = js.undefined
+  var uid: js.UndefOr[Double] = js.native
   /**
     * Unlink files before creating them. Without this option, tar overwrites
     * existing files, which preserves existing hardlinks. With this option,
     * existing hardlinks will be broken, as will any symlink that would
     * affect the location of an extracted file.
     */
-  var unlink: js.UndefOr[Boolean] = js.undefined
+  var unlink: js.UndefOr[Boolean] = js.native
 }
 
 object ExtractOptions {
   @scala.inline
-  def apply(
-    C: String = null,
-    Directory: js.UndefOr[Boolean] = js.undefined,
-    cwd: String = null,
-    filter: (/* path */ String, /* stat */ FileStat) => Boolean = null,
-    gid: Int | Double = null,
-    k: js.UndefOr[Boolean] = js.undefined,
-    keep: js.UndefOr[Boolean] = js.undefined,
-    `keep-existing`: js.UndefOr[Boolean] = js.undefined,
-    `keep-newer`: js.UndefOr[Boolean] = js.undefined,
-    `keep-newer-files`: js.UndefOr[Boolean] = js.undefined,
-    m: js.UndefOr[Boolean] = js.undefined,
-    maxMetaEntrySize: Int | Double = null,
-    maxReadSize: Int | Double = null,
-    newer: js.UndefOr[Boolean] = js.undefined,
-    `no-mtime`: js.UndefOr[Boolean] = js.undefined,
-    noMtime: js.UndefOr[Boolean] = js.undefined,
-    onentry: /* entry */ ReadEntry => Unit = null,
-    onwarn: (/* message */ String, /* data */ Buffer) => Unit = null,
-    p: js.UndefOr[Boolean] = js.undefined,
-    path: String = null,
-    preserveOwner: js.UndefOr[Boolean] = js.undefined,
-    strict: js.UndefOr[Boolean] = js.undefined,
-    strip: Int | Double = null,
-    `strip-components`: Int | Double = null,
-    stripComponents: Int | Double = null,
-    transform: /* entry */ ReadEntry => js.UndefOr[WritableStream | `false` | Null] = null,
-    `type`: String = null,
-    uid: Int | Double = null,
-    unlink: js.UndefOr[Boolean] = js.undefined
-  ): ExtractOptions = {
+  def apply(): ExtractOptions = {
     val __obj = js.Dynamic.literal()
-    if (C != null) __obj.updateDynamic("C")(C.asInstanceOf[js.Any])
-    if (!js.isUndefined(Directory)) __obj.updateDynamic("Directory")(Directory.asInstanceOf[js.Any])
-    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction2(filter))
-    if (gid != null) __obj.updateDynamic("gid")(gid.asInstanceOf[js.Any])
-    if (!js.isUndefined(k)) __obj.updateDynamic("k")(k.asInstanceOf[js.Any])
-    if (!js.isUndefined(keep)) __obj.updateDynamic("keep")(keep.asInstanceOf[js.Any])
-    if (!js.isUndefined(`keep-existing`)) __obj.updateDynamic("keep-existing")(`keep-existing`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`keep-newer`)) __obj.updateDynamic("keep-newer")(`keep-newer`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`keep-newer-files`)) __obj.updateDynamic("keep-newer-files")(`keep-newer-files`.asInstanceOf[js.Any])
-    if (!js.isUndefined(m)) __obj.updateDynamic("m")(m.asInstanceOf[js.Any])
-    if (maxMetaEntrySize != null) __obj.updateDynamic("maxMetaEntrySize")(maxMetaEntrySize.asInstanceOf[js.Any])
-    if (maxReadSize != null) __obj.updateDynamic("maxReadSize")(maxReadSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(newer)) __obj.updateDynamic("newer")(newer.asInstanceOf[js.Any])
-    if (!js.isUndefined(`no-mtime`)) __obj.updateDynamic("no-mtime")(`no-mtime`.asInstanceOf[js.Any])
-    if (!js.isUndefined(noMtime)) __obj.updateDynamic("noMtime")(noMtime.asInstanceOf[js.Any])
-    if (onentry != null) __obj.updateDynamic("onentry")(js.Any.fromFunction1(onentry))
-    if (onwarn != null) __obj.updateDynamic("onwarn")(js.Any.fromFunction2(onwarn))
-    if (!js.isUndefined(p)) __obj.updateDynamic("p")(p.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (!js.isUndefined(preserveOwner)) __obj.updateDynamic("preserveOwner")(preserveOwner.asInstanceOf[js.Any])
-    if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.asInstanceOf[js.Any])
-    if (strip != null) __obj.updateDynamic("strip")(strip.asInstanceOf[js.Any])
-    if (`strip-components` != null) __obj.updateDynamic("strip-components")(`strip-components`.asInstanceOf[js.Any])
-    if (stripComponents != null) __obj.updateDynamic("stripComponents")(stripComponents.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(js.Any.fromFunction1(transform))
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (uid != null) __obj.updateDynamic("uid")(uid.asInstanceOf[js.Any])
-    if (!js.isUndefined(unlink)) __obj.updateDynamic("unlink")(unlink.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExtractOptions]
   }
+  @scala.inline
+  implicit class ExtractOptionsOps[Self <: ExtractOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withC(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("C")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutC: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("C")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectory(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Directory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Directory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCwd(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCwd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilter(value: (/* path */ String, /* stat */ FileStat) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGid(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withK(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("k")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutK: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("k")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeep(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withKeep-existing`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keep-existing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutKeep-existing`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keep-existing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withKeep-newer`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keep-newer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutKeep-newer`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keep-newer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withKeep-newer-files`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keep-newer-files")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutKeep-newer-files`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keep-newer-files")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withM(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutM: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxMetaEntrySize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMetaEntrySize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxMetaEntrySize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMetaEntrySize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxReadSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxReadSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxReadSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxReadSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewer(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withNo-mtime`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("no-mtime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutNo-mtime`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("no-mtime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoMtime(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noMtime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoMtime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noMtime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnentry(value: /* entry */ ReadEntry => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onentry")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnentry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onentry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnwarn(value: (/* message */ String, /* data */ Buffer) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onwarn")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnwarn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onwarn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withP(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutP: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreserveOwner(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveOwner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreserveOwner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveOwner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrict(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrict: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrip(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withStrip-components`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strip-components")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutStrip-components`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strip-components")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStripComponents(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stripComponents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStripComponents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stripComponents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransform(value: /* entry */ ReadEntry => js.UndefOr[WritableStream | `false` | Null]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTransform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUid(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnlink(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unlink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnlink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unlink")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

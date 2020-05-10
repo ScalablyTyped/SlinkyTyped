@@ -4,24 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonOptimalDecomp extends js.Object {
-  var optimalDecomp: js.UndefOr[Boolean] = js.undefined
-  var removeCollinearPoints: js.UndefOr[Boolean | Double] = js.undefined
-  var skipSimpleCheck: js.UndefOr[Boolean] = js.undefined
+  var optimalDecomp: js.UndefOr[Boolean] = js.native
+  var removeCollinearPoints: js.UndefOr[Boolean | Double] = js.native
+  var skipSimpleCheck: js.UndefOr[Boolean] = js.native
 }
 
 object AnonOptimalDecomp {
   @scala.inline
-  def apply(
-    optimalDecomp: js.UndefOr[Boolean] = js.undefined,
-    removeCollinearPoints: Boolean | Double = null,
-    skipSimpleCheck: js.UndefOr[Boolean] = js.undefined
-  ): AnonOptimalDecomp = {
+  def apply(): AnonOptimalDecomp = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(optimalDecomp)) __obj.updateDynamic("optimalDecomp")(optimalDecomp.asInstanceOf[js.Any])
-    if (removeCollinearPoints != null) __obj.updateDynamic("removeCollinearPoints")(removeCollinearPoints.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipSimpleCheck)) __obj.updateDynamic("skipSimpleCheck")(skipSimpleCheck.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonOptimalDecomp]
   }
+  @scala.inline
+  implicit class AnonOptimalDecompOps[Self <: AnonOptimalDecomp] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOptimalDecomp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optimalDecomp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptimalDecomp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optimalDecomp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveCollinearPoints(value: Boolean | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeCollinearPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveCollinearPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeCollinearPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipSimpleCheck(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipSimpleCheck")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipSimpleCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipSimpleCheck")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

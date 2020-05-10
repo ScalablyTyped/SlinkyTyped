@@ -18,14 +18,41 @@ trait DescribeCACertificateResponse extends js.Object {
 
 object DescribeCACertificateResponse {
   @scala.inline
-  def apply(
-    certificateDescription: CACertificateDescription = null,
-    registrationConfig: RegistrationConfig = null
-  ): DescribeCACertificateResponse = {
+  def apply(): DescribeCACertificateResponse = {
     val __obj = js.Dynamic.literal()
-    if (certificateDescription != null) __obj.updateDynamic("certificateDescription")(certificateDescription.asInstanceOf[js.Any])
-    if (registrationConfig != null) __obj.updateDynamic("registrationConfig")(registrationConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeCACertificateResponse]
   }
+  @scala.inline
+  implicit class DescribeCACertificateResponseOps[Self <: DescribeCACertificateResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateDescription(value: CACertificateDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegistrationConfig(value: RegistrationConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registrationConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegistrationConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registrationConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LineString extends js.Object {
-  var coordinates: js.Array[Coordinate]
-  var `type`: typingsSlinky.osrm.osrmStrings.LineString
+  var coordinates: js.Array[Coordinate] = js.native
+  var `type`: typingsSlinky.osrm.osrmStrings.LineString = js.native
 }
 
 object LineString {
@@ -16,5 +17,25 @@ object LineString {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LineString]
   }
+  @scala.inline
+  implicit class LineStringOps[Self <: LineString] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCoordinates(value: js.Array[Coordinate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coordinates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: typingsSlinky.osrm.osrmStrings.LineString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -28,42 +28,40 @@ trait ConsoleMessageType extends js.Object
 
 object ConsoleMessageType {
   @scala.inline
-  def assert: typingsSlinky.puppeteer.puppeteerStrings.assert = this.cast("assert")
+  def assert: typingsSlinky.puppeteer.puppeteerStrings.assert = "assert".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.assert]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def clear: typingsSlinky.puppeteer.puppeteerStrings.clear = "clear".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.clear]
   @scala.inline
-  def clear: typingsSlinky.puppeteer.puppeteerStrings.clear = this.cast("clear")
+  def count: typingsSlinky.puppeteer.puppeteerStrings.count = "count".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.count]
   @scala.inline
-  def count: typingsSlinky.puppeteer.puppeteerStrings.count = this.cast("count")
+  def debug: typingsSlinky.puppeteer.puppeteerStrings.debug = "debug".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.debug]
   @scala.inline
-  def debug: typingsSlinky.puppeteer.puppeteerStrings.debug = this.cast("debug")
+  def dir: typingsSlinky.puppeteer.puppeteerStrings.dir = "dir".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.dir]
   @scala.inline
-  def dir: typingsSlinky.puppeteer.puppeteerStrings.dir = this.cast("dir")
+  def dirxml: typingsSlinky.puppeteer.puppeteerStrings.dirxml = "dirxml".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.dirxml]
   @scala.inline
-  def dirxml: typingsSlinky.puppeteer.puppeteerStrings.dirxml = this.cast("dirxml")
+  def endGroup: typingsSlinky.puppeteer.puppeteerStrings.endGroup = "endGroup".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.endGroup]
   @scala.inline
-  def endGroup: typingsSlinky.puppeteer.puppeteerStrings.endGroup = this.cast("endGroup")
+  def error: typingsSlinky.puppeteer.puppeteerStrings.error = "error".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.error]
   @scala.inline
-  def error: typingsSlinky.puppeteer.puppeteerStrings.error = this.cast("error")
+  def info: typingsSlinky.puppeteer.puppeteerStrings.info = "info".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.info]
   @scala.inline
-  def info: typingsSlinky.puppeteer.puppeteerStrings.info = this.cast("info")
+  def log: typingsSlinky.puppeteer.puppeteerStrings.log = "log".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.log]
   @scala.inline
-  def log: typingsSlinky.puppeteer.puppeteerStrings.log = this.cast("log")
+  def profile: typingsSlinky.puppeteer.puppeteerStrings.profile = "profile".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.profile]
   @scala.inline
-  def profile: typingsSlinky.puppeteer.puppeteerStrings.profile = this.cast("profile")
+  def profileEnd: typingsSlinky.puppeteer.puppeteerStrings.profileEnd = "profileEnd".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.profileEnd]
   @scala.inline
-  def profileEnd: typingsSlinky.puppeteer.puppeteerStrings.profileEnd = this.cast("profileEnd")
+  def startGroup: typingsSlinky.puppeteer.puppeteerStrings.startGroup = "startGroup".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.startGroup]
   @scala.inline
-  def startGroup: typingsSlinky.puppeteer.puppeteerStrings.startGroup = this.cast("startGroup")
+  def startGroupCollapsed: typingsSlinky.puppeteer.puppeteerStrings.startGroupCollapsed = "startGroupCollapsed".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.startGroupCollapsed]
   @scala.inline
-  def startGroupCollapsed: typingsSlinky.puppeteer.puppeteerStrings.startGroupCollapsed = this.cast("startGroupCollapsed")
+  def table: typingsSlinky.puppeteer.puppeteerStrings.table = "table".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.table]
   @scala.inline
-  def table: typingsSlinky.puppeteer.puppeteerStrings.table = this.cast("table")
+  def timeEnd: typingsSlinky.puppeteer.puppeteerStrings.timeEnd = "timeEnd".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.timeEnd]
   @scala.inline
-  def timeEnd: typingsSlinky.puppeteer.puppeteerStrings.timeEnd = this.cast("timeEnd")
+  def trace: typingsSlinky.puppeteer.puppeteerStrings.trace = "trace".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.trace]
   @scala.inline
-  def trace: typingsSlinky.puppeteer.puppeteerStrings.trace = this.cast("trace")
-  @scala.inline
-  def warning: typingsSlinky.puppeteer.puppeteerStrings.warning = this.cast("warning")
+  def warning: typingsSlinky.puppeteer.puppeteerStrings.warning = "warning".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.warning]
 }
 

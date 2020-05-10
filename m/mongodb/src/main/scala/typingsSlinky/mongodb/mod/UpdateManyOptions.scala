@@ -1,33 +1,52 @@
 package typingsSlinky.mongodb.mod
 
-import typingsSlinky.mongodb.mongodbStrings.majority
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UpdateManyOptions extends CommonOptions {
-  var arrayFilters: js.UndefOr[js.Array[js.Object]] = js.undefined
-  var upsert: js.UndefOr[Boolean] = js.undefined
+  var arrayFilters: js.UndefOr[js.Array[js.Object]] = js.native
+  var upsert: js.UndefOr[Boolean] = js.native
 }
 
 object UpdateManyOptions {
   @scala.inline
-  def apply(
-    arrayFilters: js.Array[js.Object] = null,
-    j: js.UndefOr[Boolean] = js.undefined,
-    session: ClientSession = null,
-    upsert: js.UndefOr[Boolean] = js.undefined,
-    w: scala.Double | majority | String = null,
-    wtimeout: Int | scala.Double = null
-  ): UpdateManyOptions = {
+  def apply(): UpdateManyOptions = {
     val __obj = js.Dynamic.literal()
-    if (arrayFilters != null) __obj.updateDynamic("arrayFilters")(arrayFilters.asInstanceOf[js.Any])
-    if (!js.isUndefined(j)) __obj.updateDynamic("j")(j.asInstanceOf[js.Any])
-    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
-    if (!js.isUndefined(upsert)) __obj.updateDynamic("upsert")(upsert.asInstanceOf[js.Any])
-    if (w != null) __obj.updateDynamic("w")(w.asInstanceOf[js.Any])
-    if (wtimeout != null) __obj.updateDynamic("wtimeout")(wtimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateManyOptions]
   }
+  @scala.inline
+  implicit class UpdateManyOptionsOps[Self <: UpdateManyOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrayFilters(value: js.Array[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrayFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpsert(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upsert")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpsert: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upsert")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

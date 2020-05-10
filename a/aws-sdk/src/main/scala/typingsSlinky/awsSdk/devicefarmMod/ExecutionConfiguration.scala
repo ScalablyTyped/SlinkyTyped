@@ -30,20 +30,77 @@ trait ExecutionConfiguration extends js.Object {
 
 object ExecutionConfiguration {
   @scala.inline
-  def apply(
-    accountsCleanup: js.UndefOr[scala.Boolean] = js.undefined,
-    appPackagesCleanup: js.UndefOr[scala.Boolean] = js.undefined,
-    jobTimeoutMinutes: Int | scala.Double = null,
-    skipAppResign: js.UndefOr[scala.Boolean] = js.undefined,
-    videoCapture: js.UndefOr[scala.Boolean] = js.undefined
-  ): ExecutionConfiguration = {
+  def apply(): ExecutionConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(accountsCleanup)) __obj.updateDynamic("accountsCleanup")(accountsCleanup.asInstanceOf[js.Any])
-    if (!js.isUndefined(appPackagesCleanup)) __obj.updateDynamic("appPackagesCleanup")(appPackagesCleanup.asInstanceOf[js.Any])
-    if (jobTimeoutMinutes != null) __obj.updateDynamic("jobTimeoutMinutes")(jobTimeoutMinutes.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipAppResign)) __obj.updateDynamic("skipAppResign")(skipAppResign.asInstanceOf[js.Any])
-    if (!js.isUndefined(videoCapture)) __obj.updateDynamic("videoCapture")(videoCapture.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecutionConfiguration]
   }
+  @scala.inline
+  implicit class ExecutionConfigurationOps[Self <: ExecutionConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountsCleanup(value: AccountsCleanup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountsCleanup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountsCleanup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountsCleanup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppPackagesCleanup(value: AppPackagesCleanup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appPackagesCleanup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppPackagesCleanup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appPackagesCleanup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobTimeoutMinutes(value: JobTimeoutMinutes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobTimeoutMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobTimeoutMinutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobTimeoutMinutes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipAppResign(value: SkipAppResign): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipAppResign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipAppResign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipAppResign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoCapture(value: VideoCapture): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoCapture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoCapture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoCapture")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

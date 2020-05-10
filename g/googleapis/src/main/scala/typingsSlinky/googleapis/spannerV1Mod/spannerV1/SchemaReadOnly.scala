@@ -66,22 +66,89 @@ trait SchemaReadOnly extends js.Object {
 
 object SchemaReadOnly {
   @scala.inline
-  def apply(
-    exactStaleness: String = null,
-    maxStaleness: String = null,
-    minReadTimestamp: String = null,
-    readTimestamp: String = null,
-    returnReadTimestamp: js.UndefOr[Boolean] = js.undefined,
-    strong: js.UndefOr[Boolean] = js.undefined
-  ): SchemaReadOnly = {
+  def apply(): SchemaReadOnly = {
     val __obj = js.Dynamic.literal()
-    if (exactStaleness != null) __obj.updateDynamic("exactStaleness")(exactStaleness.asInstanceOf[js.Any])
-    if (maxStaleness != null) __obj.updateDynamic("maxStaleness")(maxStaleness.asInstanceOf[js.Any])
-    if (minReadTimestamp != null) __obj.updateDynamic("minReadTimestamp")(minReadTimestamp.asInstanceOf[js.Any])
-    if (readTimestamp != null) __obj.updateDynamic("readTimestamp")(readTimestamp.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnReadTimestamp)) __obj.updateDynamic("returnReadTimestamp")(returnReadTimestamp.asInstanceOf[js.Any])
-    if (!js.isUndefined(strong)) __obj.updateDynamic("strong")(strong.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReadOnly]
   }
+  @scala.inline
+  implicit class SchemaReadOnlyOps[Self <: SchemaReadOnly] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExactStaleness(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exactStaleness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExactStaleness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exactStaleness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxStaleness(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxStaleness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxStaleness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxStaleness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinReadTimestamp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minReadTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinReadTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minReadTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadTimestamp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnReadTimestamp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnReadTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnReadTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnReadTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrong(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strong")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrong: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strong")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

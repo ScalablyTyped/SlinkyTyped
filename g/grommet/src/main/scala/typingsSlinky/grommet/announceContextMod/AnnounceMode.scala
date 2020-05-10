@@ -13,12 +13,10 @@ trait AnnounceMode extends js.Object
 
 object AnnounceMode {
   @scala.inline
-  def assertive: typingsSlinky.grommet.grommetStrings.assertive = this.cast("assertive")
+  def assertive: typingsSlinky.grommet.grommetStrings.assertive = "assertive".asInstanceOf[typingsSlinky.grommet.grommetStrings.assertive]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def off: typingsSlinky.grommet.grommetStrings.off = "off".asInstanceOf[typingsSlinky.grommet.grommetStrings.off]
   @scala.inline
-  def off: typingsSlinky.grommet.grommetStrings.off = this.cast("off")
-  @scala.inline
-  def polite: typingsSlinky.grommet.grommetStrings.polite = this.cast("polite")
+  def polite: typingsSlinky.grommet.grommetStrings.polite = "polite".asInstanceOf[typingsSlinky.grommet.grommetStrings.polite]
 }
 

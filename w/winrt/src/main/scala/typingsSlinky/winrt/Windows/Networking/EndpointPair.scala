@@ -13,13 +13,5 @@ class EndpointPair protected () extends IEndpointPair {
     remoteHostName: HostName,
     remoteServiceName: String
   ) = this()
-  /* CompleteClass */
-  override var localHostName: HostName = js.native
-  /* CompleteClass */
-  override var localServiceName: String = js.native
-  /* CompleteClass */
-  override var remoteHostName: HostName = js.native
-  /* CompleteClass */
-  override var remoteServiceName: String = js.native
 }
 

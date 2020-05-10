@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChartCategoryAxisItemSelectMousewheel extends js.Object {
-  var reverse: js.UndefOr[Boolean] = js.undefined
-  var zoom: js.UndefOr[String] = js.undefined
+  var reverse: js.UndefOr[Boolean] = js.native
+  var zoom: js.UndefOr[String] = js.native
 }
 
 object ChartCategoryAxisItemSelectMousewheel {
   @scala.inline
-  def apply(reverse: js.UndefOr[Boolean] = js.undefined, zoom: String = null): ChartCategoryAxisItemSelectMousewheel = {
+  def apply(): ChartCategoryAxisItemSelectMousewheel = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.asInstanceOf[js.Any])
-    if (zoom != null) __obj.updateDynamic("zoom")(zoom.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartCategoryAxisItemSelectMousewheel]
   }
+  @scala.inline
+  implicit class ChartCategoryAxisItemSelectMousewheelOps[Self <: ChartCategoryAxisItemSelectMousewheel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReverse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReverse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.twilioMcsClient
 
+import org.scalajs.dom.raw.FormData
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.FormData
 import typingsSlinky.twilioMcsClient.configurationMod.Configuration
 import typingsSlinky.twilioMcsClient.transportMod.Transport
 import scala.scalajs.js

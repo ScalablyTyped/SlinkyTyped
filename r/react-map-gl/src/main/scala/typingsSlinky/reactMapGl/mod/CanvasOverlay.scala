@@ -1,6 +1,6 @@
 package typingsSlinky.reactMapGl.mod
 
-import typingsSlinky.std.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLCanvasElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -27,18 +27,65 @@ trait SchemaOrderLineItemShippingDetailsMethod extends js.Object {
 
 object SchemaOrderLineItemShippingDetailsMethod {
   @scala.inline
-  def apply(
-    carrier: String = null,
-    maxDaysInTransit: Int | Double = null,
-    methodName: String = null,
-    minDaysInTransit: Int | Double = null
-  ): SchemaOrderLineItemShippingDetailsMethod = {
+  def apply(): SchemaOrderLineItemShippingDetailsMethod = {
     val __obj = js.Dynamic.literal()
-    if (carrier != null) __obj.updateDynamic("carrier")(carrier.asInstanceOf[js.Any])
-    if (maxDaysInTransit != null) __obj.updateDynamic("maxDaysInTransit")(maxDaysInTransit.asInstanceOf[js.Any])
-    if (methodName != null) __obj.updateDynamic("methodName")(methodName.asInstanceOf[js.Any])
-    if (minDaysInTransit != null) __obj.updateDynamic("minDaysInTransit")(minDaysInTransit.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOrderLineItemShippingDetailsMethod]
   }
+  @scala.inline
+  implicit class SchemaOrderLineItemShippingDetailsMethodOps[Self <: SchemaOrderLineItemShippingDetailsMethod] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCarrier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("carrier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCarrier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("carrier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDaysInTransit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDaysInTransit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDaysInTransit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDaysInTransit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethodName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("methodName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethodName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("methodName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinDaysInTransit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDaysInTransit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinDaysInTransit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDaysInTransit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

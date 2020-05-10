@@ -1,7 +1,6 @@
 package typingsSlinky.websocket.mod
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,13 +18,13 @@ class router () extends EventEmitter {
   def handleRequest(request: request): Unit = js.native
   def mount(path: String, protocol: String, callback: js.Function1[/* request */ IRouterRequest, Unit]): Unit = js.native
   def mount(path: String, protocol: Null, callback: js.Function1[/* request */ IRouterRequest, Unit]): Unit = js.native
-  def mount(path: RegExp, protocol: String, callback: js.Function1[/* request */ IRouterRequest, Unit]): Unit = js.native
-  def mount(path: RegExp, protocol: Null, callback: js.Function1[/* request */ IRouterRequest, Unit]): Unit = js.native
+  def mount(path: js.RegExp, protocol: String, callback: js.Function1[/* request */ IRouterRequest, Unit]): Unit = js.native
+  def mount(path: js.RegExp, protocol: Null, callback: js.Function1[/* request */ IRouterRequest, Unit]): Unit = js.native
   def pathToRegEx(path: js.RegExp): js.RegExp = js.native
   def pathToRegExp(path: String): js.RegExp = js.native
   def unmount(path: String): Unit = js.native
   def unmount(path: String, protocol: String): Unit = js.native
-  def unmount(path: RegExp): Unit = js.native
-  def unmount(path: RegExp, protocol: String): Unit = js.native
+  def unmount(path: js.RegExp): Unit = js.native
+  def unmount(path: js.RegExp, protocol: String): Unit = js.native
 }
 

@@ -13,12 +13,10 @@ trait TestStatus extends js.Object
 
 object TestStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def done: typingsSlinky.jestTypes.jestTypesStrings.done = "done".asInstanceOf[typingsSlinky.jestTypes.jestTypesStrings.done]
   @scala.inline
-  def done: typingsSlinky.jestTypes.jestTypesStrings.done = this.cast("done")
+  def skip: typingsSlinky.jestTypes.jestTypesStrings.skip = "skip".asInstanceOf[typingsSlinky.jestTypes.jestTypesStrings.skip]
   @scala.inline
-  def skip: typingsSlinky.jestTypes.jestTypesStrings.skip = this.cast("skip")
-  @scala.inline
-  def todo: typingsSlinky.jestTypes.jestTypesStrings.todo = this.cast("todo")
+  def todo: typingsSlinky.jestTypes.jestTypesStrings.todo = "todo".asInstanceOf[typingsSlinky.jestTypes.jestTypesStrings.todo]
 }
 

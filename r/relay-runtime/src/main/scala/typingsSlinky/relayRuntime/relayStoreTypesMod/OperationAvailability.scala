@@ -13,12 +13,10 @@ trait OperationAvailability extends js.Object
 
 object OperationAvailability {
   @scala.inline
-  def available: typingsSlinky.relayRuntime.relayRuntimeStrings.available = this.cast("available")
+  def available: typingsSlinky.relayRuntime.relayRuntimeStrings.available = "available".asInstanceOf[typingsSlinky.relayRuntime.relayRuntimeStrings.available]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def missing: typingsSlinky.relayRuntime.relayRuntimeStrings.missing = "missing".asInstanceOf[typingsSlinky.relayRuntime.relayRuntimeStrings.missing]
   @scala.inline
-  def missing: typingsSlinky.relayRuntime.relayRuntimeStrings.missing = this.cast("missing")
-  @scala.inline
-  def stale: typingsSlinky.relayRuntime.relayRuntimeStrings.stale = this.cast("stale")
+  def stale: typingsSlinky.relayRuntime.relayRuntimeStrings.stale = "stale".asInstanceOf[typingsSlinky.relayRuntime.relayRuntimeStrings.stale]
 }
 

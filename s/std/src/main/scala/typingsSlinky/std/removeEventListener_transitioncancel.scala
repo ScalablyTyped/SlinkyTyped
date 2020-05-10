@@ -20,7 +20,7 @@ object removeEventListener_transitioncancel extends js.Object {
   def apply(
     `type`: transitioncancel,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.TransitionEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

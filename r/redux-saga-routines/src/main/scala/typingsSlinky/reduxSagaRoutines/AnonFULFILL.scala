@@ -4,33 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFULFILL[TTriggerMetaCreator, TRequestMetaCreator, TSuccessMetaCreator, TFailureMetaCreator, TFulfillMetaCreator] extends js.Object {
-  var FAILURE: js.UndefOr[TFailureMetaCreator] = js.undefined
-  var FULFILL: js.UndefOr[TFulfillMetaCreator] = js.undefined
-  var REQUEST: js.UndefOr[TRequestMetaCreator] = js.undefined
-  var SUCCESS: js.UndefOr[TSuccessMetaCreator] = js.undefined
-  var TRIGGER: js.UndefOr[TTriggerMetaCreator] = js.undefined
-  var failure: js.UndefOr[TFailureMetaCreator] = js.undefined
-  var fulfill: js.UndefOr[TFulfillMetaCreator] = js.undefined
-  var request: js.UndefOr[TRequestMetaCreator] = js.undefined
-  var success: js.UndefOr[TSuccessMetaCreator] = js.undefined
-  var trigger: js.UndefOr[TTriggerMetaCreator] = js.undefined
+  var FAILURE: js.UndefOr[TFailureMetaCreator] = js.native
+  var FULFILL: js.UndefOr[TFulfillMetaCreator] = js.native
+  var REQUEST: js.UndefOr[TRequestMetaCreator] = js.native
+  var SUCCESS: js.UndefOr[TSuccessMetaCreator] = js.native
+  var TRIGGER: js.UndefOr[TTriggerMetaCreator] = js.native
+  var failure: js.UndefOr[TFailureMetaCreator] = js.native
+  var fulfill: js.UndefOr[TFulfillMetaCreator] = js.native
+  var request: js.UndefOr[TRequestMetaCreator] = js.native
+  var success: js.UndefOr[TSuccessMetaCreator] = js.native
+  var trigger: js.UndefOr[TTriggerMetaCreator] = js.native
 }
 
 object AnonFULFILL {
   @scala.inline
-  def apply[TTriggerMetaCreator, TRequestMetaCreator, TSuccessMetaCreator, TFailureMetaCreator, TFulfillMetaCreator](
-    FAILURE: TFailureMetaCreator = null,
-    FULFILL: TFulfillMetaCreator = null,
-    REQUEST: TRequestMetaCreator = null,
-    SUCCESS: TSuccessMetaCreator = null,
-    TRIGGER: TTriggerMetaCreator = null,
-    failure: TFailureMetaCreator = null,
-    fulfill: TFulfillMetaCreator = null,
-    request: TRequestMetaCreator = null,
-    success: TSuccessMetaCreator = null,
-    trigger: TTriggerMetaCreator = null
-  ): AnonFULFILL[
+  def apply[TTriggerMetaCreator, TRequestMetaCreator, TSuccessMetaCreator, TFailureMetaCreator, TFulfillMetaCreator](): AnonFULFILL[
     TTriggerMetaCreator, 
     TRequestMetaCreator, 
     TSuccessMetaCreator, 
@@ -38,22 +28,177 @@ object AnonFULFILL {
     TFulfillMetaCreator
   ] = {
     val __obj = js.Dynamic.literal()
-    if (FAILURE != null) __obj.updateDynamic("FAILURE")(FAILURE.asInstanceOf[js.Any])
-    if (FULFILL != null) __obj.updateDynamic("FULFILL")(FULFILL.asInstanceOf[js.Any])
-    if (REQUEST != null) __obj.updateDynamic("REQUEST")(REQUEST.asInstanceOf[js.Any])
-    if (SUCCESS != null) __obj.updateDynamic("SUCCESS")(SUCCESS.asInstanceOf[js.Any])
-    if (TRIGGER != null) __obj.updateDynamic("TRIGGER")(TRIGGER.asInstanceOf[js.Any])
-    if (failure != null) __obj.updateDynamic("failure")(failure.asInstanceOf[js.Any])
-    if (fulfill != null) __obj.updateDynamic("fulfill")(fulfill.asInstanceOf[js.Any])
-    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
-    if (success != null) __obj.updateDynamic("success")(success.asInstanceOf[js.Any])
-    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonFULFILL[
-  TTriggerMetaCreator, 
-  TRequestMetaCreator, 
-  TSuccessMetaCreator, 
-  TFailureMetaCreator, 
-  TFulfillMetaCreator]]
+      TTriggerMetaCreator, 
+      TRequestMetaCreator, 
+      TSuccessMetaCreator, 
+      TFailureMetaCreator, 
+      TFulfillMetaCreator
+    ]]
   }
+  @scala.inline
+  implicit class AnonFULFILLOps[Self[ttriggermetacreator, trequestmetacreator, tsuccessmetacreator, tfailuremetacreator, tfulfillmetacreator] <: AnonFULFILL[
+    ttriggermetacreator, 
+    trequestmetacreator, 
+    tsuccessmetacreator, 
+    tfailuremetacreator, 
+    tfulfillmetacreator
+  ], TTriggerMetaCreator, TRequestMetaCreator, TSuccessMetaCreator, TFailureMetaCreator, TFulfillMetaCreator] (val x: Self[
+        TTriggerMetaCreator, 
+        TRequestMetaCreator, 
+        TSuccessMetaCreator, 
+        TFailureMetaCreator, 
+        TFulfillMetaCreator
+      ]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[
+        TTriggerMetaCreator, 
+        TRequestMetaCreator, 
+        TSuccessMetaCreator, 
+        TFailureMetaCreator, 
+        TFulfillMetaCreator
+      ] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[
+        TTriggerMetaCreator, 
+        TRequestMetaCreator, 
+        TSuccessMetaCreator, 
+        TFailureMetaCreator, 
+        TFulfillMetaCreator
+      ]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[
+        TTriggerMetaCreator, 
+        TRequestMetaCreator, 
+        TSuccessMetaCreator, 
+        TFailureMetaCreator, 
+        TFulfillMetaCreator
+      ]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[
+        TTriggerMetaCreator, 
+        TRequestMetaCreator, 
+        TSuccessMetaCreator, 
+        TFailureMetaCreator, 
+        TFulfillMetaCreator
+      ]) with Other]
+    @scala.inline
+    def withFAILURE(value: TFailureMetaCreator): Self[
+        TTriggerMetaCreator, 
+        TRequestMetaCreator, 
+        TSuccessMetaCreator, 
+        TFailureMetaCreator, 
+        TFulfillMetaCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FAILURE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFAILURE: Self[
+        TTriggerMetaCreator, 
+        TRequestMetaCreator, 
+        TSuccessMetaCreator, 
+        TFailureMetaCreator, 
+        TFulfillMetaCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FAILURE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFULFILL(value: TFulfillMetaCreator): Self[
+        TTriggerMetaCreator, 
+        TRequestMetaCreator, 
+        TSuccessMetaCreator, 
+        TFailureMetaCreator, 
+        TFulfillMetaCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FULFILL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFULFILL: Self[
+        TTriggerMetaCreator, 
+        TRequestMetaCreator, 
+        TSuccessMetaCreator, 
+        TFailureMetaCreator, 
+        TFulfillMetaCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FULFILL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withREQUEST(value: TRequestMetaCreator): Self[
+        TTriggerMetaCreator, 
+        TRequestMetaCreator, 
+        TSuccessMetaCreator, 
+        TFailureMetaCreator, 
+        TFulfillMetaCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("REQUEST")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutREQUEST: Self[
+        TTriggerMetaCreator, 
+        TRequestMetaCreator, 
+        TSuccessMetaCreator, 
+        TFailureMetaCreator, 
+        TFulfillMetaCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("REQUEST")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSUCCESS(value: TSuccessMetaCreator): Self[
+        TTriggerMetaCreator, 
+        TRequestMetaCreator, 
+        TSuccessMetaCreator, 
+        TFailureMetaCreator, 
+        TFulfillMetaCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SUCCESS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSUCCESS: Self[
+        TTriggerMetaCreator, 
+        TRequestMetaCreator, 
+        TSuccessMetaCreator, 
+        TFailureMetaCreator, 
+        TFulfillMetaCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SUCCESS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTRIGGER(value: TTriggerMetaCreator): Self[
+        TTriggerMetaCreator, 
+        TRequestMetaCreator, 
+        TSuccessMetaCreator, 
+        TFailureMetaCreator, 
+        TFulfillMetaCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TRIGGER")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTRIGGER: Self[
+        TTriggerMetaCreator, 
+        TRequestMetaCreator, 
+        TSuccessMetaCreator, 
+        TFailureMetaCreator, 
+        TFulfillMetaCreator
+      ] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TRIGGER")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

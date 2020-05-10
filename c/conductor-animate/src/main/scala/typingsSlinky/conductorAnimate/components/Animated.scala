@@ -1,27 +1,30 @@
 package typingsSlinky.conductorAnimate.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.conductorAnimate.mod.AnimatedProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Animated
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.conductorAnimate.mod.Animated] {
+object Animated {
   @JSImport("conductor-animate", "Animated")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(id: String, additional: js.Object = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.conductorAnimate.mod.Animated] = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    if (additional != null) __obj.updateDynamic("additional")(additional.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.conductorAnimate.mod.Animated] {
+    @scala.inline
+    def additional(value: js.Object): this.type = set("additional", value.asInstanceOf[js.Any])
   }
-  type Props = AnimatedProps
+  
+  def withProps(p: AnimatedProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(id: String): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AnimatedProps]))
+  }
 }
 

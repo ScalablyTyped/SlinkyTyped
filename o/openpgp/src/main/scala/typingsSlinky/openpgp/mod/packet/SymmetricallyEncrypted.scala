@@ -41,7 +41,7 @@ class SymmetricallyEncrypted () extends js.Object {
     * @param key The key of cipher blocksize length to be used
     * @returns
     */
-  def decrypt(sessionKeyAlgorithm: symmetric, key: scala.scalajs.js.typedarray.Uint8Array): js.Promise[Boolean] = js.native
+  def decrypt(sessionKeyAlgorithm: symmetric, key: js.typedarray.Uint8Array): js.Promise[Boolean] = js.native
   /**
     * Encrypt the symmetrically-encrypted packet data
     * See {@link https://tools.ietf.org/html/rfc4880#section-9.2|RFC 4880 9.2} for algorithms.
@@ -49,6 +49,6 @@ class SymmetricallyEncrypted () extends js.Object {
     * @param key The key of cipher blocksize length to be used
     * @returns
     */
-  def encrypt(sessionKeyAlgorithm: symmetric, key: scala.scalajs.js.typedarray.Uint8Array): js.Promise[Boolean] = js.native
+  def encrypt(sessionKeyAlgorithm: symmetric, key: js.typedarray.Uint8Array): js.Promise[Boolean] = js.native
 }
 

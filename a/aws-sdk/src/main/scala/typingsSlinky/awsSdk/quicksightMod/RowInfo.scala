@@ -18,11 +18,41 @@ trait RowInfo extends js.Object {
 
 object RowInfo {
   @scala.inline
-  def apply(RowsDropped: Int | scala.Double = null, RowsIngested: Int | scala.Double = null): RowInfo = {
+  def apply(): RowInfo = {
     val __obj = js.Dynamic.literal()
-    if (RowsDropped != null) __obj.updateDynamic("RowsDropped")(RowsDropped.asInstanceOf[js.Any])
-    if (RowsIngested != null) __obj.updateDynamic("RowsIngested")(RowsIngested.asInstanceOf[js.Any])
     __obj.asInstanceOf[RowInfo]
   }
+  @scala.inline
+  implicit class RowInfoOps[Self <: RowInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRowsDropped(value: long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RowsDropped")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowsDropped: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RowsDropped")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowsIngested(value: long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RowsIngested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowsIngested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RowsIngested")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

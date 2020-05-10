@@ -6,53 +6,153 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GeolocateControlProps extends BaseControlProps {
-  var className: js.UndefOr[String] = js.undefined
-  var fitBoundsOptions: js.UndefOr[FitBoundsOptions] = js.undefined
-  var label: js.UndefOr[String] = js.undefined
-  var onGeolocate: js.UndefOr[js.Function1[/* options */ PositionOptions, Unit]] = js.undefined
-  var onViewStateChange: js.UndefOr[ViewStateChangeHandler] = js.undefined
-  var onViewportChange: js.UndefOr[ViewportChangeHandler] = js.undefined
-  var positionOptions: js.UndefOr[typingsSlinky.mapboxGl.mod.PositionOptions] = js.undefined
-  var showUserLocation: js.UndefOr[Boolean] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
-  var trackUserLocation: js.UndefOr[Boolean] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var fitBoundsOptions: js.UndefOr[FitBoundsOptions] = js.native
+  var label: js.UndefOr[String] = js.native
+  var onGeolocate: js.UndefOr[js.Function1[/* options */ PositionOptions, Unit]] = js.native
+  var onViewStateChange: js.UndefOr[ViewStateChangeHandler] = js.native
+  var onViewportChange: js.UndefOr[ViewportChangeHandler] = js.native
+  var positionOptions: js.UndefOr[typingsSlinky.mapboxGl.mod.PositionOptions] = js.native
+  var showUserLocation: js.UndefOr[Boolean] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
+  var trackUserLocation: js.UndefOr[Boolean] = js.native
 }
 
 object GeolocateControlProps {
   @scala.inline
-  def apply(
-    captureClick: js.UndefOr[Boolean] = js.undefined,
-    captureDoubleClick: js.UndefOr[Boolean] = js.undefined,
-    captureDrag: js.UndefOr[Boolean] = js.undefined,
-    captureScroll: js.UndefOr[Boolean] = js.undefined,
-    className: String = null,
-    fitBoundsOptions: FitBoundsOptions = null,
-    label: String = null,
-    onGeolocate: /* options */ PositionOptions => Unit = null,
-    onViewStateChange: /* info */ ViewStateChangeInfo => Unit = null,
-    onViewportChange: /* viewState */ ViewportProps => Unit = null,
-    positionOptions: typingsSlinky.mapboxGl.mod.PositionOptions = null,
-    showUserLocation: js.UndefOr[Boolean] = js.undefined,
-    style: CSSProperties = null,
-    trackUserLocation: js.UndefOr[Boolean] = js.undefined
-  ): GeolocateControlProps = {
+  def apply(): GeolocateControlProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(captureClick)) __obj.updateDynamic("captureClick")(captureClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureDoubleClick)) __obj.updateDynamic("captureDoubleClick")(captureDoubleClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureDrag)) __obj.updateDynamic("captureDrag")(captureDrag.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureScroll)) __obj.updateDynamic("captureScroll")(captureScroll.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (fitBoundsOptions != null) __obj.updateDynamic("fitBoundsOptions")(fitBoundsOptions.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (onGeolocate != null) __obj.updateDynamic("onGeolocate")(js.Any.fromFunction1(onGeolocate))
-    if (onViewStateChange != null) __obj.updateDynamic("onViewStateChange")(js.Any.fromFunction1(onViewStateChange))
-    if (onViewportChange != null) __obj.updateDynamic("onViewportChange")(js.Any.fromFunction1(onViewportChange))
-    if (positionOptions != null) __obj.updateDynamic("positionOptions")(positionOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(showUserLocation)) __obj.updateDynamic("showUserLocation")(showUserLocation.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(trackUserLocation)) __obj.updateDynamic("trackUserLocation")(trackUserLocation.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeolocateControlProps]
   }
+  @scala.inline
+  implicit class GeolocateControlPropsOps[Self <: GeolocateControlProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFitBoundsOptions(value: FitBoundsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fitBoundsOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFitBoundsOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fitBoundsOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnGeolocate(value: /* options */ PositionOptions => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onGeolocate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnGeolocate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onGeolocate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnViewStateChange(value: /* info */ ViewStateChangeInfo => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewStateChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnViewStateChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewStateChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnViewportChange(value: /* viewState */ ViewportProps => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewportChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnViewportChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewportChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositionOptions(value: typingsSlinky.mapboxGl.mod.PositionOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPositionOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowUserLocation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showUserLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowUserLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showUserLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrackUserLocation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackUserLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackUserLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackUserLocation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

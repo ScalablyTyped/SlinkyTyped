@@ -7,19 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Interface for focusable UI elements.
   */
+@js.native
 trait UiFocusable extends js.Object {
   /**
     * Sets focus on the element.
     */
-  def setFocus(): Unit
+  def setFocus(): Unit = js.native
 }
 
 object UiFocusable {
   @scala.inline
   def apply(setFocus: () => Unit): UiFocusable = {
     val __obj = js.Dynamic.literal(setFocus = js.Any.fromFunction0(setFocus))
-  
     __obj.asInstanceOf[UiFocusable]
   }
+  @scala.inline
+  implicit class UiFocusableOps[Self <: UiFocusable] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSetFocus(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFocus")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

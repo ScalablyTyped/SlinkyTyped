@@ -17,7 +17,7 @@ object removeEventListener_vrdisplayactivate extends js.Object {
   def apply(
     `type`: vrdisplayactivate,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

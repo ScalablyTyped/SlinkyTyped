@@ -15,16 +15,14 @@ trait Grant extends js.Object
 
 object Grant {
   @scala.inline
-  def authorization_code: typingsSlinky.auth0.auth0Strings.authorization_code = this.cast("authorization_code")
+  def authorization_code: typingsSlinky.auth0.auth0Strings.authorization_code = "authorization_code".asInstanceOf[typingsSlinky.auth0.auth0Strings.authorization_code]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def client_credentials: typingsSlinky.auth0.auth0Strings.client_credentials = "client_credentials".asInstanceOf[typingsSlinky.auth0.auth0Strings.client_credentials]
   @scala.inline
-  def client_credentials: typingsSlinky.auth0.auth0Strings.client_credentials = this.cast("client_credentials")
+  def `implicit`: typingsSlinky.auth0.auth0Strings.`implicit` = "implicit".asInstanceOf[typingsSlinky.auth0.auth0Strings.`implicit`]
   @scala.inline
-  def `implicit`: typingsSlinky.auth0.auth0Strings.`implicit` = this.cast("implicit")
+  def password: typingsSlinky.auth0.auth0Strings.password = "password".asInstanceOf[typingsSlinky.auth0.auth0Strings.password]
   @scala.inline
-  def password: typingsSlinky.auth0.auth0Strings.password = this.cast("password")
-  @scala.inline
-  def refresh_token: typingsSlinky.auth0.auth0Strings.refresh_token = this.cast("refresh_token")
+  def refresh_token: typingsSlinky.auth0.auth0Strings.refresh_token = "refresh_token".asInstanceOf[typingsSlinky.auth0.auth0Strings.refresh_token]
 }
 

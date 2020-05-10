@@ -55,32 +55,149 @@ trait SchemaDeviceMetadata extends js.Object {
 
 object SchemaDeviceMetadata {
   @scala.inline
-  def apply(
-    cpuMake: String = null,
-    cpuModel: String = null,
-    deviceClass: String = null,
-    glEsVersion: Int | Double = null,
-    manufacturer: String = null,
-    nativePlatform: String = null,
-    productName: String = null,
-    ramMb: Int | Double = null,
-    screenDensityDpi: Int | Double = null,
-    screenHeightPx: Int | Double = null,
-    screenWidthPx: Int | Double = null
-  ): SchemaDeviceMetadata = {
+  def apply(): SchemaDeviceMetadata = {
     val __obj = js.Dynamic.literal()
-    if (cpuMake != null) __obj.updateDynamic("cpuMake")(cpuMake.asInstanceOf[js.Any])
-    if (cpuModel != null) __obj.updateDynamic("cpuModel")(cpuModel.asInstanceOf[js.Any])
-    if (deviceClass != null) __obj.updateDynamic("deviceClass")(deviceClass.asInstanceOf[js.Any])
-    if (glEsVersion != null) __obj.updateDynamic("glEsVersion")(glEsVersion.asInstanceOf[js.Any])
-    if (manufacturer != null) __obj.updateDynamic("manufacturer")(manufacturer.asInstanceOf[js.Any])
-    if (nativePlatform != null) __obj.updateDynamic("nativePlatform")(nativePlatform.asInstanceOf[js.Any])
-    if (productName != null) __obj.updateDynamic("productName")(productName.asInstanceOf[js.Any])
-    if (ramMb != null) __obj.updateDynamic("ramMb")(ramMb.asInstanceOf[js.Any])
-    if (screenDensityDpi != null) __obj.updateDynamic("screenDensityDpi")(screenDensityDpi.asInstanceOf[js.Any])
-    if (screenHeightPx != null) __obj.updateDynamic("screenHeightPx")(screenHeightPx.asInstanceOf[js.Any])
-    if (screenWidthPx != null) __obj.updateDynamic("screenWidthPx")(screenWidthPx.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeviceMetadata]
   }
+  @scala.inline
+  implicit class SchemaDeviceMetadataOps[Self <: SchemaDeviceMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCpuMake(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuMake")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCpuMake: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuMake")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCpuModel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCpuModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuModel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlEsVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("glEsVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlEsVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("glEsVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManufacturer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManufacturer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNativePlatform(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativePlatform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNativePlatform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativePlatform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRamMb(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ramMb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRamMb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ramMb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreenDensityDpi(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenDensityDpi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreenDensityDpi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenDensityDpi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreenHeightPx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenHeightPx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreenHeightPx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenHeightPx")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreenWidthPx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenWidthPx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreenWidthPx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenWidthPx")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

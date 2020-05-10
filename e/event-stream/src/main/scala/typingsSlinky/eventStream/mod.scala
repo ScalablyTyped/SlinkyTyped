@@ -3,7 +3,6 @@ package typingsSlinky.eventStream
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Stream
 import typingsSlinky.node.streamMod.Writable
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,12 +35,12 @@ object mod extends js.Object {
   def readArray(array: js.Array[_]): MapStream = js.native
   def readable(asyncFunction: js.Function): MapStream = js.native
   def replace(from: String, to: String): MapStream = js.native
-  def replace(from: String, to: RegExp): MapStream = js.native
-  def replace(from: RegExp, to: String): MapStream = js.native
-  def replace(from: RegExp, to: RegExp): MapStream = js.native
+  def replace(from: String, to: js.RegExp): MapStream = js.native
+  def replace(from: js.RegExp, to: String): MapStream = js.native
+  def replace(from: js.RegExp, to: js.RegExp): MapStream = js.native
   def split(): MapStream = js.native
   def split(matcher: String): MapStream = js.native
-  def split(matcher: RegExp): MapStream = js.native
+  def split(matcher: js.RegExp): MapStream = js.native
   def stringify(): MapStream = js.native
   def wait(callback: js.Function): MapStream = js.native
   def writeArray(callback: js.Function): MapStream = js.native

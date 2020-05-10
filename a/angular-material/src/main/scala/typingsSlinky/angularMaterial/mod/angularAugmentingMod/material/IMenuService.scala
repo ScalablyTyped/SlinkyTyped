@@ -1,8 +1,8 @@
 package typingsSlinky.angularMaterial.mod.angularAugmentingMod.material
 
+import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.angular.JQueryEventObject
 import typingsSlinky.angular.mod.IPromise
-import typingsSlinky.std.MouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

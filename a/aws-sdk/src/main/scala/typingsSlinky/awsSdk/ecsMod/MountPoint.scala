@@ -22,16 +22,53 @@ trait MountPoint extends js.Object {
 
 object MountPoint {
   @scala.inline
-  def apply(
-    containerPath: String = null,
-    readOnly: js.UndefOr[scala.Boolean] = js.undefined,
-    sourceVolume: String = null
-  ): MountPoint = {
+  def apply(): MountPoint = {
     val __obj = js.Dynamic.literal()
-    if (containerPath != null) __obj.updateDynamic("containerPath")(containerPath.asInstanceOf[js.Any])
-    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
-    if (sourceVolume != null) __obj.updateDynamic("sourceVolume")(sourceVolume.asInstanceOf[js.Any])
     __obj.asInstanceOf[MountPoint]
   }
+  @scala.inline
+  implicit class MountPointOps[Self <: MountPoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainerPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadOnly(value: BoxedBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceVolume(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceVolume")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceVolume: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceVolume")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

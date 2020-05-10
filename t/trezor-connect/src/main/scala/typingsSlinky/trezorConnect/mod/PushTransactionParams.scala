@@ -1,31 +1,40 @@
 package typingsSlinky.trezorConnect.mod
 
-import typingsSlinky.trezorConnect.AnonInstance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PushTransactionParams extends CommonParams {
-  var coin: String
-  var tx: String
+  var coin: String = js.native
+  var tx: String = js.native
 }
 
 object PushTransactionParams {
   @scala.inline
-  def apply(
-    coin: String,
-    tx: String,
-    allowSeedlessDevice: js.UndefOr[Boolean] = js.undefined,
-    device: AnonInstance = null,
-    keepSession: js.UndefOr[Boolean] = js.undefined,
-    useEmptyPassphrase: js.UndefOr[Boolean] = js.undefined
-  ): PushTransactionParams = {
+  def apply(coin: String, tx: String): PushTransactionParams = {
     val __obj = js.Dynamic.literal(coin = coin.asInstanceOf[js.Any], tx = tx.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowSeedlessDevice)) __obj.updateDynamic("allowSeedlessDevice")(allowSeedlessDevice.asInstanceOf[js.Any])
-    if (device != null) __obj.updateDynamic("device")(device.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepSession)) __obj.updateDynamic("keepSession")(keepSession.asInstanceOf[js.Any])
-    if (!js.isUndefined(useEmptyPassphrase)) __obj.updateDynamic("useEmptyPassphrase")(useEmptyPassphrase.asInstanceOf[js.Any])
     __obj.asInstanceOf[PushTransactionParams]
   }
+  @scala.inline
+  implicit class PushTransactionParamsOps[Self <: PushTransactionParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCoin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTx(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tx")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

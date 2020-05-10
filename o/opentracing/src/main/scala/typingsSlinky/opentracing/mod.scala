@@ -1,33 +1,6 @@
 package typingsSlinky.opentracing
 
 import typingsSlinky.opentracing.binaryCarrierMod.default
-import typingsSlinky.opentracing.opentracingStrings.binary
-import typingsSlinky.opentracing.opentracingStrings.child_of
-import typingsSlinky.opentracing.opentracingStrings.client
-import typingsSlinky.opentracing.opentracingStrings.component
-import typingsSlinky.opentracing.opentracingStrings.consumer
-import typingsSlinky.opentracing.opentracingStrings.dbDotinstance
-import typingsSlinky.opentracing.opentracingStrings.dbDotstatement
-import typingsSlinky.opentracing.opentracingStrings.dbDottype
-import typingsSlinky.opentracing.opentracingStrings.dbDotuser
-import typingsSlinky.opentracing.opentracingStrings.error
-import typingsSlinky.opentracing.opentracingStrings.follows_from
-import typingsSlinky.opentracing.opentracingStrings.httpDotmethod
-import typingsSlinky.opentracing.opentracingStrings.httpDotstatus_code
-import typingsSlinky.opentracing.opentracingStrings.httpDoturl
-import typingsSlinky.opentracing.opentracingStrings.http_headers
-import typingsSlinky.opentracing.opentracingStrings.message_busDotdestination
-import typingsSlinky.opentracing.opentracingStrings.peerDotaddress
-import typingsSlinky.opentracing.opentracingStrings.peerDothostname
-import typingsSlinky.opentracing.opentracingStrings.peerDotipv4
-import typingsSlinky.opentracing.opentracingStrings.peerDotipv6
-import typingsSlinky.opentracing.opentracingStrings.peerDotport
-import typingsSlinky.opentracing.opentracingStrings.peerDotservice
-import typingsSlinky.opentracing.opentracingStrings.producer
-import typingsSlinky.opentracing.opentracingStrings.samplingDotpriority
-import typingsSlinky.opentracing.opentracingStrings.server
-import typingsSlinky.opentracing.opentracingStrings.spanDotkind
-import typingsSlinky.opentracing.opentracingStrings.text_map
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -73,11 +46,11 @@ object mod extends js.Object {
   class Tracer ()
     extends typingsSlinky.opentracing.tracerMod.Tracer
   
-  val FORMAT_BINARY: binary = js.native
-  val FORMAT_HTTP_HEADERS: http_headers = js.native
-  val FORMAT_TEXT_MAP: text_map = js.native
-  val REFERENCE_CHILD_OF: child_of = js.native
-  val REFERENCE_FOLLOWS_FROM: follows_from = js.native
+  val FORMAT_BINARY: /* "binary" */ String = js.native
+  val FORMAT_HTTP_HEADERS: /* "http_headers" */ String = js.native
+  val FORMAT_TEXT_MAP: /* "text_map" */ String = js.native
+  val REFERENCE_CHILD_OF: /* "child_of" */ String = js.native
+  val REFERENCE_FOLLOWS_FROM: /* "follows_from" */ String = js.native
   def childOf(spanContext: typingsSlinky.opentracing.spanContextMod.default): typingsSlinky.opentracing.referenceMod.default = js.native
   def childOf(spanContext: typingsSlinky.opentracing.spanMod.default): typingsSlinky.opentracing.referenceMod.default = js.native
   def followsFrom(spanContext: typingsSlinky.opentracing.spanContextMod.default): typingsSlinky.opentracing.referenceMod.default = js.native
@@ -86,28 +59,28 @@ object mod extends js.Object {
   def initGlobalTracer(tracer: typingsSlinky.opentracing.tracerMod.default): Unit = js.native
   @js.native
   object Tags extends js.Object {
-    val COMPONENT: component = js.native
-    val DB_INSTANCE: dbDotinstance = js.native
-    val DB_STATEMENT: dbDotstatement = js.native
-    val DB_TYPE: dbDottype = js.native
-    val DB_USER: dbDotuser = js.native
-    val ERROR: error = js.native
-    val HTTP_METHOD: httpDotmethod = js.native
-    val HTTP_STATUS_CODE: httpDotstatus_code = js.native
-    val HTTP_URL: httpDoturl = js.native
-    val MESSAGE_BUS_DESTINATION: message_busDotdestination = js.native
-    val PEER_ADDRESS: peerDotaddress = js.native
-    val PEER_HOSTNAME: peerDothostname = js.native
-    val PEER_HOST_IPV4: peerDotipv4 = js.native
-    val PEER_HOST_IPV6: peerDotipv6 = js.native
-    val PEER_PORT: peerDotport = js.native
-    val PEER_SERVICE: peerDotservice = js.native
-    val SAMPLING_PRIORITY: samplingDotpriority = js.native
-    val SPAN_KIND: spanDotkind = js.native
-    val SPAN_KIND_MESSAGING_CONSUMER: consumer = js.native
-    val SPAN_KIND_MESSAGING_PRODUCER: producer = js.native
-    val SPAN_KIND_RPC_CLIENT: client = js.native
-    val SPAN_KIND_RPC_SERVER: server = js.native
+    val COMPONENT: /* "component" */ String = js.native
+    val DB_INSTANCE: /* "db.instance" */ String = js.native
+    val DB_STATEMENT: /* "db.statement" */ String = js.native
+    val DB_TYPE: /* "db.type" */ String = js.native
+    val DB_USER: /* "db.user" */ String = js.native
+    val ERROR: /* "error" */ String = js.native
+    val HTTP_METHOD: /* "http.method" */ String = js.native
+    val HTTP_STATUS_CODE: /* "http.status_code" */ String = js.native
+    val HTTP_URL: /* "http.url" */ String = js.native
+    val MESSAGE_BUS_DESTINATION: /* "message_bus.destination" */ String = js.native
+    val PEER_ADDRESS: /* "peer.address" */ String = js.native
+    val PEER_HOSTNAME: /* "peer.hostname" */ String = js.native
+    val PEER_HOST_IPV4: /* "peer.ipv4" */ String = js.native
+    val PEER_HOST_IPV6: /* "peer.ipv6" */ String = js.native
+    val PEER_PORT: /* "peer.port" */ String = js.native
+    val PEER_SERVICE: /* "peer.service" */ String = js.native
+    val SAMPLING_PRIORITY: /* "sampling.priority" */ String = js.native
+    val SPAN_KIND: /* "span.kind" */ String = js.native
+    val SPAN_KIND_MESSAGING_CONSUMER: /* "consumer" */ String = js.native
+    val SPAN_KIND_MESSAGING_PRODUCER: /* "producer" */ String = js.native
+    val SPAN_KIND_RPC_CLIENT: /* "client" */ String = js.native
+    val SPAN_KIND_RPC_SERVER: /* "server" */ String = js.native
   }
   
 }

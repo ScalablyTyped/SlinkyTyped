@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VisibilityRule extends js.Object {
   /**
     * A comma-separated list of visibility labels that apply to the `selector`.
@@ -22,22 +23,52 @@ trait VisibilityRule extends js.Object {
     * Removing GOOGLE_INTERNAL from this restriction will break clients that
     * rely on this method and only had access to it through GOOGLE_INTERNAL.
     */
-  var restriction: js.UndefOr[String] = js.undefined
+  var restriction: js.UndefOr[String] = js.native
   /**
     * Selects methods, messages, fields, enums, etc. to which this rule applies.
     *
     * Refer to selector for syntax details.
     */
-  var selector: js.UndefOr[String] = js.undefined
+  var selector: js.UndefOr[String] = js.native
 }
 
 object VisibilityRule {
   @scala.inline
-  def apply(restriction: String = null, selector: String = null): VisibilityRule = {
+  def apply(): VisibilityRule = {
     val __obj = js.Dynamic.literal()
-    if (restriction != null) __obj.updateDynamic("restriction")(restriction.asInstanceOf[js.Any])
-    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisibilityRule]
   }
+  @scala.inline
+  implicit class VisibilityRuleOps[Self <: VisibilityRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRestriction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restriction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestriction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restriction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelector(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

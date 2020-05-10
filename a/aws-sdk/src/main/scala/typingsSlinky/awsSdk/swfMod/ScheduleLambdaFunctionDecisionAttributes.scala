@@ -30,18 +30,65 @@ trait ScheduleLambdaFunctionDecisionAttributes extends js.Object {
 
 object ScheduleLambdaFunctionDecisionAttributes {
   @scala.inline
-  def apply(
-    id: FunctionId,
-    name: FunctionName,
-    control: Data = null,
-    input: FunctionInput = null,
-    startToCloseTimeout: DurationInSecondsOptional = null
-  ): ScheduleLambdaFunctionDecisionAttributes = {
+  def apply(id: FunctionId, name: FunctionName): ScheduleLambdaFunctionDecisionAttributes = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (control != null) __obj.updateDynamic("control")(control.asInstanceOf[js.Any])
-    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
-    if (startToCloseTimeout != null) __obj.updateDynamic("startToCloseTimeout")(startToCloseTimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScheduleLambdaFunctionDecisionAttributes]
   }
+  @scala.inline
+  implicit class ScheduleLambdaFunctionDecisionAttributesOps[Self <: ScheduleLambdaFunctionDecisionAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: FunctionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: FunctionName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withControl(value: Data): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInput(value: FunctionInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartToCloseTimeout(value: DurationInSecondsOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startToCloseTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartToCloseTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startToCloseTimeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

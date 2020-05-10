@@ -1,8 +1,8 @@
 package typingsSlinky.baseui.inputMod
 
+import org.scalajs.dom.raw.HTMLInputElement
 import slinky.web.SyntheticFocusEvent
 import typingsSlinky.react.mod.Component
-import typingsSlinky.std.HTMLInputElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class BaseInput ()
   extends Component[BaseInputProps[HTMLInputElement], InternalState, js.Any] {
-  def onBlur(e: SyntheticFocusEvent[org.scalajs.dom.raw.HTMLInputElement]): Unit = js.native
-  def onFocus(e: SyntheticFocusEvent[org.scalajs.dom.raw.HTMLInputElement]): Unit = js.native
+  def onBlur(e: SyntheticFocusEvent[HTMLInputElement]): Unit = js.native
+  def onFocus(e: SyntheticFocusEvent[HTMLInputElement]): Unit = js.native
 }
 

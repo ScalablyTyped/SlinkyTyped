@@ -13,16 +13,53 @@ trait VoiceMessageContent extends js.Object {
 
 object VoiceMessageContent {
   @scala.inline
-  def apply(
-    CallInstructionsMessage: CallInstructionsMessageType = null,
-    PlainTextMessage: PlainTextMessageType = null,
-    SSMLMessage: SSMLMessageType = null
-  ): VoiceMessageContent = {
+  def apply(): VoiceMessageContent = {
     val __obj = js.Dynamic.literal()
-    if (CallInstructionsMessage != null) __obj.updateDynamic("CallInstructionsMessage")(CallInstructionsMessage.asInstanceOf[js.Any])
-    if (PlainTextMessage != null) __obj.updateDynamic("PlainTextMessage")(PlainTextMessage.asInstanceOf[js.Any])
-    if (SSMLMessage != null) __obj.updateDynamic("SSMLMessage")(SSMLMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[VoiceMessageContent]
   }
+  @scala.inline
+  implicit class VoiceMessageContentOps[Self <: VoiceMessageContent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCallInstructionsMessage(value: CallInstructionsMessageType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CallInstructionsMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallInstructionsMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CallInstructionsMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlainTextMessage(value: PlainTextMessageType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlainTextMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlainTextMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlainTextMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSSMLMessage(value: SSMLMessageType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSMLMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSSMLMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSMLMessage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,10 +12,8 @@ trait TriggerSubMenuAction extends js.Object
 
 object TriggerSubMenuAction {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def click: typingsSlinky.rcMenu.rcMenuStrings.click = "click".asInstanceOf[typingsSlinky.rcMenu.rcMenuStrings.click]
   @scala.inline
-  def click: typingsSlinky.rcMenu.rcMenuStrings.click = this.cast("click")
-  @scala.inline
-  def hover: typingsSlinky.rcMenu.rcMenuStrings.hover = this.cast("hover")
+  def hover: typingsSlinky.rcMenu.rcMenuStrings.hover = "hover".asInstanceOf[typingsSlinky.rcMenu.rcMenuStrings.hover]
 }
 

@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait XmlChildElementType[T]
   extends XmlSchemaItem[T]
      with XmlSchemaItemParser {
@@ -13,49 +14,72 @@ trait XmlChildElementType[T]
     * @type {number}
     * @memberOf XmlChildElementType
     */
-  var maxOccurs: js.UndefOr[Double] = js.undefined
+  var maxOccurs: js.UndefOr[Double] = js.native
   /**
     * min occurs of items in collection
     *
     * @type {number}
     * @memberOf XmlChildElementType
     */
-  var minOccurs: js.UndefOr[Double] = js.undefined
+  var minOccurs: js.UndefOr[Double] = js.native
   /**
     * Don't add root element of XmlCollection to compiled element
     *
     * @type {boolean}
     * @memberOf XmlChildElementType
     */
-  var noRoot: js.UndefOr[Boolean] = js.undefined
+  var noRoot: js.UndefOr[Boolean] = js.native
 }
 
 object XmlChildElementType {
   @scala.inline
-  def apply[T](
-    converter: IConverter[T] = null,
-    defaultValue: T = null,
-    localName: String = null,
-    maxOccurs: Int | Double = null,
-    minOccurs: Int | Double = null,
-    namespaceURI: String = null,
-    noRoot: js.UndefOr[Boolean] = js.undefined,
-    parser: IXmlSerializableConstructor = null,
-    prefix: String = null,
-    required: js.UndefOr[Boolean] = js.undefined
-  ): XmlChildElementType[T] = {
+  def apply[T](): XmlChildElementType[T] = {
     val __obj = js.Dynamic.literal()
-    if (converter != null) __obj.updateDynamic("converter")(converter.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (localName != null) __obj.updateDynamic("localName")(localName.asInstanceOf[js.Any])
-    if (maxOccurs != null) __obj.updateDynamic("maxOccurs")(maxOccurs.asInstanceOf[js.Any])
-    if (minOccurs != null) __obj.updateDynamic("minOccurs")(minOccurs.asInstanceOf[js.Any])
-    if (namespaceURI != null) __obj.updateDynamic("namespaceURI")(namespaceURI.asInstanceOf[js.Any])
-    if (!js.isUndefined(noRoot)) __obj.updateDynamic("noRoot")(noRoot.asInstanceOf[js.Any])
-    if (parser != null) __obj.updateDynamic("parser")(parser.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
     __obj.asInstanceOf[XmlChildElementType[T]]
   }
+  @scala.inline
+  implicit class XmlChildElementTypeOps[Self[t] <: XmlChildElementType[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withMaxOccurs(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxOccurs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxOccurs: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxOccurs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinOccurs(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minOccurs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinOccurs: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minOccurs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoRoot(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noRoot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoRoot: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noRoot")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -2,7 +2,11 @@ package typingsSlinky.reResizable.mod
 
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.TouchEvent
 import slinky.core.facade.ReactElement
+import slinky.web.SyntheticMouseEvent
+import slinky.web.SyntheticTouchEvent
 import typingsSlinky.reResizable.AnonEnable
 import typingsSlinky.reResizable.AnonHeight
 import typingsSlinky.reResizable.AnonHeightWidth
@@ -15,9 +19,6 @@ import typingsSlinky.reResizable.reResizableStrings.row
 import typingsSlinky.reResizable.reResizableStrings.width
 import typingsSlinky.reResizable.resizerMod.Direction
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.NativeMouseEvent
-import typingsSlinky.std.MouseEvent
-import typingsSlinky.std.TouchEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +37,7 @@ class Resizable protected ()
   var resizableTop: Double = js.native
   var targetLeft: Double = js.native
   var targetTop: Double = js.native
-  def base(): js.UndefOr[HTMLElement] = js.native
+  def base: js.UndefOr[HTMLElement] = js.native
   def bindEvents(): Unit = js.native
   def calculateNewMaxFromBoundary(): AnonMaxHeight = js.native
   def calculateNewMaxFromBoundary(maxWidth: Double): AnonMaxHeight = js.native
@@ -60,19 +61,16 @@ class Resizable protected ()
   def onMouseMove(event: TouchEvent): Unit = js.native
   def onMouseUp(event: MouseEvent): Unit = js.native
   def onMouseUp(event: TouchEvent): Unit = js.native
-  def onResizeStart(
-    event: typingsSlinky.react.mod.MouseEvent[typingsSlinky.std.HTMLDivElement, NativeMouseEvent],
-    direction: Direction
-  ): Unit = js.native
-  def onResizeStart(event: typingsSlinky.react.mod.TouchEvent[typingsSlinky.std.HTMLDivElement], direction: Direction): Unit = js.native
-  def parentNode(): HTMLElement | Null = js.native
-  def propsSize(): Size = js.native
+  def onResizeStart(event: SyntheticMouseEvent[HTMLDivElement], direction: Direction): Unit = js.native
+  def onResizeStart(event: SyntheticTouchEvent[HTMLDivElement], direction: Direction): Unit = js.native
+  def parentNode: HTMLElement | Null = js.native
+  def propsSize: Size = js.native
   def ref(): Unit = js.native
   def ref(c: HTMLDivElement): Unit = js.native
   def renderResizer(): ReactElement | Null = js.native
   def setBoundingClientRect(): Unit = js.native
-  def size(): NumberSize = js.native
-  def sizeStyle(): AnonHeight = js.native
+  def size: NumberSize = js.native
+  def sizeStyle: AnonHeight = js.native
   def unbindEvents(): Unit = js.native
   def updateSize(size: Size): Unit = js.native
 }

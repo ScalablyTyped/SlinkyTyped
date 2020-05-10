@@ -63,38 +63,185 @@ trait Cluster extends js.Object {
 
 object Cluster {
   @scala.inline
-  def apply(
-    BackupPolicy: BackupPolicy = null,
-    Certificates: Certificates = null,
-    ClusterId: ClusterId = null,
-    CreateTimestamp: js.Date = null,
-    HsmType: HsmType = null,
-    Hsms: Hsms = null,
-    PreCoPassword: PreCoPassword = null,
-    SecurityGroup: SecurityGroup = null,
-    SourceBackupId: BackupId = null,
-    State: ClusterState = null,
-    StateMessage: StateMessage = null,
-    SubnetMapping: ExternalSubnetMapping = null,
-    TagList: TagList = null,
-    VpcId: VpcId = null
-  ): Cluster = {
+  def apply(): Cluster = {
     val __obj = js.Dynamic.literal()
-    if (BackupPolicy != null) __obj.updateDynamic("BackupPolicy")(BackupPolicy.asInstanceOf[js.Any])
-    if (Certificates != null) __obj.updateDynamic("Certificates")(Certificates.asInstanceOf[js.Any])
-    if (ClusterId != null) __obj.updateDynamic("ClusterId")(ClusterId.asInstanceOf[js.Any])
-    if (CreateTimestamp != null) __obj.updateDynamic("CreateTimestamp")(CreateTimestamp.asInstanceOf[js.Any])
-    if (HsmType != null) __obj.updateDynamic("HsmType")(HsmType.asInstanceOf[js.Any])
-    if (Hsms != null) __obj.updateDynamic("Hsms")(Hsms.asInstanceOf[js.Any])
-    if (PreCoPassword != null) __obj.updateDynamic("PreCoPassword")(PreCoPassword.asInstanceOf[js.Any])
-    if (SecurityGroup != null) __obj.updateDynamic("SecurityGroup")(SecurityGroup.asInstanceOf[js.Any])
-    if (SourceBackupId != null) __obj.updateDynamic("SourceBackupId")(SourceBackupId.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
-    if (StateMessage != null) __obj.updateDynamic("StateMessage")(StateMessage.asInstanceOf[js.Any])
-    if (SubnetMapping != null) __obj.updateDynamic("SubnetMapping")(SubnetMapping.asInstanceOf[js.Any])
-    if (TagList != null) __obj.updateDynamic("TagList")(TagList.asInstanceOf[js.Any])
-    if (VpcId != null) __obj.updateDynamic("VpcId")(VpcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Cluster]
   }
+  @scala.inline
+  implicit class ClusterOps[Self <: Cluster] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackupPolicy(value: BackupPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackupPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCertificates(value: Certificates): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterId(value: ClusterId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHsmType(value: HsmType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHsmType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHsms(value: Hsms): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hsms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHsms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hsms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreCoPassword(value: PreCoPassword): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreCoPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreCoPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreCoPassword")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityGroup(value: SecurityGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceBackupId(value: BackupId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceBackupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceBackupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceBackupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: ClusterState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStateMessage(value: StateMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StateMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStateMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StateMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetMapping(value: ExternalSubnetMapping): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetMapping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetMapping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetMapping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagList(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcId(value: VpcId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

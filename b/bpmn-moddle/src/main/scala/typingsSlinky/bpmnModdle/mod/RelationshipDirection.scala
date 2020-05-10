@@ -14,14 +14,12 @@ trait RelationshipDirection extends js.Object
 
 object RelationshipDirection {
   @scala.inline
-  def Backward: typingsSlinky.bpmnModdle.bpmnModdleStrings.Backward = this.cast("Backward")
+  def Backward: typingsSlinky.bpmnModdle.bpmnModdleStrings.Backward = "Backward".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.Backward]
   @scala.inline
-  def Both: typingsSlinky.bpmnModdle.bpmnModdleStrings.Both = this.cast("Both")
+  def Both: typingsSlinky.bpmnModdle.bpmnModdleStrings.Both = "Both".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.Both]
   @scala.inline
-  def Forward: typingsSlinky.bpmnModdle.bpmnModdleStrings.Forward = this.cast("Forward")
+  def Forward: typingsSlinky.bpmnModdle.bpmnModdleStrings.Forward = "Forward".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.Forward]
   @scala.inline
-  def None: typingsSlinky.bpmnModdle.bpmnModdleStrings.None = this.cast("None")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def None: typingsSlinky.bpmnModdle.bpmnModdleStrings.None = "None".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.None]
 }
 

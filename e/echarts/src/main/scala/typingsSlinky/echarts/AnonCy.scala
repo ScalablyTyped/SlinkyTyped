@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCy extends js.Object {
   /**
     * The x value of the center of the element in the coordinate
@@ -12,7 +13,7 @@ trait AnonCy extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_ring.shape.cx
     */
-  var cx: js.UndefOr[Double] = js.undefined
+  var cx: js.UndefOr[Double] = js.native
   /**
     * The y value of the center of the element in the coordinate
     * system of its parent.
@@ -20,32 +21,84 @@ trait AnonCy extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_ring.shape.cy
     */
-  var cy: js.UndefOr[Double] = js.undefined
+  var cy: js.UndefOr[Double] = js.native
   /**
     * Outside radius.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_ring.shape.r
     */
-  var r: js.UndefOr[Double] = js.undefined
+  var r: js.UndefOr[Double] = js.native
   /**
     * Inside radius.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_ring.shape.r0
     */
-  var r0: js.UndefOr[Double] = js.undefined
+  var r0: js.UndefOr[Double] = js.native
 }
 
 object AnonCy {
   @scala.inline
-  def apply(cx: Int | Double = null, cy: Int | Double = null, r: Int | Double = null, r0: Int | Double = null): AnonCy = {
+  def apply(): AnonCy = {
     val __obj = js.Dynamic.literal()
-    if (cx != null) __obj.updateDynamic("cx")(cx.asInstanceOf[js.Any])
-    if (cy != null) __obj.updateDynamic("cy")(cy.asInstanceOf[js.Any])
-    if (r != null) __obj.updateDynamic("r")(r.asInstanceOf[js.Any])
-    if (r0 != null) __obj.updateDynamic("r0")(r0.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCy]
   }
+  @scala.inline
+  implicit class AnonCyOps[Self <: AnonCy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cx")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withR(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("r")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutR: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("r")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withR0(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("r0")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutR0: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("r0")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -60,22 +60,89 @@ trait SchemaCondition extends js.Object {
 
 object SchemaCondition {
   @scala.inline
-  def apply(
-    devicePolicy: SchemaDevicePolicy = null,
-    ipSubnetworks: js.Array[String] = null,
-    members: js.Array[String] = null,
-    negate: js.UndefOr[Boolean] = js.undefined,
-    regions: js.Array[String] = null,
-    requiredAccessLevels: js.Array[String] = null
-  ): SchemaCondition = {
+  def apply(): SchemaCondition = {
     val __obj = js.Dynamic.literal()
-    if (devicePolicy != null) __obj.updateDynamic("devicePolicy")(devicePolicy.asInstanceOf[js.Any])
-    if (ipSubnetworks != null) __obj.updateDynamic("ipSubnetworks")(ipSubnetworks.asInstanceOf[js.Any])
-    if (members != null) __obj.updateDynamic("members")(members.asInstanceOf[js.Any])
-    if (!js.isUndefined(negate)) __obj.updateDynamic("negate")(negate.asInstanceOf[js.Any])
-    if (regions != null) __obj.updateDynamic("regions")(regions.asInstanceOf[js.Any])
-    if (requiredAccessLevels != null) __obj.updateDynamic("requiredAccessLevels")(requiredAccessLevels.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCondition]
   }
+  @scala.inline
+  implicit class SchemaConditionOps[Self <: SchemaCondition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDevicePolicy(value: SchemaDevicePolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devicePolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevicePolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devicePolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpSubnetworks(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipSubnetworks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpSubnetworks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipSubnetworks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMembers(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("members")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMembers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("members")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNegate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNegate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequiredAccessLevels(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredAccessLevels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequiredAccessLevels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredAccessLevels")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

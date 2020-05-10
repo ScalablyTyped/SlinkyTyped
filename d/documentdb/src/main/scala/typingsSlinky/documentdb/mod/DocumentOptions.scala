@@ -1,49 +1,40 @@
 package typingsSlinky.documentdb.mod
 
-import typingsSlinky.documentdb.AnonCondition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DocumentOptions extends RequestOptions {
   /** Disables the automatic id generation. If id is missing in the body and this option is true, an error will be returned. */
-  var disableAutomaticIdGeneration: js.UndefOr[Boolean] = js.undefined
+  var disableAutomaticIdGeneration: js.UndefOr[Boolean] = js.native
 }
 
 object DocumentOptions {
   @scala.inline
-  def apply(
-    accessCondition: AnonCondition = null,
-    consistencyLevel: String = null,
-    disableAutomaticIdGeneration: js.UndefOr[Boolean] = js.undefined,
-    enableCrossPartitionQuery: js.UndefOr[Boolean] = js.undefined,
-    indexingDirective: String = null,
-    maxDegreeOfParallelism: js.UndefOr[Boolean] = js.undefined,
-    offerThroughput: Int | Double = null,
-    offerType: String = null,
-    partitionKey: String | js.Array[String] = null,
-    populateQuotaInfo: js.UndefOr[Boolean] = js.undefined,
-    postTriggerInclude: String = null,
-    preTriggerInclude: String = null,
-    resourceTokenExpirySeconds: Int | Double = null,
-    sessionToken: String = null
-  ): DocumentOptions = {
+  def apply(): DocumentOptions = {
     val __obj = js.Dynamic.literal()
-    if (accessCondition != null) __obj.updateDynamic("accessCondition")(accessCondition.asInstanceOf[js.Any])
-    if (consistencyLevel != null) __obj.updateDynamic("consistencyLevel")(consistencyLevel.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableAutomaticIdGeneration)) __obj.updateDynamic("disableAutomaticIdGeneration")(disableAutomaticIdGeneration.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableCrossPartitionQuery)) __obj.updateDynamic("enableCrossPartitionQuery")(enableCrossPartitionQuery.asInstanceOf[js.Any])
-    if (indexingDirective != null) __obj.updateDynamic("indexingDirective")(indexingDirective.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxDegreeOfParallelism)) __obj.updateDynamic("maxDegreeOfParallelism")(maxDegreeOfParallelism.asInstanceOf[js.Any])
-    if (offerThroughput != null) __obj.updateDynamic("offerThroughput")(offerThroughput.asInstanceOf[js.Any])
-    if (offerType != null) __obj.updateDynamic("offerType")(offerType.asInstanceOf[js.Any])
-    if (partitionKey != null) __obj.updateDynamic("partitionKey")(partitionKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(populateQuotaInfo)) __obj.updateDynamic("populateQuotaInfo")(populateQuotaInfo.asInstanceOf[js.Any])
-    if (postTriggerInclude != null) __obj.updateDynamic("postTriggerInclude")(postTriggerInclude.asInstanceOf[js.Any])
-    if (preTriggerInclude != null) __obj.updateDynamic("preTriggerInclude")(preTriggerInclude.asInstanceOf[js.Any])
-    if (resourceTokenExpirySeconds != null) __obj.updateDynamic("resourceTokenExpirySeconds")(resourceTokenExpirySeconds.asInstanceOf[js.Any])
-    if (sessionToken != null) __obj.updateDynamic("sessionToken")(sessionToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentOptions]
   }
+  @scala.inline
+  implicit class DocumentOptionsOps[Self <: DocumentOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisableAutomaticIdGeneration(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAutomaticIdGeneration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableAutomaticIdGeneration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAutomaticIdGeneration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

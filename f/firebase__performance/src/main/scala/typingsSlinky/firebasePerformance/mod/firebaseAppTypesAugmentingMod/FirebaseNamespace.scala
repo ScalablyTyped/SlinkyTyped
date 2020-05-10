@@ -5,16 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FirebaseNamespace extends js.Object {
-  var performance: js.UndefOr[js.Function1[/* app */ js.UndefOr[FirebaseApp], FirebasePerformance]] = js.undefined
+  var performance: js.UndefOr[js.Function1[/* app */ js.UndefOr[FirebaseApp], FirebasePerformance]] = js.native
 }
 
 object FirebaseNamespace {
   @scala.inline
-  def apply(performance: /* app */ js.UndefOr[FirebaseApp] => FirebasePerformance = null): FirebaseNamespace = {
+  def apply(): FirebaseNamespace = {
     val __obj = js.Dynamic.literal()
-    if (performance != null) __obj.updateDynamic("performance")(js.Any.fromFunction1(performance))
     __obj.asInstanceOf[FirebaseNamespace]
   }
+  @scala.inline
+  implicit class FirebaseNamespaceOps[Self <: FirebaseNamespace] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPerformance(value: /* app */ js.UndefOr[FirebaseApp] => FirebasePerformance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("performance")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPerformance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("performance")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

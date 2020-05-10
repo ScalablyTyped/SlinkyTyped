@@ -72,40 +72,197 @@ trait SchemaPropertyDefinition extends js.Object {
 
 object SchemaPropertyDefinition {
   @scala.inline
-  def apply(
-    booleanPropertyOptions: SchemaBooleanPropertyOptions = null,
-    datePropertyOptions: SchemaDatePropertyOptions = null,
-    displayOptions: SchemaPropertyDisplayOptions = null,
-    doublePropertyOptions: SchemaDoublePropertyOptions = null,
-    enumPropertyOptions: SchemaEnumPropertyOptions = null,
-    htmlPropertyOptions: SchemaHtmlPropertyOptions = null,
-    integerPropertyOptions: SchemaIntegerPropertyOptions = null,
-    isFacetable: js.UndefOr[Boolean] = js.undefined,
-    isRepeatable: js.UndefOr[Boolean] = js.undefined,
-    isReturnable: js.UndefOr[Boolean] = js.undefined,
-    isSortable: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    objectPropertyOptions: SchemaObjectPropertyOptions = null,
-    textPropertyOptions: SchemaTextPropertyOptions = null,
-    timestampPropertyOptions: SchemaTimestampPropertyOptions = null
-  ): SchemaPropertyDefinition = {
+  def apply(): SchemaPropertyDefinition = {
     val __obj = js.Dynamic.literal()
-    if (booleanPropertyOptions != null) __obj.updateDynamic("booleanPropertyOptions")(booleanPropertyOptions.asInstanceOf[js.Any])
-    if (datePropertyOptions != null) __obj.updateDynamic("datePropertyOptions")(datePropertyOptions.asInstanceOf[js.Any])
-    if (displayOptions != null) __obj.updateDynamic("displayOptions")(displayOptions.asInstanceOf[js.Any])
-    if (doublePropertyOptions != null) __obj.updateDynamic("doublePropertyOptions")(doublePropertyOptions.asInstanceOf[js.Any])
-    if (enumPropertyOptions != null) __obj.updateDynamic("enumPropertyOptions")(enumPropertyOptions.asInstanceOf[js.Any])
-    if (htmlPropertyOptions != null) __obj.updateDynamic("htmlPropertyOptions")(htmlPropertyOptions.asInstanceOf[js.Any])
-    if (integerPropertyOptions != null) __obj.updateDynamic("integerPropertyOptions")(integerPropertyOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(isFacetable)) __obj.updateDynamic("isFacetable")(isFacetable.asInstanceOf[js.Any])
-    if (!js.isUndefined(isRepeatable)) __obj.updateDynamic("isRepeatable")(isRepeatable.asInstanceOf[js.Any])
-    if (!js.isUndefined(isReturnable)) __obj.updateDynamic("isReturnable")(isReturnable.asInstanceOf[js.Any])
-    if (!js.isUndefined(isSortable)) __obj.updateDynamic("isSortable")(isSortable.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (objectPropertyOptions != null) __obj.updateDynamic("objectPropertyOptions")(objectPropertyOptions.asInstanceOf[js.Any])
-    if (textPropertyOptions != null) __obj.updateDynamic("textPropertyOptions")(textPropertyOptions.asInstanceOf[js.Any])
-    if (timestampPropertyOptions != null) __obj.updateDynamic("timestampPropertyOptions")(timestampPropertyOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPropertyDefinition]
   }
+  @scala.inline
+  implicit class SchemaPropertyDefinitionOps[Self <: SchemaPropertyDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBooleanPropertyOptions(value: SchemaBooleanPropertyOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanPropertyOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBooleanPropertyOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanPropertyOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatePropertyOptions(value: SchemaDatePropertyOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datePropertyOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatePropertyOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datePropertyOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayOptions(value: SchemaPropertyDisplayOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoublePropertyOptions(value: SchemaDoublePropertyOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doublePropertyOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDoublePropertyOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doublePropertyOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnumPropertyOptions(value: SchemaEnumPropertyOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enumPropertyOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnumPropertyOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enumPropertyOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtmlPropertyOptions(value: SchemaHtmlPropertyOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlPropertyOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtmlPropertyOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlPropertyOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntegerPropertyOptions(value: SchemaIntegerPropertyOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integerPropertyOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntegerPropertyOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integerPropertyOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsFacetable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFacetable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsFacetable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFacetable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsRepeatable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRepeatable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsRepeatable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRepeatable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsReturnable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isReturnable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsReturnable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isReturnable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsSortable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSortable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsSortable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSortable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectPropertyOptions(value: SchemaObjectPropertyOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectPropertyOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectPropertyOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectPropertyOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextPropertyOptions(value: SchemaTextPropertyOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textPropertyOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextPropertyOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textPropertyOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestampPropertyOptions(value: SchemaTimestampPropertyOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampPropertyOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestampPropertyOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampPropertyOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

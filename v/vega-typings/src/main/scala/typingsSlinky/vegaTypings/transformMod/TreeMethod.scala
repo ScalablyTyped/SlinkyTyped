@@ -12,10 +12,8 @@ trait TreeMethod extends js.Object
 
 object TreeMethod {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cluster: typingsSlinky.vegaTypings.vegaTypingsStrings.cluster = "cluster".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.cluster]
   @scala.inline
-  def cluster: typingsSlinky.vegaTypings.vegaTypingsStrings.cluster = this.cast("cluster")
-  @scala.inline
-  def tidy: typingsSlinky.vegaTypings.vegaTypingsStrings.tidy = this.cast("tidy")
+  def tidy: typingsSlinky.vegaTypings.vegaTypingsStrings.tidy = "tidy".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.tidy]
 }
 

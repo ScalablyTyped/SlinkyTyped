@@ -12,40 +12,23 @@ import scala.scalajs.js.annotation._
 @js.native
 object redisClientFactory extends js.Object {
   @js.native
-  class AbortError () extends Error {
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
-  }
+  class AbortError ()
+    extends typingsSlinky.redis.mod.AbortError
   
   @js.native
-  class AggregateError () extends Error {
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
-  }
+  class AggregateError ()
+    extends typingsSlinky.redis.mod.AbortError
   
   @js.native
   class ParserError ()
     extends typingsSlinky.redis.mod.ParserError
   
   @js.native
-  class RedisError () extends Error {
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
-  }
+  class RedisError () extends Error
   
   @js.native
-  class ReplyError () extends Error {
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
-  }
+  class ReplyError ()
+    extends typingsSlinky.redis.mod.ReplyError
   
   val Multi: Instantiable0[typingsSlinky.redis.mod.Multi] = js.native
   val RedisClient: Instantiable1[/* options */ ClientOpts, typingsSlinky.redis.mod.RedisClient] = js.native
@@ -59,6 +42,6 @@ object redisClientFactory extends js.Object {
   def createClient(unix_socket: String): typingsSlinky.redis.mod.RedisClient = js.native
   def createClient(unix_socket: String, options: ClientOpts): typingsSlinky.redis.mod.RedisClient = js.native
   def print(err: Null, reply: js.Any): Unit = js.native
-  def print(err: Error, reply: js.Any): Unit = js.native
+  def print(err: js.Error, reply: js.Any): Unit = js.native
 }
 

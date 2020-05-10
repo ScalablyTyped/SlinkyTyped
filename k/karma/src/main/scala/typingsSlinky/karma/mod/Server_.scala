@@ -1,6 +1,5 @@
 package typingsSlinky.karma.mod
 
-import typingsSlinky.bluebird.mod.^
 import typingsSlinky.karma.karmaStrings.run_complete
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
@@ -30,7 +29,7 @@ class Server_ () extends EventEmitter {
   /**
     * Force a refresh of the file list
     */
-  def refreshFiles(): ^[_] = js.native
+  def refreshFiles(): js.Promise[_] = js.native
   /**
     * Start the server
     */

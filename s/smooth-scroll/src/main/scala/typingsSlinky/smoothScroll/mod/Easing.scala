@@ -23,32 +23,30 @@ trait Easing extends js.Object
 
 object Easing {
   @scala.inline
-  def Linear: typingsSlinky.smoothScroll.smoothScrollStrings.Linear = this.cast("Linear")
+  def Linear: typingsSlinky.smoothScroll.smoothScrollStrings.Linear = "Linear".asInstanceOf[typingsSlinky.smoothScroll.smoothScrollStrings.Linear]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def easeInCubic: typingsSlinky.smoothScroll.smoothScrollStrings.easeInCubic = "easeInCubic".asInstanceOf[typingsSlinky.smoothScroll.smoothScrollStrings.easeInCubic]
   @scala.inline
-  def easeInCubic: typingsSlinky.smoothScroll.smoothScrollStrings.easeInCubic = this.cast("easeInCubic")
+  def easeInOutCubic: typingsSlinky.smoothScroll.smoothScrollStrings.easeInOutCubic = "easeInOutCubic".asInstanceOf[typingsSlinky.smoothScroll.smoothScrollStrings.easeInOutCubic]
   @scala.inline
-  def easeInOutCubic: typingsSlinky.smoothScroll.smoothScrollStrings.easeInOutCubic = this.cast("easeInOutCubic")
+  def easeInOutQuad: typingsSlinky.smoothScroll.smoothScrollStrings.easeInOutQuad = "easeInOutQuad".asInstanceOf[typingsSlinky.smoothScroll.smoothScrollStrings.easeInOutQuad]
   @scala.inline
-  def easeInOutQuad: typingsSlinky.smoothScroll.smoothScrollStrings.easeInOutQuad = this.cast("easeInOutQuad")
+  def easeInOutQuart: typingsSlinky.smoothScroll.smoothScrollStrings.easeInOutQuart = "easeInOutQuart".asInstanceOf[typingsSlinky.smoothScroll.smoothScrollStrings.easeInOutQuart]
   @scala.inline
-  def easeInOutQuart: typingsSlinky.smoothScroll.smoothScrollStrings.easeInOutQuart = this.cast("easeInOutQuart")
+  def easeInOutQuint: typingsSlinky.smoothScroll.smoothScrollStrings.easeInOutQuint = "easeInOutQuint".asInstanceOf[typingsSlinky.smoothScroll.smoothScrollStrings.easeInOutQuint]
   @scala.inline
-  def easeInOutQuint: typingsSlinky.smoothScroll.smoothScrollStrings.easeInOutQuint = this.cast("easeInOutQuint")
+  def easeInQuad: typingsSlinky.smoothScroll.smoothScrollStrings.easeInQuad = "easeInQuad".asInstanceOf[typingsSlinky.smoothScroll.smoothScrollStrings.easeInQuad]
   @scala.inline
-  def easeInQuad: typingsSlinky.smoothScroll.smoothScrollStrings.easeInQuad = this.cast("easeInQuad")
+  def easeInQuart: typingsSlinky.smoothScroll.smoothScrollStrings.easeInQuart = "easeInQuart".asInstanceOf[typingsSlinky.smoothScroll.smoothScrollStrings.easeInQuart]
   @scala.inline
-  def easeInQuart: typingsSlinky.smoothScroll.smoothScrollStrings.easeInQuart = this.cast("easeInQuart")
+  def easeInQuint: typingsSlinky.smoothScroll.smoothScrollStrings.easeInQuint = "easeInQuint".asInstanceOf[typingsSlinky.smoothScroll.smoothScrollStrings.easeInQuint]
   @scala.inline
-  def easeInQuint: typingsSlinky.smoothScroll.smoothScrollStrings.easeInQuint = this.cast("easeInQuint")
+  def easeOutCubic: typingsSlinky.smoothScroll.smoothScrollStrings.easeOutCubic = "easeOutCubic".asInstanceOf[typingsSlinky.smoothScroll.smoothScrollStrings.easeOutCubic]
   @scala.inline
-  def easeOutCubic: typingsSlinky.smoothScroll.smoothScrollStrings.easeOutCubic = this.cast("easeOutCubic")
+  def easeOutQuad: typingsSlinky.smoothScroll.smoothScrollStrings.easeOutQuad = "easeOutQuad".asInstanceOf[typingsSlinky.smoothScroll.smoothScrollStrings.easeOutQuad]
   @scala.inline
-  def easeOutQuad: typingsSlinky.smoothScroll.smoothScrollStrings.easeOutQuad = this.cast("easeOutQuad")
+  def easeOutQuart: typingsSlinky.smoothScroll.smoothScrollStrings.easeOutQuart = "easeOutQuart".asInstanceOf[typingsSlinky.smoothScroll.smoothScrollStrings.easeOutQuart]
   @scala.inline
-  def easeOutQuart: typingsSlinky.smoothScroll.smoothScrollStrings.easeOutQuart = this.cast("easeOutQuart")
-  @scala.inline
-  def easeOutQuint: typingsSlinky.smoothScroll.smoothScrollStrings.easeOutQuint = this.cast("easeOutQuint")
+  def easeOutQuint: typingsSlinky.smoothScroll.smoothScrollStrings.easeOutQuint = "easeOutQuint".asInstanceOf[typingsSlinky.smoothScroll.smoothScrollStrings.easeOutQuint]
 }
 

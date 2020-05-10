@@ -18,11 +18,41 @@ trait AttachVolumeOutput extends js.Object {
 
 object AttachVolumeOutput {
   @scala.inline
-  def apply(TargetARN: TargetARN = null, VolumeARN: VolumeARN = null): AttachVolumeOutput = {
+  def apply(): AttachVolumeOutput = {
     val __obj = js.Dynamic.literal()
-    if (TargetARN != null) __obj.updateDynamic("TargetARN")(TargetARN.asInstanceOf[js.Any])
-    if (VolumeARN != null) __obj.updateDynamic("VolumeARN")(VolumeARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttachVolumeOutput]
   }
+  @scala.inline
+  implicit class AttachVolumeOutputOps[Self <: AttachVolumeOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTargetARN(value: TargetARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeARN(value: VolumeARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeARN")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

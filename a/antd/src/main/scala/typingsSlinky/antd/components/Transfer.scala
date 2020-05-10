@@ -1,12 +1,10 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLUListElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.html.ul.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.PartialTransferLocale
 import typingsSlinky.antd.transferListMod.TransferListProps
 import typingsSlinky.antd.transferMod.ListStyle
@@ -22,61 +20,73 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Transfer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Transfer {
   @JSImport("antd/lib/transfer", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterOption(value: (/* inputValue */ String, /* item */ TransferItem) => Boolean): this.type = set("filterOption", js.Any.fromFunction2(value))
+    @scala.inline
+    def footer(value: /* props */ TransferListProps => TagMod[Any]): this.type = set("footer", js.Any.fromFunction1(value))
+    @scala.inline
+    def locale(value: PartialTransferLocale): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(
+      value: (/* targetKeys */ js.Array[String], /* direction */ String, /* moveKeys */ js.Array[String]) => Unit
+    ): this.type = set("onChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def onScroll(
+      value: (/* direction */ TransferDirection, /* e */ SyntheticEvent[Event_, HTMLUListElement]) => Unit
+    ): this.type = set("onScroll", js.Any.fromFunction2(value))
+    @scala.inline
+    def onSearch(value: (/* direction */ TransferDirection, /* value */ String) => Unit): this.type = set("onSearch", js.Any.fromFunction2(value))
+    @scala.inline
+    def onSelectChange(
+      value: (/* sourceSelectedKeys */ js.Array[String], /* targetSelectedKeys */ js.Array[String]) => Unit
+    ): this.type = set("onSelectChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def operationStyle(value: CSSProperties): this.type = set("operationStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def operations(value: js.Array[String]): this.type = set("operations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def render(value: /* item */ TransferItem => RenderResult): this.type = set("render", js.Any.fromFunction1(value))
+    @scala.inline
+    def rowKey(value: /* record */ TransferItem => String): this.type = set("rowKey", js.Any.fromFunction1(value))
+    @scala.inline
+    def selectAllLabels(value: js.Array[SelectAllLabel]): this.type = set("selectAllLabels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showSearch(value: Boolean): this.type = set("showSearch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showSelectAll(value: Boolean): this.type = set("showSelectAll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetKeys(value: js.Array[String]): this.type = set("targetKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titles(value: js.Array[String]): this.type = set("titles", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: TransferProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     dataSource: js.Array[TransferItem],
-    listStyle: (js.Function1[/* style */ ListStyle, CSSProperties]) | CSSProperties,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    filterOption: (/* inputValue */ String, /* item */ TransferItem) => Boolean = null,
-    footer: /* props */ TransferListProps => TagMod[Any] = null,
-    locale: PartialTransferLocale = null,
-    onChange: (/* targetKeys */ js.Array[String], /* direction */ String, /* moveKeys */ js.Array[String]) => Unit = null,
-    onScroll: (/* direction */ TransferDirection, /* e */ SyntheticEvent[Event_, HTMLUListElement]) => Unit = null,
-    onSearch: (/* direction */ TransferDirection, /* value */ String) => Unit = null,
-    onSelectChange: (/* sourceSelectedKeys */ js.Array[String], /* targetSelectedKeys */ js.Array[String]) => Unit = null,
-    operationStyle: CSSProperties = null,
-    operations: js.Array[String] = null,
-    prefixCls: String = null,
-    render: /* item */ TransferItem => RenderResult = null,
-    rowKey: /* record */ TransferItem => String = null,
-    selectAllLabels: js.Array[SelectAllLabel] = null,
-    selectedKeys: js.Array[String] = null,
-    showSearch: js.UndefOr[Boolean] = js.undefined,
-    showSelectAll: js.UndefOr[Boolean] = js.undefined,
-    targetKeys: js.Array[String] = null,
-    titles: js.Array[String] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any], listStyle = listStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (filterOption != null) __obj.updateDynamic("filterOption")(js.Any.fromFunction2(filterOption))
-    if (footer != null) __obj.updateDynamic("footer")(js.Any.fromFunction1(footer))
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction3(onChange))
-    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction2(onScroll))
-    if (onSearch != null) __obj.updateDynamic("onSearch")(js.Any.fromFunction2(onSearch))
-    if (onSelectChange != null) __obj.updateDynamic("onSelectChange")(js.Any.fromFunction2(onSelectChange))
-    if (operationStyle != null) __obj.updateDynamic("operationStyle")(operationStyle.asInstanceOf[js.Any])
-    if (operations != null) __obj.updateDynamic("operations")(operations.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction1(render))
-    if (rowKey != null) __obj.updateDynamic("rowKey")(js.Any.fromFunction1(rowKey))
-    if (selectAllLabels != null) __obj.updateDynamic("selectAllLabels")(selectAllLabels.asInstanceOf[js.Any])
-    if (selectedKeys != null) __obj.updateDynamic("selectedKeys")(selectedKeys.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSearch)) __obj.updateDynamic("showSearch")(showSearch.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSelectAll)) __obj.updateDynamic("showSelectAll")(showSelectAll.asInstanceOf[js.Any])
-    if (targetKeys != null) __obj.updateDynamic("targetKeys")(targetKeys.asInstanceOf[js.Any])
-    if (titles != null) __obj.updateDynamic("titles")(titles.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    listStyle: (js.Function1[/* style */ ListStyle, CSSProperties]) | CSSProperties
+  ): Builder = {
+    val __props = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any], listStyle = listStyle.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TransferProps]))
   }
-  type Props = TransferProps
 }
 

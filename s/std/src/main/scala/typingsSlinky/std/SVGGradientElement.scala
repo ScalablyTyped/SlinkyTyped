@@ -51,13 +51,14 @@ trait SVGGradientElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGGradientElement")
 @js.native
-object SVGGradientElement extends Instantiable0[SVGGradientElement] {
+object SVGGradientElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGGradientElement] {
   val SVG_SPREADMETHOD_PAD: Double = js.native
   val SVG_SPREADMETHOD_REFLECT: Double = js.native
   val SVG_SPREADMETHOD_REPEAT: Double = js.native

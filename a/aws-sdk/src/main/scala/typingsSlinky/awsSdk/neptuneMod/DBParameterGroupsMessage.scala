@@ -18,11 +18,41 @@ trait DBParameterGroupsMessage extends js.Object {
 
 object DBParameterGroupsMessage {
   @scala.inline
-  def apply(DBParameterGroups: DBParameterGroupList = null, Marker: String = null): DBParameterGroupsMessage = {
+  def apply(): DBParameterGroupsMessage = {
     val __obj = js.Dynamic.literal()
-    if (DBParameterGroups != null) __obj.updateDynamic("DBParameterGroups")(DBParameterGroups.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[DBParameterGroupsMessage]
   }
+  @scala.inline
+  implicit class DBParameterGroupsMessageOps[Self <: DBParameterGroupsMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDBParameterGroups(value: DBParameterGroupList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBParameterGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBParameterGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBParameterGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

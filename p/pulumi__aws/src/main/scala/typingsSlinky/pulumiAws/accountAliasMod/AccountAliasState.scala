@@ -15,10 +15,29 @@ trait AccountAliasState extends js.Object {
 
 object AccountAliasState {
   @scala.inline
-  def apply(accountAlias: Input[String] = null): AccountAliasState = {
+  def apply(): AccountAliasState = {
     val __obj = js.Dynamic.literal()
-    if (accountAlias != null) __obj.updateDynamic("accountAlias")(accountAlias.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountAliasState]
   }
+  @scala.inline
+  implicit class AccountAliasStateOps[Self <: AccountAliasState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountAlias(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountAlias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountAlias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountAlias")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

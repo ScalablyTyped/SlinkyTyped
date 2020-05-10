@@ -1,6 +1,5 @@
 package typingsSlinky.jasmine.jasmine
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object stringMatching extends js.Object {
   def apply(str: String): AsymmetricMatcher[String] = js.native
-  def apply(str: RegExp): AsymmetricMatcher[String] = js.native
+  def apply(str: js.RegExp): AsymmetricMatcher[String] = js.native
 }
 

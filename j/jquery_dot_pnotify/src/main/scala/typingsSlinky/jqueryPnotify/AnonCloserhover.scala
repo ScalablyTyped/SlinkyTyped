@@ -4,39 +4,87 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCloserhover extends js.Object {
   /**
     * Provide a button for the user to manually close the notice.
     */
-  var closer: js.UndefOr[Boolean] = js.undefined
+  var closer: js.UndefOr[Boolean] = js.native
   /**
     * Only show the closer button on hover.
     */
-  var closer_hover: js.UndefOr[Boolean] = js.undefined
+  var closer_hover: js.UndefOr[Boolean] = js.native
   /**
     * Provide a button for the user to manually stick the notice.
     */
-  var sticker: js.UndefOr[Boolean] = js.undefined
+  var sticker: js.UndefOr[Boolean] = js.native
   /**
     * Only show the sticker button on hover.
     */
-  var sticker_hover: js.UndefOr[Boolean] = js.undefined
+  var sticker_hover: js.UndefOr[Boolean] = js.native
 }
 
 object AnonCloserhover {
   @scala.inline
-  def apply(
-    closer: js.UndefOr[Boolean] = js.undefined,
-    closer_hover: js.UndefOr[Boolean] = js.undefined,
-    sticker: js.UndefOr[Boolean] = js.undefined,
-    sticker_hover: js.UndefOr[Boolean] = js.undefined
-  ): AnonCloserhover = {
+  def apply(): AnonCloserhover = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(closer)) __obj.updateDynamic("closer")(closer.asInstanceOf[js.Any])
-    if (!js.isUndefined(closer_hover)) __obj.updateDynamic("closer_hover")(closer_hover.asInstanceOf[js.Any])
-    if (!js.isUndefined(sticker)) __obj.updateDynamic("sticker")(sticker.asInstanceOf[js.Any])
-    if (!js.isUndefined(sticker_hover)) __obj.updateDynamic("sticker_hover")(sticker_hover.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCloserhover]
   }
+  @scala.inline
+  implicit class AnonCloserhoverOps[Self <: AnonCloserhover] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloser(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloser_hover(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closer_hover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloser_hover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closer_hover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSticker(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sticker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSticker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sticker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSticker_hover(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sticker_hover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSticker_hover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sticker_hover")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,16 +22,53 @@ trait ApplicationSettingsResponse extends js.Object {
 
 object ApplicationSettingsResponse {
   @scala.inline
-  def apply(
-    Enabled: js.UndefOr[scala.Boolean] = js.undefined,
-    S3BucketName: String = null,
-    SettingsGroup: SettingsGroup = null
-  ): ApplicationSettingsResponse = {
+  def apply(): ApplicationSettingsResponse = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.asInstanceOf[js.Any])
-    if (S3BucketName != null) __obj.updateDynamic("S3BucketName")(S3BucketName.asInstanceOf[js.Any])
-    if (SettingsGroup != null) __obj.updateDynamic("SettingsGroup")(SettingsGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationSettingsResponse]
   }
+  @scala.inline
+  implicit class ApplicationSettingsResponseOps[Self <: ApplicationSettingsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3BucketName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BucketName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3BucketName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BucketName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSettingsGroup(value: SettingsGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SettingsGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSettingsGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SettingsGroup")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

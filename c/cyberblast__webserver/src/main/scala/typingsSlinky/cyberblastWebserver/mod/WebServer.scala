@@ -1,6 +1,5 @@
 package typingsSlinky.cyberblastWebserver.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,9 +12,9 @@ class WebServer () extends js.Object {
   def respondError(error: String, context: ServerContext): js.Promise[Unit] = js.native
   def respondError(error: String, context: ServerContext, code: Double): js.Promise[Unit] = js.native
   def respondError(error: String, context: ServerContext, code: Double, message: String): js.Promise[Unit] = js.native
-  def respondError(error: Error, context: ServerContext): js.Promise[Unit] = js.native
-  def respondError(error: Error, context: ServerContext, code: Double): js.Promise[Unit] = js.native
-  def respondError(error: Error, context: ServerContext, code: Double, message: String): js.Promise[Unit] = js.native
+  def respondError(error: js.Error, context: ServerContext): js.Promise[Unit] = js.native
+  def respondError(error: js.Error, context: ServerContext, code: Double): js.Promise[Unit] = js.native
+  def respondError(error: js.Error, context: ServerContext, code: Double, message: String): js.Promise[Unit] = js.native
   def start(): js.Promise[Unit] = js.native
   def stop(): Unit = js.native
 }

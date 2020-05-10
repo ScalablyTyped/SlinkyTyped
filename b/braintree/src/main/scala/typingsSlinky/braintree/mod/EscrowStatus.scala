@@ -15,16 +15,14 @@ trait EscrowStatus extends js.Object
 
 object EscrowStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def held: typingsSlinky.braintree.braintreeStrings.held = "held".asInstanceOf[typingsSlinky.braintree.braintreeStrings.held]
   @scala.inline
-  def held: typingsSlinky.braintree.braintreeStrings.held = this.cast("held")
+  def hold_pending: typingsSlinky.braintree.braintreeStrings.hold_pending = "hold_pending".asInstanceOf[typingsSlinky.braintree.braintreeStrings.hold_pending]
   @scala.inline
-  def hold_pending: typingsSlinky.braintree.braintreeStrings.hold_pending = this.cast("hold_pending")
+  def refunded: typingsSlinky.braintree.braintreeStrings.refunded = "refunded".asInstanceOf[typingsSlinky.braintree.braintreeStrings.refunded]
   @scala.inline
-  def refunded: typingsSlinky.braintree.braintreeStrings.refunded = this.cast("refunded")
+  def release_pending: typingsSlinky.braintree.braintreeStrings.release_pending = "release_pending".asInstanceOf[typingsSlinky.braintree.braintreeStrings.release_pending]
   @scala.inline
-  def release_pending: typingsSlinky.braintree.braintreeStrings.release_pending = this.cast("release_pending")
-  @scala.inline
-  def released: typingsSlinky.braintree.braintreeStrings.released = this.cast("released")
+  def released: typingsSlinky.braintree.braintreeStrings.released = "released".asInstanceOf[typingsSlinky.braintree.braintreeStrings.released]
 }
 

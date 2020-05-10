@@ -14,10 +14,29 @@ trait DescribeConfigurationRecorderStatusRequest extends js.Object {
 
 object DescribeConfigurationRecorderStatusRequest {
   @scala.inline
-  def apply(ConfigurationRecorderNames: ConfigurationRecorderNameList = null): DescribeConfigurationRecorderStatusRequest = {
+  def apply(): DescribeConfigurationRecorderStatusRequest = {
     val __obj = js.Dynamic.literal()
-    if (ConfigurationRecorderNames != null) __obj.updateDynamic("ConfigurationRecorderNames")(ConfigurationRecorderNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeConfigurationRecorderStatusRequest]
   }
+  @scala.inline
+  implicit class DescribeConfigurationRecorderStatusRequestOps[Self <: DescribeConfigurationRecorderStatusRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigurationRecorderNames(value: ConfigurationRecorderNameList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationRecorderNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigurationRecorderNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationRecorderNames")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

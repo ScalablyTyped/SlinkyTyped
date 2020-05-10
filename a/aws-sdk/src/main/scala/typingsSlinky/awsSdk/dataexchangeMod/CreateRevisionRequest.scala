@@ -22,11 +22,47 @@ trait CreateRevisionRequest extends js.Object {
 
 object CreateRevisionRequest {
   @scala.inline
-  def apply(DataSetId: string, Comment: stringMin0Max16384 = null, Tags: MapOfString = null): CreateRevisionRequest = {
+  def apply(DataSetId: string): CreateRevisionRequest = {
     val __obj = js.Dynamic.literal(DataSetId = DataSetId.asInstanceOf[js.Any])
-    if (Comment != null) __obj.updateDynamic("Comment")(Comment.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateRevisionRequest]
   }
+  @scala.inline
+  implicit class CreateRevisionRequestOps[Self <: CreateRevisionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataSetId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComment(value: stringMin0Max16384): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: MapOfString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

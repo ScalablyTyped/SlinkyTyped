@@ -14,10 +14,29 @@ trait CreateDatasetResponse extends js.Object {
 
 object CreateDatasetResponse {
   @scala.inline
-  def apply(DatasetArn: Arn = null): CreateDatasetResponse = {
+  def apply(): CreateDatasetResponse = {
     val __obj = js.Dynamic.literal()
-    if (DatasetArn != null) __obj.updateDynamic("DatasetArn")(DatasetArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDatasetResponse]
   }
+  @scala.inline
+  implicit class CreateDatasetResponseOps[Self <: CreateDatasetResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDatasetArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatasetArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

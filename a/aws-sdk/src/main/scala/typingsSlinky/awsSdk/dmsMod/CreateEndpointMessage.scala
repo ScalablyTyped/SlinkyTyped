@@ -19,7 +19,7 @@ trait CreateEndpointMessage extends js.Object {
     */
   var DmsTransferSettings: js.UndefOr[typingsSlinky.awsSdk.dmsMod.DmsTransferSettings] = js.native
   /**
-    * Settings in JSON format for the target Amazon DynamoDB endpoint. For more information about the available settings, see Using Object Mapping to Migrate Data to DynamoDB in the AWS Database Migration Service User Guide. 
+    * Settings in JSON format for the target Amazon DynamoDB endpoint. For information about other available settings, see Using Object Mapping to Migrate Data to DynamoDB in the AWS Database Migration Service User Guide. 
     */
   var DynamoDbSettings: js.UndefOr[typingsSlinky.awsSdk.dmsMod.DynamoDbSettings] = js.native
   /**
@@ -27,7 +27,7 @@ trait CreateEndpointMessage extends js.Object {
     */
   var ElasticsearchSettings: js.UndefOr[typingsSlinky.awsSdk.dmsMod.ElasticsearchSettings] = js.native
   /**
-    * The database endpoint identifier. Identifiers must begin with a letter; must contain only ASCII letters, digits, and hyphens; and must not end with a hyphen or contain two consecutive hyphens.
+    * The database endpoint identifier. Identifiers must begin with a letter and must contain only ASCII letters, digits, and hyphens. They can't end with a hyphen or contain two consecutive hyphens.
     */
   var EndpointIdentifier: String = js.native
   /**
@@ -35,7 +35,7 @@ trait CreateEndpointMessage extends js.Object {
     */
   var EndpointType: ReplicationEndpointTypeValue = js.native
   /**
-    * The type of engine for the endpoint. Valid values, depending on the EndpointType value, include mysql, oracle, postgres, mariadb, aurora, aurora-postgresql, redshift, s3, db2, azuredb, sybase, dynamodb, mongodb, and sqlserver.
+    * The type of engine for the endpoint. Valid values, depending on the EndpointType value, include "mysql", "oracle", "postgres", "mariadb", "aurora", "aurora-postgresql", "redshift", "s3", "db2", "azuredb", "sybase", "dynamodb", "mongodb", "kinesis", "kafka", "elasticsearch", "documentdb", and "sqlserver".
     */
   var EngineName: String = js.native
   /**
@@ -47,7 +47,11 @@ trait CreateEndpointMessage extends js.Object {
     */
   var ExtraConnectionAttributes: js.UndefOr[String] = js.native
   /**
-    * Settings in JSON format for the target Amazon Kinesis Data Streams endpoint. For more information about the available settings, see Using Object Mapping to Migrate Data to a Kinesis Data Stream in the AWS Database Migration User Guide. 
+    * Settings in JSON format for the target Apache Kafka endpoint. For information about other available settings, see Using Object Mapping to Migrate Data to Apache Kafka in the AWS Database Migration User Guide. 
+    */
+  var KafkaSettings: js.UndefOr[typingsSlinky.awsSdk.dmsMod.KafkaSettings] = js.native
+  /**
+    * Settings in JSON format for the target endpoint for Amazon Kinesis Data Streams. For information about other available settings, see Using Object Mapping to Migrate Data to a Kinesis Data Stream in the AWS Database Migration User Guide. 
     */
   var KinesisSettings: js.UndefOr[typingsSlinky.awsSdk.dmsMod.KinesisSettings] = js.native
   /**
@@ -55,7 +59,7 @@ trait CreateEndpointMessage extends js.Object {
     */
   var KmsKeyId: js.UndefOr[String] = js.native
   /**
-    * Settings in JSON format for the source MongoDB endpoint. For more information about the available settings, see the configuration properties section in  Using MongoDB as a Target for AWS Database Migration Service in the AWS Database Migration Service User Guide. 
+    * Settings in JSON format for the source MongoDB endpoint. For more information about the available settings, see the configuration properties section in Using MongoDB as a Target for AWS Database Migration Service in the AWS Database Migration Service User Guide. 
     */
   var MongoDbSettings: js.UndefOr[typingsSlinky.awsSdk.dmsMod.MongoDbSettings] = js.native
   /**
@@ -95,51 +99,275 @@ trait CreateEndpointMessage extends js.Object {
 
 object CreateEndpointMessage {
   @scala.inline
-  def apply(
-    EndpointIdentifier: String,
-    EndpointType: ReplicationEndpointTypeValue,
-    EngineName: String,
-    CertificateArn: String = null,
-    DatabaseName: String = null,
-    DmsTransferSettings: DmsTransferSettings = null,
-    DynamoDbSettings: DynamoDbSettings = null,
-    ElasticsearchSettings: ElasticsearchSettings = null,
-    ExternalTableDefinition: String = null,
-    ExtraConnectionAttributes: String = null,
-    KinesisSettings: KinesisSettings = null,
-    KmsKeyId: String = null,
-    MongoDbSettings: MongoDbSettings = null,
-    Password: SecretString = null,
-    Port: Int | Double = null,
-    RedshiftSettings: RedshiftSettings = null,
-    S3Settings: S3Settings = null,
-    ServerName: String = null,
-    ServiceAccessRoleArn: String = null,
-    SslMode: DmsSslModeValue = null,
-    Tags: TagList = null,
-    Username: String = null
-  ): CreateEndpointMessage = {
+  def apply(EndpointIdentifier: String, EndpointType: ReplicationEndpointTypeValue, EngineName: String): CreateEndpointMessage = {
     val __obj = js.Dynamic.literal(EndpointIdentifier = EndpointIdentifier.asInstanceOf[js.Any], EndpointType = EndpointType.asInstanceOf[js.Any], EngineName = EngineName.asInstanceOf[js.Any])
-    if (CertificateArn != null) __obj.updateDynamic("CertificateArn")(CertificateArn.asInstanceOf[js.Any])
-    if (DatabaseName != null) __obj.updateDynamic("DatabaseName")(DatabaseName.asInstanceOf[js.Any])
-    if (DmsTransferSettings != null) __obj.updateDynamic("DmsTransferSettings")(DmsTransferSettings.asInstanceOf[js.Any])
-    if (DynamoDbSettings != null) __obj.updateDynamic("DynamoDbSettings")(DynamoDbSettings.asInstanceOf[js.Any])
-    if (ElasticsearchSettings != null) __obj.updateDynamic("ElasticsearchSettings")(ElasticsearchSettings.asInstanceOf[js.Any])
-    if (ExternalTableDefinition != null) __obj.updateDynamic("ExternalTableDefinition")(ExternalTableDefinition.asInstanceOf[js.Any])
-    if (ExtraConnectionAttributes != null) __obj.updateDynamic("ExtraConnectionAttributes")(ExtraConnectionAttributes.asInstanceOf[js.Any])
-    if (KinesisSettings != null) __obj.updateDynamic("KinesisSettings")(KinesisSettings.asInstanceOf[js.Any])
-    if (KmsKeyId != null) __obj.updateDynamic("KmsKeyId")(KmsKeyId.asInstanceOf[js.Any])
-    if (MongoDbSettings != null) __obj.updateDynamic("MongoDbSettings")(MongoDbSettings.asInstanceOf[js.Any])
-    if (Password != null) __obj.updateDynamic("Password")(Password.asInstanceOf[js.Any])
-    if (Port != null) __obj.updateDynamic("Port")(Port.asInstanceOf[js.Any])
-    if (RedshiftSettings != null) __obj.updateDynamic("RedshiftSettings")(RedshiftSettings.asInstanceOf[js.Any])
-    if (S3Settings != null) __obj.updateDynamic("S3Settings")(S3Settings.asInstanceOf[js.Any])
-    if (ServerName != null) __obj.updateDynamic("ServerName")(ServerName.asInstanceOf[js.Any])
-    if (ServiceAccessRoleArn != null) __obj.updateDynamic("ServiceAccessRoleArn")(ServiceAccessRoleArn.asInstanceOf[js.Any])
-    if (SslMode != null) __obj.updateDynamic("SslMode")(SslMode.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (Username != null) __obj.updateDynamic("Username")(Username.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateEndpointMessage]
   }
+  @scala.inline
+  implicit class CreateEndpointMessageOps[Self <: CreateEndpointMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndpointIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndpointType(value: ReplicationEndpointTypeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEngineName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCertificateArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatabaseName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabaseName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDmsTransferSettings(value: DmsTransferSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DmsTransferSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDmsTransferSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DmsTransferSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamoDbSettings(value: DynamoDbSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DynamoDbSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamoDbSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DynamoDbSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElasticsearchSettings(value: ElasticsearchSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticsearchSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticsearchSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticsearchSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalTableDefinition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalTableDefinition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalTableDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalTableDefinition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtraConnectionAttributes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtraConnectionAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtraConnectionAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtraConnectionAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKafkaSettings(value: KafkaSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KafkaSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKafkaSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KafkaSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKinesisSettings(value: KinesisSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKinesisSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsKeyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMongoDbSettings(value: MongoDbSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MongoDbSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMongoDbSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MongoDbSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassword(value: SecretString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Password")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRedshiftSettings(value: RedshiftSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RedshiftSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRedshiftSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RedshiftSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3Settings(value: S3Settings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Settings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3Settings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Settings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceAccessRoleArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceAccessRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceAccessRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceAccessRoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSslMode(value: DmsSslModeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SslMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSslMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SslMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

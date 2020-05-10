@@ -4,31 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UpdateOptions extends ReplaceOptions {
-  var keepNull: js.UndefOr[Boolean] = js.undefined
-  var mergeObjects: js.UndefOr[Boolean] = js.undefined
+  var keepNull: js.UndefOr[Boolean] = js.native
+  var mergeObjects: js.UndefOr[Boolean] = js.native
 }
 
 object UpdateOptions {
   @scala.inline
-  def apply(
-    keepNull: js.UndefOr[Boolean] = js.undefined,
-    mergeObjects: js.UndefOr[Boolean] = js.undefined,
-    overwrite: js.UndefOr[Boolean] = js.undefined,
-    returnNew: js.UndefOr[Boolean] = js.undefined,
-    returnOld: js.UndefOr[Boolean] = js.undefined,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    waitForSync: js.UndefOr[Boolean] = js.undefined
-  ): UpdateOptions = {
+  def apply(): UpdateOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(keepNull)) __obj.updateDynamic("keepNull")(keepNull.asInstanceOf[js.Any])
-    if (!js.isUndefined(mergeObjects)) __obj.updateDynamic("mergeObjects")(mergeObjects.asInstanceOf[js.Any])
-    if (!js.isUndefined(overwrite)) __obj.updateDynamic("overwrite")(overwrite.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnNew)) __obj.updateDynamic("returnNew")(returnNew.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnOld)) __obj.updateDynamic("returnOld")(returnOld.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.asInstanceOf[js.Any])
-    if (!js.isUndefined(waitForSync)) __obj.updateDynamic("waitForSync")(waitForSync.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateOptions]
   }
+  @scala.inline
+  implicit class UpdateOptionsOps[Self <: UpdateOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKeepNull(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepNull")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepNull")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMergeObjects(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeObjects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMergeObjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeObjects")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

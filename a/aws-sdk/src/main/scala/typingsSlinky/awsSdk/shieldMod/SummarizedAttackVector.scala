@@ -18,10 +18,35 @@ trait SummarizedAttackVector extends js.Object {
 
 object SummarizedAttackVector {
   @scala.inline
-  def apply(VectorType: String, VectorCounters: SummarizedCounterList = null): SummarizedAttackVector = {
+  def apply(VectorType: String): SummarizedAttackVector = {
     val __obj = js.Dynamic.literal(VectorType = VectorType.asInstanceOf[js.Any])
-    if (VectorCounters != null) __obj.updateDynamic("VectorCounters")(VectorCounters.asInstanceOf[js.Any])
     __obj.asInstanceOf[SummarizedAttackVector]
   }
+  @scala.inline
+  implicit class SummarizedAttackVectorOps[Self <: SummarizedAttackVector] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVectorType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VectorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVectorCounters(value: SummarizedCounterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VectorCounters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVectorCounters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VectorCounters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

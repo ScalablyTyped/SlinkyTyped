@@ -1,9 +1,8 @@
 package typingsSlinky.antDesignReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.AnonBadge
 import typingsSlinky.antDesignReactNative.libStyleMod.Theme
 import typingsSlinky.antDesignReactNative.tabBarItemMod.TabBarItemProps
@@ -16,40 +15,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TabBarItem
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object TabBarItem {
   @JSImport("@ant-design/react-native/lib/tab-bar/TabBarItem", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: selected */
-  def apply(
-    title: String,
-    badge: String | Double = null,
-    icon: TabBarIcon = null,
-    iconStyle: StyleProp[ImageStyle] = null,
-    onPress: () => Unit = null,
-    renderAsOriginal: js.UndefOr[Boolean] = js.undefined,
-    selectedIcon: TabBarIcon = null,
-    styles: ReturnType[js.Function1[/* theme */ Theme, AnonBadge]] = null,
-    tintColor: String = null,
-    unselectedTintColor: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
-    if (badge != null) __obj.updateDynamic("badge")(badge.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (iconStyle != null) __obj.updateDynamic("iconStyle")(iconStyle.asInstanceOf[js.Any])
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction0(onPress))
-    if (!js.isUndefined(renderAsOriginal)) __obj.updateDynamic("renderAsOriginal")(renderAsOriginal.asInstanceOf[js.Any])
-    if (selectedIcon != null) __obj.updateDynamic("selectedIcon")(selectedIcon.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (tintColor != null) __obj.updateDynamic("tintColor")(tintColor.asInstanceOf[js.Any])
-    if (unselectedTintColor != null) __obj.updateDynamic("unselectedTintColor")(unselectedTintColor.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def badge(value: String | Double): this.type = set("badge", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: TabBarIcon): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconStyle(value: StyleProp[ImageStyle]): this.type = set("iconStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconStyleNull: this.type = set("iconStyle", null)
+    @scala.inline
+    def onPress(value: () => Unit): this.type = set("onPress", js.Any.fromFunction0(value))
+    @scala.inline
+    def renderAsOriginal(value: Boolean): this.type = set("renderAsOriginal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selected(value: Boolean): this.type = set("selected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedIconReactElement(value: ReactElement): this.type = set("selectedIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedIcon(value: TabBarIcon): this.type = set("selectedIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styles(value: ReturnType[js.Function1[/* theme */ Theme, AnonBadge]]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unselectedTintColor(value: String): this.type = set("unselectedTintColor", value.asInstanceOf[js.Any])
   }
-  type Props = TabBarItemProps
+  
+  def withProps(p: TabBarItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(title: String): Builder = {
+    val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TabBarItemProps]))
+  }
 }
 

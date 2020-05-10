@@ -2,7 +2,7 @@ package typingsSlinky.samchon.collectionsMod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable3
-import typingsSlinky.tstl.IteratoranyanyanyanyEquals
+import typingsSlinky.tstl.Iteratoranyanyanyany
 import typingsSlinky.tstl.mapContainerMod.MapContainer
 import typingsSlinky.tstl.mod.base.Container
 import scala.scalajs.js
@@ -44,7 +44,7 @@ object HashMultiMapCollection extends js.Object {
         /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
-        IteratoranyanyanyanyEquals, 
+        Iteratoranyanyanyany, 
         typingsSlinky.tstl.mapElementListMod.MapElementList.ReverseIterator[
           /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
           /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
@@ -64,7 +64,7 @@ object HashMultiMapCollection extends js.Object {
         /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
-        IteratoranyanyanyanyEquals, 
+        Iteratoranyanyanyany, 
         typingsSlinky.tstl.mapElementListMod.MapElementList.ReverseIterator[
           /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
           /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 

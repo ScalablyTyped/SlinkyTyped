@@ -1,9 +1,9 @@
 package typingsSlinky.dojo.dojo
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.AnonType
 import typingsSlinky.dojo.dojox.dtl.ObjectArgs
 import typingsSlinky.dojo.dojox.dtl.StringArgs
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -21,28 +21,30 @@ import scala.scalajs.js.annotation._
 @JSImport("office-ui-fabric-react/lib/common/DirectionalHint", JSImport.Namespace)
 @js.native
 object directionalHintMod extends js.Object {
+  /* Inlined {  topLeftEdge  :0,   topCenter  :1,   topRightEdge  :2,   topAutoEdge  :3,   bottomLeftEdge  :4,   bottomCenter  :5,   bottomRightEdge  :6,   bottomAutoEdge  :7,   leftTopEdge  :8,   leftCenter  :9,   leftBottomEdge  :10,   rightTopEdge  :11,   rightCenter  :12,   rightBottomEdge  :13}[keyof {  topLeftEdge  :0,   topCenter  :1,   topRightEdge  :2,   topAutoEdge  :3,   bottomLeftEdge  :4,   bottomCenter  :5,   bottomRightEdge  :6,   bottomAutoEdge  :7,   leftTopEdge  :8,   leftCenter  :9,   leftBottomEdge  :10,   rightTopEdge  :11,   rightCenter  :12,   rightBottomEdge  :13}] */
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`3`
-    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`13`
-    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`2`
-    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`4`
-    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`0`
-    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`7`
-    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`5`
-    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`12`
     - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`11`
-    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`6`
-    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`10`
-    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`9`
+    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`7`
+    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`13`
+    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`4`
     - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`8`
+    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`3`
+    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`0`
+    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`5`
+    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`9`
+    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`10`
     - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`1`
+    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`6`
+    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`2`
+    - typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`12`
   */
   trait DirectionalHint extends js.Object
   
   @js.native
   object DirectionalHint extends js.Object {
     /**
-      * Appear below the target element, aligning with the target element such that the callout tends toward the center of the screen.
+      * Appear below the target element, aligning with the target element such that the callout tends toward
+      * the center of the screen.
       */
     var bottomAutoEdge: `7` = js.native
     /**
@@ -82,7 +84,8 @@ object directionalHintMod extends js.Object {
       */
     var rightTopEdge: `11` = js.native
     /**
-      * Appear above the target element, aligning with the target element such that the callout tends toward the center of the screen.
+      * Appear above the target element, aligning with the target element such that the callout tends toward
+      * the center of the screen.
       */
     var topAutoEdge: `3` = js.native
     /**

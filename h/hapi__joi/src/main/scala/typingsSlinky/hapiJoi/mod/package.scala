@@ -36,7 +36,7 @@ package object mod {
   type SchemaLike = java.lang.String | scala.Double | scala.Boolean | js.Object | scala.Null | typingsSlinky.hapiJoi.mod.Schema | typingsSlinky.hapiJoi.mod.SchemaMap[js.Any]
   type SchemaMap[TSchema] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in keyof TSchema ]:? @hapi/joi.@hapi/joi.SchemaLike | std.Array<@hapi/joi.@hapi/joi.SchemaLike>}
-    */ typingsSlinky.hapiJoi.hapiJoiStrings.SchemaMap with js.Any
+    */ typingsSlinky.hapiJoi.hapiJoiStrings.SchemaMap with org.scalablytyped.runtime.TopLevel[js.Any]
   type ValidationErrorFunction = js.Function1[
     /* errors */ js.Array[typingsSlinky.hapiJoi.mod.ErrorReport], 
     java.lang.String | typingsSlinky.hapiJoi.mod.ValidationErrorItem | js.Error

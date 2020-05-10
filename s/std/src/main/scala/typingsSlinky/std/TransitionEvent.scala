@@ -17,10 +17,10 @@ trait TransitionEvent extends Event_ {
 @JSGlobal("TransitionEvent")
 @js.native
 object TransitionEvent
-  extends Instantiable1[/* type */ java.lang.String, TransitionEvent]
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.TransitionEvent]
      with Instantiable2[
       /* type */ java.lang.String, 
       /* transitionEventInitDict */ TransitionEventInit, 
-      TransitionEvent
+      org.scalajs.dom.raw.TransitionEvent
     ]
 

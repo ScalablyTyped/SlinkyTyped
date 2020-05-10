@@ -17,7 +17,7 @@ object removeEventListener_MSPointerLeave extends js.Object {
   def apply(
     `type`: MSPointerLeave,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

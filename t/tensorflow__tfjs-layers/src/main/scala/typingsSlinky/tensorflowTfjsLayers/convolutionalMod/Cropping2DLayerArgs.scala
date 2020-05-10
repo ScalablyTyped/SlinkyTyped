@@ -1,15 +1,12 @@
 package typingsSlinky.tensorflowTfjsLayers.convolutionalMod
 
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.DataFormat
-import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.LayerArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Cropping2DLayerArgs extends LayerArgs {
   /**
     * Dimension of the cropping along the width and the height.
@@ -23,7 +20,7 @@ trait Cropping2DLayerArgs extends LayerArgs {
     *   interpreted as
     *   `[[top_crop, bottom_crop], [left_crop, right_crop]]`
     */
-  var cropping: Double | (js.Tuple2[Double | (js.Tuple2[Double, Double]), Double | (js.Tuple2[Double, Double])])
+  var cropping: Double | (js.Tuple2[Double | (js.Tuple2[Double, Double]), Double | (js.Tuple2[Double, Double])]) = js.native
   /**
     * Format of the data, which determines the ordering of the dimensions in
     * the inputs.
@@ -36,34 +33,44 @@ trait Cropping2DLayerArgs extends LayerArgs {
     *
     * Defaults to `channels_last`.
     */
-  var dataFormat: js.UndefOr[DataFormat] = js.undefined
+  var dataFormat: js.UndefOr[DataFormat] = js.native
 }
 
 object Cropping2DLayerArgs {
   @scala.inline
   def apply(
-    cropping: Double | (js.Tuple2[Double | (js.Tuple2[Double, Double]), Double | (js.Tuple2[Double, Double])]),
-    batchInputShape: Shape = null,
-    batchSize: Int | Double = null,
-    dataFormat: DataFormat = null,
-    dtype: DataType = null,
-    inputDType: DataType = null,
-    inputShape: Shape = null,
-    name: String = null,
-    trainable: js.UndefOr[Boolean] = js.undefined,
-    weights: js.Array[Tensor_[Rank]] = null
+    cropping: Double | (js.Tuple2[Double | (js.Tuple2[Double, Double]), Double | (js.Tuple2[Double, Double])])
   ): Cropping2DLayerArgs = {
     val __obj = js.Dynamic.literal(cropping = cropping.asInstanceOf[js.Any])
-    if (batchInputShape != null) __obj.updateDynamic("batchInputShape")(batchInputShape.asInstanceOf[js.Any])
-    if (batchSize != null) __obj.updateDynamic("batchSize")(batchSize.asInstanceOf[js.Any])
-    if (dataFormat != null) __obj.updateDynamic("dataFormat")(dataFormat.asInstanceOf[js.Any])
-    if (dtype != null) __obj.updateDynamic("dtype")(dtype.asInstanceOf[js.Any])
-    if (inputDType != null) __obj.updateDynamic("inputDType")(inputDType.asInstanceOf[js.Any])
-    if (inputShape != null) __obj.updateDynamic("inputShape")(inputShape.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(trainable)) __obj.updateDynamic("trainable")(trainable.asInstanceOf[js.Any])
-    if (weights != null) __obj.updateDynamic("weights")(weights.asInstanceOf[js.Any])
     __obj.asInstanceOf[Cropping2DLayerArgs]
   }
+  @scala.inline
+  implicit class Cropping2DLayerArgsOps[Self <: Cropping2DLayerArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCropping(
+      value: Double | (js.Tuple2[Double | (js.Tuple2[Double, Double]), Double | (js.Tuple2[Double, Double])])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cropping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDataFormat(value: DataFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataFormat")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

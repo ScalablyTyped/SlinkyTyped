@@ -19,16 +19,14 @@ trait Client extends js.Object
 
 object Client {
   @scala.inline
-  def Mobile: typingsSlinky.xrm.xrmStrings.Mobile = this.cast("Mobile")
+  def Mobile: typingsSlinky.xrm.xrmStrings.Mobile = "Mobile".asInstanceOf[typingsSlinky.xrm.xrmStrings.Mobile]
   @scala.inline
-  def Outlook: typingsSlinky.xrm.xrmStrings.Outlook = this.cast("Outlook")
+  def Outlook: typingsSlinky.xrm.xrmStrings.Outlook = "Outlook".asInstanceOf[typingsSlinky.xrm.xrmStrings.Outlook]
   @scala.inline
-  def USD: UnifiedServiceDesk = this.cast("UnifiedServiceDesk")
+  def USD: UnifiedServiceDesk = "UnifiedServiceDesk".asInstanceOf[UnifiedServiceDesk]
   @scala.inline
-  def UnifiedServiceDesk: typingsSlinky.xrm.xrmStrings.UnifiedServiceDesk = this.cast("UnifiedServiceDesk")
+  def UnifiedServiceDesk: typingsSlinky.xrm.xrmStrings.UnifiedServiceDesk = "UnifiedServiceDesk".asInstanceOf[typingsSlinky.xrm.xrmStrings.UnifiedServiceDesk]
   @scala.inline
-  def Web: typingsSlinky.xrm.xrmStrings.Web = this.cast("Web")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Web: typingsSlinky.xrm.xrmStrings.Web = "Web".asInstanceOf[typingsSlinky.xrm.xrmStrings.Web]
 }
 

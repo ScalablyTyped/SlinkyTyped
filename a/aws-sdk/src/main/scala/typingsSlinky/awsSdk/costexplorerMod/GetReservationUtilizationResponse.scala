@@ -22,15 +22,47 @@ trait GetReservationUtilizationResponse extends js.Object {
 
 object GetReservationUtilizationResponse {
   @scala.inline
-  def apply(
-    UtilizationsByTime: UtilizationsByTime,
-    NextPageToken: NextPageToken = null,
-    Total: ReservationAggregates = null
-  ): GetReservationUtilizationResponse = {
+  def apply(UtilizationsByTime: UtilizationsByTime): GetReservationUtilizationResponse = {
     val __obj = js.Dynamic.literal(UtilizationsByTime = UtilizationsByTime.asInstanceOf[js.Any])
-    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
-    if (Total != null) __obj.updateDynamic("Total")(Total.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetReservationUtilizationResponse]
   }
+  @scala.inline
+  implicit class GetReservationUtilizationResponseOps[Self <: GetReservationUtilizationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUtilizationsByTime(value: UtilizationsByTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UtilizationsByTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: NextPageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotal(value: ReservationAggregates): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Total")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Total")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

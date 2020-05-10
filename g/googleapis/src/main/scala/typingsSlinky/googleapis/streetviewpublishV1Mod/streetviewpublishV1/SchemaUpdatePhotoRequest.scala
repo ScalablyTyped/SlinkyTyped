@@ -33,11 +33,41 @@ trait SchemaUpdatePhotoRequest extends js.Object {
 
 object SchemaUpdatePhotoRequest {
   @scala.inline
-  def apply(photo: SchemaPhoto = null, updateMask: String = null): SchemaUpdatePhotoRequest = {
+  def apply(): SchemaUpdatePhotoRequest = {
     val __obj = js.Dynamic.literal()
-    if (photo != null) __obj.updateDynamic("photo")(photo.asInstanceOf[js.Any])
-    if (updateMask != null) __obj.updateDynamic("updateMask")(updateMask.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdatePhotoRequest]
   }
+  @scala.inline
+  implicit class SchemaUpdatePhotoRequestOps[Self <: SchemaUpdatePhotoRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPhoto(value: SchemaPhoto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("photo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhoto: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("photo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateMask(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateMask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

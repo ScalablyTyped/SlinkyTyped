@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var args: js.UndefOr[js.Any] = js.undefined
-  var backoff: js.UndefOr[Double] = js.undefined
-  var context: js.UndefOr[js.Any] = js.undefined
-  var interval: js.UndefOr[Double] = js.undefined
-  var max_interval: js.UndefOr[Double] = js.undefined
-  var max_tries: js.UndefOr[Double] = js.undefined
-  var predicate: js.UndefOr[js.Any] = js.undefined
-  var throw_original: js.UndefOr[Boolean] = js.undefined
-  var timeout: js.UndefOr[Double] = js.undefined
+  var args: js.UndefOr[js.Any] = js.native
+  var backoff: js.UndefOr[Double] = js.native
+  var context: js.UndefOr[js.Any] = js.native
+  var interval: js.UndefOr[Double] = js.native
+  var max_interval: js.UndefOr[Double] = js.native
+  var max_tries: js.UndefOr[Double] = js.native
+  var predicate: js.UndefOr[js.Any] = js.native
+  var throw_original: js.UndefOr[Boolean] = js.native
+  var timeout: js.UndefOr[Double] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    args: js.Any = null,
-    backoff: Int | Double = null,
-    context: js.Any = null,
-    interval: Int | Double = null,
-    max_interval: Int | Double = null,
-    max_tries: Int | Double = null,
-    predicate: js.Any = null,
-    throw_original: js.UndefOr[Boolean] = js.undefined,
-    timeout: Int | Double = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
-    if (backoff != null) __obj.updateDynamic("backoff")(backoff.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
-    if (max_interval != null) __obj.updateDynamic("max_interval")(max_interval.asInstanceOf[js.Any])
-    if (max_tries != null) __obj.updateDynamic("max_tries")(max_tries.asInstanceOf[js.Any])
-    if (predicate != null) __obj.updateDynamic("predicate")(predicate.asInstanceOf[js.Any])
-    if (!js.isUndefined(throw_original)) __obj.updateDynamic("throw_original")(throw_original.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArgs(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArgs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackoff(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backoff")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackoff: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backoff")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContext(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax_interval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax_interval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax_tries(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_tries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax_tries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_tries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPredicate(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("predicate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPredicate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("predicate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThrow_original(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("throw_original")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThrow_original: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("throw_original")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

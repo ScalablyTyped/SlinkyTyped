@@ -28,16 +28,53 @@ trait SchemaTableRow extends js.Object {
 
 object SchemaTableRow {
   @scala.inline
-  def apply(
-    rowHeight: SchemaDimension = null,
-    tableCells: js.Array[SchemaTableCell] = null,
-    tableRowProperties: SchemaTableRowProperties = null
-  ): SchemaTableRow = {
+  def apply(): SchemaTableRow = {
     val __obj = js.Dynamic.literal()
-    if (rowHeight != null) __obj.updateDynamic("rowHeight")(rowHeight.asInstanceOf[js.Any])
-    if (tableCells != null) __obj.updateDynamic("tableCells")(tableCells.asInstanceOf[js.Any])
-    if (tableRowProperties != null) __obj.updateDynamic("tableRowProperties")(tableRowProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTableRow]
   }
+  @scala.inline
+  implicit class SchemaTableRowOps[Self <: SchemaTableRow] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRowHeight(value: SchemaDimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableCells(value: js.Array[SchemaTableCell]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCells")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableCells: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCells")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableRowProperties(value: SchemaTableRowProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRowProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableRowProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRowProperties")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

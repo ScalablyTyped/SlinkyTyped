@@ -11,5 +11,6 @@ import scala.scalajs.js.annotation._
   * this. Demo purposes only.
   *
   */
+@js.native
 trait mobileAll extends js.Object
 

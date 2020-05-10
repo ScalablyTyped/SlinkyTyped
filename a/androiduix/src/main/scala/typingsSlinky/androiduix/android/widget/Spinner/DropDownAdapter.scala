@@ -1,8 +1,5 @@
 package typingsSlinky.androiduix.android.widget.Spinner
 
-import typingsSlinky.androiduix.android.database.DataSetObserver
-import typingsSlinky.androiduix.android.view.View
-import typingsSlinky.androiduix.android.view.ViewGroup
 import typingsSlinky.androiduix.android.widget.ListAdapter
 import typingsSlinky.androiduix.android.widget.SpinnerAdapter
 import scala.scalajs.js
@@ -17,31 +14,5 @@ class DropDownAdapter protected ()
   def this(adapter: SpinnerAdapter) = this()
   var mAdapter: js.Any = js.native
   var mListAdapter: js.Any = js.native
-  /* CompleteClass */
-  override def areAllItemsEnabled(): Boolean = js.native
-  /* CompleteClass */
-  override def getCount(): Double = js.native
-  /* CompleteClass */
-  override def getDropDownView(position: Double, convertView: View, parent: ViewGroup): View = js.native
-  /* CompleteClass */
-  override def getItem(position: Double): js.Any = js.native
-  /* CompleteClass */
-  override def getItemId(position: Double): Double = js.native
-  /* CompleteClass */
-  override def getItemViewType(position: Double): Double = js.native
-  /* CompleteClass */
-  override def getView(position: Double, convertView: View, parent: ViewGroup): View = js.native
-  /* CompleteClass */
-  override def getViewTypeCount(): Double = js.native
-  /* CompleteClass */
-  override def hasStableIds(): Boolean = js.native
-  /* CompleteClass */
-  override def isEmpty(): Boolean = js.native
-  /* CompleteClass */
-  override def isEnabled(position: Double): Boolean = js.native
-  /* CompleteClass */
-  override def registerDataSetObserver(observer: DataSetObserver): Unit = js.native
-  /* CompleteClass */
-  override def unregisterDataSetObserver(observer: DataSetObserver): Unit = js.native
 }
 

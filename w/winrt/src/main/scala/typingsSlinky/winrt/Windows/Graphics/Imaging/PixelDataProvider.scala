@@ -6,8 +6,5 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.Graphics.Imaging.PixelDataProvider")
 @js.native
-class PixelDataProvider () extends IPixelDataProvider {
-  /* CompleteClass */
-  override def detachPixelData(): scala.scalajs.js.typedarray.Uint8Array = js.native
-}
+class PixelDataProvider () extends IPixelDataProvider
 

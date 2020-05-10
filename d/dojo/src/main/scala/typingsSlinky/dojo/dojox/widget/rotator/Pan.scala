@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait Pan extends js.Object {
   /**
     * Returns a dojo.Animation that either pans left or right to the next pane.
@@ -39,31 +40,31 @@ trait Pan extends js.Object {
     *
     * @param args
     */
-  def pan(args: js.Object): js.Any
+  def pan(args: js.Object): js.Any = js.native
   /**
     * Returns a dojo.Animation that pans in the next rotator pane from the top.
     *
     * @param args
     */
-  def panDown(args: js.Object): js.Any
+  def panDown(args: js.Object): js.Any = js.native
   /**
     * Returns a dojo.Animation that pans in the next rotator pane from the left.
     *
     * @param args
     */
-  def panLeft(args: js.Object): js.Any
+  def panLeft(args: js.Object): js.Any = js.native
   /**
     * Returns a dojo.Animation that pans in the next rotator pane from the right.
     *
     * @param args
     */
-  def panRight(args: js.Object): js.Any
+  def panRight(args: js.Object): js.Any = js.native
   /**
     * Returns a dojo.Animation that pans in the next rotator pane from the bottom.
     *
     * @param args
     */
-  def panUp(args: js.Object): js.Any
+  def panUp(args: js.Object): js.Any = js.native
 }
 
 object Pan {
@@ -76,8 +77,45 @@ object Pan {
     panUp: js.Object => js.Any
   ): Pan = {
     val __obj = js.Dynamic.literal(pan = js.Any.fromFunction1(pan), panDown = js.Any.fromFunction1(panDown), panLeft = js.Any.fromFunction1(panLeft), panRight = js.Any.fromFunction1(panRight), panUp = js.Any.fromFunction1(panUp))
-  
     __obj.asInstanceOf[Pan]
   }
+  @scala.inline
+  implicit class PanOps[Self <: Pan] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPan(value: js.Object => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pan")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPanDown(value: js.Object => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panDown")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPanLeft(value: js.Object => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panLeft")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPanRight(value: js.Object => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panRight")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPanUp(value: js.Object => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panUp")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,17 +1,18 @@
 package typingsSlinky.reactVirtualized.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.reactVirtualized.esScrollSyncMod.ScrollSyncProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ScrollSync
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.reactVirtualized.mod.ScrollSync] {
+object ScrollSync {
   @JSImport("react-virtualized", "ScrollSync")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ScrollSyncProps): Default[tag.type, typingsSlinky.reactVirtualized.mod.ScrollSync] = new Default[tag.type, typingsSlinky.reactVirtualized.mod.ScrollSync](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ScrollSync.type): Default[tag.type, typingsSlinky.reactVirtualized.mod.ScrollSync] = new Default[tag.type, typingsSlinky.reactVirtualized.mod.ScrollSync](js.Array(this.component, js.Dictionary.empty))()
 }
 

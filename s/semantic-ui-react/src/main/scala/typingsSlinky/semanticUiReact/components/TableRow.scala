@@ -1,10 +1,7 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticVERTICALALIGNMENTS
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.center
@@ -16,42 +13,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TableRow
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object TableRow {
   @JSImport("semantic-ui-react/dist/commonjs/collections/Table/TableRow", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled */
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    as: js.Any = null,
-    cellAs: js.Any = null,
-    cells: SemanticShorthandCollection[TableCellProps] = null,
-    error: js.UndefOr[Boolean] = js.undefined,
-    negative: js.UndefOr[Boolean] = js.undefined,
-    positive: js.UndefOr[Boolean] = js.undefined,
-    textAlign: center | left | right = null,
-    verticalAlign: SemanticVERTICALALIGNMENTS = null,
-    warning: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (cellAs != null) __obj.updateDynamic("cellAs")(cellAs.asInstanceOf[js.Any])
-    if (cells != null) __obj.updateDynamic("cells")(cells.asInstanceOf[js.Any])
-    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (!js.isUndefined(negative)) __obj.updateDynamic("negative")(negative.asInstanceOf[js.Any])
-    if (!js.isUndefined(positive)) __obj.updateDynamic("positive")(positive.asInstanceOf[js.Any])
-    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
-    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
-    if (!js.isUndefined(warning)) __obj.updateDynamic("warning")(warning.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cellAs(value: js.Any): this.type = set("cellAs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cells(value: SemanticShorthandCollection[TableCellProps]): this.type = set("cells", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def negative(value: Boolean): this.type = set("negative", value.asInstanceOf[js.Any])
+    @scala.inline
+    def positive(value: Boolean): this.type = set("positive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textAlign(value: center | left | right): this.type = set("textAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalAlign(value: SemanticVERTICALALIGNMENTS): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def warning(value: Boolean): this.type = set("warning", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TableRowProps
+  
+  def withProps(p: TableRowProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TableRow.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

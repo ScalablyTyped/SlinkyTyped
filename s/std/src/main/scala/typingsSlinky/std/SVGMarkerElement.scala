@@ -56,7 +56,7 @@ trait SVGMarkerElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def setOrientToAngle(angle: org.scalajs.dom.raw.SVGAngle): Unit = js.native
   def setOrientToAuto(): Unit = js.native
@@ -64,7 +64,8 @@ trait SVGMarkerElement
 
 @JSGlobal("SVGMarkerElement")
 @js.native
-object SVGMarkerElement extends Instantiable0[SVGMarkerElement] {
+object SVGMarkerElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGMarkerElement] {
   val SVG_MARKERUNITS_STROKEWIDTH: Double = js.native
   val SVG_MARKERUNITS_UNKNOWN: Double = js.native
   val SVG_MARKERUNITS_USERSPACEONUSE: Double = js.native

@@ -133,7 +133,7 @@ package object sesv2Mod {
   type Percentage100Wrapper = scala.Double
   type PoolName = java.lang.String
   type PrivateKey = java.lang.String
-  type RawMessageData = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.sesv2Mod.Blob | java.lang.String
+  type RawMessageData = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.sesv2Mod.Blob | java.lang.String
   type RblName = java.lang.String
   type ReportId = java.lang.String
   type ReportName = java.lang.String

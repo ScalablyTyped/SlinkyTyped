@@ -12,39 +12,133 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SpinnerProps extends js.Object {
-  var animation: js.UndefOr[none | slide | fade] = js.undefined
-  var cancelable: js.UndefOr[Boolean] = js.undefined
-  var color: js.UndefOr[String] = js.undefined
-  var overlayColor: js.UndefOr[String] = js.undefined
-  var size: js.UndefOr[normal | small | large] = js.undefined
-  var textContent: js.UndefOr[String] = js.undefined
-  var textStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var animation: js.UndefOr[none | slide | fade] = js.native
+  var cancelable: js.UndefOr[Boolean] = js.native
+  var color: js.UndefOr[String] = js.native
+  var overlayColor: js.UndefOr[String] = js.native
+  var size: js.UndefOr[normal | small | large] = js.native
+  var textContent: js.UndefOr[String] = js.native
+  var textStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
+  var visible: js.UndefOr[Boolean] = js.native
 }
 
 object SpinnerProps {
   @scala.inline
-  def apply(
-    animation: none | slide | fade = null,
-    cancelable: js.UndefOr[Boolean] = js.undefined,
-    color: String = null,
-    overlayColor: String = null,
-    size: normal | small | large = null,
-    textContent: String = null,
-    textStyle: StyleProp[TextStyle] = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): SpinnerProps = {
+  def apply(): SpinnerProps = {
     val __obj = js.Dynamic.literal()
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (overlayColor != null) __obj.updateDynamic("overlayColor")(overlayColor.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (textContent != null) __obj.updateDynamic("textContent")(textContent.asInstanceOf[js.Any])
-    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpinnerProps]
   }
+  @scala.inline
+  implicit class SpinnerPropsOps[Self <: SpinnerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimation(value: none | slide | fade): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancelable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlayColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlayColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: normal | small | large): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextStyle(value: StyleProp[TextStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

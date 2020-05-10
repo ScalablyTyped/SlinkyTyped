@@ -14,10 +14,8 @@ trait VREyeDtAlias extends js.Object
 
 object VREyeDtAlias {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.webvrApi.webvrApiStrings.left = "left".asInstanceOf[typingsSlinky.webvrApi.webvrApiStrings.left]
   @scala.inline
-  def left: typingsSlinky.webvrApi.webvrApiStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.webvrApi.webvrApiStrings.right = this.cast("right")
+  def right: typingsSlinky.webvrApi.webvrApiStrings.right = "right".asInstanceOf[typingsSlinky.webvrApi.webvrApiStrings.right]
 }
 

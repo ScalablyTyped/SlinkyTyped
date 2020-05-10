@@ -14,14 +14,12 @@ trait MediaDirection extends js.Object
 
 object MediaDirection {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inactive: typingsSlinky.microsoftGraph.microsoftGraphStrings.inactive = "inactive".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.inactive]
   @scala.inline
-  def inactive: typingsSlinky.microsoftGraph.microsoftGraphStrings.inactive = this.cast("inactive")
+  def receiveOnly: typingsSlinky.microsoftGraph.microsoftGraphStrings.receiveOnly = "receiveOnly".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.receiveOnly]
   @scala.inline
-  def receiveOnly: typingsSlinky.microsoftGraph.microsoftGraphStrings.receiveOnly = this.cast("receiveOnly")
+  def sendOnly: typingsSlinky.microsoftGraph.microsoftGraphStrings.sendOnly = "sendOnly".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.sendOnly]
   @scala.inline
-  def sendOnly: typingsSlinky.microsoftGraph.microsoftGraphStrings.sendOnly = this.cast("sendOnly")
-  @scala.inline
-  def sendReceive: typingsSlinky.microsoftGraph.microsoftGraphStrings.sendReceive = this.cast("sendReceive")
+  def sendReceive: typingsSlinky.microsoftGraph.microsoftGraphStrings.sendReceive = "sendReceive".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.sendReceive]
 }
 

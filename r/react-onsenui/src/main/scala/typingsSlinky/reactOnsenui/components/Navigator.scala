@@ -1,10 +1,9 @@
 package typingsSlinky.reactOnsenui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameAnimationOptions
 import typingsSlinky.reactOnsenui.mod.AnimationOptions
 import typingsSlinky.reactOnsenui.mod.NavigatorAnimationTypes
@@ -12,38 +11,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Navigator
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactOnsenui.mod.Navigator] {
+object Navigator {
   @JSImport("react-onsenui", "Navigator")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, style */
-  def apply(
-    renderPage: (js.Any, js.UndefOr[typingsSlinky.reactOnsenui.mod.Navigator]) => ReactElement,
-    animation: NavigatorAnimationTypes = null,
-    animationOptions: AnimationOptions = null,
-    initialRoute: js.Any = null,
-    initialRouteStack: js.Array[String] = null,
-    onPostPop: () => Unit = null,
-    onPostPush: () => Unit = null,
-    onPrePop: () => Unit = null,
-    onPrePush: () => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.Navigator] = {
-    val __obj = js.Dynamic.literal(renderPage = js.Any.fromFunction2(renderPage))
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (animationOptions != null) __obj.updateDynamic("animationOptions")(animationOptions.asInstanceOf[js.Any])
-    if (initialRoute != null) __obj.updateDynamic("initialRoute")(initialRoute.asInstanceOf[js.Any])
-    if (initialRouteStack != null) __obj.updateDynamic("initialRouteStack")(initialRouteStack.asInstanceOf[js.Any])
-    if (onPostPop != null) __obj.updateDynamic("onPostPop")(js.Any.fromFunction0(onPostPop))
-    if (onPostPush != null) __obj.updateDynamic("onPostPush")(js.Any.fromFunction0(onPostPush))
-    if (onPrePop != null) __obj.updateDynamic("onPrePop")(js.Any.fromFunction0(onPrePop))
-    if (onPrePush != null) __obj.updateDynamic("onPrePush")(js.Any.fromFunction0(onPrePush))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.Navigator] {
+    @scala.inline
+    def animation(value: NavigatorAnimationTypes): this.type = set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animationOptions(value: AnimationOptions): this.type = set("animationOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialRoute(value: js.Any): this.type = set("initialRoute", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialRouteStack(value: js.Array[String]): this.type = set("initialRouteStack", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onPostPop(value: () => Unit): this.type = set("onPostPop", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPostPush(value: () => Unit): this.type = set("onPostPush", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPrePop(value: () => Unit): this.type = set("onPrePop", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPrePush(value: () => Unit): this.type = set("onPrePush", js.Any.fromFunction0(value))
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = HTMLAttributesidclassNameAnimationOptions
+  
+  def withProps(p: HTMLAttributesidclassNameAnimationOptions): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(renderPage: (js.Any, js.UndefOr[typingsSlinky.reactOnsenui.mod.Navigator]) => ReactElement): Builder = {
+    val __props = js.Dynamic.literal(renderPage = js.Any.fromFunction2(renderPage))
+    new Builder(js.Array(this.component, __props.asInstanceOf[HTMLAttributesidclassNameAnimationOptions]))
+  }
 }
 

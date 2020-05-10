@@ -1,6 +1,5 @@
 package typingsSlinky.mockjs.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,8 +19,8 @@ trait Mockjs extends js.Object {
   var version: Double = js.native
   def mock(rurl: S, rtype: S, template: js.Any): Mockjs = js.native
   def mock(rurl: S, template: js.Any): Mockjs = js.native
-  def mock(rurl: RegExp, rtype: S, template: js.Any): Mockjs = js.native
-  def mock(rurl: RegExp, template: js.Any): Mockjs = js.native
+  def mock(rurl: js.RegExp, rtype: S, template: js.Any): Mockjs = js.native
+  def mock(rurl: js.RegExp, template: js.Any): Mockjs = js.native
   def mock(template: js.Any): js.Any = js.native
   def setup(settings: MockjsSetupSettings): Unit = js.native
   def toJSONSchema(template: js.Any): MockjsToJSONSchemaRs = js.native

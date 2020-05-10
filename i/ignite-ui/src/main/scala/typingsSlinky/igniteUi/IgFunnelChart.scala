@@ -6,15 +6,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgFunnelChart
   extends /**
-	 * Option for igFunnelChart
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
   	 * Gets or sets whether to allow slices to be selected.
   	 */
-  var allowSliceSelection: js.UndefOr[Boolean] = js.undefined
+  var allowSliceSelection: js.UndefOr[Boolean] = js.native
   /**
   	 * Gets or sets values for upper and lower bezier points. That option has effect only when useBezierCurve is enabled.
   	 * Value should provide 4 numeric values in range from 0 to 1 separated by space character.
@@ -23,16 +24,16 @@ trait IgFunnelChart
   	 * Example:
   	 * bezierPoints: "0.4 0.1 0.6 1"
   	 */
-  var bezierPoints: js.UndefOr[String] = js.undefined
+  var bezierPoints: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the percentage (from near 0 to 1) of space the bottom edge of the funnel should take.
   	 */
-  var bottomEdgeWidth: js.UndefOr[Double] = js.undefined
+  var bottomEdgeWidth: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the palette of brushes to use for coloring the slices.
   	 * The value provided should be an array of css color strings or JavaScript objects defining gradients. Optionally the first element can be a string reading "RGB" or "HSV" to specify the interpolation mode of the collection.
   	 */
-  var brushes: js.UndefOr[js.Any] = js.undefined
+  var brushes: js.UndefOr[js.Any] = js.native
   /**
   	 * Event which is raised before data binding.
   	 * Return false in order to cancel data binding.
@@ -40,7 +41,7 @@ trait IgFunnelChart
   	 * Use ui.owner to obtain reference to chart widget.
   	 * Use ui.dataSource to obtain reference to instance of $.ig.DataSource.
   	 */
-  var dataBinding: js.UndefOr[DataBindingEvent] = js.undefined
+  var dataBinding: js.UndefOr[DataBindingEvent] = js.native
   /**
   	 * Event which is raised after data binding.
   	 * Function takes first argument null and second argument ui.
@@ -48,29 +49,29 @@ trait IgFunnelChart
   	 * Use ui.data to obtain reference to array actual data which is displayed by chart.
   	 * Use ui.dataSource to obtain reference to instance of $.ig.DataSource.
   	 */
-  var dataBound: js.UndefOr[DataBoundEvent] = js.undefined
+  var dataBound: js.UndefOr[DataBoundEvent] = js.native
   /**
   	 * Gets sets a valid data source.
   	 * That can be instance of array or primitives, array of objects, instance of $.ig.DataSource, or any other data accepted by $.ig.DataSource.
   	 * Note: if it is set to string and "dataSourceType" option is not set, then $.ig.JSONPDataSource is used.
   	 */
-  var dataSource: js.UndefOr[js.Any] = js.undefined
+  var dataSource: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets sets data source type (such as "json", "xml", etc). Please refer to the documentation of $.ig.DataSource and its type property
   	 */
-  var dataSourceType: js.UndefOr[String] = js.undefined
+  var dataSourceType: js.UndefOr[String] = js.native
   /**
   	 * Gets sets url which is used for sending JSON on request for remote data.
   	 */
-  var dataSourceUrl: js.UndefOr[String] = js.undefined
+  var dataSourceUrl: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the formatter function for inner labels. Function should return string and it takes 3 parameters: 1st-value of item to format, 2nd-index of item within data, 3rd-reference to the funnel chart.
   	 */
-  var formatInnerLabel: js.UndefOr[js.Any] = js.undefined
+  var formatInnerLabel: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets or sets the formatter function for outer labels. Function should return string and it takes 3 parameters: 1st-value of item to format, 2nd-index of item within data, 3rd-reference to the funnel chart.
   	 */
-  var formatOuterLabel: js.UndefOr[js.Any] = js.undefined
+  var formatOuterLabel: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets or sets how the heights of the funnel slices should be configured.
   	 *
@@ -78,11 +79,11 @@ trait IgFunnelChart
   	 * "uniform" The slice heights should be uniform.
   	 * "weighted" The slice heights should be weighted by value.
   	 */
-  var funnelSliceDisplay: js.UndefOr[String] = js.undefined
+  var funnelSliceDisplay: js.UndefOr[String] = js.native
   /**
   	 * The height of the chart.
   	 */
-  var height: js.UndefOr[Double] = js.undefined
+  var height: js.UndefOr[Double] = js.native
   /**
   	 * Event which is raised before tooltip is hidden.
   	 * Return false in order to cancel hiding and keep tooltip visible.
@@ -91,11 +92,11 @@ trait IgFunnelChart
   	 * Use ui.item to obtain reference to item.
   	 * Use ui.element to obtain reference to jquery object which represents tooltip or value of ui.element from last updateTooltip event. Value of that member can be replaced by custom element.
   	 */
-  var hideTooltip: js.UndefOr[HideTooltipEvent] = js.undefined
+  var hideTooltip: js.UndefOr[HideTooltipEvent] = js.native
   /**
   	 * Gets or sets the InnerLabel mapping property for the current series object.
   	 */
-  var innerLabelMemberPath: js.UndefOr[String] = js.undefined
+  var innerLabelMemberPath: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets whether the inner labels are visible.
   	 *
@@ -103,11 +104,11 @@ trait IgFunnelChart
   	 * "visible" Display the element.
   	 * "collapsed" Do not display the element.
   	 */
-  var innerLabelVisibility: js.UndefOr[String] = js.undefined
+  var innerLabelVisibility: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets if the funnel should be rendered inverted.
   	 */
-  var isInverted: js.UndefOr[Boolean] = js.undefined
+  var isInverted: js.UndefOr[Boolean] = js.native
   /**
   	 * Gets or sets the Legend for the chart.
   	 * The value of that option can be a string with the id of existing html element. That element should be empty and it will be used to create igChartLegend widget.
@@ -120,7 +121,7 @@ trait IgFunnelChart
   	 * legend: { element: "idOfDiv", width: 300 }
   	 * legend: { legendItemMouseLeftButtonDown: function (evt, ui) { ui.chart.toggleSelection(ui.item); } }
   	 */
-  var legend: js.UndefOr[js.Any] = js.undefined
+  var legend: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets or sets the LegendItemBadgeTemplate to use for the legend items.
   	 * The provided object should have properties called render and optionally measure.
@@ -144,11 +145,11 @@ trait IgFunnelChart
   	 *     isHitTestRender: [if true, indicates that this is a special render pass for hit testing, in which case the brushes from the data should be used]
   	 * }
   	 */
-  var legendItemBadgeTemplate: js.UndefOr[js.Any] = js.undefined
+  var legendItemBadgeTemplate: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets sets maximum number of displayed records in chart.
   	 */
-  var maxRecCount: js.UndefOr[Double] = js.undefined
+  var maxRecCount: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets which side of the chart the outer labels should appear.
   	 *
@@ -156,19 +157,19 @@ trait IgFunnelChart
   	 * "left" The labels will be displayed to the left of the chart.
   	 * "right" The labels will be displayed to the right of the chart.
   	 */
-  var outerLabelAlignment: js.UndefOr[String] = js.undefined
+  var outerLabelAlignment: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the OuterLabel mapping property for the current series object.
   	 */
-  var outerLabelMemberPath: js.UndefOr[String] = js.undefined
+  var outerLabelMemberPath: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the brush used for the outer labels.
   	 */
-  var outerLabelTextColor: js.UndefOr[String] = js.undefined
+  var outerLabelTextColor: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the text style for outer labels
   	 */
-  var outerLabelTextStyle: js.UndefOr[String] = js.undefined
+  var outerLabelTextStyle: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets whether the outer labels are visible.
   	 *
@@ -176,35 +177,35 @@ trait IgFunnelChart
   	 * "visible" Display the element.
   	 * "collapsed" Do not display the element.
   	 */
-  var outerLabelVisibility: js.UndefOr[String] = js.undefined
+  var outerLabelVisibility: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the thickness of outline around slices.
   	 */
-  var outlineThickness: js.UndefOr[Double] = js.undefined
+  var outlineThickness: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the palette of brushes to use for outlines on the slices.
   	 * The value provided should be an array of css color strings or JavaScript objects defining gradients. Optionally the first element can be a string reading "RGB" or "HSV" to specify the interpolation mode of the collection.
   	 */
-  var outlines: js.UndefOr[js.Any] = js.undefined
+  var outlines: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets or sets the scaling value used to affect the pixel density of the control.
   	 * A higher scaling ratio will produce crisper visuals at the expense of memory.  Lower values will cause the control
   	 * to appear blurry.
   	 */
-  var pixelScalingRatio: js.UndefOr[Double] = js.undefined
+  var pixelScalingRatio: js.UndefOr[Double] = js.native
   /**
   	 * See $.ig.DataSource. This is basically the property in the responses where data records are held, if the response is wrapped.
   	 */
-  var responseDataKey: js.UndefOr[String] = js.undefined
+  var responseDataKey: js.UndefOr[String] = js.native
   /**
   	 * See $.ig.DataSource. property in the response specifying the total number of records on the server.
   	 */
-  var responseTotalRecCountKey: js.UndefOr[String] = js.undefined
+  var responseTotalRecCountKey: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the style to use for selected slices.
   	 * That can be used to set stroke (outline color), fill (background color) and opacity.
   	 */
-  var selectedSliceStyle: js.UndefOr[js.Any] = js.undefined
+  var selectedSliceStyle: js.UndefOr[js.Any] = js.native
   /**
   	 * Event which is raised when a slice is clicked.
   	 * Function takes first argument null and second argument ui.
@@ -213,29 +214,29 @@ trait IgFunnelChart
   	 * Use ui.item to obtain reference to clicked slice item.
   	 * Use ui.selected to check if slice became selected.
   	 */
-  var sliceClicked: js.UndefOr[SliceClickedEvent] = js.undefined
+  var sliceClicked: js.UndefOr[SliceClickedEvent] = js.native
   /**
   	 * Gets or sets the brush used for the inner labels.
   	 */
-  var textColor: js.UndefOr[String] = js.undefined
+  var textColor: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the text style for inner labels
   	 */
-  var textStyle: js.UndefOr[String] = js.undefined
+  var textStyle: js.UndefOr[String] = js.native
   /**
   	 * Gets sets template for tooltip associated with chart item.
   	 * Example: "Value: $(ValueMemberPathInDataSource)"
   	 */
-  var tooltipTemplate: js.UndefOr[String] = js.undefined
+  var tooltipTemplate: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets how long the animations should take to run.
   	 */
-  var transitionDuration: js.UndefOr[Double] = js.undefined
+  var transitionDuration: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the style to use for unselected slices.
   	 * That can be used to set stroke (outline color), fill (background color) and opacity.
   	 */
-  var unselectedSliceStyle: js.UndefOr[js.Any] = js.undefined
+  var unselectedSliceStyle: js.UndefOr[js.Any] = js.native
   /**
   	 * Event which is raised before tooltip is updated.
   	 * Return false in order to cancel updating and hide tooltip.
@@ -247,126 +248,558 @@ trait IgFunnelChart
   	 * Use ui.y to obtain top position of tooltip in pixels relative to widget. Value of that member can be modified.
   	 * Use ui.element to obtain reference to jquery object which represents tooltip. Value of that member can be replaced by custom element.
   	 */
-  var updateTooltip: js.UndefOr[UpdateTooltipEvent] = js.undefined
+  var updateTooltip: js.UndefOr[UpdateTooltipEvent] = js.native
   /**
   	 * Gets or sets whether to use a Bezier curve to define the funnel.
   	 */
-  var useBezierCurve: js.UndefOr[Boolean] = js.undefined
+  var useBezierCurve: js.UndefOr[Boolean] = js.native
   /**
   	 * Gets or sets whether to use the outer labels to identify the legend items.
   	 */
-  var useOuterLabelsForLegend: js.UndefOr[Boolean] = js.undefined
+  var useOuterLabelsForLegend: js.UndefOr[Boolean] = js.native
   /**
   	 * Gets or sets whether to use the unselected style on unselected slices.
   	 */
-  var useUnselectedStyle: js.UndefOr[Boolean] = js.undefined
+  var useUnselectedStyle: js.UndefOr[Boolean] = js.native
   /**
   	 * Gets or sets the value member path for the funnel chart.
   	 */
-  var valueMemberPath: js.UndefOr[String] = js.undefined
+  var valueMemberPath: js.UndefOr[String] = js.native
   /**
   	 * The width of the chart.
   	 */
-  var width: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.native
 }
 
 object IgFunnelChart {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for igFunnelChart
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    allowSliceSelection: js.UndefOr[Boolean] = js.undefined,
-    bezierPoints: String = null,
-    bottomEdgeWidth: Int | Double = null,
-    brushes: js.Any = null,
-    dataBinding: (/* event */ Event_, /* ui */ DataBindingEventUIParam) => Unit = null,
-    dataBound: (/* event */ Event_, /* ui */ DataBoundEventUIParam) => Unit = null,
-    dataSource: js.Any = null,
-    dataSourceType: String = null,
-    dataSourceUrl: String = null,
-    formatInnerLabel: js.Any = null,
-    formatOuterLabel: js.Any = null,
-    funnelSliceDisplay: String = null,
-    height: Int | Double = null,
-    hideTooltip: (/* event */ Event_, /* ui */ HideTooltipEventUIParam) => Unit = null,
-    innerLabelMemberPath: String = null,
-    innerLabelVisibility: String = null,
-    isInverted: js.UndefOr[Boolean] = js.undefined,
-    legend: js.Any = null,
-    legendItemBadgeTemplate: js.Any = null,
-    maxRecCount: Int | Double = null,
-    outerLabelAlignment: String = null,
-    outerLabelMemberPath: String = null,
-    outerLabelTextColor: String = null,
-    outerLabelTextStyle: String = null,
-    outerLabelVisibility: String = null,
-    outlineThickness: Int | Double = null,
-    outlines: js.Any = null,
-    pixelScalingRatio: Int | Double = null,
-    responseDataKey: String = null,
-    responseTotalRecCountKey: String = null,
-    selectedSliceStyle: js.Any = null,
-    sliceClicked: (/* event */ Event_, /* ui */ SliceClickedEventUIParam) => Unit = null,
-    textColor: String = null,
-    textStyle: String = null,
-    tooltipTemplate: String = null,
-    transitionDuration: Int | Double = null,
-    unselectedSliceStyle: js.Any = null,
-    updateTooltip: (/* event */ Event_, /* ui */ UpdateTooltipEventUIParam) => Unit = null,
-    useBezierCurve: js.UndefOr[Boolean] = js.undefined,
-    useOuterLabelsForLegend: js.UndefOr[Boolean] = js.undefined,
-    useUnselectedStyle: js.UndefOr[Boolean] = js.undefined,
-    valueMemberPath: String = null,
-    width: Int | Double = null
-  ): IgFunnelChart = {
+  def apply(): IgFunnelChart = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(allowSliceSelection)) __obj.updateDynamic("allowSliceSelection")(allowSliceSelection.asInstanceOf[js.Any])
-    if (bezierPoints != null) __obj.updateDynamic("bezierPoints")(bezierPoints.asInstanceOf[js.Any])
-    if (bottomEdgeWidth != null) __obj.updateDynamic("bottomEdgeWidth")(bottomEdgeWidth.asInstanceOf[js.Any])
-    if (brushes != null) __obj.updateDynamic("brushes")(brushes.asInstanceOf[js.Any])
-    if (dataBinding != null) __obj.updateDynamic("dataBinding")(js.Any.fromFunction2(dataBinding))
-    if (dataBound != null) __obj.updateDynamic("dataBound")(js.Any.fromFunction2(dataBound))
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (dataSourceType != null) __obj.updateDynamic("dataSourceType")(dataSourceType.asInstanceOf[js.Any])
-    if (dataSourceUrl != null) __obj.updateDynamic("dataSourceUrl")(dataSourceUrl.asInstanceOf[js.Any])
-    if (formatInnerLabel != null) __obj.updateDynamic("formatInnerLabel")(formatInnerLabel.asInstanceOf[js.Any])
-    if (formatOuterLabel != null) __obj.updateDynamic("formatOuterLabel")(formatOuterLabel.asInstanceOf[js.Any])
-    if (funnelSliceDisplay != null) __obj.updateDynamic("funnelSliceDisplay")(funnelSliceDisplay.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (hideTooltip != null) __obj.updateDynamic("hideTooltip")(js.Any.fromFunction2(hideTooltip))
-    if (innerLabelMemberPath != null) __obj.updateDynamic("innerLabelMemberPath")(innerLabelMemberPath.asInstanceOf[js.Any])
-    if (innerLabelVisibility != null) __obj.updateDynamic("innerLabelVisibility")(innerLabelVisibility.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInverted)) __obj.updateDynamic("isInverted")(isInverted.asInstanceOf[js.Any])
-    if (legend != null) __obj.updateDynamic("legend")(legend.asInstanceOf[js.Any])
-    if (legendItemBadgeTemplate != null) __obj.updateDynamic("legendItemBadgeTemplate")(legendItemBadgeTemplate.asInstanceOf[js.Any])
-    if (maxRecCount != null) __obj.updateDynamic("maxRecCount")(maxRecCount.asInstanceOf[js.Any])
-    if (outerLabelAlignment != null) __obj.updateDynamic("outerLabelAlignment")(outerLabelAlignment.asInstanceOf[js.Any])
-    if (outerLabelMemberPath != null) __obj.updateDynamic("outerLabelMemberPath")(outerLabelMemberPath.asInstanceOf[js.Any])
-    if (outerLabelTextColor != null) __obj.updateDynamic("outerLabelTextColor")(outerLabelTextColor.asInstanceOf[js.Any])
-    if (outerLabelTextStyle != null) __obj.updateDynamic("outerLabelTextStyle")(outerLabelTextStyle.asInstanceOf[js.Any])
-    if (outerLabelVisibility != null) __obj.updateDynamic("outerLabelVisibility")(outerLabelVisibility.asInstanceOf[js.Any])
-    if (outlineThickness != null) __obj.updateDynamic("outlineThickness")(outlineThickness.asInstanceOf[js.Any])
-    if (outlines != null) __obj.updateDynamic("outlines")(outlines.asInstanceOf[js.Any])
-    if (pixelScalingRatio != null) __obj.updateDynamic("pixelScalingRatio")(pixelScalingRatio.asInstanceOf[js.Any])
-    if (responseDataKey != null) __obj.updateDynamic("responseDataKey")(responseDataKey.asInstanceOf[js.Any])
-    if (responseTotalRecCountKey != null) __obj.updateDynamic("responseTotalRecCountKey")(responseTotalRecCountKey.asInstanceOf[js.Any])
-    if (selectedSliceStyle != null) __obj.updateDynamic("selectedSliceStyle")(selectedSliceStyle.asInstanceOf[js.Any])
-    if (sliceClicked != null) __obj.updateDynamic("sliceClicked")(js.Any.fromFunction2(sliceClicked))
-    if (textColor != null) __obj.updateDynamic("textColor")(textColor.asInstanceOf[js.Any])
-    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
-    if (tooltipTemplate != null) __obj.updateDynamic("tooltipTemplate")(tooltipTemplate.asInstanceOf[js.Any])
-    if (transitionDuration != null) __obj.updateDynamic("transitionDuration")(transitionDuration.asInstanceOf[js.Any])
-    if (unselectedSliceStyle != null) __obj.updateDynamic("unselectedSliceStyle")(unselectedSliceStyle.asInstanceOf[js.Any])
-    if (updateTooltip != null) __obj.updateDynamic("updateTooltip")(js.Any.fromFunction2(updateTooltip))
-    if (!js.isUndefined(useBezierCurve)) __obj.updateDynamic("useBezierCurve")(useBezierCurve.asInstanceOf[js.Any])
-    if (!js.isUndefined(useOuterLabelsForLegend)) __obj.updateDynamic("useOuterLabelsForLegend")(useOuterLabelsForLegend.asInstanceOf[js.Any])
-    if (!js.isUndefined(useUnselectedStyle)) __obj.updateDynamic("useUnselectedStyle")(useUnselectedStyle.asInstanceOf[js.Any])
-    if (valueMemberPath != null) __obj.updateDynamic("valueMemberPath")(valueMemberPath.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgFunnelChart]
   }
+  @scala.inline
+  implicit class IgFunnelChartOps[Self <: IgFunnelChart] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowSliceSelection(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSliceSelection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowSliceSelection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSliceSelection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBezierPoints(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bezierPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBezierPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bezierPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBottomEdgeWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomEdgeWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBottomEdgeWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomEdgeWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrushes(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brushes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrushes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brushes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataBinding(value: (/* event */ Event_, /* ui */ DataBindingEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBinding")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutDataBinding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBinding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataBound(value: (/* event */ Event_, /* ui */ DataBoundEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBound")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutDataBound: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBound")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSource(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSourceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSourceUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSourceUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatInnerLabel(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatInnerLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatInnerLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatInnerLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatOuterLabel(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatOuterLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatOuterLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatOuterLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFunnelSliceDisplay(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("funnelSliceDisplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFunnelSliceDisplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("funnelSliceDisplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideTooltip(value: (/* event */ Event_, /* ui */ HideTooltipEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideTooltip")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutHideTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideTooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInnerLabelMemberPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerLabelMemberPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInnerLabelMemberPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerLabelMemberPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInnerLabelVisibility(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerLabelVisibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInnerLabelVisibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerLabelVisibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsInverted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInverted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsInverted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInverted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLegend(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLegendItemBadgeTemplate(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendItemBadgeTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegendItemBadgeTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legendItemBadgeTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRecCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRecCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRecCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRecCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOuterLabelAlignment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerLabelAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOuterLabelAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerLabelAlignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOuterLabelMemberPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerLabelMemberPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOuterLabelMemberPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerLabelMemberPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOuterLabelTextColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerLabelTextColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOuterLabelTextColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerLabelTextColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOuterLabelTextStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerLabelTextStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOuterLabelTextStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerLabelTextStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOuterLabelVisibility(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerLabelVisibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOuterLabelVisibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerLabelVisibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutlineThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutlineThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutlines(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutlines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPixelScalingRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelScalingRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPixelScalingRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelScalingRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseDataKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseDataKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseDataKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseDataKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseTotalRecCountKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseTotalRecCountKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseTotalRecCountKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseTotalRecCountKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedSliceStyle(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedSliceStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedSliceStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedSliceStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSliceClicked(value: (/* event */ Event_, /* ui */ SliceClickedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sliceClicked")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutSliceClicked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sliceClicked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnselectedSliceStyle(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unselectedSliceStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnselectedSliceStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unselectedSliceStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateTooltip(value: (/* event */ Event_, /* ui */ UpdateTooltipEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTooltip")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutUpdateTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseBezierCurve(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useBezierCurve")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseBezierCurve: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useBezierCurve")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseOuterLabelsForLegend(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useOuterLabelsForLegend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseOuterLabelsForLegend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useOuterLabelsForLegend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseUnselectedStyle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useUnselectedStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseUnselectedStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useUnselectedStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueMemberPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueMemberPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueMemberPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueMemberPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

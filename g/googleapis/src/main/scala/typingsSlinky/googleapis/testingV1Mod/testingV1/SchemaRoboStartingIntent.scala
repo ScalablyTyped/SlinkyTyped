@@ -19,16 +19,53 @@ trait SchemaRoboStartingIntent extends js.Object {
 
 object SchemaRoboStartingIntent {
   @scala.inline
-  def apply(
-    launcherActivity: SchemaLauncherActivityIntent = null,
-    startActivity: SchemaStartActivityIntent = null,
-    timeout: String = null
-  ): SchemaRoboStartingIntent = {
+  def apply(): SchemaRoboStartingIntent = {
     val __obj = js.Dynamic.literal()
-    if (launcherActivity != null) __obj.updateDynamic("launcherActivity")(launcherActivity.asInstanceOf[js.Any])
-    if (startActivity != null) __obj.updateDynamic("startActivity")(startActivity.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRoboStartingIntent]
   }
+  @scala.inline
+  implicit class SchemaRoboStartingIntentOps[Self <: SchemaRoboStartingIntent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLauncherActivity(value: SchemaLauncherActivityIntent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launcherActivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLauncherActivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launcherActivity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartActivity(value: SchemaStartActivityIntent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startActivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartActivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startActivity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -74,41 +74,203 @@ trait ModifyInstanceAttributeRequest extends js.Object {
 
 object ModifyInstanceAttributeRequest {
   @scala.inline
-  def apply(
-    InstanceId: InstanceId,
-    Attribute: InstanceAttributeName = null,
-    BlockDeviceMappings: InstanceBlockDeviceMappingSpecificationList = null,
-    DisableApiTermination: AttributeBooleanValue = null,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    EbsOptimized: AttributeBooleanValue = null,
-    EnaSupport: AttributeBooleanValue = null,
-    Groups: GroupIdStringList = null,
-    InstanceInitiatedShutdownBehavior: AttributeValue = null,
-    InstanceType: AttributeValue = null,
-    Kernel: AttributeValue = null,
-    Ramdisk: AttributeValue = null,
-    SourceDestCheck: AttributeBooleanValue = null,
-    SriovNetSupport: AttributeValue = null,
-    UserData: BlobAttributeValue = null,
-    Value: String = null
-  ): ModifyInstanceAttributeRequest = {
+  def apply(InstanceId: InstanceId): ModifyInstanceAttributeRequest = {
     val __obj = js.Dynamic.literal(InstanceId = InstanceId.asInstanceOf[js.Any])
-    if (Attribute != null) __obj.updateDynamic("Attribute")(Attribute.asInstanceOf[js.Any])
-    if (BlockDeviceMappings != null) __obj.updateDynamic("BlockDeviceMappings")(BlockDeviceMappings.asInstanceOf[js.Any])
-    if (DisableApiTermination != null) __obj.updateDynamic("DisableApiTermination")(DisableApiTermination.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (EbsOptimized != null) __obj.updateDynamic("EbsOptimized")(EbsOptimized.asInstanceOf[js.Any])
-    if (EnaSupport != null) __obj.updateDynamic("EnaSupport")(EnaSupport.asInstanceOf[js.Any])
-    if (Groups != null) __obj.updateDynamic("Groups")(Groups.asInstanceOf[js.Any])
-    if (InstanceInitiatedShutdownBehavior != null) __obj.updateDynamic("InstanceInitiatedShutdownBehavior")(InstanceInitiatedShutdownBehavior.asInstanceOf[js.Any])
-    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
-    if (Kernel != null) __obj.updateDynamic("Kernel")(Kernel.asInstanceOf[js.Any])
-    if (Ramdisk != null) __obj.updateDynamic("Ramdisk")(Ramdisk.asInstanceOf[js.Any])
-    if (SourceDestCheck != null) __obj.updateDynamic("SourceDestCheck")(SourceDestCheck.asInstanceOf[js.Any])
-    if (SriovNetSupport != null) __obj.updateDynamic("SriovNetSupport")(SriovNetSupport.asInstanceOf[js.Any])
-    if (UserData != null) __obj.updateDynamic("UserData")(UserData.asInstanceOf[js.Any])
-    if (Value != null) __obj.updateDynamic("Value")(Value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyInstanceAttributeRequest]
   }
+  @scala.inline
+  implicit class ModifyInstanceAttributeRequestOps[Self <: ModifyInstanceAttributeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceId(value: InstanceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttribute(value: InstanceAttributeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attribute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttribute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attribute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlockDeviceMappings(value: InstanceBlockDeviceMappingSpecificationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockDeviceMappings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockDeviceMappings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockDeviceMappings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableApiTermination(value: AttributeBooleanValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableApiTermination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableApiTermination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableApiTermination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEbsOptimized(value: AttributeBooleanValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsOptimized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEbsOptimized: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsOptimized")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnaSupport(value: AttributeBooleanValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnaSupport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnaSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnaSupport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroups(value: GroupIdStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceInitiatedShutdownBehavior(value: AttributeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceInitiatedShutdownBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceInitiatedShutdownBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceInitiatedShutdownBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: AttributeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKernel(value: AttributeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Kernel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKernel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Kernel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRamdisk(value: AttributeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ramdisk")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRamdisk: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ramdisk")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceDestCheck(value: AttributeBooleanValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceDestCheck")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceDestCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceDestCheck")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSriovNetSupport(value: AttributeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SriovNetSupport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSriovNetSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SriovNetSupport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserData(value: BlobAttributeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,12 +7,13 @@ import scala.scalajs.js.annotation._
 /**
   * 'Properties' object passed into the WL.upload method.
   */
+@js.native
 trait IUploadProperties extends js.Object {
   /**
     * The id attribute of the <input> tag containing info about the file to
     * upload.
     */
-  var element: String
+  var element: String = js.native
   /**
     * Indicates whether the uploaded file should overwrite an existing
     * copy. Specify true or "true" to overwrite, false or "false" to not
@@ -21,19 +22,50 @@ trait IUploadProperties extends js.Object {
     * uploaded file.
     * @default "false"
     */
-  var overwrite: js.UndefOr[String] = js.undefined
+  var overwrite: js.UndefOr[String] = js.native
   /**
     * The path to the file to upload.
     */
-  var path: String
+  var path: String = js.native
 }
 
 object IUploadProperties {
   @scala.inline
-  def apply(element: String, path: String, overwrite: String = null): IUploadProperties = {
+  def apply(element: String, path: String): IUploadProperties = {
     val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
-    if (overwrite != null) __obj.updateDynamic("overwrite")(overwrite.asInstanceOf[js.Any])
     __obj.asInstanceOf[IUploadProperties]
   }
+  @scala.inline
+  implicit class IUploadPropertiesOps[Self <: IUploadProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withElement(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOverwrite(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overwrite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverwrite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overwrite")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

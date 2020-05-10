@@ -1,6 +1,5 @@
 package typingsSlinky.grunt.grunt
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,8 +27,8 @@ object template extends js.Object {
     def date(date: String, format: String): String = js.native
     def date(date: Double): String = js.native
     def date(date: Double, format: String): String = js.native
-    def date(date: Date): String = js.native
-    def date(date: Date, format: String): String = js.native
+    def date(date: js.Date): String = js.native
+    def date(date: js.Date, format: String): String = js.native
     /**
       * Process a Lo-Dash template string.
       *

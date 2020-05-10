@@ -16,18 +16,16 @@ trait ErrorCategoryType extends js.Object
 
 object ErrorCategoryType {
   @scala.inline
-  def API_ERROR: typingsSlinky.squareConnect.squareConnectStrings.API_ERROR = this.cast("API_ERROR")
+  def API_ERROR: typingsSlinky.squareConnect.squareConnectStrings.API_ERROR = "API_ERROR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.API_ERROR]
   @scala.inline
-  def AUTHENTICATION_ERROR: typingsSlinky.squareConnect.squareConnectStrings.AUTHENTICATION_ERROR = this.cast("AUTHENTICATION_ERROR")
+  def AUTHENTICATION_ERROR: typingsSlinky.squareConnect.squareConnectStrings.AUTHENTICATION_ERROR = "AUTHENTICATION_ERROR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.AUTHENTICATION_ERROR]
   @scala.inline
-  def INVALID_REQUEST_ERROR: typingsSlinky.squareConnect.squareConnectStrings.INVALID_REQUEST_ERROR = this.cast("INVALID_REQUEST_ERROR")
+  def INVALID_REQUEST_ERROR: typingsSlinky.squareConnect.squareConnectStrings.INVALID_REQUEST_ERROR = "INVALID_REQUEST_ERROR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.INVALID_REQUEST_ERROR]
   @scala.inline
-  def PAYMENT_METHOD_ERROR: typingsSlinky.squareConnect.squareConnectStrings.PAYMENT_METHOD_ERROR = this.cast("PAYMENT_METHOD_ERROR")
+  def PAYMENT_METHOD_ERROR: typingsSlinky.squareConnect.squareConnectStrings.PAYMENT_METHOD_ERROR = "PAYMENT_METHOD_ERROR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.PAYMENT_METHOD_ERROR]
   @scala.inline
-  def RATE_LIMIT_ERROR: typingsSlinky.squareConnect.squareConnectStrings.RATE_LIMIT_ERROR = this.cast("RATE_LIMIT_ERROR")
+  def RATE_LIMIT_ERROR: typingsSlinky.squareConnect.squareConnectStrings.RATE_LIMIT_ERROR = "RATE_LIMIT_ERROR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.RATE_LIMIT_ERROR]
   @scala.inline
-  def REFUND_ERROR: typingsSlinky.squareConnect.squareConnectStrings.REFUND_ERROR = this.cast("REFUND_ERROR")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def REFUND_ERROR: typingsSlinky.squareConnect.squareConnectStrings.REFUND_ERROR = "REFUND_ERROR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.REFUND_ERROR]
 }
 

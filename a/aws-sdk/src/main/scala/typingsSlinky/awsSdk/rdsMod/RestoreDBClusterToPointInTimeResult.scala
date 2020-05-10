@@ -11,10 +11,29 @@ trait RestoreDBClusterToPointInTimeResult extends js.Object {
 
 object RestoreDBClusterToPointInTimeResult {
   @scala.inline
-  def apply(DBCluster: DBCluster = null): RestoreDBClusterToPointInTimeResult = {
+  def apply(): RestoreDBClusterToPointInTimeResult = {
     val __obj = js.Dynamic.literal()
-    if (DBCluster != null) __obj.updateDynamic("DBCluster")(DBCluster.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestoreDBClusterToPointInTimeResult]
   }
+  @scala.inline
+  implicit class RestoreDBClusterToPointInTimeResultOps[Self <: RestoreDBClusterToPointInTimeResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDBCluster(value: DBCluster): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBCluster")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBCluster: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBCluster")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

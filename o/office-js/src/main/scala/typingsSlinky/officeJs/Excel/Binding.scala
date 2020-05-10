@@ -40,8 +40,12 @@ class Binding () extends ClientObject {
     */
   val onDataChanged: EventHandlers[BindingDataChangedEventArgs] = js.native
   /**
-    *
+    * 
     * Occurs when the selected content in the binding is changed.
+    * 
+    * **Note**: If multiple, discontiguous cells are selected, 
+    * `Binding.onSelectionChanged` only reports row and column information for one selection. 
+    * Use `Worksheet.onSelectionChanged` for multiple selected ranges.
     *
     * [Api set: ExcelApi 1.2]
     *
@@ -56,28 +60,24 @@ class Binding () extends ClientObject {
     */
   val `type`: BindingType | typingsSlinky.officeJs.officeJsStrings.Range | typingsSlinky.officeJs.officeJsStrings.Table | Text = js.native
   /**
-    *
     * Deletes the binding.
     *
     * [Api set: ExcelApi 1.3]
     */
   def delete(): Unit = js.native
   /**
-    *
     * Returns the range represented by the binding. Will throw an error if binding is not of the correct type.
     *
     * [Api set: ExcelApi 1.1]
     */
   def getRange(): Range = js.native
   /**
-    *
     * Returns the table represented by the binding. Will throw an error if binding is not of the correct type.
     *
     * [Api set: ExcelApi 1.1]
     */
   def getTable(): Table = js.native
   /**
-    *
     * Returns the text represented by the binding. Will throw an error if binding is not of the correct type.
     *
     * [Api set: ExcelApi 1.1]

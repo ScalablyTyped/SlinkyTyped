@@ -37,7 +37,7 @@ trait GetClusterResult extends js.Object {
     */
   val tags: StringDictionary[js.Any] = js.native
   /**
-    * A comma separated list of one or more IP:port pairs to use to connect to the Apache Zookeeper cluster.
+    * A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster.
     */
   val zookeeperConnectString: String = js.native
 }
@@ -56,8 +56,69 @@ object GetClusterResult {
     zookeeperConnectString: String
   ): GetClusterResult = {
     val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any], bootstrapBrokers = bootstrapBrokers.asInstanceOf[js.Any], bootstrapBrokersTls = bootstrapBrokersTls.asInstanceOf[js.Any], clusterName = clusterName.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kafkaVersion = kafkaVersion.asInstanceOf[js.Any], numberOfBrokerNodes = numberOfBrokerNodes.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any], zookeeperConnectString = zookeeperConnectString.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetClusterResult]
   }
+  @scala.inline
+  implicit class GetClusterResultOps[Self <: GetClusterResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBootstrapBrokers(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootstrapBrokers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBootstrapBrokersTls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootstrapBrokersTls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClusterName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKafkaVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kafkaVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumberOfBrokerNodes(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfBrokerNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTags(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withZookeeperConnectString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zookeeperConnectString")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

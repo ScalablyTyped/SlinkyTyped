@@ -4,13 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBlackberry extends js.Object {
-  var blackberry: js.Any
-  var blackberry10: js.Any
-  var chrome: js.Any
-  var device: js.Any
-  var firefox: js.Any
-  var opera: js.Any
+  var blackberry: js.Any = js.native
+  var blackberry10: js.Any = js.native
+  var chrome: js.Any = js.native
+  var device: js.Any = js.native
+  var firefox: js.Any = js.native
+  var opera: js.Any = js.native
 }
 
 object AnonBlackberry {
@@ -24,8 +25,51 @@ object AnonBlackberry {
     opera: js.Any
   ): AnonBlackberry = {
     val __obj = js.Dynamic.literal(blackberry = blackberry.asInstanceOf[js.Any], blackberry10 = blackberry10.asInstanceOf[js.Any], chrome = chrome.asInstanceOf[js.Any], device = device.asInstanceOf[js.Any], firefox = firefox.asInstanceOf[js.Any], opera = opera.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonBlackberry]
   }
+  @scala.inline
+  implicit class AnonBlackberryOps[Self <: AnonBlackberry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlackberry(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blackberry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlackberry10(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blackberry10")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChrome(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chrome")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDevice(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFirefox(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firefox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOpera(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opera")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

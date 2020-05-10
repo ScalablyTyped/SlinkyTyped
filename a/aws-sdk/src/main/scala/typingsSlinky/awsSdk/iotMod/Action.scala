@@ -11,6 +11,10 @@ trait Action extends js.Object {
     */
   var cloudwatchAlarm: js.UndefOr[CloudwatchAlarmAction] = js.native
   /**
+    * Send data to CloudWatch logs.
+    */
+  var cloudwatchLogs: js.UndefOr[CloudwatchLogsAction] = js.native
+  /**
     * Capture a CloudWatch metric.
     */
   var cloudwatchMetric: js.UndefOr[CloudwatchMetricAction] = js.native
@@ -82,46 +86,245 @@ trait Action extends js.Object {
 
 object Action {
   @scala.inline
-  def apply(
-    cloudwatchAlarm: CloudwatchAlarmAction = null,
-    cloudwatchMetric: CloudwatchMetricAction = null,
-    dynamoDB: DynamoDBAction = null,
-    dynamoDBv2: DynamoDBv2Action = null,
-    elasticsearch: ElasticsearchAction = null,
-    firehose: FirehoseAction = null,
-    http: HttpAction = null,
-    iotAnalytics: IotAnalyticsAction = null,
-    iotEvents: IotEventsAction = null,
-    iotSiteWise: IotSiteWiseAction = null,
-    kinesis: KinesisAction = null,
-    lambda: LambdaAction = null,
-    republish: RepublishAction = null,
-    s3: S3Action = null,
-    salesforce: SalesforceAction = null,
-    sns: SnsAction = null,
-    sqs: SqsAction = null,
-    stepFunctions: StepFunctionsAction = null
-  ): Action = {
+  def apply(): Action = {
     val __obj = js.Dynamic.literal()
-    if (cloudwatchAlarm != null) __obj.updateDynamic("cloudwatchAlarm")(cloudwatchAlarm.asInstanceOf[js.Any])
-    if (cloudwatchMetric != null) __obj.updateDynamic("cloudwatchMetric")(cloudwatchMetric.asInstanceOf[js.Any])
-    if (dynamoDB != null) __obj.updateDynamic("dynamoDB")(dynamoDB.asInstanceOf[js.Any])
-    if (dynamoDBv2 != null) __obj.updateDynamic("dynamoDBv2")(dynamoDBv2.asInstanceOf[js.Any])
-    if (elasticsearch != null) __obj.updateDynamic("elasticsearch")(elasticsearch.asInstanceOf[js.Any])
-    if (firehose != null) __obj.updateDynamic("firehose")(firehose.asInstanceOf[js.Any])
-    if (http != null) __obj.updateDynamic("http")(http.asInstanceOf[js.Any])
-    if (iotAnalytics != null) __obj.updateDynamic("iotAnalytics")(iotAnalytics.asInstanceOf[js.Any])
-    if (iotEvents != null) __obj.updateDynamic("iotEvents")(iotEvents.asInstanceOf[js.Any])
-    if (iotSiteWise != null) __obj.updateDynamic("iotSiteWise")(iotSiteWise.asInstanceOf[js.Any])
-    if (kinesis != null) __obj.updateDynamic("kinesis")(kinesis.asInstanceOf[js.Any])
-    if (lambda != null) __obj.updateDynamic("lambda")(lambda.asInstanceOf[js.Any])
-    if (republish != null) __obj.updateDynamic("republish")(republish.asInstanceOf[js.Any])
-    if (s3 != null) __obj.updateDynamic("s3")(s3.asInstanceOf[js.Any])
-    if (salesforce != null) __obj.updateDynamic("salesforce")(salesforce.asInstanceOf[js.Any])
-    if (sns != null) __obj.updateDynamic("sns")(sns.asInstanceOf[js.Any])
-    if (sqs != null) __obj.updateDynamic("sqs")(sqs.asInstanceOf[js.Any])
-    if (stepFunctions != null) __obj.updateDynamic("stepFunctions")(stepFunctions.asInstanceOf[js.Any])
     __obj.asInstanceOf[Action]
   }
+  @scala.inline
+  implicit class ActionOps[Self <: Action] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloudwatchAlarm(value: CloudwatchAlarmAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudwatchAlarm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudwatchAlarm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudwatchAlarm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudwatchLogs(value: CloudwatchLogsAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudwatchLogs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudwatchLogs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudwatchLogs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudwatchMetric(value: CloudwatchMetricAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudwatchMetric")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudwatchMetric: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudwatchMetric")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamoDB(value: DynamoDBAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamoDB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamoDB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamoDB")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamoDBv2(value: DynamoDBv2Action): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamoDBv2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamoDBv2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamoDBv2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElasticsearch(value: ElasticsearchAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticsearch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticsearch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticsearch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirehose(value: FirehoseAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firehose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirehose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firehose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttp(value: HttpAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("http")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("http")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIotAnalytics(value: IotAnalyticsAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotAnalytics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIotAnalytics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotAnalytics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIotEvents(value: IotEventsAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIotEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotEvents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIotSiteWise(value: IotSiteWiseAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotSiteWise")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIotSiteWise: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotSiteWise")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKinesis(value: KinesisAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKinesis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLambda(value: LambdaAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambda")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambda: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambda")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepublish(value: RepublishAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("republish")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepublish: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("republish")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3(value: S3Action): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSalesforce(value: SalesforceAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("salesforce")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSalesforce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("salesforce")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSns(value: SnsAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSqs(value: SqsAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sqs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSqs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sqs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStepFunctions(value: StepFunctionsAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepFunctions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepFunctions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepFunctions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

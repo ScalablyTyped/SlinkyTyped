@@ -1,12 +1,12 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticSIZES
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
@@ -29,66 +29,84 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Label
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Label {
   @JSImport("semantic-ui-react/dist/commonjs/elements/Label", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    as: js.Any = null,
-    attached: top | bottom | (`top right`) | (`top left`) | (`bottom left`) | (`bottom right`) = null,
-    basic: js.UndefOr[Boolean] = js.undefined,
-    circular: js.UndefOr[Boolean] = js.undefined,
-    color: SemanticCOLORS = null,
-    content: SemanticShorthandContent = null,
-    corner: Boolean | left | right = null,
-    detail: SemanticShorthandItem[LabelDetailProps] = null,
-    empty: js.Any = null,
-    floating: js.UndefOr[Boolean] = js.undefined,
-    horizontal: js.UndefOr[Boolean] = js.undefined,
-    icon: SemanticShorthandItem[IconProps] = null,
-    image: js.Any = null,
-    onClick: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ LabelProps) => Unit = null,
-    onRemove: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ LabelProps) => Unit = null,
-    pointing: Boolean | above | below | left | right = null,
-    prompt: js.UndefOr[Boolean] = js.undefined,
-    removeIcon: SemanticShorthandItem[IconProps] = null,
-    ribbon: Boolean | right = null,
-    size: SemanticSIZES = null,
-    tag: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[slinky.web.html.`*`.tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (attached != null) __obj.updateDynamic("attached")(attached.asInstanceOf[js.Any])
-    if (!js.isUndefined(basic)) __obj.updateDynamic("basic")(basic.asInstanceOf[js.Any])
-    if (!js.isUndefined(circular)) __obj.updateDynamic("circular")(circular.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (corner != null) __obj.updateDynamic("corner")(corner.asInstanceOf[js.Any])
-    if (detail != null) __obj.updateDynamic("detail")(detail.asInstanceOf[js.Any])
-    if (empty != null) __obj.updateDynamic("empty")(empty.asInstanceOf[js.Any])
-    if (!js.isUndefined(floating)) __obj.updateDynamic("floating")(floating.asInstanceOf[js.Any])
-    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (onRemove != null) __obj.updateDynamic("onRemove")(js.Any.fromFunction2(onRemove))
-    if (pointing != null) __obj.updateDynamic("pointing")(pointing.asInstanceOf[js.Any])
-    if (!js.isUndefined(prompt)) __obj.updateDynamic("prompt")(prompt.asInstanceOf[js.Any])
-    if (removeIcon != null) __obj.updateDynamic("removeIcon")(removeIcon.asInstanceOf[js.Any])
-    if (ribbon != null) __obj.updateDynamic("ribbon")(ribbon.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (!js.isUndefined(tag)) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[slinky.web.html.`*`.tag.type, default] {
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def attached(value: top | bottom | (`top right`) | (`top left`) | (`bottom left`) | (`bottom right`)): this.type = set("attached", value.asInstanceOf[js.Any])
+    @scala.inline
+    def basic(value: Boolean): this.type = set("basic", value.asInstanceOf[js.Any])
+    @scala.inline
+    def circular(value: Boolean): this.type = set("circular", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: SemanticCOLORS): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def corner(value: Boolean | left | right): this.type = set("corner", value.asInstanceOf[js.Any])
+    @scala.inline
+    def detailReactElement(value: ReactElement): this.type = set("detail", value.asInstanceOf[js.Any])
+    @scala.inline
+    def detailFunction3(
+      value: (/* component */ ReactComponentClass[LabelDetailProps], LabelDetailProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("detail", js.Any.fromFunction3(value))
+    @scala.inline
+    def detail(value: SemanticShorthandItem[LabelDetailProps]): this.type = set("detail", value.asInstanceOf[js.Any])
+    @scala.inline
+    def empty(value: js.Any): this.type = set("empty", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floating(value: Boolean): this.type = set("floating", value.asInstanceOf[js.Any])
+    @scala.inline
+    def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconFunction3(
+      value: (/* component */ ReactComponentClass[IconProps], IconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("icon", js.Any.fromFunction3(value))
+    @scala.inline
+    def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def image(value: js.Any): this.type = set("image", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ LabelProps) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onRemove(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ LabelProps) => Unit): this.type = set("onRemove", js.Any.fromFunction2(value))
+    @scala.inline
+    def pointing(value: Boolean | above | below | left | right): this.type = set("pointing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prompt(value: Boolean): this.type = set("prompt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def removeIconReactElement(value: ReactElement): this.type = set("removeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def removeIconFunction3(
+      value: (/* component */ ReactComponentClass[IconProps], IconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("removeIcon", js.Any.fromFunction3(value))
+    @scala.inline
+    def removeIcon(value: SemanticShorthandItem[IconProps]): this.type = set("removeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ribbon(value: Boolean | right): this.type = set("ribbon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: SemanticSIZES): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tag(value: Boolean): this.type = set("tag", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.semanticUiReact.labelMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = LabelProps
+  
+  def withProps(p: LabelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Label.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

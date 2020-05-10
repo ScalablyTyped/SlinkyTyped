@@ -10,15 +10,7 @@ trait secretbox extends js.Object {
   val keyLength: Double = js.native
   val nonceLength: Double = js.native
   val overheadLength: Double = js.native
-  def apply(
-    msg: scala.scalajs.js.typedarray.Uint8Array,
-    nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def open(
-    box: scala.scalajs.js.typedarray.Uint8Array,
-    nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array | `false` = js.native
+  def apply(msg: js.typedarray.Uint8Array, nonce: js.typedarray.Uint8Array, key: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
+  def open(box: js.typedarray.Uint8Array, nonce: js.typedarray.Uint8Array, key: js.typedarray.Uint8Array): js.typedarray.Uint8Array | `false` = js.native
 }
 

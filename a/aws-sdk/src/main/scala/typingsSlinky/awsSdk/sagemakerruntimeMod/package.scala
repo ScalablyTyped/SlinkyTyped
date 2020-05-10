@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object sagemakerruntimeMod {
-  type BodyBlob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.sagemakerruntimeMod.Blob | java.lang.String
+  type BodyBlob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.sagemakerruntimeMod.Blob | java.lang.String
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.sagemakerruntimeMod.ClientApiVersions
   type CustomAttributesHeader = java.lang.String
   type EndpointName = java.lang.String

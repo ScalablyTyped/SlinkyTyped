@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Filters URLs for various criteria. See event filtering. All criteria are case sensitive. */
+@js.native
 trait UrlFilter extends js.Object {
   /**
     * Matches if the host name of the URL contains a specified string. To test whether a host name component has a
@@ -14,116 +15,323 @@ trait UrlFilter extends js.Object {
     * components need to be done separately using hostSuffix, because no implicit dot is added at the end of the
     * host name.
     */
-  var hostContains: js.UndefOr[String] = js.undefined
+  var hostContains: js.UndefOr[String] = js.native
   /** Matches if the host name of the URL is equal to a specified string. */
-  var hostEquals: js.UndefOr[String] = js.undefined
+  var hostEquals: js.UndefOr[String] = js.native
   /** Matches if the host name of the URL starts with a specified string. */
-  var hostPrefix: js.UndefOr[String] = js.undefined
+  var hostPrefix: js.UndefOr[String] = js.native
   /** Matches if the host name of the URL ends with a specified string. */
-  var hostSuffix: js.UndefOr[String] = js.undefined
+  var hostSuffix: js.UndefOr[String] = js.native
   /**
     * Matches if the URL without query segment and fragment identifier matches a specified regular expression.
     * Port numbers are stripped from the URL if they match the default port number. The regular expressions use
     * the [RE2 syntax](https://github.com/google/re2/blob/master/doc/syntax.txt).
     */
-  var originAndPathMatches: js.UndefOr[String] = js.undefined
+  var originAndPathMatches: js.UndefOr[String] = js.native
   /** Matches if the path segment of the URL contains a specified string. */
-  var pathContains: js.UndefOr[String] = js.undefined
+  var pathContains: js.UndefOr[String] = js.native
   /** Matches if the path segment of the URL is equal to a specified string. */
-  var pathEquals: js.UndefOr[String] = js.undefined
+  var pathEquals: js.UndefOr[String] = js.native
   /** Matches if the path segment of the URL starts with a specified string. */
-  var pathPrefix: js.UndefOr[String] = js.undefined
+  var pathPrefix: js.UndefOr[String] = js.native
   /** Matches if the path segment of the URL ends with a specified string. */
-  var pathSuffix: js.UndefOr[String] = js.undefined
+  var pathSuffix: js.UndefOr[String] = js.native
   /**
     * Matches if the port of the URL is contained in any of the specified port lists. For example `[80, 443,
     * [1000, 1200]]` matches all requests on port 80, 443 and in the range 1000-1200.
     */
-  var ports: js.UndefOr[js.Array[Double | (js.Tuple2[Double, Double])]] = js.undefined
+  var ports: js.UndefOr[js.Array[Double | (js.Tuple2[Double, Double])]] = js.native
   /** Matches if the query segment of the URL contains a specified string. */
-  var queryContains: js.UndefOr[String] = js.undefined
+  var queryContains: js.UndefOr[String] = js.native
   /** Matches if the query segment of the URL is equal to a specified string. */
-  var queryEquals: js.UndefOr[String] = js.undefined
+  var queryEquals: js.UndefOr[String] = js.native
   /** Matches if the query segment of the URL starts with a specified string. */
-  var queryPrefix: js.UndefOr[String] = js.undefined
+  var queryPrefix: js.UndefOr[String] = js.native
   /** Matches if the query segment of the URL ends with a specified string. */
-  var querySuffix: js.UndefOr[String] = js.undefined
+  var querySuffix: js.UndefOr[String] = js.native
   /** Matches if the scheme of the URL is equal to any of the schemes specified in the array. */
-  var schemes: js.UndefOr[js.Array[String]] = js.undefined
+  var schemes: js.UndefOr[js.Array[String]] = js.native
   /**
     * Matches if the URL (without fragment identifier) contains a specified string. Port numbers are stripped from
     * the URL if they match the default port number.
     */
-  var urlContains: js.UndefOr[String] = js.undefined
+  var urlContains: js.UndefOr[String] = js.native
   /**
     * Matches if the URL (without fragment identifier) is equal to a specified string. Port numbers are stripped
     * from the URL if they match the default port number.
     */
-  var urlEquals: js.UndefOr[String] = js.undefined
+  var urlEquals: js.UndefOr[String] = js.native
   /**
     * Matches if the URL (without fragment identifier) matches a specified regular expression. Port numbers are
     * stripped from the URL if they match the default port number. The regular expressions use the [RE2
     * syntax](https://github.com/google/re2/blob/master/doc/syntax.txt).
     */
-  var urlMatches: js.UndefOr[String] = js.undefined
+  var urlMatches: js.UndefOr[String] = js.native
   /**
     * Matches if the URL (without fragment identifier) starts with a specified string. Port numbers are stripped
     * from the URL if they match the default port number.
     */
-  var urlPrefix: js.UndefOr[String] = js.undefined
+  var urlPrefix: js.UndefOr[String] = js.native
   /**
     * Matches if the URL (without fragment identifier) ends with a specified string. Port numbers are stripped
     * from the URL if they match the default port number.
     */
-  var urlSuffix: js.UndefOr[String] = js.undefined
+  var urlSuffix: js.UndefOr[String] = js.native
 }
 
 object UrlFilter {
   @scala.inline
-  def apply(
-    hostContains: String = null,
-    hostEquals: String = null,
-    hostPrefix: String = null,
-    hostSuffix: String = null,
-    originAndPathMatches: String = null,
-    pathContains: String = null,
-    pathEquals: String = null,
-    pathPrefix: String = null,
-    pathSuffix: String = null,
-    ports: js.Array[Double | (js.Tuple2[Double, Double])] = null,
-    queryContains: String = null,
-    queryEquals: String = null,
-    queryPrefix: String = null,
-    querySuffix: String = null,
-    schemes: js.Array[String] = null,
-    urlContains: String = null,
-    urlEquals: String = null,
-    urlMatches: String = null,
-    urlPrefix: String = null,
-    urlSuffix: String = null
-  ): UrlFilter = {
+  def apply(): UrlFilter = {
     val __obj = js.Dynamic.literal()
-    if (hostContains != null) __obj.updateDynamic("hostContains")(hostContains.asInstanceOf[js.Any])
-    if (hostEquals != null) __obj.updateDynamic("hostEquals")(hostEquals.asInstanceOf[js.Any])
-    if (hostPrefix != null) __obj.updateDynamic("hostPrefix")(hostPrefix.asInstanceOf[js.Any])
-    if (hostSuffix != null) __obj.updateDynamic("hostSuffix")(hostSuffix.asInstanceOf[js.Any])
-    if (originAndPathMatches != null) __obj.updateDynamic("originAndPathMatches")(originAndPathMatches.asInstanceOf[js.Any])
-    if (pathContains != null) __obj.updateDynamic("pathContains")(pathContains.asInstanceOf[js.Any])
-    if (pathEquals != null) __obj.updateDynamic("pathEquals")(pathEquals.asInstanceOf[js.Any])
-    if (pathPrefix != null) __obj.updateDynamic("pathPrefix")(pathPrefix.asInstanceOf[js.Any])
-    if (pathSuffix != null) __obj.updateDynamic("pathSuffix")(pathSuffix.asInstanceOf[js.Any])
-    if (ports != null) __obj.updateDynamic("ports")(ports.asInstanceOf[js.Any])
-    if (queryContains != null) __obj.updateDynamic("queryContains")(queryContains.asInstanceOf[js.Any])
-    if (queryEquals != null) __obj.updateDynamic("queryEquals")(queryEquals.asInstanceOf[js.Any])
-    if (queryPrefix != null) __obj.updateDynamic("queryPrefix")(queryPrefix.asInstanceOf[js.Any])
-    if (querySuffix != null) __obj.updateDynamic("querySuffix")(querySuffix.asInstanceOf[js.Any])
-    if (schemes != null) __obj.updateDynamic("schemes")(schemes.asInstanceOf[js.Any])
-    if (urlContains != null) __obj.updateDynamic("urlContains")(urlContains.asInstanceOf[js.Any])
-    if (urlEquals != null) __obj.updateDynamic("urlEquals")(urlEquals.asInstanceOf[js.Any])
-    if (urlMatches != null) __obj.updateDynamic("urlMatches")(urlMatches.asInstanceOf[js.Any])
-    if (urlPrefix != null) __obj.updateDynamic("urlPrefix")(urlPrefix.asInstanceOf[js.Any])
-    if (urlSuffix != null) __obj.updateDynamic("urlSuffix")(urlSuffix.asInstanceOf[js.Any])
     __obj.asInstanceOf[UrlFilter]
   }
+  @scala.inline
+  implicit class UrlFilterOps[Self <: UrlFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHostContains(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostContains")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostContains: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostContains")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostEquals(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostEquals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostEquals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostEquals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostSuffix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostSuffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostSuffix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostSuffix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginAndPathMatches(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originAndPathMatches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginAndPathMatches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originAndPathMatches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPathContains(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathContains")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPathContains: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathContains")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPathEquals(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathEquals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPathEquals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathEquals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPathPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPathPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPathSuffix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathSuffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPathSuffix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathSuffix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPorts(value: js.Array[Double | (js.Tuple2[Double, Double])]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPorts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryContains(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryContains")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryContains: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryContains")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryEquals(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryEquals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryEquals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryEquals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuerySuffix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("querySuffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuerySuffix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("querySuffix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchemes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrlContains(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlContains")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrlContains: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlContains")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrlEquals(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlEquals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrlEquals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlEquals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrlMatches(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlMatches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrlMatches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlMatches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrlPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrlPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrlSuffix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlSuffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrlSuffix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlSuffix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

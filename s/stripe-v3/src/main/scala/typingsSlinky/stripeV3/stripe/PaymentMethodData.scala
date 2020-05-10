@@ -7,35 +7,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PaymentMethodData extends js.Object {
-  var billing_details: js.UndefOr[BillingDetails] = js.undefined
-  var card: js.UndefOr[Element] = js.undefined
-  var ideal: js.UndefOr[Element | AnonBank] = js.undefined
-  var sepa_debit: js.UndefOr[Element | AnonIban] = js.undefined
+  var billing_details: js.UndefOr[BillingDetails] = js.native
+  var card: js.UndefOr[Element] = js.native
+  var ideal: js.UndefOr[Element | AnonBank] = js.native
+  var sepa_debit: js.UndefOr[Element | AnonIban] = js.native
   /**
     * Billing information associated with the PaymentMethod
     * that may be used or required by particular types of
     * payment methods.
     */
-  var `type`: String
+  var `type`: String = js.native
 }
 
 object PaymentMethodData {
   @scala.inline
-  def apply(
-    `type`: String,
-    billing_details: BillingDetails = null,
-    card: Element = null,
-    ideal: Element | AnonBank = null,
-    sepa_debit: Element | AnonIban = null
-  ): PaymentMethodData = {
+  def apply(`type`: String): PaymentMethodData = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (billing_details != null) __obj.updateDynamic("billing_details")(billing_details.asInstanceOf[js.Any])
-    if (card != null) __obj.updateDynamic("card")(card.asInstanceOf[js.Any])
-    if (ideal != null) __obj.updateDynamic("ideal")(ideal.asInstanceOf[js.Any])
-    if (sepa_debit != null) __obj.updateDynamic("sepa_debit")(sepa_debit.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaymentMethodData]
   }
+  @scala.inline
+  implicit class PaymentMethodDataOps[Self <: PaymentMethodData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBilling_details(value: BillingDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billing_details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBilling_details: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billing_details")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCard(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("card")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("card")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdeal(value: Element | AnonBank): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ideal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdeal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ideal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSepa_debit(value: Element | AnonIban): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sepa_debit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSepa_debit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sepa_debit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

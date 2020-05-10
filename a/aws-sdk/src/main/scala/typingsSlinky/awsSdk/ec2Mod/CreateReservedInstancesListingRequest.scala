@@ -21,7 +21,7 @@ trait CreateReservedInstancesListingRequest extends js.Object {
   /**
     * The ID of the active Standard Reserved Instance.
     */
-  var ReservedInstancesId: String = js.native
+  var ReservedInstancesId: ReservationId = js.native
 }
 
 object CreateReservedInstancesListingRequest {
@@ -30,11 +30,42 @@ object CreateReservedInstancesListingRequest {
     ClientToken: String,
     InstanceCount: Integer,
     PriceSchedules: PriceScheduleSpecificationList,
-    ReservedInstancesId: String
+    ReservedInstancesId: ReservationId
   ): CreateReservedInstancesListingRequest = {
     val __obj = js.Dynamic.literal(ClientToken = ClientToken.asInstanceOf[js.Any], InstanceCount = InstanceCount.asInstanceOf[js.Any], PriceSchedules = PriceSchedules.asInstanceOf[js.Any], ReservedInstancesId = ReservedInstancesId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateReservedInstancesListingRequest]
   }
+  @scala.inline
+  implicit class CreateReservedInstancesListingRequestOps[Self <: CreateReservedInstancesListingRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstanceCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPriceSchedules(value: PriceScheduleSpecificationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PriceSchedules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReservedInstancesId(value: ReservationId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstancesId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

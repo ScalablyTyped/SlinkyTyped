@@ -1,6 +1,6 @@
 package typingsSlinky.svgJs.mod
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.svgJs.Anon
 import typingsSlinky.svgJs.AnonAttrs
 import typingsSlinky.svgJs.AnonDegrees
@@ -73,14 +73,14 @@ trait Library extends js.Object {
   var xmlns: String = js.native
   def apply(domElement: HTMLElement): Doc = js.native
   def apply(id: String): Doc = js.native
-  def adopt(node: org.scalajs.dom.raw.HTMLElement): Element = js.native
+  def adopt(node: HTMLElement): Element = js.native
   def create(name: String): js.Any = js.native
   def eid(name: String): String = js.native
   def extend(parent: js.Object, obj: js.Object): Unit = js.native
   def get(id: String): Element = js.native
   def invent(config: js.Object): js.Any = js.native
-  def prepare(element: org.scalajs.dom.raw.HTMLElement): Unit = js.native
+  def prepare(element: HTMLElement): Unit = js.native
   def select(query: String): Set = js.native
-  def select(query: String, parent: org.scalajs.dom.raw.HTMLElement): Set = js.native
+  def select(query: String, parent: HTMLElement): Set = js.native
 }
 

@@ -20,8 +20,27 @@ object SetVariableAction {
   @scala.inline
   def apply(value: VariableValue, variableName: VariableName): SetVariableAction = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any], variableName = variableName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SetVariableAction]
   }
+  @scala.inline
+  implicit class SetVariableActionOps[Self <: SetVariableAction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValue(value: VariableValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVariableName(value: VariableName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

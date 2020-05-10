@@ -75,22 +75,89 @@ trait SchemaEphemeralIdRegistration extends js.Object {
 
 object SchemaEphemeralIdRegistration {
   @scala.inline
-  def apply(
-    beaconEcdhPublicKey: String = null,
-    beaconIdentityKey: String = null,
-    initialClockValue: String = null,
-    initialEid: String = null,
-    rotationPeriodExponent: Int | Double = null,
-    serviceEcdhPublicKey: String = null
-  ): SchemaEphemeralIdRegistration = {
+  def apply(): SchemaEphemeralIdRegistration = {
     val __obj = js.Dynamic.literal()
-    if (beaconEcdhPublicKey != null) __obj.updateDynamic("beaconEcdhPublicKey")(beaconEcdhPublicKey.asInstanceOf[js.Any])
-    if (beaconIdentityKey != null) __obj.updateDynamic("beaconIdentityKey")(beaconIdentityKey.asInstanceOf[js.Any])
-    if (initialClockValue != null) __obj.updateDynamic("initialClockValue")(initialClockValue.asInstanceOf[js.Any])
-    if (initialEid != null) __obj.updateDynamic("initialEid")(initialEid.asInstanceOf[js.Any])
-    if (rotationPeriodExponent != null) __obj.updateDynamic("rotationPeriodExponent")(rotationPeriodExponent.asInstanceOf[js.Any])
-    if (serviceEcdhPublicKey != null) __obj.updateDynamic("serviceEcdhPublicKey")(serviceEcdhPublicKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEphemeralIdRegistration]
   }
+  @scala.inline
+  implicit class SchemaEphemeralIdRegistrationOps[Self <: SchemaEphemeralIdRegistration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBeaconEcdhPublicKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconEcdhPublicKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeaconEcdhPublicKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconEcdhPublicKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeaconIdentityKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconIdentityKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeaconIdentityKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconIdentityKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialClockValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialClockValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialClockValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialClockValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialEid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialEid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialEid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialEid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotationPeriodExponent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationPeriodExponent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotationPeriodExponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationPeriodExponent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceEcdhPublicKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceEcdhPublicKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceEcdhPublicKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceEcdhPublicKey")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

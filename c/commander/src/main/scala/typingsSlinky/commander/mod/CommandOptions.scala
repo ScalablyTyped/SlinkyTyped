@@ -4,24 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CommandOptions extends js.Object {
-  var executableFile: js.UndefOr[String] = js.undefined
-  var isDefault: js.UndefOr[Boolean] = js.undefined
-  var noHelp: js.UndefOr[Boolean] = js.undefined
+  var executableFile: js.UndefOr[String] = js.native
+  var isDefault: js.UndefOr[Boolean] = js.native
+  var noHelp: js.UndefOr[Boolean] = js.native
 }
 
 object CommandOptions {
   @scala.inline
-  def apply(
-    executableFile: String = null,
-    isDefault: js.UndefOr[Boolean] = js.undefined,
-    noHelp: js.UndefOr[Boolean] = js.undefined
-  ): CommandOptions = {
+  def apply(): CommandOptions = {
     val __obj = js.Dynamic.literal()
-    if (executableFile != null) __obj.updateDynamic("executableFile")(executableFile.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDefault)) __obj.updateDynamic("isDefault")(isDefault.asInstanceOf[js.Any])
-    if (!js.isUndefined(noHelp)) __obj.updateDynamic("noHelp")(noHelp.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommandOptions]
   }
+  @scala.inline
+  implicit class CommandOptionsOps[Self <: CommandOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecutableFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executableFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutableFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executableFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDefault(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefault")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoHelp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noHelp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoHelp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noHelp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

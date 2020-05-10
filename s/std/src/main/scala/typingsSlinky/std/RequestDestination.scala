@@ -28,42 +28,40 @@ trait RequestDestination extends js.Object
 
 object RequestDestination {
   @scala.inline
-  def _empty: typingsSlinky.std.stdStrings._empty = this.cast("")
+  def _empty: typingsSlinky.std.stdStrings._empty = "".asInstanceOf[typingsSlinky.std.stdStrings._empty]
   @scala.inline
-  def audio: typingsSlinky.std.stdStrings.audio = this.cast("audio")
+  def audio: typingsSlinky.std.stdStrings.audio = "audio".asInstanceOf[typingsSlinky.std.stdStrings.audio]
   @scala.inline
-  def audioworklet: typingsSlinky.std.stdStrings.audioworklet = this.cast("audioworklet")
+  def audioworklet: typingsSlinky.std.stdStrings.audioworklet = "audioworklet".asInstanceOf[typingsSlinky.std.stdStrings.audioworklet]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def document: typingsSlinky.std.stdStrings.document = "document".asInstanceOf[typingsSlinky.std.stdStrings.document]
   @scala.inline
-  def document: typingsSlinky.std.stdStrings.document = this.cast("document")
+  def embed: typingsSlinky.std.stdStrings.embed = "embed".asInstanceOf[typingsSlinky.std.stdStrings.embed]
   @scala.inline
-  def embed: typingsSlinky.std.stdStrings.embed = this.cast("embed")
+  def font: typingsSlinky.std.stdStrings.font = "font".asInstanceOf[typingsSlinky.std.stdStrings.font]
   @scala.inline
-  def font: typingsSlinky.std.stdStrings.font = this.cast("font")
+  def image: typingsSlinky.std.stdStrings.image = "image".asInstanceOf[typingsSlinky.std.stdStrings.image]
   @scala.inline
-  def image: typingsSlinky.std.stdStrings.image = this.cast("image")
+  def manifest: typingsSlinky.std.stdStrings.manifest = "manifest".asInstanceOf[typingsSlinky.std.stdStrings.manifest]
   @scala.inline
-  def manifest: typingsSlinky.std.stdStrings.manifest = this.cast("manifest")
+  def `object`: typingsSlinky.std.stdStrings.`object` = "object".asInstanceOf[typingsSlinky.std.stdStrings.`object`]
   @scala.inline
-  def `object`: typingsSlinky.std.stdStrings.`object` = this.cast("object")
+  def paintworklet: typingsSlinky.std.stdStrings.paintworklet = "paintworklet".asInstanceOf[typingsSlinky.std.stdStrings.paintworklet]
   @scala.inline
-  def paintworklet: typingsSlinky.std.stdStrings.paintworklet = this.cast("paintworklet")
+  def report: typingsSlinky.std.stdStrings.report = "report".asInstanceOf[typingsSlinky.std.stdStrings.report]
   @scala.inline
-  def report: typingsSlinky.std.stdStrings.report = this.cast("report")
+  def script: typingsSlinky.std.stdStrings.script = "script".asInstanceOf[typingsSlinky.std.stdStrings.script]
   @scala.inline
-  def script: typingsSlinky.std.stdStrings.script = this.cast("script")
+  def sharedworker: typingsSlinky.std.stdStrings.sharedworker = "sharedworker".asInstanceOf[typingsSlinky.std.stdStrings.sharedworker]
   @scala.inline
-  def sharedworker: typingsSlinky.std.stdStrings.sharedworker = this.cast("sharedworker")
+  def style: typingsSlinky.std.stdStrings.style = "style".asInstanceOf[typingsSlinky.std.stdStrings.style]
   @scala.inline
-  def style: typingsSlinky.std.stdStrings.style = this.cast("style")
+  def track: typingsSlinky.std.stdStrings.track = "track".asInstanceOf[typingsSlinky.std.stdStrings.track]
   @scala.inline
-  def track: typingsSlinky.std.stdStrings.track = this.cast("track")
+  def video: typingsSlinky.std.stdStrings.video = "video".asInstanceOf[typingsSlinky.std.stdStrings.video]
   @scala.inline
-  def video: typingsSlinky.std.stdStrings.video = this.cast("video")
+  def worker: typingsSlinky.std.stdStrings.worker = "worker".asInstanceOf[typingsSlinky.std.stdStrings.worker]
   @scala.inline
-  def worker: typingsSlinky.std.stdStrings.worker = this.cast("worker")
-  @scala.inline
-  def xslt: typingsSlinky.std.stdStrings.xslt = this.cast("xslt")
+  def xslt: typingsSlinky.std.stdStrings.xslt = "xslt".asInstanceOf[typingsSlinky.std.stdStrings.xslt]
 }
 

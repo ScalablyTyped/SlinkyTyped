@@ -13,12 +13,10 @@ trait TooltipShapeValue extends js.Object
 
 object TooltipShapeValue {
   @scala.inline
-  def callout: typingsSlinky.highcharts.highchartsStrings.callout = this.cast("callout")
+  def callout: typingsSlinky.highcharts.highchartsStrings.callout = "callout".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.callout]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def circle: typingsSlinky.highcharts.highchartsStrings.circle = "circle".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.circle]
   @scala.inline
-  def circle: typingsSlinky.highcharts.highchartsStrings.circle = this.cast("circle")
-  @scala.inline
-  def square: typingsSlinky.highcharts.highchartsStrings.square = this.cast("square")
+  def square: typingsSlinky.highcharts.highchartsStrings.square = "square".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.square]
 }
 

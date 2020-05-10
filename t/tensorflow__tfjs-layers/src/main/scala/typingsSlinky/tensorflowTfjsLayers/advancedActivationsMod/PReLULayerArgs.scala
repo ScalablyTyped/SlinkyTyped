@@ -1,31 +1,28 @@
 package typingsSlinky.tensorflowTfjsLayers.advancedActivationsMod
 
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
 import typingsSlinky.tensorflowTfjsLayers.constraintsMod.Constraint
 import typingsSlinky.tensorflowTfjsLayers.initializersMod.Initializer
 import typingsSlinky.tensorflowTfjsLayers.initializersMod.InitializerIdentifier
-import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import typingsSlinky.tensorflowTfjsLayers.regularizersMod.Regularizer
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.LayerArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PReLULayerArgs extends LayerArgs {
   /**
     * Constraint for the learnable alpha.
     */
-  var alphaConstraint: js.UndefOr[Constraint] = js.undefined
+  var alphaConstraint: js.UndefOr[Constraint] = js.native
   /**
     * Initializer for the learnable alpha.
     */
-  var alphaInitializer: js.UndefOr[Initializer | InitializerIdentifier] = js.undefined
+  var alphaInitializer: js.UndefOr[Initializer | InitializerIdentifier] = js.native
   /**
     * Regularizer for the learnable alpha.
     */
-  var alphaRegularizer: js.UndefOr[Regularizer] = js.undefined
+  var alphaRegularizer: js.UndefOr[Regularizer] = js.native
   /**
     * The axes along which to share learnable parameters for the activation
     * function. For example, if the incoming feature maps are from a 2D
@@ -34,39 +31,70 @@ trait PReLULayerArgs extends LayerArgs {
     * each filter channels has only one set of parameters, set
     * `shared_axes: [1, 2]`.
     */
-  var sharedAxes: js.UndefOr[Double | js.Array[Double]] = js.undefined
+  var sharedAxes: js.UndefOr[Double | js.Array[Double]] = js.native
 }
 
 object PReLULayerArgs {
   @scala.inline
-  def apply(
-    alphaConstraint: Constraint = null,
-    alphaInitializer: Initializer | InitializerIdentifier = null,
-    alphaRegularizer: Regularizer = null,
-    batchInputShape: Shape = null,
-    batchSize: Int | Double = null,
-    dtype: DataType = null,
-    inputDType: DataType = null,
-    inputShape: Shape = null,
-    name: String = null,
-    sharedAxes: Double | js.Array[Double] = null,
-    trainable: js.UndefOr[Boolean] = js.undefined,
-    weights: js.Array[Tensor_[Rank]] = null
-  ): PReLULayerArgs = {
+  def apply(): PReLULayerArgs = {
     val __obj = js.Dynamic.literal()
-    if (alphaConstraint != null) __obj.updateDynamic("alphaConstraint")(alphaConstraint.asInstanceOf[js.Any])
-    if (alphaInitializer != null) __obj.updateDynamic("alphaInitializer")(alphaInitializer.asInstanceOf[js.Any])
-    if (alphaRegularizer != null) __obj.updateDynamic("alphaRegularizer")(alphaRegularizer.asInstanceOf[js.Any])
-    if (batchInputShape != null) __obj.updateDynamic("batchInputShape")(batchInputShape.asInstanceOf[js.Any])
-    if (batchSize != null) __obj.updateDynamic("batchSize")(batchSize.asInstanceOf[js.Any])
-    if (dtype != null) __obj.updateDynamic("dtype")(dtype.asInstanceOf[js.Any])
-    if (inputDType != null) __obj.updateDynamic("inputDType")(inputDType.asInstanceOf[js.Any])
-    if (inputShape != null) __obj.updateDynamic("inputShape")(inputShape.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (sharedAxes != null) __obj.updateDynamic("sharedAxes")(sharedAxes.asInstanceOf[js.Any])
-    if (!js.isUndefined(trainable)) __obj.updateDynamic("trainable")(trainable.asInstanceOf[js.Any])
-    if (weights != null) __obj.updateDynamic("weights")(weights.asInstanceOf[js.Any])
     __obj.asInstanceOf[PReLULayerArgs]
   }
+  @scala.inline
+  implicit class PReLULayerArgsOps[Self <: PReLULayerArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlphaConstraint(value: Constraint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaConstraint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlphaConstraint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaConstraint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlphaInitializer(value: Initializer | InitializerIdentifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaInitializer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlphaInitializer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaInitializer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlphaRegularizer(value: Regularizer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaRegularizer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlphaRegularizer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaRegularizer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSharedAxes(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sharedAxes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSharedAxes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sharedAxes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

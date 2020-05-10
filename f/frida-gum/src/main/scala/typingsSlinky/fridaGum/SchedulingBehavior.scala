@@ -12,10 +12,8 @@ trait SchedulingBehavior extends js.Object
 
 object SchedulingBehavior {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cooperative: typingsSlinky.fridaGum.fridaGumStrings.cooperative = "cooperative".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.cooperative]
   @scala.inline
-  def cooperative: typingsSlinky.fridaGum.fridaGumStrings.cooperative = this.cast("cooperative")
-  @scala.inline
-  def exclusive: typingsSlinky.fridaGum.fridaGumStrings.exclusive = this.cast("exclusive")
+  def exclusive: typingsSlinky.fridaGum.fridaGumStrings.exclusive = "exclusive".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.exclusive]
 }
 

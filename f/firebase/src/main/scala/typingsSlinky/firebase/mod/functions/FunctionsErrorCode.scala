@@ -27,40 +27,38 @@ trait FunctionsErrorCode extends js.Object
 
 object FunctionsErrorCode {
   @scala.inline
-  def aborted: typingsSlinky.firebase.firebaseStrings.aborted = this.cast("aborted")
+  def aborted: typingsSlinky.firebase.firebaseStrings.aborted = "aborted".asInstanceOf[typingsSlinky.firebase.firebaseStrings.aborted]
   @scala.inline
-  def `already-exists`: typingsSlinky.firebase.firebaseStrings.`already-exists` = this.cast("already-exists")
+  def `already-exists`: typingsSlinky.firebase.firebaseStrings.`already-exists` = "already-exists".asInstanceOf[typingsSlinky.firebase.firebaseStrings.`already-exists`]
   @scala.inline
-  def cancelled: typingsSlinky.firebase.firebaseStrings.cancelled = this.cast("cancelled")
+  def cancelled: typingsSlinky.firebase.firebaseStrings.cancelled = "cancelled".asInstanceOf[typingsSlinky.firebase.firebaseStrings.cancelled]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `data-loss`: typingsSlinky.firebase.firebaseStrings.`data-loss` = "data-loss".asInstanceOf[typingsSlinky.firebase.firebaseStrings.`data-loss`]
   @scala.inline
-  def `data-loss`: typingsSlinky.firebase.firebaseStrings.`data-loss` = this.cast("data-loss")
+  def `deadline-exceeded`: typingsSlinky.firebase.firebaseStrings.`deadline-exceeded` = "deadline-exceeded".asInstanceOf[typingsSlinky.firebase.firebaseStrings.`deadline-exceeded`]
   @scala.inline
-  def `deadline-exceeded`: typingsSlinky.firebase.firebaseStrings.`deadline-exceeded` = this.cast("deadline-exceeded")
+  def `failed-precondition`: typingsSlinky.firebase.firebaseStrings.`failed-precondition` = "failed-precondition".asInstanceOf[typingsSlinky.firebase.firebaseStrings.`failed-precondition`]
   @scala.inline
-  def `failed-precondition`: typingsSlinky.firebase.firebaseStrings.`failed-precondition` = this.cast("failed-precondition")
+  def internal: typingsSlinky.firebase.firebaseStrings.internal = "internal".asInstanceOf[typingsSlinky.firebase.firebaseStrings.internal]
   @scala.inline
-  def internal: typingsSlinky.firebase.firebaseStrings.internal = this.cast("internal")
+  def `invalid-argument`: typingsSlinky.firebase.firebaseStrings.`invalid-argument` = "invalid-argument".asInstanceOf[typingsSlinky.firebase.firebaseStrings.`invalid-argument`]
   @scala.inline
-  def `invalid-argument`: typingsSlinky.firebase.firebaseStrings.`invalid-argument` = this.cast("invalid-argument")
+  def `not-found`: typingsSlinky.firebase.firebaseStrings.`not-found` = "not-found".asInstanceOf[typingsSlinky.firebase.firebaseStrings.`not-found`]
   @scala.inline
-  def `not-found`: typingsSlinky.firebase.firebaseStrings.`not-found` = this.cast("not-found")
+  def ok: typingsSlinky.firebase.firebaseStrings.ok = "ok".asInstanceOf[typingsSlinky.firebase.firebaseStrings.ok]
   @scala.inline
-  def ok: typingsSlinky.firebase.firebaseStrings.ok = this.cast("ok")
+  def `out-of-range`: typingsSlinky.firebase.firebaseStrings.`out-of-range` = "out-of-range".asInstanceOf[typingsSlinky.firebase.firebaseStrings.`out-of-range`]
   @scala.inline
-  def `out-of-range`: typingsSlinky.firebase.firebaseStrings.`out-of-range` = this.cast("out-of-range")
+  def `permission-denied`: typingsSlinky.firebase.firebaseStrings.`permission-denied` = "permission-denied".asInstanceOf[typingsSlinky.firebase.firebaseStrings.`permission-denied`]
   @scala.inline
-  def `permission-denied`: typingsSlinky.firebase.firebaseStrings.`permission-denied` = this.cast("permission-denied")
+  def `resource-exhausted`: typingsSlinky.firebase.firebaseStrings.`resource-exhausted` = "resource-exhausted".asInstanceOf[typingsSlinky.firebase.firebaseStrings.`resource-exhausted`]
   @scala.inline
-  def `resource-exhausted`: typingsSlinky.firebase.firebaseStrings.`resource-exhausted` = this.cast("resource-exhausted")
+  def unauthenticated: typingsSlinky.firebase.firebaseStrings.unauthenticated = "unauthenticated".asInstanceOf[typingsSlinky.firebase.firebaseStrings.unauthenticated]
   @scala.inline
-  def unauthenticated: typingsSlinky.firebase.firebaseStrings.unauthenticated = this.cast("unauthenticated")
+  def unavailable: typingsSlinky.firebase.firebaseStrings.unavailable = "unavailable".asInstanceOf[typingsSlinky.firebase.firebaseStrings.unavailable]
   @scala.inline
-  def unavailable: typingsSlinky.firebase.firebaseStrings.unavailable = this.cast("unavailable")
+  def unimplemented: typingsSlinky.firebase.firebaseStrings.unimplemented = "unimplemented".asInstanceOf[typingsSlinky.firebase.firebaseStrings.unimplemented]
   @scala.inline
-  def unimplemented: typingsSlinky.firebase.firebaseStrings.unimplemented = this.cast("unimplemented")
-  @scala.inline
-  def unknown: typingsSlinky.firebase.firebaseStrings.unknown = this.cast("unknown")
+  def unknown: typingsSlinky.firebase.firebaseStrings.unknown = "unknown".asInstanceOf[typingsSlinky.firebase.firebaseStrings.unknown]
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.streamjs
 
-import typingsSlinky.std.RegExp
 import typingsSlinky.streamjs.Stream.Accumulator
 import typingsSlinky.streamjs.Stream.Collector
 import typingsSlinky.streamjs.Stream.Comparator
@@ -21,10 +20,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class Stream_[T] () extends js.Object {
   def allMatch(predicate: Predicate[T]): Boolean = js.native
-  def allMatch(regexp: RegExp): Boolean = js.native
+  def allMatch(regexp: js.RegExp): Boolean = js.native
   def allMatch(sample: Sample): Boolean = js.native
   def anyMatch(predicate: Predicate[T]): Boolean = js.native
-  def anyMatch(regexp: RegExp): Boolean = js.native
+  def anyMatch(regexp: js.RegExp): Boolean = js.native
   def anyMatch(sample: Sample): Boolean = js.native
   def average(): Double = js.native
   def average(path: String): Double = js.native
@@ -34,11 +33,11 @@ class Stream_[T] () extends js.Object {
   def count(): Double = js.native
   def distinct(): Stream[T] = js.native
   def dropWhile(predicate: Predicate[T]): Stream[T] = js.native
-  def dropWhile(regexp: RegExp): Stream[String] = js.native
+  def dropWhile(regexp: js.RegExp): Stream[String] = js.native
   def dropWhile(sample: Sample): Stream[T] = js.native
   def each(consumer: Consumer[T]): Unit = js.native
   def filter(predicate: Predicate[T]): Stream[T] = js.native
-  def filter(regexp: RegExp): Stream[String] = js.native
+  def filter(regexp: js.RegExp): Stream[String] = js.native
   def filter(sample: Sample): Stream[T] = js.native
   def findAny(): Optional[T] = js.native
   def findFirst(): Optional[T] = js.native
@@ -66,13 +65,13 @@ class Stream_[T] () extends js.Object {
   def min(comparator: Comparator[T]): Optional[T] = js.native
   def min(path: String): Optional[T] = js.native
   def noneMatch(predicate: js.Function1[/* elem */ T, Boolean]): Boolean = js.native
-  def noneMatch(regexp: RegExp): Boolean = js.native
+  def noneMatch(regexp: js.RegExp): Boolean = js.native
   def partitionBy(predicate: Predicate[T]): js.Array[js.Array[T]] = js.native
-  def partitionBy(regexp: RegExp): js.Array[js.Array[T]] = js.native
+  def partitionBy(regexp: js.RegExp): js.Array[js.Array[T]] = js.native
   def partitionBy(sample: Sample): js.Array[js.Array[T]] = js.native
   def partitionBy(size: Double): js.Array[js.Array[T]] = js.native
   def partitioningBy(predicate: Predicate[T]): js.Array[js.Array[T]] = js.native
-  def partitioningBy(regexp: RegExp): js.Array[js.Array[T]] = js.native
+  def partitioningBy(regexp: js.RegExp): js.Array[js.Array[T]] = js.native
   def partitioningBy(sample: Sample): js.Array[js.Array[T]] = js.native
   def partitioningBy(size: Double): js.Array[js.Array[T]] = js.native
   def peek(consumer: Consumer[T]): Stream[T] = js.native
@@ -92,7 +91,7 @@ class Stream_[T] () extends js.Object {
   def sum(): Double = js.native
   def sum(path: String): Double = js.native
   def takeWhile(predicate: Predicate[T]): Stream[T] = js.native
-  def takeWhile(regexp: RegExp): Stream[String] = js.native
+  def takeWhile(regexp: js.RegExp): Stream[String] = js.native
   def takeWhile(sample: Sample): Stream[T] = js.native
   def toArray(): js.Array[T] = js.native
   def toList(): js.Array[T] = js.native

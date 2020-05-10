@@ -18,11 +18,41 @@ trait CreateUsageReportSubscriptionResult extends js.Object {
 
 object CreateUsageReportSubscriptionResult {
   @scala.inline
-  def apply(S3BucketName: String = null, Schedule: UsageReportSchedule = null): CreateUsageReportSubscriptionResult = {
+  def apply(): CreateUsageReportSubscriptionResult = {
     val __obj = js.Dynamic.literal()
-    if (S3BucketName != null) __obj.updateDynamic("S3BucketName")(S3BucketName.asInstanceOf[js.Any])
-    if (Schedule != null) __obj.updateDynamic("Schedule")(Schedule.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateUsageReportSubscriptionResult]
   }
+  @scala.inline
+  implicit class CreateUsageReportSubscriptionResultOps[Self <: CreateUsageReportSubscriptionResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withS3BucketName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BucketName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3BucketName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BucketName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchedule(value: UsageReportSchedule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchedule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

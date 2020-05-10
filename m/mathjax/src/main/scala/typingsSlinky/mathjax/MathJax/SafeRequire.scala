@@ -4,78 +4,296 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SafeRequire extends js.Object {
-  var HTML: js.UndefOr[Boolean] = js.undefined
-  var action: js.UndefOr[Boolean] = js.undefined
-  var amscd: js.UndefOr[Boolean] = js.undefined
-  var amsmath: js.UndefOr[Boolean] = js.undefined
-  var amssymbols: js.UndefOr[Boolean] = js.undefined
-  var autobold: js.UndefOr[Boolean] = js.undefined
-  var `autoload-all`: js.UndefOr[Boolean] = js.undefined
-  var bbox: js.UndefOr[Boolean] = js.undefined
-  var begingroup: js.UndefOr[Boolean] = js.undefined
-  var boldsymbol: js.UndefOr[Boolean] = js.undefined
-  var cancel: js.UndefOr[Boolean] = js.undefined
-  var color: js.UndefOr[Boolean] = js.undefined
-  var enclose: js.UndefOr[Boolean] = js.undefined
-  var extpfeil: js.UndefOr[Boolean] = js.undefined
-  var mathchoice: js.UndefOr[Boolean] = js.undefined
-  var mhchem: js.UndefOr[Boolean] = js.undefined
-  var newcommand: js.UndefOr[Boolean] = js.undefined
-  var noErrors: js.UndefOr[Boolean] = js.undefined
-  var noUndefined: js.UndefOr[Boolean] = js.undefined
-  var unicode: js.UndefOr[Boolean] = js.undefined
-  var verb: js.UndefOr[Boolean] = js.undefined
+  var HTML: js.UndefOr[Boolean] = js.native
+  var action: js.UndefOr[Boolean] = js.native
+  var amscd: js.UndefOr[Boolean] = js.native
+  var amsmath: js.UndefOr[Boolean] = js.native
+  var amssymbols: js.UndefOr[Boolean] = js.native
+  var autobold: js.UndefOr[Boolean] = js.native
+  var `autoload-all`: js.UndefOr[Boolean] = js.native
+  var bbox: js.UndefOr[Boolean] = js.native
+  var begingroup: js.UndefOr[Boolean] = js.native
+  var boldsymbol: js.UndefOr[Boolean] = js.native
+  var cancel: js.UndefOr[Boolean] = js.native
+  var color: js.UndefOr[Boolean] = js.native
+  var enclose: js.UndefOr[Boolean] = js.native
+  var extpfeil: js.UndefOr[Boolean] = js.native
+  var mathchoice: js.UndefOr[Boolean] = js.native
+  var mhchem: js.UndefOr[Boolean] = js.native
+  var newcommand: js.UndefOr[Boolean] = js.native
+  var noErrors: js.UndefOr[Boolean] = js.native
+  var noUndefined: js.UndefOr[Boolean] = js.native
+  var unicode: js.UndefOr[Boolean] = js.native
+  var verb: js.UndefOr[Boolean] = js.native
 }
 
 object SafeRequire {
   @scala.inline
-  def apply(
-    HTML: js.UndefOr[Boolean] = js.undefined,
-    action: js.UndefOr[Boolean] = js.undefined,
-    amscd: js.UndefOr[Boolean] = js.undefined,
-    amsmath: js.UndefOr[Boolean] = js.undefined,
-    amssymbols: js.UndefOr[Boolean] = js.undefined,
-    autobold: js.UndefOr[Boolean] = js.undefined,
-    `autoload-all`: js.UndefOr[Boolean] = js.undefined,
-    bbox: js.UndefOr[Boolean] = js.undefined,
-    begingroup: js.UndefOr[Boolean] = js.undefined,
-    boldsymbol: js.UndefOr[Boolean] = js.undefined,
-    cancel: js.UndefOr[Boolean] = js.undefined,
-    color: js.UndefOr[Boolean] = js.undefined,
-    enclose: js.UndefOr[Boolean] = js.undefined,
-    extpfeil: js.UndefOr[Boolean] = js.undefined,
-    mathchoice: js.UndefOr[Boolean] = js.undefined,
-    mhchem: js.UndefOr[Boolean] = js.undefined,
-    newcommand: js.UndefOr[Boolean] = js.undefined,
-    noErrors: js.UndefOr[Boolean] = js.undefined,
-    noUndefined: js.UndefOr[Boolean] = js.undefined,
-    unicode: js.UndefOr[Boolean] = js.undefined,
-    verb: js.UndefOr[Boolean] = js.undefined
-  ): SafeRequire = {
+  def apply(): SafeRequire = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(HTML)) __obj.updateDynamic("HTML")(HTML.asInstanceOf[js.Any])
-    if (!js.isUndefined(action)) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (!js.isUndefined(amscd)) __obj.updateDynamic("amscd")(amscd.asInstanceOf[js.Any])
-    if (!js.isUndefined(amsmath)) __obj.updateDynamic("amsmath")(amsmath.asInstanceOf[js.Any])
-    if (!js.isUndefined(amssymbols)) __obj.updateDynamic("amssymbols")(amssymbols.asInstanceOf[js.Any])
-    if (!js.isUndefined(autobold)) __obj.updateDynamic("autobold")(autobold.asInstanceOf[js.Any])
-    if (!js.isUndefined(`autoload-all`)) __obj.updateDynamic("autoload-all")(`autoload-all`.asInstanceOf[js.Any])
-    if (!js.isUndefined(bbox)) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
-    if (!js.isUndefined(begingroup)) __obj.updateDynamic("begingroup")(begingroup.asInstanceOf[js.Any])
-    if (!js.isUndefined(boldsymbol)) __obj.updateDynamic("boldsymbol")(boldsymbol.asInstanceOf[js.Any])
-    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.asInstanceOf[js.Any])
-    if (!js.isUndefined(color)) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(enclose)) __obj.updateDynamic("enclose")(enclose.asInstanceOf[js.Any])
-    if (!js.isUndefined(extpfeil)) __obj.updateDynamic("extpfeil")(extpfeil.asInstanceOf[js.Any])
-    if (!js.isUndefined(mathchoice)) __obj.updateDynamic("mathchoice")(mathchoice.asInstanceOf[js.Any])
-    if (!js.isUndefined(mhchem)) __obj.updateDynamic("mhchem")(mhchem.asInstanceOf[js.Any])
-    if (!js.isUndefined(newcommand)) __obj.updateDynamic("newcommand")(newcommand.asInstanceOf[js.Any])
-    if (!js.isUndefined(noErrors)) __obj.updateDynamic("noErrors")(noErrors.asInstanceOf[js.Any])
-    if (!js.isUndefined(noUndefined)) __obj.updateDynamic("noUndefined")(noUndefined.asInstanceOf[js.Any])
-    if (!js.isUndefined(unicode)) __obj.updateDynamic("unicode")(unicode.asInstanceOf[js.Any])
-    if (!js.isUndefined(verb)) __obj.updateDynamic("verb")(verb.asInstanceOf[js.Any])
     __obj.asInstanceOf[SafeRequire]
   }
+  @scala.inline
+  implicit class SafeRequireOps[Self <: SafeRequire] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHTML(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HTML")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHTML: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HTML")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAction(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmscd(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amscd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmscd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amscd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmsmath(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amsmath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmsmath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amsmath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmssymbols(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amssymbols")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmssymbols: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amssymbols")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutobold(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autobold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutobold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autobold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAutoload-all`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoload-all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAutoload-all`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoload-all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBbox(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bbox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBbox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bbox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBegingroup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("begingroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBegingroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("begingroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoldsymbol(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boldsymbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoldsymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boldsymbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnclose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enclose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnclose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enclose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtpfeil(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extpfeil")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtpfeil: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extpfeil")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMathchoice(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mathchoice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMathchoice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mathchoice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMhchem(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mhchem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMhchem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mhchem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewcommand(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newcommand")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewcommand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newcommand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoErrors(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoUndefined(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noUndefined")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoUndefined: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noUndefined")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnicode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unicode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnicode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unicode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerb(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verb")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

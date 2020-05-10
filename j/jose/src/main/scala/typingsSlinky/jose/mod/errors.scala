@@ -37,10 +37,6 @@ object errors extends js.Object {
   @js.native
   class JOSEError[T] () extends Error {
     var code: T = js.native
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
   }
   
   @js.native

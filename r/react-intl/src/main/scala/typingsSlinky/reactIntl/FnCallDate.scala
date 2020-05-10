@@ -1,6 +1,5 @@
 package typingsSlinky.reactIntl
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +8,6 @@ import scala.scalajs.js.annotation._
 trait FnCallDate extends js.Object {
   def apply(): String = js.native
   def apply(date: Double): String = js.native
-  def apply(date: Date): String = js.native
+  def apply(date: js.Date): String = js.native
 }
 

@@ -1,10 +1,7 @@
 package typingsSlinky.reactNativeSettingsList.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNativeSettingsList.mod.HeaderProps
@@ -12,31 +9,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Header
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeSettingsList.mod.default.Header] {
+object Header {
   @JSImport("react-native-settings-list", "default.Header")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    headerNumberOfLines: Int | Double = null,
-    headerRef: () => Unit = null,
-    headerStyle: StyleProp[TextStyle] = null,
-    headerText: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeSettingsList.mod.default.Header] = {
-    val __obj = js.Dynamic.literal()
-    if (headerNumberOfLines != null) __obj.updateDynamic("headerNumberOfLines")(headerNumberOfLines.asInstanceOf[js.Any])
-    if (headerRef != null) __obj.updateDynamic("headerRef")(js.Any.fromFunction0(headerRef))
-    if (headerStyle != null) __obj.updateDynamic("headerStyle")(headerStyle.asInstanceOf[js.Any])
-    if (headerText != null) __obj.updateDynamic("headerText")(headerText.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSettingsList.mod.default.Header] {
+    @scala.inline
+    def headerNumberOfLines(value: Double): this.type = set("headerNumberOfLines", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerRef(value: () => Unit): this.type = set("headerRef", js.Any.fromFunction0(value))
+    @scala.inline
+    def headerStyle(value: StyleProp[TextStyle]): this.type = set("headerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerStyleNull: this.type = set("headerStyle", null)
+    @scala.inline
+    def headerText(value: String): this.type = set("headerText", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactNativeSettingsList.mod.default.Header] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactNativeSettingsList.mod.default.Header](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = HeaderProps
+  
+  def withProps(p: HeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Header.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

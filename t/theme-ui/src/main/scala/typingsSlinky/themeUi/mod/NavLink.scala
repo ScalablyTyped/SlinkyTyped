@@ -1,7 +1,7 @@
 package typingsSlinky.themeUi.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.HTMLAnchorElement
+import org.scalajs.dom.raw.HTMLAnchorElement
 import typingsSlinky.themeUiComponents.mod.ForwardRef
 import typingsSlinky.themeUiComponents.mod.NavLinkProps
 import scala.scalajs.js

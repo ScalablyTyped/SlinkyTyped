@@ -1,12 +1,12 @@
 package typingsSlinky.antDesignProLayout.topNavHeaderMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.FC
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("@ant-design/pro-layout/lib/TopNavHeader", JSImport.Default)
 @js.native
-object default extends TopLevel[FC[TopNavHeaderProps]]
+object default extends TopLevel[ReactComponentClass[TopNavHeaderProps]]
 

@@ -22,10 +22,41 @@ trait RecordColumn extends js.Object {
 
 object RecordColumn {
   @scala.inline
-  def apply(Name: RecordColumnName, SqlType: RecordColumnSqlType, Mapping: RecordColumnMapping = null): RecordColumn = {
+  def apply(Name: RecordColumnName, SqlType: RecordColumnSqlType): RecordColumn = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], SqlType = SqlType.asInstanceOf[js.Any])
-    if (Mapping != null) __obj.updateDynamic("Mapping")(Mapping.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecordColumn]
   }
+  @scala.inline
+  implicit class RecordColumnOps[Self <: RecordColumn] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: RecordColumnName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSqlType(value: RecordColumnSqlType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SqlType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMapping(value: RecordColumnMapping): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Mapping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Mapping")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

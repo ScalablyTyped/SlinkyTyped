@@ -12,213 +12,881 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TreeTableProps extends js.Object {
-  var alwaysShowPaginator: js.UndefOr[Boolean] = js.undefined
-  var autoLayout: js.UndefOr[Boolean] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var columnResizeMode: js.UndefOr[String] = js.undefined
-  var contextMenuSelectionKey: js.UndefOr[js.Any] = js.undefined
-  var currentPageReportTemplate: js.UndefOr[String] = js.undefined
-  var defaultSortOrder: js.UndefOr[Double] = js.undefined
-  var emptyMessage: js.UndefOr[String] = js.undefined
-  var expandedKeys: js.UndefOr[js.Any] = js.undefined
-  var filterMode: js.UndefOr[String] = js.undefined
-  var filters: js.UndefOr[js.Object] = js.undefined
-  var first: js.UndefOr[Double] = js.undefined
-  var footer: js.UndefOr[js.Any] = js.undefined
-  var footerColumnGroup: js.UndefOr[js.Any] = js.undefined
-  var frozenFooterColumnGroup: js.UndefOr[js.Any] = js.undefined
-  var frozenHeaderColumnGroup: js.UndefOr[js.Any] = js.undefined
-  var frozenWidth: js.UndefOr[String] = js.undefined
-  var globalFilter: js.UndefOr[js.Any] = js.undefined
-  var header: js.UndefOr[js.Any] = js.undefined
-  var headerColumnGroup: js.UndefOr[js.Any] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var `lazy`: js.UndefOr[Boolean] = js.undefined
-  var loading: js.UndefOr[Boolean] = js.undefined
-  var loadingIcon: js.UndefOr[String] = js.undefined
-  var metaKeySelection: js.UndefOr[Boolean] = js.undefined
-  var multiSortMeta: js.UndefOr[js.Array[_]] = js.undefined
-  var onColReorder: js.UndefOr[js.Function1[/* e */ AnonDropIndex, Unit]] = js.undefined
-  var onCollapse: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.undefined
-  var onColumnResizeEnd: js.UndefOr[js.Function1[/* e */ AnonDelta, Unit]] = js.undefined
-  var onContextMenu: js.UndefOr[js.Function1[/* e */ AnonNode, Unit]] = js.undefined
-  var onContextMenuSelectionChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.undefined
-  var onExpand: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.undefined
-  var onFilter: js.UndefOr[js.Function1[/* filters */ js.Array[_], Unit]] = js.undefined
-  var onPage: js.UndefOr[js.Function1[/* e */ AnonFirst, Unit]] = js.undefined
-  var onRowClick: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.undefined
-  var onSelect: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.undefined
-  var onSelectionChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.undefined
-  var onSort: js.UndefOr[js.Function1[/* e */ AnonMultiSortMeta, Unit]] = js.undefined
-  var onToggle: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.undefined
-  var onUnselect: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.undefined
-  var pageLinkSize: js.UndefOr[Double] = js.undefined
-  var paginator: js.UndefOr[Boolean] = js.undefined
-  var paginatorLeft: js.UndefOr[js.Any] = js.undefined
-  var paginatorPosition: js.UndefOr[String] = js.undefined
-  var paginatorRight: js.UndefOr[js.Any] = js.undefined
-  var paginatorTemplate: js.UndefOr[String] = js.undefined
-  var propagateSelectionDown: js.UndefOr[Boolean] = js.undefined
-  var propagateSelectionUp: js.UndefOr[Boolean] = js.undefined
-  var reorderableColumns: js.UndefOr[Boolean] = js.undefined
-  var resizableColumns: js.UndefOr[Boolean] = js.undefined
-  var rowClassName: js.UndefOr[js.Function1[/* rowData */ js.Any, js.Object]] = js.undefined
-  var rows: js.UndefOr[Double] = js.undefined
-  var rowsPerPageOptions: js.UndefOr[js.Array[Double]] = js.undefined
-  var scrollHeight: js.UndefOr[String] = js.undefined
-  var scrollable: js.UndefOr[Boolean] = js.undefined
-  var selectionKeys: js.UndefOr[js.Any] = js.undefined
-  var selectionMode: js.UndefOr[String] = js.undefined
-  var sortField: js.UndefOr[String] = js.undefined
-  var sortMode: js.UndefOr[String] = js.undefined
-  var sortOrder: js.UndefOr[Double] = js.undefined
-  var style: js.UndefOr[js.Object] = js.undefined
-  var tabIndex: js.UndefOr[String] = js.undefined
-  var tableClassName: js.UndefOr[String] = js.undefined
-  var tableStyle: js.UndefOr[js.Object] = js.undefined
-  var totalRecords: js.UndefOr[Double] = js.undefined
-  var value: js.UndefOr[js.Array[TreeNode]] = js.undefined
+  var alwaysShowPaginator: js.UndefOr[Boolean] = js.native
+  var autoLayout: js.UndefOr[Boolean] = js.native
+  var className: js.UndefOr[String] = js.native
+  var columnResizeMode: js.UndefOr[String] = js.native
+  var contextMenuSelectionKey: js.UndefOr[js.Any] = js.native
+  var currentPageReportTemplate: js.UndefOr[String] = js.native
+  var defaultSortOrder: js.UndefOr[Double] = js.native
+  var emptyMessage: js.UndefOr[String] = js.native
+  var expandedKeys: js.UndefOr[js.Any] = js.native
+  var filterMode: js.UndefOr[String] = js.native
+  var filters: js.UndefOr[js.Object] = js.native
+  var first: js.UndefOr[Double] = js.native
+  var footer: js.UndefOr[js.Any] = js.native
+  var footerColumnGroup: js.UndefOr[js.Any] = js.native
+  var frozenFooterColumnGroup: js.UndefOr[js.Any] = js.native
+  var frozenHeaderColumnGroup: js.UndefOr[js.Any] = js.native
+  var frozenWidth: js.UndefOr[String] = js.native
+  var globalFilter: js.UndefOr[js.Any] = js.native
+  var header: js.UndefOr[js.Any] = js.native
+  var headerColumnGroup: js.UndefOr[js.Any] = js.native
+  var id: js.UndefOr[String] = js.native
+  var `lazy`: js.UndefOr[Boolean] = js.native
+  var loading: js.UndefOr[Boolean] = js.native
+  var loadingIcon: js.UndefOr[String] = js.native
+  var metaKeySelection: js.UndefOr[Boolean] = js.native
+  var multiSortMeta: js.UndefOr[js.Array[_]] = js.native
+  var onColReorder: js.UndefOr[js.Function1[/* e */ AnonDropIndex, Unit]] = js.native
+  var onCollapse: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.native
+  var onColumnResizeEnd: js.UndefOr[js.Function1[/* e */ AnonDelta, Unit]] = js.native
+  var onContextMenu: js.UndefOr[js.Function1[/* e */ AnonNode, Unit]] = js.native
+  var onContextMenuSelectionChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
+  var onExpand: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.native
+  var onFilter: js.UndefOr[js.Function1[/* filters */ js.Array[_], Unit]] = js.native
+  var onPage: js.UndefOr[js.Function1[/* e */ AnonFirst, Unit]] = js.native
+  var onRowClick: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.native
+  var onSelect: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.native
+  var onSelectionChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
+  var onSort: js.UndefOr[js.Function1[/* e */ AnonMultiSortMeta, Unit]] = js.native
+  var onToggle: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
+  var onUnselect: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.native
+  var pageLinkSize: js.UndefOr[Double] = js.native
+  var paginator: js.UndefOr[Boolean] = js.native
+  var paginatorLeft: js.UndefOr[js.Any] = js.native
+  var paginatorPosition: js.UndefOr[String] = js.native
+  var paginatorRight: js.UndefOr[js.Any] = js.native
+  var paginatorTemplate: js.UndefOr[String] = js.native
+  var propagateSelectionDown: js.UndefOr[Boolean] = js.native
+  var propagateSelectionUp: js.UndefOr[Boolean] = js.native
+  var reorderableColumns: js.UndefOr[Boolean] = js.native
+  var resizableColumns: js.UndefOr[Boolean] = js.native
+  var rowClassName: js.UndefOr[js.Function1[/* rowData */ js.Any, js.Object]] = js.native
+  var rows: js.UndefOr[Double] = js.native
+  var rowsPerPageOptions: js.UndefOr[js.Array[Double]] = js.native
+  var scrollHeight: js.UndefOr[String] = js.native
+  var scrollable: js.UndefOr[Boolean] = js.native
+  var selectionKeys: js.UndefOr[js.Any] = js.native
+  var selectionMode: js.UndefOr[String] = js.native
+  var sortField: js.UndefOr[String] = js.native
+  var sortMode: js.UndefOr[String] = js.native
+  var sortOrder: js.UndefOr[Double] = js.native
+  var style: js.UndefOr[js.Object] = js.native
+  var tabIndex: js.UndefOr[String] = js.native
+  var tableClassName: js.UndefOr[String] = js.native
+  var tableStyle: js.UndefOr[js.Object] = js.native
+  var totalRecords: js.UndefOr[Double] = js.native
+  var value: js.UndefOr[js.Array[TreeNode]] = js.native
 }
 
 object TreeTableProps {
   @scala.inline
-  def apply(
-    alwaysShowPaginator: js.UndefOr[Boolean] = js.undefined,
-    autoLayout: js.UndefOr[Boolean] = js.undefined,
-    className: String = null,
-    columnResizeMode: String = null,
-    contextMenuSelectionKey: js.Any = null,
-    currentPageReportTemplate: String = null,
-    defaultSortOrder: Int | Double = null,
-    emptyMessage: String = null,
-    expandedKeys: js.Any = null,
-    filterMode: String = null,
-    filters: js.Object = null,
-    first: Int | Double = null,
-    footer: js.Any = null,
-    footerColumnGroup: js.Any = null,
-    frozenFooterColumnGroup: js.Any = null,
-    frozenHeaderColumnGroup: js.Any = null,
-    frozenWidth: String = null,
-    globalFilter: js.Any = null,
-    header: js.Any = null,
-    headerColumnGroup: js.Any = null,
-    id: String = null,
-    `lazy`: js.UndefOr[Boolean] = js.undefined,
-    loading: js.UndefOr[Boolean] = js.undefined,
-    loadingIcon: String = null,
-    metaKeySelection: js.UndefOr[Boolean] = js.undefined,
-    multiSortMeta: js.Array[_] = null,
-    onColReorder: /* e */ AnonDropIndex => Unit = null,
-    onCollapse: /* e */ AnonNodeOriginalEvent => Unit = null,
-    onColumnResizeEnd: /* e */ AnonDelta => Unit = null,
-    onContextMenu: /* e */ AnonNode => Unit = null,
-    onContextMenuSelectionChange: /* e */ AnonValue => Unit = null,
-    onExpand: /* e */ AnonNodeOriginalEvent => Unit = null,
-    onFilter: /* filters */ js.Array[_] => Unit = null,
-    onPage: /* e */ AnonFirst => Unit = null,
-    onRowClick: /* e */ AnonNodeOriginalEvent => Unit = null,
-    onSelect: /* e */ AnonNodeOriginalEvent => Unit = null,
-    onSelectionChange: /* e */ AnonValue => Unit = null,
-    onSort: /* e */ AnonMultiSortMeta => Unit = null,
-    onToggle: /* e */ AnonValue => Unit = null,
-    onUnselect: /* e */ AnonNodeOriginalEvent => Unit = null,
-    pageLinkSize: Int | Double = null,
-    paginator: js.UndefOr[Boolean] = js.undefined,
-    paginatorLeft: js.Any = null,
-    paginatorPosition: String = null,
-    paginatorRight: js.Any = null,
-    paginatorTemplate: String = null,
-    propagateSelectionDown: js.UndefOr[Boolean] = js.undefined,
-    propagateSelectionUp: js.UndefOr[Boolean] = js.undefined,
-    reorderableColumns: js.UndefOr[Boolean] = js.undefined,
-    resizableColumns: js.UndefOr[Boolean] = js.undefined,
-    rowClassName: /* rowData */ js.Any => js.Object = null,
-    rows: Int | Double = null,
-    rowsPerPageOptions: js.Array[Double] = null,
-    scrollHeight: String = null,
-    scrollable: js.UndefOr[Boolean] = js.undefined,
-    selectionKeys: js.Any = null,
-    selectionMode: String = null,
-    sortField: String = null,
-    sortMode: String = null,
-    sortOrder: Int | Double = null,
-    style: js.Object = null,
-    tabIndex: String = null,
-    tableClassName: String = null,
-    tableStyle: js.Object = null,
-    totalRecords: Int | Double = null,
-    value: js.Array[TreeNode] = null
-  ): TreeTableProps = {
+  def apply(): TreeTableProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alwaysShowPaginator)) __obj.updateDynamic("alwaysShowPaginator")(alwaysShowPaginator.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoLayout)) __obj.updateDynamic("autoLayout")(autoLayout.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (columnResizeMode != null) __obj.updateDynamic("columnResizeMode")(columnResizeMode.asInstanceOf[js.Any])
-    if (contextMenuSelectionKey != null) __obj.updateDynamic("contextMenuSelectionKey")(contextMenuSelectionKey.asInstanceOf[js.Any])
-    if (currentPageReportTemplate != null) __obj.updateDynamic("currentPageReportTemplate")(currentPageReportTemplate.asInstanceOf[js.Any])
-    if (defaultSortOrder != null) __obj.updateDynamic("defaultSortOrder")(defaultSortOrder.asInstanceOf[js.Any])
-    if (emptyMessage != null) __obj.updateDynamic("emptyMessage")(emptyMessage.asInstanceOf[js.Any])
-    if (expandedKeys != null) __obj.updateDynamic("expandedKeys")(expandedKeys.asInstanceOf[js.Any])
-    if (filterMode != null) __obj.updateDynamic("filterMode")(filterMode.asInstanceOf[js.Any])
-    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
-    if (first != null) __obj.updateDynamic("first")(first.asInstanceOf[js.Any])
-    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
-    if (footerColumnGroup != null) __obj.updateDynamic("footerColumnGroup")(footerColumnGroup.asInstanceOf[js.Any])
-    if (frozenFooterColumnGroup != null) __obj.updateDynamic("frozenFooterColumnGroup")(frozenFooterColumnGroup.asInstanceOf[js.Any])
-    if (frozenHeaderColumnGroup != null) __obj.updateDynamic("frozenHeaderColumnGroup")(frozenHeaderColumnGroup.asInstanceOf[js.Any])
-    if (frozenWidth != null) __obj.updateDynamic("frozenWidth")(frozenWidth.asInstanceOf[js.Any])
-    if (globalFilter != null) __obj.updateDynamic("globalFilter")(globalFilter.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (headerColumnGroup != null) __obj.updateDynamic("headerColumnGroup")(headerColumnGroup.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(`lazy`)) __obj.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
-    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (loadingIcon != null) __obj.updateDynamic("loadingIcon")(loadingIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(metaKeySelection)) __obj.updateDynamic("metaKeySelection")(metaKeySelection.asInstanceOf[js.Any])
-    if (multiSortMeta != null) __obj.updateDynamic("multiSortMeta")(multiSortMeta.asInstanceOf[js.Any])
-    if (onColReorder != null) __obj.updateDynamic("onColReorder")(js.Any.fromFunction1(onColReorder))
-    if (onCollapse != null) __obj.updateDynamic("onCollapse")(js.Any.fromFunction1(onCollapse))
-    if (onColumnResizeEnd != null) __obj.updateDynamic("onColumnResizeEnd")(js.Any.fromFunction1(onColumnResizeEnd))
-    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(js.Any.fromFunction1(onContextMenu))
-    if (onContextMenuSelectionChange != null) __obj.updateDynamic("onContextMenuSelectionChange")(js.Any.fromFunction1(onContextMenuSelectionChange))
-    if (onExpand != null) __obj.updateDynamic("onExpand")(js.Any.fromFunction1(onExpand))
-    if (onFilter != null) __obj.updateDynamic("onFilter")(js.Any.fromFunction1(onFilter))
-    if (onPage != null) __obj.updateDynamic("onPage")(js.Any.fromFunction1(onPage))
-    if (onRowClick != null) __obj.updateDynamic("onRowClick")(js.Any.fromFunction1(onRowClick))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
-    if (onSelectionChange != null) __obj.updateDynamic("onSelectionChange")(js.Any.fromFunction1(onSelectionChange))
-    if (onSort != null) __obj.updateDynamic("onSort")(js.Any.fromFunction1(onSort))
-    if (onToggle != null) __obj.updateDynamic("onToggle")(js.Any.fromFunction1(onToggle))
-    if (onUnselect != null) __obj.updateDynamic("onUnselect")(js.Any.fromFunction1(onUnselect))
-    if (pageLinkSize != null) __obj.updateDynamic("pageLinkSize")(pageLinkSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(paginator)) __obj.updateDynamic("paginator")(paginator.asInstanceOf[js.Any])
-    if (paginatorLeft != null) __obj.updateDynamic("paginatorLeft")(paginatorLeft.asInstanceOf[js.Any])
-    if (paginatorPosition != null) __obj.updateDynamic("paginatorPosition")(paginatorPosition.asInstanceOf[js.Any])
-    if (paginatorRight != null) __obj.updateDynamic("paginatorRight")(paginatorRight.asInstanceOf[js.Any])
-    if (paginatorTemplate != null) __obj.updateDynamic("paginatorTemplate")(paginatorTemplate.asInstanceOf[js.Any])
-    if (!js.isUndefined(propagateSelectionDown)) __obj.updateDynamic("propagateSelectionDown")(propagateSelectionDown.asInstanceOf[js.Any])
-    if (!js.isUndefined(propagateSelectionUp)) __obj.updateDynamic("propagateSelectionUp")(propagateSelectionUp.asInstanceOf[js.Any])
-    if (!js.isUndefined(reorderableColumns)) __obj.updateDynamic("reorderableColumns")(reorderableColumns.asInstanceOf[js.Any])
-    if (!js.isUndefined(resizableColumns)) __obj.updateDynamic("resizableColumns")(resizableColumns.asInstanceOf[js.Any])
-    if (rowClassName != null) __obj.updateDynamic("rowClassName")(js.Any.fromFunction1(rowClassName))
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
-    if (rowsPerPageOptions != null) __obj.updateDynamic("rowsPerPageOptions")(rowsPerPageOptions.asInstanceOf[js.Any])
-    if (scrollHeight != null) __obj.updateDynamic("scrollHeight")(scrollHeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollable)) __obj.updateDynamic("scrollable")(scrollable.asInstanceOf[js.Any])
-    if (selectionKeys != null) __obj.updateDynamic("selectionKeys")(selectionKeys.asInstanceOf[js.Any])
-    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
-    if (sortField != null) __obj.updateDynamic("sortField")(sortField.asInstanceOf[js.Any])
-    if (sortMode != null) __obj.updateDynamic("sortMode")(sortMode.asInstanceOf[js.Any])
-    if (sortOrder != null) __obj.updateDynamic("sortOrder")(sortOrder.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
-    if (tableClassName != null) __obj.updateDynamic("tableClassName")(tableClassName.asInstanceOf[js.Any])
-    if (tableStyle != null) __obj.updateDynamic("tableStyle")(tableStyle.asInstanceOf[js.Any])
-    if (totalRecords != null) __obj.updateDynamic("totalRecords")(totalRecords.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[TreeTableProps]
   }
+  @scala.inline
+  implicit class TreeTablePropsOps[Self <: TreeTableProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlwaysShowPaginator(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysShowPaginator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlwaysShowPaginator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysShowPaginator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoLayout(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoLayout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnResizeMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResizeMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnResizeMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResizeMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContextMenuSelectionKey(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenuSelectionKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextMenuSelectionKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenuSelectionKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentPageReportTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentPageReportTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentPageReportTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentPageReportTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultSortOrder(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSortOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultSortOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSortOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmptyMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmptyMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpandedKeys(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandedKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpandedKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandedKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilters(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirst(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirst: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFooter(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFooter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFooterColumnGroup(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footerColumnGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFooterColumnGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footerColumnGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrozenFooterColumnGroup(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenFooterColumnGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrozenFooterColumnGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenFooterColumnGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrozenHeaderColumnGroup(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenHeaderColumnGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrozenHeaderColumnGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenHeaderColumnGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrozenWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrozenWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlobalFilter(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("globalFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("globalFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeader(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderColumnGroup(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerColumnGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderColumnGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerColumnGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLazy(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lazy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLazy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lazy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoading(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadingIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadingIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetaKeySelection(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metaKeySelection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetaKeySelection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metaKeySelection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiSortMeta(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiSortMeta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiSortMeta: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiSortMeta")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnColReorder(value: /* e */ AnonDropIndex => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onColReorder")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnColReorder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onColReorder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCollapse(value: /* e */ AnonNodeOriginalEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCollapse")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCollapse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCollapse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnColumnResizeEnd(value: /* e */ AnonDelta => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onColumnResizeEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnColumnResizeEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onColumnResizeEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnContextMenu(value: /* e */ AnonNode => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnContextMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnContextMenuSelectionChange(value: /* e */ AnonValue => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenuSelectionChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnContextMenuSelectionChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenuSelectionChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnExpand(value: /* e */ AnonNodeOriginalEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExpand")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnExpand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExpand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFilter(value: /* filters */ js.Array[_] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFilter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPage(value: /* e */ AnonFirst => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowClick(value: /* e */ AnonNodeOriginalEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSelect(value: /* e */ AnonNodeOriginalEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSelectionChange(value: /* e */ AnonValue => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSelectionChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSort(value: /* e */ AnonMultiSortMeta => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSort")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnToggle(value: /* e */ AnonValue => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onToggle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnToggle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onToggle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnUnselect(value: /* e */ AnonNodeOriginalEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUnselect")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnUnselect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUnselect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageLinkSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageLinkSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageLinkSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageLinkSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaginator(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paginator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaginator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paginator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaginatorLeft(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paginatorLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaginatorLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paginatorLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaginatorPosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paginatorPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaginatorPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paginatorPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaginatorRight(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paginatorRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaginatorRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paginatorRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaginatorTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paginatorTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaginatorTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paginatorTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPropagateSelectionDown(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propagateSelectionDown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPropagateSelectionDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propagateSelectionDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPropagateSelectionUp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propagateSelectionUp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPropagateSelectionUp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propagateSelectionUp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReorderableColumns(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reorderableColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReorderableColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reorderableColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResizableColumns(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizableColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResizableColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizableColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowClassName(value: /* rowData */ js.Any => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowClassName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRowClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowsPerPageOptions(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsPerPageOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowsPerPageOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsPerPageOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollHeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionKeys(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectionKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectionMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortOrder(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTabIndex(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableStyle(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalRecords(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalRecords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalRecords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalRecords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.Array[TreeNode]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

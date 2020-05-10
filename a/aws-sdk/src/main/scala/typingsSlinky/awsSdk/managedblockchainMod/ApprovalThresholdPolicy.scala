@@ -22,16 +22,53 @@ trait ApprovalThresholdPolicy extends js.Object {
 
 object ApprovalThresholdPolicy {
   @scala.inline
-  def apply(
-    ProposalDurationInHours: Int | Double = null,
-    ThresholdComparator: ThresholdComparator = null,
-    ThresholdPercentage: Int | Double = null
-  ): ApprovalThresholdPolicy = {
+  def apply(): ApprovalThresholdPolicy = {
     val __obj = js.Dynamic.literal()
-    if (ProposalDurationInHours != null) __obj.updateDynamic("ProposalDurationInHours")(ProposalDurationInHours.asInstanceOf[js.Any])
-    if (ThresholdComparator != null) __obj.updateDynamic("ThresholdComparator")(ThresholdComparator.asInstanceOf[js.Any])
-    if (ThresholdPercentage != null) __obj.updateDynamic("ThresholdPercentage")(ThresholdPercentage.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApprovalThresholdPolicy]
   }
+  @scala.inline
+  implicit class ApprovalThresholdPolicyOps[Self <: ApprovalThresholdPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProposalDurationInHours(value: ProposalDurationInt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProposalDurationInHours")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProposalDurationInHours: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProposalDurationInHours")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThresholdComparator(value: ThresholdComparator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThresholdComparator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThresholdComparator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThresholdComparator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThresholdPercentage(value: ThresholdPercentageInt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThresholdPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThresholdPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThresholdPercentage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

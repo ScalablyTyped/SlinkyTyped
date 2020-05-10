@@ -1,6 +1,5 @@
 package typingsSlinky.firebase.mod.database
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -448,12 +447,12 @@ trait Query extends js.Object {
   def once(
     eventType: EventType,
     successCallback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String | Null], _],
-    failureCallbackOrContext: js.Function1[/* a */ Error, Unit]
+    failureCallbackOrContext: js.Function1[/* a */ js.Error, Unit]
   ): js.Promise[DataSnapshot] = js.native
   def once(
     eventType: EventType,
     successCallback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String | Null], _],
-    failureCallbackOrContext: js.Function1[/* a */ Error, Unit],
+    failureCallbackOrContext: js.Function1[/* a */ js.Error, Unit],
     context: js.Object
   ): js.Promise[DataSnapshot] = js.native
   def once(

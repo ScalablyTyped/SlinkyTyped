@@ -1,17 +1,18 @@
 package typingsSlinky.baseui.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.baseui.AnonChildrenReactNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FocusOnce
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.baseui.modalMod.FocusOnce] {
+object FocusOnce {
   @JSImport("baseui/modal", "FocusOnce")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: AnonChildrenReactNode): Default[tag.type, typingsSlinky.baseui.modalMod.FocusOnce] = new Default[tag.type, typingsSlinky.baseui.modalMod.FocusOnce](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FocusOnce.type): Default[tag.type, typingsSlinky.baseui.modalMod.FocusOnce] = new Default[tag.type, typingsSlinky.baseui.modalMod.FocusOnce](js.Array(this.component, js.Dictionary.empty))()
 }
 

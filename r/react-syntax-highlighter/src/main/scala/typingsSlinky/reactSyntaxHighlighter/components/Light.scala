@@ -1,15 +1,17 @@
 package typingsSlinky.reactSyntaxHighlighter.components
 
 import typingsSlinky.reactSyntaxHighlighter.esmLightMod.default
+import typingsSlinky.reactSyntaxHighlighter.mod.SyntaxHighlighterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Light extends SharedApply_SyntaxHighlighterProps_249388294[default] {
+object Light {
   @JSImport("react-syntax-highlighter/dist/esm/light", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SyntaxHighlighterProps): SharedBuilder_SyntaxHighlighterProps_1113076166[default] = new SharedBuilder_SyntaxHighlighterProps_1113076166[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Light.type): SharedBuilder_SyntaxHighlighterProps_1113076166[default] = new SharedBuilder_SyntaxHighlighterProps_1113076166[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

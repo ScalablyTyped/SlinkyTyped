@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MediaElementAudioSourceOptions extends js.Object {
-  var mediaElement: org.scalajs.dom.raw.HTMLMediaElement
+  var mediaElement: org.scalajs.dom.raw.HTMLMediaElement = js.native
 }
 
 object MediaElementAudioSourceOptions {
   @scala.inline
   def apply(mediaElement: org.scalajs.dom.raw.HTMLMediaElement): MediaElementAudioSourceOptions = {
     val __obj = js.Dynamic.literal(mediaElement = mediaElement.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[MediaElementAudioSourceOptions]
   }
+  @scala.inline
+  implicit class MediaElementAudioSourceOptionsOps[Self <: MediaElementAudioSourceOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMediaElement(value: org.scalajs.dom.raw.HTMLMediaElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

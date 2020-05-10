@@ -20,24 +20,101 @@ trait AnonCustomRichMediaEvents extends js.Object {
 
 object AnonCustomRichMediaEvents {
   @scala.inline
-  def apply(
-    customRichMediaEvents: js.Array[SchemaDimensionValue] = null,
-    dateRange: SchemaDateRange = null,
-    dimensionFilters: js.Array[SchemaDimensionValue] = null,
-    dimensions: js.Array[SchemaSortedDimension] = null,
-    floodlightConfigId: SchemaDimensionValue = null,
-    metricNames: js.Array[String] = null,
-    reportProperties: AnonIncludeAttributedIPConversions = null
-  ): AnonCustomRichMediaEvents = {
+  def apply(): AnonCustomRichMediaEvents = {
     val __obj = js.Dynamic.literal()
-    if (customRichMediaEvents != null) __obj.updateDynamic("customRichMediaEvents")(customRichMediaEvents.asInstanceOf[js.Any])
-    if (dateRange != null) __obj.updateDynamic("dateRange")(dateRange.asInstanceOf[js.Any])
-    if (dimensionFilters != null) __obj.updateDynamic("dimensionFilters")(dimensionFilters.asInstanceOf[js.Any])
-    if (dimensions != null) __obj.updateDynamic("dimensions")(dimensions.asInstanceOf[js.Any])
-    if (floodlightConfigId != null) __obj.updateDynamic("floodlightConfigId")(floodlightConfigId.asInstanceOf[js.Any])
-    if (metricNames != null) __obj.updateDynamic("metricNames")(metricNames.asInstanceOf[js.Any])
-    if (reportProperties != null) __obj.updateDynamic("reportProperties")(reportProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCustomRichMediaEvents]
   }
+  @scala.inline
+  implicit class AnonCustomRichMediaEventsOps[Self <: AnonCustomRichMediaEvents] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomRichMediaEvents(value: js.Array[SchemaDimensionValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customRichMediaEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomRichMediaEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customRichMediaEvents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateRange(value: SchemaDateRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDimensionFilters(value: js.Array[SchemaDimensionValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensionFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDimensions(value: js.Array[SchemaSortedDimension]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloodlightConfigId(value: SchemaDimensionValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightConfigId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodlightConfigId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightConfigId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportProperties(value: AnonIncludeAttributedIPConversions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportProperties")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,610 +1,845 @@
 package typingsSlinky.reactFoundation.gridMod
 
-import org.scalajs.dom.raw.EventTarget
-import slinky.core.SyntheticEvent
-import slinky.core.TagMod
-import slinky.web.SyntheticAnimationEvent
-import slinky.web.SyntheticClipboardEvent
-import slinky.web.SyntheticCompositionEvent
-import slinky.web.SyntheticFocusEvent
-import slinky.web.SyntheticKeyboardEvent
-import slinky.web.SyntheticMouseEvent
-import slinky.web.SyntheticPointerEvent
-import slinky.web.SyntheticTouchEvent
-import slinky.web.SyntheticTransitionEvent
-import slinky.web.SyntheticUIEvent
-import slinky.web.SyntheticWheelEvent
-import typingsSlinky.react.AnonHtml
+import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.react.mod.AriaAttributes
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DOMAttributes
-import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.reactStrings.`additions text`
-import typingsSlinky.react.reactStrings.`inline`
-import typingsSlinky.react.reactStrings.additions
-import typingsSlinky.react.reactStrings.all
-import typingsSlinky.react.reactStrings.ascending
-import typingsSlinky.react.reactStrings.assertive
-import typingsSlinky.react.reactStrings.both
-import typingsSlinky.react.reactStrings.copy
-import typingsSlinky.react.reactStrings.date
 import typingsSlinky.react.reactStrings.decimal
-import typingsSlinky.react.reactStrings.descending
-import typingsSlinky.react.reactStrings.dialog
 import typingsSlinky.react.reactStrings.email
-import typingsSlinky.react.reactStrings.execute
-import typingsSlinky.react.reactStrings.grammar
-import typingsSlinky.react.reactStrings.grid
-import typingsSlinky.react.reactStrings.horizontal
 import typingsSlinky.react.reactStrings.inherit
-import typingsSlinky.react.reactStrings.link
-import typingsSlinky.react.reactStrings.list
-import typingsSlinky.react.reactStrings.listbox
-import typingsSlinky.react.reactStrings.location
-import typingsSlinky.react.reactStrings.menu
-import typingsSlinky.react.reactStrings.mixed
-import typingsSlinky.react.reactStrings.move
 import typingsSlinky.react.reactStrings.no
 import typingsSlinky.react.reactStrings.none
 import typingsSlinky.react.reactStrings.numeric
 import typingsSlinky.react.reactStrings.off
 import typingsSlinky.react.reactStrings.on
-import typingsSlinky.react.reactStrings.other
-import typingsSlinky.react.reactStrings.page
-import typingsSlinky.react.reactStrings.polite
-import typingsSlinky.react.reactStrings.popup
-import typingsSlinky.react.reactStrings.removals
 import typingsSlinky.react.reactStrings.search
-import typingsSlinky.react.reactStrings.spelling
-import typingsSlinky.react.reactStrings.step
 import typingsSlinky.react.reactStrings.tel
 import typingsSlinky.react.reactStrings.text
-import typingsSlinky.react.reactStrings.time
-import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
-import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
-import typingsSlinky.reactFoundation.enumsMod.Breakpoints
-import typingsSlinky.reactFoundation.enumsMod.ExtendedBreakpoints
-import typingsSlinky.reactFoundation.enumsMod.FloatTypes
-import typingsSlinky.reactFoundation.enumsMod.HorizontalAlignments
-import typingsSlinky.reactFoundation.enumsMod.SpaceControls
-import typingsSlinky.reactFoundation.enumsMod.VerticalAlignments
-import typingsSlinky.reactFoundation.reactFoundationStrings.large
-import typingsSlinky.reactFoundation.reactFoundationStrings.medium
 import typingsSlinky.reactFoundation.utilsMod.FlexboxPropTypes
-import typingsSlinky.std.Event_
-import typingsSlinky.std.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.react.mod.HTMLAttributes because var conflicts: className. Inlined about, accessKey, autoCapitalize, autoCorrect, autoSave, color, contentEditable, contextMenu, datatype, defaultChecked, defaultValue, dir, draggable, hidden, id, inlist, inputMode, is, itemID, itemProp, itemRef, itemScope, itemType, lang, placeholder, prefix, property, radioGroup, resource, results, role, security, slot, spellCheck, style, suppressContentEditableWarning, suppressHydrationWarning, tabIndex, title, translate, typeof, unselectable, vocab */ trait RowProps
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.react.mod.HTMLAttributes because var conflicts: className. Inlined about, accessKey, autoCapitalize, autoCorrect, autoSave, color, contentEditable, contextMenu, datatype, defaultChecked, defaultValue, dir, draggable, hidden, id, inlist, inputMode, is, itemID, itemProp, itemRef, itemScope, itemType, lang, placeholder, prefix, property, radioGroup, resource, results, role, security, slot, spellCheck, style, suppressContentEditableWarning, suppressHydrationWarning, tabIndex, title, translate, typeof, unselectable, vocab */ @js.native
+trait RowProps
   extends FlexboxPropTypes
      with AriaAttributes
      with DOMAttributes[HTMLDivElement] {
   // RDFa Attributes
-  var about: js.UndefOr[String] = js.undefined
+  var about: js.UndefOr[String] = js.native
   // Standard HTML Attributes
-  var accessKey: js.UndefOr[String] = js.undefined
+  var accessKey: js.UndefOr[String] = js.native
   // Non-standard Attributes
-  var autoCapitalize: js.UndefOr[String] = js.undefined
-  var autoCorrect: js.UndefOr[String] = js.undefined
-  var autoSave: js.UndefOr[String] = js.undefined
-  var collapseOnLarge: js.UndefOr[Boolean] = js.undefined
-  var collapseOnMedium: js.UndefOr[Boolean] = js.undefined
-  var collapseOnSmall: js.UndefOr[Boolean] = js.undefined
-  var color: js.UndefOr[String] = js.undefined
-  var contentEditable: js.UndefOr[Booleanish | inherit] = js.undefined
-  var contextMenu: js.UndefOr[String] = js.undefined
-  var datatype: js.UndefOr[String] = js.undefined
+  var autoCapitalize: js.UndefOr[String] = js.native
+  var autoCorrect: js.UndefOr[String] = js.native
+  var autoSave: js.UndefOr[String] = js.native
+  var collapseOnLarge: js.UndefOr[Boolean] = js.native
+  var collapseOnMedium: js.UndefOr[Boolean] = js.native
+  var collapseOnSmall: js.UndefOr[Boolean] = js.native
+  var color: js.UndefOr[String] = js.native
+  var contentEditable: js.UndefOr[Booleanish | inherit] = js.native
+  var contextMenu: js.UndefOr[String] = js.native
+  var datatype: js.UndefOr[String] = js.native
   // React-specific Attributes
-  var defaultChecked: js.UndefOr[Boolean] = js.undefined
-  var defaultValue: js.UndefOr[String | Double | js.Array[String]] = js.undefined
-  var dir: js.UndefOr[String] = js.undefined
-  var draggable: js.UndefOr[Booleanish] = js.undefined
-  var hidden: js.UndefOr[Boolean] = js.undefined
-  var horizontalAlignment: js.UndefOr[String] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var inlist: js.UndefOr[js.Any] = js.undefined
+  var defaultChecked: js.UndefOr[Boolean] = js.native
+  var defaultValue: js.UndefOr[String | Double | js.Array[String]] = js.native
+  var dir: js.UndefOr[String] = js.native
+  var draggable: js.UndefOr[Booleanish] = js.native
+  var hidden: js.UndefOr[Boolean] = js.native
+  var horizontalAlignment: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.native
+  var inlist: js.UndefOr[js.Any] = js.native
   // Living Standard
   /**
     * Hints at the type of data that might be entered by the user while editing the element or its contents
     * @see https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute
     */
-  var inputMode: js.UndefOr[none | text | tel | url | email | numeric | decimal | search] = js.undefined
+  var inputMode: js.UndefOr[none | text | tel | url | email | numeric | decimal | search] = js.native
   /**
     * Specify that a standard HTML element should behave like a defined custom built-in element
     * @see https://html.spec.whatwg.org/multipage/custom-elements.html#attr-is
     */
-  var is: js.UndefOr[String] = js.undefined
-  var isCollapsed: js.UndefOr[Boolean] = js.undefined
-  var isColumn: js.UndefOr[Boolean] = js.undefined
-  var isExpanded: js.UndefOr[Boolean] = js.undefined
-  var itemID: js.UndefOr[String] = js.undefined
-  var itemProp: js.UndefOr[String] = js.undefined
-  var itemRef: js.UndefOr[String] = js.undefined
-  var itemScope: js.UndefOr[Boolean] = js.undefined
-  var itemType: js.UndefOr[String] = js.undefined
-  var lang: js.UndefOr[String] = js.undefined
-  var placeholder: js.UndefOr[String] = js.undefined
-  var prefix: js.UndefOr[String] = js.undefined
-  var property: js.UndefOr[String] = js.undefined
+  var is: js.UndefOr[String] = js.native
+  var isCollapsed: js.UndefOr[Boolean] = js.native
+  var isColumn: js.UndefOr[Boolean] = js.native
+  var isExpanded: js.UndefOr[Boolean] = js.native
+  var itemID: js.UndefOr[String] = js.native
+  var itemProp: js.UndefOr[String] = js.native
+  var itemRef: js.UndefOr[String] = js.native
+  var itemScope: js.UndefOr[Boolean] = js.native
+  var itemType: js.UndefOr[String] = js.native
+  var lang: js.UndefOr[String] = js.native
+  var placeholder: js.UndefOr[String] = js.native
+  var prefix: js.UndefOr[String] = js.native
+  var property: js.UndefOr[String] = js.native
   // Unknown
-  var radioGroup: js.UndefOr[String] = js.undefined
-  var resource: js.UndefOr[String] = js.undefined
-  var results: js.UndefOr[Double] = js.undefined
+  var radioGroup: js.UndefOr[String] = js.native
+  var resource: js.UndefOr[String] = js.native
+  var results: js.UndefOr[Double] = js.native
    // <command>, <menuitem>
   // WAI-ARIA
-  var role: js.UndefOr[String] = js.undefined
-  var security: js.UndefOr[String] = js.undefined
-  var slot: js.UndefOr[String] = js.undefined
-  var spellCheck: js.UndefOr[Booleanish] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
-  var suppressContentEditableWarning: js.UndefOr[Boolean] = js.undefined
-  var suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined
-  var tabIndex: js.UndefOr[Double] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
-  var translate: js.UndefOr[yes | no] = js.undefined
-  var typeof: js.UndefOr[String] = js.undefined
-  var uncollapseOnLarge: js.UndefOr[Boolean] = js.undefined
-  var uncollapseOnMedium: js.UndefOr[Boolean] = js.undefined
-  var uncollapseOnSmall: js.UndefOr[Boolean] = js.undefined
-  var unselectable: js.UndefOr[on | off] = js.undefined
-  var unstackOnLarge: js.UndefOr[Boolean] = js.undefined
-  var unstackOnMedium: js.UndefOr[Boolean] = js.undefined
-  var unstackOnSmall: js.UndefOr[Boolean] = js.undefined
-  var upOnLarge: js.UndefOr[Double] = js.undefined
-  var upOnMedium: js.UndefOr[Double] = js.undefined
-  var upOnSmall: js.UndefOr[Double] = js.undefined
-  var verticalAlignment: js.UndefOr[String] = js.undefined
-  var vocab: js.UndefOr[String] = js.undefined
+  var role: js.UndefOr[String] = js.native
+  var security: js.UndefOr[String] = js.native
+  var slot: js.UndefOr[String] = js.native
+  var spellCheck: js.UndefOr[Booleanish] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
+  var suppressContentEditableWarning: js.UndefOr[Boolean] = js.native
+  var suppressHydrationWarning: js.UndefOr[Boolean] = js.native
+  var tabIndex: js.UndefOr[Double] = js.native
+  var title: js.UndefOr[String] = js.native
+  var translate: js.UndefOr[yes | no] = js.native
+  var typeof: js.UndefOr[String] = js.native
+  var uncollapseOnLarge: js.UndefOr[Boolean] = js.native
+  var uncollapseOnMedium: js.UndefOr[Boolean] = js.native
+  var uncollapseOnSmall: js.UndefOr[Boolean] = js.native
+  var unselectable: js.UndefOr[on | off] = js.native
+  var unstackOnLarge: js.UndefOr[Boolean] = js.native
+  var unstackOnMedium: js.UndefOr[Boolean] = js.native
+  var unstackOnSmall: js.UndefOr[Boolean] = js.native
+  var upOnLarge: js.UndefOr[Double] = js.native
+  var upOnMedium: js.UndefOr[Double] = js.native
+  var upOnSmall: js.UndefOr[Double] = js.native
+  var verticalAlignment: js.UndefOr[String] = js.native
+  var vocab: js.UndefOr[String] = js.native
 }
 
 object RowProps {
   @scala.inline
-  def apply(
-    about: String = null,
-    accessKey: String = null,
-    alignX: HorizontalAlignments = null,
-    alignY: VerticalAlignments = null,
-    `aria-activedescendant`: String = null,
-    `aria-atomic`: js.UndefOr[Boolean] = js.undefined,
-    `aria-autocomplete`: none | `inline` | list | both = null,
-    `aria-busy`: js.UndefOr[Boolean] = js.undefined,
-    `aria-checked`: Boolean | mixed = null,
-    `aria-colcount`: Int | Double = null,
-    `aria-colindex`: Int | Double = null,
-    `aria-colspan`: Int | Double = null,
-    `aria-controls`: String = null,
-    `aria-current`: Boolean | page | step | location | date | time = null,
-    `aria-describedby`: String = null,
-    `aria-details`: String = null,
-    `aria-disabled`: js.UndefOr[Boolean] = js.undefined,
-    `aria-dropeffect`: none | copy | execute | link | move | popup = null,
-    `aria-errormessage`: String = null,
-    `aria-expanded`: js.UndefOr[Boolean] = js.undefined,
-    `aria-flowto`: String = null,
-    `aria-grabbed`: js.UndefOr[Boolean] = js.undefined,
-    `aria-haspopup`: Boolean | menu | listbox | tree | grid | dialog = null,
-    `aria-hidden`: js.UndefOr[Boolean] = js.undefined,
-    `aria-invalid`: Boolean | grammar | spelling = null,
-    `aria-keyshortcuts`: String = null,
-    `aria-label`: String = null,
-    `aria-labelledby`: String = null,
-    `aria-level`: Int | Double = null,
-    `aria-live`: off | assertive | polite = null,
-    `aria-modal`: js.UndefOr[Boolean] = js.undefined,
-    `aria-multiline`: js.UndefOr[Boolean] = js.undefined,
-    `aria-multiselectable`: js.UndefOr[Boolean] = js.undefined,
-    `aria-orientation`: horizontal | vertical = null,
-    `aria-owns`: String = null,
-    `aria-placeholder`: String = null,
-    `aria-posinset`: Int | Double = null,
-    `aria-pressed`: Boolean | mixed = null,
-    `aria-readonly`: js.UndefOr[Boolean] = js.undefined,
-    `aria-relevant`: additions | (`additions text`) | all | removals | text = null,
-    `aria-required`: js.UndefOr[Boolean] = js.undefined,
-    `aria-roledescription`: String = null,
-    `aria-rowcount`: Int | Double = null,
-    `aria-rowindex`: Int | Double = null,
-    `aria-rowspan`: Int | Double = null,
-    `aria-selected`: js.UndefOr[Boolean] = js.undefined,
-    `aria-setsize`: Int | Double = null,
-    `aria-sort`: none | ascending | descending | other = null,
-    `aria-valuemax`: Int | Double = null,
-    `aria-valuemin`: Int | Double = null,
-    `aria-valuenow`: Int | Double = null,
-    `aria-valuetext`: String = null,
-    autoCapitalize: String = null,
-    autoCorrect: String = null,
-    autoSave: String = null,
-    centerAlign: js.UndefOr[Boolean] = js.undefined,
-    children: TagMod[Any] = null,
-    className: String = null,
-    collapseOnLarge: js.UndefOr[Boolean] = js.undefined,
-    collapseOnMedium: js.UndefOr[Boolean] = js.undefined,
-    collapseOnSmall: js.UndefOr[Boolean] = js.undefined,
-    color: String = null,
-    contentEditable: Booleanish | inherit = null,
-    contextMenu: String = null,
-    dangerouslySetInnerHTML: AnonHtml = null,
-    datatype: String = null,
-    defaultChecked: js.UndefOr[Boolean] = js.undefined,
-    defaultValue: String | Double | js.Array[String] = null,
-    dir: String = null,
-    draggable: js.UndefOr[Boolean] = js.undefined,
-    flexChild: SpaceControls = null,
-    flexContainer: js.UndefOr[Boolean] = js.undefined,
-    flexDirCol: ExtendedBreakpoints = null,
-    flexDirColRev: ExtendedBreakpoints = null,
-    flexDirRow: ExtendedBreakpoints = null,
-    flexDirRowRev: ExtendedBreakpoints = null,
-    flexOrder: Int | Double = null,
-    flexOrderLarge: Int | Double = null,
-    flexOrderMedium: Int | Double = null,
-    flexOrderSmall: Int | Double = null,
-    float: FloatTypes = null,
-    hidden: js.UndefOr[Boolean] = js.undefined,
-    hideFor: medium | large = null,
-    hideOnlyFor: Breakpoints = null,
-    horizontalAlignment: String = null,
-    id: String = null,
-    inlist: js.Any = null,
-    inputMode: none | text | tel | url | email | numeric | decimal | search = null,
-    is: String = null,
-    isClearfix: js.UndefOr[Boolean] = js.undefined,
-    isCollapsed: js.UndefOr[Boolean] = js.undefined,
-    isColumn: js.UndefOr[Boolean] = js.undefined,
-    isExpanded: js.UndefOr[Boolean] = js.undefined,
-    isHidden: js.UndefOr[Boolean] = js.undefined,
-    isInvisible: js.UndefOr[Boolean] = js.undefined,
-    itemID: String = null,
-    itemProp: String = null,
-    itemRef: String = null,
-    itemScope: js.UndefOr[Boolean] = js.undefined,
-    itemType: String = null,
-    lang: String = null,
-    noDefaultClassName: String = null,
-    onAbort: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onAnimationEnd: SyntheticAnimationEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onAnimationIteration: SyntheticAnimationEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onAnimationStart: SyntheticAnimationEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onAuxClick: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event_] => Unit = null,
-    onBlur: SyntheticFocusEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onCanPlay: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onCanPlayThrough: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onChange: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event_] => Unit = null,
-    onClick: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onCompositionEnd: SyntheticCompositionEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onCompositionStart: SyntheticCompositionEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onCompositionUpdate: SyntheticCompositionEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onContextMenu: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onCopy: SyntheticClipboardEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onCut: SyntheticClipboardEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onDoubleClick: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onDrag: DragEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onDragEnd: DragEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onDragEnter: DragEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onDragExit: DragEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onDragLeave: DragEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onDragOver: DragEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onDragStart: DragEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onDrop: DragEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onDurationChange: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onEmptied: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onEncrypted: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onEnded: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onError: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onFocus: SyntheticFocusEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onInput: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event_] => Unit = null,
-    onInvalid: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event_] => Unit = null,
-    onKeyDown: SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onKeyPress: SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onKeyUp: SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onLoad: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onLoadStart: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onLoadedData: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onLoadedMetadata: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onMouseDown: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onMouseEnter: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onMouseLeave: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onMouseMove: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onMouseOut: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onMouseOver: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onMouseUp: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onPaste: SyntheticClipboardEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onPause: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onPlay: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onPlaying: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onPointerCancel: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onPointerDown: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onPointerEnter: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onPointerLeave: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onPointerMove: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onPointerOut: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onPointerOver: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onPointerUp: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onProgress: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onRateChange: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onReset: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event_] => Unit = null,
-    onScroll: SyntheticUIEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onSeeked: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onSeeking: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onSelect: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onStalled: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onSubmit: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event_] => Unit = null,
-    onSuspend: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onTimeUpdate: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onTouchCancel: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onTouchEnd: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onTouchMove: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onTouchStart: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onTransitionEnd: SyntheticTransitionEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onVolumeChange: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onWaiting: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onWheel: SyntheticWheelEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    placeholder: String = null,
-    prefix: String = null,
-    property: String = null,
-    radioGroup: String = null,
-    resource: String = null,
-    results: Int | Double = null,
-    role: String = null,
-    security: String = null,
-    selfAlignX: HorizontalAlignments = null,
-    selfAlignY: VerticalAlignments = null,
-    showFor: Breakpoints = null,
-    showForLandscape: js.UndefOr[Boolean] = js.undefined,
-    showForPortrait: js.UndefOr[Boolean] = js.undefined,
-    showForSr: js.UndefOr[Boolean] = js.undefined,
-    showOnFocus: js.UndefOr[Boolean] = js.undefined,
-    showOnlyFor: Breakpoints = null,
-    slot: String = null,
-    spellCheck: js.UndefOr[Boolean] = js.undefined,
-    style: CSSProperties = null,
-    suppressContentEditableWarning: js.UndefOr[Boolean] = js.undefined,
-    suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
-    tabIndex: Int | Double = null,
-    title: String = null,
-    translate: yes | no = null,
-    typeof: String = null,
-    uncollapseOnLarge: js.UndefOr[Boolean] = js.undefined,
-    uncollapseOnMedium: js.UndefOr[Boolean] = js.undefined,
-    uncollapseOnSmall: js.UndefOr[Boolean] = js.undefined,
-    unselectable: on | off = null,
-    unstackOnLarge: js.UndefOr[Boolean] = js.undefined,
-    unstackOnMedium: js.UndefOr[Boolean] = js.undefined,
-    unstackOnSmall: js.UndefOr[Boolean] = js.undefined,
-    upOnLarge: Int | Double = null,
-    upOnMedium: Int | Double = null,
-    upOnSmall: Int | Double = null,
-    verticalAlignment: String = null,
-    vocab: String = null
-  ): RowProps = {
+  def apply(): RowProps = {
     val __obj = js.Dynamic.literal()
-    if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
-    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
-    if (alignX != null) __obj.updateDynamic("alignX")(alignX.asInstanceOf[js.Any])
-    if (alignY != null) __obj.updateDynamic("alignY")(alignY.asInstanceOf[js.Any])
-    if (`aria-activedescendant` != null) __obj.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-atomic`)) __obj.updateDynamic("aria-atomic")(`aria-atomic`.asInstanceOf[js.Any])
-    if (`aria-autocomplete` != null) __obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-busy`)) __obj.updateDynamic("aria-busy")(`aria-busy`.asInstanceOf[js.Any])
-    if (`aria-checked` != null) __obj.updateDynamic("aria-checked")(`aria-checked`.asInstanceOf[js.Any])
-    if (`aria-colcount` != null) __obj.updateDynamic("aria-colcount")(`aria-colcount`.asInstanceOf[js.Any])
-    if (`aria-colindex` != null) __obj.updateDynamic("aria-colindex")(`aria-colindex`.asInstanceOf[js.Any])
-    if (`aria-colspan` != null) __obj.updateDynamic("aria-colspan")(`aria-colspan`.asInstanceOf[js.Any])
-    if (`aria-controls` != null) __obj.updateDynamic("aria-controls")(`aria-controls`.asInstanceOf[js.Any])
-    if (`aria-current` != null) __obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
-    if (`aria-describedby` != null) __obj.updateDynamic("aria-describedby")(`aria-describedby`.asInstanceOf[js.Any])
-    if (`aria-details` != null) __obj.updateDynamic("aria-details")(`aria-details`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-disabled`)) __obj.updateDynamic("aria-disabled")(`aria-disabled`.asInstanceOf[js.Any])
-    if (`aria-dropeffect` != null) __obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
-    if (`aria-errormessage` != null) __obj.updateDynamic("aria-errormessage")(`aria-errormessage`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-expanded`)) __obj.updateDynamic("aria-expanded")(`aria-expanded`.asInstanceOf[js.Any])
-    if (`aria-flowto` != null) __obj.updateDynamic("aria-flowto")(`aria-flowto`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-grabbed`)) __obj.updateDynamic("aria-grabbed")(`aria-grabbed`.asInstanceOf[js.Any])
-    if (`aria-haspopup` != null) __obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-hidden`)) __obj.updateDynamic("aria-hidden")(`aria-hidden`.asInstanceOf[js.Any])
-    if (`aria-invalid` != null) __obj.updateDynamic("aria-invalid")(`aria-invalid`.asInstanceOf[js.Any])
-    if (`aria-keyshortcuts` != null) __obj.updateDynamic("aria-keyshortcuts")(`aria-keyshortcuts`.asInstanceOf[js.Any])
-    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
-    if (`aria-labelledby` != null) __obj.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
-    if (`aria-level` != null) __obj.updateDynamic("aria-level")(`aria-level`.asInstanceOf[js.Any])
-    if (`aria-live` != null) __obj.updateDynamic("aria-live")(`aria-live`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-modal`)) __obj.updateDynamic("aria-modal")(`aria-modal`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-multiline`)) __obj.updateDynamic("aria-multiline")(`aria-multiline`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-multiselectable`)) __obj.updateDynamic("aria-multiselectable")(`aria-multiselectable`.asInstanceOf[js.Any])
-    if (`aria-orientation` != null) __obj.updateDynamic("aria-orientation")(`aria-orientation`.asInstanceOf[js.Any])
-    if (`aria-owns` != null) __obj.updateDynamic("aria-owns")(`aria-owns`.asInstanceOf[js.Any])
-    if (`aria-placeholder` != null) __obj.updateDynamic("aria-placeholder")(`aria-placeholder`.asInstanceOf[js.Any])
-    if (`aria-posinset` != null) __obj.updateDynamic("aria-posinset")(`aria-posinset`.asInstanceOf[js.Any])
-    if (`aria-pressed` != null) __obj.updateDynamic("aria-pressed")(`aria-pressed`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-readonly`)) __obj.updateDynamic("aria-readonly")(`aria-readonly`.asInstanceOf[js.Any])
-    if (`aria-relevant` != null) __obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-required`)) __obj.updateDynamic("aria-required")(`aria-required`.asInstanceOf[js.Any])
-    if (`aria-roledescription` != null) __obj.updateDynamic("aria-roledescription")(`aria-roledescription`.asInstanceOf[js.Any])
-    if (`aria-rowcount` != null) __obj.updateDynamic("aria-rowcount")(`aria-rowcount`.asInstanceOf[js.Any])
-    if (`aria-rowindex` != null) __obj.updateDynamic("aria-rowindex")(`aria-rowindex`.asInstanceOf[js.Any])
-    if (`aria-rowspan` != null) __obj.updateDynamic("aria-rowspan")(`aria-rowspan`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-selected`)) __obj.updateDynamic("aria-selected")(`aria-selected`.asInstanceOf[js.Any])
-    if (`aria-setsize` != null) __obj.updateDynamic("aria-setsize")(`aria-setsize`.asInstanceOf[js.Any])
-    if (`aria-sort` != null) __obj.updateDynamic("aria-sort")(`aria-sort`.asInstanceOf[js.Any])
-    if (`aria-valuemax` != null) __obj.updateDynamic("aria-valuemax")(`aria-valuemax`.asInstanceOf[js.Any])
-    if (`aria-valuemin` != null) __obj.updateDynamic("aria-valuemin")(`aria-valuemin`.asInstanceOf[js.Any])
-    if (`aria-valuenow` != null) __obj.updateDynamic("aria-valuenow")(`aria-valuenow`.asInstanceOf[js.Any])
-    if (`aria-valuetext` != null) __obj.updateDynamic("aria-valuetext")(`aria-valuetext`.asInstanceOf[js.Any])
-    if (autoCapitalize != null) __obj.updateDynamic("autoCapitalize")(autoCapitalize.asInstanceOf[js.Any])
-    if (autoCorrect != null) __obj.updateDynamic("autoCorrect")(autoCorrect.asInstanceOf[js.Any])
-    if (autoSave != null) __obj.updateDynamic("autoSave")(autoSave.asInstanceOf[js.Any])
-    if (!js.isUndefined(centerAlign)) __obj.updateDynamic("centerAlign")(centerAlign.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(collapseOnLarge)) __obj.updateDynamic("collapseOnLarge")(collapseOnLarge.asInstanceOf[js.Any])
-    if (!js.isUndefined(collapseOnMedium)) __obj.updateDynamic("collapseOnMedium")(collapseOnMedium.asInstanceOf[js.Any])
-    if (!js.isUndefined(collapseOnSmall)) __obj.updateDynamic("collapseOnSmall")(collapseOnSmall.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
-    if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
-    if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
-    if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultChecked)) __obj.updateDynamic("defaultChecked")(defaultChecked.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (dir != null) __obj.updateDynamic("dir")(dir.asInstanceOf[js.Any])
-    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.asInstanceOf[js.Any])
-    if (flexChild != null) __obj.updateDynamic("flexChild")(flexChild.asInstanceOf[js.Any])
-    if (!js.isUndefined(flexContainer)) __obj.updateDynamic("flexContainer")(flexContainer.asInstanceOf[js.Any])
-    if (flexDirCol != null) __obj.updateDynamic("flexDirCol")(flexDirCol.asInstanceOf[js.Any])
-    if (flexDirColRev != null) __obj.updateDynamic("flexDirColRev")(flexDirColRev.asInstanceOf[js.Any])
-    if (flexDirRow != null) __obj.updateDynamic("flexDirRow")(flexDirRow.asInstanceOf[js.Any])
-    if (flexDirRowRev != null) __obj.updateDynamic("flexDirRowRev")(flexDirRowRev.asInstanceOf[js.Any])
-    if (flexOrder != null) __obj.updateDynamic("flexOrder")(flexOrder.asInstanceOf[js.Any])
-    if (flexOrderLarge != null) __obj.updateDynamic("flexOrderLarge")(flexOrderLarge.asInstanceOf[js.Any])
-    if (flexOrderMedium != null) __obj.updateDynamic("flexOrderMedium")(flexOrderMedium.asInstanceOf[js.Any])
-    if (flexOrderSmall != null) __obj.updateDynamic("flexOrderSmall")(flexOrderSmall.asInstanceOf[js.Any])
-    if (float != null) __obj.updateDynamic("float")(float.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
-    if (hideFor != null) __obj.updateDynamic("hideFor")(hideFor.asInstanceOf[js.Any])
-    if (hideOnlyFor != null) __obj.updateDynamic("hideOnlyFor")(hideOnlyFor.asInstanceOf[js.Any])
-    if (horizontalAlignment != null) __obj.updateDynamic("horizontalAlignment")(horizontalAlignment.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (inlist != null) __obj.updateDynamic("inlist")(inlist.asInstanceOf[js.Any])
-    if (inputMode != null) __obj.updateDynamic("inputMode")(inputMode.asInstanceOf[js.Any])
-    if (is != null) __obj.updateDynamic("is")(is.asInstanceOf[js.Any])
-    if (!js.isUndefined(isClearfix)) __obj.updateDynamic("isClearfix")(isClearfix.asInstanceOf[js.Any])
-    if (!js.isUndefined(isCollapsed)) __obj.updateDynamic("isCollapsed")(isCollapsed.asInstanceOf[js.Any])
-    if (!js.isUndefined(isColumn)) __obj.updateDynamic("isColumn")(isColumn.asInstanceOf[js.Any])
-    if (!js.isUndefined(isExpanded)) __obj.updateDynamic("isExpanded")(isExpanded.asInstanceOf[js.Any])
-    if (!js.isUndefined(isHidden)) __obj.updateDynamic("isHidden")(isHidden.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInvisible)) __obj.updateDynamic("isInvisible")(isInvisible.asInstanceOf[js.Any])
-    if (itemID != null) __obj.updateDynamic("itemID")(itemID.asInstanceOf[js.Any])
-    if (itemProp != null) __obj.updateDynamic("itemProp")(itemProp.asInstanceOf[js.Any])
-    if (itemRef != null) __obj.updateDynamic("itemRef")(itemRef.asInstanceOf[js.Any])
-    if (!js.isUndefined(itemScope)) __obj.updateDynamic("itemScope")(itemScope.asInstanceOf[js.Any])
-    if (itemType != null) __obj.updateDynamic("itemType")(itemType.asInstanceOf[js.Any])
-    if (lang != null) __obj.updateDynamic("lang")(lang.asInstanceOf[js.Any])
-    if (noDefaultClassName != null) __obj.updateDynamic("noDefaultClassName")(noDefaultClassName.asInstanceOf[js.Any])
-    if (onAbort != null) __obj.updateDynamic("onAbort")(js.Any.fromFunction1(onAbort))
-    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
-    if (onAnimationIteration != null) __obj.updateDynamic("onAnimationIteration")(js.Any.fromFunction1(onAnimationIteration))
-    if (onAnimationStart != null) __obj.updateDynamic("onAnimationStart")(js.Any.fromFunction1(onAnimationStart))
-    if (onAuxClick != null) __obj.updateDynamic("onAuxClick")(js.Any.fromFunction1(onAuxClick))
-    if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onCanPlay != null) __obj.updateDynamic("onCanPlay")(js.Any.fromFunction1(onCanPlay))
-    if (onCanPlayThrough != null) __obj.updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(onCanPlayThrough))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onCompositionEnd != null) __obj.updateDynamic("onCompositionEnd")(js.Any.fromFunction1(onCompositionEnd))
-    if (onCompositionStart != null) __obj.updateDynamic("onCompositionStart")(js.Any.fromFunction1(onCompositionStart))
-    if (onCompositionUpdate != null) __obj.updateDynamic("onCompositionUpdate")(js.Any.fromFunction1(onCompositionUpdate))
-    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(js.Any.fromFunction1(onContextMenu))
-    if (onCopy != null) __obj.updateDynamic("onCopy")(js.Any.fromFunction1(onCopy))
-    if (onCut != null) __obj.updateDynamic("onCut")(js.Any.fromFunction1(onCut))
-    if (onDoubleClick != null) __obj.updateDynamic("onDoubleClick")(js.Any.fromFunction1(onDoubleClick))
-    if (onDrag != null) __obj.updateDynamic("onDrag")(js.Any.fromFunction1(onDrag))
-    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(js.Any.fromFunction1(onDragEnd))
-    if (onDragEnter != null) __obj.updateDynamic("onDragEnter")(js.Any.fromFunction1(onDragEnter))
-    if (onDragExit != null) __obj.updateDynamic("onDragExit")(js.Any.fromFunction1(onDragExit))
-    if (onDragLeave != null) __obj.updateDynamic("onDragLeave")(js.Any.fromFunction1(onDragLeave))
-    if (onDragOver != null) __obj.updateDynamic("onDragOver")(js.Any.fromFunction1(onDragOver))
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction1(onDragStart))
-    if (onDrop != null) __obj.updateDynamic("onDrop")(js.Any.fromFunction1(onDrop))
-    if (onDurationChange != null) __obj.updateDynamic("onDurationChange")(js.Any.fromFunction1(onDurationChange))
-    if (onEmptied != null) __obj.updateDynamic("onEmptied")(js.Any.fromFunction1(onEmptied))
-    if (onEncrypted != null) __obj.updateDynamic("onEncrypted")(js.Any.fromFunction1(onEncrypted))
-    if (onEnded != null) __obj.updateDynamic("onEnded")(js.Any.fromFunction1(onEnded))
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onInput != null) __obj.updateDynamic("onInput")(js.Any.fromFunction1(onInput))
-    if (onInvalid != null) __obj.updateDynamic("onInvalid")(js.Any.fromFunction1(onInvalid))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
-    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
-    if (onLoadStart != null) __obj.updateDynamic("onLoadStart")(js.Any.fromFunction1(onLoadStart))
-    if (onLoadedData != null) __obj.updateDynamic("onLoadedData")(js.Any.fromFunction1(onLoadedData))
-    if (onLoadedMetadata != null) __obj.updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(onLoadedMetadata))
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
-    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(js.Any.fromFunction1(onMouseOut))
-    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(js.Any.fromFunction1(onMouseOver))
-    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
-    if (onPaste != null) __obj.updateDynamic("onPaste")(js.Any.fromFunction1(onPaste))
-    if (onPause != null) __obj.updateDynamic("onPause")(js.Any.fromFunction1(onPause))
-    if (onPlay != null) __obj.updateDynamic("onPlay")(js.Any.fromFunction1(onPlay))
-    if (onPlaying != null) __obj.updateDynamic("onPlaying")(js.Any.fromFunction1(onPlaying))
-    if (onPointerCancel != null) __obj.updateDynamic("onPointerCancel")(js.Any.fromFunction1(onPointerCancel))
-    if (onPointerDown != null) __obj.updateDynamic("onPointerDown")(js.Any.fromFunction1(onPointerDown))
-    if (onPointerEnter != null) __obj.updateDynamic("onPointerEnter")(js.Any.fromFunction1(onPointerEnter))
-    if (onPointerLeave != null) __obj.updateDynamic("onPointerLeave")(js.Any.fromFunction1(onPointerLeave))
-    if (onPointerMove != null) __obj.updateDynamic("onPointerMove")(js.Any.fromFunction1(onPointerMove))
-    if (onPointerOut != null) __obj.updateDynamic("onPointerOut")(js.Any.fromFunction1(onPointerOut))
-    if (onPointerOver != null) __obj.updateDynamic("onPointerOver")(js.Any.fromFunction1(onPointerOver))
-    if (onPointerUp != null) __obj.updateDynamic("onPointerUp")(js.Any.fromFunction1(onPointerUp))
-    if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
-    if (onRateChange != null) __obj.updateDynamic("onRateChange")(js.Any.fromFunction1(onRateChange))
-    if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
-    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
-    if (onSeeked != null) __obj.updateDynamic("onSeeked")(js.Any.fromFunction1(onSeeked))
-    if (onSeeking != null) __obj.updateDynamic("onSeeking")(js.Any.fromFunction1(onSeeking))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
-    if (onStalled != null) __obj.updateDynamic("onStalled")(js.Any.fromFunction1(onStalled))
-    if (onSubmit != null) __obj.updateDynamic("onSubmit")(js.Any.fromFunction1(onSubmit))
-    if (onSuspend != null) __obj.updateDynamic("onSuspend")(js.Any.fromFunction1(onSuspend))
-    if (onTimeUpdate != null) __obj.updateDynamic("onTimeUpdate")(js.Any.fromFunction1(onTimeUpdate))
-    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
-    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
-    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
-    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
-    if (onTransitionEnd != null) __obj.updateDynamic("onTransitionEnd")(js.Any.fromFunction1(onTransitionEnd))
-    if (onVolumeChange != null) __obj.updateDynamic("onVolumeChange")(js.Any.fromFunction1(onVolumeChange))
-    if (onWaiting != null) __obj.updateDynamic("onWaiting")(js.Any.fromFunction1(onWaiting))
-    if (onWheel != null) __obj.updateDynamic("onWheel")(js.Any.fromFunction1(onWheel))
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
-    if (radioGroup != null) __obj.updateDynamic("radioGroup")(radioGroup.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
-    if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
-    if (selfAlignX != null) __obj.updateDynamic("selfAlignX")(selfAlignX.asInstanceOf[js.Any])
-    if (selfAlignY != null) __obj.updateDynamic("selfAlignY")(selfAlignY.asInstanceOf[js.Any])
-    if (showFor != null) __obj.updateDynamic("showFor")(showFor.asInstanceOf[js.Any])
-    if (!js.isUndefined(showForLandscape)) __obj.updateDynamic("showForLandscape")(showForLandscape.asInstanceOf[js.Any])
-    if (!js.isUndefined(showForPortrait)) __obj.updateDynamic("showForPortrait")(showForPortrait.asInstanceOf[js.Any])
-    if (!js.isUndefined(showForSr)) __obj.updateDynamic("showForSr")(showForSr.asInstanceOf[js.Any])
-    if (!js.isUndefined(showOnFocus)) __obj.updateDynamic("showOnFocus")(showOnFocus.asInstanceOf[js.Any])
-    if (showOnlyFor != null) __obj.updateDynamic("showOnlyFor")(showOnlyFor.asInstanceOf[js.Any])
-    if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
-    if (!js.isUndefined(spellCheck)) __obj.updateDynamic("spellCheck")(spellCheck.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(suppressContentEditableWarning)) __obj.updateDynamic("suppressContentEditableWarning")(suppressContentEditableWarning.asInstanceOf[js.Any])
-    if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
-    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
-    if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
-    if (!js.isUndefined(uncollapseOnLarge)) __obj.updateDynamic("uncollapseOnLarge")(uncollapseOnLarge.asInstanceOf[js.Any])
-    if (!js.isUndefined(uncollapseOnMedium)) __obj.updateDynamic("uncollapseOnMedium")(uncollapseOnMedium.asInstanceOf[js.Any])
-    if (!js.isUndefined(uncollapseOnSmall)) __obj.updateDynamic("uncollapseOnSmall")(uncollapseOnSmall.asInstanceOf[js.Any])
-    if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
-    if (!js.isUndefined(unstackOnLarge)) __obj.updateDynamic("unstackOnLarge")(unstackOnLarge.asInstanceOf[js.Any])
-    if (!js.isUndefined(unstackOnMedium)) __obj.updateDynamic("unstackOnMedium")(unstackOnMedium.asInstanceOf[js.Any])
-    if (!js.isUndefined(unstackOnSmall)) __obj.updateDynamic("unstackOnSmall")(unstackOnSmall.asInstanceOf[js.Any])
-    if (upOnLarge != null) __obj.updateDynamic("upOnLarge")(upOnLarge.asInstanceOf[js.Any])
-    if (upOnMedium != null) __obj.updateDynamic("upOnMedium")(upOnMedium.asInstanceOf[js.Any])
-    if (upOnSmall != null) __obj.updateDynamic("upOnSmall")(upOnSmall.asInstanceOf[js.Any])
-    if (verticalAlignment != null) __obj.updateDynamic("verticalAlignment")(verticalAlignment.asInstanceOf[js.Any])
-    if (vocab != null) __obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])
     __obj.asInstanceOf[RowProps]
   }
+  @scala.inline
+  implicit class RowPropsOps[Self <: RowProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAbout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("about")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("about")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoCapitalize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCapitalize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoCapitalize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCapitalize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoCorrect(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCorrect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoCorrect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCorrect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoSave(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSave")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoSave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSave")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollapseOnLarge(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseOnLarge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollapseOnLarge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseOnLarge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollapseOnMedium(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseOnMedium")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollapseOnMedium: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseOnMedium")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollapseOnSmall(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseOnSmall")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollapseOnSmall: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseOnSmall")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentEditable(value: Booleanish | inherit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEditable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentEditable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEditable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContextMenu(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatatype(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datatype")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatatype: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datatype")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultChecked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultChecked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultChecked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultChecked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValue(value: String | Double | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDir(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDir: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDraggable(value: Booleanish): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDraggable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHorizontalAlignment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizontalAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlist(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlist: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlist")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputMode(value: none | text | tel | url | email | numeric | decimal | search): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsCollapsed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCollapsed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsCollapsed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCollapsed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsColumn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsExpanded(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpanded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsExpanded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpanded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemID")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemProp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemProp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemProp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemProp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemRef(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemScope(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemScope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemScope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLang(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLang: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProperty(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProperty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadioGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radioGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadioGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radioGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResults(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRole(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpellCheck(value: Booleanish): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spellCheck")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpellCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spellCheck")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuppressContentEditableWarning(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressContentEditableWarning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuppressContentEditableWarning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressContentEditableWarning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuppressHydrationWarning(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressHydrationWarning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuppressHydrationWarning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressHydrationWarning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTabIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranslate(value: yes | no): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranslate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypeof(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeof")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypeof: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeof")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUncollapseOnLarge(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uncollapseOnLarge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUncollapseOnLarge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uncollapseOnLarge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUncollapseOnMedium(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uncollapseOnMedium")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUncollapseOnMedium: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uncollapseOnMedium")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUncollapseOnSmall(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uncollapseOnSmall")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUncollapseOnSmall: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uncollapseOnSmall")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnselectable(value: on | off): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unselectable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnselectable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unselectable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnstackOnLarge(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unstackOnLarge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnstackOnLarge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unstackOnLarge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnstackOnMedium(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unstackOnMedium")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnstackOnMedium: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unstackOnMedium")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnstackOnSmall(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unstackOnSmall")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnstackOnSmall: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unstackOnSmall")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpOnLarge(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upOnLarge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpOnLarge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upOnLarge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpOnMedium(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upOnMedium")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpOnMedium: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upOnMedium")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpOnSmall(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upOnSmall")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpOnSmall: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upOnSmall")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalAlignment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVocab(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vocab")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVocab: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vocab")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

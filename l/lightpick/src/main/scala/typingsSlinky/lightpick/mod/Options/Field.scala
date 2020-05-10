@@ -3,6 +3,7 @@ package typingsSlinky.lightpick.mod.Options
 import org.scalajs.dom.raw.Attr
 import org.scalajs.dom.raw.DOMTokenList
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.EventListenerOptions
 import org.scalajs.dom.raw.HTMLAnchorElement
 import org.scalajs.dom.raw.HTMLAreaElement
 import org.scalajs.dom.raw.HTMLAudioElement
@@ -297,7 +298,6 @@ import typingsSlinky.std.ChildNode
 import typingsSlinky.std.DOMRect
 import typingsSlinky.std.DOMRectList
 import typingsSlinky.std.Document_
-import typingsSlinky.std.EventListenerOptions
 import typingsSlinky.std.EventListenerOrEventListenerObject
 import typingsSlinky.std.Event_
 import typingsSlinky.std.FullscreenOptions

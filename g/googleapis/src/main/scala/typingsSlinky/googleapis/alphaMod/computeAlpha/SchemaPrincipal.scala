@@ -59,30 +59,137 @@ trait SchemaPrincipal extends js.Object {
 
 object SchemaPrincipal {
   @scala.inline
-  def apply(
-    condition: String = null,
-    groups: js.Array[String] = null,
-    ips: js.Array[String] = null,
-    namespaces: js.Array[String] = null,
-    notGroups: js.Array[String] = null,
-    notIps: js.Array[String] = null,
-    notNamespaces: js.Array[String] = null,
-    notUsers: js.Array[String] = null,
-    properties: StringDictionary[String] = null,
-    users: js.Array[String] = null
-  ): SchemaPrincipal = {
+  def apply(): SchemaPrincipal = {
     val __obj = js.Dynamic.literal()
-    if (condition != null) __obj.updateDynamic("condition")(condition.asInstanceOf[js.Any])
-    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
-    if (ips != null) __obj.updateDynamic("ips")(ips.asInstanceOf[js.Any])
-    if (namespaces != null) __obj.updateDynamic("namespaces")(namespaces.asInstanceOf[js.Any])
-    if (notGroups != null) __obj.updateDynamic("notGroups")(notGroups.asInstanceOf[js.Any])
-    if (notIps != null) __obj.updateDynamic("notIps")(notIps.asInstanceOf[js.Any])
-    if (notNamespaces != null) __obj.updateDynamic("notNamespaces")(notNamespaces.asInstanceOf[js.Any])
-    if (notUsers != null) __obj.updateDynamic("notUsers")(notUsers.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
-    if (users != null) __obj.updateDynamic("users")(users.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPrincipal]
   }
+  @scala.inline
+  implicit class SchemaPrincipalOps[Self <: SchemaPrincipal] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCondition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroups(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIps(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ips")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ips")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamespaces(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamespaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotGroups(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotIps(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notIps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotIps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notIps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotNamespaces(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notNamespaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotNamespaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notNamespaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotUsers(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notUsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notUsers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProperties(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsers(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("users")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("users")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

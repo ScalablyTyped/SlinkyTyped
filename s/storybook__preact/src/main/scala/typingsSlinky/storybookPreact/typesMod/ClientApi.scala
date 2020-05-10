@@ -10,14 +10,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClientApi extends ClientStoryApi[StoryFnPreactReturnType] {
-  def clearDecorators(): Unit
-  def configure(loader: Loadable, module: NodeModule): Unit
-  def forceReRender(): Unit
-  def getStorybook(): js.Array[IStorybookSection]
-  def load(args: js.Any*): Unit
-  def raw(): js.Any
-  def setAddon(addon: js.Any): Unit
+  def clearDecorators(): Unit = js.native
+  def configure(loader: Loadable, module: NodeModule): Unit = js.native
+  def forceReRender(): Unit = js.native
+  def getStorybook(): js.Array[IStorybookSection] = js.native
+  def load(args: js.Any*): Unit = js.native
+  def raw(): js.Any = js.native
+  def setAddon(addon: js.Any): Unit = js.native
 }
 
 object ClientApi {
@@ -35,8 +36,57 @@ object ClientApi {
     storiesOf: (String, NodeModule) => StoryApi[StoryFnPreactReturnType]
   ): ClientApi = {
     val __obj = js.Dynamic.literal(addDecorator = js.Any.fromFunction1(addDecorator), addParameters = js.Any.fromFunction1(addParameters), clearDecorators = js.Any.fromFunction0(clearDecorators), configure = js.Any.fromFunction2(configure), forceReRender = js.Any.fromFunction0(forceReRender), getStorybook = js.Any.fromFunction0(getStorybook), load = js.Any.fromFunction1(load), raw = js.Any.fromFunction0(raw), setAddon = js.Any.fromFunction1(setAddon), storiesOf = js.Any.fromFunction2(storiesOf))
-  
     __obj.asInstanceOf[ClientApi]
   }
+  @scala.inline
+  implicit class ClientApiOps[Self <: ClientApi] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClearDecorators(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearDecorators")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withConfigure(value: (Loadable, NodeModule) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configure")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withForceReRender(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceReRender")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStorybook(value: () => js.Array[IStorybookSection]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStorybook")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withLoad(value: /* repeated */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRaw(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetAddon(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAddon")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

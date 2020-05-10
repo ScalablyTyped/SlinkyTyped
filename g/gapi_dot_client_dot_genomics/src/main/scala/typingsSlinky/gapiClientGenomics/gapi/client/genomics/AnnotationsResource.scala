@@ -8,6 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnnotationsResource extends js.Object {
   /**
     * Creates one or more new annotations atomically. All annotations must
@@ -25,7 +26,7 @@ trait AnnotationsResource extends js.Object {
     * see
     * CreateAnnotation.
     */
-  def batchCreate(request: AnonAccesstoken): Request_[BatchCreateAnnotationsResponse]
+  def batchCreate(request: AnonAccesstoken): Request_[BatchCreateAnnotationsResponse] = js.native
   /**
     * Creates a new annotation. Caller must have WRITE permission
     * for the associated annotation set.
@@ -50,17 +51,17 @@ trait AnnotationsResource extends js.Object {
     * Annotation resource
     * for additional restrictions on each field.
     */
-  def create(request: AnonAccesstoken): Request_[Annotation]
+  def create(request: AnonAccesstoken): Request_[Annotation] = js.native
   /**
     * Deletes an annotation. Caller must have WRITE permission for
     * the associated annotation set.
     */
-  def delete(request: AnonAlt): Request_[js.Object]
+  def delete(request: AnonAlt): Request_[js.Object] = js.native
   /**
     * Gets an annotation. Caller must have READ permission
     * for the associated annotation set.
     */
-  def get(request: AnonAlt): Request_[Annotation]
+  def get(request: AnonAlt): Request_[Annotation] = js.native
   /**
     * Searches for annotations that match the given criteria. Results are
     * ordered by genomic coordinate (by reference sequence, then position).
@@ -70,12 +71,12 @@ trait AnnotationsResource extends js.Object {
     * across their respective streams of paginated responses. Caller must have
     * READ permission for the queried annotation sets.
     */
-  def search(request: AnonAccesstoken): Request_[SearchAnnotationsResponse]
+  def search(request: AnonAccesstoken): Request_[SearchAnnotationsResponse] = js.native
   /**
     * Updates an annotation. Caller must have
     * WRITE permission for the associated dataset.
     */
-  def update(request: AnonAnnotationId): Request_[Annotation]
+  def update(request: AnonAnnotationId): Request_[Annotation] = js.native
 }
 
 object AnnotationsResource {
@@ -89,8 +90,51 @@ object AnnotationsResource {
     update: AnonAnnotationId => Request_[Annotation]
   ): AnnotationsResource = {
     val __obj = js.Dynamic.literal(batchCreate = js.Any.fromFunction1(batchCreate), create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), search = js.Any.fromFunction1(search), update = js.Any.fromFunction1(update))
-  
     __obj.asInstanceOf[AnnotationsResource]
   }
+  @scala.inline
+  implicit class AnnotationsResourceOps[Self <: AnnotationsResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBatchCreate(value: AnonAccesstoken => Request_[BatchCreateAnnotationsResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batchCreate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreate(value: AnonAccesstoken => Request_[Annotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDelete(value: AnonAlt => Request_[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: AnonAlt => Request_[Annotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSearch(value: AnonAccesstoken => Request_[SearchAnnotationsResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: AnonAnnotationId => Request_[Annotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

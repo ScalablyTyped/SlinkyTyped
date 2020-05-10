@@ -1,9 +1,7 @@
 package typingsSlinky.antdMobileRn.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.button
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.number
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.pointer
@@ -15,42 +13,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Pagination
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.antdMobileRn.mod.Pagination] {
+object Pagination {
   @JSImport("antd-mobile-rn", "Pagination")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    current: Double,
-    total: Double,
-    indicatorStyle: StyleProp[ViewStyle] = null,
-    mode: button | number | pointer = null,
-    nextText: String = null,
-    onChange: /* current */ Double => Unit = null,
-    onNext: () => Unit = null,
-    onPrev: () => Unit = null,
-    prevText: String = null,
-    simple: js.UndefOr[Boolean] = js.undefined,
-    style: StyleProp[ViewStyle] = null,
-    styles: IPaginationStyle = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.antdMobileRn.mod.Pagination] = {
-    val __obj = js.Dynamic.literal(current = current.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
-    if (indicatorStyle != null) __obj.updateDynamic("indicatorStyle")(indicatorStyle.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (nextText != null) __obj.updateDynamic("nextText")(nextText.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onNext != null) __obj.updateDynamic("onNext")(js.Any.fromFunction0(onNext))
-    if (onPrev != null) __obj.updateDynamic("onPrev")(js.Any.fromFunction0(onPrev))
-    if (prevText != null) __obj.updateDynamic("prevText")(prevText.asInstanceOf[js.Any])
-    if (!js.isUndefined(simple)) __obj.updateDynamic("simple")(simple.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobileRn.mod.Pagination] {
+    @scala.inline
+    def indicatorStyle(value: StyleProp[ViewStyle]): this.type = set("indicatorStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indicatorStyleNull: this.type = set("indicatorStyle", null)
+    @scala.inline
+    def mode(value: button | number | pointer): this.type = set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextText(value: String): this.type = set("nextText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* current */ Double => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onNext(value: () => Unit): this.type = set("onNext", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPrev(value: () => Unit): this.type = set("onPrev", js.Any.fromFunction0(value))
+    @scala.inline
+    def prevText(value: String): this.type = set("prevText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def simple(value: Boolean): this.type = set("simple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def styles(value: IPaginationStyle): this.type = set("styles", value.asInstanceOf[js.Any])
   }
-  type Props = PaginationNativeProps
+  
+  def withProps(p: PaginationNativeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(current: Double, total: Double): Builder = {
+    val __props = js.Dynamic.literal(current = current.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PaginationNativeProps]))
+  }
 }
 

@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonGeo extends js.Object {
-  var geo: js.Object
-  var propertiesKeys: AnonLongLabel
+  var geo: js.Object = js.native
+  var propertiesKeys: AnonLongLabel = js.native
 }
 
 object AnonGeo {
   @scala.inline
   def apply(geo: js.Object, propertiesKeys: AnonLongLabel): AnonGeo = {
     val __obj = js.Dynamic.literal(geo = geo.asInstanceOf[js.Any], propertiesKeys = propertiesKeys.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonGeo]
   }
+  @scala.inline
+  implicit class AnonGeoOps[Self <: AnonGeo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGeo(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPropertiesKeys(value: AnonLongLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propertiesKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

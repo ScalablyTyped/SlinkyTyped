@@ -1,0 +1,17 @@
+package typingsSlinky.babylonjs.legacyMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("babylonjs/Legacy/legacy", "ScaleBlock")
+@js.native
+class ScaleBlock protected ()
+  extends typingsSlinky.babylonjs.indexMod.ScaleBlock {
+  /**
+    * Creates a new ScaleBlock
+    * @param name defines the block name
+    */
+  def this(name: String) = this()
+}
+

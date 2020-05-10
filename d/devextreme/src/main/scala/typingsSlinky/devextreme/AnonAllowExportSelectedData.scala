@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAllowExportSelectedData extends js.Object {
-  var allowExportSelectedData: js.UndefOr[Boolean] = js.undefined
-  var customizeExcelCell: js.UndefOr[js.Function1[/* options */ AnonFillPatternColor, _]] = js.undefined
-  var enabled: js.UndefOr[Boolean] = js.undefined
-  var excelFilterEnabled: js.UndefOr[Boolean] = js.undefined
-  var excelWrapTextEnabled: js.UndefOr[Boolean] = js.undefined
-  var fileName: js.UndefOr[String] = js.undefined
-  var ignoreExcelErrors: js.UndefOr[Boolean] = js.undefined
-  var proxyUrl: js.UndefOr[String] = js.undefined
-  var texts: js.UndefOr[AnonExportAll] = js.undefined
+  var allowExportSelectedData: js.UndefOr[Boolean] = js.native
+  var customizeExcelCell: js.UndefOr[js.Function1[/* options */ AnonFillPatternColor, _]] = js.native
+  var enabled: js.UndefOr[Boolean] = js.native
+  var excelFilterEnabled: js.UndefOr[Boolean] = js.native
+  var excelWrapTextEnabled: js.UndefOr[Boolean] = js.native
+  var fileName: js.UndefOr[String] = js.native
+  var ignoreExcelErrors: js.UndefOr[Boolean] = js.native
+  var proxyUrl: js.UndefOr[String] = js.native
+  var texts: js.UndefOr[AnonExportAll] = js.native
 }
 
 object AnonAllowExportSelectedData {
   @scala.inline
-  def apply(
-    allowExportSelectedData: js.UndefOr[Boolean] = js.undefined,
-    customizeExcelCell: /* options */ AnonFillPatternColor => _ = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    excelFilterEnabled: js.UndefOr[Boolean] = js.undefined,
-    excelWrapTextEnabled: js.UndefOr[Boolean] = js.undefined,
-    fileName: String = null,
-    ignoreExcelErrors: js.UndefOr[Boolean] = js.undefined,
-    proxyUrl: String = null,
-    texts: AnonExportAll = null
-  ): AnonAllowExportSelectedData = {
+  def apply(): AnonAllowExportSelectedData = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowExportSelectedData)) __obj.updateDynamic("allowExportSelectedData")(allowExportSelectedData.asInstanceOf[js.Any])
-    if (customizeExcelCell != null) __obj.updateDynamic("customizeExcelCell")(js.Any.fromFunction1(customizeExcelCell))
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(excelFilterEnabled)) __obj.updateDynamic("excelFilterEnabled")(excelFilterEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(excelWrapTextEnabled)) __obj.updateDynamic("excelWrapTextEnabled")(excelWrapTextEnabled.asInstanceOf[js.Any])
-    if (fileName != null) __obj.updateDynamic("fileName")(fileName.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreExcelErrors)) __obj.updateDynamic("ignoreExcelErrors")(ignoreExcelErrors.asInstanceOf[js.Any])
-    if (proxyUrl != null) __obj.updateDynamic("proxyUrl")(proxyUrl.asInstanceOf[js.Any])
-    if (texts != null) __obj.updateDynamic("texts")(texts.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAllowExportSelectedData]
   }
+  @scala.inline
+  implicit class AnonAllowExportSelectedDataOps[Self <: AnonAllowExportSelectedData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowExportSelectedData(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowExportSelectedData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowExportSelectedData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowExportSelectedData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomizeExcelCell(value: /* options */ AnonFillPatternColor => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeExcelCell")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCustomizeExcelCell: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeExcelCell")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcelFilterEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excelFilterEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcelFilterEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excelFilterEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcelWrapTextEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excelWrapTextEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcelWrapTextEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excelWrapTextEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreExcelErrors(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreExcelErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreExcelErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreExcelErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProxyUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProxyUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTexts(value: AnonExportAll): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("texts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTexts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("texts")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

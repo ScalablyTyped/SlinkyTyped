@@ -46,25 +46,107 @@ trait CreateTriggerRequest extends js.Object {
 
 object CreateTriggerRequest {
   @scala.inline
-  def apply(
-    Actions: ActionList,
-    Name: NameString,
-    Type: TriggerType,
-    Description: DescriptionString = null,
-    Predicate: Predicate = null,
-    Schedule: GenericString = null,
-    StartOnCreation: js.UndefOr[scala.Boolean] = js.undefined,
-    Tags: TagsMap = null,
-    WorkflowName: NameString = null
-  ): CreateTriggerRequest = {
+  def apply(Actions: ActionList, Name: NameString, Type: TriggerType): CreateTriggerRequest = {
     val __obj = js.Dynamic.literal(Actions = Actions.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (Predicate != null) __obj.updateDynamic("Predicate")(Predicate.asInstanceOf[js.Any])
-    if (Schedule != null) __obj.updateDynamic("Schedule")(Schedule.asInstanceOf[js.Any])
-    if (!js.isUndefined(StartOnCreation)) __obj.updateDynamic("StartOnCreation")(StartOnCreation.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (WorkflowName != null) __obj.updateDynamic("WorkflowName")(WorkflowName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateTriggerRequest]
   }
+  @scala.inline
+  implicit class CreateTriggerRequestOps[Self <: CreateTriggerRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActions(value: ActionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Actions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: TriggerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: DescriptionString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPredicate(value: Predicate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Predicate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPredicate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Predicate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchedule(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchedule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartOnCreation(value: BooleanValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartOnCreation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartOnCreation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartOnCreation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagsMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkflowName(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkflowName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkflowName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkflowName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

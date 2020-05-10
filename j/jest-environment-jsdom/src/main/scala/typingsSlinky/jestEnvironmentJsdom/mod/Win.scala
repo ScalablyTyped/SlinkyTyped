@@ -14,6 +14,7 @@ import org.scalajs.dom.raw.CSSStyleDeclaration
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.ErrorEvent
+import org.scalajs.dom.raw.EventListenerOptions
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.HashChangeEvent
 import org.scalajs.dom.raw.IDBFactory
@@ -202,7 +203,6 @@ import typingsSlinky.std.DeviceLightEvent
 import typingsSlinky.std.Document_
 import typingsSlinky.std.ErrorConstructor
 import typingsSlinky.std.EvalErrorConstructor
-import typingsSlinky.std.EventListenerOptions
 import typingsSlinky.std.EventListenerOrEventListenerObject
 import typingsSlinky.std.Event_
 import typingsSlinky.std.ExtensionScriptApis
@@ -717,7 +717,7 @@ trait Win
   val scrollX: Double = js.native
   val scrollY: Double = js.native
   val scrollbars: BarProp = js.native
-  val self: Window_ with (/* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof globalThis */ js.Any) = js.native
+  val self: Window_ with (/* globalThis */ js.Any) = js.native
   val sessionStorage: Storage = js.native
   val speechSynthesis: SpeechSynthesis_ = js.native
   var status: String = js.native
@@ -729,7 +729,7 @@ trait Win
   val top: Window_ = js.native
   var undefined: js.UndefOr[scala.Nothing] = js.native
   var v8debug: js.UndefOr[js.Any] = js.native
-  val window: Window_ with (/* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof globalThis */ js.Any) = js.native
+  val window: Window_ with (/* globalThis */ js.Any) = js.native
   @JSName("xdescribe")
   var xdescribe_Original: DescribeBase = js.native
   @JSName("xit")
@@ -771,8 +771,8 @@ trait Win
   def ReferenceError_Error(message: String): js.Error = js.native
   def RegExp(pattern: String): js.RegExp = js.native
   def RegExp(pattern: String, flags: String): js.RegExp = js.native
-  def RegExp(pattern: typingsSlinky.std.RegExp): js.RegExp = js.native
-  def RegExp(pattern: typingsSlinky.std.RegExp, flags: String): js.RegExp = js.native
+  def RegExp(pattern: js.RegExp): js.RegExp = js.native
+  def RegExp(pattern: js.RegExp, flags: String): js.RegExp = js.native
   def String(): java.lang.String = js.native
   def String(value: js.Any): java.lang.String = js.native
   def SyntaxError(): js.SyntaxError = js.native

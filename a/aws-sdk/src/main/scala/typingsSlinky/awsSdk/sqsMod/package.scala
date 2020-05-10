@@ -9,7 +9,7 @@ package object sqsMod {
   type ActionNameList = js.Array[typingsSlinky.awsSdk.sqsMod.String]
   type AttributeNameList = js.Array[typingsSlinky.awsSdk.sqsMod.QueueAttributeName]
   type BatchResultErrorEntryList = js.Array[typingsSlinky.awsSdk.sqsMod.BatchResultErrorEntry]
-  type Binary = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.sqsMod.Blob | java.lang.String
+  type Binary = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.sqsMod.Blob | java.lang.String
   type BinaryList = js.Array[typingsSlinky.awsSdk.sqsMod.Binary]
   type Boolean = scala.Boolean
   type ChangeMessageVisibilityBatchRequestEntryList = js.Array[typingsSlinky.awsSdk.sqsMod.ChangeMessageVisibilityBatchRequestEntry]

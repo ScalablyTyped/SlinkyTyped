@@ -28,42 +28,40 @@ trait TimelineEvents extends js.Object
 
 object TimelineEvents {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def changed: typingsSlinky.vis.visStrings.changed = "changed".asInstanceOf[typingsSlinky.vis.visStrings.changed]
   @scala.inline
-  def changed: typingsSlinky.vis.visStrings.changed = this.cast("changed")
+  def click: typingsSlinky.vis.visStrings.click = "click".asInstanceOf[typingsSlinky.vis.visStrings.click]
   @scala.inline
-  def click: typingsSlinky.vis.visStrings.click = this.cast("click")
+  def contextmenu: typingsSlinky.vis.visStrings.contextmenu = "contextmenu".asInstanceOf[typingsSlinky.vis.visStrings.contextmenu]
   @scala.inline
-  def contextmenu: typingsSlinky.vis.visStrings.contextmenu = this.cast("contextmenu")
+  def currentTimeTick: typingsSlinky.vis.visStrings.currentTimeTick = "currentTimeTick".asInstanceOf[typingsSlinky.vis.visStrings.currentTimeTick]
   @scala.inline
-  def currentTimeTick: typingsSlinky.vis.visStrings.currentTimeTick = this.cast("currentTimeTick")
+  def doubleClick: typingsSlinky.vis.visStrings.doubleClick = "doubleClick".asInstanceOf[typingsSlinky.vis.visStrings.doubleClick]
   @scala.inline
-  def doubleClick: typingsSlinky.vis.visStrings.doubleClick = this.cast("doubleClick")
+  def drop: typingsSlinky.vis.visStrings.drop = "drop".asInstanceOf[typingsSlinky.vis.visStrings.drop]
   @scala.inline
-  def drop: typingsSlinky.vis.visStrings.drop = this.cast("drop")
+  def groupDragged: typingsSlinky.vis.visStrings.groupDragged = "groupDragged".asInstanceOf[typingsSlinky.vis.visStrings.groupDragged]
   @scala.inline
-  def groupDragged: typingsSlinky.vis.visStrings.groupDragged = this.cast("groupDragged")
+  def itemout: typingsSlinky.vis.visStrings.itemout = "itemout".asInstanceOf[typingsSlinky.vis.visStrings.itemout]
   @scala.inline
-  def itemout: typingsSlinky.vis.visStrings.itemout = this.cast("itemout")
+  def itemover: typingsSlinky.vis.visStrings.itemover = "itemover".asInstanceOf[typingsSlinky.vis.visStrings.itemover]
   @scala.inline
-  def itemover: typingsSlinky.vis.visStrings.itemover = this.cast("itemover")
+  def mouseDown: typingsSlinky.vis.visStrings.mouseDown = "mouseDown".asInstanceOf[typingsSlinky.vis.visStrings.mouseDown]
   @scala.inline
-  def mouseDown: typingsSlinky.vis.visStrings.mouseDown = this.cast("mouseDown")
+  def mouseMove: typingsSlinky.vis.visStrings.mouseMove = "mouseMove".asInstanceOf[typingsSlinky.vis.visStrings.mouseMove]
   @scala.inline
-  def mouseMove: typingsSlinky.vis.visStrings.mouseMove = this.cast("mouseMove")
+  def mouseOver: typingsSlinky.vis.visStrings.mouseOver = "mouseOver".asInstanceOf[typingsSlinky.vis.visStrings.mouseOver]
   @scala.inline
-  def mouseOver: typingsSlinky.vis.visStrings.mouseOver = this.cast("mouseOver")
+  def mouseUp: typingsSlinky.vis.visStrings.mouseUp = "mouseUp".asInstanceOf[typingsSlinky.vis.visStrings.mouseUp]
   @scala.inline
-  def mouseUp: typingsSlinky.vis.visStrings.mouseUp = this.cast("mouseUp")
+  def rangechange: typingsSlinky.vis.visStrings.rangechange = "rangechange".asInstanceOf[typingsSlinky.vis.visStrings.rangechange]
   @scala.inline
-  def rangechange: typingsSlinky.vis.visStrings.rangechange = this.cast("rangechange")
+  def rangechanged: typingsSlinky.vis.visStrings.rangechanged = "rangechanged".asInstanceOf[typingsSlinky.vis.visStrings.rangechanged]
   @scala.inline
-  def rangechanged: typingsSlinky.vis.visStrings.rangechanged = this.cast("rangechanged")
+  def select: typingsSlinky.vis.visStrings.select = "select".asInstanceOf[typingsSlinky.vis.visStrings.select]
   @scala.inline
-  def select: typingsSlinky.vis.visStrings.select = this.cast("select")
+  def timechange: typingsSlinky.vis.visStrings.timechange = "timechange".asInstanceOf[typingsSlinky.vis.visStrings.timechange]
   @scala.inline
-  def timechange: typingsSlinky.vis.visStrings.timechange = this.cast("timechange")
-  @scala.inline
-  def timechanged: typingsSlinky.vis.visStrings.timechanged = this.cast("timechanged")
+  def timechanged: typingsSlinky.vis.visStrings.timechanged = "timechanged".asInstanceOf[typingsSlinky.vis.visStrings.timechanged]
 }
 

@@ -2,7 +2,7 @@ package typingsSlinky.samchonFramework.mod.collections
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable3
-import typingsSlinky.tstl.IteratoranyanyanyEquals
+import typingsSlinky.tstl.Iteratoranyanyany
 import typingsSlinky.tstl.mod.base.Container
 import typingsSlinky.tstl.setContainerMod.SetContainer
 import scala.scalajs.js
@@ -42,7 +42,7 @@ object TreeMultiSetCollection extends js.Object {
         /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
-        IteratoranyanyanyEquals, 
+        Iteratoranyanyany, 
         typingsSlinky.tstl.setElementListMod.SetElementList.ReverseIterator[
           /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
           /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
@@ -59,7 +59,7 @@ object TreeMultiSetCollection extends js.Object {
         /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
-        IteratoranyanyanyEquals, 
+        Iteratoranyanyany, 
         typingsSlinky.tstl.setElementListMod.SetElementList.ReverseIterator[
           /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
           /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 

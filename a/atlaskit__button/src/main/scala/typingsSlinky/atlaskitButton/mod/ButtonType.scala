@@ -12,10 +12,8 @@ trait ButtonType extends js.Object
 
 object ButtonType {
   @scala.inline
-  def button: typingsSlinky.atlaskitButton.atlaskitButtonStrings.button = this.cast("button")
+  def button: typingsSlinky.atlaskitButton.atlaskitButtonStrings.button = "button".asInstanceOf[typingsSlinky.atlaskitButton.atlaskitButtonStrings.button]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def submit: typingsSlinky.atlaskitButton.atlaskitButtonStrings.submit = this.cast("submit")
+  def submit: typingsSlinky.atlaskitButton.atlaskitButtonStrings.submit = "submit".asInstanceOf[typingsSlinky.atlaskitButton.atlaskitButtonStrings.submit]
 }
 

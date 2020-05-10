@@ -54,12 +54,78 @@ object AssessmentTemplate {
     durationInSeconds: AssessmentRunDuration,
     name: AssessmentTemplateName,
     rulesPackageArns: AssessmentTemplateRulesPackageArnList,
-    userAttributesForFindings: UserAttributeList,
-    lastAssessmentRunArn: Arn = null
+    userAttributesForFindings: UserAttributeList
   ): AssessmentTemplate = {
     val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any], assessmentRunCount = assessmentRunCount.asInstanceOf[js.Any], assessmentTargetArn = assessmentTargetArn.asInstanceOf[js.Any], createdAt = createdAt.asInstanceOf[js.Any], durationInSeconds = durationInSeconds.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], rulesPackageArns = rulesPackageArns.asInstanceOf[js.Any], userAttributesForFindings = userAttributesForFindings.asInstanceOf[js.Any])
-    if (lastAssessmentRunArn != null) __obj.updateDynamic("lastAssessmentRunArn")(lastAssessmentRunArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssessmentTemplate]
   }
+  @scala.inline
+  implicit class AssessmentTemplateOps[Self <: AssessmentTemplate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAssessmentRunCount(value: ArnCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assessmentRunCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAssessmentTargetArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assessmentTargetArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreatedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDurationInSeconds(value: AssessmentRunDuration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("durationInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: AssessmentTemplateName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRulesPackageArns(value: AssessmentTemplateRulesPackageArnList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rulesPackageArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserAttributesForFindings(value: UserAttributeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userAttributesForFindings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLastAssessmentRunArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastAssessmentRunArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastAssessmentRunArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastAssessmentRunArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

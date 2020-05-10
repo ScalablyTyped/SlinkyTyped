@@ -1,7 +1,6 @@
 package typingsSlinky.node.cryptoMod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +12,7 @@ object scrypt extends js.Object {
     password: BinaryLike,
     salt: BinaryLike,
     keylen: Double,
-    callback: js.Function2[/* err */ Error | Null, /* derivedKey */ Buffer, Unit]
+    callback: js.Function2[/* err */ js.Error | Null, /* derivedKey */ Buffer, Unit]
   ): Unit = js.native
   def apply(
     password: BinaryLike,

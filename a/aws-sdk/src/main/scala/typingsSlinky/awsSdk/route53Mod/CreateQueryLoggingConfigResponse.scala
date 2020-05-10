@@ -20,8 +20,27 @@ object CreateQueryLoggingConfigResponse {
   @scala.inline
   def apply(Location: ResourceURI, QueryLoggingConfig: QueryLoggingConfig): CreateQueryLoggingConfigResponse = {
     val __obj = js.Dynamic.literal(Location = Location.asInstanceOf[js.Any], QueryLoggingConfig = QueryLoggingConfig.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateQueryLoggingConfigResponse]
   }
+  @scala.inline
+  implicit class CreateQueryLoggingConfigResponseOps[Self <: CreateQueryLoggingConfigResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocation(value: ResourceURI): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQueryLoggingConfig(value: QueryLoggingConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryLoggingConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

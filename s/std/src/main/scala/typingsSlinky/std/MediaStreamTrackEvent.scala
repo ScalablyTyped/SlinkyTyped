@@ -16,7 +16,7 @@ trait MediaStreamTrackEvent extends Event_ {
 object MediaStreamTrackEvent
   extends Instantiable2[
       /* type */ java.lang.String, 
-      /* eventInitDict */ MediaStreamTrackEventInit, 
-      MediaStreamTrackEvent
+      /* eventInitDict */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEventInit, 
+      org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent
     ]
 

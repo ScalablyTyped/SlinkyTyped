@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.std.Window_
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
 import scala.scalajs.js

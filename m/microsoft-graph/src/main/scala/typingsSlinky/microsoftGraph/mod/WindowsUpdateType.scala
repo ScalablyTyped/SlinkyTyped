@@ -16,18 +16,16 @@ trait WindowsUpdateType extends js.Object
 
 object WindowsUpdateType {
   @scala.inline
-  def all: typingsSlinky.microsoftGraph.microsoftGraphStrings.all = this.cast("all")
+  def all: typingsSlinky.microsoftGraph.microsoftGraphStrings.all = "all".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.all]
   @scala.inline
-  def businessReadyOnly: typingsSlinky.microsoftGraph.microsoftGraphStrings.businessReadyOnly = this.cast("businessReadyOnly")
+  def businessReadyOnly: typingsSlinky.microsoftGraph.microsoftGraphStrings.businessReadyOnly = "businessReadyOnly".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.businessReadyOnly]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = "userDefined".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined]
   @scala.inline
-  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = this.cast("userDefined")
+  def windowsInsiderBuildFast: typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsInsiderBuildFast = "windowsInsiderBuildFast".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsInsiderBuildFast]
   @scala.inline
-  def windowsInsiderBuildFast: typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsInsiderBuildFast = this.cast("windowsInsiderBuildFast")
+  def windowsInsiderBuildRelease: typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsInsiderBuildRelease = "windowsInsiderBuildRelease".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsInsiderBuildRelease]
   @scala.inline
-  def windowsInsiderBuildRelease: typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsInsiderBuildRelease = this.cast("windowsInsiderBuildRelease")
-  @scala.inline
-  def windowsInsiderBuildSlow: typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsInsiderBuildSlow = this.cast("windowsInsiderBuildSlow")
+  def windowsInsiderBuildSlow: typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsInsiderBuildSlow = "windowsInsiderBuildSlow".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.windowsInsiderBuildSlow]
 }
 

@@ -166,7 +166,8 @@ trait Node extends EventTarget {
 
 @JSGlobal("Node")
 @js.native
-object Node extends Instantiable0[Node] {
+object Node
+  extends Instantiable0[org.scalajs.dom.raw.Node] {
   val ATTRIBUTE_NODE: Double = js.native
   /**
     * node is a CDATASection node.

@@ -4,10 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ServiceWorkerGlobalScopeEventMap extends js.Object {
-  var notificationclick: NotificationEvent
-  var push: PushEvent
-  var pushsubscriptionchange: PushSubscriptionChangeEvent
+  var notificationclick: NotificationEvent = js.native
+  var push: PushEvent = js.native
+  var pushsubscriptionchange: PushSubscriptionChangeEvent = js.native
 }
 
 object ServiceWorkerGlobalScopeEventMap {
@@ -18,8 +19,33 @@ object ServiceWorkerGlobalScopeEventMap {
     pushsubscriptionchange: PushSubscriptionChangeEvent
   ): ServiceWorkerGlobalScopeEventMap = {
     val __obj = js.Dynamic.literal(notificationclick = notificationclick.asInstanceOf[js.Any], push = push.asInstanceOf[js.Any], pushsubscriptionchange = pushsubscriptionchange.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ServiceWorkerGlobalScopeEventMap]
   }
+  @scala.inline
+  implicit class ServiceWorkerGlobalScopeEventMapOps[Self <: ServiceWorkerGlobalScopeEventMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNotificationclick(value: NotificationEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationclick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPush(value: PushEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("push")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPushsubscriptionchange(value: PushSubscriptionChangeEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pushsubscriptionchange")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

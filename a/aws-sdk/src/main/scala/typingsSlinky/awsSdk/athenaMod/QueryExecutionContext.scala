@@ -14,10 +14,29 @@ trait QueryExecutionContext extends js.Object {
 
 object QueryExecutionContext {
   @scala.inline
-  def apply(Database: DatabaseString = null): QueryExecutionContext = {
+  def apply(): QueryExecutionContext = {
     val __obj = js.Dynamic.literal()
-    if (Database != null) __obj.updateDynamic("Database")(Database.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryExecutionContext]
   }
+  @scala.inline
+  implicit class QueryExecutionContextOps[Self <: QueryExecutionContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDatabase(value: DatabaseString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Database")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Database")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

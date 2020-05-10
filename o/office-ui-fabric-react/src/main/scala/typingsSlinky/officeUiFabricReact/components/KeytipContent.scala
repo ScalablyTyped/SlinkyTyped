@@ -1,14 +1,13 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
 import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipProps
 import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipStyleProps
 import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipStyles
+import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.ipointMod.IPoint
@@ -16,43 +15,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object KeytipContent
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object KeytipContent {
   @JSImport("office-ui-fabric-react/lib/components/Keytip/KeytipContent", "KeytipContent")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    content: String,
-    keySequences: js.Array[String],
-    calloutProps: ICalloutProps = null,
-    hasDynamicChildren: js.UndefOr[Boolean] = js.undefined,
-    hasMenu: js.UndefOr[Boolean] = js.undefined,
-    offset: IPoint = null,
-    onExecute: (/* executeTarget */ HTMLElement | Null, /* target */ HTMLElement | Null) => Unit = null,
-    onReturn: (/* executeTarget */ HTMLElement | Null, /* target */ HTMLElement | Null) => Unit = null,
-    overflowSetSequence: js.Array[String] = null,
-    styles: IStyleFunctionOrObject[IKeytipStyleProps, IKeytipStyles] = null,
-    theme: ITheme = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], keySequences = keySequences.asInstanceOf[js.Any])
-    if (calloutProps != null) __obj.updateDynamic("calloutProps")(calloutProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasDynamicChildren)) __obj.updateDynamic("hasDynamicChildren")(hasDynamicChildren.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasMenu)) __obj.updateDynamic("hasMenu")(hasMenu.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (onExecute != null) __obj.updateDynamic("onExecute")(js.Any.fromFunction2(onExecute))
-    if (onReturn != null) __obj.updateDynamic("onReturn")(js.Any.fromFunction2(onReturn))
-    if (overflowSetSequence != null) __obj.updateDynamic("overflowSetSequence")(overflowSetSequence.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def calloutProps(value: ICalloutProps): this.type = set("calloutProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hasDynamicChildren(value: Boolean): this.type = set("hasDynamicChildren", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hasMenu(value: Boolean): this.type = set("hasMenu", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offset(value: IPoint): this.type = set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onExecute(value: (/* executeTarget */ HTMLElement | Null, /* target */ HTMLElement | Null) => Unit): this.type = set("onExecute", js.Any.fromFunction2(value))
+    @scala.inline
+    def onReturn(value: (/* executeTarget */ HTMLElement | Null, /* target */ HTMLElement | Null) => Unit): this.type = set("onReturn", js.Any.fromFunction2(value))
+    @scala.inline
+    def overflowSetSequence(value: js.Array[String]): this.type = set("overflowSetSequence", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stylesFunction1(value: IKeytipStyleProps => Partial[IKeytipStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: IStyleFunctionOrObject[IKeytipStyleProps, IKeytipStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
-  type Props = IKeytipProps
+  
+  def withProps(p: IKeytipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(content: String, keySequences: js.Array[String]): Builder = {
+    val __props = js.Dynamic.literal(content = content.asInstanceOf[js.Any], keySequences = keySequences.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IKeytipProps]))
+  }
 }
 

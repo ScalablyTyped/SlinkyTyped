@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkClientKmsBrowser
 
+import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientKmsBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientKmsBrowser.kmsconfigurationMod.KMSResolvedConfiguration
 import typingsSlinky.awsSdkClientKmsBrowser.outputTypesUnionMod.OutputTypesUnion
@@ -8,7 +9,6 @@ import typingsSlinky.awsSdkClientKmsBrowser.typesListKeyPoliciesOutputMod.ListKe
 import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.std.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,16 +26,9 @@ object listKeyPoliciesCommandMod extends js.Object {
           Blob
         ] {
     def this(input: ListKeyPoliciesInput) = this()
-    /* CompleteClass */
-    override val input: ListKeyPoliciesInput = js.native
-    val middlewareStack: MiddlewareStack[ListKeyPoliciesInput, ListKeyPoliciesOutput, org.scalajs.dom.raw.Blob] = js.native
+    val middlewareStack: MiddlewareStack[ListKeyPoliciesInput, ListKeyPoliciesOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
-      configuration: KMSResolvedConfiguration
-    ): Handler[ListKeyPoliciesInput, ListKeyPoliciesOutput] = js.native
-    /* CompleteClass */
-    override def resolveMiddleware(
-      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KMSResolvedConfiguration
     ): Handler[ListKeyPoliciesInput, ListKeyPoliciesOutput] = js.native
   }

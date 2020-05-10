@@ -3,7 +3,6 @@ package typingsSlinky.lambdaLog.mod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.std.Console_
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,9 +28,9 @@ class LambdaLog ()
   def error(msg: String): LogMessage = js.native
   def error(msg: String, meta: js.Object): LogMessage = js.native
   def error(msg: String, meta: js.Object, tags: js.Array[String]): LogMessage = js.native
-  def error(msg: Error): LogMessage = js.native
-  def error(msg: Error, meta: js.Object): LogMessage = js.native
-  def error(msg: Error, meta: js.Object, tags: js.Array[String]): LogMessage = js.native
+  def error(msg: js.Error): LogMessage = js.native
+  def error(msg: js.Error, meta: js.Object): LogMessage = js.native
+  def error(msg: js.Error, meta: js.Object, tags: js.Array[String]): LogMessage = js.native
   def info(msg: String): LogMessage = js.native
   def info(msg: String, meta: js.Object): LogMessage = js.native
   def info(msg: String, meta: js.Object, tags: js.Array[String]): LogMessage = js.native

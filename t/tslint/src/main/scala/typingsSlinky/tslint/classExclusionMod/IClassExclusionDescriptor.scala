@@ -7,18 +7,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IClassExclusionDescriptor extends ExclusionDescriptor {
-  var locations: js.UndefOr[js.Array[Location]] = js.undefined
-  var privacies: js.UndefOr[js.Array[Privacy]] = js.undefined
+  var locations: js.UndefOr[js.Array[Location]] = js.native
+  var privacies: js.UndefOr[js.Array[Privacy]] = js.native
 }
 
 object IClassExclusionDescriptor {
   @scala.inline
-  def apply(locations: js.Array[Location] = null, privacies: js.Array[Privacy] = null): IClassExclusionDescriptor = {
+  def apply(): IClassExclusionDescriptor = {
     val __obj = js.Dynamic.literal()
-    if (locations != null) __obj.updateDynamic("locations")(locations.asInstanceOf[js.Any])
-    if (privacies != null) __obj.updateDynamic("privacies")(privacies.asInstanceOf[js.Any])
     __obj.asInstanceOf[IClassExclusionDescriptor]
   }
+  @scala.inline
+  implicit class IClassExclusionDescriptorOps[Self <: IClassExclusionDescriptor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocations(value: js.Array[Location]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivacies(value: js.Array[Privacy]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privacies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivacies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privacies")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,7 +26,6 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`short-date`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`short-month-year`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`short-time`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.year
-import typingsSlinky.std.Date
 import typingsSlinky.std.Intl.DateTimeFormatOptions
 import typingsSlinky.std.Intl.NumberFormatOptions
 import scala.scalajs.js
@@ -74,8 +73,8 @@ trait intl extends js.Object {
     * @param formatOptions Date format options.
     *
     */
-  def formatDate(value: Date): String = js.native
-  def formatDate(value: Date, formatOptions: DateTimeFormatOptions): String = js.native
+  def formatDate(value: js.Date): String = js.native
+  def formatDate(value: js.Date, formatOptions: DateTimeFormatOptions): String = js.native
   /**
     * Formats a `Number` value to a string in the current locale.
     * > Internally `formatNumber` creates [Intl formatter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) instances for the current locale. The formatters are cached using their `options` as a cache key. Reuse the same `options` objects for best performance.

@@ -1,7 +1,7 @@
 package typingsSlinky.reactTransitionGroup.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactTransitionGroup.reactTransitionGroupStrings.div
 import typingsSlinky.reactTransitionGroup.transitionGroupMod.TransitionGroupProps
 import typingsSlinky.reactTransitionGroup.transitionGroupMod.default
@@ -9,14 +9,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Couldn't find props for TypeRef(QualifiedName(IArray(Name(<intersection>))),IArray(TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reactTransitionGroup), Name(transitionGroupMod), Name(IntrinsicTransitionGroupProps))),IArray(TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reactTransitionGroup), Name(reactTransitionGroupStrings), Name(div))),IArray(),Comments(0))),NoComments), TypeRef(QualifiedName(IArray(Name(scala), Name(scalajs), Name(js), Name(Any))),IArray(),Comments(1))),NoComments) because: Could't extract props from TypeRef(QualifiedName(IArray(Name(scala), Name(scalajs), Name(js), Name(Any))),IArray(),Comments(1)) because couldn't resolve ClassTree. */
-object TransitionGroup
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for typingsSlinky.reactTransitionGroup.transitionGroupMod.IntrinsicTransitionGroupProps[typingsSlinky.reactTransitionGroup.reactTransitionGroupStrings.div] with (/ * import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements[T] * / js.Any) because: IArray(Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree.) */
+object TransitionGroup {
   @JSImport("react-transition-group/TransitionGroup", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = TransitionGroupProps[div, js.Any]
+  def apply(p: TransitionGroupProps[div, js.Any]): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TransitionGroup.type): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, js.Dictionary.empty))()
 }
 

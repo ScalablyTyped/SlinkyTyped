@@ -9,36 +9,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GetPageTitleProps extends js.Object {
-  var breadcrumb: js.UndefOr[StringDictionary[MenuDataItem]] = js.undefined
-  var breadcrumbMap: js.UndefOr[Map[String, MenuDataItem]] = js.undefined
-  var formatMessage: js.UndefOr[js.Function1[/* data */ AnonDefaultMessage, String]] = js.undefined
-  var menu: js.UndefOr[AnonDefaultOpenAll] = js.undefined
-  var pageName: js.UndefOr[String] = js.undefined
-  var pathname: js.UndefOr[String] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
+  var breadcrumb: js.UndefOr[StringDictionary[MenuDataItem]] = js.native
+  var breadcrumbMap: js.UndefOr[Map[String, MenuDataItem]] = js.native
+  var formatMessage: js.UndefOr[js.Function1[/* data */ AnonDefaultMessage, String]] = js.native
+  var menu: js.UndefOr[AnonDefaultOpenAll] = js.native
+  var pageName: js.UndefOr[String] = js.native
+  var pathname: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.native
 }
 
 object GetPageTitleProps {
   @scala.inline
-  def apply(
-    breadcrumb: StringDictionary[MenuDataItem] = null,
-    breadcrumbMap: Map[String, MenuDataItem] = null,
-    formatMessage: /* data */ AnonDefaultMessage => String = null,
-    menu: AnonDefaultOpenAll = null,
-    pageName: String = null,
-    pathname: String = null,
-    title: String = null
-  ): GetPageTitleProps = {
+  def apply(): GetPageTitleProps = {
     val __obj = js.Dynamic.literal()
-    if (breadcrumb != null) __obj.updateDynamic("breadcrumb")(breadcrumb.asInstanceOf[js.Any])
-    if (breadcrumbMap != null) __obj.updateDynamic("breadcrumbMap")(breadcrumbMap.asInstanceOf[js.Any])
-    if (formatMessage != null) __obj.updateDynamic("formatMessage")(js.Any.fromFunction1(formatMessage))
-    if (menu != null) __obj.updateDynamic("menu")(menu.asInstanceOf[js.Any])
-    if (pageName != null) __obj.updateDynamic("pageName")(pageName.asInstanceOf[js.Any])
-    if (pathname != null) __obj.updateDynamic("pathname")(pathname.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPageTitleProps]
   }
+  @scala.inline
+  implicit class GetPageTitlePropsOps[Self <: GetPageTitleProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBreadcrumb(value: StringDictionary[MenuDataItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breadcrumb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBreadcrumb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breadcrumb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBreadcrumbMap(value: Map[String, MenuDataItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breadcrumbMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBreadcrumbMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breadcrumbMap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatMessage(value: /* data */ AnonDefaultMessage => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatMessage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutFormatMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenu(value: AnonDefaultOpenAll): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPathname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPathname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

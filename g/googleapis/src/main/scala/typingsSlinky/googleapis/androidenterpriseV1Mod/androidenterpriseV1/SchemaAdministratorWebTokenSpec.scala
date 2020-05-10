@@ -49,26 +49,113 @@ trait SchemaAdministratorWebTokenSpec extends js.Object {
 
 object SchemaAdministratorWebTokenSpec {
   @scala.inline
-  def apply(
-    kind: String = null,
-    managedConfigurations: SchemaAdministratorWebTokenSpecManagedConfigurations = null,
-    parent: String = null,
-    permission: js.Array[String] = null,
-    playSearch: SchemaAdministratorWebTokenSpecPlaySearch = null,
-    privateApps: SchemaAdministratorWebTokenSpecPrivateApps = null,
-    storeBuilder: SchemaAdministratorWebTokenSpecStoreBuilder = null,
-    webApps: SchemaAdministratorWebTokenSpecWebApps = null
-  ): SchemaAdministratorWebTokenSpec = {
+  def apply(): SchemaAdministratorWebTokenSpec = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (managedConfigurations != null) __obj.updateDynamic("managedConfigurations")(managedConfigurations.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
-    if (permission != null) __obj.updateDynamic("permission")(permission.asInstanceOf[js.Any])
-    if (playSearch != null) __obj.updateDynamic("playSearch")(playSearch.asInstanceOf[js.Any])
-    if (privateApps != null) __obj.updateDynamic("privateApps")(privateApps.asInstanceOf[js.Any])
-    if (storeBuilder != null) __obj.updateDynamic("storeBuilder")(storeBuilder.asInstanceOf[js.Any])
-    if (webApps != null) __obj.updateDynamic("webApps")(webApps.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAdministratorWebTokenSpec]
   }
+  @scala.inline
+  implicit class SchemaAdministratorWebTokenSpecOps[Self <: SchemaAdministratorWebTokenSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManagedConfigurations(value: SchemaAdministratorWebTokenSpecManagedConfigurations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedConfigurations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManagedConfigurations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedConfigurations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermission(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permission")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermission: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permission")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaySearch(value: SchemaAdministratorWebTokenSpecPlaySearch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("playSearch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaySearch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("playSearch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateApps(value: SchemaAdministratorWebTokenSpecPrivateApps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privateApps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateApps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privateApps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoreBuilder(value: SchemaAdministratorWebTokenSpecStoreBuilder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeBuilder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoreBuilder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeBuilder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebApps(value: SchemaAdministratorWebTokenSpecWebApps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webApps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebApps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webApps")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

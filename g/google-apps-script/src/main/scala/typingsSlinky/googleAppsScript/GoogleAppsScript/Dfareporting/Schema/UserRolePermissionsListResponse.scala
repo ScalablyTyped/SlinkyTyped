@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UserRolePermissionsListResponse extends js.Object {
-  var kind: js.UndefOr[String] = js.undefined
-  var userRolePermissions: js.UndefOr[js.Array[UserRolePermission]] = js.undefined
+  var kind: js.UndefOr[String] = js.native
+  var userRolePermissions: js.UndefOr[js.Array[UserRolePermission]] = js.native
 }
 
 object UserRolePermissionsListResponse {
   @scala.inline
-  def apply(kind: String = null, userRolePermissions: js.Array[UserRolePermission] = null): UserRolePermissionsListResponse = {
+  def apply(): UserRolePermissionsListResponse = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (userRolePermissions != null) __obj.updateDynamic("userRolePermissions")(userRolePermissions.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserRolePermissionsListResponse]
   }
+  @scala.inline
+  implicit class UserRolePermissionsListResponseOps[Self <: UserRolePermissionsListResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserRolePermissions(value: js.Array[UserRolePermission]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userRolePermissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserRolePermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userRolePermissions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

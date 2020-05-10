@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ImageBitmap
   extends CanvasImageSource
      with TexImageSource
@@ -12,15 +13,15 @@ trait ImageBitmap
   /**
     * Returns the intrinsic height of the image, in CSS pixels.
     */
-  val height: Double
+  val height: Double = js.native
   /**
     * Returns the intrinsic width of the image, in CSS pixels.
     */
-  val width: Double
+  val width: Double = js.native
   /**
     * Releases imageBitmap's underlying bitmap data.
     */
-  def close(): Unit
+  def close(): Unit = js.native
 }
 
 @JSGlobal("ImageBitmap")

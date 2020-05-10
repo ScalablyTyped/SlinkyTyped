@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CheckboxStyle extends js.Object {
-  var borderOffColor: js.UndefOr[String] = js.undefined
-  var borderOnColor: js.UndefOr[String] = js.undefined
-  var fillColor: js.UndefOr[String] = js.undefined
-  var inset: js.UndefOr[Double] = js.undefined
-  var rippleColor: js.UndefOr[String] = js.undefined
+  var borderOffColor: js.UndefOr[String] = js.native
+  var borderOnColor: js.UndefOr[String] = js.native
+  var fillColor: js.UndefOr[String] = js.native
+  var inset: js.UndefOr[Double] = js.native
+  var rippleColor: js.UndefOr[String] = js.native
 }
 
 object CheckboxStyle {
   @scala.inline
-  def apply(
-    borderOffColor: String = null,
-    borderOnColor: String = null,
-    fillColor: String = null,
-    inset: Int | Double = null,
-    rippleColor: String = null
-  ): CheckboxStyle = {
+  def apply(): CheckboxStyle = {
     val __obj = js.Dynamic.literal()
-    if (borderOffColor != null) __obj.updateDynamic("borderOffColor")(borderOffColor.asInstanceOf[js.Any])
-    if (borderOnColor != null) __obj.updateDynamic("borderOnColor")(borderOnColor.asInstanceOf[js.Any])
-    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
-    if (inset != null) __obj.updateDynamic("inset")(inset.asInstanceOf[js.Any])
-    if (rippleColor != null) __obj.updateDynamic("rippleColor")(rippleColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[CheckboxStyle]
   }
+  @scala.inline
+  implicit class CheckboxStyleOps[Self <: CheckboxStyle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBorderOffColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderOffColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderOffColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderOffColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderOnColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderOnColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderOnColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderOnColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRippleColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rippleColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRippleColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rippleColor")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,15 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReportedErrorEvent extends js.Object {
   /** [Optional] A description of the context in which the error occurred. */
-  var context: js.UndefOr[ErrorContext] = js.undefined
+  var context: js.UndefOr[ErrorContext] = js.native
   /**
     * [Optional] Time when the event occurred.
     * If not provided, the time when the event was received by the
     * Error Reporting system will be used.
     */
-  var eventTime: js.UndefOr[String] = js.undefined
+  var eventTime: js.UndefOr[String] = js.native
   /**
     * [Required] The error message.
     * If no `context.reportLocation` is provided, the message must contain a
@@ -33,25 +34,72 @@ trait ReportedErrorEvent extends js.Object {
     * and contain the result of [`(string)$exception`](http://php.net/manual/en/exception.tostring.php).
     * &#42; &#42;&#42;Go&#42;&#42;: Must be the return value of [`runtime.Stack()`](https://golang.org/pkg/runtime/debug/#Stack).
     */
-  var message: js.UndefOr[String] = js.undefined
+  var message: js.UndefOr[String] = js.native
   /** [Required] The service context in which this error has occurred. */
-  var serviceContext: js.UndefOr[ServiceContext] = js.undefined
+  var serviceContext: js.UndefOr[ServiceContext] = js.native
 }
 
 object ReportedErrorEvent {
   @scala.inline
-  def apply(
-    context: ErrorContext = null,
-    eventTime: String = null,
-    message: String = null,
-    serviceContext: ServiceContext = null
-  ): ReportedErrorEvent = {
+  def apply(): ReportedErrorEvent = {
     val __obj = js.Dynamic.literal()
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (eventTime != null) __obj.updateDynamic("eventTime")(eventTime.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (serviceContext != null) __obj.updateDynamic("serviceContext")(serviceContext.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReportedErrorEvent]
   }
+  @scala.inline
+  implicit class ReportedErrorEventOps[Self <: ReportedErrorEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContext(value: ErrorContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceContext(value: ServiceContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceContext")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

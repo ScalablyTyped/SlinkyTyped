@@ -21,32 +21,149 @@ trait AnonAttachments extends js.Object {
 
 object AnonAttachments {
   @scala.inline
-  def apply(
-    actor: AnonVerification = null,
-    attachments: js.Array[AnonEmbed] = null,
-    content: String = null,
-    id: String = null,
-    objectType: String = null,
-    originalContent: String = null,
-    plusoners: AnonSelfLink = null,
-    replies: AnonSelfLink = null,
-    resharers: AnonSelfLink = null,
-    statusForViewer: AnonCanComment = null,
-    url: String = null
-  ): AnonAttachments = {
+  def apply(): AnonAttachments = {
     val __obj = js.Dynamic.literal()
-    if (actor != null) __obj.updateDynamic("actor")(actor.asInstanceOf[js.Any])
-    if (attachments != null) __obj.updateDynamic("attachments")(attachments.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (objectType != null) __obj.updateDynamic("objectType")(objectType.asInstanceOf[js.Any])
-    if (originalContent != null) __obj.updateDynamic("originalContent")(originalContent.asInstanceOf[js.Any])
-    if (plusoners != null) __obj.updateDynamic("plusoners")(plusoners.asInstanceOf[js.Any])
-    if (replies != null) __obj.updateDynamic("replies")(replies.asInstanceOf[js.Any])
-    if (resharers != null) __obj.updateDynamic("resharers")(resharers.asInstanceOf[js.Any])
-    if (statusForViewer != null) __obj.updateDynamic("statusForViewer")(statusForViewer.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAttachments]
   }
+  @scala.inline
+  implicit class AnonAttachmentsOps[Self <: AnonAttachments] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActor(value: AnonVerification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttachments(value: js.Array[AnonEmbed]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttachments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlusoners(value: AnonSelfLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plusoners")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlusoners: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plusoners")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplies(value: AnonSelfLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResharers(value: AnonSelfLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resharers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResharers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resharers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusForViewer(value: AnonCanComment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusForViewer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusForViewer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusForViewer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,5 +18,6 @@ trait SVGMaskElement extends SVGElement {
 
 @JSGlobal("SVGMaskElement")
 @js.native
-object SVGMaskElement extends Instantiable0[SVGMaskElement]
+object SVGMaskElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGMaskElement]
 

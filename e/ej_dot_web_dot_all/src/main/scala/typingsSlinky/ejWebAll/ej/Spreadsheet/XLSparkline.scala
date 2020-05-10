@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait XLSparkline extends js.Object {
   /** This method used to change the sparkline color and marker point color in the spreadsheet.
     * @param {string} Pass the sparkline ID
@@ -11,14 +12,14 @@ trait XLSparkline extends js.Object {
     * @param {number} Optional. Pass the sheet index
     * @returns {void}
     */
-  def changePointColor(sparklineId: String, option: js.Any, sheetIdx: Double): Unit
+  def changePointColor(sparklineId: String, option: js.Any, sheetIdx: Double): Unit = js.native
   /** This method used to change the sparkline type in the spreadsheet.
     * @param {string} Pass the sparkline ID
     * @param {string} Pass the sparkline type
     * @param {number} Optional. Pass the sheet index
     * @returns {void}
     */
-  def changeType(sparklineId: String, `type`: String, sheetIdx: Double): Unit
+  def changeType(sparklineId: String, `type`: String, sheetIdx: Double): Unit = js.native
   /** This method used for creating the sparkline chart for specified range in spreadsheet.
     * @param {string} Pass the data range
     * @param {string} Pass the location range
@@ -33,7 +34,7 @@ trait XLSparkline extends js.Object {
     `type`: String,
     options: SparklineOptions,
     sheetIndex: Double
-  ): Unit
+  ): Unit = js.native
 }
 
 object XLSparkline {
@@ -44,8 +45,33 @@ object XLSparkline {
     createSparkline: (String, String, String, SparklineOptions, Double) => Unit
   ): XLSparkline = {
     val __obj = js.Dynamic.literal(changePointColor = js.Any.fromFunction3(changePointColor), changeType = js.Any.fromFunction3(changeType), createSparkline = js.Any.fromFunction5(createSparkline))
-  
     __obj.asInstanceOf[XLSparkline]
   }
+  @scala.inline
+  implicit class XLSparklineOps[Self <: XLSparkline] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChangePointColor(value: (String, js.Any, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changePointColor")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withChangeType(value: (String, String, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeType")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withCreateSparkline(value: (String, String, String, SparklineOptions, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createSparkline")(js.Any.fromFunction5(value))
+        ret
+    }
+  }
+  
 }
 

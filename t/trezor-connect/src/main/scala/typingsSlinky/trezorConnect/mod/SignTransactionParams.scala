@@ -1,51 +1,125 @@
 package typingsSlinky.trezorConnect.mod
 
-import typingsSlinky.trezorConnect.AnonInstance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SignTransactionParams extends CommonParams {
-  var branchId: js.UndefOr[Double] = js.undefined
-  var coin: String
-  var expiry: js.UndefOr[Double] = js.undefined
-  var inputs: js.Array[Input]
-  var locktime: js.UndefOr[Double] = js.undefined
-  var outputs: js.Array[Output]
-  var push: js.UndefOr[Boolean] = js.undefined
-  var refTxs: js.UndefOr[js.Array[RefTransaction]] = js.undefined
-  var version: js.UndefOr[Double] = js.undefined
+  var branchId: js.UndefOr[Double] = js.native
+  var coin: String = js.native
+  var expiry: js.UndefOr[Double] = js.native
+  var inputs: js.Array[Input] = js.native
+  var locktime: js.UndefOr[Double] = js.native
+  var outputs: js.Array[Output] = js.native
+  var push: js.UndefOr[Boolean] = js.native
+  var refTxs: js.UndefOr[js.Array[RefTransaction]] = js.native
+  var version: js.UndefOr[Double] = js.native
 }
 
 object SignTransactionParams {
   @scala.inline
-  def apply(
-    coin: String,
-    inputs: js.Array[Input],
-    outputs: js.Array[Output],
-    allowSeedlessDevice: js.UndefOr[Boolean] = js.undefined,
-    branchId: Int | Double = null,
-    device: AnonInstance = null,
-    expiry: Int | Double = null,
-    keepSession: js.UndefOr[Boolean] = js.undefined,
-    locktime: Int | Double = null,
-    push: js.UndefOr[Boolean] = js.undefined,
-    refTxs: js.Array[RefTransaction] = null,
-    useEmptyPassphrase: js.UndefOr[Boolean] = js.undefined,
-    version: Int | Double = null
-  ): SignTransactionParams = {
+  def apply(coin: String, inputs: js.Array[Input], outputs: js.Array[Output]): SignTransactionParams = {
     val __obj = js.Dynamic.literal(coin = coin.asInstanceOf[js.Any], inputs = inputs.asInstanceOf[js.Any], outputs = outputs.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowSeedlessDevice)) __obj.updateDynamic("allowSeedlessDevice")(allowSeedlessDevice.asInstanceOf[js.Any])
-    if (branchId != null) __obj.updateDynamic("branchId")(branchId.asInstanceOf[js.Any])
-    if (device != null) __obj.updateDynamic("device")(device.asInstanceOf[js.Any])
-    if (expiry != null) __obj.updateDynamic("expiry")(expiry.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepSession)) __obj.updateDynamic("keepSession")(keepSession.asInstanceOf[js.Any])
-    if (locktime != null) __obj.updateDynamic("locktime")(locktime.asInstanceOf[js.Any])
-    if (!js.isUndefined(push)) __obj.updateDynamic("push")(push.asInstanceOf[js.Any])
-    if (refTxs != null) __obj.updateDynamic("refTxs")(refTxs.asInstanceOf[js.Any])
-    if (!js.isUndefined(useEmptyPassphrase)) __obj.updateDynamic("useEmptyPassphrase")(useEmptyPassphrase.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignTransactionParams]
   }
+  @scala.inline
+  implicit class SignTransactionParamsOps[Self <: SignTransactionParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCoin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputs(value: js.Array[Input]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutputs(value: js.Array[Output]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBranchId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("branchId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBranchId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("branchId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpiry(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expiry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpiry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expiry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocktime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locktime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocktime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locktime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPush(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("push")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("push")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRefTxs(value: js.Array[RefTransaction]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refTxs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRefTxs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refTxs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,15 +1,17 @@
 package typingsSlinky.reactSpinners.components
 
 import typingsSlinky.reactSpinners.clipLoaderMod.default
+import typingsSlinky.reactSpinners.interfacesMod.LoaderSizeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ClipLoader extends SharedApply_LoaderSizeProps_1622436841[default] {
+object ClipLoader {
   @JSImport("react-spinners/ClipLoader", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: LoaderSizeProps): SharedBuilder_LoaderSizeProps1650113268[default] = new SharedBuilder_LoaderSizeProps1650113268[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ClipLoader.type): SharedBuilder_LoaderSizeProps1650113268[default] = new SharedBuilder_LoaderSizeProps1650113268[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

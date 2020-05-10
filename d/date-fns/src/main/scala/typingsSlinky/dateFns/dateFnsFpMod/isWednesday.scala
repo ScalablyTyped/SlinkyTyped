@@ -2,12 +2,12 @@ package typingsSlinky.dateFns.dateFnsFpMod
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.dateFns.CurriedFn1
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("date-fns/fp", "isWednesday")
 @js.native
-object isWednesday extends TopLevel[CurriedFn1[Date | Double, Boolean]]
+object isWednesday
+  extends TopLevel[CurriedFn1[js.Date | Double, Boolean]]
 

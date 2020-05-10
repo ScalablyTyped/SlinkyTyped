@@ -14,10 +14,29 @@ trait SchemaBuildBazelRemoteExecutionV2ActionCacheUpdateCapabilities extends js.
 
 object SchemaBuildBazelRemoteExecutionV2ActionCacheUpdateCapabilities {
   @scala.inline
-  def apply(updateEnabled: js.UndefOr[Boolean] = js.undefined): SchemaBuildBazelRemoteExecutionV2ActionCacheUpdateCapabilities = {
+  def apply(): SchemaBuildBazelRemoteExecutionV2ActionCacheUpdateCapabilities = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(updateEnabled)) __obj.updateDynamic("updateEnabled")(updateEnabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2ActionCacheUpdateCapabilities]
   }
+  @scala.inline
+  implicit class SchemaBuildBazelRemoteExecutionV2ActionCacheUpdateCapabilitiesOps[Self <: SchemaBuildBazelRemoteExecutionV2ActionCacheUpdateCapabilities] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUpdateEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

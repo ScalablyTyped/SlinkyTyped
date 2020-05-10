@@ -18,11 +18,41 @@ trait TimeToLiveDescription extends js.Object {
 
 object TimeToLiveDescription {
   @scala.inline
-  def apply(AttributeName: TimeToLiveAttributeName = null, TimeToLiveStatus: TimeToLiveStatus = null): TimeToLiveDescription = {
+  def apply(): TimeToLiveDescription = {
     val __obj = js.Dynamic.literal()
-    if (AttributeName != null) __obj.updateDynamic("AttributeName")(AttributeName.asInstanceOf[js.Any])
-    if (TimeToLiveStatus != null) __obj.updateDynamic("TimeToLiveStatus")(TimeToLiveStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimeToLiveDescription]
   }
+  @scala.inline
+  implicit class TimeToLiveDescriptionOps[Self <: TimeToLiveDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributeName(value: TimeToLiveAttributeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeToLiveStatus(value: TimeToLiveStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeToLiveStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeToLiveStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeToLiveStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

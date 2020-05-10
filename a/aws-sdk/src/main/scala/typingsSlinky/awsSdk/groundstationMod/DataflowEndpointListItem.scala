@@ -18,11 +18,41 @@ trait DataflowEndpointListItem extends js.Object {
 
 object DataflowEndpointListItem {
   @scala.inline
-  def apply(dataflowEndpointGroupArn: DataflowEndpointGroupArn = null, dataflowEndpointGroupId: String = null): DataflowEndpointListItem = {
+  def apply(): DataflowEndpointListItem = {
     val __obj = js.Dynamic.literal()
-    if (dataflowEndpointGroupArn != null) __obj.updateDynamic("dataflowEndpointGroupArn")(dataflowEndpointGroupArn.asInstanceOf[js.Any])
-    if (dataflowEndpointGroupId != null) __obj.updateDynamic("dataflowEndpointGroupId")(dataflowEndpointGroupId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataflowEndpointListItem]
   }
+  @scala.inline
+  implicit class DataflowEndpointListItemOps[Self <: DataflowEndpointListItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataflowEndpointGroupArn(value: DataflowEndpointGroupArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataflowEndpointGroupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataflowEndpointGroupArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataflowEndpointGroupArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataflowEndpointGroupId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataflowEndpointGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataflowEndpointGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataflowEndpointGroupId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

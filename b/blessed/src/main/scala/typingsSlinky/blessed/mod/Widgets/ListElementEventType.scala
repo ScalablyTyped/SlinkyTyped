@@ -17,20 +17,18 @@ trait ListElementEventType extends js.Object
 
 object ListElementEventType {
   @scala.inline
-  def action: typingsSlinky.blessed.blessedStrings.action = this.cast("action")
+  def action: typingsSlinky.blessed.blessedStrings.action = "action".asInstanceOf[typingsSlinky.blessed.blessedStrings.action]
   @scala.inline
-  def `add item`: typingsSlinky.blessed.blessedStrings.`add item` = this.cast("add item")
+  def `add item`: typingsSlinky.blessed.blessedStrings.`add item` = ("add item").asInstanceOf[typingsSlinky.blessed.blessedStrings.`add item`]
   @scala.inline
-  def cancel: typingsSlinky.blessed.blessedStrings.cancel = this.cast("cancel")
+  def cancel: typingsSlinky.blessed.blessedStrings.cancel = "cancel".asInstanceOf[typingsSlinky.blessed.blessedStrings.cancel]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `create item`: typingsSlinky.blessed.blessedStrings.`create item` = ("create item").asInstanceOf[typingsSlinky.blessed.blessedStrings.`create item`]
   @scala.inline
-  def `create item`: typingsSlinky.blessed.blessedStrings.`create item` = this.cast("create item")
+  def `insert item`: typingsSlinky.blessed.blessedStrings.`insert item` = ("insert item").asInstanceOf[typingsSlinky.blessed.blessedStrings.`insert item`]
   @scala.inline
-  def `insert item`: typingsSlinky.blessed.blessedStrings.`insert item` = this.cast("insert item")
+  def `remove item`: typingsSlinky.blessed.blessedStrings.`remove item` = ("remove item").asInstanceOf[typingsSlinky.blessed.blessedStrings.`remove item`]
   @scala.inline
-  def `remove item`: typingsSlinky.blessed.blessedStrings.`remove item` = this.cast("remove item")
-  @scala.inline
-  def `set items`: typingsSlinky.blessed.blessedStrings.`set items` = this.cast("set items")
+  def `set items`: typingsSlinky.blessed.blessedStrings.`set items` = ("set items").asInstanceOf[typingsSlinky.blessed.blessedStrings.`set items`]
 }
 

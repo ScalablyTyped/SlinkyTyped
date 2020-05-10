@@ -26,18 +26,65 @@ trait ResourceChangeDetail extends js.Object {
 
 object ResourceChangeDetail {
   @scala.inline
-  def apply(
-    CausingEntity: CausingEntity = null,
-    ChangeSource: ChangeSource = null,
-    Evaluation: EvaluationType = null,
-    Target: ResourceTargetDefinition = null
-  ): ResourceChangeDetail = {
+  def apply(): ResourceChangeDetail = {
     val __obj = js.Dynamic.literal()
-    if (CausingEntity != null) __obj.updateDynamic("CausingEntity")(CausingEntity.asInstanceOf[js.Any])
-    if (ChangeSource != null) __obj.updateDynamic("ChangeSource")(ChangeSource.asInstanceOf[js.Any])
-    if (Evaluation != null) __obj.updateDynamic("Evaluation")(Evaluation.asInstanceOf[js.Any])
-    if (Target != null) __obj.updateDynamic("Target")(Target.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceChangeDetail]
   }
+  @scala.inline
+  implicit class ResourceChangeDetailOps[Self <: ResourceChangeDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCausingEntity(value: CausingEntity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CausingEntity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCausingEntity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CausingEntity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChangeSource(value: ChangeSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChangeSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvaluation(value: EvaluationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Evaluation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvaluation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Evaluation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTarget(value: ResourceTargetDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,8 +48,8 @@ object Text extends js.Object {
     */
   def decode(reader: Reader): Text = js.native
   def decode(reader: Reader, length: Double): Text = js.native
-  def decode(reader: Uint8Array): Text = js.native
-  def decode(reader: Uint8Array, length: Double): Text = js.native
+  def decode(reader: js.typedarray.Uint8Array): Text = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): Text = js.native
   /**
     * Decodes a Text message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -59,7 +58,7 @@ object Text extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): Text = js.native
-  def decodeDelimited(reader: Uint8Array): Text = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): Text = js.native
   /**
     * Encodes the specified Text message. Does not implicitly {@link google.cloud.dialogflow.v2beta1.Intent.Message.Text.verify|verify} messages.
     * @param message Text message or plain object to encode

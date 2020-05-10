@@ -9,7 +9,7 @@ trait DescribeFleetHistoryResult extends js.Object {
   /**
     * The ID of the EC Fleet.
     */
-  var FleetId: js.UndefOr[FleetIdentifier] = js.native
+  var FleetId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.FleetId] = js.native
   /**
     * Information about the events in the history of the EC2 Fleet.
     */
@@ -30,20 +30,77 @@ trait DescribeFleetHistoryResult extends js.Object {
 
 object DescribeFleetHistoryResult {
   @scala.inline
-  def apply(
-    FleetId: FleetIdentifier = null,
-    HistoryRecords: HistoryRecordSet = null,
-    LastEvaluatedTime: js.Date = null,
-    NextToken: String = null,
-    StartTime: js.Date = null
-  ): DescribeFleetHistoryResult = {
+  def apply(): DescribeFleetHistoryResult = {
     val __obj = js.Dynamic.literal()
-    if (FleetId != null) __obj.updateDynamic("FleetId")(FleetId.asInstanceOf[js.Any])
-    if (HistoryRecords != null) __obj.updateDynamic("HistoryRecords")(HistoryRecords.asInstanceOf[js.Any])
-    if (LastEvaluatedTime != null) __obj.updateDynamic("LastEvaluatedTime")(LastEvaluatedTime.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (StartTime != null) __obj.updateDynamic("StartTime")(StartTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeFleetHistoryResult]
   }
+  @scala.inline
+  implicit class DescribeFleetHistoryResultOps[Self <: DescribeFleetHistoryResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFleetId(value: FleetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFleetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHistoryRecords(value: HistoryRecordSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HistoryRecords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHistoryRecords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HistoryRecords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastEvaluatedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastEvaluatedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastEvaluatedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastEvaluatedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

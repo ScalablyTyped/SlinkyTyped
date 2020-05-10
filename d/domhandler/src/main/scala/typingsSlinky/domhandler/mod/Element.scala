@@ -1,36 +1,34 @@
 package typingsSlinky.domhandler.mod
 
-import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Element extends DomElement {
   @JSName("name")
-  var name_Element: String
+  var name_Element: String = js.native
 }
 
 object Element {
   @scala.inline
-  def apply(
-    name: String,
-    attribs: StringDictionary[String] = null,
-    children: js.Array[DomElement] = null,
-    data: js.Any = null,
-    next: DomElement = null,
-    parent: DomElement = null,
-    prev: DomElement = null,
-    `type`: String = null
-  ): Element = {
+  def apply(name: String): Element = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (attribs != null) __obj.updateDynamic("attribs")(attribs.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (next != null) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
-    if (prev != null) __obj.updateDynamic("prev")(prev.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Element]
   }
+  @scala.inline
+  implicit class ElementOps[Self <: Element] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

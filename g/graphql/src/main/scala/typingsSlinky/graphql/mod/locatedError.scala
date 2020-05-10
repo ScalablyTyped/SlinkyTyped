@@ -1,7 +1,6 @@
 package typingsSlinky.graphql.mod
 
 import typingsSlinky.graphql.astMod.ASTNode
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +13,6 @@ object locatedError extends js.Object {
     nodes: js.Array[ASTNode],
     path: js.Array[String | Double]
   ): typingsSlinky.graphql.graphQLErrorMod.GraphQLError = js.native
-  def apply(originalError: Error, nodes: js.Array[ASTNode], path: js.Array[String | Double]): typingsSlinky.graphql.graphQLErrorMod.GraphQLError = js.native
+  def apply(originalError: js.Error, nodes: js.Array[ASTNode], path: js.Array[String | Double]): typingsSlinky.graphql.graphQLErrorMod.GraphQLError = js.native
 }
 

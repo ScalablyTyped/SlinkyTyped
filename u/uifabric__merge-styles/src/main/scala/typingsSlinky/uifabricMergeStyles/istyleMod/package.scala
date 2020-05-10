@@ -17,7 +17,7 @@ package object istyleMod {
     - java.lang.String
     - typingsSlinky.uifabricMergeStyles.uifabricMergeStylesBooleans.`false`
     - scala.Null
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
   */
   type IStyleBase = js.UndefOr[
     typingsSlinky.uifabricMergeStyles.istyleMod._IStyleBase | java.lang.String | scala.Null

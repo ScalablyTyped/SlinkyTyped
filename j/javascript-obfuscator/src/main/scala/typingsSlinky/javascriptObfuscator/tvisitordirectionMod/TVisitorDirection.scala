@@ -12,10 +12,8 @@ trait TVisitorDirection extends js.Object
 
 object TVisitorDirection {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def enter: typingsSlinky.javascriptObfuscator.javascriptObfuscatorStrings.enter = "enter".asInstanceOf[typingsSlinky.javascriptObfuscator.javascriptObfuscatorStrings.enter]
   @scala.inline
-  def enter: typingsSlinky.javascriptObfuscator.javascriptObfuscatorStrings.enter = this.cast("enter")
-  @scala.inline
-  def leave: typingsSlinky.javascriptObfuscator.javascriptObfuscatorStrings.leave = this.cast("leave")
+  def leave: typingsSlinky.javascriptObfuscator.javascriptObfuscatorStrings.leave = "leave".asInstanceOf[typingsSlinky.javascriptObfuscator.javascriptObfuscatorStrings.leave]
 }
 

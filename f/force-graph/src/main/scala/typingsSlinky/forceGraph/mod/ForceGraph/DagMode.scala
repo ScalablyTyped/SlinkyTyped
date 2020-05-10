@@ -16,18 +16,16 @@ trait DagMode extends js.Object
 
 object DagMode {
   @scala.inline
-  def bu: typingsSlinky.forceGraph.forceGraphStrings.bu = this.cast("bu")
+  def bu: typingsSlinky.forceGraph.forceGraphStrings.bu = "bu".asInstanceOf[typingsSlinky.forceGraph.forceGraphStrings.bu]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def lr: typingsSlinky.forceGraph.forceGraphStrings.lr = "lr".asInstanceOf[typingsSlinky.forceGraph.forceGraphStrings.lr]
   @scala.inline
-  def lr: typingsSlinky.forceGraph.forceGraphStrings.lr = this.cast("lr")
+  def radialin: typingsSlinky.forceGraph.forceGraphStrings.radialin = "radialin".asInstanceOf[typingsSlinky.forceGraph.forceGraphStrings.radialin]
   @scala.inline
-  def radialin: typingsSlinky.forceGraph.forceGraphStrings.radialin = this.cast("radialin")
+  def radialout: typingsSlinky.forceGraph.forceGraphStrings.radialout = "radialout".asInstanceOf[typingsSlinky.forceGraph.forceGraphStrings.radialout]
   @scala.inline
-  def radialout: typingsSlinky.forceGraph.forceGraphStrings.radialout = this.cast("radialout")
+  def rl: typingsSlinky.forceGraph.forceGraphStrings.rl = "rl".asInstanceOf[typingsSlinky.forceGraph.forceGraphStrings.rl]
   @scala.inline
-  def rl: typingsSlinky.forceGraph.forceGraphStrings.rl = this.cast("rl")
-  @scala.inline
-  def td: typingsSlinky.forceGraph.forceGraphStrings.td = this.cast("td")
+  def td: typingsSlinky.forceGraph.forceGraphStrings.td = "td".asInstanceOf[typingsSlinky.forceGraph.forceGraphStrings.td]
 }
 

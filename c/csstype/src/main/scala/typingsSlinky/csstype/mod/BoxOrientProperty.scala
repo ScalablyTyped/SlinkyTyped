@@ -19,24 +19,22 @@ trait BoxOrientProperty extends js.Object
 
 object BoxOrientProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  def `block-axis`: typingsSlinky.csstype.csstypeStrings.`block-axis` = this.cast("block-axis")
+  def `block-axis`: typingsSlinky.csstype.csstypeStrings.`block-axis` = "block-axis".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`block-axis`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def horizontal: typingsSlinky.csstype.csstypeStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.csstype.csstypeStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.csstype.csstypeStrings.horizontal = this.cast("horizontal")
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def `inline-axis`: typingsSlinky.csstype.csstypeStrings.`inline-axis` = "inline-axis".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`inline-axis`]
   @scala.inline
-  def `inline-axis`: typingsSlinky.csstype.csstypeStrings.`inline-axis` = this.cast("inline-axis")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
   @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
-  @scala.inline
-  def vertical: typingsSlinky.csstype.csstypeStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.csstype.csstypeStrings.vertical = "vertical".asInstanceOf[typingsSlinky.csstype.csstypeStrings.vertical]
 }
 

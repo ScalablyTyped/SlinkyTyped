@@ -11,7 +11,7 @@ trait ColorCorrector extends js.Object {
     */
   var Brightness: js.UndefOr[integerMin1Max100] = js.native
   /**
-    * Specify the color space you want for this output. The service supports conversion between HDR formats, between SDR formats, and from SDR to HDR. The service doesn't support conversion from HDR to SDR. SDR to HDR conversion doesn't upgrade the dynamic range. The converted video has an HDR format, but visually appears the same as an unconverted output.
+    * Specify the color space you want for this output. The service supports conversion between HDR formats, between SDR formats, from SDR to HDR, and from HDR to SDR. SDR to HDR conversion doesn't upgrade the dynamic range. The converted video has an HDR format, but visually appears the same as an unconverted output. HDR to SDR conversion uses Elemental tone mapping technology to approximate the outcome of manually regrading from HDR to SDR.
     */
   var ColorSpaceConversion: js.UndefOr[typingsSlinky.awsSdk.mediaconvertMod.ColorSpaceConversion] = js.native
   /**
@@ -34,22 +34,89 @@ trait ColorCorrector extends js.Object {
 
 object ColorCorrector {
   @scala.inline
-  def apply(
-    Brightness: Int | Double = null,
-    ColorSpaceConversion: ColorSpaceConversion = null,
-    Contrast: Int | Double = null,
-    Hdr10Metadata: Hdr10Metadata = null,
-    Hue: Int | Double = null,
-    Saturation: Int | Double = null
-  ): ColorCorrector = {
+  def apply(): ColorCorrector = {
     val __obj = js.Dynamic.literal()
-    if (Brightness != null) __obj.updateDynamic("Brightness")(Brightness.asInstanceOf[js.Any])
-    if (ColorSpaceConversion != null) __obj.updateDynamic("ColorSpaceConversion")(ColorSpaceConversion.asInstanceOf[js.Any])
-    if (Contrast != null) __obj.updateDynamic("Contrast")(Contrast.asInstanceOf[js.Any])
-    if (Hdr10Metadata != null) __obj.updateDynamic("Hdr10Metadata")(Hdr10Metadata.asInstanceOf[js.Any])
-    if (Hue != null) __obj.updateDynamic("Hue")(Hue.asInstanceOf[js.Any])
-    if (Saturation != null) __obj.updateDynamic("Saturation")(Saturation.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColorCorrector]
   }
+  @scala.inline
+  implicit class ColorCorrectorOps[Self <: ColorCorrector] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBrightness(value: integerMin1Max100): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Brightness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrightness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Brightness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorSpaceConversion(value: ColorSpaceConversion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpaceConversion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorSpaceConversion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpaceConversion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContrast(value: integerMin1Max100): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Contrast")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContrast: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Contrast")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHdr10Metadata(value: Hdr10Metadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hdr10Metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHdr10Metadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hdr10Metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHue(value: integerMinNegative180Max180): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSaturation(value: integerMin1Max100): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Saturation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSaturation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Saturation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

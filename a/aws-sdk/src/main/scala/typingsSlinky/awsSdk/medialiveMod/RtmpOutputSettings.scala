@@ -26,17 +26,59 @@ trait RtmpOutputSettings extends js.Object {
 
 object RtmpOutputSettings {
   @scala.inline
-  def apply(
-    Destination: OutputLocationRef,
-    CertificateMode: RtmpOutputCertificateMode = null,
-    ConnectionRetryInterval: Int | Double = null,
-    NumRetries: Int | Double = null
-  ): RtmpOutputSettings = {
+  def apply(Destination: OutputLocationRef): RtmpOutputSettings = {
     val __obj = js.Dynamic.literal(Destination = Destination.asInstanceOf[js.Any])
-    if (CertificateMode != null) __obj.updateDynamic("CertificateMode")(CertificateMode.asInstanceOf[js.Any])
-    if (ConnectionRetryInterval != null) __obj.updateDynamic("ConnectionRetryInterval")(ConnectionRetryInterval.asInstanceOf[js.Any])
-    if (NumRetries != null) __obj.updateDynamic("NumRetries")(NumRetries.asInstanceOf[js.Any])
     __obj.asInstanceOf[RtmpOutputSettings]
   }
+  @scala.inline
+  implicit class RtmpOutputSettingsOps[Self <: RtmpOutputSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestination(value: OutputLocationRef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCertificateMode(value: RtmpOutputCertificateMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionRetryInterval(value: integerMin1): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionRetryInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionRetryInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionRetryInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumRetries(value: integerMin0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumRetries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumRetries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumRetries")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -66,7 +66,7 @@ trait ServiceWorker
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_statechange(`type`: statechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -80,11 +80,12 @@ trait ServiceWorker
   def removeEventListener_statechange(
     `type`: statechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("ServiceWorker")
 @js.native
-object ServiceWorker extends Instantiable0[ServiceWorker]
+object ServiceWorker
+  extends Instantiable0[org.scalajs.dom.experimental.serviceworkers.ServiceWorker]
 

@@ -1,7 +1,5 @@
 package typingsSlinky.validator
 
-import typingsSlinky.validator.mod.validator.IsMobilePhoneOptions
-import typingsSlinky.validator.mod.validator.MobilePhoneLocale
 import typingsSlinky.validator.validatorStrings.any
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,13 +15,23 @@ object isMobilePhoneMod extends js.Object {
     * @param [options] - Options
     */
   def default(str: String): Boolean = js.native
-  def default(str: String, locale: js.Array[MobilePhoneLocale]): Boolean = js.native
-  def default(str: String, locale: js.Array[MobilePhoneLocale], options: IsMobilePhoneOptions): Boolean = js.native
-  def default(str: String, locale: MobilePhoneLocale): Boolean = js.native
-  def default(str: String, locale: MobilePhoneLocale, options: IsMobilePhoneOptions): Boolean = js.native
+  def default(str: String, locale: js.Array[typingsSlinky.validator.mod.validator.MobilePhoneLocale]): Boolean = js.native
+  def default(
+    str: String,
+    locale: js.Array[typingsSlinky.validator.mod.validator.MobilePhoneLocale],
+    options: typingsSlinky.validator.mod.validator.IsMobilePhoneOptions
+  ): Boolean = js.native
+  def default(str: String, locale: typingsSlinky.validator.mod.validator.MobilePhoneLocale): Boolean = js.native
+  def default(
+    str: String,
+    locale: typingsSlinky.validator.mod.validator.MobilePhoneLocale,
+    options: typingsSlinky.validator.mod.validator.IsMobilePhoneOptions
+  ): Boolean = js.native
   @JSName("default")
   def default_any(str: String, locale: any): Boolean = js.native
   @JSName("default")
-  def default_any(str: String, locale: any, options: IsMobilePhoneOptions): Boolean = js.native
+  def default_any(str: String, locale: any, options: typingsSlinky.validator.mod.validator.IsMobilePhoneOptions): Boolean = js.native
+  type IsMobilePhoneOptions = typingsSlinky.validator.mod.validator.IsMobilePhoneOptions
+  type MobilePhoneLocale = typingsSlinky.validator.mod.validator.MobilePhoneLocale
 }
 

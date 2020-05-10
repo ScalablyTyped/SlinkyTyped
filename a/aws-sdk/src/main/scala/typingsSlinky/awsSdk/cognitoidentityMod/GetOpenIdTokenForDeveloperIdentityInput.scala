@@ -26,16 +26,53 @@ trait GetOpenIdTokenForDeveloperIdentityInput extends js.Object {
 
 object GetOpenIdTokenForDeveloperIdentityInput {
   @scala.inline
-  def apply(
-    IdentityPoolId: IdentityPoolId,
-    Logins: LoginsMap,
-    IdentityId: IdentityId = null,
-    TokenDuration: Int | Double = null
-  ): GetOpenIdTokenForDeveloperIdentityInput = {
+  def apply(IdentityPoolId: IdentityPoolId, Logins: LoginsMap): GetOpenIdTokenForDeveloperIdentityInput = {
     val __obj = js.Dynamic.literal(IdentityPoolId = IdentityPoolId.asInstanceOf[js.Any], Logins = Logins.asInstanceOf[js.Any])
-    if (IdentityId != null) __obj.updateDynamic("IdentityId")(IdentityId.asInstanceOf[js.Any])
-    if (TokenDuration != null) __obj.updateDynamic("TokenDuration")(TokenDuration.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetOpenIdTokenForDeveloperIdentityInput]
   }
+  @scala.inline
+  implicit class GetOpenIdTokenForDeveloperIdentityInputOps[Self <: GetOpenIdTokenForDeveloperIdentityInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIdentityPoolId(value: IdentityPoolId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityPoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLogins(value: LoginsMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Logins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdentityId(value: IdentityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentityId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTokenDuration(value: TokenDuration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TokenDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTokenDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TokenDuration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

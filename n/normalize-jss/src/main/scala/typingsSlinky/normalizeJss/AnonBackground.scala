@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBackground extends js.Object {
-  var background: String
-  var textDecorationSkip: String
+  var background: String = js.native
+  var textDecorationSkip: String = js.native
 }
 
 object AnonBackground {
   @scala.inline
   def apply(background: String, textDecorationSkip: String): AnonBackground = {
     val __obj = js.Dynamic.literal(background = background.asInstanceOf[js.Any], textDecorationSkip = textDecorationSkip.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonBackground]
   }
+  @scala.inline
+  implicit class AnonBackgroundOps[Self <: AnonBackground] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackground(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextDecorationSkip(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDecorationSkip")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

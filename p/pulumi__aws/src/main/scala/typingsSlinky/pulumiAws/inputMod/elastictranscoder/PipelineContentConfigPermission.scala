@@ -23,16 +23,53 @@ trait PipelineContentConfigPermission extends js.Object {
 
 object PipelineContentConfigPermission {
   @scala.inline
-  def apply(
-    accesses: Input[js.Array[Input[String]]] = null,
-    grantee: Input[String] = null,
-    granteeType: Input[String] = null
-  ): PipelineContentConfigPermission = {
+  def apply(): PipelineContentConfigPermission = {
     val __obj = js.Dynamic.literal()
-    if (accesses != null) __obj.updateDynamic("accesses")(accesses.asInstanceOf[js.Any])
-    if (grantee != null) __obj.updateDynamic("grantee")(grantee.asInstanceOf[js.Any])
-    if (granteeType != null) __obj.updateDynamic("granteeType")(granteeType.asInstanceOf[js.Any])
     __obj.asInstanceOf[PipelineContentConfigPermission]
   }
+  @scala.inline
+  implicit class PipelineContentConfigPermissionOps[Self <: PipelineContentConfigPermission] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccesses(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accesses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccesses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accesses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrantee(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grantee")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrantee: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grantee")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGranteeType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("granteeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGranteeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("granteeType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

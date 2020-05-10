@@ -14,18 +14,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.ModuleSpecifier, 'type'> */
+@js.native
 trait ImportNamespaceSpecifier
   extends ASTNode
      with ModuleSpecifierKind
      with NodeKind
      with PrintableKind
      with SpecifierKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var id: js.UndefOr[IdentifierKind] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var local: js.UndefOr[IdentifierKind] = js.undefined
-  var name: js.UndefOr[IdentifierKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ImportNamespaceSpecifier
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var id: js.UndefOr[IdentifierKind] = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var local: js.UndefOr[IdentifierKind] = js.native
+  var name: js.UndefOr[IdentifierKind] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ImportNamespaceSpecifier = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.ImportNamespaceSpecifier")

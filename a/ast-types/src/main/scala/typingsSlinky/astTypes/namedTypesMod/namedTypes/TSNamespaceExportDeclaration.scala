@@ -14,16 +14,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
+@js.native
 trait TSNamespaceExportDeclaration
   extends ASTNode
      with DeclarationKind
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var id: IdentifierKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSNamespaceExportDeclaration
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var id: IdentifierKind = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSNamespaceExportDeclaration = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSNamespaceExportDeclaration")

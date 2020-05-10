@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MSAssertion extends js.Object {
-  val id: java.lang.String
-  val `type`: MSCredentialType
+  val id: java.lang.String = js.native
+  val `type`: MSCredentialType = js.native
 }
 
 @JSGlobal("MSAssertion")

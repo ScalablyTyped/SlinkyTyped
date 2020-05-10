@@ -19,10 +19,35 @@ trait TaskDefinitionVolumeEfsVolumeConfiguration extends js.Object {
 
 object TaskDefinitionVolumeEfsVolumeConfiguration {
   @scala.inline
-  def apply(fileSystemId: Input[String], rootDirectory: Input[String] = null): TaskDefinitionVolumeEfsVolumeConfiguration = {
+  def apply(fileSystemId: Input[String]): TaskDefinitionVolumeEfsVolumeConfiguration = {
     val __obj = js.Dynamic.literal(fileSystemId = fileSystemId.asInstanceOf[js.Any])
-    if (rootDirectory != null) __obj.updateDynamic("rootDirectory")(rootDirectory.asInstanceOf[js.Any])
     __obj.asInstanceOf[TaskDefinitionVolumeEfsVolumeConfiguration]
   }
+  @scala.inline
+  implicit class TaskDefinitionVolumeEfsVolumeConfigurationOps[Self <: TaskDefinitionVolumeEfsVolumeConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileSystemId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRootDirectory(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootDirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRootDirectory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootDirectory")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

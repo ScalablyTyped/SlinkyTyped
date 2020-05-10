@@ -1,29 +1,29 @@
 package typingsSlinky.canvasjs.mod
 
-import typingsSlinky.canvasjs.AnonDataSeries
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChartDataSeriesOptions extends ChartDataCommon {
   /**
     * Setting axisXIndex lets you choose to which X axis the dataSeries should be attached.
     * In case of Multi-Series or Combinational Charts, one can assign some series to first X axis and rest to another axis.
     * This is helpful when dataSeries objects use different unit of measurement or range of data. By default, all series are plotted against first axis.
     */
-  var axisXIndex: js.UndefOr[Double] = js.undefined
+  var axisXIndex: js.UndefOr[Double] = js.native
   /**
     * Setting axisXType lets you choose between primary and secondary X Axis for a dataSeries to plot against. By choosing “secondary” Axis you can plot the series against axisX2.
     * In case of Multi-Series or Combinational Charts, one can assign primary axis to some series and secondary axis to other series.
     * This is helpful when dataSeries objects use different unit of measurement or range of data. By default, all series are plotted against primary X axis.
     */
-  var axisXType: js.UndefOr[String] = js.undefined
+  var axisXType: js.UndefOr[String] = js.native
   /**
     * Setting axisYIndex lets you choose to which Y axis the dataSeries should be attached to.
     * In case of Multi-Series or Combinational Charts, one can assign some series to first Y axis and rest to another axis.
     * This is helpful when dataSeries objects use different unit of measurement or range of data. By default, all series are plotted against first axis.
     */
-  var axisYIndex: js.UndefOr[Double] = js.undefined
+  var axisYIndex: js.UndefOr[Double] = js.native
   /**
     * Setting axisYType lets you choose between primary and secondary Y Axis for a dataSeries to plot against. By choosing "secondary" Axis you can plot the series against axisY2.
     * In case of Multi-Series or Combinational Charts, one can assign primary axis to some series and secondary axis to other series.
@@ -31,53 +31,53 @@ trait ChartDataSeriesOptions extends ChartDataCommon {
     * Default: "primary"
     * Options: "primary", "secondary"
     */
-  var axisYType: js.UndefOr[String] = js.undefined
+  var axisYType: js.UndefOr[String] = js.native
   /**
     * Sets the bevel property, which creates a chiselled effect at the corners of a Column Charts and Bar Charts.
     * Default: "true"
     * Example: "true", "false"
     */
-  var bevelEnabled: js.UndefOr[Boolean] = js.undefined
+  var bevelEnabled: js.UndefOr[Boolean] = js.native
   /**
     * By default, a line breaks wherever a null dataPoint (y = null) is present.
     * You can change this behaviour to draw a line between adjacent non-null dataPoints by setting connectNullData to true.
     * Default: false
     * Example: true, false
     */
-  var connectNullData: js.UndefOr[Boolean] = js.undefined
+  var connectNullData: js.UndefOr[Boolean] = js.native
   /**
     * It represents collection dataPoint inside dataSeries.
     */
-  var dataPoints: js.Array[ChartDataPoint]
+  var dataPoints: js.Array[ChartDataPoint] = js.native
   /**
     * Enables or disables exploding of Pie/Doughnut segment on click.
     * Default: true
     * Options: false, true
     */
-  var explodeOnClick: js.UndefOr[Boolean] = js.undefined
+  var explodeOnClick: js.UndefOr[Boolean] = js.native
   /**
     * Sets opacity of the filled color.
     * Default: .7 for Area Charts and 1 for all other chart types.
     */
-  var fillOpacity: js.UndefOr[Double] = js.undefined
+  var fillOpacity: js.UndefOr[Double] = js.native
   /**
     * innerRadius property allows you to set a Doughnut chart’s inner radius.
     * Value can either be in pixels (number – ex: 100) or percent (string – ex: “80%”). Percent values are relative to the outer radius of doughnut chart.
     * Default: “70%”
     * Example: 200, 150, “90%”, “75%”
     */
-  var innerRadius: js.UndefOr[Double | String] = js.undefined
+  var innerRadius: js.UndefOr[Double | String] = js.native
   /**
     * Sets the Line Dash Type for all Line and Area Charts.
     * Default: solid
     */
-  var lineDashType: js.UndefOr[DashType] = js.undefined
+  var lineDashType: js.UndefOr[DashType] = js.native
   /**
     * Sets the thickness of line in line charts and area charts.
     * Default: 2
     * Example: 3,4..
     */
-  var lineThickness: js.UndefOr[Double] = js.undefined
+  var lineThickness: js.UndefOr[Double] = js.native
   /**
     * Sets the Line Dash Type of line wherever null data is present.
     * Note:
@@ -86,11 +86,11 @@ trait ChartDataSeriesOptions extends ChartDataCommon {
     * 3.Not Supported on IE8.
     * Default: "dash"
     */
-  var nullDataLineDashType: js.UndefOr[DashType] = js.undefined
+  var nullDataLineDashType: js.UndefOr[DashType] = js.native
   /**
     * Defines how percent values are formatted before they appear on the indexLabel or toolTip. You can format percent values using this property.
     */
-  var percentFormatString: js.UndefOr[String] = js.undefined
+  var percentFormatString: js.UndefOr[String] = js.native
   /**
     * radius property allows you to set the Pie/Doughnut chart’s (outer) radius.
     * Value can either be in pixels (number – ex: 100) or percent (string – ex: “80%”). Percent values are relative to the plot area’s size.
@@ -99,25 +99,25 @@ trait ChartDataSeriesOptions extends ChartDataCommon {
     * Default: Automatically calculate in order to best fit the indexLabels.
     * Example: 200, 150, “90%”, “75%”
     */
-  var radius: js.UndefOr[Double | String] = js.undefined
+  var radius: js.UndefOr[Double | String] = js.native
   /**
     * In candle Stick chart, when Closing Price is greater than Opening price, the body is filled with white by default and it can be overridden by risingColor property.
     * Default: "white"
     * Options: "red", "#DD7E86", etc.
     */
-  var risingColor: js.UndefOr[String] = js.undefined
+  var risingColor: js.UndefOr[String] = js.native
   /**
     * Setting this property to true makes the dataSeries to appear in legend. In case of pie/ doughnut chart, dataPoints of the single series chart appear in legend.
     * Default: false
     * Options: false, true
     */
-  var showInLegend: js.UndefOr[Boolean] = js.undefined
+  var showInLegend: js.UndefOr[Boolean] = js.native
   /**
     * Sets the starting Angle of the Pie or Doughnut Chart in degrees.
     * Default: 0
     * Example: 30, 240, -100..
     */
-  var startAngle: js.UndefOr[Double] = js.undefined
+  var startAngle: js.UndefOr[Double] = js.native
   /**
     * Sets the type of chart to be rendered for corresponding dataSeries. One can choose from the following options.
     * Default: "column"
@@ -140,149 +140,329 @@ trait ChartDataSeriesOptions extends ChartDataCommon {
     *     "pie"
     *     "doughnut"
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /**
     * Sets the visibility of dataSeries. Data Series is visible by default and you can hide the same by setting visible property to false.
     * Default: true
     * Example: true, false
     */
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.native
   /**
     * Defines how x axis values must be formatted before they appear on the indexLabel or toolTip. You can format numbers and date time values using this property.
     */
-  var xValueFormatString: js.UndefOr[String] = js.undefined
+  var xValueFormatString: js.UndefOr[String] = js.native
   /**
     * This defines the data type of x values. Data Type is normally figured out by default based on the object type that is assigned to x.
     * But if you are providing time stamp (which is integer) values instead of Date objects, you’ll have to explicitly set the xValueType to "dateTime".
     * Default: Automatically Calculated
     * Options: "number", "dateTime"
     */
-  var xValueType: js.UndefOr[String] = js.undefined
+  var xValueType: js.UndefOr[String] = js.native
   /**
     * Defines how y axis values must be formatted before they appear on the indexLabel or toolTip. You can format numbers and date time values using this property.
     */
-  var yValueFormatString: js.UndefOr[String] = js.undefined
+  var yValueFormatString: js.UndefOr[String] = js.native
   /**
     * Defines how z values is formatted before they appear on the indexLabel or toolTip. You can format numbers using this property.
     */
-  var zValueFormatString: js.UndefOr[String] = js.undefined
+  var zValueFormatString: js.UndefOr[String] = js.native
 }
 
 object ChartDataSeriesOptions {
   @scala.inline
-  def apply(
-    dataPoints: js.Array[ChartDataPoint],
-    axisXIndex: Int | Double = null,
-    axisXType: String = null,
-    axisYIndex: Int | Double = null,
-    axisYType: String = null,
-    bevelEnabled: js.UndefOr[Boolean] = js.undefined,
-    click: /* event */ ChartEvent => Unit = null,
-    color: String = null,
-    connectNullData: js.UndefOr[Boolean] = js.undefined,
-    explodeOnClick: js.UndefOr[Boolean] = js.undefined,
-    fillOpacity: Int | Double = null,
-    highlightEnabled: js.UndefOr[Boolean] = js.undefined,
-    indexLabel: String = null,
-    indexLabelBackgroundColor: String = null,
-    indexLabelFontColor: String = null,
-    indexLabelFontFamily: String = null,
-    indexLabelFontSize: Int | Double = null,
-    indexLabelFontStyle: String = null,
-    indexLabelFontWeight: String = null,
-    indexLabelFormatter: /* e */ AnonDataSeries => String = null,
-    indexLabelLineColor: String = null,
-    indexLabelLineDashType: DashType = null,
-    indexLabelLineThickness: Int | Double = null,
-    indexLabelOrientation: String = null,
-    indexLabelPlacement: String = null,
-    innerRadius: Double | String = null,
-    legendMarkerBorderColor: String = null,
-    legendMarkerBorderThickness: Int | Double = null,
-    legendMarkerColor: String = null,
-    legendMarkerType: String = null,
-    legendText: String = null,
-    lineDashType: DashType = null,
-    lineThickness: Int | Double = null,
-    markerBorderColor: String = null,
-    markerBorderThickness: Int | Double = null,
-    markerColor: String = null,
-    markerSize: Int | Double = null,
-    markerType: String = null,
-    mousemove: /* event */ ChartEvent => Unit = null,
-    mouseout: /* event */ ChartEvent => Unit = null,
-    mouseover: /* event */ ChartEvent => Unit = null,
-    name: String = null,
-    nullDataLineDashType: DashType = null,
-    percentFormatString: String = null,
-    radius: Double | String = null,
-    risingColor: String = null,
-    showInLegend: js.UndefOr[Boolean] = js.undefined,
-    startAngle: Int | Double = null,
-    toolTipContent: String = null,
-    `type`: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    xValueFormatString: String = null,
-    xValueType: String = null,
-    yValueFormatString: String = null,
-    zValueFormatString: String = null
-  ): ChartDataSeriesOptions = {
+  def apply(dataPoints: js.Array[ChartDataPoint]): ChartDataSeriesOptions = {
     val __obj = js.Dynamic.literal(dataPoints = dataPoints.asInstanceOf[js.Any])
-    if (axisXIndex != null) __obj.updateDynamic("axisXIndex")(axisXIndex.asInstanceOf[js.Any])
-    if (axisXType != null) __obj.updateDynamic("axisXType")(axisXType.asInstanceOf[js.Any])
-    if (axisYIndex != null) __obj.updateDynamic("axisYIndex")(axisYIndex.asInstanceOf[js.Any])
-    if (axisYType != null) __obj.updateDynamic("axisYType")(axisYType.asInstanceOf[js.Any])
-    if (!js.isUndefined(bevelEnabled)) __obj.updateDynamic("bevelEnabled")(bevelEnabled.asInstanceOf[js.Any])
-    if (click != null) __obj.updateDynamic("click")(js.Any.fromFunction1(click))
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(connectNullData)) __obj.updateDynamic("connectNullData")(connectNullData.asInstanceOf[js.Any])
-    if (!js.isUndefined(explodeOnClick)) __obj.updateDynamic("explodeOnClick")(explodeOnClick.asInstanceOf[js.Any])
-    if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
-    if (!js.isUndefined(highlightEnabled)) __obj.updateDynamic("highlightEnabled")(highlightEnabled.asInstanceOf[js.Any])
-    if (indexLabel != null) __obj.updateDynamic("indexLabel")(indexLabel.asInstanceOf[js.Any])
-    if (indexLabelBackgroundColor != null) __obj.updateDynamic("indexLabelBackgroundColor")(indexLabelBackgroundColor.asInstanceOf[js.Any])
-    if (indexLabelFontColor != null) __obj.updateDynamic("indexLabelFontColor")(indexLabelFontColor.asInstanceOf[js.Any])
-    if (indexLabelFontFamily != null) __obj.updateDynamic("indexLabelFontFamily")(indexLabelFontFamily.asInstanceOf[js.Any])
-    if (indexLabelFontSize != null) __obj.updateDynamic("indexLabelFontSize")(indexLabelFontSize.asInstanceOf[js.Any])
-    if (indexLabelFontStyle != null) __obj.updateDynamic("indexLabelFontStyle")(indexLabelFontStyle.asInstanceOf[js.Any])
-    if (indexLabelFontWeight != null) __obj.updateDynamic("indexLabelFontWeight")(indexLabelFontWeight.asInstanceOf[js.Any])
-    if (indexLabelFormatter != null) __obj.updateDynamic("indexLabelFormatter")(js.Any.fromFunction1(indexLabelFormatter))
-    if (indexLabelLineColor != null) __obj.updateDynamic("indexLabelLineColor")(indexLabelLineColor.asInstanceOf[js.Any])
-    if (indexLabelLineDashType != null) __obj.updateDynamic("indexLabelLineDashType")(indexLabelLineDashType.asInstanceOf[js.Any])
-    if (indexLabelLineThickness != null) __obj.updateDynamic("indexLabelLineThickness")(indexLabelLineThickness.asInstanceOf[js.Any])
-    if (indexLabelOrientation != null) __obj.updateDynamic("indexLabelOrientation")(indexLabelOrientation.asInstanceOf[js.Any])
-    if (indexLabelPlacement != null) __obj.updateDynamic("indexLabelPlacement")(indexLabelPlacement.asInstanceOf[js.Any])
-    if (innerRadius != null) __obj.updateDynamic("innerRadius")(innerRadius.asInstanceOf[js.Any])
-    if (legendMarkerBorderColor != null) __obj.updateDynamic("legendMarkerBorderColor")(legendMarkerBorderColor.asInstanceOf[js.Any])
-    if (legendMarkerBorderThickness != null) __obj.updateDynamic("legendMarkerBorderThickness")(legendMarkerBorderThickness.asInstanceOf[js.Any])
-    if (legendMarkerColor != null) __obj.updateDynamic("legendMarkerColor")(legendMarkerColor.asInstanceOf[js.Any])
-    if (legendMarkerType != null) __obj.updateDynamic("legendMarkerType")(legendMarkerType.asInstanceOf[js.Any])
-    if (legendText != null) __obj.updateDynamic("legendText")(legendText.asInstanceOf[js.Any])
-    if (lineDashType != null) __obj.updateDynamic("lineDashType")(lineDashType.asInstanceOf[js.Any])
-    if (lineThickness != null) __obj.updateDynamic("lineThickness")(lineThickness.asInstanceOf[js.Any])
-    if (markerBorderColor != null) __obj.updateDynamic("markerBorderColor")(markerBorderColor.asInstanceOf[js.Any])
-    if (markerBorderThickness != null) __obj.updateDynamic("markerBorderThickness")(markerBorderThickness.asInstanceOf[js.Any])
-    if (markerColor != null) __obj.updateDynamic("markerColor")(markerColor.asInstanceOf[js.Any])
-    if (markerSize != null) __obj.updateDynamic("markerSize")(markerSize.asInstanceOf[js.Any])
-    if (markerType != null) __obj.updateDynamic("markerType")(markerType.asInstanceOf[js.Any])
-    if (mousemove != null) __obj.updateDynamic("mousemove")(js.Any.fromFunction1(mousemove))
-    if (mouseout != null) __obj.updateDynamic("mouseout")(js.Any.fromFunction1(mouseout))
-    if (mouseover != null) __obj.updateDynamic("mouseover")(js.Any.fromFunction1(mouseover))
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (nullDataLineDashType != null) __obj.updateDynamic("nullDataLineDashType")(nullDataLineDashType.asInstanceOf[js.Any])
-    if (percentFormatString != null) __obj.updateDynamic("percentFormatString")(percentFormatString.asInstanceOf[js.Any])
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
-    if (risingColor != null) __obj.updateDynamic("risingColor")(risingColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(showInLegend)) __obj.updateDynamic("showInLegend")(showInLegend.asInstanceOf[js.Any])
-    if (startAngle != null) __obj.updateDynamic("startAngle")(startAngle.asInstanceOf[js.Any])
-    if (toolTipContent != null) __obj.updateDynamic("toolTipContent")(toolTipContent.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (xValueFormatString != null) __obj.updateDynamic("xValueFormatString")(xValueFormatString.asInstanceOf[js.Any])
-    if (xValueType != null) __obj.updateDynamic("xValueType")(xValueType.asInstanceOf[js.Any])
-    if (yValueFormatString != null) __obj.updateDynamic("yValueFormatString")(yValueFormatString.asInstanceOf[js.Any])
-    if (zValueFormatString != null) __obj.updateDynamic("zValueFormatString")(zValueFormatString.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartDataSeriesOptions]
   }
+  @scala.inline
+  implicit class ChartDataSeriesOptionsOps[Self <: ChartDataSeriesOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataPoints(value: js.Array[ChartDataPoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAxisXIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisXIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisXIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisXIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxisXType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisXType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisXType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisXType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxisYIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisYIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisYIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisYIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxisYType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisYType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisYType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisYType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBevelEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bevelEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBevelEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bevelEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectNullData(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectNullData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectNullData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectNullData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExplodeOnClick(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("explodeOnClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExplodeOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("explodeOnClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInnerRadius(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInnerRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineDashType(value: DashType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineDashType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineDashType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineDashType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNullDataLineDashType(value: DashType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nullDataLineDashType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNullDataLineDashType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nullDataLineDashType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPercentFormatString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percentFormatString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPercentFormatString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percentFormatString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadius(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRisingColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("risingColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRisingColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("risingColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowInLegend(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showInLegend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowInLegend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showInLegend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXValueFormatString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xValueFormatString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXValueFormatString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xValueFormatString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXValueType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xValueType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXValueType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xValueType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYValueFormatString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yValueFormatString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYValueFormatString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yValueFormatString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZValueFormatString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zValueFormatString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZValueFormatString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zValueFormatString")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,45 +5,112 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait String
   extends ShapeDef
      with Shape {
-  var enum: js.UndefOr[js.Array[java.lang.String]] = js.undefined
-  var idempotencyToken: js.UndefOr[scala.Boolean] = js.undefined
-  var jsonValue: js.UndefOr[scala.Boolean] = js.undefined
-  var max: js.UndefOr[scala.Double] = js.undefined
-  var min: js.UndefOr[scala.Double] = js.undefined
-  var pattern: js.UndefOr[java.lang.String] = js.undefined
+  var enum: js.UndefOr[js.Array[java.lang.String]] = js.native
+  var idempotencyToken: js.UndefOr[scala.Boolean] = js.native
+  var jsonValue: js.UndefOr[scala.Boolean] = js.native
+  var max: js.UndefOr[scala.Double] = js.native
+  var min: js.UndefOr[scala.Double] = js.native
+  var pattern: js.UndefOr[java.lang.String] = js.native
   @JSName("type")
-  val type_String: string
+  val type_String: string = js.native
 }
 
 object String {
   @scala.inline
-  def apply(
-    `type`: string,
-    deprecated: js.UndefOr[scala.Boolean] = js.undefined,
-    documentation: java.lang.String = null,
-    enum: js.Array[java.lang.String] = null,
-    idempotencyToken: js.UndefOr[scala.Boolean] = js.undefined,
-    jsonValue: js.UndefOr[scala.Boolean] = js.undefined,
-    max: Int | scala.Double = null,
-    min: Int | scala.Double = null,
-    pattern: java.lang.String = null,
-    sensitive: js.UndefOr[scala.Boolean] = js.undefined
-  ): String = {
+  def apply(`type`: string): String = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(deprecated)) __obj.updateDynamic("deprecated")(deprecated.asInstanceOf[js.Any])
-    if (documentation != null) __obj.updateDynamic("documentation")(documentation.asInstanceOf[js.Any])
-    if (enum != null) __obj.updateDynamic("enum")(enum.asInstanceOf[js.Any])
-    if (!js.isUndefined(idempotencyToken)) __obj.updateDynamic("idempotencyToken")(idempotencyToken.asInstanceOf[js.Any])
-    if (!js.isUndefined(jsonValue)) __obj.updateDynamic("jsonValue")(jsonValue.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (pattern != null) __obj.updateDynamic("pattern")(pattern.asInstanceOf[js.Any])
-    if (!js.isUndefined(sensitive)) __obj.updateDynamic("sensitive")(sensitive.asInstanceOf[js.Any])
     __obj.asInstanceOf[String]
   }
+  @scala.inline
+  implicit class StringOps[Self <: String] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnum(value: js.Array[java.lang.String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdempotencyToken(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idempotencyToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdempotencyToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idempotencyToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJsonValue(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJsonValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: scala.Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: scala.Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPattern(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPattern: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,18 +26,65 @@ trait TerminateEnvironmentMessage extends js.Object {
 
 object TerminateEnvironmentMessage {
   @scala.inline
-  def apply(
-    EnvironmentId: EnvironmentId = null,
-    EnvironmentName: EnvironmentName = null,
-    ForceTerminate: js.UndefOr[Boolean] = js.undefined,
-    TerminateResources: js.UndefOr[Boolean] = js.undefined
-  ): TerminateEnvironmentMessage = {
+  def apply(): TerminateEnvironmentMessage = {
     val __obj = js.Dynamic.literal()
-    if (EnvironmentId != null) __obj.updateDynamic("EnvironmentId")(EnvironmentId.asInstanceOf[js.Any])
-    if (EnvironmentName != null) __obj.updateDynamic("EnvironmentName")(EnvironmentName.asInstanceOf[js.Any])
-    if (!js.isUndefined(ForceTerminate)) __obj.updateDynamic("ForceTerminate")(ForceTerminate.asInstanceOf[js.Any])
-    if (!js.isUndefined(TerminateResources)) __obj.updateDynamic("TerminateResources")(TerminateResources.asInstanceOf[js.Any])
     __obj.asInstanceOf[TerminateEnvironmentMessage]
   }
+  @scala.inline
+  implicit class TerminateEnvironmentMessageOps[Self <: TerminateEnvironmentMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnvironmentId(value: EnvironmentId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironmentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironmentName(value: EnvironmentName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironmentName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceTerminate(value: ForceTerminate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForceTerminate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceTerminate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForceTerminate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerminateResources(value: TerminateEnvironmentResources): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminateResources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerminateResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminateResources")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

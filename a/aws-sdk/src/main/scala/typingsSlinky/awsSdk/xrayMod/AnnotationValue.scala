@@ -22,16 +22,53 @@ trait AnnotationValue extends js.Object {
 
 object AnnotationValue {
   @scala.inline
-  def apply(
-    BooleanValue: js.UndefOr[scala.Boolean] = js.undefined,
-    NumberValue: Int | scala.Double = null,
-    StringValue: String = null
-  ): AnnotationValue = {
+  def apply(): AnnotationValue = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(BooleanValue)) __obj.updateDynamic("BooleanValue")(BooleanValue.asInstanceOf[js.Any])
-    if (NumberValue != null) __obj.updateDynamic("NumberValue")(NumberValue.asInstanceOf[js.Any])
-    if (StringValue != null) __obj.updateDynamic("StringValue")(StringValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnnotationValue]
   }
+  @scala.inline
+  implicit class AnnotationValueOps[Self <: AnnotationValue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBooleanValue(value: NullableBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BooleanValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBooleanValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BooleanValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberValue(value: NullableDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStringValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StringValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStringValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StringValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,53 @@ trait AnonArcStatus extends js.Object {
 
 object AnonArcStatus {
   @scala.inline
-  def apply(arcStatus: String = null, dealId: String = null, webPropertyId: Int | Double = null): AnonArcStatus = {
+  def apply(): AnonArcStatus = {
     val __obj = js.Dynamic.literal()
-    if (arcStatus != null) __obj.updateDynamic("arcStatus")(arcStatus.asInstanceOf[js.Any])
-    if (dealId != null) __obj.updateDynamic("dealId")(dealId.asInstanceOf[js.Any])
-    if (webPropertyId != null) __obj.updateDynamic("webPropertyId")(webPropertyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonArcStatus]
   }
+  @scala.inline
+  implicit class AnonArcStatusOps[Self <: AnonArcStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArcStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arcStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArcStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arcStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDealId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dealId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDealId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dealId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebPropertyId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebPropertyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

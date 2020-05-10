@@ -16,8 +16,21 @@ object DisassociateDRTLogBucketRequest {
   @scala.inline
   def apply(LogBucket: LogBucket): DisassociateDRTLogBucketRequest = {
     val __obj = js.Dynamic.literal(LogBucket = LogBucket.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DisassociateDRTLogBucketRequest]
   }
+  @scala.inline
+  implicit class DisassociateDRTLogBucketRequestOps[Self <: DisassociateDRTLogBucketRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLogBucket(value: LogBucket): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogBucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait GraylogDeflate extends js.Object
 
 object GraylogDeflate {
   @scala.inline
-  def always: typingsSlinky.graylog2.graylog2Strings.always = this.cast("always")
+  def always: typingsSlinky.graylog2.graylog2Strings.always = "always".asInstanceOf[typingsSlinky.graylog2.graylog2Strings.always]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def never: typingsSlinky.graylog2.graylog2Strings.never = "never".asInstanceOf[typingsSlinky.graylog2.graylog2Strings.never]
   @scala.inline
-  def never: typingsSlinky.graylog2.graylog2Strings.never = this.cast("never")
-  @scala.inline
-  def optimal: typingsSlinky.graylog2.graylog2Strings.optimal = this.cast("optimal")
+  def optimal: typingsSlinky.graylog2.graylog2Strings.optimal = "optimal".asInstanceOf[typingsSlinky.graylog2.graylog2Strings.optimal]
 }
 

@@ -8,19 +8,51 @@ import scala.scalajs.js.annotation._
   * The Track Object in Playlists
   * [](https://developer.spotify.com/web-api/object-model/)
   */
+@js.native
 trait PlaylistTrackObject extends js.Object {
-  var added_at: String
-  var added_by: UserObjectPublic
-  var is_local: Boolean
-  var track: TrackObjectFull
+  var added_at: String = js.native
+  var added_by: UserObjectPublic = js.native
+  var is_local: Boolean = js.native
+  var track: TrackObjectFull = js.native
 }
 
 object PlaylistTrackObject {
   @scala.inline
   def apply(added_at: String, added_by: UserObjectPublic, is_local: Boolean, track: TrackObjectFull): PlaylistTrackObject = {
     val __obj = js.Dynamic.literal(added_at = added_at.asInstanceOf[js.Any], added_by = added_by.asInstanceOf[js.Any], is_local = is_local.asInstanceOf[js.Any], track = track.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PlaylistTrackObject]
   }
+  @scala.inline
+  implicit class PlaylistTrackObjectOps[Self <: PlaylistTrackObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdded_at(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("added_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdded_by(value: UserObjectPublic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("added_by")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIs_local(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is_local")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrack(value: TrackObjectFull): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

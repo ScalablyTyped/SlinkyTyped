@@ -5,18 +5,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WebpBoolean extends Boolean {
-  var alpha: scala.Boolean
-  var animation: scala.Boolean
-  var lossless: scala.Boolean
+  var alpha: scala.Boolean = js.native
+  var animation: scala.Boolean = js.native
+  var lossless: scala.Boolean = js.native
 }
 
 object WebpBoolean {
   @scala.inline
   def apply(alpha: scala.Boolean, animation: scala.Boolean, lossless: scala.Boolean): WebpBoolean = {
     val __obj = js.Dynamic.literal(alpha = alpha.asInstanceOf[js.Any], animation = animation.asInstanceOf[js.Any], lossless = lossless.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[WebpBoolean]
   }
+  @scala.inline
+  implicit class WebpBooleanOps[Self <: WebpBoolean] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlpha(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAnimation(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLossless(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lossless")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

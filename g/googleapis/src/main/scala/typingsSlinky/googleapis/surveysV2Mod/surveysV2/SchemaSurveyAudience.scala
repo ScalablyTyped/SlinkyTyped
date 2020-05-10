@@ -51,22 +51,89 @@ trait SchemaSurveyAudience extends js.Object {
 
 object SchemaSurveyAudience {
   @scala.inline
-  def apply(
-    ages: js.Array[String] = null,
-    country: String = null,
-    countrySubdivision: String = null,
-    gender: String = null,
-    languages: js.Array[String] = null,
-    populationSource: String = null
-  ): SchemaSurveyAudience = {
+  def apply(): SchemaSurveyAudience = {
     val __obj = js.Dynamic.literal()
-    if (ages != null) __obj.updateDynamic("ages")(ages.asInstanceOf[js.Any])
-    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
-    if (countrySubdivision != null) __obj.updateDynamic("countrySubdivision")(countrySubdivision.asInstanceOf[js.Any])
-    if (gender != null) __obj.updateDynamic("gender")(gender.asInstanceOf[js.Any])
-    if (languages != null) __obj.updateDynamic("languages")(languages.asInstanceOf[js.Any])
-    if (populationSource != null) __obj.updateDynamic("populationSource")(populationSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSurveyAudience]
   }
+  @scala.inline
+  implicit class SchemaSurveyAudienceOps[Self <: SchemaSurveyAudience] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAges(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountry(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountrySubdivision(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countrySubdivision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountrySubdivision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countrySubdivision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGender(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguages(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopulationSource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("populationSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopulationSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("populationSource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait AxisTitleAlignValue extends js.Object
 
 object AxisTitleAlignValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def high: typingsSlinky.highcharts.highchartsStrings.high = "high".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.high]
   @scala.inline
-  def high: typingsSlinky.highcharts.highchartsStrings.high = this.cast("high")
+  def low: typingsSlinky.highcharts.highchartsStrings.low = "low".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.low]
   @scala.inline
-  def low: typingsSlinky.highcharts.highchartsStrings.low = this.cast("low")
-  @scala.inline
-  def middle: typingsSlinky.highcharts.highchartsStrings.middle = this.cast("middle")
+  def middle: typingsSlinky.highcharts.highchartsStrings.middle = "middle".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.middle]
 }
 

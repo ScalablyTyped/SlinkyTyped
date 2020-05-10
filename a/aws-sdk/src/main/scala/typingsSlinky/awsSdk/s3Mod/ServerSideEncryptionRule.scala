@@ -14,10 +14,29 @@ trait ServerSideEncryptionRule extends js.Object {
 
 object ServerSideEncryptionRule {
   @scala.inline
-  def apply(ApplyServerSideEncryptionByDefault: ServerSideEncryptionByDefault = null): ServerSideEncryptionRule = {
+  def apply(): ServerSideEncryptionRule = {
     val __obj = js.Dynamic.literal()
-    if (ApplyServerSideEncryptionByDefault != null) __obj.updateDynamic("ApplyServerSideEncryptionByDefault")(ApplyServerSideEncryptionByDefault.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServerSideEncryptionRule]
   }
+  @scala.inline
+  implicit class ServerSideEncryptionRuleOps[Self <: ServerSideEncryptionRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplyServerSideEncryptionByDefault(value: ServerSideEncryptionByDefault): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplyServerSideEncryptionByDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplyServerSideEncryptionByDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplyServerSideEncryptionByDefault")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

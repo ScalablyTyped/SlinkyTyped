@@ -22,10 +22,41 @@ trait PutSkillAuthorizationRequest extends js.Object {
 
 object PutSkillAuthorizationRequest {
   @scala.inline
-  def apply(AuthorizationResult: AuthorizationResult, SkillId: SkillId, RoomArn: Arn = null): PutSkillAuthorizationRequest = {
+  def apply(AuthorizationResult: AuthorizationResult, SkillId: SkillId): PutSkillAuthorizationRequest = {
     val __obj = js.Dynamic.literal(AuthorizationResult = AuthorizationResult.asInstanceOf[js.Any], SkillId = SkillId.asInstanceOf[js.Any])
-    if (RoomArn != null) __obj.updateDynamic("RoomArn")(RoomArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutSkillAuthorizationRequest]
   }
+  @scala.inline
+  implicit class PutSkillAuthorizationRequestOps[Self <: PutSkillAuthorizationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthorizationResult(value: AuthorizationResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizationResult")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSkillId(value: SkillId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SkillId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoomArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoomArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoomArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoomArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

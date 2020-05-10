@@ -14,10 +14,29 @@ trait FetchPageResult extends js.Object {
 
 object FetchPageResult {
   @scala.inline
-  def apply(Page: Page = null): FetchPageResult = {
+  def apply(): FetchPageResult = {
     val __obj = js.Dynamic.literal()
-    if (Page != null) __obj.updateDynamic("Page")(Page.asInstanceOf[js.Any])
     __obj.asInstanceOf[FetchPageResult]
   }
+  @scala.inline
+  implicit class FetchPageResultOps[Self <: FetchPageResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPage(value: Page): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Page")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -71,12 +71,10 @@ object LeafNode {
     start: Double,
     sticky: Boolean,
     `type`: typingsSlinky.regexpp.regexppStrings.Flags,
-    unicode: Boolean,
-    parent: RegExpLiteral = null
+    unicode: Boolean
   ): LeafNode = {
     val __obj = js.Dynamic.literal(dotAll = dotAll.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], global = global.asInstanceOf[js.Any], ignoreCase = ignoreCase.asInstanceOf[js.Any], multiline = multiline.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], sticky = sticky.asInstanceOf[js.Any], unicode = unicode.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
     __obj.asInstanceOf[LeafNode]
   }
   @scala.inline
@@ -130,12 +128,10 @@ object LeafNode {
     parent: Alternative | Quantifier | CharacterClass,
     raw: String,
     start: Double,
-    `type`: typingsSlinky.regexpp.regexppStrings.CharacterSet,
-    value: String = null
+    `type`: typingsSlinky.regexpp.regexppStrings.CharacterSet
   ): LeafNode = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], negate = negate.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[LeafNode]
   }
 }

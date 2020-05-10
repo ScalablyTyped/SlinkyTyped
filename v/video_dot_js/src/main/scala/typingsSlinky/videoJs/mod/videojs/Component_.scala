@@ -47,7 +47,7 @@ trait Component_ extends EventedMixin {
   @JSName("$")
   def $(selector: String, context: String): Element = js.native
   @JSName("$")
-  def $(selector: String, context: typingsSlinky.std.Element): Element = js.native
+  def $(selector: String, context: Element): Element = js.native
   /**
     * Finds all DOM element matching a `selector`. This can be within the `Component`s
     * `contentEl()` or another custom context.
@@ -70,7 +70,7 @@ trait Component_ extends EventedMixin {
   @JSName("$$")
   def DollarDollar(selector: String, context: String): NodeList = js.native
   @JSName("$$")
-  def DollarDollar(selector: String, context: typingsSlinky.std.Element): NodeList = js.native
+  def DollarDollar(selector: String, context: Element): NodeList = js.native
   /**
     * Add a child `Component` inside the current `Component`.
     *
@@ -91,9 +91,9 @@ trait Component_ extends EventedMixin {
   def addChild(component: String): Component = js.native
   def addChild(component: String, optionsopt: js.Any): Component = js.native
   def addChild(component: String, optionsopt: js.Any, indexopt: Double): Component = js.native
-  def addChild(component: typingsSlinky.std.Element): Element = js.native
-  def addChild(component: typingsSlinky.std.Element, optionsopt: js.Any): Element = js.native
-  def addChild(component: typingsSlinky.std.Element, optionsopt: js.Any, indexopt: Double): Element = js.native
+  def addChild(component: Element): Element = js.native
+  def addChild(component: Element, optionsopt: js.Any): Element = js.native
+  def addChild(component: Element, optionsopt: js.Any, indexopt: Double): Element = js.native
   def addChild[T /* <: Component */](child: T): T = js.native
   def addChild[T /* <: Component */](child: T, options: js.Any): T = js.native
   def addChild[T /* <: Component */](child: T, options: js.Any, index: Double): T = js.native

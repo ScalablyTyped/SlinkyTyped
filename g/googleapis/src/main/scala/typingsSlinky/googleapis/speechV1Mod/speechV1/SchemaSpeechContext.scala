@@ -24,10 +24,29 @@ trait SchemaSpeechContext extends js.Object {
 
 object SchemaSpeechContext {
   @scala.inline
-  def apply(phrases: js.Array[String] = null): SchemaSpeechContext = {
+  def apply(): SchemaSpeechContext = {
     val __obj = js.Dynamic.literal()
-    if (phrases != null) __obj.updateDynamic("phrases")(phrases.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSpeechContext]
   }
+  @scala.inline
+  implicit class SchemaSpeechContextOps[Self <: SchemaSpeechContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPhrases(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("phrases")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhrases: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("phrases")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

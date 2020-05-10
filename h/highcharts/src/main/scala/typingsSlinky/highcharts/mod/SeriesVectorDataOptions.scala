@@ -4,13 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SeriesVectorDataOptions extends js.Object {
-  var accessibility: js.UndefOr[SeriesVectorDataAccessibilityOptions] = js.undefined
+  var accessibility: js.UndefOr[SeriesVectorDataAccessibilityOptions] = js.native
   /**
     * (Highcharts, Gantt) An additional, individual class name for the data
     * point's graphic representation.
     */
-  var className: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Individual color for the point. By default
     * the color is pulled from the global `colors` array.
@@ -18,7 +19,7 @@ trait SeriesVectorDataOptions extends js.Object {
     * In styled mode, the `color` option doesn't take effect. Instead, use
     * `colorIndex`.
     */
-  var color: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var color: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts, Gantt) A specific color index to use for the point, so its
     * graphic representations are given the class name `highcharts-color-{n}`.
@@ -26,53 +27,53 @@ trait SeriesVectorDataOptions extends js.Object {
     * mode, the color by is set by the `fill` attribute, so the change in class
     * name won't have a visual effect by default.
     */
-  var colorIndex: js.UndefOr[Double] = js.undefined
+  var colorIndex: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Individual data label for each point. The
     * options are the same as the ones for plotOptions.series.dataLabels.
     */
-  var dataLabels: js.UndefOr[DataLabelsOptionsObject | js.Array[DataLabelsOptionsObject]] = js.undefined
+  var dataLabels: js.UndefOr[DataLabelsOptionsObject | js.Array[DataLabelsOptionsObject]] = js.native
   /**
     * (Highcharts, Highstock) A description of the point to add to the screen
     * reader information about the point.
     */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock) The vector direction in degrees, where 0 is north
     * (pointing towards south).
     */
-  var direction: js.UndefOr[Double] = js.undefined
+  var direction: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock) Point specific options for the draggable-points
     * module. Overrides options on `series.dragDrop`.
     */
-  var dragDrop: js.UndefOr[SeriesVectorDataDragDropOptions] = js.undefined
+  var dragDrop: js.UndefOr[SeriesVectorDataDragDropOptions] = js.native
   /**
     * (Highcharts) The `id` of a series in the drilldown.series array to use
     * for a drilldown for this point.
     */
-  var drilldown: js.UndefOr[String] = js.undefined
+  var drilldown: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Individual point events
     */
-  var events: js.UndefOr[SeriesVectorDataEventsOptions] = js.undefined
+  var events: js.UndefOr[SeriesVectorDataEventsOptions] = js.native
   /**
     * (Highcharts, Highstock, Gantt) An id for the point. This can be used
     * after render time to get a pointer to the point object through
     * `chart.get()`.
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock) The rank for this point's data label in case of
     * collision. If two data labels are about to overlap, only the one with the
     * highest `labelrank` will be drawn.
     */
-  var labelrank: js.UndefOr[Double] = js.undefined
+  var labelrank: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock) The length of the vector. The rendered length
     * will relate to the `vectorLength` setting.
     */
-  var length: js.UndefOr[Double] = js.undefined
+  var length: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock) Options for the point markers of line-like
     * series. Properties like `fillColor`, `lineColor` and `lineWidth` define
@@ -83,70 +84,263 @@ trait SeriesVectorDataOptions extends js.Object {
     * In styled mode, the markers can be styled with the `.highcharts-point`,
     * `.highcharts-point-hover` and `.highcharts-point-select` class names.
     */
-  var marker: js.UndefOr[SeriesVectorDataMarkerOptions] = js.undefined
+  var marker: js.UndefOr[SeriesVectorDataMarkerOptions] = js.native
   /**
     * (Highcharts, Highstock) The name of the point as shown in the legend,
     * tooltip, dataLabels etc.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Whether the data point is selected
     * initially.
     */
-  var selected: js.UndefOr[Boolean] = js.undefined
+  var selected: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock) The x value of the point. For datetime axes, the
     * X value is the timestamp in milliseconds since 1970.
     */
-  var x: js.UndefOr[Double] = js.undefined
+  var x: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock) The y value of the point.
     */
-  var y: js.UndefOr[Double | Null] = js.undefined
+  var y: js.UndefOr[Double | Null] = js.native
 }
 
 object SeriesVectorDataOptions {
   @scala.inline
-  def apply(
-    accessibility: SeriesVectorDataAccessibilityOptions = null,
-    className: String = null,
-    color: ColorString | GradientColorObject | PatternObject = null,
-    colorIndex: Int | Double = null,
-    dataLabels: DataLabelsOptionsObject | js.Array[DataLabelsOptionsObject] = null,
-    description: String = null,
-    direction: Int | Double = null,
-    dragDrop: SeriesVectorDataDragDropOptions = null,
-    drilldown: String = null,
-    events: SeriesVectorDataEventsOptions = null,
-    id: String = null,
-    labelrank: Int | Double = null,
-    length: Int | Double = null,
-    marker: SeriesVectorDataMarkerOptions = null,
-    name: String = null,
-    selected: js.UndefOr[Boolean] = js.undefined,
-    x: Int | Double = null,
-    y: Int | Double = null
-  ): SeriesVectorDataOptions = {
+  def apply(): SeriesVectorDataOptions = {
     val __obj = js.Dynamic.literal()
-    if (accessibility != null) __obj.updateDynamic("accessibility")(accessibility.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (colorIndex != null) __obj.updateDynamic("colorIndex")(colorIndex.asInstanceOf[js.Any])
-    if (dataLabels != null) __obj.updateDynamic("dataLabels")(dataLabels.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (dragDrop != null) __obj.updateDynamic("dragDrop")(dragDrop.asInstanceOf[js.Any])
-    if (drilldown != null) __obj.updateDynamic("drilldown")(drilldown.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (labelrank != null) __obj.updateDynamic("labelrank")(labelrank.asInstanceOf[js.Any])
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
-    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesVectorDataOptions]
   }
+  @scala.inline
+  implicit class SeriesVectorDataOptionsOps[Self <: SeriesVectorDataOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessibility(value: SeriesVectorDataAccessibilityOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataLabels(value: DataLabelsOptionsObject | js.Array[DataLabelsOptionsObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDragDrop(value: SeriesVectorDataDragDropOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDragDrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDrop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrilldown(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drilldown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrilldown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drilldown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvents(value: SeriesVectorDataEventsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelrank(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelrank")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelrank: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelrank")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: SeriesVectorDataMarkerOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelected(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(null)
+        ret
+    }
+  }
+  
 }
 

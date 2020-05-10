@@ -1,6 +1,7 @@
 package typingsSlinky.firebaseFirestore
 
 import typingsSlinky.firebaseFirestore.blobMod.Blob
+import typingsSlinky.firebaseFirestore.byteStringMod.ByteString
 import typingsSlinky.firebaseFirestore.collectionsMod.DocumentKeySet_
 import typingsSlinky.firebaseFirestore.collectionsMod.MaybeDocumentMap_
 import typingsSlinky.firebaseFirestore.databaseInfoMod.DatabaseId
@@ -12,7 +13,6 @@ import typingsSlinky.firebaseFirestore.documentMod.MaybeDocument
 import typingsSlinky.firebaseFirestore.documentMod.NoDocument
 import typingsSlinky.firebaseFirestore.documentMod.UnknownDocument
 import typingsSlinky.firebaseFirestore.documentSetMod.DocumentSet
-import typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.LessthansignDELETEGreaterthansign
 import typingsSlinky.firebaseFirestore.localViewChangesMod.LocalViewChanges
 import typingsSlinky.firebaseFirestore.modelFieldValueMod.FieldValue
 import typingsSlinky.firebaseFirestore.modelFieldValueMod.JsonObject
@@ -37,7 +37,6 @@ import typingsSlinky.firebaseFirestore.sortedMapMod.SortedMap
 import typingsSlinky.firebaseFirestore.sortedSetMod.SortedSet
 import typingsSlinky.firebaseFirestore.targetDataMod.TargetData
 import typingsSlinky.firebaseFirestore.targetDataMod.TargetPurpose
-import typingsSlinky.firebaseFirestore.typesMod.ProtoByteString
 import typingsSlinky.firebaseFirestore.typesMod.TargetId
 import typingsSlinky.firebaseFirestore.userDataConverterMod.DocumentKeyReference
 import typingsSlinky.firebaseFirestore.viewMod.LimboDocumentChange
@@ -54,12 +53,13 @@ object utilHelpersMod extends js.Object {
   @js.native
   class DocComparator () extends js.Object
   
-  val DELETE_SENTINEL: LessthansignDELETEGreaterthansign = js.native
+  val DELETE_SENTINEL: /* "<DELETE>" */ String = js.native
   def ackTarget(docsOrKeys: (Document | String)*): TargetChange = js.native
   def addTargetMapping(docsOrKeys: (Document | String)*): TargetChange = js.native
   def applyDocChanges(view: View, docsOrKeys: (Document | DocumentKey)*): ViewChange = js.native
   def blob(bytes: Double*): Blob = js.native
   def bound(values: js.Array[js.Tuple3[String, js.Object, OrderByDirection]], before: Boolean): Bound = js.native
+  def byteStringFromString(value: String): ByteString = js.native
   def dbId(project: String): DatabaseId = js.native
   def dbId(project: String, database: String): DatabaseId = js.native
   def deleteMutation(keyStr: String): DeleteMutation = js.native
@@ -128,7 +128,7 @@ object utilHelpersMod extends js.Object {
   def mask(paths: String*): FieldMask = js.native
   def mutationResult(testVersion: TestSnapshotVersion): MutationResult = js.native
   def noChangeEvent(targetId: Double, snapshotVersion: Double): RemoteEvent = js.native
-  def noChangeEvent(targetId: Double, snapshotVersion: Double, resumeToken: ProtoByteString): RemoteEvent = js.native
+  def noChangeEvent(targetId: Double, snapshotVersion: Double, resumeToken: ByteString): RemoteEvent = js.native
   def orderBy(path: String): OrderBy = js.native
   def orderBy(path: String, op: String): OrderBy = js.native
   def patchMutation(keyStr: String, json: JsonObject[_]): PatchMutation = js.native
@@ -138,7 +138,7 @@ object utilHelpersMod extends js.Object {
   def ref(dbIdStr: String, keyStr: String): DocumentKeyReference = js.native
   def ref(dbIdStr: String, keyStr: String, offset: Double): DocumentKeyReference = js.native
   def removedDoc(keyStr: String): NoDocument = js.native
-  def resumeTokenForSnapshot(snapshotVersion: SnapshotVersion): ProtoByteString = js.native
+  def resumeTokenForSnapshot(snapshotVersion: SnapshotVersion): ByteString = js.native
   def setMutation(keyStr: String, json: JsonObject[_]): SetMutation = js.native
   def size(obj: JsonObject[_]): Double = js.native
   def targetData(targetId: TargetId, queryPurpose: TargetPurpose, path: String): TargetData = js.native

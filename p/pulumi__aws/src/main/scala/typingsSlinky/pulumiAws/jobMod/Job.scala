@@ -3,6 +3,7 @@ package typingsSlinky.pulumiAws.jobMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.outputMod.glue.JobCommand
 import typingsSlinky.pulumiAws.outputMod.glue.JobExecutionProperty
+import typingsSlinky.pulumiAws.outputMod.glue.JobNotificationProperty
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -57,7 +58,7 @@ class Job protected () extends CustomResource {
     */
   val glueVersion: Output_[String] = js.native
   /**
-    * The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs.
+    * The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
     */
   val maxCapacity: Output_[Double] = js.native
   /**
@@ -65,9 +66,13 @@ class Job protected () extends CustomResource {
     */
   val maxRetries: Output_[js.UndefOr[Double]] = js.native
   /**
-    * The name of the job command. Defaults to `glueetl`
+    * The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, `maxCapacity` needs to be set if `pythonshell` is chosen.
     */
   val name: Output_[String] = js.native
+  /**
+    * Notification property of the job. Defined below.
+    */
+  val notificationProperty: Output_[JobNotificationProperty] = js.native
   /**
     * The number of workers of a defined workerType that are allocated when a job runs.
     */

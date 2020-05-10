@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
   * Widgets should use _TemplatedMixin plus if necessary _WidgetsInTemplateMixin instead.
   * 
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dijit.WidgetsInTemplateMixin because Inheritance from two classes. Inlined contextRequire, widgetsInTemplate, startup */ @JSGlobal("dijit._Templated")
 @js.native
 class Templated () extends TemplatedMixin {

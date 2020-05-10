@@ -54,7 +54,7 @@ object Timepicker extends js.Object {
   /**
     * Init Timepicker
     */
-  def init(els: typingsSlinky.std.Element): Timepicker = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialTimepickerOptions): Timepicker = js.native
+  def init(els: Element): Timepicker = js.native
+  def init(els: Element, options: PartialTimepickerOptions): Timepicker = js.native
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.rcPicker.dateBodyMod
 
-import slinky.core.TagMod
 import typingsSlinky.rcPicker.generateMod.GenerateConfig
 import typingsSlinky.rcPicker.interfaceMod.Locale
 import typingsSlinky.rcPicker.interfaceMod.OnSelect
@@ -11,14 +10,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DateBodyProps[DateType] extends DateBodyPassProps[DateType] {
-  var generateConfig: GenerateConfig[DateType]
-  var locale: Locale
-  var onSelect: OnSelect[DateType]
-  var prefixCls: String
-  var rowCount: Double
-  var value: js.UndefOr[DateType | Null] = js.undefined
-  var viewDate: DateType
+  var generateConfig: GenerateConfig[DateType] = js.native
+  var locale: Locale = js.native
+  var onSelect: OnSelect[DateType] = js.native
+  var prefixCls: String = js.native
+  var rowCount: Double = js.native
+  var value: js.UndefOr[DateType | Null] = js.native
+  var viewDate: DateType = js.native
 }
 
 object DateBodyProps {
@@ -29,20 +29,72 @@ object DateBodyProps {
     onSelect: (DateType, /* type */ key | mouse | submit) => Unit,
     prefixCls: String,
     rowCount: Double,
-    viewDate: DateType,
-    dateRender: (DateType, DateType) => TagMod[Any] = null,
-    disabledDate: DateType => Boolean = null,
-    prefixColumn: DateType => TagMod[Any] = null,
-    rowClassName: DateType => String = null,
-    value: DateType = null
+    viewDate: DateType
   ): DateBodyProps[DateType] = {
     val __obj = js.Dynamic.literal(generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], onSelect = js.Any.fromFunction2(onSelect), prefixCls = prefixCls.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], viewDate = viewDate.asInstanceOf[js.Any])
-    if (dateRender != null) __obj.updateDynamic("dateRender")(js.Any.fromFunction2(dateRender))
-    if (disabledDate != null) __obj.updateDynamic("disabledDate")(js.Any.fromFunction1(disabledDate))
-    if (prefixColumn != null) __obj.updateDynamic("prefixColumn")(js.Any.fromFunction1(prefixColumn))
-    if (rowClassName != null) __obj.updateDynamic("rowClassName")(js.Any.fromFunction1(rowClassName))
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[DateBodyProps[DateType]]
   }
+  @scala.inline
+  implicit class DateBodyPropsOps[Self[datetype] <: DateBodyProps[datetype], DateType] (val x: Self[DateType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[DateType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[DateType]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[DateType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[DateType] with Other]
+    @scala.inline
+    def withGenerateConfig(value: GenerateConfig[DateType]): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocale(value: Locale): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnSelect(value: (DateType, /* type */ key | mouse | submit) => Unit): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRowCount(value: Double): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withViewDate(value: DateType): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: DateType): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueNull: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(null)
+        ret
+    }
+  }
+  
 }
 

@@ -18,11 +18,41 @@ trait GetFieldLevelEncryptionProfileConfigResult extends js.Object {
 
 object GetFieldLevelEncryptionProfileConfigResult {
   @scala.inline
-  def apply(ETag: String = null, FieldLevelEncryptionProfileConfig: FieldLevelEncryptionProfileConfig = null): GetFieldLevelEncryptionProfileConfigResult = {
+  def apply(): GetFieldLevelEncryptionProfileConfigResult = {
     val __obj = js.Dynamic.literal()
-    if (ETag != null) __obj.updateDynamic("ETag")(ETag.asInstanceOf[js.Any])
-    if (FieldLevelEncryptionProfileConfig != null) __obj.updateDynamic("FieldLevelEncryptionProfileConfig")(FieldLevelEncryptionProfileConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetFieldLevelEncryptionProfileConfigResult]
   }
+  @scala.inline
+  implicit class GetFieldLevelEncryptionProfileConfigResultOps[Self <: GetFieldLevelEncryptionProfileConfigResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withETag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutETag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFieldLevelEncryptionProfileConfig(value: FieldLevelEncryptionProfileConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldLevelEncryptionProfileConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldLevelEncryptionProfileConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldLevelEncryptionProfileConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

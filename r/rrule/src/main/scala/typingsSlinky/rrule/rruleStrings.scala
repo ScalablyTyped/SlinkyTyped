@@ -1,6 +1,7 @@
 package typingsSlinky.rrule
 
 import typingsSlinky.rrule.cacheMod.CacheKeys
+import typingsSlinky.rrule.typesMod.QueryMethodTypes
 import typingsSlinky.rrule.weekdayMod.WeekdayStr
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,16 +30,22 @@ object rruleStrings {
   sealed trait WE extends WeekdayStr
   
   @js.native
-  sealed trait after extends CacheKeys
+  sealed trait after
+    extends CacheKeys
+       with QueryMethodTypes
   
   @js.native
-  sealed trait all extends js.Object
+  sealed trait all extends QueryMethodTypes
   
   @js.native
-  sealed trait before extends CacheKeys
+  sealed trait before
+    extends CacheKeys
+       with QueryMethodTypes
   
   @js.native
-  sealed trait between extends CacheKeys
+  sealed trait between
+    extends CacheKeys
+       with QueryMethodTypes
   
   @js.native
   sealed trait byeaster extends js.Object

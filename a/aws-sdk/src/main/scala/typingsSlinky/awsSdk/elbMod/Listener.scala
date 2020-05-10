@@ -30,17 +30,59 @@ trait Listener extends js.Object {
 
 object Listener {
   @scala.inline
-  def apply(
-    InstancePort: InstancePort,
-    LoadBalancerPort: AccessPointPort,
-    Protocol: Protocol,
-    InstanceProtocol: Protocol = null,
-    SSLCertificateId: SSLCertificateId = null
-  ): Listener = {
+  def apply(InstancePort: InstancePort, LoadBalancerPort: AccessPointPort, Protocol: Protocol): Listener = {
     val __obj = js.Dynamic.literal(InstancePort = InstancePort.asInstanceOf[js.Any], LoadBalancerPort = LoadBalancerPort.asInstanceOf[js.Any], Protocol = Protocol.asInstanceOf[js.Any])
-    if (InstanceProtocol != null) __obj.updateDynamic("InstanceProtocol")(InstanceProtocol.asInstanceOf[js.Any])
-    if (SSLCertificateId != null) __obj.updateDynamic("SSLCertificateId")(SSLCertificateId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Listener]
   }
+  @scala.inline
+  implicit class ListenerOps[Self <: Listener] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstancePort(value: InstancePort): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstancePort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoadBalancerPort(value: AccessPointPort): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProtocol(value: Protocol): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstanceProtocol(value: Protocol): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceProtocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceProtocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSSLCertificateId(value: SSLCertificateId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSLCertificateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSSLCertificateId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSLCertificateId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

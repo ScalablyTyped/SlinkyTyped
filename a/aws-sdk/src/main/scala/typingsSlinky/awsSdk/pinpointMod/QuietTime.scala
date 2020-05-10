@@ -18,11 +18,41 @@ trait QuietTime extends js.Object {
 
 object QuietTime {
   @scala.inline
-  def apply(End: string = null, Start: string = null): QuietTime = {
+  def apply(): QuietTime = {
     val __obj = js.Dynamic.literal()
-    if (End != null) __obj.updateDynamic("End")(End.asInstanceOf[js.Any])
-    if (Start != null) __obj.updateDynamic("Start")(Start.asInstanceOf[js.Any])
     __obj.asInstanceOf[QuietTime]
   }
+  @scala.inline
+  implicit class QuietTimeOps[Self <: QuietTime] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnd(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("End")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("End")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Start")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

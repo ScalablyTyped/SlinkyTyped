@@ -2,7 +2,7 @@ package typingsSlinky.jsdom
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.std.CloseEvent
+import org.scalajs.dom.raw.CloseEvent
 import typingsSlinky.std.CloseEventInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,16 +1,16 @@
 package typingsSlinky.shopifyPrime.productCollectionMod
 
-import typingsSlinky.shopifyPrime.AnonAttachment
 import typingsSlinky.shopifyPrime.AnonColumn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SmartCollection extends ProductCollection {
   /**
     * If false, products must match all of the rules to be included in the collection. If true, products can only match one of the rules.
     */
-  var disjunctive: js.UndefOr[Boolean] = js.undefined
+  var disjunctive: js.UndefOr[Boolean] = js.native
   /**
     * The list of rules that define what products go into the smart collection. Each rule has the following properties:
     *
@@ -51,41 +51,46 @@ trait SmartCollection extends ProductCollection {
     *
     * tag: product tag.
     */
-  var rules: js.UndefOr[js.Array[AnonColumn]] = js.undefined
+  var rules: js.UndefOr[js.Array[AnonColumn]] = js.native
 }
 
 object SmartCollection {
   @scala.inline
-  def apply(
-    admin_graphql_api_id: String = null,
-    body_html: String = null,
-    disjunctive: js.UndefOr[Boolean] = js.undefined,
-    handle: String = null,
-    id: Int | Double = null,
-    image: AnonAttachment = null,
-    published_at: String = null,
-    published_scope: String = null,
-    rules: js.Array[AnonColumn] = null,
-    sort_order: String = null,
-    template_suffix: String = null,
-    title: String = null,
-    updated_at: String = null
-  ): SmartCollection = {
+  def apply(): SmartCollection = {
     val __obj = js.Dynamic.literal()
-    if (admin_graphql_api_id != null) __obj.updateDynamic("admin_graphql_api_id")(admin_graphql_api_id.asInstanceOf[js.Any])
-    if (body_html != null) __obj.updateDynamic("body_html")(body_html.asInstanceOf[js.Any])
-    if (!js.isUndefined(disjunctive)) __obj.updateDynamic("disjunctive")(disjunctive.asInstanceOf[js.Any])
-    if (handle != null) __obj.updateDynamic("handle")(handle.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (published_at != null) __obj.updateDynamic("published_at")(published_at.asInstanceOf[js.Any])
-    if (published_scope != null) __obj.updateDynamic("published_scope")(published_scope.asInstanceOf[js.Any])
-    if (rules != null) __obj.updateDynamic("rules")(rules.asInstanceOf[js.Any])
-    if (sort_order != null) __obj.updateDynamic("sort_order")(sort_order.asInstanceOf[js.Any])
-    if (template_suffix != null) __obj.updateDynamic("template_suffix")(template_suffix.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (updated_at != null) __obj.updateDynamic("updated_at")(updated_at.asInstanceOf[js.Any])
     __obj.asInstanceOf[SmartCollection]
   }
+  @scala.inline
+  implicit class SmartCollectionOps[Self <: SmartCollection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisjunctive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disjunctive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisjunctive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disjunctive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRules(value: js.Array[AnonColumn]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

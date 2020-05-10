@@ -4,18 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DidChangeLanguageFlavorParams extends js.Object {
-  var flavor: String
-  var language: String
-  var uri: String
+  var flavor: String = js.native
+  var language: String = js.native
+  var uri: String = js.native
 }
 
 object DidChangeLanguageFlavorParams {
   @scala.inline
   def apply(flavor: String, language: String, uri: String): DidChangeLanguageFlavorParams = {
     val __obj = js.Dynamic.literal(flavor = flavor.asInstanceOf[js.Any], language = language.asInstanceOf[js.Any], uri = uri.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DidChangeLanguageFlavorParams]
   }
+  @scala.inline
+  implicit class DidChangeLanguageFlavorParamsOps[Self <: DidChangeLanguageFlavorParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFlavor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flavor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

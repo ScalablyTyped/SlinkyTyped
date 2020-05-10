@@ -21,8 +21,8 @@ trait Cash_ extends js.Object {
   def add(selector: String, context: Element): Cash_ = js.native
   def add(selector: Cash_): Cash_ = js.native
   def add(selector: Cash_, context: Element): Cash_ = js.native
-  def add(selector: typingsSlinky.std.Element): Cash_ = js.native
-  def add(selector: typingsSlinky.std.Element, context: Element): Cash_ = js.native
+  def add(selector: Element): Cash_ = js.native
+  def add(selector: Element, context: Element): Cash_ = js.native
   /**
     * addClass
     * Adds the className argument to collection elements.
@@ -33,21 +33,21 @@ trait Cash_ extends js.Object {
     * after
     * Inserts content or elements after the collection.
     */
-  def after(selector: typingsSlinky.std.Element): Cash_ = js.native
+  def after(selector: Element): Cash_ = js.native
   /**
     * append
     * Appends the target element to the each element in the collection.
     */
   def append(content: String): Cash_ = js.native
   def append(content: Cash_): Cash_ = js.native
-  def append(content: typingsSlinky.std.Element): Cash_ = js.native
+  def append(content: Element): Cash_ = js.native
   /**
     * appendTo
     * Adds the elements in a collection to the target element(s).
     */
   def appendTo(parent: String): Cash_ = js.native
   def appendTo(parent: Cash_): Cash_ = js.native
-  def appendTo(parent: typingsSlinky.std.Element): Cash_ = js.native
+  def appendTo(parent: Element): Cash_ = js.native
   /**
     * attr
     * Without attrValue, returns the attribute value of the first element in the collection.
@@ -60,7 +60,7 @@ trait Cash_ extends js.Object {
     * Inserts content or elements before the collection.
     */
   def before(selector: String): Cash_ = js.native
-  def before(selector: typingsSlinky.std.Element): Cash_ = js.native
+  def before(selector: Element): Cash_ = js.native
   /**
     * children
     * Without a selector specified, returns a collection of child elements.
@@ -174,21 +174,21 @@ trait Cash_ extends js.Object {
     */
   def insertAfter(selector: String): Cash_ = js.native
   def insertAfter(selector: Cash_): Cash_ = js.native
-  def insertAfter(selector: typingsSlinky.std.Element): Cash_ = js.native
+  def insertAfter(selector: Element): Cash_ = js.native
   /**
     * insertBefore
     * Inserts collection before specified element.
     */
   def insertBefore(selector: String): Cash_ = js.native
   def insertBefore(selector: Cash_): Cash_ = js.native
-  def insertBefore(selector: typingsSlinky.std.Element): Cash_ = js.native
+  def insertBefore(selector: Element): Cash_ = js.native
   /**
     * is
     * Returns whether the provided selector, element or collection matches any element in the collection.
     */
   def is(selector: String): Boolean = js.native
   def is(selector: Cash_): Boolean = js.native
-  def is(selector: typingsSlinky.std.Element): Boolean = js.native
+  def is(selector: Element): Boolean = js.native
   /**
     * last
     * Returns last element in the collection.
@@ -205,7 +205,7 @@ trait Cash_ extends js.Object {
     */
   def not(selector: String): Cash_ = js.native
   def not(selector: Cash_): Cash_ = js.native
-  def not(selector: typingsSlinky.std.Element): Cash_ = js.native
+  def not(selector: Element): Cash_ = js.native
   /**
     * off
     * Removes event listener from collection elements.
@@ -281,7 +281,7 @@ trait Cash_ extends js.Object {
     */
   def prependTo(parent: String): Cash_ = js.native
   def prependTo(parent: Cash_): Cash_ = js.native
-  def prependTo(parent: typingsSlinky.std.Element): Cash_ = js.native
+  def prependTo(parent: Element): Cash_ = js.native
   /**
     * prev
     * Returns the previous adjacent element.

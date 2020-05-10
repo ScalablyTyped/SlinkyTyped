@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PrintTaskProperties extends TaskProperties {
   /**
     * The time interval in milliseconds between each job status request sent to an asynchronous GP task.
@@ -12,17 +13,34 @@ trait PrintTaskProperties extends TaskProperties {
     *
     * @default 1000
     */
-  var updateDelay: js.UndefOr[Double] = js.undefined
+  var updateDelay: js.UndefOr[Double] = js.native
 }
 
 object PrintTaskProperties {
   @scala.inline
-  def apply(requestOptions: js.Any = null, updateDelay: Int | Double = null, url: String = null): PrintTaskProperties = {
+  def apply(): PrintTaskProperties = {
     val __obj = js.Dynamic.literal()
-    if (requestOptions != null) __obj.updateDynamic("requestOptions")(requestOptions.asInstanceOf[js.Any])
-    if (updateDelay != null) __obj.updateDynamic("updateDelay")(updateDelay.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrintTaskProperties]
   }
+  @scala.inline
+  implicit class PrintTaskPropertiesOps[Self <: PrintTaskProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUpdateDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDelay")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

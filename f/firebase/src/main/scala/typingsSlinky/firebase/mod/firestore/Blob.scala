@@ -27,7 +27,7 @@ class Blob protected () extends js.Object {
     * @return
     *   The Uint8Array created from the Blob object.
     */
-  def toUint8Array(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def toUint8Array(): js.typedarray.Uint8Array = js.native
 }
 
 /* static members */
@@ -48,6 +48,6 @@ object Blob extends js.Object {
     * @param array
     *   The Uint8Array used to create the Blob object.
     */
-  def fromUint8Array(array: scala.scalajs.js.typedarray.Uint8Array): Blob = js.native
+  def fromUint8Array(array: js.typedarray.Uint8Array): Blob = js.native
 }
 

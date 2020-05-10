@@ -4,21 +4,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HasPlayServicesParams extends js.Object {
   /**
     * When showPlayServicesUpdateDialog is true, the user will be prompted to
     * install Play Services if on Android and they are not installed.
     * Default is true
     */
-  var showPlayServicesUpdateDialog: js.UndefOr[Boolean] = js.undefined
+  var showPlayServicesUpdateDialog: js.UndefOr[Boolean] = js.native
 }
 
 object HasPlayServicesParams {
   @scala.inline
-  def apply(showPlayServicesUpdateDialog: js.UndefOr[Boolean] = js.undefined): HasPlayServicesParams = {
+  def apply(): HasPlayServicesParams = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(showPlayServicesUpdateDialog)) __obj.updateDynamic("showPlayServicesUpdateDialog")(showPlayServicesUpdateDialog.asInstanceOf[js.Any])
     __obj.asInstanceOf[HasPlayServicesParams]
   }
+  @scala.inline
+  implicit class HasPlayServicesParamsOps[Self <: HasPlayServicesParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withShowPlayServicesUpdateDialog(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showPlayServicesUpdateDialog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowPlayServicesUpdateDialog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showPlayServicesUpdateDialog")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

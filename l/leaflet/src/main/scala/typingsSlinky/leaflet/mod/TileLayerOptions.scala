@@ -4,76 +4,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TileLayerOptions extends GridLayerOptions {
-  var accessToken: js.UndefOr[String] = js.undefined
-  var crossOrigin: js.UndefOr[CrossOrigin] = js.undefined
-  var detectRetina: js.UndefOr[Boolean] = js.undefined
-  var errorTileUrl: js.UndefOr[String] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var maxNativeZoom: js.UndefOr[Double] = js.undefined
-  var minNativeZoom: js.UndefOr[Double] = js.undefined
-  var subdomains: js.UndefOr[String | js.Array[String]] = js.undefined
-  var tms: js.UndefOr[Boolean] = js.undefined
-  var zoomOffset: js.UndefOr[Double] = js.undefined
-  var zoomReverse: js.UndefOr[Boolean] = js.undefined
+  var accessToken: js.UndefOr[String] = js.native
+  var crossOrigin: js.UndefOr[CrossOrigin] = js.native
+  var detectRetina: js.UndefOr[Boolean] = js.native
+  var errorTileUrl: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.native
+  var maxNativeZoom: js.UndefOr[Double] = js.native
+  var minNativeZoom: js.UndefOr[Double] = js.native
+  var subdomains: js.UndefOr[String | js.Array[String]] = js.native
+  var tms: js.UndefOr[Boolean] = js.native
+  var zoomOffset: js.UndefOr[Double] = js.native
+  var zoomReverse: js.UndefOr[Boolean] = js.native
 }
 
 object TileLayerOptions {
   @scala.inline
-  def apply(
-    accessToken: String = null,
-    attribution: String = null,
-    bounds: LatLngBoundsExpression = null,
-    className: String = null,
-    crossOrigin: CrossOrigin = null,
-    detectRetina: js.UndefOr[Boolean] = js.undefined,
-    errorTileUrl: String = null,
-    id: String = null,
-    keepBuffer: Int | Double = null,
-    maxNativeZoom: Int | Double = null,
-    maxZoom: Int | Double = null,
-    minNativeZoom: Int | Double = null,
-    minZoom: Int | Double = null,
-    noWrap: js.UndefOr[Boolean] = js.undefined,
-    opacity: Int | Double = null,
-    pane: String = null,
-    subdomains: String | js.Array[String] = null,
-    tileSize: Double | Point_ = null,
-    tms: js.UndefOr[Boolean] = js.undefined,
-    updateInterval: Int | Double = null,
-    updateWhenIdle: js.UndefOr[Boolean] = js.undefined,
-    updateWhenZooming: js.UndefOr[Boolean] = js.undefined,
-    zIndex: Int | Double = null,
-    zoomOffset: Int | Double = null,
-    zoomReverse: js.UndefOr[Boolean] = js.undefined
-  ): TileLayerOptions = {
+  def apply(): TileLayerOptions = {
     val __obj = js.Dynamic.literal()
-    if (accessToken != null) __obj.updateDynamic("accessToken")(accessToken.asInstanceOf[js.Any])
-    if (attribution != null) __obj.updateDynamic("attribution")(attribution.asInstanceOf[js.Any])
-    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
-    if (!js.isUndefined(detectRetina)) __obj.updateDynamic("detectRetina")(detectRetina.asInstanceOf[js.Any])
-    if (errorTileUrl != null) __obj.updateDynamic("errorTileUrl")(errorTileUrl.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (keepBuffer != null) __obj.updateDynamic("keepBuffer")(keepBuffer.asInstanceOf[js.Any])
-    if (maxNativeZoom != null) __obj.updateDynamic("maxNativeZoom")(maxNativeZoom.asInstanceOf[js.Any])
-    if (maxZoom != null) __obj.updateDynamic("maxZoom")(maxZoom.asInstanceOf[js.Any])
-    if (minNativeZoom != null) __obj.updateDynamic("minNativeZoom")(minNativeZoom.asInstanceOf[js.Any])
-    if (minZoom != null) __obj.updateDynamic("minZoom")(minZoom.asInstanceOf[js.Any])
-    if (!js.isUndefined(noWrap)) __obj.updateDynamic("noWrap")(noWrap.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (pane != null) __obj.updateDynamic("pane")(pane.asInstanceOf[js.Any])
-    if (subdomains != null) __obj.updateDynamic("subdomains")(subdomains.asInstanceOf[js.Any])
-    if (tileSize != null) __obj.updateDynamic("tileSize")(tileSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(tms)) __obj.updateDynamic("tms")(tms.asInstanceOf[js.Any])
-    if (updateInterval != null) __obj.updateDynamic("updateInterval")(updateInterval.asInstanceOf[js.Any])
-    if (!js.isUndefined(updateWhenIdle)) __obj.updateDynamic("updateWhenIdle")(updateWhenIdle.asInstanceOf[js.Any])
-    if (!js.isUndefined(updateWhenZooming)) __obj.updateDynamic("updateWhenZooming")(updateWhenZooming.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
-    if (zoomOffset != null) __obj.updateDynamic("zoomOffset")(zoomOffset.asInstanceOf[js.Any])
-    if (!js.isUndefined(zoomReverse)) __obj.updateDynamic("zoomReverse")(zoomReverse.asInstanceOf[js.Any])
     __obj.asInstanceOf[TileLayerOptions]
   }
+  @scala.inline
+  implicit class TileLayerOptionsOps[Self <: TileLayerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrossOrigin(value: CrossOrigin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrossOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDetectRetina(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detectRetina")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetectRetina: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detectRetina")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorTileUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorTileUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorTileUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorTileUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxNativeZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNativeZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxNativeZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNativeZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinNativeZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minNativeZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinNativeZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minNativeZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubdomains(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subdomains")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubdomains: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subdomains")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTms(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomReverse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomReverse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomReverse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomReverse")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,16 +22,53 @@ trait Search extends js.Object {
 
 object Search {
   @scala.inline
-  def apply(
-    Displayable: js.UndefOr[scala.Boolean] = js.undefined,
-    Facetable: js.UndefOr[scala.Boolean] = js.undefined,
-    Searchable: js.UndefOr[scala.Boolean] = js.undefined
-  ): Search = {
+  def apply(): Search = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(Displayable)) __obj.updateDynamic("Displayable")(Displayable.asInstanceOf[js.Any])
-    if (!js.isUndefined(Facetable)) __obj.updateDynamic("Facetable")(Facetable.asInstanceOf[js.Any])
-    if (!js.isUndefined(Searchable)) __obj.updateDynamic("Searchable")(Searchable.asInstanceOf[js.Any])
     __obj.asInstanceOf[Search]
   }
+  @scala.inline
+  implicit class SearchOps[Self <: Search] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisplayable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Displayable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Displayable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFacetable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Facetable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFacetable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Facetable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Searchable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Searchable")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

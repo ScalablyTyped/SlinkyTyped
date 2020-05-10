@@ -16,8 +16,21 @@ object AttackVectorDescription {
   @scala.inline
   def apply(VectorType: String): AttackVectorDescription = {
     val __obj = js.Dynamic.literal(VectorType = VectorType.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AttackVectorDescription]
   }
+  @scala.inline
+  implicit class AttackVectorDescriptionOps[Self <: AttackVectorDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVectorType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VectorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

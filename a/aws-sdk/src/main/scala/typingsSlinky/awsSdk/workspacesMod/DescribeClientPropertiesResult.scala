@@ -14,10 +14,29 @@ trait DescribeClientPropertiesResult extends js.Object {
 
 object DescribeClientPropertiesResult {
   @scala.inline
-  def apply(ClientPropertiesList: ClientPropertiesList = null): DescribeClientPropertiesResult = {
+  def apply(): DescribeClientPropertiesResult = {
     val __obj = js.Dynamic.literal()
-    if (ClientPropertiesList != null) __obj.updateDynamic("ClientPropertiesList")(ClientPropertiesList.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeClientPropertiesResult]
   }
+  @scala.inline
+  implicit class DescribeClientPropertiesResultOps[Self <: DescribeClientPropertiesResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientPropertiesList(value: ClientPropertiesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientPropertiesList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientPropertiesList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientPropertiesList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

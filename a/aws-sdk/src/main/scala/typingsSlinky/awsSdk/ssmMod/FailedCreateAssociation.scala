@@ -22,16 +22,53 @@ trait FailedCreateAssociation extends js.Object {
 
 object FailedCreateAssociation {
   @scala.inline
-  def apply(
-    Entry: CreateAssociationBatchRequestEntry = null,
-    Fault: Fault = null,
-    Message: BatchErrorMessage = null
-  ): FailedCreateAssociation = {
+  def apply(): FailedCreateAssociation = {
     val __obj = js.Dynamic.literal()
-    if (Entry != null) __obj.updateDynamic("Entry")(Entry.asInstanceOf[js.Any])
-    if (Fault != null) __obj.updateDynamic("Fault")(Fault.asInstanceOf[js.Any])
-    if (Message != null) __obj.updateDynamic("Message")(Message.asInstanceOf[js.Any])
     __obj.asInstanceOf[FailedCreateAssociation]
   }
+  @scala.inline
+  implicit class FailedCreateAssociationOps[Self <: FailedCreateAssociation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntry(value: CreateAssociationBatchRequestEntry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Entry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Entry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFault(value: Fault): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fault")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: BatchErrorMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

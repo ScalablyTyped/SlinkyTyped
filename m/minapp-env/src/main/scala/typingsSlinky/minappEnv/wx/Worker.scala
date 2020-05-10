@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Worker extends js.Object {
   /** [Worker.onMessage(function callback)](Worker.onMessage.md)
     *
     * 监听主线程/Worker 线程向当前线程发送的消息的事件。 */
   def onMessage(/** 主线程/Worker 线程向当前线程发送的消息的事件的回调函数 */
-  callback: WorkerOnMessageCallback): Unit
+  callback: WorkerOnMessageCallback): Unit = js.native
   /** [Worker.postMessage(Object message)](Worker.postMessage.md)
   *
   * 向主线程/Worker 线程发送的消息。
@@ -33,19 +34,44 @@ trait Worker extends js.Object {
   })
   ``` */
   def postMessage(/** 需要发送的消息，必须是一个可序列化的 JavaScript key-value 形式的对象。 */
-  message: js.Object): Unit
+  message: js.Object): Unit = js.native
   /** [Worker.terminate()](Worker.terminate.md)
     *
     * 结束当前 Worker 线程。仅限在主线程 worker 对象上调用。 */
-  def terminate(): Unit
+  def terminate(): Unit = js.native
 }
 
 object Worker {
   @scala.inline
   def apply(onMessage: WorkerOnMessageCallback => Unit, postMessage: js.Object => Unit, terminate: () => Unit): Worker = {
     val __obj = js.Dynamic.literal(onMessage = js.Any.fromFunction1(onMessage), postMessage = js.Any.fromFunction1(postMessage), terminate = js.Any.fromFunction0(terminate))
-  
     __obj.asInstanceOf[Worker]
   }
+  @scala.inline
+  implicit class WorkerOps[Self <: Worker] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnMessage(value: WorkerOnMessageCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMessage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPostMessage(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postMessage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTerminate(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terminate")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

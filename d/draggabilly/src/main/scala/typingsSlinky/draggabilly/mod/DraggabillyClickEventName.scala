@@ -15,16 +15,14 @@ trait DraggabillyClickEventName extends js.Object
 
 object DraggabillyClickEventName {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dragEnd: typingsSlinky.draggabilly.draggabillyStrings.dragEnd = "dragEnd".asInstanceOf[typingsSlinky.draggabilly.draggabillyStrings.dragEnd]
   @scala.inline
-  def dragEnd: typingsSlinky.draggabilly.draggabillyStrings.dragEnd = this.cast("dragEnd")
+  def dragStart: typingsSlinky.draggabilly.draggabillyStrings.dragStart = "dragStart".asInstanceOf[typingsSlinky.draggabilly.draggabillyStrings.dragStart]
   @scala.inline
-  def dragStart: typingsSlinky.draggabilly.draggabillyStrings.dragStart = this.cast("dragStart")
+  def pointerDown: typingsSlinky.draggabilly.draggabillyStrings.pointerDown = "pointerDown".asInstanceOf[typingsSlinky.draggabilly.draggabillyStrings.pointerDown]
   @scala.inline
-  def pointerDown: typingsSlinky.draggabilly.draggabillyStrings.pointerDown = this.cast("pointerDown")
+  def pointerUp: typingsSlinky.draggabilly.draggabillyStrings.pointerUp = "pointerUp".asInstanceOf[typingsSlinky.draggabilly.draggabillyStrings.pointerUp]
   @scala.inline
-  def pointerUp: typingsSlinky.draggabilly.draggabillyStrings.pointerUp = this.cast("pointerUp")
-  @scala.inline
-  def staticClick: typingsSlinky.draggabilly.draggabillyStrings.staticClick = this.cast("staticClick")
+  def staticClick: typingsSlinky.draggabilly.draggabillyStrings.staticClick = "staticClick".asInstanceOf[typingsSlinky.draggabilly.draggabillyStrings.staticClick]
 }
 

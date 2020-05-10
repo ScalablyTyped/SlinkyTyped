@@ -18,11 +18,41 @@ trait RoleUsageType extends js.Object {
 
 object RoleUsageType {
   @scala.inline
-  def apply(Region: RegionNameType = null, Resources: ArnListType = null): RoleUsageType = {
+  def apply(): RoleUsageType = {
     val __obj = js.Dynamic.literal()
-    if (Region != null) __obj.updateDynamic("Region")(Region.asInstanceOf[js.Any])
-    if (Resources != null) __obj.updateDynamic("Resources")(Resources.asInstanceOf[js.Any])
     __obj.asInstanceOf[RoleUsageType]
   }
+  @scala.inline
+  implicit class RoleUsageTypeOps[Self <: RoleUsageType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRegion(value: RegionNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResources(value: ArnListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Resources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Resources")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

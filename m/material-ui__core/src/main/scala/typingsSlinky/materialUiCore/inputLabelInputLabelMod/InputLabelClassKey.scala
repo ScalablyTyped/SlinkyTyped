@@ -21,28 +21,26 @@ trait InputLabelClassKey extends js.Object
 
 object InputLabelClassKey {
   @scala.inline
-  def animated: typingsSlinky.materialUiCore.materialUiCoreStrings.animated = this.cast("animated")
+  def animated: typingsSlinky.materialUiCore.materialUiCoreStrings.animated = "animated".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.animated]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = "disabled".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = this.cast("disabled")
+  def error: typingsSlinky.materialUiCore.materialUiCoreStrings.error = "error".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.error]
   @scala.inline
-  def error: typingsSlinky.materialUiCore.materialUiCoreStrings.error = this.cast("error")
+  def filled: typingsSlinky.materialUiCore.materialUiCoreStrings.filled = "filled".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.filled]
   @scala.inline
-  def filled: typingsSlinky.materialUiCore.materialUiCoreStrings.filled = this.cast("filled")
+  def focused: typingsSlinky.materialUiCore.materialUiCoreStrings.focused = "focused".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.focused]
   @scala.inline
-  def focused: typingsSlinky.materialUiCore.materialUiCoreStrings.focused = this.cast("focused")
+  def formControl: typingsSlinky.materialUiCore.materialUiCoreStrings.formControl = "formControl".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.formControl]
   @scala.inline
-  def formControl: typingsSlinky.materialUiCore.materialUiCoreStrings.formControl = this.cast("formControl")
+  def marginDense: typingsSlinky.materialUiCore.materialUiCoreStrings.marginDense = "marginDense".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.marginDense]
   @scala.inline
-  def marginDense: typingsSlinky.materialUiCore.materialUiCoreStrings.marginDense = this.cast("marginDense")
+  def outlined: typingsSlinky.materialUiCore.materialUiCoreStrings.outlined = "outlined".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.outlined]
   @scala.inline
-  def outlined: typingsSlinky.materialUiCore.materialUiCoreStrings.outlined = this.cast("outlined")
+  def required: typingsSlinky.materialUiCore.materialUiCoreStrings.required = "required".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.required]
   @scala.inline
-  def required: typingsSlinky.materialUiCore.materialUiCoreStrings.required = this.cast("required")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
-  @scala.inline
-  def shrink: typingsSlinky.materialUiCore.materialUiCoreStrings.shrink = this.cast("shrink")
+  def shrink: typingsSlinky.materialUiCore.materialUiCoreStrings.shrink = "shrink".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.shrink]
 }
 

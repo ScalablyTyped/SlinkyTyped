@@ -30,19 +30,71 @@ trait SetRiskConfigurationRequest extends js.Object {
 
 object SetRiskConfigurationRequest {
   @scala.inline
-  def apply(
-    UserPoolId: UserPoolIdType,
-    AccountTakeoverRiskConfiguration: AccountTakeoverRiskConfigurationType = null,
-    ClientId: ClientIdType = null,
-    CompromisedCredentialsRiskConfiguration: CompromisedCredentialsRiskConfigurationType = null,
-    RiskExceptionConfiguration: RiskExceptionConfigurationType = null
-  ): SetRiskConfigurationRequest = {
+  def apply(UserPoolId: UserPoolIdType): SetRiskConfigurationRequest = {
     val __obj = js.Dynamic.literal(UserPoolId = UserPoolId.asInstanceOf[js.Any])
-    if (AccountTakeoverRiskConfiguration != null) __obj.updateDynamic("AccountTakeoverRiskConfiguration")(AccountTakeoverRiskConfiguration.asInstanceOf[js.Any])
-    if (ClientId != null) __obj.updateDynamic("ClientId")(ClientId.asInstanceOf[js.Any])
-    if (CompromisedCredentialsRiskConfiguration != null) __obj.updateDynamic("CompromisedCredentialsRiskConfiguration")(CompromisedCredentialsRiskConfiguration.asInstanceOf[js.Any])
-    if (RiskExceptionConfiguration != null) __obj.updateDynamic("RiskExceptionConfiguration")(RiskExceptionConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetRiskConfigurationRequest]
   }
+  @scala.inline
+  implicit class SetRiskConfigurationRequestOps[Self <: SetRiskConfigurationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUserPoolId(value: UserPoolIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccountTakeoverRiskConfiguration(value: AccountTakeoverRiskConfigurationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountTakeoverRiskConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountTakeoverRiskConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountTakeoverRiskConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientId(value: ClientIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompromisedCredentialsRiskConfiguration(value: CompromisedCredentialsRiskConfigurationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompromisedCredentialsRiskConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompromisedCredentialsRiskConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompromisedCredentialsRiskConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRiskExceptionConfiguration(value: RiskExceptionConfigurationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RiskExceptionConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRiskExceptionConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RiskExceptionConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

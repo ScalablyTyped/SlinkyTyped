@@ -14,14 +14,12 @@ trait CalendarView extends js.Object
 
 object CalendarView {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def century: typingsSlinky.reactWidgets.reactWidgetsStrings.century = "century".asInstanceOf[typingsSlinky.reactWidgets.reactWidgetsStrings.century]
   @scala.inline
-  def century: typingsSlinky.reactWidgets.reactWidgetsStrings.century = this.cast("century")
+  def decade: typingsSlinky.reactWidgets.reactWidgetsStrings.decade = "decade".asInstanceOf[typingsSlinky.reactWidgets.reactWidgetsStrings.decade]
   @scala.inline
-  def decade: typingsSlinky.reactWidgets.reactWidgetsStrings.decade = this.cast("decade")
+  def month: typingsSlinky.reactWidgets.reactWidgetsStrings.month = "month".asInstanceOf[typingsSlinky.reactWidgets.reactWidgetsStrings.month]
   @scala.inline
-  def month: typingsSlinky.reactWidgets.reactWidgetsStrings.month = this.cast("month")
-  @scala.inline
-  def year: typingsSlinky.reactWidgets.reactWidgetsStrings.year = this.cast("year")
+  def year: typingsSlinky.reactWidgets.reactWidgetsStrings.year = "year".asInstanceOf[typingsSlinky.reactWidgets.reactWidgetsStrings.year]
 }
 

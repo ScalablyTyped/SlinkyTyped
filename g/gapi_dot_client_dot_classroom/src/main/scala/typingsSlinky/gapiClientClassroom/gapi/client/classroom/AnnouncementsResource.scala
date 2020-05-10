@@ -45,6 +45,7 @@ trait AnnouncementsResource extends js.Object {
     * deleted.
     * &#42; `NOT_FOUND` if no course exists with the requested ID.
     */
+  def delete(): Request_[js.Object] = js.native
   def delete(request: AnonFields): Request_[js.Object] = js.native
   /**
     * Returns an announcement.
@@ -56,6 +57,7 @@ trait AnnouncementsResource extends js.Object {
     * &#42; `INVALID_ARGUMENT` if the request is malformed.
     * &#42; `NOT_FOUND` if the requested course or announcement does not exist.
     */
+  def get(): Request_[Announcement] = js.native
   def get(request: AnonFields): Request_[Announcement] = js.native
   /**
     * Returns a list of announcements that the requester is permitted to view.
@@ -70,6 +72,7 @@ trait AnnouncementsResource extends js.Object {
     * &#42; `INVALID_ARGUMENT` if the request is malformed.
     * &#42; `NOT_FOUND` if the requested course does not exist.
     */
+  def list(): Request_[ListAnnouncementsResponse] = js.native
   def list(request: AnonAnnouncementStates): Request_[ListAnnouncementsResponse] = js.native
   def modifyAssignees(request: AnonFields, body: ModifyAnnouncementAssigneesRequest): Request_[Announcement] = js.native
   /**

@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBottom extends js.Object {
-  var bottom: js.UndefOr[Boolean] = js.undefined
-  var left: js.UndefOr[Boolean] = js.undefined
-  var right: js.UndefOr[Boolean] = js.undefined
-  var top: js.UndefOr[Boolean] = js.undefined
+  var bottom: js.UndefOr[Boolean] = js.native
+  var left: js.UndefOr[Boolean] = js.native
+  var right: js.UndefOr[Boolean] = js.native
+  var top: js.UndefOr[Boolean] = js.native
 }
 
 object AnonBottom {
   @scala.inline
-  def apply(
-    bottom: js.UndefOr[Boolean] = js.undefined,
-    left: js.UndefOr[Boolean] = js.undefined,
-    right: js.UndefOr[Boolean] = js.undefined,
-    top: js.UndefOr[Boolean] = js.undefined
-  ): AnonBottom = {
+  def apply(): AnonBottom = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bottom)) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
-    if (!js.isUndefined(left)) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (!js.isUndefined(right)) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (!js.isUndefined(top)) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBottom]
   }
+  @scala.inline
+  implicit class AnonBottomOps[Self <: AnonBottom] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBottom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeft(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRight(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,11 +18,41 @@ trait GetCrawlersResponse extends js.Object {
 
 object GetCrawlersResponse {
   @scala.inline
-  def apply(Crawlers: CrawlerList = null, NextToken: Token = null): GetCrawlersResponse = {
+  def apply(): GetCrawlersResponse = {
     val __obj = js.Dynamic.literal()
-    if (Crawlers != null) __obj.updateDynamic("Crawlers")(Crawlers.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCrawlersResponse]
   }
+  @scala.inline
+  implicit class GetCrawlersResponseOps[Self <: GetCrawlersResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCrawlers(value: CrawlerList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Crawlers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrawlers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Crawlers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: Token): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

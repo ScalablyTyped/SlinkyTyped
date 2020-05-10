@@ -4,55 +4,123 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDeviceScaleFactor extends js.Object {
   /**
     * Specify device scale factor (can be thought of as dpr).
     * @default 1
     */
-  var deviceScaleFactor: js.UndefOr[Double] = js.undefined
+  var deviceScaleFactor: js.UndefOr[Double] = js.native
   /**
     * Specifies if viewport supports touch events.
     * @default false
     */
-  var hasTouch: js.UndefOr[Boolean] = js.undefined
+  var hasTouch: js.UndefOr[Boolean] = js.native
   /**
     * page height in pixels.
     */
-  var height: js.UndefOr[Double] = js.undefined
+  var height: js.UndefOr[Double] = js.native
   /**
     * Specifies if viewport is in landscape mode.
     * @default false
     */
-  var isLandscape: js.UndefOr[Boolean] = js.undefined
+  var isLandscape: js.UndefOr[Boolean] = js.native
   /**
     * Whether the meta viewport tag is taken into account.
     * @default false
     */
-  var isMobile: js.UndefOr[Boolean] = js.undefined
+  var isMobile: js.UndefOr[Boolean] = js.native
   /**
     * page width in pixels.
     */
-  var width: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.native
 }
 
 object AnonDeviceScaleFactor {
   @scala.inline
-  def apply(
-    deviceScaleFactor: Int | Double = null,
-    hasTouch: js.UndefOr[Boolean] = js.undefined,
-    height: Int | Double = null,
-    isLandscape: js.UndefOr[Boolean] = js.undefined,
-    isMobile: js.UndefOr[Boolean] = js.undefined,
-    width: Int | Double = null
-  ): AnonDeviceScaleFactor = {
+  def apply(): AnonDeviceScaleFactor = {
     val __obj = js.Dynamic.literal()
-    if (deviceScaleFactor != null) __obj.updateDynamic("deviceScaleFactor")(deviceScaleFactor.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasTouch)) __obj.updateDynamic("hasTouch")(hasTouch.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(isLandscape)) __obj.updateDynamic("isLandscape")(isLandscape.asInstanceOf[js.Any])
-    if (!js.isUndefined(isMobile)) __obj.updateDynamic("isMobile")(isMobile.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDeviceScaleFactor]
   }
+  @scala.inline
+  implicit class AnonDeviceScaleFactorOps[Self <: AnonDeviceScaleFactor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceScaleFactor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceScaleFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceScaleFactor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceScaleFactor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasTouch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasTouch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasTouch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasTouch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsLandscape(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLandscape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsLandscape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLandscape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsMobile(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isMobile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsMobile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isMobile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

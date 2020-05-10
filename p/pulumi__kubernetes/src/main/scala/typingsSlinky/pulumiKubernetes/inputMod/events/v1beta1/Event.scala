@@ -13,123 +13,296 @@ import scala.scalajs.js.annotation._
   * Event is a report of an event somewhere in the cluster. It generally denotes some state
   * change in the system.
   */
+@js.native
 trait Event extends js.Object {
   /**
     * What action was taken/failed regarding to the regarding object.
     */
-  var action: js.UndefOr[Input[String]] = js.undefined
+  var action: js.UndefOr[Input[String]] = js.native
   /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should
     * convert recognized schemas to the latest internal value, and may reject unrecognized
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[eventsDotk8sDotioSlashv1beta1]] = js.undefined
+  var apiVersion: js.UndefOr[Input[eventsDotk8sDotioSlashv1beta1]] = js.native
   /**
     * Deprecated field assuring backward compatibility with core.v1 Event type
     */
-  var deprecatedCount: js.UndefOr[Input[Double]] = js.undefined
+  var deprecatedCount: js.UndefOr[Input[Double]] = js.native
   /**
     * Deprecated field assuring backward compatibility with core.v1 Event type
     */
-  var deprecatedFirstTimestamp: js.UndefOr[Input[String]] = js.undefined
+  var deprecatedFirstTimestamp: js.UndefOr[Input[String]] = js.native
   /**
     * Deprecated field assuring backward compatibility with core.v1 Event type
     */
-  var deprecatedLastTimestamp: js.UndefOr[Input[String]] = js.undefined
+  var deprecatedLastTimestamp: js.UndefOr[Input[String]] = js.native
   /**
     * Deprecated field assuring backward compatibility with core.v1 Event type
     */
-  var deprecatedSource: js.UndefOr[Input[EventSource]] = js.undefined
+  var deprecatedSource: js.UndefOr[Input[EventSource]] = js.native
   /**
     * Required. Time when this Event was first observed.
     */
-  var eventTime: Input[String]
+  var eventTime: Input[String] = js.native
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
     * CamelCase. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-  var kind: js.UndefOr[Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.Event]] = js.undefined
-  var metadata: js.UndefOr[Input[ObjectMeta]] = js.undefined
+  var kind: js.UndefOr[Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.Event]] = js.native
+  var metadata: js.UndefOr[Input[ObjectMeta]] = js.native
   /**
     * Optional. A human-readable description of the status of this operation. Maximal length of
     * the note is 1kB, but libraries should be prepared to handle values up to 64kB.
     */
-  var note: js.UndefOr[Input[String]] = js.undefined
+  var note: js.UndefOr[Input[String]] = js.native
   /**
     * Why the action was taken.
     */
-  var reason: js.UndefOr[Input[String]] = js.undefined
+  var reason: js.UndefOr[Input[String]] = js.native
   /**
     * The object this Event is about. In most cases it's an Object reporting controller
     * implements. E.g. ReplicaSetController implements ReplicaSets and this event is emitted
     * because it acts on some changes in a ReplicaSet object.
     */
-  var regarding: js.UndefOr[Input[ObjectReference]] = js.undefined
+  var regarding: js.UndefOr[Input[ObjectReference]] = js.native
   /**
     * Optional secondary object for more complex actions. E.g. when regarding object triggers a
     * creation or deletion of related object.
     */
-  var related: js.UndefOr[Input[ObjectReference]] = js.undefined
+  var related: js.UndefOr[Input[ObjectReference]] = js.native
   /**
     * Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
     */
-  var reportingController: js.UndefOr[Input[String]] = js.undefined
+  var reportingController: js.UndefOr[Input[String]] = js.native
   /**
     * ID of the controller instance, e.g. `kubelet-xyzf`.
     */
-  var reportingInstance: js.UndefOr[Input[String]] = js.undefined
+  var reportingInstance: js.UndefOr[Input[String]] = js.native
   /**
     * Data about the Event series this event represents or nil if it's a singleton Event.
     */
-  var series: js.UndefOr[Input[EventSeries]] = js.undefined
+  var series: js.UndefOr[Input[EventSeries]] = js.native
   /**
     * Type of this event (Normal, Warning), new types could be added in the future.
     */
-  var `type`: js.UndefOr[Input[String]] = js.undefined
+  var `type`: js.UndefOr[Input[String]] = js.native
 }
 
 object Event {
   @scala.inline
-  def apply(
-    eventTime: Input[String],
-    action: Input[String] = null,
-    apiVersion: Input[eventsDotk8sDotioSlashv1beta1] = null,
-    deprecatedCount: Input[Double] = null,
-    deprecatedFirstTimestamp: Input[String] = null,
-    deprecatedLastTimestamp: Input[String] = null,
-    deprecatedSource: Input[EventSource] = null,
-    kind: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.Event] = null,
-    metadata: Input[ObjectMeta] = null,
-    note: Input[String] = null,
-    reason: Input[String] = null,
-    regarding: Input[ObjectReference] = null,
-    related: Input[ObjectReference] = null,
-    reportingController: Input[String] = null,
-    reportingInstance: Input[String] = null,
-    series: Input[EventSeries] = null,
-    `type`: Input[String] = null
-  ): Event = {
+  def apply(eventTime: Input[String]): Event = {
     val __obj = js.Dynamic.literal(eventTime = eventTime.asInstanceOf[js.Any])
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (apiVersion != null) __obj.updateDynamic("apiVersion")(apiVersion.asInstanceOf[js.Any])
-    if (deprecatedCount != null) __obj.updateDynamic("deprecatedCount")(deprecatedCount.asInstanceOf[js.Any])
-    if (deprecatedFirstTimestamp != null) __obj.updateDynamic("deprecatedFirstTimestamp")(deprecatedFirstTimestamp.asInstanceOf[js.Any])
-    if (deprecatedLastTimestamp != null) __obj.updateDynamic("deprecatedLastTimestamp")(deprecatedLastTimestamp.asInstanceOf[js.Any])
-    if (deprecatedSource != null) __obj.updateDynamic("deprecatedSource")(deprecatedSource.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (note != null) __obj.updateDynamic("note")(note.asInstanceOf[js.Any])
-    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
-    if (regarding != null) __obj.updateDynamic("regarding")(regarding.asInstanceOf[js.Any])
-    if (related != null) __obj.updateDynamic("related")(related.asInstanceOf[js.Any])
-    if (reportingController != null) __obj.updateDynamic("reportingController")(reportingController.asInstanceOf[js.Any])
-    if (reportingInstance != null) __obj.updateDynamic("reportingInstance")(reportingInstance.asInstanceOf[js.Any])
-    if (series != null) __obj.updateDynamic("series")(series.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Event]
   }
+  @scala.inline
+  implicit class EventOps[Self <: Event] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventTime(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAction(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApiVersion(value: Input[eventsDotk8sDotioSlashv1beta1]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApiVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeprecatedCount(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecatedCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeprecatedCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecatedCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeprecatedFirstTimestamp(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecatedFirstTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeprecatedFirstTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecatedFirstTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeprecatedLastTimestamp(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecatedLastTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeprecatedLastTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecatedLastTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeprecatedSource(value: Input[EventSource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecatedSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeprecatedSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecatedSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.Event]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: Input[ObjectMeta]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNote(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNote: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReason(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegarding(value: Input[ObjectReference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regarding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegarding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regarding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelated(value: Input[ObjectReference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("related")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("related")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportingController(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportingController")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportingController: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportingController")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportingInstance(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportingInstance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportingInstance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportingInstance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeries(value: Input[EventSeries]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

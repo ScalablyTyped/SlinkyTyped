@@ -21,91 +21,307 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GaxiosOptions extends js.Object {
   /**
     * Optional method to override making the actual HTTP request. Useful
     * for writing tests.
     */
-  var adapter: js.UndefOr[js.Function1[/* options */ GaxiosOptions, GaxiosPromise[_]]] = js.undefined
-  var agent: js.UndefOr[Agent] = js.undefined
-  var baseURL: js.UndefOr[String] = js.undefined
-  var baseUrl: js.UndefOr[String] = js.undefined
-  var body: js.UndefOr[js.Any] = js.undefined
-  var data: js.UndefOr[js.Any] = js.undefined
-  var follow: js.UndefOr[Double] = js.undefined
-  var headers: js.UndefOr[Headers] = js.undefined
+  var adapter: js.UndefOr[js.Function1[/* options */ GaxiosOptions, GaxiosPromise[_]]] = js.native
+  var agent: js.UndefOr[Agent] = js.native
+  var baseURL: js.UndefOr[String] = js.native
+  var baseUrl: js.UndefOr[String] = js.native
+  var body: js.UndefOr[js.Any] = js.native
+  var data: js.UndefOr[js.Any] = js.native
+  var follow: js.UndefOr[Double] = js.native
+  var headers: js.UndefOr[Headers] = js.native
   /**
     * The maximum size of the http response content in bytes allowed.
     */
-  var maxContentLength: js.UndefOr[Double] = js.undefined
+  var maxContentLength: js.UndefOr[Double] = js.native
   /**
     * The maximum number of redirects to follow. Defaults to 20.
     */
-  var maxRedirects: js.UndefOr[Double] = js.undefined
-  var method: js.UndefOr[GET | HEAD | POST | DELETE | PUT | CONNECT | OPTIONS | TRACE | PATCH] = js.undefined
-  var onUploadProgress: js.UndefOr[js.Function1[/* progressEvent */ js.Any, Unit]] = js.undefined
-  var params: js.UndefOr[js.Any] = js.undefined
-  var paramsSerializer: js.UndefOr[js.Function1[/* params */ StringDictionary[String | Double], String]] = js.undefined
-  var responseType: js.UndefOr[arraybuffer | blob | json | text | stream] = js.undefined
-  var retry: js.UndefOr[Boolean] = js.undefined
-  var retryConfig: js.UndefOr[RetryConfig] = js.undefined
-  var signal: js.UndefOr[AbortSignal] = js.undefined
-  var size: js.UndefOr[Double] = js.undefined
-  var timeout: js.UndefOr[Double] = js.undefined
-  var url: js.UndefOr[String] = js.undefined
-  var validateStatus: js.UndefOr[js.Function1[/* status */ Double, Boolean]] = js.undefined
+  var maxRedirects: js.UndefOr[Double] = js.native
+  var method: js.UndefOr[GET | HEAD | POST | DELETE | PUT | CONNECT | OPTIONS | TRACE | PATCH] = js.native
+  var onUploadProgress: js.UndefOr[js.Function1[/* progressEvent */ js.Any, Unit]] = js.native
+  var params: js.UndefOr[js.Any] = js.native
+  var paramsSerializer: js.UndefOr[js.Function1[/* params */ StringDictionary[String | Double], String]] = js.native
+  var responseType: js.UndefOr[arraybuffer | blob | json | text | stream] = js.native
+  var retry: js.UndefOr[Boolean] = js.native
+  var retryConfig: js.UndefOr[RetryConfig] = js.native
+  var signal: js.UndefOr[AbortSignal] = js.native
+  var size: js.UndefOr[Double] = js.native
+  var timeout: js.UndefOr[Double] = js.native
+  var url: js.UndefOr[String] = js.native
+  var validateStatus: js.UndefOr[js.Function1[/* status */ Double, Boolean]] = js.native
 }
 
 object GaxiosOptions {
   @scala.inline
-  def apply(
-    adapter: /* options */ GaxiosOptions => GaxiosPromise[_] = null,
-    agent: Agent = null,
-    baseURL: String = null,
-    baseUrl: String = null,
-    body: js.Any = null,
-    data: js.Any = null,
-    follow: Int | Double = null,
-    headers: Headers = null,
-    maxContentLength: Int | Double = null,
-    maxRedirects: Int | Double = null,
-    method: GET | HEAD | POST | DELETE | PUT | CONNECT | OPTIONS | TRACE | PATCH = null,
-    onUploadProgress: /* progressEvent */ js.Any => Unit = null,
-    params: js.Any = null,
-    paramsSerializer: /* params */ StringDictionary[String | Double] => String = null,
-    responseType: arraybuffer | blob | json | text | stream = null,
-    retry: js.UndefOr[Boolean] = js.undefined,
-    retryConfig: RetryConfig = null,
-    signal: AbortSignal = null,
-    size: Int | Double = null,
-    timeout: Int | Double = null,
-    url: String = null,
-    validateStatus: /* status */ Double => Boolean = null
-  ): GaxiosOptions = {
+  def apply(): GaxiosOptions = {
     val __obj = js.Dynamic.literal()
-    if (adapter != null) __obj.updateDynamic("adapter")(js.Any.fromFunction1(adapter))
-    if (agent != null) __obj.updateDynamic("agent")(agent.asInstanceOf[js.Any])
-    if (baseURL != null) __obj.updateDynamic("baseURL")(baseURL.asInstanceOf[js.Any])
-    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (follow != null) __obj.updateDynamic("follow")(follow.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (maxContentLength != null) __obj.updateDynamic("maxContentLength")(maxContentLength.asInstanceOf[js.Any])
-    if (maxRedirects != null) __obj.updateDynamic("maxRedirects")(maxRedirects.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (onUploadProgress != null) __obj.updateDynamic("onUploadProgress")(js.Any.fromFunction1(onUploadProgress))
-    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
-    if (paramsSerializer != null) __obj.updateDynamic("paramsSerializer")(js.Any.fromFunction1(paramsSerializer))
-    if (responseType != null) __obj.updateDynamic("responseType")(responseType.asInstanceOf[js.Any])
-    if (!js.isUndefined(retry)) __obj.updateDynamic("retry")(retry.asInstanceOf[js.Any])
-    if (retryConfig != null) __obj.updateDynamic("retryConfig")(retryConfig.asInstanceOf[js.Any])
-    if (signal != null) __obj.updateDynamic("signal")(signal.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (validateStatus != null) __obj.updateDynamic("validateStatus")(js.Any.fromFunction1(validateStatus))
     __obj.asInstanceOf[GaxiosOptions]
   }
+  @scala.inline
+  implicit class GaxiosOptionsOps[Self <: GaxiosOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdapter(value: /* options */ GaxiosOptions => GaxiosPromise[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adapter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAdapter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adapter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAgent(value: Agent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseURL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBody(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFollow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("follow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFollow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("follow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: Headers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxContentLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxContentLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxContentLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxContentLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRedirects(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRedirects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRedirects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRedirects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: GET | HEAD | POST | DELETE | PUT | CONNECT | OPTIONS | TRACE | PATCH): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnUploadProgress(value: /* progressEvent */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUploadProgress")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnUploadProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUploadProgress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParams(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParamsSerializer(value: /* params */ StringDictionary[String | Double] => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paramsSerializer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutParamsSerializer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paramsSerializer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseType(value: arraybuffer | blob | json | text | stream): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetry(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetryConfig(value: RetryConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetryConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignal(value: AbortSignal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidateStatus(value: /* status */ Double => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validateStatus")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutValidateStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validateStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

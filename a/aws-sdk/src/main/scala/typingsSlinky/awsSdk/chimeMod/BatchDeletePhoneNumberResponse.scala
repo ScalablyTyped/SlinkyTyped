@@ -14,10 +14,29 @@ trait BatchDeletePhoneNumberResponse extends js.Object {
 
 object BatchDeletePhoneNumberResponse {
   @scala.inline
-  def apply(PhoneNumberErrors: PhoneNumberErrorList = null): BatchDeletePhoneNumberResponse = {
+  def apply(): BatchDeletePhoneNumberResponse = {
     val __obj = js.Dynamic.literal()
-    if (PhoneNumberErrors != null) __obj.updateDynamic("PhoneNumberErrors")(PhoneNumberErrors.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchDeletePhoneNumberResponse]
   }
+  @scala.inline
+  implicit class BatchDeletePhoneNumberResponseOps[Self <: BatchDeletePhoneNumberResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPhoneNumberErrors(value: PhoneNumberErrorList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumberErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhoneNumberErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumberErrors")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

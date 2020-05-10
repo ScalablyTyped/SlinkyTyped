@@ -4,48 +4,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ToolbarOptions extends js.Object {
-  var flipHorizontal: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.undefined
-  var flipVertical: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.undefined
-  var next: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.undefined
-  var oneToOne: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.undefined
-  var play: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.undefined
-  var prev: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.undefined
-  var reset: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.undefined
-  var rotateLeft: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.undefined
-  var rotateRight: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.undefined
-  var zoomIn: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.undefined
-  var zoomOut: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.undefined
+  var flipHorizontal: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.native
+  var flipVertical: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.native
+  var next: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.native
+  var oneToOne: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.native
+  var play: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.native
+  var prev: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.native
+  var reset: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.native
+  var rotateLeft: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.native
+  var rotateRight: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.native
+  var zoomIn: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.native
+  var zoomOut: js.UndefOr[Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions] = js.native
 }
 
 object ToolbarOptions {
   @scala.inline
-  def apply(
-    flipHorizontal: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions = null,
-    flipVertical: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions = null,
-    next: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions = null,
-    oneToOne: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions = null,
-    play: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions = null,
-    prev: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions = null,
-    reset: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions = null,
-    rotateLeft: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions = null,
-    rotateRight: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions = null,
-    zoomIn: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions = null,
-    zoomOut: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions = null
-  ): ToolbarOptions = {
+  def apply(): ToolbarOptions = {
     val __obj = js.Dynamic.literal()
-    if (flipHorizontal != null) __obj.updateDynamic("flipHorizontal")(flipHorizontal.asInstanceOf[js.Any])
-    if (flipVertical != null) __obj.updateDynamic("flipVertical")(flipVertical.asInstanceOf[js.Any])
-    if (next != null) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
-    if (oneToOne != null) __obj.updateDynamic("oneToOne")(oneToOne.asInstanceOf[js.Any])
-    if (play != null) __obj.updateDynamic("play")(play.asInstanceOf[js.Any])
-    if (prev != null) __obj.updateDynamic("prev")(prev.asInstanceOf[js.Any])
-    if (reset != null) __obj.updateDynamic("reset")(reset.asInstanceOf[js.Any])
-    if (rotateLeft != null) __obj.updateDynamic("rotateLeft")(rotateLeft.asInstanceOf[js.Any])
-    if (rotateRight != null) __obj.updateDynamic("rotateRight")(rotateRight.asInstanceOf[js.Any])
-    if (zoomIn != null) __obj.updateDynamic("zoomIn")(zoomIn.asInstanceOf[js.Any])
-    if (zoomOut != null) __obj.updateDynamic("zoomOut")(zoomOut.asInstanceOf[js.Any])
     __obj.asInstanceOf[ToolbarOptions]
   }
+  @scala.inline
+  implicit class ToolbarOptionsOps[Self <: ToolbarOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFlipHorizontal(value: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flipHorizontal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlipHorizontal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flipHorizontal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlipVertical(value: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flipVertical")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlipVertical: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flipVertical")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNext(value: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOneToOne(value: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oneToOne")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOneToOne: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oneToOne")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlay(value: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("play")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("play")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrev(value: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prev")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrev: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prev")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReset(value: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotateLeft(value: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotateLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotateRight(value: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotateRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomIn(value: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomIn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomOut(value: Boolean | Visibility | ToolbarButtonSize | js.Function | ToolbarButtonOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomOut")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

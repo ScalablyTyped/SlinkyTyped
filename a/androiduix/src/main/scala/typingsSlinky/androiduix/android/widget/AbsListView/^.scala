@@ -3,7 +3,7 @@ package typingsSlinky.androiduix.android.widget.AbsListView
 import typingsSlinky.androiduix.android.graphics.Rect
 import typingsSlinky.androiduix.android.view.View
 import typingsSlinky.androiduix.android.view.animation.Interpolator
-import typingsSlinky.androiduix.java.util.ArrayList
+import typingsSlinky.androiduix.java_.util.ArrayList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -6,13 +6,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IconSymbol3DLayerResource extends Object {
   /**
     * The URL or data URI for the image. If the external resource is an SVG then the SVG root node must have a set width and height, otherwise it will not render at the correct size. SVG is not supported in IE11.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-IconSymbol3DLayer.html#resource)
     */
-  var href: js.UndefOr[String] = js.undefined
+  var href: js.UndefOr[String] = js.native
   /**
     * Uses a built-in shape. See the table below for list of possible values.
     *
@@ -28,7 +29,7 @@ trait IconSymbol3DLayerResource extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-IconSymbol3DLayer.html#resource)
     */
-  var primitive: js.UndefOr[String] = js.undefined
+  var primitive: js.UndefOr[String] = js.native
 }
 
 object IconSymbol3DLayerResource {
@@ -36,14 +37,42 @@ object IconSymbol3DLayerResource {
   def apply(
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
-    propertyIsEnumerable: PropertyKey => Boolean,
-    href: String = null,
-    primitive: String = null
+    propertyIsEnumerable: PropertyKey => Boolean
   ): IconSymbol3DLayerResource = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
-    if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])
-    if (primitive != null) __obj.updateDynamic("primitive")(primitive.asInstanceOf[js.Any])
     __obj.asInstanceOf[IconSymbol3DLayerResource]
   }
+  @scala.inline
+  implicit class IconSymbol3DLayerResourceOps[Self <: IconSymbol3DLayerResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHref(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHref: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimitive(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primitive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimitive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primitive")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,12 +1,12 @@
 package typingsSlinky.reactDates.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.ClassicComponentClass
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("react-dates", "SingleDatePicker")
 @js.native
-object SingleDatePicker extends TopLevel[ClassicComponentClass[SingleDatePickerShape]]
+object SingleDatePicker extends TopLevel[ReactComponentClass[SingleDatePickerShape]]
 

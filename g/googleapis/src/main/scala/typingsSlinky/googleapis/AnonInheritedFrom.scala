@@ -14,18 +14,65 @@ trait AnonInheritedFrom extends js.Object {
 
 object AnonInheritedFrom {
   @scala.inline
-  def apply(
-    inherited: js.UndefOr[Boolean] = js.undefined,
-    inheritedFrom: String = null,
-    role: String = null,
-    teamDrivePermissionType: String = null
-  ): AnonInheritedFrom = {
+  def apply(): AnonInheritedFrom = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(inherited)) __obj.updateDynamic("inherited")(inherited.asInstanceOf[js.Any])
-    if (inheritedFrom != null) __obj.updateDynamic("inheritedFrom")(inheritedFrom.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (teamDrivePermissionType != null) __obj.updateDynamic("teamDrivePermissionType")(teamDrivePermissionType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonInheritedFrom]
   }
+  @scala.inline
+  implicit class AnonInheritedFromOps[Self <: AnonInheritedFrom] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInherited(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inherited")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInherited: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inherited")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInheritedFrom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inheritedFrom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInheritedFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inheritedFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRole(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTeamDrivePermissionType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teamDrivePermissionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTeamDrivePermissionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teamDrivePermissionType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

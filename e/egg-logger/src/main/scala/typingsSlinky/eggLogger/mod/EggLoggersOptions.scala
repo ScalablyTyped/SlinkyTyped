@@ -7,22 +7,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EggLoggersOptions extends js.Object {
-  var agentLogName: String
-  var appLogName: String
-  var buffer: js.UndefOr[Boolean] = js.undefined
+  var agentLogName: String = js.native
+  var appLogName: String = js.native
+  var buffer: js.UndefOr[Boolean] = js.native
   // whether write error logger to common-error.log, `duplicate` / `redirect` / `ignore`, default to `duplicate`
-  var concentrateError: js.UndefOr[duplicate | redirect | ignore] = js.undefined
-  var consoleLevel: js.UndefOr[LoggerLevel] = js.undefined
-  var coreLogName: String
-  var dir: String
-  var encoding: js.UndefOr[String] = js.undefined
-  var env: js.UndefOr[String] = js.undefined
-  var eol: js.UndefOr[String] = js.undefined
-  var errorLogName: String
-  var level: js.UndefOr[LoggerLevel] = js.undefined
-  var outputJSON: js.UndefOr[Boolean] = js.undefined
-  var `type`: String
+  var concentrateError: js.UndefOr[duplicate | redirect | ignore] = js.native
+  var consoleLevel: js.UndefOr[LoggerLevel] = js.native
+  var coreLogName: String = js.native
+  var dir: String = js.native
+  var encoding: js.UndefOr[String] = js.native
+  var env: js.UndefOr[String] = js.native
+  var eol: js.UndefOr[String] = js.native
+  var errorLogName: String = js.native
+  var level: js.UndefOr[LoggerLevel] = js.native
+  var outputJSON: js.UndefOr[Boolean] = js.native
+  var `type`: String = js.native
 }
 
 object EggLoggersOptions {
@@ -33,27 +34,151 @@ object EggLoggersOptions {
     coreLogName: String,
     dir: String,
     errorLogName: String,
-    `type`: String,
-    buffer: js.UndefOr[Boolean] = js.undefined,
-    concentrateError: duplicate | redirect | ignore = null,
-    consoleLevel: LoggerLevel = null,
-    encoding: String = null,
-    env: String = null,
-    eol: String = null,
-    level: LoggerLevel = null,
-    outputJSON: js.UndefOr[Boolean] = js.undefined
+    `type`: String
   ): EggLoggersOptions = {
     val __obj = js.Dynamic.literal(agentLogName = agentLogName.asInstanceOf[js.Any], appLogName = appLogName.asInstanceOf[js.Any], coreLogName = coreLogName.asInstanceOf[js.Any], dir = dir.asInstanceOf[js.Any], errorLogName = errorLogName.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(buffer)) __obj.updateDynamic("buffer")(buffer.asInstanceOf[js.Any])
-    if (concentrateError != null) __obj.updateDynamic("concentrateError")(concentrateError.asInstanceOf[js.Any])
-    if (consoleLevel != null) __obj.updateDynamic("consoleLevel")(consoleLevel.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
-    if (eol != null) __obj.updateDynamic("eol")(eol.asInstanceOf[js.Any])
-    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
-    if (!js.isUndefined(outputJSON)) __obj.updateDynamic("outputJSON")(outputJSON.asInstanceOf[js.Any])
     __obj.asInstanceOf[EggLoggersOptions]
   }
+  @scala.inline
+  implicit class EggLoggersOptionsOps[Self <: EggLoggersOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAgentLogName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentLogName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppLogName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appLogName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCoreLogName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreLogName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDir(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withErrorLogName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorLogName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBuffer(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuffer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConcentrateError(value: duplicate | redirect | ignore): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("concentrateError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConcentrateError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("concentrateError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConsoleLevel(value: LoggerLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("consoleLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConsoleLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("consoleLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncoding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnv(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnv: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevel(value: LoggerLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputJSON(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputJSON")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputJSON: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputJSON")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

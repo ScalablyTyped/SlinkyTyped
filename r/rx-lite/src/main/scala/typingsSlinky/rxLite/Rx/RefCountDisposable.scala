@@ -10,8 +10,6 @@ import scala.scalajs.js.annotation._
 class RefCountDisposable protected () extends IDisposable {
   def this(disposable: IDisposable) = this()
   var isDisposed: Boolean = js.native
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
   def getDisposable(): IDisposable = js.native
 }
 

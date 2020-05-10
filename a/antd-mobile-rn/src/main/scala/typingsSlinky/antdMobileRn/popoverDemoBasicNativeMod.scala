@@ -1,7 +1,5 @@
 package typingsSlinky.antdMobileRn
 
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.Popover
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.`Popover example`
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +19,7 @@ object popoverDemoBasicNativeMod extends js.Object {
     def this(props: js.Any) = this()
   }
   
-  val description: `Popover example` = js.native
-  val title: Popover = js.native
+  val description: /* "Popover example" */ String = js.native
+  val title: /* "Popover" */ String = js.native
 }
 

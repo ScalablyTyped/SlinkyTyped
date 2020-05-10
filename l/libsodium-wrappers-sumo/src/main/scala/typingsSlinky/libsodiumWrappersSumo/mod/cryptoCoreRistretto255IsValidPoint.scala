@@ -1,6 +1,5 @@
 package typingsSlinky.libsodiumWrappersSumo.mod
 
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object cryptoCoreRistretto255IsValidPoint extends js.Object {
   def apply(point: String): Boolean = js.native
-  def apply(point: Uint8Array): Boolean = js.native
+  def apply(point: js.typedarray.Uint8Array): Boolean = js.native
 }
 

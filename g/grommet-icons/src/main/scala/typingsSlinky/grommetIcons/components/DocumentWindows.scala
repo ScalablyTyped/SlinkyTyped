@@ -1,15 +1,18 @@
 package typingsSlinky.grommetIcons.components
 
+import org.scalajs.dom.raw.SVGSVGElement
+import typingsSlinky.grommetIcons.iconsMod.IconProps
+import typingsSlinky.react.mod.SVGProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DocumentWindows
-  extends `SharedApply_<intersection>_2028676135`[typingsSlinky.grommetIcons.mod.DocumentWindows] {
+object DocumentWindows {
   @JSImport("grommet-icons", "DocumentWindows")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.DocumentWindows] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.DocumentWindows](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DocumentWindows.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.DocumentWindows] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.DocumentWindows](js.Array(this.component, js.Dictionary.empty))()
 }
 

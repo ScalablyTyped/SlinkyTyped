@@ -1,41 +1,44 @@
 package typingsSlinky.materialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.propTypes.tooltipHorizontal
 import typingsSlinky.materialUi.MaterialUI.propTypes.vertical
 import typingsSlinky.materialUi.tooltipMod.TooltipProps
 import typingsSlinky.materialUi.tooltipMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tooltip
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Tooltip {
   @JSImport("material-ui/internal/Tooltip", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    label: js.Any,
-    horizontalPosition: tooltipHorizontal = null,
-    show: js.UndefOr[Boolean] = js.undefined,
-    touch: js.UndefOr[Boolean] = js.undefined,
-    verticalPosition: vertical = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(label = label.asInstanceOf[js.Any])
-    if (horizontalPosition != null) __obj.updateDynamic("horizontalPosition")(horizontalPosition.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (!js.isUndefined(touch)) __obj.updateDynamic("touch")(touch.asInstanceOf[js.Any])
-    if (verticalPosition != null) __obj.updateDynamic("verticalPosition")(verticalPosition.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def horizontalPosition(value: tooltipHorizontal): this.type = set("horizontalPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def show(value: Boolean): this.type = set("show", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def touch(value: Boolean): this.type = set("touch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalPosition(value: vertical): this.type = set("verticalPosition", value.asInstanceOf[js.Any])
   }
-  type Props = TooltipProps
+  
+  def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(label: js.Any): Builder = {
+    val __props = js.Dynamic.literal(label = label.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TooltipProps]))
+  }
 }
 

@@ -22,10 +22,41 @@ trait DisassociateNodeRequest extends js.Object {
 
 object DisassociateNodeRequest {
   @scala.inline
-  def apply(NodeName: NodeName, ServerName: ServerName, EngineAttributes: EngineAttributes = null): DisassociateNodeRequest = {
+  def apply(NodeName: NodeName, ServerName: ServerName): DisassociateNodeRequest = {
     val __obj = js.Dynamic.literal(NodeName = NodeName.asInstanceOf[js.Any], ServerName = ServerName.asInstanceOf[js.Any])
-    if (EngineAttributes != null) __obj.updateDynamic("EngineAttributes")(EngineAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisassociateNodeRequest]
   }
+  @scala.inline
+  implicit class DisassociateNodeRequestOps[Self <: DisassociateNodeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNodeName(value: NodeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServerName(value: ServerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEngineAttributes(value: EngineAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngineAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineAttributes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

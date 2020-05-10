@@ -9,54 +9,192 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined react-native-elements.react-native-elements.RecursivePartial<std.Partial<react-native-elements.react-native-elements.TooltipProps>> */
+@js.native
 trait RecursivePartialPartialTo extends js.Object {
-  var backgroundColor: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.undefined
-  var containerStyle: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]] = js.undefined
-  var height: js.UndefOr[RecursivePartial[js.UndefOr[Double]]] = js.undefined
-  var highlightColor: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.undefined
-  var onClose: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.undefined
-  var onOpen: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.undefined
-  var overlayColor: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.undefined
-  var pointerColor: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.undefined
-  var popover: js.UndefOr[RecursivePartial[js.UndefOr[ReactElement]]] = js.undefined
-  var toggleOnPress: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.undefined
-  var width: js.UndefOr[RecursivePartial[js.UndefOr[Double]]] = js.undefined
-  var withOverlay: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.undefined
-  var withPointer: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.undefined
+  var backgroundColor: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.native
+  var containerStyle: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]] = js.native
+  var height: js.UndefOr[RecursivePartial[js.UndefOr[Double]]] = js.native
+  var highlightColor: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.native
+  var onClose: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.native
+  var onOpen: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.native
+  var overlayColor: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.native
+  var pointerColor: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.native
+  var popover: js.UndefOr[RecursivePartial[js.UndefOr[ReactElement]]] = js.native
+  var toggleOnPress: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
+  var width: js.UndefOr[RecursivePartial[js.UndefOr[Double]]] = js.native
+  var withOverlay: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
+  var withPointer: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
 }
 
 object RecursivePartialPartialTo {
   @scala.inline
-  def apply(
-    backgroundColor: RecursivePartial[js.UndefOr[String]] = null,
-    containerStyle: RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]] = null,
-    height: RecursivePartial[js.UndefOr[Double]] = null,
-    highlightColor: RecursivePartial[js.UndefOr[String]] = null,
-    onClose: RecursivePartial[js.UndefOr[js.Function0[Unit]]] = null,
-    onOpen: RecursivePartial[js.UndefOr[js.Function0[Unit]]] = null,
-    overlayColor: RecursivePartial[js.UndefOr[String]] = null,
-    pointerColor: RecursivePartial[js.UndefOr[String]] = null,
-    popover: RecursivePartial[js.UndefOr[ReactElement]] = null,
-    toggleOnPress: RecursivePartial[js.UndefOr[Boolean]] = null,
-    width: RecursivePartial[js.UndefOr[Double]] = null,
-    withOverlay: RecursivePartial[js.UndefOr[Boolean]] = null,
-    withPointer: RecursivePartial[js.UndefOr[Boolean]] = null
-  ): RecursivePartialPartialTo = {
+  def apply(): RecursivePartialPartialTo = {
     val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (highlightColor != null) __obj.updateDynamic("highlightColor")(highlightColor.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(onClose.asInstanceOf[js.Any])
-    if (onOpen != null) __obj.updateDynamic("onOpen")(onOpen.asInstanceOf[js.Any])
-    if (overlayColor != null) __obj.updateDynamic("overlayColor")(overlayColor.asInstanceOf[js.Any])
-    if (pointerColor != null) __obj.updateDynamic("pointerColor")(pointerColor.asInstanceOf[js.Any])
-    if (popover != null) __obj.updateDynamic("popover")(popover.asInstanceOf[js.Any])
-    if (toggleOnPress != null) __obj.updateDynamic("toggleOnPress")(toggleOnPress.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (withOverlay != null) __obj.updateDynamic("withOverlay")(withOverlay.asInstanceOf[js.Any])
-    if (withPointer != null) __obj.updateDynamic("withPointer")(withPointer.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecursivePartialPartialTo]
   }
+  @scala.inline
+  implicit class RecursivePartialPartialToOps[Self <: RecursivePartialPartialTo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundColor(value: RecursivePartial[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerStyle(value: RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: RecursivePartial[js.UndefOr[Double]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighlightColor(value: RecursivePartial[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlightColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClose(value: RecursivePartial[js.UndefOr[js.Function0[Unit]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOpen(value: RecursivePartial[js.UndefOr[js.Function0[Unit]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlayColor(value: RecursivePartial[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlayColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointerColor(value: RecursivePartial[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointerColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopover(value: RecursivePartial[js.UndefOr[ReactElement]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggleOnPress(value: RecursivePartial[js.UndefOr[Boolean]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleOnPress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggleOnPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleOnPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: RecursivePartial[js.UndefOr[Double]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWithOverlay(value: RecursivePartial[js.UndefOr[Boolean]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withOverlay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWithOverlay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withOverlay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWithPointer(value: RecursivePartial[js.UndefOr[Boolean]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withPointer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWithPointer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withPointer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

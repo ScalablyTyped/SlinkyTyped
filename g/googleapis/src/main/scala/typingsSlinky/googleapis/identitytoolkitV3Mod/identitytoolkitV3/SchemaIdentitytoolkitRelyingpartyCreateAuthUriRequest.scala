@@ -93,42 +93,209 @@ trait SchemaIdentitytoolkitRelyingpartyCreateAuthUriRequest extends js.Object {
 
 object SchemaIdentitytoolkitRelyingpartyCreateAuthUriRequest {
   @scala.inline
-  def apply(
-    appId: String = null,
-    authFlowType: String = null,
-    clientId: String = null,
-    context: String = null,
-    continueUri: String = null,
-    customParameter: StringDictionary[String] = null,
-    hostedDomain: String = null,
-    identifier: String = null,
-    oauthConsumerKey: String = null,
-    oauthScope: String = null,
-    openidRealm: String = null,
-    otaApp: String = null,
-    providerId: String = null,
-    sessionId: String = null,
-    tenantId: String = null,
-    tenantProjectNumber: String = null
-  ): SchemaIdentitytoolkitRelyingpartyCreateAuthUriRequest = {
+  def apply(): SchemaIdentitytoolkitRelyingpartyCreateAuthUriRequest = {
     val __obj = js.Dynamic.literal()
-    if (appId != null) __obj.updateDynamic("appId")(appId.asInstanceOf[js.Any])
-    if (authFlowType != null) __obj.updateDynamic("authFlowType")(authFlowType.asInstanceOf[js.Any])
-    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (continueUri != null) __obj.updateDynamic("continueUri")(continueUri.asInstanceOf[js.Any])
-    if (customParameter != null) __obj.updateDynamic("customParameter")(customParameter.asInstanceOf[js.Any])
-    if (hostedDomain != null) __obj.updateDynamic("hostedDomain")(hostedDomain.asInstanceOf[js.Any])
-    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
-    if (oauthConsumerKey != null) __obj.updateDynamic("oauthConsumerKey")(oauthConsumerKey.asInstanceOf[js.Any])
-    if (oauthScope != null) __obj.updateDynamic("oauthScope")(oauthScope.asInstanceOf[js.Any])
-    if (openidRealm != null) __obj.updateDynamic("openidRealm")(openidRealm.asInstanceOf[js.Any])
-    if (otaApp != null) __obj.updateDynamic("otaApp")(otaApp.asInstanceOf[js.Any])
-    if (providerId != null) __obj.updateDynamic("providerId")(providerId.asInstanceOf[js.Any])
-    if (sessionId != null) __obj.updateDynamic("sessionId")(sessionId.asInstanceOf[js.Any])
-    if (tenantId != null) __obj.updateDynamic("tenantId")(tenantId.asInstanceOf[js.Any])
-    if (tenantProjectNumber != null) __obj.updateDynamic("tenantProjectNumber")(tenantProjectNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIdentitytoolkitRelyingpartyCreateAuthUriRequest]
   }
+  @scala.inline
+  implicit class SchemaIdentitytoolkitRelyingpartyCreateAuthUriRequestOps[Self <: SchemaIdentitytoolkitRelyingpartyCreateAuthUriRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthFlowType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authFlowType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthFlowType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authFlowType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContext(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContinueUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continueUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinueUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continueUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomParameter(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customParameter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomParameter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customParameter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostedDomain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostedDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostedDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostedDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOauthConsumerKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthConsumerKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOauthConsumerKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthConsumerKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOauthScope(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthScope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOauthScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthScope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenidRealm(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openidRealm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenidRealm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openidRealm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOtaApp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("otaApp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOtaApp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("otaApp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProviderId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("providerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProviderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("providerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTenantId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTenantId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTenantProjectNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantProjectNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTenantProjectNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantProjectNumber")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

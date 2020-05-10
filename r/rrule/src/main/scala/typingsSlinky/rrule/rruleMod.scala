@@ -31,7 +31,6 @@ import typingsSlinky.rrule.typesMod.ParsedOptions
 import typingsSlinky.rrule.typesMod.QueryMethodTypes
 import typingsSlinky.rrule.typesMod.QueryMethods
 import typingsSlinky.rrule.weekdayMod.Weekday
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,23 +45,23 @@ object rruleMod extends js.Object {
     var options: ParsedOptions = js.native
     var origOptions: PartialOptions = js.native
     def _cacheAdd(what: CacheKeys): Unit = js.native
-    def _cacheAdd(what: CacheKeys, value: js.Array[Date]): Unit = js.native
-    def _cacheAdd(what: CacheKeys, value: js.Array[Date], args: PartialIterArgs): Unit = js.native
+    def _cacheAdd(what: CacheKeys, value: js.Array[js.Date]): Unit = js.native
+    def _cacheAdd(what: CacheKeys, value: js.Array[js.Date], args: PartialIterArgs): Unit = js.native
     def _cacheAdd(what: CacheKeys, value: Null, args: PartialIterArgs): Unit = js.native
-    def _cacheAdd(what: CacheKeys, value: Date): Unit = js.native
-    def _cacheAdd(what: CacheKeys, value: Date, args: PartialIterArgs): Unit = js.native
+    def _cacheAdd(what: CacheKeys, value: js.Date): Unit = js.native
+    def _cacheAdd(what: CacheKeys, value: js.Date, args: PartialIterArgs): Unit = js.native
     @JSName("_cacheAdd")
     def _cacheAdd_all(what: all): Unit = js.native
     @JSName("_cacheAdd")
-    def _cacheAdd_all(what: all, value: js.Array[Date]): Unit = js.native
+    def _cacheAdd_all(what: all, value: js.Array[js.Date]): Unit = js.native
     @JSName("_cacheAdd")
-    def _cacheAdd_all(what: all, value: js.Array[Date], args: PartialIterArgs): Unit = js.native
+    def _cacheAdd_all(what: all, value: js.Array[js.Date], args: PartialIterArgs): Unit = js.native
     @JSName("_cacheAdd")
     def _cacheAdd_all(what: all, value: Null, args: PartialIterArgs): Unit = js.native
     @JSName("_cacheAdd")
-    def _cacheAdd_all(what: all, value: Date): Unit = js.native
+    def _cacheAdd_all(what: all, value: js.Date): Unit = js.native
     @JSName("_cacheAdd")
-    def _cacheAdd_all(what: all, value: Date, args: PartialIterArgs): Unit = js.native
+    def _cacheAdd_all(what: all, value: js.Date, args: PartialIterArgs): Unit = js.native
     /* protected */ def _iter[M /* <: QueryMethodTypes */](iterResult: typingsSlinky.rrule.iterresultMod.default[M]): IterResultType[M] = js.native
     /**
       * Returns the first recurrence after the given datetime instance.
@@ -113,14 +112,6 @@ object rruleMod extends js.Object {
   class default () extends RRule {
     def this(options: PartialOptions) = this()
     def this(options: PartialOptions, noCache: Boolean) = this()
-    /* CompleteClass */
-    override def after(date: js.Date, inc: Boolean): js.Date = js.native
-    /* CompleteClass */
-    override def all(): js.Array[js.Date] = js.native
-    /* CompleteClass */
-    override def before(date: js.Date, inc: Boolean): js.Date = js.native
-    /* CompleteClass */
-    override def between(after: js.Date, before: js.Date, inc: Boolean): js.Array[js.Date] = js.native
   }
   
   val DEFAULT_OPTIONS: Options = js.native
@@ -143,7 +134,9 @@ object rruleMod extends js.Object {
   object default extends js.Object {
     val DAILY: String | Double = js.native
     val FR: Weekday = js.native
-    val FREQUENCIES: js.Array[String] = js.native
+    val FREQUENCIES: js.Array[
+        /* keyof / * import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Frequency * / any */ String
+      ] = js.native
     val HOURLY: String | Double = js.native
     val MINUTELY: String | Double = js.native
     val MO: Weekday = js.native

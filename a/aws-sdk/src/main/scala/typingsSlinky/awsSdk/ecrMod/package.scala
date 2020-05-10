@@ -77,7 +77,7 @@ package object ecrMod {
   type LayerFailureList = js.Array[typingsSlinky.awsSdk.ecrMod.LayerFailure]
   type LayerFailureReason = java.lang.String
   type LayerList = js.Array[typingsSlinky.awsSdk.ecrMod.Layer]
-  type LayerPartBlob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.ecrMod.Blob | java.lang.String
+  type LayerPartBlob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.ecrMod.Blob | java.lang.String
   type LayerSizeInBytes = scala.Double
   type LifecyclePolicyPreviewResultList = js.Array[typingsSlinky.awsSdk.ecrMod.LifecyclePolicyPreviewResult]
   /* Rewritten from type alias, can be one of: 

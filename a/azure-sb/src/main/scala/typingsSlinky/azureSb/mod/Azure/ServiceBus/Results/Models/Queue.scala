@@ -7,14 +7,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Queue extends ExtendedBase {
-  var DeadLetteringOnMessageExpiration: String
-  var LockDuration: Duration
-  var MaxDeliveryCount: String
-  var MessageCount: String
-  var QueueName: String
-  var RequiresSession: String
-  var SupportOrdering: String
+  var DeadLetteringOnMessageExpiration: String = js.native
+  var LockDuration: Duration = js.native
+  var MaxDeliveryCount: String = js.native
+  var MessageCount: String = js.native
+  var QueueName: String = js.native
+  var RequiresSession: String = js.native
+  var SupportOrdering: String = js.native
 }
 
 object Queue {
@@ -48,5 +49,55 @@ object Queue {
     __obj.updateDynamic("_")(_underscore.asInstanceOf[js.Any])
     __obj.asInstanceOf[Queue]
   }
+  @scala.inline
+  implicit class QueueOps[Self <: Queue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeadLetteringOnMessageExpiration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeadLetteringOnMessageExpiration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLockDuration(value: Duration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LockDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxDeliveryCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxDeliveryCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessageCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQueueName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRequiresSession(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequiresSession")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSupportOrdering(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportOrdering")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

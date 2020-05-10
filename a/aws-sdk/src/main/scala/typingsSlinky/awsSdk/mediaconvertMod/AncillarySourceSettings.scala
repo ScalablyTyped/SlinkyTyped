@@ -22,16 +22,53 @@ trait AncillarySourceSettings extends js.Object {
 
 object AncillarySourceSettings {
   @scala.inline
-  def apply(
-    Convert608To708: AncillaryConvert608To708 = null,
-    SourceAncillaryChannelNumber: Int | Double = null,
-    TerminateCaptions: AncillaryTerminateCaptions = null
-  ): AncillarySourceSettings = {
+  def apply(): AncillarySourceSettings = {
     val __obj = js.Dynamic.literal()
-    if (Convert608To708 != null) __obj.updateDynamic("Convert608To708")(Convert608To708.asInstanceOf[js.Any])
-    if (SourceAncillaryChannelNumber != null) __obj.updateDynamic("SourceAncillaryChannelNumber")(SourceAncillaryChannelNumber.asInstanceOf[js.Any])
-    if (TerminateCaptions != null) __obj.updateDynamic("TerminateCaptions")(TerminateCaptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[AncillarySourceSettings]
   }
+  @scala.inline
+  implicit class AncillarySourceSettingsOps[Self <: AncillarySourceSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConvert608To708(value: AncillaryConvert608To708): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Convert608To708")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConvert608To708: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Convert608To708")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceAncillaryChannelNumber(value: integerMin1Max4): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceAncillaryChannelNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceAncillaryChannelNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceAncillaryChannelNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerminateCaptions(value: AncillaryTerminateCaptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminateCaptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerminateCaptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminateCaptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,11 +18,41 @@ trait AdminListUserAuthEventsResponse extends js.Object {
 
 object AdminListUserAuthEventsResponse {
   @scala.inline
-  def apply(AuthEvents: AuthEventsType = null, NextToken: PaginationKey = null): AdminListUserAuthEventsResponse = {
+  def apply(): AdminListUserAuthEventsResponse = {
     val __obj = js.Dynamic.literal()
-    if (AuthEvents != null) __obj.updateDynamic("AuthEvents")(AuthEvents.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdminListUserAuthEventsResponse]
   }
+  @scala.inline
+  implicit class AdminListUserAuthEventsResponseOps[Self <: AdminListUserAuthEventsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthEvents(value: AuthEventsType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthEvents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

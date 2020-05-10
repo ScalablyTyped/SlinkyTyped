@@ -14,10 +14,29 @@ trait CreateVpcPeeringAuthorizationOutput extends js.Object {
 
 object CreateVpcPeeringAuthorizationOutput {
   @scala.inline
-  def apply(VpcPeeringAuthorization: VpcPeeringAuthorization = null): CreateVpcPeeringAuthorizationOutput = {
+  def apply(): CreateVpcPeeringAuthorizationOutput = {
     val __obj = js.Dynamic.literal()
-    if (VpcPeeringAuthorization != null) __obj.updateDynamic("VpcPeeringAuthorization")(VpcPeeringAuthorization.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateVpcPeeringAuthorizationOutput]
   }
+  @scala.inline
+  implicit class CreateVpcPeeringAuthorizationOutputOps[Self <: CreateVpcPeeringAuthorizationOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVpcPeeringAuthorization(value: VpcPeeringAuthorization): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcPeeringAuthorization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcPeeringAuthorization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcPeeringAuthorization")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

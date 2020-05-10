@@ -30,14 +30,10 @@ trait Typeofclipboard extends js.Object {
     *      *Since Chrome 71. Warning: this is the current Dev channel.*
     * @param [callback]
     */
-  def setImageData(imageData: scala.scalajs.js.typedarray.ArrayBuffer, `type`: ImageType): Unit = js.native
+  def setImageData(imageData: js.typedarray.ArrayBuffer, `type`: ImageType): Unit = js.native
+  def setImageData(imageData: js.typedarray.ArrayBuffer, `type`: ImageType, additionalItems: AdditionalItems): Unit = js.native
   def setImageData(
-    imageData: scala.scalajs.js.typedarray.ArrayBuffer,
-    `type`: ImageType,
-    additionalItems: AdditionalItems
-  ): Unit = js.native
-  def setImageData(
-    imageData: scala.scalajs.js.typedarray.ArrayBuffer,
+    imageData: js.typedarray.ArrayBuffer,
     `type`: ImageType,
     additionalItems: AdditionalItems,
     callback: js.Function0[Unit]

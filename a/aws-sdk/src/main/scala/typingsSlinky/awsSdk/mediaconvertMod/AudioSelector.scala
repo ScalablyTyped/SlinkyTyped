@@ -52,30 +52,139 @@ trait AudioSelector extends js.Object {
 
 object AudioSelector {
   @scala.inline
-  def apply(
-    CustomLanguageCode: stringMin3Max3PatternAZaZ3 = null,
-    DefaultSelection: AudioDefaultSelection = null,
-    ExternalAudioFileInput: stringPatternS3MM2VVMMPPEEGGMMPP3AAVVIIMMPP4FFLLVVMMPPTTMMPPGGMM4VVTTRRPPFF4VVMM2TTSSTTSS264HH264MMKKVVMMOOVVMMTTSSMM2TTWWMMVVAASSFFVVOOBB3GGPP3GGPPPPMMXXFFDDIIVVXXXXVVIIDDRRAAWWDDVVGGXXFFMM1VV3GG2VVMMFFMM3UU8LLCCHHGGXXFFMMPPEEGG2MMXXFFMMPPEEGG2MMXXFFHHDDWWAAVVYY4MMAAAACCAAIIFFFFMMPP2AACC3EECC3DDTTSSEEHttpsMM2VVMMPPEEGGMMPP3AAVVIIMMPP4FFLLVVMMPPTTMMPPGGMM4VVTTRRPPFF4VVMM2TTSSTTSS264HH264MMKKVVMMOOVVMMTTSSMM2TTWWMMVVAASSFFVVOOBB3GGPP3GGPPPPMMXXFFDDIIVVXXXXVVIIDDRRAAWWDDVVGGXXFFMM1VV3GG2VVMMFFMM3U = null,
-    LanguageCode: LanguageCode = null,
-    Offset: Int | Double = null,
-    Pids: listOfIntegerMin1Max2147483647 = null,
-    ProgramSelection: Int | Double = null,
-    RemixSettings: RemixSettings = null,
-    SelectorType: AudioSelectorType = null,
-    Tracks: listOfIntegerMin1Max2147483647 = null
-  ): AudioSelector = {
+  def apply(): AudioSelector = {
     val __obj = js.Dynamic.literal()
-    if (CustomLanguageCode != null) __obj.updateDynamic("CustomLanguageCode")(CustomLanguageCode.asInstanceOf[js.Any])
-    if (DefaultSelection != null) __obj.updateDynamic("DefaultSelection")(DefaultSelection.asInstanceOf[js.Any])
-    if (ExternalAudioFileInput != null) __obj.updateDynamic("ExternalAudioFileInput")(ExternalAudioFileInput.asInstanceOf[js.Any])
-    if (LanguageCode != null) __obj.updateDynamic("LanguageCode")(LanguageCode.asInstanceOf[js.Any])
-    if (Offset != null) __obj.updateDynamic("Offset")(Offset.asInstanceOf[js.Any])
-    if (Pids != null) __obj.updateDynamic("Pids")(Pids.asInstanceOf[js.Any])
-    if (ProgramSelection != null) __obj.updateDynamic("ProgramSelection")(ProgramSelection.asInstanceOf[js.Any])
-    if (RemixSettings != null) __obj.updateDynamic("RemixSettings")(RemixSettings.asInstanceOf[js.Any])
-    if (SelectorType != null) __obj.updateDynamic("SelectorType")(SelectorType.asInstanceOf[js.Any])
-    if (Tracks != null) __obj.updateDynamic("Tracks")(Tracks.asInstanceOf[js.Any])
     __obj.asInstanceOf[AudioSelector]
   }
+  @scala.inline
+  implicit class AudioSelectorOps[Self <: AudioSelector] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomLanguageCode(value: stringMin3Max3PatternAZaZ3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomLanguageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomLanguageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomLanguageCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultSelection(value: AudioDefaultSelection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultSelection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultSelection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultSelection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalAudioFileInput(
+      value: stringPatternS3MM2VVMMPPEEGGMMPP3AAVVIIMMPP4FFLLVVMMPPTTMMPPGGMM4VVTTRRPPFF4VVMM2TTSSTTSS264HH264MMKKVVMMOOVVMMTTSSMM2TTWWMMVVAASSFFVVOOBB3GGPP3GGPPPPMMXXFFDDIIVVXXXXVVIIDDRRAAWWDDVVGGXXFFMM1VV3GG2VVMMFFMM3UU8LLCCHHGGXXFFMMPPEEGG2MMXXFFMMPPEEGG2MMXXFFHHDDWWAAVVYY4MMAAAACCAAIIFFFFMMPP2AACC3EECC3DDTTSSEEHttpsMM2VVMMPPEEGGMMPP3AAVVIIMMPP4FFLLVVMMPPTTMMPPGGMM4VVTTRRPPFF4VVMM2TTSSTTSS264HH264MMKKVVMMOOVVMMTTSSMM2TTWWMMVVAASSFFVVOOBB3GGPP3GGPPPPMMXXFFDDIIVVXXXXVVIIDDRRAAWWDDVVGGXXFFMM1VV3GG2VVMMFFMM3U
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalAudioFileInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalAudioFileInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalAudioFileInput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguageCode(value: LanguageCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffset(value: integerMinNegative2147483648Max2147483647): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPids(value: listOfIntegerMin1Max2147483647): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pids")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPids: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pids")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgramSelection(value: integerMin0Max8): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramSelection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgramSelection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramSelection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemixSettings(value: RemixSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemixSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemixSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemixSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectorType(value: AudioSelectorType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectorType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectorType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTracks(value: listOfIntegerMin1Max2147483647): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tracks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTracks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tracks")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

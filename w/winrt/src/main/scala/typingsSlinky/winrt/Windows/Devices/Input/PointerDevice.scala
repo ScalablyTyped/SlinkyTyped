@@ -1,27 +1,13 @@
 package typingsSlinky.winrt.Windows.Devices.Input
 
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
-import typingsSlinky.winrt.Windows.Foundation.Rect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.Devices.Input.PointerDevice")
 @js.native
-class PointerDevice () extends IPointerDevice {
-  /* CompleteClass */
-  override var isIntegrated: Boolean = js.native
-  /* CompleteClass */
-  override var maxContacts: Double = js.native
-  /* CompleteClass */
-  override var physicalDeviceRect: Rect = js.native
-  /* CompleteClass */
-  override var pointerDeviceType: PointerDeviceType = js.native
-  /* CompleteClass */
-  override var screenRect: Rect = js.native
-  /* CompleteClass */
-  override var supportedUsages: IVectorView[PointerDeviceUsage] = js.native
-}
+class PointerDevice () extends IPointerDevice
 
 /* static members */
 @JSGlobal("Windows.Devices.Input.PointerDevice")

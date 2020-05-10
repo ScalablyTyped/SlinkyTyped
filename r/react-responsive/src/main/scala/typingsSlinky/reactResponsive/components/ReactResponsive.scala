@@ -1,11 +1,9 @@
 package typingsSlinky.reactResponsive.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ClassType
 import typingsSlinky.reactResponsive.PartialMediaQueryMatchers
 import typingsSlinky.reactResponsive.mod.MediaQueryMatchers
@@ -20,118 +18,126 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactResponsive
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactResponsive {
   @JSImport("react-responsive", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, height, style, width */
-  def apply(
-    all: js.UndefOr[Boolean] = js.undefined,
-    aspectRatio: String = null,
-    aural: js.UndefOr[Boolean] = js.undefined,
-    braille: js.UndefOr[Boolean] = js.undefined,
-    color: js.UndefOr[Boolean] = js.undefined,
-    colorIndex: js.UndefOr[Boolean] = js.undefined,
-    component: String | ReactComponentClass[_] | (ClassType[_, _, _]) = null,
-    device: MediaQueryMatchers = null,
-    deviceAspectRatio: String = null,
-    deviceHeight: Double | String = null,
-    deviceWidth: Double | String = null,
-    embossed: js.UndefOr[Boolean] = js.undefined,
-    grid: js.UndefOr[Boolean] = js.undefined,
-    handheld: js.UndefOr[Boolean] = js.undefined,
-    maxAspectRatio: String = null,
-    maxColor: Int | Double = null,
-    maxColorIndex: Int | Double = null,
-    maxDeviceAspectRatio: String = null,
-    maxDeviceHeight: Double | String = null,
-    maxDeviceWidth: Double | String = null,
-    maxHeight: Double | String = null,
-    maxMonochrome: Int | Double = null,
-    maxResolution: Double | String = null,
-    maxWidth: Double | String = null,
-    minAspectRatio: String = null,
-    minColor: Int | Double = null,
-    minColorIndex: Int | Double = null,
-    minDeviceAspectRatio: String = null,
-    minDeviceHeight: Double | String = null,
-    minDeviceWidth: Double | String = null,
-    minHeight: Double | String = null,
-    minMonochrome: Int | Double = null,
-    minResolution: Double | String = null,
-    minWidth: Double | String = null,
-    monochrome: js.UndefOr[Boolean] = js.undefined,
-    onBeforeChange: /* matches */ Boolean => Unit = null,
-    onChange: /* matches */ Boolean => Unit = null,
-    orientation: portrait | landscape = null,
-    print: js.UndefOr[Boolean] = js.undefined,
-    projection: js.UndefOr[Boolean] = js.undefined,
-    query: String = null,
-    resolution: Double | String = null,
-    scan: progressive | interlace = null,
-    screen: js.UndefOr[Boolean] = js.undefined,
-    tty: js.UndefOr[Boolean] = js.undefined,
-    tv: js.UndefOr[Boolean] = js.undefined,
-    `type`: MediaQueryType = null,
-    values: PartialMediaQueryMatchers = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(all)) __obj.updateDynamic("all")(all.asInstanceOf[js.Any])
-    if (aspectRatio != null) __obj.updateDynamic("aspectRatio")(aspectRatio.asInstanceOf[js.Any])
-    if (!js.isUndefined(aural)) __obj.updateDynamic("aural")(aural.asInstanceOf[js.Any])
-    if (!js.isUndefined(braille)) __obj.updateDynamic("braille")(braille.asInstanceOf[js.Any])
-    if (!js.isUndefined(color)) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(colorIndex)) __obj.updateDynamic("colorIndex")(colorIndex.asInstanceOf[js.Any])
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (device != null) __obj.updateDynamic("device")(device.asInstanceOf[js.Any])
-    if (deviceAspectRatio != null) __obj.updateDynamic("deviceAspectRatio")(deviceAspectRatio.asInstanceOf[js.Any])
-    if (deviceHeight != null) __obj.updateDynamic("deviceHeight")(deviceHeight.asInstanceOf[js.Any])
-    if (deviceWidth != null) __obj.updateDynamic("deviceWidth")(deviceWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(embossed)) __obj.updateDynamic("embossed")(embossed.asInstanceOf[js.Any])
-    if (!js.isUndefined(grid)) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
-    if (!js.isUndefined(handheld)) __obj.updateDynamic("handheld")(handheld.asInstanceOf[js.Any])
-    if (maxAspectRatio != null) __obj.updateDynamic("maxAspectRatio")(maxAspectRatio.asInstanceOf[js.Any])
-    if (maxColor != null) __obj.updateDynamic("maxColor")(maxColor.asInstanceOf[js.Any])
-    if (maxColorIndex != null) __obj.updateDynamic("maxColorIndex")(maxColorIndex.asInstanceOf[js.Any])
-    if (maxDeviceAspectRatio != null) __obj.updateDynamic("maxDeviceAspectRatio")(maxDeviceAspectRatio.asInstanceOf[js.Any])
-    if (maxDeviceHeight != null) __obj.updateDynamic("maxDeviceHeight")(maxDeviceHeight.asInstanceOf[js.Any])
-    if (maxDeviceWidth != null) __obj.updateDynamic("maxDeviceWidth")(maxDeviceWidth.asInstanceOf[js.Any])
-    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
-    if (maxMonochrome != null) __obj.updateDynamic("maxMonochrome")(maxMonochrome.asInstanceOf[js.Any])
-    if (maxResolution != null) __obj.updateDynamic("maxResolution")(maxResolution.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (minAspectRatio != null) __obj.updateDynamic("minAspectRatio")(minAspectRatio.asInstanceOf[js.Any])
-    if (minColor != null) __obj.updateDynamic("minColor")(minColor.asInstanceOf[js.Any])
-    if (minColorIndex != null) __obj.updateDynamic("minColorIndex")(minColorIndex.asInstanceOf[js.Any])
-    if (minDeviceAspectRatio != null) __obj.updateDynamic("minDeviceAspectRatio")(minDeviceAspectRatio.asInstanceOf[js.Any])
-    if (minDeviceHeight != null) __obj.updateDynamic("minDeviceHeight")(minDeviceHeight.asInstanceOf[js.Any])
-    if (minDeviceWidth != null) __obj.updateDynamic("minDeviceWidth")(minDeviceWidth.asInstanceOf[js.Any])
-    if (minHeight != null) __obj.updateDynamic("minHeight")(minHeight.asInstanceOf[js.Any])
-    if (minMonochrome != null) __obj.updateDynamic("minMonochrome")(minMonochrome.asInstanceOf[js.Any])
-    if (minResolution != null) __obj.updateDynamic("minResolution")(minResolution.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(monochrome)) __obj.updateDynamic("monochrome")(monochrome.asInstanceOf[js.Any])
-    if (onBeforeChange != null) __obj.updateDynamic("onBeforeChange")(js.Any.fromFunction1(onBeforeChange))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (!js.isUndefined(print)) __obj.updateDynamic("print")(print.asInstanceOf[js.Any])
-    if (!js.isUndefined(projection)) __obj.updateDynamic("projection")(projection.asInstanceOf[js.Any])
-    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
-    if (resolution != null) __obj.updateDynamic("resolution")(resolution.asInstanceOf[js.Any])
-    if (scan != null) __obj.updateDynamic("scan")(scan.asInstanceOf[js.Any])
-    if (!js.isUndefined(screen)) __obj.updateDynamic("screen")(screen.asInstanceOf[js.Any])
-    if (!js.isUndefined(tty)) __obj.updateDynamic("tty")(tty.asInstanceOf[js.Any])
-    if (!js.isUndefined(tv)) __obj.updateDynamic("tv")(tv.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def all(value: Boolean): this.type = set("all", value.asInstanceOf[js.Any])
+    @scala.inline
+    def aspectRatio(value: String): this.type = set("aspectRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def aural(value: Boolean): this.type = set("aural", value.asInstanceOf[js.Any])
+    @scala.inline
+    def braille(value: Boolean): this.type = set("braille", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: Boolean): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorIndex(value: Boolean): this.type = set("colorIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentFunctionComponent(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentComponentClass(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def component(value: String | ReactComponentClass[_] | (ClassType[_, _, _])): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def device(value: MediaQueryMatchers): this.type = set("device", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deviceAspectRatio(value: String): this.type = set("deviceAspectRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deviceHeight(value: Double | String): this.type = set("deviceHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deviceWidth(value: Double | String): this.type = set("deviceWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def embossed(value: Boolean): this.type = set("embossed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def grid(value: Boolean): this.type = set("grid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handheld(value: Boolean): this.type = set("handheld", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double | String): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxAspectRatio(value: String): this.type = set("maxAspectRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxColor(value: Double): this.type = set("maxColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxColorIndex(value: Double): this.type = set("maxColorIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDeviceAspectRatio(value: String): this.type = set("maxDeviceAspectRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDeviceHeight(value: Double | String): this.type = set("maxDeviceHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDeviceWidth(value: Double | String): this.type = set("maxDeviceWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxHeight(value: Double | String): this.type = set("maxHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxMonochrome(value: Double): this.type = set("maxMonochrome", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxResolution(value: Double | String): this.type = set("maxResolution", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxWidth(value: Double | String): this.type = set("maxWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minAspectRatio(value: String): this.type = set("minAspectRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minColor(value: Double): this.type = set("minColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minColorIndex(value: Double): this.type = set("minColorIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDeviceAspectRatio(value: String): this.type = set("minDeviceAspectRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDeviceHeight(value: Double | String): this.type = set("minDeviceHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDeviceWidth(value: Double | String): this.type = set("minDeviceWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minHeight(value: Double | String): this.type = set("minHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minMonochrome(value: Double): this.type = set("minMonochrome", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minResolution(value: Double | String): this.type = set("minResolution", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minWidth(value: Double | String): this.type = set("minWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def monochrome(value: Boolean): this.type = set("monochrome", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBeforeChange(value: /* matches */ Boolean => Unit): this.type = set("onBeforeChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: /* matches */ Boolean => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def orientation(value: portrait | landscape): this.type = set("orientation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def print(value: Boolean): this.type = set("print", value.asInstanceOf[js.Any])
+    @scala.inline
+    def projection(value: Boolean): this.type = set("projection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def query(value: String): this.type = set("query", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resolution(value: Double | String): this.type = set("resolution", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scan(value: progressive | interlace): this.type = set("scan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def screen(value: Boolean): this.type = set("screen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tty(value: Boolean): this.type = set("tty", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tv(value: Boolean): this.type = set("tv", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: MediaQueryType): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def values(value: PartialMediaQueryMatchers): this.type = set("values", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactResponsive.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MediaQueryProps
+  
+  def withProps(p: MediaQueryProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactResponsive.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

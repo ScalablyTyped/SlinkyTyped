@@ -18,11 +18,41 @@ trait DocumentAttributeValueCountPair extends js.Object {
 
 object DocumentAttributeValueCountPair {
   @scala.inline
-  def apply(Count: Int | Double = null, DocumentAttributeValue: DocumentAttributeValue = null): DocumentAttributeValueCountPair = {
+  def apply(): DocumentAttributeValueCountPair = {
     val __obj = js.Dynamic.literal()
-    if (Count != null) __obj.updateDynamic("Count")(Count.asInstanceOf[js.Any])
-    if (DocumentAttributeValue != null) __obj.updateDynamic("DocumentAttributeValue")(DocumentAttributeValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentAttributeValueCountPair]
   }
+  @scala.inline
+  implicit class DocumentAttributeValueCountPairOps[Self <: DocumentAttributeValueCountPair] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentAttributeValue(value: DocumentAttributeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentAttributeValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentAttributeValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentAttributeValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

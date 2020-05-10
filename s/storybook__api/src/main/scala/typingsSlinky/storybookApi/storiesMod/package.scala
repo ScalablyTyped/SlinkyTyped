@@ -20,7 +20,7 @@ package object storiesMod {
     - typingsSlinky.storybookApi.storybookApiStrings.story
     - typingsSlinky.storybookApi.storybookApiStrings.info
     - typingsSlinky.storybookApi.storybookApiStrings.settings
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
   */
   type ViewMode = js.UndefOr[typingsSlinky.storybookApi.storiesMod._ViewMode]
 }

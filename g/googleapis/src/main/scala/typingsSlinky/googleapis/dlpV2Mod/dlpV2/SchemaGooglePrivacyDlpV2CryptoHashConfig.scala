@@ -22,10 +22,29 @@ trait SchemaGooglePrivacyDlpV2CryptoHashConfig extends js.Object {
 
 object SchemaGooglePrivacyDlpV2CryptoHashConfig {
   @scala.inline
-  def apply(cryptoKey: SchemaGooglePrivacyDlpV2CryptoKey = null): SchemaGooglePrivacyDlpV2CryptoHashConfig = {
+  def apply(): SchemaGooglePrivacyDlpV2CryptoHashConfig = {
     val __obj = js.Dynamic.literal()
-    if (cryptoKey != null) __obj.updateDynamic("cryptoKey")(cryptoKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2CryptoHashConfig]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2CryptoHashConfigOps[Self <: SchemaGooglePrivacyDlpV2CryptoHashConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCryptoKey(value: SchemaGooglePrivacyDlpV2CryptoKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCryptoKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoKey")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

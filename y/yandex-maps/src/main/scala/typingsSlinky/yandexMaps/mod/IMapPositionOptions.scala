@@ -4,24 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IMapPositionOptions extends IMapZoomOptions {
-  var timingFunction: js.UndefOr[String] = js.undefined
+  var timingFunction: js.UndefOr[String] = js.native
 }
 
 object IMapPositionOptions {
   @scala.inline
-  def apply(
-    checkZoomRange: js.UndefOr[Boolean] = js.undefined,
-    duration: Int | Double = null,
-    timingFunction: String = null,
-    useMapMargin: js.UndefOr[Boolean] = js.undefined
-  ): IMapPositionOptions = {
+  def apply(): IMapPositionOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(checkZoomRange)) __obj.updateDynamic("checkZoomRange")(checkZoomRange.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (timingFunction != null) __obj.updateDynamic("timingFunction")(timingFunction.asInstanceOf[js.Any])
-    if (!js.isUndefined(useMapMargin)) __obj.updateDynamic("useMapMargin")(useMapMargin.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMapPositionOptions]
   }
+  @scala.inline
+  implicit class IMapPositionOptionsOps[Self <: IMapPositionOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTimingFunction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timingFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimingFunction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timingFunction")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

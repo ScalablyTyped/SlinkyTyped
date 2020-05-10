@@ -8,25 +8,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonQualification extends js.Object {
-  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
-  var id: IdentifierKind
-  var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
-  var qualification: IdentifierKind | QualifiedTypeIdentifierKind
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  var id: IdentifierKind = js.native
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  var qualification: IdentifierKind | QualifiedTypeIdentifierKind = js.native
 }
 
 object AnonQualification {
   @scala.inline
-  def apply(
-    id: IdentifierKind,
-    qualification: IdentifierKind | QualifiedTypeIdentifierKind,
-    comments: js.Array[CommentKind] = null,
-    loc: SourceLocationKind = null
-  ): AnonQualification = {
+  def apply(id: IdentifierKind, qualification: IdentifierKind | QualifiedTypeIdentifierKind): AnonQualification = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], qualification = qualification.asInstanceOf[js.Any])
-    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonQualification]
   }
+  @scala.inline
+  implicit class AnonQualificationOps[Self <: AnonQualification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: IdentifierKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQualification(value: IdentifierKind | QualifiedTypeIdentifierKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qualification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComments(value: js.Array[CommentKind]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommentsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(null)
+        ret
+    }
+    @scala.inline
+    def withLoc(value: SourceLocationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(null)
+        ret
+    }
+  }
+  
 }
 

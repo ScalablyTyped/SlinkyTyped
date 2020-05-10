@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.yandexMaps.mod.IFreezable because var conflicts: events. Inlined freeze, isFrozen, unfreeze
 - typingsSlinky.yandexMaps.mod.ICircleGeometryAccess because var conflicts: events. Inlined contains, getClosest, getCoordinates, getRadius, setCoordinates, setCoordinates, setRadius */ @js.native
 trait ICircleGeometry extends IGeometry {

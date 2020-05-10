@@ -1,27 +1,25 @@
 package typingsSlinky.extjs.Ext.grid.plugin
 
-import typingsSlinky.extjs.Ext.Array
 import typingsSlinky.extjs.Ext.IAbstractPlugin
-import typingsSlinky.extjs.Ext.IClass
-import typingsSlinky.extjs.Ext.IComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IBufferedRenderer extends IAbstractPlugin {
   /** [Method] Initialize this as a plugin
   		* @param grid Object
   		*/
   @JSName("init")
-  var init_IBufferedRenderer: js.UndefOr[js.Function1[/* grid */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var init_IBufferedRenderer: js.UndefOr[js.Function1[/* grid */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Config Option] (Number) */
-  var leadingBufferZone: js.UndefOr[Double] = js.undefined
+  var leadingBufferZone: js.UndefOr[Double] = js.native
   /** [Config Option] (Number) */
-  var numFromEdge: js.UndefOr[Double] = js.undefined
+  var numFromEdge: js.UndefOr[Double] = js.native
   /** [Config Option] (Number) */
-  var percentageFromEdge: js.UndefOr[Double] = js.undefined
+  var percentageFromEdge: js.UndefOr[Double] = js.native
   /** [Property] (Number) */
-  var position: js.UndefOr[Double] = js.undefined
+  var position: js.UndefOr[Double] = js.native
   /** [Method] Scrolls to and optionlly selects the specified row index in the total dataset
   		* @param recordIdx Number The zero-based position in the dataset to scroll to.
   		* @param doSelect Boolean Pass as true to select the specified row.
@@ -36,91 +34,152 @@ trait IBufferedRenderer extends IAbstractPlugin {
       /* scope */ js.UndefOr[js.Any], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Config Option] (Number) */
-  var scrollToLoadBuffer: js.UndefOr[Double] = js.undefined
+  var scrollToLoadBuffer: js.UndefOr[Double] = js.native
   /** [Config Option] (Boolean) */
-  var synchronousRender: js.UndefOr[Boolean] = js.undefined
+  var synchronousRender: js.UndefOr[Boolean] = js.native
   /** [Config Option] (Number) */
-  var trailingBufferZone: js.UndefOr[Double] = js.undefined
+  var trailingBufferZone: js.UndefOr[Double] = js.native
   /** [Config Option] (Boolean) */
-  var variableRowHeight: js.UndefOr[Boolean] = js.undefined
+  var variableRowHeight: js.UndefOr[Boolean] = js.native
 }
 
 object IBufferedRenderer {
   @scala.inline
-  def apply(
-    alias: Array = null,
-    alternateClassName: js.Any = null,
-    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
-    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
-    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
-    clonePlugin: /* overrideCfg */ js.UndefOr[js.Any] => Unit = null,
-    config: js.Any = null,
-    destroy: () => Unit = null,
-    disable: () => Unit = null,
-    enable: () => Unit = null,
-    extend: String = null,
-    getCmp: () => IComponent = null,
-    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
-    inheritableStatics: js.Any = null,
-    init: /* grid */ js.UndefOr[js.Any] => Unit = null,
-    initConfig: /* config */ js.UndefOr[js.Any] => IBufferedRenderer = null,
-    isPlugin: js.UndefOr[Boolean] = js.undefined,
-    leadingBufferZone: Int | Double = null,
-    mixins: js.Any = null,
-    numFromEdge: Int | Double = null,
-    percentageFromEdge: Int | Double = null,
-    pluginId: String = null,
-    position: Int | Double = null,
-    requires: Array = null,
-    scrollTo: (/* recordIdx */ js.UndefOr[Double], /* doSelect */ js.UndefOr[Boolean], /* callback */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => Unit = null,
-    scrollToLoadBuffer: Int | Double = null,
-    self: IClass = null,
-    setCmp: /* cmp */ js.UndefOr[IComponent] => Unit = null,
-    singleton: js.UndefOr[Boolean] = js.undefined,
-    statics: js.Any = null,
-    synchronousRender: js.UndefOr[Boolean] = js.undefined,
-    trailingBufferZone: Int | Double = null,
-    uses: Array = null,
-    variableRowHeight: js.UndefOr[Boolean] = js.undefined
-  ): IBufferedRenderer = {
+  def apply(): IBufferedRenderer = {
     val __obj = js.Dynamic.literal()
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
-    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
-    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
-    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
-    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
-    if (clonePlugin != null) __obj.updateDynamic("clonePlugin")(js.Any.fromFunction1(clonePlugin))
-    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
-    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction0(destroy))
-    if (disable != null) __obj.updateDynamic("disable")(js.Any.fromFunction0(disable))
-    if (enable != null) __obj.updateDynamic("enable")(js.Any.fromFunction0(enable))
-    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
-    if (getCmp != null) __obj.updateDynamic("getCmp")(js.Any.fromFunction0(getCmp))
-    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
-    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
-    if (init != null) __obj.updateDynamic("init")(js.Any.fromFunction1(init))
-    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
-    if (!js.isUndefined(isPlugin)) __obj.updateDynamic("isPlugin")(isPlugin.asInstanceOf[js.Any])
-    if (leadingBufferZone != null) __obj.updateDynamic("leadingBufferZone")(leadingBufferZone.asInstanceOf[js.Any])
-    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
-    if (numFromEdge != null) __obj.updateDynamic("numFromEdge")(numFromEdge.asInstanceOf[js.Any])
-    if (percentageFromEdge != null) __obj.updateDynamic("percentageFromEdge")(percentageFromEdge.asInstanceOf[js.Any])
-    if (pluginId != null) __obj.updateDynamic("pluginId")(pluginId.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (requires != null) __obj.updateDynamic("requires")(requires.asInstanceOf[js.Any])
-    if (scrollTo != null) __obj.updateDynamic("scrollTo")(js.Any.fromFunction4(scrollTo))
-    if (scrollToLoadBuffer != null) __obj.updateDynamic("scrollToLoadBuffer")(scrollToLoadBuffer.asInstanceOf[js.Any])
-    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
-    if (setCmp != null) __obj.updateDynamic("setCmp")(js.Any.fromFunction1(setCmp))
-    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.asInstanceOf[js.Any])
-    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
-    if (!js.isUndefined(synchronousRender)) __obj.updateDynamic("synchronousRender")(synchronousRender.asInstanceOf[js.Any])
-    if (trailingBufferZone != null) __obj.updateDynamic("trailingBufferZone")(trailingBufferZone.asInstanceOf[js.Any])
-    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
-    if (!js.isUndefined(variableRowHeight)) __obj.updateDynamic("variableRowHeight")(variableRowHeight.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBufferedRenderer]
   }
+  @scala.inline
+  implicit class IBufferedRendererOps[Self <: IBufferedRenderer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInit(value: /* grid */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutInit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeadingBufferZone(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leadingBufferZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeadingBufferZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leadingBufferZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumFromEdge(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numFromEdge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumFromEdge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numFromEdge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPercentageFromEdge(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percentageFromEdge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPercentageFromEdge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percentageFromEdge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollTo(
+      value: (/* recordIdx */ js.UndefOr[Double], /* doSelect */ js.UndefOr[Boolean], /* callback */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTo")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutScrollTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollToLoadBuffer(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToLoadBuffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollToLoadBuffer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToLoadBuffer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSynchronousRender(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronousRender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSynchronousRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronousRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrailingBufferZone(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trailingBufferZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrailingBufferZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trailingBufferZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVariableRowHeight(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variableRowHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVariableRowHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variableRowHeight")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

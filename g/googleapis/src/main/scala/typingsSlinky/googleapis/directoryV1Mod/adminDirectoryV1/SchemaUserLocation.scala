@@ -49,24 +49,101 @@ trait SchemaUserLocation extends js.Object {
 
 object SchemaUserLocation {
   @scala.inline
-  def apply(
-    area: String = null,
-    buildingId: String = null,
-    customType: String = null,
-    deskCode: String = null,
-    floorName: String = null,
-    floorSection: String = null,
-    `type`: String = null
-  ): SchemaUserLocation = {
+  def apply(): SchemaUserLocation = {
     val __obj = js.Dynamic.literal()
-    if (area != null) __obj.updateDynamic("area")(area.asInstanceOf[js.Any])
-    if (buildingId != null) __obj.updateDynamic("buildingId")(buildingId.asInstanceOf[js.Any])
-    if (customType != null) __obj.updateDynamic("customType")(customType.asInstanceOf[js.Any])
-    if (deskCode != null) __obj.updateDynamic("deskCode")(deskCode.asInstanceOf[js.Any])
-    if (floorName != null) __obj.updateDynamic("floorName")(floorName.asInstanceOf[js.Any])
-    if (floorSection != null) __obj.updateDynamic("floorSection")(floorSection.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUserLocation]
   }
+  @scala.inline
+  implicit class SchemaUserLocationOps[Self <: SchemaUserLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArea(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuildingId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buildingId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuildingId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buildingId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeskCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deskCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeskCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deskCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloorName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floorName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloorName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floorName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloorSection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floorSection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloorSection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floorSection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

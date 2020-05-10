@@ -13,12 +13,10 @@ trait EdgeDirection extends js.Object
 
 object EdgeDirection {
   @scala.inline
-  def any: typingsSlinky.arangodb.arangodbStrings.any = this.cast("any")
+  def any: typingsSlinky.arangodb.arangodbStrings.any = "any".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.any]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inbound: typingsSlinky.arangodb.arangodbStrings.inbound = "inbound".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.inbound]
   @scala.inline
-  def inbound: typingsSlinky.arangodb.arangodbStrings.inbound = this.cast("inbound")
-  @scala.inline
-  def outbound: typingsSlinky.arangodb.arangodbStrings.outbound = this.cast("outbound")
+  def outbound: typingsSlinky.arangodb.arangodbStrings.outbound = "outbound".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.outbound]
 }
 

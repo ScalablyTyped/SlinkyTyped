@@ -1,6 +1,5 @@
 package typingsSlinky.durandal
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -62,7 +61,7 @@ trait DurandalSystemModule extends js.Object {
     * Logs an error.
     * @param {Error} obj The error to report.
     */
-  def error(error: Error): Unit = js.native
+  def error(error: js.Error): Unit = js.native
   /**
     * Extends the first object with the properties of the following objects.
     * @param {object} obj The target object to extend.

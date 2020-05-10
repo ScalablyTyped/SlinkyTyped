@@ -48,7 +48,7 @@ object utilsMod extends js.Object {
   def isPromiseLike(value: js.Any): /* is std.PromiseLike<any> */ Boolean = js.native
   def isStateLike(state: js.Any): /* is xstate.xstate/lib/types.StateLike<any> */ Boolean = js.native
   def isString(value: js.Any): /* is string */ Boolean = js.native
-  def keys[T /* <: js.Object */](value: T): js.Array[String] = js.native
+  def keys[T /* <: js.Object */](value: T): js.Array[/* keyof T */ String] = js.native
   def mapContext[TContext, TEvent /* <: EventObject */](
     mapper: Mapper[TContext, TEvent],
     context: TContext,
@@ -70,7 +70,7 @@ object utilsMod extends js.Object {
   ): StringDictionary[P] = js.native
   def matchesState(parentStateId: StateValue, childStateId: StateValue): Boolean = js.native
   def matchesState(parentStateId: StateValue, childStateId: StateValue, delimiter: String): Boolean = js.native
-  def nestedPath[T /* <: Record[String, _] */](props: js.Array[String], accessorProp: String): js.Function1[/* object */ T, T] = js.native
+  def nestedPath[T /* <: Record[String, _] */](props: js.Array[String], accessorProp: /* keyof T */ String): js.Function1[/* object */ T, T] = js.native
   def normalizeTarget[TContext, TEvent /* <: EventObject */](): js.UndefOr[js.Array[String | (StateNode[TContext, _, TEvent, _])]] = js.native
   def normalizeTarget[TContext, TEvent /* <: EventObject */](target: SingleOrArray[String | (StateNode[TContext, _, TEvent, _])]): js.UndefOr[js.Array[String | (StateNode[TContext, _, TEvent, _])]] = js.native
   def partition[T, A /* <: T */, B /* <: T */](items: js.Array[T], predicate: js.Function1[/* item */ T, /* is A */ Boolean]): js.Tuple2[js.Array[A], js.Array[B]] = js.native

@@ -5,36 +5,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait TSLiteralType_
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ @js.native
+trait TSLiteralType_
   extends TSType
      with BaseNode {
-  var literal: NumericLiteral_ | StringLiteral_ | BooleanLiteral_
+  var literal: NumericLiteral_ | StringLiteral_ | BooleanLiteral_ = js.native
   @JSName("type")
-  var type_TSLiteralType_ : TSLiteralType
+  var type_TSLiteralType_ : TSLiteralType = js.native
 }
 
 object TSLiteralType_ {
   @scala.inline
-  def apply(
-    literal: NumericLiteral_ | StringLiteral_ | BooleanLiteral_,
-    `type`: TSLiteralType,
-    end: Int | Double = null,
-    innerComments: js.Array[Comment] = null,
-    leadingComments: js.Array[Comment] = null,
-    loc: SourceLocation = null,
-    start: Int | Double = null,
-    trailingComments: js.Array[Comment] = null
-  ): TSLiteralType_ = {
+  def apply(literal: NumericLiteral_ | StringLiteral_ | BooleanLiteral_, `type`: TSLiteralType): TSLiteralType_ = {
     val __obj = js.Dynamic.literal(literal = literal.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
-    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSLiteralType_]
   }
+  @scala.inline
+  implicit class TSLiteralType_Ops[Self <: TSLiteralType_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLiteral(value: NumericLiteral_ | StringLiteral_ | BooleanLiteral_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("literal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: TSLiteralType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

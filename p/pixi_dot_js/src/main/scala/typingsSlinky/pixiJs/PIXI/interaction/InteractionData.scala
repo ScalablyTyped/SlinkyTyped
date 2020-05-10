@@ -2,11 +2,11 @@ package typingsSlinky.pixiJs.PIXI.interaction
 
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.PointerEvent
+import org.scalajs.dom.raw.Touch
 import org.scalajs.dom.raw.TouchEvent
 import typingsSlinky.pixiJs.PIXI.DisplayObject
 import typingsSlinky.pixiJs.PIXI.Point
 import typingsSlinky.pixiJs.PIXI.Sprite
-import typingsSlinky.std.Touch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -129,8 +129,8 @@ class InteractionData () extends js.Object {
     * @type {number}
     */
   var width: Double = js.native
-  def copyEvent(event: typingsSlinky.std.MouseEvent): Unit = js.native
-  def copyEvent(event: typingsSlinky.std.PointerEvent): Unit = js.native
+  def copyEvent(event: MouseEvent): Unit = js.native
+  def copyEvent(event: PointerEvent): Unit = js.native
   /**
     * Copies properties from normalized event data.
     *

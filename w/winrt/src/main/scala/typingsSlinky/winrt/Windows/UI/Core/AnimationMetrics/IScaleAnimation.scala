@@ -5,12 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IScaleAnimation extends IPropertyAnimation {
-  var finalScaleX: Double
-  var finalScaleY: Double
-  var initialScaleX: Double
-  var initialScaleY: Double
-  var normalizedOrigin: Point
+  var finalScaleX: Double = js.native
+  var finalScaleY: Double = js.native
+  var initialScaleX: Double = js.native
+  var initialScaleY: Double = js.native
+  var normalizedOrigin: Point = js.native
 }
 
 object IScaleAnimation {
@@ -31,5 +32,43 @@ object IScaleAnimation {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IScaleAnimation]
   }
+  @scala.inline
+  implicit class IScaleAnimationOps[Self <: IScaleAnimation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFinalScaleX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalScaleX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFinalScaleY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalScaleY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInitialScaleX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialScaleX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInitialScaleY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialScaleY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNormalizedOrigin(value: Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizedOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

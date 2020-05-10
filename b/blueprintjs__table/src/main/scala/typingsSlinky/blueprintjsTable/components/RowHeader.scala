@@ -1,12 +1,10 @@
 package typingsSlinky.blueprintjsTable.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsTable.commonCellMod.IFocusedCellCoordinates
 import typingsSlinky.blueprintjsTable.commonMod.Grid
 import typingsSlinky.blueprintjsTable.draggableMod.ICoordinateData
@@ -17,13 +15,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RowHeader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsTable.rowHeaderMod.RowHeader] {
+object RowHeader {
   @JSImport("@blueprintjs/table/lib/esm/headers/rowHeader", "RowHeader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsTable.rowHeaderMod.RowHeader] {
+    @scala.inline
+    def defaultRowHeight(value: Double): this.type = set("defaultRowHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableMultipleSelection(value: Boolean): this.type = set("enableMultipleSelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusedCell(value: IFocusedCellCoordinates): this.type = set("focusedCell", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isResizable(value: Boolean): this.type = set("isResizable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxRowHeight(value: Double): this.type = set("maxRowHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minRowHeight(value: Double): this.type = set("minRowHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onSelectionEnd(value: /* regions */ js.Array[IRegion] => Unit): this.type = set("onSelectionEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def rowHeaderCellRenderer(value: /* rowIndex */ Double => ReactElement): this.type = set("rowHeaderCellRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def selectedRegionTransform(
+      value: (/* region */ IRegion, /* event */ MouseEvent | KeyboardEvent, /* coords */ js.UndefOr[ICoordinateData]) => IRegion
+    ): this.type = set("selectedRegionTransform", js.Any.fromFunction3(value))
+    @scala.inline
+    def selectedRegions(value: js.Array[IRegion]): this.type = set("selectedRegions", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: IRowHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     grid: Grid,
     locator: ILocator,
@@ -35,35 +63,10 @@ object RowHeader
     onRowHeightChanged: (/* index */ Double, /* size */ Double) => Unit,
     onSelection: js.Array[IRegion] => Unit,
     rowIndexEnd: Double,
-    rowIndexStart: Double,
-    defaultRowHeight: Int | Double = null,
-    enableMultipleSelection: js.UndefOr[Boolean] = js.undefined,
-    focusedCell: IFocusedCellCoordinates = null,
-    isResizable: js.UndefOr[Boolean] = js.undefined,
-    loading: js.UndefOr[Boolean] = js.undefined,
-    maxRowHeight: Int | Double = null,
-    minRowHeight: Int | Double = null,
-    onSelectionEnd: /* regions */ js.Array[IRegion] => Unit = null,
-    rowHeaderCellRenderer: /* rowIndex */ Double => ReactElement = null,
-    selectedRegionTransform: (/* region */ IRegion, /* event */ MouseEvent | KeyboardEvent, /* coords */ js.UndefOr[ICoordinateData]) => IRegion = null,
-    selectedRegions: js.Array[IRegion] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsTable.rowHeaderMod.RowHeader] = {
-    val __obj = js.Dynamic.literal(grid = grid.asInstanceOf[js.Any], locator = locator.asInstanceOf[js.Any], onFocusedCell = js.Any.fromFunction1(onFocusedCell), onLayoutLock = js.Any.fromFunction1(onLayoutLock), onReordered = js.Any.fromFunction3(onReordered), onReordering = js.Any.fromFunction3(onReordering), onResizeGuide = js.Any.fromFunction1(onResizeGuide), onRowHeightChanged = js.Any.fromFunction2(onRowHeightChanged), onSelection = js.Any.fromFunction1(onSelection), rowIndexEnd = rowIndexEnd.asInstanceOf[js.Any], rowIndexStart = rowIndexStart.asInstanceOf[js.Any])
-    if (defaultRowHeight != null) __obj.updateDynamic("defaultRowHeight")(defaultRowHeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableMultipleSelection)) __obj.updateDynamic("enableMultipleSelection")(enableMultipleSelection.asInstanceOf[js.Any])
-    if (focusedCell != null) __obj.updateDynamic("focusedCell")(focusedCell.asInstanceOf[js.Any])
-    if (!js.isUndefined(isResizable)) __obj.updateDynamic("isResizable")(isResizable.asInstanceOf[js.Any])
-    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (maxRowHeight != null) __obj.updateDynamic("maxRowHeight")(maxRowHeight.asInstanceOf[js.Any])
-    if (minRowHeight != null) __obj.updateDynamic("minRowHeight")(minRowHeight.asInstanceOf[js.Any])
-    if (onSelectionEnd != null) __obj.updateDynamic("onSelectionEnd")(js.Any.fromFunction1(onSelectionEnd))
-    if (rowHeaderCellRenderer != null) __obj.updateDynamic("rowHeaderCellRenderer")(js.Any.fromFunction1(rowHeaderCellRenderer))
-    if (selectedRegionTransform != null) __obj.updateDynamic("selectedRegionTransform")(js.Any.fromFunction3(selectedRegionTransform))
-    if (selectedRegions != null) __obj.updateDynamic("selectedRegions")(selectedRegions.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    rowIndexStart: Double
+  ): Builder = {
+    val __props = js.Dynamic.literal(grid = grid.asInstanceOf[js.Any], locator = locator.asInstanceOf[js.Any], onFocusedCell = js.Any.fromFunction1(onFocusedCell), onLayoutLock = js.Any.fromFunction1(onLayoutLock), onReordered = js.Any.fromFunction3(onReordered), onReordering = js.Any.fromFunction3(onReordering), onResizeGuide = js.Any.fromFunction1(onResizeGuide), onRowHeightChanged = js.Any.fromFunction2(onRowHeightChanged), onSelection = js.Any.fromFunction1(onSelection), rowIndexEnd = rowIndexEnd.asInstanceOf[js.Any], rowIndexStart = rowIndexStart.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IRowHeaderProps]))
   }
-  type Props = IRowHeaderProps
 }
 

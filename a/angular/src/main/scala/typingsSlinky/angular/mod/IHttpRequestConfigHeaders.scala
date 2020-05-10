@@ -5,33 +5,92 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IHttpRequestConfigHeaders
-  extends /* requestType */ StringDictionary[js.Any] {
-  var common: js.UndefOr[js.Any] = js.undefined
-  var get: js.UndefOr[js.Any] = js.undefined
-  var patch: js.UndefOr[js.Any] = js.undefined
-  var post: js.UndefOr[js.Any] = js.undefined
-  var put: js.UndefOr[js.Any] = js.undefined
+  extends /**
+  * Indexer which should return ng.INgModelController for most properties but cannot because of "All named properties must be assignable to string indexer type" constraint - see https://github.com/Microsoft/TypeScript/issues/272
+  */
+/* name */ StringDictionary[js.Any] {
+  var common: js.UndefOr[js.Any] = js.native
+  var get: js.UndefOr[js.Any] = js.native
+  var patch: js.UndefOr[js.Any] = js.native
+  var post: js.UndefOr[js.Any] = js.native
+  var put: js.UndefOr[js.Any] = js.native
 }
 
 object IHttpRequestConfigHeaders {
   @scala.inline
-  def apply(
-    StringDictionary: /* requestType */ StringDictionary[js.Any] = null,
-    common: js.Any = null,
-    get: js.Any = null,
-    patch: js.Any = null,
-    post: js.Any = null,
-    put: js.Any = null
-  ): IHttpRequestConfigHeaders = {
+  def apply(): IHttpRequestConfigHeaders = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (common != null) __obj.updateDynamic("common")(common.asInstanceOf[js.Any])
-    if (get != null) __obj.updateDynamic("get")(get.asInstanceOf[js.Any])
-    if (patch != null) __obj.updateDynamic("patch")(patch.asInstanceOf[js.Any])
-    if (post != null) __obj.updateDynamic("post")(post.asInstanceOf[js.Any])
-    if (put != null) __obj.updateDynamic("put")(put.asInstanceOf[js.Any])
     __obj.asInstanceOf[IHttpRequestConfigHeaders]
   }
+  @scala.inline
+  implicit class IHttpRequestConfigHeadersOps[Self <: IHttpRequestConfigHeaders] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommon(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("common")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("common")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGet(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatch(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPost(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("post")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("post")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPut(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("put")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("put")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

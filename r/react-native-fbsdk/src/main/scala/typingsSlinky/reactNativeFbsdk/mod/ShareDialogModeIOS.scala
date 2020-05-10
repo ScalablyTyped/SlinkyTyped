@@ -13,12 +13,10 @@ trait ShareDialogModeIOS extends js.Object
 
 object ShareDialogModeIOS {
   @scala.inline
-  def automatic: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.automatic = this.cast("automatic")
+  def automatic: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.automatic = "automatic".asInstanceOf[typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.automatic]
   @scala.inline
-  def browser: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.browser = this.cast("browser")
+  def browser: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.browser = "browser".asInstanceOf[typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.browser]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def webview: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.webview = this.cast("webview")
+  def webview: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.webview = "webview".asInstanceOf[typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.webview]
 }
 

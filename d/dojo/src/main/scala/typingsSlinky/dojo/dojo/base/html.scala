@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * This module is a stub for the core dojo DOM API.
   *
   */
+@js.native
 trait html extends js.Object
 

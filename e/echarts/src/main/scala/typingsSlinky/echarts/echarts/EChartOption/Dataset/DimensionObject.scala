@@ -12,24 +12,62 @@ import scala.scalajs.js.annotation._
 /**
   * @see https://echarts.apache.org/en/option.html#dataset.dimensions
   */
+@js.native
 trait DimensionObject extends js.Object {
-  var displayName: js.UndefOr[String] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var `type`: js.UndefOr[number | float | int | ordinal | time] = js.undefined
+  var displayName: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[number | float | int | ordinal | time] = js.native
 }
 
 object DimensionObject {
   @scala.inline
-  def apply(
-    displayName: String = null,
-    name: String = null,
-    `type`: number | float | int | ordinal | time = null
-  ): DimensionObject = {
+  def apply(): DimensionObject = {
     val __obj = js.Dynamic.literal()
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DimensionObject]
   }
+  @scala.inline
+  implicit class DimensionObjectOps[Self <: DimensionObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: number | float | int | ordinal | time): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,18 +26,65 @@ trait TaskObject extends js.Object {
 
 object TaskObject {
   @scala.inline
-  def apply(
-    attemptId: id = null,
-    objects: PipelineObjectMap = null,
-    pipelineId: id = null,
-    taskId: taskId = null
-  ): TaskObject = {
+  def apply(): TaskObject = {
     val __obj = js.Dynamic.literal()
-    if (attemptId != null) __obj.updateDynamic("attemptId")(attemptId.asInstanceOf[js.Any])
-    if (objects != null) __obj.updateDynamic("objects")(objects.asInstanceOf[js.Any])
-    if (pipelineId != null) __obj.updateDynamic("pipelineId")(pipelineId.asInstanceOf[js.Any])
-    if (taskId != null) __obj.updateDynamic("taskId")(taskId.asInstanceOf[js.Any])
     __obj.asInstanceOf[TaskObject]
   }
+  @scala.inline
+  implicit class TaskObjectOps[Self <: TaskObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttemptId(value: id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attemptId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttemptId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attemptId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjects(value: PipelineObjectMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPipelineId(value: id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPipelineId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskId(value: taskId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

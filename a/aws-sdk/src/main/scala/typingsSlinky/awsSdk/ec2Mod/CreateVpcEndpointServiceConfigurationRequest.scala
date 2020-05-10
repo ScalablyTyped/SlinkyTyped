@@ -34,21 +34,83 @@ trait CreateVpcEndpointServiceConfigurationRequest extends js.Object {
 
 object CreateVpcEndpointServiceConfigurationRequest {
   @scala.inline
-  def apply(
-    NetworkLoadBalancerArns: ValueStringList,
-    AcceptanceRequired: js.UndefOr[scala.Boolean] = js.undefined,
-    ClientToken: String = null,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    PrivateDnsName: String = null,
-    TagSpecifications: TagSpecificationList = null
-  ): CreateVpcEndpointServiceConfigurationRequest = {
+  def apply(NetworkLoadBalancerArns: ValueStringList): CreateVpcEndpointServiceConfigurationRequest = {
     val __obj = js.Dynamic.literal(NetworkLoadBalancerArns = NetworkLoadBalancerArns.asInstanceOf[js.Any])
-    if (!js.isUndefined(AcceptanceRequired)) __obj.updateDynamic("AcceptanceRequired")(AcceptanceRequired.asInstanceOf[js.Any])
-    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (PrivateDnsName != null) __obj.updateDynamic("PrivateDnsName")(PrivateDnsName.asInstanceOf[js.Any])
-    if (TagSpecifications != null) __obj.updateDynamic("TagSpecifications")(TagSpecifications.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateVpcEndpointServiceConfigurationRequest]
   }
+  @scala.inline
+  implicit class CreateVpcEndpointServiceConfigurationRequestOps[Self <: CreateVpcEndpointServiceConfigurationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNetworkLoadBalancerArns(value: ValueStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkLoadBalancerArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAcceptanceRequired(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptanceRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceptanceRequired: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptanceRequired")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateDnsName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateDnsName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateDnsName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateDnsName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagSpecifications(value: TagSpecificationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagSpecifications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagSpecifications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagSpecifications")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

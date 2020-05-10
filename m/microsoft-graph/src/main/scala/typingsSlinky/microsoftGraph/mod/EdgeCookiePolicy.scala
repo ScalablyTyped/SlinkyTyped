@@ -14,14 +14,12 @@ trait EdgeCookiePolicy extends js.Object
 
 object EdgeCookiePolicy {
   @scala.inline
-  def allow: typingsSlinky.microsoftGraph.microsoftGraphStrings.allow = this.cast("allow")
+  def allow: typingsSlinky.microsoftGraph.microsoftGraphStrings.allow = "allow".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.allow]
   @scala.inline
-  def blockAll: typingsSlinky.microsoftGraph.microsoftGraphStrings.blockAll = this.cast("blockAll")
+  def blockAll: typingsSlinky.microsoftGraph.microsoftGraphStrings.blockAll = "blockAll".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.blockAll]
   @scala.inline
-  def blockThirdParty: typingsSlinky.microsoftGraph.microsoftGraphStrings.blockThirdParty = this.cast("blockThirdParty")
+  def blockThirdParty: typingsSlinky.microsoftGraph.microsoftGraphStrings.blockThirdParty = "blockThirdParty".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.blockThirdParty]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = this.cast("userDefined")
+  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = "userDefined".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined]
 }
 

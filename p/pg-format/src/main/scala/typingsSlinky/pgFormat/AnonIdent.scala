@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonIdent extends js.Object {
-  var ident: js.UndefOr[String] = js.undefined
-  var literal: js.UndefOr[String] = js.undefined
-  var string: js.UndefOr[String] = js.undefined
+  var ident: js.UndefOr[String] = js.native
+  var literal: js.UndefOr[String] = js.native
+  var string: js.UndefOr[String] = js.native
 }
 
 object AnonIdent {
   @scala.inline
-  def apply(ident: String = null, literal: String = null, string: String = null): AnonIdent = {
+  def apply(): AnonIdent = {
     val __obj = js.Dynamic.literal()
-    if (ident != null) __obj.updateDynamic("ident")(ident.asInstanceOf[js.Any])
-    if (literal != null) __obj.updateDynamic("literal")(literal.asInstanceOf[js.Any])
-    if (string != null) __obj.updateDynamic("string")(string.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonIdent]
   }
+  @scala.inline
+  implicit class AnonIdentOps[Self <: AnonIdent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIdent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ident")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ident")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLiteral(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("literal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLiteral: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("literal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

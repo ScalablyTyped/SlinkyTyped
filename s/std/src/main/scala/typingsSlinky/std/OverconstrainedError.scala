@@ -5,8 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OverconstrainedError extends Error {
-  var constraint: java.lang.String
+  var constraint: java.lang.String = js.native
 }
 
 @JSGlobal("OverconstrainedError")

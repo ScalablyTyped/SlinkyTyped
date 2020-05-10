@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
   * 
   * Its dynamic counterpart is {@link Phaser.Physics.Arcade.Group}.
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType because Already inherited */ @JSGlobal("Phaser.Physics.Arcade.StaticGroup")
 @js.native
 class StaticGroup protected ()

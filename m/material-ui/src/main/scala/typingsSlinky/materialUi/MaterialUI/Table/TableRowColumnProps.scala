@@ -6,50 +6,158 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TableRowColumnProps extends js.Object {
   // <td/> is element that get the 'other' properties
-  var className: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
   // useful attributes passed to <td/>
-  var colSpan: js.UndefOr[Double] = js.undefined
-  var columnNumber: js.UndefOr[Double] = js.undefined
-  var hoverable: js.UndefOr[Boolean] = js.undefined
-  var key: js.UndefOr[String] = js.undefined
+  var colSpan: js.UndefOr[Double] = js.native
+  var columnNumber: js.UndefOr[Double] = js.native
+  var hoverable: js.UndefOr[Boolean] = js.native
+  var key: js.UndefOr[String] = js.native
   /** @deprecated Instead, use event handler on Table */
-  var onClick: js.UndefOr[js.Function2[/* e */ SyntheticMouseEvent[js.Object], /* column */ Double, Unit]] = js.undefined
+  var onClick: js.UndefOr[js.Function2[/* e */ SyntheticMouseEvent[js.Object], /* column */ Double, Unit]] = js.native
   /** @deprecated Instead, use event handler on Table */
-  var onHover: js.UndefOr[js.Function2[/* e */ SyntheticMouseEvent[js.Object], /* column */ Double, Unit]] = js.undefined
+  var onHover: js.UndefOr[js.Function2[/* e */ SyntheticMouseEvent[js.Object], /* column */ Double, Unit]] = js.native
   /** @deprecated Instead, use event handler on Table */
-  var onHoverExit: js.UndefOr[js.Function2[/* e */ SyntheticMouseEvent[js.Object], /* column */ Double, Unit]] = js.undefined
-  var rowSpan: js.UndefOr[Double] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
+  var onHoverExit: js.UndefOr[js.Function2[/* e */ SyntheticMouseEvent[js.Object], /* column */ Double, Unit]] = js.native
+  var rowSpan: js.UndefOr[Double] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
 }
 
 object TableRowColumnProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    colSpan: Int | Double = null,
-    columnNumber: Int | Double = null,
-    hoverable: js.UndefOr[Boolean] = js.undefined,
-    key: String = null,
-    onClick: (/* e */ SyntheticMouseEvent[js.Object], /* column */ Double) => Unit = null,
-    onHover: (/* e */ SyntheticMouseEvent[js.Object], /* column */ Double) => Unit = null,
-    onHoverExit: (/* e */ SyntheticMouseEvent[js.Object], /* column */ Double) => Unit = null,
-    rowSpan: Int | Double = null,
-    style: CSSProperties = null
-  ): TableRowColumnProps = {
+  def apply(): TableRowColumnProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (colSpan != null) __obj.updateDynamic("colSpan")(colSpan.asInstanceOf[js.Any])
-    if (columnNumber != null) __obj.updateDynamic("columnNumber")(columnNumber.asInstanceOf[js.Any])
-    if (!js.isUndefined(hoverable)) __obj.updateDynamic("hoverable")(hoverable.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (onHover != null) __obj.updateDynamic("onHover")(js.Any.fromFunction2(onHover))
-    if (onHoverExit != null) __obj.updateDynamic("onHoverExit")(js.Any.fromFunction2(onHoverExit))
-    if (rowSpan != null) __obj.updateDynamic("rowSpan")(rowSpan.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableRowColumnProps]
   }
+  @scala.inline
+  implicit class TableRowColumnPropsOps[Self <: TableRowColumnProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColSpan(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colSpan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColSpan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colSpan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoverable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClick(value: (/* e */ SyntheticMouseEvent[js.Object], /* column */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnHover(value: (/* e */ SyntheticMouseEvent[js.Object], /* column */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHover")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnHover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnHoverExit(value: (/* e */ SyntheticMouseEvent[js.Object], /* column */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHoverExit")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnHoverExit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHoverExit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowSpan(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowSpan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowSpan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowSpan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

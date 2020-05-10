@@ -16,8 +16,21 @@ object GetNetworkProfileRequest {
   @scala.inline
   def apply(arn: AmazonResourceName): GetNetworkProfileRequest = {
     val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetNetworkProfileRequest]
   }
+  @scala.inline
+  implicit class GetNetworkProfileRequestOps[Self <: GetNetworkProfileRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: AmazonResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

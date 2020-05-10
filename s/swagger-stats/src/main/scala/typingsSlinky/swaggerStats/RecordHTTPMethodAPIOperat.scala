@@ -6,15 +6,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Record<swagger-stats.swagger-stats.HTTPMethod, swagger-stats.swagger-stats.APIOperationDefinition> */
+@js.native
 trait RecordHTTPMethodAPIOperat extends js.Object {
-  var DELETE: APIOperationDefinition
-  var GET: APIOperationDefinition
-  var HEAD: APIOperationDefinition
-  var OPTIONS: APIOperationDefinition
-  var PATCH: APIOperationDefinition
-  var POST: APIOperationDefinition
-  var PUT: APIOperationDefinition
-  var TRACE: APIOperationDefinition
+  var DELETE: APIOperationDefinition = js.native
+  var GET: APIOperationDefinition = js.native
+  var HEAD: APIOperationDefinition = js.native
+  var OPTIONS: APIOperationDefinition = js.native
+  var PATCH: APIOperationDefinition = js.native
+  var POST: APIOperationDefinition = js.native
+  var PUT: APIOperationDefinition = js.native
+  var TRACE: APIOperationDefinition = js.native
 }
 
 object RecordHTTPMethodAPIOperat {
@@ -30,8 +31,63 @@ object RecordHTTPMethodAPIOperat {
     TRACE: APIOperationDefinition
   ): RecordHTTPMethodAPIOperat = {
     val __obj = js.Dynamic.literal(DELETE = DELETE.asInstanceOf[js.Any], GET = GET.asInstanceOf[js.Any], HEAD = HEAD.asInstanceOf[js.Any], OPTIONS = OPTIONS.asInstanceOf[js.Any], PATCH = PATCH.asInstanceOf[js.Any], POST = POST.asInstanceOf[js.Any], PUT = PUT.asInstanceOf[js.Any], TRACE = TRACE.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[RecordHTTPMethodAPIOperat]
   }
+  @scala.inline
+  implicit class RecordHTTPMethodAPIOperatOps[Self <: RecordHTTPMethodAPIOperat] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDELETE(value: APIOperationDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DELETE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGET(value: APIOperationDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GET")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHEAD(value: APIOperationDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAD")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOPTIONS(value: APIOperationDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OPTIONS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPATCH(value: APIOperationDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PATCH")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPOST(value: APIOperationDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("POST")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPUT(value: APIOperationDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PUT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTRACE(value: APIOperationDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TRACE")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

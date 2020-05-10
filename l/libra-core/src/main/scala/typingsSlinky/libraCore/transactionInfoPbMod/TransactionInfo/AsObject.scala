@@ -4,24 +4,74 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AsObject extends js.Object {
-  var eventRootHash: scala.scalajs.js.typedarray.Uint8Array | String
-  var gasUsed: String
-  var signedTransactionHash: scala.scalajs.js.typedarray.Uint8Array | String
-  var stateRootHash: scala.scalajs.js.typedarray.Uint8Array | String
+  var eventRootHash: js.typedarray.Uint8Array | String = js.native
+  var gasUsed: String = js.native
+  var signedTransactionHash: js.typedarray.Uint8Array | String = js.native
+  var stateRootHash: js.typedarray.Uint8Array | String = js.native
 }
 
 object AsObject {
   @scala.inline
   def apply(
-    eventRootHash: scala.scalajs.js.typedarray.Uint8Array | String,
+    eventRootHash: js.typedarray.Uint8Array | String,
     gasUsed: String,
-    signedTransactionHash: scala.scalajs.js.typedarray.Uint8Array | String,
-    stateRootHash: scala.scalajs.js.typedarray.Uint8Array | String
+    signedTransactionHash: js.typedarray.Uint8Array | String,
+    stateRootHash: js.typedarray.Uint8Array | String
   ): AsObject = {
     val __obj = js.Dynamic.literal(eventRootHash = eventRootHash.asInstanceOf[js.Any], gasUsed = gasUsed.asInstanceOf[js.Any], signedTransactionHash = signedTransactionHash.asInstanceOf[js.Any], stateRootHash = stateRootHash.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AsObject]
   }
+  @scala.inline
+  implicit class AsObjectOps[Self <: AsObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventRootHashUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventRootHash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEventRootHash(value: js.typedarray.Uint8Array | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventRootHash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGasUsed(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gasUsed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSignedTransactionHashUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signedTransactionHash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSignedTransactionHash(value: js.typedarray.Uint8Array | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signedTransactionHash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStateRootHashUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateRootHash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStateRootHash(value: js.typedarray.Uint8Array | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateRootHash")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

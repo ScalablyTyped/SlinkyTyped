@@ -16,18 +16,16 @@ trait GridJustification extends js.Object
 
 object GridJustification {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.materialUiCore.materialUiCoreStrings.center = "center".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.center]
   @scala.inline
-  def center: typingsSlinky.materialUiCore.materialUiCoreStrings.center = this.cast("center")
+  def `flex-end`: typingsSlinky.materialUiCore.materialUiCoreStrings.`flex-end` = "flex-end".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.`flex-end`]
   @scala.inline
-  def `flex-end`: typingsSlinky.materialUiCore.materialUiCoreStrings.`flex-end` = this.cast("flex-end")
+  def `flex-start`: typingsSlinky.materialUiCore.materialUiCoreStrings.`flex-start` = "flex-start".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.`flex-start`]
   @scala.inline
-  def `flex-start`: typingsSlinky.materialUiCore.materialUiCoreStrings.`flex-start` = this.cast("flex-start")
+  def `space-around`: typingsSlinky.materialUiCore.materialUiCoreStrings.`space-around` = "space-around".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.`space-around`]
   @scala.inline
-  def `space-around`: typingsSlinky.materialUiCore.materialUiCoreStrings.`space-around` = this.cast("space-around")
+  def `space-between`: typingsSlinky.materialUiCore.materialUiCoreStrings.`space-between` = "space-between".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.`space-between`]
   @scala.inline
-  def `space-between`: typingsSlinky.materialUiCore.materialUiCoreStrings.`space-between` = this.cast("space-between")
-  @scala.inline
-  def `space-evenly`: typingsSlinky.materialUiCore.materialUiCoreStrings.`space-evenly` = this.cast("space-evenly")
+  def `space-evenly`: typingsSlinky.materialUiCore.materialUiCoreStrings.`space-evenly` = "space-evenly".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.`space-evenly`]
 }
 

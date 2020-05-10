@@ -26,17 +26,59 @@ trait BouncedRecipientInfo extends js.Object {
 
 object BouncedRecipientInfo {
   @scala.inline
-  def apply(
-    Recipient: Address,
-    BounceType: BounceType = null,
-    RecipientArn: AmazonResourceName = null,
-    RecipientDsnFields: RecipientDsnFields = null
-  ): BouncedRecipientInfo = {
+  def apply(Recipient: Address): BouncedRecipientInfo = {
     val __obj = js.Dynamic.literal(Recipient = Recipient.asInstanceOf[js.Any])
-    if (BounceType != null) __obj.updateDynamic("BounceType")(BounceType.asInstanceOf[js.Any])
-    if (RecipientArn != null) __obj.updateDynamic("RecipientArn")(RecipientArn.asInstanceOf[js.Any])
-    if (RecipientDsnFields != null) __obj.updateDynamic("RecipientDsnFields")(RecipientDsnFields.asInstanceOf[js.Any])
     __obj.asInstanceOf[BouncedRecipientInfo]
   }
+  @scala.inline
+  implicit class BouncedRecipientInfoOps[Self <: BouncedRecipientInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRecipient(value: Address): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Recipient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBounceType(value: BounceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BounceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBounceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BounceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipientArn(value: AmazonResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecipientArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipientArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecipientArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipientDsnFields(value: RecipientDsnFields): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecipientDsnFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipientDsnFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecipientDsnFields")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,13 +4,14 @@ import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.meteor.Meteor.SubscriptionHandle
 import typingsSlinky.meteor.Tracker.Computation
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait TemplateInstance extends js.Object {
-  var data: js.Object = js.native
+  var data: Record[String, _] = js.native
   var firstNode: js.Object = js.native
   var lastNode: js.Object = js.native
   var view: js.Object = js.native

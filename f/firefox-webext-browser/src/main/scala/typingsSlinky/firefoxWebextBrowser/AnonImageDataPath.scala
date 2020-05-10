@@ -7,6 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonImageDataPath extends js.Object {
   /**
     * Either an ImageData object or a dictionary {size -> ImageData} representing icon to be set. If the icon is
@@ -15,7 +16,7 @@ trait AnonImageDataPath extends js.Object {
     * will be selected. Initially only scales 1 and 2 will be supported. At least one image must be specified.
     * Note that 'details.imageData = foo' is equivalent to 'details.imageData = {'19': foo}'
     */
-  var imageData: js.UndefOr[ImageDataType | NumberDictionary[ImageDataType]] = js.undefined
+  var imageData: js.UndefOr[ImageDataType | NumberDictionary[ImageDataType]] = js.native
   /**
     * Either a relative image path or a dictionary {size -> relative image path} pointing to icon to be set. If
     * the icon is specified as a dictionary, the actual image to be used is chosen depending on screen's pixel
@@ -23,27 +24,74 @@ trait AnonImageDataPath extends js.Object {
     * size `scale` * 19 will be selected. Initially only scales 1 and 2 will be supported. At least one image must
     * be specified. Note that 'details.path = foo' is equivalent to 'details.imageData = {'19': foo}'
     */
-  var path: js.UndefOr[String | StringDictionary[String]] = js.undefined
+  var path: js.UndefOr[String | StringDictionary[String]] = js.native
   /** Sets the sidebar icon for the tab specified by tabId. Automatically resets when the tab is closed. */
-  var tabId: js.UndefOr[Double] = js.undefined
+  var tabId: js.UndefOr[Double] = js.native
   /** Sets the sidebar icon for the window specified by windowId. */
-  var windowId: js.UndefOr[Double] = js.undefined
+  var windowId: js.UndefOr[Double] = js.native
 }
 
 object AnonImageDataPath {
   @scala.inline
-  def apply(
-    imageData: ImageDataType | NumberDictionary[ImageDataType] = null,
-    path: String | StringDictionary[String] = null,
-    tabId: Int | Double = null,
-    windowId: Int | Double = null
-  ): AnonImageDataPath = {
+  def apply(): AnonImageDataPath = {
     val __obj = js.Dynamic.literal()
-    if (imageData != null) __obj.updateDynamic("imageData")(imageData.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (tabId != null) __obj.updateDynamic("tabId")(tabId.asInstanceOf[js.Any])
-    if (windowId != null) __obj.updateDynamic("windowId")(windowId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonImageDataPath]
   }
+  @scala.inline
+  implicit class AnonImageDataPathOps[Self <: AnonImageDataPath] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImageData(value: ImageDataType | NumberDictionary[ImageDataType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String | StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTabId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWindowId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("windowId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWindowId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("windowId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

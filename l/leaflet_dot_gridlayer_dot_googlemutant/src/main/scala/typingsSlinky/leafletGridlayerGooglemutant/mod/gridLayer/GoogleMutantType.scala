@@ -14,14 +14,12 @@ trait GoogleMutantType extends js.Object
 
 object GoogleMutantType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hybrid: typingsSlinky.leafletGridlayerGooglemutant.leafletGridlayerGooglemutantStrings.hybrid = "hybrid".asInstanceOf[typingsSlinky.leafletGridlayerGooglemutant.leafletGridlayerGooglemutantStrings.hybrid]
   @scala.inline
-  def hybrid: typingsSlinky.leafletGridlayerGooglemutant.leafletGridlayerGooglemutantStrings.hybrid = this.cast("hybrid")
+  def roadmap: typingsSlinky.leafletGridlayerGooglemutant.leafletGridlayerGooglemutantStrings.roadmap = "roadmap".asInstanceOf[typingsSlinky.leafletGridlayerGooglemutant.leafletGridlayerGooglemutantStrings.roadmap]
   @scala.inline
-  def roadmap: typingsSlinky.leafletGridlayerGooglemutant.leafletGridlayerGooglemutantStrings.roadmap = this.cast("roadmap")
+  def satellite: typingsSlinky.leafletGridlayerGooglemutant.leafletGridlayerGooglemutantStrings.satellite = "satellite".asInstanceOf[typingsSlinky.leafletGridlayerGooglemutant.leafletGridlayerGooglemutantStrings.satellite]
   @scala.inline
-  def satellite: typingsSlinky.leafletGridlayerGooglemutant.leafletGridlayerGooglemutantStrings.satellite = this.cast("satellite")
-  @scala.inline
-  def terrain: typingsSlinky.leafletGridlayerGooglemutant.leafletGridlayerGooglemutantStrings.terrain = this.cast("terrain")
+  def terrain: typingsSlinky.leafletGridlayerGooglemutant.leafletGridlayerGooglemutantStrings.terrain = "terrain".asInstanceOf[typingsSlinky.leafletGridlayerGooglemutant.leafletGridlayerGooglemutantStrings.terrain]
 }
 

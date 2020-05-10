@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NotificationStatisticsQuery extends js.Object {
-  var conditions: js.Array[NotificationStatisticsQueryConditions]
+  var conditions: js.Array[NotificationStatisticsQueryConditions] = js.native
 }
 
 object NotificationStatisticsQuery {
   @scala.inline
   def apply(conditions: js.Array[NotificationStatisticsQueryConditions]): NotificationStatisticsQuery = {
     val __obj = js.Dynamic.literal(conditions = conditions.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[NotificationStatisticsQuery]
   }
+  @scala.inline
+  implicit class NotificationStatisticsQueryOps[Self <: NotificationStatisticsQuery] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConditions(value: js.Array[NotificationStatisticsQueryConditions]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

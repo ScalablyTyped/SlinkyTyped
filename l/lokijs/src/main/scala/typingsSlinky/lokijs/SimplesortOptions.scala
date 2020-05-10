@@ -4,11 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SimplesortOptions extends js.Object {
-  var desc: Boolean
-  var disableIndexIntersect: Boolean
-  var forceIndexIntersect: Boolean
-  var useJavascriptSorting: Boolean
+  var desc: Boolean = js.native
+  var disableIndexIntersect: Boolean = js.native
+  var forceIndexIntersect: Boolean = js.native
+  var useJavascriptSorting: Boolean = js.native
 }
 
 object SimplesortOptions {
@@ -20,8 +21,39 @@ object SimplesortOptions {
     useJavascriptSorting: Boolean
   ): SimplesortOptions = {
     val __obj = js.Dynamic.literal(desc = desc.asInstanceOf[js.Any], disableIndexIntersect = disableIndexIntersect.asInstanceOf[js.Any], forceIndexIntersect = forceIndexIntersect.asInstanceOf[js.Any], useJavascriptSorting = useJavascriptSorting.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SimplesortOptions]
   }
+  @scala.inline
+  implicit class SimplesortOptionsOps[Self <: SimplesortOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDesc(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableIndexIntersect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableIndexIntersect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForceIndexIntersect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceIndexIntersect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUseJavascriptSorting(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useJavascriptSorting")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -11,7 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -32,8 +32,8 @@ abstract class PublishedServiceBase protected () extends Document {
   @JSName("model")
   var model_FPublishedServiceBase: IModel = js.native
   @JSName("containerAsFolderBase")
-  def containerAsFolderBase_MPublishedServiceBase(): FolderBase = js.native
-  def versionedServices(): IList[VersionedService] = js.native
+  def containerAsFolderBase_MPublishedServiceBase: FolderBase = js.native
+  def versionedServices: IList[VersionedService] = js.native
 }
 
 /* static members */

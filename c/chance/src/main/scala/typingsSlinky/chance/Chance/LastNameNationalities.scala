@@ -19,24 +19,22 @@ trait LastNameNationalities extends js.Object
 
 object LastNameNationalities {
   @scala.inline
-  def Asterisk: typingsSlinky.chance.chanceStrings.Asterisk = this.cast("*")
+  def Asterisk: typingsSlinky.chance.chanceStrings.Asterisk = "*".asInstanceOf[typingsSlinky.chance.chanceStrings.Asterisk]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def de: typingsSlinky.chance.chanceStrings.de = "de".asInstanceOf[typingsSlinky.chance.chanceStrings.de]
   @scala.inline
-  def de: typingsSlinky.chance.chanceStrings.de = this.cast("de")
+  def en: typingsSlinky.chance.chanceStrings.en = "en".asInstanceOf[typingsSlinky.chance.chanceStrings.en]
   @scala.inline
-  def en: typingsSlinky.chance.chanceStrings.en = this.cast("en")
+  def es: typingsSlinky.chance.chanceStrings.es = "es".asInstanceOf[typingsSlinky.chance.chanceStrings.es]
   @scala.inline
-  def es: typingsSlinky.chance.chanceStrings.es = this.cast("es")
+  def fr: typingsSlinky.chance.chanceStrings.fr = "fr".asInstanceOf[typingsSlinky.chance.chanceStrings.fr]
   @scala.inline
-  def fr: typingsSlinky.chance.chanceStrings.fr = this.cast("fr")
+  def it: typingsSlinky.chance.chanceStrings.it = "it".asInstanceOf[typingsSlinky.chance.chanceStrings.it]
   @scala.inline
-  def it: typingsSlinky.chance.chanceStrings.it = this.cast("it")
+  def jp: typingsSlinky.chance.chanceStrings.jp = "jp".asInstanceOf[typingsSlinky.chance.chanceStrings.jp]
   @scala.inline
-  def jp: typingsSlinky.chance.chanceStrings.jp = this.cast("jp")
+  def nl: typingsSlinky.chance.chanceStrings.nl = "nl".asInstanceOf[typingsSlinky.chance.chanceStrings.nl]
   @scala.inline
-  def nl: typingsSlinky.chance.chanceStrings.nl = this.cast("nl")
-  @scala.inline
-  def uk: typingsSlinky.chance.chanceStrings.uk = this.cast("uk")
+  def uk: typingsSlinky.chance.chanceStrings.uk = "uk".asInstanceOf[typingsSlinky.chance.chanceStrings.uk]
 }
 

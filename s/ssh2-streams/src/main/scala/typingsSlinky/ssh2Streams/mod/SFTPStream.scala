@@ -28,7 +28,6 @@ import typingsSlinky.ssh2Streams.ssh2StreamsStrings.continue
 import typingsSlinky.ssh2Streams.ssh2StreamsStrings.end
 import typingsSlinky.ssh2Streams.ssh2StreamsStrings.error
 import typingsSlinky.ssh2Streams.ssh2StreamsStrings.ready
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -197,9 +196,9 @@ class SFTPStream () extends Transform {
     * Returns `false` if you should wait for the `continue` event before sending any more traffic.
     */
   def futimes(handle: Buffer, atime: Double, mtime: Double, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
-  def futimes(handle: Buffer, atime: Double, mtime: Date, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
-  def futimes(handle: Buffer, atime: Date, mtime: Double, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
-  def futimes(handle: Buffer, atime: Date, mtime: Date, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
+  def futimes(handle: Buffer, atime: Double, mtime: js.Date, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
+  def futimes(handle: Buffer, atime: js.Date, mtime: Double, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
+  def futimes(handle: Buffer, atime: js.Date, mtime: js.Date, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
   /**
     * (Server-only)
     * Sends a handle response for the request identified by `id`.
@@ -623,9 +622,9 @@ class SFTPStream () extends Transform {
     * Returns `false` if you should wait for the `continue` event before sending any more traffic.
     */
   def utimes(path: String, atime: Double, mtime: Double, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
-  def utimes(path: String, atime: Double, mtime: Date, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
-  def utimes(path: String, atime: Date, mtime: Double, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
-  def utimes(path: String, atime: Date, mtime: Date, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
+  def utimes(path: String, atime: Double, mtime: js.Date, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
+  def utimes(path: String, atime: js.Date, mtime: Double, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
+  def utimes(path: String, atime: js.Date, mtime: js.Date, callback: js.Function1[/* err */ js.Any, Unit]): Boolean = js.native
   /**
     * (Client-only)
     * Returns `false` if you should wait for the `continue` event before sending any more traffic.

@@ -30,18 +30,65 @@ trait CreateObjectRequest extends js.Object {
 
 object CreateObjectRequest {
   @scala.inline
-  def apply(
-    DirectoryArn: Arn,
-    SchemaFacets: SchemaFacetList,
-    LinkName: LinkName = null,
-    ObjectAttributeList: AttributeKeyAndValueList = null,
-    ParentReference: ObjectReference = null
-  ): CreateObjectRequest = {
+  def apply(DirectoryArn: Arn, SchemaFacets: SchemaFacetList): CreateObjectRequest = {
     val __obj = js.Dynamic.literal(DirectoryArn = DirectoryArn.asInstanceOf[js.Any], SchemaFacets = SchemaFacets.asInstanceOf[js.Any])
-    if (LinkName != null) __obj.updateDynamic("LinkName")(LinkName.asInstanceOf[js.Any])
-    if (ObjectAttributeList != null) __obj.updateDynamic("ObjectAttributeList")(ObjectAttributeList.asInstanceOf[js.Any])
-    if (ParentReference != null) __obj.updateDynamic("ParentReference")(ParentReference.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateObjectRequest]
   }
+  @scala.inline
+  implicit class CreateObjectRequestOps[Self <: CreateObjectRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectoryArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSchemaFacets(value: SchemaFacetList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaFacets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinkName(value: LinkName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectAttributeList(value: AttributeKeyAndValueList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectAttributeList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectAttributeList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectAttributeList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentReference(value: ObjectReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentReference")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

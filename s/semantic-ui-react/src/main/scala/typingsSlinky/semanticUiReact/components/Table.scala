@@ -1,10 +1,11 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
@@ -25,76 +26,86 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Table
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Table {
   @JSImport("semantic-ui-react/dist/commonjs/collections/Table", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    as: js.Any = null,
-    attached: Boolean | top | bottom = null,
-    basic: Boolean | very = null,
-    celled: Boolean | internally = null,
-    collapsing: js.UndefOr[Boolean] = js.undefined,
-    color: SemanticCOLORS = null,
-    columns: SemanticWIDTHS = null,
-    compact: Boolean | very = null,
-    definition: js.UndefOr[Boolean] = js.undefined,
-    fixed: js.UndefOr[Boolean] = js.undefined,
-    footerRow: SemanticShorthandItem[TableRowProps] = null,
-    headerRow: SemanticShorthandItem[TableRowProps] = null,
-    headerRows: SemanticShorthandCollection[TableRowProps] = null,
-    inverted: js.UndefOr[Boolean] = js.undefined,
-    padded: Boolean | very = null,
-    renderBodyRow: (/* data */ js.Any, /* index */ Double) => _ = null,
-    selectable: js.UndefOr[Boolean] = js.undefined,
-    singleLine: js.UndefOr[Boolean] = js.undefined,
-    size: small | large = null,
-    sortable: js.UndefOr[Boolean] = js.undefined,
-    stackable: js.UndefOr[Boolean] = js.undefined,
-    striped: js.UndefOr[Boolean] = js.undefined,
-    structured: js.UndefOr[Boolean] = js.undefined,
-    tableData: js.Array[_] = null,
-    textAlign: center | left | right = null,
-    unstackable: js.UndefOr[Boolean] = js.undefined,
-    verticalAlign: SemanticVERTICALALIGNMENTS = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (attached != null) __obj.updateDynamic("attached")(attached.asInstanceOf[js.Any])
-    if (basic != null) __obj.updateDynamic("basic")(basic.asInstanceOf[js.Any])
-    if (celled != null) __obj.updateDynamic("celled")(celled.asInstanceOf[js.Any])
-    if (!js.isUndefined(collapsing)) __obj.updateDynamic("collapsing")(collapsing.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (compact != null) __obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
-    if (!js.isUndefined(definition)) __obj.updateDynamic("definition")(definition.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixed)) __obj.updateDynamic("fixed")(fixed.asInstanceOf[js.Any])
-    if (footerRow != null) __obj.updateDynamic("footerRow")(footerRow.asInstanceOf[js.Any])
-    if (headerRow != null) __obj.updateDynamic("headerRow")(headerRow.asInstanceOf[js.Any])
-    if (headerRows != null) __obj.updateDynamic("headerRows")(headerRows.asInstanceOf[js.Any])
-    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.asInstanceOf[js.Any])
-    if (padded != null) __obj.updateDynamic("padded")(padded.asInstanceOf[js.Any])
-    if (renderBodyRow != null) __obj.updateDynamic("renderBodyRow")(js.Any.fromFunction2(renderBodyRow))
-    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.asInstanceOf[js.Any])
-    if (!js.isUndefined(singleLine)) __obj.updateDynamic("singleLine")(singleLine.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (!js.isUndefined(sortable)) __obj.updateDynamic("sortable")(sortable.asInstanceOf[js.Any])
-    if (!js.isUndefined(stackable)) __obj.updateDynamic("stackable")(stackable.asInstanceOf[js.Any])
-    if (!js.isUndefined(striped)) __obj.updateDynamic("striped")(striped.asInstanceOf[js.Any])
-    if (!js.isUndefined(structured)) __obj.updateDynamic("structured")(structured.asInstanceOf[js.Any])
-    if (tableData != null) __obj.updateDynamic("tableData")(tableData.asInstanceOf[js.Any])
-    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
-    if (!js.isUndefined(unstackable)) __obj.updateDynamic("unstackable")(unstackable.asInstanceOf[js.Any])
-    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def attached(value: Boolean | top | bottom): this.type = set("attached", value.asInstanceOf[js.Any])
+    @scala.inline
+    def basic(value: Boolean | very): this.type = set("basic", value.asInstanceOf[js.Any])
+    @scala.inline
+    def celled(value: Boolean | internally): this.type = set("celled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def collapsing(value: Boolean): this.type = set("collapsing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: SemanticCOLORS): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columns(value: SemanticWIDTHS): this.type = set("columns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def compact(value: Boolean | very): this.type = set("compact", value.asInstanceOf[js.Any])
+    @scala.inline
+    def definition(value: Boolean): this.type = set("definition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fixed(value: Boolean): this.type = set("fixed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footerRowReactElement(value: ReactElement): this.type = set("footerRow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footerRowFunction3(
+      value: (/* component */ ReactComponentClass[TableRowProps], TableRowProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("footerRow", js.Any.fromFunction3(value))
+    @scala.inline
+    def footerRow(value: SemanticShorthandItem[TableRowProps]): this.type = set("footerRow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerRowReactElement(value: ReactElement): this.type = set("headerRow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerRowFunction3(
+      value: (/* component */ ReactComponentClass[TableRowProps], TableRowProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("headerRow", js.Any.fromFunction3(value))
+    @scala.inline
+    def headerRow(value: SemanticShorthandItem[TableRowProps]): this.type = set("headerRow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerRows(value: SemanticShorthandCollection[TableRowProps]): this.type = set("headerRows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inverted(value: Boolean): this.type = set("inverted", value.asInstanceOf[js.Any])
+    @scala.inline
+    def padded(value: Boolean | very): this.type = set("padded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderBodyRow(value: (/* data */ js.Any, /* index */ Double) => _): this.type = set("renderBodyRow", js.Any.fromFunction2(value))
+    @scala.inline
+    def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def singleLine(value: Boolean): this.type = set("singleLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: small | large): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sortable(value: Boolean): this.type = set("sortable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stackable(value: Boolean): this.type = set("stackable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def striped(value: Boolean): this.type = set("striped", value.asInstanceOf[js.Any])
+    @scala.inline
+    def structured(value: Boolean): this.type = set("structured", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tableData(value: js.Array[_]): this.type = set("tableData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textAlign(value: center | left | right): this.type = set("textAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unstackable(value: Boolean): this.type = set("unstackable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalAlign(value: SemanticVERTICALALIGNMENTS): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TableProps
+  
+  def withProps(p: TableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Table.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

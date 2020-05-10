@@ -6,27 +6,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCenter extends js.Object {
-  var center: js.UndefOr[js.Array[Double]] = js.undefined
-  var component: js.UndefOr[dxVectorMap] = js.undefined
-  var element: js.UndefOr[dxElement] = js.undefined
-  var model: js.UndefOr[js.Any] = js.undefined
+  var center: js.UndefOr[js.Array[Double]] = js.native
+  var component: js.UndefOr[dxVectorMap] = js.native
+  var element: js.UndefOr[dxElement] = js.native
+  var model: js.UndefOr[js.Any] = js.native
 }
 
 object AnonCenter {
   @scala.inline
-  def apply(
-    center: js.Array[Double] = null,
-    component: dxVectorMap = null,
-    element: dxElement = null,
-    model: js.Any = null
-  ): AnonCenter = {
+  def apply(): AnonCenter = {
     val __obj = js.Dynamic.literal()
-    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCenter]
   }
+  @scala.inline
+  implicit class AnonCenterOps[Self <: AnonCenter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCenter(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponent(value: dxVectorMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElement(value: dxElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModel(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

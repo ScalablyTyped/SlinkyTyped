@@ -5,28 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ListInvoicesParams extends CursorParams {
-  var customer_uuid: js.UndefOr[String] = js.undefined
-  var data_source_uuid: js.UndefOr[String] = js.undefined
-  var external_id: js.UndefOr[String] = js.undefined
+  var customer_uuid: js.UndefOr[String] = js.native
+  var data_source_uuid: js.UndefOr[String] = js.native
+  var external_id: js.UndefOr[String] = js.native
 }
 
 object ListInvoicesParams {
   @scala.inline
-  def apply(
-    customer_uuid: String = null,
-    data_source_uuid: String = null,
-    external_id: String = null,
-    page: Int | Double = null,
-    per_page: Int | Double = null
-  ): ListInvoicesParams = {
+  def apply(): ListInvoicesParams = {
     val __obj = js.Dynamic.literal()
-    if (customer_uuid != null) __obj.updateDynamic("customer_uuid")(customer_uuid.asInstanceOf[js.Any])
-    if (data_source_uuid != null) __obj.updateDynamic("data_source_uuid")(data_source_uuid.asInstanceOf[js.Any])
-    if (external_id != null) __obj.updateDynamic("external_id")(external_id.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (per_page != null) __obj.updateDynamic("per_page")(per_page.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListInvoicesParams]
   }
+  @scala.inline
+  implicit class ListInvoicesParamsOps[Self <: ListInvoicesParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomer_uuid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customer_uuid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomer_uuid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customer_uuid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData_source_uuid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data_source_uuid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData_source_uuid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data_source_uuid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternal_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("external_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternal_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("external_id")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

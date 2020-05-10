@@ -105,7 +105,7 @@ class Bounds () extends js.Object {
     *
     * @param {Float32Array} vertices - The verts to add.
     */
-  def addQuad(vertices: scala.scalajs.js.typedarray.Float32Array): Unit = js.native
+  def addQuad(vertices: js.typedarray.Float32Array): Unit = js.native
   /**
     * Adds screen vertices from array
     *
@@ -113,7 +113,7 @@ class Bounds () extends js.Object {
     * @param {number} beginOffset - begin offset
     * @param {number} endOffset - end offset, excluded
     */
-  def addVertexData(vertexData: scala.scalajs.js.typedarray.Float32Array, beginOffset: Double, endOffset: Double): Unit = js.native
+  def addVertexData(vertexData: js.typedarray.Float32Array, beginOffset: Double, endOffset: Double): Unit = js.native
   /**
     * Add an array of mesh vertices
     *
@@ -122,12 +122,7 @@ class Bounds () extends js.Object {
     * @param {number} beginOffset - begin offset
     * @param {number} endOffset - end offset, excluded
     */
-  def addVertices(
-    transform: Transform,
-    vertices: scala.scalajs.js.typedarray.Float32Array,
-    beginOffset: Double,
-    endOffset: Double
-  ): Unit = js.native
+  def addVertices(transform: Transform, vertices: js.typedarray.Float32Array, beginOffset: Double, endOffset: Double): Unit = js.native
   /**
     * Add an array of mesh vertices
     *
@@ -138,22 +133,17 @@ class Bounds () extends js.Object {
     * @param {number} [padX] - x padding
     * @param {number} [padY] - y padding
     */
+  def addVerticesMatrix(matrix: Matrix, vertices: js.typedarray.Float32Array, beginOffset: Double, endOffset: Double): Unit = js.native
   def addVerticesMatrix(
     matrix: Matrix,
-    vertices: scala.scalajs.js.typedarray.Float32Array,
-    beginOffset: Double,
-    endOffset: Double
-  ): Unit = js.native
-  def addVerticesMatrix(
-    matrix: Matrix,
-    vertices: scala.scalajs.js.typedarray.Float32Array,
+    vertices: js.typedarray.Float32Array,
     beginOffset: Double,
     endOffset: Double,
     padX: Double
   ): Unit = js.native
   def addVerticesMatrix(
     matrix: Matrix,
-    vertices: scala.scalajs.js.typedarray.Float32Array,
+    vertices: js.typedarray.Float32Array,
     beginOffset: Double,
     endOffset: Double,
     padX: Double,

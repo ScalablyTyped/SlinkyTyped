@@ -18,11 +18,41 @@ trait VolumeStatusAttachmentStatus extends js.Object {
 
 object VolumeStatusAttachmentStatus {
   @scala.inline
-  def apply(InstanceId: String = null, IoPerformance: String = null): VolumeStatusAttachmentStatus = {
+  def apply(): VolumeStatusAttachmentStatus = {
     val __obj = js.Dynamic.literal()
-    if (InstanceId != null) __obj.updateDynamic("InstanceId")(InstanceId.asInstanceOf[js.Any])
-    if (IoPerformance != null) __obj.updateDynamic("IoPerformance")(IoPerformance.asInstanceOf[js.Any])
     __obj.asInstanceOf[VolumeStatusAttachmentStatus]
   }
+  @scala.inline
+  implicit class VolumeStatusAttachmentStatusOps[Self <: VolumeStatusAttachmentStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIoPerformance(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IoPerformance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIoPerformance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IoPerformance")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

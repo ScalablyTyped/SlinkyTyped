@@ -14,14 +14,12 @@ trait BitLockerEncryptionMethod extends js.Object
 
 object BitLockerEncryptionMethod {
   @scala.inline
-  def aesCbc128: typingsSlinky.microsoftGraph.microsoftGraphStrings.aesCbc128 = this.cast("aesCbc128")
+  def aesCbc128: typingsSlinky.microsoftGraph.microsoftGraphStrings.aesCbc128 = "aesCbc128".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.aesCbc128]
   @scala.inline
-  def aesCbc256: typingsSlinky.microsoftGraph.microsoftGraphStrings.aesCbc256 = this.cast("aesCbc256")
+  def aesCbc256: typingsSlinky.microsoftGraph.microsoftGraphStrings.aesCbc256 = "aesCbc256".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.aesCbc256]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def xtsAes128: typingsSlinky.microsoftGraph.microsoftGraphStrings.xtsAes128 = "xtsAes128".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.xtsAes128]
   @scala.inline
-  def xtsAes128: typingsSlinky.microsoftGraph.microsoftGraphStrings.xtsAes128 = this.cast("xtsAes128")
-  @scala.inline
-  def xtsAes256: typingsSlinky.microsoftGraph.microsoftGraphStrings.xtsAes256 = this.cast("xtsAes256")
+  def xtsAes256: typingsSlinky.microsoftGraph.microsoftGraphStrings.xtsAes256 = "xtsAes256".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.xtsAes256]
 }
 

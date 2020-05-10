@@ -26,7 +26,7 @@ class VertexBuffer protected () extends js.Object {
     format: VertexFormat,
     numVertices: Double,
     usage: Double,
-    initialData: scala.scalajs.js.typedarray.ArrayBuffer
+    initialData: js.typedarray.ArrayBuffer
   ) = this()
   /**
     * @function
@@ -64,7 +64,16 @@ class VertexBuffer protected () extends js.Object {
     * @description Returns a mapped memory block representing the content of the vertex buffer.
     * @returns {ArrayBuffer} An array containing the byte data stored in the vertex buffer.
     */
-  def lock(): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def lock(): js.typedarray.ArrayBuffer = js.native
+  /**
+    * @function
+    * @name pc.VertexBuffer#setData
+    * @description Copies data into vertex buffer's memory.
+    * @param {ArrayBuffer} [data] - Source data to copy.
+    * @returns {boolean} True if function finished successfuly, false otherwise.
+    */
+  def setData(): Boolean = js.native
+  def setData(data: js.typedarray.ArrayBuffer): Boolean = js.native
   /**
     * @function
     * @name pc.VertexBuffer#unlock

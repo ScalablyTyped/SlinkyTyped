@@ -28,11 +28,41 @@ trait SchemaGooglePrivacyDlpV2LikelihoodAdjustment extends js.Object {
 
 object SchemaGooglePrivacyDlpV2LikelihoodAdjustment {
   @scala.inline
-  def apply(fixedLikelihood: String = null, relativeLikelihood: Int | Double = null): SchemaGooglePrivacyDlpV2LikelihoodAdjustment = {
+  def apply(): SchemaGooglePrivacyDlpV2LikelihoodAdjustment = {
     val __obj = js.Dynamic.literal()
-    if (fixedLikelihood != null) __obj.updateDynamic("fixedLikelihood")(fixedLikelihood.asInstanceOf[js.Any])
-    if (relativeLikelihood != null) __obj.updateDynamic("relativeLikelihood")(relativeLikelihood.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2LikelihoodAdjustment]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2LikelihoodAdjustmentOps[Self <: SchemaGooglePrivacyDlpV2LikelihoodAdjustment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFixedLikelihood(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedLikelihood")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedLikelihood: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedLikelihood")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelativeLikelihood(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeLikelihood")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelativeLikelihood: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeLikelihood")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

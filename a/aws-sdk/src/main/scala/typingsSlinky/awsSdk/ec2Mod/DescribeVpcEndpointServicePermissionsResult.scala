@@ -18,11 +18,41 @@ trait DescribeVpcEndpointServicePermissionsResult extends js.Object {
 
 object DescribeVpcEndpointServicePermissionsResult {
   @scala.inline
-  def apply(AllowedPrincipals: AllowedPrincipalSet = null, NextToken: String = null): DescribeVpcEndpointServicePermissionsResult = {
+  def apply(): DescribeVpcEndpointServicePermissionsResult = {
     val __obj = js.Dynamic.literal()
-    if (AllowedPrincipals != null) __obj.updateDynamic("AllowedPrincipals")(AllowedPrincipals.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeVpcEndpointServicePermissionsResult]
   }
+  @scala.inline
+  implicit class DescribeVpcEndpointServicePermissionsResultOps[Self <: DescribeVpcEndpointServicePermissionsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowedPrincipals(value: AllowedPrincipalSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedPrincipals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedPrincipals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedPrincipals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

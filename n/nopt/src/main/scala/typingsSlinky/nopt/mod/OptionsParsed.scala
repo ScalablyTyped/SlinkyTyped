@@ -6,17 +6,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OptionsParsed
   extends /* k */ StringDictionary[js.Any] {
-  var argv: AnonCooked
+  var argv: AnonCooked = js.native
 }
 
 object OptionsParsed {
   @scala.inline
-  def apply(argv: AnonCooked, StringDictionary: /* k */ StringDictionary[js.Any] = null): OptionsParsed = {
+  def apply(argv: AnonCooked): OptionsParsed = {
     val __obj = js.Dynamic.literal(argv = argv.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[OptionsParsed]
   }
+  @scala.inline
+  implicit class OptionsParsedOps[Self <: OptionsParsed] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArgv(value: AnonCooked): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("argv")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

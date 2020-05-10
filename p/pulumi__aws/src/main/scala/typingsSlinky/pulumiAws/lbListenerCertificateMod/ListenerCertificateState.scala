@@ -19,11 +19,41 @@ trait ListenerCertificateState extends js.Object {
 
 object ListenerCertificateState {
   @scala.inline
-  def apply(certificateArn: Input[String] = null, listenerArn: Input[String] = null): ListenerCertificateState = {
+  def apply(): ListenerCertificateState = {
     val __obj = js.Dynamic.literal()
-    if (certificateArn != null) __obj.updateDynamic("certificateArn")(certificateArn.asInstanceOf[js.Any])
-    if (listenerArn != null) __obj.updateDynamic("listenerArn")(listenerArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListenerCertificateState]
   }
+  @scala.inline
+  implicit class ListenerCertificateStateOps[Self <: ListenerCertificateState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListenerArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listenerArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListenerArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listenerArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

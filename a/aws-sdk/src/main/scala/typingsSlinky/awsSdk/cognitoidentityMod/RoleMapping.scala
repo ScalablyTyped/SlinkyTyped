@@ -22,15 +22,47 @@ trait RoleMapping extends js.Object {
 
 object RoleMapping {
   @scala.inline
-  def apply(
-    Type: RoleMappingType,
-    AmbiguousRoleResolution: AmbiguousRoleResolutionType = null,
-    RulesConfiguration: RulesConfigurationType = null
-  ): RoleMapping = {
+  def apply(Type: RoleMappingType): RoleMapping = {
     val __obj = js.Dynamic.literal(Type = Type.asInstanceOf[js.Any])
-    if (AmbiguousRoleResolution != null) __obj.updateDynamic("AmbiguousRoleResolution")(AmbiguousRoleResolution.asInstanceOf[js.Any])
-    if (RulesConfiguration != null) __obj.updateDynamic("RulesConfiguration")(RulesConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[RoleMapping]
   }
+  @scala.inline
+  implicit class RoleMappingOps[Self <: RoleMapping] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: RoleMappingType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAmbiguousRoleResolution(value: AmbiguousRoleResolutionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AmbiguousRoleResolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmbiguousRoleResolution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AmbiguousRoleResolution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRulesConfiguration(value: RulesConfigurationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RulesConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRulesConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RulesConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

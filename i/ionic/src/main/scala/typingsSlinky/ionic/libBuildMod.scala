@@ -9,12 +9,6 @@ import typingsSlinky.ionic.definitionsMod.IProject
 import typingsSlinky.ionic.definitionsMod.IShell
 import typingsSlinky.ionic.definitionsMod.NpmClient
 import typingsSlinky.ionic.definitionsMod.Runner
-import typingsSlinky.ionic.ionicBooleans.`true`
-import typingsSlinky.ionic.ionicStrings.Yarn
-import typingsSlinky.ionic.ionicStrings.`npm CLI`
-import typingsSlinky.ionic.ionicStrings.ionicColonbuild
-import typingsSlinky.ionic.ionicStrings.npm
-import typingsSlinky.ionic.ionicStrings.yarn_
 import typingsSlinky.ionicCliFramework.definitionsMod.CommandLineInputs
 import typingsSlinky.ionicCliFramework.definitionsMod.CommandLineOptions
 import typingsSlinky.ionicCliFrameworkPrompts.mod.PromptModule
@@ -70,7 +64,7 @@ object libBuildMod extends js.Object {
     /* protected */ def promptToInstall(): js.Promise[Boolean] = js.native
     /* protected */ def resolveProgram(): js.Promise[String] = js.native
     def resolveScript(): js.Promise[js.UndefOr[String]] = js.native
-    def resolvedProgram(): String = js.native
+    def resolvedProgram: String = js.native
     /* protected */ def run(options: T): js.Promise[Unit] = js.native
     /* protected */ def runWrapper(options: T): js.Promise[Unit] = js.native
   }
@@ -86,8 +80,6 @@ object libBuildMod extends js.Object {
     def determineEngineFromCommandLine(options: CommandLineOptions): String = js.native
     def getCommandMetadata(): js.Promise[PartialCommandMetadata] = js.native
     def getPkgManagerBuildCLI(): PkgManagerBuildCLI = js.native
-    /* CompleteClass */
-    override def run(options: T): js.Promise[Unit] = js.native
   }
   
   @js.native
@@ -104,36 +96,20 @@ object libBuildMod extends js.Object {
   }
   
   @js.native
-  class NpmBuildCLI () extends PkgManagerBuildCLI {
-    @JSName("name")
-    val name_NpmBuildCLI: `npm CLI` = js.native
-    @JSName("pkg")
-    val pkg_NpmBuildCLI: npm = js.native
-    @JSName("program")
-    val program_NpmBuildCLI: npm = js.native
-  }
+  class NpmBuildCLI () extends PkgManagerBuildCLI
   
   @js.native
   trait PkgManagerBuildCLI extends BuildCLI[BaseBuildOptions] {
-    @JSName("global")
-    val global_PkgManagerBuildCLI: `true` = js.native
     @JSName("program")
     val program_PkgManagerBuildCLI: NpmClient = js.native
     @JSName("script")
-    val script_PkgManagerBuildCLI: ionicColonbuild = js.native
+    val script_PkgManagerBuildCLI: /* "ionic:build" */ String = js.native
   }
   
   @js.native
-  class YarnBuildCLI () extends PkgManagerBuildCLI {
-    @JSName("name")
-    val name_YarnBuildCLI: Yarn = js.native
-    @JSName("pkg")
-    val pkg_YarnBuildCLI: yarn_ = js.native
-    @JSName("program")
-    val program_YarnBuildCLI: yarn_ = js.native
-  }
+  class YarnBuildCLI () extends PkgManagerBuildCLI
   
-  val BUILD_SCRIPT: ionicColonbuild = js.native
+  val BUILD_SCRIPT: /* "ionic:build" */ String = js.native
   val COMMON_BUILD_COMMAND_OPTIONS: js.Array[CommandMetadataOption] = js.native
 }
 

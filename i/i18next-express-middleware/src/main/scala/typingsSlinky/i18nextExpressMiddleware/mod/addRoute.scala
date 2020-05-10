@@ -2,6 +2,7 @@ package typingsSlinky.i18nextExpressMiddleware.mod
 
 import typingsSlinky.express.mod.RequestHandler
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +15,7 @@ object addRoute extends js.Object {
     route: String,
     lngs: js.Array[String],
     app: App,
-    fc: RequestHandler[ParamsDictionary]
+    fc: RequestHandler[ParamsDictionary, _, _, Query]
   ): Unit = js.native
   def apply(
     i18next: I18next,
@@ -22,7 +23,7 @@ object addRoute extends js.Object {
     lngs: js.Array[String],
     app: App,
     verb: String,
-    fc: RequestHandler[ParamsDictionary]
+    fc: RequestHandler[ParamsDictionary, _, _, Query]
   ): Unit = js.native
 }
 

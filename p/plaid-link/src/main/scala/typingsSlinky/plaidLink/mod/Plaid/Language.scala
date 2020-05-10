@@ -13,12 +13,10 @@ trait Language extends js.Object
 
 object Language {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def en: typingsSlinky.plaidLink.plaidLinkStrings.en = "en".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.en]
   @scala.inline
-  def en: typingsSlinky.plaidLink.plaidLinkStrings.en = this.cast("en")
+  def es: typingsSlinky.plaidLink.plaidLinkStrings.es = "es".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.es]
   @scala.inline
-  def es: typingsSlinky.plaidLink.plaidLinkStrings.es = this.cast("es")
-  @scala.inline
-  def fr: typingsSlinky.plaidLink.plaidLinkStrings.fr = this.cast("fr")
+  def fr: typingsSlinky.plaidLink.plaidLinkStrings.fr = "fr".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.fr]
 }
 

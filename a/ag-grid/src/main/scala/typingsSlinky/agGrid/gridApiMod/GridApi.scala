@@ -3,6 +3,8 @@ package typingsSlinky.agGrid.gridApiMod
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.Touch
 import typingsSlinky.agGrid.AnonColId
 import typingsSlinky.agGrid.alignedGridsServiceMod.AlignedGridsService
 import typingsSlinky.agGrid.clientSideRowModelMod.RowDataTransaction
@@ -29,8 +31,6 @@ import typingsSlinky.agGrid.iRowModelMod.IRowModel
 import typingsSlinky.agGrid.iServerSideDatasourceMod.IServerSideDatasource
 import typingsSlinky.agGrid.iViewportDatasourceMod.IViewportDatasource
 import typingsSlinky.agGrid.rowNodeMod.RowNode
-import typingsSlinky.std.MouseEvent
-import typingsSlinky.std.Touch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

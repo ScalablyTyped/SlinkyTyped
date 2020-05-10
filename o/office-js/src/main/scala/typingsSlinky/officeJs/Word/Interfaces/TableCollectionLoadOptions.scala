@@ -191,3 +191,331 @@ trait TableCollectionLoadOptions extends js.Object {
   var width: js.UndefOr[Boolean] = js.native
 }
 
+object TableCollectionLoadOptions {
+  @scala.inline
+  def apply(): TableCollectionLoadOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[TableCollectionLoadOptions]
+  }
+  @scala.inline
+  implicit class TableCollectionLoadOptionsOps[Self <: TableCollectionLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$all(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$all: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlignment(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFont(value: FontLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFont: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderRowCount(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerRowCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderRowCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerRowCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHorizontalAlignment(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizontalAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsUniform(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isUniform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsUniform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isUniform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNestingLevel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nestingLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNestingLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nestingLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentBody(value: BodyLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentContentControl(value: ContentControlLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentContentControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentContentControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentContentControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentContentControlOrNullObject(value: ContentControlLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentContentControlOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentContentControlOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentContentControlOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentTable(value: TableLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentTable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentTableCell(value: TableCellLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentTableCell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentTableCell: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentTableCell")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentTableCellOrNullObject(value: TableCellLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentTableCellOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentTableCellOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentTableCellOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentTableOrNullObject(value: TableLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentTableOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentTableOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentTableOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowCount(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadingColor(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadingColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadingColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadingColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleBandedColumns(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleBandedColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyleBandedColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleBandedColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleBandedRows(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleBandedRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyleBandedRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleBandedRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleBuiltIn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleBuiltIn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyleBuiltIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleBuiltIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleFirstColumn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleFirstColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyleFirstColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleFirstColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleLastColumn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleLastColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyleLastColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleLastColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleTotalRow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleTotalRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyleTotalRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleTotalRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValues(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalAlignment(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

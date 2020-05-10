@@ -15,16 +15,14 @@ trait Kind extends js.Object
 
 object Kind {
   @scala.inline
-  def captions: typingsSlinky.videoJs.videoJsStrings.captions = this.cast("captions")
+  def captions: typingsSlinky.videoJs.videoJsStrings.captions = "captions".asInstanceOf[typingsSlinky.videoJs.videoJsStrings.captions]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def chapters: typingsSlinky.videoJs.videoJsStrings.chapters = "chapters".asInstanceOf[typingsSlinky.videoJs.videoJsStrings.chapters]
   @scala.inline
-  def chapters: typingsSlinky.videoJs.videoJsStrings.chapters = this.cast("chapters")
+  def descriptions: typingsSlinky.videoJs.videoJsStrings.descriptions = "descriptions".asInstanceOf[typingsSlinky.videoJs.videoJsStrings.descriptions]
   @scala.inline
-  def descriptions: typingsSlinky.videoJs.videoJsStrings.descriptions = this.cast("descriptions")
+  def metadata: typingsSlinky.videoJs.videoJsStrings.metadata = "metadata".asInstanceOf[typingsSlinky.videoJs.videoJsStrings.metadata]
   @scala.inline
-  def metadata: typingsSlinky.videoJs.videoJsStrings.metadata = this.cast("metadata")
-  @scala.inline
-  def subtitles: typingsSlinky.videoJs.videoJsStrings.subtitles = this.cast("subtitles")
+  def subtitles: typingsSlinky.videoJs.videoJsStrings.subtitles = "subtitles".asInstanceOf[typingsSlinky.videoJs.videoJsStrings.subtitles]
 }
 

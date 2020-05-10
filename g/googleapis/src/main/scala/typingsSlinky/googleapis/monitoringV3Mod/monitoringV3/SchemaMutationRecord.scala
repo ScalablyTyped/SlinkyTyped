@@ -21,11 +21,41 @@ trait SchemaMutationRecord extends js.Object {
 
 object SchemaMutationRecord {
   @scala.inline
-  def apply(mutateTime: String = null, mutatedBy: String = null): SchemaMutationRecord = {
+  def apply(): SchemaMutationRecord = {
     val __obj = js.Dynamic.literal()
-    if (mutateTime != null) __obj.updateDynamic("mutateTime")(mutateTime.asInstanceOf[js.Any])
-    if (mutatedBy != null) __obj.updateDynamic("mutatedBy")(mutatedBy.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMutationRecord]
   }
+  @scala.inline
+  implicit class SchemaMutationRecordOps[Self <: SchemaMutationRecord] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMutateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mutateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMutateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mutateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMutatedBy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mutatedBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMutatedBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mutatedBy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

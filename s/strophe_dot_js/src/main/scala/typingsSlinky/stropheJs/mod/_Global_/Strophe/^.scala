@@ -290,7 +290,7 @@ object ^ extends js.Object {
     *  Returns:
     *    The serialized element tree as a String.
     */
-  def serialize(elem: typingsSlinky.std.Element): String = js.native
+  def serialize(elem: Element): String = js.native
   def serialize(elem: typingsSlinky.stropheJs.mod.Strophe.Builder): String = js.native
   /** Function: unescapeNode
     *  Unescape a node part (also called local part) of a JID.

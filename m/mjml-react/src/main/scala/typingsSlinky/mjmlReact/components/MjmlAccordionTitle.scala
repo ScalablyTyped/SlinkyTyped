@@ -1,10 +1,7 @@
 package typingsSlinky.mjmlReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.csstype.mod.BackgroundColorProperty
 import typingsSlinky.csstype.mod.ColorProperty
 import typingsSlinky.mjmlReact.mod.ClassNameProps
@@ -15,41 +12,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MjmlAccordionTitle
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mjmlReact.mod.MjmlAccordionTitle] {
+object MjmlAccordionTitle {
   @JSImport("mjml-react", "MjmlAccordionTitle")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    backgroundColor: BackgroundColorProperty = null,
-    color: ColorProperty = null,
-    cssClass: String = null,
-    fontFamily: String = null,
-    fontSize: String | Double = null,
-    padding: String | Double = null,
-    paddingBottom: String | Double = null,
-    paddingLeft: String | Double = null,
-    paddingRight: String | Double = null,
-    paddingTop: String | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlAccordionTitle] = {
-    val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (paddingBottom != null) __obj.updateDynamic("paddingBottom")(paddingBottom.asInstanceOf[js.Any])
-    if (paddingLeft != null) __obj.updateDynamic("paddingLeft")(paddingLeft.asInstanceOf[js.Any])
-    if (paddingRight != null) __obj.updateDynamic("paddingRight")(paddingRight.asInstanceOf[js.Any])
-    if (paddingTop != null) __obj.updateDynamic("paddingTop")(paddingTop.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlAccordionTitle] {
+    @scala.inline
+    def backgroundColor(value: BackgroundColorProperty): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: ColorProperty): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cssClass(value: String): this.type = set("cssClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fontFamily(value: String): this.type = set("fontFamily", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fontSize(value: String | Double): this.type = set("fontSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def padding(value: String | Double): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingBottom(value: String | Double): this.type = set("paddingBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingLeft(value: String | Double): this.type = set("paddingLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingRight(value: String | Double): this.type = set("paddingRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingTop(value: String | Double): this.type = set("paddingTop", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlAccordionTitle] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.mjmlReact.mod.MjmlAccordionTitle](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = RequiredChildrenProps with MjmlAccordionTitleProps with PaddingProps with ClassNameProps
+  
+  def withProps(p: RequiredChildrenProps with MjmlAccordionTitleProps with PaddingProps with ClassNameProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MjmlAccordionTitle.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

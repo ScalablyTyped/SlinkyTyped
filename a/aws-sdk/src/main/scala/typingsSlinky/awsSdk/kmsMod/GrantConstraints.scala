@@ -18,14 +18,41 @@ trait GrantConstraints extends js.Object {
 
 object GrantConstraints {
   @scala.inline
-  def apply(
-    EncryptionContextEquals: EncryptionContextType = null,
-    EncryptionContextSubset: EncryptionContextType = null
-  ): GrantConstraints = {
+  def apply(): GrantConstraints = {
     val __obj = js.Dynamic.literal()
-    if (EncryptionContextEquals != null) __obj.updateDynamic("EncryptionContextEquals")(EncryptionContextEquals.asInstanceOf[js.Any])
-    if (EncryptionContextSubset != null) __obj.updateDynamic("EncryptionContextSubset")(EncryptionContextSubset.asInstanceOf[js.Any])
     __obj.asInstanceOf[GrantConstraints]
   }
+  @scala.inline
+  implicit class GrantConstraintsOps[Self <: GrantConstraints] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncryptionContextEquals(value: EncryptionContextType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionContextEquals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionContextEquals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionContextEquals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptionContextSubset(value: EncryptionContextType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionContextSubset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionContextSubset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionContextSubset")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

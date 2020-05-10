@@ -1,37 +1,47 @@
 package typingsSlinky.analyticsNode
 
-import typingsSlinky.analyticsNode.mod.AnalyticsNode.Integrations
+import typingsSlinky.analyticsNode.mod.AnalyticsNode.Identity
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait AnonAnonymousId extends js.Object {
-  var anonymousId: js.UndefOr[String | Double] = js.undefined
-  var context: js.UndefOr[js.Any] = js.undefined
-  var integrations: js.UndefOr[Integrations] = js.undefined
-  var timestamp: js.UndefOr[js.Date] = js.undefined
-  var traits: js.UndefOr[js.Any] = js.undefined
-  var userId: js.UndefOr[String | Double] = js.undefined
+@js.native
+trait AnonAnonymousId extends Identity {
+  var anonymousId: String | Double = js.native
+  var userId: js.UndefOr[String | Double] = js.native
 }
 
 object AnonAnonymousId {
   @scala.inline
-  def apply(
-    anonymousId: String | Double = null,
-    context: js.Any = null,
-    integrations: Integrations = null,
-    timestamp: js.Date = null,
-    traits: js.Any = null,
-    userId: String | Double = null
-  ): AnonAnonymousId = {
-    val __obj = js.Dynamic.literal()
-    if (anonymousId != null) __obj.updateDynamic("anonymousId")(anonymousId.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (integrations != null) __obj.updateDynamic("integrations")(integrations.asInstanceOf[js.Any])
-    if (timestamp != null) __obj.updateDynamic("timestamp")(timestamp.asInstanceOf[js.Any])
-    if (traits != null) __obj.updateDynamic("traits")(traits.asInstanceOf[js.Any])
-    if (userId != null) __obj.updateDynamic("userId")(userId.asInstanceOf[js.Any])
+  def apply(anonymousId: String | Double): AnonAnonymousId = {
+    val __obj = js.Dynamic.literal(anonymousId = anonymousId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAnonymousId]
   }
+  @scala.inline
+  implicit class AnonAnonymousIdOps[Self <: AnonAnonymousId] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnonymousId(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anonymousId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserId(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

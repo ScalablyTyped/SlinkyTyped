@@ -4,14 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonTfvcproject extends js.Object {
-  var owner: AnonRequired
-  var repo: AnonRequired
-  var tfvc_project: AnonType
-  var vcs: AnonEnum
-  var vcs_password: AnonType
-  var vcs_url: AnonRequired
-  var vcs_username: AnonType
+  var owner: AnonRequired = js.native
+  var repo: AnonRequired = js.native
+  var tfvc_project: AnonType = js.native
+  var vcs: AnonEnum = js.native
+  var vcs_password: AnonType = js.native
+  var vcs_url: AnonRequired = js.native
+  var vcs_username: AnonType = js.native
 }
 
 object AnonTfvcproject {
@@ -26,8 +27,57 @@ object AnonTfvcproject {
     vcs_username: AnonType
   ): AnonTfvcproject = {
     val __obj = js.Dynamic.literal(owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any], tfvc_project = tfvc_project.asInstanceOf[js.Any], vcs = vcs.asInstanceOf[js.Any], vcs_password = vcs_password.asInstanceOf[js.Any], vcs_url = vcs_url.asInstanceOf[js.Any], vcs_username = vcs_username.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonTfvcproject]
   }
+  @scala.inline
+  implicit class AnonTfvcprojectOps[Self <: AnonTfvcproject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOwner(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRepo(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTfvc_project(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tfvc_project")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVcs(value: AnonEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vcs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVcs_password(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vcs_password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVcs_url(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vcs_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVcs_username(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vcs_username")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

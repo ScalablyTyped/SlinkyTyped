@@ -1,10 +1,9 @@
 package typingsSlinky.antDesignPro.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.AnonAddTab
 import typingsSlinky.antDesignPro.loginTabMod.LoginTabProps
 import typingsSlinky.antDesignPro.loginTabMod.default
@@ -12,19 +11,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LoginTab
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object LoginTab {
   @JSImport("ant-design-pro/lib/Login/LoginTab", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(tabUtil: AnonAddTab, tab: TagMod[Any] = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(tabUtil = tabUtil.asInstanceOf[js.Any])
-    if (tab != null) __obj.updateDynamic("tab")(tab.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def tabReactElement(value: ReactElement): this.type = set("tab", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tab(value: TagMod[Any]): this.type = set("tab", value.asInstanceOf[js.Any])
   }
-  type Props = LoginTabProps
+  
+  def withProps(p: LoginTabProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(tabUtil: AnonAddTab): Builder = {
+    val __props = js.Dynamic.literal(tabUtil = tabUtil.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[LoginTabProps]))
+  }
 }
 

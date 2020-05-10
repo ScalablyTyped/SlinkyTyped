@@ -34,22 +34,89 @@ trait NodeGroup extends js.Object {
 
 object NodeGroup {
   @scala.inline
-  def apply(
-    NodeGroupId: String = null,
-    NodeGroupMembers: NodeGroupMemberList = null,
-    PrimaryEndpoint: Endpoint = null,
-    ReaderEndpoint: Endpoint = null,
-    Slots: String = null,
-    Status: String = null
-  ): NodeGroup = {
+  def apply(): NodeGroup = {
     val __obj = js.Dynamic.literal()
-    if (NodeGroupId != null) __obj.updateDynamic("NodeGroupId")(NodeGroupId.asInstanceOf[js.Any])
-    if (NodeGroupMembers != null) __obj.updateDynamic("NodeGroupMembers")(NodeGroupMembers.asInstanceOf[js.Any])
-    if (PrimaryEndpoint != null) __obj.updateDynamic("PrimaryEndpoint")(PrimaryEndpoint.asInstanceOf[js.Any])
-    if (ReaderEndpoint != null) __obj.updateDynamic("ReaderEndpoint")(ReaderEndpoint.asInstanceOf[js.Any])
-    if (Slots != null) __obj.updateDynamic("Slots")(Slots.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeGroup]
   }
+  @scala.inline
+  implicit class NodeGroupOps[Self <: NodeGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNodeGroupId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeGroupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeGroupMembers(value: NodeGroupMemberList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeGroupMembers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeGroupMembers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeGroupMembers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimaryEndpoint(value: Endpoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrimaryEndpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimaryEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrimaryEndpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReaderEndpoint(value: Endpoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReaderEndpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReaderEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReaderEndpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlots(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Slots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlots: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Slots")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

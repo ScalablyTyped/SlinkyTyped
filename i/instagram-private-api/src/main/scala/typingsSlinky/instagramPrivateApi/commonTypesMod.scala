@@ -1,8 +1,8 @@
 package typingsSlinky.instagramPrivateApi
 
-import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.caseless.mod.Caseless
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.close
+import typingsSlinky.node.NodeJS.Dict
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.httpMod.IncomingHttpHeaders
@@ -29,6 +29,7 @@ object commonTypesMod extends js.Object {
       ] = js.native
     @JSName("_read")
     var _read_Original: js.Function1[/* size */ Double, Unit] = js.native
+    var aborted: Boolean = js.native
     @JSName("addListener")
     var addListener_Original: js.Function2[close, /* listener */ js.Function0[Unit], this.type] = js.native
     var body: Body = js.native
@@ -111,7 +112,7 @@ object commonTypesMod extends js.Object {
     var timings: js.UndefOr[AnonConnect] = js.native
     @JSName("toJSON")
     var toJSON_Original: js.Function0[ResponseAsJSON] = js.native
-    var trailers: StringDictionary[js.UndefOr[String]] = js.native
+    var trailers: Dict[String] = js.native
     @JSName("unpipe")
     var unpipe_Original: js.Function0[this.type] = js.native
     @JSName("unshift")

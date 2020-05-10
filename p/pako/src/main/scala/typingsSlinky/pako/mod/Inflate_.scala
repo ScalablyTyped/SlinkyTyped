@@ -1,6 +1,5 @@
 package typingsSlinky.pako.mod
 
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,8 +18,8 @@ class Inflate_ () extends js.Object {
   def push(data: Data): Boolean = js.native
   def push(data: Data, mode: Boolean): Boolean = js.native
   def push(data: Data, mode: FlushValues): Boolean = js.native
-  def push(data: ArrayBuffer): Boolean = js.native
-  def push(data: ArrayBuffer, mode: Boolean): Boolean = js.native
-  def push(data: ArrayBuffer, mode: FlushValues): Boolean = js.native
+  def push(data: js.typedarray.ArrayBuffer): Boolean = js.native
+  def push(data: js.typedarray.ArrayBuffer, mode: Boolean): Boolean = js.native
+  def push(data: js.typedarray.ArrayBuffer, mode: FlushValues): Boolean = js.native
 }
 

@@ -1,11 +1,10 @@
 package typingsSlinky.reactNative.mod
 
-import typingsSlinky.reactNative.reactNativeStrings.fade
-import typingsSlinky.reactNative.reactNativeStrings.slide
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StatusBarProps
   extends StatusBarPropsIOS
      with StatusBarPropsAndroid {
@@ -13,33 +12,50 @@ trait StatusBarProps
     * If the transition between status bar property changes should be
     * animated. Supported for backgroundColor, barStyle and hidden.
     */
-  var animated: js.UndefOr[Boolean] = js.undefined
+  var animated: js.UndefOr[Boolean] = js.native
   /**
     * If the status bar is hidden.
     */
-  var hidden: js.UndefOr[Boolean] = js.undefined
+  var hidden: js.UndefOr[Boolean] = js.native
 }
 
 object StatusBarProps {
   @scala.inline
-  def apply(
-    animated: js.UndefOr[Boolean] = js.undefined,
-    backgroundColor: String = null,
-    barStyle: StatusBarStyle = null,
-    hidden: js.UndefOr[Boolean] = js.undefined,
-    networkActivityIndicatorVisible: js.UndefOr[Boolean] = js.undefined,
-    showHideTransition: fade | slide = null,
-    translucent: js.UndefOr[Boolean] = js.undefined
-  ): StatusBarProps = {
+  def apply(): StatusBarProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (barStyle != null) __obj.updateDynamic("barStyle")(barStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
-    if (!js.isUndefined(networkActivityIndicatorVisible)) __obj.updateDynamic("networkActivityIndicatorVisible")(networkActivityIndicatorVisible.asInstanceOf[js.Any])
-    if (showHideTransition != null) __obj.updateDynamic("showHideTransition")(showHideTransition.asInstanceOf[js.Any])
-    if (!js.isUndefined(translucent)) __obj.updateDynamic("translucent")(translucent.asInstanceOf[js.Any])
     __obj.asInstanceOf[StatusBarProps]
   }
+  @scala.inline
+  implicit class StatusBarPropsOps[Self <: StatusBarProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -27,6 +27,6 @@ abstract class TerrainProvider () extends js.Object {
 object TerrainProvider extends js.Object {
   var heightmapTerrainQuality: Double = js.native
   def getEstimatedLevelZeroGeometricErrorForAHeightmap(ellipsoid: Ellipsoid, tileImageWidth: Double, numberOfTilesAtLevelZero: Double): Double = js.native
-  def getRegularGridIndices(width: Double, height: Double): scala.scalajs.js.typedarray.Uint16Array = js.native
+  def getRegularGridIndices(width: Double, height: Double): js.typedarray.Uint16Array = js.native
 }
 

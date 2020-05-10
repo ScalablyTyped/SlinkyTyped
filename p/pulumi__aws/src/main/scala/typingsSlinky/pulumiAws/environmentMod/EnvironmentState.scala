@@ -22,7 +22,7 @@ trait EnvironmentState extends js.Object {
     * Name of the application that contains the version
     * to be deployed
     */
-  val application: js.UndefOr[Input[Application]] = js.native
+  val application: js.UndefOr[Input[String | Application]] = js.native
   val arn: js.UndefOr[Input[String]] = js.native
   /**
     * The autoscaling groups used by this Environment.
@@ -123,56 +123,293 @@ trait EnvironmentState extends js.Object {
 
 object EnvironmentState {
   @scala.inline
-  def apply(
-    allSettings: Input[js.Array[Input[EnvironmentAllSetting]]] = null,
-    application: Input[Application] = null,
-    arn: Input[String] = null,
-    autoscalingGroups: Input[js.Array[Input[String]]] = null,
-    cname: Input[String] = null,
-    cnamePrefix: Input[String] = null,
-    description: Input[String] = null,
-    endpointUrl: Input[String] = null,
-    instances: Input[js.Array[Input[String]]] = null,
-    launchConfigurations: Input[js.Array[Input[String]]] = null,
-    loadBalancers: Input[js.Array[Input[String]]] = null,
-    name: Input[String] = null,
-    platformArn: Input[String] = null,
-    pollInterval: Input[String] = null,
-    queues: Input[js.Array[Input[String]]] = null,
-    settings: Input[js.Array[Input[EnvironmentSetting]]] = null,
-    solutionStackName: Input[String] = null,
-    tags: Input[StringDictionary[_]] = null,
-    templateName: Input[String] = null,
-    tier: Input[String] = null,
-    triggers: Input[js.Array[Input[String]]] = null,
-    version: Input[ApplicationVersion] = null,
-    waitForReadyTimeout: Input[String] = null
-  ): EnvironmentState = {
+  def apply(): EnvironmentState = {
     val __obj = js.Dynamic.literal()
-    if (allSettings != null) __obj.updateDynamic("allSettings")(allSettings.asInstanceOf[js.Any])
-    if (application != null) __obj.updateDynamic("application")(application.asInstanceOf[js.Any])
-    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
-    if (autoscalingGroups != null) __obj.updateDynamic("autoscalingGroups")(autoscalingGroups.asInstanceOf[js.Any])
-    if (cname != null) __obj.updateDynamic("cname")(cname.asInstanceOf[js.Any])
-    if (cnamePrefix != null) __obj.updateDynamic("cnamePrefix")(cnamePrefix.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (endpointUrl != null) __obj.updateDynamic("endpointUrl")(endpointUrl.asInstanceOf[js.Any])
-    if (instances != null) __obj.updateDynamic("instances")(instances.asInstanceOf[js.Any])
-    if (launchConfigurations != null) __obj.updateDynamic("launchConfigurations")(launchConfigurations.asInstanceOf[js.Any])
-    if (loadBalancers != null) __obj.updateDynamic("loadBalancers")(loadBalancers.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (platformArn != null) __obj.updateDynamic("platformArn")(platformArn.asInstanceOf[js.Any])
-    if (pollInterval != null) __obj.updateDynamic("pollInterval")(pollInterval.asInstanceOf[js.Any])
-    if (queues != null) __obj.updateDynamic("queues")(queues.asInstanceOf[js.Any])
-    if (settings != null) __obj.updateDynamic("settings")(settings.asInstanceOf[js.Any])
-    if (solutionStackName != null) __obj.updateDynamic("solutionStackName")(solutionStackName.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (templateName != null) __obj.updateDynamic("templateName")(templateName.asInstanceOf[js.Any])
-    if (tier != null) __obj.updateDynamic("tier")(tier.asInstanceOf[js.Any])
-    if (triggers != null) __obj.updateDynamic("triggers")(triggers.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
-    if (waitForReadyTimeout != null) __obj.updateDynamic("waitForReadyTimeout")(waitForReadyTimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnvironmentState]
   }
+  @scala.inline
+  implicit class EnvironmentStateOps[Self <: EnvironmentState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllSettings(value: Input[js.Array[Input[EnvironmentAllSetting]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApplication(value: Input[String | Application]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("application")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplication: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("application")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoscalingGroups(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscalingGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoscalingGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscalingGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCname(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCnamePrefix(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cnamePrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCnamePrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cnamePrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpointUrl(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpointUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstances(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchConfigurations(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchConfigurations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchConfigurations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchConfigurations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadBalancers(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadBalancers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPollInterval(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pollInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPollInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pollInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueues(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSettings(value: Input[js.Array[Input[EnvironmentSetting]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSolutionStackName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("solutionStackName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSolutionStackName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("solutionStackName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTier(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriggers(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: Input[ApplicationVersion]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWaitForReadyTimeout(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForReadyTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWaitForReadyTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForReadyTimeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

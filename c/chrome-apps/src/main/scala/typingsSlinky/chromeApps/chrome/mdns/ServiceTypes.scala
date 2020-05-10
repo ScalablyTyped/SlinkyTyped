@@ -9,16 +9,30 @@ import scala.scalajs.js.annotation._
   * [key in ValidServiceTypes]: string
   */
 /* Inlined std.Record<chrome-apps.chrome.mdns.ValidServiceTypes, string> */
+@js.native
 trait ServiceTypes extends js.Object {
-  var serviceType: String
+  var serviceType: String = js.native
 }
 
 object ServiceTypes {
   @scala.inline
   def apply(serviceType: String): ServiceTypes = {
     val __obj = js.Dynamic.literal(serviceType = serviceType.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ServiceTypes]
   }
+  @scala.inline
+  implicit class ServiceTypesOps[Self <: ServiceTypes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServiceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -25,7 +25,7 @@ object mod extends js.Object {
     * @param {number} size Buffer size
     * @returns {Uint8Array} Buffer
     */
-  type PoolAllocator = js.Function1[/* size */ Double, scala.scalajs.js.typedarray.Uint8Array]
+  type PoolAllocator = js.Function1[/* size */ Double, js.typedarray.Uint8Array]
   /**
     * A slicer as used by {@link util.pool}.
     * @typedef PoolSlicer
@@ -36,10 +36,10 @@ object mod extends js.Object {
     * @this {Uint8Array}
     */
   type PoolSlicer = js.ThisFunction2[
-    /* this */ scala.scalajs.js.typedarray.Uint8Array, 
+    /* this */ js.typedarray.Uint8Array, 
     /* start */ Double, 
     /* end */ Double, 
-    scala.scalajs.js.typedarray.Uint8Array
+    js.typedarray.Uint8Array
   ]
 }
 

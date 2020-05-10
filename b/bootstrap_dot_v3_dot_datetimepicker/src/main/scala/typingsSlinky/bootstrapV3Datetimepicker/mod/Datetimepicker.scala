@@ -3,7 +3,6 @@ package typingsSlinky.bootstrapV3Datetimepicker.mod
 import typingsSlinky.bootstrapV3Datetimepicker.mod._Global_.JQuery
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.moment.mod.MomentBuiltinFormat
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,7 +49,7 @@ trait Datetimepicker extends js.Object {
   	 * - dp.change - In case newDate is different from current moment
   	 */
   def date(date: Moment): Unit = js.native
-  def date(date: Date): Unit = js.native
+  def date(date: js.Date): Unit = js.native
   /** Returns the component's model current date, a moment object or null if not set. */
   @JSName("date")
   def date_Moment(): Moment = js.native
@@ -83,7 +82,7 @@ trait Datetimepicker extends js.Object {
   def defaultDate(date: String): Unit = js.native
   def defaultDate(date: Boolean): Unit = js.native
   def defaultDate(date: Moment): Unit = js.native
-  def defaultDate(date: Date): Unit = js.native
+  def defaultDate(date: js.Date): Unit = js.native
   /** Destroys the widget and removes all attached event listeners */
   def destroy(): Unit = js.native
   /**
@@ -97,7 +96,7 @@ trait Datetimepicker extends js.Object {
   	 * NOTES: probably should be: disabledDates(): boolean | Array<moment.Moment>; see: DatetimepickerOptions
   	 */
   def disabledDates(): Boolean | js.Any = js.native
-  def disabledDates(dates: js.Array[String | Date | Moment]): Unit = js.native
+  def disabledDates(dates: js.Array[String | js.Date | Moment]): Unit = js.native
   /**
   	 * Takes an array of values and disallows the user to select those days.
   	 * Setting this takes precedence over options.minDate, options.maxDate configuration.
@@ -136,7 +135,7 @@ trait Datetimepicker extends js.Object {
   	 * NOTES: probably should be: enabledDates(): boolean | Array<moment.Moment>; see: DatetimepickerOptions
   	 */
   def enabledDates(): Boolean | js.Any = js.native
-  def enabledDates(dates: js.Array[String | Date | Moment]): Unit = js.native
+  def enabledDates(dates: js.Array[String | js.Date | Moment]): Unit = js.native
   /**
   	 * Takes an array of values and allows the user to select only from those days.
   	 * Setting this takes precedence over options.minDate, options.maxDate configuration.
@@ -234,7 +233,7 @@ trait Datetimepicker extends js.Object {
   	 * - dp.error - if the new maxDate is after currently selected moment
   	 */
   def maxDate(date: Moment): Unit = js.native
-  def maxDate(date: Date): Unit = js.native
+  def maxDate(date: js.Date): Unit = js.native
   /** Returns the currently set moment of the options.minDate or false if not set */
   def minDate(): Moment | Boolean = js.native
   def minDate(date: String): Unit = js.native
@@ -252,7 +251,7 @@ trait Datetimepicker extends js.Object {
   	 * - dp.error - if the new minDate is after currently selected moment
   	 */
   def minDate(date: Moment): Unit = js.native
-  def minDate(date: Date): Unit = js.native
+  def minDate(date: js.Date): Unit = js.native
   /**
   	 * Returns the components current options object.
   	 * Note that the changing the values of the returned object does not change the components actual configuration.
@@ -353,7 +352,7 @@ trait Datetimepicker extends js.Object {
   def viewDate(value: String): Unit = js.native
   def viewDate(value: Boolean): Unit = js.native
   def viewDate(value: Moment): Unit = js.native
-  def viewDate(value: Date): Unit = js.native
+  def viewDate(value: js.Date): Unit = js.native
   /** Returns the options.viewMode. */
   def viewMode(): String = js.native
   /**

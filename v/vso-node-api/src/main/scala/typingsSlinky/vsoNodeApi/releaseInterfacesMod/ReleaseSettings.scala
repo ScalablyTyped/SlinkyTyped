@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReleaseSettings extends js.Object {
-  var retentionSettings: RetentionSettings
+  var retentionSettings: RetentionSettings = js.native
 }
 
 object ReleaseSettings {
   @scala.inline
   def apply(retentionSettings: RetentionSettings): ReleaseSettings = {
     val __obj = js.Dynamic.literal(retentionSettings = retentionSettings.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ReleaseSettings]
   }
+  @scala.inline
+  implicit class ReleaseSettingsOps[Self <: ReleaseSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRetentionSettings(value: RetentionSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retentionSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

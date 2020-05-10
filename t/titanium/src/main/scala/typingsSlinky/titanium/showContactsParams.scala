@@ -7,23 +7,24 @@ import scala.scalajs.js.annotation._
 /**
   * Dictionary of options for the <Titanium.Contacts.showContacts> method.
   */
+@js.native
 trait showContactsParams extends js.Object {
   /**
   	 * Determines whether to animate the show/hide of the contacts picker (iPhone, iPad only.)
   	 */
-  var animated: js.UndefOr[Boolean] = js.undefined
+  var animated: js.UndefOr[Boolean] = js.native
   /**
   	 * Function to call when selection is canceled.
   	 */
-  var cancel: js.UndefOr[js.Function1[/* param0 */ js.Any, _]] = js.undefined
+  var cancel: js.UndefOr[js.Function1[/* param0 */ js.Any, Unit]] = js.native
   /**
   	 * Field names to show when selecting properties. By default, shows all available.
   	 */
-  var fields: js.UndefOr[js.Array[String]] = js.undefined
+  var fields: js.UndefOr[js.Array[java.lang.String]] = js.native
   /**
   	 * Function to call when a person is selected. Must not be used with `selectedProperty` property.
   	 */
-  var selectedPerson: js.UndefOr[js.Function1[/* param0 */ js.Any, _]] = js.undefined
+  var selectedPerson: js.UndefOr[js.Function1[/* param0 */ js.Any, Unit]] = js.native
   /**
   	 * Function to call when a property is selected. Must not be used with `selectedPerson`
   	 * property.
@@ -35,25 +36,82 @@ trait showContactsParams extends js.Object {
   	 * Since iOS 9.0, apple only returns the person object with partial information. Currently it is known to
   	 * at least contain the selected property and fullName.
   	 */
-  var selectedProperty: js.UndefOr[js.Function1[/* param0 */ js.Any, _]] = js.undefined
+  var selectedProperty: js.UndefOr[js.Function1[/* param0 */ js.Any, Unit]] = js.native
 }
 
 object showContactsParams {
   @scala.inline
-  def apply(
-    animated: js.UndefOr[Boolean] = js.undefined,
-    cancel: /* param0 */ js.Any => _ = null,
-    fields: js.Array[String] = null,
-    selectedPerson: /* param0 */ js.Any => _ = null,
-    selectedProperty: /* param0 */ js.Any => _ = null
-  ): showContactsParams = {
+  def apply(): showContactsParams = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
-    if (cancel != null) __obj.updateDynamic("cancel")(js.Any.fromFunction1(cancel))
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (selectedPerson != null) __obj.updateDynamic("selectedPerson")(js.Any.fromFunction1(selectedPerson))
-    if (selectedProperty != null) __obj.updateDynamic("selectedProperty")(js.Any.fromFunction1(selectedProperty))
     __obj.asInstanceOf[showContactsParams]
   }
+  @scala.inline
+  implicit class showContactsParamsOps[Self <: showContactsParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancel(value: /* param0 */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFields(value: js.Array[java.lang.String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedPerson(value: /* param0 */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedPerson")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSelectedPerson: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedPerson")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedProperty(value: /* param0 */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedProperty")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSelectedProperty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedProperty")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

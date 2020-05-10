@@ -12,10 +12,8 @@ trait ContentEncoding extends js.Object
 
 object ContentEncoding {
   @scala.inline
-  def aes128gcm: typingsSlinky.webPush.webPushStrings.aes128gcm = this.cast("aes128gcm")
+  def aes128gcm: typingsSlinky.webPush.webPushStrings.aes128gcm = "aes128gcm".asInstanceOf[typingsSlinky.webPush.webPushStrings.aes128gcm]
   @scala.inline
-  def aesgcm: typingsSlinky.webPush.webPushStrings.aesgcm = this.cast("aesgcm")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def aesgcm: typingsSlinky.webPush.webPushStrings.aesgcm = "aesgcm".asInstanceOf[typingsSlinky.webPush.webPushStrings.aesgcm]
 }
 

@@ -23,11 +23,41 @@ trait SchemaListFhirStoresResponse extends js.Object {
 
 object SchemaListFhirStoresResponse {
   @scala.inline
-  def apply(fhirStores: js.Array[SchemaFhirStore] = null, nextPageToken: String = null): SchemaListFhirStoresResponse = {
+  def apply(): SchemaListFhirStoresResponse = {
     val __obj = js.Dynamic.literal()
-    if (fhirStores != null) __obj.updateDynamic("fhirStores")(fhirStores.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListFhirStoresResponse]
   }
+  @scala.inline
+  implicit class SchemaListFhirStoresResponseOps[Self <: SchemaListFhirStoresResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFhirStores(value: js.Array[SchemaFhirStore]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fhirStores")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFhirStores: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fhirStores")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

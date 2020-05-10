@@ -4,7 +4,6 @@ import typingsSlinky.ncp.OptionserrsPathLike
 import typingsSlinky.ncp.Optionserrsundefined
 import typingsSlinky.ncp.OptionsstopOnErrtrue
 import typingsSlinky.node.fsMod.WriteStream
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ object ^ extends js.Object {
   def apply(
     source: String,
     destination: String,
-    callback: js.Function1[/* err */ js.Array[Error] | Null, Unit]
+    callback: js.Function1[/* err */ js.Array[js.Error] | Null, Unit]
   ): Unit = js.native
   def apply(
     source: String,
@@ -28,19 +27,19 @@ object ^ extends js.Object {
     source: String,
     destination: String,
     options: Optionserrsundefined,
-    callback: js.Function1[/* err */ js.Array[Error] | Null, Unit]
+    callback: js.Function1[/* err */ js.Array[js.Error] | Null, Unit]
   ): Unit = js.native
   def apply(
     source: String,
     destination: String,
     options: OptionsstopOnErrtrue,
-    callback: js.Function1[/* err */ Error | Null, Unit]
+    callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   def apply(
     source: String,
     destination: String,
     options: Options,
-    callback: js.Function1[/* err */ Error | js.Array[Error] | WriteStream | Null, Unit]
+    callback: js.Function1[/* err */ js.Error | js.Array[js.Error] | WriteStream | Null, Unit]
   ): Unit = js.native
   /**
   	 * **NOTE:** This function provides design-time support for util.promisify.

@@ -16,16 +16,14 @@ trait Hash extends js.Object
 
 object Hash {
   @scala.inline
-  def MD5_SHA1: typingsSlinky.chromeApps.chromeAppsStrings.MD5_SHA1 = this.cast("MD5_SHA1")
+  def MD5_SHA1: typingsSlinky.chromeApps.chromeAppsStrings.MD5_SHA1 = "MD5_SHA1".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.MD5_SHA1]
   @scala.inline
-  def SHA1: typingsSlinky.chromeApps.chromeAppsStrings.SHA1 = this.cast("SHA1")
+  def SHA1: typingsSlinky.chromeApps.chromeAppsStrings.SHA1 = "SHA1".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.SHA1]
   @scala.inline
-  def SHA256: typingsSlinky.chromeApps.chromeAppsStrings.SHA256 = this.cast("SHA256")
+  def SHA256: typingsSlinky.chromeApps.chromeAppsStrings.SHA256 = "SHA256".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.SHA256]
   @scala.inline
-  def SHA384: typingsSlinky.chromeApps.chromeAppsStrings.SHA384 = this.cast("SHA384")
+  def SHA384: typingsSlinky.chromeApps.chromeAppsStrings.SHA384 = "SHA384".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.SHA384]
   @scala.inline
-  def SHA512: typingsSlinky.chromeApps.chromeAppsStrings.SHA512 = this.cast("SHA512")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SHA512: typingsSlinky.chromeApps.chromeAppsStrings.SHA512 = "SHA512".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.SHA512]
 }
 

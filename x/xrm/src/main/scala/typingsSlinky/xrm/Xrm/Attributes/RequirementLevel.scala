@@ -18,12 +18,10 @@ trait RequirementLevel extends js.Object
 
 object RequirementLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def none: typingsSlinky.xrm.xrmStrings.none = "none".asInstanceOf[typingsSlinky.xrm.xrmStrings.none]
   @scala.inline
-  def none: typingsSlinky.xrm.xrmStrings.none = this.cast("none")
+  def recommended: typingsSlinky.xrm.xrmStrings.recommended = "recommended".asInstanceOf[typingsSlinky.xrm.xrmStrings.recommended]
   @scala.inline
-  def recommended: typingsSlinky.xrm.xrmStrings.recommended = this.cast("recommended")
-  @scala.inline
-  def required: typingsSlinky.xrm.xrmStrings.required = this.cast("required")
+  def required: typingsSlinky.xrm.xrmStrings.required = "required".asInstanceOf[typingsSlinky.xrm.xrmStrings.required]
 }
 

@@ -29,44 +29,42 @@ trait AdvancedPseudos extends js.Object
 
 object AdvancedPseudos {
   @scala.inline
-  def `Colon-moz-anyLeftparenthesisRightparenthesis`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-anyLeftparenthesisRightparenthesis` = this.cast(":-moz-any()")
+  def `Colon-moz-anyLeftparenthesisRightparenthesis`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-anyLeftparenthesisRightparenthesis` = ":-moz-any()".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-moz-anyLeftparenthesisRightparenthesis`]
   @scala.inline
-  def `Colon-moz-dir`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-dir` = this.cast(":-moz-dir")
+  def `Colon-moz-dir`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-dir` = ":-moz-dir".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-moz-dir`]
   @scala.inline
-  def `Colon-webkit-anyLeftparenthesisRightparenthesis`: typingsSlinky.csstype.csstypeStrings.`Colon-webkit-anyLeftparenthesisRightparenthesis` = this.cast(":-webkit-any()")
+  def `Colon-webkit-anyLeftparenthesisRightparenthesis`: typingsSlinky.csstype.csstypeStrings.`Colon-webkit-anyLeftparenthesisRightparenthesis` = ":-webkit-any()".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-webkit-anyLeftparenthesisRightparenthesis`]
   @scala.inline
-  def ColonColoncue: typingsSlinky.csstype.csstypeStrings.ColonColoncue = this.cast("::cue")
+  def ColonColoncue: typingsSlinky.csstype.csstypeStrings.ColonColoncue = "::cue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColoncue]
   @scala.inline
-  def ColonColonpart: typingsSlinky.csstype.csstypeStrings.ColonColonpart = this.cast("::part")
+  def ColonColonpart: typingsSlinky.csstype.csstypeStrings.ColonColonpart = "::part".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColonpart]
   @scala.inline
-  def ColonColonslotted: typingsSlinky.csstype.csstypeStrings.ColonColonslotted = this.cast("::slotted")
+  def ColonColonslotted: typingsSlinky.csstype.csstypeStrings.ColonColonslotted = "::slotted".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColonslotted]
   @scala.inline
-  def Colondir: typingsSlinky.csstype.csstypeStrings.Colondir = this.cast(":dir")
+  def Colondir: typingsSlinky.csstype.csstypeStrings.Colondir = ":dir".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colondir]
   @scala.inline
-  def Colonhas: typingsSlinky.csstype.csstypeStrings.Colonhas = this.cast(":has")
+  def Colonhas: typingsSlinky.csstype.csstypeStrings.Colonhas = ":has".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonhas]
   @scala.inline
-  def Colonhost: typingsSlinky.csstype.csstypeStrings.Colonhost = this.cast(":host")
+  def Colonhost: typingsSlinky.csstype.csstypeStrings.Colonhost = ":host".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonhost]
   @scala.inline
-  def `Colonhost-context`: typingsSlinky.csstype.csstypeStrings.`Colonhost-context` = this.cast(":host-context")
+  def `Colonhost-context`: typingsSlinky.csstype.csstypeStrings.`Colonhost-context` = ":host-context".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonhost-context`]
   @scala.inline
-  def Colonis: typingsSlinky.csstype.csstypeStrings.Colonis = this.cast(":is")
+  def Colonis: typingsSlinky.csstype.csstypeStrings.Colonis = ":is".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonis]
   @scala.inline
-  def Colonlang: typingsSlinky.csstype.csstypeStrings.Colonlang = this.cast(":lang")
+  def Colonlang: typingsSlinky.csstype.csstypeStrings.Colonlang = ":lang".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonlang]
   @scala.inline
-  def ColonmatchesLeftparenthesisRightparenthesis: typingsSlinky.csstype.csstypeStrings.ColonmatchesLeftparenthesisRightparenthesis = this.cast(":matches()")
+  def ColonmatchesLeftparenthesisRightparenthesis: typingsSlinky.csstype.csstypeStrings.ColonmatchesLeftparenthesisRightparenthesis = ":matches()".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonmatchesLeftparenthesisRightparenthesis]
   @scala.inline
-  def Colonnot: typingsSlinky.csstype.csstypeStrings.Colonnot = this.cast(":not")
+  def Colonnot: typingsSlinky.csstype.csstypeStrings.Colonnot = ":not".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonnot]
   @scala.inline
-  def `Colonnth-child`: typingsSlinky.csstype.csstypeStrings.`Colonnth-child` = this.cast(":nth-child")
+  def `Colonnth-child`: typingsSlinky.csstype.csstypeStrings.`Colonnth-child` = ":nth-child".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonnth-child`]
   @scala.inline
-  def `Colonnth-last-child`: typingsSlinky.csstype.csstypeStrings.`Colonnth-last-child` = this.cast(":nth-last-child")
+  def `Colonnth-last-child`: typingsSlinky.csstype.csstypeStrings.`Colonnth-last-child` = ":nth-last-child".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonnth-last-child`]
   @scala.inline
-  def `Colonnth-last-of-type`: typingsSlinky.csstype.csstypeStrings.`Colonnth-last-of-type` = this.cast(":nth-last-of-type")
+  def `Colonnth-last-of-type`: typingsSlinky.csstype.csstypeStrings.`Colonnth-last-of-type` = ":nth-last-of-type".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonnth-last-of-type`]
   @scala.inline
-  def `Colonnth-of-type`: typingsSlinky.csstype.csstypeStrings.`Colonnth-of-type` = this.cast(":nth-of-type")
+  def `Colonnth-of-type`: typingsSlinky.csstype.csstypeStrings.`Colonnth-of-type` = ":nth-of-type".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonnth-of-type`]
   @scala.inline
-  def Colonwhere: typingsSlinky.csstype.csstypeStrings.Colonwhere = this.cast(":where")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Colonwhere: typingsSlinky.csstype.csstypeStrings.Colonwhere = ":where".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonwhere]
 }
 

@@ -21,28 +21,26 @@ trait ReporterType extends js.Object
 
 object ReporterType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cobertura: typingsSlinky.karmaCoverage.karmaCoverageStrings.cobertura = "cobertura".asInstanceOf[typingsSlinky.karmaCoverage.karmaCoverageStrings.cobertura]
   @scala.inline
-  def cobertura: typingsSlinky.karmaCoverage.karmaCoverageStrings.cobertura = this.cast("cobertura")
+  def html: typingsSlinky.karmaCoverage.karmaCoverageStrings.html = "html".asInstanceOf[typingsSlinky.karmaCoverage.karmaCoverageStrings.html]
   @scala.inline
-  def html: typingsSlinky.karmaCoverage.karmaCoverageStrings.html = this.cast("html")
+  def `in-memory`: typingsSlinky.karmaCoverage.karmaCoverageStrings.`in-memory` = "in-memory".asInstanceOf[typingsSlinky.karmaCoverage.karmaCoverageStrings.`in-memory`]
   @scala.inline
-  def `in-memory`: typingsSlinky.karmaCoverage.karmaCoverageStrings.`in-memory` = this.cast("in-memory")
+  def json: typingsSlinky.karmaCoverage.karmaCoverageStrings.json = "json".asInstanceOf[typingsSlinky.karmaCoverage.karmaCoverageStrings.json]
   @scala.inline
-  def json: typingsSlinky.karmaCoverage.karmaCoverageStrings.json = this.cast("json")
+  def `json-summary`: typingsSlinky.karmaCoverage.karmaCoverageStrings.`json-summary` = "json-summary".asInstanceOf[typingsSlinky.karmaCoverage.karmaCoverageStrings.`json-summary`]
   @scala.inline
-  def `json-summary`: typingsSlinky.karmaCoverage.karmaCoverageStrings.`json-summary` = this.cast("json-summary")
+  def lcov: typingsSlinky.karmaCoverage.karmaCoverageStrings.lcov = "lcov".asInstanceOf[typingsSlinky.karmaCoverage.karmaCoverageStrings.lcov]
   @scala.inline
-  def lcov: typingsSlinky.karmaCoverage.karmaCoverageStrings.lcov = this.cast("lcov")
+  def lcovonly: typingsSlinky.karmaCoverage.karmaCoverageStrings.lcovonly = "lcovonly".asInstanceOf[typingsSlinky.karmaCoverage.karmaCoverageStrings.lcovonly]
   @scala.inline
-  def lcovonly: typingsSlinky.karmaCoverage.karmaCoverageStrings.lcovonly = this.cast("lcovonly")
+  def none: typingsSlinky.karmaCoverage.karmaCoverageStrings.none = "none".asInstanceOf[typingsSlinky.karmaCoverage.karmaCoverageStrings.none]
   @scala.inline
-  def none: typingsSlinky.karmaCoverage.karmaCoverageStrings.none = this.cast("none")
+  def teamcity: typingsSlinky.karmaCoverage.karmaCoverageStrings.teamcity = "teamcity".asInstanceOf[typingsSlinky.karmaCoverage.karmaCoverageStrings.teamcity]
   @scala.inline
-  def teamcity: typingsSlinky.karmaCoverage.karmaCoverageStrings.teamcity = this.cast("teamcity")
+  def text: typingsSlinky.karmaCoverage.karmaCoverageStrings.text = "text".asInstanceOf[typingsSlinky.karmaCoverage.karmaCoverageStrings.text]
   @scala.inline
-  def text: typingsSlinky.karmaCoverage.karmaCoverageStrings.text = this.cast("text")
-  @scala.inline
-  def `text-summary`: typingsSlinky.karmaCoverage.karmaCoverageStrings.`text-summary` = this.cast("text-summary")
+  def `text-summary`: typingsSlinky.karmaCoverage.karmaCoverageStrings.`text-summary` = "text-summary".asInstanceOf[typingsSlinky.karmaCoverage.karmaCoverageStrings.`text-summary`]
 }
 

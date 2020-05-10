@@ -1,38 +1,32 @@
 package typingsSlinky.reactRouterNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactRouterNative.mod.NativeRouterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object NativeRouter
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactRouterNative.mod.NativeRouter] {
+object NativeRouter {
   @JSImport("react-router-native", "NativeRouter")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    getUserConfirmation: js.Function = null,
-    initialEntries: js.Array[String] = null,
-    initialIndex: Int | Double = null,
-    keyLength: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactRouterNative.mod.NativeRouter] = {
-    val __obj = js.Dynamic.literal()
-    if (getUserConfirmation != null) __obj.updateDynamic("getUserConfirmation")(getUserConfirmation.asInstanceOf[js.Any])
-    if (initialEntries != null) __obj.updateDynamic("initialEntries")(initialEntries.asInstanceOf[js.Any])
-    if (initialIndex != null) __obj.updateDynamic("initialIndex")(initialIndex.asInstanceOf[js.Any])
-    if (keyLength != null) __obj.updateDynamic("keyLength")(keyLength.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactRouterNative.mod.NativeRouter] {
+    @scala.inline
+    def getUserConfirmation(value: js.Function): this.type = set("getUserConfirmation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialEntries(value: js.Array[String]): this.type = set("initialEntries", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialIndex(value: Double): this.type = set("initialIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keyLength(value: Double): this.type = set("keyLength", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactRouterNative.mod.NativeRouter] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactRouterNative.mod.NativeRouter](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = NativeRouterProps
+  
+  def withProps(p: NativeRouterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: NativeRouter.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

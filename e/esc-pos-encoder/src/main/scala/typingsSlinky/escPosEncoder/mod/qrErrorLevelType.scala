@@ -14,14 +14,12 @@ trait qrErrorLevelType extends js.Object
 
 object qrErrorLevelType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def h: typingsSlinky.escPosEncoder.escPosEncoderStrings.h = "h".asInstanceOf[typingsSlinky.escPosEncoder.escPosEncoderStrings.h]
   @scala.inline
-  def h: typingsSlinky.escPosEncoder.escPosEncoderStrings.h = this.cast("h")
+  def l: typingsSlinky.escPosEncoder.escPosEncoderStrings.l = "l".asInstanceOf[typingsSlinky.escPosEncoder.escPosEncoderStrings.l]
   @scala.inline
-  def l: typingsSlinky.escPosEncoder.escPosEncoderStrings.l = this.cast("l")
+  def m: typingsSlinky.escPosEncoder.escPosEncoderStrings.m = "m".asInstanceOf[typingsSlinky.escPosEncoder.escPosEncoderStrings.m]
   @scala.inline
-  def m: typingsSlinky.escPosEncoder.escPosEncoderStrings.m = this.cast("m")
-  @scala.inline
-  def q: typingsSlinky.escPosEncoder.escPosEncoderStrings.q = this.cast("q")
+  def q: typingsSlinky.escPosEncoder.escPosEncoderStrings.q = "q".asInstanceOf[typingsSlinky.escPosEncoder.escPosEncoderStrings.q]
 }
 

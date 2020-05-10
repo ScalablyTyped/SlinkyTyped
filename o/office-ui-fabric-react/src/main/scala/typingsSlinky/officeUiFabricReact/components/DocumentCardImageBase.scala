@@ -1,16 +1,15 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.documentCardImageTypesMod.IDocumentCardImage
 import typingsSlinky.officeUiFabricReact.documentCardImageTypesMod.IDocumentCardImageProps
 import typingsSlinky.officeUiFabricReact.documentCardImageTypesMod.IDocumentCardImageStyleProps
 import typingsSlinky.officeUiFabricReact.documentCardImageTypesMod.IDocumentCardImageStyles
 import typingsSlinky.officeUiFabricReact.iconTypesMod.IIconProps
 import typingsSlinky.officeUiFabricReact.imageTypesMod.ImageFit
+import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -18,49 +17,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DocumentCardImageBase
-  extends ExternalComponentWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.officeUiFabricReact.documentCardImageBaseMod.DocumentCardImageBase
-    ] {
+object DocumentCardImageBase {
   @JSImport("office-ui-fabric-react/lib/components/DocumentCard/DocumentCardImage.base", "DocumentCardImageBase")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    componentRef: IRefObject[IDocumentCardImage] = null,
-    height: Int | Double = null,
-    iconProps: IIconProps = null,
-    imageFit: ImageFit = null,
-    imageSrc: String = null,
-    styles: IStyleFunctionOrObject[IDocumentCardImageStyleProps, IDocumentCardImageStyles] = null,
-    theme: ITheme = null,
-    width: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[
-    tag.type, 
-    typingsSlinky.officeUiFabricReact.documentCardImageBaseMod.DocumentCardImageBase
-  ] = {
-    val __obj = js.Dynamic.literal()
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (iconProps != null) __obj.updateDynamic("iconProps")(iconProps.asInstanceOf[js.Any])
-    if (imageFit != null) __obj.updateDynamic("imageFit")(imageFit.asInstanceOf[js.Any])
-    if (imageSrc != null) __obj.updateDynamic("imageSrc")(imageSrc.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[
+          tag.type, 
+          typingsSlinky.officeUiFabricReact.documentCardImageBaseMod.DocumentCardImageBase
+        ] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ IDocumentCardImage | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[IDocumentCardImage]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[IDocumentCardImage]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconProps(value: IIconProps): this.type = set("iconProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def imageFit(value: ImageFit): this.type = set("imageFit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def imageSrc(value: String): this.type = set("imageSrc", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stylesFunction1(value: IDocumentCardImageStyleProps => Partial[IDocumentCardImageStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: IStyleFunctionOrObject[IDocumentCardImageStyleProps, IDocumentCardImageStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[
-    tag.type, 
-    typingsSlinky.officeUiFabricReact.documentCardImageBaseMod.DocumentCardImageBase
-  ] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.officeUiFabricReact.documentCardImageBaseMod.DocumentCardImageBase](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IDocumentCardImageProps
+  
+  def withProps(p: IDocumentCardImageProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DocumentCardImageBase.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

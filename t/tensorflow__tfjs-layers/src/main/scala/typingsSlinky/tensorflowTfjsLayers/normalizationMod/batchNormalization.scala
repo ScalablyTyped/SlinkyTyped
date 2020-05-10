@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsLayers.normalizationMod
 
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
+import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,22 +9,22 @@ import scala.scalajs.js.annotation._
 @JSImport("@tensorflow/tfjs-layers/dist/layers/normalization", "batchNormalization")
 @js.native
 object batchNormalization extends js.Object {
-  def apply(x: Tensor_[Rank], mean: Tensor_[Rank], variance: Tensor_[Rank]): Tensor_[Rank] = js.native
-  def apply(x: Tensor_[Rank], mean: Tensor_[Rank], variance: Tensor_[Rank], beta: Tensor_[Rank]): Tensor_[Rank] = js.native
+  def apply(x: Tensor[Rank], mean: Tensor[Rank], variance: Tensor[Rank]): Tensor[Rank] = js.native
+  def apply(x: Tensor[Rank], mean: Tensor[Rank], variance: Tensor[Rank], beta: Tensor[Rank]): Tensor[Rank] = js.native
   def apply(
-    x: Tensor_[Rank],
-    mean: Tensor_[Rank],
-    variance: Tensor_[Rank],
-    beta: Tensor_[Rank],
-    gamma: Tensor_[Rank]
-  ): Tensor_[Rank] = js.native
+    x: Tensor[Rank],
+    mean: Tensor[Rank],
+    variance: Tensor[Rank],
+    beta: Tensor[Rank],
+    gamma: Tensor[Rank]
+  ): Tensor[Rank] = js.native
   def apply(
-    x: Tensor_[Rank],
-    mean: Tensor_[Rank],
-    variance: Tensor_[Rank],
-    beta: Tensor_[Rank],
-    gamma: Tensor_[Rank],
+    x: Tensor[Rank],
+    mean: Tensor[Rank],
+    variance: Tensor[Rank],
+    beta: Tensor[Rank],
+    gamma: Tensor[Rank],
     epsilon: Double
-  ): Tensor_[Rank] = js.native
+  ): Tensor[Rank] = js.native
 }
 

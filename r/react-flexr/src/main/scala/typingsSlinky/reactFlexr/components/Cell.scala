@@ -1,10 +1,7 @@
 package typingsSlinky.reactFlexr.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFlexr.ReactFlexr.CellProps
 import typingsSlinky.reactFlexr.reactFlexrStrings.bottom
 import typingsSlinky.reactFlexr.reactFlexrStrings.center
@@ -13,37 +10,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Cell
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactFlexr.mod.Cell] {
+object Cell {
   @JSImport("react-flexr", "Cell")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    align: top | center | bottom = null,
-    desk: String | Double = null,
-    flex: js.UndefOr[Boolean] = js.undefined,
-    gutter: String = null,
-    lap: String | Double = null,
-    palm: String | Double = null,
-    portable: String | Double = null,
-    size: String | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactFlexr.mod.Cell] = {
-    val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (desk != null) __obj.updateDynamic("desk")(desk.asInstanceOf[js.Any])
-    if (!js.isUndefined(flex)) __obj.updateDynamic("flex")(flex.asInstanceOf[js.Any])
-    if (gutter != null) __obj.updateDynamic("gutter")(gutter.asInstanceOf[js.Any])
-    if (lap != null) __obj.updateDynamic("lap")(lap.asInstanceOf[js.Any])
-    if (palm != null) __obj.updateDynamic("palm")(palm.asInstanceOf[js.Any])
-    if (portable != null) __obj.updateDynamic("portable")(portable.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactFlexr.mod.Cell] {
+    @scala.inline
+    def align(value: top | center | bottom): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def desk(value: String | Double): this.type = set("desk", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flex(value: Boolean): this.type = set("flex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gutter(value: String): this.type = set("gutter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lap(value: String | Double): this.type = set("lap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def palm(value: String | Double): this.type = set("palm", value.asInstanceOf[js.Any])
+    @scala.inline
+    def portable(value: String | Double): this.type = set("portable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: String | Double): this.type = set("size", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactFlexr.mod.Cell] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactFlexr.mod.Cell](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = CellProps
+  
+  def withProps(p: CellProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Cell.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

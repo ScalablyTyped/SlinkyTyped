@@ -1,10 +1,8 @@
 package typingsSlinky.cathoQuantum.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.input.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.cathoQuantum.AnonColorsSpacing
 import typingsSlinky.cathoQuantum.AnonDisabled
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.button
@@ -16,35 +14,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RadioGroup
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object RadioGroup {
   @JSImport("@catho/quantum/RadioGroup", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    name: String,
-    error: String = null,
-    `inline`: js.UndefOr[Boolean] = js.undefined,
-    onChange: ChangeEvent[HTMLInputElement] => Unit = null,
-    options: js.Array[AnonDisabled] = null,
-    theme: AnonColorsSpacing = null,
-    `type`: radio | button = null,
-    value: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def error(value: String): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: ChangeEvent[HTMLInputElement] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def options(value: js.Array[AnonDisabled]): this.type = set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: AnonColorsSpacing): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: radio | button): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  type Props = RadioGroupProps
+  
+  def withProps(p: RadioGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(name: String): Builder = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[RadioGroupProps]))
+  }
 }
 

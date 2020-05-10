@@ -1,15 +1,11 @@
 package typingsSlinky.samchon
 
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Type
 import typingsSlinky.samchon.distributedSystemArrayMod.DistributedSystemArray
 import typingsSlinky.samchon.distributedSystemMod.DistributedSystem
 import typingsSlinky.samchon.iclientdriverMod.IClientDriver
 import typingsSlinky.samchon.iserverMod.IServer
 import typingsSlinky.tstl.dequeMod.Deque
 import typingsSlinky.tstl.dequeMod.Deque.Iterator
-import typingsSlinky.tstl.dequeMod.Deque.ReverseIterator
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,27 +26,6 @@ object distributedClientArrayMod extends js.Object {
       */
     var server_base_ : js.Any = js.native
     /**
-      * Add a newly connected remote client.
-      *
-      * The {@link addClient addClient()} is an abstract method being called when a remote client is newly connected
-      * with {@link IClientDriver} object who communicates with the remote system. Overrides this method and defines
-      * what to do with the *driver*, a newly connected remote client.
-      *
-      * Below methods and example codes may be good for comprehending how to utilize this {@link addClient} method.
-      *
-      * - https://github.com/samchon/framework-examples/blob/master/calculator/calculator-server.ts
-      * - https://github.com/samchon/framework-examples/blob/master/chat-server/server.ts
-      * - {@link service.Server.addClient}
-      * - {@link external.ExternalClientArray.addClient}
-      * - {@link slave.SlaveServer.addClient}
-      *
-      * @param driver A {@link ICommunicator communicator} with (newly connected) remote client.
-      */
-    /* CompleteClass */
-    override def addClient(driver: IClientDriver): Unit = js.native
-    /* InferMemberOverrides */
-    override def addEventListener(`type`: Type, listener: Listener[System, Deque[System], Iterator[System], ReverseIterator[System]]): Unit = js.native
-    /**
       * Range Assigner.
       *
       * @param first Input iteartor of the first position.
@@ -59,25 +34,10 @@ object distributedClientArrayMod extends js.Object {
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[System, InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
     /**
-      * Iterator to the first element.
-      *
-      * @return Iterator to the first element.
-      */
-    /* InferMemberOverrides */
-    override def begin(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[System, Deque[System], Iterator[System], ReverseIterator[System], System] = js.native
-    /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
     override def clear(): Unit = js.native
-    /**
-      * Close server.
-      *
-      * Close opened server. All remote clients, have connected with this server, are also closed and their call back
-      * functions, for closed connection, {@link IClientDriver.onClose} are also called.
-      */
-    /* CompleteClass */
-    override def close(): Unit = js.native
     /**
       * Factory method creating {@link DistributedSystem} object.
       *
@@ -110,21 +70,6 @@ object distributedClientArrayMod extends js.Object {
       * @return A new {@link IServerBase} object.
       */
     /* protected */ def createServerBase(): IServer = js.native
-    /* InferMemberOverrides */
-    override def dispatchEvent(event: CollectionEvent[System, Deque[System], Iterator[System], ReverseIterator[System]]): Unit = js.native
-    /**
-      * Test whether container is empty.
-      */
-    /* InferMemberOverrides */
-    /* InferMemberOverrides */
-    override def empty(): Boolean = js.native
-    /**
-      * Iterator to the end.
-      *
-      * @return Iterator to the end.
-      */
-    /* InferMemberOverrides */
-    override def end(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[System, Deque[System], Iterator[System], ReverseIterator[System], System] = js.native
     /**
       * Erase elements in range.
       *
@@ -154,55 +99,6 @@ object distributedClientArrayMod extends js.Object {
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def front(`val`: System): Unit = js.native
-    /* InferMemberOverrides */
-    override def hasEventListener(`type`: Type): Boolean = js.native
-    /**
-      * Open server.
-      *
-      * @param port Port number to open.
-      */
-    /* CompleteClass */
-    override def open(port: Double): Unit = js.native
-    /**
-      * Insert items at the end.
-      *
-      * @param items Items to insert.
-      * @return Number of elements in the container after insertion.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    /* InferMemberOverrides */
-    override def push(items: System*): Double = js.native
-    /**
-      * Insert an element at the end.
-      *
-      * @param val Value to insert.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    /* InferMemberOverrides */
-    override def push_back(`val`: System): Unit = js.native
-    /**
-      * Reverse iterator to the first element in reverse.
-      *
-      * @return Reverse iterator to the first.
-      */
-    /* InferMemberOverrides */
-    override def rbegin(): ReverseIterator[System] = js.native
-    /* InferMemberOverrides */
-    override def removeEventListener(`type`: Type, listener: Listener[System, Deque[System], Iterator[System], ReverseIterator[System]]): Unit = js.native
-    /**
-      * Reverse iterator to the reverse end.
-      *
-      * @return Reverse iterator to the end.
-      */
-    /* InferMemberOverrides */
-    override def rend(): ReverseIterator[System] = js.native
-    /**
-      * Number of elements in the container.
-      */
-    /* InferMemberOverrides */
-    override def size(): Double = js.native
     /**
       * Swap elements.
       *

@@ -16,18 +16,16 @@ trait CalendarComponentType extends js.Object
 
 object CalendarComponentType {
   @scala.inline
-  def VALARM: typingsSlinky.ical.icalStrings.VALARM = this.cast("VALARM")
+  def VALARM: typingsSlinky.ical.icalStrings.VALARM = "VALARM".asInstanceOf[typingsSlinky.ical.icalStrings.VALARM]
   @scala.inline
-  def VEVENT: typingsSlinky.ical.icalStrings.VEVENT = this.cast("VEVENT")
+  def VEVENT: typingsSlinky.ical.icalStrings.VEVENT = "VEVENT".asInstanceOf[typingsSlinky.ical.icalStrings.VEVENT]
   @scala.inline
-  def VFREEBUSY: typingsSlinky.ical.icalStrings.VFREEBUSY = this.cast("VFREEBUSY")
+  def VFREEBUSY: typingsSlinky.ical.icalStrings.VFREEBUSY = "VFREEBUSY".asInstanceOf[typingsSlinky.ical.icalStrings.VFREEBUSY]
   @scala.inline
-  def VJOURNAL: typingsSlinky.ical.icalStrings.VJOURNAL = this.cast("VJOURNAL")
+  def VJOURNAL: typingsSlinky.ical.icalStrings.VJOURNAL = "VJOURNAL".asInstanceOf[typingsSlinky.ical.icalStrings.VJOURNAL]
   @scala.inline
-  def VTIMEZONE: typingsSlinky.ical.icalStrings.VTIMEZONE = this.cast("VTIMEZONE")
+  def VTIMEZONE: typingsSlinky.ical.icalStrings.VTIMEZONE = "VTIMEZONE".asInstanceOf[typingsSlinky.ical.icalStrings.VTIMEZONE]
   @scala.inline
-  def VTODO: typingsSlinky.ical.icalStrings.VTODO = this.cast("VTODO")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def VTODO: typingsSlinky.ical.icalStrings.VTODO = "VTODO".asInstanceOf[typingsSlinky.ical.icalStrings.VTODO]
 }
 

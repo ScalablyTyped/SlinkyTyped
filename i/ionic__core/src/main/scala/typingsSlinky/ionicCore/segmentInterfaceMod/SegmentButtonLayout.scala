@@ -16,18 +16,16 @@ trait SegmentButtonLayout extends js.Object
 
 object SegmentButtonLayout {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `icon-bottom`: typingsSlinky.ionicCore.ionicCoreStrings.`icon-bottom` = "icon-bottom".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.`icon-bottom`]
   @scala.inline
-  def `icon-bottom`: typingsSlinky.ionicCore.ionicCoreStrings.`icon-bottom` = this.cast("icon-bottom")
+  def `icon-end`: typingsSlinky.ionicCore.ionicCoreStrings.`icon-end` = "icon-end".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.`icon-end`]
   @scala.inline
-  def `icon-end`: typingsSlinky.ionicCore.ionicCoreStrings.`icon-end` = this.cast("icon-end")
+  def `icon-hide`: typingsSlinky.ionicCore.ionicCoreStrings.`icon-hide` = "icon-hide".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.`icon-hide`]
   @scala.inline
-  def `icon-hide`: typingsSlinky.ionicCore.ionicCoreStrings.`icon-hide` = this.cast("icon-hide")
+  def `icon-start`: typingsSlinky.ionicCore.ionicCoreStrings.`icon-start` = "icon-start".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.`icon-start`]
   @scala.inline
-  def `icon-start`: typingsSlinky.ionicCore.ionicCoreStrings.`icon-start` = this.cast("icon-start")
+  def `icon-top`: typingsSlinky.ionicCore.ionicCoreStrings.`icon-top` = "icon-top".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.`icon-top`]
   @scala.inline
-  def `icon-top`: typingsSlinky.ionicCore.ionicCoreStrings.`icon-top` = this.cast("icon-top")
-  @scala.inline
-  def `label-hide`: typingsSlinky.ionicCore.ionicCoreStrings.`label-hide` = this.cast("label-hide")
+  def `label-hide`: typingsSlinky.ionicCore.ionicCoreStrings.`label-hide` = "label-hide".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.`label-hide`]
 }
 

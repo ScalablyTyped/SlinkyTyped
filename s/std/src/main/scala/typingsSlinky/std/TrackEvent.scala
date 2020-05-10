@@ -15,6 +15,10 @@ trait TrackEvent extends Event_ {
 @JSGlobal("TrackEvent")
 @js.native
 object TrackEvent
-  extends Instantiable1[/* typeArg */ java.lang.String, TrackEvent]
-     with Instantiable2[/* typeArg */ java.lang.String, /* eventInitDict */ TrackEventInit, TrackEvent]
+  extends Instantiable1[/* typeArg */ java.lang.String, org.scalajs.dom.raw.TrackEvent]
+     with Instantiable2[
+      /* typeArg */ java.lang.String, 
+      /* eventInitDict */ TrackEventInit, 
+      org.scalajs.dom.raw.TrackEvent
+    ]
 

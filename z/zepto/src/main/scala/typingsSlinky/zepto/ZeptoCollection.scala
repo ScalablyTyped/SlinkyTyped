@@ -1,8 +1,8 @@
 package typingsSlinky.zepto
 
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.XMLHttpRequest
-import typingsSlinky.std.Element
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -339,12 +339,12 @@ trait ZeptoCollection extends js.Object {
   	* Get all elements or a single element from the current collection. When no index is given, returns all elements in an ordinary array. When index is specified, return only the element at that position. This is different than eq in the way that the returned node is not wrapped in a Zepto collection.
   	* @return
   	**/
-  def get(): js.Array[org.scalajs.dom.raw.HTMLElement] = js.native
+  def get(): js.Array[HTMLElement] = js.native
   /**
   	* @see ZeptoCollection.get
   	* @param index
   	**/
-  def get(index: Double): org.scalajs.dom.raw.HTMLElement = js.native
+  def get(index: Double): HTMLElement = js.native
   /**
   	* @see ZeptoCollection.has
   	* @param node

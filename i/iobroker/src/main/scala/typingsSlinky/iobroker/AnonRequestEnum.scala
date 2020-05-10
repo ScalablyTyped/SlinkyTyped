@@ -5,17 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonRequestEnum extends js.Object {
-  var requestEnum: String
-  var result: Record[String, _]
+  var requestEnum: String = js.native
+  var result: Record[String, _] = js.native
 }
 
 object AnonRequestEnum {
   @scala.inline
   def apply(requestEnum: String, result: Record[String, _]): AnonRequestEnum = {
     val __obj = js.Dynamic.literal(requestEnum = requestEnum.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonRequestEnum]
   }
+  @scala.inline
+  implicit class AnonRequestEnumOps[Self <: AnonRequestEnum] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRequestEnum(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestEnum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResult(value: Record[String, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

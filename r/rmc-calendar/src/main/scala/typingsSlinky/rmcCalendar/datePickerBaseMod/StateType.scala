@@ -5,16 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StateType extends js.Object {
-  var months: js.Array[MonthData]
+  var months: js.Array[MonthData] = js.native
 }
 
 object StateType {
   @scala.inline
   def apply(months: js.Array[MonthData]): StateType = {
     val __obj = js.Dynamic.literal(months = months.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[StateType]
   }
+  @scala.inline
+  implicit class StateTypeOps[Self <: StateType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMonths(value: js.Array[MonthData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("months")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

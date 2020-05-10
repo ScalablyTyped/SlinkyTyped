@@ -12,10 +12,8 @@ trait ErrorEvent extends js.Object
 
 object ErrorEvent {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def completeColonerror: typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.completeColonerror = "complete:error".asInstanceOf[typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.completeColonerror]
   @scala.inline
-  def completeColonerror: typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.completeColonerror = this.cast("complete:error")
-  @scala.inline
-  def pollColonerror: typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.pollColonerror = this.cast("poll:error")
+  def pollColonerror: typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.pollColonerror = "poll:error".asInstanceOf[typingsSlinky.camundaExternalTaskClientJs.camundaExternalTaskClientJsStrings.pollColonerror]
 }
 

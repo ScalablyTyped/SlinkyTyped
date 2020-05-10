@@ -7,15 +7,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PagerDataPart[TElement] extends js.Object {
   /**
     * The number of filtered rows.
     */
-  var filteredRows: js.UndefOr[Double] = js.undefined
+  var filteredRows: js.UndefOr[Double] = js.native
   /**
     * The column-names of the table.
     */
-  var headers: js.UndefOr[js.Array[String]] = js.undefined
+  var headers: js.UndefOr[js.Array[String]] = js.native
   /**
     * The output to display in the output-area.
     *
@@ -34,32 +35,90 @@ trait PagerDataPart[TElement] extends js.Object {
     * | `{filteredRows}`   | The amount of filtered rows.                 |
     * | `{totalRows}`      | The total amount of rows.                    |
     */
-  var output: js.UndefOr[String | PagerOutputProcessor[TElement]] = js.undefined
+  var output: js.UndefOr[String | PagerOutputProcessor[TElement]] = js.native
   /**
     * The data to show.
     */
-  var rows: js.UndefOr[js.Array[js.Array[_]] | JQuery[HTMLElement]] = js.undefined
+  var rows: js.UndefOr[js.Array[js.Array[_]] | JQuery[HTMLElement]] = js.native
   /**
     * The number of total rows.
     */
-  var total: Double
+  var total: Double = js.native
 }
 
 object PagerDataPart {
   @scala.inline
-  def apply[TElement](
-    total: Double,
-    filteredRows: Int | Double = null,
-    headers: js.Array[String] = null,
-    output: String | PagerOutputProcessor[TElement] = null,
-    rows: js.Array[js.Array[_]] | JQuery[HTMLElement] = null
-  ): PagerDataPart[TElement] = {
+  def apply[TElement](total: Double): PagerDataPart[TElement] = {
     val __obj = js.Dynamic.literal(total = total.asInstanceOf[js.Any])
-    if (filteredRows != null) __obj.updateDynamic("filteredRows")(filteredRows.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[PagerDataPart[TElement]]
   }
+  @scala.inline
+  implicit class PagerDataPartOps[Self[telement] <: PagerDataPart[telement], TElement] (val x: Self[TElement]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TElement] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TElement]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[TElement] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TElement] with Other]
+    @scala.inline
+    def withTotal(value: Double): Self[TElement] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFilteredRows(value: Double): Self[TElement] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filteredRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilteredRows: Self[TElement] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filteredRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: js.Array[String]): Self[TElement] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self[TElement] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputFunction2(value: (TElement, /* pager */ js.Any) => String): Self[TElement] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withOutput(value: String | PagerOutputProcessor[TElement]): Self[TElement] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutput: Self[TElement] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: js.Array[js.Array[_]] | JQuery[HTMLElement]): Self[TElement] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self[TElement] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

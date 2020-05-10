@@ -56,24 +56,101 @@ trait SchemaServiceStatus extends js.Object {
 
 object SchemaServiceStatus {
   @scala.inline
-  def apply(
-    address: SchemaAddressable = null,
-    conditions: js.Array[SchemaServiceCondition] = null,
-    domain: String = null,
-    latestCreatedRevisionName: String = null,
-    latestReadyRevisionName: String = null,
-    observedGeneration: Int | Double = null,
-    traffic: js.Array[SchemaTrafficTarget] = null
-  ): SchemaServiceStatus = {
+  def apply(): SchemaServiceStatus = {
     val __obj = js.Dynamic.literal()
-    if (address != null) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
-    if (conditions != null) __obj.updateDynamic("conditions")(conditions.asInstanceOf[js.Any])
-    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
-    if (latestCreatedRevisionName != null) __obj.updateDynamic("latestCreatedRevisionName")(latestCreatedRevisionName.asInstanceOf[js.Any])
-    if (latestReadyRevisionName != null) __obj.updateDynamic("latestReadyRevisionName")(latestReadyRevisionName.asInstanceOf[js.Any])
-    if (observedGeneration != null) __obj.updateDynamic("observedGeneration")(observedGeneration.asInstanceOf[js.Any])
-    if (traffic != null) __obj.updateDynamic("traffic")(traffic.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaServiceStatus]
   }
+  @scala.inline
+  implicit class SchemaServiceStatusOps[Self <: SchemaServiceStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: SchemaAddressable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConditions(value: js.Array[SchemaServiceCondition]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConditions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatestCreatedRevisionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestCreatedRevisionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatestCreatedRevisionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestCreatedRevisionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatestReadyRevisionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestReadyRevisionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatestReadyRevisionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestReadyRevisionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObservedGeneration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("observedGeneration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObservedGeneration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("observedGeneration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTraffic(value: js.Array[SchemaTrafficTarget]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("traffic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTraffic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("traffic")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

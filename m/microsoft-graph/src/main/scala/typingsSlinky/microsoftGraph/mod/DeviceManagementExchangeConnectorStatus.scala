@@ -15,14 +15,12 @@ trait DeviceManagementExchangeConnectorStatus extends js.Object
 
 object DeviceManagementExchangeConnectorStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def connected: typingsSlinky.microsoftGraph.microsoftGraphStrings.connected = "connected".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.connected]
   @scala.inline
-  def connected: typingsSlinky.microsoftGraph.microsoftGraphStrings.connected = this.cast("connected")
+  def connectionPending: typingsSlinky.microsoftGraph.microsoftGraphStrings.connectionPending = "connectionPending".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.connectionPending]
   @scala.inline
-  def connectionPending: typingsSlinky.microsoftGraph.microsoftGraphStrings.connectionPending = this.cast("connectionPending")
+  def disconnected: typingsSlinky.microsoftGraph.microsoftGraphStrings.disconnected = "disconnected".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.disconnected]
   @scala.inline
-  def disconnected: typingsSlinky.microsoftGraph.microsoftGraphStrings.disconnected = this.cast("disconnected")
-  @scala.inline
-  def none: none_ = this.cast("none")
+  def none: none_ = "none".asInstanceOf[none_]
 }
 

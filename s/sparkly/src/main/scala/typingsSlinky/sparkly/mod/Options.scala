@@ -5,29 +5,71 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
   /**
   		Maximum range.
   		*/
-  val maximum: js.UndefOr[Double] = js.undefined
+  val maximum: js.UndefOr[Double] = js.native
   /**
   		Minimum range.
   		*/
-  val minimum: js.UndefOr[Double] = js.undefined
+  val minimum: js.UndefOr[Double] = js.native
   /**
   		Style for the sparklines.
   		*/
-  val style: js.UndefOr[fire] = js.undefined
+  val style: js.UndefOr[fire] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(maximum: Int | Double = null, minimum: Int | Double = null, style: fire = null): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (maximum != null) __obj.updateDynamic("maximum")(maximum.asInstanceOf[js.Any])
-    if (minimum != null) __obj.updateDynamic("minimum")(minimum.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaximum(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimum(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: fire): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -19,7 +19,7 @@ class Map protected () extends KVO {
   var mapSystemProjection: js.Any = js.native
   var mapTypes: js.Any = js.native
   def addPane(name: String, elementOrIndex: Double): Unit = js.native
-  def addPane(name: String, elementOrIndex: typingsSlinky.std.HTMLElement): Unit = js.native
+  def addPane(name: String, elementOrIndex: HTMLElement): Unit = js.native
   def destory(): Unit = js.native
   def fitBounds(bounds: js.Any): Unit = js.native
   def fitBounds(bounds: js.Any, margin: js.Any): Unit = js.native

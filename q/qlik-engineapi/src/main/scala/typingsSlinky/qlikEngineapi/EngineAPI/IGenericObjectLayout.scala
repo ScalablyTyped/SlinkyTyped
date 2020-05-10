@@ -7,31 +7,32 @@ import scala.scalajs.js.annotation._
 /**
   * GenericObjectLayout...
   */
+@js.native
 trait IGenericObjectLayout extends IGenericBaseLayout {
   /**
     * This parameter is optional.
     * Gives information on the error.
     */
-  var qError: js.UndefOr[INxLayoutErrors] = js.undefined
+  var qError: js.UndefOr[INxLayoutErrors] = js.native
   /**
     * Should be set to create an object that is linked to another object.
     * Enter the identifier of the object you want to link to.
     * If you do not want to link your object, set this parameter to an empty string.
     */
-  var qExtendsId: String
+  var qExtendsId: String = js.native
   /**
     * Is set to true if the generic object contains some properties that are not persistent
     * (a soft patch was applied).
     */
-  var qHasSoftPatches: Boolean
+  var qHasSoftPatches: Boolean = js.native
   /**
     * Information about the selections.
     */
-  var qSelectionInfo: INxSelectionInfo
+  var qSelectionInfo: INxSelectionInfo = js.native
   /**
     * 	Name of the alternate state. Default is current selections $ .
     */
-  var qStateName: String
+  var qStateName: String = js.native
 }
 
 object IGenericObjectLayout {
@@ -42,12 +43,54 @@ object IGenericObjectLayout {
     qInfo: INxInfo,
     qMeta: INxMeta,
     qSelectionInfo: INxSelectionInfo,
-    qStateName: String,
-    qError: INxLayoutErrors = null
+    qStateName: String
   ): IGenericObjectLayout = {
     val __obj = js.Dynamic.literal(qExtendsId = qExtendsId.asInstanceOf[js.Any], qHasSoftPatches = qHasSoftPatches.asInstanceOf[js.Any], qInfo = qInfo.asInstanceOf[js.Any], qMeta = qMeta.asInstanceOf[js.Any], qSelectionInfo = qSelectionInfo.asInstanceOf[js.Any], qStateName = qStateName.asInstanceOf[js.Any])
-    if (qError != null) __obj.updateDynamic("qError")(qError.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGenericObjectLayout]
   }
+  @scala.inline
+  implicit class IGenericObjectLayoutOps[Self <: IGenericObjectLayout] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQExtendsId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qExtendsId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQHasSoftPatches(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qHasSoftPatches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQSelectionInfo(value: INxSelectionInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qSelectionInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQStateName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qStateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQError(value: INxLayoutErrors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qError")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

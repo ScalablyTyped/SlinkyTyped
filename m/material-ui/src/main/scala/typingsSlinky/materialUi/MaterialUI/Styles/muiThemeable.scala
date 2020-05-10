@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object muiThemeable extends js.Object {
   def apply(): js.Function1[
-    /* component */ ReactComponentClass[AnonMuiTheme] | ReactComponentClass[AnonMuiTheme], 
-    ReactComponentClass[AnonMuiTheme] | ReactComponentClass[AnonMuiTheme]
+    /* component */ ReactComponentClass[AnonMuiTheme], 
+    ReactComponentClass[AnonMuiTheme]
   ] = js.native
 }
 

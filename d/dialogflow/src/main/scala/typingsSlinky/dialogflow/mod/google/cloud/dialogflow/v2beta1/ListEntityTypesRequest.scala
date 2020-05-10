@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -58,8 +57,8 @@ object ListEntityTypesRequest extends js.Object {
     */
   def decode(reader: Reader): ListEntityTypesRequest = js.native
   def decode(reader: Reader, length: Double): ListEntityTypesRequest = js.native
-  def decode(reader: Uint8Array): ListEntityTypesRequest = js.native
-  def decode(reader: Uint8Array, length: Double): ListEntityTypesRequest = js.native
+  def decode(reader: js.typedarray.Uint8Array): ListEntityTypesRequest = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): ListEntityTypesRequest = js.native
   /**
     * Decodes a ListEntityTypesRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -68,7 +67,7 @@ object ListEntityTypesRequest extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): ListEntityTypesRequest = js.native
-  def decodeDelimited(reader: Uint8Array): ListEntityTypesRequest = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): ListEntityTypesRequest = js.native
   /**
     * Encodes the specified ListEntityTypesRequest message. Does not implicitly {@link google.cloud.dialogflow.v2beta1.ListEntityTypesRequest.verify|verify} messages.
     * @param message ListEntityTypesRequest message or plain object to encode

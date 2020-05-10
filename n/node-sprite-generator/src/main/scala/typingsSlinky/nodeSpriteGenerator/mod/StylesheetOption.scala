@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StylesheetOption extends js.Object {
-  var nameMapping: js.UndefOr[js.Function0[String]] = js.undefined
-  var pixelRatio: js.UndefOr[Double] = js.undefined
-  var prefix: js.UndefOr[String] = js.undefined
-  var spritePath: js.UndefOr[String] = js.undefined
+  var nameMapping: js.UndefOr[js.Function0[String]] = js.native
+  var pixelRatio: js.UndefOr[Double] = js.native
+  var prefix: js.UndefOr[String] = js.native
+  var spritePath: js.UndefOr[String] = js.native
 }
 
 object StylesheetOption {
   @scala.inline
-  def apply(
-    nameMapping: () => String = null,
-    pixelRatio: Int | Double = null,
-    prefix: String = null,
-    spritePath: String = null
-  ): StylesheetOption = {
+  def apply(): StylesheetOption = {
     val __obj = js.Dynamic.literal()
-    if (nameMapping != null) __obj.updateDynamic("nameMapping")(js.Any.fromFunction0(nameMapping))
-    if (pixelRatio != null) __obj.updateDynamic("pixelRatio")(pixelRatio.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (spritePath != null) __obj.updateDynamic("spritePath")(spritePath.asInstanceOf[js.Any])
     __obj.asInstanceOf[StylesheetOption]
   }
+  @scala.inline
+  implicit class StylesheetOptionOps[Self <: StylesheetOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNameMapping(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameMapping")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutNameMapping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameMapping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPixelRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPixelRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpritePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spritePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpritePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spritePath")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

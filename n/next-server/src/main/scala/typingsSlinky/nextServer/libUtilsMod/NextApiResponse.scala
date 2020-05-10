@@ -16,8 +16,6 @@ import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.ReadableOptions
 import typingsSlinky.node.streamMod.WritableOptions
-import typingsSlinky.std.Error
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -66,7 +64,7 @@ trait NextApiResponse[T] extends js.Object {
   val writableLength: Double = js.native
   val writableObjectMode: Boolean = js.native
   def _destroy(error: Null, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
-  def _destroy(error: Error, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
+  def _destroy(error: js.Error, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
   def _final(callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
   def _write(
     chunk: js.Any,
@@ -126,8 +124,8 @@ trait NextApiResponse[T] extends js.Object {
   def end(chunk: js.Any, encoding: String, cb: js.Function0[Unit]): Unit = js.native
   def end(data: String): Unit = js.native
   def end(data: String, cb: js.Function0[Unit]): Unit = js.native
-  def end(data: Uint8Array): Unit = js.native
-  def end(data: Uint8Array, cb: js.Function0[Unit]): Unit = js.native
+  def end(data: js.typedarray.Uint8Array): Unit = js.native
+  def end(data: js.typedarray.Uint8Array, cb: js.Function0[Unit]): Unit = js.native
   def end(str: String, encoding: String): Unit = js.native
   def end(str: String, encoding: String, cb: js.Function0[Unit]): Unit = js.native
   def eventNames(): js.Array[String | js.Symbol] = js.native
@@ -231,15 +229,15 @@ trait NextApiResponse[T] extends js.Object {
   def status(statusCode: Double): NextApiResponse[T] = js.native
   def uncork(): Unit = js.native
   def write(buffer: String): Boolean = js.native
-  def write(buffer: String, cb: js.Function1[/* err */ js.UndefOr[Error | Null], Unit]): Boolean = js.native
-  def write(buffer: Uint8Array): Boolean = js.native
-  def write(buffer: Uint8Array, cb: js.Function1[/* err */ js.UndefOr[Error | Null], Unit]): Boolean = js.native
+  def write(buffer: String, cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
+  def write(buffer: js.typedarray.Uint8Array): Boolean = js.native
+  def write(buffer: js.typedarray.Uint8Array, cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
   def write(chunk: js.Any): Boolean = js.native
-  def write(chunk: js.Any, cb: js.Function1[/* error */ js.UndefOr[Error | Null], Unit]): Boolean = js.native
+  def write(chunk: js.Any, cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
   def write(chunk: js.Any, encoding: String): Boolean = js.native
-  def write(chunk: js.Any, encoding: String, cb: js.Function1[/* error */ js.UndefOr[Error | Null], Unit]): Boolean = js.native
+  def write(chunk: js.Any, encoding: String, cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
   def write(str: String, encoding: String): Boolean = js.native
-  def write(str: String, encoding: String, cb: js.Function1[/* err */ js.UndefOr[Error | Null], Unit]): Boolean = js.native
+  def write(str: String, encoding: String, cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
   // https://github.com/nodejs/node/blob/master/test/parallel/test-http-write-callbacks.js#L53
   // no args in writeContinue callback
   def writeContinue(): Unit = js.native

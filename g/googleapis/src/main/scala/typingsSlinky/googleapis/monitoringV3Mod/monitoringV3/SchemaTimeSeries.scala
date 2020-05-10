@@ -62,22 +62,89 @@ trait SchemaTimeSeries extends js.Object {
 
 object SchemaTimeSeries {
   @scala.inline
-  def apply(
-    metadata: SchemaMonitoredResourceMetadata = null,
-    metric: SchemaMetric = null,
-    metricKind: String = null,
-    points: js.Array[SchemaPoint] = null,
-    resource: SchemaMonitoredResource = null,
-    valueType: String = null
-  ): SchemaTimeSeries = {
+  def apply(): SchemaTimeSeries = {
     val __obj = js.Dynamic.literal()
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (metric != null) __obj.updateDynamic("metric")(metric.asInstanceOf[js.Any])
-    if (metricKind != null) __obj.updateDynamic("metricKind")(metricKind.asInstanceOf[js.Any])
-    if (points != null) __obj.updateDynamic("points")(points.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
-    if (valueType != null) __obj.updateDynamic("valueType")(valueType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTimeSeries]
   }
+  @scala.inline
+  implicit class SchemaTimeSeriesOps[Self <: SchemaTimeSeries] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMetadata(value: SchemaMonitoredResourceMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetric(value: SchemaMetric): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetric: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricKind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricKind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoints(value: js.Array[SchemaPoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResource(value: SchemaMonitoredResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

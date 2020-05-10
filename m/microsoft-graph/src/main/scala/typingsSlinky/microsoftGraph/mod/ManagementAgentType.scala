@@ -22,28 +22,26 @@ trait ManagementAgentType extends js.Object
 
 object ManagementAgentType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def configurationManagerClient: typingsSlinky.microsoftGraph.microsoftGraphStrings.configurationManagerClient = "configurationManagerClient".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.configurationManagerClient]
   @scala.inline
-  def configurationManagerClient: typingsSlinky.microsoftGraph.microsoftGraphStrings.configurationManagerClient = this.cast("configurationManagerClient")
+  def configurationManagerClientMdm: typingsSlinky.microsoftGraph.microsoftGraphStrings.configurationManagerClientMdm = "configurationManagerClientMdm".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.configurationManagerClientMdm]
   @scala.inline
-  def configurationManagerClientMdm: typingsSlinky.microsoftGraph.microsoftGraphStrings.configurationManagerClientMdm = this.cast("configurationManagerClientMdm")
+  def configurationManagerClientMdmEas: typingsSlinky.microsoftGraph.microsoftGraphStrings.configurationManagerClientMdmEas = "configurationManagerClientMdmEas".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.configurationManagerClientMdmEas]
   @scala.inline
-  def configurationManagerClientMdmEas: typingsSlinky.microsoftGraph.microsoftGraphStrings.configurationManagerClientMdmEas = this.cast("configurationManagerClientMdmEas")
+  def eas: typingsSlinky.microsoftGraph.microsoftGraphStrings.eas = "eas".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.eas]
   @scala.inline
-  def eas: typingsSlinky.microsoftGraph.microsoftGraphStrings.eas = this.cast("eas")
+  def easIntuneClient: typingsSlinky.microsoftGraph.microsoftGraphStrings.easIntuneClient = "easIntuneClient".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.easIntuneClient]
   @scala.inline
-  def easIntuneClient: typingsSlinky.microsoftGraph.microsoftGraphStrings.easIntuneClient = this.cast("easIntuneClient")
+  def easMdm: typingsSlinky.microsoftGraph.microsoftGraphStrings.easMdm = "easMdm".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.easMdm]
   @scala.inline
-  def easMdm: typingsSlinky.microsoftGraph.microsoftGraphStrings.easMdm = this.cast("easMdm")
+  def googleCloudDevicePolicyController: typingsSlinky.microsoftGraph.microsoftGraphStrings.googleCloudDevicePolicyController = "googleCloudDevicePolicyController".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.googleCloudDevicePolicyController]
   @scala.inline
-  def googleCloudDevicePolicyController: typingsSlinky.microsoftGraph.microsoftGraphStrings.googleCloudDevicePolicyController = this.cast("googleCloudDevicePolicyController")
+  def intuneClient: typingsSlinky.microsoftGraph.microsoftGraphStrings.intuneClient = "intuneClient".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.intuneClient]
   @scala.inline
-  def intuneClient: typingsSlinky.microsoftGraph.microsoftGraphStrings.intuneClient = this.cast("intuneClient")
+  def jamf: typingsSlinky.microsoftGraph.microsoftGraphStrings.jamf = "jamf".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.jamf]
   @scala.inline
-  def jamf: typingsSlinky.microsoftGraph.microsoftGraphStrings.jamf = this.cast("jamf")
+  def mdm: typingsSlinky.microsoftGraph.microsoftGraphStrings.mdm = "mdm".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.mdm]
   @scala.inline
-  def mdm: typingsSlinky.microsoftGraph.microsoftGraphStrings.mdm = this.cast("mdm")
-  @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
 }
 

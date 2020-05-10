@@ -27,18 +27,65 @@ trait CreateLocationS3Request extends js.Object {
 
 object CreateLocationS3Request {
   @scala.inline
-  def apply(
-    S3BucketArn: S3BucketArn,
-    S3Config: S3Config,
-    S3StorageClass: S3StorageClass = null,
-    Subdirectory: S3Subdirectory = null,
-    Tags: TagList = null
-  ): CreateLocationS3Request = {
+  def apply(S3BucketArn: S3BucketArn, S3Config: S3Config): CreateLocationS3Request = {
     val __obj = js.Dynamic.literal(S3BucketArn = S3BucketArn.asInstanceOf[js.Any], S3Config = S3Config.asInstanceOf[js.Any])
-    if (S3StorageClass != null) __obj.updateDynamic("S3StorageClass")(S3StorageClass.asInstanceOf[js.Any])
-    if (Subdirectory != null) __obj.updateDynamic("Subdirectory")(Subdirectory.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateLocationS3Request]
   }
+  @scala.inline
+  implicit class CreateLocationS3RequestOps[Self <: CreateLocationS3Request] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withS3BucketArn(value: S3BucketArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BucketArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3Config(value: S3Config): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Config")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3StorageClass(value: S3StorageClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3StorageClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3StorageClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3StorageClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubdirectory(value: S3Subdirectory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subdirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubdirectory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subdirectory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

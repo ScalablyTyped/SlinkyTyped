@@ -26,18 +26,65 @@ trait Rectangle extends js.Object {
 
 object Rectangle {
   @scala.inline
-  def apply(
-    Height: Int | Double = null,
-    Width: Int | Double = null,
-    X: Int | Double = null,
-    Y: Int | Double = null
-  ): Rectangle = {
+  def apply(): Rectangle = {
     val __obj = js.Dynamic.literal()
-    if (Height != null) __obj.updateDynamic("Height")(Height.asInstanceOf[js.Any])
-    if (Width != null) __obj.updateDynamic("Width")(Width.asInstanceOf[js.Any])
-    if (X != null) __obj.updateDynamic("X")(X.asInstanceOf[js.Any])
-    if (Y != null) __obj.updateDynamic("Y")(Y.asInstanceOf[js.Any])
     __obj.asInstanceOf[Rectangle]
   }
+  @scala.inline
+  implicit class RectangleOps[Self <: Rectangle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeight(value: integerMin2Max2147483647): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: integerMin2Max2147483647): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX(value: integerMin0Max2147483647): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("X")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("X")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY(value: integerMin0Max2147483647): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Y")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

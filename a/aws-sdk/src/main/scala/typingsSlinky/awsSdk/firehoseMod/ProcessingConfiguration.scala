@@ -18,11 +18,41 @@ trait ProcessingConfiguration extends js.Object {
 
 object ProcessingConfiguration {
   @scala.inline
-  def apply(Enabled: js.UndefOr[Boolean] = js.undefined, Processors: ProcessorList = null): ProcessingConfiguration = {
+  def apply(): ProcessingConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.asInstanceOf[js.Any])
-    if (Processors != null) __obj.updateDynamic("Processors")(Processors.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProcessingConfiguration]
   }
+  @scala.inline
+  implicit class ProcessingConfigurationOps[Self <: ProcessingConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnabled(value: BooleanObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProcessors(value: ProcessorList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Processors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProcessors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Processors")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

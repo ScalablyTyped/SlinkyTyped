@@ -22,10 +22,41 @@ trait CreateTableRequest extends js.Object {
 
 object CreateTableRequest {
   @scala.inline
-  def apply(DatabaseName: NameString, TableInput: TableInput, CatalogId: CatalogIdString = null): CreateTableRequest = {
+  def apply(DatabaseName: NameString, TableInput: TableInput): CreateTableRequest = {
     val __obj = js.Dynamic.literal(DatabaseName = DatabaseName.asInstanceOf[js.Any], TableInput = TableInput.asInstanceOf[js.Any])
-    if (CatalogId != null) __obj.updateDynamic("CatalogId")(CatalogId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateTableRequest]
   }
+  @scala.inline
+  implicit class CreateTableRequestOps[Self <: CreateTableRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDatabaseName(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTableInput(value: TableInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCatalogId(value: CatalogIdString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCatalogId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

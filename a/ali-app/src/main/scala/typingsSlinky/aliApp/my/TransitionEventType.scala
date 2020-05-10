@@ -14,14 +14,12 @@ trait TransitionEventType extends js.Object
 
 object TransitionEventType {
   @scala.inline
-  def animationend: typingsSlinky.aliApp.aliAppStrings.animationend = this.cast("animationend")
+  def animationend: typingsSlinky.aliApp.aliAppStrings.animationend = "animationend".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.animationend]
   @scala.inline
-  def animationiteration: typingsSlinky.aliApp.aliAppStrings.animationiteration = this.cast("animationiteration")
+  def animationiteration: typingsSlinky.aliApp.aliAppStrings.animationiteration = "animationiteration".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.animationiteration]
   @scala.inline
-  def animationstart: typingsSlinky.aliApp.aliAppStrings.animationstart = this.cast("animationstart")
+  def animationstart: typingsSlinky.aliApp.aliAppStrings.animationstart = "animationstart".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.animationstart]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def transitionend: typingsSlinky.aliApp.aliAppStrings.transitionend = this.cast("transitionend")
+  def transitionend: typingsSlinky.aliApp.aliAppStrings.transitionend = "transitionend".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.transitionend]
 }
 

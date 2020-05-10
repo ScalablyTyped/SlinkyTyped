@@ -1,9 +1,7 @@
 package typingsSlinky.reactSound.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSound.mod.ReactSoundProps
 import typingsSlinky.reactSound.mod.default
 import typingsSlinky.reactSound.reactSoundStrings.PAUSED
@@ -13,51 +11,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactSound
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactSound {
   @JSImport("react-sound", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: loop */
-  def apply(
-    playStatus: PLAYING | STOPPED | PAUSED,
-    url: String,
-    autoLoad: js.UndefOr[Boolean] = js.undefined,
-    onBufferChange: () => Unit = null,
-    onError: () => Unit = null,
-    onFinishedPlaying: () => Unit = null,
-    onLoad: () => Unit = null,
-    onLoading: () => Unit = null,
-    onPause: () => Unit = null,
-    onPlaying: () => Unit = null,
-    onResume: () => Unit = null,
-    onStop: () => Unit = null,
-    playFromPosition: Int | Double = null,
-    playbackRate: Int | Double = null,
-    position: Int | Double = null,
-    volume: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(playStatus = playStatus.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoLoad)) __obj.updateDynamic("autoLoad")(autoLoad.asInstanceOf[js.Any])
-    if (onBufferChange != null) __obj.updateDynamic("onBufferChange")(js.Any.fromFunction0(onBufferChange))
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction0(onError))
-    if (onFinishedPlaying != null) __obj.updateDynamic("onFinishedPlaying")(js.Any.fromFunction0(onFinishedPlaying))
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction0(onLoad))
-    if (onLoading != null) __obj.updateDynamic("onLoading")(js.Any.fromFunction0(onLoading))
-    if (onPause != null) __obj.updateDynamic("onPause")(js.Any.fromFunction0(onPause))
-    if (onPlaying != null) __obj.updateDynamic("onPlaying")(js.Any.fromFunction0(onPlaying))
-    if (onResume != null) __obj.updateDynamic("onResume")(js.Any.fromFunction0(onResume))
-    if (onStop != null) __obj.updateDynamic("onStop")(js.Any.fromFunction0(onStop))
-    if (playFromPosition != null) __obj.updateDynamic("playFromPosition")(playFromPosition.asInstanceOf[js.Any])
-    if (playbackRate != null) __obj.updateDynamic("playbackRate")(playbackRate.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (volume != null) __obj.updateDynamic("volume")(volume.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def autoLoad(value: Boolean): this.type = set("autoLoad", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loop(value: Boolean): this.type = set("loop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBufferChange(value: () => Unit): this.type = set("onBufferChange", js.Any.fromFunction0(value))
+    @scala.inline
+    def onError(value: () => Unit): this.type = set("onError", js.Any.fromFunction0(value))
+    @scala.inline
+    def onFinishedPlaying(value: () => Unit): this.type = set("onFinishedPlaying", js.Any.fromFunction0(value))
+    @scala.inline
+    def onLoad(value: () => Unit): this.type = set("onLoad", js.Any.fromFunction0(value))
+    @scala.inline
+    def onLoading(value: () => Unit): this.type = set("onLoading", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPause(value: () => Unit): this.type = set("onPause", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPlaying(value: () => Unit): this.type = set("onPlaying", js.Any.fromFunction0(value))
+    @scala.inline
+    def onResume(value: () => Unit): this.type = set("onResume", js.Any.fromFunction0(value))
+    @scala.inline
+    def onStop(value: () => Unit): this.type = set("onStop", js.Any.fromFunction0(value))
+    @scala.inline
+    def playFromPosition(value: Double): this.type = set("playFromPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def playbackRate(value: Double): this.type = set("playbackRate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def position(value: Double): this.type = set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def volume(value: Double): this.type = set("volume", value.asInstanceOf[js.Any])
   }
-  type Props = ReactSoundProps
+  
+  def withProps(p: ReactSoundProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(playStatus: PLAYING | STOPPED | PAUSED, url: String): Builder = {
+    val __props = js.Dynamic.literal(playStatus = playStatus.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactSoundProps]))
+  }
 }
 

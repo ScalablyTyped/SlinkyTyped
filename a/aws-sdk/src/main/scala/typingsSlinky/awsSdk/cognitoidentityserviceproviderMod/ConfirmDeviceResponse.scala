@@ -14,10 +14,29 @@ trait ConfirmDeviceResponse extends js.Object {
 
 object ConfirmDeviceResponse {
   @scala.inline
-  def apply(UserConfirmationNecessary: js.UndefOr[Boolean] = js.undefined): ConfirmDeviceResponse = {
+  def apply(): ConfirmDeviceResponse = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(UserConfirmationNecessary)) __obj.updateDynamic("UserConfirmationNecessary")(UserConfirmationNecessary.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfirmDeviceResponse]
   }
+  @scala.inline
+  implicit class ConfirmDeviceResponseOps[Self <: ConfirmDeviceResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUserConfirmationNecessary(value: BooleanType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserConfirmationNecessary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserConfirmationNecessary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserConfirmationNecessary")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

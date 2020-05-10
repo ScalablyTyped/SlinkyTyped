@@ -1,77 +1,91 @@
 package typingsSlinky.rheostat.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rheostat.mod.Algorithm
 import typingsSlinky.rheostat.mod.Orientation
+import typingsSlinky.rheostat.mod.Props
 import typingsSlinky.rheostat.mod.PublicState
 import typingsSlinky.rheostat.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Rheostat
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Rheostat {
   @JSImport("rheostat", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled */
-  def apply(
-    algorithm: Algorithm = null,
-    autoAdjustVerticalPosition: js.UndefOr[Boolean] = js.undefined,
-    background: ReactComponentClass[_] = null,
-    getNextHandlePosition: (/* handleIdx */ Double, /* percentPosition */ Double) => Double = null,
-    handle: ReactComponentClass[_] = null,
-    max: Int | Double = null,
-    min: Int | Double = null,
-    onChange: /* publicState */ PublicState => _ = null,
-    onClick: () => _ = null,
-    onKeyPress: () => _ = null,
-    onSliderDragEnd: () => _ = null,
-    onSliderDragMove: () => _ = null,
-    onSliderDragStart: () => _ = null,
-    onValuesUpdated: /* publicState */ PublicState => _ = null,
-    orientation: Orientation = null,
-    pitComponent: ReactComponentClass[_] = null,
-    pitPoints: js.Array[Double] = null,
-    progressBar: ReactComponentClass[_] = null,
-    snap: js.UndefOr[Boolean] = js.undefined,
-    snapPoints: js.Array[Double] = null,
-    values: js.Array[Double] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (algorithm != null) __obj.updateDynamic("algorithm")(algorithm.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoAdjustVerticalPosition)) __obj.updateDynamic("autoAdjustVerticalPosition")(autoAdjustVerticalPosition.asInstanceOf[js.Any])
-    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
-    if (getNextHandlePosition != null) __obj.updateDynamic("getNextHandlePosition")(js.Any.fromFunction2(getNextHandlePosition))
-    if (handle != null) __obj.updateDynamic("handle")(handle.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction0(onClick))
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction0(onKeyPress))
-    if (onSliderDragEnd != null) __obj.updateDynamic("onSliderDragEnd")(js.Any.fromFunction0(onSliderDragEnd))
-    if (onSliderDragMove != null) __obj.updateDynamic("onSliderDragMove")(js.Any.fromFunction0(onSliderDragMove))
-    if (onSliderDragStart != null) __obj.updateDynamic("onSliderDragStart")(js.Any.fromFunction0(onSliderDragStart))
-    if (onValuesUpdated != null) __obj.updateDynamic("onValuesUpdated")(js.Any.fromFunction1(onValuesUpdated))
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (pitComponent != null) __obj.updateDynamic("pitComponent")(pitComponent.asInstanceOf[js.Any])
-    if (pitPoints != null) __obj.updateDynamic("pitPoints")(pitPoints.asInstanceOf[js.Any])
-    if (progressBar != null) __obj.updateDynamic("progressBar")(progressBar.asInstanceOf[js.Any])
-    if (!js.isUndefined(snap)) __obj.updateDynamic("snap")(snap.asInstanceOf[js.Any])
-    if (snapPoints != null) __obj.updateDynamic("snapPoints")(snapPoints.asInstanceOf[js.Any])
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def algorithm(value: Algorithm): this.type = set("algorithm", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoAdjustVerticalPosition(value: Boolean): this.type = set("autoAdjustVerticalPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundFunctionComponent(value: ReactComponentClass[_]): this.type = set("background", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundComponentClass(value: ReactComponentClass[_]): this.type = set("background", value.asInstanceOf[js.Any])
+    @scala.inline
+    def background(value: ReactComponentClass[_]): this.type = set("background", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getNextHandlePosition(value: (/* handleIdx */ Double, /* percentPosition */ Double) => Double): this.type = set("getNextHandlePosition", js.Any.fromFunction2(value))
+    @scala.inline
+    def handleFunctionComponent(value: ReactComponentClass[_]): this.type = set("handle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handleComponentClass(value: ReactComponentClass[_]): this.type = set("handle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handle(value: ReactComponentClass[_]): this.type = set("handle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
+    @scala.inline
+    def min(value: Double): this.type = set("min", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* publicState */ PublicState => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClick(value: () => _): this.type = set("onClick", js.Any.fromFunction0(value))
+    @scala.inline
+    def onKeyPress(value: () => _): this.type = set("onKeyPress", js.Any.fromFunction0(value))
+    @scala.inline
+    def onSliderDragEnd(value: () => _): this.type = set("onSliderDragEnd", js.Any.fromFunction0(value))
+    @scala.inline
+    def onSliderDragMove(value: () => _): this.type = set("onSliderDragMove", js.Any.fromFunction0(value))
+    @scala.inline
+    def onSliderDragStart(value: () => _): this.type = set("onSliderDragStart", js.Any.fromFunction0(value))
+    @scala.inline
+    def onValuesUpdated(value: /* publicState */ PublicState => _): this.type = set("onValuesUpdated", js.Any.fromFunction1(value))
+    @scala.inline
+    def orientation(value: Orientation): this.type = set("orientation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pitComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("pitComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pitComponentComponentClass(value: ReactComponentClass[_]): this.type = set("pitComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pitComponent(value: ReactComponentClass[_]): this.type = set("pitComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pitPoints(value: js.Array[Double]): this.type = set("pitPoints", value.asInstanceOf[js.Any])
+    @scala.inline
+    def progressBarFunctionComponent(value: ReactComponentClass[_]): this.type = set("progressBar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def progressBarComponentClass(value: ReactComponentClass[_]): this.type = set("progressBar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def progressBar(value: ReactComponentClass[_]): this.type = set("progressBar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def snap(value: Boolean): this.type = set("snap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def snapPoints(value: js.Array[Double]): this.type = set("snapPoints", value.asInstanceOf[js.Any])
+    @scala.inline
+    def values(value: js.Array[Double]): this.type = set("values", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.rheostat.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = typingsSlinky.rheostat.mod.Props
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Rheostat.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

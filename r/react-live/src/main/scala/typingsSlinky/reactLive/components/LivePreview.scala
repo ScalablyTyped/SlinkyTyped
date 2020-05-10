@@ -1,15 +1,17 @@
 package typingsSlinky.reactLive.components
 
+import org.scalajs.dom.raw.HTMLDivElement
+import typingsSlinky.react.mod.HTMLProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LivePreview
-  extends SharedApply_DivProps_144271167[typingsSlinky.reactLive.mod.LivePreview] {
+object LivePreview {
   @JSImport("react-live", "LivePreview")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: HTMLProps[HTMLDivElement]): SharedBuilder_DivProps891316400[typingsSlinky.reactLive.mod.LivePreview] = new SharedBuilder_DivProps891316400[typingsSlinky.reactLive.mod.LivePreview](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: LivePreview.type): SharedBuilder_DivProps891316400[typingsSlinky.reactLive.mod.LivePreview] = new SharedBuilder_DivProps891316400[typingsSlinky.reactLive.mod.LivePreview](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -38,24 +38,101 @@ trait Artwork extends js.Object {
 
 object Artwork {
   @scala.inline
-  def apply(
-    AlbumArtFormat: JpgOrPng = null,
-    Encryption: Encryption = null,
-    InputKey: WatermarkKey = null,
-    MaxHeight: DigitsOrAuto = null,
-    MaxWidth: DigitsOrAuto = null,
-    PaddingPolicy: PaddingPolicy = null,
-    SizingPolicy: SizingPolicy = null
-  ): Artwork = {
+  def apply(): Artwork = {
     val __obj = js.Dynamic.literal()
-    if (AlbumArtFormat != null) __obj.updateDynamic("AlbumArtFormat")(AlbumArtFormat.asInstanceOf[js.Any])
-    if (Encryption != null) __obj.updateDynamic("Encryption")(Encryption.asInstanceOf[js.Any])
-    if (InputKey != null) __obj.updateDynamic("InputKey")(InputKey.asInstanceOf[js.Any])
-    if (MaxHeight != null) __obj.updateDynamic("MaxHeight")(MaxHeight.asInstanceOf[js.Any])
-    if (MaxWidth != null) __obj.updateDynamic("MaxWidth")(MaxWidth.asInstanceOf[js.Any])
-    if (PaddingPolicy != null) __obj.updateDynamic("PaddingPolicy")(PaddingPolicy.asInstanceOf[js.Any])
-    if (SizingPolicy != null) __obj.updateDynamic("SizingPolicy")(SizingPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[Artwork]
   }
+  @scala.inline
+  implicit class ArtworkOps[Self <: Artwork] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlbumArtFormat(value: JpgOrPng): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlbumArtFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlbumArtFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlbumArtFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryption(value: Encryption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputKey(value: WatermarkKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxHeight(value: DigitsOrAuto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxWidth(value: DigitsOrAuto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingPolicy(value: PaddingPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaddingPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaddingPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizingPolicy(value: SizingPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizingPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizingPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizingPolicy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

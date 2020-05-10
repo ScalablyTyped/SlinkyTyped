@@ -26,3 +26,67 @@ trait DescribeDeploymentsReques extends js.Object {
   var StackId: js.UndefOr[String] = js.native
 }
 
+object DescribeDeploymentsReques {
+  @scala.inline
+  def apply(): DescribeDeploymentsReques = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[DescribeDeploymentsReques]
+  }
+  @scala.inline
+  implicit class DescribeDeploymentsRequesOps[Self <: DescribeDeploymentsReques] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$waiter(value: WaiterConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$waiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AppId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AppId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeploymentIds(value: Strings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeploymentIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

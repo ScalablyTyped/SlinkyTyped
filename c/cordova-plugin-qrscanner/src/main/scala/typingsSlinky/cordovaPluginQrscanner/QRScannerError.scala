@@ -28,27 +28,53 @@ import scala.scalajs.js.annotation._
 *    7 | `LIGHT_UNAVAILABLE`         | The device light is unavailable because it doesn't exist or is otherwise unable to be configured.
 *    8 | `OPEN_SETTINGS_UNAVAILABLE` | The device is unable to open settings.
 */
+@js.native
 trait QRScannerError extends js.Object {
   /**
     * A simple message describing this QRScannerError.
     */
-  var _message: String
+  var _message: String = js.native
   /**
     * The standard number identifying the type of this QRScannerError.
     */
-  var code: Double
+  var code: Double = js.native
   /**
     * The standard string identifying the type of this QRScannerError.
     */
-  var name: String
+  var name: String = js.native
 }
 
 object QRScannerError {
   @scala.inline
   def apply(_message: String, code: Double, name: String): QRScannerError = {
     val __obj = js.Dynamic.literal(_message = _message.asInstanceOf[js.Any], code = code.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[QRScannerError]
   }
+  @scala.inline
+  implicit class QRScannerErrorOps[Self <: QRScannerError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_message(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

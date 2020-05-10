@@ -6,8 +6,5 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral")
 @js.native
-class SearchPaneSuggestionsRequestDeferral () extends ISearchPaneSuggestionsRequestDeferral {
-  /* CompleteClass */
-  override def complete(): Unit = js.native
-}
+class SearchPaneSuggestionsRequestDeferral () extends ISearchPaneSuggestionsRequestDeferral
 

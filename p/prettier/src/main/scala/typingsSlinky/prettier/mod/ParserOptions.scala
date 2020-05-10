@@ -20,10 +20,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ParserOptions extends RequiredOptions {
-  var originalText: String
-  def locEnd(node: js.Any): Double
-  def locStart(node: js.Any): Double
+  var originalText: String = js.native
+  def locEnd(node: js.Any): Double = js.native
+  def locStart(node: js.Any): Double = js.native
 }
 
 object ParserOptions {
@@ -43,7 +44,7 @@ object ParserOptions {
     parser: BuiltInParserName | CustomParser,
     plugins: js.Array[String | Plugin],
     printWidth: Double,
-    proseWrap: Boolean | always | never | preserve,
+    proseWrap: always | never | preserve,
     quoteProps: `as-needed` | consistent | preserve,
     rangeEnd: Double,
     rangeStart: Double,
@@ -56,8 +57,33 @@ object ParserOptions {
     vueIndentScriptAndStyle: Boolean
   ): ParserOptions = {
     val __obj = js.Dynamic.literal(arrowParens = arrowParens.asInstanceOf[js.Any], bracketSpacing = bracketSpacing.asInstanceOf[js.Any], endOfLine = endOfLine.asInstanceOf[js.Any], filepath = filepath.asInstanceOf[js.Any], htmlWhitespaceSensitivity = htmlWhitespaceSensitivity.asInstanceOf[js.Any], insertPragma = insertPragma.asInstanceOf[js.Any], jsxBracketSameLine = jsxBracketSameLine.asInstanceOf[js.Any], jsxSingleQuote = jsxSingleQuote.asInstanceOf[js.Any], locEnd = js.Any.fromFunction1(locEnd), locStart = js.Any.fromFunction1(locStart), originalText = originalText.asInstanceOf[js.Any], parser = parser.asInstanceOf[js.Any], plugins = plugins.asInstanceOf[js.Any], printWidth = printWidth.asInstanceOf[js.Any], proseWrap = proseWrap.asInstanceOf[js.Any], quoteProps = quoteProps.asInstanceOf[js.Any], rangeEnd = rangeEnd.asInstanceOf[js.Any], rangeStart = rangeStart.asInstanceOf[js.Any], requirePragma = requirePragma.asInstanceOf[js.Any], semi = semi.asInstanceOf[js.Any], singleQuote = singleQuote.asInstanceOf[js.Any], tabWidth = tabWidth.asInstanceOf[js.Any], trailingComma = trailingComma.asInstanceOf[js.Any], useTabs = useTabs.asInstanceOf[js.Any], vueIndentScriptAndStyle = vueIndentScriptAndStyle.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ParserOptions]
   }
+  @scala.inline
+  implicit class ParserOptionsOps[Self <: ParserOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocEnd(value: js.Any => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLocStart(value: js.Any => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOriginalText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalText")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

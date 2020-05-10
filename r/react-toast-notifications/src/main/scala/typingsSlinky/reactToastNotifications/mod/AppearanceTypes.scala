@@ -14,14 +14,12 @@ trait AppearanceTypes extends js.Object
 
 object AppearanceTypes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.error = "error".asInstanceOf[typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.error]
   @scala.inline
-  def error: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.error = this.cast("error")
+  def info: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.info = "info".asInstanceOf[typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.info]
   @scala.inline
-  def info: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.info = this.cast("info")
+  def success: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.success = "success".asInstanceOf[typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.success]
   @scala.inline
-  def success: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.success = this.cast("success")
-  @scala.inline
-  def warning: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.warning = this.cast("warning")
+  def warning: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.warning = "warning".asInstanceOf[typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.warning]
 }
 

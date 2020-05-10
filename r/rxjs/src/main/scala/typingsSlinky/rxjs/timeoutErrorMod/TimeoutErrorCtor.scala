@@ -6,5 +6,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TimeoutErrorCtor extends Instantiable0[TimeoutError]
+trait TimeoutErrorCtor
+  extends Instantiable0[js.Error]
 

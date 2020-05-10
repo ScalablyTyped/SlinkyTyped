@@ -17,20 +17,18 @@ trait DayOfWeek extends js.Object
 
 object DayOfWeek {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def friday: typingsSlinky.microsoftGraph.microsoftGraphStrings.friday = "friday".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.friday]
   @scala.inline
-  def friday: typingsSlinky.microsoftGraph.microsoftGraphStrings.friday = this.cast("friday")
+  def monday: typingsSlinky.microsoftGraph.microsoftGraphStrings.monday = "monday".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.monday]
   @scala.inline
-  def monday: typingsSlinky.microsoftGraph.microsoftGraphStrings.monday = this.cast("monday")
+  def saturday: typingsSlinky.microsoftGraph.microsoftGraphStrings.saturday = "saturday".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.saturday]
   @scala.inline
-  def saturday: typingsSlinky.microsoftGraph.microsoftGraphStrings.saturday = this.cast("saturday")
+  def sunday: typingsSlinky.microsoftGraph.microsoftGraphStrings.sunday = "sunday".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.sunday]
   @scala.inline
-  def sunday: typingsSlinky.microsoftGraph.microsoftGraphStrings.sunday = this.cast("sunday")
+  def thursday: typingsSlinky.microsoftGraph.microsoftGraphStrings.thursday = "thursday".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.thursday]
   @scala.inline
-  def thursday: typingsSlinky.microsoftGraph.microsoftGraphStrings.thursday = this.cast("thursday")
+  def tuesday: typingsSlinky.microsoftGraph.microsoftGraphStrings.tuesday = "tuesday".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.tuesday]
   @scala.inline
-  def tuesday: typingsSlinky.microsoftGraph.microsoftGraphStrings.tuesday = this.cast("tuesday")
-  @scala.inline
-  def wednesday: typingsSlinky.microsoftGraph.microsoftGraphStrings.wednesday = this.cast("wednesday")
+  def wednesday: typingsSlinky.microsoftGraph.microsoftGraphStrings.wednesday = "wednesday".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.wednesday]
 }
 

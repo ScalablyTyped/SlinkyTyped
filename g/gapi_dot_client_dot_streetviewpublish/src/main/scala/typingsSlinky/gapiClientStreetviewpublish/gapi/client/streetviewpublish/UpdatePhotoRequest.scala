@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UpdatePhotoRequest extends js.Object {
   /**
     * Required. Photo object containing the
     * new metadata.
     */
-  var photo: js.UndefOr[Photo] = js.undefined
+  var photo: js.UndefOr[Photo] = js.native
   /**
     * Mask that identifies fields on the photo metadata to update.
     * If not present, the old Photo
@@ -38,16 +39,46 @@ trait UpdatePhotoRequest extends js.Object {
     * contains `connections` and `UpdatePhotoRequest.photo.connections` is empty,
     * all connections will be removed.</aside>
     */
-  var updateMask: js.UndefOr[String] = js.undefined
+  var updateMask: js.UndefOr[String] = js.native
 }
 
 object UpdatePhotoRequest {
   @scala.inline
-  def apply(photo: Photo = null, updateMask: String = null): UpdatePhotoRequest = {
+  def apply(): UpdatePhotoRequest = {
     val __obj = js.Dynamic.literal()
-    if (photo != null) __obj.updateDynamic("photo")(photo.asInstanceOf[js.Any])
-    if (updateMask != null) __obj.updateDynamic("updateMask")(updateMask.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdatePhotoRequest]
   }
+  @scala.inline
+  implicit class UpdatePhotoRequestOps[Self <: UpdatePhotoRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPhoto(value: Photo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("photo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhoto: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("photo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateMask(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateMask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

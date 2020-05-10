@@ -4,13 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IMacAlgorithmNamesStatics extends js.Object {
-  var aesCmac: String
-  var hmacMd5: String
-  var hmacSha1: String
-  var hmacSha256: String
-  var hmacSha384: String
-  var hmacSha512: String
+  var aesCmac: String = js.native
+  var hmacMd5: String = js.native
+  var hmacSha1: String = js.native
+  var hmacSha256: String = js.native
+  var hmacSha384: String = js.native
+  var hmacSha512: String = js.native
 }
 
 object IMacAlgorithmNamesStatics {
@@ -24,8 +25,51 @@ object IMacAlgorithmNamesStatics {
     hmacSha512: String
   ): IMacAlgorithmNamesStatics = {
     val __obj = js.Dynamic.literal(aesCmac = aesCmac.asInstanceOf[js.Any], hmacMd5 = hmacMd5.asInstanceOf[js.Any], hmacSha1 = hmacSha1.asInstanceOf[js.Any], hmacSha256 = hmacSha256.asInstanceOf[js.Any], hmacSha384 = hmacSha384.asInstanceOf[js.Any], hmacSha512 = hmacSha512.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IMacAlgorithmNamesStatics]
   }
+  @scala.inline
+  implicit class IMacAlgorithmNamesStaticsOps[Self <: IMacAlgorithmNamesStatics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAesCmac(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aesCmac")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHmacMd5(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hmacMd5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHmacSha1(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hmacSha1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHmacSha256(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hmacSha256")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHmacSha384(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hmacSha384")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHmacSha512(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hmacSha512")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

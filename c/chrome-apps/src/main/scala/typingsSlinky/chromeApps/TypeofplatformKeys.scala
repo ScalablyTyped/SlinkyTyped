@@ -1,7 +1,6 @@
 package typingsSlinky.chromeApps
 
 import typingsSlinky.chromeApps.chrome.enterprise.platformKeys.Token
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,8 +27,8 @@ trait TypeofplatformKeys extends js.Object {
     * @param callback Called back with the challenge response.
     */
   def challengeMachineKey(
-    challenge: scala.scalajs.js.typedarray.ArrayBuffer,
-    callback: js.Function1[/* response */ ArrayBuffer, Unit]
+    challenge: js.typedarray.ArrayBuffer,
+    callback: js.Function1[/* response */ js.typedarray.ArrayBuffer, Unit]
   ): Unit = js.native
   /**
     * @since **Since Chrome 59.** - Note: the parameter 'registerKey' requires at least Chrome 59
@@ -54,9 +53,9 @@ trait TypeofplatformKeys extends js.Object {
     * @param callback Called back with the challenge response.
     */
   def challengeMachineKey(
-    challenge: scala.scalajs.js.typedarray.ArrayBuffer,
+    challenge: js.typedarray.ArrayBuffer,
     registerKey: Boolean,
-    callback: js.Function1[/* response */ scala.scalajs.js.typedarray.ArrayBuffer, Unit]
+    callback: js.Function1[/* response */ js.typedarray.ArrayBuffer, Unit]
   ): Unit = js.native
   /**
     * @since Chrome 50.
@@ -79,9 +78,9 @@ trait TypeofplatformKeys extends js.Object {
     * @param callback Called back with the challenge response.
     */
   def challengeUserKey(
-    challenge: scala.scalajs.js.typedarray.ArrayBuffer,
+    challenge: js.typedarray.ArrayBuffer,
     registerKey: Boolean,
-    callback: js.Function1[/* response */ scala.scalajs.js.typedarray.ArrayBuffer, Unit]
+    callback: js.Function1[/* response */ js.typedarray.ArrayBuffer, Unit]
   ): Unit = js.native
   /**
     * Returns the list of all client certificates available from the given token.
@@ -91,7 +90,7 @@ trait TypeofplatformKeys extends js.Object {
     */
   def getCertificates(
     tokenId: String,
-    callback: js.Function1[/* certificates */ js.Array[scala.scalajs.js.typedarray.ArrayBuffer], Unit]
+    callback: js.Function1[/* certificates */ js.Array[js.typedarray.ArrayBuffer], Unit]
   ): Unit = js.native
   /**
     * Returns the available Tokens.
@@ -109,11 +108,7 @@ trait TypeofplatformKeys extends js.Object {
     * @param certificate The DER encoding of a X.509 certificate.
     * @param [callback] Called back when this operation is finished.
     */
-  def importCertificate(
-    tokenId: String,
-    certificate: scala.scalajs.js.typedarray.ArrayBuffer,
-    callback: js.Function0[Unit]
-  ): Unit = js.native
+  def importCertificate(tokenId: String, certificate: js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
   /**
     * Removes certificate from the given token if present.
     * Should be used to remove obsolete certificates so that they are not
@@ -123,10 +118,6 @@ trait TypeofplatformKeys extends js.Object {
     * @param certificate The DER encoding of a X.509 certificate.
     * @param [callback] Called back when this operation is finished.
     */
-  def removeCertificate(
-    tokenId: String,
-    certificate: scala.scalajs.js.typedarray.ArrayBuffer,
-    callback: js.Function0[Unit]
-  ): Unit = js.native
+  def removeCertificate(tokenId: String, certificate: js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
 }
 

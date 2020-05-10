@@ -11,10 +11,29 @@ trait ModifyGlobalClusterResult extends js.Object {
 
 object ModifyGlobalClusterResult {
   @scala.inline
-  def apply(GlobalCluster: GlobalCluster = null): ModifyGlobalClusterResult = {
+  def apply(): ModifyGlobalClusterResult = {
     val __obj = js.Dynamic.literal()
-    if (GlobalCluster != null) __obj.updateDynamic("GlobalCluster")(GlobalCluster.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyGlobalClusterResult]
   }
+  @scala.inline
+  implicit class ModifyGlobalClusterResultOps[Self <: ModifyGlobalClusterResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGlobalCluster(value: GlobalCluster): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalCluster")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalCluster: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalCluster")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.tstl.tstlMod
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.tstl.IteratoranyanyanyanyEquals
+import typingsSlinky.tstl.Iteratoranyanyanyany
 import typingsSlinky.tstl.comparatorMod.Comparator
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import typingsSlinky.tstl.ipairMod.IPair
@@ -65,7 +65,7 @@ object TreeMultiMap extends js.Object {
         /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
-        IteratoranyanyanyanyEquals, 
+        Iteratoranyanyanyany, 
         typingsSlinky.tstl.mapElementListMod.MapElementList.ReverseIterator[
           /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
           /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
@@ -85,7 +85,7 @@ object TreeMultiMap extends js.Object {
         /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
-        IteratoranyanyanyanyEquals, 
+        Iteratoranyanyanyany, 
         typingsSlinky.tstl.mapElementListMod.MapElementList.ReverseIterator[
           /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
           /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 

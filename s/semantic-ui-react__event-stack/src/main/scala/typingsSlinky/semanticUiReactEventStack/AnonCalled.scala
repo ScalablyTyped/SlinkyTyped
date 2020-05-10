@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCalled extends js.Object {
-  var called: js.UndefOr[Boolean] = js.undefined
+  var called: js.UndefOr[Boolean] = js.native
 }
 
 object AnonCalled {
   @scala.inline
-  def apply(called: js.UndefOr[Boolean] = js.undefined): AnonCalled = {
+  def apply(): AnonCalled = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(called)) __obj.updateDynamic("called")(called.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCalled]
   }
+  @scala.inline
+  implicit class AnonCalledOps[Self <: AnonCalled] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCalled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("called")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCalled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("called")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -74,7 +74,7 @@ import scala.scalajs.js.annotation._
 /* Inlined parent std.Pick<react.react.HTMLAttributes<std.HTMLElement>, std.Exclude<keyof react.react.HTMLAttributes<std.HTMLElement>, 'onBlur'>> */
 @js.native
 trait FieldProps[T]
-  extends /* prop */ StringDictionary[js.Any] {
+  extends /* name */ StringDictionary[js.Any] {
   var about: js.UndefOr[String] = js.native
   var accessKey: js.UndefOr[String] = js.native
   var `aria-activedescendant`: js.UndefOr[String] = js.native

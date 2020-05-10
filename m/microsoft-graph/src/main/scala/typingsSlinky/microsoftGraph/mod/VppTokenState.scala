@@ -16,16 +16,14 @@ trait VppTokenState extends js.Object
 
 object VppTokenState {
   @scala.inline
-  def assignedToExternalMDM: typingsSlinky.microsoftGraph.microsoftGraphStrings.assignedToExternalMDM = this.cast("assignedToExternalMDM")
+  def assignedToExternalMDM: typingsSlinky.microsoftGraph.microsoftGraphStrings.assignedToExternalMDM = "assignedToExternalMDM".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.assignedToExternalMDM]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def expired: typingsSlinky.microsoftGraph.microsoftGraphStrings.expired = "expired".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.expired]
   @scala.inline
-  def expired: typingsSlinky.microsoftGraph.microsoftGraphStrings.expired = this.cast("expired")
+  def invalid: typingsSlinky.microsoftGraph.microsoftGraphStrings.invalid = "invalid".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.invalid]
   @scala.inline
-  def invalid: typingsSlinky.microsoftGraph.microsoftGraphStrings.invalid = this.cast("invalid")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
   @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
-  @scala.inline
-  def valid: typingsSlinky.microsoftGraph.microsoftGraphStrings.valid = this.cast("valid")
+  def valid: typingsSlinky.microsoftGraph.microsoftGraphStrings.valid = "valid".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.valid]
 }
 

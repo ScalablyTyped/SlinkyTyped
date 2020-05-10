@@ -20,26 +20,24 @@ trait UpdateReason extends js.Object
 
 object UpdateReason {
   @scala.inline
-  def attributes: typingsSlinky.twilioChat.twilioChatStrings.attributes = this.cast("attributes")
+  def attributes: typingsSlinky.twilioChat.twilioChatStrings.attributes = "attributes".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.attributes]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def createdBy: typingsSlinky.twilioChat.twilioChatStrings.createdBy = "createdBy".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.createdBy]
   @scala.inline
-  def createdBy: typingsSlinky.twilioChat.twilioChatStrings.createdBy = this.cast("createdBy")
+  def dateCreated: typingsSlinky.twilioChat.twilioChatStrings.dateCreated = "dateCreated".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.dateCreated]
   @scala.inline
-  def dateCreated: typingsSlinky.twilioChat.twilioChatStrings.dateCreated = this.cast("dateCreated")
+  def dateUpdated: typingsSlinky.twilioChat.twilioChatStrings.dateUpdated = "dateUpdated".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.dateUpdated]
   @scala.inline
-  def dateUpdated: typingsSlinky.twilioChat.twilioChatStrings.dateUpdated = this.cast("dateUpdated")
+  def friendlyName: typingsSlinky.twilioChat.twilioChatStrings.friendlyName = "friendlyName".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.friendlyName]
   @scala.inline
-  def friendlyName: typingsSlinky.twilioChat.twilioChatStrings.friendlyName = this.cast("friendlyName")
+  def lastConsumedMessageIndex: typingsSlinky.twilioChat.twilioChatStrings.lastConsumedMessageIndex = "lastConsumedMessageIndex".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.lastConsumedMessageIndex]
   @scala.inline
-  def lastConsumedMessageIndex: typingsSlinky.twilioChat.twilioChatStrings.lastConsumedMessageIndex = this.cast("lastConsumedMessageIndex")
+  def lastMessage: typingsSlinky.twilioChat.twilioChatStrings.lastMessage = "lastMessage".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.lastMessage]
   @scala.inline
-  def lastMessage: typingsSlinky.twilioChat.twilioChatStrings.lastMessage = this.cast("lastMessage")
+  def notificationLevel: typingsSlinky.twilioChat.twilioChatStrings.notificationLevel = "notificationLevel".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.notificationLevel]
   @scala.inline
-  def notificationLevel: typingsSlinky.twilioChat.twilioChatStrings.notificationLevel = this.cast("notificationLevel")
+  def status: typingsSlinky.twilioChat.twilioChatStrings.status = "status".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.status]
   @scala.inline
-  def status: typingsSlinky.twilioChat.twilioChatStrings.status = this.cast("status")
-  @scala.inline
-  def uniqueName: typingsSlinky.twilioChat.twilioChatStrings.uniqueName = this.cast("uniqueName")
+  def uniqueName: typingsSlinky.twilioChat.twilioChatStrings.uniqueName = "uniqueName".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.uniqueName]
 }
 

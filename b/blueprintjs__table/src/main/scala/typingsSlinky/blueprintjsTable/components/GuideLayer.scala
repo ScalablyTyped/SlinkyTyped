@@ -1,35 +1,30 @@
 package typingsSlinky.blueprintjsTable.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsTable.guidesMod.IGuideLayerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GuideLayer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsTable.guidesMod.GuideLayer] {
+object GuideLayer {
   @JSImport("@blueprintjs/table/lib/esm/layers/guides", "GuideLayer")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    horizontalGuides: js.Array[Double] = null,
-    verticalGuides: js.Array[Double] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsTable.guidesMod.GuideLayer] = {
-    val __obj = js.Dynamic.literal()
-    if (horizontalGuides != null) __obj.updateDynamic("horizontalGuides")(horizontalGuides.asInstanceOf[js.Any])
-    if (verticalGuides != null) __obj.updateDynamic("verticalGuides")(verticalGuides.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsTable.guidesMod.GuideLayer] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def horizontalGuides(value: js.Array[Double]): this.type = set("horizontalGuides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalGuides(value: js.Array[Double]): this.type = set("verticalGuides", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.blueprintjsTable.guidesMod.GuideLayer] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.blueprintjsTable.guidesMod.GuideLayer](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IGuideLayerProps
+  
+  def withProps(p: IGuideLayerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: GuideLayer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/orientation.html](http://www.html5plus.org/doc/zh_cn/orientation.html)
   */
+@js.native
 trait PlusOrientationOrientationOption extends js.Object {
   /**
     * 更新方向信息的时间间隔
@@ -16,15 +17,34 @@ trait PlusOrientationOrientationOption extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/orientation.html](http://www.html5plus.org/doc/zh_cn/orientation.html)
     */
-  var frequency: js.UndefOr[Double] = js.undefined
+  var frequency: js.UndefOr[Double] = js.native
 }
 
 object PlusOrientationOrientationOption {
   @scala.inline
-  def apply(frequency: Int | Double = null): PlusOrientationOrientationOption = {
+  def apply(): PlusOrientationOrientationOption = {
     val __obj = js.Dynamic.literal()
-    if (frequency != null) __obj.updateDynamic("frequency")(frequency.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusOrientationOrientationOption]
   }
+  @scala.inline
+  implicit class PlusOrientationOrientationOptionOps[Self <: PlusOrientationOrientationOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFrequency(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrequency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

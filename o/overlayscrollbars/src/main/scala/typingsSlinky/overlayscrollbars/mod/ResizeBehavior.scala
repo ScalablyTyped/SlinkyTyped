@@ -18,22 +18,20 @@ trait ResizeBehavior extends js.Object
 
 object ResizeBehavior {
   @scala.inline
-  def b: typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.b = this.cast("b")
+  def b: typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.b = "b".asInstanceOf[typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.b]
   @scala.inline
-  def both: typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.both = this.cast("both")
+  def both: typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.both = "both".asInstanceOf[typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.both]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def h: typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.h = "h".asInstanceOf[typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.h]
   @scala.inline
-  def h: typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.h = this.cast("h")
+  def horizontal: typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.horizontal = this.cast("horizontal")
+  def n: typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.n = "n".asInstanceOf[typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.n]
   @scala.inline
-  def n: typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.n = this.cast("n")
+  def none: typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.none = "none".asInstanceOf[typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.none]
   @scala.inline
-  def none: typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.none = this.cast("none")
+  def v: typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.v = "v".asInstanceOf[typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.v]
   @scala.inline
-  def v: typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.v = this.cast("v")
-  @scala.inline
-  def vertical: typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.vertical = "vertical".asInstanceOf[typingsSlinky.overlayscrollbars.overlayscrollbarsStrings.vertical]
 }
 

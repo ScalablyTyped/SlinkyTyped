@@ -43,24 +43,101 @@ trait SchemaExecutionStageSummary extends js.Object {
 
 object SchemaExecutionStageSummary {
   @scala.inline
-  def apply(
-    componentSource: js.Array[SchemaComponentSource] = null,
-    componentTransform: js.Array[SchemaComponentTransform] = null,
-    id: String = null,
-    inputSource: js.Array[SchemaStageSource] = null,
-    kind: String = null,
-    name: String = null,
-    outputSource: js.Array[SchemaStageSource] = null
-  ): SchemaExecutionStageSummary = {
+  def apply(): SchemaExecutionStageSummary = {
     val __obj = js.Dynamic.literal()
-    if (componentSource != null) __obj.updateDynamic("componentSource")(componentSource.asInstanceOf[js.Any])
-    if (componentTransform != null) __obj.updateDynamic("componentTransform")(componentTransform.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (inputSource != null) __obj.updateDynamic("inputSource")(inputSource.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (outputSource != null) __obj.updateDynamic("outputSource")(outputSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExecutionStageSummary]
   }
+  @scala.inline
+  implicit class SchemaExecutionStageSummaryOps[Self <: SchemaExecutionStageSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComponentSource(value: js.Array[SchemaComponentSource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponentSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponentTransform(value: js.Array[SchemaComponentTransform]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentTransform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponentTransform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentTransform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputSource(value: js.Array[SchemaStageSource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputSource(value: js.Array[SchemaStageSource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputSource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

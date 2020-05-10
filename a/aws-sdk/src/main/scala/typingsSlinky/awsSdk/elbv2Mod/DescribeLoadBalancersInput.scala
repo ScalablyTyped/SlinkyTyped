@@ -26,18 +26,65 @@ trait DescribeLoadBalancersInput extends js.Object {
 
 object DescribeLoadBalancersInput {
   @scala.inline
-  def apply(
-    LoadBalancerArns: LoadBalancerArns = null,
-    Marker: Marker = null,
-    Names: LoadBalancerNames = null,
-    PageSize: Int | Double = null
-  ): DescribeLoadBalancersInput = {
+  def apply(): DescribeLoadBalancersInput = {
     val __obj = js.Dynamic.literal()
-    if (LoadBalancerArns != null) __obj.updateDynamic("LoadBalancerArns")(LoadBalancerArns.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (Names != null) __obj.updateDynamic("Names")(Names.asInstanceOf[js.Any])
-    if (PageSize != null) __obj.updateDynamic("PageSize")(PageSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLoadBalancersInput]
   }
+  @scala.inline
+  implicit class DescribeLoadBalancersInputOps[Self <: DescribeLoadBalancersInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLoadBalancerArns(value: LoadBalancerArns): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadBalancerArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerArns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: Marker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNames(value: LoadBalancerNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Names")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Names")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageSize(value: PageSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

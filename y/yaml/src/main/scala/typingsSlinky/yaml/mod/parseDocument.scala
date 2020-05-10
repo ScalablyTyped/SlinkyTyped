@@ -1,5 +1,6 @@
 package typingsSlinky.yaml.mod
 
+import typingsSlinky.yaml.mod.Document.Parsed
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("yaml", "parseDocument")
 @js.native
 object parseDocument extends js.Object {
-  def apply(str: String): typingsSlinky.yaml.mod.ast.Document = js.native
-  def apply(str: String, options: ParseOptions): typingsSlinky.yaml.mod.ast.Document = js.native
+  def apply(str: String): Parsed = js.native
+  def apply(str: String, options: Options): Parsed = js.native
 }
 

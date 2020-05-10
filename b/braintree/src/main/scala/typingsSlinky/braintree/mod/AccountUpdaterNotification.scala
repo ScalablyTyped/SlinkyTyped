@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AccountUpdaterNotification
   extends BaseWebhookNotification
      with WebhookNotification {
-  var accountUpdaterDailyReport: AccountUpdaterDailyReport
+  var accountUpdaterDailyReport: AccountUpdaterDailyReport = js.native
   @JSName("kind")
-  var kind_AccountUpdaterNotification: AccountUpdaterNotificationKind
+  var kind_AccountUpdaterNotification: AccountUpdaterNotificationKind = js.native
 }
 
 object AccountUpdaterNotification {
@@ -20,8 +21,27 @@ object AccountUpdaterNotification {
     timestamp: js.Date
   ): AccountUpdaterNotification = {
     val __obj = js.Dynamic.literal(accountUpdaterDailyReport = accountUpdaterDailyReport.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AccountUpdaterNotification]
   }
+  @scala.inline
+  implicit class AccountUpdaterNotificationOps[Self <: AccountUpdaterNotification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountUpdaterDailyReport(value: AccountUpdaterDailyReport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountUpdaterDailyReport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: AccountUpdaterNotificationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

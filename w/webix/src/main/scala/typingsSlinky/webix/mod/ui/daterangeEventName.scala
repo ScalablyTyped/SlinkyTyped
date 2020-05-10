@@ -18,22 +18,20 @@ trait daterangeEventName extends js.Object
 
 object daterangeEventName {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def onAfterDateSelect: typingsSlinky.webix.webixStrings.onAfterDateSelect = "onAfterDateSelect".asInstanceOf[typingsSlinky.webix.webixStrings.onAfterDateSelect]
   @scala.inline
-  def onAfterDateSelect: typingsSlinky.webix.webixStrings.onAfterDateSelect = this.cast("onAfterDateSelect")
+  def onBeforeDateSelect: typingsSlinky.webix.webixStrings.onBeforeDateSelect = "onBeforeDateSelect".asInstanceOf[typingsSlinky.webix.webixStrings.onBeforeDateSelect]
   @scala.inline
-  def onBeforeDateSelect: typingsSlinky.webix.webixStrings.onBeforeDateSelect = this.cast("onBeforeDateSelect")
+  def onBindRequest: typingsSlinky.webix.webixStrings.onBindRequest = "onBindRequest".asInstanceOf[typingsSlinky.webix.webixStrings.onBindRequest]
   @scala.inline
-  def onBindRequest: typingsSlinky.webix.webixStrings.onBindRequest = this.cast("onBindRequest")
+  def onChange: typingsSlinky.webix.webixStrings.onChange = "onChange".asInstanceOf[typingsSlinky.webix.webixStrings.onChange]
   @scala.inline
-  def onChange: typingsSlinky.webix.webixStrings.onChange = this.cast("onChange")
+  def onDateClear: typingsSlinky.webix.webixStrings.onDateClear = "onDateClear".asInstanceOf[typingsSlinky.webix.webixStrings.onDateClear]
   @scala.inline
-  def onDateClear: typingsSlinky.webix.webixStrings.onDateClear = this.cast("onDateClear")
+  def onDestruct: typingsSlinky.webix.webixStrings.onDestruct = "onDestruct".asInstanceOf[typingsSlinky.webix.webixStrings.onDestruct]
   @scala.inline
-  def onDestruct: typingsSlinky.webix.webixStrings.onDestruct = this.cast("onDestruct")
+  def onTodaySet: typingsSlinky.webix.webixStrings.onTodaySet = "onTodaySet".asInstanceOf[typingsSlinky.webix.webixStrings.onTodaySet]
   @scala.inline
-  def onTodaySet: typingsSlinky.webix.webixStrings.onTodaySet = this.cast("onTodaySet")
-  @scala.inline
-  def onViewShow: typingsSlinky.webix.webixStrings.onViewShow = this.cast("onViewShow")
+  def onViewShow: typingsSlinky.webix.webixStrings.onViewShow = "onViewShow".asInstanceOf[typingsSlinky.webix.webixStrings.onViewShow]
 }
 

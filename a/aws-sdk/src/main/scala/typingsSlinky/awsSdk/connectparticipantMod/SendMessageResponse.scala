@@ -18,11 +18,41 @@ trait SendMessageResponse extends js.Object {
 
 object SendMessageResponse {
   @scala.inline
-  def apply(AbsoluteTime: Instant = null, Id: ChatItemId = null): SendMessageResponse = {
+  def apply(): SendMessageResponse = {
     val __obj = js.Dynamic.literal()
-    if (AbsoluteTime != null) __obj.updateDynamic("AbsoluteTime")(AbsoluteTime.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendMessageResponse]
   }
+  @scala.inline
+  implicit class SendMessageResponseOps[Self <: SendMessageResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAbsoluteTime(value: Instant): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AbsoluteTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbsoluteTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AbsoluteTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: ChatItemId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

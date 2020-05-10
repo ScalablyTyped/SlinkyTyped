@@ -1,8 +1,8 @@
 package typingsSlinky.angularDesktopNotification.mod.angularAugmentingMod.desktopNotification
 
+import org.scalajs.dom.experimental.NotificationOptions
 import typingsSlinky.angular.mod.IPromise
 import typingsSlinky.angularDesktopNotification.AnonDefault
-import typingsSlinky.std.NotificationOptions
 import typingsSlinky.std.NotificationPermission
 import scala.scalajs.js
 import scala.scalajs.js.`|`

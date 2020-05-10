@@ -18,11 +18,41 @@ trait SecretsManagerSecretResourceData extends js.Object {
 
 object SecretsManagerSecretResourceData {
   @scala.inline
-  def apply(ARN: string = null, AdditionalStagingLabelsToDownload: listOfString = null): SecretsManagerSecretResourceData = {
+  def apply(): SecretsManagerSecretResourceData = {
     val __obj = js.Dynamic.literal()
-    if (ARN != null) __obj.updateDynamic("ARN")(ARN.asInstanceOf[js.Any])
-    if (AdditionalStagingLabelsToDownload != null) __obj.updateDynamic("AdditionalStagingLabelsToDownload")(AdditionalStagingLabelsToDownload.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecretsManagerSecretResourceData]
   }
+  @scala.inline
+  implicit class SecretsManagerSecretResourceDataOps[Self <: SecretsManagerSecretResourceData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withARN(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdditionalStagingLabelsToDownload(value: listOfString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalStagingLabelsToDownload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalStagingLabelsToDownload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalStagingLabelsToDownload")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

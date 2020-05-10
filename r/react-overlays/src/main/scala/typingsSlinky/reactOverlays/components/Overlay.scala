@@ -1,12 +1,12 @@
 package typingsSlinky.reactOverlays.components
 
-import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactInstance
 import typingsSlinky.reactOverlays.overlayMod.OverlayProps
 import typingsSlinky.reactOverlays.overlayMod.Placements
@@ -18,57 +18,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Overlay
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactOverlays.mod.Overlay] {
+object Overlay {
   @JSImport("react-overlays", "Overlay")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    container: TagMod[Any] | js.Function = null,
-    flip: js.UndefOr[Boolean] = js.undefined,
-    onEnter: /* node */ HTMLElement => _ = null,
-    onEntered: /* node */ HTMLElement => _ = null,
-    onEntering: /* node */ HTMLElement => _ = null,
-    onExit: /* node */ HTMLElement => _ = null,
-    onExited: /* node */ HTMLElement => _ = null,
-    onExiting: /* node */ HTMLElement => _ = null,
-    onHide: (/* props */ PortalProps, /* repeated */ js.Any) => _ = null,
-    onRendered: js.Function = null,
-    placement: Placements = null,
-    popperConfig: js.Object = null,
-    rootClose: js.UndefOr[Boolean] = js.undefined,
-    rootCloseDisabled: js.UndefOr[Boolean] = js.undefined,
-    rootCloseEvent: click | mousedown = null,
-    show: js.UndefOr[Boolean] = js.undefined,
-    target: ReactInstance | js.Function0[ReactInstance] = null,
-    transition: ReactComponentClass[TransitionProps] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactOverlays.mod.Overlay] = {
-    val __obj = js.Dynamic.literal()
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (!js.isUndefined(flip)) __obj.updateDynamic("flip")(flip.asInstanceOf[js.Any])
-    if (onEnter != null) __obj.updateDynamic("onEnter")(js.Any.fromFunction1(onEnter))
-    if (onEntered != null) __obj.updateDynamic("onEntered")(js.Any.fromFunction1(onEntered))
-    if (onEntering != null) __obj.updateDynamic("onEntering")(js.Any.fromFunction1(onEntering))
-    if (onExit != null) __obj.updateDynamic("onExit")(js.Any.fromFunction1(onExit))
-    if (onExited != null) __obj.updateDynamic("onExited")(js.Any.fromFunction1(onExited))
-    if (onExiting != null) __obj.updateDynamic("onExiting")(js.Any.fromFunction1(onExiting))
-    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction2(onHide))
-    if (onRendered != null) __obj.updateDynamic("onRendered")(onRendered.asInstanceOf[js.Any])
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (popperConfig != null) __obj.updateDynamic("popperConfig")(popperConfig.asInstanceOf[js.Any])
-    if (!js.isUndefined(rootClose)) __obj.updateDynamic("rootClose")(rootClose.asInstanceOf[js.Any])
-    if (!js.isUndefined(rootCloseDisabled)) __obj.updateDynamic("rootCloseDisabled")(rootCloseDisabled.asInstanceOf[js.Any])
-    if (rootCloseEvent != null) __obj.updateDynamic("rootCloseEvent")(rootCloseEvent.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactOverlays.mod.Overlay] {
+    @scala.inline
+    def containerReactElement(value: ReactElement): this.type = set("container", value.asInstanceOf[js.Any])
+    @scala.inline
+    def container(value: TagMod[Any] | js.Function): this.type = set("container", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flip(value: Boolean): this.type = set("flip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onEnter(value: /* node */ HTMLElement => _): this.type = set("onEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEntered(value: /* node */ HTMLElement => _): this.type = set("onEntered", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEntering(value: /* node */ HTMLElement => _): this.type = set("onEntering", js.Any.fromFunction1(value))
+    @scala.inline
+    def onExit(value: /* node */ HTMLElement => _): this.type = set("onExit", js.Any.fromFunction1(value))
+    @scala.inline
+    def onExited(value: /* node */ HTMLElement => _): this.type = set("onExited", js.Any.fromFunction1(value))
+    @scala.inline
+    def onExiting(value: /* node */ HTMLElement => _): this.type = set("onExiting", js.Any.fromFunction1(value))
+    @scala.inline
+    def onHide(value: (/* props */ PortalProps, /* repeated */ js.Any) => _): this.type = set("onHide", js.Any.fromFunction2(value))
+    @scala.inline
+    def onRendered(value: js.Function): this.type = set("onRendered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placement(value: Placements): this.type = set("placement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popperConfig(value: js.Object): this.type = set("popperConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rootClose(value: Boolean): this.type = set("rootClose", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rootCloseDisabled(value: Boolean): this.type = set("rootCloseDisabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rootCloseEvent(value: click | mousedown): this.type = set("rootCloseEvent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def show(value: Boolean): this.type = set("show", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetElement(value: Element): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetFunction0(value: () => ReactInstance): this.type = set("target", js.Any.fromFunction0(value))
+    @scala.inline
+    def targetComponent(value: ReactComponentClass[js.Any]): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def target(value: ReactInstance | js.Function0[ReactInstance]): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionFunctionComponent(value: ReactComponentClass[TransitionProps]): this.type = set("transition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionComponentClass(value: ReactComponentClass[TransitionProps]): this.type = set("transition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transition(value: ReactComponentClass[TransitionProps]): this.type = set("transition", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactOverlays.mod.Overlay] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactOverlays.mod.Overlay](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = OverlayProps
+  
+  def withProps(p: OverlayProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Overlay.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

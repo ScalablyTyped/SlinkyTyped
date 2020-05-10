@@ -12,10 +12,8 @@ trait Status extends js.Object
 
 object Status {
   @scala.inline
-  def captive: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.captive = this.cast("captive")
+  def captive: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.captive = "captive".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.captive]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def clear: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.clear = this.cast("clear")
+  def clear: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.clear = "clear".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.clear]
 }
 

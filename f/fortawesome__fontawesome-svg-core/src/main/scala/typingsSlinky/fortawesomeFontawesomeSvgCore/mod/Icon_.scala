@@ -1,36 +1,32 @@
 package typingsSlinky.fortawesomeFontawesomeSvgCore.mod
 
-import org.scalajs.dom.raw.HTMLCollection
 import typingsSlinky.fortawesomeFontawesomeCommonTypes.mod.IconDefinition
-import typingsSlinky.fortawesomeFontawesomeCommonTypes.mod.IconName
-import typingsSlinky.fortawesomeFontawesomeCommonTypes.mod.IconPathData
-import typingsSlinky.fortawesomeFontawesomeCommonTypes.mod.IconPrefix
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Icon_
   extends IconDefinition
      with FontawesomeObject
      with IconOrText {
-  val `type`: typingsSlinky.fortawesomeFontawesomeSvgCore.fortawesomeFontawesomeSvgCoreStrings.icon
+  val `type`: typingsSlinky.fortawesomeFontawesomeSvgCore.fortawesomeFontawesomeSvgCoreStrings.icon = js.native
 }
 
 object Icon_ {
   @scala.inline
-  def apply(
-    `abstract`: js.Array[AbstractElement],
-    html: js.Array[String],
-    icon: js.Tuple5[Double, Double, js.Array[String], String, IconPathData],
-    iconName: IconName,
-    node: HTMLCollection,
-    prefix: IconPrefix,
-    `type`: typingsSlinky.fortawesomeFontawesomeSvgCore.fortawesomeFontawesomeSvgCoreStrings.icon
-  ): Icon_ = {
-    val __obj = js.Dynamic.literal(html = html.asInstanceOf[js.Any], icon = icon.asInstanceOf[js.Any], iconName = iconName.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any])
-    __obj.updateDynamic("abstract")(`abstract`.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Icon_]
+  implicit class Icon_Ops[Self <: Icon_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: typingsSlinky.fortawesomeFontawesomeSvgCore.fortawesomeFontawesomeSvgCoreStrings.icon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
   }
+  
 }
 

@@ -39,20 +39,77 @@ trait SchemaGooglePrivacyDlpV2KMapEstimationHistogramBucket extends js.Object {
 
 object SchemaGooglePrivacyDlpV2KMapEstimationHistogramBucket {
   @scala.inline
-  def apply(
-    bucketSize: String = null,
-    bucketValueCount: String = null,
-    bucketValues: js.Array[SchemaGooglePrivacyDlpV2KMapEstimationQuasiIdValues] = null,
-    maxAnonymity: String = null,
-    minAnonymity: String = null
-  ): SchemaGooglePrivacyDlpV2KMapEstimationHistogramBucket = {
+  def apply(): SchemaGooglePrivacyDlpV2KMapEstimationHistogramBucket = {
     val __obj = js.Dynamic.literal()
-    if (bucketSize != null) __obj.updateDynamic("bucketSize")(bucketSize.asInstanceOf[js.Any])
-    if (bucketValueCount != null) __obj.updateDynamic("bucketValueCount")(bucketValueCount.asInstanceOf[js.Any])
-    if (bucketValues != null) __obj.updateDynamic("bucketValues")(bucketValues.asInstanceOf[js.Any])
-    if (maxAnonymity != null) __obj.updateDynamic("maxAnonymity")(maxAnonymity.asInstanceOf[js.Any])
-    if (minAnonymity != null) __obj.updateDynamic("minAnonymity")(minAnonymity.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2KMapEstimationHistogramBucket]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2KMapEstimationHistogramBucketOps[Self <: SchemaGooglePrivacyDlpV2KMapEstimationHistogramBucket] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucketSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucketValueCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValueCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketValueCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValueCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucketValues(value: js.Array[SchemaGooglePrivacyDlpV2KMapEstimationQuasiIdValues]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAnonymity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAnonymity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAnonymity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAnonymity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinAnonymity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minAnonymity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinAnonymity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minAnonymity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

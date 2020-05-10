@@ -23,11 +23,41 @@ trait SchemaDirectDealsList extends js.Object {
 
 object SchemaDirectDealsList {
   @scala.inline
-  def apply(directDeals: js.Array[SchemaDirectDeal] = null, kind: String = null): SchemaDirectDealsList = {
+  def apply(): SchemaDirectDealsList = {
     val __obj = js.Dynamic.literal()
-    if (directDeals != null) __obj.updateDynamic("directDeals")(directDeals.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDirectDealsList]
   }
+  @scala.inline
+  implicit class SchemaDirectDealsListOps[Self <: SchemaDirectDealsList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectDeals(value: js.Array[SchemaDirectDeal]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directDeals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectDeals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directDeals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,12 +22,53 @@ trait SchemaInstanceWithNamedPorts extends js.Object {
 
 object SchemaInstanceWithNamedPorts {
   @scala.inline
-  def apply(instance: String = null, namedPorts: js.Array[SchemaNamedPort] = null, status: String = null): SchemaInstanceWithNamedPorts = {
+  def apply(): SchemaInstanceWithNamedPorts = {
     val __obj = js.Dynamic.literal()
-    if (instance != null) __obj.updateDynamic("instance")(instance.asInstanceOf[js.Any])
-    if (namedPorts != null) __obj.updateDynamic("namedPorts")(namedPorts.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstanceWithNamedPorts]
   }
+  @scala.inline
+  implicit class SchemaInstanceWithNamedPortsOps[Self <: SchemaInstanceWithNamedPorts] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstance(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamedPorts(value: js.Array[SchemaNamedPort]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedPorts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamedPorts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedPorts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

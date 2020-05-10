@@ -1,49 +1,49 @@
 package typingsSlinky.reactOnsenui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameContentStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Page
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactOnsenui.mod.Page] {
+object Page {
   @JSImport("react-onsenui", "Page")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, style */
-  def apply(
-    contentStyle: js.Any = null,
-    modifier: String = null,
-    onHide: () => Unit = null,
-    onInit: () => Unit = null,
-    onShow: () => Unit = null,
-    renderBottomToolbar: () => Unit = null,
-    renderFixed: () => Unit = null,
-    renderModal: () => Unit = null,
-    renderToolbar: () => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.Page] = {
-    val __obj = js.Dynamic.literal()
-    if (contentStyle != null) __obj.updateDynamic("contentStyle")(contentStyle.asInstanceOf[js.Any])
-    if (modifier != null) __obj.updateDynamic("modifier")(modifier.asInstanceOf[js.Any])
-    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction0(onHide))
-    if (onInit != null) __obj.updateDynamic("onInit")(js.Any.fromFunction0(onInit))
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction0(onShow))
-    if (renderBottomToolbar != null) __obj.updateDynamic("renderBottomToolbar")(js.Any.fromFunction0(renderBottomToolbar))
-    if (renderFixed != null) __obj.updateDynamic("renderFixed")(js.Any.fromFunction0(renderFixed))
-    if (renderModal != null) __obj.updateDynamic("renderModal")(js.Any.fromFunction0(renderModal))
-    if (renderToolbar != null) __obj.updateDynamic("renderToolbar")(js.Any.fromFunction0(renderToolbar))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.Page] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentStyle(value: js.Any): this.type = set("contentStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def modifier(value: String): this.type = set("modifier", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onHide(value: () => Unit): this.type = set("onHide", js.Any.fromFunction0(value))
+    @scala.inline
+    def onInit(value: () => Unit): this.type = set("onInit", js.Any.fromFunction0(value))
+    @scala.inline
+    def onShow(value: () => Unit): this.type = set("onShow", js.Any.fromFunction0(value))
+    @scala.inline
+    def renderBottomToolbar(value: () => Unit): this.type = set("renderBottomToolbar", js.Any.fromFunction0(value))
+    @scala.inline
+    def renderFixed(value: () => Unit): this.type = set("renderFixed", js.Any.fromFunction0(value))
+    @scala.inline
+    def renderModal(value: () => Unit): this.type = set("renderModal", js.Any.fromFunction0(value))
+    @scala.inline
+    def renderToolbar(value: () => Unit): this.type = set("renderToolbar", js.Any.fromFunction0(value))
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.Page] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactOnsenui.mod.Page](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = HTMLAttributesidclassNameContentStyle
+  
+  def withProps(p: HTMLAttributesidclassNameContentStyle): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Page.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

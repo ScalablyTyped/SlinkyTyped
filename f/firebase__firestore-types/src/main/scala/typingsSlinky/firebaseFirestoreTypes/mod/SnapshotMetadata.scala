@@ -4,18 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SnapshotMetadata extends js.Object {
-  val fromCache: Boolean
-  val hasPendingWrites: Boolean
-  def isEqual(other: SnapshotMetadata): Boolean
+  val fromCache: Boolean = js.native
+  val hasPendingWrites: Boolean = js.native
+  def isEqual(other: SnapshotMetadata): Boolean = js.native
 }
 
 object SnapshotMetadata {
   @scala.inline
   def apply(fromCache: Boolean, hasPendingWrites: Boolean, isEqual: SnapshotMetadata => Boolean): SnapshotMetadata = {
     val __obj = js.Dynamic.literal(fromCache = fromCache.asInstanceOf[js.Any], hasPendingWrites = hasPendingWrites.asInstanceOf[js.Any], isEqual = js.Any.fromFunction1(isEqual))
-  
     __obj.asInstanceOf[SnapshotMetadata]
   }
+  @scala.inline
+  implicit class SnapshotMetadataOps[Self <: SnapshotMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFromCache(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromCache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHasPendingWrites(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasPendingWrites")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsEqual(value: SnapshotMetadata => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEqual")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

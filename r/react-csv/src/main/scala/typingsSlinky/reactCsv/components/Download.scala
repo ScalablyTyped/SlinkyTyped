@@ -1,15 +1,22 @@
 package typingsSlinky.reactCsv.components
 
+import typingsSlinky.reactCsv.commonPropTypesMod.Data
+import typingsSlinky.reactCsv.downloadMod.DownloadPropTypes
 import typingsSlinky.reactCsv.downloadMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Download extends SharedApply_DownloadPropTypes1673519281[default] {
+object Download {
   @JSImport("react-csv/components/Download", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: DownloadPropTypes): SharedBuilder_DownloadPropTypes1077784257[default] = new SharedBuilder_DownloadPropTypes1077784257[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(data: String | Data): SharedBuilder_DownloadPropTypes1077784257[default] = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new SharedBuilder_DownloadPropTypes1077784257[default](js.Array(this.component, __props.asInstanceOf[DownloadPropTypes]))
+  }
 }
 

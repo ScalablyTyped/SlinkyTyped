@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 trait String
   extends /* index */ NumberDictionary[java.lang.String] {
   /** Iterator */
-  @JSName(scala.scalajs.js.Symbol.iterator)
+  @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[java.lang.String]] = js.native
   /** Returns the length of a String object. */
   val length: Double = js.native
@@ -114,7 +114,7 @@ trait String
     * @param regexp A variable name or string literal containing the regular expression pattern and flags.
     */
   def `match`(regexp: java.lang.String): RegExpMatchArray | Null = js.native
-  def `match`(regexp: RegExp): RegExpMatchArray | Null = js.native
+  def `match`(regexp: js.RegExp): RegExpMatchArray | Null = js.native
   /**
     * Matches a string with a regular expression, and returns an iterable of matches
     * containing the results of that search.
@@ -205,9 +205,9 @@ trait String
     * @param replaceValue A string containing the text to replace for every successful match of searchValue in this string.
     */
   def replace(searchValue: AnonReplace, replaceValue: java.lang.String): java.lang.String = js.native
-  def replace(searchValue: RegExp, replaceValue: java.lang.String): java.lang.String = js.native
+  def replace(searchValue: js.RegExp, replaceValue: java.lang.String): java.lang.String = js.native
   def replace(
-    searchValue: RegExp,
+    searchValue: js.RegExp,
     replacer: js.Function2[/* substring */ java.lang.String, /* repeated */ js.Any, java.lang.String]
   ): java.lang.String = js.native
   /**
@@ -215,7 +215,7 @@ trait String
     * @param regexp The regular expression pattern and applicable flags.
     */
   def search(regexp: java.lang.String): Double = js.native
-  def search(regexp: RegExp): Double = js.native
+  def search(regexp: js.RegExp): Double = js.native
   /**
     * Finds the first substring match in a regular expression search.
     * @param searcher An object which supports searching within a string.
@@ -239,8 +239,8 @@ trait String
     */
   def split(separator: java.lang.String): js.Array[java.lang.String] = js.native
   def split(separator: java.lang.String, limit: Double): js.Array[java.lang.String] = js.native
-  def split(separator: RegExp): js.Array[java.lang.String] = js.native
-  def split(separator: RegExp, limit: Double): js.Array[java.lang.String] = js.native
+  def split(separator: js.RegExp): js.Array[java.lang.String] = js.native
+  def split(separator: js.RegExp, limit: Double): js.Array[java.lang.String] = js.native
   /**
     * Split a string into substrings using the specified separator and return them as an array.
     * @param splitter An object that can split a string.

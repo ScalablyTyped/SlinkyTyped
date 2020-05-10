@@ -312,17 +312,13 @@ trait TypeofbluetoothLowEnergy extends js.Object {
     * @param value The value that should be sent to the remote characteristic as part of the write request.
     * @param callback Called when the write request has completed.
     */
-  def writeCharacteristicValue(
-    characteristicId: String,
-    value: scala.scalajs.js.typedarray.ArrayBuffer,
-    callback: js.Function0[Unit]
-  ): Unit = js.native
+  def writeCharacteristicValue(characteristicId: String, value: js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
   /**
     * Write the value of a specified characteristic descriptor from a remote peripheral.
     * @param descriptorId The instance ID of the GATT characteristic descriptor whose value should be written to.
     * @param value The value that should be sent to the remote descriptor as part of the write request.
     * @param callback Called when the write request has completed.
     */
-  def writeDescriptorValue(descriptorId: String, value: scala.scalajs.js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
+  def writeDescriptorValue(descriptorId: String, value: js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
 }
 

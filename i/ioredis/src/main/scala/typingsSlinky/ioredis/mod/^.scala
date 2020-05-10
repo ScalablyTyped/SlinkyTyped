@@ -1,7 +1,6 @@
 package typingsSlinky.ioredis.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.ioredis.AnonLua
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,14 +14,6 @@ class ^ () extends Redis {
   def this(host: String, options: RedisOptions) = this()
   def this(port: Double, host: String) = this()
   def this(port: Double, host: String, options: RedisOptions) = this()
-  /* CompleteClass */
-  override def createBuiltinCommand(commandName: String): js.Object = js.native
-  /* CompleteClass */
-  override def defineCommand(name: String, definition: AnonLua): Unit = js.native
-  /* CompleteClass */
-  override def getBuiltinCommands(): js.Array[String] = js.native
-  /* CompleteClass */
-  override def sendCommand(): Unit = js.native
 }
 
 @JSImport("ioredis", JSImport.Namespace)

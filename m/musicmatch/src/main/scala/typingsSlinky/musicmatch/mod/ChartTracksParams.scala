@@ -4,25 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChartTracksParams extends Pageable {
-  var country: js.UndefOr[String] = js.undefined
-  var f_has_lyrics: js.UndefOr[TBoolean] = js.undefined
+  var country: js.UndefOr[String] = js.native
+  var f_has_lyrics: js.UndefOr[TBoolean] = js.native
 }
 
 object ChartTracksParams {
   @scala.inline
-  def apply(
-    country: String = null,
-    f_has_lyrics: TBoolean = null,
-    page: Int | Double = null,
-    page_size: Int | Double = null
-  ): ChartTracksParams = {
+  def apply(): ChartTracksParams = {
     val __obj = js.Dynamic.literal()
-    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
-    if (f_has_lyrics != null) __obj.updateDynamic("f_has_lyrics")(f_has_lyrics.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (page_size != null) __obj.updateDynamic("page_size")(page_size.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartTracksParams]
   }
+  @scala.inline
+  implicit class ChartTracksParamsOps[Self <: ChartTracksParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCountry(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withF_has_lyrics(value: TBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("f_has_lyrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutF_has_lyrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("f_has_lyrics")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

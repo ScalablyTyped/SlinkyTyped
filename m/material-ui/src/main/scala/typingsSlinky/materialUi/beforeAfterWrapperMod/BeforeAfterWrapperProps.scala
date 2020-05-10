@@ -1,47 +1,106 @@
 package typingsSlinky.materialUi.beforeAfterWrapperMod
 
-import slinky.core.TagMod
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BeforeAfterWrapperProps extends Props[BeforeAfterWrapper] {
-  var afterElementType: js.UndefOr[String] = js.undefined
-  var afterStyle: js.UndefOr[CSSProperties] = js.undefined
-  var beforeElementType: js.UndefOr[String] = js.undefined
-  var beforeStyle: js.UndefOr[CSSProperties] = js.undefined
-  var elementType: js.UndefOr[String] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
+  var afterElementType: js.UndefOr[String] = js.native
+  var afterStyle: js.UndefOr[CSSProperties] = js.native
+  var beforeElementType: js.UndefOr[String] = js.native
+  var beforeStyle: js.UndefOr[CSSProperties] = js.native
+  var elementType: js.UndefOr[String] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
 }
 
 object BeforeAfterWrapperProps {
   @scala.inline
-  def apply(
-    afterElementType: String = null,
-    afterStyle: CSSProperties = null,
-    beforeElementType: String = null,
-    beforeStyle: CSSProperties = null,
-    children: TagMod[Any] = null,
-    elementType: String = null,
-    key: Key = null,
-    ref: LegacyRef[BeforeAfterWrapper] = null,
-    style: CSSProperties = null
-  ): BeforeAfterWrapperProps = {
+  def apply(): BeforeAfterWrapperProps = {
     val __obj = js.Dynamic.literal()
-    if (afterElementType != null) __obj.updateDynamic("afterElementType")(afterElementType.asInstanceOf[js.Any])
-    if (afterStyle != null) __obj.updateDynamic("afterStyle")(afterStyle.asInstanceOf[js.Any])
-    if (beforeElementType != null) __obj.updateDynamic("beforeElementType")(beforeElementType.asInstanceOf[js.Any])
-    if (beforeStyle != null) __obj.updateDynamic("beforeStyle")(beforeStyle.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (elementType != null) __obj.updateDynamic("elementType")(elementType.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[BeforeAfterWrapperProps]
   }
+  @scala.inline
+  implicit class BeforeAfterWrapperPropsOps[Self <: BeforeAfterWrapperProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfterElementType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterElementType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAfterElementType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterElementType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAfterStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeElementType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeElementType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeforeElementType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeElementType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeforeStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElementType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElementType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

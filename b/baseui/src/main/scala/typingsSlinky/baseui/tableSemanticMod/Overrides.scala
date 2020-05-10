@@ -4,55 +4,159 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Overrides extends js.Object {
   var Root: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var Table: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var TableBody: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var TableBodyCell: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var TableBodyRow: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var TableHead: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var TableHeadCell: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var TableHeadRow: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
-  ] = js.undefined
+  ] = js.native
 }
 
 object Overrides {
   @scala.inline
-  def apply(
-    Root: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any = null,
-    Table: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any = null,
-    TableBody: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any = null,
-    TableBodyCell: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any = null,
-    TableBodyRow: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any = null,
-    TableHead: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any = null,
-    TableHeadCell: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any = null,
-    TableHeadRow: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any = null
-  ): Overrides = {
+  def apply(): Overrides = {
     val __obj = js.Dynamic.literal()
-    if (Root != null) __obj.updateDynamic("Root")(Root.asInstanceOf[js.Any])
-    if (Table != null) __obj.updateDynamic("Table")(Table.asInstanceOf[js.Any])
-    if (TableBody != null) __obj.updateDynamic("TableBody")(TableBody.asInstanceOf[js.Any])
-    if (TableBodyCell != null) __obj.updateDynamic("TableBodyCell")(TableBodyCell.asInstanceOf[js.Any])
-    if (TableBodyRow != null) __obj.updateDynamic("TableBodyRow")(TableBodyRow.asInstanceOf[js.Any])
-    if (TableHead != null) __obj.updateDynamic("TableHead")(TableHead.asInstanceOf[js.Any])
-    if (TableHeadCell != null) __obj.updateDynamic("TableHeadCell")(TableHeadCell.asInstanceOf[js.Any])
-    if (TableHeadRow != null) __obj.updateDynamic("TableHeadRow")(TableHeadRow.asInstanceOf[js.Any])
     __obj.asInstanceOf[Overrides]
   }
+  @scala.inline
+  implicit class OverridesOps[Self <: Overrides] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRoot(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTable(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Table")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Table")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableBody(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableBodyCell(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableBodyCell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableBodyCell: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableBodyCell")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableBodyRow(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableBodyRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableBodyRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableBodyRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableHead(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableHead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableHead: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableHead")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableHeadCell(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableHeadCell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableHeadCell: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableHeadCell")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableHeadRow(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableHeadRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableHeadRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableHeadRow")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -28,8 +28,33 @@ object TypedLinkFacet {
     Name: TypedLinkName
   ): TypedLinkFacet = {
     val __obj = js.Dynamic.literal(Attributes = Attributes.asInstanceOf[js.Any], IdentityAttributeOrder = IdentityAttributeOrder.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TypedLinkFacet]
   }
+  @scala.inline
+  implicit class TypedLinkFacetOps[Self <: TypedLinkFacet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributes(value: TypedLinkAttributeDefinitionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdentityAttributeOrder(value: AttributeNameList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityAttributeOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: TypedLinkName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,10 @@
 package typingsSlinky.chrome
 
 import typingsSlinky.chrome.chrome.contentSettings.ScopeEnum
+import typingsSlinky.chrome.chrome.cookies.SameSiteStatus
+import typingsSlinky.chrome.chrome.idle.IdleState
+import typingsSlinky.chrome.chrome.loginState.ProfileType
+import typingsSlinky.chrome.chrome.loginState.SessionState
 import typingsSlinky.chrome.chrome.omnibox.OnInputEnteredDisposition
 import typingsSlinky.chrome.chrome.runtime.RequestUpdateCheckStatus
 import typingsSlinky.chrome.chrome.webRequest.ResourceType
@@ -9,6 +13,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object chromeStrings {
+  @js.native
+  sealed trait IN_LOCK_SCREEN extends SessionState
+  
+  @js.native
+  sealed trait IN_LOGIN_SCREEN extends SessionState
+  
+  @js.native
+  sealed trait IN_OOBE_SCREEN extends SessionState
+  
+  @js.native
+  sealed trait IN_SESSION extends SessionState
+  
+  @js.native
+  sealed trait SIGNIN_PROFILE extends ProfileType
+  
+  @js.native
+  sealed trait UNKNOWN extends SessionState
+  
+  @js.native
+  sealed trait USER_PROFILE extends ProfileType
+  
+  @js.native
+  sealed trait active extends IdleState
+  
   @js.native
   sealed trait allow extends js.Object
   
@@ -70,16 +98,25 @@ object chromeStrings {
   sealed trait frame_error extends js.Object
   
   @js.native
+  sealed trait idle extends IdleState
+  
+  @js.native
   sealed trait image extends ResourceType
   
   @js.native
   sealed trait incognito_session_only extends ScopeEnum
   
   @js.native
+  sealed trait lax extends SameSiteStatus
+  
+  @js.native
   sealed trait left extends js.Object
   
   @js.native
   sealed trait loading extends js.Object
+  
+  @js.native
+  sealed trait locked extends IdleState
   
   @js.native
   sealed trait main_frame extends ResourceType
@@ -98,6 +135,9 @@ object chromeStrings {
   
   @js.native
   sealed trait no extends js.Object
+  
+  @js.native
+  sealed trait no_restriction extends SameSiteStatus
   
   @js.native
   sealed trait no_update extends RequestUpdateCheckStatus
@@ -151,6 +191,9 @@ object chromeStrings {
   sealed trait seven extends js.Object
   
   @js.native
+  sealed trait strict extends SameSiteStatus
+  
+  @js.native
   sealed trait stylesheet extends ResourceType
   
   @js.native
@@ -172,6 +215,9 @@ object chromeStrings {
   sealed trait two extends js.Object
   
   @js.native
+  sealed trait unspecified extends SameSiteStatus
+  
+  @js.native
   sealed trait update_available extends RequestUpdateCheckStatus
   
   @js.native
@@ -180,6 +226,22 @@ object chromeStrings {
   @js.native
   sealed trait xmlhttprequest extends ResourceType
   
+  @scala.inline
+  def IN_LOCK_SCREEN: IN_LOCK_SCREEN = "IN_LOCK_SCREEN".asInstanceOf[IN_LOCK_SCREEN]
+  @scala.inline
+  def IN_LOGIN_SCREEN: IN_LOGIN_SCREEN = "IN_LOGIN_SCREEN".asInstanceOf[IN_LOGIN_SCREEN]
+  @scala.inline
+  def IN_OOBE_SCREEN: IN_OOBE_SCREEN = "IN_OOBE_SCREEN".asInstanceOf[IN_OOBE_SCREEN]
+  @scala.inline
+  def IN_SESSION: IN_SESSION = "IN_SESSION".asInstanceOf[IN_SESSION]
+  @scala.inline
+  def SIGNIN_PROFILE: SIGNIN_PROFILE = "SIGNIN_PROFILE".asInstanceOf[SIGNIN_PROFILE]
+  @scala.inline
+  def UNKNOWN: UNKNOWN = "UNKNOWN".asInstanceOf[UNKNOWN]
+  @scala.inline
+  def USER_PROFILE: USER_PROFILE = "USER_PROFILE".asInstanceOf[USER_PROFILE]
+  @scala.inline
+  def active: active = "active".asInstanceOf[active]
   @scala.inline
   def allow: allow = "allow".asInstanceOf[allow]
   @scala.inline
@@ -221,13 +283,19 @@ object chromeStrings {
   @scala.inline
   def frame_error: frame_error = "frame_error".asInstanceOf[frame_error]
   @scala.inline
+  def idle: idle = "idle".asInstanceOf[idle]
+  @scala.inline
   def image: image = "image".asInstanceOf[image]
   @scala.inline
   def incognito_session_only: incognito_session_only = "incognito_session_only".asInstanceOf[incognito_session_only]
   @scala.inline
+  def lax: lax = "lax".asInstanceOf[lax]
+  @scala.inline
   def left: left = "left".asInstanceOf[left]
   @scala.inline
   def loading: loading = "loading".asInstanceOf[loading]
+  @scala.inline
+  def locked: locked = "locked".asInstanceOf[locked]
   @scala.inline
   def main_frame: main_frame = "main_frame".asInstanceOf[main_frame]
   @scala.inline
@@ -240,6 +308,8 @@ object chromeStrings {
   def newForegroundTab: newForegroundTab = "newForegroundTab".asInstanceOf[newForegroundTab]
   @scala.inline
   def no: no = "no".asInstanceOf[no]
+  @scala.inline
+  def no_restriction: no_restriction = "no_restriction".asInstanceOf[no_restriction]
   @scala.inline
   def no_update: no_update = "no_update".asInstanceOf[no_update]
   @scala.inline
@@ -275,6 +345,8 @@ object chromeStrings {
   @scala.inline
   def seven: seven = "seven".asInstanceOf[seven]
   @scala.inline
+  def strict: strict = "strict".asInstanceOf[strict]
+  @scala.inline
   def stylesheet: stylesheet = "stylesheet".asInstanceOf[stylesheet]
   @scala.inline
   def sub_frame: sub_frame = "sub_frame".asInstanceOf[sub_frame]
@@ -288,6 +360,8 @@ object chromeStrings {
   def top: top = "top".asInstanceOf[top]
   @scala.inline
   def two: two = "two".asInstanceOf[two]
+  @scala.inline
+  def unspecified: unspecified = "unspecified".asInstanceOf[unspecified]
   @scala.inline
   def update_available: update_available = "update_available".asInstanceOf[update_available]
   @scala.inline

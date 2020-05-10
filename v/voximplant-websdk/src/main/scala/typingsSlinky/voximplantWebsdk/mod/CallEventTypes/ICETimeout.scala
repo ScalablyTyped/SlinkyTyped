@@ -8,19 +8,33 @@ import scala.scalajs.js.annotation._
 /**
 		*	Event dispatched in case of network connection problem between 2 peers
 		*/
+@js.native
 trait ICETimeout extends js.Object {
   /**
   			*	Call that dispatched the event
   			*/
-  var call: Call
+  var call: Call = js.native
 }
 
 object ICETimeout {
   @scala.inline
   def apply(call: Call): ICETimeout = {
     val __obj = js.Dynamic.literal(call = call.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ICETimeout]
   }
+  @scala.inline
+  implicit class ICETimeoutOps[Self <: ICETimeout] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCall(value: Call): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("call")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

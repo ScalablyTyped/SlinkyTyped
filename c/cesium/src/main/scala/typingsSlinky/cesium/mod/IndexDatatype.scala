@@ -22,13 +22,13 @@ object IndexDatatype extends js.Object {
   
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[IndexDatatype with Double] = js.native
-  def createTypedArray(numberOfVertices: Double, indicesLengthOrArray: js.Any): scala.scalajs.js.typedarray.Uint16Array | scala.scalajs.js.typedarray.Uint32Array = js.native
+  def createTypedArray(numberOfVertices: Double, indicesLengthOrArray: js.Any): js.typedarray.Uint16Array | js.typedarray.Uint32Array = js.native
   def createTypedArrayFromArrayBuffer(
     numberOfVertices: Double,
-    sourceArray: scala.scalajs.js.typedarray.ArrayBuffer,
+    sourceArray: js.typedarray.ArrayBuffer,
     byteOffset: Double,
     length: Double
-  ): scala.scalajs.js.typedarray.Uint16Array | scala.scalajs.js.typedarray.Uint32Array = js.native
+  ): js.typedarray.Uint16Array | js.typedarray.Uint32Array = js.native
   def getSizeInBytes(indexDatatype: IndexDatatype): Double = js.native
   def validate(indexDatatype: IndexDatatype): Boolean = js.native
   /* 0 */ @js.native

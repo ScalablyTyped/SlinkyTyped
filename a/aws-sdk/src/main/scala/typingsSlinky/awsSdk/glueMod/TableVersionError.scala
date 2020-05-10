@@ -22,12 +22,53 @@ trait TableVersionError extends js.Object {
 
 object TableVersionError {
   @scala.inline
-  def apply(ErrorDetail: ErrorDetail = null, TableName: NameString = null, VersionId: VersionString = null): TableVersionError = {
+  def apply(): TableVersionError = {
     val __obj = js.Dynamic.literal()
-    if (ErrorDetail != null) __obj.updateDynamic("ErrorDetail")(ErrorDetail.asInstanceOf[js.Any])
-    if (TableName != null) __obj.updateDynamic("TableName")(TableName.asInstanceOf[js.Any])
-    if (VersionId != null) __obj.updateDynamic("VersionId")(VersionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableVersionError]
   }
+  @scala.inline
+  implicit class TableVersionErrorOps[Self <: TableVersionError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorDetail(value: ErrorDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorDetail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableName(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionId(value: VersionString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

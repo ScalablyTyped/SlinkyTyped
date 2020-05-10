@@ -16,18 +16,16 @@ trait CustomLayerId extends js.Object
 
 object CustomLayerId {
   @scala.inline
-  def axes: typingsSlinky.nivoScatterplot.nivoScatterplotStrings.axes = this.cast("axes")
+  def axes: typingsSlinky.nivoScatterplot.nivoScatterplotStrings.axes = "axes".asInstanceOf[typingsSlinky.nivoScatterplot.nivoScatterplotStrings.axes]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def grid: typingsSlinky.nivoScatterplot.nivoScatterplotStrings.grid = "grid".asInstanceOf[typingsSlinky.nivoScatterplot.nivoScatterplotStrings.grid]
   @scala.inline
-  def grid: typingsSlinky.nivoScatterplot.nivoScatterplotStrings.grid = this.cast("grid")
+  def legends: typingsSlinky.nivoScatterplot.nivoScatterplotStrings.legends = "legends".asInstanceOf[typingsSlinky.nivoScatterplot.nivoScatterplotStrings.legends]
   @scala.inline
-  def legends: typingsSlinky.nivoScatterplot.nivoScatterplotStrings.legends = this.cast("legends")
+  def markers: typingsSlinky.nivoScatterplot.nivoScatterplotStrings.markers = "markers".asInstanceOf[typingsSlinky.nivoScatterplot.nivoScatterplotStrings.markers]
   @scala.inline
-  def markers: typingsSlinky.nivoScatterplot.nivoScatterplotStrings.markers = this.cast("markers")
+  def mesh: typingsSlinky.nivoScatterplot.nivoScatterplotStrings.mesh = "mesh".asInstanceOf[typingsSlinky.nivoScatterplot.nivoScatterplotStrings.mesh]
   @scala.inline
-  def mesh: typingsSlinky.nivoScatterplot.nivoScatterplotStrings.mesh = this.cast("mesh")
-  @scala.inline
-  def nodes: typingsSlinky.nivoScatterplot.nivoScatterplotStrings.nodes = this.cast("nodes")
+  def nodes: typingsSlinky.nivoScatterplot.nivoScatterplotStrings.nodes = "nodes".asInstanceOf[typingsSlinky.nivoScatterplot.nivoScatterplotStrings.nodes]
 }
 

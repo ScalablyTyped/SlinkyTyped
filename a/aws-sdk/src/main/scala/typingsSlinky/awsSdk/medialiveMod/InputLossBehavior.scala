@@ -30,20 +30,77 @@ trait InputLossBehavior extends js.Object {
 
 object InputLossBehavior {
   @scala.inline
-  def apply(
-    BlackFrameMsec: Int | Double = null,
-    InputLossImageColor: stringMin6Max6 = null,
-    InputLossImageSlate: InputLocation = null,
-    InputLossImageType: InputLossImageType = null,
-    RepeatFrameMsec: Int | Double = null
-  ): InputLossBehavior = {
+  def apply(): InputLossBehavior = {
     val __obj = js.Dynamic.literal()
-    if (BlackFrameMsec != null) __obj.updateDynamic("BlackFrameMsec")(BlackFrameMsec.asInstanceOf[js.Any])
-    if (InputLossImageColor != null) __obj.updateDynamic("InputLossImageColor")(InputLossImageColor.asInstanceOf[js.Any])
-    if (InputLossImageSlate != null) __obj.updateDynamic("InputLossImageSlate")(InputLossImageSlate.asInstanceOf[js.Any])
-    if (InputLossImageType != null) __obj.updateDynamic("InputLossImageType")(InputLossImageType.asInstanceOf[js.Any])
-    if (RepeatFrameMsec != null) __obj.updateDynamic("RepeatFrameMsec")(RepeatFrameMsec.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputLossBehavior]
   }
+  @scala.inline
+  implicit class InputLossBehaviorOps[Self <: InputLossBehavior] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlackFrameMsec(value: integerMin0Max1000000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlackFrameMsec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlackFrameMsec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlackFrameMsec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputLossImageColor(value: stringMin6Max6): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputLossImageColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputLossImageColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputLossImageColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputLossImageSlate(value: InputLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputLossImageSlate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputLossImageSlate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputLossImageSlate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputLossImageType(value: InputLossImageType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputLossImageType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputLossImageType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputLossImageType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepeatFrameMsec(value: integerMin0Max1000000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RepeatFrameMsec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepeatFrameMsec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RepeatFrameMsec")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

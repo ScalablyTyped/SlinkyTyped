@@ -1,32 +1,41 @@
 package typingsSlinky.antdMobileRn.listItemNativeMod
 
-import slinky.core.TagMod
 import typingsSlinky.antdMobileRn.AnonBrief
-import typingsSlinky.reactNative.mod.StyleProp
-import typingsSlinky.reactNative.mod.ViewStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BriefProps
   extends typingsSlinky.antdMobileRn.listPropsTypeMod.BriefProps {
-  var styles: js.UndefOr[AnonBrief] = js.undefined
+  var styles: js.UndefOr[AnonBrief] = js.native
 }
 
 object BriefProps {
   @scala.inline
-  def apply(
-    children: TagMod[Any] = null,
-    style: StyleProp[ViewStyle] = null,
-    styles: AnonBrief = null,
-    wrap: js.UndefOr[Boolean] = js.undefined
-  ): BriefProps = {
+  def apply(): BriefProps = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrap)) __obj.updateDynamic("wrap")(wrap.asInstanceOf[js.Any])
     __obj.asInstanceOf[BriefProps]
   }
+  @scala.inline
+  implicit class BriefPropsOps[Self <: BriefProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStyles(value: AnonBrief): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

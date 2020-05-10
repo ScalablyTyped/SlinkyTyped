@@ -26,17 +26,59 @@ trait MessageResponse extends js.Object {
 
 object MessageResponse {
   @scala.inline
-  def apply(
-    ApplicationId: string,
-    EndpointResult: MapOfEndpointMessageResult = null,
-    RequestId: string = null,
-    Result: MapOfMessageResult = null
-  ): MessageResponse = {
+  def apply(ApplicationId: string): MessageResponse = {
     val __obj = js.Dynamic.literal(ApplicationId = ApplicationId.asInstanceOf[js.Any])
-    if (EndpointResult != null) __obj.updateDynamic("EndpointResult")(EndpointResult.asInstanceOf[js.Any])
-    if (RequestId != null) __obj.updateDynamic("RequestId")(RequestId.asInstanceOf[js.Any])
-    if (Result != null) __obj.updateDynamic("Result")(Result.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageResponse]
   }
+  @scala.inline
+  implicit class MessageResponseOps[Self <: MessageResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndpointResult(value: MapOfEndpointMessageResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointResult")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpointResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointResult")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResult(value: MapOfMessageResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Result")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Result")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

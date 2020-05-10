@@ -4,26 +4,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Permissions extends js.Object {
-  /**
-    * Optional.
-    * List of named permissions (does not include hosts or origins). Anything listed here must appear in the optional_permissions list in the manifest.
-    */
-  var origins: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Optional.
     * List of origin permissions. Anything listed here must be a subset of a host that appears in the optional_permissions list in the manifest. For example, if http:// *.example.com/ or http:// * appears in optional_permissions, you can request an origin of http://help.example.com/. Any path is ignored.
     */
-  var permissions: js.UndefOr[js.Array[String]] = js.undefined
+  var origins: js.UndefOr[js.Array[String]] = js.native
+  /**
+    * Optional.
+    * List of named permissions (does not include hosts or origins). Anything listed here must appear in the optional_permissions list in the manifest.
+    */
+  var permissions: js.UndefOr[js.Array[String]] = js.native
 }
 
 object Permissions {
   @scala.inline
-  def apply(origins: js.Array[String] = null, permissions: js.Array[String] = null): Permissions = {
+  def apply(): Permissions = {
     val __obj = js.Dynamic.literal()
-    if (origins != null) __obj.updateDynamic("origins")(origins.asInstanceOf[js.Any])
-    if (permissions != null) __obj.updateDynamic("permissions")(permissions.asInstanceOf[js.Any])
     __obj.asInstanceOf[Permissions]
   }
+  @scala.inline
+  implicit class PermissionsOps[Self <: Permissions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOrigins(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrigins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermissions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

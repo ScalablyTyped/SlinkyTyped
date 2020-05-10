@@ -21,16 +21,53 @@ trait LifecyclePolicyState extends js.Object {
 
 object LifecyclePolicyState {
   @scala.inline
-  def apply(
-    policy: Input[String | LifecyclePolicyDocument] = null,
-    registryId: Input[String] = null,
-    repository: Input[String] = null
-  ): LifecyclePolicyState = {
+  def apply(): LifecyclePolicyState = {
     val __obj = js.Dynamic.literal()
-    if (policy != null) __obj.updateDynamic("policy")(policy.asInstanceOf[js.Any])
-    if (registryId != null) __obj.updateDynamic("registryId")(registryId.asInstanceOf[js.Any])
-    if (repository != null) __obj.updateDynamic("repository")(repository.asInstanceOf[js.Any])
     __obj.asInstanceOf[LifecyclePolicyState]
   }
+  @scala.inline
+  implicit class LifecyclePolicyStateOps[Self <: LifecyclePolicyState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPolicy(value: Input[String | LifecyclePolicyDocument]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegistryId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegistryId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registryId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepository(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepository: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

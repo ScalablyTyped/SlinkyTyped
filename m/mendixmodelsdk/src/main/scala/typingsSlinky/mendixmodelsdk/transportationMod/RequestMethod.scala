@@ -14,14 +14,12 @@ trait RequestMethod extends js.Object
 
 object RequestMethod {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def delete: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.delete = "delete".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.delete]
   @scala.inline
-  def delete: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.delete = this.cast("delete")
+  def get: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.get = "get".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.get]
   @scala.inline
-  def get: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.get = this.cast("get")
+  def post: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.post = "post".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.post]
   @scala.inline
-  def post: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.post = this.cast("post")
-  @scala.inline
-  def put: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.put = this.cast("put")
+  def put: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.put = "put".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.put]
 }
 

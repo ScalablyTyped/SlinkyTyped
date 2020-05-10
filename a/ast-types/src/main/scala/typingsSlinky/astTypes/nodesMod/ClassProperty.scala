@@ -18,17 +18,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/nodes.Declaration, 'type'> */
+@js.native
 trait ClassProperty extends ASTNode {
-  var access: js.UndefOr[public | `private` | `protected`] = js.undefined
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var computed: Boolean
-  var key: LiteralKind | IdentifierKind | ExpressionKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var static: Boolean
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ClassProperty
-  var typeAnnotation: TypeAnnotationKind | TSTypeAnnotationKind | Null
-  var value: ExpressionKind | Null
-  var variance: VarianceKind | plus | minus | Null
+  var access: js.UndefOr[public | `private` | `protected`] = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var computed: Boolean = js.native
+  var key: LiteralKind | IdentifierKind | ExpressionKind = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var static: Boolean = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ClassProperty = js.native
+  var typeAnnotation: TypeAnnotationKind | TSTypeAnnotationKind | Null = js.native
+  var value: ExpressionKind | Null = js.native
+  var variance: VarianceKind | plus | minus | Null = js.native
 }
 
 object ClassProperty {
@@ -37,23 +38,115 @@ object ClassProperty {
     computed: Boolean,
     key: LiteralKind | IdentifierKind | ExpressionKind,
     static: Boolean,
-    `type`: typingsSlinky.astTypes.astTypesStrings.ClassProperty,
-    access: public | `private` | `protected` = null,
-    comments: js.Array[CommentKind] = null,
-    loc: SourceLocationKind = null,
-    typeAnnotation: TypeAnnotationKind | TSTypeAnnotationKind = null,
-    value: ExpressionKind = null,
-    variance: VarianceKind | plus | minus = null
+    `type`: typingsSlinky.astTypes.astTypesStrings.ClassProperty
   ): ClassProperty = {
     val __obj = js.Dynamic.literal(computed = computed.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], static = static.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (access != null) __obj.updateDynamic("access")(access.asInstanceOf[js.Any])
-    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (typeAnnotation != null) __obj.updateDynamic("typeAnnotation")(typeAnnotation.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (variance != null) __obj.updateDynamic("variance")(variance.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassProperty]
   }
+  @scala.inline
+  implicit class ClassPropertyOps[Self <: ClassProperty] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComputed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKey(value: LiteralKind | IdentifierKind | ExpressionKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: typingsSlinky.astTypes.astTypesStrings.ClassProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccess(value: public | `private` | `protected`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("access")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("access")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComments(value: js.Array[CommentKind]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoc(value: SourceLocationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypeAnnotation(value: TypeAnnotationKind | TSTypeAnnotationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypeAnnotationNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(null)
+        ret
+    }
+    @scala.inline
+    def withValue(value: ExpressionKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValueNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(null)
+        ret
+    }
+    @scala.inline
+    def withVariance(value: VarianceKind | plus | minus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVarianceNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variance")(null)
+        ret
+    }
+  }
+  
 }
 

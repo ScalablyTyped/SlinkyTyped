@@ -24,7 +24,5 @@ class UniformRandom () extends RandomBase {
   var min: js.Any = js.native
   var random: js.Any = js.native
   var range: js.Any = js.native
-  /* CompleteClass */
-  override def nextValue(): Double = js.native
 }
 

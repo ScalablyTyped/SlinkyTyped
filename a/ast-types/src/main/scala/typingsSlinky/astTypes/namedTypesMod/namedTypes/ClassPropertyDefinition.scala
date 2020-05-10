@@ -17,16 +17,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
+@js.native
 trait ClassPropertyDefinition
   extends ASTNode
      with DeclarationKind
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var definition: MethodDefinitionKind | VariableDeclaratorKind | ClassPropertyDefinitionKind | ClassPropertyKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ClassPropertyDefinition
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var definition: MethodDefinitionKind | VariableDeclaratorKind | ClassPropertyDefinitionKind | ClassPropertyKind = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ClassPropertyDefinition = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.ClassPropertyDefinition")

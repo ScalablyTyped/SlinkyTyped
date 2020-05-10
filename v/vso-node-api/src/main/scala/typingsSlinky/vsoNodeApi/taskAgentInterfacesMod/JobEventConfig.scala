@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait JobEventConfig extends js.Object {
-  var timeout: String
+  var timeout: String = js.native
 }
 
 object JobEventConfig {
   @scala.inline
   def apply(timeout: String): JobEventConfig = {
     val __obj = js.Dynamic.literal(timeout = timeout.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[JobEventConfig]
   }
+  @scala.inline
+  implicit class JobEventConfigOps[Self <: JobEventConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTimeout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,54 +1,55 @@
 package typingsSlinky.antdMobile.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.imagePickerMod.ImagePickerPropTypes
 import typingsSlinky.antdMobile.imagePickerMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ImagePicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ImagePicker {
   @JSImport("antd-mobile/lib/image-picker", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: accept, className, multiple */
-  def apply(
-    capture: js.Any = null,
-    disableDelete: js.UndefOr[Boolean] = js.undefined,
-    files: js.Array[js.Object] = null,
-    length: Double | String = null,
-    onAddImageClick: () => Unit = null,
-    onChange: (/* files */ js.Array[js.Object], /* operationType */ String, /* index */ js.UndefOr[Double]) => Unit = null,
-    onFail: /* msg */ String => Unit = null,
-    onImageClick: (/* index */ js.UndefOr[Double], /* files */ js.UndefOr[js.Array[js.Object]]) => Unit = null,
-    prefixCls: String = null,
-    selectable: js.UndefOr[Boolean] = js.undefined,
-    style: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (capture != null) __obj.updateDynamic("capture")(capture.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableDelete)) __obj.updateDynamic("disableDelete")(disableDelete.asInstanceOf[js.Any])
-    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
-    if (onAddImageClick != null) __obj.updateDynamic("onAddImageClick")(js.Any.fromFunction0(onAddImageClick))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction3(onChange))
-    if (onFail != null) __obj.updateDynamic("onFail")(js.Any.fromFunction1(onFail))
-    if (onImageClick != null) __obj.updateDynamic("onImageClick")(js.Any.fromFunction2(onImageClick))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def accept(value: String): this.type = set("accept", value.asInstanceOf[js.Any])
+    @scala.inline
+    def capture(value: js.Any): this.type = set("capture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableDelete(value: Boolean): this.type = set("disableDelete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def files(value: js.Array[js.Object]): this.type = set("files", value.asInstanceOf[js.Any])
+    @scala.inline
+    def length(value: Double | String): this.type = set("length", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAddImageClick(value: () => Unit): this.type = set("onAddImageClick", js.Any.fromFunction0(value))
+    @scala.inline
+    def onChange(
+      value: (/* files */ js.Array[js.Object], /* operationType */ String, /* index */ js.UndefOr[Double]) => Unit
+    ): this.type = set("onChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def onFail(value: /* msg */ String => Unit): this.type = set("onFail", js.Any.fromFunction1(value))
+    @scala.inline
+    def onImageClick(value: (/* index */ js.UndefOr[Double], /* files */ js.UndefOr[js.Array[js.Object]]) => Unit): this.type = set("onImageClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antdMobile.imagePickerMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ImagePickerPropTypes
+  
+  def withProps(p: ImagePickerPropTypes): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ImagePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

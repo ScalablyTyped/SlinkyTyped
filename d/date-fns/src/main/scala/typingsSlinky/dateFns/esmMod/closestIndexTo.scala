@@ -1,6 +1,5 @@
 package typingsSlinky.dateFns.esmMod
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object closestIndexTo extends js.Object {
   def apply(dateToCompare: Double, datesArray: js.Array[js.Date | Double]): Double = js.native
-  def apply(dateToCompare: Date, datesArray: js.Array[js.Date | Double]): Double = js.native
+  def apply(dateToCompare: js.Date, datesArray: js.Array[js.Date | Double]): Double = js.native
 }
 

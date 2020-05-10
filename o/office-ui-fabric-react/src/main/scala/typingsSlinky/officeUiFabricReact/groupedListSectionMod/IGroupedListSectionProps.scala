@@ -2,7 +2,6 @@ package typingsSlinky.officeUiFabricReact.groupedListSectionMod
 
 import slinky.core.TagMod
 import typingsSlinky.officeUiFabricReact.AnonCallback
-import typingsSlinky.officeUiFabricReact.IClassNamesIGroupedListSt
 import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropEvents
 import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropHelper
 import typingsSlinky.officeUiFabricReact.groupFooterTypesMod.IGroupFooterProps
@@ -10,9 +9,11 @@ import typingsSlinky.officeUiFabricReact.groupHeaderTypesMod.IGroupHeaderProps
 import typingsSlinky.officeUiFabricReact.groupShowAllTypesMod.IGroupShowAllProps
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroup
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroupRenderProps
+import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroupedListStyles
 import typingsSlinky.officeUiFabricReact.listTypesMod.IListProps
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
 import typingsSlinky.react.mod.ClassAttributes
+import typingsSlinky.uifabricMergeStyles.istylesetMod.IProcessedStyleSet
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
 import typingsSlinky.uifabricUtilities.selectionTypesMod.ISelection
@@ -48,7 +49,7 @@ trait IGroupedListSectionProps extends ClassAttributes[GroupedListSection] {
   /** Optional override properties to render groups. */
   var groupProps: js.UndefOr[IGroupRenderProps] = js.native
   /** GroupedList resolved class names */
-  var groupedListClassNames: js.UndefOr[IClassNamesIGroupedListSt] = js.native
+  var groupedListClassNames: js.UndefOr[IProcessedStyleSet[IGroupedListStyles]] = js.native
   /** Stores parent group's children. */
   var groups: js.UndefOr[js.Array[IGroup]] = js.native
   /** Information to pass in to the group header. */
@@ -66,7 +67,8 @@ trait IGroupedListSectionProps extends ClassAttributes[GroupedListSection] {
   /**
     * Optional callback to determine whether the list should be rendered in full, or virtualized.
     * Virtualization will add and remove pages of items as the user scrolls them into the visible range.
-    * This benefits larger list scenarios by reducing the DOM on the screen, but can negatively affect performance for smaller lists.
+    * This benefits larger list scenarios by reducing the DOM on the screen, but can negatively affect performance for
+    * smaller lists.
     * The default implementation will virtualize when this callback is not provided.
     */
   var onShouldVirtualize: js.UndefOr[js.Function1[/* props */ IListProps[_], Boolean]] = js.native

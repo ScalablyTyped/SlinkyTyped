@@ -22,14 +22,41 @@ trait DataSourceToIndexFieldMapping extends js.Object {
 
 object DataSourceToIndexFieldMapping {
   @scala.inline
-  def apply(
-    DataSourceFieldName: DataSourceFieldName,
-    IndexFieldName: IndexFieldName,
-    DateFieldFormat: DataSourceDateFieldFormat = null
-  ): DataSourceToIndexFieldMapping = {
+  def apply(DataSourceFieldName: DataSourceFieldName, IndexFieldName: IndexFieldName): DataSourceToIndexFieldMapping = {
     val __obj = js.Dynamic.literal(DataSourceFieldName = DataSourceFieldName.asInstanceOf[js.Any], IndexFieldName = IndexFieldName.asInstanceOf[js.Any])
-    if (DateFieldFormat != null) __obj.updateDynamic("DateFieldFormat")(DateFieldFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataSourceToIndexFieldMapping]
   }
+  @scala.inline
+  implicit class DataSourceToIndexFieldMappingOps[Self <: DataSourceToIndexFieldMapping] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataSourceFieldName(value: DataSourceFieldName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSourceFieldName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndexFieldName(value: IndexFieldName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexFieldName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDateFieldFormat(value: DataSourceDateFieldFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DateFieldFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateFieldFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DateFieldFormat")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

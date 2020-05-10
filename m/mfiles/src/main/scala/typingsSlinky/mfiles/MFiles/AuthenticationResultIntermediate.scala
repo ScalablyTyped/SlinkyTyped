@@ -2,19 +2,13 @@ package typingsSlinky.mfiles.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.mfiles.IAuthenticationResultIntermediate
-import typingsSlinky.mfiles.INamedValues
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.AuthenticationResultIntermediate")
 @js.native
-class AuthenticationResultIntermediate () extends IAuthenticationResultIntermediate {
-  /* CompleteClass */
-  override val AttemptIdentifier: String = js.native
-  /* CompleteClass */
-  override val AuthenticationData: INamedValues = js.native
-}
+class AuthenticationResultIntermediate () extends IAuthenticationResultIntermediate
 
 @JSGlobal("MFiles.AuthenticationResultIntermediate")
 @js.native

@@ -4,19 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CompletionErrorsEvent extends RealTimePullRequestEvent {
   /**
     * The error message associated with the completion error
     */
-  var errorMessage: String
+  var errorMessage: String = js.native
 }
 
 object CompletionErrorsEvent {
   @scala.inline
   def apply(errorMessage: String, eventId: String, pullRequestId: Double): CompletionErrorsEvent = {
     val __obj = js.Dynamic.literal(errorMessage = errorMessage.asInstanceOf[js.Any], eventId = eventId.asInstanceOf[js.Any], pullRequestId = pullRequestId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CompletionErrorsEvent]
   }
+  @scala.inline
+  implicit class CompletionErrorsEventOps[Self <: CompletionErrorsEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

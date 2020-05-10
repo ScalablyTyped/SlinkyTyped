@@ -18,10 +18,35 @@ trait ReplicaGlobalSecondaryIndex extends js.Object {
 
 object ReplicaGlobalSecondaryIndex {
   @scala.inline
-  def apply(IndexName: IndexName, ProvisionedThroughputOverride: ProvisionedThroughputOverride = null): ReplicaGlobalSecondaryIndex = {
+  def apply(IndexName: IndexName): ReplicaGlobalSecondaryIndex = {
     val __obj = js.Dynamic.literal(IndexName = IndexName.asInstanceOf[js.Any])
-    if (ProvisionedThroughputOverride != null) __obj.updateDynamic("ProvisionedThroughputOverride")(ProvisionedThroughputOverride.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplicaGlobalSecondaryIndex]
   }
+  @scala.inline
+  implicit class ReplicaGlobalSecondaryIndexOps[Self <: ReplicaGlobalSecondaryIndex] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIndexName(value: IndexName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProvisionedThroughputOverride(value: ProvisionedThroughputOverride): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughputOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedThroughputOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughputOverride")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

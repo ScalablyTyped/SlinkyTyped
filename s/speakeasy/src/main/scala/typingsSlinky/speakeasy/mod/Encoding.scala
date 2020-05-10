@@ -14,14 +14,12 @@ trait Encoding extends js.Object
 
 object Encoding {
   @scala.inline
-  def ascii: typingsSlinky.speakeasy.speakeasyStrings.ascii = this.cast("ascii")
+  def ascii: typingsSlinky.speakeasy.speakeasyStrings.ascii = "ascii".asInstanceOf[typingsSlinky.speakeasy.speakeasyStrings.ascii]
   @scala.inline
-  def base32: typingsSlinky.speakeasy.speakeasyStrings.base32 = this.cast("base32")
+  def base32: typingsSlinky.speakeasy.speakeasyStrings.base32 = "base32".asInstanceOf[typingsSlinky.speakeasy.speakeasyStrings.base32]
   @scala.inline
-  def base64: typingsSlinky.speakeasy.speakeasyStrings.base64 = this.cast("base64")
+  def base64: typingsSlinky.speakeasy.speakeasyStrings.base64 = "base64".asInstanceOf[typingsSlinky.speakeasy.speakeasyStrings.base64]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def hex: typingsSlinky.speakeasy.speakeasyStrings.hex = this.cast("hex")
+  def hex: typingsSlinky.speakeasy.speakeasyStrings.hex = "hex".asInstanceOf[typingsSlinky.speakeasy.speakeasyStrings.hex]
 }
 

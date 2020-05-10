@@ -19,24 +19,22 @@ trait PositionType extends js.Object
 
 object PositionType {
   @scala.inline
-  def bottom: typingsSlinky.cypress.cypressStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.cypress.cypressStrings.bottom = "bottom".asInstanceOf[typingsSlinky.cypress.cypressStrings.bottom]
   @scala.inline
-  def bottomLeft: typingsSlinky.cypress.cypressStrings.bottomLeft = this.cast("bottomLeft")
+  def bottomLeft: typingsSlinky.cypress.cypressStrings.bottomLeft = "bottomLeft".asInstanceOf[typingsSlinky.cypress.cypressStrings.bottomLeft]
   @scala.inline
-  def bottomRight: typingsSlinky.cypress.cypressStrings.bottomRight = this.cast("bottomRight")
+  def bottomRight: typingsSlinky.cypress.cypressStrings.bottomRight = "bottomRight".asInstanceOf[typingsSlinky.cypress.cypressStrings.bottomRight]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.cypress.cypressStrings.center = "center".asInstanceOf[typingsSlinky.cypress.cypressStrings.center]
   @scala.inline
-  def center: typingsSlinky.cypress.cypressStrings.center = this.cast("center")
+  def left: typingsSlinky.cypress.cypressStrings.left = "left".asInstanceOf[typingsSlinky.cypress.cypressStrings.left]
   @scala.inline
-  def left: typingsSlinky.cypress.cypressStrings.left = this.cast("left")
+  def right: typingsSlinky.cypress.cypressStrings.right = "right".asInstanceOf[typingsSlinky.cypress.cypressStrings.right]
   @scala.inline
-  def right: typingsSlinky.cypress.cypressStrings.right = this.cast("right")
+  def top: typingsSlinky.cypress.cypressStrings.top = "top".asInstanceOf[typingsSlinky.cypress.cypressStrings.top]
   @scala.inline
-  def top: typingsSlinky.cypress.cypressStrings.top = this.cast("top")
+  def topLeft: typingsSlinky.cypress.cypressStrings.topLeft = "topLeft".asInstanceOf[typingsSlinky.cypress.cypressStrings.topLeft]
   @scala.inline
-  def topLeft: typingsSlinky.cypress.cypressStrings.topLeft = this.cast("topLeft")
-  @scala.inline
-  def topRight: typingsSlinky.cypress.cypressStrings.topRight = this.cast("topRight")
+  def topRight: typingsSlinky.cypress.cypressStrings.topRight = "topRight".asInstanceOf[typingsSlinky.cypress.cypressStrings.topRight]
 }
 

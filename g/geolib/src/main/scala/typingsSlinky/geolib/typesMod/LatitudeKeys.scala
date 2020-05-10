@@ -13,12 +13,10 @@ trait LatitudeKeys extends js.Object
 
 object LatitudeKeys {
   @scala.inline
-  def `1`: typingsSlinky.geolib.geolibNumbers.`1` = this.cast(1)
+  def `1`: typingsSlinky.geolib.geolibNumbers.`1` = 1.asInstanceOf[typingsSlinky.geolib.geolibNumbers.`1`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def lat: typingsSlinky.geolib.geolibStrings.lat = "lat".asInstanceOf[typingsSlinky.geolib.geolibStrings.lat]
   @scala.inline
-  def lat: typingsSlinky.geolib.geolibStrings.lat = this.cast("lat")
-  @scala.inline
-  def latitude: typingsSlinky.geolib.geolibStrings.latitude = this.cast("latitude")
+  def latitude: typingsSlinky.geolib.geolibStrings.latitude = "latitude".asInstanceOf[typingsSlinky.geolib.geolibStrings.latitude]
 }
 

@@ -1,45 +1,49 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdStrings.alternate
 import typingsSlinky.antd.antdStrings.left
 import typingsSlinky.antd.antdStrings.right
 import typingsSlinky.antd.timelineMod.default
 import typingsSlinky.antd.timelineTimelineMod.TimelineProps
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Timeline
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Timeline {
   @JSImport("antd/lib/timeline", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    mode: left | alternate | right = null,
-    pending: TagMod[Any] = null,
-    pendingDot: TagMod[Any] = null,
-    prefixCls: String = null,
-    reverse: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (pending != null) __obj.updateDynamic("pending")(pending.asInstanceOf[js.Any])
-    if (pendingDot != null) __obj.updateDynamic("pendingDot")(pendingDot.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mode(value: left | alternate | right): this.type = set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pendingReactElement(value: ReactElement): this.type = set("pending", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pending(value: TagMod[Any]): this.type = set("pending", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pendingDotReactElement(value: ReactElement): this.type = set("pendingDot", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pendingDot(value: TagMod[Any]): this.type = set("pendingDot", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def reverse(value: Boolean): this.type = set("reverse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.timelineMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TimelineProps
+  
+  def withProps(p: TimelineProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Timeline.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

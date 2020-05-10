@@ -33,7 +33,7 @@ class SymEncryptedIntegrityProtected () extends js.Object {
     * @param streaming Whether to read this.encrypted as a stream
     * @returns
     */
-  def decrypt(sessionKeyAlgorithm: String, key: scala.scalajs.js.typedarray.Uint8Array, streaming: Boolean): js.Promise[Boolean] = js.native
+  def decrypt(sessionKeyAlgorithm: String, key: js.typedarray.Uint8Array, streaming: Boolean): js.Promise[Boolean] = js.native
   /**
     * Encrypt the payload in the packet.
     * @param sessionKeyAlgorithm The selected symmetric encryption algorithm to be used e.g. 'aes128'
@@ -41,6 +41,6 @@ class SymEncryptedIntegrityProtected () extends js.Object {
     * @param streaming Whether to set this.encrypted to a stream
     * @returns
     */
-  def encrypt(sessionKeyAlgorithm: String, key: scala.scalajs.js.typedarray.Uint8Array, streaming: Boolean): js.Promise[Boolean] = js.native
+  def encrypt(sessionKeyAlgorithm: String, key: js.typedarray.Uint8Array, streaming: Boolean): js.Promise[Boolean] = js.native
 }
 

@@ -1,227 +1,271 @@
 package typingsSlinky.vegaTypings.legendMod
 
 import typingsSlinky.vegaTypings.axisMod.FormatType
-import typingsSlinky.vegaTypings.axisMod.LabelOverlap
-import typingsSlinky.vegaTypings.axisMod.TickCount
 import typingsSlinky.vegaTypings.axisMod.TimeFormatSpecifier
 import typingsSlinky.vegaTypings.encodeMod.Orientation
 import typingsSlinky.vegaTypings.encodeMod.Text
-import typingsSlinky.vegaTypings.layoutMod.LayoutAlign
 import typingsSlinky.vegaTypings.signalMod.SignalRef
-import typingsSlinky.vegaTypings.valuesMod.AlignValue
-import typingsSlinky.vegaTypings.valuesMod.AnchorValue
-import typingsSlinky.vegaTypings.valuesMod.ColorValue
-import typingsSlinky.vegaTypings.valuesMod.DashArrayValue
-import typingsSlinky.vegaTypings.valuesMod.FontStyleValue
-import typingsSlinky.vegaTypings.valuesMod.FontWeightValue
-import typingsSlinky.vegaTypings.valuesMod.NumberValue
-import typingsSlinky.vegaTypings.valuesMod.OrientValue
-import typingsSlinky.vegaTypings.valuesMod.StringValue
-import typingsSlinky.vegaTypings.valuesMod.SymbolShapeValue
-import typingsSlinky.vegaTypings.valuesMod.TextBaselineValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Legend extends BaseLegend {
   /**
     * The direction of the legend, one of `"vertical"` (default) or `"horizontal"`.
     *
     * __Default value:__ `"vertical"`
     */
-  var direction: js.UndefOr[Orientation] = js.undefined
+  var direction: js.UndefOr[Orientation] = js.native
   /**
     * Mark definitions for custom legend encoding.
     */
-  var encode: js.UndefOr[LegendEncode] = js.undefined
-  var fill: js.UndefOr[String] = js.undefined
+  var encode: js.UndefOr[LegendEncode] = js.native
+  var fill: js.UndefOr[String] = js.native
   /**
     * The format specifier pattern for legend labels. For numerical values, must be a legal [d3-format](https://github.com/d3/d3-format#locale_format) specifier. For date-time values, must be a legal [d3-time-format](https://github.com/d3/d3-time-format#locale_format) specifier or multi-format object.
     */
-  var format: js.UndefOr[String | TimeFormatSpecifier | SignalRef] = js.undefined
+  var format: js.UndefOr[String | TimeFormatSpecifier | SignalRef] = js.native
   /**
     * The format type for legend labels (number, time, or utc).
     */
-  var formatType: js.UndefOr[FormatType | SignalRef] = js.undefined
-  var opacity: js.UndefOr[String] = js.undefined
-  var shape: js.UndefOr[String] = js.undefined
-  var size: js.UndefOr[String] = js.undefined
-  var stroke: js.UndefOr[String] = js.undefined
-  var strokeDash: js.UndefOr[String] = js.undefined
-  var strokeWidth: js.UndefOr[String] = js.undefined
+  var formatType: js.UndefOr[FormatType | SignalRef] = js.native
+  var opacity: js.UndefOr[String] = js.native
+  var shape: js.UndefOr[String] = js.native
+  var size: js.UndefOr[String] = js.native
+  var stroke: js.UndefOr[String] = js.native
+  var strokeDash: js.UndefOr[String] = js.native
+  var strokeWidth: js.UndefOr[String] = js.native
   /**
     * The minimum desired step between tick values for quantitative legends, in terms of scale domain values. For example, a value of `1` indicates that ticks should not be less than 1 unit apart. If `tickMinStep` is specified, the `tickCount` value will be adjusted, if necessary, to enforce the minimum step value.
     */
-  var tickMinStep: js.UndefOr[Double | SignalRef] = js.undefined
+  var tickMinStep: js.UndefOr[Double | SignalRef] = js.native
   /**
     * The title for the legend.
     */
-  var title: js.UndefOr[Text | SignalRef] = js.undefined
+  var title: js.UndefOr[Text | SignalRef] = js.native
   /**
     * The type of legend to include. One of `"symbol"` for discrete symbol legends, or `"gradient"` for a continuous color gradient. If gradient is used only the fill or stroke scale parameters are considered. If unspecified, the type will be inferred based on the scale parameters used and their backing scale types.
     */
-  var `type`: js.UndefOr[LegendType] = js.undefined
+  var `type`: js.UndefOr[LegendType] = js.native
   /**
     * Explicitly set the visible legend values.
     */
-  var values: js.UndefOr[js.Array[_] | SignalRef] = js.undefined
+  var values: js.UndefOr[js.Array[_] | SignalRef] = js.native
   /**
     * The integer z-index indicating the layering of the legend group relative to other axis, mark, and legend groups.
     *
     * @TJS-type integer
     * @minimum 0
     */
-  var zindex: js.UndefOr[Double] = js.undefined
+  var zindex: js.UndefOr[Double] = js.native
 }
 
 object Legend {
   @scala.inline
-  def apply(
-    clipHeight: Double | SignalRef = null,
-    columnPadding: Double | SignalRef = null,
-    columns: Double | SignalRef = null,
-    cornerRadius: NumberValue = null,
-    direction: Orientation = null,
-    encode: LegendEncode = null,
-    fill: String = null,
-    fillColor: ColorValue = null,
-    format: String | TimeFormatSpecifier | SignalRef = null,
-    formatType: FormatType | SignalRef = null,
-    gradientLength: Double | SignalRef = null,
-    gradientOpacity: NumberValue = null,
-    gradientStrokeColor: ColorValue = null,
-    gradientStrokeWidth: NumberValue = null,
-    gradientThickness: Double | SignalRef = null,
-    gridAlign: LayoutAlign | SignalRef = null,
-    labelAlign: AlignValue = null,
-    labelBaseline: TextBaselineValue = null,
-    labelColor: ColorValue = null,
-    labelFont: StringValue = null,
-    labelFontSize: NumberValue = null,
-    labelFontStyle: FontStyleValue = null,
-    labelFontWeight: FontWeightValue = null,
-    labelLimit: NumberValue = null,
-    labelOffset: NumberValue = null,
-    labelOpacity: NumberValue = null,
-    labelOverlap: LabelOverlap | SignalRef = null,
-    labelPadding: NumberValue = null,
-    labelSeparation: Double | SignalRef = null,
-    legendX: NumberValue = null,
-    legendY: NumberValue = null,
-    offset: NumberValue = null,
-    opacity: String = null,
-    orient: LegendOrient | SignalRef = null,
-    padding: NumberValue = null,
-    rowPadding: Double | SignalRef = null,
-    shape: String = null,
-    size: String = null,
-    stroke: String = null,
-    strokeColor: ColorValue = null,
-    strokeDash: String = null,
-    strokeWidth: String = null,
-    symbolDash: DashArrayValue = null,
-    symbolDashOffset: NumberValue = null,
-    symbolFillColor: ColorValue = null,
-    symbolLimit: NumberValue = null,
-    symbolOffset: NumberValue = null,
-    symbolOpacity: NumberValue = null,
-    symbolSize: NumberValue = null,
-    symbolStrokeColor: ColorValue = null,
-    symbolStrokeWidth: NumberValue = null,
-    symbolType: SymbolShapeValue = null,
-    tickCount: TickCount = null,
-    tickMinStep: Double | SignalRef = null,
-    title: Text | SignalRef = null,
-    titleAlign: AlignValue = null,
-    titleAnchor: AnchorValue = null,
-    titleBaseline: TextBaselineValue = null,
-    titleColor: ColorValue = null,
-    titleFont: StringValue = null,
-    titleFontSize: NumberValue = null,
-    titleFontStyle: FontStyleValue = null,
-    titleFontWeight: FontWeightValue = null,
-    titleLimit: NumberValue = null,
-    titleLineHeight: NumberValue = null,
-    titleOpacity: NumberValue = null,
-    titleOrient: OrientValue = null,
-    titlePadding: NumberValue = null,
-    `type`: LegendType = null,
-    values: js.Array[_] | SignalRef = null,
-    zindex: Int | Double = null
-  ): Legend = {
+  def apply(): Legend = {
     val __obj = js.Dynamic.literal()
-    if (clipHeight != null) __obj.updateDynamic("clipHeight")(clipHeight.asInstanceOf[js.Any])
-    if (columnPadding != null) __obj.updateDynamic("columnPadding")(columnPadding.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (cornerRadius != null) __obj.updateDynamic("cornerRadius")(cornerRadius.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (encode != null) __obj.updateDynamic("encode")(encode.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (formatType != null) __obj.updateDynamic("formatType")(formatType.asInstanceOf[js.Any])
-    if (gradientLength != null) __obj.updateDynamic("gradientLength")(gradientLength.asInstanceOf[js.Any])
-    if (gradientOpacity != null) __obj.updateDynamic("gradientOpacity")(gradientOpacity.asInstanceOf[js.Any])
-    if (gradientStrokeColor != null) __obj.updateDynamic("gradientStrokeColor")(gradientStrokeColor.asInstanceOf[js.Any])
-    if (gradientStrokeWidth != null) __obj.updateDynamic("gradientStrokeWidth")(gradientStrokeWidth.asInstanceOf[js.Any])
-    if (gradientThickness != null) __obj.updateDynamic("gradientThickness")(gradientThickness.asInstanceOf[js.Any])
-    if (gridAlign != null) __obj.updateDynamic("gridAlign")(gridAlign.asInstanceOf[js.Any])
-    if (labelAlign != null) __obj.updateDynamic("labelAlign")(labelAlign.asInstanceOf[js.Any])
-    if (labelBaseline != null) __obj.updateDynamic("labelBaseline")(labelBaseline.asInstanceOf[js.Any])
-    if (labelColor != null) __obj.updateDynamic("labelColor")(labelColor.asInstanceOf[js.Any])
-    if (labelFont != null) __obj.updateDynamic("labelFont")(labelFont.asInstanceOf[js.Any])
-    if (labelFontSize != null) __obj.updateDynamic("labelFontSize")(labelFontSize.asInstanceOf[js.Any])
-    if (labelFontStyle != null) __obj.updateDynamic("labelFontStyle")(labelFontStyle.asInstanceOf[js.Any])
-    if (labelFontWeight != null) __obj.updateDynamic("labelFontWeight")(labelFontWeight.asInstanceOf[js.Any])
-    if (labelLimit != null) __obj.updateDynamic("labelLimit")(labelLimit.asInstanceOf[js.Any])
-    if (labelOffset != null) __obj.updateDynamic("labelOffset")(labelOffset.asInstanceOf[js.Any])
-    if (labelOpacity != null) __obj.updateDynamic("labelOpacity")(labelOpacity.asInstanceOf[js.Any])
-    if (labelOverlap != null) __obj.updateDynamic("labelOverlap")(labelOverlap.asInstanceOf[js.Any])
-    if (labelPadding != null) __obj.updateDynamic("labelPadding")(labelPadding.asInstanceOf[js.Any])
-    if (labelSeparation != null) __obj.updateDynamic("labelSeparation")(labelSeparation.asInstanceOf[js.Any])
-    if (legendX != null) __obj.updateDynamic("legendX")(legendX.asInstanceOf[js.Any])
-    if (legendY != null) __obj.updateDynamic("legendY")(legendY.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (orient != null) __obj.updateDynamic("orient")(orient.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (rowPadding != null) __obj.updateDynamic("rowPadding")(rowPadding.asInstanceOf[js.Any])
-    if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
-    if (strokeDash != null) __obj.updateDynamic("strokeDash")(strokeDash.asInstanceOf[js.Any])
-    if (strokeWidth != null) __obj.updateDynamic("strokeWidth")(strokeWidth.asInstanceOf[js.Any])
-    if (symbolDash != null) __obj.updateDynamic("symbolDash")(symbolDash.asInstanceOf[js.Any])
-    if (symbolDashOffset != null) __obj.updateDynamic("symbolDashOffset")(symbolDashOffset.asInstanceOf[js.Any])
-    if (symbolFillColor != null) __obj.updateDynamic("symbolFillColor")(symbolFillColor.asInstanceOf[js.Any])
-    if (symbolLimit != null) __obj.updateDynamic("symbolLimit")(symbolLimit.asInstanceOf[js.Any])
-    if (symbolOffset != null) __obj.updateDynamic("symbolOffset")(symbolOffset.asInstanceOf[js.Any])
-    if (symbolOpacity != null) __obj.updateDynamic("symbolOpacity")(symbolOpacity.asInstanceOf[js.Any])
-    if (symbolSize != null) __obj.updateDynamic("symbolSize")(symbolSize.asInstanceOf[js.Any])
-    if (symbolStrokeColor != null) __obj.updateDynamic("symbolStrokeColor")(symbolStrokeColor.asInstanceOf[js.Any])
-    if (symbolStrokeWidth != null) __obj.updateDynamic("symbolStrokeWidth")(symbolStrokeWidth.asInstanceOf[js.Any])
-    if (symbolType != null) __obj.updateDynamic("symbolType")(symbolType.asInstanceOf[js.Any])
-    if (tickCount != null) __obj.updateDynamic("tickCount")(tickCount.asInstanceOf[js.Any])
-    if (tickMinStep != null) __obj.updateDynamic("tickMinStep")(tickMinStep.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titleAlign != null) __obj.updateDynamic("titleAlign")(titleAlign.asInstanceOf[js.Any])
-    if (titleAnchor != null) __obj.updateDynamic("titleAnchor")(titleAnchor.asInstanceOf[js.Any])
-    if (titleBaseline != null) __obj.updateDynamic("titleBaseline")(titleBaseline.asInstanceOf[js.Any])
-    if (titleColor != null) __obj.updateDynamic("titleColor")(titleColor.asInstanceOf[js.Any])
-    if (titleFont != null) __obj.updateDynamic("titleFont")(titleFont.asInstanceOf[js.Any])
-    if (titleFontSize != null) __obj.updateDynamic("titleFontSize")(titleFontSize.asInstanceOf[js.Any])
-    if (titleFontStyle != null) __obj.updateDynamic("titleFontStyle")(titleFontStyle.asInstanceOf[js.Any])
-    if (titleFontWeight != null) __obj.updateDynamic("titleFontWeight")(titleFontWeight.asInstanceOf[js.Any])
-    if (titleLimit != null) __obj.updateDynamic("titleLimit")(titleLimit.asInstanceOf[js.Any])
-    if (titleLineHeight != null) __obj.updateDynamic("titleLineHeight")(titleLineHeight.asInstanceOf[js.Any])
-    if (titleOpacity != null) __obj.updateDynamic("titleOpacity")(titleOpacity.asInstanceOf[js.Any])
-    if (titleOrient != null) __obj.updateDynamic("titleOrient")(titleOrient.asInstanceOf[js.Any])
-    if (titlePadding != null) __obj.updateDynamic("titlePadding")(titlePadding.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
-    if (zindex != null) __obj.updateDynamic("zindex")(zindex.asInstanceOf[js.Any])
     __obj.asInstanceOf[Legend]
   }
+  @scala.inline
+  implicit class LegendOps[Self <: Legend] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirection(value: Orientation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncode(value: LegendEncode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFill(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: String | TimeFormatSpecifier | SignalRef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatType(value: FormatType | SignalRef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShape(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStroke(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStroke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeDash(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeDash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeDash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeDash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickMinStep(value: Double | SignalRef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickMinStep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickMinStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickMinStep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: Text | SignalRef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: LegendType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValues(value: js.Array[_] | SignalRef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZindex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zindex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZindex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zindex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,12 +22,53 @@ trait BrokerInstance extends js.Object {
 
 object BrokerInstance {
   @scala.inline
-  def apply(ConsoleURL: string = null, Endpoints: listOfString = null, IpAddress: string = null): BrokerInstance = {
+  def apply(): BrokerInstance = {
     val __obj = js.Dynamic.literal()
-    if (ConsoleURL != null) __obj.updateDynamic("ConsoleURL")(ConsoleURL.asInstanceOf[js.Any])
-    if (Endpoints != null) __obj.updateDynamic("Endpoints")(Endpoints.asInstanceOf[js.Any])
-    if (IpAddress != null) __obj.updateDynamic("IpAddress")(IpAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[BrokerInstance]
   }
+  @scala.inline
+  implicit class BrokerInstanceOps[Self <: BrokerInstance] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConsoleURL(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsoleURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConsoleURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsoleURL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpoints(value: listOfString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpAddress(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddress")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

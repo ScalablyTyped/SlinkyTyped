@@ -12,10 +12,8 @@ trait UploadType extends js.Object
 
 object UploadType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def drag: typingsSlinky.antd.antdStrings.drag = "drag".asInstanceOf[typingsSlinky.antd.antdStrings.drag]
   @scala.inline
-  def drag: typingsSlinky.antd.antdStrings.drag = this.cast("drag")
-  @scala.inline
-  def select: typingsSlinky.antd.antdStrings.select = this.cast("select")
+  def select: typingsSlinky.antd.antdStrings.select = "select".asInstanceOf[typingsSlinky.antd.antdStrings.select]
 }
 

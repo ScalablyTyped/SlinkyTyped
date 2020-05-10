@@ -9,22 +9,18 @@ import scala.scalajs.js.annotation._
 @JSImport("libsodium-wrappers-sumo", "crypto_stream_chacha20")
 @js.native
 object cryptoStreamChacha20 extends js.Object {
+  def apply(outLength: Double, key: js.typedarray.Uint8Array, nonce: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
   def apply(
     outLength: Double,
-    key: scala.scalajs.js.typedarray.Uint8Array,
-    nonce: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def apply(
-    outLength: Double,
-    key: scala.scalajs.js.typedarray.Uint8Array,
-    nonce: scala.scalajs.js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
+    nonce: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
     outLength: Double,
-    key: scala.scalajs.js.typedarray.Uint8Array,
-    nonce: scala.scalajs.js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
+    nonce: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
 }
 

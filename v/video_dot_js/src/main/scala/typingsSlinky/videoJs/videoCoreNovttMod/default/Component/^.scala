@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.videoJs.AnonGetTagSettings
 import typingsSlinky.videoJs.AnonInstantiable
 import typingsSlinky.videoJs.AnonInstantiableClickableComponent
 import typingsSlinky.videoJs.AnonInstantiableMenu
@@ -15,6 +14,7 @@ import typingsSlinky.videoJs.AnonInstantiableMouseTimeDisplay
 import typingsSlinky.videoJs.AnonInstantiableSpacer
 import typingsSlinky.videoJs.AnonInstantiableTimeToolTip
 import typingsSlinky.videoJs.TypeofComponent
+import typingsSlinky.videoJs.TypeofPlayer
 import typingsSlinky.videoJs.mod.videojs.Component.ReadyCallback
 import typingsSlinky.videoJs.mod.videojs.ComponentOptions
 import typingsSlinky.videoJs.mod.videojs.Player
@@ -131,7 +131,7 @@ Instantiable1[/* player */ Player, typingsSlinky.videoJs.mod.videojs.Component])
   @JSName("getComponent")
   def getComponent_MouseTimeDisplay(name: MouseTimeDisplay): AnonInstantiableMouseTimeDisplay = js.native
   @JSName("getComponent")
-  def getComponent_Player(name: typingsSlinky.videoJs.videoJsStrings.Player): AnonGetTagSettings = js.native
+  def getComponent_Player(name: typingsSlinky.videoJs.videoJsStrings.Player): TypeofPlayer = js.native
   @JSName("getComponent")
   def getComponent_Spacer(name: Spacer): AnonInstantiableSpacer = js.native
   @JSName("getComponent")
@@ -153,7 +153,7 @@ Instantiable1[/* player */ Player, typingsSlinky.videoJs.mod.videojs.Component])
   @JSName("getComponent")
   def getComponent_mouseTimeDisplay(name: mouseTimeDisplay_): AnonInstantiableMouseTimeDisplay = js.native
   @JSName("getComponent")
-  def getComponent_player(name: player_): AnonGetTagSettings = js.native
+  def getComponent_player(name: player_): TypeofPlayer = js.native
   @JSName("getComponent")
   def getComponent_spacer(name: spacer_): AnonInstantiableSpacer = js.native
   @JSName("getComponent")

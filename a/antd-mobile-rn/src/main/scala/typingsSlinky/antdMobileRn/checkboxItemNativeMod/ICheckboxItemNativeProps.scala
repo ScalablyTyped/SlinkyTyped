@@ -1,8 +1,6 @@
 package typingsSlinky.antdMobileRn.checkboxItemNativeMod
 
-import slinky.core.TagMod
 import typingsSlinky.antdMobileRn.checkboxPropsTypeMod.CheckboxItemPropsType
-import typingsSlinky.antdMobileRn.checkboxPropsTypeMod.OnChangeParams
 import typingsSlinky.antdMobileRn.checkboxStyleIndexNativeMod.ICheckboxStyle
 import typingsSlinky.reactNative.mod.ImageStyle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -11,38 +9,74 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ICheckboxItemNativeProps extends CheckboxItemPropsType {
-  var checkboxStyle: js.UndefOr[StyleProp[ImageStyle]] = js.undefined
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  var styles: js.UndefOr[ICheckboxStyle] = js.undefined
+  var checkboxStyle: js.UndefOr[StyleProp[ImageStyle]] = js.native
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var styles: js.UndefOr[ICheckboxStyle] = js.native
 }
 
 object ICheckboxItemNativeProps {
   @scala.inline
-  def apply(
-    checkboxStyle: StyleProp[ImageStyle] = null,
-    checked: js.UndefOr[Boolean] = js.undefined,
-    defaultChecked: js.UndefOr[Boolean] = js.undefined,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    extra: TagMod[Any] = null,
-    onChange: /* params */ OnChangeParams => Unit = null,
-    onClick: /* e */ js.UndefOr[js.Any] => Unit = null,
-    prefixCls: String = null,
-    style: StyleProp[ViewStyle] = null,
-    styles: ICheckboxStyle = null
-  ): ICheckboxItemNativeProps = {
+  def apply(): ICheckboxItemNativeProps = {
     val __obj = js.Dynamic.literal()
-    if (checkboxStyle != null) __obj.updateDynamic("checkboxStyle")(checkboxStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(checked)) __obj.updateDynamic("checked")(checked.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultChecked)) __obj.updateDynamic("defaultChecked")(defaultChecked.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICheckboxItemNativeProps]
   }
+  @scala.inline
+  implicit class ICheckboxItemNativePropsOps[Self <: ICheckboxItemNativeProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCheckboxStyle(value: StyleProp[ImageStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckboxStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckboxStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
+        ret
+    }
+    @scala.inline
+    def withStyles(value: ICheckboxStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

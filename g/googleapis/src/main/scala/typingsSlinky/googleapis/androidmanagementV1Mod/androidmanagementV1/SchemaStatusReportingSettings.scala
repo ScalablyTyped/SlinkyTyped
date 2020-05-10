@@ -45,26 +45,113 @@ trait SchemaStatusReportingSettings extends js.Object {
 
 object SchemaStatusReportingSettings {
   @scala.inline
-  def apply(
-    applicationReportsEnabled: js.UndefOr[Boolean] = js.undefined,
-    deviceSettingsEnabled: js.UndefOr[Boolean] = js.undefined,
-    displayInfoEnabled: js.UndefOr[Boolean] = js.undefined,
-    hardwareStatusEnabled: js.UndefOr[Boolean] = js.undefined,
-    memoryInfoEnabled: js.UndefOr[Boolean] = js.undefined,
-    networkInfoEnabled: js.UndefOr[Boolean] = js.undefined,
-    powerManagementEventsEnabled: js.UndefOr[Boolean] = js.undefined,
-    softwareInfoEnabled: js.UndefOr[Boolean] = js.undefined
-  ): SchemaStatusReportingSettings = {
+  def apply(): SchemaStatusReportingSettings = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(applicationReportsEnabled)) __obj.updateDynamic("applicationReportsEnabled")(applicationReportsEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(deviceSettingsEnabled)) __obj.updateDynamic("deviceSettingsEnabled")(deviceSettingsEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(displayInfoEnabled)) __obj.updateDynamic("displayInfoEnabled")(displayInfoEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(hardwareStatusEnabled)) __obj.updateDynamic("hardwareStatusEnabled")(hardwareStatusEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(memoryInfoEnabled)) __obj.updateDynamic("memoryInfoEnabled")(memoryInfoEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(networkInfoEnabled)) __obj.updateDynamic("networkInfoEnabled")(networkInfoEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(powerManagementEventsEnabled)) __obj.updateDynamic("powerManagementEventsEnabled")(powerManagementEventsEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(softwareInfoEnabled)) __obj.updateDynamic("softwareInfoEnabled")(softwareInfoEnabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStatusReportingSettings]
   }
+  @scala.inline
+  implicit class SchemaStatusReportingSettingsOps[Self <: SchemaStatusReportingSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationReportsEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationReportsEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationReportsEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationReportsEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceSettingsEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceSettingsEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceSettingsEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceSettingsEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayInfoEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayInfoEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayInfoEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayInfoEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHardwareStatusEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hardwareStatusEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHardwareStatusEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hardwareStatusEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMemoryInfoEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memoryInfoEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMemoryInfoEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memoryInfoEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkInfoEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInfoEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkInfoEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInfoEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPowerManagementEventsEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("powerManagementEventsEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPowerManagementEventsEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("powerManagementEventsEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSoftwareInfoEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("softwareInfoEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSoftwareInfoEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("softwareInfoEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

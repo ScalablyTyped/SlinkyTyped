@@ -4,45 +4,103 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ActivePaneChangedEventUIParam extends js.Object {
   /**
   	 * Gets the active cell of the new active pane or null if there is no active pane.
   	 */
-  var activeCell: js.UndefOr[String] = js.undefined
+  var activeCell: js.UndefOr[String] = js.native
   /**
   	 * Gets the current active [pane](ig.spreadsheet.SpreadsheetPane).
   	 */
-  var newActivePane: js.UndefOr[js.Any] = js.undefined
+  var newActivePane: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets the previous active [pane](ig.spreadsheet.SpreadsheetPane).
   	 */
-  var oldActivePane: js.UndefOr[js.Any] = js.undefined
+  var oldActivePane: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets a reference to the spreadsheet widget.
   	 */
-  var owner: js.UndefOr[js.Any] = js.undefined
+  var owner: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets the current visible range of the new active pane or null if there is no active pane.
   	 */
-  var visibleRange: js.UndefOr[String] = js.undefined
+  var visibleRange: js.UndefOr[String] = js.native
 }
 
 object ActivePaneChangedEventUIParam {
   @scala.inline
-  def apply(
-    activeCell: String = null,
-    newActivePane: js.Any = null,
-    oldActivePane: js.Any = null,
-    owner: js.Any = null,
-    visibleRange: String = null
-  ): ActivePaneChangedEventUIParam = {
+  def apply(): ActivePaneChangedEventUIParam = {
     val __obj = js.Dynamic.literal()
-    if (activeCell != null) __obj.updateDynamic("activeCell")(activeCell.asInstanceOf[js.Any])
-    if (newActivePane != null) __obj.updateDynamic("newActivePane")(newActivePane.asInstanceOf[js.Any])
-    if (oldActivePane != null) __obj.updateDynamic("oldActivePane")(oldActivePane.asInstanceOf[js.Any])
-    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
-    if (visibleRange != null) __obj.updateDynamic("visibleRange")(visibleRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActivePaneChangedEventUIParam]
   }
+  @scala.inline
+  implicit class ActivePaneChangedEventUIParamOps[Self <: ActivePaneChangedEventUIParam] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActiveCell(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeCell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveCell: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeCell")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewActivePane(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newActivePane")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewActivePane: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newActivePane")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOldActivePane(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldActivePane")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOldActivePane: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldActivePane")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwner(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibleRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibleRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleRange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

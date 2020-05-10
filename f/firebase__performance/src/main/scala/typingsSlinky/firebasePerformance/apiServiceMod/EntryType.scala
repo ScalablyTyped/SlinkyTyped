@@ -16,18 +16,16 @@ trait EntryType extends js.Object
 
 object EntryType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def frame: typingsSlinky.firebasePerformance.firebasePerformanceStrings.frame = "frame".asInstanceOf[typingsSlinky.firebasePerformance.firebasePerformanceStrings.frame]
   @scala.inline
-  def frame: typingsSlinky.firebasePerformance.firebasePerformanceStrings.frame = this.cast("frame")
+  def mark: typingsSlinky.firebasePerformance.firebasePerformanceStrings.mark = "mark".asInstanceOf[typingsSlinky.firebasePerformance.firebasePerformanceStrings.mark]
   @scala.inline
-  def mark: typingsSlinky.firebasePerformance.firebasePerformanceStrings.mark = this.cast("mark")
+  def measure: typingsSlinky.firebasePerformance.firebasePerformanceStrings.measure = "measure".asInstanceOf[typingsSlinky.firebasePerformance.firebasePerformanceStrings.measure]
   @scala.inline
-  def measure: typingsSlinky.firebasePerformance.firebasePerformanceStrings.measure = this.cast("measure")
+  def navigation: typingsSlinky.firebasePerformance.firebasePerformanceStrings.navigation = "navigation".asInstanceOf[typingsSlinky.firebasePerformance.firebasePerformanceStrings.navigation]
   @scala.inline
-  def navigation: typingsSlinky.firebasePerformance.firebasePerformanceStrings.navigation = this.cast("navigation")
+  def paint: typingsSlinky.firebasePerformance.firebasePerformanceStrings.paint = "paint".asInstanceOf[typingsSlinky.firebasePerformance.firebasePerformanceStrings.paint]
   @scala.inline
-  def paint: typingsSlinky.firebasePerformance.firebasePerformanceStrings.paint = this.cast("paint")
-  @scala.inline
-  def resource: typingsSlinky.firebasePerformance.firebasePerformanceStrings.resource = this.cast("resource")
+  def resource: typingsSlinky.firebasePerformance.firebasePerformanceStrings.resource = "resource".asInstanceOf[typingsSlinky.firebasePerformance.firebasePerformanceStrings.resource]
 }
 

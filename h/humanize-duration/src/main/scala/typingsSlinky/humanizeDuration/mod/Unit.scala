@@ -18,22 +18,20 @@ trait Unit extends js.Object
 
 object Unit {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def d: typingsSlinky.humanizeDuration.humanizeDurationStrings.d = "d".asInstanceOf[typingsSlinky.humanizeDuration.humanizeDurationStrings.d]
   @scala.inline
-  def d: typingsSlinky.humanizeDuration.humanizeDurationStrings.d = this.cast("d")
+  def h: typingsSlinky.humanizeDuration.humanizeDurationStrings.h = "h".asInstanceOf[typingsSlinky.humanizeDuration.humanizeDurationStrings.h]
   @scala.inline
-  def h: typingsSlinky.humanizeDuration.humanizeDurationStrings.h = this.cast("h")
+  def m: typingsSlinky.humanizeDuration.humanizeDurationStrings.m = "m".asInstanceOf[typingsSlinky.humanizeDuration.humanizeDurationStrings.m]
   @scala.inline
-  def m: typingsSlinky.humanizeDuration.humanizeDurationStrings.m = this.cast("m")
+  def mo: typingsSlinky.humanizeDuration.humanizeDurationStrings.mo = "mo".asInstanceOf[typingsSlinky.humanizeDuration.humanizeDurationStrings.mo]
   @scala.inline
-  def mo: typingsSlinky.humanizeDuration.humanizeDurationStrings.mo = this.cast("mo")
+  def ms: typingsSlinky.humanizeDuration.humanizeDurationStrings.ms = "ms".asInstanceOf[typingsSlinky.humanizeDuration.humanizeDurationStrings.ms]
   @scala.inline
-  def ms: typingsSlinky.humanizeDuration.humanizeDurationStrings.ms = this.cast("ms")
+  def s: typingsSlinky.humanizeDuration.humanizeDurationStrings.s = "s".asInstanceOf[typingsSlinky.humanizeDuration.humanizeDurationStrings.s]
   @scala.inline
-  def s: typingsSlinky.humanizeDuration.humanizeDurationStrings.s = this.cast("s")
+  def w: typingsSlinky.humanizeDuration.humanizeDurationStrings.w = "w".asInstanceOf[typingsSlinky.humanizeDuration.humanizeDurationStrings.w]
   @scala.inline
-  def w: typingsSlinky.humanizeDuration.humanizeDurationStrings.w = this.cast("w")
-  @scala.inline
-  def y: typingsSlinky.humanizeDuration.humanizeDurationStrings.y = this.cast("y")
+  def y: typingsSlinky.humanizeDuration.humanizeDurationStrings.y = "y".asInstanceOf[typingsSlinky.humanizeDuration.humanizeDurationStrings.y]
 }
 

@@ -17,20 +17,18 @@ trait SvgElements extends js.Object
 
 object SvgElements {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def circle: typingsSlinky.svgIntersections.svgIntersectionsStrings.circle = "circle".asInstanceOf[typingsSlinky.svgIntersections.svgIntersectionsStrings.circle]
   @scala.inline
-  def circle: typingsSlinky.svgIntersections.svgIntersectionsStrings.circle = this.cast("circle")
+  def ellipse: typingsSlinky.svgIntersections.svgIntersectionsStrings.ellipse = "ellipse".asInstanceOf[typingsSlinky.svgIntersections.svgIntersectionsStrings.ellipse]
   @scala.inline
-  def ellipse: typingsSlinky.svgIntersections.svgIntersectionsStrings.ellipse = this.cast("ellipse")
+  def line: typingsSlinky.svgIntersections.svgIntersectionsStrings.line = "line".asInstanceOf[typingsSlinky.svgIntersections.svgIntersectionsStrings.line]
   @scala.inline
-  def line: typingsSlinky.svgIntersections.svgIntersectionsStrings.line = this.cast("line")
+  def path: typingsSlinky.svgIntersections.svgIntersectionsStrings.path = "path".asInstanceOf[typingsSlinky.svgIntersections.svgIntersectionsStrings.path]
   @scala.inline
-  def path: typingsSlinky.svgIntersections.svgIntersectionsStrings.path = this.cast("path")
+  def polygon: typingsSlinky.svgIntersections.svgIntersectionsStrings.polygon = "polygon".asInstanceOf[typingsSlinky.svgIntersections.svgIntersectionsStrings.polygon]
   @scala.inline
-  def polygon: typingsSlinky.svgIntersections.svgIntersectionsStrings.polygon = this.cast("polygon")
+  def polyline: typingsSlinky.svgIntersections.svgIntersectionsStrings.polyline = "polyline".asInstanceOf[typingsSlinky.svgIntersections.svgIntersectionsStrings.polyline]
   @scala.inline
-  def polyline: typingsSlinky.svgIntersections.svgIntersectionsStrings.polyline = this.cast("polyline")
-  @scala.inline
-  def rect: typingsSlinky.svgIntersections.svgIntersectionsStrings.rect = this.cast("rect")
+  def rect: typingsSlinky.svgIntersections.svgIntersectionsStrings.rect = "rect".asInstanceOf[typingsSlinky.svgIntersections.svgIntersectionsStrings.rect]
 }
 

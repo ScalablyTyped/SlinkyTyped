@@ -15,16 +15,14 @@ trait EventType extends js.Object
 
 object EventType {
   @scala.inline
-  def Spacechild_added: typingsSlinky.firebaseDatabase.firebaseDatabaseStrings.Spacechild_added = this.cast(" child_added")
+  def Spacechild_added: typingsSlinky.firebaseDatabase.firebaseDatabaseStrings.Spacechild_added = (" child_added").asInstanceOf[typingsSlinky.firebaseDatabase.firebaseDatabaseStrings.Spacechild_added]
   @scala.inline
-  def Spacechild_changed: typingsSlinky.firebaseDatabase.firebaseDatabaseStrings.Spacechild_changed = this.cast(" child_changed")
+  def Spacechild_changed: typingsSlinky.firebaseDatabase.firebaseDatabaseStrings.Spacechild_changed = (" child_changed").asInstanceOf[typingsSlinky.firebaseDatabase.firebaseDatabaseStrings.Spacechild_changed]
   @scala.inline
-  def Spacechild_moved: typingsSlinky.firebaseDatabase.firebaseDatabaseStrings.Spacechild_moved = this.cast(" child_moved")
+  def Spacechild_moved: typingsSlinky.firebaseDatabase.firebaseDatabaseStrings.Spacechild_moved = (" child_moved").asInstanceOf[typingsSlinky.firebaseDatabase.firebaseDatabaseStrings.Spacechild_moved]
   @scala.inline
-  def Spacechild_removed: typingsSlinky.firebaseDatabase.firebaseDatabaseStrings.Spacechild_removed = this.cast(" child_removed")
+  def Spacechild_removed: typingsSlinky.firebaseDatabase.firebaseDatabaseStrings.Spacechild_removed = (" child_removed").asInstanceOf[typingsSlinky.firebaseDatabase.firebaseDatabaseStrings.Spacechild_removed]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def value: typingsSlinky.firebaseDatabase.firebaseDatabaseStrings.value = this.cast("value")
+  def value: typingsSlinky.firebaseDatabase.firebaseDatabaseStrings.value = "value".asInstanceOf[typingsSlinky.firebaseDatabase.firebaseDatabaseStrings.value]
 }
 

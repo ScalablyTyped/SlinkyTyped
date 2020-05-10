@@ -22,11 +22,41 @@ trait SchemaPlacementsGenerateTagsResponse extends js.Object {
 
 object SchemaPlacementsGenerateTagsResponse {
   @scala.inline
-  def apply(kind: String = null, placementTags: js.Array[SchemaPlacementTag] = null): SchemaPlacementsGenerateTagsResponse = {
+  def apply(): SchemaPlacementsGenerateTagsResponse = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (placementTags != null) __obj.updateDynamic("placementTags")(placementTags.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPlacementsGenerateTagsResponse]
   }
+  @scala.inline
+  implicit class SchemaPlacementsGenerateTagsResponseOps[Self <: SchemaPlacementsGenerateTagsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacementTags(value: js.Array[SchemaPlacementTag]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placementTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacementTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placementTags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

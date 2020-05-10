@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBr extends js.Object {
-  var bl: js.UndefOr[Boolean] = js.undefined
-  var br: js.UndefOr[Boolean] = js.undefined
-  var mb: js.UndefOr[Boolean] = js.undefined
-  var ml: js.UndefOr[Boolean] = js.undefined
-  var mr: js.UndefOr[Boolean] = js.undefined
-  var mt: js.UndefOr[Boolean] = js.undefined
-  var mtr: js.UndefOr[Boolean] = js.undefined
-  var tl: js.UndefOr[Boolean] = js.undefined
-  var tr: js.UndefOr[Boolean] = js.undefined
+  var bl: js.UndefOr[Boolean] = js.native
+  var br: js.UndefOr[Boolean] = js.native
+  var mb: js.UndefOr[Boolean] = js.native
+  var ml: js.UndefOr[Boolean] = js.native
+  var mr: js.UndefOr[Boolean] = js.native
+  var mt: js.UndefOr[Boolean] = js.native
+  var mtr: js.UndefOr[Boolean] = js.native
+  var tl: js.UndefOr[Boolean] = js.native
+  var tr: js.UndefOr[Boolean] = js.native
 }
 
 object AnonBr {
   @scala.inline
-  def apply(
-    bl: js.UndefOr[Boolean] = js.undefined,
-    br: js.UndefOr[Boolean] = js.undefined,
-    mb: js.UndefOr[Boolean] = js.undefined,
-    ml: js.UndefOr[Boolean] = js.undefined,
-    mr: js.UndefOr[Boolean] = js.undefined,
-    mt: js.UndefOr[Boolean] = js.undefined,
-    mtr: js.UndefOr[Boolean] = js.undefined,
-    tl: js.UndefOr[Boolean] = js.undefined,
-    tr: js.UndefOr[Boolean] = js.undefined
-  ): AnonBr = {
+  def apply(): AnonBr = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bl)) __obj.updateDynamic("bl")(bl.asInstanceOf[js.Any])
-    if (!js.isUndefined(br)) __obj.updateDynamic("br")(br.asInstanceOf[js.Any])
-    if (!js.isUndefined(mb)) __obj.updateDynamic("mb")(mb.asInstanceOf[js.Any])
-    if (!js.isUndefined(ml)) __obj.updateDynamic("ml")(ml.asInstanceOf[js.Any])
-    if (!js.isUndefined(mr)) __obj.updateDynamic("mr")(mr.asInstanceOf[js.Any])
-    if (!js.isUndefined(mt)) __obj.updateDynamic("mt")(mt.asInstanceOf[js.Any])
-    if (!js.isUndefined(mtr)) __obj.updateDynamic("mtr")(mtr.asInstanceOf[js.Any])
-    if (!js.isUndefined(tl)) __obj.updateDynamic("tl")(tl.asInstanceOf[js.Any])
-    if (!js.isUndefined(tr)) __obj.updateDynamic("tr")(tr.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBr]
   }
+  @scala.inline
+  implicit class AnonBrOps[Self <: AnonBr] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBr(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("br")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("br")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMb(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ml")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ml")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMr(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMt(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMtr(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mtr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMtr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mtr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTr(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tr")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

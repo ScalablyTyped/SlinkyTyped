@@ -11,7 +11,7 @@ object channelMod extends js.Object {
   @js.native
   trait Channel extends EventEmitter {
     var isConnected: Boolean = js.native
-    def send(message: scala.scalajs.js.typedarray.ArrayBuffer): Unit = js.native
+    def send(message: js.typedarray.ArrayBuffer): Unit = js.native
   }
   
 }

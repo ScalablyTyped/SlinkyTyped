@@ -16,8 +16,21 @@ object ValidateMatchmakingRuleSetInput {
   @scala.inline
   def apply(RuleSetBody: RuleSetBody): ValidateMatchmakingRuleSetInput = {
     val __obj = js.Dynamic.literal(RuleSetBody = RuleSetBody.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ValidateMatchmakingRuleSetInput]
   }
+  @scala.inline
+  implicit class ValidateMatchmakingRuleSetInputOps[Self <: ValidateMatchmakingRuleSetInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRuleSetBody(value: RuleSetBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleSetBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

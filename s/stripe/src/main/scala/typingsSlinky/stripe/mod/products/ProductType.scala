@@ -12,10 +12,8 @@ trait ProductType extends js.Object
 
 object ProductType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def good: typingsSlinky.stripe.stripeStrings.good = "good".asInstanceOf[typingsSlinky.stripe.stripeStrings.good]
   @scala.inline
-  def good: typingsSlinky.stripe.stripeStrings.good = this.cast("good")
-  @scala.inline
-  def service: typingsSlinky.stripe.stripeStrings.service = this.cast("service")
+  def service: typingsSlinky.stripe.stripeStrings.service = "service".asInstanceOf[typingsSlinky.stripe.stripeStrings.service]
 }
 

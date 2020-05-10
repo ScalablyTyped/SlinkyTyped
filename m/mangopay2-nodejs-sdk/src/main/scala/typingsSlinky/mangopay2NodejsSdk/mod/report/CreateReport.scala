@@ -6,36 +6,114 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent mangopay2-nodejs-sdk.mangopay2-nodejs-sdk/types.PickPartial<mangopay2-nodejs-sdk.mangopay2-nodejs-sdk.report.ReportData, 'Tag' | 'CallbackURL' | 'DownloadFormat' | 'Sort' | 'Preview' | 'Filters' | 'Columns'> */
+@js.native
 trait CreateReport extends js.Object {
-  var CallbackURL: js.UndefOr[String] = js.undefined
-  var Columns: js.UndefOr[js.Array[Column]] = js.undefined
-  var DownloadFormat: js.UndefOr[CSV] = js.undefined
-  var Filters: js.UndefOr[typingsSlinky.mangopay2NodejsSdk.mod.report.Filters] = js.undefined
-  var Preview: js.UndefOr[Boolean] = js.undefined
-  var Sort: js.UndefOr[String] = js.undefined
-  var Tag: js.UndefOr[String] = js.undefined
+  var CallbackURL: js.UndefOr[String] = js.native
+  var Columns: js.UndefOr[js.Array[Column]] = js.native
+  var DownloadFormat: js.UndefOr[CSV] = js.native
+  var Filters: js.UndefOr[typingsSlinky.mangopay2NodejsSdk.mod.report.Filters] = js.native
+  var Preview: js.UndefOr[Boolean] = js.native
+  var Sort: js.UndefOr[String] = js.native
+  var Tag: js.UndefOr[String] = js.native
 }
 
 object CreateReport {
   @scala.inline
-  def apply(
-    CallbackURL: String = null,
-    Columns: js.Array[Column] = null,
-    DownloadFormat: CSV = null,
-    Filters: Filters = null,
-    Preview: js.UndefOr[Boolean] = js.undefined,
-    Sort: String = null,
-    Tag: String = null
-  ): CreateReport = {
+  def apply(): CreateReport = {
     val __obj = js.Dynamic.literal()
-    if (CallbackURL != null) __obj.updateDynamic("CallbackURL")(CallbackURL.asInstanceOf[js.Any])
-    if (Columns != null) __obj.updateDynamic("Columns")(Columns.asInstanceOf[js.Any])
-    if (DownloadFormat != null) __obj.updateDynamic("DownloadFormat")(DownloadFormat.asInstanceOf[js.Any])
-    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
-    if (!js.isUndefined(Preview)) __obj.updateDynamic("Preview")(Preview.asInstanceOf[js.Any])
-    if (Sort != null) __obj.updateDynamic("Sort")(Sort.asInstanceOf[js.Any])
-    if (Tag != null) __obj.updateDynamic("Tag")(Tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateReport]
   }
+  @scala.inline
+  implicit class CreateReportOps[Self <: CreateReport] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCallbackURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CallbackURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallbackURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CallbackURL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumns(value: js.Array[Column]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDownloadFormat(value: CSV): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DownloadFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDownloadFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DownloadFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilters(value: Filters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreview(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Preview")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreview: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Preview")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSort(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.applicationinsightsJs.Microsoft.ApplicationInsights
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.PerformanceTiming
 import typingsSlinky.applicationinsightsJs.AI.DataPoint
 import typingsSlinky.applicationinsightsJs.AI.ExceptionDetails
@@ -29,13 +28,6 @@ object Telemetry extends js.Object {
     def this(name: String) = this()
     def this(name: String, properties: js.Any) = this()
     def this(name: String, properties: js.Any, measurements: js.Any) = this()
-    /**
-      * The set of fields for a serializeable object.
-      * This defines the serialization order and a value of true/false
-      * for each field defines whether the field is required or not.
-      */
-    /* CompleteClass */
-    override var aiDataContract: js.Any = js.native
     @JSName("aiDataContract")
     var aiDataContract_Event: AnonMeasurements = js.native
     var measurements: js.Any = js.native
@@ -60,13 +52,6 @@ object Telemetry extends js.Object {
       measurements: js.Any,
       severityLevel: SeverityLevel
     ) = this()
-    /**
-      * The set of fields for a serializeable object.
-      * This defines the serialization order and a value of true/false
-      * for each field defines whether the field is required or not.
-      */
-    /* CompleteClass */
-    override var aiDataContract: js.Any = js.native
     @JSName("aiDataContract")
     var aiDataContract_Exception: AnonExceptions = js.native
     var crashThreadId: Double = js.native
@@ -89,13 +74,6 @@ object Telemetry extends js.Object {
     def this(name: String, value: Double, count: Double, min: Double) = this()
     def this(name: String, value: Double, count: Double, min: Double, max: Double) = this()
     def this(name: String, value: Double, count: Double, min: Double, max: Double, properties: js.Any) = this()
-    /**
-      * The set of fields for a serializeable object.
-      * This defines the serialization order and a value of true/false
-      * for each field defines whether the field is required or not.
-      */
-    /* CompleteClass */
-    override var aiDataContract: js.Any = js.native
     @JSName("aiDataContract")
     var aiDataContract_Metric: AnonMetrics = js.native
     var metrics: js.Array[DataPoint] = js.native
@@ -115,13 +93,6 @@ object Telemetry extends js.Object {
     def this(name: String, url: String, durationMs: Double) = this()
     def this(name: String, url: String, durationMs: Double, properties: js.Any) = this()
     def this(name: String, url: String, durationMs: Double, properties: js.Any, measurements: js.Any) = this()
-    /**
-      * The set of fields for a serializeable object.
-      * This defines the serialization order and a value of true/false
-      * for each field defines whether the field is required or not.
-      */
-    /* CompleteClass */
-    override var aiDataContract: js.Any = js.native
     @JSName("aiDataContract")
     var aiDataContract_PageView: AnonDuration = js.native
   }
@@ -136,13 +107,6 @@ object Telemetry extends js.Object {
     def this(name: String, url: String, unused: Double) = this()
     def this(name: String, url: String, unused: Double, properties: js.Any) = this()
     def this(name: String, url: String, unused: Double, properties: js.Any, measurements: js.Any) = this()
-    /**
-      * The set of fields for a serializeable object.
-      * This defines the serialization order and a value of true/false
-      * for each field defines whether the field is required or not.
-      */
-    /* CompleteClass */
-    override var aiDataContract: js.Any = js.native
     @JSName("aiDataContract")
     var aiDataContract_PageViewPerformance: AnonDomProcessing = js.native
     var durationMs: js.Any = js.native
@@ -184,13 +148,6 @@ object Telemetry extends js.Object {
       resultCode: Double,
       method: String
     ) = this()
-    /**
-      * The set of fields for a serializeable object.
-      * This defines the serialization order and a value of true/false
-      * for each field defines whether the field is required or not.
-      */
-    /* CompleteClass */
-    override var aiDataContract: js.Any = js.native
     /* private */ def formatDependencyName(method: js.Any, absoluteUrl: js.Any): js.Any = js.native
   }
   
@@ -203,13 +160,6 @@ object Telemetry extends js.Object {
       */
     def this(message: String) = this()
     def this(message: String, properties: js.Any) = this()
-    /**
-      * The set of fields for a serializeable object.
-      * This defines the serialization order and a value of true/false
-      * for each field defines whether the field is required or not.
-      */
-    /* CompleteClass */
-    override var aiDataContract: js.Any = js.native
     @JSName("aiDataContract")
     var aiDataContract_Trace: AnonMessage = js.native
   }
@@ -219,15 +169,7 @@ object Telemetry extends js.Object {
     @js.native
     class Base ()
       extends typingsSlinky.applicationinsightsJs.Microsoft.Telemetry.Base
-         with ISerializable {
-      /**
-        * The set of fields for a serializeable object.
-        * This defines the serialization order and a value of true/false
-        * for each field defines whether the field is required or not.
-        */
-      /* CompleteClass */
-      override var aiDataContract: js.Any = js.native
-    }
+         with ISerializable
     
     @js.native
     class Data[TDomain] protected ()
@@ -237,13 +179,6 @@ object Telemetry extends js.Object {
         * Constructs a new instance of telemetry data.
         */
       def this(`type`: String, data: TDomain) = this()
-      /**
-        * The set of fields for a serializeable object.
-        * This defines the serialization order and a value of true/false
-        * for each field defines whether the field is required or not.
-        */
-      /* CompleteClass */
-      override var aiDataContract: js.Any = js.native
     }
     
     @js.native
@@ -255,45 +190,8 @@ object Telemetry extends js.Object {
         * Constructs a new instance of telemetry data.
         */
       def this(data: typingsSlinky.applicationinsightsJs.Microsoft.Telemetry.Base, name: String) = this()
-      /**
-        * The set of fields for a serializeable object.
-        * This defines the serialization order and a value of true/false
-        * for each field defines whether the field is required or not.
-        */
-      /* CompleteClass */
-      override var aiDataContract: js.Any = js.native
-      /* CompleteClass */
-      override var appId: String = js.native
-      /* CompleteClass */
-      override var appVer: String = js.native
-      /* CompleteClass */
-      override var data: js.Any = js.native
       @JSName("data")
       var data_Envelope: Base = js.native
-      /* CompleteClass */
-      override var deviceId: String = js.native
-      /* CompleteClass */
-      override var flags: Double = js.native
-      /* CompleteClass */
-      override var iKey: String = js.native
-      /* CompleteClass */
-      override var name: String = js.native
-      /* CompleteClass */
-      override var os: String = js.native
-      /* CompleteClass */
-      override var osVer: String = js.native
-      /* CompleteClass */
-      override var sampleRate: Double = js.native
-      /* CompleteClass */
-      override var seq: String = js.native
-      /* CompleteClass */
-      override var tags: StringDictionary[js.Any] = js.native
-      /* CompleteClass */
-      override var time: String = js.native
-      /* CompleteClass */
-      override var userId: String = js.native
-      /* CompleteClass */
-      override var ver: Double = js.native
     }
     
     /* static members */

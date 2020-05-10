@@ -39,20 +39,77 @@ trait SchemaRewrite extends js.Object {
 
 object SchemaRewrite {
   @scala.inline
-  def apply(
-    dynamicLinks: js.UndefOr[Boolean] = js.undefined,
-    function: String = null,
-    glob: String = null,
-    path: String = null,
-    run: SchemaCloudRunRewrite = null
-  ): SchemaRewrite = {
+  def apply(): SchemaRewrite = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(dynamicLinks)) __obj.updateDynamic("dynamicLinks")(dynamicLinks.asInstanceOf[js.Any])
-    if (function != null) __obj.updateDynamic("function")(function.asInstanceOf[js.Any])
-    if (glob != null) __obj.updateDynamic("glob")(glob.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (run != null) __obj.updateDynamic("run")(run.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRewrite]
   }
+  @scala.inline
+  implicit class SchemaRewriteOps[Self <: SchemaRewrite] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDynamicLinks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicLinks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamicLinks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicLinks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFunction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("function")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFunction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("function")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlob(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("glob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("glob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRun(value: SchemaCloudRunRewrite): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("run")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("run")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

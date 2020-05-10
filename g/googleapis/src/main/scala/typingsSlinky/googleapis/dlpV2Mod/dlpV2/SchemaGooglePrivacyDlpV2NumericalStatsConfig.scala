@@ -19,10 +19,29 @@ trait SchemaGooglePrivacyDlpV2NumericalStatsConfig extends js.Object {
 
 object SchemaGooglePrivacyDlpV2NumericalStatsConfig {
   @scala.inline
-  def apply(field: SchemaGooglePrivacyDlpV2FieldId = null): SchemaGooglePrivacyDlpV2NumericalStatsConfig = {
+  def apply(): SchemaGooglePrivacyDlpV2NumericalStatsConfig = {
     val __obj = js.Dynamic.literal()
-    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2NumericalStatsConfig]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2NumericalStatsConfigOps[Self <: SchemaGooglePrivacyDlpV2NumericalStatsConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withField(value: SchemaGooglePrivacyDlpV2FieldId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

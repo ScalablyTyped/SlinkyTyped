@@ -50,30 +50,137 @@ trait SchemaOrderReportTransaction extends js.Object {
 
 object SchemaOrderReportTransaction {
   @scala.inline
-  def apply(
-    disbursementAmount: SchemaPrice = null,
-    disbursementCreationDate: String = null,
-    disbursementDate: String = null,
-    disbursementId: String = null,
-    merchantId: String = null,
-    merchantOrderId: String = null,
-    orderId: String = null,
-    productAmount: SchemaAmount = null,
-    productAmountWithRemittedTax: SchemaProductAmount = null,
-    transactionDate: String = null
-  ): SchemaOrderReportTransaction = {
+  def apply(): SchemaOrderReportTransaction = {
     val __obj = js.Dynamic.literal()
-    if (disbursementAmount != null) __obj.updateDynamic("disbursementAmount")(disbursementAmount.asInstanceOf[js.Any])
-    if (disbursementCreationDate != null) __obj.updateDynamic("disbursementCreationDate")(disbursementCreationDate.asInstanceOf[js.Any])
-    if (disbursementDate != null) __obj.updateDynamic("disbursementDate")(disbursementDate.asInstanceOf[js.Any])
-    if (disbursementId != null) __obj.updateDynamic("disbursementId")(disbursementId.asInstanceOf[js.Any])
-    if (merchantId != null) __obj.updateDynamic("merchantId")(merchantId.asInstanceOf[js.Any])
-    if (merchantOrderId != null) __obj.updateDynamic("merchantOrderId")(merchantOrderId.asInstanceOf[js.Any])
-    if (orderId != null) __obj.updateDynamic("orderId")(orderId.asInstanceOf[js.Any])
-    if (productAmount != null) __obj.updateDynamic("productAmount")(productAmount.asInstanceOf[js.Any])
-    if (productAmountWithRemittedTax != null) __obj.updateDynamic("productAmountWithRemittedTax")(productAmountWithRemittedTax.asInstanceOf[js.Any])
-    if (transactionDate != null) __obj.updateDynamic("transactionDate")(transactionDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOrderReportTransaction]
   }
+  @scala.inline
+  implicit class SchemaOrderReportTransactionOps[Self <: SchemaOrderReportTransaction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisbursementAmount(value: SchemaPrice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disbursementAmount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisbursementAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disbursementAmount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisbursementCreationDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disbursementCreationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisbursementCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disbursementCreationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisbursementDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disbursementDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisbursementDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disbursementDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisbursementId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disbursementId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisbursementId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disbursementId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMerchantId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMerchantId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMerchantOrderId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantOrderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMerchantOrderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantOrderId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrderId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orderId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductAmount(value: SchemaAmount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productAmount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productAmount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductAmountWithRemittedTax(value: SchemaProductAmount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productAmountWithRemittedTax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductAmountWithRemittedTax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productAmountWithRemittedTax")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransactionDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransactionDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionDate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,9 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent grpc.grpc.ServiceDefinition<grpc.grpc.UntypedServiceImplementation> */
+@js.native
 trait IAdmissionControlService extends js.Object {
-  var submitTransaction: IAdmissionControlServiceISubmitTransaction
-  var updateToLatestLedger: IAdmissionControlServiceIUpdateToLatestLedger
+  var submitTransaction: IAdmissionControlServiceISubmitTransaction = js.native
+  var updateToLatestLedger: IAdmissionControlServiceIUpdateToLatestLedger = js.native
 }
 
 object IAdmissionControlService {
@@ -17,8 +18,27 @@ object IAdmissionControlService {
     updateToLatestLedger: IAdmissionControlServiceIUpdateToLatestLedger
   ): IAdmissionControlService = {
     val __obj = js.Dynamic.literal(submitTransaction = submitTransaction.asInstanceOf[js.Any], updateToLatestLedger = updateToLatestLedger.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IAdmissionControlService]
   }
+  @scala.inline
+  implicit class IAdmissionControlServiceOps[Self <: IAdmissionControlService] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSubmitTransaction(value: IAdmissionControlServiceISubmitTransaction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submitTransaction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdateToLatestLedger(value: IAdmissionControlServiceIUpdateToLatestLedger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateToLatestLedger")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

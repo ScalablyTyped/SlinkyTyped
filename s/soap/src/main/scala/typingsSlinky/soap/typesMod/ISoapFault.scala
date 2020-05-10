@@ -14,21 +14,13 @@ trait ISoapFault extends js.Object
 
 object ISoapFault {
   @scala.inline
-  def ISoapFault11(
-    faultcode: Double | String,
-    faultstring: String,
-    detail: String = null,
-    statusCode: Int | Double = null
-  ): ISoapFault = {
+  def ISoapFault11(faultcode: Double | String, faultstring: String): ISoapFault = {
     val __obj = js.Dynamic.literal(faultcode = faultcode.asInstanceOf[js.Any], faultstring = faultstring.asInstanceOf[js.Any])
-    if (detail != null) __obj.updateDynamic("detail")(detail.asInstanceOf[js.Any])
-    if (statusCode != null) __obj.updateDynamic("statusCode")(statusCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISoapFault]
   }
   @scala.inline
-  def ISoapFault12(Code: AnonSubcode, Reason: AnonText, statusCode: Int | Double = null): ISoapFault = {
+  def ISoapFault12(Code: AnonSubcode, Reason: AnonText): ISoapFault = {
     val __obj = js.Dynamic.literal(Code = Code.asInstanceOf[js.Any], Reason = Reason.asInstanceOf[js.Any])
-    if (statusCode != null) __obj.updateDynamic("statusCode")(statusCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISoapFault]
   }
 }

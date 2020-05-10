@@ -18,11 +18,41 @@ trait DescribeConformancePackStatusResponse extends js.Object {
 
 object DescribeConformancePackStatusResponse {
   @scala.inline
-  def apply(ConformancePackStatusDetails: ConformancePackStatusDetailsList = null, NextToken: NextToken = null): DescribeConformancePackStatusResponse = {
+  def apply(): DescribeConformancePackStatusResponse = {
     val __obj = js.Dynamic.literal()
-    if (ConformancePackStatusDetails != null) __obj.updateDynamic("ConformancePackStatusDetails")(ConformancePackStatusDetails.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeConformancePackStatusResponse]
   }
+  @scala.inline
+  implicit class DescribeConformancePackStatusResponseOps[Self <: DescribeConformancePackStatusResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConformancePackStatusDetails(value: ConformancePackStatusDetailsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConformancePackStatusDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConformancePackStatusDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConformancePackStatusDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

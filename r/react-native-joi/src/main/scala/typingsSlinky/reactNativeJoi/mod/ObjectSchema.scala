@@ -1,11 +1,10 @@
 package typingsSlinky.reactNativeJoi.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.reactNativeJoi.mod._SchemaLike because Already inherited
 - typingsSlinky.reactNativeJoi.mod._Schema because Already inherited */ @js.native
 trait ObjectSchema extends AnySchema {
@@ -91,7 +90,7 @@ trait ObjectSchema extends AnySchema {
     * @param pattern - a pattern that can be either a regular expression or a joi schema that will be tested against the unknown key names
     * @param schema - the schema object matching keys must validate against
     */
-  def pattern(pattern: RegExp, schema: SchemaLike): this.type = js.native
+  def pattern(pattern: js.RegExp, schema: SchemaLike): this.type = js.native
   /**
     * Renames a key to another name (deletes the renamed key).
     */

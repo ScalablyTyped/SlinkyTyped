@@ -14,14 +14,12 @@ trait DropAction extends js.Object
 
 object DropAction {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def copy: typingsSlinky.phosphorDragdrop.phosphorDragdropStrings.copy = "copy".asInstanceOf[typingsSlinky.phosphorDragdrop.phosphorDragdropStrings.copy]
   @scala.inline
-  def copy: typingsSlinky.phosphorDragdrop.phosphorDragdropStrings.copy = this.cast("copy")
+  def link: typingsSlinky.phosphorDragdrop.phosphorDragdropStrings.link = "link".asInstanceOf[typingsSlinky.phosphorDragdrop.phosphorDragdropStrings.link]
   @scala.inline
-  def link: typingsSlinky.phosphorDragdrop.phosphorDragdropStrings.link = this.cast("link")
+  def move: typingsSlinky.phosphorDragdrop.phosphorDragdropStrings.move = "move".asInstanceOf[typingsSlinky.phosphorDragdrop.phosphorDragdropStrings.move]
   @scala.inline
-  def move: typingsSlinky.phosphorDragdrop.phosphorDragdropStrings.move = this.cast("move")
-  @scala.inline
-  def none: typingsSlinky.phosphorDragdrop.phosphorDragdropStrings.none = this.cast("none")
+  def none: typingsSlinky.phosphorDragdrop.phosphorDragdropStrings.none = "none".asInstanceOf[typingsSlinky.phosphorDragdrop.phosphorDragdropStrings.none]
 }
 

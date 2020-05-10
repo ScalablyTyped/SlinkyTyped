@@ -55,20 +55,77 @@ trait SchemaItemAcl extends js.Object {
 
 object SchemaItemAcl {
   @scala.inline
-  def apply(
-    aclInheritanceType: String = null,
-    deniedReaders: js.Array[SchemaPrincipal] = null,
-    inheritAclFrom: String = null,
-    owners: js.Array[SchemaPrincipal] = null,
-    readers: js.Array[SchemaPrincipal] = null
-  ): SchemaItemAcl = {
+  def apply(): SchemaItemAcl = {
     val __obj = js.Dynamic.literal()
-    if (aclInheritanceType != null) __obj.updateDynamic("aclInheritanceType")(aclInheritanceType.asInstanceOf[js.Any])
-    if (deniedReaders != null) __obj.updateDynamic("deniedReaders")(deniedReaders.asInstanceOf[js.Any])
-    if (inheritAclFrom != null) __obj.updateDynamic("inheritAclFrom")(inheritAclFrom.asInstanceOf[js.Any])
-    if (owners != null) __obj.updateDynamic("owners")(owners.asInstanceOf[js.Any])
-    if (readers != null) __obj.updateDynamic("readers")(readers.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaItemAcl]
   }
+  @scala.inline
+  implicit class SchemaItemAclOps[Self <: SchemaItemAcl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAclInheritanceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aclInheritanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAclInheritanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aclInheritanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeniedReaders(value: js.Array[SchemaPrincipal]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deniedReaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeniedReaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deniedReaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInheritAclFrom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inheritAclFrom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInheritAclFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inheritAclFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwners(value: js.Array[SchemaPrincipal]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owners")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwners: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owners")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReaders(value: js.Array[SchemaPrincipal]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

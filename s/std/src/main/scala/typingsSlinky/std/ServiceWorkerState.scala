@@ -16,18 +16,16 @@ trait ServiceWorkerState extends js.Object
 
 object ServiceWorkerState {
   @scala.inline
-  def activated: typingsSlinky.std.stdStrings.activated = this.cast("activated")
+  def activated: typingsSlinky.std.stdStrings.activated = "activated".asInstanceOf[typingsSlinky.std.stdStrings.activated]
   @scala.inline
-  def activating: typingsSlinky.std.stdStrings.activating = this.cast("activating")
+  def activating: typingsSlinky.std.stdStrings.activating = "activating".asInstanceOf[typingsSlinky.std.stdStrings.activating]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def installed: typingsSlinky.std.stdStrings.installed = "installed".asInstanceOf[typingsSlinky.std.stdStrings.installed]
   @scala.inline
-  def installed: typingsSlinky.std.stdStrings.installed = this.cast("installed")
+  def installing: typingsSlinky.std.stdStrings.installing = "installing".asInstanceOf[typingsSlinky.std.stdStrings.installing]
   @scala.inline
-  def installing: typingsSlinky.std.stdStrings.installing = this.cast("installing")
+  def parsed: typingsSlinky.std.stdStrings.parsed = "parsed".asInstanceOf[typingsSlinky.std.stdStrings.parsed]
   @scala.inline
-  def parsed: typingsSlinky.std.stdStrings.parsed = this.cast("parsed")
-  @scala.inline
-  def redundant: typingsSlinky.std.stdStrings.redundant = this.cast("redundant")
+  def redundant: typingsSlinky.std.stdStrings.redundant = "redundant".asInstanceOf[typingsSlinky.std.stdStrings.redundant]
 }
 

@@ -14,14 +14,12 @@ trait ApiKind extends js.Object
 
 object ApiKind {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `class`: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`class` = "class".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`class`]
   @scala.inline
-  def `class`: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`class` = this.cast("class")
+  def enum: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.enum = "enum".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.enum]
   @scala.inline
-  def enum: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.enum = this.cast("enum")
+  def interface: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.interface = "interface".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.interface]
   @scala.inline
-  def interface: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.interface = this.cast("interface")
-  @scala.inline
-  def typeAlias: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.typeAlias = this.cast("typeAlias")
+  def typeAlias: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.typeAlias = "typeAlias".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.typeAlias]
 }
 

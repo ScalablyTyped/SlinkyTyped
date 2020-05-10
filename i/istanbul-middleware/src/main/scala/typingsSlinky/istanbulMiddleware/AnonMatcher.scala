@@ -2,30 +2,69 @@ package typingsSlinky.istanbulMiddleware
 
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.istanbulMiddleware.mod.ClientMatcher
 import typingsSlinky.istanbulMiddleware.mod.PathTransformer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonMatcher extends js.Object {
-  var matcher: js.UndefOr[ClientMatcher] = js.undefined
-  var pathTransformer: js.UndefOr[PathTransformer] = js.undefined
-  var verbose: js.UndefOr[Boolean] = js.undefined
+  var matcher: js.UndefOr[ClientMatcher] = js.native
+  var pathTransformer: js.UndefOr[PathTransformer] = js.native
+  var verbose: js.UndefOr[Boolean] = js.native
 }
 
 object AnonMatcher {
   @scala.inline
-  def apply(
-    matcher: /* req */ Request_[ParamsDictionary] => Boolean = null,
-    pathTransformer: /* req */ Request_[ParamsDictionary] => String = null,
-    verbose: js.UndefOr[Boolean] = js.undefined
-  ): AnonMatcher = {
+  def apply(): AnonMatcher = {
     val __obj = js.Dynamic.literal()
-    if (matcher != null) __obj.updateDynamic("matcher")(js.Any.fromFunction1(matcher))
-    if (pathTransformer != null) __obj.updateDynamic("pathTransformer")(js.Any.fromFunction1(pathTransformer))
-    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonMatcher]
   }
+  @scala.inline
+  implicit class AnonMatcherOps[Self <: AnonMatcher] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMatcher(value: /* req */ Request_[ParamsDictionary, js.Any, js.Any, Query] => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matcher")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutMatcher: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matcher")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPathTransformer(value: /* req */ Request_[ParamsDictionary, js.Any, js.Any, Query] => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathTransformer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPathTransformer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathTransformer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerbose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerbose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

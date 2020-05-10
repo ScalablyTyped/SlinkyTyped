@@ -18,11 +18,41 @@ trait StopDiscovererResponse extends js.Object {
 
 object StopDiscovererResponse {
   @scala.inline
-  def apply(DiscovererId: string = null, State: DiscovererState = null): StopDiscovererResponse = {
+  def apply(): StopDiscovererResponse = {
     val __obj = js.Dynamic.literal()
-    if (DiscovererId != null) __obj.updateDynamic("DiscovererId")(DiscovererId.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
     __obj.asInstanceOf[StopDiscovererResponse]
   }
+  @scala.inline
+  implicit class StopDiscovererResponseOps[Self <: StopDiscovererResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDiscovererId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiscovererId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiscovererId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiscovererId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: DiscovererState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

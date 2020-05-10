@@ -25,16 +25,53 @@ trait SchemaMembership extends js.Object {
 
 object SchemaMembership {
   @scala.inline
-  def apply(
-    contactGroupMembership: SchemaContactGroupMembership = null,
-    domainMembership: SchemaDomainMembership = null,
-    metadata: SchemaFieldMetadata = null
-  ): SchemaMembership = {
+  def apply(): SchemaMembership = {
     val __obj = js.Dynamic.literal()
-    if (contactGroupMembership != null) __obj.updateDynamic("contactGroupMembership")(contactGroupMembership.asInstanceOf[js.Any])
-    if (domainMembership != null) __obj.updateDynamic("domainMembership")(domainMembership.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMembership]
   }
+  @scala.inline
+  implicit class SchemaMembershipOps[Self <: SchemaMembership] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContactGroupMembership(value: SchemaContactGroupMembership): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactGroupMembership")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContactGroupMembership: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactGroupMembership")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomainMembership(value: SchemaDomainMembership): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainMembership")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainMembership: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainMembership")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: SchemaFieldMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

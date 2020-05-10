@@ -1,0 +1,42 @@
+package typingsSlinky.protractorHelpers.mod._Global_.protractor
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ElementArrayFinder extends js.Object {
+  @JSName("$$data")
+  def DollarDollardata(hook: String): ElementArrayFinder = js.native
+  def getByText(text: String): ElementFinder = js.native
+}
+
+object ElementArrayFinder {
+  @scala.inline
+  def apply(DollarDollardata: String => ElementArrayFinder, getByText: String => ElementFinder): ElementArrayFinder = {
+    val __obj = js.Dynamic.literal(getByText = js.Any.fromFunction1(getByText))
+    __obj.updateDynamic("$$data")(js.Any.fromFunction1(DollarDollardata))
+    __obj.asInstanceOf[ElementArrayFinder]
+  }
+  @scala.inline
+  implicit class ElementArrayFinderOps[Self <: ElementArrayFinder] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDollarDollardata(value: String => ElementArrayFinder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$$data")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetByText(value: String => ElementFinder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getByText")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
+

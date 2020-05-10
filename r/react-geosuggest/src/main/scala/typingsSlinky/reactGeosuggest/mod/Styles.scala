@@ -5,24 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Styles extends js.Object {
-  var input: js.UndefOr[Record[String, _]] = js.undefined
-  var suggestItem: js.UndefOr[Record[String, _]] = js.undefined
-  var suggests: js.UndefOr[Record[String, _]] = js.undefined
+  var input: js.UndefOr[Record[String, _]] = js.native
+  var suggestItem: js.UndefOr[Record[String, _]] = js.native
+  var suggests: js.UndefOr[Record[String, _]] = js.native
 }
 
 object Styles {
   @scala.inline
-  def apply(
-    input: Record[String, _] = null,
-    suggestItem: Record[String, _] = null,
-    suggests: Record[String, _] = null
-  ): Styles = {
+  def apply(): Styles = {
     val __obj = js.Dynamic.literal()
-    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
-    if (suggestItem != null) __obj.updateDynamic("suggestItem")(suggestItem.asInstanceOf[js.Any])
-    if (suggests != null) __obj.updateDynamic("suggests")(suggests.asInstanceOf[js.Any])
     __obj.asInstanceOf[Styles]
   }
+  @scala.inline
+  implicit class StylesOps[Self <: Styles] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInput(value: Record[String, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestItem(value: Record[String, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggests(value: Record[String, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggests")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

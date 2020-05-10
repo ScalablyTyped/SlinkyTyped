@@ -30,20 +30,77 @@ trait Celebrity extends js.Object {
 
 object Celebrity {
   @scala.inline
-  def apply(
-    Face: ComparedFace = null,
-    Id: RekognitionUniqueId = null,
-    MatchConfidence: Int | Double = null,
-    Name: String = null,
-    Urls: Urls = null
-  ): Celebrity = {
+  def apply(): Celebrity = {
     val __obj = js.Dynamic.literal()
-    if (Face != null) __obj.updateDynamic("Face")(Face.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (MatchConfidence != null) __obj.updateDynamic("MatchConfidence")(MatchConfidence.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (Urls != null) __obj.updateDynamic("Urls")(Urls.asInstanceOf[js.Any])
     __obj.asInstanceOf[Celebrity]
   }
+  @scala.inline
+  implicit class CelebrityOps[Self <: Celebrity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFace(value: ComparedFace): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Face")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Face")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: RekognitionUniqueId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatchConfidence(value: Percent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchConfidence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatchConfidence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchConfidence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrls(value: Urls): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Urls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Urls")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

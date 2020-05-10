@@ -4,13 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Typeofacc extends js.Object {
   // Equivalent of native kamailio.cfg function: acc_db_request("comment", "dbtable").
-  def acc_db_request(comment: String, dbtable: String): Double
+  def acc_db_request(comment: String, dbtable: String): Double = js.native
   // Equivalent of native kamailio.cfg function: acc_log_request("comment").
-  def acc_log_request(comment: String): Double
+  def acc_log_request(comment: String): Double = js.native
   // Equivalent of native kamailio.cfg function: acc_request("comment", "dbtable").
-  def acc_request(comment: String, dbtable: String): Double
+  def acc_request(comment: String, dbtable: String): Double = js.native
 }
 
 object Typeofacc {
@@ -21,8 +22,33 @@ object Typeofacc {
     acc_request: (String, String) => Double
   ): Typeofacc = {
     val __obj = js.Dynamic.literal(acc_db_request = js.Any.fromFunction2(acc_db_request), acc_log_request = js.Any.fromFunction1(acc_log_request), acc_request = js.Any.fromFunction2(acc_request))
-  
     __obj.asInstanceOf[Typeofacc]
   }
+  @scala.inline
+  implicit class TypeofaccOps[Self <: Typeofacc] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcc_db_request(value: (String, String) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acc_db_request")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withAcc_log_request(value: String => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acc_log_request")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAcc_request(value: (String, String) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acc_request")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

@@ -9,7 +9,7 @@ package object iamMod {
   type ActionNameListType = js.Array[typingsSlinky.awsSdk.iamMod.ActionNameType]
   type ActionNameType = java.lang.String
   type ArnListType = js.Array[typingsSlinky.awsSdk.iamMod.arnType]
-  type BootstrapDatum = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.iamMod.Blob | java.lang.String
+  type BootstrapDatum = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.iamMod.Blob | java.lang.String
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.iamMod.ClientApiVersions
   type ColumnNumber = scala.Double
   type ContextEntryListType = js.Array[typingsSlinky.awsSdk.iamMod.ContextEntry]
@@ -89,7 +89,7 @@ package object iamMod {
   type PolicyUserListType = js.Array[typingsSlinky.awsSdk.iamMod.PolicyUser]
   type ReasonType = java.lang.String
   type RegionNameType = java.lang.String
-  type ReportContentType = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.iamMod.Blob | java.lang.String
+  type ReportContentType = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.iamMod.Blob | java.lang.String
   type ReportFormatType = typingsSlinky.awsSdk.awsSdkStrings.textSlashcsv | java.lang.String
   type ReportStateDescriptionType = java.lang.String
   /* Rewritten from type alias, can be one of: 

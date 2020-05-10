@@ -7,10 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.Graphics.Printing.PrintManager")
 @js.native
-class PrintManager () extends IPrintManager {
-  /* CompleteClass */
-  override var onprinttaskrequested: js.Any = js.native
-}
+class PrintManager () extends IPrintManager
 
 /* static members */
 @JSGlobal("Windows.Graphics.Printing.PrintManager")

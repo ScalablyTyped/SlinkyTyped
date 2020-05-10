@@ -1,10 +1,8 @@
 package typingsSlinky.reactVirtualKeyboard.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import org.scalajs.dom.raw.Element
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactVirtualKeyboard.mod.KeyboardProps
 import typingsSlinky.reactVirtualKeyboard.mod.ReactKeyboardOptions
 import typingsSlinky.reactVirtualKeyboard.mod.default
@@ -13,32 +11,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactVirtualKeyboard
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactVirtualKeyboard {
   @JSImport("react-virtual-keyboard", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name, placeholder */
-  def apply(
-    callbackParent: (/* event */ js.UndefOr[String | Event_], /* keyboard */ js.UndefOr[typingsSlinky.std.Element], /* el */ js.UndefOr[typingsSlinky.std.Element]) => Unit = null,
-    onAccepted: (/* event */ js.UndefOr[String | Event_], /* keyboard */ js.UndefOr[org.scalajs.dom.raw.Element], /* el */ js.UndefOr[org.scalajs.dom.raw.Element]) => Unit = null,
-    onChange: (/* event */ js.UndefOr[String | Event_], /* keyboard */ js.UndefOr[org.scalajs.dom.raw.Element], /* el */ js.UndefOr[org.scalajs.dom.raw.Element]) => Unit = null,
-    options: ReactKeyboardOptions = null,
-    value: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (callbackParent != null) __obj.updateDynamic("callbackParent")(js.Any.fromFunction3(callbackParent))
-    if (onAccepted != null) __obj.updateDynamic("onAccepted")(js.Any.fromFunction3(onAccepted))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction3(onChange))
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def callbackParent(
+      value: (/* event */ js.UndefOr[String | Event_], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+    ): this.type = set("callbackParent", js.Any.fromFunction3(value))
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAccepted(
+      value: (/* event */ js.UndefOr[String | Event_], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+    ): this.type = set("onAccepted", js.Any.fromFunction3(value))
+    @scala.inline
+    def onChange(
+      value: (/* event */ js.UndefOr[String | Event_], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+    ): this.type = set("onChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def options(value: ReactKeyboardOptions): this.type = set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactVirtualKeyboard.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = KeyboardProps
+  
+  def withProps(p: KeyboardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactVirtualKeyboard.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

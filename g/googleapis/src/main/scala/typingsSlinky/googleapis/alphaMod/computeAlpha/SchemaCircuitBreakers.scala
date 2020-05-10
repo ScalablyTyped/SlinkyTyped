@@ -44,22 +44,89 @@ trait SchemaCircuitBreakers extends js.Object {
 
 object SchemaCircuitBreakers {
   @scala.inline
-  def apply(
-    connectTimeout: SchemaDuration = null,
-    maxConnections: Int | Double = null,
-    maxPendingRequests: Int | Double = null,
-    maxRequests: Int | Double = null,
-    maxRequestsPerConnection: Int | Double = null,
-    maxRetries: Int | Double = null
-  ): SchemaCircuitBreakers = {
+  def apply(): SchemaCircuitBreakers = {
     val __obj = js.Dynamic.literal()
-    if (connectTimeout != null) __obj.updateDynamic("connectTimeout")(connectTimeout.asInstanceOf[js.Any])
-    if (maxConnections != null) __obj.updateDynamic("maxConnections")(maxConnections.asInstanceOf[js.Any])
-    if (maxPendingRequests != null) __obj.updateDynamic("maxPendingRequests")(maxPendingRequests.asInstanceOf[js.Any])
-    if (maxRequests != null) __obj.updateDynamic("maxRequests")(maxRequests.asInstanceOf[js.Any])
-    if (maxRequestsPerConnection != null) __obj.updateDynamic("maxRequestsPerConnection")(maxRequestsPerConnection.asInstanceOf[js.Any])
-    if (maxRetries != null) __obj.updateDynamic("maxRetries")(maxRetries.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCircuitBreakers]
   }
+  @scala.inline
+  implicit class SchemaCircuitBreakersOps[Self <: SchemaCircuitBreakers] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnectTimeout(value: SchemaDuration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxConnections(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConnections")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxConnections: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConnections")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxPendingRequests(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPendingRequests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxPendingRequests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPendingRequests")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRequests(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRequests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRequests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRequests")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRequestsPerConnection(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRequestsPerConnection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRequestsPerConnection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRequestsPerConnection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRetries(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRetries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetries")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

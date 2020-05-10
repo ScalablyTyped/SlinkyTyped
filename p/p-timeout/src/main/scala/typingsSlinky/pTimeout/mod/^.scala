@@ -1,7 +1,6 @@
 package typingsSlinky.pTimeout.mod
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +29,7 @@ object ^ extends js.Object {
   	*/
   def apply[ValueType](input: js.Thenable[ValueType], milliseconds: Double): js.Promise[ValueType] = js.native
   def apply[ValueType](input: js.Thenable[ValueType], milliseconds: Double, message: String): js.Promise[ValueType] = js.native
-  def apply[ValueType](input: js.Thenable[ValueType], milliseconds: Double, message: Error): js.Promise[ValueType] = js.native
+  def apply[ValueType](input: js.Thenable[ValueType], milliseconds: Double, message: js.Error): js.Promise[ValueType] = js.native
   /**
   	Timeout a promise after a specified amount of time.
   	If you pass in a cancelable promise, specifically a promise with a `.cancel()` method, that method will be called when the `pTimeout` promise times out.

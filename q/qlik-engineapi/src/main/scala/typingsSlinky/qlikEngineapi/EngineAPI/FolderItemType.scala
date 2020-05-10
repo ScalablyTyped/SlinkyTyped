@@ -13,12 +13,10 @@ trait FolderItemType extends js.Object
 
 object FolderItemType {
   @scala.inline
-  def FILE: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FILE = this.cast("FILE")
+  def FILE: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FILE = "FILE".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FILE]
   @scala.inline
-  def FOLDER: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FOLDER = this.cast("FOLDER")
+  def FOLDER: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FOLDER = "FOLDER".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FOLDER]
   @scala.inline
-  def OTHER: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.OTHER = this.cast("OTHER")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def OTHER: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.OTHER = "OTHER".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.OTHER]
 }
 

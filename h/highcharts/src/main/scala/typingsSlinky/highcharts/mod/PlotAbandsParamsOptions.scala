@@ -4,33 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotAbandsParamsOptions extends js.Object {
   /**
     * (Highstock) The algorithms factor value used to calculate bands.
     */
-  var factor: js.UndefOr[Double] = js.undefined
+  var factor: js.UndefOr[Double] = js.native
   /**
     * (Highstock) The point index which indicator calculations will base. For
     * example using OHLC data, index=2 means the indicator will be calculated
     * using Low values.
     */
-  var index: js.UndefOr[Double] = js.undefined
+  var index: js.UndefOr[Double] = js.native
   /**
     * (Highstock) The base period for indicator calculations. This is the
     * number of data points which are taken into account for the indicator
     * calculations.
     */
-  var period: js.UndefOr[Double] = js.undefined
+  var period: js.UndefOr[Double] = js.native
 }
 
 object PlotAbandsParamsOptions {
   @scala.inline
-  def apply(factor: Int | Double = null, index: Int | Double = null, period: Int | Double = null): PlotAbandsParamsOptions = {
+  def apply(): PlotAbandsParamsOptions = {
     val __obj = js.Dynamic.literal()
-    if (factor != null) __obj.updateDynamic("factor")(factor.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (period != null) __obj.updateDynamic("period")(period.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotAbandsParamsOptions]
   }
+  @scala.inline
+  implicit class PlotAbandsParamsOptionsOps[Self <: PlotAbandsParamsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFactor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("factor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFactor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("factor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeriod(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

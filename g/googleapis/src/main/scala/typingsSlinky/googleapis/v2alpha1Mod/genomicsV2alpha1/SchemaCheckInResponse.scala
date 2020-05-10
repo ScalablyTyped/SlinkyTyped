@@ -25,11 +25,41 @@ trait SchemaCheckInResponse extends js.Object {
 
 object SchemaCheckInResponse {
   @scala.inline
-  def apply(deadline: String = null, metadata: StringDictionary[js.Any] = null): SchemaCheckInResponse = {
+  def apply(): SchemaCheckInResponse = {
     val __obj = js.Dynamic.literal()
-    if (deadline != null) __obj.updateDynamic("deadline")(deadline.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCheckInResponse]
   }
+  @scala.inline
+  implicit class SchemaCheckInResponseOps[Self <: SchemaCheckInResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeadline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deadline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeadline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deadline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

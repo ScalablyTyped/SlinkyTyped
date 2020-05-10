@@ -9,8 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class ModelGraphics () extends js.Object {
   def this(options: AnonArticulations) = this()
-  var articulations: js.Any = js.native
-   // PropertyBag
+  var articulations: PropertyBag = js.native
   var clampAnimations: Property | Boolean = js.native
   var clippingPlanes: Property | ClippingPlaneCollection = js.native
   var color: Property | Color = js.native
@@ -24,8 +23,7 @@ class ModelGraphics () extends js.Object {
   var lightColor: Property | Cartesian3 = js.native
   var maximumScale: Property | Double = js.native
   var minimumPixelSize: Property | Double = js.native
-  var nodeTransformations: js.Any = js.native
-   // PropertyBag
+  var nodeTransformations: PropertyBag = js.native
   var runAnimations: Property | Boolean = js.native
   var scale: Property | Double = js.native
   var shadows: Property | ShadowMode = js.native

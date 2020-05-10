@@ -4,55 +4,163 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CreativeCustomEvent extends js.Object {
   /** Unique ID of this event used by DDM Reporting and Data Transfer. This is a read-only field. */
-  var advertiserCustomEventId: js.UndefOr[String] = js.undefined
+  var advertiserCustomEventId: js.UndefOr[String] = js.native
   /** User-entered name for the event. */
-  var advertiserCustomEventName: js.UndefOr[String] = js.undefined
+  var advertiserCustomEventName: js.UndefOr[String] = js.native
   /** Type of the event. This is a read-only field. */
-  var advertiserCustomEventType: js.UndefOr[String] = js.undefined
+  var advertiserCustomEventType: js.UndefOr[String] = js.native
   /** Artwork label column, used to link events in DCM back to events in Studio. This is a required field and should not be modified after insertion. */
-  var artworkLabel: js.UndefOr[String] = js.undefined
+  var artworkLabel: js.UndefOr[String] = js.native
   /** Artwork type used by the creative.This is a read-only field. */
-  var artworkType: js.UndefOr[String] = js.undefined
+  var artworkType: js.UndefOr[String] = js.native
   /** Exit URL of the event. This field is used only for exit events. */
-  var exitUrl: js.UndefOr[String] = js.undefined
+  var exitUrl: js.UndefOr[String] = js.native
   /** ID of this event. This is a required field and should not be modified after insertion. */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /** Properties for rich media popup windows. This field is used only for exit events. */
-  var popupWindowProperties: js.UndefOr[PopupWindowProperties] = js.undefined
+  var popupWindowProperties: js.UndefOr[PopupWindowProperties] = js.native
   /** Target type used by the event. */
-  var targetType: js.UndefOr[String] = js.undefined
+  var targetType: js.UndefOr[String] = js.native
   /** Video reporting ID, used to differentiate multiple videos in a single creative. This is a read-only field. */
-  var videoReportingId: js.UndefOr[String] = js.undefined
+  var videoReportingId: js.UndefOr[String] = js.native
 }
 
 object CreativeCustomEvent {
   @scala.inline
-  def apply(
-    advertiserCustomEventId: String = null,
-    advertiserCustomEventName: String = null,
-    advertiserCustomEventType: String = null,
-    artworkLabel: String = null,
-    artworkType: String = null,
-    exitUrl: String = null,
-    id: String = null,
-    popupWindowProperties: PopupWindowProperties = null,
-    targetType: String = null,
-    videoReportingId: String = null
-  ): CreativeCustomEvent = {
+  def apply(): CreativeCustomEvent = {
     val __obj = js.Dynamic.literal()
-    if (advertiserCustomEventId != null) __obj.updateDynamic("advertiserCustomEventId")(advertiserCustomEventId.asInstanceOf[js.Any])
-    if (advertiserCustomEventName != null) __obj.updateDynamic("advertiserCustomEventName")(advertiserCustomEventName.asInstanceOf[js.Any])
-    if (advertiserCustomEventType != null) __obj.updateDynamic("advertiserCustomEventType")(advertiserCustomEventType.asInstanceOf[js.Any])
-    if (artworkLabel != null) __obj.updateDynamic("artworkLabel")(artworkLabel.asInstanceOf[js.Any])
-    if (artworkType != null) __obj.updateDynamic("artworkType")(artworkType.asInstanceOf[js.Any])
-    if (exitUrl != null) __obj.updateDynamic("exitUrl")(exitUrl.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (popupWindowProperties != null) __obj.updateDynamic("popupWindowProperties")(popupWindowProperties.asInstanceOf[js.Any])
-    if (targetType != null) __obj.updateDynamic("targetType")(targetType.asInstanceOf[js.Any])
-    if (videoReportingId != null) __obj.updateDynamic("videoReportingId")(videoReportingId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreativeCustomEvent]
   }
+  @scala.inline
+  implicit class CreativeCustomEventOps[Self <: CreativeCustomEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdvertiserCustomEventId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserCustomEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdvertiserCustomEventId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserCustomEventId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdvertiserCustomEventName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserCustomEventName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdvertiserCustomEventName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserCustomEventName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdvertiserCustomEventType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserCustomEventType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdvertiserCustomEventType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserCustomEventType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArtworkLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artworkLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArtworkLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artworkLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArtworkType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artworkType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArtworkType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artworkType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExitUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExitUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopupWindowProperties(value: PopupWindowProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupWindowProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopupWindowProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupWindowProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoReportingId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoReportingId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoReportingId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoReportingId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

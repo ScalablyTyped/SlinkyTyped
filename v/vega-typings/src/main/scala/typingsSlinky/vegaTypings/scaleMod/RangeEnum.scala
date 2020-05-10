@@ -20,22 +20,20 @@ trait RangeEnum
 
 object RangeEnum {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def category: typingsSlinky.vegaTypings.vegaTypingsStrings.category = "category".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.category]
   @scala.inline
-  def category: typingsSlinky.vegaTypings.vegaTypingsStrings.category = this.cast("category")
+  def diverging: typingsSlinky.vegaTypings.vegaTypingsStrings.diverging = "diverging".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.diverging]
   @scala.inline
-  def diverging: typingsSlinky.vegaTypings.vegaTypingsStrings.diverging = this.cast("diverging")
+  def heatmap: typingsSlinky.vegaTypings.vegaTypingsStrings.heatmap = "heatmap".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.heatmap]
   @scala.inline
-  def heatmap: typingsSlinky.vegaTypings.vegaTypingsStrings.heatmap = this.cast("heatmap")
+  def height: typingsSlinky.vegaTypings.vegaTypingsStrings.height = "height".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.height]
   @scala.inline
-  def height: typingsSlinky.vegaTypings.vegaTypingsStrings.height = this.cast("height")
+  def ordinal: typingsSlinky.vegaTypings.vegaTypingsStrings.ordinal = "ordinal".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.ordinal]
   @scala.inline
-  def ordinal: typingsSlinky.vegaTypings.vegaTypingsStrings.ordinal = this.cast("ordinal")
+  def ramp: typingsSlinky.vegaTypings.vegaTypingsStrings.ramp = "ramp".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.ramp]
   @scala.inline
-  def ramp: typingsSlinky.vegaTypings.vegaTypingsStrings.ramp = this.cast("ramp")
+  def symbol: typingsSlinky.vegaTypings.vegaTypingsStrings.symbol = "symbol".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.symbol]
   @scala.inline
-  def symbol: typingsSlinky.vegaTypings.vegaTypingsStrings.symbol = this.cast("symbol")
-  @scala.inline
-  def width: typingsSlinky.vegaTypings.vegaTypingsStrings.width = this.cast("width")
+  def width: typingsSlinky.vegaTypings.vegaTypingsStrings.width = "width".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.width]
 }
 

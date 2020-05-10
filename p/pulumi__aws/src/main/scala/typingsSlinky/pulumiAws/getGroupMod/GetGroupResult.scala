@@ -102,8 +102,129 @@ object GetGroupResult {
     vpcZoneIdentifier: String
   ): GetGroupResult = {
     val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any], availabilityZones = availabilityZones.asInstanceOf[js.Any], defaultCooldown = defaultCooldown.asInstanceOf[js.Any], desiredCapacity = desiredCapacity.asInstanceOf[js.Any], healthCheckGracePeriod = healthCheckGracePeriod.asInstanceOf[js.Any], healthCheckType = healthCheckType.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], launchConfiguration = launchConfiguration.asInstanceOf[js.Any], loadBalancers = loadBalancers.asInstanceOf[js.Any], maxSize = maxSize.asInstanceOf[js.Any], minSize = minSize.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], newInstancesProtectedFromScaleIn = newInstancesProtectedFromScaleIn.asInstanceOf[js.Any], placementGroup = placementGroup.asInstanceOf[js.Any], serviceLinkedRoleArn = serviceLinkedRoleArn.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], targetGroupArns = targetGroupArns.asInstanceOf[js.Any], terminationPolicies = terminationPolicies.asInstanceOf[js.Any], vpcZoneIdentifier = vpcZoneIdentifier.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetGroupResult]
   }
+  @scala.inline
+  implicit class GetGroupResultOps[Self <: GetGroupResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAvailabilityZones(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZones")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultCooldown(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCooldown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDesiredCapacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHealthCheckGracePeriod(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheckGracePeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHealthCheckType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheckType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLaunchConfiguration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoadBalancers(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNewInstancesProtectedFromScaleIn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newInstancesProtectedFromScaleIn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlacementGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placementGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServiceLinkedRoleArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceLinkedRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetGroupArns(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetGroupArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTerminationPolicies(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terminationPolicies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVpcZoneIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcZoneIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

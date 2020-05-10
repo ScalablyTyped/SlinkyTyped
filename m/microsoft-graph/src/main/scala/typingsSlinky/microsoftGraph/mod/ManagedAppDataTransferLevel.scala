@@ -14,12 +14,10 @@ trait ManagedAppDataTransferLevel extends js.Object
 
 object ManagedAppDataTransferLevel {
   @scala.inline
-  def allApps: typingsSlinky.microsoftGraph.microsoftGraphStrings.allApps = this.cast("allApps")
+  def allApps: typingsSlinky.microsoftGraph.microsoftGraphStrings.allApps = "allApps".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.allApps]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def managedApps: typingsSlinky.microsoftGraph.microsoftGraphStrings.managedApps = "managedApps".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.managedApps]
   @scala.inline
-  def managedApps: typingsSlinky.microsoftGraph.microsoftGraphStrings.managedApps = this.cast("managedApps")
-  @scala.inline
-  def none: none_ = this.cast("none")
+  def none: none_ = "none".asInstanceOf[none_]
 }
 

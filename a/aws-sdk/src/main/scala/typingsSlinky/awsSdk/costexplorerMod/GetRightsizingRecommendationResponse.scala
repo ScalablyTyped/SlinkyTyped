@@ -26,18 +26,65 @@ trait GetRightsizingRecommendationResponse extends js.Object {
 
 object GetRightsizingRecommendationResponse {
   @scala.inline
-  def apply(
-    Metadata: RightsizingRecommendationMetadata = null,
-    NextPageToken: NextPageToken = null,
-    RightsizingRecommendations: RightsizingRecommendationList = null,
-    Summary: RightsizingRecommendationSummary = null
-  ): GetRightsizingRecommendationResponse = {
+  def apply(): GetRightsizingRecommendationResponse = {
     val __obj = js.Dynamic.literal()
-    if (Metadata != null) __obj.updateDynamic("Metadata")(Metadata.asInstanceOf[js.Any])
-    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
-    if (RightsizingRecommendations != null) __obj.updateDynamic("RightsizingRecommendations")(RightsizingRecommendations.asInstanceOf[js.Any])
-    if (Summary != null) __obj.updateDynamic("Summary")(Summary.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRightsizingRecommendationResponse]
   }
+  @scala.inline
+  implicit class GetRightsizingRecommendationResponseOps[Self <: GetRightsizingRecommendationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMetadata(value: RightsizingRecommendationMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: NextPageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRightsizingRecommendations(value: RightsizingRecommendationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RightsizingRecommendations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRightsizingRecommendations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RightsizingRecommendations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSummary(value: RightsizingRecommendationSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Summary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Summary")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

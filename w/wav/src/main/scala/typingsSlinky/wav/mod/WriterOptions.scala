@@ -1,100 +1,79 @@
 package typingsSlinky.wav.mod
 
-import typingsSlinky.node.AnonChunk
-import typingsSlinky.node.streamMod.Transform
-import typingsSlinky.node.streamMod.TransformCallback
 import typingsSlinky.node.streamMod.TransformOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WriterOptions extends TransformOptions {
-  var bitDepth: js.UndefOr[Double] = js.undefined
-  var channels: js.UndefOr[Double] = js.undefined
-  var format: js.UndefOr[Double] = js.undefined
-  var sampleRate: js.UndefOr[Double] = js.undefined
+  var bitDepth: js.UndefOr[Double] = js.native
+  var channels: js.UndefOr[Double] = js.native
+  var format: js.UndefOr[Double] = js.native
+  var sampleRate: js.UndefOr[Double] = js.native
 }
 
 object WriterOptions {
   @scala.inline
-  def apply(
-    allowHalfOpen: js.UndefOr[Boolean] = js.undefined,
-    autoDestroy: js.UndefOr[Boolean] = js.undefined,
-    bitDepth: Int | Double = null,
-    channels: Int | Double = null,
-    decodeStrings: js.UndefOr[Boolean] = js.undefined,
-    defaultEncoding: String = null,
-    destroy: js.ThisFunction2[
-      /* this */ Transform, 
-      /* error */ js.Error | Null, 
-      /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
-      Unit
-    ] = null,
-    emitClose: js.UndefOr[Boolean] = js.undefined,
-    encoding: String = null,
-    `final`: js.ThisFunction1[
-      /* this */ Transform, 
-      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
-      Unit
-    ] = null,
-    flush: js.ThisFunction1[/* this */ Transform, /* callback */ TransformCallback, Unit] = null,
-    format: Int | Double = null,
-    highWaterMark: Int | Double = null,
-    objectMode: js.UndefOr[Boolean] = js.undefined,
-    read: js.ThisFunction1[/* this */ Transform, /* size */ Double, Unit] = null,
-    readableHighWaterMark: Int | Double = null,
-    readableObjectMode: js.UndefOr[Boolean] = js.undefined,
-    sampleRate: Int | Double = null,
-    transform: js.ThisFunction3[
-      /* this */ Transform, 
-      /* chunk */ js.Any, 
-      /* encoding */ String, 
-      /* callback */ TransformCallback, 
-      Unit
-    ] = null,
-    writableCorked: Int | Double = null,
-    writableHighWaterMark: Int | Double = null,
-    writableObjectMode: js.UndefOr[Boolean] = js.undefined,
-    write: js.ThisFunction3[
-      /* this */ Transform, 
-      /* chunk */ js.Any, 
-      /* encoding */ String, 
-      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
-      Unit
-    ] = null,
-    writev: js.ThisFunction2[
-      /* this */ Transform, 
-      /* chunks */ js.Array[AnonChunk], 
-      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
-      Unit
-    ] = null
-  ): WriterOptions = {
+  def apply(): WriterOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowHalfOpen)) __obj.updateDynamic("allowHalfOpen")(allowHalfOpen.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoDestroy)) __obj.updateDynamic("autoDestroy")(autoDestroy.asInstanceOf[js.Any])
-    if (bitDepth != null) __obj.updateDynamic("bitDepth")(bitDepth.asInstanceOf[js.Any])
-    if (channels != null) __obj.updateDynamic("channels")(channels.asInstanceOf[js.Any])
-    if (!js.isUndefined(decodeStrings)) __obj.updateDynamic("decodeStrings")(decodeStrings.asInstanceOf[js.Any])
-    if (defaultEncoding != null) __obj.updateDynamic("defaultEncoding")(defaultEncoding.asInstanceOf[js.Any])
-    if (destroy != null) __obj.updateDynamic("destroy")(destroy.asInstanceOf[js.Any])
-    if (!js.isUndefined(emitClose)) __obj.updateDynamic("emitClose")(emitClose.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (`final` != null) __obj.updateDynamic("final")(`final`.asInstanceOf[js.Any])
-    if (flush != null) __obj.updateDynamic("flush")(flush.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (highWaterMark != null) __obj.updateDynamic("highWaterMark")(highWaterMark.asInstanceOf[js.Any])
-    if (!js.isUndefined(objectMode)) __obj.updateDynamic("objectMode")(objectMode.asInstanceOf[js.Any])
-    if (read != null) __obj.updateDynamic("read")(read.asInstanceOf[js.Any])
-    if (readableHighWaterMark != null) __obj.updateDynamic("readableHighWaterMark")(readableHighWaterMark.asInstanceOf[js.Any])
-    if (!js.isUndefined(readableObjectMode)) __obj.updateDynamic("readableObjectMode")(readableObjectMode.asInstanceOf[js.Any])
-    if (sampleRate != null) __obj.updateDynamic("sampleRate")(sampleRate.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
-    if (writableCorked != null) __obj.updateDynamic("writableCorked")(writableCorked.asInstanceOf[js.Any])
-    if (writableHighWaterMark != null) __obj.updateDynamic("writableHighWaterMark")(writableHighWaterMark.asInstanceOf[js.Any])
-    if (!js.isUndefined(writableObjectMode)) __obj.updateDynamic("writableObjectMode")(writableObjectMode.asInstanceOf[js.Any])
-    if (write != null) __obj.updateDynamic("write")(write.asInstanceOf[js.Any])
-    if (writev != null) __obj.updateDynamic("writev")(writev.asInstanceOf[js.Any])
     __obj.asInstanceOf[WriterOptions]
   }
+  @scala.inline
+  implicit class WriterOptionsOps[Self <: WriterOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBitDepth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBitDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitDepth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChannels(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleRate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

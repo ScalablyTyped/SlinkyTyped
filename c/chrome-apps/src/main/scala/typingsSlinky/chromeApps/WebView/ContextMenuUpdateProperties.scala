@@ -5,68 +5,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ContextMenuUpdateProperties extends js.Object {
   /**
     * The state of a checkbox or radio item: true for selected and false for unselected.
     * Only one radio item can be selected at a time in a given group of radio items.
     */
-  var checked: js.UndefOr[Boolean] = js.undefined
+  var checked: js.UndefOr[Boolean] = js.native
   /**
     * List of contexts this menu item will appear in.
     */
-  var contexts: js.UndefOr[js.Array[_]] = js.undefined
+  var contexts: js.UndefOr[js.Array[_]] = js.native
   /**
     * Lets you restrict the item to apply only to documents whose URL matches one of the given patterns.
     * (This applies to frames as well.)
     */
-  var documentUrlPatterns: js.UndefOr[js.Array[_]] = js.undefined
+  var documentUrlPatterns: js.UndefOr[js.Array[_]] = js.native
   /**
     * Whether this context menu item is enabled or disabled.
     */
-  var enabled: js.UndefOr[Boolean] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.native
   /**
     * A function that will be called back when the menu item is clicked.
     * @param callback
     */
-  var onclick: js.UndefOr[js.Function1[/* info */ js.Any, Unit]] = js.undefined
+  var onclick: js.UndefOr[js.Function1[/* info */ js.Any, Unit]] = js.native
   /**
     * The ID of a parent menu item; this makes the item a child of a previously added item. <em>Note:</em> You cannot change an item to be a child of one of its own descendants.
     */
-  var parentId: js.UndefOr[integer | String] = js.undefined
+  var parentId: js.UndefOr[integer | String] = js.native
   /**
     * Similar to documentUrlPatterns, but lets you filter based on the src attribute of img/audio/video tags and the href of anchor tags.
     */
-  var targetUrlPatterns: js.UndefOr[js.Array[_]] = js.undefined
+  var targetUrlPatterns: js.UndefOr[js.Array[_]] = js.native
   /** The text to be displayed in the item */
-  var title: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.native
   /** The type of menu item. */
-  var `type`: js.UndefOr[ContextType] = js.undefined
+  var `type`: js.UndefOr[ContextType] = js.native
 }
 
 object ContextMenuUpdateProperties {
   @scala.inline
-  def apply(
-    checked: js.UndefOr[Boolean] = js.undefined,
-    contexts: js.Array[_] = null,
-    documentUrlPatterns: js.Array[_] = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    onclick: /* info */ js.Any => Unit = null,
-    parentId: integer | String = null,
-    targetUrlPatterns: js.Array[_] = null,
-    title: String = null,
-    `type`: ContextType = null
-  ): ContextMenuUpdateProperties = {
+  def apply(): ContextMenuUpdateProperties = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(checked)) __obj.updateDynamic("checked")(checked.asInstanceOf[js.Any])
-    if (contexts != null) __obj.updateDynamic("contexts")(contexts.asInstanceOf[js.Any])
-    if (documentUrlPatterns != null) __obj.updateDynamic("documentUrlPatterns")(documentUrlPatterns.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (onclick != null) __obj.updateDynamic("onclick")(js.Any.fromFunction1(onclick))
-    if (parentId != null) __obj.updateDynamic("parentId")(parentId.asInstanceOf[js.Any])
-    if (targetUrlPatterns != null) __obj.updateDynamic("targetUrlPatterns")(targetUrlPatterns.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContextMenuUpdateProperties]
   }
+  @scala.inline
+  implicit class ContextMenuUpdatePropertiesOps[Self <: ContextMenuUpdateProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChecked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChecked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContexts(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contexts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContexts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contexts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentUrlPatterns(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentUrlPatterns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentUrlPatterns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentUrlPatterns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnclick(value: /* info */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onclick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnclick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onclick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentId(value: integer | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetUrlPatterns(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetUrlPatterns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetUrlPatterns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetUrlPatterns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: ContextType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

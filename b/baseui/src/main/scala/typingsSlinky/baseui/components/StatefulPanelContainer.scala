@@ -1,10 +1,7 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.AnonExpandedBoolean
 import typingsSlinky.baseui.accordionMod.PanelState
 import typingsSlinky.baseui.accordionMod.StatefulPanelContainerProps
@@ -13,29 +10,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object StatefulPanelContainer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.accordionMod.StatefulPanelContainer] {
+object StatefulPanelContainer {
   @JSImport("baseui/accordion", "StatefulPanelContainer")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    initialState: PanelState = null,
-    onChange: /* args */ AnonExpandedBoolean => _ = null,
-    stateReducer: (expand, PanelState, PanelState) => PanelState = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.baseui.accordionMod.StatefulPanelContainer] = {
-    val __obj = js.Dynamic.literal()
-    if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (stateReducer != null) __obj.updateDynamic("stateReducer")(js.Any.fromFunction3(stateReducer))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.accordionMod.StatefulPanelContainer] {
+    @scala.inline
+    def initialState(value: PanelState): this.type = set("initialState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* args */ AnonExpandedBoolean => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def stateReducer(value: (expand, PanelState, PanelState) => PanelState): this.type = set("stateReducer", js.Any.fromFunction3(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.accordionMod.StatefulPanelContainer] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.baseui.accordionMod.StatefulPanelContainer](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = StatefulPanelContainerProps
+  
+  def withProps(p: StatefulPanelContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: StatefulPanelContainer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

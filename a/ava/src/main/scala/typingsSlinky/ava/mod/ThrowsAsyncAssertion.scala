@@ -1,6 +1,5 @@
 package typingsSlinky.ava.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,8 +34,8 @@ trait ThrowsAsyncAssertion extends js.Object {
   	 * Assert that the async function throws [an error](https://www.npmjs.com/package/is-error). If so, returns the error
   	 * value. You must await the result. The error must have a message that matches the regular expression.
   	 */
-  def apply[ThrownError /* <: js.Error */](fn: js.Function0[js.Thenable[_]], regex: RegExp): js.Promise[ThrownError] = js.native
-  def apply[ThrownError /* <: js.Error */](fn: js.Function0[js.Thenable[_]], regex: RegExp, message: String): js.Promise[ThrownError] = js.native
+  def apply[ThrownError /* <: js.Error */](fn: js.Function0[js.Thenable[_]], regex: js.RegExp): js.Promise[ThrownError] = js.native
+  def apply[ThrownError /* <: js.Error */](fn: js.Function0[js.Thenable[_]], regex: js.RegExp, message: String): js.Promise[ThrownError] = js.native
   /**
   	 * Assert that the promise rejects with [an error](https://www.npmjs.com/package/is-error). If so, returns the
   	 * rejection reason. You must await the result.
@@ -65,8 +64,8 @@ trait ThrowsAsyncAssertion extends js.Object {
   	 * Assert that the promise rejects with [an error](https://www.npmjs.com/package/is-error). If so, returns the
   	 * rejection reason. You must await the result. The error must have a message that matches the regular expression.
   	 */
-  def apply[ThrownError /* <: js.Error */](promise: js.Thenable[_], regex: RegExp): js.Promise[ThrownError] = js.native
-  def apply[ThrownError /* <: js.Error */](promise: js.Thenable[_], regex: RegExp, message: String): js.Promise[ThrownError] = js.native
+  def apply[ThrownError /* <: js.Error */](promise: js.Thenable[_], regex: js.RegExp): js.Promise[ThrownError] = js.native
+  def apply[ThrownError /* <: js.Error */](promise: js.Thenable[_], regex: js.RegExp, message: String): js.Promise[ThrownError] = js.native
   /** Skip this assertion. */
   def skip(thrower: js.Any): Unit = js.native
   def skip(thrower: js.Any, expectations: js.Any): Unit = js.native

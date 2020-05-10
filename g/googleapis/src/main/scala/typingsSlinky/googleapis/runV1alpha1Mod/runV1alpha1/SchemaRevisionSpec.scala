@@ -57,24 +57,101 @@ trait SchemaRevisionSpec extends js.Object {
 
 object SchemaRevisionSpec {
   @scala.inline
-  def apply(
-    concurrencyModel: String = null,
-    container: SchemaContainer = null,
-    containerConcurrency: Int | Double = null,
-    generation: Int | Double = null,
-    serviceAccountName: String = null,
-    servingState: String = null,
-    timeoutSeconds: Int | Double = null
-  ): SchemaRevisionSpec = {
+  def apply(): SchemaRevisionSpec = {
     val __obj = js.Dynamic.literal()
-    if (concurrencyModel != null) __obj.updateDynamic("concurrencyModel")(concurrencyModel.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (containerConcurrency != null) __obj.updateDynamic("containerConcurrency")(containerConcurrency.asInstanceOf[js.Any])
-    if (generation != null) __obj.updateDynamic("generation")(generation.asInstanceOf[js.Any])
-    if (serviceAccountName != null) __obj.updateDynamic("serviceAccountName")(serviceAccountName.asInstanceOf[js.Any])
-    if (servingState != null) __obj.updateDynamic("servingState")(servingState.asInstanceOf[js.Any])
-    if (timeoutSeconds != null) __obj.updateDynamic("timeoutSeconds")(timeoutSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRevisionSpec]
   }
+  @scala.inline
+  implicit class SchemaRevisionSpecOps[Self <: SchemaRevisionSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConcurrencyModel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("concurrencyModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConcurrencyModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("concurrencyModel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainer(value: SchemaContainer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerConcurrency(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerConcurrency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerConcurrency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerConcurrency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeneration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeneration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceAccountName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccountName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceAccountName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccountName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServingState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servingState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServingState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servingState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeoutSeconds(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeoutSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

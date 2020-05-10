@@ -1,13 +1,12 @@
 package typingsSlinky.grommet.mod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLInputElement
+import slinky.core.ReactComponentClass
 import typingsSlinky.grommet.radioButtonMod.RadioButtonProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.InputHTMLAttributes
-import typingsSlinky.std.HTMLInputElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,18 +16,12 @@ import scala.scalajs.js.annotation._
 class RadioButton protected ()
   extends Component[
       RadioButtonProps with (DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement]), 
-      ComponentState, 
+      js.Object, 
       js.Any
     ] {
-  def this(props: RadioButtonProps with (DetailedHTMLProps[
-        InputHTMLAttributes[org.scalajs.dom.raw.HTMLInputElement], 
-        org.scalajs.dom.raw.HTMLInputElement
-      ])) = this()
+  def this(props: RadioButtonProps with (DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement])) = this()
   def this(
-    props: RadioButtonProps with (DetailedHTMLProps[
-        InputHTMLAttributes[org.scalajs.dom.raw.HTMLInputElement], 
-        org.scalajs.dom.raw.HTMLInputElement
-      ]),
+    props: RadioButtonProps with (DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement]),
     context: js.Any
   ) = this()
 }
@@ -36,9 +29,8 @@ class RadioButton protected ()
 @JSImport("grommet", "RadioButton")
 @js.native
 object RadioButton extends TopLevel[
-      ComponentClass[
-        RadioButtonProps with (DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement]), 
-        ComponentState
+      ReactComponentClass[
+        RadioButtonProps with (DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement])
       ]
     ]
 

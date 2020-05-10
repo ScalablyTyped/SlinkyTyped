@@ -8,6 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IndexesResource extends js.Object {
   /**
     * Creates the specified index.
@@ -24,13 +25,13 @@ trait IndexesResource extends js.Object {
     *
     * Indexes with a single field cannot be created.
     */
-  def create(request: AnonKey): Request_[Operation]
+  def create(request: AnonKey): Request_[Operation] = js.native
   /** Deletes an index. */
-  def delete(request: AnonName): Request_[js.Object]
+  def delete(request: AnonName): Request_[js.Object] = js.native
   /** Gets an index. */
-  def get(request: AnonName): Request_[Index]
+  def get(request: AnonName): Request_[Index] = js.native
   /** Lists the indexes that match the specified filters. */
-  def list(request: AnonFilter): Request_[ListIndexesResponse]
+  def list(request: AnonFilter): Request_[ListIndexesResponse] = js.native
 }
 
 object IndexesResource {
@@ -42,8 +43,39 @@ object IndexesResource {
     list: AnonFilter => Request_[ListIndexesResponse]
   ): IndexesResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
-  
     __obj.asInstanceOf[IndexesResource]
   }
+  @scala.inline
+  implicit class IndexesResourceOps[Self <: IndexesResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreate(value: AnonKey => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDelete(value: AnonName => Request_[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: AnonName => Request_[Index]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withList(value: AnonFilter => Request_[ListIndexesResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

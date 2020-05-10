@@ -1,7 +1,7 @@
 package typingsSlinky.androiduix.android.widget.AbsListView
 
 import typingsSlinky.androiduix.android.widget.OverScroller
-import typingsSlinky.androiduix.java.lang.Runnable
+import typingsSlinky.androiduix.java_.lang.Runnable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,8 +17,6 @@ class FlingRunnable protected () extends Runnable {
   /* private */ def edgeReached(delta: js.Any): js.Any = js.native
   def endFling(): Unit = js.native
   def flywheelTouch(): Unit = js.native
-  /* CompleteClass */
-  override def run(): js.Any = js.native
   def start(initialVelocity: Double): Unit = js.native
   def startOverfling(initialVelocity: Double): Unit = js.native
   def startScroll(distance: Double, duration: Double, linear: Boolean): Unit = js.native

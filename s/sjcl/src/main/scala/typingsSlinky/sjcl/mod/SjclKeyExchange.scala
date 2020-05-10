@@ -5,16 +5,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // ________________________________________________________________________
+@js.native
 trait SjclKeyExchange extends js.Object {
-  var srp: SjclSecureRemotePassword
+  var srp: SjclSecureRemotePassword = js.native
 }
 
 object SjclKeyExchange {
   @scala.inline
   def apply(srp: SjclSecureRemotePassword): SjclKeyExchange = {
     val __obj = js.Dynamic.literal(srp = srp.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SjclKeyExchange]
   }
+  @scala.inline
+  implicit class SjclKeyExchangeOps[Self <: SjclKeyExchange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSrp(value: SjclSecureRemotePassword): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("srp")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -34,21 +34,83 @@ trait DestinationDescription extends js.Object {
 
 object DestinationDescription {
   @scala.inline
-  def apply(
-    DestinationId: DestinationId,
-    ElasticsearchDestinationDescription: ElasticsearchDestinationDescription = null,
-    ExtendedS3DestinationDescription: ExtendedS3DestinationDescription = null,
-    RedshiftDestinationDescription: RedshiftDestinationDescription = null,
-    S3DestinationDescription: S3DestinationDescription = null,
-    SplunkDestinationDescription: SplunkDestinationDescription = null
-  ): DestinationDescription = {
+  def apply(DestinationId: DestinationId): DestinationDescription = {
     val __obj = js.Dynamic.literal(DestinationId = DestinationId.asInstanceOf[js.Any])
-    if (ElasticsearchDestinationDescription != null) __obj.updateDynamic("ElasticsearchDestinationDescription")(ElasticsearchDestinationDescription.asInstanceOf[js.Any])
-    if (ExtendedS3DestinationDescription != null) __obj.updateDynamic("ExtendedS3DestinationDescription")(ExtendedS3DestinationDescription.asInstanceOf[js.Any])
-    if (RedshiftDestinationDescription != null) __obj.updateDynamic("RedshiftDestinationDescription")(RedshiftDestinationDescription.asInstanceOf[js.Any])
-    if (S3DestinationDescription != null) __obj.updateDynamic("S3DestinationDescription")(S3DestinationDescription.asInstanceOf[js.Any])
-    if (SplunkDestinationDescription != null) __obj.updateDynamic("SplunkDestinationDescription")(SplunkDestinationDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[DestinationDescription]
   }
+  @scala.inline
+  implicit class DestinationDescriptionOps[Self <: DestinationDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestinationId(value: DestinationId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withElasticsearchDestinationDescription(value: ElasticsearchDestinationDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticsearchDestinationDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticsearchDestinationDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticsearchDestinationDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtendedS3DestinationDescription(value: ExtendedS3DestinationDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendedS3DestinationDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtendedS3DestinationDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendedS3DestinationDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRedshiftDestinationDescription(value: RedshiftDestinationDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RedshiftDestinationDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRedshiftDestinationDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RedshiftDestinationDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3DestinationDescription(value: S3DestinationDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3DestinationDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3DestinationDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3DestinationDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSplunkDestinationDescription(value: SplunkDestinationDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SplunkDestinationDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSplunkDestinationDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SplunkDestinationDescription")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,7 +4,6 @@ import typingsSlinky.awsSdk.cloudfrontSignerMod.Signer.CannedPolicy
 import typingsSlinky.awsSdk.cloudfrontSignerMod.Signer.CustomPolicy
 import typingsSlinky.awsSdk.cloudfrontSignerMod.Signer.SignerOptionsWithPolicy
 import typingsSlinky.awsSdk.cloudfrontSignerMod.Signer.SignerOptionsWithoutPolicy
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +27,7 @@ class Signer_ protected () extends js.Object {
     */
   def getSignedCookie(
     options: SignerOptionsWithPolicy,
-    callback: js.Function2[/* err */ Error, /* cookie */ CustomPolicy, Unit]
+    callback: js.Function2[/* err */ js.Error, /* cookie */ CustomPolicy, Unit]
   ): Unit = js.native
   /**
     * Create a signed Amazon CloudFront Cookie.
@@ -39,7 +38,7 @@ class Signer_ protected () extends js.Object {
     */
   def getSignedCookie(
     options: SignerOptionsWithoutPolicy,
-    callback: js.Function2[/* err */ Error, /* cookie */ CannedPolicy, Unit]
+    callback: js.Function2[/* err */ js.Error, /* cookie */ CannedPolicy, Unit]
   ): Unit = js.native
   /**
     * Create a signed Amazon CloudFront URL.

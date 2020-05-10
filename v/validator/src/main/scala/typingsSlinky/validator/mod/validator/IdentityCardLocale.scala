@@ -13,12 +13,10 @@ trait IdentityCardLocale extends js.Object
 
 object IdentityCardLocale {
   @scala.inline
-  def ES: typingsSlinky.validator.validatorStrings.ES = this.cast("ES")
+  def ES: typingsSlinky.validator.validatorStrings.ES = "ES".asInstanceOf[typingsSlinky.validator.validatorStrings.ES]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `he-IL`: typingsSlinky.validator.validatorStrings.`he-IL` = "he-IL".asInstanceOf[typingsSlinky.validator.validatorStrings.`he-IL`]
   @scala.inline
-  def `he-IL`: typingsSlinky.validator.validatorStrings.`he-IL` = this.cast("he-IL")
-  @scala.inline
-  def `zh-TW`: typingsSlinky.validator.validatorStrings.`zh-TW` = this.cast("zh-TW")
+  def `zh-TW`: typingsSlinky.validator.validatorStrings.`zh-TW` = "zh-TW".asInstanceOf[typingsSlinky.validator.validatorStrings.`zh-TW`]
 }
 

@@ -18,11 +18,41 @@ trait DescribeTransitGatewaysResult extends js.Object {
 
 object DescribeTransitGatewaysResult {
   @scala.inline
-  def apply(NextToken: String = null, TransitGateways: TransitGatewayList = null): DescribeTransitGatewaysResult = {
+  def apply(): DescribeTransitGatewaysResult = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (TransitGateways != null) __obj.updateDynamic("TransitGateways")(TransitGateways.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTransitGatewaysResult]
   }
+  @scala.inline
+  implicit class DescribeTransitGatewaysResultOps[Self <: DescribeTransitGatewaysResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitGateways(value: TransitGatewayList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGateways")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitGateways: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGateways")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

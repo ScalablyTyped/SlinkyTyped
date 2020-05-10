@@ -1,6 +1,7 @@
 package typingsSlinky.arcgisJsApi.esri
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.arcgisJsApi.IHandle
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`2d`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`bottom-left`
@@ -12,7 +13,6 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.center
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.left
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.right
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.top
-import typingsSlinky.std.MouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

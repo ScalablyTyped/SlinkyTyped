@@ -4,39 +4,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GoogleCloudDialogflowV2IntentParameter extends js.Object {
-  var defaultValue: js.UndefOr[String] = js.undefined
-  var displayName: js.UndefOr[String] = js.undefined
-  var entityTypeDisplayName: js.UndefOr[String] = js.undefined
-  var isList: js.UndefOr[Boolean] = js.undefined
-  var mandatory: js.UndefOr[Boolean] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var prompts: js.UndefOr[js.Array[String]] = js.undefined
-  var value: js.UndefOr[String] = js.undefined
+  var defaultValue: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[String] = js.native
+  var entityTypeDisplayName: js.UndefOr[String] = js.native
+  var isList: js.UndefOr[Boolean] = js.native
+  var mandatory: js.UndefOr[Boolean] = js.native
+  var name: js.UndefOr[String] = js.native
+  var prompts: js.UndefOr[js.Array[String]] = js.native
+  var value: js.UndefOr[String] = js.native
 }
 
 object GoogleCloudDialogflowV2IntentParameter {
   @scala.inline
-  def apply(
-    defaultValue: String = null,
-    displayName: String = null,
-    entityTypeDisplayName: String = null,
-    isList: js.UndefOr[Boolean] = js.undefined,
-    mandatory: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    prompts: js.Array[String] = null,
-    value: String = null
-  ): GoogleCloudDialogflowV2IntentParameter = {
+  def apply(): GoogleCloudDialogflowV2IntentParameter = {
     val __obj = js.Dynamic.literal()
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (entityTypeDisplayName != null) __obj.updateDynamic("entityTypeDisplayName")(entityTypeDisplayName.asInstanceOf[js.Any])
-    if (!js.isUndefined(isList)) __obj.updateDynamic("isList")(isList.asInstanceOf[js.Any])
-    if (!js.isUndefined(mandatory)) __obj.updateDynamic("mandatory")(mandatory.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (prompts != null) __obj.updateDynamic("prompts")(prompts.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleCloudDialogflowV2IntentParameter]
   }
+  @scala.inline
+  implicit class GoogleCloudDialogflowV2IntentParameterOps[Self <: GoogleCloudDialogflowV2IntentParameter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntityTypeDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityTypeDisplayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityTypeDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityTypeDisplayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsList(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMandatory(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mandatory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMandatory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mandatory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrompts(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prompts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrompts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prompts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

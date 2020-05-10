@@ -1,14 +1,11 @@
 package typingsSlinky.tensorflowTfjsLayers.coreMod
 
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
-import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.LayerArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DropoutLayerArgs extends LayerArgs {
   /**
     * Integer array representing the shape of the binary dropout mask that will
@@ -18,40 +15,56 @@ trait DropoutLayerArgs extends LayerArgs {
     * and you want the dropout mask to be the same for all timesteps, you can use
     * `noise_shape=(batch_size, 1, features)`.
     */
-  var noiseShape: js.UndefOr[js.Array[Double]] = js.undefined
+  var noiseShape: js.UndefOr[js.Array[Double]] = js.native
   /** Float between 0 and 1. Fraction of the input units to drop. */
-  var rate: Double
+  var rate: Double = js.native
   /** An integer to use as random seed. */
-  var seed: js.UndefOr[Double] = js.undefined
+  var seed: js.UndefOr[Double] = js.native
 }
 
 object DropoutLayerArgs {
   @scala.inline
-  def apply(
-    rate: Double,
-    batchInputShape: Shape = null,
-    batchSize: Int | Double = null,
-    dtype: DataType = null,
-    inputDType: DataType = null,
-    inputShape: Shape = null,
-    name: String = null,
-    noiseShape: js.Array[Double] = null,
-    seed: Int | Double = null,
-    trainable: js.UndefOr[Boolean] = js.undefined,
-    weights: js.Array[Tensor_[Rank]] = null
-  ): DropoutLayerArgs = {
+  def apply(rate: Double): DropoutLayerArgs = {
     val __obj = js.Dynamic.literal(rate = rate.asInstanceOf[js.Any])
-    if (batchInputShape != null) __obj.updateDynamic("batchInputShape")(batchInputShape.asInstanceOf[js.Any])
-    if (batchSize != null) __obj.updateDynamic("batchSize")(batchSize.asInstanceOf[js.Any])
-    if (dtype != null) __obj.updateDynamic("dtype")(dtype.asInstanceOf[js.Any])
-    if (inputDType != null) __obj.updateDynamic("inputDType")(inputDType.asInstanceOf[js.Any])
-    if (inputShape != null) __obj.updateDynamic("inputShape")(inputShape.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (noiseShape != null) __obj.updateDynamic("noiseShape")(noiseShape.asInstanceOf[js.Any])
-    if (seed != null) __obj.updateDynamic("seed")(seed.asInstanceOf[js.Any])
-    if (!js.isUndefined(trainable)) __obj.updateDynamic("trainable")(trainable.asInstanceOf[js.Any])
-    if (weights != null) __obj.updateDynamic("weights")(weights.asInstanceOf[js.Any])
     __obj.asInstanceOf[DropoutLayerArgs]
   }
+  @scala.inline
+  implicit class DropoutLayerArgsOps[Self <: DropoutLayerArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNoiseShape(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noiseShape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoiseShape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noiseShape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

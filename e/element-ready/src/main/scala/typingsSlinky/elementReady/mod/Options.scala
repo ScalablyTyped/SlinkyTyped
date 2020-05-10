@@ -6,36 +6,80 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
   /**
   		Automatically stop checking for the element to be ready after the DOM ready event. The promise is then resolved to `undefined`.
   		@default true
   		*/
-  val stopOnDomReady: js.UndefOr[Boolean] = js.undefined
+  val stopOnDomReady: js.UndefOr[Boolean] = js.native
   /**
   		The element that's expected to contain a match.
   		@default document
   		*/
-  val target: js.UndefOr[Element | Document_] = js.undefined
+  val target: js.UndefOr[Element | Document_] = js.native
   /**
   		Milliseconds to wait before stopping the search and resolving the promise to `undefined`.
   		@default Infinity
   		*/
-  val timeout: js.UndefOr[Double] = js.undefined
+  val timeout: js.UndefOr[Double] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    stopOnDomReady: js.UndefOr[Boolean] = js.undefined,
-    target: Element | Document_ = null,
-    timeout: Int | Double = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(stopOnDomReady)) __obj.updateDynamic("stopOnDomReady")(stopOnDomReady.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStopOnDomReady(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopOnDomReady")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopOnDomReady: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopOnDomReady")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTarget(value: Element | Document_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

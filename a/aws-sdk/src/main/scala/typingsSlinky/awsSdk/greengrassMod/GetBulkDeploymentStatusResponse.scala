@@ -34,22 +34,89 @@ trait GetBulkDeploymentStatusResponse extends js.Object {
 
 object GetBulkDeploymentStatusResponse {
   @scala.inline
-  def apply(
-    BulkDeploymentMetrics: BulkDeploymentMetrics = null,
-    BulkDeploymentStatus: BulkDeploymentStatus = null,
-    CreatedAt: string = null,
-    ErrorDetails: ErrorDetails = null,
-    ErrorMessage: string = null,
-    tags: Tags = null
-  ): GetBulkDeploymentStatusResponse = {
+  def apply(): GetBulkDeploymentStatusResponse = {
     val __obj = js.Dynamic.literal()
-    if (BulkDeploymentMetrics != null) __obj.updateDynamic("BulkDeploymentMetrics")(BulkDeploymentMetrics.asInstanceOf[js.Any])
-    if (BulkDeploymentStatus != null) __obj.updateDynamic("BulkDeploymentStatus")(BulkDeploymentStatus.asInstanceOf[js.Any])
-    if (CreatedAt != null) __obj.updateDynamic("CreatedAt")(CreatedAt.asInstanceOf[js.Any])
-    if (ErrorDetails != null) __obj.updateDynamic("ErrorDetails")(ErrorDetails.asInstanceOf[js.Any])
-    if (ErrorMessage != null) __obj.updateDynamic("ErrorMessage")(ErrorMessage.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetBulkDeploymentStatusResponse]
   }
+  @scala.inline
+  implicit class GetBulkDeploymentStatusResponseOps[Self <: GetBulkDeploymentStatusResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBulkDeploymentMetrics(value: BulkDeploymentMetrics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BulkDeploymentMetrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBulkDeploymentMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BulkDeploymentMetrics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBulkDeploymentStatus(value: BulkDeploymentStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BulkDeploymentStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBulkDeploymentStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BulkDeploymentStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatedAt(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorDetails(value: ErrorDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorMessage(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

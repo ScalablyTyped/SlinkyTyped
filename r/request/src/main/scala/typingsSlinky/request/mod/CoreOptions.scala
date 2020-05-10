@@ -11,165 +11,685 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CoreOptions extends js.Object {
-  var agent: js.UndefOr[Agent | typingsSlinky.node.httpsMod.Agent] = js.undefined
-  var agentClass: js.UndefOr[js.Any] = js.undefined
-  var agentOptions: js.UndefOr[AgentOptions | typingsSlinky.node.httpsMod.AgentOptions] = js.undefined
-  var auth: js.UndefOr[AuthOptions] = js.undefined
-  var aws: js.UndefOr[AWSOptions] = js.undefined
-  var baseUrl: js.UndefOr[String] = js.undefined
-  var body: js.UndefOr[js.Any] = js.undefined
-  var ca: js.UndefOr[String | Buffer | (js.Array[Buffer | String])] = js.undefined
-  var callback: js.UndefOr[RequestCallback] = js.undefined
-  var cert: js.UndefOr[Buffer] = js.undefined
-  var encoding: js.UndefOr[String | Null] = js.undefined
-  var family: js.UndefOr[`4` | `6`] = js.undefined
-  var followAllRedirects: js.UndefOr[Boolean] = js.undefined
-  var followOriginalHttpMethod: js.UndefOr[Boolean] = js.undefined
-  var followRedirect: js.UndefOr[Boolean | (js.Function1[/* response */ IncomingMessage, Boolean])] = js.undefined
-  var forever: js.UndefOr[js.Any] = js.undefined
-  var form: js.UndefOr[StringDictionary[js.Any] | String] = js.undefined
-  var formData: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var gzip: js.UndefOr[Boolean] = js.undefined
-  var har: js.UndefOr[HttpArchiveRequest] = js.undefined
-  var hawk: js.UndefOr[HawkOptions] = js.undefined
-  var headers: js.UndefOr[Headers] = js.undefined
-  var host: js.UndefOr[String] = js.undefined
-  var jar: js.UndefOr[CookieJar | Boolean] = js.undefined
-  var json: js.UndefOr[js.Any] = js.undefined
-  var jsonReplacer: js.UndefOr[js.Function2[/* key */ String, /* value */ js.Any, _]] = js.undefined
-  var jsonReviver: js.UndefOr[js.Function2[/* key */ String, /* value */ js.Any, _]] = js.undefined
-  var key: js.UndefOr[Buffer] = js.undefined
-  var localAddress: js.UndefOr[String] = js.undefined
-  var maxRedirects: js.UndefOr[Double] = js.undefined
-  var method: js.UndefOr[String] = js.undefined
-  var multipart: js.UndefOr[js.Array[RequestPart] | Multipart] = js.undefined
-  var oauth: js.UndefOr[OAuthOptions] = js.undefined
-  var passphrase: js.UndefOr[String] = js.undefined
-  var pool: js.UndefOr[PoolOptions] = js.undefined
-  var port: js.UndefOr[Double] = js.undefined
-  var postambleCRLF: js.UndefOr[Boolean] = js.undefined
-  var preambleCRLF: js.UndefOr[Boolean] = js.undefined
-  var proxy: js.UndefOr[js.Any] = js.undefined
-  var qs: js.UndefOr[js.Any] = js.undefined
-  var qsParseOptions: js.UndefOr[js.Any] = js.undefined
-  var qsStringifyOptions: js.UndefOr[js.Any] = js.undefined
-  var rejectUnauthorized: js.UndefOr[Boolean] = js.undefined
-  var removeRefererHeader: js.UndefOr[Boolean] = js.undefined
-  var strictSSL: js.UndefOr[Boolean] = js.undefined
-  var time: js.UndefOr[Boolean] = js.undefined
-  var timeout: js.UndefOr[Double] = js.undefined
-  var tunnel: js.UndefOr[Boolean] = js.undefined
-  var useQuerystring: js.UndefOr[Boolean] = js.undefined
-  var withCredentials: js.UndefOr[Boolean] = js.undefined
+  var agent: js.UndefOr[Agent | typingsSlinky.node.httpsMod.Agent] = js.native
+  var agentClass: js.UndefOr[js.Any] = js.native
+  var agentOptions: js.UndefOr[AgentOptions | typingsSlinky.node.httpsMod.AgentOptions] = js.native
+  var auth: js.UndefOr[AuthOptions] = js.native
+  var aws: js.UndefOr[AWSOptions] = js.native
+  var baseUrl: js.UndefOr[String] = js.native
+  var body: js.UndefOr[js.Any] = js.native
+  var ca: js.UndefOr[String | Buffer | (js.Array[Buffer | String])] = js.native
+  var callback: js.UndefOr[RequestCallback] = js.native
+  var cert: js.UndefOr[Buffer] = js.native
+  var encoding: js.UndefOr[String | Null] = js.native
+  var family: js.UndefOr[`4` | `6`] = js.native
+  var followAllRedirects: js.UndefOr[Boolean] = js.native
+  var followOriginalHttpMethod: js.UndefOr[Boolean] = js.native
+  var followRedirect: js.UndefOr[Boolean | (js.Function1[/* response */ IncomingMessage, Boolean])] = js.native
+  var forever: js.UndefOr[js.Any] = js.native
+  var form: js.UndefOr[StringDictionary[js.Any] | String] = js.native
+  var formData: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var gzip: js.UndefOr[Boolean] = js.native
+  var har: js.UndefOr[HttpArchiveRequest] = js.native
+  var hawk: js.UndefOr[HawkOptions] = js.native
+  var headers: js.UndefOr[Headers] = js.native
+  var host: js.UndefOr[String] = js.native
+  var jar: js.UndefOr[CookieJar | Boolean] = js.native
+  var json: js.UndefOr[js.Any] = js.native
+  var jsonReplacer: js.UndefOr[js.Function2[/* key */ String, /* value */ js.Any, _]] = js.native
+  var jsonReviver: js.UndefOr[js.Function2[/* key */ String, /* value */ js.Any, _]] = js.native
+  var key: js.UndefOr[Buffer] = js.native
+  var localAddress: js.UndefOr[String] = js.native
+  var maxRedirects: js.UndefOr[Double] = js.native
+  var method: js.UndefOr[String] = js.native
+  var multipart: js.UndefOr[js.Array[RequestPart] | Multipart] = js.native
+  var oauth: js.UndefOr[OAuthOptions] = js.native
+  var passphrase: js.UndefOr[String] = js.native
+  var pool: js.UndefOr[PoolOptions] = js.native
+  var port: js.UndefOr[Double] = js.native
+  var postambleCRLF: js.UndefOr[Boolean] = js.native
+  var preambleCRLF: js.UndefOr[Boolean] = js.native
+  var proxy: js.UndefOr[js.Any] = js.native
+  var qs: js.UndefOr[js.Any] = js.native
+  var qsParseOptions: js.UndefOr[js.Any] = js.native
+  var qsStringifyOptions: js.UndefOr[js.Any] = js.native
+  var rejectUnauthorized: js.UndefOr[Boolean] = js.native
+  var removeRefererHeader: js.UndefOr[Boolean] = js.native
+  var strictSSL: js.UndefOr[Boolean] = js.native
+  var time: js.UndefOr[Boolean] = js.native
+  var timeout: js.UndefOr[Double] = js.native
+  var tunnel: js.UndefOr[Boolean] = js.native
+  var useQuerystring: js.UndefOr[Boolean] = js.native
+  var withCredentials: js.UndefOr[Boolean] = js.native
 }
 
 object CoreOptions {
   @scala.inline
-  def apply(
-    agent: Agent | typingsSlinky.node.httpsMod.Agent = null,
-    agentClass: js.Any = null,
-    agentOptions: AgentOptions | typingsSlinky.node.httpsMod.AgentOptions = null,
-    auth: AuthOptions = null,
-    aws: AWSOptions = null,
-    baseUrl: String = null,
-    body: js.Any = null,
-    ca: String | Buffer | (js.Array[Buffer | String]) = null,
-    callback: (/* error */ js.Any, /* response */ Response, /* body */ js.Any) => Unit = null,
-    cert: Buffer = null,
-    encoding: String = null,
-    family: `4` | `6` = null,
-    followAllRedirects: js.UndefOr[Boolean] = js.undefined,
-    followOriginalHttpMethod: js.UndefOr[Boolean] = js.undefined,
-    followRedirect: Boolean | (js.Function1[/* response */ IncomingMessage, Boolean]) = null,
-    forever: js.Any = null,
-    form: StringDictionary[js.Any] | String = null,
-    formData: StringDictionary[js.Any] = null,
-    gzip: js.UndefOr[Boolean] = js.undefined,
-    har: HttpArchiveRequest = null,
-    hawk: HawkOptions = null,
-    headers: Headers = null,
-    host: String = null,
-    jar: CookieJar | Boolean = null,
-    json: js.Any = null,
-    jsonReplacer: (/* key */ String, /* value */ js.Any) => _ = null,
-    jsonReviver: (/* key */ String, /* value */ js.Any) => _ = null,
-    key: Buffer = null,
-    localAddress: String = null,
-    maxRedirects: Int | Double = null,
-    method: String = null,
-    multipart: js.Array[RequestPart] | Multipart = null,
-    oauth: OAuthOptions = null,
-    passphrase: String = null,
-    pool: PoolOptions = null,
-    port: Int | Double = null,
-    postambleCRLF: js.UndefOr[Boolean] = js.undefined,
-    preambleCRLF: js.UndefOr[Boolean] = js.undefined,
-    proxy: js.Any = null,
-    qs: js.Any = null,
-    qsParseOptions: js.Any = null,
-    qsStringifyOptions: js.Any = null,
-    rejectUnauthorized: js.UndefOr[Boolean] = js.undefined,
-    removeRefererHeader: js.UndefOr[Boolean] = js.undefined,
-    strictSSL: js.UndefOr[Boolean] = js.undefined,
-    time: js.UndefOr[Boolean] = js.undefined,
-    timeout: Int | Double = null,
-    tunnel: js.UndefOr[Boolean] = js.undefined,
-    useQuerystring: js.UndefOr[Boolean] = js.undefined,
-    withCredentials: js.UndefOr[Boolean] = js.undefined
-  ): CoreOptions = {
+  def apply(): CoreOptions = {
     val __obj = js.Dynamic.literal()
-    if (agent != null) __obj.updateDynamic("agent")(agent.asInstanceOf[js.Any])
-    if (agentClass != null) __obj.updateDynamic("agentClass")(agentClass.asInstanceOf[js.Any])
-    if (agentOptions != null) __obj.updateDynamic("agentOptions")(agentOptions.asInstanceOf[js.Any])
-    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
-    if (aws != null) __obj.updateDynamic("aws")(aws.asInstanceOf[js.Any])
-    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (ca != null) __obj.updateDynamic("ca")(ca.asInstanceOf[js.Any])
-    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction3(callback))
-    if (cert != null) __obj.updateDynamic("cert")(cert.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (family != null) __obj.updateDynamic("family")(family.asInstanceOf[js.Any])
-    if (!js.isUndefined(followAllRedirects)) __obj.updateDynamic("followAllRedirects")(followAllRedirects.asInstanceOf[js.Any])
-    if (!js.isUndefined(followOriginalHttpMethod)) __obj.updateDynamic("followOriginalHttpMethod")(followOriginalHttpMethod.asInstanceOf[js.Any])
-    if (followRedirect != null) __obj.updateDynamic("followRedirect")(followRedirect.asInstanceOf[js.Any])
-    if (forever != null) __obj.updateDynamic("forever")(forever.asInstanceOf[js.Any])
-    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
-    if (formData != null) __obj.updateDynamic("formData")(formData.asInstanceOf[js.Any])
-    if (!js.isUndefined(gzip)) __obj.updateDynamic("gzip")(gzip.asInstanceOf[js.Any])
-    if (har != null) __obj.updateDynamic("har")(har.asInstanceOf[js.Any])
-    if (hawk != null) __obj.updateDynamic("hawk")(hawk.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (jar != null) __obj.updateDynamic("jar")(jar.asInstanceOf[js.Any])
-    if (json != null) __obj.updateDynamic("json")(json.asInstanceOf[js.Any])
-    if (jsonReplacer != null) __obj.updateDynamic("jsonReplacer")(js.Any.fromFunction2(jsonReplacer))
-    if (jsonReviver != null) __obj.updateDynamic("jsonReviver")(js.Any.fromFunction2(jsonReviver))
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (localAddress != null) __obj.updateDynamic("localAddress")(localAddress.asInstanceOf[js.Any])
-    if (maxRedirects != null) __obj.updateDynamic("maxRedirects")(maxRedirects.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (multipart != null) __obj.updateDynamic("multipart")(multipart.asInstanceOf[js.Any])
-    if (oauth != null) __obj.updateDynamic("oauth")(oauth.asInstanceOf[js.Any])
-    if (passphrase != null) __obj.updateDynamic("passphrase")(passphrase.asInstanceOf[js.Any])
-    if (pool != null) __obj.updateDynamic("pool")(pool.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (!js.isUndefined(postambleCRLF)) __obj.updateDynamic("postambleCRLF")(postambleCRLF.asInstanceOf[js.Any])
-    if (!js.isUndefined(preambleCRLF)) __obj.updateDynamic("preambleCRLF")(preambleCRLF.asInstanceOf[js.Any])
-    if (proxy != null) __obj.updateDynamic("proxy")(proxy.asInstanceOf[js.Any])
-    if (qs != null) __obj.updateDynamic("qs")(qs.asInstanceOf[js.Any])
-    if (qsParseOptions != null) __obj.updateDynamic("qsParseOptions")(qsParseOptions.asInstanceOf[js.Any])
-    if (qsStringifyOptions != null) __obj.updateDynamic("qsStringifyOptions")(qsStringifyOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(rejectUnauthorized)) __obj.updateDynamic("rejectUnauthorized")(rejectUnauthorized.asInstanceOf[js.Any])
-    if (!js.isUndefined(removeRefererHeader)) __obj.updateDynamic("removeRefererHeader")(removeRefererHeader.asInstanceOf[js.Any])
-    if (!js.isUndefined(strictSSL)) __obj.updateDynamic("strictSSL")(strictSSL.asInstanceOf[js.Any])
-    if (!js.isUndefined(time)) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(tunnel)) __obj.updateDynamic("tunnel")(tunnel.asInstanceOf[js.Any])
-    if (!js.isUndefined(useQuerystring)) __obj.updateDynamic("useQuerystring")(useQuerystring.asInstanceOf[js.Any])
-    if (!js.isUndefined(withCredentials)) __obj.updateDynamic("withCredentials")(withCredentials.asInstanceOf[js.Any])
     __obj.asInstanceOf[CoreOptions]
   }
+  @scala.inline
+  implicit class CoreOptionsOps[Self <: CoreOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAgent(value: Agent | typingsSlinky.node.httpsMod.Agent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAgentClass(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgentClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAgentOptions(value: AgentOptions | typingsSlinky.node.httpsMod.AgentOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgentOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuth(value: AuthOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAws(value: AWSOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aws")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAws: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aws")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBody(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCa(value: String | Buffer | (js.Array[Buffer | String])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ca")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCa: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ca")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCallback(value: (/* error */ js.Any, /* response */ Response, /* body */ js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCert(value: Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cert")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCert: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cert")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncoding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncodingNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(null)
+        ret
+    }
+    @scala.inline
+    def withFamily(value: `4` | `6`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("family")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("family")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFollowAllRedirects(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followAllRedirects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFollowAllRedirects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followAllRedirects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFollowOriginalHttpMethod(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followOriginalHttpMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFollowOriginalHttpMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followOriginalHttpMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFollowRedirectFunction1(value: /* response */ IncomingMessage => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followRedirect")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFollowRedirect(value: Boolean | (js.Function1[/* response */ IncomingMessage, Boolean])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followRedirect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFollowRedirect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followRedirect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForever(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forever")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForever: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forever")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForm(value: StringDictionary[js.Any] | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormData(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGzip(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gzip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGzip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gzip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHar(value: HttpArchiveRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("har")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("har")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHawk(value: HawkOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hawk")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHawk: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hawk")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: Headers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJar(value: CookieJar | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJson(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJson: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJsonReplacer(value: (/* key */ String, /* value */ js.Any) => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonReplacer")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutJsonReplacer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonReplacer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJsonReviver(value: (/* key */ String, /* value */ js.Any) => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonReviver")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutJsonReviver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonReviver")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRedirects(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRedirects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRedirects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRedirects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultipart(value: js.Array[RequestPart] | Multipart): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multipart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultipart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multipart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOauth(value: OAuthOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOauth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassphrase(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passphrase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassphrase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passphrase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPool(value: PoolOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pool")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPool: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pool")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostambleCRLF(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postambleCRLF")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostambleCRLF: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postambleCRLF")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreambleCRLF(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preambleCRLF")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreambleCRLF: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preambleCRLF")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProxy(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProxy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQs(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQsParseOptions(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qsParseOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQsParseOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qsParseOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQsStringifyOptions(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qsStringifyOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQsStringifyOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qsStringifyOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRejectUnauthorized(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectUnauthorized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRejectUnauthorized: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectUnauthorized")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveRefererHeader(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeRefererHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveRefererHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeRefererHeader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrictSSL(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strictSSL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrictSSL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strictSSL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTime(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTunnel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTunnel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseQuerystring(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useQuerystring")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseQuerystring: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useQuerystring")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWithCredentials(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withCredentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWithCredentials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withCredentials")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

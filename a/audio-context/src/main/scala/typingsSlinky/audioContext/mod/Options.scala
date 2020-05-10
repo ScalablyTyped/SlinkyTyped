@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var channels: js.UndefOr[Double] = js.undefined
-  var contextAttributes: js.UndefOr[js.Object] = js.undefined
-  var latencyHint: js.UndefOr[String | Double] = js.undefined
-  var length: js.UndefOr[Double] = js.undefined
-  var offline: js.UndefOr[Boolean] = js.undefined
-  var sampleRate: js.UndefOr[Double] = js.undefined
+  var channels: js.UndefOr[Double] = js.native
+  var contextAttributes: js.UndefOr[js.Object] = js.native
+  var latencyHint: js.UndefOr[String | Double] = js.native
+  var length: js.UndefOr[Double] = js.native
+  var offline: js.UndefOr[Boolean] = js.native
+  var sampleRate: js.UndefOr[Double] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    channels: Int | Double = null,
-    contextAttributes: js.Object = null,
-    latencyHint: String | Double = null,
-    length: Int | Double = null,
-    offline: js.UndefOr[Boolean] = js.undefined,
-    sampleRate: Int | Double = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (channels != null) __obj.updateDynamic("channels")(channels.asInstanceOf[js.Any])
-    if (contextAttributes != null) __obj.updateDynamic("contextAttributes")(contextAttributes.asInstanceOf[js.Any])
-    if (latencyHint != null) __obj.updateDynamic("latencyHint")(latencyHint.asInstanceOf[js.Any])
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
-    if (!js.isUndefined(offline)) __obj.updateDynamic("offline")(offline.asInstanceOf[js.Any])
-    if (sampleRate != null) __obj.updateDynamic("sampleRate")(sampleRate.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChannels(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContextAttributes(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatencyHint(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latencyHint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatencyHint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latencyHint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffline(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleRate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

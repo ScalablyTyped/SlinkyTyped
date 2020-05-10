@@ -17,7 +17,7 @@ package object storeUtilsMod {
     - typingsSlinky.apolloUtilities.storeUtilsMod.ListValue
     - typingsSlinky.apolloUtilities.storeUtilsMod.JsonValue
     - scala.Null
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
     - scala.Unit
     - js.Object
   */

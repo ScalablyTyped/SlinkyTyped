@@ -7,38 +7,121 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonClearColor extends js.Object {
-  var clearColor: js.UndefOr[Color] = js.undefined
-  var forcePowerOfTwo: js.UndefOr[Boolean] = js.undefined
-  var fragmentShader: String
-  var name: js.UndefOr[String] = js.undefined
-  var pixelFormat: js.UndefOr[PixelFormat] = js.undefined
-  var scissorRectangle: js.UndefOr[BoundingRectangle] = js.undefined
-  var textureScale: js.UndefOr[Double] = js.undefined
-  var uniforms: js.UndefOr[js.Object] = js.undefined
+  var clearColor: js.UndefOr[Color] = js.native
+  var forcePowerOfTwo: js.UndefOr[Boolean] = js.native
+  var fragmentShader: String = js.native
+  var name: js.UndefOr[String] = js.native
+  var pixelFormat: js.UndefOr[PixelFormat] = js.native
+  var scissorRectangle: js.UndefOr[BoundingRectangle] = js.native
+  var textureScale: js.UndefOr[Double] = js.native
+  var uniforms: js.UndefOr[js.Object] = js.native
 }
 
 object AnonClearColor {
   @scala.inline
-  def apply(
-    fragmentShader: String,
-    clearColor: Color = null,
-    forcePowerOfTwo: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    pixelFormat: PixelFormat = null,
-    scissorRectangle: BoundingRectangle = null,
-    textureScale: Int | Double = null,
-    uniforms: js.Object = null
-  ): AnonClearColor = {
+  def apply(fragmentShader: String): AnonClearColor = {
     val __obj = js.Dynamic.literal(fragmentShader = fragmentShader.asInstanceOf[js.Any])
-    if (clearColor != null) __obj.updateDynamic("clearColor")(clearColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(forcePowerOfTwo)) __obj.updateDynamic("forcePowerOfTwo")(forcePowerOfTwo.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (pixelFormat != null) __obj.updateDynamic("pixelFormat")(pixelFormat.asInstanceOf[js.Any])
-    if (scissorRectangle != null) __obj.updateDynamic("scissorRectangle")(scissorRectangle.asInstanceOf[js.Any])
-    if (textureScale != null) __obj.updateDynamic("textureScale")(textureScale.asInstanceOf[js.Any])
-    if (uniforms != null) __obj.updateDynamic("uniforms")(uniforms.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonClearColor]
   }
+  @scala.inline
+  implicit class AnonClearColorOps[Self <: AnonClearColor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFragmentShader(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fragmentShader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClearColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClearColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForcePowerOfTwo(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forcePowerOfTwo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForcePowerOfTwo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forcePowerOfTwo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPixelFormat(value: PixelFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPixelFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScissorRectangle(value: BoundingRectangle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scissorRectangle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScissorRectangle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scissorRectangle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextureScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textureScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextureScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textureScale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUniforms(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniforms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUniforms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniforms")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

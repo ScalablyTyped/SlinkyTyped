@@ -20,3 +20,25 @@ trait IOnChanges extends js.Object {
   def $onChanges(onChangesObj: IOnChangesObject): Unit = js.native
 }
 
+object IOnChanges {
+  @scala.inline
+  def apply($onChanges: IOnChangesObject => Unit): IOnChanges = {
+    val __obj = js.Dynamic.literal($onChanges = js.Any.fromFunction1($onChanges))
+    __obj.asInstanceOf[IOnChanges]
+  }
+  @scala.inline
+  implicit class IOnChangesOps[Self <: IOnChanges] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$onChanges(value: IOnChangesObject => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$onChanges")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
+

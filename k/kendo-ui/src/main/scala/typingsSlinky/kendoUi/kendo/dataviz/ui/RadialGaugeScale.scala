@@ -4,57 +4,205 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RadialGaugeScale extends js.Object {
-  var endAngle: js.UndefOr[Double] = js.undefined
-  var labels: js.UndefOr[RadialGaugeScaleLabels] = js.undefined
-  var majorTicks: js.UndefOr[RadialGaugeScaleMajorTicks] = js.undefined
-  var majorUnit: js.UndefOr[Double] = js.undefined
-  var max: js.UndefOr[Double] = js.undefined
-  var min: js.UndefOr[Double] = js.undefined
-  var minorTicks: js.UndefOr[RadialGaugeScaleMinorTicks] = js.undefined
-  var minorUnit: js.UndefOr[Double] = js.undefined
-  var rangeDistance: js.UndefOr[Double] = js.undefined
-  var rangePlaceholderColor: js.UndefOr[String] = js.undefined
-  var rangeSize: js.UndefOr[Double] = js.undefined
-  var ranges: js.UndefOr[js.Array[RadialGaugeScaleRange]] = js.undefined
-  var reverse: js.UndefOr[Boolean] = js.undefined
-  var startAngle: js.UndefOr[Double] = js.undefined
+  var endAngle: js.UndefOr[Double] = js.native
+  var labels: js.UndefOr[RadialGaugeScaleLabels] = js.native
+  var majorTicks: js.UndefOr[RadialGaugeScaleMajorTicks] = js.native
+  var majorUnit: js.UndefOr[Double] = js.native
+  var max: js.UndefOr[Double] = js.native
+  var min: js.UndefOr[Double] = js.native
+  var minorTicks: js.UndefOr[RadialGaugeScaleMinorTicks] = js.native
+  var minorUnit: js.UndefOr[Double] = js.native
+  var rangeDistance: js.UndefOr[Double] = js.native
+  var rangePlaceholderColor: js.UndefOr[String] = js.native
+  var rangeSize: js.UndefOr[Double] = js.native
+  var ranges: js.UndefOr[js.Array[RadialGaugeScaleRange]] = js.native
+  var reverse: js.UndefOr[Boolean] = js.native
+  var startAngle: js.UndefOr[Double] = js.native
 }
 
 object RadialGaugeScale {
   @scala.inline
-  def apply(
-    endAngle: Int | Double = null,
-    labels: RadialGaugeScaleLabels = null,
-    majorTicks: RadialGaugeScaleMajorTicks = null,
-    majorUnit: Int | Double = null,
-    max: Int | Double = null,
-    min: Int | Double = null,
-    minorTicks: RadialGaugeScaleMinorTicks = null,
-    minorUnit: Int | Double = null,
-    rangeDistance: Int | Double = null,
-    rangePlaceholderColor: String = null,
-    rangeSize: Int | Double = null,
-    ranges: js.Array[RadialGaugeScaleRange] = null,
-    reverse: js.UndefOr[Boolean] = js.undefined,
-    startAngle: Int | Double = null
-  ): RadialGaugeScale = {
+  def apply(): RadialGaugeScale = {
     val __obj = js.Dynamic.literal()
-    if (endAngle != null) __obj.updateDynamic("endAngle")(endAngle.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (majorTicks != null) __obj.updateDynamic("majorTicks")(majorTicks.asInstanceOf[js.Any])
-    if (majorUnit != null) __obj.updateDynamic("majorUnit")(majorUnit.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minorTicks != null) __obj.updateDynamic("minorTicks")(minorTicks.asInstanceOf[js.Any])
-    if (minorUnit != null) __obj.updateDynamic("minorUnit")(minorUnit.asInstanceOf[js.Any])
-    if (rangeDistance != null) __obj.updateDynamic("rangeDistance")(rangeDistance.asInstanceOf[js.Any])
-    if (rangePlaceholderColor != null) __obj.updateDynamic("rangePlaceholderColor")(rangePlaceholderColor.asInstanceOf[js.Any])
-    if (rangeSize != null) __obj.updateDynamic("rangeSize")(rangeSize.asInstanceOf[js.Any])
-    if (ranges != null) __obj.updateDynamic("ranges")(ranges.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.asInstanceOf[js.Any])
-    if (startAngle != null) __obj.updateDynamic("startAngle")(startAngle.asInstanceOf[js.Any])
     __obj.asInstanceOf[RadialGaugeScale]
   }
+  @scala.inline
+  implicit class RadialGaugeScaleOps[Self <: RadialGaugeScale] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: RadialGaugeScaleLabels): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMajorTicks(value: RadialGaugeScaleMajorTicks): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorTicks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMajorTicks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorTicks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMajorUnit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMajorUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorUnit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTicks(value: RadialGaugeScaleMinorTicks): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTicks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTicks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTicks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorUnit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorUnit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeDistance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeDistance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangePlaceholderColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangePlaceholderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangePlaceholderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangePlaceholderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRanges(value: js.Array[RadialGaugeScaleRange]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReverse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReverse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

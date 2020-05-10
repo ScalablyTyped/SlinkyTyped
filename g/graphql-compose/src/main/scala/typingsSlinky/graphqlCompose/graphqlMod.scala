@@ -110,7 +110,6 @@ import typingsSlinky.graphqlCompose.inputTypeComposerMod._InputTypeComposeDefini
 import typingsSlinky.graphqlCompose.scalarTypeComposerMod._ScalarTypeComposeDefinition
 import typingsSlinky.std.AsyncIterable
 import typingsSlinky.std.AsyncIterableIterator
-import typingsSlinky.std.Error
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -512,7 +511,7 @@ object graphqlMod extends js.Object {
     nodes: js.Array[ASTNode],
     path: js.Array[String | Double]
   ): typingsSlinky.graphql.graphQLErrorMod.GraphQLError = js.native
-  def locatedError(originalError: Error, nodes: js.Array[ASTNode], path: js.Array[String | Double]): typingsSlinky.graphql.graphQLErrorMod.GraphQLError = js.native
+  def locatedError(originalError: js.Error, nodes: js.Array[ASTNode], path: js.Array[String | Double]): typingsSlinky.graphql.graphQLErrorMod.GraphQLError = js.native
   def parse(source: String): DocumentNode = js.native
   def parse(source: String, options: ParseOptions): DocumentNode = js.native
   def parse(source: typingsSlinky.graphql.sourceMod.Source): DocumentNode = js.native

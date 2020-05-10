@@ -12,10 +12,8 @@ trait TextPathSpacing extends js.Object
 
 object TextPathSpacing {
   @scala.inline
-  def auto: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.auto = "auto".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def exact: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.exact = this.cast("exact")
+  def exact: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.exact = "exact".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.exact]
 }
 

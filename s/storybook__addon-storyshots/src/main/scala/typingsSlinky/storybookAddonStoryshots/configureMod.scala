@@ -1,5 +1,6 @@
 package typingsSlinky.storybookAddonStoryshots
 
+import typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object configureMod extends js.Object {
   def default(options: storybookClientApiStorysh): Unit = js.native
+  def getMainFile(configDir: String): String | `false` = js.native
+  def getPreviewFile(configDir: String): String | `false` = js.native
 }
 

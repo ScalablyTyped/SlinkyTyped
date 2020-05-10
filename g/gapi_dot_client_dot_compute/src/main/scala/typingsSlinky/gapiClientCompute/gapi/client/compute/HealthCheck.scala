@@ -4,81 +4,239 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HealthCheck extends js.Object {
   /** How often (in seconds) to send a health check. The default value is 5 seconds. */
-  var checkIntervalSec: js.UndefOr[Double] = js.undefined
+  var checkIntervalSec: js.UndefOr[Double] = js.native
   /** [Output Only] Creation timestamp in 3339 text format. */
-  var creationTimestamp: js.UndefOr[String] = js.undefined
+  var creationTimestamp: js.UndefOr[String] = js.native
   /** An optional description of this resource. Provide this property when you create the resource. */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /** A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2. */
-  var healthyThreshold: js.UndefOr[Double] = js.undefined
-  var httpHealthCheck: js.UndefOr[HTTPHealthCheck_] = js.undefined
-  var httpsHealthCheck: js.UndefOr[HTTPSHealthCheck_] = js.undefined
+  var healthyThreshold: js.UndefOr[Double] = js.native
+  var httpHealthCheck: js.UndefOr[HTTPHealthCheck_] = js.native
+  var httpsHealthCheck: js.UndefOr[HTTPSHealthCheck_] = js.native
   /** [Output Only] The unique identifier for the resource. This identifier is defined by the server. */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /** Type of the resource. */
-  var kind: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.native
   /**
     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035.
     * Specifically, the name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]&#42;[a-z0-9])? which means the first character must be
     * a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /** [Output Only] Server-defined URL for the resource. */
-  var selfLink: js.UndefOr[String] = js.undefined
-  var sslHealthCheck: js.UndefOr[SSLHealthCheck] = js.undefined
-  var tcpHealthCheck: js.UndefOr[TCPHealthCheck] = js.undefined
+  var selfLink: js.UndefOr[String] = js.native
+  var sslHealthCheck: js.UndefOr[SSLHealthCheck] = js.native
+  var tcpHealthCheck: js.UndefOr[TCPHealthCheck] = js.native
   /**
     * How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than
     * checkIntervalSec.
     */
-  var timeoutSec: js.UndefOr[Double] = js.undefined
+  var timeoutSec: js.UndefOr[Double] = js.native
   /**
     * Specifies the type of the healthCheck, either TCP, SSL, HTTP or HTTPS. If not specified, the default is TCP. Exactly one of the protocol-specific
     * health check field must be specified, which must match type field.
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /** A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2. */
-  var unhealthyThreshold: js.UndefOr[Double] = js.undefined
+  var unhealthyThreshold: js.UndefOr[Double] = js.native
 }
 
 object HealthCheck {
   @scala.inline
-  def apply(
-    checkIntervalSec: Int | Double = null,
-    creationTimestamp: String = null,
-    description: String = null,
-    healthyThreshold: Int | Double = null,
-    httpHealthCheck: HTTPHealthCheck_ = null,
-    httpsHealthCheck: HTTPSHealthCheck_ = null,
-    id: String = null,
-    kind: String = null,
-    name: String = null,
-    selfLink: String = null,
-    sslHealthCheck: SSLHealthCheck = null,
-    tcpHealthCheck: TCPHealthCheck = null,
-    timeoutSec: Int | Double = null,
-    `type`: String = null,
-    unhealthyThreshold: Int | Double = null
-  ): HealthCheck = {
+  def apply(): HealthCheck = {
     val __obj = js.Dynamic.literal()
-    if (checkIntervalSec != null) __obj.updateDynamic("checkIntervalSec")(checkIntervalSec.asInstanceOf[js.Any])
-    if (creationTimestamp != null) __obj.updateDynamic("creationTimestamp")(creationTimestamp.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (healthyThreshold != null) __obj.updateDynamic("healthyThreshold")(healthyThreshold.asInstanceOf[js.Any])
-    if (httpHealthCheck != null) __obj.updateDynamic("httpHealthCheck")(httpHealthCheck.asInstanceOf[js.Any])
-    if (httpsHealthCheck != null) __obj.updateDynamic("httpsHealthCheck")(httpsHealthCheck.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
-    if (sslHealthCheck != null) __obj.updateDynamic("sslHealthCheck")(sslHealthCheck.asInstanceOf[js.Any])
-    if (tcpHealthCheck != null) __obj.updateDynamic("tcpHealthCheck")(tcpHealthCheck.asInstanceOf[js.Any])
-    if (timeoutSec != null) __obj.updateDynamic("timeoutSec")(timeoutSec.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (unhealthyThreshold != null) __obj.updateDynamic("unhealthyThreshold")(unhealthyThreshold.asInstanceOf[js.Any])
     __obj.asInstanceOf[HealthCheck]
   }
+  @scala.inline
+  implicit class HealthCheckOps[Self <: HealthCheck] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCheckIntervalSec(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkIntervalSec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckIntervalSec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkIntervalSec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTimestamp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHealthyThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("healthyThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHealthyThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("healthyThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttpHealthCheck(value: HTTPHealthCheck_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpHealthCheck")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpHealthCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpHealthCheck")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttpsHealthCheck(value: HTTPSHealthCheck_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpsHealthCheck")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpsHealthCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpsHealthCheck")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelfLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelfLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSslHealthCheck(value: SSLHealthCheck): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sslHealthCheck")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSslHealthCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sslHealthCheck")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTcpHealthCheck(value: TCPHealthCheck): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpHealthCheck")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTcpHealthCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpHealthCheck")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeoutSec(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutSec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeoutSec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutSec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnhealthyThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unhealthyThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnhealthyThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unhealthyThreshold")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

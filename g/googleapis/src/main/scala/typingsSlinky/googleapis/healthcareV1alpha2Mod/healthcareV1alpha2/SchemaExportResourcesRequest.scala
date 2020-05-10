@@ -27,14 +27,41 @@ trait SchemaExportResourcesRequest extends js.Object {
 
 object SchemaExportResourcesRequest {
   @scala.inline
-  def apply(
-    bigqueryDestination: SchemaGoogleCloudHealthcareV1alpha2FhirBigQueryDestination = null,
-    gcsDestination: SchemaGoogleCloudHealthcareV1alpha2FhirRestGcsDestination = null
-  ): SchemaExportResourcesRequest = {
+  def apply(): SchemaExportResourcesRequest = {
     val __obj = js.Dynamic.literal()
-    if (bigqueryDestination != null) __obj.updateDynamic("bigqueryDestination")(bigqueryDestination.asInstanceOf[js.Any])
-    if (gcsDestination != null) __obj.updateDynamic("gcsDestination")(gcsDestination.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExportResourcesRequest]
   }
+  @scala.inline
+  implicit class SchemaExportResourcesRequestOps[Self <: SchemaExportResourcesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBigqueryDestination(value: SchemaGoogleCloudHealthcareV1alpha2FhirBigQueryDestination): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bigqueryDestination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBigqueryDestination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bigqueryDestination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGcsDestination(value: SchemaGoogleCloudHealthcareV1alpha2FhirRestGcsDestination): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsDestination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGcsDestination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsDestination")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

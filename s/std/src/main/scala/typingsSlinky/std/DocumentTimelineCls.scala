@@ -8,7 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class DocumentTimelineCls () extends AnimationTimeline {
   def this(options: DocumentTimelineOptions) = this()
-  /* CompleteClass */
-  override val currentTime: Double | Null = js.native
 }
 

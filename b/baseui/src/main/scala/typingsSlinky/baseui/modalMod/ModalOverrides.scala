@@ -4,40 +4,108 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ModalOverrides extends js.Object {
   var Backdrop: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedStylePropsArg> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var Close: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedStylePropsArg> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var Dialog: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedStylePropsArg> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var DialogContainer: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedStylePropsArg> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var Root: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedStylePropsArg> */ js.Any
-  ] = js.undefined
+  ] = js.native
 }
 
 object ModalOverrides {
   @scala.inline
-  def apply(
-    Backdrop: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedStylePropsArg> */ js.Any = null,
-    Close: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedStylePropsArg> */ js.Any = null,
-    Dialog: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedStylePropsArg> */ js.Any = null,
-    DialogContainer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedStylePropsArg> */ js.Any = null,
-    Root: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedStylePropsArg> */ js.Any = null
-  ): ModalOverrides = {
+  def apply(): ModalOverrides = {
     val __obj = js.Dynamic.literal()
-    if (Backdrop != null) __obj.updateDynamic("Backdrop")(Backdrop.asInstanceOf[js.Any])
-    if (Close != null) __obj.updateDynamic("Close")(Close.asInstanceOf[js.Any])
-    if (Dialog != null) __obj.updateDynamic("Dialog")(Dialog.asInstanceOf[js.Any])
-    if (DialogContainer != null) __obj.updateDynamic("DialogContainer")(DialogContainer.asInstanceOf[js.Any])
-    if (Root != null) __obj.updateDynamic("Root")(Root.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModalOverrides]
   }
+  @scala.inline
+  implicit class ModalOverridesOps[Self <: ModalOverrides] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackdrop(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedStylePropsArg> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Backdrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackdrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Backdrop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClose(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedStylePropsArg> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Close")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Close")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDialog(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedStylePropsArg> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Dialog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Dialog")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDialogContainer(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedStylePropsArg> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DialogContainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialogContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DialogContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedStylePropsArg> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

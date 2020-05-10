@@ -4,19 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAttempts extends js.Object {
-  var attempts: Double
-  var batch_id: String
-  var response_code: Double
-  var ts: String
+  var attempts: Double = js.native
+  var batch_id: String = js.native
+  var response_code: Double = js.native
+  var ts: String = js.native
 }
 
 object AnonAttempts {
   @scala.inline
   def apply(attempts: Double, batch_id: String, response_code: Double, ts: String): AnonAttempts = {
     val __obj = js.Dynamic.literal(attempts = attempts.asInstanceOf[js.Any], batch_id = batch_id.asInstanceOf[js.Any], response_code = response_code.asInstanceOf[js.Any], ts = ts.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonAttempts]
   }
+  @scala.inline
+  implicit class AnonAttemptsOps[Self <: AnonAttempts] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttempts(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attempts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBatch_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batch_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResponse_code(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response_code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ts")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -14,14 +14,12 @@ trait UnifiedNumberFormatOptionsCurrencyDisplay extends js.Object
 
 object UnifiedNumberFormatOptionsCurrencyDisplay {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def code: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.code = "code".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.code]
   @scala.inline
-  def code: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.code = this.cast("code")
+  def name: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.name = "name".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.name]
   @scala.inline
-  def name: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.name = this.cast("name")
+  def narrowSymbol: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.narrowSymbol = "narrowSymbol".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.narrowSymbol]
   @scala.inline
-  def narrowSymbol: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.narrowSymbol = this.cast("narrowSymbol")
-  @scala.inline
-  def symbol: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.symbol = this.cast("symbol")
+  def symbol: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.symbol = "symbol".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.symbol]
 }
 

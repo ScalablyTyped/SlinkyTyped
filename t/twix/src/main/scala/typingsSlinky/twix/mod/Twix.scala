@@ -2,7 +2,6 @@ package typingsSlinky.twix.mod
 
 import typingsSlinky.moment.mod.Duration_
 import typingsSlinky.moment.mod.Moment
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ trait Twix extends js.Object {
   def asDuration(period: String): Duration_ = js.native
   def contains(date: String): Boolean = js.native
   def contains(date: Moment): Boolean = js.native
-  def contains(date: Date): Boolean = js.native
+  def contains(date: js.Date): Boolean = js.native
   def count(period: String): Double = js.native
   def countInner(period: String): Double = js.native
   def difference(other: Twix): js.Array[Twix] = js.native

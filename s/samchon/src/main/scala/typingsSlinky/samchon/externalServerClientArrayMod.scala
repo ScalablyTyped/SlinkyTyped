@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("samchon/templates/external/derived/ExternalServerClientArray", JSImport.Namespace)
 @js.native
 object externalServerClientArrayMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.tstl.isizeMod.ISize because Already inherited
   - typingsSlinky.tstl.iforwardcontainerMod.IForwardContainer because Already inherited
   - typingsSlinky.tstl.ipushMod.IPush because Already inherited

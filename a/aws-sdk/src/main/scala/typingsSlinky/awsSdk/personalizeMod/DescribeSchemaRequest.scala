@@ -16,8 +16,21 @@ object DescribeSchemaRequest {
   @scala.inline
   def apply(schemaArn: Arn): DescribeSchemaRequest = {
     val __obj = js.Dynamic.literal(schemaArn = schemaArn.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DescribeSchemaRequest]
   }
+  @scala.inline
+  implicit class DescribeSchemaRequestOps[Self <: DescribeSchemaRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSchemaArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

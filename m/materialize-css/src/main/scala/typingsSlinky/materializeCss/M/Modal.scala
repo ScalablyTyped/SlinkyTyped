@@ -16,12 +16,6 @@ class Modal ()
     * ID of the modal element
     */
   var id: String = js.native
-  /* CompleteClass */
-  override var isOpen: Boolean = js.native
-  /* CompleteClass */
-  override def close(): Unit = js.native
-  /* CompleteClass */
-  override def open(): Unit = js.native
 }
 
 /* static members */
@@ -40,7 +34,7 @@ object Modal extends js.Object {
   /**
     * Init Modal
     */
-  def init(els: typingsSlinky.std.Element): Modal = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialModalOptions): Modal = js.native
+  def init(els: Element): Modal = js.native
+  def init(els: Element, options: PartialModalOptions): Modal = js.native
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.objectFitImages
 
-import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.NodeList
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.NodeList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

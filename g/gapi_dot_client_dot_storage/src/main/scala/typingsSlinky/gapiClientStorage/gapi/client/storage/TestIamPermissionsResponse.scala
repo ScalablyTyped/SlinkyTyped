@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TestIamPermissionsResponse extends js.Object {
   /** The kind of item this is. */
-  var kind: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.native
   /**
     * The permissions held by the caller. Permissions are always of the format storage.resource.capability, where resource is one of buckets or objects. The
     * supported permissions are as follows:
@@ -25,16 +26,46 @@ trait TestIamPermissionsResponse extends js.Object {
     * - storage.objects.setIamPolicy — Update object IAM policy.
     * - storage.objects.update — Update object metadata.
     */
-  var permissions: js.UndefOr[js.Array[String]] = js.undefined
+  var permissions: js.UndefOr[js.Array[String]] = js.native
 }
 
 object TestIamPermissionsResponse {
   @scala.inline
-  def apply(kind: String = null, permissions: js.Array[String] = null): TestIamPermissionsResponse = {
+  def apply(): TestIamPermissionsResponse = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (permissions != null) __obj.updateDynamic("permissions")(permissions.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestIamPermissionsResponse]
   }
+  @scala.inline
+  implicit class TestIamPermissionsResponseOps[Self <: TestIamPermissionsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermissions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

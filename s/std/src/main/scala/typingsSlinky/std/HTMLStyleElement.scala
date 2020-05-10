@@ -53,11 +53,12 @@ trait HTMLStyleElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("HTMLStyleElement")
 @js.native
-object HTMLStyleElement extends Instantiable0[HTMLStyleElement]
+object HTMLStyleElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLStyleElement]
 

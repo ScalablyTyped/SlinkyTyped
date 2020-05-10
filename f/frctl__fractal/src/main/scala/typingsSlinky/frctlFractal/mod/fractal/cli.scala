@@ -3,9 +3,8 @@ package typingsSlinky.frctlFractal.mod.fractal
 import typingsSlinky.frctlFractal.AnonCli
 import typingsSlinky.frctlFractal.AnonCurrent
 import typingsSlinky.frctlFractal.AnonDescription
-import typingsSlinky.frctlFractal.ClifractalFractalConsole
+import typingsSlinky.frctlFractal.ClifractalFractal
 import typingsSlinky.frctlFractal.mod.CliTheme
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,31 +19,16 @@ object cli extends js.Object {
     var notify_FCli: Notifier = js.native
     def command(
       commandString: String,
-      callback: js.ThisFunction2[
-          /* this */ ClifractalFractalConsole, 
-          /* args */ js.Any, 
-          /* done */ js.Function0[Unit], 
-          Unit
-        ]
+      callback: js.ThisFunction2[/* this */ ClifractalFractal, /* args */ js.Any, /* done */ js.Function0[Unit], Unit]
     ): Unit = js.native
     def command(
       commandString: String,
-      callback: js.ThisFunction2[
-          /* this */ ClifractalFractalConsole, 
-          /* args */ js.Any, 
-          /* done */ js.Function0[Unit], 
-          Unit
-        ],
+      callback: js.ThisFunction2[/* this */ ClifractalFractal, /* args */ js.Any, /* done */ js.Function0[Unit], Unit],
       opts: String
     ): Unit = js.native
     def command(
       commandString: String,
-      callback: js.ThisFunction2[
-          /* this */ ClifractalFractalConsole, 
-          /* args */ js.Any, 
-          /* done */ js.Function0[Unit], 
-          Unit
-        ],
+      callback: js.ThisFunction2[/* this */ ClifractalFractal, /* args */ js.Any, /* done */ js.Function0[Unit], Unit],
       opts: AnonDescription
     ): Unit = js.native
     def error(message: String): Unit = js.native
@@ -71,7 +55,7 @@ object cli extends js.Object {
     def debugMode(status: Boolean): Unit = js.native
     def dump(data: js.Any): Unit = js.native
     def error(err: String, data: js.Error): this.type = js.native
-    def error(err: Error): this.type = js.native
+    def error(err: js.Error): this.type = js.native
     def isSlogging(): Boolean = js.native
     def log(text: String): this.type = js.native
     def persist(): this.type = js.native

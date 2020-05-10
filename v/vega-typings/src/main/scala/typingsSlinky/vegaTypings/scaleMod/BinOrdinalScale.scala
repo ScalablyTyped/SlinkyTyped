@@ -1,50 +1,77 @@
 package typingsSlinky.vegaTypings.scaleMod
 
-import typingsSlinky.vegaTypings.signalMod.SignalRef
 import typingsSlinky.vegaTypings.vegaTypingsStrings.`bin-ordinal`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BinOrdinalScale
   extends BaseScale
      with Scale {
-  var bins: js.UndefOr[ScaleBins] = js.undefined
-  var interpolate: js.UndefOr[ScaleInterpolate] = js.undefined
-  var range: js.UndefOr[RangeScheme | ScaleData] = js.undefined
+  var bins: js.UndefOr[ScaleBins] = js.native
+  var interpolate: js.UndefOr[ScaleInterpolate] = js.native
+  var range: js.UndefOr[RangeScheme | ScaleData] = js.native
   @JSName("type")
-  var type_BinOrdinalScale: `bin-ordinal`
+  var type_BinOrdinalScale: `bin-ordinal` = js.native
 }
 
 object BinOrdinalScale {
   @scala.inline
-  def apply(
-    name: String,
-    `type`: `bin-ordinal`,
-    bins: ScaleBins = null,
-    domain: (js.Array[Null | String | Double | Boolean | SignalRef]) | ScaleData | SignalRef = null,
-    domainMax: Double | SignalRef = null,
-    domainMid: Double | SignalRef = null,
-    domainMin: Double | SignalRef = null,
-    domainRaw: js.Array[_] | SignalRef = null,
-    interpolate: ScaleInterpolate = null,
-    range: RangeScheme | ScaleData = null,
-    reverse: Boolean | SignalRef = null,
-    round: Boolean | SignalRef = null
-  ): BinOrdinalScale = {
+  def apply(name: String, `type`: `bin-ordinal`): BinOrdinalScale = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (bins != null) __obj.updateDynamic("bins")(bins.asInstanceOf[js.Any])
-    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
-    if (domainMax != null) __obj.updateDynamic("domainMax")(domainMax.asInstanceOf[js.Any])
-    if (domainMid != null) __obj.updateDynamic("domainMid")(domainMid.asInstanceOf[js.Any])
-    if (domainMin != null) __obj.updateDynamic("domainMin")(domainMin.asInstanceOf[js.Any])
-    if (domainRaw != null) __obj.updateDynamic("domainRaw")(domainRaw.asInstanceOf[js.Any])
-    if (interpolate != null) __obj.updateDynamic("interpolate")(interpolate.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (reverse != null) __obj.updateDynamic("reverse")(reverse.asInstanceOf[js.Any])
-    if (round != null) __obj.updateDynamic("round")(round.asInstanceOf[js.Any])
     __obj.asInstanceOf[BinOrdinalScale]
   }
+  @scala.inline
+  implicit class BinOrdinalScaleOps[Self <: BinOrdinalScale] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: `bin-ordinal`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBins(value: ScaleBins): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterpolate(value: ScaleInterpolate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterpolate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: RangeScheme | ScaleData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

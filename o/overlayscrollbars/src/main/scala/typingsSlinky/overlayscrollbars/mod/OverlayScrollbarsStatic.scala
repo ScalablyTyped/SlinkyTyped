@@ -1,9 +1,10 @@
 package typingsSlinky.overlayscrollbars.mod
 
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Node
+import org.scalajs.dom.raw.NodeListOf
 import typingsSlinky.overlayscrollbars.AnonDictindex
-import typingsSlinky.std.Element
-import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.NodeListOf
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,14 +25,14 @@ trait OverlayScrollbarsStatic extends js.Object {
     elements: JQuery,
     filter: js.Function2[/* element */ Element, /* instance */ OverlayScrollbars, Boolean]
   ): js.UndefOr[OverlayScrollbars | js.Array[OverlayScrollbars]] = js.native
-  def apply(elements: NodeListOf[Element]): js.UndefOr[OverlayScrollbars | js.Array[OverlayScrollbars]] = js.native
-  def apply(elements: NodeListOf[Element], filter: String): js.UndefOr[OverlayScrollbars | js.Array[OverlayScrollbars]] = js.native
+  def apply(elements: NodeListOf[Element with Node]): js.UndefOr[OverlayScrollbars | js.Array[OverlayScrollbars]] = js.native
+  def apply(elements: NodeListOf[Element with Node], filter: String): js.UndefOr[OverlayScrollbars | js.Array[OverlayScrollbars]] = js.native
   def apply(
-    elements: NodeListOf[Element],
+    elements: NodeListOf[Element with Node],
     filter: js.Function2[/* element */ Element, /* instance */ OverlayScrollbars, Boolean]
   ): js.UndefOr[OverlayScrollbars | js.Array[OverlayScrollbars]] = js.native
-  def apply(elements: NodeListOf[Element], options: Options): js.UndefOr[OverlayScrollbars | js.Array[OverlayScrollbars]] = js.native
-  def apply(elements: NodeListOf[Element], options: Options, extensions: Extensions): js.UndefOr[OverlayScrollbars | js.Array[OverlayScrollbars]] = js.native
+  def apply(elements: NodeListOf[Element with Node], options: Options): js.UndefOr[OverlayScrollbars | js.Array[OverlayScrollbars]] = js.native
+  def apply(elements: NodeListOf[Element with Node], options: Options, extensions: Extensions): js.UndefOr[OverlayScrollbars | js.Array[OverlayScrollbars]] = js.native
   def apply(element: JQuery): js.UndefOr[OverlayScrollbars] = js.native
   def apply(element: JQuery, options: Options): OverlayScrollbars = js.native
   def apply(element: JQuery, options: Options, extensions: Extensions): OverlayScrollbars = js.native

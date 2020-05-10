@@ -12,10 +12,8 @@ trait OverlayPointerEventTypes extends js.Object
 
 object OverlayPointerEventTypes {
   @scala.inline
-  def auto: typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.auto = "auto".asInstanceOf[typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def none: typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.none = this.cast("none")
+  def none: typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.none = "none".asInstanceOf[typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.none]
 }
 

@@ -14,12 +14,10 @@ trait CredentialMediationRequirement extends js.Object
 
 object CredentialMediationRequirement {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def optional: typingsSlinky.std.stdStrings.optional = "optional".asInstanceOf[typingsSlinky.std.stdStrings.optional]
   @scala.inline
-  def optional: typingsSlinky.std.stdStrings.optional = this.cast("optional")
+  def required: required_ = "required".asInstanceOf[required_]
   @scala.inline
-  def required: required_ = this.cast("required")
-  @scala.inline
-  def silent: typingsSlinky.std.stdStrings.silent = this.cast("silent")
+  def silent: typingsSlinky.std.stdStrings.silent = "silent".asInstanceOf[typingsSlinky.std.stdStrings.silent]
 }
 

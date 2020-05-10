@@ -22,15 +22,47 @@ trait Distribution extends js.Object {
 
 object Distribution {
   @scala.inline
-  def apply(
-    region: NonEmptyString,
-    amiDistributionConfiguration: AmiDistributionConfiguration = null,
-    licenseConfigurationArns: ArnList = null
-  ): Distribution = {
+  def apply(region: NonEmptyString): Distribution = {
     val __obj = js.Dynamic.literal(region = region.asInstanceOf[js.Any])
-    if (amiDistributionConfiguration != null) __obj.updateDynamic("amiDistributionConfiguration")(amiDistributionConfiguration.asInstanceOf[js.Any])
-    if (licenseConfigurationArns != null) __obj.updateDynamic("licenseConfigurationArns")(licenseConfigurationArns.asInstanceOf[js.Any])
     __obj.asInstanceOf[Distribution]
   }
+  @scala.inline
+  implicit class DistributionOps[Self <: Distribution] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRegion(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAmiDistributionConfiguration(value: AmiDistributionConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amiDistributionConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmiDistributionConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amiDistributionConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLicenseConfigurationArns(value: ArnList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseConfigurationArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenseConfigurationArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseConfigurationArns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

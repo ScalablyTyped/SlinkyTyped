@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Word extends js.Object {
   /**
     * The bounding box for the word.
@@ -22,24 +23,65 @@ trait Word extends js.Object {
     * 1----0
     * and the vertice order will still be (0, 1, 2, 3).
     */
-  var boundingBox: js.UndefOr[BoundingPoly] = js.undefined
+  var boundingBox: js.UndefOr[BoundingPoly] = js.native
   /** Additional information detected for the word. */
-  var property: js.UndefOr[TextProperty] = js.undefined
+  var property: js.UndefOr[TextProperty] = js.native
   /**
     * List of symbols in the word.
     * The order of the symbols follows the natural reading order.
     */
-  var symbols: js.UndefOr[js.Array[Symbol]] = js.undefined
+  var symbols: js.UndefOr[js.Array[Symbol]] = js.native
 }
 
 object Word {
   @scala.inline
-  def apply(boundingBox: BoundingPoly = null, property: TextProperty = null, symbols: js.Array[Symbol] = null): Word = {
+  def apply(): Word = {
     val __obj = js.Dynamic.literal()
-    if (boundingBox != null) __obj.updateDynamic("boundingBox")(boundingBox.asInstanceOf[js.Any])
-    if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
-    if (symbols != null) __obj.updateDynamic("symbols")(symbols.asInstanceOf[js.Any])
     __obj.asInstanceOf[Word]
   }
+  @scala.inline
+  implicit class WordOps[Self <: Word] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBoundingBox(value: BoundingPoly): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingBox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoundingBox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingBox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProperty(value: TextProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProperty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbols(value: js.Array[Symbol]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbols")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbols: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbols")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -29,19 +29,9 @@ object Action {
     __obj.asInstanceOf[Action]
   }
   @scala.inline
-  def AnonDestinationId(
-    navigation: Navigation,
-    preserveScrollPosition: Boolean,
-    `type`: NODE,
-    destinationId: String = null,
-    overlayRelativePosition: Vector = null,
-    transition: Transition = null
-  ): Action = {
+  def AnonDestinationId(navigation: Navigation, preserveScrollPosition: Boolean, `type`: NODE): Action = {
     val __obj = js.Dynamic.literal(navigation = navigation.asInstanceOf[js.Any], preserveScrollPosition = preserveScrollPosition.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (destinationId != null) __obj.updateDynamic("destinationId")(destinationId.asInstanceOf[js.Any])
-    if (overlayRelativePosition != null) __obj.updateDynamic("overlayRelativePosition")(overlayRelativePosition.asInstanceOf[js.Any])
-    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
     __obj.asInstanceOf[Action]
   }
 }

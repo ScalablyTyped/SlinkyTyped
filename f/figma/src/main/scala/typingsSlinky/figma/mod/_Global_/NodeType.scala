@@ -25,36 +25,34 @@ trait NodeType extends js.Object
 
 object NodeType {
   @scala.inline
-  def BOOLEAN_OPERATION: typingsSlinky.figma.figmaStrings.BOOLEAN_OPERATION = this.cast("BOOLEAN_OPERATION")
+  def BOOLEAN_OPERATION: typingsSlinky.figma.figmaStrings.BOOLEAN_OPERATION = "BOOLEAN_OPERATION".asInstanceOf[typingsSlinky.figma.figmaStrings.BOOLEAN_OPERATION]
   @scala.inline
-  def COMPONENT: typingsSlinky.figma.figmaStrings.COMPONENT = this.cast("COMPONENT")
+  def COMPONENT: typingsSlinky.figma.figmaStrings.COMPONENT = "COMPONENT".asInstanceOf[typingsSlinky.figma.figmaStrings.COMPONENT]
   @scala.inline
-  def DOCUMENT: typingsSlinky.figma.figmaStrings.DOCUMENT = this.cast("DOCUMENT")
+  def DOCUMENT: typingsSlinky.figma.figmaStrings.DOCUMENT = "DOCUMENT".asInstanceOf[typingsSlinky.figma.figmaStrings.DOCUMENT]
   @scala.inline
-  def ELLIPSE: typingsSlinky.figma.figmaStrings.ELLIPSE = this.cast("ELLIPSE")
+  def ELLIPSE: typingsSlinky.figma.figmaStrings.ELLIPSE = "ELLIPSE".asInstanceOf[typingsSlinky.figma.figmaStrings.ELLIPSE]
   @scala.inline
-  def FRAME: typingsSlinky.figma.figmaStrings.FRAME = this.cast("FRAME")
+  def FRAME: typingsSlinky.figma.figmaStrings.FRAME = "FRAME".asInstanceOf[typingsSlinky.figma.figmaStrings.FRAME]
   @scala.inline
-  def GROUP: typingsSlinky.figma.figmaStrings.GROUP = this.cast("GROUP")
+  def GROUP: typingsSlinky.figma.figmaStrings.GROUP = "GROUP".asInstanceOf[typingsSlinky.figma.figmaStrings.GROUP]
   @scala.inline
-  def INSTANCE: typingsSlinky.figma.figmaStrings.INSTANCE = this.cast("INSTANCE")
+  def INSTANCE: typingsSlinky.figma.figmaStrings.INSTANCE = "INSTANCE".asInstanceOf[typingsSlinky.figma.figmaStrings.INSTANCE]
   @scala.inline
-  def LINE: typingsSlinky.figma.figmaStrings.LINE = this.cast("LINE")
+  def LINE: typingsSlinky.figma.figmaStrings.LINE = "LINE".asInstanceOf[typingsSlinky.figma.figmaStrings.LINE]
   @scala.inline
-  def PAGE: typingsSlinky.figma.figmaStrings.PAGE = this.cast("PAGE")
+  def PAGE: typingsSlinky.figma.figmaStrings.PAGE = "PAGE".asInstanceOf[typingsSlinky.figma.figmaStrings.PAGE]
   @scala.inline
-  def POLYGON: typingsSlinky.figma.figmaStrings.POLYGON = this.cast("POLYGON")
+  def POLYGON: typingsSlinky.figma.figmaStrings.POLYGON = "POLYGON".asInstanceOf[typingsSlinky.figma.figmaStrings.POLYGON]
   @scala.inline
-  def RECTANGLE: typingsSlinky.figma.figmaStrings.RECTANGLE = this.cast("RECTANGLE")
+  def RECTANGLE: typingsSlinky.figma.figmaStrings.RECTANGLE = "RECTANGLE".asInstanceOf[typingsSlinky.figma.figmaStrings.RECTANGLE]
   @scala.inline
-  def SLICE: typingsSlinky.figma.figmaStrings.SLICE = this.cast("SLICE")
+  def SLICE: typingsSlinky.figma.figmaStrings.SLICE = "SLICE".asInstanceOf[typingsSlinky.figma.figmaStrings.SLICE]
   @scala.inline
-  def STAR: typingsSlinky.figma.figmaStrings.STAR = this.cast("STAR")
+  def STAR: typingsSlinky.figma.figmaStrings.STAR = "STAR".asInstanceOf[typingsSlinky.figma.figmaStrings.STAR]
   @scala.inline
-  def TEXT: typingsSlinky.figma.figmaStrings.TEXT = this.cast("TEXT")
+  def TEXT: typingsSlinky.figma.figmaStrings.TEXT = "TEXT".asInstanceOf[typingsSlinky.figma.figmaStrings.TEXT]
   @scala.inline
-  def VECTOR: typingsSlinky.figma.figmaStrings.VECTOR = this.cast("VECTOR")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def VECTOR: typingsSlinky.figma.figmaStrings.VECTOR = "VECTOR".asInstanceOf[typingsSlinky.figma.figmaStrings.VECTOR]
 }
 

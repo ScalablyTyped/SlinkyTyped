@@ -5,21 +5,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IIssuingDisputeEvidence extends js.Object {
   /**
     * Evidence to support a fraudulent dispute. This will only be present if your dispute’s reason is fraudulent.
     */
-  var fraudulent: js.UndefOr[AnonDisputeexplanation] = js.undefined
-  var other: js.UndefOr[AnonDisputeexplanation] = js.undefined
+  var fraudulent: js.UndefOr[AnonDisputeexplanation] = js.native
+  var other: js.UndefOr[AnonDisputeexplanation] = js.native
 }
 
 object IIssuingDisputeEvidence {
   @scala.inline
-  def apply(fraudulent: AnonDisputeexplanation = null, other: AnonDisputeexplanation = null): IIssuingDisputeEvidence = {
+  def apply(): IIssuingDisputeEvidence = {
     val __obj = js.Dynamic.literal()
-    if (fraudulent != null) __obj.updateDynamic("fraudulent")(fraudulent.asInstanceOf[js.Any])
-    if (other != null) __obj.updateDynamic("other")(other.asInstanceOf[js.Any])
     __obj.asInstanceOf[IIssuingDisputeEvidence]
   }
+  @scala.inline
+  implicit class IIssuingDisputeEvidenceOps[Self <: IIssuingDisputeEvidence] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFraudulent(value: AnonDisputeexplanation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fraudulent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFraudulent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fraudulent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOther(value: AnonDisputeexplanation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("other")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOther: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("other")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ContactFindOptions extends js.Object {
-  var filter: js.UndefOr[String] = js.undefined
-  var multiple: js.UndefOr[Boolean] = js.undefined
+  var filter: js.UndefOr[String] = js.native
+  var multiple: js.UndefOr[Boolean] = js.native
 }
 
 @JSGlobal("ContactFindOptions")

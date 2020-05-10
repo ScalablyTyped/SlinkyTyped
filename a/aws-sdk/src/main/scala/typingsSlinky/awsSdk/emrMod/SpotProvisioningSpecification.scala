@@ -22,14 +22,41 @@ trait SpotProvisioningSpecification extends js.Object {
 
 object SpotProvisioningSpecification {
   @scala.inline
-  def apply(
-    TimeoutAction: SpotProvisioningTimeoutAction,
-    TimeoutDurationMinutes: WholeNumber,
-    BlockDurationMinutes: Int | Double = null
-  ): SpotProvisioningSpecification = {
+  def apply(TimeoutAction: SpotProvisioningTimeoutAction, TimeoutDurationMinutes: WholeNumber): SpotProvisioningSpecification = {
     val __obj = js.Dynamic.literal(TimeoutAction = TimeoutAction.asInstanceOf[js.Any], TimeoutDurationMinutes = TimeoutDurationMinutes.asInstanceOf[js.Any])
-    if (BlockDurationMinutes != null) __obj.updateDynamic("BlockDurationMinutes")(BlockDurationMinutes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpotProvisioningSpecification]
   }
+  @scala.inline
+  implicit class SpotProvisioningSpecificationOps[Self <: SpotProvisioningSpecification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTimeoutAction(value: SpotProvisioningTimeoutAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimeoutDurationMinutes(value: WholeNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutDurationMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlockDurationMinutes(value: WholeNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockDurationMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockDurationMinutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockDurationMinutes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

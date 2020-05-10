@@ -11,27 +11,75 @@ import scala.scalajs.js.annotation._
   * @property slider {boolean=} - flag whether to show the slider (true) or not, defaults to false
   * @property sliderSnaps {boolean=} - flag whether slider should snap to the integer values or not, defaults to false. This option has effect only if slider is enabled.
   */
+@js.native
 trait Options extends js.Object {
-  var alignment: js.UndefOr[LayoutAlignment] = js.undefined
-  var slider: js.UndefOr[Boolean] = js.undefined
-  var sliderSnaps: js.UndefOr[Boolean] = js.undefined
-  var zoomSpeed: js.UndefOr[Double] = js.undefined
+  var alignment: js.UndefOr[LayoutAlignment] = js.native
+  var slider: js.UndefOr[Boolean] = js.native
+  var sliderSnaps: js.UndefOr[Boolean] = js.native
+  var zoomSpeed: js.UndefOr[Double] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    alignment: LayoutAlignment = null,
-    slider: js.UndefOr[Boolean] = js.undefined,
-    sliderSnaps: js.UndefOr[Boolean] = js.undefined,
-    zoomSpeed: Int | Double = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
-    if (!js.isUndefined(slider)) __obj.updateDynamic("slider")(slider.asInstanceOf[js.Any])
-    if (!js.isUndefined(sliderSnaps)) __obj.updateDynamic("sliderSnaps")(sliderSnaps.asInstanceOf[js.Any])
-    if (zoomSpeed != null) __obj.updateDynamic("zoomSpeed")(zoomSpeed.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlignment(value: LayoutAlignment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlider(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlider: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slider")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSliderSnaps(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sliderSnaps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSliderSnaps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sliderSnaps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomSpeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomSpeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomSpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomSpeed")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

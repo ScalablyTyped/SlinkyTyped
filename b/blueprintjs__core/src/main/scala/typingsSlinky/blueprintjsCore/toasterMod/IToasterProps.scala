@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IToasterProps extends IProps {
   /**
     * Whether a toast should acquire application focus when it first opens.
@@ -12,24 +13,24 @@ trait IToasterProps extends IProps {
     * Note that `enforceFocus` is always disabled for `Toaster`s.
     * @default false
     */
-  var autoFocus: js.UndefOr[Boolean] = js.undefined
+  var autoFocus: js.UndefOr[Boolean] = js.native
   /**
     * Whether pressing the `esc` key should clear all active toasts.
     * @default true
     */
-  var canEscapeKeyClear: js.UndefOr[Boolean] = js.undefined
+  var canEscapeKeyClear: js.UndefOr[Boolean] = js.native
   /**
     * The maximum number of active toasts that can be displayed at once.
     *
     * When the limit is about to be exceeded, the oldest active toast is removed.
     * @default undefined
     */
-  var maxToasts: js.UndefOr[Double] = js.undefined
+  var maxToasts: js.UndefOr[Double] = js.native
   /**
     * Position of `Toaster` within its container.
     * @default Position.TOP
     */
-  var position: js.UndefOr[ToasterPosition] = js.undefined
+  var position: js.UndefOr[ToasterPosition] = js.native
   /**
     * Whether the toaster should be rendered into a new element attached to `document.body`.
     * If `false`, then positioning will be relative to the parent element.
@@ -38,27 +39,82 @@ trait IToasterProps extends IProps {
     * to the container.
     * @default true
     */
-  var usePortal: js.UndefOr[Boolean] = js.undefined
+  var usePortal: js.UndefOr[Boolean] = js.native
 }
 
 object IToasterProps {
   @scala.inline
-  def apply(
-    autoFocus: js.UndefOr[Boolean] = js.undefined,
-    canEscapeKeyClear: js.UndefOr[Boolean] = js.undefined,
-    className: String = null,
-    maxToasts: Int | Double = null,
-    position: ToasterPosition = null,
-    usePortal: js.UndefOr[Boolean] = js.undefined
-  ): IToasterProps = {
+  def apply(): IToasterProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])
-    if (!js.isUndefined(canEscapeKeyClear)) __obj.updateDynamic("canEscapeKeyClear")(canEscapeKeyClear.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (maxToasts != null) __obj.updateDynamic("maxToasts")(maxToasts.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(usePortal)) __obj.updateDynamic("usePortal")(usePortal.asInstanceOf[js.Any])
     __obj.asInstanceOf[IToasterProps]
   }
+  @scala.inline
+  implicit class IToasterPropsOps[Self <: IToasterProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanEscapeKeyClear(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canEscapeKeyClear")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanEscapeKeyClear: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canEscapeKeyClear")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxToasts(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxToasts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxToasts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxToasts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: ToasterPosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsePortal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usePortal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsePortal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usePortal")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

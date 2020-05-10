@@ -86,3 +86,41 @@ trait Ng1Controller extends js.Object {
   def uiOnParamsChanged(newValues: js.Any, DollartransitionDollar: Transition): Unit = js.native
 }
 
+object Ng1Controller {
+  @scala.inline
+  def apply(
+    $onInit: () => Unit,
+    uiCanExit: Transition => HookResult,
+    uiOnParamsChanged: (js.Any, Transition) => Unit
+  ): Ng1Controller = {
+    val __obj = js.Dynamic.literal($onInit = js.Any.fromFunction0($onInit), uiCanExit = js.Any.fromFunction1(uiCanExit), uiOnParamsChanged = js.Any.fromFunction2(uiOnParamsChanged))
+    __obj.asInstanceOf[Ng1Controller]
+  }
+  @scala.inline
+  implicit class Ng1ControllerOps[Self <: Ng1Controller] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$onInit(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$onInit")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUiCanExit(value: Transition => HookResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uiCanExit")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUiOnParamsChanged(value: (js.Any, Transition) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uiOnParamsChanged")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
+}
+

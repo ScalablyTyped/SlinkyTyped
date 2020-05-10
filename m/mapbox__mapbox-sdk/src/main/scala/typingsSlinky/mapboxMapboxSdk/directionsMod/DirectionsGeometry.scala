@@ -13,12 +13,10 @@ trait DirectionsGeometry extends js.Object
 
 object DirectionsGeometry {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def geojson: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.geojson = "geojson".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.geojson]
   @scala.inline
-  def geojson: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.geojson = this.cast("geojson")
+  def polyline: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.polyline = "polyline".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.polyline]
   @scala.inline
-  def polyline: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.polyline = this.cast("polyline")
-  @scala.inline
-  def polyline6: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.polyline6 = this.cast("polyline6")
+  def polyline6: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.polyline6 = "polyline6".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.polyline6]
 }
 

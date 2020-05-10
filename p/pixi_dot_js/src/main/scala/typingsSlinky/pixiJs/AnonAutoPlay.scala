@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAutoPlay extends js.Object {
-  var autoLoad: js.UndefOr[Boolean] = js.undefined
-  var autoPlay: js.UndefOr[Boolean] = js.undefined
-  var crossorigin: js.UndefOr[Boolean] = js.undefined
-  var updateFPS: js.UndefOr[Double] = js.undefined
+  var autoLoad: js.UndefOr[Boolean] = js.native
+  var autoPlay: js.UndefOr[Boolean] = js.native
+  var crossorigin: js.UndefOr[Boolean] = js.native
+  var updateFPS: js.UndefOr[Double] = js.native
 }
 
 object AnonAutoPlay {
   @scala.inline
-  def apply(
-    autoLoad: js.UndefOr[Boolean] = js.undefined,
-    autoPlay: js.UndefOr[Boolean] = js.undefined,
-    crossorigin: js.UndefOr[Boolean] = js.undefined,
-    updateFPS: Int | Double = null
-  ): AnonAutoPlay = {
+  def apply(): AnonAutoPlay = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoLoad)) __obj.updateDynamic("autoLoad")(autoLoad.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoPlay)) __obj.updateDynamic("autoPlay")(autoPlay.asInstanceOf[js.Any])
-    if (!js.isUndefined(crossorigin)) __obj.updateDynamic("crossorigin")(crossorigin.asInstanceOf[js.Any])
-    if (updateFPS != null) __obj.updateDynamic("updateFPS")(updateFPS.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAutoPlay]
   }
+  @scala.inline
+  implicit class AnonAutoPlayOps[Self <: AnonAutoPlay] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoLoad(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoLoad")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoLoad")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoPlay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPlay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoPlay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPlay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrossorigin(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossorigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrossorigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossorigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateFPS(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateFPS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateFPS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateFPS")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

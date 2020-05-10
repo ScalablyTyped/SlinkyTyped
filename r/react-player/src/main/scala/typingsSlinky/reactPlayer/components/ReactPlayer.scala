@@ -1,11 +1,8 @@
 package typingsSlinky.reactPlayer.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.experimental.mediastream.MediaStream
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactPlayer.AnonLoaded
 import typingsSlinky.reactPlayer.mod.Config
 import typingsSlinky.reactPlayer.mod.DailyMotionConfig
@@ -22,88 +19,94 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactPlayer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactPlayer {
   @JSImport("react-player", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: controls, loop, muted */
-  def apply(
-    config: Config = null,
-    dailymotionConfig: DailyMotionConfig = null,
-    facebookConfig: FacebookConfig = null,
-    fileConfig: FileConfig = null,
-    height: String | Double = null,
-    light: Boolean | String = null,
-    onBuffer: () => Unit = null,
-    onBufferEnd: () => Unit = null,
-    onDisablePIP: () => Unit = null,
-    onDuration: /* duration */ Double => Unit = null,
-    onEnablePIP: () => Unit = null,
-    onEnded: () => Unit = null,
-    onError: (/* error */ js.Any, /* data */ js.UndefOr[js.Any], /* hlsInstance */ js.UndefOr[js.Any], /* hlsGlobal */ js.UndefOr[js.Any]) => Unit = null,
-    onPause: () => Unit = null,
-    onPlay: () => Unit = null,
-    onProgress: /* state */ AnonLoaded => Unit = null,
-    onReady: () => Unit = null,
-    onSeek: /* seconds */ Double => Unit = null,
-    onStart: () => Unit = null,
-    pip: js.UndefOr[Boolean] = js.undefined,
-    playbackRate: Int | Double = null,
-    playing: js.UndefOr[Boolean] = js.undefined,
-    playsinline: js.UndefOr[Boolean] = js.undefined,
-    progressInterval: Int | Double = null,
-    soundcloudConfig: SoundCloudConfig = null,
-    style: js.Object = null,
-    url: String | (js.Array[SourceProps | String]) | MediaStream = null,
-    vimeoConfig: VimeoConfig = null,
-    volume: Int | Double = null,
-    width: String | Double = null,
-    wistiaConfig: WistiaConfig = null,
-    wrapper: js.Any = null,
-    youtubeConfig: YouTubeConfig = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
-    if (dailymotionConfig != null) __obj.updateDynamic("dailymotionConfig")(dailymotionConfig.asInstanceOf[js.Any])
-    if (facebookConfig != null) __obj.updateDynamic("facebookConfig")(facebookConfig.asInstanceOf[js.Any])
-    if (fileConfig != null) __obj.updateDynamic("fileConfig")(fileConfig.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (light != null) __obj.updateDynamic("light")(light.asInstanceOf[js.Any])
-    if (onBuffer != null) __obj.updateDynamic("onBuffer")(js.Any.fromFunction0(onBuffer))
-    if (onBufferEnd != null) __obj.updateDynamic("onBufferEnd")(js.Any.fromFunction0(onBufferEnd))
-    if (onDisablePIP != null) __obj.updateDynamic("onDisablePIP")(js.Any.fromFunction0(onDisablePIP))
-    if (onDuration != null) __obj.updateDynamic("onDuration")(js.Any.fromFunction1(onDuration))
-    if (onEnablePIP != null) __obj.updateDynamic("onEnablePIP")(js.Any.fromFunction0(onEnablePIP))
-    if (onEnded != null) __obj.updateDynamic("onEnded")(js.Any.fromFunction0(onEnded))
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction4(onError))
-    if (onPause != null) __obj.updateDynamic("onPause")(js.Any.fromFunction0(onPause))
-    if (onPlay != null) __obj.updateDynamic("onPlay")(js.Any.fromFunction0(onPlay))
-    if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
-    if (onReady != null) __obj.updateDynamic("onReady")(js.Any.fromFunction0(onReady))
-    if (onSeek != null) __obj.updateDynamic("onSeek")(js.Any.fromFunction1(onSeek))
-    if (onStart != null) __obj.updateDynamic("onStart")(js.Any.fromFunction0(onStart))
-    if (!js.isUndefined(pip)) __obj.updateDynamic("pip")(pip.asInstanceOf[js.Any])
-    if (playbackRate != null) __obj.updateDynamic("playbackRate")(playbackRate.asInstanceOf[js.Any])
-    if (!js.isUndefined(playing)) __obj.updateDynamic("playing")(playing.asInstanceOf[js.Any])
-    if (!js.isUndefined(playsinline)) __obj.updateDynamic("playsinline")(playsinline.asInstanceOf[js.Any])
-    if (progressInterval != null) __obj.updateDynamic("progressInterval")(progressInterval.asInstanceOf[js.Any])
-    if (soundcloudConfig != null) __obj.updateDynamic("soundcloudConfig")(soundcloudConfig.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (vimeoConfig != null) __obj.updateDynamic("vimeoConfig")(vimeoConfig.asInstanceOf[js.Any])
-    if (volume != null) __obj.updateDynamic("volume")(volume.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (wistiaConfig != null) __obj.updateDynamic("wistiaConfig")(wistiaConfig.asInstanceOf[js.Any])
-    if (wrapper != null) __obj.updateDynamic("wrapper")(wrapper.asInstanceOf[js.Any])
-    if (youtubeConfig != null) __obj.updateDynamic("youtubeConfig")(youtubeConfig.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def config(value: Config): this.type = set("config", value.asInstanceOf[js.Any])
+    @scala.inline
+    def controls(value: Boolean): this.type = set("controls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dailymotionConfig(value: DailyMotionConfig): this.type = set("dailymotionConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def facebookConfig(value: FacebookConfig): this.type = set("facebookConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fileConfig(value: FileConfig): this.type = set("fileConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: String | Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def light(value: Boolean | String): this.type = set("light", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loop(value: Boolean): this.type = set("loop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def muted(value: Boolean): this.type = set("muted", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBuffer(value: () => Unit): this.type = set("onBuffer", js.Any.fromFunction0(value))
+    @scala.inline
+    def onBufferEnd(value: () => Unit): this.type = set("onBufferEnd", js.Any.fromFunction0(value))
+    @scala.inline
+    def onDisablePIP(value: () => Unit): this.type = set("onDisablePIP", js.Any.fromFunction0(value))
+    @scala.inline
+    def onDuration(value: /* duration */ Double => Unit): this.type = set("onDuration", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEnablePIP(value: () => Unit): this.type = set("onEnablePIP", js.Any.fromFunction0(value))
+    @scala.inline
+    def onEnded(value: () => Unit): this.type = set("onEnded", js.Any.fromFunction0(value))
+    @scala.inline
+    def onError(
+      value: (/* error */ js.Any, /* data */ js.UndefOr[js.Any], /* hlsInstance */ js.UndefOr[js.Any], /* hlsGlobal */ js.UndefOr[js.Any]) => Unit
+    ): this.type = set("onError", js.Any.fromFunction4(value))
+    @scala.inline
+    def onPause(value: () => Unit): this.type = set("onPause", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPlay(value: () => Unit): this.type = set("onPlay", js.Any.fromFunction0(value))
+    @scala.inline
+    def onProgress(value: /* state */ AnonLoaded => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
+    @scala.inline
+    def onReady(value: () => Unit): this.type = set("onReady", js.Any.fromFunction0(value))
+    @scala.inline
+    def onSeek(value: /* seconds */ Double => Unit): this.type = set("onSeek", js.Any.fromFunction1(value))
+    @scala.inline
+    def onStart(value: () => Unit): this.type = set("onStart", js.Any.fromFunction0(value))
+    @scala.inline
+    def pip(value: Boolean): this.type = set("pip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def playbackRate(value: Double): this.type = set("playbackRate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def playing(value: Boolean): this.type = set("playing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def playsinline(value: Boolean): this.type = set("playsinline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def progressInterval(value: Double): this.type = set("progressInterval", value.asInstanceOf[js.Any])
+    @scala.inline
+    def soundcloudConfig(value: SoundCloudConfig): this.type = set("soundcloudConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def urlMediaStream(value: MediaStream): this.type = set("url", value.asInstanceOf[js.Any])
+    @scala.inline
+    def url(value: String | (js.Array[SourceProps | String]) | MediaStream): this.type = set("url", value.asInstanceOf[js.Any])
+    @scala.inline
+    def vimeoConfig(value: VimeoConfig): this.type = set("vimeoConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def volume(value: Double): this.type = set("volume", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wistiaConfig(value: WistiaConfig): this.type = set("wistiaConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapper(value: js.Any): this.type = set("wrapper", value.asInstanceOf[js.Any])
+    @scala.inline
+    def youtubeConfig(value: YouTubeConfig): this.type = set("youtubeConfig", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactPlayer.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ReactPlayerProps
+  
+  def withProps(p: ReactPlayerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactPlayer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

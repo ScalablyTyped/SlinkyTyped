@@ -1,6 +1,5 @@
 package typingsSlinky.reactInteractive.mod
 
-import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,21 +12,13 @@ trait FocusProps extends js.Object
 
 object FocusProps {
   @scala.inline
-  def AnonFocus(focus: CSSProperties = null): FocusProps = {
+  def AnonFocus(): FocusProps = {
     val __obj = js.Dynamic.literal()
-    if (focus != null) __obj.updateDynamic("focus")(focus.asInstanceOf[js.Any])
     __obj.asInstanceOf[FocusProps]
   }
   @scala.inline
-  def AnonFocusFromMouse(
-    focusFromMouse: CSSProperties = null,
-    focusFromTab: CSSProperties = null,
-    focusFromTouch: CSSProperties = null
-  ): FocusProps = {
+  def AnonFocusFromMouse(): FocusProps = {
     val __obj = js.Dynamic.literal()
-    if (focusFromMouse != null) __obj.updateDynamic("focusFromMouse")(focusFromMouse.asInstanceOf[js.Any])
-    if (focusFromTab != null) __obj.updateDynamic("focusFromTab")(focusFromTab.asInstanceOf[js.Any])
-    if (focusFromTouch != null) __obj.updateDynamic("focusFromTouch")(focusFromTouch.asInstanceOf[js.Any])
     __obj.asInstanceOf[FocusProps]
   }
 }

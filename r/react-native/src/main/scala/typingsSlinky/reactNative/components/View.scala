@@ -1,15 +1,16 @@
 package typingsSlinky.reactNative.components
 
+import typingsSlinky.reactNative.mod.ViewProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object View
-  extends SharedApply_ViewProps1897749046[typingsSlinky.reactNative.mod.View] {
+object View {
   @JSImport("react-native", "View")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ViewProps): SharedBuilder_ViewProps_655098327[typingsSlinky.reactNative.mod.View] = new SharedBuilder_ViewProps_655098327[typingsSlinky.reactNative.mod.View](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: View.type): SharedBuilder_ViewProps_655098327[typingsSlinky.reactNative.mod.View] = new SharedBuilder_ViewProps_655098327[typingsSlinky.reactNative.mod.View](js.Array(this.component, js.Dictionary.empty))()
 }
 

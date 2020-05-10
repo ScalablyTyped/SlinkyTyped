@@ -24,3 +24,55 @@ trait ParamsResourcePartnersDevicesUnclaimasync extends StandardParameters {
   var requestBody: js.UndefOr[SchemaUnclaimDevicesRequest] = js.native
 }
 
+object ParamsResourcePartnersDevicesUnclaimasync {
+  @scala.inline
+  def apply(): ParamsResourcePartnersDevicesUnclaimasync = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ParamsResourcePartnersDevicesUnclaimasync]
+  }
+  @scala.inline
+  implicit class ParamsResourcePartnersDevicesUnclaimasyncOps[Self <: ParamsResourcePartnersDevicesUnclaimasync] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartnerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partnerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartnerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partnerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestBody(value: SchemaUnclaimDevicesRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

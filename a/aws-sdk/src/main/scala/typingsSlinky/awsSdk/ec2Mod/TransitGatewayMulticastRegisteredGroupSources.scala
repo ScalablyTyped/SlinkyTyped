@@ -22,16 +22,53 @@ trait TransitGatewayMulticastRegisteredGroupSources extends js.Object {
 
 object TransitGatewayMulticastRegisteredGroupSources {
   @scala.inline
-  def apply(
-    GroupIpAddress: String = null,
-    RegisteredNetworkInterfaceIds: ValueStringList = null,
-    TransitGatewayMulticastDomainId: String = null
-  ): TransitGatewayMulticastRegisteredGroupSources = {
+  def apply(): TransitGatewayMulticastRegisteredGroupSources = {
     val __obj = js.Dynamic.literal()
-    if (GroupIpAddress != null) __obj.updateDynamic("GroupIpAddress")(GroupIpAddress.asInstanceOf[js.Any])
-    if (RegisteredNetworkInterfaceIds != null) __obj.updateDynamic("RegisteredNetworkInterfaceIds")(RegisteredNetworkInterfaceIds.asInstanceOf[js.Any])
-    if (TransitGatewayMulticastDomainId != null) __obj.updateDynamic("TransitGatewayMulticastDomainId")(TransitGatewayMulticastDomainId.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransitGatewayMulticastRegisteredGroupSources]
   }
+  @scala.inline
+  implicit class TransitGatewayMulticastRegisteredGroupSourcesOps[Self <: TransitGatewayMulticastRegisteredGroupSources] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroupIpAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupIpAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupIpAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupIpAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegisteredNetworkInterfaceIds(value: ValueStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegisteredNetworkInterfaceIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegisteredNetworkInterfaceIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegisteredNetworkInterfaceIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitGatewayMulticastDomainId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayMulticastDomainId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitGatewayMulticastDomainId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayMulticastDomainId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

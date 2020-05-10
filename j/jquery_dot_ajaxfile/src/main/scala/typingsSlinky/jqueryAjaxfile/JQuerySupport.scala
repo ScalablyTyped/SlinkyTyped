@@ -7,72 +7,270 @@ import scala.scalajs.js.annotation._
 /*
   Collection of properties of the current browser
 */
+@js.native
 trait JQuerySupport extends js.Object {
-  var ajax: js.UndefOr[Boolean] = js.undefined
-  var boxModel: js.UndefOr[Boolean] = js.undefined
-  var changeBubbles: js.UndefOr[Boolean] = js.undefined
-  var checkClone: js.UndefOr[Boolean] = js.undefined
-  var checkOn: js.UndefOr[Boolean] = js.undefined
-  var cors: js.UndefOr[Boolean] = js.undefined
-  var cssFloat: js.UndefOr[Boolean] = js.undefined
-  var hrefNormalized: js.UndefOr[Boolean] = js.undefined
-  var htmlSerialize: js.UndefOr[Boolean] = js.undefined
-  var leadingWhitespace: js.UndefOr[Boolean] = js.undefined
-  var noCloneChecked: js.UndefOr[Boolean] = js.undefined
-  var noCloneEvent: js.UndefOr[Boolean] = js.undefined
-  var opacity: js.UndefOr[Boolean] = js.undefined
-  var optDisabled: js.UndefOr[Boolean] = js.undefined
-  var optSelected: js.UndefOr[Boolean] = js.undefined
-  var scriptEval: js.UndefOr[js.Function0[Boolean]] = js.undefined
-  var style: js.UndefOr[Boolean] = js.undefined
-  var submitBubbles: js.UndefOr[Boolean] = js.undefined
-  var tbody: js.UndefOr[Boolean] = js.undefined
+  var ajax: js.UndefOr[Boolean] = js.native
+  var boxModel: js.UndefOr[Boolean] = js.native
+  var changeBubbles: js.UndefOr[Boolean] = js.native
+  var checkClone: js.UndefOr[Boolean] = js.native
+  var checkOn: js.UndefOr[Boolean] = js.native
+  var cors: js.UndefOr[Boolean] = js.native
+  var cssFloat: js.UndefOr[Boolean] = js.native
+  var hrefNormalized: js.UndefOr[Boolean] = js.native
+  var htmlSerialize: js.UndefOr[Boolean] = js.native
+  var leadingWhitespace: js.UndefOr[Boolean] = js.native
+  var noCloneChecked: js.UndefOr[Boolean] = js.native
+  var noCloneEvent: js.UndefOr[Boolean] = js.native
+  var opacity: js.UndefOr[Boolean] = js.native
+  var optDisabled: js.UndefOr[Boolean] = js.native
+  var optSelected: js.UndefOr[Boolean] = js.native
+  var scriptEval: js.UndefOr[js.Function0[Boolean]] = js.native
+  var style: js.UndefOr[Boolean] = js.native
+  var submitBubbles: js.UndefOr[Boolean] = js.native
+  var tbody: js.UndefOr[Boolean] = js.native
 }
 
 object JQuerySupport {
   @scala.inline
-  def apply(
-    ajax: js.UndefOr[Boolean] = js.undefined,
-    boxModel: js.UndefOr[Boolean] = js.undefined,
-    changeBubbles: js.UndefOr[Boolean] = js.undefined,
-    checkClone: js.UndefOr[Boolean] = js.undefined,
-    checkOn: js.UndefOr[Boolean] = js.undefined,
-    cors: js.UndefOr[Boolean] = js.undefined,
-    cssFloat: js.UndefOr[Boolean] = js.undefined,
-    hrefNormalized: js.UndefOr[Boolean] = js.undefined,
-    htmlSerialize: js.UndefOr[Boolean] = js.undefined,
-    leadingWhitespace: js.UndefOr[Boolean] = js.undefined,
-    noCloneChecked: js.UndefOr[Boolean] = js.undefined,
-    noCloneEvent: js.UndefOr[Boolean] = js.undefined,
-    opacity: js.UndefOr[Boolean] = js.undefined,
-    optDisabled: js.UndefOr[Boolean] = js.undefined,
-    optSelected: js.UndefOr[Boolean] = js.undefined,
-    scriptEval: () => Boolean = null,
-    style: js.UndefOr[Boolean] = js.undefined,
-    submitBubbles: js.UndefOr[Boolean] = js.undefined,
-    tbody: js.UndefOr[Boolean] = js.undefined
-  ): JQuerySupport = {
+  def apply(): JQuerySupport = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(ajax)) __obj.updateDynamic("ajax")(ajax.asInstanceOf[js.Any])
-    if (!js.isUndefined(boxModel)) __obj.updateDynamic("boxModel")(boxModel.asInstanceOf[js.Any])
-    if (!js.isUndefined(changeBubbles)) __obj.updateDynamic("changeBubbles")(changeBubbles.asInstanceOf[js.Any])
-    if (!js.isUndefined(checkClone)) __obj.updateDynamic("checkClone")(checkClone.asInstanceOf[js.Any])
-    if (!js.isUndefined(checkOn)) __obj.updateDynamic("checkOn")(checkOn.asInstanceOf[js.Any])
-    if (!js.isUndefined(cors)) __obj.updateDynamic("cors")(cors.asInstanceOf[js.Any])
-    if (!js.isUndefined(cssFloat)) __obj.updateDynamic("cssFloat")(cssFloat.asInstanceOf[js.Any])
-    if (!js.isUndefined(hrefNormalized)) __obj.updateDynamic("hrefNormalized")(hrefNormalized.asInstanceOf[js.Any])
-    if (!js.isUndefined(htmlSerialize)) __obj.updateDynamic("htmlSerialize")(htmlSerialize.asInstanceOf[js.Any])
-    if (!js.isUndefined(leadingWhitespace)) __obj.updateDynamic("leadingWhitespace")(leadingWhitespace.asInstanceOf[js.Any])
-    if (!js.isUndefined(noCloneChecked)) __obj.updateDynamic("noCloneChecked")(noCloneChecked.asInstanceOf[js.Any])
-    if (!js.isUndefined(noCloneEvent)) __obj.updateDynamic("noCloneEvent")(noCloneEvent.asInstanceOf[js.Any])
-    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (!js.isUndefined(optDisabled)) __obj.updateDynamic("optDisabled")(optDisabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(optSelected)) __obj.updateDynamic("optSelected")(optSelected.asInstanceOf[js.Any])
-    if (scriptEval != null) __obj.updateDynamic("scriptEval")(js.Any.fromFunction0(scriptEval))
-    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(submitBubbles)) __obj.updateDynamic("submitBubbles")(submitBubbles.asInstanceOf[js.Any])
-    if (!js.isUndefined(tbody)) __obj.updateDynamic("tbody")(tbody.asInstanceOf[js.Any])
     __obj.asInstanceOf[JQuerySupport]
   }
+  @scala.inline
+  implicit class JQuerySupportOps[Self <: JQuerySupport] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAjax(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ajax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAjax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ajax")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoxModel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boxModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoxModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boxModel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChangeBubbles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeBubbles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChangeBubbles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeBubbles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckClone(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkClone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckClone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkClone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckOn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCors(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCssFloat(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cssFloat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCssFloat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cssFloat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHrefNormalized(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hrefNormalized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHrefNormalized: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hrefNormalized")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtmlSerialize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlSerialize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtmlSerialize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlSerialize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeadingWhitespace(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leadingWhitespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeadingWhitespace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leadingWhitespace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoCloneChecked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noCloneChecked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoCloneChecked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noCloneChecked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoCloneEvent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noCloneEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoCloneEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noCloneEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optDisabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optDisabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptSelected(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optSelected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptSelected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optSelected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScriptEval(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptEval")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutScriptEval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptEval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubmitBubbles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submitBubbles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubmitBubbles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submitBubbles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTbody(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tbody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTbody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tbody")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

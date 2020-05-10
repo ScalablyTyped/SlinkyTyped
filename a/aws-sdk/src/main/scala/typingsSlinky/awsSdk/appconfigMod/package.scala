@@ -33,7 +33,12 @@ package object appconfigMod {
   */
   type EnvironmentState = typingsSlinky.awsSdk.appconfigMod._EnvironmentState | java.lang.String
   type GrowthFactor = scala.Double
-  type GrowthType = typingsSlinky.awsSdk.awsSdkStrings.LINEAR | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.LINEAR
+    - typingsSlinky.awsSdk.awsSdkStrings.EXPONENTIAL
+    - java.lang.String
+  */
+  type GrowthType = typingsSlinky.awsSdk.appconfigMod._GrowthType | java.lang.String
   type Id = java.lang.String
   type Integer = scala.Double
   type Iso8601DateTime = js.Date
@@ -66,7 +71,7 @@ package object appconfigMod {
   type ValidatorType = typingsSlinky.awsSdk.appconfigMod._ValidatorType | java.lang.String
   type ValidatorTypeList = js.Array[typingsSlinky.awsSdk.appconfigMod.ValidatorType]
   type Version = java.lang.String
-  type _Blob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.appconfigMod.Blob | java.lang.String
+  type _Blob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.appconfigMod.Blob | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2019-10-09`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

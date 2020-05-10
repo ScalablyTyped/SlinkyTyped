@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/runtime.html](http://www.html5plus.org/doc/zh_cn/runtime.html)
   */
+@js.native
 trait PlusRuntimeApplicationInf extends js.Object {
   /**
     * 程序的操作行为
@@ -16,14 +17,14 @@ trait PlusRuntimeApplicationInf extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/runtime.html](http://www.html5plus.org/doc/zh_cn/runtime.html)
     */
-  var action: js.UndefOr[String] = js.undefined
+  var action: js.UndefOr[String] = js.native
   /**
     * 调用程序的参数
     * 仅Android平台支持，为JSON格式，用于传递给要调用程序的参数，如extra:{url:"http://www.html5plus.org"}。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/runtime.html](http://www.html5plus.org/doc/zh_cn/runtime.html)
     */
-  var extra: js.UndefOr[js.Any] = js.undefined
+  var extra: js.UndefOr[js.Any] = js.native
   /**
     * 新任务模式标记
     * 可取值：
@@ -34,30 +35,77 @@ trait PlusRuntimeApplicationInf extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/runtime.html](http://www.html5plus.org/doc/zh_cn/runtime.html)
     */
-  var newTask: js.UndefOr[Boolean] = js.undefined
+  var newTask: js.UndefOr[Boolean] = js.native
   /**
     * 第三方程序包名
     * 仅Android平台支持，表示程序的包名，其它平台忽略此属性值。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/runtime.html](http://www.html5plus.org/doc/zh_cn/runtime.html)
     */
-  var pname: js.UndefOr[String] = js.undefined
+  var pname: js.UndefOr[String] = js.native
 }
 
 object PlusRuntimeApplicationInf {
   @scala.inline
-  def apply(
-    action: String = null,
-    extra: js.Any = null,
-    newTask: js.UndefOr[Boolean] = js.undefined,
-    pname: String = null
-  ): PlusRuntimeApplicationInf = {
+  def apply(): PlusRuntimeApplicationInf = {
     val __obj = js.Dynamic.literal()
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (!js.isUndefined(newTask)) __obj.updateDynamic("newTask")(newTask.asInstanceOf[js.Any])
-    if (pname != null) __obj.updateDynamic("pname")(pname.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusRuntimeApplicationInf]
   }
+  @scala.inline
+  implicit class PlusRuntimeApplicationInfOps[Self <: PlusRuntimeApplicationInf] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtra(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtra: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewTask(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newTask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewTask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newTask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pname")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

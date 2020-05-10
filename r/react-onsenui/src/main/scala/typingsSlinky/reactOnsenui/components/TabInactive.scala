@@ -1,17 +1,16 @@
 package typingsSlinky.reactOnsenui.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
-import slinky.web.html.`*`.tag
+import typingsSlinky.reactOnsenui.HTMLAttributesidclassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TabInactive
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.reactOnsenui.mod.TabInactive] {
+object TabInactive {
   @JSImport("react-onsenui", "TabInactive")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: HTMLAttributesidclassName): SharedBuilder_HTMLAttributesidclassName1108775840[typingsSlinky.reactOnsenui.mod.TabInactive] = new SharedBuilder_HTMLAttributesidclassName1108775840[typingsSlinky.reactOnsenui.mod.TabInactive](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TabInactive.type): SharedBuilder_HTMLAttributesidclassName1108775840[typingsSlinky.reactOnsenui.mod.TabInactive] = new SharedBuilder_HTMLAttributesidclassName1108775840[typingsSlinky.reactOnsenui.mod.TabInactive](js.Array(this.component, js.Dictionary.empty))()
 }
 

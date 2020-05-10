@@ -1,6 +1,5 @@
 package typingsSlinky.notifyjs.mod
 
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,31 +9,6 @@ import scala.scalajs.js.annotation._
 class ^ protected () extends Notify {
   def this(title: String) = this()
   def this(title: String, options: INotifyOption) = this()
-  /**
-    * Close the notification.
-    */
-  /* CompleteClass */
-  override def close(): Unit = js.native
-  /**
-    * Remove all event listener.
-    */
-  /* CompleteClass */
-  override def destroy(): Unit = js.native
-  /* CompleteClass */
-  override def handleEvent(e: Event_): Unit = js.native
-  /* CompleteClass */
-  override def onClickNotification(): Unit = js.native
-  /* CompleteClass */
-  override def onCloseNotification(): Unit = js.native
-  /* CompleteClass */
-  override def onErrorNotification(): Unit = js.native
-  /* CompleteClass */
-  override def onShowNotification(e: Event_): Unit = js.native
-  /**
-    * Show the notification.
-    */
-  /* CompleteClass */
-  override def show(): Unit = js.native
 }
 
 @JSImport("notifyjs", JSImport.Namespace)

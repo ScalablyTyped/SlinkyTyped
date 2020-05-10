@@ -14,10 +14,29 @@ trait DescribeTagsResponse extends js.Object {
 
 object DescribeTagsResponse {
   @scala.inline
-  def apply(resourceTags: ResourceTagList = null): DescribeTagsResponse = {
+  def apply(): DescribeTagsResponse = {
     val __obj = js.Dynamic.literal()
-    if (resourceTags != null) __obj.updateDynamic("resourceTags")(resourceTags.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTagsResponse]
   }
+  @scala.inline
+  implicit class DescribeTagsResponseOps[Self <: DescribeTagsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResourceTags(value: ResourceTagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceTags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

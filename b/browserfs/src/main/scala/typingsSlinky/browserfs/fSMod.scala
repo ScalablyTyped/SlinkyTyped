@@ -10,7 +10,6 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.fsMod.FSWatcher
 import typingsSlinky.node.fsMod.ReadStream
 import typingsSlinky.node.fsMod.WriteStream
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +31,7 @@ object fSMod extends js.Object {
       * converts Date or number to a fractional UNIX timestamp
       * Grabbed from NodeJS sources (lib/fs.js)
       */
-    def _toUnixTimestamp(time: Date): Double = js.native
+    def _toUnixTimestamp(time: js.Date): Double = js.native
     def access(path: String, callback: js.Function1[/* err */ ApiError, Unit]): Unit = js.native
     def access(path: String, mode: Double, callback: js.Function1[/* err */ ApiError, Unit]): Unit = js.native
     def accessSync(path: String): Unit = js.native
@@ -247,12 +246,12 @@ object fSMod extends js.Object {
       */
     def futimes(fd: Double, atime: Double, mtime: Double): Unit = js.native
     def futimes(fd: Double, atime: Double, mtime: Double, cb: BFSOneArgCallback): Unit = js.native
-    def futimes(fd: Double, atime: Double, mtime: Date): Unit = js.native
-    def futimes(fd: Double, atime: Double, mtime: Date, cb: BFSOneArgCallback): Unit = js.native
-    def futimes(fd: Double, atime: Date, mtime: Double): Unit = js.native
-    def futimes(fd: Double, atime: Date, mtime: Double, cb: BFSOneArgCallback): Unit = js.native
-    def futimes(fd: Double, atime: Date, mtime: Date): Unit = js.native
-    def futimes(fd: Double, atime: Date, mtime: Date, cb: BFSOneArgCallback): Unit = js.native
+    def futimes(fd: Double, atime: Double, mtime: js.Date): Unit = js.native
+    def futimes(fd: Double, atime: Double, mtime: js.Date, cb: BFSOneArgCallback): Unit = js.native
+    def futimes(fd: Double, atime: js.Date, mtime: Double): Unit = js.native
+    def futimes(fd: Double, atime: js.Date, mtime: Double, cb: BFSOneArgCallback): Unit = js.native
+    def futimes(fd: Double, atime: js.Date, mtime: js.Date): Unit = js.native
+    def futimes(fd: Double, atime: js.Date, mtime: js.Date, cb: BFSOneArgCallback): Unit = js.native
     /**
       * Change the file timestamps of a file referenced by the supplied file
       * descriptor.
@@ -261,9 +260,9 @@ object fSMod extends js.Object {
       * @param mtime
       */
     def futimesSync(fd: Double, atime: Double, mtime: Double): Unit = js.native
-    def futimesSync(fd: Double, atime: Double, mtime: Date): Unit = js.native
-    def futimesSync(fd: Double, atime: Date, mtime: Double): Unit = js.native
-    def futimesSync(fd: Double, atime: Date, mtime: Date): Unit = js.native
+    def futimesSync(fd: Double, atime: Double, mtime: js.Date): Unit = js.native
+    def futimesSync(fd: Double, atime: js.Date, mtime: Double): Unit = js.native
+    def futimesSync(fd: Double, atime: js.Date, mtime: js.Date): Unit = js.native
     /* private */ def getFdForFile(file: js.Any): js.Any = js.native
     /**
       * **NONSTANDARD**: Grab the FileSystem instance that backs this API.
@@ -650,12 +649,12 @@ object fSMod extends js.Object {
       */
     def utimes(path: String, atime: Double, mtime: Double): Unit = js.native
     def utimes(path: String, atime: Double, mtime: Double, cb: BFSOneArgCallback): Unit = js.native
-    def utimes(path: String, atime: Double, mtime: Date): Unit = js.native
-    def utimes(path: String, atime: Double, mtime: Date, cb: BFSOneArgCallback): Unit = js.native
-    def utimes(path: String, atime: Date, mtime: Double): Unit = js.native
-    def utimes(path: String, atime: Date, mtime: Double, cb: BFSOneArgCallback): Unit = js.native
-    def utimes(path: String, atime: Date, mtime: Date): Unit = js.native
-    def utimes(path: String, atime: Date, mtime: Date, cb: BFSOneArgCallback): Unit = js.native
+    def utimes(path: String, atime: Double, mtime: js.Date): Unit = js.native
+    def utimes(path: String, atime: Double, mtime: js.Date, cb: BFSOneArgCallback): Unit = js.native
+    def utimes(path: String, atime: js.Date, mtime: Double): Unit = js.native
+    def utimes(path: String, atime: js.Date, mtime: Double, cb: BFSOneArgCallback): Unit = js.native
+    def utimes(path: String, atime: js.Date, mtime: js.Date): Unit = js.native
+    def utimes(path: String, atime: js.Date, mtime: js.Date, cb: BFSOneArgCallback): Unit = js.native
     /**
       * Change file timestamps of the file referenced by the supplied path.
       * @param path
@@ -663,9 +662,9 @@ object fSMod extends js.Object {
       * @param mtime
       */
     def utimesSync(path: String, atime: Double, mtime: Double): Unit = js.native
-    def utimesSync(path: String, atime: Double, mtime: Date): Unit = js.native
-    def utimesSync(path: String, atime: Date, mtime: Double): Unit = js.native
-    def utimesSync(path: String, atime: Date, mtime: Date): Unit = js.native
+    def utimesSync(path: String, atime: Double, mtime: js.Date): Unit = js.native
+    def utimesSync(path: String, atime: js.Date, mtime: Double): Unit = js.native
+    def utimesSync(path: String, atime: js.Date, mtime: js.Date): Unit = js.native
     def watch(filename: String): FSWatcher = js.native
     def watch(filename: String, listener: js.Function2[/* event */ String, /* filename */ String, _]): FSWatcher = js.native
     def watch(filename: String, options: AnonPersistent): FSWatcher = js.native

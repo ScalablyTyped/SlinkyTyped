@@ -18,14 +18,41 @@ trait FacetResult extends js.Object {
 
 object FacetResult {
   @scala.inline
-  def apply(
-    DocumentAttributeKey: DocumentAttributeKey = null,
-    DocumentAttributeValueCountPairs: DocumentAttributeValueCountPairList = null
-  ): FacetResult = {
+  def apply(): FacetResult = {
     val __obj = js.Dynamic.literal()
-    if (DocumentAttributeKey != null) __obj.updateDynamic("DocumentAttributeKey")(DocumentAttributeKey.asInstanceOf[js.Any])
-    if (DocumentAttributeValueCountPairs != null) __obj.updateDynamic("DocumentAttributeValueCountPairs")(DocumentAttributeValueCountPairs.asInstanceOf[js.Any])
     __obj.asInstanceOf[FacetResult]
   }
+  @scala.inline
+  implicit class FacetResultOps[Self <: FacetResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocumentAttributeKey(value: DocumentAttributeKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentAttributeKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentAttributeKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentAttributeKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentAttributeValueCountPairs(value: DocumentAttributeValueCountPairList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentAttributeValueCountPairs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentAttributeValueCountPairs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentAttributeValueCountPairs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

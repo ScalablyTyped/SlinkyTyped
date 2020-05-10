@@ -5,20 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait JWKSImportOptions extends ImportOptions {
-  var ignoreErrors: js.UndefOr[Boolean] = js.undefined
+  var ignoreErrors: js.UndefOr[Boolean] = js.native
 }
 
 object JWKSImportOptions {
   @scala.inline
-  def apply(
-    calculateMissingRSAPrimes: js.UndefOr[Boolean] = js.undefined,
-    ignoreErrors: js.UndefOr[Boolean] = js.undefined
-  ): JWKSImportOptions = {
+  def apply(): JWKSImportOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(calculateMissingRSAPrimes)) __obj.updateDynamic("calculateMissingRSAPrimes")(calculateMissingRSAPrimes.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreErrors)) __obj.updateDynamic("ignoreErrors")(ignoreErrors.asInstanceOf[js.Any])
     __obj.asInstanceOf[JWKSImportOptions]
   }
+  @scala.inline
+  implicit class JWKSImportOptionsOps[Self <: JWKSImportOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIgnoreErrors(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreErrors")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,22 +18,20 @@ trait AspectRatingType extends js.Object
 
 object AspectRatingType {
   @scala.inline
-  def appeal: typingsSlinky.googleMaps.googleMapsStrings.appeal = this.cast("appeal")
+  def appeal: typingsSlinky.googleMaps.googleMapsStrings.appeal = "appeal".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.appeal]
   @scala.inline
-  def atmosphere: typingsSlinky.googleMaps.googleMapsStrings.atmosphere = this.cast("atmosphere")
+  def atmosphere: typingsSlinky.googleMaps.googleMapsStrings.atmosphere = "atmosphere".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.atmosphere]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def decor: typingsSlinky.googleMaps.googleMapsStrings.decor = "decor".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.decor]
   @scala.inline
-  def decor: typingsSlinky.googleMaps.googleMapsStrings.decor = this.cast("decor")
+  def facilities: typingsSlinky.googleMaps.googleMapsStrings.facilities = "facilities".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.facilities]
   @scala.inline
-  def facilities: typingsSlinky.googleMaps.googleMapsStrings.facilities = this.cast("facilities")
+  def food: typingsSlinky.googleMaps.googleMapsStrings.food = "food".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.food]
   @scala.inline
-  def food: typingsSlinky.googleMaps.googleMapsStrings.food = this.cast("food")
+  def overall: typingsSlinky.googleMaps.googleMapsStrings.overall = "overall".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.overall]
   @scala.inline
-  def overall: typingsSlinky.googleMaps.googleMapsStrings.overall = this.cast("overall")
+  def quality: typingsSlinky.googleMaps.googleMapsStrings.quality = "quality".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.quality]
   @scala.inline
-  def quality: typingsSlinky.googleMaps.googleMapsStrings.quality = this.cast("quality")
-  @scala.inline
-  def service: typingsSlinky.googleMaps.googleMapsStrings.service = this.cast("service")
+  def service: typingsSlinky.googleMaps.googleMapsStrings.service = "service".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.service]
 }
 

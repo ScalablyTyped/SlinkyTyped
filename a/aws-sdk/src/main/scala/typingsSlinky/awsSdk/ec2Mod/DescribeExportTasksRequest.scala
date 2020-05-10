@@ -18,11 +18,41 @@ trait DescribeExportTasksRequest extends js.Object {
 
 object DescribeExportTasksRequest {
   @scala.inline
-  def apply(ExportTaskIds: ExportTaskIdStringList = null, Filters: FilterList = null): DescribeExportTasksRequest = {
+  def apply(): DescribeExportTasksRequest = {
     val __obj = js.Dynamic.literal()
-    if (ExportTaskIds != null) __obj.updateDynamic("ExportTaskIds")(ExportTaskIds.asInstanceOf[js.Any])
-    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeExportTasksRequest]
   }
+  @scala.inline
+  implicit class DescribeExportTasksRequestOps[Self <: DescribeExportTasksRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExportTaskIds(value: ExportTaskIdStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportTaskIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExportTaskIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportTaskIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilters(value: FilterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

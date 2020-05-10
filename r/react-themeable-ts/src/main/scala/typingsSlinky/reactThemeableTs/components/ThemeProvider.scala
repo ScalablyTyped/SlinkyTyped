@@ -1,26 +1,22 @@
 package typingsSlinky.reactThemeableTs.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactThemeableTs.themeProviderMod.IThemeProviderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ThemeProvider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactThemeableTs.mod.ThemeProvider] {
+object ThemeProvider {
   @JSImport("react-themeable-ts", "ThemeProvider")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(reactThemeable: js.Any, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactThemeableTs.mod.ThemeProvider] = {
-    val __obj = js.Dynamic.literal(reactThemeable = reactThemeable.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: IThemeProviderProps): Default[tag.type, typingsSlinky.reactThemeableTs.mod.ThemeProvider] = new Default[tag.type, typingsSlinky.reactThemeableTs.mod.ThemeProvider](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(reactThemeable: js.Any): Default[tag.type, typingsSlinky.reactThemeableTs.mod.ThemeProvider] = {
+    val __props = js.Dynamic.literal(reactThemeable = reactThemeable.asInstanceOf[js.Any])
+    new Default[tag.type, typingsSlinky.reactThemeableTs.mod.ThemeProvider](js.Array(this.component, __props.asInstanceOf[IThemeProviderProps]))
   }
-  type Props = IThemeProviderProps
 }
 

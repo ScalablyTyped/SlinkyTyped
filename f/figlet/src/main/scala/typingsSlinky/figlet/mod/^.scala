@@ -1,6 +1,5 @@
 package typingsSlinky.figlet.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("figlet", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
-  def apply(txt: String, cb: js.Function2[/* error */ Error | Null, /* result */ js.UndefOr[String], Unit]): Unit = js.native
+  def apply(txt: String, cb: js.Function2[/* error */ js.Error | Null, /* result */ js.UndefOr[String], Unit]): Unit = js.native
   def apply(
     txt: String,
     font: Fonts_,

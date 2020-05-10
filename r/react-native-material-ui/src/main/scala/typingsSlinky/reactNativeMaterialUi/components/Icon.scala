@@ -1,35 +1,37 @@
 package typingsSlinky.reactNativeMaterialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeMaterialUi.mod.IconProps
 import typingsSlinky.reactNativeMaterialUi.mod.ViewStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Icon
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeMaterialUi.mod.Icon] {
+object Icon {
   @JSImport("react-native-material-ui", "Icon")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: size */
-  def apply(
-    name: String,
-    color: String = null,
-    style: ViewStyle | js.Array[ViewStyle] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeMaterialUi.mod.Icon] = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeMaterialUi.mod.Icon] {
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: ViewStyle | js.Array[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
   }
-  type Props = IconProps
+  
+  def withProps(p: IconProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(name: String): Builder = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IconProps]))
+  }
 }
 

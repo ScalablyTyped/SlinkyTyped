@@ -15,7 +15,7 @@ class Animator () extends js.Object {
     * @returns Resolved when the animation is done
     */
   def addClass(element: HTMLElement, className: String): js.Promise[Boolean] = js.native
-  def animate(element: js.Array[typingsSlinky.std.HTMLElement], className: String): js.Promise[Boolean] = js.native
+  def animate(element: js.Array[HTMLElement], className: String): js.Promise[Boolean] = js.native
   /**
     * Execute a single animation.
     * @param element Element to animate
@@ -23,7 +23,7 @@ class Animator () extends js.Object {
     * @param options options for the animation (duration, easing, ...)
     * @returns Resolved when the animation is done
     */
-  def animate(element: typingsSlinky.std.HTMLElement, className: String): js.Promise[Boolean] = js.native
+  def animate(element: HTMLElement, className: String): js.Promise[Boolean] = js.native
   /**
     * Execute an 'enter' animation on an element
     * @param element Element to animate

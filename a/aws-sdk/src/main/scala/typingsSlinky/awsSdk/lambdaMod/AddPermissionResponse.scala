@@ -14,10 +14,29 @@ trait AddPermissionResponse extends js.Object {
 
 object AddPermissionResponse {
   @scala.inline
-  def apply(Statement: String = null): AddPermissionResponse = {
+  def apply(): AddPermissionResponse = {
     val __obj = js.Dynamic.literal()
-    if (Statement != null) __obj.updateDynamic("Statement")(Statement.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddPermissionResponse]
   }
+  @scala.inline
+  implicit class AddPermissionResponseOps[Self <: AddPermissionResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStatement(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Statement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Statement")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

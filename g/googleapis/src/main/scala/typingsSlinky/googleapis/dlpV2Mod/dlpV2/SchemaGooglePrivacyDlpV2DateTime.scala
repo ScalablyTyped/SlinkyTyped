@@ -21,18 +21,65 @@ trait SchemaGooglePrivacyDlpV2DateTime extends js.Object {
 
 object SchemaGooglePrivacyDlpV2DateTime {
   @scala.inline
-  def apply(
-    date: SchemaGoogleTypeDate = null,
-    dayOfWeek: String = null,
-    time: SchemaGoogleTypeTimeOfDay = null,
-    timeZone: SchemaGooglePrivacyDlpV2TimeZone = null
-  ): SchemaGooglePrivacyDlpV2DateTime = {
+  def apply(): SchemaGooglePrivacyDlpV2DateTime = {
     val __obj = js.Dynamic.literal()
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (dayOfWeek != null) __obj.updateDynamic("dayOfWeek")(dayOfWeek.asInstanceOf[js.Any])
-    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
-    if (timeZone != null) __obj.updateDynamic("timeZone")(timeZone.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2DateTime]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2DateTimeOps[Self <: SchemaGooglePrivacyDlpV2DateTime] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDate(value: SchemaGoogleTypeDate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDayOfWeek(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayOfWeek")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDayOfWeek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayOfWeek")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTime(value: SchemaGoogleTypeTimeOfDay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeZone(value: SchemaGooglePrivacyDlpV2TimeZone): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZone")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

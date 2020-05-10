@@ -1,9 +1,10 @@
 package typingsSlinky.officeUiFabricReact
 
 import org.scalajs.dom.raw.HTMLDivElement
+import slinky.core.facade.ReactRef
 import typingsSlinky.officeUiFabricReact.suggestionsDottypesMod.ISuggestionsCoreProps
 import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionModel
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +14,12 @@ import scala.scalajs.js.annotation._
 object suggestionsCoreMod extends js.Object {
   @js.native
   class SuggestionsCore[T] protected ()
-    extends BaseComponent[ISuggestionsCoreProps[T], js.Object] {
+    extends Component[ISuggestionsCoreProps[T], js.Object, js.Any] {
     def this(suggestionsProps: ISuggestionsCoreProps[T]) = this()
     var SuggestionsItemOfProperType: js.Any = js.native
     var _onClickTypedSuggestionsItem: js.Any = js.native
     var _onRemoveTypedSuggestionsItem: js.Any = js.native
-    var _selectedElement: HTMLDivElement = js.native
+    var _selectedElement: ReactRef[HTMLDivElement] = js.native
     var currentIndex: Double = js.native
     var currentSuggestion: js.UndefOr[ISuggestionModel[T]] = js.native
     val selectedElement: js.UndefOr[HTMLDivElement] = js.native

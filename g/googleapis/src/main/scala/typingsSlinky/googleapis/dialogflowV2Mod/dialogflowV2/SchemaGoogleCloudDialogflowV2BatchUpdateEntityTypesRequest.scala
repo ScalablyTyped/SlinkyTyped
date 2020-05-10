@@ -36,18 +36,65 @@ trait SchemaGoogleCloudDialogflowV2BatchUpdateEntityTypesRequest extends js.Obje
 
 object SchemaGoogleCloudDialogflowV2BatchUpdateEntityTypesRequest {
   @scala.inline
-  def apply(
-    entityTypeBatchInline: SchemaGoogleCloudDialogflowV2EntityTypeBatch = null,
-    entityTypeBatchUri: String = null,
-    languageCode: String = null,
-    updateMask: String = null
-  ): SchemaGoogleCloudDialogflowV2BatchUpdateEntityTypesRequest = {
+  def apply(): SchemaGoogleCloudDialogflowV2BatchUpdateEntityTypesRequest = {
     val __obj = js.Dynamic.literal()
-    if (entityTypeBatchInline != null) __obj.updateDynamic("entityTypeBatchInline")(entityTypeBatchInline.asInstanceOf[js.Any])
-    if (entityTypeBatchUri != null) __obj.updateDynamic("entityTypeBatchUri")(entityTypeBatchUri.asInstanceOf[js.Any])
-    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
-    if (updateMask != null) __obj.updateDynamic("updateMask")(updateMask.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2BatchUpdateEntityTypesRequest]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudDialogflowV2BatchUpdateEntityTypesRequestOps[Self <: SchemaGoogleCloudDialogflowV2BatchUpdateEntityTypesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntityTypeBatchInline(value: SchemaGoogleCloudDialogflowV2EntityTypeBatch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityTypeBatchInline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityTypeBatchInline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityTypeBatchInline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntityTypeBatchUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityTypeBatchUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityTypeBatchUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityTypeBatchUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguageCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateMask(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateMask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

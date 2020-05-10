@@ -28,16 +28,53 @@ trait SchemaListTimeSeriesResponse extends js.Object {
 
 object SchemaListTimeSeriesResponse {
   @scala.inline
-  def apply(
-    executionErrors: js.Array[SchemaStatus] = null,
-    nextPageToken: String = null,
-    timeSeries: js.Array[SchemaTimeSeries] = null
-  ): SchemaListTimeSeriesResponse = {
+  def apply(): SchemaListTimeSeriesResponse = {
     val __obj = js.Dynamic.literal()
-    if (executionErrors != null) __obj.updateDynamic("executionErrors")(executionErrors.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (timeSeries != null) __obj.updateDynamic("timeSeries")(timeSeries.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListTimeSeriesResponse]
   }
+  @scala.inline
+  implicit class SchemaListTimeSeriesResponseOps[Self <: SchemaListTimeSeriesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecutionErrors(value: js.Array[SchemaStatus]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeSeries(value: js.Array[SchemaTimeSeries]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeSeries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeSeries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeSeries")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -31,7 +31,7 @@ class XmlObject () extends IXmlSerializable {
   /* protected */ def CreateElement(document: Document_, localName: String, namespaceUri: String): Element = js.native
   /* protected */ def CreateElement(document: Document_, localName: String, namespaceUri: String, prefix: String): Element = js.native
   /* protected */ def CreateElement(document: Document_, localName: String, namespaceUri: Null, prefix: String): Element = js.native
-  def Element(): js.UndefOr[org.scalajs.dom.raw.Element | Null] = js.native
+  def Element: js.UndefOr[org.scalajs.dom.raw.Element | Null] = js.native
   def GetAttribute(name: String): String | Null = js.native
   def GetAttribute(name: String, defaultValue: String): String | Null = js.native
   def GetAttribute(name: String, defaultValue: String, required: Boolean): String | Null = js.native
@@ -50,14 +50,14 @@ class XmlObject () extends IXmlSerializable {
   def HasChanged(): Boolean = js.native
   def IsEmpty(): Boolean = js.native
   def LoadXml(param: Element): Unit = js.native
-  def LocalName(): String = js.native
-  def NamespaceURI(): String | Null = js.native
+  def LocalName: String = js.native
+  def NamespaceURI: String | Null = js.native
   /* protected */ def OnGetXml(element: Element): Unit = js.native
   /* protected */ def OnLoadXml(element: Element): Unit = js.native
   def Prefix(): js.Any = js.native
   def Prefix(value: String): js.Any = js.native
   @JSName("Prefix")
-  def Prefix_Union(): String | Null = js.native
+  def Prefix_Union: String | Null = js.native
 }
 
 /* static members */
@@ -93,10 +93,10 @@ object XmlObject extends js.Object {
   def GetElement(element: Element, name: String): Element = js.native
   def GetElement(element: Element, name: String, required: Boolean): Element = js.native
   def GetElementById(element: Document_, idValue: String): Element | Null = js.native
-  def GetElementById(element: typingsSlinky.std.Element, idValue: String): Element | Null = js.native
+  def GetElementById(element: Element, idValue: String): Element | Null = js.native
   def GetFirstChild(node: Node, localName: String): Element | Null = js.native
   def GetFirstChild(node: Node, localName: String, nameSpace: String): Element | Null = js.native
   def LoadXml[T /* <: XmlObject */](param: String): T = js.native
-  def LoadXml[T /* <: XmlObject */](param: typingsSlinky.std.Element): T = js.native
+  def LoadXml[T /* <: XmlObject */](param: Element): T = js.native
 }
 

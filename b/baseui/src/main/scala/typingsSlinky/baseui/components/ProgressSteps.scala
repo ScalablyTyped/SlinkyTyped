@@ -1,35 +1,29 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.progressStepsMod.ProgressStepsOverrides
 import typingsSlinky.baseui.progressStepsMod.ProgressStepsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ProgressSteps
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object ProgressSteps {
   @JSImport("baseui/progress-steps", "ProgressSteps")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    current: Int | Double = null,
-    overrides: ProgressStepsOverrides = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (current != null) __obj.updateDynamic("current")(current.asInstanceOf[js.Any])
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def current(value: Double): this.type = set("current", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overrides(value: ProgressStepsOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ProgressStepsProps
+  
+  def withProps(p: ProgressStepsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ProgressSteps.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

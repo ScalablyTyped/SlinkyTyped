@@ -14,13 +14,13 @@ class BinaryDecoder () extends js.Object {
   def atEnd(): Boolean = js.native
   def clear(): Unit = js.native
   def free(): Unit = js.native
-  def getBuffer(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def getBuffer(): js.typedarray.Uint8Array = js.native
   def getCursor(): Double = js.native
   def getEnd(): Double = js.native
   def getError(): Boolean = js.native
   def pastEnd(): Boolean = js.native
   def readBool(): Boolean = js.native
-  def readBytes(length: Double): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def readBytes(length: Double): js.typedarray.Uint8Array = js.native
   def readDouble(): Double = js.native
   def readEnum(): Double = js.native
   def readFixedHash64(): String = js.native

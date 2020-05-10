@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ErrorConstructor
-  extends Instantiable0[Error]
-     with Instantiable1[/* message */ java.lang.String, Error] {
+  extends Instantiable0[js.Error]
+     with Instantiable1[/* message */ java.lang.String, js.Error] {
   def apply(): js.Error = js.native
   def apply(message: java.lang.String): js.Error = js.native
 }

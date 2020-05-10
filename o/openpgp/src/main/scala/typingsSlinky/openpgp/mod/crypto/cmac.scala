@@ -27,6 +27,6 @@ object cmac extends js.Object {
     * @param data
     * @param padding
     */
-  def rightXorMut(data: scala.scalajs.js.typedarray.Uint8Array, padding: scala.scalajs.js.typedarray.Uint8Array): Unit = js.native
+  def rightXorMut(data: js.typedarray.Uint8Array, padding: js.typedarray.Uint8Array): Unit = js.native
 }
 

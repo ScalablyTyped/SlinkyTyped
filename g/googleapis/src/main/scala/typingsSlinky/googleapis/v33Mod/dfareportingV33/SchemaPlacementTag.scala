@@ -21,11 +21,41 @@ trait SchemaPlacementTag extends js.Object {
 
 object SchemaPlacementTag {
   @scala.inline
-  def apply(placementId: String = null, tagDatas: js.Array[SchemaTagData] = null): SchemaPlacementTag = {
+  def apply(): SchemaPlacementTag = {
     val __obj = js.Dynamic.literal()
-    if (placementId != null) __obj.updateDynamic("placementId")(placementId.asInstanceOf[js.Any])
-    if (tagDatas != null) __obj.updateDynamic("tagDatas")(tagDatas.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPlacementTag]
   }
+  @scala.inline
+  implicit class SchemaPlacementTagOps[Self <: SchemaPlacementTag] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPlacementId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placementId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacementId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placementId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagDatas(value: js.Array[SchemaTagData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagDatas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagDatas: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagDatas")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

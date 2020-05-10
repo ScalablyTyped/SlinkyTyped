@@ -1,7 +1,6 @@
 package typingsSlinky.seleniumStandalone.mod
 
 import typingsSlinky.node.childProcessMod.ChildProcess
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,9 +8,9 @@ import scala.scalajs.js.annotation._
 @JSImport("selenium-standalone", "start")
 @js.native
 object start extends js.Object {
-  def apply(cb: js.Function2[Error | Null, /* selenium */ ChildProcess, Unit]): Unit = js.native
+  def apply(cb: js.Function2[js.Error | Null, /* selenium */ ChildProcess, Unit]): Unit = js.native
   def apply(
-    optsCb: js.Function2[/* error */ Error | Null, /* selenium */ ChildProcess, Unit],
+    optsCb: js.Function2[/* error */ js.Error | Null, /* selenium */ ChildProcess, Unit],
     cb: js.Function2[/* error */ js.Error | Null, /* selenium */ ChildProcess, Unit]
   ): Unit = js.native
   def apply(optsCb: StartOpts): Unit = js.native

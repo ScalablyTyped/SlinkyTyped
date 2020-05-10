@@ -18,11 +18,41 @@ trait BackupPlanTemplatesListMember extends js.Object {
 
 object BackupPlanTemplatesListMember {
   @scala.inline
-  def apply(BackupPlanTemplateId: String = null, BackupPlanTemplateName: String = null): BackupPlanTemplatesListMember = {
+  def apply(): BackupPlanTemplatesListMember = {
     val __obj = js.Dynamic.literal()
-    if (BackupPlanTemplateId != null) __obj.updateDynamic("BackupPlanTemplateId")(BackupPlanTemplateId.asInstanceOf[js.Any])
-    if (BackupPlanTemplateName != null) __obj.updateDynamic("BackupPlanTemplateName")(BackupPlanTemplateName.asInstanceOf[js.Any])
     __obj.asInstanceOf[BackupPlanTemplatesListMember]
   }
+  @scala.inline
+  implicit class BackupPlanTemplatesListMemberOps[Self <: BackupPlanTemplatesListMember] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackupPlanTemplateId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanTemplateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackupPlanTemplateId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanTemplateId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackupPlanTemplateName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanTemplateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackupPlanTemplateName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanTemplateName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 @JSImport("vso-node-api/FileContainerApi", JSImport.Namespace)
 @js.native
 object fileContainerApiMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.vsoNodeApi.clientApiBasesMod.ClientApiBase because Already inherited
   - typingsSlinky.vsoNodeApi.fileContainerApiBaseMod.IFileContainerApiBase because Already inherited
   - typingsSlinky.vsoNodeApi.fileContainerApiMod.IFileContainerApi because var conflicts: baseUrl, http, rest, userAgent, vsoClient. Inlined createItem, getItem, getItem, getItem, getItem */ @js.native

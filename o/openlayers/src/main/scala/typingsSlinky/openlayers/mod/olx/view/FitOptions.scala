@@ -6,42 +6,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FitOptions extends js.Object {
-  var callback: js.UndefOr[AnimateCallback] = js.undefined
-  var constrainResolution: js.UndefOr[Boolean] = js.undefined
-  var duration: js.UndefOr[Double] = js.undefined
-  var easing: js.UndefOr[js.Function1[/* t */ Double, Double]] = js.undefined
-  var maxZoom: js.UndefOr[Double] = js.undefined
-  var minResolution: js.UndefOr[Double] = js.undefined
-  var nearest: js.UndefOr[Boolean] = js.undefined
-  var padding: js.UndefOr[js.Array[Double]] = js.undefined
-  var size: js.UndefOr[Size] = js.undefined
+  var callback: js.UndefOr[AnimateCallback] = js.native
+  var constrainResolution: js.UndefOr[Boolean] = js.native
+  var duration: js.UndefOr[Double] = js.native
+  var easing: js.UndefOr[js.Function1[/* t */ Double, Double]] = js.native
+  var maxZoom: js.UndefOr[Double] = js.native
+  var minResolution: js.UndefOr[Double] = js.native
+  var nearest: js.UndefOr[Boolean] = js.native
+  var padding: js.UndefOr[js.Array[Double]] = js.native
+  var size: js.UndefOr[Size] = js.native
 }
 
 object FitOptions {
   @scala.inline
-  def apply(
-    callback: /* completed */ Boolean => Unit = null,
-    constrainResolution: js.UndefOr[Boolean] = js.undefined,
-    duration: Int | Double = null,
-    easing: /* t */ Double => Double = null,
-    maxZoom: Int | Double = null,
-    minResolution: Int | Double = null,
-    nearest: js.UndefOr[Boolean] = js.undefined,
-    padding: js.Array[Double] = null,
-    size: Size = null
-  ): FitOptions = {
+  def apply(): FitOptions = {
     val __obj = js.Dynamic.literal()
-    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction1(callback))
-    if (!js.isUndefined(constrainResolution)) __obj.updateDynamic("constrainResolution")(constrainResolution.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(js.Any.fromFunction1(easing))
-    if (maxZoom != null) __obj.updateDynamic("maxZoom")(maxZoom.asInstanceOf[js.Any])
-    if (minResolution != null) __obj.updateDynamic("minResolution")(minResolution.asInstanceOf[js.Any])
-    if (!js.isUndefined(nearest)) __obj.updateDynamic("nearest")(nearest.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[FitOptions]
   }
+  @scala.inline
+  implicit class FitOptionsOps[Self <: FitOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCallback(value: /* completed */ Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConstrainResolution(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constrainResolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstrainResolution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constrainResolution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEasing(value: /* t */ Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinResolution(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minResolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinResolution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minResolution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNearest(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nearest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNearest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nearest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

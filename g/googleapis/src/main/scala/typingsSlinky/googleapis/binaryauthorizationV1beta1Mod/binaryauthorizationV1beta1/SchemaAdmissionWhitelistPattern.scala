@@ -20,10 +20,29 @@ trait SchemaAdmissionWhitelistPattern extends js.Object {
 
 object SchemaAdmissionWhitelistPattern {
   @scala.inline
-  def apply(namePattern: String = null): SchemaAdmissionWhitelistPattern = {
+  def apply(): SchemaAdmissionWhitelistPattern = {
     val __obj = js.Dynamic.literal()
-    if (namePattern != null) __obj.updateDynamic("namePattern")(namePattern.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAdmissionWhitelistPattern]
   }
+  @scala.inline
+  implicit class SchemaAdmissionWhitelistPatternOps[Self <: SchemaAdmissionWhitelistPattern] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNamePattern(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamePattern: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePattern")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

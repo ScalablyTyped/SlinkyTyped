@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DescribeCommentsRequest extends js.Object {
   /**
-    * Amazon WorkDocs authentication token. Do not set this field when using administrative API actions, as in accessing the API using AWS credentials.
+    * Amazon WorkDocs authentication token. Not required when using AWS administrator credentials to access the API.
     */
   var AuthenticationToken: js.UndefOr[AuthenticationHeaderType] = js.native
   /**
@@ -30,18 +30,65 @@ trait DescribeCommentsRequest extends js.Object {
 
 object DescribeCommentsRequest {
   @scala.inline
-  def apply(
-    DocumentId: ResourceIdType,
-    VersionId: DocumentVersionIdType,
-    AuthenticationToken: AuthenticationHeaderType = null,
-    Limit: Int | Double = null,
-    Marker: MarkerType = null
-  ): DescribeCommentsRequest = {
+  def apply(DocumentId: ResourceIdType, VersionId: DocumentVersionIdType): DescribeCommentsRequest = {
     val __obj = js.Dynamic.literal(DocumentId = DocumentId.asInstanceOf[js.Any], VersionId = VersionId.asInstanceOf[js.Any])
-    if (AuthenticationToken != null) __obj.updateDynamic("AuthenticationToken")(AuthenticationToken.asInstanceOf[js.Any])
-    if (Limit != null) __obj.updateDynamic("Limit")(Limit.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeCommentsRequest]
   }
+  @scala.inline
+  implicit class DescribeCommentsRequestOps[Self <: DescribeCommentsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocumentId(value: ResourceIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVersionId(value: DocumentVersionIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthenticationToken(value: AuthenticationHeaderType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthenticationToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: LimitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: MarkerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

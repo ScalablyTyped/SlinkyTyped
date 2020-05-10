@@ -13,7 +13,7 @@ object arrayBufferMod extends js.Object {
   @js.native
   class ArrayBuffer () extends CommonBuffer {
     @JSName("data")
-    var data_ArrayBuffer: scala.scalajs.js.typedarray.Float32Array = js.native
+    var data_ArrayBuffer: js.typedarray.Float32Array = js.native
     var size: Double = js.native
     def initWhenCreate(data: js.Array[Double], size: Double, `type`: EBufferType, usage: EBufferUsage): js.Any = js.native
     def resetData(data: js.Array[Double]): this.type = js.native

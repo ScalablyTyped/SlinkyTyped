@@ -1,7 +1,9 @@
 package typingsSlinky.dragselect.mod
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.SVGElement
+import org.scalajs.dom.raw.TouchEvent
 import typingsSlinky.dragselect.AnonBottom
 import typingsSlinky.dragselect.AnonX
 import typingsSlinky.dragselect.AnonY
@@ -16,8 +18,6 @@ import typingsSlinky.dragselect.dragselectStrings.shiftKey
 import typingsSlinky.dragselect.dragselectStrings.top
 import typingsSlinky.std.ArrayLike
 import typingsSlinky.std.Document_
-import typingsSlinky.std.MouseEvent
-import typingsSlinky.std.TouchEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -94,8 +94,8 @@ trait DragSelect extends js.Object {
     * except the sizes will be nulled.
     * @param area
     */
-  def getAreaRect(area: typingsSlinky.std.HTMLElement): AnonBottom = js.native
-  def getAreaRect(area: typingsSlinky.std.SVGElement): AnonBottom = js.native
+  def getAreaRect(area: HTMLElement): AnonBottom = js.native
+  def getAreaRect(area: SVGElement): AnonBottom = js.native
   /**
     * Returns the last seen position of the cursor/selector
     */
@@ -110,15 +110,15 @@ trait DragSelect extends js.Object {
     */
   def getCursorPos(): AnonX = js.native
   def getCursorPos(event: MouseEvent): AnonX = js.native
-  def getCursorPos(event: MouseEvent, _area: typingsSlinky.std.HTMLElement): AnonX = js.native
-  def getCursorPos(event: MouseEvent, _area: typingsSlinky.std.HTMLElement, ignoreScroll: Boolean): AnonX = js.native
-  def getCursorPos(event: MouseEvent, _area: typingsSlinky.std.SVGElement): AnonX = js.native
-  def getCursorPos(event: MouseEvent, _area: typingsSlinky.std.SVGElement, ignoreScroll: Boolean): AnonX = js.native
+  def getCursorPos(event: MouseEvent, _area: HTMLElement): AnonX = js.native
+  def getCursorPos(event: MouseEvent, _area: HTMLElement, ignoreScroll: Boolean): AnonX = js.native
+  def getCursorPos(event: MouseEvent, _area: SVGElement): AnonX = js.native
+  def getCursorPos(event: MouseEvent, _area: SVGElement, ignoreScroll: Boolean): AnonX = js.native
   def getCursorPos(event: TouchEvent): AnonX = js.native
-  def getCursorPos(event: TouchEvent, _area: typingsSlinky.std.HTMLElement): AnonX = js.native
-  def getCursorPos(event: TouchEvent, _area: typingsSlinky.std.HTMLElement, ignoreScroll: Boolean): AnonX = js.native
-  def getCursorPos(event: TouchEvent, _area: typingsSlinky.std.SVGElement): AnonX = js.native
-  def getCursorPos(event: TouchEvent, _area: typingsSlinky.std.SVGElement, ignoreScroll: Boolean): AnonX = js.native
+  def getCursorPos(event: TouchEvent, _area: HTMLElement): AnonX = js.native
+  def getCursorPos(event: TouchEvent, _area: HTMLElement, ignoreScroll: Boolean): AnonX = js.native
+  def getCursorPos(event: TouchEvent, _area: SVGElement): AnonX = js.native
+  def getCursorPos(event: TouchEvent, _area: SVGElement, ignoreScroll: Boolean): AnonX = js.native
   @JSName("getCursorPos")
   def getCursorPos_false(event: MouseEvent, _area: `false`): AnonX = js.native
   @JSName("getCursorPos")
@@ -150,8 +150,8 @@ trait DragSelect extends js.Object {
     * @return scroll X/Y
     */
   def getScroll(): AnonY = js.native
-  def getScroll(area: typingsSlinky.std.HTMLElement): AnonY = js.native
-  def getScroll(area: typingsSlinky.std.SVGElement): AnonY = js.native
+  def getScroll(area: HTMLElement): AnonY = js.native
+  def getScroll(area: SVGElement): AnonY = js.native
   /**
     * Gets all nodes that can be selected
     * @return this.selectables
@@ -161,17 +161,17 @@ trait DragSelect extends js.Object {
     * Returns the current selected nodes
     */
   def getSelection(): js.Array[HTMLElement | SVGElement] = js.native
-  def isCursorNearEdge(event: js.UndefOr[scala.Nothing], area: typingsSlinky.std.HTMLElement): `false` | left | right | top | bottom = js.native
-  def isCursorNearEdge(event: js.UndefOr[scala.Nothing], area: typingsSlinky.std.SVGElement): `false` | left | right | top | bottom = js.native
+  def isCursorNearEdge(event: js.UndefOr[scala.Nothing], area: HTMLElement): `false` | left | right | top | bottom = js.native
+  def isCursorNearEdge(event: js.UndefOr[scala.Nothing], area: SVGElement): `false` | left | right | top | bottom = js.native
   /**
     * Check if the selector is near an edge of the area
     * @param [event] event object.
     * @param area the area.
     */
-  def isCursorNearEdge(event: MouseEvent, area: typingsSlinky.std.HTMLElement): `false` | left | right | top | bottom = js.native
-  def isCursorNearEdge(event: MouseEvent, area: typingsSlinky.std.SVGElement): `false` | left | right | top | bottom = js.native
-  def isCursorNearEdge(event: TouchEvent, area: typingsSlinky.std.HTMLElement): `false` | left | right | top | bottom = js.native
-  def isCursorNearEdge(event: TouchEvent, area: typingsSlinky.std.SVGElement): `false` | left | right | top | bottom = js.native
+  def isCursorNearEdge(event: MouseEvent, area: HTMLElement): `false` | left | right | top | bottom = js.native
+  def isCursorNearEdge(event: MouseEvent, area: SVGElement): `false` | left | right | top | bottom = js.native
+  def isCursorNearEdge(event: TouchEvent, area: HTMLElement): `false` | left | right | top | bottom = js.native
+  def isCursorNearEdge(event: TouchEvent, area: SVGElement): `false` | left | right | top | bottom = js.native
   def moveCallback(event: MouseEvent): Unit = js.native
   def moveCallback(event: TouchEvent): Unit = js.native
   def moveStartCallback(event: MouseEvent): Unit = js.native
@@ -216,10 +216,10 @@ trait DragSelect extends js.Object {
     * @param item selected item.
     * @return item
     */
-  def select(item: typingsSlinky.std.HTMLElement): HTMLElement | SVGElement | `false` = js.native
-  def select(item: typingsSlinky.std.SVGElement): HTMLElement | SVGElement | `false` = js.native
-  def selectCallback(selected: typingsSlinky.std.HTMLElement): Unit = js.native
-  def selectCallback(selected: typingsSlinky.std.SVGElement): Unit = js.native
+  def select(item: HTMLElement): HTMLElement | SVGElement | `false` = js.native
+  def select(item: SVGElement): HTMLElement | SVGElement | `false` = js.native
+  def selectCallback(selected: HTMLElement): Unit = js.native
+  def selectCallback(selected: SVGElement): Unit = js.native
   /**
     * Sets all elements that can be selected.
     * Removes all current selectables (& their respective classes).
@@ -268,8 +268,8 @@ trait DragSelect extends js.Object {
     * @param item – item to select.
     * @return item
     */
-  def toggle(item: typingsSlinky.std.HTMLElement): HTMLElement | SVGElement = js.native
-  def toggle(item: typingsSlinky.std.SVGElement): HTMLElement | SVGElement = js.native
+  def toggle(item: HTMLElement): HTMLElement | SVGElement = js.native
+  def toggle(item: SVGElement): HTMLElement | SVGElement = js.native
   /**
     * Toggles specific nodes from the selection:
     * If element is not in selection it will be added, if it is already selected, it will be removed.
@@ -287,9 +287,9 @@ trait DragSelect extends js.Object {
     * @param item selected item.
     * @return item
     */
-  def unselect(item: typingsSlinky.std.HTMLElement): HTMLElement | SVGElement | `false` = js.native
-  def unselect(item: typingsSlinky.std.SVGElement): HTMLElement | SVGElement | `false` = js.native
-  def unselectCallback(selected: typingsSlinky.std.HTMLElement): Unit = js.native
-  def unselectCallback(selected: typingsSlinky.std.SVGElement): Unit = js.native
+  def unselect(item: HTMLElement): HTMLElement | SVGElement | `false` = js.native
+  def unselect(item: SVGElement): HTMLElement | SVGElement | `false` = js.native
+  def unselectCallback(selected: HTMLElement): Unit = js.native
+  def unselectCallback(selected: SVGElement): Unit = js.native
 }
 

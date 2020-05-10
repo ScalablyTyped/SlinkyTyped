@@ -1,7 +1,6 @@
 package typingsSlinky.hexoLog
 
 import typingsSlinky.hexoBunyan.mod.^
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +22,7 @@ object mod extends js.Object {
       * (including the stack) and sets `msg` to the exception
       * message or you can specify the `msg`.
       */
-    def d(error: Error, params: js.Any*): Unit = js.native
+    def d(error: js.Error, params: js.Any*): Unit = js.native
     /**
       * Uses `util.format` for msg formatting.
       */
@@ -48,7 +47,7 @@ object mod extends js.Object {
       * (including the stack) and sets `msg` to the exception
       * message or you can specify the `msg`.
       */
-    def e(error: Error, params: js.Any*): Unit = js.native
+    def e(error: js.Error, params: js.Any*): Unit = js.native
     /**
       * Uses `util.format` for msg formatting.
       */
@@ -73,7 +72,7 @@ object mod extends js.Object {
       * (including the stack) and sets `msg` to the exception
       * message or you can specify the `msg`.
       */
-    def i(error: Error, params: js.Any*): Unit = js.native
+    def i(error: js.Error, params: js.Any*): Unit = js.native
     /**
       * Uses `util.format` for msg formatting.
       */
@@ -98,7 +97,7 @@ object mod extends js.Object {
       * (including the stack) and sets `msg` to the exception
       * message or you can specify the `msg`.
       */
-    def log(error: Error, params: js.Any*): Unit = js.native
+    def log(error: js.Error, params: js.Any*): Unit = js.native
     /**
       * Uses `util.format` for msg formatting.
       */
@@ -123,7 +122,7 @@ object mod extends js.Object {
       * (including the stack) and sets `msg` to the exception
       * message or you can specify the `msg`.
       */
-    def w(error: Error, params: js.Any*): Unit = js.native
+    def w(error: js.Error, params: js.Any*): Unit = js.native
     /**
       * Uses `util.format` for msg formatting.
       */

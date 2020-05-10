@@ -1,31 +1,23 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.SVGElement
 import org.scalajs.dom.raw.SVGGElement
-import typingsSlinky.devextreme.AnonBottom
-import typingsSlinky.devextreme.AnonCornerRadius
-import typingsSlinky.devextreme.AnonHorizontalAlignment
 import typingsSlinky.devextreme.AnonItemDxFunnelItem
-import typingsSlinky.devextreme.devextremeStrings.bottom
-import typingsSlinky.devextreme.devextremeStrings.center
-import typingsSlinky.devextreme.devextremeStrings.horizontal
-import typingsSlinky.devextreme.devextremeStrings.left
-import typingsSlinky.devextreme.devextremeStrings.right
-import typingsSlinky.devextreme.devextremeStrings.top
-import typingsSlinky.devextreme.devextremeStrings.vertical
 import typingsSlinky.devextreme.mod.DevExpress.core.template
 import typingsSlinky.devextreme.mod._Global_.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxFunnelLegend extends BaseLegend {
   /** Specifies the hint that appears when a user hovers the mouse pointer over a legend item. */
-  var customizeHint: js.UndefOr[js.Function1[/* itemInfo */ AnonItemDxFunnelItem, String]] = js.undefined
+  var customizeHint: js.UndefOr[js.Function1[/* itemInfo */ AnonItemDxFunnelItem, String]] = js.native
   /** Allows you to change the order, text, and visibility of legend items. */
-  var customizeItems: js.UndefOr[js.Function1[/* items */ js.Array[FunnelLegendItem], js.Array[FunnelLegendItem]]] = js.undefined
+  var customizeItems: js.UndefOr[js.Function1[/* items */ js.Array[FunnelLegendItem], js.Array[FunnelLegendItem]]] = js.native
   /** Customizes the text displayed by legend items. */
-  var customizeText: js.UndefOr[js.Function1[/* itemInfo */ AnonItemDxFunnelItem, String]] = js.undefined
+  var customizeText: js.UndefOr[js.Function1[/* itemInfo */ AnonItemDxFunnelItem, String]] = js.native
   /** Specifies an SVG element that serves as a custom legend item marker. */
   var markerTemplate: js.UndefOr[
     template | (js.Function2[
@@ -33,63 +25,90 @@ trait dxFunnelLegend extends BaseLegend {
       /* element */ SVGGElement, 
       String | SVGElement | JQuery
     ])
-  ] = js.undefined
+  ] = js.native
 }
 
 object dxFunnelLegend {
   @scala.inline
-  def apply(
-    backgroundColor: String = null,
-    border: AnonCornerRadius = null,
-    columnCount: Int | Double = null,
-    columnItemSpacing: Int | Double = null,
-    customizeHint: /* itemInfo */ AnonItemDxFunnelItem => String = null,
-    customizeItems: /* items */ js.Array[FunnelLegendItem] => js.Array[FunnelLegendItem] = null,
-    customizeText: /* itemInfo */ AnonItemDxFunnelItem => String = null,
-    font: Font = null,
-    horizontalAlignment: center | left | right = null,
-    itemTextPosition: bottom | left | right | top = null,
-    itemsAlignment: center | left | right = null,
-    margin: Double | AnonBottom = null,
-    markerSize: Int | Double = null,
-    markerTemplate: template | (js.Function2[
-      /* legendItem */ FunnelLegendItem, 
-      /* element */ SVGGElement, 
-      String | SVGElement | JQuery
-    ]) = null,
-    orientation: horizontal | vertical = null,
-    paddingLeftRight: Int | Double = null,
-    paddingTopBottom: Int | Double = null,
-    rowCount: Int | Double = null,
-    rowItemSpacing: Int | Double = null,
-    title: AnonHorizontalAlignment | String = null,
-    verticalAlignment: bottom | top = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): dxFunnelLegend = {
+  def apply(): dxFunnelLegend = {
     val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
-    if (columnCount != null) __obj.updateDynamic("columnCount")(columnCount.asInstanceOf[js.Any])
-    if (columnItemSpacing != null) __obj.updateDynamic("columnItemSpacing")(columnItemSpacing.asInstanceOf[js.Any])
-    if (customizeHint != null) __obj.updateDynamic("customizeHint")(js.Any.fromFunction1(customizeHint))
-    if (customizeItems != null) __obj.updateDynamic("customizeItems")(js.Any.fromFunction1(customizeItems))
-    if (customizeText != null) __obj.updateDynamic("customizeText")(js.Any.fromFunction1(customizeText))
-    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
-    if (horizontalAlignment != null) __obj.updateDynamic("horizontalAlignment")(horizontalAlignment.asInstanceOf[js.Any])
-    if (itemTextPosition != null) __obj.updateDynamic("itemTextPosition")(itemTextPosition.asInstanceOf[js.Any])
-    if (itemsAlignment != null) __obj.updateDynamic("itemsAlignment")(itemsAlignment.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (markerSize != null) __obj.updateDynamic("markerSize")(markerSize.asInstanceOf[js.Any])
-    if (markerTemplate != null) __obj.updateDynamic("markerTemplate")(markerTemplate.asInstanceOf[js.Any])
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (paddingLeftRight != null) __obj.updateDynamic("paddingLeftRight")(paddingLeftRight.asInstanceOf[js.Any])
-    if (paddingTopBottom != null) __obj.updateDynamic("paddingTopBottom")(paddingTopBottom.asInstanceOf[js.Any])
-    if (rowCount != null) __obj.updateDynamic("rowCount")(rowCount.asInstanceOf[js.Any])
-    if (rowItemSpacing != null) __obj.updateDynamic("rowItemSpacing")(rowItemSpacing.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (verticalAlignment != null) __obj.updateDynamic("verticalAlignment")(verticalAlignment.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxFunnelLegend]
   }
+  @scala.inline
+  implicit class dxFunnelLegendOps[Self <: dxFunnelLegend] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomizeHint(value: /* itemInfo */ AnonItemDxFunnelItem => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeHint")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCustomizeHint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeHint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomizeItems(value: /* items */ js.Array[FunnelLegendItem] => js.Array[FunnelLegendItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeItems")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCustomizeItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomizeText(value: /* itemInfo */ AnonItemDxFunnelItem => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCustomizeText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkerTemplateFunction2(
+      value: (/* legendItem */ FunnelLegendItem, /* element */ SVGGElement) => String | SVGElement | JQuery
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerTemplate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withMarkerTemplateElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMarkerTemplate(
+      value: template | (js.Function2[
+          /* legendItem */ FunnelLegendItem, 
+          /* element */ SVGGElement, 
+          String | SVGElement | JQuery
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkerTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerTemplate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

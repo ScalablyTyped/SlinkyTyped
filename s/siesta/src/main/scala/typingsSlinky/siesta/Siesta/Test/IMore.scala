@@ -1,6 +1,5 @@
 package typingsSlinky.siesta.Siesta.Test
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,12 +31,12 @@ trait IMore extends js.Object {
   def isaOk(value: js.Any, className: String, desc: String): Unit = js.native
   def isaOk(value: js.Any, className: js.Function, desc: String): Unit = js.native
   def like(string: String, regex: String, desc: String): Unit = js.native
-  def like(string: String, regex: RegExp, desc: String): Unit = js.native
+  def like(string: String, regex: js.RegExp, desc: String): Unit = js.native
   def livesOk(func: js.Function, desc: String): Unit = js.native
   def throwsOk(func: js.Function, expected: String, desc: String): Unit = js.native
-  def throwsOk(func: js.Function, expected: RegExp, desc: String): Unit = js.native
+  def throwsOk(func: js.Function, expected: js.RegExp, desc: String): Unit = js.native
   def unlike(string: String, regex: String, desc: String): Unit = js.native
-  def unlike(string: String, regex: RegExp, desc: String): Unit = js.native
+  def unlike(string: String, regex: js.RegExp, desc: String): Unit = js.native
   def verifyGlobals(names: String*): Unit = js.native
   def waitFor(config: IWaitForConfig): IWaitForReturn = js.native
   def waitFor(method: js.Function, callback: js.Function): IWaitForReturn = js.native

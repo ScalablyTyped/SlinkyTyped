@@ -13,5 +13,6 @@ trait SVGFEMergeNodeElement extends SVGElement {
 
 @JSGlobal("SVGFEMergeNodeElement")
 @js.native
-object SVGFEMergeNodeElement extends Instantiable0[SVGFEMergeNodeElement]
+object SVGFEMergeNodeElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFEMergeNodeElement]
 

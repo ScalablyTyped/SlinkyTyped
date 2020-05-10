@@ -29,16 +29,53 @@ trait SchemaStatusMessage extends js.Object {
 
 object SchemaStatusMessage {
   @scala.inline
-  def apply(
-    description: SchemaFormatMessage = null,
-    isError: js.UndefOr[Boolean] = js.undefined,
-    refersTo: String = null
-  ): SchemaStatusMessage = {
+  def apply(): SchemaStatusMessage = {
     val __obj = js.Dynamic.literal()
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (!js.isUndefined(isError)) __obj.updateDynamic("isError")(isError.asInstanceOf[js.Any])
-    if (refersTo != null) __obj.updateDynamic("refersTo")(refersTo.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStatusMessage]
   }
+  @scala.inline
+  implicit class SchemaStatusMessageOps[Self <: SchemaStatusMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: SchemaFormatMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsError(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRefersTo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refersTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRefersTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refersTo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

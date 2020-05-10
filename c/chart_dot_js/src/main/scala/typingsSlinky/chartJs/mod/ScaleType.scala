@@ -15,16 +15,14 @@ trait ScaleType extends js.Object
 
 object ScaleType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def category: typingsSlinky.chartJs.chartJsStrings.category = "category".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.category]
   @scala.inline
-  def category: typingsSlinky.chartJs.chartJsStrings.category = this.cast("category")
+  def linear: typingsSlinky.chartJs.chartJsStrings.linear = "linear".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.linear]
   @scala.inline
-  def linear: typingsSlinky.chartJs.chartJsStrings.linear = this.cast("linear")
+  def logarithmic: typingsSlinky.chartJs.chartJsStrings.logarithmic = "logarithmic".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.logarithmic]
   @scala.inline
-  def logarithmic: typingsSlinky.chartJs.chartJsStrings.logarithmic = this.cast("logarithmic")
+  def radialLinear: typingsSlinky.chartJs.chartJsStrings.radialLinear = "radialLinear".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.radialLinear]
   @scala.inline
-  def radialLinear: typingsSlinky.chartJs.chartJsStrings.radialLinear = this.cast("radialLinear")
-  @scala.inline
-  def time: typingsSlinky.chartJs.chartJsStrings.time = this.cast("time")
+  def time: typingsSlinky.chartJs.chartJsStrings.time = "time".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.time]
 }
 

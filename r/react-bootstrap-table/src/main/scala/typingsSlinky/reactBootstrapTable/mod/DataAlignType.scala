@@ -15,16 +15,14 @@ trait DataAlignType extends js.Object
 
 object DataAlignType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.center = "center".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.center]
   @scala.inline
-  def center: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.center = this.cast("center")
+  def end: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.end = "end".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.end]
   @scala.inline
-  def end: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.end = this.cast("end")
+  def left: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.left = "left".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.left]
   @scala.inline
-  def left: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.left = this.cast("left")
+  def right: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.right = "right".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.right]
   @scala.inline
-  def right: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.right = this.cast("right")
-  @scala.inline
-  def start: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.start = this.cast("start")
+  def start: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.start = "start".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.start]
 }
 

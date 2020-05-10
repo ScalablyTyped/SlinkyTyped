@@ -1,10 +1,10 @@
 package typingsSlinky.cathoQuantum.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.core.facade.ReactElement
+import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.cathoQuantum.AnonBreakpoints
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.button
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.error
@@ -26,40 +26,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SocialButton
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object SocialButton {
   @JSImport("@catho/quantum/SocialButton", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, id, onClick */
-  def apply(
-    provider: String,
-    $as: ReactElement | String = null,
-    center: js.UndefOr[Boolean] = js.undefined,
-    full: js.UndefOr[Boolean] = js.undefined,
-    icon: String = null,
-    size: xsmall | small | medium | large | xlarge = null,
-    skin: neutral | primary | secondary | success | warning | error = null,
-    stroked: js.UndefOr[Boolean] = js.undefined,
-    theme: AnonBreakpoints = null,
-    `type`: button | reset | submit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(provider = provider.asInstanceOf[js.Any])
-    if ($as != null) __obj.updateDynamic("$as")($as.asInstanceOf[js.Any])
-    if (!js.isUndefined(center)) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (!js.isUndefined(full)) __obj.updateDynamic("full")(full.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (skin != null) __obj.updateDynamic("skin")(skin.asInstanceOf[js.Any])
-    if (!js.isUndefined(stroked)) __obj.updateDynamic("stroked")(stroked.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def $asReactElement(value: ReactElement): this.type = set("$as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def $as(value: ReactElement | String): this.type = set("$as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def center(value: Boolean): this.type = set("center", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def full(value: Boolean): this.type = set("full", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: String): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: SyntheticMouseEvent[HTMLButtonElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def size(value: xsmall | small | medium | large | xlarge): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def skin(value: neutral | primary | secondary | success | warning | error): this.type = set("skin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stroked(value: Boolean): this.type = set("stroked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: AnonBreakpoints): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: button | reset | submit): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  type Props = SocialButtonProps
+  
+  def withProps(p: SocialButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(provider: String): Builder = {
+    val __props = js.Dynamic.literal(provider = provider.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SocialButtonProps]))
+  }
 }
 

@@ -36,9 +36,9 @@ trait DurandalViewLocatorModule extends js.Object {
     * @param {DOMElement[]} [elementsToSearch] An existing set of elements to search first.
     * @returns {Promise} A promise of the view.
     */
-  def locateView(view: typingsSlinky.std.HTMLElement): DurandalPromise[HTMLElement] = js.native
-  def locateView(view: typingsSlinky.std.HTMLElement, area: String): DurandalPromise[HTMLElement] = js.native
-  def locateView(view: typingsSlinky.std.HTMLElement, area: String, elementsToSearch: js.Array[HTMLElement]): DurandalPromise[HTMLElement] = js.native
+  def locateView(view: HTMLElement): DurandalPromise[HTMLElement] = js.native
+  def locateView(view: HTMLElement, area: String): DurandalPromise[HTMLElement] = js.native
+  def locateView(view: HTMLElement, area: String, elementsToSearch: js.Array[HTMLElement]): DurandalPromise[HTMLElement] = js.native
   /**
     * Maps an object instance to a view instance.
     * @param {object} obj The object to locate the view for.

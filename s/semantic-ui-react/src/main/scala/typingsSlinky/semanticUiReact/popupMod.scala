@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.semanticUiReact.popupPopupMod.PopupComponent
 import typingsSlinky.semanticUiReact.popupPopupMod.PopupProps
 import scala.scalajs.js
@@ -14,7 +13,7 @@ import scala.scalajs.js.annotation._
 object popupMod extends js.Object {
   @js.native
   class default protected ()
-    extends Component[PopupProps, ComponentState, js.Any] {
+    extends Component[PopupProps, js.Object, js.Any] {
     def this(props: PopupProps) = this()
     def this(props: PopupProps, context: js.Any) = this()
   }

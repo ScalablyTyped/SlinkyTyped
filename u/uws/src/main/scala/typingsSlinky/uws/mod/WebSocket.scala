@@ -2,7 +2,6 @@ package typingsSlinky.uws.mod
 
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.httpMod.IncomingMessage
-import typingsSlinky.std.Error
 import typingsSlinky.uws.Anon0
 import typingsSlinky.uws.AnonBinary
 import typingsSlinky.uws.AnonBinaryBoolean
@@ -109,11 +108,11 @@ trait WebSocket extends EventEmitter {
   def pong(data: js.Any, options: AnonBinary, dontFail: Boolean): Unit = js.native
   def resume(): Unit = js.native
   def send(data: js.Any): Unit = js.native
-  def send(data: js.Any, cb: js.Function1[/* err */ Error, Unit]): Unit = js.native
+  def send(data: js.Any, cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def send(data: js.Any, options: AnonBinary): Unit = js.native
   def send(data: js.Any, options: AnonBinary, cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def stream(): Unit = js.native
-  def stream(cb: js.Function2[/* err */ Error, /* final */ Boolean, Unit]): Unit = js.native
+  def stream(cb: js.Function2[/* err */ js.Error, /* final */ Boolean, Unit]): Unit = js.native
   def stream(options: AnonBinary): Unit = js.native
   def stream(options: AnonBinary, cb: js.Function2[/* err */ js.Error, /* final */ Boolean, Unit]): Unit = js.native
   def terminate(): Unit = js.native

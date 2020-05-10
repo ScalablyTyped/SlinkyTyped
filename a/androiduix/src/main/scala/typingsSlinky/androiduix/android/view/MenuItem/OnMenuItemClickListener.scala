@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OnMenuItemClickListener extends js.Object {
-  def onMenuItemClick(item: typingsSlinky.androiduix.android.view.MenuItem): Boolean
+  def onMenuItemClick(item: typingsSlinky.androiduix.android.view.MenuItem): Boolean = js.native
 }
 
 object OnMenuItemClickListener {
   @scala.inline
   def apply(onMenuItemClick: typingsSlinky.androiduix.android.view.MenuItem => Boolean): OnMenuItemClickListener = {
     val __obj = js.Dynamic.literal(onMenuItemClick = js.Any.fromFunction1(onMenuItemClick))
-  
     __obj.asInstanceOf[OnMenuItemClickListener]
   }
+  @scala.inline
+  implicit class OnMenuItemClickListenerOps[Self <: OnMenuItemClickListener] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnMenuItemClick(value: typingsSlinky.androiduix.android.view.MenuItem => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuItemClick")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -39,12 +39,60 @@ object UserPoolVerificationMessageTemplate {
     emailMessageByLink: String,
     emailSubject: String,
     emailSubjectByLink: String,
-    smsMessage: String,
-    defaultEmailOption: String = null
+    smsMessage: String
   ): UserPoolVerificationMessageTemplate = {
     val __obj = js.Dynamic.literal(emailMessage = emailMessage.asInstanceOf[js.Any], emailMessageByLink = emailMessageByLink.asInstanceOf[js.Any], emailSubject = emailSubject.asInstanceOf[js.Any], emailSubjectByLink = emailSubjectByLink.asInstanceOf[js.Any], smsMessage = smsMessage.asInstanceOf[js.Any])
-    if (defaultEmailOption != null) __obj.updateDynamic("defaultEmailOption")(defaultEmailOption.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPoolVerificationMessageTemplate]
   }
+  @scala.inline
+  implicit class UserPoolVerificationMessageTemplateOps[Self <: UserPoolVerificationMessageTemplate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmailMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emailMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmailMessageByLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emailMessageByLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmailSubject(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emailSubject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmailSubjectByLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emailSubjectByLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSmsMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smsMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultEmailOption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultEmailOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultEmailOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultEmailOption")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

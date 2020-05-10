@@ -19,7 +19,7 @@ object sendFeatureReport extends js.Object {
   def apply(
     connectionId: integer,
     reportId: integer,
-    data: scala.scalajs.js.typedarray.ArrayBuffer,
+    data: js.typedarray.ArrayBuffer,
     callback: js.Function0[Unit]
   ): Unit = js.native
 }

@@ -22,30 +22,28 @@ trait EventType extends js.Object
 
 object EventType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def resize: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resize = "resize".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resize]
   @scala.inline
-  def resize: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resize = this.cast("resize")
+  def resizeEnd: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resizeEnd = "resizeEnd".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resizeEnd]
   @scala.inline
-  def resizeEnd: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resizeEnd = this.cast("resizeEnd")
+  def resizeStart: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resizeStart = "resizeStart".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resizeStart]
   @scala.inline
-  def resizeStart: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.resizeStart = this.cast("resizeStart")
+  def scroll: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scroll = "scroll".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scroll]
   @scala.inline
-  def scroll: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scroll = this.cast("scroll")
+  def scrollEnd: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scrollEnd = "scrollEnd".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scrollEnd]
   @scala.inline
-  def scrollEnd: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scrollEnd = this.cast("scrollEnd")
+  def scrollStart: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scrollStart = "scrollStart".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scrollStart]
   @scala.inline
-  def scrollStart: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.scrollStart = this.cast("scrollStart")
+  def touchend: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchend = "touchend".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchend]
   @scala.inline
-  def touchend: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchend = this.cast("touchend")
+  def touchmove: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmove = "touchmove".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmove]
   @scala.inline
-  def touchmove: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmove = this.cast("touchmove")
+  def touchmoveEnd: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmoveEnd = "touchmoveEnd".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmoveEnd]
   @scala.inline
-  def touchmoveEnd: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmoveEnd = this.cast("touchmoveEnd")
+  def touchmoveStart: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmoveStart = "touchmoveStart".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmoveStart]
   @scala.inline
-  def touchmoveStart: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmoveStart = this.cast("touchmoveStart")
+  def touchstart: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchstart = "touchstart".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchstart]
   @scala.inline
-  def touchstart: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchstart = this.cast("touchstart")
-  @scala.inline
-  def visibilitychange: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.visibilitychange = this.cast("visibilitychange")
+  def visibilitychange: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.visibilitychange = "visibilitychange".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.visibilitychange]
 }
 

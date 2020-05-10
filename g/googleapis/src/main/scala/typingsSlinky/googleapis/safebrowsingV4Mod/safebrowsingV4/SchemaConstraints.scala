@@ -45,22 +45,89 @@ trait SchemaConstraints extends js.Object {
 
 object SchemaConstraints {
   @scala.inline
-  def apply(
-    deviceLocation: String = null,
-    language: String = null,
-    maxDatabaseEntries: Int | Double = null,
-    maxUpdateEntries: Int | Double = null,
-    region: String = null,
-    supportedCompressions: js.Array[String] = null
-  ): SchemaConstraints = {
+  def apply(): SchemaConstraints = {
     val __obj = js.Dynamic.literal()
-    if (deviceLocation != null) __obj.updateDynamic("deviceLocation")(deviceLocation.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (maxDatabaseEntries != null) __obj.updateDynamic("maxDatabaseEntries")(maxDatabaseEntries.asInstanceOf[js.Any])
-    if (maxUpdateEntries != null) __obj.updateDynamic("maxUpdateEntries")(maxUpdateEntries.asInstanceOf[js.Any])
-    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
-    if (supportedCompressions != null) __obj.updateDynamic("supportedCompressions")(supportedCompressions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaConstraints]
   }
+  @scala.inline
+  implicit class SchemaConstraintsOps[Self <: SchemaConstraints] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDatabaseEntries(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDatabaseEntries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDatabaseEntries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDatabaseEntries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxUpdateEntries(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUpdateEntries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxUpdateEntries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUpdateEntries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportedCompressions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedCompressions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportedCompressions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedCompressions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

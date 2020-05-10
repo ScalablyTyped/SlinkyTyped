@@ -57,8 +57,8 @@ object routeOutletMod extends js.Object {
     def commit(enteringEl: HTMLElement): js.Promise[Boolean] = js.native
     def commit(enteringEl: HTMLElement, leavingEl: js.UndefOr[scala.Nothing], opts: RouterOutletOptions): js.Promise[Boolean] = js.native
     /** @internal */
-    def commit(enteringEl: HTMLElement, leavingEl: typingsSlinky.std.HTMLElement): js.Promise[Boolean] = js.native
-    def commit(enteringEl: HTMLElement, leavingEl: typingsSlinky.std.HTMLElement, opts: RouterOutletOptions): js.Promise[Boolean] = js.native
+    def commit(enteringEl: HTMLElement, leavingEl: HTMLElement): js.Promise[Boolean] = js.native
+    def commit(enteringEl: HTMLElement, leavingEl: HTMLElement, opts: RouterOutletOptions): js.Promise[Boolean] = js.native
     @JSName("componentWillLoad")
     def componentWillLoad_MRouterOutlet(): Unit = js.native
     @JSName("connectedCallback")

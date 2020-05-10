@@ -9,39 +9,40 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait strings_ extends js.Object {
   /**
     * Adds slashes - useful for passing strings to JavaScript, for example.
     *
     * @param value
     */
-  def addslashes(value: js.Any): js.Any
+  def addslashes(value: js.Any): js.Any = js.native
   /**
     * Capitalizes the first character of the value
     *
     * @param value
     */
-  def capfirst(value: js.Any): Double
+  def capfirst(value: js.Any): Double = js.native
   /**
     * Centers the value in a field of a given width
     *
     * @param value
     * @param arg
     */
-  def center(value: js.Any, arg: js.Any): String
+  def center(value: js.Any, arg: js.Any): String = js.native
   /**
     * Removes all values of arg from the given string
     *
     * @param value
     * @param arg
     */
-  def cut(value: js.Any, arg: js.Any): js.Any
+  def cut(value: js.Any, arg: js.Any): js.Any = js.native
   /**
     * Replaces ampersands with &amp; entities
     *
     * @param value
     */
-  def fix_ampersands(value: js.Any): js.Any
+  def fix_ampersands(value: js.Any): js.Any = js.native
   /**
     * Format a number according to arg
     * If called without an argument, displays a floating point
@@ -54,50 +55,50 @@ trait strings_ extends js.Object {
     * @param value
     * @param arg
     */
-  def floatformat(value: js.Any, arg: js.Any): js.Any
+  def floatformat(value: js.Any, arg: js.Any): js.Any = js.native
   /**
     *
     * @param value
     */
-  def iriencode(value: js.Any): js.Any
+  def iriencode(value: js.Any): js.Any = js.native
   /**
     * Displays text with line numbers
     *
     * @param value
     */
-  def linenumbers(value: js.Any): js.Any
+  def linenumbers(value: js.Any): js.Any = js.native
   /**
     *
     * @param value
     * @param arg
     */
-  def ljust(value: js.Any, arg: js.Any): String
+  def ljust(value: js.Any, arg: js.Any): String = js.native
   /**
     * Converts a string into all lowercase
     *
     * @param value
     */
-  def lower(value: js.Any): js.Any
+  def lower(value: js.Any): js.Any = js.native
   /**
     * Returns the value turned into a list. For an integer, it's a list of
     * digits. For a string, it's a list of characters.
     *
     * @param value
     */
-  def make_list(value: js.Any): js.Array[_]
+  def make_list(value: js.Any): js.Array[_] = js.native
   /**
     *
     * @param value
     * @param arg
     */
-  def rjust(value: js.Any, arg: js.Any): String
+  def rjust(value: js.Any, arg: js.Any): String = js.native
   /**
     * Converts to lowercase, removes
     * non-alpha chars and converts spaces to hyphens
     *
     * @param value
     */
-  def slugify(value: js.Any): js.Any
+  def slugify(value: js.Any): js.Any = js.native
   /**
     * Formats the variable according to the argument, a string formatting specifier.
     * This specifier uses Python string formatting syntax, with the exception that
@@ -106,58 +107,58 @@ trait strings_ extends js.Object {
     * @param value
     * @param arg
     */
-  def stringformat(value: js.Any, arg: js.Any): js.Any
+  def stringformat(value: js.Any, arg: js.Any): js.Any = js.native
   /**
     * Converts a string into titlecase
     *
     * @param value
     */
-  def title(value: js.Any): String
+  def title(value: js.Any): String = js.native
   /**
     * Truncates a string after a certain number of words
     *
     * @param value
     * @param arg Number of words to truncate after
     */
-  def truncatewords(value: js.Any, arg: Double): js.Any
+  def truncatewords(value: js.Any, arg: Double): js.Any = js.native
   /**
     *
     * @param value
     * @param arg
     */
-  def truncatewords_html(value: js.Any, arg: js.Any): String
+  def truncatewords_html(value: js.Any, arg: js.Any): String = js.native
   /**
     *
     * @param value
     */
-  def upper(value: js.Any): js.Any
+  def upper(value: js.Any): js.Any = js.native
   /**
     *
     * @param value
     */
-  def urlencode(value: js.Any): js.Any
+  def urlencode(value: js.Any): js.Any = js.native
   /**
     *
     * @param value
     */
-  def urlize(value: js.Any): js.Any
+  def urlize(value: js.Any): js.Any = js.native
   /**
     *
     * @param value
     * @param arg
     */
-  def urlizetrunc(value: js.Any, arg: js.Any): js.Any
+  def urlizetrunc(value: js.Any, arg: js.Any): js.Any = js.native
   /**
     *
     * @param value
     */
-  def wordcount(value: js.Any): Double
+  def wordcount(value: js.Any): Double = js.native
   /**
     *
     * @param value alias name: 'cent', 'pound' ..
     * @param arg
     */
-  def wordwrap(value: String, arg: js.Any): js.Any
+  def wordwrap(value: String, arg: js.Any): js.Any = js.native
 }
 
 object strings_ {
@@ -188,8 +189,153 @@ object strings_ {
     wordwrap: (String, js.Any) => js.Any
   ): strings_ = {
     val __obj = js.Dynamic.literal(addslashes = js.Any.fromFunction1(addslashes), capfirst = js.Any.fromFunction1(capfirst), center = js.Any.fromFunction2(center), cut = js.Any.fromFunction2(cut), fix_ampersands = js.Any.fromFunction1(fix_ampersands), floatformat = js.Any.fromFunction2(floatformat), iriencode = js.Any.fromFunction1(iriencode), linenumbers = js.Any.fromFunction1(linenumbers), ljust = js.Any.fromFunction2(ljust), lower = js.Any.fromFunction1(lower), make_list = js.Any.fromFunction1(make_list), rjust = js.Any.fromFunction2(rjust), slugify = js.Any.fromFunction1(slugify), stringformat = js.Any.fromFunction2(stringformat), title = js.Any.fromFunction1(title), truncatewords = js.Any.fromFunction2(truncatewords), truncatewords_html = js.Any.fromFunction2(truncatewords_html), upper = js.Any.fromFunction1(upper), urlencode = js.Any.fromFunction1(urlencode), urlize = js.Any.fromFunction1(urlize), urlizetrunc = js.Any.fromFunction2(urlizetrunc), wordcount = js.Any.fromFunction1(wordcount), wordwrap = js.Any.fromFunction2(wordwrap))
-  
     __obj.asInstanceOf[strings_]
   }
+  @scala.inline
+  implicit class strings_Ops[Self <: strings_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddslashes(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addslashes")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCapfirst(value: js.Any => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capfirst")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCenter(value: (js.Any, js.Any) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withCut(value: (js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cut")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withFix_ampersands(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fix_ampersands")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFloatformat(value: (js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatformat")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withIriencode(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iriencode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLinenumbers(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linenumbers")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLjust(value: (js.Any, js.Any) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ljust")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withLower(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lower")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMake_list(value: js.Any => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("make_list")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRjust(value: (js.Any, js.Any) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rjust")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSlugify(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slugify")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStringformat(value: (js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringformat")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withTitle(value: js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTruncatewords(value: (js.Any, Double) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("truncatewords")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withTruncatewords_html(value: (js.Any, js.Any) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("truncatewords_html")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUpper(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upper")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUrlencode(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlencode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUrlize(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUrlizetrunc(value: (js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlizetrunc")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withWordcount(value: js.Any => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordcount")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWordwrap(value: (String, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordwrap")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

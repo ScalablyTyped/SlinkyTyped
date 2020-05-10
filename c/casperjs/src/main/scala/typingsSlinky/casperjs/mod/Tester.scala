@@ -1,6 +1,5 @@
 package typingsSlinky.casperjs.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -67,8 +66,8 @@ trait Tester extends js.Object {
   def assertType(input: js.Any, `type`: String, message: String): js.Any = js.native
   def assertUrlMatch(pattern: String): js.Any = js.native
   def assertUrlMatch(pattern: String, message: String): js.Any = js.native
-  def assertUrlMatch(pattern: RegExp): js.Any = js.native
-  def assertUrlMatch(pattern: RegExp, message: String): js.Any = js.native
+  def assertUrlMatch(pattern: js.RegExp): js.Any = js.native
+  def assertUrlMatch(pattern: js.RegExp, message: String): js.Any = js.native
   def assertVisible(selector: String): js.Any = js.native
   def assertVisible(selector: String, message: String): js.Any = js.native
   def begin(description: String, config: js.Object): js.Any = js.native

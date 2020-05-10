@@ -14,5 +14,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("browser.devtools.panels.onThemeChanged")
 @js.native
 object onThemeChanged
-  extends TopLevel[WebExtEvent[js.Function1[/* themeName */ String, Unit]]]
+  extends TopLevel[WebExtEvent[js.Function1[/* command */ String, Unit]]]
 

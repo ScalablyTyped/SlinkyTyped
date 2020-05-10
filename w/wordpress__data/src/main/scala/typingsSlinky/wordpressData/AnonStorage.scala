@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonStorage extends js.Object {
-  var storage: js.UndefOr[PickStoragegetItemsetItem] = js.undefined
-  var storageKey: js.UndefOr[String] = js.undefined
+  var storage: js.UndefOr[PickStoragegetItemsetItem] = js.native
+  var storageKey: js.UndefOr[String] = js.native
 }
 
 object AnonStorage {
   @scala.inline
-  def apply(storage: PickStoragegetItemsetItem = null, storageKey: String = null): AnonStorage = {
+  def apply(): AnonStorage = {
     val __obj = js.Dynamic.literal()
-    if (storage != null) __obj.updateDynamic("storage")(storage.asInstanceOf[js.Any])
-    if (storageKey != null) __obj.updateDynamic("storageKey")(storageKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonStorage]
   }
+  @scala.inline
+  implicit class AnonStorageOps[Self <: AnonStorage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStorage(value: PickStoragegetItemsetItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStorageKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storageKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorageKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storageKey")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

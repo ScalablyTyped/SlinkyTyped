@@ -31,16 +31,53 @@ trait SchemaBackendServiceCdnPolicy extends js.Object {
 
 object SchemaBackendServiceCdnPolicy {
   @scala.inline
-  def apply(
-    cacheKeyPolicy: SchemaCacheKeyPolicy = null,
-    signedUrlCacheMaxAgeSec: String = null,
-    signedUrlKeyNames: js.Array[String] = null
-  ): SchemaBackendServiceCdnPolicy = {
+  def apply(): SchemaBackendServiceCdnPolicy = {
     val __obj = js.Dynamic.literal()
-    if (cacheKeyPolicy != null) __obj.updateDynamic("cacheKeyPolicy")(cacheKeyPolicy.asInstanceOf[js.Any])
-    if (signedUrlCacheMaxAgeSec != null) __obj.updateDynamic("signedUrlCacheMaxAgeSec")(signedUrlCacheMaxAgeSec.asInstanceOf[js.Any])
-    if (signedUrlKeyNames != null) __obj.updateDynamic("signedUrlKeyNames")(signedUrlKeyNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBackendServiceCdnPolicy]
   }
+  @scala.inline
+  implicit class SchemaBackendServiceCdnPolicyOps[Self <: SchemaBackendServiceCdnPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCacheKeyPolicy(value: SchemaCacheKeyPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheKeyPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheKeyPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheKeyPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignedUrlCacheMaxAgeSec(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signedUrlCacheMaxAgeSec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignedUrlCacheMaxAgeSec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signedUrlCacheMaxAgeSec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignedUrlKeyNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signedUrlKeyNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignedUrlKeyNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signedUrlKeyNames")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

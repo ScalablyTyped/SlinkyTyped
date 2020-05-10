@@ -1,139 +1,134 @@
 package typingsSlinky.ink.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.ink.mod.ColorProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Color
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Color {
   @JSImport("ink", "Color")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: hidden */
-  def apply(
-    bgBlack: js.UndefOr[Boolean] = js.undefined,
-    bgBlackBright: js.UndefOr[Boolean] = js.undefined,
-    bgBlue: js.UndefOr[Boolean] = js.undefined,
-    bgBlueBright: js.UndefOr[Boolean] = js.undefined,
-    bgCyan: js.UndefOr[Boolean] = js.undefined,
-    bgCyanBright: js.UndefOr[Boolean] = js.undefined,
-    bgGreen: js.UndefOr[Boolean] = js.undefined,
-    bgGreenBright: js.UndefOr[Boolean] = js.undefined,
-    bgHex: String = null,
-    bgHsl: js.Tuple3[Double, Double, Double] = null,
-    bgHsv: js.Tuple3[Double, Double, Double] = null,
-    bgHwb: js.Tuple3[Double, Double, Double] = null,
-    bgKeyword: String = null,
-    bgMagenta: js.UndefOr[Boolean] = js.undefined,
-    bgMagentaBright: js.UndefOr[Boolean] = js.undefined,
-    bgRed: js.UndefOr[Boolean] = js.undefined,
-    bgRedBright: js.UndefOr[Boolean] = js.undefined,
-    bgRgb: js.Tuple3[Double, Double, Double] = null,
-    bgWhite: js.UndefOr[Boolean] = js.undefined,
-    bgWhiteBright: js.UndefOr[Boolean] = js.undefined,
-    bgYellow: js.UndefOr[Boolean] = js.undefined,
-    bgYellowBright: js.UndefOr[Boolean] = js.undefined,
-    black: js.UndefOr[Boolean] = js.undefined,
-    blackBright: js.UndefOr[Boolean] = js.undefined,
-    blue: js.UndefOr[Boolean] = js.undefined,
-    blueBright: js.UndefOr[Boolean] = js.undefined,
-    bold: js.UndefOr[Boolean] = js.undefined,
-    cyan: js.UndefOr[Boolean] = js.undefined,
-    cyanBright: js.UndefOr[Boolean] = js.undefined,
-    dim: js.UndefOr[Boolean] = js.undefined,
-    gray: js.UndefOr[Boolean] = js.undefined,
-    green: js.UndefOr[Boolean] = js.undefined,
-    greenBright: js.UndefOr[Boolean] = js.undefined,
-    grey: js.UndefOr[Boolean] = js.undefined,
-    hex: String = null,
-    hsl: js.Tuple3[Double, Double, Double] = null,
-    hsv: js.Tuple3[Double, Double, Double] = null,
-    hwb: js.Tuple3[Double, Double, Double] = null,
-    inverse: js.UndefOr[Boolean] = js.undefined,
-    italic: js.UndefOr[Boolean] = js.undefined,
-    keyword: String = null,
-    magenta: js.UndefOr[Boolean] = js.undefined,
-    magentaBright: js.UndefOr[Boolean] = js.undefined,
-    red: js.UndefOr[Boolean] = js.undefined,
-    redBright: js.UndefOr[Boolean] = js.undefined,
-    reset: js.UndefOr[Boolean] = js.undefined,
-    rgb: js.Tuple3[Double, Double, Double] = null,
-    strikethrough: js.UndefOr[Boolean] = js.undefined,
-    underline: js.UndefOr[Boolean] = js.undefined,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    white: js.UndefOr[Boolean] = js.undefined,
-    whiteBright: js.UndefOr[Boolean] = js.undefined,
-    yellow: js.UndefOr[Boolean] = js.undefined,
-    yellowBright: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bgBlack)) __obj.updateDynamic("bgBlack")(bgBlack.asInstanceOf[js.Any])
-    if (!js.isUndefined(bgBlackBright)) __obj.updateDynamic("bgBlackBright")(bgBlackBright.asInstanceOf[js.Any])
-    if (!js.isUndefined(bgBlue)) __obj.updateDynamic("bgBlue")(bgBlue.asInstanceOf[js.Any])
-    if (!js.isUndefined(bgBlueBright)) __obj.updateDynamic("bgBlueBright")(bgBlueBright.asInstanceOf[js.Any])
-    if (!js.isUndefined(bgCyan)) __obj.updateDynamic("bgCyan")(bgCyan.asInstanceOf[js.Any])
-    if (!js.isUndefined(bgCyanBright)) __obj.updateDynamic("bgCyanBright")(bgCyanBright.asInstanceOf[js.Any])
-    if (!js.isUndefined(bgGreen)) __obj.updateDynamic("bgGreen")(bgGreen.asInstanceOf[js.Any])
-    if (!js.isUndefined(bgGreenBright)) __obj.updateDynamic("bgGreenBright")(bgGreenBright.asInstanceOf[js.Any])
-    if (bgHex != null) __obj.updateDynamic("bgHex")(bgHex.asInstanceOf[js.Any])
-    if (bgHsl != null) __obj.updateDynamic("bgHsl")(bgHsl.asInstanceOf[js.Any])
-    if (bgHsv != null) __obj.updateDynamic("bgHsv")(bgHsv.asInstanceOf[js.Any])
-    if (bgHwb != null) __obj.updateDynamic("bgHwb")(bgHwb.asInstanceOf[js.Any])
-    if (bgKeyword != null) __obj.updateDynamic("bgKeyword")(bgKeyword.asInstanceOf[js.Any])
-    if (!js.isUndefined(bgMagenta)) __obj.updateDynamic("bgMagenta")(bgMagenta.asInstanceOf[js.Any])
-    if (!js.isUndefined(bgMagentaBright)) __obj.updateDynamic("bgMagentaBright")(bgMagentaBright.asInstanceOf[js.Any])
-    if (!js.isUndefined(bgRed)) __obj.updateDynamic("bgRed")(bgRed.asInstanceOf[js.Any])
-    if (!js.isUndefined(bgRedBright)) __obj.updateDynamic("bgRedBright")(bgRedBright.asInstanceOf[js.Any])
-    if (bgRgb != null) __obj.updateDynamic("bgRgb")(bgRgb.asInstanceOf[js.Any])
-    if (!js.isUndefined(bgWhite)) __obj.updateDynamic("bgWhite")(bgWhite.asInstanceOf[js.Any])
-    if (!js.isUndefined(bgWhiteBright)) __obj.updateDynamic("bgWhiteBright")(bgWhiteBright.asInstanceOf[js.Any])
-    if (!js.isUndefined(bgYellow)) __obj.updateDynamic("bgYellow")(bgYellow.asInstanceOf[js.Any])
-    if (!js.isUndefined(bgYellowBright)) __obj.updateDynamic("bgYellowBright")(bgYellowBright.asInstanceOf[js.Any])
-    if (!js.isUndefined(black)) __obj.updateDynamic("black")(black.asInstanceOf[js.Any])
-    if (!js.isUndefined(blackBright)) __obj.updateDynamic("blackBright")(blackBright.asInstanceOf[js.Any])
-    if (!js.isUndefined(blue)) __obj.updateDynamic("blue")(blue.asInstanceOf[js.Any])
-    if (!js.isUndefined(blueBright)) __obj.updateDynamic("blueBright")(blueBright.asInstanceOf[js.Any])
-    if (!js.isUndefined(bold)) __obj.updateDynamic("bold")(bold.asInstanceOf[js.Any])
-    if (!js.isUndefined(cyan)) __obj.updateDynamic("cyan")(cyan.asInstanceOf[js.Any])
-    if (!js.isUndefined(cyanBright)) __obj.updateDynamic("cyanBright")(cyanBright.asInstanceOf[js.Any])
-    if (!js.isUndefined(dim)) __obj.updateDynamic("dim")(dim.asInstanceOf[js.Any])
-    if (!js.isUndefined(gray)) __obj.updateDynamic("gray")(gray.asInstanceOf[js.Any])
-    if (!js.isUndefined(green)) __obj.updateDynamic("green")(green.asInstanceOf[js.Any])
-    if (!js.isUndefined(greenBright)) __obj.updateDynamic("greenBright")(greenBright.asInstanceOf[js.Any])
-    if (!js.isUndefined(grey)) __obj.updateDynamic("grey")(grey.asInstanceOf[js.Any])
-    if (hex != null) __obj.updateDynamic("hex")(hex.asInstanceOf[js.Any])
-    if (hsl != null) __obj.updateDynamic("hsl")(hsl.asInstanceOf[js.Any])
-    if (hsv != null) __obj.updateDynamic("hsv")(hsv.asInstanceOf[js.Any])
-    if (hwb != null) __obj.updateDynamic("hwb")(hwb.asInstanceOf[js.Any])
-    if (!js.isUndefined(inverse)) __obj.updateDynamic("inverse")(inverse.asInstanceOf[js.Any])
-    if (!js.isUndefined(italic)) __obj.updateDynamic("italic")(italic.asInstanceOf[js.Any])
-    if (keyword != null) __obj.updateDynamic("keyword")(keyword.asInstanceOf[js.Any])
-    if (!js.isUndefined(magenta)) __obj.updateDynamic("magenta")(magenta.asInstanceOf[js.Any])
-    if (!js.isUndefined(magentaBright)) __obj.updateDynamic("magentaBright")(magentaBright.asInstanceOf[js.Any])
-    if (!js.isUndefined(red)) __obj.updateDynamic("red")(red.asInstanceOf[js.Any])
-    if (!js.isUndefined(redBright)) __obj.updateDynamic("redBright")(redBright.asInstanceOf[js.Any])
-    if (!js.isUndefined(reset)) __obj.updateDynamic("reset")(reset.asInstanceOf[js.Any])
-    if (rgb != null) __obj.updateDynamic("rgb")(rgb.asInstanceOf[js.Any])
-    if (!js.isUndefined(strikethrough)) __obj.updateDynamic("strikethrough")(strikethrough.asInstanceOf[js.Any])
-    if (!js.isUndefined(underline)) __obj.updateDynamic("underline")(underline.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (!js.isUndefined(white)) __obj.updateDynamic("white")(white.asInstanceOf[js.Any])
-    if (!js.isUndefined(whiteBright)) __obj.updateDynamic("whiteBright")(whiteBright.asInstanceOf[js.Any])
-    if (!js.isUndefined(yellow)) __obj.updateDynamic("yellow")(yellow.asInstanceOf[js.Any])
-    if (!js.isUndefined(yellowBright)) __obj.updateDynamic("yellowBright")(yellowBright.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def bgBlack(value: Boolean): this.type = set("bgBlack", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgBlackBright(value: Boolean): this.type = set("bgBlackBright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgBlue(value: Boolean): this.type = set("bgBlue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgBlueBright(value: Boolean): this.type = set("bgBlueBright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgCyan(value: Boolean): this.type = set("bgCyan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgCyanBright(value: Boolean): this.type = set("bgCyanBright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgGreen(value: Boolean): this.type = set("bgGreen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgGreenBright(value: Boolean): this.type = set("bgGreenBright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgHex(value: String): this.type = set("bgHex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgHsl(value: js.Tuple3[Double, Double, Double]): this.type = set("bgHsl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgHsv(value: js.Tuple3[Double, Double, Double]): this.type = set("bgHsv", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgHwb(value: js.Tuple3[Double, Double, Double]): this.type = set("bgHwb", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgKeyword(value: String): this.type = set("bgKeyword", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgMagenta(value: Boolean): this.type = set("bgMagenta", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgMagentaBright(value: Boolean): this.type = set("bgMagentaBright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgRed(value: Boolean): this.type = set("bgRed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgRedBright(value: Boolean): this.type = set("bgRedBright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgRgb(value: js.Tuple3[Double, Double, Double]): this.type = set("bgRgb", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgWhite(value: Boolean): this.type = set("bgWhite", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgWhiteBright(value: Boolean): this.type = set("bgWhiteBright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgYellow(value: Boolean): this.type = set("bgYellow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bgYellowBright(value: Boolean): this.type = set("bgYellowBright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def black(value: Boolean): this.type = set("black", value.asInstanceOf[js.Any])
+    @scala.inline
+    def blackBright(value: Boolean): this.type = set("blackBright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def blue(value: Boolean): this.type = set("blue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def blueBright(value: Boolean): this.type = set("blueBright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bold(value: Boolean): this.type = set("bold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cyan(value: Boolean): this.type = set("cyan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cyanBright(value: Boolean): this.type = set("cyanBright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dim(value: Boolean): this.type = set("dim", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gray(value: Boolean): this.type = set("gray", value.asInstanceOf[js.Any])
+    @scala.inline
+    def green(value: Boolean): this.type = set("green", value.asInstanceOf[js.Any])
+    @scala.inline
+    def greenBright(value: Boolean): this.type = set("greenBright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def grey(value: Boolean): this.type = set("grey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hex(value: String): this.type = set("hex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hsl(value: js.Tuple3[Double, Double, Double]): this.type = set("hsl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hsv(value: js.Tuple3[Double, Double, Double]): this.type = set("hsv", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hwb(value: js.Tuple3[Double, Double, Double]): this.type = set("hwb", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inverse(value: Boolean): this.type = set("inverse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def italic(value: Boolean): this.type = set("italic", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keyword(value: String): this.type = set("keyword", value.asInstanceOf[js.Any])
+    @scala.inline
+    def magenta(value: Boolean): this.type = set("magenta", value.asInstanceOf[js.Any])
+    @scala.inline
+    def magentaBright(value: Boolean): this.type = set("magentaBright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def red(value: Boolean): this.type = set("red", value.asInstanceOf[js.Any])
+    @scala.inline
+    def redBright(value: Boolean): this.type = set("redBright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def reset(value: Boolean): this.type = set("reset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rgb(value: js.Tuple3[Double, Double, Double]): this.type = set("rgb", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strikethrough(value: Boolean): this.type = set("strikethrough", value.asInstanceOf[js.Any])
+    @scala.inline
+    def underline(value: Boolean): this.type = set("underline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def white(value: Boolean): this.type = set("white", value.asInstanceOf[js.Any])
+    @scala.inline
+    def whiteBright(value: Boolean): this.type = set("whiteBright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yellow(value: Boolean): this.type = set("yellow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yellowBright(value: Boolean): this.type = set("yellowBright", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ColorProps
+  
+  def withProps(p: ColorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Color.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

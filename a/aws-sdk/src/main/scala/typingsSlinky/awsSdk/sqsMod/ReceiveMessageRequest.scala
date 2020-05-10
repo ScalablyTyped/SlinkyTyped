@@ -38,23 +38,95 @@ trait ReceiveMessageRequest extends js.Object {
 
 object ReceiveMessageRequest {
   @scala.inline
-  def apply(
-    QueueUrl: String,
-    AttributeNames: AttributeNameList = null,
-    MaxNumberOfMessages: Int | Double = null,
-    MessageAttributeNames: MessageAttributeNameList = null,
-    ReceiveRequestAttemptId: String = null,
-    VisibilityTimeout: Int | Double = null,
-    WaitTimeSeconds: Int | Double = null
-  ): ReceiveMessageRequest = {
+  def apply(QueueUrl: String): ReceiveMessageRequest = {
     val __obj = js.Dynamic.literal(QueueUrl = QueueUrl.asInstanceOf[js.Any])
-    if (AttributeNames != null) __obj.updateDynamic("AttributeNames")(AttributeNames.asInstanceOf[js.Any])
-    if (MaxNumberOfMessages != null) __obj.updateDynamic("MaxNumberOfMessages")(MaxNumberOfMessages.asInstanceOf[js.Any])
-    if (MessageAttributeNames != null) __obj.updateDynamic("MessageAttributeNames")(MessageAttributeNames.asInstanceOf[js.Any])
-    if (ReceiveRequestAttemptId != null) __obj.updateDynamic("ReceiveRequestAttemptId")(ReceiveRequestAttemptId.asInstanceOf[js.Any])
-    if (VisibilityTimeout != null) __obj.updateDynamic("VisibilityTimeout")(VisibilityTimeout.asInstanceOf[js.Any])
-    if (WaitTimeSeconds != null) __obj.updateDynamic("WaitTimeSeconds")(WaitTimeSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReceiveMessageRequest]
   }
+  @scala.inline
+  implicit class ReceiveMessageRequestOps[Self <: ReceiveMessageRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQueueUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributeNames(value: AttributeNameList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxNumberOfMessages(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxNumberOfMessages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxNumberOfMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxNumberOfMessages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessageAttributeNames(value: MessageAttributeNameList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageAttributeNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageAttributeNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageAttributeNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReceiveRequestAttemptId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReceiveRequestAttemptId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReceiveRequestAttemptId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReceiveRequestAttemptId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibilityTimeout(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VisibilityTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibilityTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VisibilityTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWaitTimeSeconds(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WaitTimeSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWaitTimeSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WaitTimeSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

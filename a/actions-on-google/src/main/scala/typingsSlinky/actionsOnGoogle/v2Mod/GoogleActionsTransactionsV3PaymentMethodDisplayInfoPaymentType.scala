@@ -17,20 +17,18 @@ trait GoogleActionsTransactionsV3PaymentMethodDisplayInfoPaymentType extends js.
 
 object GoogleActionsTransactionsV3PaymentMethodDisplayInfoPaymentType {
   @scala.inline
-  def BANK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.BANK = this.cast("BANK")
+  def BANK: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.BANK = "BANK".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.BANK]
   @scala.inline
-  def CASH: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CASH = this.cast("CASH")
+  def CASH: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CASH = "CASH".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CASH]
   @scala.inline
-  def GIFT_CARD: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.GIFT_CARD = this.cast("GIFT_CARD")
+  def GIFT_CARD: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.GIFT_CARD = "GIFT_CARD".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.GIFT_CARD]
   @scala.inline
-  def LOYALTY_PROGRAM: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.LOYALTY_PROGRAM = this.cast("LOYALTY_PROGRAM")
+  def LOYALTY_PROGRAM: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.LOYALTY_PROGRAM = "LOYALTY_PROGRAM".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.LOYALTY_PROGRAM]
   @scala.inline
-  def PAYMENT_CARD: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PAYMENT_CARD = this.cast("PAYMENT_CARD")
+  def PAYMENT_CARD: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PAYMENT_CARD = "PAYMENT_CARD".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PAYMENT_CARD]
   @scala.inline
-  def PAYMENT_TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PAYMENT_TYPE_UNSPECIFIED = this.cast("PAYMENT_TYPE_UNSPECIFIED")
+  def PAYMENT_TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PAYMENT_TYPE_UNSPECIFIED = "PAYMENT_TYPE_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PAYMENT_TYPE_UNSPECIFIED]
   @scala.inline
-  def WALLET: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.WALLET = this.cast("WALLET")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def WALLET: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.WALLET = "WALLET".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.WALLET]
 }
 

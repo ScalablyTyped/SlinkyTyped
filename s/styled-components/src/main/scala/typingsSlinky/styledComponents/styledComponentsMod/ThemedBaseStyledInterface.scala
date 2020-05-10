@@ -1,6 +1,5 @@
 package typingsSlinky.styledComponents.styledComponentsMod
 
-import slinky.core.ReactComponentClass
 import typingsSlinky.styledComponents.styledComponentsStrings.`object`
 import typingsSlinky.styledComponents.styledComponentsStrings.`var`
 import typingsSlinky.styledComponents.styledComponentsStrings.a
@@ -141,6 +140,7 @@ import typingsSlinky.styledComponents.styledComponentsStrings.samp
 import typingsSlinky.styledComponents.styledComponentsStrings.script
 import typingsSlinky.styledComponents.styledComponentsStrings.section
 import typingsSlinky.styledComponents.styledComponentsStrings.select
+import typingsSlinky.styledComponents.styledComponentsStrings.slot
 import typingsSlinky.styledComponents.styledComponentsStrings.small
 import typingsSlinky.styledComponents.styledComponentsStrings.source
 import typingsSlinky.styledComponents.styledComponentsStrings.span
@@ -884,6 +884,11 @@ trait ThemedBaseStyledInterface[T /* <: js.Object */] extends ThemedStyledCompon
   def apply(
     // unfortunately using a conditional type to validate that it can receive a `theme?: Theme`
   // causes tests to fail in TS 3.1
+  component: slot
+  ): ThemedStyledFunction[slot, T, js.Object, scala.Nothing] = js.native
+  def apply(
+    // unfortunately using a conditional type to validate that it can receive a `theme?: Theme`
+  // causes tests to fail in TS 3.1
   component: small
   ): ThemedStyledFunction[small, T, js.Object, scala.Nothing] = js.native
   def apply(
@@ -1051,10 +1056,11 @@ trait ThemedBaseStyledInterface[T /* <: js.Object */] extends ThemedStyledCompon
   // causes tests to fail in TS 3.1
   component: webview
   ): ThemedStyledFunction[webview, T, js.Object, scala.Nothing] = js.native
-  def apply[C /* <: ReactComponentClass[_] | ReactComponentClass[_] */](
-    // unfortunately using a conditional type to validate that it can receive a `theme?: Theme`
-  // causes tests to fail in TS 3.1
-  component: C
-  ): ThemedStyledFunction[C, T, js.Object, scala.Nothing] = js.native
+  def apply[C /* <: AnyStyledComponent */](component: C): ThemedStyledFunction[
+    StyledComponentInnerComponent[C], 
+    T, 
+    StyledComponentInnerOtherProps[C], 
+    StyledComponentInnerAttrs[C]
+  ] = js.native
 }
 

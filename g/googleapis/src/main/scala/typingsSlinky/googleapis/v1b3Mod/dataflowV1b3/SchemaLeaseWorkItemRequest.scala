@@ -46,24 +46,101 @@ trait SchemaLeaseWorkItemRequest extends js.Object {
 
 object SchemaLeaseWorkItemRequest {
   @scala.inline
-  def apply(
-    currentWorkerTime: String = null,
-    location: String = null,
-    requestedLeaseDuration: String = null,
-    unifiedWorkerRequest: StringDictionary[js.Any] = null,
-    workItemTypes: js.Array[String] = null,
-    workerCapabilities: js.Array[String] = null,
-    workerId: String = null
-  ): SchemaLeaseWorkItemRequest = {
+  def apply(): SchemaLeaseWorkItemRequest = {
     val __obj = js.Dynamic.literal()
-    if (currentWorkerTime != null) __obj.updateDynamic("currentWorkerTime")(currentWorkerTime.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (requestedLeaseDuration != null) __obj.updateDynamic("requestedLeaseDuration")(requestedLeaseDuration.asInstanceOf[js.Any])
-    if (unifiedWorkerRequest != null) __obj.updateDynamic("unifiedWorkerRequest")(unifiedWorkerRequest.asInstanceOf[js.Any])
-    if (workItemTypes != null) __obj.updateDynamic("workItemTypes")(workItemTypes.asInstanceOf[js.Any])
-    if (workerCapabilities != null) __obj.updateDynamic("workerCapabilities")(workerCapabilities.asInstanceOf[js.Any])
-    if (workerId != null) __obj.updateDynamic("workerId")(workerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLeaseWorkItemRequest]
   }
+  @scala.inline
+  implicit class SchemaLeaseWorkItemRequestOps[Self <: SchemaLeaseWorkItemRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentWorkerTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentWorkerTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentWorkerTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentWorkerTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestedLeaseDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedLeaseDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestedLeaseDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedLeaseDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnifiedWorkerRequest(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unifiedWorkerRequest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnifiedWorkerRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unifiedWorkerRequest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkItemTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workItemTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkItemTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workItemTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerCapabilities(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerCapabilities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerCapabilities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerCapabilities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

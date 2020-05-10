@@ -4,99 +4,393 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SparklineCategoryAxisItem extends js.Object {
-  var autoBaseUnitSteps: js.UndefOr[js.Any] = js.undefined
-  var axisCrossingValue: js.UndefOr[js.Any | js.Date] = js.undefined
-  var baseUnit: js.UndefOr[String] = js.undefined
-  var baseUnitStep: js.UndefOr[js.Any] = js.undefined
-  var categories: js.UndefOr[js.Any] = js.undefined
-  var color: js.UndefOr[String] = js.undefined
-  var crosshair: js.UndefOr[SparklineCategoryAxisItemCrosshair] = js.undefined
-  var field: js.UndefOr[String] = js.undefined
-  var justified: js.UndefOr[Boolean] = js.undefined
-  var labels: js.UndefOr[SparklineCategoryAxisItemLabels] = js.undefined
-  var line: js.UndefOr[SparklineCategoryAxisItemLine] = js.undefined
-  var majorGridLines: js.UndefOr[SparklineCategoryAxisItemMajorGridLines] = js.undefined
-  var majorTicks: js.UndefOr[SparklineCategoryAxisItemMajorTicks] = js.undefined
-  var max: js.UndefOr[js.Any] = js.undefined
-  var maxDateGroups: js.UndefOr[Double] = js.undefined
-  var maxDivisions: js.UndefOr[Double] = js.undefined
-  var min: js.UndefOr[js.Any] = js.undefined
-  var minorGridLines: js.UndefOr[SparklineCategoryAxisItemMinorGridLines] = js.undefined
-  var minorTicks: js.UndefOr[SparklineCategoryAxisItemMinorTicks] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var notes: js.UndefOr[SparklineCategoryAxisItemNotes] = js.undefined
-  var plotBands: js.UndefOr[js.Array[SparklineCategoryAxisItemPlotBand]] = js.undefined
-  var reverse: js.UndefOr[Boolean] = js.undefined
-  var roundToBaseUnit: js.UndefOr[Boolean] = js.undefined
-  var title: js.UndefOr[SparklineCategoryAxisItemTitle] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
-  var visible: js.UndefOr[Boolean] = js.undefined
-  var weekStartDay: js.UndefOr[Double] = js.undefined
+  var autoBaseUnitSteps: js.UndefOr[js.Any] = js.native
+  var axisCrossingValue: js.UndefOr[js.Any | js.Date] = js.native
+  var baseUnit: js.UndefOr[String] = js.native
+  var baseUnitStep: js.UndefOr[js.Any] = js.native
+  var categories: js.UndefOr[js.Any] = js.native
+  var color: js.UndefOr[String] = js.native
+  var crosshair: js.UndefOr[SparklineCategoryAxisItemCrosshair] = js.native
+  var field: js.UndefOr[String] = js.native
+  var justified: js.UndefOr[Boolean] = js.native
+  var labels: js.UndefOr[SparklineCategoryAxisItemLabels] = js.native
+  var line: js.UndefOr[SparklineCategoryAxisItemLine] = js.native
+  var majorGridLines: js.UndefOr[SparklineCategoryAxisItemMajorGridLines] = js.native
+  var majorTicks: js.UndefOr[SparklineCategoryAxisItemMajorTicks] = js.native
+  var max: js.UndefOr[js.Any] = js.native
+  var maxDateGroups: js.UndefOr[Double] = js.native
+  var maxDivisions: js.UndefOr[Double] = js.native
+  var min: js.UndefOr[js.Any] = js.native
+  var minorGridLines: js.UndefOr[SparklineCategoryAxisItemMinorGridLines] = js.native
+  var minorTicks: js.UndefOr[SparklineCategoryAxisItemMinorTicks] = js.native
+  var name: js.UndefOr[String] = js.native
+  var notes: js.UndefOr[SparklineCategoryAxisItemNotes] = js.native
+  var plotBands: js.UndefOr[js.Array[SparklineCategoryAxisItemPlotBand]] = js.native
+  var reverse: js.UndefOr[Boolean] = js.native
+  var roundToBaseUnit: js.UndefOr[Boolean] = js.native
+  var title: js.UndefOr[SparklineCategoryAxisItemTitle] = js.native
+  var `type`: js.UndefOr[String] = js.native
+  var visible: js.UndefOr[Boolean] = js.native
+  var weekStartDay: js.UndefOr[Double] = js.native
 }
 
 object SparklineCategoryAxisItem {
   @scala.inline
-  def apply(
-    autoBaseUnitSteps: js.Any = null,
-    axisCrossingValue: js.Any | js.Date = null,
-    baseUnit: String = null,
-    baseUnitStep: js.Any = null,
-    categories: js.Any = null,
-    color: String = null,
-    crosshair: SparklineCategoryAxisItemCrosshair = null,
-    field: String = null,
-    justified: js.UndefOr[Boolean] = js.undefined,
-    labels: SparklineCategoryAxisItemLabels = null,
-    line: SparklineCategoryAxisItemLine = null,
-    majorGridLines: SparklineCategoryAxisItemMajorGridLines = null,
-    majorTicks: SparklineCategoryAxisItemMajorTicks = null,
-    max: js.Any = null,
-    maxDateGroups: Int | Double = null,
-    maxDivisions: Int | Double = null,
-    min: js.Any = null,
-    minorGridLines: SparklineCategoryAxisItemMinorGridLines = null,
-    minorTicks: SparklineCategoryAxisItemMinorTicks = null,
-    name: String = null,
-    notes: SparklineCategoryAxisItemNotes = null,
-    plotBands: js.Array[SparklineCategoryAxisItemPlotBand] = null,
-    reverse: js.UndefOr[Boolean] = js.undefined,
-    roundToBaseUnit: js.UndefOr[Boolean] = js.undefined,
-    title: SparklineCategoryAxisItemTitle = null,
-    `type`: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    weekStartDay: Int | Double = null
-  ): SparklineCategoryAxisItem = {
+  def apply(): SparklineCategoryAxisItem = {
     val __obj = js.Dynamic.literal()
-    if (autoBaseUnitSteps != null) __obj.updateDynamic("autoBaseUnitSteps")(autoBaseUnitSteps.asInstanceOf[js.Any])
-    if (axisCrossingValue != null) __obj.updateDynamic("axisCrossingValue")(axisCrossingValue.asInstanceOf[js.Any])
-    if (baseUnit != null) __obj.updateDynamic("baseUnit")(baseUnit.asInstanceOf[js.Any])
-    if (baseUnitStep != null) __obj.updateDynamic("baseUnitStep")(baseUnitStep.asInstanceOf[js.Any])
-    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (crosshair != null) __obj.updateDynamic("crosshair")(crosshair.asInstanceOf[js.Any])
-    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
-    if (!js.isUndefined(justified)) __obj.updateDynamic("justified")(justified.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
-    if (majorGridLines != null) __obj.updateDynamic("majorGridLines")(majorGridLines.asInstanceOf[js.Any])
-    if (majorTicks != null) __obj.updateDynamic("majorTicks")(majorTicks.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maxDateGroups != null) __obj.updateDynamic("maxDateGroups")(maxDateGroups.asInstanceOf[js.Any])
-    if (maxDivisions != null) __obj.updateDynamic("maxDivisions")(maxDivisions.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minorGridLines != null) __obj.updateDynamic("minorGridLines")(minorGridLines.asInstanceOf[js.Any])
-    if (minorTicks != null) __obj.updateDynamic("minorTicks")(minorTicks.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
-    if (plotBands != null) __obj.updateDynamic("plotBands")(plotBands.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.asInstanceOf[js.Any])
-    if (!js.isUndefined(roundToBaseUnit)) __obj.updateDynamic("roundToBaseUnit")(roundToBaseUnit.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (weekStartDay != null) __obj.updateDynamic("weekStartDay")(weekStartDay.asInstanceOf[js.Any])
     __obj.asInstanceOf[SparklineCategoryAxisItem]
   }
+  @scala.inline
+  implicit class SparklineCategoryAxisItemOps[Self <: SparklineCategoryAxisItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoBaseUnitSteps(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBaseUnitSteps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoBaseUnitSteps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBaseUnitSteps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxisCrossingValueDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisCrossingValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAxisCrossingValue(value: js.Any | js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisCrossingValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisCrossingValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisCrossingValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseUnit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseUnitStep(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnitStep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseUnitStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnitStep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategories(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategories: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrosshair(value: SparklineCategoryAxisItemCrosshair): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crosshair")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrosshair: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crosshair")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJustified(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("justified")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJustified: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("justified")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: SparklineCategoryAxisItemLabels): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLine(value: SparklineCategoryAxisItemLine): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMajorGridLines(value: SparklineCategoryAxisItemMajorGridLines): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorGridLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMajorGridLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorGridLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMajorTicks(value: SparklineCategoryAxisItemMajorTicks): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorTicks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMajorTicks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorTicks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDateGroups(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDateGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDateGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDateGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDivisions(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDivisions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDivisions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDivisions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorGridLines(value: SparklineCategoryAxisItemMinorGridLines): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorGridLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorGridLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorGridLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTicks(value: SparklineCategoryAxisItemMinorTicks): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTicks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTicks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTicks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotes(value: SparklineCategoryAxisItemNotes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlotBands(value: js.Array[SparklineCategoryAxisItemPlotBand]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plotBands")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlotBands: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plotBands")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReverse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReverse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoundToBaseUnit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roundToBaseUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoundToBaseUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roundToBaseUnit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: SparklineCategoryAxisItemTitle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeekStartDay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weekStartDay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeekStartDay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weekStartDay")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

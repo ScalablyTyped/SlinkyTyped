@@ -1,15 +1,16 @@
 package typingsSlinky.reduxForm.components
 
+import typingsSlinky.reduxForm.formMod.FormProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Form
-  extends SharedApply_FormProps_878087310[typingsSlinky.reduxForm.mod.Form[js.Any, js.Any, js.Any]] {
+object Form {
   @JSImport("redux-form", "Form")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps[FormData, P, ErrorType](p: FormProps[FormData, P, ErrorType]): SharedBuilder_FormProps302896858[typingsSlinky.reduxForm.mod.Form[js.Any, js.Any, js.Any], FormData, P, ErrorType] = new SharedBuilder_FormProps302896858[typingsSlinky.reduxForm.mod.Form[js.Any, js.Any, js.Any], FormData, P, ErrorType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[FormData, P, ErrorType](companion: Form.type): SharedBuilder_FormProps302896858[typingsSlinky.reduxForm.mod.Form[js.Any, js.Any, js.Any], FormData, P, ErrorType] = new SharedBuilder_FormProps302896858[typingsSlinky.reduxForm.mod.Form[js.Any, js.Any, js.Any], FormData, P, ErrorType](js.Array(this.component, js.Dictionary.empty))()
 }
 

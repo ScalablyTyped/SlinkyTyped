@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonButton extends js.Object {
-  var button: js.UndefOr[String] = js.undefined
-  var container: js.UndefOr[String] = js.undefined
-  var form: js.UndefOr[String] = js.undefined
-  var input: js.UndefOr[String] = js.undefined
-  var msgbox: js.UndefOr[String] = js.undefined
-  var resetButton: js.UndefOr[String] = js.undefined
+  var button: js.UndefOr[String] = js.native
+  var container: js.UndefOr[String] = js.native
+  var form: js.UndefOr[String] = js.native
+  var input: js.UndefOr[String] = js.native
+  var msgbox: js.UndefOr[String] = js.native
+  var resetButton: js.UndefOr[String] = js.native
 }
 
 object AnonButton {
   @scala.inline
-  def apply(
-    button: String = null,
-    container: String = null,
-    form: String = null,
-    input: String = null,
-    msgbox: String = null,
-    resetButton: String = null
-  ): AnonButton = {
+  def apply(): AnonButton = {
     val __obj = js.Dynamic.literal()
-    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
-    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
-    if (msgbox != null) __obj.updateDynamic("msgbox")(msgbox.asInstanceOf[js.Any])
-    if (resetButton != null) __obj.updateDynamic("resetButton")(resetButton.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonButton]
   }
+  @scala.inline
+  implicit class AnonButtonOps[Self <: AnonButton] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withButton(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForm(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInput(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMsgbox(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("msgbox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMsgbox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("msgbox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResetButton(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResetButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetButton")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

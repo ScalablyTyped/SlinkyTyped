@@ -1,31 +1,6 @@
 package typingsSlinky.reactNativeVideo.mod
 
-import slinky.core.SyntheticEvent
-import typingsSlinky.reactNative.ReadonlyactionNamestring
-import typingsSlinky.reactNative.mod.AccessibilityActionInfo
-import typingsSlinky.reactNative.mod.AccessibilityRole
-import typingsSlinky.reactNative.mod.AccessibilityState
-import typingsSlinky.reactNative.mod.AccessibilityStates
-import typingsSlinky.reactNative.mod.AccessibilityTrait
-import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
-import typingsSlinky.reactNative.mod.NativeTouchEvent
-import typingsSlinky.reactNative.mod.NodeHandle
-import typingsSlinky.reactNative.mod.StyleProp
-import typingsSlinky.reactNative.mod.TVParallaxProperties
 import typingsSlinky.reactNative.mod.ViewProps
-import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNative.reactNativeStrings.`box-none`
-import typingsSlinky.reactNative.reactNativeStrings.`box-only`
-import typingsSlinky.reactNative.reactNativeStrings.`no-hide-descendants`
-import typingsSlinky.reactNative.reactNativeStrings.assertive
-import typingsSlinky.reactNative.reactNativeStrings.auto
-import typingsSlinky.reactNative.reactNativeStrings.button
-import typingsSlinky.reactNative.reactNativeStrings.no
-import typingsSlinky.reactNative.reactNativeStrings.polite
-import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
-import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
-import typingsSlinky.reactNative.reactNativeStrings.yes
 import typingsSlinky.reactNativeVideo.AnonBufferForPlaybackAfterRebufferMs
 import typingsSlinky.reactNativeVideo.AnonLanguage
 import typingsSlinky.reactNativeVideo.AnonType
@@ -44,354 +19,1011 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VideoProperties extends ViewProps {
-  var allowsExternalPlayback: js.UndefOr[Boolean] = js.undefined
-  var audioOnly: js.UndefOr[Boolean] = js.undefined
-  var automaticallyWaitsToMinimizeStalling: js.UndefOr[Boolean] = js.undefined
-  var bufferConfig: js.UndefOr[AnonBufferForPlaybackAfterRebufferMs] = js.undefined
-  var controls: js.UndefOr[Boolean] = js.undefined
-  var currentTime: js.UndefOr[Double] = js.undefined
-  var disableFocus: js.UndefOr[Boolean] = js.undefined
-  var filter: js.UndefOr[FilterType] = js.undefined
-  var filterEnable: js.UndefOr[Boolean] = js.undefined
-  var fullscreen: js.UndefOr[Boolean] = js.undefined
-  var fullscreenAutorotate: js.UndefOr[Boolean] = js.undefined
-  var fullscreenOrientation: js.UndefOr[all | landscape | portrait] = js.undefined
-  var hideShutterView: js.UndefOr[Boolean] = js.undefined
-  var ignoreSilentSwitch: js.UndefOr[ignore | obey] = js.undefined
-  var maxBitRate: js.UndefOr[Double] = js.undefined
-  var minLoadRetryCount: js.UndefOr[Double] = js.undefined
-  var muted: js.UndefOr[Boolean] = js.undefined
-  var onAudioBecomingNoisy: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onAudioFocusChanged: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onBandwidthUpdate: js.UndefOr[js.Function1[/* data */ OnBandwidthUpdateData, Unit]] = js.undefined
-  var onBuffer: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onEnd: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onError: js.UndefOr[js.Function1[/* error */ LoadError, Unit]] = js.undefined
-  var onExternalPlaybackChange: js.UndefOr[js.Function1[/* data */ OnExternalPlaybackChangeData, Unit]] = js.undefined
-  var onFullscreenPlayerDidDismiss: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onFullscreenPlayerDidPresent: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onFullscreenPlayerWillDismiss: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onFullscreenPlayerWillPresent: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onLoad: js.UndefOr[js.Function1[/* data */ OnLoadData, Unit]] = js.undefined
-  var onLoadStart: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onPictureInPictureStatusChanged: js.UndefOr[js.Function1[/* data */ OnPictureInPictureStatusData, Unit]] = js.undefined
-  var onPlaybackRateChange: js.UndefOr[js.Function1[/* data */ OnPlaybackRateData, Unit]] = js.undefined
-  var onPlaybackResume: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onPlaybackStalled: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onProgress: js.UndefOr[js.Function1[/* data */ OnProgressData, Unit]] = js.undefined
-  var onReadyForDisplay: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onRestoreUserInterfaceForPictureInPictureStop: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onSeek: js.UndefOr[js.Function1[/* data */ OnSeekData, Unit]] = js.undefined
-  var onTimedMetadata: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onVideoBuffer: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onVideoEnd: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onVideoError: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onVideoFullscreenPlayerDidDismiss: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onVideoFullscreenPlayerDidPresent: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onVideoFullscreenPlayerWillDismiss: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onVideoFullscreenPlayerWillPresent: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onVideoLoad: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onVideoLoadStart: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onVideoProgress: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onVideoSeek: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var paused: js.UndefOr[Boolean] = js.undefined
-  var pictureInPicture: js.UndefOr[Boolean] = js.undefined
-  var playInBackground: js.UndefOr[Boolean] = js.undefined
-  var playWhenInactive: js.UndefOr[Boolean] = js.undefined
+  var allowsExternalPlayback: js.UndefOr[Boolean] = js.native
+  var audioOnly: js.UndefOr[Boolean] = js.native
+  var automaticallyWaitsToMinimizeStalling: js.UndefOr[Boolean] = js.native
+  var bufferConfig: js.UndefOr[AnonBufferForPlaybackAfterRebufferMs] = js.native
+  var controls: js.UndefOr[Boolean] = js.native
+  var currentTime: js.UndefOr[Double] = js.native
+  var disableFocus: js.UndefOr[Boolean] = js.native
+  var filter: js.UndefOr[FilterType] = js.native
+  var filterEnable: js.UndefOr[Boolean] = js.native
+  var fullscreen: js.UndefOr[Boolean] = js.native
+  var fullscreenAutorotate: js.UndefOr[Boolean] = js.native
+  var fullscreenOrientation: js.UndefOr[all | landscape | portrait] = js.native
+  var hideShutterView: js.UndefOr[Boolean] = js.native
+  var ignoreSilentSwitch: js.UndefOr[ignore | obey] = js.native
+  var maxBitRate: js.UndefOr[Double] = js.native
+  var minLoadRetryCount: js.UndefOr[Double] = js.native
+  var muted: js.UndefOr[Boolean] = js.native
+  var onAudioBecomingNoisy: js.UndefOr[js.Function0[Unit]] = js.native
+  var onAudioFocusChanged: js.UndefOr[js.Function0[Unit]] = js.native
+  var onBandwidthUpdate: js.UndefOr[js.Function1[/* data */ OnBandwidthUpdateData, Unit]] = js.native
+  var onBuffer: js.UndefOr[js.Function1[/* data */ OnBufferData, Unit]] = js.native
+  var onEnd: js.UndefOr[js.Function0[Unit]] = js.native
+  var onError: js.UndefOr[js.Function1[/* error */ LoadError, Unit]] = js.native
+  var onExternalPlaybackChange: js.UndefOr[js.Function1[/* data */ OnExternalPlaybackChangeData, Unit]] = js.native
+  var onFullscreenPlayerDidDismiss: js.UndefOr[js.Function0[Unit]] = js.native
+  var onFullscreenPlayerDidPresent: js.UndefOr[js.Function0[Unit]] = js.native
+  var onFullscreenPlayerWillDismiss: js.UndefOr[js.Function0[Unit]] = js.native
+  var onFullscreenPlayerWillPresent: js.UndefOr[js.Function0[Unit]] = js.native
+  var onLoad: js.UndefOr[js.Function1[/* data */ OnLoadData, Unit]] = js.native
+  var onLoadStart: js.UndefOr[js.Function0[Unit]] = js.native
+  var onPictureInPictureStatusChanged: js.UndefOr[js.Function1[/* data */ OnPictureInPictureStatusData, Unit]] = js.native
+  var onPlaybackRateChange: js.UndefOr[js.Function1[/* data */ OnPlaybackRateData, Unit]] = js.native
+  var onPlaybackResume: js.UndefOr[js.Function0[Unit]] = js.native
+  var onPlaybackStalled: js.UndefOr[js.Function0[Unit]] = js.native
+  var onProgress: js.UndefOr[js.Function1[/* data */ OnProgressData, Unit]] = js.native
+  var onReadyForDisplay: js.UndefOr[js.Function0[Unit]] = js.native
+  var onRestoreUserInterfaceForPictureInPictureStop: js.UndefOr[js.Function0[Unit]] = js.native
+  var onSeek: js.UndefOr[js.Function1[/* data */ OnSeekData, Unit]] = js.native
+  var onTimedMetadata: js.UndefOr[js.Function0[Unit]] = js.native
+  var onVideoBuffer: js.UndefOr[js.Function0[Unit]] = js.native
+  var onVideoEnd: js.UndefOr[js.Function0[Unit]] = js.native
+  var onVideoError: js.UndefOr[js.Function0[Unit]] = js.native
+  var onVideoFullscreenPlayerDidDismiss: js.UndefOr[js.Function0[Unit]] = js.native
+  var onVideoFullscreenPlayerDidPresent: js.UndefOr[js.Function0[Unit]] = js.native
+  var onVideoFullscreenPlayerWillDismiss: js.UndefOr[js.Function0[Unit]] = js.native
+  var onVideoFullscreenPlayerWillPresent: js.UndefOr[js.Function0[Unit]] = js.native
+  var onVideoLoad: js.UndefOr[js.Function0[Unit]] = js.native
+  var onVideoLoadStart: js.UndefOr[js.Function0[Unit]] = js.native
+  var onVideoProgress: js.UndefOr[js.Function0[Unit]] = js.native
+  var onVideoSeek: js.UndefOr[js.Function0[Unit]] = js.native
+  var paused: js.UndefOr[Boolean] = js.native
+  var pictureInPicture: js.UndefOr[Boolean] = js.native
+  var playInBackground: js.UndefOr[Boolean] = js.native
+  var playWhenInactive: js.UndefOr[Boolean] = js.native
    // via Image#resizeMode
-  var poster: js.UndefOr[String] = js.undefined
+  var poster: js.UndefOr[String] = js.native
    // via Image#resizeMode
-  var posterResizeMode: js.UndefOr[stretch | contain | cover | none] = js.undefined
-  var progressUpdateInterval: js.UndefOr[Double] = js.undefined
-  var rate: js.UndefOr[Double] = js.undefined
-  var repeat: js.UndefOr[Boolean] = js.undefined
-  var reportBandwidth: js.UndefOr[Boolean] = js.undefined
-  var resizeMode: js.UndefOr[stretch | contain | cover | none] = js.undefined
-  var rotation: js.UndefOr[Double] = js.undefined
+  var posterResizeMode: js.UndefOr[stretch | contain | cover | none] = js.native
+  var progressUpdateInterval: js.UndefOr[Double] = js.native
+  var rate: js.UndefOr[Double] = js.native
+  var repeat: js.UndefOr[Boolean] = js.native
+  var reportBandwidth: js.UndefOr[Boolean] = js.native
+  var resizeMode: js.UndefOr[stretch | contain | cover | none] = js.native
+  var rotation: js.UndefOr[Double] = js.native
   /* Required by react-native */
-  var scaleX: js.UndefOr[Double] = js.undefined
-  var scaleY: js.UndefOr[Double] = js.undefined
-  var seek: js.UndefOr[Double] = js.undefined
-  var selectedAudioTrack: js.UndefOr[AnonType] = js.undefined
-  var selectedTextTrack: js.UndefOr[AnonType] = js.undefined
-  var selectedVideoTrack: js.UndefOr[AnonValue] = js.undefined
+  var scaleX: js.UndefOr[Double] = js.native
+  var scaleY: js.UndefOr[Double] = js.native
+  var seek: js.UndefOr[Double] = js.native
+  var selectedAudioTrack: js.UndefOr[AnonType] = js.native
+  var selectedTextTrack: js.UndefOr[AnonType] = js.native
+  var selectedVideoTrack: js.UndefOr[AnonValue] = js.native
   /* Wrapper component */
   // Opaque type returned by require('./video.mp4')
-  var source: AnonUri | Double
+  var source: AnonUri | Double = js.native
   /* Native only */
-  var src: js.UndefOr[js.Any] = js.undefined
-  var stereoPan: js.UndefOr[Double] = js.undefined
-  var textTracks: js.UndefOr[js.Array[AnonLanguage]] = js.undefined
-  var translateX: js.UndefOr[Double] = js.undefined
-  var translateY: js.UndefOr[Double] = js.undefined
-  var useTextureView: js.UndefOr[Boolean] = js.undefined
-  var volume: js.UndefOr[Double] = js.undefined
+  var src: js.UndefOr[js.Any] = js.native
+  var stereoPan: js.UndefOr[Double] = js.native
+  var textTracks: js.UndefOr[js.Array[AnonLanguage]] = js.native
+  var translateX: js.UndefOr[Double] = js.native
+  var translateY: js.UndefOr[Double] = js.native
+  var useTextureView: js.UndefOr[Boolean] = js.native
+  var volume: js.UndefOr[Double] = js.native
 }
 
 object VideoProperties {
   @scala.inline
-  def apply(
-    source: AnonUri | Double,
-    accessibilityActions: js.Array[AccessibilityActionInfo] = null,
-    accessibilityComponentType: typingsSlinky.reactNative.reactNativeStrings.none | button | radiobutton_checked | radiobutton_unchecked = null,
-    accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,
-    accessibilityHint: String = null,
-    accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.undefined,
-    accessibilityLabel: String = null,
-    accessibilityLiveRegion: typingsSlinky.reactNative.reactNativeStrings.none | polite | assertive = null,
-    accessibilityRole: AccessibilityRole = null,
-    accessibilityState: AccessibilityState = null,
-    accessibilityStates: js.Array[AccessibilityStates] = null,
-    accessibilityTraits: AccessibilityTrait | js.Array[AccessibilityTrait] = null,
-    accessibilityViewIsModal: js.UndefOr[Boolean] = js.undefined,
-    accessible: js.UndefOr[Boolean] = js.undefined,
-    allowsExternalPlayback: js.UndefOr[Boolean] = js.undefined,
-    audioOnly: js.UndefOr[Boolean] = js.undefined,
-    automaticallyWaitsToMinimizeStalling: js.UndefOr[Boolean] = js.undefined,
-    bufferConfig: AnonBufferForPlaybackAfterRebufferMs = null,
-    collapsable: js.UndefOr[Boolean] = js.undefined,
-    controls: js.UndefOr[Boolean] = js.undefined,
-    currentTime: Int | Double = null,
-    disableFocus: js.UndefOr[Boolean] = js.undefined,
-    filter: FilterType = null,
-    filterEnable: js.UndefOr[Boolean] = js.undefined,
-    fullscreen: js.UndefOr[Boolean] = js.undefined,
-    fullscreenAutorotate: js.UndefOr[Boolean] = js.undefined,
-    fullscreenOrientation: all | landscape | portrait = null,
-    hasTVPreferredFocus: js.UndefOr[Boolean] = js.undefined,
-    hideShutterView: js.UndefOr[Boolean] = js.undefined,
-    hitSlop: Insets = null,
-    ignoreSilentSwitch: ignore | obey = null,
-    importantForAccessibility: auto | yes | no | `no-hide-descendants` = null,
-    isTVSelectable: js.UndefOr[Boolean] = js.undefined,
-    maxBitRate: Int | Double = null,
-    minLoadRetryCount: Int | Double = null,
-    muted: js.UndefOr[Boolean] = js.undefined,
-    nativeID: String = null,
-    needsOffscreenAlphaCompositing: js.UndefOr[Boolean] = js.undefined,
-    onAccessibilityAction: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit = null,
-    onAccessibilityEscape: () => Unit = null,
-    onAccessibilityTap: () => Unit = null,
-    onAudioBecomingNoisy: () => Unit = null,
-    onAudioFocusChanged: () => Unit = null,
-    onBandwidthUpdate: /* data */ OnBandwidthUpdateData => Unit = null,
-    onBuffer: () => Unit = null,
-    onEnd: () => Unit = null,
-    onError: /* error */ LoadError => Unit = null,
-    onExternalPlaybackChange: /* data */ OnExternalPlaybackChangeData => Unit = null,
-    onFullscreenPlayerDidDismiss: () => Unit = null,
-    onFullscreenPlayerDidPresent: () => Unit = null,
-    onFullscreenPlayerWillDismiss: () => Unit = null,
-    onFullscreenPlayerWillPresent: () => Unit = null,
-    onLayout: /* event */ LayoutChangeEvent => Unit = null,
-    onLoad: /* data */ OnLoadData => Unit = null,
-    onLoadStart: () => Unit = null,
-    onMagicTap: () => Unit = null,
-    onMoveShouldSetResponder: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
-    onMoveShouldSetResponderCapture: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
-    onPictureInPictureStatusChanged: /* data */ OnPictureInPictureStatusData => Unit = null,
-    onPlaybackRateChange: /* data */ OnPlaybackRateData => Unit = null,
-    onPlaybackResume: () => Unit = null,
-    onPlaybackStalled: () => Unit = null,
-    onProgress: /* data */ OnProgressData => Unit = null,
-    onReadyForDisplay: () => Unit = null,
-    onResponderEnd: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onResponderGrant: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onResponderMove: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onResponderReject: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onResponderRelease: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onResponderStart: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onResponderTerminate: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onResponderTerminationRequest: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
-    onRestoreUserInterfaceForPictureInPictureStop: () => Unit = null,
-    onSeek: /* data */ OnSeekData => Unit = null,
-    onStartShouldSetResponder: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
-    onStartShouldSetResponderCapture: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
-    onTimedMetadata: () => Unit = null,
-    onTouchCancel: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onTouchEnd: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onTouchEndCapture: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onTouchMove: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onTouchStart: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onVideoBuffer: () => Unit = null,
-    onVideoEnd: () => Unit = null,
-    onVideoError: () => Unit = null,
-    onVideoFullscreenPlayerDidDismiss: () => Unit = null,
-    onVideoFullscreenPlayerDidPresent: () => Unit = null,
-    onVideoFullscreenPlayerWillDismiss: () => Unit = null,
-    onVideoFullscreenPlayerWillPresent: () => Unit = null,
-    onVideoLoad: () => Unit = null,
-    onVideoLoadStart: () => Unit = null,
-    onVideoProgress: () => Unit = null,
-    onVideoSeek: () => Unit = null,
-    paused: js.UndefOr[Boolean] = js.undefined,
-    pictureInPicture: js.UndefOr[Boolean] = js.undefined,
-    playInBackground: js.UndefOr[Boolean] = js.undefined,
-    playWhenInactive: js.UndefOr[Boolean] = js.undefined,
-    pointerEvents: `box-none` | typingsSlinky.reactNative.reactNativeStrings.none | `box-only` | auto = null,
-    poster: String = null,
-    posterResizeMode: stretch | contain | cover | none = null,
-    progressUpdateInterval: Int | Double = null,
-    rate: Int | Double = null,
-    removeClippedSubviews: js.UndefOr[Boolean] = js.undefined,
-    renderToHardwareTextureAndroid: js.UndefOr[Boolean] = js.undefined,
-    repeat: js.UndefOr[Boolean] = js.undefined,
-    reportBandwidth: js.UndefOr[Boolean] = js.undefined,
-    resizeMode: stretch | contain | cover | none = null,
-    rotation: Int | Double = null,
-    scaleX: Int | Double = null,
-    scaleY: Int | Double = null,
-    seek: Int | Double = null,
-    selectedAudioTrack: AnonType = null,
-    selectedTextTrack: AnonType = null,
-    selectedVideoTrack: AnonValue = null,
-    shouldRasterizeIOS: js.UndefOr[Boolean] = js.undefined,
-    src: js.Any = null,
-    stereoPan: Int | Double = null,
-    style: StyleProp[ViewStyle] = null,
-    testID: String = null,
-    textTracks: js.Array[AnonLanguage] = null,
-    translateX: Int | Double = null,
-    translateY: Int | Double = null,
-    tvParallaxMagnification: Int | Double = null,
-    tvParallaxProperties: TVParallaxProperties = null,
-    tvParallaxShiftDistanceX: Int | Double = null,
-    tvParallaxShiftDistanceY: Int | Double = null,
-    tvParallaxTiltAngle: Int | Double = null,
-    useTextureView: js.UndefOr[Boolean] = js.undefined,
-    volume: Int | Double = null
-  ): VideoProperties = {
+  def apply(source: AnonUri | Double): VideoProperties = {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
-    if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
-    if (accessibilityComponentType != null) __obj.updateDynamic("accessibilityComponentType")(accessibilityComponentType.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityElementsHidden)) __obj.updateDynamic("accessibilityElementsHidden")(accessibilityElementsHidden.asInstanceOf[js.Any])
-    if (accessibilityHint != null) __obj.updateDynamic("accessibilityHint")(accessibilityHint.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityIgnoresInvertColors)) __obj.updateDynamic("accessibilityIgnoresInvertColors")(accessibilityIgnoresInvertColors.asInstanceOf[js.Any])
-    if (accessibilityLabel != null) __obj.updateDynamic("accessibilityLabel")(accessibilityLabel.asInstanceOf[js.Any])
-    if (accessibilityLiveRegion != null) __obj.updateDynamic("accessibilityLiveRegion")(accessibilityLiveRegion.asInstanceOf[js.Any])
-    if (accessibilityRole != null) __obj.updateDynamic("accessibilityRole")(accessibilityRole.asInstanceOf[js.Any])
-    if (accessibilityState != null) __obj.updateDynamic("accessibilityState")(accessibilityState.asInstanceOf[js.Any])
-    if (accessibilityStates != null) __obj.updateDynamic("accessibilityStates")(accessibilityStates.asInstanceOf[js.Any])
-    if (accessibilityTraits != null) __obj.updateDynamic("accessibilityTraits")(accessibilityTraits.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityViewIsModal)) __obj.updateDynamic("accessibilityViewIsModal")(accessibilityViewIsModal.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessible)) __obj.updateDynamic("accessible")(accessible.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowsExternalPlayback)) __obj.updateDynamic("allowsExternalPlayback")(allowsExternalPlayback.asInstanceOf[js.Any])
-    if (!js.isUndefined(audioOnly)) __obj.updateDynamic("audioOnly")(audioOnly.asInstanceOf[js.Any])
-    if (!js.isUndefined(automaticallyWaitsToMinimizeStalling)) __obj.updateDynamic("automaticallyWaitsToMinimizeStalling")(automaticallyWaitsToMinimizeStalling.asInstanceOf[js.Any])
-    if (bufferConfig != null) __obj.updateDynamic("bufferConfig")(bufferConfig.asInstanceOf[js.Any])
-    if (!js.isUndefined(collapsable)) __obj.updateDynamic("collapsable")(collapsable.asInstanceOf[js.Any])
-    if (!js.isUndefined(controls)) __obj.updateDynamic("controls")(controls.asInstanceOf[js.Any])
-    if (currentTime != null) __obj.updateDynamic("currentTime")(currentTime.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableFocus)) __obj.updateDynamic("disableFocus")(disableFocus.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (!js.isUndefined(filterEnable)) __obj.updateDynamic("filterEnable")(filterEnable.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullscreen)) __obj.updateDynamic("fullscreen")(fullscreen.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullscreenAutorotate)) __obj.updateDynamic("fullscreenAutorotate")(fullscreenAutorotate.asInstanceOf[js.Any])
-    if (fullscreenOrientation != null) __obj.updateDynamic("fullscreenOrientation")(fullscreenOrientation.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasTVPreferredFocus)) __obj.updateDynamic("hasTVPreferredFocus")(hasTVPreferredFocus.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideShutterView)) __obj.updateDynamic("hideShutterView")(hideShutterView.asInstanceOf[js.Any])
-    if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
-    if (ignoreSilentSwitch != null) __obj.updateDynamic("ignoreSilentSwitch")(ignoreSilentSwitch.asInstanceOf[js.Any])
-    if (importantForAccessibility != null) __obj.updateDynamic("importantForAccessibility")(importantForAccessibility.asInstanceOf[js.Any])
-    if (!js.isUndefined(isTVSelectable)) __obj.updateDynamic("isTVSelectable")(isTVSelectable.asInstanceOf[js.Any])
-    if (maxBitRate != null) __obj.updateDynamic("maxBitRate")(maxBitRate.asInstanceOf[js.Any])
-    if (minLoadRetryCount != null) __obj.updateDynamic("minLoadRetryCount")(minLoadRetryCount.asInstanceOf[js.Any])
-    if (!js.isUndefined(muted)) __obj.updateDynamic("muted")(muted.asInstanceOf[js.Any])
-    if (nativeID != null) __obj.updateDynamic("nativeID")(nativeID.asInstanceOf[js.Any])
-    if (!js.isUndefined(needsOffscreenAlphaCompositing)) __obj.updateDynamic("needsOffscreenAlphaCompositing")(needsOffscreenAlphaCompositing.asInstanceOf[js.Any])
-    if (onAccessibilityAction != null) __obj.updateDynamic("onAccessibilityAction")(js.Any.fromFunction1(onAccessibilityAction))
-    if (onAccessibilityEscape != null) __obj.updateDynamic("onAccessibilityEscape")(js.Any.fromFunction0(onAccessibilityEscape))
-    if (onAccessibilityTap != null) __obj.updateDynamic("onAccessibilityTap")(js.Any.fromFunction0(onAccessibilityTap))
-    if (onAudioBecomingNoisy != null) __obj.updateDynamic("onAudioBecomingNoisy")(js.Any.fromFunction0(onAudioBecomingNoisy))
-    if (onAudioFocusChanged != null) __obj.updateDynamic("onAudioFocusChanged")(js.Any.fromFunction0(onAudioFocusChanged))
-    if (onBandwidthUpdate != null) __obj.updateDynamic("onBandwidthUpdate")(js.Any.fromFunction1(onBandwidthUpdate))
-    if (onBuffer != null) __obj.updateDynamic("onBuffer")(js.Any.fromFunction0(onBuffer))
-    if (onEnd != null) __obj.updateDynamic("onEnd")(js.Any.fromFunction0(onEnd))
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (onExternalPlaybackChange != null) __obj.updateDynamic("onExternalPlaybackChange")(js.Any.fromFunction1(onExternalPlaybackChange))
-    if (onFullscreenPlayerDidDismiss != null) __obj.updateDynamic("onFullscreenPlayerDidDismiss")(js.Any.fromFunction0(onFullscreenPlayerDidDismiss))
-    if (onFullscreenPlayerDidPresent != null) __obj.updateDynamic("onFullscreenPlayerDidPresent")(js.Any.fromFunction0(onFullscreenPlayerDidPresent))
-    if (onFullscreenPlayerWillDismiss != null) __obj.updateDynamic("onFullscreenPlayerWillDismiss")(js.Any.fromFunction0(onFullscreenPlayerWillDismiss))
-    if (onFullscreenPlayerWillPresent != null) __obj.updateDynamic("onFullscreenPlayerWillPresent")(js.Any.fromFunction0(onFullscreenPlayerWillPresent))
-    if (onLayout != null) __obj.updateDynamic("onLayout")(js.Any.fromFunction1(onLayout))
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
-    if (onLoadStart != null) __obj.updateDynamic("onLoadStart")(js.Any.fromFunction0(onLoadStart))
-    if (onMagicTap != null) __obj.updateDynamic("onMagicTap")(js.Any.fromFunction0(onMagicTap))
-    if (onMoveShouldSetResponder != null) __obj.updateDynamic("onMoveShouldSetResponder")(js.Any.fromFunction1(onMoveShouldSetResponder))
-    if (onMoveShouldSetResponderCapture != null) __obj.updateDynamic("onMoveShouldSetResponderCapture")(js.Any.fromFunction1(onMoveShouldSetResponderCapture))
-    if (onPictureInPictureStatusChanged != null) __obj.updateDynamic("onPictureInPictureStatusChanged")(js.Any.fromFunction1(onPictureInPictureStatusChanged))
-    if (onPlaybackRateChange != null) __obj.updateDynamic("onPlaybackRateChange")(js.Any.fromFunction1(onPlaybackRateChange))
-    if (onPlaybackResume != null) __obj.updateDynamic("onPlaybackResume")(js.Any.fromFunction0(onPlaybackResume))
-    if (onPlaybackStalled != null) __obj.updateDynamic("onPlaybackStalled")(js.Any.fromFunction0(onPlaybackStalled))
-    if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
-    if (onReadyForDisplay != null) __obj.updateDynamic("onReadyForDisplay")(js.Any.fromFunction0(onReadyForDisplay))
-    if (onResponderEnd != null) __obj.updateDynamic("onResponderEnd")(js.Any.fromFunction1(onResponderEnd))
-    if (onResponderGrant != null) __obj.updateDynamic("onResponderGrant")(js.Any.fromFunction1(onResponderGrant))
-    if (onResponderMove != null) __obj.updateDynamic("onResponderMove")(js.Any.fromFunction1(onResponderMove))
-    if (onResponderReject != null) __obj.updateDynamic("onResponderReject")(js.Any.fromFunction1(onResponderReject))
-    if (onResponderRelease != null) __obj.updateDynamic("onResponderRelease")(js.Any.fromFunction1(onResponderRelease))
-    if (onResponderStart != null) __obj.updateDynamic("onResponderStart")(js.Any.fromFunction1(onResponderStart))
-    if (onResponderTerminate != null) __obj.updateDynamic("onResponderTerminate")(js.Any.fromFunction1(onResponderTerminate))
-    if (onResponderTerminationRequest != null) __obj.updateDynamic("onResponderTerminationRequest")(js.Any.fromFunction1(onResponderTerminationRequest))
-    if (onRestoreUserInterfaceForPictureInPictureStop != null) __obj.updateDynamic("onRestoreUserInterfaceForPictureInPictureStop")(js.Any.fromFunction0(onRestoreUserInterfaceForPictureInPictureStop))
-    if (onSeek != null) __obj.updateDynamic("onSeek")(js.Any.fromFunction1(onSeek))
-    if (onStartShouldSetResponder != null) __obj.updateDynamic("onStartShouldSetResponder")(js.Any.fromFunction1(onStartShouldSetResponder))
-    if (onStartShouldSetResponderCapture != null) __obj.updateDynamic("onStartShouldSetResponderCapture")(js.Any.fromFunction1(onStartShouldSetResponderCapture))
-    if (onTimedMetadata != null) __obj.updateDynamic("onTimedMetadata")(js.Any.fromFunction0(onTimedMetadata))
-    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
-    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
-    if (onTouchEndCapture != null) __obj.updateDynamic("onTouchEndCapture")(js.Any.fromFunction1(onTouchEndCapture))
-    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
-    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
-    if (onVideoBuffer != null) __obj.updateDynamic("onVideoBuffer")(js.Any.fromFunction0(onVideoBuffer))
-    if (onVideoEnd != null) __obj.updateDynamic("onVideoEnd")(js.Any.fromFunction0(onVideoEnd))
-    if (onVideoError != null) __obj.updateDynamic("onVideoError")(js.Any.fromFunction0(onVideoError))
-    if (onVideoFullscreenPlayerDidDismiss != null) __obj.updateDynamic("onVideoFullscreenPlayerDidDismiss")(js.Any.fromFunction0(onVideoFullscreenPlayerDidDismiss))
-    if (onVideoFullscreenPlayerDidPresent != null) __obj.updateDynamic("onVideoFullscreenPlayerDidPresent")(js.Any.fromFunction0(onVideoFullscreenPlayerDidPresent))
-    if (onVideoFullscreenPlayerWillDismiss != null) __obj.updateDynamic("onVideoFullscreenPlayerWillDismiss")(js.Any.fromFunction0(onVideoFullscreenPlayerWillDismiss))
-    if (onVideoFullscreenPlayerWillPresent != null) __obj.updateDynamic("onVideoFullscreenPlayerWillPresent")(js.Any.fromFunction0(onVideoFullscreenPlayerWillPresent))
-    if (onVideoLoad != null) __obj.updateDynamic("onVideoLoad")(js.Any.fromFunction0(onVideoLoad))
-    if (onVideoLoadStart != null) __obj.updateDynamic("onVideoLoadStart")(js.Any.fromFunction0(onVideoLoadStart))
-    if (onVideoProgress != null) __obj.updateDynamic("onVideoProgress")(js.Any.fromFunction0(onVideoProgress))
-    if (onVideoSeek != null) __obj.updateDynamic("onVideoSeek")(js.Any.fromFunction0(onVideoSeek))
-    if (!js.isUndefined(paused)) __obj.updateDynamic("paused")(paused.asInstanceOf[js.Any])
-    if (!js.isUndefined(pictureInPicture)) __obj.updateDynamic("pictureInPicture")(pictureInPicture.asInstanceOf[js.Any])
-    if (!js.isUndefined(playInBackground)) __obj.updateDynamic("playInBackground")(playInBackground.asInstanceOf[js.Any])
-    if (!js.isUndefined(playWhenInactive)) __obj.updateDynamic("playWhenInactive")(playWhenInactive.asInstanceOf[js.Any])
-    if (pointerEvents != null) __obj.updateDynamic("pointerEvents")(pointerEvents.asInstanceOf[js.Any])
-    if (poster != null) __obj.updateDynamic("poster")(poster.asInstanceOf[js.Any])
-    if (posterResizeMode != null) __obj.updateDynamic("posterResizeMode")(posterResizeMode.asInstanceOf[js.Any])
-    if (progressUpdateInterval != null) __obj.updateDynamic("progressUpdateInterval")(progressUpdateInterval.asInstanceOf[js.Any])
-    if (rate != null) __obj.updateDynamic("rate")(rate.asInstanceOf[js.Any])
-    if (!js.isUndefined(removeClippedSubviews)) __obj.updateDynamic("removeClippedSubviews")(removeClippedSubviews.asInstanceOf[js.Any])
-    if (!js.isUndefined(renderToHardwareTextureAndroid)) __obj.updateDynamic("renderToHardwareTextureAndroid")(renderToHardwareTextureAndroid.asInstanceOf[js.Any])
-    if (!js.isUndefined(repeat)) __obj.updateDynamic("repeat")(repeat.asInstanceOf[js.Any])
-    if (!js.isUndefined(reportBandwidth)) __obj.updateDynamic("reportBandwidth")(reportBandwidth.asInstanceOf[js.Any])
-    if (resizeMode != null) __obj.updateDynamic("resizeMode")(resizeMode.asInstanceOf[js.Any])
-    if (rotation != null) __obj.updateDynamic("rotation")(rotation.asInstanceOf[js.Any])
-    if (scaleX != null) __obj.updateDynamic("scaleX")(scaleX.asInstanceOf[js.Any])
-    if (scaleY != null) __obj.updateDynamic("scaleY")(scaleY.asInstanceOf[js.Any])
-    if (seek != null) __obj.updateDynamic("seek")(seek.asInstanceOf[js.Any])
-    if (selectedAudioTrack != null) __obj.updateDynamic("selectedAudioTrack")(selectedAudioTrack.asInstanceOf[js.Any])
-    if (selectedTextTrack != null) __obj.updateDynamic("selectedTextTrack")(selectedTextTrack.asInstanceOf[js.Any])
-    if (selectedVideoTrack != null) __obj.updateDynamic("selectedVideoTrack")(selectedVideoTrack.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldRasterizeIOS)) __obj.updateDynamic("shouldRasterizeIOS")(shouldRasterizeIOS.asInstanceOf[js.Any])
-    if (src != null) __obj.updateDynamic("src")(src.asInstanceOf[js.Any])
-    if (stereoPan != null) __obj.updateDynamic("stereoPan")(stereoPan.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
-    if (textTracks != null) __obj.updateDynamic("textTracks")(textTracks.asInstanceOf[js.Any])
-    if (translateX != null) __obj.updateDynamic("translateX")(translateX.asInstanceOf[js.Any])
-    if (translateY != null) __obj.updateDynamic("translateY")(translateY.asInstanceOf[js.Any])
-    if (tvParallaxMagnification != null) __obj.updateDynamic("tvParallaxMagnification")(tvParallaxMagnification.asInstanceOf[js.Any])
-    if (tvParallaxProperties != null) __obj.updateDynamic("tvParallaxProperties")(tvParallaxProperties.asInstanceOf[js.Any])
-    if (tvParallaxShiftDistanceX != null) __obj.updateDynamic("tvParallaxShiftDistanceX")(tvParallaxShiftDistanceX.asInstanceOf[js.Any])
-    if (tvParallaxShiftDistanceY != null) __obj.updateDynamic("tvParallaxShiftDistanceY")(tvParallaxShiftDistanceY.asInstanceOf[js.Any])
-    if (tvParallaxTiltAngle != null) __obj.updateDynamic("tvParallaxTiltAngle")(tvParallaxTiltAngle.asInstanceOf[js.Any])
-    if (!js.isUndefined(useTextureView)) __obj.updateDynamic("useTextureView")(useTextureView.asInstanceOf[js.Any])
-    if (volume != null) __obj.updateDynamic("volume")(volume.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoProperties]
   }
+  @scala.inline
+  implicit class VideoPropertiesOps[Self <: VideoProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSource(value: AnonUri | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllowsExternalPlayback(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowsExternalPlayback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowsExternalPlayback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowsExternalPlayback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAudioOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audioOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudioOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audioOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutomaticallyWaitsToMinimizeStalling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("automaticallyWaitsToMinimizeStalling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutomaticallyWaitsToMinimizeStalling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("automaticallyWaitsToMinimizeStalling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBufferConfig(value: AnonBufferForPlaybackAfterRebufferMs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBufferConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withControls(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilter(value: FilterType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterEnable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterEnable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterEnable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterEnable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFullscreen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullscreen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFullscreenAutorotate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreenAutorotate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullscreenAutorotate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreenAutorotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFullscreenOrientation(value: all | landscape | portrait): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreenOrientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullscreenOrientation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreenOrientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideShutterView(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideShutterView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideShutterView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideShutterView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreSilentSwitch(value: ignore | obey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreSilentSwitch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreSilentSwitch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreSilentSwitch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxBitRate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBitRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxBitRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBitRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinLoadRetryCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minLoadRetryCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinLoadRetryCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minLoadRetryCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("muted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("muted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAudioBecomingNoisy(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAudioBecomingNoisy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAudioBecomingNoisy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAudioBecomingNoisy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAudioFocusChanged(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAudioFocusChanged")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAudioFocusChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAudioFocusChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBandwidthUpdate(value: /* data */ OnBandwidthUpdateData => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBandwidthUpdate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnBandwidthUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBandwidthUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBuffer(value: /* data */ OnBufferData => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBuffer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnBuffer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBuffer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnEnd(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnError(value: /* error */ LoadError => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnExternalPlaybackChange(value: /* data */ OnExternalPlaybackChangeData => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExternalPlaybackChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnExternalPlaybackChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExternalPlaybackChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFullscreenPlayerDidDismiss(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFullscreenPlayerDidDismiss")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFullscreenPlayerDidDismiss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFullscreenPlayerDidDismiss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFullscreenPlayerDidPresent(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFullscreenPlayerDidPresent")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFullscreenPlayerDidPresent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFullscreenPlayerDidPresent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFullscreenPlayerWillDismiss(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFullscreenPlayerWillDismiss")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFullscreenPlayerWillDismiss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFullscreenPlayerWillDismiss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFullscreenPlayerWillPresent(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFullscreenPlayerWillPresent")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFullscreenPlayerWillPresent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFullscreenPlayerWillPresent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLoad(value: /* data */ OnLoadData => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLoadStart(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadStart")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLoadStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPictureInPictureStatusChanged(value: /* data */ OnPictureInPictureStatusData => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPictureInPictureStatusChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPictureInPictureStatusChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPictureInPictureStatusChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPlaybackRateChange(value: /* data */ OnPlaybackRateData => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaybackRateChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPlaybackRateChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaybackRateChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPlaybackResume(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaybackResume")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPlaybackResume: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaybackResume")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPlaybackStalled(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaybackStalled")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPlaybackStalled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaybackStalled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnProgress(value: /* data */ OnProgressData => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnReadyForDisplay(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onReadyForDisplay")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnReadyForDisplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onReadyForDisplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRestoreUserInterfaceForPictureInPictureStop(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRestoreUserInterfaceForPictureInPictureStop")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRestoreUserInterfaceForPictureInPictureStop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRestoreUserInterfaceForPictureInPictureStop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSeek(value: /* data */ OnSeekData => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeek")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSeek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeek")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTimedMetadata(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTimedMetadata")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTimedMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTimedMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnVideoBuffer(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoBuffer")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnVideoBuffer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoBuffer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnVideoEnd(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoEnd")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnVideoEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnVideoError(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoError")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnVideoError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnVideoFullscreenPlayerDidDismiss(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoFullscreenPlayerDidDismiss")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnVideoFullscreenPlayerDidDismiss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoFullscreenPlayerDidDismiss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnVideoFullscreenPlayerDidPresent(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoFullscreenPlayerDidPresent")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnVideoFullscreenPlayerDidPresent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoFullscreenPlayerDidPresent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnVideoFullscreenPlayerWillDismiss(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoFullscreenPlayerWillDismiss")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnVideoFullscreenPlayerWillDismiss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoFullscreenPlayerWillDismiss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnVideoFullscreenPlayerWillPresent(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoFullscreenPlayerWillPresent")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnVideoFullscreenPlayerWillPresent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoFullscreenPlayerWillPresent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnVideoLoad(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoLoad")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnVideoLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoLoad")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnVideoLoadStart(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoLoadStart")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnVideoLoadStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoLoadStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnVideoProgress(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoProgress")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnVideoProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoProgress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnVideoSeek(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoSeek")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnVideoSeek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVideoSeek")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaused(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaused: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPictureInPicture(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pictureInPicture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPictureInPicture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pictureInPicture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlayInBackground(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("playInBackground")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlayInBackground: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("playInBackground")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlayWhenInactive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("playWhenInactive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlayWhenInactive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("playWhenInactive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoster(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poster")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoster: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poster")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosterResizeMode(value: stretch | contain | cover | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("posterResizeMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosterResizeMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("posterResizeMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressUpdateInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressUpdateInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressUpdateInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressUpdateInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepeat(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repeat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepeat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repeat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportBandwidth(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportBandwidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportBandwidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportBandwidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResizeMode(value: stretch | contain | cover | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResizeMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeek(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seek")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seek")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedAudioTrack(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedAudioTrack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedAudioTrack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedAudioTrack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedTextTrack(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedTextTrack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedTextTrack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedTextTrack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedVideoTrack(value: AnonValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedVideoTrack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedVideoTrack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedVideoTrack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSrc(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStereoPan(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stereoPan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStereoPan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stereoPan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextTracks(value: js.Array[AnonLanguage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textTracks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextTracks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textTracks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranslateX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translateX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranslateX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translateX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranslateY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translateY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranslateY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translateY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseTextureView(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useTextureView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseTextureView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useTextureView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolume(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolume: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

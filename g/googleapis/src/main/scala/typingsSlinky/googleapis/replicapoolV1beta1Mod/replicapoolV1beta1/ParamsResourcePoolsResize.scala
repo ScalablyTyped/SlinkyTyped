@@ -36,34 +36,77 @@ trait ParamsResourcePoolsResize extends StandardParameters {
 
 object ParamsResourcePoolsResize {
   @scala.inline
-  def apply(
-    alt: String = null,
-    auth: String | OAuth2Client | JWT | Compute | UserRefreshClient = null,
-    fields: String = null,
-    key: String = null,
-    numReplicas: Int | Double = null,
-    oauth_token: String = null,
-    poolName: String = null,
-    prettyPrint: js.UndefOr[Boolean] = js.undefined,
-    projectName: String = null,
-    quotaUser: String = null,
-    userIp: String = null,
-    zone: String = null
-  ): ParamsResourcePoolsResize = {
+  def apply(): ParamsResourcePoolsResize = {
     val __obj = js.Dynamic.literal()
-    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
-    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (numReplicas != null) __obj.updateDynamic("numReplicas")(numReplicas.asInstanceOf[js.Any])
-    if (oauth_token != null) __obj.updateDynamic("oauth_token")(oauth_token.asInstanceOf[js.Any])
-    if (poolName != null) __obj.updateDynamic("poolName")(poolName.asInstanceOf[js.Any])
-    if (!js.isUndefined(prettyPrint)) __obj.updateDynamic("prettyPrint")(prettyPrint.asInstanceOf[js.Any])
-    if (projectName != null) __obj.updateDynamic("projectName")(projectName.asInstanceOf[js.Any])
-    if (quotaUser != null) __obj.updateDynamic("quotaUser")(quotaUser.asInstanceOf[js.Any])
-    if (userIp != null) __obj.updateDynamic("userIp")(userIp.asInstanceOf[js.Any])
-    if (zone != null) __obj.updateDynamic("zone")(zone.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParamsResourcePoolsResize]
   }
+  @scala.inline
+  implicit class ParamsResourcePoolsResizeOps[Self <: ParamsResourcePoolsResize] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumReplicas(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numReplicas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumReplicas: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numReplicas")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoolName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoolName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zone")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

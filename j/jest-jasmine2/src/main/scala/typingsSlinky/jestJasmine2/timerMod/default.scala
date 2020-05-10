@@ -9,9 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class default () extends Timer {
   def this(options: AnonNow) = this()
-  /* CompleteClass */
-  override def elapsed(): Double = js.native
-  /* CompleteClass */
-  override def start(): Unit = js.native
 }
 

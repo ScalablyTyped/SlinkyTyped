@@ -18,22 +18,20 @@ trait KeyUsage extends js.Object
 
 object KeyUsage {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def decrypt: typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.decrypt = "decrypt".asInstanceOf[typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.decrypt]
   @scala.inline
-  def decrypt: typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.decrypt = this.cast("decrypt")
+  def deriveBits: typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.deriveBits = "deriveBits".asInstanceOf[typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.deriveBits]
   @scala.inline
-  def deriveBits: typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.deriveBits = this.cast("deriveBits")
+  def deriveKey: typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.deriveKey = "deriveKey".asInstanceOf[typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.deriveKey]
   @scala.inline
-  def deriveKey: typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.deriveKey = this.cast("deriveKey")
+  def encrypt: typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.encrypt = "encrypt".asInstanceOf[typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.encrypt]
   @scala.inline
-  def encrypt: typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.encrypt = this.cast("encrypt")
+  def sign: typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.sign = "sign".asInstanceOf[typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.sign]
   @scala.inline
-  def sign: typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.sign = this.cast("sign")
+  def unwrapKey: typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.unwrapKey = "unwrapKey".asInstanceOf[typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.unwrapKey]
   @scala.inline
-  def unwrapKey: typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.unwrapKey = this.cast("unwrapKey")
+  def verify: typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.verify = "verify".asInstanceOf[typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.verify]
   @scala.inline
-  def verify: typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.verify = this.cast("verify")
-  @scala.inline
-  def wrapKey: typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.wrapKey = this.cast("wrapKey")
+  def wrapKey: typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.wrapKey = "wrapKey".asInstanceOf[typingsSlinky.awsCryptoIe11Detection.awsCryptoIe11DetectionStrings.wrapKey]
 }
 

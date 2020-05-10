@@ -34,19 +34,71 @@ trait TypedLinkAttributeDefinition extends js.Object {
 
 object TypedLinkAttributeDefinition {
   @scala.inline
-  def apply(
-    Name: AttributeName,
-    RequiredBehavior: RequiredAttributeBehavior,
-    Type: FacetAttributeType,
-    DefaultValue: TypedAttributeValue = null,
-    IsImmutable: js.UndefOr[Boolean] = js.undefined,
-    Rules: RuleMap = null
-  ): TypedLinkAttributeDefinition = {
+  def apply(Name: AttributeName, RequiredBehavior: RequiredAttributeBehavior, Type: FacetAttributeType): TypedLinkAttributeDefinition = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], RequiredBehavior = RequiredBehavior.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
-    if (DefaultValue != null) __obj.updateDynamic("DefaultValue")(DefaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsImmutable)) __obj.updateDynamic("IsImmutable")(IsImmutable.asInstanceOf[js.Any])
-    if (Rules != null) __obj.updateDynamic("Rules")(Rules.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypedLinkAttributeDefinition]
   }
+  @scala.inline
+  implicit class TypedLinkAttributeDefinitionOps[Self <: TypedLinkAttributeDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: AttributeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRequiredBehavior(value: RequiredAttributeBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequiredBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: FacetAttributeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultValue(value: TypedAttributeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsImmutable(value: Bool): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsImmutable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsImmutable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsImmutable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRules(value: RuleMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rules")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

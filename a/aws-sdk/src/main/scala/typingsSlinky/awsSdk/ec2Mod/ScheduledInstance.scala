@@ -70,40 +70,197 @@ trait ScheduledInstance extends js.Object {
 
 object ScheduledInstance {
   @scala.inline
-  def apply(
-    AvailabilityZone: String = null,
-    CreateDate: js.Date = null,
-    HourlyPrice: String = null,
-    InstanceCount: Int | scala.Double = null,
-    InstanceType: String = null,
-    NetworkPlatform: String = null,
-    NextSlotStartTime: js.Date = null,
-    Platform: String = null,
-    PreviousSlotEndTime: js.Date = null,
-    Recurrence: ScheduledInstanceRecurrence = null,
-    ScheduledInstanceId: String = null,
-    SlotDurationInHours: Int | scala.Double = null,
-    TermEndDate: js.Date = null,
-    TermStartDate: js.Date = null,
-    TotalScheduledInstanceHours: Int | scala.Double = null
-  ): ScheduledInstance = {
+  def apply(): ScheduledInstance = {
     val __obj = js.Dynamic.literal()
-    if (AvailabilityZone != null) __obj.updateDynamic("AvailabilityZone")(AvailabilityZone.asInstanceOf[js.Any])
-    if (CreateDate != null) __obj.updateDynamic("CreateDate")(CreateDate.asInstanceOf[js.Any])
-    if (HourlyPrice != null) __obj.updateDynamic("HourlyPrice")(HourlyPrice.asInstanceOf[js.Any])
-    if (InstanceCount != null) __obj.updateDynamic("InstanceCount")(InstanceCount.asInstanceOf[js.Any])
-    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
-    if (NetworkPlatform != null) __obj.updateDynamic("NetworkPlatform")(NetworkPlatform.asInstanceOf[js.Any])
-    if (NextSlotStartTime != null) __obj.updateDynamic("NextSlotStartTime")(NextSlotStartTime.asInstanceOf[js.Any])
-    if (Platform != null) __obj.updateDynamic("Platform")(Platform.asInstanceOf[js.Any])
-    if (PreviousSlotEndTime != null) __obj.updateDynamic("PreviousSlotEndTime")(PreviousSlotEndTime.asInstanceOf[js.Any])
-    if (Recurrence != null) __obj.updateDynamic("Recurrence")(Recurrence.asInstanceOf[js.Any])
-    if (ScheduledInstanceId != null) __obj.updateDynamic("ScheduledInstanceId")(ScheduledInstanceId.asInstanceOf[js.Any])
-    if (SlotDurationInHours != null) __obj.updateDynamic("SlotDurationInHours")(SlotDurationInHours.asInstanceOf[js.Any])
-    if (TermEndDate != null) __obj.updateDynamic("TermEndDate")(TermEndDate.asInstanceOf[js.Any])
-    if (TermStartDate != null) __obj.updateDynamic("TermStartDate")(TermStartDate.asInstanceOf[js.Any])
-    if (TotalScheduledInstanceHours != null) __obj.updateDynamic("TotalScheduledInstanceHours")(TotalScheduledInstanceHours.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScheduledInstance]
   }
+  @scala.inline
+  implicit class ScheduledInstanceOps[Self <: ScheduledInstance] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailabilityZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHourlyPrice(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HourlyPrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHourlyPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HourlyPrice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkPlatform(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkPlatform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkPlatform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkPlatform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextSlotStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextSlotStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextSlotStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextSlotStartTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatform(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreviousSlotEndTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviousSlotEndTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreviousSlotEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviousSlotEndTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecurrence(value: ScheduledInstanceRecurrence): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Recurrence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecurrence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Recurrence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduledInstanceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledInstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduledInstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledInstanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlotDurationInHours(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SlotDurationInHours")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlotDurationInHours: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SlotDurationInHours")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTermEndDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TermEndDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTermEndDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TermEndDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTermStartDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TermStartDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTermStartDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TermStartDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalScheduledInstanceHours(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalScheduledInstanceHours")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalScheduledInstanceHours: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalScheduledInstanceHours")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

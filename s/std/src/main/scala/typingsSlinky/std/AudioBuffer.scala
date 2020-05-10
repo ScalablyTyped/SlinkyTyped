@@ -12,14 +12,15 @@ trait AudioBuffer extends js.Object {
   val length: Double = js.native
   val numberOfChannels: Double = js.native
   val sampleRate: Double = js.native
-  def copyFromChannel(destination: scala.scalajs.js.typedarray.Float32Array, channelNumber: Double): Unit = js.native
-  def copyFromChannel(destination: scala.scalajs.js.typedarray.Float32Array, channelNumber: Double, bufferOffset: Double): Unit = js.native
-  def copyToChannel(source: scala.scalajs.js.typedarray.Float32Array, channelNumber: Double): Unit = js.native
-  def copyToChannel(source: scala.scalajs.js.typedarray.Float32Array, channelNumber: Double, bufferOffset: Double): Unit = js.native
-  def getChannelData(channel: Double): scala.scalajs.js.typedarray.Float32Array = js.native
+  def copyFromChannel(destination: js.typedarray.Float32Array, channelNumber: Double): Unit = js.native
+  def copyFromChannel(destination: js.typedarray.Float32Array, channelNumber: Double, bufferOffset: Double): Unit = js.native
+  def copyToChannel(source: js.typedarray.Float32Array, channelNumber: Double): Unit = js.native
+  def copyToChannel(source: js.typedarray.Float32Array, channelNumber: Double, bufferOffset: Double): Unit = js.native
+  def getChannelData(channel: Double): js.typedarray.Float32Array = js.native
 }
 
 @JSGlobal("AudioBuffer")
 @js.native
-object AudioBuffer extends Instantiable1[/* options */ AudioBufferOptions, AudioBuffer]
+object AudioBuffer
+  extends Instantiable1[/* options */ AudioBufferOptions, org.scalajs.dom.raw.AudioBuffer]
 

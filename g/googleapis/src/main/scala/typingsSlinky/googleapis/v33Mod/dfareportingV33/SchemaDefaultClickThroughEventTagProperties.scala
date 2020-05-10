@@ -25,14 +25,41 @@ trait SchemaDefaultClickThroughEventTagProperties extends js.Object {
 
 object SchemaDefaultClickThroughEventTagProperties {
   @scala.inline
-  def apply(
-    defaultClickThroughEventTagId: String = null,
-    overrideInheritedEventTag: js.UndefOr[Boolean] = js.undefined
-  ): SchemaDefaultClickThroughEventTagProperties = {
+  def apply(): SchemaDefaultClickThroughEventTagProperties = {
     val __obj = js.Dynamic.literal()
-    if (defaultClickThroughEventTagId != null) __obj.updateDynamic("defaultClickThroughEventTagId")(defaultClickThroughEventTagId.asInstanceOf[js.Any])
-    if (!js.isUndefined(overrideInheritedEventTag)) __obj.updateDynamic("overrideInheritedEventTag")(overrideInheritedEventTag.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDefaultClickThroughEventTagProperties]
   }
+  @scala.inline
+  implicit class SchemaDefaultClickThroughEventTagPropertiesOps[Self <: SchemaDefaultClickThroughEventTagProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultClickThroughEventTagId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultClickThroughEventTagId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultClickThroughEventTagId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultClickThroughEventTagId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverrideInheritedEventTag(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideInheritedEventTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverrideInheritedEventTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideInheritedEventTag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

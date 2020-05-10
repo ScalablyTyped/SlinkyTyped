@@ -4,40 +4,128 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GridFilterableOperatorsNumber extends js.Object {
   @JSName("eq")
-  var eq_FGridFilterableOperatorsNumber: js.UndefOr[String] = js.undefined
-  var gt: js.UndefOr[String] = js.undefined
-  var gte: js.UndefOr[String] = js.undefined
-  var isnotnull: js.UndefOr[String] = js.undefined
-  var isnull: js.UndefOr[String] = js.undefined
-  var lt: js.UndefOr[String] = js.undefined
-  var lte: js.UndefOr[String] = js.undefined
-  var neq: js.UndefOr[String] = js.undefined
+  var eq_FGridFilterableOperatorsNumber: js.UndefOr[String] = js.native
+  var gt: js.UndefOr[String] = js.native
+  var gte: js.UndefOr[String] = js.native
+  var isnotnull: js.UndefOr[String] = js.native
+  var isnull: js.UndefOr[String] = js.native
+  var lt: js.UndefOr[String] = js.native
+  var lte: js.UndefOr[String] = js.native
+  var neq: js.UndefOr[String] = js.native
 }
 
 object GridFilterableOperatorsNumber {
   @scala.inline
-  def apply(
-    eq: String = null,
-    gt: String = null,
-    gte: String = null,
-    isnotnull: String = null,
-    isnull: String = null,
-    lt: String = null,
-    lte: String = null,
-    neq: String = null
-  ): GridFilterableOperatorsNumber = {
+  def apply(): GridFilterableOperatorsNumber = {
     val __obj = js.Dynamic.literal()
-    if (eq != null) __obj.updateDynamic("eq")(eq.asInstanceOf[js.Any])
-    if (gt != null) __obj.updateDynamic("gt")(gt.asInstanceOf[js.Any])
-    if (gte != null) __obj.updateDynamic("gte")(gte.asInstanceOf[js.Any])
-    if (isnotnull != null) __obj.updateDynamic("isnotnull")(isnotnull.asInstanceOf[js.Any])
-    if (isnull != null) __obj.updateDynamic("isnull")(isnull.asInstanceOf[js.Any])
-    if (lt != null) __obj.updateDynamic("lt")(lt.asInstanceOf[js.Any])
-    if (lte != null) __obj.updateDynamic("lte")(lte.asInstanceOf[js.Any])
-    if (neq != null) __obj.updateDynamic("neq")(neq.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridFilterableOperatorsNumber]
   }
+  @scala.inline
+  implicit class GridFilterableOperatorsNumberOps[Self <: GridFilterableOperatorsNumber] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEq(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eq")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEq: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eq")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGt(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGte(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gte")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGte: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gte")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsnotnull(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isnotnull")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsnotnull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isnotnull")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsnull(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isnull")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsnull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isnull")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLt(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLte(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lte")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLte: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lte")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeq(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("neq")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeq: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("neq")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

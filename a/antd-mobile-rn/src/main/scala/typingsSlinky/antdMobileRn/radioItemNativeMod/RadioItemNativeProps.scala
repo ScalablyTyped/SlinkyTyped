@@ -1,6 +1,5 @@
 package typingsSlinky.antdMobileRn.radioItemNativeMod
 
-import typingsSlinky.antdMobileRn.AnonTarget
 import typingsSlinky.antdMobileRn.radioPropsTypeMod.RadioItemPropsType
 import typingsSlinky.antdMobileRn.radioStyleIndexNativeMod.IRadioStyle
 import typingsSlinky.reactNative.mod.ImageStyle
@@ -10,40 +9,74 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RadioItemNativeProps extends RadioItemPropsType {
-  var radioStyle: js.UndefOr[StyleProp[ImageStyle]] = js.undefined
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  var styles: js.UndefOr[IRadioStyle] = js.undefined
+  var radioStyle: js.UndefOr[StyleProp[ImageStyle]] = js.native
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var styles: js.UndefOr[IRadioStyle] = js.native
 }
 
 object RadioItemNativeProps {
   @scala.inline
-  def apply(
-    checked: js.UndefOr[Boolean] = js.undefined,
-    defaultChecked: js.UndefOr[Boolean] = js.undefined,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    onChange: /* e */ AnonTarget => Unit = null,
-    onClick: () => _ = null,
-    radioProps: js.Object = null,
-    radioStyle: StyleProp[ImageStyle] = null,
-    style: StyleProp[ViewStyle] = null,
-    styles: IRadioStyle = null,
-    wrapLabel: js.UndefOr[Boolean] = js.undefined
-  ): RadioItemNativeProps = {
+  def apply(): RadioItemNativeProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(checked)) __obj.updateDynamic("checked")(checked.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultChecked)) __obj.updateDynamic("defaultChecked")(defaultChecked.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction0(onClick))
-    if (radioProps != null) __obj.updateDynamic("radioProps")(radioProps.asInstanceOf[js.Any])
-    if (radioStyle != null) __obj.updateDynamic("radioStyle")(radioStyle.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrapLabel)) __obj.updateDynamic("wrapLabel")(wrapLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[RadioItemNativeProps]
   }
+  @scala.inline
+  implicit class RadioItemNativePropsOps[Self <: RadioItemNativeProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRadioStyle(value: StyleProp[ImageStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radioStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadioStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radioStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadioStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radioStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
+        ret
+    }
+    @scala.inline
+    def withStyles(value: IRadioStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

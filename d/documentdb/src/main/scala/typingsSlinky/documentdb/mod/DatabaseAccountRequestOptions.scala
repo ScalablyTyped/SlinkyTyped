@@ -1,49 +1,40 @@
 package typingsSlinky.documentdb.mod
 
-import typingsSlinky.documentdb.AnonCondition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DatabaseAccountRequestOptions extends RequestOptions {
   /** The endpoint url whose database account needs to be retrieved. If not present, current client's url will be used. */
-  var urlConnection: js.UndefOr[String] = js.undefined
+  var urlConnection: js.UndefOr[String] = js.native
 }
 
 object DatabaseAccountRequestOptions {
   @scala.inline
-  def apply(
-    accessCondition: AnonCondition = null,
-    consistencyLevel: String = null,
-    enableCrossPartitionQuery: js.UndefOr[Boolean] = js.undefined,
-    indexingDirective: String = null,
-    maxDegreeOfParallelism: js.UndefOr[Boolean] = js.undefined,
-    offerThroughput: Int | Double = null,
-    offerType: String = null,
-    partitionKey: String | js.Array[String] = null,
-    populateQuotaInfo: js.UndefOr[Boolean] = js.undefined,
-    postTriggerInclude: String = null,
-    preTriggerInclude: String = null,
-    resourceTokenExpirySeconds: Int | Double = null,
-    sessionToken: String = null,
-    urlConnection: String = null
-  ): DatabaseAccountRequestOptions = {
+  def apply(): DatabaseAccountRequestOptions = {
     val __obj = js.Dynamic.literal()
-    if (accessCondition != null) __obj.updateDynamic("accessCondition")(accessCondition.asInstanceOf[js.Any])
-    if (consistencyLevel != null) __obj.updateDynamic("consistencyLevel")(consistencyLevel.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableCrossPartitionQuery)) __obj.updateDynamic("enableCrossPartitionQuery")(enableCrossPartitionQuery.asInstanceOf[js.Any])
-    if (indexingDirective != null) __obj.updateDynamic("indexingDirective")(indexingDirective.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxDegreeOfParallelism)) __obj.updateDynamic("maxDegreeOfParallelism")(maxDegreeOfParallelism.asInstanceOf[js.Any])
-    if (offerThroughput != null) __obj.updateDynamic("offerThroughput")(offerThroughput.asInstanceOf[js.Any])
-    if (offerType != null) __obj.updateDynamic("offerType")(offerType.asInstanceOf[js.Any])
-    if (partitionKey != null) __obj.updateDynamic("partitionKey")(partitionKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(populateQuotaInfo)) __obj.updateDynamic("populateQuotaInfo")(populateQuotaInfo.asInstanceOf[js.Any])
-    if (postTriggerInclude != null) __obj.updateDynamic("postTriggerInclude")(postTriggerInclude.asInstanceOf[js.Any])
-    if (preTriggerInclude != null) __obj.updateDynamic("preTriggerInclude")(preTriggerInclude.asInstanceOf[js.Any])
-    if (resourceTokenExpirySeconds != null) __obj.updateDynamic("resourceTokenExpirySeconds")(resourceTokenExpirySeconds.asInstanceOf[js.Any])
-    if (sessionToken != null) __obj.updateDynamic("sessionToken")(sessionToken.asInstanceOf[js.Any])
-    if (urlConnection != null) __obj.updateDynamic("urlConnection")(urlConnection.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatabaseAccountRequestOptions]
   }
+  @scala.inline
+  implicit class DatabaseAccountRequestOptionsOps[Self <: DatabaseAccountRequestOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUrlConnection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlConnection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrlConnection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlConnection")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

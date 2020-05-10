@@ -13,12 +13,10 @@ trait XummQrQuality extends js.Object
 
 object XummQrQuality {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def h: typingsSlinky.xummApi.xummApiStrings.h = "h".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.h]
   @scala.inline
-  def h: typingsSlinky.xummApi.xummApiStrings.h = this.cast("h")
+  def m: typingsSlinky.xummApi.xummApiStrings.m = "m".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.m]
   @scala.inline
-  def m: typingsSlinky.xummApi.xummApiStrings.m = this.cast("m")
-  @scala.inline
-  def q: typingsSlinky.xummApi.xummApiStrings.q = this.cast("q")
+  def q: typingsSlinky.xummApi.xummApiStrings.q = "q".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.q]
 }
 

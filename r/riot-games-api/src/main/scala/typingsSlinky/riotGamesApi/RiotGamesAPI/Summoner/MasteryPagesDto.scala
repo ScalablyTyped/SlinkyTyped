@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MasteryPagesDto extends js.Object {
-  var pages: js.Array[MasteryPageDto]
-  var summonerId: Double
+  var pages: js.Array[MasteryPageDto] = js.native
+  var summonerId: Double = js.native
 }
 
 object MasteryPagesDto {
   @scala.inline
   def apply(pages: js.Array[MasteryPageDto], summonerId: Double): MasteryPagesDto = {
     val __obj = js.Dynamic.literal(pages = pages.asInstanceOf[js.Any], summonerId = summonerId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[MasteryPagesDto]
   }
+  @scala.inline
+  implicit class MasteryPagesDtoOps[Self <: MasteryPagesDto] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPages(value: js.Array[MasteryPageDto]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSummonerId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summonerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

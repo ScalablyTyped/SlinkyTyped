@@ -5,60 +5,218 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SingleColumnMenuOptions extends js.Object {
-  var cancelable: js.UndefOr[Boolean] = js.undefined
-  var continueOnSubmit: js.UndefOr[Boolean] = js.undefined
-  var exitOnUnexpectedKey: js.UndefOr[Boolean] = js.undefined
-  var extraLines: js.UndefOr[Double] = js.undefined
-  var itemMaxWidth: js.UndefOr[Double] = js.undefined
-  var keyBindings: js.UndefOr[StringDictionary[String]] = js.undefined
-  var leftPadding: js.UndefOr[String] = js.undefined
-  var oneLineItem: js.UndefOr[Boolean] = js.undefined
-  var selectedIndex: js.UndefOr[Double] = js.undefined
-  var selectedLeftPadding: js.UndefOr[String] = js.undefined
-  var selectedStyle: js.UndefOr[CTerminal] = js.undefined
-  var style: js.UndefOr[CTerminal] = js.undefined
-  var submittedLeftPadding: js.UndefOr[String] = js.undefined
-  var submittedStyle: js.UndefOr[CTerminal] = js.undefined
-  var y: js.UndefOr[Double] = js.undefined
+  var cancelable: js.UndefOr[Boolean] = js.native
+  var continueOnSubmit: js.UndefOr[Boolean] = js.native
+  var exitOnUnexpectedKey: js.UndefOr[Boolean] = js.native
+  var extraLines: js.UndefOr[Double] = js.native
+  var itemMaxWidth: js.UndefOr[Double] = js.native
+  var keyBindings: js.UndefOr[StringDictionary[String]] = js.native
+  var leftPadding: js.UndefOr[String] = js.native
+  var oneLineItem: js.UndefOr[Boolean] = js.native
+  var selectedIndex: js.UndefOr[Double] = js.native
+  var selectedLeftPadding: js.UndefOr[String] = js.native
+  var selectedStyle: js.UndefOr[CTerminal] = js.native
+  var style: js.UndefOr[CTerminal] = js.native
+  var submittedLeftPadding: js.UndefOr[String] = js.native
+  var submittedStyle: js.UndefOr[CTerminal] = js.native
+  var y: js.UndefOr[Double] = js.native
 }
 
 object SingleColumnMenuOptions {
   @scala.inline
-  def apply(
-    cancelable: js.UndefOr[Boolean] = js.undefined,
-    continueOnSubmit: js.UndefOr[Boolean] = js.undefined,
-    exitOnUnexpectedKey: js.UndefOr[Boolean] = js.undefined,
-    extraLines: Int | Double = null,
-    itemMaxWidth: Int | Double = null,
-    keyBindings: StringDictionary[String] = null,
-    leftPadding: String = null,
-    oneLineItem: js.UndefOr[Boolean] = js.undefined,
-    selectedIndex: Int | Double = null,
-    selectedLeftPadding: String = null,
-    selectedStyle: CTerminal = null,
-    style: CTerminal = null,
-    submittedLeftPadding: String = null,
-    submittedStyle: CTerminal = null,
-    y: Int | Double = null
-  ): SingleColumnMenuOptions = {
+  def apply(): SingleColumnMenuOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.asInstanceOf[js.Any])
-    if (!js.isUndefined(continueOnSubmit)) __obj.updateDynamic("continueOnSubmit")(continueOnSubmit.asInstanceOf[js.Any])
-    if (!js.isUndefined(exitOnUnexpectedKey)) __obj.updateDynamic("exitOnUnexpectedKey")(exitOnUnexpectedKey.asInstanceOf[js.Any])
-    if (extraLines != null) __obj.updateDynamic("extraLines")(extraLines.asInstanceOf[js.Any])
-    if (itemMaxWidth != null) __obj.updateDynamic("itemMaxWidth")(itemMaxWidth.asInstanceOf[js.Any])
-    if (keyBindings != null) __obj.updateDynamic("keyBindings")(keyBindings.asInstanceOf[js.Any])
-    if (leftPadding != null) __obj.updateDynamic("leftPadding")(leftPadding.asInstanceOf[js.Any])
-    if (!js.isUndefined(oneLineItem)) __obj.updateDynamic("oneLineItem")(oneLineItem.asInstanceOf[js.Any])
-    if (selectedIndex != null) __obj.updateDynamic("selectedIndex")(selectedIndex.asInstanceOf[js.Any])
-    if (selectedLeftPadding != null) __obj.updateDynamic("selectedLeftPadding")(selectedLeftPadding.asInstanceOf[js.Any])
-    if (selectedStyle != null) __obj.updateDynamic("selectedStyle")(selectedStyle.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (submittedLeftPadding != null) __obj.updateDynamic("submittedLeftPadding")(submittedLeftPadding.asInstanceOf[js.Any])
-    if (submittedStyle != null) __obj.updateDynamic("submittedStyle")(submittedStyle.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[SingleColumnMenuOptions]
   }
+  @scala.inline
+  implicit class SingleColumnMenuOptionsOps[Self <: SingleColumnMenuOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCancelable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContinueOnSubmit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continueOnSubmit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinueOnSubmit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continueOnSubmit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExitOnUnexpectedKey(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitOnUnexpectedKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExitOnUnexpectedKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitOnUnexpectedKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtraLines(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtraLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemMaxWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemMaxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemMaxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemMaxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyBindings(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyBindings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyBindings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyBindings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeftPadding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftPadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeftPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftPadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOneLineItem(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oneLineItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOneLineItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oneLineItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedLeftPadding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedLeftPadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedLeftPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedLeftPadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedStyle(value: CTerminal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CTerminal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubmittedLeftPadding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submittedLeftPadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubmittedLeftPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submittedLeftPadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubmittedStyle(value: CTerminal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submittedStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubmittedStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submittedStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -30,10 +30,29 @@ trait SchemaGoogleCloudHealthcareV1alphaGcsSource extends js.Object {
 
 object SchemaGoogleCloudHealthcareV1alphaGcsSource {
   @scala.inline
-  def apply(contentUri: String = null): SchemaGoogleCloudHealthcareV1alphaGcsSource = {
+  def apply(): SchemaGoogleCloudHealthcareV1alphaGcsSource = {
     val __obj = js.Dynamic.literal()
-    if (contentUri != null) __obj.updateDynamic("contentUri")(contentUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudHealthcareV1alphaGcsSource]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudHealthcareV1alphaGcsSourceOps[Self <: SchemaGoogleCloudHealthcareV1alphaGcsSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentUri")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

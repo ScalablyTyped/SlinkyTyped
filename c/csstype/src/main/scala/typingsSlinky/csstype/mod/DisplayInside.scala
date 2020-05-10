@@ -19,24 +19,22 @@ trait DisplayInside extends _DisplayProperty
 
 object DisplayInside {
   @scala.inline
-  def `-ms-flexbox`: typingsSlinky.csstype.csstypeStrings.`-ms-flexbox` = this.cast("-ms-flexbox")
+  def `-ms-flexbox`: typingsSlinky.csstype.csstypeStrings.`-ms-flexbox` = "-ms-flexbox".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-ms-flexbox`]
   @scala.inline
-  def `-ms-grid`: typingsSlinky.csstype.csstypeStrings.`-ms-grid` = this.cast("-ms-grid")
+  def `-ms-grid`: typingsSlinky.csstype.csstypeStrings.`-ms-grid` = "-ms-grid".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-ms-grid`]
   @scala.inline
-  def `-webkit-flex`: typingsSlinky.csstype.csstypeStrings.`-webkit-flex` = this.cast("-webkit-flex")
+  def `-webkit-flex`: typingsSlinky.csstype.csstypeStrings.`-webkit-flex` = "-webkit-flex".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-webkit-flex`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def flex: typingsSlinky.csstype.csstypeStrings.flex = "flex".asInstanceOf[typingsSlinky.csstype.csstypeStrings.flex]
   @scala.inline
-  def flex: typingsSlinky.csstype.csstypeStrings.flex = this.cast("flex")
+  def flow: typingsSlinky.csstype.csstypeStrings.flow = "flow".asInstanceOf[typingsSlinky.csstype.csstypeStrings.flow]
   @scala.inline
-  def flow: typingsSlinky.csstype.csstypeStrings.flow = this.cast("flow")
+  def `flow-root`: typingsSlinky.csstype.csstypeStrings.`flow-root` = "flow-root".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`flow-root`]
   @scala.inline
-  def `flow-root`: typingsSlinky.csstype.csstypeStrings.`flow-root` = this.cast("flow-root")
+  def grid: typingsSlinky.csstype.csstypeStrings.grid = "grid".asInstanceOf[typingsSlinky.csstype.csstypeStrings.grid]
   @scala.inline
-  def grid: typingsSlinky.csstype.csstypeStrings.grid = this.cast("grid")
+  def ruby: typingsSlinky.csstype.csstypeStrings.ruby = "ruby".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ruby]
   @scala.inline
-  def ruby: typingsSlinky.csstype.csstypeStrings.ruby = this.cast("ruby")
-  @scala.inline
-  def table: typingsSlinky.csstype.csstypeStrings.table = this.cast("table")
+  def table: typingsSlinky.csstype.csstypeStrings.table = "table".asInstanceOf[typingsSlinky.csstype.csstypeStrings.table]
 }
 

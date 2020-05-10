@@ -14,14 +14,12 @@ trait Theme extends js.Object
 
 object Theme {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dark: typingsSlinky.mermaid.mermaidStrings.dark = "dark".asInstanceOf[typingsSlinky.mermaid.mermaidStrings.dark]
   @scala.inline
-  def dark: typingsSlinky.mermaid.mermaidStrings.dark = this.cast("dark")
+  def default: typingsSlinky.mermaid.mermaidStrings.default = "default".asInstanceOf[typingsSlinky.mermaid.mermaidStrings.default]
   @scala.inline
-  def default: typingsSlinky.mermaid.mermaidStrings.default = this.cast("default")
+  def forest: typingsSlinky.mermaid.mermaidStrings.forest = "forest".asInstanceOf[typingsSlinky.mermaid.mermaidStrings.forest]
   @scala.inline
-  def forest: typingsSlinky.mermaid.mermaidStrings.forest = this.cast("forest")
-  @scala.inline
-  def neutral: typingsSlinky.mermaid.mermaidStrings.neutral = this.cast("neutral")
+  def neutral: typingsSlinky.mermaid.mermaidStrings.neutral = "neutral".asInstanceOf[typingsSlinky.mermaid.mermaidStrings.neutral]
 }
 

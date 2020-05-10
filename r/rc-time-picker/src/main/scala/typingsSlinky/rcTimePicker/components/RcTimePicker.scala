@@ -1,11 +1,9 @@
 package typingsSlinky.rcTimePicker.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.rcTimePicker.AnonOpen
 import typingsSlinky.rcTimePicker.PartialTimePickerProps
@@ -14,80 +12,90 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RcTimePicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object RcTimePicker {
   @JSImport("rc-time-picker", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, id, open, placeholder */
-  def apply(
-    addon: PartialTimePickerProps => ReactElement = null,
-    allowEmpty: js.UndefOr[Boolean] = js.undefined,
-    clearIcon: TagMod[Any] = null,
-    clearText: String = null,
-    defaultOpenValue: Moment = null,
-    defaultValue: Moment = null,
-    disabledHours: () => js.Array[Double] = null,
-    disabledMinutes: /* hour */ Double => js.Array[Double] = null,
-    disabledSeconds: (/* hour */ Double, /* minute */ Double) => js.Array[Double] = null,
-    focusOnOpen: js.UndefOr[Boolean] = js.undefined,
-    format: String = null,
-    hideDisabledOptions: js.UndefOr[Boolean] = js.undefined,
-    hourStep: Int | Double = null,
-    inputIcon: TagMod[Any] = null,
-    inputReadOnly: js.UndefOr[Boolean] = js.undefined,
-    minuteStep: Int | Double = null,
-    onChange: /* value */ Moment => Unit = null,
-    onClose: /* state */ AnonOpen => Unit = null,
-    onOpen: /* state */ AnonOpen => Unit = null,
-    placement: String = null,
-    popupClassName: String = null,
-    prefixCls: String = null,
-    secondStep: Int | Double = null,
-    showHour: js.UndefOr[Boolean] = js.undefined,
-    showMinute: js.UndefOr[Boolean] = js.undefined,
-    showSecond: js.UndefOr[Boolean] = js.undefined,
-    transitionName: String = null,
-    use12Hours: js.UndefOr[Boolean] = js.undefined,
-    value: Moment = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal()
-    if (addon != null) __obj.updateDynamic("addon")(js.Any.fromFunction1(addon))
-    if (!js.isUndefined(allowEmpty)) __obj.updateDynamic("allowEmpty")(allowEmpty.asInstanceOf[js.Any])
-    if (clearIcon != null) __obj.updateDynamic("clearIcon")(clearIcon.asInstanceOf[js.Any])
-    if (clearText != null) __obj.updateDynamic("clearText")(clearText.asInstanceOf[js.Any])
-    if (defaultOpenValue != null) __obj.updateDynamic("defaultOpenValue")(defaultOpenValue.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (disabledHours != null) __obj.updateDynamic("disabledHours")(js.Any.fromFunction0(disabledHours))
-    if (disabledMinutes != null) __obj.updateDynamic("disabledMinutes")(js.Any.fromFunction1(disabledMinutes))
-    if (disabledSeconds != null) __obj.updateDynamic("disabledSeconds")(js.Any.fromFunction2(disabledSeconds))
-    if (!js.isUndefined(focusOnOpen)) __obj.updateDynamic("focusOnOpen")(focusOnOpen.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideDisabledOptions)) __obj.updateDynamic("hideDisabledOptions")(hideDisabledOptions.asInstanceOf[js.Any])
-    if (hourStep != null) __obj.updateDynamic("hourStep")(hourStep.asInstanceOf[js.Any])
-    if (inputIcon != null) __obj.updateDynamic("inputIcon")(inputIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(inputReadOnly)) __obj.updateDynamic("inputReadOnly")(inputReadOnly.asInstanceOf[js.Any])
-    if (minuteStep != null) __obj.updateDynamic("minuteStep")(minuteStep.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
-    if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction1(onOpen))
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (popupClassName != null) __obj.updateDynamic("popupClassName")(popupClassName.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (secondStep != null) __obj.updateDynamic("secondStep")(secondStep.asInstanceOf[js.Any])
-    if (!js.isUndefined(showHour)) __obj.updateDynamic("showHour")(showHour.asInstanceOf[js.Any])
-    if (!js.isUndefined(showMinute)) __obj.updateDynamic("showMinute")(showMinute.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSecond)) __obj.updateDynamic("showSecond")(showSecond.asInstanceOf[js.Any])
-    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
-    if (!js.isUndefined(use12Hours)) __obj.updateDynamic("use12Hours")(use12Hours.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def addon(value: PartialTimePickerProps => ReactElement): this.type = set("addon", js.Any.fromFunction1(value))
+    @scala.inline
+    def allowEmpty(value: Boolean): this.type = set("allowEmpty", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clearIconReactElement(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clearIcon(value: TagMod[Any]): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clearText(value: String): this.type = set("clearText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultOpenValue(value: Moment): this.type = set("defaultOpenValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: Moment): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledHours(value: () => js.Array[Double]): this.type = set("disabledHours", js.Any.fromFunction0(value))
+    @scala.inline
+    def disabledMinutes(value: /* hour */ Double => js.Array[Double]): this.type = set("disabledMinutes", js.Any.fromFunction1(value))
+    @scala.inline
+    def disabledSeconds(value: (/* hour */ Double, /* minute */ Double) => js.Array[Double]): this.type = set("disabledSeconds", js.Any.fromFunction2(value))
+    @scala.inline
+    def focusOnOpen(value: Boolean): this.type = set("focusOnOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def format(value: String): this.type = set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hideDisabledOptions(value: Boolean): this.type = set("hideDisabledOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hourStep(value: Double): this.type = set("hourStep", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputIconReactElement(value: ReactElement): this.type = set("inputIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputIcon(value: TagMod[Any]): this.type = set("inputIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputReadOnly(value: Boolean): this.type = set("inputReadOnly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minuteStep(value: Double): this.type = set("minuteStep", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* value */ Moment => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClose(value: /* state */ AnonOpen => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    @scala.inline
+    def onOpen(value: /* state */ AnonOpen => Unit): this.type = set("onOpen", js.Any.fromFunction1(value))
+    @scala.inline
+    def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placement(value: String): this.type = set("placement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popupClassName(value: String): this.type = set("popupClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def secondStep(value: Double): this.type = set("secondStep", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showHour(value: Boolean): this.type = set("showHour", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showMinute(value: Boolean): this.type = set("showMinute", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showSecond(value: Boolean): this.type = set("showSecond", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def use12Hours(value: Boolean): this.type = set("use12Hours", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: Moment): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, ^] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.rcTimePicker.mod.^](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PartialTimePickerProps
+  
+  def withProps(p: PartialTimePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: RcTimePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

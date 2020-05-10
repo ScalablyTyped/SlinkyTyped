@@ -9,21 +9,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonExclusiveBoolean extends js.Object {
-  var exclusive: js.UndefOr[Boolean] = js.undefined
-  var invalidate: js.UndefOr[never | surround | overlap | inside | touch] = js.undefined
+  var exclusive: js.UndefOr[Boolean] = js.native
+  var invalidate: js.UndefOr[never | surround | overlap | inside | touch] = js.native
 }
 
 object AnonExclusiveBoolean {
   @scala.inline
-  def apply(
-    exclusive: js.UndefOr[Boolean] = js.undefined,
-    invalidate: never | surround | overlap | inside | touch = null
-  ): AnonExclusiveBoolean = {
+  def apply(): AnonExclusiveBoolean = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(exclusive)) __obj.updateDynamic("exclusive")(exclusive.asInstanceOf[js.Any])
-    if (invalidate != null) __obj.updateDynamic("invalidate")(invalidate.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonExclusiveBoolean]
   }
+  @scala.inline
+  implicit class AnonExclusiveBooleanOps[Self <: AnonExclusiveBoolean] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExclusive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclusive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvalidate(value: never | surround | overlap | inside | touch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvalidate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

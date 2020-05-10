@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IHtmlUtilities extends js.Object {
-  def convertToText(html: String): String
+  def convertToText(html: String): String = js.native
 }
 
 object IHtmlUtilities {
   @scala.inline
   def apply(convertToText: String => String): IHtmlUtilities = {
     val __obj = js.Dynamic.literal(convertToText = js.Any.fromFunction1(convertToText))
-  
     __obj.asInstanceOf[IHtmlUtilities]
   }
+  @scala.inline
+  implicit class IHtmlUtilitiesOps[Self <: IHtmlUtilities] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConvertToText(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertToText")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

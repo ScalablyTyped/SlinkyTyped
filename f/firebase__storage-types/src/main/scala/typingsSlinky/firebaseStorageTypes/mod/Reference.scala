@@ -1,9 +1,7 @@
 package typingsSlinky.firebaseStorageTypes.mod
 
+import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.Storage
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.Blob
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,12 +21,12 @@ trait Reference extends js.Object {
   def list(): js.Promise[ListResult] = js.native
   def list(options: ListOptions): js.Promise[ListResult] = js.native
   def listAll(): js.Promise[ListResult] = js.native
-  def put(data: ArrayBuffer): UploadTask = js.native
-  def put(data: ArrayBuffer, metadata: UploadMetadata): UploadTask = js.native
+  def put(data: js.typedarray.ArrayBuffer): UploadTask = js.native
+  def put(data: js.typedarray.ArrayBuffer, metadata: UploadMetadata): UploadTask = js.native
   def put(data: Blob): UploadTask = js.native
   def put(data: Blob, metadata: UploadMetadata): UploadTask = js.native
-  def put(data: Uint8Array): UploadTask = js.native
-  def put(data: Uint8Array, metadata: UploadMetadata): UploadTask = js.native
+  def put(data: js.typedarray.Uint8Array): UploadTask = js.native
+  def put(data: js.typedarray.Uint8Array, metadata: UploadMetadata): UploadTask = js.native
   def putString(data: String): UploadTask = js.native
   def putString(data: String, format: StringFormat): UploadTask = js.native
   def putString(data: String, format: StringFormat, metadata: UploadMetadata): UploadTask = js.native

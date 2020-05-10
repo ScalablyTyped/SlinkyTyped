@@ -4,38 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CreateCollectionRequest extends js.Object {
   // text describing the collection
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   // configuration for event data
-  var event_time_info: js.UndefOr[EventTimeInfo] = js.undefined
+  var event_time_info: js.UndefOr[EventTimeInfo] = js.native
   // list of mappings
-  var field_mappings: js.UndefOr[js.Array[FieldMappingV2]] = js.undefined
+  var field_mappings: js.UndefOr[js.Array[FieldMappingV2]] = js.native
   // unique identifer for collection, can contain alphanumeric or dash characters
-  var name: String
+  var name: String = js.native
   // number of seconds after which data is purged, based on event time
-  var retention_secs: js.UndefOr[Double] = js.undefined
+  var retention_secs: js.UndefOr[Double] = js.native
   // list of sources from which to ingest data
-  var sources: js.UndefOr[js.Array[Source]] = js.undefined
+  var sources: js.UndefOr[js.Array[Source]] = js.native
 }
 
 object CreateCollectionRequest {
   @scala.inline
-  def apply(
-    name: String,
-    description: String = null,
-    event_time_info: EventTimeInfo = null,
-    field_mappings: js.Array[FieldMappingV2] = null,
-    retention_secs: Int | Double = null,
-    sources: js.Array[Source] = null
-  ): CreateCollectionRequest = {
+  def apply(name: String): CreateCollectionRequest = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (event_time_info != null) __obj.updateDynamic("event_time_info")(event_time_info.asInstanceOf[js.Any])
-    if (field_mappings != null) __obj.updateDynamic("field_mappings")(field_mappings.asInstanceOf[js.Any])
-    if (retention_secs != null) __obj.updateDynamic("retention_secs")(retention_secs.asInstanceOf[js.Any])
-    if (sources != null) __obj.updateDynamic("sources")(sources.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateCollectionRequest]
   }
+  @scala.inline
+  implicit class CreateCollectionRequestOps[Self <: CreateCollectionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvent_time_info(value: EventTimeInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event_time_info")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvent_time_info: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event_time_info")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withField_mappings(value: js.Array[FieldMappingV2]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field_mappings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutField_mappings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field_mappings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetention_secs(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retention_secs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetention_secs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retention_secs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSources(value: js.Array[Source]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

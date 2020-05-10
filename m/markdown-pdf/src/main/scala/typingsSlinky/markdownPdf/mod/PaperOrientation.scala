@@ -12,10 +12,8 @@ trait PaperOrientation extends js.Object
 
 object PaperOrientation {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def landscape: typingsSlinky.markdownPdf.markdownPdfStrings.landscape = "landscape".asInstanceOf[typingsSlinky.markdownPdf.markdownPdfStrings.landscape]
   @scala.inline
-  def landscape: typingsSlinky.markdownPdf.markdownPdfStrings.landscape = this.cast("landscape")
-  @scala.inline
-  def portait: typingsSlinky.markdownPdf.markdownPdfStrings.portait = this.cast("portait")
+  def portait: typingsSlinky.markdownPdf.markdownPdfStrings.portait = "portait".asInstanceOf[typingsSlinky.markdownPdf.markdownPdfStrings.portait]
 }
 

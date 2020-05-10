@@ -35,20 +35,77 @@ trait SchemaReplicaStatus extends js.Object {
 
 object SchemaReplicaStatus {
   @scala.inline
-  def apply(
-    details: String = null,
-    state: String = null,
-    templateVersion: String = null,
-    vmLink: String = null,
-    vmStartTime: String = null
-  ): SchemaReplicaStatus = {
+  def apply(): SchemaReplicaStatus = {
     val __obj = js.Dynamic.literal()
-    if (details != null) __obj.updateDynamic("details")(details.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
-    if (templateVersion != null) __obj.updateDynamic("templateVersion")(templateVersion.asInstanceOf[js.Any])
-    if (vmLink != null) __obj.updateDynamic("vmLink")(vmLink.asInstanceOf[js.Any])
-    if (vmStartTime != null) __obj.updateDynamic("vmStartTime")(vmStartTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReplicaStatus]
   }
+  @scala.inline
+  implicit class SchemaReplicaStatusOps[Self <: SchemaReplicaStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDetails(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVmLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVmLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVmStartTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVmStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmStartTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

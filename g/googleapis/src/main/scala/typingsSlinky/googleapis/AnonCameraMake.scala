@@ -31,52 +31,269 @@ trait AnonCameraMake extends js.Object {
 
 object AnonCameraMake {
   @scala.inline
-  def apply(
-    aperture: Int | Double = null,
-    cameraMake: String = null,
-    cameraModel: String = null,
-    colorSpace: String = null,
-    exposureBias: Int | Double = null,
-    exposureMode: String = null,
-    exposureTime: Int | Double = null,
-    flashUsed: js.UndefOr[Boolean] = js.undefined,
-    focalLength: Int | Double = null,
-    height: Int | Double = null,
-    isoSpeed: Int | Double = null,
-    lens: String = null,
-    location: AnonAltitude = null,
-    maxApertureValue: Int | Double = null,
-    meteringMode: String = null,
-    rotation: Int | Double = null,
-    sensor: String = null,
-    subjectDistance: Int | Double = null,
-    time: String = null,
-    whiteBalance: String = null,
-    width: Int | Double = null
-  ): AnonCameraMake = {
+  def apply(): AnonCameraMake = {
     val __obj = js.Dynamic.literal()
-    if (aperture != null) __obj.updateDynamic("aperture")(aperture.asInstanceOf[js.Any])
-    if (cameraMake != null) __obj.updateDynamic("cameraMake")(cameraMake.asInstanceOf[js.Any])
-    if (cameraModel != null) __obj.updateDynamic("cameraModel")(cameraModel.asInstanceOf[js.Any])
-    if (colorSpace != null) __obj.updateDynamic("colorSpace")(colorSpace.asInstanceOf[js.Any])
-    if (exposureBias != null) __obj.updateDynamic("exposureBias")(exposureBias.asInstanceOf[js.Any])
-    if (exposureMode != null) __obj.updateDynamic("exposureMode")(exposureMode.asInstanceOf[js.Any])
-    if (exposureTime != null) __obj.updateDynamic("exposureTime")(exposureTime.asInstanceOf[js.Any])
-    if (!js.isUndefined(flashUsed)) __obj.updateDynamic("flashUsed")(flashUsed.asInstanceOf[js.Any])
-    if (focalLength != null) __obj.updateDynamic("focalLength")(focalLength.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (isoSpeed != null) __obj.updateDynamic("isoSpeed")(isoSpeed.asInstanceOf[js.Any])
-    if (lens != null) __obj.updateDynamic("lens")(lens.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (maxApertureValue != null) __obj.updateDynamic("maxApertureValue")(maxApertureValue.asInstanceOf[js.Any])
-    if (meteringMode != null) __obj.updateDynamic("meteringMode")(meteringMode.asInstanceOf[js.Any])
-    if (rotation != null) __obj.updateDynamic("rotation")(rotation.asInstanceOf[js.Any])
-    if (sensor != null) __obj.updateDynamic("sensor")(sensor.asInstanceOf[js.Any])
-    if (subjectDistance != null) __obj.updateDynamic("subjectDistance")(subjectDistance.asInstanceOf[js.Any])
-    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
-    if (whiteBalance != null) __obj.updateDynamic("whiteBalance")(whiteBalance.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCameraMake]
   }
+  @scala.inline
+  implicit class AnonCameraMakeOps[Self <: AnonCameraMake] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAperture(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aperture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAperture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aperture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCameraMake(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraMake")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCameraMake: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraMake")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCameraModel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCameraModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraModel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorSpace(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSpace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorSpace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSpace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExposureBias(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exposureBias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExposureBias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exposureBias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExposureMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exposureMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExposureMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exposureMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExposureTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exposureTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExposureTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exposureTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlashUsed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flashUsed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlashUsed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flashUsed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocalLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focalLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocalLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focalLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsoSpeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isoSpeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsoSpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isoSpeed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLens(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLens: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lens")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: AnonAltitude): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxApertureValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxApertureValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxApertureValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxApertureValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMeteringMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meteringMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeteringMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meteringMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSensor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sensor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSensor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sensor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubjectDistance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subjectDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubjectDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subjectDistance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhiteBalance(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whiteBalance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhiteBalance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whiteBalance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

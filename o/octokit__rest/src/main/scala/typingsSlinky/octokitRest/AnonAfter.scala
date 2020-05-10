@@ -7,10 +7,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAfter extends js.Object {
-  def after(name: String, callback: js.Function2[/* response */ Response[_], /* options */ HookOptions, Unit]): Unit
-  def before(name: String, callback: js.Function1[/* options */ HookOptions, Unit]): Unit
-  def error(name: String, callback: js.Function2[/* error */ HookError, /* options */ HookOptions, Unit]): Unit
+  def after(name: String, callback: js.Function2[/* response */ Response[_], /* options */ HookOptions, Unit]): Unit = js.native
+  def before(name: String, callback: js.Function1[/* options */ HookOptions, Unit]): Unit = js.native
+  def error(name: String, callback: js.Function2[/* error */ HookError, /* options */ HookOptions, Unit]): Unit = js.native
   def wrap(
     name: String,
     callback: js.Function2[
@@ -18,7 +19,7 @@ trait AnonAfter extends js.Object {
       /* options */ HookOptions, 
       Unit
     ]
-  ): Unit
+  ): Unit = js.native
 }
 
 object AnonAfter {
@@ -34,8 +35,45 @@ object AnonAfter {
     ]) => Unit
   ): AnonAfter = {
     val __obj = js.Dynamic.literal(after = js.Any.fromFunction2(after), before = js.Any.fromFunction2(before), error = js.Any.fromFunction2(error), wrap = js.Any.fromFunction2(wrap))
-  
     __obj.asInstanceOf[AnonAfter]
   }
+  @scala.inline
+  implicit class AnonAfterOps[Self <: AnonAfter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfter(value: (String, js.Function2[/* response */ Response[_], /* options */ HookOptions, Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withBefore(value: (String, js.Function1[/* options */ HookOptions, Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withError(value: (String, js.Function2[/* error */ HookError, /* options */ HookOptions, Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withWrap(
+      value: (String, js.Function2[
+          /* request */ js.Function1[/* options */ HookOptions, js.Promise[Response[_]]], 
+          /* options */ HookOptions, 
+          Unit
+        ]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.powerAssert.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +12,8 @@ object throws extends js.Object {
   def apply(block: js.Function, error: js.Function1[/* err */ js.Any, Boolean]): Unit = js.native
   def apply(block: js.Function, error: js.Function1[/* err */ js.Any, Boolean], message: String): Unit = js.native
   def apply(block: js.Function, error: js.Function, message: String): Unit = js.native
-  def apply(block: js.Function, error: RegExp): Unit = js.native
-  def apply(block: js.Function, error: RegExp, message: String): Unit = js.native
+  def apply(block: js.Function, error: js.RegExp): Unit = js.native
+  def apply(block: js.Function, error: js.RegExp, message: String): Unit = js.native
   def apply(block: js.Function, message: String): Unit = js.native
 }
 

@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAccess extends js.Object {
   /**
     * Validates a request against the route's authentication access configuration, where:
@@ -16,15 +17,28 @@ trait AnonAccess extends js.Object {
     *     requires any authentication.
     * [See docs](https://hapijs.com/api/17.0.1#-requestrouteauthaccessrequest)
     */
-  def access(request: Request): Boolean
+  def access(request: Request): Boolean = js.native
 }
 
 object AnonAccess {
   @scala.inline
   def apply(access: Request => Boolean): AnonAccess = {
     val __obj = js.Dynamic.literal(access = js.Any.fromFunction1(access))
-  
     __obj.asInstanceOf[AnonAccess]
   }
+  @scala.inline
+  implicit class AnonAccessOps[Self <: AnonAccess] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccess(value: Request => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("access")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OuibounceConfig extends js.Object {
   /**
     * By default, Ouibounce will only fire once for each visitor.
@@ -16,11 +17,11 @@ trait OuibounceConfig extends js.Object {
     * landing pages. If you enable `aggressive`, the modal will fire any
     * time the page is reloaded, for the same user.
     */
-  var aggressive: js.UndefOr[Boolean] = js.undefined
+  var aggressive: js.UndefOr[Boolean] = js.native
   /**
     * A function that will run once Ouibounce has been triggered.
     */
-  var callback: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var callback: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * Ouibounce sets a cookie by default to prevent the modal from
     * appearing more than once per user. You can add a cookie domain
@@ -30,7 +31,7 @@ trait OuibounceConfig extends js.Object {
     * blog.example.com and example.com), then set a `cookieDomain` such
     * as .example.com (notice the dot in front).
     */
-  var cookieDomain: js.UndefOr[String] = js.undefined
+  var cookieDomain: js.UndefOr[String] = js.native
   /**
     * Ouibounce sets a cookie by default to prevent the modal from
     * appearing more than once per user. You can add a cookie expiration
@@ -39,11 +40,11 @@ trait OuibounceConfig extends js.Object {
     * will expire at the end of the session, which for most browsers is
     * when the browser is closed entirely.
     */
-  var cookieExpire: js.UndefOr[Double] = js.undefined
+  var cookieExpire: js.UndefOr[Double] = js.native
   /**
     * The name for the cookie.
     */
-  var cookieName: js.UndefOr[String] = js.undefined
+  var cookieName: js.UndefOr[String] = js.native
   /**
     * By default, Ouibounce will show the modal immediately. You could
     * instead configure it to wait `x` milliseconds before showing the modal.
@@ -52,7 +53,7 @@ trait OuibounceConfig extends js.Object {
     * period" for visitors instead of immediately presenting the modal
     * window.
     */
-  var delay: js.UndefOr[Double] = js.undefined
+  var delay: js.UndefOr[Double] = js.native
   /**
     * Ouibounce fires when the mouse cursor moves close to (or passes)
     * the top of the viewport. You can define how far the mouse has to be
@@ -61,11 +62,11 @@ trait OuibounceConfig extends js.Object {
     *
     * *Defaults to 20.*
     */
-  var sensitivity: js.UndefOr[Double] = js.undefined
+  var sensitivity: js.UndefOr[Double] = js.native
   /**
     * Whether the cookie should be used sitewide.
     */
-  var sitewide: js.UndefOr[Boolean] = js.undefined
+  var sitewide: js.UndefOr[Boolean] = js.native
   /**
     * By default, Ouibounce won't fire in the first second to prevent
     * false positives, as it's unlikely the user will be able to exit
@@ -73,33 +74,130 @@ trait OuibounceConfig extends js.Object {
     * of time that firing is surpressed for, you can pass in a number
     * of milliseconds to `timer`.
     */
-  var timer: js.UndefOr[Double] = js.undefined
+  var timer: js.UndefOr[Double] = js.native
 }
 
 object OuibounceConfig {
   @scala.inline
-  def apply(
-    aggressive: js.UndefOr[Boolean] = js.undefined,
-    callback: () => Unit = null,
-    cookieDomain: String = null,
-    cookieExpire: Int | Double = null,
-    cookieName: String = null,
-    delay: Int | Double = null,
-    sensitivity: Int | Double = null,
-    sitewide: js.UndefOr[Boolean] = js.undefined,
-    timer: Int | Double = null
-  ): OuibounceConfig = {
+  def apply(): OuibounceConfig = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(aggressive)) __obj.updateDynamic("aggressive")(aggressive.asInstanceOf[js.Any])
-    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction0(callback))
-    if (cookieDomain != null) __obj.updateDynamic("cookieDomain")(cookieDomain.asInstanceOf[js.Any])
-    if (cookieExpire != null) __obj.updateDynamic("cookieExpire")(cookieExpire.asInstanceOf[js.Any])
-    if (cookieName != null) __obj.updateDynamic("cookieName")(cookieName.asInstanceOf[js.Any])
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (sensitivity != null) __obj.updateDynamic("sensitivity")(sensitivity.asInstanceOf[js.Any])
-    if (!js.isUndefined(sitewide)) __obj.updateDynamic("sitewide")(sitewide.asInstanceOf[js.Any])
-    if (timer != null) __obj.updateDynamic("timer")(timer.asInstanceOf[js.Any])
     __obj.asInstanceOf[OuibounceConfig]
   }
+  @scala.inline
+  implicit class OuibounceConfigOps[Self <: OuibounceConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggressive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggressive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggressive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggressive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCallback(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCookieDomain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCookieDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCookieExpire(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieExpire")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCookieExpire: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieExpire")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCookieName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCookieName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSensitivity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sensitivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSensitivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sensitivity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSitewide(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sitewide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSitewide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sitewide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimer(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

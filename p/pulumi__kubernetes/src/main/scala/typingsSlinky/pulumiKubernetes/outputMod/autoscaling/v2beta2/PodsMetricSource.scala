@@ -9,23 +9,43 @@ import scala.scalajs.js.annotation._
   * target (for example, transactions-processed-per-second). The values will be averaged together
   * before being compared to the target value.
   */
+@js.native
 trait PodsMetricSource extends js.Object {
   /**
     * metric identifies the target metric by name and selector
     */
-  val metric: MetricIdentifier
+  val metric: MetricIdentifier = js.native
   /**
     * target specifies the target value for the given metric
     */
-  val target: MetricTarget
+  val target: MetricTarget = js.native
 }
 
 object PodsMetricSource {
   @scala.inline
   def apply(metric: MetricIdentifier, target: MetricTarget): PodsMetricSource = {
     val __obj = js.Dynamic.literal(metric = metric.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PodsMetricSource]
   }
+  @scala.inline
+  implicit class PodsMetricSourceOps[Self <: PodsMetricSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMetric(value: MetricIdentifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTarget(value: MetricTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

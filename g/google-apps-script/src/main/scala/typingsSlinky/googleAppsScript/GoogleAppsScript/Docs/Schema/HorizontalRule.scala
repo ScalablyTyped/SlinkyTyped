@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HorizontalRule extends js.Object {
-  var suggestedDeletionIds: js.UndefOr[js.Array[String]] = js.undefined
-  var suggestedInsertionIds: js.UndefOr[js.Array[String]] = js.undefined
-  var suggestedTextStyleChanges: js.UndefOr[js.Object] = js.undefined
-  var textStyle: js.UndefOr[TextStyle] = js.undefined
+  var suggestedDeletionIds: js.UndefOr[js.Array[String]] = js.native
+  var suggestedInsertionIds: js.UndefOr[js.Array[String]] = js.native
+  var suggestedTextStyleChanges: js.UndefOr[js.Object] = js.native
+  var textStyle: js.UndefOr[TextStyle] = js.native
 }
 
 object HorizontalRule {
   @scala.inline
-  def apply(
-    suggestedDeletionIds: js.Array[String] = null,
-    suggestedInsertionIds: js.Array[String] = null,
-    suggestedTextStyleChanges: js.Object = null,
-    textStyle: TextStyle = null
-  ): HorizontalRule = {
+  def apply(): HorizontalRule = {
     val __obj = js.Dynamic.literal()
-    if (suggestedDeletionIds != null) __obj.updateDynamic("suggestedDeletionIds")(suggestedDeletionIds.asInstanceOf[js.Any])
-    if (suggestedInsertionIds != null) __obj.updateDynamic("suggestedInsertionIds")(suggestedInsertionIds.asInstanceOf[js.Any])
-    if (suggestedTextStyleChanges != null) __obj.updateDynamic("suggestedTextStyleChanges")(suggestedTextStyleChanges.asInstanceOf[js.Any])
-    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[HorizontalRule]
   }
+  @scala.inline
+  implicit class HorizontalRuleOps[Self <: HorizontalRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSuggestedDeletionIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedDeletionIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedDeletionIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedDeletionIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedInsertionIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedInsertionIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedInsertionIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedInsertionIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedTextStyleChanges(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedTextStyleChanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedTextStyleChanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedTextStyleChanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextStyle(value: TextStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

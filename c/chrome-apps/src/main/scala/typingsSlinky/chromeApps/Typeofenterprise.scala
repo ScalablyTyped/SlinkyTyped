@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Typeofenterprise extends js.Object {
   // #endregion
   // #region chrome.enterprise.*
@@ -18,7 +19,7 @@ trait Typeofenterprise extends js.Object {
     * @description
     * Use the chrome.enterprise.deviceAttributes API to read device attributes.
     */
-  val deviceAttributes: TypeofdeviceAttributes
+  val deviceAttributes: TypeofdeviceAttributes = js.native
   /**
     * @requires Permissions: 'enterprise.platformKeys'
     * @requires Note: This API is only available to apps force-installed by enterprise policy.
@@ -28,15 +29,34 @@ trait Typeofenterprise extends js.Object {
     * The certificates will be managed by the platform and can be used for TLS authentication, network access or by other extension through chrome.platformKeys.
     * @see[Documentation]{@link https://developer.chrome.com/extensions/enterprise_platformKeys}
     */
-  val platformKeys: TypeofplatformKeys
+  val platformKeys: TypeofplatformKeys = js.native
 }
 
 object Typeofenterprise {
   @scala.inline
   def apply(deviceAttributes: TypeofdeviceAttributes, platformKeys: TypeofplatformKeys): Typeofenterprise = {
     val __obj = js.Dynamic.literal(deviceAttributes = deviceAttributes.asInstanceOf[js.Any], platformKeys = platformKeys.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Typeofenterprise]
   }
+  @scala.inline
+  implicit class TypeofenterpriseOps[Self <: Typeofenterprise] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceAttributes(value: TypeofdeviceAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlatformKeys(value: TypeofplatformKeys): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

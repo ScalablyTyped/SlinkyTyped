@@ -20,8 +20,27 @@ object PutEventSelectorsRequest {
   @scala.inline
   def apply(EventSelectors: EventSelectors, TrailName: String): PutEventSelectorsRequest = {
     val __obj = js.Dynamic.literal(EventSelectors = EventSelectors.asInstanceOf[js.Any], TrailName = TrailName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PutEventSelectorsRequest]
   }
+  @scala.inline
+  implicit class PutEventSelectorsRequestOps[Self <: PutEventSelectorsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventSelectors(value: EventSelectors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventSelectors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrailName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrailName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

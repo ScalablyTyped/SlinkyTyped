@@ -12,70 +12,174 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RequestOptions extends js.Object {
   /**
     * 结束的回调函数（调用成功、失败都会执行）
     */
-  var complete: js.UndefOr[js.Function1[/* result */ GeneralCallbackResult, Unit]] = js.undefined
+  var complete: js.UndefOr[js.Function1[/* result */ GeneralCallbackResult, Unit]] = js.native
   /**
     * 请求的参数
     */
-  var data: js.UndefOr[String | js.Object | scala.scalajs.js.typedarray.ArrayBuffer] = js.undefined
+  var data: js.UndefOr[String | js.Object | js.typedarray.ArrayBuffer] = js.native
   /**
     * 如果设为json，会尝试对返回的数据做一次 JSON.parse
     */
-  var dataType: js.UndefOr[String] = js.undefined
+  var dataType: js.UndefOr[String] = js.native
   /**
     * 失败的回调函数
     */
-  var fail: js.UndefOr[js.Function1[/* result */ GeneralCallbackResult, Unit]] = js.undefined
+  var fail: js.UndefOr[js.Function1[/* result */ GeneralCallbackResult, Unit]] = js.native
   /**
     * 设置请求的 header，header 中不能设置 Referer。
     */
-  var header: js.UndefOr[js.Any] = js.undefined
+  var header: js.UndefOr[js.Any] = js.native
   /**
     * 默认为 GET
     * 可以是：OPTIONS，GET，HEAD，POST，PUT，DELETE，TRACE，CONNECT
     */
-  var method: js.UndefOr[OPTIONS | GET | HEAD | POST | PUT | DELETE | TRACE | CONNECT] = js.undefined
+  var method: js.UndefOr[OPTIONS | GET | HEAD | POST | PUT | DELETE | TRACE | CONNECT] = js.native
   /**
     * 设置响应的数据类型。合法值：text、arraybuffer
     */
-  var responseType: js.UndefOr[String] = js.undefined
+  var responseType: js.UndefOr[String] = js.native
   /**
     * 成功返回的回调函数
     */
-  var success: js.UndefOr[js.Function1[/* result */ RequestSuccessCallbackResult, Unit]] = js.undefined
+  var success: js.UndefOr[js.Function1[/* result */ RequestSuccessCallbackResult, Unit]] = js.native
   /**
     * 资源url
     */
-  var url: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.native
 }
 
 object RequestOptions {
   @scala.inline
-  def apply(
-    complete: /* result */ GeneralCallbackResult => Unit = null,
-    data: String | js.Object | scala.scalajs.js.typedarray.ArrayBuffer = null,
-    dataType: String = null,
-    fail: /* result */ GeneralCallbackResult => Unit = null,
-    header: js.Any = null,
-    method: OPTIONS | GET | HEAD | POST | PUT | DELETE | TRACE | CONNECT = null,
-    responseType: String = null,
-    success: /* result */ RequestSuccessCallbackResult => Unit = null,
-    url: String = null
-  ): RequestOptions = {
+  def apply(): RequestOptions = {
     val __obj = js.Dynamic.literal()
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dataType != null) __obj.updateDynamic("dataType")(dataType.asInstanceOf[js.Any])
-    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (responseType != null) __obj.updateDynamic("responseType")(responseType.asInstanceOf[js.Any])
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestOptions]
   }
+  @scala.inline
+  implicit class RequestOptionsOps[Self <: RequestOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComplete(value: /* result */ GeneralCallbackResult => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataArrayBuffer(value: js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: String | js.Object | js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFail(value: /* result */ GeneralCallbackResult => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutFail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeader(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: OPTIONS | GET | HEAD | POST | PUT | DELETE | TRACE | CONNECT): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccess(value: /* result */ RequestSuccessCallbackResult => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,10 +12,8 @@ trait LegendDirection extends js.Object
 
 object LegendDirection {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def column: typingsSlinky.nivoLegends.nivoLegendsStrings.column = "column".asInstanceOf[typingsSlinky.nivoLegends.nivoLegendsStrings.column]
   @scala.inline
-  def column: typingsSlinky.nivoLegends.nivoLegendsStrings.column = this.cast("column")
-  @scala.inline
-  def row: typingsSlinky.nivoLegends.nivoLegendsStrings.row = this.cast("row")
+  def row: typingsSlinky.nivoLegends.nivoLegendsStrings.row = "row".asInstanceOf[typingsSlinky.nivoLegends.nivoLegendsStrings.row]
 }
 

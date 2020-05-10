@@ -29,18 +29,65 @@ trait SchemaSourceFork extends js.Object {
 
 object SchemaSourceFork {
   @scala.inline
-  def apply(
-    primary: SchemaSourceSplitShard = null,
-    primarySource: SchemaDerivedSource = null,
-    residual: SchemaSourceSplitShard = null,
-    residualSource: SchemaDerivedSource = null
-  ): SchemaSourceFork = {
+  def apply(): SchemaSourceFork = {
     val __obj = js.Dynamic.literal()
-    if (primary != null) __obj.updateDynamic("primary")(primary.asInstanceOf[js.Any])
-    if (primarySource != null) __obj.updateDynamic("primarySource")(primarySource.asInstanceOf[js.Any])
-    if (residual != null) __obj.updateDynamic("residual")(residual.asInstanceOf[js.Any])
-    if (residualSource != null) __obj.updateDynamic("residualSource")(residualSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSourceFork]
   }
+  @scala.inline
+  implicit class SchemaSourceForkOps[Self <: SchemaSourceFork] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPrimary(value: SchemaSourceSplitShard): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimarySource(value: SchemaDerivedSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primarySource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimarySource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primarySource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResidual(value: SchemaSourceSplitShard): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("residual")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResidual: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("residual")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResidualSource(value: SchemaDerivedSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("residualSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResidualSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("residualSource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

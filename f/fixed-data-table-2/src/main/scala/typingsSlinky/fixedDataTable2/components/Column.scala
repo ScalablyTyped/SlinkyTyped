@@ -1,9 +1,8 @@
 package typingsSlinky.fixedDataTable2.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.fixedDataTable2.fixedDataTable2Strings.center
 import typingsSlinky.fixedDataTable2.fixedDataTable2Strings.left
 import typingsSlinky.fixedDataTable2.fixedDataTable2Strings.right
@@ -15,49 +14,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Column
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.fixedDataTable2.mod.Column] {
+object Column {
   @JSImport("fixed-data-table-2", "Column")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    width: Double,
-    align: left | center | right = null,
-    allowCellsRecycling: js.UndefOr[Boolean] = js.undefined,
-    cell: ElementOrFunc[ColumnCellProps] = null,
-    columnKey: String | Double = null,
-    fixed: js.UndefOr[Boolean] = js.undefined,
-    fixedRight: js.UndefOr[Boolean] = js.undefined,
-    flexGrow: Int | Double = null,
-    footer: ElementOrFunc[ColumnHeaderProps] = null,
-    header: ElementOrFunc[ColumnHeaderProps] = null,
-    isReorderable: js.UndefOr[Boolean] = js.undefined,
-    isResizable: js.UndefOr[Boolean] = js.undefined,
-    maxWidth: Int | Double = null,
-    minWidth: Int | Double = null,
-    pureRendering: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.fixedDataTable2.mod.Column] = {
-    val __obj = js.Dynamic.literal(width = width.asInstanceOf[js.Any])
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowCellsRecycling)) __obj.updateDynamic("allowCellsRecycling")(allowCellsRecycling.asInstanceOf[js.Any])
-    if (cell != null) __obj.updateDynamic("cell")(cell.asInstanceOf[js.Any])
-    if (columnKey != null) __obj.updateDynamic("columnKey")(columnKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixed)) __obj.updateDynamic("fixed")(fixed.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixedRight)) __obj.updateDynamic("fixedRight")(fixedRight.asInstanceOf[js.Any])
-    if (flexGrow != null) __obj.updateDynamic("flexGrow")(flexGrow.asInstanceOf[js.Any])
-    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (!js.isUndefined(isReorderable)) __obj.updateDynamic("isReorderable")(isReorderable.asInstanceOf[js.Any])
-    if (!js.isUndefined(isResizable)) __obj.updateDynamic("isResizable")(isResizable.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(pureRendering)) __obj.updateDynamic("pureRendering")(pureRendering.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.fixedDataTable2.mod.Column] {
+    @scala.inline
+    def align(value: left | center | right): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def allowCellsRecycling(value: Boolean): this.type = set("allowCellsRecycling", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cellReactElement(value: ReactElement): this.type = set("cell", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cellFunction1(value: ColumnCellProps => String | ReactElement): this.type = set("cell", js.Any.fromFunction1(value))
+    @scala.inline
+    def cell(value: ElementOrFunc[ColumnCellProps]): this.type = set("cell", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columnKey(value: String | Double): this.type = set("columnKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fixed(value: Boolean): this.type = set("fixed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fixedRight(value: Boolean): this.type = set("fixedRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flexGrow(value: Double): this.type = set("flexGrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footerFunction1(value: ColumnHeaderProps => String | ReactElement): this.type = set("footer", js.Any.fromFunction1(value))
+    @scala.inline
+    def footer(value: ElementOrFunc[ColumnHeaderProps]): this.type = set("footer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerFunction1(value: ColumnHeaderProps => String | ReactElement): this.type = set("header", js.Any.fromFunction1(value))
+    @scala.inline
+    def header(value: ElementOrFunc[ColumnHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isReorderable(value: Boolean): this.type = set("isReorderable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isResizable(value: Boolean): this.type = set("isResizable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxWidth(value: Double): this.type = set("maxWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minWidth(value: Double): this.type = set("minWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pureRendering(value: Boolean): this.type = set("pureRendering", value.asInstanceOf[js.Any])
   }
-  type Props = ColumnProps
+  
+  def withProps(p: ColumnProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(width: Double): Builder = {
+    val __props = js.Dynamic.literal(width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ColumnProps]))
+  }
 }
 

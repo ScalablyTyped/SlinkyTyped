@@ -1,11 +1,8 @@
 package typingsSlinky.victory.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.victory.Anon1
 import typingsSlinky.victory.AnonLeft
 import typingsSlinky.victory.AnonName
-import typingsSlinky.victory.AnonXBoolean
-import typingsSlinky.victory.AnonY
 import typingsSlinky.victory.OmitBlockPropsleftright
 import typingsSlinky.victory.victoryStrings.data
 import typingsSlinky.victory.victoryStrings.horizontal
@@ -16,6 +13,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VictoryLegendProps
   extends VictorySingleLabableProps
      with VictoryCommonProps
@@ -33,7 +31,7 @@ trait VictoryLegendProps
     * text measurements, and may need to be adjusted.
     * @default <Border/>
     */
-  var borderComponent: js.UndefOr[ReactElement] = js.undefined
+  var borderComponent: js.UndefOr[ReactElement] = js.native
   /**
     * The borderPadding specifies the amount of padding that should
     * be added between the legend items and the border. This prop may be given as
@@ -41,11 +39,11 @@ trait VictoryLegendProps
     * Please note that the default width and height calculated for the border
     * component is based on approximated text measurements, so padding may need to be adjusted.
     */
-  var borderPadding: js.UndefOr[PaddingProps] = js.undefined
+  var borderPadding: js.UndefOr[PaddingProps] = js.native
   /**
     * The centerTitle boolean prop specifies whether a legend title should be centered.
     */
-  var centerTitle: js.UndefOr[Boolean] = js.undefined
+  var centerTitle: js.UndefOr[Boolean] = js.native
   /**
     * The colorScale prop defines a color scale to be applied to each data
     * symbol in VictoryLegend. This prop should be given as an array of CSS
@@ -56,43 +54,43 @@ trait VictoryLegendProps
     * Colors will repeat when there are more symbols than colors in the
     * provided colorScale.
     */
-  var colorScale: js.UndefOr[ColorScalePropType] = js.undefined
+  var colorScale: js.UndefOr[ColorScalePropType] = js.native
   /**
     * Specify data via the data prop. VictoryLegend expects data as an
     * array of objects with name (required), symbol, and labels properties.
     * The data prop must be given as an array.
     */
   @JSName("data")
-  var data_VictoryLegendProps: js.UndefOr[js.Array[AnonName]] = js.undefined
+  var data_VictoryLegendProps: js.UndefOr[js.Array[AnonName]] = js.native
   /**
     * VictoryLegend uses the standard eventKey prop to specify how event targets
     * are addressed. This prop is not commonly used.
     */
-  var eventKey: js.UndefOr[StringOrNumberOrCallback | js.Array[String]] = js.undefined
+  var eventKey: js.UndefOr[StringOrNumberOrCallback | js.Array[String]] = js.native
   /**
     * VictoryLegend uses the standard events prop.
     */
   var events: js.UndefOr[
     js.Array[EventPropTypeInterface[data | labels | parent, StringOrNumberOrCallback]]
-  ] = js.undefined
+  ] = js.native
   /**
     * VictoryLegend uses the standard externalEventMutations prop.
     */
-  var externalEventMutations: js.UndefOr[js.Array[_]] = js.undefined
+  var externalEventMutations: js.UndefOr[js.Array[_]] = js.native
   /**
     * The gutter prop defines the number of pixels between legend rows or
     * columns, depending on orientation. When orientation is horizontal,
     * gutters are between columns. When orientation is vertical, gutters
     * are the space between rows.
     */
-  var gutter: js.UndefOr[Double | AnonLeft] = js.undefined
+  var gutter: js.UndefOr[Double | AnonLeft] = js.native
   /**
     * The itemsPerRow prop determines how many items to render in each row
     * of a horizontal legend, or in each column of a vertical legend. This
     * prop should be given as an integer. When this prop is not given,
     * legend items will be rendered in a single row or column.
     */
-  var itemsPerRow: js.UndefOr[Double] = js.undefined
+  var itemsPerRow: js.UndefOr[Double] = js.native
   /**
     * The orientation prop takes a string that defines whether legend data
     * are displayed in a row or column. When orientation is "horizontal",
@@ -103,14 +101,14 @@ trait VictoryLegendProps
     * displaying many series of data.
     * @default 'vertical'
     */
-  var orientation: js.UndefOr[horizontal | vertical] = js.undefined
+  var orientation: js.UndefOr[horizontal | vertical] = js.native
   /**
     * The rowGutter prop defines the number of pixels between legend rows.
     * This prop may be given as a number, or as an object with values
     * specified for “top” and “bottom” gutters. To set spacing between columns,
     * use the gutter prop.
     */
-  var rowGutter: js.UndefOr[Double | OmitBlockPropsleftright] = js.undefined
+  var rowGutter: js.UndefOr[Double | OmitBlockPropsleftright] = js.native
   /**
     * The style prop defines the style of the VictoryLegend component.
     * The style prop should be given as an object with styles defined for data, labels and
@@ -118,17 +116,17 @@ trait VictoryLegendProps
     * padding should be specified via props as they determine relative
     * layout for components in VictoryLegend.
     */
-  var style: js.UndefOr[VictoryStyleInterface] = js.undefined
+  var style: js.UndefOr[VictoryStyleInterface] = js.native
   /**
     * The symbolSpacer prop defines the number of pixels between data
     * components and label components.
     */
-  var symbolSpacer: js.UndefOr[Double] = js.undefined
+  var symbolSpacer: js.UndefOr[Double] = js.native
   /**
     * The title prop specifies a title to render with the legend.
     * This prop should be given as a string, or an array of strings for multi-line titles.
     */
-  var title: js.UndefOr[String | js.Array[String]] = js.undefined
+  var title: js.UndefOr[String | js.Array[String]] = js.native
   /**
     * The titleComponent prop takes a component instance which will be used to render
     * a title for the component. The new element created from the passed
@@ -138,107 +136,270 @@ trait VictoryLegendProps
     * or ignored within the custom component itself. If labelComponent is omitted,
     * a new VictoryLabel will be created with the props described above.
     */
-  var titleComponent: js.UndefOr[ReactElement] = js.undefined
+  var titleComponent: js.UndefOr[ReactElement] = js.native
   /**
     * The titleOrientation prop specifies where the a title should be rendered
     * in relation to the rest of the legend. Possible values
     * for this prop are “top”, “bottom”, “left”, and “right”.
     * @default (provided by default theme): titleOrientation="top"
     */
-  var titleOrientation: js.UndefOr[OrientationTypes] = js.undefined
+  var titleOrientation: js.UndefOr[OrientationTypes] = js.native
   /**
     * The x and y props define the base position of the legend element.
     */
   @JSName("x")
-  var x_VictoryLegendProps: js.UndefOr[Double] = js.undefined
+  var x_VictoryLegendProps: js.UndefOr[Double] = js.native
   @JSName("y")
-  var y_VictoryLegendProps: js.UndefOr[Double] = js.undefined
+  var y_VictoryLegendProps: js.UndefOr[Double] = js.native
 }
 
 object VictoryLegendProps {
   @scala.inline
-  def apply(
-    animate: Boolean | AnimatePropTypeInterface = null,
-    borderComponent: ReactElement = null,
-    borderPadding: PaddingProps = null,
-    categories: CategoryPropType = null,
-    centerTitle: js.UndefOr[Boolean] = js.undefined,
-    colorScale: ColorScalePropType = null,
-    containerComponent: ReactElement = null,
-    data: js.Array[AnonName] = null,
-    dataComponent: ReactElement = null,
-    domain: DomainPropType = null,
-    eventKey: StringOrNumberOrCallback | js.Array[String] = null,
-    events: js.Array[EventPropTypeInterface[data | labels | parent, StringOrNumberOrCallback]] = null,
-    externalEventMutations: js.Array[_] = null,
-    groupComponent: ReactElement = null,
-    gutter: Double | AnonLeft = null,
-    height: Int | Double = null,
-    horizontal: js.UndefOr[Boolean] = js.undefined,
-    itemsPerRow: Int | Double = null,
-    label: String | (js.Function1[/* data */ js.Any, String]) = null,
-    labelComponent: ReactElement = null,
-    maxDomain: Double | AnonY = null,
-    minDomain: Double | AnonY = null,
-    name: String = null,
-    orientation: horizontal | vertical = null,
-    padding: PaddingProps = null,
-    rowGutter: Double | OmitBlockPropsleftright = null,
-    scale: ScalePropType | D3Scale | Anon1 = null,
-    singleQuadrantDomainPadding: Boolean | AnonXBoolean = null,
-    standalone: js.UndefOr[Boolean] = js.undefined,
-    style: VictoryStyleInterface = null,
-    symbolSpacer: Int | Double = null,
-    theme: VictoryThemeDefinition = null,
-    title: String | js.Array[String] = null,
-    titleComponent: ReactElement = null,
-    titleOrientation: OrientationTypes = null,
-    width: Int | Double = null,
-    x: Int | Double = null,
-    y: Int | Double = null,
-    y0: DataGetterPropType = null
-  ): VictoryLegendProps = {
+  def apply(): VictoryLegendProps = {
     val __obj = js.Dynamic.literal()
-    if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (borderComponent != null) __obj.updateDynamic("borderComponent")(borderComponent.asInstanceOf[js.Any])
-    if (borderPadding != null) __obj.updateDynamic("borderPadding")(borderPadding.asInstanceOf[js.Any])
-    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
-    if (!js.isUndefined(centerTitle)) __obj.updateDynamic("centerTitle")(centerTitle.asInstanceOf[js.Any])
-    if (colorScale != null) __obj.updateDynamic("colorScale")(colorScale.asInstanceOf[js.Any])
-    if (containerComponent != null) __obj.updateDynamic("containerComponent")(containerComponent.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dataComponent != null) __obj.updateDynamic("dataComponent")(dataComponent.asInstanceOf[js.Any])
-    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
-    if (eventKey != null) __obj.updateDynamic("eventKey")(eventKey.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (externalEventMutations != null) __obj.updateDynamic("externalEventMutations")(externalEventMutations.asInstanceOf[js.Any])
-    if (groupComponent != null) __obj.updateDynamic("groupComponent")(groupComponent.asInstanceOf[js.Any])
-    if (gutter != null) __obj.updateDynamic("gutter")(gutter.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.asInstanceOf[js.Any])
-    if (itemsPerRow != null) __obj.updateDynamic("itemsPerRow")(itemsPerRow.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (labelComponent != null) __obj.updateDynamic("labelComponent")(labelComponent.asInstanceOf[js.Any])
-    if (maxDomain != null) __obj.updateDynamic("maxDomain")(maxDomain.asInstanceOf[js.Any])
-    if (minDomain != null) __obj.updateDynamic("minDomain")(minDomain.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (rowGutter != null) __obj.updateDynamic("rowGutter")(rowGutter.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (singleQuadrantDomainPadding != null) __obj.updateDynamic("singleQuadrantDomainPadding")(singleQuadrantDomainPadding.asInstanceOf[js.Any])
-    if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (symbolSpacer != null) __obj.updateDynamic("symbolSpacer")(symbolSpacer.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titleComponent != null) __obj.updateDynamic("titleComponent")(titleComponent.asInstanceOf[js.Any])
-    if (titleOrientation != null) __obj.updateDynamic("titleOrientation")(titleOrientation.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
-    if (y0 != null) __obj.updateDynamic("y0")(y0.asInstanceOf[js.Any])
     __obj.asInstanceOf[VictoryLegendProps]
   }
+  @scala.inline
+  implicit class VictoryLegendPropsOps[Self <: VictoryLegendProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBorderComponent(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderComponent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderComponent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderPadding(value: PaddingProps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderPadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderPadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCenterTitle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("centerTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCenterTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("centerTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorScale(value: ColorScalePropType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Array[AnonName]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventKeyFunction1(value: /* args */ CallbackArgs => String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEventKey(value: StringOrNumberOrCallback | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvents(value: js.Array[EventPropTypeInterface[data | labels | parent, StringOrNumberOrCallback]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalEventMutations(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalEventMutations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalEventMutations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalEventMutations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGutter(value: Double | AnonLeft): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gutter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGutter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gutter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemsPerRow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsPerRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemsPerRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsPerRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrientation(value: horizontal | vertical): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrientation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowGutter(value: Double | OmitBlockPropsleftright): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowGutter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowGutter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowGutter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: VictoryStyleInterface): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbolSpacer(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSpacer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbolSpacer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSpacer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleComponent(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleComponent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleComponent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleOrientation(value: OrientationTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleOrientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleOrientation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleOrientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

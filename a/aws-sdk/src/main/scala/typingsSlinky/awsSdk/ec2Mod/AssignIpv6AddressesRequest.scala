@@ -22,15 +22,47 @@ trait AssignIpv6AddressesRequest extends js.Object {
 
 object AssignIpv6AddressesRequest {
   @scala.inline
-  def apply(
-    NetworkInterfaceId: NetworkInterfaceId,
-    Ipv6AddressCount: Int | scala.Double = null,
-    Ipv6Addresses: Ipv6AddressList = null
-  ): AssignIpv6AddressesRequest = {
+  def apply(NetworkInterfaceId: NetworkInterfaceId): AssignIpv6AddressesRequest = {
     val __obj = js.Dynamic.literal(NetworkInterfaceId = NetworkInterfaceId.asInstanceOf[js.Any])
-    if (Ipv6AddressCount != null) __obj.updateDynamic("Ipv6AddressCount")(Ipv6AddressCount.asInstanceOf[js.Any])
-    if (Ipv6Addresses != null) __obj.updateDynamic("Ipv6Addresses")(Ipv6Addresses.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssignIpv6AddressesRequest]
   }
+  @scala.inline
+  implicit class AssignIpv6AddressesRequestOps[Self <: AssignIpv6AddressesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNetworkInterfaceId(value: NetworkInterfaceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInterfaceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIpv6AddressCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6AddressCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6AddressCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6AddressCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv6Addresses(value: Ipv6AddressList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Addresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6Addresses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Addresses")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

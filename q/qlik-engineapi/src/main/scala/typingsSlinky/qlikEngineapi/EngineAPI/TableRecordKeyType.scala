@@ -14,14 +14,12 @@ trait TableRecordKeyType extends js.Object
 
 object TableRecordKeyType {
   @scala.inline
-  def ANY_KEY: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.ANY_KEY = this.cast("ANY_KEY")
+  def ANY_KEY: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.ANY_KEY = "ANY_KEY".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.ANY_KEY]
   @scala.inline
-  def NOT_KEY: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.NOT_KEY = this.cast("NOT_KEY")
+  def NOT_KEY: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.NOT_KEY = "NOT_KEY".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.NOT_KEY]
   @scala.inline
-  def PERFECT_KEY: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.PERFECT_KEY = this.cast("PERFECT_KEY")
+  def PERFECT_KEY: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.PERFECT_KEY = "PERFECT_KEY".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.PERFECT_KEY]
   @scala.inline
-  def PRIMARY_KEY: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.PRIMARY_KEY = this.cast("PRIMARY_KEY")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def PRIMARY_KEY: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.PRIMARY_KEY = "PRIMARY_KEY".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.PRIMARY_KEY]
 }
 

@@ -26,12 +26,53 @@ trait SchemaFindDevicesByDeviceIdentifierRequest extends js.Object {
 
 object SchemaFindDevicesByDeviceIdentifierRequest {
   @scala.inline
-  def apply(deviceIdentifier: SchemaDeviceIdentifier = null, limit: String = null, pageToken: String = null): SchemaFindDevicesByDeviceIdentifierRequest = {
+  def apply(): SchemaFindDevicesByDeviceIdentifierRequest = {
     val __obj = js.Dynamic.literal()
-    if (deviceIdentifier != null) __obj.updateDynamic("deviceIdentifier")(deviceIdentifier.asInstanceOf[js.Any])
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFindDevicesByDeviceIdentifierRequest]
   }
+  @scala.inline
+  implicit class SchemaFindDevicesByDeviceIdentifierRequestOps[Self <: SchemaFindDevicesByDeviceIdentifierRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceIdentifier(value: SchemaDeviceIdentifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

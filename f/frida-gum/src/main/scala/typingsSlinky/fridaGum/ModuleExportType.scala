@@ -12,10 +12,8 @@ trait ModuleExportType extends js.Object
 
 object ModuleExportType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def function: typingsSlinky.fridaGum.fridaGumStrings.function = "function".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.function]
   @scala.inline
-  def function: typingsSlinky.fridaGum.fridaGumStrings.function = this.cast("function")
-  @scala.inline
-  def variable: typingsSlinky.fridaGum.fridaGumStrings.variable = this.cast("variable")
+  def variable: typingsSlinky.fridaGum.fridaGumStrings.variable = "variable".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.variable]
 }
 

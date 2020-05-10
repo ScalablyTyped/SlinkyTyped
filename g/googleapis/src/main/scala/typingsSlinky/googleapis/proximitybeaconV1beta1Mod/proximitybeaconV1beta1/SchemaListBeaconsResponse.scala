@@ -27,12 +27,53 @@ trait SchemaListBeaconsResponse extends js.Object {
 
 object SchemaListBeaconsResponse {
   @scala.inline
-  def apply(beacons: js.Array[SchemaBeacon] = null, nextPageToken: String = null, totalCount: String = null): SchemaListBeaconsResponse = {
+  def apply(): SchemaListBeaconsResponse = {
     val __obj = js.Dynamic.literal()
-    if (beacons != null) __obj.updateDynamic("beacons")(beacons.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (totalCount != null) __obj.updateDynamic("totalCount")(totalCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListBeaconsResponse]
   }
+  @scala.inline
+  implicit class SchemaListBeaconsResponseOps[Self <: SchemaListBeaconsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBeacons(value: js.Array[SchemaBeacon]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beacons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeacons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beacons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

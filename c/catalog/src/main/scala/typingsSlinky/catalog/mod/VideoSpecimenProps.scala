@@ -4,29 +4,82 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VideoSpecimenProps extends js.Object {
-  var autoplay: js.UndefOr[Boolean] = js.undefined
-  var loop: js.UndefOr[Boolean] = js.undefined
-  var muted: js.UndefOr[Boolean] = js.undefined
-  var src: String
-  var title: js.UndefOr[String] = js.undefined
+  var autoplay: js.UndefOr[Boolean] = js.native
+  var loop: js.UndefOr[Boolean] = js.native
+  var muted: js.UndefOr[Boolean] = js.native
+  var src: String = js.native
+  var title: js.UndefOr[String] = js.native
 }
 
 object VideoSpecimenProps {
   @scala.inline
-  def apply(
-    src: String,
-    autoplay: js.UndefOr[Boolean] = js.undefined,
-    loop: js.UndefOr[Boolean] = js.undefined,
-    muted: js.UndefOr[Boolean] = js.undefined,
-    title: String = null
-  ): VideoSpecimenProps = {
+  def apply(src: String): VideoSpecimenProps = {
     val __obj = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.asInstanceOf[js.Any])
-    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.asInstanceOf[js.Any])
-    if (!js.isUndefined(muted)) __obj.updateDynamic("muted")(muted.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoSpecimenProps]
   }
+  @scala.inline
+  implicit class VideoSpecimenPropsOps[Self <: VideoSpecimenProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSrc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoplay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("muted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("muted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

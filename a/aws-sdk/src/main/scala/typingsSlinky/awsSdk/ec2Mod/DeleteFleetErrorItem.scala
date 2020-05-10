@@ -13,16 +13,46 @@ trait DeleteFleetErrorItem extends js.Object {
   /**
     * The ID of the EC2 Fleet.
     */
-  var FleetId: js.UndefOr[FleetIdentifier] = js.native
+  var FleetId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.FleetId] = js.native
 }
 
 object DeleteFleetErrorItem {
   @scala.inline
-  def apply(Error: DeleteFleetError = null, FleetId: FleetIdentifier = null): DeleteFleetErrorItem = {
+  def apply(): DeleteFleetErrorItem = {
     val __obj = js.Dynamic.literal()
-    if (Error != null) __obj.updateDynamic("Error")(Error.asInstanceOf[js.Any])
-    if (FleetId != null) __obj.updateDynamic("FleetId")(FleetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteFleetErrorItem]
   }
+  @scala.inline
+  implicit class DeleteFleetErrorItemOps[Self <: DeleteFleetErrorItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withError(value: DeleteFleetError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFleetId(value: FleetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFleetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

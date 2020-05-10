@@ -24,8 +24,33 @@ object AccessKeyLastUsed {
   @scala.inline
   def apply(LastUsedDate: js.Date, Region: stringType, ServiceName: stringType): AccessKeyLastUsed = {
     val __obj = js.Dynamic.literal(LastUsedDate = LastUsedDate.asInstanceOf[js.Any], Region = Region.asInstanceOf[js.Any], ServiceName = ServiceName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AccessKeyLastUsed]
   }
+  @scala.inline
+  implicit class AccessKeyLastUsedOps[Self <: AccessKeyLastUsed] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLastUsedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUsedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegion(value: stringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServiceName(value: stringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

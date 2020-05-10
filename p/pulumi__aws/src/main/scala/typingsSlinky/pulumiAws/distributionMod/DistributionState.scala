@@ -167,66 +167,353 @@ trait DistributionState extends js.Object {
 
 object DistributionState {
   @scala.inline
-  def apply(
-    activeTrustedSigners: Input[StringDictionary[_]] = null,
-    aliases: Input[js.Array[Input[String]]] = null,
-    arn: Input[String] = null,
-    callerReference: Input[String] = null,
-    comment: Input[String] = null,
-    customErrorResponses: Input[js.Array[Input[DistributionCustomErrorResponse]]] = null,
-    defaultCacheBehavior: Input[DistributionDefaultCacheBehavior] = null,
-    defaultRootObject: Input[String] = null,
-    domainName: Input[String] = null,
-    enabled: Input[Boolean] = null,
-    etag: Input[String] = null,
-    hostedZoneId: Input[String] = null,
-    httpVersion: Input[String] = null,
-    inProgressValidationBatches: Input[Double] = null,
-    isIpv6Enabled: Input[Boolean] = null,
-    lastModifiedTime: Input[String] = null,
-    loggingConfig: Input[DistributionLoggingConfig] = null,
-    orderedCacheBehaviors: Input[js.Array[Input[DistributionOrderedCacheBehavior]]] = null,
-    originGroups: Input[js.Array[Input[DistributionOriginGroup]]] = null,
-    origins: Input[js.Array[Input[DistributionOrigin]]] = null,
-    priceClass: Input[String] = null,
-    restrictions: Input[DistributionRestrictions] = null,
-    retainOnDelete: Input[Boolean] = null,
-    status: Input[String] = null,
-    tags: Input[StringDictionary[_]] = null,
-    viewerCertificate: Input[DistributionViewerCertificate] = null,
-    waitForDeployment: Input[Boolean] = null,
-    webAclId: Input[String] = null
-  ): DistributionState = {
+  def apply(): DistributionState = {
     val __obj = js.Dynamic.literal()
-    if (activeTrustedSigners != null) __obj.updateDynamic("activeTrustedSigners")(activeTrustedSigners.asInstanceOf[js.Any])
-    if (aliases != null) __obj.updateDynamic("aliases")(aliases.asInstanceOf[js.Any])
-    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
-    if (callerReference != null) __obj.updateDynamic("callerReference")(callerReference.asInstanceOf[js.Any])
-    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
-    if (customErrorResponses != null) __obj.updateDynamic("customErrorResponses")(customErrorResponses.asInstanceOf[js.Any])
-    if (defaultCacheBehavior != null) __obj.updateDynamic("defaultCacheBehavior")(defaultCacheBehavior.asInstanceOf[js.Any])
-    if (defaultRootObject != null) __obj.updateDynamic("defaultRootObject")(defaultRootObject.asInstanceOf[js.Any])
-    if (domainName != null) __obj.updateDynamic("domainName")(domainName.asInstanceOf[js.Any])
-    if (enabled != null) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
-    if (hostedZoneId != null) __obj.updateDynamic("hostedZoneId")(hostedZoneId.asInstanceOf[js.Any])
-    if (httpVersion != null) __obj.updateDynamic("httpVersion")(httpVersion.asInstanceOf[js.Any])
-    if (inProgressValidationBatches != null) __obj.updateDynamic("inProgressValidationBatches")(inProgressValidationBatches.asInstanceOf[js.Any])
-    if (isIpv6Enabled != null) __obj.updateDynamic("isIpv6Enabled")(isIpv6Enabled.asInstanceOf[js.Any])
-    if (lastModifiedTime != null) __obj.updateDynamic("lastModifiedTime")(lastModifiedTime.asInstanceOf[js.Any])
-    if (loggingConfig != null) __obj.updateDynamic("loggingConfig")(loggingConfig.asInstanceOf[js.Any])
-    if (orderedCacheBehaviors != null) __obj.updateDynamic("orderedCacheBehaviors")(orderedCacheBehaviors.asInstanceOf[js.Any])
-    if (originGroups != null) __obj.updateDynamic("originGroups")(originGroups.asInstanceOf[js.Any])
-    if (origins != null) __obj.updateDynamic("origins")(origins.asInstanceOf[js.Any])
-    if (priceClass != null) __obj.updateDynamic("priceClass")(priceClass.asInstanceOf[js.Any])
-    if (restrictions != null) __obj.updateDynamic("restrictions")(restrictions.asInstanceOf[js.Any])
-    if (retainOnDelete != null) __obj.updateDynamic("retainOnDelete")(retainOnDelete.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (viewerCertificate != null) __obj.updateDynamic("viewerCertificate")(viewerCertificate.asInstanceOf[js.Any])
-    if (waitForDeployment != null) __obj.updateDynamic("waitForDeployment")(waitForDeployment.asInstanceOf[js.Any])
-    if (webAclId != null) __obj.updateDynamic("webAclId")(webAclId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DistributionState]
   }
+  @scala.inline
+  implicit class DistributionStateOps[Self <: DistributionState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActiveTrustedSigners(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeTrustedSigners")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveTrustedSigners: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeTrustedSigners")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAliases(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aliases")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAliases: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aliases")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCallerReference(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callerReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallerReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callerReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComment(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomErrorResponses(value: Input[js.Array[Input[DistributionCustomErrorResponse]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customErrorResponses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomErrorResponses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customErrorResponses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultCacheBehavior(value: Input[DistributionDefaultCacheBehavior]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCacheBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultCacheBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCacheBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultRootObject(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRootObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultRootObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRootObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomainName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEtag(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEtag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostedZoneId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostedZoneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostedZoneId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostedZoneId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttpVersion(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInProgressValidationBatches(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inProgressValidationBatches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInProgressValidationBatches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inProgressValidationBatches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsIpv6Enabled(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIpv6Enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsIpv6Enabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIpv6Enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedTime(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoggingConfig(value: Input[DistributionLoggingConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoggingConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrderedCacheBehaviors(value: Input[js.Array[Input[DistributionOrderedCacheBehavior]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orderedCacheBehaviors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrderedCacheBehaviors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orderedCacheBehaviors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginGroups(value: Input[js.Array[Input[DistributionOriginGroup]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrigins(value: Input[js.Array[Input[DistributionOrigin]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrigins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriceClass(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priceClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriceClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priceClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestrictions(value: Input[DistributionRestrictions]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestrictions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetainOnDelete(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retainOnDelete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetainOnDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retainOnDelete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewerCertificate(value: Input[DistributionViewerCertificate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewerCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViewerCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewerCertificate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWaitForDeployment(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForDeployment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWaitForDeployment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForDeployment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebAclId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webAclId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebAclId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webAclId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

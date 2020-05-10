@@ -5,61 +5,137 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDefaultTimeoutInterval
   extends /* key */ StringDictionary[js.Any] {
   /**
     * Default time to wait in ms before a test fails.
     */
-  var defaultTimeoutInterval: js.UndefOr[Double] = js.undefined
+  var defaultTimeoutInterval: js.UndefOr[Double] = js.native
   /**
     * If set, only execute specs whose names match the pattern, which is
     * internally compiled to a RegExp.
     */
-  var grep: js.UndefOr[String] = js.undefined
+  var grep: js.UndefOr[String] = js.native
   /**
     * Inverts 'grep' matches
     */
-  var invertGrep: js.UndefOr[Boolean] = js.undefined
+  var invertGrep: js.UndefOr[Boolean] = js.native
   /**
     * Function called to print jasmine results.
     */
-  var print: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var print: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * If true, run specs in semi-random order
     */
-  var random: js.UndefOr[Boolean] = js.undefined
+  var random: js.UndefOr[Boolean] = js.native
   /**
     * Set the randomization seed if randomization is turned on
     */
-  var seed: js.UndefOr[String] = js.undefined
+  var seed: js.UndefOr[String] = js.native
   /**
     * If true, print colors to the terminal.
     */
-  var showColors: js.UndefOr[Boolean] = js.undefined
+  var showColors: js.UndefOr[Boolean] = js.native
 }
 
 object AnonDefaultTimeoutInterval {
   @scala.inline
-  def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    defaultTimeoutInterval: Int | Double = null,
-    grep: String = null,
-    invertGrep: js.UndefOr[Boolean] = js.undefined,
-    print: () => Unit = null,
-    random: js.UndefOr[Boolean] = js.undefined,
-    seed: String = null,
-    showColors: js.UndefOr[Boolean] = js.undefined
-  ): AnonDefaultTimeoutInterval = {
+  def apply(): AnonDefaultTimeoutInterval = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (defaultTimeoutInterval != null) __obj.updateDynamic("defaultTimeoutInterval")(defaultTimeoutInterval.asInstanceOf[js.Any])
-    if (grep != null) __obj.updateDynamic("grep")(grep.asInstanceOf[js.Any])
-    if (!js.isUndefined(invertGrep)) __obj.updateDynamic("invertGrep")(invertGrep.asInstanceOf[js.Any])
-    if (print != null) __obj.updateDynamic("print")(js.Any.fromFunction0(print))
-    if (!js.isUndefined(random)) __obj.updateDynamic("random")(random.asInstanceOf[js.Any])
-    if (seed != null) __obj.updateDynamic("seed")(seed.asInstanceOf[js.Any])
-    if (!js.isUndefined(showColors)) __obj.updateDynamic("showColors")(showColors.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDefaultTimeoutInterval]
   }
+  @scala.inline
+  implicit class AnonDefaultTimeoutIntervalOps[Self <: AnonDefaultTimeoutInterval] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultTimeoutInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTimeoutInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultTimeoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTimeoutInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrep(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvertGrep(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invertGrep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvertGrep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invertGrep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrint(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("print")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutPrint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("print")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRandom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("random")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRandom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("random")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeed(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowColors(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showColors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowColors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showColors")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

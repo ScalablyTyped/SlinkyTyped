@@ -6,18 +6,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Observer extends js.Object {
-  var observer: IntersectionObserver
-  def observe(): Unit
-  def triggerLoad(element: Element): Unit
+  var observer: IntersectionObserver = js.native
+  def observe(): Unit = js.native
+  def triggerLoad(element: Element): Unit = js.native
 }
 
 object Observer {
   @scala.inline
   def apply(observe: () => Unit, observer: IntersectionObserver, triggerLoad: Element => Unit): Observer = {
     val __obj = js.Dynamic.literal(observe = js.Any.fromFunction0(observe), observer = observer.asInstanceOf[js.Any], triggerLoad = js.Any.fromFunction1(triggerLoad))
-  
     __obj.asInstanceOf[Observer]
   }
+  @scala.inline
+  implicit class ObserverOps[Self <: Observer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withObserve(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("observe")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withObserver(value: IntersectionObserver): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("observer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTriggerLoad(value: Element => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerLoad")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

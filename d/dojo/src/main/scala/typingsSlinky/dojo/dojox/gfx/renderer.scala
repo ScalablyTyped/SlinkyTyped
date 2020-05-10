@@ -11,5 +11,6 @@ import scala.scalajs.js.annotation._
   * implementation based on detected environment and current configuration settings.
   *
   */
+@js.native
 trait renderer extends js.Object
 

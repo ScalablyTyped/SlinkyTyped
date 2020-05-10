@@ -71,28 +71,125 @@ trait SchemaGoogleCloudMlV1HyperparameterSpec extends js.Object {
 
 object SchemaGoogleCloudMlV1HyperparameterSpec {
   @scala.inline
-  def apply(
-    algorithm: String = null,
-    enableTrialEarlyStopping: js.UndefOr[Boolean] = js.undefined,
-    goal: String = null,
-    hyperparameterMetricTag: String = null,
-    maxFailedTrials: Int | Double = null,
-    maxParallelTrials: Int | Double = null,
-    maxTrials: Int | Double = null,
-    params: js.Array[SchemaGoogleCloudMlV1ParameterSpec] = null,
-    resumePreviousJobId: String = null
-  ): SchemaGoogleCloudMlV1HyperparameterSpec = {
+  def apply(): SchemaGoogleCloudMlV1HyperparameterSpec = {
     val __obj = js.Dynamic.literal()
-    if (algorithm != null) __obj.updateDynamic("algorithm")(algorithm.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableTrialEarlyStopping)) __obj.updateDynamic("enableTrialEarlyStopping")(enableTrialEarlyStopping.asInstanceOf[js.Any])
-    if (goal != null) __obj.updateDynamic("goal")(goal.asInstanceOf[js.Any])
-    if (hyperparameterMetricTag != null) __obj.updateDynamic("hyperparameterMetricTag")(hyperparameterMetricTag.asInstanceOf[js.Any])
-    if (maxFailedTrials != null) __obj.updateDynamic("maxFailedTrials")(maxFailedTrials.asInstanceOf[js.Any])
-    if (maxParallelTrials != null) __obj.updateDynamic("maxParallelTrials")(maxParallelTrials.asInstanceOf[js.Any])
-    if (maxTrials != null) __obj.updateDynamic("maxTrials")(maxTrials.asInstanceOf[js.Any])
-    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
-    if (resumePreviousJobId != null) __obj.updateDynamic("resumePreviousJobId")(resumePreviousJobId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudMlV1HyperparameterSpec]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudMlV1HyperparameterSpecOps[Self <: SchemaGoogleCloudMlV1HyperparameterSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlgorithm(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableTrialEarlyStopping(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTrialEarlyStopping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableTrialEarlyStopping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTrialEarlyStopping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGoal(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHyperparameterMetricTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hyperparameterMetricTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHyperparameterMetricTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hyperparameterMetricTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxFailedTrials(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFailedTrials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxFailedTrials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFailedTrials")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxParallelTrials(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxParallelTrials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxParallelTrials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxParallelTrials")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxTrials(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTrials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxTrials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTrials")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParams(value: js.Array[SchemaGoogleCloudMlV1ParameterSpec]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResumePreviousJobId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resumePreviousJobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResumePreviousJobId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resumePreviousJobId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -21,37 +21,103 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PrismThemeEntry extends /* styleKey */ StringDictionary[String | Double | Unit] {
-  var backgroundColor: js.UndefOr[String] = js.undefined
-  var color: js.UndefOr[String] = js.undefined
-  var fontStyle: js.UndefOr[normal | italic] = js.undefined
+  var backgroundColor: js.UndefOr[String] = js.native
+  var color: js.UndefOr[String] = js.native
+  var fontStyle: js.UndefOr[normal | italic] = js.native
   var fontWeight: js.UndefOr[
     normal | bold | `100` | `200` | `300` | `400` | `500` | `600` | `700` | `800` | `900`
-  ] = js.undefined
-  var opacity: js.UndefOr[Double] = js.undefined
-  var textDecorationLine: js.UndefOr[none | underline | `line-through` | (`underline line-through`)] = js.undefined
+  ] = js.native
+  var opacity: js.UndefOr[Double] = js.native
+  var textDecorationLine: js.UndefOr[none | underline | `line-through` | (`underline line-through`)] = js.native
 }
 
 object PrismThemeEntry {
   @scala.inline
-  def apply(
-    StringDictionary: /* styleKey */ StringDictionary[String | Double | Unit] = null,
-    backgroundColor: String = null,
-    color: String = null,
-    fontStyle: normal | italic = null,
-    fontWeight: normal | bold | `100` | `200` | `300` | `400` | `500` | `600` | `700` | `800` | `900` = null,
-    opacity: Int | Double = null,
-    textDecorationLine: none | underline | `line-through` | (`underline line-through`) = null
-  ): PrismThemeEntry = {
+  def apply(): PrismThemeEntry = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (fontStyle != null) __obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
-    if (fontWeight != null) __obj.updateDynamic("fontWeight")(fontWeight.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (textDecorationLine != null) __obj.updateDynamic("textDecorationLine")(textDecorationLine.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrismThemeEntry]
   }
+  @scala.inline
+  implicit class PrismThemeEntryOps[Self <: PrismThemeEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontStyle(value: normal | italic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontWeight(value: normal | bold | `100` | `200` | `300` | `400` | `500` | `600` | `700` | `800` | `900`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextDecorationLine(value: none | underline | `line-through` | (`underline line-through`)): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDecorationLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextDecorationLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDecorationLine")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

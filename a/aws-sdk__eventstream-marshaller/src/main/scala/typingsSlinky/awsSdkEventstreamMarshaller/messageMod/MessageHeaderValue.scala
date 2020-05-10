@@ -29,7 +29,7 @@ trait MessageHeaderValue extends js.Object
 
 object MessageHeaderValue {
   @scala.inline
-  def BinaryHeaderValue(`type`: binary, value: scala.scalajs.js.typedarray.Uint8Array): MessageHeaderValue = {
+  def BinaryHeaderValue(`type`: binary, value: js.typedarray.Uint8Array): MessageHeaderValue = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageHeaderValue]

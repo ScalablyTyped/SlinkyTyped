@@ -18,11 +18,41 @@ trait ListFragmentsOutput extends js.Object {
 
 object ListFragmentsOutput {
   @scala.inline
-  def apply(Fragments: FragmentList = null, NextToken: String = null): ListFragmentsOutput = {
+  def apply(): ListFragmentsOutput = {
     val __obj = js.Dynamic.literal()
-    if (Fragments != null) __obj.updateDynamic("Fragments")(Fragments.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListFragmentsOutput]
   }
+  @scala.inline
+  implicit class ListFragmentsOutputOps[Self <: ListFragmentsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFragments(value: FragmentList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fragments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFragments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fragments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

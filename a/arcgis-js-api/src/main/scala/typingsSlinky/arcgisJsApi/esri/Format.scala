@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Format extends js.Object {
   /**
     * Contains information that describes how this Format should be converted.  This property should only be set when creating a custom Format.
@@ -13,7 +14,7 @@ trait Format extends js.Object {
     *
     * @default null
     */
-  var conversionInfo: ConversionInfo
+  var conversionInfo: ConversionInfo = js.native
   /**
     * A array of [Coordinate Segments](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-CoordinateConversion-support-Format.html#CoordinateSegment).  Each segment represents a section of the Format's coordinate.
     *
@@ -21,7 +22,7 @@ trait Format extends js.Object {
     *
     * @default null
     */
-  var coordinateSegments: js.Array[CoordinateSegment]
+  var coordinateSegments: js.Array[CoordinateSegment] = js.native
   /**
     * A string that serves as a pattern describing how this Format should be displayed.  The pattern should contain all of aliases specified by the Format's [coordinateSegments property](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-CoordinateConversion-support-Format.html#coordinateSegments).
     *
@@ -29,7 +30,7 @@ trait Format extends js.Object {
     *
     * @default null
     */
-  var currentPattern: String
+  var currentPattern: String = js.native
   /**
     * The default pattern describing how this Format should be displayed.  See [currentPattern](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-CoordinateConversion-support-Format.html#currentPattern).
     *
@@ -37,7 +38,7 @@ trait Format extends js.Object {
     *
     * @default null
     */
-  var defaultPattern: String
+  var defaultPattern: String = js.native
   /**
     * The name of the coordinate.  A [CoordinateConversion](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-CoordinateConversion.html) widget should not contain multiple Formats with the same name.
     *
@@ -45,19 +46,19 @@ trait Format extends js.Object {
     *
     * @default null
     */
-  var name: String
+  var name: String = js.native
   /**
     * The [SpatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html) for this format.  Coordinates generated for a format will be derived from points in this spatial reference.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-CoordinateConversion-support-Format.html#spatialReference)
     */
-  var spatialReference: SpatialReference
+  var spatialReference: SpatialReference = js.native
   /**
     * The view model of the [CoordinateConversion](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-CoordinateConversion.html) widget that is utilizing this format.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-CoordinateConversion-support-Format.html#viewModel)
     */
-  var viewModel: CoordinateConversionViewModel
+  var viewModel: CoordinateConversionViewModel = js.native
 }
 
 @JSGlobal("__esri.Format")

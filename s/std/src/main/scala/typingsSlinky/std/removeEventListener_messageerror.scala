@@ -20,7 +20,7 @@ object removeEventListener_messageerror extends js.Object {
   def apply(
     `type`: messageerror,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

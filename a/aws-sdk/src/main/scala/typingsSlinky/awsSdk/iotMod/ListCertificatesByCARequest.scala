@@ -26,17 +26,59 @@ trait ListCertificatesByCARequest extends js.Object {
 
 object ListCertificatesByCARequest {
   @scala.inline
-  def apply(
-    caCertificateId: CertificateId,
-    ascendingOrder: js.UndefOr[scala.Boolean] = js.undefined,
-    marker: Marker = null,
-    pageSize: Int | Double = null
-  ): ListCertificatesByCARequest = {
+  def apply(caCertificateId: CertificateId): ListCertificatesByCARequest = {
     val __obj = js.Dynamic.literal(caCertificateId = caCertificateId.asInstanceOf[js.Any])
-    if (!js.isUndefined(ascendingOrder)) __obj.updateDynamic("ascendingOrder")(ascendingOrder.asInstanceOf[js.Any])
-    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
-    if (pageSize != null) __obj.updateDynamic("pageSize")(pageSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListCertificatesByCARequest]
   }
+  @scala.inline
+  implicit class ListCertificatesByCARequestOps[Self <: ListCertificatesByCARequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCaCertificateId(value: CertificateId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caCertificateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAscendingOrder(value: AscendingOrder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ascendingOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAscendingOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ascendingOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: Marker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageSize(value: PageSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

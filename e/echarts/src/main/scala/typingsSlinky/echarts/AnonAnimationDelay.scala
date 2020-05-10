@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAnimationDelay extends js.Object {
   /**
     * Whether to enable animation.
@@ -13,7 +14,7 @@ trait AnonAnimationDelay extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.animation
     */
-  var animation: js.UndefOr[Boolean] = js.undefined
+  var animation: js.UndefOr[Boolean] = js.native
   /**
     * Delay before updating the first animation, which supports
     * callback function for different data to have different animation
@@ -30,7 +31,7 @@ trait AnonAnimationDelay extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.animationDelay
     */
-  var animationDelay: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDelay: js.UndefOr[js.Function | Double] = js.native
   /**
     * Delay before updating animation, which supports callback
     * function for different data to have different animation effect.
@@ -46,7 +47,7 @@ trait AnonAnimationDelay extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.animationDelayUpdate
     */
-  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.native
   /**
     * Duration of the first animation, which supports callback
     * function for different data to have different animation effect:
@@ -58,7 +59,7 @@ trait AnonAnimationDelay extends js.Object {
     * 1000
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.animationDuration
     */
-  var animationDuration: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDuration: js.UndefOr[js.Function | Double] = js.native
   /**
     * Time for animation to complete, which supports callback function
     * for different data to have different animation effect:
@@ -70,7 +71,7 @@ trait AnonAnimationDelay extends js.Object {
     * 300
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.animationDurationUpdate
     */
-  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.native
   /**
     * Easing method used for the first animation.
     * Varied easing effects can be found at
@@ -82,7 +83,7 @@ trait AnonAnimationDelay extends js.Object {
     * "cubicOut"
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.animationEasing
     */
-  var animationEasing: js.UndefOr[String] = js.undefined
+  var animationEasing: js.UndefOr[String] = js.native
   /**
     * Easing method used for animation.
     *
@@ -91,7 +92,7 @@ trait AnonAnimationDelay extends js.Object {
     * "cubicOut"
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.animationEasingUpdate
     */
-  var animationEasingUpdate: js.UndefOr[String] = js.undefined
+  var animationEasingUpdate: js.UndefOr[String] = js.native
   /**
     * Whether to set graphic number threshold to animation.
     * Animation will be disabled when graphic number is larger
@@ -102,7 +103,7 @@ trait AnonAnimationDelay extends js.Object {
     * 2000
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.animationThreshold
     */
-  var animationThreshold: js.UndefOr[Double] = js.undefined
+  var animationThreshold: js.UndefOr[Double] = js.native
   /**
     * Data array of marking line.
     * Every array item can be an array of one or two values, representing
@@ -150,21 +151,21 @@ trait AnonAnimationDelay extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.data
     */
-  var data: js.UndefOr[Anon0] = js.undefined
+  var data: js.UndefOr[Anon0] = js.native
   /**
     * Mark line text.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.label
     */
-  var label: js.UndefOr[AnonPosition] = js.undefined
+  var label: js.UndefOr[AnonPosition] = js.native
   /**
     * Mark line style.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.lineStyle
     */
-  var lineStyle: js.UndefOr[AnonCurveness] = js.undefined
+  var lineStyle: js.UndefOr[AnonCurveness] = js.native
   /**
     * Precison of marking line value, which is useful when displaying
     * average value mark line.
@@ -174,7 +175,7 @@ trait AnonAnimationDelay extends js.Object {
     * 2
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.precision
     */
-  var precision: js.UndefOr[Double] = js.undefined
+  var precision: js.UndefOr[Double] = js.native
   /**
     * Whether to ignore mouse events.
     * Default value is false, for triggering and responding to
@@ -183,7 +184,7 @@ trait AnonAnimationDelay extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.silent
     */
-  var silent: js.UndefOr[Boolean] = js.undefined
+  var silent: js.UndefOr[Boolean] = js.native
   /**
     * Symbol type at the two ends of the mark line.
     * It can be an array for two ends, or assigned seperately.
@@ -194,7 +195,7 @@ trait AnonAnimationDelay extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.symbol
     */
-  var symbol: js.UndefOr[js.Array[_] | String] = js.undefined
+  var symbol: js.UndefOr[js.Array[_] | String] = js.native
   /**
     * Symbol size at the two ends of the mark line.
     * It can be an array for two ends, or assigned seperately.
@@ -205,45 +206,202 @@ trait AnonAnimationDelay extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.symbolSize
     */
-  var symbolSize: js.UndefOr[js.Array[_] | Double] = js.undefined
+  var symbolSize: js.UndefOr[js.Array[_] | Double] = js.native
 }
 
 object AnonAnimationDelay {
   @scala.inline
-  def apply(
-    animation: js.UndefOr[Boolean] = js.undefined,
-    animationDelay: js.Function | Double = null,
-    animationDelayUpdate: js.Function | Double = null,
-    animationDuration: js.Function | Double = null,
-    animationDurationUpdate: js.Function | Double = null,
-    animationEasing: String = null,
-    animationEasingUpdate: String = null,
-    animationThreshold: Int | Double = null,
-    data: Anon0 = null,
-    label: AnonPosition = null,
-    lineStyle: AnonCurveness = null,
-    precision: Int | Double = null,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    symbol: js.Array[_] | String = null,
-    symbolSize: js.Array[_] | Double = null
-  ): AnonAnimationDelay = {
+  def apply(): AnonAnimationDelay = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animation)) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (animationDelay != null) __obj.updateDynamic("animationDelay")(animationDelay.asInstanceOf[js.Any])
-    if (animationDelayUpdate != null) __obj.updateDynamic("animationDelayUpdate")(animationDelayUpdate.asInstanceOf[js.Any])
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (animationDurationUpdate != null) __obj.updateDynamic("animationDurationUpdate")(animationDurationUpdate.asInstanceOf[js.Any])
-    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
-    if (animationEasingUpdate != null) __obj.updateDynamic("animationEasingUpdate")(animationEasingUpdate.asInstanceOf[js.Any])
-    if (animationThreshold != null) __obj.updateDynamic("animationThreshold")(animationThreshold.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (lineStyle != null) __obj.updateDynamic("lineStyle")(lineStyle.asInstanceOf[js.Any])
-    if (precision != null) __obj.updateDynamic("precision")(precision.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.asInstanceOf[js.Any])
-    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
-    if (symbolSize != null) __obj.updateDynamic("symbolSize")(symbolSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAnimationDelay]
   }
+  @scala.inline
+  implicit class AnonAnimationDelayOps[Self <: AnonAnimationDelay] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDelay(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDelayUpdate(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDelayUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDuration(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDurationUpdate(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDurationUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationEasing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationEasingUpdate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationEasingUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: Anon0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: AnonPosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineStyle(value: AnonCurveness): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrecision(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrecision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSilent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSilent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbol(value: js.Array[_] | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbolSize(value: js.Array[_] | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbolSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

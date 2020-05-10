@@ -8,19 +8,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IForwardContainer[Iterator /* <: IForwardIterator[ValueType[Iterator], Iterator] */] extends ISize {
   /**
     * Iterator to the first element.
     *
     * @return Iterator to the first element.
     */
-  def begin(): Iterator
+  def begin(): Iterator = js.native
   /**
     * Iterator to the end.
     *
     * @return Iterator to the end.
     */
-  def end(): Iterator
+  def end(): Iterator = js.native
 }
 
 @JSImport("tstl/ranges/container/IForwardContainer", "IForwardContainer")

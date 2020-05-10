@@ -13,12 +13,10 @@ trait OptionsStepValue extends js.Object
 
 object OptionsStepValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.highcharts.highchartsStrings.center = "center".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.center]
   @scala.inline
-  def center: typingsSlinky.highcharts.highchartsStrings.center = this.cast("center")
+  def left: typingsSlinky.highcharts.highchartsStrings.left = "left".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.left]
   @scala.inline
-  def left: typingsSlinky.highcharts.highchartsStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.highcharts.highchartsStrings.right = this.cast("right")
+  def right: typingsSlinky.highcharts.highchartsStrings.right = "right".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.right]
 }
 

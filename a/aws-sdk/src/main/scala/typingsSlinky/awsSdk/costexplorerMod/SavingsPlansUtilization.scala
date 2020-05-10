@@ -26,18 +26,65 @@ trait SavingsPlansUtilization extends js.Object {
 
 object SavingsPlansUtilization {
   @scala.inline
-  def apply(
-    TotalCommitment: GenericString = null,
-    UnusedCommitment: GenericString = null,
-    UsedCommitment: GenericString = null,
-    UtilizationPercentage: GenericString = null
-  ): SavingsPlansUtilization = {
+  def apply(): SavingsPlansUtilization = {
     val __obj = js.Dynamic.literal()
-    if (TotalCommitment != null) __obj.updateDynamic("TotalCommitment")(TotalCommitment.asInstanceOf[js.Any])
-    if (UnusedCommitment != null) __obj.updateDynamic("UnusedCommitment")(UnusedCommitment.asInstanceOf[js.Any])
-    if (UsedCommitment != null) __obj.updateDynamic("UsedCommitment")(UsedCommitment.asInstanceOf[js.Any])
-    if (UtilizationPercentage != null) __obj.updateDynamic("UtilizationPercentage")(UtilizationPercentage.asInstanceOf[js.Any])
     __obj.asInstanceOf[SavingsPlansUtilization]
   }
+  @scala.inline
+  implicit class SavingsPlansUtilizationOps[Self <: SavingsPlansUtilization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTotalCommitment(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCommitment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalCommitment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCommitment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnusedCommitment(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnusedCommitment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnusedCommitment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnusedCommitment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsedCommitment(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UsedCommitment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsedCommitment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UsedCommitment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUtilizationPercentage(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UtilizationPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUtilizationPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UtilizationPercentage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

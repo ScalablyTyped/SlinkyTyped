@@ -14,139 +14,557 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Piecewise
   extends typingsSlinky.echarts.echarts.EChartOption.VisualMap {
-  var align: js.UndefOr[auto | left | right] = js.undefined
-  var backgroundColor: js.UndefOr[String] = js.undefined
-  var borderColor: js.UndefOr[String] = js.undefined
-  var borderWidth: js.UndefOr[Double] = js.undefined
-  var bottom: js.UndefOr[Double | String] = js.undefined
-  var categories: js.UndefOr[js.Array[String]] = js.undefined
-  var color: js.UndefOr[js.Array[String]] = js.undefined
-  var controller: js.UndefOr[AnonInRange] = js.undefined
-  var dimension: js.UndefOr[String | Double] = js.undefined
-  var formatter: js.UndefOr[String | js.Function] = js.undefined
-  var hoverLink: js.UndefOr[Boolean] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var inRange: js.UndefOr[RangeObject] = js.undefined
-  var inverse: js.UndefOr[Boolean] = js.undefined
-  var itemGap: js.UndefOr[Double] = js.undefined
-  var itemHeight: js.UndefOr[Double] = js.undefined
-  var itemSymbol: js.UndefOr[String] = js.undefined
-  var itemWidth: js.UndefOr[Double] = js.undefined
-  var left: js.UndefOr[Double | String] = js.undefined
-  var max: js.UndefOr[Double] = js.undefined
-  var maxOpen: js.UndefOr[Boolean] = js.undefined
-  var min: js.UndefOr[Double] = js.undefined
-  var minOpen: js.UndefOr[Boolean] = js.undefined
-  var orient: js.UndefOr[vertical | horizontal] = js.undefined
-  var outOfRange: js.UndefOr[RangeObject] = js.undefined
-  var padding: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var pieces: js.UndefOr[js.Array[PiecesObject]] = js.undefined
-  var precision: js.UndefOr[Double] = js.undefined
-  var right: js.UndefOr[Double | String] = js.undefined
-  var selectedMode: js.UndefOr[multiple | single] = js.undefined
-  var seriesIndex: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var show: js.UndefOr[Boolean] = js.undefined
-  var showLabel: js.UndefOr[Boolean] = js.undefined
-  var splitNumber: js.UndefOr[Double] = js.undefined
-  var text: js.UndefOr[js.Array[String]] = js.undefined
-  var textGap: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var textStyle: js.UndefOr[TextStyle] = js.undefined
-  var top: js.UndefOr[Double | String] = js.undefined
-  var `type`: js.UndefOr[piecewise] = js.undefined
-  var z: js.UndefOr[Double] = js.undefined
-  var zlevel: js.UndefOr[Double] = js.undefined
+  var align: js.UndefOr[auto | left | right] = js.native
+  var backgroundColor: js.UndefOr[String] = js.native
+  var borderColor: js.UndefOr[String] = js.native
+  var borderWidth: js.UndefOr[Double] = js.native
+  var bottom: js.UndefOr[Double | String] = js.native
+  var categories: js.UndefOr[js.Array[String]] = js.native
+  var color: js.UndefOr[js.Array[String]] = js.native
+  var controller: js.UndefOr[AnonInRange] = js.native
+  var dimension: js.UndefOr[String | Double] = js.native
+  var formatter: js.UndefOr[String | js.Function] = js.native
+  var hoverLink: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[String] = js.native
+  var inRange: js.UndefOr[RangeObject] = js.native
+  var inverse: js.UndefOr[Boolean] = js.native
+  var itemGap: js.UndefOr[Double] = js.native
+  var itemHeight: js.UndefOr[Double] = js.native
+  var itemSymbol: js.UndefOr[String] = js.native
+  var itemWidth: js.UndefOr[Double] = js.native
+  var left: js.UndefOr[Double | String] = js.native
+  var max: js.UndefOr[Double] = js.native
+  var maxOpen: js.UndefOr[Boolean] = js.native
+  var min: js.UndefOr[Double] = js.native
+  var minOpen: js.UndefOr[Boolean] = js.native
+  var orient: js.UndefOr[vertical | horizontal] = js.native
+  var outOfRange: js.UndefOr[RangeObject] = js.native
+  var padding: js.UndefOr[Double | js.Array[Double]] = js.native
+  var pieces: js.UndefOr[js.Array[PiecesObject]] = js.native
+  var precision: js.UndefOr[Double] = js.native
+  var right: js.UndefOr[Double | String] = js.native
+  var selectedMode: js.UndefOr[multiple | single] = js.native
+  var seriesIndex: js.UndefOr[Double | js.Array[Double]] = js.native
+  var show: js.UndefOr[Boolean] = js.native
+  var showLabel: js.UndefOr[Boolean] = js.native
+  var splitNumber: js.UndefOr[Double] = js.native
+  var text: js.UndefOr[js.Array[String]] = js.native
+  var textGap: js.UndefOr[Double | js.Array[Double]] = js.native
+  var textStyle: js.UndefOr[TextStyle] = js.native
+  var top: js.UndefOr[Double | String] = js.native
+  var `type`: js.UndefOr[piecewise] = js.native
+  var z: js.UndefOr[Double] = js.native
+  var zlevel: js.UndefOr[Double] = js.native
 }
 
 object Piecewise {
   @scala.inline
-  def apply(
-    align: auto | left | right = null,
-    backgroundColor: String = null,
-    borderColor: String = null,
-    borderWidth: Int | Double = null,
-    bottom: Double | String = null,
-    categories: js.Array[String] = null,
-    color: js.Array[String] = null,
-    controller: AnonInRange = null,
-    dimension: String | Double = null,
-    formatter: String | js.Function = null,
-    hoverLink: js.UndefOr[Boolean] = js.undefined,
-    id: String = null,
-    inRange: RangeObject = null,
-    inverse: js.UndefOr[Boolean] = js.undefined,
-    itemGap: Int | Double = null,
-    itemHeight: Int | Double = null,
-    itemSymbol: String = null,
-    itemWidth: Int | Double = null,
-    left: Double | String = null,
-    max: Int | Double = null,
-    maxOpen: js.UndefOr[Boolean] = js.undefined,
-    min: Int | Double = null,
-    minOpen: js.UndefOr[Boolean] = js.undefined,
-    orient: vertical | horizontal = null,
-    outOfRange: RangeObject = null,
-    padding: Double | js.Array[Double] = null,
-    pieces: js.Array[PiecesObject] = null,
-    precision: Int | Double = null,
-    right: Double | String = null,
-    selectedMode: multiple | single = null,
-    seriesIndex: Double | js.Array[Double] = null,
-    show: js.UndefOr[Boolean] = js.undefined,
-    showLabel: js.UndefOr[Boolean] = js.undefined,
-    splitNumber: Int | Double = null,
-    text: js.Array[String] = null,
-    textGap: Double | js.Array[Double] = null,
-    textStyle: TextStyle = null,
-    top: Double | String = null,
-    `type`: piecewise = null,
-    z: Int | Double = null,
-    zlevel: Int | Double = null
-  ): Piecewise = {
+  def apply(): Piecewise = {
     val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
-    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (controller != null) __obj.updateDynamic("controller")(controller.asInstanceOf[js.Any])
-    if (dimension != null) __obj.updateDynamic("dimension")(dimension.asInstanceOf[js.Any])
-    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
-    if (!js.isUndefined(hoverLink)) __obj.updateDynamic("hoverLink")(hoverLink.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (inRange != null) __obj.updateDynamic("inRange")(inRange.asInstanceOf[js.Any])
-    if (!js.isUndefined(inverse)) __obj.updateDynamic("inverse")(inverse.asInstanceOf[js.Any])
-    if (itemGap != null) __obj.updateDynamic("itemGap")(itemGap.asInstanceOf[js.Any])
-    if (itemHeight != null) __obj.updateDynamic("itemHeight")(itemHeight.asInstanceOf[js.Any])
-    if (itemSymbol != null) __obj.updateDynamic("itemSymbol")(itemSymbol.asInstanceOf[js.Any])
-    if (itemWidth != null) __obj.updateDynamic("itemWidth")(itemWidth.asInstanceOf[js.Any])
-    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxOpen)) __obj.updateDynamic("maxOpen")(maxOpen.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (!js.isUndefined(minOpen)) __obj.updateDynamic("minOpen")(minOpen.asInstanceOf[js.Any])
-    if (orient != null) __obj.updateDynamic("orient")(orient.asInstanceOf[js.Any])
-    if (outOfRange != null) __obj.updateDynamic("outOfRange")(outOfRange.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (pieces != null) __obj.updateDynamic("pieces")(pieces.asInstanceOf[js.Any])
-    if (precision != null) __obj.updateDynamic("precision")(precision.asInstanceOf[js.Any])
-    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (selectedMode != null) __obj.updateDynamic("selectedMode")(selectedMode.asInstanceOf[js.Any])
-    if (seriesIndex != null) __obj.updateDynamic("seriesIndex")(seriesIndex.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (!js.isUndefined(showLabel)) __obj.updateDynamic("showLabel")(showLabel.asInstanceOf[js.Any])
-    if (splitNumber != null) __obj.updateDynamic("splitNumber")(splitNumber.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (textGap != null) __obj.updateDynamic("textGap")(textGap.asInstanceOf[js.Any])
-    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
-    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (z != null) __obj.updateDynamic("z")(z.asInstanceOf[js.Any])
-    if (zlevel != null) __obj.updateDynamic("zlevel")(zlevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[Piecewise]
   }
+  @scala.inline
+  implicit class PiecewiseOps[Self <: Piecewise] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlign(value: auto | left | right): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBottom(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategories(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategories: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withController(value: AnonInRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutController: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDimension(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimension")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatter(value: String | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverLink(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoverLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInRange(value: RangeObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInverse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inverse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInverse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inverse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemGap(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemGap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemGap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemGap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemSymbol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemSymbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemSymbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeft(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrient(value: vertical | horizontal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutOfRange(value: RangeObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outOfRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutOfRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outOfRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPieces(value: js.Array[PiecesObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pieces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPieces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pieces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrecision(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrecision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRight(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedMode(value: multiple | single): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeriesIndex(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeriesIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowLabel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSplitNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSplitNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextGap(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textGap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextGap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textGap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextStyle(value: TextStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTop(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: piecewise): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZ(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZ: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZlevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZlevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,11 +26,41 @@ trait SchemaPullRequest extends js.Object {
 
 object SchemaPullRequest {
   @scala.inline
-  def apply(maxMessages: Int | Double = null, returnImmediately: js.UndefOr[Boolean] = js.undefined): SchemaPullRequest = {
+  def apply(): SchemaPullRequest = {
     val __obj = js.Dynamic.literal()
-    if (maxMessages != null) __obj.updateDynamic("maxMessages")(maxMessages.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnImmediately)) __obj.updateDynamic("returnImmediately")(returnImmediately.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPullRequest]
   }
+  @scala.inline
+  implicit class SchemaPullRequestOps[Self <: SchemaPullRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxMessages(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMessages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMessages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnImmediately(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnImmediately")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnImmediately: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnImmediately")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

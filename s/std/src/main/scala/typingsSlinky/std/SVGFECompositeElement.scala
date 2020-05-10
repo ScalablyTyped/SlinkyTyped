@@ -58,13 +58,14 @@ trait SVGFECompositeElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGFECompositeElement")
 @js.native
-object SVGFECompositeElement extends Instantiable0[SVGFECompositeElement] {
+object SVGFECompositeElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFECompositeElement] {
   val SVG_FECOMPOSITE_OPERATOR_ARITHMETIC: Double = js.native
   val SVG_FECOMPOSITE_OPERATOR_ATOP: Double = js.native
   val SVG_FECOMPOSITE_OPERATOR_IN: Double = js.native

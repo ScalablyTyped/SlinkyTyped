@@ -6,8 +6,5 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.Devices.Input.KeyboardCapabilities")
 @js.native
-class KeyboardCapabilities () extends IKeyboardCapabilities {
-  /* CompleteClass */
-  override var keyboardPresent: Double = js.native
-}
+class KeyboardCapabilities () extends IKeyboardCapabilities
 

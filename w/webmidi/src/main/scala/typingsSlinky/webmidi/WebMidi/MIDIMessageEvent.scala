@@ -10,7 +10,7 @@ trait MIDIMessageEvent extends Event_ {
   /**
     * A Uint8Array containing the MIDI data bytes of a single MIDI message.
     */
-  var data: scala.scalajs.js.typedarray.Uint8Array = js.native
+  var data: js.typedarray.Uint8Array = js.native
   /**
     * A timestamp specifying when the event occurred.
     */

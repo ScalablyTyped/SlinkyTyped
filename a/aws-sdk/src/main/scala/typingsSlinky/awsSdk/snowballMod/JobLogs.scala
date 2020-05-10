@@ -22,16 +22,53 @@ trait JobLogs extends js.Object {
 
 object JobLogs {
   @scala.inline
-  def apply(
-    JobCompletionReportURI: String = null,
-    JobFailureLogURI: String = null,
-    JobSuccessLogURI: String = null
-  ): JobLogs = {
+  def apply(): JobLogs = {
     val __obj = js.Dynamic.literal()
-    if (JobCompletionReportURI != null) __obj.updateDynamic("JobCompletionReportURI")(JobCompletionReportURI.asInstanceOf[js.Any])
-    if (JobFailureLogURI != null) __obj.updateDynamic("JobFailureLogURI")(JobFailureLogURI.asInstanceOf[js.Any])
-    if (JobSuccessLogURI != null) __obj.updateDynamic("JobSuccessLogURI")(JobSuccessLogURI.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobLogs]
   }
+  @scala.inline
+  implicit class JobLogsOps[Self <: JobLogs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobCompletionReportURI(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobCompletionReportURI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobCompletionReportURI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobCompletionReportURI")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobFailureLogURI(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobFailureLogURI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobFailureLogURI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobFailureLogURI")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobSuccessLogURI(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobSuccessLogURI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobSuccessLogURI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobSuccessLogURI")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

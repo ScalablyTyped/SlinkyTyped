@@ -16,8 +16,21 @@ object GlobalSignOutRequest {
   @scala.inline
   def apply(AccessToken: TokenModelType): GlobalSignOutRequest = {
     val __obj = js.Dynamic.literal(AccessToken = AccessToken.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GlobalSignOutRequest]
   }
+  @scala.inline
+  implicit class GlobalSignOutRequestOps[Self <: GlobalSignOutRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessToken(value: TokenModelType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

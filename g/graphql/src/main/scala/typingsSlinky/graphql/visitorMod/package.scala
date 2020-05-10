@@ -14,11 +14,11 @@ package object visitorMod {
   type EnterLeaveVisitor[KindToNode, Nodes] = typingsSlinky.graphql.visitorMod.EnterLeave[
     (typingsSlinky.graphql.visitorMod.VisitFn[Nodes, Nodes]) | (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof KindToNode ]:? graphql.graphql/language/visitor.VisitFn<Nodes, KindToNode[K]>}
-    */ typingsSlinky.graphql.graphqlStrings.EnterLeaveVisitor with KindToNode)
+    */ typingsSlinky.graphql.graphqlStrings.EnterLeaveVisitor with org.scalablytyped.runtime.TopLevel[KindToNode])
   ]
   type ShapeMapVisitor[KindToNode, Nodes] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof KindToNode ]:? graphql.graphql/language/visitor.VisitFn<Nodes, KindToNode[K]> | graphql.graphql/language/visitor.EnterLeave<graphql.graphql/language/visitor.VisitFn<Nodes, KindToNode[K]>>}
-    */ typingsSlinky.graphql.graphqlStrings.ShapeMapVisitor with js.Any
+    */ typingsSlinky.graphql.graphqlStrings.ShapeMapVisitor with org.scalablytyped.runtime.TopLevel[js.Any]
   type VisitFn[TAnyNode, TVisitedNode] = js.Function5[
     /* node */ TVisitedNode, 
     /* key */ js.UndefOr[java.lang.String | scala.Double], 
@@ -30,5 +30,5 @@ package object visitorMod {
   type Visitor[KindToNode, Nodes] = (typingsSlinky.graphql.visitorMod.EnterLeaveVisitor[KindToNode, Nodes]) | (typingsSlinky.graphql.visitorMod.ShapeMapVisitor[KindToNode, Nodes])
   type VisitorKeyMap[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: std.ReadonlyArray<keyof T[P]>}
-    */ typingsSlinky.graphql.graphqlStrings.VisitorKeyMap with js.Any
+    */ typingsSlinky.graphql.graphqlStrings.VisitorKeyMap with org.scalablytyped.runtime.TopLevel[js.Any]
 }

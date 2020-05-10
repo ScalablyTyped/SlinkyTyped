@@ -4,21 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAllowVaultCardOverride extends js.Object {
-  var allowVaultCardOverride: js.UndefOr[Boolean] = js.undefined
-  var vaultCard: js.UndefOr[Boolean] = js.undefined
+  var allowVaultCardOverride: js.UndefOr[Boolean] = js.native
+  var vaultCard: js.UndefOr[Boolean] = js.native
 }
 
 object AnonAllowVaultCardOverride {
   @scala.inline
-  def apply(
-    allowVaultCardOverride: js.UndefOr[Boolean] = js.undefined,
-    vaultCard: js.UndefOr[Boolean] = js.undefined
-  ): AnonAllowVaultCardOverride = {
+  def apply(): AnonAllowVaultCardOverride = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowVaultCardOverride)) __obj.updateDynamic("allowVaultCardOverride")(allowVaultCardOverride.asInstanceOf[js.Any])
-    if (!js.isUndefined(vaultCard)) __obj.updateDynamic("vaultCard")(vaultCard.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAllowVaultCardOverride]
   }
+  @scala.inline
+  implicit class AnonAllowVaultCardOverrideOps[Self <: AnonAllowVaultCardOverride] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowVaultCardOverride(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowVaultCardOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowVaultCardOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowVaultCardOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVaultCard(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vaultCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVaultCard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vaultCard")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

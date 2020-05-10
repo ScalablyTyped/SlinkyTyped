@@ -4,36 +4,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ContentOwner extends js.Object {
-  var conflictNotificationEmail: js.UndefOr[String] = js.undefined
-  var displayName: js.UndefOr[String] = js.undefined
-  var disputeNotificationEmails: js.UndefOr[js.Array[String]] = js.undefined
-  var fingerprintReportNotificationEmails: js.UndefOr[js.Array[String]] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var kind: js.UndefOr[String] = js.undefined
-  var primaryNotificationEmails: js.UndefOr[js.Array[String]] = js.undefined
+  var conflictNotificationEmail: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[String] = js.native
+  var disputeNotificationEmails: js.UndefOr[js.Array[String]] = js.native
+  var fingerprintReportNotificationEmails: js.UndefOr[js.Array[String]] = js.native
+  var id: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.native
+  var primaryNotificationEmails: js.UndefOr[js.Array[String]] = js.native
 }
 
 object ContentOwner {
   @scala.inline
-  def apply(
-    conflictNotificationEmail: String = null,
-    displayName: String = null,
-    disputeNotificationEmails: js.Array[String] = null,
-    fingerprintReportNotificationEmails: js.Array[String] = null,
-    id: String = null,
-    kind: String = null,
-    primaryNotificationEmails: js.Array[String] = null
-  ): ContentOwner = {
+  def apply(): ContentOwner = {
     val __obj = js.Dynamic.literal()
-    if (conflictNotificationEmail != null) __obj.updateDynamic("conflictNotificationEmail")(conflictNotificationEmail.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (disputeNotificationEmails != null) __obj.updateDynamic("disputeNotificationEmails")(disputeNotificationEmails.asInstanceOf[js.Any])
-    if (fingerprintReportNotificationEmails != null) __obj.updateDynamic("fingerprintReportNotificationEmails")(fingerprintReportNotificationEmails.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (primaryNotificationEmails != null) __obj.updateDynamic("primaryNotificationEmails")(primaryNotificationEmails.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentOwner]
   }
+  @scala.inline
+  implicit class ContentOwnerOps[Self <: ContentOwner] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConflictNotificationEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conflictNotificationEmail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConflictNotificationEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conflictNotificationEmail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisputeNotificationEmails(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disputeNotificationEmails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisputeNotificationEmails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disputeNotificationEmails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFingerprintReportNotificationEmails(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprintReportNotificationEmails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFingerprintReportNotificationEmails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprintReportNotificationEmails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimaryNotificationEmails(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryNotificationEmails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimaryNotificationEmails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryNotificationEmails")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

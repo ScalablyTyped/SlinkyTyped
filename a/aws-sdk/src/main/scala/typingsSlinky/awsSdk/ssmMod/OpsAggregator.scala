@@ -34,22 +34,89 @@ trait OpsAggregator extends js.Object {
 
 object OpsAggregator {
   @scala.inline
-  def apply(
-    AggregatorType: OpsAggregatorType = null,
-    Aggregators: OpsAggregatorList = null,
-    AttributeName: OpsDataAttributeName = null,
-    Filters: OpsFilterList = null,
-    TypeName: OpsDataTypeName = null,
-    Values: OpsAggregatorValueMap = null
-  ): OpsAggregator = {
+  def apply(): OpsAggregator = {
     val __obj = js.Dynamic.literal()
-    if (AggregatorType != null) __obj.updateDynamic("AggregatorType")(AggregatorType.asInstanceOf[js.Any])
-    if (Aggregators != null) __obj.updateDynamic("Aggregators")(Aggregators.asInstanceOf[js.Any])
-    if (AttributeName != null) __obj.updateDynamic("AttributeName")(AttributeName.asInstanceOf[js.Any])
-    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
-    if (TypeName != null) __obj.updateDynamic("TypeName")(TypeName.asInstanceOf[js.Any])
-    if (Values != null) __obj.updateDynamic("Values")(Values.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpsAggregator]
   }
+  @scala.inline
+  implicit class OpsAggregatorOps[Self <: OpsAggregator] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggregatorType(value: OpsAggregatorType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AggregatorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregatorType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AggregatorType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAggregators(value: OpsAggregatorList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Aggregators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregators: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Aggregators")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttributeName(value: OpsDataAttributeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilters(value: OpsFilterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypeName(value: OpsDataTypeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValues(value: OpsAggregatorValueMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

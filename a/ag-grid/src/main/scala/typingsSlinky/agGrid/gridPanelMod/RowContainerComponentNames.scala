@@ -22,30 +22,28 @@ trait RowContainerComponentNames extends js.Object
 
 object RowContainerComponentNames {
   @scala.inline
-  def body: typingsSlinky.agGrid.agGridStrings.body = this.cast("body")
+  def body: typingsSlinky.agGrid.agGridStrings.body = "body".asInstanceOf[typingsSlinky.agGrid.agGridStrings.body]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def floatingBottom: typingsSlinky.agGrid.agGridStrings.floatingBottom = "floatingBottom".asInstanceOf[typingsSlinky.agGrid.agGridStrings.floatingBottom]
   @scala.inline
-  def floatingBottom: typingsSlinky.agGrid.agGridStrings.floatingBottom = this.cast("floatingBottom")
+  def floatingBottomFullWith: typingsSlinky.agGrid.agGridStrings.floatingBottomFullWith = "floatingBottomFullWith".asInstanceOf[typingsSlinky.agGrid.agGridStrings.floatingBottomFullWith]
   @scala.inline
-  def floatingBottomFullWith: typingsSlinky.agGrid.agGridStrings.floatingBottomFullWith = this.cast("floatingBottomFullWith")
+  def floatingBottomPinnedLeft: typingsSlinky.agGrid.agGridStrings.floatingBottomPinnedLeft = "floatingBottomPinnedLeft".asInstanceOf[typingsSlinky.agGrid.agGridStrings.floatingBottomPinnedLeft]
   @scala.inline
-  def floatingBottomPinnedLeft: typingsSlinky.agGrid.agGridStrings.floatingBottomPinnedLeft = this.cast("floatingBottomPinnedLeft")
+  def floatingBottomPinnedRight: typingsSlinky.agGrid.agGridStrings.floatingBottomPinnedRight = "floatingBottomPinnedRight".asInstanceOf[typingsSlinky.agGrid.agGridStrings.floatingBottomPinnedRight]
   @scala.inline
-  def floatingBottomPinnedRight: typingsSlinky.agGrid.agGridStrings.floatingBottomPinnedRight = this.cast("floatingBottomPinnedRight")
+  def floatingTop: typingsSlinky.agGrid.agGridStrings.floatingTop = "floatingTop".asInstanceOf[typingsSlinky.agGrid.agGridStrings.floatingTop]
   @scala.inline
-  def floatingTop: typingsSlinky.agGrid.agGridStrings.floatingTop = this.cast("floatingTop")
+  def floatingTopFullWidth: typingsSlinky.agGrid.agGridStrings.floatingTopFullWidth = "floatingTopFullWidth".asInstanceOf[typingsSlinky.agGrid.agGridStrings.floatingTopFullWidth]
   @scala.inline
-  def floatingTopFullWidth: typingsSlinky.agGrid.agGridStrings.floatingTopFullWidth = this.cast("floatingTopFullWidth")
+  def floatingTopPinnedLeft: typingsSlinky.agGrid.agGridStrings.floatingTopPinnedLeft = "floatingTopPinnedLeft".asInstanceOf[typingsSlinky.agGrid.agGridStrings.floatingTopPinnedLeft]
   @scala.inline
-  def floatingTopPinnedLeft: typingsSlinky.agGrid.agGridStrings.floatingTopPinnedLeft = this.cast("floatingTopPinnedLeft")
+  def floatingTopPinnedRight: typingsSlinky.agGrid.agGridStrings.floatingTopPinnedRight = "floatingTopPinnedRight".asInstanceOf[typingsSlinky.agGrid.agGridStrings.floatingTopPinnedRight]
   @scala.inline
-  def floatingTopPinnedRight: typingsSlinky.agGrid.agGridStrings.floatingTopPinnedRight = this.cast("floatingTopPinnedRight")
+  def fullWidth: typingsSlinky.agGrid.agGridStrings.fullWidth = "fullWidth".asInstanceOf[typingsSlinky.agGrid.agGridStrings.fullWidth]
   @scala.inline
-  def fullWidth: typingsSlinky.agGrid.agGridStrings.fullWidth = this.cast("fullWidth")
+  def pinnedLeft: typingsSlinky.agGrid.agGridStrings.pinnedLeft = "pinnedLeft".asInstanceOf[typingsSlinky.agGrid.agGridStrings.pinnedLeft]
   @scala.inline
-  def pinnedLeft: typingsSlinky.agGrid.agGridStrings.pinnedLeft = this.cast("pinnedLeft")
-  @scala.inline
-  def pinnedRight: typingsSlinky.agGrid.agGridStrings.pinnedRight = this.cast("pinnedRight")
+  def pinnedRight: typingsSlinky.agGrid.agGridStrings.pinnedRight = "pinnedRight".asInstanceOf[typingsSlinky.agGrid.agGridStrings.pinnedRight]
 }
 

@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 /**
   * See: {@link https://docs.mendix.com/refguide7/project relevant section in reference guide}
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -30,7 +30,7 @@ abstract class ProjectDocument protected () extends ModelUnit {
   val containerAsProject_FProjectDocument: IProject = js.native
   @JSName("model")
   var model_FProjectDocument: IModel = js.native
-  def containerAsProject(): Project = js.native
+  def containerAsProject: Project = js.native
 }
 
 /* static members */

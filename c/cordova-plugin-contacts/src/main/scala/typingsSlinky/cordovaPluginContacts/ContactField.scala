@@ -20,13 +20,14 @@ import scala.scalajs.js.annotation._
   * url when the value attribute contains a URL to the photo image, or base64 when the value
   * contains a base64-encoded image string.
   */
+@js.native
 trait ContactField extends js.Object {
   /** Set to true if this ContactField contains the user's preferred value. */
-  var pref: Boolean
+  var pref: Boolean = js.native
   /** A string that indicates what type of field this is, home for example. */
-  var `type`: String
+  var `type`: String = js.native
   /** The value of the field, such as a phone number or email address. */
-  var value: String
+  var value: String = js.native
 }
 
 @JSGlobal("ContactField")

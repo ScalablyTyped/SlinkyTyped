@@ -5,12 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IToastNotification extends js.Object {
-  var content: XmlDocument
-  var expirationTime: js.Date
-  var onactivated: js.Any
-  var ondismissed: js.Any
-  var onfailed: js.Any
+  var content: XmlDocument = js.native
+  var expirationTime: js.Date = js.native
+  var onactivated: js.Any = js.native
+  var ondismissed: js.Any = js.native
+  var onfailed: js.Any = js.native
 }
 
 object IToastNotification {
@@ -23,8 +24,45 @@ object IToastNotification {
     onfailed: js.Any
   ): IToastNotification = {
     val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], expirationTime = expirationTime.asInstanceOf[js.Any], onactivated = onactivated.asInstanceOf[js.Any], ondismissed = ondismissed.asInstanceOf[js.Any], onfailed = onfailed.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IToastNotification]
   }
+  @scala.inline
+  implicit class IToastNotificationOps[Self <: IToastNotification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: XmlDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExpirationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnactivated(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onactivated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOndismissed(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondismissed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnfailed(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onfailed")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

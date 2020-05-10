@@ -19,7 +19,6 @@ import typingsSlinky.shelljs.mod.TouchOptionsLiteral
 import typingsSlinky.shelljsExecProxy.shelljsExecProxyStrings.PlussignN
 import typingsSlinky.shelljsExecProxy.shelljsExecProxyStrings.`-N`
 import typingsSlinky.shelljsExecProxy.shelljsExecProxyStrings.`-c`
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -251,8 +250,8 @@ trait ShelljsExecProxy extends /* k */ StringDictionary[Exec] {
   	 * @return Returns a string containing all lines of the file that match the given regex_filter.
   	 */
   def grep(options: String, regex_filter: String, files: js.Array[String]): ShellString = js.native
-  def grep(options: String, regex_filter: RegExp, files: String*): ShellString = js.native
-  def grep(options: String, regex_filter: RegExp, files: js.Array[String]): ShellString = js.native
+  def grep(options: String, regex_filter: js.RegExp, files: String*): ShellString = js.native
+  def grep(options: String, regex_filter: js.RegExp, files: js.Array[String]): ShellString = js.native
   def grep(regex_filter: String, files: String*): ShellString = js.native
   /**
   	 * Reads input string from given files and returns a string containing all lines
@@ -263,8 +262,8 @@ trait ShelljsExecProxy extends /* k */ StringDictionary[Exec] {
   	 * @return             Returns a string containing all lines of the file that match the given `regex_filter`.
   	 */
   def grep(regex_filter: String, files: js.Array[String]): ShellString = js.native
-  def grep(regex_filter: RegExp, files: String*): ShellString = js.native
-  def grep(regex_filter: RegExp, files: js.Array[String]): ShellString = js.native
+  def grep(regex_filter: js.RegExp, files: String*): ShellString = js.native
+  def grep(regex_filter: js.RegExp, files: js.Array[String]): ShellString = js.native
   def head(files: String*): ShellString = js.native
   def head(files: js.Array[String]): ShellString = js.native
   def head(options: HeadOptions, files: String*): ShellString = js.native
@@ -552,8 +551,8 @@ trait ShelljsExecProxy extends /* k */ StringDictionary[Exec] {
   	 * @return            The new string after replacement.
   	 */
   def sed(options: String, searchRegex: String, replacement: String, files: js.Array[String]): ShellString = js.native
-  def sed(options: String, searchRegex: RegExp, replacement: String, files: String*): ShellString = js.native
-  def sed(options: String, searchRegex: RegExp, replacement: String, files: js.Array[String]): ShellString = js.native
+  def sed(options: String, searchRegex: js.RegExp, replacement: String, files: String*): ShellString = js.native
+  def sed(options: String, searchRegex: js.RegExp, replacement: String, files: js.Array[String]): ShellString = js.native
   def sed(searchRegex: String, replacement: String, files: String*): ShellString = js.native
   /**
   	 * Reads an input string from file and performs a JavaScript `replace()`
@@ -565,8 +564,8 @@ trait ShelljsExecProxy extends /* k */ StringDictionary[Exec] {
   	 * @return            The new string after replacement.
   	 */
   def sed(searchRegex: String, replacement: String, files: js.Array[String]): ShellString = js.native
-  def sed(searchRegex: RegExp, replacement: String, files: String*): ShellString = js.native
-  def sed(searchRegex: RegExp, replacement: String, files: js.Array[String]): ShellString = js.native
+  def sed(searchRegex: js.RegExp, replacement: String, files: String*): ShellString = js.native
+  def sed(searchRegex: js.RegExp, replacement: String, files: js.Array[String]): ShellString = js.native
   def set(options: String): Unit = js.native
   def sort(files: String*): ShellString = js.native
   /**

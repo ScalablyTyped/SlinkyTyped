@@ -26,18 +26,65 @@ trait ConnectivityInfo extends js.Object {
 
 object ConnectivityInfo {
   @scala.inline
-  def apply(
-    HostAddress: string = null,
-    Id: string = null,
-    Metadata: string = null,
-    PortNumber: Int | Double = null
-  ): ConnectivityInfo = {
+  def apply(): ConnectivityInfo = {
     val __obj = js.Dynamic.literal()
-    if (HostAddress != null) __obj.updateDynamic("HostAddress")(HostAddress.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (Metadata != null) __obj.updateDynamic("Metadata")(Metadata.asInstanceOf[js.Any])
-    if (PortNumber != null) __obj.updateDynamic("PortNumber")(PortNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectivityInfo]
   }
+  @scala.inline
+  implicit class ConnectivityInfoOps[Self <: ConnectivityInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHostAddress(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPortNumber(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPortNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortNumber")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

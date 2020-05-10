@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DocumentHighlights extends js.Object {
-  var fileName: java.lang.String
-  var highlightSpans: js.Array[HighlightSpan]
+  var fileName: java.lang.String = js.native
+  var highlightSpans: js.Array[HighlightSpan] = js.native
 }
 
 object DocumentHighlights {
   @scala.inline
   def apply(fileName: java.lang.String, highlightSpans: js.Array[HighlightSpan]): DocumentHighlights = {
     val __obj = js.Dynamic.literal(fileName = fileName.asInstanceOf[js.Any], highlightSpans = highlightSpans.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DocumentHighlights]
   }
+  @scala.inline
+  implicit class DocumentHighlightsOps[Self <: DocumentHighlights] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileName(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHighlightSpans(value: js.Array[HighlightSpan]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightSpans")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

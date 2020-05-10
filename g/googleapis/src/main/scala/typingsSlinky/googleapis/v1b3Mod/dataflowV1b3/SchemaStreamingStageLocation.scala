@@ -18,10 +18,29 @@ trait SchemaStreamingStageLocation extends js.Object {
 
 object SchemaStreamingStageLocation {
   @scala.inline
-  def apply(streamId: String = null): SchemaStreamingStageLocation = {
+  def apply(): SchemaStreamingStageLocation = {
     val __obj = js.Dynamic.literal()
-    if (streamId != null) __obj.updateDynamic("streamId")(streamId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStreamingStageLocation]
   }
+  @scala.inline
+  implicit class SchemaStreamingStageLocationOps[Self <: SchemaStreamingStageLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStreamId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

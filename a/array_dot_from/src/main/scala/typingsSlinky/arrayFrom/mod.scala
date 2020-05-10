@@ -1,7 +1,6 @@
 package typingsSlinky.arrayFrom
 
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,11 +9,11 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   def apply[T](arrayLike: ArrayLike[T]): js.Array[T] = js.native
-  def apply[T](iterable: Iterable[T]): js.Array[T] = js.native
+  def apply[T](iterable: js.Iterable[T]): js.Array[T] = js.native
   def apply[T, U](arrayLike: ArrayLike[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U]): js.Array[U] = js.native
   def apply[T, U](arrayLike: ArrayLike[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U], thisArg: js.Any): js.Array[U] = js.native
-  def apply[T, U](iterable: Iterable[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U]): js.Array[U] = js.native
-  def apply[T, U](iterable: Iterable[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U], thisArg: js.Any): js.Array[U] = js.native
+  def apply[T, U](iterable: js.Iterable[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U]): js.Array[U] = js.native
+  def apply[T, U](iterable: js.Iterable[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U], thisArg: js.Any): js.Array[U] = js.native
   /**
   	 * Gets the optimal `Array.from` implementation to use.
   	 */
@@ -32,7 +31,7 @@ object mod extends js.Object {
   	 * @param mapfn A mapping function to call on every element of the array.
   	 * @param thisArg Value of `this` used to invoke the mapfn.
   	 */
-  def implementation[T](iterable: Iterable[T]): js.Array[T] = js.native
+  def implementation[T](iterable: js.Iterable[T]): js.Array[T] = js.native
   /**
   	 * Creates an array from an array-like or iterable object.
   	 * @param iterable An iterable object to convert to an array.
@@ -53,14 +52,14 @@ object mod extends js.Object {
   	 * @param mapfn A mapping function to call on every element of the array.
   	 * @param thisArg Value of `this` used to invoke the mapfn.
   	 */
-  def implementation[T, U](iterable: Iterable[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U]): js.Array[U] = js.native
+  def implementation[T, U](iterable: js.Iterable[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U]): js.Array[U] = js.native
   /**
   	 * Creates an array from an array-like or iterable object.
   	 * @param iterable An iterable object to convert to an array.
   	 * @param mapfn A mapping function to call on every element of the array.
   	 * @param thisArg Value of `this` used to invoke the mapfn.
   	 */
-  def implementation[T, U](iterable: Iterable[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U], thisArg: js.Any): js.Array[U] = js.native
+  def implementation[T, U](iterable: js.Iterable[T], mapfn: js.Function2[/* v */ T, /* k */ Double, U], thisArg: js.Any): js.Array[U] = js.native
   def shim(): /* import warning: importer.ImportType#apply Failed type conversion: typeof ArrayFrom */ js.Any = js.native
 }
 

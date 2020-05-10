@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait LodashPartition extends js.Object {
-  def apply[T](callback: ValueIteratee[T]): LodashPartition2x1[T] = js.native
+  def apply[T](callback: ValueIteratee[T]): js.Tuple2[js.Array[T], js.Array[T]] = js.native
   def apply[T /* <: js.Object */](
     callback: ValueIteratee[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any

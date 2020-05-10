@@ -1,11 +1,9 @@
 package typingsSlinky.antdMobile.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.AnonLabel
 import typingsSlinky.antdMobile.listViewMod.ListViewProps
 import typingsSlinky.antdMobile.listViewMod.default
@@ -14,83 +12,93 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ListView
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ListView {
   @JSImport("antd-mobile/lib/list-view", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentContainerStyle(value: CSSProperties): this.type = set("contentContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delayActivityIndicator(value: js.Any): this.type = set("delayActivityIndicator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delayTime(value: Double): this.type = set("delayTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialListSize(value: Double): this.type = set("initialListSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listPrefixCls(value: String): this.type = set("listPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listViewPrefixCls(value: String): this.type = set("listViewPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onContentSizeChange(value: (/* w */ Double, /* h */ Double) => Unit): this.type = set("onContentSizeChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onEndReached(value: /* e */ js.UndefOr[js.Any] => Unit): this.type = set("onEndReached", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEndReachedThreshold(value: Double): this.type = set("onEndReachedThreshold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onLayout(value: /* event */ js.Any => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
+    @scala.inline
+    def onQuickSearch(value: (/* sectionID */ js.Any, /* topId */ js.UndefOr[js.Any]) => Unit): this.type = set("onQuickSearch", js.Any.fromFunction2(value))
+    @scala.inline
+    def onScroll(value: /* e */ js.UndefOr[js.Any] => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
+    @scala.inline
+    def pageSize(value: Double): this.type = set("pageSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pullToRefreshReactElement(value: ReactElement): this.type = set("pullToRefresh", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pullToRefresh(value: TagMod[Any]): this.type = set("pullToRefresh", value.asInstanceOf[js.Any])
+    @scala.inline
+    def quickSearchBarStyle(value: CSSProperties): this.type = set("quickSearchBarStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def quickSearchBarTop(value: AnonLabel): this.type = set("quickSearchBarTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderBodyComponent(value: () => ReactElement): this.type = set("renderBodyComponent", js.Any.fromFunction0(value))
+    @scala.inline
+    def renderFooter(value: () => ReactElement): this.type = set("renderFooter", js.Any.fromFunction0(value))
+    @scala.inline
+    def renderHeader(value: () => ReactElement): this.type = set("renderHeader", js.Any.fromFunction0(value))
+    @scala.inline
+    def renderScrollComponent(value: /* p */ js.Any => ReactElement): this.type = set("renderScrollComponent", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderSectionBodyWrapper(value: () => ReactElement): this.type = set("renderSectionBodyWrapper", js.Any.fromFunction0(value))
+    @scala.inline
+    def renderSectionHeader(value: (/* sectionData */ js.Any, /* sectionId */ String | Double) => ReactElement): this.type = set("renderSectionHeader", js.Any.fromFunction2(value))
+    @scala.inline
+    def renderSectionWrapper(value: () => ReactElement): this.type = set("renderSectionWrapper", js.Any.fromFunction0(value))
+    @scala.inline
+    def renderSeparator(
+      value: (/* sectionID */ String | Double, /* rowID */ String | Double, /* adjacentRowHighlighted */ js.UndefOr[Boolean]) => ReactElement
+    ): this.type = set("renderSeparator", js.Any.fromFunction3(value))
+    @scala.inline
+    def scrollEventThrottle(value: Double): this.type = set("scrollEventThrottle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollRenderAheadDistance(value: Double): this.type = set("scrollRenderAheadDistance", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sectionBodyClassName(value: String): this.type = set("sectionBodyClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useBodyScroll(value: Boolean): this.type = set("useBodyScroll", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: ListViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     dataSource: js.Any,
-    renderRow: (js.Any, Double | String, Double | String, js.UndefOr[Boolean]) => ReactElement,
-    contentContainerStyle: CSSProperties = null,
-    delayActivityIndicator: js.Any = null,
-    delayTime: Int | Double = null,
-    horizontal: js.UndefOr[Boolean] = js.undefined,
-    initialListSize: Int | Double = null,
-    listPrefixCls: String = null,
-    listViewPrefixCls: String = null,
-    onContentSizeChange: (/* w */ Double, /* h */ Double) => Unit = null,
-    onEndReached: /* e */ js.UndefOr[js.Any] => Unit = null,
-    onEndReachedThreshold: Int | Double = null,
-    onLayout: /* event */ js.Any => Unit = null,
-    onQuickSearch: (/* sectionID */ js.Any, /* topId */ js.UndefOr[js.Any]) => Unit = null,
-    onScroll: /* e */ js.UndefOr[js.Any] => Unit = null,
-    pageSize: Int | Double = null,
-    prefixCls: String = null,
-    pullToRefresh: TagMod[Any] = null,
-    quickSearchBarStyle: CSSProperties = null,
-    quickSearchBarTop: AnonLabel = null,
-    renderBodyComponent: () => ReactElement = null,
-    renderFooter: () => ReactElement = null,
-    renderHeader: () => ReactElement = null,
-    renderScrollComponent: /* p */ js.Any => ReactElement = null,
-    renderSectionBodyWrapper: () => ReactElement = null,
-    renderSectionHeader: (/* sectionData */ js.Any, /* sectionId */ String | Double) => ReactElement = null,
-    renderSectionWrapper: () => ReactElement = null,
-    renderSeparator: (/* sectionID */ String | Double, /* rowID */ String | Double, /* adjacentRowHighlighted */ js.UndefOr[Boolean]) => ReactElement = null,
-    scrollEventThrottle: Int | Double = null,
-    scrollRenderAheadDistance: Int | Double = null,
-    sectionBodyClassName: String = null,
-    useBodyScroll: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any], renderRow = js.Any.fromFunction4(renderRow))
-    if (contentContainerStyle != null) __obj.updateDynamic("contentContainerStyle")(contentContainerStyle.asInstanceOf[js.Any])
-    if (delayActivityIndicator != null) __obj.updateDynamic("delayActivityIndicator")(delayActivityIndicator.asInstanceOf[js.Any])
-    if (delayTime != null) __obj.updateDynamic("delayTime")(delayTime.asInstanceOf[js.Any])
-    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.asInstanceOf[js.Any])
-    if (initialListSize != null) __obj.updateDynamic("initialListSize")(initialListSize.asInstanceOf[js.Any])
-    if (listPrefixCls != null) __obj.updateDynamic("listPrefixCls")(listPrefixCls.asInstanceOf[js.Any])
-    if (listViewPrefixCls != null) __obj.updateDynamic("listViewPrefixCls")(listViewPrefixCls.asInstanceOf[js.Any])
-    if (onContentSizeChange != null) __obj.updateDynamic("onContentSizeChange")(js.Any.fromFunction2(onContentSizeChange))
-    if (onEndReached != null) __obj.updateDynamic("onEndReached")(js.Any.fromFunction1(onEndReached))
-    if (onEndReachedThreshold != null) __obj.updateDynamic("onEndReachedThreshold")(onEndReachedThreshold.asInstanceOf[js.Any])
-    if (onLayout != null) __obj.updateDynamic("onLayout")(js.Any.fromFunction1(onLayout))
-    if (onQuickSearch != null) __obj.updateDynamic("onQuickSearch")(js.Any.fromFunction2(onQuickSearch))
-    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
-    if (pageSize != null) __obj.updateDynamic("pageSize")(pageSize.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (pullToRefresh != null) __obj.updateDynamic("pullToRefresh")(pullToRefresh.asInstanceOf[js.Any])
-    if (quickSearchBarStyle != null) __obj.updateDynamic("quickSearchBarStyle")(quickSearchBarStyle.asInstanceOf[js.Any])
-    if (quickSearchBarTop != null) __obj.updateDynamic("quickSearchBarTop")(quickSearchBarTop.asInstanceOf[js.Any])
-    if (renderBodyComponent != null) __obj.updateDynamic("renderBodyComponent")(js.Any.fromFunction0(renderBodyComponent))
-    if (renderFooter != null) __obj.updateDynamic("renderFooter")(js.Any.fromFunction0(renderFooter))
-    if (renderHeader != null) __obj.updateDynamic("renderHeader")(js.Any.fromFunction0(renderHeader))
-    if (renderScrollComponent != null) __obj.updateDynamic("renderScrollComponent")(js.Any.fromFunction1(renderScrollComponent))
-    if (renderSectionBodyWrapper != null) __obj.updateDynamic("renderSectionBodyWrapper")(js.Any.fromFunction0(renderSectionBodyWrapper))
-    if (renderSectionHeader != null) __obj.updateDynamic("renderSectionHeader")(js.Any.fromFunction2(renderSectionHeader))
-    if (renderSectionWrapper != null) __obj.updateDynamic("renderSectionWrapper")(js.Any.fromFunction0(renderSectionWrapper))
-    if (renderSeparator != null) __obj.updateDynamic("renderSeparator")(js.Any.fromFunction3(renderSeparator))
-    if (scrollEventThrottle != null) __obj.updateDynamic("scrollEventThrottle")(scrollEventThrottle.asInstanceOf[js.Any])
-    if (scrollRenderAheadDistance != null) __obj.updateDynamic("scrollRenderAheadDistance")(scrollRenderAheadDistance.asInstanceOf[js.Any])
-    if (sectionBodyClassName != null) __obj.updateDynamic("sectionBodyClassName")(sectionBodyClassName.asInstanceOf[js.Any])
-    if (!js.isUndefined(useBodyScroll)) __obj.updateDynamic("useBodyScroll")(useBodyScroll.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    renderRow: (js.Any, Double | String, Double | String, js.UndefOr[Boolean]) => ReactElement
+  ): Builder = {
+    val __props = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any], renderRow = js.Any.fromFunction4(renderRow))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ListViewProps]))
   }
-  type Props = ListViewProps
 }
 

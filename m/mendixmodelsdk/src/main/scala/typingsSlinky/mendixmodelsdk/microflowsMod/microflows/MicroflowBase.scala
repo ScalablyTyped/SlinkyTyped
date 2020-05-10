@@ -13,7 +13,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -48,23 +48,23 @@ abstract class MicroflowBase protected () extends Document {
   @JSName("returnType")
   val returnType_FMicroflowBase: String | Null = js.native
   @JSName("containerAsFolderBase")
-  def containerAsFolderBase_MMicroflowBase(): FolderBase = js.native
-  def flows(): IList[Flow] = js.native
-  def markAsUsed(): Boolean = js.native
+  def containerAsFolderBase_MMicroflowBase: FolderBase = js.native
+  def flows: IList[Flow] = js.native
+  def markAsUsed: Boolean = js.native
   def markAsUsed(newValue: Boolean): js.Any = js.native
   /**
     * In version 7.9.0: introduced
     */
-  def microflowReturnType(): DataType = js.native
+  def microflowReturnType: DataType = js.native
   def microflowReturnType(newValue: DataType): js.Any = js.native
-  def objectCollection(): MicroflowObjectCollection = js.native
+  def objectCollection: MicroflowObjectCollection = js.native
   def objectCollection(newValue: MicroflowObjectCollection): js.Any = js.native
   /**
     * The value of this property is conceptually of type dataTypes.LegacyDataType.
     *
     * In version 7.9.0: deleted
     */
-  def returnType(): String = js.native
+  def returnType: String = js.native
   def returnType(newValue: String): js.Any = js.native
 }
 

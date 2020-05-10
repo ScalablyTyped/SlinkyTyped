@@ -19,24 +19,22 @@ trait NativeABI extends js.Object
 
 object NativeABI {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def default: typingsSlinky.fridaGum.fridaGumStrings.default = "default".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.default]
   @scala.inline
-  def default: typingsSlinky.fridaGum.fridaGumStrings.default = this.cast("default")
+  def fastcall: typingsSlinky.fridaGum.fridaGumStrings.fastcall = "fastcall".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.fastcall]
   @scala.inline
-  def fastcall: typingsSlinky.fridaGum.fridaGumStrings.fastcall = this.cast("fastcall")
+  def mscdecl: typingsSlinky.fridaGum.fridaGumStrings.mscdecl = "mscdecl".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.mscdecl]
   @scala.inline
-  def mscdecl: typingsSlinky.fridaGum.fridaGumStrings.mscdecl = this.cast("mscdecl")
+  def stdcall: typingsSlinky.fridaGum.fridaGumStrings.stdcall = "stdcall".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.stdcall]
   @scala.inline
-  def stdcall: typingsSlinky.fridaGum.fridaGumStrings.stdcall = this.cast("stdcall")
+  def sysv: typingsSlinky.fridaGum.fridaGumStrings.sysv = "sysv".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.sysv]
   @scala.inline
-  def sysv: typingsSlinky.fridaGum.fridaGumStrings.sysv = this.cast("sysv")
+  def thiscall: typingsSlinky.fridaGum.fridaGumStrings.thiscall = "thiscall".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.thiscall]
   @scala.inline
-  def thiscall: typingsSlinky.fridaGum.fridaGumStrings.thiscall = this.cast("thiscall")
+  def unix64: typingsSlinky.fridaGum.fridaGumStrings.unix64 = "unix64".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.unix64]
   @scala.inline
-  def unix64: typingsSlinky.fridaGum.fridaGumStrings.unix64 = this.cast("unix64")
+  def vfp: typingsSlinky.fridaGum.fridaGumStrings.vfp = "vfp".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.vfp]
   @scala.inline
-  def vfp: typingsSlinky.fridaGum.fridaGumStrings.vfp = this.cast("vfp")
-  @scala.inline
-  def win64: typingsSlinky.fridaGum.fridaGumStrings.win64 = this.cast("win64")
+  def win64: typingsSlinky.fridaGum.fridaGumStrings.win64 = "win64".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.win64]
 }
 

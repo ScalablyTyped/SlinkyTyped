@@ -1,12 +1,12 @@
 package typingsSlinky.storybookComponents.propRowMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.FC
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("@storybook/components/dist/blocks/PropsTable/PropRow", "PropRow")
 @js.native
-object PropRow extends TopLevel[FC[PropRowProps]]
+object PropRow extends TopLevel[ReactComponentClass[PropRowProps]]
 

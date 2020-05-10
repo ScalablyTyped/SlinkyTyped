@@ -1,20 +1,23 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
-import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FocusTrapZoneFocusZoneExample
-  extends ExternalComponentNoPropsWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.officeUiFabricReact.focusTrapZoneFocusZoneExampleMod.FocusTrapZoneFocusZoneExample
-    ] {
+object FocusTrapZoneFocusZoneExample {
   @JSImport("office-ui-fabric-react/lib/components/FocusTrapZone/examples/FocusTrapZone.FocusZone.Example", "FocusTrapZoneFocusZoneExample")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: js.Object): SharedBuilder_Object_159303587[
+    typingsSlinky.officeUiFabricReact.focusTrapZoneFocusZoneExampleMod.FocusTrapZoneFocusZoneExample
+  ] = new SharedBuilder_Object_159303587[
+    typingsSlinky.officeUiFabricReact.focusTrapZoneFocusZoneExampleMod.FocusTrapZoneFocusZoneExample
+  ](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FocusTrapZoneFocusZoneExample.type): SharedBuilder_Object_159303587[
+    typingsSlinky.officeUiFabricReact.focusTrapZoneFocusZoneExampleMod.FocusTrapZoneFocusZoneExample
+  ] = new SharedBuilder_Object_159303587[
+    typingsSlinky.officeUiFabricReact.focusTrapZoneFocusZoneExampleMod.FocusTrapZoneFocusZoneExample
+  ](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -78,44 +78,221 @@ trait ReplicationTask extends js.Object {
 
 object ReplicationTask {
   @scala.inline
-  def apply(
-    CdcStartPosition: String = null,
-    CdcStopPosition: String = null,
-    LastFailureMessage: String = null,
-    MigrationType: MigrationTypeValue = null,
-    RecoveryCheckpoint: String = null,
-    ReplicationInstanceArn: String = null,
-    ReplicationTaskArn: String = null,
-    ReplicationTaskCreationDate: js.Date = null,
-    ReplicationTaskIdentifier: String = null,
-    ReplicationTaskSettings: String = null,
-    ReplicationTaskStartDate: js.Date = null,
-    ReplicationTaskStats: ReplicationTaskStats = null,
-    SourceEndpointArn: String = null,
-    Status: String = null,
-    StopReason: String = null,
-    TableMappings: String = null,
-    TargetEndpointArn: String = null
-  ): ReplicationTask = {
+  def apply(): ReplicationTask = {
     val __obj = js.Dynamic.literal()
-    if (CdcStartPosition != null) __obj.updateDynamic("CdcStartPosition")(CdcStartPosition.asInstanceOf[js.Any])
-    if (CdcStopPosition != null) __obj.updateDynamic("CdcStopPosition")(CdcStopPosition.asInstanceOf[js.Any])
-    if (LastFailureMessage != null) __obj.updateDynamic("LastFailureMessage")(LastFailureMessage.asInstanceOf[js.Any])
-    if (MigrationType != null) __obj.updateDynamic("MigrationType")(MigrationType.asInstanceOf[js.Any])
-    if (RecoveryCheckpoint != null) __obj.updateDynamic("RecoveryCheckpoint")(RecoveryCheckpoint.asInstanceOf[js.Any])
-    if (ReplicationInstanceArn != null) __obj.updateDynamic("ReplicationInstanceArn")(ReplicationInstanceArn.asInstanceOf[js.Any])
-    if (ReplicationTaskArn != null) __obj.updateDynamic("ReplicationTaskArn")(ReplicationTaskArn.asInstanceOf[js.Any])
-    if (ReplicationTaskCreationDate != null) __obj.updateDynamic("ReplicationTaskCreationDate")(ReplicationTaskCreationDate.asInstanceOf[js.Any])
-    if (ReplicationTaskIdentifier != null) __obj.updateDynamic("ReplicationTaskIdentifier")(ReplicationTaskIdentifier.asInstanceOf[js.Any])
-    if (ReplicationTaskSettings != null) __obj.updateDynamic("ReplicationTaskSettings")(ReplicationTaskSettings.asInstanceOf[js.Any])
-    if (ReplicationTaskStartDate != null) __obj.updateDynamic("ReplicationTaskStartDate")(ReplicationTaskStartDate.asInstanceOf[js.Any])
-    if (ReplicationTaskStats != null) __obj.updateDynamic("ReplicationTaskStats")(ReplicationTaskStats.asInstanceOf[js.Any])
-    if (SourceEndpointArn != null) __obj.updateDynamic("SourceEndpointArn")(SourceEndpointArn.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (StopReason != null) __obj.updateDynamic("StopReason")(StopReason.asInstanceOf[js.Any])
-    if (TableMappings != null) __obj.updateDynamic("TableMappings")(TableMappings.asInstanceOf[js.Any])
-    if (TargetEndpointArn != null) __obj.updateDynamic("TargetEndpointArn")(TargetEndpointArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplicationTask]
   }
+  @scala.inline
+  implicit class ReplicationTaskOps[Self <: ReplicationTask] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCdcStartPosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CdcStartPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCdcStartPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CdcStartPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCdcStopPosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CdcStopPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCdcStopPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CdcStopPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastFailureMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastFailureMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastFailureMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastFailureMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMigrationType(value: MigrationTypeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MigrationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMigrationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MigrationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecoveryCheckpoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecoveryCheckpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecoveryCheckpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecoveryCheckpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationInstanceArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationInstanceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationInstanceArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationInstanceArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationTaskArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationTaskArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationTaskCreationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskCreationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationTaskCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskCreationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationTaskIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationTaskIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationTaskSettings(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationTaskSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationTaskStartDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskStartDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationTaskStartDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskStartDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationTaskStats(value: ReplicationTaskStats): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskStats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationTaskStats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskStats")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceEndpointArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceEndpointArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceEndpointArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceEndpointArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StopReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StopReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableMappings(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableMappings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableMappings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableMappings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetEndpointArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetEndpointArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetEndpointArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetEndpointArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

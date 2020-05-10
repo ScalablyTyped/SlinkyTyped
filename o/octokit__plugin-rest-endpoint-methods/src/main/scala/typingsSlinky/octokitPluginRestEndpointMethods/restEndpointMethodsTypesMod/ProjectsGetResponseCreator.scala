@@ -4,25 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ProjectsGetResponseCreator extends js.Object {
-  var avatar_url: String
-  var events_url: String
-  var followers_url: String
-  var following_url: String
-  var gists_url: String
-  var gravatar_id: String
-  var html_url: String
-  var id: Double
-  var login: String
-  var node_id: String
-  var organizations_url: String
-  var received_events_url: String
-  var repos_url: String
-  var site_admin: Boolean
-  var starred_url: String
-  var subscriptions_url: String
-  var `type`: String
-  var url: String
+  var avatar_url: String = js.native
+  var events_url: String = js.native
+  var followers_url: String = js.native
+  var following_url: String = js.native
+  var gists_url: String = js.native
+  var gravatar_id: String = js.native
+  var html_url: String = js.native
+  var id: Double = js.native
+  var login: String = js.native
+  var node_id: String = js.native
+  var organizations_url: String = js.native
+  var received_events_url: String = js.native
+  var repos_url: String = js.native
+  var site_admin: Boolean = js.native
+  var starred_url: String = js.native
+  var subscriptions_url: String = js.native
+  var `type`: String = js.native
+  var url: String = js.native
 }
 
 object ProjectsGetResponseCreator {
@@ -51,5 +52,121 @@ object ProjectsGetResponseCreator {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectsGetResponseCreator]
   }
+  @scala.inline
+  implicit class ProjectsGetResponseCreatorOps[Self <: ProjectsGetResponseCreator] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvatar_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvents_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFollowers_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followers_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFollowing_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("following_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGists_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gists_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGravatar_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gravatar_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtml_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLogin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("login")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNode_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("node_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrganizations_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("organizations_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReceived_events_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("received_events_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRepos_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repos_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSite_admin(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("site_admin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStarred_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("starred_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubscriptions_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriptions_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

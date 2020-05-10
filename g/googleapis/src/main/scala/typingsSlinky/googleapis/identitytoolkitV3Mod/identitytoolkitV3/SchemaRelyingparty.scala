@@ -76,40 +76,197 @@ trait SchemaRelyingparty extends js.Object {
 
 object SchemaRelyingparty {
   @scala.inline
-  def apply(
-    androidInstallApp: js.UndefOr[Boolean] = js.undefined,
-    androidMinimumVersion: String = null,
-    androidPackageName: String = null,
-    canHandleCodeInApp: js.UndefOr[Boolean] = js.undefined,
-    captchaResp: String = null,
-    challenge: String = null,
-    continueUrl: String = null,
-    email: String = null,
-    iOSAppStoreId: String = null,
-    iOSBundleId: String = null,
-    idToken: String = null,
-    kind: String = null,
-    newEmail: String = null,
-    requestType: String = null,
-    userIp: String = null
-  ): SchemaRelyingparty = {
+  def apply(): SchemaRelyingparty = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(androidInstallApp)) __obj.updateDynamic("androidInstallApp")(androidInstallApp.asInstanceOf[js.Any])
-    if (androidMinimumVersion != null) __obj.updateDynamic("androidMinimumVersion")(androidMinimumVersion.asInstanceOf[js.Any])
-    if (androidPackageName != null) __obj.updateDynamic("androidPackageName")(androidPackageName.asInstanceOf[js.Any])
-    if (!js.isUndefined(canHandleCodeInApp)) __obj.updateDynamic("canHandleCodeInApp")(canHandleCodeInApp.asInstanceOf[js.Any])
-    if (captchaResp != null) __obj.updateDynamic("captchaResp")(captchaResp.asInstanceOf[js.Any])
-    if (challenge != null) __obj.updateDynamic("challenge")(challenge.asInstanceOf[js.Any])
-    if (continueUrl != null) __obj.updateDynamic("continueUrl")(continueUrl.asInstanceOf[js.Any])
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (iOSAppStoreId != null) __obj.updateDynamic("iOSAppStoreId")(iOSAppStoreId.asInstanceOf[js.Any])
-    if (iOSBundleId != null) __obj.updateDynamic("iOSBundleId")(iOSBundleId.asInstanceOf[js.Any])
-    if (idToken != null) __obj.updateDynamic("idToken")(idToken.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (newEmail != null) __obj.updateDynamic("newEmail")(newEmail.asInstanceOf[js.Any])
-    if (requestType != null) __obj.updateDynamic("requestType")(requestType.asInstanceOf[js.Any])
-    if (userIp != null) __obj.updateDynamic("userIp")(userIp.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRelyingparty]
   }
+  @scala.inline
+  implicit class SchemaRelyingpartyOps[Self <: SchemaRelyingparty] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAndroidInstallApp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidInstallApp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroidInstallApp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidInstallApp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAndroidMinimumVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidMinimumVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroidMinimumVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidMinimumVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAndroidPackageName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidPackageName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroidPackageName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidPackageName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanHandleCodeInApp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canHandleCodeInApp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanHandleCodeInApp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canHandleCodeInApp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaptchaResp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captchaResp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptchaResp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captchaResp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChallenge(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("challenge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChallenge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("challenge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContinueUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continueUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinueUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continueUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIOSAppStoreId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iOSAppStoreId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIOSAppStoreId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iOSAppStoreId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIOSBundleId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iOSBundleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIOSBundleId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iOSBundleId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newEmail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newEmail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserIp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userIp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

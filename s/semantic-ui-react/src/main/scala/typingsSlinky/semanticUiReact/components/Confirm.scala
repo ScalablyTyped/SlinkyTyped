@@ -1,13 +1,16 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLAnchorElement
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.a.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.semanticUiReact.buttonButtonMod.ButtonProps
 import typingsSlinky.semanticUiReact.confirmConfirmMod.ConfirmProps
 import typingsSlinky.semanticUiReact.confirmMod.default
@@ -28,94 +31,132 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Confirm
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Confirm {
   @JSImport("semantic-ui-react/dist/commonjs/addons/Confirm", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    actions: SemanticShorthandItem[ModalActionsProps] = null,
-    as: js.Any = null,
-    basic: js.UndefOr[Boolean] = js.undefined,
-    cancelButton: SemanticShorthandItem[ButtonProps] = null,
-    centered: js.UndefOr[Boolean] = js.undefined,
-    closeIcon: js.Any = null,
-    closeOnDimmerClick: js.UndefOr[Boolean] = js.undefined,
-    closeOnDocumentClick: js.UndefOr[Boolean] = js.undefined,
-    closeOnEscape: js.UndefOr[Boolean] = js.undefined,
-    closeOnPortalMouseLeave: js.UndefOr[Boolean] = js.undefined,
-    closeOnTriggerBlur: js.UndefOr[Boolean] = js.undefined,
-    closeOnTriggerClick: js.UndefOr[Boolean] = js.undefined,
-    closeOnTriggerMouseLeave: js.UndefOr[Boolean] = js.undefined,
-    confirmButton: SemanticShorthandItem[ButtonProps] = null,
-    content: SemanticShorthandItem[ModalContentProps] = null,
-    defaultOpen: js.UndefOr[Boolean] = js.undefined,
-    dimmer: `true` | blurring | inverted = null,
-    eventPool: String = null,
-    header: SemanticShorthandItem[ModalHeaderProps] = null,
-    mountNode: js.Any = null,
-    mouseEnterDelay: Int | Double = null,
-    mouseLeaveDelay: Int | Double = null,
-    onActionClick: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ ModalProps) => Unit = null,
-    onCancel: (/* event */ SyntheticMouseEvent[HTMLAnchorElement], /* data */ ConfirmProps) => Unit = null,
-    onClose: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ ModalProps) => Unit = null,
-    onConfirm: (/* event */ SyntheticMouseEvent[HTMLAnchorElement], /* data */ ConfirmProps) => Unit = null,
-    onMount: (/* nothing */ Null, /* data */ ModalProps) => Unit = null,
-    onOpen: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ ModalProps) => Unit = null,
-    onUnmount: (/* nothing */ Null, /* data */ ModalProps) => Unit = null,
-    open: js.UndefOr[Boolean] = js.undefined,
-    openOnTriggerClick: js.UndefOr[Boolean] = js.undefined,
-    openOnTriggerFocus: js.UndefOr[Boolean] = js.undefined,
-    openOnTriggerMouseEnter: js.UndefOr[Boolean] = js.undefined,
-    size: mini | tiny | small | large | fullscreen = null,
-    trigger: TagMod[Any] = null,
-    triggerRef: typingsSlinky.react.mod.Ref[_] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (!js.isUndefined(basic)) __obj.updateDynamic("basic")(basic.asInstanceOf[js.Any])
-    if (cancelButton != null) __obj.updateDynamic("cancelButton")(cancelButton.asInstanceOf[js.Any])
-    if (!js.isUndefined(centered)) __obj.updateDynamic("centered")(centered.asInstanceOf[js.Any])
-    if (closeIcon != null) __obj.updateDynamic("closeIcon")(closeIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnDimmerClick)) __obj.updateDynamic("closeOnDimmerClick")(closeOnDimmerClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnDocumentClick)) __obj.updateDynamic("closeOnDocumentClick")(closeOnDocumentClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnEscape)) __obj.updateDynamic("closeOnEscape")(closeOnEscape.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnPortalMouseLeave)) __obj.updateDynamic("closeOnPortalMouseLeave")(closeOnPortalMouseLeave.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnTriggerBlur)) __obj.updateDynamic("closeOnTriggerBlur")(closeOnTriggerBlur.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnTriggerClick)) __obj.updateDynamic("closeOnTriggerClick")(closeOnTriggerClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnTriggerMouseLeave)) __obj.updateDynamic("closeOnTriggerMouseLeave")(closeOnTriggerMouseLeave.asInstanceOf[js.Any])
-    if (confirmButton != null) __obj.updateDynamic("confirmButton")(confirmButton.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultOpen)) __obj.updateDynamic("defaultOpen")(defaultOpen.asInstanceOf[js.Any])
-    if (dimmer != null) __obj.updateDynamic("dimmer")(dimmer.asInstanceOf[js.Any])
-    if (eventPool != null) __obj.updateDynamic("eventPool")(eventPool.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (mountNode != null) __obj.updateDynamic("mountNode")(mountNode.asInstanceOf[js.Any])
-    if (mouseEnterDelay != null) __obj.updateDynamic("mouseEnterDelay")(mouseEnterDelay.asInstanceOf[js.Any])
-    if (mouseLeaveDelay != null) __obj.updateDynamic("mouseLeaveDelay")(mouseLeaveDelay.asInstanceOf[js.Any])
-    if (onActionClick != null) __obj.updateDynamic("onActionClick")(js.Any.fromFunction2(onActionClick))
-    if (onCancel != null) __obj.updateDynamic("onCancel")(js.Any.fromFunction2(onCancel))
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction2(onClose))
-    if (onConfirm != null) __obj.updateDynamic("onConfirm")(js.Any.fromFunction2(onConfirm))
-    if (onMount != null) __obj.updateDynamic("onMount")(js.Any.fromFunction2(onMount))
-    if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction2(onOpen))
-    if (onUnmount != null) __obj.updateDynamic("onUnmount")(js.Any.fromFunction2(onUnmount))
-    if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.asInstanceOf[js.Any])
-    if (!js.isUndefined(openOnTriggerClick)) __obj.updateDynamic("openOnTriggerClick")(openOnTriggerClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(openOnTriggerFocus)) __obj.updateDynamic("openOnTriggerFocus")(openOnTriggerFocus.asInstanceOf[js.Any])
-    if (!js.isUndefined(openOnTriggerMouseEnter)) __obj.updateDynamic("openOnTriggerMouseEnter")(openOnTriggerMouseEnter.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
-    if (triggerRef != null) __obj.updateDynamic("triggerRef")(triggerRef.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def actionsReactElement(value: ReactElement): this.type = set("actions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def actionsFunction3(
+      value: (/* component */ ReactComponentClass[ModalActionsProps], ModalActionsProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("actions", js.Any.fromFunction3(value))
+    @scala.inline
+    def actions(value: SemanticShorthandItem[ModalActionsProps]): this.type = set("actions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def basic(value: Boolean): this.type = set("basic", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelButtonReactElement(value: ReactElement): this.type = set("cancelButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelButtonFunction3(
+      value: (/* component */ ReactComponentClass[ButtonProps], ButtonProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("cancelButton", js.Any.fromFunction3(value))
+    @scala.inline
+    def cancelButton(value: SemanticShorthandItem[ButtonProps]): this.type = set("cancelButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def centered(value: Boolean): this.type = set("centered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeIcon(value: js.Any): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeOnDimmerClick(value: Boolean): this.type = set("closeOnDimmerClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeOnDocumentClick(value: Boolean): this.type = set("closeOnDocumentClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeOnEscape(value: Boolean): this.type = set("closeOnEscape", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeOnPortalMouseLeave(value: Boolean): this.type = set("closeOnPortalMouseLeave", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeOnTriggerBlur(value: Boolean): this.type = set("closeOnTriggerBlur", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeOnTriggerClick(value: Boolean): this.type = set("closeOnTriggerClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeOnTriggerMouseLeave(value: Boolean): this.type = set("closeOnTriggerMouseLeave", value.asInstanceOf[js.Any])
+    @scala.inline
+    def confirmButtonReactElement(value: ReactElement): this.type = set("confirmButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def confirmButtonFunction3(
+      value: (/* component */ ReactComponentClass[ButtonProps], ButtonProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("confirmButton", js.Any.fromFunction3(value))
+    @scala.inline
+    def confirmButton(value: SemanticShorthandItem[ButtonProps]): this.type = set("confirmButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentFunction3(
+      value: (/* component */ ReactComponentClass[ModalContentProps], ModalContentProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("content", js.Any.fromFunction3(value))
+    @scala.inline
+    def content(value: SemanticShorthandItem[ModalContentProps]): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dimmer(value: `true` | blurring | inverted): this.type = set("dimmer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def eventPool(value: String): this.type = set("eventPool", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerFunction3(
+      value: (/* component */ ReactComponentClass[ModalHeaderProps], ModalHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("header", js.Any.fromFunction3(value))
+    @scala.inline
+    def header(value: SemanticShorthandItem[ModalHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mountNode(value: js.Any): this.type = set("mountNode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mouseEnterDelay(value: Double): this.type = set("mouseEnterDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mouseLeaveDelay(value: Double): this.type = set("mouseLeaveDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onActionClick(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ ModalProps) => Unit): this.type = set("onActionClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onCancel(value: (/* event */ SyntheticMouseEvent[HTMLAnchorElement], /* data */ ConfirmProps) => Unit): this.type = set("onCancel", js.Any.fromFunction2(value))
+    @scala.inline
+    def onClose(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ ModalProps) => Unit): this.type = set("onClose", js.Any.fromFunction2(value))
+    @scala.inline
+    def onConfirm(value: (/* event */ SyntheticMouseEvent[HTMLAnchorElement], /* data */ ConfirmProps) => Unit): this.type = set("onConfirm", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMount(value: (/* nothing */ Null, /* data */ ModalProps) => Unit): this.type = set("onMount", js.Any.fromFunction2(value))
+    @scala.inline
+    def onOpen(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ ModalProps) => Unit): this.type = set("onOpen", js.Any.fromFunction2(value))
+    @scala.inline
+    def onUnmount(value: (/* nothing */ Null, /* data */ ModalProps) => Unit): this.type = set("onUnmount", js.Any.fromFunction2(value))
+    @scala.inline
+    def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def openOnTriggerClick(value: Boolean): this.type = set("openOnTriggerClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def openOnTriggerFocus(value: Boolean): this.type = set("openOnTriggerFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def openOnTriggerMouseEnter(value: Boolean): this.type = set("openOnTriggerMouseEnter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: mini | tiny | small | large | fullscreen): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def triggerReactElement(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def trigger(value: TagMod[Any]): this.type = set("trigger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def triggerRefRefObject(value: ReactRef[_]): this.type = set("triggerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def triggerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("triggerRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def triggerRef(value: typingsSlinky.react.mod.Ref[_]): this.type = set("triggerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def triggerRefNull: this.type = set("triggerRef", null)
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.a.tag.type, typingsSlinky.semanticUiReact.confirmMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ConfirmProps
+  
+  def withProps(p: ConfirmProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Confirm.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

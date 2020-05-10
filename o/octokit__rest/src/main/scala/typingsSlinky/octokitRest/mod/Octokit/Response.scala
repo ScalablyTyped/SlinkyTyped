@@ -11,7 +11,7 @@ trait Response[T] extends js.Object {
   var data: T = js.native
   /** Response headers */
   var headers: AnonDate = js.native
-  @JSName(scala.scalajs.js.Symbol.iterator)
+  @JSName(js.Symbol.iterator)
   var iterator: js.Function0[js.Iterator[_]] = js.native
   /** Response status number */
   var status: Double = js.native

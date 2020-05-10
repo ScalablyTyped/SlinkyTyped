@@ -1,9 +1,7 @@
 package typingsSlinky.reactIntl.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactIntl.DisplayNamesOptionsvalues
 import typingsSlinky.reactIntl.reactIntlStrings.`best fit`
 import typingsSlinky.reactIntl.reactIntlStrings.code
@@ -20,29 +18,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FormattedDisplayName
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object FormattedDisplayName {
   @JSImport("react-intl", "FormattedDisplayName")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    value: String | Double | js.Object,
-    fallback: code | none = null,
-    localeMatcher: lookup | (`best fit`) = null,
-    style: narrow | short | long = null,
-    `type`: language | region | script | currency = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    if (fallback != null) __obj.updateDynamic("fallback")(fallback.asInstanceOf[js.Any])
-    if (localeMatcher != null) __obj.updateDynamic("localeMatcher")(localeMatcher.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def fallback(value: code | none): this.type = set("fallback", value.asInstanceOf[js.Any])
+    @scala.inline
+    def localeMatcher(value: lookup | (`best fit`)): this.type = set("localeMatcher", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: narrow | short | long): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: language | region | script | currency): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  type Props = DisplayNamesOptionsvalues
+  
+  def withProps(p: DisplayNamesOptionsvalues): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(value: String | Double | js.Object): Builder = {
+    val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[DisplayNamesOptionsvalues]))
+  }
 }
 

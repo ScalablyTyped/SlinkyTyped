@@ -2,7 +2,23 @@ package typingsSlinky.twitchExt
 
 import typingsSlinky.twitchExt.twitchExtBooleans.`false`
 import typingsSlinky.twitchExt.twitchExtBooleans.`true`
+import typingsSlinky.twitchExt.twitchExtStrings.arePlayerControlsVisible
+import typingsSlinky.twitchExt.twitchExtStrings.bitrate
+import typingsSlinky.twitchExt.twitchExtStrings.bufferSize
+import typingsSlinky.twitchExt.twitchExtStrings.displayResolution
+import typingsSlinky.twitchExt.twitchExtStrings.game
+import typingsSlinky.twitchExt.twitchExtStrings.hlsLatencyBroadcaster
+import typingsSlinky.twitchExt.twitchExtStrings.isFullScreen
+import typingsSlinky.twitchExt.twitchExtStrings.isMuted
+import typingsSlinky.twitchExt.twitchExtStrings.isPaused
+import typingsSlinky.twitchExt.twitchExtStrings.isTheatreMode
+import typingsSlinky.twitchExt.twitchExtStrings.language
+import typingsSlinky.twitchExt.twitchExtStrings.mode
+import typingsSlinky.twitchExt.twitchExtStrings.playbackMode
 import typingsSlinky.twitchExt.twitchExtStrings.production
+import typingsSlinky.twitchExt.twitchExtStrings.theme
+import typingsSlinky.twitchExt.twitchExtStrings.videoResolution
+import typingsSlinky.twitchExt.twitchExtStrings.volume
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -68,7 +84,13 @@ trait TwitchExt extends js.Object {
   	 * @see https://dev.twitch.tv/docs/extensions/reference/#oncontext
   	 */
   def onContext(
-    contextCallback: js.Function2[/* context */ PartialTwitchExtContext, /* changed */ js.Array[String], Unit]
+    contextCallback: js.Function2[
+      /* context */ PartialTwitchExtContext, 
+      /* changed */ js.Array[
+        /* keyof twitch-ext.PartialTwitchExtContext */ isPaused | bufferSize | isTheatreMode | isMuted | isFullScreen | hlsLatencyBroadcaster | volume | videoResolution | displayResolution | playbackMode | mode | arePlayerControlsVisible | bitrate | game | language | theme
+      ], 
+      Unit
+    ]
   ): Unit = js.native
   /**
   	 * This function binds the callback to any internal error.

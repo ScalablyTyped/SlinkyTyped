@@ -24,7 +24,7 @@ object mod extends js.Object {
   @js.native
   object blue extends /* n */ NumberDictionary[String] {
     /** Iterator */
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[IterableIterator[String]] = js.native
     /**
       * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
@@ -35,7 +35,7 @@ object mod extends js.Object {
       * Returns an object whose properties have the value 'true'
       * when they will be absent when used in a 'with' statement.
       */
-    @JSName(scala.scalajs.js.Symbol.unscopables)
+    @JSName(js.Symbol.unscopables)
     var unscopables: js.Function0[AnonCopyWithin] = js.native
     /**
       * Combines two or more arrays.
@@ -471,7 +471,7 @@ object mod extends js.Object {
   @js.native
   object cyan extends /* n */ NumberDictionary[String] {
     /** Iterator */
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[IterableIterator[String]] = js.native
     /**
       * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
@@ -482,7 +482,7 @@ object mod extends js.Object {
       * Returns an object whose properties have the value 'true'
       * when they will be absent when used in a 'with' statement.
       */
-    @JSName(scala.scalajs.js.Symbol.unscopables)
+    @JSName(js.Symbol.unscopables)
     var unscopables: js.Function0[AnonCopyWithin] = js.native
     /**
       * Combines two or more arrays.
@@ -918,7 +918,7 @@ object mod extends js.Object {
   @js.native
   object geekblue extends /* n */ NumberDictionary[String] {
     /** Iterator */
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[IterableIterator[String]] = js.native
     /**
       * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
@@ -929,7 +929,7 @@ object mod extends js.Object {
       * Returns an object whose properties have the value 'true'
       * when they will be absent when used in a 'with' statement.
       */
-    @JSName(scala.scalajs.js.Symbol.unscopables)
+    @JSName(js.Symbol.unscopables)
     var unscopables: js.Function0[AnonCopyWithin] = js.native
     /**
       * Combines two or more arrays.
@@ -1365,7 +1365,7 @@ object mod extends js.Object {
   @js.native
   object gold extends /* n */ NumberDictionary[String] {
     /** Iterator */
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[IterableIterator[String]] = js.native
     /**
       * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
@@ -1376,7 +1376,7 @@ object mod extends js.Object {
       * Returns an object whose properties have the value 'true'
       * when they will be absent when used in a 'with' statement.
       */
-    @JSName(scala.scalajs.js.Symbol.unscopables)
+    @JSName(js.Symbol.unscopables)
     var unscopables: js.Function0[AnonCopyWithin] = js.native
     /**
       * Combines two or more arrays.
@@ -1812,7 +1812,7 @@ object mod extends js.Object {
   @js.native
   object green extends /* n */ NumberDictionary[String] {
     /** Iterator */
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[IterableIterator[String]] = js.native
     /**
       * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
@@ -1823,7 +1823,7 @@ object mod extends js.Object {
       * Returns an object whose properties have the value 'true'
       * when they will be absent when used in a 'with' statement.
       */
-    @JSName(scala.scalajs.js.Symbol.unscopables)
+    @JSName(js.Symbol.unscopables)
     var unscopables: js.Function0[AnonCopyWithin] = js.native
     /**
       * Combines two or more arrays.
@@ -2259,7 +2259,7 @@ object mod extends js.Object {
   @js.native
   object grey extends /* n */ NumberDictionary[String] {
     /** Iterator */
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[IterableIterator[String]] = js.native
     /**
       * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
@@ -2270,7 +2270,7 @@ object mod extends js.Object {
       * Returns an object whose properties have the value 'true'
       * when they will be absent when used in a 'with' statement.
       */
-    @JSName(scala.scalajs.js.Symbol.unscopables)
+    @JSName(js.Symbol.unscopables)
     var unscopables: js.Function0[AnonCopyWithin] = js.native
     /**
       * Combines two or more arrays.
@@ -2706,7 +2706,7 @@ object mod extends js.Object {
   @js.native
   object lime extends /* n */ NumberDictionary[String] {
     /** Iterator */
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[IterableIterator[String]] = js.native
     /**
       * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
@@ -2717,7 +2717,7 @@ object mod extends js.Object {
       * Returns an object whose properties have the value 'true'
       * when they will be absent when used in a 'with' statement.
       */
-    @JSName(scala.scalajs.js.Symbol.unscopables)
+    @JSName(js.Symbol.unscopables)
     var unscopables: js.Function0[AnonCopyWithin] = js.native
     /**
       * Combines two or more arrays.
@@ -3153,7 +3153,7 @@ object mod extends js.Object {
   @js.native
   object magenta extends /* n */ NumberDictionary[String] {
     /** Iterator */
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[IterableIterator[String]] = js.native
     /**
       * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
@@ -3164,7 +3164,7 @@ object mod extends js.Object {
       * Returns an object whose properties have the value 'true'
       * when they will be absent when used in a 'with' statement.
       */
-    @JSName(scala.scalajs.js.Symbol.unscopables)
+    @JSName(js.Symbol.unscopables)
     var unscopables: js.Function0[AnonCopyWithin] = js.native
     /**
       * Combines two or more arrays.
@@ -3600,7 +3600,7 @@ object mod extends js.Object {
   @js.native
   object orange extends /* n */ NumberDictionary[String] {
     /** Iterator */
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[IterableIterator[String]] = js.native
     /**
       * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
@@ -3611,7 +3611,7 @@ object mod extends js.Object {
       * Returns an object whose properties have the value 'true'
       * when they will be absent when used in a 'with' statement.
       */
-    @JSName(scala.scalajs.js.Symbol.unscopables)
+    @JSName(js.Symbol.unscopables)
     var unscopables: js.Function0[AnonCopyWithin] = js.native
     /**
       * Combines two or more arrays.
@@ -4050,7 +4050,7 @@ object mod extends js.Object {
   @js.native
   object purple extends /* n */ NumberDictionary[String] {
     /** Iterator */
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[IterableIterator[String]] = js.native
     /**
       * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
@@ -4061,7 +4061,7 @@ object mod extends js.Object {
       * Returns an object whose properties have the value 'true'
       * when they will be absent when used in a 'with' statement.
       */
-    @JSName(scala.scalajs.js.Symbol.unscopables)
+    @JSName(js.Symbol.unscopables)
     var unscopables: js.Function0[AnonCopyWithin] = js.native
     /**
       * Combines two or more arrays.
@@ -4497,7 +4497,7 @@ object mod extends js.Object {
   @js.native
   object red extends /* n */ NumberDictionary[String] {
     /** Iterator */
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[IterableIterator[String]] = js.native
     /**
       * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
@@ -4508,7 +4508,7 @@ object mod extends js.Object {
       * Returns an object whose properties have the value 'true'
       * when they will be absent when used in a 'with' statement.
       */
-    @JSName(scala.scalajs.js.Symbol.unscopables)
+    @JSName(js.Symbol.unscopables)
     var unscopables: js.Function0[AnonCopyWithin] = js.native
     /**
       * Combines two or more arrays.
@@ -4944,7 +4944,7 @@ object mod extends js.Object {
   @js.native
   object volcano extends /* n */ NumberDictionary[String] {
     /** Iterator */
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[IterableIterator[String]] = js.native
     /**
       * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
@@ -4955,7 +4955,7 @@ object mod extends js.Object {
       * Returns an object whose properties have the value 'true'
       * when they will be absent when used in a 'with' statement.
       */
-    @JSName(scala.scalajs.js.Symbol.unscopables)
+    @JSName(js.Symbol.unscopables)
     var unscopables: js.Function0[AnonCopyWithin] = js.native
     /**
       * Combines two or more arrays.
@@ -5391,7 +5391,7 @@ object mod extends js.Object {
   @js.native
   object yellow extends /* n */ NumberDictionary[String] {
     /** Iterator */
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[IterableIterator[String]] = js.native
     /**
       * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
@@ -5402,7 +5402,7 @@ object mod extends js.Object {
       * Returns an object whose properties have the value 'true'
       * when they will be absent when used in a 'with' statement.
       */
-    @JSName(scala.scalajs.js.Symbol.unscopables)
+    @JSName(js.Symbol.unscopables)
     var unscopables: js.Function0[AnonCopyWithin] = js.native
     /**
       * Combines two or more arrays.

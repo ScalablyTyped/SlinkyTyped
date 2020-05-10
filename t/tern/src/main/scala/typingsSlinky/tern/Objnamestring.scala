@@ -1,6 +1,5 @@
 package typingsSlinky.tern
 
-import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.estree.mod.Node
 import typingsSlinky.tern.inferMod.ANull
 import typingsSlinky.tern.inferMod.AVal
@@ -23,8 +22,6 @@ trait Objnamestring extends js.Object {
     * or synthesized in some other way).
     */
   var originNode: js.UndefOr[Node] = js.native
-  /** An object mapping the object’s known properties to AVals. Don’t manipulate this directly (ever), only use it if you have to iterate over the properties. */
-  var props: StringDictionary[AVal] = js.native
   /** The prototype of the object, or null. */
   var proto: (Obj with AnonName) | Null = js.native
   def addType(args: js.Any*): Unit = js.native

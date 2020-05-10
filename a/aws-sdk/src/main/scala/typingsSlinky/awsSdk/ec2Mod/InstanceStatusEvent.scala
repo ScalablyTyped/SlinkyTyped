@@ -34,22 +34,89 @@ trait InstanceStatusEvent extends js.Object {
 
 object InstanceStatusEvent {
   @scala.inline
-  def apply(
-    Code: EventCode = null,
-    Description: String = null,
-    InstanceEventId: InstanceEventId = null,
-    NotAfter: js.Date = null,
-    NotBefore: js.Date = null,
-    NotBeforeDeadline: js.Date = null
-  ): InstanceStatusEvent = {
+  def apply(): InstanceStatusEvent = {
     val __obj = js.Dynamic.literal()
-    if (Code != null) __obj.updateDynamic("Code")(Code.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (InstanceEventId != null) __obj.updateDynamic("InstanceEventId")(InstanceEventId.asInstanceOf[js.Any])
-    if (NotAfter != null) __obj.updateDynamic("NotAfter")(NotAfter.asInstanceOf[js.Any])
-    if (NotBefore != null) __obj.updateDynamic("NotBefore")(NotBefore.asInstanceOf[js.Any])
-    if (NotBeforeDeadline != null) __obj.updateDynamic("NotBeforeDeadline")(NotBeforeDeadline.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceStatusEvent]
   }
+  @scala.inline
+  implicit class InstanceStatusEventOps[Self <: InstanceStatusEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCode(value: EventCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Code")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceEventId(value: InstanceEventId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceEventId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceEventId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotAfter(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotAfter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotBefore(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotBefore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotBeforeDeadline(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotBeforeDeadline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotBeforeDeadline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotBeforeDeadline")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

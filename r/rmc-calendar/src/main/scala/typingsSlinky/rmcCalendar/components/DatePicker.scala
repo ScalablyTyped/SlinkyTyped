@@ -1,10 +1,7 @@
 package typingsSlinky.rmcCalendar.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.ExtraData
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.Locale
 import typingsSlinky.rmcCalendar.datePickerMod.default
@@ -17,51 +14,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DatePicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object DatePicker {
   @JSImport("rmc-calendar/lib/DatePicker", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    defaultDate: js.Date = null,
-    endDate: js.Date = null,
-    getDateExtra: /* date */ js.Date => ExtraData = null,
-    infiniteOpt: js.UndefOr[Boolean] = js.undefined,
-    initalMonths: Int | Double = null,
-    locale: Locale = null,
-    maxDate: js.Date = null,
-    minDate: js.Date = null,
-    onCellClick: /* date */ js.Date => Unit = null,
-    onLayout: /* clientHight */ Double => Unit = null,
-    onSelectHasDisableDate: /* date */ js.Array[js.Date] => Unit = null,
-    prefixCls: String = null,
-    rowSize: normal | xl = null,
-    startDate: js.Date = null,
-    `type`: one | range = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (defaultDate != null) __obj.updateDynamic("defaultDate")(defaultDate.asInstanceOf[js.Any])
-    if (endDate != null) __obj.updateDynamic("endDate")(endDate.asInstanceOf[js.Any])
-    if (getDateExtra != null) __obj.updateDynamic("getDateExtra")(js.Any.fromFunction1(getDateExtra))
-    if (!js.isUndefined(infiniteOpt)) __obj.updateDynamic("infiniteOpt")(infiniteOpt.asInstanceOf[js.Any])
-    if (initalMonths != null) __obj.updateDynamic("initalMonths")(initalMonths.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (onCellClick != null) __obj.updateDynamic("onCellClick")(js.Any.fromFunction1(onCellClick))
-    if (onLayout != null) __obj.updateDynamic("onLayout")(js.Any.fromFunction1(onLayout))
-    if (onSelectHasDisableDate != null) __obj.updateDynamic("onSelectHasDisableDate")(js.Any.fromFunction1(onSelectHasDisableDate))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (rowSize != null) __obj.updateDynamic("rowSize")(rowSize.asInstanceOf[js.Any])
-    if (startDate != null) __obj.updateDynamic("startDate")(startDate.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def defaultDate(value: js.Date): this.type = set("defaultDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endDate(value: js.Date): this.type = set("endDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getDateExtra(value: /* date */ js.Date => ExtraData): this.type = set("getDateExtra", js.Any.fromFunction1(value))
+    @scala.inline
+    def infiniteOpt(value: Boolean): this.type = set("infiniteOpt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initalMonths(value: Double): this.type = set("initalMonths", value.asInstanceOf[js.Any])
+    @scala.inline
+    def locale(value: Locale): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCellClick(value: /* date */ js.Date => Unit): this.type = set("onCellClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLayout(value: /* clientHight */ Double => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSelectHasDisableDate(value: /* date */ js.Array[js.Date] => Unit): this.type = set("onSelectHasDisableDate", js.Any.fromFunction1(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowSize(value: normal | xl): this.type = set("rowSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startDate(value: js.Date): this.type = set("startDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: one | range): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.rmcCalendar.datePickerMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PropsType
+  
+  def withProps(p: PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DatePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

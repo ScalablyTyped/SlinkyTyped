@@ -51,28 +51,125 @@ trait AssumeRoleRequest extends TemporaryCredentialsOptions {
 
 object AssumeRoleRequest {
   @scala.inline
-  def apply(
-    RoleArn: arnType,
-    RoleSessionName: roleSessionNameType,
-    DurationSeconds: Int | Double = null,
-    ExternalId: externalIdType = null,
-    Policy: sessionPolicyDocumentType = null,
-    PolicyArns: policyDescriptorListType = null,
-    SerialNumber: serialNumberType = null,
-    Tags: tagListType = null,
-    TokenCode: tokenCodeType = null,
-    TransitiveTagKeys: tagKeyListType = null
-  ): AssumeRoleRequest = {
+  def apply(RoleArn: arnType, RoleSessionName: roleSessionNameType): AssumeRoleRequest = {
     val __obj = js.Dynamic.literal(RoleArn = RoleArn.asInstanceOf[js.Any], RoleSessionName = RoleSessionName.asInstanceOf[js.Any])
-    if (DurationSeconds != null) __obj.updateDynamic("DurationSeconds")(DurationSeconds.asInstanceOf[js.Any])
-    if (ExternalId != null) __obj.updateDynamic("ExternalId")(ExternalId.asInstanceOf[js.Any])
-    if (Policy != null) __obj.updateDynamic("Policy")(Policy.asInstanceOf[js.Any])
-    if (PolicyArns != null) __obj.updateDynamic("PolicyArns")(PolicyArns.asInstanceOf[js.Any])
-    if (SerialNumber != null) __obj.updateDynamic("SerialNumber")(SerialNumber.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (TokenCode != null) __obj.updateDynamic("TokenCode")(TokenCode.asInstanceOf[js.Any])
-    if (TransitiveTagKeys != null) __obj.updateDynamic("TransitiveTagKeys")(TransitiveTagKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssumeRoleRequest]
   }
+  @scala.inline
+  implicit class AssumeRoleRequestOps[Self <: AssumeRoleRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRoleArn(value: arnType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleSessionName(value: roleSessionNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleSessionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDurationSeconds(value: roleDurationSecondsType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDurationSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalId(value: externalIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicy(value: sessionPolicyDocumentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Policy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyArns(value: policyDescriptorListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyArns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSerialNumber(value: serialNumberType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SerialNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSerialNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SerialNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: tagListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTokenCode(value: tokenCodeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TokenCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTokenCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TokenCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitiveTagKeys(value: tagKeyListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitiveTagKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitiveTagKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitiveTagKeys")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

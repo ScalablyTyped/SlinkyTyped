@@ -15,22 +15,23 @@ import scala.scalajs.js.annotation._
   * _loadObject to denote a lazy loading (not loaded yet) object.
   *
   */
+@js.native
 trait ref extends js.Object {
   /**
     *
     */
-  var refAttribute: String
+  var refAttribute: String = js.native
   /**
     *
     */
-  var serializeFunctions: Boolean
+  var serializeFunctions: Boolean = js.native
   /**
     * evaluates the passed string-form of a JSON object.
     *
     * @param str a string literal of a JSON item, for instance:'{ "foo": [ "bar", 1, { "baz": "thud" } ] }'
     * @param args               OptionalSee resolveJson
     */
-  def fromJson(str: String, args: js.Object): js.Any
+  def fromJson(str: String, args: js.Object): js.Any = js.native
   /**
     * Indexes and resolves references in the JSON object.
     * A JSON Schema object that can be used to advise the handling of the JSON (defining ids, date properties, urls, etc)
@@ -38,7 +39,7 @@ trait ref extends js.Object {
     * @param root The root object of the object graph to be processed
     * @param args               OptionalObject with additional arguments:The index parameter:  This is the index object (map) to use to store an index of all the objects.  If you are using inter-message referencing, you must provide the same object for each call.The defaultId parameter:  This is the default id to use for the root object (if it doesn't define it's own id)The idPrefix parameter:  This the prefix to use for the ids as they enter the index. This allows multiple tables  to use ids (that might otherwise collide) that enter the same global index.  idPrefix should be in the form "/Service/".  For example,  if the idPrefix is "/Table/", and object is encountered {id:"4",...}, this would go in the  index as "/Table/4".The idAttribute parameter:  This indicates what property is the identity property. This defaults to "id"The assignAbsoluteIds parameter:  This indicates that the resolveJson should assign absolute ids (__id) as the objects are being parsed.The schemas parameter:  This provides a map of schemas, from which prototypes can be retrievedThe loader parameter:  This is a function that is called added to the reference objects that can't be resolved (lazy objects)
     */
-  def resolveJson(root: js.Object, args: js.Object): js.Any
+  def resolveJson(root: js.Object, args: js.Object): js.Any = js.native
   /**
     * Create a JSON serialization of an object.
     * This has support for referencing, including circular references, duplicate references, and out-of-message references
@@ -49,7 +50,7 @@ trait ref extends js.Object {
     * @param idPrefix               OptionalThe prefix that has been used for the absolute ids
     * @param indexSubObjects               Optional
     */
-  def toJson(it: js.Object, prettyPrint: Boolean, idPrefix: js.Object, indexSubObjects: js.Object): js.Any
+  def toJson(it: js.Object, prettyPrint: Boolean, idPrefix: js.Object, indexSubObjects: js.Object): js.Any = js.native
 }
 
 object ref {
@@ -62,8 +63,45 @@ object ref {
     toJson: (js.Object, Boolean, js.Object, js.Object) => js.Any
   ): ref = {
     val __obj = js.Dynamic.literal(fromJson = js.Any.fromFunction2(fromJson), refAttribute = refAttribute.asInstanceOf[js.Any], resolveJson = js.Any.fromFunction2(resolveJson), serializeFunctions = serializeFunctions.asInstanceOf[js.Any], toJson = js.Any.fromFunction4(toJson))
-  
     __obj.asInstanceOf[ref]
   }
+  @scala.inline
+  implicit class refOps[Self <: ref] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFromJson(value: (String, js.Object) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromJson")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRefAttribute(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refAttribute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResolveJson(value: (js.Object, js.Object) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveJson")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSerializeFunctions(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serializeFunctions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToJson(value: (js.Object, Boolean, js.Object, js.Object) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toJson")(js.Any.fromFunction4(value))
+        ret
+    }
+  }
+  
 }
 

@@ -22,30 +22,28 @@ trait DatabaseType extends js.Object
 
 object DatabaseType {
   @scala.inline
-  def `Jet 2Dotx`: typingsSlinky.activexAccess.activexAccessStrings.`Jet 2Dotx` = this.cast("Jet 2.x")
+  def `Jet 2Dotx`: typingsSlinky.activexAccess.activexAccessStrings.`Jet 2Dotx` = ("Jet 2.x").asInstanceOf[typingsSlinky.activexAccess.activexAccessStrings.`Jet 2Dotx`]
   @scala.inline
-  def `Jet 3Dotx`: typingsSlinky.activexAccess.activexAccessStrings.`Jet 3Dotx` = this.cast("Jet 3.x")
+  def `Jet 3Dotx`: typingsSlinky.activexAccess.activexAccessStrings.`Jet 3Dotx` = ("Jet 3.x").asInstanceOf[typingsSlinky.activexAccess.activexAccessStrings.`Jet 3Dotx`]
   @scala.inline
-  def `Microsoft Access LeftparenthesisdefaultRightparenthesis`: typingsSlinky.activexAccess.activexAccessStrings.`Microsoft Access LeftparenthesisdefaultRightparenthesis` = this.cast("Microsoft Access (default)")
+  def `Microsoft Access LeftparenthesisdefaultRightparenthesis`: typingsSlinky.activexAccess.activexAccessStrings.`Microsoft Access LeftparenthesisdefaultRightparenthesis` = ("Microsoft Access (default)").asInstanceOf[typingsSlinky.activexAccess.activexAccessStrings.`Microsoft Access LeftparenthesisdefaultRightparenthesis`]
   @scala.inline
-  def `ODBC Database`: typingsSlinky.activexAccess.activexAccessStrings.`ODBC Database` = this.cast("ODBC Database")
+  def `ODBC Database`: typingsSlinky.activexAccess.activexAccessStrings.`ODBC Database` = ("ODBC Database").asInstanceOf[typingsSlinky.activexAccess.activexAccessStrings.`ODBC Database`]
   @scala.inline
-  def `Paradox 3Dotx`: typingsSlinky.activexAccess.activexAccessStrings.`Paradox 3Dotx` = this.cast("Paradox 3.x")
+  def `Paradox 3Dotx`: typingsSlinky.activexAccess.activexAccessStrings.`Paradox 3Dotx` = ("Paradox 3.x").asInstanceOf[typingsSlinky.activexAccess.activexAccessStrings.`Paradox 3Dotx`]
   @scala.inline
-  def `Paradox 4Dotx`: typingsSlinky.activexAccess.activexAccessStrings.`Paradox 4Dotx` = this.cast("Paradox 4.x")
+  def `Paradox 4Dotx`: typingsSlinky.activexAccess.activexAccessStrings.`Paradox 4Dotx` = ("Paradox 4.x").asInstanceOf[typingsSlinky.activexAccess.activexAccessStrings.`Paradox 4Dotx`]
   @scala.inline
-  def `Paradox 5Dotx`: typingsSlinky.activexAccess.activexAccessStrings.`Paradox 5Dotx` = this.cast("Paradox 5.x")
+  def `Paradox 5Dotx`: typingsSlinky.activexAccess.activexAccessStrings.`Paradox 5Dotx` = ("Paradox 5.x").asInstanceOf[typingsSlinky.activexAccess.activexAccessStrings.`Paradox 5Dotx`]
   @scala.inline
-  def `Paradox 7Dotx`: typingsSlinky.activexAccess.activexAccessStrings.`Paradox 7Dotx` = this.cast("Paradox 7.x")
+  def `Paradox 7Dotx`: typingsSlinky.activexAccess.activexAccessStrings.`Paradox 7Dotx` = ("Paradox 7.x").asInstanceOf[typingsSlinky.activexAccess.activexAccessStrings.`Paradox 7Dotx`]
   @scala.inline
-  def WSS: typingsSlinky.activexAccess.activexAccessStrings.WSS = this.cast("WSS")
+  def WSS: typingsSlinky.activexAccess.activexAccessStrings.WSS = "WSS".asInstanceOf[typingsSlinky.activexAccess.activexAccessStrings.WSS]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `dBase 5Dot0`: typingsSlinky.activexAccess.activexAccessStrings.`dBase 5Dot0` = ("dBase 5.0").asInstanceOf[typingsSlinky.activexAccess.activexAccessStrings.`dBase 5Dot0`]
   @scala.inline
-  def `dBase 5Dot0`: typingsSlinky.activexAccess.activexAccessStrings.`dBase 5Dot0` = this.cast("dBase 5.0")
+  def `dBase III`: typingsSlinky.activexAccess.activexAccessStrings.`dBase III` = ("dBase III").asInstanceOf[typingsSlinky.activexAccess.activexAccessStrings.`dBase III`]
   @scala.inline
-  def `dBase III`: typingsSlinky.activexAccess.activexAccessStrings.`dBase III` = this.cast("dBase III")
-  @scala.inline
-  def `dBase IV`: typingsSlinky.activexAccess.activexAccessStrings.`dBase IV` = this.cast("dBase IV")
+  def `dBase IV`: typingsSlinky.activexAccess.activexAccessStrings.`dBase IV` = ("dBase IV").asInstanceOf[typingsSlinky.activexAccess.activexAccessStrings.`dBase IV`]
 }
 

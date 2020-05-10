@@ -1,46 +1,41 @@
 package typingsSlinky.reactNativeRatings.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ImageStyle
 import typingsSlinky.reactNativeRatings.mod.AirbnbRatingProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AirbnbRating
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeRatings.mod.AirbnbRating] {
+object AirbnbRating {
   @JSImport("react-native-ratings", "AirbnbRating")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: size */
-  def apply(
-    count: Int | Double = null,
-    defaultRating: Int | Double = null,
-    isDisabled: js.UndefOr[Boolean] = js.undefined,
-    onFinishRating: /* value */ Double => Unit = null,
-    reviews: js.Array[String] = null,
-    showRating: js.UndefOr[Boolean] = js.undefined,
-    starStyle: ImageStyle = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeRatings.mod.AirbnbRating] = {
-    val __obj = js.Dynamic.literal()
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (defaultRating != null) __obj.updateDynamic("defaultRating")(defaultRating.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDisabled)) __obj.updateDynamic("isDisabled")(isDisabled.asInstanceOf[js.Any])
-    if (onFinishRating != null) __obj.updateDynamic("onFinishRating")(js.Any.fromFunction1(onFinishRating))
-    if (reviews != null) __obj.updateDynamic("reviews")(reviews.asInstanceOf[js.Any])
-    if (!js.isUndefined(showRating)) __obj.updateDynamic("showRating")(showRating.asInstanceOf[js.Any])
-    if (starStyle != null) __obj.updateDynamic("starStyle")(starStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeRatings.mod.AirbnbRating] {
+    @scala.inline
+    def count(value: Double): this.type = set("count", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultRating(value: Double): this.type = set("defaultRating", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isDisabled(value: Boolean): this.type = set("isDisabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onFinishRating(value: /* value */ Double => Unit): this.type = set("onFinishRating", js.Any.fromFunction1(value))
+    @scala.inline
+    def reviews(value: js.Array[String]): this.type = set("reviews", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showRating(value: Boolean): this.type = set("showRating", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def starStyle(value: ImageStyle): this.type = set("starStyle", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactNativeRatings.mod.AirbnbRating] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactNativeRatings.mod.AirbnbRating](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = AirbnbRatingProps
+  
+  def withProps(p: AirbnbRatingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: AirbnbRating.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

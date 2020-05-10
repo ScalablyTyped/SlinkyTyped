@@ -14,13 +14,11 @@ object Footnote {
   @scala.inline
   def TextFootnote(id: String | Double, text: String): Footnote = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Footnote]
   }
   @scala.inline
-  def LinkFootnote(id: String | Double, url: String, shortUrl: String = null): Footnote = {
+  def LinkFootnote(id: String | Double, url: String): Footnote = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-    if (shortUrl != null) __obj.updateDynamic("shortUrl")(shortUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[Footnote]
   }
 }

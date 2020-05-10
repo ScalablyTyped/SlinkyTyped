@@ -18,11 +18,41 @@ trait PendingAggregationRequest extends js.Object {
 
 object PendingAggregationRequest {
   @scala.inline
-  def apply(RequesterAccountId: AccountId = null, RequesterAwsRegion: AwsRegion = null): PendingAggregationRequest = {
+  def apply(): PendingAggregationRequest = {
     val __obj = js.Dynamic.literal()
-    if (RequesterAccountId != null) __obj.updateDynamic("RequesterAccountId")(RequesterAccountId.asInstanceOf[js.Any])
-    if (RequesterAwsRegion != null) __obj.updateDynamic("RequesterAwsRegion")(RequesterAwsRegion.asInstanceOf[js.Any])
     __obj.asInstanceOf[PendingAggregationRequest]
   }
+  @scala.inline
+  implicit class PendingAggregationRequestOps[Self <: PendingAggregationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRequesterAccountId(value: AccountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequesterAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterAccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequesterAwsRegion(value: AwsRegion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterAwsRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequesterAwsRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterAwsRegion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

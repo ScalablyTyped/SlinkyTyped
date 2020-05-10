@@ -26,18 +26,65 @@ trait ExecuteStatementResponse extends js.Object {
 
 object ExecuteStatementResponse {
   @scala.inline
-  def apply(
-    columnMetadata: Metadata = null,
-    generatedFields: FieldList = null,
-    numberOfRecordsUpdated: Int | Double = null,
-    records: SqlRecords = null
-  ): ExecuteStatementResponse = {
+  def apply(): ExecuteStatementResponse = {
     val __obj = js.Dynamic.literal()
-    if (columnMetadata != null) __obj.updateDynamic("columnMetadata")(columnMetadata.asInstanceOf[js.Any])
-    if (generatedFields != null) __obj.updateDynamic("generatedFields")(generatedFields.asInstanceOf[js.Any])
-    if (numberOfRecordsUpdated != null) __obj.updateDynamic("numberOfRecordsUpdated")(numberOfRecordsUpdated.asInstanceOf[js.Any])
-    if (records != null) __obj.updateDynamic("records")(records.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecuteStatementResponse]
   }
+  @scala.inline
+  implicit class ExecuteStatementResponseOps[Self <: ExecuteStatementResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumnMetadata(value: Metadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeneratedFields(value: FieldList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generatedFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeneratedFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generatedFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfRecordsUpdated(value: RecordsUpdated): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfRecordsUpdated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfRecordsUpdated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfRecordsUpdated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecords(value: SqlRecords): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("records")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("records")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

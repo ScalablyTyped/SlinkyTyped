@@ -9,6 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+// tslint:disable-next-line:interface-name
 @js.native
 trait InvitationsResource extends js.Object {
   /**
@@ -27,6 +28,7 @@ trait InvitationsResource extends js.Object {
     * &#42; UserGroupsMembershipLimitReached
     * &#42; `NOT_FOUND` if no invitation exists with the requested ID.
     */
+  def accept(): Request_[js.Object] = js.native
   def accept(request: AnonIdKey): Request_[js.Object] = js.native
   def create(request: AnonKeyOauthtoken, body: Invitation): Request_[Invitation] = js.native
   /**
@@ -53,6 +55,7 @@ trait InvitationsResource extends js.Object {
     * requested invitation or for access errors.
     * &#42; `NOT_FOUND` if no invitation exists with the requested ID.
     */
+  def delete(): Request_[js.Object] = js.native
   def delete(request: AnonIdKey): Request_[js.Object] = js.native
   /**
     * Returns an invitation.
@@ -63,6 +66,7 @@ trait InvitationsResource extends js.Object {
     * requested invitation or for access errors.
     * &#42; `NOT_FOUND` if no invitation exists with the requested ID.
     */
+  def get(): Request_[Invitation] = js.native
   def get(request: AnonIdKey): Request_[Invitation] = js.native
   /**
     * Returns a list of invitations that the requesting user is permitted to
@@ -75,6 +79,7 @@ trait InvitationsResource extends js.Object {
     *
     * &#42; `PERMISSION_DENIED` for access errors.
     */
+  def list(): Request_[ListInvitationsResponse] = js.native
   def list(request: AnonPageSize): Request_[ListInvitationsResponse] = js.native
 }
 

@@ -7,24 +7,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonOtherwise extends js.Object {
-  var otherwise: js.UndefOr[String] = js.undefined
-  var privacy: js.UndefOr[default | public | `private`] = js.undefined
-  var statuses: js.UndefOr[js.Array[Double]] = js.undefined
+  var otherwise: js.UndefOr[String] = js.native
+  var privacy: js.UndefOr[default | public | `private`] = js.native
+  var statuses: js.UndefOr[js.Array[Double]] = js.native
 }
 
 object AnonOtherwise {
   @scala.inline
-  def apply(
-    otherwise: String = null,
-    privacy: default | public | `private` = null,
-    statuses: js.Array[Double] = null
-  ): AnonOtherwise = {
+  def apply(): AnonOtherwise = {
     val __obj = js.Dynamic.literal()
-    if (otherwise != null) __obj.updateDynamic("otherwise")(otherwise.asInstanceOf[js.Any])
-    if (privacy != null) __obj.updateDynamic("privacy")(privacy.asInstanceOf[js.Any])
-    if (statuses != null) __obj.updateDynamic("statuses")(statuses.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonOtherwise]
   }
+  @scala.inline
+  implicit class AnonOtherwiseOps[Self <: AnonOtherwise] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOtherwise(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("otherwise")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOtherwise: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("otherwise")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivacy(value: default | public | `private`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privacy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivacy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privacy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatuses(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statuses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatuses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statuses")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

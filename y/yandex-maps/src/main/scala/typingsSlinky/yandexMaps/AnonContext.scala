@@ -6,24 +6,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonContext extends js.Object {
-  var context: js.UndefOr[js.Object] = js.undefined
-  var controllers: js.UndefOr[js.Array[IEventWorkflowController]] = js.undefined
-  var parent: js.UndefOr[IEventManager] = js.undefined
+  var context: js.UndefOr[js.Object] = js.native
+  var controllers: js.UndefOr[js.Array[IEventWorkflowController]] = js.native
+  var parent: js.UndefOr[IEventManager] = js.native
 }
 
 object AnonContext {
   @scala.inline
-  def apply(
-    context: js.Object = null,
-    controllers: js.Array[IEventWorkflowController] = null,
-    parent: IEventManager = null
-  ): AnonContext = {
+  def apply(): AnonContext = {
     val __obj = js.Dynamic.literal()
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (controllers != null) __obj.updateDynamic("controllers")(controllers.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonContext]
   }
+  @scala.inline
+  implicit class AnonContextOps[Self <: AnonContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContext(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withControllers(value: js.Array[IEventWorkflowController]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controllers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutControllers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controllers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParent(value: IEventManager): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

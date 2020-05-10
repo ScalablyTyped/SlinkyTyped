@@ -38,24 +38,101 @@ trait AssessmentRunFilter extends js.Object {
 
 object AssessmentRunFilter {
   @scala.inline
-  def apply(
-    completionTimeRange: TimestampRange = null,
-    durationRange: DurationRange = null,
-    namePattern: NamePattern = null,
-    rulesPackageArns: FilterRulesPackageArnList = null,
-    startTimeRange: TimestampRange = null,
-    stateChangeTimeRange: TimestampRange = null,
-    states: AssessmentRunStateList = null
-  ): AssessmentRunFilter = {
+  def apply(): AssessmentRunFilter = {
     val __obj = js.Dynamic.literal()
-    if (completionTimeRange != null) __obj.updateDynamic("completionTimeRange")(completionTimeRange.asInstanceOf[js.Any])
-    if (durationRange != null) __obj.updateDynamic("durationRange")(durationRange.asInstanceOf[js.Any])
-    if (namePattern != null) __obj.updateDynamic("namePattern")(namePattern.asInstanceOf[js.Any])
-    if (rulesPackageArns != null) __obj.updateDynamic("rulesPackageArns")(rulesPackageArns.asInstanceOf[js.Any])
-    if (startTimeRange != null) __obj.updateDynamic("startTimeRange")(startTimeRange.asInstanceOf[js.Any])
-    if (stateChangeTimeRange != null) __obj.updateDynamic("stateChangeTimeRange")(stateChangeTimeRange.asInstanceOf[js.Any])
-    if (states != null) __obj.updateDynamic("states")(states.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssessmentRunFilter]
   }
+  @scala.inline
+  implicit class AssessmentRunFilterOps[Self <: AssessmentRunFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompletionTimeRange(value: TimestampRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completionTimeRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompletionTimeRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completionTimeRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDurationRange(value: DurationRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("durationRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDurationRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("durationRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamePattern(value: NamePattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamePattern: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePattern")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRulesPackageArns(value: FilterRulesPackageArnList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rulesPackageArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRulesPackageArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rulesPackageArns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTimeRange(value: TimestampRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTimeRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStateChangeTimeRange(value: TimestampRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateChangeTimeRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStateChangeTimeRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateChangeTimeRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStates(value: AssessmentRunStateList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("states")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("states")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,7 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.AnonValueBoolean
 import typingsSlinky.primereact.toggleButtonMod.ToggleButtonProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
@@ -12,42 +9,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ToggleButton
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactTogglebuttonMod.ToggleButton] {
+object ToggleButton {
   @JSImport("primereact/togglebutton", "ToggleButton")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: checked, className, id, tabIndex */
-  def apply(
-    ariaLabelledBy: String = null,
-    offIcon: String = null,
-    offLabel: String = null,
-    onChange: /* e */ AnonValueBoolean => Unit = null,
-    onIcon: String = null,
-    onLabel: String = null,
-    style: js.Object = null,
-    tooltip: js.Any = null,
-    tooltipOptions: TooltipOptions = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactTogglebuttonMod.ToggleButton] = {
-    val __obj = js.Dynamic.literal()
-    if (ariaLabelledBy != null) __obj.updateDynamic("ariaLabelledBy")(ariaLabelledBy.asInstanceOf[js.Any])
-    if (offIcon != null) __obj.updateDynamic("offIcon")(offIcon.asInstanceOf[js.Any])
-    if (offLabel != null) __obj.updateDynamic("offLabel")(offLabel.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onIcon != null) __obj.updateDynamic("onIcon")(onIcon.asInstanceOf[js.Any])
-    if (onLabel != null) __obj.updateDynamic("onLabel")(onLabel.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (tooltipOptions != null) __obj.updateDynamic("tooltipOptions")(tooltipOptions.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.primereactTogglebuttonMod.ToggleButton] {
+    @scala.inline
+    def ariaLabelledBy(value: String): this.type = set("ariaLabelledBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offIcon(value: String): this.type = set("offIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offLabel(value: String): this.type = set("offLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* e */ AnonValueBoolean => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onIcon(value: String): this.type = set("onIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onLabel(value: String): this.type = set("onLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltip(value: js.Any): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipOptions(value: TooltipOptions): this.type = set("tooltipOptions", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactTogglebuttonMod.ToggleButton] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.primereactTogglebuttonMod.ToggleButton](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ToggleButtonProps
+  
+  def withProps(p: ToggleButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ToggleButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

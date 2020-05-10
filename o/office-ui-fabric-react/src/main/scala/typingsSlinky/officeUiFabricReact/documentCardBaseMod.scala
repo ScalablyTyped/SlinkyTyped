@@ -2,7 +2,7 @@ package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.officeUiFabricReact.documentCardTypesMod.IDocumentCard
 import typingsSlinky.officeUiFabricReact.documentCardTypesMod.IDocumentCardProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 object documentCardBaseMod extends js.Object {
   @js.native
   class DocumentCardBase protected ()
-    extends BaseComponent[IDocumentCardProps, js.Any]
+    extends Component[IDocumentCardProps, js.Any, js.Any]
        with IDocumentCard {
     def this(props: IDocumentCardProps) = this()
     var _classNames: js.Any = js.native
@@ -20,11 +20,6 @@ object documentCardBaseMod extends js.Object {
     var _onClick: js.Any = js.native
     var _onKeyDown: js.Any = js.native
     var _rootElement: js.Any = js.native
-    /**
-      * Sets focus to the DocumentCard.
-      */
-    /* CompleteClass */
-    override def focus(): Unit = js.native
   }
   
   /* static members */

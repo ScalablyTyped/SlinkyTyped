@@ -115,8 +115,8 @@ class ContentSetter protected () extends js.Object {
     * @param cont               OptionalAn html string, node or enumerable list of nodes for insertion into the domIf not provided, the object's content property will be used
     * @param params               Optional
     */
-  def set(cont: typingsSlinky.std.HTMLElement): js.Any = js.native
-  def set(cont: typingsSlinky.std.HTMLElement, params: js.Object): js.Any = js.native
+  def set(cont: HTMLElement): js.Any = js.native
+  def set(cont: HTMLElement, params: js.Object): js.Any = js.native
   /**
     * sets the content on the node
     *

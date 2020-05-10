@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Anon3D extends js.Object {
   /**
     * The '3D' requirement denotes GPU hardware acceleration.
@@ -20,7 +21,7 @@ trait Anon3D extends js.Object {
     *   }
     * }
     */
-  var `3D`: js.UndefOr[AnonFeatures] = js.undefined
+  var `3D`: js.UndefOr[AnonFeatures] = js.native
   /**
     * The 'plugins' requirement indicates if an app requires NPAPI to run.
     *
@@ -36,16 +37,46 @@ trait Anon3D extends js.Object {
     *   }
     * }
     */
-  var plugins: js.UndefOr[AnonNpapi] = js.undefined
+  var plugins: js.UndefOr[AnonNpapi] = js.native
 }
 
 object Anon3D {
   @scala.inline
-  def apply(`3D`: AnonFeatures = null, plugins: AnonNpapi = null): Anon3D = {
+  def apply(): Anon3D = {
     val __obj = js.Dynamic.literal()
-    if (`3D` != null) __obj.updateDynamic("3D")(`3D`.asInstanceOf[js.Any])
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
     __obj.asInstanceOf[Anon3D]
   }
+  @scala.inline
+  implicit class Anon3DOps[Self <: Anon3D] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with3D(value: AnonFeatures): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("3D")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without3D: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("3D")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlugins(value: AnonNpapi): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

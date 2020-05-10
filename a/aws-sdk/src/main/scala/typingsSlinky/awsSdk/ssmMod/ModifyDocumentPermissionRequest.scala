@@ -30,18 +30,65 @@ trait ModifyDocumentPermissionRequest extends js.Object {
 
 object ModifyDocumentPermissionRequest {
   @scala.inline
-  def apply(
-    Name: DocumentName,
-    PermissionType: DocumentPermissionType,
-    AccountIdsToAdd: AccountIdList = null,
-    AccountIdsToRemove: AccountIdList = null,
-    SharedDocumentVersion: SharedDocumentVersion = null
-  ): ModifyDocumentPermissionRequest = {
+  def apply(Name: DocumentName, PermissionType: DocumentPermissionType): ModifyDocumentPermissionRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], PermissionType = PermissionType.asInstanceOf[js.Any])
-    if (AccountIdsToAdd != null) __obj.updateDynamic("AccountIdsToAdd")(AccountIdsToAdd.asInstanceOf[js.Any])
-    if (AccountIdsToRemove != null) __obj.updateDynamic("AccountIdsToRemove")(AccountIdsToRemove.asInstanceOf[js.Any])
-    if (SharedDocumentVersion != null) __obj.updateDynamic("SharedDocumentVersion")(SharedDocumentVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyDocumentPermissionRequest]
   }
+  @scala.inline
+  implicit class ModifyDocumentPermissionRequestOps[Self <: ModifyDocumentPermissionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: DocumentName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPermissionType(value: DocumentPermissionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccountIdsToAdd(value: AccountIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountIdsToAdd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountIdsToAdd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountIdsToAdd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccountIdsToRemove(value: AccountIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountIdsToRemove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountIdsToRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountIdsToRemove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSharedDocumentVersion(value: SharedDocumentVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedDocumentVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSharedDocumentVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedDocumentVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

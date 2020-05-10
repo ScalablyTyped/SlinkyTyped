@@ -1,9 +1,9 @@
 package typingsSlinky.openlayers.mod.control
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.openlayers.mod.Map
 import typingsSlinky.openlayers.mod.Object
 import typingsSlinky.openlayers.mod.olx.control.ControlOptions
-import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

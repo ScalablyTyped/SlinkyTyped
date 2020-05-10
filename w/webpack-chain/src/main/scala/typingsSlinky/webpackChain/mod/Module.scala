@@ -1,6 +1,5 @@
 package typingsSlinky.webpackChain.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,11 +9,9 @@ import scala.scalajs.js.annotation._
 class Module ()
   extends typingsSlinky.webpackChain.mod._Config.TypedChainedMap[Config, js.Any] {
   var rules: TypedChainedMap[this.type, Rule[Module]] = js.native
-  /* CompleteClass */
-  override def end(): Config = js.native
-  def noParse(noParse: js.Array[RegExp]): this.type = js.native
+  def noParse(noParse: js.Array[js.RegExp]): this.type = js.native
   def noParse(noParse: js.Function1[/* contentPath */ String, Boolean]): this.type = js.native
-  def noParse(noParse: RegExp): this.type = js.native
+  def noParse(noParse: js.RegExp): this.type = js.native
   def rule(name: String): Rule[Module] = js.native
   def strictExportPresence(value: Boolean): this.type = js.native
 }

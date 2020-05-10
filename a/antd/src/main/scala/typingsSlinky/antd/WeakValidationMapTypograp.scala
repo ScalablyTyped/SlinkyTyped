@@ -8,33 +8,101 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined react.react.WeakValidationMap<antd.antd/lib/typography/Typography.TypographyProps> */
+@js.native
 trait WeakValidationMapTypograp extends js.Object {
-  var `aria-label`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
-  var children: js.UndefOr[Validator[js.UndefOr[Null | TagMod[Any]]]] = js.undefined
-  var className: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
-  var id: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
-  var prefixCls: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
-  var style: js.UndefOr[Validator[js.UndefOr[CSSProperties | Null]]] = js.undefined
+  var `aria-label`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
+  var children: js.UndefOr[Validator[js.UndefOr[Null | TagMod[Any]]]] = js.native
+  var className: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
+  var id: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
+  var prefixCls: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
+  var style: js.UndefOr[Validator[js.UndefOr[CSSProperties | Null]]] = js.native
 }
 
 object WeakValidationMapTypograp {
   @scala.inline
-  def apply(
-    `aria-label`: Validator[js.UndefOr[Null | String]] = null,
-    children: Validator[js.UndefOr[Null | TagMod[Any]]] = null,
-    className: Validator[js.UndefOr[Null | String]] = null,
-    id: Validator[js.UndefOr[Null | String]] = null,
-    prefixCls: Validator[js.UndefOr[Null | String]] = null,
-    style: Validator[js.UndefOr[CSSProperties | Null]] = null
-  ): WeakValidationMapTypograp = {
+  def apply(): WeakValidationMapTypograp = {
     val __obj = js.Dynamic.literal()
-    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[WeakValidationMapTypograp]
   }
+  @scala.inline
+  implicit class WeakValidationMapTypograpOps[Self <: WeakValidationMapTypograp] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def `withAria-label`(value: Validator[js.UndefOr[Null | String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-label`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildren(value: Validator[js.UndefOr[Null | TagMod[Any]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: Validator[js.UndefOr[Null | String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: Validator[js.UndefOr[Null | String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: Validator[js.UndefOr[Null | String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: Validator[js.UndefOr[CSSProperties | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

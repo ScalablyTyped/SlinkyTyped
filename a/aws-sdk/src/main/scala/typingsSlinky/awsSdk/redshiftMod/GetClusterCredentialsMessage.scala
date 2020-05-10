@@ -34,20 +34,77 @@ trait GetClusterCredentialsMessage extends js.Object {
 
 object GetClusterCredentialsMessage {
   @scala.inline
-  def apply(
-    ClusterIdentifier: String,
-    DbUser: String,
-    AutoCreate: js.UndefOr[scala.Boolean] = js.undefined,
-    DbGroups: DbGroupList = null,
-    DbName: String = null,
-    DurationSeconds: Int | scala.Double = null
-  ): GetClusterCredentialsMessage = {
+  def apply(ClusterIdentifier: String, DbUser: String): GetClusterCredentialsMessage = {
     val __obj = js.Dynamic.literal(ClusterIdentifier = ClusterIdentifier.asInstanceOf[js.Any], DbUser = DbUser.asInstanceOf[js.Any])
-    if (!js.isUndefined(AutoCreate)) __obj.updateDynamic("AutoCreate")(AutoCreate.asInstanceOf[js.Any])
-    if (DbGroups != null) __obj.updateDynamic("DbGroups")(DbGroups.asInstanceOf[js.Any])
-    if (DbName != null) __obj.updateDynamic("DbName")(DbName.asInstanceOf[js.Any])
-    if (DurationSeconds != null) __obj.updateDynamic("DurationSeconds")(DurationSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetClusterCredentialsMessage]
   }
+  @scala.inline
+  implicit class GetClusterCredentialsMessageOps[Self <: GetClusterCredentialsMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDbUser(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DbUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoCreate(value: BooleanOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoCreate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoCreate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDbGroups(value: DbGroupList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DbGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDbGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DbGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDbName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DbName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDbName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DbName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDurationSeconds(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDurationSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

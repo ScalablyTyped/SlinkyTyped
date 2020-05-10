@@ -23,14 +23,6 @@ object coreObserverMod extends js.Object {
     var onUserCompleted: js.Function = js.native
     var onUserError: js.Function = js.native
     var onUserNext: js.Function = js.native
-    /* CompleteClass */
-    override def completed(): js.Any = js.native
-    /* CompleteClass */
-    override def dispose(): Unit = js.native
-    /* CompleteClass */
-    override def error(error: js.Any): js.Any = js.native
-    /* CompleteClass */
-    override def next(value: js.Any): js.Any = js.native
     /* protected */ def onCompleted(): js.Any = js.native
     /* protected */ def onError(error: js.Any): js.Any = js.native
     /* protected */ def onNext(value: js.Any): js.Any = js.native

@@ -2,136 +2,316 @@ package typingsSlinky.reactToolbox.libTimePickerTimePickerMod
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.reactToolbox.reactToolboxStrings.`24hr`
 import typingsSlinky.reactToolbox.reactToolboxStrings.ampm
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TimePickerProps
   extends /**
-  * Additional attributes passed to inner Input component.
+  * Additional attributes passed to composed component.
   */
 /* key */ StringDictionary[js.Any] {
   /**
     * Whether time picker is active.
     * @default false
     */
-  var active: js.UndefOr[Boolean] = js.undefined
+  var active: js.UndefOr[Boolean] = js.native
   /**
     * Label used for cancel button.
     * @default "Cancel"
     */
-  var cancelLabel: js.UndefOr[String] = js.undefined
+  var cancelLabel: js.UndefOr[String] = js.native
   /**
     * Provide error text which will be displayed under the field.
     */
-  var error: js.UndefOr[String] = js.undefined
+  var error: js.UndefOr[String] = js.native
   /**
     * Format to display the clock. It can be 24hr or ampm.
     * @default "24hr"
     */
-  var format: js.UndefOr[`24hr` | ampm] = js.undefined
+  var format: js.UndefOr[`24hr` | ampm] = js.native
   /**
     * A key to identify an Icon from Material Design Icons or a custom Icon Element.
     */
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
+  var icon: js.UndefOr[TagMod[Any]] = js.native
   /**
     * This class will be applied to Input component of TimePicker.
     */
-  var inputClassName: js.UndefOr[String] = js.undefined
+  var inputClassName: js.UndefOr[String] = js.native
   /**
     * The text string to use for the floating label element in the input component.
     */
-  var label: js.UndefOr[String] = js.undefined
+  var label: js.UndefOr[String] = js.native
   /**
     * Label used for 'OK' button on Dialog.
     * @default "Ok"
     */
-  var okLabel: js.UndefOr[String] = js.undefined
+  var okLabel: js.UndefOr[String] = js.native
   /**
     * Callback called when the picker value is changed.
     */
-  var onChange: js.UndefOr[js.Function] = js.undefined
+  var onChange: js.UndefOr[js.Function] = js.native
   /**
     * Callback fired on Input click.
     */
-  var onClick: js.UndefOr[js.Function] = js.undefined
+  var onClick: js.UndefOr[js.Function] = js.native
   /**
     * Callback fired after dismissing the Dialog.
     */
-  var onDismiss: js.UndefOr[js.Function] = js.undefined
+  var onDismiss: js.UndefOr[js.Function] = js.native
   /**
     * Callback called when the ESC key is pressed with the overlay active.
     */
-  var onEscKeyDown: js.UndefOr[js.Function] = js.undefined
+  var onEscKeyDown: js.UndefOr[js.Function] = js.native
   /**
     * Callback invoked on Input key press.
     */
-  var onKeyPress: js.UndefOr[js.Function] = js.undefined
+  var onKeyPress: js.UndefOr[js.Function] = js.native
   /**
     * Callback to be invoked when the dialog overlay is clicked.
     */
-  var onOverlayClick: js.UndefOr[js.Function] = js.undefined
+  var onOverlayClick: js.UndefOr[js.Function] = js.native
   /**
     * The input element will be readonly and look like disabled.
     */
-  var readonly: js.UndefOr[Boolean] = js.undefined
+  var readonly: js.UndefOr[Boolean] = js.native
   /**
     * Classnames object defining the component style.
     */
-  var theme: js.UndefOr[TimePickerTheme] = js.undefined
+  var theme: js.UndefOr[TimePickerTheme] = js.native
   /**
     * Datetime object with currrently selected time.
     */
-  var value: js.UndefOr[js.Date] = js.undefined
+  var value: js.UndefOr[js.Date] = js.native
 }
 
 object TimePickerProps {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-    * Additional attributes passed to inner Input component.
-    */
-  /* key */ StringDictionary[js.Any] = null,
-    active: js.UndefOr[Boolean] = js.undefined,
-    cancelLabel: String = null,
-    error: String = null,
-    format: `24hr` | ampm = null,
-    icon: TagMod[Any] = null,
-    inputClassName: String = null,
-    label: String = null,
-    okLabel: String = null,
-    onChange: js.Function = null,
-    onClick: js.Function = null,
-    onDismiss: js.Function = null,
-    onEscKeyDown: js.Function = null,
-    onKeyPress: js.Function = null,
-    onOverlayClick: js.Function = null,
-    readonly: js.UndefOr[Boolean] = js.undefined,
-    theme: TimePickerTheme = null,
-    value: js.Date = null
-  ): TimePickerProps = {
+  def apply(): TimePickerProps = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (cancelLabel != null) __obj.updateDynamic("cancelLabel")(cancelLabel.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (inputClassName != null) __obj.updateDynamic("inputClassName")(inputClassName.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (okLabel != null) __obj.updateDynamic("okLabel")(okLabel.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(onChange.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
-    if (onDismiss != null) __obj.updateDynamic("onDismiss")(onDismiss.asInstanceOf[js.Any])
-    if (onEscKeyDown != null) __obj.updateDynamic("onEscKeyDown")(onEscKeyDown.asInstanceOf[js.Any])
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(onKeyPress.asInstanceOf[js.Any])
-    if (onOverlayClick != null) __obj.updateDynamic("onOverlayClick")(onOverlayClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(readonly)) __obj.updateDynamic("readonly")(readonly.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimePickerProps]
   }
+  @scala.inline
+  implicit class TimePickerPropsOps[Self <: TimePickerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancelLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: `24hr` | ampm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIcon(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOkLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("okLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOkLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("okLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClick(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDismiss(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDismiss")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDismiss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDismiss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnEscKeyDown(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEscKeyDown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnEscKeyDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEscKeyDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnKeyPress(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnKeyPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOverlayClick(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOverlayClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnOverlayClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOverlayClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadonly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadonly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTheme(value: TimePickerTheme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

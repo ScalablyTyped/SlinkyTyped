@@ -1,27 +1,23 @@
 package typingsSlinky.reactToastNotifications.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactToastNotifications.mod.Placement
 import typingsSlinky.reactToastNotifications.mod.ToastContainerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DefaultToastContainer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactToastNotifications.mod.DefaultToastContainer] {
+object DefaultToastContainer {
   @JSImport("react-toast-notifications", "DefaultToastContainer")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(hasToasts: Boolean, placement: Placement, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactToastNotifications.mod.DefaultToastContainer] = {
-    val __obj = js.Dynamic.literal(hasToasts = hasToasts.asInstanceOf[js.Any], placement = placement.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: ToastContainerProps): Default[tag.type, typingsSlinky.reactToastNotifications.mod.DefaultToastContainer] = new Default[tag.type, typingsSlinky.reactToastNotifications.mod.DefaultToastContainer](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(hasToasts: Boolean, placement: Placement): Default[tag.type, typingsSlinky.reactToastNotifications.mod.DefaultToastContainer] = {
+    val __props = js.Dynamic.literal(hasToasts = hasToasts.asInstanceOf[js.Any], placement = placement.asInstanceOf[js.Any])
+    new Default[tag.type, typingsSlinky.reactToastNotifications.mod.DefaultToastContainer](js.Array(this.component, __props.asInstanceOf[ToastContainerProps]))
   }
-  type Props = ToastContainerProps
 }
 

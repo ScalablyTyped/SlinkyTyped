@@ -27,16 +27,53 @@ trait CreateWebACLRequest extends js.Object {
 
 object CreateWebACLRequest {
   @scala.inline
-  def apply(
-    ChangeToken: ChangeToken,
-    DefaultAction: WafAction,
-    MetricName: MetricName,
-    Name: ResourceName,
-    Tags: TagList = null
-  ): CreateWebACLRequest = {
+  def apply(ChangeToken: ChangeToken, DefaultAction: WafAction, MetricName: MetricName, Name: ResourceName): CreateWebACLRequest = {
     val __obj = js.Dynamic.literal(ChangeToken = ChangeToken.asInstanceOf[js.Any], DefaultAction = DefaultAction.asInstanceOf[js.Any], MetricName = MetricName.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateWebACLRequest]
   }
+  @scala.inline
+  implicit class CreateWebACLRequestOps[Self <: CreateWebACLRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChangeToken(value: ChangeToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultAction(value: WafAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetricName(value: MetricName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

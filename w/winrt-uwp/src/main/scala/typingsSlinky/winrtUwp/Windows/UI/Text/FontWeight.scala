@@ -5,17 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Refers to the density of a typeface, in terms of the lightness or heaviness of the strokes. */
+@js.native
 trait FontWeight extends js.Object {
   /** The font weight expressed as a numeric value. See Remarks. */
-  var weight: Double
+  var weight: Double = js.native
 }
 
 object FontWeight {
   @scala.inline
   def apply(weight: Double): FontWeight = {
     val __obj = js.Dynamic.literal(weight = weight.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[FontWeight]
   }
+  @scala.inline
+  implicit class FontWeightOps[Self <: FontWeight] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

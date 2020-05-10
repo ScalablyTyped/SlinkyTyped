@@ -12,10 +12,8 @@ trait ScrollSetting extends js.Object
 
 object ScrollSetting {
   @scala.inline
-  def _empty: typingsSlinky.std.stdStrings._empty = this.cast("")
+  def _empty: typingsSlinky.std.stdStrings._empty = "".asInstanceOf[typingsSlinky.std.stdStrings._empty]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def up: typingsSlinky.std.stdStrings.up = this.cast("up")
+  def up: typingsSlinky.std.stdStrings.up = "up".asInstanceOf[typingsSlinky.std.stdStrings.up]
 }
 

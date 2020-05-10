@@ -1,7 +1,6 @@
 package typingsSlinky.web3Utils.mod
 
 import typingsSlinky.bnJs.mod.^
-import typingsSlinky.std.Uint8Array
 import typingsSlinky.web3Utils.AnonR
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -40,7 +39,7 @@ trait Utils extends js.Object {
   def isHex(hex: Hex): Boolean = js.native
   def isHexStrict(hex: Hex): Boolean = js.native
   def isInBloom(bloom: String, value: String): Boolean = js.native
-  def isInBloom(bloom: String, value: Uint8Array): Boolean = js.native
+  def isInBloom(bloom: String, value: js.typedarray.Uint8Array): Boolean = js.native
   def isTopic(topic: String): Boolean = js.native
   def isTopicInBloom(bloom: String, topic: String): Boolean = js.native
   def isUserEthereumAddressInBloom(bloom: String, ethereumAddress: String): Boolean = js.native

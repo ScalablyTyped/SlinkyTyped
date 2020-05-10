@@ -110,52 +110,269 @@ trait MetricAlarmArgs extends js.Object {
 
 object MetricAlarmArgs {
   @scala.inline
-  def apply(
-    comparisonOperator: Input[String],
-    evaluationPeriods: Input[Double],
-    actionsEnabled: Input[Boolean] = null,
-    alarmActions: Input[js.Array[Input[String | Topic]]] = null,
-    alarmDescription: Input[String] = null,
-    datapointsToAlarm: Input[Double] = null,
-    dimensions: Input[StringDictionary[_]] = null,
-    evaluateLowSampleCountPercentiles: Input[String] = null,
-    extendedStatistic: Input[String] = null,
-    insufficientDataActions: Input[js.Array[Input[String | Topic]]] = null,
-    metricName: Input[String] = null,
-    metricQueries: Input[js.Array[Input[MetricAlarmMetricQuery]]] = null,
-    name: Input[String] = null,
-    namespace: Input[String] = null,
-    okActions: Input[js.Array[Input[String | Topic]]] = null,
-    period: Input[Double] = null,
-    statistic: Input[String] = null,
-    tags: Input[StringDictionary[_]] = null,
-    threshold: Input[Double] = null,
-    thresholdMetricId: Input[String] = null,
-    treatMissingData: Input[String] = null,
-    unit: Input[String] = null
-  ): MetricAlarmArgs = {
+  def apply(comparisonOperator: Input[String], evaluationPeriods: Input[Double]): MetricAlarmArgs = {
     val __obj = js.Dynamic.literal(comparisonOperator = comparisonOperator.asInstanceOf[js.Any], evaluationPeriods = evaluationPeriods.asInstanceOf[js.Any])
-    if (actionsEnabled != null) __obj.updateDynamic("actionsEnabled")(actionsEnabled.asInstanceOf[js.Any])
-    if (alarmActions != null) __obj.updateDynamic("alarmActions")(alarmActions.asInstanceOf[js.Any])
-    if (alarmDescription != null) __obj.updateDynamic("alarmDescription")(alarmDescription.asInstanceOf[js.Any])
-    if (datapointsToAlarm != null) __obj.updateDynamic("datapointsToAlarm")(datapointsToAlarm.asInstanceOf[js.Any])
-    if (dimensions != null) __obj.updateDynamic("dimensions")(dimensions.asInstanceOf[js.Any])
-    if (evaluateLowSampleCountPercentiles != null) __obj.updateDynamic("evaluateLowSampleCountPercentiles")(evaluateLowSampleCountPercentiles.asInstanceOf[js.Any])
-    if (extendedStatistic != null) __obj.updateDynamic("extendedStatistic")(extendedStatistic.asInstanceOf[js.Any])
-    if (insufficientDataActions != null) __obj.updateDynamic("insufficientDataActions")(insufficientDataActions.asInstanceOf[js.Any])
-    if (metricName != null) __obj.updateDynamic("metricName")(metricName.asInstanceOf[js.Any])
-    if (metricQueries != null) __obj.updateDynamic("metricQueries")(metricQueries.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
-    if (okActions != null) __obj.updateDynamic("okActions")(okActions.asInstanceOf[js.Any])
-    if (period != null) __obj.updateDynamic("period")(period.asInstanceOf[js.Any])
-    if (statistic != null) __obj.updateDynamic("statistic")(statistic.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (threshold != null) __obj.updateDynamic("threshold")(threshold.asInstanceOf[js.Any])
-    if (thresholdMetricId != null) __obj.updateDynamic("thresholdMetricId")(thresholdMetricId.asInstanceOf[js.Any])
-    if (treatMissingData != null) __obj.updateDynamic("treatMissingData")(treatMissingData.asInstanceOf[js.Any])
-    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricAlarmArgs]
   }
+  @scala.inline
+  implicit class MetricAlarmArgsOps[Self <: MetricAlarmArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComparisonOperator(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comparisonOperator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvaluationPeriods(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluationPeriods")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActionsEnabled(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionsEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionsEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionsEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlarmActions(value: Input[js.Array[Input[String | Topic]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alarmActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlarmActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alarmActions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlarmDescription(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alarmDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlarmDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alarmDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatapointsToAlarm(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datapointsToAlarm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatapointsToAlarm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datapointsToAlarm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDimensions(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvaluateLowSampleCountPercentiles(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluateLowSampleCountPercentiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvaluateLowSampleCountPercentiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluateLowSampleCountPercentiles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtendedStatistic(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedStatistic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtendedStatistic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedStatistic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsufficientDataActions(value: Input[js.Array[Input[String | Topic]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insufficientDataActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsufficientDataActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insufficientDataActions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricQueries(value: Input[js.Array[Input[MetricAlarmMetricQuery]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricQueries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricQueries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricQueries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamespace(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamespace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOkActions(value: Input[js.Array[Input[String | Topic]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("okActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOkActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("okActions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeriod(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatistic(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statistic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatistic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statistic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreshold(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThresholdMetricId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thresholdMetricId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThresholdMetricId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thresholdMetricId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTreatMissingData(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("treatMissingData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTreatMissingData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("treatMissingData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnit(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

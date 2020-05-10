@@ -1,6 +1,5 @@
 package typingsSlinky.libsodiumWrappers.mod
 
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object toHex extends js.Object {
   def apply(input: String): String = js.native
-  def apply(input: Uint8Array): String = js.native
+  def apply(input: js.typedarray.Uint8Array): String = js.native
 }
 

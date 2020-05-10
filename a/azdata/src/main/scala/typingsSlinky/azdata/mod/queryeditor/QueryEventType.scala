@@ -15,16 +15,14 @@ trait QueryEventType extends js.Object
 
 object QueryEventType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def executionPlan: typingsSlinky.azdata.azdataStrings.executionPlan = "executionPlan".asInstanceOf[typingsSlinky.azdata.azdataStrings.executionPlan]
   @scala.inline
-  def executionPlan: typingsSlinky.azdata.azdataStrings.executionPlan = this.cast("executionPlan")
+  def queryStart: typingsSlinky.azdata.azdataStrings.queryStart = "queryStart".asInstanceOf[typingsSlinky.azdata.azdataStrings.queryStart]
   @scala.inline
-  def queryStart: typingsSlinky.azdata.azdataStrings.queryStart = this.cast("queryStart")
+  def queryStop: typingsSlinky.azdata.azdataStrings.queryStop = "queryStop".asInstanceOf[typingsSlinky.azdata.azdataStrings.queryStop]
   @scala.inline
-  def queryStop: typingsSlinky.azdata.azdataStrings.queryStop = this.cast("queryStop")
+  def queryUpdate: typingsSlinky.azdata.azdataStrings.queryUpdate = "queryUpdate".asInstanceOf[typingsSlinky.azdata.azdataStrings.queryUpdate]
   @scala.inline
-  def queryUpdate: typingsSlinky.azdata.azdataStrings.queryUpdate = this.cast("queryUpdate")
-  @scala.inline
-  def visualize: typingsSlinky.azdata.azdataStrings.visualize = this.cast("visualize")
+  def visualize: typingsSlinky.azdata.azdataStrings.visualize = "visualize".asInstanceOf[typingsSlinky.azdata.azdataStrings.visualize]
 }
 

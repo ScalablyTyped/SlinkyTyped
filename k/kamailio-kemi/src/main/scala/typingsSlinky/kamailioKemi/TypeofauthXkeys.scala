@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TypeofauthXkeys extends js.Object {
-  def auth_xkeys_add(shdr: String, skey: String, salg: String, sdata: String): Double
-  def auth_xkeys_check(shdr: String, skey: String, salg: String, sdata: String): Double
+  def auth_xkeys_add(shdr: String, skey: String, salg: String, sdata: String): Double = js.native
+  def auth_xkeys_check(shdr: String, skey: String, salg: String, sdata: String): Double = js.native
 }
 
 object TypeofauthXkeys {
@@ -16,8 +17,27 @@ object TypeofauthXkeys {
     auth_xkeys_check: (String, String, String, String) => Double
   ): TypeofauthXkeys = {
     val __obj = js.Dynamic.literal(auth_xkeys_add = js.Any.fromFunction4(auth_xkeys_add), auth_xkeys_check = js.Any.fromFunction4(auth_xkeys_check))
-  
     __obj.asInstanceOf[TypeofauthXkeys]
   }
+  @scala.inline
+  implicit class TypeofauthXkeysOps[Self <: TypeofauthXkeys] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth_xkeys_add(value: (String, String, String, String) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth_xkeys_add")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withAuth_xkeys_check(value: (String, String, String, String) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth_xkeys_check")(js.Any.fromFunction4(value))
+        ret
+    }
+  }
+  
 }
 

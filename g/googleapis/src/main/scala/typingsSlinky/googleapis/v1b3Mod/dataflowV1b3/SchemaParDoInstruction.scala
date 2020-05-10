@@ -35,20 +35,77 @@ trait SchemaParDoInstruction extends js.Object {
 
 object SchemaParDoInstruction {
   @scala.inline
-  def apply(
-    input: SchemaInstructionInput = null,
-    multiOutputInfos: js.Array[SchemaMultiOutputInfo] = null,
-    numOutputs: Int | Double = null,
-    sideInputs: js.Array[SchemaSideInputInfo] = null,
-    userFn: StringDictionary[js.Any] = null
-  ): SchemaParDoInstruction = {
+  def apply(): SchemaParDoInstruction = {
     val __obj = js.Dynamic.literal()
-    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
-    if (multiOutputInfos != null) __obj.updateDynamic("multiOutputInfos")(multiOutputInfos.asInstanceOf[js.Any])
-    if (numOutputs != null) __obj.updateDynamic("numOutputs")(numOutputs.asInstanceOf[js.Any])
-    if (sideInputs != null) __obj.updateDynamic("sideInputs")(sideInputs.asInstanceOf[js.Any])
-    if (userFn != null) __obj.updateDynamic("userFn")(userFn.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaParDoInstruction]
   }
+  @scala.inline
+  implicit class SchemaParDoInstructionOps[Self <: SchemaParDoInstruction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInput(value: SchemaInstructionInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiOutputInfos(value: js.Array[SchemaMultiOutputInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiOutputInfos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiOutputInfos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiOutputInfos")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumOutputs(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numOutputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumOutputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numOutputs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSideInputs(value: js.Array[SchemaSideInputInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sideInputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSideInputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sideInputs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserFn(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userFn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userFn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

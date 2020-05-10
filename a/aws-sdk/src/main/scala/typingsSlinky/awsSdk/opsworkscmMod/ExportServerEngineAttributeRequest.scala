@@ -22,10 +22,41 @@ trait ExportServerEngineAttributeRequest extends js.Object {
 
 object ExportServerEngineAttributeRequest {
   @scala.inline
-  def apply(ExportAttributeName: String, ServerName: ServerName, InputAttributes: EngineAttributes = null): ExportServerEngineAttributeRequest = {
+  def apply(ExportAttributeName: String, ServerName: ServerName): ExportServerEngineAttributeRequest = {
     val __obj = js.Dynamic.literal(ExportAttributeName = ExportAttributeName.asInstanceOf[js.Any], ServerName = ServerName.asInstanceOf[js.Any])
-    if (InputAttributes != null) __obj.updateDynamic("InputAttributes")(InputAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportServerEngineAttributeRequest]
   }
+  @scala.inline
+  implicit class ExportServerEngineAttributeRequestOps[Self <: ExportServerEngineAttributeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExportAttributeName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportAttributeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServerName(value: ServerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputAttributes(value: EngineAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputAttributes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

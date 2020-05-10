@@ -23,14 +23,41 @@ trait SchemaInconclusiveDetail extends js.Object {
 
 object SchemaInconclusiveDetail {
   @scala.inline
-  def apply(
-    abortedByUser: js.UndefOr[Boolean] = js.undefined,
-    infrastructureFailure: js.UndefOr[Boolean] = js.undefined
-  ): SchemaInconclusiveDetail = {
+  def apply(): SchemaInconclusiveDetail = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(abortedByUser)) __obj.updateDynamic("abortedByUser")(abortedByUser.asInstanceOf[js.Any])
-    if (!js.isUndefined(infrastructureFailure)) __obj.updateDynamic("infrastructureFailure")(infrastructureFailure.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInconclusiveDetail]
   }
+  @scala.inline
+  implicit class SchemaInconclusiveDetailOps[Self <: SchemaInconclusiveDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAbortedByUser(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abortedByUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbortedByUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abortedByUser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInfrastructureFailure(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infrastructureFailure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInfrastructureFailure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infrastructureFailure")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

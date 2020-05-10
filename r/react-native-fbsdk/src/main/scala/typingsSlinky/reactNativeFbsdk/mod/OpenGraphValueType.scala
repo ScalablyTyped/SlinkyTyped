@@ -14,14 +14,12 @@ trait OpenGraphValueType extends js.Object
 
 object OpenGraphValueType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def number: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.number = "number".asInstanceOf[typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.number]
   @scala.inline
-  def number: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.number = this.cast("number")
+  def `open-graph-object`: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.`open-graph-object` = "open-graph-object".asInstanceOf[typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.`open-graph-object`]
   @scala.inline
-  def `open-graph-object`: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.`open-graph-object` = this.cast("open-graph-object")
+  def photo: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.photo = "photo".asInstanceOf[typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.photo]
   @scala.inline
-  def photo: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.photo = this.cast("photo")
-  @scala.inline
-  def string: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.string = this.cast("string")
+  def string: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.string = "string".asInstanceOf[typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.string]
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.canvasjs.mod
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,8 +16,8 @@ object formatDate extends js.Object {
     * @param formatString Default formatString is “DD MMM YYYY”.
     * @param culture Default culture is “en”.
     */
-  def apply(date: Date): Unit = js.native
-  def apply(date: Date, formatString: String): Unit = js.native
-  def apply(date: Date, formatString: String, culture: String): Unit = js.native
+  def apply(date: js.Date): Unit = js.native
+  def apply(date: js.Date, formatString: String): Unit = js.native
+  def apply(date: js.Date, formatString: String, culture: String): Unit = js.native
 }
 

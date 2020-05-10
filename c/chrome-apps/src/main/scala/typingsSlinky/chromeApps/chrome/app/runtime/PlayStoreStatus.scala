@@ -2,7 +2,7 @@ package typingsSlinky.chromeApps.chrome.app.runtime
 
 import typingsSlinky.chromeApps.chromeAppsStrings.available
 import typingsSlinky.chromeApps.chromeAppsStrings.enabled_
-import typingsSlinky.chromeApps.chromeAppsStrings.unknown_
+import typingsSlinky.chromeApps.chromeAppsStrings.unknown__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ import scala.scalajs.js.annotation._
 object PlayStoreStatus extends js.Object {
   var AVAILABLE: available = js.native
   var ENABLED: enabled_ = js.native
-  var UNKNOWN: unknown_ = js.native
+  var UNKNOWN: unknown__ = js.native
 }
 

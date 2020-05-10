@@ -62,35 +62,167 @@ trait CreatePatchBaselineRequest extends js.Object {
 
 object CreatePatchBaselineRequest {
   @scala.inline
-  def apply(
-    Name: BaselineName,
-    ApprovalRules: PatchRuleGroup = null,
-    ApprovedPatches: PatchIdList = null,
-    ApprovedPatchesComplianceLevel: PatchComplianceLevel = null,
-    ApprovedPatchesEnableNonSecurity: js.UndefOr[scala.Boolean] = js.undefined,
-    ClientToken: ClientToken = null,
-    Description: BaselineDescription = null,
-    GlobalFilters: PatchFilterGroup = null,
-    OperatingSystem: OperatingSystem = null,
-    RejectedPatches: PatchIdList = null,
-    RejectedPatchesAction: PatchAction = null,
-    Sources: PatchSourceList = null,
-    Tags: TagList = null
-  ): CreatePatchBaselineRequest = {
+  def apply(Name: BaselineName): CreatePatchBaselineRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
-    if (ApprovalRules != null) __obj.updateDynamic("ApprovalRules")(ApprovalRules.asInstanceOf[js.Any])
-    if (ApprovedPatches != null) __obj.updateDynamic("ApprovedPatches")(ApprovedPatches.asInstanceOf[js.Any])
-    if (ApprovedPatchesComplianceLevel != null) __obj.updateDynamic("ApprovedPatchesComplianceLevel")(ApprovedPatchesComplianceLevel.asInstanceOf[js.Any])
-    if (!js.isUndefined(ApprovedPatchesEnableNonSecurity)) __obj.updateDynamic("ApprovedPatchesEnableNonSecurity")(ApprovedPatchesEnableNonSecurity.asInstanceOf[js.Any])
-    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (GlobalFilters != null) __obj.updateDynamic("GlobalFilters")(GlobalFilters.asInstanceOf[js.Any])
-    if (OperatingSystem != null) __obj.updateDynamic("OperatingSystem")(OperatingSystem.asInstanceOf[js.Any])
-    if (RejectedPatches != null) __obj.updateDynamic("RejectedPatches")(RejectedPatches.asInstanceOf[js.Any])
-    if (RejectedPatchesAction != null) __obj.updateDynamic("RejectedPatchesAction")(RejectedPatchesAction.asInstanceOf[js.Any])
-    if (Sources != null) __obj.updateDynamic("Sources")(Sources.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreatePatchBaselineRequest]
   }
+  @scala.inline
+  implicit class CreatePatchBaselineRequestOps[Self <: CreatePatchBaselineRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: BaselineName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withApprovalRules(value: PatchRuleGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApprovalRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovalRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApprovalRules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApprovedPatches(value: PatchIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApprovedPatches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovedPatches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApprovedPatches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApprovedPatchesComplianceLevel(value: PatchComplianceLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApprovedPatchesComplianceLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovedPatchesComplianceLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApprovedPatchesComplianceLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApprovedPatchesEnableNonSecurity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApprovedPatchesEnableNonSecurity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovedPatchesEnableNonSecurity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApprovedPatchesEnableNonSecurity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientToken(value: ClientToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: BaselineDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlobalFilters(value: PatchFilterGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperatingSystem(value: OperatingSystem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatingSystem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRejectedPatches(value: PatchIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RejectedPatches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRejectedPatches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RejectedPatches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRejectedPatchesAction(value: PatchAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RejectedPatchesAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRejectedPatchesAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RejectedPatchesAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSources(value: PatchSourceList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

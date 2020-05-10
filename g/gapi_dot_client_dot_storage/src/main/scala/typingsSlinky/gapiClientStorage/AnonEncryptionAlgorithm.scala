@@ -4,20 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonEncryptionAlgorithm extends js.Object {
   /** The encryption algorithm. */
-  var encryptionAlgorithm: js.UndefOr[String] = js.undefined
+  var encryptionAlgorithm: js.UndefOr[String] = js.native
   /** SHA256 hash value of the encryption key. */
-  var keySha256: js.UndefOr[String] = js.undefined
+  var keySha256: js.UndefOr[String] = js.native
 }
 
 object AnonEncryptionAlgorithm {
   @scala.inline
-  def apply(encryptionAlgorithm: String = null, keySha256: String = null): AnonEncryptionAlgorithm = {
+  def apply(): AnonEncryptionAlgorithm = {
     val __obj = js.Dynamic.literal()
-    if (encryptionAlgorithm != null) __obj.updateDynamic("encryptionAlgorithm")(encryptionAlgorithm.asInstanceOf[js.Any])
-    if (keySha256 != null) __obj.updateDynamic("keySha256")(keySha256.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonEncryptionAlgorithm]
   }
+  @scala.inline
+  implicit class AnonEncryptionAlgorithmOps[Self <: AnonEncryptionAlgorithm] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncryptionAlgorithm(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionAlgorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeySha256(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keySha256")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeySha256: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keySha256")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

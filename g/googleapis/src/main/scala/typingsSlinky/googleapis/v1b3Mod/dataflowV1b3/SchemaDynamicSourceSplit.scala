@@ -25,11 +25,41 @@ trait SchemaDynamicSourceSplit extends js.Object {
 
 object SchemaDynamicSourceSplit {
   @scala.inline
-  def apply(primary: SchemaDerivedSource = null, residual: SchemaDerivedSource = null): SchemaDynamicSourceSplit = {
+  def apply(): SchemaDynamicSourceSplit = {
     val __obj = js.Dynamic.literal()
-    if (primary != null) __obj.updateDynamic("primary")(primary.asInstanceOf[js.Any])
-    if (residual != null) __obj.updateDynamic("residual")(residual.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDynamicSourceSplit]
   }
+  @scala.inline
+  implicit class SchemaDynamicSourceSplitOps[Self <: SchemaDynamicSourceSplit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPrimary(value: SchemaDerivedSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResidual(value: SchemaDerivedSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("residual")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResidual: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("residual")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

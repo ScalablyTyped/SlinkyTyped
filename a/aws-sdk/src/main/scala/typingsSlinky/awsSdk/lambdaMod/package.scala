@@ -13,7 +13,7 @@ package object lambdaMod {
   type Arn = java.lang.String
   type BatchSize = scala.Double
   type BisectBatchOnFunctionError = scala.Boolean
-  type BlobStream = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.lambdaMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
+  type BlobStream = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.lambdaMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
   type Boolean = scala.Boolean
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.lambdaMod.ClientApiVersions
   type CompatibleRuntimes = js.Array[typingsSlinky.awsSdk.lambdaMod.Runtime]
@@ -136,6 +136,7 @@ package object lambdaMod {
     - typingsSlinky.awsSdk.awsSdkStrings.`nodejs4Dot3-edge`
     - typingsSlinky.awsSdk.awsSdkStrings.go1Dotx
     - typingsSlinky.awsSdk.awsSdkStrings.ruby2Dot5
+    - typingsSlinky.awsSdk.awsSdkStrings.ruby2Dot7
     - typingsSlinky.awsSdk.awsSdkStrings.provided
     - java.lang.String
   */
@@ -190,7 +191,7 @@ package object lambdaMod {
   type Version = java.lang.String
   type VpcId = java.lang.String
   type Weight = scala.Double
-  type _Blob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.lambdaMod.Blob | java.lang.String
+  type _Blob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.lambdaMod.Blob | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2014-11-11`
     - typingsSlinky.awsSdk.awsSdkStrings.`2015-03-31`

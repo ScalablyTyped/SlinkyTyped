@@ -7,27 +7,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDisplayName extends js.Object {
-  var displayName: js.UndefOr[String] = js.undefined
-  var privilege: js.UndefOr[ShareRelationshipPrivilegeLevel] = js.undefined
-  var recipientUserIdentity: js.UndefOr[UserIdentity] = js.undefined
-  var sharerUserId: js.UndefOr[UserID] = js.undefined
+  var displayName: js.UndefOr[String] = js.native
+  var privilege: js.UndefOr[ShareRelationshipPrivilegeLevel] = js.native
+  var recipientUserIdentity: js.UndefOr[UserIdentity] = js.native
+  var sharerUserId: js.UndefOr[UserID] = js.native
 }
 
 object AnonDisplayName {
   @scala.inline
-  def apply(
-    displayName: String = null,
-    privilege: ShareRelationshipPrivilegeLevel = null,
-    recipientUserIdentity: UserIdentity = null,
-    sharerUserId: Int | Double = null
-  ): AnonDisplayName = {
+  def apply(): AnonDisplayName = {
     val __obj = js.Dynamic.literal()
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (privilege != null) __obj.updateDynamic("privilege")(privilege.asInstanceOf[js.Any])
-    if (recipientUserIdentity != null) __obj.updateDynamic("recipientUserIdentity")(recipientUserIdentity.asInstanceOf[js.Any])
-    if (sharerUserId != null) __obj.updateDynamic("sharerUserId")(sharerUserId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDisplayName]
   }
+  @scala.inline
+  implicit class AnonDisplayNameOps[Self <: AnonDisplayName] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivilege(value: ShareRelationshipPrivilegeLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privilege")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivilege: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privilege")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipientUserIdentity(value: UserIdentity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientUserIdentity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipientUserIdentity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientUserIdentity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSharerUserId(value: UserID): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sharerUserId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSharerUserId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sharerUserId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

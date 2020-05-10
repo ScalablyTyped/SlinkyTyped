@@ -23,10 +23,29 @@ trait SchemaExpirationPolicy extends js.Object {
 
 object SchemaExpirationPolicy {
   @scala.inline
-  def apply(ttl: String = null): SchemaExpirationPolicy = {
+  def apply(): SchemaExpirationPolicy = {
     val __obj = js.Dynamic.literal()
-    if (ttl != null) __obj.updateDynamic("ttl")(ttl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExpirationPolicy]
   }
+  @scala.inline
+  implicit class SchemaExpirationPolicyOps[Self <: SchemaExpirationPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTtl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTtl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -119,66 +119,269 @@ trait ParamsResourcePlacementgroupsList extends StandardParameters {
 
 object ParamsResourcePlacementgroupsList {
   @scala.inline
-  def apply(
-    advertiserIds: js.Array[String] = null,
-    alt: String = null,
-    archived: js.UndefOr[Boolean] = js.undefined,
-    auth: String | OAuth2Client | JWT | Compute | UserRefreshClient = null,
-    campaignIds: js.Array[String] = null,
-    contentCategoryIds: js.Array[String] = null,
-    directorySiteIds: js.Array[String] = null,
-    fields: String = null,
-    ids: js.Array[String] = null,
-    key: String = null,
-    maxEndDate: String = null,
-    maxResults: Int | Double = null,
-    maxStartDate: String = null,
-    minEndDate: String = null,
-    minStartDate: String = null,
-    oauth_token: String = null,
-    pageToken: String = null,
-    placementGroupType: String = null,
-    placementStrategyIds: js.Array[String] = null,
-    prettyPrint: js.UndefOr[Boolean] = js.undefined,
-    pricingTypes: js.Array[String] = null,
-    profileId: String = null,
-    quotaUser: String = null,
-    searchString: String = null,
-    siteIds: js.Array[String] = null,
-    sortField: String = null,
-    sortOrder: String = null,
-    userIp: String = null
-  ): ParamsResourcePlacementgroupsList = {
+  def apply(): ParamsResourcePlacementgroupsList = {
     val __obj = js.Dynamic.literal()
-    if (advertiserIds != null) __obj.updateDynamic("advertiserIds")(advertiserIds.asInstanceOf[js.Any])
-    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
-    if (!js.isUndefined(archived)) __obj.updateDynamic("archived")(archived.asInstanceOf[js.Any])
-    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
-    if (campaignIds != null) __obj.updateDynamic("campaignIds")(campaignIds.asInstanceOf[js.Any])
-    if (contentCategoryIds != null) __obj.updateDynamic("contentCategoryIds")(contentCategoryIds.asInstanceOf[js.Any])
-    if (directorySiteIds != null) __obj.updateDynamic("directorySiteIds")(directorySiteIds.asInstanceOf[js.Any])
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (ids != null) __obj.updateDynamic("ids")(ids.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (maxEndDate != null) __obj.updateDynamic("maxEndDate")(maxEndDate.asInstanceOf[js.Any])
-    if (maxResults != null) __obj.updateDynamic("maxResults")(maxResults.asInstanceOf[js.Any])
-    if (maxStartDate != null) __obj.updateDynamic("maxStartDate")(maxStartDate.asInstanceOf[js.Any])
-    if (minEndDate != null) __obj.updateDynamic("minEndDate")(minEndDate.asInstanceOf[js.Any])
-    if (minStartDate != null) __obj.updateDynamic("minStartDate")(minStartDate.asInstanceOf[js.Any])
-    if (oauth_token != null) __obj.updateDynamic("oauth_token")(oauth_token.asInstanceOf[js.Any])
-    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
-    if (placementGroupType != null) __obj.updateDynamic("placementGroupType")(placementGroupType.asInstanceOf[js.Any])
-    if (placementStrategyIds != null) __obj.updateDynamic("placementStrategyIds")(placementStrategyIds.asInstanceOf[js.Any])
-    if (!js.isUndefined(prettyPrint)) __obj.updateDynamic("prettyPrint")(prettyPrint.asInstanceOf[js.Any])
-    if (pricingTypes != null) __obj.updateDynamic("pricingTypes")(pricingTypes.asInstanceOf[js.Any])
-    if (profileId != null) __obj.updateDynamic("profileId")(profileId.asInstanceOf[js.Any])
-    if (quotaUser != null) __obj.updateDynamic("quotaUser")(quotaUser.asInstanceOf[js.Any])
-    if (searchString != null) __obj.updateDynamic("searchString")(searchString.asInstanceOf[js.Any])
-    if (siteIds != null) __obj.updateDynamic("siteIds")(siteIds.asInstanceOf[js.Any])
-    if (sortField != null) __obj.updateDynamic("sortField")(sortField.asInstanceOf[js.Any])
-    if (sortOrder != null) __obj.updateDynamic("sortOrder")(sortOrder.asInstanceOf[js.Any])
-    if (userIp != null) __obj.updateDynamic("userIp")(userIp.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParamsResourcePlacementgroupsList]
   }
+  @scala.inline
+  implicit class ParamsResourcePlacementgroupsListOps[Self <: ParamsResourcePlacementgroupsList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdvertiserIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdvertiserIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArchived(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("archived")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArchived: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("archived")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCampaignIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("campaignIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCampaignIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("campaignIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentCategoryIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentCategoryIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentCategoryIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentCategoryIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectorySiteIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directorySiteIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectorySiteIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directorySiteIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ids")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ids")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxEndDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxEndDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxEndDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxEndDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxStartDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxStartDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxStartDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxStartDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinEndDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minEndDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinEndDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minEndDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinStartDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minStartDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinStartDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minStartDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacementGroupType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placementGroupType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacementGroupType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placementGroupType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacementStrategyIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placementStrategyIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacementStrategyIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placementStrategyIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPricingTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pricingTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPricingTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pricingTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfileId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profileId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfileId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profileId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSiteIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("siteIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSiteIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("siteIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortOrder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

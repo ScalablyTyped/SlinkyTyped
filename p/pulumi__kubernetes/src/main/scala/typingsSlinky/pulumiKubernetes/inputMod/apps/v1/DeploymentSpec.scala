@@ -10,17 +10,18 @@ import scala.scalajs.js.annotation._
 /**
   * DeploymentSpec is the specification of the desired behavior of the Deployment.
   */
+@js.native
 trait DeploymentSpec extends js.Object {
   /**
     * Minimum number of seconds for which a newly created pod should be ready without any of its
     * container crashing, for it to be considered available. Defaults to 0 (pod will be
     * considered available as soon as it is ready)
     */
-  var minReadySeconds: js.UndefOr[Input[Double]] = js.undefined
+  var minReadySeconds: js.UndefOr[Input[Double]] = js.native
   /**
     * Indicates that the deployment is paused.
     */
-  var paused: js.UndefOr[Input[Boolean]] = js.undefined
+  var paused: js.UndefOr[Input[Boolean]] = js.native
   /**
     * The maximum time in seconds for a deployment to make progress before it is considered to be
     * failed. The deployment controller will continue to process failed deployments and a
@@ -28,52 +29,129 @@ trait DeploymentSpec extends js.Object {
     * Note that progress will not be estimated during the time a deployment is paused. Defaults
     * to 600s.
     */
-  var progressDeadlineSeconds: js.UndefOr[Input[Double]] = js.undefined
+  var progressDeadlineSeconds: js.UndefOr[Input[Double]] = js.native
   /**
     * Number of desired pods. This is a pointer to distinguish between explicit zero and not
     * specified. Defaults to 1.
     */
-  var replicas: js.UndefOr[Input[Double]] = js.undefined
+  var replicas: js.UndefOr[Input[Double]] = js.native
   /**
     * The number of old ReplicaSets to retain to allow rollback. This is a pointer to distinguish
     * between explicit zero and not specified. Defaults to 10.
     */
-  var revisionHistoryLimit: js.UndefOr[Input[Double]] = js.undefined
+  var revisionHistoryLimit: js.UndefOr[Input[Double]] = js.native
   /**
     * Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the
     * ones affected by this deployment. It must match the pod template's labels.
     */
-  var selector: Input[LabelSelector]
+  var selector: Input[LabelSelector] = js.native
   /**
     * The deployment strategy to use to replace existing pods with new ones.
     */
-  var strategy: js.UndefOr[Input[DeploymentStrategy]] = js.undefined
+  var strategy: js.UndefOr[Input[DeploymentStrategy]] = js.native
   /**
     * Template describes the pods that will be created.
     */
-  var template: Input[PodTemplateSpec]
+  var template: Input[PodTemplateSpec] = js.native
 }
 
 object DeploymentSpec {
   @scala.inline
-  def apply(
-    selector: Input[LabelSelector],
-    template: Input[PodTemplateSpec],
-    minReadySeconds: Input[Double] = null,
-    paused: Input[Boolean] = null,
-    progressDeadlineSeconds: Input[Double] = null,
-    replicas: Input[Double] = null,
-    revisionHistoryLimit: Input[Double] = null,
-    strategy: Input[DeploymentStrategy] = null
-  ): DeploymentSpec = {
+  def apply(selector: Input[LabelSelector], template: Input[PodTemplateSpec]): DeploymentSpec = {
     val __obj = js.Dynamic.literal(selector = selector.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any])
-    if (minReadySeconds != null) __obj.updateDynamic("minReadySeconds")(minReadySeconds.asInstanceOf[js.Any])
-    if (paused != null) __obj.updateDynamic("paused")(paused.asInstanceOf[js.Any])
-    if (progressDeadlineSeconds != null) __obj.updateDynamic("progressDeadlineSeconds")(progressDeadlineSeconds.asInstanceOf[js.Any])
-    if (replicas != null) __obj.updateDynamic("replicas")(replicas.asInstanceOf[js.Any])
-    if (revisionHistoryLimit != null) __obj.updateDynamic("revisionHistoryLimit")(revisionHistoryLimit.asInstanceOf[js.Any])
-    if (strategy != null) __obj.updateDynamic("strategy")(strategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentSpec]
   }
+  @scala.inline
+  implicit class DeploymentSpecOps[Self <: DeploymentSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSelector(value: Input[LabelSelector]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemplate(value: Input[PodTemplateSpec]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinReadySeconds(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minReadySeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinReadySeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minReadySeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaused(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaused: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressDeadlineSeconds(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressDeadlineSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressDeadlineSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressDeadlineSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicas(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicas: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicas")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionHistoryLimit(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionHistoryLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionHistoryLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionHistoryLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrategy(value: Input[DeploymentStrategy]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strategy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

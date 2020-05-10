@@ -17,20 +17,18 @@ trait IPv6Scope extends js.Object
 
 object IPv6Scope {
   @scala.inline
-  def `Admin local`: typingsSlinky.ipAddress.ipAddressStrings.`Admin local` = this.cast("Admin local")
+  def `Admin local`: typingsSlinky.ipAddress.ipAddressStrings.`Admin local` = ("Admin local").asInstanceOf[typingsSlinky.ipAddress.ipAddressStrings.`Admin local`]
   @scala.inline
-  def Global: typingsSlinky.ipAddress.ipAddressStrings.Global = this.cast("Global")
+  def Global: typingsSlinky.ipAddress.ipAddressStrings.Global = "Global".asInstanceOf[typingsSlinky.ipAddress.ipAddressStrings.Global]
   @scala.inline
-  def `Interface local`: typingsSlinky.ipAddress.ipAddressStrings.`Interface local` = this.cast("Interface local")
+  def `Interface local`: typingsSlinky.ipAddress.ipAddressStrings.`Interface local` = ("Interface local").asInstanceOf[typingsSlinky.ipAddress.ipAddressStrings.`Interface local`]
   @scala.inline
-  def `Link local`: typingsSlinky.ipAddress.ipAddressStrings.`Link local` = this.cast("Link local")
+  def `Link local`: typingsSlinky.ipAddress.ipAddressStrings.`Link local` = ("Link local").asInstanceOf[typingsSlinky.ipAddress.ipAddressStrings.`Link local`]
   @scala.inline
-  def `Organization local`: typingsSlinky.ipAddress.ipAddressStrings.`Organization local` = this.cast("Organization local")
+  def `Organization local`: typingsSlinky.ipAddress.ipAddressStrings.`Organization local` = ("Organization local").asInstanceOf[typingsSlinky.ipAddress.ipAddressStrings.`Organization local`]
   @scala.inline
-  def Reserved: typingsSlinky.ipAddress.ipAddressStrings.Reserved = this.cast("Reserved")
+  def Reserved: typingsSlinky.ipAddress.ipAddressStrings.Reserved = "Reserved".asInstanceOf[typingsSlinky.ipAddress.ipAddressStrings.Reserved]
   @scala.inline
-  def `Site local`: typingsSlinky.ipAddress.ipAddressStrings.`Site local` = this.cast("Site local")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `Site local`: typingsSlinky.ipAddress.ipAddressStrings.`Site local` = ("Site local").asInstanceOf[typingsSlinky.ipAddress.ipAddressStrings.`Site local`]
 }
 

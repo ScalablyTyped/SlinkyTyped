@@ -18,11 +18,41 @@ trait GetAssociatedIpv6PoolCidrsResult extends js.Object {
 
 object GetAssociatedIpv6PoolCidrsResult {
   @scala.inline
-  def apply(Ipv6CidrAssociations: Ipv6CidrAssociationSet = null, NextToken: String = null): GetAssociatedIpv6PoolCidrsResult = {
+  def apply(): GetAssociatedIpv6PoolCidrsResult = {
     val __obj = js.Dynamic.literal()
-    if (Ipv6CidrAssociations != null) __obj.updateDynamic("Ipv6CidrAssociations")(Ipv6CidrAssociations.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAssociatedIpv6PoolCidrsResult]
   }
+  @scala.inline
+  implicit class GetAssociatedIpv6PoolCidrsResultOps[Self <: GetAssociatedIpv6PoolCidrsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIpv6CidrAssociations(value: Ipv6CidrAssociationSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6CidrAssociations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6CidrAssociations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6CidrAssociations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

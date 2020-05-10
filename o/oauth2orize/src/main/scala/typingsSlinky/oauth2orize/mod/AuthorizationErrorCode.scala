@@ -16,18 +16,16 @@ trait AuthorizationErrorCode extends js.Object
 
 object AuthorizationErrorCode {
   @scala.inline
-  def access_denied: typingsSlinky.oauth2orize.oauth2orizeStrings.access_denied = this.cast("access_denied")
+  def access_denied: typingsSlinky.oauth2orize.oauth2orizeStrings.access_denied = "access_denied".asInstanceOf[typingsSlinky.oauth2orize.oauth2orizeStrings.access_denied]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def invalid_request: typingsSlinky.oauth2orize.oauth2orizeStrings.invalid_request = "invalid_request".asInstanceOf[typingsSlinky.oauth2orize.oauth2orizeStrings.invalid_request]
   @scala.inline
-  def invalid_request: typingsSlinky.oauth2orize.oauth2orizeStrings.invalid_request = this.cast("invalid_request")
+  def invalid_scope: typingsSlinky.oauth2orize.oauth2orizeStrings.invalid_scope = "invalid_scope".asInstanceOf[typingsSlinky.oauth2orize.oauth2orizeStrings.invalid_scope]
   @scala.inline
-  def invalid_scope: typingsSlinky.oauth2orize.oauth2orizeStrings.invalid_scope = this.cast("invalid_scope")
+  def temporarily_unavailable: typingsSlinky.oauth2orize.oauth2orizeStrings.temporarily_unavailable = "temporarily_unavailable".asInstanceOf[typingsSlinky.oauth2orize.oauth2orizeStrings.temporarily_unavailable]
   @scala.inline
-  def temporarily_unavailable: typingsSlinky.oauth2orize.oauth2orizeStrings.temporarily_unavailable = this.cast("temporarily_unavailable")
+  def unauthorized_client: typingsSlinky.oauth2orize.oauth2orizeStrings.unauthorized_client = "unauthorized_client".asInstanceOf[typingsSlinky.oauth2orize.oauth2orizeStrings.unauthorized_client]
   @scala.inline
-  def unauthorized_client: typingsSlinky.oauth2orize.oauth2orizeStrings.unauthorized_client = this.cast("unauthorized_client")
-  @scala.inline
-  def unsupported_response_type: typingsSlinky.oauth2orize.oauth2orizeStrings.unsupported_response_type = this.cast("unsupported_response_type")
+  def unsupported_response_type: typingsSlinky.oauth2orize.oauth2orizeStrings.unsupported_response_type = "unsupported_response_type".asInstanceOf[typingsSlinky.oauth2orize.oauth2orizeStrings.unsupported_response_type]
 }
 

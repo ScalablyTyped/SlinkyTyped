@@ -25,11 +25,41 @@ trait SchemaGoogleDevtoolsRemoteworkersV1test2CommandOverhead extends js.Object 
 
 object SchemaGoogleDevtoolsRemoteworkersV1test2CommandOverhead {
   @scala.inline
-  def apply(duration: String = null, overhead: String = null): SchemaGoogleDevtoolsRemoteworkersV1test2CommandOverhead = {
+  def apply(): SchemaGoogleDevtoolsRemoteworkersV1test2CommandOverhead = {
     val __obj = js.Dynamic.literal()
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (overhead != null) __obj.updateDynamic("overhead")(overhead.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemoteworkersV1test2CommandOverhead]
   }
+  @scala.inline
+  implicit class SchemaGoogleDevtoolsRemoteworkersV1test2CommandOverheadOps[Self <: SchemaGoogleDevtoolsRemoteworkersV1test2CommandOverhead] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverhead(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overhead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverhead: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overhead")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

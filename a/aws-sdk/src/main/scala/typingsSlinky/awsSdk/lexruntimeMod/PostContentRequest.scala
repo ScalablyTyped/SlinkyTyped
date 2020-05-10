@@ -47,16 +47,90 @@ object PostContentRequest {
     botName: BotName,
     contentType: HttpContentType,
     inputStream: BlobStream,
-    userId: UserId,
-    accept: Accept = null,
-    requestAttributes: AttributesString = null,
-    sessionAttributes: AttributesString = null
+    userId: UserId
   ): PostContentRequest = {
     val __obj = js.Dynamic.literal(botAlias = botAlias.asInstanceOf[js.Any], botName = botName.asInstanceOf[js.Any], contentType = contentType.asInstanceOf[js.Any], inputStream = inputStream.asInstanceOf[js.Any], userId = userId.asInstanceOf[js.Any])
-    if (accept != null) __obj.updateDynamic("accept")(accept.asInstanceOf[js.Any])
-    if (requestAttributes != null) __obj.updateDynamic("requestAttributes")(requestAttributes.asInstanceOf[js.Any])
-    if (sessionAttributes != null) __obj.updateDynamic("sessionAttributes")(sessionAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[PostContentRequest]
   }
+  @scala.inline
+  implicit class PostContentRequestOps[Self <: PostContentRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBotAlias(value: BotAlias): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("botAlias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBotName(value: BotName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("botName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentType(value: HttpContentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputStreamUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputStream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputStream(value: BlobStream): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputStream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserId(value: UserId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccept(value: Accept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccept: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestAttributes(value: AttributesString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionAttributes(value: AttributesString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionAttributes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

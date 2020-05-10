@@ -10,11 +10,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IConvertFromHTMLConfig extends js.Object {
   // Block styles:
   var htmlToBlock: js.UndefOr[
     js.Function2[/* nodeName */ String, /* node */ HTMLElement, DraftBlockType | AnonData | `false`]
-  ] = js.undefined
+  ] = js.native
   // Html entities
   var htmlToEntity: js.UndefOr[
     js.Function6[
@@ -29,11 +30,11 @@ trait IConvertFromHTMLConfig extends js.Object {
       /* replaceEntityData */ js.Function2[/* key */ String, /* data */ js.Object, Unit], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   // Inline styles:
   var htmlToStyle: js.UndefOr[
     js.Function2[/* nodeName */ String, /* node */ HTMLElement, DraftInlineStyleType]
-  ] = js.undefined
+  ] = js.native
   // Text entities
   var textToEntity: js.UndefOr[
     js.Function5[
@@ -47,29 +48,80 @@ trait IConvertFromHTMLConfig extends js.Object {
       /* replaceEntityData */ js.Function2[/* key */ String, /* data */ js.Object, Unit], 
       js.Array[AnonEntity]
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object IConvertFromHTMLConfig {
   @scala.inline
-  def apply(
-    htmlToBlock: (/* nodeName */ String, /* node */ HTMLElement) => DraftBlockType | AnonData | `false` = null,
-    htmlToEntity: (/* nodeName */ String, /* node */ HTMLElement, /* createEntity */ js.Function3[/* type */ String, /* mutability */ String, /* data */ js.Object, EntityKey], /* getEntity */ js.Function1[
-      /* key */ EntityKey, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Entity */ _
-    ], /* mergeEntityData */ js.Function2[/* key */ String, /* data */ js.Object, Unit], /* replaceEntityData */ js.Function2[/* key */ String, /* data */ js.Object, Unit]) => Unit = null,
-    htmlToStyle: (/* nodeName */ String, /* node */ HTMLElement) => DraftInlineStyleType = null,
-    textToEntity: (/* text */ String, /* createEntity */ js.Function3[/* type */ String, /* mutability */ String, /* data */ js.Object, EntityKey], /* getEntity */ js.Function1[
-      /* key */ EntityKey, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Entity */ _
-    ], /* mergeEntityData */ js.Function2[/* key */ String, /* data */ js.Object, Unit], /* replaceEntityData */ js.Function2[/* key */ String, /* data */ js.Object, Unit]) => js.Array[AnonEntity] = null
-  ): IConvertFromHTMLConfig = {
+  def apply(): IConvertFromHTMLConfig = {
     val __obj = js.Dynamic.literal()
-    if (htmlToBlock != null) __obj.updateDynamic("htmlToBlock")(js.Any.fromFunction2(htmlToBlock))
-    if (htmlToEntity != null) __obj.updateDynamic("htmlToEntity")(js.Any.fromFunction6(htmlToEntity))
-    if (htmlToStyle != null) __obj.updateDynamic("htmlToStyle")(js.Any.fromFunction2(htmlToStyle))
-    if (textToEntity != null) __obj.updateDynamic("textToEntity")(js.Any.fromFunction5(textToEntity))
     __obj.asInstanceOf[IConvertFromHTMLConfig]
   }
+  @scala.inline
+  implicit class IConvertFromHTMLConfigOps[Self <: IConvertFromHTMLConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHtmlToBlock(value: (/* nodeName */ String, /* node */ HTMLElement) => DraftBlockType | AnonData | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlToBlock")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutHtmlToBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlToBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtmlToEntity(
+      value: (/* nodeName */ String, /* node */ HTMLElement, /* createEntity */ js.Function3[/* type */ String, /* mutability */ String, /* data */ js.Object, EntityKey], /* getEntity */ js.Function1[
+          /* key */ EntityKey, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Entity */ _
+        ], /* mergeEntityData */ js.Function2[/* key */ String, /* data */ js.Object, Unit], /* replaceEntityData */ js.Function2[/* key */ String, /* data */ js.Object, Unit]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlToEntity")(js.Any.fromFunction6(value))
+        ret
+    }
+    @scala.inline
+    def withoutHtmlToEntity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlToEntity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtmlToStyle(value: (/* nodeName */ String, /* node */ HTMLElement) => DraftInlineStyleType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlToStyle")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutHtmlToStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlToStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextToEntity(
+      value: (/* text */ String, /* createEntity */ js.Function3[/* type */ String, /* mutability */ String, /* data */ js.Object, EntityKey], /* getEntity */ js.Function1[
+          /* key */ EntityKey, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Entity */ _
+        ], /* mergeEntityData */ js.Function2[/* key */ String, /* data */ js.Object, Unit], /* replaceEntityData */ js.Function2[/* key */ String, /* data */ js.Object, Unit]) => js.Array[AnonEntity]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textToEntity")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutTextToEntity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textToEntity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

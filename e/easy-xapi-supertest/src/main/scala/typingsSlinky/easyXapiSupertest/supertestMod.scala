@@ -2,7 +2,6 @@ package typingsSlinky.easyXapiSupertest
 
 import typingsSlinky.easyXapiSupertest.superagentMod.Request
 import typingsSlinky.easyXapiSupertest.superagentMod.SuperAgent
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,13 +16,13 @@ object supertestMod extends js.Object {
     def expect(body: String, callback: CallbackHandler): Test = js.native
     def expect(body: js.Object): Test = js.native
     def expect(body: js.Object, callback: CallbackHandler): Test = js.native
-    def expect(body: RegExp): Test = js.native
-    def expect(body: RegExp, callback: CallbackHandler): Test = js.native
+    def expect(body: js.RegExp): Test = js.native
+    def expect(body: js.RegExp, callback: CallbackHandler): Test = js.native
     def expect(checker: js.Function1[/* res */ Response, _]): Test = js.native
     def expect(field: String, `val`: String): Test = js.native
     def expect(field: String, `val`: String, callback: CallbackHandler): Test = js.native
-    def expect(field: String, `val`: RegExp): Test = js.native
-    def expect(field: String, `val`: RegExp, callback: CallbackHandler): Test = js.native
+    def expect(field: String, `val`: js.RegExp): Test = js.native
+    def expect(field: String, `val`: js.RegExp, callback: CallbackHandler): Test = js.native
     def expect(status: Double): Test = js.native
     def expect(status: Double, body: String): Test = js.native
     def expect(status: Double, body: String, callback: CallbackHandler): Test = js.native

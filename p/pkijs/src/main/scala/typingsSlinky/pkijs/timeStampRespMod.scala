@@ -21,8 +21,8 @@ object timeStampRespMod extends js.Object {
       * @param {string} [hashAlgorithm] Hashing algorithm. Default SHA-1
       * @returns {Promise}
       */
-    def sign(privateKey: CryptoKey): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def sign(privateKey: CryptoKey, hashAlgorithm: String): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+    def sign(privateKey: CryptoKey): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def sign(privateKey: CryptoKey, hashAlgorithm: String): js.Thenable[js.typedarray.ArrayBuffer] = js.native
     def toJSON(): js.Any = js.native
     def toSchema(): js.Any = js.native
     /**

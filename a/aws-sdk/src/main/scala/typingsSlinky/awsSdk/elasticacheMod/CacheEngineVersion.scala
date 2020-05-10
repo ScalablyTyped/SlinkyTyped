@@ -30,20 +30,77 @@ trait CacheEngineVersion extends js.Object {
 
 object CacheEngineVersion {
   @scala.inline
-  def apply(
-    CacheEngineDescription: String = null,
-    CacheEngineVersionDescription: String = null,
-    CacheParameterGroupFamily: String = null,
-    Engine: String = null,
-    EngineVersion: String = null
-  ): CacheEngineVersion = {
+  def apply(): CacheEngineVersion = {
     val __obj = js.Dynamic.literal()
-    if (CacheEngineDescription != null) __obj.updateDynamic("CacheEngineDescription")(CacheEngineDescription.asInstanceOf[js.Any])
-    if (CacheEngineVersionDescription != null) __obj.updateDynamic("CacheEngineVersionDescription")(CacheEngineVersionDescription.asInstanceOf[js.Any])
-    if (CacheParameterGroupFamily != null) __obj.updateDynamic("CacheParameterGroupFamily")(CacheParameterGroupFamily.asInstanceOf[js.Any])
-    if (Engine != null) __obj.updateDynamic("Engine")(Engine.asInstanceOf[js.Any])
-    if (EngineVersion != null) __obj.updateDynamic("EngineVersion")(EngineVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[CacheEngineVersion]
   }
+  @scala.inline
+  implicit class CacheEngineVersionOps[Self <: CacheEngineVersion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCacheEngineDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheEngineDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheEngineDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheEngineDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheEngineVersionDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheEngineVersionDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheEngineVersionDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheEngineVersionDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheParameterGroupFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheParameterGroupFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheParameterGroupFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheParameterGroupFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEngine(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEngineVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngineVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

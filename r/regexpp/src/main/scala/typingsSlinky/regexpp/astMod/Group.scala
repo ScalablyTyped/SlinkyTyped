@@ -4,15 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Group
   extends BranchNode
      with NodeBase
      with QuantifiableElement {
-  var alternatives: js.Array[Alternative]
+  var alternatives: js.Array[Alternative] = js.native
   @JSName("parent")
-  var parent_Group: Alternative | Quantifier
+  var parent_Group: Alternative | Quantifier = js.native
   @JSName("type")
-  var type_Group: typingsSlinky.regexpp.regexppStrings.Group
+  var type_Group: typingsSlinky.regexpp.regexppStrings.Group = js.native
 }
 
 object Group {
@@ -29,5 +30,31 @@ object Group {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Group]
   }
+  @scala.inline
+  implicit class GroupOps[Self <: Group] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlternatives(value: js.Array[Alternative]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alternatives")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParent(value: Alternative | Quantifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: typingsSlinky.regexpp.regexppStrings.Group): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

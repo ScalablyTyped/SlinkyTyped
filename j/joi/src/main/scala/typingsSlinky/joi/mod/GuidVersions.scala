@@ -15,16 +15,14 @@ trait GuidVersions extends js.Object
 
 object GuidVersions {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def uuidv1: typingsSlinky.joi.joiStrings.uuidv1 = "uuidv1".asInstanceOf[typingsSlinky.joi.joiStrings.uuidv1]
   @scala.inline
-  def uuidv1: typingsSlinky.joi.joiStrings.uuidv1 = this.cast("uuidv1")
+  def uuidv2: typingsSlinky.joi.joiStrings.uuidv2 = "uuidv2".asInstanceOf[typingsSlinky.joi.joiStrings.uuidv2]
   @scala.inline
-  def uuidv2: typingsSlinky.joi.joiStrings.uuidv2 = this.cast("uuidv2")
+  def uuidv3: typingsSlinky.joi.joiStrings.uuidv3 = "uuidv3".asInstanceOf[typingsSlinky.joi.joiStrings.uuidv3]
   @scala.inline
-  def uuidv3: typingsSlinky.joi.joiStrings.uuidv3 = this.cast("uuidv3")
+  def uuidv4: typingsSlinky.joi.joiStrings.uuidv4 = "uuidv4".asInstanceOf[typingsSlinky.joi.joiStrings.uuidv4]
   @scala.inline
-  def uuidv4: typingsSlinky.joi.joiStrings.uuidv4 = this.cast("uuidv4")
-  @scala.inline
-  def uuidv5: typingsSlinky.joi.joiStrings.uuidv5 = this.cast("uuidv5")
+  def uuidv5: typingsSlinky.joi.joiStrings.uuidv5 = "uuidv5".asInstanceOf[typingsSlinky.joi.joiStrings.uuidv5]
 }
 

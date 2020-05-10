@@ -1,6 +1,5 @@
 package typingsSlinky.amcharts
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -639,7 +638,7 @@ object amGraphMod extends js.Object {
       * This function should return a string which will be displayed in a balloon.
       */
     def balloonFunction(graphDataItem: typingsSlinky.amcharts.graphDataItemMod.default, amGraph: AmGraph): String = js.native
-    def labelFunction(valueText: String, data: Date, valueAxis: typingsSlinky.amcharts.valueAxisMod.default): String = js.native
+    def labelFunction(valueText: String, data: js.Date, valueAxis: typingsSlinky.amcharts.valueAxisMod.default): String = js.native
     /**
       * You can use it to format labels of data items in any way you want.
       * Graph will call this function and pass reference to GraphDataItem and formatted text as attributes.

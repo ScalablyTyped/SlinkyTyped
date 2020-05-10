@@ -22,16 +22,53 @@ trait StartLambdaFunctionFailedEventAttributes extends js.Object {
 
 object StartLambdaFunctionFailedEventAttributes {
   @scala.inline
-  def apply(
-    cause: StartLambdaFunctionFailedCause = null,
-    message: CauseMessage = null,
-    scheduledEventId: Int | Double = null
-  ): StartLambdaFunctionFailedEventAttributes = {
+  def apply(): StartLambdaFunctionFailedEventAttributes = {
     val __obj = js.Dynamic.literal()
-    if (cause != null) __obj.updateDynamic("cause")(cause.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (scheduledEventId != null) __obj.updateDynamic("scheduledEventId")(scheduledEventId.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartLambdaFunctionFailedEventAttributes]
   }
+  @scala.inline
+  implicit class StartLambdaFunctionFailedEventAttributesOps[Self <: StartLambdaFunctionFailedEventAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCause(value: StartLambdaFunctionFailedCause): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cause")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCause: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cause")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: CauseMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduledEventId(value: EventId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduledEventId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledEventId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,47 +1,47 @@
 package typingsSlinky.reactCoinhive.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactCoinhive.mod.CoinHiveProps
 import typingsSlinky.reactCoinhive.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactCoinhive
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactCoinhive {
   @JSImport("react-coinhive", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: src */
-  def apply(
-    siteKey: String,
-    autoThreads: js.UndefOr[Boolean] = js.undefined,
-    onInit: /* callback */ js.Any => Unit = null,
-    onStart: /* callback */ js.Any => Unit = null,
-    onStop: /* callback */ js.Any => Unit = null,
-    run: js.UndefOr[Boolean] = js.undefined,
-    threads: Int | Double = null,
-    throttle: Int | Double = null,
-    userName: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(siteKey = siteKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoThreads)) __obj.updateDynamic("autoThreads")(autoThreads.asInstanceOf[js.Any])
-    if (onInit != null) __obj.updateDynamic("onInit")(js.Any.fromFunction1(onInit))
-    if (onStart != null) __obj.updateDynamic("onStart")(js.Any.fromFunction1(onStart))
-    if (onStop != null) __obj.updateDynamic("onStop")(js.Any.fromFunction1(onStop))
-    if (!js.isUndefined(run)) __obj.updateDynamic("run")(run.asInstanceOf[js.Any])
-    if (threads != null) __obj.updateDynamic("threads")(threads.asInstanceOf[js.Any])
-    if (throttle != null) __obj.updateDynamic("throttle")(throttle.asInstanceOf[js.Any])
-    if (userName != null) __obj.updateDynamic("userName")(userName.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def autoThreads(value: Boolean): this.type = set("autoThreads", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onInit(value: /* callback */ js.Any => Unit): this.type = set("onInit", js.Any.fromFunction1(value))
+    @scala.inline
+    def onStart(value: /* callback */ js.Any => Unit): this.type = set("onStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onStop(value: /* callback */ js.Any => Unit): this.type = set("onStop", js.Any.fromFunction1(value))
+    @scala.inline
+    def run(value: Boolean): this.type = set("run", value.asInstanceOf[js.Any])
+    @scala.inline
+    def src(value: String): this.type = set("src", value.asInstanceOf[js.Any])
+    @scala.inline
+    def threads(value: Double): this.type = set("threads", value.asInstanceOf[js.Any])
+    @scala.inline
+    def throttle(value: Double): this.type = set("throttle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def userName(value: String): this.type = set("userName", value.asInstanceOf[js.Any])
   }
-  type Props = CoinHiveProps
+  
+  def withProps(p: CoinHiveProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(siteKey: String): Builder = {
+    val __props = js.Dynamic.literal(siteKey = siteKey.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CoinHiveProps]))
+  }
 }
 

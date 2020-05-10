@@ -12,10 +12,8 @@ trait LegendLayoutType extends js.Object
 
 object LegendLayoutType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def horizontal: typingsSlinky.bizcharts.bizchartsStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.bizcharts.bizchartsStrings.horizontal = this.cast("horizontal")
-  @scala.inline
-  def vertical: typingsSlinky.bizcharts.bizchartsStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.bizcharts.bizchartsStrings.vertical = "vertical".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.vertical]
 }
 

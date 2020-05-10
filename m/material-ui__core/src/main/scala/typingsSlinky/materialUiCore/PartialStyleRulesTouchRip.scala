@@ -19,24 +19,101 @@ trait PartialStyleRulesTouchRip extends js.Object {
 
 object PartialStyleRulesTouchRip {
   @scala.inline
-  def apply(
-    child: CSSProperties = null,
-    childLeaving: CSSProperties = null,
-    childPulsate: CSSProperties = null,
-    ripple: CSSProperties = null,
-    ripplePulsate: CSSProperties = null,
-    rippleVisible: CSSProperties = null,
-    root: CSSProperties = null
-  ): PartialStyleRulesTouchRip = {
+  def apply(): PartialStyleRulesTouchRip = {
     val __obj = js.Dynamic.literal()
-    if (child != null) __obj.updateDynamic("child")(child.asInstanceOf[js.Any])
-    if (childLeaving != null) __obj.updateDynamic("childLeaving")(childLeaving.asInstanceOf[js.Any])
-    if (childPulsate != null) __obj.updateDynamic("childPulsate")(childPulsate.asInstanceOf[js.Any])
-    if (ripple != null) __obj.updateDynamic("ripple")(ripple.asInstanceOf[js.Any])
-    if (ripplePulsate != null) __obj.updateDynamic("ripplePulsate")(ripplePulsate.asInstanceOf[js.Any])
-    if (rippleVisible != null) __obj.updateDynamic("rippleVisible")(rippleVisible.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialStyleRulesTouchRip]
   }
+  @scala.inline
+  implicit class PartialStyleRulesTouchRipOps[Self <: PartialStyleRulesTouchRip] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChild(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("child")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("child")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildLeaving(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childLeaving")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildLeaving: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childLeaving")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildPulsate(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childPulsate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildPulsate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childPulsate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRipple(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ripple")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRipple: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ripple")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRipplePulsate(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ripplePulsate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRipplePulsate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ripplePulsate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRippleVisible(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rippleVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRippleVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rippleVisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

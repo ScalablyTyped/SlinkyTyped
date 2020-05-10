@@ -13,11 +13,8 @@ class default protected () extends Triangulation {
     targetProj: typingsSlinky.ol.projectionMod.default,
     targetExtent: Extent,
     maxSourceExtent: Extent,
-    errorThreshold: Double
+    errorThreshold: Double,
+    opt_destinationResolution: Double
   ) = this()
-  /* CompleteClass */
-  override def calculateSourceExtent(): Extent = js.native
-  /* CompleteClass */
-  override def getTriangles(): js.Array[Triangle] = js.native
 }
 

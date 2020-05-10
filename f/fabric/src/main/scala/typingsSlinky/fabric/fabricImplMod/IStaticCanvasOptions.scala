@@ -6,18 +6,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IStaticCanvasOptions extends js.Object {
   /**
   	 * Indicates whether the browser can be scrolled when using a touchscreen and dragging on the canvas
   	 * @type Boolean
   	 */
-  var allowTouchScrolling: js.UndefOr[Boolean] = js.undefined
+  var allowTouchScrolling: js.UndefOr[Boolean] = js.native
   /**
   	 * Background color of canvas instance.
   	 * Should be set via {@link fabric.StaticCanvas#setBackgroundColor}.
   	 * @type {(String|fabric.Pattern)}
   	 */
-  var backgroundColor: js.UndefOr[String | Pattern] = js.undefined
+  var backgroundColor: js.UndefOr[String | Pattern] = js.native
   /**
   	 * Background image of canvas instance.
   	 * Should be set via {@link fabric.StaticCanvas#setBackgroundImage}.
@@ -29,13 +30,13 @@ trait IStaticCanvasOptions extends js.Object {
   	 * vale. As an alternative you can disable image objectCaching
   	 * @type fabric.Image
   	 */
-  var backgroundImage: js.UndefOr[Image | String] = js.undefined
+  var backgroundImage: js.UndefOr[Image | String] = js.native
   /**
   	 * if set to false background image is not affected by viewport transform
   	 * @since 1.6.3
   	 * @type Boolean
   	 */
-  var backgroundVpt: js.UndefOr[Boolean] = js.undefined
+  var backgroundVpt: js.UndefOr[Boolean] = js.native
   /**
   	 * a fabricObject that, without stroke define a clipping area with their shape. filled in black
   	 * the clipPath object gets used when the canvas has rendered, and the context is placed in the
@@ -43,7 +44,7 @@ trait IStaticCanvasOptions extends js.Object {
   	 * clipPath will clip away controls, if you do not want this to happen use controlsAboveOverlay = true
   	 * @type fabric.Object
   	 */
-  var clipPath: js.UndefOr[Object] = js.undefined
+  var clipPath: js.UndefOr[Object] = js.native
   /**
   	 * Function that determines clipping of entire canvas area
   	 * Being passed context as first argument.
@@ -53,34 +54,34 @@ trait IStaticCanvasOptions extends js.Object {
   	 * @deprecated since 2.0.0
   	 * @type Function
   	 */
-  var clipTo: js.UndefOr[js.Function1[/* context */ CanvasRenderingContext2D, Unit]] = js.undefined
+  var clipTo: js.UndefOr[js.Function1[/* context */ CanvasRenderingContext2D, Unit]] = js.native
   /**
   	 * Indicates whether object controls (borders/controls) are rendered above overlay image
   	 * @type Boolean
   	 */
-  var controlsAboveOverlay: js.UndefOr[Boolean] = js.undefined
+  var controlsAboveOverlay: js.UndefOr[Boolean] = js.native
   /**
   	 * When true, canvas is scaled by devicePixelRatio for better rendering on retina screens
   	 * @type Boolean
   	 */
-  var enableRetinaScaling: js.UndefOr[Boolean] = js.undefined
+  var enableRetinaScaling: js.UndefOr[Boolean] = js.native
   /**
   	 * Indicates whether this canvas will use image smoothing, this is on by default in browsers
   	 */
-  var imageSmoothingEnabled: js.UndefOr[Boolean] = js.undefined
+  var imageSmoothingEnabled: js.UndefOr[Boolean] = js.native
   /**
   	 * Indicates whether toObject/toDatalessObject should include default values
   	 * if set to false, takes precedence over the object value.
   	 * @type Boolean
   	 */
-  var includeDefaultValues: js.UndefOr[Boolean] = js.undefined
+  var includeDefaultValues: js.UndefOr[Boolean] = js.native
   /**
   	 * Overlay color of canvas instance.
   	 * Should be set via {@link fabric.StaticCanvas#setOverlayColor}
   	 * @since 1.3.9
   	 * @type {(String|fabric.Pattern)}
   	 */
-  var overlayColor: js.UndefOr[String | Pattern] = js.undefined
+  var overlayColor: js.UndefOr[String | Pattern] = js.native
   /**
   	 * Overlay image of canvas instance.
   	 * Should be set via {@link fabric.StaticCanvas#setOverlayImage}.
@@ -92,13 +93,13 @@ trait IStaticCanvasOptions extends js.Object {
   	 * vale. As an alternative you can disable image objectCaching
   	 * @type fabric.Image
   	 */
-  var overlayImage: js.UndefOr[Image] = js.undefined
+  var overlayImage: js.UndefOr[Image] = js.native
   /**
   	 * if set to false overlay image is not affected by viewport transform
   	 * @since 1.6.3
   	 * @type Boolean
   	 */
-  var overlayVpt: js.UndefOr[Boolean] = js.undefined
+  var overlayVpt: js.UndefOr[Boolean] = js.native
   /**
   	 * Indicates whether {@link fabric.Collection.add}, {@link fabric.Collection.insertAt} and {@link fabric.Collection.remove},
   	 * {@link fabric.StaticCanvas.moveTo}, {@link fabric.StaticCanvas.clear} and many more, should also re-render canvas.
@@ -108,7 +109,7 @@ trait IStaticCanvasOptions extends js.Object {
   	 * Left default to true to do not break documentation and old app, fiddles.
   	 * @type Boolean
   	 */
-  var renderOnAddRemove: js.UndefOr[Boolean] = js.undefined
+  var renderOnAddRemove: js.UndefOr[Boolean] = js.native
   /**
   	 * Based on vptCoords and object.aCoords, skip rendering of objects that
   	 * are not included in current viewport.
@@ -118,22 +119,22 @@ trait IStaticCanvasOptions extends js.Object {
   	 * @memberOf fabric.StaticCanvas.prototype
   	 * @type Boolean
   	 */
-  var skipOffscreen: js.UndefOr[Boolean] = js.undefined
+  var skipOffscreen: js.UndefOr[Boolean] = js.native
   /**
   	 * Indicates whether objects' state should be saved
   	 * @type Boolean
   	 */
-  var stateful: js.UndefOr[Boolean] = js.undefined
+  var stateful: js.UndefOr[Boolean] = js.native
   /**
   	 * When true, getSvgTransform() will apply the StaticCanvas.viewportTransform to the SVG transformation. When true,
   	 * a zoomed canvas will then produce zoomed SVG output.
   	 * @type Boolean
   	 */
-  var svgViewportTransformation: js.UndefOr[Boolean] = js.undefined
+  var svgViewportTransformation: js.UndefOr[Boolean] = js.native
   /**
   	 * The transformation (in the format of Canvas transform) which focuses the viewport
   	 */
-  var viewportTransform: js.UndefOr[js.Array[Double]] = js.undefined
+  var viewportTransform: js.UndefOr[js.Array[Double]] = js.native
   /**
   	 * Describe canvas element extension over design
   	 * properties are tl,tr,bl,br.
@@ -143,53 +144,250 @@ trait IStaticCanvasOptions extends js.Object {
   	 * The coordinates get updated with @method calcViewportBoundaries.
   	 * @memberOf fabric.StaticCanvas.prototype
   	 */
-  var vptCoords: js.UndefOr[AnonTl] = js.undefined
+  var vptCoords: js.UndefOr[AnonTl] = js.native
 }
 
 object IStaticCanvasOptions {
   @scala.inline
-  def apply(
-    allowTouchScrolling: js.UndefOr[Boolean] = js.undefined,
-    backgroundColor: String | Pattern = null,
-    backgroundImage: Image | String = null,
-    backgroundVpt: js.UndefOr[Boolean] = js.undefined,
-    clipPath: Object = null,
-    clipTo: /* context */ CanvasRenderingContext2D => Unit = null,
-    controlsAboveOverlay: js.UndefOr[Boolean] = js.undefined,
-    enableRetinaScaling: js.UndefOr[Boolean] = js.undefined,
-    imageSmoothingEnabled: js.UndefOr[Boolean] = js.undefined,
-    includeDefaultValues: js.UndefOr[Boolean] = js.undefined,
-    overlayColor: String | Pattern = null,
-    overlayImage: Image = null,
-    overlayVpt: js.UndefOr[Boolean] = js.undefined,
-    renderOnAddRemove: js.UndefOr[Boolean] = js.undefined,
-    skipOffscreen: js.UndefOr[Boolean] = js.undefined,
-    stateful: js.UndefOr[Boolean] = js.undefined,
-    svgViewportTransformation: js.UndefOr[Boolean] = js.undefined,
-    viewportTransform: js.Array[Double] = null,
-    vptCoords: AnonTl = null
-  ): IStaticCanvasOptions = {
+  def apply(): IStaticCanvasOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowTouchScrolling)) __obj.updateDynamic("allowTouchScrolling")(allowTouchScrolling.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (backgroundImage != null) __obj.updateDynamic("backgroundImage")(backgroundImage.asInstanceOf[js.Any])
-    if (!js.isUndefined(backgroundVpt)) __obj.updateDynamic("backgroundVpt")(backgroundVpt.asInstanceOf[js.Any])
-    if (clipPath != null) __obj.updateDynamic("clipPath")(clipPath.asInstanceOf[js.Any])
-    if (clipTo != null) __obj.updateDynamic("clipTo")(js.Any.fromFunction1(clipTo))
-    if (!js.isUndefined(controlsAboveOverlay)) __obj.updateDynamic("controlsAboveOverlay")(controlsAboveOverlay.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableRetinaScaling)) __obj.updateDynamic("enableRetinaScaling")(enableRetinaScaling.asInstanceOf[js.Any])
-    if (!js.isUndefined(imageSmoothingEnabled)) __obj.updateDynamic("imageSmoothingEnabled")(imageSmoothingEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeDefaultValues)) __obj.updateDynamic("includeDefaultValues")(includeDefaultValues.asInstanceOf[js.Any])
-    if (overlayColor != null) __obj.updateDynamic("overlayColor")(overlayColor.asInstanceOf[js.Any])
-    if (overlayImage != null) __obj.updateDynamic("overlayImage")(overlayImage.asInstanceOf[js.Any])
-    if (!js.isUndefined(overlayVpt)) __obj.updateDynamic("overlayVpt")(overlayVpt.asInstanceOf[js.Any])
-    if (!js.isUndefined(renderOnAddRemove)) __obj.updateDynamic("renderOnAddRemove")(renderOnAddRemove.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipOffscreen)) __obj.updateDynamic("skipOffscreen")(skipOffscreen.asInstanceOf[js.Any])
-    if (!js.isUndefined(stateful)) __obj.updateDynamic("stateful")(stateful.asInstanceOf[js.Any])
-    if (!js.isUndefined(svgViewportTransformation)) __obj.updateDynamic("svgViewportTransformation")(svgViewportTransformation.asInstanceOf[js.Any])
-    if (viewportTransform != null) __obj.updateDynamic("viewportTransform")(viewportTransform.asInstanceOf[js.Any])
-    if (vptCoords != null) __obj.updateDynamic("vptCoords")(vptCoords.asInstanceOf[js.Any])
     __obj.asInstanceOf[IStaticCanvasOptions]
   }
+  @scala.inline
+  implicit class IStaticCanvasOptionsOps[Self <: IStaticCanvasOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowTouchScrolling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTouchScrolling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowTouchScrolling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTouchScrolling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundColor(value: String | Pattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundImage(value: Image | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundVpt(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundVpt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundVpt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundVpt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClipPath(value: Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClipPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClipTo(value: /* context */ CanvasRenderingContext2D => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipTo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutClipTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withControlsAboveOverlay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controlsAboveOverlay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutControlsAboveOverlay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controlsAboveOverlay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableRetinaScaling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRetinaScaling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableRetinaScaling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRetinaScaling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageSmoothingEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageSmoothingEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageSmoothingEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageSmoothingEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeDefaultValues(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeDefaultValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeDefaultValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeDefaultValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlayColor(value: String | Pattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlayColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlayImage(value: Image): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlayImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlayVpt(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayVpt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlayVpt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayVpt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderOnAddRemove(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderOnAddRemove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenderOnAddRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderOnAddRemove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipOffscreen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipOffscreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipOffscreen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipOffscreen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStateful(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateful")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStateful: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateful")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSvgViewportTransformation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svgViewportTransformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSvgViewportTransformation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svgViewportTransformation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewportTransform(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewportTransform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViewportTransform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewportTransform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVptCoords(value: AnonTl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vptCoords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVptCoords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vptCoords")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

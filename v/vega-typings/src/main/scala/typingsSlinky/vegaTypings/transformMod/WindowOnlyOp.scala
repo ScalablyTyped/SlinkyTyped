@@ -23,32 +23,30 @@ trait WindowOnlyOp extends js.Object
 
 object WindowOnlyOp {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cume_dist: typingsSlinky.vegaTypings.vegaTypingsStrings.cume_dist = "cume_dist".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.cume_dist]
   @scala.inline
-  def cume_dist: typingsSlinky.vegaTypings.vegaTypingsStrings.cume_dist = this.cast("cume_dist")
+  def dense_rank: typingsSlinky.vegaTypings.vegaTypingsStrings.dense_rank = "dense_rank".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.dense_rank]
   @scala.inline
-  def dense_rank: typingsSlinky.vegaTypings.vegaTypingsStrings.dense_rank = this.cast("dense_rank")
+  def first_value: typingsSlinky.vegaTypings.vegaTypingsStrings.first_value = "first_value".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.first_value]
   @scala.inline
-  def first_value: typingsSlinky.vegaTypings.vegaTypingsStrings.first_value = this.cast("first_value")
+  def lag: typingsSlinky.vegaTypings.vegaTypingsStrings.lag = "lag".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.lag]
   @scala.inline
-  def lag: typingsSlinky.vegaTypings.vegaTypingsStrings.lag = this.cast("lag")
+  def last_value: typingsSlinky.vegaTypings.vegaTypingsStrings.last_value = "last_value".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.last_value]
   @scala.inline
-  def last_value: typingsSlinky.vegaTypings.vegaTypingsStrings.last_value = this.cast("last_value")
+  def lead: typingsSlinky.vegaTypings.vegaTypingsStrings.lead = "lead".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.lead]
   @scala.inline
-  def lead: typingsSlinky.vegaTypings.vegaTypingsStrings.lead = this.cast("lead")
+  def next_value: typingsSlinky.vegaTypings.vegaTypingsStrings.next_value = "next_value".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.next_value]
   @scala.inline
-  def next_value: typingsSlinky.vegaTypings.vegaTypingsStrings.next_value = this.cast("next_value")
+  def nth_value: typingsSlinky.vegaTypings.vegaTypingsStrings.nth_value = "nth_value".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.nth_value]
   @scala.inline
-  def nth_value: typingsSlinky.vegaTypings.vegaTypingsStrings.nth_value = this.cast("nth_value")
+  def ntile: typingsSlinky.vegaTypings.vegaTypingsStrings.ntile = "ntile".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.ntile]
   @scala.inline
-  def ntile: typingsSlinky.vegaTypings.vegaTypingsStrings.ntile = this.cast("ntile")
+  def percent_rank: typingsSlinky.vegaTypings.vegaTypingsStrings.percent_rank = "percent_rank".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.percent_rank]
   @scala.inline
-  def percent_rank: typingsSlinky.vegaTypings.vegaTypingsStrings.percent_rank = this.cast("percent_rank")
+  def prev_value: typingsSlinky.vegaTypings.vegaTypingsStrings.prev_value = "prev_value".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.prev_value]
   @scala.inline
-  def prev_value: typingsSlinky.vegaTypings.vegaTypingsStrings.prev_value = this.cast("prev_value")
+  def rank: typingsSlinky.vegaTypings.vegaTypingsStrings.rank = "rank".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.rank]
   @scala.inline
-  def rank: typingsSlinky.vegaTypings.vegaTypingsStrings.rank = this.cast("rank")
-  @scala.inline
-  def row_number: typingsSlinky.vegaTypings.vegaTypingsStrings.row_number = this.cast("row_number")
+  def row_number: typingsSlinky.vegaTypings.vegaTypingsStrings.row_number = "row_number".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.row_number]
 }
 

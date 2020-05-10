@@ -1,9 +1,8 @@
 package typingsSlinky.reactToastNotifications.mod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +10,12 @@ import scala.scalajs.js.annotation._
 @JSImport("react-toast-notifications", "DefaultToastContainer")
 @js.native
 class DefaultToastContainer protected ()
-  extends Component[ToastContainerProps, ComponentState, js.Any] {
+  extends Component[ToastContainerProps, js.Object, js.Any] {
   def this(props: ToastContainerProps) = this()
   def this(props: ToastContainerProps, context: js.Any) = this()
 }
 
 @JSImport("react-toast-notifications", "DefaultToastContainer")
 @js.native
-object DefaultToastContainer extends TopLevel[ComponentType[ToastContainerProps]]
+object DefaultToastContainer extends TopLevel[ReactComponentClass[ToastContainerProps]]
 

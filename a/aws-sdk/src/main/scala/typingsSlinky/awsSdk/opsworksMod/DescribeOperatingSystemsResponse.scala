@@ -14,10 +14,29 @@ trait DescribeOperatingSystemsResponse extends js.Object {
 
 object DescribeOperatingSystemsResponse {
   @scala.inline
-  def apply(OperatingSystems: OperatingSystems = null): DescribeOperatingSystemsResponse = {
+  def apply(): DescribeOperatingSystemsResponse = {
     val __obj = js.Dynamic.literal()
-    if (OperatingSystems != null) __obj.updateDynamic("OperatingSystems")(OperatingSystems.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeOperatingSystemsResponse]
   }
+  @scala.inline
+  implicit class DescribeOperatingSystemsResponseOps[Self <: DescribeOperatingSystemsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOperatingSystems(value: OperatingSystems): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatingSystems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystems")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

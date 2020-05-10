@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Disk extends js.Object {
   /**
     * Disk storage type, as defined by Google Compute Engine.  This
@@ -25,24 +26,65 @@ trait Disk extends js.Object {
     *
     * compute.googleapis.com/projects/project-id/zones/zone/diskTypes/pd-standard
     */
-  var diskType: js.UndefOr[String] = js.undefined
+  var diskType: js.UndefOr[String] = js.native
   /** Directory in a VM where disk is mounted. */
-  var mountPoint: js.UndefOr[String] = js.undefined
+  var mountPoint: js.UndefOr[String] = js.native
   /**
     * Size of disk in GB.  If zero or unspecified, the service will
     * attempt to choose a reasonable default.
     */
-  var sizeGb: js.UndefOr[Double] = js.undefined
+  var sizeGb: js.UndefOr[Double] = js.native
 }
 
 object Disk {
   @scala.inline
-  def apply(diskType: String = null, mountPoint: String = null, sizeGb: Int | Double = null): Disk = {
+  def apply(): Disk = {
     val __obj = js.Dynamic.literal()
-    if (diskType != null) __obj.updateDynamic("diskType")(diskType.asInstanceOf[js.Any])
-    if (mountPoint != null) __obj.updateDynamic("mountPoint")(mountPoint.asInstanceOf[js.Any])
-    if (sizeGb != null) __obj.updateDynamic("sizeGb")(sizeGb.asInstanceOf[js.Any])
     __obj.asInstanceOf[Disk]
   }
+  @scala.inline
+  implicit class DiskOps[Self <: Disk] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDiskType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMountPoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mountPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMountPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mountPoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizeGb(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeGb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizeGb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeGb")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

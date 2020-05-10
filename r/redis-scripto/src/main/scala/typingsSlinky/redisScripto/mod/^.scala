@@ -9,32 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class ^ protected () extends Scripto {
   def this(redisClient: RedisClient) = this()
-  /* CompleteClass */
-  override def eval(
-    scriptName: String,
-    keys: js.Array[String],
-    args: js.Array[_],
-    callback: js.Function2[/* err */ js.Error, /* result */ js.Any, Unit]
-  ): Unit = js.native
-  /* CompleteClass */
-  override def evalSha(
-    scriptName: String,
-    keys: js.Array[String],
-    args: js.Array[_],
-    callback: js.Function2[/* err */ js.Error, /* result */ js.Any, Unit]
-  ): Unit = js.native
-  /* CompleteClass */
-  override def load(scripts: Scripts): Unit = js.native
-  /* CompleteClass */
-  override def loadFromDir(scriptsDir: String): Unit = js.native
-  /* CompleteClass */
-  override def loadFromFile(name: String, filepath: String): Unit = js.native
-  /* CompleteClass */
-  override def run(
-    scriptName: String,
-    keys: js.Array[String],
-    args: js.Array[_],
-    callback: js.Function2[/* err */ js.Error, /* result */ js.Any, Unit]
-  ): Unit = js.native
 }
 

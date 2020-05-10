@@ -26,16 +26,53 @@ trait SchemaGooglePrivacyDlpV2Result extends js.Object {
 
 object SchemaGooglePrivacyDlpV2Result {
   @scala.inline
-  def apply(
-    infoTypeStats: js.Array[SchemaGooglePrivacyDlpV2InfoTypeStats] = null,
-    processedBytes: String = null,
-    totalEstimatedBytes: String = null
-  ): SchemaGooglePrivacyDlpV2Result = {
+  def apply(): SchemaGooglePrivacyDlpV2Result = {
     val __obj = js.Dynamic.literal()
-    if (infoTypeStats != null) __obj.updateDynamic("infoTypeStats")(infoTypeStats.asInstanceOf[js.Any])
-    if (processedBytes != null) __obj.updateDynamic("processedBytes")(processedBytes.asInstanceOf[js.Any])
-    if (totalEstimatedBytes != null) __obj.updateDynamic("totalEstimatedBytes")(totalEstimatedBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2Result]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2ResultOps[Self <: SchemaGooglePrivacyDlpV2Result] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInfoTypeStats(value: js.Array[SchemaGooglePrivacyDlpV2InfoTypeStats]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infoTypeStats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInfoTypeStats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infoTypeStats")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProcessedBytes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processedBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProcessedBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processedBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalEstimatedBytes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalEstimatedBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalEstimatedBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalEstimatedBytes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

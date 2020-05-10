@@ -84,7 +84,7 @@ class Extract protected () extends js.Object {
     *  to convert. If left empty will use the main renderer
     * @return {Uint8Array} One-dimensional array containing the pixel data of the entire texture
     */
-  def pixels(target: DisplayObject): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def pixels(target: RenderTexture): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def pixels(target: DisplayObject): js.typedarray.Uint8Array = js.native
+  def pixels(target: RenderTexture): js.typedarray.Uint8Array = js.native
 }
 

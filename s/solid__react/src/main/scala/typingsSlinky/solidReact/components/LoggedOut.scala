@@ -1,17 +1,15 @@
 package typingsSlinky.solidReact.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
-import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LoggedOut
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.solidReact.mod.LoggedOut] {
+object LoggedOut {
   @JSImport("@solid/react", "LoggedOut")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: js.Object): SharedBuilder_Object_159303587[typingsSlinky.solidReact.mod.LoggedOut] = new SharedBuilder_Object_159303587[typingsSlinky.solidReact.mod.LoggedOut](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: LoggedOut.type): SharedBuilder_Object_159303587[typingsSlinky.solidReact.mod.LoggedOut] = new SharedBuilder_Object_159303587[typingsSlinky.solidReact.mod.LoggedOut](js.Array(this.component, js.Dictionary.empty))()
 }
 

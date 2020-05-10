@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 /**
   * See: {@link https://docs.mendix.com/refguide7/domain-model relevant section in reference guide}
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -38,14 +38,14 @@ class DomainModel protected () extends ModuleDocument {
   val entities_FDomainModel: IList[IEntity] = js.native
   @JSName("model")
   var model_FDomainModel: IModel = js.native
-  def annotations(): IList[Annotation] = js.native
-  def associations(): IList[Association] = js.native
+  def annotations: IList[Annotation] = js.native
+  def associations: IList[Association] = js.native
   @JSName("containerAsModule")
-  def containerAsModule_MDomainModel(): Module = js.native
-  def crossAssociations(): IList[CrossAssociation] = js.native
-  def documentation(): String = js.native
+  def containerAsModule_MDomainModel: Module = js.native
+  def crossAssociations: IList[CrossAssociation] = js.native
+  def documentation: String = js.native
   def documentation(newValue: String): js.Any = js.native
-  def entities(): IList[Entity] = js.native
+  def entities: IList[Entity] = js.native
 }
 
 /* static members */

@@ -1,9 +1,9 @@
 package typingsSlinky.ngFileUpload.mod.angularAugmentingMod.angularFileUpload
 
 import org.scalajs.dom.raw.Blob
+import org.scalajs.dom.raw.File
 import typingsSlinky.angular.mod.IPromise
 import typingsSlinky.angular.mod.IRequestConfig
-import typingsSlinky.std.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,8 +27,8 @@ trait IUploadService extends js.Object {
     * @param  {boolean} [disallowObjectUrl]
     * @return {angular.IPromise<string>}
     */
-  def dataUrl(file: org.scalajs.dom.raw.File): IPromise[Blob | String] = js.native
-  def dataUrl(file: org.scalajs.dom.raw.File, disallowObjectUrl: Boolean): IPromise[Blob | String] = js.native
+  def dataUrl(file: File): IPromise[Blob | String] = js.native
+  def dataUrl(file: File, disallowObjectUrl: Boolean): IPromise[Blob | String] = js.native
   /**
     * Alternative way of uploading, send the file binary with the file's content-type.
     * Could be used to upload files to CouchDB, imgur, etc... html5 FileReader is needed.
@@ -44,7 +44,7 @@ trait IUploadService extends js.Object {
     * @param  {File} file
     * @return {angular.IPromise<ImageDimensions>}
     */
-  def imageDimensions(file: org.scalajs.dom.raw.File): IPromise[ImageDimensions] = js.native
+  def imageDimensions(file: File): IPromise[ImageDimensions] = js.native
   /**
     * Returns boolean showing if image resize is supported by this browser
     *
@@ -85,7 +85,7 @@ trait IUploadService extends js.Object {
     * @param  {string} newName
     * @return {File}
     */
-  def rename(file: org.scalajs.dom.raw.File, newName: String): Blob = js.native
+  def rename(file: File, newName: String): Blob = js.native
   /**
     * Resizes an image. Returns a promise
     *
@@ -98,7 +98,7 @@ trait IUploadService extends js.Object {
     * @param  {boolean} [centerCrop]
     * @return {angular.IPromise<string>}
     */
-  def resize(file: org.scalajs.dom.raw.File, options: FileResizeOptions): IPromise[org.scalajs.dom.raw.File] = js.native
+  def resize(file: File, options: FileResizeOptions): IPromise[File] = js.native
   /**
     * Set the default values for ngf-select and ngf-drop directives
     *

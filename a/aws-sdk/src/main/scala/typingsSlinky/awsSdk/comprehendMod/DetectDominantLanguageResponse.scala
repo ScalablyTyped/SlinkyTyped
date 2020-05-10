@@ -14,10 +14,29 @@ trait DetectDominantLanguageResponse extends js.Object {
 
 object DetectDominantLanguageResponse {
   @scala.inline
-  def apply(Languages: ListOfDominantLanguages = null): DetectDominantLanguageResponse = {
+  def apply(): DetectDominantLanguageResponse = {
     val __obj = js.Dynamic.literal()
-    if (Languages != null) __obj.updateDynamic("Languages")(Languages.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetectDominantLanguageResponse]
   }
+  @scala.inline
+  implicit class DetectDominantLanguageResponseOps[Self <: DetectDominantLanguageResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLanguages(value: ListOfDominantLanguages): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Languages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Languages")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

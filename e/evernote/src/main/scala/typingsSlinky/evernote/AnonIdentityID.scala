@@ -8,27 +8,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonIdentityID extends js.Object {
-  var identityID: js.UndefOr[IdentityID] = js.undefined
-  var notFoundException: js.UndefOr[EDAMNotFoundException] = js.undefined
-  var userException: js.UndefOr[EDAMUserException] = js.undefined
-  var userID: js.UndefOr[UserID] = js.undefined
+  var identityID: js.UndefOr[IdentityID] = js.native
+  var notFoundException: js.UndefOr[EDAMNotFoundException] = js.native
+  var userException: js.UndefOr[EDAMUserException] = js.native
+  var userID: js.UndefOr[UserID] = js.native
 }
 
 object AnonIdentityID {
   @scala.inline
-  def apply(
-    identityID: Int | Double = null,
-    notFoundException: EDAMNotFoundException = null,
-    userException: EDAMUserException = null,
-    userID: Int | Double = null
-  ): AnonIdentityID = {
+  def apply(): AnonIdentityID = {
     val __obj = js.Dynamic.literal()
-    if (identityID != null) __obj.updateDynamic("identityID")(identityID.asInstanceOf[js.Any])
-    if (notFoundException != null) __obj.updateDynamic("notFoundException")(notFoundException.asInstanceOf[js.Any])
-    if (userException != null) __obj.updateDynamic("userException")(userException.asInstanceOf[js.Any])
-    if (userID != null) __obj.updateDynamic("userID")(userID.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonIdentityID]
   }
+  @scala.inline
+  implicit class AnonIdentityIDOps[Self <: AnonIdentityID] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIdentityID(value: IdentityID): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identityID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentityID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identityID")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotFoundException(value: EDAMNotFoundException): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notFoundException")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotFoundException: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notFoundException")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserException(value: EDAMUserException): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userException")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserException: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userException")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserID(value: UserID): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userID")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

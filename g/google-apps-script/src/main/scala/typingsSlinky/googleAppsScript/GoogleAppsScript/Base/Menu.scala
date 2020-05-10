@@ -21,11 +21,12 @@ import scala.scalajs.js.annotation._
   *           .addToUi();
   *     }
   */
+@js.native
 trait Menu extends js.Object {
-  def addItem(caption: String, functionName: String): Menu
-  def addSeparator(): Menu
-  def addSubMenu(menu: Menu): Menu
-  def addToUi(): Unit
+  def addItem(caption: String, functionName: String): Menu = js.native
+  def addSeparator(): Menu = js.native
+  def addSubMenu(menu: Menu): Menu = js.native
+  def addToUi(): Unit = js.native
 }
 
 object Menu {
@@ -37,8 +38,39 @@ object Menu {
     addToUi: () => Unit
   ): Menu = {
     val __obj = js.Dynamic.literal(addItem = js.Any.fromFunction2(addItem), addSeparator = js.Any.fromFunction0(addSeparator), addSubMenu = js.Any.fromFunction1(addSubMenu), addToUi = js.Any.fromFunction0(addToUi))
-  
     __obj.asInstanceOf[Menu]
   }
+  @scala.inline
+  implicit class MenuOps[Self <: Menu] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddItem(value: (String, String) => Menu): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addItem")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withAddSeparator(value: () => Menu): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addSeparator")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withAddSubMenu(value: Menu => Menu): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addSubMenu")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAddToUi(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addToUi")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

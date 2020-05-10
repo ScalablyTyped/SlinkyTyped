@@ -34,22 +34,89 @@ trait SpotFleetRequestConfig extends js.Object {
 
 object SpotFleetRequestConfig {
   @scala.inline
-  def apply(
-    ActivityStatus: ActivityStatus = null,
-    CreateTime: js.Date = null,
-    SpotFleetRequestConfig: SpotFleetRequestConfigData = null,
-    SpotFleetRequestId: String = null,
-    SpotFleetRequestState: BatchState = null,
-    Tags: TagList = null
-  ): SpotFleetRequestConfig = {
+  def apply(): SpotFleetRequestConfig = {
     val __obj = js.Dynamic.literal()
-    if (ActivityStatus != null) __obj.updateDynamic("ActivityStatus")(ActivityStatus.asInstanceOf[js.Any])
-    if (CreateTime != null) __obj.updateDynamic("CreateTime")(CreateTime.asInstanceOf[js.Any])
-    if (SpotFleetRequestConfig != null) __obj.updateDynamic("SpotFleetRequestConfig")(SpotFleetRequestConfig.asInstanceOf[js.Any])
-    if (SpotFleetRequestId != null) __obj.updateDynamic("SpotFleetRequestId")(SpotFleetRequestId.asInstanceOf[js.Any])
-    if (SpotFleetRequestState != null) __obj.updateDynamic("SpotFleetRequestState")(SpotFleetRequestState.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpotFleetRequestConfig]
   }
+  @scala.inline
+  implicit class SpotFleetRequestConfigOps[Self <: SpotFleetRequestConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActivityStatus(value: ActivityStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivityStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivityStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivityStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpotFleetRequestConfig(value: SpotFleetRequestConfigData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotFleetRequestConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpotFleetRequestConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotFleetRequestConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpotFleetRequestId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotFleetRequestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpotFleetRequestId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotFleetRequestId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpotFleetRequestState(value: BatchState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotFleetRequestState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpotFleetRequestState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotFleetRequestState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -87,36 +87,204 @@ object Finding {
     attributes: AttributeList,
     createdAt: js.Date,
     updatedAt: js.Date,
-    userAttributes: UserAttributeList,
-    assetAttributes: AssetAttributes = null,
-    assetType: AssetType = null,
-    confidence: Int | Double = null,
-    description: Text = null,
-    id: FindingId = null,
-    indicatorOfCompromise: js.UndefOr[Boolean] = js.undefined,
-    numericSeverity: Int | Double = null,
-    recommendation: Text = null,
-    schemaVersion: Int | Double = null,
-    service: ServiceName = null,
-    serviceAttributes: InspectorServiceAttributes = null,
-    severity: Severity = null,
-    title: Text = null
+    userAttributes: UserAttributeList
   ): Finding = {
     val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any], attributes = attributes.asInstanceOf[js.Any], createdAt = createdAt.asInstanceOf[js.Any], updatedAt = updatedAt.asInstanceOf[js.Any], userAttributes = userAttributes.asInstanceOf[js.Any])
-    if (assetAttributes != null) __obj.updateDynamic("assetAttributes")(assetAttributes.asInstanceOf[js.Any])
-    if (assetType != null) __obj.updateDynamic("assetType")(assetType.asInstanceOf[js.Any])
-    if (confidence != null) __obj.updateDynamic("confidence")(confidence.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(indicatorOfCompromise)) __obj.updateDynamic("indicatorOfCompromise")(indicatorOfCompromise.asInstanceOf[js.Any])
-    if (numericSeverity != null) __obj.updateDynamic("numericSeverity")(numericSeverity.asInstanceOf[js.Any])
-    if (recommendation != null) __obj.updateDynamic("recommendation")(recommendation.asInstanceOf[js.Any])
-    if (schemaVersion != null) __obj.updateDynamic("schemaVersion")(schemaVersion.asInstanceOf[js.Any])
-    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
-    if (serviceAttributes != null) __obj.updateDynamic("serviceAttributes")(serviceAttributes.asInstanceOf[js.Any])
-    if (severity != null) __obj.updateDynamic("severity")(severity.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[Finding]
   }
+  @scala.inline
+  implicit class FindingOps[Self <: Finding] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributes(value: AttributeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreatedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdatedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserAttributes(value: UserAttributeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAssetAttributes(value: AssetAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssetAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAssetType(value: AssetType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssetType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfidence(value: IocConfidence): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfidence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Text): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: FindingId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndicatorOfCompromise(value: Bool): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indicatorOfCompromise")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndicatorOfCompromise: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indicatorOfCompromise")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumericSeverity(value: NumericSeverity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numericSeverity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumericSeverity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numericSeverity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecommendation(value: Text): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recommendation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecommendation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recommendation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemaVersion(value: NumericVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchemaVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withService(value: ServiceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceAttributes(value: InspectorServiceAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeverity(value: Severity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("severity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeverity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("severity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: Text): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

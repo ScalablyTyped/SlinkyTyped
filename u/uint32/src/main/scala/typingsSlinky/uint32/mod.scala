@@ -16,7 +16,7 @@ object mod extends js.Object {
   def highPart(number: Double): Double = js.native
   def log2(uint32val: Double): Double = js.native
   def majority(x: Double, y: Double, z: Double): Double = js.native
-  def mult(factor1: Double, factor2: Double, resultUint32Array2: scala.scalajs.js.typedarray.Uint32Array): Unit = js.native
+  def mult(factor1: Double, factor2: Double, resultUint32Array2: js.typedarray.Uint32Array): Unit = js.native
   def not(uint32val: Double): Double = js.native
   def or(uint32val0: Double, argv: Double*): Double = js.native
   def rotateLeft(uint32val: Double, numBits: Double): Double = js.native

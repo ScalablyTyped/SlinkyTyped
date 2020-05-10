@@ -5,16 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFormikFormikContext[Values] extends js.Object {
-  var formik: FormikContext[Values]
+  var formik: FormikContext[Values] = js.native
 }
 
 object AnonFormikFormikContext {
   @scala.inline
   def apply[Values](formik: FormikContext[Values]): AnonFormikFormikContext[Values] = {
     val __obj = js.Dynamic.literal(formik = formik.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonFormikFormikContext[Values]]
   }
+  @scala.inline
+  implicit class AnonFormikFormikContextOps[Self[values] <: AnonFormikFormikContext[values], Values] (val x: Self[Values]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[Values] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Values]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[Values] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[Values] with Other]
+    @scala.inline
+    def withFormik(value: FormikContext[Values]): Self[Values] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formik")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

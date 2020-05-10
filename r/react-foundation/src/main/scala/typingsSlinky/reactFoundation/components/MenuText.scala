@@ -1,14 +1,16 @@
 package typingsSlinky.reactFoundation.components
 
+import typingsSlinky.reactFoundation.menuMod.MenuItemProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MenuText extends SharedApply_MenuItemProps_1400551496 {
+object MenuText {
   @JSImport("react-foundation", "MenuText")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: MenuItemProps): SharedBuilder_MenuItemProps470639042 = new SharedBuilder_MenuItemProps470639042(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MenuText.type): SharedBuilder_MenuItemProps470639042 = new SharedBuilder_MenuItemProps470639042(js.Array(this.component, js.Dictionary.empty))()
 }
 

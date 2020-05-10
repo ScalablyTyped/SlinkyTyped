@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLButtonElement
 import typingsSlinky.materializeCss.MElements
 import typingsSlinky.materializeCss.PartialDatepickerOptions
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,17 +25,11 @@ class Datepicker ()
     * DONE button instance (undocumented!).
     */
   var doneBtn: HTMLButtonElement = js.native
-  /* CompleteClass */
-  override var isOpen: Boolean = js.native
-  /* CompleteClass */
-  override def close(): Unit = js.native
   /**
     * Change date view to a specific date on the datepicker
     * @param date Date to show on the datepicker.
     */
   def gotoDate(date: js.Date): Unit = js.native
-  /* CompleteClass */
-  override def open(): Unit = js.native
   /**
     * Set a date on the datepicker
     * @param date Date to set on the datepicker.
@@ -45,8 +38,8 @@ class Datepicker ()
   def setDate(): Unit = js.native
   def setDate(date: String): Unit = js.native
   def setDate(date: String, preventOnSelect: Boolean): Unit = js.native
-  def setDate(date: Date): Unit = js.native
-  def setDate(date: Date, preventOnSelect: Boolean): Unit = js.native
+  def setDate(date: js.Date): Unit = js.native
+  def setDate(date: js.Date, preventOnSelect: Boolean): Unit = js.native
   def setInputValue(): Unit = js.native
 }
 
@@ -66,7 +59,7 @@ object Datepicker extends js.Object {
   /**
     * Init Datepicker
     */
-  def init(els: typingsSlinky.std.Element): Datepicker = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialDatepickerOptions): Datepicker = js.native
+  def init(els: Element): Datepicker = js.native
+  def init(els: Element, options: PartialDatepickerOptions): Datepicker = js.native
 }
 

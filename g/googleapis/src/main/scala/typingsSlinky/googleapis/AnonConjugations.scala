@@ -18,26 +18,113 @@ trait AnonConjugations extends js.Object {
 
 object AnonConjugations {
   @scala.inline
-  def apply(
-    conjugations: js.Array[AnonValue] = null,
-    definitions: js.Array[AnonDefinition] = null,
-    partOfSpeech: String = null,
-    pronunciation: String = null,
-    pronunciationUrl: String = null,
-    source: AnonAttribution = null,
-    syllabification: String = null,
-    synonyms: js.Array[AnonSource] = null
-  ): AnonConjugations = {
+  def apply(): AnonConjugations = {
     val __obj = js.Dynamic.literal()
-    if (conjugations != null) __obj.updateDynamic("conjugations")(conjugations.asInstanceOf[js.Any])
-    if (definitions != null) __obj.updateDynamic("definitions")(definitions.asInstanceOf[js.Any])
-    if (partOfSpeech != null) __obj.updateDynamic("partOfSpeech")(partOfSpeech.asInstanceOf[js.Any])
-    if (pronunciation != null) __obj.updateDynamic("pronunciation")(pronunciation.asInstanceOf[js.Any])
-    if (pronunciationUrl != null) __obj.updateDynamic("pronunciationUrl")(pronunciationUrl.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (syllabification != null) __obj.updateDynamic("syllabification")(syllabification.asInstanceOf[js.Any])
-    if (synonyms != null) __obj.updateDynamic("synonyms")(synonyms.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonConjugations]
   }
+  @scala.inline
+  implicit class AnonConjugationsOps[Self <: AnonConjugations] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConjugations(value: js.Array[AnonValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conjugations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConjugations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conjugations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefinitions(value: js.Array[AnonDefinition]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definitions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefinitions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definitions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartOfSpeech(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partOfSpeech")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartOfSpeech: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partOfSpeech")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPronunciation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pronunciation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPronunciation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pronunciation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPronunciationUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pronunciationUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPronunciationUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pronunciationUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: AnonAttribution): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSyllabification(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syllabification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSyllabification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syllabification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSynonyms(value: js.Array[AnonSource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synonyms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSynonyms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synonyms")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

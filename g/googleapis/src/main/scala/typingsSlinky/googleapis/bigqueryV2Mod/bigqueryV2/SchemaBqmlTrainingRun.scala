@@ -36,18 +36,65 @@ trait SchemaBqmlTrainingRun extends js.Object {
 
 object SchemaBqmlTrainingRun {
   @scala.inline
-  def apply(
-    iterationResults: js.Array[SchemaBqmlIterationResult] = null,
-    startTime: String = null,
-    state: String = null,
-    trainingOptions: AnonEarlyStop = null
-  ): SchemaBqmlTrainingRun = {
+  def apply(): SchemaBqmlTrainingRun = {
     val __obj = js.Dynamic.literal()
-    if (iterationResults != null) __obj.updateDynamic("iterationResults")(iterationResults.asInstanceOf[js.Any])
-    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
-    if (trainingOptions != null) __obj.updateDynamic("trainingOptions")(trainingOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBqmlTrainingRun]
   }
+  @scala.inline
+  implicit class SchemaBqmlTrainingRunOps[Self <: SchemaBqmlTrainingRun] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIterationResults(value: js.Array[SchemaBqmlIterationResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iterationResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIterationResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iterationResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrainingOptions(value: AnonEarlyStop): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrainingOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

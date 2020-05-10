@@ -4,15 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PartialBlockStatement extends Node {
-  var closeStrip: StripFlags
-  var hash: Hash
-  var name: PathExpression | SubExpression
-  var openStrip: StripFlags
-  var params: js.Array[Expression]
-  var program: Program
+  var closeStrip: StripFlags = js.native
+  var hash: Hash = js.native
+  var name: PathExpression | SubExpression = js.native
+  var openStrip: StripFlags = js.native
+  var params: js.Array[Expression] = js.native
+  var program: Program = js.native
   @JSName("type")
-  var type_PartialBlockStatement: typingsSlinky.handlebars.handlebarsStrings.PartialBlockStatement
+  var type_PartialBlockStatement: typingsSlinky.handlebars.handlebarsStrings.PartialBlockStatement = js.native
 }
 
 object PartialBlockStatement {
@@ -31,5 +32,55 @@ object PartialBlockStatement {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialBlockStatement]
   }
+  @scala.inline
+  implicit class PartialBlockStatementOps[Self <: PartialBlockStatement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloseStrip(value: StripFlags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeStrip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHash(value: Hash): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: PathExpression | SubExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOpenStrip(value: StripFlags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openStrip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParams(value: js.Array[Expression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProgram(value: Program): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("program")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: typingsSlinky.handlebars.handlebarsStrings.PartialBlockStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

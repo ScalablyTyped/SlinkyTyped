@@ -3,7 +3,6 @@ package typingsSlinky.node.NodeJS
 import typingsSlinky.node.AnonEnd
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,8 +22,8 @@ trait ReadableStream extends EventEmitter {
   def unpipe(destination: WritableStream): this.type = js.native
   def unshift(chunk: String): Unit = js.native
   def unshift(chunk: String, encoding: BufferEncoding): Unit = js.native
-  def unshift(chunk: Uint8Array): Unit = js.native
-  def unshift(chunk: Uint8Array, encoding: BufferEncoding): Unit = js.native
+  def unshift(chunk: js.typedarray.Uint8Array): Unit = js.native
+  def unshift(chunk: js.typedarray.Uint8Array, encoding: BufferEncoding): Unit = js.native
   def wrap(oldStream: ReadableStream): this.type = js.native
 }
 

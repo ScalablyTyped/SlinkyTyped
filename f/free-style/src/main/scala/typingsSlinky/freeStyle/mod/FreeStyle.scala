@@ -14,10 +14,6 @@ class FreeStyle protected ()
   var debug: Boolean = js.native
   @JSName("hash")
   var hash_Original: HashFunction = js.native
-  /* CompleteClass */
-  override var id: String = js.native
-  /* CompleteClass */
-  override def getStyles(): String = js.native
   def hash(str: String): String = js.native
   def registerCss(styles: Styles): Unit = js.native
   def registerHashRule(prefix: String, styles: Styles): String = js.native

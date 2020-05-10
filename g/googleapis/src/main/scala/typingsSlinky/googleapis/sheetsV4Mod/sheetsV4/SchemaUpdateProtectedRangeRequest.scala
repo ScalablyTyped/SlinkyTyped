@@ -23,11 +23,41 @@ trait SchemaUpdateProtectedRangeRequest extends js.Object {
 
 object SchemaUpdateProtectedRangeRequest {
   @scala.inline
-  def apply(fields: String = null, protectedRange: SchemaProtectedRange = null): SchemaUpdateProtectedRangeRequest = {
+  def apply(): SchemaUpdateProtectedRangeRequest = {
     val __obj = js.Dynamic.literal()
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (protectedRange != null) __obj.updateDynamic("protectedRange")(protectedRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateProtectedRangeRequest]
   }
+  @scala.inline
+  implicit class SchemaUpdateProtectedRangeRequestOps[Self <: SchemaUpdateProtectedRangeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFields(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtectedRange(value: SchemaProtectedRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protectedRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtectedRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protectedRange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

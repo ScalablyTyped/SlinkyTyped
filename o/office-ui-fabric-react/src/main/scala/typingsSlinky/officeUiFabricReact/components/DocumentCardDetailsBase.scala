@@ -1,14 +1,13 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.documentCardDetailsTypesMod.IDocumentCardDetails
 import typingsSlinky.officeUiFabricReact.documentCardDetailsTypesMod.IDocumentCardDetailsProps
 import typingsSlinky.officeUiFabricReact.documentCardDetailsTypesMod.IDocumentCardDetailsStyleProps
 import typingsSlinky.officeUiFabricReact.documentCardDetailsTypesMod.IDocumentCardDetailsStyles
+import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -16,39 +15,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DocumentCardDetailsBase
-  extends ExternalComponentWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.officeUiFabricReact.documentCardDetailsBaseMod.DocumentCardDetailsBase
-    ] {
+object DocumentCardDetailsBase {
   @JSImport("office-ui-fabric-react/lib/components/DocumentCard/DocumentCardDetails.base", "DocumentCardDetailsBase")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    componentRef: IRefObject[IDocumentCardDetails] = null,
-    styles: IStyleFunctionOrObject[IDocumentCardDetailsStyleProps, IDocumentCardDetailsStyles] = null,
-    theme: ITheme = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[
-    tag.type, 
-    typingsSlinky.officeUiFabricReact.documentCardDetailsBaseMod.DocumentCardDetailsBase
-  ] = {
-    val __obj = js.Dynamic.literal()
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[
+          tag.type, 
+          typingsSlinky.officeUiFabricReact.documentCardDetailsBaseMod.DocumentCardDetailsBase
+        ] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ IDocumentCardDetails | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[IDocumentCardDetails]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[IDocumentCardDetails]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stylesFunction1(value: IDocumentCardDetailsStyleProps => Partial[IDocumentCardDetailsStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: IStyleFunctionOrObject[IDocumentCardDetailsStyleProps, IDocumentCardDetailsStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[
-    tag.type, 
-    typingsSlinky.officeUiFabricReact.documentCardDetailsBaseMod.DocumentCardDetailsBase
-  ] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.officeUiFabricReact.documentCardDetailsBaseMod.DocumentCardDetailsBase](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IDocumentCardDetailsProps
+  
+  def withProps(p: IDocumentCardDetailsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DocumentCardDetailsBase.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

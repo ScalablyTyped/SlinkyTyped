@@ -2,7 +2,7 @@ package typingsSlinky.videoJs.videoCoreNovttMod.default
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.std.HTMLTrackElement
+import org.scalajs.dom.raw.HTMLTrackElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -34,8 +34,8 @@ import typingsSlinky.androiduix.android.view.animation.Animation
 import typingsSlinky.androiduix.android.widget.ImageView
 import typingsSlinky.androiduix.android.widget.ImageView.ScaleType
 import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderMap
-import typingsSlinky.androiduix.java.lang.Runnable
-import typingsSlinky.androiduix.java.util.ArrayList
+import typingsSlinky.androiduix.java_.lang.Runnable
+import typingsSlinky.androiduix.java_.util.ArrayList
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`

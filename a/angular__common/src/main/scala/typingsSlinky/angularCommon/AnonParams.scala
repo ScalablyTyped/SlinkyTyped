@@ -10,30 +10,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonParams extends js.Object {
-  var headers: js.UndefOr[HttpHeaders] = js.undefined
-  var params: js.UndefOr[HttpParams] = js.undefined
-  var reportProgress: js.UndefOr[Boolean] = js.undefined
-  var responseType: js.UndefOr[arraybuffer | blob | json | text] = js.undefined
-  var withCredentials: js.UndefOr[Boolean] = js.undefined
+  var headers: js.UndefOr[HttpHeaders] = js.native
+  var params: js.UndefOr[HttpParams] = js.native
+  var reportProgress: js.UndefOr[Boolean] = js.native
+  var responseType: js.UndefOr[arraybuffer | blob | json | text] = js.native
+  var withCredentials: js.UndefOr[Boolean] = js.native
 }
 
 object AnonParams {
   @scala.inline
-  def apply(
-    headers: HttpHeaders = null,
-    params: HttpParams = null,
-    reportProgress: js.UndefOr[Boolean] = js.undefined,
-    responseType: arraybuffer | blob | json | text = null,
-    withCredentials: js.UndefOr[Boolean] = js.undefined
-  ): AnonParams = {
+  def apply(): AnonParams = {
     val __obj = js.Dynamic.literal()
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
-    if (!js.isUndefined(reportProgress)) __obj.updateDynamic("reportProgress")(reportProgress.asInstanceOf[js.Any])
-    if (responseType != null) __obj.updateDynamic("responseType")(responseType.asInstanceOf[js.Any])
-    if (!js.isUndefined(withCredentials)) __obj.updateDynamic("withCredentials")(withCredentials.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonParams]
   }
+  @scala.inline
+  implicit class AnonParamsOps[Self <: AnonParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeaders(value: HttpHeaders): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParams(value: HttpParams): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportProgress(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportProgress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportProgress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseType(value: arraybuffer | blob | json | text): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWithCredentials(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withCredentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWithCredentials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withCredentials")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

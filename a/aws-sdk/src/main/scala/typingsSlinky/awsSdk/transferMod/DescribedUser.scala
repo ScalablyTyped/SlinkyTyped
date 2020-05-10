@@ -46,27 +46,119 @@ trait DescribedUser extends js.Object {
 
 object DescribedUser {
   @scala.inline
-  def apply(
-    Arn: Arn,
-    HomeDirectory: HomeDirectory = null,
-    HomeDirectoryMappings: HomeDirectoryMappings = null,
-    HomeDirectoryType: HomeDirectoryType = null,
-    Policy: Policy = null,
-    Role: Role = null,
-    SshPublicKeys: SshPublicKeys = null,
-    Tags: Tags = null,
-    UserName: UserName = null
-  ): DescribedUser = {
+  def apply(Arn: Arn): DescribedUser = {
     val __obj = js.Dynamic.literal(Arn = Arn.asInstanceOf[js.Any])
-    if (HomeDirectory != null) __obj.updateDynamic("HomeDirectory")(HomeDirectory.asInstanceOf[js.Any])
-    if (HomeDirectoryMappings != null) __obj.updateDynamic("HomeDirectoryMappings")(HomeDirectoryMappings.asInstanceOf[js.Any])
-    if (HomeDirectoryType != null) __obj.updateDynamic("HomeDirectoryType")(HomeDirectoryType.asInstanceOf[js.Any])
-    if (Policy != null) __obj.updateDynamic("Policy")(Policy.asInstanceOf[js.Any])
-    if (Role != null) __obj.updateDynamic("Role")(Role.asInstanceOf[js.Any])
-    if (SshPublicKeys != null) __obj.updateDynamic("SshPublicKeys")(SshPublicKeys.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (UserName != null) __obj.updateDynamic("UserName")(UserName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribedUser]
   }
+  @scala.inline
+  implicit class DescribedUserOps[Self <: DescribedUser] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHomeDirectory(value: HomeDirectory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HomeDirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomeDirectory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HomeDirectory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHomeDirectoryMappings(value: HomeDirectoryMappings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HomeDirectoryMappings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomeDirectoryMappings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HomeDirectoryMappings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHomeDirectoryType(value: HomeDirectoryType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HomeDirectoryType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomeDirectoryType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HomeDirectoryType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicy(value: Policy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Policy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRole(value: Role): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSshPublicKeys(value: SshPublicKeys): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SshPublicKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSshPublicKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SshPublicKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserName(value: UserName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

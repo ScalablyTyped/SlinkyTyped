@@ -1,8 +1,8 @@
 package typingsSlinky.p5.mod
 
+import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.std.Event_
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

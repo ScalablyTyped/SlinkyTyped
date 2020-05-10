@@ -18,11 +18,41 @@ trait IspPlacement extends js.Object {
 
 object IspPlacement {
   @scala.inline
-  def apply(IspName: IspName = null, PlacementStatistics: PlacementStatistics = null): IspPlacement = {
+  def apply(): IspPlacement = {
     val __obj = js.Dynamic.literal()
-    if (IspName != null) __obj.updateDynamic("IspName")(IspName.asInstanceOf[js.Any])
-    if (PlacementStatistics != null) __obj.updateDynamic("PlacementStatistics")(PlacementStatistics.asInstanceOf[js.Any])
     __obj.asInstanceOf[IspPlacement]
   }
+  @scala.inline
+  implicit class IspPlacementOps[Self <: IspPlacement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIspName(value: IspName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IspName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIspName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IspName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacementStatistics(value: PlacementStatistics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlacementStatistics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacementStatistics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlacementStatistics")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

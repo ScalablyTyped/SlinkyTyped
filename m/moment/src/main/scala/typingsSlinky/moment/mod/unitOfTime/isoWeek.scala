@@ -13,12 +13,10 @@ trait isoWeek extends _StartOf
 
 object isoWeek {
   @scala.inline
-  def W: typingsSlinky.moment.momentStrings.W = this.cast("W")
+  def W: typingsSlinky.moment.momentStrings.W = "W".asInstanceOf[typingsSlinky.moment.momentStrings.W]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def isoWeek: typingsSlinky.moment.momentStrings.isoWeek = "isoWeek".asInstanceOf[typingsSlinky.moment.momentStrings.isoWeek]
   @scala.inline
-  def isoWeek: typingsSlinky.moment.momentStrings.isoWeek = this.cast("isoWeek")
-  @scala.inline
-  def isoWeeks: typingsSlinky.moment.momentStrings.isoWeeks = this.cast("isoWeeks")
+  def isoWeeks: typingsSlinky.moment.momentStrings.isoWeeks = "isoWeeks".asInstanceOf[typingsSlinky.moment.momentStrings.isoWeeks]
 }
 

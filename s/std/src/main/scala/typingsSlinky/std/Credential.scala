@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Credential extends js.Object {
-  val id: java.lang.String
-  val `type`: java.lang.String
+  val id: java.lang.String = js.native
+  val `type`: java.lang.String = js.native
 }
 
 @JSGlobal("Credential")

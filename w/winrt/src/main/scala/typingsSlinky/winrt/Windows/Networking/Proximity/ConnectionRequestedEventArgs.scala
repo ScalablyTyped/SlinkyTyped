@@ -6,8 +6,5 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.Networking.Proximity.ConnectionRequestedEventArgs")
 @js.native
-class ConnectionRequestedEventArgs () extends IConnectionRequestedEventArgs {
-  /* CompleteClass */
-  override var peerInformation: PeerInformation = js.native
-}
+class ConnectionRequestedEventArgs () extends IConnectionRequestedEventArgs
 

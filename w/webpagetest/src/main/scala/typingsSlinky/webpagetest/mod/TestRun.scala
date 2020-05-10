@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TestRun extends js.Object {
-  var firstView: js.Any
+  var firstView: js.Any = js.native
 }
 
 object TestRun {
   @scala.inline
   def apply(firstView: js.Any): TestRun = {
     val __obj = js.Dynamic.literal(firstView = firstView.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TestRun]
   }
+  @scala.inline
+  implicit class TestRunOps[Self <: TestRun] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFirstView(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstView")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

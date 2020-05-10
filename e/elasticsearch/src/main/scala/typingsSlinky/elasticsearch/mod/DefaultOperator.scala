@@ -12,10 +12,8 @@ trait DefaultOperator extends js.Object
 
 object DefaultOperator {
   @scala.inline
-  def AND: typingsSlinky.elasticsearch.elasticsearchStrings.AND = this.cast("AND")
+  def AND: typingsSlinky.elasticsearch.elasticsearchStrings.AND = "AND".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.AND]
   @scala.inline
-  def OR: typingsSlinky.elasticsearch.elasticsearchStrings.OR = this.cast("OR")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def OR: typingsSlinky.elasticsearch.elasticsearchStrings.OR = "OR".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.OR]
 }
 

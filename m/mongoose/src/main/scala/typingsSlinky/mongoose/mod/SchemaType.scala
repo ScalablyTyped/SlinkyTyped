@@ -1,6 +1,5 @@
 package typingsSlinky.mongoose.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,8 +59,8 @@ trait SchemaType extends js.Object {
     * @param errorMsg optional error message
     * @param type optional validator type
     */
-  def validate(obj: RegExp): this.type = js.native
-  def validate(obj: RegExp, errorMsg: String): this.type = js.native
-  def validate(obj: RegExp, errorMsg: String, `type`: String): this.type = js.native
+  def validate(obj: js.RegExp): this.type = js.native
+  def validate(obj: js.RegExp, errorMsg: String): this.type = js.native
+  def validate(obj: js.RegExp, errorMsg: String, `type`: String): this.type = js.native
 }
 

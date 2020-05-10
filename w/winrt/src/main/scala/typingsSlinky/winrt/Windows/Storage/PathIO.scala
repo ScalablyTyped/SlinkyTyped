@@ -28,7 +28,7 @@ object PathIO extends js.Object {
   def readTextAsync(absolutePath: String): IAsyncOperation[String] = js.native
   def readTextAsync(absolutePath: String, encoding: UnicodeEncoding): IAsyncOperation[String] = js.native
   def writeBufferAsync(absolutePath: String, buffer: IBuffer): IAsyncAction = js.native
-  def writeBytesAsync(absolutePath: String, buffer: scala.scalajs.js.typedarray.Uint8Array): IAsyncAction = js.native
+  def writeBytesAsync(absolutePath: String, buffer: js.typedarray.Uint8Array): IAsyncAction = js.native
   def writeLinesAsync(absolutePath: String, lines: IIterable[String]): IAsyncAction = js.native
   def writeLinesAsync(absolutePath: String, lines: IIterable[String], encoding: UnicodeEncoding): IAsyncAction = js.native
   def writeTextAsync(absolutePath: String, contents: String): IAsyncAction = js.native

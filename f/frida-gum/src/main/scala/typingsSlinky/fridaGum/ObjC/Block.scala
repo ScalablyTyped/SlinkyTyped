@@ -21,8 +21,6 @@ class Block protected () extends ObjectWrapper {
   def this(target: MethodSpec[BlockMethodImplementation]) = this()
   def this(target: NativePointer, options: NativeFunctionOptions) = this()
   def this(target: MethodSpec[BlockMethodImplementation], options: NativeFunctionOptions) = this()
-  /* CompleteClass */
-  override var handle: NativePointer = js.native
   /**
     * Current implementation. You may replace it by assigning to this property.
     */

@@ -30,17 +30,59 @@ trait BucketNotificationArgs extends js.Object {
 
 object BucketNotificationArgs {
   @scala.inline
-  def apply(
-    bucket: Input[String],
-    lambdaFunctions: Input[js.Array[Input[BucketNotificationLambdaFunction]]] = null,
-    queues: Input[js.Array[Input[BucketNotificationQueue]]] = null,
-    topics: Input[js.Array[Input[BucketNotificationTopic]]] = null
-  ): BucketNotificationArgs = {
+  def apply(bucket: Input[String]): BucketNotificationArgs = {
     val __obj = js.Dynamic.literal(bucket = bucket.asInstanceOf[js.Any])
-    if (lambdaFunctions != null) __obj.updateDynamic("lambdaFunctions")(lambdaFunctions.asInstanceOf[js.Any])
-    if (queues != null) __obj.updateDynamic("queues")(queues.asInstanceOf[js.Any])
-    if (topics != null) __obj.updateDynamic("topics")(topics.asInstanceOf[js.Any])
     __obj.asInstanceOf[BucketNotificationArgs]
   }
+  @scala.inline
+  implicit class BucketNotificationArgsOps[Self <: BucketNotificationArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucket(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLambdaFunctions(value: Input[js.Array[Input[BucketNotificationLambdaFunction]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaFunctions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueues(value: Input[js.Array[Input[BucketNotificationQueue]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopics(value: Input[js.Array[Input[BucketNotificationTopic]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topics")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

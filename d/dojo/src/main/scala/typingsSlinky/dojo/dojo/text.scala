@@ -16,24 +16,25 @@ import scala.scalajs.js.annotation._
   * loader. This feature is outside the scope of the CommonJS plugins specification.
   *
   */
+@js.native
 trait text extends js.Object {
   /**
     *
     */
-  var dynamic: Boolean
+  var dynamic: Boolean = js.native
   /**
     *
     * @param id Path to the resource.
     * @param require Object that include the function toUrl with given id returns a valid URL from which to load the text.
     * @param load Callback function which will be called, when the loading finished.
     */
-  def load(id: String, require: js.Function, load: js.Function): Unit
+  def load(id: String, require: js.Function, load: js.Function): Unit = js.native
   /**
     *
     * @param id
     * @param toAbsMid
     */
-  def normalize(id: js.Any, toAbsMid: js.Any): String
+  def normalize(id: js.Any, toAbsMid: js.Any): String = js.native
 }
 
 object text {
@@ -44,8 +45,33 @@ object text {
     normalize: (js.Any, js.Any) => String
   ): text = {
     val __obj = js.Dynamic.literal(dynamic = dynamic.asInstanceOf[js.Any], load = js.Any.fromFunction3(load), normalize = js.Any.fromFunction2(normalize))
-  
     __obj.asInstanceOf[text]
   }
+  @scala.inline
+  implicit class textOps[Self <: text] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDynamic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoad(value: (String, js.Function, js.Function) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withNormalize(value: (js.Any, js.Any) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

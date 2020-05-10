@@ -13,12 +13,10 @@ trait RTCIceGatherPolicy extends js.Object
 
 object RTCIceGatherPolicy {
   @scala.inline
-  def all: typingsSlinky.std.stdStrings.all = this.cast("all")
+  def all: typingsSlinky.std.stdStrings.all = "all".asInstanceOf[typingsSlinky.std.stdStrings.all]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def nohost: typingsSlinky.std.stdStrings.nohost = "nohost".asInstanceOf[typingsSlinky.std.stdStrings.nohost]
   @scala.inline
-  def nohost: typingsSlinky.std.stdStrings.nohost = this.cast("nohost")
-  @scala.inline
-  def relay: typingsSlinky.std.stdStrings.relay = this.cast("relay")
+  def relay: typingsSlinky.std.stdStrings.relay = "relay".asInstanceOf[typingsSlinky.std.stdStrings.relay]
 }
 

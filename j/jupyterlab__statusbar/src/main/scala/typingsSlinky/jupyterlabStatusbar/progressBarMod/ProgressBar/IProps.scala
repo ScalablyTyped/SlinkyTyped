@@ -7,19 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Props for the ProgressBar.
   */
+@js.native
 trait IProps extends js.Object {
   /**
     * The current progress percentage, from 0 to 100
     */
-  var percentage: Double
+  var percentage: Double = js.native
 }
 
 object IProps {
   @scala.inline
   def apply(percentage: Double): IProps = {
     val __obj = js.Dynamic.literal(percentage = percentage.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IProps]
   }
+  @scala.inline
+  implicit class IPropsOps[Self <: IProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPercentage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

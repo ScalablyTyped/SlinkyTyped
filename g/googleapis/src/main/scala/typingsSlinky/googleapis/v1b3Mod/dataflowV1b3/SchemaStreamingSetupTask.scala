@@ -35,20 +35,77 @@ trait SchemaStreamingSetupTask extends js.Object {
 
 object SchemaStreamingSetupTask {
   @scala.inline
-  def apply(
-    drain: js.UndefOr[Boolean] = js.undefined,
-    receiveWorkPort: Int | Double = null,
-    snapshotConfig: SchemaStreamingApplianceSnapshotConfig = null,
-    streamingComputationTopology: SchemaTopologyConfig = null,
-    workerHarnessPort: Int | Double = null
-  ): SchemaStreamingSetupTask = {
+  def apply(): SchemaStreamingSetupTask = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(drain)) __obj.updateDynamic("drain")(drain.asInstanceOf[js.Any])
-    if (receiveWorkPort != null) __obj.updateDynamic("receiveWorkPort")(receiveWorkPort.asInstanceOf[js.Any])
-    if (snapshotConfig != null) __obj.updateDynamic("snapshotConfig")(snapshotConfig.asInstanceOf[js.Any])
-    if (streamingComputationTopology != null) __obj.updateDynamic("streamingComputationTopology")(streamingComputationTopology.asInstanceOf[js.Any])
-    if (workerHarnessPort != null) __obj.updateDynamic("workerHarnessPort")(workerHarnessPort.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStreamingSetupTask]
   }
+  @scala.inline
+  implicit class SchemaStreamingSetupTaskOps[Self <: SchemaStreamingSetupTask] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDrain(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReceiveWorkPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("receiveWorkPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReceiveWorkPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("receiveWorkPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnapshotConfig(value: SchemaStreamingApplianceSnapshotConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnapshotConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamingComputationTopology(value: SchemaTopologyConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingComputationTopology")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamingComputationTopology: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingComputationTopology")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerHarnessPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerHarnessPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerHarnessPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerHarnessPort")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

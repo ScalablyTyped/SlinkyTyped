@@ -22,12 +22,53 @@ trait ListOperationsRequest extends js.Object {
 
 object ListOperationsRequest {
   @scala.inline
-  def apply(Marker: PageMarker = null, MaxItems: Int | Double = null, SubmittedSince: js.Date = null): ListOperationsRequest = {
+  def apply(): ListOperationsRequest = {
     val __obj = js.Dynamic.literal()
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (MaxItems != null) __obj.updateDynamic("MaxItems")(MaxItems.asInstanceOf[js.Any])
-    if (SubmittedSince != null) __obj.updateDynamic("SubmittedSince")(SubmittedSince.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListOperationsRequest]
   }
+  @scala.inline
+  implicit class ListOperationsRequestOps[Self <: ListOperationsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMarker(value: PageMarker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxItems(value: PageMaxItems): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubmittedSince(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmittedSince")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubmittedSince: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmittedSince")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

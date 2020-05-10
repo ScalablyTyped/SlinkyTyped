@@ -26,18 +26,65 @@ trait CustomAvailabilityZone extends js.Object {
 
 object CustomAvailabilityZone {
   @scala.inline
-  def apply(
-    CustomAvailabilityZoneId: String = null,
-    CustomAvailabilityZoneName: String = null,
-    CustomAvailabilityZoneStatus: String = null,
-    VpnDetails: VpnDetails = null
-  ): CustomAvailabilityZone = {
+  def apply(): CustomAvailabilityZone = {
     val __obj = js.Dynamic.literal()
-    if (CustomAvailabilityZoneId != null) __obj.updateDynamic("CustomAvailabilityZoneId")(CustomAvailabilityZoneId.asInstanceOf[js.Any])
-    if (CustomAvailabilityZoneName != null) __obj.updateDynamic("CustomAvailabilityZoneName")(CustomAvailabilityZoneName.asInstanceOf[js.Any])
-    if (CustomAvailabilityZoneStatus != null) __obj.updateDynamic("CustomAvailabilityZoneStatus")(CustomAvailabilityZoneStatus.asInstanceOf[js.Any])
-    if (VpnDetails != null) __obj.updateDynamic("VpnDetails")(VpnDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomAvailabilityZone]
   }
+  @scala.inline
+  implicit class CustomAvailabilityZoneOps[Self <: CustomAvailabilityZone] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomAvailabilityZoneId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAvailabilityZoneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomAvailabilityZoneId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAvailabilityZoneId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomAvailabilityZoneName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAvailabilityZoneName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomAvailabilityZoneName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAvailabilityZoneName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomAvailabilityZoneStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAvailabilityZoneStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomAvailabilityZoneStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAvailabilityZoneStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpnDetails(value: VpnDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpnDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnDetails")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

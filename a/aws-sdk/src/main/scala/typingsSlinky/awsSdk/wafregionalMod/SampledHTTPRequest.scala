@@ -30,18 +30,65 @@ trait SampledHTTPRequest extends js.Object {
 
 object SampledHTTPRequest {
   @scala.inline
-  def apply(
-    Request: HTTPRequest,
-    Weight: SampleWeight,
-    Action: Action = null,
-    RuleWithinRuleGroup: ResourceId = null,
-    Timestamp: js.Date = null
-  ): SampledHTTPRequest = {
+  def apply(Request: HTTPRequest, Weight: SampleWeight): SampledHTTPRequest = {
     val __obj = js.Dynamic.literal(Request = Request.asInstanceOf[js.Any], Weight = Weight.asInstanceOf[js.Any])
-    if (Action != null) __obj.updateDynamic("Action")(Action.asInstanceOf[js.Any])
-    if (RuleWithinRuleGroup != null) __obj.updateDynamic("RuleWithinRuleGroup")(RuleWithinRuleGroup.asInstanceOf[js.Any])
-    if (Timestamp != null) __obj.updateDynamic("Timestamp")(Timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[SampledHTTPRequest]
   }
+  @scala.inline
+  implicit class SampledHTTPRequestOps[Self <: SampledHTTPRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRequest(value: HTTPRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Request")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWeight(value: SampleWeight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Weight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAction(value: Action): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuleWithinRuleGroup(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleWithinRuleGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuleWithinRuleGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleWithinRuleGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

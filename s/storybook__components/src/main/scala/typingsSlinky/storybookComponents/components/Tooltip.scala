@@ -1,42 +1,64 @@
 package typingsSlinky.storybookComponents.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.storybookComponents.storybookComponentsStrings.ancillary
+import typingsSlinky.storybookComponents.storybookComponentsStrings.border
+import typingsSlinky.storybookComponents.storybookComponentsStrings.critical
+import typingsSlinky.storybookComponents.storybookComponentsStrings.dark
+import typingsSlinky.storybookComponents.storybookComponentsStrings.darker
+import typingsSlinky.storybookComponents.storybookComponentsStrings.darkest
+import typingsSlinky.storybookComponents.storybookComponentsStrings.defaultText
+import typingsSlinky.storybookComponents.storybookComponentsStrings.gold
+import typingsSlinky.storybookComponents.storybookComponentsStrings.green
+import typingsSlinky.storybookComponents.storybookComponentsStrings.inverseText
+import typingsSlinky.storybookComponents.storybookComponentsStrings.light
+import typingsSlinky.storybookComponents.storybookComponentsStrings.lighter
+import typingsSlinky.storybookComponents.storybookComponentsStrings.lightest
+import typingsSlinky.storybookComponents.storybookComponentsStrings.medium
+import typingsSlinky.storybookComponents.storybookComponentsStrings.mediumdark
+import typingsSlinky.storybookComponents.storybookComponentsStrings.mediumlight
+import typingsSlinky.storybookComponents.storybookComponentsStrings.negative
+import typingsSlinky.storybookComponents.storybookComponentsStrings.orange
+import typingsSlinky.storybookComponents.storybookComponentsStrings.positive
+import typingsSlinky.storybookComponents.storybookComponentsStrings.primary
+import typingsSlinky.storybookComponents.storybookComponentsStrings.purple
+import typingsSlinky.storybookComponents.storybookComponentsStrings.seafoam
+import typingsSlinky.storybookComponents.storybookComponentsStrings.secondary
+import typingsSlinky.storybookComponents.storybookComponentsStrings.tertiary
+import typingsSlinky.storybookComponents.storybookComponentsStrings.ultraviolet
+import typingsSlinky.storybookComponents.storybookComponentsStrings.warning
 import typingsSlinky.storybookComponents.tooltipMod.TooltipProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tooltip
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Tooltip {
   @JSImport("@storybook/components/dist/tooltip/Tooltip", "Tooltip")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    arrowProps: js.Any = null,
-    arrowRef: js.Any = null,
-    color: String = null,
-    hasChrome: js.UndefOr[Boolean] = js.undefined,
-    placement: String = null,
-    tooltipRef: js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (arrowProps != null) __obj.updateDynamic("arrowProps")(arrowProps.asInstanceOf[js.Any])
-    if (arrowRef != null) __obj.updateDynamic("arrowRef")(arrowRef.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasChrome)) __obj.updateDynamic("hasChrome")(hasChrome.asInstanceOf[js.Any])
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (tooltipRef != null) __obj.updateDynamic("tooltipRef")(tooltipRef.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def arrowProps(value: js.Any): this.type = set("arrowProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arrowRef(value: js.Any): this.type = set("arrowRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(
+      value: primary | secondary | tertiary | ancillary | orange | gold | green | seafoam | purple | ultraviolet | lightest | lighter | light | mediumlight | medium | mediumdark | dark | darker | darkest | border | positive | negative | warning | critical | defaultText | inverseText
+    ): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hasChrome(value: Boolean): this.type = set("hasChrome", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placement(value: String): this.type = set("placement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipRef(value: js.Any): this.type = set("tooltipRef", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TooltipProps
+  
+  def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Tooltip.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

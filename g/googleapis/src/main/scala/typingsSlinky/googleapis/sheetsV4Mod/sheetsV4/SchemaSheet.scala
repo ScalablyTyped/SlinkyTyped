@@ -69,34 +69,161 @@ trait SchemaSheet extends js.Object {
 
 object SchemaSheet {
   @scala.inline
-  def apply(
-    bandedRanges: js.Array[SchemaBandedRange] = null,
-    basicFilter: SchemaBasicFilter = null,
-    charts: js.Array[SchemaEmbeddedChart] = null,
-    columnGroups: js.Array[SchemaDimensionGroup] = null,
-    conditionalFormats: js.Array[SchemaConditionalFormatRule] = null,
-    data: js.Array[SchemaGridData] = null,
-    developerMetadata: js.Array[SchemaDeveloperMetadata] = null,
-    filterViews: js.Array[SchemaFilterView] = null,
-    merges: js.Array[SchemaGridRange] = null,
-    properties: SchemaSheetProperties = null,
-    protectedRanges: js.Array[SchemaProtectedRange] = null,
-    rowGroups: js.Array[SchemaDimensionGroup] = null
-  ): SchemaSheet = {
+  def apply(): SchemaSheet = {
     val __obj = js.Dynamic.literal()
-    if (bandedRanges != null) __obj.updateDynamic("bandedRanges")(bandedRanges.asInstanceOf[js.Any])
-    if (basicFilter != null) __obj.updateDynamic("basicFilter")(basicFilter.asInstanceOf[js.Any])
-    if (charts != null) __obj.updateDynamic("charts")(charts.asInstanceOf[js.Any])
-    if (columnGroups != null) __obj.updateDynamic("columnGroups")(columnGroups.asInstanceOf[js.Any])
-    if (conditionalFormats != null) __obj.updateDynamic("conditionalFormats")(conditionalFormats.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (developerMetadata != null) __obj.updateDynamic("developerMetadata")(developerMetadata.asInstanceOf[js.Any])
-    if (filterViews != null) __obj.updateDynamic("filterViews")(filterViews.asInstanceOf[js.Any])
-    if (merges != null) __obj.updateDynamic("merges")(merges.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
-    if (protectedRanges != null) __obj.updateDynamic("protectedRanges")(protectedRanges.asInstanceOf[js.Any])
-    if (rowGroups != null) __obj.updateDynamic("rowGroups")(rowGroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSheet]
   }
+  @scala.inline
+  implicit class SchemaSheetOps[Self <: SchemaSheet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBandedRanges(value: js.Array[SchemaBandedRange]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bandedRanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBandedRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bandedRanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBasicFilter(value: SchemaBasicFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basicFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBasicFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basicFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCharts(value: js.Array[SchemaEmbeddedChart]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCharts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnGroups(value: js.Array[SchemaDimensionGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConditionalFormats(value: js.Array[SchemaConditionalFormatRule]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditionalFormats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConditionalFormats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditionalFormats")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Array[SchemaGridData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeveloperMetadata(value: js.Array[SchemaDeveloperMetadata]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("developerMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeveloperMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("developerMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterViews(value: js.Array[SchemaFilterView]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterViews")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterViews: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterViews")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMerges(value: js.Array[SchemaGridRange]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMerges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProperties(value: SchemaSheetProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtectedRanges(value: js.Array[SchemaProtectedRange]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protectedRanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtectedRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protectedRanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowGroups(value: js.Array[SchemaDimensionGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowGroups")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

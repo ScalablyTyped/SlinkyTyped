@@ -13,12 +13,10 @@ trait batteryEvent extends js.Object
 
 object batteryEvent {
   @scala.inline
-  def batterycritical: typingsSlinky.cordovaPluginBatteryStatus.cordovaPluginBatteryStatusStrings.batterycritical = this.cast("batterycritical")
+  def batterycritical: typingsSlinky.cordovaPluginBatteryStatus.cordovaPluginBatteryStatusStrings.batterycritical = "batterycritical".asInstanceOf[typingsSlinky.cordovaPluginBatteryStatus.cordovaPluginBatteryStatusStrings.batterycritical]
   @scala.inline
-  def batterylow: typingsSlinky.cordovaPluginBatteryStatus.cordovaPluginBatteryStatusStrings.batterylow = this.cast("batterylow")
+  def batterylow: typingsSlinky.cordovaPluginBatteryStatus.cordovaPluginBatteryStatusStrings.batterylow = "batterylow".asInstanceOf[typingsSlinky.cordovaPluginBatteryStatus.cordovaPluginBatteryStatusStrings.batterylow]
   @scala.inline
-  def batterystatus: typingsSlinky.cordovaPluginBatteryStatus.cordovaPluginBatteryStatusStrings.batterystatus = this.cast("batterystatus")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def batterystatus: typingsSlinky.cordovaPluginBatteryStatus.cordovaPluginBatteryStatusStrings.batterystatus = "batterystatus".asInstanceOf[typingsSlinky.cordovaPluginBatteryStatus.cordovaPluginBatteryStatusStrings.batterystatus]
 }
 

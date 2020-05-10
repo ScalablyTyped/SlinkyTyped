@@ -26,18 +26,65 @@ trait AmiDistributionConfiguration extends js.Object {
 
 object AmiDistributionConfiguration {
   @scala.inline
-  def apply(
-    amiTags: TagMap = null,
-    description: NonEmptyString = null,
-    launchPermission: LaunchPermissionConfiguration = null,
-    name: AmiNameString = null
-  ): AmiDistributionConfiguration = {
+  def apply(): AmiDistributionConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (amiTags != null) __obj.updateDynamic("amiTags")(amiTags.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (launchPermission != null) __obj.updateDynamic("launchPermission")(launchPermission.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[AmiDistributionConfiguration]
   }
+  @scala.inline
+  implicit class AmiDistributionConfigurationOps[Self <: AmiDistributionConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAmiTags(value: TagMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amiTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmiTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amiTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchPermission(value: LaunchPermissionConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchPermission")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchPermission: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchPermission")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: AmiNameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

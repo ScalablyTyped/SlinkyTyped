@@ -4,51 +4,119 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Product extends js.Object {
   /**
     * The product description.
     */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /**
     * A link to the product's associated image.
     */
-  var imageURI: js.UndefOr[String] = js.undefined
+  var imageURI: js.UndefOr[String] = js.native
   /**
     * The price of the product.
     */
-  var price: js.UndefOr[String] = js.undefined
+  var price: js.UndefOr[String] = js.native
   /**
     * The currency code for the product.
     */
-  var priceCurrencyCode: js.UndefOr[String] = js.undefined
+  var priceCurrencyCode: js.UndefOr[String] = js.native
   /**
     * The product's game-specified identifier.
     */
-  var productID: js.UndefOr[String] = js.undefined
+  var productID: js.UndefOr[String] = js.native
   /**
     * The title of the product.
     */
-  var title: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.native
 }
 
 object Product {
   @scala.inline
-  def apply(
-    description: String = null,
-    imageURI: String = null,
-    price: String = null,
-    priceCurrencyCode: String = null,
-    productID: String = null,
-    title: String = null
-  ): Product = {
+  def apply(): Product = {
     val __obj = js.Dynamic.literal()
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (imageURI != null) __obj.updateDynamic("imageURI")(imageURI.asInstanceOf[js.Any])
-    if (price != null) __obj.updateDynamic("price")(price.asInstanceOf[js.Any])
-    if (priceCurrencyCode != null) __obj.updateDynamic("priceCurrencyCode")(priceCurrencyCode.asInstanceOf[js.Any])
-    if (productID != null) __obj.updateDynamic("productID")(productID.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[Product]
   }
+  @scala.inline
+  implicit class ProductOps[Self <: Product] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageURI(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageURI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageURI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageURI")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrice(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriceCurrencyCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priceCurrencyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriceCurrencyCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priceCurrencyCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productID")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

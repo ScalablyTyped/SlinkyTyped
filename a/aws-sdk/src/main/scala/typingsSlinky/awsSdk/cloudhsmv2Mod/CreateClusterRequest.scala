@@ -23,11 +23,53 @@ trait CreateClusterRequest extends js.Object {
 
 object CreateClusterRequest {
   @scala.inline
-  def apply(HsmType: HsmType, SubnetIds: SubnetIds, SourceBackupId: BackupId = null, TagList: TagList = null): CreateClusterRequest = {
+  def apply(HsmType: HsmType, SubnetIds: SubnetIds): CreateClusterRequest = {
     val __obj = js.Dynamic.literal(HsmType = HsmType.asInstanceOf[js.Any], SubnetIds = SubnetIds.asInstanceOf[js.Any])
-    if (SourceBackupId != null) __obj.updateDynamic("SourceBackupId")(SourceBackupId.asInstanceOf[js.Any])
-    if (TagList != null) __obj.updateDynamic("TagList")(TagList.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateClusterRequest]
   }
+  @scala.inline
+  implicit class CreateClusterRequestOps[Self <: CreateClusterRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHsmType(value: HsmType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubnetIds(value: SubnetIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceBackupId(value: BackupId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceBackupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceBackupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceBackupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagList(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,10 +12,8 @@ trait ResponseRouteEvent extends js.Object
 
 object ResponseRouteEvent {
   @scala.inline
-  def beforeResponse: typingsSlinky.pollyjsCore.pollyjsCoreStrings.beforeResponse = this.cast("beforeResponse")
+  def beforeResponse: typingsSlinky.pollyjsCore.pollyjsCoreStrings.beforeResponse = "beforeResponse".asInstanceOf[typingsSlinky.pollyjsCore.pollyjsCoreStrings.beforeResponse]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def response: typingsSlinky.pollyjsCore.pollyjsCoreStrings.response = this.cast("response")
+  def response: typingsSlinky.pollyjsCore.pollyjsCoreStrings.response = "response".asInstanceOf[typingsSlinky.pollyjsCore.pollyjsCoreStrings.response]
 }
 

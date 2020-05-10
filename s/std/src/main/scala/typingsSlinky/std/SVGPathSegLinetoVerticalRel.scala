@@ -5,11 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SVGPathSegLinetoVerticalRel extends SVGPathSeg {
-  var y: Double
+  var y: Double = js.native
 }
 
 @JSGlobal("SVGPathSegLinetoVerticalRel")
 @js.native
-object SVGPathSegLinetoVerticalRel extends Instantiable0[SVGPathSegLinetoVerticalRel]
+object SVGPathSegLinetoVerticalRel
+  extends Instantiable0[org.scalajs.dom.raw.SVGPathSegLinetoVerticalRel]
 

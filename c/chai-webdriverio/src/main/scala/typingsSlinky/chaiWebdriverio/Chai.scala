@@ -1,6 +1,5 @@
 package typingsSlinky.chaiWebdriverio
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,11 +16,11 @@ object Chai extends js.Object {
     def focus(): Unit = js.native
     def text(expected: String): Unit = js.native
     def text(expected: Double): Unit = js.native
-    def text(expected: RegExp): Unit = js.native
+    def text(expected: js.RegExp): Unit = js.native
     def there(): Unit = js.native
     def value(expected: String): Unit = js.native
     def value(expected: Double): Unit = js.native
-    def value(expected: RegExp): Unit = js.native
+    def value(expected: js.RegExp): Unit = js.native
   }
   
 }

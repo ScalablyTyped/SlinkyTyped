@@ -25,36 +25,34 @@ trait FilterType extends js.Object
 
 object FilterType {
   @scala.inline
-  def Bessel: typingsSlinky.gm.gmStrings.Bessel = this.cast("Bessel")
+  def Bessel: typingsSlinky.gm.gmStrings.Bessel = "Bessel".asInstanceOf[typingsSlinky.gm.gmStrings.Bessel]
   @scala.inline
-  def Blackman: typingsSlinky.gm.gmStrings.Blackman = this.cast("Blackman")
+  def Blackman: typingsSlinky.gm.gmStrings.Blackman = "Blackman".asInstanceOf[typingsSlinky.gm.gmStrings.Blackman]
   @scala.inline
-  def Box: typingsSlinky.gm.gmStrings.Box = this.cast("Box")
+  def Box: typingsSlinky.gm.gmStrings.Box = "Box".asInstanceOf[typingsSlinky.gm.gmStrings.Box]
   @scala.inline
-  def Catrom: typingsSlinky.gm.gmStrings.Catrom = this.cast("Catrom")
+  def Catrom: typingsSlinky.gm.gmStrings.Catrom = "Catrom".asInstanceOf[typingsSlinky.gm.gmStrings.Catrom]
   @scala.inline
-  def Cubic: typingsSlinky.gm.gmStrings.Cubic = this.cast("Cubic")
+  def Cubic: typingsSlinky.gm.gmStrings.Cubic = "Cubic".asInstanceOf[typingsSlinky.gm.gmStrings.Cubic]
   @scala.inline
-  def Gaussian: typingsSlinky.gm.gmStrings.Gaussian = this.cast("Gaussian")
+  def Gaussian: typingsSlinky.gm.gmStrings.Gaussian = "Gaussian".asInstanceOf[typingsSlinky.gm.gmStrings.Gaussian]
   @scala.inline
-  def Hamming: typingsSlinky.gm.gmStrings.Hamming = this.cast("Hamming")
+  def Hamming: typingsSlinky.gm.gmStrings.Hamming = "Hamming".asInstanceOf[typingsSlinky.gm.gmStrings.Hamming]
   @scala.inline
-  def Hanning: typingsSlinky.gm.gmStrings.Hanning = this.cast("Hanning")
+  def Hanning: typingsSlinky.gm.gmStrings.Hanning = "Hanning".asInstanceOf[typingsSlinky.gm.gmStrings.Hanning]
   @scala.inline
-  def Hermite: typingsSlinky.gm.gmStrings.Hermite = this.cast("Hermite")
+  def Hermite: typingsSlinky.gm.gmStrings.Hermite = "Hermite".asInstanceOf[typingsSlinky.gm.gmStrings.Hermite]
   @scala.inline
-  def Lanczos: typingsSlinky.gm.gmStrings.Lanczos = this.cast("Lanczos")
+  def Lanczos: typingsSlinky.gm.gmStrings.Lanczos = "Lanczos".asInstanceOf[typingsSlinky.gm.gmStrings.Lanczos]
   @scala.inline
-  def Mitchell: typingsSlinky.gm.gmStrings.Mitchell = this.cast("Mitchell")
+  def Mitchell: typingsSlinky.gm.gmStrings.Mitchell = "Mitchell".asInstanceOf[typingsSlinky.gm.gmStrings.Mitchell]
   @scala.inline
-  def Point: typingsSlinky.gm.gmStrings.Point = this.cast("Point")
+  def Point: typingsSlinky.gm.gmStrings.Point = "Point".asInstanceOf[typingsSlinky.gm.gmStrings.Point]
   @scala.inline
-  def Quadratic: typingsSlinky.gm.gmStrings.Quadratic = this.cast("Quadratic")
+  def Quadratic: typingsSlinky.gm.gmStrings.Quadratic = "Quadratic".asInstanceOf[typingsSlinky.gm.gmStrings.Quadratic]
   @scala.inline
-  def Sinc: typingsSlinky.gm.gmStrings.Sinc = this.cast("Sinc")
+  def Sinc: typingsSlinky.gm.gmStrings.Sinc = "Sinc".asInstanceOf[typingsSlinky.gm.gmStrings.Sinc]
   @scala.inline
-  def Triangle: typingsSlinky.gm.gmStrings.Triangle = this.cast("Triangle")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Triangle: typingsSlinky.gm.gmStrings.Triangle = "Triangle".asInstanceOf[typingsSlinky.gm.gmStrings.Triangle]
 }
 

@@ -7,30 +7,31 @@ import scala.scalajs.js.annotation._
 // NOTE: This model is generic with a bunch of optional properties to represent all types of chart models.
 // Each chart type defines their own unique model structure so some of these optional properties
 // might always have values depending on the chart type.
+@js.native
 trait Model extends js.Object {
-  var backgroundColor: String
-  var base: Double
-  var borderAlign: js.UndefOr[BorderAlignment] = js.undefined
-  var borderColor: String
-  var borderWidth: js.UndefOr[Double] = js.undefined
-  var circumference: js.UndefOr[Double] = js.undefined
-  var controlPointNextX: Double
-  var controlPointNextY: Double
-  var controlPointPreviousX: Double
-  var controlPointPreviousY: Double
-  var endAngle: js.UndefOr[Double] = js.undefined
-  var head: Double
-  var hitRadius: Double
-  var innerRadius: js.UndefOr[Double] = js.undefined
-  var outerRadius: js.UndefOr[Double] = js.undefined
-  var pointStyle: String
-  var radius: String
-  var skip: js.UndefOr[Boolean] = js.undefined
-  var startAngle: js.UndefOr[Double] = js.undefined
-  var steppedLine: js.UndefOr[scala.Nothing] = js.undefined
-  var tension: Double
-  var x: Double
-  var y: Double
+  var backgroundColor: String = js.native
+  var base: Double = js.native
+  var borderAlign: js.UndefOr[BorderAlignment] = js.native
+  var borderColor: String = js.native
+  var borderWidth: js.UndefOr[Double] = js.native
+  var circumference: js.UndefOr[Double] = js.native
+  var controlPointNextX: Double = js.native
+  var controlPointNextY: Double = js.native
+  var controlPointPreviousX: Double = js.native
+  var controlPointPreviousY: Double = js.native
+  var endAngle: js.UndefOr[Double] = js.native
+  var head: Double = js.native
+  var hitRadius: Double = js.native
+  var innerRadius: js.UndefOr[Double] = js.native
+  var outerRadius: js.UndefOr[Double] = js.native
+  var pointStyle: String = js.native
+  var radius: String = js.native
+  var skip: js.UndefOr[Boolean] = js.native
+  var startAngle: js.UndefOr[Double] = js.native
+  var steppedLine: js.UndefOr[scala.Nothing] = js.native
+  var tension: Double = js.native
+  var x: Double = js.native
+  var y: Double = js.native
 }
 
 object Model {
@@ -49,28 +50,210 @@ object Model {
     radius: String,
     tension: Double,
     x: Double,
-    y: Double,
-    borderAlign: BorderAlignment = null,
-    borderWidth: Int | Double = null,
-    circumference: Int | Double = null,
-    endAngle: Int | Double = null,
-    innerRadius: Int | Double = null,
-    outerRadius: Int | Double = null,
-    skip: js.UndefOr[Boolean] = js.undefined,
-    startAngle: Int | Double = null,
-    steppedLine: js.UndefOr[scala.Nothing] = js.undefined
+    y: Double
   ): Model = {
     val __obj = js.Dynamic.literal(backgroundColor = backgroundColor.asInstanceOf[js.Any], base = base.asInstanceOf[js.Any], borderColor = borderColor.asInstanceOf[js.Any], controlPointNextX = controlPointNextX.asInstanceOf[js.Any], controlPointNextY = controlPointNextY.asInstanceOf[js.Any], controlPointPreviousX = controlPointPreviousX.asInstanceOf[js.Any], controlPointPreviousY = controlPointPreviousY.asInstanceOf[js.Any], head = head.asInstanceOf[js.Any], hitRadius = hitRadius.asInstanceOf[js.Any], pointStyle = pointStyle.asInstanceOf[js.Any], radius = radius.asInstanceOf[js.Any], tension = tension.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
-    if (borderAlign != null) __obj.updateDynamic("borderAlign")(borderAlign.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (circumference != null) __obj.updateDynamic("circumference")(circumference.asInstanceOf[js.Any])
-    if (endAngle != null) __obj.updateDynamic("endAngle")(endAngle.asInstanceOf[js.Any])
-    if (innerRadius != null) __obj.updateDynamic("innerRadius")(innerRadius.asInstanceOf[js.Any])
-    if (outerRadius != null) __obj.updateDynamic("outerRadius")(outerRadius.asInstanceOf[js.Any])
-    if (!js.isUndefined(skip)) __obj.updateDynamic("skip")(skip.asInstanceOf[js.Any])
-    if (startAngle != null) __obj.updateDynamic("startAngle")(startAngle.asInstanceOf[js.Any])
-    if (!js.isUndefined(steppedLine)) __obj.updateDynamic("steppedLine")(steppedLine.asInstanceOf[js.Any])
     __obj.asInstanceOf[Model]
   }
+  @scala.inline
+  implicit class ModelOps[Self <: Model] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBase(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBorderColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withControlPointNextX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controlPointNextX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withControlPointNextY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controlPointNextY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withControlPointPreviousX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controlPointPreviousX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withControlPointPreviousY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controlPointPreviousY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHead(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHitRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hitRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPointStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRadius(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTension(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBorderAlign(value: BorderAlignment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderAlign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCircumference(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("circumference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCircumference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("circumference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInnerRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInnerRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOuterRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOuterRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkip(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSteppedLine(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("steppedLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSteppedLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("steppedLine")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

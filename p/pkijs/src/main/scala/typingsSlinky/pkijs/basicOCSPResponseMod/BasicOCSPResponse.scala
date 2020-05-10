@@ -26,18 +26,18 @@ trait BasicOCSPResponse extends js.Object {
   ): js.Thenable[GetCertificateStatusResult] = js.native
   /**
     * Make signature for current OCSP Basic Response
-    * 
+    *
     * @param {CryptoKey} privateKey Private key for "subjectPublicKeyInfo" structure
     * @param {string} [hashAlgorithm] Hashing algorithm. Default SHA-1
     * @returns {PromiseLike<ArrayBuffer>}
     */
-  def sign(privateKey: CryptoKey): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-  def sign(privateKey: CryptoKey, hashAlgorithm: String): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def sign(privateKey: CryptoKey): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(privateKey: CryptoKey, hashAlgorithm: String): js.Thenable[js.typedarray.ArrayBuffer] = js.native
   def toJSON(): js.Any = js.native
   def toSchema(): js.Any = js.native
   /**
     * Verify existing OCSP Basic Response
-    * 
+    *
     * @param {{ trustedCerts?: Certificate[] }} parameters Additional parameters
     * @returns {PromiseLike<boolean>}
     */

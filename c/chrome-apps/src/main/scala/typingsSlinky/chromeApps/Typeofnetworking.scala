@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Typeofnetworking extends js.Object {
   // #endregion
   // #region chrome.networking.*
@@ -16,7 +17,7 @@ trait Typeofnetworking extends js.Object {
     * @description
     * Use the *networking.config* API to authenticate to captive portals.
     */
-  val config: Typeofconfig
+  val config: Typeofconfig = js.native
   //////////////////////////////////////
   // Open Network Configuration (ONC) //
   //////////////////////////////////////
@@ -34,15 +35,34 @@ trait Typeofnetworking extends js.Object {
     * Most interface properties and type values use UpperCamelCase to match
     * the ONC specification instead of the JavaScript lowerCamelCase convention.
     */
-  val onc: Typeofonc
+  val onc: Typeofonc = js.native
 }
 
 object Typeofnetworking {
   @scala.inline
   def apply(config: Typeofconfig, onc: Typeofonc): Typeofnetworking = {
     val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any], onc = onc.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Typeofnetworking]
   }
+  @scala.inline
+  implicit class TypeofnetworkingOps[Self <: Typeofnetworking] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfig(value: Typeofconfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnc(value: Typeofonc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onc")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

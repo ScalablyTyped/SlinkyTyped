@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFailAfter extends js.Object {
-  var failAfter: js.UndefOr[Double] = js.undefined
-  var initialDelay: js.UndefOr[Double] = js.undefined
-  var maxDelay: js.UndefOr[Double] = js.undefined
+  var failAfter: js.UndefOr[Double] = js.native
+  var initialDelay: js.UndefOr[Double] = js.native
+  var maxDelay: js.UndefOr[Double] = js.native
 }
 
 object AnonFailAfter {
   @scala.inline
-  def apply(failAfter: Int | Double = null, initialDelay: Int | Double = null, maxDelay: Int | Double = null): AnonFailAfter = {
+  def apply(): AnonFailAfter = {
     val __obj = js.Dynamic.literal()
-    if (failAfter != null) __obj.updateDynamic("failAfter")(failAfter.asInstanceOf[js.Any])
-    if (initialDelay != null) __obj.updateDynamic("initialDelay")(initialDelay.asInstanceOf[js.Any])
-    if (maxDelay != null) __obj.updateDynamic("maxDelay")(maxDelay.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonFailAfter]
   }
+  @scala.inline
+  implicit class AnonFailAfterOps[Self <: AnonFailAfter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailAfter(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failAfter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDelay")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

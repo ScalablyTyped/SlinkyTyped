@@ -10,7 +10,6 @@ import typingsSlinky.jestJasmine2.suiteMod.default
 import typingsSlinky.jestJasmine2.typesMod.AssertionErrorWithStack
 import typingsSlinky.jestJasmine2.typesMod.Reporter
 import typingsSlinky.jestJasmine2.typesMod.Spy
-import typingsSlinky.std.Error
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -55,7 +54,7 @@ trait AnonAddReporter extends js.Object {
   def execute(runnablesToRun: js.Array[String]): js.Promise[Unit] = js.native
   def execute(runnablesToRun: js.Array[String], suiteTree: default): js.Promise[Unit] = js.native
   def fail(error: AssertionErrorWithStack): Unit = js.native
-  def fail(error: Error): Unit = js.native
+  def fail(error: js.Error): Unit = js.native
   def fdescribe(description: String, specDefinitions: js.Function): default = js.native
   def fit(
     description: String,

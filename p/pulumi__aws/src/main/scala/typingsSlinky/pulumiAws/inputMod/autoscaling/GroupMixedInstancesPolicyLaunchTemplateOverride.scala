@@ -19,11 +19,41 @@ trait GroupMixedInstancesPolicyLaunchTemplateOverride extends js.Object {
 
 object GroupMixedInstancesPolicyLaunchTemplateOverride {
   @scala.inline
-  def apply(instanceType: Input[String] = null, weightedCapacity: Input[String] = null): GroupMixedInstancesPolicyLaunchTemplateOverride = {
+  def apply(): GroupMixedInstancesPolicyLaunchTemplateOverride = {
     val __obj = js.Dynamic.literal()
-    if (instanceType != null) __obj.updateDynamic("instanceType")(instanceType.asInstanceOf[js.Any])
-    if (weightedCapacity != null) __obj.updateDynamic("weightedCapacity")(weightedCapacity.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroupMixedInstancesPolicyLaunchTemplateOverride]
   }
+  @scala.inline
+  implicit class GroupMixedInstancesPolicyLaunchTemplateOverrideOps[Self <: GroupMixedInstancesPolicyLaunchTemplateOverride] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeightedCapacity(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weightedCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeightedCapacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weightedCapacity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,16 +26,53 @@ trait CreateDataSourceFromS3Input extends js.Object {
 
 object CreateDataSourceFromS3Input {
   @scala.inline
-  def apply(
-    DataSourceId: EntityId,
-    DataSpec: S3DataSpec,
-    ComputeStatistics: js.UndefOr[Boolean] = js.undefined,
-    DataSourceName: EntityName = null
-  ): CreateDataSourceFromS3Input = {
+  def apply(DataSourceId: EntityId, DataSpec: S3DataSpec): CreateDataSourceFromS3Input = {
     val __obj = js.Dynamic.literal(DataSourceId = DataSourceId.asInstanceOf[js.Any], DataSpec = DataSpec.asInstanceOf[js.Any])
-    if (!js.isUndefined(ComputeStatistics)) __obj.updateDynamic("ComputeStatistics")(ComputeStatistics.asInstanceOf[js.Any])
-    if (DataSourceName != null) __obj.updateDynamic("DataSourceName")(DataSourceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDataSourceFromS3Input]
   }
+  @scala.inline
+  implicit class CreateDataSourceFromS3InputOps[Self <: CreateDataSourceFromS3Input] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataSourceId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDataSpec(value: S3DataSpec): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSpec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComputeStatistics(value: ComputeStatistics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputeStatistics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputeStatistics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputeStatistics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSourceName(value: EntityName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSourceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSourceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSourceName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

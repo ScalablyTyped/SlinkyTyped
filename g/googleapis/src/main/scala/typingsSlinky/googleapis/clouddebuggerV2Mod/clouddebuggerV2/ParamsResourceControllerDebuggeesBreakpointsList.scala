@@ -35,3 +35,67 @@ trait ParamsResourceControllerDebuggeesBreakpointsList extends StandardParameter
   var waitToken: js.UndefOr[String] = js.native
 }
 
+object ParamsResourceControllerDebuggeesBreakpointsList {
+  @scala.inline
+  def apply(): ParamsResourceControllerDebuggeesBreakpointsList = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ParamsResourceControllerDebuggeesBreakpointsList]
+  }
+  @scala.inline
+  implicit class ParamsResourceControllerDebuggeesBreakpointsListOps[Self <: ParamsResourceControllerDebuggeesBreakpointsList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebuggeeId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debuggeeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebuggeeId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debuggeeId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessOnTimeout(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successOnTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessOnTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successOnTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWaitToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWaitToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitToken")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

@@ -6,53 +6,181 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MapOptions extends js.Object {
   var controls: js.UndefOr[
     typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.controlControlMod.default] | js.Array[typingsSlinky.ol.controlControlMod.default]
-  ] = js.undefined
+  ] = js.native
   var interactions: js.UndefOr[
     typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.interactionInteractionMod.default] | js.Array[typingsSlinky.ol.interactionInteractionMod.default]
-  ] = js.undefined
-  var keyboardEventTarget: js.UndefOr[HTMLElement | Document_ | String] = js.undefined
+  ] = js.native
+  var keyboardEventTarget: js.UndefOr[HTMLElement | Document_ | String] = js.native
   var layers: js.UndefOr[
     js.Array[typingsSlinky.ol.baseMod.default] | typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.baseMod.default] | typingsSlinky.ol.groupMod.default
-  ] = js.undefined
-  var maxTilesLoading: js.UndefOr[Double] = js.undefined
-  var moveTolerance: js.UndefOr[Double] = js.undefined
+  ] = js.native
+  var maxTilesLoading: js.UndefOr[Double] = js.native
+  var moveTolerance: js.UndefOr[Double] = js.native
   var overlays: js.UndefOr[
     typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.overlayMod.default] | js.Array[typingsSlinky.ol.overlayMod.default]
-  ] = js.undefined
-  var pixelRatio: js.UndefOr[Double] = js.undefined
-  var target: js.UndefOr[HTMLElement | String] = js.undefined
-  var view: js.UndefOr[typingsSlinky.ol.viewMod.default] = js.undefined
+  ] = js.native
+  var pixelRatio: js.UndefOr[Double] = js.native
+  var target: js.UndefOr[HTMLElement | String] = js.native
+  var view: js.UndefOr[typingsSlinky.ol.viewMod.default] = js.native
 }
 
 object MapOptions {
   @scala.inline
-  def apply(
-    controls: typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.controlControlMod.default] | js.Array[typingsSlinky.ol.controlControlMod.default] = null,
-    interactions: typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.interactionInteractionMod.default] | js.Array[typingsSlinky.ol.interactionInteractionMod.default] = null,
-    keyboardEventTarget: HTMLElement | Document_ | String = null,
-    layers: js.Array[typingsSlinky.ol.baseMod.default] | typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.baseMod.default] | typingsSlinky.ol.groupMod.default = null,
-    maxTilesLoading: Int | Double = null,
-    moveTolerance: Int | Double = null,
-    overlays: typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.overlayMod.default] | js.Array[typingsSlinky.ol.overlayMod.default] = null,
-    pixelRatio: Int | Double = null,
-    target: HTMLElement | String = null,
-    view: typingsSlinky.ol.viewMod.default = null
-  ): MapOptions = {
+  def apply(): MapOptions = {
     val __obj = js.Dynamic.literal()
-    if (controls != null) __obj.updateDynamic("controls")(controls.asInstanceOf[js.Any])
-    if (interactions != null) __obj.updateDynamic("interactions")(interactions.asInstanceOf[js.Any])
-    if (keyboardEventTarget != null) __obj.updateDynamic("keyboardEventTarget")(keyboardEventTarget.asInstanceOf[js.Any])
-    if (layers != null) __obj.updateDynamic("layers")(layers.asInstanceOf[js.Any])
-    if (maxTilesLoading != null) __obj.updateDynamic("maxTilesLoading")(maxTilesLoading.asInstanceOf[js.Any])
-    if (moveTolerance != null) __obj.updateDynamic("moveTolerance")(moveTolerance.asInstanceOf[js.Any])
-    if (overlays != null) __obj.updateDynamic("overlays")(overlays.asInstanceOf[js.Any])
-    if (pixelRatio != null) __obj.updateDynamic("pixelRatio")(pixelRatio.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapOptions]
   }
+  @scala.inline
+  implicit class MapOptionsOps[Self <: MapOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withControls(
+      value: typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.controlControlMod.default] | js.Array[typingsSlinky.ol.controlControlMod.default]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInteractions(
+      value: typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.interactionInteractionMod.default] | js.Array[typingsSlinky.ol.interactionInteractionMod.default]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interactions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInteractions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interactions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyboardEventTargetHTMLElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardEventTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeyboardEventTarget(value: HTMLElement | Document_ | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardEventTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyboardEventTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardEventTarget")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayers(
+      value: js.Array[typingsSlinky.ol.baseMod.default] | typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.baseMod.default] | typingsSlinky.ol.groupMod.default
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxTilesLoading(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTilesLoading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxTilesLoading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTilesLoading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMoveTolerance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveTolerance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMoveTolerance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveTolerance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlays(
+      value: typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.overlayMod.default] | js.Array[typingsSlinky.ol.overlayMod.default]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPixelRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPixelRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetHTMLElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTarget(value: HTMLElement | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withView(value: typingsSlinky.ol.viewMod.default): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

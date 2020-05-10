@@ -1,6 +1,5 @@
 package typingsSlinky.ethers.typesMod
 
-import typingsSlinky.ethers.ethersStrings.block
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,9 +59,6 @@ abstract class MinimalProvider () extends OnceBlockable {
   def lookupAddress(address: js.Promise[String]): js.Promise[String] = js.native
   def on(eventName: EventType, listener: Listener): MinimalProvider = js.native
   def once(eventName: EventType, listener: Listener): MinimalProvider = js.native
-  /* CompleteClass */
-  @JSName("once")
-  override def once_block(eventName: block, handler: js.Function0[Unit]): Unit = js.native
   def removeAllListeners(eventName: EventType): MinimalProvider = js.native
   def removeListener(eventName: EventType, listener: Listener): MinimalProvider = js.native
   def resolveName(name: String): js.Promise[String] = js.native

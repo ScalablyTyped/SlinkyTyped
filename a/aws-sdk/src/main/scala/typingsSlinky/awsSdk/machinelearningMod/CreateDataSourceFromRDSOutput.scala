@@ -14,10 +14,29 @@ trait CreateDataSourceFromRDSOutput extends js.Object {
 
 object CreateDataSourceFromRDSOutput {
   @scala.inline
-  def apply(DataSourceId: EntityId = null): CreateDataSourceFromRDSOutput = {
+  def apply(): CreateDataSourceFromRDSOutput = {
     val __obj = js.Dynamic.literal()
-    if (DataSourceId != null) __obj.updateDynamic("DataSourceId")(DataSourceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDataSourceFromRDSOutput]
   }
+  @scala.inline
+  implicit class CreateDataSourceFromRDSOutputOps[Self <: CreateDataSourceFromRDSOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataSourceId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSourceId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

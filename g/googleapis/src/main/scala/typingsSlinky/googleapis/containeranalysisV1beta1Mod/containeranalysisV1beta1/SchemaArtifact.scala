@@ -31,12 +31,53 @@ trait SchemaArtifact extends js.Object {
 
 object SchemaArtifact {
   @scala.inline
-  def apply(checksum: String = null, id: String = null, names: js.Array[String] = null): SchemaArtifact = {
+  def apply(): SchemaArtifact = {
     val __obj = js.Dynamic.literal()
-    if (checksum != null) __obj.updateDynamic("checksum")(checksum.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (names != null) __obj.updateDynamic("names")(names.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaArtifact]
   }
+  @scala.inline
+  implicit class SchemaArtifactOps[Self <: SchemaArtifact] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChecksum(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChecksum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("names")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("names")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

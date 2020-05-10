@@ -18,11 +18,41 @@ trait Lifecycle extends js.Object {
 
 object Lifecycle {
   @scala.inline
-  def apply(DeleteAfterDays: Int | Double = null, MoveToColdStorageAfterDays: Int | Double = null): Lifecycle = {
+  def apply(): Lifecycle = {
     val __obj = js.Dynamic.literal()
-    if (DeleteAfterDays != null) __obj.updateDynamic("DeleteAfterDays")(DeleteAfterDays.asInstanceOf[js.Any])
-    if (MoveToColdStorageAfterDays != null) __obj.updateDynamic("MoveToColdStorageAfterDays")(MoveToColdStorageAfterDays.asInstanceOf[js.Any])
     __obj.asInstanceOf[Lifecycle]
   }
+  @scala.inline
+  implicit class LifecycleOps[Self <: Lifecycle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeleteAfterDays(value: Long_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteAfterDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteAfterDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteAfterDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMoveToColdStorageAfterDays(value: Long_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MoveToColdStorageAfterDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMoveToColdStorageAfterDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MoveToColdStorageAfterDays")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

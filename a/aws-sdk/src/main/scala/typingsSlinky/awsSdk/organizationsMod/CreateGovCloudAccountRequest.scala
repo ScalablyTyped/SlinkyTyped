@@ -26,16 +26,53 @@ trait CreateGovCloudAccountRequest extends js.Object {
 
 object CreateGovCloudAccountRequest {
   @scala.inline
-  def apply(
-    AccountName: AccountName,
-    Email: Email,
-    IamUserAccessToBilling: IAMUserAccessToBilling = null,
-    RoleName: RoleName = null
-  ): CreateGovCloudAccountRequest = {
+  def apply(AccountName: AccountName, Email: Email): CreateGovCloudAccountRequest = {
     val __obj = js.Dynamic.literal(AccountName = AccountName.asInstanceOf[js.Any], Email = Email.asInstanceOf[js.Any])
-    if (IamUserAccessToBilling != null) __obj.updateDynamic("IamUserAccessToBilling")(IamUserAccessToBilling.asInstanceOf[js.Any])
-    if (RoleName != null) __obj.updateDynamic("RoleName")(RoleName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateGovCloudAccountRequest]
   }
+  @scala.inline
+  implicit class CreateGovCloudAccountRequestOps[Self <: CreateGovCloudAccountRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountName(value: AccountName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmail(value: Email): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIamUserAccessToBilling(value: IAMUserAccessToBilling): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IamUserAccessToBilling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIamUserAccessToBilling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IamUserAccessToBilling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleName(value: RoleName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

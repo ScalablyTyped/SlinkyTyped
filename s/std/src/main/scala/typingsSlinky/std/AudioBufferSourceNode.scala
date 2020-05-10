@@ -22,10 +22,10 @@ trait AudioBufferSourceNode extends AudioScheduledSourceNode {
 @JSGlobal("AudioBufferSourceNode")
 @js.native
 object AudioBufferSourceNode
-  extends Instantiable1[/* context */ BaseAudioContext, AudioBufferSourceNode]
+  extends Instantiable1[/* context */ BaseAudioContext, org.scalajs.dom.raw.AudioBufferSourceNode]
      with Instantiable2[
       /* context */ BaseAudioContext, 
       /* options */ AudioBufferSourceOptions, 
-      AudioBufferSourceNode
+      org.scalajs.dom.raw.AudioBufferSourceNode
     ]
 

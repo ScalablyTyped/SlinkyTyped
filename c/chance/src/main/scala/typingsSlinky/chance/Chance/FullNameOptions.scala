@@ -4,19 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FullNameOptions extends js.Object {
-  var middle: Boolean
-  var middle_initial: Boolean
-  var prefix: Boolean
-  var suffix: Boolean
+  var middle: Boolean = js.native
+  var middle_initial: Boolean = js.native
+  var prefix: Boolean = js.native
+  var suffix: Boolean = js.native
 }
 
 object FullNameOptions {
   @scala.inline
   def apply(middle: Boolean, middle_initial: Boolean, prefix: Boolean, suffix: Boolean): FullNameOptions = {
     val __obj = js.Dynamic.literal(middle = middle.asInstanceOf[js.Any], middle_initial = middle_initial.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any], suffix = suffix.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[FullNameOptions]
   }
+  @scala.inline
+  implicit class FullNameOptionsOps[Self <: FullNameOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMiddle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("middle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMiddle_initial(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("middle_initial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuffix(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

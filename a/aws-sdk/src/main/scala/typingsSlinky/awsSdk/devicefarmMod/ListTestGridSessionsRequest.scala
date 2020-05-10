@@ -42,25 +42,107 @@ trait ListTestGridSessionsRequest extends js.Object {
 
 object ListTestGridSessionsRequest {
   @scala.inline
-  def apply(
-    projectArn: DeviceFarmArn,
-    creationTimeAfter: js.Date = null,
-    creationTimeBefore: js.Date = null,
-    endTimeAfter: js.Date = null,
-    endTimeBefore: js.Date = null,
-    maxResult: Int | scala.Double = null,
-    nextToken: PaginationToken = null,
-    status: TestGridSessionStatus = null
-  ): ListTestGridSessionsRequest = {
+  def apply(projectArn: DeviceFarmArn): ListTestGridSessionsRequest = {
     val __obj = js.Dynamic.literal(projectArn = projectArn.asInstanceOf[js.Any])
-    if (creationTimeAfter != null) __obj.updateDynamic("creationTimeAfter")(creationTimeAfter.asInstanceOf[js.Any])
-    if (creationTimeBefore != null) __obj.updateDynamic("creationTimeBefore")(creationTimeBefore.asInstanceOf[js.Any])
-    if (endTimeAfter != null) __obj.updateDynamic("endTimeAfter")(endTimeAfter.asInstanceOf[js.Any])
-    if (endTimeBefore != null) __obj.updateDynamic("endTimeBefore")(endTimeBefore.asInstanceOf[js.Any])
-    if (maxResult != null) __obj.updateDynamic("maxResult")(maxResult.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTestGridSessionsRequest]
   }
+  @scala.inline
+  implicit class ListTestGridSessionsRequestOps[Self <: ListTestGridSessionsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProjectArn(value: DeviceFarmArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreationTimeAfter(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimeAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTimeAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimeAfter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTimeBefore(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimeBefore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTimeBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimeBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTimeAfter(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimeAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTimeAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimeAfter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTimeBefore(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimeBefore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTimeBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimeBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResult(value: MaxPageSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResult")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResult")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: TestGridSessionStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

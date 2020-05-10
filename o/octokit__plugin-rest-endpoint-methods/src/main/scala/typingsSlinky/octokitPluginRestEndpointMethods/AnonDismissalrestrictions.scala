@@ -4,18 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDismissalrestrictions extends js.Object {
-  var branch: AnonRequired
-  var dismiss_stale_reviews: AnonType
-  var dismissal_restrictions: AnonType
+  var branch: AnonRequired = js.native
+  var dismiss_stale_reviews: AnonType = js.native
+  var dismissal_restrictions: AnonType = js.native
   @JSName("dismissal_restrictions.teams")
-  var dismissal_restrictionsDotteams: AnonType
+  var dismissal_restrictionsDotteams: AnonType = js.native
   @JSName("dismissal_restrictions.users")
-  var dismissal_restrictionsDotusers: AnonType
-  var owner: AnonRequired
-  var repo: AnonRequired
-  var require_code_owner_reviews: AnonType
-  var required_approving_review_count: AnonType
+  var dismissal_restrictionsDotusers: AnonType = js.native
+  var owner: AnonRequired = js.native
+  var repo: AnonRequired = js.native
+  var require_code_owner_reviews: AnonType = js.native
+  var required_approving_review_count: AnonType = js.native
 }
 
 object AnonDismissalrestrictions {
@@ -36,5 +37,67 @@ object AnonDismissalrestrictions {
     __obj.updateDynamic("dismissal_restrictions.users")(dismissal_restrictionsDotusers.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDismissalrestrictions]
   }
+  @scala.inline
+  implicit class AnonDismissalrestrictionsOps[Self <: AnonDismissalrestrictions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBranch(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("branch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDismiss_stale_reviews(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dismiss_stale_reviews")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDismissal_restrictions(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dismissal_restrictions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDismissal_restrictionsDotteams(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dismissal_restrictions.teams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDismissal_restrictionsDotusers(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dismissal_restrictions.users")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOwner(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRepo(value: AnonRequired): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRequire_code_owner_reviews(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("require_code_owner_reviews")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRequired_approving_review_count(value: AnonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("required_approving_review_count")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

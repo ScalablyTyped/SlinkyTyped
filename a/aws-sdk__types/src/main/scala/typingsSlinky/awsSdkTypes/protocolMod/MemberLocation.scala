@@ -15,16 +15,14 @@ trait MemberLocation extends js.Object
 
 object MemberLocation {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def header: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.header = "header".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.header]
   @scala.inline
-  def header: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.header = this.cast("header")
+  def headers: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.headers = "headers".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.headers]
   @scala.inline
-  def headers: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.headers = this.cast("headers")
+  def querystring: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.querystring = "querystring".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.querystring]
   @scala.inline
-  def querystring: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.querystring = this.cast("querystring")
+  def statusCode: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.statusCode = "statusCode".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.statusCode]
   @scala.inline
-  def statusCode: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.statusCode = this.cast("statusCode")
-  @scala.inline
-  def uri: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.uri = this.cast("uri")
+  def uri: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.uri = "uri".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.uri]
 }
 

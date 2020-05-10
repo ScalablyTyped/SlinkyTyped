@@ -15,7 +15,7 @@ object skeletonMod extends js.Object {
     def this(bones: js.Array[Bone]) = this()
     def this(bones: js.Array[Bone], boneInverses: js.Array[Matrix4]) = this()
     var boneInverses: js.Array[Matrix4] = js.native
-    var boneMatrices: scala.scalajs.js.typedarray.Float32Array = js.native
+    var boneMatrices: js.typedarray.Float32Array = js.native
     var boneTexture: DataTexture = js.native
     var boneTextureHeight: Double = js.native
     var boneTextureWidth: Double = js.native

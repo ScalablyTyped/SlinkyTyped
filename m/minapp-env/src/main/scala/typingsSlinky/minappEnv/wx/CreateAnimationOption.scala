@@ -11,11 +11,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CreateAnimationOption extends js.Object {
   /** 动画延迟时间，单位 ms */
-  var delay: js.UndefOr[Double] = js.undefined
+  var delay: js.UndefOr[Double] = js.native
   /** 动画持续时间，单位 ms */
-  var duration: js.UndefOr[Double] = js.undefined
+  var duration: js.UndefOr[Double] = js.native
   /** 动画的效果
     *
     * 可选值：
@@ -28,24 +29,71 @@ trait CreateAnimationOption extends js.Object {
     * - 'step-end': 动画一直保持开始状态，最后一帧跳到结束状态; */
   var timingFunction: js.UndefOr[
     linear | ease | `ease-in` | `ease-in-out` | `ease-out` | `step-start` | `step-end`
-  ] = js.undefined
-  var transformOrigin: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var transformOrigin: js.UndefOr[String] = js.native
 }
 
 object CreateAnimationOption {
   @scala.inline
-  def apply(
-    delay: Int | Double = null,
-    duration: Int | Double = null,
-    timingFunction: linear | ease | `ease-in` | `ease-in-out` | `ease-out` | `step-start` | `step-end` = null,
-    transformOrigin: String = null
-  ): CreateAnimationOption = {
+  def apply(): CreateAnimationOption = {
     val __obj = js.Dynamic.literal()
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (timingFunction != null) __obj.updateDynamic("timingFunction")(timingFunction.asInstanceOf[js.Any])
-    if (transformOrigin != null) __obj.updateDynamic("transformOrigin")(transformOrigin.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateAnimationOption]
   }
+  @scala.inline
+  implicit class CreateAnimationOptionOps[Self <: CreateAnimationOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimingFunction(value: linear | ease | `ease-in` | `ease-in-out` | `ease-out` | `step-start` | `step-end`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timingFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimingFunction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timingFunction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransformOrigin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransformOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformOrigin")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

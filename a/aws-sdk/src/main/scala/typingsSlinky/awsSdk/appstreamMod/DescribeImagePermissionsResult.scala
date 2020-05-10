@@ -22,16 +22,53 @@ trait DescribeImagePermissionsResult extends js.Object {
 
 object DescribeImagePermissionsResult {
   @scala.inline
-  def apply(
-    Name: Name = null,
-    NextToken: String = null,
-    SharedImagePermissionsList: SharedImagePermissionsList = null
-  ): DescribeImagePermissionsResult = {
+  def apply(): DescribeImagePermissionsResult = {
     val __obj = js.Dynamic.literal()
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (SharedImagePermissionsList != null) __obj.updateDynamic("SharedImagePermissionsList")(SharedImagePermissionsList.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeImagePermissionsResult]
   }
+  @scala.inline
+  implicit class DescribeImagePermissionsResultOps[Self <: DescribeImagePermissionsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSharedImagePermissionsList(value: SharedImagePermissionsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedImagePermissionsList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSharedImagePermissionsList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedImagePermissionsList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

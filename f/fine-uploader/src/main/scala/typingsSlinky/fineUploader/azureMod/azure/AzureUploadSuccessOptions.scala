@@ -4,25 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AzureUploadSuccessOptions extends js.Object {
   /**
     * Additional headers sent along with each signature request
     *
     * @default `{}`
     */
-  var customHeaders: js.UndefOr[js.Any] = js.undefined
+  var customHeaders: js.UndefOr[js.Any] = js.native
   /**
     * An endpoint that Fine Uploader should POST to when a file has been successfully uploaded to Azure Blob Storage.
     *
     * @default `null`
     */
-  var endpoint: js.UndefOr[String] = js.undefined
+  var endpoint: js.UndefOr[String] = js.native
   /**
     * The request method (i.e. POST/PUT)
     *
     * @default `POST`
     */
-  var method: js.UndefOr[String] = js.undefined
+  var method: js.UndefOr[String] = js.native
   /**
     * Any additional parameters to attach to upload success file requests.
     *
@@ -31,23 +32,70 @@ trait AzureUploadSuccessOptions extends js.Object {
     *
     * @default `{}`
     */
-  var params: js.UndefOr[js.Any] = js.undefined
+  var params: js.UndefOr[js.Any] = js.native
 }
 
 object AzureUploadSuccessOptions {
   @scala.inline
-  def apply(
-    customHeaders: js.Any = null,
-    endpoint: String = null,
-    method: String = null,
-    params: js.Any = null
-  ): AzureUploadSuccessOptions = {
+  def apply(): AzureUploadSuccessOptions = {
     val __obj = js.Dynamic.literal()
-    if (customHeaders != null) __obj.updateDynamic("customHeaders")(customHeaders.asInstanceOf[js.Any])
-    if (endpoint != null) __obj.updateDynamic("endpoint")(endpoint.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
     __obj.asInstanceOf[AzureUploadSuccessOptions]
   }
+  @scala.inline
+  implicit class AzureUploadSuccessOptionsOps[Self <: AzureUploadSuccessOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomHeaders(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParams(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

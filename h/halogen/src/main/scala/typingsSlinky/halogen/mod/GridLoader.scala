@@ -1,13 +1,12 @@
 package typingsSlinky.halogen.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("halogen", "GridLoader")
 @js.native
-object GridLoader extends TopLevel[ComponentClass[MarginLoaderProps[String], ComponentState]]
+object GridLoader extends TopLevel[ReactComponentClass[MarginLoaderProps[String]]]
 

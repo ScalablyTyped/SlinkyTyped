@@ -24,22 +24,5 @@ class ContactCls protected () extends Contact {
     categories: js.UndefOr[ContactField],
     urls: js.UndefOr[js.Array[ContactField]]
   ) = this()
-  /**
-    * Removes the contact from the device contacts database, otherwise executes an error callback with a ContactError object.
-    * @param onSuccess Success callback function invoked on success operation.
-    * @param onError Error callback function, invoked when an error occurs.
-    */
-  /* CompleteClass */
-  override def remove(onSuccess: js.Function0[Unit], onError: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
-  /**
-    * Saves a new contact to the device contacts database, or updates an existing contact if a contact with the same id already exists.
-    * @param onSuccess Success callback function invoked on success operation with che Contact object.
-    * @param onError Error callback function, invoked when an error occurs.
-    */
-  /* CompleteClass */
-  override def save(
-    onSuccess: js.Function1[/* contact */ this.type, Unit],
-    onError: js.Function1[/* error */ js.Error, Unit]
-  ): Unit = js.native
 }
 

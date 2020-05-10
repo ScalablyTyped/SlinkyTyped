@@ -19,24 +19,22 @@ trait MozFloatEdgeProperty extends js.Object
 
 object MozFloatEdgeProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  def `border-box`: typingsSlinky.csstype.csstypeStrings.`border-box` = this.cast("border-box")
+  def `border-box`: typingsSlinky.csstype.csstypeStrings.`border-box` = "border-box".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`border-box`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `content-box`: typingsSlinky.csstype.csstypeStrings.`content-box` = "content-box".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`content-box`]
   @scala.inline
-  def `content-box`: typingsSlinky.csstype.csstypeStrings.`content-box` = this.cast("content-box")
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def `margin-box`: typingsSlinky.csstype.csstypeStrings.`margin-box` = "margin-box".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`margin-box`]
   @scala.inline
-  def `margin-box`: typingsSlinky.csstype.csstypeStrings.`margin-box` = this.cast("margin-box")
+  def `padding-box`: typingsSlinky.csstype.csstypeStrings.`padding-box` = "padding-box".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`padding-box`]
   @scala.inline
-  def `padding-box`: typingsSlinky.csstype.csstypeStrings.`padding-box` = this.cast("padding-box")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
-  @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
 }
 

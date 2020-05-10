@@ -14,10 +14,29 @@ trait SigninDelegateGroup extends js.Object {
 
 object SigninDelegateGroup {
   @scala.inline
-  def apply(GroupName: NonEmptyString = null): SigninDelegateGroup = {
+  def apply(): SigninDelegateGroup = {
     val __obj = js.Dynamic.literal()
-    if (GroupName != null) __obj.updateDynamic("GroupName")(GroupName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SigninDelegateGroup]
   }
+  @scala.inline
+  implicit class SigninDelegateGroupOps[Self <: SigninDelegateGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroupName(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

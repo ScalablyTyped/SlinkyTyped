@@ -8,73 +8,212 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MlFindFileStructure[T] extends Generic {
-  var body: T
-  var charset: js.UndefOr[String] = js.undefined
-  var column_names: js.UndefOr[String | js.Array[String]] = js.undefined
-  var delimiter: js.UndefOr[String] = js.undefined
-  var explain: js.UndefOr[Boolean] = js.undefined
-  var format: js.UndefOr[ndjson | xml | delimited | semi_structured_text] = js.undefined
-  var grok_pattern: js.UndefOr[String] = js.undefined
-  var has_header_row: js.UndefOr[Boolean] = js.undefined
-  var line_merge_size_limit: js.UndefOr[Double] = js.undefined
-  var lines_to_sample: js.UndefOr[Double] = js.undefined
-  var quote: js.UndefOr[String] = js.undefined
-  var should_trim_fields: js.UndefOr[Boolean] = js.undefined
-  var timeout: js.UndefOr[String] = js.undefined
-  var timestamp_field: js.UndefOr[String] = js.undefined
-  var timestamp_format: js.UndefOr[String] = js.undefined
+  var body: T = js.native
+  var charset: js.UndefOr[String] = js.native
+  var column_names: js.UndefOr[String | js.Array[String]] = js.native
+  var delimiter: js.UndefOr[String] = js.native
+  var explain: js.UndefOr[Boolean] = js.native
+  var format: js.UndefOr[ndjson | xml | delimited | semi_structured_text] = js.native
+  var grok_pattern: js.UndefOr[String] = js.native
+  var has_header_row: js.UndefOr[Boolean] = js.native
+  var line_merge_size_limit: js.UndefOr[Double] = js.native
+  var lines_to_sample: js.UndefOr[Double] = js.native
+  var quote: js.UndefOr[String] = js.native
+  var should_trim_fields: js.UndefOr[Boolean] = js.native
+  var timeout: js.UndefOr[String] = js.native
+  var timestamp_field: js.UndefOr[String] = js.native
+  var timestamp_format: js.UndefOr[String] = js.native
 }
 
 object MlFindFileStructure {
   @scala.inline
-  def apply[T](
-    body: T,
-    charset: String = null,
-    column_names: String | js.Array[String] = null,
-    delimiter: String = null,
-    error_trace: js.UndefOr[Boolean] = js.undefined,
-    explain: js.UndefOr[Boolean] = js.undefined,
-    filter_path: String | js.Array[String] = null,
-    format: ndjson | xml | delimited | semi_structured_text = null,
-    grok_pattern: String = null,
-    has_header_row: js.UndefOr[Boolean] = js.undefined,
-    human: js.UndefOr[Boolean] = js.undefined,
-    ignore: Double | js.Array[Double] = null,
-    line_merge_size_limit: Int | Double = null,
-    lines_to_sample: Int | Double = null,
-    method: String = null,
-    pretty: js.UndefOr[Boolean] = js.undefined,
-    quote: String = null,
-    should_trim_fields: js.UndefOr[Boolean] = js.undefined,
-    source: String = null,
-    timeout: String = null,
-    timestamp_field: String = null,
-    timestamp_format: String = null
-  ): MlFindFileStructure[T] = {
+  def apply[T](body: T): MlFindFileStructure[T] = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
-    if (charset != null) __obj.updateDynamic("charset")(charset.asInstanceOf[js.Any])
-    if (column_names != null) __obj.updateDynamic("column_names")(column_names.asInstanceOf[js.Any])
-    if (delimiter != null) __obj.updateDynamic("delimiter")(delimiter.asInstanceOf[js.Any])
-    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.asInstanceOf[js.Any])
-    if (!js.isUndefined(explain)) __obj.updateDynamic("explain")(explain.asInstanceOf[js.Any])
-    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (grok_pattern != null) __obj.updateDynamic("grok_pattern")(grok_pattern.asInstanceOf[js.Any])
-    if (!js.isUndefined(has_header_row)) __obj.updateDynamic("has_header_row")(has_header_row.asInstanceOf[js.Any])
-    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.asInstanceOf[js.Any])
-    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
-    if (line_merge_size_limit != null) __obj.updateDynamic("line_merge_size_limit")(line_merge_size_limit.asInstanceOf[js.Any])
-    if (lines_to_sample != null) __obj.updateDynamic("lines_to_sample")(lines_to_sample.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.asInstanceOf[js.Any])
-    if (quote != null) __obj.updateDynamic("quote")(quote.asInstanceOf[js.Any])
-    if (!js.isUndefined(should_trim_fields)) __obj.updateDynamic("should_trim_fields")(should_trim_fields.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (timestamp_field != null) __obj.updateDynamic("timestamp_field")(timestamp_field.asInstanceOf[js.Any])
-    if (timestamp_format != null) __obj.updateDynamic("timestamp_format")(timestamp_format.asInstanceOf[js.Any])
     __obj.asInstanceOf[MlFindFileStructure[T]]
   }
+  @scala.inline
+  implicit class MlFindFileStructureOps[Self[t] <: MlFindFileStructure[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withBody(value: T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCharset(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCharset: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumn_names(value: String | js.Array[String]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("column_names")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumn_names: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("column_names")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelimiter(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelimiter: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExplain(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("explain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExplain: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("explain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: ndjson | xml | delimited | semi_structured_text): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrok_pattern(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grok_pattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrok_pattern: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grok_pattern")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHas_header_row(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("has_header_row")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHas_header_row: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("has_header_row")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLine_merge_size_limit(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line_merge_size_limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLine_merge_size_limit: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line_merge_size_limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLines_to_sample(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lines_to_sample")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLines_to_sample: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lines_to_sample")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuote(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuote: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quote")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShould_trim_fields(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("should_trim_fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShould_trim_fields: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("should_trim_fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestamp_field(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp_field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestamp_field: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp_field")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestamp_format(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp_format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestamp_format: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp_format")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

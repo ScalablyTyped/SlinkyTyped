@@ -2,10 +2,10 @@ package typingsSlinky.easeljs.createjs
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.WebGLProgram
 import org.scalajs.dom.raw.WebGLRenderingContext
 import org.scalajs.dom.raw.WebGLTexture
-import typingsSlinky.std.HTMLImageElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,9 +35,9 @@ class StageGL protected () extends Stage {
   def purgeTextures(): Unit = js.native
   def purgeTextures(count: Double): Unit = js.native
   def releaseTexture(item: DisplayObject): Unit = js.native
-  def releaseTexture(item: typingsSlinky.std.HTMLCanvasElement): Unit = js.native
+  def releaseTexture(item: HTMLCanvasElement): Unit = js.native
   def releaseTexture(item: HTMLImageElement): Unit = js.native
-  def releaseTexture(item: typingsSlinky.std.WebGLTexture): Unit = js.native
+  def releaseTexture(item: WebGLTexture): Unit = js.native
   def setTextureParams(gl: WebGLRenderingContext): Unit = js.native
   def setTextureParams(gl: WebGLRenderingContext, isPOT: Boolean): Unit = js.native
   def updateSimultaneousTextureCount(): Unit = js.native
@@ -51,10 +51,10 @@ class StageGL protected () extends Stage {
 object StageGL extends js.Object {
   var COVER_FRAGMENT_BODY: String = js.native
   var COVER_FRAGMENT_HEADER: String = js.native
-  var COVER_UV: scala.scalajs.js.typedarray.Float32Array = js.native
-  var COVER_UV_FLIP: scala.scalajs.js.typedarray.Float32Array = js.native
+  var COVER_UV: js.typedarray.Float32Array = js.native
+  var COVER_UV_FLIP: js.typedarray.Float32Array = js.native
   var COVER_VARYING_HEADER: String = js.native
-  var COVER_VERT: scala.scalajs.js.typedarray.Float32Array = js.native
+  var COVER_VERT: js.typedarray.Float32Array = js.native
   var COVER_VERTEX_BODY: String = js.native
   var COVER_VERTEX_HEADER: String = js.native
   var DEFAULT_MAX_BATCH_SIZE: Double = js.native

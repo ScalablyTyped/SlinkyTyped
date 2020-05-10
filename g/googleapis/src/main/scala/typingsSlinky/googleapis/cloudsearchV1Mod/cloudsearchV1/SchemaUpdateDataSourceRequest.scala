@@ -15,11 +15,41 @@ trait SchemaUpdateDataSourceRequest extends js.Object {
 
 object SchemaUpdateDataSourceRequest {
   @scala.inline
-  def apply(debugOptions: SchemaDebugOptions = null, source: SchemaDataSource = null): SchemaUpdateDataSourceRequest = {
+  def apply(): SchemaUpdateDataSourceRequest = {
     val __obj = js.Dynamic.literal()
-    if (debugOptions != null) __obj.updateDynamic("debugOptions")(debugOptions.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateDataSourceRequest]
   }
+  @scala.inline
+  implicit class SchemaUpdateDataSourceRequestOps[Self <: SchemaUpdateDataSourceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDebugOptions(value: SchemaDebugOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: SchemaDataSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

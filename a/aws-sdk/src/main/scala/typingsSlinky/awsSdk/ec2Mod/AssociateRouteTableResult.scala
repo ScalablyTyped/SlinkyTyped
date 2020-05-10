@@ -18,11 +18,41 @@ trait AssociateRouteTableResult extends js.Object {
 
 object AssociateRouteTableResult {
   @scala.inline
-  def apply(AssociationId: String = null, AssociationState: RouteTableAssociationState = null): AssociateRouteTableResult = {
+  def apply(): AssociateRouteTableResult = {
     val __obj = js.Dynamic.literal()
-    if (AssociationId != null) __obj.updateDynamic("AssociationId")(AssociationId.asInstanceOf[js.Any])
-    if (AssociationState != null) __obj.updateDynamic("AssociationState")(AssociationState.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociateRouteTableResult]
   }
+  @scala.inline
+  implicit class AssociateRouteTableResultOps[Self <: AssociateRouteTableResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssociationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAssociationState(value: RouteTableAssociationState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociationState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationState")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

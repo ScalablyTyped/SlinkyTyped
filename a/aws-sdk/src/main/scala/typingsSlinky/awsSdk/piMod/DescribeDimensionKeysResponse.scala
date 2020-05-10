@@ -30,20 +30,77 @@ trait DescribeDimensionKeysResponse extends js.Object {
 
 object DescribeDimensionKeysResponse {
   @scala.inline
-  def apply(
-    AlignedEndTime: js.Date = null,
-    AlignedStartTime: js.Date = null,
-    Keys: DimensionKeyDescriptionList = null,
-    NextToken: String = null,
-    PartitionKeys: ResponsePartitionKeyList = null
-  ): DescribeDimensionKeysResponse = {
+  def apply(): DescribeDimensionKeysResponse = {
     val __obj = js.Dynamic.literal()
-    if (AlignedEndTime != null) __obj.updateDynamic("AlignedEndTime")(AlignedEndTime.asInstanceOf[js.Any])
-    if (AlignedStartTime != null) __obj.updateDynamic("AlignedStartTime")(AlignedStartTime.asInstanceOf[js.Any])
-    if (Keys != null) __obj.updateDynamic("Keys")(Keys.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (PartitionKeys != null) __obj.updateDynamic("PartitionKeys")(PartitionKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDimensionKeysResponse]
   }
+  @scala.inline
+  implicit class DescribeDimensionKeysResponseOps[Self <: DescribeDimensionKeysResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlignedEndTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlignedEndTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignedEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlignedEndTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlignedStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlignedStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignedStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlignedStartTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeys(value: DimensionKeyDescriptionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Keys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Keys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartitionKeys(value: ResponsePartitionKeyList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartitionKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionKeys")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

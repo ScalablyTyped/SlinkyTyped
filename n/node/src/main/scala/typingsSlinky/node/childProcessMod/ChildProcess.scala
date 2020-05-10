@@ -10,7 +10,6 @@ import typingsSlinky.node.nodeStrings.message
 import typingsSlinky.node.streamMod.Pipe
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Writable
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -118,12 +117,12 @@ trait ChildProcess extends EventEmitter {
   ): this.type = js.native
   def ref(): Unit = js.native
   def send(message: Serializable): Boolean = js.native
-  def send(message: Serializable, callback: js.Function1[/* error */ Error | Null, Unit]): Boolean = js.native
+  def send(message: Serializable, callback: js.Function1[/* error */ js.Error | Null, Unit]): Boolean = js.native
   def send(message: Serializable, sendHandle: SendHandle): Boolean = js.native
   def send(
     message: Serializable,
     sendHandle: SendHandle,
-    callback: js.Function1[/* error */ Error | Null, Unit]
+    callback: js.Function1[/* error */ js.Error | Null, Unit]
   ): Boolean = js.native
   def send(message: Serializable, sendHandle: SendHandle, options: MessageOptions): Boolean = js.native
   def send(

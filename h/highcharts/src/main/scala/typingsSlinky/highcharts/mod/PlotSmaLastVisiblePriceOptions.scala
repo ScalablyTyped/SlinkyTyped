@@ -4,21 +4,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotSmaLastVisiblePriceOptions extends js.Object {
   /**
     * (Highstock) Enable or disable the indicator.
     */
-  var enabled: js.UndefOr[Boolean] = js.undefined
-  var label: js.UndefOr[PlotSmaLastVisiblePriceLabelOptions] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.native
+  var label: js.UndefOr[PlotSmaLastVisiblePriceLabelOptions] = js.native
 }
 
 object PlotSmaLastVisiblePriceOptions {
   @scala.inline
-  def apply(enabled: js.UndefOr[Boolean] = js.undefined, label: PlotSmaLastVisiblePriceLabelOptions = null): PlotSmaLastVisiblePriceOptions = {
+  def apply(): PlotSmaLastVisiblePriceOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotSmaLastVisiblePriceOptions]
   }
+  @scala.inline
+  implicit class PlotSmaLastVisiblePriceOptionsOps[Self <: PlotSmaLastVisiblePriceOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: PlotSmaLastVisiblePriceLabelOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

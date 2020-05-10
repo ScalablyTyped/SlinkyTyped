@@ -1,10 +1,7 @@
 package typingsSlinky.protonNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.protonNative.AnonH
 import typingsSlinky.protonNative.AnonX
 import typingsSlinky.protonNative.mod.TabProps
@@ -12,35 +9,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tab
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.protonNative.mod.Tab] {
+object Tab {
   @JSImport("proton-native", "Tab")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    align: AnonH = null,
-    column: Int | Double = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    expand: AnonH = null,
-    row: Int | Double = null,
-    span: AnonX = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.protonNative.mod.Tab] = {
-    val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
-    if (row != null) __obj.updateDynamic("row")(row.asInstanceOf[js.Any])
-    if (span != null) __obj.updateDynamic("span")(span.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.protonNative.mod.Tab] {
+    @scala.inline
+    def align(value: AnonH): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def column(value: Double): this.type = set("column", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enabled(value: Boolean): this.type = set("enabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expand(value: AnonH): this.type = set("expand", value.asInstanceOf[js.Any])
+    @scala.inline
+    def row(value: Double): this.type = set("row", value.asInstanceOf[js.Any])
+    @scala.inline
+    def span(value: AnonX): this.type = set("span", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.protonNative.mod.Tab] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.protonNative.mod.Tab](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TabProps
+  
+  def withProps(p: TabProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Tab.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

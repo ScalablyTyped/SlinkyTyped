@@ -16,18 +16,16 @@ trait HttpMethod extends js.Object
 
 object HttpMethod {
   @scala.inline
-  def DELETE: typingsSlinky.puppeteer.puppeteerStrings.DELETE = this.cast("DELETE")
+  def DELETE: typingsSlinky.puppeteer.puppeteerStrings.DELETE = "DELETE".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.DELETE]
   @scala.inline
-  def GET: typingsSlinky.puppeteer.puppeteerStrings.GET = this.cast("GET")
+  def GET: typingsSlinky.puppeteer.puppeteerStrings.GET = "GET".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.GET]
   @scala.inline
-  def OPTIONS: typingsSlinky.puppeteer.puppeteerStrings.OPTIONS = this.cast("OPTIONS")
+  def OPTIONS: typingsSlinky.puppeteer.puppeteerStrings.OPTIONS = "OPTIONS".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.OPTIONS]
   @scala.inline
-  def PATCH: typingsSlinky.puppeteer.puppeteerStrings.PATCH = this.cast("PATCH")
+  def PATCH: typingsSlinky.puppeteer.puppeteerStrings.PATCH = "PATCH".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.PATCH]
   @scala.inline
-  def POST: typingsSlinky.puppeteer.puppeteerStrings.POST = this.cast("POST")
+  def POST: typingsSlinky.puppeteer.puppeteerStrings.POST = "POST".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.POST]
   @scala.inline
-  def PUT: typingsSlinky.puppeteer.puppeteerStrings.PUT = this.cast("PUT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def PUT: typingsSlinky.puppeteer.puppeteerStrings.PUT = "PUT".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.PUT]
 }
 

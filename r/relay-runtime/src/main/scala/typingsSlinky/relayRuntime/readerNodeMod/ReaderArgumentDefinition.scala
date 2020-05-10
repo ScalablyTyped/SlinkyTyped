@@ -18,9 +18,8 @@ object ReaderArgumentDefinition {
     __obj.asInstanceOf[ReaderArgumentDefinition]
   }
   @scala.inline
-  def ReaderRootArgument(kind: String, name: String, `type`: String = null): ReaderArgumentDefinition = {
+  def ReaderRootArgument(kind: String, name: String): ReaderArgumentDefinition = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReaderArgumentDefinition]
   }
 }

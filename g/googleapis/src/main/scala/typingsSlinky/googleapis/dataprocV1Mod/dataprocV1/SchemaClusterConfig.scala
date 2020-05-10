@@ -62,26 +62,113 @@ trait SchemaClusterConfig extends js.Object {
 
 object SchemaClusterConfig {
   @scala.inline
-  def apply(
-    configBucket: String = null,
-    encryptionConfig: SchemaEncryptionConfig = null,
-    gceClusterConfig: SchemaGceClusterConfig = null,
-    initializationActions: js.Array[SchemaNodeInitializationAction] = null,
-    masterConfig: SchemaInstanceGroupConfig = null,
-    secondaryWorkerConfig: SchemaInstanceGroupConfig = null,
-    softwareConfig: SchemaSoftwareConfig = null,
-    workerConfig: SchemaInstanceGroupConfig = null
-  ): SchemaClusterConfig = {
+  def apply(): SchemaClusterConfig = {
     val __obj = js.Dynamic.literal()
-    if (configBucket != null) __obj.updateDynamic("configBucket")(configBucket.asInstanceOf[js.Any])
-    if (encryptionConfig != null) __obj.updateDynamic("encryptionConfig")(encryptionConfig.asInstanceOf[js.Any])
-    if (gceClusterConfig != null) __obj.updateDynamic("gceClusterConfig")(gceClusterConfig.asInstanceOf[js.Any])
-    if (initializationActions != null) __obj.updateDynamic("initializationActions")(initializationActions.asInstanceOf[js.Any])
-    if (masterConfig != null) __obj.updateDynamic("masterConfig")(masterConfig.asInstanceOf[js.Any])
-    if (secondaryWorkerConfig != null) __obj.updateDynamic("secondaryWorkerConfig")(secondaryWorkerConfig.asInstanceOf[js.Any])
-    if (softwareConfig != null) __obj.updateDynamic("softwareConfig")(softwareConfig.asInstanceOf[js.Any])
-    if (workerConfig != null) __obj.updateDynamic("workerConfig")(workerConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaClusterConfig]
   }
+  @scala.inline
+  implicit class SchemaClusterConfigOps[Self <: SchemaClusterConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigBucket(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configBucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigBucket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configBucket")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptionConfig(value: SchemaEncryptionConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGceClusterConfig(value: SchemaGceClusterConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gceClusterConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGceClusterConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gceClusterConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitializationActions(value: js.Array[SchemaNodeInitializationAction]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initializationActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitializationActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initializationActions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterConfig(value: SchemaInstanceGroupConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecondaryWorkerConfig(value: SchemaInstanceGroupConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryWorkerConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecondaryWorkerConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryWorkerConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSoftwareConfig(value: SchemaSoftwareConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("softwareConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSoftwareConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("softwareConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerConfig(value: SchemaInstanceGroupConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

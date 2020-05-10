@@ -4,45 +4,103 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ApplicationTabBackstageSettings extends js.Object {
   /** Specifies the width of backstage page header that contains tabs and buttons.
     * @Default {null}
     */
-  var headerWidth: js.UndefOr[String | Double] = js.undefined
+  var headerWidth: js.UndefOr[String | Double] = js.native
   /** Specifies the height of ribbon backstage page.
     * @Default {null}
     */
-  var height: js.UndefOr[String | Double] = js.undefined
+  var height: js.UndefOr[String | Double] = js.native
   /** Specifies the ribbon backstage page with its tab and button elements.
     * @Default {Array}
     */
-  var pages: js.UndefOr[js.Array[ApplicationTabBackstageSettingsPage]] = js.undefined
+  var pages: js.UndefOr[js.Array[ApplicationTabBackstageSettingsPage]] = js.native
   /** Specifies the display text of application tab.
     * @Default {null}
     */
-  var text: js.UndefOr[String] = js.undefined
+  var text: js.UndefOr[String] = js.native
   /** Specifies the width of ribbon backstage page.
     * @Default {null}
     */
-  var width: js.UndefOr[String | Double] = js.undefined
+  var width: js.UndefOr[String | Double] = js.native
 }
 
 object ApplicationTabBackstageSettings {
   @scala.inline
-  def apply(
-    headerWidth: String | Double = null,
-    height: String | Double = null,
-    pages: js.Array[ApplicationTabBackstageSettingsPage] = null,
-    text: String = null,
-    width: String | Double = null
-  ): ApplicationTabBackstageSettings = {
+  def apply(): ApplicationTabBackstageSettings = {
     val __obj = js.Dynamic.literal()
-    if (headerWidth != null) __obj.updateDynamic("headerWidth")(headerWidth.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (pages != null) __obj.updateDynamic("pages")(pages.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationTabBackstageSettings]
   }
+  @scala.inline
+  implicit class ApplicationTabBackstageSettingsOps[Self <: ApplicationTabBackstageSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeaderWidth(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPages(value: js.Array[ApplicationTabBackstageSettingsPage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

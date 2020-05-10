@@ -1,7 +1,5 @@
 package typingsSlinky.antdMobileRn.progressIndexNativeMod
 
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.fixed
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.normal
 import typingsSlinky.antdMobileRn.progressPropsTypeMod.ProgressPropsType
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -9,35 +7,87 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ProgressProps extends ProgressPropsType {
-  var barStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  var styles: js.UndefOr[js.Any] = js.undefined
-  var wrapWidth: js.UndefOr[Double] = js.undefined
+  var barStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var styles: js.UndefOr[js.Any] = js.native
+  var wrapWidth: js.UndefOr[Double] = js.native
 }
 
 object ProgressProps {
   @scala.inline
-  def apply(
-    appearTransition: js.UndefOr[Boolean] = js.undefined,
-    barStyle: StyleProp[ViewStyle] = null,
-    percent: Int | Double = null,
-    position: fixed | normal = null,
-    style: StyleProp[ViewStyle] = null,
-    styles: js.Any = null,
-    unfilled: js.UndefOr[Boolean] = js.undefined,
-    wrapWidth: Int | Double = null
-  ): ProgressProps = {
+  def apply(): ProgressProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(appearTransition)) __obj.updateDynamic("appearTransition")(appearTransition.asInstanceOf[js.Any])
-    if (barStyle != null) __obj.updateDynamic("barStyle")(barStyle.asInstanceOf[js.Any])
-    if (percent != null) __obj.updateDynamic("percent")(percent.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (!js.isUndefined(unfilled)) __obj.updateDynamic("unfilled")(unfilled.asInstanceOf[js.Any])
-    if (wrapWidth != null) __obj.updateDynamic("wrapWidth")(wrapWidth.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProgressProps]
   }
+  @scala.inline
+  implicit class ProgressPropsOps[Self <: ProgressProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBarStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
+        ret
+    }
+    @scala.inline
+    def withStyles(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrapWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrapWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapWidth")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

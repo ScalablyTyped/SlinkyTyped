@@ -19,7 +19,7 @@ object referenceMod extends js.Object {
     /**
       * Gets or sets the digest value of the current Reference.
       */
-    var DigestValue: scala.scalajs.js.typedarray.Uint8Array = js.native
+    var DigestValue: js.typedarray.Uint8Array = js.native
     /**
       * Gets or sets the ID of the current Reference.
       */

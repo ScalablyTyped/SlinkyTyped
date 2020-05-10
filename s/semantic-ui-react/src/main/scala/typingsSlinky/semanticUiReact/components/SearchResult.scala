@@ -1,12 +1,10 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.searchResultMod.SearchResultProps
 import typingsSlinky.semanticUiReact.searchResultMod.default
@@ -14,40 +12,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SearchResult
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object SearchResult {
   @JSImport("semantic-ui-react/dist/commonjs/modules/Search/SearchResult", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    title: String,
-    active: js.UndefOr[Boolean] = js.undefined,
-    as: js.Any = null,
-    content: SemanticShorthandContent = null,
-    description: String = null,
-    id: Double | String = null,
-    image: String = null,
-    onClick: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ SearchResultProps) => Unit = null,
-    price: String = null,
-    renderer: /* props */ SearchResultProps => js.Array[ReactElement] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (price != null) __obj.updateDynamic("price")(price.asInstanceOf[js.Any])
-    if (renderer != null) __obj.updateDynamic("renderer")(js.Any.fromFunction1(renderer))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def description(value: String): this.type = set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: Double | String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def image(value: String): this.type = set("image", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ SearchResultProps) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def price(value: String): this.type = set("price", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderer(value: /* props */ SearchResultProps => js.Array[ReactElement]): this.type = set("renderer", js.Any.fromFunction1(value))
   }
-  type Props = SearchResultProps
+  
+  def withProps(p: SearchResultProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(title: String): Builder = {
+    val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SearchResultProps]))
+  }
 }
 

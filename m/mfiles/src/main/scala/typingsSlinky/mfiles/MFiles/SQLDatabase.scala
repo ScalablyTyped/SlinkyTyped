@@ -1,7 +1,6 @@
 package typingsSlinky.mfiles.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.mfiles.IImpersonation
 import typingsSlinky.mfiles.ISQLDatabase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,20 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.SQLDatabase")
 @js.native
-class SQLDatabase () extends ISQLDatabase {
-  /* CompleteClass */
-  override var AdminUser: IImpersonation = js.native
-  /* CompleteClass */
-  override var BasicUser: IImpersonation = js.native
-  /* CompleteClass */
-  override var Engine: MFDBEngine = js.native
-  /* CompleteClass */
-  override var Name: String = js.native
-  /* CompleteClass */
-  override var Server: String = js.native
-  /* CompleteClass */
-  override def Clone(): ISQLDatabase = js.native
-}
+class SQLDatabase () extends ISQLDatabase
 
 @JSGlobal("MFiles.SQLDatabase")
 @js.native

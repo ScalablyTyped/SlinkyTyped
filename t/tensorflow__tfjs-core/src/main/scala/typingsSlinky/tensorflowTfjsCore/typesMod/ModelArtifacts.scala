@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ModelArtifacts extends js.Object {
   /**
     * What library or tool is responsible for converting the original model
@@ -15,18 +16,18 @@ trait ModelArtifacts extends js.Object {
     * conversion process (e.g., saved directly from a TensorFlow.js
     * `tf.LayersModel` instance.)
     */
-  var convertedBy: js.UndefOr[String | Null] = js.undefined
+  var convertedBy: js.UndefOr[String | Null] = js.native
   /**
     * Hard-coded format name for models saved from TensorFlow.js or converted
     * by TensorFlow.js Converter.
     */
-  var format: js.UndefOr[String] = js.undefined
+  var format: js.UndefOr[String] = js.native
   /**
     * What library is responsible for originally generating this artifact.
     *
     * Used for debugging purposes. E.g., 'TensorFlow.js v1.0.0'.
     */
-  var generatedBy: js.UndefOr[String] = js.undefined
+  var generatedBy: js.UndefOr[String] = js.native
   /**
     * Model topology.
     *
@@ -34,50 +35,149 @@ trait ModelArtifacts extends js.Object {
     * For TensorFlow-style models (e.g., `SavedModel`), this is the JSON
     * encoding of the `GraphDef` protocol buffer.
     */
-  var modelTopology: js.UndefOr[js.Object | scala.scalajs.js.typedarray.ArrayBuffer] = js.undefined
+  var modelTopology: js.UndefOr[js.Object | js.typedarray.ArrayBuffer] = js.native
   /**
     * Serialized configuration for the model's training.
     */
-  var trainingConfig: js.UndefOr[TrainingConfig] = js.undefined
+  var trainingConfig: js.UndefOr[TrainingConfig] = js.native
   /**
     * User-defined metadata about the model.
     */
-  var userDefinedMetadata: js.UndefOr[js.Object] = js.undefined
+  var userDefinedMetadata: js.UndefOr[js.Object] = js.native
   /**
     * Binary buffer for all weight values concatenated in the order specified
     * by `weightSpecs`.
     */
-  var weightData: js.UndefOr[scala.scalajs.js.typedarray.ArrayBuffer] = js.undefined
+  var weightData: js.UndefOr[js.typedarray.ArrayBuffer] = js.native
   /**
     * Weight specifications.
     *
     * This corresponds to the weightsData below.
     */
-  var weightSpecs: js.UndefOr[js.Array[WeightsManifestEntry]] = js.undefined
+  var weightSpecs: js.UndefOr[js.Array[WeightsManifestEntry]] = js.native
 }
 
 object ModelArtifacts {
   @scala.inline
-  def apply(
-    convertedBy: String = null,
-    format: String = null,
-    generatedBy: String = null,
-    modelTopology: js.Object | scala.scalajs.js.typedarray.ArrayBuffer = null,
-    trainingConfig: TrainingConfig = null,
-    userDefinedMetadata: js.Object = null,
-    weightData: scala.scalajs.js.typedarray.ArrayBuffer = null,
-    weightSpecs: js.Array[WeightsManifestEntry] = null
-  ): ModelArtifacts = {
+  def apply(): ModelArtifacts = {
     val __obj = js.Dynamic.literal()
-    if (convertedBy != null) __obj.updateDynamic("convertedBy")(convertedBy.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (generatedBy != null) __obj.updateDynamic("generatedBy")(generatedBy.asInstanceOf[js.Any])
-    if (modelTopology != null) __obj.updateDynamic("modelTopology")(modelTopology.asInstanceOf[js.Any])
-    if (trainingConfig != null) __obj.updateDynamic("trainingConfig")(trainingConfig.asInstanceOf[js.Any])
-    if (userDefinedMetadata != null) __obj.updateDynamic("userDefinedMetadata")(userDefinedMetadata.asInstanceOf[js.Any])
-    if (weightData != null) __obj.updateDynamic("weightData")(weightData.asInstanceOf[js.Any])
-    if (weightSpecs != null) __obj.updateDynamic("weightSpecs")(weightSpecs.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModelArtifacts]
   }
+  @scala.inline
+  implicit class ModelArtifactsOps[Self <: ModelArtifacts] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConvertedBy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertedBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConvertedBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertedBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConvertedByNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertedBy")(null)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeneratedBy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generatedBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeneratedBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generatedBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModelTopologyArrayBuffer(value: js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelTopology")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModelTopology(value: js.Object | js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelTopology")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModelTopology: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelTopology")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrainingConfig(value: TrainingConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrainingConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserDefinedMetadata(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userDefinedMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserDefinedMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userDefinedMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeightData(value: js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weightData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeightData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weightData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeightSpecs(value: js.Array[WeightsManifestEntry]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weightSpecs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeightSpecs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weightSpecs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

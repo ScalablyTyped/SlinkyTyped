@@ -22,12 +22,53 @@ trait PersonDetail extends js.Object {
 
 object PersonDetail {
   @scala.inline
-  def apply(BoundingBox: BoundingBox = null, Face: FaceDetail = null, Index: Int | Double = null): PersonDetail = {
+  def apply(): PersonDetail = {
     val __obj = js.Dynamic.literal()
-    if (BoundingBox != null) __obj.updateDynamic("BoundingBox")(BoundingBox.asInstanceOf[js.Any])
-    if (Face != null) __obj.updateDynamic("Face")(Face.asInstanceOf[js.Any])
-    if (Index != null) __obj.updateDynamic("Index")(Index.asInstanceOf[js.Any])
     __obj.asInstanceOf[PersonDetail]
   }
+  @scala.inline
+  implicit class PersonDetailOps[Self <: PersonDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBoundingBox(value: BoundingBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BoundingBox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoundingBox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BoundingBox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFace(value: FaceDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Face")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Face")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndex(value: PersonIndex): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Index")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

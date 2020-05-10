@@ -5,30 +5,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VideoBandwidthProfileOptions extends js.Object {
-  var dominantSpeakerPriority: js.UndefOr[Priority] = js.undefined
-  var maxSubscriptionBitrate: js.UndefOr[Double] = js.undefined
-  var maxTracks: js.UndefOr[Double] = js.undefined
-  var mode: js.UndefOr[BandwidthProfileMode] = js.undefined
-  var renderDimensions: js.UndefOr[VideoRenderDimensions] = js.undefined
+  var dominantSpeakerPriority: js.UndefOr[Priority] = js.native
+  var maxSubscriptionBitrate: js.UndefOr[Double] = js.native
+  var maxTracks: js.UndefOr[Double] = js.native
+  var mode: js.UndefOr[BandwidthProfileMode] = js.native
+  var renderDimensions: js.UndefOr[VideoRenderDimensions] = js.native
 }
 
 object VideoBandwidthProfileOptions {
   @scala.inline
-  def apply(
-    dominantSpeakerPriority: Priority = null,
-    maxSubscriptionBitrate: Int | Double = null,
-    maxTracks: Int | Double = null,
-    mode: BandwidthProfileMode = null,
-    renderDimensions: VideoRenderDimensions = null
-  ): VideoBandwidthProfileOptions = {
+  def apply(): VideoBandwidthProfileOptions = {
     val __obj = js.Dynamic.literal()
-    if (dominantSpeakerPriority != null) __obj.updateDynamic("dominantSpeakerPriority")(dominantSpeakerPriority.asInstanceOf[js.Any])
-    if (maxSubscriptionBitrate != null) __obj.updateDynamic("maxSubscriptionBitrate")(maxSubscriptionBitrate.asInstanceOf[js.Any])
-    if (maxTracks != null) __obj.updateDynamic("maxTracks")(maxTracks.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (renderDimensions != null) __obj.updateDynamic("renderDimensions")(renderDimensions.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoBandwidthProfileOptions]
   }
+  @scala.inline
+  implicit class VideoBandwidthProfileOptionsOps[Self <: VideoBandwidthProfileOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDominantSpeakerPriority(value: Priority): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dominantSpeakerPriority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDominantSpeakerPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dominantSpeakerPriority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSubscriptionBitrate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSubscriptionBitrate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSubscriptionBitrate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSubscriptionBitrate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxTracks(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTracks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxTracks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTracks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: BandwidthProfileMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderDimensions(value: VideoRenderDimensions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderDimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenderDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderDimensions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

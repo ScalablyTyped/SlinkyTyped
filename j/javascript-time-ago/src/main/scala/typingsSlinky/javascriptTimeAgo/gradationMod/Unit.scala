@@ -18,22 +18,20 @@ trait Unit extends js.Object
 
 object Unit {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def day: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.day = "day".asInstanceOf[typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.day]
   @scala.inline
-  def day: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.day = this.cast("day")
+  def hour: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.hour = "hour".asInstanceOf[typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.hour]
   @scala.inline
-  def hour: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.hour = this.cast("hour")
+  def minute: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.minute = "minute".asInstanceOf[typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.minute]
   @scala.inline
-  def minute: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.minute = this.cast("minute")
+  def month: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.month = "month".asInstanceOf[typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.month]
   @scala.inline
-  def month: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.month = this.cast("month")
+  def now: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.now = "now".asInstanceOf[typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.now]
   @scala.inline
-  def now: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.now = this.cast("now")
+  def second: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.second = "second".asInstanceOf[typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.second]
   @scala.inline
-  def second: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.second = this.cast("second")
+  def week: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.week = "week".asInstanceOf[typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.week]
   @scala.inline
-  def week: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.week = this.cast("week")
-  @scala.inline
-  def year: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.year = this.cast("year")
+  def year: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.year = "year".asInstanceOf[typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.year]
 }
 

@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MaxNormConfig extends js.Object {
-  var axis: js.UndefOr[Double] = js.undefined
-  var max_value: js.UndefOr[Double] = js.undefined
+  var axis: js.UndefOr[Double] = js.native
+  var max_value: js.UndefOr[Double] = js.native
 }
 
 object MaxNormConfig {
   @scala.inline
-  def apply(axis: Int | Double = null, max_value: Int | Double = null): MaxNormConfig = {
+  def apply(): MaxNormConfig = {
     val __obj = js.Dynamic.literal()
-    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
-    if (max_value != null) __obj.updateDynamic("max_value")(max_value.asInstanceOf[js.Any])
     __obj.asInstanceOf[MaxNormConfig]
   }
+  @scala.inline
+  implicit class MaxNormConfigOps[Self <: MaxNormConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAxis(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax_value(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax_value: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

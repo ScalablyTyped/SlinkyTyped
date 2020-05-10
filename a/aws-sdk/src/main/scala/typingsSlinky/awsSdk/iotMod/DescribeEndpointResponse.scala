@@ -14,10 +14,29 @@ trait DescribeEndpointResponse extends js.Object {
 
 object DescribeEndpointResponse {
   @scala.inline
-  def apply(endpointAddress: EndpointAddress = null): DescribeEndpointResponse = {
+  def apply(): DescribeEndpointResponse = {
     val __obj = js.Dynamic.literal()
-    if (endpointAddress != null) __obj.updateDynamic("endpointAddress")(endpointAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEndpointResponse]
   }
+  @scala.inline
+  implicit class DescribeEndpointResponseOps[Self <: DescribeEndpointResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndpointAddress(value: EndpointAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpointAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointAddress")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -19,16 +19,53 @@ trait ListAssignmentsForHITResponse extends js.Object {
 
 object ListAssignmentsForHITResponse {
   @scala.inline
-  def apply(
-    Assignments: AssignmentList = null,
-    NextToken: PaginationToken = null,
-    NumResults: Int | Double = null
-  ): ListAssignmentsForHITResponse = {
+  def apply(): ListAssignmentsForHITResponse = {
     val __obj = js.Dynamic.literal()
-    if (Assignments != null) __obj.updateDynamic("Assignments")(Assignments.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (NumResults != null) __obj.updateDynamic("NumResults")(NumResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListAssignmentsForHITResponse]
   }
+  @scala.inline
+  implicit class ListAssignmentsForHITResponseOps[Self <: ListAssignmentsForHITResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssignments(value: AssignmentList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Assignments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssignments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Assignments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumResults(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumResults")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

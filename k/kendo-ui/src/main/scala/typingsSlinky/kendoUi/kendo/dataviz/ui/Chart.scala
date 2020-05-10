@@ -9,7 +9,6 @@ import typingsSlinky.kendoUi.kendo.dataviz.ChartSeries
 import typingsSlinky.kendoUi.kendo.drawing.PDFOptions
 import typingsSlinky.kendoUi.kendo.drawing.Surface
 import typingsSlinky.kendoUi.kendo.ui.Widget
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,7 +45,7 @@ class Chart protected () extends Widget {
   def showTooltip(filter: String): Unit = js.native
   def showTooltip(filter: js.Function): Unit = js.native
   def showTooltip(filter: Double): Unit = js.native
-  def showTooltip(filter: Date): Unit = js.native
+  def showTooltip(filter: js.Date): Unit = js.native
   def svg(): String = js.native
   def toggleHighlight(show: Boolean, options: js.Any): Unit = js.native
 }

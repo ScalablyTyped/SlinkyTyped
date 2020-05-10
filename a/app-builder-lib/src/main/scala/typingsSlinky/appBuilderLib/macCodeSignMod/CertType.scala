@@ -15,16 +15,14 @@ trait CertType extends js.Object
 
 object CertType {
   @scala.inline
-  def `3rd Party Mac Developer Application`: typingsSlinky.appBuilderLib.appBuilderLibStrings.`3rd Party Mac Developer Application` = this.cast("3rd Party Mac Developer Application")
+  def `3rd Party Mac Developer Application`: typingsSlinky.appBuilderLib.appBuilderLibStrings.`3rd Party Mac Developer Application` = ("3rd Party Mac Developer Application").asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.`3rd Party Mac Developer Application`]
   @scala.inline
-  def `3rd Party Mac Developer Installer`: typingsSlinky.appBuilderLib.appBuilderLibStrings.`3rd Party Mac Developer Installer` = this.cast("3rd Party Mac Developer Installer")
+  def `3rd Party Mac Developer Installer`: typingsSlinky.appBuilderLib.appBuilderLibStrings.`3rd Party Mac Developer Installer` = ("3rd Party Mac Developer Installer").asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.`3rd Party Mac Developer Installer`]
   @scala.inline
-  def `Developer ID Application`: typingsSlinky.appBuilderLib.appBuilderLibStrings.`Developer ID Application` = this.cast("Developer ID Application")
+  def `Developer ID Application`: typingsSlinky.appBuilderLib.appBuilderLibStrings.`Developer ID Application` = ("Developer ID Application").asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.`Developer ID Application`]
   @scala.inline
-  def `Developer ID Installer`: typingsSlinky.appBuilderLib.appBuilderLibStrings.`Developer ID Installer` = this.cast("Developer ID Installer")
+  def `Developer ID Installer`: typingsSlinky.appBuilderLib.appBuilderLibStrings.`Developer ID Installer` = ("Developer ID Installer").asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.`Developer ID Installer`]
   @scala.inline
-  def `Mac Developer`: typingsSlinky.appBuilderLib.appBuilderLibStrings.`Mac Developer` = this.cast("Mac Developer")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `Mac Developer`: typingsSlinky.appBuilderLib.appBuilderLibStrings.`Mac Developer` = ("Mac Developer").asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.`Mac Developer`]
 }
 

@@ -1,29 +1,35 @@
 package typingsSlinky.stripe.mod.customers
 
-import typingsSlinky.stripe.mod.IOptionsMetadata
 import typingsSlinky.stripe.mod.bankAccounts.ISourceCreationOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ICustomerBankAccountSourceCreationOptions extends ICustomerSourceCreationOptions {
   @JSName("source")
-  var source_ICustomerBankAccountSourceCreationOptions: ISourceCreationOptions
+  var source_ICustomerBankAccountSourceCreationOptions: ISourceCreationOptions = js.native
 }
 
 object ICustomerBankAccountSourceCreationOptions {
   @scala.inline
-  def apply(
-    source: ISourceCreationOptions,
-    expand: js.Array[String] = null,
-    include: js.Array[String] = null,
-    metadata: IOptionsMetadata = null
-  ): ICustomerBankAccountSourceCreationOptions = {
+  def apply(source: ISourceCreationOptions): ICustomerBankAccountSourceCreationOptions = {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
-    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
-    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICustomerBankAccountSourceCreationOptions]
   }
+  @scala.inline
+  implicit class ICustomerBankAccountSourceCreationOptionsOps[Self <: ICustomerBankAccountSourceCreationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSource(value: ISourceCreationOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

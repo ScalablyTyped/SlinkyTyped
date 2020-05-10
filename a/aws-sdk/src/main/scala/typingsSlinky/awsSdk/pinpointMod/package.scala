@@ -121,6 +121,7 @@ package object pinpointMod {
   type ListOfJourneyResponse = js.Array[typingsSlinky.awsSdk.pinpointMod.JourneyResponse]
   type ListOfMultiConditionalBranch = js.Array[typingsSlinky.awsSdk.pinpointMod.MultiConditionalBranch]
   type ListOfRandomSplitEntry = js.Array[typingsSlinky.awsSdk.pinpointMod.RandomSplitEntry]
+  type ListOfRecommenderConfigurationResponse = js.Array[typingsSlinky.awsSdk.pinpointMod.RecommenderConfigurationResponse]
   type ListOfResultRow = js.Array[typingsSlinky.awsSdk.pinpointMod.ResultRow]
   type ListOfResultRowValue = js.Array[typingsSlinky.awsSdk.pinpointMod.ResultRowValue]
   type ListOfSegmentDimensions = js.Array[typingsSlinky.awsSdk.pinpointMod.SegmentDimensions]
@@ -211,7 +212,7 @@ package object pinpointMod {
     - java.lang.String
   */
   type Type = typingsSlinky.awsSdk.pinpointMod._Type | java.lang.String
-  type _Blob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.pinpointMod.Blob | java.lang.String
+  type _Blob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.pinpointMod.Blob | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2016-12-01`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

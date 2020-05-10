@@ -15,16 +15,14 @@ trait AnimationPreset extends _AnimationProp
 
 object AnimationPreset {
   @scala.inline
-  def accordionHorizontal: typingsSlinky.reactFlipMove.reactFlipMoveStrings.accordionHorizontal = this.cast("accordionHorizontal")
+  def accordionHorizontal: typingsSlinky.reactFlipMove.reactFlipMoveStrings.accordionHorizontal = "accordionHorizontal".asInstanceOf[typingsSlinky.reactFlipMove.reactFlipMoveStrings.accordionHorizontal]
   @scala.inline
-  def accordionVertical: typingsSlinky.reactFlipMove.reactFlipMoveStrings.accordionVertical = this.cast("accordionVertical")
+  def accordionVertical: typingsSlinky.reactFlipMove.reactFlipMoveStrings.accordionVertical = "accordionVertical".asInstanceOf[typingsSlinky.reactFlipMove.reactFlipMoveStrings.accordionVertical]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def elevator: typingsSlinky.reactFlipMove.reactFlipMoveStrings.elevator = "elevator".asInstanceOf[typingsSlinky.reactFlipMove.reactFlipMoveStrings.elevator]
   @scala.inline
-  def elevator: typingsSlinky.reactFlipMove.reactFlipMoveStrings.elevator = this.cast("elevator")
+  def fade: typingsSlinky.reactFlipMove.reactFlipMoveStrings.fade = "fade".asInstanceOf[typingsSlinky.reactFlipMove.reactFlipMoveStrings.fade]
   @scala.inline
-  def fade: typingsSlinky.reactFlipMove.reactFlipMoveStrings.fade = this.cast("fade")
-  @scala.inline
-  def none: typingsSlinky.reactFlipMove.reactFlipMoveStrings.none = this.cast("none")
+  def none: typingsSlinky.reactFlipMove.reactFlipMoveStrings.none = "none".asInstanceOf[typingsSlinky.reactFlipMove.reactFlipMoveStrings.none]
 }
 

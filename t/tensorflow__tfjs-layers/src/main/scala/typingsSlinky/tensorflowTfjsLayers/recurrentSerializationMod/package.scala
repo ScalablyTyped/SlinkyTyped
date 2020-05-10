@@ -22,7 +22,6 @@ package object recurrentSerializationMod {
     typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.LSTMLayerConfig
   ]
   type RNNCellSerialization = typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.SimpleRNNCellSerialization | typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.GRUCellSerialization | typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.LSTMCellSerialization | typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.StackedRNNCellsSerialization
-  type RecurrentLayerClassName = /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-layers.@tensorflow/tfjs-layers/dist/keras_format/layers/recurrent_serialization.RecurrentLayerSerialization['class_name'] */ js.Any
   type RecurrentLayerSerialization = typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.SimpleRNNLayerSerialization | typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.LSTMLayerSerialization | typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.GRULayerSerialization
   type SimpleRNNCellSerialization = typingsSlinky.tensorflowTfjsLayers.typesMod.BaseSerialization[
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.SimpleRNNCell, 

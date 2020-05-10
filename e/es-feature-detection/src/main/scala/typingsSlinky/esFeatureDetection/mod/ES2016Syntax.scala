@@ -13,12 +13,10 @@ trait ES2016Syntax extends js.Object
 
 object ES2016Syntax {
   @scala.inline
-  def `Exponentiation operator`: typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.`Exponentiation operator` = this.cast("Exponentiation operator")
+  def `Exponentiation operator`: typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.`Exponentiation operator` = ("Exponentiation operator").asInstanceOf[typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.`Exponentiation operator`]
   @scala.inline
-  def `Rest destructuring`: typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.`Rest destructuring` = this.cast("Rest destructuring")
+  def `Rest destructuring`: typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.`Rest destructuring` = ("Rest destructuring").asInstanceOf[typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.`Rest destructuring`]
   @scala.inline
-  def __all: typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.__all = this.cast("__all")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def __all: typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.__all = "__all".asInstanceOf[typingsSlinky.esFeatureDetection.esFeatureDetectionStrings.__all]
 }
 

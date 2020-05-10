@@ -28,8 +28,6 @@ class CAG ()
   def _toWallPolygons(options: js.Any): js.Array[_] = js.native
   def area(): Double = js.native
   def canonicalized(): CAG = js.native
-  /* CompleteClass */
-  override def center(cAxes: js.Array[String]): CxG = js.native
   def check(): Unit = js.native
   def contract(radius: Double, resolution: Double): CAG = js.native
   def expand(radius: Double, resolution: Double): CAG = js.native

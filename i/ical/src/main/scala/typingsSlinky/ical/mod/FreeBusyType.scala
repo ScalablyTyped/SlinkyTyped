@@ -12,10 +12,8 @@ trait FreeBusyType extends js.Object
 
 object FreeBusyType {
   @scala.inline
-  def BUSY: typingsSlinky.ical.icalStrings.BUSY = this.cast("BUSY")
+  def BUSY: typingsSlinky.ical.icalStrings.BUSY = "BUSY".asInstanceOf[typingsSlinky.ical.icalStrings.BUSY]
   @scala.inline
-  def FREE: typingsSlinky.ical.icalStrings.FREE = this.cast("FREE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def FREE: typingsSlinky.ical.icalStrings.FREE = "FREE".asInstanceOf[typingsSlinky.ical.icalStrings.FREE]
 }
 

@@ -11,7 +11,7 @@ package object Cypress {
   type FileContents = java.lang.String | js.Array[js.Any] | js.Object
   type HttpMethod = java.lang.String
   type ObjectLike = org.scalablytyped.runtime.StringDictionary[js.Any]
-  type Omit[T, K /* <: java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[java.lang.String, K]]
+  type Omit[T, K /* <: /* keyof T */ java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   type Padding = scala.Double | js.Array[scala.Double] | (js.Tuple2[scala.Double, scala.Double]) | (js.Tuple3[scala.Double, scala.Double, scala.Double]) | (js.Tuple4[scala.Double, scala.Double, scala.Double, scala.Double])
   type RequestBody = java.lang.String | js.Object
   /**

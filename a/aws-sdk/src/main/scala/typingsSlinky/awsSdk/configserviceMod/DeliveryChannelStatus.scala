@@ -26,18 +26,65 @@ trait DeliveryChannelStatus extends js.Object {
 
 object DeliveryChannelStatus {
   @scala.inline
-  def apply(
-    configHistoryDeliveryInfo: ConfigExportDeliveryInfo = null,
-    configSnapshotDeliveryInfo: ConfigExportDeliveryInfo = null,
-    configStreamDeliveryInfo: ConfigStreamDeliveryInfo = null,
-    name: String = null
-  ): DeliveryChannelStatus = {
+  def apply(): DeliveryChannelStatus = {
     val __obj = js.Dynamic.literal()
-    if (configHistoryDeliveryInfo != null) __obj.updateDynamic("configHistoryDeliveryInfo")(configHistoryDeliveryInfo.asInstanceOf[js.Any])
-    if (configSnapshotDeliveryInfo != null) __obj.updateDynamic("configSnapshotDeliveryInfo")(configSnapshotDeliveryInfo.asInstanceOf[js.Any])
-    if (configStreamDeliveryInfo != null) __obj.updateDynamic("configStreamDeliveryInfo")(configStreamDeliveryInfo.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeliveryChannelStatus]
   }
+  @scala.inline
+  implicit class DeliveryChannelStatusOps[Self <: DeliveryChannelStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigHistoryDeliveryInfo(value: ConfigExportDeliveryInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configHistoryDeliveryInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigHistoryDeliveryInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configHistoryDeliveryInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigSnapshotDeliveryInfo(value: ConfigExportDeliveryInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configSnapshotDeliveryInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigSnapshotDeliveryInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configSnapshotDeliveryInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigStreamDeliveryInfo(value: ConfigStreamDeliveryInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configStreamDeliveryInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigStreamDeliveryInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configStreamDeliveryInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

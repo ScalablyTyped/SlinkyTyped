@@ -95,38 +95,185 @@ trait SchemaAuditLog extends js.Object {
 
 object SchemaAuditLog {
   @scala.inline
-  def apply(
-    authenticationInfo: SchemaAuthenticationInfo = null,
-    authorizationInfo: js.Array[SchemaAuthorizationInfo] = null,
-    metadata: StringDictionary[js.Any] = null,
-    methodName: String = null,
-    numResponseItems: String = null,
-    request: StringDictionary[js.Any] = null,
-    requestMetadata: SchemaRequestMetadata = null,
-    resourceLocation: SchemaResourceLocation = null,
-    resourceName: String = null,
-    resourceOriginalState: StringDictionary[js.Any] = null,
-    response: StringDictionary[js.Any] = null,
-    serviceData: StringDictionary[js.Any] = null,
-    serviceName: String = null,
-    status: SchemaStatus = null
-  ): SchemaAuditLog = {
+  def apply(): SchemaAuditLog = {
     val __obj = js.Dynamic.literal()
-    if (authenticationInfo != null) __obj.updateDynamic("authenticationInfo")(authenticationInfo.asInstanceOf[js.Any])
-    if (authorizationInfo != null) __obj.updateDynamic("authorizationInfo")(authorizationInfo.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (methodName != null) __obj.updateDynamic("methodName")(methodName.asInstanceOf[js.Any])
-    if (numResponseItems != null) __obj.updateDynamic("numResponseItems")(numResponseItems.asInstanceOf[js.Any])
-    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
-    if (requestMetadata != null) __obj.updateDynamic("requestMetadata")(requestMetadata.asInstanceOf[js.Any])
-    if (resourceLocation != null) __obj.updateDynamic("resourceLocation")(resourceLocation.asInstanceOf[js.Any])
-    if (resourceName != null) __obj.updateDynamic("resourceName")(resourceName.asInstanceOf[js.Any])
-    if (resourceOriginalState != null) __obj.updateDynamic("resourceOriginalState")(resourceOriginalState.asInstanceOf[js.Any])
-    if (response != null) __obj.updateDynamic("response")(response.asInstanceOf[js.Any])
-    if (serviceData != null) __obj.updateDynamic("serviceData")(serviceData.asInstanceOf[js.Any])
-    if (serviceName != null) __obj.updateDynamic("serviceName")(serviceName.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAuditLog]
   }
+  @scala.inline
+  implicit class SchemaAuditLogOps[Self <: SchemaAuditLog] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthenticationInfo(value: SchemaAuthenticationInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthenticationInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthorizationInfo(value: js.Array[SchemaAuthorizationInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizationInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethodName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("methodName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethodName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("methodName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumResponseItems(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numResponseItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumResponseItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numResponseItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequest(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestMetadata(value: SchemaRequestMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceLocation(value: SchemaResourceLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceOriginalState(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceOriginalState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceOriginalState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceOriginalState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponse(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceData(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: SchemaStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

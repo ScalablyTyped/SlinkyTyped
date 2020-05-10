@@ -25,11 +25,41 @@ trait SchemaTestDetails extends js.Object {
 
 object SchemaTestDetails {
   @scala.inline
-  def apply(errorMessage: String = null, progressMessages: js.Array[String] = null): SchemaTestDetails = {
+  def apply(): SchemaTestDetails = {
     val __obj = js.Dynamic.literal()
-    if (errorMessage != null) __obj.updateDynamic("errorMessage")(errorMessage.asInstanceOf[js.Any])
-    if (progressMessages != null) __obj.updateDynamic("progressMessages")(progressMessages.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTestDetails]
   }
+  @scala.inline
+  implicit class SchemaTestDetailsOps[Self <: SchemaTestDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressMessages(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressMessages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressMessages")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

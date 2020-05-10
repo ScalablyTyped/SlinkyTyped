@@ -5,33 +5,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HideProps extends js.Object {
-  var large: js.UndefOr[Boolean] = js.undefined
-  var medium: js.UndefOr[Boolean] = js.undefined
-  var small: js.UndefOr[Boolean] = js.undefined
-  var theme: js.UndefOr[AnonBreakpointsObject] = js.undefined
-  var xlarge: js.UndefOr[Boolean] = js.undefined
-  var xsmall: js.UndefOr[Boolean] = js.undefined
+  var large: js.UndefOr[Boolean] = js.native
+  var medium: js.UndefOr[Boolean] = js.native
+  var small: js.UndefOr[Boolean] = js.native
+  var theme: js.UndefOr[AnonBreakpointsObject] = js.native
+  var xlarge: js.UndefOr[Boolean] = js.native
+  var xsmall: js.UndefOr[Boolean] = js.native
 }
 
 object HideProps {
   @scala.inline
-  def apply(
-    large: js.UndefOr[Boolean] = js.undefined,
-    medium: js.UndefOr[Boolean] = js.undefined,
-    small: js.UndefOr[Boolean] = js.undefined,
-    theme: AnonBreakpointsObject = null,
-    xlarge: js.UndefOr[Boolean] = js.undefined,
-    xsmall: js.UndefOr[Boolean] = js.undefined
-  ): HideProps = {
+  def apply(): HideProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(large)) __obj.updateDynamic("large")(large.asInstanceOf[js.Any])
-    if (!js.isUndefined(medium)) __obj.updateDynamic("medium")(medium.asInstanceOf[js.Any])
-    if (!js.isUndefined(small)) __obj.updateDynamic("small")(small.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (!js.isUndefined(xlarge)) __obj.updateDynamic("xlarge")(xlarge.asInstanceOf[js.Any])
-    if (!js.isUndefined(xsmall)) __obj.updateDynamic("xsmall")(xsmall.asInstanceOf[js.Any])
     __obj.asInstanceOf[HideProps]
   }
+  @scala.inline
+  implicit class HidePropsOps[Self <: HideProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLarge(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLarge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMedium(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("medium")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMedium: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("medium")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmall(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmall: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTheme(value: AnonBreakpointsObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXlarge(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xlarge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXlarge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xlarge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXsmall(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xsmall")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXsmall: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xsmall")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

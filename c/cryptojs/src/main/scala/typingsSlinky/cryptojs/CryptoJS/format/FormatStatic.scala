@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FormatStatic extends js.Object {
-  var Hex: IFormatter
-  var OpenSSL: IFormatter
+  var Hex: IFormatter = js.native
+  var OpenSSL: IFormatter = js.native
 }
 
 object FormatStatic {
   @scala.inline
   def apply(Hex: IFormatter, OpenSSL: IFormatter): FormatStatic = {
     val __obj = js.Dynamic.literal(Hex = Hex.asInstanceOf[js.Any], OpenSSL = OpenSSL.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[FormatStatic]
   }
+  @scala.inline
+  implicit class FormatStaticOps[Self <: FormatStatic] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHex(value: IFormatter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOpenSSL(value: IFormatter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OpenSSL")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

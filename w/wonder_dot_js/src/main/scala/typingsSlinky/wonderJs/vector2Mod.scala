@@ -10,7 +10,7 @@ object vector2Mod extends js.Object {
   @js.native
   class Vector2 () extends js.Object {
     def this(x: js.Any, y: js.Any) = this()
-    var values: scala.scalajs.js.typedarray.Float32Array = js.native
+    var values: js.typedarray.Float32Array = js.native
     var x: Double = js.native
     var y: Double = js.native
     def add(v: Vector2): this.type = js.native

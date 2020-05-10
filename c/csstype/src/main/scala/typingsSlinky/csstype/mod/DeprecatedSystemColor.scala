@@ -38,62 +38,60 @@ trait DeprecatedSystemColor extends _Color
 
 object DeprecatedSystemColor {
   @scala.inline
-  def ActiveBorder: typingsSlinky.csstype.csstypeStrings.ActiveBorder = this.cast("ActiveBorder")
+  def ActiveBorder: typingsSlinky.csstype.csstypeStrings.ActiveBorder = "ActiveBorder".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ActiveBorder]
   @scala.inline
-  def ActiveCaption: typingsSlinky.csstype.csstypeStrings.ActiveCaption = this.cast("ActiveCaption")
+  def ActiveCaption: typingsSlinky.csstype.csstypeStrings.ActiveCaption = "ActiveCaption".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ActiveCaption]
   @scala.inline
-  def AppWorkspace: typingsSlinky.csstype.csstypeStrings.AppWorkspace = this.cast("AppWorkspace")
+  def AppWorkspace: typingsSlinky.csstype.csstypeStrings.AppWorkspace = "AppWorkspace".asInstanceOf[typingsSlinky.csstype.csstypeStrings.AppWorkspace]
   @scala.inline
-  def Background: typingsSlinky.csstype.csstypeStrings.Background = this.cast("Background")
+  def Background: typingsSlinky.csstype.csstypeStrings.Background = "Background".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Background]
   @scala.inline
-  def ButtonFace: typingsSlinky.csstype.csstypeStrings.ButtonFace = this.cast("ButtonFace")
+  def ButtonFace: typingsSlinky.csstype.csstypeStrings.ButtonFace = "ButtonFace".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ButtonFace]
   @scala.inline
-  def ButtonHighlight: typingsSlinky.csstype.csstypeStrings.ButtonHighlight = this.cast("ButtonHighlight")
+  def ButtonHighlight: typingsSlinky.csstype.csstypeStrings.ButtonHighlight = "ButtonHighlight".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ButtonHighlight]
   @scala.inline
-  def ButtonShadow: typingsSlinky.csstype.csstypeStrings.ButtonShadow = this.cast("ButtonShadow")
+  def ButtonShadow: typingsSlinky.csstype.csstypeStrings.ButtonShadow = "ButtonShadow".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ButtonShadow]
   @scala.inline
-  def ButtonText: typingsSlinky.csstype.csstypeStrings.ButtonText = this.cast("ButtonText")
+  def ButtonText: typingsSlinky.csstype.csstypeStrings.ButtonText = "ButtonText".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ButtonText]
   @scala.inline
-  def CaptionText: typingsSlinky.csstype.csstypeStrings.CaptionText = this.cast("CaptionText")
+  def CaptionText: typingsSlinky.csstype.csstypeStrings.CaptionText = "CaptionText".asInstanceOf[typingsSlinky.csstype.csstypeStrings.CaptionText]
   @scala.inline
-  def GrayText: typingsSlinky.csstype.csstypeStrings.GrayText = this.cast("GrayText")
+  def GrayText: typingsSlinky.csstype.csstypeStrings.GrayText = "GrayText".asInstanceOf[typingsSlinky.csstype.csstypeStrings.GrayText]
   @scala.inline
-  def Highlight: typingsSlinky.csstype.csstypeStrings.Highlight = this.cast("Highlight")
+  def Highlight: typingsSlinky.csstype.csstypeStrings.Highlight = "Highlight".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Highlight]
   @scala.inline
-  def HighlightText: typingsSlinky.csstype.csstypeStrings.HighlightText = this.cast("HighlightText")
+  def HighlightText: typingsSlinky.csstype.csstypeStrings.HighlightText = "HighlightText".asInstanceOf[typingsSlinky.csstype.csstypeStrings.HighlightText]
   @scala.inline
-  def InactiveBorder: typingsSlinky.csstype.csstypeStrings.InactiveBorder = this.cast("InactiveBorder")
+  def InactiveBorder: typingsSlinky.csstype.csstypeStrings.InactiveBorder = "InactiveBorder".asInstanceOf[typingsSlinky.csstype.csstypeStrings.InactiveBorder]
   @scala.inline
-  def InactiveCaption: typingsSlinky.csstype.csstypeStrings.InactiveCaption = this.cast("InactiveCaption")
+  def InactiveCaption: typingsSlinky.csstype.csstypeStrings.InactiveCaption = "InactiveCaption".asInstanceOf[typingsSlinky.csstype.csstypeStrings.InactiveCaption]
   @scala.inline
-  def InactiveCaptionText: typingsSlinky.csstype.csstypeStrings.InactiveCaptionText = this.cast("InactiveCaptionText")
+  def InactiveCaptionText: typingsSlinky.csstype.csstypeStrings.InactiveCaptionText = "InactiveCaptionText".asInstanceOf[typingsSlinky.csstype.csstypeStrings.InactiveCaptionText]
   @scala.inline
-  def InfoBackground: typingsSlinky.csstype.csstypeStrings.InfoBackground = this.cast("InfoBackground")
+  def InfoBackground: typingsSlinky.csstype.csstypeStrings.InfoBackground = "InfoBackground".asInstanceOf[typingsSlinky.csstype.csstypeStrings.InfoBackground]
   @scala.inline
-  def InfoText: typingsSlinky.csstype.csstypeStrings.InfoText = this.cast("InfoText")
+  def InfoText: typingsSlinky.csstype.csstypeStrings.InfoText = "InfoText".asInstanceOf[typingsSlinky.csstype.csstypeStrings.InfoText]
   @scala.inline
-  def Menu: typingsSlinky.csstype.csstypeStrings.Menu = this.cast("Menu")
+  def Menu: typingsSlinky.csstype.csstypeStrings.Menu = "Menu".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Menu]
   @scala.inline
-  def MenuText: typingsSlinky.csstype.csstypeStrings.MenuText = this.cast("MenuText")
+  def MenuText: typingsSlinky.csstype.csstypeStrings.MenuText = "MenuText".asInstanceOf[typingsSlinky.csstype.csstypeStrings.MenuText]
   @scala.inline
-  def Scrollbar: typingsSlinky.csstype.csstypeStrings.Scrollbar = this.cast("Scrollbar")
+  def Scrollbar: typingsSlinky.csstype.csstypeStrings.Scrollbar = "Scrollbar".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Scrollbar]
   @scala.inline
-  def ThreeDDarkShadow: typingsSlinky.csstype.csstypeStrings.ThreeDDarkShadow = this.cast("ThreeDDarkShadow")
+  def ThreeDDarkShadow: typingsSlinky.csstype.csstypeStrings.ThreeDDarkShadow = "ThreeDDarkShadow".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ThreeDDarkShadow]
   @scala.inline
-  def ThreeDFace: typingsSlinky.csstype.csstypeStrings.ThreeDFace = this.cast("ThreeDFace")
+  def ThreeDFace: typingsSlinky.csstype.csstypeStrings.ThreeDFace = "ThreeDFace".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ThreeDFace]
   @scala.inline
-  def ThreeDHighlight: typingsSlinky.csstype.csstypeStrings.ThreeDHighlight = this.cast("ThreeDHighlight")
+  def ThreeDHighlight: typingsSlinky.csstype.csstypeStrings.ThreeDHighlight = "ThreeDHighlight".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ThreeDHighlight]
   @scala.inline
-  def ThreeDLightShadow: typingsSlinky.csstype.csstypeStrings.ThreeDLightShadow = this.cast("ThreeDLightShadow")
+  def ThreeDLightShadow: typingsSlinky.csstype.csstypeStrings.ThreeDLightShadow = "ThreeDLightShadow".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ThreeDLightShadow]
   @scala.inline
-  def ThreeDShadow: typingsSlinky.csstype.csstypeStrings.ThreeDShadow = this.cast("ThreeDShadow")
+  def ThreeDShadow: typingsSlinky.csstype.csstypeStrings.ThreeDShadow = "ThreeDShadow".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ThreeDShadow]
   @scala.inline
-  def Window: typingsSlinky.csstype.csstypeStrings.Window = this.cast("Window")
+  def Window: typingsSlinky.csstype.csstypeStrings.Window = "Window".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Window]
   @scala.inline
-  def WindowFrame: typingsSlinky.csstype.csstypeStrings.WindowFrame = this.cast("WindowFrame")
+  def WindowFrame: typingsSlinky.csstype.csstypeStrings.WindowFrame = "WindowFrame".asInstanceOf[typingsSlinky.csstype.csstypeStrings.WindowFrame]
   @scala.inline
-  def WindowText: typingsSlinky.csstype.csstypeStrings.WindowText = this.cast("WindowText")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def WindowText: typingsSlinky.csstype.csstypeStrings.WindowText = "WindowText".asInstanceOf[typingsSlinky.csstype.csstypeStrings.WindowText]
 }
 

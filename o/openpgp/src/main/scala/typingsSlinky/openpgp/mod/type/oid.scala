@@ -33,7 +33,7 @@ object oid extends js.Object {
       * @param input Where to read the OID from
       * @returns Number of read bytes
       */
-    def read(input: scala.scalajs.js.typedarray.Uint8Array): Double = js.native
+    def read(input: js.typedarray.Uint8Array): Double = js.native
     /**
       * Serialize an OID object as a hex string
       * @returns String with the hex value of the OID
@@ -43,7 +43,7 @@ object oid extends js.Object {
       * Serialize an OID object
       * @returns Array with the serialized value the OID
       */
-    def write(): scala.scalajs.js.typedarray.Uint8Array = js.native
+    def write(): js.typedarray.Uint8Array = js.native
   }
   
 }

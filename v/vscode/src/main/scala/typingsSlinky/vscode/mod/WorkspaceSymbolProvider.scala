@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WorkspaceSymbolProvider extends js.Object {
   /**
   		 * Given a symbol fill in its [location](#SymbolInformation.location). This method is called whenever a symbol
@@ -23,7 +24,7 @@ trait WorkspaceSymbolProvider extends js.Object {
       /* token */ CancellationToken, 
       ProviderResult[SymbolInformation]
     ]
-  ] = js.undefined
+  ] = js.native
   /**
   		 * Project-wide search for a symbol matching the given query string.
   		 *
@@ -41,18 +42,44 @@ trait WorkspaceSymbolProvider extends js.Object {
   		 * @return An array of document highlights or a thenable that resolves to such. The lack of a result can be
   		 * signaled by returning `undefined`, `null`, or an empty array.
   		 */
-  def provideWorkspaceSymbols(query: String, token: CancellationToken): ProviderResult[js.Array[SymbolInformation]]
+  def provideWorkspaceSymbols(query: String, token: CancellationToken): ProviderResult[js.Array[SymbolInformation]] = js.native
 }
 
 object WorkspaceSymbolProvider {
   @scala.inline
   def apply(
-    provideWorkspaceSymbols: (String, CancellationToken) => ProviderResult[js.Array[SymbolInformation]],
-    resolveWorkspaceSymbol: (/* symbol */ SymbolInformation, /* token */ CancellationToken) => ProviderResult[SymbolInformation] = null
+    provideWorkspaceSymbols: (String, CancellationToken) => ProviderResult[js.Array[SymbolInformation]]
   ): WorkspaceSymbolProvider = {
     val __obj = js.Dynamic.literal(provideWorkspaceSymbols = js.Any.fromFunction2(provideWorkspaceSymbols))
-    if (resolveWorkspaceSymbol != null) __obj.updateDynamic("resolveWorkspaceSymbol")(js.Any.fromFunction2(resolveWorkspaceSymbol))
     __obj.asInstanceOf[WorkspaceSymbolProvider]
   }
+  @scala.inline
+  implicit class WorkspaceSymbolProviderOps[Self <: WorkspaceSymbolProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProvideWorkspaceSymbols(value: (String, CancellationToken) => ProviderResult[js.Array[SymbolInformation]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("provideWorkspaceSymbols")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withResolveWorkspaceSymbol(
+      value: (/* symbol */ SymbolInformation, /* token */ CancellationToken) => ProviderResult[SymbolInformation]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveWorkspaceSymbol")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutResolveWorkspaceSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveWorkspaceSymbol")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

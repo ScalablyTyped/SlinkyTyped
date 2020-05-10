@@ -19,24 +19,22 @@ trait SuccessAppState extends js.Object
 
 object SuccessAppState {
   @scala.inline
-  def APP_NOT_FOUND: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.APP_NOT_FOUND = this.cast("APP_NOT_FOUND")
+  def APP_NOT_FOUND: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.APP_NOT_FOUND = "APP_NOT_FOUND".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.APP_NOT_FOUND]
   @scala.inline
-  def FAILED: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.FAILED = this.cast("FAILED")
+  def FAILED: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.FAILED = "FAILED".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.FAILED]
   @scala.inline
-  def FAILED_STAGING: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.FAILED_STAGING = this.cast("FAILED_STAGING")
+  def FAILED_STAGING: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.FAILED_STAGING = "FAILED_STAGING".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.FAILED_STAGING]
   @scala.inline
-  def MXBUILD_STARTED: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.MXBUILD_STARTED = this.cast("MXBUILD_STARTED")
+  def MXBUILD_STARTED: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.MXBUILD_STARTED = "MXBUILD_STARTED".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.MXBUILD_STARTED]
   @scala.inline
-  def STAGING: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.STAGING = this.cast("STAGING")
+  def STAGING: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.STAGING = "STAGING".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.STAGING]
   @scala.inline
-  def STARTED: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.STARTED = this.cast("STARTED")
+  def STARTED: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.STARTED = "STARTED".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.STARTED]
   @scala.inline
-  def STARTING: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.STARTING = this.cast("STARTING")
+  def STARTING: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.STARTING = "STARTING".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.STARTING]
   @scala.inline
-  def STOPPED: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.STOPPED = this.cast("STOPPED")
+  def STOPPED: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.STOPPED = "STOPPED".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.STOPPED]
   @scala.inline
-  def UPDATING: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.UPDATING = this.cast("UPDATING")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UPDATING: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.UPDATING = "UPDATING".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.UPDATING]
 }
 

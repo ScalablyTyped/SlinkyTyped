@@ -1,6 +1,5 @@
 package typingsSlinky.yauzl.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ object open extends js.Object {
   def apply(path: String): Unit = js.native
   def apply(
     path: String,
-    callback: js.Function2[/* err */ js.UndefOr[Error], /* zipfile */ js.UndefOr[ZipFile], Unit]
+    callback: js.Function2[/* err */ js.UndefOr[js.Error], /* zipfile */ js.UndefOr[ZipFile], Unit]
   ): Unit = js.native
   def apply(path: String, options: Options): Unit = js.native
   def apply(

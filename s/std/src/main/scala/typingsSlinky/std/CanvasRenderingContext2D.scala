@@ -30,5 +30,6 @@ trait CanvasRenderingContext2D
 
 @JSGlobal("CanvasRenderingContext2D")
 @js.native
-object CanvasRenderingContext2D extends Instantiable0[CanvasRenderingContext2D]
+object CanvasRenderingContext2D
+  extends Instantiable0[org.scalajs.dom.raw.CanvasRenderingContext2D]
 

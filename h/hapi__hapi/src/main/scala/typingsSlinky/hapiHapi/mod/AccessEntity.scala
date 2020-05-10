@@ -13,12 +13,10 @@ trait AccessEntity extends js.Object
 
 object AccessEntity {
   @scala.inline
-  def any: typingsSlinky.hapiHapi.hapiHapiStrings.any = this.cast("any")
+  def any: typingsSlinky.hapiHapi.hapiHapiStrings.any = "any".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.any]
   @scala.inline
-  def app: typingsSlinky.hapiHapi.hapiHapiStrings.app = this.cast("app")
+  def app: typingsSlinky.hapiHapi.hapiHapiStrings.app = "app".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.app]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def user: typingsSlinky.hapiHapi.hapiHapiStrings.user = this.cast("user")
+  def user: typingsSlinky.hapiHapi.hapiHapiStrings.user = "user".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.user]
 }
 

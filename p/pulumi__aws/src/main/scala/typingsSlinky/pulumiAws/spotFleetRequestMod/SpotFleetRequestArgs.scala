@@ -100,36 +100,192 @@ object SpotFleetRequestArgs {
   def apply(
     iamFleetRole: Input[String],
     launchSpecifications: Input[js.Array[Input[SpotFleetRequestLaunchSpecification]]],
-    targetCapacity: Input[Double],
-    allocationStrategy: Input[String] = null,
-    excessCapacityTerminationPolicy: Input[String] = null,
-    fleetType: Input[String] = null,
-    instanceInterruptionBehaviour: Input[String] = null,
-    instancePoolsToUseCount: Input[Double] = null,
-    loadBalancers: Input[js.Array[Input[String]]] = null,
-    replaceUnhealthyInstances: Input[Boolean] = null,
-    spotPrice: Input[String] = null,
-    targetGroupArns: Input[js.Array[Input[String]]] = null,
-    terminateInstancesWithExpiration: Input[Boolean] = null,
-    validFrom: Input[String] = null,
-    validUntil: Input[String] = null,
-    waitForFulfillment: Input[Boolean] = null
+    targetCapacity: Input[Double]
   ): SpotFleetRequestArgs = {
     val __obj = js.Dynamic.literal(iamFleetRole = iamFleetRole.asInstanceOf[js.Any], launchSpecifications = launchSpecifications.asInstanceOf[js.Any], targetCapacity = targetCapacity.asInstanceOf[js.Any])
-    if (allocationStrategy != null) __obj.updateDynamic("allocationStrategy")(allocationStrategy.asInstanceOf[js.Any])
-    if (excessCapacityTerminationPolicy != null) __obj.updateDynamic("excessCapacityTerminationPolicy")(excessCapacityTerminationPolicy.asInstanceOf[js.Any])
-    if (fleetType != null) __obj.updateDynamic("fleetType")(fleetType.asInstanceOf[js.Any])
-    if (instanceInterruptionBehaviour != null) __obj.updateDynamic("instanceInterruptionBehaviour")(instanceInterruptionBehaviour.asInstanceOf[js.Any])
-    if (instancePoolsToUseCount != null) __obj.updateDynamic("instancePoolsToUseCount")(instancePoolsToUseCount.asInstanceOf[js.Any])
-    if (loadBalancers != null) __obj.updateDynamic("loadBalancers")(loadBalancers.asInstanceOf[js.Any])
-    if (replaceUnhealthyInstances != null) __obj.updateDynamic("replaceUnhealthyInstances")(replaceUnhealthyInstances.asInstanceOf[js.Any])
-    if (spotPrice != null) __obj.updateDynamic("spotPrice")(spotPrice.asInstanceOf[js.Any])
-    if (targetGroupArns != null) __obj.updateDynamic("targetGroupArns")(targetGroupArns.asInstanceOf[js.Any])
-    if (terminateInstancesWithExpiration != null) __obj.updateDynamic("terminateInstancesWithExpiration")(terminateInstancesWithExpiration.asInstanceOf[js.Any])
-    if (validFrom != null) __obj.updateDynamic("validFrom")(validFrom.asInstanceOf[js.Any])
-    if (validUntil != null) __obj.updateDynamic("validUntil")(validUntil.asInstanceOf[js.Any])
-    if (waitForFulfillment != null) __obj.updateDynamic("waitForFulfillment")(waitForFulfillment.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpotFleetRequestArgs]
   }
+  @scala.inline
+  implicit class SpotFleetRequestArgsOps[Self <: SpotFleetRequestArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIamFleetRole(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iamFleetRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLaunchSpecifications(value: Input[js.Array[Input[SpotFleetRequestLaunchSpecification]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchSpecifications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetCapacity(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllocationStrategy(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allocationStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllocationStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allocationStrategy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcessCapacityTerminationPolicy(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excessCapacityTerminationPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcessCapacityTerminationPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excessCapacityTerminationPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFleetType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fleetType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFleetType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fleetType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceInterruptionBehaviour(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceInterruptionBehaviour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceInterruptionBehaviour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceInterruptionBehaviour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstancePoolsToUseCount(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instancePoolsToUseCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstancePoolsToUseCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instancePoolsToUseCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadBalancers(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadBalancers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplaceUnhealthyInstances(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceUnhealthyInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplaceUnhealthyInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceUnhealthyInstances")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpotPrice(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spotPrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpotPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spotPrice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetGroupArns(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetGroupArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetGroupArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetGroupArns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerminateInstancesWithExpiration(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terminateInstancesWithExpiration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerminateInstancesWithExpiration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terminateInstancesWithExpiration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidFrom(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validFrom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidUntil(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validUntil")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidUntil: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validUntil")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWaitForFulfillment(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForFulfillment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWaitForFulfillment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForFulfillment")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,11 +22,47 @@ trait WorkflowExecutionFailedEventAttributes extends js.Object {
 
 object WorkflowExecutionFailedEventAttributes {
   @scala.inline
-  def apply(decisionTaskCompletedEventId: EventId, details: Data = null, reason: FailureReason = null): WorkflowExecutionFailedEventAttributes = {
+  def apply(decisionTaskCompletedEventId: EventId): WorkflowExecutionFailedEventAttributes = {
     val __obj = js.Dynamic.literal(decisionTaskCompletedEventId = decisionTaskCompletedEventId.asInstanceOf[js.Any])
-    if (details != null) __obj.updateDynamic("details")(details.asInstanceOf[js.Any])
-    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkflowExecutionFailedEventAttributes]
   }
+  @scala.inline
+  implicit class WorkflowExecutionFailedEventAttributesOps[Self <: WorkflowExecutionFailedEventAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDecisionTaskCompletedEventId(value: EventId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decisionTaskCompletedEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDetails(value: Data): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReason(value: FailureReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

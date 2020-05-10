@@ -9,5 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object ineum_meta extends js.Object {
   def apply(command: meta, key: String, value: String): Unit = js.native
+  def apply(command: meta, key: String, value: Boolean): Unit = js.native
+  def apply(command: meta, key: String, value: Double): Unit = js.native
 }
 

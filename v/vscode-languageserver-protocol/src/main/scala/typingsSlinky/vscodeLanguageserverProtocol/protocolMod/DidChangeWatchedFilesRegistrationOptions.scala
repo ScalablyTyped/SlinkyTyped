@@ -4,19 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DidChangeWatchedFilesRegistrationOptions extends js.Object {
   /**
     * The watchers to register.
     */
-  var watchers: js.Array[FileSystemWatcher]
+  var watchers: js.Array[FileSystemWatcher] = js.native
 }
 
 object DidChangeWatchedFilesRegistrationOptions {
   @scala.inline
   def apply(watchers: js.Array[FileSystemWatcher]): DidChangeWatchedFilesRegistrationOptions = {
     val __obj = js.Dynamic.literal(watchers = watchers.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DidChangeWatchedFilesRegistrationOptions]
   }
+  @scala.inline
+  implicit class DidChangeWatchedFilesRegistrationOptionsOps[Self <: DidChangeWatchedFilesRegistrationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWatchers(value: js.Array[FileSystemWatcher]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watchers")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

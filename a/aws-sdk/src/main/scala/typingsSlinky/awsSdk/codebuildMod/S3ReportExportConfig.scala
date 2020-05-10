@@ -30,20 +30,77 @@ trait S3ReportExportConfig extends js.Object {
 
 object S3ReportExportConfig {
   @scala.inline
-  def apply(
-    bucket: NonEmptyString = null,
-    encryptionDisabled: js.UndefOr[scala.Boolean] = js.undefined,
-    encryptionKey: NonEmptyString = null,
-    packaging: ReportPackagingType = null,
-    path: String = null
-  ): S3ReportExportConfig = {
+  def apply(): S3ReportExportConfig = {
     val __obj = js.Dynamic.literal()
-    if (bucket != null) __obj.updateDynamic("bucket")(bucket.asInstanceOf[js.Any])
-    if (!js.isUndefined(encryptionDisabled)) __obj.updateDynamic("encryptionDisabled")(encryptionDisabled.asInstanceOf[js.Any])
-    if (encryptionKey != null) __obj.updateDynamic("encryptionKey")(encryptionKey.asInstanceOf[js.Any])
-    if (packaging != null) __obj.updateDynamic("packaging")(packaging.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3ReportExportConfig]
   }
+  @scala.inline
+  implicit class S3ReportExportConfigOps[Self <: S3ReportExportConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucket(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptionDisabled(value: WrapperBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionDisabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionDisabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptionKey(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPackaging(value: ReportPackagingType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packaging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackaging: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packaging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

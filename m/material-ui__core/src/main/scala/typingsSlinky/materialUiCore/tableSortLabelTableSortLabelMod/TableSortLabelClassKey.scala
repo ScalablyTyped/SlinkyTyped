@@ -15,16 +15,14 @@ trait TableSortLabelClassKey extends js.Object
 
 object TableSortLabelClassKey {
   @scala.inline
-  def active: typingsSlinky.materialUiCore.materialUiCoreStrings.active = this.cast("active")
+  def active: typingsSlinky.materialUiCore.materialUiCoreStrings.active = "active".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.active]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def icon: typingsSlinky.materialUiCore.materialUiCoreStrings.icon = "icon".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.icon]
   @scala.inline
-  def icon: typingsSlinky.materialUiCore.materialUiCoreStrings.icon = this.cast("icon")
+  def iconDirectionAsc: typingsSlinky.materialUiCore.materialUiCoreStrings.iconDirectionAsc = "iconDirectionAsc".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.iconDirectionAsc]
   @scala.inline
-  def iconDirectionAsc: typingsSlinky.materialUiCore.materialUiCoreStrings.iconDirectionAsc = this.cast("iconDirectionAsc")
+  def iconDirectionDesc: typingsSlinky.materialUiCore.materialUiCoreStrings.iconDirectionDesc = "iconDirectionDesc".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.iconDirectionDesc]
   @scala.inline
-  def iconDirectionDesc: typingsSlinky.materialUiCore.materialUiCoreStrings.iconDirectionDesc = this.cast("iconDirectionDesc")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

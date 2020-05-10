@@ -6,87 +6,91 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MessageBoxesOptions extends MessageBoxesDefault {
-  var bodyClass: js.UndefOr[String] = js.undefined
-  var buttons: js.UndefOr[AnonCancel | js.Any] = js.undefined
+  var bodyClass: js.UndefOr[String] = js.native
+  var buttons: js.UndefOr[AnonCancel | js.Any] = js.native
   @JSName("buttonsAlign")
-  var buttonsAlign_MessageBoxesOptions: js.UndefOr[js.Any] = js.undefined
+  var buttonsAlign_MessageBoxesOptions: js.UndefOr[js.Any] = js.native
   var callback: js.UndefOr[
     js.Function3[/* lobibox */ js.Any, /* type */ js.UndefOr[String], /* ev */ js.UndefOr[js.Any], Unit]
-  ] = js.undefined
-  var modalClasses: js.UndefOr[AnonConfirm] = js.undefined
+  ] = js.native
+  var modalClasses: js.UndefOr[AnonConfirm] = js.native
 }
 
 object MessageBoxesOptions {
   @scala.inline
-  def apply(
-    baseClass: String = null,
-    beforeClose: /* lobibox */ js.Any => Unit = null,
-    bodyClass: String = null,
-    buttons: AnonCancel | js.Any = null,
-    buttonsAlign: js.Any = null,
-    callback: (/* lobibox */ js.Any, /* type */ js.UndefOr[String], /* ev */ js.UndefOr[js.Any]) => Unit = null,
-    closeButton: js.UndefOr[Boolean] = js.undefined,
-    closeOnEsc: js.UndefOr[Boolean] = js.undefined,
-    closed: /* lobibox */ js.Any => Unit = null,
-    customBtnClass: String = null,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    delayToRemove: Int | Double = null,
-    draggable: js.UndefOr[Boolean] = js.undefined,
-    getTitle: () => String = null,
-    height: String = null,
-    hide: () => MessageBoxesOptions = null,
-    hideClass: String = null,
-    horizontalOffset: Int | Double = null,
-    modal: js.UndefOr[Boolean] = js.undefined,
-    modalClasses: AnonConfirm = null,
-    msg: String = null,
-    onShow: /* lobibox */ js.Any => Unit = null,
-    setHeight: /* height */ js.UndefOr[Double] => MessageBoxesOptions = null,
-    setPosition: (/* left */ js.UndefOr[Double | String], /* top */ js.UndefOr[Double]) => MessageBoxesOptions = null,
-    setSize: (/* width */ js.UndefOr[Double], /* height */ js.UndefOr[Double]) => MessageBoxesOptions = null,
-    setTitle: /* title */ js.UndefOr[String] => MessageBoxesOptions = null,
-    setWidth: /* width */ js.UndefOr[Double] => MessageBoxesOptions = null,
-    show: () => MessageBoxesOptions = null,
-    showClass: String = null,
-    shown: /* lobibox */ js.Any => Unit = null,
-    title: String = null,
-    width: Int | Double = null
-  ): MessageBoxesOptions = {
+  def apply(): MessageBoxesOptions = {
     val __obj = js.Dynamic.literal()
-    if (baseClass != null) __obj.updateDynamic("baseClass")(baseClass.asInstanceOf[js.Any])
-    if (beforeClose != null) __obj.updateDynamic("beforeClose")(js.Any.fromFunction1(beforeClose))
-    if (bodyClass != null) __obj.updateDynamic("bodyClass")(bodyClass.asInstanceOf[js.Any])
-    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
-    if (buttonsAlign != null) __obj.updateDynamic("buttonsAlign")(buttonsAlign.asInstanceOf[js.Any])
-    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction3(callback))
-    if (!js.isUndefined(closeButton)) __obj.updateDynamic("closeButton")(closeButton.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnEsc)) __obj.updateDynamic("closeOnEsc")(closeOnEsc.asInstanceOf[js.Any])
-    if (closed != null) __obj.updateDynamic("closed")(js.Any.fromFunction1(closed))
-    if (customBtnClass != null) __obj.updateDynamic("customBtnClass")(customBtnClass.asInstanceOf[js.Any])
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (delayToRemove != null) __obj.updateDynamic("delayToRemove")(delayToRemove.asInstanceOf[js.Any])
-    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.asInstanceOf[js.Any])
-    if (getTitle != null) __obj.updateDynamic("getTitle")(js.Any.fromFunction0(getTitle))
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (hide != null) __obj.updateDynamic("hide")(js.Any.fromFunction0(hide))
-    if (hideClass != null) __obj.updateDynamic("hideClass")(hideClass.asInstanceOf[js.Any])
-    if (horizontalOffset != null) __obj.updateDynamic("horizontalOffset")(horizontalOffset.asInstanceOf[js.Any])
-    if (!js.isUndefined(modal)) __obj.updateDynamic("modal")(modal.asInstanceOf[js.Any])
-    if (modalClasses != null) __obj.updateDynamic("modalClasses")(modalClasses.asInstanceOf[js.Any])
-    if (msg != null) __obj.updateDynamic("msg")(msg.asInstanceOf[js.Any])
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction1(onShow))
-    if (setHeight != null) __obj.updateDynamic("setHeight")(js.Any.fromFunction1(setHeight))
-    if (setPosition != null) __obj.updateDynamic("setPosition")(js.Any.fromFunction2(setPosition))
-    if (setSize != null) __obj.updateDynamic("setSize")(js.Any.fromFunction2(setSize))
-    if (setTitle != null) __obj.updateDynamic("setTitle")(js.Any.fromFunction1(setTitle))
-    if (setWidth != null) __obj.updateDynamic("setWidth")(js.Any.fromFunction1(setWidth))
-    if (show != null) __obj.updateDynamic("show")(js.Any.fromFunction0(show))
-    if (showClass != null) __obj.updateDynamic("showClass")(showClass.asInstanceOf[js.Any])
-    if (shown != null) __obj.updateDynamic("shown")(js.Any.fromFunction1(shown))
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageBoxesOptions]
   }
+  @scala.inline
+  implicit class MessageBoxesOptionsOps[Self <: MessageBoxesOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBodyClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBodyClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtons(value: AnonCancel | js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtonsAlign(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonsAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtonsAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonsAlign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCallback(value: (/* lobibox */ js.Any, /* type */ js.UndefOr[String], /* ev */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModalClasses(value: AnonConfirm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modalClasses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModalClasses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modalClasses")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

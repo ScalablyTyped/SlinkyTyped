@@ -15,7 +15,8 @@ trait WebGLRenderingContext
 
 @JSGlobal("WebGLRenderingContext")
 @js.native
-object WebGLRenderingContext extends Instantiable0[WebGLRenderingContext] {
+object WebGLRenderingContext
+  extends Instantiable0[org.scalajs.dom.raw.WebGLRenderingContext] {
   val ACTIVE_ATTRIBUTES: GLenum = js.native
   val ACTIVE_TEXTURE: GLenum = js.native
   val ACTIVE_UNIFORMS: GLenum = js.native

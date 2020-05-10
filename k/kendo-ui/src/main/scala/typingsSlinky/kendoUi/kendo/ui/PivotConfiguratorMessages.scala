@@ -4,39 +4,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PivotConfiguratorMessages extends js.Object {
-  var columns: js.UndefOr[String] = js.undefined
-  var columnsLabel: js.UndefOr[String] = js.undefined
-  var fieldMenu: js.UndefOr[PivotConfiguratorMessagesFieldMenu] = js.undefined
-  var fieldsLabel: js.UndefOr[String] = js.undefined
-  var measures: js.UndefOr[String] = js.undefined
-  var measuresLabel: js.UndefOr[String] = js.undefined
-  var rows: js.UndefOr[String] = js.undefined
-  var rowsLabel: js.UndefOr[String] = js.undefined
+  var columns: js.UndefOr[String] = js.native
+  var columnsLabel: js.UndefOr[String] = js.native
+  var fieldMenu: js.UndefOr[PivotConfiguratorMessagesFieldMenu] = js.native
+  var fieldsLabel: js.UndefOr[String] = js.native
+  var measures: js.UndefOr[String] = js.native
+  var measuresLabel: js.UndefOr[String] = js.native
+  var rows: js.UndefOr[String] = js.native
+  var rowsLabel: js.UndefOr[String] = js.native
 }
 
 object PivotConfiguratorMessages {
   @scala.inline
-  def apply(
-    columns: String = null,
-    columnsLabel: String = null,
-    fieldMenu: PivotConfiguratorMessagesFieldMenu = null,
-    fieldsLabel: String = null,
-    measures: String = null,
-    measuresLabel: String = null,
-    rows: String = null,
-    rowsLabel: String = null
-  ): PivotConfiguratorMessages = {
+  def apply(): PivotConfiguratorMessages = {
     val __obj = js.Dynamic.literal()
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (columnsLabel != null) __obj.updateDynamic("columnsLabel")(columnsLabel.asInstanceOf[js.Any])
-    if (fieldMenu != null) __obj.updateDynamic("fieldMenu")(fieldMenu.asInstanceOf[js.Any])
-    if (fieldsLabel != null) __obj.updateDynamic("fieldsLabel")(fieldsLabel.asInstanceOf[js.Any])
-    if (measures != null) __obj.updateDynamic("measures")(measures.asInstanceOf[js.Any])
-    if (measuresLabel != null) __obj.updateDynamic("measuresLabel")(measuresLabel.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
-    if (rowsLabel != null) __obj.updateDynamic("rowsLabel")(rowsLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[PivotConfiguratorMessages]
   }
+  @scala.inline
+  implicit class PivotConfiguratorMessagesOps[Self <: PivotConfiguratorMessages] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumns(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnsLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnsLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnsLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnsLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFieldMenu(value: PivotConfiguratorMessagesFieldMenu): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldMenu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldMenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFieldsLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldsLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldsLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldsLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMeasures(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeasures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMeasuresLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measuresLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeasuresLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measuresLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowsLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowsLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsLabel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

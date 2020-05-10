@@ -18,11 +18,41 @@ trait DescribeWorkspaceSnapshotsResult extends js.Object {
 
 object DescribeWorkspaceSnapshotsResult {
   @scala.inline
-  def apply(RebuildSnapshots: SnapshotList = null, RestoreSnapshots: SnapshotList = null): DescribeWorkspaceSnapshotsResult = {
+  def apply(): DescribeWorkspaceSnapshotsResult = {
     val __obj = js.Dynamic.literal()
-    if (RebuildSnapshots != null) __obj.updateDynamic("RebuildSnapshots")(RebuildSnapshots.asInstanceOf[js.Any])
-    if (RestoreSnapshots != null) __obj.updateDynamic("RestoreSnapshots")(RestoreSnapshots.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeWorkspaceSnapshotsResult]
   }
+  @scala.inline
+  implicit class DescribeWorkspaceSnapshotsResultOps[Self <: DescribeWorkspaceSnapshotsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRebuildSnapshots(value: SnapshotList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RebuildSnapshots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRebuildSnapshots: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RebuildSnapshots")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestoreSnapshots(value: SnapshotList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RestoreSnapshots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestoreSnapshots: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RestoreSnapshots")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

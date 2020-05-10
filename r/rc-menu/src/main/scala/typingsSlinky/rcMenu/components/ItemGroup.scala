@@ -1,15 +1,16 @@
 package typingsSlinky.rcMenu.components
 
+import typingsSlinky.rcMenu.menuItemGroupMod.MenuItemGroupProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ItemGroup
-  extends SharedApply_MenuItemGroupProps_1119416409[typingsSlinky.rcMenu.mod.ItemGroup] {
+object ItemGroup {
   @JSImport("rc-menu/lib", "ItemGroup")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: MenuItemGroupProps): SharedBuilder_MenuItemGroupProps_851978124[typingsSlinky.rcMenu.mod.ItemGroup] = new SharedBuilder_MenuItemGroupProps_851978124[typingsSlinky.rcMenu.mod.ItemGroup](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ItemGroup.type): SharedBuilder_MenuItemGroupProps_851978124[typingsSlinky.rcMenu.mod.ItemGroup] = new SharedBuilder_MenuItemGroupProps_851978124[typingsSlinky.rcMenu.mod.ItemGroup](js.Array(this.component, js.Dictionary.empty))()
 }
 

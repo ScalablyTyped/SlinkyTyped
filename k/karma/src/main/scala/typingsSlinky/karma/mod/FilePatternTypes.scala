@@ -16,19 +16,17 @@ trait FilePatternTypes extends js.Object
 
 object FilePatternTypes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def css: typingsSlinky.karma.karmaStrings.css = "css".asInstanceOf[typingsSlinky.karma.karmaStrings.css]
   @scala.inline
-  def css: typingsSlinky.karma.karmaStrings.css = this.cast("css")
+  def dart: typingsSlinky.karma.karmaStrings.dart = "dart".asInstanceOf[typingsSlinky.karma.karmaStrings.dart]
   @scala.inline
-  def dart: typingsSlinky.karma.karmaStrings.dart = this.cast("dart")
+  def dom: typingsSlinky.karma.karmaStrings.dom = "dom".asInstanceOf[typingsSlinky.karma.karmaStrings.dom]
   @scala.inline
-  def dom: typingsSlinky.karma.karmaStrings.dom = this.cast("dom")
-  @scala.inline
-  def html: typingsSlinky.karma.karmaStrings.html = this.cast("html")
+  def html: typingsSlinky.karma.karmaStrings.html = "html".asInstanceOf[typingsSlinky.karma.karmaStrings.html]
   @JSName("js")
   @scala.inline
-  def js_ : typingsSlinky.karma.karmaStrings.js_ = this.cast("js")
+  def js_ : typingsSlinky.karma.karmaStrings.js_ = "js".asInstanceOf[typingsSlinky.karma.karmaStrings.js_]
   @scala.inline
-  def module: typingsSlinky.karma.karmaStrings.module = this.cast("module")
+  def module: typingsSlinky.karma.karmaStrings.module = "module".asInstanceOf[typingsSlinky.karma.karmaStrings.module]
 }
 

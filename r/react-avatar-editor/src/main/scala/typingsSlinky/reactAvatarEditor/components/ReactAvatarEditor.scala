@@ -1,11 +1,9 @@
 package typingsSlinky.reactAvatarEditor.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.File
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactAvatarEditor.mod.AvatarEditorProps
 import typingsSlinky.reactAvatarEditor.mod.ImageState
 import typingsSlinky.reactAvatarEditor.mod.Position
@@ -15,62 +13,64 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactAvatarEditor
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactAvatarEditor {
   @JSImport("react-avatar-editor", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    image: String | File,
-    border: Double | js.Array[Double] = null,
-    borderRadius: Int | Double = null,
-    color: js.Array[Double] = null,
-    crossOrigin: String = null,
-    disableBoundaryChecks: js.UndefOr[Boolean] = js.undefined,
-    disableDrop: js.UndefOr[Boolean] = js.undefined,
-    height: Int | Double = null,
-    onDropFile: /* event */ DragEvent => Unit = null,
-    onImageChange: () => Unit = null,
-    onImageReady: /* event */ Event_ => Unit = null,
-    onLoadFailure: /* event */ Event_ => Unit = null,
-    onLoadSuccess: /* imgInfo */ ImageState => Unit = null,
-    onMouseMove: /* event */ Event_ => Unit = null,
-    onMouseUp: () => Unit = null,
-    onPositionChange: /* position */ Position => Unit = null,
-    position: Position = null,
-    rotate: Int | Double = null,
-    scale: Int | Double = null,
-    style: js.Object = null,
-    width: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(image = image.asInstanceOf[js.Any])
-    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
-    if (borderRadius != null) __obj.updateDynamic("borderRadius")(borderRadius.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableBoundaryChecks)) __obj.updateDynamic("disableBoundaryChecks")(disableBoundaryChecks.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableDrop)) __obj.updateDynamic("disableDrop")(disableDrop.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (onDropFile != null) __obj.updateDynamic("onDropFile")(js.Any.fromFunction1(onDropFile))
-    if (onImageChange != null) __obj.updateDynamic("onImageChange")(js.Any.fromFunction0(onImageChange))
-    if (onImageReady != null) __obj.updateDynamic("onImageReady")(js.Any.fromFunction1(onImageReady))
-    if (onLoadFailure != null) __obj.updateDynamic("onLoadFailure")(js.Any.fromFunction1(onLoadFailure))
-    if (onLoadSuccess != null) __obj.updateDynamic("onLoadSuccess")(js.Any.fromFunction1(onLoadSuccess))
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
-    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction0(onMouseUp))
-    if (onPositionChange != null) __obj.updateDynamic("onPositionChange")(js.Any.fromFunction1(onPositionChange))
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (rotate != null) __obj.updateDynamic("rotate")(rotate.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def border(value: Double | js.Array[Double]): this.type = set("border", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderRadius(value: Double): this.type = set("borderRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: js.Array[Double]): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def crossOrigin(value: String): this.type = set("crossOrigin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableBoundaryChecks(value: Boolean): this.type = set("disableBoundaryChecks", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableDrop(value: Boolean): this.type = set("disableDrop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDropFile(value: /* event */ DragEvent => Unit): this.type = set("onDropFile", js.Any.fromFunction1(value))
+    @scala.inline
+    def onImageChange(value: () => Unit): this.type = set("onImageChange", js.Any.fromFunction0(value))
+    @scala.inline
+    def onImageReady(value: /* event */ Event_ => Unit): this.type = set("onImageReady", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoadFailure(value: /* event */ Event_ => Unit): this.type = set("onLoadFailure", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoadSuccess(value: /* imgInfo */ ImageState => Unit): this.type = set("onLoadSuccess", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseMove(value: /* event */ Event_ => Unit): this.type = set("onMouseMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseUp(value: () => Unit): this.type = set("onMouseUp", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPositionChange(value: /* position */ Position => Unit): this.type = set("onPositionChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def position(value: Position): this.type = set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rotate(value: Double): this.type = set("rotate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scale(value: Double): this.type = set("scale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  type Props = AvatarEditorProps
+  
+  def withProps(p: AvatarEditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(image: String | File): Builder = {
+    val __props = js.Dynamic.literal(image = image.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AvatarEditorProps]))
+  }
 }
 

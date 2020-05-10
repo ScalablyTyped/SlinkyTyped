@@ -42,22 +42,89 @@ trait SchemaInstructionOutput extends js.Object {
 
 object SchemaInstructionOutput {
   @scala.inline
-  def apply(
-    codec: StringDictionary[js.Any] = null,
-    name: String = null,
-    onlyCountKeyBytes: js.UndefOr[Boolean] = js.undefined,
-    onlyCountValueBytes: js.UndefOr[Boolean] = js.undefined,
-    originalName: String = null,
-    systemName: String = null
-  ): SchemaInstructionOutput = {
+  def apply(): SchemaInstructionOutput = {
     val __obj = js.Dynamic.literal()
-    if (codec != null) __obj.updateDynamic("codec")(codec.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(onlyCountKeyBytes)) __obj.updateDynamic("onlyCountKeyBytes")(onlyCountKeyBytes.asInstanceOf[js.Any])
-    if (!js.isUndefined(onlyCountValueBytes)) __obj.updateDynamic("onlyCountValueBytes")(onlyCountValueBytes.asInstanceOf[js.Any])
-    if (originalName != null) __obj.updateDynamic("originalName")(originalName.asInstanceOf[js.Any])
-    if (systemName != null) __obj.updateDynamic("systemName")(systemName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstructionOutput]
   }
+  @scala.inline
+  implicit class SchemaInstructionOutputOps[Self <: SchemaInstructionOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCodec(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnlyCountKeyBytes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyCountKeyBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnlyCountKeyBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyCountKeyBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnlyCountValueBytes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyCountValueBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnlyCountValueBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyCountValueBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSystemName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("systemName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSystemName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("systemName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

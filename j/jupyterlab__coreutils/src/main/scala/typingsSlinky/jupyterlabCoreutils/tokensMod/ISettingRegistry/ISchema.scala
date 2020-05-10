@@ -1,6 +1,5 @@
 package typingsSlinky.jupyterlabCoreutils.tokensMod.ISettingRegistry
 
-import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.`object`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,6 +9,7 @@ import scala.scalajs.js.annotation._
   * A schema type that is a minimal subset of the formal JSON Schema along with
   * optional JupyterLab rendering hints.
   */
+@js.native
 trait ISchema extends IProperty {
   /**
     * Whether the schema is deprecated.
@@ -20,22 +20,22 @@ trait ISchema extends IProperty {
     * plugin's settings if it is set to `true`.
     */
   @JSName("jupyter.lab.setting-deprecated")
-  var `jupyterDotlabDotsetting-deprecated`: js.UndefOr[Boolean] = js.undefined
+  var `jupyterDotlabDotsetting-deprecated`: js.UndefOr[Boolean] = js.native
   /**
     * The JupyterLab icon class hint.
     */
   @JSName("jupyter.lab.setting-icon-class")
-  var `jupyterDotlabDotsetting-icon-class`: js.UndefOr[String] = js.undefined
+  var `jupyterDotlabDotsetting-icon-class`: js.UndefOr[String] = js.native
   /**
     * The JupyterLab icon label hint.
     */
   @JSName("jupyter.lab.setting-icon-label")
-  var `jupyterDotlabDotsetting-icon-label`: js.UndefOr[String] = js.undefined
+  var `jupyterDotlabDotsetting-icon-label`: js.UndefOr[String] = js.native
   /**
     * The JupyterLab shortcuts that are creaed by a plugin's schema.
     */
   @JSName("jupyter.lab.shortcuts")
-  var jupyterDotlabDotshortcuts: js.UndefOr[js.Array[IShortcut]] = js.undefined
+  var jupyterDotlabDotshortcuts: js.UndefOr[js.Array[IShortcut]] = js.native
   /**
     * A flag that indicates plugin should be transformed before being used by
     * the setting registry.
@@ -49,40 +49,94 @@ trait ISchema extends IProperty {
     * out and reject.
     */
   @JSName("jupyter.lab.transform")
-  var jupyterDotlabDottransform: js.UndefOr[Boolean] = js.undefined
+  var jupyterDotlabDottransform: js.UndefOr[Boolean] = js.native
   /**
     * The root schema is always an object.
     */
   @JSName("type")
-  var type_ISchema: `object`
+  var type_ISchema: `object` = js.native
 }
 
 object ISchema {
   @scala.inline
-  def apply(
-    `type`: `object`,
-    default: js.Any = null,
-    description: String = null,
-    `jupyterDotlabDotsetting-deprecated`: js.UndefOr[Boolean] = js.undefined,
-    `jupyterDotlabDotsetting-icon-class`: String = null,
-    `jupyterDotlabDotsetting-icon-label`: String = null,
-    jupyterDotlabDotshortcuts: js.Array[IShortcut] = null,
-    jupyterDotlabDottransform: js.UndefOr[Boolean] = js.undefined,
-    properties: StringDictionary[IProperty] = null,
-    title: String = null
-  ): ISchema = {
+  def apply(`type`: `object`): ISchema = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (!js.isUndefined(`jupyterDotlabDotsetting-deprecated`)) __obj.updateDynamic("jupyter.lab.setting-deprecated")(`jupyterDotlabDotsetting-deprecated`.asInstanceOf[js.Any])
-    if (`jupyterDotlabDotsetting-icon-class` != null) __obj.updateDynamic("jupyter.lab.setting-icon-class")(`jupyterDotlabDotsetting-icon-class`.asInstanceOf[js.Any])
-    if (`jupyterDotlabDotsetting-icon-label` != null) __obj.updateDynamic("jupyter.lab.setting-icon-label")(`jupyterDotlabDotsetting-icon-label`.asInstanceOf[js.Any])
-    if (jupyterDotlabDotshortcuts != null) __obj.updateDynamic("jupyter.lab.shortcuts")(jupyterDotlabDotshortcuts.asInstanceOf[js.Any])
-    if (!js.isUndefined(jupyterDotlabDottransform)) __obj.updateDynamic("jupyter.lab.transform")(jupyterDotlabDottransform.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISchema]
   }
+  @scala.inline
+  implicit class ISchemaOps[Self <: ISchema] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: `object`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withJupyterDotlabDotsetting-deprecated`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jupyter.lab.setting-deprecated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutJupyterDotlabDotsetting-deprecated`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jupyter.lab.setting-deprecated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withJupyterDotlabDotsetting-icon-class`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jupyter.lab.setting-icon-class")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutJupyterDotlabDotsetting-icon-class`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jupyter.lab.setting-icon-class")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withJupyterDotlabDotsetting-icon-label`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jupyter.lab.setting-icon-label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutJupyterDotlabDotsetting-icon-label`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jupyter.lab.setting-icon-label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJupyterDotlabDotshortcuts(value: js.Array[IShortcut]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jupyter.lab.shortcuts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJupyterDotlabDotshortcuts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jupyter.lab.shortcuts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJupyterDotlabDottransform(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jupyter.lab.transform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJupyterDotlabDottransform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jupyter.lab.transform")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

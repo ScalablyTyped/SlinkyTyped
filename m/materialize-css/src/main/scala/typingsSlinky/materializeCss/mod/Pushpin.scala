@@ -28,7 +28,7 @@ object Pushpin extends js.Object {
   /**
     * Init Pushpin
     */
-  def init(els: typingsSlinky.std.Element): typingsSlinky.materializeCss.M.Pushpin = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialPushpinOptions): typingsSlinky.materializeCss.M.Pushpin = js.native
+  def init(els: Element): typingsSlinky.materializeCss.M.Pushpin = js.native
+  def init(els: Element, options: PartialPushpinOptions): typingsSlinky.materializeCss.M.Pushpin = js.native
 }
 

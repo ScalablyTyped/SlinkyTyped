@@ -1,9 +1,7 @@
 package typingsSlinky.spectacle.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.spectacle.mod.AnimProps
 import typingsSlinky.spectacle.mod.CSSProperties
 import typingsSlinky.spectacle.mod.easeType
@@ -11,32 +9,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Anim
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.mod.Anim] {
+object Anim {
   @JSImport("spectacle", "Anim")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.spectacle.mod.Anim] {
+    @scala.inline
+    def onAnim(value: (/* forwards */ js.UndefOr[Boolean], /* animIndex */ js.UndefOr[Double]) => Unit): this.type = set("onAnim", js.Any.fromFunction2(value))
+    @scala.inline
+    def order(value: Double): this.type = set("order", value.asInstanceOf[js.Any])
+    @scala.inline
+    def route(value: js.Object): this.type = set("route", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: AnimProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     easing: easeType,
     fromStyle: CSSProperties | js.Array[CSSProperties],
     toStyle: CSSProperties | js.Array[CSSProperties],
-    transitionDuration: Double,
-    onAnim: (/* forwards */ js.UndefOr[Boolean], /* animIndex */ js.UndefOr[Double]) => Unit = null,
-    order: Int | Double = null,
-    route: js.Object = null,
-    style: CSSProperties = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.Anim] = {
-    val __obj = js.Dynamic.literal(easing = easing.asInstanceOf[js.Any], fromStyle = fromStyle.asInstanceOf[js.Any], toStyle = toStyle.asInstanceOf[js.Any], transitionDuration = transitionDuration.asInstanceOf[js.Any])
-    if (onAnim != null) __obj.updateDynamic("onAnim")(js.Any.fromFunction2(onAnim))
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
-    if (route != null) __obj.updateDynamic("route")(route.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    transitionDuration: Double
+  ): Builder = {
+    val __props = js.Dynamic.literal(easing = easing.asInstanceOf[js.Any], fromStyle = fromStyle.asInstanceOf[js.Any], toStyle = toStyle.asInstanceOf[js.Any], transitionDuration = transitionDuration.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AnimProps]))
   }
-  type Props = AnimProps
 }
 

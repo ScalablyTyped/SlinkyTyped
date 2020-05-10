@@ -14,30 +14,88 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<{  position  :'NE' | 'NC' | 'NW' | 'SE' | 'SC' | 'SW' | 'C' | 'CE' | 'CW',   margin_nord  :number,   margin_sud  :number,   margin_east  :number,   margin_west  :number}> */
+@js.native
 trait WatermarkSettings extends js.Object {
-  var margin_east: js.UndefOr[Double] = js.undefined
-  var margin_nord: js.UndefOr[Double] = js.undefined
-  var margin_sud: js.UndefOr[Double] = js.undefined
-  var margin_west: js.UndefOr[Double] = js.undefined
-  var position: js.UndefOr[NE | NC | NW | SE | SC | SW | C | CE | CW] = js.undefined
+  var margin_east: js.UndefOr[Double] = js.native
+  var margin_nord: js.UndefOr[Double] = js.native
+  var margin_sud: js.UndefOr[Double] = js.native
+  var margin_west: js.UndefOr[Double] = js.native
+  var position: js.UndefOr[NE | NC | NW | SE | SC | SW | C | CE | CW] = js.native
 }
 
 object WatermarkSettings {
   @scala.inline
-  def apply(
-    margin_east: Int | Double = null,
-    margin_nord: Int | Double = null,
-    margin_sud: Int | Double = null,
-    margin_west: Int | Double = null,
-    position: NE | NC | NW | SE | SC | SW | C | CE | CW = null
-  ): WatermarkSettings = {
+  def apply(): WatermarkSettings = {
     val __obj = js.Dynamic.literal()
-    if (margin_east != null) __obj.updateDynamic("margin_east")(margin_east.asInstanceOf[js.Any])
-    if (margin_nord != null) __obj.updateDynamic("margin_nord")(margin_nord.asInstanceOf[js.Any])
-    if (margin_sud != null) __obj.updateDynamic("margin_sud")(margin_sud.asInstanceOf[js.Any])
-    if (margin_west != null) __obj.updateDynamic("margin_west")(margin_west.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
     __obj.asInstanceOf[WatermarkSettings]
   }
+  @scala.inline
+  implicit class WatermarkSettingsOps[Self <: WatermarkSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMargin_east(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin_east")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin_east: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin_east")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin_nord(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin_nord")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin_nord: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin_nord")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin_sud(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin_sud")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin_sud: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin_sud")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin_west(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin_west")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin_west: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin_west")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: NE | NC | NW | SE | SC | SW | C | CE | CW): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

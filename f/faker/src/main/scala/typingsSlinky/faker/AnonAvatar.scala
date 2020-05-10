@@ -1,6 +1,5 @@
 package typingsSlinky.faker
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,8 +29,8 @@ trait AnonAvatar extends js.Object {
   def password(len: Double, memorable: Boolean): String = js.native
   def password(len: Double, memorable: Boolean, pattern: String): String = js.native
   def password(len: Double, memorable: Boolean, pattern: String, prefix: String): String = js.native
-  def password(len: Double, memorable: Boolean, pattern: RegExp): String = js.native
-  def password(len: Double, memorable: Boolean, pattern: RegExp, prefix: String): String = js.native
+  def password(len: Double, memorable: Boolean, pattern: js.RegExp): String = js.native
+  def password(len: Double, memorable: Boolean, pattern: js.RegExp, prefix: String): String = js.native
   def protocol(): String = js.native
   def url(): String = js.native
   def userAgent(): String = js.native

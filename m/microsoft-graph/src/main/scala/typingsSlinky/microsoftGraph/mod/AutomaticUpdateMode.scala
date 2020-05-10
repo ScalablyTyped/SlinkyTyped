@@ -16,18 +16,16 @@ trait AutomaticUpdateMode extends js.Object
 
 object AutomaticUpdateMode {
   @scala.inline
-  def autoInstallAndRebootAtMaintenanceTime: typingsSlinky.microsoftGraph.microsoftGraphStrings.autoInstallAndRebootAtMaintenanceTime = this.cast("autoInstallAndRebootAtMaintenanceTime")
+  def autoInstallAndRebootAtMaintenanceTime: typingsSlinky.microsoftGraph.microsoftGraphStrings.autoInstallAndRebootAtMaintenanceTime = "autoInstallAndRebootAtMaintenanceTime".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.autoInstallAndRebootAtMaintenanceTime]
   @scala.inline
-  def autoInstallAndRebootAtScheduledTime: typingsSlinky.microsoftGraph.microsoftGraphStrings.autoInstallAndRebootAtScheduledTime = this.cast("autoInstallAndRebootAtScheduledTime")
+  def autoInstallAndRebootAtScheduledTime: typingsSlinky.microsoftGraph.microsoftGraphStrings.autoInstallAndRebootAtScheduledTime = "autoInstallAndRebootAtScheduledTime".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.autoInstallAndRebootAtScheduledTime]
   @scala.inline
-  def autoInstallAndRebootWithoutEndUserControl: typingsSlinky.microsoftGraph.microsoftGraphStrings.autoInstallAndRebootWithoutEndUserControl = this.cast("autoInstallAndRebootWithoutEndUserControl")
+  def autoInstallAndRebootWithoutEndUserControl: typingsSlinky.microsoftGraph.microsoftGraphStrings.autoInstallAndRebootWithoutEndUserControl = "autoInstallAndRebootWithoutEndUserControl".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.autoInstallAndRebootWithoutEndUserControl]
   @scala.inline
-  def autoInstallAtMaintenanceTime: typingsSlinky.microsoftGraph.microsoftGraphStrings.autoInstallAtMaintenanceTime = this.cast("autoInstallAtMaintenanceTime")
+  def autoInstallAtMaintenanceTime: typingsSlinky.microsoftGraph.microsoftGraphStrings.autoInstallAtMaintenanceTime = "autoInstallAtMaintenanceTime".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.autoInstallAtMaintenanceTime]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def notifyDownload: typingsSlinky.microsoftGraph.microsoftGraphStrings.notifyDownload = "notifyDownload".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.notifyDownload]
   @scala.inline
-  def notifyDownload: typingsSlinky.microsoftGraph.microsoftGraphStrings.notifyDownload = this.cast("notifyDownload")
-  @scala.inline
-  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = this.cast("userDefined")
+  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = "userDefined".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined]
 }
 

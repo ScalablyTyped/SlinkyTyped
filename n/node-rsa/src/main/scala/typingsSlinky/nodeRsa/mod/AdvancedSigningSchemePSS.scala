@@ -5,18 +5,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AdvancedSigningSchemePSS extends AdvancedSigningScheme {
-  var hash: HashingAlgorithm
-  var saltLength: Double
-  var scheme: pss
+  var hash: HashingAlgorithm = js.native
+  var saltLength: Double = js.native
+  var scheme: pss = js.native
 }
 
 object AdvancedSigningSchemePSS {
   @scala.inline
   def apply(hash: HashingAlgorithm, saltLength: Double, scheme: pss): AdvancedSigningSchemePSS = {
     val __obj = js.Dynamic.literal(hash = hash.asInstanceOf[js.Any], saltLength = saltLength.asInstanceOf[js.Any], scheme = scheme.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AdvancedSigningSchemePSS]
   }
+  @scala.inline
+  implicit class AdvancedSigningSchemePSSOps[Self <: AdvancedSigningSchemePSS] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHash(value: HashingAlgorithm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSaltLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saltLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScheme(value: pss): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheme")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.kendoUi.kendo.spreadsheet
 
 import typingsSlinky.kendoUi.kendo.Observable_
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -81,7 +80,7 @@ class Range () extends Observable_ {
   def input(): js.Any = js.native
   def input(value: String): Unit = js.native
   def input(value: Double): Unit = js.native
-  def input(value: Date): Unit = js.native
+  def input(value: js.Date): Unit = js.native
   @JSName("input")
   def input_Unit(): Unit = js.native
   def isFilterable(): Boolean = js.native
@@ -110,7 +109,7 @@ class Range () extends Observable_ {
   def value(): js.Any = js.native
   def value(value: String): Unit = js.native
   def value(value: Double): Unit = js.native
-  def value(value: Date): Unit = js.native
+  def value(value: js.Date): Unit = js.native
   @JSName("value")
   def value_Unit(): Unit = js.native
   def values(): js.Any = js.native

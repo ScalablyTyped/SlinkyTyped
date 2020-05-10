@@ -25,11 +25,41 @@ trait SchemaUpdateJobRequest extends js.Object {
 
 object SchemaUpdateJobRequest {
   @scala.inline
-  def apply(job: SchemaJob = null, updateMask: String = null): SchemaUpdateJobRequest = {
+  def apply(): SchemaUpdateJobRequest = {
     val __obj = js.Dynamic.literal()
-    if (job != null) __obj.updateDynamic("job")(job.asInstanceOf[js.Any])
-    if (updateMask != null) __obj.updateDynamic("updateMask")(updateMask.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateJobRequest]
   }
+  @scala.inline
+  implicit class SchemaUpdateJobRequestOps[Self <: SchemaUpdateJobRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJob(value: SchemaJob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("job")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("job")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateMask(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateMask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

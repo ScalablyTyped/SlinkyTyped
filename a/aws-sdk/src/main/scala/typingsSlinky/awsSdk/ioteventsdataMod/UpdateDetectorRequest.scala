@@ -26,15 +26,47 @@ trait UpdateDetectorRequest extends js.Object {
 
 object UpdateDetectorRequest {
   @scala.inline
-  def apply(
-    detectorModelName: DetectorModelName,
-    messageId: MessageId,
-    state: DetectorStateDefinition,
-    keyValue: KeyValue = null
-  ): UpdateDetectorRequest = {
+  def apply(detectorModelName: DetectorModelName, messageId: MessageId, state: DetectorStateDefinition): UpdateDetectorRequest = {
     val __obj = js.Dynamic.literal(detectorModelName = detectorModelName.asInstanceOf[js.Any], messageId = messageId.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
-    if (keyValue != null) __obj.updateDynamic("keyValue")(keyValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateDetectorRequest]
   }
+  @scala.inline
+  implicit class UpdateDetectorRequestOps[Self <: UpdateDetectorRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDetectorModelName(value: DetectorModelName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorModelName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessageId(value: MessageId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withState(value: DetectorStateDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeyValue(value: KeyValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

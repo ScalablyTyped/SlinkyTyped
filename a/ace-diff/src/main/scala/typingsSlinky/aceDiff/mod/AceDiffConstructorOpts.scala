@@ -1,44 +1,56 @@
 package typingsSlinky.aceDiff.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.aceDiff.AnonConnector
-import typingsSlinky.aceDiff.aceDiffStrings.broad
-import typingsSlinky.aceDiff.aceDiffStrings.specific
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AceDiffConstructorOpts extends AceDiffOpts {
-  var element: String | HTMLElement
+  var element: String | HTMLElement = js.native
   @JSName("left")
-  var left_AceDiffConstructorOpts: AceDiffLROpts
+  var left_AceDiffConstructorOpts: AceDiffLROpts = js.native
   @JSName("right")
-  var right_AceDiffConstructorOpts: AceDiffLROpts
+  var right_AceDiffConstructorOpts: AceDiffLROpts = js.native
 }
 
 object AceDiffConstructorOpts {
   @scala.inline
-  def apply(
-    element: String | HTMLElement,
-    left: AceDiffLROpts,
-    right: AceDiffLROpts,
-    classes: AnonConnector = null,
-    diffGranularity: specific | broad = null,
-    maxDiffs: Int | Double = null,
-    mode: String = null,
-    showConnectors: js.UndefOr[Boolean] = js.undefined,
-    showDiffs: js.UndefOr[Boolean] = js.undefined,
-    theme: String = null
-  ): AceDiffConstructorOpts = {
+  def apply(element: String | HTMLElement, left: AceDiffLROpts, right: AceDiffLROpts): AceDiffConstructorOpts = {
     val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any], left = left.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any])
-    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
-    if (diffGranularity != null) __obj.updateDynamic("diffGranularity")(diffGranularity.asInstanceOf[js.Any])
-    if (maxDiffs != null) __obj.updateDynamic("maxDiffs")(maxDiffs.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (!js.isUndefined(showConnectors)) __obj.updateDynamic("showConnectors")(showConnectors.asInstanceOf[js.Any])
-    if (!js.isUndefined(showDiffs)) __obj.updateDynamic("showDiffs")(showDiffs.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[AceDiffConstructorOpts]
   }
+  @scala.inline
+  implicit class AceDiffConstructorOptsOps[Self <: AceDiffConstructorOpts] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withElementHTMLElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withElement(value: String | HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLeft(value: AceDiffLROpts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRight(value: AceDiffLROpts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

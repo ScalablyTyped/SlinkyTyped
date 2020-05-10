@@ -1,10 +1,8 @@
 package typingsSlinky.polymerTs.polymer
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.CSSStyleDeclaration
 import typingsSlinky.polymerTs.AnonAddedCount
 import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.HTMLSlotElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,31 +14,9 @@ class PolymerBase () extends HTMLElement {
   var $: js.Any = js.native
   @JSName("$$")
   var DollarDollar: js.Any = js.native
-  /* CompleteClass */
-  override val assignedSlot: HTMLSlotElement | Null = js.native
-  /* CompleteClass */
-  override var contentEditable: String = js.native
   var customStyle: StringDictionary[String] = js.native
-  /* CompleteClass */
-  override var innerHTML: String = js.native
-  /* CompleteClass */
-  override var inputMode: String = js.native
-  /* CompleteClass */
-  override val isContentEditable: Boolean = js.native
-  /**
-    * Returns the first following sibling that is an element, and null otherwise.
-    */
-  /* CompleteClass */
-  override val nextElementSibling: org.scalajs.dom.raw.Element | Null = js.native
-  /**
-    * Returns the first preceding sibling that is an element, and null otherwise.
-    */
-  /* CompleteClass */
-  override val previousElementSibling: org.scalajs.dom.raw.Element | Null = js.native
   var root: org.scalajs.dom.raw.HTMLElement = js.native
   var shadyRoot: org.scalajs.dom.raw.HTMLElement = js.native
-  /* CompleteClass */
-  override val style: CSSStyleDeclaration = js.native
   def arrayDelete(path: String, item: String): js.Any = js.native
   def arrayDelete(path: String, item: js.Any): js.Any = js.native
   def async(callback: js.Function): js.Any = js.native

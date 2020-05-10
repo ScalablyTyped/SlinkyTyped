@@ -5,18 +5,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RestType extends Type_ {
-  var expression: js.UndefOr[Type_] = js.undefined
-  var `type`: typingsSlinky.doctrine.doctrineStrings.RestType
+  var expression: js.UndefOr[Type_] = js.native
+  var `type`: typingsSlinky.doctrine.doctrineStrings.RestType = js.native
 }
 
 object RestType {
   @scala.inline
-  def apply(`type`: typingsSlinky.doctrine.doctrineStrings.RestType, expression: Type_ = null): RestType = {
+  def apply(`type`: typingsSlinky.doctrine.doctrineStrings.RestType): RestType = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (expression != null) __obj.updateDynamic("expression")(expression.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestType]
   }
+  @scala.inline
+  implicit class RestTypeOps[Self <: RestType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: typingsSlinky.doctrine.doctrineStrings.RestType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExpression(value: Type_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

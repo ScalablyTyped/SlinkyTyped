@@ -14,10 +14,29 @@ trait GetGraphqlApiResponse extends js.Object {
 
 object GetGraphqlApiResponse {
   @scala.inline
-  def apply(graphqlApi: GraphqlApi = null): GetGraphqlApiResponse = {
+  def apply(): GetGraphqlApiResponse = {
     val __obj = js.Dynamic.literal()
-    if (graphqlApi != null) __obj.updateDynamic("graphqlApi")(graphqlApi.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetGraphqlApiResponse]
   }
+  @scala.inline
+  implicit class GetGraphqlApiResponseOps[Self <: GetGraphqlApiResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGraphqlApi(value: GraphqlApi): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("graphqlApi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGraphqlApi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("graphqlApi")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

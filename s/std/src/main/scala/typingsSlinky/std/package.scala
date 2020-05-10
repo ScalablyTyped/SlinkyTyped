@@ -11,7 +11,7 @@ package object std {
   type AuthenticationExtensionsSupported = js.Array[java.lang.String]
   type AuthenticatorSelectionList = js.Array[typingsSlinky.std.AAGUID]
   type AutoKeyword = typingsSlinky.std.stdStrings.auto
-  type BigInteger = scala.scalajs.js.typedarray.Uint8Array
+  type BigInteger = js.typedarray.Uint8Array
   type BlobCallback = js.Function1[/* blob */ org.scalajs.dom.raw.Blob | scala.Null, scala.Unit]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.std.BufferSource
@@ -27,7 +27,7 @@ package object std {
     - typingsSlinky.std.ReadableStream[typingsSlinky.std.Uint8Array]
     - java.lang.String
   */
-  type BodyInit = typingsSlinky.std._BodyInit | org.scalajs.dom.experimental.ReadableStream[scala.scalajs.js.typedarray.Uint8Array] | java.lang.String
+  type BodyInit = typingsSlinky.std._BodyInit | org.scalajs.dom.experimental.ReadableStream[js.typedarray.Uint8Array] | java.lang.String
   /** A CDATA section that can be used within XML to include extended portions of unescaped text. The symbols < and & don’t need escaping as they normally do when inside a CDATA section. */
   type CDATASection = org.scalajs.dom.raw.Text
   type COSEAlgorithmIdentifier = scala.Double
@@ -75,9 +75,9 @@ package object std {
     * Extract from T those types that are assignable to U
     */
   type Extract[T, U] = T
-  type Float32List = scala.scalajs.js.typedarray.Float32Array | js.Array[typingsSlinky.std.GLfloat]
+  type Float32List = js.typedarray.Float32Array | js.Array[typingsSlinky.std.GLfloat]
   type ForEachCallback = js.Function2[
-    /* keyId */ scala.scalajs.js.typedarray.Int8Array | scala.scalajs.js.typedarray.Int16Array | scala.scalajs.js.typedarray.Int32Array | scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint16Array | scala.scalajs.js.typedarray.Uint32Array | scala.scalajs.js.typedarray.Uint8ClampedArray | scala.scalajs.js.typedarray.Float32Array | scala.scalajs.js.typedarray.Float64Array | scala.scalajs.js.typedarray.DataView | scala.scalajs.js.typedarray.ArrayBuffer | scala.Null, 
+    /* keyId */ js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer | scala.Null, 
     /* status */ typingsSlinky.std.MediaKeyStatus, 
     scala.Unit
   ]
@@ -112,7 +112,7 @@ package object std {
     * Obtain the return type of a constructor function type
     */
   type InstanceType[T /* <: org.scalablytyped.runtime.Instantiable1[/* args */ js.Any, js.Any] */] = js.Any
-  type Int32List = scala.scalajs.js.typedarray.Int32Array | js.Array[typingsSlinky.std.GLint]
+  type Int32List = js.typedarray.Int32Array | js.Array[typingsSlinky.std.GLint]
   type IntersectionObserverCallback = js.Function2[
     /* entries */ js.Array[typingsSlinky.std.IntersectionObserverEntry], 
     /* observer */ typingsSlinky.std.IntersectionObserver, 
@@ -152,7 +152,7 @@ package object std {
   /**
     * Construct a type with the properties of T except for those in type K.
     */
-  type Omit[T, K /* <: java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[java.lang.String, K]]
+  type Omit[T, K /* <: /* keyof any */ java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   /**
     * Removes the 'this' parameter from a function type.
     */
@@ -183,7 +183,7 @@ package object std {
     */
   type Partial[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]:? T[P]}
-    */ typingsSlinky.std.stdStrings.Partial with T
+    */ typingsSlinky.std.stdStrings.Partial with org.scalablytyped.runtime.TopLevel[T]
   type PaymentRequestUpdateEventInit = typingsSlinky.std.EventInit
   type PerformanceEntryList = js.Array[org.scalajs.dom.raw.PerformanceEntry]
   /** PerformanceMark is an abstract interface for PerformanceEntry objects with an entryType of "mark". Entries of this type are created by calling performance.mark() to add a named DOMHighResTimeStamp (the mark) to the browser's performance timeline. */
@@ -198,9 +198,9 @@ package object std {
   /**
     * From T, pick a set of properties whose keys are in the union K
     */
-  type Pick[T, K /* <: java.lang.String */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  type Pick[T, K /* <: /* keyof T */ java.lang.String */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in K ]: T[P]}
-    */ typingsSlinky.std.stdStrings.Pick with T
+    */ typingsSlinky.std.stdStrings.Pick with org.scalablytyped.runtime.TopLevel[T]
   type PositionCallback = js.Function1[/* position */ org.scalajs.dom.raw.Position, scala.Unit]
   type PositionErrorCallback = js.Function1[/* positionError */ org.scalajs.dom.raw.PositionError, scala.Unit]
   type PromiseConstructorLike = org.scalablytyped.runtime.Instantiable1[
@@ -239,11 +239,11 @@ package object std {
     */
   type Readonly[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {readonly [ P in keyof T ]: T[P]}
-    */ typingsSlinky.std.stdStrings.Readonly with T
+    */ typingsSlinky.std.stdStrings.Readonly with org.scalablytyped.runtime.TopLevel[T]
   /**
     * Construct a type with a set of properties K of type T
     */
-  type Record[K /* <: java.lang.String */, T] = org.scalablytyped.runtime.StringDictionary[T]
+  type Record[K /* <: /* keyof any */ java.lang.String */, T] = org.scalablytyped.runtime.StringDictionary[T]
   type ReferenceError = js.Error
   type RequestInfo = org.scalajs.dom.experimental.Request | java.lang.String
   /**
@@ -251,7 +251,7 @@ package object std {
     */
   type Required[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: -? T[P]}
-    */ typingsSlinky.std.stdStrings.Required with T
+    */ typingsSlinky.std.stdStrings.Required with org.scalablytyped.runtime.TopLevel[T]
   /**
     * Obtain the return type of a function type
     */
@@ -279,7 +279,7 @@ package object std {
   ]
   type TypeError = js.Error
   type URIError = js.Error
-  type Uint32List = scala.scalajs.js.typedarray.Uint32Array | js.Array[typingsSlinky.std.GLuint]
+  type Uint32List = js.typedarray.Uint32Array | js.Array[typingsSlinky.std.GLuint]
   type UvmEntries = js.Array[typingsSlinky.std.UvmEntry]
   type UvmEntry = js.Array[scala.Double]
   type VibratePattern = scala.Double | js.Array[scala.Double]

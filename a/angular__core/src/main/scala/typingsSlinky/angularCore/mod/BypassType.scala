@@ -15,16 +15,14 @@ trait BypassType extends js.Object
 
 object BypassType {
   @scala.inline
-  def Html: typingsSlinky.angularCore.angularCoreStrings.Html = this.cast("Html")
+  def Html: typingsSlinky.angularCore.angularCoreStrings.Html = "Html".asInstanceOf[typingsSlinky.angularCore.angularCoreStrings.Html]
   @scala.inline
-  def ResourceUrl: typingsSlinky.angularCore.angularCoreStrings.ResourceUrl = this.cast("ResourceUrl")
+  def ResourceUrl: typingsSlinky.angularCore.angularCoreStrings.ResourceUrl = "ResourceUrl".asInstanceOf[typingsSlinky.angularCore.angularCoreStrings.ResourceUrl]
   @scala.inline
-  def Script: typingsSlinky.angularCore.angularCoreStrings.Script = this.cast("Script")
+  def Script: typingsSlinky.angularCore.angularCoreStrings.Script = "Script".asInstanceOf[typingsSlinky.angularCore.angularCoreStrings.Script]
   @scala.inline
-  def Style: typingsSlinky.angularCore.angularCoreStrings.Style = this.cast("Style")
+  def Style: typingsSlinky.angularCore.angularCoreStrings.Style = "Style".asInstanceOf[typingsSlinky.angularCore.angularCoreStrings.Style]
   @scala.inline
-  def Url: typingsSlinky.angularCore.angularCoreStrings.Url = this.cast("Url")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Url: typingsSlinky.angularCore.angularCoreStrings.Url = "Url".asInstanceOf[typingsSlinky.angularCore.angularCoreStrings.Url]
 }
 

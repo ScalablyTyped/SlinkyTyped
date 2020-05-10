@@ -6,60 +6,230 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BasicToastrOptions extends js.Object {
-  var attention: js.UndefOr[Boolean] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var component: js.UndefOr[ReactComponentClass[js.Object] | ReactElement] = js.undefined
-  var getState: js.UndefOr[js.Function1[/* state */ ToastrState, ToastrState]] = js.undefined
-  var icon: js.UndefOr[ReactElement] = js.undefined
-  var onCloseButtonClick: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onHideComplete: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onShowComplete: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onToastrClick: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var progressBar: js.UndefOr[Boolean] = js.undefined
-  var removeOnHover: js.UndefOr[Boolean] = js.undefined
-  var showCloseButton: js.UndefOr[Boolean] = js.undefined
-  var timeOut: js.UndefOr[Double] = js.undefined
-  var transitionIn: js.UndefOr[transitionInType] = js.undefined
-  var transitionOut: js.UndefOr[transitionOutType] = js.undefined
+  var attention: js.UndefOr[Boolean] = js.native
+  var className: js.UndefOr[String] = js.native
+  var component: js.UndefOr[ReactComponentClass[js.Object] | ReactElement] = js.native
+  var getState: js.UndefOr[js.Function1[/* state */ ToastrState, ToastrState]] = js.native
+  var icon: js.UndefOr[ReactElement] = js.native
+  var onCloseButtonClick: js.UndefOr[js.Function0[Unit]] = js.native
+  var onHideComplete: js.UndefOr[js.Function0[Unit]] = js.native
+  var onShowComplete: js.UndefOr[js.Function0[Unit]] = js.native
+  var onToastrClick: js.UndefOr[js.Function0[Unit]] = js.native
+  var progressBar: js.UndefOr[Boolean] = js.native
+  var removeOnHover: js.UndefOr[Boolean] = js.native
+  var showCloseButton: js.UndefOr[Boolean] = js.native
+  var timeOut: js.UndefOr[Double] = js.native
+  var transitionIn: js.UndefOr[transitionInType] = js.native
+  var transitionOut: js.UndefOr[transitionOutType] = js.native
 }
 
 object BasicToastrOptions {
   @scala.inline
-  def apply(
-    attention: js.UndefOr[Boolean] = js.undefined,
-    className: String = null,
-    component: ReactComponentClass[js.Object] | ReactElement = null,
-    getState: /* state */ ToastrState => ToastrState = null,
-    icon: ReactElement = null,
-    onCloseButtonClick: () => Unit = null,
-    onHideComplete: () => Unit = null,
-    onShowComplete: () => Unit = null,
-    onToastrClick: () => Unit = null,
-    progressBar: js.UndefOr[Boolean] = js.undefined,
-    removeOnHover: js.UndefOr[Boolean] = js.undefined,
-    showCloseButton: js.UndefOr[Boolean] = js.undefined,
-    timeOut: Int | Double = null,
-    transitionIn: transitionInType = null,
-    transitionOut: transitionOutType = null
-  ): BasicToastrOptions = {
+  def apply(): BasicToastrOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(attention)) __obj.updateDynamic("attention")(attention.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (getState != null) __obj.updateDynamic("getState")(js.Any.fromFunction1(getState))
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (onCloseButtonClick != null) __obj.updateDynamic("onCloseButtonClick")(js.Any.fromFunction0(onCloseButtonClick))
-    if (onHideComplete != null) __obj.updateDynamic("onHideComplete")(js.Any.fromFunction0(onHideComplete))
-    if (onShowComplete != null) __obj.updateDynamic("onShowComplete")(js.Any.fromFunction0(onShowComplete))
-    if (onToastrClick != null) __obj.updateDynamic("onToastrClick")(js.Any.fromFunction0(onToastrClick))
-    if (!js.isUndefined(progressBar)) __obj.updateDynamic("progressBar")(progressBar.asInstanceOf[js.Any])
-    if (!js.isUndefined(removeOnHover)) __obj.updateDynamic("removeOnHover")(removeOnHover.asInstanceOf[js.Any])
-    if (!js.isUndefined(showCloseButton)) __obj.updateDynamic("showCloseButton")(showCloseButton.asInstanceOf[js.Any])
-    if (timeOut != null) __obj.updateDynamic("timeOut")(timeOut.asInstanceOf[js.Any])
-    if (transitionIn != null) __obj.updateDynamic("transitionIn")(transitionIn.asInstanceOf[js.Any])
-    if (transitionOut != null) __obj.updateDynamic("transitionOut")(transitionOut.asInstanceOf[js.Any])
     __obj.asInstanceOf[BasicToastrOptions]
   }
+  @scala.inline
+  implicit class BasicToastrOptionsOps[Self <: BasicToastrOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttention(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attention")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttention: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attention")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponentReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComponentComponent(value: ReactComponentClass[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComponent(value: ReactComponentClass[js.Object] | ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetState(value: /* state */ ToastrState => ToastrState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCloseButtonClick(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCloseButtonClick")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCloseButtonClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCloseButtonClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnHideComplete(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHideComplete")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnHideComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHideComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnShowComplete(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShowComplete")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnShowComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShowComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnToastrClick(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onToastrClick")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnToastrClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onToastrClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressBar(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressBar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressBar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressBar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveOnHover(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeOnHover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveOnHover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeOnHover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowCloseButton(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showCloseButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowCloseButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showCloseButton")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeOut(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionIn(value: transitionInType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionIn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionOut(value: transitionOutType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionOut")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

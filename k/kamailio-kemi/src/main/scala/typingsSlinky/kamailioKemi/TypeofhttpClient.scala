@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TypeofhttpClient extends js.Object {
-  def curl_connect(con: String, url: String, dpv: String): Double
-  def curl_connect_post(con: String, url: String, ctype: String, data: String, dpv: String): Double
-  def query(url: String, dpv: String): Double
-  def query_post(url: String, post: String, dpv: String): Double
-  def query_post_hdrs(url: String, post: String, hdrs: String, dpv: String): Double
+  def curl_connect(con: String, url: String, dpv: String): Double = js.native
+  def curl_connect_post(con: String, url: String, ctype: String, data: String, dpv: String): Double = js.native
+  def query(url: String, dpv: String): Double = js.native
+  def query_post(url: String, post: String, dpv: String): Double = js.native
+  def query_post_hdrs(url: String, post: String, hdrs: String, dpv: String): Double = js.native
 }
 
 object TypeofhttpClient {
@@ -22,8 +23,45 @@ object TypeofhttpClient {
     query_post_hdrs: (String, String, String, String) => Double
   ): TypeofhttpClient = {
     val __obj = js.Dynamic.literal(curl_connect = js.Any.fromFunction3(curl_connect), curl_connect_post = js.Any.fromFunction5(curl_connect_post), query = js.Any.fromFunction2(query), query_post = js.Any.fromFunction3(query_post), query_post_hdrs = js.Any.fromFunction4(query_post_hdrs))
-  
     __obj.asInstanceOf[TypeofhttpClient]
   }
+  @scala.inline
+  implicit class TypeofhttpClientOps[Self <: TypeofhttpClient] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurl_connect(value: (String, String, String) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curl_connect")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withCurl_connect_post(value: (String, String, String, String, String) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curl_connect_post")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withQuery(value: (String, String) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withQuery_post(value: (String, String, String) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query_post")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withQuery_post_hdrs(value: (String, String, String, String) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query_post_hdrs")(js.Any.fromFunction4(value))
+        ret
+    }
+  }
+  
 }
 

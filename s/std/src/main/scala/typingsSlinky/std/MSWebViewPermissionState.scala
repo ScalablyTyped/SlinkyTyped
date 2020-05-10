@@ -14,14 +14,12 @@ trait MSWebViewPermissionState extends js.Object
 
 object MSWebViewPermissionState {
   @scala.inline
-  def allow: typingsSlinky.std.stdStrings.allow = this.cast("allow")
+  def allow: typingsSlinky.std.stdStrings.allow = "allow".asInstanceOf[typingsSlinky.std.stdStrings.allow]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def defer: typingsSlinky.std.stdStrings.defer = "defer".asInstanceOf[typingsSlinky.std.stdStrings.defer]
   @scala.inline
-  def defer: typingsSlinky.std.stdStrings.defer = this.cast("defer")
+  def deny: typingsSlinky.std.stdStrings.deny = "deny".asInstanceOf[typingsSlinky.std.stdStrings.deny]
   @scala.inline
-  def deny: typingsSlinky.std.stdStrings.deny = this.cast("deny")
-  @scala.inline
-  def unknown: typingsSlinky.std.stdStrings.unknown = this.cast("unknown")
+  def unknown: typingsSlinky.std.stdStrings.unknown = "unknown".asInstanceOf[typingsSlinky.std.stdStrings.unknown]
 }
 

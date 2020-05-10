@@ -4,19 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxPolarChartAdaptiveLayout extends BaseChartAdaptiveLayout
 
 object dxPolarChartAdaptiveLayout {
   @scala.inline
-  def apply(
-    height: Int | Double = null,
-    keepLabels: js.UndefOr[Boolean] = js.undefined,
-    width: Int | Double = null
-  ): dxPolarChartAdaptiveLayout = {
+  def apply(): dxPolarChartAdaptiveLayout = {
     val __obj = js.Dynamic.literal()
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepLabels)) __obj.updateDynamic("keepLabels")(keepLabels.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxPolarChartAdaptiveLayout]
   }
 }

@@ -20,8 +20,27 @@ object EventAccountFilter {
   @scala.inline
   def apply(awsAccountId: accountId, eventArn: eventArn): EventAccountFilter = {
     val __obj = js.Dynamic.literal(awsAccountId = awsAccountId.asInstanceOf[js.Any], eventArn = eventArn.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[EventAccountFilter]
   }
+  @scala.inline
+  implicit class EventAccountFilterOps[Self <: EventAccountFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAwsAccountId(value: accountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEventArn(value: eventArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -34,18 +34,65 @@ trait SchemaSubscriptionPurchase extends js.Object {
 
 object SchemaSubscriptionPurchase {
   @scala.inline
-  def apply(
-    autoRenewing: js.UndefOr[Boolean] = js.undefined,
-    initiationTimestampMsec: String = null,
-    kind: String = null,
-    validUntilTimestampMsec: String = null
-  ): SchemaSubscriptionPurchase = {
+  def apply(): SchemaSubscriptionPurchase = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoRenewing)) __obj.updateDynamic("autoRenewing")(autoRenewing.asInstanceOf[js.Any])
-    if (initiationTimestampMsec != null) __obj.updateDynamic("initiationTimestampMsec")(initiationTimestampMsec.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (validUntilTimestampMsec != null) __obj.updateDynamic("validUntilTimestampMsec")(validUntilTimestampMsec.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSubscriptionPurchase]
   }
+  @scala.inline
+  implicit class SchemaSubscriptionPurchaseOps[Self <: SchemaSubscriptionPurchase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoRenewing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRenewing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoRenewing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRenewing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitiationTimestampMsec(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initiationTimestampMsec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitiationTimestampMsec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initiationTimestampMsec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidUntilTimestampMsec(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validUntilTimestampMsec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidUntilTimestampMsec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validUntilTimestampMsec")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

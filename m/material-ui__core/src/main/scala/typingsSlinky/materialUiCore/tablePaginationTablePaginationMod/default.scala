@@ -1,9 +1,8 @@
 package typingsSlinky.materialUiCore.tablePaginationTablePaginationMod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +10,12 @@ import scala.scalajs.js.annotation._
 @JSImport("@material-ui/core/TablePagination/TablePagination", JSImport.Default)
 @js.native
 class default protected ()
-  extends Component[TablePaginationProps, ComponentState, js.Any] {
+  extends Component[TablePaginationProps, js.Object, js.Any] {
   def this(props: TablePaginationProps) = this()
   def this(props: TablePaginationProps, context: js.Any) = this()
 }
 
 @JSImport("@material-ui/core/TablePagination/TablePagination", JSImport.Default)
 @js.native
-object default extends TopLevel[ComponentType[TablePaginationProps]]
+object default extends TopLevel[ReactComponentClass[TablePaginationProps]]
 

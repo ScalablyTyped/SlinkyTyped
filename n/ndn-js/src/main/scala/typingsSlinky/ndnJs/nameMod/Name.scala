@@ -3,8 +3,6 @@ package typingsSlinky.ndnJs.nameMod
 import typingsSlinky.ndnJs.blobMod.Blob
 import typingsSlinky.ndnJs.nameMod.Name.Component
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("ndn-js/name", "Name")
 @js.native
 class Name () extends js.Object {
-  def this(components: js.Array[Component | scala.scalajs.js.typedarray.Uint8Array]) = this()
+  def this(components: js.Array[Component | js.typedarray.Uint8Array]) = this()
   def this(name: String) = this()
   def this(name: Name) = this()
   def append(components: Name): Name = js.native
@@ -26,12 +24,12 @@ class Name () extends js.Object {
   def append(value: Blob): Name = js.native
   def append(value: Blob, `type`: ComponentType): Name = js.native
   def append(value: Blob, `type`: ComponentType, otherTypeCode: Double): Name = js.native
-  def append(value: ArrayBuffer): Name = js.native
-  def append(value: ArrayBuffer, `type`: ComponentType): Name = js.native
-  def append(value: ArrayBuffer, `type`: ComponentType, otherTypeCode: Double): Name = js.native
-  def append(value: Uint8Array): Name = js.native
-  def append(value: Uint8Array, `type`: ComponentType): Name = js.native
-  def append(value: Uint8Array, `type`: ComponentType, otherTypeCode: Double): Name = js.native
+  def append(value: js.typedarray.ArrayBuffer): Name = js.native
+  def append(value: js.typedarray.ArrayBuffer, `type`: ComponentType): Name = js.native
+  def append(value: js.typedarray.ArrayBuffer, `type`: ComponentType, otherTypeCode: Double): Name = js.native
+  def append(value: js.typedarray.Uint8Array): Name = js.native
+  def append(value: js.typedarray.Uint8Array, `type`: ComponentType): Name = js.native
+  def append(value: js.typedarray.Uint8Array, `type`: ComponentType, otherTypeCode: Double): Name = js.native
   def appendImplicitSha256Digest(digest: Blob): Name = js.native
   def appendParametersSha256Digest(digest: Blob): Name = js.native
   def appendSegment(segment: Double): Name = js.native
@@ -76,18 +74,18 @@ object Name extends js.Object {
     def this(value: String) = this()
     def this(value: js.Array[Double]) = this()
     def this(value: Blob) = this()
-    def this(value: scala.scalajs.js.typedarray.ArrayBuffer) = this()
-    def this(value: scala.scalajs.js.typedarray.Uint8Array) = this()
+    def this(value: js.typedarray.ArrayBuffer) = this()
+    def this(value: js.typedarray.Uint8Array) = this()
     def this(value: String, `type`: ComponentType) = this()
     def this(value: js.Array[Double], `type`: ComponentType) = this()
     def this(value: Blob, `type`: ComponentType) = this()
-    def this(value: scala.scalajs.js.typedarray.ArrayBuffer, `type`: ComponentType) = this()
-    def this(value: scala.scalajs.js.typedarray.Uint8Array, `type`: ComponentType) = this()
+    def this(value: js.typedarray.ArrayBuffer, `type`: ComponentType) = this()
+    def this(value: js.typedarray.Uint8Array, `type`: ComponentType) = this()
     def this(value: String, `type`: ComponentType, otherTypeCode: Double) = this()
     def this(value: js.Array[Double], `type`: ComponentType, otherTypeCode: Double) = this()
     def this(value: Blob, `type`: ComponentType, otherTypeCode: Double) = this()
-    def this(value: scala.scalajs.js.typedarray.ArrayBuffer, `type`: ComponentType, otherTypeCode: Double) = this()
-    def this(value: scala.scalajs.js.typedarray.Uint8Array, `type`: ComponentType, otherTypeCode: Double) = this()
+    def this(value: js.typedarray.ArrayBuffer, `type`: ComponentType, otherTypeCode: Double) = this()
+    def this(value: js.typedarray.Uint8Array, `type`: ComponentType, otherTypeCode: Double) = this()
     def compare(other: Component): CompareResult = js.native
     def equals(other: Component): Boolean = js.native
     def getOtherTypeCode(): Double = js.native

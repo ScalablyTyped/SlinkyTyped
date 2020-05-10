@@ -22,10 +22,41 @@ trait SetIdentityNotificationTopicRequest extends js.Object {
 
 object SetIdentityNotificationTopicRequest {
   @scala.inline
-  def apply(Identity: Identity, NotificationType: NotificationType, SnsTopic: NotificationTopic = null): SetIdentityNotificationTopicRequest = {
+  def apply(Identity: Identity, NotificationType: NotificationType): SetIdentityNotificationTopicRequest = {
     val __obj = js.Dynamic.literal(Identity = Identity.asInstanceOf[js.Any], NotificationType = NotificationType.asInstanceOf[js.Any])
-    if (SnsTopic != null) __obj.updateDynamic("SnsTopic")(SnsTopic.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetIdentityNotificationTopicRequest]
   }
+  @scala.inline
+  implicit class SetIdentityNotificationTopicRequestOps[Self <: SetIdentityNotificationTopicRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIdentity(value: Identity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Identity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNotificationType(value: NotificationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSnsTopic(value: NotificationTopic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnsTopic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnsTopic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnsTopic")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

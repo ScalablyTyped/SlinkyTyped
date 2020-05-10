@@ -30,18 +30,65 @@ trait CorsRule extends js.Object {
 
 object CorsRule {
   @scala.inline
-  def apply(
-    AllowedHeaders: AllowedHeaders,
-    AllowedOrigins: AllowedOrigins,
-    AllowedMethods: AllowedMethods = null,
-    ExposeHeaders: ExposeHeaders = null,
-    MaxAgeSeconds: Int | Double = null
-  ): CorsRule = {
+  def apply(AllowedHeaders: AllowedHeaders, AllowedOrigins: AllowedOrigins): CorsRule = {
     val __obj = js.Dynamic.literal(AllowedHeaders = AllowedHeaders.asInstanceOf[js.Any], AllowedOrigins = AllowedOrigins.asInstanceOf[js.Any])
-    if (AllowedMethods != null) __obj.updateDynamic("AllowedMethods")(AllowedMethods.asInstanceOf[js.Any])
-    if (ExposeHeaders != null) __obj.updateDynamic("ExposeHeaders")(ExposeHeaders.asInstanceOf[js.Any])
-    if (MaxAgeSeconds != null) __obj.updateDynamic("MaxAgeSeconds")(MaxAgeSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[CorsRule]
   }
+  @scala.inline
+  implicit class CorsRuleOps[Self <: CorsRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowedHeaders(value: AllowedHeaders): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllowedOrigins(value: AllowedOrigins): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedOrigins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllowedMethods(value: AllowedMethods): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedMethods")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedMethods: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedMethods")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExposeHeaders(value: ExposeHeaders): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExposeHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExposeHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExposeHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAgeSeconds(value: MaxAgeSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxAgeSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAgeSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxAgeSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait PanFade extends js.Object {
   /**
     * Returns a dojo.Animation that either pans left or right to the next pane.
@@ -39,31 +40,31 @@ trait PanFade extends js.Object {
     *
     * @param args
     */
-  def panFade(args: js.Object): js.Any
+  def panFade(args: js.Object): js.Any = js.native
   /**
     * Returns a dojo.Animation that pans in the next rotator pane from the top.
     *
     * @param args
     */
-  def panFadeDown(args: js.Object): js.Any
+  def panFadeDown(args: js.Object): js.Any = js.native
   /**
     * Returns a dojo.Animation that pans in the next rotator pane from the left.
     *
     * @param args
     */
-  def panFadeLeft(args: js.Object): js.Any
+  def panFadeLeft(args: js.Object): js.Any = js.native
   /**
     * Returns a dojo.Animation that pans in the next rotator pane from the right.
     *
     * @param args
     */
-  def panFadeRight(args: js.Object): js.Any
+  def panFadeRight(args: js.Object): js.Any = js.native
   /**
     * Returns a dojo.Animation that pans in the next rotator pane from the bottom.
     *
     * @param args
     */
-  def panFadeUp(args: js.Object): js.Any
+  def panFadeUp(args: js.Object): js.Any = js.native
 }
 
 object PanFade {
@@ -76,8 +77,45 @@ object PanFade {
     panFadeUp: js.Object => js.Any
   ): PanFade = {
     val __obj = js.Dynamic.literal(panFade = js.Any.fromFunction1(panFade), panFadeDown = js.Any.fromFunction1(panFadeDown), panFadeLeft = js.Any.fromFunction1(panFadeLeft), panFadeRight = js.Any.fromFunction1(panFadeRight), panFadeUp = js.Any.fromFunction1(panFadeUp))
-  
     __obj.asInstanceOf[PanFade]
   }
+  @scala.inline
+  implicit class PanFadeOps[Self <: PanFade] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPanFade(value: js.Object => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panFade")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPanFadeDown(value: js.Object => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panFadeDown")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPanFadeLeft(value: js.Object => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panFadeLeft")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPanFadeRight(value: js.Object => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panFadeRight")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPanFadeUp(value: js.Object => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panFadeUp")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

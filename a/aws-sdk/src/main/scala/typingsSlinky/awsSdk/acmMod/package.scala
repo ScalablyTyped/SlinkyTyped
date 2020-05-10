@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation._
 package object acmMod {
   type Arn = java.lang.String
   type CertificateBody = java.lang.String
-  type CertificateBodyBlob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.acmMod.Blob | java.lang.String
+  type CertificateBodyBlob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.acmMod.Blob | java.lang.String
   type CertificateChain = java.lang.String
-  type CertificateChainBlob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.acmMod.Blob | java.lang.String
+  type CertificateChainBlob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.acmMod.Blob | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.PENDING_VALIDATION
     - typingsSlinky.awsSdk.awsSdkStrings.ISSUED
@@ -118,9 +118,9 @@ package object acmMod {
   type KeyUsageName = typingsSlinky.awsSdk.acmMod._KeyUsageName | java.lang.String
   type MaxItems = scala.Double
   type NextToken = java.lang.String
-  type PassphraseBlob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.acmMod.Blob | java.lang.String
+  type PassphraseBlob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.acmMod.Blob | java.lang.String
   type PrivateKey = java.lang.String
-  type PrivateKeyBlob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.acmMod.Blob | java.lang.String
+  type PrivateKeyBlob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.acmMod.Blob | java.lang.String
   type RecordType = typingsSlinky.awsSdk.awsSdkStrings.CNAME | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ELIGIBLE

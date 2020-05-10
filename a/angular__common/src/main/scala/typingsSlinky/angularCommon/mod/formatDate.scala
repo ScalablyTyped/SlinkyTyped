@@ -1,6 +1,5 @@
 package typingsSlinky.angularCommon.mod
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ object formatDate extends js.Object {
   def apply(value: String, format: String, locale: String, timezone: String): String = js.native
   def apply(value: Double, format: String, locale: String): String = js.native
   def apply(value: Double, format: String, locale: String, timezone: String): String = js.native
-  def apply(value: Date, format: String, locale: String): String = js.native
-  def apply(value: Date, format: String, locale: String, timezone: String): String = js.native
+  def apply(value: js.Date, format: String, locale: String): String = js.native
+  def apply(value: js.Date, format: String, locale: String, timezone: String): String = js.native
 }
 

@@ -39,20 +39,77 @@ trait SchemaThreatEntrySet extends js.Object {
 
 object SchemaThreatEntrySet {
   @scala.inline
-  def apply(
-    compressionType: String = null,
-    rawHashes: SchemaRawHashes = null,
-    rawIndices: SchemaRawIndices = null,
-    riceHashes: SchemaRiceDeltaEncoding = null,
-    riceIndices: SchemaRiceDeltaEncoding = null
-  ): SchemaThreatEntrySet = {
+  def apply(): SchemaThreatEntrySet = {
     val __obj = js.Dynamic.literal()
-    if (compressionType != null) __obj.updateDynamic("compressionType")(compressionType.asInstanceOf[js.Any])
-    if (rawHashes != null) __obj.updateDynamic("rawHashes")(rawHashes.asInstanceOf[js.Any])
-    if (rawIndices != null) __obj.updateDynamic("rawIndices")(rawIndices.asInstanceOf[js.Any])
-    if (riceHashes != null) __obj.updateDynamic("riceHashes")(riceHashes.asInstanceOf[js.Any])
-    if (riceIndices != null) __obj.updateDynamic("riceIndices")(riceIndices.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaThreatEntrySet]
   }
+  @scala.inline
+  implicit class SchemaThreatEntrySetOps[Self <: SchemaThreatEntrySet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompressionType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compressionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompressionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compressionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRawHashes(value: SchemaRawHashes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawHashes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRawHashes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawHashes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRawIndices(value: SchemaRawIndices): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawIndices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRawIndices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawIndices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRiceHashes(value: SchemaRiceDeltaEncoding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("riceHashes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRiceHashes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("riceHashes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRiceIndices(value: SchemaRiceDeltaEncoding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("riceIndices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRiceIndices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("riceIndices")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -10,3 +10,38 @@ trait FormalExpression extends Expression {
   var language: String = js.native
 }
 
+object FormalExpression {
+  @scala.inline
+  def apply(
+    $parent: TypeDerived,
+    $type: ElementType,
+    body: String,
+    evaluatesToTypeRef: ItemDefinition,
+    id: String,
+    language: String
+  ): FormalExpression = {
+    val __obj = js.Dynamic.literal($parent = $parent.asInstanceOf[js.Any], $type = $type.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], evaluatesToTypeRef = evaluatesToTypeRef.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], language = language.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FormalExpression]
+  }
+  @scala.inline
+  implicit class FormalExpressionOps[Self <: FormalExpression] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEvaluatesToTypeRef(value: ItemDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluatesToTypeRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

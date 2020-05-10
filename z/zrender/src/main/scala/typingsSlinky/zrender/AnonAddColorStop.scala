@@ -11,15 +11,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAddColorStop extends js.Object {
-  var colorStops: ColorStops
-  var globalCoord: GlobalCoords
-  var `type`: linear
-  var x: X
-  var x2: X2
-  var y: Y
-  var y2: Y2
-  def addColorStop(offset: Double, color: String): Unit
+  var colorStops: ColorStops = js.native
+  var globalCoord: GlobalCoords = js.native
+  var `type`: linear = js.native
+  var x: X = js.native
+  var x2: X2 = js.native
+  var y: Y = js.native
+  var y2: Y2 = js.native
+  def addColorStop(offset: Double, color: String): Unit = js.native
 }
 
 object AnonAddColorStop {
@@ -38,5 +39,61 @@ object AnonAddColorStop {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAddColorStop]
   }
+  @scala.inline
+  implicit class AnonAddColorStopOps[Self <: AnonAddColorStop] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddColorStop(value: (Double, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addColorStop")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withColorStops(value: ColorStops): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorStops")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGlobalCoord(value: GlobalCoords): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("globalCoord")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: linear): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX(value: X): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX2(value: X2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Y): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY2(value: Y2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y2")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

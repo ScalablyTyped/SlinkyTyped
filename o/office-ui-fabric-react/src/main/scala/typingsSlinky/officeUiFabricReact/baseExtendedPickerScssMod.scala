@@ -1,7 +1,5 @@
 package typingsSlinky.officeUiFabricReact
 
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.pickerInput_6841a0ca
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.pickerText_6841a0ca
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("office-ui-fabric-react/lib/components/ExtendedPicker/BaseExtendedPicker.scss", JSImport.Namespace)
 @js.native
 object baseExtendedPickerScssMod extends js.Object {
-  val pickerInput: pickerInput_6841a0ca = js.native
-  val pickerText: pickerText_6841a0ca = js.native
+  val pickerInput: /* "pickerInput_8d9d7e4e" */ String = js.native
+  val pickerText: /* "pickerText_8d9d7e4e" */ String = js.native
 }
 

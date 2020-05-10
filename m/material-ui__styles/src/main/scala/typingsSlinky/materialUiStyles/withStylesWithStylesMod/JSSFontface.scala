@@ -13,51 +13,179 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined csstype.csstype.FontFace & {  fallbacks ? :std.Array<csstype.csstype.FontFace>} */
+@js.native
 trait JSSFontface extends js.Object {
-  var MozFontFeatureSettings: js.UndefOr[FontFaceFontFeatureSettingsProperty] = js.undefined
-  var fallbacks: js.UndefOr[js.Array[FontFace]] = js.undefined
-  var fontDisplay: js.UndefOr[FontFaceFontDisplayProperty] = js.undefined
-  var fontFamily: js.UndefOr[String] = js.undefined
-  var fontFeatureSettings: js.UndefOr[FontFaceFontFeatureSettingsProperty] = js.undefined
-  var fontStretch: js.UndefOr[FontFaceFontStretchProperty] = js.undefined
-  var fontStyle: js.UndefOr[FontFaceFontStyleProperty] = js.undefined
-  var fontVariant: js.UndefOr[FontFaceFontVariantProperty] = js.undefined
-  var fontVariationSettings: js.UndefOr[FontFaceFontVariationSettingsProperty] = js.undefined
-  var fontWeight: js.UndefOr[FontFaceFontWeightProperty] = js.undefined
-  var src: js.UndefOr[String] = js.undefined
-  var unicodeRange: js.UndefOr[String] = js.undefined
+  var MozFontFeatureSettings: js.UndefOr[FontFaceFontFeatureSettingsProperty] = js.native
+  var fallbacks: js.UndefOr[js.Array[FontFace]] = js.native
+  var fontDisplay: js.UndefOr[FontFaceFontDisplayProperty] = js.native
+  var fontFamily: js.UndefOr[String] = js.native
+  var fontFeatureSettings: js.UndefOr[FontFaceFontFeatureSettingsProperty] = js.native
+  var fontStretch: js.UndefOr[FontFaceFontStretchProperty] = js.native
+  var fontStyle: js.UndefOr[FontFaceFontStyleProperty] = js.native
+  var fontVariant: js.UndefOr[FontFaceFontVariantProperty] = js.native
+  var fontVariationSettings: js.UndefOr[FontFaceFontVariationSettingsProperty] = js.native
+  var fontWeight: js.UndefOr[FontFaceFontWeightProperty] = js.native
+  var src: js.UndefOr[String] = js.native
+  var unicodeRange: js.UndefOr[String] = js.native
 }
 
 object JSSFontface {
   @scala.inline
-  def apply(
-    MozFontFeatureSettings: FontFaceFontFeatureSettingsProperty = null,
-    fallbacks: js.Array[FontFace] = null,
-    fontDisplay: FontFaceFontDisplayProperty = null,
-    fontFamily: String = null,
-    fontFeatureSettings: FontFaceFontFeatureSettingsProperty = null,
-    fontStretch: FontFaceFontStretchProperty = null,
-    fontStyle: FontFaceFontStyleProperty = null,
-    fontVariant: FontFaceFontVariantProperty = null,
-    fontVariationSettings: FontFaceFontVariationSettingsProperty = null,
-    fontWeight: FontFaceFontWeightProperty = null,
-    src: String = null,
-    unicodeRange: String = null
-  ): JSSFontface = {
+  def apply(): JSSFontface = {
     val __obj = js.Dynamic.literal()
-    if (MozFontFeatureSettings != null) __obj.updateDynamic("MozFontFeatureSettings")(MozFontFeatureSettings.asInstanceOf[js.Any])
-    if (fallbacks != null) __obj.updateDynamic("fallbacks")(fallbacks.asInstanceOf[js.Any])
-    if (fontDisplay != null) __obj.updateDynamic("fontDisplay")(fontDisplay.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (fontFeatureSettings != null) __obj.updateDynamic("fontFeatureSettings")(fontFeatureSettings.asInstanceOf[js.Any])
-    if (fontStretch != null) __obj.updateDynamic("fontStretch")(fontStretch.asInstanceOf[js.Any])
-    if (fontStyle != null) __obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
-    if (fontVariant != null) __obj.updateDynamic("fontVariant")(fontVariant.asInstanceOf[js.Any])
-    if (fontVariationSettings != null) __obj.updateDynamic("fontVariationSettings")(fontVariationSettings.asInstanceOf[js.Any])
-    if (fontWeight != null) __obj.updateDynamic("fontWeight")(fontWeight.asInstanceOf[js.Any])
-    if (src != null) __obj.updateDynamic("src")(src.asInstanceOf[js.Any])
-    if (unicodeRange != null) __obj.updateDynamic("unicodeRange")(unicodeRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[JSSFontface]
   }
+  @scala.inline
+  implicit class JSSFontfaceOps[Self <: JSSFontface] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMozFontFeatureSettings(value: FontFaceFontFeatureSettingsProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozFontFeatureSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozFontFeatureSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MozFontFeatureSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFallbacks(value: js.Array[FontFace]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbacks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFallbacks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbacks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontDisplay(value: FontFaceFontDisplayProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontDisplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontDisplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontDisplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontFeatureSettings(value: FontFaceFontFeatureSettingsProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFeatureSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontFeatureSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFeatureSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontStretch(value: FontFaceFontStretchProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStretch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontStretch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStretch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontStyle(value: FontFaceFontStyleProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontVariant(value: FontFaceFontVariantProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontVariant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontVariationSettings(value: FontFaceFontVariationSettingsProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariationSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontVariationSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariationSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontWeight(value: FontFaceFontWeightProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSrc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnicodeRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unicodeRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnicodeRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unicodeRange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -20,10 +20,8 @@ trait SelectionType extends js.Object
 
 object SelectionType {
   @scala.inline
-  def additive: typingsSlinky.cytoscape.cytoscapeStrings.additive = this.cast("additive")
+  def additive: typingsSlinky.cytoscape.cytoscapeStrings.additive = "additive".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.additive]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def single: typingsSlinky.cytoscape.cytoscapeStrings.single = this.cast("single")
+  def single: typingsSlinky.cytoscape.cytoscapeStrings.single = "single".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.single]
 }
 

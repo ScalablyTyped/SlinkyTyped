@@ -1,7 +1,6 @@
 package typingsSlinky.webdriverio
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.RegExp
 import typingsSlinky.webdriver.WebDriver.RectReturn
 import typingsSlinky.webdriverio.WebdriverIO.Cookie
 import typingsSlinky.webdriverio.WebdriverIO.Element
@@ -158,7 +157,7 @@ trait BrowserPromise extends js.Object {
   def setTimeout(timeouts: Timeouts): Unit = js.native
   def setWindowSize(width: Double, height: Double): Null | js.Object = js.native
   def switchWindow(urlOrTitleToMatch: String): Unit = js.native
-  def switchWindow(urlOrTitleToMatch: RegExp): Unit = js.native
+  def switchWindow(urlOrTitleToMatch: js.RegExp): Unit = js.native
   def uploadFile(localPath: String): String = js.native
   def url(): Unit = js.native
   def url(url: String): Unit = js.native

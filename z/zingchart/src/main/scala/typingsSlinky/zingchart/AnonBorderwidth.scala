@@ -4,67 +4,155 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBorderwidth extends js.Object {
   /**
     * Sets the transparency level of the object. Values must range between 0.0 and 1.0, with 0.0 being completely transparent and 1.0 be
     * ing completely opaque. Note that values require the leading 0 before the decimal point. 0.3 | 0.4 | 0.9 | ...
     */
-  var alpha: js.UndefOr[Double] = js.undefined
+  var alpha: js.UndefOr[Double] = js.native
   /**
     * Sets the background color of the object. Colors can be entered by name (e.g., "purple", "blue"), hexadecimal notation (e.g., "#666
     * 699", #33ccff"), or RGB notation (e.g., "rgb(255,0,0)", "rgb(0,0,255)"). "none" | "transparent" | "purple" | "#33ccff" | "rgb(100,
     *  15, 15)" | ...
     */
-  var `background-color`: js.UndefOr[String] = js.undefined
+  var `background-color`: js.UndefOr[String] = js.native
   /**
     * Sets the border color of the object. "none" | "transparent" | "purple" | "#33ccff" | "rgb(100, 15, 15)" | ...
     */
-  var `border-color`: js.UndefOr[String] = js.undefined
+  var `border-color`: js.UndefOr[String] = js.native
   /**
     * Sets the border width of the object. 1 | 3 | | "6px" | ...
     */
-  var `border-width`: js.UndefOr[Double] = js.undefined
+  var `border-width`: js.UndefOr[Double] = js.native
   /**
     * Sets the line color of the object. "none" | "transparent" | "purple" | "#33ccff" | "rgb(100, 15, 15)" | ...
     */
-  var `line-color`: js.UndefOr[String] = js.undefined
+  var `line-color`: js.UndefOr[String] = js.native
   /**
     * Sets the line style of the object. "solid" | "dotted" | "dashed" | "dashdot"
     */
-  var `line-style`: js.UndefOr[String] = js.undefined
+  var `line-style`: js.UndefOr[String] = js.native
   /**
     * Sets the line width of the object. 1 | 3 | | "6px" | ...
     */
-  var `line-width`: js.UndefOr[Double] = js.undefined
+  var `line-width`: js.UndefOr[Double] = js.native
   /**
     * The type of the marker object to render. square | circle | diamond | triangle | star5 | star6 | star7 | star8 | rpoly5 | gear5 | g
     * ear6 | gear7 | gear8
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
 }
 
 object AnonBorderwidth {
   @scala.inline
-  def apply(
-    alpha: Int | Double = null,
-    `background-color`: String = null,
-    `border-color`: String = null,
-    `border-width`: Int | Double = null,
-    `line-color`: String = null,
-    `line-style`: String = null,
-    `line-width`: Int | Double = null,
-    `type`: String = null
-  ): AnonBorderwidth = {
+  def apply(): AnonBorderwidth = {
     val __obj = js.Dynamic.literal()
-    if (alpha != null) __obj.updateDynamic("alpha")(alpha.asInstanceOf[js.Any])
-    if (`background-color` != null) __obj.updateDynamic("background-color")(`background-color`.asInstanceOf[js.Any])
-    if (`border-color` != null) __obj.updateDynamic("border-color")(`border-color`.asInstanceOf[js.Any])
-    if (`border-width` != null) __obj.updateDynamic("border-width")(`border-width`.asInstanceOf[js.Any])
-    if (`line-color` != null) __obj.updateDynamic("line-color")(`line-color`.asInstanceOf[js.Any])
-    if (`line-style` != null) __obj.updateDynamic("line-style")(`line-style`.asInstanceOf[js.Any])
-    if (`line-width` != null) __obj.updateDynamic("line-width")(`line-width`.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBorderwidth]
   }
+  @scala.inline
+  implicit class AnonBorderwidthOps[Self <: AnonBorderwidth] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlpha(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlpha: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withBackground-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutBackground-color`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background-color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withBorder-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("border-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutBorder-color`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("border-color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withBorder-width`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("border-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutBorder-width`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("border-width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withLine-color`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutLine-color`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withLine-style`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutLine-style`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withLine-width`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutLine-width`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

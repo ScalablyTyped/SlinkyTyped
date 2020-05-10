@@ -12,10 +12,8 @@ trait InterfaceType extends js.Object
 
 object InterfaceType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def full: typingsSlinky.chromeApps.chromeAppsStrings.full = "full".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.full]
   @scala.inline
-  def full: typingsSlinky.chromeApps.chromeAppsStrings.full = this.cast("full")
-  @scala.inline
-  def partial: typingsSlinky.chromeApps.chromeAppsStrings.partial = this.cast("partial")
+  def partial: typingsSlinky.chromeApps.chromeAppsStrings.partial = "partial".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.partial]
 }
 

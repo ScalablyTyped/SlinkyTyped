@@ -502,990 +502,988 @@ trait FlagNameValues extends js.Object
 
 object FlagNameValues {
   @scala.inline
-  def ad: typingsSlinky.semanticUiReact.semanticUiReactStrings.ad = this.cast("ad")
+  def ad: typingsSlinky.semanticUiReact.semanticUiReactStrings.ad = "ad".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ad]
   @scala.inline
-  def ae: typingsSlinky.semanticUiReact.semanticUiReactStrings.ae = this.cast("ae")
+  def ae: typingsSlinky.semanticUiReact.semanticUiReactStrings.ae = "ae".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ae]
   @scala.inline
-  def af: typingsSlinky.semanticUiReact.semanticUiReactStrings.af = this.cast("af")
+  def af: typingsSlinky.semanticUiReact.semanticUiReactStrings.af = "af".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.af]
   @scala.inline
-  def afghanistan: typingsSlinky.semanticUiReact.semanticUiReactStrings.afghanistan = this.cast("afghanistan")
+  def afghanistan: typingsSlinky.semanticUiReact.semanticUiReactStrings.afghanistan = "afghanistan".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.afghanistan]
   @scala.inline
-  def ag: typingsSlinky.semanticUiReact.semanticUiReactStrings.ag = this.cast("ag")
+  def ag: typingsSlinky.semanticUiReact.semanticUiReactStrings.ag = "ag".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ag]
   @scala.inline
-  def ai: typingsSlinky.semanticUiReact.semanticUiReactStrings.ai = this.cast("ai")
+  def ai: typingsSlinky.semanticUiReact.semanticUiReactStrings.ai = "ai".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ai]
   @scala.inline
-  def al: typingsSlinky.semanticUiReact.semanticUiReactStrings.al = this.cast("al")
+  def al: typingsSlinky.semanticUiReact.semanticUiReactStrings.al = "al".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.al]
   @scala.inline
-  def `aland islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`aland islands` = this.cast("aland islands")
+  def `aland islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`aland islands` = ("aland islands").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`aland islands`]
   @scala.inline
-  def albania: typingsSlinky.semanticUiReact.semanticUiReactStrings.albania = this.cast("albania")
+  def albania: typingsSlinky.semanticUiReact.semanticUiReactStrings.albania = "albania".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.albania]
   @scala.inline
-  def algeria: typingsSlinky.semanticUiReact.semanticUiReactStrings.algeria = this.cast("algeria")
+  def algeria: typingsSlinky.semanticUiReact.semanticUiReactStrings.algeria = "algeria".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.algeria]
   @scala.inline
-  def am: typingsSlinky.semanticUiReact.semanticUiReactStrings.am = this.cast("am")
+  def am: typingsSlinky.semanticUiReact.semanticUiReactStrings.am = "am".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.am]
   @scala.inline
-  def america: typingsSlinky.semanticUiReact.semanticUiReactStrings.america = this.cast("america")
+  def america: typingsSlinky.semanticUiReact.semanticUiReactStrings.america = "america".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.america]
   @scala.inline
-  def `american samoa`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`american samoa` = this.cast("american samoa")
+  def `american samoa`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`american samoa` = ("american samoa").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`american samoa`]
   @scala.inline
-  def an: typingsSlinky.semanticUiReact.semanticUiReactStrings.an = this.cast("an")
+  def an: typingsSlinky.semanticUiReact.semanticUiReactStrings.an = "an".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.an]
   @scala.inline
-  def andorra: typingsSlinky.semanticUiReact.semanticUiReactStrings.andorra = this.cast("andorra")
+  def andorra: typingsSlinky.semanticUiReact.semanticUiReactStrings.andorra = "andorra".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.andorra]
   @scala.inline
-  def angola: typingsSlinky.semanticUiReact.semanticUiReactStrings.angola = this.cast("angola")
+  def angola: typingsSlinky.semanticUiReact.semanticUiReactStrings.angola = "angola".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.angola]
   @scala.inline
-  def anguilla: typingsSlinky.semanticUiReact.semanticUiReactStrings.anguilla = this.cast("anguilla")
+  def anguilla: typingsSlinky.semanticUiReact.semanticUiReactStrings.anguilla = "anguilla".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.anguilla]
   @scala.inline
-  def antigua: typingsSlinky.semanticUiReact.semanticUiReactStrings.antigua = this.cast("antigua")
+  def antigua: typingsSlinky.semanticUiReact.semanticUiReactStrings.antigua = "antigua".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.antigua]
   @scala.inline
-  def ao: typingsSlinky.semanticUiReact.semanticUiReactStrings.ao = this.cast("ao")
+  def ao: typingsSlinky.semanticUiReact.semanticUiReactStrings.ao = "ao".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ao]
   @scala.inline
-  def ar: typingsSlinky.semanticUiReact.semanticUiReactStrings.ar = this.cast("ar")
+  def ar: typingsSlinky.semanticUiReact.semanticUiReactStrings.ar = "ar".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ar]
   @scala.inline
-  def argentina: typingsSlinky.semanticUiReact.semanticUiReactStrings.argentina = this.cast("argentina")
+  def argentina: typingsSlinky.semanticUiReact.semanticUiReactStrings.argentina = "argentina".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.argentina]
   @scala.inline
-  def armenia: typingsSlinky.semanticUiReact.semanticUiReactStrings.armenia = this.cast("armenia")
+  def armenia: typingsSlinky.semanticUiReact.semanticUiReactStrings.armenia = "armenia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.armenia]
   @scala.inline
-  def aruba: typingsSlinky.semanticUiReact.semanticUiReactStrings.aruba = this.cast("aruba")
+  def aruba: typingsSlinky.semanticUiReact.semanticUiReactStrings.aruba = "aruba".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.aruba]
   @scala.inline
-  def as: typingsSlinky.semanticUiReact.semanticUiReactStrings.as = this.cast("as")
+  def as: typingsSlinky.semanticUiReact.semanticUiReactStrings.as = "as".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.as]
   @scala.inline
-  def at: typingsSlinky.semanticUiReact.semanticUiReactStrings.at = this.cast("at")
+  def at: typingsSlinky.semanticUiReact.semanticUiReactStrings.at = "at".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.at]
   @scala.inline
-  def au: typingsSlinky.semanticUiReact.semanticUiReactStrings.au = this.cast("au")
+  def au: typingsSlinky.semanticUiReact.semanticUiReactStrings.au = "au".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.au]
   @scala.inline
-  def australia: typingsSlinky.semanticUiReact.semanticUiReactStrings.australia = this.cast("australia")
+  def australia: typingsSlinky.semanticUiReact.semanticUiReactStrings.australia = "australia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.australia]
   @scala.inline
-  def austria: typingsSlinky.semanticUiReact.semanticUiReactStrings.austria = this.cast("austria")
+  def austria: typingsSlinky.semanticUiReact.semanticUiReactStrings.austria = "austria".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.austria]
   @scala.inline
-  def aw: typingsSlinky.semanticUiReact.semanticUiReactStrings.aw = this.cast("aw")
+  def aw: typingsSlinky.semanticUiReact.semanticUiReactStrings.aw = "aw".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.aw]
   @scala.inline
-  def ax: typingsSlinky.semanticUiReact.semanticUiReactStrings.ax = this.cast("ax")
+  def ax: typingsSlinky.semanticUiReact.semanticUiReactStrings.ax = "ax".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ax]
   @scala.inline
-  def az: typingsSlinky.semanticUiReact.semanticUiReactStrings.az = this.cast("az")
+  def az: typingsSlinky.semanticUiReact.semanticUiReactStrings.az = "az".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.az]
   @scala.inline
-  def azerbaijan: typingsSlinky.semanticUiReact.semanticUiReactStrings.azerbaijan = this.cast("azerbaijan")
+  def azerbaijan: typingsSlinky.semanticUiReact.semanticUiReactStrings.azerbaijan = "azerbaijan".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.azerbaijan]
   @scala.inline
-  def ba: typingsSlinky.semanticUiReact.semanticUiReactStrings.ba = this.cast("ba")
+  def ba: typingsSlinky.semanticUiReact.semanticUiReactStrings.ba = "ba".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ba]
   @scala.inline
-  def bahamas: typingsSlinky.semanticUiReact.semanticUiReactStrings.bahamas = this.cast("bahamas")
+  def bahamas: typingsSlinky.semanticUiReact.semanticUiReactStrings.bahamas = "bahamas".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bahamas]
   @scala.inline
-  def bahrain: typingsSlinky.semanticUiReact.semanticUiReactStrings.bahrain = this.cast("bahrain")
+  def bahrain: typingsSlinky.semanticUiReact.semanticUiReactStrings.bahrain = "bahrain".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bahrain]
   @scala.inline
-  def bangladesh: typingsSlinky.semanticUiReact.semanticUiReactStrings.bangladesh = this.cast("bangladesh")
+  def bangladesh: typingsSlinky.semanticUiReact.semanticUiReactStrings.bangladesh = "bangladesh".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bangladesh]
   @scala.inline
-  def barbados: typingsSlinky.semanticUiReact.semanticUiReactStrings.barbados = this.cast("barbados")
+  def barbados: typingsSlinky.semanticUiReact.semanticUiReactStrings.barbados = "barbados".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.barbados]
   @scala.inline
-  def bb: typingsSlinky.semanticUiReact.semanticUiReactStrings.bb = this.cast("bb")
+  def bb: typingsSlinky.semanticUiReact.semanticUiReactStrings.bb = "bb".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bb]
   @scala.inline
-  def bd: typingsSlinky.semanticUiReact.semanticUiReactStrings.bd = this.cast("bd")
+  def bd: typingsSlinky.semanticUiReact.semanticUiReactStrings.bd = "bd".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bd]
   @scala.inline
-  def be: typingsSlinky.semanticUiReact.semanticUiReactStrings.be = this.cast("be")
+  def be: typingsSlinky.semanticUiReact.semanticUiReactStrings.be = "be".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.be]
   @scala.inline
-  def belarus: typingsSlinky.semanticUiReact.semanticUiReactStrings.belarus = this.cast("belarus")
+  def belarus: typingsSlinky.semanticUiReact.semanticUiReactStrings.belarus = "belarus".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.belarus]
   @scala.inline
-  def belgium: typingsSlinky.semanticUiReact.semanticUiReactStrings.belgium = this.cast("belgium")
+  def belgium: typingsSlinky.semanticUiReact.semanticUiReactStrings.belgium = "belgium".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.belgium]
   @scala.inline
-  def belize: typingsSlinky.semanticUiReact.semanticUiReactStrings.belize = this.cast("belize")
+  def belize: typingsSlinky.semanticUiReact.semanticUiReactStrings.belize = "belize".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.belize]
   @scala.inline
-  def benin: typingsSlinky.semanticUiReact.semanticUiReactStrings.benin = this.cast("benin")
+  def benin: typingsSlinky.semanticUiReact.semanticUiReactStrings.benin = "benin".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.benin]
   @scala.inline
-  def bermuda: typingsSlinky.semanticUiReact.semanticUiReactStrings.bermuda = this.cast("bermuda")
+  def bermuda: typingsSlinky.semanticUiReact.semanticUiReactStrings.bermuda = "bermuda".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bermuda]
   @scala.inline
-  def bf: typingsSlinky.semanticUiReact.semanticUiReactStrings.bf = this.cast("bf")
+  def bf: typingsSlinky.semanticUiReact.semanticUiReactStrings.bf = "bf".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bf]
   @scala.inline
-  def bg: typingsSlinky.semanticUiReact.semanticUiReactStrings.bg = this.cast("bg")
+  def bg: typingsSlinky.semanticUiReact.semanticUiReactStrings.bg = "bg".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bg]
   @scala.inline
-  def bh: typingsSlinky.semanticUiReact.semanticUiReactStrings.bh = this.cast("bh")
+  def bh: typingsSlinky.semanticUiReact.semanticUiReactStrings.bh = "bh".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bh]
   @scala.inline
-  def bhutan: typingsSlinky.semanticUiReact.semanticUiReactStrings.bhutan = this.cast("bhutan")
+  def bhutan: typingsSlinky.semanticUiReact.semanticUiReactStrings.bhutan = "bhutan".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bhutan]
   @scala.inline
-  def bi: typingsSlinky.semanticUiReact.semanticUiReactStrings.bi = this.cast("bi")
+  def bi: typingsSlinky.semanticUiReact.semanticUiReactStrings.bi = "bi".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bi]
   @scala.inline
-  def bj: typingsSlinky.semanticUiReact.semanticUiReactStrings.bj = this.cast("bj")
+  def bj: typingsSlinky.semanticUiReact.semanticUiReactStrings.bj = "bj".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bj]
   @scala.inline
-  def bm: typingsSlinky.semanticUiReact.semanticUiReactStrings.bm = this.cast("bm")
+  def bm: typingsSlinky.semanticUiReact.semanticUiReactStrings.bm = "bm".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bm]
   @scala.inline
-  def bn: typingsSlinky.semanticUiReact.semanticUiReactStrings.bn = this.cast("bn")
+  def bn: typingsSlinky.semanticUiReact.semanticUiReactStrings.bn = "bn".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bn]
   @scala.inline
-  def bo: typingsSlinky.semanticUiReact.semanticUiReactStrings.bo = this.cast("bo")
+  def bo: typingsSlinky.semanticUiReact.semanticUiReactStrings.bo = "bo".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bo]
   @scala.inline
-  def bolivia: typingsSlinky.semanticUiReact.semanticUiReactStrings.bolivia = this.cast("bolivia")
+  def bolivia: typingsSlinky.semanticUiReact.semanticUiReactStrings.bolivia = "bolivia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bolivia]
   @scala.inline
-  def bosnia: typingsSlinky.semanticUiReact.semanticUiReactStrings.bosnia = this.cast("bosnia")
+  def bosnia: typingsSlinky.semanticUiReact.semanticUiReactStrings.bosnia = "bosnia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bosnia]
   @scala.inline
-  def botswana: typingsSlinky.semanticUiReact.semanticUiReactStrings.botswana = this.cast("botswana")
+  def botswana: typingsSlinky.semanticUiReact.semanticUiReactStrings.botswana = "botswana".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.botswana]
   @scala.inline
-  def `bouvet island`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`bouvet island` = this.cast("bouvet island")
+  def `bouvet island`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`bouvet island` = ("bouvet island").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`bouvet island`]
   @scala.inline
-  def br: typingsSlinky.semanticUiReact.semanticUiReactStrings.br = this.cast("br")
+  def br: typingsSlinky.semanticUiReact.semanticUiReactStrings.br = "br".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.br]
   @scala.inline
-  def brazil: typingsSlinky.semanticUiReact.semanticUiReactStrings.brazil = this.cast("brazil")
+  def brazil: typingsSlinky.semanticUiReact.semanticUiReactStrings.brazil = "brazil".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.brazil]
   @scala.inline
-  def `british virgin islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`british virgin islands` = this.cast("british virgin islands")
+  def `british virgin islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`british virgin islands` = ("british virgin islands").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`british virgin islands`]
   @scala.inline
-  def brunei: typingsSlinky.semanticUiReact.semanticUiReactStrings.brunei = this.cast("brunei")
+  def brunei: typingsSlinky.semanticUiReact.semanticUiReactStrings.brunei = "brunei".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.brunei]
   @scala.inline
-  def bs: typingsSlinky.semanticUiReact.semanticUiReactStrings.bs = this.cast("bs")
+  def bs: typingsSlinky.semanticUiReact.semanticUiReactStrings.bs = "bs".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bs]
   @scala.inline
-  def bt: typingsSlinky.semanticUiReact.semanticUiReactStrings.bt = this.cast("bt")
+  def bt: typingsSlinky.semanticUiReact.semanticUiReactStrings.bt = "bt".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bt]
   @scala.inline
-  def bulgaria: typingsSlinky.semanticUiReact.semanticUiReactStrings.bulgaria = this.cast("bulgaria")
+  def bulgaria: typingsSlinky.semanticUiReact.semanticUiReactStrings.bulgaria = "bulgaria".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bulgaria]
   @scala.inline
-  def `burkina faso`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`burkina faso` = this.cast("burkina faso")
+  def `burkina faso`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`burkina faso` = ("burkina faso").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`burkina faso`]
   @scala.inline
-  def burma: typingsSlinky.semanticUiReact.semanticUiReactStrings.burma = this.cast("burma")
+  def burma: typingsSlinky.semanticUiReact.semanticUiReactStrings.burma = "burma".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.burma]
   @scala.inline
-  def burundi: typingsSlinky.semanticUiReact.semanticUiReactStrings.burundi = this.cast("burundi")
+  def burundi: typingsSlinky.semanticUiReact.semanticUiReactStrings.burundi = "burundi".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.burundi]
   @scala.inline
-  def bv: typingsSlinky.semanticUiReact.semanticUiReactStrings.bv = this.cast("bv")
+  def bv: typingsSlinky.semanticUiReact.semanticUiReactStrings.bv = "bv".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bv]
   @scala.inline
-  def bw: typingsSlinky.semanticUiReact.semanticUiReactStrings.bw = this.cast("bw")
+  def bw: typingsSlinky.semanticUiReact.semanticUiReactStrings.bw = "bw".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bw]
   @scala.inline
-  def by: typingsSlinky.semanticUiReact.semanticUiReactStrings.by = this.cast("by")
+  def by: typingsSlinky.semanticUiReact.semanticUiReactStrings.by = "by".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.by]
   @scala.inline
-  def bz: typingsSlinky.semanticUiReact.semanticUiReactStrings.bz = this.cast("bz")
+  def bz: typingsSlinky.semanticUiReact.semanticUiReactStrings.bz = "bz".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.bz]
   @scala.inline
-  def ca: typingsSlinky.semanticUiReact.semanticUiReactStrings.ca = this.cast("ca")
+  def ca: typingsSlinky.semanticUiReact.semanticUiReactStrings.ca = "ca".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ca]
   @scala.inline
-  def `caicos islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`caicos islands` = this.cast("caicos islands")
+  def `caicos islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`caicos islands` = ("caicos islands").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`caicos islands`]
   @scala.inline
-  def cambodia: typingsSlinky.semanticUiReact.semanticUiReactStrings.cambodia = this.cast("cambodia")
+  def cambodia: typingsSlinky.semanticUiReact.semanticUiReactStrings.cambodia = "cambodia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cambodia]
   @scala.inline
-  def cameroon: typingsSlinky.semanticUiReact.semanticUiReactStrings.cameroon = this.cast("cameroon")
+  def cameroon: typingsSlinky.semanticUiReact.semanticUiReactStrings.cameroon = "cameroon".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cameroon]
   @scala.inline
-  def canada: typingsSlinky.semanticUiReact.semanticUiReactStrings.canada = this.cast("canada")
+  def canada: typingsSlinky.semanticUiReact.semanticUiReactStrings.canada = "canada".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.canada]
   @scala.inline
-  def `cape verde`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`cape verde` = this.cast("cape verde")
+  def `cape verde`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`cape verde` = ("cape verde").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`cape verde`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `cayman islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`cayman islands` = ("cayman islands").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`cayman islands`]
   @scala.inline
-  def `cayman islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`cayman islands` = this.cast("cayman islands")
+  def cc: typingsSlinky.semanticUiReact.semanticUiReactStrings.cc = "cc".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cc]
   @scala.inline
-  def cc: typingsSlinky.semanticUiReact.semanticUiReactStrings.cc = this.cast("cc")
+  def cd: typingsSlinky.semanticUiReact.semanticUiReactStrings.cd = "cd".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cd]
   @scala.inline
-  def cd: typingsSlinky.semanticUiReact.semanticUiReactStrings.cd = this.cast("cd")
+  def `central african republic`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`central african republic` = ("central african republic").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`central african republic`]
   @scala.inline
-  def `central african republic`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`central african republic` = this.cast("central african republic")
+  def cf: typingsSlinky.semanticUiReact.semanticUiReactStrings.cf = "cf".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cf]
   @scala.inline
-  def cf: typingsSlinky.semanticUiReact.semanticUiReactStrings.cf = this.cast("cf")
+  def cg: typingsSlinky.semanticUiReact.semanticUiReactStrings.cg = "cg".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cg]
   @scala.inline
-  def cg: typingsSlinky.semanticUiReact.semanticUiReactStrings.cg = this.cast("cg")
+  def ch: typingsSlinky.semanticUiReact.semanticUiReactStrings.ch = "ch".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ch]
   @scala.inline
-  def ch: typingsSlinky.semanticUiReact.semanticUiReactStrings.ch = this.cast("ch")
+  def chad: typingsSlinky.semanticUiReact.semanticUiReactStrings.chad = "chad".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.chad]
   @scala.inline
-  def chad: typingsSlinky.semanticUiReact.semanticUiReactStrings.chad = this.cast("chad")
+  def chile: typingsSlinky.semanticUiReact.semanticUiReactStrings.chile = "chile".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.chile]
   @scala.inline
-  def chile: typingsSlinky.semanticUiReact.semanticUiReactStrings.chile = this.cast("chile")
+  def china: typingsSlinky.semanticUiReact.semanticUiReactStrings.china = "china".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.china]
   @scala.inline
-  def china: typingsSlinky.semanticUiReact.semanticUiReactStrings.china = this.cast("china")
+  def `christmas island`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`christmas island` = ("christmas island").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`christmas island`]
   @scala.inline
-  def `christmas island`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`christmas island` = this.cast("christmas island")
+  def ci: typingsSlinky.semanticUiReact.semanticUiReactStrings.ci = "ci".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ci]
   @scala.inline
-  def ci: typingsSlinky.semanticUiReact.semanticUiReactStrings.ci = this.cast("ci")
+  def ck: typingsSlinky.semanticUiReact.semanticUiReactStrings.ck = "ck".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ck]
   @scala.inline
-  def ck: typingsSlinky.semanticUiReact.semanticUiReactStrings.ck = this.cast("ck")
+  def cl: typingsSlinky.semanticUiReact.semanticUiReactStrings.cl = "cl".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cl]
   @scala.inline
-  def cl: typingsSlinky.semanticUiReact.semanticUiReactStrings.cl = this.cast("cl")
+  def cm: typingsSlinky.semanticUiReact.semanticUiReactStrings.cm = "cm".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cm]
   @scala.inline
-  def cm: typingsSlinky.semanticUiReact.semanticUiReactStrings.cm = this.cast("cm")
+  def cn: typingsSlinky.semanticUiReact.semanticUiReactStrings.cn = "cn".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cn]
   @scala.inline
-  def cn: typingsSlinky.semanticUiReact.semanticUiReactStrings.cn = this.cast("cn")
+  def co: typingsSlinky.semanticUiReact.semanticUiReactStrings.co = "co".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.co]
   @scala.inline
-  def co: typingsSlinky.semanticUiReact.semanticUiReactStrings.co = this.cast("co")
+  def `cocos islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`cocos islands` = ("cocos islands").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`cocos islands`]
   @scala.inline
-  def `cocos islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`cocos islands` = this.cast("cocos islands")
+  def colombia: typingsSlinky.semanticUiReact.semanticUiReactStrings.colombia = "colombia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.colombia]
   @scala.inline
-  def colombia: typingsSlinky.semanticUiReact.semanticUiReactStrings.colombia = this.cast("colombia")
+  def comoros: typingsSlinky.semanticUiReact.semanticUiReactStrings.comoros = "comoros".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.comoros]
   @scala.inline
-  def comoros: typingsSlinky.semanticUiReact.semanticUiReactStrings.comoros = this.cast("comoros")
+  def congo: typingsSlinky.semanticUiReact.semanticUiReactStrings.congo = "congo".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.congo]
   @scala.inline
-  def congo: typingsSlinky.semanticUiReact.semanticUiReactStrings.congo = this.cast("congo")
+  def `congo brazzaville`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`congo brazzaville` = ("congo brazzaville").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`congo brazzaville`]
   @scala.inline
-  def `congo brazzaville`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`congo brazzaville` = this.cast("congo brazzaville")
+  def `cook islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`cook islands` = ("cook islands").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`cook islands`]
   @scala.inline
-  def `cook islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`cook islands` = this.cast("cook islands")
+  def `costa rica`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`costa rica` = ("costa rica").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`costa rica`]
   @scala.inline
-  def `costa rica`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`costa rica` = this.cast("costa rica")
+  def `cote divoire`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`cote divoire` = ("cote divoire").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`cote divoire`]
   @scala.inline
-  def `cote divoire`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`cote divoire` = this.cast("cote divoire")
+  def cr: typingsSlinky.semanticUiReact.semanticUiReactStrings.cr = "cr".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cr]
   @scala.inline
-  def cr: typingsSlinky.semanticUiReact.semanticUiReactStrings.cr = this.cast("cr")
+  def croatia: typingsSlinky.semanticUiReact.semanticUiReactStrings.croatia = "croatia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.croatia]
   @scala.inline
-  def croatia: typingsSlinky.semanticUiReact.semanticUiReactStrings.croatia = this.cast("croatia")
+  def cs: typingsSlinky.semanticUiReact.semanticUiReactStrings.cs = "cs".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cs]
   @scala.inline
-  def cs: typingsSlinky.semanticUiReact.semanticUiReactStrings.cs = this.cast("cs")
+  def cu: typingsSlinky.semanticUiReact.semanticUiReactStrings.cu = "cu".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cu]
   @scala.inline
-  def cu: typingsSlinky.semanticUiReact.semanticUiReactStrings.cu = this.cast("cu")
+  def cuba: typingsSlinky.semanticUiReact.semanticUiReactStrings.cuba = "cuba".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cuba]
   @scala.inline
-  def cuba: typingsSlinky.semanticUiReact.semanticUiReactStrings.cuba = this.cast("cuba")
+  def cv: typingsSlinky.semanticUiReact.semanticUiReactStrings.cv = "cv".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cv]
   @scala.inline
-  def cv: typingsSlinky.semanticUiReact.semanticUiReactStrings.cv = this.cast("cv")
+  def cx: typingsSlinky.semanticUiReact.semanticUiReactStrings.cx = "cx".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cx]
   @scala.inline
-  def cx: typingsSlinky.semanticUiReact.semanticUiReactStrings.cx = this.cast("cx")
+  def cy: typingsSlinky.semanticUiReact.semanticUiReactStrings.cy = "cy".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cy]
   @scala.inline
-  def cy: typingsSlinky.semanticUiReact.semanticUiReactStrings.cy = this.cast("cy")
+  def cyprus: typingsSlinky.semanticUiReact.semanticUiReactStrings.cyprus = "cyprus".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cyprus]
   @scala.inline
-  def cyprus: typingsSlinky.semanticUiReact.semanticUiReactStrings.cyprus = this.cast("cyprus")
+  def cz: typingsSlinky.semanticUiReact.semanticUiReactStrings.cz = "cz".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.cz]
   @scala.inline
-  def cz: typingsSlinky.semanticUiReact.semanticUiReactStrings.cz = this.cast("cz")
+  def `czech republic`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`czech republic` = ("czech republic").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`czech republic`]
   @scala.inline
-  def `czech republic`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`czech republic` = this.cast("czech republic")
+  def de: typingsSlinky.semanticUiReact.semanticUiReactStrings.de = "de".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.de]
   @scala.inline
-  def de: typingsSlinky.semanticUiReact.semanticUiReactStrings.de = this.cast("de")
+  def denmark: typingsSlinky.semanticUiReact.semanticUiReactStrings.denmark = "denmark".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.denmark]
   @scala.inline
-  def denmark: typingsSlinky.semanticUiReact.semanticUiReactStrings.denmark = this.cast("denmark")
+  def dj: typingsSlinky.semanticUiReact.semanticUiReactStrings.dj = "dj".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.dj]
   @scala.inline
-  def dj: typingsSlinky.semanticUiReact.semanticUiReactStrings.dj = this.cast("dj")
+  def djibouti: typingsSlinky.semanticUiReact.semanticUiReactStrings.djibouti = "djibouti".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.djibouti]
   @scala.inline
-  def djibouti: typingsSlinky.semanticUiReact.semanticUiReactStrings.djibouti = this.cast("djibouti")
+  def dk: typingsSlinky.semanticUiReact.semanticUiReactStrings.dk = "dk".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.dk]
   @scala.inline
-  def dk: typingsSlinky.semanticUiReact.semanticUiReactStrings.dk = this.cast("dk")
+  def dm: typingsSlinky.semanticUiReact.semanticUiReactStrings.dm = "dm".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.dm]
   @scala.inline
-  def dm: typingsSlinky.semanticUiReact.semanticUiReactStrings.dm = this.cast("dm")
+  def `do`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`do` = "do".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`do`]
   @scala.inline
-  def `do`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`do` = this.cast("do")
+  def dominica: typingsSlinky.semanticUiReact.semanticUiReactStrings.dominica = "dominica".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.dominica]
   @scala.inline
-  def dominica: typingsSlinky.semanticUiReact.semanticUiReactStrings.dominica = this.cast("dominica")
+  def `dominican republic`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`dominican republic` = ("dominican republic").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`dominican republic`]
   @scala.inline
-  def `dominican republic`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`dominican republic` = this.cast("dominican republic")
+  def dz: typingsSlinky.semanticUiReact.semanticUiReactStrings.dz = "dz".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.dz]
   @scala.inline
-  def dz: typingsSlinky.semanticUiReact.semanticUiReactStrings.dz = this.cast("dz")
+  def ec: typingsSlinky.semanticUiReact.semanticUiReactStrings.ec = "ec".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ec]
   @scala.inline
-  def ec: typingsSlinky.semanticUiReact.semanticUiReactStrings.ec = this.cast("ec")
+  def ecuador: typingsSlinky.semanticUiReact.semanticUiReactStrings.ecuador = "ecuador".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ecuador]
   @scala.inline
-  def ecuador: typingsSlinky.semanticUiReact.semanticUiReactStrings.ecuador = this.cast("ecuador")
+  def ee: typingsSlinky.semanticUiReact.semanticUiReactStrings.ee = "ee".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ee]
   @scala.inline
-  def ee: typingsSlinky.semanticUiReact.semanticUiReactStrings.ee = this.cast("ee")
+  def eg: typingsSlinky.semanticUiReact.semanticUiReactStrings.eg = "eg".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.eg]
   @scala.inline
-  def eg: typingsSlinky.semanticUiReact.semanticUiReactStrings.eg = this.cast("eg")
+  def egypt: typingsSlinky.semanticUiReact.semanticUiReactStrings.egypt = "egypt".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.egypt]
   @scala.inline
-  def egypt: typingsSlinky.semanticUiReact.semanticUiReactStrings.egypt = this.cast("egypt")
+  def eh: typingsSlinky.semanticUiReact.semanticUiReactStrings.eh = "eh".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.eh]
   @scala.inline
-  def eh: typingsSlinky.semanticUiReact.semanticUiReactStrings.eh = this.cast("eh")
+  def `el salvador`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`el salvador` = ("el salvador").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`el salvador`]
   @scala.inline
-  def `el salvador`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`el salvador` = this.cast("el salvador")
+  def `equatorial guinea`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`equatorial guinea` = ("equatorial guinea").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`equatorial guinea`]
   @scala.inline
-  def `equatorial guinea`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`equatorial guinea` = this.cast("equatorial guinea")
+  def er: typingsSlinky.semanticUiReact.semanticUiReactStrings.er = "er".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.er]
   @scala.inline
-  def er: typingsSlinky.semanticUiReact.semanticUiReactStrings.er = this.cast("er")
+  def eritrea: typingsSlinky.semanticUiReact.semanticUiReactStrings.eritrea = "eritrea".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.eritrea]
   @scala.inline
-  def eritrea: typingsSlinky.semanticUiReact.semanticUiReactStrings.eritrea = this.cast("eritrea")
+  def es: typingsSlinky.semanticUiReact.semanticUiReactStrings.es = "es".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.es]
   @scala.inline
-  def es: typingsSlinky.semanticUiReact.semanticUiReactStrings.es = this.cast("es")
+  def estonia: typingsSlinky.semanticUiReact.semanticUiReactStrings.estonia = "estonia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.estonia]
   @scala.inline
-  def estonia: typingsSlinky.semanticUiReact.semanticUiReactStrings.estonia = this.cast("estonia")
+  def et: typingsSlinky.semanticUiReact.semanticUiReactStrings.et = "et".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.et]
   @scala.inline
-  def et: typingsSlinky.semanticUiReact.semanticUiReactStrings.et = this.cast("et")
+  def ethiopia: typingsSlinky.semanticUiReact.semanticUiReactStrings.ethiopia = "ethiopia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ethiopia]
   @scala.inline
-  def ethiopia: typingsSlinky.semanticUiReact.semanticUiReactStrings.ethiopia = this.cast("ethiopia")
+  def eu: typingsSlinky.semanticUiReact.semanticUiReactStrings.eu = "eu".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.eu]
   @scala.inline
-  def eu: typingsSlinky.semanticUiReact.semanticUiReactStrings.eu = this.cast("eu")
+  def `european union`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`european union` = ("european union").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`european union`]
   @scala.inline
-  def `european union`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`european union` = this.cast("european union")
+  def `falkland islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`falkland islands` = ("falkland islands").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`falkland islands`]
   @scala.inline
-  def `falkland islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`falkland islands` = this.cast("falkland islands")
+  def `faroe islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`faroe islands` = ("faroe islands").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`faroe islands`]
   @scala.inline
-  def `faroe islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`faroe islands` = this.cast("faroe islands")
+  def fi: typingsSlinky.semanticUiReact.semanticUiReactStrings.fi = "fi".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.fi]
   @scala.inline
-  def fi: typingsSlinky.semanticUiReact.semanticUiReactStrings.fi = this.cast("fi")
+  def fiji: typingsSlinky.semanticUiReact.semanticUiReactStrings.fiji = "fiji".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.fiji]
   @scala.inline
-  def fiji: typingsSlinky.semanticUiReact.semanticUiReactStrings.fiji = this.cast("fiji")
+  def finland: typingsSlinky.semanticUiReact.semanticUiReactStrings.finland = "finland".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.finland]
   @scala.inline
-  def finland: typingsSlinky.semanticUiReact.semanticUiReactStrings.finland = this.cast("finland")
+  def fj: typingsSlinky.semanticUiReact.semanticUiReactStrings.fj = "fj".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.fj]
   @scala.inline
-  def fj: typingsSlinky.semanticUiReact.semanticUiReactStrings.fj = this.cast("fj")
+  def fk: typingsSlinky.semanticUiReact.semanticUiReactStrings.fk = "fk".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.fk]
   @scala.inline
-  def fk: typingsSlinky.semanticUiReact.semanticUiReactStrings.fk = this.cast("fk")
+  def fm: typingsSlinky.semanticUiReact.semanticUiReactStrings.fm = "fm".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.fm]
   @scala.inline
-  def fm: typingsSlinky.semanticUiReact.semanticUiReactStrings.fm = this.cast("fm")
+  def fo: typingsSlinky.semanticUiReact.semanticUiReactStrings.fo = "fo".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.fo]
   @scala.inline
-  def fo: typingsSlinky.semanticUiReact.semanticUiReactStrings.fo = this.cast("fo")
+  def fr: typingsSlinky.semanticUiReact.semanticUiReactStrings.fr = "fr".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.fr]
   @scala.inline
-  def fr: typingsSlinky.semanticUiReact.semanticUiReactStrings.fr = this.cast("fr")
+  def france: typingsSlinky.semanticUiReact.semanticUiReactStrings.france = "france".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.france]
   @scala.inline
-  def france: typingsSlinky.semanticUiReact.semanticUiReactStrings.france = this.cast("france")
+  def `french guiana`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`french guiana` = ("french guiana").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`french guiana`]
   @scala.inline
-  def `french guiana`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`french guiana` = this.cast("french guiana")
+  def `french polynesia`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`french polynesia` = ("french polynesia").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`french polynesia`]
   @scala.inline
-  def `french polynesia`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`french polynesia` = this.cast("french polynesia")
+  def `french territories`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`french territories` = ("french territories").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`french territories`]
   @scala.inline
-  def `french territories`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`french territories` = this.cast("french territories")
+  def ga: typingsSlinky.semanticUiReact.semanticUiReactStrings.ga = "ga".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ga]
   @scala.inline
-  def ga: typingsSlinky.semanticUiReact.semanticUiReactStrings.ga = this.cast("ga")
+  def gabon: typingsSlinky.semanticUiReact.semanticUiReactStrings.gabon = "gabon".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gabon]
   @scala.inline
-  def gabon: typingsSlinky.semanticUiReact.semanticUiReactStrings.gabon = this.cast("gabon")
+  def gambia: typingsSlinky.semanticUiReact.semanticUiReactStrings.gambia = "gambia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gambia]
   @scala.inline
-  def gambia: typingsSlinky.semanticUiReact.semanticUiReactStrings.gambia = this.cast("gambia")
+  def gb: typingsSlinky.semanticUiReact.semanticUiReactStrings.gb = "gb".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gb]
   @scala.inline
-  def gb: typingsSlinky.semanticUiReact.semanticUiReactStrings.gb = this.cast("gb")
+  def `gb sct`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`gb sct` = ("gb sct").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`gb sct`]
   @scala.inline
-  def `gb sct`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`gb sct` = this.cast("gb sct")
+  def `gb wls`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`gb wls` = ("gb wls").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`gb wls`]
   @scala.inline
-  def `gb wls`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`gb wls` = this.cast("gb wls")
+  def gd: typingsSlinky.semanticUiReact.semanticUiReactStrings.gd = "gd".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gd]
   @scala.inline
-  def gd: typingsSlinky.semanticUiReact.semanticUiReactStrings.gd = this.cast("gd")
+  def ge: typingsSlinky.semanticUiReact.semanticUiReactStrings.ge = "ge".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ge]
   @scala.inline
-  def ge: typingsSlinky.semanticUiReact.semanticUiReactStrings.ge = this.cast("ge")
+  def georgia: typingsSlinky.semanticUiReact.semanticUiReactStrings.georgia = "georgia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.georgia]
   @scala.inline
-  def georgia: typingsSlinky.semanticUiReact.semanticUiReactStrings.georgia = this.cast("georgia")
+  def germany: typingsSlinky.semanticUiReact.semanticUiReactStrings.germany = "germany".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.germany]
   @scala.inline
-  def germany: typingsSlinky.semanticUiReact.semanticUiReactStrings.germany = this.cast("germany")
+  def gf: typingsSlinky.semanticUiReact.semanticUiReactStrings.gf = "gf".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gf]
   @scala.inline
-  def gf: typingsSlinky.semanticUiReact.semanticUiReactStrings.gf = this.cast("gf")
+  def gh: typingsSlinky.semanticUiReact.semanticUiReactStrings.gh = "gh".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gh]
   @scala.inline
-  def gh: typingsSlinky.semanticUiReact.semanticUiReactStrings.gh = this.cast("gh")
+  def ghana: typingsSlinky.semanticUiReact.semanticUiReactStrings.ghana = "ghana".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ghana]
   @scala.inline
-  def ghana: typingsSlinky.semanticUiReact.semanticUiReactStrings.ghana = this.cast("ghana")
+  def gi: typingsSlinky.semanticUiReact.semanticUiReactStrings.gi = "gi".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gi]
   @scala.inline
-  def gi: typingsSlinky.semanticUiReact.semanticUiReactStrings.gi = this.cast("gi")
+  def gibraltar: typingsSlinky.semanticUiReact.semanticUiReactStrings.gibraltar = "gibraltar".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gibraltar]
   @scala.inline
-  def gibraltar: typingsSlinky.semanticUiReact.semanticUiReactStrings.gibraltar = this.cast("gibraltar")
+  def gl: typingsSlinky.semanticUiReact.semanticUiReactStrings.gl = "gl".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gl]
   @scala.inline
-  def gl: typingsSlinky.semanticUiReact.semanticUiReactStrings.gl = this.cast("gl")
+  def gm: typingsSlinky.semanticUiReact.semanticUiReactStrings.gm = "gm".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gm]
   @scala.inline
-  def gm: typingsSlinky.semanticUiReact.semanticUiReactStrings.gm = this.cast("gm")
+  def gn: typingsSlinky.semanticUiReact.semanticUiReactStrings.gn = "gn".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gn]
   @scala.inline
-  def gn: typingsSlinky.semanticUiReact.semanticUiReactStrings.gn = this.cast("gn")
+  def gp: typingsSlinky.semanticUiReact.semanticUiReactStrings.gp = "gp".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gp]
   @scala.inline
-  def gp: typingsSlinky.semanticUiReact.semanticUiReactStrings.gp = this.cast("gp")
+  def gq: typingsSlinky.semanticUiReact.semanticUiReactStrings.gq = "gq".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gq]
   @scala.inline
-  def gq: typingsSlinky.semanticUiReact.semanticUiReactStrings.gq = this.cast("gq")
+  def gr: typingsSlinky.semanticUiReact.semanticUiReactStrings.gr = "gr".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gr]
   @scala.inline
-  def gr: typingsSlinky.semanticUiReact.semanticUiReactStrings.gr = this.cast("gr")
+  def greece: typingsSlinky.semanticUiReact.semanticUiReactStrings.greece = "greece".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.greece]
   @scala.inline
-  def greece: typingsSlinky.semanticUiReact.semanticUiReactStrings.greece = this.cast("greece")
+  def greenland: typingsSlinky.semanticUiReact.semanticUiReactStrings.greenland = "greenland".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.greenland]
   @scala.inline
-  def greenland: typingsSlinky.semanticUiReact.semanticUiReactStrings.greenland = this.cast("greenland")
+  def grenada: typingsSlinky.semanticUiReact.semanticUiReactStrings.grenada = "grenada".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.grenada]
   @scala.inline
-  def grenada: typingsSlinky.semanticUiReact.semanticUiReactStrings.grenada = this.cast("grenada")
+  def gs: typingsSlinky.semanticUiReact.semanticUiReactStrings.gs = "gs".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gs]
   @scala.inline
-  def gs: typingsSlinky.semanticUiReact.semanticUiReactStrings.gs = this.cast("gs")
+  def gt: typingsSlinky.semanticUiReact.semanticUiReactStrings.gt = "gt".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gt]
   @scala.inline
-  def gt: typingsSlinky.semanticUiReact.semanticUiReactStrings.gt = this.cast("gt")
+  def gu: typingsSlinky.semanticUiReact.semanticUiReactStrings.gu = "gu".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gu]
   @scala.inline
-  def gu: typingsSlinky.semanticUiReact.semanticUiReactStrings.gu = this.cast("gu")
+  def guadeloupe: typingsSlinky.semanticUiReact.semanticUiReactStrings.guadeloupe = "guadeloupe".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.guadeloupe]
   @scala.inline
-  def guadeloupe: typingsSlinky.semanticUiReact.semanticUiReactStrings.guadeloupe = this.cast("guadeloupe")
+  def guam: typingsSlinky.semanticUiReact.semanticUiReactStrings.guam = "guam".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.guam]
   @scala.inline
-  def guam: typingsSlinky.semanticUiReact.semanticUiReactStrings.guam = this.cast("guam")
+  def guatemala: typingsSlinky.semanticUiReact.semanticUiReactStrings.guatemala = "guatemala".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.guatemala]
   @scala.inline
-  def guatemala: typingsSlinky.semanticUiReact.semanticUiReactStrings.guatemala = this.cast("guatemala")
+  def guinea: typingsSlinky.semanticUiReact.semanticUiReactStrings.guinea = "guinea".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.guinea]
   @scala.inline
-  def guinea: typingsSlinky.semanticUiReact.semanticUiReactStrings.guinea = this.cast("guinea")
+  def `guinea-bissau`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`guinea-bissau` = "guinea-bissau".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`guinea-bissau`]
   @scala.inline
-  def `guinea-bissau`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`guinea-bissau` = this.cast("guinea-bissau")
+  def guyana: typingsSlinky.semanticUiReact.semanticUiReactStrings.guyana = "guyana".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.guyana]
   @scala.inline
-  def guyana: typingsSlinky.semanticUiReact.semanticUiReactStrings.guyana = this.cast("guyana")
+  def gw: typingsSlinky.semanticUiReact.semanticUiReactStrings.gw = "gw".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gw]
   @scala.inline
-  def gw: typingsSlinky.semanticUiReact.semanticUiReactStrings.gw = this.cast("gw")
+  def gy: typingsSlinky.semanticUiReact.semanticUiReactStrings.gy = "gy".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.gy]
   @scala.inline
-  def gy: typingsSlinky.semanticUiReact.semanticUiReactStrings.gy = this.cast("gy")
+  def haiti: typingsSlinky.semanticUiReact.semanticUiReactStrings.haiti = "haiti".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.haiti]
   @scala.inline
-  def haiti: typingsSlinky.semanticUiReact.semanticUiReactStrings.haiti = this.cast("haiti")
+  def `heard island`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`heard island` = ("heard island").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`heard island`]
   @scala.inline
-  def `heard island`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`heard island` = this.cast("heard island")
+  def hk: typingsSlinky.semanticUiReact.semanticUiReactStrings.hk = "hk".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.hk]
   @scala.inline
-  def hk: typingsSlinky.semanticUiReact.semanticUiReactStrings.hk = this.cast("hk")
+  def hm: typingsSlinky.semanticUiReact.semanticUiReactStrings.hm = "hm".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.hm]
   @scala.inline
-  def hm: typingsSlinky.semanticUiReact.semanticUiReactStrings.hm = this.cast("hm")
+  def hn: typingsSlinky.semanticUiReact.semanticUiReactStrings.hn = "hn".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.hn]
   @scala.inline
-  def hn: typingsSlinky.semanticUiReact.semanticUiReactStrings.hn = this.cast("hn")
+  def honduras: typingsSlinky.semanticUiReact.semanticUiReactStrings.honduras = "honduras".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.honduras]
   @scala.inline
-  def honduras: typingsSlinky.semanticUiReact.semanticUiReactStrings.honduras = this.cast("honduras")
+  def `hong kong`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`hong kong` = ("hong kong").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`hong kong`]
   @scala.inline
-  def `hong kong`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`hong kong` = this.cast("hong kong")
+  def hr: typingsSlinky.semanticUiReact.semanticUiReactStrings.hr = "hr".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.hr]
   @scala.inline
-  def hr: typingsSlinky.semanticUiReact.semanticUiReactStrings.hr = this.cast("hr")
+  def ht: typingsSlinky.semanticUiReact.semanticUiReactStrings.ht = "ht".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ht]
   @scala.inline
-  def ht: typingsSlinky.semanticUiReact.semanticUiReactStrings.ht = this.cast("ht")
+  def hu: typingsSlinky.semanticUiReact.semanticUiReactStrings.hu = "hu".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.hu]
   @scala.inline
-  def hu: typingsSlinky.semanticUiReact.semanticUiReactStrings.hu = this.cast("hu")
+  def hungary: typingsSlinky.semanticUiReact.semanticUiReactStrings.hungary = "hungary".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.hungary]
   @scala.inline
-  def hungary: typingsSlinky.semanticUiReact.semanticUiReactStrings.hungary = this.cast("hungary")
+  def iceland: typingsSlinky.semanticUiReact.semanticUiReactStrings.iceland = "iceland".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.iceland]
   @scala.inline
-  def iceland: typingsSlinky.semanticUiReact.semanticUiReactStrings.iceland = this.cast("iceland")
+  def id: typingsSlinky.semanticUiReact.semanticUiReactStrings.id = "id".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.id]
   @scala.inline
-  def id: typingsSlinky.semanticUiReact.semanticUiReactStrings.id = this.cast("id")
+  def ie: typingsSlinky.semanticUiReact.semanticUiReactStrings.ie = "ie".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ie]
   @scala.inline
-  def ie: typingsSlinky.semanticUiReact.semanticUiReactStrings.ie = this.cast("ie")
+  def il: typingsSlinky.semanticUiReact.semanticUiReactStrings.il = "il".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.il]
   @scala.inline
-  def il: typingsSlinky.semanticUiReact.semanticUiReactStrings.il = this.cast("il")
+  def in: typingsSlinky.semanticUiReact.semanticUiReactStrings.in = "in".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.in]
   @scala.inline
-  def in: typingsSlinky.semanticUiReact.semanticUiReactStrings.in = this.cast("in")
+  def india: typingsSlinky.semanticUiReact.semanticUiReactStrings.india = "india".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.india]
   @scala.inline
-  def india: typingsSlinky.semanticUiReact.semanticUiReactStrings.india = this.cast("india")
+  def `indian ocean territory`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`indian ocean territory` = ("indian ocean territory").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`indian ocean territory`]
   @scala.inline
-  def `indian ocean territory`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`indian ocean territory` = this.cast("indian ocean territory")
+  def indonesia: typingsSlinky.semanticUiReact.semanticUiReactStrings.indonesia = "indonesia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.indonesia]
   @scala.inline
-  def indonesia: typingsSlinky.semanticUiReact.semanticUiReactStrings.indonesia = this.cast("indonesia")
+  def io: typingsSlinky.semanticUiReact.semanticUiReactStrings.io = "io".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.io]
   @scala.inline
-  def io: typingsSlinky.semanticUiReact.semanticUiReactStrings.io = this.cast("io")
+  def iq: typingsSlinky.semanticUiReact.semanticUiReactStrings.iq = "iq".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.iq]
   @scala.inline
-  def iq: typingsSlinky.semanticUiReact.semanticUiReactStrings.iq = this.cast("iq")
+  def ir: typingsSlinky.semanticUiReact.semanticUiReactStrings.ir = "ir".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ir]
   @scala.inline
-  def ir: typingsSlinky.semanticUiReact.semanticUiReactStrings.ir = this.cast("ir")
+  def iran: typingsSlinky.semanticUiReact.semanticUiReactStrings.iran = "iran".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.iran]
   @scala.inline
-  def iran: typingsSlinky.semanticUiReact.semanticUiReactStrings.iran = this.cast("iran")
+  def iraq: typingsSlinky.semanticUiReact.semanticUiReactStrings.iraq = "iraq".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.iraq]
   @scala.inline
-  def iraq: typingsSlinky.semanticUiReact.semanticUiReactStrings.iraq = this.cast("iraq")
+  def ireland: typingsSlinky.semanticUiReact.semanticUiReactStrings.ireland = "ireland".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ireland]
   @scala.inline
-  def ireland: typingsSlinky.semanticUiReact.semanticUiReactStrings.ireland = this.cast("ireland")
+  def is: typingsSlinky.semanticUiReact.semanticUiReactStrings.is = "is".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.is]
   @scala.inline
-  def is: typingsSlinky.semanticUiReact.semanticUiReactStrings.is = this.cast("is")
+  def israel: typingsSlinky.semanticUiReact.semanticUiReactStrings.israel = "israel".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.israel]
   @scala.inline
-  def israel: typingsSlinky.semanticUiReact.semanticUiReactStrings.israel = this.cast("israel")
+  def it: typingsSlinky.semanticUiReact.semanticUiReactStrings.it = "it".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.it]
   @scala.inline
-  def it: typingsSlinky.semanticUiReact.semanticUiReactStrings.it = this.cast("it")
+  def italy: typingsSlinky.semanticUiReact.semanticUiReactStrings.italy = "italy".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.italy]
   @scala.inline
-  def italy: typingsSlinky.semanticUiReact.semanticUiReactStrings.italy = this.cast("italy")
+  def jamaica: typingsSlinky.semanticUiReact.semanticUiReactStrings.jamaica = "jamaica".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.jamaica]
   @scala.inline
-  def jamaica: typingsSlinky.semanticUiReact.semanticUiReactStrings.jamaica = this.cast("jamaica")
+  def `jan mayen`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`jan mayen` = ("jan mayen").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`jan mayen`]
   @scala.inline
-  def `jan mayen`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`jan mayen` = this.cast("jan mayen")
+  def japan: typingsSlinky.semanticUiReact.semanticUiReactStrings.japan = "japan".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.japan]
   @scala.inline
-  def japan: typingsSlinky.semanticUiReact.semanticUiReactStrings.japan = this.cast("japan")
+  def jm: typingsSlinky.semanticUiReact.semanticUiReactStrings.jm = "jm".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.jm]
   @scala.inline
-  def jm: typingsSlinky.semanticUiReact.semanticUiReactStrings.jm = this.cast("jm")
+  def jo: typingsSlinky.semanticUiReact.semanticUiReactStrings.jo = "jo".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.jo]
   @scala.inline
-  def jo: typingsSlinky.semanticUiReact.semanticUiReactStrings.jo = this.cast("jo")
+  def jordan: typingsSlinky.semanticUiReact.semanticUiReactStrings.jordan = "jordan".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.jordan]
   @scala.inline
-  def jordan: typingsSlinky.semanticUiReact.semanticUiReactStrings.jordan = this.cast("jordan")
+  def jp: typingsSlinky.semanticUiReact.semanticUiReactStrings.jp = "jp".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.jp]
   @scala.inline
-  def jp: typingsSlinky.semanticUiReact.semanticUiReactStrings.jp = this.cast("jp")
+  def kazakhstan: typingsSlinky.semanticUiReact.semanticUiReactStrings.kazakhstan = "kazakhstan".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.kazakhstan]
   @scala.inline
-  def kazakhstan: typingsSlinky.semanticUiReact.semanticUiReactStrings.kazakhstan = this.cast("kazakhstan")
+  def ke: typingsSlinky.semanticUiReact.semanticUiReactStrings.ke = "ke".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ke]
   @scala.inline
-  def ke: typingsSlinky.semanticUiReact.semanticUiReactStrings.ke = this.cast("ke")
+  def kenya: typingsSlinky.semanticUiReact.semanticUiReactStrings.kenya = "kenya".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.kenya]
   @scala.inline
-  def kenya: typingsSlinky.semanticUiReact.semanticUiReactStrings.kenya = this.cast("kenya")
+  def kg: typingsSlinky.semanticUiReact.semanticUiReactStrings.kg = "kg".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.kg]
   @scala.inline
-  def kg: typingsSlinky.semanticUiReact.semanticUiReactStrings.kg = this.cast("kg")
+  def kh: typingsSlinky.semanticUiReact.semanticUiReactStrings.kh = "kh".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.kh]
   @scala.inline
-  def kh: typingsSlinky.semanticUiReact.semanticUiReactStrings.kh = this.cast("kh")
+  def ki: typingsSlinky.semanticUiReact.semanticUiReactStrings.ki = "ki".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ki]
   @scala.inline
-  def ki: typingsSlinky.semanticUiReact.semanticUiReactStrings.ki = this.cast("ki")
+  def kiribati: typingsSlinky.semanticUiReact.semanticUiReactStrings.kiribati = "kiribati".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.kiribati]
   @scala.inline
-  def kiribati: typingsSlinky.semanticUiReact.semanticUiReactStrings.kiribati = this.cast("kiribati")
+  def km: typingsSlinky.semanticUiReact.semanticUiReactStrings.km = "km".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.km]
   @scala.inline
-  def km: typingsSlinky.semanticUiReact.semanticUiReactStrings.km = this.cast("km")
+  def kn: typingsSlinky.semanticUiReact.semanticUiReactStrings.kn = "kn".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.kn]
   @scala.inline
-  def kn: typingsSlinky.semanticUiReact.semanticUiReactStrings.kn = this.cast("kn")
+  def kp: typingsSlinky.semanticUiReact.semanticUiReactStrings.kp = "kp".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.kp]
   @scala.inline
-  def kp: typingsSlinky.semanticUiReact.semanticUiReactStrings.kp = this.cast("kp")
+  def kr: typingsSlinky.semanticUiReact.semanticUiReactStrings.kr = "kr".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.kr]
   @scala.inline
-  def kr: typingsSlinky.semanticUiReact.semanticUiReactStrings.kr = this.cast("kr")
+  def kuwait: typingsSlinky.semanticUiReact.semanticUiReactStrings.kuwait = "kuwait".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.kuwait]
   @scala.inline
-  def kuwait: typingsSlinky.semanticUiReact.semanticUiReactStrings.kuwait = this.cast("kuwait")
+  def kw: typingsSlinky.semanticUiReact.semanticUiReactStrings.kw = "kw".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.kw]
   @scala.inline
-  def kw: typingsSlinky.semanticUiReact.semanticUiReactStrings.kw = this.cast("kw")
+  def ky: typingsSlinky.semanticUiReact.semanticUiReactStrings.ky = "ky".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ky]
   @scala.inline
-  def ky: typingsSlinky.semanticUiReact.semanticUiReactStrings.ky = this.cast("ky")
+  def kyrgyzstan: typingsSlinky.semanticUiReact.semanticUiReactStrings.kyrgyzstan = "kyrgyzstan".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.kyrgyzstan]
   @scala.inline
-  def kyrgyzstan: typingsSlinky.semanticUiReact.semanticUiReactStrings.kyrgyzstan = this.cast("kyrgyzstan")
+  def kz: typingsSlinky.semanticUiReact.semanticUiReactStrings.kz = "kz".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.kz]
   @scala.inline
-  def kz: typingsSlinky.semanticUiReact.semanticUiReactStrings.kz = this.cast("kz")
+  def la: typingsSlinky.semanticUiReact.semanticUiReactStrings.la = "la".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.la]
   @scala.inline
-  def la: typingsSlinky.semanticUiReact.semanticUiReactStrings.la = this.cast("la")
+  def laos: typingsSlinky.semanticUiReact.semanticUiReactStrings.laos = "laos".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.laos]
   @scala.inline
-  def laos: typingsSlinky.semanticUiReact.semanticUiReactStrings.laos = this.cast("laos")
+  def latvia: typingsSlinky.semanticUiReact.semanticUiReactStrings.latvia = "latvia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.latvia]
   @scala.inline
-  def latvia: typingsSlinky.semanticUiReact.semanticUiReactStrings.latvia = this.cast("latvia")
+  def lb: typingsSlinky.semanticUiReact.semanticUiReactStrings.lb = "lb".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.lb]
   @scala.inline
-  def lb: typingsSlinky.semanticUiReact.semanticUiReactStrings.lb = this.cast("lb")
+  def lc: typingsSlinky.semanticUiReact.semanticUiReactStrings.lc = "lc".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.lc]
   @scala.inline
-  def lc: typingsSlinky.semanticUiReact.semanticUiReactStrings.lc = this.cast("lc")
+  def lebanon: typingsSlinky.semanticUiReact.semanticUiReactStrings.lebanon = "lebanon".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.lebanon]
   @scala.inline
-  def lebanon: typingsSlinky.semanticUiReact.semanticUiReactStrings.lebanon = this.cast("lebanon")
+  def lesotho: typingsSlinky.semanticUiReact.semanticUiReactStrings.lesotho = "lesotho".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.lesotho]
   @scala.inline
-  def lesotho: typingsSlinky.semanticUiReact.semanticUiReactStrings.lesotho = this.cast("lesotho")
+  def li: typingsSlinky.semanticUiReact.semanticUiReactStrings.li = "li".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.li]
   @scala.inline
-  def li: typingsSlinky.semanticUiReact.semanticUiReactStrings.li = this.cast("li")
+  def liberia: typingsSlinky.semanticUiReact.semanticUiReactStrings.liberia = "liberia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.liberia]
   @scala.inline
-  def liberia: typingsSlinky.semanticUiReact.semanticUiReactStrings.liberia = this.cast("liberia")
+  def libya: typingsSlinky.semanticUiReact.semanticUiReactStrings.libya = "libya".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.libya]
   @scala.inline
-  def libya: typingsSlinky.semanticUiReact.semanticUiReactStrings.libya = this.cast("libya")
+  def liechtenstein: typingsSlinky.semanticUiReact.semanticUiReactStrings.liechtenstein = "liechtenstein".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.liechtenstein]
   @scala.inline
-  def liechtenstein: typingsSlinky.semanticUiReact.semanticUiReactStrings.liechtenstein = this.cast("liechtenstein")
+  def lithuania: typingsSlinky.semanticUiReact.semanticUiReactStrings.lithuania = "lithuania".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.lithuania]
   @scala.inline
-  def lithuania: typingsSlinky.semanticUiReact.semanticUiReactStrings.lithuania = this.cast("lithuania")
+  def lk: typingsSlinky.semanticUiReact.semanticUiReactStrings.lk = "lk".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.lk]
   @scala.inline
-  def lk: typingsSlinky.semanticUiReact.semanticUiReactStrings.lk = this.cast("lk")
+  def lr: typingsSlinky.semanticUiReact.semanticUiReactStrings.lr = "lr".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.lr]
   @scala.inline
-  def lr: typingsSlinky.semanticUiReact.semanticUiReactStrings.lr = this.cast("lr")
+  def ls: typingsSlinky.semanticUiReact.semanticUiReactStrings.ls = "ls".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ls]
   @scala.inline
-  def ls: typingsSlinky.semanticUiReact.semanticUiReactStrings.ls = this.cast("ls")
+  def lt: typingsSlinky.semanticUiReact.semanticUiReactStrings.lt = "lt".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.lt]
   @scala.inline
-  def lt: typingsSlinky.semanticUiReact.semanticUiReactStrings.lt = this.cast("lt")
+  def lu: typingsSlinky.semanticUiReact.semanticUiReactStrings.lu = "lu".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.lu]
   @scala.inline
-  def lu: typingsSlinky.semanticUiReact.semanticUiReactStrings.lu = this.cast("lu")
+  def luxembourg: typingsSlinky.semanticUiReact.semanticUiReactStrings.luxembourg = "luxembourg".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.luxembourg]
   @scala.inline
-  def luxembourg: typingsSlinky.semanticUiReact.semanticUiReactStrings.luxembourg = this.cast("luxembourg")
+  def lv: typingsSlinky.semanticUiReact.semanticUiReactStrings.lv = "lv".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.lv]
   @scala.inline
-  def lv: typingsSlinky.semanticUiReact.semanticUiReactStrings.lv = this.cast("lv")
+  def ly: typingsSlinky.semanticUiReact.semanticUiReactStrings.ly = "ly".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ly]
   @scala.inline
-  def ly: typingsSlinky.semanticUiReact.semanticUiReactStrings.ly = this.cast("ly")
+  def ma: typingsSlinky.semanticUiReact.semanticUiReactStrings.ma = "ma".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ma]
   @scala.inline
-  def ma: typingsSlinky.semanticUiReact.semanticUiReactStrings.ma = this.cast("ma")
+  def macau: typingsSlinky.semanticUiReact.semanticUiReactStrings.macau = "macau".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.macau]
   @scala.inline
-  def macau: typingsSlinky.semanticUiReact.semanticUiReactStrings.macau = this.cast("macau")
+  def macedonia: typingsSlinky.semanticUiReact.semanticUiReactStrings.macedonia = "macedonia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.macedonia]
   @scala.inline
-  def macedonia: typingsSlinky.semanticUiReact.semanticUiReactStrings.macedonia = this.cast("macedonia")
+  def madagascar: typingsSlinky.semanticUiReact.semanticUiReactStrings.madagascar = "madagascar".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.madagascar]
   @scala.inline
-  def madagascar: typingsSlinky.semanticUiReact.semanticUiReactStrings.madagascar = this.cast("madagascar")
+  def malawi: typingsSlinky.semanticUiReact.semanticUiReactStrings.malawi = "malawi".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.malawi]
   @scala.inline
-  def malawi: typingsSlinky.semanticUiReact.semanticUiReactStrings.malawi = this.cast("malawi")
+  def malaysia: typingsSlinky.semanticUiReact.semanticUiReactStrings.malaysia = "malaysia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.malaysia]
   @scala.inline
-  def malaysia: typingsSlinky.semanticUiReact.semanticUiReactStrings.malaysia = this.cast("malaysia")
+  def maldives: typingsSlinky.semanticUiReact.semanticUiReactStrings.maldives = "maldives".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.maldives]
   @scala.inline
-  def maldives: typingsSlinky.semanticUiReact.semanticUiReactStrings.maldives = this.cast("maldives")
+  def mali: typingsSlinky.semanticUiReact.semanticUiReactStrings.mali = "mali".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mali]
   @scala.inline
-  def mali: typingsSlinky.semanticUiReact.semanticUiReactStrings.mali = this.cast("mali")
+  def malta: typingsSlinky.semanticUiReact.semanticUiReactStrings.malta = "malta".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.malta]
   @scala.inline
-  def malta: typingsSlinky.semanticUiReact.semanticUiReactStrings.malta = this.cast("malta")
+  def `marshall islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`marshall islands` = ("marshall islands").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`marshall islands`]
   @scala.inline
-  def `marshall islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`marshall islands` = this.cast("marshall islands")
+  def martinique: typingsSlinky.semanticUiReact.semanticUiReactStrings.martinique = "martinique".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.martinique]
   @scala.inline
-  def martinique: typingsSlinky.semanticUiReact.semanticUiReactStrings.martinique = this.cast("martinique")
+  def mauritania: typingsSlinky.semanticUiReact.semanticUiReactStrings.mauritania = "mauritania".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mauritania]
   @scala.inline
-  def mauritania: typingsSlinky.semanticUiReact.semanticUiReactStrings.mauritania = this.cast("mauritania")
+  def mauritius: typingsSlinky.semanticUiReact.semanticUiReactStrings.mauritius = "mauritius".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mauritius]
   @scala.inline
-  def mauritius: typingsSlinky.semanticUiReact.semanticUiReactStrings.mauritius = this.cast("mauritius")
+  def mayotte: typingsSlinky.semanticUiReact.semanticUiReactStrings.mayotte = "mayotte".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mayotte]
   @scala.inline
-  def mayotte: typingsSlinky.semanticUiReact.semanticUiReactStrings.mayotte = this.cast("mayotte")
+  def mc: typingsSlinky.semanticUiReact.semanticUiReactStrings.mc = "mc".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mc]
   @scala.inline
-  def mc: typingsSlinky.semanticUiReact.semanticUiReactStrings.mc = this.cast("mc")
+  def md: typingsSlinky.semanticUiReact.semanticUiReactStrings.md = "md".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.md]
   @scala.inline
-  def md: typingsSlinky.semanticUiReact.semanticUiReactStrings.md = this.cast("md")
+  def me: typingsSlinky.semanticUiReact.semanticUiReactStrings.me = "me".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.me]
   @scala.inline
-  def me: typingsSlinky.semanticUiReact.semanticUiReactStrings.me = this.cast("me")
+  def mexico: typingsSlinky.semanticUiReact.semanticUiReactStrings.mexico = "mexico".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mexico]
   @scala.inline
-  def mexico: typingsSlinky.semanticUiReact.semanticUiReactStrings.mexico = this.cast("mexico")
+  def mg: typingsSlinky.semanticUiReact.semanticUiReactStrings.mg = "mg".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mg]
   @scala.inline
-  def mg: typingsSlinky.semanticUiReact.semanticUiReactStrings.mg = this.cast("mg")
+  def mh: typingsSlinky.semanticUiReact.semanticUiReactStrings.mh = "mh".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mh]
   @scala.inline
-  def mh: typingsSlinky.semanticUiReact.semanticUiReactStrings.mh = this.cast("mh")
+  def micronesia: typingsSlinky.semanticUiReact.semanticUiReactStrings.micronesia = "micronesia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.micronesia]
   @scala.inline
-  def micronesia: typingsSlinky.semanticUiReact.semanticUiReactStrings.micronesia = this.cast("micronesia")
+  def mk: typingsSlinky.semanticUiReact.semanticUiReactStrings.mk = "mk".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mk]
   @scala.inline
-  def mk: typingsSlinky.semanticUiReact.semanticUiReactStrings.mk = this.cast("mk")
+  def ml: typingsSlinky.semanticUiReact.semanticUiReactStrings.ml = "ml".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ml]
   @scala.inline
-  def ml: typingsSlinky.semanticUiReact.semanticUiReactStrings.ml = this.cast("ml")
+  def mm: typingsSlinky.semanticUiReact.semanticUiReactStrings.mm = "mm".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mm]
   @scala.inline
-  def mm: typingsSlinky.semanticUiReact.semanticUiReactStrings.mm = this.cast("mm")
+  def mn: typingsSlinky.semanticUiReact.semanticUiReactStrings.mn = "mn".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mn]
   @scala.inline
-  def mn: typingsSlinky.semanticUiReact.semanticUiReactStrings.mn = this.cast("mn")
+  def mo: typingsSlinky.semanticUiReact.semanticUiReactStrings.mo = "mo".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mo]
   @scala.inline
-  def mo: typingsSlinky.semanticUiReact.semanticUiReactStrings.mo = this.cast("mo")
+  def moldova: typingsSlinky.semanticUiReact.semanticUiReactStrings.moldova = "moldova".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.moldova]
   @scala.inline
-  def moldova: typingsSlinky.semanticUiReact.semanticUiReactStrings.moldova = this.cast("moldova")
+  def monaco: typingsSlinky.semanticUiReact.semanticUiReactStrings.monaco = "monaco".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.monaco]
   @scala.inline
-  def monaco: typingsSlinky.semanticUiReact.semanticUiReactStrings.monaco = this.cast("monaco")
+  def mongolia: typingsSlinky.semanticUiReact.semanticUiReactStrings.mongolia = "mongolia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mongolia]
   @scala.inline
-  def mongolia: typingsSlinky.semanticUiReact.semanticUiReactStrings.mongolia = this.cast("mongolia")
+  def montenegro: typingsSlinky.semanticUiReact.semanticUiReactStrings.montenegro = "montenegro".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.montenegro]
   @scala.inline
-  def montenegro: typingsSlinky.semanticUiReact.semanticUiReactStrings.montenegro = this.cast("montenegro")
+  def montserrat: typingsSlinky.semanticUiReact.semanticUiReactStrings.montserrat = "montserrat".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.montserrat]
   @scala.inline
-  def montserrat: typingsSlinky.semanticUiReact.semanticUiReactStrings.montserrat = this.cast("montserrat")
+  def morocco: typingsSlinky.semanticUiReact.semanticUiReactStrings.morocco = "morocco".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.morocco]
   @scala.inline
-  def morocco: typingsSlinky.semanticUiReact.semanticUiReactStrings.morocco = this.cast("morocco")
+  def mozambique: typingsSlinky.semanticUiReact.semanticUiReactStrings.mozambique = "mozambique".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mozambique]
   @scala.inline
-  def mozambique: typingsSlinky.semanticUiReact.semanticUiReactStrings.mozambique = this.cast("mozambique")
+  def mp: typingsSlinky.semanticUiReact.semanticUiReactStrings.mp = "mp".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mp]
   @scala.inline
-  def mp: typingsSlinky.semanticUiReact.semanticUiReactStrings.mp = this.cast("mp")
+  def mq: typingsSlinky.semanticUiReact.semanticUiReactStrings.mq = "mq".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mq]
   @scala.inline
-  def mq: typingsSlinky.semanticUiReact.semanticUiReactStrings.mq = this.cast("mq")
+  def mr: typingsSlinky.semanticUiReact.semanticUiReactStrings.mr = "mr".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mr]
   @scala.inline
-  def mr: typingsSlinky.semanticUiReact.semanticUiReactStrings.mr = this.cast("mr")
+  def ms: typingsSlinky.semanticUiReact.semanticUiReactStrings.ms = "ms".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ms]
   @scala.inline
-  def ms: typingsSlinky.semanticUiReact.semanticUiReactStrings.ms = this.cast("ms")
+  def mt: typingsSlinky.semanticUiReact.semanticUiReactStrings.mt = "mt".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mt]
   @scala.inline
-  def mt: typingsSlinky.semanticUiReact.semanticUiReactStrings.mt = this.cast("mt")
+  def mu: typingsSlinky.semanticUiReact.semanticUiReactStrings.mu = "mu".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mu]
   @scala.inline
-  def mu: typingsSlinky.semanticUiReact.semanticUiReactStrings.mu = this.cast("mu")
+  def mv: typingsSlinky.semanticUiReact.semanticUiReactStrings.mv = "mv".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mv]
   @scala.inline
-  def mv: typingsSlinky.semanticUiReact.semanticUiReactStrings.mv = this.cast("mv")
+  def mw: typingsSlinky.semanticUiReact.semanticUiReactStrings.mw = "mw".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mw]
   @scala.inline
-  def mw: typingsSlinky.semanticUiReact.semanticUiReactStrings.mw = this.cast("mw")
+  def mx: typingsSlinky.semanticUiReact.semanticUiReactStrings.mx = "mx".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mx]
   @scala.inline
-  def mx: typingsSlinky.semanticUiReact.semanticUiReactStrings.mx = this.cast("mx")
+  def my: typingsSlinky.semanticUiReact.semanticUiReactStrings.my = "my".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.my]
   @scala.inline
-  def my: typingsSlinky.semanticUiReact.semanticUiReactStrings.my = this.cast("my")
+  def myanmar: typingsSlinky.semanticUiReact.semanticUiReactStrings.myanmar = "myanmar".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.myanmar]
   @scala.inline
-  def myanmar: typingsSlinky.semanticUiReact.semanticUiReactStrings.myanmar = this.cast("myanmar")
+  def mz: typingsSlinky.semanticUiReact.semanticUiReactStrings.mz = "mz".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mz]
   @scala.inline
-  def mz: typingsSlinky.semanticUiReact.semanticUiReactStrings.mz = this.cast("mz")
+  def na: typingsSlinky.semanticUiReact.semanticUiReactStrings.na = "na".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.na]
   @scala.inline
-  def na: typingsSlinky.semanticUiReact.semanticUiReactStrings.na = this.cast("na")
+  def namibia: typingsSlinky.semanticUiReact.semanticUiReactStrings.namibia = "namibia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.namibia]
   @scala.inline
-  def namibia: typingsSlinky.semanticUiReact.semanticUiReactStrings.namibia = this.cast("namibia")
+  def nauru: typingsSlinky.semanticUiReact.semanticUiReactStrings.nauru = "nauru".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.nauru]
   @scala.inline
-  def nauru: typingsSlinky.semanticUiReact.semanticUiReactStrings.nauru = this.cast("nauru")
+  def nc: typingsSlinky.semanticUiReact.semanticUiReactStrings.nc = "nc".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.nc]
   @scala.inline
-  def nc: typingsSlinky.semanticUiReact.semanticUiReactStrings.nc = this.cast("nc")
+  def ne: typingsSlinky.semanticUiReact.semanticUiReactStrings.ne = "ne".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ne]
   @scala.inline
-  def ne: typingsSlinky.semanticUiReact.semanticUiReactStrings.ne = this.cast("ne")
+  def nepal: typingsSlinky.semanticUiReact.semanticUiReactStrings.nepal = "nepal".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.nepal]
   @scala.inline
-  def nepal: typingsSlinky.semanticUiReact.semanticUiReactStrings.nepal = this.cast("nepal")
+  def netherlands: typingsSlinky.semanticUiReact.semanticUiReactStrings.netherlands = "netherlands".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.netherlands]
   @scala.inline
-  def netherlands: typingsSlinky.semanticUiReact.semanticUiReactStrings.netherlands = this.cast("netherlands")
+  def `netherlands antilles`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`netherlands antilles` = ("netherlands antilles").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`netherlands antilles`]
   @scala.inline
-  def `netherlands antilles`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`netherlands antilles` = this.cast("netherlands antilles")
+  def `new caledonia`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`new caledonia` = ("new caledonia").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`new caledonia`]
   @scala.inline
-  def `new caledonia`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`new caledonia` = this.cast("new caledonia")
+  def `new guinea`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`new guinea` = ("new guinea").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`new guinea`]
   @scala.inline
-  def `new guinea`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`new guinea` = this.cast("new guinea")
+  def `new zealand`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`new zealand` = ("new zealand").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`new zealand`]
   @scala.inline
-  def `new zealand`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`new zealand` = this.cast("new zealand")
+  def nf: typingsSlinky.semanticUiReact.semanticUiReactStrings.nf = "nf".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.nf]
   @scala.inline
-  def nf: typingsSlinky.semanticUiReact.semanticUiReactStrings.nf = this.cast("nf")
+  def ng: typingsSlinky.semanticUiReact.semanticUiReactStrings.ng = "ng".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ng]
   @scala.inline
-  def ng: typingsSlinky.semanticUiReact.semanticUiReactStrings.ng = this.cast("ng")
+  def ni: typingsSlinky.semanticUiReact.semanticUiReactStrings.ni = "ni".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ni]
   @scala.inline
-  def ni: typingsSlinky.semanticUiReact.semanticUiReactStrings.ni = this.cast("ni")
+  def nicaragua: typingsSlinky.semanticUiReact.semanticUiReactStrings.nicaragua = "nicaragua".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.nicaragua]
   @scala.inline
-  def nicaragua: typingsSlinky.semanticUiReact.semanticUiReactStrings.nicaragua = this.cast("nicaragua")
+  def niger: typingsSlinky.semanticUiReact.semanticUiReactStrings.niger = "niger".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.niger]
   @scala.inline
-  def niger: typingsSlinky.semanticUiReact.semanticUiReactStrings.niger = this.cast("niger")
+  def nigeria: typingsSlinky.semanticUiReact.semanticUiReactStrings.nigeria = "nigeria".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.nigeria]
   @scala.inline
-  def nigeria: typingsSlinky.semanticUiReact.semanticUiReactStrings.nigeria = this.cast("nigeria")
+  def niue: typingsSlinky.semanticUiReact.semanticUiReactStrings.niue = "niue".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.niue]
   @scala.inline
-  def niue: typingsSlinky.semanticUiReact.semanticUiReactStrings.niue = this.cast("niue")
+  def nl: typingsSlinky.semanticUiReact.semanticUiReactStrings.nl = "nl".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.nl]
   @scala.inline
-  def nl: typingsSlinky.semanticUiReact.semanticUiReactStrings.nl = this.cast("nl")
+  def no: typingsSlinky.semanticUiReact.semanticUiReactStrings.no = "no".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.no]
   @scala.inline
-  def no: typingsSlinky.semanticUiReact.semanticUiReactStrings.no = this.cast("no")
+  def `norfolk island`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`norfolk island` = ("norfolk island").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`norfolk island`]
   @scala.inline
-  def `norfolk island`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`norfolk island` = this.cast("norfolk island")
+  def `north korea`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`north korea` = ("north korea").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`north korea`]
   @scala.inline
-  def `north korea`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`north korea` = this.cast("north korea")
+  def `northern mariana islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`northern mariana islands` = ("northern mariana islands").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`northern mariana islands`]
   @scala.inline
-  def `northern mariana islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`northern mariana islands` = this.cast("northern mariana islands")
+  def norway: typingsSlinky.semanticUiReact.semanticUiReactStrings.norway = "norway".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.norway]
   @scala.inline
-  def norway: typingsSlinky.semanticUiReact.semanticUiReactStrings.norway = this.cast("norway")
+  def np: typingsSlinky.semanticUiReact.semanticUiReactStrings.np = "np".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.np]
   @scala.inline
-  def np: typingsSlinky.semanticUiReact.semanticUiReactStrings.np = this.cast("np")
+  def nr: typingsSlinky.semanticUiReact.semanticUiReactStrings.nr = "nr".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.nr]
   @scala.inline
-  def nr: typingsSlinky.semanticUiReact.semanticUiReactStrings.nr = this.cast("nr")
+  def nu: typingsSlinky.semanticUiReact.semanticUiReactStrings.nu = "nu".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.nu]
   @scala.inline
-  def nu: typingsSlinky.semanticUiReact.semanticUiReactStrings.nu = this.cast("nu")
+  def nz: typingsSlinky.semanticUiReact.semanticUiReactStrings.nz = "nz".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.nz]
   @scala.inline
-  def nz: typingsSlinky.semanticUiReact.semanticUiReactStrings.nz = this.cast("nz")
+  def om: typingsSlinky.semanticUiReact.semanticUiReactStrings.om = "om".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.om]
   @scala.inline
-  def om: typingsSlinky.semanticUiReact.semanticUiReactStrings.om = this.cast("om")
+  def oman: typingsSlinky.semanticUiReact.semanticUiReactStrings.oman = "oman".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.oman]
   @scala.inline
-  def oman: typingsSlinky.semanticUiReact.semanticUiReactStrings.oman = this.cast("oman")
+  def pa: typingsSlinky.semanticUiReact.semanticUiReactStrings.pa = "pa".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.pa]
   @scala.inline
-  def pa: typingsSlinky.semanticUiReact.semanticUiReactStrings.pa = this.cast("pa")
+  def pakistan: typingsSlinky.semanticUiReact.semanticUiReactStrings.pakistan = "pakistan".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.pakistan]
   @scala.inline
-  def pakistan: typingsSlinky.semanticUiReact.semanticUiReactStrings.pakistan = this.cast("pakistan")
+  def palau: typingsSlinky.semanticUiReact.semanticUiReactStrings.palau = "palau".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.palau]
   @scala.inline
-  def palau: typingsSlinky.semanticUiReact.semanticUiReactStrings.palau = this.cast("palau")
+  def palestine: typingsSlinky.semanticUiReact.semanticUiReactStrings.palestine = "palestine".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.palestine]
   @scala.inline
-  def palestine: typingsSlinky.semanticUiReact.semanticUiReactStrings.palestine = this.cast("palestine")
+  def panama: typingsSlinky.semanticUiReact.semanticUiReactStrings.panama = "panama".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.panama]
   @scala.inline
-  def panama: typingsSlinky.semanticUiReact.semanticUiReactStrings.panama = this.cast("panama")
+  def paraguay: typingsSlinky.semanticUiReact.semanticUiReactStrings.paraguay = "paraguay".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.paraguay]
   @scala.inline
-  def paraguay: typingsSlinky.semanticUiReact.semanticUiReactStrings.paraguay = this.cast("paraguay")
+  def pe: typingsSlinky.semanticUiReact.semanticUiReactStrings.pe = "pe".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.pe]
   @scala.inline
-  def pe: typingsSlinky.semanticUiReact.semanticUiReactStrings.pe = this.cast("pe")
+  def peru: typingsSlinky.semanticUiReact.semanticUiReactStrings.peru = "peru".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.peru]
   @scala.inline
-  def peru: typingsSlinky.semanticUiReact.semanticUiReactStrings.peru = this.cast("peru")
+  def pf: typingsSlinky.semanticUiReact.semanticUiReactStrings.pf = "pf".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.pf]
   @scala.inline
-  def pf: typingsSlinky.semanticUiReact.semanticUiReactStrings.pf = this.cast("pf")
+  def pg: typingsSlinky.semanticUiReact.semanticUiReactStrings.pg = "pg".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.pg]
   @scala.inline
-  def pg: typingsSlinky.semanticUiReact.semanticUiReactStrings.pg = this.cast("pg")
+  def ph: typingsSlinky.semanticUiReact.semanticUiReactStrings.ph = "ph".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ph]
   @scala.inline
-  def ph: typingsSlinky.semanticUiReact.semanticUiReactStrings.ph = this.cast("ph")
+  def philippines: typingsSlinky.semanticUiReact.semanticUiReactStrings.philippines = "philippines".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.philippines]
   @scala.inline
-  def philippines: typingsSlinky.semanticUiReact.semanticUiReactStrings.philippines = this.cast("philippines")
+  def `pitcairn islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`pitcairn islands` = ("pitcairn islands").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`pitcairn islands`]
   @scala.inline
-  def `pitcairn islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`pitcairn islands` = this.cast("pitcairn islands")
+  def pk: typingsSlinky.semanticUiReact.semanticUiReactStrings.pk = "pk".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.pk]
   @scala.inline
-  def pk: typingsSlinky.semanticUiReact.semanticUiReactStrings.pk = this.cast("pk")
+  def pl: typingsSlinky.semanticUiReact.semanticUiReactStrings.pl = "pl".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.pl]
   @scala.inline
-  def pl: typingsSlinky.semanticUiReact.semanticUiReactStrings.pl = this.cast("pl")
+  def pm: typingsSlinky.semanticUiReact.semanticUiReactStrings.pm = "pm".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.pm]
   @scala.inline
-  def pm: typingsSlinky.semanticUiReact.semanticUiReactStrings.pm = this.cast("pm")
+  def pn: typingsSlinky.semanticUiReact.semanticUiReactStrings.pn = "pn".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.pn]
   @scala.inline
-  def pn: typingsSlinky.semanticUiReact.semanticUiReactStrings.pn = this.cast("pn")
+  def poland: typingsSlinky.semanticUiReact.semanticUiReactStrings.poland = "poland".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.poland]
   @scala.inline
-  def poland: typingsSlinky.semanticUiReact.semanticUiReactStrings.poland = this.cast("poland")
+  def portugal: typingsSlinky.semanticUiReact.semanticUiReactStrings.portugal = "portugal".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.portugal]
   @scala.inline
-  def portugal: typingsSlinky.semanticUiReact.semanticUiReactStrings.portugal = this.cast("portugal")
+  def pr: typingsSlinky.semanticUiReact.semanticUiReactStrings.pr = "pr".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.pr]
   @scala.inline
-  def pr: typingsSlinky.semanticUiReact.semanticUiReactStrings.pr = this.cast("pr")
+  def ps: typingsSlinky.semanticUiReact.semanticUiReactStrings.ps = "ps".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ps]
   @scala.inline
-  def ps: typingsSlinky.semanticUiReact.semanticUiReactStrings.ps = this.cast("ps")
+  def pt: typingsSlinky.semanticUiReact.semanticUiReactStrings.pt = "pt".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.pt]
   @scala.inline
-  def pt: typingsSlinky.semanticUiReact.semanticUiReactStrings.pt = this.cast("pt")
+  def `puerto rico`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`puerto rico` = ("puerto rico").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`puerto rico`]
   @scala.inline
-  def `puerto rico`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`puerto rico` = this.cast("puerto rico")
+  def pw: typingsSlinky.semanticUiReact.semanticUiReactStrings.pw = "pw".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.pw]
   @scala.inline
-  def pw: typingsSlinky.semanticUiReact.semanticUiReactStrings.pw = this.cast("pw")
+  def py: typingsSlinky.semanticUiReact.semanticUiReactStrings.py = "py".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.py]
   @scala.inline
-  def py: typingsSlinky.semanticUiReact.semanticUiReactStrings.py = this.cast("py")
+  def qa: typingsSlinky.semanticUiReact.semanticUiReactStrings.qa = "qa".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.qa]
   @scala.inline
-  def qa: typingsSlinky.semanticUiReact.semanticUiReactStrings.qa = this.cast("qa")
+  def qatar: typingsSlinky.semanticUiReact.semanticUiReactStrings.qatar = "qatar".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.qatar]
   @scala.inline
-  def qatar: typingsSlinky.semanticUiReact.semanticUiReactStrings.qatar = this.cast("qatar")
+  def re: typingsSlinky.semanticUiReact.semanticUiReactStrings.re = "re".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.re]
   @scala.inline
-  def re: typingsSlinky.semanticUiReact.semanticUiReactStrings.re = this.cast("re")
+  def reunion: typingsSlinky.semanticUiReact.semanticUiReactStrings.reunion = "reunion".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.reunion]
   @scala.inline
-  def reunion: typingsSlinky.semanticUiReact.semanticUiReactStrings.reunion = this.cast("reunion")
+  def ro: typingsSlinky.semanticUiReact.semanticUiReactStrings.ro = "ro".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ro]
   @scala.inline
-  def ro: typingsSlinky.semanticUiReact.semanticUiReactStrings.ro = this.cast("ro")
+  def romania: typingsSlinky.semanticUiReact.semanticUiReactStrings.romania = "romania".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.romania]
   @scala.inline
-  def romania: typingsSlinky.semanticUiReact.semanticUiReactStrings.romania = this.cast("romania")
+  def rs: typingsSlinky.semanticUiReact.semanticUiReactStrings.rs = "rs".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.rs]
   @scala.inline
-  def rs: typingsSlinky.semanticUiReact.semanticUiReactStrings.rs = this.cast("rs")
+  def ru: typingsSlinky.semanticUiReact.semanticUiReactStrings.ru = "ru".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ru]
   @scala.inline
-  def ru: typingsSlinky.semanticUiReact.semanticUiReactStrings.ru = this.cast("ru")
+  def russia: typingsSlinky.semanticUiReact.semanticUiReactStrings.russia = "russia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.russia]
   @scala.inline
-  def russia: typingsSlinky.semanticUiReact.semanticUiReactStrings.russia = this.cast("russia")
+  def rw: typingsSlinky.semanticUiReact.semanticUiReactStrings.rw = "rw".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.rw]
   @scala.inline
-  def rw: typingsSlinky.semanticUiReact.semanticUiReactStrings.rw = this.cast("rw")
+  def rwanda: typingsSlinky.semanticUiReact.semanticUiReactStrings.rwanda = "rwanda".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.rwanda]
   @scala.inline
-  def rwanda: typingsSlinky.semanticUiReact.semanticUiReactStrings.rwanda = this.cast("rwanda")
+  def sa: typingsSlinky.semanticUiReact.semanticUiReactStrings.sa = "sa".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.sa]
   @scala.inline
-  def sa: typingsSlinky.semanticUiReact.semanticUiReactStrings.sa = this.cast("sa")
+  def `saint helena`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`saint helena` = ("saint helena").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`saint helena`]
   @scala.inline
-  def `saint helena`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`saint helena` = this.cast("saint helena")
+  def `saint kitts and nevis`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`saint kitts and nevis` = ("saint kitts and nevis").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`saint kitts and nevis`]
   @scala.inline
-  def `saint kitts and nevis`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`saint kitts and nevis` = this.cast("saint kitts and nevis")
+  def `saint lucia`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`saint lucia` = ("saint lucia").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`saint lucia`]
   @scala.inline
-  def `saint lucia`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`saint lucia` = this.cast("saint lucia")
+  def `saint pierre`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`saint pierre` = ("saint pierre").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`saint pierre`]
   @scala.inline
-  def `saint pierre`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`saint pierre` = this.cast("saint pierre")
+  def `saint vincent`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`saint vincent` = ("saint vincent").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`saint vincent`]
   @scala.inline
-  def `saint vincent`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`saint vincent` = this.cast("saint vincent")
+  def samoa: typingsSlinky.semanticUiReact.semanticUiReactStrings.samoa = "samoa".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.samoa]
   @scala.inline
-  def samoa: typingsSlinky.semanticUiReact.semanticUiReactStrings.samoa = this.cast("samoa")
+  def `san marino`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`san marino` = ("san marino").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`san marino`]
   @scala.inline
-  def `san marino`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`san marino` = this.cast("san marino")
+  def `sandwich islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`sandwich islands` = ("sandwich islands").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`sandwich islands`]
   @scala.inline
-  def `sandwich islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`sandwich islands` = this.cast("sandwich islands")
+  def `sao tome`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`sao tome` = ("sao tome").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`sao tome`]
   @scala.inline
-  def `sao tome`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`sao tome` = this.cast("sao tome")
+  def `saudi arabia`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`saudi arabia` = ("saudi arabia").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`saudi arabia`]
   @scala.inline
-  def `saudi arabia`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`saudi arabia` = this.cast("saudi arabia")
+  def sb: typingsSlinky.semanticUiReact.semanticUiReactStrings.sb = "sb".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.sb]
   @scala.inline
-  def sb: typingsSlinky.semanticUiReact.semanticUiReactStrings.sb = this.cast("sb")
+  def sc: typingsSlinky.semanticUiReact.semanticUiReactStrings.sc = "sc".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.sc]
   @scala.inline
-  def sc: typingsSlinky.semanticUiReact.semanticUiReactStrings.sc = this.cast("sc")
+  def scotland: typingsSlinky.semanticUiReact.semanticUiReactStrings.scotland = "scotland".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.scotland]
   @scala.inline
-  def scotland: typingsSlinky.semanticUiReact.semanticUiReactStrings.scotland = this.cast("scotland")
+  def sd: typingsSlinky.semanticUiReact.semanticUiReactStrings.sd = "sd".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.sd]
   @scala.inline
-  def sd: typingsSlinky.semanticUiReact.semanticUiReactStrings.sd = this.cast("sd")
+  def se: typingsSlinky.semanticUiReact.semanticUiReactStrings.se = "se".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.se]
   @scala.inline
-  def se: typingsSlinky.semanticUiReact.semanticUiReactStrings.se = this.cast("se")
+  def senegal: typingsSlinky.semanticUiReact.semanticUiReactStrings.senegal = "senegal".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.senegal]
   @scala.inline
-  def senegal: typingsSlinky.semanticUiReact.semanticUiReactStrings.senegal = this.cast("senegal")
+  def serbia: typingsSlinky.semanticUiReact.semanticUiReactStrings.serbia = "serbia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.serbia]
   @scala.inline
-  def serbia: typingsSlinky.semanticUiReact.semanticUiReactStrings.serbia = this.cast("serbia")
+  def seychelles: typingsSlinky.semanticUiReact.semanticUiReactStrings.seychelles = "seychelles".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.seychelles]
   @scala.inline
-  def seychelles: typingsSlinky.semanticUiReact.semanticUiReactStrings.seychelles = this.cast("seychelles")
+  def sg: typingsSlinky.semanticUiReact.semanticUiReactStrings.sg = "sg".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.sg]
   @scala.inline
-  def sg: typingsSlinky.semanticUiReact.semanticUiReactStrings.sg = this.cast("sg")
+  def sh: typingsSlinky.semanticUiReact.semanticUiReactStrings.sh = "sh".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.sh]
   @scala.inline
-  def sh: typingsSlinky.semanticUiReact.semanticUiReactStrings.sh = this.cast("sh")
+  def si: typingsSlinky.semanticUiReact.semanticUiReactStrings.si = "si".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.si]
   @scala.inline
-  def si: typingsSlinky.semanticUiReact.semanticUiReactStrings.si = this.cast("si")
+  def `sierra leone`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`sierra leone` = ("sierra leone").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`sierra leone`]
   @scala.inline
-  def `sierra leone`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`sierra leone` = this.cast("sierra leone")
+  def singapore: typingsSlinky.semanticUiReact.semanticUiReactStrings.singapore = "singapore".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.singapore]
   @scala.inline
-  def singapore: typingsSlinky.semanticUiReact.semanticUiReactStrings.singapore = this.cast("singapore")
+  def sj: typingsSlinky.semanticUiReact.semanticUiReactStrings.sj = "sj".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.sj]
   @scala.inline
-  def sj: typingsSlinky.semanticUiReact.semanticUiReactStrings.sj = this.cast("sj")
+  def sk: typingsSlinky.semanticUiReact.semanticUiReactStrings.sk = "sk".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.sk]
   @scala.inline
-  def sk: typingsSlinky.semanticUiReact.semanticUiReactStrings.sk = this.cast("sk")
+  def sl: typingsSlinky.semanticUiReact.semanticUiReactStrings.sl = "sl".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.sl]
   @scala.inline
-  def sl: typingsSlinky.semanticUiReact.semanticUiReactStrings.sl = this.cast("sl")
+  def slovakia: typingsSlinky.semanticUiReact.semanticUiReactStrings.slovakia = "slovakia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.slovakia]
   @scala.inline
-  def slovakia: typingsSlinky.semanticUiReact.semanticUiReactStrings.slovakia = this.cast("slovakia")
+  def slovenia: typingsSlinky.semanticUiReact.semanticUiReactStrings.slovenia = "slovenia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.slovenia]
   @scala.inline
-  def slovenia: typingsSlinky.semanticUiReact.semanticUiReactStrings.slovenia = this.cast("slovenia")
+  def sm: typingsSlinky.semanticUiReact.semanticUiReactStrings.sm = "sm".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.sm]
   @scala.inline
-  def sm: typingsSlinky.semanticUiReact.semanticUiReactStrings.sm = this.cast("sm")
+  def sn: typingsSlinky.semanticUiReact.semanticUiReactStrings.sn = "sn".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.sn]
   @scala.inline
-  def sn: typingsSlinky.semanticUiReact.semanticUiReactStrings.sn = this.cast("sn")
+  def so: typingsSlinky.semanticUiReact.semanticUiReactStrings.so = "so".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.so]
   @scala.inline
-  def so: typingsSlinky.semanticUiReact.semanticUiReactStrings.so = this.cast("so")
+  def `solomon islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`solomon islands` = ("solomon islands").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`solomon islands`]
   @scala.inline
-  def `solomon islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`solomon islands` = this.cast("solomon islands")
+  def somalia: typingsSlinky.semanticUiReact.semanticUiReactStrings.somalia = "somalia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.somalia]
   @scala.inline
-  def somalia: typingsSlinky.semanticUiReact.semanticUiReactStrings.somalia = this.cast("somalia")
+  def `south africa`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`south africa` = ("south africa").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`south africa`]
   @scala.inline
-  def `south africa`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`south africa` = this.cast("south africa")
+  def `south korea`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`south korea` = ("south korea").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`south korea`]
   @scala.inline
-  def `south korea`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`south korea` = this.cast("south korea")
+  def spain: typingsSlinky.semanticUiReact.semanticUiReactStrings.spain = "spain".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.spain]
   @scala.inline
-  def spain: typingsSlinky.semanticUiReact.semanticUiReactStrings.spain = this.cast("spain")
+  def sr: typingsSlinky.semanticUiReact.semanticUiReactStrings.sr = "sr".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.sr]
   @scala.inline
-  def sr: typingsSlinky.semanticUiReact.semanticUiReactStrings.sr = this.cast("sr")
+  def `sri lanka`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`sri lanka` = ("sri lanka").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`sri lanka`]
   @scala.inline
-  def `sri lanka`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`sri lanka` = this.cast("sri lanka")
+  def st: typingsSlinky.semanticUiReact.semanticUiReactStrings.st = "st".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.st]
   @scala.inline
-  def st: typingsSlinky.semanticUiReact.semanticUiReactStrings.st = this.cast("st")
+  def sudan: typingsSlinky.semanticUiReact.semanticUiReactStrings.sudan = "sudan".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.sudan]
   @scala.inline
-  def sudan: typingsSlinky.semanticUiReact.semanticUiReactStrings.sudan = this.cast("sudan")
+  def suriname: typingsSlinky.semanticUiReact.semanticUiReactStrings.suriname = "suriname".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.suriname]
   @scala.inline
-  def suriname: typingsSlinky.semanticUiReact.semanticUiReactStrings.suriname = this.cast("suriname")
+  def sv: typingsSlinky.semanticUiReact.semanticUiReactStrings.sv = "sv".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.sv]
   @scala.inline
-  def sv: typingsSlinky.semanticUiReact.semanticUiReactStrings.sv = this.cast("sv")
+  def svalbard: typingsSlinky.semanticUiReact.semanticUiReactStrings.svalbard = "svalbard".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.svalbard]
   @scala.inline
-  def svalbard: typingsSlinky.semanticUiReact.semanticUiReactStrings.svalbard = this.cast("svalbard")
+  def swaziland: typingsSlinky.semanticUiReact.semanticUiReactStrings.swaziland = "swaziland".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.swaziland]
   @scala.inline
-  def swaziland: typingsSlinky.semanticUiReact.semanticUiReactStrings.swaziland = this.cast("swaziland")
+  def sweden: typingsSlinky.semanticUiReact.semanticUiReactStrings.sweden = "sweden".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.sweden]
   @scala.inline
-  def sweden: typingsSlinky.semanticUiReact.semanticUiReactStrings.sweden = this.cast("sweden")
+  def switzerland: typingsSlinky.semanticUiReact.semanticUiReactStrings.switzerland = "switzerland".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.switzerland]
   @scala.inline
-  def switzerland: typingsSlinky.semanticUiReact.semanticUiReactStrings.switzerland = this.cast("switzerland")
+  def sy: typingsSlinky.semanticUiReact.semanticUiReactStrings.sy = "sy".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.sy]
   @scala.inline
-  def sy: typingsSlinky.semanticUiReact.semanticUiReactStrings.sy = this.cast("sy")
+  def syria: typingsSlinky.semanticUiReact.semanticUiReactStrings.syria = "syria".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.syria]
   @scala.inline
-  def syria: typingsSlinky.semanticUiReact.semanticUiReactStrings.syria = this.cast("syria")
+  def sz: typingsSlinky.semanticUiReact.semanticUiReactStrings.sz = "sz".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.sz]
   @scala.inline
-  def sz: typingsSlinky.semanticUiReact.semanticUiReactStrings.sz = this.cast("sz")
+  def taiwan: typingsSlinky.semanticUiReact.semanticUiReactStrings.taiwan = "taiwan".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.taiwan]
   @scala.inline
-  def taiwan: typingsSlinky.semanticUiReact.semanticUiReactStrings.taiwan = this.cast("taiwan")
+  def tajikistan: typingsSlinky.semanticUiReact.semanticUiReactStrings.tajikistan = "tajikistan".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tajikistan]
   @scala.inline
-  def tajikistan: typingsSlinky.semanticUiReact.semanticUiReactStrings.tajikistan = this.cast("tajikistan")
+  def tanzania: typingsSlinky.semanticUiReact.semanticUiReactStrings.tanzania = "tanzania".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tanzania]
   @scala.inline
-  def tanzania: typingsSlinky.semanticUiReact.semanticUiReactStrings.tanzania = this.cast("tanzania")
+  def tc: typingsSlinky.semanticUiReact.semanticUiReactStrings.tc = "tc".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tc]
   @scala.inline
-  def tc: typingsSlinky.semanticUiReact.semanticUiReactStrings.tc = this.cast("tc")
+  def td: typingsSlinky.semanticUiReact.semanticUiReactStrings.td = "td".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.td]
   @scala.inline
-  def td: typingsSlinky.semanticUiReact.semanticUiReactStrings.td = this.cast("td")
+  def tf: typingsSlinky.semanticUiReact.semanticUiReactStrings.tf = "tf".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tf]
   @scala.inline
-  def tf: typingsSlinky.semanticUiReact.semanticUiReactStrings.tf = this.cast("tf")
+  def tg: typingsSlinky.semanticUiReact.semanticUiReactStrings.tg = "tg".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tg]
   @scala.inline
-  def tg: typingsSlinky.semanticUiReact.semanticUiReactStrings.tg = this.cast("tg")
+  def th: typingsSlinky.semanticUiReact.semanticUiReactStrings.th = "th".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.th]
   @scala.inline
-  def th: typingsSlinky.semanticUiReact.semanticUiReactStrings.th = this.cast("th")
+  def thailand: typingsSlinky.semanticUiReact.semanticUiReactStrings.thailand = "thailand".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.thailand]
   @scala.inline
-  def thailand: typingsSlinky.semanticUiReact.semanticUiReactStrings.thailand = this.cast("thailand")
+  def timorleste: typingsSlinky.semanticUiReact.semanticUiReactStrings.timorleste = "timorleste".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.timorleste]
   @scala.inline
-  def timorleste: typingsSlinky.semanticUiReact.semanticUiReactStrings.timorleste = this.cast("timorleste")
+  def tj: typingsSlinky.semanticUiReact.semanticUiReactStrings.tj = "tj".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tj]
   @scala.inline
-  def tj: typingsSlinky.semanticUiReact.semanticUiReactStrings.tj = this.cast("tj")
+  def tk: typingsSlinky.semanticUiReact.semanticUiReactStrings.tk = "tk".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tk]
   @scala.inline
-  def tk: typingsSlinky.semanticUiReact.semanticUiReactStrings.tk = this.cast("tk")
+  def tl: typingsSlinky.semanticUiReact.semanticUiReactStrings.tl = "tl".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tl]
   @scala.inline
-  def tl: typingsSlinky.semanticUiReact.semanticUiReactStrings.tl = this.cast("tl")
+  def tm: typingsSlinky.semanticUiReact.semanticUiReactStrings.tm = "tm".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tm]
   @scala.inline
-  def tm: typingsSlinky.semanticUiReact.semanticUiReactStrings.tm = this.cast("tm")
+  def tn: typingsSlinky.semanticUiReact.semanticUiReactStrings.tn = "tn".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tn]
   @scala.inline
-  def tn: typingsSlinky.semanticUiReact.semanticUiReactStrings.tn = this.cast("tn")
+  def to: typingsSlinky.semanticUiReact.semanticUiReactStrings.to = "to".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.to]
   @scala.inline
-  def to: typingsSlinky.semanticUiReact.semanticUiReactStrings.to = this.cast("to")
+  def togo: typingsSlinky.semanticUiReact.semanticUiReactStrings.togo = "togo".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.togo]
   @scala.inline
-  def togo: typingsSlinky.semanticUiReact.semanticUiReactStrings.togo = this.cast("togo")
+  def tokelau: typingsSlinky.semanticUiReact.semanticUiReactStrings.tokelau = "tokelau".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tokelau]
   @scala.inline
-  def tokelau: typingsSlinky.semanticUiReact.semanticUiReactStrings.tokelau = this.cast("tokelau")
+  def tonga: typingsSlinky.semanticUiReact.semanticUiReactStrings.tonga = "tonga".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tonga]
   @scala.inline
-  def tonga: typingsSlinky.semanticUiReact.semanticUiReactStrings.tonga = this.cast("tonga")
+  def tr: typingsSlinky.semanticUiReact.semanticUiReactStrings.tr = "tr".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tr]
   @scala.inline
-  def tr: typingsSlinky.semanticUiReact.semanticUiReactStrings.tr = this.cast("tr")
+  def trinidad: typingsSlinky.semanticUiReact.semanticUiReactStrings.trinidad = "trinidad".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.trinidad]
   @scala.inline
-  def trinidad: typingsSlinky.semanticUiReact.semanticUiReactStrings.trinidad = this.cast("trinidad")
+  def tt: typingsSlinky.semanticUiReact.semanticUiReactStrings.tt = "tt".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tt]
   @scala.inline
-  def tt: typingsSlinky.semanticUiReact.semanticUiReactStrings.tt = this.cast("tt")
+  def tunisia: typingsSlinky.semanticUiReact.semanticUiReactStrings.tunisia = "tunisia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tunisia]
   @scala.inline
-  def tunisia: typingsSlinky.semanticUiReact.semanticUiReactStrings.tunisia = this.cast("tunisia")
+  def turkey: typingsSlinky.semanticUiReact.semanticUiReactStrings.turkey = "turkey".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.turkey]
   @scala.inline
-  def turkey: typingsSlinky.semanticUiReact.semanticUiReactStrings.turkey = this.cast("turkey")
+  def turkmenistan: typingsSlinky.semanticUiReact.semanticUiReactStrings.turkmenistan = "turkmenistan".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.turkmenistan]
   @scala.inline
-  def turkmenistan: typingsSlinky.semanticUiReact.semanticUiReactStrings.turkmenistan = this.cast("turkmenistan")
+  def tuvalu: typingsSlinky.semanticUiReact.semanticUiReactStrings.tuvalu = "tuvalu".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tuvalu]
   @scala.inline
-  def tuvalu: typingsSlinky.semanticUiReact.semanticUiReactStrings.tuvalu = this.cast("tuvalu")
+  def tv: typingsSlinky.semanticUiReact.semanticUiReactStrings.tv = "tv".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tv]
   @scala.inline
-  def tv: typingsSlinky.semanticUiReact.semanticUiReactStrings.tv = this.cast("tv")
+  def tw: typingsSlinky.semanticUiReact.semanticUiReactStrings.tw = "tw".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tw]
   @scala.inline
-  def tw: typingsSlinky.semanticUiReact.semanticUiReactStrings.tw = this.cast("tw")
+  def tz: typingsSlinky.semanticUiReact.semanticUiReactStrings.tz = "tz".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tz]
   @scala.inline
-  def tz: typingsSlinky.semanticUiReact.semanticUiReactStrings.tz = this.cast("tz")
+  def ua: typingsSlinky.semanticUiReact.semanticUiReactStrings.ua = "ua".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ua]
   @scala.inline
-  def ua: typingsSlinky.semanticUiReact.semanticUiReactStrings.ua = this.cast("ua")
+  def uae: typingsSlinky.semanticUiReact.semanticUiReactStrings.uae = "uae".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.uae]
   @scala.inline
-  def uae: typingsSlinky.semanticUiReact.semanticUiReactStrings.uae = this.cast("uae")
+  def ug: typingsSlinky.semanticUiReact.semanticUiReactStrings.ug = "ug".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ug]
   @scala.inline
-  def ug: typingsSlinky.semanticUiReact.semanticUiReactStrings.ug = this.cast("ug")
+  def uganda: typingsSlinky.semanticUiReact.semanticUiReactStrings.uganda = "uganda".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.uganda]
   @scala.inline
-  def uganda: typingsSlinky.semanticUiReact.semanticUiReactStrings.uganda = this.cast("uganda")
+  def uk: typingsSlinky.semanticUiReact.semanticUiReactStrings.uk = "uk".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.uk]
   @scala.inline
-  def uk: typingsSlinky.semanticUiReact.semanticUiReactStrings.uk = this.cast("uk")
+  def ukraine: typingsSlinky.semanticUiReact.semanticUiReactStrings.ukraine = "ukraine".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ukraine]
   @scala.inline
-  def ukraine: typingsSlinky.semanticUiReact.semanticUiReactStrings.ukraine = this.cast("ukraine")
+  def um: typingsSlinky.semanticUiReact.semanticUiReactStrings.um = "um".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.um]
   @scala.inline
-  def um: typingsSlinky.semanticUiReact.semanticUiReactStrings.um = this.cast("um")
+  def `united arab emirates`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`united arab emirates` = ("united arab emirates").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`united arab emirates`]
   @scala.inline
-  def `united arab emirates`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`united arab emirates` = this.cast("united arab emirates")
+  def `united kingdom`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`united kingdom` = ("united kingdom").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`united kingdom`]
   @scala.inline
-  def `united kingdom`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`united kingdom` = this.cast("united kingdom")
+  def `united states`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`united states` = ("united states").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`united states`]
   @scala.inline
-  def `united states`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`united states` = this.cast("united states")
+  def uruguay: typingsSlinky.semanticUiReact.semanticUiReactStrings.uruguay = "uruguay".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.uruguay]
   @scala.inline
-  def uruguay: typingsSlinky.semanticUiReact.semanticUiReactStrings.uruguay = this.cast("uruguay")
+  def us: typingsSlinky.semanticUiReact.semanticUiReactStrings.us = "us".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.us]
   @scala.inline
-  def us: typingsSlinky.semanticUiReact.semanticUiReactStrings.us = this.cast("us")
+  def `us minor islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`us minor islands` = ("us minor islands").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`us minor islands`]
   @scala.inline
-  def `us minor islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`us minor islands` = this.cast("us minor islands")
+  def `us virgin islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`us virgin islands` = ("us virgin islands").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`us virgin islands`]
   @scala.inline
-  def `us virgin islands`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`us virgin islands` = this.cast("us virgin islands")
+  def uy: typingsSlinky.semanticUiReact.semanticUiReactStrings.uy = "uy".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.uy]
   @scala.inline
-  def uy: typingsSlinky.semanticUiReact.semanticUiReactStrings.uy = this.cast("uy")
+  def uz: typingsSlinky.semanticUiReact.semanticUiReactStrings.uz = "uz".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.uz]
   @scala.inline
-  def uz: typingsSlinky.semanticUiReact.semanticUiReactStrings.uz = this.cast("uz")
+  def uzbekistan: typingsSlinky.semanticUiReact.semanticUiReactStrings.uzbekistan = "uzbekistan".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.uzbekistan]
   @scala.inline
-  def uzbekistan: typingsSlinky.semanticUiReact.semanticUiReactStrings.uzbekistan = this.cast("uzbekistan")
+  def va: typingsSlinky.semanticUiReact.semanticUiReactStrings.va = "va".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.va]
   @scala.inline
-  def va: typingsSlinky.semanticUiReact.semanticUiReactStrings.va = this.cast("va")
+  def vanuatu: typingsSlinky.semanticUiReact.semanticUiReactStrings.vanuatu = "vanuatu".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.vanuatu]
   @scala.inline
-  def vanuatu: typingsSlinky.semanticUiReact.semanticUiReactStrings.vanuatu = this.cast("vanuatu")
+  def `vatican city`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`vatican city` = ("vatican city").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`vatican city`]
   @scala.inline
-  def `vatican city`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`vatican city` = this.cast("vatican city")
+  def vc: typingsSlinky.semanticUiReact.semanticUiReactStrings.vc = "vc".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.vc]
   @scala.inline
-  def vc: typingsSlinky.semanticUiReact.semanticUiReactStrings.vc = this.cast("vc")
+  def ve: typingsSlinky.semanticUiReact.semanticUiReactStrings.ve = "ve".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ve]
   @scala.inline
-  def ve: typingsSlinky.semanticUiReact.semanticUiReactStrings.ve = this.cast("ve")
+  def venezuela: typingsSlinky.semanticUiReact.semanticUiReactStrings.venezuela = "venezuela".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.venezuela]
   @scala.inline
-  def venezuela: typingsSlinky.semanticUiReact.semanticUiReactStrings.venezuela = this.cast("venezuela")
+  def vg: typingsSlinky.semanticUiReact.semanticUiReactStrings.vg = "vg".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.vg]
   @scala.inline
-  def vg: typingsSlinky.semanticUiReact.semanticUiReactStrings.vg = this.cast("vg")
+  def vi: typingsSlinky.semanticUiReact.semanticUiReactStrings.vi = "vi".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.vi]
   @scala.inline
-  def vi: typingsSlinky.semanticUiReact.semanticUiReactStrings.vi = this.cast("vi")
+  def vietnam: typingsSlinky.semanticUiReact.semanticUiReactStrings.vietnam = "vietnam".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.vietnam]
   @scala.inline
-  def vietnam: typingsSlinky.semanticUiReact.semanticUiReactStrings.vietnam = this.cast("vietnam")
+  def vn: typingsSlinky.semanticUiReact.semanticUiReactStrings.vn = "vn".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.vn]
   @scala.inline
-  def vn: typingsSlinky.semanticUiReact.semanticUiReactStrings.vn = this.cast("vn")
+  def vu: typingsSlinky.semanticUiReact.semanticUiReactStrings.vu = "vu".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.vu]
   @scala.inline
-  def vu: typingsSlinky.semanticUiReact.semanticUiReactStrings.vu = this.cast("vu")
+  def wales: typingsSlinky.semanticUiReact.semanticUiReactStrings.wales = "wales".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.wales]
   @scala.inline
-  def wales: typingsSlinky.semanticUiReact.semanticUiReactStrings.wales = this.cast("wales")
+  def `wallis and futuna`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`wallis and futuna` = ("wallis and futuna").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`wallis and futuna`]
   @scala.inline
-  def `wallis and futuna`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`wallis and futuna` = this.cast("wallis and futuna")
+  def `western sahara`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`western sahara` = ("western sahara").asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.`western sahara`]
   @scala.inline
-  def `western sahara`: typingsSlinky.semanticUiReact.semanticUiReactStrings.`western sahara` = this.cast("western sahara")
+  def wf: typingsSlinky.semanticUiReact.semanticUiReactStrings.wf = "wf".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.wf]
   @scala.inline
-  def wf: typingsSlinky.semanticUiReact.semanticUiReactStrings.wf = this.cast("wf")
+  def ws: typingsSlinky.semanticUiReact.semanticUiReactStrings.ws = "ws".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ws]
   @scala.inline
-  def ws: typingsSlinky.semanticUiReact.semanticUiReactStrings.ws = this.cast("ws")
+  def ye: typingsSlinky.semanticUiReact.semanticUiReactStrings.ye = "ye".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.ye]
   @scala.inline
-  def ye: typingsSlinky.semanticUiReact.semanticUiReactStrings.ye = this.cast("ye")
+  def yemen: typingsSlinky.semanticUiReact.semanticUiReactStrings.yemen = "yemen".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.yemen]
   @scala.inline
-  def yemen: typingsSlinky.semanticUiReact.semanticUiReactStrings.yemen = this.cast("yemen")
+  def yt: typingsSlinky.semanticUiReact.semanticUiReactStrings.yt = "yt".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.yt]
   @scala.inline
-  def yt: typingsSlinky.semanticUiReact.semanticUiReactStrings.yt = this.cast("yt")
+  def za: typingsSlinky.semanticUiReact.semanticUiReactStrings.za = "za".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.za]
   @scala.inline
-  def za: typingsSlinky.semanticUiReact.semanticUiReactStrings.za = this.cast("za")
+  def zambia: typingsSlinky.semanticUiReact.semanticUiReactStrings.zambia = "zambia".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.zambia]
   @scala.inline
-  def zambia: typingsSlinky.semanticUiReact.semanticUiReactStrings.zambia = this.cast("zambia")
+  def zimbabwe: typingsSlinky.semanticUiReact.semanticUiReactStrings.zimbabwe = "zimbabwe".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.zimbabwe]
   @scala.inline
-  def zimbabwe: typingsSlinky.semanticUiReact.semanticUiReactStrings.zimbabwe = this.cast("zimbabwe")
+  def zm: typingsSlinky.semanticUiReact.semanticUiReactStrings.zm = "zm".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.zm]
   @scala.inline
-  def zm: typingsSlinky.semanticUiReact.semanticUiReactStrings.zm = this.cast("zm")
-  @scala.inline
-  def zw: typingsSlinky.semanticUiReact.semanticUiReactStrings.zw = this.cast("zw")
+  def zw: typingsSlinky.semanticUiReact.semanticUiReactStrings.zw = "zw".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.zw]
 }
 

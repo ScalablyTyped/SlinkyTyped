@@ -6,22 +6,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Encoder[T /* <: Encodable */] extends js.Object {
-  def byteLength(value: Encodable): Double
-  def decode(buffer: Buffer, start: Double, end: Double): T
-  def encode(value: Encodable, buffer: Buffer, start: Double, end: Double): Double
+  def byteLength(value: Encodable): Double = js.native
+  def decode(buffer: Buffer, start: Double, end: Double): T = js.native
+  def encode(value: Encodable, buffer: Buffer, start: Double, end: Double): Double = js.native
 }
 
 object Encoder {
   @scala.inline
-  def apply[T /* <: Encodable */](
+  def apply[T](
     byteLength: Encodable => Double,
     decode: (Buffer, Double, Double) => T,
     encode: (Encodable, Buffer, Double, Double) => Double
   ): Encoder[T] = {
     val __obj = js.Dynamic.literal(byteLength = js.Any.fromFunction1(byteLength), decode = js.Any.fromFunction3(decode), encode = js.Any.fromFunction4(encode))
-  
     __obj.asInstanceOf[Encoder[T]]
   }
+  @scala.inline
+  implicit class EncoderOps[Self[t] <: Encoder[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withByteLength(value: Encodable => Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byteLength")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDecode(value: (Buffer, Double, Double) => T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decode")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withEncode(value: (Encodable, Buffer, Double, Double) => Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encode")(js.Any.fromFunction4(value))
+        ret
+    }
+  }
+  
 }
 

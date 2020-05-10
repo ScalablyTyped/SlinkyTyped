@@ -1,36 +1,36 @@
 package typingsSlinky.rmcTabs.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rmcTabs.tabPaneMod.PropsType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TabPane
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.rmcTabs.tabPaneMod.TabPane] {
+object TabPane {
   @JSImport("rmc-tabs/lib/TabPane", "TabPane")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    active: Boolean,
-    fixX: js.UndefOr[Boolean] = js.undefined,
-    fixY: js.UndefOr[Boolean] = js.undefined,
-    role: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.rmcTabs.tabPaneMod.TabPane] = {
-    val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixX)) __obj.updateDynamic("fixX")(fixX.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixY)) __obj.updateDynamic("fixY")(fixY.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.rmcTabs.tabPaneMod.TabPane] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fixX(value: Boolean): this.type = set("fixX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fixY(value: Boolean): this.type = set("fixY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
   }
-  type Props = PropsType
+  
+  def withProps(p: PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(active: Boolean): Builder = {
+    val __props = js.Dynamic.literal(active = active.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PropsType]))
+  }
 }
 

@@ -13,12 +13,10 @@ trait SignatureHelpTriggerCharacter extends js.Object
 
 object SignatureHelpTriggerCharacter {
   @scala.inline
-  def Comma: typingsSlinky.typescript.typescriptStrings.Comma = this.cast(",")
+  def Comma: typingsSlinky.typescript.typescriptStrings.Comma = ",".asInstanceOf[typingsSlinky.typescript.typescriptStrings.Comma]
   @scala.inline
-  def Leftparenthesis: typingsSlinky.typescript.typescriptStrings.Leftparenthesis = this.cast("(")
+  def Leftparenthesis: typingsSlinky.typescript.typescriptStrings.Leftparenthesis = "(".asInstanceOf[typingsSlinky.typescript.typescriptStrings.Leftparenthesis]
   @scala.inline
-  def Lessthansign: typingsSlinky.typescript.typescriptStrings.Lessthansign = this.cast("<")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Lessthansign: typingsSlinky.typescript.typescriptStrings.Lessthansign = "<".asInstanceOf[typingsSlinky.typescript.typescriptStrings.Lessthansign]
 }
 

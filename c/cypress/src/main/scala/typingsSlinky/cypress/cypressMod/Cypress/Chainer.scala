@@ -183,10 +183,7 @@ import typingsSlinky.cypress.cypressStrings.respondTo
 import typingsSlinky.cypress.cypressStrings.returned
 import typingsSlinky.cypress.cypressStrings.satisfy
 import typingsSlinky.cypress.sinonMod.SinonSpy
-import typingsSlinky.std.Date
-import typingsSlinky.std.Error
 import typingsSlinky.std.ErrorConstructor
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -224,7 +221,7 @@ trait Chainer[Subject] extends js.Object {
     * @see http://chaijs.com/api/bdd/#method_match
     * @see https://on.cypress.io/assertions
     */
-  def apply(chainer: `match`, value: RegExp): Chainable[Subject] = js.native
+  def apply(chainer: `match`, value: js.RegExp): Chainable[Subject] = js.native
   /**
     * When no arguments are provided, `.throw` invokes the target function and asserts that an error is thrown.
     * When one argument is provided, and it’s a string, `.throw` invokes the target function and asserts that an error is thrown with a message that contains that string.
@@ -239,7 +236,7 @@ trait Chainer[Subject] extends js.Object {
   def apply(chainer: `throw`): Chainable[Subject] = js.native
   def apply(chainer: `throw`, error: js.Function): Chainable[Subject] = js.native
   def apply(chainer: `throw`, error: js.Function, expected: String): Chainable[Subject] = js.native
-  def apply(chainer: `throw`, error: js.Function, expected: RegExp): Chainable[Subject] = js.native
+  def apply(chainer: `throw`, error: js.Function, expected: js.RegExp): Chainable[Subject] = js.native
   /**
     * When no arguments are provided, `.throw` invokes the target function and asserts that an error is thrown.
     * When one argument is provided, and it’s a string, `.throw` invokes the target function and asserts that an error is thrown with a message that contains that string.
@@ -252,11 +249,11 @@ trait Chainer[Subject] extends js.Object {
     * @see https://on.cypress.io/assertions
     */
   // tslint:disable-next-line ban-types
-  def apply(chainer: `throw`, error: Error): Chainable[Subject] = js.native
-  def apply(chainer: `throw`, error: Error, expected: String): Chainable[Subject] = js.native
-  def apply(chainer: `throw`, error: Error, expected: RegExp): Chainable[Subject] = js.native
+  def apply(chainer: `throw`, error: js.Error): Chainable[Subject] = js.native
+  def apply(chainer: `throw`, error: js.Error, expected: String): Chainable[Subject] = js.native
+  def apply(chainer: `throw`, error: js.Error, expected: js.RegExp): Chainable[Subject] = js.native
   def apply(chainer: `throw`, value: String): Chainable[Subject] = js.native
-  def apply(chainer: `throw`, value: RegExp): Chainable[Subject] = js.native
+  def apply(chainer: `throw`, value: js.RegExp): Chainable[Subject] = js.native
   /**
     * Assert spy always returned the provided value.
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyalwaysreturnedobj
@@ -272,7 +269,7 @@ trait Chainer[Subject] extends js.Object {
     * @see https://on.cypress.io/assertions
     */
   def apply(chainer: beDotabove, value: Double): Chainable[Subject] = js.native
-  def apply(chainer: beDotabove, value: Date): Chainable[Subject] = js.native
+  def apply(chainer: beDotabove, value: js.Date): Chainable[Subject] = js.native
   /**
     * Assert if spy was always called with matching arguments (and possibly others).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyalwayscalledwithmatcharg1-arg2-
@@ -324,7 +321,7 @@ trait Chainer[Subject] extends js.Object {
     * @see https://on.cypress.io/assertions
     */
   def apply(chainer: beDotatDotleast, value: Double): Chainable[Subject] = js.native
-  def apply(chainer: beDotatDotleast, value: Date): Chainable[Subject] = js.native
+  def apply(chainer: beDotatDotleast, value: js.Date): Chainable[Subject] = js.native
   // chai
   /**
     * Asserts that the target’s `type` is equal to the given string type.
@@ -589,7 +586,7 @@ trait Chainer[Subject] extends js.Object {
     * @see https://on.cypress.io/assertions
     */
   def apply(chainer: beDotwithin, start: Double, end: Double): Chainable[Subject] = js.native
-  def apply(chainer: beDotwithin, start: Date, end: Date): Chainable[Subject] = js.native
+  def apply(chainer: beDotwithin, start: js.Date, end: js.Date): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.change` asserts that the given function `subject` returns a different value when it’s invoked before the target function compared to when it’s invoked afterward.
     * However, it’s often best to assert that `subject` is equal to its expected value.
@@ -732,7 +729,7 @@ trait Chainer[Subject] extends js.Object {
     */
   def apply(chainer: haveDotalwaysDotthrown): Chainable[Subject] = js.native
   def apply(chainer: haveDotalwaysDotthrown, value: String): Chainable[Subject] = js.native
-  def apply(chainer: haveDotalwaysDotthrown, value: Error): Chainable[Subject] = js.native
+  def apply(chainer: haveDotalwaysDotthrown, value: js.Error): Chainable[Subject] = js.native
   def apply(chainer: haveDotalwaysDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
     * Causes all `.keys` assertions that follow in the chain to only require that the target have at least one of the given keys. This is the opposite of `.all`, which requires that the target have all of the given keys.
@@ -942,7 +939,7 @@ trait Chainer[Subject] extends js.Object {
     * @see https://on.cypress.io/assertions
     */
   def apply(chainer: haveDotstring, `match`: String): Chainable[Subject] = js.native
-  def apply(chainer: haveDotstring, `match`: RegExp): Chainable[Subject] = js.native
+  def apply(chainer: haveDotstring, `match`: js.RegExp): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection is equal to the given text, using `.text()`.
     * @example
@@ -958,7 +955,7 @@ trait Chainer[Subject] extends js.Object {
     */
   def apply(chainer: haveDotthrown): Chainable[Subject] = js.native
   def apply(chainer: haveDotthrown, value: String): Chainable[Subject] = js.native
-  def apply(chainer: haveDotthrown, value: Error): Chainable[Subject] = js.native
+  def apply(chainer: haveDotthrown, value: js.Error): Chainable[Subject] = js.native
   def apply(chainer: haveDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection has the given value, using `.val()`.
@@ -1037,7 +1034,7 @@ trait Chainer[Subject] extends js.Object {
     * @see https://on.cypress.io/assertions
     */
   def apply(chainer: notDotbeDotabove, value: Double): Chainable[Subject] = js.native
-  def apply(chainer: notDotbeDotabove, value: Date): Chainable[Subject] = js.native
+  def apply(chainer: notDotbeDotabove, value: js.Date): Chainable[Subject] = js.native
   /**
     * Assert if spy was not always called with matching arguments (and possibly others).
     * @see http://sinonjs.org/releases/v4.1.3/spies/#spyalwayscalledwithmatcharg1-arg2-
@@ -1089,7 +1086,7 @@ trait Chainer[Subject] extends js.Object {
     * @see https://on.cypress.io/assertions
     */
   def apply(chainer: notDotbeDotatDotleast, value: Double): Chainable[Subject] = js.native
-  def apply(chainer: notDotbeDotatDotleast, value: Date): Chainable[Subject] = js.native
+  def apply(chainer: notDotbeDotatDotleast, value: js.Date): Chainable[Subject] = js.native
   // chai.not
   /**
     * Asserts that the target’s `type` is not equal to the given string type.
@@ -1354,7 +1351,7 @@ trait Chainer[Subject] extends js.Object {
     * @see https://on.cypress.io/assertions
     */
   def apply(chainer: notDotbeDotwithin, start: Double, end: Double): Chainable[Subject] = js.native
-  def apply(chainer: notDotbeDotwithin, start: Date, end: Date): Chainable[Subject] = js.native
+  def apply(chainer: notDotbeDotwithin, start: js.Date, end: js.Date): Chainable[Subject] = js.native
   /**
     * When one argument is provided, `.change` asserts that the given function `subject` returns a different value when it’s invoked before the target function compared to when it’s invoked afterward.
     * However, it’s often best to assert that `subject` is equal to its expected value.
@@ -1496,7 +1493,7 @@ trait Chainer[Subject] extends js.Object {
     */
   def apply(chainer: notDothaveDotalwaysDotthrown): Chainable[Subject] = js.native
   def apply(chainer: notDothaveDotalwaysDotthrown, value: String): Chainable[Subject] = js.native
-  def apply(chainer: notDothaveDotalwaysDotthrown, value: Error): Chainable[Subject] = js.native
+  def apply(chainer: notDothaveDotalwaysDotthrown, value: js.Error): Chainable[Subject] = js.native
   def apply(chainer: notDothaveDotalwaysDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
     * Causes all `.keys` assertions that follow in the chain to only require that the target not have at least one of the given keys. This is the opposite of `.all`, which requires that the target have all of the given keys.
@@ -1697,7 +1694,7 @@ trait Chainer[Subject] extends js.Object {
     * @see https://on.cypress.io/assertions
     */
   def apply(chainer: notDothaveDotstring, `match`: String): Chainable[Subject] = js.native
-  def apply(chainer: notDothaveDotstring, `match`: RegExp): Chainable[Subject] = js.native
+  def apply(chainer: notDothaveDotstring, `match`: js.RegExp): Chainable[Subject] = js.native
   /**
     * Assert that the text of the first element of the selection is not equal to the given text, using `.text()`.
     * @example
@@ -1713,7 +1710,7 @@ trait Chainer[Subject] extends js.Object {
     */
   def apply(chainer: notDothaveDotthrown): Chainable[Subject] = js.native
   def apply(chainer: notDothaveDotthrown, value: String): Chainable[Subject] = js.native
-  def apply(chainer: notDothaveDotthrown, value: Error): Chainable[Subject] = js.native
+  def apply(chainer: notDothaveDotthrown, value: js.Error): Chainable[Subject] = js.native
   def apply(chainer: notDothaveDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not have the given value, using `.val()`.
@@ -1792,7 +1789,7 @@ trait Chainer[Subject] extends js.Object {
     * @see http://chaijs.com/api/bdd/#method_match
     * @see https://on.cypress.io/assertions
     */
-  def apply(chainer: notDotmatch, value: RegExp): Chainable[Subject] = js.native
+  def apply(chainer: notDotmatch, value: js.RegExp): Chainable[Subject] = js.native
   /**
     * When the target is a non-function object, `.respondTo` asserts that the target does not have a `method` with the given name method. The method can be own or inherited, and it can be enumerable or non-enumerable.
     * @example

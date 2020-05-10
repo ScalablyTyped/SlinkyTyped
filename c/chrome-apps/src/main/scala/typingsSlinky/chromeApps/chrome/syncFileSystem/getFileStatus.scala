@@ -2,9 +2,12 @@ package typingsSlinky.chromeApps.chrome.syncFileSystem
 
 import typingsSlinky.chromeApps.AnonCONFLICTING
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
-import typingsSlinky.chromeApps.chromeAppsStrings.conflicting
-import typingsSlinky.chromeApps.chromeAppsStrings.pending
-import typingsSlinky.chromeApps.chromeAppsStrings.synced
+import typingsSlinky.chromeApps.chromeAppsStrings.CONFLICTING
+import typingsSlinky.chromeApps.chromeAppsStrings.PENDING
+import typingsSlinky.chromeApps.chromeAppsStrings.SYNCED
+import typingsSlinky.chromeApps.chromeAppsStrings.conflicting_
+import typingsSlinky.chromeApps.chromeAppsStrings.pending_
+import typingsSlinky.chromeApps.chromeAppsStrings.synced_
 import typingsSlinky.filesystem.FileEntry
 import typingsSlinky.std.Exclude
 import scala.scalajs.js
@@ -23,7 +26,14 @@ object getFileStatus extends js.Object {
   def apply(
     fileEntry: FileEntry,
     callback: js.Function1[
-      /* status */ ToStringLiteral[AnonCONFLICTING, String, Exclude[String, synced | pending | conflicting]], 
+      /* status */ ToStringLiteral[
+        AnonCONFLICTING, 
+        /* keyof chrome-apps.AnonCONFLICTING */ SYNCED | PENDING | CONFLICTING, 
+        Exclude[
+          /* keyof chrome-apps.AnonCONFLICTING */ SYNCED | PENDING | CONFLICTING, 
+          synced_ | pending_ | conflicting_
+        ]
+      ], 
       Unit
     ]
   ): Unit = js.native

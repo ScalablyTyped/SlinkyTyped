@@ -85,7 +85,7 @@ object mod extends js.Object {
       * @param {Int32Array} array of pivoted row indices
       * @returns {Matrix} rhs replaced by the solution
       **/
-    def lusolve(rhs: Matrix, ipiv: scala.scalajs.js.typedarray.Int32Array): Matrix = js.native
+    def lusolve(rhs: Matrix, ipiv: js.typedarray.Int32Array): Matrix = js.native
     /**
       * Maps a function `callback` to all elements of a copy of current matrix.
       * @param {Function} callback

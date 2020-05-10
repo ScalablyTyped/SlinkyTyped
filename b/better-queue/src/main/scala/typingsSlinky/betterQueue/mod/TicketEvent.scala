@@ -17,20 +17,18 @@ trait TicketEvent extends js.Object
 
 object TicketEvent {
   @scala.inline
-  def accept: typingsSlinky.betterQueue.betterQueueStrings.accept = this.cast("accept")
+  def accept: typingsSlinky.betterQueue.betterQueueStrings.accept = "accept".asInstanceOf[typingsSlinky.betterQueue.betterQueueStrings.accept]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.betterQueue.betterQueueStrings.error = "error".asInstanceOf[typingsSlinky.betterQueue.betterQueueStrings.error]
   @scala.inline
-  def error: typingsSlinky.betterQueue.betterQueueStrings.error = this.cast("error")
+  def failed: typingsSlinky.betterQueue.betterQueueStrings.failed = "failed".asInstanceOf[typingsSlinky.betterQueue.betterQueueStrings.failed]
   @scala.inline
-  def failed: typingsSlinky.betterQueue.betterQueueStrings.failed = this.cast("failed")
+  def finish: typingsSlinky.betterQueue.betterQueueStrings.finish = "finish".asInstanceOf[typingsSlinky.betterQueue.betterQueueStrings.finish]
   @scala.inline
-  def finish: typingsSlinky.betterQueue.betterQueueStrings.finish = this.cast("finish")
+  def progress: typingsSlinky.betterQueue.betterQueueStrings.progress = "progress".asInstanceOf[typingsSlinky.betterQueue.betterQueueStrings.progress]
   @scala.inline
-  def progress: typingsSlinky.betterQueue.betterQueueStrings.progress = this.cast("progress")
+  def queued: typingsSlinky.betterQueue.betterQueueStrings.queued = "queued".asInstanceOf[typingsSlinky.betterQueue.betterQueueStrings.queued]
   @scala.inline
-  def queued: typingsSlinky.betterQueue.betterQueueStrings.queued = this.cast("queued")
-  @scala.inline
-  def started: typingsSlinky.betterQueue.betterQueueStrings.started = this.cast("started")
+  def started: typingsSlinky.betterQueue.betterQueueStrings.started = "started".asInstanceOf[typingsSlinky.betterQueue.betterQueueStrings.started]
 }
 

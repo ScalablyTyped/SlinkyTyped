@@ -76,7 +76,7 @@ trait MessagePort
   def removeEventListener_message(
     `type`: message,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_messageerror(
@@ -93,7 +93,7 @@ trait MessagePort
   def removeEventListener_messageerror(
     `type`: messageerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   /**
     * Begins dispatching messages received on the port.
@@ -103,5 +103,6 @@ trait MessagePort
 
 @JSGlobal("MessagePort")
 @js.native
-object MessagePort extends Instantiable0[MessagePort]
+object MessagePort
+  extends Instantiable0[org.scalajs.dom.raw.MessagePort]
 

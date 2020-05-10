@@ -14,14 +14,12 @@ trait CoordsMode extends js.Object
 
 object CoordsMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def div: typingsSlinky.codemirror.codemirrorStrings.div = "div".asInstanceOf[typingsSlinky.codemirror.codemirrorStrings.div]
   @scala.inline
-  def div: typingsSlinky.codemirror.codemirrorStrings.div = this.cast("div")
+  def local: typingsSlinky.codemirror.codemirrorStrings.local = "local".asInstanceOf[typingsSlinky.codemirror.codemirrorStrings.local]
   @scala.inline
-  def local: typingsSlinky.codemirror.codemirrorStrings.local = this.cast("local")
+  def page: typingsSlinky.codemirror.codemirrorStrings.page = "page".asInstanceOf[typingsSlinky.codemirror.codemirrorStrings.page]
   @scala.inline
-  def page: typingsSlinky.codemirror.codemirrorStrings.page = this.cast("page")
-  @scala.inline
-  def window: typingsSlinky.codemirror.codemirrorStrings.window = this.cast("window")
+  def window: typingsSlinky.codemirror.codemirrorStrings.window = "window".asInstanceOf[typingsSlinky.codemirror.codemirrorStrings.window]
 }
 

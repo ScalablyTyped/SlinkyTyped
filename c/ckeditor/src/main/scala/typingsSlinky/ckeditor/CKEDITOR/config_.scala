@@ -14,54 +14,55 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // https://docs.com/ckeditor4/latest/api/CKEDITOR_config.html
+@js.native
 trait config_ extends js.Object {
-  var allowedContent: js.UndefOr[Boolean | allowedContentRules] = js.undefined
-  var autoEmbed_widget: js.UndefOr[String | (js.Function1[/* url */ String, String])] = js.undefined
-  var autoGrow_bottomSpace: js.UndefOr[Double] = js.undefined
-  var autoGrow_maxHeight: js.UndefOr[Double] = js.undefined
-  var autoGrow_minHeight: js.UndefOr[Double] = js.undefined
-  var autoGrow_onStartup: js.UndefOr[Boolean] = js.undefined
-  var autoUpdateElement: js.UndefOr[Boolean] = js.undefined
-  var baseFloatZIndex: js.UndefOr[Double] = js.undefined
-  var baseHref: js.UndefOr[String] = js.undefined
-  var basicEntities: js.UndefOr[Boolean] = js.undefined
-  var blockedKeystrokes: js.UndefOr[js.Array[Double]] = js.undefined
-  var bodyClass: js.UndefOr[String] = js.undefined
-  var bodyId: js.UndefOr[String] = js.undefined
-  var browserContextMenuOnCtrl: js.UndefOr[Boolean] = js.undefined
-  var clipboard_defaultContentType: js.UndefOr[html | text] = js.undefined
-  var clipboard_notificationDuration: js.UndefOr[Double] = js.undefined
-  var cloudServices_tokenUrl: js.UndefOr[String] = js.undefined
-  var cloudServices_uploadUrl: js.UndefOr[String] = js.undefined
-  var coceSnippet_theme: js.UndefOr[String] = js.undefined
-  var codeSnippetGeshi_url: js.UndefOr[String] = js.undefined
-  var codeSnippet_codeClass: js.UndefOr[String] = js.undefined
-  var codeSnippet_languages: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var colorButton_backStyle: js.UndefOr[styleObject] = js.undefined
-  var colorButton_colors: js.UndefOr[String] = js.undefined
-  var colorButton_colorsPerRow: js.UndefOr[Double] = js.undefined
-  var colorButton_enableAutomatic: js.UndefOr[Boolean] = js.undefined
-  var colorButton_enableMore: js.UndefOr[Boolean] = js.undefined
-  var colorButton_foreStyle: js.UndefOr[styleObject] = js.undefined
-  var colorButton_normalizeBackground: js.UndefOr[Boolean] = js.undefined
-  var contentsCss: js.UndefOr[String | js.Array[String]] = js.undefined
-  var contentsLangDirection: js.UndefOr[String] = js.undefined
-  var contentsLanguage: js.UndefOr[String] = js.undefined
-  var copyFormatting_allowRules: js.UndefOr[String] = js.undefined
-  var copyFormatting_allowedContexts: js.UndefOr[Boolean | js.Array[String]] = js.undefined
-  var copyFormatting_keystrokeCopy: js.UndefOr[Double] = js.undefined
-  var copyFormatting_keystrokePaste: js.UndefOr[Double] = js.undefined
-  var copyFormatting_outerCursor: js.UndefOr[Boolean] = js.undefined
-  var coreStyles_bold: js.UndefOr[styleObject] = js.undefined
-  var coreStyles_italic: js.UndefOr[styleObject] = js.undefined
-  var coreStyles_strike: js.UndefOr[styleObject] = js.undefined
-  var coreStyles_subscript: js.UndefOr[styleObject] = js.undefined
-  var coreStyles_superscript: js.UndefOr[styleObject] = js.undefined
-  var coreStyles_underline: js.UndefOr[styleObject] = js.undefined
-  var customConfig: js.UndefOr[String] = js.undefined
-  var dataIndentationChars: js.UndefOr[String] = js.undefined
-  var defaultLanguage: js.UndefOr[String] = js.undefined
-  var devtools_styles: js.UndefOr[String] = js.undefined
+  var allowedContent: js.UndefOr[Boolean | allowedContentRules] = js.native
+  var autoEmbed_widget: js.UndefOr[String | (js.Function1[/* url */ String, String])] = js.native
+  var autoGrow_bottomSpace: js.UndefOr[Double] = js.native
+  var autoGrow_maxHeight: js.UndefOr[Double] = js.native
+  var autoGrow_minHeight: js.UndefOr[Double] = js.native
+  var autoGrow_onStartup: js.UndefOr[Boolean] = js.native
+  var autoUpdateElement: js.UndefOr[Boolean] = js.native
+  var baseFloatZIndex: js.UndefOr[Double] = js.native
+  var baseHref: js.UndefOr[String] = js.native
+  var basicEntities: js.UndefOr[Boolean] = js.native
+  var blockedKeystrokes: js.UndefOr[js.Array[Double]] = js.native
+  var bodyClass: js.UndefOr[String] = js.native
+  var bodyId: js.UndefOr[String] = js.native
+  var browserContextMenuOnCtrl: js.UndefOr[Boolean] = js.native
+  var clipboard_defaultContentType: js.UndefOr[html | text] = js.native
+  var clipboard_notificationDuration: js.UndefOr[Double] = js.native
+  var cloudServices_tokenUrl: js.UndefOr[String] = js.native
+  var cloudServices_uploadUrl: js.UndefOr[String] = js.native
+  var coceSnippet_theme: js.UndefOr[String] = js.native
+  var codeSnippetGeshi_url: js.UndefOr[String] = js.native
+  var codeSnippet_codeClass: js.UndefOr[String] = js.native
+  var codeSnippet_languages: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var colorButton_backStyle: js.UndefOr[styleObject] = js.native
+  var colorButton_colors: js.UndefOr[String] = js.native
+  var colorButton_colorsPerRow: js.UndefOr[Double] = js.native
+  var colorButton_enableAutomatic: js.UndefOr[Boolean] = js.native
+  var colorButton_enableMore: js.UndefOr[Boolean] = js.native
+  var colorButton_foreStyle: js.UndefOr[styleObject] = js.native
+  var colorButton_normalizeBackground: js.UndefOr[Boolean] = js.native
+  var contentsCss: js.UndefOr[String | js.Array[String]] = js.native
+  var contentsLangDirection: js.UndefOr[String] = js.native
+  var contentsLanguage: js.UndefOr[String] = js.native
+  var copyFormatting_allowRules: js.UndefOr[String] = js.native
+  var copyFormatting_allowedContexts: js.UndefOr[Boolean | js.Array[String]] = js.native
+  var copyFormatting_keystrokeCopy: js.UndefOr[Double] = js.native
+  var copyFormatting_keystrokePaste: js.UndefOr[Double] = js.native
+  var copyFormatting_outerCursor: js.UndefOr[Boolean] = js.native
+  var coreStyles_bold: js.UndefOr[styleObject] = js.native
+  var coreStyles_italic: js.UndefOr[styleObject] = js.native
+  var coreStyles_strike: js.UndefOr[styleObject] = js.native
+  var coreStyles_subscript: js.UndefOr[styleObject] = js.native
+  var coreStyles_superscript: js.UndefOr[styleObject] = js.native
+  var coreStyles_underline: js.UndefOr[styleObject] = js.native
+  var customConfig: js.UndefOr[String] = js.native
+  var dataIndentationChars: js.UndefOr[String] = js.native
+  var defaultLanguage: js.UndefOr[String] = js.native
+  var devtools_styles: js.UndefOr[String] = js.native
   var devtools_textCallback: js.UndefOr[
     js.Function4[
       /* editor */ editor, 
@@ -70,719 +71,3287 @@ trait config_ extends js.Object {
       /* tabName */ String, 
       String
     ]
-  ] = js.undefined
-  var dialog_backgroundCoverColor: js.UndefOr[String] = js.undefined
-  var dialog_backgroundCoverOpacity: js.UndefOr[Double] = js.undefined
-  var dialog_buttonsOrder: js.UndefOr[String] = js.undefined
-  var dialog_magnetDistance: js.UndefOr[Double] = js.undefined
-  var dialog_noConfirmCancel: js.UndefOr[Boolean] = js.undefined
-  var dialog_startupFocusTab: js.UndefOr[Boolean] = js.undefined
-  var disableNativeObjectResizing: js.UndefOr[Boolean] = js.undefined
-  var disableNativeReadonlyStyling: js.UndefOr[Boolean] = js.undefined
-  var disableNativeSpellChecker: js.UndefOr[Boolean] = js.undefined
-  var disableNativeTableHandles: js.UndefOr[Boolean] = js.undefined
-  var disallowedContent: js.UndefOr[disallowedContentRules] = js.undefined
-  var div_wrapTable: js.UndefOr[Boolean] = js.undefined
-  var docType: js.UndefOr[String] = js.undefined
-  var easyimage_class: js.UndefOr[String] = js.undefined
-  var easyimage_defaultStyle: js.UndefOr[String] = js.undefined
-  var easyimage_styles: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var easyimage_toolbar: js.UndefOr[js.Array[String] | String] = js.undefined
-  var emailProtection: js.UndefOr[String] = js.undefined
-  var embed_provider: js.UndefOr[String] = js.undefined
-  var enableTabKeyTools: js.UndefOr[Boolean] = js.undefined
-  var enterMode: js.UndefOr[Double] = js.undefined
-  var entities: js.UndefOr[Boolean] = js.undefined
-  var entities_additional: js.UndefOr[String] = js.undefined
-  var entities_greek: js.UndefOr[Boolean] = js.undefined
-  var entities_latin: js.UndefOr[Boolean] = js.undefined
-  var entities_processNumerical: js.UndefOr[Boolean | String] = js.undefined
-  var extraAllowedContent: js.UndefOr[allowedContentRules] = js.undefined
-  var extraPlugins: js.UndefOr[String] = js.undefined
-  var fileTools_defaultFileName: js.UndefOr[String] = js.undefined
-  var fileTools_requestHeaders: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var filebrowserBrowseUrl: js.UndefOr[String] = js.undefined
-  var filebrowserFlashBrowseUrl: js.UndefOr[String] = js.undefined
-  var filebrowserFlashUploadUrl: js.UndefOr[String] = js.undefined
-  var filebrowserImageBrowseLinkUrl: js.UndefOr[String] = js.undefined
-  var filebrowserImageBrowseUrl: js.UndefOr[String] = js.undefined
-  var filebrowserImageUploadUrl: js.UndefOr[String] = js.undefined
-  var filebrowserUploadMethod: js.UndefOr[String] = js.undefined
-  var filebrowserUploadUrl: js.UndefOr[String] = js.undefined
-  var filebrowserWindowFeatures: js.UndefOr[String] = js.undefined
-  var filebrowserWindowHeight: js.UndefOr[Double | String] = js.undefined
-  var filebrowserWindowWidth: js.UndefOr[Double | String] = js.undefined
+  ] = js.native
+  var dialog_backgroundCoverColor: js.UndefOr[String] = js.native
+  var dialog_backgroundCoverOpacity: js.UndefOr[Double] = js.native
+  var dialog_buttonsOrder: js.UndefOr[String] = js.native
+  var dialog_magnetDistance: js.UndefOr[Double] = js.native
+  var dialog_noConfirmCancel: js.UndefOr[Boolean] = js.native
+  var dialog_startupFocusTab: js.UndefOr[Boolean] = js.native
+  var disableNativeObjectResizing: js.UndefOr[Boolean] = js.native
+  var disableNativeReadonlyStyling: js.UndefOr[Boolean] = js.native
+  var disableNativeSpellChecker: js.UndefOr[Boolean] = js.native
+  var disableNativeTableHandles: js.UndefOr[Boolean] = js.native
+  var disallowedContent: js.UndefOr[disallowedContentRules] = js.native
+  var div_wrapTable: js.UndefOr[Boolean] = js.native
+  var docType: js.UndefOr[String] = js.native
+  var easyimage_class: js.UndefOr[String] = js.native
+  var easyimage_defaultStyle: js.UndefOr[String] = js.native
+  var easyimage_styles: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var easyimage_toolbar: js.UndefOr[js.Array[String] | String] = js.native
+  var emailProtection: js.UndefOr[String] = js.native
+  var embed_provider: js.UndefOr[String] = js.native
+  var emoji_emojiListUrl: js.UndefOr[String] = js.native
+  var emoji_minChars: js.UndefOr[Double] = js.native
+  var enableContextMenu: js.UndefOr[Boolean] = js.native
+  var enableTabKeyTools: js.UndefOr[Boolean] = js.native
+  var enterMode: js.UndefOr[Double] = js.native
+  var entities: js.UndefOr[Boolean] = js.native
+  var entities_additional: js.UndefOr[String] = js.native
+  var entities_greek: js.UndefOr[Boolean] = js.native
+  var entities_latin: js.UndefOr[Boolean] = js.native
+  var entities_processNumerical: js.UndefOr[Boolean | String] = js.native
+  var extraAllowedContent: js.UndefOr[allowedContentRules] = js.native
+  var extraPlugins: js.UndefOr[String] = js.native
+  var fileTools_defaultFileName: js.UndefOr[String] = js.native
+  var fileTools_requestHeaders: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var filebrowserBrowseUrl: js.UndefOr[String] = js.native
+  var filebrowserFlashBrowseUrl: js.UndefOr[String] = js.native
+  var filebrowserFlashUploadUrl: js.UndefOr[String] = js.native
+  var filebrowserImageBrowseLinkUrl: js.UndefOr[String] = js.native
+  var filebrowserImageBrowseUrl: js.UndefOr[String] = js.native
+  var filebrowserImageUploadUrl: js.UndefOr[String] = js.native
+  var filebrowserUploadMethod: js.UndefOr[String] = js.native
+  var filebrowserUploadUrl: js.UndefOr[String] = js.native
+  var filebrowserWindowFeatures: js.UndefOr[String] = js.native
+  var filebrowserWindowHeight: js.UndefOr[Double | String] = js.native
+  var filebrowserWindowWidth: js.UndefOr[Double | String] = js.native
   var fillEmptyBlocks: js.UndefOr[
     Boolean | (js.Function1[/* element */ typingsSlinky.ckeditor.CKEDITOR.htmlParser.element, Boolean])
-  ] = js.undefined
-  var find_highlight: js.UndefOr[styleObject] = js.undefined
-  var flashAddEmbedTag: js.UndefOr[Boolean] = js.undefined
-  var flashConvertOnEdit: js.UndefOr[Boolean] = js.undefined
-  var flashEmbedTagOnly: js.UndefOr[Boolean] = js.undefined
-  var floatSpaceDockedOffsetX: js.UndefOr[Double] = js.undefined
-  var floatSpaceDockedOffsetY: js.UndefOr[Double] = js.undefined
-  var floatSpacePinnedOffsetX: js.UndefOr[Double] = js.undefined
-  var floatSpacePinnedOffsetY: js.UndefOr[Double] = js.undefined
-  var floatSpacePreferRight: js.UndefOr[Boolean] = js.undefined
-  var fontSize_defaultLabel: js.UndefOr[String] = js.undefined
-  var fontSize_sizes: js.UndefOr[String] = js.undefined
-  var fontSize_style: js.UndefOr[styleObject] = js.undefined
-  var font_defaultLabel: js.UndefOr[String] = js.undefined
-  var font_names: js.UndefOr[String] = js.undefined
-  var font_style: js.UndefOr[styleObject] = js.undefined
-  var forceEnterMode: js.UndefOr[Boolean] = js.undefined
-  var forcePasteAsPlainText: js.UndefOr[Boolean] = js.undefined
-  var forceSimpleAmpersand: js.UndefOr[Boolean] = js.undefined
-  var format_address: js.UndefOr[styleObject] = js.undefined
-  var format_div: js.UndefOr[styleObject] = js.undefined
-  var format_h1: js.UndefOr[styleObject] = js.undefined
-  var format_h2: js.UndefOr[styleObject] = js.undefined
-  var format_h3: js.UndefOr[styleObject] = js.undefined
-  var format_h4: js.UndefOr[styleObject] = js.undefined
-  var format_h5: js.UndefOr[styleObject] = js.undefined
-  var format_h6: js.UndefOr[styleObject] = js.undefined
-  var format_p: js.UndefOr[styleObject] = js.undefined
-  var format_pre: js.UndefOr[styleObject] = js.undefined
-  var format_tags: js.UndefOr[String] = js.undefined
-  var fullPage: js.UndefOr[Boolean] = js.undefined
-  var grayt_autoStartup: js.UndefOr[Boolean] = js.undefined
-  var height: js.UndefOr[String | Double] = js.undefined
-  var htmlEncodeOutput: js.UndefOr[Boolean] = js.undefined
-  var ignoreEmptyParagraph: js.UndefOr[Boolean] = js.undefined
-  var image2_alignClasses: js.UndefOr[js.Array[String]] = js.undefined
-  var image2_altRequired: js.UndefOr[Boolean] = js.undefined
-  var image2_captionedClass: js.UndefOr[String] = js.undefined
-  var image2_disableResizer: js.UndefOr[Boolean] = js.undefined
-  var image2_prefillDimensions: js.UndefOr[Boolean] = js.undefined
-  var imageUploadUrl: js.UndefOr[String] = js.undefined
-  var image_prefillDimensions: js.UndefOr[Boolean] = js.undefined
-  var image_previewText: js.UndefOr[String] = js.undefined
-  var image_removeLinkByEmptyUrl: js.UndefOr[Boolean] = js.undefined
-  var indentClasses: js.UndefOr[js.Array[String]] = js.undefined
-  var indentOffset: js.UndefOr[Double] = js.undefined
-  var indentUnit: js.UndefOr[String] = js.undefined
-  var jqueryOverrideVal: js.UndefOr[Boolean] = js.undefined
-  var justifyClasses: js.UndefOr[js.Array[String]] = js.undefined
-  var keystrokes: js.UndefOr[js.Array[js.Tuple2[Double, String]]] = js.undefined
-  var language: js.UndefOr[String] = js.undefined
-  var language_list: js.UndefOr[js.Array[String]] = js.undefined
-  var linkJavaScriptLinksAllowed: js.UndefOr[Boolean] = js.undefined
-  var linkShowAdvancedTab: js.UndefOr[Boolean] = js.undefined
-  var linkShowTargetTab: js.UndefOr[Boolean] = js.undefined
-  var magicline_color: js.UndefOr[String] = js.undefined
-  var magicline_everywhere: js.UndefOr[Boolean] = js.undefined
-  var magicline_holdDistance: js.UndefOr[Double] = js.undefined
-  var magicline_keystrokeNext: js.UndefOr[Double] = js.undefined
-  var magicline_keystrokePrevious: js.UndefOr[Double] = js.undefined
-  var magicline_tabuList: js.UndefOr[js.Array[String]] = js.undefined
-  var magicline_triggerOffset: js.UndefOr[Double] = js.undefined
-  var mathJaxClass: js.UndefOr[String] = js.undefined
-  var mathJaxLib: js.UndefOr[String] = js.undefined
-  var menu_groups: js.UndefOr[String] = js.undefined
-  var menu_subMenuDelay: js.UndefOr[Double] = js.undefined
-  var newpage_html: js.UndefOr[String] = js.undefined
-  var notification_duration: js.UndefOr[Double] = js.undefined
-  var on: js.UndefOr[eventObject] = js.undefined
-  var pasteFilter: js.UndefOr[String] = js.undefined
-  var pasteFromWordCleanupFile: js.UndefOr[String] = js.undefined
-  var pasteFromWordNumberedHeadingToList: js.UndefOr[Boolean] = js.undefined
-  var pasteFromWordPromptCleanup: js.UndefOr[Boolean] = js.undefined
-  var pasteFromWordRemoveFontStyles: js.UndefOr[Boolean] = js.undefined
-  var pasteFromWordRemoveStyles: js.UndefOr[Boolean] = js.undefined
-  var pasteFromWord_heuristicsEdgeList: js.UndefOr[Boolean] = js.undefined
-  var pasteFromWord_inlineImages: js.UndefOr[Boolean] = js.undefined
-  var plugins: js.UndefOr[String] = js.undefined
-  var protectedSource: js.UndefOr[js.Array[js.RegExp]] = js.undefined
-  var readOnly: js.UndefOr[Boolean] = js.undefined
-  var removeButtons: js.UndefOr[String] = js.undefined
-  var removeDialogTabs: js.UndefOr[String] = js.undefined
-  var removeFormatAttributes: js.UndefOr[String] = js.undefined
-  var removeFormatTags: js.UndefOr[String] = js.undefined
-  var removePlugins: js.UndefOr[String] = js.undefined
-  var resize_dir: js.UndefOr[String] = js.undefined
-  var resize_enabled: js.UndefOr[Boolean] = js.undefined
-  var resize_maxHeight: js.UndefOr[Double] = js.undefined
-  var resize_maxWidth: js.UndefOr[Double] = js.undefined
-  var resize_minHeight: js.UndefOr[Double] = js.undefined
-  var resize_minWidth: js.UndefOr[Double] = js.undefined
-  var scayt_autoStartup: js.UndefOr[Boolean] = js.undefined
-  var scayt_contextCommands: js.UndefOr[String] = js.undefined
-  var scayt_contextMenuItemsOrder: js.UndefOr[String] = js.undefined
-  var scayt_customDictionaryIds: js.UndefOr[String] = js.undefined
-  var scayt_customerId: js.UndefOr[String] = js.undefined
-  var scayt_disableOptionsStorage: js.UndefOr[String | js.Array[String]] = js.undefined
-  var scayt_elementsToIgnore: js.UndefOr[String] = js.undefined
-  var scayt_handleCheckDirty: js.UndefOr[String] = js.undefined
-  var scayt_handleUndoRedo: js.UndefOr[String] = js.undefined
-  var scayt_ignoreAllCapsWords: js.UndefOr[Boolean] = js.undefined
-  var scayt_ignoreDomainNames: js.UndefOr[Boolean] = js.undefined
-  var scayt_ignoreWordsWithMixedCases: js.UndefOr[Boolean] = js.undefined
-  var scayt_ignoreWordsWithNumbers: js.UndefOr[Boolean] = js.undefined
-  var scayt_inlineModeImmediateMarkup: js.UndefOr[Boolean] = js.undefined
-  var scayt_maxSuggestions: js.UndefOr[Double] = js.undefined
-  var scayt_minWordLength: js.UndefOr[Double] = js.undefined
-  var scayt_moreSuggestions: js.UndefOr[String] = js.undefined
-  var scayt_multiLanguageMode: js.UndefOr[Boolean] = js.undefined
-  var scayt_multiLanguageStyles: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var scayt_sLang: js.UndefOr[String] = js.undefined
-  var scayt_serviceHost: js.UndefOr[String] = js.undefined
-  var scayt_servicePath: js.UndefOr[String] = js.undefined
-  var scayt_servicePort: js.UndefOr[String] = js.undefined
-  var scayt_serviceProtocol: js.UndefOr[String] = js.undefined
-  var scayt_srcUrl: js.UndefOr[String] = js.undefined
-  var scayt_uiTabs: js.UndefOr[String] = js.undefined
-  var scayt_userDictionaryName: js.UndefOr[String] = js.undefined
-  var sharedSpaces: js.UndefOr[sharedSpace] = js.undefined
-  var shiftEnterMode: js.UndefOr[Double] = js.undefined
-  var skin: js.UndefOr[String] = js.undefined
-  var smiley_columns: js.UndefOr[Double] = js.undefined
-  var smiley_descriptions: js.UndefOr[js.Array[String]] = js.undefined
-  var smiley_images: js.UndefOr[js.Array[String]] = js.undefined
-  var smiley_path: js.UndefOr[String] = js.undefined
-  var sourceAreaTabSize: js.UndefOr[Double] = js.undefined
-  var specialChars: js.UndefOr[js.Array[String | (js.Tuple2[String, String])]] = js.undefined
-  var startupFocus: js.UndefOr[String | Boolean] = js.undefined
-  var startupMode: js.UndefOr[String] = js.undefined
-  var startupOutlineBlocks: js.UndefOr[Boolean] = js.undefined
-  var startupShowBorders: js.UndefOr[Boolean] = js.undefined
-  var stylesSet: js.UndefOr[String | Boolean | js.Array[styleObject]] = js.undefined
-  var stylesheetParser_skipSelectors: js.UndefOr[js.RegExp] = js.undefined
-  var stylesheetParser_validSelectors: js.UndefOr[js.RegExp] = js.undefined
-  var tabIndex: js.UndefOr[Double] = js.undefined
-  var tabSpaces: js.UndefOr[Double] = js.undefined
-  var templates: js.UndefOr[String] = js.undefined
-  var templates_files: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var templates_replaceContent: js.UndefOr[Boolean] = js.undefined
-  var title: js.UndefOr[String | Boolean] = js.undefined
-  var toolbar: js.UndefOr[String | (js.Array[String | js.Array[String] | AnonGroups]) | Null] = js.undefined
-  var toolbarCanCollapse: js.UndefOr[Boolean] = js.undefined
-  var toolbarGroupCycling: js.UndefOr[Boolean] = js.undefined
-  var toolbarGroups: js.UndefOr[js.Array[typingsSlinky.ckeditor.CKEDITOR.toolbarGroups | String]] = js.undefined
-  var toolbarLocation: js.UndefOr[String] = js.undefined
-  var toolbarStartupExpanded: js.UndefOr[Boolean] = js.undefined
-  var uiColor: js.UndefOr[String] = js.undefined
-  var undoStackSize: js.UndefOr[Double] = js.undefined
-  var uploadUrl: js.UndefOr[String] = js.undefined
-  var useComputedState: js.UndefOr[Boolean] = js.undefined
-  var width: js.UndefOr[String | Double] = js.undefined
-  var wsc_cmd: js.UndefOr[String] = js.undefined
-  var wsc_customDictionaryIds: js.UndefOr[String] = js.undefined
-  var wsc_customLoaderScript: js.UndefOr[String] = js.undefined
-  var wsc_customerId: js.UndefOr[String] = js.undefined
-  var wsc_height: js.UndefOr[String] = js.undefined
-  var wsc_lang: js.UndefOr[String] = js.undefined
-  var wsc_left: js.UndefOr[String] = js.undefined
-  var wsc_top: js.UndefOr[String] = js.undefined
-  var wsc_userDictionaryName: js.UndefOr[String] = js.undefined
-  var wsc_width: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var find_highlight: js.UndefOr[styleObject] = js.native
+  var flashAddEmbedTag: js.UndefOr[Boolean] = js.native
+  var flashConvertOnEdit: js.UndefOr[Boolean] = js.native
+  var flashEmbedTagOnly: js.UndefOr[Boolean] = js.native
+  var floatSpaceDockedOffsetX: js.UndefOr[Double] = js.native
+  var floatSpaceDockedOffsetY: js.UndefOr[Double] = js.native
+  var floatSpacePinnedOffsetX: js.UndefOr[Double] = js.native
+  var floatSpacePinnedOffsetY: js.UndefOr[Double] = js.native
+  var floatSpacePreferRight: js.UndefOr[Boolean] = js.native
+  var fontSize_defaultLabel: js.UndefOr[String] = js.native
+  var fontSize_sizes: js.UndefOr[String] = js.native
+  var fontSize_style: js.UndefOr[styleObject] = js.native
+  var font_defaultLabel: js.UndefOr[String] = js.native
+  var font_names: js.UndefOr[String] = js.native
+  var font_style: js.UndefOr[styleObject] = js.native
+  var forceEnterMode: js.UndefOr[Boolean] = js.native
+  var forcePasteAsPlainText: js.UndefOr[Boolean] = js.native
+  var forceSimpleAmpersand: js.UndefOr[Boolean] = js.native
+  var format_address: js.UndefOr[styleObject] = js.native
+  var format_div: js.UndefOr[styleObject] = js.native
+  var format_h1: js.UndefOr[styleObject] = js.native
+  var format_h2: js.UndefOr[styleObject] = js.native
+  var format_h3: js.UndefOr[styleObject] = js.native
+  var format_h4: js.UndefOr[styleObject] = js.native
+  var format_h5: js.UndefOr[styleObject] = js.native
+  var format_h6: js.UndefOr[styleObject] = js.native
+  var format_p: js.UndefOr[styleObject] = js.native
+  var format_pre: js.UndefOr[styleObject] = js.native
+  var format_tags: js.UndefOr[String] = js.native
+  var fullPage: js.UndefOr[Boolean] = js.native
+  var grayt_autoStartup: js.UndefOr[Boolean] = js.native
+  var height: js.UndefOr[String | Double] = js.native
+  var htmlEncodeOutput: js.UndefOr[Boolean] = js.native
+  var ignoreEmptyParagraph: js.UndefOr[Boolean] = js.native
+  var image2_alignClasses: js.UndefOr[js.Array[String]] = js.native
+  var image2_altRequired: js.UndefOr[Boolean] = js.native
+  var image2_captionedClass: js.UndefOr[String] = js.native
+  var image2_disableResizer: js.UndefOr[Boolean] = js.native
+  var image2_prefillDimensions: js.UndefOr[Boolean] = js.native
+  var imageUploadUrl: js.UndefOr[String] = js.native
+  var image_prefillDimensions: js.UndefOr[Boolean] = js.native
+  var image_previewText: js.UndefOr[String] = js.native
+  var image_removeLinkByEmptyUrl: js.UndefOr[Boolean] = js.native
+  var indentClasses: js.UndefOr[js.Array[String]] = js.native
+  var indentOffset: js.UndefOr[Double] = js.native
+  var indentUnit: js.UndefOr[String] = js.native
+  var jqueryOverrideVal: js.UndefOr[Boolean] = js.native
+  var justifyClasses: js.UndefOr[js.Array[String]] = js.native
+  var keystrokes: js.UndefOr[js.Array[js.Tuple2[Double, String]]] = js.native
+  var language: js.UndefOr[String] = js.native
+  var language_list: js.UndefOr[js.Array[String]] = js.native
+  var linkJavaScriptLinksAllowed: js.UndefOr[Boolean] = js.native
+  var linkShowAdvancedTab: js.UndefOr[Boolean] = js.native
+  var linkShowTargetTab: js.UndefOr[Boolean] = js.native
+  var magicline_color: js.UndefOr[String] = js.native
+  var magicline_everywhere: js.UndefOr[Boolean] = js.native
+  var magicline_holdDistance: js.UndefOr[Double] = js.native
+  var magicline_keystrokeNext: js.UndefOr[Double] = js.native
+  var magicline_keystrokePrevious: js.UndefOr[Double] = js.native
+  var magicline_tabuList: js.UndefOr[js.Array[String]] = js.native
+  var magicline_triggerOffset: js.UndefOr[Double] = js.native
+  var mathJaxClass: js.UndefOr[String] = js.native
+  var mathJaxLib: js.UndefOr[String] = js.native
+  var menu_groups: js.UndefOr[String] = js.native
+  var menu_subMenuDelay: js.UndefOr[Double] = js.native
+  var newpage_html: js.UndefOr[String] = js.native
+  var notification_duration: js.UndefOr[Double] = js.native
+  var on: js.UndefOr[eventObject] = js.native
+  var pasteFilter: js.UndefOr[String] = js.native
+  var pasteFromWordCleanupFile: js.UndefOr[String] = js.native
+  var pasteFromWordNumberedHeadingToList: js.UndefOr[Boolean] = js.native
+  var pasteFromWordPromptCleanup: js.UndefOr[Boolean] = js.native
+  var pasteFromWordRemoveFontStyles: js.UndefOr[Boolean] = js.native
+  var pasteFromWordRemoveStyles: js.UndefOr[Boolean] = js.native
+  var pasteFromWord_heuristicsEdgeList: js.UndefOr[Boolean] = js.native
+  var pasteFromWord_inlineImages: js.UndefOr[Boolean] = js.native
+  var plugins: js.UndefOr[String] = js.native
+  var protectedSource: js.UndefOr[js.Array[js.RegExp]] = js.native
+  var readOnly: js.UndefOr[Boolean] = js.native
+  var removeButtons: js.UndefOr[String] = js.native
+  var removeDialogTabs: js.UndefOr[String] = js.native
+  var removeFormatAttributes: js.UndefOr[String] = js.native
+  var removeFormatTags: js.UndefOr[String] = js.native
+  var removePlugins: js.UndefOr[String] = js.native
+  var resize_dir: js.UndefOr[String] = js.native
+  var resize_enabled: js.UndefOr[Boolean] = js.native
+  var resize_maxHeight: js.UndefOr[Double] = js.native
+  var resize_maxWidth: js.UndefOr[Double] = js.native
+  var resize_minHeight: js.UndefOr[Double] = js.native
+  var resize_minWidth: js.UndefOr[Double] = js.native
+  var scayt_autoStartup: js.UndefOr[Boolean] = js.native
+  var scayt_contextCommands: js.UndefOr[String] = js.native
+  var scayt_contextMenuItemsOrder: js.UndefOr[String] = js.native
+  var scayt_customDictionaryIds: js.UndefOr[String] = js.native
+  var scayt_customerId: js.UndefOr[String] = js.native
+  var scayt_disableOptionsStorage: js.UndefOr[String | js.Array[String]] = js.native
+  var scayt_elementsToIgnore: js.UndefOr[String] = js.native
+  var scayt_handleCheckDirty: js.UndefOr[String] = js.native
+  var scayt_handleUndoRedo: js.UndefOr[String] = js.native
+  var scayt_ignoreAllCapsWords: js.UndefOr[Boolean] = js.native
+  var scayt_ignoreDomainNames: js.UndefOr[Boolean] = js.native
+  var scayt_ignoreWordsWithMixedCases: js.UndefOr[Boolean] = js.native
+  var scayt_ignoreWordsWithNumbers: js.UndefOr[Boolean] = js.native
+  var scayt_inlineModeImmediateMarkup: js.UndefOr[Boolean] = js.native
+  var scayt_maxSuggestions: js.UndefOr[Double] = js.native
+  var scayt_minWordLength: js.UndefOr[Double] = js.native
+  var scayt_moreSuggestions: js.UndefOr[String] = js.native
+  var scayt_multiLanguageMode: js.UndefOr[Boolean] = js.native
+  var scayt_multiLanguageStyles: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var scayt_sLang: js.UndefOr[String] = js.native
+  var scayt_serviceHost: js.UndefOr[String] = js.native
+  var scayt_servicePath: js.UndefOr[String] = js.native
+  var scayt_servicePort: js.UndefOr[String] = js.native
+  var scayt_serviceProtocol: js.UndefOr[String] = js.native
+  var scayt_srcUrl: js.UndefOr[String] = js.native
+  var scayt_uiTabs: js.UndefOr[String] = js.native
+  var scayt_userDictionaryName: js.UndefOr[String] = js.native
+  var sharedSpaces: js.UndefOr[sharedSpace] = js.native
+  var shiftEnterMode: js.UndefOr[Double] = js.native
+  var skin: js.UndefOr[String] = js.native
+  var smiley_columns: js.UndefOr[Double] = js.native
+  var smiley_descriptions: js.UndefOr[js.Array[String]] = js.native
+  var smiley_images: js.UndefOr[js.Array[String]] = js.native
+  var smiley_path: js.UndefOr[String] = js.native
+  var sourceAreaTabSize: js.UndefOr[Double] = js.native
+  var specialChars: js.UndefOr[js.Array[String | (js.Tuple2[String, String])]] = js.native
+  var startupFocus: js.UndefOr[String | Boolean] = js.native
+  var startupMode: js.UndefOr[String] = js.native
+  var startupOutlineBlocks: js.UndefOr[Boolean] = js.native
+  var startupShowBorders: js.UndefOr[Boolean] = js.native
+  var stylesSet: js.UndefOr[String | Boolean | js.Array[styleObject]] = js.native
+  var stylesheetParser_skipSelectors: js.UndefOr[js.RegExp] = js.native
+  var stylesheetParser_validSelectors: js.UndefOr[js.RegExp] = js.native
+  var tabIndex: js.UndefOr[Double] = js.native
+  var tabSpaces: js.UndefOr[Double] = js.native
+  var templates: js.UndefOr[String] = js.native
+  var templates_files: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var templates_replaceContent: js.UndefOr[Boolean] = js.native
+  var title: js.UndefOr[String | Boolean] = js.native
+  var toolbar: js.UndefOr[String | (js.Array[String | js.Array[String] | AnonGroups]) | Null] = js.native
+  var toolbarCanCollapse: js.UndefOr[Boolean] = js.native
+  var toolbarGroupCycling: js.UndefOr[Boolean] = js.native
+  var toolbarGroups: js.UndefOr[js.Array[typingsSlinky.ckeditor.CKEDITOR.toolbarGroups | String]] = js.native
+  var toolbarLocation: js.UndefOr[String] = js.native
+  var toolbarStartupExpanded: js.UndefOr[Boolean] = js.native
+  var uiColor: js.UndefOr[String] = js.native
+  var undoStackSize: js.UndefOr[Double] = js.native
+  var uploadUrl: js.UndefOr[String] = js.native
+  var useComputedState: js.UndefOr[Boolean] = js.native
+  var width: js.UndefOr[String | Double] = js.native
+  var wsc_cmd: js.UndefOr[String] = js.native
+  var wsc_customDictionaryIds: js.UndefOr[String] = js.native
+  var wsc_customLoaderScript: js.UndefOr[String] = js.native
+  var wsc_customerId: js.UndefOr[String] = js.native
+  var wsc_height: js.UndefOr[String] = js.native
+  var wsc_lang: js.UndefOr[String] = js.native
+  var wsc_left: js.UndefOr[String] = js.native
+  var wsc_top: js.UndefOr[String] = js.native
+  var wsc_userDictionaryName: js.UndefOr[String] = js.native
+  var wsc_width: js.UndefOr[String] = js.native
 }
 
 object config_ {
   @scala.inline
-  def apply(
-    allowedContent: Boolean | allowedContentRules = null,
-    autoEmbed_widget: String | (js.Function1[/* url */ String, String]) = null,
-    autoGrow_bottomSpace: Int | Double = null,
-    autoGrow_maxHeight: Int | Double = null,
-    autoGrow_minHeight: Int | Double = null,
-    autoGrow_onStartup: js.UndefOr[Boolean] = js.undefined,
-    autoUpdateElement: js.UndefOr[Boolean] = js.undefined,
-    baseFloatZIndex: Int | Double = null,
-    baseHref: String = null,
-    basicEntities: js.UndefOr[Boolean] = js.undefined,
-    blockedKeystrokes: js.Array[Double] = null,
-    bodyClass: String = null,
-    bodyId: String = null,
-    browserContextMenuOnCtrl: js.UndefOr[Boolean] = js.undefined,
-    clipboard_defaultContentType: html | text = null,
-    clipboard_notificationDuration: Int | Double = null,
-    cloudServices_tokenUrl: String = null,
-    cloudServices_uploadUrl: String = null,
-    coceSnippet_theme: String = null,
-    codeSnippetGeshi_url: String = null,
-    codeSnippet_codeClass: String = null,
-    codeSnippet_languages: StringDictionary[js.Any] = null,
-    colorButton_backStyle: styleObject = null,
-    colorButton_colors: String = null,
-    colorButton_colorsPerRow: Int | Double = null,
-    colorButton_enableAutomatic: js.UndefOr[Boolean] = js.undefined,
-    colorButton_enableMore: js.UndefOr[Boolean] = js.undefined,
-    colorButton_foreStyle: styleObject = null,
-    colorButton_normalizeBackground: js.UndefOr[Boolean] = js.undefined,
-    contentsCss: String | js.Array[String] = null,
-    contentsLangDirection: String = null,
-    contentsLanguage: String = null,
-    copyFormatting_allowRules: String = null,
-    copyFormatting_allowedContexts: Boolean | js.Array[String] = null,
-    copyFormatting_keystrokeCopy: Int | Double = null,
-    copyFormatting_keystrokePaste: Int | Double = null,
-    copyFormatting_outerCursor: js.UndefOr[Boolean] = js.undefined,
-    coreStyles_bold: styleObject = null,
-    coreStyles_italic: styleObject = null,
-    coreStyles_strike: styleObject = null,
-    coreStyles_subscript: styleObject = null,
-    coreStyles_superscript: styleObject = null,
-    coreStyles_underline: styleObject = null,
-    customConfig: String = null,
-    dataIndentationChars: String = null,
-    defaultLanguage: String = null,
-    devtools_styles: String = null,
-    devtools_textCallback: (/* editor */ editor, /* dialog */ dialog, /* element */ element, /* tabName */ String) => String = null,
-    dialog_backgroundCoverColor: String = null,
-    dialog_backgroundCoverOpacity: Int | Double = null,
-    dialog_buttonsOrder: String = null,
-    dialog_magnetDistance: Int | Double = null,
-    dialog_noConfirmCancel: js.UndefOr[Boolean] = js.undefined,
-    dialog_startupFocusTab: js.UndefOr[Boolean] = js.undefined,
-    disableNativeObjectResizing: js.UndefOr[Boolean] = js.undefined,
-    disableNativeReadonlyStyling: js.UndefOr[Boolean] = js.undefined,
-    disableNativeSpellChecker: js.UndefOr[Boolean] = js.undefined,
-    disableNativeTableHandles: js.UndefOr[Boolean] = js.undefined,
-    disallowedContent: disallowedContentRules = null,
-    div_wrapTable: js.UndefOr[Boolean] = js.undefined,
-    docType: String = null,
-    easyimage_class: String = null,
-    easyimage_defaultStyle: String = null,
-    easyimage_styles: StringDictionary[js.Any] = null,
-    easyimage_toolbar: js.Array[String] | String = null,
-    emailProtection: String = null,
-    embed_provider: String = null,
-    enableTabKeyTools: js.UndefOr[Boolean] = js.undefined,
-    enterMode: Int | Double = null,
-    entities: js.UndefOr[Boolean] = js.undefined,
-    entities_additional: String = null,
-    entities_greek: js.UndefOr[Boolean] = js.undefined,
-    entities_latin: js.UndefOr[Boolean] = js.undefined,
-    entities_processNumerical: Boolean | String = null,
-    extraAllowedContent: allowedContentRules = null,
-    extraPlugins: String = null,
-    fileTools_defaultFileName: String = null,
-    fileTools_requestHeaders: StringDictionary[js.Any] = null,
-    filebrowserBrowseUrl: String = null,
-    filebrowserFlashBrowseUrl: String = null,
-    filebrowserFlashUploadUrl: String = null,
-    filebrowserImageBrowseLinkUrl: String = null,
-    filebrowserImageBrowseUrl: String = null,
-    filebrowserImageUploadUrl: String = null,
-    filebrowserUploadMethod: String = null,
-    filebrowserUploadUrl: String = null,
-    filebrowserWindowFeatures: String = null,
-    filebrowserWindowHeight: Double | String = null,
-    filebrowserWindowWidth: Double | String = null,
-    fillEmptyBlocks: Boolean | (js.Function1[/* element */ typingsSlinky.ckeditor.CKEDITOR.htmlParser.element, Boolean]) = null,
-    find_highlight: styleObject = null,
-    flashAddEmbedTag: js.UndefOr[Boolean] = js.undefined,
-    flashConvertOnEdit: js.UndefOr[Boolean] = js.undefined,
-    flashEmbedTagOnly: js.UndefOr[Boolean] = js.undefined,
-    floatSpaceDockedOffsetX: Int | Double = null,
-    floatSpaceDockedOffsetY: Int | Double = null,
-    floatSpacePinnedOffsetX: Int | Double = null,
-    floatSpacePinnedOffsetY: Int | Double = null,
-    floatSpacePreferRight: js.UndefOr[Boolean] = js.undefined,
-    fontSize_defaultLabel: String = null,
-    fontSize_sizes: String = null,
-    fontSize_style: styleObject = null,
-    font_defaultLabel: String = null,
-    font_names: String = null,
-    font_style: styleObject = null,
-    forceEnterMode: js.UndefOr[Boolean] = js.undefined,
-    forcePasteAsPlainText: js.UndefOr[Boolean] = js.undefined,
-    forceSimpleAmpersand: js.UndefOr[Boolean] = js.undefined,
-    format_address: styleObject = null,
-    format_div: styleObject = null,
-    format_h1: styleObject = null,
-    format_h2: styleObject = null,
-    format_h3: styleObject = null,
-    format_h4: styleObject = null,
-    format_h5: styleObject = null,
-    format_h6: styleObject = null,
-    format_p: styleObject = null,
-    format_pre: styleObject = null,
-    format_tags: String = null,
-    fullPage: js.UndefOr[Boolean] = js.undefined,
-    grayt_autoStartup: js.UndefOr[Boolean] = js.undefined,
-    height: String | Double = null,
-    htmlEncodeOutput: js.UndefOr[Boolean] = js.undefined,
-    ignoreEmptyParagraph: js.UndefOr[Boolean] = js.undefined,
-    image2_alignClasses: js.Array[String] = null,
-    image2_altRequired: js.UndefOr[Boolean] = js.undefined,
-    image2_captionedClass: String = null,
-    image2_disableResizer: js.UndefOr[Boolean] = js.undefined,
-    image2_prefillDimensions: js.UndefOr[Boolean] = js.undefined,
-    imageUploadUrl: String = null,
-    image_prefillDimensions: js.UndefOr[Boolean] = js.undefined,
-    image_previewText: String = null,
-    image_removeLinkByEmptyUrl: js.UndefOr[Boolean] = js.undefined,
-    indentClasses: js.Array[String] = null,
-    indentOffset: Int | Double = null,
-    indentUnit: String = null,
-    jqueryOverrideVal: js.UndefOr[Boolean] = js.undefined,
-    justifyClasses: js.Array[String] = null,
-    keystrokes: js.Array[js.Tuple2[Double, String]] = null,
-    language: String = null,
-    language_list: js.Array[String] = null,
-    linkJavaScriptLinksAllowed: js.UndefOr[Boolean] = js.undefined,
-    linkShowAdvancedTab: js.UndefOr[Boolean] = js.undefined,
-    linkShowTargetTab: js.UndefOr[Boolean] = js.undefined,
-    magicline_color: String = null,
-    magicline_everywhere: js.UndefOr[Boolean] = js.undefined,
-    magicline_holdDistance: Int | Double = null,
-    magicline_keystrokeNext: Int | Double = null,
-    magicline_keystrokePrevious: Int | Double = null,
-    magicline_tabuList: js.Array[String] = null,
-    magicline_triggerOffset: Int | Double = null,
-    mathJaxClass: String = null,
-    mathJaxLib: String = null,
-    menu_groups: String = null,
-    menu_subMenuDelay: Int | Double = null,
-    newpage_html: String = null,
-    notification_duration: Int | Double = null,
-    on: eventObject = null,
-    pasteFilter: String = null,
-    pasteFromWordCleanupFile: String = null,
-    pasteFromWordNumberedHeadingToList: js.UndefOr[Boolean] = js.undefined,
-    pasteFromWordPromptCleanup: js.UndefOr[Boolean] = js.undefined,
-    pasteFromWordRemoveFontStyles: js.UndefOr[Boolean] = js.undefined,
-    pasteFromWordRemoveStyles: js.UndefOr[Boolean] = js.undefined,
-    pasteFromWord_heuristicsEdgeList: js.UndefOr[Boolean] = js.undefined,
-    pasteFromWord_inlineImages: js.UndefOr[Boolean] = js.undefined,
-    plugins: String = null,
-    protectedSource: js.Array[js.RegExp] = null,
-    readOnly: js.UndefOr[Boolean] = js.undefined,
-    removeButtons: String = null,
-    removeDialogTabs: String = null,
-    removeFormatAttributes: String = null,
-    removeFormatTags: String = null,
-    removePlugins: String = null,
-    resize_dir: String = null,
-    resize_enabled: js.UndefOr[Boolean] = js.undefined,
-    resize_maxHeight: Int | Double = null,
-    resize_maxWidth: Int | Double = null,
-    resize_minHeight: Int | Double = null,
-    resize_minWidth: Int | Double = null,
-    scayt_autoStartup: js.UndefOr[Boolean] = js.undefined,
-    scayt_contextCommands: String = null,
-    scayt_contextMenuItemsOrder: String = null,
-    scayt_customDictionaryIds: String = null,
-    scayt_customerId: String = null,
-    scayt_disableOptionsStorage: String | js.Array[String] = null,
-    scayt_elementsToIgnore: String = null,
-    scayt_handleCheckDirty: String = null,
-    scayt_handleUndoRedo: String = null,
-    scayt_ignoreAllCapsWords: js.UndefOr[Boolean] = js.undefined,
-    scayt_ignoreDomainNames: js.UndefOr[Boolean] = js.undefined,
-    scayt_ignoreWordsWithMixedCases: js.UndefOr[Boolean] = js.undefined,
-    scayt_ignoreWordsWithNumbers: js.UndefOr[Boolean] = js.undefined,
-    scayt_inlineModeImmediateMarkup: js.UndefOr[Boolean] = js.undefined,
-    scayt_maxSuggestions: Int | Double = null,
-    scayt_minWordLength: Int | Double = null,
-    scayt_moreSuggestions: String = null,
-    scayt_multiLanguageMode: js.UndefOr[Boolean] = js.undefined,
-    scayt_multiLanguageStyles: StringDictionary[js.Any] = null,
-    scayt_sLang: String = null,
-    scayt_serviceHost: String = null,
-    scayt_servicePath: String = null,
-    scayt_servicePort: String = null,
-    scayt_serviceProtocol: String = null,
-    scayt_srcUrl: String = null,
-    scayt_uiTabs: String = null,
-    scayt_userDictionaryName: String = null,
-    sharedSpaces: sharedSpace = null,
-    shiftEnterMode: Int | Double = null,
-    skin: String = null,
-    smiley_columns: Int | Double = null,
-    smiley_descriptions: js.Array[String] = null,
-    smiley_images: js.Array[String] = null,
-    smiley_path: String = null,
-    sourceAreaTabSize: Int | Double = null,
-    specialChars: js.Array[String | (js.Tuple2[String, String])] = null,
-    startupFocus: String | Boolean = null,
-    startupMode: String = null,
-    startupOutlineBlocks: js.UndefOr[Boolean] = js.undefined,
-    startupShowBorders: js.UndefOr[Boolean] = js.undefined,
-    stylesSet: String | Boolean | js.Array[styleObject] = null,
-    stylesheetParser_skipSelectors: js.RegExp = null,
-    stylesheetParser_validSelectors: js.RegExp = null,
-    tabIndex: Int | Double = null,
-    tabSpaces: Int | Double = null,
-    templates: String = null,
-    templates_files: StringDictionary[js.Any] = null,
-    templates_replaceContent: js.UndefOr[Boolean] = js.undefined,
-    title: String | Boolean = null,
-    toolbar: String | (js.Array[String | js.Array[String] | AnonGroups]) = null,
-    toolbarCanCollapse: js.UndefOr[Boolean] = js.undefined,
-    toolbarGroupCycling: js.UndefOr[Boolean] = js.undefined,
-    toolbarGroups: js.Array[toolbarGroups | String] = null,
-    toolbarLocation: String = null,
-    toolbarStartupExpanded: js.UndefOr[Boolean] = js.undefined,
-    uiColor: String = null,
-    undoStackSize: Int | Double = null,
-    uploadUrl: String = null,
-    useComputedState: js.UndefOr[Boolean] = js.undefined,
-    width: String | Double = null,
-    wsc_cmd: String = null,
-    wsc_customDictionaryIds: String = null,
-    wsc_customLoaderScript: String = null,
-    wsc_customerId: String = null,
-    wsc_height: String = null,
-    wsc_lang: String = null,
-    wsc_left: String = null,
-    wsc_top: String = null,
-    wsc_userDictionaryName: String = null,
-    wsc_width: String = null
-  ): config_ = {
+  def apply(): config_ = {
     val __obj = js.Dynamic.literal()
-    if (allowedContent != null) __obj.updateDynamic("allowedContent")(allowedContent.asInstanceOf[js.Any])
-    if (autoEmbed_widget != null) __obj.updateDynamic("autoEmbed_widget")(autoEmbed_widget.asInstanceOf[js.Any])
-    if (autoGrow_bottomSpace != null) __obj.updateDynamic("autoGrow_bottomSpace")(autoGrow_bottomSpace.asInstanceOf[js.Any])
-    if (autoGrow_maxHeight != null) __obj.updateDynamic("autoGrow_maxHeight")(autoGrow_maxHeight.asInstanceOf[js.Any])
-    if (autoGrow_minHeight != null) __obj.updateDynamic("autoGrow_minHeight")(autoGrow_minHeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoGrow_onStartup)) __obj.updateDynamic("autoGrow_onStartup")(autoGrow_onStartup.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoUpdateElement)) __obj.updateDynamic("autoUpdateElement")(autoUpdateElement.asInstanceOf[js.Any])
-    if (baseFloatZIndex != null) __obj.updateDynamic("baseFloatZIndex")(baseFloatZIndex.asInstanceOf[js.Any])
-    if (baseHref != null) __obj.updateDynamic("baseHref")(baseHref.asInstanceOf[js.Any])
-    if (!js.isUndefined(basicEntities)) __obj.updateDynamic("basicEntities")(basicEntities.asInstanceOf[js.Any])
-    if (blockedKeystrokes != null) __obj.updateDynamic("blockedKeystrokes")(blockedKeystrokes.asInstanceOf[js.Any])
-    if (bodyClass != null) __obj.updateDynamic("bodyClass")(bodyClass.asInstanceOf[js.Any])
-    if (bodyId != null) __obj.updateDynamic("bodyId")(bodyId.asInstanceOf[js.Any])
-    if (!js.isUndefined(browserContextMenuOnCtrl)) __obj.updateDynamic("browserContextMenuOnCtrl")(browserContextMenuOnCtrl.asInstanceOf[js.Any])
-    if (clipboard_defaultContentType != null) __obj.updateDynamic("clipboard_defaultContentType")(clipboard_defaultContentType.asInstanceOf[js.Any])
-    if (clipboard_notificationDuration != null) __obj.updateDynamic("clipboard_notificationDuration")(clipboard_notificationDuration.asInstanceOf[js.Any])
-    if (cloudServices_tokenUrl != null) __obj.updateDynamic("cloudServices_tokenUrl")(cloudServices_tokenUrl.asInstanceOf[js.Any])
-    if (cloudServices_uploadUrl != null) __obj.updateDynamic("cloudServices_uploadUrl")(cloudServices_uploadUrl.asInstanceOf[js.Any])
-    if (coceSnippet_theme != null) __obj.updateDynamic("coceSnippet_theme")(coceSnippet_theme.asInstanceOf[js.Any])
-    if (codeSnippetGeshi_url != null) __obj.updateDynamic("codeSnippetGeshi_url")(codeSnippetGeshi_url.asInstanceOf[js.Any])
-    if (codeSnippet_codeClass != null) __obj.updateDynamic("codeSnippet_codeClass")(codeSnippet_codeClass.asInstanceOf[js.Any])
-    if (codeSnippet_languages != null) __obj.updateDynamic("codeSnippet_languages")(codeSnippet_languages.asInstanceOf[js.Any])
-    if (colorButton_backStyle != null) __obj.updateDynamic("colorButton_backStyle")(colorButton_backStyle.asInstanceOf[js.Any])
-    if (colorButton_colors != null) __obj.updateDynamic("colorButton_colors")(colorButton_colors.asInstanceOf[js.Any])
-    if (colorButton_colorsPerRow != null) __obj.updateDynamic("colorButton_colorsPerRow")(colorButton_colorsPerRow.asInstanceOf[js.Any])
-    if (!js.isUndefined(colorButton_enableAutomatic)) __obj.updateDynamic("colorButton_enableAutomatic")(colorButton_enableAutomatic.asInstanceOf[js.Any])
-    if (!js.isUndefined(colorButton_enableMore)) __obj.updateDynamic("colorButton_enableMore")(colorButton_enableMore.asInstanceOf[js.Any])
-    if (colorButton_foreStyle != null) __obj.updateDynamic("colorButton_foreStyle")(colorButton_foreStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(colorButton_normalizeBackground)) __obj.updateDynamic("colorButton_normalizeBackground")(colorButton_normalizeBackground.asInstanceOf[js.Any])
-    if (contentsCss != null) __obj.updateDynamic("contentsCss")(contentsCss.asInstanceOf[js.Any])
-    if (contentsLangDirection != null) __obj.updateDynamic("contentsLangDirection")(contentsLangDirection.asInstanceOf[js.Any])
-    if (contentsLanguage != null) __obj.updateDynamic("contentsLanguage")(contentsLanguage.asInstanceOf[js.Any])
-    if (copyFormatting_allowRules != null) __obj.updateDynamic("copyFormatting_allowRules")(copyFormatting_allowRules.asInstanceOf[js.Any])
-    if (copyFormatting_allowedContexts != null) __obj.updateDynamic("copyFormatting_allowedContexts")(copyFormatting_allowedContexts.asInstanceOf[js.Any])
-    if (copyFormatting_keystrokeCopy != null) __obj.updateDynamic("copyFormatting_keystrokeCopy")(copyFormatting_keystrokeCopy.asInstanceOf[js.Any])
-    if (copyFormatting_keystrokePaste != null) __obj.updateDynamic("copyFormatting_keystrokePaste")(copyFormatting_keystrokePaste.asInstanceOf[js.Any])
-    if (!js.isUndefined(copyFormatting_outerCursor)) __obj.updateDynamic("copyFormatting_outerCursor")(copyFormatting_outerCursor.asInstanceOf[js.Any])
-    if (coreStyles_bold != null) __obj.updateDynamic("coreStyles_bold")(coreStyles_bold.asInstanceOf[js.Any])
-    if (coreStyles_italic != null) __obj.updateDynamic("coreStyles_italic")(coreStyles_italic.asInstanceOf[js.Any])
-    if (coreStyles_strike != null) __obj.updateDynamic("coreStyles_strike")(coreStyles_strike.asInstanceOf[js.Any])
-    if (coreStyles_subscript != null) __obj.updateDynamic("coreStyles_subscript")(coreStyles_subscript.asInstanceOf[js.Any])
-    if (coreStyles_superscript != null) __obj.updateDynamic("coreStyles_superscript")(coreStyles_superscript.asInstanceOf[js.Any])
-    if (coreStyles_underline != null) __obj.updateDynamic("coreStyles_underline")(coreStyles_underline.asInstanceOf[js.Any])
-    if (customConfig != null) __obj.updateDynamic("customConfig")(customConfig.asInstanceOf[js.Any])
-    if (dataIndentationChars != null) __obj.updateDynamic("dataIndentationChars")(dataIndentationChars.asInstanceOf[js.Any])
-    if (defaultLanguage != null) __obj.updateDynamic("defaultLanguage")(defaultLanguage.asInstanceOf[js.Any])
-    if (devtools_styles != null) __obj.updateDynamic("devtools_styles")(devtools_styles.asInstanceOf[js.Any])
-    if (devtools_textCallback != null) __obj.updateDynamic("devtools_textCallback")(js.Any.fromFunction4(devtools_textCallback))
-    if (dialog_backgroundCoverColor != null) __obj.updateDynamic("dialog_backgroundCoverColor")(dialog_backgroundCoverColor.asInstanceOf[js.Any])
-    if (dialog_backgroundCoverOpacity != null) __obj.updateDynamic("dialog_backgroundCoverOpacity")(dialog_backgroundCoverOpacity.asInstanceOf[js.Any])
-    if (dialog_buttonsOrder != null) __obj.updateDynamic("dialog_buttonsOrder")(dialog_buttonsOrder.asInstanceOf[js.Any])
-    if (dialog_magnetDistance != null) __obj.updateDynamic("dialog_magnetDistance")(dialog_magnetDistance.asInstanceOf[js.Any])
-    if (!js.isUndefined(dialog_noConfirmCancel)) __obj.updateDynamic("dialog_noConfirmCancel")(dialog_noConfirmCancel.asInstanceOf[js.Any])
-    if (!js.isUndefined(dialog_startupFocusTab)) __obj.updateDynamic("dialog_startupFocusTab")(dialog_startupFocusTab.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableNativeObjectResizing)) __obj.updateDynamic("disableNativeObjectResizing")(disableNativeObjectResizing.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableNativeReadonlyStyling)) __obj.updateDynamic("disableNativeReadonlyStyling")(disableNativeReadonlyStyling.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableNativeSpellChecker)) __obj.updateDynamic("disableNativeSpellChecker")(disableNativeSpellChecker.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableNativeTableHandles)) __obj.updateDynamic("disableNativeTableHandles")(disableNativeTableHandles.asInstanceOf[js.Any])
-    if (disallowedContent != null) __obj.updateDynamic("disallowedContent")(disallowedContent.asInstanceOf[js.Any])
-    if (!js.isUndefined(div_wrapTable)) __obj.updateDynamic("div_wrapTable")(div_wrapTable.asInstanceOf[js.Any])
-    if (docType != null) __obj.updateDynamic("docType")(docType.asInstanceOf[js.Any])
-    if (easyimage_class != null) __obj.updateDynamic("easyimage_class")(easyimage_class.asInstanceOf[js.Any])
-    if (easyimage_defaultStyle != null) __obj.updateDynamic("easyimage_defaultStyle")(easyimage_defaultStyle.asInstanceOf[js.Any])
-    if (easyimage_styles != null) __obj.updateDynamic("easyimage_styles")(easyimage_styles.asInstanceOf[js.Any])
-    if (easyimage_toolbar != null) __obj.updateDynamic("easyimage_toolbar")(easyimage_toolbar.asInstanceOf[js.Any])
-    if (emailProtection != null) __obj.updateDynamic("emailProtection")(emailProtection.asInstanceOf[js.Any])
-    if (embed_provider != null) __obj.updateDynamic("embed_provider")(embed_provider.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableTabKeyTools)) __obj.updateDynamic("enableTabKeyTools")(enableTabKeyTools.asInstanceOf[js.Any])
-    if (enterMode != null) __obj.updateDynamic("enterMode")(enterMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(entities)) __obj.updateDynamic("entities")(entities.asInstanceOf[js.Any])
-    if (entities_additional != null) __obj.updateDynamic("entities_additional")(entities_additional.asInstanceOf[js.Any])
-    if (!js.isUndefined(entities_greek)) __obj.updateDynamic("entities_greek")(entities_greek.asInstanceOf[js.Any])
-    if (!js.isUndefined(entities_latin)) __obj.updateDynamic("entities_latin")(entities_latin.asInstanceOf[js.Any])
-    if (entities_processNumerical != null) __obj.updateDynamic("entities_processNumerical")(entities_processNumerical.asInstanceOf[js.Any])
-    if (extraAllowedContent != null) __obj.updateDynamic("extraAllowedContent")(extraAllowedContent.asInstanceOf[js.Any])
-    if (extraPlugins != null) __obj.updateDynamic("extraPlugins")(extraPlugins.asInstanceOf[js.Any])
-    if (fileTools_defaultFileName != null) __obj.updateDynamic("fileTools_defaultFileName")(fileTools_defaultFileName.asInstanceOf[js.Any])
-    if (fileTools_requestHeaders != null) __obj.updateDynamic("fileTools_requestHeaders")(fileTools_requestHeaders.asInstanceOf[js.Any])
-    if (filebrowserBrowseUrl != null) __obj.updateDynamic("filebrowserBrowseUrl")(filebrowserBrowseUrl.asInstanceOf[js.Any])
-    if (filebrowserFlashBrowseUrl != null) __obj.updateDynamic("filebrowserFlashBrowseUrl")(filebrowserFlashBrowseUrl.asInstanceOf[js.Any])
-    if (filebrowserFlashUploadUrl != null) __obj.updateDynamic("filebrowserFlashUploadUrl")(filebrowserFlashUploadUrl.asInstanceOf[js.Any])
-    if (filebrowserImageBrowseLinkUrl != null) __obj.updateDynamic("filebrowserImageBrowseLinkUrl")(filebrowserImageBrowseLinkUrl.asInstanceOf[js.Any])
-    if (filebrowserImageBrowseUrl != null) __obj.updateDynamic("filebrowserImageBrowseUrl")(filebrowserImageBrowseUrl.asInstanceOf[js.Any])
-    if (filebrowserImageUploadUrl != null) __obj.updateDynamic("filebrowserImageUploadUrl")(filebrowserImageUploadUrl.asInstanceOf[js.Any])
-    if (filebrowserUploadMethod != null) __obj.updateDynamic("filebrowserUploadMethod")(filebrowserUploadMethod.asInstanceOf[js.Any])
-    if (filebrowserUploadUrl != null) __obj.updateDynamic("filebrowserUploadUrl")(filebrowserUploadUrl.asInstanceOf[js.Any])
-    if (filebrowserWindowFeatures != null) __obj.updateDynamic("filebrowserWindowFeatures")(filebrowserWindowFeatures.asInstanceOf[js.Any])
-    if (filebrowserWindowHeight != null) __obj.updateDynamic("filebrowserWindowHeight")(filebrowserWindowHeight.asInstanceOf[js.Any])
-    if (filebrowserWindowWidth != null) __obj.updateDynamic("filebrowserWindowWidth")(filebrowserWindowWidth.asInstanceOf[js.Any])
-    if (fillEmptyBlocks != null) __obj.updateDynamic("fillEmptyBlocks")(fillEmptyBlocks.asInstanceOf[js.Any])
-    if (find_highlight != null) __obj.updateDynamic("find_highlight")(find_highlight.asInstanceOf[js.Any])
-    if (!js.isUndefined(flashAddEmbedTag)) __obj.updateDynamic("flashAddEmbedTag")(flashAddEmbedTag.asInstanceOf[js.Any])
-    if (!js.isUndefined(flashConvertOnEdit)) __obj.updateDynamic("flashConvertOnEdit")(flashConvertOnEdit.asInstanceOf[js.Any])
-    if (!js.isUndefined(flashEmbedTagOnly)) __obj.updateDynamic("flashEmbedTagOnly")(flashEmbedTagOnly.asInstanceOf[js.Any])
-    if (floatSpaceDockedOffsetX != null) __obj.updateDynamic("floatSpaceDockedOffsetX")(floatSpaceDockedOffsetX.asInstanceOf[js.Any])
-    if (floatSpaceDockedOffsetY != null) __obj.updateDynamic("floatSpaceDockedOffsetY")(floatSpaceDockedOffsetY.asInstanceOf[js.Any])
-    if (floatSpacePinnedOffsetX != null) __obj.updateDynamic("floatSpacePinnedOffsetX")(floatSpacePinnedOffsetX.asInstanceOf[js.Any])
-    if (floatSpacePinnedOffsetY != null) __obj.updateDynamic("floatSpacePinnedOffsetY")(floatSpacePinnedOffsetY.asInstanceOf[js.Any])
-    if (!js.isUndefined(floatSpacePreferRight)) __obj.updateDynamic("floatSpacePreferRight")(floatSpacePreferRight.asInstanceOf[js.Any])
-    if (fontSize_defaultLabel != null) __obj.updateDynamic("fontSize_defaultLabel")(fontSize_defaultLabel.asInstanceOf[js.Any])
-    if (fontSize_sizes != null) __obj.updateDynamic("fontSize_sizes")(fontSize_sizes.asInstanceOf[js.Any])
-    if (fontSize_style != null) __obj.updateDynamic("fontSize_style")(fontSize_style.asInstanceOf[js.Any])
-    if (font_defaultLabel != null) __obj.updateDynamic("font_defaultLabel")(font_defaultLabel.asInstanceOf[js.Any])
-    if (font_names != null) __obj.updateDynamic("font_names")(font_names.asInstanceOf[js.Any])
-    if (font_style != null) __obj.updateDynamic("font_style")(font_style.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceEnterMode)) __obj.updateDynamic("forceEnterMode")(forceEnterMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(forcePasteAsPlainText)) __obj.updateDynamic("forcePasteAsPlainText")(forcePasteAsPlainText.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceSimpleAmpersand)) __obj.updateDynamic("forceSimpleAmpersand")(forceSimpleAmpersand.asInstanceOf[js.Any])
-    if (format_address != null) __obj.updateDynamic("format_address")(format_address.asInstanceOf[js.Any])
-    if (format_div != null) __obj.updateDynamic("format_div")(format_div.asInstanceOf[js.Any])
-    if (format_h1 != null) __obj.updateDynamic("format_h1")(format_h1.asInstanceOf[js.Any])
-    if (format_h2 != null) __obj.updateDynamic("format_h2")(format_h2.asInstanceOf[js.Any])
-    if (format_h3 != null) __obj.updateDynamic("format_h3")(format_h3.asInstanceOf[js.Any])
-    if (format_h4 != null) __obj.updateDynamic("format_h4")(format_h4.asInstanceOf[js.Any])
-    if (format_h5 != null) __obj.updateDynamic("format_h5")(format_h5.asInstanceOf[js.Any])
-    if (format_h6 != null) __obj.updateDynamic("format_h6")(format_h6.asInstanceOf[js.Any])
-    if (format_p != null) __obj.updateDynamic("format_p")(format_p.asInstanceOf[js.Any])
-    if (format_pre != null) __obj.updateDynamic("format_pre")(format_pre.asInstanceOf[js.Any])
-    if (format_tags != null) __obj.updateDynamic("format_tags")(format_tags.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullPage)) __obj.updateDynamic("fullPage")(fullPage.asInstanceOf[js.Any])
-    if (!js.isUndefined(grayt_autoStartup)) __obj.updateDynamic("grayt_autoStartup")(grayt_autoStartup.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(htmlEncodeOutput)) __obj.updateDynamic("htmlEncodeOutput")(htmlEncodeOutput.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreEmptyParagraph)) __obj.updateDynamic("ignoreEmptyParagraph")(ignoreEmptyParagraph.asInstanceOf[js.Any])
-    if (image2_alignClasses != null) __obj.updateDynamic("image2_alignClasses")(image2_alignClasses.asInstanceOf[js.Any])
-    if (!js.isUndefined(image2_altRequired)) __obj.updateDynamic("image2_altRequired")(image2_altRequired.asInstanceOf[js.Any])
-    if (image2_captionedClass != null) __obj.updateDynamic("image2_captionedClass")(image2_captionedClass.asInstanceOf[js.Any])
-    if (!js.isUndefined(image2_disableResizer)) __obj.updateDynamic("image2_disableResizer")(image2_disableResizer.asInstanceOf[js.Any])
-    if (!js.isUndefined(image2_prefillDimensions)) __obj.updateDynamic("image2_prefillDimensions")(image2_prefillDimensions.asInstanceOf[js.Any])
-    if (imageUploadUrl != null) __obj.updateDynamic("imageUploadUrl")(imageUploadUrl.asInstanceOf[js.Any])
-    if (!js.isUndefined(image_prefillDimensions)) __obj.updateDynamic("image_prefillDimensions")(image_prefillDimensions.asInstanceOf[js.Any])
-    if (image_previewText != null) __obj.updateDynamic("image_previewText")(image_previewText.asInstanceOf[js.Any])
-    if (!js.isUndefined(image_removeLinkByEmptyUrl)) __obj.updateDynamic("image_removeLinkByEmptyUrl")(image_removeLinkByEmptyUrl.asInstanceOf[js.Any])
-    if (indentClasses != null) __obj.updateDynamic("indentClasses")(indentClasses.asInstanceOf[js.Any])
-    if (indentOffset != null) __obj.updateDynamic("indentOffset")(indentOffset.asInstanceOf[js.Any])
-    if (indentUnit != null) __obj.updateDynamic("indentUnit")(indentUnit.asInstanceOf[js.Any])
-    if (!js.isUndefined(jqueryOverrideVal)) __obj.updateDynamic("jqueryOverrideVal")(jqueryOverrideVal.asInstanceOf[js.Any])
-    if (justifyClasses != null) __obj.updateDynamic("justifyClasses")(justifyClasses.asInstanceOf[js.Any])
-    if (keystrokes != null) __obj.updateDynamic("keystrokes")(keystrokes.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (language_list != null) __obj.updateDynamic("language_list")(language_list.asInstanceOf[js.Any])
-    if (!js.isUndefined(linkJavaScriptLinksAllowed)) __obj.updateDynamic("linkJavaScriptLinksAllowed")(linkJavaScriptLinksAllowed.asInstanceOf[js.Any])
-    if (!js.isUndefined(linkShowAdvancedTab)) __obj.updateDynamic("linkShowAdvancedTab")(linkShowAdvancedTab.asInstanceOf[js.Any])
-    if (!js.isUndefined(linkShowTargetTab)) __obj.updateDynamic("linkShowTargetTab")(linkShowTargetTab.asInstanceOf[js.Any])
-    if (magicline_color != null) __obj.updateDynamic("magicline_color")(magicline_color.asInstanceOf[js.Any])
-    if (!js.isUndefined(magicline_everywhere)) __obj.updateDynamic("magicline_everywhere")(magicline_everywhere.asInstanceOf[js.Any])
-    if (magicline_holdDistance != null) __obj.updateDynamic("magicline_holdDistance")(magicline_holdDistance.asInstanceOf[js.Any])
-    if (magicline_keystrokeNext != null) __obj.updateDynamic("magicline_keystrokeNext")(magicline_keystrokeNext.asInstanceOf[js.Any])
-    if (magicline_keystrokePrevious != null) __obj.updateDynamic("magicline_keystrokePrevious")(magicline_keystrokePrevious.asInstanceOf[js.Any])
-    if (magicline_tabuList != null) __obj.updateDynamic("magicline_tabuList")(magicline_tabuList.asInstanceOf[js.Any])
-    if (magicline_triggerOffset != null) __obj.updateDynamic("magicline_triggerOffset")(magicline_triggerOffset.asInstanceOf[js.Any])
-    if (mathJaxClass != null) __obj.updateDynamic("mathJaxClass")(mathJaxClass.asInstanceOf[js.Any])
-    if (mathJaxLib != null) __obj.updateDynamic("mathJaxLib")(mathJaxLib.asInstanceOf[js.Any])
-    if (menu_groups != null) __obj.updateDynamic("menu_groups")(menu_groups.asInstanceOf[js.Any])
-    if (menu_subMenuDelay != null) __obj.updateDynamic("menu_subMenuDelay")(menu_subMenuDelay.asInstanceOf[js.Any])
-    if (newpage_html != null) __obj.updateDynamic("newpage_html")(newpage_html.asInstanceOf[js.Any])
-    if (notification_duration != null) __obj.updateDynamic("notification_duration")(notification_duration.asInstanceOf[js.Any])
-    if (on != null) __obj.updateDynamic("on")(on.asInstanceOf[js.Any])
-    if (pasteFilter != null) __obj.updateDynamic("pasteFilter")(pasteFilter.asInstanceOf[js.Any])
-    if (pasteFromWordCleanupFile != null) __obj.updateDynamic("pasteFromWordCleanupFile")(pasteFromWordCleanupFile.asInstanceOf[js.Any])
-    if (!js.isUndefined(pasteFromWordNumberedHeadingToList)) __obj.updateDynamic("pasteFromWordNumberedHeadingToList")(pasteFromWordNumberedHeadingToList.asInstanceOf[js.Any])
-    if (!js.isUndefined(pasteFromWordPromptCleanup)) __obj.updateDynamic("pasteFromWordPromptCleanup")(pasteFromWordPromptCleanup.asInstanceOf[js.Any])
-    if (!js.isUndefined(pasteFromWordRemoveFontStyles)) __obj.updateDynamic("pasteFromWordRemoveFontStyles")(pasteFromWordRemoveFontStyles.asInstanceOf[js.Any])
-    if (!js.isUndefined(pasteFromWordRemoveStyles)) __obj.updateDynamic("pasteFromWordRemoveStyles")(pasteFromWordRemoveStyles.asInstanceOf[js.Any])
-    if (!js.isUndefined(pasteFromWord_heuristicsEdgeList)) __obj.updateDynamic("pasteFromWord_heuristicsEdgeList")(pasteFromWord_heuristicsEdgeList.asInstanceOf[js.Any])
-    if (!js.isUndefined(pasteFromWord_inlineImages)) __obj.updateDynamic("pasteFromWord_inlineImages")(pasteFromWord_inlineImages.asInstanceOf[js.Any])
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
-    if (protectedSource != null) __obj.updateDynamic("protectedSource")(protectedSource.asInstanceOf[js.Any])
-    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
-    if (removeButtons != null) __obj.updateDynamic("removeButtons")(removeButtons.asInstanceOf[js.Any])
-    if (removeDialogTabs != null) __obj.updateDynamic("removeDialogTabs")(removeDialogTabs.asInstanceOf[js.Any])
-    if (removeFormatAttributes != null) __obj.updateDynamic("removeFormatAttributes")(removeFormatAttributes.asInstanceOf[js.Any])
-    if (removeFormatTags != null) __obj.updateDynamic("removeFormatTags")(removeFormatTags.asInstanceOf[js.Any])
-    if (removePlugins != null) __obj.updateDynamic("removePlugins")(removePlugins.asInstanceOf[js.Any])
-    if (resize_dir != null) __obj.updateDynamic("resize_dir")(resize_dir.asInstanceOf[js.Any])
-    if (!js.isUndefined(resize_enabled)) __obj.updateDynamic("resize_enabled")(resize_enabled.asInstanceOf[js.Any])
-    if (resize_maxHeight != null) __obj.updateDynamic("resize_maxHeight")(resize_maxHeight.asInstanceOf[js.Any])
-    if (resize_maxWidth != null) __obj.updateDynamic("resize_maxWidth")(resize_maxWidth.asInstanceOf[js.Any])
-    if (resize_minHeight != null) __obj.updateDynamic("resize_minHeight")(resize_minHeight.asInstanceOf[js.Any])
-    if (resize_minWidth != null) __obj.updateDynamic("resize_minWidth")(resize_minWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(scayt_autoStartup)) __obj.updateDynamic("scayt_autoStartup")(scayt_autoStartup.asInstanceOf[js.Any])
-    if (scayt_contextCommands != null) __obj.updateDynamic("scayt_contextCommands")(scayt_contextCommands.asInstanceOf[js.Any])
-    if (scayt_contextMenuItemsOrder != null) __obj.updateDynamic("scayt_contextMenuItemsOrder")(scayt_contextMenuItemsOrder.asInstanceOf[js.Any])
-    if (scayt_customDictionaryIds != null) __obj.updateDynamic("scayt_customDictionaryIds")(scayt_customDictionaryIds.asInstanceOf[js.Any])
-    if (scayt_customerId != null) __obj.updateDynamic("scayt_customerId")(scayt_customerId.asInstanceOf[js.Any])
-    if (scayt_disableOptionsStorage != null) __obj.updateDynamic("scayt_disableOptionsStorage")(scayt_disableOptionsStorage.asInstanceOf[js.Any])
-    if (scayt_elementsToIgnore != null) __obj.updateDynamic("scayt_elementsToIgnore")(scayt_elementsToIgnore.asInstanceOf[js.Any])
-    if (scayt_handleCheckDirty != null) __obj.updateDynamic("scayt_handleCheckDirty")(scayt_handleCheckDirty.asInstanceOf[js.Any])
-    if (scayt_handleUndoRedo != null) __obj.updateDynamic("scayt_handleUndoRedo")(scayt_handleUndoRedo.asInstanceOf[js.Any])
-    if (!js.isUndefined(scayt_ignoreAllCapsWords)) __obj.updateDynamic("scayt_ignoreAllCapsWords")(scayt_ignoreAllCapsWords.asInstanceOf[js.Any])
-    if (!js.isUndefined(scayt_ignoreDomainNames)) __obj.updateDynamic("scayt_ignoreDomainNames")(scayt_ignoreDomainNames.asInstanceOf[js.Any])
-    if (!js.isUndefined(scayt_ignoreWordsWithMixedCases)) __obj.updateDynamic("scayt_ignoreWordsWithMixedCases")(scayt_ignoreWordsWithMixedCases.asInstanceOf[js.Any])
-    if (!js.isUndefined(scayt_ignoreWordsWithNumbers)) __obj.updateDynamic("scayt_ignoreWordsWithNumbers")(scayt_ignoreWordsWithNumbers.asInstanceOf[js.Any])
-    if (!js.isUndefined(scayt_inlineModeImmediateMarkup)) __obj.updateDynamic("scayt_inlineModeImmediateMarkup")(scayt_inlineModeImmediateMarkup.asInstanceOf[js.Any])
-    if (scayt_maxSuggestions != null) __obj.updateDynamic("scayt_maxSuggestions")(scayt_maxSuggestions.asInstanceOf[js.Any])
-    if (scayt_minWordLength != null) __obj.updateDynamic("scayt_minWordLength")(scayt_minWordLength.asInstanceOf[js.Any])
-    if (scayt_moreSuggestions != null) __obj.updateDynamic("scayt_moreSuggestions")(scayt_moreSuggestions.asInstanceOf[js.Any])
-    if (!js.isUndefined(scayt_multiLanguageMode)) __obj.updateDynamic("scayt_multiLanguageMode")(scayt_multiLanguageMode.asInstanceOf[js.Any])
-    if (scayt_multiLanguageStyles != null) __obj.updateDynamic("scayt_multiLanguageStyles")(scayt_multiLanguageStyles.asInstanceOf[js.Any])
-    if (scayt_sLang != null) __obj.updateDynamic("scayt_sLang")(scayt_sLang.asInstanceOf[js.Any])
-    if (scayt_serviceHost != null) __obj.updateDynamic("scayt_serviceHost")(scayt_serviceHost.asInstanceOf[js.Any])
-    if (scayt_servicePath != null) __obj.updateDynamic("scayt_servicePath")(scayt_servicePath.asInstanceOf[js.Any])
-    if (scayt_servicePort != null) __obj.updateDynamic("scayt_servicePort")(scayt_servicePort.asInstanceOf[js.Any])
-    if (scayt_serviceProtocol != null) __obj.updateDynamic("scayt_serviceProtocol")(scayt_serviceProtocol.asInstanceOf[js.Any])
-    if (scayt_srcUrl != null) __obj.updateDynamic("scayt_srcUrl")(scayt_srcUrl.asInstanceOf[js.Any])
-    if (scayt_uiTabs != null) __obj.updateDynamic("scayt_uiTabs")(scayt_uiTabs.asInstanceOf[js.Any])
-    if (scayt_userDictionaryName != null) __obj.updateDynamic("scayt_userDictionaryName")(scayt_userDictionaryName.asInstanceOf[js.Any])
-    if (sharedSpaces != null) __obj.updateDynamic("sharedSpaces")(sharedSpaces.asInstanceOf[js.Any])
-    if (shiftEnterMode != null) __obj.updateDynamic("shiftEnterMode")(shiftEnterMode.asInstanceOf[js.Any])
-    if (skin != null) __obj.updateDynamic("skin")(skin.asInstanceOf[js.Any])
-    if (smiley_columns != null) __obj.updateDynamic("smiley_columns")(smiley_columns.asInstanceOf[js.Any])
-    if (smiley_descriptions != null) __obj.updateDynamic("smiley_descriptions")(smiley_descriptions.asInstanceOf[js.Any])
-    if (smiley_images != null) __obj.updateDynamic("smiley_images")(smiley_images.asInstanceOf[js.Any])
-    if (smiley_path != null) __obj.updateDynamic("smiley_path")(smiley_path.asInstanceOf[js.Any])
-    if (sourceAreaTabSize != null) __obj.updateDynamic("sourceAreaTabSize")(sourceAreaTabSize.asInstanceOf[js.Any])
-    if (specialChars != null) __obj.updateDynamic("specialChars")(specialChars.asInstanceOf[js.Any])
-    if (startupFocus != null) __obj.updateDynamic("startupFocus")(startupFocus.asInstanceOf[js.Any])
-    if (startupMode != null) __obj.updateDynamic("startupMode")(startupMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(startupOutlineBlocks)) __obj.updateDynamic("startupOutlineBlocks")(startupOutlineBlocks.asInstanceOf[js.Any])
-    if (!js.isUndefined(startupShowBorders)) __obj.updateDynamic("startupShowBorders")(startupShowBorders.asInstanceOf[js.Any])
-    if (stylesSet != null) __obj.updateDynamic("stylesSet")(stylesSet.asInstanceOf[js.Any])
-    if (stylesheetParser_skipSelectors != null) __obj.updateDynamic("stylesheetParser_skipSelectors")(stylesheetParser_skipSelectors.asInstanceOf[js.Any])
-    if (stylesheetParser_validSelectors != null) __obj.updateDynamic("stylesheetParser_validSelectors")(stylesheetParser_validSelectors.asInstanceOf[js.Any])
-    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
-    if (tabSpaces != null) __obj.updateDynamic("tabSpaces")(tabSpaces.asInstanceOf[js.Any])
-    if (templates != null) __obj.updateDynamic("templates")(templates.asInstanceOf[js.Any])
-    if (templates_files != null) __obj.updateDynamic("templates_files")(templates_files.asInstanceOf[js.Any])
-    if (!js.isUndefined(templates_replaceContent)) __obj.updateDynamic("templates_replaceContent")(templates_replaceContent.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (toolbar != null) __obj.updateDynamic("toolbar")(toolbar.asInstanceOf[js.Any])
-    if (!js.isUndefined(toolbarCanCollapse)) __obj.updateDynamic("toolbarCanCollapse")(toolbarCanCollapse.asInstanceOf[js.Any])
-    if (!js.isUndefined(toolbarGroupCycling)) __obj.updateDynamic("toolbarGroupCycling")(toolbarGroupCycling.asInstanceOf[js.Any])
-    if (toolbarGroups != null) __obj.updateDynamic("toolbarGroups")(toolbarGroups.asInstanceOf[js.Any])
-    if (toolbarLocation != null) __obj.updateDynamic("toolbarLocation")(toolbarLocation.asInstanceOf[js.Any])
-    if (!js.isUndefined(toolbarStartupExpanded)) __obj.updateDynamic("toolbarStartupExpanded")(toolbarStartupExpanded.asInstanceOf[js.Any])
-    if (uiColor != null) __obj.updateDynamic("uiColor")(uiColor.asInstanceOf[js.Any])
-    if (undoStackSize != null) __obj.updateDynamic("undoStackSize")(undoStackSize.asInstanceOf[js.Any])
-    if (uploadUrl != null) __obj.updateDynamic("uploadUrl")(uploadUrl.asInstanceOf[js.Any])
-    if (!js.isUndefined(useComputedState)) __obj.updateDynamic("useComputedState")(useComputedState.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (wsc_cmd != null) __obj.updateDynamic("wsc_cmd")(wsc_cmd.asInstanceOf[js.Any])
-    if (wsc_customDictionaryIds != null) __obj.updateDynamic("wsc_customDictionaryIds")(wsc_customDictionaryIds.asInstanceOf[js.Any])
-    if (wsc_customLoaderScript != null) __obj.updateDynamic("wsc_customLoaderScript")(wsc_customLoaderScript.asInstanceOf[js.Any])
-    if (wsc_customerId != null) __obj.updateDynamic("wsc_customerId")(wsc_customerId.asInstanceOf[js.Any])
-    if (wsc_height != null) __obj.updateDynamic("wsc_height")(wsc_height.asInstanceOf[js.Any])
-    if (wsc_lang != null) __obj.updateDynamic("wsc_lang")(wsc_lang.asInstanceOf[js.Any])
-    if (wsc_left != null) __obj.updateDynamic("wsc_left")(wsc_left.asInstanceOf[js.Any])
-    if (wsc_top != null) __obj.updateDynamic("wsc_top")(wsc_top.asInstanceOf[js.Any])
-    if (wsc_userDictionaryName != null) __obj.updateDynamic("wsc_userDictionaryName")(wsc_userDictionaryName.asInstanceOf[js.Any])
-    if (wsc_width != null) __obj.updateDynamic("wsc_width")(wsc_width.asInstanceOf[js.Any])
     __obj.asInstanceOf[config_]
   }
+  @scala.inline
+  implicit class config_Ops[Self <: config_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowedContent(value: Boolean | allowedContentRules): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoEmbed_widgetFunction1(value: /* url */ String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoEmbed_widget")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAutoEmbed_widget(value: String | (js.Function1[/* url */ String, String])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoEmbed_widget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoEmbed_widget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoEmbed_widget")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoGrow_bottomSpace(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGrow_bottomSpace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoGrow_bottomSpace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGrow_bottomSpace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoGrow_maxHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGrow_maxHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoGrow_maxHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGrow_maxHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoGrow_minHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGrow_minHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoGrow_minHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGrow_minHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoGrow_onStartup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGrow_onStartup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoGrow_onStartup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoGrow_onStartup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoUpdateElement(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpdateElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoUpdateElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpdateElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseFloatZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseFloatZIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseFloatZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseFloatZIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseHref(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseHref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseHref: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseHref")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBasicEntities(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basicEntities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBasicEntities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basicEntities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlockedKeystrokes(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockedKeystrokes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockedKeystrokes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockedKeystrokes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBodyClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBodyClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBodyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBodyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrowserContextMenuOnCtrl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browserContextMenuOnCtrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrowserContextMenuOnCtrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browserContextMenuOnCtrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClipboard_defaultContentType(value: html | text): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboard_defaultContentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClipboard_defaultContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboard_defaultContentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClipboard_notificationDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboard_notificationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClipboard_notificationDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboard_notificationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudServices_tokenUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudServices_tokenUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudServices_tokenUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudServices_tokenUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloudServices_uploadUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudServices_uploadUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudServices_uploadUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudServices_uploadUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoceSnippet_theme(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coceSnippet_theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoceSnippet_theme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coceSnippet_theme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodeSnippetGeshi_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeSnippetGeshi_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodeSnippetGeshi_url: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeSnippetGeshi_url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodeSnippet_codeClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeSnippet_codeClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodeSnippet_codeClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeSnippet_codeClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodeSnippet_languages(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeSnippet_languages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodeSnippet_languages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeSnippet_languages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorButton_backStyle(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorButton_backStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorButton_backStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorButton_backStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorButton_colors(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorButton_colors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorButton_colors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorButton_colors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorButton_colorsPerRow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorButton_colorsPerRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorButton_colorsPerRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorButton_colorsPerRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorButton_enableAutomatic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorButton_enableAutomatic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorButton_enableAutomatic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorButton_enableAutomatic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorButton_enableMore(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorButton_enableMore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorButton_enableMore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorButton_enableMore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorButton_foreStyle(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorButton_foreStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorButton_foreStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorButton_foreStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorButton_normalizeBackground(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorButton_normalizeBackground")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorButton_normalizeBackground: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorButton_normalizeBackground")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentsCss(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentsCss")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentsCss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentsCss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentsLangDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentsLangDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentsLangDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentsLangDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentsLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentsLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentsLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentsLanguage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCopyFormatting_allowRules(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFormatting_allowRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCopyFormatting_allowRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFormatting_allowRules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCopyFormatting_allowedContexts(value: Boolean | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFormatting_allowedContexts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCopyFormatting_allowedContexts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFormatting_allowedContexts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCopyFormatting_keystrokeCopy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFormatting_keystrokeCopy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCopyFormatting_keystrokeCopy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFormatting_keystrokeCopy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCopyFormatting_keystrokePaste(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFormatting_keystrokePaste")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCopyFormatting_keystrokePaste: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFormatting_keystrokePaste")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCopyFormatting_outerCursor(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFormatting_outerCursor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCopyFormatting_outerCursor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFormatting_outerCursor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoreStyles_bold(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreStyles_bold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoreStyles_bold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreStyles_bold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoreStyles_italic(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreStyles_italic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoreStyles_italic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreStyles_italic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoreStyles_strike(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreStyles_strike")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoreStyles_strike: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreStyles_strike")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoreStyles_subscript(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreStyles_subscript")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoreStyles_subscript: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreStyles_subscript")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoreStyles_superscript(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreStyles_superscript")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoreStyles_superscript: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreStyles_superscript")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoreStyles_underline(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreStyles_underline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoreStyles_underline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreStyles_underline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomConfig(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataIndentationChars(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataIndentationChars")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataIndentationChars: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataIndentationChars")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLanguage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDevtools_styles(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devtools_styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevtools_styles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devtools_styles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDevtools_textCallback(
+      value: (/* editor */ editor, /* dialog */ dialog, /* element */ element, /* tabName */ String) => String
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devtools_textCallback")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutDevtools_textCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devtools_textCallback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDialog_backgroundCoverColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog_backgroundCoverColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialog_backgroundCoverColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog_backgroundCoverColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDialog_backgroundCoverOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog_backgroundCoverOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialog_backgroundCoverOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog_backgroundCoverOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDialog_buttonsOrder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog_buttonsOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialog_buttonsOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog_buttonsOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDialog_magnetDistance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog_magnetDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialog_magnetDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog_magnetDistance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDialog_noConfirmCancel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog_noConfirmCancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialog_noConfirmCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog_noConfirmCancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDialog_startupFocusTab(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog_startupFocusTab")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialog_startupFocusTab: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog_startupFocusTab")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableNativeObjectResizing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableNativeObjectResizing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableNativeObjectResizing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableNativeObjectResizing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableNativeReadonlyStyling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableNativeReadonlyStyling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableNativeReadonlyStyling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableNativeReadonlyStyling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableNativeSpellChecker(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableNativeSpellChecker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableNativeSpellChecker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableNativeSpellChecker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableNativeTableHandles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableNativeTableHandles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableNativeTableHandles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableNativeTableHandles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisallowedContent(value: disallowedContentRules): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disallowedContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisallowedContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disallowedContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiv_wrapTable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("div_wrapTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiv_wrapTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("div_wrapTable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("docType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("docType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEasyimage_class(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easyimage_class")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEasyimage_class: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easyimage_class")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEasyimage_defaultStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easyimage_defaultStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEasyimage_defaultStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easyimage_defaultStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEasyimage_styles(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easyimage_styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEasyimage_styles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easyimage_styles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEasyimage_toolbar(value: js.Array[String] | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easyimage_toolbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEasyimage_toolbar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easyimage_toolbar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmailProtection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emailProtection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmailProtection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emailProtection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmbed_provider(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embed_provider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmbed_provider: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embed_provider")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmoji_emojiListUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emoji_emojiListUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmoji_emojiListUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emoji_emojiListUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmoji_minChars(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emoji_minChars")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmoji_minChars: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emoji_minChars")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableContextMenu(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableContextMenu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableContextMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableContextMenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableTabKeyTools(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTabKeyTools")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableTabKeyTools: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTabKeyTools")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnterMode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnterMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntities(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntities_additional(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities_additional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntities_additional: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities_additional")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntities_greek(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities_greek")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntities_greek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities_greek")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntities_latin(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities_latin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntities_latin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities_latin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntities_processNumerical(value: Boolean | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities_processNumerical")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntities_processNumerical: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities_processNumerical")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtraAllowedContent(value: allowedContentRules): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraAllowedContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtraAllowedContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraAllowedContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtraPlugins(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraPlugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtraPlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extraPlugins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileTools_defaultFileName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileTools_defaultFileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileTools_defaultFileName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileTools_defaultFileName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileTools_requestHeaders(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileTools_requestHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileTools_requestHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileTools_requestHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilebrowserBrowseUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserBrowseUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilebrowserBrowseUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserBrowseUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilebrowserFlashBrowseUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserFlashBrowseUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilebrowserFlashBrowseUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserFlashBrowseUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilebrowserFlashUploadUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserFlashUploadUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilebrowserFlashUploadUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserFlashUploadUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilebrowserImageBrowseLinkUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserImageBrowseLinkUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilebrowserImageBrowseLinkUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserImageBrowseLinkUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilebrowserImageBrowseUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserImageBrowseUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilebrowserImageBrowseUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserImageBrowseUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilebrowserImageUploadUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserImageUploadUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilebrowserImageUploadUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserImageUploadUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilebrowserUploadMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserUploadMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilebrowserUploadMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserUploadMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilebrowserUploadUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserUploadUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilebrowserUploadUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserUploadUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilebrowserWindowFeatures(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserWindowFeatures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilebrowserWindowFeatures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserWindowFeatures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilebrowserWindowHeight(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserWindowHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilebrowserWindowHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserWindowHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilebrowserWindowWidth(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserWindowWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilebrowserWindowWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filebrowserWindowWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillEmptyBlocksFunction1(value: /* element */ typingsSlinky.ckeditor.CKEDITOR.htmlParser.element => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillEmptyBlocks")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFillEmptyBlocks(
+      value: Boolean | (js.Function1[/* element */ typingsSlinky.ckeditor.CKEDITOR.htmlParser.element, Boolean])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillEmptyBlocks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillEmptyBlocks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillEmptyBlocks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFind_highlight(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("find_highlight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFind_highlight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("find_highlight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlashAddEmbedTag(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flashAddEmbedTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlashAddEmbedTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flashAddEmbedTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlashConvertOnEdit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flashConvertOnEdit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlashConvertOnEdit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flashConvertOnEdit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlashEmbedTagOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flashEmbedTagOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlashEmbedTagOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flashEmbedTagOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloatSpaceDockedOffsetX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatSpaceDockedOffsetX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloatSpaceDockedOffsetX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatSpaceDockedOffsetX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloatSpaceDockedOffsetY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatSpaceDockedOffsetY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloatSpaceDockedOffsetY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatSpaceDockedOffsetY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloatSpacePinnedOffsetX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatSpacePinnedOffsetX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloatSpacePinnedOffsetX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatSpacePinnedOffsetX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloatSpacePinnedOffsetY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatSpacePinnedOffsetY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloatSpacePinnedOffsetY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatSpacePinnedOffsetY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloatSpacePreferRight(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatSpacePreferRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloatSpacePreferRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatSpacePreferRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSize_defaultLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize_defaultLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSize_defaultLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize_defaultLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSize_sizes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize_sizes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSize_sizes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize_sizes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSize_style(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize_style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSize_style: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize_style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFont_defaultLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font_defaultLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFont_defaultLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font_defaultLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFont_names(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font_names")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFont_names: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font_names")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFont_style(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font_style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFont_style: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font_style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceEnterMode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceEnterMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceEnterMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceEnterMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForcePasteAsPlainText(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forcePasteAsPlainText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForcePasteAsPlainText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forcePasteAsPlainText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceSimpleAmpersand(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceSimpleAmpersand")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceSimpleAmpersand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceSimpleAmpersand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat_address(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat_address: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_address")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat_div(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_div")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat_div: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_div")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat_h1(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_h1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat_h1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_h1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat_h2(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_h2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat_h2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_h2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat_h3(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_h3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat_h3: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_h3")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat_h4(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_h4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat_h4: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_h4")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat_h5(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_h5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat_h5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_h5")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat_h6(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_h6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat_h6: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_h6")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat_p(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_p")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat_p: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_p")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat_pre(value: styleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_pre")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat_pre: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_pre")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat_tags(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat_tags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFullPage(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullPage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrayt_autoStartup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grayt_autoStartup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrayt_autoStartup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grayt_autoStartup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtmlEncodeOutput(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlEncodeOutput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtmlEncodeOutput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlEncodeOutput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreEmptyParagraph(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmptyParagraph")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreEmptyParagraph: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmptyParagraph")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage2_alignClasses(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image2_alignClasses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage2_alignClasses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image2_alignClasses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage2_altRequired(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image2_altRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage2_altRequired: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image2_altRequired")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage2_captionedClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image2_captionedClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage2_captionedClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image2_captionedClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage2_disableResizer(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image2_disableResizer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage2_disableResizer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image2_disableResizer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage2_prefillDimensions(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image2_prefillDimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage2_prefillDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image2_prefillDimensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageUploadUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUploadUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageUploadUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUploadUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage_prefillDimensions(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image_prefillDimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage_prefillDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image_prefillDimensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage_previewText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image_previewText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage_previewText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image_previewText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage_removeLinkByEmptyUrl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image_removeLinkByEmptyUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage_removeLinkByEmptyUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image_removeLinkByEmptyUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndentClasses(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentClasses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndentClasses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentClasses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndentOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndentOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndentUnit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndentUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentUnit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJqueryOverrideVal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jqueryOverrideVal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJqueryOverrideVal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jqueryOverrideVal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJustifyClasses(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("justifyClasses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJustifyClasses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("justifyClasses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeystrokes(value: js.Array[js.Tuple2[Double, String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keystrokes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeystrokes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keystrokes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguage_list(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language_list")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage_list: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language_list")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkJavaScriptLinksAllowed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkJavaScriptLinksAllowed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkJavaScriptLinksAllowed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkJavaScriptLinksAllowed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkShowAdvancedTab(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkShowAdvancedTab")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkShowAdvancedTab: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkShowAdvancedTab")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkShowTargetTab(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkShowTargetTab")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkShowTargetTab: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkShowTargetTab")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMagicline_color(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magicline_color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMagicline_color: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magicline_color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMagicline_everywhere(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magicline_everywhere")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMagicline_everywhere: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magicline_everywhere")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMagicline_holdDistance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magicline_holdDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMagicline_holdDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magicline_holdDistance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMagicline_keystrokeNext(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magicline_keystrokeNext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMagicline_keystrokeNext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magicline_keystrokeNext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMagicline_keystrokePrevious(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magicline_keystrokePrevious")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMagicline_keystrokePrevious: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magicline_keystrokePrevious")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMagicline_tabuList(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magicline_tabuList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMagicline_tabuList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magicline_tabuList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMagicline_triggerOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magicline_triggerOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMagicline_triggerOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magicline_triggerOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMathJaxClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mathJaxClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMathJaxClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mathJaxClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMathJaxLib(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mathJaxLib")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMathJaxLib: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mathJaxLib")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenu_groups(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menu_groups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenu_groups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menu_groups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenu_subMenuDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menu_subMenuDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenu_subMenuDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menu_subMenuDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewpage_html(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newpage_html")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewpage_html: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newpage_html")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotification_duration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notification_duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotification_duration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notification_duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOn(value: eventObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPasteFilter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPasteFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPasteFromWordCleanupFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteFromWordCleanupFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPasteFromWordCleanupFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteFromWordCleanupFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPasteFromWordNumberedHeadingToList(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteFromWordNumberedHeadingToList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPasteFromWordNumberedHeadingToList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteFromWordNumberedHeadingToList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPasteFromWordPromptCleanup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteFromWordPromptCleanup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPasteFromWordPromptCleanup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteFromWordPromptCleanup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPasteFromWordRemoveFontStyles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteFromWordRemoveFontStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPasteFromWordRemoveFontStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteFromWordRemoveFontStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPasteFromWordRemoveStyles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteFromWordRemoveStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPasteFromWordRemoveStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteFromWordRemoveStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPasteFromWord_heuristicsEdgeList(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteFromWord_heuristicsEdgeList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPasteFromWord_heuristicsEdgeList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteFromWord_heuristicsEdgeList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPasteFromWord_inlineImages(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteFromWord_inlineImages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPasteFromWord_inlineImages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteFromWord_inlineImages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlugins(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtectedSource(value: js.Array[js.RegExp]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protectedSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtectedSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protectedSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveButtons(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeButtons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeButtons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveDialogTabs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeDialogTabs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveDialogTabs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeDialogTabs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveFormatAttributes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFormatAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveFormatAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFormatAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveFormatTags(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFormatTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveFormatTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFormatTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemovePlugins(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removePlugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemovePlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removePlugins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResize_dir(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize_dir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResize_dir: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize_dir")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResize_enabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize_enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResize_enabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize_enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResize_maxHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize_maxHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResize_maxHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize_maxHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResize_maxWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize_maxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResize_maxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize_maxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResize_minHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize_minHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResize_minHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize_minHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResize_minWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize_minWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResize_minWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize_minWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_autoStartup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_autoStartup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_autoStartup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_autoStartup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_contextCommands(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_contextCommands")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_contextCommands: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_contextCommands")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_contextMenuItemsOrder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_contextMenuItemsOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_contextMenuItemsOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_contextMenuItemsOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_customDictionaryIds(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_customDictionaryIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_customDictionaryIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_customDictionaryIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_customerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_customerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_customerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_customerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_disableOptionsStorage(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_disableOptionsStorage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_disableOptionsStorage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_disableOptionsStorage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_elementsToIgnore(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_elementsToIgnore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_elementsToIgnore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_elementsToIgnore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_handleCheckDirty(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_handleCheckDirty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_handleCheckDirty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_handleCheckDirty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_handleUndoRedo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_handleUndoRedo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_handleUndoRedo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_handleUndoRedo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_ignoreAllCapsWords(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_ignoreAllCapsWords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_ignoreAllCapsWords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_ignoreAllCapsWords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_ignoreDomainNames(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_ignoreDomainNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_ignoreDomainNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_ignoreDomainNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_ignoreWordsWithMixedCases(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_ignoreWordsWithMixedCases")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_ignoreWordsWithMixedCases: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_ignoreWordsWithMixedCases")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_ignoreWordsWithNumbers(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_ignoreWordsWithNumbers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_ignoreWordsWithNumbers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_ignoreWordsWithNumbers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_inlineModeImmediateMarkup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_inlineModeImmediateMarkup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_inlineModeImmediateMarkup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_inlineModeImmediateMarkup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_maxSuggestions(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_maxSuggestions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_maxSuggestions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_maxSuggestions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_minWordLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_minWordLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_minWordLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_minWordLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_moreSuggestions(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_moreSuggestions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_moreSuggestions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_moreSuggestions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_multiLanguageMode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_multiLanguageMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_multiLanguageMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_multiLanguageMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_multiLanguageStyles(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_multiLanguageStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_multiLanguageStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_multiLanguageStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_sLang(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_sLang")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_sLang: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_sLang")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_serviceHost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_serviceHost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_serviceHost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_serviceHost")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_servicePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_servicePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_servicePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_servicePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_servicePort(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_servicePort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_servicePort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_servicePort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_serviceProtocol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_serviceProtocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_serviceProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_serviceProtocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_srcUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_srcUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_srcUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_srcUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_uiTabs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_uiTabs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_uiTabs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_uiTabs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScayt_userDictionaryName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_userDictionaryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScayt_userDictionaryName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scayt_userDictionaryName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSharedSpaces(value: sharedSpace): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sharedSpaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSharedSpaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sharedSpaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShiftEnterMode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftEnterMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShiftEnterMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftEnterMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmiley_columns(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smiley_columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmiley_columns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smiley_columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmiley_descriptions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smiley_descriptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmiley_descriptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smiley_descriptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmiley_images(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smiley_images")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmiley_images: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smiley_images")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmiley_path(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smiley_path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmiley_path: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smiley_path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceAreaTabSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAreaTabSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceAreaTabSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAreaTabSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpecialChars(value: js.Array[String | (js.Tuple2[String, String])]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("specialChars")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpecialChars: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("specialChars")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartupFocus(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startupFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartupFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startupFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartupMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startupMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartupMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startupMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartupOutlineBlocks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startupOutlineBlocks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartupOutlineBlocks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startupOutlineBlocks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartupShowBorders(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startupShowBorders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartupShowBorders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startupShowBorders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStylesSet(value: String | Boolean | js.Array[styleObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStylesSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStylesheetParser_skipSelectors(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheetParser_skipSelectors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStylesheetParser_skipSelectors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheetParser_skipSelectors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStylesheetParser_validSelectors(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheetParser_validSelectors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStylesheetParser_validSelectors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheetParser_validSelectors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTabIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTabSpaces(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabSpaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabSpaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabSpaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplates(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplates_files(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templates_files")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplates_files: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templates_files")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplates_replaceContent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templates_replaceContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplates_replaceContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templates_replaceContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar(value: String | (js.Array[String | js.Array[String] | AnonGroups])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbarNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(null)
+        ret
+    }
+    @scala.inline
+    def withToolbarCanCollapse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarCanCollapse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbarCanCollapse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarCanCollapse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbarGroupCycling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarGroupCycling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbarGroupCycling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarGroupCycling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbarGroups(value: js.Array[toolbarGroups | String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbarGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbarLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbarLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbarStartupExpanded(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarStartupExpanded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbarStartupExpanded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarStartupExpanded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUiColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uiColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUiColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uiColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUndoStackSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("undoStackSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUndoStackSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("undoStackSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUploadUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUploadUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseComputedState(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useComputedState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseComputedState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useComputedState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWsc_cmd(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_cmd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWsc_cmd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_cmd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWsc_customDictionaryIds(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_customDictionaryIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWsc_customDictionaryIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_customDictionaryIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWsc_customLoaderScript(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_customLoaderScript")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWsc_customLoaderScript: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_customLoaderScript")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWsc_customerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_customerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWsc_customerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_customerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWsc_height(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWsc_height: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWsc_lang(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_lang")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWsc_lang: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_lang")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWsc_left(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWsc_left: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_left")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWsc_top(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWsc_top: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_top")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWsc_userDictionaryName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_userDictionaryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWsc_userDictionaryName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_userDictionaryName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWsc_width(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWsc_width: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsc_width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

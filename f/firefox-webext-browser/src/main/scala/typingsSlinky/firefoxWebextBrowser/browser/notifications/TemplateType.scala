@@ -15,14 +15,12 @@ trait TemplateType extends js.Object
 
 object TemplateType {
   @scala.inline
-  def basic: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.basic = this.cast("basic")
+  def basic: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.basic = "basic".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.basic]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def image: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.image = "image".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.image]
   @scala.inline
-  def image: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.image = this.cast("image")
+  def list: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.list = "list".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.list]
   @scala.inline
-  def list: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.list = this.cast("list")
-  @scala.inline
-  def progress: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.progress = this.cast("progress")
+  def progress: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.progress = "progress".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.progress]
 }
 

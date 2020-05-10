@@ -1,7 +1,7 @@
 package typingsSlinky.vanillaSwipe
 
-import typingsSlinky.std.MouseEvent
-import typingsSlinky.std.TouchEvent
+import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.TouchEvent
 import typingsSlinky.vanillaSwipe.calculateMovingPositionMod.E
 import typingsSlinky.vanillaSwipe.calculatePositionMod.Value
 import typingsSlinky.vanillaSwipe.calculatePositionMod.nextPosition

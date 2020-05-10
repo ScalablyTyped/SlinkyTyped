@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IComponentLoadFailedEventArgs extends js.Object {
-  var completion: MediaProtectionServiceCompletion
-  var information: RevocationAndRenewalInformation
+  var completion: MediaProtectionServiceCompletion = js.native
+  var information: RevocationAndRenewalInformation = js.native
 }
 
 object IComponentLoadFailedEventArgs {
   @scala.inline
   def apply(completion: MediaProtectionServiceCompletion, information: RevocationAndRenewalInformation): IComponentLoadFailedEventArgs = {
     val __obj = js.Dynamic.literal(completion = completion.asInstanceOf[js.Any], information = information.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IComponentLoadFailedEventArgs]
   }
+  @scala.inline
+  implicit class IComponentLoadFailedEventArgsOps[Self <: IComponentLoadFailedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompletion(value: MediaProtectionServiceCompletion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInformation(value: RevocationAndRenewalInformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("information")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

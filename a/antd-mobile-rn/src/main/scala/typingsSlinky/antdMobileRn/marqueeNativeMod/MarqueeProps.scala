@@ -7,38 +7,133 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MarqueeProps extends js.Object {
-  var className: js.UndefOr[String] = js.undefined
-  var fps: js.UndefOr[Double] = js.undefined
-  var leading: js.UndefOr[Double] = js.undefined
-  var loop: js.UndefOr[Boolean] = js.undefined
-  var maxWidth: js.UndefOr[Double] = js.undefined
-  var style: js.UndefOr[StyleProp[TextStyle]] = js.undefined
-  var text: TagMod[Any]
-  var trailing: js.UndefOr[Double] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var fps: js.UndefOr[Double] = js.native
+  var leading: js.UndefOr[Double] = js.native
+  var loop: js.UndefOr[Boolean] = js.native
+  var maxWidth: js.UndefOr[Double] = js.native
+  var style: js.UndefOr[StyleProp[TextStyle]] = js.native
+  var text: TagMod[Any] = js.native
+  var trailing: js.UndefOr[Double] = js.native
 }
 
 object MarqueeProps {
   @scala.inline
-  def apply(
-    text: TagMod[Any],
-    className: String = null,
-    fps: Int | Double = null,
-    leading: Int | Double = null,
-    loop: js.UndefOr[Boolean] = js.undefined,
-    maxWidth: Int | Double = null,
-    style: StyleProp[TextStyle] = null,
-    trailing: Int | Double = null
-  ): MarqueeProps = {
-    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (fps != null) __obj.updateDynamic("fps")(fps.asInstanceOf[js.Any])
-    if (leading != null) __obj.updateDynamic("leading")(leading.asInstanceOf[js.Any])
-    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (trailing != null) __obj.updateDynamic("trailing")(trailing.asInstanceOf[js.Any])
+  def apply(): MarqueeProps = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[MarqueeProps]
   }
+  @scala.inline
+  implicit class MarqueePropsOps[Self <: MarqueeProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFps(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeading(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: StyleProp[TextStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
+        ret
+    }
+    @scala.inline
+    def withText(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrailing(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trailing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrailing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trailing")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

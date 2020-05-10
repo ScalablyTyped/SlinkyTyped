@@ -25,7 +25,7 @@ trait VRDisplay extends EventTarget {
   def getPose(): VRPose = js.native
   def requestAnimationFrame(callback: FrameRequestCallback): Double = js.native
   def requestPresent(layers: js.Array[VRLayer]): js.Promise[Unit] = js.native
-  def requestPresent(layers: Iterable[VRLayer]): js.Promise[Unit] = js.native
+  def requestPresent(layers: js.Iterable[VRLayer]): js.Promise[Unit] = js.native
   def resetPose(): Unit = js.native
   def submitFrame(): Unit = js.native
   def submitFrame(pose: VRPose): Unit = js.native

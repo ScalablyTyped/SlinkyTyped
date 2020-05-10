@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCustomStoreKey extends js.Object {
-  var customStoreKey: js.UndefOr[String] = js.undefined
+  var customStoreKey: js.UndefOr[String] = js.native
 }
 
 object AnonCustomStoreKey {
   @scala.inline
-  def apply(customStoreKey: String = null): AnonCustomStoreKey = {
+  def apply(): AnonCustomStoreKey = {
     val __obj = js.Dynamic.literal()
-    if (customStoreKey != null) __obj.updateDynamic("customStoreKey")(customStoreKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCustomStoreKey]
   }
+  @scala.inline
+  implicit class AnonCustomStoreKeyOps[Self <: AnonCustomStoreKey] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomStoreKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customStoreKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomStoreKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customStoreKey")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -76,30 +76,137 @@ trait SchemaReportApiColumnSpec extends js.Object {
 
 object SchemaReportApiColumnSpec {
   @scala.inline
-  def apply(
-    columnName: String = null,
-    customDimensionName: String = null,
-    customMetricName: String = null,
-    endDate: String = null,
-    groupByColumn: js.UndefOr[Boolean] = js.undefined,
-    headerText: String = null,
-    platformSource: String = null,
-    productReportPerspective: String = null,
-    savedColumnName: String = null,
-    startDate: String = null
-  ): SchemaReportApiColumnSpec = {
+  def apply(): SchemaReportApiColumnSpec = {
     val __obj = js.Dynamic.literal()
-    if (columnName != null) __obj.updateDynamic("columnName")(columnName.asInstanceOf[js.Any])
-    if (customDimensionName != null) __obj.updateDynamic("customDimensionName")(customDimensionName.asInstanceOf[js.Any])
-    if (customMetricName != null) __obj.updateDynamic("customMetricName")(customMetricName.asInstanceOf[js.Any])
-    if (endDate != null) __obj.updateDynamic("endDate")(endDate.asInstanceOf[js.Any])
-    if (!js.isUndefined(groupByColumn)) __obj.updateDynamic("groupByColumn")(groupByColumn.asInstanceOf[js.Any])
-    if (headerText != null) __obj.updateDynamic("headerText")(headerText.asInstanceOf[js.Any])
-    if (platformSource != null) __obj.updateDynamic("platformSource")(platformSource.asInstanceOf[js.Any])
-    if (productReportPerspective != null) __obj.updateDynamic("productReportPerspective")(productReportPerspective.asInstanceOf[js.Any])
-    if (savedColumnName != null) __obj.updateDynamic("savedColumnName")(savedColumnName.asInstanceOf[js.Any])
-    if (startDate != null) __obj.updateDynamic("startDate")(startDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReportApiColumnSpec]
   }
+  @scala.inline
+  implicit class SchemaReportApiColumnSpecOps[Self <: SchemaReportApiColumnSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumnName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomDimensionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customDimensionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomDimensionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customDimensionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomMetricName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customMetricName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomMetricName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customMetricName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupByColumn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupByColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupByColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupByColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformSource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductReportPerspective(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productReportPerspective")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductReportPerspective: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productReportPerspective")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSavedColumnName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("savedColumnName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSavedColumnName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("savedColumnName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,34 +7,102 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ApolloCurrentQueryResult[T] extends js.Object {
-  var data: js.UndefOr[T] = js.undefined
-  var error: js.UndefOr[ApolloError] = js.undefined
-  var errors: js.UndefOr[js.Array[GraphQLError]] = js.undefined
-  var loading: Boolean
-  var networkStatus: NetworkStatus
-  var partial: js.UndefOr[Boolean] = js.undefined
-  var stale: js.UndefOr[Boolean] = js.undefined
+  var data: js.UndefOr[T] = js.native
+  var error: js.UndefOr[ApolloError] = js.native
+  var errors: js.UndefOr[js.Array[GraphQLError]] = js.native
+  var loading: Boolean = js.native
+  var networkStatus: NetworkStatus = js.native
+  var partial: js.UndefOr[Boolean] = js.native
+  var stale: js.UndefOr[Boolean] = js.native
 }
 
 object ApolloCurrentQueryResult {
   @scala.inline
-  def apply[T](
-    loading: Boolean,
-    networkStatus: NetworkStatus,
-    data: T = null,
-    error: ApolloError = null,
-    errors: js.Array[GraphQLError] = null,
-    partial: js.UndefOr[Boolean] = js.undefined,
-    stale: js.UndefOr[Boolean] = js.undefined
-  ): ApolloCurrentQueryResult[T] = {
+  def apply[T](loading: Boolean, networkStatus: NetworkStatus): ApolloCurrentQueryResult[T] = {
     val __obj = js.Dynamic.literal(loading = loading.asInstanceOf[js.Any], networkStatus = networkStatus.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
-    if (!js.isUndefined(partial)) __obj.updateDynamic("partial")(partial.asInstanceOf[js.Any])
-    if (!js.isUndefined(stale)) __obj.updateDynamic("stale")(stale.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApolloCurrentQueryResult[T]]
   }
+  @scala.inline
+  implicit class ApolloCurrentQueryResultOps[Self[t] <: ApolloCurrentQueryResult[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withLoading(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNetworkStatus(value: NetworkStatus): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: ApolloError): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrors(value: js.Array[GraphQLError]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrors: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartial(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartial: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partial")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStale(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStale: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stale")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

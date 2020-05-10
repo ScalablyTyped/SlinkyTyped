@@ -74,38 +74,185 @@ trait SchemaOccurrence extends js.Object {
 
 object SchemaOccurrence {
   @scala.inline
-  def apply(
-    attestation: SchemaDetails = null,
-    build: SchemaGrafeasV1beta1BuildDetails = null,
-    createTime: String = null,
-    deployment: SchemaGrafeasV1beta1DeploymentDetails = null,
-    derivedImage: SchemaGrafeasV1beta1ImageDetails = null,
-    discovered: SchemaGrafeasV1beta1DiscoveryDetails = null,
-    installation: SchemaGrafeasV1beta1PackageDetails = null,
-    kind: String = null,
-    name: String = null,
-    noteName: String = null,
-    remediation: String = null,
-    resource: SchemaResource = null,
-    updateTime: String = null,
-    vulnerability: SchemaGrafeasV1beta1VulnerabilityDetails = null
-  ): SchemaOccurrence = {
+  def apply(): SchemaOccurrence = {
     val __obj = js.Dynamic.literal()
-    if (attestation != null) __obj.updateDynamic("attestation")(attestation.asInstanceOf[js.Any])
-    if (build != null) __obj.updateDynamic("build")(build.asInstanceOf[js.Any])
-    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
-    if (deployment != null) __obj.updateDynamic("deployment")(deployment.asInstanceOf[js.Any])
-    if (derivedImage != null) __obj.updateDynamic("derivedImage")(derivedImage.asInstanceOf[js.Any])
-    if (discovered != null) __obj.updateDynamic("discovered")(discovered.asInstanceOf[js.Any])
-    if (installation != null) __obj.updateDynamic("installation")(installation.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (noteName != null) __obj.updateDynamic("noteName")(noteName.asInstanceOf[js.Any])
-    if (remediation != null) __obj.updateDynamic("remediation")(remediation.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
-    if (updateTime != null) __obj.updateDynamic("updateTime")(updateTime.asInstanceOf[js.Any])
-    if (vulnerability != null) __obj.updateDynamic("vulnerability")(vulnerability.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOccurrence]
   }
+  @scala.inline
+  implicit class SchemaOccurrenceOps[Self <: SchemaOccurrence] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttestation(value: SchemaDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attestation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttestation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attestation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuild(value: SchemaGrafeasV1beta1BuildDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeployment(value: SchemaGrafeasV1beta1DeploymentDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deployment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeployment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deployment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDerivedImage(value: SchemaGrafeasV1beta1ImageDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("derivedImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDerivedImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("derivedImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiscovered(value: SchemaGrafeasV1beta1DiscoveryDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("discovered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiscovered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("discovered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstallation(value: SchemaGrafeasV1beta1PackageDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("installation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstallation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("installation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoteName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noteName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoteName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noteName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemediation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remediation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemediation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remediation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResource(value: SchemaResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVulnerability(value: SchemaGrafeasV1beta1VulnerabilityDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vulnerability")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVulnerability: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vulnerability")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

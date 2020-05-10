@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * A dropdown-based select stack.
   *
   */
+@js.native
 trait DropDownStack extends js.Object
 

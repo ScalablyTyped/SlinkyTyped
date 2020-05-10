@@ -1,8 +1,5 @@
 package typingsSlinky.ionic
 
-import typingsSlinky.ionic.ionicStrings.BASE_DIRECTORY_NOT_FOUND
-import typingsSlinky.ionic.ionicStrings.LOCAL_CLI_NOT_FOUND
-import typingsSlinky.ionic.ionicStrings.VERSION_TOO_OLD
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,9 +7,9 @@ import scala.scalajs.js.annotation._
 @JSImport("ionic/bootstrap", JSImport.Namespace)
 @js.native
 object bootstrapMod extends js.Object {
-  val ERROR_BASE_DIRECTORY_NOT_FOUND: BASE_DIRECTORY_NOT_FOUND = js.native
-  val ERROR_LOCAL_CLI_NOT_FOUND: LOCAL_CLI_NOT_FOUND = js.native
-  val ERROR_VERSION_TOO_OLD: VERSION_TOO_OLD = js.native
+  val ERROR_BASE_DIRECTORY_NOT_FOUND: /* "BASE_DIRECTORY_NOT_FOUND" */ String = js.native
+  val ERROR_LOCAL_CLI_NOT_FOUND: /* "LOCAL_CLI_NOT_FOUND" */ String = js.native
+  val ERROR_VERSION_TOO_OLD: /* "VERSION_TOO_OLD" */ String = js.native
   def detectLocalCLI(): js.Promise[String] = js.native
 }
 

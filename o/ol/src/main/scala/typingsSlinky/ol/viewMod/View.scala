@@ -59,6 +59,7 @@ trait View
   def getAnimating(): Boolean = js.native
   def getCenter(): Coordinate = js.native
   def getCenterInternal(): Coordinate = js.native
+  def getConstrainResolution(): Boolean = js.native
   def getConstrainedCenter(): Coordinate = js.native
   def getConstrainedCenter(targetCenter: js.UndefOr[scala.Nothing], opt_targetResolution: Double): Coordinate = js.native
   def getConstrainedCenter(targetCenter: Coordinate): Coordinate = js.native
@@ -124,6 +125,8 @@ trait View
   def setResolution(): Unit = js.native
   def setResolution(resolution: Double): Unit = js.native
   def setRotation(rotation: Double): Unit = js.native
+  def setViewportSize(): Unit = js.native
+  def setViewportSize(opt_size: Size): Unit = js.native
   def setZoom(zoom: Double): Unit = js.native
   @JSName("un")
   def un_changecenter(`type`: changeColoncenter, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native

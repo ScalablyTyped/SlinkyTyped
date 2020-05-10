@@ -14,14 +14,12 @@ trait StripeApplePayShipping extends js.Object
 
 object StripeApplePayShipping {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def delivery: typingsSlinky.stripeV2.stripeV2Strings.delivery = "delivery".asInstanceOf[typingsSlinky.stripeV2.stripeV2Strings.delivery]
   @scala.inline
-  def delivery: typingsSlinky.stripeV2.stripeV2Strings.delivery = this.cast("delivery")
+  def servicePickup: typingsSlinky.stripeV2.stripeV2Strings.servicePickup = "servicePickup".asInstanceOf[typingsSlinky.stripeV2.stripeV2Strings.servicePickup]
   @scala.inline
-  def servicePickup: typingsSlinky.stripeV2.stripeV2Strings.servicePickup = this.cast("servicePickup")
+  def shipping: typingsSlinky.stripeV2.stripeV2Strings.shipping = "shipping".asInstanceOf[typingsSlinky.stripeV2.stripeV2Strings.shipping]
   @scala.inline
-  def shipping: typingsSlinky.stripeV2.stripeV2Strings.shipping = this.cast("shipping")
-  @scala.inline
-  def storePickup: typingsSlinky.stripeV2.stripeV2Strings.storePickup = this.cast("storePickup")
+  def storePickup: typingsSlinky.stripeV2.stripeV2Strings.storePickup = "storePickup".asInstanceOf[typingsSlinky.stripeV2.stripeV2Strings.storePickup]
 }
 

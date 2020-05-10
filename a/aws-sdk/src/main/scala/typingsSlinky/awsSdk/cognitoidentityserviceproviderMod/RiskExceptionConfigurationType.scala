@@ -18,14 +18,41 @@ trait RiskExceptionConfigurationType extends js.Object {
 
 object RiskExceptionConfigurationType {
   @scala.inline
-  def apply(
-    BlockedIPRangeList: BlockedIPRangeListType = null,
-    SkippedIPRangeList: SkippedIPRangeListType = null
-  ): RiskExceptionConfigurationType = {
+  def apply(): RiskExceptionConfigurationType = {
     val __obj = js.Dynamic.literal()
-    if (BlockedIPRangeList != null) __obj.updateDynamic("BlockedIPRangeList")(BlockedIPRangeList.asInstanceOf[js.Any])
-    if (SkippedIPRangeList != null) __obj.updateDynamic("SkippedIPRangeList")(SkippedIPRangeList.asInstanceOf[js.Any])
     __obj.asInstanceOf[RiskExceptionConfigurationType]
   }
+  @scala.inline
+  implicit class RiskExceptionConfigurationTypeOps[Self <: RiskExceptionConfigurationType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlockedIPRangeList(value: BlockedIPRangeListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockedIPRangeList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockedIPRangeList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockedIPRangeList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkippedIPRangeList(value: SkippedIPRangeListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SkippedIPRangeList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkippedIPRangeList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SkippedIPRangeList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

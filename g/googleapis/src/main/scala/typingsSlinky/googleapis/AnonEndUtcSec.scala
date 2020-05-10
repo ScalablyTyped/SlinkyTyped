@@ -12,11 +12,41 @@ trait AnonEndUtcSec extends js.Object {
 
 object AnonEndUtcSec {
   @scala.inline
-  def apply(endUtcSec: String = null, startUtcSec: String = null): AnonEndUtcSec = {
+  def apply(): AnonEndUtcSec = {
     val __obj = js.Dynamic.literal()
-    if (endUtcSec != null) __obj.updateDynamic("endUtcSec")(endUtcSec.asInstanceOf[js.Any])
-    if (startUtcSec != null) __obj.updateDynamic("startUtcSec")(startUtcSec.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonEndUtcSec]
   }
+  @scala.inline
+  implicit class AnonEndUtcSecOps[Self <: AnonEndUtcSec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndUtcSec(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endUtcSec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndUtcSec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endUtcSec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartUtcSec(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startUtcSec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartUtcSec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startUtcSec")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

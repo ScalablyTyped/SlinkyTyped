@@ -54,32 +54,149 @@ trait Bundle extends js.Object {
 
 object Bundle {
   @scala.inline
-  def apply(
-    bundleId: NonEmptyString = null,
-    cpuCount: Int | Double = null,
-    diskSizeInGb: Int | Double = null,
-    instanceType: String = null,
-    isActive: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    power: Int | Double = null,
-    price: Int | Double = null,
-    ramSizeInGb: Int | Double = null,
-    supportedPlatforms: InstancePlatformList = null,
-    transferPerMonthInGb: Int | Double = null
-  ): Bundle = {
+  def apply(): Bundle = {
     val __obj = js.Dynamic.literal()
-    if (bundleId != null) __obj.updateDynamic("bundleId")(bundleId.asInstanceOf[js.Any])
-    if (cpuCount != null) __obj.updateDynamic("cpuCount")(cpuCount.asInstanceOf[js.Any])
-    if (diskSizeInGb != null) __obj.updateDynamic("diskSizeInGb")(diskSizeInGb.asInstanceOf[js.Any])
-    if (instanceType != null) __obj.updateDynamic("instanceType")(instanceType.asInstanceOf[js.Any])
-    if (!js.isUndefined(isActive)) __obj.updateDynamic("isActive")(isActive.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (power != null) __obj.updateDynamic("power")(power.asInstanceOf[js.Any])
-    if (price != null) __obj.updateDynamic("price")(price.asInstanceOf[js.Any])
-    if (ramSizeInGb != null) __obj.updateDynamic("ramSizeInGb")(ramSizeInGb.asInstanceOf[js.Any])
-    if (supportedPlatforms != null) __obj.updateDynamic("supportedPlatforms")(supportedPlatforms.asInstanceOf[js.Any])
-    if (transferPerMonthInGb != null) __obj.updateDynamic("transferPerMonthInGb")(transferPerMonthInGb.asInstanceOf[js.Any])
     __obj.asInstanceOf[Bundle]
   }
+  @scala.inline
+  implicit class BundleOps[Self <: Bundle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBundleId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBundleId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCpuCount(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCpuCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskSizeInGb(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeInGb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskSizeInGb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeInGb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isActive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isActive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPower(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("power")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPower: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("power")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrice(value: float): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRamSizeInGb(value: float): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ramSizeInGb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRamSizeInGb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ramSizeInGb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportedPlatforms(value: InstancePlatformList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedPlatforms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportedPlatforms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedPlatforms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransferPerMonthInGb(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferPerMonthInGb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransferPerMonthInGb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferPerMonthInGb")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

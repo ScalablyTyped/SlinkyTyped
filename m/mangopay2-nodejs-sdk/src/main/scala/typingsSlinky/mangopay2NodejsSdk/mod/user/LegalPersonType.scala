@@ -13,12 +13,10 @@ trait LegalPersonType extends js.Object
 
 object LegalPersonType {
   @scala.inline
-  def BUSINESS: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.BUSINESS = this.cast("BUSINESS")
+  def BUSINESS: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.BUSINESS = "BUSINESS".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.BUSINESS]
   @scala.inline
-  def ORGANIZATION: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.ORGANIZATION = this.cast("ORGANIZATION")
+  def ORGANIZATION: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.ORGANIZATION = "ORGANIZATION".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.ORGANIZATION]
   @scala.inline
-  def SOLETRADER: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.SOLETRADER = this.cast("SOLETRADER")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SOLETRADER: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.SOLETRADER = "SOLETRADER".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.SOLETRADER]
 }
 

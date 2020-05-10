@@ -17,14 +17,12 @@ trait RemoveBehavior extends js.Object
 
 object RemoveBehavior {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def none: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.none = "none".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.none]
   @scala.inline
-  def none: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.none = this.cast("none")
+  def `select-previous-tab`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`select-previous-tab` = "select-previous-tab".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`select-previous-tab`]
   @scala.inline
-  def `select-previous-tab`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`select-previous-tab` = this.cast("select-previous-tab")
+  def `select-tab-after`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`select-tab-after` = "select-tab-after".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`select-tab-after`]
   @scala.inline
-  def `select-tab-after`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`select-tab-after` = this.cast("select-tab-after")
-  @scala.inline
-  def `select-tab-before`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`select-tab-before` = this.cast("select-tab-before")
+  def `select-tab-before`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`select-tab-before` = "select-tab-before".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`select-tab-before`]
 }
 

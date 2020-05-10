@@ -26,17 +26,59 @@ trait CreateMeetingRequest extends js.Object {
 
 object CreateMeetingRequest {
   @scala.inline
-  def apply(
-    ClientRequestToken: ClientRequestToken,
-    MediaRegion: String = null,
-    MeetingHostId: ExternalUserIdType = null,
-    NotificationsConfiguration: MeetingNotificationConfiguration = null
-  ): CreateMeetingRequest = {
+  def apply(ClientRequestToken: ClientRequestToken): CreateMeetingRequest = {
     val __obj = js.Dynamic.literal(ClientRequestToken = ClientRequestToken.asInstanceOf[js.Any])
-    if (MediaRegion != null) __obj.updateDynamic("MediaRegion")(MediaRegion.asInstanceOf[js.Any])
-    if (MeetingHostId != null) __obj.updateDynamic("MeetingHostId")(MeetingHostId.asInstanceOf[js.Any])
-    if (NotificationsConfiguration != null) __obj.updateDynamic("NotificationsConfiguration")(NotificationsConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateMeetingRequest]
   }
+  @scala.inline
+  implicit class CreateMeetingRequestOps[Self <: CreateMeetingRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientRequestToken(value: ClientRequestToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMediaRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediaRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaRegion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMeetingHostId(value: ExternalUserIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MeetingHostId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeetingHostId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MeetingHostId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotificationsConfiguration(value: MeetingNotificationConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationsConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationsConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationsConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

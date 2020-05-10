@@ -1,15 +1,16 @@
 package typingsSlinky.halogenium.components
 
+import typingsSlinky.halogenium.mod.SizeLoaderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MoonLoader
-  extends SharedApply_SizeLoaderProps_215683621[typingsSlinky.halogenium.mod.MoonLoader] {
+object MoonLoader {
   @JSImport("halogenium", "MoonLoader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SizeLoaderProps): SharedBuilder_SizeLoaderProps1933566266[typingsSlinky.halogenium.mod.MoonLoader] = new SharedBuilder_SizeLoaderProps1933566266[typingsSlinky.halogenium.mod.MoonLoader](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MoonLoader.type): SharedBuilder_SizeLoaderProps1933566266[typingsSlinky.halogenium.mod.MoonLoader] = new SharedBuilder_SizeLoaderProps1933566266[typingsSlinky.halogenium.mod.MoonLoader](js.Array(this.component, js.Dictionary.empty))()
 }
 

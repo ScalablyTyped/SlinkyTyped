@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFilterType extends js.Object {
-  var filterExtensionType: js.UndefOr[js.Array[String]] = js.undefined
-  var filterId: js.UndefOr[js.Array[String]] = js.undefined
-  var filterType: js.UndefOr[js.Array[String]] = js.undefined
-  var filterVersionNumber: js.UndefOr[js.Array[Double]] = js.undefined
-  var pageLimit: js.UndefOr[Double] = js.undefined
-  var pageNumber: js.UndefOr[Double] = js.undefined
+  var filterExtensionType: js.UndefOr[js.Array[String]] = js.native
+  var filterId: js.UndefOr[js.Array[String]] = js.native
+  var filterType: js.UndefOr[js.Array[String]] = js.native
+  var filterVersionNumber: js.UndefOr[js.Array[Double]] = js.native
+  var pageLimit: js.UndefOr[Double] = js.native
+  var pageNumber: js.UndefOr[Double] = js.native
 }
 
 object AnonFilterType {
   @scala.inline
-  def apply(
-    filterExtensionType: js.Array[String] = null,
-    filterId: js.Array[String] = null,
-    filterType: js.Array[String] = null,
-    filterVersionNumber: js.Array[Double] = null,
-    pageLimit: Int | Double = null,
-    pageNumber: Int | Double = null
-  ): AnonFilterType = {
+  def apply(): AnonFilterType = {
     val __obj = js.Dynamic.literal()
-    if (filterExtensionType != null) __obj.updateDynamic("filterExtensionType")(filterExtensionType.asInstanceOf[js.Any])
-    if (filterId != null) __obj.updateDynamic("filterId")(filterId.asInstanceOf[js.Any])
-    if (filterType != null) __obj.updateDynamic("filterType")(filterType.asInstanceOf[js.Any])
-    if (filterVersionNumber != null) __obj.updateDynamic("filterVersionNumber")(filterVersionNumber.asInstanceOf[js.Any])
-    if (pageLimit != null) __obj.updateDynamic("pageLimit")(pageLimit.asInstanceOf[js.Any])
-    if (pageNumber != null) __obj.updateDynamic("pageNumber")(pageNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonFilterType]
   }
+  @scala.inline
+  implicit class AnonFilterTypeOps[Self <: AnonFilterType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilterExtensionType(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterExtensionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterExtensionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterExtensionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterId(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterType(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterVersionNumber(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterVersionNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterVersionNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterVersionNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageNumber")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

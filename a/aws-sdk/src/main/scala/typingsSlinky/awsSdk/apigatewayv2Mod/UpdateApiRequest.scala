@@ -54,31 +54,143 @@ trait UpdateApiRequest extends js.Object {
 
 object UpdateApiRequest {
   @scala.inline
-  def apply(
-    ApiId: string,
-    ApiKeySelectionExpression: SelectionExpression = null,
-    CorsConfiguration: Cors = null,
-    CredentialsArn: Arn = null,
-    Description: StringWithLengthBetween0And1024 = null,
-    DisableSchemaValidation: js.UndefOr[Boolean] = js.undefined,
-    Name: StringWithLengthBetween1And128 = null,
-    RouteKey: SelectionKey = null,
-    RouteSelectionExpression: SelectionExpression = null,
-    Target: UriWithLengthBetween1And2048 = null,
-    Version: StringWithLengthBetween1And64 = null
-  ): UpdateApiRequest = {
+  def apply(ApiId: string): UpdateApiRequest = {
     val __obj = js.Dynamic.literal(ApiId = ApiId.asInstanceOf[js.Any])
-    if (ApiKeySelectionExpression != null) __obj.updateDynamic("ApiKeySelectionExpression")(ApiKeySelectionExpression.asInstanceOf[js.Any])
-    if (CorsConfiguration != null) __obj.updateDynamic("CorsConfiguration")(CorsConfiguration.asInstanceOf[js.Any])
-    if (CredentialsArn != null) __obj.updateDynamic("CredentialsArn")(CredentialsArn.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (!js.isUndefined(DisableSchemaValidation)) __obj.updateDynamic("DisableSchemaValidation")(DisableSchemaValidation.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (RouteKey != null) __obj.updateDynamic("RouteKey")(RouteKey.asInstanceOf[js.Any])
-    if (RouteSelectionExpression != null) __obj.updateDynamic("RouteSelectionExpression")(RouteSelectionExpression.asInstanceOf[js.Any])
-    if (Target != null) __obj.updateDynamic("Target")(Target.asInstanceOf[js.Any])
-    if (Version != null) __obj.updateDynamic("Version")(Version.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateApiRequest]
   }
+  @scala.inline
+  implicit class UpdateApiRequestOps[Self <: UpdateApiRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withApiKeySelectionExpression(value: SelectionExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiKeySelectionExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApiKeySelectionExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiKeySelectionExpression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCorsConfiguration(value: Cors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CorsConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCorsConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CorsConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCredentialsArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CredentialsArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCredentialsArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CredentialsArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: StringWithLengthBetween0And1024): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableSchemaValidation(value: boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableSchemaValidation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableSchemaValidation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableSchemaValidation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: StringWithLengthBetween1And128): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRouteKey(value: SelectionKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRouteKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRouteSelectionExpression(value: SelectionExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteSelectionExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRouteSelectionExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteSelectionExpression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTarget(value: UriWithLengthBetween1And2048): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: StringWithLengthBetween1And64): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

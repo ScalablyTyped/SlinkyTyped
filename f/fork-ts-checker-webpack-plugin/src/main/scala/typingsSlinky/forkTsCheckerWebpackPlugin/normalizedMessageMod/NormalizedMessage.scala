@@ -1,6 +1,5 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin.normalizedMessageMod
 
-import typingsSlinky.forkTsCheckerWebpackPlugin.forkTsCheckerWebpackPluginStrings.INTERNAL_ERROR
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +28,7 @@ class NormalizedMessage protected () extends js.Object {
 @JSImport("fork-ts-checker-webpack-plugin/lib/NormalizedMessage", "NormalizedMessage")
 @js.native
 object NormalizedMessage extends js.Object {
-  val ERROR_CODE_INTERNAL: INTERNAL_ERROR = js.native
+  val ERROR_CODE_INTERNAL: /* "INTERNAL_ERROR" */ String = js.native
   val SEVERITY_ERROR: Severity = js.native
   val SEVERITY_WARNING: Severity = js.native
   val TYPE_DIAGNOSTIC: ErrorType = js.native

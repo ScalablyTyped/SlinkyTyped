@@ -5,43 +5,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReGeocodePoi extends js.Object {
   /**
     * 址信息
     */
-  var address: String
+  var address: String = js.native
   /**
     * 商圈名称
     */
-  var businessArea: String
+  var businessArea: String = js.native
   /**
     * 该Poi相对于请求坐标的方向
     */
-  var direction: String
+  var direction: String = js.native
   /**
     * 该Poi到请求坐标的距离
     */
-  var distance: Double
+  var distance: Double = js.native
   /**
     * 唯一标识
     */
-  var id: String
+  var id: String = js.native
   /**
     * 坐标
     */
-  var location: LngLat
+  var location: LngLat = js.native
   /**
     * 名称
     */
-  var name: String
+  var name: String = js.native
   /**
     * 电话
     */
-  var tel: String
+  var tel: String = js.native
   /**
     * 类型
     */
-  var `type`: String
+  var `type`: String = js.native
 }
 
 object ReGeocodePoi {
@@ -61,5 +62,67 @@ object ReGeocodePoi {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReGeocodePoi]
   }
+  @scala.inline
+  implicit class ReGeocodePoiOps[Self <: ReGeocodePoi] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBusinessArea(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("businessArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDistance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocation(value: LngLat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -15,16 +15,14 @@ trait MdmAppConfigKeyType extends js.Object
 
 object MdmAppConfigKeyType {
   @scala.inline
-  def booleanType: typingsSlinky.microsoftGraph.microsoftGraphStrings.booleanType = this.cast("booleanType")
+  def booleanType: typingsSlinky.microsoftGraph.microsoftGraphStrings.booleanType = "booleanType".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.booleanType]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def integerType: typingsSlinky.microsoftGraph.microsoftGraphStrings.integerType = "integerType".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.integerType]
   @scala.inline
-  def integerType: typingsSlinky.microsoftGraph.microsoftGraphStrings.integerType = this.cast("integerType")
+  def realType: typingsSlinky.microsoftGraph.microsoftGraphStrings.realType = "realType".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.realType]
   @scala.inline
-  def realType: typingsSlinky.microsoftGraph.microsoftGraphStrings.realType = this.cast("realType")
+  def stringType: typingsSlinky.microsoftGraph.microsoftGraphStrings.stringType = "stringType".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.stringType]
   @scala.inline
-  def stringType: typingsSlinky.microsoftGraph.microsoftGraphStrings.stringType = this.cast("stringType")
-  @scala.inline
-  def tokenType: typingsSlinky.microsoftGraph.microsoftGraphStrings.tokenType = this.cast("tokenType")
+  def tokenType: typingsSlinky.microsoftGraph.microsoftGraphStrings.tokenType = "tokenType".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.tokenType]
 }
 

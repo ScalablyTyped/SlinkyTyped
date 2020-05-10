@@ -22,16 +22,53 @@ trait SchemaOrderLineItemShippingDetails extends js.Object {
 
 object SchemaOrderLineItemShippingDetails {
   @scala.inline
-  def apply(
-    deliverByDate: String = null,
-    method: SchemaOrderLineItemShippingDetailsMethod = null,
-    shipByDate: String = null
-  ): SchemaOrderLineItemShippingDetails = {
+  def apply(): SchemaOrderLineItemShippingDetails = {
     val __obj = js.Dynamic.literal()
-    if (deliverByDate != null) __obj.updateDynamic("deliverByDate")(deliverByDate.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (shipByDate != null) __obj.updateDynamic("shipByDate")(shipByDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOrderLineItemShippingDetails]
   }
+  @scala.inline
+  implicit class SchemaOrderLineItemShippingDetailsOps[Self <: SchemaOrderLineItemShippingDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeliverByDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deliverByDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeliverByDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deliverByDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: SchemaOrderLineItemShippingDetailsMethod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShipByDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shipByDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShipByDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shipByDate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

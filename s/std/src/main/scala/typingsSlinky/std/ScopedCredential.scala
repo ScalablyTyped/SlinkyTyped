@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ScopedCredential extends js.Object {
-  val id: scala.scalajs.js.typedarray.ArrayBuffer
-  val `type`: ScopedCredentialType
+  val id: js.typedarray.ArrayBuffer = js.native
+  val `type`: ScopedCredentialType = js.native
 }
 
 @JSGlobal("ScopedCredential")

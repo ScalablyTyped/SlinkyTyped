@@ -4,45 +4,153 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAllowDependencyAdding extends js.Object {
-  var allowDependencyAdding: js.UndefOr[Boolean] = js.undefined
-  var allowDependencyDeleting: js.UndefOr[Boolean] = js.undefined
-  var allowDependencyUpdating: js.UndefOr[Boolean] = js.undefined
-  var allowResourceAdding: js.UndefOr[Boolean] = js.undefined
-  var allowResourceDeleting: js.UndefOr[Boolean] = js.undefined
-  var allowResourceUpdating: js.UndefOr[Boolean] = js.undefined
-  var allowTaskAdding: js.UndefOr[Boolean] = js.undefined
-  var allowTaskDeleting: js.UndefOr[Boolean] = js.undefined
-  var allowTaskUpdating: js.UndefOr[Boolean] = js.undefined
-  var enabled: js.UndefOr[Boolean] = js.undefined
+  var allowDependencyAdding: js.UndefOr[Boolean] = js.native
+  var allowDependencyDeleting: js.UndefOr[Boolean] = js.native
+  var allowDependencyUpdating: js.UndefOr[Boolean] = js.native
+  var allowResourceAdding: js.UndefOr[Boolean] = js.native
+  var allowResourceDeleting: js.UndefOr[Boolean] = js.native
+  var allowResourceUpdating: js.UndefOr[Boolean] = js.native
+  var allowTaskAdding: js.UndefOr[Boolean] = js.native
+  var allowTaskDeleting: js.UndefOr[Boolean] = js.native
+  var allowTaskUpdating: js.UndefOr[Boolean] = js.native
+  var enabled: js.UndefOr[Boolean] = js.native
 }
 
 object AnonAllowDependencyAdding {
   @scala.inline
-  def apply(
-    allowDependencyAdding: js.UndefOr[Boolean] = js.undefined,
-    allowDependencyDeleting: js.UndefOr[Boolean] = js.undefined,
-    allowDependencyUpdating: js.UndefOr[Boolean] = js.undefined,
-    allowResourceAdding: js.UndefOr[Boolean] = js.undefined,
-    allowResourceDeleting: js.UndefOr[Boolean] = js.undefined,
-    allowResourceUpdating: js.UndefOr[Boolean] = js.undefined,
-    allowTaskAdding: js.UndefOr[Boolean] = js.undefined,
-    allowTaskDeleting: js.UndefOr[Boolean] = js.undefined,
-    allowTaskUpdating: js.UndefOr[Boolean] = js.undefined,
-    enabled: js.UndefOr[Boolean] = js.undefined
-  ): AnonAllowDependencyAdding = {
+  def apply(): AnonAllowDependencyAdding = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowDependencyAdding)) __obj.updateDynamic("allowDependencyAdding")(allowDependencyAdding.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowDependencyDeleting)) __obj.updateDynamic("allowDependencyDeleting")(allowDependencyDeleting.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowDependencyUpdating)) __obj.updateDynamic("allowDependencyUpdating")(allowDependencyUpdating.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowResourceAdding)) __obj.updateDynamic("allowResourceAdding")(allowResourceAdding.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowResourceDeleting)) __obj.updateDynamic("allowResourceDeleting")(allowResourceDeleting.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowResourceUpdating)) __obj.updateDynamic("allowResourceUpdating")(allowResourceUpdating.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowTaskAdding)) __obj.updateDynamic("allowTaskAdding")(allowTaskAdding.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowTaskDeleting)) __obj.updateDynamic("allowTaskDeleting")(allowTaskDeleting.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowTaskUpdating)) __obj.updateDynamic("allowTaskUpdating")(allowTaskUpdating.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAllowDependencyAdding]
   }
+  @scala.inline
+  implicit class AnonAllowDependencyAddingOps[Self <: AnonAllowDependencyAdding] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowDependencyAdding(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDependencyAdding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowDependencyAdding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDependencyAdding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowDependencyDeleting(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDependencyDeleting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowDependencyDeleting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDependencyDeleting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowDependencyUpdating(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDependencyUpdating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowDependencyUpdating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDependencyUpdating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowResourceAdding(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowResourceAdding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowResourceAdding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowResourceAdding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowResourceDeleting(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowResourceDeleting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowResourceDeleting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowResourceDeleting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowResourceUpdating(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowResourceUpdating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowResourceUpdating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowResourceUpdating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowTaskAdding(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTaskAdding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowTaskAdding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTaskAdding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowTaskDeleting(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTaskDeleting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowTaskDeleting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTaskDeleting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowTaskUpdating(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTaskUpdating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowTaskUpdating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTaskUpdating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

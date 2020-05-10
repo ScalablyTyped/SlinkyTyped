@@ -9,19 +9,20 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait misc_ extends js.Object {
   /**
     * Format the value like a 'human-readable' file size (i.e. 13 KB, 4.1 MB, 102bytes, etc).
     *
     * @param value
     */
-  def filesizeformat(value: js.Any): String
+  def filesizeformat(value: js.Any): String = js.native
   /**
     * Takes a phone number and converts it in to its numerical equivalent
     *
     * @param value
     */
-  def phone2numeric(value: js.Any): String
+  def phone2numeric(value: js.Any): String = js.native
   /**
     * Returns a plural suffix if the value is not 1, for '1 vote' vs. '2 votes'
     * By default, 's' is used as a suffix; if an argument is provided, that string
@@ -31,13 +32,13 @@ trait misc_ extends js.Object {
     * @param value
     * @param arg
     */
-  def pluralize(value: js.Any, arg: js.Any): String
+  def pluralize(value: js.Any, arg: js.Any): String = js.native
   /**
     * A wrapper around toJson unless something better comes along
     *
     * @param value
     */
-  def pprint(value: js.Any): js.Any
+  def pprint(value: js.Any): js.Any = js.native
 }
 
 object misc_ {
@@ -49,8 +50,39 @@ object misc_ {
     pprint: js.Any => js.Any
   ): misc_ = {
     val __obj = js.Dynamic.literal(filesizeformat = js.Any.fromFunction1(filesizeformat), phone2numeric = js.Any.fromFunction1(phone2numeric), pluralize = js.Any.fromFunction2(pluralize), pprint = js.Any.fromFunction1(pprint))
-  
     __obj.asInstanceOf[misc_]
   }
+  @scala.inline
+  implicit class misc_Ops[Self <: misc_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilesizeformat(value: js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filesizeformat")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPhone2numeric(value: js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("phone2numeric")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPluralize(value: (js.Any, js.Any) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pluralize")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withPprint(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pprint")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

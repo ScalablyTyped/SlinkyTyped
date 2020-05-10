@@ -6,27 +6,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDuration extends js.Object {
-  var duration: js.UndefOr[Double] = js.undefined
-  var easing: js.UndefOr[easeOutCubic | linear] = js.undefined
-  var enabled: js.UndefOr[Boolean] = js.undefined
-  var maxPointCountSupported: js.UndefOr[Double] = js.undefined
+  var duration: js.UndefOr[Double] = js.native
+  var easing: js.UndefOr[easeOutCubic | linear] = js.native
+  var enabled: js.UndefOr[Boolean] = js.native
+  var maxPointCountSupported: js.UndefOr[Double] = js.native
 }
 
 object AnonDuration {
   @scala.inline
-  def apply(
-    duration: Int | Double = null,
-    easing: easeOutCubic | linear = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    maxPointCountSupported: Int | Double = null
-  ): AnonDuration = {
+  def apply(): AnonDuration = {
     val __obj = js.Dynamic.literal()
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (maxPointCountSupported != null) __obj.updateDynamic("maxPointCountSupported")(maxPointCountSupported.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDuration]
   }
+  @scala.inline
+  implicit class AnonDurationOps[Self <: AnonDuration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEasing(value: easeOutCubic | linear): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxPointCountSupported(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPointCountSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxPointCountSupported: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPointCountSupported")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

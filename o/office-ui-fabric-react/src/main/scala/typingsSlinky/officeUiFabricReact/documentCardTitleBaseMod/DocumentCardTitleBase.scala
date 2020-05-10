@@ -1,16 +1,19 @@
 package typingsSlinky.officeUiFabricReact.documentCardTitleBaseMod
 
 import typingsSlinky.officeUiFabricReact.documentCardTitleTypesMod.IDocumentCardTitleProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("office-ui-fabric-react/lib/components/DocumentCard/DocumentCardTitle.base", "DocumentCardTitleBase")
 @js.native
-class DocumentCardTitleBase protected () extends BaseComponent[IDocumentCardTitleProps, IDocumentCardTitleState] {
+class DocumentCardTitleBase protected ()
+  extends Component[IDocumentCardTitleProps, IDocumentCardTitleState, js.Any] {
   def this(props: IDocumentCardTitleProps) = this()
+  var _async: js.Any = js.native
   var _classNames: js.Any = js.native
+  var _events: js.Any = js.native
   var _measureTitleElement: js.Any = js.native
   var _shrinkTitle: js.Any = js.native
   var _titleElement: js.Any = js.native

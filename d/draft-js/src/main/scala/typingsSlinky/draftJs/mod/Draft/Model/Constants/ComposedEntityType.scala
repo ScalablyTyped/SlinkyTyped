@@ -17,14 +17,12 @@ trait ComposedEntityType extends js.Object
 
 object ComposedEntityType {
   @scala.inline
-  def IMAGE: typingsSlinky.draftJs.draftJsStrings.IMAGE = this.cast("IMAGE")
+  def IMAGE: typingsSlinky.draftJs.draftJsStrings.IMAGE = "IMAGE".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.IMAGE]
   @scala.inline
-  def LINK: typingsSlinky.draftJs.draftJsStrings.LINK = this.cast("LINK")
+  def LINK: typingsSlinky.draftJs.draftJsStrings.LINK = "LINK".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.LINK]
   @scala.inline
-  def PHOTO: typingsSlinky.draftJs.draftJsStrings.PHOTO = this.cast("PHOTO")
+  def PHOTO: typingsSlinky.draftJs.draftJsStrings.PHOTO = "PHOTO".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.PHOTO]
   @scala.inline
-  def TOKEN: typingsSlinky.draftJs.draftJsStrings.TOKEN = this.cast("TOKEN")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TOKEN: typingsSlinky.draftJs.draftJsStrings.TOKEN = "TOKEN".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.TOKEN]
 }
 

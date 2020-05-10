@@ -5,17 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PostPolicyResult extends js.Object {
-  var formData: StringDictionary[js.Any]
-  var postURL: String
+  var formData: StringDictionary[js.Any] = js.native
+  var postURL: String = js.native
 }
 
 object PostPolicyResult {
   @scala.inline
   def apply(formData: StringDictionary[js.Any], postURL: String): PostPolicyResult = {
     val __obj = js.Dynamic.literal(formData = formData.asInstanceOf[js.Any], postURL = postURL.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PostPolicyResult]
   }
+  @scala.inline
+  implicit class PostPolicyResultOps[Self <: PostPolicyResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormData(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPostURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

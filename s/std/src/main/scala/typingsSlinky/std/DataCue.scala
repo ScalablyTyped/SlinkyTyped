@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait DataCue extends TextTrackCue {
-  var data: scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  var data: js.typedarray.ArrayBuffer = js.native
 }
 
 @JSGlobal("DataCue")

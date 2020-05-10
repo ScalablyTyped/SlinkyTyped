@@ -1,41 +1,35 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.layerMod.LayerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Layer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Layer {
   @JSImport("baseui/layer", "Layer")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    host: HTMLElement = null,
-    index: Int | Double = null,
-    mountNode: HTMLElement = null,
-    onMount: () => _ = null,
-    onUnmount: () => _ = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (mountNode != null) __obj.updateDynamic("mountNode")(mountNode.asInstanceOf[js.Any])
-    if (onMount != null) __obj.updateDynamic("onMount")(js.Any.fromFunction0(onMount))
-    if (onUnmount != null) __obj.updateDynamic("onUnmount")(js.Any.fromFunction0(onUnmount))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def host(value: HTMLElement): this.type = set("host", value.asInstanceOf[js.Any])
+    @scala.inline
+    def index(value: Double): this.type = set("index", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mountNode(value: HTMLElement): this.type = set("mountNode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onMount(value: () => _): this.type = set("onMount", js.Any.fromFunction0(value))
+    @scala.inline
+    def onUnmount(value: () => _): this.type = set("onUnmount", js.Any.fromFunction0(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = LayerProps
+  
+  def withProps(p: LayerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Layer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

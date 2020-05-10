@@ -14,10 +14,29 @@ trait DescribeElasticLoadBalancersResult extends js.Object {
 
 object DescribeElasticLoadBalancersResult {
   @scala.inline
-  def apply(ElasticLoadBalancers: ElasticLoadBalancers = null): DescribeElasticLoadBalancersResult = {
+  def apply(): DescribeElasticLoadBalancersResult = {
     val __obj = js.Dynamic.literal()
-    if (ElasticLoadBalancers != null) __obj.updateDynamic("ElasticLoadBalancers")(ElasticLoadBalancers.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeElasticLoadBalancersResult]
   }
+  @scala.inline
+  implicit class DescribeElasticLoadBalancersResultOps[Self <: DescribeElasticLoadBalancersResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withElasticLoadBalancers(value: ElasticLoadBalancers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticLoadBalancers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticLoadBalancers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticLoadBalancers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

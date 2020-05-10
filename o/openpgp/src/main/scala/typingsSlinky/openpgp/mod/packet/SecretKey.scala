@@ -104,7 +104,7 @@ class SecretKey () extends js.Object {
     * Calculates the fingerprint of the key
     * @returns A Uint8Array containing the fingerprint
     */
-  def getFingerprintBytes(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def getFingerprintBytes(): js.typedarray.Uint8Array = js.native
   /**
     * Calculates the key id of the key
     * @returns A 8 byte key id

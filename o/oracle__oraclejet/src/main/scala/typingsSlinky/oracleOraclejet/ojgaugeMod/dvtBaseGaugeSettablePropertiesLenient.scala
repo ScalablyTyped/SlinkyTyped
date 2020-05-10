@@ -9,24 +9,50 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@oracle/oraclejet.@oracle/oraclejet/ojgauge.dvtBaseGaugeSettableProperties> */
+@js.native
 trait dvtBaseGaugeSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
-  var trackResize: js.UndefOr[on | off] = js.undefined
-  var translations: js.UndefOr[AnonLabelAndValue] = js.undefined
+  var trackResize: js.UndefOr[on | off] = js.native
+  var translations: js.UndefOr[AnonLabelAndValue] = js.native
 }
 
 object dvtBaseGaugeSettablePropertiesLenient {
   @scala.inline
-  def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    trackResize: on | off = null,
-    translations: AnonLabelAndValue = null
-  ): dvtBaseGaugeSettablePropertiesLenient = {
+  def apply(): dvtBaseGaugeSettablePropertiesLenient = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (trackResize != null) __obj.updateDynamic("trackResize")(trackResize.asInstanceOf[js.Any])
-    if (translations != null) __obj.updateDynamic("translations")(translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[dvtBaseGaugeSettablePropertiesLenient]
   }
+  @scala.inline
+  implicit class dvtBaseGaugeSettablePropertiesLenientOps[Self <: dvtBaseGaugeSettablePropertiesLenient] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTrackResize(value: on | off): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackResize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackResize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackResize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranslations(value: AnonLabelAndValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranslations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

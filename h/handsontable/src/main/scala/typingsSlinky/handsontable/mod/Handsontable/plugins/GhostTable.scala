@@ -36,7 +36,7 @@ trait GhostTable extends js.Object {
   def getWidths(callback: js.Function2[/* row */ Double, /* height */ Double, Unit]): Unit = js.native
   def injectTable(): Unit = js.native
   def injectTable(parent: Unit): Unit = js.native
-  def injectTable(parent: typingsSlinky.std.HTMLElement): Unit = js.native
+  def injectTable(parent: HTMLElement): Unit = js.native
   def isHorizontal(): Boolean = js.native
   def isVertical(): Boolean = js.native
   def removeTable(): Unit = js.native

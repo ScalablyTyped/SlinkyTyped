@@ -13,12 +13,10 @@ trait MutationTypes extends js.Object
 
 object MutationTypes {
   @scala.inline
-  def NODE_DELETE: typingsSlinky.relayRuntime.relayRuntimeStrings.NODE_DELETE = this.cast("NODE_DELETE")
+  def NODE_DELETE: typingsSlinky.relayRuntime.relayRuntimeStrings.NODE_DELETE = "NODE_DELETE".asInstanceOf[typingsSlinky.relayRuntime.relayRuntimeStrings.NODE_DELETE]
   @scala.inline
-  def RANGE_ADD: typingsSlinky.relayRuntime.relayRuntimeStrings.RANGE_ADD = this.cast("RANGE_ADD")
+  def RANGE_ADD: typingsSlinky.relayRuntime.relayRuntimeStrings.RANGE_ADD = "RANGE_ADD".asInstanceOf[typingsSlinky.relayRuntime.relayRuntimeStrings.RANGE_ADD]
   @scala.inline
-  def RANGE_DELETE: typingsSlinky.relayRuntime.relayRuntimeStrings.RANGE_DELETE = this.cast("RANGE_DELETE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def RANGE_DELETE: typingsSlinky.relayRuntime.relayRuntimeStrings.RANGE_DELETE = "RANGE_DELETE".asInstanceOf[typingsSlinky.relayRuntime.relayRuntimeStrings.RANGE_DELETE]
 }
 

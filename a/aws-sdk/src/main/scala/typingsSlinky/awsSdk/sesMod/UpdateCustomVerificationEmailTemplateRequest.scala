@@ -34,21 +34,83 @@ trait UpdateCustomVerificationEmailTemplateRequest extends js.Object {
 
 object UpdateCustomVerificationEmailTemplateRequest {
   @scala.inline
-  def apply(
-    TemplateName: TemplateName,
-    FailureRedirectionURL: FailureRedirectionURL = null,
-    FromEmailAddress: FromAddress = null,
-    SuccessRedirectionURL: SuccessRedirectionURL = null,
-    TemplateContent: TemplateContent = null,
-    TemplateSubject: Subject = null
-  ): UpdateCustomVerificationEmailTemplateRequest = {
+  def apply(TemplateName: TemplateName): UpdateCustomVerificationEmailTemplateRequest = {
     val __obj = js.Dynamic.literal(TemplateName = TemplateName.asInstanceOf[js.Any])
-    if (FailureRedirectionURL != null) __obj.updateDynamic("FailureRedirectionURL")(FailureRedirectionURL.asInstanceOf[js.Any])
-    if (FromEmailAddress != null) __obj.updateDynamic("FromEmailAddress")(FromEmailAddress.asInstanceOf[js.Any])
-    if (SuccessRedirectionURL != null) __obj.updateDynamic("SuccessRedirectionURL")(SuccessRedirectionURL.asInstanceOf[js.Any])
-    if (TemplateContent != null) __obj.updateDynamic("TemplateContent")(TemplateContent.asInstanceOf[js.Any])
-    if (TemplateSubject != null) __obj.updateDynamic("TemplateSubject")(TemplateSubject.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateCustomVerificationEmailTemplateRequest]
   }
+  @scala.inline
+  implicit class UpdateCustomVerificationEmailTemplateRequestOps[Self <: UpdateCustomVerificationEmailTemplateRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTemplateName(value: TemplateName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFailureRedirectionURL(value: FailureRedirectionURL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureRedirectionURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureRedirectionURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureRedirectionURL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFromEmailAddress(value: FromAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FromEmailAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromEmailAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FromEmailAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessRedirectionURL(value: SuccessRedirectionURL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SuccessRedirectionURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessRedirectionURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SuccessRedirectionURL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateContent(value: TemplateContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateSubject(value: Subject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateSubject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateSubject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateSubject")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

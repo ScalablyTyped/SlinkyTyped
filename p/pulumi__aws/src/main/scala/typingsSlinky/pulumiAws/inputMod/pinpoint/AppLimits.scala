@@ -27,18 +27,65 @@ trait AppLimits extends js.Object {
 
 object AppLimits {
   @scala.inline
-  def apply(
-    daily: Input[Double] = null,
-    maximumDuration: Input[Double] = null,
-    messagesPerSecond: Input[Double] = null,
-    total: Input[Double] = null
-  ): AppLimits = {
+  def apply(): AppLimits = {
     val __obj = js.Dynamic.literal()
-    if (daily != null) __obj.updateDynamic("daily")(daily.asInstanceOf[js.Any])
-    if (maximumDuration != null) __obj.updateDynamic("maximumDuration")(maximumDuration.asInstanceOf[js.Any])
-    if (messagesPerSecond != null) __obj.updateDynamic("messagesPerSecond")(messagesPerSecond.asInstanceOf[js.Any])
-    if (total != null) __obj.updateDynamic("total")(total.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppLimits]
   }
+  @scala.inline
+  implicit class AppLimitsOps[Self <: AppLimits] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDaily(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("daily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDaily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("daily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumDuration(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessagesPerSecond(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messagesPerSecond")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessagesPerSecond: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messagesPerSecond")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotal(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.dhtmlxgantt
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Date
 import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -163,7 +162,7 @@ trait GanttStatic extends js.Object {
   	 * @param start the date when a task is scheduled to begin
   	 * @param end the date when a task is scheduled to be completed
   	*/
-  def calculateDuration(start: Date, end: js.Date): Double = js.native
+  def calculateDuration(start: js.Date, end: js.Date): Double = js.native
   /**
   	 * calculates the end date of a task
   	 * @param config the <a href="#configurationobjectproperties">configuration object</a> of a time span
@@ -175,7 +174,7 @@ trait GanttStatic extends js.Object {
   	 * @param duration the duration of a task
   	 * @param unit the time unit of the duration
   	*/
-  def calculateEndDate(start: Date, duration: Double, unit: String): js.Date = js.native
+  def calculateEndDate(start: js.Date, duration: Double, unit: String): js.Date = js.native
   /**
   	 * calculates the level of a task
   	 * @param task the task's object
@@ -362,8 +361,8 @@ trait GanttStatic extends js.Object {
   	 * @param handler the event handler
   	 * @param options optional, optional, the value of either the <i>useCapture</i> or <i>options</i> parameter. <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">Read details</a>
   	*/
-  def event(node: typingsSlinky.std.HTMLElement, event: String, handler: GanttCallback): Unit = js.native
-  def event(node: typingsSlinky.std.HTMLElement, event: String, handler: GanttCallback, options: js.Any): Unit = js.native
+  def event(node: HTMLElement, event: String, handler: GanttCallback): Unit = js.native
+  def event(node: HTMLElement, event: String, handler: GanttCallback, options: js.Any): Unit = js.native
   def eventRemove(node: String, event: String, handler: GanttCallback): Unit = js.native
   def eventRemove(node: String, event: String, handler: GanttCallback, options: js.Any): Unit = js.native
   /**
@@ -373,8 +372,8 @@ trait GanttStatic extends js.Object {
   	 * @param handler the event handler
   	 * @param options optional, optional, the value of either the <i>useCapture</i> or <i>options</i> parameter. <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener">Read details</a>
   	*/
-  def eventRemove(node: typingsSlinky.std.HTMLElement, event: String, handler: GanttCallback): Unit = js.native
-  def eventRemove(node: typingsSlinky.std.HTMLElement, event: String, handler: GanttCallback, options: js.Any): Unit = js.native
+  def eventRemove(node: HTMLElement, event: String, handler: GanttCallback): Unit = js.native
+  def eventRemove(node: HTMLElement, event: String, handler: GanttCallback, options: js.Any): Unit = js.native
   /**
   	 * expands gantt to the full screen mode
   	*/
@@ -769,9 +768,9 @@ trait GanttStatic extends js.Object {
   def init(container: String): Unit = js.native
   def init(container: String, from: js.Date): Unit = js.native
   def init(container: String, from: js.Date, to: js.Date): Unit = js.native
-  def init(container: typingsSlinky.std.HTMLElement): Unit = js.native
-  def init(container: typingsSlinky.std.HTMLElement, from: js.Date): Unit = js.native
-  def init(container: typingsSlinky.std.HTMLElement, from: js.Date, to: js.Date): Unit = js.native
+  def init(container: HTMLElement): Unit = js.native
+  def init(container: HTMLElement, from: js.Date): Unit = js.native
+  def init(container: HTMLElement, from: js.Date, to: js.Date): Unit = js.native
   /**
   	 * checks whether a task is a child of other task
   	 * @param childId the id of a task that you want to check as a child
@@ -856,7 +855,7 @@ trait GanttStatic extends js.Object {
   	 * @param date a date to check
   	 * @param timeunit a time unit: 'hour' or 'day'.<br> If not specified, the value of 'gantt.config.duration_unit'  is used
   	*/
-  def isWorkTime(date: Date, timeunit: String): Boolean = js.native
+  def isWorkTime(date: js.Date, timeunit: String): Boolean = js.native
   /**
   	 * loads data to the gantt from an external data source
   	 * @param url the server-side url (may be a static file or a server side script that outputs data)

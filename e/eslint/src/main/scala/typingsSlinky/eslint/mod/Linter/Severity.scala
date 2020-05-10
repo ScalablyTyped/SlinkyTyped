@@ -13,12 +13,10 @@ trait Severity extends js.Object
 
 object Severity {
   @scala.inline
-  def `0`: typingsSlinky.eslint.eslintNumbers.`0` = this.cast(0)
+  def `0`: typingsSlinky.eslint.eslintNumbers.`0` = 0.asInstanceOf[typingsSlinky.eslint.eslintNumbers.`0`]
   @scala.inline
-  def `1`: typingsSlinky.eslint.eslintNumbers.`1` = this.cast(1)
+  def `1`: typingsSlinky.eslint.eslintNumbers.`1` = 1.asInstanceOf[typingsSlinky.eslint.eslintNumbers.`1`]
   @scala.inline
-  def `2`: typingsSlinky.eslint.eslintNumbers.`2` = this.cast(2)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `2`: typingsSlinky.eslint.eslintNumbers.`2` = 2.asInstanceOf[typingsSlinky.eslint.eslintNumbers.`2`]
 }
 

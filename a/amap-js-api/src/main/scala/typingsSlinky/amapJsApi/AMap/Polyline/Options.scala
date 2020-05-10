@@ -1,97 +1,141 @@
 package typingsSlinky.amapJsApi.AMap.Polyline
 
 import typingsSlinky.amapJsApi.AMap.LocationValue
-import typingsSlinky.amapJsApi.AMap.Map
-import typingsSlinky.amapJsApi.AMap.StrokeLineCap
-import typingsSlinky.amapJsApi.AMap.StrokeLineJoin
-import typingsSlinky.amapJsApi.AMap.StrokeStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options[ExtraData]
   extends typingsSlinky.amapJsApi.AMap.PathOverlay.Options[ExtraData] {
   /**
     * 描边的宽度
     */
-  var borderWeight: js.UndefOr[Double] = js.undefined
+  var borderWeight: js.UndefOr[Double] = js.native
   /**
     * 方向箭头颜色
     */
-  var dirColor: js.UndefOr[String] = js.undefined
+  var dirColor: js.UndefOr[String] = js.native
   /**
     * 是否绘制成大地线
     */
-  var geodesic: js.UndefOr[Boolean] = js.undefined
+  var geodesic: js.UndefOr[Boolean] = js.native
   /**
     * 线条是否带描边
     */
-  var isOutline: js.UndefOr[Boolean] = js.undefined
+  var isOutline: js.UndefOr[Boolean] = js.native
   /**
     * 线条描边颜色
     */
-  var outlineColor: js.UndefOr[String] = js.undefined
+  var outlineColor: js.UndefOr[String] = js.native
   // internal
   /**
     * 折线的节点数组
     */
-  var path: js.UndefOr[js.Array[LocationValue]] = js.undefined
+  var path: js.UndefOr[js.Array[LocationValue]] = js.native
   /**
     * 是否延路径显示方向箭头
     */
-  var showDir: js.UndefOr[Boolean] = js.undefined
+  var showDir: js.UndefOr[Boolean] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply[ExtraData](
-    borderWeight: Int | Double = null,
-    bubble: js.UndefOr[Boolean] = js.undefined,
-    clickable: js.UndefOr[Boolean] = js.undefined,
-    cursor: String = null,
-    dirColor: String = null,
-    draggable: js.UndefOr[Boolean] = js.undefined,
-    extData: ExtraData = null,
-    geodesic: js.UndefOr[Boolean] = js.undefined,
-    isOutline: js.UndefOr[Boolean] = js.undefined,
-    lineCap: StrokeLineCap = null,
-    lineJoin: StrokeLineJoin = null,
-    map: Map = null,
-    outlineColor: String = null,
-    path: js.Array[LocationValue] = null,
-    showDir: js.UndefOr[Boolean] = js.undefined,
-    strokeColor: String = null,
-    strokeDasharray: js.Array[Double] = null,
-    strokeOpacity: Int | Double = null,
-    strokeStyle: StrokeStyle = null,
-    strokeWeight: Int | Double = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    zIndex: Int | Double = null
-  ): Options[ExtraData] = {
+  def apply[ExtraData](): Options[ExtraData] = {
     val __obj = js.Dynamic.literal()
-    if (borderWeight != null) __obj.updateDynamic("borderWeight")(borderWeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(bubble)) __obj.updateDynamic("bubble")(bubble.asInstanceOf[js.Any])
-    if (!js.isUndefined(clickable)) __obj.updateDynamic("clickable")(clickable.asInstanceOf[js.Any])
-    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
-    if (dirColor != null) __obj.updateDynamic("dirColor")(dirColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.asInstanceOf[js.Any])
-    if (extData != null) __obj.updateDynamic("extData")(extData.asInstanceOf[js.Any])
-    if (!js.isUndefined(geodesic)) __obj.updateDynamic("geodesic")(geodesic.asInstanceOf[js.Any])
-    if (!js.isUndefined(isOutline)) __obj.updateDynamic("isOutline")(isOutline.asInstanceOf[js.Any])
-    if (lineCap != null) __obj.updateDynamic("lineCap")(lineCap.asInstanceOf[js.Any])
-    if (lineJoin != null) __obj.updateDynamic("lineJoin")(lineJoin.asInstanceOf[js.Any])
-    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
-    if (outlineColor != null) __obj.updateDynamic("outlineColor")(outlineColor.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (!js.isUndefined(showDir)) __obj.updateDynamic("showDir")(showDir.asInstanceOf[js.Any])
-    if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
-    if (strokeDasharray != null) __obj.updateDynamic("strokeDasharray")(strokeDasharray.asInstanceOf[js.Any])
-    if (strokeOpacity != null) __obj.updateDynamic("strokeOpacity")(strokeOpacity.asInstanceOf[js.Any])
-    if (strokeStyle != null) __obj.updateDynamic("strokeStyle")(strokeStyle.asInstanceOf[js.Any])
-    if (strokeWeight != null) __obj.updateDynamic("strokeWeight")(strokeWeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options[ExtraData]]
   }
+  @scala.inline
+  implicit class OptionsOps[Self[extradata] <: Options[extradata], ExtraData] (val x: Self[ExtraData]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[ExtraData] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[ExtraData]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[ExtraData] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[ExtraData] with Other]
+    @scala.inline
+    def withBorderWeight(value: Double): Self[ExtraData] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWeight: Self[ExtraData] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirColor(value: String): Self[ExtraData] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dirColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirColor: Self[ExtraData] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dirColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeodesic(value: Boolean): Self[ExtraData] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geodesic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeodesic: Self[ExtraData] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geodesic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsOutline(value: Boolean): Self[ExtraData] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isOutline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsOutline: Self[ExtraData] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isOutline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutlineColor(value: String): Self[ExtraData] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutlineColor: Self[ExtraData] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: js.Array[LocationValue]): Self[ExtraData] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self[ExtraData] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowDir(value: Boolean): Self[ExtraData] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showDir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowDir: Self[ExtraData] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showDir")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

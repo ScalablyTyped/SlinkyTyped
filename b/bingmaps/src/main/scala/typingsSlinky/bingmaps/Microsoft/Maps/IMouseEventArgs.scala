@@ -4,39 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IMouseEventArgs extends ILayerMouseEventArgs {
   /** The event that occurred. */
-  var eventName: String
+  var eventName: String = js.native
   /** A boolean indicating if the primary button, such as the left mouse button or a tap on a touch screen, was used during a mouse down or up event. */
-  var isPrimary: Boolean
+  var isPrimary: Boolean = js.native
   /** A boolean indicating if the secondary mouse button, such as the right mouse button, was used during a mouse down or up event. */
-  var isSecondary: Boolean
+  var isSecondary: Boolean = js.native
   /** If the target is a shape, this will be the layer that the shape is in. */
-  var layer: Layer
+  var layer: Layer = js.native
   /** The map location of where the event occurred. */
-  var location: Location
+  var location: Location = js.native
   /** The x-value of the pixel coordinate on the page of the mouse cursor. */
-  var pageX: Double
+  var pageX: Double = js.native
   /** The y-value of the pixel coordinate on the page of the mouse cursor. */
-  var pageY: Double
+  var pageY: Double = js.native
   /** The pixel coordinate of the mouse cusrsor relative to the top left corner of the map div. */
-  var point: Point
+  var point: Point = js.native
   /** The object that triggered the event. */
-  var target: Map | IPrimitive
+  var target: Map | IPrimitive = js.native
   /** The type of the object that the event is attached to. Valid values include the following: ‘map’, 'layer', ‘polygon’, ‘polyline’, or ‘pushpin’ */
-  var targetType: String
+  var targetType: String = js.native
   /**	The number of units that the mouse wheel has changed. */
-  var wheelDelta: Double
+  var wheelDelta: Double = js.native
   /**
     * Returns the x-value of the pixel coordinate, relative to the map, of the mouse.
     * @returns The x-value of the pixel coordinate, relative to the map, of the mouse.
     */
-  def getX(): Double
+  def getX(): Double = js.native
   /**
     * Returns the y-value of the pixel coordinate, relative to the map, of the mouse.
     * @returns The y-value of the pixel coordinate, relative to the map, of the mouse.
     */
-  def getY(): Double
+  def getY(): Double = js.native
 }
 
 object IMouseEventArgs {
@@ -58,8 +59,93 @@ object IMouseEventArgs {
     wheelDelta: Double
   ): IMouseEventArgs = {
     val __obj = js.Dynamic.literal(eventName = eventName.asInstanceOf[js.Any], getX = js.Any.fromFunction0(getX), getY = js.Any.fromFunction0(getY), isPrimary = isPrimary.asInstanceOf[js.Any], isSecondary = isSecondary.asInstanceOf[js.Any], layer = layer.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], pageX = pageX.asInstanceOf[js.Any], pageY = pageY.asInstanceOf[js.Any], point = point.asInstanceOf[js.Any], primitive = primitive.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any], targetType = targetType.asInstanceOf[js.Any], wheelDelta = wheelDelta.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IMouseEventArgs]
   }
+  @scala.inline
+  implicit class IMouseEventArgsOps[Self <: IMouseEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetX(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getX")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetY(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getY")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsPrimary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPrimary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsSecondary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSecondary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLayer(value: Layer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocation(value: Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPoint(value: Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTarget(value: Map | IPrimitive): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWheelDelta(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wheelDelta")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

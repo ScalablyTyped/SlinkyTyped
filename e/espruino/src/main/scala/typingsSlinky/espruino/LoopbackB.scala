@@ -11,10 +11,7 @@ import scala.scalajs.js.annotation._
   * 
   * @return  
   */
-class LoopbackB () extends Serial {
-  /* CompleteClass */
-  override def removeListener(event: String, listener: js.Any): js.Any = js.native
-}
+class LoopbackB () extends Serial
 
 /**
 * <p>A loopback serial device. Data sent to LoopbackA comes out of LoopbackB and vice versa</p>

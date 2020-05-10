@@ -9,9 +9,10 @@ import scala.scalajs.js.annotation._
 @js.native
 object vfsFontsMod extends js.Object {
   @js.native
-  object pdfMake
-    extends /* name */ StringDictionary[js.Any] {
-    var vfs: js.Any = js.native
+  object pdfMake extends js.Object {
+    @js.native
+    object vfs extends /* file */ StringDictionary[String]
+    
   }
   
 }

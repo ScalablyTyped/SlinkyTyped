@@ -12,48 +12,154 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Modifiers
   extends /* name */ StringDictionary[js.UndefOr[BaseModifier with (Record[String, _])]] {
-  var applyStyle: js.UndefOr[BaseModifieronLoadFunctio] = js.undefined
-  var arrow: js.UndefOr[BaseModifierelementstring] = js.undefined
-  var computeStyle: js.UndefOr[BaseModifiergpuAccelerati] = js.undefined
-  var flip: js.UndefOr[BaseModifierbehaviorBehav] = js.undefined
-  var hide: js.UndefOr[BaseModifier] = js.undefined
-  var inner: js.UndefOr[BaseModifier] = js.undefined
-  var keepTogether: js.UndefOr[BaseModifier] = js.undefined
-  var offset: js.UndefOr[BaseModifieroffsetnumbers] = js.undefined
-  var preventOverflow: js.UndefOr[BaseModifierpriorityArray] = js.undefined
-  var shift: js.UndefOr[BaseModifier] = js.undefined
+  var applyStyle: js.UndefOr[BaseModifieronLoadFunctio] = js.native
+  var arrow: js.UndefOr[BaseModifierelementstring] = js.native
+  var computeStyle: js.UndefOr[BaseModifiergpuAccelerati] = js.native
+  var flip: js.UndefOr[BaseModifierbehaviorBehav] = js.native
+  var hide: js.UndefOr[BaseModifier] = js.native
+  var inner: js.UndefOr[BaseModifier] = js.native
+  var keepTogether: js.UndefOr[BaseModifier] = js.native
+  var offset: js.UndefOr[BaseModifieroffsetnumbers] = js.native
+  var preventOverflow: js.UndefOr[BaseModifierpriorityArray] = js.native
+  var shift: js.UndefOr[BaseModifier] = js.native
 }
 
 object Modifiers {
   @scala.inline
-  def apply(
-    StringDictionary: /* name */ StringDictionary[js.UndefOr[BaseModifier with (Record[String, _])]] = null,
-    applyStyle: BaseModifieronLoadFunctio = null,
-    arrow: BaseModifierelementstring = null,
-    computeStyle: BaseModifiergpuAccelerati = null,
-    flip: BaseModifierbehaviorBehav = null,
-    hide: BaseModifier = null,
-    inner: BaseModifier = null,
-    keepTogether: BaseModifier = null,
-    offset: BaseModifieroffsetnumbers = null,
-    preventOverflow: BaseModifierpriorityArray = null,
-    shift: BaseModifier = null
-  ): Modifiers = {
+  def apply(): Modifiers = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (applyStyle != null) __obj.updateDynamic("applyStyle")(applyStyle.asInstanceOf[js.Any])
-    if (arrow != null) __obj.updateDynamic("arrow")(arrow.asInstanceOf[js.Any])
-    if (computeStyle != null) __obj.updateDynamic("computeStyle")(computeStyle.asInstanceOf[js.Any])
-    if (flip != null) __obj.updateDynamic("flip")(flip.asInstanceOf[js.Any])
-    if (hide != null) __obj.updateDynamic("hide")(hide.asInstanceOf[js.Any])
-    if (inner != null) __obj.updateDynamic("inner")(inner.asInstanceOf[js.Any])
-    if (keepTogether != null) __obj.updateDynamic("keepTogether")(keepTogether.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (preventOverflow != null) __obj.updateDynamic("preventOverflow")(preventOverflow.asInstanceOf[js.Any])
-    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
     __obj.asInstanceOf[Modifiers]
   }
+  @scala.inline
+  implicit class ModifiersOps[Self <: Modifiers] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplyStyle(value: BaseModifieronLoadFunctio): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applyStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplyStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applyStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArrow(value: BaseModifierelementstring): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComputeStyle(value: BaseModifiergpuAccelerati): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputeStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlip(value: BaseModifierbehaviorBehav): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHide(value: BaseModifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInner(value: BaseModifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepTogether(value: BaseModifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepTogether")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepTogether: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepTogether")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffset(value: BaseModifieroffsetnumbers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreventOverflow(value: BaseModifierpriorityArray): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventOverflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreventOverflow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventOverflow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShift(value: BaseModifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shift")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShift: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shift")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -16,14 +16,12 @@ trait CompositingOperator
 
 object CompositingOperator {
   @scala.inline
-  def add: typingsSlinky.csstype.csstypeStrings.add = this.cast("add")
+  def add: typingsSlinky.csstype.csstypeStrings.add = "add".asInstanceOf[typingsSlinky.csstype.csstypeStrings.add]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def exclude: typingsSlinky.csstype.csstypeStrings.exclude = "exclude".asInstanceOf[typingsSlinky.csstype.csstypeStrings.exclude]
   @scala.inline
-  def exclude: typingsSlinky.csstype.csstypeStrings.exclude = this.cast("exclude")
+  def intersect: typingsSlinky.csstype.csstypeStrings.intersect = "intersect".asInstanceOf[typingsSlinky.csstype.csstypeStrings.intersect]
   @scala.inline
-  def intersect: typingsSlinky.csstype.csstypeStrings.intersect = this.cast("intersect")
-  @scala.inline
-  def subtract: typingsSlinky.csstype.csstypeStrings.subtract = this.cast("subtract")
+  def subtract: typingsSlinky.csstype.csstypeStrings.subtract = "subtract".asInstanceOf[typingsSlinky.csstype.csstypeStrings.subtract]
 }
 

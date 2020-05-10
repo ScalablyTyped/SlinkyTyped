@@ -23,32 +23,30 @@ trait ReturnKeyTypeOptions extends js.Object
 
 object ReturnKeyTypeOptions {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def default: typingsSlinky.reactNative.reactNativeStrings.default = "default".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.default]
   @scala.inline
-  def default: typingsSlinky.reactNative.reactNativeStrings.default = this.cast("default")
+  def done: typingsSlinky.reactNative.reactNativeStrings.done = "done".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.done]
   @scala.inline
-  def done: typingsSlinky.reactNative.reactNativeStrings.done = this.cast("done")
+  def `emergency-call`: typingsSlinky.reactNative.reactNativeStrings.`emergency-call` = "emergency-call".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.`emergency-call`]
   @scala.inline
-  def `emergency-call`: typingsSlinky.reactNative.reactNativeStrings.`emergency-call` = this.cast("emergency-call")
+  def go: typingsSlinky.reactNative.reactNativeStrings.go = "go".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.go]
   @scala.inline
-  def go: typingsSlinky.reactNative.reactNativeStrings.go = this.cast("go")
+  def google: typingsSlinky.reactNative.reactNativeStrings.google = "google".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.google]
   @scala.inline
-  def google: typingsSlinky.reactNative.reactNativeStrings.google = this.cast("google")
+  def join: typingsSlinky.reactNative.reactNativeStrings.join = "join".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.join]
   @scala.inline
-  def join: typingsSlinky.reactNative.reactNativeStrings.join = this.cast("join")
+  def next: typingsSlinky.reactNative.reactNativeStrings.next = "next".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.next]
   @scala.inline
-  def next: typingsSlinky.reactNative.reactNativeStrings.next = this.cast("next")
+  def none: typingsSlinky.reactNative.reactNativeStrings.none = "none".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.none]
   @scala.inline
-  def none: typingsSlinky.reactNative.reactNativeStrings.none = this.cast("none")
+  def previous: typingsSlinky.reactNative.reactNativeStrings.previous = "previous".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.previous]
   @scala.inline
-  def previous: typingsSlinky.reactNative.reactNativeStrings.previous = this.cast("previous")
+  def route: typingsSlinky.reactNative.reactNativeStrings.route = "route".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.route]
   @scala.inline
-  def route: typingsSlinky.reactNative.reactNativeStrings.route = this.cast("route")
+  def search: typingsSlinky.reactNative.reactNativeStrings.search = "search".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.search]
   @scala.inline
-  def search: typingsSlinky.reactNative.reactNativeStrings.search = this.cast("search")
+  def send: typingsSlinky.reactNative.reactNativeStrings.send = "send".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.send]
   @scala.inline
-  def send: typingsSlinky.reactNative.reactNativeStrings.send = this.cast("send")
-  @scala.inline
-  def yahoo: typingsSlinky.reactNative.reactNativeStrings.yahoo = this.cast("yahoo")
+  def yahoo: typingsSlinky.reactNative.reactNativeStrings.yahoo = "yahoo".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.yahoo]
 }
 

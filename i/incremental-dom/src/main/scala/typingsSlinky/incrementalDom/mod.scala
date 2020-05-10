@@ -70,10 +70,10 @@ object mod extends js.Object {
   var text: js.Function1[/* value */ String | Double | Boolean, Text] = js.native
   @js.native
   object patch extends js.Object {
-    def apply[T](node: typingsSlinky.std.DocumentFragment, fn: js.Function1[/* data */ T, Unit]): Node = js.native
-    def apply[T](node: typingsSlinky.std.DocumentFragment, fn: js.Function1[/* data */ T, Unit], data: T): Node = js.native
-    def apply[T](node: typingsSlinky.std.Element, fn: js.Function1[/* data */ T, Unit]): Node = js.native
-    def apply[T](node: typingsSlinky.std.Element, fn: js.Function1[/* data */ T, Unit], data: T): Node = js.native
+    def apply[T](node: DocumentFragment, fn: js.Function1[/* data */ T, Unit]): Node = js.native
+    def apply[T](node: DocumentFragment, fn: js.Function1[/* data */ T, Unit], data: T): Node = js.native
+    def apply[T](node: Element, fn: js.Function1[/* data */ T, Unit]): Node = js.native
+    def apply[T](node: Element, fn: js.Function1[/* data */ T, Unit], data: T): Node = js.native
   }
   
   type NameOrCtorDef = String | AnonInstantiable

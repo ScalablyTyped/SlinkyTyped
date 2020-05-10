@@ -9,26 +9,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StoryshotsOptions extends js.Object {
-  var asyncJest: js.UndefOr[Boolean] = js.undefined
-  var config: js.UndefOr[js.Function1[/* options */ js.Any, Unit]] = js.undefined
-  var configPath: js.UndefOr[String] = js.undefined
-  var framework: js.UndefOr[SupportedFramework] = js.undefined
-  var integrityOptions: js.UndefOr[IOptions | `false`] = js.undefined
-  var renderer: js.UndefOr[js.Function] = js.undefined
+  var asyncJest: js.UndefOr[Boolean] = js.native
+  var config: js.UndefOr[js.Function1[/* options */ js.Any, Unit]] = js.native
+  var configPath: js.UndefOr[String] = js.native
+  var framework: js.UndefOr[SupportedFramework] = js.native
+  var integrityOptions: js.UndefOr[IOptions | `false`] = js.native
+  var renderer: js.UndefOr[js.Function] = js.native
   /**
     * @Deprecated The functionality of this option is completely covered by snapshotSerializers which should be used instead.
     */
-  var serializer: js.UndefOr[js.Any] = js.undefined
+  var serializer: js.UndefOr[js.Any] = js.native
   var snapshotSerializers: js.UndefOr[
     js.Array[
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify jest.SnapshotSerializerPlugin */ _
     ]
-  ] = js.undefined
-  var stories2snapsConverter: js.UndefOr[Stories2SnapsConverter] = js.undefined
-  var storyKindRegex: js.UndefOr[js.RegExp | String] = js.undefined
-  var storyNameRegex: js.UndefOr[js.RegExp | String] = js.undefined
-  var suite: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var stories2snapsConverter: js.UndefOr[Stories2SnapsConverter] = js.native
+  var storyKindRegex: js.UndefOr[js.RegExp | String] = js.native
+  var storyNameRegex: js.UndefOr[js.RegExp | String] = js.native
+  var suite: js.UndefOr[String] = js.native
   var test: js.UndefOr[
     js.Function4[
       /* story */ js.Any, 
@@ -37,43 +38,196 @@ trait StoryshotsOptions extends js.Object {
       /* options */ js.UndefOr[js.Any], 
       _
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object StoryshotsOptions {
   @scala.inline
-  def apply(
-    asyncJest: js.UndefOr[Boolean] = js.undefined,
-    config: /* options */ js.Any => Unit = null,
-    configPath: String = null,
-    framework: SupportedFramework = null,
-    integrityOptions: IOptions | `false` = null,
-    renderer: js.Function = null,
-    serializer: js.Any = null,
-    snapshotSerializers: js.Array[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify jest.SnapshotSerializerPlugin */ _
-    ] = null,
-    stories2snapsConverter: Stories2SnapsConverter = null,
-    storyKindRegex: js.RegExp | String = null,
-    storyNameRegex: js.RegExp | String = null,
-    suite: String = null,
-    test: (/* story */ js.Any, /* context */ js.Any, /* renderTree */ RenderTree, /* options */ js.UndefOr[js.Any]) => _ = null
-  ): StoryshotsOptions = {
+  def apply(): StoryshotsOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(asyncJest)) __obj.updateDynamic("asyncJest")(asyncJest.asInstanceOf[js.Any])
-    if (config != null) __obj.updateDynamic("config")(js.Any.fromFunction1(config))
-    if (configPath != null) __obj.updateDynamic("configPath")(configPath.asInstanceOf[js.Any])
-    if (framework != null) __obj.updateDynamic("framework")(framework.asInstanceOf[js.Any])
-    if (integrityOptions != null) __obj.updateDynamic("integrityOptions")(integrityOptions.asInstanceOf[js.Any])
-    if (renderer != null) __obj.updateDynamic("renderer")(renderer.asInstanceOf[js.Any])
-    if (serializer != null) __obj.updateDynamic("serializer")(serializer.asInstanceOf[js.Any])
-    if (snapshotSerializers != null) __obj.updateDynamic("snapshotSerializers")(snapshotSerializers.asInstanceOf[js.Any])
-    if (stories2snapsConverter != null) __obj.updateDynamic("stories2snapsConverter")(stories2snapsConverter.asInstanceOf[js.Any])
-    if (storyKindRegex != null) __obj.updateDynamic("storyKindRegex")(storyKindRegex.asInstanceOf[js.Any])
-    if (storyNameRegex != null) __obj.updateDynamic("storyNameRegex")(storyNameRegex.asInstanceOf[js.Any])
-    if (suite != null) __obj.updateDynamic("suite")(suite.asInstanceOf[js.Any])
-    if (test != null) __obj.updateDynamic("test")(js.Any.fromFunction4(test))
     __obj.asInstanceOf[StoryshotsOptions]
   }
+  @scala.inline
+  implicit class StoryshotsOptionsOps[Self <: StoryshotsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAsyncJest(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncJest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAsyncJest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncJest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfig(value: /* options */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFramework(value: SupportedFramework): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("framework")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFramework: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("framework")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntegrityOptions(value: IOptions | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integrityOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntegrityOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integrityOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderer(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenderer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSerializer(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serializer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSerializer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serializer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnapshotSerializers(
+      value: js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify jest.SnapshotSerializerPlugin */ _
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotSerializers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnapshotSerializers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotSerializers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStories2snapsConverter(value: Stories2SnapsConverter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stories2snapsConverter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStories2snapsConverter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stories2snapsConverter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoryKindRegexRegExp(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storyKindRegex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStoryKindRegex(value: js.RegExp | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storyKindRegex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoryKindRegex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storyKindRegex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoryNameRegexRegExp(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storyNameRegex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStoryNameRegex(value: js.RegExp | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storyNameRegex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoryNameRegex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storyNameRegex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuite(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTest(
+      value: (/* story */ js.Any, /* context */ js.Any, /* renderTree */ RenderTree, /* options */ js.UndefOr[js.Any]) => _
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutTest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

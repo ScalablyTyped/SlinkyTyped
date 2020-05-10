@@ -5,17 +5,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WriteAnyRequestType extends js.Object {
-  var data: AnonHtml
-  var `type`: js.UndefOr[String] = js.undefined
+  var data: AnonHtml = js.native
+  var `type`: js.UndefOr[String] = js.native
 }
 
 object WriteAnyRequestType {
   @scala.inline
-  def apply(data: AnonHtml, `type`: String = null): WriteAnyRequestType = {
+  def apply(data: AnonHtml): WriteAnyRequestType = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WriteAnyRequestType]
   }
+  @scala.inline
+  implicit class WriteAnyRequestTypeOps[Self <: WriteAnyRequestType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: AnonHtml): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

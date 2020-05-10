@@ -8,9 +8,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDuration extends js.Object {
   // 动画变化时间，默认0，单位：毫秒
-  var duration: js.UndefOr[Double] = js.undefined
+  var duration: js.UndefOr[Double] = js.native
   /**
   			 * 动画变化方式，默认 linear
   			 * 值	说明
@@ -20,16 +21,46 @@ trait AnonDuration extends js.Object {
   			 * easeOut	动画以低速结束。
   			 * easeInOut	动画以低速开始和结束。
   			 */
-  var timingFunc: js.UndefOr[linear | easeIn | easeOut | easeInOut] = js.undefined
+  var timingFunc: js.UndefOr[linear | easeIn | easeOut | easeInOut] = js.native
 }
 
 object AnonDuration {
   @scala.inline
-  def apply(duration: Int | Double = null, timingFunc: linear | easeIn | easeOut | easeInOut = null): AnonDuration = {
+  def apply(): AnonDuration = {
     val __obj = js.Dynamic.literal()
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (timingFunc != null) __obj.updateDynamic("timingFunc")(timingFunc.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDuration]
   }
+  @scala.inline
+  implicit class AnonDurationOps[Self <: AnonDuration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimingFunc(value: linear | easeIn | easeOut | easeInOut): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timingFunc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimingFunc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timingFunc")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

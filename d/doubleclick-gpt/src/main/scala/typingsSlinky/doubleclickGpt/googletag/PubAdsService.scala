@@ -1,10 +1,10 @@
 package typingsSlinky.doubleclickGpt.googletag
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.doubleclickGpt.AnonChangeCorrelator
 import typingsSlinky.doubleclickGpt.AnonRestrictDataProcessing
 import typingsSlinky.doubleclickGpt.doubleclickGptNumbers.`0`
 import typingsSlinky.doubleclickGpt.doubleclickGptNumbers.`1`
-import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,11 +1,9 @@
 package typingsSlinky.antdMobile.components
 
 import org.scalablytyped.runtime.NumberDictionary
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.sliderMod.SliderProps
 import typingsSlinky.antdMobile.sliderMod.default
 import typingsSlinky.react.mod.CSSProperties
@@ -13,58 +11,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Slider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Slider {
   @JSImport("antd-mobile/lib/slider", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    defaultValue: Int | Double = null,
-    dots: js.UndefOr[Boolean] = js.undefined,
-    handle: js.Any = null,
-    handleStyle: CSSProperties = null,
-    included: js.UndefOr[Boolean] = js.undefined,
-    marks: NumberDictionary[String] = null,
-    max: Int | Double = null,
-    maximumTrackStyle: CSSProperties = null,
-    min: Int | Double = null,
-    minimumTrackStyle: CSSProperties = null,
-    onAfterChange: /* value */ js.UndefOr[Double] => Unit = null,
-    onChange: /* value */ js.UndefOr[Double] => Unit = null,
-    prefixCls: String = null,
-    railStyle: CSSProperties = null,
-    step: Int | Double = null,
-    tipFormatter: /* value */ js.UndefOr[String] => TagMod[Any] = null,
-    trackStyle: CSSProperties = null,
-    value: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(dots)) __obj.updateDynamic("dots")(dots.asInstanceOf[js.Any])
-    if (handle != null) __obj.updateDynamic("handle")(handle.asInstanceOf[js.Any])
-    if (handleStyle != null) __obj.updateDynamic("handleStyle")(handleStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(included)) __obj.updateDynamic("included")(included.asInstanceOf[js.Any])
-    if (marks != null) __obj.updateDynamic("marks")(marks.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maximumTrackStyle != null) __obj.updateDynamic("maximumTrackStyle")(maximumTrackStyle.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minimumTrackStyle != null) __obj.updateDynamic("minimumTrackStyle")(minimumTrackStyle.asInstanceOf[js.Any])
-    if (onAfterChange != null) __obj.updateDynamic("onAfterChange")(js.Any.fromFunction1(onAfterChange))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (railStyle != null) __obj.updateDynamic("railStyle")(railStyle.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
-    if (tipFormatter != null) __obj.updateDynamic("tipFormatter")(js.Any.fromFunction1(tipFormatter))
-    if (trackStyle != null) __obj.updateDynamic("trackStyle")(trackStyle.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def defaultValue(value: Double): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dots(value: Boolean): this.type = set("dots", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handle(value: js.Any): this.type = set("handle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handleStyle(value: CSSProperties): this.type = set("handleStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def included(value: Boolean): this.type = set("included", value.asInstanceOf[js.Any])
+    @scala.inline
+    def marks(value: NumberDictionary[String]): this.type = set("marks", value.asInstanceOf[js.Any])
+    @scala.inline
+    def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maximumTrackStyle(value: CSSProperties): this.type = set("maximumTrackStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def min(value: Double): this.type = set("min", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minimumTrackStyle(value: CSSProperties): this.type = set("minimumTrackStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAfterChange(value: /* value */ js.UndefOr[Double] => Unit): this.type = set("onAfterChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: /* value */ js.UndefOr[Double] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def railStyle(value: CSSProperties): this.type = set("railStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tipFormatter(value: /* value */ js.UndefOr[String] => TagMod[Any]): this.type = set("tipFormatter", js.Any.fromFunction1(value))
+    @scala.inline
+    def trackStyle(value: CSSProperties): this.type = set("trackStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antdMobile.sliderMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SliderProps
+  
+  def withProps(p: SliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Slider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

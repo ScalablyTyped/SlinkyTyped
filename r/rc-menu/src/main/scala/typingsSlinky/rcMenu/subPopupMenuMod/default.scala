@@ -2,6 +2,7 @@ package typingsSlinky.rcMenu.subPopupMenuMod
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
+import slinky.core.ReactComponentClass
 import typingsSlinky.rcMenu.PartialSubPopupMenuProps
 import typingsSlinky.rcMenu.WeakValidationMapSubPopup
 import typingsSlinky.react.mod.Component
@@ -24,11 +25,11 @@ class default protected ()
 @JSImport("rc-menu/lib/SubPopupMenu", JSImport.Default)
 @js.native
 object default
-  extends Instantiable1[/* props */ SubPopupMenuProps, Component[SubPopupMenuProps, js.Any, js.Any]]
+  extends Instantiable1[/* props */ SubPopupMenuProps, ReactComponentClass[SubPopupMenuProps]]
      with Instantiable2[
       /* props */ SubPopupMenuProps, 
       /* context */ js.Any, 
-      Component[SubPopupMenuProps, js.Any, js.Any]
+      ReactComponentClass[SubPopupMenuProps]
     ] {
   var childContextTypes: js.UndefOr[ValidationMap[_]] = js.native
   var contextType: js.UndefOr[Context[_]] = js.native

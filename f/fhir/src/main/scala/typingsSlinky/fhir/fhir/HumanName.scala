@@ -7,103 +7,231 @@ import scala.scalajs.js.annotation._
 /**
   * Name of a human - parts and usage
   */
+@js.native
 trait HumanName extends Element {
   /**
     * Contains extended information for property 'family'.
     */
-  var _family: js.UndefOr[Element] = js.undefined
+  var _family: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'given'.
     */
-  var _given: js.UndefOr[js.Array[Element]] = js.undefined
+  var _given: js.UndefOr[js.Array[Element]] = js.native
   /**
     * Contains extended information for property 'prefix'.
     */
-  var _prefix: js.UndefOr[js.Array[Element]] = js.undefined
+  var _prefix: js.UndefOr[js.Array[Element]] = js.native
   /**
     * Contains extended information for property 'suffix'.
     */
-  var _suffix: js.UndefOr[js.Array[Element]] = js.undefined
+  var _suffix: js.UndefOr[js.Array[Element]] = js.native
   /**
     * Contains extended information for property 'text'.
     */
-  var _text: js.UndefOr[Element] = js.undefined
+  var _text: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'use'.
     */
-  var _use: js.UndefOr[Element] = js.undefined
+  var _use: js.UndefOr[Element] = js.native
   /**
     * Family name (often called 'Surname')
     */
-  var family: js.UndefOr[String] = js.undefined
+  var family: js.UndefOr[String] = js.native
   /**
     * Given names (not always 'first'). Includes middle names
     */
-  var given: js.UndefOr[js.Array[String]] = js.undefined
+  var given: js.UndefOr[js.Array[String]] = js.native
   /**
     * Time period when name was/is in use
     */
-  var period: js.UndefOr[Period] = js.undefined
+  var period: js.UndefOr[Period] = js.native
   /**
     * Parts that come before the name
     */
-  var prefix: js.UndefOr[js.Array[String]] = js.undefined
+  var prefix: js.UndefOr[js.Array[String]] = js.native
   /**
     * Parts that come after the name
     */
-  var suffix: js.UndefOr[js.Array[String]] = js.undefined
+  var suffix: js.UndefOr[js.Array[String]] = js.native
   /**
     * Text representation of the full name
     */
-  var text: js.UndefOr[String] = js.undefined
+  var text: js.UndefOr[String] = js.native
   /**
     * usual | official | temp | nickname | anonymous | old | maiden
     */
-  var use: js.UndefOr[code] = js.undefined
+  var use: js.UndefOr[code] = js.native
 }
 
 object HumanName {
   @scala.inline
-  def apply(
-    _family: Element = null,
-    _fhir_comments: js.Array[Element] = null,
-    _given: js.Array[Element] = null,
-    _id: Element = null,
-    _prefix: js.Array[Element] = null,
-    _suffix: js.Array[Element] = null,
-    _text: Element = null,
-    _use: Element = null,
-    extension: js.Array[Extension] = null,
-    family: String = null,
-    fhir_comments: js.Array[String] = null,
-    given: js.Array[String] = null,
-    id: String = null,
-    period: Period = null,
-    prefix: js.Array[String] = null,
-    suffix: js.Array[String] = null,
-    text: String = null,
-    use: code = null
-  ): HumanName = {
+  def apply(): HumanName = {
     val __obj = js.Dynamic.literal()
-    if (_family != null) __obj.updateDynamic("_family")(_family.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_given != null) __obj.updateDynamic("_given")(_given.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_prefix != null) __obj.updateDynamic("_prefix")(_prefix.asInstanceOf[js.Any])
-    if (_suffix != null) __obj.updateDynamic("_suffix")(_suffix.asInstanceOf[js.Any])
-    if (_text != null) __obj.updateDynamic("_text")(_text.asInstanceOf[js.Any])
-    if (_use != null) __obj.updateDynamic("_use")(_use.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (family != null) __obj.updateDynamic("family")(family.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (given != null) __obj.updateDynamic("given")(given.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (period != null) __obj.updateDynamic("period")(period.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (use != null) __obj.updateDynamic("use")(use.asInstanceOf[js.Any])
     __obj.asInstanceOf[HumanName]
   }
+  @scala.inline
+  implicit class HumanNameOps[Self <: HumanName] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_family(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_family")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_family: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_family")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_given(value: js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_given")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_given: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_given")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_prefix(value: js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_prefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_prefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_suffix(value: js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_suffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_suffix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_suffix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_text(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_text: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_use(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_use")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_use: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_use")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("family")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("family")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGiven(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("given")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGiven: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("given")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeriod(value: Period): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuffix(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuffix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUse(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("use")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("use")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

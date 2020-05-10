@@ -5,39 +5,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CardStyle extends js.Object {
-  var backgroundColor: js.UndefOr[String] = js.undefined
-  var borderColor: js.UndefOr[String] = js.undefined
-  var borderRadius: js.UndefOr[Double] = js.undefined
-  var borderWidth: js.UndefOr[Double] = js.undefined
-  var shadowColor: js.UndefOr[String] = js.undefined
-  var shadowOffset: js.UndefOr[AnonHeight] = js.undefined
-  var shadowOpacity: js.UndefOr[Double] = js.undefined
-  var shadowRadius: js.UndefOr[Double] = js.undefined
+  var backgroundColor: js.UndefOr[String] = js.native
+  var borderColor: js.UndefOr[String] = js.native
+  var borderRadius: js.UndefOr[Double] = js.native
+  var borderWidth: js.UndefOr[Double] = js.native
+  var shadowColor: js.UndefOr[String] = js.native
+  var shadowOffset: js.UndefOr[AnonHeight] = js.native
+  var shadowOpacity: js.UndefOr[Double] = js.native
+  var shadowRadius: js.UndefOr[Double] = js.native
 }
 
 object CardStyle {
   @scala.inline
-  def apply(
-    backgroundColor: String = null,
-    borderColor: String = null,
-    borderRadius: Int | Double = null,
-    borderWidth: Int | Double = null,
-    shadowColor: String = null,
-    shadowOffset: AnonHeight = null,
-    shadowOpacity: Int | Double = null,
-    shadowRadius: Int | Double = null
-  ): CardStyle = {
+  def apply(): CardStyle = {
     val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (borderRadius != null) __obj.updateDynamic("borderRadius")(borderRadius.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (shadowColor != null) __obj.updateDynamic("shadowColor")(shadowColor.asInstanceOf[js.Any])
-    if (shadowOffset != null) __obj.updateDynamic("shadowOffset")(shadowOffset.asInstanceOf[js.Any])
-    if (shadowOpacity != null) __obj.updateDynamic("shadowOpacity")(shadowOpacity.asInstanceOf[js.Any])
-    if (shadowRadius != null) __obj.updateDynamic("shadowRadius")(shadowRadius.asInstanceOf[js.Any])
     __obj.asInstanceOf[CardStyle]
   }
+  @scala.inline
+  implicit class CardStyleOps[Self <: CardStyle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowOffset(value: AnonHeight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowRadius")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

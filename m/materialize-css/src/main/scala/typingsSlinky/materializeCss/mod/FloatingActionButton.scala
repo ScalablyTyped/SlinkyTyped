@@ -28,7 +28,7 @@ object FloatingActionButton extends js.Object {
   /**
     * Init FloatingActionButton
     */
-  def init(els: typingsSlinky.std.Element): typingsSlinky.materializeCss.M.FloatingActionButton = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialFloatingActionButt): typingsSlinky.materializeCss.M.FloatingActionButton = js.native
+  def init(els: Element): typingsSlinky.materializeCss.M.FloatingActionButton = js.native
+  def init(els: Element, options: PartialFloatingActionButt): typingsSlinky.materializeCss.M.FloatingActionButton = js.native
 }
 

@@ -30,20 +30,77 @@ trait Mp3Settings extends js.Object {
 
 object Mp3Settings {
   @scala.inline
-  def apply(
-    Bitrate: Int | Double = null,
-    Channels: Int | Double = null,
-    RateControlMode: Mp3RateControlMode = null,
-    SampleRate: Int | Double = null,
-    VbrQuality: Int | Double = null
-  ): Mp3Settings = {
+  def apply(): Mp3Settings = {
     val __obj = js.Dynamic.literal()
-    if (Bitrate != null) __obj.updateDynamic("Bitrate")(Bitrate.asInstanceOf[js.Any])
-    if (Channels != null) __obj.updateDynamic("Channels")(Channels.asInstanceOf[js.Any])
-    if (RateControlMode != null) __obj.updateDynamic("RateControlMode")(RateControlMode.asInstanceOf[js.Any])
-    if (SampleRate != null) __obj.updateDynamic("SampleRate")(SampleRate.asInstanceOf[js.Any])
-    if (VbrQuality != null) __obj.updateDynamic("VbrQuality")(VbrQuality.asInstanceOf[js.Any])
     __obj.asInstanceOf[Mp3Settings]
   }
+  @scala.inline
+  implicit class Mp3SettingsOps[Self <: Mp3Settings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBitrate(value: integerMin16000Max320000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bitrate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBitrate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bitrate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChannels(value: integerMin1Max2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Channels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Channels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRateControlMode(value: Mp3RateControlMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RateControlMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRateControlMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RateControlMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleRate(value: integerMin22050Max48000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVbrQuality(value: integerMin0Max9): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VbrQuality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVbrQuality: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VbrQuality")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -15,16 +15,14 @@ trait UnitLength extends js.Object
 
 object UnitLength {
   @scala.inline
-  def `2-digit`: typingsSlinky.luxon.luxonStrings.`2-digit` = this.cast("2-digit")
+  def `2-digit`: typingsSlinky.luxon.luxonStrings.`2-digit` = "2-digit".asInstanceOf[typingsSlinky.luxon.luxonStrings.`2-digit`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def long: typingsSlinky.luxon.luxonStrings.long = "long".asInstanceOf[typingsSlinky.luxon.luxonStrings.long]
   @scala.inline
-  def long: typingsSlinky.luxon.luxonStrings.long = this.cast("long")
+  def narrow: typingsSlinky.luxon.luxonStrings.narrow = "narrow".asInstanceOf[typingsSlinky.luxon.luxonStrings.narrow]
   @scala.inline
-  def narrow: typingsSlinky.luxon.luxonStrings.narrow = this.cast("narrow")
+  def numeric: typingsSlinky.luxon.luxonStrings.numeric = "numeric".asInstanceOf[typingsSlinky.luxon.luxonStrings.numeric]
   @scala.inline
-  def numeric: typingsSlinky.luxon.luxonStrings.numeric = this.cast("numeric")
-  @scala.inline
-  def short: typingsSlinky.luxon.luxonStrings.short = this.cast("short")
+  def short: typingsSlinky.luxon.luxonStrings.short = "short".asInstanceOf[typingsSlinky.luxon.luxonStrings.short]
 }
 

@@ -14,11 +14,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NavigateToOptions extends js.Object {
   /**
     * 窗口显示动画的持续时间，单位为 ms
     */
-  var animationDuration: js.UndefOr[Double] = js.undefined
+  var animationDuration: js.UndefOr[Double] = js.native
   /**
     * 窗口显示的动画类型
     * - auto: 自动选择动画效果
@@ -34,43 +35,112 @@ trait NavigateToOptions extends js.Object {
     */
   var animationType: js.UndefOr[
     auto | none | `slide-in-right` | `slide-in-left` | `slide-in-top` | `slide-in-bottom` | `fade-in` | `zoom-out` | `zoom-fade-out` | `pop-in`
-  ] = js.undefined
+  ] = js.native
   /**
     * 接口调用结束的回调函数（调用成功、失败都会执行）
     */
-  var complete: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var complete: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * 接口调用失败的回调函数
     */
-  var fail: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var fail: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * 接口调用成功的回调函数
     */
-  var success: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var success: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * 需要跳转的应用内非 tabBar 的页面的路径 , 路径后可以带参数
     */
-  var url: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.native
 }
 
 object NavigateToOptions {
   @scala.inline
-  def apply(
-    animationDuration: Int | Double = null,
-    animationType: auto | none | `slide-in-right` | `slide-in-left` | `slide-in-top` | `slide-in-bottom` | `fade-in` | `zoom-out` | `zoom-fade-out` | `pop-in` = null,
-    complete: () => Unit = null,
-    fail: () => Unit = null,
-    success: () => Unit = null,
-    url: String = null
-  ): NavigateToOptions = {
+  def apply(): NavigateToOptions = {
     val __obj = js.Dynamic.literal()
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (animationType != null) __obj.updateDynamic("animationType")(animationType.asInstanceOf[js.Any])
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction0(complete))
-    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction0(fail))
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction0(success))
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigateToOptions]
   }
+  @scala.inline
+  implicit class NavigateToOptionsOps[Self <: NavigateToOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimationDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationType(
+      value: auto | none | `slide-in-right` | `slide-in-left` | `slide-in-top` | `slide-in-bottom` | `fade-in` | `zoom-out` | `zoom-fade-out` | `pop-in`
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComplete(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFail(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutFail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccess(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,18 +4,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReposEnablePagesSiteParams extends js.Object {
-  var owner: String
-  var repo: String
-  var source: js.UndefOr[ReposEnablePagesSiteParamsSource] = js.undefined
+  var owner: String = js.native
+  var repo: String = js.native
+  var source: js.UndefOr[ReposEnablePagesSiteParamsSource] = js.native
 }
 
 object ReposEnablePagesSiteParams {
   @scala.inline
-  def apply(owner: String, repo: String, source: ReposEnablePagesSiteParamsSource = null): ReposEnablePagesSiteParams = {
+  def apply(owner: String, repo: String): ReposEnablePagesSiteParams = {
     val __obj = js.Dynamic.literal(owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReposEnablePagesSiteParams]
   }
+  @scala.inline
+  implicit class ReposEnablePagesSiteParamsOps[Self <: ReposEnablePagesSiteParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOwner(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRepo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSource(value: ReposEnablePagesSiteParamsSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

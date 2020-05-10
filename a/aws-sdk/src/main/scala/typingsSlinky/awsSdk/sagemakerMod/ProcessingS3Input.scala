@@ -38,14 +38,66 @@ object ProcessingS3Input {
     LocalPath: ProcessingLocalPath,
     S3DataType: ProcessingS3DataType,
     S3InputMode: ProcessingS3InputMode,
-    S3Uri: S3Uri,
-    S3CompressionType: ProcessingS3CompressionType = null,
-    S3DataDistributionType: ProcessingS3DataDistributionType = null
+    S3Uri: S3Uri
   ): ProcessingS3Input = {
     val __obj = js.Dynamic.literal(LocalPath = LocalPath.asInstanceOf[js.Any], S3DataType = S3DataType.asInstanceOf[js.Any], S3InputMode = S3InputMode.asInstanceOf[js.Any], S3Uri = S3Uri.asInstanceOf[js.Any])
-    if (S3CompressionType != null) __obj.updateDynamic("S3CompressionType")(S3CompressionType.asInstanceOf[js.Any])
-    if (S3DataDistributionType != null) __obj.updateDynamic("S3DataDistributionType")(S3DataDistributionType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProcessingS3Input]
   }
+  @scala.inline
+  implicit class ProcessingS3InputOps[Self <: ProcessingS3Input] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocalPath(value: ProcessingLocalPath): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3DataType(value: ProcessingS3DataType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3DataType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3InputMode(value: ProcessingS3InputMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3InputMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3Uri(value: S3Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3CompressionType(value: ProcessingS3CompressionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3CompressionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3CompressionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3CompressionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3DataDistributionType(value: ProcessingS3DataDistributionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3DataDistributionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3DataDistributionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3DataDistributionType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

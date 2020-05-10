@@ -27,16 +27,53 @@ trait SchemaListGroupMembersResponse extends js.Object {
 
 object SchemaListGroupMembersResponse {
   @scala.inline
-  def apply(
-    members: js.Array[SchemaMonitoredResource] = null,
-    nextPageToken: String = null,
-    totalSize: Int | Double = null
-  ): SchemaListGroupMembersResponse = {
+  def apply(): SchemaListGroupMembersResponse = {
     val __obj = js.Dynamic.literal()
-    if (members != null) __obj.updateDynamic("members")(members.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (totalSize != null) __obj.updateDynamic("totalSize")(totalSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListGroupMembersResponse]
   }
+  @scala.inline
+  implicit class SchemaListGroupMembersResponseOps[Self <: SchemaListGroupMembersResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMembers(value: js.Array[SchemaMonitoredResource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("members")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMembers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("members")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

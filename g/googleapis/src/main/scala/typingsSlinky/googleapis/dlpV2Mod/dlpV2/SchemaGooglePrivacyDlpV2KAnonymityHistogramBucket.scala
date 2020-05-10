@@ -31,20 +31,77 @@ trait SchemaGooglePrivacyDlpV2KAnonymityHistogramBucket extends js.Object {
 
 object SchemaGooglePrivacyDlpV2KAnonymityHistogramBucket {
   @scala.inline
-  def apply(
-    bucketSize: String = null,
-    bucketValueCount: String = null,
-    bucketValues: js.Array[SchemaGooglePrivacyDlpV2KAnonymityEquivalenceClass] = null,
-    equivalenceClassSizeLowerBound: String = null,
-    equivalenceClassSizeUpperBound: String = null
-  ): SchemaGooglePrivacyDlpV2KAnonymityHistogramBucket = {
+  def apply(): SchemaGooglePrivacyDlpV2KAnonymityHistogramBucket = {
     val __obj = js.Dynamic.literal()
-    if (bucketSize != null) __obj.updateDynamic("bucketSize")(bucketSize.asInstanceOf[js.Any])
-    if (bucketValueCount != null) __obj.updateDynamic("bucketValueCount")(bucketValueCount.asInstanceOf[js.Any])
-    if (bucketValues != null) __obj.updateDynamic("bucketValues")(bucketValues.asInstanceOf[js.Any])
-    if (equivalenceClassSizeLowerBound != null) __obj.updateDynamic("equivalenceClassSizeLowerBound")(equivalenceClassSizeLowerBound.asInstanceOf[js.Any])
-    if (equivalenceClassSizeUpperBound != null) __obj.updateDynamic("equivalenceClassSizeUpperBound")(equivalenceClassSizeUpperBound.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2KAnonymityHistogramBucket]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2KAnonymityHistogramBucketOps[Self <: SchemaGooglePrivacyDlpV2KAnonymityHistogramBucket] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucketSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucketValueCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValueCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketValueCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValueCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucketValues(value: js.Array[SchemaGooglePrivacyDlpV2KAnonymityEquivalenceClass]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEquivalenceClassSizeLowerBound(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equivalenceClassSizeLowerBound")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEquivalenceClassSizeLowerBound: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equivalenceClassSizeLowerBound")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEquivalenceClassSizeUpperBound(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equivalenceClassSizeUpperBound")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEquivalenceClassSizeUpperBound: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equivalenceClassSizeUpperBound")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

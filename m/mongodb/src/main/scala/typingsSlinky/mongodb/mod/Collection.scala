@@ -1,11 +1,10 @@
 package typingsSlinky.mongodb.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.mongodb.Anon0
+import typingsSlinky.mongodb.Anon1
 import typingsSlinky.mongodb.AnonBatchSizeReadPreference
 import typingsSlinky.mongodb.AnonDropTargetSession
 import typingsSlinky.mongodb.AnonFullSession
-import typingsSlinky.mongodb.AnonMaxTimeMSReadPreference
 import typingsSlinky.mongodb.AnonMaxTimeMSSession
 import typingsSlinky.mongodb.AnonScaleSession
 import typingsSlinky.mongodb.AnonSession
@@ -15,6 +14,7 @@ import typingsSlinky.mongodb.CommonOptionsbypassDocume
 import typingsSlinky.mongodb.CommonOptionsmaxTimeMSnum
 import typingsSlinky.mongodb.CommonOptionssingleboolea
 import typingsSlinky.mongodb.UpdateOneOptionsmultibool
+import typingsSlinky.mongodb.mongodbStrings._id
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -53,12 +53,15 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     options: CollectionAggregationOptions,
     callback: MongoCallback[AggregationCursor[T]]
   ): AggregationCursor[T] = js.native
-  def bulkWrite(operations: js.Array[js.Object]): js.Promise[BulkWriteOpResultObject] = js.native
+  def bulkWrite(operations: js.Array[BulkWriteOperation[TSchema]]): js.Promise[BulkWriteOpResultObject] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.0/api/Collection.html#bulkWrite */
-  def bulkWrite(operations: js.Array[js.Object], callback: MongoCallback[BulkWriteOpResultObject]): Unit = js.native
-  def bulkWrite(operations: js.Array[js.Object], options: CollectionBulkWriteOptions): js.Promise[BulkWriteOpResultObject] = js.native
   def bulkWrite(
-    operations: js.Array[js.Object],
+    operations: js.Array[BulkWriteOperation[TSchema]],
+    callback: MongoCallback[BulkWriteOpResultObject]
+  ): Unit = js.native
+  def bulkWrite(operations: js.Array[BulkWriteOperation[TSchema]], options: CollectionBulkWriteOptions): js.Promise[BulkWriteOpResultObject] = js.native
+  def bulkWrite(
+    operations: js.Array[BulkWriteOperation[TSchema]],
     options: CollectionBulkWriteOptions,
     callback: MongoCallback[BulkWriteOpResultObject]
   ): Unit = js.native
@@ -115,23 +118,40 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     options: CommonOptionsbypassDocume,
     callback: MongoCallback[DeleteWriteOpResultObject]
   ): Unit = js.native
-  def distinct(key: String): js.Promise[_] = js.native
-  /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#distinct */
-  def distinct(key: String, callback: MongoCallback[_]): Unit = js.native
-  def distinct(key: String, query: FilterQuery[TSchema]): js.Promise[_] = js.native
-  def distinct(key: String, query: FilterQuery[TSchema], callback: MongoCallback[_]): Unit = js.native
-  def distinct(key: String, query: FilterQuery[TSchema], options: AnonMaxTimeMSReadPreference): js.Promise[_] = js.native
+  def distinct(key: String): js.Promise[js.Array[_]] = js.native
+  def distinct(key: String, callback: MongoCallback[js.Array[_]]): Unit = js.native
+  def distinct(key: String, query: FilterQuery[TSchema]): js.Promise[js.Array[_]] = js.native
+  def distinct(key: String, query: FilterQuery[TSchema], callback: MongoCallback[js.Array[_]]): Unit = js.native
+  def distinct(key: String, query: FilterQuery[TSchema], options: MongoDistinctPreferences): js.Promise[js.Array[_]] = js.native
   def distinct(
     key: String,
     query: FilterQuery[TSchema],
-    options: AnonMaxTimeMSReadPreference,
-    callback: MongoCallback[_]
+    options: MongoDistinctPreferences,
+    callback: MongoCallback[js.Array[_]]
+  ): Unit = js.native
+  @JSName("distinct")
+  def distinct_id(key: _id): js.Promise[js.Array[ExtractIdType[TSchema]]] = js.native
+  /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#distinct */
+  @JSName("distinct")
+  def distinct_id(key: _id, callback: MongoCallback[js.Array[ExtractIdType[TSchema]]]): Unit = js.native
+  @JSName("distinct")
+  def distinct_id(key: _id, query: FilterQuery[TSchema]): js.Promise[js.Array[ExtractIdType[TSchema]]] = js.native
+  @JSName("distinct")
+  def distinct_id(key: _id, query: FilterQuery[TSchema], callback: MongoCallback[js.Array[ExtractIdType[TSchema]]]): Unit = js.native
+  @JSName("distinct")
+  def distinct_id(key: _id, query: FilterQuery[TSchema], options: MongoDistinctPreferences): js.Promise[js.Array[ExtractIdType[TSchema]]] = js.native
+  @JSName("distinct")
+  def distinct_id(
+    key: _id,
+    query: FilterQuery[TSchema],
+    options: MongoDistinctPreferences,
+    callback: MongoCallback[js.Array[ExtractIdType[TSchema]]]
   ): Unit = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#drop */
   def drop(): js.Promise[_] = js.native
   def drop(callback: MongoCallback[_]): Unit = js.native
-  def drop(options: Anon0): js.Promise[_] = js.native
-  def drop(options: Anon0, callback: MongoCallback[_]): Unit = js.native
+  def drop(options: Anon1): js.Promise[_] = js.native
+  def drop(options: Anon1, callback: MongoCallback[_]): Unit = js.native
   def dropIndex(indexName: String): js.Promise[_] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#dropIndex */
   def dropIndex(indexName: String, callback: MongoCallback[_]): Unit = js.native
@@ -798,12 +818,12 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
   def indexExists(indexes: String): js.Promise[Boolean] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#indexExists */
   def indexExists(indexes: String, callback: MongoCallback[Boolean]): Unit = js.native
-  def indexExists(indexes: String, options: Anon0): js.Promise[Boolean] = js.native
-  def indexExists(indexes: String, options: Anon0, callback: MongoCallback[Boolean]): Unit = js.native
+  def indexExists(indexes: String, options: Anon1): js.Promise[Boolean] = js.native
+  def indexExists(indexes: String, options: Anon1, callback: MongoCallback[Boolean]): Unit = js.native
   def indexExists(indexes: js.Array[String]): js.Promise[Boolean] = js.native
   def indexExists(indexes: js.Array[String], callback: MongoCallback[Boolean]): Unit = js.native
-  def indexExists(indexes: js.Array[String], options: Anon0): js.Promise[Boolean] = js.native
-  def indexExists(indexes: js.Array[String], options: Anon0, callback: MongoCallback[Boolean]): Unit = js.native
+  def indexExists(indexes: js.Array[String], options: Anon1): js.Promise[Boolean] = js.native
+  def indexExists(indexes: js.Array[String], options: Anon1, callback: MongoCallback[Boolean]): Unit = js.native
   def indexInformation(): js.Promise[_] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#indexInformation */
   def indexInformation(callback: MongoCallback[_]): Unit = js.native
@@ -812,7 +832,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#indexes */
   def indexes(): js.Promise[_] = js.native
   def indexes(callback: MongoCallback[_]): Unit = js.native
-  def indexes(options: Anon0): js.Promise[_] = js.native
+  def indexes(options: Anon1): js.Promise[_] = js.native
   def indexes(options: AnonSessionClientSession, callback: MongoCallback[_]): Unit = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#initializeOrderedBulkOp */
   def initializeOrderedBulkOp(): OrderedBulkOperation = js.native
@@ -853,8 +873,8 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#isCapped */
   def isCapped(): js.Promise[_] = js.native
   def isCapped(callback: MongoCallback[_]): Unit = js.native
-  def isCapped(options: Anon0): js.Promise[_] = js.native
-  def isCapped(options: Anon0, callback: MongoCallback[_]): Unit = js.native
+  def isCapped(options: Anon1): js.Promise[_] = js.native
+  def isCapped(options: Anon1, callback: MongoCallback[_]): Unit = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#listIndexes */
   def listIndexes(): CommandCursor = js.native
   def listIndexes(options: AnonBatchSizeReadPreference): CommandCursor = js.native
@@ -901,8 +921,8 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#options */
   def options(): js.Promise[_] = js.native
   def options(callback: MongoCallback[_]): Unit = js.native
-  def options(options: Anon0): js.Promise[_] = js.native
-  def options(options: Anon0, callback: MongoCallback[_]): Unit = js.native
+  def options(options: Anon1): js.Promise[_] = js.native
+  def options(options: Anon1, callback: MongoCallback[_]): Unit = js.native
   def parallelCollectionScan(): js.Promise[js.Array[Cursor[_]]] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#parallelCollectionScan */
   def parallelCollectionScan(callback: MongoCallback[js.Array[Cursor[_]]]): Unit = js.native
@@ -911,8 +931,8 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#reIndex */
   def reIndex(): js.Promise[_] = js.native
   def reIndex(callback: MongoCallback[_]): Unit = js.native
-  def reIndex(options: Anon0): js.Promise[_] = js.native
-  def reIndex(options: Anon0, callback: MongoCallback[_]): Unit = js.native
+  def reIndex(options: Anon1): js.Promise[_] = js.native
+  def reIndex(options: Anon1, callback: MongoCallback[_]): Unit = js.native
   /** @deprecated Use use deleteOne, deleteMany or bulkWrite */
   def remove(selector: js.Object): Unit = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#remove */
@@ -1030,8 +1050,8 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     callback: MongoCallback[UpdateWriteOpResult]
   ): Unit = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.3/api/Collection.html#watch */
-  def watch(): ChangeStream = js.native
-  def watch(pipeline: js.Array[js.Object]): ChangeStream = js.native
-  def watch(pipeline: js.Array[js.Object], options: ChangeStreamOptionssessio): ChangeStream = js.native
+  def watch[T](): ChangeStream[T] = js.native
+  def watch[T](pipeline: js.Array[js.Object]): ChangeStream[T] = js.native
+  def watch[T](pipeline: js.Array[js.Object], options: ChangeStreamOptionssessio): ChangeStream[T] = js.native
 }
 

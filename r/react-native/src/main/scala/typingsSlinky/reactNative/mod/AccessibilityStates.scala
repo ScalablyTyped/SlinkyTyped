@@ -18,22 +18,20 @@ trait AccessibilityStates extends js.Object
 
 object AccessibilityStates {
   @scala.inline
-  def busy: typingsSlinky.reactNative.reactNativeStrings.busy = this.cast("busy")
+  def busy: typingsSlinky.reactNative.reactNativeStrings.busy = "busy".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.busy]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def checked: typingsSlinky.reactNative.reactNativeStrings.checked = "checked".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.checked]
   @scala.inline
-  def checked: typingsSlinky.reactNative.reactNativeStrings.checked = this.cast("checked")
+  def collapsed: typingsSlinky.reactNative.reactNativeStrings.collapsed = "collapsed".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.collapsed]
   @scala.inline
-  def collapsed: typingsSlinky.reactNative.reactNativeStrings.collapsed = this.cast("collapsed")
+  def disabled: typingsSlinky.reactNative.reactNativeStrings.disabled = "disabled".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.reactNative.reactNativeStrings.disabled = this.cast("disabled")
+  def expanded: typingsSlinky.reactNative.reactNativeStrings.expanded = "expanded".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.expanded]
   @scala.inline
-  def expanded: typingsSlinky.reactNative.reactNativeStrings.expanded = this.cast("expanded")
+  def hasPopup: typingsSlinky.reactNative.reactNativeStrings.hasPopup = "hasPopup".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.hasPopup]
   @scala.inline
-  def hasPopup: typingsSlinky.reactNative.reactNativeStrings.hasPopup = this.cast("hasPopup")
+  def selected: typingsSlinky.reactNative.reactNativeStrings.selected = "selected".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.selected]
   @scala.inline
-  def selected: typingsSlinky.reactNative.reactNativeStrings.selected = this.cast("selected")
-  @scala.inline
-  def unchecked: typingsSlinky.reactNative.reactNativeStrings.unchecked = this.cast("unchecked")
+  def unchecked: typingsSlinky.reactNative.reactNativeStrings.unchecked = "unchecked".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.unchecked]
 }
 

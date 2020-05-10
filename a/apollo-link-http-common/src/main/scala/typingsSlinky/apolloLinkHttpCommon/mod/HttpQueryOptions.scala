@@ -4,21 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HttpQueryOptions extends js.Object {
-  var includeExtensions: js.UndefOr[Boolean] = js.undefined
-  var includeQuery: js.UndefOr[Boolean] = js.undefined
+  var includeExtensions: js.UndefOr[Boolean] = js.native
+  var includeQuery: js.UndefOr[Boolean] = js.native
 }
 
 object HttpQueryOptions {
   @scala.inline
-  def apply(
-    includeExtensions: js.UndefOr[Boolean] = js.undefined,
-    includeQuery: js.UndefOr[Boolean] = js.undefined
-  ): HttpQueryOptions = {
+  def apply(): HttpQueryOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(includeExtensions)) __obj.updateDynamic("includeExtensions")(includeExtensions.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeQuery)) __obj.updateDynamic("includeQuery")(includeQuery.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpQueryOptions]
   }
+  @scala.inline
+  implicit class HttpQueryOptionsOps[Self <: HttpQueryOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIncludeExtensions(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeExtensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeExtensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeExtensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeQuery(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeQuery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeQuery")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

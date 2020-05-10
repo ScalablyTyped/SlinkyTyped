@@ -64,18 +64,65 @@ trait SchemaObjectConditions extends js.Object {
 
 object SchemaObjectConditions {
   @scala.inline
-  def apply(
-    excludePrefixes: js.Array[String] = null,
-    includePrefixes: js.Array[String] = null,
-    maxTimeElapsedSinceLastModification: String = null,
-    minTimeElapsedSinceLastModification: String = null
-  ): SchemaObjectConditions = {
+  def apply(): SchemaObjectConditions = {
     val __obj = js.Dynamic.literal()
-    if (excludePrefixes != null) __obj.updateDynamic("excludePrefixes")(excludePrefixes.asInstanceOf[js.Any])
-    if (includePrefixes != null) __obj.updateDynamic("includePrefixes")(includePrefixes.asInstanceOf[js.Any])
-    if (maxTimeElapsedSinceLastModification != null) __obj.updateDynamic("maxTimeElapsedSinceLastModification")(maxTimeElapsedSinceLastModification.asInstanceOf[js.Any])
-    if (minTimeElapsedSinceLastModification != null) __obj.updateDynamic("minTimeElapsedSinceLastModification")(minTimeElapsedSinceLastModification.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaObjectConditions]
   }
+  @scala.inline
+  implicit class SchemaObjectConditionsOps[Self <: SchemaObjectConditions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExcludePrefixes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludePrefixes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludePrefixes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludePrefixes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludePrefixes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includePrefixes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludePrefixes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includePrefixes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxTimeElapsedSinceLastModification(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeElapsedSinceLastModification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxTimeElapsedSinceLastModification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeElapsedSinceLastModification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinTimeElapsedSinceLastModification(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minTimeElapsedSinceLastModification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinTimeElapsedSinceLastModification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minTimeElapsedSinceLastModification")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

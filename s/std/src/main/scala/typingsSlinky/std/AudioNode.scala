@@ -14,21 +14,22 @@ trait AudioNode extends EventTarget {
   val context: BaseAudioContext = js.native
   val numberOfInputs: Double = js.native
   val numberOfOutputs: Double = js.native
-  def connect(destinationNode: AudioNode): org.scalajs.dom.raw.AudioNode = js.native
-  def connect(destinationNode: AudioNode, output: Double): org.scalajs.dom.raw.AudioNode = js.native
-  def connect(destinationNode: AudioNode, output: Double, input: Double): org.scalajs.dom.raw.AudioNode = js.native
-  def connect(destinationParam: AudioParam): Unit = js.native
-  def connect(destinationParam: AudioParam, output: Double): Unit = js.native
+  def connect(destinationNode: org.scalajs.dom.raw.AudioNode): org.scalajs.dom.raw.AudioNode = js.native
+  def connect(destinationNode: org.scalajs.dom.raw.AudioNode, output: Double): org.scalajs.dom.raw.AudioNode = js.native
+  def connect(destinationNode: org.scalajs.dom.raw.AudioNode, output: Double, input: Double): org.scalajs.dom.raw.AudioNode = js.native
+  def connect(destinationParam: org.scalajs.dom.raw.AudioParam): Unit = js.native
+  def connect(destinationParam: org.scalajs.dom.raw.AudioParam, output: Double): Unit = js.native
   def disconnect(): Unit = js.native
-  def disconnect(destinationNode: AudioNode): Unit = js.native
-  def disconnect(destinationNode: AudioNode, output: Double): Unit = js.native
-  def disconnect(destinationNode: AudioNode, output: Double, input: Double): Unit = js.native
-  def disconnect(destinationParam: AudioParam): Unit = js.native
-  def disconnect(destinationParam: AudioParam, output: Double): Unit = js.native
+  def disconnect(destinationNode: org.scalajs.dom.raw.AudioNode): Unit = js.native
+  def disconnect(destinationNode: org.scalajs.dom.raw.AudioNode, output: Double): Unit = js.native
+  def disconnect(destinationNode: org.scalajs.dom.raw.AudioNode, output: Double, input: Double): Unit = js.native
+  def disconnect(destinationParam: org.scalajs.dom.raw.AudioParam): Unit = js.native
+  def disconnect(destinationParam: org.scalajs.dom.raw.AudioParam, output: Double): Unit = js.native
   def disconnect(output: Double): Unit = js.native
 }
 
 @JSGlobal("AudioNode")
 @js.native
-object AudioNode extends Instantiable0[AudioNode]
+object AudioNode
+  extends Instantiable0[org.scalajs.dom.raw.AudioNode]
 

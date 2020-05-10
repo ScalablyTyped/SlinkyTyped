@@ -48,7 +48,7 @@ object Slider extends js.Object {
   /**
     * Init Slider
     */
-  def init(els: typingsSlinky.std.Element): Slider = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialSliderOptions): Slider = js.native
+  def init(els: Element): Slider = js.native
+  def init(els: Element, options: PartialSliderOptions): Slider = js.native
 }
 

@@ -7,19 +7,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UsersResource extends js.Object {
-  var sshPublicKeys: SshPublicKeysResource
+  var sshPublicKeys: SshPublicKeysResource = js.native
   /**
     * Retrieves the profile information used for logging in to a virtual machine
     * on Google Compute Engine.
     */
-  def getLoginProfile(request: AnonAccesstoken): Request_[LoginProfile]
+  def getLoginProfile(request: AnonAccesstoken): Request_[LoginProfile] = js.native
   /**
     * Adds an SSH public key and returns the profile information. Default POSIX
     * account information is set when no username and UID exist as part of the
     * login profile.
     */
-  def importSshPublicKey(request: AnonBearertoken): Request_[ImportSshPublicKeyResponse]
+  def importSshPublicKey(request: AnonBearertoken): Request_[ImportSshPublicKeyResponse] = js.native
 }
 
 object UsersResource {
@@ -30,8 +31,33 @@ object UsersResource {
     sshPublicKeys: SshPublicKeysResource
   ): UsersResource = {
     val __obj = js.Dynamic.literal(getLoginProfile = js.Any.fromFunction1(getLoginProfile), importSshPublicKey = js.Any.fromFunction1(importSshPublicKey), sshPublicKeys = sshPublicKeys.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[UsersResource]
   }
+  @scala.inline
+  implicit class UsersResourceOps[Self <: UsersResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetLoginProfile(value: AnonAccesstoken => Request_[LoginProfile]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLoginProfile")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withImportSshPublicKey(value: AnonBearertoken => Request_[ImportSshPublicKeyResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("importSshPublicKey")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSshPublicKeys(value: SshPublicKeysResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sshPublicKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

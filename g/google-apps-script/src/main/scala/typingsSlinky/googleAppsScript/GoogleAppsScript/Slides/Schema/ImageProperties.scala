@@ -4,39 +4,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ImageProperties extends js.Object {
-  var brightness: js.UndefOr[Double] = js.undefined
-  var contrast: js.UndefOr[Double] = js.undefined
-  var cropProperties: js.UndefOr[CropProperties] = js.undefined
-  var link: js.UndefOr[Link] = js.undefined
-  var outline: js.UndefOr[Outline] = js.undefined
-  var recolor: js.UndefOr[Recolor] = js.undefined
-  var shadow: js.UndefOr[Shadow] = js.undefined
-  var transparency: js.UndefOr[Double] = js.undefined
+  var brightness: js.UndefOr[Double] = js.native
+  var contrast: js.UndefOr[Double] = js.native
+  var cropProperties: js.UndefOr[CropProperties] = js.native
+  var link: js.UndefOr[Link] = js.native
+  var outline: js.UndefOr[Outline] = js.native
+  var recolor: js.UndefOr[Recolor] = js.native
+  var shadow: js.UndefOr[Shadow] = js.native
+  var transparency: js.UndefOr[Double] = js.native
 }
 
 object ImageProperties {
   @scala.inline
-  def apply(
-    brightness: Int | Double = null,
-    contrast: Int | Double = null,
-    cropProperties: CropProperties = null,
-    link: Link = null,
-    outline: Outline = null,
-    recolor: Recolor = null,
-    shadow: Shadow = null,
-    transparency: Int | Double = null
-  ): ImageProperties = {
+  def apply(): ImageProperties = {
     val __obj = js.Dynamic.literal()
-    if (brightness != null) __obj.updateDynamic("brightness")(brightness.asInstanceOf[js.Any])
-    if (contrast != null) __obj.updateDynamic("contrast")(contrast.asInstanceOf[js.Any])
-    if (cropProperties != null) __obj.updateDynamic("cropProperties")(cropProperties.asInstanceOf[js.Any])
-    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
-    if (outline != null) __obj.updateDynamic("outline")(outline.asInstanceOf[js.Any])
-    if (recolor != null) __obj.updateDynamic("recolor")(recolor.asInstanceOf[js.Any])
-    if (shadow != null) __obj.updateDynamic("shadow")(shadow.asInstanceOf[js.Any])
-    if (transparency != null) __obj.updateDynamic("transparency")(transparency.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageProperties]
   }
+  @scala.inline
+  implicit class ImagePropertiesOps[Self <: ImageProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBrightness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brightness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrightness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brightness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContrast(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contrast")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContrast: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contrast")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCropProperties(value: CropProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cropProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCropProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cropProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLink(value: Link): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutline(value: Outline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecolor(value: Recolor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recolor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecolor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recolor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadow(value: Shadow): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransparency(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transparency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransparency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transparency")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

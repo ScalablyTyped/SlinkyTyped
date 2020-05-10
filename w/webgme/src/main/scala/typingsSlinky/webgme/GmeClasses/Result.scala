@@ -1,6 +1,5 @@
 package typingsSlinky.webgme.GmeClasses
 
-import typingsSlinky.std.Error
 import typingsSlinky.webgme.AnonFinishTime
 import typingsSlinky.webgme.GmeCommon.ArtifactHash
 import typingsSlinky.webgme.GmeCommon.ErrorStr
@@ -70,7 +69,7 @@ trait Result extends js.Object {
     * Serializes this object to a JSON representation.
     */
   def serialize(): AnonFinishTime = js.native
-  def setError(error: Error): Unit = js.native
+  def setError(error: js.Error): Unit = js.native
   /**
     * Sets the error string if any error occured during execution.
     */

@@ -1,9 +1,6 @@
 package typingsSlinky.fundamentalReact.actionBarMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.fundamentalReact.FunctionComponentActionBa
-import typingsSlinky.fundamentalReact.FunctionComponentActionBaCall
-import typingsSlinky.fundamentalReact.FunctionComponentActionBaContextTypes
 import typingsSlinky.fundamentalReact.PartialActionBarProps
 import typingsSlinky.fundamentalReact.WeakValidationMapActionBa
 import typingsSlinky.react.mod.PropsWithChildren
@@ -15,9 +12,6 @@ import scala.scalajs.js.annotation._
 @JSImport("fundamental-react/lib/ActionBar/ActionBar", "ActionBar")
 @js.native
 object ActionBar extends js.Object {
-  var Actions: FunctionComponentActionBa = js.native
-  var Back: FunctionComponentActionBaCall = js.native
-  var Header: FunctionComponentActionBaContextTypes = js.native
   var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
   var defaultProps: js.UndefOr[PartialActionBarProps] = js.native
   var displayName: js.UndefOr[typingsSlinky.fundamentalReact.fundamentalReactStrings.ActionBar | String] = js.native

@@ -89,38 +89,185 @@ trait SchemaGetIosPostInstallAttributionResponse extends js.Object {
 
 object SchemaGetIosPostInstallAttributionResponse {
   @scala.inline
-  def apply(
-    appMinimumVersion: String = null,
-    attributionConfidence: String = null,
-    deepLink: String = null,
-    externalBrowserDestinationLink: String = null,
-    fallbackLink: String = null,
-    invitationId: String = null,
-    isStrongMatchExecutable: js.UndefOr[Boolean] = js.undefined,
-    matchMessage: String = null,
-    requestIpVersion: String = null,
-    requestedLink: String = null,
-    resolvedLink: String = null,
-    utmCampaign: String = null,
-    utmMedium: String = null,
-    utmSource: String = null
-  ): SchemaGetIosPostInstallAttributionResponse = {
+  def apply(): SchemaGetIosPostInstallAttributionResponse = {
     val __obj = js.Dynamic.literal()
-    if (appMinimumVersion != null) __obj.updateDynamic("appMinimumVersion")(appMinimumVersion.asInstanceOf[js.Any])
-    if (attributionConfidence != null) __obj.updateDynamic("attributionConfidence")(attributionConfidence.asInstanceOf[js.Any])
-    if (deepLink != null) __obj.updateDynamic("deepLink")(deepLink.asInstanceOf[js.Any])
-    if (externalBrowserDestinationLink != null) __obj.updateDynamic("externalBrowserDestinationLink")(externalBrowserDestinationLink.asInstanceOf[js.Any])
-    if (fallbackLink != null) __obj.updateDynamic("fallbackLink")(fallbackLink.asInstanceOf[js.Any])
-    if (invitationId != null) __obj.updateDynamic("invitationId")(invitationId.asInstanceOf[js.Any])
-    if (!js.isUndefined(isStrongMatchExecutable)) __obj.updateDynamic("isStrongMatchExecutable")(isStrongMatchExecutable.asInstanceOf[js.Any])
-    if (matchMessage != null) __obj.updateDynamic("matchMessage")(matchMessage.asInstanceOf[js.Any])
-    if (requestIpVersion != null) __obj.updateDynamic("requestIpVersion")(requestIpVersion.asInstanceOf[js.Any])
-    if (requestedLink != null) __obj.updateDynamic("requestedLink")(requestedLink.asInstanceOf[js.Any])
-    if (resolvedLink != null) __obj.updateDynamic("resolvedLink")(resolvedLink.asInstanceOf[js.Any])
-    if (utmCampaign != null) __obj.updateDynamic("utmCampaign")(utmCampaign.asInstanceOf[js.Any])
-    if (utmMedium != null) __obj.updateDynamic("utmMedium")(utmMedium.asInstanceOf[js.Any])
-    if (utmSource != null) __obj.updateDynamic("utmSource")(utmSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGetIosPostInstallAttributionResponse]
   }
+  @scala.inline
+  implicit class SchemaGetIosPostInstallAttributionResponseOps[Self <: SchemaGetIosPostInstallAttributionResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppMinimumVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appMinimumVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppMinimumVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appMinimumVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttributionConfidence(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributionConfidence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributionConfidence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributionConfidence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeepLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deepLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeepLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deepLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalBrowserDestinationLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalBrowserDestinationLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalBrowserDestinationLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalBrowserDestinationLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFallbackLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFallbackLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvitationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvitationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsStrongMatchExecutable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isStrongMatchExecutable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsStrongMatchExecutable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isStrongMatchExecutable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatchMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatchMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestIpVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestIpVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestIpVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestIpVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestedLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestedLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolvedLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvedLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolvedLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvedLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUtmCampaign(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utmCampaign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUtmCampaign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utmCampaign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUtmMedium(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utmMedium")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUtmMedium: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utmMedium")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUtmSource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utmSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUtmSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utmSource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

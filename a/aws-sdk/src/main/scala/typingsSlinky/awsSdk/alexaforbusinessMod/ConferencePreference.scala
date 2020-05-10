@@ -14,10 +14,29 @@ trait ConferencePreference extends js.Object {
 
 object ConferencePreference {
   @scala.inline
-  def apply(DefaultConferenceProviderArn: Arn = null): ConferencePreference = {
+  def apply(): ConferencePreference = {
     val __obj = js.Dynamic.literal()
-    if (DefaultConferenceProviderArn != null) __obj.updateDynamic("DefaultConferenceProviderArn")(DefaultConferenceProviderArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConferencePreference]
   }
+  @scala.inline
+  implicit class ConferencePreferenceOps[Self <: ConferencePreference] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultConferenceProviderArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultConferenceProviderArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultConferenceProviderArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultConferenceProviderArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

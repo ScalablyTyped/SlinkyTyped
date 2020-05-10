@@ -42,66 +42,353 @@ trait TypographyOptions extends js.Object {
 
 object TypographyOptions {
   @scala.inline
-  def apply(
-    allVariants: CSSProperties = null,
-    body1: TypographyStyleOptions = null,
-    body2: TypographyStyleOptions = null,
-    button: TypographyStyleOptions = null,
-    caption: TypographyStyleOptions = null,
-    display1: TypographyStyleOptions = null,
-    display2: TypographyStyleOptions = null,
-    display3: TypographyStyleOptions = null,
-    display4: TypographyStyleOptions = null,
-    fontFamily: FontFamilyProperty = null,
-    fontSize: Int | Double = null,
-    fontWeightLight: FontWeightProperty = null,
-    fontWeightMedium: FontWeightProperty = null,
-    fontWeightRegular: FontWeightProperty = null,
-    h1: TypographyStyleOptions = null,
-    h2: TypographyStyleOptions = null,
-    h3: TypographyStyleOptions = null,
-    h4: TypographyStyleOptions = null,
-    h5: TypographyStyleOptions = null,
-    h6: TypographyStyleOptions = null,
-    headline: TypographyStyleOptions = null,
-    htmlFontSize: Int | Double = null,
-    overline: TypographyStyleOptions = null,
-    subheading: TypographyStyleOptions = null,
-    subtitle1: TypographyStyleOptions = null,
-    subtitle2: TypographyStyleOptions = null,
-    title: TypographyStyleOptions = null,
-    useNextVariants: js.UndefOr[Boolean] = js.undefined
-  ): TypographyOptions = {
+  def apply(): TypographyOptions = {
     val __obj = js.Dynamic.literal()
-    if (allVariants != null) __obj.updateDynamic("allVariants")(allVariants.asInstanceOf[js.Any])
-    if (body1 != null) __obj.updateDynamic("body1")(body1.asInstanceOf[js.Any])
-    if (body2 != null) __obj.updateDynamic("body2")(body2.asInstanceOf[js.Any])
-    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
-    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
-    if (display1 != null) __obj.updateDynamic("display1")(display1.asInstanceOf[js.Any])
-    if (display2 != null) __obj.updateDynamic("display2")(display2.asInstanceOf[js.Any])
-    if (display3 != null) __obj.updateDynamic("display3")(display3.asInstanceOf[js.Any])
-    if (display4 != null) __obj.updateDynamic("display4")(display4.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
-    if (fontWeightLight != null) __obj.updateDynamic("fontWeightLight")(fontWeightLight.asInstanceOf[js.Any])
-    if (fontWeightMedium != null) __obj.updateDynamic("fontWeightMedium")(fontWeightMedium.asInstanceOf[js.Any])
-    if (fontWeightRegular != null) __obj.updateDynamic("fontWeightRegular")(fontWeightRegular.asInstanceOf[js.Any])
-    if (h1 != null) __obj.updateDynamic("h1")(h1.asInstanceOf[js.Any])
-    if (h2 != null) __obj.updateDynamic("h2")(h2.asInstanceOf[js.Any])
-    if (h3 != null) __obj.updateDynamic("h3")(h3.asInstanceOf[js.Any])
-    if (h4 != null) __obj.updateDynamic("h4")(h4.asInstanceOf[js.Any])
-    if (h5 != null) __obj.updateDynamic("h5")(h5.asInstanceOf[js.Any])
-    if (h6 != null) __obj.updateDynamic("h6")(h6.asInstanceOf[js.Any])
-    if (headline != null) __obj.updateDynamic("headline")(headline.asInstanceOf[js.Any])
-    if (htmlFontSize != null) __obj.updateDynamic("htmlFontSize")(htmlFontSize.asInstanceOf[js.Any])
-    if (overline != null) __obj.updateDynamic("overline")(overline.asInstanceOf[js.Any])
-    if (subheading != null) __obj.updateDynamic("subheading")(subheading.asInstanceOf[js.Any])
-    if (subtitle1 != null) __obj.updateDynamic("subtitle1")(subtitle1.asInstanceOf[js.Any])
-    if (subtitle2 != null) __obj.updateDynamic("subtitle2")(subtitle2.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (!js.isUndefined(useNextVariants)) __obj.updateDynamic("useNextVariants")(useNextVariants.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypographyOptions]
   }
+  @scala.inline
+  implicit class TypographyOptionsOps[Self <: TypographyOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllVariants(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allVariants")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllVariants: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allVariants")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBody1(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBody2(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButton(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaption(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplay1(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplay1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplay2(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplay2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplay3(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplay3: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display3")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplay4(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplay4: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display4")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontFamily(value: FontFamilyProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontWeightLight(value: FontWeightProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeightLight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontWeightLight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeightLight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontWeightMedium(value: FontWeightProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeightMedium")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontWeightMedium: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeightMedium")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontWeightRegular(value: FontWeightProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeightRegular")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontWeightRegular: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeightRegular")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH1(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH2(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH3(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH3: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h3")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH4(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH4: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h4")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH5(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h5")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH6(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH6: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h6")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeadline(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeadline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtmlFontSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlFontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtmlFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlFontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverline(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubheading(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subheading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubheading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subheading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubtitle1(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubtitle1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubtitle2(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubtitle2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: TypographyStyleOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseNextVariants(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useNextVariants")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseNextVariants: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useNextVariants")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,6 +4,8 @@ import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.raw.Blob
+import org.scalajs.dom.raw.CanvasRenderingContext2D
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLAnchorElement
 import org.scalajs.dom.raw.HTMLAreaElement
@@ -113,6 +115,7 @@ import org.scalajs.dom.raw.SVGTextElement
 import org.scalajs.dom.raw.SVGTextPathElement
 import org.scalajs.dom.raw.SVGUseElement
 import org.scalajs.dom.raw.SVGViewElement
+import org.scalajs.dom.raw.TouchList
 import typingsSlinky.d3Array.mod.Bisector_
 import typingsSlinky.d3Array.mod.HistogramGeneratorDate
 import typingsSlinky.d3Array.mod.HistogramGeneratorNumber
@@ -226,6 +229,7 @@ import typingsSlinky.d3Scale.mod.ScalePower
 import typingsSlinky.d3Scale.mod.ScaleQuantile_
 import typingsSlinky.d3Scale.mod.ScaleQuantize_
 import typingsSlinky.d3Scale.mod.ScaleSequential_
+import typingsSlinky.d3Scale.mod.ScaleSymLog_
 import typingsSlinky.d3Scale.mod.ScaleThreshold_
 import typingsSlinky.d3Scale.mod.ScaleTime_
 import typingsSlinky.d3Selection.mod.BaseEvent
@@ -447,12 +451,7 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.video
 import typingsSlinky.plotlyJs.plotlyJsStrings.view
 import typingsSlinky.plotlyJs.plotlyJsStrings.wbr
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.CanvasRenderingContext2D
-import typingsSlinky.std.Date
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Element
-import typingsSlinky.std.Float32Array
-import typingsSlinky.std.Float64Array
 import typingsSlinky.std.HTMLAppletElement
 import typingsSlinky.std.HTMLBaseFontElement
 import typingsSlinky.std.HTMLDataElement
@@ -471,17 +470,8 @@ import typingsSlinky.std.HTMLTableDataCellElement
 import typingsSlinky.std.HTMLTableHeaderCellElement
 import typingsSlinky.std.HTMLTemplateElement
 import typingsSlinky.std.HTMLTimeElement
-import typingsSlinky.std.Int16Array
-import typingsSlinky.std.Int32Array
-import typingsSlinky.std.Int8Array
-import typingsSlinky.std.Iterable
 import typingsSlinky.std.Map
 import typingsSlinky.std.SVGForeignObjectElement
-import typingsSlinky.std.TouchList
-import typingsSlinky.std.Uint16Array
-import typingsSlinky.std.Uint32Array
-import typingsSlinky.std.Uint8Array
-import typingsSlinky.std.Uint8ClampedArray
 import typingsSlinky.std.Window_
 import typingsSlinky.std.XMLDocument
 import scala.scalajs.js
@@ -504,9 +494,13 @@ object coreMod extends js.Object {
   def deleteTraces(root: Root, indices: Double): js.Promise[PlotlyHTMLElement] = js.native
   def downloadImage(root: Root, opts: DownloadImgopts): js.Promise[String] = js.native
   def extendTraces(root: Root, update: js.Array[Data], indices: js.Array[Double]): js.Promise[PlotlyHTMLElement] = js.native
+  def extendTraces(root: Root, update: js.Array[Data], indices: js.Array[Double], maxPoints: Double): js.Promise[PlotlyHTMLElement] = js.native
   def extendTraces(root: Root, update: js.Array[Data], indices: Double): js.Promise[PlotlyHTMLElement] = js.native
+  def extendTraces(root: Root, update: js.Array[Data], indices: Double, maxPoints: Double): js.Promise[PlotlyHTMLElement] = js.native
   def extendTraces(root: Root, update: Data, indices: js.Array[Double]): js.Promise[PlotlyHTMLElement] = js.native
+  def extendTraces(root: Root, update: Data, indices: js.Array[Double], maxPoints: Double): js.Promise[PlotlyHTMLElement] = js.native
   def extendTraces(root: Root, update: Data, indices: Double): js.Promise[PlotlyHTMLElement] = js.native
+  def extendTraces(root: Root, update: Data, indices: Double, maxPoints: Double): js.Promise[PlotlyHTMLElement] = js.native
   def moveTraces(root: Root, currentIndices: js.Array[Double]): js.Promise[PlotlyHTMLElement] = js.native
   def moveTraces(root: Root, currentIndices: js.Array[Double], newIndices: js.Array[Double]): js.Promise[PlotlyHTMLElement] = js.native
   def moveTraces(root: Root, currentIndices: js.Array[Double], newIndices: Double): js.Promise[PlotlyHTMLElement] = js.native
@@ -634,6 +628,7 @@ object coreMod extends js.Object {
     val schemeSet2: js.Array[String] = js.native
     val schemeSet3: js.Array[String] = js.native
     val schemeSpectral: js.Array[js.Array[String]] = js.native
+    val schemeTableau10: js.Array[String] = js.native
     val schemeYlGn: js.Array[js.Array[String]] = js.native
     val schemeYlGnBu: js.Array[js.Array[String]] = js.native
     val schemeYlOrBr: js.Array[js.Array[String]] = js.native
@@ -718,8 +713,8 @@ object coreMod extends js.Object {
     def active[Datum, PElement /* <: BaseType */, PDatum](node: EnterElement, name: String): (Transition_[EnterElement, Datum, PElement, PDatum]) | Null = js.native
     def active[Datum, PElement /* <: BaseType */, PDatum](node: Document_): (Transition_[Document_, Datum, PElement, PDatum]) | Null = js.native
     def active[Datum, PElement /* <: BaseType */, PDatum](node: Document_, name: String): (Transition_[Document_, Datum, PElement, PDatum]) | Null = js.native
-    def active[Datum, PElement /* <: BaseType */, PDatum](node: Element): (Transition_[org.scalajs.dom.raw.Element, Datum, PElement, PDatum]) | Null = js.native
-    def active[Datum, PElement /* <: BaseType */, PDatum](node: Element, name: String): (Transition_[org.scalajs.dom.raw.Element, Datum, PElement, PDatum]) | Null = js.native
+    def active[Datum, PElement /* <: BaseType */, PDatum](node: Element): (Transition_[Element, Datum, PElement, PDatum]) | Null = js.native
+    def active[Datum, PElement /* <: BaseType */, PDatum](node: Element, name: String): (Transition_[Element, Datum, PElement, PDatum]) | Null = js.native
     def active[Datum, PElement /* <: BaseType */, PDatum](node: Window_): (Transition_[Window_, Datum, PElement, PDatum]) | Null = js.native
     def active[Datum, PElement /* <: BaseType */, PDatum](node: Window_, name: String): (Transition_[Window_, Datum, PElement, PDatum]) | Null = js.native
     def arc(): Arc_[_, DefaultArcObject] = js.native
@@ -746,27 +741,27 @@ object coreMod extends js.Object {
     def bisect(array: ArrayLike[Double], x: Double): Double = js.native
     def bisect(array: ArrayLike[Double], x: Double, lo: Double): Double = js.native
     def bisect(array: ArrayLike[Double], x: Double, lo: Double, hi: Double): Double = js.native
-    def bisect(array: ArrayLike[Date], x: Date): Double = js.native
-    def bisect(array: ArrayLike[Date], x: Date, lo: Double): Double = js.native
-    def bisect(array: ArrayLike[Date], x: Date, lo: Double, hi: Double): Double = js.native
+    def bisect(array: ArrayLike[js.Date], x: js.Date): Double = js.native
+    def bisect(array: ArrayLike[js.Date], x: js.Date, lo: Double): Double = js.native
+    def bisect(array: ArrayLike[js.Date], x: js.Date, lo: Double, hi: Double): Double = js.native
     def bisectLeft(array: ArrayLike[String], x: String): Double = js.native
     def bisectLeft(array: ArrayLike[String], x: String, lo: Double): Double = js.native
     def bisectLeft(array: ArrayLike[String], x: String, lo: Double, hi: Double): Double = js.native
     def bisectLeft(array: ArrayLike[Double], x: Double): Double = js.native
     def bisectLeft(array: ArrayLike[Double], x: Double, lo: Double): Double = js.native
     def bisectLeft(array: ArrayLike[Double], x: Double, lo: Double, hi: Double): Double = js.native
-    def bisectLeft(array: ArrayLike[Date], x: Date): Double = js.native
-    def bisectLeft(array: ArrayLike[Date], x: Date, lo: Double): Double = js.native
-    def bisectLeft(array: ArrayLike[Date], x: Date, lo: Double, hi: Double): Double = js.native
+    def bisectLeft(array: ArrayLike[js.Date], x: js.Date): Double = js.native
+    def bisectLeft(array: ArrayLike[js.Date], x: js.Date, lo: Double): Double = js.native
+    def bisectLeft(array: ArrayLike[js.Date], x: js.Date, lo: Double, hi: Double): Double = js.native
     def bisectRight(array: ArrayLike[String], x: String): Double = js.native
     def bisectRight(array: ArrayLike[String], x: String, lo: Double): Double = js.native
     def bisectRight(array: ArrayLike[String], x: String, lo: Double, hi: Double): Double = js.native
     def bisectRight(array: ArrayLike[Double], x: Double): Double = js.native
     def bisectRight(array: ArrayLike[Double], x: Double, lo: Double): Double = js.native
     def bisectRight(array: ArrayLike[Double], x: Double, lo: Double, hi: Double): Double = js.native
-    def bisectRight(array: ArrayLike[Date], x: Date): Double = js.native
-    def bisectRight(array: ArrayLike[Date], x: Date, lo: Double): Double = js.native
-    def bisectRight(array: ArrayLike[Date], x: Date, lo: Double, hi: Double): Double = js.native
+    def bisectRight(array: ArrayLike[js.Date], x: js.Date): Double = js.native
+    def bisectRight(array: ArrayLike[js.Date], x: js.Date, lo: Double): Double = js.native
+    def bisectRight(array: ArrayLike[js.Date], x: js.Date, lo: Double, hi: Double): Double = js.native
     def bisector[T, U](accessor: js.Function1[/* x */ T, U]): Bisector_[T, U] = js.native
     def bisector[T, U](comparator: js.Function2[/* a */ T, /* b */ U, Double]): Bisector_[T, U] = js.native
     def blob(url: String): js.Promise[Blob] = js.native
@@ -775,8 +770,8 @@ object coreMod extends js.Object {
     def brushSelection(node: SVGGElement): BrushSelection_ | Null = js.native
     def brushX[Datum](): BrushBehavior[Datum] = js.native
     def brushY[Datum](): BrushBehavior[Datum] = js.native
-    def buffer(url: String): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def buffer(url: String, init: RequestInit): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+    def buffer(url: String): js.Promise[js.typedarray.ArrayBuffer] = js.native
+    def buffer(url: String, init: RequestInit): js.Promise[js.typedarray.ArrayBuffer] = js.native
     def chord(): ChordLayout = js.native
     def clientPoint(container: ContainerElement, event: ClientPointEvent): js.Tuple2[Double, Double] = js.native
     def cluster[Datum](): ClusterLayout[Datum] = js.native
@@ -796,7 +791,7 @@ object coreMod extends js.Object {
     def color(cssColorSpecifier: String): RGBColor | HSLColor | Null = js.native
     def contourDensity[Datum](): ContourDensity_[Datum] = js.native
     def contours(): Contours_ = js.native
-    def create[NewGElement /* <: org.scalajs.dom.raw.Element */](name: String): Selection_[NewGElement, js.UndefOr[scala.Nothing], Null, js.UndefOr[scala.Nothing]] = js.native
+    def create[NewGElement /* <: Element */](name: String): Selection_[NewGElement, js.UndefOr[scala.Nothing], Null, js.UndefOr[scala.Nothing]] = js.native
     @JSName("create")
     def create_a(name: a): Selection_[HTMLAnchorElement, js.UndefOr[scala.Nothing], Null, js.UndefOr[scala.Nothing]] = js.native
     @JSName("create")
@@ -1161,7 +1156,7 @@ object coreMod extends js.Object {
     def create_view(name: view): Selection_[SVGViewElement, js.UndefOr[scala.Nothing], Null, js.UndefOr[scala.Nothing]] = js.native
     @JSName("create")
     def create_wbr(name: wbr): Selection_[HTMLElement, js.UndefOr[scala.Nothing], Null, js.UndefOr[scala.Nothing]] = js.native
-    def creator[NewGElement /* <: org.scalajs.dom.raw.Element */](name: String): js.ThisFunction0[/* this */ BaseType, NewGElement] = js.native
+    def creator[NewGElement /* <: Element */](name: String): js.ThisFunction0[/* this */ BaseType, NewGElement] = js.native
     @JSName("creator")
     def creator_a(name: a): js.ThisFunction0[/* this */ BaseType, HTMLAnchorElement] = js.native
     @JSName("creator")
@@ -1509,10 +1504,10 @@ object coreMod extends js.Object {
     def cross[S, T](a: js.Iterable[S], b: js.Iterable[T]): js.Array[js.Tuple2[S, T]] = js.native
     def cross[S, T, U](a: js.Iterable[S], b: js.Iterable[T], reducer: js.Function2[/* a */ S, /* b */ T, U]): js.Array[U] = js.native
     def csv[Columns /* <: String */](url: String): js.Promise[DSVRowArray[Columns]] = js.native
-    def csv[Columns /* <: String */](url: String, init: typingsSlinky.std.RequestInit): js.Promise[DSVRowArray[Columns]] = js.native
+    def csv[Columns /* <: String */](url: String, init: RequestInit): js.Promise[DSVRowArray[Columns]] = js.native
     def csv[ParsedRow /* <: js.Object */, Columns /* <: String */](
       url: String,
-      init: typingsSlinky.std.RequestInit,
+      init: RequestInit,
       row: js.Function3[
           /* rawRow */ DSVRowString[Columns], 
           /* index */ Double, 
@@ -1530,7 +1525,7 @@ object coreMod extends js.Object {
         ]
     ): js.Promise[DSVParsedArray[ParsedRow]] = js.native
     def csvFormat[T /* <: js.Object */](rows: js.Array[T]): String = js.native
-    def csvFormat[T /* <: js.Object */](rows: js.Array[T], columns: js.Array[String]): String = js.native
+    def csvFormat[T /* <: js.Object */](rows: js.Array[T], columns: js.Array[/* keyof T */ String]): String = js.native
     def csvFormatRows(rows: js.Array[js.Array[String]]): String = js.native
     def csvParse[Columns /* <: String */](csvString: String): DSVRowArray[Columns] = js.native
     def csvParse[ParsedRow /* <: js.Object */, Columns /* <: String */](
@@ -1714,9 +1709,9 @@ object coreMod extends js.Object {
     def descending(): Double = js.native
     def descending(a: js.UndefOr[Primitive], b: Primitive): Double = js.native
     def descending(a: Primitive): Double = js.native
-    def deviation[T /* <: Numeric */](array: Iterable[js.UndefOr[T | Null]]): js.UndefOr[Double] = js.native
+    def deviation[T /* <: Numeric */](array: js.Iterable[js.UndefOr[T | Null]]): js.UndefOr[Double] = js.native
     def deviation[T](
-      array: Iterable[T],
+      array: js.Iterable[T],
       accessor: js.Function3[
           /* datum */ T, 
           /* index */ Double, 
@@ -1725,18 +1720,18 @@ object coreMod extends js.Object {
         ]
     ): js.UndefOr[Double] = js.native
     def dispatch[T /* <: EventTarget */](types: String*): Dispatch_[T] = js.native
-    def drag[GElement /* <: org.scalajs.dom.raw.Element */, Datum](): DragBehavior[GElement, Datum, Datum | SubjectPosition] = js.native
+    def drag[GElement /* <: Element */, Datum](): DragBehavior[GElement, Datum, Datum | SubjectPosition] = js.native
     def dragDisable(window: Window_): Unit = js.native
     def dragEnable(window: Window_): Unit = js.native
     def dragEnable(window: Window_, noClick: Boolean): Unit = js.native
     @JSName("drag")
-    def drag_GElement_DraggedElementBaseTypeDatumSubject[GElement /* <: org.scalajs.dom.raw.Element */, Datum, Subject](): DragBehavior[GElement, Datum, Subject] = js.native
+    def drag_GElement_DraggedElementBaseTypeDatumSubject[GElement /* <: Element */, Datum, Subject](): DragBehavior[GElement, Datum, Subject] = js.native
     def dsv[Columns /* <: String */](delimiter: String, url: String): js.Promise[DSVRowArray[Columns]] = js.native
-    def dsv[Columns /* <: String */](delimiter: String, url: String, init: typingsSlinky.std.RequestInit): js.Promise[DSVRowArray[Columns]] = js.native
+    def dsv[Columns /* <: String */](delimiter: String, url: String, init: RequestInit): js.Promise[DSVRowArray[Columns]] = js.native
     def dsv[ParsedRow /* <: js.Object */, Columns /* <: String */](
       delimiter: String,
       url: String,
-      init: typingsSlinky.std.RequestInit,
+      init: RequestInit,
       row: js.Function3[
           /* rawRow */ DSVRowString[Columns], 
           /* index */ Double, 
@@ -1843,9 +1838,9 @@ object coreMod extends js.Object {
     def entries(obj: js.Object): js.Array[AnonValue] = js.native
     def entries[T](obj: StringDictionary[T]): js.Array[AnonKey[T]] = js.native
     def entries[T](obj: ArrayLike[T]): js.Array[AnonKey[T]] = js.native
-    def extent(array: Iterable[String]): js.Tuple2[js.UndefOr[String], js.UndefOr[String]] = js.native
+    def extent(array: js.Iterable[String]): js.Tuple2[js.UndefOr[String], js.UndefOr[String]] = js.native
     def extent[T](
-      array: Iterable[T],
+      array: js.Iterable[T],
       accessor: js.Function3[
           /* datum */ T, 
           /* index */ Double, 
@@ -2094,9 +2089,9 @@ object coreMod extends js.Object {
     def hierarchy[Datum](data: Datum, children: js.Function1[/* d */ Datum, js.UndefOr[js.Array[Datum] | Null]]): HierarchyNode[Datum] = js.native
     def histogram(): HistogramGeneratorNumber[Double, Double] = js.native
     @JSName("histogram")
-    def `histogram_DatumValue_UnionDatejs.undefined_HistogramGeneratorDate`[Datum, Value /* <: js.UndefOr[js.Date] */](): HistogramGeneratorDate[Datum, Value] = js.native
+    def `histogram_DatumValue_UnionDate<undefined>_HistogramGeneratorDate`[Datum, Value /* <: js.UndefOr[js.Date] */](): HistogramGeneratorDate[Datum, Value] = js.native
     @JSName("histogram")
-    def `histogram_DatumValue_UnionDoublejs.undefined`[Datum, Value /* <: js.UndefOr[Double] */](): HistogramGeneratorNumber[Datum, Value] = js.native
+    def `histogram_DatumValue_UnionDouble<undefined>`[Datum, Value /* <: js.UndefOr[Double] */](): HistogramGeneratorNumber[Datum, Value] = js.native
     def hsl(color: ColorCommonInstance): HSLColor = js.native
     /**
       * Converts the provided color instance and returns an HSL color.
@@ -2137,7 +2132,7 @@ object coreMod extends js.Object {
     def interpolate(a: AnonToString, b: String): js.Function1[/* t */ Double, String] = js.native
     def interpolate(a: typingsSlinky.d3Interpolate.AnonValueOf, b: Double): js.Function1[/* t */ Double, Double] = js.native
     def interpolate(a: typingsSlinky.d3Interpolate.AnonValueOf, b: typingsSlinky.d3Interpolate.AnonValueOf): js.Function1[/* t */ Double, Double] = js.native
-    def interpolate(a: Date, b: Date): js.Function1[/* t */ Double, js.Date] = js.native
+    def interpolate(a: js.Date, b: js.Date): js.Function1[/* t */ Double, js.Date] = js.native
     def interpolate[U /* <: js.Object */](a: js.Any, b: U): js.Function1[/* t */ Double, U] = js.native
     def interpolate[U /* <: js.Array[_] */](a: js.Array[_], b: U): js.Function1[/* t */ Double, U] = js.native
     def interpolateArray[A /* <: js.Array[_] */](a: js.Array[_], b: A): ArrayInterpolator[A] = js.native
@@ -2147,6 +2142,7 @@ object coreMod extends js.Object {
     def interpolateBrBG(t: Double): String = js.native
     def interpolateBuGn(t: Double): String = js.native
     def interpolateBuPu(t: Double): String = js.native
+    def interpolateCividis(t: Double): String = js.native
     def interpolateCool(t: Double): String = js.native
     def interpolateCubehelix(a: String, b: String): js.Function1[/* t */ Double, String] = js.native
     def interpolateCubehelix(a: String, b: ColorCommonInstance): js.Function1[/* t */ Double, String] = js.native
@@ -2225,6 +2221,7 @@ object coreMod extends js.Object {
     def interpolateString(a: AnonToString, b: AnonToString): js.Function1[/* t */ Double, String] = js.native
     def interpolateTransformCss(a: String, b: String): js.Function1[/* t */ Double, String] = js.native
     def interpolateTransformSvg(a: String, b: String): js.Function1[/* t */ Double, String] = js.native
+    def interpolateTurbo(t: Double): String = js.native
     def interpolateViridis(t: Double): String = js.native
     def interpolateWarm(t: Double): String = js.native
     def interpolateYlGn(t: Double): String = js.native
@@ -2329,9 +2326,9 @@ object coreMod extends js.Object {
     def map[T](obj: NumberDictionary[T]): Map_[T] = js.native
     def map[T](obj: StringDictionary[T]): Map_[T] = js.native
     def matcher(selector: String): js.ThisFunction0[/* this */ BaseType, Boolean] = js.native
-    def max(array: Iterable[String]): js.UndefOr[String] = js.native
+    def max(array: js.Iterable[String]): js.UndefOr[String] = js.native
     def max[T](
-      array: Iterable[T],
+      array: js.Iterable[T],
       accessor: js.Function3[
           /* datum */ T, 
           /* index */ Double, 
@@ -2346,9 +2343,9 @@ object coreMod extends js.Object {
     ): js.UndefOr[U] = js.native
     @JSName("max")
     def max_T_Numeric[T /* <: Numeric */](array: js.Iterable[T]): js.UndefOr[T] = js.native
-    def mean[T /* <: Numeric */](array: Iterable[js.UndefOr[T | Null]]): js.UndefOr[Double] = js.native
+    def mean[T /* <: Numeric */](array: js.Iterable[js.UndefOr[T | Null]]): js.UndefOr[Double] = js.native
     def mean[T](
-      array: Iterable[T],
+      array: js.Iterable[T],
       accessor: js.Function3[
           /* datum */ T, 
           /* index */ Double, 
@@ -2356,15 +2353,15 @@ object coreMod extends js.Object {
           js.UndefOr[Double | Null]
         ]
     ): js.UndefOr[Double] = js.native
-    def median[T /* <: Numeric */](array: Iterable[js.UndefOr[T | Null]]): js.UndefOr[Double] = js.native
+    def median[T /* <: Numeric */](array: js.Iterable[js.UndefOr[T | Null]]): js.UndefOr[Double] = js.native
     def median[T](
-      array: Iterable[T],
+      array: js.Iterable[T],
       accessor: js.Function3[/* element */ T, /* i */ Double, /* array */ js.Iterable[T], js.UndefOr[Double | Null]]
     ): js.UndefOr[Double] = js.native
     def merge[T](arrays: js.Iterable[js.Iterable[T]]): js.Array[T] = js.native
-    def min(array: Iterable[String]): js.UndefOr[String] = js.native
+    def min(array: js.Iterable[String]): js.UndefOr[String] = js.native
     def min[T](
-      array: Iterable[T],
+      array: js.Iterable[T],
       accessor: js.Function3[
           /* datum */ T, 
           /* index */ Double, 
@@ -2391,7 +2388,7 @@ object coreMod extends js.Object {
     def partition[Datum](): PartitionLayout[Datum] = js.native
     def path(): Path_ = js.native
     def permute[T](array: NumberDictionary[T], keys: ArrayLike[Double]): js.Array[T] = js.native
-    def permute[T, K /* <: String */](`object`: T, keys: ArrayLike[K]): js.Array[
+    def permute[T, K /* <: /* keyof T */ String */](`object`: T, keys: ArrayLike[K]): js.Array[
         /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any
       ] = js.native
     def pie(): Pie_[_, Double | typingsSlinky.d3Shape.AnonValueOf] = js.native
@@ -2423,9 +2420,9 @@ object coreMod extends js.Object {
     def quadtree[T](data: js.Array[T]): Quadtree_[T] = js.native
     def quadtree[T](data: js.Array[T], x: js.Function1[/* d */ T, Double]): Quadtree_[T] = js.native
     def quadtree[T](data: js.Array[T], x: js.Function1[/* d */ T, Double], y: js.Function1[/* d */ T, Double]): Quadtree_[T] = js.native
-    def quantile[T /* <: Numeric */](array: Iterable[js.UndefOr[T | Null]], p: Double): js.UndefOr[Double] = js.native
+    def quantile[T /* <: Numeric */](array: js.Iterable[js.UndefOr[T | Null]], p: Double): js.UndefOr[Double] = js.native
     def quantile[T](
-      array: Iterable[T],
+      array: js.Iterable[T],
       p: Double,
       accessor: js.Function3[/* element */ T, /* i */ Double, /* array */ js.Iterable[T], js.UndefOr[Double | Null]]
     ): js.UndefOr[Double] = js.native
@@ -2576,6 +2573,11 @@ object coreMod extends js.Object {
     def scaleSqrt_Output[Output](): ScalePower[Output, Output] = js.native
     @JSName("scaleSqrt")
     def scaleSqrt_RangeOutput[Range, Output](): ScalePower[Range, Output] = js.native
+    def scaleSymlog(): ScaleSymLog_[Double, Double] = js.native
+    @JSName("scaleSymlog")
+    def scaleSymlog_Output[Output](): ScaleSymLog_[Output, Output] = js.native
+    @JSName("scaleSymlog")
+    def scaleSymlog_RangeOutput[Range, Output](): ScaleSymLog_[Range, Output] = js.native
     def scaleThreshold(): ScaleThreshold_[Double, Double] = js.native
     @JSName("scaleThreshold")
     def scaleThreshold_Domain_UnionDoubleStringDateRange[Domain /* <: Double | String | js.Date */, Range](): ScaleThreshold_[Domain, Range] = js.native
@@ -2596,7 +2598,7 @@ object coreMod extends js.Object {
     def select[OldDatum](): Selection_[Null, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
     def select[OldDatum](node: EnterElement): Selection_[EnterElement, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
     def select[OldDatum](node: Document_): Selection_[Document_, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
-    def select[OldDatum](node: Element): Selection_[org.scalajs.dom.raw.Element, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
+    def select[OldDatum](node: Element): Selection_[Element, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
     def select[OldDatum](node: Window_): Selection_[Window_, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
     def select[GElement /* <: BaseType */, OldDatum](selector: String): Selection_[GElement, OldDatum, HTMLElement, _] = js.native
     def selectAll(): Selection_[Null, js.UndefOr[scala.Nothing], Null, js.UndefOr[scala.Nothing]] = js.native
@@ -2604,8 +2606,8 @@ object coreMod extends js.Object {
     def selectAll[GElement /* <: BaseType */, OldDatum](nodes: typingsSlinky.d3Selection.mod.ArrayLike[GElement]): Selection_[GElement, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
     def selectAll[GElement /* <: BaseType */, OldDatum](selector: String): Selection_[GElement, OldDatum, HTMLElement, _] = js.native
     def selection(): Selection_[HTMLElement, _, Null, js.UndefOr[scala.Nothing]] = js.native
-    def selector[DescElement /* <: org.scalajs.dom.raw.Element */](selector: String): js.ThisFunction0[/* this */ BaseType, DescElement] = js.native
-    def selectorAll[DescElement /* <: org.scalajs.dom.raw.Element */](selector: String): js.ThisFunction0[/* this */ BaseType, NodeListOf[DescElement with Node]] = js.native
+    def selector[DescElement /* <: Element */](selector: String): js.ThisFunction0[/* this */ BaseType, DescElement] = js.native
+    def selectorAll[DescElement /* <: Element */](selector: String): js.ThisFunction0[/* this */ BaseType, NodeListOf[DescElement with Node]] = js.native
     def set(): Set_ = js.native
     def set(array: js.Array[String | Stringifiable]): Set_ = js.native
     def set(d3Set: Set_): Set_ = js.native
@@ -2613,33 +2615,33 @@ object coreMod extends js.Object {
       array: js.Array[T],
       key: js.Function3[/* value */ T, /* index */ Double, /* array */ js.Array[T], String]
     ): Set_ = js.native
-    def shuffle(array: Float32Array): scala.scalajs.js.typedarray.Float32Array = js.native
-    def shuffle(array: Float32Array, lo: Double): scala.scalajs.js.typedarray.Float32Array = js.native
-    def shuffle(array: Float32Array, lo: Double, hi: Double): scala.scalajs.js.typedarray.Float32Array = js.native
-    def shuffle(array: Float64Array): scala.scalajs.js.typedarray.Float64Array = js.native
-    def shuffle(array: Float64Array, lo: Double): scala.scalajs.js.typedarray.Float64Array = js.native
-    def shuffle(array: Float64Array, lo: Double, hi: Double): scala.scalajs.js.typedarray.Float64Array = js.native
-    def shuffle(array: Int16Array): scala.scalajs.js.typedarray.Int16Array = js.native
-    def shuffle(array: Int16Array, lo: Double): scala.scalajs.js.typedarray.Int16Array = js.native
-    def shuffle(array: Int16Array, lo: Double, hi: Double): scala.scalajs.js.typedarray.Int16Array = js.native
-    def shuffle(array: Int32Array): scala.scalajs.js.typedarray.Int32Array = js.native
-    def shuffle(array: Int32Array, lo: Double): scala.scalajs.js.typedarray.Int32Array = js.native
-    def shuffle(array: Int32Array, lo: Double, hi: Double): scala.scalajs.js.typedarray.Int32Array = js.native
-    def shuffle(array: Int8Array): scala.scalajs.js.typedarray.Int8Array = js.native
-    def shuffle(array: Int8Array, lo: Double): scala.scalajs.js.typedarray.Int8Array = js.native
-    def shuffle(array: Int8Array, lo: Double, hi: Double): scala.scalajs.js.typedarray.Int8Array = js.native
-    def shuffle(array: Uint16Array): scala.scalajs.js.typedarray.Uint16Array = js.native
-    def shuffle(array: Uint16Array, lo: Double): scala.scalajs.js.typedarray.Uint16Array = js.native
-    def shuffle(array: Uint16Array, lo: Double, hi: Double): scala.scalajs.js.typedarray.Uint16Array = js.native
-    def shuffle(array: Uint32Array): scala.scalajs.js.typedarray.Uint32Array = js.native
-    def shuffle(array: Uint32Array, lo: Double): scala.scalajs.js.typedarray.Uint32Array = js.native
-    def shuffle(array: Uint32Array, lo: Double, hi: Double): scala.scalajs.js.typedarray.Uint32Array = js.native
-    def shuffle(array: Uint8Array): scala.scalajs.js.typedarray.Uint8Array = js.native
-    def shuffle(array: Uint8Array, lo: Double): scala.scalajs.js.typedarray.Uint8Array = js.native
-    def shuffle(array: Uint8Array, lo: Double, hi: Double): scala.scalajs.js.typedarray.Uint8Array = js.native
-    def shuffle(array: Uint8ClampedArray): scala.scalajs.js.typedarray.Uint8ClampedArray = js.native
-    def shuffle(array: Uint8ClampedArray, lo: Double): scala.scalajs.js.typedarray.Uint8ClampedArray = js.native
-    def shuffle(array: Uint8ClampedArray, lo: Double, hi: Double): scala.scalajs.js.typedarray.Uint8ClampedArray = js.native
+    def shuffle(array: js.typedarray.Float32Array): js.typedarray.Float32Array = js.native
+    def shuffle(array: js.typedarray.Float32Array, lo: Double): js.typedarray.Float32Array = js.native
+    def shuffle(array: js.typedarray.Float32Array, lo: Double, hi: Double): js.typedarray.Float32Array = js.native
+    def shuffle(array: js.typedarray.Float64Array): js.typedarray.Float64Array = js.native
+    def shuffle(array: js.typedarray.Float64Array, lo: Double): js.typedarray.Float64Array = js.native
+    def shuffle(array: js.typedarray.Float64Array, lo: Double, hi: Double): js.typedarray.Float64Array = js.native
+    def shuffle(array: js.typedarray.Int16Array): js.typedarray.Int16Array = js.native
+    def shuffle(array: js.typedarray.Int16Array, lo: Double): js.typedarray.Int16Array = js.native
+    def shuffle(array: js.typedarray.Int16Array, lo: Double, hi: Double): js.typedarray.Int16Array = js.native
+    def shuffle(array: js.typedarray.Int32Array): js.typedarray.Int32Array = js.native
+    def shuffle(array: js.typedarray.Int32Array, lo: Double): js.typedarray.Int32Array = js.native
+    def shuffle(array: js.typedarray.Int32Array, lo: Double, hi: Double): js.typedarray.Int32Array = js.native
+    def shuffle(array: js.typedarray.Int8Array): js.typedarray.Int8Array = js.native
+    def shuffle(array: js.typedarray.Int8Array, lo: Double): js.typedarray.Int8Array = js.native
+    def shuffle(array: js.typedarray.Int8Array, lo: Double, hi: Double): js.typedarray.Int8Array = js.native
+    def shuffle(array: js.typedarray.Uint16Array): js.typedarray.Uint16Array = js.native
+    def shuffle(array: js.typedarray.Uint16Array, lo: Double): js.typedarray.Uint16Array = js.native
+    def shuffle(array: js.typedarray.Uint16Array, lo: Double, hi: Double): js.typedarray.Uint16Array = js.native
+    def shuffle(array: js.typedarray.Uint32Array): js.typedarray.Uint32Array = js.native
+    def shuffle(array: js.typedarray.Uint32Array, lo: Double): js.typedarray.Uint32Array = js.native
+    def shuffle(array: js.typedarray.Uint32Array, lo: Double, hi: Double): js.typedarray.Uint32Array = js.native
+    def shuffle(array: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
+    def shuffle(array: js.typedarray.Uint8Array, lo: Double): js.typedarray.Uint8Array = js.native
+    def shuffle(array: js.typedarray.Uint8Array, lo: Double, hi: Double): js.typedarray.Uint8Array = js.native
+    def shuffle(array: js.typedarray.Uint8ClampedArray): js.typedarray.Uint8ClampedArray = js.native
+    def shuffle(array: js.typedarray.Uint8ClampedArray, lo: Double): js.typedarray.Uint8ClampedArray = js.native
+    def shuffle(array: js.typedarray.Uint8ClampedArray, lo: Double, hi: Double): js.typedarray.Uint8ClampedArray = js.native
     def shuffle[T](array: js.Array[T]): js.Array[T] = js.native
     def shuffle[T](array: js.Array[T], lo: Double): js.Array[T] = js.native
     def shuffle[T](array: js.Array[T], lo: Double, hi: Double): js.Array[T] = js.native
@@ -2662,10 +2664,10 @@ object coreMod extends js.Object {
     @JSName("stack")
     def stack_ThisDatumKey[This, Datum, Key](): Stack_[This, Datum, Key] = js.native
     def stratify[Datum](): StratifyOperator[Datum] = js.native
-    def style(node: org.scalajs.dom.raw.Element, name: String): String = js.native
-    def sum[T /* <: Numeric */](array: Iterable[js.UndefOr[T | Null]]): Double = js.native
+    def style(node: Element, name: String): String = js.native
+    def sum[T /* <: Numeric */](array: js.Iterable[js.UndefOr[T | Null]]): Double = js.native
     def sum[T](
-      array: Iterable[T],
+      array: js.Iterable[T],
       accessor: js.Function3[
           /* datum */ T, 
           /* index */ Double, 
@@ -3047,7 +3049,7 @@ object coreMod extends js.Object {
     def touch(container: ContainerElement, identifier: Double): (js.Tuple2[Double, Double]) | Null = js.native
     def touch(container: ContainerElement, touches: TouchList, identifier: Double): (js.Tuple2[Double, Double]) | Null = js.native
     def touches(container: ContainerElement): js.Array[js.Tuple2[Double, Double]] = js.native
-    def touches(container: ContainerElement, touches: org.scalajs.dom.raw.TouchList): js.Array[js.Tuple2[Double, Double]] = js.native
+    def touches(container: ContainerElement, touches: TouchList): js.Array[js.Tuple2[Double, Double]] = js.native
     def transition[OldDatum](): Transition_[HTMLElement, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
     def transition[OldDatum](name: String): Transition_[HTMLElement, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
     def transition[OldDatum](transition: Transition_[BaseType, _, BaseType, _]): Transition_[HTMLElement, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
@@ -3061,10 +3063,10 @@ object coreMod extends js.Object {
     def treemapSliceDice(node: HierarchyRectangularNode[_], x0: Double, y0: Double, x1: Double, y1: Double): Unit = js.native
     def treemapSquarify(node: HierarchyRectangularNode[_], x0: Double, y0: Double, x1: Double, y1: Double): Unit = js.native
     def tsv[Columns /* <: String */](url: String): js.Promise[DSVRowArray[Columns]] = js.native
-    def tsv[Columns /* <: String */](url: String, init: typingsSlinky.std.RequestInit): js.Promise[DSVRowArray[Columns]] = js.native
+    def tsv[Columns /* <: String */](url: String, init: RequestInit): js.Promise[DSVRowArray[Columns]] = js.native
     def tsv[ParsedRow /* <: js.Object */, Columns /* <: String */](
       url: String,
-      init: typingsSlinky.std.RequestInit,
+      init: RequestInit,
       row: js.Function3[
           /* rawRow */ DSVRowString[Columns], 
           /* index */ Double, 
@@ -3082,7 +3084,7 @@ object coreMod extends js.Object {
         ]
     ): js.Promise[DSVParsedArray[ParsedRow]] = js.native
     def tsvFormat[T /* <: js.Object */](rows: js.Array[T]): String = js.native
-    def tsvFormat[T /* <: js.Object */](rows: js.Array[T], columns: js.Array[String]): String = js.native
+    def tsvFormat[T /* <: js.Object */](rows: js.Array[T], columns: js.Array[/* keyof T */ String]): String = js.native
     def tsvFormatRows(rows: js.Array[js.Array[String]]): String = js.native
     def tsvParse[Columns /* <: String */](tsvString: String): DSVRowArray[Columns] = js.native
     def tsvParse[ParsedRow /* <: js.Object */, Columns /* <: String */](
@@ -3434,9 +3436,9 @@ object coreMod extends js.Object {
     def values(obj: js.Object): js.Array[_] = js.native
     def values[T](obj: StringDictionary[T]): js.Array[T] = js.native
     def values[T](obj: ArrayLike[T]): js.Array[T] = js.native
-    def variance[T /* <: Numeric */](array: Iterable[js.UndefOr[T | Null]]): js.UndefOr[Double] = js.native
+    def variance[T /* <: Numeric */](array: js.Iterable[js.UndefOr[T | Null]]): js.UndefOr[Double] = js.native
     def variance[T](
-      array: Iterable[T],
+      array: js.Iterable[T],
       accessor: js.Function3[
           /* datum */ T, 
           /* index */ Double, 
@@ -3451,8 +3453,8 @@ object coreMod extends js.Object {
     def xml(url: String): js.Promise[XMLDocument] = js.native
     def xml(url: String, init: RequestInit): js.Promise[XMLDocument] = js.native
     def zip[T](arrays: ArrayLike[T]*): js.Array[js.Array[T]] = js.native
-    def zoom[ZoomRefElement /* <: org.scalajs.dom.raw.Element */, Datum](): ZoomBehavior[ZoomRefElement, Datum] = js.native
-    def zoomTransform(node: org.scalajs.dom.raw.Element): ZoomTransform_ = js.native
+    def zoom[ZoomRefElement /* <: Element */, Datum](): ZoomBehavior[ZoomRefElement, Datum] = js.native
+    def zoomTransform(node: Element): ZoomTransform_ = js.native
   }
   
 }

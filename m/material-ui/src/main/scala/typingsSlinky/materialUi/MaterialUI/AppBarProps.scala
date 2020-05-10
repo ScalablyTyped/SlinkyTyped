@@ -9,60 +9,224 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AppBarProps extends js.Object {
-  var className: js.UndefOr[String] = js.undefined
-  var iconClassNameLeft: js.UndefOr[String] = js.undefined
-  var iconClassNameRight: js.UndefOr[String] = js.undefined
-  var iconElementLeft: js.UndefOr[ReactElement] = js.undefined
-  var iconElementRight: js.UndefOr[ReactElement] = js.undefined
-  var iconStyleLeft: js.UndefOr[CSSProperties] = js.undefined
-  var iconStyleRight: js.UndefOr[CSSProperties] = js.undefined
-  var onLeftIconButtonClick: js.UndefOr[MouseEventHandler[js.Object]] = js.undefined
-  var onRightIconButtonClick: js.UndefOr[MouseEventHandler[js.Object]] = js.undefined
-  var onTitleClick: js.UndefOr[MouseEventHandler[js.Object]] = js.undefined
-  var showMenuIconButton: js.UndefOr[Boolean] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
-  var titleStyle: js.UndefOr[CSSProperties] = js.undefined
-  var zDepth: js.UndefOr[Double] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var iconClassNameLeft: js.UndefOr[String] = js.native
+  var iconClassNameRight: js.UndefOr[String] = js.native
+  var iconElementLeft: js.UndefOr[ReactElement] = js.native
+  var iconElementRight: js.UndefOr[ReactElement] = js.native
+  var iconStyleLeft: js.UndefOr[CSSProperties] = js.native
+  var iconStyleRight: js.UndefOr[CSSProperties] = js.native
+  var onLeftIconButtonClick: js.UndefOr[MouseEventHandler[js.Object]] = js.native
+  var onRightIconButtonClick: js.UndefOr[MouseEventHandler[js.Object]] = js.native
+  var onTitleClick: js.UndefOr[MouseEventHandler[js.Object]] = js.native
+  var showMenuIconButton: js.UndefOr[Boolean] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
+  var title: js.UndefOr[TagMod[Any]] = js.native
+  var titleStyle: js.UndefOr[CSSProperties] = js.native
+  var zDepth: js.UndefOr[Double] = js.native
 }
 
 object AppBarProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    iconClassNameLeft: String = null,
-    iconClassNameRight: String = null,
-    iconElementLeft: ReactElement = null,
-    iconElementRight: ReactElement = null,
-    iconStyleLeft: CSSProperties = null,
-    iconStyleRight: CSSProperties = null,
-    onLeftIconButtonClick: SyntheticMouseEvent[js.Object] => Unit = null,
-    onRightIconButtonClick: SyntheticMouseEvent[js.Object] => Unit = null,
-    onTitleClick: SyntheticMouseEvent[js.Object] => Unit = null,
-    showMenuIconButton: js.UndefOr[Boolean] = js.undefined,
-    style: CSSProperties = null,
-    title: TagMod[Any] = null,
-    titleStyle: CSSProperties = null,
-    zDepth: Int | Double = null
-  ): AppBarProps = {
+  def apply(): AppBarProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (iconClassNameLeft != null) __obj.updateDynamic("iconClassNameLeft")(iconClassNameLeft.asInstanceOf[js.Any])
-    if (iconClassNameRight != null) __obj.updateDynamic("iconClassNameRight")(iconClassNameRight.asInstanceOf[js.Any])
-    if (iconElementLeft != null) __obj.updateDynamic("iconElementLeft")(iconElementLeft.asInstanceOf[js.Any])
-    if (iconElementRight != null) __obj.updateDynamic("iconElementRight")(iconElementRight.asInstanceOf[js.Any])
-    if (iconStyleLeft != null) __obj.updateDynamic("iconStyleLeft")(iconStyleLeft.asInstanceOf[js.Any])
-    if (iconStyleRight != null) __obj.updateDynamic("iconStyleRight")(iconStyleRight.asInstanceOf[js.Any])
-    if (onLeftIconButtonClick != null) __obj.updateDynamic("onLeftIconButtonClick")(js.Any.fromFunction1(onLeftIconButtonClick))
-    if (onRightIconButtonClick != null) __obj.updateDynamic("onRightIconButtonClick")(js.Any.fromFunction1(onRightIconButtonClick))
-    if (onTitleClick != null) __obj.updateDynamic("onTitleClick")(js.Any.fromFunction1(onTitleClick))
-    if (!js.isUndefined(showMenuIconButton)) __obj.updateDynamic("showMenuIconButton")(showMenuIconButton.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titleStyle != null) __obj.updateDynamic("titleStyle")(titleStyle.asInstanceOf[js.Any])
-    if (zDepth != null) __obj.updateDynamic("zDepth")(zDepth.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppBarProps]
   }
+  @scala.inline
+  implicit class AppBarPropsOps[Self <: AppBarProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconClassNameLeft(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClassNameLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconClassNameLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClassNameLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconClassNameRight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClassNameRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconClassNameRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClassNameRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconElementLeft(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconElementLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconElementLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconElementLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconElementRight(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconElementRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconElementRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconElementRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconStyleLeft(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyleLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconStyleLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyleLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconStyleRight(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyleRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconStyleRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyleRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLeftIconButtonClick(value: SyntheticMouseEvent[js.Object] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLeftIconButtonClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLeftIconButtonClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLeftIconButtonClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRightIconButtonClick(value: SyntheticMouseEvent[js.Object] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRightIconButtonClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRightIconButtonClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRightIconButtonClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTitleClick(value: SyntheticMouseEvent[js.Object] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTitleClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTitleClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTitleClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowMenuIconButton(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showMenuIconButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowMenuIconButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showMenuIconButton")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZDepth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zDepth")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

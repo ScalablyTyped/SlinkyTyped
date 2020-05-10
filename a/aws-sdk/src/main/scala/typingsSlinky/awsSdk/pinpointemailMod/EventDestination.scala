@@ -38,22 +38,89 @@ trait EventDestination extends js.Object {
 
 object EventDestination {
   @scala.inline
-  def apply(
-    MatchingEventTypes: EventTypes,
-    Name: EventDestinationName,
-    CloudWatchDestination: CloudWatchDestination = null,
-    Enabled: js.UndefOr[Boolean] = js.undefined,
-    KinesisFirehoseDestination: KinesisFirehoseDestination = null,
-    PinpointDestination: PinpointDestination = null,
-    SnsDestination: SnsDestination = null
-  ): EventDestination = {
+  def apply(MatchingEventTypes: EventTypes, Name: EventDestinationName): EventDestination = {
     val __obj = js.Dynamic.literal(MatchingEventTypes = MatchingEventTypes.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
-    if (CloudWatchDestination != null) __obj.updateDynamic("CloudWatchDestination")(CloudWatchDestination.asInstanceOf[js.Any])
-    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.asInstanceOf[js.Any])
-    if (KinesisFirehoseDestination != null) __obj.updateDynamic("KinesisFirehoseDestination")(KinesisFirehoseDestination.asInstanceOf[js.Any])
-    if (PinpointDestination != null) __obj.updateDynamic("PinpointDestination")(PinpointDestination.asInstanceOf[js.Any])
-    if (SnsDestination != null) __obj.updateDynamic("SnsDestination")(SnsDestination.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventDestination]
   }
+  @scala.inline
+  implicit class EventDestinationOps[Self <: EventDestination] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMatchingEventTypes(value: EventTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchingEventTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: EventDestinationName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCloudWatchDestination(value: CloudWatchDestination): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchDestination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudWatchDestination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchDestination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Enabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKinesisFirehoseDestination(value: KinesisFirehoseDestination): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisFirehoseDestination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKinesisFirehoseDestination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisFirehoseDestination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPinpointDestination(value: PinpointDestination): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PinpointDestination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPinpointDestination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PinpointDestination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnsDestination(value: SnsDestination): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnsDestination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnsDestination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnsDestination")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

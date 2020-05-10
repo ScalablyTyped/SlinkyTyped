@@ -38,18 +38,65 @@ trait SchemaGooglePrivacyDlpV2DateShiftConfig extends js.Object {
 
 object SchemaGooglePrivacyDlpV2DateShiftConfig {
   @scala.inline
-  def apply(
-    context: SchemaGooglePrivacyDlpV2FieldId = null,
-    cryptoKey: SchemaGooglePrivacyDlpV2CryptoKey = null,
-    lowerBoundDays: Int | Double = null,
-    upperBoundDays: Int | Double = null
-  ): SchemaGooglePrivacyDlpV2DateShiftConfig = {
+  def apply(): SchemaGooglePrivacyDlpV2DateShiftConfig = {
     val __obj = js.Dynamic.literal()
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (cryptoKey != null) __obj.updateDynamic("cryptoKey")(cryptoKey.asInstanceOf[js.Any])
-    if (lowerBoundDays != null) __obj.updateDynamic("lowerBoundDays")(lowerBoundDays.asInstanceOf[js.Any])
-    if (upperBoundDays != null) __obj.updateDynamic("upperBoundDays")(upperBoundDays.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2DateShiftConfig]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2DateShiftConfigOps[Self <: SchemaGooglePrivacyDlpV2DateShiftConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContext(value: SchemaGooglePrivacyDlpV2FieldId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCryptoKey(value: SchemaGooglePrivacyDlpV2CryptoKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCryptoKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLowerBoundDays(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerBoundDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLowerBoundDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerBoundDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpperBoundDays(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upperBoundDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpperBoundDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upperBoundDays")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

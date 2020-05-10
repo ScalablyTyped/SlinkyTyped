@@ -22,15 +22,47 @@ trait PutEmailIdentityMailFromAttributesRequest extends js.Object {
 
 object PutEmailIdentityMailFromAttributesRequest {
   @scala.inline
-  def apply(
-    EmailIdentity: Identity,
-    BehaviorOnMxFailure: BehaviorOnMxFailure = null,
-    MailFromDomain: MailFromDomainName = null
-  ): PutEmailIdentityMailFromAttributesRequest = {
+  def apply(EmailIdentity: Identity): PutEmailIdentityMailFromAttributesRequest = {
     val __obj = js.Dynamic.literal(EmailIdentity = EmailIdentity.asInstanceOf[js.Any])
-    if (BehaviorOnMxFailure != null) __obj.updateDynamic("BehaviorOnMxFailure")(BehaviorOnMxFailure.asInstanceOf[js.Any])
-    if (MailFromDomain != null) __obj.updateDynamic("MailFromDomain")(MailFromDomain.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutEmailIdentityMailFromAttributesRequest]
   }
+  @scala.inline
+  implicit class PutEmailIdentityMailFromAttributesRequestOps[Self <: PutEmailIdentityMailFromAttributesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmailIdentity(value: Identity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailIdentity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBehaviorOnMxFailure(value: BehaviorOnMxFailure): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BehaviorOnMxFailure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBehaviorOnMxFailure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BehaviorOnMxFailure")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMailFromDomain(value: MailFromDomainName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MailFromDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMailFromDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MailFromDomain")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,26 +4,68 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClickOptions extends js.Object {
   /** @default MouseButtons.Left */
-  var button: js.UndefOr[MouseButtons] = js.undefined
+  var button: js.UndefOr[MouseButtons] = js.native
   /** @default 1 */
-  var clickCount: js.UndefOr[Double] = js.undefined
+  var clickCount: js.UndefOr[Double] = js.native
   /**
     * Time to wait between mousedown and mouseup in milliseconds.
     * @default 0
     */
-  var delay: js.UndefOr[Double] = js.undefined
+  var delay: js.UndefOr[Double] = js.native
 }
 
 object ClickOptions {
   @scala.inline
-  def apply(button: MouseButtons = null, clickCount: Int | Double = null, delay: Int | Double = null): ClickOptions = {
+  def apply(): ClickOptions = {
     val __obj = js.Dynamic.literal()
-    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
-    if (clickCount != null) __obj.updateDynamic("clickCount")(clickCount.asInstanceOf[js.Any])
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClickOptions]
   }
+  @scala.inline
+  implicit class ClickOptionsOps[Self <: ClickOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withButton(value: MouseButtons): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClickCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClickCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

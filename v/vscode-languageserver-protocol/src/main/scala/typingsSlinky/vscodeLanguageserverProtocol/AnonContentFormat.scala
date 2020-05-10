@@ -5,28 +5,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonContentFormat extends js.Object {
   /**
     * Client supports the follow content formats for the content
     * property. The order describes the preferred format of the client.
     */
-  var contentFormat: js.UndefOr[js.Array[MarkupKind]] = js.undefined
+  var contentFormat: js.UndefOr[js.Array[MarkupKind]] = js.native
   /**
     * Whether hover supports dynamic registration.
     */
-  var dynamicRegistration: js.UndefOr[Boolean] = js.undefined
+  var dynamicRegistration: js.UndefOr[Boolean] = js.native
 }
 
 object AnonContentFormat {
   @scala.inline
-  def apply(
-    contentFormat: js.Array[MarkupKind] = null,
-    dynamicRegistration: js.UndefOr[Boolean] = js.undefined
-  ): AnonContentFormat = {
+  def apply(): AnonContentFormat = {
     val __obj = js.Dynamic.literal()
-    if (contentFormat != null) __obj.updateDynamic("contentFormat")(contentFormat.asInstanceOf[js.Any])
-    if (!js.isUndefined(dynamicRegistration)) __obj.updateDynamic("dynamicRegistration")(dynamicRegistration.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonContentFormat]
   }
+  @scala.inline
+  implicit class AnonContentFormatOps[Self <: AnonContentFormat] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentFormat(value: js.Array[MarkupKind]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamicRegistration(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicRegistration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamicRegistration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicRegistration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

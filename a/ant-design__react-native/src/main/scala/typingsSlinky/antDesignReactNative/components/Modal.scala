@@ -1,10 +1,9 @@
 package typingsSlinky.antDesignReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.modalMod.default
 import typingsSlinky.antDesignReactNative.modalModalMod.ModalProps
 import typingsSlinky.antDesignReactNative.modalPropsTypeMod.Action
@@ -17,53 +16,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Modal
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Modal {
   @JSImport("@ant-design/react-native/lib/modal", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    visible: Boolean,
-    animateAppear: js.UndefOr[Boolean] = js.undefined,
-    animated: js.UndefOr[Boolean] = js.undefined,
-    animationType: js.Any = null,
-    bodyStyle: StyleProp[ViewStyle] = null,
-    closable: js.UndefOr[Boolean] = js.undefined,
-    footer: js.Array[Action[TextStyle]] = null,
-    locale: js.Object = null,
-    maskClosable: js.UndefOr[Boolean] = js.undefined,
-    onAnimationEnd: /* visible */ Boolean => Unit = null,
-    onClose: () => Unit = null,
-    operation: js.UndefOr[Boolean] = js.undefined,
-    popup: js.UndefOr[Boolean] = js.undefined,
-    style: StyleProp[ViewStyle] = null,
-    styles: Partial[ModalStyle] = null,
-    title: TagMod[Any] = null,
-    transparent: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(visible = visible.asInstanceOf[js.Any])
-    if (!js.isUndefined(animateAppear)) __obj.updateDynamic("animateAppear")(animateAppear.asInstanceOf[js.Any])
-    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
-    if (animationType != null) __obj.updateDynamic("animationType")(animationType.asInstanceOf[js.Any])
-    if (bodyStyle != null) __obj.updateDynamic("bodyStyle")(bodyStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(closable)) __obj.updateDynamic("closable")(closable.asInstanceOf[js.Any])
-    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (!js.isUndefined(maskClosable)) __obj.updateDynamic("maskClosable")(maskClosable.asInstanceOf[js.Any])
-    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
-    if (!js.isUndefined(operation)) __obj.updateDynamic("operation")(operation.asInstanceOf[js.Any])
-    if (!js.isUndefined(popup)) __obj.updateDynamic("popup")(popup.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (!js.isUndefined(transparent)) __obj.updateDynamic("transparent")(transparent.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def animateAppear(value: Boolean): this.type = set("animateAppear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animationType(value: js.Any): this.type = set("animationType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bodyStyle(value: StyleProp[ViewStyle]): this.type = set("bodyStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bodyStyleNull: this.type = set("bodyStyle", null)
+    @scala.inline
+    def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footer(value: js.Array[Action[TextStyle]]): this.type = set("footer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def locale(value: js.Object): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maskClosable(value: Boolean): this.type = set("maskClosable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAnimationEnd(value: /* visible */ Boolean => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClose(value: () => Unit): this.type = set("onClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def operation(value: Boolean): this.type = set("operation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popup(value: Boolean): this.type = set("popup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def styles(value: Partial[ModalStyle]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transparent(value: Boolean): this.type = set("transparent", value.asInstanceOf[js.Any])
   }
-  type Props = ModalProps
+  
+  def withProps(p: ModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(visible: Boolean): Builder = {
+    val __props = js.Dynamic.literal(visible = visible.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ModalProps]))
+  }
 }
 

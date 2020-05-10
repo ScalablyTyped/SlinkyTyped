@@ -1,7 +1,7 @@
 package typingsSlinky.wavesurferJs
 
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.wavesurferJs.mod.WaveRenderer
 import typingsSlinky.wavesurferJs.mod.WaveSurferParams
 import scala.scalajs.js

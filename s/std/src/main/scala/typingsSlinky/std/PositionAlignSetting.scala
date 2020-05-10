@@ -14,14 +14,12 @@ trait PositionAlignSetting extends js.Object
 
 object PositionAlignSetting {
   @scala.inline
-  def auto: typingsSlinky.std.stdStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.std.stdStrings.auto = "auto".asInstanceOf[typingsSlinky.std.stdStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.std.stdStrings.center = "center".asInstanceOf[typingsSlinky.std.stdStrings.center]
   @scala.inline
-  def center: typingsSlinky.std.stdStrings.center = this.cast("center")
+  def `line-left`: typingsSlinky.std.stdStrings.`line-left` = "line-left".asInstanceOf[typingsSlinky.std.stdStrings.`line-left`]
   @scala.inline
-  def `line-left`: typingsSlinky.std.stdStrings.`line-left` = this.cast("line-left")
-  @scala.inline
-  def `line-right`: typingsSlinky.std.stdStrings.`line-right` = this.cast("line-right")
+  def `line-right`: typingsSlinky.std.stdStrings.`line-right` = "line-right".asInstanceOf[typingsSlinky.std.stdStrings.`line-right`]
 }
 

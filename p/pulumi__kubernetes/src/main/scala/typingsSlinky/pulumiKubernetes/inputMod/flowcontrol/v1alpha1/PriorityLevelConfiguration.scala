@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 /**
   * PriorityLevelConfiguration represents the configuration of a priority level.
   */
+@js.native
 trait PriorityLevelConfiguration extends js.Object {
   /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should
@@ -17,7 +18,7 @@ trait PriorityLevelConfiguration extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[flowcontrolDotapiserverDotk8sDotioSlashv1alpha1]] = js.undefined
+  var apiVersion: js.UndefOr[Input[flowcontrolDotapiserverDotk8sDotioSlashv1alpha1]] = js.native
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -28,35 +29,84 @@ trait PriorityLevelConfiguration extends js.Object {
     Input[
       typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.PriorityLevelConfiguration
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * `metadata` is the standard object's metadata. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     */
-  var metadata: js.UndefOr[Input[ObjectMeta]] = js.undefined
+  var metadata: js.UndefOr[Input[ObjectMeta]] = js.native
   /**
     * `spec` is the specification of the desired behavior of a "request-priority". More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
     */
-  var spec: js.UndefOr[Input[PriorityLevelConfigurationSpec]] = js.undefined
+  var spec: js.UndefOr[Input[PriorityLevelConfigurationSpec]] = js.native
 }
 
 object PriorityLevelConfiguration {
   @scala.inline
-  def apply(
-    apiVersion: Input[flowcontrolDotapiserverDotk8sDotioSlashv1alpha1] = null,
-    kind: Input[
-      typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.PriorityLevelConfiguration
-    ] = null,
-    metadata: Input[ObjectMeta] = null,
-    spec: Input[PriorityLevelConfigurationSpec] = null
-  ): PriorityLevelConfiguration = {
+  def apply(): PriorityLevelConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (apiVersion != null) __obj.updateDynamic("apiVersion")(apiVersion.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (spec != null) __obj.updateDynamic("spec")(spec.asInstanceOf[js.Any])
     __obj.asInstanceOf[PriorityLevelConfiguration]
   }
+  @scala.inline
+  implicit class PriorityLevelConfigurationOps[Self <: PriorityLevelConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiVersion(value: Input[flowcontrolDotapiserverDotk8sDotioSlashv1alpha1]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApiVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(
+      value: Input[
+          typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.PriorityLevelConfiguration
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: Input[ObjectMeta]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpec(value: Input[PriorityLevelConfigurationSpec]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

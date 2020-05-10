@@ -178,6 +178,7 @@ package object mod {
     - typingsSlinky.babelTypes.mod.Property
     - typingsSlinky.babelTypes.mod.Pureish
     - typingsSlinky.babelTypes.mod.QualifiedTypeIdentifier_
+    - typingsSlinky.babelTypes.mod.RecordExpression_
     - typingsSlinky.babelTypes.mod.RegExpLiteral_
     - typingsSlinky.babelTypes.mod.RegexLiteral
     - typingsSlinky.babelTypes.mod.RestElement_
@@ -194,6 +195,7 @@ package object mod {
     - typingsSlinky.babelTypes.mod.Super_
     - typingsSlinky.babelTypes.mod.SwitchCase_
     - typingsSlinky.babelTypes.mod.SwitchStatement_
+    - typingsSlinky.babelTypes.mod.SymbolTypeAnnotation_
     - typingsSlinky.babelTypes.mod.TSAnyKeyword_
     - typingsSlinky.babelTypes.mod.TSArrayType_
     - typingsSlinky.babelTypes.mod.TSAsExpression_
@@ -266,6 +268,7 @@ package object mod {
     - typingsSlinky.babelTypes.mod.ThisTypeAnnotation_
     - typingsSlinky.babelTypes.mod.ThrowStatement_
     - typingsSlinky.babelTypes.mod.TryStatement_
+    - typingsSlinky.babelTypes.mod.TupleExpression_
     - typingsSlinky.babelTypes.mod.TupleTypeAnnotation_
     - typingsSlinky.babelTypes.mod.TypeAlias_
     - typingsSlinky.babelTypes.mod.TypeAnnotation_

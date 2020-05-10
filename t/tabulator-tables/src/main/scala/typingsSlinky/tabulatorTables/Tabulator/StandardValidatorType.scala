@@ -16,18 +16,16 @@ trait StandardValidatorType extends js.Object
 
 object StandardValidatorType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def float: typingsSlinky.tabulatorTables.tabulatorTablesStrings.float = "float".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.float]
   @scala.inline
-  def float: typingsSlinky.tabulatorTables.tabulatorTablesStrings.float = this.cast("float")
+  def integer: typingsSlinky.tabulatorTables.tabulatorTablesStrings.integer = "integer".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.integer]
   @scala.inline
-  def integer: typingsSlinky.tabulatorTables.tabulatorTablesStrings.integer = this.cast("integer")
+  def numeric: typingsSlinky.tabulatorTables.tabulatorTablesStrings.numeric = "numeric".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.numeric]
   @scala.inline
-  def numeric: typingsSlinky.tabulatorTables.tabulatorTablesStrings.numeric = this.cast("numeric")
+  def required: typingsSlinky.tabulatorTables.tabulatorTablesStrings.required = "required".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.required]
   @scala.inline
-  def required: typingsSlinky.tabulatorTables.tabulatorTablesStrings.required = this.cast("required")
+  def string: typingsSlinky.tabulatorTables.tabulatorTablesStrings.string = "string".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.string]
   @scala.inline
-  def string: typingsSlinky.tabulatorTables.tabulatorTablesStrings.string = this.cast("string")
-  @scala.inline
-  def unique: typingsSlinky.tabulatorTables.tabulatorTablesStrings.unique = this.cast("unique")
+  def unique: typingsSlinky.tabulatorTables.tabulatorTablesStrings.unique = "unique".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.unique]
 }
 

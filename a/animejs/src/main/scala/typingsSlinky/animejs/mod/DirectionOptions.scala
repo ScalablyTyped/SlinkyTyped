@@ -13,12 +13,10 @@ trait DirectionOptions extends js.Object
 
 object DirectionOptions {
   @scala.inline
-  def alternate: typingsSlinky.animejs.animejsStrings.alternate = this.cast("alternate")
+  def alternate: typingsSlinky.animejs.animejsStrings.alternate = "alternate".asInstanceOf[typingsSlinky.animejs.animejsStrings.alternate]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def normal: typingsSlinky.animejs.animejsStrings.normal = "normal".asInstanceOf[typingsSlinky.animejs.animejsStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.animejs.animejsStrings.normal = this.cast("normal")
-  @scala.inline
-  def reverse: typingsSlinky.animejs.animejsStrings.reverse = this.cast("reverse")
+  def reverse: typingsSlinky.animejs.animejsStrings.reverse = "reverse".asInstanceOf[typingsSlinky.animejs.animejsStrings.reverse]
 }
 

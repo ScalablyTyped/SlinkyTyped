@@ -1,7 +1,6 @@
 package typingsSlinky.hapiCode.mod
 
 import typingsSlinky.hapiHoek.mod.deepEqual.Options
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -165,7 +164,7 @@ object expect extends js.Object {
     def equals(value: js.Array[T], options: Options): Assertion[T] = js.native
     def error(): Assertion[T] = js.native
     def error(message: String): Assertion[T] = js.native
-    def error(message: RegExp): Assertion[T] = js.native
+    def error(message: js.RegExp): Assertion[T] = js.native
     /**
       * Asserts that the reference value is an error.
       * 
@@ -176,7 +175,7 @@ object expect extends js.Object {
       */
     def error(`type`: js.Function): Assertion[T] = js.native
     def error(`type`: js.Function, message: String): Assertion[T] = js.native
-    def error(`type`: js.Function, message: RegExp): Assertion[T] = js.native
+    def error(`type`: js.Function, message: js.RegExp): Assertion[T] = js.native
     /**
       * Asserts that the reference value exists (not null or undefined).
       *
@@ -341,7 +340,7 @@ object expect extends js.Object {
     def regexp(): Assertion[T] = js.native
     def reject(): Assertion[T] = js.native
     def reject(message: String): Assertion[T] = js.native
-    def reject(message: RegExp): Assertion[T] = js.native
+    def reject(message: js.RegExp): Assertion[T] = js.native
     /**
       * Asserts that the Promise reference value rejects with an exception when called.
       * 
@@ -352,10 +351,10 @@ object expect extends js.Object {
       */
     def reject(`type`: js.Function): Assertion[T] = js.native
     def reject(`type`: js.Function, message: String): Assertion[T] = js.native
-    def reject(`type`: js.Function, message: RegExp): Assertion[T] = js.native
+    def reject(`type`: js.Function, message: js.RegExp): Assertion[T] = js.native
     def rejects(): Assertion[T] = js.native
     def rejects(message: String): Assertion[T] = js.native
-    def rejects(message: RegExp): Assertion[T] = js.native
+    def rejects(message: js.RegExp): Assertion[T] = js.native
     /**
       * Asserts that the Promise reference value rejects with an exception when called.
       *
@@ -366,7 +365,7 @@ object expect extends js.Object {
       */
     def rejects(`type`: js.Function): Assertion[T] = js.native
     def rejects(`type`: js.Function, message: String): Assertion[T] = js.native
-    def rejects(`type`: js.Function, message: RegExp): Assertion[T] = js.native
+    def rejects(`type`: js.Function, message: js.RegExp): Assertion[T] = js.native
     /**
       * Asserts that the reference value satisfies the provided validator function.
       *
@@ -407,7 +406,7 @@ object expect extends js.Object {
     def string(): Assertion[T] = js.native
     def `throw`(): Assertion[T] = js.native
     def `throw`(message: String): Assertion[T] = js.native
-    def `throw`(message: RegExp): Assertion[T] = js.native
+    def `throw`(message: js.RegExp): Assertion[T] = js.native
     /**
       * Asserts that the function reference value throws an exception when called.
       * 
@@ -418,10 +417,10 @@ object expect extends js.Object {
       */
     def `throw`(`type`: js.Function): Assertion[T] = js.native
     def `throw`(`type`: js.Function, message: String): Assertion[T] = js.native
-    def `throw`(`type`: js.Function, message: RegExp): Assertion[T] = js.native
+    def `throw`(`type`: js.Function, message: js.RegExp): Assertion[T] = js.native
     def throws(): Assertion[T] = js.native
     def throws(message: String): Assertion[T] = js.native
-    def throws(message: RegExp): Assertion[T] = js.native
+    def throws(message: js.RegExp): Assertion[T] = js.native
     /**
       * Asserts that the function reference value throws an exception when called.
       *
@@ -432,7 +431,7 @@ object expect extends js.Object {
       */
     def throws(`type`: js.Function): Assertion[T] = js.native
     def throws(`type`: js.Function, message: String): Assertion[T] = js.native
-    def throws(`type`: js.Function, message: RegExp): Assertion[T] = js.native
+    def throws(`type`: js.Function, message: js.RegExp): Assertion[T] = js.native
     // Values
     /**
       * Asserts that the reference value is true.

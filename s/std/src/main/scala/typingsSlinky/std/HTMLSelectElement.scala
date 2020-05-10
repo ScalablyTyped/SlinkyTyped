@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait HTMLSelectElement
   extends HTMLElement
-     with /* name */ NumberDictionary[HTMLOptionElement | HTMLOptGroupElement] {
+     with /* name */ NumberDictionary[org.scalajs.dom.raw.HTMLOptionElement | org.scalajs.dom.raw.HTMLOptGroupElement] {
   var autocomplete: java.lang.String = js.native
   var disabled: scala.Boolean = js.native
   /**
     * Retrieves a reference to the form that the object is embedded in.
     */
   val form: org.scalajs.dom.raw.HTMLFormElement | Null = js.native
-  @JSName(scala.scalajs.js.Symbol.iterator)
+  @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[org.scalajs.dom.raw.Element]] = js.native
   val labels: org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLLabelElement with org.scalajs.dom.raw.Node] = js.native
   /**
@@ -66,17 +66,17 @@ trait HTMLSelectElement
     * Returns whether an element will successfully validate based on forms validation rules and constraints.
     */
   val willValidate: scala.Boolean = js.native
-  def add(element: HTMLOptGroupElement): Unit = js.native
-  def add(element: HTMLOptGroupElement, before: Double): Unit = js.native
-  def add(element: HTMLOptGroupElement, before: HTMLElement): Unit = js.native
+  def add(element: org.scalajs.dom.raw.HTMLOptGroupElement): Unit = js.native
+  def add(element: org.scalajs.dom.raw.HTMLOptGroupElement, before: Double): Unit = js.native
+  def add(element: org.scalajs.dom.raw.HTMLOptGroupElement, before: org.scalajs.dom.raw.HTMLElement): Unit = js.native
   /**
     * Adds an element to the areas, controlRange, or options collection.
     * @param element Variant of type Number that specifies the index position in the collection where the element is placed. If no value is given, the method places the element at the end of the collection.
     * @param before Variant of type Object that specifies an element to insert before, or null to append the object to the collection.
     */
-  def add(element: HTMLOptionElement): Unit = js.native
-  def add(element: HTMLOptionElement, before: Double): Unit = js.native
-  def add(element: HTMLOptionElement, before: HTMLElement): Unit = js.native
+  def add(element: org.scalajs.dom.raw.HTMLOptionElement): Unit = js.native
+  def add(element: org.scalajs.dom.raw.HTMLOptionElement, before: Double): Unit = js.native
+  def add(element: org.scalajs.dom.raw.HTMLOptionElement, before: org.scalajs.dom.raw.HTMLElement): Unit = js.native
   /**
     * Appends an event listener for events whose type attribute value is type. The callback argument sets the callback that will be invoked when the event is dispatched.
     * 
@@ -127,7 +127,7 @@ trait HTMLSelectElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def reportValidity(): scala.Boolean = js.native
   /**
@@ -139,5 +139,6 @@ trait HTMLSelectElement
 
 @JSGlobal("HTMLSelectElement")
 @js.native
-object HTMLSelectElement extends Instantiable0[HTMLSelectElement]
+object HTMLSelectElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLSelectElement]
 

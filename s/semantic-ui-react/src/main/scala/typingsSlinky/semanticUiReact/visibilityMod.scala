@@ -1,9 +1,8 @@
 package typingsSlinky.semanticUiReact
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.semanticUiReact.visibilityVisibilityMod.VisibilityProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,13 +13,13 @@ import scala.scalajs.js.annotation._
 object visibilityMod extends js.Object {
   @js.native
   class default protected ()
-    extends Component[VisibilityProps, ComponentState, js.Any] {
+    extends Component[VisibilityProps, js.Object, js.Any] {
     def this(props: VisibilityProps) = this()
     def this(props: VisibilityProps, context: js.Any) = this()
   }
   
   @js.native
-  object default extends TopLevel[ComponentClass[VisibilityProps, ComponentState]]
+  object default extends TopLevel[ReactComponentClass[VisibilityProps]]
   
 }
 

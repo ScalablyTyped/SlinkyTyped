@@ -22,16 +22,53 @@ trait CreateFlowLogsResult extends js.Object {
 
 object CreateFlowLogsResult {
   @scala.inline
-  def apply(
-    ClientToken: String = null,
-    FlowLogIds: ValueStringList = null,
-    Unsuccessful: UnsuccessfulItemSet = null
-  ): CreateFlowLogsResult = {
+  def apply(): CreateFlowLogsResult = {
     val __obj = js.Dynamic.literal()
-    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
-    if (FlowLogIds != null) __obj.updateDynamic("FlowLogIds")(FlowLogIds.asInstanceOf[js.Any])
-    if (Unsuccessful != null) __obj.updateDynamic("Unsuccessful")(Unsuccessful.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateFlowLogsResult]
   }
+  @scala.inline
+  implicit class CreateFlowLogsResultOps[Self <: CreateFlowLogsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlowLogIds(value: ValueStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowLogIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlowLogIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowLogIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnsuccessful(value: UnsuccessfulItemSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unsuccessful")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnsuccessful: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unsuccessful")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

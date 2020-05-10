@@ -13,12 +13,10 @@ trait RuleSeverity extends js.Object
 
 object RuleSeverity {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.tslint.tslintStrings.error = "error".asInstanceOf[typingsSlinky.tslint.tslintStrings.error]
   @scala.inline
-  def error: typingsSlinky.tslint.tslintStrings.error = this.cast("error")
+  def off: typingsSlinky.tslint.tslintStrings.off = "off".asInstanceOf[typingsSlinky.tslint.tslintStrings.off]
   @scala.inline
-  def off: typingsSlinky.tslint.tslintStrings.off = this.cast("off")
-  @scala.inline
-  def warning: typingsSlinky.tslint.tslintStrings.warning = this.cast("warning")
+  def warning: typingsSlinky.tslint.tslintStrings.warning = "warning".asInstanceOf[typingsSlinky.tslint.tslintStrings.warning]
 }
 

@@ -9,15 +9,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait FnCallObssObssPCombinator extends js.Object {
-  def apply[T /* <: js.Tuple6[
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _]
-  ] */](obss: T): Stream_[
-    js.Tuple6[
+  def apply[T /* <: js.Tuple3[Observable[_, _], Observable[_, _], Observable[_, _]] */](obss: T): Stream_[
+    js.Tuple3[
       ValueOfAnObservable[
         /* import warning: importer.ImportType#apply Failed type conversion: T[0] */ js.Any
       ], 
@@ -26,15 +19,6 @@ trait FnCallObssObssPCombinator extends js.Object {
       ], 
       ValueOfAnObservable[
         /* import warning: importer.ImportType#apply Failed type conversion: T[2] */ js.Any
-      ], 
-      ValueOfAnObservable[
-        /* import warning: importer.ImportType#apply Failed type conversion: T[3] */ js.Any
-      ], 
-      ValueOfAnObservable[
-        /* import warning: importer.ImportType#apply Failed type conversion: T[4] */ js.Any
-      ], 
-      ValueOfAnObservable[
-        /* import warning: importer.ImportType#apply Failed type conversion: T[5] */ js.Any
       ]
     ], 
     _

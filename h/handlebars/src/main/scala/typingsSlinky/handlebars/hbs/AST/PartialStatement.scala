@@ -4,14 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PartialStatement extends Node {
-  var hash: Hash
-  var indent: String
-  var name: PathExpression | SubExpression
-  var params: js.Array[Expression]
-  var strip: StripFlags
+  var hash: Hash = js.native
+  var indent: String = js.native
+  var name: PathExpression | SubExpression = js.native
+  var params: js.Array[Expression] = js.native
+  var strip: StripFlags = js.native
   @JSName("type")
-  var type_PartialStatement: typingsSlinky.handlebars.handlebarsStrings.PartialStatement
+  var type_PartialStatement: typingsSlinky.handlebars.handlebarsStrings.PartialStatement = js.native
 }
 
 object PartialStatement {
@@ -29,5 +30,49 @@ object PartialStatement {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialStatement]
   }
+  @scala.inline
+  implicit class PartialStatementOps[Self <: PartialStatement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHash(value: Hash): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: PathExpression | SubExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParams(value: js.Array[Expression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStrip(value: StripFlags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: typingsSlinky.handlebars.handlebarsStrings.PartialStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

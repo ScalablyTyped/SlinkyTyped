@@ -61,28 +61,144 @@ object RemediationConfiguration {
   def apply(
     ConfigRuleName: ConfigRuleName,
     TargetId: StringWithCharLimit256,
-    TargetType: RemediationTargetType,
-    Arn: StringWithCharLimit1024 = null,
-    Automatic: js.UndefOr[scala.Boolean] = js.undefined,
-    CreatedByService: StringWithCharLimit1024 = null,
-    ExecutionControls: ExecutionControls = null,
-    MaximumAutomaticAttempts: Int | Double = null,
-    Parameters: RemediationParameters = null,
-    ResourceType: String = null,
-    RetryAttemptSeconds: Int | Double = null,
-    TargetVersion: String = null
+    TargetType: RemediationTargetType
   ): RemediationConfiguration = {
     val __obj = js.Dynamic.literal(ConfigRuleName = ConfigRuleName.asInstanceOf[js.Any], TargetId = TargetId.asInstanceOf[js.Any], TargetType = TargetType.asInstanceOf[js.Any])
-    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
-    if (!js.isUndefined(Automatic)) __obj.updateDynamic("Automatic")(Automatic.asInstanceOf[js.Any])
-    if (CreatedByService != null) __obj.updateDynamic("CreatedByService")(CreatedByService.asInstanceOf[js.Any])
-    if (ExecutionControls != null) __obj.updateDynamic("ExecutionControls")(ExecutionControls.asInstanceOf[js.Any])
-    if (MaximumAutomaticAttempts != null) __obj.updateDynamic("MaximumAutomaticAttempts")(MaximumAutomaticAttempts.asInstanceOf[js.Any])
-    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
-    if (ResourceType != null) __obj.updateDynamic("ResourceType")(ResourceType.asInstanceOf[js.Any])
-    if (RetryAttemptSeconds != null) __obj.updateDynamic("RetryAttemptSeconds")(RetryAttemptSeconds.asInstanceOf[js.Any])
-    if (TargetVersion != null) __obj.updateDynamic("TargetVersion")(TargetVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemediationConfiguration]
   }
+  @scala.inline
+  implicit class RemediationConfigurationOps[Self <: RemediationConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigRuleName(value: ConfigRuleName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetId(value: StringWithCharLimit256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetType(value: RemediationTargetType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArn(value: StringWithCharLimit1024): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutomatic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Automatic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutomatic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Automatic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatedByService(value: StringWithCharLimit1024): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedByService")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedByService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedByService")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionControls(value: ExecutionControls): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionControls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionControls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumAutomaticAttempts(value: AutoRemediationAttempts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumAutomaticAttempts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumAutomaticAttempts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumAutomaticAttempts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: RemediationParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetryAttemptSeconds(value: AutoRemediationAttemptSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RetryAttemptSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetryAttemptSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RetryAttemptSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -21,11 +21,41 @@ trait SchemaPubSubIODetails extends js.Object {
 
 object SchemaPubSubIODetails {
   @scala.inline
-  def apply(subscription: String = null, topic: String = null): SchemaPubSubIODetails = {
+  def apply(): SchemaPubSubIODetails = {
     val __obj = js.Dynamic.literal()
-    if (subscription != null) __obj.updateDynamic("subscription")(subscription.asInstanceOf[js.Any])
-    if (topic != null) __obj.updateDynamic("topic")(topic.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPubSubIODetails]
   }
+  @scala.inline
+  implicit class SchemaPubSubIODetailsOps[Self <: SchemaPubSubIODetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSubscription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubscription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopic(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

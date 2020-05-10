@@ -8,17 +8,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Schedule extends js.Object {
-  var fireDate: Double
-  var repeatInterval: js.UndefOr[minute | hour | day | week] = js.undefined
+  var fireDate: Double = js.native
+  var repeatInterval: js.UndefOr[minute | hour | day | week] = js.native
 }
 
 object Schedule {
   @scala.inline
-  def apply(fireDate: Double, repeatInterval: minute | hour | day | week = null): Schedule = {
+  def apply(fireDate: Double): Schedule = {
     val __obj = js.Dynamic.literal(fireDate = fireDate.asInstanceOf[js.Any])
-    if (repeatInterval != null) __obj.updateDynamic("repeatInterval")(repeatInterval.asInstanceOf[js.Any])
     __obj.asInstanceOf[Schedule]
   }
+  @scala.inline
+  implicit class ScheduleOps[Self <: Schedule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFireDate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fireDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRepeatInterval(value: minute | hour | day | week): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repeatInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepeatInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repeatInterval")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

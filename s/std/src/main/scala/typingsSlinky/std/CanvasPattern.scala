@@ -17,5 +17,6 @@ trait CanvasPattern extends js.Object {
 
 @JSGlobal("CanvasPattern")
 @js.native
-object CanvasPattern extends Instantiable0[CanvasPattern]
+object CanvasPattern
+  extends Instantiable0[org.scalajs.dom.raw.CanvasPattern]
 

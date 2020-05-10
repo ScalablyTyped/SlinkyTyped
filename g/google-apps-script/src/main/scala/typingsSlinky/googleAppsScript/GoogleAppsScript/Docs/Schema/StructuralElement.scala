@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StructuralElement extends js.Object {
-  var endIndex: js.UndefOr[Double] = js.undefined
-  var paragraph: js.UndefOr[Paragraph] = js.undefined
-  var sectionBreak: js.UndefOr[SectionBreak] = js.undefined
-  var startIndex: js.UndefOr[Double] = js.undefined
-  var table: js.UndefOr[Table] = js.undefined
-  var tableOfContents: js.UndefOr[TableOfContents] = js.undefined
+  var endIndex: js.UndefOr[Double] = js.native
+  var paragraph: js.UndefOr[Paragraph] = js.native
+  var sectionBreak: js.UndefOr[SectionBreak] = js.native
+  var startIndex: js.UndefOr[Double] = js.native
+  var table: js.UndefOr[Table] = js.native
+  var tableOfContents: js.UndefOr[TableOfContents] = js.native
 }
 
 object StructuralElement {
   @scala.inline
-  def apply(
-    endIndex: Int | Double = null,
-    paragraph: Paragraph = null,
-    sectionBreak: SectionBreak = null,
-    startIndex: Int | Double = null,
-    table: Table = null,
-    tableOfContents: TableOfContents = null
-  ): StructuralElement = {
+  def apply(): StructuralElement = {
     val __obj = js.Dynamic.literal()
-    if (endIndex != null) __obj.updateDynamic("endIndex")(endIndex.asInstanceOf[js.Any])
-    if (paragraph != null) __obj.updateDynamic("paragraph")(paragraph.asInstanceOf[js.Any])
-    if (sectionBreak != null) __obj.updateDynamic("sectionBreak")(sectionBreak.asInstanceOf[js.Any])
-    if (startIndex != null) __obj.updateDynamic("startIndex")(startIndex.asInstanceOf[js.Any])
-    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
-    if (tableOfContents != null) __obj.updateDynamic("tableOfContents")(tableOfContents.asInstanceOf[js.Any])
     __obj.asInstanceOf[StructuralElement]
   }
+  @scala.inline
+  implicit class StructuralElementOps[Self <: StructuralElement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParagraph(value: Paragraph): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraph")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParagraph: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraph")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSectionBreak(value: SectionBreak): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionBreak")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSectionBreak: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionBreak")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTable(value: Table): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableOfContents(value: TableOfContents): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableOfContents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableOfContents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableOfContents")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

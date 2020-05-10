@@ -12,22 +12,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SupressionListEntry extends js.Object {
-  var created: String
+  var created: String = js.native
   /** Short explanation of the suppression */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /**
     * Whether the recipient requested to not receive any non-transactional messages
     * Not required if a valid type is passed
     *
     * @deprecated Available, but deprecated in favor of type
     */
-  var non_transactional: js.UndefOr[Boolean] = js.undefined
+  var non_transactional: js.UndefOr[Boolean] = js.native
   /**
     * Email address to be suppressed
     *
     */
-  var recipient: String
+  var recipient: String = js.native
   /**
     * Source responsible for inserting the list entry
     *
@@ -36,38 +37,112 @@ trait SupressionListEntry extends js.Object {
     */
   var source: js.UndefOr[
     (`Spam Complaint`) | (`List Unsubscribe`) | (`Bounce Rule`) | (`Unsubscribe Link`) | (`Manually Added`) | Compliance
-  ] = js.undefined
+  ] = js.native
   /**
     * Whether the recipient requested to not receive any transactional messages
     * Not required if a valid type is passed
     *
     * @deprecated Available, but deprecated in favor of type
     */
-  var transactional: js.UndefOr[Boolean] = js.undefined
+  var transactional: js.UndefOr[Boolean] = js.native
   /** Type of suppression record: transactional or non_transactional */
-  var `type`: js.UndefOr[transactional | non_transactional] = js.undefined
-  var updated: String
+  var `type`: js.UndefOr[transactional | non_transactional] = js.native
+  var updated: String = js.native
 }
 
 object SupressionListEntry {
   @scala.inline
-  def apply(
-    created: String,
-    recipient: String,
-    updated: String,
-    description: String = null,
-    non_transactional: js.UndefOr[Boolean] = js.undefined,
-    source: (`Spam Complaint`) | (`List Unsubscribe`) | (`Bounce Rule`) | (`Unsubscribe Link`) | (`Manually Added`) | Compliance = null,
-    transactional: js.UndefOr[Boolean] = js.undefined,
-    `type`: transactional | non_transactional = null
-  ): SupressionListEntry = {
+  def apply(created: String, recipient: String, updated: String): SupressionListEntry = {
     val __obj = js.Dynamic.literal(created = created.asInstanceOf[js.Any], recipient = recipient.asInstanceOf[js.Any], updated = updated.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (!js.isUndefined(non_transactional)) __obj.updateDynamic("non_transactional")(non_transactional.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (!js.isUndefined(transactional)) __obj.updateDynamic("transactional")(transactional.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SupressionListEntry]
   }
+  @scala.inline
+  implicit class SupressionListEntryOps[Self <: SupressionListEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreated(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRecipient(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdated(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNon_transactional(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("non_transactional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNon_transactional: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("non_transactional")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(
+      value: (`Spam Complaint`) | (`List Unsubscribe`) | (`Bounce Rule`) | (`Unsubscribe Link`) | (`Manually Added`) | Compliance
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransactional(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransactional: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactional")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: transactional | non_transactional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

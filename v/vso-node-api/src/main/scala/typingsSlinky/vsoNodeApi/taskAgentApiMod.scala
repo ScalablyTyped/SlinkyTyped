@@ -18,7 +18,7 @@ object taskAgentApiMod extends js.Object {
     def uploadTaskDefinition(customHeaders: IHeaders, contentStream: ReadableStream, taskId: String, overwrite: Boolean): js.Promise[Unit] = js.native
   }
   
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.vsoNodeApi.clientApiBasesMod.ClientApiBase because Already inherited
   - typingsSlinky.vsoNodeApi.taskAgentApiBaseMod.ITaskAgentApiBase because Already inherited
   - typingsSlinky.vsoNodeApi.taskAgentApiMod.ITaskAgentApi because var conflicts: baseUrl, http, rest, userAgent, vsoClient. Inlined uploadTaskDefinition */ @js.native

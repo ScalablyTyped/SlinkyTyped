@@ -4,24 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Cache_ extends js.Object {
   /**
   	 * Get the cached intermediate JavaScript function for a template.
   	 *
   	 * @param key key for caching
   	 */
-  def get(key: String): js.UndefOr[TemplateFunction]
+  def get(key: String): js.UndefOr[TemplateFunction] = js.native
   /**
   	 * Clear the entire cache.
   	 */
-  def reset(): Unit
+  def reset(): Unit = js.native
   /**
   	 * Cache the intermediate JavaScript function for a template.
   	 *
   	 * @param key key for caching
   	 * @param val cached function
   	 */
-  def set(key: String, `val`: TemplateFunction): Unit
+  def set(key: String, `val`: TemplateFunction): Unit = js.native
 }
 
 object Cache_ {
@@ -32,8 +33,33 @@ object Cache_ {
     set: (String, TemplateFunction) => Unit
   ): Cache_ = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), reset = js.Any.fromFunction0(reset), set = js.Any.fromFunction2(set))
-  
     __obj.asInstanceOf[Cache_]
   }
+  @scala.inline
+  implicit class Cache_Ops[Self <: Cache_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGet(value: String => js.UndefOr[TemplateFunction]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withReset(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSet(value: (String, TemplateFunction) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,118 +1,129 @@
 package typingsSlinky.officeUiFabricReact.detailsListTypesMod
 
-import org.scalajs.dom.raw.HTMLButtonElement
-import slinky.core.facade.ReactElement
 import typingsSlinky.officeUiFabricReact.detailsRowTypesMod.ICellStyleProps
-import typingsSlinky.officeUiFabricReact.groupHeaderTypesMod.IGroupHeaderProps
-import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroup
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroupDividerProps
-import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
-import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
-import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
 import typingsSlinky.uifabricUtilities.selectionTypesMod.ISelection
-import typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.officeUiFabricReact.detailsRowTypesMod.IDetailsItemProps because var conflicts: indentWidth, selectionMode, viewport. Inlined columns, groupNestingDepth, selection, checkboxVisibility, cellStyleProps, rowWidth */ trait IDetailsGroupDividerProps extends IGroupDividerProps {
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.officeUiFabricReact.detailsRowTypesMod.IDetailsItemProps because var conflicts: indentWidth, selectionMode, viewport. Inlined columns, groupNestingDepth, selection, checkboxVisibility, cellStyleProps, rowWidth */ @js.native
+trait IDetailsGroupDividerProps extends IGroupDividerProps {
   /**
     * Rules for rendering column cells.
     */
-  var cellStyleProps: js.UndefOr[ICellStyleProps] = js.undefined
+  var cellStyleProps: js.UndefOr[ICellStyleProps] = js.native
   /**
     * Checkbox visibility
     */
-  var checkboxVisibility: js.UndefOr[CheckboxVisibility] = js.undefined
+  var checkboxVisibility: js.UndefOr[CheckboxVisibility] = js.native
   /**
     * Column metadata
     */
-  var columns: js.UndefOr[js.Array[IColumn]] = js.undefined
+  var columns: js.UndefOr[js.Array[IColumn]] = js.native
   /**
     * Nesting depth of a grouping
     */
-  var groupNestingDepth: js.UndefOr[Double] = js.undefined
+  var groupNestingDepth: js.UndefOr[Double] = js.native
   /**
     * Minimum width of the row.
     *
     * @defaultvalue 0
     */
-  var rowWidth: js.UndefOr[Double] = js.undefined
+  var rowWidth: js.UndefOr[Double] = js.native
   /**
     * Selection from utilities
     */
-  var selection: js.UndefOr[ISelection[IObjectWithKey]] = js.undefined
+  var selection: js.UndefOr[ISelection[IObjectWithKey]] = js.native
 }
 
 object IDetailsGroupDividerProps {
   @scala.inline
-  def apply(
-    cellStyleProps: ICellStyleProps = null,
-    checkboxVisibility: CheckboxVisibility = null,
-    className: String = null,
-    columns: js.Array[IColumn] = null,
-    compact: js.UndefOr[Boolean] = js.undefined,
-    componentRef: IRefObject[js.Object] = null,
-    expandButtonProps: HTMLAttributes[HTMLButtonElement] = null,
-    footerText: String = null,
-    group: IGroup = null,
-    groupIndex: Int | Double = null,
-    groupLevel: Int | Double = null,
-    groupNestingDepth: Int | Double = null,
-    groups: js.Array[IGroup] = null,
-    indentWidth: Int | Double = null,
-    isCollapsedGroupSelectVisible: js.UndefOr[Boolean] = js.undefined,
-    isGroupLoading: /* group */ IGroup => Boolean = null,
-    isSelected: js.UndefOr[Boolean] = js.undefined,
-    loadingText: String = null,
-    onGroupHeaderClick: /* group */ IGroup => Unit = null,
-    onRenderTitle: (/* props */ js.UndefOr[IGroupHeaderProps], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IGroupHeaderProps], ReactElement | Null]]) => ReactElement | Null = null,
-    onToggleCollapse: /* group */ IGroup => Unit = null,
-    onToggleSelectGroup: /* group */ IGroup => Unit = null,
-    onToggleSummarize: /* group */ IGroup => Unit = null,
-    rowWidth: Int | Double = null,
-    selected: js.UndefOr[Boolean] = js.undefined,
-    selection: ISelection[IObjectWithKey] = null,
-    selectionMode: SelectionMode = null,
-    showAllLinkText: String = null,
-    theme: ITheme = null,
-    viewport: IViewport = null
-  ): IDetailsGroupDividerProps = {
+  def apply(): IDetailsGroupDividerProps = {
     val __obj = js.Dynamic.literal()
-    if (cellStyleProps != null) __obj.updateDynamic("cellStyleProps")(cellStyleProps.asInstanceOf[js.Any])
-    if (checkboxVisibility != null) __obj.updateDynamic("checkboxVisibility")(checkboxVisibility.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (expandButtonProps != null) __obj.updateDynamic("expandButtonProps")(expandButtonProps.asInstanceOf[js.Any])
-    if (footerText != null) __obj.updateDynamic("footerText")(footerText.asInstanceOf[js.Any])
-    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
-    if (groupIndex != null) __obj.updateDynamic("groupIndex")(groupIndex.asInstanceOf[js.Any])
-    if (groupLevel != null) __obj.updateDynamic("groupLevel")(groupLevel.asInstanceOf[js.Any])
-    if (groupNestingDepth != null) __obj.updateDynamic("groupNestingDepth")(groupNestingDepth.asInstanceOf[js.Any])
-    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
-    if (indentWidth != null) __obj.updateDynamic("indentWidth")(indentWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(isCollapsedGroupSelectVisible)) __obj.updateDynamic("isCollapsedGroupSelectVisible")(isCollapsedGroupSelectVisible.asInstanceOf[js.Any])
-    if (isGroupLoading != null) __obj.updateDynamic("isGroupLoading")(js.Any.fromFunction1(isGroupLoading))
-    if (!js.isUndefined(isSelected)) __obj.updateDynamic("isSelected")(isSelected.asInstanceOf[js.Any])
-    if (loadingText != null) __obj.updateDynamic("loadingText")(loadingText.asInstanceOf[js.Any])
-    if (onGroupHeaderClick != null) __obj.updateDynamic("onGroupHeaderClick")(js.Any.fromFunction1(onGroupHeaderClick))
-    if (onRenderTitle != null) __obj.updateDynamic("onRenderTitle")(js.Any.fromFunction2(onRenderTitle))
-    if (onToggleCollapse != null) __obj.updateDynamic("onToggleCollapse")(js.Any.fromFunction1(onToggleCollapse))
-    if (onToggleSelectGroup != null) __obj.updateDynamic("onToggleSelectGroup")(js.Any.fromFunction1(onToggleSelectGroup))
-    if (onToggleSummarize != null) __obj.updateDynamic("onToggleSummarize")(js.Any.fromFunction1(onToggleSummarize))
-    if (rowWidth != null) __obj.updateDynamic("rowWidth")(rowWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
-    if (selection != null) __obj.updateDynamic("selection")(selection.asInstanceOf[js.Any])
-    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
-    if (showAllLinkText != null) __obj.updateDynamic("showAllLinkText")(showAllLinkText.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (viewport != null) __obj.updateDynamic("viewport")(viewport.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDetailsGroupDividerProps]
   }
+  @scala.inline
+  implicit class IDetailsGroupDividerPropsOps[Self <: IDetailsGroupDividerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCellStyleProps(value: ICellStyleProps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellStyleProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellStyleProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellStyleProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckboxVisibility(value: CheckboxVisibility): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxVisibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckboxVisibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxVisibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumns(value: js.Array[IColumn]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupNestingDepth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupNestingDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupNestingDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupNestingDepth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelection(value: ISelection[IObjectWithKey]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

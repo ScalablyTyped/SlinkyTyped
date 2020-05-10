@@ -1,10 +1,7 @@
 package typingsSlinky.recharts.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.recharts.PartialMargin
 import typingsSlinky.recharts.mod.BrushProps
 import typingsSlinky.recharts.mod.DataKey
@@ -12,56 +9,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Brush
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.Brush] {
+object Brush {
   @JSImport("recharts", "Brush")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    data: js.Array[_] = null,
-    dataKey: DataKey = null,
-    endIndex: Int | Double = null,
-    fill: String = null,
-    gap: Int | Double = null,
-    height: Int | Double = null,
-    leaveTimeOut: Int | Double = null,
-    onChange: /* repeated */ js.Any => Unit = null,
-    padding: PartialMargin = null,
-    startIndex: Int | Double = null,
-    stroke: String = null,
-    tickFormatter: /* value */ js.Any => js.Any = null,
-    travellerWidth: Int | Double = null,
-    updateId: String | Double = null,
-    width: Int | Double = null,
-    x: Int | Double = null,
-    y: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.Brush] = {
-    val __obj = js.Dynamic.literal()
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dataKey != null) __obj.updateDynamic("dataKey")(dataKey.asInstanceOf[js.Any])
-    if (endIndex != null) __obj.updateDynamic("endIndex")(endIndex.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (gap != null) __obj.updateDynamic("gap")(gap.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (leaveTimeOut != null) __obj.updateDynamic("leaveTimeOut")(leaveTimeOut.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (startIndex != null) __obj.updateDynamic("startIndex")(startIndex.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (tickFormatter != null) __obj.updateDynamic("tickFormatter")(js.Any.fromFunction1(tickFormatter))
-    if (travellerWidth != null) __obj.updateDynamic("travellerWidth")(travellerWidth.asInstanceOf[js.Any])
-    if (updateId != null) __obj.updateDynamic("updateId")(updateId.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.recharts.mod.Brush] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataKeyFunction1(value: /* dataObject */ js.Any => String | Double | (js.Tuple2[Double, Double]) | Null): this.type = set("dataKey", js.Any.fromFunction1(value))
+    @scala.inline
+    def dataKey(value: DataKey): this.type = set("dataKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endIndex(value: Double): this.type = set("endIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fill(value: String): this.type = set("fill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gap(value: Double): this.type = set("gap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def leaveTimeOut(value: Double): this.type = set("leaveTimeOut", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* repeated */ js.Any => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def padding(value: PartialMargin): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startIndex(value: Double): this.type = set("startIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stroke(value: String): this.type = set("stroke", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tickFormatter(value: /* value */ js.Any => js.Any): this.type = set("tickFormatter", js.Any.fromFunction1(value))
+    @scala.inline
+    def travellerWidth(value: Double): this.type = set("travellerWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def updateId(value: String | Double): this.type = set("updateId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def x(value: Double): this.type = set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.mod.Brush] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.mod.Brush](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = BrushProps
+  
+  def withProps(p: BrushProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Brush.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

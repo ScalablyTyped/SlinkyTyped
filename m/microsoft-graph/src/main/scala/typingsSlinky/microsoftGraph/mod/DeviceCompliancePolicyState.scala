@@ -4,40 +4,106 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DeviceCompliancePolicyState extends Entity {
   // The name of the policy for this policyBase
-  var displayName: js.UndefOr[String] = js.undefined
+  var displayName: js.UndefOr[String] = js.native
   // Platform type that the policy applies to
-  var platformType: js.UndefOr[PolicyPlatformType] = js.undefined
+  var platformType: js.UndefOr[PolicyPlatformType] = js.native
   // Count of how many setting a policy holds
-  var settingCount: js.UndefOr[Double] = js.undefined
-  var settingStates: js.UndefOr[js.Array[DeviceCompliancePolicySettingState]] = js.undefined
+  var settingCount: js.UndefOr[Double] = js.native
+  var settingStates: js.UndefOr[js.Array[DeviceCompliancePolicySettingState]] = js.native
   // The compliance state of the policy
-  var state: js.UndefOr[ComplianceStatus] = js.undefined
+  var state: js.UndefOr[ComplianceStatus] = js.native
   // The version of the policy
-  var version: js.UndefOr[Double] = js.undefined
+  var version: js.UndefOr[Double] = js.native
 }
 
 object DeviceCompliancePolicyState {
   @scala.inline
-  def apply(
-    displayName: String = null,
-    id: String = null,
-    platformType: PolicyPlatformType = null,
-    settingCount: Int | Double = null,
-    settingStates: js.Array[DeviceCompliancePolicySettingState] = null,
-    state: ComplianceStatus = null,
-    version: Int | Double = null
-  ): DeviceCompliancePolicyState = {
+  def apply(): DeviceCompliancePolicyState = {
     val __obj = js.Dynamic.literal()
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (platformType != null) __obj.updateDynamic("platformType")(platformType.asInstanceOf[js.Any])
-    if (settingCount != null) __obj.updateDynamic("settingCount")(settingCount.asInstanceOf[js.Any])
-    if (settingStates != null) __obj.updateDynamic("settingStates")(settingStates.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceCompliancePolicyState]
   }
+  @scala.inline
+  implicit class DeviceCompliancePolicyStateOps[Self <: DeviceCompliancePolicyState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformType(value: PolicyPlatformType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSettingCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("settingCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSettingCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("settingCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSettingStates(value: js.Array[DeviceCompliancePolicySettingState]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("settingStates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSettingStates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("settingStates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: ComplianceStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

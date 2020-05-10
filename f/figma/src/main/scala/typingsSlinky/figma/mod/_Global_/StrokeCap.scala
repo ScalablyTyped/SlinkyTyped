@@ -15,16 +15,14 @@ trait StrokeCap extends js.Object
 
 object StrokeCap {
   @scala.inline
-  def ARROW_EQUILATERAL: typingsSlinky.figma.figmaStrings.ARROW_EQUILATERAL = this.cast("ARROW_EQUILATERAL")
+  def ARROW_EQUILATERAL: typingsSlinky.figma.figmaStrings.ARROW_EQUILATERAL = "ARROW_EQUILATERAL".asInstanceOf[typingsSlinky.figma.figmaStrings.ARROW_EQUILATERAL]
   @scala.inline
-  def ARROW_LINES: typingsSlinky.figma.figmaStrings.ARROW_LINES = this.cast("ARROW_LINES")
+  def ARROW_LINES: typingsSlinky.figma.figmaStrings.ARROW_LINES = "ARROW_LINES".asInstanceOf[typingsSlinky.figma.figmaStrings.ARROW_LINES]
   @scala.inline
-  def NONE: typingsSlinky.figma.figmaStrings.NONE = this.cast("NONE")
+  def NONE: typingsSlinky.figma.figmaStrings.NONE = "NONE".asInstanceOf[typingsSlinky.figma.figmaStrings.NONE]
   @scala.inline
-  def ROUND: typingsSlinky.figma.figmaStrings.ROUND = this.cast("ROUND")
+  def ROUND: typingsSlinky.figma.figmaStrings.ROUND = "ROUND".asInstanceOf[typingsSlinky.figma.figmaStrings.ROUND]
   @scala.inline
-  def SQUARE: typingsSlinky.figma.figmaStrings.SQUARE = this.cast("SQUARE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SQUARE: typingsSlinky.figma.figmaStrings.SQUARE = "SQUARE".asInstanceOf[typingsSlinky.figma.figmaStrings.SQUARE]
 }
 

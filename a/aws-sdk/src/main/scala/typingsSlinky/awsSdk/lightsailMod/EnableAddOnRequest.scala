@@ -20,8 +20,27 @@ object EnableAddOnRequest {
   @scala.inline
   def apply(addOnRequest: AddOnRequest, resourceName: ResourceName): EnableAddOnRequest = {
     val __obj = js.Dynamic.literal(addOnRequest = addOnRequest.asInstanceOf[js.Any], resourceName = resourceName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[EnableAddOnRequest]
   }
+  @scala.inline
+  implicit class EnableAddOnRequestOps[Self <: EnableAddOnRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddOnRequest(value: AddOnRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnRequest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

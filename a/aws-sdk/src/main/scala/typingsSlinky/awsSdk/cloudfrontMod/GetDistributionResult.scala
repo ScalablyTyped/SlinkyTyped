@@ -18,11 +18,41 @@ trait GetDistributionResult extends js.Object {
 
 object GetDistributionResult {
   @scala.inline
-  def apply(Distribution: Distribution = null, ETag: String = null): GetDistributionResult = {
+  def apply(): GetDistributionResult = {
     val __obj = js.Dynamic.literal()
-    if (Distribution != null) __obj.updateDynamic("Distribution")(Distribution.asInstanceOf[js.Any])
-    if (ETag != null) __obj.updateDynamic("ETag")(ETag.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDistributionResult]
   }
+  @scala.inline
+  implicit class GetDistributionResultOps[Self <: GetDistributionResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDistribution(value: Distribution): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Distribution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistribution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Distribution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withETag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutETag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

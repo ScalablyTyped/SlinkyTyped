@@ -24,22 +24,20 @@ trait ReferrerPolicy extends js.Object
 
 object ReferrerPolicy {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `no-referrer`: typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`no-referrer` = "no-referrer".asInstanceOf[typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`no-referrer`]
   @scala.inline
-  def `no-referrer`: typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`no-referrer` = this.cast("no-referrer")
+  def `no-referrer-when-downgrade`: typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`no-referrer-when-downgrade` = "no-referrer-when-downgrade".asInstanceOf[typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`no-referrer-when-downgrade`]
   @scala.inline
-  def `no-referrer-when-downgrade`: typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`no-referrer-when-downgrade` = this.cast("no-referrer-when-downgrade")
+  def origin: typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.origin = "origin".asInstanceOf[typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.origin]
   @scala.inline
-  def origin: typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.origin = this.cast("origin")
+  def `origin-when-cross-origin`: typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`origin-when-cross-origin` = "origin-when-cross-origin".asInstanceOf[typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`origin-when-cross-origin`]
   @scala.inline
-  def `origin-when-cross-origin`: typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`origin-when-cross-origin` = this.cast("origin-when-cross-origin")
+  def `same-origin`: typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`same-origin` = "same-origin".asInstanceOf[typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`same-origin`]
   @scala.inline
-  def `same-origin`: typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`same-origin` = this.cast("same-origin")
+  def `strict-origin`: typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`strict-origin` = "strict-origin".asInstanceOf[typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`strict-origin`]
   @scala.inline
-  def `strict-origin`: typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`strict-origin` = this.cast("strict-origin")
+  def `strict-origin-when-cross-origin`: typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`strict-origin-when-cross-origin` = "strict-origin-when-cross-origin".asInstanceOf[typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`strict-origin-when-cross-origin`]
   @scala.inline
-  def `strict-origin-when-cross-origin`: typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`strict-origin-when-cross-origin` = this.cast("strict-origin-when-cross-origin")
-  @scala.inline
-  def `unsafe-url`: typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`unsafe-url` = this.cast("unsafe-url")
+  def `unsafe-url`: typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`unsafe-url` = "unsafe-url".asInstanceOf[typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`unsafe-url`]
 }
 

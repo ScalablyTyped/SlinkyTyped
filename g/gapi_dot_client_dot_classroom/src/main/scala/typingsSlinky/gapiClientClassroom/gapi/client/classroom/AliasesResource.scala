@@ -38,6 +38,7 @@ trait AliasesResource extends js.Object {
     * requesting user or course (for example, if a user not in a domain
     * attempts to delete a domain-scoped alias).
     */
+  def delete(): Request_[js.Object] = js.native
   def delete(request: AnonAlias): Request_[js.Object] = js.native
   /**
     * Returns a list of aliases for a course.
@@ -48,6 +49,7 @@ trait AliasesResource extends js.Object {
     * course or for access errors.
     * &#42; `NOT_FOUND` if the course does not exist.
     */
+  def list(): Request_[ListCourseAliasesResponse] = js.native
   def list(request: AnonCallback): Request_[ListCourseAliasesResponse] = js.native
 }
 

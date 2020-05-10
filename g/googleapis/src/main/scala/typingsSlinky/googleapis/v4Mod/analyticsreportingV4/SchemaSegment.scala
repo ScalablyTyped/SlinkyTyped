@@ -23,11 +23,41 @@ trait SchemaSegment extends js.Object {
 
 object SchemaSegment {
   @scala.inline
-  def apply(dynamicSegment: SchemaDynamicSegment = null, segmentId: String = null): SchemaSegment = {
+  def apply(): SchemaSegment = {
     val __obj = js.Dynamic.literal()
-    if (dynamicSegment != null) __obj.updateDynamic("dynamicSegment")(dynamicSegment.asInstanceOf[js.Any])
-    if (segmentId != null) __obj.updateDynamic("segmentId")(segmentId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSegment]
   }
+  @scala.inline
+  implicit class SchemaSegmentOps[Self <: SchemaSegment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDynamicSegment(value: SchemaDynamicSegment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicSegment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamicSegment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicSegment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,78 +12,296 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAutoplay extends js.Object {
-  var autoplay: js.UndefOr[`0` | `1`] = js.undefined
-  var cc_lang_pref: js.UndefOr[String] = js.undefined
-  var cc_load_policy: js.UndefOr[`1`] = js.undefined
-  var color: js.UndefOr[red | white] = js.undefined
-  var controls: js.UndefOr[`0` | `1`] = js.undefined
-  var disablekb: js.UndefOr[`0` | `1`] = js.undefined
-  var enablejsapi: js.UndefOr[`0` | `1`] = js.undefined
-  var end: js.UndefOr[Double] = js.undefined
-  var fs: js.UndefOr[`0` | `1`] = js.undefined
-  var hl: js.UndefOr[String] = js.undefined
-  var iv_load_policy: js.UndefOr[`1` | `3`] = js.undefined
-  var list: js.UndefOr[String] = js.undefined
-  var listType: js.UndefOr[playlist | search | user_uploads] = js.undefined
-  var loop: js.UndefOr[`0` | `1`] = js.undefined
-  var modestbranding: js.UndefOr[`1`] = js.undefined
-  var origin: js.UndefOr[String] = js.undefined
-  var playlist: js.UndefOr[String] = js.undefined
-  var playsinline: js.UndefOr[`0` | `1`] = js.undefined
-  var rel: js.UndefOr[`0` | `1`] = js.undefined
-  var start: js.UndefOr[Double] = js.undefined
-  var widget_referrer: js.UndefOr[String] = js.undefined
+  var autoplay: js.UndefOr[`0` | `1`] = js.native
+  var cc_lang_pref: js.UndefOr[String] = js.native
+  var cc_load_policy: js.UndefOr[`1`] = js.native
+  var color: js.UndefOr[red | white] = js.native
+  var controls: js.UndefOr[`0` | `1`] = js.native
+  var disablekb: js.UndefOr[`0` | `1`] = js.native
+  var enablejsapi: js.UndefOr[`0` | `1`] = js.native
+  var end: js.UndefOr[Double] = js.native
+  var fs: js.UndefOr[`0` | `1`] = js.native
+  var hl: js.UndefOr[String] = js.native
+  var iv_load_policy: js.UndefOr[`1` | `3`] = js.native
+  var list: js.UndefOr[String] = js.native
+  var listType: js.UndefOr[playlist | search | user_uploads] = js.native
+  var loop: js.UndefOr[`0` | `1`] = js.native
+  var modestbranding: js.UndefOr[`1`] = js.native
+  var origin: js.UndefOr[String] = js.native
+  var playlist: js.UndefOr[String] = js.native
+  var playsinline: js.UndefOr[`0` | `1`] = js.native
+  var rel: js.UndefOr[`0` | `1`] = js.native
+  var start: js.UndefOr[Double] = js.native
+  var widget_referrer: js.UndefOr[String] = js.native
 }
 
 object AnonAutoplay {
   @scala.inline
-  def apply(
-    autoplay: `0` | `1` = null,
-    cc_lang_pref: String = null,
-    cc_load_policy: `1` = null,
-    color: red | white = null,
-    controls: `0` | `1` = null,
-    disablekb: `0` | `1` = null,
-    enablejsapi: `0` | `1` = null,
-    end: Int | Double = null,
-    fs: `0` | `1` = null,
-    hl: String = null,
-    iv_load_policy: `1` | `3` = null,
-    list: String = null,
-    listType: playlist | search | user_uploads = null,
-    loop: `0` | `1` = null,
-    modestbranding: `1` = null,
-    origin: String = null,
-    playlist: String = null,
-    playsinline: `0` | `1` = null,
-    rel: `0` | `1` = null,
-    start: Int | Double = null,
-    widget_referrer: String = null
-  ): AnonAutoplay = {
+  def apply(): AnonAutoplay = {
     val __obj = js.Dynamic.literal()
-    if (autoplay != null) __obj.updateDynamic("autoplay")(autoplay.asInstanceOf[js.Any])
-    if (cc_lang_pref != null) __obj.updateDynamic("cc_lang_pref")(cc_lang_pref.asInstanceOf[js.Any])
-    if (cc_load_policy != null) __obj.updateDynamic("cc_load_policy")(cc_load_policy.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (controls != null) __obj.updateDynamic("controls")(controls.asInstanceOf[js.Any])
-    if (disablekb != null) __obj.updateDynamic("disablekb")(disablekb.asInstanceOf[js.Any])
-    if (enablejsapi != null) __obj.updateDynamic("enablejsapi")(enablejsapi.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (fs != null) __obj.updateDynamic("fs")(fs.asInstanceOf[js.Any])
-    if (hl != null) __obj.updateDynamic("hl")(hl.asInstanceOf[js.Any])
-    if (iv_load_policy != null) __obj.updateDynamic("iv_load_policy")(iv_load_policy.asInstanceOf[js.Any])
-    if (list != null) __obj.updateDynamic("list")(list.asInstanceOf[js.Any])
-    if (listType != null) __obj.updateDynamic("listType")(listType.asInstanceOf[js.Any])
-    if (loop != null) __obj.updateDynamic("loop")(loop.asInstanceOf[js.Any])
-    if (modestbranding != null) __obj.updateDynamic("modestbranding")(modestbranding.asInstanceOf[js.Any])
-    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
-    if (playlist != null) __obj.updateDynamic("playlist")(playlist.asInstanceOf[js.Any])
-    if (playsinline != null) __obj.updateDynamic("playsinline")(playsinline.asInstanceOf[js.Any])
-    if (rel != null) __obj.updateDynamic("rel")(rel.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (widget_referrer != null) __obj.updateDynamic("widget_referrer")(widget_referrer.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAutoplay]
   }
+  @scala.inline
+  implicit class AnonAutoplayOps[Self <: AnonAutoplay] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoplay(value: `0` | `1`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCc_lang_pref(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cc_lang_pref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCc_lang_pref: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cc_lang_pref")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCc_load_policy(value: `1`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cc_load_policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCc_load_policy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cc_load_policy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: red | white): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withControls(value: `0` | `1`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisablekb(value: `0` | `1`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disablekb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisablekb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disablekb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnablejsapi(value: `0` | `1`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablejsapi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnablejsapi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablejsapi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnd(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFs(value: `0` | `1`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIv_load_policy(value: `1` | `3`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iv_load_policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIv_load_policy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iv_load_policy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withList(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListType(value: playlist | search | user_uploads): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoop(value: `0` | `1`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModestbranding(value: `1`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modestbranding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModestbranding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modestbranding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrigin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaylist(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("playlist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaylist: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("playlist")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaysinline(value: `0` | `1`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("playsinline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaysinline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("playsinline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRel(value: `0` | `1`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidget_referrer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("widget_referrer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidget_referrer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("widget_referrer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

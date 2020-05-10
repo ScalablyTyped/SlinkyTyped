@@ -30,18 +30,65 @@ trait SchemaDataValidationRule extends js.Object {
 
 object SchemaDataValidationRule {
   @scala.inline
-  def apply(
-    condition: SchemaBooleanCondition = null,
-    inputMessage: String = null,
-    showCustomUi: js.UndefOr[Boolean] = js.undefined,
-    strict: js.UndefOr[Boolean] = js.undefined
-  ): SchemaDataValidationRule = {
+  def apply(): SchemaDataValidationRule = {
     val __obj = js.Dynamic.literal()
-    if (condition != null) __obj.updateDynamic("condition")(condition.asInstanceOf[js.Any])
-    if (inputMessage != null) __obj.updateDynamic("inputMessage")(inputMessage.asInstanceOf[js.Any])
-    if (!js.isUndefined(showCustomUi)) __obj.updateDynamic("showCustomUi")(showCustomUi.asInstanceOf[js.Any])
-    if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDataValidationRule]
   }
+  @scala.inline
+  implicit class SchemaDataValidationRuleOps[Self <: SchemaDataValidationRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCondition(value: SchemaBooleanCondition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowCustomUi(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showCustomUi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowCustomUi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showCustomUi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrict(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrict: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

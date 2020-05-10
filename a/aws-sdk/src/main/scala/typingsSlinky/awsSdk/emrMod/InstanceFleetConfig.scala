@@ -34,21 +34,83 @@ trait InstanceFleetConfig extends js.Object {
 
 object InstanceFleetConfig {
   @scala.inline
-  def apply(
-    InstanceFleetType: InstanceFleetType,
-    InstanceTypeConfigs: InstanceTypeConfigList = null,
-    LaunchSpecifications: InstanceFleetProvisioningSpecifications = null,
-    Name: XmlStringMaxLen256 = null,
-    TargetOnDemandCapacity: Int | Double = null,
-    TargetSpotCapacity: Int | Double = null
-  ): InstanceFleetConfig = {
+  def apply(InstanceFleetType: InstanceFleetType): InstanceFleetConfig = {
     val __obj = js.Dynamic.literal(InstanceFleetType = InstanceFleetType.asInstanceOf[js.Any])
-    if (InstanceTypeConfigs != null) __obj.updateDynamic("InstanceTypeConfigs")(InstanceTypeConfigs.asInstanceOf[js.Any])
-    if (LaunchSpecifications != null) __obj.updateDynamic("LaunchSpecifications")(LaunchSpecifications.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (TargetOnDemandCapacity != null) __obj.updateDynamic("TargetOnDemandCapacity")(TargetOnDemandCapacity.asInstanceOf[js.Any])
-    if (TargetSpotCapacity != null) __obj.updateDynamic("TargetSpotCapacity")(TargetSpotCapacity.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceFleetConfig]
   }
+  @scala.inline
+  implicit class InstanceFleetConfigOps[Self <: InstanceFleetConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceFleetType(value: InstanceFleetType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFleetType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstanceTypeConfigs(value: InstanceTypeConfigList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceTypeConfigs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceTypeConfigs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceTypeConfigs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchSpecifications(value: InstanceFleetProvisioningSpecifications): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchSpecifications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchSpecifications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchSpecifications")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: XmlStringMaxLen256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetOnDemandCapacity(value: WholeNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetOnDemandCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetOnDemandCapacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetOnDemandCapacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetSpotCapacity(value: WholeNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetSpotCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetSpotCapacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetSpotCapacity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

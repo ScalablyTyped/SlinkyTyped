@@ -13,12 +13,10 @@ trait PaddingMode extends js.Object
 
 object PaddingMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def causal: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.causal = "causal".asInstanceOf[typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.causal]
   @scala.inline
-  def causal: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.causal = this.cast("causal")
+  def same: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.same = "same".asInstanceOf[typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.same]
   @scala.inline
-  def same: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.same = this.cast("same")
-  @scala.inline
-  def valid: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.valid = this.cast("valid")
+  def valid: typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.valid = "valid".asInstanceOf[typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.valid]
 }
 

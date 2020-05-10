@@ -5,24 +5,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GPSPointDimension extends js.Object {
   /**
     * Coordinate to measure distance from.
     */
-  var Coordinates: js.UndefOr[GPSCoordinates] = js.undefined
+  var Coordinates: js.UndefOr[GPSCoordinates] = js.native
   /**
     * Range in kilometers from the coordinate.
     */
-  var RangeInKilometers: js.UndefOr[Double] = js.undefined
+  var RangeInKilometers: js.UndefOr[Double] = js.native
 }
 
 object GPSPointDimension {
   @scala.inline
-  def apply(Coordinates: GPSCoordinates = null, RangeInKilometers: Int | Double = null): GPSPointDimension = {
+  def apply(): GPSPointDimension = {
     val __obj = js.Dynamic.literal()
-    if (Coordinates != null) __obj.updateDynamic("Coordinates")(Coordinates.asInstanceOf[js.Any])
-    if (RangeInKilometers != null) __obj.updateDynamic("RangeInKilometers")(RangeInKilometers.asInstanceOf[js.Any])
     __obj.asInstanceOf[GPSPointDimension]
   }
+  @scala.inline
+  implicit class GPSPointDimensionOps[Self <: GPSPointDimension] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCoordinates(value: GPSCoordinates): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Coordinates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoordinates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Coordinates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeInKilometers(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RangeInKilometers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeInKilometers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RangeInKilometers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

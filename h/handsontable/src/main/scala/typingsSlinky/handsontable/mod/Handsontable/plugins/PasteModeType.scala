@@ -13,12 +13,10 @@ trait PasteModeType extends js.Object
 
 object PasteModeType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def overwrite: typingsSlinky.handsontable.handsontableStrings.overwrite = "overwrite".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.overwrite]
   @scala.inline
-  def overwrite: typingsSlinky.handsontable.handsontableStrings.overwrite = this.cast("overwrite")
+  def shift_down: typingsSlinky.handsontable.handsontableStrings.shift_down = "shift_down".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.shift_down]
   @scala.inline
-  def shift_down: typingsSlinky.handsontable.handsontableStrings.shift_down = this.cast("shift_down")
-  @scala.inline
-  def shift_right: typingsSlinky.handsontable.handsontableStrings.shift_right = this.cast("shift_right")
+  def shift_right: typingsSlinky.handsontable.handsontableStrings.shift_right = "shift_right".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.shift_right]
 }
 

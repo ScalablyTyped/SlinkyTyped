@@ -5,33 +5,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonSearchedWords extends js.Object {
-  var notes: js.UndefOr[js.Array[NoteMetadata]] = js.undefined
-  var searchedWords: js.UndefOr[js.Array[String]] = js.undefined
-  var startIndex: js.UndefOr[Double] = js.undefined
-  var stoppedWords: js.UndefOr[js.Array[String]] = js.undefined
-  var totalNotes: js.UndefOr[Double] = js.undefined
-  var updateCount: js.UndefOr[Double] = js.undefined
+  var notes: js.UndefOr[js.Array[NoteMetadata]] = js.native
+  var searchedWords: js.UndefOr[js.Array[String]] = js.native
+  var startIndex: js.UndefOr[Double] = js.native
+  var stoppedWords: js.UndefOr[js.Array[String]] = js.native
+  var totalNotes: js.UndefOr[Double] = js.native
+  var updateCount: js.UndefOr[Double] = js.native
 }
 
 object AnonSearchedWords {
   @scala.inline
-  def apply(
-    notes: js.Array[NoteMetadata] = null,
-    searchedWords: js.Array[String] = null,
-    startIndex: Int | Double = null,
-    stoppedWords: js.Array[String] = null,
-    totalNotes: Int | Double = null,
-    updateCount: Int | Double = null
-  ): AnonSearchedWords = {
+  def apply(): AnonSearchedWords = {
     val __obj = js.Dynamic.literal()
-    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
-    if (searchedWords != null) __obj.updateDynamic("searchedWords")(searchedWords.asInstanceOf[js.Any])
-    if (startIndex != null) __obj.updateDynamic("startIndex")(startIndex.asInstanceOf[js.Any])
-    if (stoppedWords != null) __obj.updateDynamic("stoppedWords")(stoppedWords.asInstanceOf[js.Any])
-    if (totalNotes != null) __obj.updateDynamic("totalNotes")(totalNotes.asInstanceOf[js.Any])
-    if (updateCount != null) __obj.updateDynamic("updateCount")(updateCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonSearchedWords]
   }
+  @scala.inline
+  implicit class AnonSearchedWordsOps[Self <: AnonSearchedWords] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNotes(value: js.Array[NoteMetadata]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchedWords(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchedWords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchedWords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchedWords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoppedWords(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stoppedWords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoppedWords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stoppedWords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalNotes(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalNotes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalNotes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalNotes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

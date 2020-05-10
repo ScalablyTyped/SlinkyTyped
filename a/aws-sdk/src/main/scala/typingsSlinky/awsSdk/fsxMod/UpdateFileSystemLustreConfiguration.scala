@@ -14,10 +14,29 @@ trait UpdateFileSystemLustreConfiguration extends js.Object {
 
 object UpdateFileSystemLustreConfiguration {
   @scala.inline
-  def apply(WeeklyMaintenanceStartTime: WeeklyTime = null): UpdateFileSystemLustreConfiguration = {
+  def apply(): UpdateFileSystemLustreConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (WeeklyMaintenanceStartTime != null) __obj.updateDynamic("WeeklyMaintenanceStartTime")(WeeklyMaintenanceStartTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateFileSystemLustreConfiguration]
   }
+  @scala.inline
+  implicit class UpdateFileSystemLustreConfigurationOps[Self <: UpdateFileSystemLustreConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWeeklyMaintenanceStartTime(value: WeeklyTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WeeklyMaintenanceStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeeklyMaintenanceStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WeeklyMaintenanceStartTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

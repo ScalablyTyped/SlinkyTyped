@@ -1,18 +1,18 @@
 package typingsSlinky.nodemailer.streamTransportMod
 
 import typingsSlinky.nodemailer.mod.Transport
-import typingsSlinky.nodemailer.nodemailerBooleans.`true`
 import typingsSlinky.nodemailer.sharedMod.Logger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StreamTransport extends Transport {
-  var logger: Logger
+  var logger: Logger = js.native
   @JSName("mailer")
-  var mailer_StreamTransport: typingsSlinky.nodemailer.mailerMod.^
-  var options: Options
-  var winbreak: Boolean
+  var mailer_StreamTransport: typingsSlinky.nodemailer.mailerMod.^ = js.native
+  var options: Options = js.native
+  var winbreak: Boolean = js.native
 }
 
 object StreamTransport {
@@ -28,14 +28,42 @@ object StreamTransport {
       Unit
     ]) => Unit,
     version: String,
-    winbreak: Boolean,
-    close: () => Unit = null,
-    verify: (js.Function1[/* callback */ js.Function2[/* err */ js.Error | Null, `true`, Unit], Unit]) with js.Function0[js.Promise[`true`]] = null
+    winbreak: Boolean
   ): StreamTransport = {
     val __obj = js.Dynamic.literal(logger = logger.asInstanceOf[js.Any], mailer = mailer.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], send = js.Any.fromFunction2(send), version = version.asInstanceOf[js.Any], winbreak = winbreak.asInstanceOf[js.Any])
-    if (close != null) __obj.updateDynamic("close")(js.Any.fromFunction0(close))
-    if (verify != null) __obj.updateDynamic("verify")(verify.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreamTransport]
   }
+  @scala.inline
+  implicit class StreamTransportOps[Self <: StreamTransport] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLogger(value: Logger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMailer(value: typingsSlinky.nodemailer.mailerMod.^): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mailer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptions(value: Options): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWinbreak(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("winbreak")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

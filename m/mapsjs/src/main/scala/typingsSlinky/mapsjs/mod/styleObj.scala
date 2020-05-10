@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait styleObj extends js.Object {
-  var dashArray: js.UndefOr[String] = js.undefined
-  var fillColor: js.UndefOr[String] = js.undefined
-  var fillOpacity: js.UndefOr[Double] = js.undefined
-  var outlineColor: js.UndefOr[String] = js.undefined
-  var outlineOpacity: js.UndefOr[Double] = js.undefined
-  var outlineThicknessPix: js.UndefOr[Double] = js.undefined
+  var dashArray: js.UndefOr[String] = js.native
+  var fillColor: js.UndefOr[String] = js.native
+  var fillOpacity: js.UndefOr[Double] = js.native
+  var outlineColor: js.UndefOr[String] = js.native
+  var outlineOpacity: js.UndefOr[Double] = js.native
+  var outlineThicknessPix: js.UndefOr[Double] = js.native
 }
 
 object styleObj {
   @scala.inline
-  def apply(
-    dashArray: String = null,
-    fillColor: String = null,
-    fillOpacity: Int | Double = null,
-    outlineColor: String = null,
-    outlineOpacity: Int | Double = null,
-    outlineThicknessPix: Int | Double = null
-  ): styleObj = {
+  def apply(): styleObj = {
     val __obj = js.Dynamic.literal()
-    if (dashArray != null) __obj.updateDynamic("dashArray")(dashArray.asInstanceOf[js.Any])
-    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
-    if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
-    if (outlineColor != null) __obj.updateDynamic("outlineColor")(outlineColor.asInstanceOf[js.Any])
-    if (outlineOpacity != null) __obj.updateDynamic("outlineOpacity")(outlineOpacity.asInstanceOf[js.Any])
-    if (outlineThicknessPix != null) __obj.updateDynamic("outlineThicknessPix")(outlineThicknessPix.asInstanceOf[js.Any])
     __obj.asInstanceOf[styleObj]
   }
+  @scala.inline
+  implicit class styleObjOps[Self <: styleObj] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDashArray(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dashArray")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDashArray: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dashArray")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutlineColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutlineColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutlineOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutlineOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutlineThicknessPix(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineThicknessPix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutlineThicknessPix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineThicknessPix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

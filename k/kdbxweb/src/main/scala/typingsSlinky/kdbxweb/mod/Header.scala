@@ -14,7 +14,7 @@ class Header () extends js.Object {
   var endPos: Double = js.native
   var kdfParameters: VarDictionary = js.native
   var keyEncryptionRounds: Double = js.native
-  var masterSeed: scala.scalajs.js.typedarray.Uint8Array = js.native
+  var masterSeed: js.typedarray.Uint8Array = js.native
   var protectedStreamKey: js.Any = js.native
   var publicCustomData: js.Any = js.native
   var streamStartBytes: js.Any = js.native

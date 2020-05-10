@@ -17,20 +17,18 @@ trait TextStatus extends js.Object
 
 object TextStatus {
   @scala.inline
-  def abort: typingsSlinky.jquery.jqueryStrings.abort = this.cast("abort")
+  def abort: typingsSlinky.jquery.jqueryStrings.abort = "abort".asInstanceOf[typingsSlinky.jquery.jqueryStrings.abort]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.jquery.jqueryStrings.error = "error".asInstanceOf[typingsSlinky.jquery.jqueryStrings.error]
   @scala.inline
-  def error: typingsSlinky.jquery.jqueryStrings.error = this.cast("error")
+  def nocontent: typingsSlinky.jquery.jqueryStrings.nocontent = "nocontent".asInstanceOf[typingsSlinky.jquery.jqueryStrings.nocontent]
   @scala.inline
-  def nocontent: typingsSlinky.jquery.jqueryStrings.nocontent = this.cast("nocontent")
+  def notmodified: typingsSlinky.jquery.jqueryStrings.notmodified = "notmodified".asInstanceOf[typingsSlinky.jquery.jqueryStrings.notmodified]
   @scala.inline
-  def notmodified: typingsSlinky.jquery.jqueryStrings.notmodified = this.cast("notmodified")
+  def parsererror: typingsSlinky.jquery.jqueryStrings.parsererror = "parsererror".asInstanceOf[typingsSlinky.jquery.jqueryStrings.parsererror]
   @scala.inline
-  def parsererror: typingsSlinky.jquery.jqueryStrings.parsererror = this.cast("parsererror")
+  def success: typingsSlinky.jquery.jqueryStrings.success = "success".asInstanceOf[typingsSlinky.jquery.jqueryStrings.success]
   @scala.inline
-  def success: typingsSlinky.jquery.jqueryStrings.success = this.cast("success")
-  @scala.inline
-  def timeout: typingsSlinky.jquery.jqueryStrings.timeout = this.cast("timeout")
+  def timeout: typingsSlinky.jquery.jqueryStrings.timeout = "timeout".asInstanceOf[typingsSlinky.jquery.jqueryStrings.timeout]
 }
 

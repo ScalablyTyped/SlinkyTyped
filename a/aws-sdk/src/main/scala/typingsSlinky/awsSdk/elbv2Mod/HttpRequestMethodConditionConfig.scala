@@ -14,10 +14,29 @@ trait HttpRequestMethodConditionConfig extends js.Object {
 
 object HttpRequestMethodConditionConfig {
   @scala.inline
-  def apply(Values: ListOfString = null): HttpRequestMethodConditionConfig = {
+  def apply(): HttpRequestMethodConditionConfig = {
     val __obj = js.Dynamic.literal()
-    if (Values != null) __obj.updateDynamic("Values")(Values.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpRequestMethodConditionConfig]
   }
+  @scala.inline
+  implicit class HttpRequestMethodConditionConfigOps[Self <: HttpRequestMethodConditionConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValues(value: ListOfString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

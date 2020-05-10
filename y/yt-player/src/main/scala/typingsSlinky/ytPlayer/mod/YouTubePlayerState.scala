@@ -16,18 +16,16 @@ trait YouTubePlayerState extends js.Object
 
 object YouTubePlayerState {
   @scala.inline
-  def buffering: typingsSlinky.ytPlayer.ytPlayerStrings.buffering = this.cast("buffering")
+  def buffering: typingsSlinky.ytPlayer.ytPlayerStrings.buffering = "buffering".asInstanceOf[typingsSlinky.ytPlayer.ytPlayerStrings.buffering]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cued: typingsSlinky.ytPlayer.ytPlayerStrings.cued = "cued".asInstanceOf[typingsSlinky.ytPlayer.ytPlayerStrings.cued]
   @scala.inline
-  def cued: typingsSlinky.ytPlayer.ytPlayerStrings.cued = this.cast("cued")
+  def ended: typingsSlinky.ytPlayer.ytPlayerStrings.ended = "ended".asInstanceOf[typingsSlinky.ytPlayer.ytPlayerStrings.ended]
   @scala.inline
-  def ended: typingsSlinky.ytPlayer.ytPlayerStrings.ended = this.cast("ended")
+  def paused: typingsSlinky.ytPlayer.ytPlayerStrings.paused = "paused".asInstanceOf[typingsSlinky.ytPlayer.ytPlayerStrings.paused]
   @scala.inline
-  def paused: typingsSlinky.ytPlayer.ytPlayerStrings.paused = this.cast("paused")
+  def playing: typingsSlinky.ytPlayer.ytPlayerStrings.playing = "playing".asInstanceOf[typingsSlinky.ytPlayer.ytPlayerStrings.playing]
   @scala.inline
-  def playing: typingsSlinky.ytPlayer.ytPlayerStrings.playing = this.cast("playing")
-  @scala.inline
-  def unstarted: typingsSlinky.ytPlayer.ytPlayerStrings.unstarted = this.cast("unstarted")
+  def unstarted: typingsSlinky.ytPlayer.ytPlayerStrings.unstarted = "unstarted".asInstanceOf[typingsSlinky.ytPlayer.ytPlayerStrings.unstarted]
 }
 

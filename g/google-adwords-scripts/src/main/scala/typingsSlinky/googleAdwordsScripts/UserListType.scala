@@ -17,20 +17,18 @@ trait UserListType extends js.Object
 
 object UserListType {
   @scala.inline
-  def CRM_BASED: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.CRM_BASED = this.cast("CRM_BASED")
+  def CRM_BASED: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.CRM_BASED = "CRM_BASED".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.CRM_BASED]
   @scala.inline
-  def EXTERNAL_REMARKETING: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.EXTERNAL_REMARKETING = this.cast("EXTERNAL_REMARKETING")
+  def EXTERNAL_REMARKETING: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.EXTERNAL_REMARKETING = "EXTERNAL_REMARKETING".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.EXTERNAL_REMARKETING]
   @scala.inline
-  def LOGICAL: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LOGICAL = this.cast("LOGICAL")
+  def LOGICAL: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LOGICAL = "LOGICAL".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.LOGICAL]
   @scala.inline
-  def REMARKETING: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.REMARKETING = this.cast("REMARKETING")
+  def REMARKETING: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.REMARKETING = "REMARKETING".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.REMARKETING]
   @scala.inline
-  def RULE_BASED: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.RULE_BASED = this.cast("RULE_BASED")
+  def RULE_BASED: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.RULE_BASED = "RULE_BASED".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.RULE_BASED]
   @scala.inline
-  def SIMILAR: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.SIMILAR = this.cast("SIMILAR")
+  def SIMILAR: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.SIMILAR = "SIMILAR".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.SIMILAR]
   @scala.inline
-  def UNKNOWN0: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.UNKNOWN0 = this.cast("UNKNOWN0")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UNKNOWN0: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.UNKNOWN0 = "UNKNOWN0".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.UNKNOWN0]
 }
 

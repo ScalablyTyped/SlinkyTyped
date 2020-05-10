@@ -47,5 +47,6 @@ trait CSSStyleSheet extends StyleSheet {
 
 @JSGlobal("CSSStyleSheet")
 @js.native
-object CSSStyleSheet extends Instantiable0[CSSStyleSheet]
+object CSSStyleSheet
+  extends Instantiable0[org.scalajs.dom.raw.CSSStyleSheet]
 

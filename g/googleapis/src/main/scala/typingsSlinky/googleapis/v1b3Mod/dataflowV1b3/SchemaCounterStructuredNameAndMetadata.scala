@@ -22,11 +22,41 @@ trait SchemaCounterStructuredNameAndMetadata extends js.Object {
 
 object SchemaCounterStructuredNameAndMetadata {
   @scala.inline
-  def apply(metadata: SchemaCounterMetadata = null, name: SchemaCounterStructuredName = null): SchemaCounterStructuredNameAndMetadata = {
+  def apply(): SchemaCounterStructuredNameAndMetadata = {
     val __obj = js.Dynamic.literal()
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCounterStructuredNameAndMetadata]
   }
+  @scala.inline
+  implicit class SchemaCounterStructuredNameAndMetadataOps[Self <: SchemaCounterStructuredNameAndMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMetadata(value: SchemaCounterMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: SchemaCounterStructuredName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

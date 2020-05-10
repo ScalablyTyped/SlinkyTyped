@@ -18,11 +18,14 @@ trait DeviceOrientationEvent extends Event_ {
 @JSGlobal("DeviceOrientationEvent")
 @js.native
 object DeviceOrientationEvent
-  extends Instantiable1[/* type */ java.lang.String, DeviceOrientationEvent]
+  extends Instantiable1[
+      /* type */ java.lang.String, 
+      org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent
+    ]
      with Instantiable2[
       /* type */ java.lang.String, 
-      /* eventInitDict */ DeviceOrientationEventInit, 
-      DeviceOrientationEvent
+      /* eventInitDict */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEventInit, 
+      org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent
     ] {
   def requestPermission(): js.Promise[PermissionState] = js.native
 }

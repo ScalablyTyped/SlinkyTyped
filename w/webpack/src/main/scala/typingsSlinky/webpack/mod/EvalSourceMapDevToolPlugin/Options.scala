@@ -6,33 +6,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var append: js.UndefOr[`false` | String] = js.undefined
-  var columns: js.UndefOr[Boolean] = js.undefined
-  var lineToLine: js.UndefOr[Boolean | AnonExclude] = js.undefined
-  var module: js.UndefOr[Boolean] = js.undefined
-  var moduleFilenameTemplate: js.UndefOr[String] = js.undefined
-  var sourceRoot: js.UndefOr[String] = js.undefined
+  var append: js.UndefOr[`false` | String] = js.native
+  var columns: js.UndefOr[Boolean] = js.native
+  var lineToLine: js.UndefOr[Boolean | AnonExclude] = js.native
+  var module: js.UndefOr[Boolean] = js.native
+  var moduleFilenameTemplate: js.UndefOr[String] = js.native
+  var sourceRoot: js.UndefOr[String] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    append: `false` | String = null,
-    columns: js.UndefOr[Boolean] = js.undefined,
-    lineToLine: Boolean | AnonExclude = null,
-    module: js.UndefOr[Boolean] = js.undefined,
-    moduleFilenameTemplate: String = null,
-    sourceRoot: String = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (append != null) __obj.updateDynamic("append")(append.asInstanceOf[js.Any])
-    if (!js.isUndefined(columns)) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (lineToLine != null) __obj.updateDynamic("lineToLine")(lineToLine.asInstanceOf[js.Any])
-    if (!js.isUndefined(module)) __obj.updateDynamic("module")(module.asInstanceOf[js.Any])
-    if (moduleFilenameTemplate != null) __obj.updateDynamic("moduleFilenameTemplate")(moduleFilenameTemplate.asInstanceOf[js.Any])
-    if (sourceRoot != null) __obj.updateDynamic("sourceRoot")(sourceRoot.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppend(value: `false` | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("append")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("append")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumns(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineToLine(value: Boolean | AnonExclude): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineToLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineToLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineToLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModule(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("module")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("module")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModuleFilenameTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moduleFilenameTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModuleFilenameTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moduleFilenameTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceRoot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceRoot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceRoot")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

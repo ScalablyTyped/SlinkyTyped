@@ -23,7 +23,7 @@ object mod extends js.Object {
     def this(number: Double) = this()
     def this(number: typingsSlinky.bnJs.mod.BN) = this()
     def this(number: Buffer) = this()
-    def this(number: scala.scalajs.js.typedarray.Uint8Array) = this()
+    def this(number: js.typedarray.Uint8Array) = this()
     def this(number: String, base: Double) = this()
     def this(number: String, base: hex) = this()
     def this(number: String, endian: Endianness) = this()
@@ -39,9 +39,9 @@ object mod extends js.Object {
     def this(number: Buffer, base: Double) = this()
     def this(number: Buffer, base: hex) = this()
     def this(number: Buffer, endian: Endianness) = this()
-    def this(number: scala.scalajs.js.typedarray.Uint8Array, base: Double) = this()
-    def this(number: scala.scalajs.js.typedarray.Uint8Array, base: hex) = this()
-    def this(number: scala.scalajs.js.typedarray.Uint8Array, endian: Endianness) = this()
+    def this(number: js.typedarray.Uint8Array, base: Double) = this()
+    def this(number: js.typedarray.Uint8Array, base: hex) = this()
+    def this(number: js.typedarray.Uint8Array, endian: Endianness) = this()
     def this(number: String, base: Double, endian: Endianness) = this()
     def this(number: String, base: hex, endian: Endianness) = this()
     def this(number: js.Array[Double], base: Double, endian: Endianness) = this()
@@ -52,8 +52,8 @@ object mod extends js.Object {
     def this(number: typingsSlinky.bnJs.mod.BN, base: hex, endian: Endianness) = this()
     def this(number: Buffer, base: Double, endian: Endianness) = this()
     def this(number: Buffer, base: hex, endian: Endianness) = this()
-    def this(number: scala.scalajs.js.typedarray.Uint8Array, base: Double, endian: Endianness) = this()
-    def this(number: scala.scalajs.js.typedarray.Uint8Array, base: hex, endian: Endianness) = this()
+    def this(number: js.typedarray.Uint8Array, base: Double, endian: Endianness) = this()
+    def this(number: js.typedarray.Uint8Array, base: hex, endian: Endianness) = this()
   }
   
   val KECCAK256_NULL: Buffer = js.native

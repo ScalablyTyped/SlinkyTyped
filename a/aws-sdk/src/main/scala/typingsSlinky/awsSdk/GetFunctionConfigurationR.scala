@@ -1,6 +1,7 @@
 package typingsSlinky.awsSdk
 
 import typingsSlinky.awsSdk.lambdaMod.NamespacedFunctionName
+import typingsSlinky.awsSdk.lambdaMod.Qualifier
 import typingsSlinky.awsSdk.serviceMod.WaiterConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,5 +20,51 @@ trait GetFunctionConfigurationR extends js.Object {
     * Specify a version or alias to get details about a published version of the function.
     */
   var Qualifier: js.UndefOr[typingsSlinky.awsSdk.lambdaMod.Qualifier] = js.native
+}
+
+object GetFunctionConfigurationR {
+  @scala.inline
+  def apply(FunctionName: NamespacedFunctionName): GetFunctionConfigurationR = {
+    val __obj = js.Dynamic.literal(FunctionName = FunctionName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GetFunctionConfigurationR]
+  }
+  @scala.inline
+  implicit class GetFunctionConfigurationROps[Self <: GetFunctionConfigurationR] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFunctionName(value: NamespacedFunctionName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$waiter(value: WaiterConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$waiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQualifier(value: Qualifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Qualifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQualifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Qualifier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

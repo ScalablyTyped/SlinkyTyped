@@ -26,18 +26,65 @@ trait GetProtectionStatusResponse extends js.Object {
 
 object GetProtectionStatusResponse {
   @scala.inline
-  def apply(
-    AdminAccountId: AWSAccountId = null,
-    Data: ProtectionData = null,
-    NextToken: PaginationToken = null,
-    ServiceType: SecurityServiceType = null
-  ): GetProtectionStatusResponse = {
+  def apply(): GetProtectionStatusResponse = {
     val __obj = js.Dynamic.literal()
-    if (AdminAccountId != null) __obj.updateDynamic("AdminAccountId")(AdminAccountId.asInstanceOf[js.Any])
-    if (Data != null) __obj.updateDynamic("Data")(Data.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (ServiceType != null) __obj.updateDynamic("ServiceType")(ServiceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetProtectionStatusResponse]
   }
+  @scala.inline
+  implicit class GetProtectionStatusResponseOps[Self <: GetProtectionStatusResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdminAccountId(value: AWSAccountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdminAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdminAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdminAccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: ProtectionData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceType(value: SecurityServiceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

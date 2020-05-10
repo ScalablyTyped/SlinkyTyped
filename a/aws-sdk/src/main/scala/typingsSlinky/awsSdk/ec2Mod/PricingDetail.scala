@@ -18,11 +18,41 @@ trait PricingDetail extends js.Object {
 
 object PricingDetail {
   @scala.inline
-  def apply(Count: Int | scala.Double = null, Price: Int | scala.Double = null): PricingDetail = {
+  def apply(): PricingDetail = {
     val __obj = js.Dynamic.literal()
-    if (Count != null) __obj.updateDynamic("Count")(Count.asInstanceOf[js.Any])
-    if (Price != null) __obj.updateDynamic("Price")(Price.asInstanceOf[js.Any])
     __obj.asInstanceOf[PricingDetail]
   }
+  @scala.inline
+  implicit class PricingDetailOps[Self <: PricingDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrice(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Price")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Price")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

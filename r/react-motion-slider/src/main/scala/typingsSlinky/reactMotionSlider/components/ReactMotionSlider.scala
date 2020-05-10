@@ -1,10 +1,7 @@
 package typingsSlinky.reactMotionSlider.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMotion.mod.OpaqueConfig
 import typingsSlinky.reactMotionSlider.mod.SliderProps
 import typingsSlinky.reactMotionSlider.mod.default
@@ -17,45 +14,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactMotionSlider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactMotionSlider {
   @JSImport("react-motion-slider", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    afterSlide: /* currentIndex */ Double => Unit = null,
-    align: left | center | right = null,
-    autoHeight: js.UndefOr[Boolean] = js.undefined,
-    beforeSlide: (/* currentIndex */ Double, /* nextIndex */ Double) => Unit = null,
-    currentIndex: Int | Double = null,
-    currentKey: String | Double = null,
-    flickTimeout: Int | Double = null,
-    slidesToMove: Int | Double = null,
-    slidesToShow: Int | Double = null,
-    springConfig: OpaqueConfig = null,
-    swipe: Boolean | touch | mouse = null,
-    swipeThreshold: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (afterSlide != null) __obj.updateDynamic("afterSlide")(js.Any.fromFunction1(afterSlide))
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoHeight)) __obj.updateDynamic("autoHeight")(autoHeight.asInstanceOf[js.Any])
-    if (beforeSlide != null) __obj.updateDynamic("beforeSlide")(js.Any.fromFunction2(beforeSlide))
-    if (currentIndex != null) __obj.updateDynamic("currentIndex")(currentIndex.asInstanceOf[js.Any])
-    if (currentKey != null) __obj.updateDynamic("currentKey")(currentKey.asInstanceOf[js.Any])
-    if (flickTimeout != null) __obj.updateDynamic("flickTimeout")(flickTimeout.asInstanceOf[js.Any])
-    if (slidesToMove != null) __obj.updateDynamic("slidesToMove")(slidesToMove.asInstanceOf[js.Any])
-    if (slidesToShow != null) __obj.updateDynamic("slidesToShow")(slidesToShow.asInstanceOf[js.Any])
-    if (springConfig != null) __obj.updateDynamic("springConfig")(springConfig.asInstanceOf[js.Any])
-    if (swipe != null) __obj.updateDynamic("swipe")(swipe.asInstanceOf[js.Any])
-    if (swipeThreshold != null) __obj.updateDynamic("swipeThreshold")(swipeThreshold.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def afterSlide(value: /* currentIndex */ Double => Unit): this.type = set("afterSlide", js.Any.fromFunction1(value))
+    @scala.inline
+    def align(value: left | center | right): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoHeight(value: Boolean): this.type = set("autoHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def beforeSlide(value: (/* currentIndex */ Double, /* nextIndex */ Double) => Unit): this.type = set("beforeSlide", js.Any.fromFunction2(value))
+    @scala.inline
+    def currentIndex(value: Double): this.type = set("currentIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def currentKey(value: String | Double): this.type = set("currentKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flickTimeout(value: Double): this.type = set("flickTimeout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def slidesToMove(value: Double): this.type = set("slidesToMove", value.asInstanceOf[js.Any])
+    @scala.inline
+    def slidesToShow(value: Double): this.type = set("slidesToShow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def springConfig(value: OpaqueConfig): this.type = set("springConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def swipe(value: Boolean | touch | mouse): this.type = set("swipe", value.asInstanceOf[js.Any])
+    @scala.inline
+    def swipeThreshold(value: Double): this.type = set("swipeThreshold", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactMotionSlider.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SliderProps
+  
+  def withProps(p: SliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactMotionSlider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

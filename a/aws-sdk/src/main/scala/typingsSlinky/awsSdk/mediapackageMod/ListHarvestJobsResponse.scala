@@ -18,11 +18,41 @@ trait ListHarvestJobsResponse extends js.Object {
 
 object ListHarvestJobsResponse {
   @scala.inline
-  def apply(HarvestJobs: listOfHarvestJob = null, NextToken: string = null): ListHarvestJobsResponse = {
+  def apply(): ListHarvestJobsResponse = {
     val __obj = js.Dynamic.literal()
-    if (HarvestJobs != null) __obj.updateDynamic("HarvestJobs")(HarvestJobs.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListHarvestJobsResponse]
   }
+  @scala.inline
+  implicit class ListHarvestJobsResponseOps[Self <: ListHarvestJobsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHarvestJobs(value: listOfHarvestJob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HarvestJobs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHarvestJobs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HarvestJobs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,35 +1,37 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.AnonValueString
 import typingsSlinky.primereact.dataViewMod.DataViewLayoutOptionsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DataViewLayoutOptions
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactDataviewMod.DataViewLayoutOptions] {
+object DataViewLayoutOptions {
   @JSImport("primereact/dataview", "DataViewLayoutOptions")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id */
-  def apply(
-    onChange: AnonValueString => Unit,
-    layout: String = null,
-    style: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactDataviewMod.DataViewLayoutOptions] = {
-    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.primereactDataviewMod.DataViewLayoutOptions] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def layout(value: String): this.type = set("layout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: String): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = DataViewLayoutOptionsProps
+  
+  def withProps(p: DataViewLayoutOptionsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(onChange: AnonValueString => Unit): Builder = {
+    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[DataViewLayoutOptionsProps]))
+  }
 }
 

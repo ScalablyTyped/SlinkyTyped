@@ -23,14 +23,41 @@ trait SchemaNonGuaranteedAuctionTerms extends js.Object {
 
 object SchemaNonGuaranteedAuctionTerms {
   @scala.inline
-  def apply(
-    autoOptimizePrivateAuction: js.UndefOr[Boolean] = js.undefined,
-    reservePricesPerBuyer: js.Array[SchemaPricePerBuyer] = null
-  ): SchemaNonGuaranteedAuctionTerms = {
+  def apply(): SchemaNonGuaranteedAuctionTerms = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoOptimizePrivateAuction)) __obj.updateDynamic("autoOptimizePrivateAuction")(autoOptimizePrivateAuction.asInstanceOf[js.Any])
-    if (reservePricesPerBuyer != null) __obj.updateDynamic("reservePricesPerBuyer")(reservePricesPerBuyer.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNonGuaranteedAuctionTerms]
   }
+  @scala.inline
+  implicit class SchemaNonGuaranteedAuctionTermsOps[Self <: SchemaNonGuaranteedAuctionTerms] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoOptimizePrivateAuction(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoOptimizePrivateAuction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoOptimizePrivateAuction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoOptimizePrivateAuction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReservePricesPerBuyer(value: js.Array[SchemaPricePerBuyer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reservePricesPerBuyer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReservePricesPerBuyer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reservePricesPerBuyer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

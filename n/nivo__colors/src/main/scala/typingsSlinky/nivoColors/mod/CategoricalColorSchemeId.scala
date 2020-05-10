@@ -20,26 +20,24 @@ trait CategoricalColorSchemeId extends js.Object
 
 object CategoricalColorSchemeId {
   @scala.inline
-  def accent: typingsSlinky.nivoColors.nivoColorsStrings.accent = this.cast("accent")
+  def accent: typingsSlinky.nivoColors.nivoColorsStrings.accent = "accent".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.accent]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def category10: typingsSlinky.nivoColors.nivoColorsStrings.category10 = "category10".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.category10]
   @scala.inline
-  def category10: typingsSlinky.nivoColors.nivoColorsStrings.category10 = this.cast("category10")
+  def dark2: typingsSlinky.nivoColors.nivoColorsStrings.dark2 = "dark2".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.dark2]
   @scala.inline
-  def dark2: typingsSlinky.nivoColors.nivoColorsStrings.dark2 = this.cast("dark2")
+  def nivo: typingsSlinky.nivoColors.nivoColorsStrings.nivo = "nivo".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.nivo]
   @scala.inline
-  def nivo: typingsSlinky.nivoColors.nivoColorsStrings.nivo = this.cast("nivo")
+  def paired: typingsSlinky.nivoColors.nivoColorsStrings.paired = "paired".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.paired]
   @scala.inline
-  def paired: typingsSlinky.nivoColors.nivoColorsStrings.paired = this.cast("paired")
+  def pastel1: typingsSlinky.nivoColors.nivoColorsStrings.pastel1 = "pastel1".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.pastel1]
   @scala.inline
-  def pastel1: typingsSlinky.nivoColors.nivoColorsStrings.pastel1 = this.cast("pastel1")
+  def pastel2: typingsSlinky.nivoColors.nivoColorsStrings.pastel2 = "pastel2".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.pastel2]
   @scala.inline
-  def pastel2: typingsSlinky.nivoColors.nivoColorsStrings.pastel2 = this.cast("pastel2")
+  def set1: typingsSlinky.nivoColors.nivoColorsStrings.set1 = "set1".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.set1]
   @scala.inline
-  def set1: typingsSlinky.nivoColors.nivoColorsStrings.set1 = this.cast("set1")
+  def set2: typingsSlinky.nivoColors.nivoColorsStrings.set2 = "set2".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.set2]
   @scala.inline
-  def set2: typingsSlinky.nivoColors.nivoColorsStrings.set2 = this.cast("set2")
-  @scala.inline
-  def set3: typingsSlinky.nivoColors.nivoColorsStrings.set3 = this.cast("set3")
+  def set3: typingsSlinky.nivoColors.nivoColorsStrings.set3 = "set3".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.set3]
 }
 

@@ -12,17 +12,37 @@ import scala.scalajs.js.annotation._
   *             .addSuggestion("First suggestion")
   *             .addSuggestion("Second suggestion"))
   */
+@js.native
 trait Suggestions extends js.Object {
-  def addSuggestion(suggestion: String): Suggestions
-  def addSuggestions(suggestions: js.Array[String]): Suggestions
+  def addSuggestion(suggestion: String): Suggestions = js.native
+  def addSuggestions(suggestions: js.Array[String]): Suggestions = js.native
 }
 
 object Suggestions {
   @scala.inline
   def apply(addSuggestion: String => Suggestions, addSuggestions: js.Array[String] => Suggestions): Suggestions = {
     val __obj = js.Dynamic.literal(addSuggestion = js.Any.fromFunction1(addSuggestion), addSuggestions = js.Any.fromFunction1(addSuggestions))
-  
     __obj.asInstanceOf[Suggestions]
   }
+  @scala.inline
+  implicit class SuggestionsOps[Self <: Suggestions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddSuggestion(value: String => Suggestions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addSuggestion")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAddSuggestions(value: js.Array[String] => Suggestions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addSuggestions")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

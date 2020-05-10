@@ -6,25 +6,73 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonTransition extends js.Object {
   /** The title of the page. */
-  var title: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.native
   /** The transition type for this visit from its referrer. */
-  var transition: js.UndefOr[TransitionType] = js.undefined
+  var transition: js.UndefOr[TransitionType] = js.native
   /** The URL to add. Must be a valid URL that can be added to history. */
-  var url: String
+  var url: String = js.native
   /** The date when this visit occurred. */
-  var visitTime: js.UndefOr[Date] = js.undefined
+  var visitTime: js.UndefOr[Date] = js.native
 }
 
 object AnonTransition {
   @scala.inline
-  def apply(url: String, title: String = null, transition: TransitionType = null, visitTime: Date = null): AnonTransition = {
+  def apply(url: String): AnonTransition = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
-    if (visitTime != null) __obj.updateDynamic("visitTime")(visitTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonTransition]
   }
+  @scala.inline
+  implicit class AnonTransitionOps[Self <: AnonTransition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransition(value: TransitionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisitTime(value: Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visitTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisitTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visitTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

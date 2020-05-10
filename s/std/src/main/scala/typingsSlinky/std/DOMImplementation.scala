@@ -30,5 +30,6 @@ trait DOMImplementation extends js.Object {
 
 @JSGlobal("DOMImplementation")
 @js.native
-object DOMImplementation extends Instantiable0[DOMImplementation]
+object DOMImplementation
+  extends Instantiable0[org.scalajs.dom.raw.DOMImplementation]
 

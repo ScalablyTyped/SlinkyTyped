@@ -1,15 +1,38 @@
 package typingsSlinky.reactPopperTooltip.components
 
+import org.scalajs.dom.raw.HTMLElement
+import slinky.core.TagMod
+import typingsSlinky.popperJs.mod.Popper.Placement
 import typingsSlinky.reactPopperTooltip.tooltipTriggerMod.default
+import typingsSlinky.reactPopperTooltip.typesMod.TooltipArg
+import typingsSlinky.reactPopperTooltip.typesMod.TooltipTriggerProps
+import typingsSlinky.reactPopperTooltip.typesMod.Trigger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TooltipTrigger extends SharedApply_TooltipTriggerProps1656813916[default] {
+object TooltipTrigger {
   @JSImport("react-popper-tooltip/dist/TooltipTrigger", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: TooltipTriggerProps): SharedBuilder_TooltipTriggerProps102580951[default] = new SharedBuilder_TooltipTriggerProps102580951[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(
+    closeOnOutOfBoundaries: Boolean,
+    defaultTooltipShown: Boolean,
+    delayHide: Double,
+    delayShow: Double,
+    followCursor: Boolean,
+    onVisibilityChange: Boolean => Unit,
+    placement: Placement,
+    portalContainer: HTMLElement,
+    tooltip: TooltipArg => TagMod[Any],
+    trigger: Trigger,
+    usePortal: Boolean
+  ): SharedBuilder_TooltipTriggerProps102580951[default] = {
+    val __props = js.Dynamic.literal(closeOnOutOfBoundaries = closeOnOutOfBoundaries.asInstanceOf[js.Any], defaultTooltipShown = defaultTooltipShown.asInstanceOf[js.Any], delayHide = delayHide.asInstanceOf[js.Any], delayShow = delayShow.asInstanceOf[js.Any], followCursor = followCursor.asInstanceOf[js.Any], onVisibilityChange = js.Any.fromFunction1(onVisibilityChange), placement = placement.asInstanceOf[js.Any], portalContainer = portalContainer.asInstanceOf[js.Any], tooltip = js.Any.fromFunction1(tooltip), trigger = trigger.asInstanceOf[js.Any], usePortal = usePortal.asInstanceOf[js.Any])
+    new SharedBuilder_TooltipTriggerProps102580951[default](js.Array(this.component, __props.asInstanceOf[TooltipTriggerProps]))
+  }
 }
 

@@ -1,11 +1,10 @@
 package typingsSlinky.victory.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.victory.mod.CallbackArgs
 import typingsSlinky.victory.mod.NumberOrCallback
 import typingsSlinky.victory.mod.OrientationTypes
 import typingsSlinky.victory.mod.StringOrNumberOrCallback
@@ -17,76 +16,92 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object VictoryTooltip
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.VictoryTooltip] {
+object VictoryTooltip {
   @JSImport("victory", "VictoryTooltip")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: style */
-  def apply(
-    activateData: js.UndefOr[Boolean] = js.undefined,
-    active: js.UndefOr[Boolean] = js.undefined,
-    angle: String | Double = null,
-    cornerRadius: NumberOrCallback = null,
-    data: js.Array[_] = null,
-    datum: js.Object = null,
-    dx: StringOrNumberOrCallback = null,
-    dy: StringOrNumberOrCallback = null,
-    events: js.Object = null,
-    flyoutComponent: ReactElement = null,
-    flyoutHeight: NumberOrCallback = null,
-    flyoutStyle: VictoryStyleObject = null,
-    flyoutWidth: NumberOrCallback = null,
-    groupComponent: ReactElement = null,
-    height: Int | Double = null,
-    horizontal: js.UndefOr[Boolean] = js.undefined,
-    index: Double | String = null,
-    labelComponent: ReactElement = null,
-    orientation: OrientationTypes | VictoryNumberCallback = null,
-    pointerLength: NumberOrCallback = null,
-    pointerWidth: NumberOrCallback = null,
-    renderInPortal: js.UndefOr[Boolean] = js.undefined,
-    text: StringOrNumberOrCallback | (js.Array[Double | String]) = null,
-    theme: VictoryThemeDefinition = null,
-    width: Int | Double = null,
-    x: Int | Double = null,
-    y: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryTooltip] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(activateData)) __obj.updateDynamic("activateData")(activateData.asInstanceOf[js.Any])
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (angle != null) __obj.updateDynamic("angle")(angle.asInstanceOf[js.Any])
-    if (cornerRadius != null) __obj.updateDynamic("cornerRadius")(cornerRadius.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (datum != null) __obj.updateDynamic("datum")(datum.asInstanceOf[js.Any])
-    if (dx != null) __obj.updateDynamic("dx")(dx.asInstanceOf[js.Any])
-    if (dy != null) __obj.updateDynamic("dy")(dy.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (flyoutComponent != null) __obj.updateDynamic("flyoutComponent")(flyoutComponent.asInstanceOf[js.Any])
-    if (flyoutHeight != null) __obj.updateDynamic("flyoutHeight")(flyoutHeight.asInstanceOf[js.Any])
-    if (flyoutStyle != null) __obj.updateDynamic("flyoutStyle")(flyoutStyle.asInstanceOf[js.Any])
-    if (flyoutWidth != null) __obj.updateDynamic("flyoutWidth")(flyoutWidth.asInstanceOf[js.Any])
-    if (groupComponent != null) __obj.updateDynamic("groupComponent")(groupComponent.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (labelComponent != null) __obj.updateDynamic("labelComponent")(labelComponent.asInstanceOf[js.Any])
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (pointerLength != null) __obj.updateDynamic("pointerLength")(pointerLength.asInstanceOf[js.Any])
-    if (pointerWidth != null) __obj.updateDynamic("pointerWidth")(pointerWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(renderInPortal)) __obj.updateDynamic("renderInPortal")(renderInPortal.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryTooltip] {
+    @scala.inline
+    def activateData(value: Boolean): this.type = set("activateData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def angle(value: String | Double): this.type = set("angle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cornerRadiusFunction1(value: /* args */ CallbackArgs => Double): this.type = set("cornerRadius", js.Any.fromFunction1(value))
+    @scala.inline
+    def cornerRadius(value: NumberOrCallback): this.type = set("cornerRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def datum(value: js.Object): this.type = set("datum", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dxFunction1(value: /* args */ CallbackArgs => String | Double): this.type = set("dx", js.Any.fromFunction1(value))
+    @scala.inline
+    def dx(value: StringOrNumberOrCallback): this.type = set("dx", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dyFunction1(value: /* args */ CallbackArgs => String | Double): this.type = set("dy", js.Any.fromFunction1(value))
+    @scala.inline
+    def dy(value: StringOrNumberOrCallback): this.type = set("dy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def events(value: js.Object): this.type = set("events", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flyoutComponent(value: ReactElement): this.type = set("flyoutComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flyoutHeightFunction1(value: /* args */ CallbackArgs => Double): this.type = set("flyoutHeight", js.Any.fromFunction1(value))
+    @scala.inline
+    def flyoutHeight(value: NumberOrCallback): this.type = set("flyoutHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flyoutStyle(value: VictoryStyleObject): this.type = set("flyoutStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flyoutWidthFunction1(value: /* args */ CallbackArgs => Double): this.type = set("flyoutWidth", js.Any.fromFunction1(value))
+    @scala.inline
+    def flyoutWidth(value: NumberOrCallback): this.type = set("flyoutWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupComponent(value: ReactElement): this.type = set("groupComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def index(value: Double | String): this.type = set("index", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelComponent(value: ReactElement): this.type = set("labelComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def orientationFunction1(value: /* args */ CallbackArgs => Double): this.type = set("orientation", js.Any.fromFunction1(value))
+    @scala.inline
+    def orientation(value: OrientationTypes | VictoryNumberCallback): this.type = set("orientation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pointerLengthFunction1(value: /* args */ CallbackArgs => Double): this.type = set("pointerLength", js.Any.fromFunction1(value))
+    @scala.inline
+    def pointerLength(value: NumberOrCallback): this.type = set("pointerLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pointerWidthFunction1(value: /* args */ CallbackArgs => Double): this.type = set("pointerWidth", js.Any.fromFunction1(value))
+    @scala.inline
+    def pointerWidth(value: NumberOrCallback): this.type = set("pointerWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderInPortal(value: Boolean): this.type = set("renderInPortal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textFunction1(value: /* args */ CallbackArgs => String | Double): this.type = set("text", js.Any.fromFunction1(value))
+    @scala.inline
+    def text(value: StringOrNumberOrCallback | (js.Array[Double | String])): this.type = set("text", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: VictoryThemeDefinition): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def x(value: Double): this.type = set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryTooltip] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.VictoryTooltip](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = VictoryTooltipProps
+  
+  def withProps(p: VictoryTooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: VictoryTooltip.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

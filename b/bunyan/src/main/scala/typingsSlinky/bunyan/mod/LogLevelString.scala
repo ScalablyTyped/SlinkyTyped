@@ -16,18 +16,16 @@ trait LogLevelString extends js.Object
 
 object LogLevelString {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def debug: typingsSlinky.bunyan.bunyanStrings.debug = "debug".asInstanceOf[typingsSlinky.bunyan.bunyanStrings.debug]
   @scala.inline
-  def debug: typingsSlinky.bunyan.bunyanStrings.debug = this.cast("debug")
+  def error: typingsSlinky.bunyan.bunyanStrings.error = "error".asInstanceOf[typingsSlinky.bunyan.bunyanStrings.error]
   @scala.inline
-  def error: typingsSlinky.bunyan.bunyanStrings.error = this.cast("error")
+  def fatal: typingsSlinky.bunyan.bunyanStrings.fatal = "fatal".asInstanceOf[typingsSlinky.bunyan.bunyanStrings.fatal]
   @scala.inline
-  def fatal: typingsSlinky.bunyan.bunyanStrings.fatal = this.cast("fatal")
+  def info: typingsSlinky.bunyan.bunyanStrings.info = "info".asInstanceOf[typingsSlinky.bunyan.bunyanStrings.info]
   @scala.inline
-  def info: typingsSlinky.bunyan.bunyanStrings.info = this.cast("info")
+  def trace: typingsSlinky.bunyan.bunyanStrings.trace = "trace".asInstanceOf[typingsSlinky.bunyan.bunyanStrings.trace]
   @scala.inline
-  def trace: typingsSlinky.bunyan.bunyanStrings.trace = this.cast("trace")
-  @scala.inline
-  def warn: typingsSlinky.bunyan.bunyanStrings.warn = this.cast("warn")
+  def warn: typingsSlinky.bunyan.bunyanStrings.warn = "warn".asInstanceOf[typingsSlinky.bunyan.bunyanStrings.warn]
 }
 

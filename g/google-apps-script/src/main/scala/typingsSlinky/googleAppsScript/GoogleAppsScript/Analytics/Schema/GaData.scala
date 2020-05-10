@@ -4,66 +4,244 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GaData extends js.Object {
-  var columnHeaders: js.UndefOr[js.Array[GaDataColumnHeaders]] = js.undefined
-  var containsSampledData: js.UndefOr[Boolean] = js.undefined
-  var dataLastRefreshed: js.UndefOr[String] = js.undefined
-  var dataTable: js.UndefOr[GaDataDataTable] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var itemsPerPage: js.UndefOr[Double] = js.undefined
-  var kind: js.UndefOr[String] = js.undefined
-  var nextLink: js.UndefOr[String] = js.undefined
-  var previousLink: js.UndefOr[String] = js.undefined
-  var profileInfo: js.UndefOr[GaDataProfileInfo] = js.undefined
-  var query: js.UndefOr[GaDataQuery] = js.undefined
-  var rows: js.UndefOr[js.Array[js.Array[String]]] = js.undefined
-  var sampleSize: js.UndefOr[String] = js.undefined
-  var sampleSpace: js.UndefOr[String] = js.undefined
-  var selfLink: js.UndefOr[String] = js.undefined
-  var totalResults: js.UndefOr[Double] = js.undefined
-  var totalsForAllResults: js.UndefOr[js.Object] = js.undefined
+  var columnHeaders: js.UndefOr[js.Array[GaDataColumnHeaders]] = js.native
+  var containsSampledData: js.UndefOr[Boolean] = js.native
+  var dataLastRefreshed: js.UndefOr[String] = js.native
+  var dataTable: js.UndefOr[GaDataDataTable] = js.native
+  var id: js.UndefOr[String] = js.native
+  var itemsPerPage: js.UndefOr[Double] = js.native
+  var kind: js.UndefOr[String] = js.native
+  var nextLink: js.UndefOr[String] = js.native
+  var previousLink: js.UndefOr[String] = js.native
+  var profileInfo: js.UndefOr[GaDataProfileInfo] = js.native
+  var query: js.UndefOr[GaDataQuery] = js.native
+  var rows: js.UndefOr[js.Array[js.Array[String]]] = js.native
+  var sampleSize: js.UndefOr[String] = js.native
+  var sampleSpace: js.UndefOr[String] = js.native
+  var selfLink: js.UndefOr[String] = js.native
+  var totalResults: js.UndefOr[Double] = js.native
+  var totalsForAllResults: js.UndefOr[js.Object] = js.native
 }
 
 object GaData {
   @scala.inline
-  def apply(
-    columnHeaders: js.Array[GaDataColumnHeaders] = null,
-    containsSampledData: js.UndefOr[Boolean] = js.undefined,
-    dataLastRefreshed: String = null,
-    dataTable: GaDataDataTable = null,
-    id: String = null,
-    itemsPerPage: Int | Double = null,
-    kind: String = null,
-    nextLink: String = null,
-    previousLink: String = null,
-    profileInfo: GaDataProfileInfo = null,
-    query: GaDataQuery = null,
-    rows: js.Array[js.Array[String]] = null,
-    sampleSize: String = null,
-    sampleSpace: String = null,
-    selfLink: String = null,
-    totalResults: Int | Double = null,
-    totalsForAllResults: js.Object = null
-  ): GaData = {
+  def apply(): GaData = {
     val __obj = js.Dynamic.literal()
-    if (columnHeaders != null) __obj.updateDynamic("columnHeaders")(columnHeaders.asInstanceOf[js.Any])
-    if (!js.isUndefined(containsSampledData)) __obj.updateDynamic("containsSampledData")(containsSampledData.asInstanceOf[js.Any])
-    if (dataLastRefreshed != null) __obj.updateDynamic("dataLastRefreshed")(dataLastRefreshed.asInstanceOf[js.Any])
-    if (dataTable != null) __obj.updateDynamic("dataTable")(dataTable.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (itemsPerPage != null) __obj.updateDynamic("itemsPerPage")(itemsPerPage.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (nextLink != null) __obj.updateDynamic("nextLink")(nextLink.asInstanceOf[js.Any])
-    if (previousLink != null) __obj.updateDynamic("previousLink")(previousLink.asInstanceOf[js.Any])
-    if (profileInfo != null) __obj.updateDynamic("profileInfo")(profileInfo.asInstanceOf[js.Any])
-    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
-    if (sampleSize != null) __obj.updateDynamic("sampleSize")(sampleSize.asInstanceOf[js.Any])
-    if (sampleSpace != null) __obj.updateDynamic("sampleSpace")(sampleSpace.asInstanceOf[js.Any])
-    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
-    if (totalResults != null) __obj.updateDynamic("totalResults")(totalResults.asInstanceOf[js.Any])
-    if (totalsForAllResults != null) __obj.updateDynamic("totalsForAllResults")(totalsForAllResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[GaData]
   }
+  @scala.inline
+  implicit class GaDataOps[Self <: GaData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumnHeaders(value: js.Array[GaDataColumnHeaders]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainsSampledData(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containsSampledData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainsSampledData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containsSampledData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataLastRefreshed(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLastRefreshed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataLastRefreshed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLastRefreshed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataTable(value: GaDataDataTable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataTable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemsPerPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsPerPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemsPerPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsPerPage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreviousLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreviousLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfileInfo(value: GaDataProfileInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profileInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfileInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profileInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuery(value: GaDataQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: js.Array[js.Array[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleSpace(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleSpace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleSpace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleSpace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelfLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelfLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalResults(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalsForAllResults(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalsForAllResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalsForAllResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalsForAllResults")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

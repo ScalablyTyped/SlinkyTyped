@@ -14,14 +14,12 @@ trait EducationGender extends js.Object
 
 object EducationGender {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def female: typingsSlinky.microsoftGraph.microsoftGraphStrings.female = "female".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.female]
   @scala.inline
-  def female: typingsSlinky.microsoftGraph.microsoftGraphStrings.female = this.cast("female")
+  def male: typingsSlinky.microsoftGraph.microsoftGraphStrings.male = "male".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.male]
   @scala.inline
-  def male: typingsSlinky.microsoftGraph.microsoftGraphStrings.male = this.cast("male")
+  def other: typingsSlinky.microsoftGraph.microsoftGraphStrings.other = "other".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.other]
   @scala.inline
-  def other: typingsSlinky.microsoftGraph.microsoftGraphStrings.other = this.cast("other")
-  @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
 }
 

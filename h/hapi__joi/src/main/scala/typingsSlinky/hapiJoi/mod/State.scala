@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait State extends js.Object {
-  var ancestors: js.UndefOr[js.Any] = js.undefined
-  var key: js.UndefOr[String] = js.undefined
-  var localize: js.UndefOr[js.Function1[/* repeated */ js.Any, this.type]] = js.undefined
-  var parent: js.UndefOr[js.Any] = js.undefined
-  var path: js.UndefOr[String] = js.undefined
-  var reference: js.UndefOr[js.Any] = js.undefined
+  var ancestors: js.UndefOr[js.Any] = js.native
+  var key: js.UndefOr[String] = js.native
+  var localize: js.UndefOr[js.Function1[/* repeated */ js.Any, this.type]] = js.native
+  var parent: js.UndefOr[js.Any] = js.native
+  var path: js.UndefOr[String] = js.native
+  var reference: js.UndefOr[js.Any] = js.native
 }
 
 object State {
   @scala.inline
-  def apply(
-    ancestors: js.Any = null,
-    key: String = null,
-    localize: /* repeated */ js.Any => State = null,
-    parent: js.Any = null,
-    path: String = null,
-    reference: js.Any = null
-  ): State = {
+  def apply(): State = {
     val __obj = js.Dynamic.literal()
-    if (ancestors != null) __obj.updateDynamic("ancestors")(ancestors.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (localize != null) __obj.updateDynamic("localize")(js.Any.fromFunction1(localize))
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (reference != null) __obj.updateDynamic("reference")(reference.asInstanceOf[js.Any])
     __obj.asInstanceOf[State]
   }
+  @scala.inline
+  implicit class StateOps[Self <: State] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAncestors(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ancestors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAncestors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ancestors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalize(value: /* repeated */ js.Any => State): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLocalize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReference(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reference")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

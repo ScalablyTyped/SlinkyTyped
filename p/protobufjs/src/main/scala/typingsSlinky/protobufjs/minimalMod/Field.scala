@@ -1,7 +1,6 @@
 package typingsSlinky.protobufjs.minimalMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.protobufjs.mod.Buffer
 import typingsSlinky.protobufjs.mod.Constructor
 import typingsSlinky.protobufjs.mod.FieldDecorator
 import typingsSlinky.protobufjs.mod.IField
@@ -24,7 +23,6 @@ import typingsSlinky.protobufjs.protobufjsStrings.sint64
 import typingsSlinky.protobufjs.protobufjsStrings.string
 import typingsSlinky.protobufjs.protobufjsStrings.uint32
 import typingsSlinky.protobufjs.protobufjsStrings.uint64
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -120,7 +118,7 @@ object Field extends js.Object {
     fieldId: Double,
     fieldType: js.Object | bool | bytes | double | fixed32 | fixed64 | float | int32 | int64 | sfixed32 | sfixed64 | sint32 | sint64 | string | uint32 | uint64,
     fieldRule: optional,
-    defaultValue: js.Array[Boolean | Buffer | Double | Long | String | Uint8Array]
+    defaultValue: js.Array[Boolean | js.typedarray.Uint8Array | Double | Long | String]
   ): FieldDecorator = js.native
   def d(
     fieldId: Double,
@@ -144,7 +142,7 @@ object Field extends js.Object {
     fieldId: Double,
     fieldType: double | float | int32 | uint32 | sint32 | fixed32 | sfixed32 | int64 | uint64 | sint64 | fixed64 | sfixed64 | string | bool | bytes | js.Object,
     fieldRule: optional,
-    defaultValue: Uint8Array
+    defaultValue: js.typedarray.Uint8Array
   ): FieldDecorator = js.native
   def d(
     fieldId: Double,
@@ -161,7 +159,7 @@ object Field extends js.Object {
     fieldId: Double,
     fieldType: js.Object | bool | bytes | double | fixed32 | fixed64 | float | int32 | int64 | sfixed32 | sfixed64 | sint32 | sint64 | string | uint32 | uint64,
     fieldRule: repeated,
-    defaultValue: js.Array[Boolean | Buffer | Double | Long | String | Uint8Array]
+    defaultValue: js.Array[Boolean | js.typedarray.Uint8Array | Double | Long | String]
   ): FieldDecorator = js.native
   def d(
     fieldId: Double,
@@ -185,7 +183,7 @@ object Field extends js.Object {
     fieldId: Double,
     fieldType: double | float | int32 | uint32 | sint32 | fixed32 | sfixed32 | int64 | uint64 | sint64 | fixed64 | sfixed64 | string | bool | bytes | js.Object,
     fieldRule: repeated,
-    defaultValue: Uint8Array
+    defaultValue: js.typedarray.Uint8Array
   ): FieldDecorator = js.native
   def d(
     fieldId: Double,
@@ -202,7 +200,7 @@ object Field extends js.Object {
     fieldId: Double,
     fieldType: js.Object | bool | bytes | double | fixed32 | fixed64 | float | int32 | int64 | sfixed32 | sfixed64 | sint32 | sint64 | string | uint32 | uint64,
     fieldRule: required,
-    defaultValue: js.Array[Boolean | Buffer | Double | Long | String | Uint8Array]
+    defaultValue: js.Array[Boolean | js.typedarray.Uint8Array | Double | Long | String]
   ): FieldDecorator = js.native
   def d(
     fieldId: Double,
@@ -226,7 +224,7 @@ object Field extends js.Object {
     fieldId: Double,
     fieldType: double | float | int32 | uint32 | sint32 | fixed32 | sfixed32 | int64 | uint64 | sint64 | fixed64 | sfixed64 | string | bool | bytes | js.Object,
     fieldRule: required,
-    defaultValue: Uint8Array
+    defaultValue: js.typedarray.Uint8Array
   ): FieldDecorator = js.native
   def d[T /* <: typingsSlinky.protobufjs.mod.Message[T] */](fieldId: Double, fieldType: String): FieldDecorator = js.native
   /**

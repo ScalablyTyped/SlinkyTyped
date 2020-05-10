@@ -3,11 +3,9 @@ package typingsSlinky.pixiJs.mod
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
+import org.scalajs.dom.raw.SVGElement
 import typingsSlinky.pixiJs.AnonAlphaMode
 import typingsSlinky.pixiJs.PIXI.resources.Resource
-import typingsSlinky.std.Float32Array
-import typingsSlinky.std.SVGElement
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -89,15 +87,15 @@ object BaseTexture extends js.Object {
   def from(source: String): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: String, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: String, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
-  def from(source: typingsSlinky.std.HTMLCanvasElement): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
-  def from(source: typingsSlinky.std.HTMLCanvasElement, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
-  def from(source: typingsSlinky.std.HTMLCanvasElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
-  def from(source: typingsSlinky.std.HTMLImageElement): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
-  def from(source: typingsSlinky.std.HTMLImageElement, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
-  def from(source: typingsSlinky.std.HTMLImageElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
-  def from(source: typingsSlinky.std.HTMLVideoElement): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
-  def from(source: typingsSlinky.std.HTMLVideoElement, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
-  def from(source: typingsSlinky.std.HTMLVideoElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def from(source: HTMLCanvasElement): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def from(source: HTMLCanvasElement, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def from(source: HTMLCanvasElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def from(source: HTMLImageElement): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def from(source: HTMLImageElement, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def from(source: HTMLImageElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def from(source: HTMLVideoElement): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def from(source: HTMLVideoElement, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def from(source: HTMLVideoElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: SVGElement): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: SVGElement, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   def from(source: SVGElement, options: js.Any, strict: Boolean): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
@@ -112,10 +110,10 @@ object BaseTexture extends js.Object {
     * @param {object} [options] See {@link PIXI.BaseTexture}'s constructor for options.
     * @return {PIXI.BaseTexture} The resulting new BaseTexture
     */
-  def fromBuffer(buffer: Float32Array, width: Double, height: Double): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
-  def fromBuffer(buffer: Float32Array, width: Double, height: Double, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
-  def fromBuffer(buffer: Uint8Array, width: Double, height: Double): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
-  def fromBuffer(buffer: Uint8Array, width: Double, height: Double, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def fromBuffer(buffer: js.typedarray.Float32Array, width: Double, height: Double): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def fromBuffer(buffer: js.typedarray.Float32Array, width: Double, height: Double, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def fromBuffer(buffer: js.typedarray.Uint8Array, width: Double, height: Double): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
+  def fromBuffer(buffer: js.typedarray.Uint8Array, width: Double, height: Double, options: js.Any): typingsSlinky.pixiJs.PIXI.BaseTexture = js.native
   /**
     * Remove a BaseTexture from the global BaseTextureCache.
     *

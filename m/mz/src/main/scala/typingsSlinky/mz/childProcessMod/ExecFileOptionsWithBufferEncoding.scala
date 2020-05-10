@@ -1,0 +1,47 @@
+package typingsSlinky.mz.childProcessMod
+
+import typingsSlinky.mz.mzStrings.buffer
+import typingsSlinky.node.childProcessMod.ExecFileOptions
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ExecFileOptionsWithBufferEncoding extends ExecFileOptions {
+  var encoding: js.UndefOr[buffer | Null] = js.native
+}
+
+object ExecFileOptionsWithBufferEncoding {
+  @scala.inline
+  def apply(): ExecFileOptionsWithBufferEncoding = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ExecFileOptionsWithBufferEncoding]
+  }
+  @scala.inline
+  implicit class ExecFileOptionsWithBufferEncodingOps[Self <: ExecFileOptionsWithBufferEncoding] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncoding(value: buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncodingNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(null)
+        ret
+    }
+  }
+  
+}
+

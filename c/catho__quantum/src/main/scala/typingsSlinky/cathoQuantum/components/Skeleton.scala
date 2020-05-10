@@ -1,10 +1,7 @@
 package typingsSlinky.cathoQuantum.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.cathoQuantum.AnonBaseFontSizeNumber
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.button
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.circle
@@ -20,31 +17,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Skeleton
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Skeleton {
   @JSImport("@catho/quantum/Skeleton", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    height: String = null,
-    size: xsmall | small | medium | large = null,
-    theme: AnonBaseFontSizeNumber = null,
-    `type`: rect | circle | text | button | typingsSlinky.cathoQuantum.cathoQuantumStrings.tag = null,
-    width: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def height(value: String): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: xsmall | small | medium | large): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: AnonBaseFontSizeNumber): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: rect | circle | text | button | typingsSlinky.cathoQuantum.cathoQuantumStrings.tag): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: String): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.cathoQuantum.skeletonMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SkeletonProps
+  
+  def withProps(p: SkeletonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Skeleton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

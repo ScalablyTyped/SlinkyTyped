@@ -18,11 +18,41 @@ trait Stream extends js.Object {
 
 object Stream {
   @scala.inline
-  def apply(fileId: Int | Double = null, streamId: StreamId = null): Stream = {
+  def apply(): Stream = {
     val __obj = js.Dynamic.literal()
-    if (fileId != null) __obj.updateDynamic("fileId")(fileId.asInstanceOf[js.Any])
-    if (streamId != null) __obj.updateDynamic("streamId")(streamId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Stream]
   }
+  @scala.inline
+  implicit class StreamOps[Self <: Stream] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileId(value: FileId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamId(value: StreamId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

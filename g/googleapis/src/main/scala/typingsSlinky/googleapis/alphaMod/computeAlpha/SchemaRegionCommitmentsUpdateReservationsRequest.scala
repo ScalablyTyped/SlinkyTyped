@@ -15,10 +15,29 @@ trait SchemaRegionCommitmentsUpdateReservationsRequest extends js.Object {
 
 object SchemaRegionCommitmentsUpdateReservationsRequest {
   @scala.inline
-  def apply(reservations: js.Array[SchemaReservation] = null): SchemaRegionCommitmentsUpdateReservationsRequest = {
+  def apply(): SchemaRegionCommitmentsUpdateReservationsRequest = {
     val __obj = js.Dynamic.literal()
-    if (reservations != null) __obj.updateDynamic("reservations")(reservations.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRegionCommitmentsUpdateReservationsRequest]
   }
+  @scala.inline
+  implicit class SchemaRegionCommitmentsUpdateReservationsRequestOps[Self <: SchemaRegionCommitmentsUpdateReservationsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReservations(value: js.Array[SchemaReservation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reservations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReservations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reservations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

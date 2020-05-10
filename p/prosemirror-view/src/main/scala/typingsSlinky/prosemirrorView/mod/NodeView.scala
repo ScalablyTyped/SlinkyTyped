@@ -11,6 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NodeView[S /* <: Schema[_, _] */] extends js.Object {
   /**
     * The DOM node that should hold the node's content. Only meaningful
@@ -20,22 +21,22 @@ trait NodeView[S /* <: Schema[_, _] */] extends js.Object {
     * is not present, the node view itself is responsible for rendering
     * (or deciding not to render) its child nodes.
     */
-  var contentDOM: js.UndefOr[Node | Null] = js.undefined
+  var contentDOM: js.UndefOr[Node | Null] = js.native
   /**
     * When defining a `selectNode` method, you should also provide a
     * `deselectNode` method to remove the effect again.
     */
-  var deselectNode: js.UndefOr[js.Function0[Unit] | Null] = js.undefined
+  var deselectNode: js.UndefOr[js.Function0[Unit] | Null] = js.native
   /**
     * Called when the node view is removed from the editor or the whole
     * editor is destroyed.
     */
-  var destroy: js.UndefOr[js.Function0[Unit] | Null] = js.undefined
+  var destroy: js.UndefOr[js.Function0[Unit] | Null] = js.native
   /**
     * The outer DOM node that represents the document node. When not
     * given, the default strategy is used to create a DOM node.
     */
-  var dom: js.UndefOr[Node | Null] = js.undefined
+  var dom: js.UndefOr[Node | Null] = js.native
   /**
     * Called when a DOM
     * [mutation](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)
@@ -46,12 +47,12 @@ trait NodeView[S /* <: Schema[_, _] */] extends js.Object {
     * re-parse the range around the mutation, true if it can safely be
     * ignored.
     */
-  var ignoreMutation: js.UndefOr[(js.Function1[/* p */ MutationRecord | AnonTarget, Boolean]) | Null] = js.undefined
+  var ignoreMutation: js.UndefOr[(js.Function1[/* p */ MutationRecord | AnonTarget, Boolean]) | Null] = js.native
   /**
     * Can be used to override the way the node's selected status (as a
     * node selection) is displayed.
     */
-  var selectNode: js.UndefOr[js.Function0[Unit] | Null] = js.undefined
+  var selectNode: js.UndefOr[js.Function0[Unit] | Null] = js.native
   /**
     * This will be called to handle setting the selection inside the
     * node. The `anchor` and `head` positions are relative to the start
@@ -61,13 +62,13 @@ trait NodeView[S /* <: Schema[_, _] */] extends js.Object {
     */
   var setSelection: js.UndefOr[
     (js.Function3[/* anchor */ Double, /* head */ Double, /* root */ Document_, Unit]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * Can be used to prevent the editor view from trying to handle some
     * or all DOM events that bubble up from the node view. Events for
     * which this returns true are not handled by the editor.
     */
-  var stopEvent: js.UndefOr[(js.Function1[/* event */ Event_, Boolean]) | Null] = js.undefined
+  var stopEvent: js.UndefOr[(js.Function1[/* event */ Event_, Boolean]) | Null] = js.native
   /**
     * When given, this will be called when the view is updating itself.
     * It will be given a node (possibly of a different type), and an
@@ -84,33 +85,186 @@ trait NodeView[S /* <: Schema[_, _] */] extends js.Object {
       /* decorations */ js.Array[Decoration[StringDictionary[_]]], 
       Boolean
     ]) | Null
-  ] = js.undefined
+  ] = js.native
 }
 
 object NodeView {
   @scala.inline
-  def apply[S /* <: Schema[_, _] */](
-    contentDOM: Node = null,
-    deselectNode: () => Unit = null,
-    destroy: () => Unit = null,
-    dom: Node = null,
-    ignoreMutation: /* p */ MutationRecord | AnonTarget => Boolean = null,
-    selectNode: () => Unit = null,
-    setSelection: (/* anchor */ Double, /* head */ Double, /* root */ Document_) => Unit = null,
-    stopEvent: /* event */ Event_ => Boolean = null,
-    update: (/* node */ typingsSlinky.prosemirrorModel.mod.Node[S], /* decorations */ js.Array[Decoration[StringDictionary[_]]]) => Boolean = null
-  ): NodeView[S] = {
+  def apply[S](): NodeView[S] = {
     val __obj = js.Dynamic.literal()
-    if (contentDOM != null) __obj.updateDynamic("contentDOM")(contentDOM.asInstanceOf[js.Any])
-    if (deselectNode != null) __obj.updateDynamic("deselectNode")(js.Any.fromFunction0(deselectNode))
-    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction0(destroy))
-    if (dom != null) __obj.updateDynamic("dom")(dom.asInstanceOf[js.Any])
-    if (ignoreMutation != null) __obj.updateDynamic("ignoreMutation")(js.Any.fromFunction1(ignoreMutation))
-    if (selectNode != null) __obj.updateDynamic("selectNode")(js.Any.fromFunction0(selectNode))
-    if (setSelection != null) __obj.updateDynamic("setSelection")(js.Any.fromFunction3(setSelection))
-    if (stopEvent != null) __obj.updateDynamic("stopEvent")(js.Any.fromFunction1(stopEvent))
-    if (update != null) __obj.updateDynamic("update")(js.Any.fromFunction2(update))
     __obj.asInstanceOf[NodeView[S]]
   }
+  @scala.inline
+  implicit class NodeViewOps[Self[s] <: NodeView[s], S] (val x: Self[S]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[S] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[S]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[S] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[S] with Other]
+    @scala.inline
+    def withContentDOM(value: Node): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDOM")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentDOM: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDOM")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentDOMNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDOM")(null)
+        ret
+    }
+    @scala.inline
+    def withDeselectNode(value: () => Unit): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deselectNode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutDeselectNode: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deselectNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeselectNodeNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deselectNode")(null)
+        ret
+    }
+    @scala.inline
+    def withDestroy(value: () => Unit): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutDestroy: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestroyNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(null)
+        ret
+    }
+    @scala.inline
+    def withDom(value: Node): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDom: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dom")(null)
+        ret
+    }
+    @scala.inline
+    def withIgnoreMutation(value: /* p */ MutationRecord | AnonTarget => Boolean): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreMutation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreMutation: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreMutation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreMutationNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreMutation")(null)
+        ret
+    }
+    @scala.inline
+    def withSelectNode(value: () => Unit): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectNode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutSelectNode: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectNodeNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectNode")(null)
+        ret
+    }
+    @scala.inline
+    def withSetSelection(value: (/* anchor */ Double, /* head */ Double, /* root */ Document_) => Unit): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSelection")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetSelection: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSelection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetSelectionNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSelection")(null)
+        ret
+    }
+    @scala.inline
+    def withStopEvent(value: /* event */ Event_ => Boolean): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopEvent")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutStopEvent: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopEventNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopEvent")(null)
+        ret
+    }
+    @scala.inline
+    def withUpdate(
+      value: (/* node */ typingsSlinky.prosemirrorModel.mod.Node[S], /* decorations */ js.Array[Decoration[StringDictionary[_]]]) => Boolean
+    ): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutUpdate: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(null)
+        ret
+    }
+  }
+  
 }
 

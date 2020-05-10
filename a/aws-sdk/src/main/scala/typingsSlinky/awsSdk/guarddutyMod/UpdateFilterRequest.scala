@@ -34,20 +34,77 @@ trait UpdateFilterRequest extends js.Object {
 
 object UpdateFilterRequest {
   @scala.inline
-  def apply(
-    DetectorId: DetectorId,
-    FilterName: String,
-    Action: FilterAction = null,
-    Description: FilterDescription = null,
-    FindingCriteria: FindingCriteria = null,
-    Rank: Int | scala.Double = null
-  ): UpdateFilterRequest = {
+  def apply(DetectorId: DetectorId, FilterName: String): UpdateFilterRequest = {
     val __obj = js.Dynamic.literal(DetectorId = DetectorId.asInstanceOf[js.Any], FilterName = FilterName.asInstanceOf[js.Any])
-    if (Action != null) __obj.updateDynamic("Action")(Action.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (FindingCriteria != null) __obj.updateDynamic("FindingCriteria")(FindingCriteria.asInstanceOf[js.Any])
-    if (Rank != null) __obj.updateDynamic("Rank")(Rank.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateFilterRequest]
   }
+  @scala.inline
+  implicit class UpdateFilterRequestOps[Self <: UpdateFilterRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDetectorId(value: DetectorId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectorId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFilterName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAction(value: FilterAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: FilterDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFindingCriteria(value: FindingCriteria): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FindingCriteria")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFindingCriteria: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FindingCriteria")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRank(value: FilterRank): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rank")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRank: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rank")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,109 +1,115 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonBorderColor
-import typingsSlinky.devextreme.AnonColorDashStyle
-import typingsSlinky.devextreme.AnonDisplayMode
-import typingsSlinky.devextreme.devextremeStrings.allArgumentPoints
-import typingsSlinky.devextreme.devextremeStrings.allSeriesPoints
 import typingsSlinky.devextreme.devextremeStrings.area
 import typingsSlinky.devextreme.devextremeStrings.bar
-import typingsSlinky.devextreme.devextremeStrings.dash
-import typingsSlinky.devextreme.devextremeStrings.dot
-import typingsSlinky.devextreme.devextremeStrings.excludePoints
-import typingsSlinky.devextreme.devextremeStrings.includePoints
 import typingsSlinky.devextreme.devextremeStrings.line
-import typingsSlinky.devextreme.devextremeStrings.longDash
-import typingsSlinky.devextreme.devextremeStrings.nearestPoint
-import typingsSlinky.devextreme.devextremeStrings.none
-import typingsSlinky.devextreme.devextremeStrings.onlyPoint
 import typingsSlinky.devextreme.devextremeStrings.scatter
-import typingsSlinky.devextreme.devextremeStrings.solid
 import typingsSlinky.devextreme.devextremeStrings.stackedbar
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxPolarChartCommonSeriesSettings extends dxPolarChartSeriesTypesCommonPolarChartSeries {
   /** An object that specifies configuration options for all series of the area type in the chart. */
-  var area: js.UndefOr[js.Any] = js.undefined
+  var area: js.UndefOr[js.Any] = js.native
   /** An object that specifies configuration options for all series of the 'bar' type in the chart. */
-  var bar: js.UndefOr[js.Any] = js.undefined
+  var bar: js.UndefOr[js.Any] = js.native
   /** An object that specifies configuration options for all series of the 'line' type in the chart. */
-  var line: js.UndefOr[js.Any] = js.undefined
+  var line: js.UndefOr[js.Any] = js.native
   /** An object that specifies configuration options for all series of the 'scatter' type in the chart. */
-  var scatter: js.UndefOr[js.Any] = js.undefined
+  var scatter: js.UndefOr[js.Any] = js.native
   /** An object that specifies configuration options for all series of the 'stackedBar' type in the chart. */
-  var stackedbar: js.UndefOr[js.Any] = js.undefined
+  var stackedbar: js.UndefOr[js.Any] = js.native
   /** Sets a series type. */
-  var `type`: js.UndefOr[area | bar | line | scatter | stackedbar] = js.undefined
+  var `type`: js.UndefOr[area | bar | line | scatter | stackedbar] = js.native
 }
 
 object dxPolarChartCommonSeriesSettings {
   @scala.inline
-  def apply(
-    area: js.Any = null,
-    argumentField: String = null,
-    bar: js.Any = null,
-    barPadding: Int | Double = null,
-    barWidth: Int | Double = null,
-    border: AnonColorDashStyle = null,
-    closed: js.UndefOr[Boolean] = js.undefined,
-    color: String = null,
-    dashStyle: dash | dot | longDash | solid = null,
-    hoverMode: allArgumentPoints | allSeriesPoints | excludePoints | includePoints | nearestPoint | none | onlyPoint = null,
-    hoverStyle: AnonBorderColor = null,
-    ignoreEmptyPoints: js.UndefOr[Boolean] = js.undefined,
-    label: dxPolarChartSeriesTypesCommonPolarChartSeriesLabel = null,
-    line: js.Any = null,
-    maxLabelCount: Int | Double = null,
-    minBarSize: Int | Double = null,
-    opacity: Int | Double = null,
-    point: dxPolarChartSeriesTypesCommonPolarChartSeriesPoint = null,
-    scatter: js.Any = null,
-    selectionMode: allArgumentPoints | allSeriesPoints | excludePoints | includePoints | none | onlyPoint = null,
-    selectionStyle: AnonBorderColor = null,
-    showInLegend: js.UndefOr[Boolean] = js.undefined,
-    stack: String = null,
-    stackedbar: js.Any = null,
-    tagField: String = null,
-    `type`: area | bar | line | scatter | stackedbar = null,
-    valueErrorBar: AnonDisplayMode = null,
-    valueField: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    width: Int | Double = null
-  ): dxPolarChartCommonSeriesSettings = {
+  def apply(): dxPolarChartCommonSeriesSettings = {
     val __obj = js.Dynamic.literal()
-    if (area != null) __obj.updateDynamic("area")(area.asInstanceOf[js.Any])
-    if (argumentField != null) __obj.updateDynamic("argumentField")(argumentField.asInstanceOf[js.Any])
-    if (bar != null) __obj.updateDynamic("bar")(bar.asInstanceOf[js.Any])
-    if (barPadding != null) __obj.updateDynamic("barPadding")(barPadding.asInstanceOf[js.Any])
-    if (barWidth != null) __obj.updateDynamic("barWidth")(barWidth.asInstanceOf[js.Any])
-    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
-    if (!js.isUndefined(closed)) __obj.updateDynamic("closed")(closed.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (dashStyle != null) __obj.updateDynamic("dashStyle")(dashStyle.asInstanceOf[js.Any])
-    if (hoverMode != null) __obj.updateDynamic("hoverMode")(hoverMode.asInstanceOf[js.Any])
-    if (hoverStyle != null) __obj.updateDynamic("hoverStyle")(hoverStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreEmptyPoints)) __obj.updateDynamic("ignoreEmptyPoints")(ignoreEmptyPoints.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
-    if (maxLabelCount != null) __obj.updateDynamic("maxLabelCount")(maxLabelCount.asInstanceOf[js.Any])
-    if (minBarSize != null) __obj.updateDynamic("minBarSize")(minBarSize.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (point != null) __obj.updateDynamic("point")(point.asInstanceOf[js.Any])
-    if (scatter != null) __obj.updateDynamic("scatter")(scatter.asInstanceOf[js.Any])
-    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
-    if (selectionStyle != null) __obj.updateDynamic("selectionStyle")(selectionStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(showInLegend)) __obj.updateDynamic("showInLegend")(showInLegend.asInstanceOf[js.Any])
-    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
-    if (stackedbar != null) __obj.updateDynamic("stackedbar")(stackedbar.asInstanceOf[js.Any])
-    if (tagField != null) __obj.updateDynamic("tagField")(tagField.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (valueErrorBar != null) __obj.updateDynamic("valueErrorBar")(valueErrorBar.asInstanceOf[js.Any])
-    if (valueField != null) __obj.updateDynamic("valueField")(valueField.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxPolarChartCommonSeriesSettings]
   }
+  @scala.inline
+  implicit class dxPolarChartCommonSeriesSettingsOps[Self <: dxPolarChartCommonSeriesSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArea(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBar(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLine(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScatter(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scatter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScatter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scatter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackedbar(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stackedbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackedbar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stackedbar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: area | bar | line | scatter | stackedbar): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

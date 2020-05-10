@@ -27,38 +27,36 @@ trait MobileAppContentFileUploadState extends js.Object
 
 object MobileAppContentFileUploadState {
   @scala.inline
-  def azureStorageUriRenewalFailed: typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRenewalFailed = this.cast("azureStorageUriRenewalFailed")
+  def azureStorageUriRenewalFailed: typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRenewalFailed = "azureStorageUriRenewalFailed".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRenewalFailed]
   @scala.inline
-  def azureStorageUriRenewalPending: typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRenewalPending = this.cast("azureStorageUriRenewalPending")
+  def azureStorageUriRenewalPending: typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRenewalPending = "azureStorageUriRenewalPending".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRenewalPending]
   @scala.inline
-  def azureStorageUriRenewalSuccess: typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRenewalSuccess = this.cast("azureStorageUriRenewalSuccess")
+  def azureStorageUriRenewalSuccess: typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRenewalSuccess = "azureStorageUriRenewalSuccess".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRenewalSuccess]
   @scala.inline
-  def azureStorageUriRenewalTimedOut: typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRenewalTimedOut = this.cast("azureStorageUriRenewalTimedOut")
+  def azureStorageUriRenewalTimedOut: typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRenewalTimedOut = "azureStorageUriRenewalTimedOut".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRenewalTimedOut]
   @scala.inline
-  def azureStorageUriRequestFailed: typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRequestFailed = this.cast("azureStorageUriRequestFailed")
+  def azureStorageUriRequestFailed: typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRequestFailed = "azureStorageUriRequestFailed".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRequestFailed]
   @scala.inline
-  def azureStorageUriRequestPending: typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRequestPending = this.cast("azureStorageUriRequestPending")
+  def azureStorageUriRequestPending: typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRequestPending = "azureStorageUriRequestPending".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRequestPending]
   @scala.inline
-  def azureStorageUriRequestSuccess: typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRequestSuccess = this.cast("azureStorageUriRequestSuccess")
+  def azureStorageUriRequestSuccess: typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRequestSuccess = "azureStorageUriRequestSuccess".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRequestSuccess]
   @scala.inline
-  def azureStorageUriRequestTimedOut: typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRequestTimedOut = this.cast("azureStorageUriRequestTimedOut")
+  def azureStorageUriRequestTimedOut: typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRequestTimedOut = "azureStorageUriRequestTimedOut".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.azureStorageUriRequestTimedOut]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def commitFileFailed: typingsSlinky.microsoftGraph.microsoftGraphStrings.commitFileFailed = "commitFileFailed".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.commitFileFailed]
   @scala.inline
-  def commitFileFailed: typingsSlinky.microsoftGraph.microsoftGraphStrings.commitFileFailed = this.cast("commitFileFailed")
+  def commitFilePending: typingsSlinky.microsoftGraph.microsoftGraphStrings.commitFilePending = "commitFilePending".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.commitFilePending]
   @scala.inline
-  def commitFilePending: typingsSlinky.microsoftGraph.microsoftGraphStrings.commitFilePending = this.cast("commitFilePending")
+  def commitFileSuccess: typingsSlinky.microsoftGraph.microsoftGraphStrings.commitFileSuccess = "commitFileSuccess".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.commitFileSuccess]
   @scala.inline
-  def commitFileSuccess: typingsSlinky.microsoftGraph.microsoftGraphStrings.commitFileSuccess = this.cast("commitFileSuccess")
+  def commitFileTimedOut: typingsSlinky.microsoftGraph.microsoftGraphStrings.commitFileTimedOut = "commitFileTimedOut".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.commitFileTimedOut]
   @scala.inline
-  def commitFileTimedOut: typingsSlinky.microsoftGraph.microsoftGraphStrings.commitFileTimedOut = this.cast("commitFileTimedOut")
+  def error: typingsSlinky.microsoftGraph.microsoftGraphStrings.error = "error".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.error]
   @scala.inline
-  def error: typingsSlinky.microsoftGraph.microsoftGraphStrings.error = this.cast("error")
+  def success: typingsSlinky.microsoftGraph.microsoftGraphStrings.success = "success".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.success]
   @scala.inline
-  def success: typingsSlinky.microsoftGraph.microsoftGraphStrings.success = this.cast("success")
+  def transientError: typingsSlinky.microsoftGraph.microsoftGraphStrings.transientError = "transientError".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.transientError]
   @scala.inline
-  def transientError: typingsSlinky.microsoftGraph.microsoftGraphStrings.transientError = this.cast("transientError")
-  @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
 }
 

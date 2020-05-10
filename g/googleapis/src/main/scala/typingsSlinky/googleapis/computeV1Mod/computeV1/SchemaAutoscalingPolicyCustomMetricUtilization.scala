@@ -34,16 +34,53 @@ trait SchemaAutoscalingPolicyCustomMetricUtilization extends js.Object {
 
 object SchemaAutoscalingPolicyCustomMetricUtilization {
   @scala.inline
-  def apply(
-    metric: String = null,
-    utilizationTarget: Int | Double = null,
-    utilizationTargetType: String = null
-  ): SchemaAutoscalingPolicyCustomMetricUtilization = {
+  def apply(): SchemaAutoscalingPolicyCustomMetricUtilization = {
     val __obj = js.Dynamic.literal()
-    if (metric != null) __obj.updateDynamic("metric")(metric.asInstanceOf[js.Any])
-    if (utilizationTarget != null) __obj.updateDynamic("utilizationTarget")(utilizationTarget.asInstanceOf[js.Any])
-    if (utilizationTargetType != null) __obj.updateDynamic("utilizationTargetType")(utilizationTargetType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAutoscalingPolicyCustomMetricUtilization]
   }
+  @scala.inline
+  implicit class SchemaAutoscalingPolicyCustomMetricUtilizationOps[Self <: SchemaAutoscalingPolicyCustomMetricUtilization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMetric(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetric: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUtilizationTarget(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utilizationTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUtilizationTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utilizationTarget")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUtilizationTargetType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utilizationTargetType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUtilizationTargetType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utilizationTargetType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

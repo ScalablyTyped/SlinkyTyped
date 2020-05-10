@@ -1,7 +1,7 @@
 package typingsSlinky.semanticUiReact.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.StatelessComponent
+import slinky.core.ReactComponentClass
 import typingsSlinky.semanticUiReact.imageGroupMod.ImageGroupProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation._
 
 @JSImport("semantic-ui-react", "ImageGroup")
 @js.native
-object ImageGroup extends TopLevel[StatelessComponent[ImageGroupProps]]
+object ImageGroup extends TopLevel[ReactComponentClass[ImageGroupProps]]
 

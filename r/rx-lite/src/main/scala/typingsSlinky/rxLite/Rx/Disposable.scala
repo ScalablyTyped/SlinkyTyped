@@ -9,8 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class Disposable protected () extends IDisposable {
   def this(action: js.Function0[Unit]) = this()
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
 }
 
 /* static members */

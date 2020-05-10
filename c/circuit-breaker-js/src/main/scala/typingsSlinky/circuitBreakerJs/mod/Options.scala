@@ -4,36 +4,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var errorThreshold: js.UndefOr[Double] = js.undefined
-  var numBuckets: js.UndefOr[Double] = js.undefined
-  var onCircuitClose: js.UndefOr[js.Function1[/* m */ Metrics, Unit]] = js.undefined
-  var onCircuitOpen: js.UndefOr[js.Function1[/* m */ Metrics, Unit]] = js.undefined
-  var timeoutDuration: js.UndefOr[Double] = js.undefined
-  var volumeThreshold: js.UndefOr[Double] = js.undefined
-  var windowDuration: js.UndefOr[Double] = js.undefined
+  var errorThreshold: js.UndefOr[Double] = js.native
+  var numBuckets: js.UndefOr[Double] = js.native
+  var onCircuitClose: js.UndefOr[js.Function1[/* m */ Metrics, Unit]] = js.native
+  var onCircuitOpen: js.UndefOr[js.Function1[/* m */ Metrics, Unit]] = js.native
+  var timeoutDuration: js.UndefOr[Double] = js.native
+  var volumeThreshold: js.UndefOr[Double] = js.native
+  var windowDuration: js.UndefOr[Double] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    errorThreshold: Int | Double = null,
-    numBuckets: Int | Double = null,
-    onCircuitClose: /* m */ Metrics => Unit = null,
-    onCircuitOpen: /* m */ Metrics => Unit = null,
-    timeoutDuration: Int | Double = null,
-    volumeThreshold: Int | Double = null,
-    windowDuration: Int | Double = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (errorThreshold != null) __obj.updateDynamic("errorThreshold")(errorThreshold.asInstanceOf[js.Any])
-    if (numBuckets != null) __obj.updateDynamic("numBuckets")(numBuckets.asInstanceOf[js.Any])
-    if (onCircuitClose != null) __obj.updateDynamic("onCircuitClose")(js.Any.fromFunction1(onCircuitClose))
-    if (onCircuitOpen != null) __obj.updateDynamic("onCircuitOpen")(js.Any.fromFunction1(onCircuitOpen))
-    if (timeoutDuration != null) __obj.updateDynamic("timeoutDuration")(timeoutDuration.asInstanceOf[js.Any])
-    if (volumeThreshold != null) __obj.updateDynamic("volumeThreshold")(volumeThreshold.asInstanceOf[js.Any])
-    if (windowDuration != null) __obj.updateDynamic("windowDuration")(windowDuration.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumBuckets(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numBuckets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumBuckets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numBuckets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCircuitClose(value: /* m */ Metrics => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCircuitClose")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCircuitClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCircuitClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCircuitOpen(value: /* m */ Metrics => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCircuitOpen")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCircuitOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCircuitOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeoutDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWindowDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("windowDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWindowDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("windowDuration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

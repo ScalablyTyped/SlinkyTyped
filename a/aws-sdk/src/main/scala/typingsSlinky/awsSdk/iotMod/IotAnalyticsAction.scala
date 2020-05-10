@@ -22,12 +22,53 @@ trait IotAnalyticsAction extends js.Object {
 
 object IotAnalyticsAction {
   @scala.inline
-  def apply(channelArn: AwsArn = null, channelName: ChannelName = null, roleArn: AwsArn = null): IotAnalyticsAction = {
+  def apply(): IotAnalyticsAction = {
     val __obj = js.Dynamic.literal()
-    if (channelArn != null) __obj.updateDynamic("channelArn")(channelArn.asInstanceOf[js.Any])
-    if (channelName != null) __obj.updateDynamic("channelName")(channelName.asInstanceOf[js.Any])
-    if (roleArn != null) __obj.updateDynamic("roleArn")(roleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[IotAnalyticsAction]
   }
+  @scala.inline
+  implicit class IotAnalyticsActionOps[Self <: IotAnalyticsAction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChannelArn(value: AwsArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannelArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChannelName(value: ChannelName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannelName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: AwsArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

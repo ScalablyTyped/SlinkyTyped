@@ -19,11 +19,41 @@ trait NetworkInterfaceSecurityGroupAttachmentState extends js.Object {
 
 object NetworkInterfaceSecurityGroupAttachmentState {
   @scala.inline
-  def apply(networkInterfaceId: Input[String] = null, securityGroupId: Input[String] = null): NetworkInterfaceSecurityGroupAttachmentState = {
+  def apply(): NetworkInterfaceSecurityGroupAttachmentState = {
     val __obj = js.Dynamic.literal()
-    if (networkInterfaceId != null) __obj.updateDynamic("networkInterfaceId")(networkInterfaceId.asInstanceOf[js.Any])
-    if (securityGroupId != null) __obj.updateDynamic("securityGroupId")(securityGroupId.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkInterfaceSecurityGroupAttachmentState]
   }
+  @scala.inline
+  implicit class NetworkInterfaceSecurityGroupAttachmentStateOps[Self <: NetworkInterfaceSecurityGroupAttachmentState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNetworkInterfaceId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkInterfaceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityGroupId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroupId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

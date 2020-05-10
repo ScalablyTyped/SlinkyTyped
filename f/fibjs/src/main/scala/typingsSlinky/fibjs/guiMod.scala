@@ -1,11 +1,5 @@
 package typingsSlinky.fibjs
 
-import typingsSlinky.fibjs.fibjsNumbers.`10000`
-import typingsSlinky.fibjs.fibjsNumbers.`11000`
-import typingsSlinky.fibjs.fibjsNumbers.`11001`
-import typingsSlinky.fibjs.fibjsNumbers.`7000`
-import typingsSlinky.fibjs.fibjsNumbers.`8000`
-import typingsSlinky.fibjs.fibjsNumbers.`9000`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,12 +12,12 @@ import scala.scalajs.js.annotation._
 @JSImport("gui", JSImport.Namespace)
 @js.native
 object guiMod extends js.Object {
-  val EDGE: `11001` = js.native
-  val IE10: `10000` = js.native
-  val IE11: `11000` = js.native
-  val IE7: `7000` = js.native
-  val IE8: `8000` = js.native
-  val IE9: `9000` = js.native
+  val EDGE: /* 11001 */ Double = js.native
+  val IE10: /* 10000 */ Double = js.native
+  val IE11: /* 11000 */ Double = js.native
+  val IE7: /* 7000 */ Double = js.native
+  val IE8: /* 8000 */ Double = js.native
+  val IE9: /* 9000 */ Double = js.native
   def open(url: String): ClassWebView = js.native
   def open(url: String, opt: js.Object): ClassWebView = js.native
   def setVersion(ver: Double): Unit = js.native

@@ -18,10 +18,35 @@ trait ResetServiceSpecificCredentialRequest extends js.Object {
 
 object ResetServiceSpecificCredentialRequest {
   @scala.inline
-  def apply(ServiceSpecificCredentialId: serviceSpecificCredentialId, UserName: userNameType = null): ResetServiceSpecificCredentialRequest = {
+  def apply(ServiceSpecificCredentialId: serviceSpecificCredentialId): ResetServiceSpecificCredentialRequest = {
     val __obj = js.Dynamic.literal(ServiceSpecificCredentialId = ServiceSpecificCredentialId.asInstanceOf[js.Any])
-    if (UserName != null) __obj.updateDynamic("UserName")(UserName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResetServiceSpecificCredentialRequest]
   }
+  @scala.inline
+  implicit class ResetServiceSpecificCredentialRequestOps[Self <: ResetServiceSpecificCredentialRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServiceSpecificCredentialId(value: serviceSpecificCredentialId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceSpecificCredentialId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserName(value: userNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

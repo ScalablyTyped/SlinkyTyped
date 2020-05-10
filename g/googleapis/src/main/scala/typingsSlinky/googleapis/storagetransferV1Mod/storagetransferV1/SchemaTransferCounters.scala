@@ -85,42 +85,209 @@ trait SchemaTransferCounters extends js.Object {
 
 object SchemaTransferCounters {
   @scala.inline
-  def apply(
-    bytesCopiedToSink: String = null,
-    bytesDeletedFromSink: String = null,
-    bytesDeletedFromSource: String = null,
-    bytesFailedToDeleteFromSink: String = null,
-    bytesFoundFromSource: String = null,
-    bytesFoundOnlyFromSink: String = null,
-    bytesFromSourceFailed: String = null,
-    bytesFromSourceSkippedBySync: String = null,
-    objectsCopiedToSink: String = null,
-    objectsDeletedFromSink: String = null,
-    objectsDeletedFromSource: String = null,
-    objectsFailedToDeleteFromSink: String = null,
-    objectsFoundFromSource: String = null,
-    objectsFoundOnlyFromSink: String = null,
-    objectsFromSourceFailed: String = null,
-    objectsFromSourceSkippedBySync: String = null
-  ): SchemaTransferCounters = {
+  def apply(): SchemaTransferCounters = {
     val __obj = js.Dynamic.literal()
-    if (bytesCopiedToSink != null) __obj.updateDynamic("bytesCopiedToSink")(bytesCopiedToSink.asInstanceOf[js.Any])
-    if (bytesDeletedFromSink != null) __obj.updateDynamic("bytesDeletedFromSink")(bytesDeletedFromSink.asInstanceOf[js.Any])
-    if (bytesDeletedFromSource != null) __obj.updateDynamic("bytesDeletedFromSource")(bytesDeletedFromSource.asInstanceOf[js.Any])
-    if (bytesFailedToDeleteFromSink != null) __obj.updateDynamic("bytesFailedToDeleteFromSink")(bytesFailedToDeleteFromSink.asInstanceOf[js.Any])
-    if (bytesFoundFromSource != null) __obj.updateDynamic("bytesFoundFromSource")(bytesFoundFromSource.asInstanceOf[js.Any])
-    if (bytesFoundOnlyFromSink != null) __obj.updateDynamic("bytesFoundOnlyFromSink")(bytesFoundOnlyFromSink.asInstanceOf[js.Any])
-    if (bytesFromSourceFailed != null) __obj.updateDynamic("bytesFromSourceFailed")(bytesFromSourceFailed.asInstanceOf[js.Any])
-    if (bytesFromSourceSkippedBySync != null) __obj.updateDynamic("bytesFromSourceSkippedBySync")(bytesFromSourceSkippedBySync.asInstanceOf[js.Any])
-    if (objectsCopiedToSink != null) __obj.updateDynamic("objectsCopiedToSink")(objectsCopiedToSink.asInstanceOf[js.Any])
-    if (objectsDeletedFromSink != null) __obj.updateDynamic("objectsDeletedFromSink")(objectsDeletedFromSink.asInstanceOf[js.Any])
-    if (objectsDeletedFromSource != null) __obj.updateDynamic("objectsDeletedFromSource")(objectsDeletedFromSource.asInstanceOf[js.Any])
-    if (objectsFailedToDeleteFromSink != null) __obj.updateDynamic("objectsFailedToDeleteFromSink")(objectsFailedToDeleteFromSink.asInstanceOf[js.Any])
-    if (objectsFoundFromSource != null) __obj.updateDynamic("objectsFoundFromSource")(objectsFoundFromSource.asInstanceOf[js.Any])
-    if (objectsFoundOnlyFromSink != null) __obj.updateDynamic("objectsFoundOnlyFromSink")(objectsFoundOnlyFromSink.asInstanceOf[js.Any])
-    if (objectsFromSourceFailed != null) __obj.updateDynamic("objectsFromSourceFailed")(objectsFromSourceFailed.asInstanceOf[js.Any])
-    if (objectsFromSourceSkippedBySync != null) __obj.updateDynamic("objectsFromSourceSkippedBySync")(objectsFromSourceSkippedBySync.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTransferCounters]
   }
+  @scala.inline
+  implicit class SchemaTransferCountersOps[Self <: SchemaTransferCounters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBytesCopiedToSink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesCopiedToSink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesCopiedToSink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesCopiedToSink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBytesDeletedFromSink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesDeletedFromSink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesDeletedFromSink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesDeletedFromSink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBytesDeletedFromSource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesDeletedFromSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesDeletedFromSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesDeletedFromSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBytesFailedToDeleteFromSink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesFailedToDeleteFromSink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesFailedToDeleteFromSink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesFailedToDeleteFromSink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBytesFoundFromSource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesFoundFromSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesFoundFromSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesFoundFromSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBytesFoundOnlyFromSink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesFoundOnlyFromSink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesFoundOnlyFromSink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesFoundOnlyFromSink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBytesFromSourceFailed(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesFromSourceFailed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesFromSourceFailed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesFromSourceFailed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBytesFromSourceSkippedBySync(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesFromSourceSkippedBySync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesFromSourceSkippedBySync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesFromSourceSkippedBySync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectsCopiedToSink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectsCopiedToSink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectsCopiedToSink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectsCopiedToSink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectsDeletedFromSink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectsDeletedFromSink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectsDeletedFromSink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectsDeletedFromSink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectsDeletedFromSource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectsDeletedFromSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectsDeletedFromSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectsDeletedFromSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectsFailedToDeleteFromSink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectsFailedToDeleteFromSink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectsFailedToDeleteFromSink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectsFailedToDeleteFromSink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectsFoundFromSource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectsFoundFromSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectsFoundFromSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectsFoundFromSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectsFoundOnlyFromSink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectsFoundOnlyFromSink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectsFoundOnlyFromSink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectsFoundOnlyFromSink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectsFromSourceFailed(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectsFromSourceFailed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectsFromSourceFailed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectsFromSourceFailed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectsFromSourceSkippedBySync(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectsFromSourceSkippedBySync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectsFromSourceSkippedBySync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectsFromSourceSkippedBySync")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

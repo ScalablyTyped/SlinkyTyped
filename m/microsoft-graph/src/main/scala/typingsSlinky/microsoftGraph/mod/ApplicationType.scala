@@ -12,10 +12,8 @@ trait ApplicationType extends js.Object
 
 object ApplicationType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def desktop: typingsSlinky.microsoftGraph.microsoftGraphStrings.desktop = "desktop".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.desktop]
   @scala.inline
-  def desktop: typingsSlinky.microsoftGraph.microsoftGraphStrings.desktop = this.cast("desktop")
-  @scala.inline
-  def universal: typingsSlinky.microsoftGraph.microsoftGraphStrings.universal = this.cast("universal")
+  def universal: typingsSlinky.microsoftGraph.microsoftGraphStrings.universal = "universal".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.universal]
 }
 

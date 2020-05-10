@@ -18,7 +18,7 @@ object cryptoMod extends js.Object {
       * Finalizes the hash and provides a promise that will be fulfilled with the
       * raw bytes of the calculated hash.
       */
-    def digest(): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+    def digest(): js.Promise[js.typedarray.Uint8Array] = js.native
     /**
       * Adds a chunk of data to the hash. If a buffer is provided, the `encoding`
       * argument will be ignored. If a string is provided without a specified
@@ -41,12 +41,12 @@ object cryptoMod extends js.Object {
     extends Instantiable0[Hash]
        with Instantiable1[/* secret */ SourceData, Hash]
   
-  type SourceData = String | scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
+  type SourceData = String | js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView
   type StreamHasher[StreamType] = js.Function2[
     /* hashCtor */ AnonInstantiable, 
     /* stream */ StreamType, 
-    js.Promise[scala.scalajs.js.typedarray.Uint8Array]
+    js.Promise[js.typedarray.Uint8Array]
   ]
-  type randomValues = js.Function1[/* byteLength */ Double, js.Promise[scala.scalajs.js.typedarray.Uint8Array]]
+  type randomValues = js.Function1[/* byteLength */ Double, js.Promise[js.typedarray.Uint8Array]]
 }
 

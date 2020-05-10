@@ -45,18 +45,65 @@ trait SchemaGoogleDevtoolsRemoteexecutionV1testExecuteResponse extends js.Object
 
 object SchemaGoogleDevtoolsRemoteexecutionV1testExecuteResponse {
   @scala.inline
-  def apply(
-    cachedResult: js.UndefOr[Boolean] = js.undefined,
-    result: SchemaGoogleDevtoolsRemoteexecutionV1testActionResult = null,
-    serverLogs: StringDictionary[SchemaGoogleDevtoolsRemoteexecutionV1testLogFile] = null,
-    status: SchemaGoogleRpcStatus = null
-  ): SchemaGoogleDevtoolsRemoteexecutionV1testExecuteResponse = {
+  def apply(): SchemaGoogleDevtoolsRemoteexecutionV1testExecuteResponse = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(cachedResult)) __obj.updateDynamic("cachedResult")(cachedResult.asInstanceOf[js.Any])
-    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
-    if (serverLogs != null) __obj.updateDynamic("serverLogs")(serverLogs.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemoteexecutionV1testExecuteResponse]
   }
+  @scala.inline
+  implicit class SchemaGoogleDevtoolsRemoteexecutionV1testExecuteResponseOps[Self <: SchemaGoogleDevtoolsRemoteexecutionV1testExecuteResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCachedResult(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cachedResult")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCachedResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cachedResult")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResult(value: SchemaGoogleDevtoolsRemoteexecutionV1testActionResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerLogs(value: StringDictionary[SchemaGoogleDevtoolsRemoteexecutionV1testLogFile]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverLogs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerLogs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverLogs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: SchemaGoogleRpcStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

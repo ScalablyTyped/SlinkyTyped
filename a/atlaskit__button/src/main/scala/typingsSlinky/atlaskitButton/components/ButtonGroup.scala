@@ -1,30 +1,27 @@
 package typingsSlinky.atlaskitButton.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.atlaskitButton.mod.ButtonAppearances
 import typingsSlinky.atlaskitButton.mod.ButtonGroupProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ButtonGroup
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.atlaskitButton.mod.ButtonGroup] {
+object ButtonGroup {
   @JSImport("@atlaskit/button", "ButtonGroup")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(appearance: ButtonAppearances = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.atlaskitButton.mod.ButtonGroup] = {
-    val __obj = js.Dynamic.literal()
-    if (appearance != null) __obj.updateDynamic("appearance")(appearance.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.atlaskitButton.mod.ButtonGroup] {
+    @scala.inline
+    def appearance(value: ButtonAppearances): this.type = set("appearance", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.atlaskitButton.mod.ButtonGroup] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.atlaskitButton.mod.ButtonGroup](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ButtonGroupProps
+  
+  def withProps(p: ButtonGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ButtonGroup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

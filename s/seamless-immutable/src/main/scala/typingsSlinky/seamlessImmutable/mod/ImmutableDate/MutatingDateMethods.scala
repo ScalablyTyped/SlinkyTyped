@@ -27,36 +27,34 @@ trait MutatingDateMethods extends js.Object
 
 object MutatingDateMethods {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def setDate: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setDate = "setDate".asInstanceOf[typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setDate]
   @scala.inline
-  def setDate: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setDate = this.cast("setDate")
+  def setFullYear: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setFullYear = "setFullYear".asInstanceOf[typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setFullYear]
   @scala.inline
-  def setFullYear: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setFullYear = this.cast("setFullYear")
+  def setHours: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setHours = "setHours".asInstanceOf[typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setHours]
   @scala.inline
-  def setHours: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setHours = this.cast("setHours")
+  def setMilliseconds: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setMilliseconds = "setMilliseconds".asInstanceOf[typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setMilliseconds]
   @scala.inline
-  def setMilliseconds: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setMilliseconds = this.cast("setMilliseconds")
+  def setMinutes: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setMinutes = "setMinutes".asInstanceOf[typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setMinutes]
   @scala.inline
-  def setMinutes: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setMinutes = this.cast("setMinutes")
+  def setMonth: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setMonth = "setMonth".asInstanceOf[typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setMonth]
   @scala.inline
-  def setMonth: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setMonth = this.cast("setMonth")
+  def setSeconds: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setSeconds = "setSeconds".asInstanceOf[typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setSeconds]
   @scala.inline
-  def setSeconds: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setSeconds = this.cast("setSeconds")
+  def setTime: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setTime = "setTime".asInstanceOf[typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setTime]
   @scala.inline
-  def setTime: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setTime = this.cast("setTime")
+  def setUTCDate: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCDate = "setUTCDate".asInstanceOf[typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCDate]
   @scala.inline
-  def setUTCDate: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCDate = this.cast("setUTCDate")
+  def setUTCFullYear: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCFullYear = "setUTCFullYear".asInstanceOf[typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCFullYear]
   @scala.inline
-  def setUTCFullYear: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCFullYear = this.cast("setUTCFullYear")
+  def setUTCHours: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCHours = "setUTCHours".asInstanceOf[typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCHours]
   @scala.inline
-  def setUTCHours: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCHours = this.cast("setUTCHours")
+  def setUTCMilliseconds: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCMilliseconds = "setUTCMilliseconds".asInstanceOf[typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCMilliseconds]
   @scala.inline
-  def setUTCMilliseconds: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCMilliseconds = this.cast("setUTCMilliseconds")
+  def setUTCMinutes: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCMinutes = "setUTCMinutes".asInstanceOf[typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCMinutes]
   @scala.inline
-  def setUTCMinutes: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCMinutes = this.cast("setUTCMinutes")
+  def setUTCMonth: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCMonth = "setUTCMonth".asInstanceOf[typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCMonth]
   @scala.inline
-  def setUTCMonth: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCMonth = this.cast("setUTCMonth")
-  @scala.inline
-  def setUTCSeconds: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCSeconds = this.cast("setUTCSeconds")
+  def setUTCSeconds: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCSeconds = "setUTCSeconds".asInstanceOf[typingsSlinky.seamlessImmutable.seamlessImmutableStrings.setUTCSeconds]
 }
 

@@ -6,19 +6,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EntityAction extends IEnum {
-  var AcceptChanges: EntityActionSymbol
-  var Attach: EntityActionSymbol
-  var AttachOnImport: EntityActionSymbol
-  var AttachOnQuery: EntityActionSymbol
-  var Clear: EntityActionSymbol
-  var Detach: EntityActionSymbol
-  var EntityStateChange: EntityActionSymbol
-  var MergeOnImport: EntityActionSymbol
-  var MergeOnQuery: EntityActionSymbol
-  var MergeOnSave: EntityActionSymbol
-  var PropertyChange: EntityActionSymbol
-  var RejectChanges: EntityActionSymbol
+  var AcceptChanges: EntityActionSymbol = js.native
+  var Attach: EntityActionSymbol = js.native
+  var AttachOnImport: EntityActionSymbol = js.native
+  var AttachOnQuery: EntityActionSymbol = js.native
+  var Clear: EntityActionSymbol = js.native
+  var Detach: EntityActionSymbol = js.native
+  var EntityStateChange: EntityActionSymbol = js.native
+  var MergeOnImport: EntityActionSymbol = js.native
+  var MergeOnQuery: EntityActionSymbol = js.native
+  var MergeOnSave: EntityActionSymbol = js.native
+  var PropertyChange: EntityActionSymbol = js.native
+  var RejectChanges: EntityActionSymbol = js.native
 }
 
 @JSGlobal("breeze.EntityAction")

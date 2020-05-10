@@ -13,12 +13,10 @@ trait ArrayRelation extends js.Object
 
 object ArrayRelation {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def extension: typingsSlinky.ckeditorCkeditor5Utils.ckeditorCkeditor5UtilsStrings.extension = "extension".asInstanceOf[typingsSlinky.ckeditorCkeditor5Utils.ckeditorCkeditor5UtilsStrings.extension]
   @scala.inline
-  def extension: typingsSlinky.ckeditorCkeditor5Utils.ckeditorCkeditor5UtilsStrings.extension = this.cast("extension")
+  def prefix: typingsSlinky.ckeditorCkeditor5Utils.ckeditorCkeditor5UtilsStrings.prefix = "prefix".asInstanceOf[typingsSlinky.ckeditorCkeditor5Utils.ckeditorCkeditor5UtilsStrings.prefix]
   @scala.inline
-  def prefix: typingsSlinky.ckeditorCkeditor5Utils.ckeditorCkeditor5UtilsStrings.prefix = this.cast("prefix")
-  @scala.inline
-  def same: typingsSlinky.ckeditorCkeditor5Utils.ckeditorCkeditor5UtilsStrings.same = this.cast("same")
+  def same: typingsSlinky.ckeditorCkeditor5Utils.ckeditorCkeditor5UtilsStrings.same = "same".asInstanceOf[typingsSlinky.ckeditorCkeditor5Utils.ckeditorCkeditor5UtilsStrings.same]
 }
 
